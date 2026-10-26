@@ -1,0 +1,3269 @@
+{
+ "id": "k2p-y25-k2-33-opioid-analjezikler-ve-antagonistleri",
+ "title": "Opioid Analjezikler ve Antagonistleri",
+ "course": "Tıbbi Farmakoloji",
+ "committee": "donem3-kurul2",
+ "sayfaHaritasi": "teyitli",
+ "slides": [
+  {
+   "slideNumber": 1,
+   "title": "Opioidlerin Tarihçesi ve Ham Afyon Alkaloidleri",
+   "bolum": "1",
+   "pdfSayfalari": [
+    2,
+    3
+   ],
+   "sourcePdf": {
+    "startPage": 2,
+    "endPage": 3
+   },
+   "content": "Opioid agonistlerinin prototipi olan morfin, şiddetli ağrı sağaltımında yüzyıllardır kullanılan temel analjeziktir.\n\n- **Ham Afyon (Opium):** Haşhaş kapsüllerinin çizilmesiyle elde edilen sütün kurutulmasıyla oluşan katı doğal ekstredir.\n- **Doğal Alkaloidler:** Afyonda morfin (%10 konsantrasyonda), kodein, tebain ve papaverin bulunur.\n- **Terminoloji Ayrımı:** Opiat terimi yalnızca doğal bitkisel alkaloidleri kapsarken, opioid terimi reseptörleri etkileyen tüm doğal, yarı-sentetik ve sentetik bileşikleri tanımlar.\n\n> [!NOTE]\n> Morfin, analjezik etkinliğin temel referans standardıdır ve majör mü-opioid reseptörünün tam agonistidir.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Ham afyonun (opium) bileşiminde en yüksek konsantrasyonda bulunan ve prototip kabul edilen alkaloid hangisidir?",
+     "options": [
+      {
+       "text": "Morfin",
+       "isCorrect": true,
+       "explanation": "Morfin, bu klinik durumda beklenen temel farmakolojik yanıtı ve mekanizmayı temsil eder. Soruda aranan hedef farmakolojik kavram doğru olarak bu seçenekle açıklanmaktadır."
+      },
+      {
+       "text": "Papaverin",
+       "isCorrect": false,
+       "explanation": "Papaverin, farmakolojide farklı bir biyolojik yolağa ve etki mekanizmasına sahip özgün bir kavramdır. Bu seçenek soruda hedeflenen spesifik klinik etki mekanizmasını açıklamaz."
+      },
+      {
+       "text": "Tebain",
+       "isCorrect": false,
+       "explanation": "Tebain, farmakolojide farklı bir biyolojik yolağa ve etki mekanizmasına sahip özgün bir kavramdır. Bu seçenek soruda hedeflenen spesifik klinik etki mekanizmasını açıklamaz."
+      },
+      {
+       "text": "Kodein",
+       "isCorrect": false,
+       "explanation": "Kodein, farmakolojide farklı bir biyolojik yolağa ve etki mekanizmasına sahip özgün bir kavramdır. Bu seçenek soruda hedeflenen spesifik klinik etki mekanizmasını açıklamaz."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "maskedTerm": "opiat",
+     "hint": "Yalnızca doğal bitkisel kaynaklı alkaloidleri tanımlayan terim",
+     "options": [
+      "opiat",
+      "opioid",
+      "endorfin",
+      "antagonist"
+     ],
+     "sentence": "Haşhaş kapsüllerinden elde edilen doğal alkaloidlere opiat denirken, reseptörleri etkileyen tüm bileşiklere opioid adı verilir."
+    },
+    {
+     "type": "active_recall",
+     "question": "Opiat ve opioid kavramları arasındaki temel fark nedir?",
+     "answer": "Opiat yalnızca doğal afyon alkaloidlerini ifade eder; opioid ise doğal, yarı sentetik ve sentetik tüm reseptör ligandlarını kapsar."
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Doğal afyon alkaloidleri ve morfin hakkında temel özellikler:",
+     "items": [
+      {
+       "text": "Morfin mü reseptörünün tam agonistidir ve altın standart analjeziktir.",
+       "isLie": false,
+       "explanation": "Morfin klinik farmakolojide tüm opioidlerin potens kıyaslama standardıdır."
+      },
+      {
+       "text": "Papaverin afyon içinde yer alan bir alkaloiddir.",
+       "isLie": false,
+       "explanation": "Papaverin opium ekstraktında doğal olarak bulunan bir benzilizokinolin türevidir."
+      },
+      {
+       "text": "Ham afyon yapay olarak laboratuvarda kimyasal sentezle üretilen saf bir maddedir.",
+       "isLie": true,
+       "explanation": "Ham afyon Papaver somniferum kapsüllerinin çizilmesiyle elde edilen doğal bitkisel bir maddedir."
+      }
+     ]
+    }
+   ],
+   "synthesisNarrative": "Opioid agonistlerinin prototipi olan morfin, şiddetli ağrı sağaltımında yüzyıllardır kullanılan temel analjeziktir.\n\n- **Ham Afyon (Opium):** Haşhaş kapsüllerinin çizilmesiyle elde edilen sütün kurutulmasıyla oluşan katı doğal ekstredir.\n- **Doğal Alkaloidler:** Afyonda morfin (%10 konsantrasyonda), kodein, tebain ve papaverin bulunur.\n- **Terminoloji Ayrımı:** Opiat terimi yalnızca doğal bitkisel alkaloidleri kapsarken, opioid terimi reseptörleri etkileyen tüm doğal, yarı-sentetik ve sentetik bileşikleri tanımlar.\n\n> [!NOTE]\n> Morfin, analjezik etkinliğin temel referans standardıdır ve majör mü-opioid reseptörünün tam agonistidir."
+  },
+  {
+   "slideNumber": 2,
+   "title": "Opioid Reseptör Alt Tipleri ve Dağılımı",
+   "bolum": "1",
+   "pdfSayfalari": [
+    4,
+    4
+   ],
+   "sourcePdf": {
+    "startPage": 4,
+    "endPage": 4
+   },
+   "content": "Opioidlerin farmakolojik etkileri merkezi ve periferik sinir sistemindeki spesifik reseptörler üzerinden gerçekleşir.\n\n- **Mü (MOR) Reseptörleri:** Supraspinal ve spinal analjezi, solunum depresyonu, öfori, sedasyon ve gastrointestinal motilite azalmasına aracılık eder.\n- **Delta (DOR) Reseptörleri:** Özellikle omurilik düzeyinde antinosiseptif etki ve duygudurum regülasyonunda rol oynar.\n- **Kappa (KOR) Reseptörleri:** Spinal düzeyde analjezi sağlarken disfori, halüsinasyon ve psikotomimetik yanıtlara neden olur.\n\n> [!IMPORTANT]\n> Klinik kullanımda olan analjeziklerin büyük çoğunluğu etkilerini öncelikli olarak mü-opioid reseptörleri üzerinden gösterir.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Aktivasyonu sonucunda analjezi ile birlikte disfori ve halüsinasyon gibi psikotomimetik etkilere yol açan opioid reseptörü hangisidir?",
+     "options": [
+      {
+       "text": "Kappa reseptörü",
+       "isCorrect": true,
+       "explanation": "Kappa reseptörü, bu klinik durumda beklenen temel farmakolojik yanıtı ve mekanizmayı temsil eder. Soruda aranan hedef farmakolojik kavram doğru olarak bu seçenekle açıklanmaktadır."
+      },
+      {
+       "text": "Mü reseptörü",
+       "isCorrect": false,
+       "explanation": "Mü reseptörü, farmakolojide farklı bir biyolojik yolağa ve etki mekanizmasına sahip özgün bir kavramdır. Bu seçenek soruda hedeflenen spesifik klinik etki mekanizmasını açıklamaz."
+      },
+      {
+       "text": "Delta reseptörü",
+       "isCorrect": false,
+       "explanation": "Delta reseptörü, farmakolojide farklı bir biyolojik yolağa ve etki mekanizmasına sahip özgün bir kavramdır. Bu seçenek soruda hedeflenen spesifik klinik etki mekanizmasını açıklamaz."
+      },
+      {
+       "text": "ORL1 reseptörü",
+       "isCorrect": false,
+       "explanation": "ORL1 reseptörü, farmakolojide farklı bir biyolojik yolağa ve etki mekanizmasına sahip özgün bir kavramdır. Bu seçenek soruda hedeflenen spesifik klinik etki mekanizmasını açıklamaz."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "maskedTerm": "öfori",
+     "hint": "Mü reseptör uyarımıyla ortaya çıkan aşırı iyilik ve haz hissi",
+     "options": [
+      "öfori",
+      "disfori",
+      "halüsinasyon",
+      "ataksi"
+     ],
+     "sentence": "Morfin gibi güçlü analjeziklerin oluşturduğu öfori ve analjezi temel olarak mü reseptörleri üzerinden gerçekleşir."
+    },
+    {
+     "type": "swipe_matching",
+     "leftCategory": "Mü Reseptörü Etkileri",
+     "rightCategory": "Kappa Reseptörü Etkileri",
+     "cards": [
+      {
+       "text": "Öfori ve belirgin supraspinal analjezi",
+       "category": "left"
+      },
+      {
+       "text": "Solunum merkezinin karbondioksite duyarlılığını azaltma",
+       "category": "left"
+      },
+      {
+       "text": "Disfori ve psikotomimetik reaksiyonlar",
+       "category": "right"
+      },
+      {
+       "text": "Halüsinasyon ve huzursuzluk hissi",
+       "category": "right"
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Mü ve kappa reseptör aktivasyonlarının duygudurum üzerindeki zıt etkileri nelerdir?",
+     "answer": "Mü reseptörleri öfori ve sedasyon oluştururken; kappa reseptörleri disfori ve halüsinasyonlara yol açar."
+    }
+   ],
+   "synthesisNarrative": "Opioidlerin farmakolojik etkileri merkezi ve periferik sinir sistemindeki spesifik reseptörler üzerinden gerçekleşir.\n\n- **Mü (MOR) Reseptörleri:** Supraspinal ve spinal analjezi, solunum depresyonu, öfori, sedasyon ve gastrointestinal motilite azalmasına aracılık eder.\n- **Delta (DOR) Reseptörleri:** Özellikle omurilik düzeyinde antinosiseptif etki ve duygudurum regülasyonunda rol oynar.\n- **Kappa (KOR) Reseptörleri:** Spinal düzeyde analjezi sağlarken disfori, halüsinasyon ve psikotomimetik yanıtlara neden olur.\n\n> [!IMPORTANT]\n> Klinik kullanımda olan analjeziklerin büyük çoğunluğu etkilerini öncelikli olarak mü-opioid reseptörleri üzerinden gösterir."
+  },
+  {
+   "slideNumber": 3,
+   "title": "Endojen Opioid Peptid Aileleri ve Prekürsörleri",
+   "bolum": "1",
+   "pdfSayfalari": [
+    5,
+    6
+   ],
+   "sourcePdf": {
+    "startPage": 5,
+    "endPage": 6
+   },
+   "content": "Merkezi sinir sisteminde ekzojen opioidlerin bağlandığı reseptörler, doğal antinosiseptif endojen peptidler tarafından uyarılır.\n\n- **Endorfinler:** Pro-opiomelanokortin (POMC) prekürsöründen sentezlenir; en önemli üyesi olan beta-endorfin mü reseptörlerine yüksek afinite gösterir.\n- **Enkefalinler:** Proenkefalinden türeyen metionin-enkefalin ve lösin-enkefalin pentapeptidleridir; delta reseptörlerine öncelikli bağlanırlar.\n- **Dinorfinler:** Prodinorfin prekürsöründen sentezlenir; dinorfin A, dinorfin B ve neoendorfinleri içerir ve kappa reseptörlerini uyarırlar.\n\n> [!NOTE]\n> Bu üç endojen peptid ailesi, vücudun ağrı iletimini frenleyen dahili fizyolojik analjezi mekanizmasını oluşturur.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Pro-opiomelanokortin (POMC) öncül proteininden sentezlenen ve temel olarak mü reseptörlerini aktive eden endojen peptid hangisidir?",
+     "options": [
+      {
+       "text": "Beta-endorfin",
+       "isCorrect": true,
+       "explanation": "Beta-endorfin, bu klinik durumda beklenen temel farmakolojik yanıtı ve mekanizmayı temsil eder. Soruda aranan hedef farmakolojik kavram doğru olarak bu seçenekle açıklanmaktadır."
+      },
+      {
+       "text": "Met-enkefalin",
+       "isCorrect": false,
+       "explanation": "Met-enkefalin, farmakolojide farklı bir biyolojik yolağa ve etki mekanizmasına sahip özgün bir kavramdır. Bu seçenek soruda hedeflenen spesifik klinik etki mekanizmasını açıklamaz."
+      },
+      {
+       "text": "Dinorfin A",
+       "isCorrect": false,
+       "explanation": "Dinorfin A, farmakolojide farklı bir biyolojik yolağa ve etki mekanizmasına sahip özgün bir kavramdır. Bu seçenek soruda hedeflenen spesifik klinik etki mekanizmasını açıklamaz."
+      },
+      {
+       "text": "Lö-enkefalin",
+       "isCorrect": false,
+       "explanation": "Lö-enkefalin, farmakolojide farklı bir biyolojik yolağa ve etki mekanizmasına sahip özgün bir kavramdır. Bu seçenek soruda hedeflenen spesifik klinik etki mekanizmasını açıklamaz."
+      }
+     ]
+    },
+    {
+     "type": "interactive_table",
+     "title": "Endojen Peptidler ve Prekürsör Eşleşmesi",
+     "tableHeaders": [
+      "Peptid Ailesi",
+      "Öncül Molekül",
+      "Hedef Reseptör"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Endorfinler",
+         "isMasked": false
+        },
+        {
+         "text": "POMC",
+         "isMasked": true,
+         "hint": "İlgili biyolojik özellik"
+        },
+        {
+         "text": "Mü reseptörü",
+         "isMasked": false
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Enkefalinler",
+         "isMasked": false
+        },
+        {
+         "text": "Proenkefalin",
+         "isMasked": true,
+         "hint": "İlgili biyolojik özellik"
+        },
+        {
+         "text": "Delta reseptörü",
+         "isMasked": false
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Dinorfinler",
+         "isMasked": false
+        },
+        {
+         "text": "Prodinorfin",
+         "isMasked": true,
+         "hint": "İlgili biyolojik özellik"
+        },
+        {
+         "text": "Kappa reseptörü",
+         "isMasked": false
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "maskedTerm": "pentapeptid",
+     "hint": "Beş amino asitlik peptid zinciri yapısını ifade eden terim",
+     "options": [
+      "pentapeptid",
+      "polipeptid",
+      "glikoprotein",
+      "steroid"
+     ],
+     "sentence": "Enkefalinler beş amino asitten oluşan metionin ve lösin enkefalin pentapeptid yapısındadır."
+    },
+    {
+     "type": "active_recall",
+     "question": "Üç temel endojen opioid öncül molekülü hangileridir?",
+     "answer": "Pro-opiomelanokortin (POMC), proenkefalin ve prodinorfindir."
+    }
+   ],
+   "synthesisNarrative": "Merkezi sinir sisteminde ekzojen opioidlerin bağlandığı reseptörler, doğal antinosiseptif endojen peptidler tarafından uyarılır.\n\n- **Endorfinler:** Pro-opiomelanokortin (POMC) prekürsöründen sentezlenir; en önemli üyesi olan beta-endorfin mü reseptörlerine yüksek afinite gösterir.\n- **Enkefalinler:** Proenkefalinden türeyen metionin-enkefalin ve lösin-enkefalin pentapeptidleridir; delta reseptörlerine öncelikli bağlanırlar.\n- **Dinorfinler:** Prodinorfin prekürsöründen sentezlenir; dinorfin A, dinorfin B ve neoendorfinleri içerir ve kappa reseptörlerini uyarırlar.\n\n> [!NOTE]\n> Bu üç endojen peptid ailesi, vücudun ağrı iletimini frenleyen dahili fizyolojik analjezi mekanizmasını oluşturur."
+  },
+  {
+   "slideNumber": 4,
+   "title": "Endomorfinler ve Nosiseptin / ORL1 Sistemi",
+   "bolum": "1",
+   "pdfSayfalari": [
+    7,
+    8
+   ],
+   "sourcePdf": {
+    "startPage": 7,
+    "endPage": 8
+   },
+   "content": "Klasik üç peptid ailesine ek olarak yüksek seçicilik gösteren yeni endojen opioid ligandlar tanımlanmıştır.\n\n- **Endomorfin-1 ve Endomorfin-2:** Mü-opioid reseptörlerine olağanüstü yüksek seçicilik ve afinite gösteren, güçlü analjezik doğal peptidlerdir.\n- **Nosiseptin (Orfanin FQ):** Yapısal olarak opioidlere benzeyen ancak klasik opioid reseptörlerine bağlanmayan özgün bir peptiddir.\n- **ORL1 Reseptörü:** Nosiseptinin bağlandığı reseptör olup klasik opioid antagonisti nalokson tarafından bloke edilemez.\n\n> [!IMPORTANT]\n> Naloksonun etkisiz olması, ORL1/nosiseptin sistemini klasik mü, delta ve kappa reseptörlerinden kesin olarak ayırır.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Opioid benzeri etkilere sahip olan ancak klasik kompetitif antagonist nalokson ile bloke edilemeyen reseptör sistemi hangisidir?",
+     "options": [
+      {
+       "text": "ORL1 / Nosiseptin",
+       "isCorrect": true,
+       "explanation": "ORL1 / Nosiseptin, bu klinik durumda beklenen temel farmakolojik yanıtı ve mekanizmayı temsil eder. Soruda aranan hedef farmakolojik kavram doğru olarak bu seçenekle açıklanmaktadır."
+      },
+      {
+       "text": "Mü-1 reseptörü",
+       "isCorrect": false,
+       "explanation": "Mü-1 reseptörü, farmakolojide farklı bir biyolojik yolağa ve etki mekanizmasına sahip özgün bir kavramdır. Bu seçenek soruda hedeflenen spesifik klinik etki mekanizmasını açıklamaz."
+      },
+      {
+       "text": "Delta-2 reseptörü",
+       "isCorrect": false,
+       "explanation": "Delta-2 reseptörü, farmakolojide farklı bir biyolojik yolağa ve etki mekanizmasına sahip özgün bir kavramdır. Bu seçenek soruda hedeflenen spesifik klinik etki mekanizmasını açıklamaz."
+      },
+      {
+       "text": "Kappa-1 reseptörü",
+       "isCorrect": false,
+       "explanation": "Kappa-1 reseptörü, farmakolojide farklı bir biyolojik yolağa ve etki mekanizmasına sahip özgün bir kavramdır. Bu seçenek soruda hedeflenen spesifik klinik etki mekanizmasını açıklamaz."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "maskedTerm": "nalokson",
+     "hint": "Opioid intoksikasyonunda kullanılan prototip tam antagonist",
+     "options": [
+      "nalokson",
+      "morfin",
+      "metadon",
+      "kodein"
+     ],
+     "sentence": "Nosiseptin sisteminin bağlandığı ORL1 reseptörü klasik opioid antagonisti nalokson ile bloke edilemez."
+    },
+    {
+     "type": "active_recall",
+     "question": "Mü reseptörlerine en seçici doğal endojen ligandlar hangileridir?",
+     "answer": "Endomorfin-1 ve endomorfin-2 peptidleridir."
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Endomorfinler ve ORL1 sistemi hakkında farmakolojik önermeler:",
+     "items": [
+      {
+       "text": "Endomorfinler mü reseptörlerine çok yüksek seçicilikle bağlanır.",
+       "isLie": false,
+       "explanation": "Endomorfin-1 ve 2 mü reseptörünün en seçici doğal ligandlarıdır."
+      },
+      {
+       "text": "ORL1 reseptörü nalokson ile kolaylıkla bloke edilebilen bir klasik opioid reseptörüdür.",
+       "isLie": true,
+       "explanation": "ORL1 reseptörü nalokson tarafından bloke edilemez, klasik antagonistlere yanıtsızdır."
+      },
+      {
+       "text": "Nosiseptin peptidinin diğer adı orfanin FQ olarak bilinir.",
+       "isLie": false,
+       "explanation": "Nosiseptin ve orfanin FQ aynı peptid molekülünün eşanlamlı isimleridir."
+      }
+     ]
+    }
+   ],
+   "synthesisNarrative": "Klasik üç peptid ailesine ek olarak yüksek seçicilik gösteren yeni endojen opioid ligandlar tanımlanmıştır.\n\n- **Endomorfin-1 ve Endomorfin-2:** Mü-opioid reseptörlerine olağanüstü yüksek seçicilik ve afinite gösteren, güçlü analjezik doğal peptidlerdir.\n- **Nosiseptin (Orfanin FQ):** Yapısal olarak opioidlere benzeyen ancak klasik opioid reseptörlerine bağlanmayan özgün bir peptiddir.\n- **ORL1 Reseptörü:** Nosiseptinin bağlandığı reseptör olup klasik opioid antagonisti nalokson tarafından bloke edilemez.\n\n> [!IMPORTANT]\n> Naloksonun etkisiz olması, ORL1/nosiseptin sistemini klasik mü, delta ve kappa reseptörlerinden kesin olarak ayırır."
+  },
+  {
+   "slideNumber": 5,
+   "title": "Ekzojen Opioidlerin Absorbsiyonu ve Dağılımı",
+   "bolum": "2",
+   "pdfSayfalari": [
+    9,
+    11
+   ],
+   "sourcePdf": {
+    "startPage": 9,
+    "endPage": 11
+   },
+   "content": "Opioid ilaçların klinik etkinlik ve etki başlama hızlarını farmakokinetik parametreleri belirler.\n\n- **Absorbsiyon Yolları:** Subkutan, intramusküler ve oral yollardan iyi emilirler. Ancak karaciğerde belirgin ilk geçiş eliminasyonuna uğrarlar.\n- **Oral Biyoyararlanım:** Morfinin oral biyoyararlanımı düşüktür (%25 civarı); bu nedenle terapötik eşdeğerlik için oral doz parenteral dozdan yaklaşık 3 kat yüksek seçilir.\n- **Doku Dağılımı:** Lipofilik opioidler (fentanil) hızla santral sinir sistemine geçerken, hidrofilik olanlar (morfin) daha yavaş penetre olur.\n\n> [!NOTE]\n> Fentanilin yüksek yağda çözünürlüğü, dakikalar içinde analjezi başlatmasını ve hızlı redistribüsyon ile etkisinin sonlanmasını sağlar.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Morfinin oral uygulamasında aynı analjezik etkinliği sağlamak için parenteral doza göre belirgin şekilde yüksek doz gerekmesinin nedeni nedir?",
+     "options": [
+      {
+       "text": "Karaciğerde yüksek oranda ilk geçiş eliminasyonuna uğraması",
+       "isCorrect": true,
+       "explanation": "Karaciğerde yüksek oranda ilk geçiş eliminasyonuna uğraması, bu klinik durumda beklenen temel farmakolojik yanıtı ve mekanizmayı temsil eder. Soruda aranan hedef farmakolojik kavram doğru olarak bu seçenekle açıklanmaktadır."
+      },
+      {
+       "text": "Mide asidinde tamamen parçalanarak inaktive olması",
+       "isCorrect": false,
+       "explanation": "Mide asidinde tamamen parçalanarak inaktive olması, farmakolojide farklı bir biyolojik yolağa ve etki mekanizmasına sahip özgün bir kavramdır. Bu seçenek soruda hedeflenen spesifik klinik etki mekanizmasını açıklamaz."
+      },
+      {
+       "text": "Böbreklerden değişmeden hızla filtre edilip atılması",
+       "isCorrect": false,
+       "explanation": "Böbreklerden değişmeden hızla filtre edilip atılması, farmakolojide farklı bir biyolojik yolağa ve etki mekanizmasına sahip özgün bir kavramdır. Bu seçenek soruda hedeflenen spesifik klinik etki mekanizmasını açıklamaz."
+      },
+      {
+       "text": "Plazma proteinlerine yüzde yüz oranında geri dönüşsüz bağlanması",
+       "isCorrect": false,
+       "explanation": "Plazma proteinlerine yüzde yüz oranında geri dönüşsüz bağlanması, farmakolojide farklı bir biyolojik yolağa ve etki mekanizmasına sahip özgün bir kavramdır. Bu seçenek soruda hedeflenen spesifik klinik etki mekanizmasını açıklamaz."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "maskedTerm": "fentanil",
+     "hint": "Yüksek lipofilikliğiyle bilinen sentetik fenilpiperidin grubu güçlü analjezik",
+     "options": [
+      "fentanil",
+      "morfin",
+      "kodein",
+      "loperamid"
+     ],
+     "sentence": "Lipofilik yapısı yüksek olan fentanil kan beyin bariyerini hızla aşarak dakikalar içinde analjezi sağlar."
+    },
+    {
+     "type": "active_recall",
+     "question": "Oral morfin dozu neden intramusküler veya intravenöz dozdan belirgin olarak yüksektir?",
+     "answer": "Karaciğerdeki belirgin ilk geçiş metabolizması nedeniyle oral biyoyararlanım düşüktür."
+    },
+    {
+     "type": "swipe_matching",
+     "leftCategory": "Lipofilik Opioid Özelliği",
+     "rightCategory": "Hidrofilik Opioid Özelliği",
+     "cards": [
+      {
+       "text": "Kan beyin bariyerini saniyeler içinde aşma",
+       "category": "left"
+      },
+      {
+       "text": "Hızlı doku redistribüsyonu ile sonlanan etki",
+       "category": "left"
+      },
+      {
+       "text": "Merkezi sinir sistemine daha yavaş geçiş hızı",
+       "category": "right"
+      },
+      {
+       "text": "Epidural uygulamada omurilikte daha uzun süre kalma",
+       "category": "right"
+      }
+     ]
+    }
+   ],
+   "synthesisNarrative": "Opioid ilaçların klinik etkinlik ve etki başlama hızlarını farmakokinetik parametreleri belirler.\n\n- **Absorbsiyon Yolları:** Subkutan, intramusküler ve oral yollardan iyi emilirler. Ancak karaciğerde belirgin ilk geçiş eliminasyonuna uğrarlar.\n- **Oral Biyoyararlanım:** Morfinin oral biyoyararlanımı düşüktür (%25 civarı); bu nedenle terapötik eşdeğerlik için oral doz parenteral dozdan yaklaşık 3 kat yüksek seçilir.\n- **Doku Dağılımı:** Lipofilik opioidler (fentanil) hızla santral sinir sistemine geçerken, hidrofilik olanlar (morfin) daha yavaş penetre olur.\n\n> [!NOTE]\n> Fentanilin yüksek yağda çözünürlüğü, dakikalar içinde analjezi başlatmasını ve hızlı redistribüsyon ile etkisinin sonlanmasını sağlar."
+  },
+  {
+   "slideNumber": 6,
+   "title": "Morfin Metabolizması ve Morfin-6-Glukuronid",
+   "bolum": "2",
+   "pdfSayfalari": [
+    12,
+    12
+   ],
+   "sourcePdf": {
+    "startPage": 12,
+    "endPage": 12
+   },
+   "content": "Morfinin karaciğerdeki temel metabolik dönüşüm yolu glukuronidasyon konjugasyonudur.\n\n- **Morfin-3-Glukuronid (M3G):** Morfinin yaklaşık %90'ı bu yolağa girer. Analjezik etkisi yoktur; santral nöroeksitasyon, hiperaljezi ve miyoklonusa yol açabilir.\n- **Morfin-6-Glukuronid (M6G):** Dozun yaklaşık %10'u bu aktif metaboliti oluşturur. Ana bileşikten 4 ila 6 kat daha güçlü analjeziktir.\n- **Klinik ve Toksik Önemi:** M6G böbrek yoluyla vücuttan uzaklaştırılır.\n\n> [!IMPORTANT]\n> Böbrek yetmezliği olan hastalarda M6G birikir; bu durum standart dozlarda dahi uzamış ve ölümcül solunum depresyonuna yol açabilir.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Morfinin glukuronidasyonu ile oluşan ve ana bileşikten 4-6 kat daha güçlü analjezik etki gösteren aktif metabolit hangisidir?",
+     "options": [
+      {
+       "text": "Morfin-6-glukuronid",
+       "isCorrect": true,
+       "explanation": "Morfin-6-glukuronid, bu klinik durumda beklenen temel farmakolojik yanıtı ve mekanizmayı temsil eder. Soruda aranan hedef farmakolojik kavram doğru olarak bu seçenekle açıklanmaktadır."
+      },
+      {
+       "text": "Morfin-3-glukuronid",
+       "isCorrect": false,
+       "explanation": "Morfin-3-glukuronid, farmakolojide farklı bir biyolojik yolağa ve etki mekanizmasına sahip özgün bir kavramdır. Bu seçenek soruda hedeflenen spesifik klinik etki mekanizmasını açıklamaz."
+      },
+      {
+       "text": "Normorfin",
+       "isCorrect": false,
+       "explanation": "Normorfin, farmakolojide farklı bir biyolojik yolağa ve etki mekanizmasına sahip özgün bir kavramdır. Bu seçenek soruda hedeflenen spesifik klinik etki mekanizmasını açıklamaz."
+      },
+      {
+       "text": "Kodein",
+       "isCorrect": false,
+       "explanation": "Kodein, farmakolojide farklı bir biyolojik yolağa ve etki mekanizmasına sahip özgün bir kavramdır. Bu seçenek soruda hedeflenen spesifik klinik etki mekanizmasını açıklamaz."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "maskedTerm": "morfin-6-glukuronid",
+     "hint": "Ana bileşikten çok daha güçlü aktif konjugasyon ürünü",
+     "options": [
+      "morfin-6-glukuronid",
+      "morfin-3-glukuronid",
+      "normorfin",
+      "fentanil"
+     ],
+     "sentence": "Böbrek yetmezliğinde aktif metabolit morfin-6-glukuronid atılamayarak birikir ve solunum arrestine yol açabilir."
+    },
+    {
+     "type": "active_recall",
+     "question": "Morfin-3-glukuronid (M3G) ile Morfin-6-glukuronid (M6G) arasındaki temel farmakolojik fark nedir?",
+     "answer": "M6G son derece güçlü aktif analjeziktir; M3G ise analjezik olmayıp nöroeksitasyon ve miyoklonus yapar."
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Morfin metabolizması ve metabolitleri hakkında klinik bilgiler:",
+     "items": [
+      {
+       "text": "M6G analjezik etkinliği morfinden daha yüksek olan güçlü bir moleküldür.",
+       "isLie": false,
+       "explanation": "M6G ana morfin molekülünden 4-6 kat daha yüksek analjezik potense sahiptir."
+      },
+      {
+       "text": "Morfin karaciğerde temel olarak glukuronid konjugasyonu ile metabolize edilir.",
+       "isLie": false,
+       "explanation": "Morfin UGT enzimleri ile 3 ve 6 pozisyonlarından glukuronidasyona uğrar."
+      },
+      {
+       "text": "Böbrek yetmezliği olan hastalarda morfin metabolitleri tamamen zararsızdır ve doz kısıtlaması gerekmez.",
+       "isLie": true,
+       "explanation": "Böbrek yetmezliğinde M6G birikerek ölümcül solunum depresyonu yapar; doz mutlaka azaltılmalıdır."
+      }
+     ]
+    }
+   ],
+   "synthesisNarrative": "Morfinin karaciğerdeki temel metabolik dönüşüm yolu glukuronidasyon konjugasyonudur.\n\n- **Morfin-3-Glukuronid (M3G):** Morfinin yaklaşık %90'ı bu yolağa girer. Analjezik etkisi yoktur; santral nöroeksitasyon, hiperaljezi ve miyoklonusa yol açabilir.\n- **Morfin-6-Glukuronid (M6G):** Dozun yaklaşık %10'u bu aktif metaboliti oluşturur. Ana bileşikten 4 ila 6 kat daha güçlü analjeziktir.\n- **Klinik ve Toksik Önemi:** M6G böbrek yoluyla vücuttan uzaklaştırılır.\n\n> [!IMPORTANT]\n> Böbrek yetmezliği olan hastalarda M6G birikir; bu durum standart dozlarda dahi uzamış ve ölümcül solunum depresyonuna yol açabilir."
+  },
+  {
+   "slideNumber": 7,
+   "title": "Hidromorfon ve Nöroeksitasyon Mekanizmaları",
+   "bolum": "2",
+   "pdfSayfalari": [
+    13,
+    13
+   ],
+   "sourcePdf": {
+    "startPage": 13,
+    "endPage": 13
+   },
+   "content": "Yarı-sentetik güçlü bir fenantren türevi olan hidromorfon, morfine benzer metabolik özellikler sergiler.\n\n- **Glukuronidasyon Metabolizması:** Karaciğerde konjugasyon ile hidromorfon-3-glukuronide (H3G) dönüştürülür.\n- **Nöroeksitatör Profil:** H3G analjezik etki göstermez; merkezi sinir sistemini eksite edici özelliklere sahiptir.\n- **Toksik Belirtiler:** Yüksek dozlarda veya böbrek klirensi bozulduğunda miyoklonus, allodini ve ajitasyon gelişebilir.\n\n> [!NOTE]\n> Opioid tedavisi altındaki hastada ağrının beklenmedik şekilde artması (opioid kaynaklı hiperaljezi), 3-glukuronid metabolitlerinin nöroeksitatör birikiminden kaynaklanabilir.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Hidromorfonun karaciğer metabolizması sonucu oluşan ve analjezik etkisi olmayıp nöroeksitasyona yol açan metaboliti hangisidir?",
+     "options": [
+      {
+       "text": "Hidromorfon-3-glukuronid",
+       "isCorrect": true,
+       "explanation": "Hidromorfon-3-glukuronid, bu klinik durumda beklenen temel farmakolojik yanıtı ve mekanizmayı temsil eder. Soruda aranan hedef farmakolojik kavram doğru olarak bu seçenekle açıklanmaktadır."
+      },
+      {
+       "text": "Hidromorfon-6-glukuronid",
+       "isCorrect": false,
+       "explanation": "Hidromorfon-6-glukuronid, farmakolojide farklı bir biyolojik yolağa ve etki mekanizmasına sahip özgün bir kavramdır. Bu seçenek soruda hedeflenen spesifik klinik etki mekanizmasını açıklamaz."
+      },
+      {
+       "text": "Normorfin",
+       "isCorrect": false,
+       "explanation": "Normorfin, farmakolojide farklı bir biyolojik yolağa ve etki mekanizmasına sahip özgün bir kavramdır. Bu seçenek soruda hedeflenen spesifik klinik etki mekanizmasını açıklamaz."
+      },
+      {
+       "text": "Oksimorfon",
+       "isCorrect": false,
+       "explanation": "Oksimorfon, farmakolojide farklı bir biyolojik yolağa ve etki mekanizmasına sahip özgün bir kavramdır. Bu seçenek soruda hedeflenen spesifik klinik etki mekanizmasını açıklamaz."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "maskedTerm": "nöroeksitasyon",
+     "hint": "Merkezi sinir sisteminde miyoklonus ve ajitasyona yol açan aşırı uyarılma durumu",
+     "options": [
+      "nöroeksitasyon",
+      "sedasyon",
+      "analjezi",
+      "hipotansiyon"
+     ],
+     "sentence": "Hidromorfon ve morfinin 3-glukuronid metabolitleri analjezik etki göstermez ve nöroeksitasyon oluşturabilir."
+    },
+    {
+     "type": "active_recall",
+     "question": "Opioid kaynaklı miyoklonus ve allodini tablosunda hangi metabolit grubu sorumlu tutulur?",
+     "answer": "Morfin ve hidromorfonun analjezik olmayan 3-glukuronid metabolitleri (M3G ve H3G) sorumludur."
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Hidromorfon farmakolojisi hakkında klinik bilgiler:",
+     "items": [
+      {
+       "text": "Hidromorfon şiddetli ağrıda kullanılan güçlü bir fenantren türevidir.",
+       "isLie": false,
+       "explanation": "Hidromorfon morfinden daha potent yarı-sentetik güçlü bir analjeziktir."
+      },
+      {
+       "text": "Hidromorfon-3-glukuronid analjezi sağlayan temel aktif moleküldür.",
+       "isLie": true,
+       "explanation": "H3G analjezik değildir, MSS'de eksitasyon ve miyoklonus yapan metabolittir."
+      },
+      {
+       "text": "Böbrek yetmezliğinde hidromorfon metabolitleri vücutta birikebilir.",
+       "isLie": false,
+       "explanation": "Tüm glukuronid metabolitleri gibi H3G de renal yolla atılır ve yetmezlikte birikir."
+      }
+     ]
+    }
+   ],
+   "synthesisNarrative": "Yarı-sentetik güçlü bir fenantren türevi olan hidromorfon, morfine benzer metabolik özellikler sergiler.\n\n- **Glukuronidasyon Metabolizması:** Karaciğerde konjugasyon ile hidromorfon-3-glukuronide (H3G) dönüştürülür.\n- **Nöroeksitatör Profil:** H3G analjezik etki göstermez; merkezi sinir sistemini eksite edici özelliklere sahiptir.\n- **Toksik Belirtiler:** Yüksek dozlarda veya böbrek klirensi bozulduğunda miyoklonus, allodini ve ajitasyon gelişebilir.\n\n> [!NOTE]\n> Opioid tedavisi altındaki hastada ağrının beklenmedik şekilde artması (opioid kaynaklı hiperaljezi), 3-glukuronid metabolitlerinin nöroeksitatör birikiminden kaynaklanabilir."
+  },
+  {
+   "slideNumber": 8,
+   "title": "Fentanil Metabolizması ve CYP3A4 Yolağı",
+   "bolum": "2",
+   "pdfSayfalari": [
+    14,
+    14
+   ],
+   "sourcePdf": {
+    "startPage": 14,
+    "endPage": 14
+   },
+   "content": "Sentetik bir fenilpiperidin türevi olan fentanil, morfinden farklı bir karaciğer eliminasyon yolağı kullanır.\n\n- **Sitokrom P450 Yolağı:** Karaciğerde mikrozomal CYP3A4 izoenzimi tarafından N-dealkilasyon ile inaktif norfentanile metabolize edilir.\n- **Aktif Metabolit Yokluğu:** Glukuronidasyon metaboliti oluşturmaz; bu nedenle böbrek yetmezliğinde morfine kıyasla daha güvenli bir seçenektir.\n- **İlaç Etkileşimleri:** CYP3A4 inhibitörleri (ketokonazol, klaritromisin) fentanil plazma konsantrasyonunu ve toksisitesini artırır.\n\n> [!IMPORTANT]\n> Glukuronidasyon yerine CYP3A4 ile inaktif metabolitlere dönüşmesi, fentanili böbrek yetmezliği olan ağrılı hastalarda tercih sebebi yapar.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Fentanilin karaciğerde N-dealkilasyon yoluyla inaktif norfentanile metabolize edilmesinden sorumlu temel sitokrom P450 enzimi hangisidir?",
+     "options": [
+      {
+       "text": "CYP3A4",
+       "isCorrect": true,
+       "explanation": "CYP3A4, bu klinik durumda beklenen temel farmakolojik yanıtı ve mekanizmayı temsil eder. Soruda aranan hedef farmakolojik kavram doğru olarak bu seçenekle açıklanmaktadır."
+      },
+      {
+       "text": "CYP2D6",
+       "isCorrect": false,
+       "explanation": "CYP2D6, farmakolojide farklı bir biyolojik yolağa ve etki mekanizmasına sahip özgün bir kavramdır. Bu seçenek soruda hedeflenen spesifik klinik etki mekanizmasını açıklamaz."
+      },
+      {
+       "text": "CYP1A2",
+       "isCorrect": false,
+       "explanation": "CYP1A2, farmakolojide farklı bir biyolojik yolağa ve etki mekanizmasına sahip özgün bir kavramdır. Bu seçenek soruda hedeflenen spesifik klinik etki mekanizmasını açıklamaz."
+      },
+      {
+       "text": "CYP2E1",
+       "isCorrect": false,
+       "explanation": "CYP2E1, farmakolojide farklı bir biyolojik yolağa ve etki mekanizmasına sahip özgün bir kavramdır. Bu seçenek soruda hedeflenen spesifik klinik etki mekanizmasını açıklamaz."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "maskedTerm": "fentanil",
+     "hint": "CYP3A4 ile inaktif metabolitlere dönüşen lipofilik sentetik opioid",
+     "options": [
+      "fentanil",
+      "morfin",
+      "hidromorfon",
+      "kodein"
+     ],
+     "sentence": "Böbrek yetmezliği olan hastalarda aktif glukuronid metaboliti üretmediği için fentanil morfine tercih edilir."
+    },
+    {
+     "type": "active_recall",
+     "question": "Fentanilin böbrek yetmezliğinde morfine göre daha güvenli olmasının farmakokinetik gerekçesi nedir?",
+     "answer": "Morfin gibi toksik biriken aktif glukuronid metaboliti üretmez; karaciğerde CYP3A4 ile inaktif norfentanile yıkılır."
+    },
+    {
+     "type": "swipe_matching",
+     "leftCategory": "Morfin Metabolik Yolağı",
+     "rightCategory": "Fentanil Metabolik Yolağı",
+     "cards": [
+      {
+       "text": "Hepatik glukuronidasyon konjugasyonu",
+       "category": "left"
+      },
+      {
+       "text": "Aktif 6-glukuronid metaboliti oluşumu",
+       "category": "left"
+      },
+      {
+       "text": "Sitokrom P450 CYP3A4 N-dealkilasyonu",
+       "category": "right"
+      },
+      {
+       "text": "İnaktif norfentanil metaboliti oluşumu",
+       "category": "right"
+      }
+     ]
+    }
+   ],
+   "synthesisNarrative": "Sentetik bir fenilpiperidin türevi olan fentanil, morfinden farklı bir karaciğer eliminasyon yolağı kullanır.\n\n- **Sitokrom P450 Yolağı:** Karaciğerde mikrozomal CYP3A4 izoenzimi tarafından N-dealkilasyon ile inaktif norfentanile metabolize edilir.\n- **Aktif Metabolit Yokluğu:** Glukuronidasyon metaboliti oluşturmaz; bu nedenle böbrek yetmezliğinde morfine kıyasla daha güvenli bir seçenektir.\n- **İlaç Etkileşimleri:** CYP3A4 inhibitörleri (ketokonazol, klaritromisin) fentanil plazma konsantrasyonunu ve toksisitesini artırır.\n\n> [!IMPORTANT]\n> Glukuronidasyon yerine CYP3A4 ile inaktif metabolitlere dönüşmesi, fentanili böbrek yetmezliği olan ağrılı hastalarda tercih sebebi yapar."
+  },
+  {
+   "slideNumber": 9,
+   "title": "[TEKRAR SAYFASI - CHECKPOINT 1] Giriş, Peptidler ve Farmakokinetik",
+   "bolum": "2",
+   "isCheckpoint": true,
+   "pdfSayfalari": [
+    2,
+    14
+   ],
+   "sourcePdf": {
+    "startPage": 2,
+    "endPage": 14
+   },
+   "content": "Bu bölümde opioidlerin bitkisel kökenini, reseptör sınıflamasını ve farmakokinetik ilkelerini inceledik.\n\n- **Reseptörler ve Peptidler:** POMC kökenli beta-endorfin mü reseptörüne, proenkefalin kökenli enkefalinler delta reseptörüne, prodinorfin kökenli dinorfinler kappa reseptörüne bağlanır.\n- **Yeni Sistemler:** Endomorfinler mü reseptörüne en seçici doğal ligandlarken; ORL1/nosiseptin sistemi naloksonla bloke edilemez.\n- **Metabolizma Farkları:** Morfin aktif M6G üretip böbrek yetmezliğinde birikirken, fentanil CYP3A4 ile inaktif metabolitlere dönüşür.\n\n> [!NOTE]\n> Bu temel farmakokinetik kurallar, sonraki bölümlerde göreceğimiz hücresel sinyal iletimi ve organ etkilerinin zeminini oluşturur.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Aşağıdaki eşleştirmelerden hangisi endojen peptid prekürsörü ve hedef reseptör açısından DOĞRUDUR?",
+     "options": [
+      {
+       "text": "POMC — Beta-endorfin — Mü reseptörü",
+       "isCorrect": true,
+       "explanation": "POMC — Beta-endorfin — Mü reseptörü, bu klinik durumda beklenen temel farmakolojik yanıtı ve mekanizmayı temsil eder. Soruda aranan hedef farmakolojik kavram doğru olarak bu seçenekle açıklanmaktadır."
+      },
+      {
+       "text": "Prodinorfin — Lö-enkefalin — Mü reseptörü",
+       "isCorrect": false,
+       "explanation": "Prodinorfin — Lö-enkefalin — Mü reseptörü, farmakolojide farklı bir biyolojik yolağa ve etki mekanizmasına sahip özgün bir kavramdır. Bu seçenek soruda hedeflenen spesifik klinik etki mekanizmasını açıklamaz."
+      },
+      {
+       "text": "Proenkefalin — Dinorfin A — Kappa reseptörü",
+       "isCorrect": false,
+       "explanation": "Proenkefalin — Dinorfin A — Kappa reseptörü, farmakolojide farklı bir biyolojik yolağa ve etki mekanizmasına sahip özgün bir kavramdır. Bu seçenek soruda hedeflenen spesifik klinik etki mekanizmasını açıklamaz."
+      },
+      {
+       "text": "POMC — Nosiseptin — ORL1 reseptörü",
+       "isCorrect": false,
+       "explanation": "POMC — Nosiseptin — ORL1 reseptörü, farmakolojide farklı bir biyolojik yolağa ve etki mekanizmasına sahip özgün bir kavramdır. Bu seçenek soruda hedeflenen spesifik klinik etki mekanizmasını açıklamaz."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "maskedTerm": "morfin-6-glukuronid",
+     "hint": "Böbrek yetmezliğinde birikerek uzamış apne yapan aktif konjugat",
+     "options": [
+      "morfin-6-glukuronid",
+      "norfentanil",
+      "papaverin",
+      "tebain"
+     ],
+     "sentence": "Böbrek yetmezliğinde morfin-6-glukuronid birikerek toksisite yaparken fentanil CYP3A4 ile inaktive edilir."
+    },
+    {
+     "type": "interactive_table",
+     "title": "Opioid İlaçlar ve Temel Metabolizma Yolları",
+     "tableHeaders": [
+      "İlaç",
+      "Metabolizma Yolağı",
+      "Klinik Özellik"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Morfin",
+         "isMasked": false
+        },
+        {
+         "text": "Glukuronidasyon",
+         "isMasked": true,
+         "hint": "İlgili biyolojik özellik"
+        },
+        {
+         "text": "M6G aktif metaboliti böbrekte birikir",
+         "isMasked": false
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Fentanil",
+         "isMasked": false
+        },
+        {
+         "text": "CYP3A4 N-dealkilasyon",
+         "isMasked": true,
+         "hint": "İlgili biyolojik özellik"
+        },
+        {
+         "text": "Aktif metabolit üretmez, böbrekte güvenli",
+         "isMasked": false
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Hidromorfon",
+         "isMasked": false
+        },
+        {
+         "text": "Glukuronidasyon",
+         "isMasked": true,
+         "hint": "İlgili biyolojik özellik"
+        },
+        {
+         "text": "H3G nöroeksitatör etkili metabolittir",
+         "isMasked": false
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "ORL1 reseptörünü klasik mü, delta ve kappa reseptörlerinden ayıran temel farmakolojik özellik nedir?",
+     "answer": "Klasik opioid kompetitif antagonisti olan nalokson ile bloke edilememesidir."
+    }
+   ],
+   "synthesisNarrative": "Bu bölümde opioidlerin bitkisel kökenini, reseptör sınıflamasını ve farmakokinetik ilkelerini inceledik.\n\n- **Reseptörler ve Peptidler:** POMC kökenli beta-endorfin mü reseptörüne, proenkefalin kökenli enkefalinler delta reseptörüne, prodinorfin kökenli dinorfinler kappa reseptörüne bağlanır.\n- **Yeni Sistemler:** Endomorfinler mü reseptörüne en seçici doğal ligandlarken; ORL1/nosiseptin sistemi naloksonla bloke edilemez.\n- **Metabolizma Farkları:** Morfin aktif M6G üretip böbrek yetmezliğinde birikirken, fentanil CYP3A4 ile inaktif metabolitlere dönüşür.\n\n> [!NOTE]\n> Bu temel farmakokinetik kurallar, sonraki bölümlerde göreceğimiz hücresel sinyal iletimi ve organ etkilerinin zeminini oluşturur."
+  },
+  {
+   "slideNumber": 10,
+   "title": "Hücresel Etki Mekanizması: Gi/Go Kenetlenmesi",
+   "bolum": "3",
+   "pdfSayfalari": [
+    15,
+    16
+   ],
+   "sourcePdf": {
+    "startPage": 15,
+    "endPage": 16
+   },
+   "content": "Moleküler düzeyde tüm opioid reseptörleri inhibitör heterotrimerik Gi ve Go proteinleri ile kenetlidir.\n\n- **Adenilat Siklaz İnhibisyonu:** Gi proteini alfa alt birimi adenilat siklazı inhibe ederek hücre içi cAMP düzeyini azaltır.\n- **Presinaptik Kalsiyum İnhibisyonu:** Voltaj bağımlı Ca2+ kanalları kapatılarak eksitatör nörotransmitterlerin (P maddesi, glutamat) salınımı engellenir.\n- **Postsinaptik Potasyum Açılması:** İçe doğrultucu K+ kanalları (GIRK) açılarak potasyum çıkışı artırılır ve postsinaptik nöron hiperpolarize edilir.\n\n> [!IMPORTANT]\n> Presinaptik kalsiyum blokajı ve postsinaptik potasyum açılması, nöronal uyarılabilirliği çift yönlü baskılayarak analjezi oluşturur.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Opioid reseptör aktivasyonunun postsinaptik nöron membranında oluşturduğu temel iyonik değişiklik hangisidir?",
+     "options": [
+      {
+       "text": "Potasyum (K+) kanallarının açılması sonucu hiperpolarizasyon",
+       "isCorrect": true,
+       "explanation": "Potasyum (K+) kanallarının açılması sonucu hiperpolarizasyon, bu klinik durumda beklenen temel farmakolojik yanıtı ve mekanizmayı temsil eder. Soruda aranan hedef farmakolojik kavram doğru olarak bu seçenekle açıklanmaktadır."
+      },
+      {
+       "text": "Kalsiyum (Ca2+) kanallarının açılması sonucu depolarizasyon",
+       "isCorrect": false,
+       "explanation": "Kalsiyum (Ca2+) kanallarının açılması sonucu depolarizasyon, farmakolojide farklı bir biyolojik yolağa ve etki mekanizmasına sahip özgün bir kavramdır. Bu seçenek soruda hedeflenen spesifik klinik etki mekanizmasını açıklamaz."
+      },
+      {
+       "text": "Sodyum (Na+) kanallarının açılması sonucu aksiyon potansiyeli",
+       "isCorrect": false,
+       "explanation": "Sodyum (Na+) kanallarının açılması sonucu aksiyon potansiyeli, farmakolojide farklı bir biyolojik yolağa ve etki mekanizmasına sahip özgün bir kavramdır. Bu seçenek soruda hedeflenen spesifik klinik etki mekanizmasını açıklamaz."
+      },
+      {
+       "text": "Klor (Cl-) pompalarının inhibe edilerek hücrenin pozitifleşmesi",
+       "isCorrect": false,
+       "explanation": "Klor (Cl-) pompalarının inhibe edilerek hücrenin pozitifleşmesi, farmakolojide farklı bir biyolojik yolağa ve etki mekanizmasına sahip özgün bir kavramdır. Bu seçenek soruda hedeflenen spesifik klinik etki mekanizmasını açıklamaz."
+      }
+     ]
+    },
+    {
+     "type": "causal_chain",
+     "title": "Opioidlerin Hücresel İnhibisyon Basamakları",
+     "steps": [
+      "1. Agonistin Gi/Go kenetli opioid reseptörüne bağlanması",
+      "2. Adenilat siklaz aktivitesinin ve cAMP sentezinin inhibe edilmesi",
+      "3. Presinaptik Ca2+ kanallarının kapanması ve transmiter salınımının durması",
+      "4. Postsinaptik K+ kanallarının açılarak membranın hiperpolarize olması"
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "maskedTerm": "kalsiyum",
+     "hint": "Presinaptik uçta transmiter salınımı için gerekli olan iki değerlikli katyon",
+     "options": [
+      "kalsiyum",
+      "potasyum",
+      "klor",
+      "sodyum"
+     ],
+     "sentence": "Opioidler presinaptik kalsiyum kanallarını kapatarak veziküler transmiter ekzositozunu durdururlar."
+    },
+    {
+     "type": "active_recall",
+     "question": "Opioidlerin presinaptik ve postsinaptik nöronlar üzerindeki iki temel iyonik etkisi nedir?",
+     "answer": "Presinaptik voltaj bağımlı Ca2+ kanallarını kapatır ve postsinaptik K+ kanallarını açarak hiperpolarizasyon yapar."
+    }
+   ],
+   "synthesisNarrative": "Moleküler düzeyde tüm opioid reseptörleri inhibitör heterotrimerik Gi ve Go proteinleri ile kenetlidir.\n\n- **Adenilat Siklaz İnhibisyonu:** Gi proteini alfa alt birimi adenilat siklazı inhibe ederek hücre içi cAMP düzeyini azaltır.\n- **Presinaptik Kalsiyum İnhibisyonu:** Voltaj bağımlı Ca2+ kanalları kapatılarak eksitatör nörotransmitterlerin (P maddesi, glutamat) salınımı engellenir.\n- **Postsinaptik Potasyum Açılması:** İçe doğrultucu K+ kanalları (GIRK) açılarak potasyum çıkışı artırılır ve postsinaptik nöron hiperpolarize edilir.\n\n> [!IMPORTANT]\n> Presinaptik kalsiyum blokajı ve postsinaptik potasyum açılması, nöronal uyarılabilirliği çift yönlü baskılayarak analjezi oluşturur."
+  },
+  {
+   "slideNumber": 11,
+   "title": "Spinal Arka Boynuzda Ağrı Kapısının Kapatılması",
+   "bolum": "3",
+   "pdfSayfalari": [
+    17,
+    18
+   ],
+   "sourcePdf": {
+    "startPage": 17,
+    "endPage": 18
+   },
+   "content": "Ağrı duyusu periferik nosiseptörlerden primer aferent A-delta ve C lifleri aracılığıyla omurilik arka boynuzuna iletilir.\n\n- **Substantia Gelatinosa (Rexed Lamina II):** Opioid reseptörlerinin en yoğun kümelendiği anatomik bölgedir.\n- **Presinaptik Ağrı Blokajı:** Primer aferent terminallerindeki opioid reseptörleri uyarılarak P maddesi ve glutamat salınımı durdurulur.\n- **İkinci Nöronun Baskılanması:** Projeksiyon nöronları postsinaptik hiperpolarizasyon ile suskunlaştırılır; ağrı sinyali yukarı merkezlere iletilemez.\n\n> [!NOTE]\n> Epidural veya intratekal opioid enjeksiyonu, arka boynuzdaki bu reseptörleri doğrudan uyararak motor blok yapmaksızın seçici analjezi sağlar.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Omurilik arka boynuzunda opioid reseptörlerinin en yoğun bulunduğu ve primer aferent liflerle sinaps yapılan anatomik tabaka hangisidir?",
+     "options": [
+      {
+       "text": "Substantia gelatinosa (Lamina II)",
+       "isCorrect": true,
+       "explanation": "Substantia gelatinosa (Lamina II), bu klinik durumda beklenen temel farmakolojik yanıtı ve mekanizmayı temsil eder. Soruda aranan hedef farmakolojik kavram doğru olarak bu seçenekle açıklanmaktadır."
+      },
+      {
+       "text": "Ön boynuz motor çekirdekleri (Lamina IX)",
+       "isCorrect": false,
+       "explanation": "Ön boynuz motor çekirdekleri (Lamina IX), farmakolojide farklı bir biyolojik yolağa ve etki mekanizmasına sahip özgün bir kavramdır. Bu seçenek soruda hedeflenen spesifik klinik etki mekanizmasını açıklamaz."
+      },
+      {
+       "text": "Lateral boynuz sempatik çekirdeği",
+       "isCorrect": false,
+       "explanation": "Lateral boynuz sempatik çekirdeği, farmakolojide farklı bir biyolojik yolağa ve etki mekanizmasına sahip özgün bir kavramdır. Bu seçenek soruda hedeflenen spesifik klinik etki mekanizmasını açıklamaz."
+      },
+      {
+       "text": "Clarke kolonu (Lamina VII)",
+       "isCorrect": false,
+       "explanation": "Clarke kolonu (Lamina VII), farmakolojide farklı bir biyolojik yolağa ve etki mekanizmasına sahip özgün bir kavramdır. Bu seçenek soruda hedeflenen spesifik klinik etki mekanizmasını açıklamaz."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "maskedTerm": "P maddesi",
+     "hint": "C liflerinden salınan temel nosiseptif nöropeptid",
+     "options": [
+      "P maddesi",
+      "GABA",
+      "dopamin",
+      "asetilkolin"
+     ],
+     "sentence": "Opioidler arka boynuzda primer aferent terminallerden P maddesi salınımını engelleyerek ağrıyı durdurur."
+    },
+    {
+     "type": "active_recall",
+     "question": "Epidural opioid uygulamasının lokal anesteziklere kıyasla en belirgin üstünlüğü nedir?",
+     "answer": "Motor ve sempatik blok oluşturmaksızın yalnızca ağrı iletimini seçici olarak baskılamasıdır."
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Omurilik arka boynuzunda opioid etkisi hakkında fizyolojik kurallar:",
+     "items": [
+      {
+       "text": "Substantia gelatinosa bölgesinde yüksek yoğunlukta opioid reseptörü bulunur.",
+       "isLie": false,
+       "explanation": "Lamina II bölgesi opioid reseptörlerince en zengin spinal yapıdır."
+      },
+      {
+       "text": "Opioidler primer aferent liflerden glutamat salınımını presinaptik olarak artırırlar.",
+       "isLie": true,
+       "explanation": "Opioidler glutamat ve P maddesi salınımını artırmaz, güçlü şekilde inhibe ederler."
+      },
+      {
+       "text": "İkinci sıra ağrı ileti nöronları postsinaptik hiperpolarizasyonla baskılanır.",
+       "isLie": false,
+       "explanation": "GIRK kanalları açılarak projeksiyon nöronlarının uyarılması engellenir."
+      }
+     ]
+    }
+   ],
+   "synthesisNarrative": "Ağrı duyusu periferik nosiseptörlerden primer aferent A-delta ve C lifleri aracılığıyla omurilik arka boynuzuna iletilir.\n\n- **Substantia Gelatinosa (Rexed Lamina II):** Opioid reseptörlerinin en yoğun kümelendiği anatomik bölgedir.\n- **Presinaptik Ağrı Blokajı:** Primer aferent terminallerindeki opioid reseptörleri uyarılarak P maddesi ve glutamat salınımı durdurulur.\n- **İkinci Nöronun Baskılanması:** Projeksiyon nöronları postsinaptik hiperpolarizasyon ile suskunlaştırılır; ağrı sinyali yukarı merkezlere iletilemez.\n\n> [!NOTE]\n> Epidural veya intratekal opioid enjeksiyonu, arka boynuzdaki bu reseptörleri doğrudan uyararak motor blok yapmaksızın seçici analjezi sağlar."
+  },
+  {
+   "slideNumber": 12,
+   "title": "Supraspinal Ağrı Modülasyonu ve İnen İnhibitör Yollar",
+   "bolum": "3",
+   "pdfSayfalari": [
+    19,
+    20
+   ],
+   "sourcePdf": {
+    "startPage": 19,
+    "endPage": 20
+   },
+   "content": "Opioidler yalnızca omurilik düzeyinde değil, beyin sapındaki inen ağrı baskılayıcı sistemleri uyararak da analjezi üretirler.\n\n- **Disinhibisyon Mekanizması:** Periakuaduktal gri cevherde (PAG) bulunan inhibitör GABAerjik ara nöronlar opioidlerce susturulur.\n- **İnen Yolakların Aktivasyonu:** GABA baskısından kurtulan PAG nöronları, rostral ventromedial medulladaki (RVM) nükleus rafe magnusu uyarır.\n- **Transmitter Salınımı:** Omurilik arka boynuzuna inen serotonerjik ve noradrenerjik lifler aktive olarak ağrı iletimini periferden gelen düzeyde kapatır.\n\n> [!IMPORTANT]\n> Opioidlerin analjezik gücü, spinal lokal inhibisyon ile supraspinal inen yolların aktivasyonunun güçlü sinerjisine dayanır.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Opioidlerin periakuaduktal gri cevherde (PAG) inen ağrı baskılayıcı yolları aktive etmesindeki temel mekanizma nedir?",
+     "options": [
+      {
+       "text": "İnhibitör GABAerjik ara nöronların baskılanması (disinhibisyon)",
+       "isCorrect": true,
+       "explanation": "İnhibitör GABAerjik ara nöronların baskılanması (disinhibisyon), bu klinik durumda beklenen temel farmakolojik yanıtı ve mekanizmayı temsil eder. Soruda aranan hedef farmakolojik kavram doğru olarak bu seçenekle açıklanmaktadır."
+      },
+      {
+       "text": "Direkt eksitatör glutamaterjik NMDA reseptör uyarımı",
+       "isCorrect": false,
+       "explanation": "Direkt eksitatör glutamaterjik NMDA reseptör uyarımı, farmakolojide farklı bir biyolojik yolağa ve etki mekanizmasına sahip özgün bir kavramdır. Bu seçenek soruda hedeflenen spesifik klinik etki mekanizmasını açıklamaz."
+      },
+      {
+       "text": "Dopamin D2 reseptörlerinin bloke edilmesi",
+       "isCorrect": false,
+       "explanation": "Dopamin D2 reseptörlerinin bloke edilmesi, farmakolojide farklı bir biyolojik yolağa ve etki mekanizmasına sahip özgün bir kavramdır. Bu seçenek soruda hedeflenen spesifik klinik etki mekanizmasını açıklamaz."
+      },
+      {
+       "text": "Asetilkolinesteraz enziminin aktive edilmesi",
+       "isCorrect": false,
+       "explanation": "Asetilkolinesteraz enziminin aktive edilmesi, farmakolojide farklı bir biyolojik yolağa ve etki mekanizmasına sahip özgün bir kavramdır. Bu seçenek soruda hedeflenen spesifik klinik etki mekanizmasını açıklamaz."
+      }
+     ]
+    },
+    {
+     "type": "causal_chain",
+     "title": "Supraspinal İnen Analjezi Yolağı",
+     "steps": [
+      "1. Agonistin periakuaduktal gri cevherdeki (PAG) mü reseptörlerine bağlanması",
+      "2. İnhibitör GABAerjik ara nöronların susturulması (disinhibisyon)",
+      "3. Rostral ventromedial medulla ve rafe magnus çekirdeğinin uyarılması",
+      "4. Arka boynuza inen serotonerjik ve noradrenerjik liflerden transmiter salınımı",
+      "5. Spinal ağrı iletiminin periferik seviyede bloke edilmesi"
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "maskedTerm": "disinhibisyon",
+     "hint": "İnhibitör bir frenin ortadan kaldırılarak sistemin aktive edilmesi süreci",
+     "options": [
+      "disinhibisyon",
+      "depolarizasyon",
+      "fasilitasyon",
+      "desensitizasyon"
+     ],
+     "sentence": "Beyin sapında periakuaduktal gri cevher nöronlarının serbest kalması disinhibisyon mekanizması ile açıklanır."
+    },
+    {
+     "type": "active_recall",
+     "question": "İnen ağrı baskılayıcı yolakların omurilik arka boynuzuna ulaştırdığı iki temel nörotransmitter hangisidir?",
+     "answer": "Serotonin (5-HT) ve noradrenalindir."
+    }
+   ],
+   "synthesisNarrative": "Opioidler yalnızca omurilik düzeyinde değil, beyin sapındaki inen ağrı baskılayıcı sistemleri uyararak da analjezi üretirler.\n\n- **Disinhibisyon Mekanizması:** Periakuaduktal gri cevherde (PAG) bulunan inhibitör GABAerjik ara nöronlar opioidlerce susturulur.\n- **İnen Yolakların Aktivasyonu:** GABA baskısından kurtulan PAG nöronları, rostral ventromedial medulladaki (RVM) nükleus rafe magnusu uyarır.\n- **Transmitter Salınımı:** Omurilik arka boynuzuna inen serotonerjik ve noradrenerjik lifler aktive olarak ağrı iletimini periferden gelen düzeyde kapatır.\n\n> [!IMPORTANT]\n> Opioidlerin analjezik gücü, spinal lokal inhibisyon ile supraspinal inen yolların aktivasyonunun güçlü sinerjisine dayanır."
+  },
+  {
+   "slideNumber": 13,
+   "title": "Periferik Analjezi ve Reseptör Desensitizasyonu",
+   "bolum": "3",
+   "pdfSayfalari": [
+    21,
+    22
+   ],
+   "sourcePdf": {
+    "startPage": 21,
+    "endPage": 22
+   },
+   "content": "Opioid reseptörleri merkezi yapıların yanı sıra primer duyusal sinir uçlarında da sentezlenip taşınır.\n\n- **İnflamasyon ve Periferik Reseptörler:** Dokuda inflamasyon geliştiğinde periferik akson uçlarında opioid reseptör ekspresyonu belirgin artar.\n- **Lokal Uygulama:** Artroskopik cerrahi sonrası eklem içine morfin enjeksiyonu, santral yan etki yapmaksızın lokal analjezi sağlar.\n- **Reseptör Desensitizasyonu:** Sürekli agonist maruziyetinde G protein kenetli reseptör kinazlar (GRK) reseptörü fosforiller.\n- **Beta-Arrestin Kenetlenmesi:** Fosforillenen reseptöre bağlanan beta-arrestin, reseptörün hücre içine internalize edilmesine ve duyarsızlaşmasına (tolerans başlangıcı) yol açar.\n\n> [!NOTE]\n> Beta-arrestin yolağı hem tolerans gelişiminden hem de bazı advers etkilerden sorumlu temel hücresel mekanizmadır.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Sürekli agonist maruziyetinde opioid reseptörlerinin fosforillenmesi ve hücre içine internalize edilerek duyarsızlaşmasında rol oynayan adaptör protein hangisidir?",
+     "options": [
+      {
+       "text": "Beta-arrestin",
+       "isCorrect": true,
+       "explanation": "Beta-arrestin, bu klinik durumda beklenen temel farmakolojik yanıtı ve mekanizmayı temsil eder. Soruda aranan hedef farmakolojik kavram doğru olarak bu seçenekle açıklanmaktadır."
+      },
+      {
+       "text": "Kalmodulin",
+       "isCorrect": false,
+       "explanation": "Kalmodulin, farmakolojide farklı bir biyolojik yolağa ve etki mekanizmasına sahip özgün bir kavramdır. Bu seçenek soruda hedeflenen spesifik klinik etki mekanizmasını açıklamaz."
+      },
+      {
+       "text": "Troponin C",
+       "isCorrect": false,
+       "explanation": "Troponin C, farmakolojide farklı bir biyolojik yolağa ve etki mekanizmasına sahip özgün bir kavramdır. Bu seçenek soruda hedeflenen spesifik klinik etki mekanizmasını açıklamaz."
+      },
+      {
+       "text": "Klatrin hafif zinciri",
+       "isCorrect": false,
+       "explanation": "Klatrin hafif zinciri, farmakolojide farklı bir biyolojik yolağa ve etki mekanizmasına sahip özgün bir kavramdır. Bu seçenek soruda hedeflenen spesifik klinik etki mekanizmasını açıklamaz."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "maskedTerm": "internalizasyon",
+     "hint": "Membran reseptörlerinin endositozla hücre içerisine alınması süreci",
+     "options": [
+      "internalizasyon",
+      "hiperpolarizasyon",
+      "fosforilasyon",
+      "disinhibisyon"
+     ],
+     "sentence": "Kronik opioid kullanımında reseptörün hücre içine çekilerek etkisizleşmesine internalizasyon adı verilir."
+    },
+    {
+     "type": "active_recall",
+     "question": "İnflamasyonlu periferik dokularda opioidlerin lokal analjezik etkinliğinin artmasının nedeni nedir?",
+     "answer": "İnflamasyonun primer duyu liflerinde periferik opioid reseptör ekspresyonunu ve taşınmasını artırmasıdır."
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Periferik opioid etkileri ve desensitizasyon hakkında önermeler:",
+     "items": [
+      {
+       "text": "İnflamasyonlu eklem içine uygulanan morfin lokal analjezi sağlayabilir.",
+       "isLie": false,
+       "explanation": "Periferik opioid reseptörleri eklem içi uygulamada lokal antinosiseptif etki gösterir."
+      },
+      {
+       "text": "Opioid toleransı yalnızca hücre içi cAMP artışıyla açıklanır, reseptör kaybı görülmez.",
+       "isLie": true,
+       "explanation": "Toleransta beta-arrestin kenetlenmesi, fosforilasyon ve reseptör internalizasyonu temel rol oynar."
+      },
+      {
+       "text": "GRK enzimleri sürekli uyarılan opioid reseptörlerini fosforiller.",
+       "isLie": false,
+       "explanation": "G protein reseptör kinazlar (GRK) desensitizasyonun ilk basamağını yürütür."
+      }
+     ]
+    }
+   ],
+   "synthesisNarrative": "Opioid reseptörleri merkezi yapıların yanı sıra primer duyusal sinir uçlarında da sentezlenip taşınır.\n\n- **İnflamasyon ve Periferik Reseptörler:** Dokuda inflamasyon geliştiğinde periferik akson uçlarında opioid reseptör ekspresyonu belirgin artar.\n- **Lokal Uygulama:** Artroskopik cerrahi sonrası eklem içine morfin enjeksiyonu, santral yan etki yapmaksızın lokal analjezi sağlar.\n- **Reseptör Desensitizasyonu:** Sürekli agonist maruziyetinde G protein kenetli reseptör kinazlar (GRK) reseptörü fosforiller.\n- **Beta-Arrestin Kenetlenmesi:** Fosforillenen reseptöre bağlanan beta-arrestin, reseptörün hücre içine internalize edilmesine ve duyarsızlaşmasına (tolerans başlangıcı) yol açar.\n\n> [!NOTE]\n> Beta-arrestin yolağı hem tolerans gelişiminden hem de bazı advers etkilerden sorumlu temel hücresel mekanizmadır."
+  },
+  {
+   "slideNumber": 14,
+   "title": "Santral Etkiler: Analjezi, Öfori ve Sedasyon",
+   "bolum": "4",
+   "pdfSayfalari": [
+    23,
+    24
+   ],
+   "sourcePdf": {
+    "startPage": 23,
+    "endPage": 24
+   },
+   "content": "Morfin ve benzeri mü agonistleri merkezi sinir sisteminde geniş kapsamlı psikolojik ve duyusal değişiklikler oluşturur.\n\n- **Analjezi Özelliği:** Hem ağrının duyusal-ayırıcı komponentini (şiddet algısı) hem de duygusal-reaktif komponentini (ağrıya bağlı anksiyete ve acı çekme) eşzamanlı hafifletir.\n- **Öfori Mekanizması:** Ventral tegmental alandaki GABAerjik internöronların baskılanmasıyla nükleus akkumbenste dopamin salınımı katlanarak artar; derin bir huzur ve haz duygusu oluşur.\n- **Sedasyon ve Bilişsel Yavaşlama:** Yaşlı hastalarda veya santral depresanlarla kombine edildiğinde uyku hali ve konfüzyona yol açabilir.\n\n> [!IMPORTANT]\n> Nükleus akkumbenste dopamin artışıyla tetiklenen öfori, opioidlerin psikolojik bağımlılık ve kötüye kullanım potansiyelinin birincil itici gücüdür.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Opioidlerin oluşturduğu öfori tablosundan ve psikolojik bağımlılık gelişiminden sorumlu temel santral ödül merkezi ve nörotransmitter hangisidir?",
+     "options": [
+      {
+       "text": "Nükleus akkumbens — Dopamin",
+       "isCorrect": true,
+       "explanation": "Nükleus akkumbens — Dopamin, bu klinik durumda beklenen temel farmakolojik yanıtı ve mekanizmayı temsil eder. Soruda aranan hedef farmakolojik kavram doğru olarak bu seçenekle açıklanmaktadır."
+      },
+      {
+       "text": "Locus coeruleus — Noradrenalin",
+       "isCorrect": false,
+       "explanation": "Locus coeruleus — Noradrenalin, farmakolojide farklı bir biyolojik yolağa ve etki mekanizmasına sahip özgün bir kavramdır. Bu seçenek soruda hedeflenen spesifik klinik etki mekanizmasını açıklamaz."
+      },
+      {
+       "text": "Substantia nigra — Asetilkolin",
+       "isCorrect": false,
+       "explanation": "Substantia nigra — Asetilkolin, farmakolojide farklı bir biyolojik yolağa ve etki mekanizmasına sahip özgün bir kavramdır. Bu seçenek soruda hedeflenen spesifik klinik etki mekanizmasını açıklamaz."
+      },
+      {
+       "text": "Hipokampus — Histamin",
+       "isCorrect": false,
+       "explanation": "Hipokampus — Histamin, farmakolojide farklı bir biyolojik yolağa ve etki mekanizmasına sahip özgün bir kavramdır. Bu seçenek soruda hedeflenen spesifik klinik etki mekanizmasını açıklamaz."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "maskedTerm": "dopamin",
+     "hint": "Haz ve ödül yolağında artan temel katekolamin nörotransmitter",
+     "options": [
+      "dopamin",
+      "GABA",
+      "serotonin",
+      "glisin"
+     ],
+     "sentence": "Opioidlerin bağımlılık potansiyeli mezolimbik ödül yolağında dopamin salınımının artmasıyla doğrudan ilişkilidir."
+    },
+    {
+     "type": "active_recall",
+     "question": "Opioid analjezisinin ağrının duyusal ve duygusal boyutları üzerindeki etkisi nasıldır?",
+     "answer": "Hasta ağrının varlığını fark etmeye devam etse dahi ağrının oluşturduğu acı, kaygı ve rahatsızlık hissi ortadan kalkar."
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Opioidlerin santral etkileri hakkında klinik bilgiler:",
+     "items": [
+      {
+       "text": "Morfin ağrının hem şiddetini hem de duygusal acı çekme bileşenini azaltır.",
+       "isLie": false,
+       "explanation": "Opioidler ağrı algısını ve reaksiyonel anksiyeteyi birlikte baskılar."
+      },
+      {
+       "text": "Opioidler dopamin salınımını engelleyerek derin bir anhedoni tablosu oluştururlar.",
+       "isLie": true,
+       "explanation": "GABA frenini kaldırarak mezolimbik sistemde dopamini artırır ve öfori yaparlar."
+      },
+      {
+       "text": "Sedasyon özellikle yaşlı ve polifarmasi altındaki hastalarda belirgindir.",
+       "isLie": false,
+       "explanation": "Opioidlerin santral depresan etkisi yaşlı bireylerde daha belirgindir."
+      }
+     ]
+    }
+   ],
+   "synthesisNarrative": "Morfin ve benzeri mü agonistleri merkezi sinir sisteminde geniş kapsamlı psikolojik ve duyusal değişiklikler oluşturur.\n\n- **Analjezi Özelliği:** Hem ağrının duyusal-ayırıcı komponentini (şiddet algısı) hem de duygusal-reaktif komponentini (ağrıya bağlı anksiyete ve acı çekme) eşzamanlı hafifletir.\n- **Öfori Mekanizması:** Ventral tegmental alandaki GABAerjik internöronların baskılanmasıyla nükleus akkumbenste dopamin salınımı katlanarak artar; derin bir huzur ve haz duygusu oluşur.\n- **Sedasyon ve Bilişsel Yavaşlama:** Yaşlı hastalarda veya santral depresanlarla kombine edildiğinde uyku hali ve konfüzyona yol açabilir.\n\n> [!IMPORTANT]\n> Nükleus akkumbenste dopamin artışıyla tetiklenen öfori, opioidlerin psikolojik bağımlılık ve kötüye kullanım potansiyelinin birincil itici gücüdür."
+  },
+  {
+   "slideNumber": 15,
+   "title": "Solunum Depresyonu ve Antitusif Etki Mekanizmaları",
+   "bolum": "4",
+   "pdfSayfalari": [
+    25,
+    26
+   ],
+   "sourcePdf": {
+    "startPage": 25,
+    "endPage": 26
+   },
+   "content": "Beyin sapında medullada yer alan solunum ve öksürük merkezleri opioid agonistlerine yüksek hassasiyet gösterir.\n\n- **Solunum Depresyonu:** Beyin sapı kemosensitif solunum merkezinin PaCO2 artışına verdiği yanıtı doza bağımlı olarak köreltirler. Solunum sayısı ve tidal volüm azalır; PaCO2 yükselir.\n- **Klinik Risk:** Akut zehirlenmede ölüme yol açan nihai mekanizma solunum durmasıdır (apne).\n- **Öksürük Refleksinin Baskılanması:** Meduller öksürük merkezi doğrudan inhibe edilir.\n\n> [!NOTE]\n> Antitusif etki analjezik dozun belirgin olarak altındaki dozlarda ortaya çıkar; bu nedenle kodein gibi zayıf opioidler öksürük kesici olarak güvenle kullanılır.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Opioidlerin oluşturduğu solunum depresyonunun altında yatan temel fizyopatolojik mekanizma nedir?",
+     "options": [
+      {
+       "text": "Beyin sapı solunum merkezinin karbondioksite (PaCO2) duyarlılığının azalması",
+       "isCorrect": true,
+       "explanation": "Beyin sapı solunum merkezinin karbondioksite (PaCO2) duyarlılığının azalması, bu klinik durumda beklenen temel farmakolojik yanıtı ve mekanizmayı temsil eder. Soruda aranan hedef farmakolojik kavram doğru olarak bu seçenekle açıklanmaktadır."
+      },
+      {
+       "text": "Diyafram kasının nöromüsküler kavşağında asetilkolin reseptörlerinin bloke edilmesi",
+       "isCorrect": false,
+       "explanation": "Diyafram kasının nöromüsküler kavşağında asetilkolin reseptörlerinin bloke edilmesi, farmakolojide farklı bir biyolojik yolağa ve etki mekanizmasına sahip özgün bir kavramdır. Bu seçenek soruda hedeflenen spesifik klinik etki mekanizmasını açıklamaz."
+      },
+      {
+       "text": "Bronş düz kaslarında yaygın ve geri dönüşsüz bronkospazm gelişmesi",
+       "isCorrect": false,
+       "explanation": "Bronş düz kaslarında yaygın ve geri dönüşsüz bronkospazm gelişmesi, farmakolojide farklı bir biyolojik yolağa ve etki mekanizmasına sahip özgün bir kavramdır. Bu seçenek soruda hedeflenen spesifik klinik etki mekanizmasını açıklamaz."
+      },
+      {
+       "text": "Karotis kemoreseptörlerinin kalıcı olarak nekroza uğraması",
+       "isCorrect": false,
+       "explanation": "Karotis kemoreseptörlerinin kalıcı olarak nekroza uğraması, farmakolojide farklı bir biyolojik yolağa ve etki mekanizmasına sahip özgün bir kavramdır. Bu seçenek soruda hedeflenen spesifik klinik etki mekanizmasını açıklamaz."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "maskedTerm": "karbondioksit",
+     "hint": "Solunum merkezinin uyarılmasını sağlayan temel arteriyel gaz (CO2)",
+     "options": [
+      "karbondioksit",
+      "oksijen",
+      "azot",
+      "karbonmonoksit"
+     ],
+     "sentence": "Opioid doza bağımlı solunum depresyonu yaparak arteriyel kanda karbondioksit birikmesine yol açar."
+    },
+    {
+     "type": "active_recall",
+     "question": "Antitusif (öksürük kesici) doz ile analjezik doz arasındaki ilişki nasıldır?",
+     "answer": "Antitusif etki analjezi için gereken dozdan çok daha düşük dozlarda elde edilir."
+    },
+    {
+     "type": "swipe_matching",
+     "leftCategory": "Solunum Depresyonu Bulgusu",
+     "rightCategory": "Antitusif Etki Özelliği",
+     "cards": [
+      {
+       "text": "Dakika solunum sayısında ve tidal volümde düşüş",
+       "category": "left"
+      },
+      {
+       "text": "Arteriyel kanda PaCO2 yükselmesi ve asidoz",
+       "category": "left"
+      },
+      {
+       "text": "Meduller öksürük refleks arkının baskılanması",
+       "category": "right"
+      },
+      {
+       "text": "Analjezik dozun altındaki düşük dozlarda elde edilebilme",
+       "category": "right"
+      }
+     ]
+    }
+   ],
+   "synthesisNarrative": "Beyin sapında medullada yer alan solunum ve öksürük merkezleri opioid agonistlerine yüksek hassasiyet gösterir.\n\n- **Solunum Depresyonu:** Beyin sapı kemosensitif solunum merkezinin PaCO2 artışına verdiği yanıtı doza bağımlı olarak köreltirler. Solunum sayısı ve tidal volüm azalır; PaCO2 yükselir.\n- **Klinik Risk:** Akut zehirlenmede ölüme yol açan nihai mekanizma solunum durmasıdır (apne).\n- **Öksürük Refleksinin Baskılanması:** Meduller öksürük merkezi doğrudan inhibe edilir.\n\n> [!NOTE]\n> Antitusif etki analjezik dozun belirgin olarak altındaki dozlarda ortaya çıkar; bu nedenle kodein gibi zayıf opioidler öksürük kesici olarak güvenle kullanılır."
+  },
+  {
+   "slideNumber": 16,
+   "title": "Pupilla, Trunkal Rijidite ve Isı Düzenlenmesi",
+   "bolum": "4",
+   "pdfSayfalari": [
+    27,
+    28
+   ],
+   "sourcePdf": {
+    "startPage": 27,
+    "endPage": 28
+   },
+   "content": "Opioidler kranial sinir çekirdekleri, ekstrapiramidal motor yolaklar ve hipotalamus üzerinde özgül etkilere sahiptir.\n\n- **Miyozis (Toplu İğne Başı Pupilla):** Okülomotor sinirin Edinger-Westphal parasempatik çekirdeğinin uyarılması sonucu konstriksiyon gelişir. Bu etkiye tolerans gelişmez; tanısal değeri çok yüksektir.\n- **Trunkal Rijidite (Gövde Sertliği):** Hızlı ve yüksek doz fentanil enjeksiyonlarında toraks ve abdominal kaslarda şiddetli tonus artışı gelişir; spontan ve mekanik soluk alıp vermeyi imkansız kılar.\n- **Vücut Isısı:** Hipotalamik termoregülasyon merkezini etkileyerek insanlarda genellikle hafif hipotermiye yol açarlar.\n\n> [!IMPORTANT]\n> Trunkal rijidite acil bir tablodur; hava yolu kontrolü için nöromüsküler bloker veya nalokson uygulanmasını zorunlu kılar.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Morfin kullanımında ortaya çıkan ve kronik bağımlılarda dahi TOLERANS GELİŞMEYEN karakteristik pupilla bulgusu hangisidir?",
+     "options": [
+      {
+       "text": "Miyozis (Edinger-Westphal uyarımı ile daralma)",
+       "isCorrect": true,
+       "explanation": "Miyozis (Edinger-Westphal uyarımı ile daralma), bu klinik durumda beklenen temel farmakolojik yanıtı ve mekanizmayı temsil eder. Soruda aranan hedef farmakolojik kavram doğru olarak bu seçenekle açıklanmaktadır."
+      },
+      {
+       "text": "Midriyazis (Sempatik tonus artışı ile genişleme)",
+       "isCorrect": false,
+       "explanation": "Midriyazis (Sempatik tonus artışı ile genişleme), farmakolojide farklı bir biyolojik yolağa ve etki mekanizmasına sahip özgün bir kavramdır. Bu seçenek soruda hedeflenen spesifik klinik etki mekanizmasını açıklamaz."
+      },
+      {
+       "text": "Anizokori (İki pupilla arasında asimetri)",
+       "isCorrect": false,
+       "explanation": "Anizokori (İki pupilla arasında asimetri), farmakolojide farklı bir biyolojik yolağa ve etki mekanizmasına sahip özgün bir kavramdır. Bu seçenek soruda hedeflenen spesifik klinik etki mekanizmasını açıklamaz."
+      },
+      {
+       "text": "Işık refleksinin tamamen kaybolmasıyla fiks dilatasyon",
+       "isCorrect": false,
+       "explanation": "Işık refleksinin tamamen kaybolmasıyla fiks dilatasyon, farmakolojide farklı bir biyolojik yolağa ve etki mekanizmasına sahip özgün bir kavramdır. Bu seçenek soruda hedeflenen spesifik klinik etki mekanizmasını açıklamaz."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "maskedTerm": "Edinger-Westphal",
+     "hint": "Pupilla konstriksiyonunu yöneten parasempatik kranial sinir çekirdeği",
+     "options": [
+      "Edinger-Westphal",
+      "Locus coeruleus",
+      "Nükleus ambiguus",
+      "Nükleus solitarius"
+     ],
+     "sentence": "Morfin okülomotor sinirin Edinger-Westphal çekirdeğini uyararak toplu iğne başı pupilla oluşturur."
+    },
+    {
+     "type": "active_recall",
+     "question": "Trunkal rijidite tablosu hangi opioid grubunun hızlı intravenöz uygulanmasında en sık görülür ve klinik tehlikesi nedir?",
+     "answer": "Fentanil ve türevlerinde görülür; göğüs duvarını kilitleyerek mekanik ventilasyonu imkansız hale getirir."
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Opioidlerin otonomik ve motor etkileri hakkında klinik önermeler:",
+     "items": [
+      {
+       "text": "Miyozis bulgusuna uzun süreli kullanımda dahi tolerans gelişmez.",
+       "isLie": false,
+       "explanation": "Miyozis ve konstipasyon tolerans gelişmeyen iki klasik etkidir."
+      },
+      {
+       "text": "Trunkal rijidite yalnızca kodein şuruplarının oral kullanımında görülen hafif bir tablodur.",
+       "isLie": true,
+       "explanation": "Trunkal rijidite yüksek doz hızlı IV fentanil enjeksiyonunda görülen hayatı tehdit eden kas sertliğidir."
+      },
+      {
+       "text": "Morfin insanlarda hipotalamus üzerinden hafif hipotermi oluşturabilir.",
+       "isLie": false,
+       "explanation": "Mü reseptör aktivasyonu termoregülasyonu etkileyerek vücut sıcaklığını düşürebilir."
+      }
+     ]
+    }
+   ],
+   "synthesisNarrative": "Opioidler kranial sinir çekirdekleri, ekstrapiramidal motor yolaklar ve hipotalamus üzerinde özgül etkilere sahiptir.\n\n- **Miyozis (Toplu İğne Başı Pupilla):** Okülomotor sinirin Edinger-Westphal parasempatik çekirdeğinin uyarılması sonucu konstriksiyon gelişir. Bu etkiye tolerans gelişmez; tanısal değeri çok yüksektir.\n- **Trunkal Rijidite (Gövde Sertliği):** Hızlı ve yüksek doz fentanil enjeksiyonlarında toraks ve abdominal kaslarda şiddetli tonus artışı gelişir; spontan ve mekanik soluk alıp vermeyi imkansız kılar.\n- **Vücut Isısı:** Hipotalamik termoregülasyon merkezini etkileyerek insanlarda genellikle hafif hipotermiye yol açarlar.\n\n> [!IMPORTANT]\n> Trunkal rijidite acil bir tablodur; hava yolu kontrolü için nöromüsküler bloker veya nalokson uygulanmasını zorunlu kılar."
+  },
+  {
+   "slideNumber": 17,
+   "title": "Kardiyovasküler Sistem ve Meperidin Farkı",
+   "bolum": "4",
+   "pdfSayfalari": [
+    29,
+    29
+   ],
+   "sourcePdf": {
+    "startPage": 29,
+    "endPage": 29
+   },
+   "content": "Opioidlerin terapötik dozlarda miyokard kontraktilitesi üzerine doğrudan belirgin bir baskılayıcı etkisi yoktur.\n\n- **Bradikardi Mekanizması:** Morfin ve fentanil meduller vagal çekirdekleri uyararak bradikardi oluşturur.\n- **Hipotansiyon:** Periferik damarlarda vazodilatasyon ve morfinin mast hücrelerinden histamin salıvermesi ortostatik hipotansiyona yol açabilir.\n- **Meperidin İstisnası:** Yapısal olarak atropine benzerlik gösterir; antimuskarinik özellikleri nedeniyle bradikardi yerine taşikardi oluşturur.\n- **Normeperidin Toksisitesi:** Meperidinin karaciğer metaboliti normeperidin santral eksitasyon, kas seğirmeleri ve konvülsiyon yapabilir.\n\n> [!IMPORTANT]\n> Taşikardi yapması ve normeperidin birikimiyle konvülsiyon riski taşıması nedeniyle meperidinin kronik ve tekrarlayan kullanımı terk edilmiştir.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Atropin benzeri antimuskarinik kimyasal yapısı nedeniyle diğer opioidlerin aksine taşikardi yapabilen sentetik opioid hangisidir?",
+     "options": [
+      {
+       "text": "Meperidin",
+       "isCorrect": true,
+       "explanation": "Meperidin, bu klinik durumda beklenen temel farmakolojik yanıtı ve mekanizmayı temsil eder. Soruda aranan hedef farmakolojik kavram doğru olarak bu seçenekle açıklanmaktadır."
+      },
+      {
+       "text": "Morfin",
+       "isCorrect": false,
+       "explanation": "Morfin, farmakolojide farklı bir biyolojik yolağa ve etki mekanizmasına sahip özgün bir kavramdır. Bu seçenek soruda hedeflenen spesifik klinik etki mekanizmasını açıklamaz."
+      },
+      {
+       "text": "Fentanil",
+       "isCorrect": false,
+       "explanation": "Fentanil, farmakolojide farklı bir biyolojik yolağa ve etki mekanizmasına sahip özgün bir kavramdır. Bu seçenek soruda hedeflenen spesifik klinik etki mekanizmasını açıklamaz."
+      },
+      {
+       "text": "Remifentanil",
+       "isCorrect": false,
+       "explanation": "Remifentanil, farmakolojide farklı bir biyolojik yolağa ve etki mekanizmasına sahip özgün bir kavramdır. Bu seçenek soruda hedeflenen spesifik klinik etki mekanizmasını açıklamaz."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "maskedTerm": "normeperidin",
+     "hint": "Meperidinin nörotoksik ve eksitatör santral metaboliti",
+     "options": [
+      "normeperidin",
+      "morfin-6-glukuronid",
+      "norfentanil",
+      "nalokson"
+     ],
+     "sentence": "Meperidinin aktif metaboliti olan normeperidin böbrek yetmezliğinde birikerek konvülsiyon oluşturabilir."
+    },
+    {
+     "type": "active_recall",
+     "question": "Morfin ve fentanil bradikardi yaparken meperidin neden taşikardiye yol açar?",
+     "answer": "Meperidinin atropin benzeri kimyasal yapıya sahip olması ve antimuskarinik etki göstermesidir."
+    },
+    {
+     "type": "swipe_matching",
+     "leftCategory": "Klasik Opioid (Morfin)",
+     "rightCategory": "Meperidin Özelliği",
+     "cards": [
+      {
+       "text": "Meduller vagal uyarım ile bradikardi oluşturma",
+       "category": "left"
+      },
+      {
+       "text": "Glukuronidasyon ile metabolize edilme",
+       "category": "left"
+      },
+      {
+       "text": "Antimuskarinik etki ile taşikardi oluşturma",
+       "category": "right"
+      },
+      {
+       "text": "Toksik metaboliti normeperidin ile konvülsiyon riski",
+       "category": "right"
+      }
+     ]
+    }
+   ],
+   "synthesisNarrative": "Opioidlerin terapötik dozlarda miyokard kontraktilitesi üzerine doğrudan belirgin bir baskılayıcı etkisi yoktur.\n\n- **Bradikardi Mekanizması:** Morfin ve fentanil meduller vagal çekirdekleri uyararak bradikardi oluşturur.\n- **Hipotansiyon:** Periferik damarlarda vazodilatasyon ve morfinin mast hücrelerinden histamin salıvermesi ortostatik hipotansiyona yol açabilir.\n- **Meperidin İstisnası:** Yapısal olarak atropine benzerlik gösterir; antimuskarinik özellikleri nedeniyle bradikardi yerine taşikardi oluşturur.\n- **Normeperidin Toksisitesi:** Meperidinin karaciğer metaboliti normeperidin santral eksitasyon, kas seğirmeleri ve konvülsiyon yapabilir.\n\n> [!IMPORTANT]\n> Taşikardi yapması ve normeperidin birikimiyle konvülsiyon riski taşıması nedeniyle meperidinin kronik ve tekrarlayan kullanımı terk edilmiştir."
+  },
+  {
+   "slideNumber": 18,
+   "title": "Gastrointestinal, Biliyer ve Periferik Etkiler",
+   "bolum": "4",
+   "pdfSayfalari": [
+    30,
+    34
+   ],
+   "sourcePdf": {
+    "startPage": 30,
+    "endPage": 34
+   },
+   "content": "Gastrointestinal kanal ve düz kaslı organlar yüksek yoğunlukta opioid reseptörleri barındırır.\n\n- **Konstipasyon:** Mide boşalması gecikir, propulsif barsak peristaltizmi durur, anal sfinkter tonusu artar ve sıvı emilimi artar. Bu etkiye tolerans gelişmez.\n- **Safra Yolları Spazmı:** Oddi sfinkterinde kasılma oluşturarak biliyer basıncı belirgin artırırlar; safra koliği benzeri epigastrik ağrı tetikleyebilirler.\n- **Üriner Retansiyon:** Mesane detrusor kasını gevşetip internal sfinkter tonusunu artırarak idrar yapmayı güçleştirirler.\n- **Histamin Salınımı:** Morfin mast hücrelerinden doğrudan histamin degranülasyonu yaparak ürtiker, terleme ve kaşıntı (pruritus) oluşturur.\n\n> [!NOTE]\n> Opioid tedavisi başlanan her hastada konstipasyon profilaksisi (laksatif) tedavi rejimine ilk günden eklenmelidir.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Morfinin gastrointestinal ve biliyer sistemdeki etkileri ile ilgili aşağıdaki ifadelerden hangisi DOĞRUDUR?",
+     "options": [
+      {
+       "text": "Oddi sfinkterinde spazm yaparak biliyer basıncı artırır ve konstipasyon yapar.",
+       "isCorrect": true,
+       "explanation": "Oddi sfinkterinde spazm yaparak biliyer basıncı artırır ve konstipasyon yapar., bu klinik durumda beklenen temel farmakolojik yanıtı ve mekanizmayı temsil eder. Soruda aranan hedef farmakolojik kavram doğru olarak bu seçenekle açıklanmaktadır."
+      },
+      {
+       "text": "Barsak propulsif peristaltizmini hızlandırarak sekretuar diyare oluşturur.",
+       "isCorrect": false,
+       "explanation": "Barsak propulsif peristaltizmini hızlandırarak sekretuar diyare oluşturur., farmakolojide farklı bir biyolojik yolağa ve etki mekanizmasına sahip özgün bir kavramdır. Bu seçenek soruda hedeflenen spesifik klinik etki mekanizmasını açıklamaz."
+      },
+      {
+       "text": "Kronik kullanımda konstipasyon etkisine birkaç hafta içinde tam tolerans gelişir.",
+       "isCorrect": false,
+       "explanation": "Kronik kullanımda konstipasyon etkisine birkaç hafta içinde tam tolerans gelişir., farmakolojide farklı bir biyolojik yolağa ve etki mekanizmasına sahip özgün bir kavramdır. Bu seçenek soruda hedeflenen spesifik klinik etki mekanizmasını açıklamaz."
+      },
+      {
+       "text": "Oddi sfinkterini gevşeterek safra akışını belirgin derecede kolaylaştırır.",
+       "isCorrect": false,
+       "explanation": "Oddi sfinkterini gevşeterek safra akışını belirgin derecede kolaylaştırır., farmakolojide farklı bir biyolojik yolağa ve etki mekanizmasına sahip özgün bir kavramdır. Bu seçenek soruda hedeflenen spesifik klinik etki mekanizmasını açıklamaz."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "maskedTerm": "histamin",
+     "hint": "Mast hücrelerinden salınarak vazodilatasyon ve pruritus yapan otokoid",
+     "options": [
+      "histamin",
+      "serotonin",
+      "bradikinin",
+      "lökotrien"
+     ],
+     "sentence": "Morfinin mast hücrelerinden doğrudan histamin salıvermesi ciltte kaşıntı ve ürtikere yol açar."
+    },
+    {
+     "type": "active_recall",
+     "question": "Opioidlerin kronik kullanımında tolerans GELİŞMEYEN iki temel farmakolojik etki hangisidir?",
+     "answer": "Miyozis (pupilla daralması) ve konstipasyondur (kabızlık)."
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Opioidlerin organ sistemleri etkileri hakkında klinik önermeler:",
+     "items": [
+      {
+       "text": "Morfin Oddi sfinkterinde spazma yol açarak safra yolları basıncını yükseltir.",
+       "isLie": false,
+       "explanation": "Biliyer düz kas kasılması safra basıncını artırır."
+      },
+      {
+       "text": "Opioid konstipasyonuna zamanla tam tolerans geliştiği için laksatif gerekmez.",
+       "isLie": true,
+       "explanation": "Konstipasyona asla tolerans gelişmez; profilaktik laksatif zorunludur."
+      },
+      {
+       "text": "Morfin doğrudan mast hücre degranülasyonu ile histamin salıverebilir.",
+       "isLie": false,
+       "explanation": "İmmünolojik olmayan yolla histamin salınımı kaşıntı ve hipotansiyon yapar."
+      }
+     ]
+    }
+   ],
+   "synthesisNarrative": "Gastrointestinal kanal ve düz kaslı organlar yüksek yoğunlukta opioid reseptörleri barındırır.\n\n- **Konstipasyon:** Mide boşalması gecikir, propulsif barsak peristaltizmi durur, anal sfinkter tonusu artar ve sıvı emilimi artar. Bu etkiye tolerans gelişmez.\n- **Safra Yolları Spazmı:** Oddi sfinkterinde kasılma oluşturarak biliyer basıncı belirgin artırırlar; safra koliği benzeri epigastrik ağrı tetikleyebilirler.\n- **Üriner Retansiyon:** Mesane detrusor kasını gevşetip internal sfinkter tonusunu artırarak idrar yapmayı güçleştirirler.\n- **Histamin Salınımı:** Morfin mast hücrelerinden doğrudan histamin degranülasyonu yaparak ürtiker, terleme ve kaşıntı (pruritus) oluşturur.\n\n> [!NOTE]\n> Opioid tedavisi başlanan her hastada konstipasyon profilaksisi (laksatif) tedavi rejimine ilk günden eklenmelidir."
+  },
+  {
+   "slideNumber": 19,
+   "title": "[TEKRAR SAYFASI - CHECKPOINT 2] Hücresel Mekanizmalar ve Organ Etkileri",
+   "bolum": "4",
+   "isCheckpoint": true,
+   "pdfSayfalari": [
+    15,
+    34
+   ],
+   "sourcePdf": {
+    "startPage": 15,
+    "endPage": 34
+   },
+   "content": "Bu bölümde opioidlerin hücresel sinyal yolaklarını ve organ sistemlerindeki temel farmakolojik yanıtlarını pekiştirdik.\n\n- **Hücresel Mekanizma:** Gi/Go kenetlenmesiyle cAMP azalır, presinaptik Ca2+ kanalları kapanır ve postsinaptik K+ kanalları açılarak hiperpolarizasyon sağlanır.\n- **Ağrı Yolları:** Omurilik arka boynuzunda P maddesi salınımı baskılanırken, beyin sapında PAG disinhibisyonu ile inen analjezik yollar uyarılır.\n- **Organ Etkileri:** Solunum merkezinin CO2 duyarlılığı körelir (fatal risk), Edinger-Westphal uyarımıyla miyozis gelişir ve barsak motilitesi durur.\n\n> [!NOTE]\n> Analjezi, sedasyon ve solunum depresyonuna hızla tolerans gelişirken; miyozis ve konstipasyona karşı tolerans gelişmez.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Opioidlerin hücresel mekanizması ve klinik etkileri ile ilgili aşağıdaki ifadelerden hangisi YANLIŞTIR?",
+     "options": [
+      {
+       "text": "Kronik morfin tedavisinde miyozis ve konstipasyona hızla tam tolerans gelişir.",
+       "isCorrect": true,
+       "explanation": "Kronik morfin tedavisinde miyozis ve konstipasyona hızla tam tolerans gelişir., bu klinik durumda beklenen temel farmakolojik yanıtı ve mekanizmayı temsil eder. Soruda aranan hedef farmakolojik kavram doğru olarak bu seçenekle açıklanmaktadır."
+      },
+      {
+       "text": "Presinaptik voltaj bağımlı kalsiyum kanalları kapatılarak transmiter salınımı durdurulur.",
+       "isCorrect": false,
+       "explanation": "Presinaptik voltaj bağımlı kalsiyum kanalları kapatılarak transmiter salınımı durdurulur., farmakolojide farklı bir biyolojik yolağa ve etki mekanizmasına sahip özgün bir kavramdır. Bu seçenek soruda hedeflenen spesifik klinik etki mekanizmasını açıklamaz."
+      },
+      {
+       "text": "Meperidin atropin benzeri yapısı nedeniyle diğer opioidlerin aksine taşikardi yapabilir.",
+       "isCorrect": false,
+       "explanation": "Meperidin atropin benzeri yapısı nedeniyle diğer opioidlerin aksine taşikardi yapabilir., farmakolojide farklı bir biyolojik yolağa ve etki mekanizmasına sahip özgün bir kavramdır. Bu seçenek soruda hedeflenen spesifik klinik etki mekanizmasını açıklamaz."
+      },
+      {
+       "text": "Beyin sapında periakuaduktal gri cevherde GABAerjik disinhibisyon analjeziyi başlatır.",
+       "isCorrect": false,
+       "explanation": "Beyin sapında periakuaduktal gri cevherde GABAerjik disinhibisyon analjeziyi başlatır., farmakolojide farklı bir biyolojik yolağa ve etki mekanizmasına sahip özgün bir kavramdır. Bu seçenek soruda hedeflenen spesifik klinik etki mekanizmasını açıklamaz."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "maskedTerm": "solunum depresyonu",
+     "hint": "Beyin sapı CO2 duyarlılığının körelmesiyle ortaya çıkan hayatı tehdit eden tablo",
+     "options": [
+      "solunum depresyonu",
+      "trunkal rijidite",
+      "pruritus",
+      "konstipasyon"
+     ],
+     "sentence": "Opioid intoksikasyonunda ölümcül tablonun nedeni beyin sapında gelişen solunum depresyonudur."
+    },
+    {
+     "type": "interactive_table",
+     "title": "Opioid Etkileri ve Tolerans Gelişimi Karşılaştırması",
+     "tableHeaders": [
+      "Etki",
+      "Tolerans Durumu",
+      "Sorumlu Mekanizma"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Analjezi ve Öfori",
+         "isMasked": false
+        },
+        {
+         "text": "Yüksek tolerans gelişir",
+         "isMasked": true,
+         "hint": "İlgili biyolojik özellik"
+        },
+        {
+         "text": "Reseptör desensitizasyonu ve internalizasyon",
+         "isMasked": false
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Solunum Depresyonu",
+         "isMasked": false
+        },
+        {
+         "text": "Yüksek tolerans gelişir",
+         "isMasked": true,
+         "hint": "İlgili biyolojik özellik"
+        },
+        {
+         "text": "Solunum merkezinin desensitizasyonu",
+         "isMasked": false
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Miyozis",
+         "isMasked": false
+        },
+        {
+         "text": "Tolerans gelişmez",
+         "isMasked": true,
+         "hint": "İlgili biyolojik özellik"
+        },
+        {
+         "text": "Edinger-Westphal çekirdek uyarımı",
+         "isMasked": false
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Konstipasyon",
+         "isMasked": false
+        },
+        {
+         "text": "Tolerans gelişmez",
+         "isMasked": true,
+         "hint": "İlgili biyolojik özellik"
+        },
+        {
+         "text": "Periferik miyenterik pleksus inhibisyonu",
+         "isMasked": false
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Meperidinin tekrarlayan kullanımında ortaya çıkan konvülsiyon riskinin biyokimyasal nedeni nedir?",
+     "answer": "Karaciğerde oluşan normeperidin metabolitinin santral sinir sistemini eksite edici etkisidir."
+    }
+   ],
+   "synthesisNarrative": "Bu bölümde opioidlerin hücresel sinyal yolaklarını ve organ sistemlerindeki temel farmakolojik yanıtlarını pekiştirdik.\n\n- **Hücresel Mekanizma:** Gi/Go kenetlenmesiyle cAMP azalır, presinaptik Ca2+ kanalları kapanır ve postsinaptik K+ kanalları açılarak hiperpolarizasyon sağlanır.\n- **Ağrı Yolları:** Omurilik arka boynuzunda P maddesi salınımı baskılanırken, beyin sapında PAG disinhibisyonu ile inen analjezik yollar uyarılır.\n- **Organ Etkileri:** Solunum merkezinin CO2 duyarlılığı körelir (fatal risk), Edinger-Westphal uyarımıyla miyozis gelişir ve barsak motilitesi durur.\n\n> [!NOTE]\n> Analjezi, sedasyon ve solunum depresyonuna hızla tolerans gelişirken; miyozis ve konstipasyona karşı tolerans gelişmez."
+  },
+  {
+   "slideNumber": 20,
+   "title": "Klinik Endikasyonlar ve Ağrı Yönetimi İlkeleri",
+   "bolum": "5",
+   "pdfSayfalari": [
+    35,
+    36
+   ],
+   "sourcePdf": {
+    "startPage": 35,
+    "endPage": 36
+   },
+   "content": "Opioid analjeziklerin klinik kullanımında temel amaç, hastaya en az advers etkiyle yeterli ağrı kontrolü sağlamaktır.\n\n- **Şiddetli Akut Ağrı:** Cerrahi operasyonlar, travmalar ve akut miyokard enfarktüsünde parenteral morfin veya fentanil tercih edilir.\n- **Kronik Kanser Ağrısı:** Dünya Sağlık Örgütü ağrı basamak tedavisinin üçüncü basamağında yer alırlar; saatli ve düzenli protokollerle uygulanırlar.\n- **Yavaş Salımlı Formülasyonlar:** Kontrollü salımlı oral morfin ve oksikodon tabletleri veya transdermal fentanil bantları plazma konsantrasyonunu sabit tutar.\n\n> [!NOTE]\n> Kronik kanser ağrısında ihtiyaç duyuldukça değil, ağrı başlamadan önce düzenli saat aralıklarıyla ilaç verilmesi esastır.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Kronik kanser ağrısının medikal tedavisinde Dünya Sağlık Örgütü (DSÖ) protokolüne göre temel uygulama prensibi nedir?",
+     "options": [
+      {
+       "text": "Ağrı ortaya çıkmadan önce saatli ve düzenli aralıklarla analjezik uygulanması",
+       "isCorrect": true,
+       "explanation": "Ağrı ortaya çıkmadan önce saatli ve düzenli aralıklarla analjezik uygulanması, bu klinik durumda beklenen temel farmakolojik yanıtı ve mekanizmayı temsil eder. Soruda aranan hedef farmakolojik kavram doğru olarak bu seçenekle açıklanmaktadır."
+      },
+      {
+       "text": "Yalnızca hasta şiddetli ağrı krizi yaşadığında PRN (ihtiyaç halinde) verilmesi",
+       "isCorrect": false,
+       "explanation": "Yalnızca hasta şiddetli ağrı krizi yaşadığında PRN (ihtiyaç halinde) verilmesi, farmakolojide farklı bir biyolojik yolağa ve etki mekanizmasına sahip özgün bir kavramdır. Bu seçenek soruda hedeflenen spesifik klinik etki mekanizmasını açıklamaz."
+      },
+      {
+       "text": "Tolerans gelişimini önlemek için her hafta ilacın tamamen kesilmesi",
+       "isCorrect": false,
+       "explanation": "Tolerans gelişimini önlemek için her hafta ilacın tamamen kesilmesi, farmakolojide farklı bir biyolojik yolağa ve etki mekanizmasına sahip özgün bir kavramdır. Bu seçenek soruda hedeflenen spesifik klinik etki mekanizmasını açıklamaz."
+      },
+      {
+       "text": "Yan etkilerden kaçınmak için yalnızca periferik antienflamatuar verilmesi",
+       "isCorrect": false,
+       "explanation": "Yan etkilerden kaçınmak için yalnızca periferik antienflamatuar verilmesi, farmakolojide farklı bir biyolojik yolağa ve etki mekanizmasına sahip özgün bir kavramdır. Bu seçenek soruda hedeflenen spesifik klinik etki mekanizmasını açıklamaz."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "maskedTerm": "kontrollü salımlı",
+     "hint": "İlacın vücutta yavaş ve düzenli emilmesini sağlayan farmasötik teknoloji",
+     "options": [
+      "kontrollü salımlı",
+      "hızlı çözünen",
+      "intravenöz puşe",
+      "topikal süspansiyon"
+     ],
+     "sentence": "Kronik kanser ağrısı yönetiminde plazma düzeyini sabit tutmak için kontrollü salımlı formülasyonlar tercih edilir."
+    },
+    {
+     "type": "active_recall",
+     "question": "Kronik kanser ağrısında transdermal uygulamanın (fentanil bandı) hastaya sağladığı en büyük konfor nedir?",
+     "answer": "Günde birden fazla enjeksiyon veya tablet alma ihtiyacını ortadan kaldırarak 72 saat boyunca stabil analjezi sunmasıdır."
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Opioidlerin klinik ağrı yönetimi ilkeleri hakkında bilgiler:",
+     "items": [
+      {
+       "text": "Morfin akut miyokard enfarktüsü ağrısında hem analjezi hem anksiyolitik etki sağlar.",
+       "isLie": false,
+       "explanation": "Morfin sempatik tonusu kırarak miyokardın oksijen tüketimini azaltır."
+      },
+      {
+       "text": "Kronik kanser hastalarında bağımlılık korkusuyla opioid dozları daima yetersiz tutulmalıdır.",
+       "isLie": true,
+       "explanation": "Terminal dönem veya kanser ağrısında tavan dozu yoktur; hastanın ağrısını kesecek doz titre edilir."
+      },
+      {
+       "text": "Transdermal fentanil yamaları kararlı plazma konsantrasyonu oluşturur.",
+       "isLie": false,
+       "explanation": "Cilt altı yağ dokusunda depo oluşturarak 3 gün boyunca sabit salınım sağlar."
+      }
+     ]
+    }
+   ],
+   "synthesisNarrative": "Opioid analjeziklerin klinik kullanımında temel amaç, hastaya en az advers etkiyle yeterli ağrı kontrolü sağlamaktır.\n\n- **Şiddetli Akut Ağrı:** Cerrahi operasyonlar, travmalar ve akut miyokard enfarktüsünde parenteral morfin veya fentanil tercih edilir.\n- **Kronik Kanser Ağrısı:** Dünya Sağlık Örgütü ağrı basamak tedavisinin üçüncü basamağında yer alırlar; saatli ve düzenli protokollerle uygulanırlar.\n- **Yavaş Salımlı Formülasyonlar:** Kontrollü salımlı oral morfin ve oksikodon tabletleri veya transdermal fentanil bantları plazma konsantrasyonunu sabit tutar.\n\n> [!NOTE]\n> Kronik kanser ağrısında ihtiyaç duyuldukça değil, ağrı başlamadan önce düzenli saat aralıklarıyla ilaç verilmesi esastır."
+  },
+  {
+   "slideNumber": 21,
+   "title": "Obstetrik Analjezi ve Akut Pulmoner Ödem",
+   "bolum": "5",
+   "pdfSayfalari": [
+    37,
+    38
+   ],
+   "sourcePdf": {
+    "startPage": 37,
+    "endPage": 38
+   },
+   "content": "Opioidlerin akut acil tablolarda ve doğum eyleminde özgül klinik endikasyonları bulunur.\n\n- **Obstetrik Analjezi:** Doğum ağrılarında opioidler sıklıkla kullanılır; ancak plasenta bariyerini kolaylıkla aşarak fötal dolaşıma geçerler.\n- **Yenidoğan Solunum Depresyonu:** Doğum sırasında anneye verilen opioid bebeğin solunumunu baskılayabilir; doğum salonunda göbek kordonu için nalokson hazır bulundurulmalıdır.\n- **Akut Pulmoner Ödem:** Sol ventrikül yetmezliğine bağlı akciğer ödeminde intravenöz morfin venodilatasyon yaparak kalbe venöz dönüşü (ön yük) ve pulmoner kapiller basıncı düşürür.\n\n> [!IMPORTANT]\n> Morfin pulmoner ödemde anksiyeteyi giderir, nefes darlığı hissini hafifletir ve venöz göllenme ile kalbin ön yükünü azaltarak hayat kurtarır.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Sol kalp yetmezliğine bağlı akut pulmoner ödem tablosunda intravenöz morfin uygulanmasının temel hemodinamik yararı nedir?",
+     "options": [
+      {
+       "text": "Sistemik venodilatasyon ile venöz dönüşü (ön yükü) ve pulmoner kapiller basıncı azaltması",
+       "isCorrect": true,
+       "explanation": "Sistemik venodilatasyon ile venöz dönüşü (ön yükü) ve pulmoner kapiller basıncı azaltması, bu klinik durumda beklenen temel farmakolojik yanıtı ve mekanizmayı temsil eder. Soruda aranan hedef farmakolojik kavram doğru olarak bu seçenekle açıklanmaktadır."
+      },
+      {
+       "text": "Pozitif inotropik etki ile miyokard kontraktilitesini iki katına çıkarması",
+       "isCorrect": false,
+       "explanation": "Pozitif inotropik etki ile miyokard kontraktilitesini iki katına çıkarması, farmakolojide farklı bir biyolojik yolağa ve etki mekanizmasına sahip özgün bir kavramdır. Bu seçenek soruda hedeflenen spesifik klinik etki mekanizmasını açıklamaz."
+      },
+      {
+       "text": "Böbrek tübüllerinde doğrudan sodyum geri emilimini bloke ederek diürez yapması",
+       "isCorrect": false,
+       "explanation": "Böbrek tübüllerinde doğrudan sodyum geri emilimini bloke ederek diürez yapması, farmakolojide farklı bir biyolojik yolağa ve etki mekanizmasına sahip özgün bir kavramdır. Bu seçenek soruda hedeflenen spesifik klinik etki mekanizmasını açıklamaz."
+      },
+      {
+       "text": "Koroner arterlerde vazokonstriksiyon yaparak periferik direnci yükseltmesi",
+       "isCorrect": false,
+       "explanation": "Koroner arterlerde vazokonstriksiyon yaparak periferik direnci yükseltmesi, farmakolojide farklı bir biyolojik yolağa ve etki mekanizmasına sahip özgün bir kavramdır. Bu seçenek soruda hedeflenen spesifik klinik etki mekanizmasını açıklamaz."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "maskedTerm": "nalokson",
+     "hint": "Yenidoğan solunum depresyonunu anında geri çeviren kompetitif opioid antidotu",
+     "options": [
+      "nalokson",
+      "morfin",
+      "oksitosin",
+      "fentanil"
+     ],
+     "sentence": "Doğum sırasında anneye opioid verildiğinde yenidoğanda solunum depresyonuna karşı nalokson hazır bulundurulmalıdır."
+    },
+    {
+     "type": "active_recall",
+     "question": "Doğum analjezisinde opioid kullanımının uterus kasılmaları ve yenidoğan üzerindeki iki temel etkisi nedir?",
+     "answer": "Doğum eylemini uzatabilir ve plasentayı geçerek yenidoğanda solunum depresyonu yapabilir."
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Obstetrik analjezi ve pulmoner ödemde opioid kullanımı hakkında önermeler:",
+     "items": [
+      {
+       "text": "Morfin pulmoner ödemli hastada venöz göllenme sağlayarak kalbin ön yükünü hafifletir.",
+       "isLie": false,
+       "explanation": "Venodilatasyon pulmoner kapiller tıkacı çözer."
+      },
+      {
+       "text": "Opioidler lipofilik yapıları nedeniyle plasenta bariyerini kesinlikle geçemezler.",
+       "isLie": true,
+       "explanation": "Opioidler plasentayı hızla aşarak fötusa geçer ve neonatal depresyon yapabilir."
+      },
+      {
+       "text": "Morfin hastadaki hava açlığı ve panik hissini yatıştırır.",
+       "isLie": false,
+       "explanation": "Sedatif ve anksiyolitik etkisi solunum eforunun panik yükünü kırar."
+      }
+     ]
+    }
+   ],
+   "synthesisNarrative": "Opioidlerin akut acil tablolarda ve doğum eyleminde özgül klinik endikasyonları bulunur.\n\n- **Obstetrik Analjezi:** Doğum ağrılarında opioidler sıklıkla kullanılır; ancak plasenta bariyerini kolaylıkla aşarak fötal dolaşıma geçerler.\n- **Yenidoğan Solunum Depresyonu:** Doğum sırasında anneye verilen opioid bebeğin solunumunu baskılayabilir; doğum salonunda göbek kordonu için nalokson hazır bulundurulmalıdır.\n- **Akut Pulmoner Ödem:** Sol ventrikül yetmezliğine bağlı akciğer ödeminde intravenöz morfin venodilatasyon yaparak kalbe venöz dönüşü (ön yük) ve pulmoner kapiller basıncı düşürür.\n\n> [!IMPORTANT]\n> Morfin pulmoner ödemde anksiyeteyi giderir, nefes darlığı hissini hafifletir ve venöz göllenme ile kalbin ön yükünü azaltarak hayat kurtarır."
+  },
+  {
+   "slideNumber": 22,
+   "title": "Dengeli Anestezi ve Cerrahi Kullanım",
+   "bolum": "5",
+   "pdfSayfalari": [
+    39,
+    39
+   ],
+   "sourcePdf": {
+    "startPage": 39,
+    "endPage": 39
+   },
+   "content": "Genel anestezi uygulamalarında opioidler analjezik, sedatif ve kardiyak stabilizasyon bileşeni olarak yer alır.\n\n- **Dengeli Anestezi Konsepti:** İnhalasyon anestezikleri, kas gevşeticiler ve intravenöz opioidlerin kombine kullanımıdır.\n- **Kullanılan Ajanlar:** Fentanil, sufentanil, alfentanil ve ultra kısa etkili remifentanil cerrahide en sık seçilen opioidlerdir.\n- **Kardiyovasküler Kararlılık:** Yüksek doz fentanil ve sufentanil miyokard kontraktilitesini bozmaz; koroner cerrahide hemodinamik kararlılık sağlar.\n\n> [!NOTE]\n> Remifentanilin kandaki non-spesifik esterazlarla hızla parçalanması, cerrahi bitiminde dakikalar içinde hastanın uyanmasını sağlar.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Kanda ve dokularda bulunan non-spesifik esterazlar tarafından hızla hidrolize edilerek ultra kısa etki süresi sergileyen intravenöz opioid hangisidir?",
+     "options": [
+      {
+       "text": "Remifentanil",
+       "isCorrect": true,
+       "explanation": "Remifentanil, bu klinik durumda beklenen temel farmakolojik yanıtı ve mekanizmayı temsil eder. Soruda aranan hedef farmakolojik kavram doğru olarak bu seçenekle açıklanmaktadır."
+      },
+      {
+       "text": "Morfin",
+       "isCorrect": false,
+       "explanation": "Morfin, farmakolojide farklı bir biyolojik yolağa ve etki mekanizmasına sahip özgün bir kavramdır. Bu seçenek soruda hedeflenen spesifik klinik etki mekanizmasını açıklamaz."
+      },
+      {
+       "text": "Metadon",
+       "isCorrect": false,
+       "explanation": "Metadon, farmakolojide farklı bir biyolojik yolağa ve etki mekanizmasına sahip özgün bir kavramdır. Bu seçenek soruda hedeflenen spesifik klinik etki mekanizmasını açıklamaz."
+      },
+      {
+       "text": "Meperidin",
+       "isCorrect": false,
+       "explanation": "Meperidin, farmakolojide farklı bir biyolojik yolağa ve etki mekanizmasına sahip özgün bir kavramdır. Bu seçenek soruda hedeflenen spesifik klinik etki mekanizmasını açıklamaz."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "maskedTerm": "fentanil",
+     "hint": "Cerrahi anestezide morfinden 100 kat güçlü prototip sentetik opioid",
+     "options": [
+      "fentanil",
+      "kodein",
+      "propoksifen",
+      "loperamid"
+     ],
+     "sentence": "Genel cerrahi anestezi protokollerinde fentanil hemodinamik kararlılık sağlayarak inhalasyon anestezik ihtiyacını azaltır."
+    },
+    {
+     "type": "active_recall",
+     "question": "Ultra kısa etkili remifentanilin anestezi sonlandırılmasındaki en büyük farmakokinetik avantajı nedir?",
+     "answer": "Plazma esterazları ile hızla yıkılması sayesinde infüzyon kesildikten 5-10 dakika sonra hastanın tamamen derlenmesidir."
+    },
+    {
+     "type": "swipe_matching",
+     "leftCategory": "Remifentanil Özelliği",
+     "rightCategory": "Morfin Özelliği",
+     "cards": [
+      {
+       "text": "Plazma esterazları ile dakikalar içinde metabolize edilme",
+       "category": "left"
+      },
+      {
+       "text": "İnfüzyon kesilince dakikalar içinde tam derlenme",
+       "category": "left"
+      },
+      {
+       "text": "Karaciğer glukuronidasyon konjugasyonu ile yıkılma",
+       "category": "right"
+      },
+      {
+       "text": "Saatler süren analjezik ve sedatif etki profili",
+       "category": "right"
+      }
+     ]
+    }
+   ],
+   "synthesisNarrative": "Genel anestezi uygulamalarında opioidler analjezik, sedatif ve kardiyak stabilizasyon bileşeni olarak yer alır.\n\n- **Dengeli Anestezi Konsepti:** İnhalasyon anestezikleri, kas gevşeticiler ve intravenöz opioidlerin kombine kullanımıdır.\n- **Kullanılan Ajanlar:** Fentanil, sufentanil, alfentanil ve ultra kısa etkili remifentanil cerrahide en sık seçilen opioidlerdir.\n- **Kardiyovasküler Kararlılık:** Yüksek doz fentanil ve sufentanil miyokard kontraktilitesini bozmaz; koroner cerrahide hemodinamik kararlılık sağlar.\n\n> [!NOTE]\n> Remifentanilin kandaki non-spesifik esterazlarla hızla parçalanması, cerrahi bitiminde dakikalar içinde hastanın uyanmasını sağlar."
+  },
+  {
+   "slideNumber": 23,
+   "title": "Hasta Kontrollü Analjezi (PCA) ve Alternatif Yollar",
+   "bolum": "5",
+   "pdfSayfalari": [
+    40,
+    41
+   ],
+   "sourcePdf": {
+    "startPage": 40,
+    "endPage": 41
+   },
+   "content": "Postoperatif ağrıda ve atılım ağrılarında konvansiyonel parenteral yollara modern alternatifler geliştirilmiştir.\n\n- **Hasta Kontrollü Analjezi (PCA):** Hastanın ağrısı olduğunda bir butona basarak programlanmış dozda IV opioid almasını sağlayan infüzyon sistemidir.\n- **Kilitli Süre (Lockout Interval):** Doz aşımı ve toksisiteyi önlemek amacıyla cihaz iki doz arasında (örneğin 6-10 dakika) kilitlenir; hasta butona bassa dahi ek ilaç vermez.\n- **Alternatif Uygulama Yolları:** Nazal mukoza zengin vaskülarizasyonu sayesinde intranazal fentanil hızlı analjezi sağlar; rektal fitiller ve transdermal yamalar oral alamayanlarda kullanılır.\n\n> [!IMPORTANT]\n> PCA cihazındaki kilitli kalma süresi (lockout interval), hastanın uykuya daldığında istemsizce butona basmasını ve ölümcül doz aşımını önleyen en kritik güvenlik bariyeridir.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Hasta Kontrollü Analjezi (PCA) cihazlarında hastanın aşırı doz alarak solunum depresyonuna girmesini engelleyen temel güvenlik düzeneği nedir?",
+     "options": [
+      {
+       "text": "Kilitli kalma süresi (lockout interval)",
+       "isCorrect": true,
+       "explanation": "Kilitli kalma süresi (lockout interval), bu klinik durumda beklenen temel farmakolojik yanıtı ve mekanizmayı temsil eder. Soruda aranan hedef farmakolojik kavram doğru olarak bu seçenekle açıklanmaktadır."
+      },
+      {
+       "text": "Otomatik nalokson infüzyon pompası",
+       "isCorrect": false,
+       "explanation": "Otomatik nalokson infüzyon pompası, farmakolojide farklı bir biyolojik yolağa ve etki mekanizmasına sahip özgün bir kavramdır. Bu seçenek soruda hedeflenen spesifik klinik etki mekanizmasını açıklamaz."
+      },
+      {
+       "text": "İdrar çıkışı sensörü",
+       "isCorrect": false,
+       "explanation": "İdrar çıkışı sensörü, farmakolojide farklı bir biyolojik yolağa ve etki mekanizmasına sahip özgün bir kavramdır. Bu seçenek soruda hedeflenen spesifik klinik etki mekanizmasını açıklamaz."
+      },
+      {
+       "text": "Damar içi basınç regülatörü",
+       "isCorrect": false,
+       "explanation": "Damar içi basınç regülatörü, farmakolojide farklı bir biyolojik yolağa ve etki mekanizmasına sahip özgün bir kavramdır. Bu seçenek soruda hedeflenen spesifik klinik etki mekanizmasını açıklamaz."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "maskedTerm": "intranazal",
+     "hint": "Burun mukozasından emilim sağlayan hızlı uygulama yolu",
+     "options": [
+      "intranazal",
+      "intratekal",
+      "rektal",
+      "subkutan"
+     ],
+     "sentence": "Tekrarlanan damar yolu enjeksiyonlarından kaçınmak için akut atılım ağrılarında intranazal fentanil spreyi kullanılır."
+    },
+    {
+     "type": "active_recall",
+     "question": "PCA uygulamasında hastanın ağrı hissetmesi ile ilaca ulaşması arasındaki sürenin kısalmasının klinik yararı nedir?",
+     "answer": "Ağrı anksiyetesini kırar, hemşire bağımlılığını azaltır ve daha düşük toplam opioid dozuyla daha stabil analjezi sağlar."
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Hasta kontrollü analjezi (PCA) ve alternatif yollar hakkında önermeler:",
+     "items": [
+      {
+       "text": "Lockout interval süresi boyunca cihaz hastanın buton taleplerini reddeder.",
+       "isLie": false,
+       "explanation": "Bu güvenlik kilidi aşırı birikimi ve toksisiteyi önler."
+      },
+      {
+       "text": "PCA uygulamasında hastanın yakını hasta uyurken butona basarak ilacı sürdürmelidir.",
+       "isLie": true,
+       "explanation": "PCA yalnızca hasta uyanıkken ve kendi kontrolünde kullanılmalıdır; refakatçinin basması ölümcül doz aşımına yol açar."
+      },
+      {
+       "text": "Nazal mukoza hızlı sistemik emilim sağlayan damardan zengin bir yüzeydir.",
+       "isLie": false,
+       "explanation": "İntranazal fentanil dakikalar içinde kanda pik yapar."
+      }
+     ]
+    }
+   ],
+   "synthesisNarrative": "Postoperatif ağrıda ve atılım ağrılarında konvansiyonel parenteral yollara modern alternatifler geliştirilmiştir.\n\n- **Hasta Kontrollü Analjezi (PCA):** Hastanın ağrısı olduğunda bir butona basarak programlanmış dozda IV opioid almasını sağlayan infüzyon sistemidir.\n- **Kilitli Süre (Lockout Interval):** Doz aşımı ve toksisiteyi önlemek amacıyla cihaz iki doz arasında (örneğin 6-10 dakika) kilitlenir; hasta butona bassa dahi ek ilaç vermez.\n- **Alternatif Uygulama Yolları:** Nazal mukoza zengin vaskülarizasyonu sayesinde intranazal fentanil hızlı analjezi sağlar; rektal fitiller ve transdermal yamalar oral alamayanlarda kullanılır.\n\n> [!IMPORTANT]\n> PCA cihazındaki kilitli kalma süresi (lockout interval), hastanın uykuya daldığında istemsizce butona basmasını ve ölümcül doz aşımını önleyen en kritik güvenlik bariyeridir."
+  },
+  {
+   "slideNumber": 24,
+   "title": "Tolerans Dinamikleri ve Çapraz Tolerans",
+   "bolum": "6",
+   "pdfSayfalari": [
+    42,
+    45
+   ],
+   "sourcePdf": {
+    "startPage": 42,
+    "endPage": 45
+   },
+   "content": "Tekrarlayan opioid uygulamalarında aynı terapötik yanıtı elde etmek için giderek artan dozlara gereksinim duyulur.\n\n- **Toleransın Hızla Geliştiği Etkiler:** Analjezi, sedasyon, öfori ve en önemlisi solunum depresyonu etkilerine hızla tolerans gelişir.\n- **Tolerans Gelişmeyen Etkiler:** Miyozis (pupilla daralması) ve konstipasyona (kabızlık) karşı tolerans gelişmez; bu iki bulgu kronik bağımlılarda bile mevcuttur.\n- **Çapraz Tolerans ve Opioid Rotasyonu:** Bir mü agonistine tolerans geliştiğinde diğer mü agonistlerine tolerans kısmi (inkomplet) kalır.\n\n> [!IMPORTANT]\n> Opioid rotasyonunda yeni başlanan ilacın dozu teorik eşdeğer dozdan %25 ila %50 daha düşük hesaplanır; aksi halde eksik çapraz tolerans nedeniyle aşırı doz gelişebilir.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Kronik opioid kullanımında tolerans gelişen hastada başka bir opioide geçilirken (opioid rotasyonu) başlangıç dozunun hesaplanandan düşük tutulmasının farmakolojik gerekçesi nedir?",
+     "options": [
+      {
+       "text": "Reseptörler arasında çapraz toleransın inkomplet (eksik) olması",
+       "isCorrect": true,
+       "explanation": "Reseptörler arasında çapraz toleransın inkomplet (eksik) olması, bu klinik durumda beklenen temel farmakolojik yanıtı ve mekanizmayı temsil eder. Soruda aranan hedef farmakolojik kavram doğru olarak bu seçenekle açıklanmaktadır."
+      },
+      {
+       "text": "Yeni opioidin karaciğerde hiç metabolize edilememesi",
+       "isCorrect": false,
+       "explanation": "Yeni opioidin karaciğerde hiç metabolize edilememesi, farmakolojide farklı bir biyolojik yolağa ve etki mekanizmasına sahip özgün bir kavramdır. Bu seçenek soruda hedeflenen spesifik klinik etki mekanizmasını açıklamaz."
+      },
+      {
+       "text": "Eski opioidin kanda kalıcı olarak nötralizan antikor oluşturması",
+       "isCorrect": false,
+       "explanation": "Eski opioidin kanda kalıcı olarak nötralizan antikor oluşturması, farmakolojide farklı bir biyolojik yolağa ve etki mekanizmasına sahip özgün bir kavramdır. Bu seçenek soruda hedeflenen spesifik klinik etki mekanizmasını açıklamaz."
+      },
+      {
+       "text": "Yeni ilacın böbreklerden atılımının imkansız olması",
+       "isCorrect": false,
+       "explanation": "Yeni ilacın böbreklerden atılımının imkansız olması, farmakolojide farklı bir biyolojik yolağa ve etki mekanizmasına sahip özgün bir kavramdır. Bu seçenek soruda hedeflenen spesifik klinik etki mekanizmasını açıklamaz."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "maskedTerm": "rotasyonu",
+     "hint": "Farklı bir moleküle dönerek çapraz tolerans boşluğundan yararlanma işlemi",
+     "options": [
+      "rotasyonu",
+      "antagonizması",
+      "fiksasyonu",
+      "eliminasyonu"
+     ],
+     "sentence": "Tolerans gelişen hastada analjezik etkiyi korumak için farklı bir opioide geçilmesine opioid rotasyonu denir."
+    },
+    {
+     "type": "active_recall",
+     "question": "Opioid bağımlılarında yüzlerce miligram morfinin solunumu durdurmamasının mekanizması nedir?",
+     "answer": "Solunum merkezinin karbondioksit duyarsızlığına karşı yüksek oranda tolerans gelişmesidir."
+    },
+    {
+     "type": "swipe_matching",
+     "leftCategory": "Yüksek Tolerans Gelişen Etkiler",
+     "rightCategory": "Tolerans Gelişmeyen Etkiler",
+     "cards": [
+      {
+       "text": "Analjezik ve ağrı kesici etkinlik",
+       "category": "left"
+      },
+      {
+       "text": "Solunum depresyonu ve öfori",
+       "category": "left"
+      },
+      {
+       "text": "Pupilla konstriksiyonu (miyozis)",
+       "category": "right"
+      },
+      {
+       "text": "Gastrointestinal konstipasyon",
+       "category": "right"
+      }
+     ]
+    }
+   ],
+   "synthesisNarrative": "Tekrarlayan opioid uygulamalarında aynı terapötik yanıtı elde etmek için giderek artan dozlara gereksinim duyulur.\n\n- **Toleransın Hızla Geliştiği Etkiler:** Analjezi, sedasyon, öfori ve en önemlisi solunum depresyonu etkilerine hızla tolerans gelişir.\n- **Tolerans Gelişmeyen Etkiler:** Miyozis (pupilla daralması) ve konstipasyona (kabızlık) karşı tolerans gelişmez; bu iki bulgu kronik bağımlılarda bile mevcuttur.\n- **Çapraz Tolerans ve Opioid Rotasyonu:** Bir mü agonistine tolerans geliştiğinde diğer mü agonistlerine tolerans kısmi (inkomplet) kalır.\n\n> [!IMPORTANT]\n> Opioid rotasyonunda yeni başlanan ilacın dozu teorik eşdeğer dozdan %25 ila %50 daha düşük hesaplanır; aksi halde eksik çapraz tolerans nedeniyle aşırı doz gelişebilir."
+  },
+  {
+   "slideNumber": 25,
+   "title": "Fiziksel Bağımlılık ve Yoksunluk Sendromu",
+   "bolum": "6",
+   "pdfSayfalari": [
+    46,
+    48
+   ],
+   "sourcePdf": {
+    "startPage": 46,
+    "endPage": 48
+   },
+   "content": "Mü tipi opioidlerin tekrarlayan uygulanışı hücresel düzeyde derin bir adaptasyona ve fiziksel bağımlılığa yol açar.\n\n- **Yoksunluk Krizi:** İlacın aniden kesilmesi veya kompetitif bir antagonistin (nalokson) verilmesiyle dakikalar içinde patlak verir.\n- **Klinik Tablo:** Rinore, lakrimasyon, esneme, piloereksiyon (tüylerin diken diken olması, soğuk hindi), terleme, midriyazis, taşikardi, hipertansiyon ve şiddetli karın krampları izlenir.\n- **Klonidin Tedavisi:** Yoksunluktaki aşırı sempatik fırtına, locus coeruleus'taki sempatik deşarjı baskılayan santral alfa-2 adrenerjik agonist klonidin ile hafifletilir.\n\n> [!IMPORTANT]\n> Bağımlı bir hastaya nalokson enjekte edilmesi dakikalar içinde şiddetli ve tehlikeli bir presipite yoksunluk tablosu tetikler.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Opioid yoksunluk sendromunda ortaya çıkan aşırı sempatik hiperaktiviteyi, terlemeyi ve taşikardiyi baskılamak için kullanılan santral etkili alfa-2 adrenerjik agonist hangisidir?",
+     "options": [
+      {
+       "text": "Klonidin",
+       "isCorrect": true,
+       "explanation": "Klonidin, bu klinik durumda beklenen temel farmakolojik yanıtı ve mekanizmayı temsil eder. Soruda aranan hedef farmakolojik kavram doğru olarak bu seçenekle açıklanmaktadır."
+      },
+      {
+       "text": "Nalokson",
+       "isCorrect": false,
+       "explanation": "Nalokson, farmakolojide farklı bir biyolojik yolağa ve etki mekanizmasına sahip özgün bir kavramdır. Bu seçenek soruda hedeflenen spesifik klinik etki mekanizmasını açıklamaz."
+      },
+      {
+       "text": "Atropin",
+       "isCorrect": false,
+       "explanation": "Atropin, farmakolojide farklı bir biyolojik yolağa ve etki mekanizmasına sahip özgün bir kavramdır. Bu seçenek soruda hedeflenen spesifik klinik etki mekanizmasını açıklamaz."
+      },
+      {
+       "text": "Fizostigmin",
+       "isCorrect": false,
+       "explanation": "Fizostigmin, farmakolojide farklı bir biyolojik yolağa ve etki mekanizmasına sahip özgün bir kavramdır. Bu seçenek soruda hedeflenen spesifik klinik etki mekanizmasını açıklamaz."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "maskedTerm": "piloereksiyon",
+     "hint": "Ciltteki kıl diplerinin otonomik deşarjla dikleşmesi durumu",
+     "options": [
+      "piloereksiyon",
+      "miyozis",
+      "sedasyon",
+      "bradikardi"
+     ],
+     "sentence": "Opioid yoksunluğunda tüylerin diken diken olmasına piloereksiyon veya soğuk hindi belirtisi denir."
+    },
+    {
+     "type": "active_recall",
+     "question": "Opioid etkisi altında olan bir hastanın pupillaları ile yoksunluk krizindeki hastanın pupillaları arasındaki zıtlık nedir?",
+     "answer": "Opioid etkisi altındayken miyozis (toplu iğne başı) görülür; yoksunluk krizinde ise midriyazis (genişleme) ortaya çıkar."
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Opioid yoksunluk sendromu hakkında klinik önermeler:",
+     "items": [
+      {
+       "text": "Klonidin yoksunluktaki otonomik sempatik hiperaktiviteyi baskılamada etkilidir.",
+       "isLie": false,
+       "explanation": "Santral alfa-2 otoreseptörleri uyararak noradrenalin salınımını durdurur."
+      },
+      {
+       "text": "Nalokson enjeksiyonu bağımlı bir hastada yoksunluk semptomlarını tamamen yatıştırır.",
+       "isLie": true,
+       "explanation": "Nalokson reseptörleri bloke ederek dakikalar içinde şiddetli yoksunluk krizi başlatır."
+      },
+      {
+       "text": "Rinore, lakrimasyon ve karın krampları yoksunluğun tipik erken bulgularıdır.",
+       "isLie": false,
+       "explanation": "Parasempatik ve otonomik hiperaktivite sekresyonları ve krampları tetikler."
+      }
+     ]
+    }
+   ],
+   "synthesisNarrative": "Mü tipi opioidlerin tekrarlayan uygulanışı hücresel düzeyde derin bir adaptasyona ve fiziksel bağımlılığa yol açar.\n\n- **Yoksunluk Krizi:** İlacın aniden kesilmesi veya kompetitif bir antagonistin (nalokson) verilmesiyle dakikalar içinde patlak verir.\n- **Klinik Tablo:** Rinore, lakrimasyon, esneme, piloereksiyon (tüylerin diken diken olması, soğuk hindi), terleme, midriyazis, taşikardi, hipertansiyon ve şiddetli karın krampları izlenir.\n- **Klonidin Tedavisi:** Yoksunluktaki aşırı sempatik fırtına, locus coeruleus'taki sempatik deşarjı baskılayan santral alfa-2 adrenerjik agonist klonidin ile hafifletilir.\n\n> [!IMPORTANT]\n> Bağımlı bir hastaya nalokson enjekte edilmesi dakikalar içinde şiddetli ve tehlikeli bir presipite yoksunluk tablosu tetikler."
+  },
+  {
+   "slideNumber": 26,
+   "title": "Kötüye Kullanım ve Bağımlılık Dinamikleri",
+   "bolum": "6",
+   "pdfSayfalari": [
+    49,
+    49
+   ],
+   "sourcePdf": {
+    "startPage": 49,
+    "endPage": 49
+   },
+   "content": "Opioidlerin kötüye kullanımı (suistimali) biyolojik, psikolojik ve farmakokinetik faktörlerin birleşimiyle tetiklenir.\n\n- **Pekiştirici Güç:** İlaca ulaşıldığında hissedilen ani öfori hissi pozitif pekiştirme sağlarken, yoksunluk ıstırabından kaçma çabası negatif pekiştirme oluşturur.\n- **Farmakokinetik Hızın Rolü:** Kan beyin bariyerini en hızlı geçen ve hızla pik yapan ilaçlar (eroin, IV fentanil) bağımlılık potansiyeli en yüksek moleküllerdir.\n- **Suistimali Önleme Formülasyonları:** Ağızdan alındığında aktif olan ancak ezilip enjekte edilmek istendiğinde içindeki naloksonun açığa çıktığı kombine tabletler geliştirilmiştir.\n\n> [!NOTE]\n> Hızlı etki başlangıcı bağımlılık yapıcı pekiştirmeyi katlarken, yavaş salımlı veya uzun yarı ömürlü ajanlar bağımlılık riskini azaltır.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Bir opioid ilacın bağımlılık ve kötüye kullanım potansiyelini en çok artıran farmakokinetik özellik hangisidir?",
+     "options": [
+      {
+       "text": "Yüksek lipofiliklik ile kan beyin bariyerini saniyeler içinde aşarak hızla pik yapması",
+       "isCorrect": true,
+       "explanation": "MSS'ye hızla giren ve ani öforik tepe oluşturan maddeler en güçlü bağımlılık yapıcı pekiştirmeyi sağlar."
+      },
+      {
+       "text": "Plazma proteinlerine yüzde yüz bağlanarak dokuya geçememesi",
+       "isCorrect": false,
+       "explanation": "Plazma proteinlerine yüzde yüz bağlanarak dokuya geçememesi, farmakolojide farklı bir biyolojik yolağa ve etki mekanizmasına sahip özgün bir kavramdır. Bu seçenek soruda hedeflenen spesifik klinik etki mekanizmasını açıklamaz."
+      },
+      {
+       "text": "Yarı ömrünün 72 saatten uzun olup çok yavaş konsantrasyon değiştirmesi",
+       "isCorrect": false,
+       "explanation": "Yarı ömrünün 72 saatten uzun olup çok yavaş konsantrasyon değiştirmesi, farmakolojide farklı bir biyolojik yolağa ve etki mekanizmasına sahip özgün bir kavramdır. Bu seçenek soruda hedeflenen spesifik klinik etki mekanizmasını açıklamaz."
+      },
+      {
+       "text": "Oral biyoyararlanımının sıfır olup bağırsaktan hiç emilmemesi",
+       "isCorrect": false,
+       "explanation": "Oral biyoyararlanımının sıfır olup bağırsaktan hiç emilmemesi, farmakolojide farklı bir biyolojik yolağa ve etki mekanizmasına sahip özgün bir kavramdır. Bu seçenek soruda hedeflenen spesifik klinik etki mekanizmasını açıklamaz."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "maskedTerm": "nalokson",
+     "hint": "Ezilip damardan verildiğinde analjeziyi engelleyen antagonist",
+     "options": [
+      "nalokson",
+      "morfin",
+      "asetaminofen",
+      "fentanil"
+     ],
+     "sentence": "İntravenöz suistimali önlemek amacıyla bazı oral preparatlara antagonist nalokson eklenir."
+    },
+    {
+     "type": "active_recall",
+     "question": "Opioid bağımlılığında negatif pekiştirme (negative reinforcement) neyi ifade eder?",
+     "answer": "Kişinin zevk almak için değil, şiddetli yoksunluk belirtilerini ve acısını durdurmak için ilacı araması ve kullanmasıdır."
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Opioid kötüye kullanımı hakkında önermeler:",
+     "items": [
+      {
+       "text": "MSS'ye giriş hızı ne kadar yüksekse ilacın bağımlılık potansiyeli o kadar artar.",
+       "isLie": false,
+       "explanation": "Hızlı beyin penetrasyonu öforik tepeyi güçlendirir."
+      },
+      {
+       "text": "Opioid bağımlılığı yalnızca irade zayıflığıdır, nörobiyolojik bir reseptör adaptasyonu içermez.",
+       "isLie": true,
+       "explanation": "Bağımlılık mezolimbik yolakta nöroplastisite ve reseptör adaptasyonu içeren kronik bir beyin hastalığıdır."
+      },
+      {
+       "text": "Suistimale dirençli tabletler ezildiğinde antagonist serbest kalır.",
+       "isLie": false,
+       "explanation": "Formülasyon teknolojisi intravenöz suistimali engeller."
+      }
+     ]
+    }
+   ],
+   "synthesisNarrative": "Opioidlerin kötüye kullanımı (suistimali) biyolojik, psikolojik ve farmakokinetik faktörlerin birleşimiyle tetiklenir.\n\n- **Pekiştirici Güç:** İlaca ulaşıldığında hissedilen ani öfori hissi pozitif pekiştirme sağlarken, yoksunluk ıstırabından kaçma çabası negatif pekiştirme oluşturur.\n- **Farmakokinetik Hızın Rolü:** Kan beyin bariyerini en hızlı geçen ve hızla pik yapan ilaçlar (eroin, IV fentanil) bağımlılık potansiyeli en yüksek moleküllerdir.\n- **Suistimali Önleme Formülasyonları:** Ağızdan alındığında aktif olan ancak ezilip enjekte edilmek istendiğinde içindeki naloksonun açığa çıktığı kombine tabletler geliştirilmiştir.\n\n> [!NOTE]\n> Hızlı etki başlangıcı bağımlılık yapıcı pekiştirmeyi katlarken, yavaş salımlı veya uzun yarı ömürlü ajanlar bağımlılık riskini azaltır."
+  },
+  {
+   "slideNumber": 27,
+   "title": "Kontrendikasyonlar ve Özel Hasta Grupları",
+   "bolum": "6",
+   "pdfSayfalari": [
+    50,
+    52
+   ],
+   "sourcePdf": {
+    "startPage": 50,
+    "endPage": 52
+   },
+   "content": "Opioid analjeziklerin bazı klinik durumlarda kullanımı kesinlikle kontrendikedir veya aşırı dikkat gerektirir.\n\n- **Kafa Travmaları:** Solunum depresyonu sonucu CO2 retansiyonu gelişir; CO2 serebral damarlarda güçlü vazodilatasyon yaparak kafa içi basıncını (KİBAS) ölümcül şekilde artırır. Ayrıca pupil refleksini bozarak nörolojik takibi engeller.\n- **Solunum Fonksiyon Bozuklukları:** Ağır KOAH, astım atağı veya kor pulmonalede solunum durması riskini katlar.\n- **Gebelik ve Yenidoğan:** Gebelikte kronik opioid kullanımı bebekte doğum sonrası neonatal yoksunluk sendromuna (NAS: irritabilite, tremor, beslenme bozukluğu) yol açar.\n- **Karaciğer ve Böbrek Yetmezliği:** İlaç klirensi bozulur; yarı ömür ve toksik metabolit birikimi dramatik şekilde artar.\n\n> [!IMPORTANT]\n> Kafa travmalı veya bilinci kapalı hastada opioid kullanımı, hem intrakraniyal basıncı artırması hem de pupilla takibini imkansız kılması nedeniyle kontrendikedir.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Kafa travması geçiren bir hastada morfin gibi güçlü opioid analjeziklerin kontrendike olmasının temel nedeni nedir?",
+     "options": [
+      {
+       "text": "Solunum depresyonuna bağlı CO2 retansiyonunun serebral vazodilatasyonla kafa içi basıncını artırması",
+       "isCorrect": true,
+       "explanation": "Solunum depresyonuna bağlı CO2 retansiyonunun serebral vazodilatasyonla kafa içi basıncını artırması, bu klinik durumda beklenen temel farmakolojik yanıtı ve mekanizmayı temsil eder. Soruda aranan hedef farmakolojik kavram doğru olarak bu seçenekle açıklanmaktadır."
+      },
+      {
+       "text": "Kan basıncını yükselterek hipertansif intraserebral kanama başlatması",
+       "isCorrect": false,
+       "explanation": "Kan basıncını yükselterek hipertansif intraserebral kanama başlatması, farmakolojide farklı bir biyolojik yolağa ve etki mekanizmasına sahip özgün bir kavramdır. Bu seçenek soruda hedeflenen spesifik klinik etki mekanizmasını açıklamaz."
+      },
+      {
+       "text": "Beyin omurilik sıvısı üretimini doğrudan yüz katına çıkarması",
+       "isCorrect": false,
+       "explanation": "Beyin omurilik sıvısı üretimini doğrudan yüz katına çıkarması, farmakolojide farklı bir biyolojik yolağa ve etki mekanizmasına sahip özgün bir kavramdır. Bu seçenek soruda hedeflenen spesifik klinik etki mekanizmasını açıklamaz."
+      },
+      {
+       "text": "Kan beyin bariyerinde geri dönüşsüz mekanik delikler açması",
+       "isCorrect": false,
+       "explanation": "Kan beyin bariyerinde geri dönüşsüz mekanik delikler açması, farmakolojide farklı bir biyolojik yolağa ve etki mekanizmasına sahip özgün bir kavramdır. Bu seçenek soruda hedeflenen spesifik klinik etki mekanizmasını açıklamaz."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "maskedTerm": "vazodilatasyon",
+     "hint": "Damar lümeninin genişlemesi ve kan akımının artması",
+     "options": [
+      "vazodilatasyon",
+      "vazokonstriksiyon",
+      "tromboz",
+      "ateroskleroz"
+     ],
+     "sentence": "Kafa travmasında CO2 birikmesi serebral vazodilatasyon yaparak kafa içi basıncını tehlikeli şekilde yükseltir."
+    },
+    {
+     "type": "active_recall",
+     "question": "Opioid bağımlısı annelerin bebeklerinde doğumdan sonra görülen neonatal yoksunluk sendromunun (NAS) temel bulguları nelerdir?",
+     "answer": "Yüksek sesle durmaksızın ağlama, şiddetli tremor, konvülsiyonlar, beslenme güçlüğü ve diyaredir."
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Opioidlerin kontrendikasyonları hakkında klinik bilgiler:",
+     "items": [
+      {
+       "text": "Kafa travmasında kafa içi basınç artışı riski nedeniyle opioidlerden kaçınılmalıdır.",
+       "isLie": false,
+       "explanation": "CO2 retansiyonu beyin damarlarını genişleterek basıncı fırlatır."
+      },
+      {
+       "text": "Akut astım atağında solunum merkezini dinlendirmek amacıyla yüksek doz morfin ilk tercihtir.",
+       "isLie": true,
+       "explanation": "Astım atağında solunum depresyonu ve histamin salınımı fataldir, kesinlikle kontrendikedir."
+      },
+      {
+       "text": "Ağır karaciğer yetmezliğinde opioid klirensi bozulduğu için doz azaltılmalıdır.",
+       "isLie": false,
+       "explanation": "Hepatik metabolizma yetersizliğinde ilaç kanda birikir ve komaya sokar."
+      }
+     ]
+    }
+   ],
+   "synthesisNarrative": "Opioid analjeziklerin bazı klinik durumlarda kullanımı kesinlikle kontrendikedir veya aşırı dikkat gerektirir.\n\n- **Kafa Travmaları:** Solunum depresyonu sonucu CO2 retansiyonu gelişir; CO2 serebral damarlarda güçlü vazodilatasyon yaparak kafa içi basıncını (KİBAS) ölümcül şekilde artırır. Ayrıca pupil refleksini bozarak nörolojik takibi engeller.\n- **Solunum Fonksiyon Bozuklukları:** Ağır KOAH, astım atağı veya kor pulmonalede solunum durması riskini katlar.\n- **Gebelik ve Yenidoğan:** Gebelikte kronik opioid kullanımı bebekte doğum sonrası neonatal yoksunluk sendromuna (NAS: irritabilite, tremor, beslenme bozukluğu) yol açar.\n- **Karaciğer ve Böbrek Yetmezliği:** İlaç klirensi bozulur; yarı ömür ve toksik metabolit birikimi dramatik şekilde artar.\n\n> [!IMPORTANT]\n> Kafa travmalı veya bilinci kapalı hastada opioid kullanımı, hem intrakraniyal basıncı artırması hem de pupilla takibini imkansız kılması nedeniyle kontrendikedir."
+  },
+  {
+   "slideNumber": 28,
+   "title": "[TEKRAR SAYFASI - CHECKPOINT 3] Klinik Kullanım, Tolerans ve Toksisite",
+   "bolum": "6",
+   "isCheckpoint": true,
+   "pdfSayfalari": [
+    35,
+    52
+   ],
+   "sourcePdf": {
+    "startPage": 35,
+    "endPage": 52
+   },
+   "content": "Bu bölümde opioidlerin klinik endikasyonlarını, tolerans paternlerini, bağımlılık dinamiklerini ve kontrendikasyonlarını pekiştirdik.\n\n- **Klinik Endikasyonlar:** Kanser ağrısı, cerrahi sonrası ağrı ve akut pulmoner ödemde (ön yükü azaltarak) hayat kurtarıcıdır.\n- **PCA Sistemi:** Lockout interval parametresi sayesinde aşırı doz önlenerek güvenli bireysel ağrı kontrolü sağlanır.\n- **Tolerans Dinamikleri:** Analjezi ve solunuma tolerans gelişirken miyozis ve konstipasyona tolerans gelişmez. Çapraz tolerans inkomplet olduğundan opioid rotasyonunda doz düşürülür.\n- **Kafa Travması Uyarısı:** CO2 retansiyonu sonucu serebral vazodilatasyonla KİBAS arttığı için kontrendikedir.\n\n> [!NOTE]\n> Yoksunluk sendromunda ortaya çıkan sempatik fırtınanın kontrolünde santral alfa-2 agonisti klonidin kilit rol oynar.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Aşağıdaki klinik tablolardan hangisinde morfin kullanımı KESİNLİKLE KONTRENDİKEDİR?",
+     "options": [
+      {
+       "text": "Akut kafa travması ve bilinç bulanıklığı olan hasta",
+       "isCorrect": true,
+       "explanation": "Akut kafa travması ve bilinç bulanıklığı olan hasta, bu klinik durumda beklenen temel farmakolojik yanıtı ve mekanizmayı temsil eder. Soruda aranan hedef farmakolojik kavram doğru olarak bu seçenekle açıklanmaktadır."
+      },
+      {
+       "text": "Akut sol ventrikül yetmezliğine bağlı pulmoner ödem",
+       "isCorrect": false,
+       "explanation": "Akut sol ventrikül yetmezliğine bağlı pulmoner ödem, farmakolojide farklı bir biyolojik yolağa ve etki mekanizmasına sahip özgün bir kavramdır. Bu seçenek soruda hedeflenen spesifik klinik etki mekanizmasını açıklamaz."
+      },
+      {
+       "text": "Akut transmural miyokard enfarktüsü göğüs ağrısı",
+       "isCorrect": false,
+       "explanation": "Akut transmural miyokard enfarktüsü göğüs ağrısı, farmakolojide farklı bir biyolojik yolağa ve etki mekanizmasına sahip özgün bir kavramdır. Bu seçenek soruda hedeflenen spesifik klinik etki mekanizmasını açıklamaz."
+      },
+      {
+       "text": "Terminal dönem kemik metastazlı kanser ağrısı",
+       "isCorrect": false,
+       "explanation": "Terminal dönem kemik metastazlı kanser ağrısı, farmakolojide farklı bir biyolojik yolağa ve etki mekanizmasına sahip özgün bir kavramdır. Bu seçenek soruda hedeflenen spesifik klinik etki mekanizmasını açıklamaz."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "maskedTerm": "klonidin",
+     "hint": "Locus coeruleus noradrenerjik deşarjını baskılayan alfa-2 agonist",
+     "options": [
+      "klonidin",
+      "fentanil",
+      "morfin",
+      "nalokson"
+     ],
+     "sentence": "Opioid yoksunluk sendromundaki otonomik sempatik hiperaktivite santral etkili klonidin ile tedavi edilir."
+    },
+    {
+     "type": "interactive_table",
+     "title": "Klinik Durumlar ve Opioid Kararı",
+     "tableHeaders": [
+      "Klinik Tablo",
+      "Opioid Kullanımı",
+      "Fizyopatolojik Gerekçe"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Kafa Travması",
+         "isMasked": false
+        },
+        {
+         "text": "Kontrendike",
+         "isMasked": true,
+         "hint": "İlgili biyolojik özellik"
+        },
+        {
+         "text": "CO2 retansiyonu serebral vazodilatasyon ve KİBAS artışı yapar",
+         "isMasked": false
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Pulmoner Ödem",
+         "isMasked": false
+        },
+        {
+         "text": "Endike (Morfin)",
+         "isMasked": true,
+         "hint": "İlgili biyolojik özellik"
+        },
+        {
+         "text": "Venodilatasyon ile kalbin ön yükünü ve anksiyeteyi düşürür",
+         "isMasked": false
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Doğum Eylemi",
+         "isMasked": false
+        },
+        {
+         "text": "Dikkatli Endike",
+         "isMasked": true,
+         "hint": "İlgili biyolojik özellik"
+        },
+        {
+         "text": "Plasentayı aşarak yenidoğanda solunum depresyonu riski taşır",
+         "isMasked": false
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Akut Astım Atağı",
+         "isMasked": false
+        },
+        {
+         "text": "Kontrendike",
+         "isMasked": true,
+         "hint": "İlgili biyolojik özellik"
+        },
+        {
+         "text": "Solunum depresyonu ve histamin salınımı ile bronkospazmı artırır",
+         "isMasked": false
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Opioid rotasyonunda yeni ilacın dozu neden doğrudan eşdeğer dozdan değil, %25-50 daha düşük başlatılır?",
+     "answer": "Reseptörler arasındaki çapraz toleransın eksik (inkomplet) olması nedeniyle hastanın yeni ilaca aşırı duyarlı olabilmesidir."
+    }
+   ],
+   "synthesisNarrative": "Bu bölümde opioidlerin klinik endikasyonlarını, tolerans paternlerini, bağımlılık dinamiklerini ve kontrendikasyonlarını pekiştirdik.\n\n- **Klinik Endikasyonlar:** Kanser ağrısı, cerrahi sonrası ağrı ve akut pulmoner ödemde (ön yükü azaltarak) hayat kurtarıcıdır.\n- **PCA Sistemi:** Lockout interval parametresi sayesinde aşırı doz önlenerek güvenli bireysel ağrı kontrolü sağlanır.\n- **Tolerans Dinamikleri:** Analjezi ve solunuma tolerans gelişirken miyozis ve konstipasyona tolerans gelişmez. Çapraz tolerans inkomplet olduğundan opioid rotasyonunda doz düşürülür.\n- **Kafa Travması Uyarısı:** CO2 retansiyonu sonucu serebral vazodilatasyonla KİBAS arttığı için kontrendikedir.\n\n> [!NOTE]\n> Yoksunluk sendromunda ortaya çıkan sempatik fırtınanın kontrolünde santral alfa-2 agonisti klonidin kilit rol oynar."
+  },
+  {
+   "slideNumber": 29,
+   "title": "Güçlü Agonistler: Fenantrenler ve Fentanil Ailesi",
+   "bolum": "7",
+   "pdfSayfalari": [
+    53,
+    56
+   ],
+   "sourcePdf": {
+    "startPage": 53,
+    "endPage": 56
+   },
+   "content": "Şiddetli akut ve kronik ağrılarda yüksek intrensek aktiviteye sahip tam mü agonistleri kullanılır.\n\n- **Fenantrenler:** Morfin, hidromorfon ve oksimorfon bu gruptadır. Hidromorfon morfinden 5-7 kat daha potenttir.\n- **Fentanil Ailesi:** Fentanil morfinden 80-100 kat güçlüdür. Son derece lipofiliktir ve dengeli anestezide intravenöz kullanılır.\n- **Sufentanil ve Alfentanil:** Sufentanil fentanilden de 5 ila 7 kat (morfinden yaklaşık 500-1000 kat) daha güçlüdür; kalp cerrahisinde stabilite sağlar. Alfentanil ise hızlı başlangıçlıdır.\n\n> [!IMPORTANT]\n> Sufentanil klinik kullanımda mevcut en güçlü opioid analjeziktir ve anestezi indüksiyonunda mikrodoz düzeylerinde titre edilir.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Fentanilden 5 ila 7 kat daha güçlü olan ve kalp cerrahisinde hemodinamik stabilite sağlamak amacıyla kullanılan en potent opioid agonist hangisidir?",
+     "options": [
+      {
+       "text": "Sufentanil",
+       "isCorrect": true,
+       "explanation": "Sufentanil, bu klinik durumda beklenen temel farmakolojik yanıtı ve mekanizmayı temsil eder. Soruda aranan hedef farmakolojik kavram doğru olarak bu seçenekle açıklanmaktadır."
+      },
+      {
+       "text": "Kodein",
+       "isCorrect": false,
+       "explanation": "Kodein, farmakolojide farklı bir biyolojik yolağa ve etki mekanizmasına sahip özgün bir kavramdır. Bu seçenek soruda hedeflenen spesifik klinik etki mekanizmasını açıklamaz."
+      },
+      {
+       "text": "Meperidin",
+       "isCorrect": false,
+       "explanation": "Meperidin, farmakolojide farklı bir biyolojik yolağa ve etki mekanizmasına sahip özgün bir kavramdır. Bu seçenek soruda hedeflenen spesifik klinik etki mekanizmasını açıklamaz."
+      },
+      {
+       "text": "Propoksifen",
+       "isCorrect": false,
+       "explanation": "Propoksifen, farmakolojide farklı bir biyolojik yolağa ve etki mekanizmasına sahip özgün bir kavramdır. Bu seçenek soruda hedeflenen spesifik klinik etki mekanizmasını açıklamaz."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "maskedTerm": "sufentanil",
+     "hint": "En güçlü analjezik potens değerine sahip fentanil türevi",
+     "options": [
+      "sufentanil",
+      "morfin",
+      "meperidin",
+      "kodein"
+     ],
+     "sentence": "Klinik anestezide fentanilden yaklaşık yedi kat daha potent olan sentetik opioid sufentanil molekülüdür."
+    },
+    {
+     "type": "active_recall",
+     "question": "Fenantren grubu güçlü agonistler ile fentanil ailesi arasındaki temel kimyasal ve potens farkı nedir?",
+     "answer": "Fenantrenler (morfin, hidromorfon) doğal/yarı sentetik çekirdek taşırken; fentanil ailesi sentetik fenilpiperidin türevi olup 100 ila 1000 kat daha potenttir."
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Güçlü opioid agonistleri hakkında klinik bilgiler:",
+     "items": [
+      {
+       "text": "Sufentanil fentanilden daha güçlü bir mü-opioid reseptör agonistidir.",
+       "isLie": false,
+       "explanation": "Sufentanil en yüksek potense sahip opioid ajandır."
+      },
+      {
+       "text": "Hidromorfon analjezik potansı morfinden belirgin derecede daha zayıf bir ajandır.",
+       "isLie": true,
+       "explanation": "Hidromorfon morfinden 5-7 kat daha potent güçlü bir fenantrendir."
+      },
+      {
+       "text": "Fentanil ailesi lipofilik yapısı sayesinde beyin dokusuna çok hızlı penetre olur.",
+       "isLie": false,
+       "explanation": "Yüksek lipofiliklik hızlı MSS geçişi sağlar."
+      }
+     ]
+    }
+   ],
+   "synthesisNarrative": "Şiddetli akut ve kronik ağrılarda yüksek intrensek aktiviteye sahip tam mü agonistleri kullanılır.\n\n- **Fenantrenler:** Morfin, hidromorfon ve oksimorfon bu gruptadır. Hidromorfon morfinden 5-7 kat daha potenttir.\n- **Fentanil Ailesi:** Fentanil morfinden 80-100 kat güçlüdür. Son derece lipofiliktir ve dengeli anestezide intravenöz kullanılır.\n- **Sufentanil ve Alfentanil:** Sufentanil fentanilden de 5 ila 7 kat (morfinden yaklaşık 500-1000 kat) daha güçlüdür; kalp cerrahisinde stabilite sağlar. Alfentanil ise hızlı başlangıçlıdır.\n\n> [!IMPORTANT]\n> Sufentanil klinik kullanımda mevcut en güçlü opioid analjeziktir ve anestezi indüksiyonunda mikrodoz düzeylerinde titre edilir."
+  },
+  {
+   "slideNumber": 30,
+   "title": "Metadon: NMDA Blokajı ve Bağımlılık İdamesi",
+   "bolum": "7",
+   "pdfSayfalari": [
+    54,
+    55
+   ],
+   "sourcePdf": {
+    "startPage": 54,
+    "endPage": 55
+   },
+   "content": "Metadon çoklu etki mekanizmasına ve özgün farmakokinetik profile sahip sentetik bir opioiddir.\n\n- **İkili Etki Mekanizması:** Güçlü bir mü-opioid reseptör agonisti olmasının yanı sıra, NMDA reseptörlerini bloke eder ve monoamin (serotonin, noradrenalin) geri alımını baskılar.\n- **Nöropatik Ağrıda Üstünlük:** NMDA reseptör blokajı sayesinde santral duyarlılaşmayı kırar ve nöropatik ağrıda belirgin etkinlik gösterir.\n- **Uzun Yarı Ömür ve İdame:** Eliminasyon yarı ömrü 24 ila 36 saattir. Dokularda depolanır ve yavaş salınır.\n\n> [!NOTE]\n> Ani kesildiğinde yoksunluk belirtileri çok daha yavaş gelişir ve hafif seyreder; bu nedenle opioid bağımlılarının detoksifikasyonunda ve idame programlarında altın standarttır.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Güçlü mü-opioid agonizminin yanı sıra NMDA reseptörlerini bloke ederek nöropatik ağrıda ve bağımlılık tedavisinde kullanılan uzun ömürlü sentetik opioid hangisidir?",
+     "options": [
+      {
+       "text": "Metadon",
+       "isCorrect": true,
+       "explanation": "Metadon, bu klinik durumda beklenen temel farmakolojik yanıtı ve mekanizmayı temsil eder. Soruda aranan hedef farmakolojik kavram doğru olarak bu seçenekle açıklanmaktadır."
+      },
+      {
+       "text": "Fentanil",
+       "isCorrect": false,
+       "explanation": "Fentanil, farmakolojide farklı bir biyolojik yolağa ve etki mekanizmasına sahip özgün bir kavramdır. Bu seçenek soruda hedeflenen spesifik klinik etki mekanizmasını açıklamaz."
+      },
+      {
+       "text": "Kodein",
+       "isCorrect": false,
+       "explanation": "Kodein, farmakolojide farklı bir biyolojik yolağa ve etki mekanizmasına sahip özgün bir kavramdır. Bu seçenek soruda hedeflenen spesifik klinik etki mekanizmasını açıklamaz."
+      },
+      {
+       "text": "Morfin",
+       "isCorrect": false,
+       "explanation": "Morfin, farmakolojide farklı bir biyolojik yolağa ve etki mekanizmasına sahip özgün bir kavramdır. Bu seçenek soruda hedeflenen spesifik klinik etki mekanizmasını açıklamaz."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "maskedTerm": "NMDA",
+     "hint": "Glutamatın bağlandığı ve nöropatik ağrıda rol oynayan iyonotropik reseptör",
+     "options": [
+      "NMDA",
+      "GABA",
+      "nikotinik",
+      "muskarinik"
+     ],
+     "sentence": "Metadon mü reseptör uyarımı yanında eksitatör NMDA reseptörlerini bloke ederek tolerans gelişimini geciktirir."
+    },
+    {
+     "type": "active_recall",
+     "question": "Metadonun opioid bağımlılık idame tedavisinde tercih edilmesinin iki temel farmakolojik nedeni nedir?",
+     "answer": "Yarı ömrünün çok uzun olması (24-36 saat) ve kesildiğinde yoksunluk krizinin ani ve şiddetli değil çok yavaş ve tolere edilebilir gelişmesidir."
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Metadon farmakolojisi hakkında önermeler:",
+     "items": [
+      {
+       "text": "Metadon NMDA reseptör blokajı yaparak santral duyarlılaşmayı hafifletir.",
+       "isLie": false,
+       "explanation": "NMDA antagonizması metadona nöropatik ağrıda üstünlük sağlar."
+      },
+      {
+       "text": "Metadonun yarı ömrü 1-2 saattir ve günde en az altı kez enjeksiyon gerektirir.",
+       "isLie": true,
+       "explanation": "Metadonun yarı ömrü 24-36 saattir; oral yoldan günde tek doz olarak kullanılır."
+      },
+      {
+       "text": "Opioid bağımlılarının rehabilitasyon ve idame programlarında temel ilaçtır.",
+       "isLie": false,
+       "explanation": "Yoksunluğu baskılayarak kişinin sosyal hayata uyumunu sağlar."
+      }
+     ]
+    }
+   ],
+   "synthesisNarrative": "Metadon çoklu etki mekanizmasına ve özgün farmakokinetik profile sahip sentetik bir opioiddir.\n\n- **İkili Etki Mekanizması:** Güçlü bir mü-opioid reseptör agonisti olmasının yanı sıra, NMDA reseptörlerini bloke eder ve monoamin (serotonin, noradrenalin) geri alımını baskılar.\n- **Nöropatik Ağrıda Üstünlük:** NMDA reseptör blokajı sayesinde santral duyarlılaşmayı kırar ve nöropatik ağrıda belirgin etkinlik gösterir.\n- **Uzun Yarı Ömür ve İdame:** Eliminasyon yarı ömrü 24 ila 36 saattir. Dokularda depolanır ve yavaş salınır.\n\n> [!NOTE]\n> Ani kesildiğinde yoksunluk belirtileri çok daha yavaş gelişir ve hafif seyreder; bu nedenle opioid bağımlılarının detoksifikasyonunda ve idame programlarında altın standarttır."
+  },
+  {
+   "slideNumber": 31,
+   "title": "Zayıf Agonistler ve Periferik Antidiyareikler",
+   "bolum": "7",
+   "pdfSayfalari": [
+    57,
+    59
+   ],
+   "sourcePdf": {
+    "startPage": 57,
+    "endPage": 59
+   },
+   "content": "Orta şiddetteki ağrılarda ve spesifik gastrointestinal patolojilerde özel opioid türevleri kullanılır.\n\n- **Kodein ve Oksikodon:** Hafif-orta ağrıda oral yoldan asetaminofen veya NSAİİ ile kombine edilirler. Kodein bir ön ilaç olup CYP2D6 ile morfine dönüşerek analjezi sağlar.\n- **Propoksifen:** Analjezik gücü kodeinden düşüktür; kardiyotoksik metaboliti nedeniyle klinik kullanımı terk edilmiştir.\n- **Loperamid ve Difenoksilat:** Periferik etkili fenilpiperidin türevleridir. Loperamid kan-beyin bariyerini geçemez ve P-glikoprotein pompasıyla dışarı atılır.\n\n> [!IMPORTANT]\n> Loperamid santral sinir sistemine geçemediği için bağımlılık ve sedasyon yapmaz; gastrointestinal kanalda peristaltizmi durdurarak diyareyi güvenle tedavi eder.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Kan-beyin bariyerini geçemeyen, santral analjezik veya bağımlılık yapıcı etkisi bulunmayan ve diyare tedavisinde kullanılan periferik opioid hangisidir?",
+     "options": [
+      {
+       "text": "Loperamid",
+       "isCorrect": true,
+       "explanation": "Loperamid, bu klinik durumda beklenen temel farmakolojik yanıtı ve mekanizmayı temsil eder. Soruda aranan hedef farmakolojik kavram doğru olarak bu seçenekle açıklanmaktadır."
+      },
+      {
+       "text": "Morfin",
+       "isCorrect": false,
+       "explanation": "Morfin, farmakolojide farklı bir biyolojik yolağa ve etki mekanizmasına sahip özgün bir kavramdır. Bu seçenek soruda hedeflenen spesifik klinik etki mekanizmasını açıklamaz."
+      },
+      {
+       "text": "Oksikodon",
+       "isCorrect": false,
+       "explanation": "Oksikodon, farmakolojide farklı bir biyolojik yolağa ve etki mekanizmasına sahip özgün bir kavramdır. Bu seçenek soruda hedeflenen spesifik klinik etki mekanizmasını açıklamaz."
+      },
+      {
+       "text": "Fentanil",
+       "isCorrect": false,
+       "explanation": "Fentanil, farmakolojide farklı bir biyolojik yolağa ve etki mekanizmasına sahip özgün bir kavramdır. Bu seçenek soruda hedeflenen spesifik klinik etki mekanizmasını açıklamaz."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "maskedTerm": "CYP2D6",
+     "hint": "Kodeinin morfine biyoaktivasyonunu sağlayan polimorfik sitokrom P450 enzimi",
+     "options": [
+      "CYP2D6",
+      "CYP3A4",
+      "CYP1A2",
+      "CYP2E1"
+     ],
+     "sentence": "Ön ilaç olan kodein karaciğerde CYP2D6 enzimi tarafından aktif analjezik morfine dönüştürülür."
+    },
+    {
+     "type": "active_recall",
+     "question": "CYP2D6 zayıf metabolize edici polimorfizmine sahip bir hastada kodein verildiğinde ne gözlenir?",
+     "answer": "Kodein morfine dönüştürülemez ve hastada beklenen analjezik etki yetersiz kalır."
+    },
+    {
+     "type": "swipe_matching",
+     "leftCategory": "Kodein Özelliği",
+     "rightCategory": "Loperamid Özelliği",
+     "cards": [
+      {
+       "text": "CYP2D6 ile aktif morfine dönüşerek analjezi sağlama",
+       "category": "left"
+      },
+      {
+       "text": "Hafif ve orta ağrıda oral kombinasyonlarda kullanılma",
+       "category": "left"
+      },
+      {
+       "text": "Kan beyin bariyerini geçemeyerek periferde kalma",
+       "category": "right"
+      },
+      {
+       "text": "Bağımlılık yapmaksızın diyareyi semptomatik durdurma",
+       "category": "right"
+      }
+     ]
+    }
+   ],
+   "synthesisNarrative": "Orta şiddetteki ağrılarda ve spesifik gastrointestinal patolojilerde özel opioid türevleri kullanılır.\n\n- **Kodein ve Oksikodon:** Hafif-orta ağrıda oral yoldan asetaminofen veya NSAİİ ile kombine edilirler. Kodein bir ön ilaç olup CYP2D6 ile morfine dönüşerek analjezi sağlar.\n- **Propoksifen:** Analjezik gücü kodeinden düşüktür; kardiyotoksik metaboliti nedeniyle klinik kullanımı terk edilmiştir.\n- **Loperamid ve Difenoksilat:** Periferik etkili fenilpiperidin türevleridir. Loperamid kan-beyin bariyerini geçemez ve P-glikoprotein pompasıyla dışarı atılır.\n\n> [!IMPORTANT]\n> Loperamid santral sinir sistemine geçemediği için bağımlılık ve sedasyon yapmaz; gastrointestinal kanalda peristaltizmi durdurarak diyareyi güvenle tedavi eder."
+  },
+  {
+   "slideNumber": 32,
+   "title": "Karma Agonist-Antagonistler ve Buprenorfin",
+   "bolum": "7",
+   "pdfSayfalari": [
+    60,
+    62
+   ],
+   "sourcePdf": {
+    "startPage": 60,
+    "endPage": 62
+   },
+   "content": "Opioid reseptör alt tipleri üzerinde farklı intrensek aktivite sergileyen moleküller karma etki profiline sahiptir.\n\n- **Buprenorfin:** Mü reseptörlerine son derece yüksek afinite ile bağlanan güçlü bir parsiyel agonisttir; delta ve kappa reseptörlerini ise bloke eder. Reseptörden disosiasyonu çok yavaştır.\n- **Tavan Etkisi:** Buprenorfinde solunum depresyonu doza paralel sonsuz artmaz, tavan etkisine ulaşır; bu durum ölümcül intoksikasyon riskini azaltır.\n- **Pentazosin ve Nalbufin:** Kappa reseptörlerinde agonist, mü reseptörlerinde ise antagonist veya parsiyel agonisttirler.\n\n> [!IMPORTANT]\n> Mü tam agonisti (morfin) kullanan bir hastaya buprenorfin veya pentazosin verilirse, morfin reseptörden kovulur ve aniden akut yoksunluk krizi başlar.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Mü-opioid reseptörlerine çok yüksek afiniteyle bağlanan, parsiyel agonist etki gösteren ve reseptörden yavaş ayrıldığı için naloksonla geri döndürülmesi güç olan ilaç hangisidir?",
+     "options": [
+      {
+       "text": "Buprenorfin",
+       "isCorrect": true,
+       "explanation": "Buprenorfin, bu klinik durumda beklenen temel farmakolojik yanıtı ve mekanizmayı temsil eder. Soruda aranan hedef farmakolojik kavram doğru olarak bu seçenekle açıklanmaktadır."
+      },
+      {
+       "text": "Morfin",
+       "isCorrect": false,
+       "explanation": "Morfin, farmakolojide farklı bir biyolojik yolağa ve etki mekanizmasına sahip özgün bir kavramdır. Bu seçenek soruda hedeflenen spesifik klinik etki mekanizmasını açıklamaz."
+      },
+      {
+       "text": "Pentazosin",
+       "isCorrect": false,
+       "explanation": "Pentazosin, farmakolojide farklı bir biyolojik yolağa ve etki mekanizmasına sahip özgün bir kavramdır. Bu seçenek soruda hedeflenen spesifik klinik etki mekanizmasını açıklamaz."
+      },
+      {
+       "text": "Fentanil",
+       "isCorrect": false,
+       "explanation": "Fentanil, farmakolojide farklı bir biyolojik yolağa ve etki mekanizmasına sahip özgün bir kavramdır. Bu seçenek soruda hedeflenen spesifik klinik etki mekanizmasını açıklamaz."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "maskedTerm": "yoksunluk",
+     "hint": "Opioid reseptör aktivitesinin aniden düşmesiyle ortaya çıkan otonom kriz",
+     "options": [
+      "yoksunluk",
+      "öfori",
+      "sedasyon",
+      "bradikardi"
+     ],
+     "sentence": "Düzenli morfin alan bir hastaya buprenorfin verilmesi tam agonistin kovulmasıyla yoksunluk krizini tetikler."
+    },
+    {
+     "type": "active_recall",
+     "question": "Buprenorfinin solunum depresyonu profili açısından morfinden en önemli güvenlik farkı nedir?",
+     "answer": "Parsiyel agonist olması nedeniyle solunum depresyonunda tavan etkisi göstermesi ve letal doz aşımı riskinin daha düşük olmasıdır."
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Buprenorfin ve karma agonistler hakkında farmakolojik bilgiler:",
+     "items": [
+      {
+       "text": "Buprenorfin mü reseptörlerine morfinden daha yüksek afinite ile bağlanır.",
+       "isLie": false,
+       "explanation": "Reseptöre afinitesi çok yüksektir ve morfini yerinden eder."
+      },
+      {
+       "text": "Buprenorfin tam bir mü agonisti olup solunum depresyonunda hiçbir tavan etkisi göstermez.",
+       "isLie": true,
+       "explanation": "Buprenorfin parsiyel agonisttir ve solunum depresyonunda belirgin tavan etkisi gösterir."
+      },
+      {
+       "text": "Nalbufin kappa reseptör agonisti ve mü reseptör antagonistidir.",
+       "isLie": false,
+       "explanation": "Karma agonist-antagonist yapıda bir opioiddir."
+      }
+     ]
+    }
+   ],
+   "synthesisNarrative": "Opioid reseptör alt tipleri üzerinde farklı intrensek aktivite sergileyen moleküller karma etki profiline sahiptir.\n\n- **Buprenorfin:** Mü reseptörlerine son derece yüksek afinite ile bağlanan güçlü bir parsiyel agonisttir; delta ve kappa reseptörlerini ise bloke eder. Reseptörden disosiasyonu çok yavaştır.\n- **Tavan Etkisi:** Buprenorfinde solunum depresyonu doza paralel sonsuz artmaz, tavan etkisine ulaşır; bu durum ölümcül intoksikasyon riskini azaltır.\n- **Pentazosin ve Nalbufin:** Kappa reseptörlerinde agonist, mü reseptörlerinde ise antagonist veya parsiyel agonisttirler.\n\n> [!IMPORTANT]\n> Mü tam agonisti (morfin) kullanan bir hastaya buprenorfin veya pentazosin verilirse, morfin reseptörden kovulur ve aniden akut yoksunluk krizi başlar."
+  },
+  {
+   "slideNumber": 33,
+   "title": "Atipik Analjezik Tramadol ve Antitusifler",
+   "bolum": "7",
+   "pdfSayfalari": [
+    63,
+    65
+   ],
+   "sourcePdf": {
+    "startPage": 63,
+    "endPage": 65
+   },
+   "content": "Ağrı ve öksürük kontrolünde klasik opioid mekanizması dışına çıkan moleküller özgül avantajlar sunar.\n\n- **Tramadol:** Zayıf mü-opioid agonisti olmasının yanında, serotonin ve noradrenalin geri alımını bloke eder. İnen inhibitör yolları güçlendirerek analjezi sağlar.\n- **Tramadol Riskleri:** Aşırı dozda konvülsiyon eşiğini düşürür ve serotonerjik ilaçlarla kombine edildiğinde serotonin sendromuna yol açabilir.\n- **Dekstrometorfan:** Morfin türevi bir d-izomerdir. Analjezik veya bağımlılık yapıcı etkisi yoktur; mü reseptörlerini uyarmaz. Meduller öksürük merkezini baskılayan güvenli reçetesiz antitusiftir.\n\n> [!NOTE]\n> Dekstrometorfan bağımlılık potansiyeli taşımadığı için soğuk algınlığı ve kuru öksürük şuruplarında yaygın olarak yer alır.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Analjezik etkisini zayıf mü-agonizmine ek olarak serotonin ve noradrenalin geri alımını bloke ederek gösteren, aşırı dozda konvülsiyon riski taşıyan ilaç hangisidir?",
+     "options": [
+      {
+       "text": "Tramadol",
+       "isCorrect": true,
+       "explanation": "Tramadol, bu klinik durumda beklenen temel farmakolojik yanıtı ve mekanizmayı temsil eder. Soruda aranan hedef farmakolojik kavram doğru olarak bu seçenekle açıklanmaktadır."
+      },
+      {
+       "text": "Morfin",
+       "isCorrect": false,
+       "explanation": "Morfin, farmakolojide farklı bir biyolojik yolağa ve etki mekanizmasına sahip özgün bir kavramdır. Bu seçenek soruda hedeflenen spesifik klinik etki mekanizmasını açıklamaz."
+      },
+      {
+       "text": "Dekstrometorfan",
+       "isCorrect": false,
+       "explanation": "Dekstrometorfan, farmakolojide farklı bir biyolojik yolağa ve etki mekanizmasına sahip özgün bir kavramdır. Bu seçenek soruda hedeflenen spesifik klinik etki mekanizmasını açıklamaz."
+      },
+      {
+       "text": "Loperamid",
+       "isCorrect": false,
+       "explanation": "Loperamid, farmakolojide farklı bir biyolojik yolağa ve etki mekanizmasına sahip özgün bir kavramdır. Bu seçenek soruda hedeflenen spesifik klinik etki mekanizmasını açıklamaz."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "maskedTerm": "dekstrometorfan",
+     "hint": "Reçetesiz soğuk algınlığı şuruplarında kullanılan güvenli antitusif",
+     "options": [
+      "dekstrometorfan",
+      "tramadol",
+      "fentanil",
+      "meperidin"
+     ],
+     "sentence": "Morfin d-izomeri olan dekstrometorfan analjezik ve bağımlılık etkisi olmaksızın öksürük merkezini baskılar."
+    },
+    {
+     "type": "active_recall",
+     "question": "Tramadol kullanan bir hastada SSRI antidepresan başlandığında gelişebilecek en önemli toksik tablo nedir?",
+     "answer": "Serotonin geri alımının aşırı inhibisyonuna bağlı hayatı tehdit eden Serotonin Sendromudur."
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Tramadol ve antitusifler hakkında klinik önermeler:",
+     "items": [
+      {
+       "text": "Tramadol hem opioid hem monoaminerjik inen yolları aktive ederek analjezi sağlar.",
+       "isLie": false,
+       "explanation": "Çift mekanizmalı santral analjeziktir."
+      },
+      {
+       "text": "Dekstrometorfan yüksek bağımlılık potansiyeli nedeniyle kırmızı reçeteye tabidir.",
+       "isLie": true,
+       "explanation": "Dekstrometorfan bağımlılık yapmaz ve reçetesiz satılan güvenli bir antitusiftir."
+      },
+      {
+       "text": "Tramadol toksisitesinde konvülsiyon riski mevcuttur.",
+       "isLie": false,
+       "explanation": "Nöbet eşiğini düşürür ve epileptik atakları tetikleyebilir."
+      }
+     ]
+    }
+   ],
+   "synthesisNarrative": "Ağrı ve öksürük kontrolünde klasik opioid mekanizması dışına çıkan moleküller özgül avantajlar sunar.\n\n- **Tramadol:** Zayıf mü-opioid agonisti olmasının yanında, serotonin ve noradrenalin geri alımını bloke eder. İnen inhibitör yolları güçlendirerek analjezi sağlar.\n- **Tramadol Riskleri:** Aşırı dozda konvülsiyon eşiğini düşürür ve serotonerjik ilaçlarla kombine edildiğinde serotonin sendromuna yol açabilir.\n- **Dekstrometorfan:** Morfin türevi bir d-izomerdir. Analjezik veya bağımlılık yapıcı etkisi yoktur; mü reseptörlerini uyarmaz. Meduller öksürük merkezini baskılayan güvenli reçetesiz antitusiftir.\n\n> [!NOTE]\n> Dekstrometorfan bağımlılık potansiyeli taşımadığı için soğuk algınlığı ve kuru öksürük şuruplarında yaygın olarak yer alır."
+  },
+  {
+   "slideNumber": 34,
+   "title": "Tam Antagonistler: Nalokson ve Akut Toksisite",
+   "bolum": "8",
+   "pdfSayfalari": [
+    66,
+    68
+   ],
+   "sourcePdf": {
+    "startPage": 66,
+    "endPage": 68
+   },
+   "content": "Tam opioid antagonistleri reseptörleri kompetitif olarak bloke ederken hiçbir intrensek aktivite göstermezler.\n\n- **Nalokson:** Mü, delta ve kappa reseptörlerine yüksek afiniteyle bağlanır; ancak en yüksek afinitesi mü reseptörünedir. Oral biyoyararlanımı neredeyse sıfırdır; parenteral veya nazal sprey olarak verilir.\n- **Akut İntoksikasyon Tedavisi:** Koma, solunum depresyonu ve miyozis triadı ile gelen hastada IV nalokson 1-2 dakika içinde solunumu ve bilinci normale döndürür.\n- **Kısa Yarı Ömür Tehlikesi:** Naloksonun etki süresi kısadır (yaklaşık 1-2 saat); morfin veya metadon gibi uzun etkili opioidlerin vücuttaki etkisi sürerken naloksonun etkisi biterse hasta yeniden komaya ve apneye girebilir.\n\n> [!IMPORTANT]\n> Nalokson uygulanan hasta solunumu düzelse dahi taburcu edilemez; naloksonun etkisi opioidden önce biteceği için tekrar komaya girme riski mevcuttur.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Akut opioid doz aşımında koma ve solunum depresyonunu dakikalar içinde geri çeviren intravenöz standart tam kompetitif antagonist hangisidir?",
+     "options": [
+      {
+       "text": "Nalokson",
+       "isCorrect": true,
+       "explanation": "Nalokson, bu klinik durumda beklenen temel farmakolojik yanıtı ve mekanizmayı temsil eder. Soruda aranan hedef farmakolojik kavram doğru olarak bu seçenekle açıklanmaktadır."
+      },
+      {
+       "text": "Flumazenil",
+       "isCorrect": false,
+       "explanation": "Flumazenil, farmakolojide farklı bir biyolojik yolağa ve etki mekanizmasına sahip özgün bir kavramdır. Bu seçenek soruda hedeflenen spesifik klinik etki mekanizmasını açıklamaz."
+      },
+      {
+       "text": "Naltrekson",
+       "isCorrect": false,
+       "explanation": "Naltrekson, farmakolojide farklı bir biyolojik yolağa ve etki mekanizmasına sahip özgün bir kavramdır. Bu seçenek soruda hedeflenen spesifik klinik etki mekanizmasını açıklamaz."
+      },
+      {
+       "text": "Metadon",
+       "isCorrect": false,
+       "explanation": "Metadon, farmakolojide farklı bir biyolojik yolağa ve etki mekanizmasına sahip özgün bir kavramdır. Bu seçenek soruda hedeflenen spesifik klinik etki mekanizmasını açıklamaz."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "maskedTerm": "kısa",
+     "hint": "Naloksonun etki süresinin opioide kıyasla durumu",
+     "options": [
+      "kısa",
+      "uzun",
+      "eşit",
+      "sonsuz"
+     ],
+     "sentence": "Naloksonun etki süresi morfinden kısa olduğu için hasta nalokson etkisi geçince yeniden solunum depresyonuna girebilir."
+    },
+    {
+     "type": "active_recall",
+     "question": "Opioid zehirlenmesinde nalokson verildikten sonra hastanın acil serviste saatlerce izlenmesinin nedeni nedir?",
+     "answer": "Naloksonun yarı ömrünün kısa olması (1-2 saat) nedeniyle etkisi geçtikten sonra opioidin yeniden baskın gelip solunumu durdurabilmesidir."
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Nalokson farmakolojisi hakkında klinik bilgiler:",
+     "items": [
+      {
+       "text": "Nalokson intrensek aktivitesi sıfır olan tam kompetitif bir antagonisttir.",
+       "isLie": false,
+       "explanation": "Reseptörü aktive etmez, yalnızca agonistleri bloke eder."
+      },
+      {
+       "text": "Nalokson oral yoldan alındığında yüzde yüz emilir ve 48 saat boyunca etki gösterir.",
+       "isLie": true,
+       "explanation": "Nalokson oral biyoyararlanımı sıfıra yakındır ve etki süresi 1-2 saat gibi kısadır."
+      },
+      {
+       "text": "Opioid bağımlısında nalokson anında şiddetli bir yoksunluk krizi başlatabilir.",
+       "isLie": false,
+       "explanation": "Reseptörleri aniden boşalttığı için akut otonomik yoksunluk fırtınası tetikler."
+      }
+     ]
+    }
+   ],
+   "synthesisNarrative": "Tam opioid antagonistleri reseptörleri kompetitif olarak bloke ederken hiçbir intrensek aktivite göstermezler.\n\n- **Nalokson:** Mü, delta ve kappa reseptörlerine yüksek afiniteyle bağlanır; ancak en yüksek afinitesi mü reseptörünedir. Oral biyoyararlanımı neredeyse sıfırdır; parenteral veya nazal sprey olarak verilir.\n- **Akut İntoksikasyon Tedavisi:** Koma, solunum depresyonu ve miyozis triadı ile gelen hastada IV nalokson 1-2 dakika içinde solunumu ve bilinci normale döndürür.\n- **Kısa Yarı Ömür Tehlikesi:** Naloksonun etki süresi kısadır (yaklaşık 1-2 saat); morfin veya metadon gibi uzun etkili opioidlerin vücuttaki etkisi sürerken naloksonun etkisi biterse hasta yeniden komaya ve apneye girebilir.\n\n> [!IMPORTANT]\n> Nalokson uygulanan hasta solunumu düzelse dahi taburcu edilemez; naloksonun etkisi opioidden önce biteceği için tekrar komaya girme riski mevcuttur."
+  },
+  {
+   "slideNumber": 35,
+   "title": "Uzun Etkili Antagonistler: Naltrekson ve Nalmefen",
+   "bolum": "8",
+   "pdfSayfalari": [
+    69,
+    70
+   ],
+   "sourcePdf": {
+    "startPage": 69,
+    "endPage": 70
+   },
+   "content": "Kronik bağımlılık tedavisinde ve spesifik yan etki kontrolünde uzun etkili veya periferik antagonistler kullanılır.\n\n- **Naltrekson:** Oral biyoyararlanımı yüksek, karaciğerde aktif 6-beta-naltreksol metabolitine dönüşen uzun etkili (24-48 saat) antagonisttir.\n- **Klinik Endikasyonları:** Detoksifiye edilmiş opioid bağımlılarında relapsı (nüksü) önleme programlarında ve alkol bağımlılığında aşermeyi (craving) azaltmak amacıyla kullanılır.\n- **Nalmefen:** Naltrekson türevi olup yarı ömrü 8-10 saattir; intravenöz uygulanarak uzun etkili intoksikasyonlarda tekrarlayan nalokson ihtiyacını azaltır.\n- **Periferik Antagonistler (Metilnaltrekson, Alvimopan):** Kan beyin bariyerini geçemez; analjeziyi bozmadan opioid kaynaklı inatçı konstipasyonu çözerler.\n\n> [!NOTE]\n> Naltrekson tedavisine başlamadan önce hastanın vücudunda hiçbir opioid bulunmadığı idrar testiyle veya nalokson provokasyonuyla kesinleştirilmelidir.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Oral biyoyararlanımı yüksek olan, tek dozla 24-48 saat opioid blokajı sağlayan ve alkol ile opioid bağımlılığında nüks önlemede kullanılan antagonist hangisidir?",
+     "options": [
+      {
+       "text": "Naltrekson",
+       "isCorrect": true,
+       "explanation": "Naltrekson, bu klinik durumda beklenen temel farmakolojik yanıtı ve mekanizmayı temsil eder. Soruda aranan hedef farmakolojik kavram doğru olarak bu seçenekle açıklanmaktadır."
+      },
+      {
+       "text": "Nalokson",
+       "isCorrect": false,
+       "explanation": "Nalokson, farmakolojide farklı bir biyolojik yolağa ve etki mekanizmasına sahip özgün bir kavramdır. Bu seçenek soruda hedeflenen spesifik klinik etki mekanizmasını açıklamaz."
+      },
+      {
+       "text": "Morfin",
+       "isCorrect": false,
+       "explanation": "Morfin, farmakolojide farklı bir biyolojik yolağa ve etki mekanizmasına sahip özgün bir kavramdır. Bu seçenek soruda hedeflenen spesifik klinik etki mekanizmasını açıklamaz."
+      },
+      {
+       "text": "Buprenorfin",
+       "isCorrect": false,
+       "explanation": "Buprenorfin, farmakolojide farklı bir biyolojik yolağa ve etki mekanizmasına sahip özgün bir kavramdır. Bu seçenek soruda hedeflenen spesifik klinik etki mekanizmasını açıklamaz."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "maskedTerm": "metilnaltrekson",
+     "hint": "Periferik kısıtlı kuaterner yapılı opioid antagonisti",
+     "options": [
+      "metilnaltrekson",
+      "nalokson",
+      "fentanil",
+      "eroin"
+     ],
+     "sentence": "Kan beyin bariyerini aşamayan metilnaltrekson analjeziyi bozmadan opioid konstipasyonunu tedavi eder."
+    },
+    {
+     "type": "active_recall",
+     "question": "Alkol bağımlılığında naltreksonun kullanılma gerekçesi nedir?",
+     "answer": "Alkolün tetiklediği endojen opioid ve dopamin salınımını bloke ederek alkole karşı aşermeyi (craving) ve içme arzusunu azaltmasıdır."
+    },
+    {
+     "type": "swipe_matching",
+     "leftCategory": "Nalokson Özelliği",
+     "rightCategory": "Naltrekson Özelliği",
+     "cards": [
+      {
+       "text": "Parenteral veya intranazal acil kullanım",
+       "category": "left"
+      },
+      {
+       "text": "1-2 saatlik kısa etki süresi",
+       "category": "left"
+      },
+      {
+       "text": "Oral yoldan yüksek biyoyararlanım",
+       "category": "right"
+      },
+      {
+       "text": "24-48 saatlik uzun süreli bağımlılık nüks önleme",
+       "category": "right"
+      }
+     ]
+    }
+   ],
+   "synthesisNarrative": "Kronik bağımlılık tedavisinde ve spesifik yan etki kontrolünde uzun etkili veya periferik antagonistler kullanılır.\n\n- **Naltrekson:** Oral biyoyararlanımı yüksek, karaciğerde aktif 6-beta-naltreksol metabolitine dönüşen uzun etkili (24-48 saat) antagonisttir.\n- **Klinik Endikasyonları:** Detoksifiye edilmiş opioid bağımlılarında relapsı (nüksü) önleme programlarında ve alkol bağımlılığında aşermeyi (craving) azaltmak amacıyla kullanılır.\n- **Nalmefen:** Naltrekson türevi olup yarı ömrü 8-10 saattir; intravenöz uygulanarak uzun etkili intoksikasyonlarda tekrarlayan nalokson ihtiyacını azaltır.\n- **Periferik Antagonistler (Metilnaltrekson, Alvimopan):** Kan beyin bariyerini geçemez; analjeziyi bozmadan opioid kaynaklı inatçı konstipasyonu çözerler.\n\n> [!NOTE]\n> Naltrekson tedavisine başlamadan önce hastanın vücudunda hiçbir opioid bulunmadığı idrar testiyle veya nalokson provokasyonuyla kesinleştirilmelidir."
+  },
+  {
+   "slideNumber": 36,
+   "title": "[TEKRAR SAYFASI - CHECKPOINT 4] Spesifik İlaçlar ve Antagonistler",
+   "bolum": "8",
+   "isCheckpoint": true,
+   "pdfSayfalari": [
+    53,
+    70
+   ],
+   "sourcePdf": {
+    "startPage": 53,
+    "endPage": 70
+   },
+   "content": "Bu bölümde spesifik opioid agonistlerini, parsiyel ajanları ve kompetitif antagonistleri karşılaştırdık.\n\n- **Güçlü Agonistler:** Sufentanil klinik kullanımda en güçlü analjeziktir. Metadon mü agonizmi yanında NMDA blokajı yapar ve uzun yarı ömrüyle bağımlılık idamesinde kullanılır.\n- **Özel Ajanlar:** Loperamid KBB'yi geçmeyerek diyarede kullanılır. Buprenorfin yüksek afiniteli parsiyel agonist olup solunumda tavan etkisi gösterir. Tramadol serotonin/noradrenalin geri alımını da bloke eder.\n- **Antagonistler:** Nalokson akut zehirlenmede hayat kurtaran kısa etkili parenteral antidottur. Naltrekson ise oral uzun etkili olup nüks önleme programlarında kullanılır.\n\n> [!NOTE]\n> Bu ders boyunca öğrendiğimiz tüm farmakolojik ilkeleri son slayttaki ders sonu oyunlarıyla pekiştireceğiz.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Aşağıdaki ilaç eşleştirmelerinden hangisi etki mekanizması veya klinik kullanımı açısından DOĞRUDUR?",
+     "options": [
+      {
+       "text": "Buprenorfin — Yüksek afiniteli mü parsiyel agonisti — Solunum depresyonunda tavan etkisi",
+       "isCorrect": true,
+       "explanation": "Buprenorfin — Yüksek afiniteli mü parsiyel agonisti — Solunum depresyonunda tavan etkisi, bu klinik durumda beklenen temel farmakolojik yanıtı ve mekanizmayı temsil eder. Soruda aranan hedef farmakolojik kavram doğru olarak bu seçenekle açıklanmaktadır."
+      },
+      {
+       "text": "Loperamid — Yüksek lipofiliklik — Kan beyin bariyerini aşarak şiddetli öfori oluşturma",
+       "isCorrect": false,
+       "explanation": "Loperamid — Yüksek lipofiliklik — Kan beyin bariyerini aşarak şiddetli öfori oluşturma, farmakolojide farklı bir biyolojik yolağa ve etki mekanizmasına sahip özgün bir kavramdır. Bu seçenek soruda hedeflenen spesifik klinik etki mekanizmasını açıklamaz."
+      },
+      {
+       "text": "Nalokson — Oral uzun etkili agonist — Kronik kanser ağrısında ilk seçenek",
+       "isCorrect": false,
+       "explanation": "Nalokson — Oral uzun etkili agonist — Kronik kanser ağrısında ilk seçenek, farmakolojide farklı bir biyolojik yolağa ve etki mekanizmasına sahip özgün bir kavramdır. Bu seçenek soruda hedeflenen spesifik klinik etki mekanizmasını açıklamaz."
+      },
+      {
+       "text": "Metadon — Kısa etkili esterazla yıkılan anestezik — 5 dakikalık yarı ömür",
+       "isCorrect": false,
+       "explanation": "Metadon — Kısa etkili esterazla yıkılan anestezik — 5 dakikalık yarı ömür, farmakolojide farklı bir biyolojik yolağa ve etki mekanizmasına sahip özgün bir kavramdır. Bu seçenek soruda hedeflenen spesifik klinik etki mekanizmasını açıklamaz."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "maskedTerm": "naltrekson",
+     "hint": "24-48 saat etkili oral opioid antagonisti",
+     "options": [
+      "naltrekson",
+      "morfin",
+      "fentanil",
+      "meperidin"
+     ],
+     "sentence": "Akut opioid intoksikasyonu acilinde damardan nalokson verilirken bağımlılık nüksünü önlemede oral naltrekson kullanılır."
+    },
+    {
+     "type": "interactive_table",
+     "title": "Opioid İlaçlar ve Klinik Profil Özeti",
+     "tableHeaders": [
+      "İlaç",
+      "Etki Mekanizması",
+      "Belirgin Klinik Özellik"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Sufentanil",
+         "isMasked": false
+        },
+        {
+         "text": "Yüksek potensli mü tam agonisti",
+         "isMasked": true,
+         "hint": "İlgili biyolojik özellik"
+        },
+        {
+         "text": "Mevcut en güçlü analjeziktir, kalp cerrahisinde kullanılır",
+         "isMasked": false
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Metadon",
+         "isMasked": false
+        },
+        {
+         "text": "Mü agonisti + NMDA antagonisti",
+         "isMasked": true,
+         "hint": "İlgili biyolojik özellik"
+        },
+        {
+         "text": "Uzun yarı ömürlüdür, bağımlılık detoksifikasyonunda standarttır",
+         "isMasked": false
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Loperamid",
+         "isMasked": false
+        },
+        {
+         "text": "Periferik mü agonisti",
+         "isMasked": true,
+         "hint": "İlgili biyolojik özellik"
+        },
+        {
+         "text": "Kan-beyin bariyerini geçmez, diyare tedavisinde kullanılır",
+         "isMasked": false
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Nalokson",
+         "isMasked": false
+        },
+        {
+         "text": "Tam kompetitif antagonist",
+         "isMasked": true,
+         "hint": "İlgili biyolojik özellik"
+        },
+        {
+         "text": "Kısa etkilidir, akut doz aşımında komayı dakikalar içinde açar",
+         "isMasked": false
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Opioid antagonistleri olan Nalokson ile Naltrekson arasındaki en kritik iki fark nedir?",
+     "answer": "Nalokson parenteral uygulanan ve 1-2 saat süren kısa etkili acil antidottur; Naltrekson ise oral kullanılan ve 24-48 saat süren uzun etkili bağımlılık ilacıdır."
+    }
+   ],
+   "synthesisNarrative": "Bu bölümde spesifik opioid agonistlerini, parsiyel ajanları ve kompetitif antagonistleri karşılaştırdık.\n\n- **Güçlü Agonistler:** Sufentanil klinik kullanımda en güçlü analjeziktir. Metadon mü agonizmi yanında NMDA blokajı yapar ve uzun yarı ömrüyle bağımlılık idamesinde kullanılır.\n- **Özel Ajanlar:** Loperamid KBB'yi geçmeyerek diyarede kullanılır. Buprenorfin yüksek afiniteli parsiyel agonist olup solunumda tavan etkisi gösterir. Tramadol serotonin/noradrenalin geri alımını da bloke eder.\n- **Antagonistler:** Nalokson akut zehirlenmede hayat kurtaran kısa etkili parenteral antidottur. Naltrekson ise oral uzun etkili olup nüks önleme programlarında kullanılır.\n\n> [!NOTE]\n> Bu ders boyunca öğrendiğimiz tüm farmakolojik ilkeleri son slayttaki ders sonu oyunlarıyla pekiştireceğiz."
+  },
+  {
+   "slideNumber": 37,
+   "title": "[OYUN SAYFASI] Ders Sonu Oyunları: Opioid Analjezikler ve Antagonistleri",
+   "bolum": "8",
+   "isGameFinale": true,
+   "pdfSayfalari": [
+    69,
+    70
+   ],
+   "sourcePdf": {
+    "startPage": 69,
+    "endPage": 70
+   },
+   "content": "Tebrikler! Opioid Analjezikler ve Antagonistleri dersini başarıyla tamamladınız.\n\n- **Oyun Parkuru:** Şimdi ders boyunca öğrendiğiniz moleküler mekanizmaları, toksisite triadını, tolerans paternlerini ve antidot yönetimini interaktif oyunlarla test edin.\n- **Sıralama ve Muhakeme:** Akut intoksikasyon acil müdahale basamaklarını doğru sıraya koyun, farmakokinetik parametreleri tahmin edin ve klinik bozucu senaryoları çözün.\n- **Son Düzeltme:** Klinik vaka metnindeki farmakolojik yanılgıları tespit edip düzelterek bilginizi mühürleyin.\n\n> [!NOTE]\n> Bu oyunlar, kurul sınavlarında karşınıza çıkacak vaka ve mekanizma sorularını en yüksek hızda ve sıfır hatayla çözmeniz için tasarlanmıştır.",
+   "interactiveElements": [
+    {
+     "type": "sequence_order",
+     "prompt": "Acil servise getirilen akut opioid intoksikasyonu vakasında uygulanacak müdahale adımlarını doğru sıraya diziniz:",
+     "steps": [
+      "Hava yolu güvenliğinin değerlendirilmesi ve mekanik ventilasyon / oksijenasyon desteğinin başlatılması",
+      "İntravenöz damar yolunun açılması ve vitallerin monitörize edilmesi",
+      "Spesifik kompetitif antagonist naloksonun intravenöz yoldan titre edilerek verilmesi",
+      "Dakika solunum sayısı, tidal volüm ve pupilla yanıtının yakından izlenmesi",
+      "Naloksonun kısa yarı ömrü nedeniyle hastanın yeniden komaya girmemesi için en az 4-6 saat acilde gözlenmesi"
+     ],
+     "explanation": "Akut intoksikasyonda öncelikle hava yolu ve solunum güvenceye alınır, ardından damar yolu açılarak spesifik antidot nalokson verilir ve izlem sürdürülür."
+    },
+    {
+     "type": "estimate_slider",
+     "prompt": "Karaciğerde metabolize edilen morfinin yaklaşık yüzde kaçı aktif metabolit Morfin-6-Glukuronide (M6G) dönüştürülür?",
+     "min": 0,
+     "max": 50,
+     "answer": 10,
+     "tolerance": 3,
+     "step": 1,
+     "unit": "%",
+     "explanation": "Morfinin yaklaşık yüzde onu aktif morfin-6-glukuronide dönüştürülürken, yaklaşık yüzde doksanı inaktif M3G'ye dönüştürülür."
+    },
+    {
+     "type": "perturbation",
+     "scenario": "Kronik yüksek doz morfin bağımlısı bir hastaya aniden tam antagonist Nalokson uygulanıyor.",
+     "parameters": [
+      {
+       "name": "Solunum sayısı",
+       "correct": "artar",
+       "explanation": "Solunum merkezindeki opioid baskısı kalkarak dakika solunumu hızla yükselir."
+      },
+      {
+       "name": "Pupilla çapı (miyozis düzeyi)",
+       "correct": "azalır",
+       "explanation": "Edinger-Westphal parasempatik tonusu kırılarak pupilla genişler ve miyozis kaybolur."
+      },
+      {
+       "name": "Kan basıncı ve taşikardi",
+       "correct": "artar",
+       "explanation": "Locus coeruleus noradrenerjik deşarjı serbest kalarak sempatik fırtına ve hipertansiyon başlar."
+      }
+     ]
+    },
+    {
+     "type": "fix_the_text",
+     "text": "Kronik kanser ağrısı olan hastada morfin tedavisi sırasında analjezi ve solunum depresyonuna karşı tolerans gelişirken konstipasyon etkisine de zamanla tam tolerans geliştiği için laksatif tedavisi kesilir.",
+     "errors": [
+      {
+       "wrong": "konstipasyon",
+       "correct": "sedasyon",
+       "options": [
+        "öfori"
+       ],
+       "explanation": "Konstipasyona ve miyozise karşı asla tolerans gelişmez; hastada sedasyona tolerans gelişir ancak laksatif asla kesilmemelidir."
+      }
+     ]
+    }
+   ],
+   "synthesisNarrative": "Tebrikler! Opioid Analjezikler ve Antagonistleri dersini başarıyla tamamladınız.\n\n- **Oyun Parkuru:** Şimdi ders boyunca öğrendiğiniz moleküler mekanizmaları, toksisite triadını, tolerans paternlerini ve antidot yönetimini interaktif oyunlarla test edin.\n- **Sıralama ve Muhakeme:** Akut intoksikasyon acil müdahale basamaklarını doğru sıraya koyun, farmakokinetik parametreleri tahmin edin ve klinik bozucu senaryoları çözün.\n- **Son Düzeltme:** Klinik vaka metnindeki farmakolojik yanılgıları tespit edip düzelterek bilginizi mühürleyin.\n\n> [!NOTE]\n> Bu oyunlar, kurul sınavlarında karşınıza çıkacak vaka ve mekanizma sorularını en yüksek hızda ve sıfır hatayla çözmeniz için tasarlanmıştır."
+  }
+ ],
+ "discipline": "Tıbbi Farmakoloji",
+ "deckId": "k2p-y25-k2-33-opioid-analjezikler-ve-antagonistleri",
+ "donem": "2025-2026",
+ "arsiv": true,
+ "confidence": "high",
+ "totalSlides": 37,
+ "matchedPastQuestionsCount": 10,
+ "sinama": {
+  "etiket": "2025-2026 Arşiv",
+  "aciklama": "Bu ders 2025-2026 dönemi (geçen yıl) slaytlarından hazırlanmıştır; 2026-2027 güncel müfredat dersleriyle karışmaz."
+ }
+}

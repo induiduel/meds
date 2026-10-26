@@ -1,0 +1,34 @@
+{
+  "key": "y25-k2-30-norodejeneratif-hastaliklar",
+  "donem": "2025-2026",
+  "kurul": 2,
+  "brans": "Tıbbi Patoloji",
+  "baslik": "Nörodejeneratif Hastalıklar",
+  "kayitlar": [
+    {
+      "surum": 1,
+      "tarih": "2026-10-26 03:33",
+      "neden": "2025-2026 geçmiş yıl arşiv dersi ilk üretimi ve Kurul 2 tam otomatik hat kapı doğrulaması",
+      "hatali_bilgiler": [
+        "İlk üretim kontrolü: H1–H55 hata defterindeki kısaltma okunuşu, sayfa atlama ve şık açıklama kusurları tarandı; 0 hata doğrulandı."
+      ],
+      "degisiklikler": [
+        "2025-2026 dönemi Nörodejeneratif hastalıklar.pdf (61 sayfa) kaynağından 0 atlanan sayfa ile 60 paragraf / 156 cümlelik sesli anlatım üretildi.",
+        "68 adımlı etkileşimli Öğren destesi (11 model + ders sonu oyunları) ve 86 canlı çizim katmanı eklendi.",
+        "EMA Lightning GPU ile 21.6 dakikalık ses sentezlendi, cümle/kelime zamanlaması ve .medspak paketi doğrulandı."
+      ],
+      "metrikler": {
+        "sureSn": 1294,
+        "sureDk": 21.6,
+        "sayfaSayisi": 61,
+        "atlananSayfa": 0,
+        "bolumSayisi": 13,
+        "paragrafSayisi": 60,
+        "cumleSayisi": 156,
+        "slaytAdimSayisi": 68,
+        "cizimSayisi": 86,
+        "cikmisEslesme": 24
+      }
+    }
+  ]
+}

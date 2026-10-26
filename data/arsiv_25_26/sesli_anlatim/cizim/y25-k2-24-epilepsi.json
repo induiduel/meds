@@ -1,0 +1,3694 @@
+{
+ "surum": 1,
+ "metinHash": "9d0fc62becac5eeb6ee43e06d98768626021374a",
+ "p": {
+  "2": {
+   "3": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "24 saat arayla ≥2 tetiklenmemiş/refleks nöbet",
+      "1 nöbet + 10 yılda tekrar riski ≥%60",
+      "Epilepsi sendromu varlığı"
+     ],
+     "baslik": "Epilepsi hastalığı: üç durumdan biri",
+     "numarali": true,
+     "s": 4,
+     "k": [
+      0,
+      54
+     ],
+     "tip": "liste",
+     "konum": [
+      0.03,
+      0.9
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.308,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.228,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "4": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "cok_neden_tek_sonuc",
+     "sablon_ad": "Birçok neden → tek sonuç",
+     "duzen": "grup",
+     "bag": "neden olur",
+     "kaynaklar": [
+      "Son aylarda serebrovasküler hastalık",
+      "Nöbete yol açan yapısal lezyon",
+      "EEG'de interiktal epileptiform aktivite"
+     ],
+     "sonuc": "Tek nöbette yüksek tekrarlama riski",
+     "s": 6,
+     "k": [
+      0,
+      196
+     ],
+     "tip": "grup",
+     "konum": [
+      0.03,
+      0.9
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.263,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.1833,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "5": {
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "risk_artisi",
+     "sablon_ad": "Durum → risk artışı",
+     "duzen": "tablo",
+     "basliklar": [
+      "Durum",
+      "Risk artışı"
+     ],
+     "satirlar": [
+      [
+       "Akut beyin hasarıyla nöbet",
+       "2,55 kat (1-5 yıl)"
+      ],
+      [
+       "EEG'de epileptiform anomali",
+       "2,16 kat (1-5 yıl)"
+      ],
+      [
+       "Görüntülemede epileptojenik lezyon",
+       "2,44 kat (1-4 yıl)"
+      ],
+      [
+       "Noktürnal nöbet",
+       "2,1 kat (1-4 yıl)"
+      ]
+     ],
+     "s": 7,
+     "k": [
+      0,
+      177
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.03,
+      0.88
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.367,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.2665,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "6": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Hipokampal skleroz",
+      "Fokal kortikal displazi",
+      "Tuberoskleroz",
+      "Lizensefali, heterotopi",
+      "Polimikrogiri, şizensefali",
+      "Hemimegalensefali",
+      "Hipotalamik hamartom"
+     ],
+     "baslik": "Tekrar riski yüksek nörogörüntüleme bulguları",
+     "s": 8,
+     "k": [
+      30,
+      275
+     ],
+     "tip": "liste",
+     "konum": [
+      0.45,
+      0.23
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.53,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ],
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "cok_neden_tek_sonuc",
+     "sablon_ad": "Birçok neden → tek sonuç",
+     "duzen": "grup",
+     "bag": "neden olur",
+     "kaynaklar": [
+      "Düşük dereceli glial tümörler, DNET, gangliogliom",
+      "Kavernom, arteriovenöz malformasyon",
+      "Nörosistiserkozis, porensefalik kist",
+      "Travmatik beyin hasarı"
+     ],
+     "sonuc": "Kortekse yakın lezyon: epileptojenik, yüksek risk",
+     "s": 8,
+     "k": [
+      0,
+      331
+     ],
+     "tip": "grup",
+     "konum": [
+      0.03,
+      0.96
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.36,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.3404,
+     "ek_renk": "#ffffff"
+    }
+   ],
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "bulgu_dusundurur",
+     "sablon_ad": "Bulgu → düşündürdüğü tanı",
+     "duzen": "tablo",
+     "basliklar": [
+      "Bulgu",
+      "Düşündürdüğü"
+     ],
+     "satirlar": [
+      [
+       "Jeneralize/fokal diken ve keskin yavaş dalga",
+       "Yüksek tekrar riski"
+      ],
+      [
+       "Temporal lob epilepsisinde TIRDA",
+       "Yüksek tekrar riski"
+      ]
+     ],
+     "s": 8,
+     "k": [
+      7,
+      233
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.03,
+      0.96
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.293,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.2726,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "7": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Fokal başlangıçlı",
+      "Jeneralize başlangıçlı",
+      "Başlangıcı bilinmeyen"
+     ],
+     "baslik": "2017 sınıflaması: başlangıca göre",
+     "numarali": true,
+     "s": 9,
+     "k": [
+      20,
+      149
+     ],
+     "tip": "liste",
+     "konum": [
+      0.69,
+      0.68
+     ],
+     "genislik": 0.3,
+     "doluluk": 0.0,
+     "kutu_h": 0.308,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ]
+  },
+  "8": {
+   "0": [
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.1875,
+       0.328
+      ],
+      [
+       0.267,
+       0.328
+      ],
+      [
+       0.346,
+       0.328
+      ],
+      [
+       0.346,
+       0.355
+      ],
+      [
+       0.346,
+       0.382
+      ],
+      [
+       0.267,
+       0.382
+      ],
+      [
+       0.1875,
+       0.382
+      ],
+      [
+       0.1875,
+       0.355
+      ]
+     ],
+     "etiket": "farkındalık korunmuş/bozulmuş",
+     "s": 10,
+     "k": [
+      10,
+      79
+     ],
+     "etiket_konum": [
+      0.336,
+      0.208
+     ],
+     "etiket_genislik": 0.404,
+     "etiket_hedef": [
+      0.346,
+      0.328
+     ],
+     "etiket_boy": 0.0443,
+     "yakin": [
+      0.1275,
+      0.148,
+      0.8,
+      0.442
+     ]
+    }
+   ],
+   "1": [
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.1875,
+       0.405
+      ],
+      [
+       0.267,
+       0.405
+      ],
+      [
+       0.346,
+       0.405
+      ],
+      [
+       0.346,
+       0.47
+      ],
+      [
+       0.346,
+       0.54
+      ],
+      [
+       0.346,
+       0.612
+      ],
+      [
+       0.1875,
+       0.612
+      ],
+      [
+       0.1875,
+       0.54
+      ],
+      [
+       0.1875,
+       0.47
+      ]
+     ],
+     "etiket": "motor semptomlar",
+     "s": 10,
+     "k": [
+      9,
+      127
+     ],
+     "etiket_konum": [
+      0.336,
+      0.365
+     ],
+     "etiket_genislik": 0.239,
+     "yakin": [
+      0.1275,
+      0.305,
+      0.635,
+      0.672
+     ]
+    },
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.1875,
+       0.612
+      ],
+      [
+       0.346,
+       0.612
+      ],
+      [
+       0.346,
+       0.66
+      ],
+      [
+       0.346,
+       0.715
+      ],
+      [
+       0.346,
+       0.768
+      ],
+      [
+       0.267,
+       0.768
+      ],
+      [
+       0.1875,
+       0.768
+      ],
+      [
+       0.1875,
+       0.715
+      ],
+      [
+       0.1875,
+       0.66
+      ]
+     ],
+     "etiket": "nonmotor semptomlar",
+     "s": 10,
+     "k": [
+      128,
+      217
+     ],
+     "etiket_konum": [
+      0.056,
+      0.572
+     ],
+     "etiket_genislik": 0.277,
+     "yakin": [
+      0,
+      0.512,
+      0.406,
+      0.828
+     ]
+    }
+   ],
+   "2": [
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.139,
+       0.8
+      ],
+      [
+       0.235,
+       0.8
+      ],
+      [
+       0.33,
+       0.8
+      ],
+      [
+       0.4275,
+       0.8
+      ],
+      [
+       0.4275,
+       0.83
+      ],
+      [
+       0.33,
+       0.83
+      ],
+      [
+       0.235,
+       0.83
+      ],
+      [
+       0.139,
+       0.83
+      ]
+     ],
+     "etiket": "fokal → bilateral tonik-klonik",
+     "s": 10,
+     "k": [
+      0,
+      79
+     ],
+     "etiket_konum": [
+      0.4175,
+      0.83
+     ],
+     "etiket_genislik": 0.416,
+     "yakin": [
+      0.079,
+      0.74,
+      0.8935,
+      0.93
+     ]
+    }
+   ]
+  },
+  "9": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "karar",
+     "sablon_ad": "Karar dalı",
+     "duzen": "dal",
+     "soru": "Fokal nöbette farkındalık",
+     "dallar": [
+      [
+       "Korunmuş",
+       "Farkındalığın korunduğu nöbet (eski basit parsiyel)"
+      ],
+      [
+       "Bozulmuş",
+       "Farkındalığın bozulduğu nöbet (eski kompleks parsiyel)"
+      ]
+     ],
+     "s": 11,
+     "k": [
+      0,
+      206
+     ],
+     "tip": "dal",
+     "konum": [
+      0.03,
+      0.85
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.354,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.2242,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "10": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "karar",
+     "sablon_ad": "Karar dalı",
+     "duzen": "dal",
+     "soru": "Nöbette ilk belirgin bulgu",
+     "dallar": [
+      [
+       "Motor",
+       "Motor semptomlu fokal nöbet"
+      ],
+      [
+       "Motor olmayan",
+       "Nonmotor semptomlu fokal nöbet"
+      ]
+     ],
+     "s": 12,
+     "k": [
+      0,
+      79
+     ],
+     "tip": "dal",
+     "konum": [
+      0.13,
+      0.68
+     ],
+     "genislik": 0.6,
+     "doluluk": 0.0,
+     "kutu_h": 0.274,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ]
+  },
+  "11": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "terim_tanim",
+     "sablon_ad": "Terim → tanım",
+     "duzen": "tablo",
+     "basliklar": [
+      "Terim",
+      "Tanım"
+     ],
+     "satirlar": [
+      [
+       "Epileptik spazm",
+       "Gövde ekstansiyonu, kollarda fleksiyon/ekstansiyon postürü"
+      ],
+      [
+       "Hiperkinetik",
+       "Pedal çevirme, ayağa kalkma, koşma"
+      ]
+     ],
+     "s": 13,
+     "k": [
+      8,
+      186
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.03,
+      0.87
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.293,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.1826,
+     "ek_renk": "#ffffff"
+    }
+   ],
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Otonom bulgular",
+      "Duraklama (davranışın durması)",
+      "Kognitif",
+      "Emosyonel",
+      "Duysal"
+     ],
+     "baslik": "Nonmotor fokal nöbetler",
+     "s": 13,
+     "k": [
+      0,
+      113
+     ],
+     "tip": "liste",
+     "konum": [
+      0.03,
+      0.87
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.419,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.3089,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "12": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "mekanizma_adimlari",
+     "sablon_ad": "Mekanizma basamakları",
+     "duzen": "zincir",
+     "ogeler": [
+      "Farklı odaktan benzer, aynı odaktan farklı nöbet",
+      "Semiyolojinin lokalizasyon değeri sınırlı",
+      "EEG ve görüntülemeyle desteklenmeli"
+     ],
+     "s": 14,
+     "k": [
+      0,
+      159
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.03,
+      0.9
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.35,
+     "yon": "dikey",
+     "olcek": 1.0,
+     "ek_alt": 0.2696,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "13": {
+   "3": [
+    {
+     "tur": "sema",
+     "sablon": "bulgu_dusundurur",
+     "sablon_ad": "Bulgu → düşündürdüğü tanı",
+     "duzen": "tablo",
+     "basliklar": [
+      "Bulgu",
+      "Düşündürdüğü"
+     ],
+     "satirlar": [
+      [
+       "Zorlu baş dönmesi",
+       "Kontralateral frontal odak (değeri düşük)"
+      ],
+      [
+       "Eskrimci postürü",
+       "Ekstansör kolun kontralateralinde odak"
+      ],
+      [
+       "Figür 4 pozisyonu",
+       "Ekstansör kolun kontralateralinde odak"
+      ]
+     ],
+     "s": 15,
+     "k": [
+      0,
+      302
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.03,
+      0.77
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.31,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.0995,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "14": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Febril nöbet öyküsü",
+      "Pozitif aile öyküsü",
+      "Belli aralıklarla tekrarlayan nöbetler"
+     ],
+     "baslik": "Temporal lob nöbetlerinde öykü",
+     "s": 16,
+     "k": [
+      0,
+      121
+     ],
+     "tip": "liste",
+     "konum": [
+      0.03,
+      0.75
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.308,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.078,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "15": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "karsilastirma",
+     "sablon_ad": "İki durumun karşılaştırması",
+     "duzen": "karsit",
+     "basliklar": [
+      "Özellik"
+     ],
+     "satirlar": [
+      [
+       "Görsel illüzyon/halüsinasyon",
+       "Daha karmaşık",
+       "Daha basit yapıda"
+      ]
+     ],
+     "kutuplar": [
+      "Temporal kaynaklı",
+      "Oksipital kaynaklı"
+     ],
+     "s": 17,
+     "k": [
+      115,
+      213
+     ],
+     "tip": "karsit",
+     "konum": [
+      0.03,
+      0.78
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.236,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.0356,
+     "ek_renk": "#ffffff"
+    }
+   ],
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "klinik_seyir",
+     "sablon_ad": "Klinik seyir (sırayla gelişen evreler)",
+     "duzen": "adimlar",
+     "ogeler": [
+      "Motor duraklama",
+      "Oroalimanter otomatizmalar (dudak şapırdatma, çiğneme)",
+      "Diğer otomatizmalar eklenir"
+     ],
+     "s": 17,
+     "k": [
+      0,
+      165
+     ],
+     "tip": "adimlar",
+     "konum": [
+      0.03,
+      0.78
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.259,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.0587,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "16": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Motor semptomlu",
+      "Nonmotor semptomlu (absans)"
+     ],
+     "baslik": "Jeneralize başlangıçlı nöbetler",
+     "s": 18,
+     "k": [
+      57,
+      133
+     ],
+     "tip": "liste",
+     "konum": [
+      0.03,
+      0.9
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.253,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.1726,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "17": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "karsilastirma",
+     "sablon_ad": "İki durumun karşılaştırması",
+     "duzen": "karsit",
+     "basliklar": [
+      "Özellik"
+     ],
+     "satirlar": [
+      [
+       "Sıçramanın ritmi",
+       "Ritmik",
+       "Ritmik değil, ani"
+      ]
+     ],
+     "kutuplar": [
+      "Klonik nöbet",
+      "Miyoklonik nöbet"
+     ],
+     "s": 19,
+     "k": [
+      0,
+      166
+     ],
+     "tip": "karsit",
+     "konum": [
+      0.03,
+      0.85
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.196,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.0656,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "18": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "karsilastirma",
+     "sablon_ad": "İki durumun karşılaştırması",
+     "duzen": "karsit",
+     "basliklar": [
+      "Özellik"
+     ],
+     "satirlar": [
+      [
+       "Bilinç kaybı",
+       "Tam",
+       "Tam olmayabilir"
+      ],
+      [
+       "Başlangıç ve bitiş",
+       "Ani",
+       "Genelde sinsi"
+      ],
+      [
+       "Kas tonusu değişikliği",
+       "Daha seyrek",
+       "Daha sık"
+      ]
+     ],
+     "kutuplar": [
+      "Tipik absans",
+      "Atipik absans"
+     ],
+     "s": 20,
+     "k": [
+      0,
+      127
+     ],
+     "tip": "karsit",
+     "konum": [
+      0.04,
+      0.85
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.31,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.1795,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "19": {
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "15 dakikadan kısa sürer",
+      "Bilateral tonik-klonik başlar",
+      "İlk 24 saatte tekrarlamaz",
+      "Nörolojik muayene normal",
+      "Postiktal Todd parezisi yok"
+     ],
+     "baslik": "Basit febril nöbet ölçütleri",
+     "numarali": true,
+     "s": 21,
+     "k": [
+      0,
+      217
+     ],
+     "tip": "liste",
+     "konum": [
+      0.03,
+      0.89
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.419,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.3289,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "21": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "cok_neden_tek_sonuc",
+     "sablon_ad": "Birçok neden → tek sonuç",
+     "duzen": "grup",
+     "bag": "neden olur",
+     "kaynaklar": [
+      "15 ay altında başlangıç",
+      "Ailede epilepsi / febril nöbet öyküsü",
+      "Sık ateşli hastalık öyküsü",
+      "Nöbet başlangıcında düşük ateş"
+     ],
+     "sonuc": "Febril nöbet tekrar riski artar",
+     "s": 23,
+     "k": [
+      75,
+      237
+     ],
+     "tip": "grup",
+     "konum": [
+      0.03,
+      0.86
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.32,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.2003,
+     "ek_renk": "#ffffff"
+    }
+   ],
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "cok_neden_tek_sonuc",
+     "sablon_ad": "Birçok neden → tek sonuç",
+     "duzen": "grup",
+     "bag": "neden olur",
+     "kaynaklar": [
+      "Gelişim geriliği / anormal nörolojik durum",
+      "Ailede ateşsiz nöbet",
+      "Komplike febril nöbet"
+     ],
+     "sonuc": "Epilepsi gelişme riski artar",
+     "s": 23,
+     "k": [
+      130,
+      260
+     ],
+     "tip": "grup",
+     "konum": [
+      0.03,
+      0.86
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.303,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.1834,
+     "ek_renk": "#ffffff"
+    }
+   ],
+   "4": [
+    {
+     "tur": "sema",
+     "sablon": "karar",
+     "sablon_ad": "Karar dalı",
+     "duzen": "dal",
+     "soru": "Febril nöbet tipi?",
+     "dallar": [
+      [
+       "Basit",
+       "Sürekli AEİ yok; rektal/oral diazepam profilaksisi"
+      ],
+      [
+       "Kompleks",
+       "Akut nörolojik sendrom ya da Dravet gibi ensefalopati ara"
+      ]
+     ],
+     "s": 23,
+     "k": [
+      0,
+      131
+     ],
+     "tip": "dal",
+     "konum": [
+      0.03,
+      0.86
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.314,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.1942,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "22": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "cok_neden_tek_sonuc",
+     "sablon_ad": "Birçok neden → tek sonuç",
+     "duzen": "grup",
+     "bag": "neden olur",
+     "kaynaklar": [
+      "Metabolik / toksik sistemik olay",
+      "Akut beyin hastalığı"
+     ],
+     "sonuc": "Akut semptomatik nöbet",
+     "s": 24,
+     "k": [
+      0,
+      152
+     ],
+     "tip": "grup",
+     "konum": [
+      0.03,
+      0.86
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.206,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.0864,
+     "ek_renk": "#ffffff"
+    }
+   ],
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "mekanizma_adimlari",
+     "sablon_ad": "Mekanizma basamakları",
+     "duzen": "zincir",
+     "ogeler": [
+      "Beyinle ilişkili akut hastalık",
+      "Hastalık yatışır",
+      "Epilepsi gelişme riski artar"
+     ],
+     "s": 24,
+     "k": [
+      0,
+      154
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.03,
+      0.86
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.35,
+     "yon": "dikey",
+     "olcek": 1.0,
+     "ek_alt": 0.2296,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "23": {
+   "0": [
+    {
+     "tur": "akis",
+     "a": [
+      0.166,
+      0.547
+     ],
+     "b": [
+      0.329,
+      0.547
+     ],
+     "iliski": "aktive",
+     "etiket": "hasar → ilk nöbet",
+     "s": 25,
+     "k": [
+      64,
+      96
+     ],
+     "yol": [
+      [
+       0.166,
+       0.547
+      ],
+      [
+       0.1762,
+       0.5527
+      ],
+      [
+       0.1864,
+       0.5577
+      ],
+      [
+       0.1966,
+       0.5619
+      ],
+      [
+       0.2068,
+       0.5653
+      ],
+      [
+       0.2169,
+       0.568
+      ],
+      [
+       0.2271,
+       0.5699
+      ],
+      [
+       0.2373,
+       0.5711
+      ],
+      [
+       0.2475,
+       0.5715
+      ],
+      [
+       0.2577,
+       0.5711
+      ],
+      [
+       0.2679,
+       0.5699
+      ],
+      [
+       0.2781,
+       0.568
+      ],
+      [
+       0.2883,
+       0.5653
+      ],
+      [
+       0.2984,
+       0.5619
+      ],
+      [
+       0.3086,
+       0.5577
+      ],
+      [
+       0.3188,
+       0.5527
+      ],
+      [
+       0.329,
+       0.547
+      ]
+     ],
+     "rota": "kavis",
+     "etiket_konum": [
+      0.166,
+      0.547
+     ],
+     "etiket_genislik": 0.252,
+     "yakin": [
+      0.106,
+      0.487,
+      0.478,
+      0.647
+     ]
+    },
+    {
+     "tur": "akis",
+     "a": [
+      0.695,
+      0.547
+     ],
+     "b": [
+      0.8,
+      0.547
+     ],
+     "iliski": "donusur",
+     "etiket": "değişiklikler → epilepsi",
+     "s": 25,
+     "k": [
+      111,
+      180
+     ],
+     "odak": [
+      0.675,
+      0.527,
+      0.82,
+      0.567
+     ],
+     "etiket_konum": [
+      0.52,
+      0.407
+     ],
+     "etiket_genislik": 0.34,
+     "etiket_hedef": [
+      0.6902,
+      0.527
+     ],
+     "etiket_boy": 0.0443,
+     "yakin": [
+      0.46,
+      0.347,
+      0.92,
+      0.627
+     ]
+    }
+   ],
+   "1": [
+    {
+     "tur": "akis",
+     "a": [
+      0.465,
+      0.386
+     ],
+     "b": [
+      0.465,
+      0.524
+     ],
+     "iliski": "aktive",
+     "etiket": "genetik her basamağı etkiler",
+     "s": 25,
+     "k": [
+      37,
+      48
+     ],
+     "yol": [
+      [
+       0.465,
+       0.386
+      ],
+      [
+       0.4601,
+       0.3946
+      ],
+      [
+       0.4559,
+       0.4033
+      ],
+      [
+       0.4524,
+       0.4119
+      ],
+      [
+       0.4495,
+       0.4205
+      ],
+      [
+       0.4472,
+       0.4291
+      ],
+      [
+       0.4456,
+       0.4378
+      ],
+      [
+       0.4446,
+       0.4464
+      ],
+      [
+       0.4443,
+       0.455
+      ],
+      [
+       0.4446,
+       0.4636
+      ],
+      [
+       0.4456,
+       0.4723
+      ],
+      [
+       0.4472,
+       0.4809
+      ],
+      [
+       0.4495,
+       0.4895
+      ],
+      [
+       0.4524,
+       0.4981
+      ],
+      [
+       0.4559,
+       0.5068
+      ],
+      [
+       0.4601,
+       0.5154
+      ],
+      [
+       0.465,
+       0.524
+      ]
+     ],
+     "rota": "kavis",
+     "etiket_konum": [
+      0.465,
+      0.266
+     ],
+     "etiket_genislik": 0.391,
+     "etiket_hedef": [
+      0.475,
+      0.514
+     ],
+     "etiket_boy": 0.0443,
+     "yakin": [
+      0.3843,
+      0.206,
+      0.916,
+      0.584
+     ]
+    },
+    {
+     "tur": "akis",
+     "a": [
+      0.465,
+      0.704
+     ],
+     "b": [
+      0.465,
+      0.576
+     ],
+     "iliski": "aktive",
+     "etiket": "yaş ve cins etkiler",
+     "s": 25,
+     "k": [
+      49,
+      69
+     ],
+     "yol": [
+      [
+       0.465,
+       0.704
+      ],
+      [
+       0.4695,
+       0.696
+      ],
+      [
+       0.4734,
+       0.688
+      ],
+      [
+       0.4767,
+       0.68
+      ],
+      [
+       0.4794,
+       0.672
+      ],
+      [
+       0.4815,
+       0.664
+      ],
+      [
+       0.483,
+       0.656
+      ],
+      [
+       0.4839,
+       0.648
+      ],
+      [
+       0.4842,
+       0.64
+      ],
+      [
+       0.4839,
+       0.632
+      ],
+      [
+       0.483,
+       0.624
+      ],
+      [
+       0.4815,
+       0.616
+      ],
+      [
+       0.4794,
+       0.608
+      ],
+      [
+       0.4767,
+       0.6
+      ],
+      [
+       0.4734,
+       0.592
+      ],
+      [
+       0.4695,
+       0.584
+      ],
+      [
+       0.465,
+       0.576
+      ]
+     ],
+     "rota": "kavis",
+     "etiket_konum": [
+      0.465,
+      0.794
+     ],
+     "etiket_genislik": 0.277,
+     "etiket_hedef": [
+      0.475,
+      0.586
+     ],
+     "etiket_boy": 0.0443,
+     "yakin": [
+      0.405,
+      0.516,
+      0.802,
+      0.8983
+     ]
+    }
+   ]
+  },
+  "24": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "karsilastirma",
+     "sablon_ad": "İki durumun karşılaştırması",
+     "duzen": "karsit",
+     "basliklar": [
+      "Özellik"
+     ],
+     "satirlar": [
+      [
+       "Kaynak (Galen)",
+       "Beyinden kaynaklanır",
+       "Vücudun herhangi bir bölgesinden"
+      ]
+     ],
+     "kutuplar": [
+      "İdyopatik nöbet",
+      "Semptomatik nöbet"
+     ],
+     "s": 26,
+     "k": [
+      176,
+      305
+     ],
+     "tip": "karsit",
+     "konum": [
+      0.03,
+      0.88
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.236,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.1356,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "25": {
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Yaşamın ilk yılı",
+      "60 yaş sonrası"
+     ],
+     "baslik": "İnsidansın en yüksek olduğu dönemler",
+     "s": 27,
+     "k": [
+      0,
+      80
+     ],
+     "tip": "liste",
+     "konum": [
+      0.29,
+      0.02
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.253,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ]
+  },
+  "26": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Epilepsi nöbeti tipi",
+      "Epilepsi tipi",
+      "Epilepsi sendromu",
+      "Etyolojinin değerlendirilmesi",
+      "Komorbiditelerin değerlendirilmesi"
+     ],
+     "baslik": "Yeni epilepsi sınıflaması: 5 aşama",
+     "numarali": true,
+     "s": 28,
+     "k": [
+      0,
+      181
+     ],
+     "tip": "liste",
+     "konum": [
+      0.03,
+      0.82
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.419,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.2589,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "27": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Fokal epilepsiler",
+      "Jeneralize epilepsiler",
+      "Kombine fokal ve jeneralize (Dravet, Lennox-Gastaut)",
+      "Bilinmeyen"
+     ],
+     "baslik": "Epilepsi tipi: 4 grup",
+     "s": 29,
+     "k": [
+      0,
+      215
+     ],
+     "tip": "liste",
+     "konum": [
+      0.03,
+      0.74
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.363,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.1234,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "28": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "cok_neden_tek_sonuc",
+     "sablon_ad": "Birçok neden → tek sonuç",
+     "duzen": "grup",
+     "bag": "neden olur",
+     "kaynaklar": [
+      "Klinik bulgular",
+      "Elektrofizyolojik bulgular",
+      "Laboratuvar bulguları",
+      "Radyolojik bulgular"
+     ],
+     "sonuc": "Epilepsi sendromunun belirlenmesi",
+     "s": 30,
+     "k": [
+      0,
+      144
+     ],
+     "tip": "grup",
+     "konum": [
+      0.03,
+      0.85
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.32,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.1903,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "29": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Kendini sınırlayan yenidoğan nöbetleri",
+      "Kendini sınırlayan ailesel yenidoğan epilepsisi",
+      "Erken miyoklonik ensefalopati",
+      "Ohtahara sendromu"
+     ],
+     "baslik": "Yenidoğan dönemi sendromları",
+     "s": 31,
+     "k": [
+      58,
+      225
+     ],
+     "tip": "liste",
+     "konum": [
+      0.04,
+      0.98
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.363,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.3634,
+     "ek_renk": "#ffffff"
+    }
+   ],
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Gezici fokal nöbetlerle seyreden infantil epilepsi",
+      "West sendromu",
+      "İnfantil miyoklonik epilepsi",
+      "Kendini sınırlayan (ailesel) infantil epilepsi",
+      "Dravet sendromu",
+      "İlerleyici olmayan hastalığa bağlı miyoklonik ensefalopati"
+     ],
+     "baslik": "İnfantil dönem sendromları",
+     "s": 31,
+     "k": [
+      0,
+      257
+     ],
+     "tip": "liste",
+     "konum": [
+      0.04,
+      0.98
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.474,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.4743,
+     "ek_renk": "#ffffff"
+    }
+   ],
+   "4": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Juvenil absans epilepsisi",
+      "Juvenil miyoklonik epilepsi",
+      "Sadece jeneralize tonik-klonik nöbetli epilepsi",
+      "Otozomal dominant işitsel özellikli epilepsi",
+      "Diğer ailesel temporal lob epilepsileri"
+     ],
+     "baslik": "Ergen ve erişkin dönem sendromları",
+     "s": 31,
+     "k": [
+      0,
+      235
+     ],
+     "tip": "liste",
+     "konum": [
+      0.04,
+      0.98
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.419,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.4189,
+     "ek_renk": "#ffffff"
+    }
+   ],
+   "5": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Değişken odaklı ailesel fokal epilepsi",
+      "Refleks epilepsi",
+      "Progresif miyoklonik epilepsi"
+     ],
+     "baslik": "Başlangıç yaşı değişken sendromlar",
+     "s": 31,
+     "k": [
+      0,
+      132
+     ],
+     "tip": "liste",
+     "konum": [
+      0.04,
+      0.98
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.308,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.308,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "30": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Yapısal",
+      "Genetik",
+      "Enfeksiyonlar",
+      "Metabolik",
+      "İmmünite",
+      "Bilinmeyen"
+     ],
+     "baslik": "Etyolojinin altı alt grubu",
+     "s": 32,
+     "k": [
+      142,
+      236
+     ],
+     "tip": "liste",
+     "konum": [
+      0.38,
+      0.47
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.474,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ]
+  },
+  "31": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "sendrom_kromozom",
+     "sablon_ad": "Sendrom → kromozom anomalisi",
+     "duzen": "tablo",
+     "basliklar": [
+      "Sendrom",
+      "Kromozom anomalisi"
+     ],
+     "satirlar": [
+      [
+       "Down sendromu",
+       "Trizomi 21"
+      ],
+      [
+       "Miller Dieker sendromu",
+       "17p delesyonu"
+      ],
+      [
+       "Pallister Killian sendromu",
+       "Tetrazomi 12p"
+      ],
+      [
+       "Wolf Hirschhorn sendromu",
+       "4p delesyonu"
+      ]
+     ],
+     "s": 33,
+     "k": [
+      26,
+      283
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.6,
+      0.45
+     ],
+     "genislik": 0.34,
+     "doluluk": 0.0,
+     "kutu_h": 0.487,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ]
+  },
+  "33": {
+   "0": [
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.508,
+       0.115
+      ],
+      [
+       0.523,
+       0.098
+      ],
+      [
+       0.54,
+       0.1
+      ],
+      [
+       0.556,
+       0.103
+      ],
+      [
+       0.568,
+       0.12
+      ],
+      [
+       0.566,
+       0.16
+      ],
+      [
+       0.56,
+       0.2
+      ],
+      [
+       0.54,
+       0.21
+      ],
+      [
+       0.52,
+       0.205
+      ],
+      [
+       0.508,
+       0.18
+      ],
+      [
+       0.506,
+       0.145
+      ]
+     ],
+     "etiket": "sol santrotemporal faz dönmesi",
+     "s": 35,
+     "k": [
+      132,
+      179
+     ],
+     "etiket_konum": [
+      0.558,
+      0.058
+     ],
+     "etiket_genislik": 0.416,
+     "yakin": [
+      0.446,
+      0,
+      1,
+      0.27
+     ]
+    },
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.51,
+       0.488
+      ],
+      [
+       0.525,
+       0.478
+      ],
+      [
+       0.542,
+       0.48
+      ],
+      [
+       0.556,
+       0.492
+      ],
+      [
+       0.565,
+       0.515
+      ],
+      [
+       0.56,
+       0.545
+      ],
+      [
+       0.545,
+       0.558
+      ],
+      [
+       0.527,
+       0.555
+      ],
+      [
+       0.512,
+       0.54
+      ],
+      [
+       0.508,
+       0.512
+      ]
+     ],
+     "s": 35,
+     "k": [
+      180,
+      211
+     ],
+     "yakin": [
+      0.448,
+      0.418,
+      0.625,
+      0.618
+     ]
+    }
+   ]
+  },
+  "34": {
+   "0": [
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.322,
+       0.12
+      ],
+      [
+       0.338,
+       0.112
+      ],
+      [
+       0.352,
+       0.122
+      ],
+      [
+       0.356,
+       0.25
+      ],
+      [
+       0.354,
+       0.4
+      ],
+      [
+       0.352,
+       0.55
+      ],
+      [
+       0.348,
+       0.65
+      ],
+      [
+       0.334,
+       0.66
+      ],
+      [
+       0.322,
+       0.64
+      ],
+      [
+       0.318,
+       0.5
+      ],
+      [
+       0.318,
+       0.35
+      ],
+      [
+       0.32,
+       0.22
+      ]
+     ],
+     "etiket": "jeneralize çok dikenli deşarj",
+     "s": 36,
+     "k": [
+      111,
+      134
+     ],
+     "etiket_konum": [
+      0.466,
+      0.052
+     ],
+     "etiket_genislik": 0.404,
+     "etiket_hedef": [
+      0.356,
+      0.112
+     ],
+     "etiket_boy": 0.0443
+    },
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.428,
+       0.12
+      ],
+      [
+       0.45,
+       0.108
+      ],
+      [
+       0.475,
+       0.115
+      ],
+      [
+       0.482,
+       0.25
+      ],
+      [
+       0.48,
+       0.4
+      ],
+      [
+       0.478,
+       0.55
+      ],
+      [
+       0.47,
+       0.65
+      ],
+      [
+       0.448,
+       0.66
+      ],
+      [
+       0.43,
+       0.64
+      ],
+      [
+       0.426,
+       0.5
+      ],
+      [
+       0.425,
+       0.35
+      ],
+      [
+       0.426,
+       0.22
+      ]
+     ],
+     "etiket": "düzensiz dikenli dalga deşarjı",
+     "s": 36,
+     "k": [
+      135,
+      163
+     ],
+     "etiket_konum": [
+      0.425,
+      0.672
+     ],
+     "etiket_genislik": 0.416,
+     "yakin": [
+      0.365,
+      0.048,
+      0.901,
+      0.772
+     ]
+    }
+   ]
+  },
+  "35": {
+   "0": [
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.3625,
+       0.498
+      ],
+      [
+       0.375,
+       0.49
+      ],
+      [
+       0.391,
+       0.485
+      ],
+      [
+       0.406,
+       0.4875
+      ],
+      [
+       0.417,
+       0.494
+      ],
+      [
+       0.416,
+       0.508
+      ],
+      [
+       0.403,
+       0.519
+      ],
+      [
+       0.3875,
+       0.525
+      ],
+      [
+       0.372,
+       0.523
+      ],
+      [
+       0.3625,
+       0.5125
+      ]
+     ],
+     "s": 37,
+     "k": [
+      22,
+      80
+     ],
+     "yakin": [
+      0.3025,
+      0.425,
+      0.477,
+      0.585
+     ]
+    }
+   ]
+  },
+  "36": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Anamnez ve muayene",
+      "Laboratuvar incelemeleri",
+      "EEG",
+      "Uzun süreli video-EEG monitorizasyonu",
+      "Nöropsikolojik değerlendirme",
+      "BT ve MR görüntüleme"
+     ],
+     "baslik": "Epilepsili hastanın değerlendirilmesi",
+     "s": 38,
+     "k": [
+      0,
+      244
+     ],
+     "tip": "liste",
+     "konum": [
+      0.03,
+      0.85
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.474,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.3443,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "37": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "karsilastirma",
+     "sablon_ad": "İki durumun karşılaştırması",
+     "duzen": "karsit",
+     "basliklar": [
+      "Özellik"
+     ],
+     "satirlar": [
+      [
+       "Jeneralize diken-dalga",
+       "3 Hz",
+       "2,5 Hz'den yavaş"
+      ]
+     ],
+     "kutuplar": [
+      "Tipik absans",
+      "Atipik absans"
+     ],
+     "s": 39,
+     "k": [
+      68,
+      177
+     ],
+     "tip": "karsit",
+     "konum": [
+      0.03,
+      0.8
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.196,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.0156,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "39": {
+   "0": [
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.175,
+       0.3
+      ],
+      [
+       0.1938,
+       0.2867
+      ],
+      [
+       0.2125,
+       0.2967
+      ],
+      [
+       0.22,
+       0.325
+      ],
+      [
+       0.2075,
+       0.35
+      ],
+      [
+       0.185,
+       0.3533
+      ],
+      [
+       0.1725,
+       0.33
+      ]
+     ],
+     "etiket": "fokal kortikal displazi",
+     "s": 41,
+     "k": [
+      73,
+      102
+     ],
+     "etiket_konum": [
+      0.0,
+      0.02
+     ],
+     "etiket_genislik": 0.328,
+     "etiket_hedef": [
+      0.1725,
+      0.2867
+     ],
+     "etiket_boy": 0.0443,
+     "yakin": [
+      0,
+      0,
+      0.388,
+      0.4133
+     ]
+    }
+   ]
+  },
+  "40": {
+   "0": [
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.285,
+       0.2833
+      ],
+      [
+       0.3063,
+       0.275
+      ],
+      [
+       0.3187,
+       0.2967
+      ],
+      [
+       0.31,
+       0.32
+      ],
+      [
+       0.29,
+       0.32
+      ],
+      [
+       0.2812,
+       0.3033
+      ]
+     ],
+     "s": 42,
+     "k": [
+      68,
+      139
+     ],
+     "yakin": [
+      0.2212,
+      0.215,
+      0.3787,
+      0.38
+     ]
+    },
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.46,
+       0.125
+      ],
+      [
+       0.4775,
+       0.12
+      ],
+      [
+       0.49,
+       0.1367
+      ],
+      [
+       0.4875,
+       0.16
+      ],
+      [
+       0.47,
+       0.1667
+      ],
+      [
+       0.4575,
+       0.15
+      ]
+     ],
+     "s": 42,
+     "k": [
+      140,
+      180
+     ],
+     "yakin": [
+      0.3975,
+      0.06,
+      0.55,
+      0.2267
+     ]
+    }
+   ],
+   "1": [
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.4813,
+       0.6583
+      ],
+      [
+       0.5,
+       0.6167
+      ],
+      [
+       0.525,
+       0.575
+      ],
+      [
+       0.55,
+       0.5583
+      ],
+      [
+       0.565,
+       0.5833
+      ],
+      [
+       0.5563,
+       0.6333
+      ],
+      [
+       0.525,
+       0.6617
+      ],
+      [
+       0.4938,
+       0.6667
+      ]
+     ],
+     "etiket": "oksipital kalsifikasyon",
+     "s": 42,
+     "k": [
+      92,
+      157
+     ],
+     "etiket_konum": [
+      0.16,
+      0.84
+     ],
+     "etiket_genislik": 0.328,
+     "etiket_hedef": [
+      0.4813,
+      0.6667
+     ],
+     "etiket_boy": 0.0443,
+     "yakin": [
+      0.1,
+      0.4983,
+      0.625,
+      0.9443
+     ]
+    },
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.725,
+       0.5833
+      ],
+      [
+       0.7475,
+       0.5717
+      ],
+      [
+       0.765,
+       0.5917
+      ],
+      [
+       0.7625,
+       0.625
+      ],
+      [
+       0.74,
+       0.6367
+      ],
+      [
+       0.7225,
+       0.6133
+      ]
+     ],
+     "etiket": "mezyal temporal HSV lezyonu",
+     "s": 42,
+     "k": [
+      158,
+      236
+     ],
+     "etiket_konum": [
+      0.5,
+      0.84
+     ],
+     "etiket_genislik": 0.378,
+     "etiket_hedef": [
+      0.7225,
+      0.6367
+     ],
+     "etiket_boy": 0.0443,
+     "yakin": [
+      0.44,
+      0.5117,
+      0.938,
+      0.9443
+     ]
+    }
+   ]
+  },
+  "41": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Senkoplar",
+      "Siyanotik nefes tutma atakları",
+      "Metabolik nedenler",
+      "Migren",
+      "Kardiyak ritim bozuklukları (SVT)"
+     ],
+     "baslik": "Çocukluk çağı ayırıcı tanı",
+     "s": 43,
+     "k": [
+      0,
+      254
+     ],
+     "tip": "liste",
+     "konum": [
+      0.03,
+      0.89
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.419,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.3289,
+     "ek_renk": "#ffffff"
+    }
+   ],
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Tikler",
+      "Yenidoğan titreme atakları",
+      "Çocukluğun benign miyoklonisi",
+      "Nonepileptik psikojen ataklar",
+      "Benign paroksizmal koreatetoz",
+      "Gece korkuları, parasomniler"
+     ],
+     "baslik": "Nöbeti taklit eden diğer durumlar",
+     "s": 43,
+     "k": [
+      0,
+      307
+     ],
+     "tip": "liste",
+     "konum": [
+      0.03,
+      0.89
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.474,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.3843,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "42": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Psikojenik (yalancı) nöbet",
+      "Panik atak",
+      "Hiperventilasyon"
+     ],
+     "baslik": "Nonepileptik ataklar",
+     "s": 44,
+     "k": [
+      0,
+      86
+     ],
+     "tip": "liste",
+     "konum": [
+      0.58,
+      0.54
+     ],
+     "genislik": 0.34,
+     "doluluk": 0.0,
+     "kutu_h": 0.308,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ]
+  },
+  "43": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "karsilastirma",
+     "sablon_ad": "İki durumun karşılaştırması",
+     "duzen": "karsit",
+     "basliklar": [
+      "Özellik"
+     ],
+     "satirlar": [
+      [
+       "Postür",
+       "Hemen daima ayakta",
+       "Her postür"
+      ],
+      [
+       "Renk",
+       "Beyaz",
+       "Morarma"
+      ],
+      [
+       "Başlangıç",
+       "Yavaş (presenkop)",
+       "Ani ya da auralı"
+      ]
+     ],
+     "kutuplar": [
+      "Senkop",
+      "Epilepsi"
+     ],
+     "s": 45,
+     "k": [
+      74,
+      253
+     ],
+     "tip": "karsit",
+     "konum": [
+      0.03,
+      0.98
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.31,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.3095,
+     "ek_renk": "#ffffff"
+    }
+   ],
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "karsilastirma",
+     "sablon_ad": "İki durumun karşılaştırması",
+     "duzen": "karsit",
+     "basliklar": [
+      "Özellik"
+     ],
+     "satirlar": [
+      [
+       "Bilinçsiz süre",
+       "Saniyeler",
+       "Dakikalar"
+      ],
+      [
+       "Düzelme",
+       "Hızlı",
+       "Yavaş"
+      ],
+      [
+       "Postiktal konfüzyon",
+       "Çok seyrek",
+       "Sık"
+      ]
+     ],
+     "kutuplar": [
+      "Senkop",
+      "Epilepsi"
+     ],
+     "s": 45,
+     "k": [
+      0,
+      219
+     ],
+     "tip": "karsit",
+     "konum": [
+      0.03,
+      0.98
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.31,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.3095,
+     "ek_renk": "#ffffff"
+    }
+   ],
+   "4": [
+    {
+     "tur": "sema",
+     "sablon": "bulgu_dusundurur",
+     "sablon_ad": "Bulgu → düşündürdüğü tanı",
+     "duzen": "tablo",
+     "basliklar": [
+      "Bulgu",
+      "Düşündürdüğü"
+     ],
+     "satirlar": [
+      [
+       "Nöbet sırasında normal EEG",
+       "Psikojenik atak"
+      ]
+     ],
+     "s": 45,
+     "k": [
+      128,
+      211
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.03,
+      0.98
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.196,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.1956,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "44": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "neden_sonuc",
+     "sablon_ad": "Neden → sonuç",
+     "duzen": "zincir",
+     "bag": "yol açar",
+     "ogeler": [
+      "Karbamazepin otoindüksiyonu",
+      "Yarılanma 24-45 saatten 8-24 saate kısalır"
+     ],
+     "s": 47,
+     "k": [
+      0,
+      151
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.186,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.1463,
+     "ek_renk": "#ffffff"
+    }
+   ],
+   "3": [
+    {
+     "tur": "sema",
+     "sablon": "mekanizma_adimlari",
+     "sablon_ad": "Mekanizma basamakları",
+     "duzen": "zincir",
+     "ogeler": [
+      "Fenitoinde doyurulabilen hepatik metabolizma",
+      "Konsantrasyona bağlı yarılanma",
+      "Küçük doz artışı toksisite"
+     ],
+     "s": 47,
+     "k": [
+      0,
+      151
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.35,
+     "yon": "dikey",
+     "olcek": 1.0,
+     "ek_alt": 0.3096,
+     "ek_renk": "#ffffff"
+    }
+   ],
+   "6": [
+    {
+     "tur": "sema",
+     "sablon": "ilac_etki",
+     "sablon_ad": "İlaç → mekanizma → sonuç",
+     "duzen": "tablo",
+     "basliklar": [
+      "İlaç",
+      "Mekanizma",
+      "Sonuç"
+     ],
+     "satirlar": [
+      [
+       "Valproat",
+       "Enzim inhibisyonu",
+       "Lamotrijin yarılanması uzar, doz azaltılır"
+      ],
+      [
+       "Enzim indükleyiciler",
+       "Enzim indüksiyonu",
+       "Lamotrijin yarılanması kısalır"
+      ]
+     ],
+     "s": 47,
+     "k": [
+      56,
+      164
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.333,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.2926,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "45": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "neden_sonuc",
+     "sablon_ad": "Neden → sonuç",
+     "duzen": "zincir",
+     "bag": "yol açar",
+     "ogeler": [
+      "Gabapentinde doza bağımlı emilim",
+      "Doz arttıkça biyoyararlanım azalır"
+     ],
+     "s": 48,
+     "k": [
+      98,
+      175
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.05,
+      0.93
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.186,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.1363,
+     "ek_renk": "#ffffff"
+    }
+   ],
+   "3": [
+    {
+     "tur": "sema",
+     "sablon": "neden_sonuc",
+     "sablon_ad": "Neden → sonuç",
+     "duzen": "zincir",
+     "bag": "yol açar",
+     "ogeler": [
+      "Valproat rufinamid atılımını azaltır",
+      "Rufinamid plazma düzeyi %70 artar"
+     ],
+     "s": 48,
+     "k": [
+      114,
+      214
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.05,
+      0.93
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.186,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.1363,
+     "ek_renk": "#ffffff"
+    }
+   ],
+   "4": [
+    {
+     "tur": "sema",
+     "sablon": "cok_neden_tek_sonuc",
+     "sablon_ad": "Birçok neden → tek sonuç",
+     "duzen": "grup",
+     "bag": "neden olur",
+     "kaynaklar": [
+      "Karbamazepin",
+      "Fenitoin"
+     ],
+     "sonuc": "Perampanel klirensi 2-3 kat artar",
+     "s": 48,
+     "k": [
+      90,
+      169
+     ],
+     "tip": "grup",
+     "konum": [
+      0.05,
+      0.93
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.206,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.1564,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "46": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "bulgu_dusundurur",
+     "sablon_ad": "Bulgu → düşündürdüğü tanı",
+     "duzen": "tablo",
+     "basliklar": [
+      "Bulgu",
+      "Düşündürdüğü"
+     ],
+     "satirlar": [
+      [
+       "Nöbetin alışılmıştan uzun sürmesi",
+       "Status epileptikus"
+      ],
+      [
+       "Düzelmeden art arda çok sayıda nöbet",
+       "Status epileptikus, acil tedavi"
+      ]
+     ],
+     "s": 49,
+     "k": [
+      0,
+      245
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.22,
+      0.54
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.333,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ]
+  },
+  "47": {
+   "0": [
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.1225,
+       0.395
+      ],
+      [
+       0.2375,
+       0.395
+      ],
+      [
+       0.35,
+       0.395
+      ],
+      [
+       0.35,
+       0.6333
+      ],
+      [
+       0.35,
+       0.8617
+      ],
+      [
+       0.23,
+       0.8617
+      ],
+      [
+       0.23,
+       0.625
+      ],
+      [
+       0.175,
+       0.625
+      ],
+      [
+       0.1225,
+       0.625
+      ],
+      [
+       0.1225,
+       0.5
+      ]
+     ],
+     "etiket": "erken SE: benzodiazepin",
+     "s": 50,
+     "k": [
+      35,
+      138
+     ],
+     "etiket_konum": [
+      0.0,
+      0.2
+     ],
+     "etiket_genislik": 0.328,
+     "etiket_hedef": [
+      0.1638,
+      0.395
+     ],
+     "etiket_boy": 0.0443,
+     "yakin": [
+      0,
+      0.14,
+      0.41,
+      0.9217
+     ]
+    }
+   ],
+   "1": [
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.1225,
+       0.395
+      ],
+      [
+       0.175,
+       0.395
+      ],
+      [
+       0.2288,
+       0.395
+      ],
+      [
+       0.2288,
+       0.5083
+      ],
+      [
+       0.2288,
+       0.625
+      ],
+      [
+       0.175,
+       0.625
+      ],
+      [
+       0.1225,
+       0.625
+      ],
+      [
+       0.1225,
+       0.5083
+      ]
+     ],
+     "etiket": "damar yolu açık: IV diazepam",
+     "s": 50,
+     "k": [
+      0,
+      65
+     ],
+     "etiket_konum": [
+      0.34,
+      0.2
+     ],
+     "etiket_genislik": 0.391,
+     "etiket_hedef": [
+      0.2288,
+      0.395
+     ],
+     "etiket_boy": 0.0443,
+     "yakin": [
+      0.0625,
+      0.14,
+      0.791,
+      0.685
+     ]
+    },
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.23,
+       0.395
+      ],
+      [
+       0.29,
+       0.395
+      ],
+      [
+       0.35,
+       0.395
+      ],
+      [
+       0.35,
+       0.6333
+      ],
+      [
+       0.35,
+       0.8617
+      ],
+      [
+       0.29,
+       0.8617
+      ],
+      [
+       0.23,
+       0.8617
+      ],
+      [
+       0.23,
+       0.6333
+      ]
+     ],
+     "etiket": "damar yolu yok: midazolam/rektal",
+     "s": 50,
+     "k": [
+      100,
+      207
+     ],
+     "etiket_konum": [
+      0.0,
+      0.14
+     ],
+     "etiket_genislik": 0.42,
+     "etiket_hedef": [
+      0.23,
+      0.395
+     ],
+     "etiket_boy": 0.0443
+    }
+   ],
+   "2": [
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.35,
+       0.395
+      ],
+      [
+       0.4562,
+       0.395
+      ],
+      [
+       0.5687,
+       0.395
+      ],
+      [
+       0.5687,
+       0.55
+      ],
+      [
+       0.5687,
+       0.6967
+      ],
+      [
+       0.4562,
+       0.6967
+      ],
+      [
+       0.4562,
+       0.6633
+      ],
+      [
+       0.35,
+       0.6633
+      ],
+      [
+       0.35,
+       0.5333
+      ]
+     ],
+     "etiket": "dirençli SE: fenitoin ve alternatifler",
+     "s": 50,
+     "k": [
+      0,
+      167
+     ],
+     "etiket_konum": [
+      0.44,
+      0.1
+     ],
+     "etiket_genislik": 0.42,
+     "etiket_hedef": [
+      0.5687,
+      0.395
+     ],
+     "etiket_boy": 0.0773
+    }
+   ]
+  }
+ },
+ "rapor": {
+  "aday": 90,
+  "gecti": 73,
+  "ret": {
+   "panel metni 'Nitelik' henüz anlatılmamış terim içeriyor (ile": 1,
+   "panel metni 'Eşik düşer → akut semptomatik ' henüz anlatılma": 1,
+   "panel metni 'Aralıklı ışık, sıcak su' henüz anlatılmamış ter": 1,
+   "panel metni 'Kas tonusunun kaybı' henüz anlatılmamış terim i": 1,
+   "kelime aralığı geçersiz (19–26, cümle 5 kelime)": 1,
+   "panel metni 'Düşme atağı' henüz anlatılmamış terim içeriyor ": 1,
+   "sayfada resim kutusu yok (kontur/eğri yalnız resim üstünde)": 3,
+   "panel metni '4-10 / 1000' henüz anlatılmamış terim içeriyor ": 1,
+   "panel metni '2,2-44 / 1000' henüz anlatılmamış terim içeriyo": 1,
+   "noktaların %36'i çizgi üstünde (en az %70)": 1,
+   "noktaların %45'i çizgi üstünde (en az %70)": 1,
+   "noktaların %53'i çizgi üstünde (en az %70)": 1,
+   "hücre 60 karakterden uzun": 1,
+   "kelime aralığı geçersiz (0–19, cümle 5 kelime)": 1,
+   "kelime aralığı geçersiz (0–24, cümle 21 kelime)": 1
+  },
+  "ret_ayrinti": [
+   {
+    "cumle": "P1.C2",
+    "sayfa": 3,
+    "tur": "sema",
+    "neden": "panel metni 'Nitelik' henüz anlatılmamış terim içeriyor (ileri sızıntı)",
+    "komut": {}
+   },
+   {
+    "cumle": "P3.C0",
+    "sayfa": 5,
+    "tur": "sema",
+    "neden": "panel metni 'Eşik düşer → akut semptomatik ' henüz anlatılmamış terim içeriyor (ileri sızıntı)",
+    "komut": {}
+   },
+   {
+    "cumle": "P3.C2",
+    "sayfa": 5,
+    "tur": "sema",
+    "neden": "panel metni 'Aralıklı ışık, sıcak su' henüz anlatılmamış terim içeriyor (ileri sızıntı)",
+    "komut": {}
+   },
+   {
+    "cumle": "P11.C0",
+    "sayfa": 13,
+    "tur": "sema",
+    "neden": "panel metni 'Kas tonusunun kaybı' henüz anlatılmamış terim içeriyor (ileri sızıntı)",
+    "komut": {}
+   },
+   {
+    "cumle": "P13.C6",
+    "sayfa": 15,
+    "tur": "sema",
+    "neden": "kelime aralığı geçersiz (19–26, cümle 5 kelime)",
+    "komut": {}
+   },
+   {
+    "cumle": "P17.C3",
+    "sayfa": 19,
+    "tur": "sema",
+    "neden": "panel metni 'Düşme atağı' henüz anlatılmamış terim içeriyor (ileri sızıntı)",
+    "komut": {}
+   },
+   {
+    "cumle": "P20.C0",
+    "sayfa": 22,
+    "tur": "kontur",
+    "neden": "sayfada resim kutusu yok (kontur/eğri yalnız resim üstünde)",
+    "komut": {
+     "nokta": [
+      [
+       0.345,
+       0.472
+      ],
+      [
+       0.46,
+       0.472
+      ],
+      [
+       0.578,
+       0.472
+      ],
+      [
+       0.578,
+       0.515
+      ],
+      [
+       0.578,
+       0.558
+      ],
+      [
+       0.46,
+       0.558
+      ],
+      [
+       0.345,
+       0.558
+      ],
+      [
+       0.345,
+       0.515
+      ]
+     ],
+     "etiket": "basit: kısa, jeneralize"
+    }
+   },
+   {
+    "cumle": "P20.C0",
+    "sayfa": 22,
+    "tur": "kontur",
+    "neden": "sayfada resim kutusu yok (kontur/eğri yalnız resim üstünde)",
+    "komut": {
+     "nokta": [
+      [
+       0.578,
+       0.472
+      ],
+      [
+       0.7,
+       0.472
+      ],
+      [
+       0.835,
+       0.472
+      ],
+      [
+       0.835,
+       0.515
+      ],
+      [
+       0.835,
+       0.558
+      ],
+      [
+       0.7,
+       0.558
+      ],
+      [
+       0.578,
+       0.558
+      ],
+      [
+       0.578,
+       0.515
+      ]
+     ],
+     "etiket": "komplike: uzun, fokal olabilir"
+    }
+   },
+   {
+    "cumle": "P20.C1",
+    "sayfa": 22,
+    "tur": "kontur",
+    "neden": "sayfada resim kutusu yok (kontur/eğri yalnız resim üstünde)",
+    "komut": {
+     "nokta": [
+      [
+       0.0625,
+       0.558
+      ],
+      [
+       0.345,
+       0.558
+      ],
+      [
+       0.578,
+       0.558
+      ],
+      [
+       0.835,
+       0.558
+      ],
+      [
+       0.835,
+       0.625
+      ],
+      [
+       0.835,
+       0.69
+      ],
+      [
+       0.578,
+       0.69
+      ],
+      [
+       0.345,
+       0.69
+      ],
+      [
+       0.0625,
+       0.69
+      ],
+      [
+       0.0625,
+       0.625
+      ]
+     ],
+     "etiket": "basitte yok, komplikede olabilir"
+    }
+   },
+   {
+    "cumle": "P25.C0",
+    "sayfa": 27,
+    "tur": "sema",
+    "neden": "panel metni '4-10 / 1000' henüz anlatılmamış terim içeriyor (ileri sızıntı)",
+    "komut": {}
+   },
+   {
+    "cumle": "P25.C1",
+    "sayfa": 27,
+    "tur": "sema",
+    "neden": "panel metni '2,2-44 / 1000' henüz anlatılmamış terim içeriyor (ileri sızıntı)",
+    "komut": {}
+   },
+   {
+    "cumle": "P39.C0",
+    "sayfa": 41,
+    "tur": "kontur",
+    "neden": "noktaların %36'i çizgi üstünde (en az %70)",
+    "komut": {
+     "nokta": [
+      [
+       0.4813,
+       0.1917
+      ],
+      [
+       0.5062,
+       0.1867
+      ],
+      [
+       0.5188,
+       0.2333
+      ],
+      [
+       0.5125,
+       0.2917
+      ],
+      [
+       0.4938,
+       0.3083
+      ],
+      [
+       0.4788,
+       0.2667
+      ]
+     ],
+     "etiket": "nodüler heterotopi"
+    }
+   },
+   {
+    "cumle": "P39.C1",
+    "sayfa": 41,
+    "tur": "kontur",
+    "neden": "noktaların %45'i çizgi üstünde (en az %70)",
+    "komut": {
+     "nokta": [
+      [
+       0.3,
+       0.5417
+      ],
+      [
+       0.3275,
+       0.5367
+      ],
+      [
+       0.34,
+       0.5667
+      ],
+      [
+       0.3312,
+       0.6033
+      ],
+      [
+       0.3063,
+       0.6083
+      ],
+      [
+       0.2938,
+       0.575
+      ]
+     ],
+     "etiket": "perisilviyen displazi"
+    }
+   },
+   {
+    "cumle": "P39.C1",
+    "sayfa": 41,
+    "tur": "kontur",
+    "neden": "noktaların %53'i çizgi üstünde (en az %70)",
+    "komut": {
+     "nokta": [
+      [
+       0.4775,
+       0.4467
+      ],
+      [
+       0.525,
+       0.4533
+      ],
+      [
+       0.5625,
+       0.5
+      ],
+      [
+       0.5725,
+       0.575
+      ],
+      [
+       0.5563,
+       0.6583
+      ],
+      [
+       0.5125,
+       0.7083
+      ],
+      [
+       0.475,
+       0.7167
+      ],
+      [
+       0.4725,
+       0.5833
+      ]
+     ],
+     "etiket": "büyümüş hemisfer"
+    }
+   },
+   {
+    "cumle": "P47.C3",
+    "sayfa": 50,
+    "tur": "kontur",
+    "neden": "kelime aralığı geçersiz (0–19, cümle 5 kelime)",
+    "komut": {
+     "nokta": [
+      [
+       0.57,
+       0.395
+      ],
+      [
+       0.685,
+       0.395
+      ],
+      [
+       0.765,
+       0.395
+      ],
+      [
+       0.765,
+       0.545
+      ],
+      [
+       0.6887,
+       0.545
+      ],
+      [
+       0.6887,
+       0.6833
+      ],
+      [
+       0.6887,
+       0.8067
+      ],
+      [
+       0.57,
+       0.8067
+      ],
+      [
+       0.57,
+       0.6
+      ]
+     ],
+     "etiket": "süper dirençli SE: infüzyon"
+    }
+   },
+   {
+    "cumle": "P47.C4",
+    "sayfa": 50,
+    "tur": "kontur",
+    "neden": "kelime aralığı geçersiz (0–24, cümle 21 kelime)",
+    "komut": {
+     "nokta": [
+      [
+       0.1212,
+       0.885
+      ],
+      [
+       0.1625,
+       0.8617
+      ],
+      [
+       0.4375,
+       0.8617
+      ],
+      [
+       0.725,
+       0.8617
+      ],
+      [
+       0.7625,
+       0.885
+      ],
+      [
+       0.725,
+       0.9083
+      ],
+      [
+       0.4375,
+       0.9083
+      ],
+      [
+       0.1625,
+       0.9083
+      ]
+     ],
+     "etiket": "tüm süreçte izlem"
+    }
+   }
+  ]
+ }
+}

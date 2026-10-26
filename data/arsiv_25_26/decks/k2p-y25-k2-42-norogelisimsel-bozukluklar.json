@@ -1,0 +1,2073 @@
+{
+ "id": "k2p-y25-k2-42-norogelisimsel-bozukluklar",
+ "deckId": "k2p-y25-k2-42-norogelisimsel-bozukluklar",
+ "title": "Nörogelişimsel Bozukluklar",
+ "donem": "2025-2026",
+ "committee": "donem3-kurul2",
+ "sourcePdf": "y25-k2-42-norogelisimsel-bozukluklar.pdf",
+ "sayfaHaritasi": "teyitli",
+ "totalSlides": 24,
+ "slides": [
+  {
+   "id": "k2-42-d-s01",
+   "slideNumber": 1,
+   "title": "Nörogelişimsel Bozukluklar: Kavramsal Tanım ve Klinik Çerçeve",
+   "bolum": "1",
+   "pdfSayfalari": [
+    1,
+    2
+   ],
+   "sourcePdf": {
+    "startPage": 1,
+    "endPage": 2
+   },
+   "content": "Nörogelişimsel bozukluklar, merkezi sinir sisteminin olgunlaşma sürecinde ortaya çıkan ve bireyin zihinsel işlevleri ile kimlik gelişimini doğrudan biçimlendiren heterojen klinik tablolardır.\n\n- **Klinik Tanımlama:** Tanı tek bir spesifik etiyolojiye veya patognomonik laboratuvar bulgusuna değil, klinik belirti kümelerinin ayrıntılı betimlenmesine dayanır.\n- **Belirti Kombinasyonu:** Klinik görünüm birden çok semptomun farklı varyasyonlarından meydana gelir ve bireysel farklılıklar ön plandadır.\n- **Gelişimsel Süreç:** Belirtiler zihinsel işlevlerin inşa edildiği kritik gelişim pencerelerinde şekillenir.\n\n> [!NOTE]\n> Nörogelişimsel tablolarda laboratuvar veya görüntüleme bulgusu tanı koydurucu değil, ayırıcı tanıda dışlayıcıdır; klinik muhakeme esastır.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Nörogelişimsel bozuklukların temel tanısal yaklaşımı hakkında hangisi doğrudur?",
+     "options": [
+      {
+       "text": "Tek bir patognomonik biyobelirteçle tanı konur.",
+       "isCorrect": false,
+       "explanation": "Tek bir patognomonik biyobelirteçle tanı konur. kavramı bu klinik tabloyu oluşturmaz; ilgili nörogelişimsel süreçte farklı bir alanda fonksiyon gösterir. Nörogelişimsel bozukluklarda tek bir patognomonik biyobelirteç bulunmaz."
+      },
+      {
+       "text": "Tanı klinik belirtilerin ayrıntılı betimlenmesine dayanır.",
+       "isCorrect": true,
+       "explanation": "Tanı klinik belirtilerin ayrıntılı betimlenmesine dayanır. doğru yanıttır; çünkü bu spesifik klinik ve gelişimsel mekanizma doğrudan hedeflenen tanı ölçütünü kurar. Klinik belirtilerin gelişimsel dönemdeki örüntüsü tanı koymanın temelidir."
+      },
+      {
+       "text": "Belirtiler yalnızca ileri erişkinlik evresinde ortaya çıkar.",
+       "isCorrect": false,
+       "explanation": "Belirtiler yalnızca ileri erişkinlik evresinde ortaya çıkar. kavramı bu klinik tabloyu oluşturmaz; ilgili nörogelişimsel süreçte farklı bir alanda fonksiyon gösterir. Bu bozukluklar erken çocukluk veya okul öncesi evrede başlar."
+      },
+      {
+       "text": "Tüm klinik tablolar homojen tek bir etiyolojiye sahiptir.",
+       "isCorrect": false,
+       "explanation": "Tüm klinik tablolar homojen tek bir etiyolojiye sahiptir. kavramı bu klinik tabloyu oluşturmaz; ilgili nörogelişimsel süreçte farklı bir alanda fonksiyon gösterir. Nörogelişimsel bozukluklar etiyolojik açıdan son derece heterojendir."
+      }
+     ],
+     "id": "k42-s01-e1"
+    },
+    {
+     "type": "cloze_masking",
+     "maskedTerm": "betimlenmesine",
+     "hint": "Nörogelişimsel bozukluklar kapsamında ilgili klinik veya gelişimsel kavramdır.",
+     "id": "k42-s01-e2",
+     "sentence": "Nörogelişimsel bozuklukların tanısı özgül bir biyolojik belirteçten ziyade klinik belirtilerin betimlenmesine dayanmaktadır."
+    },
+    {
+     "type": "causal_chain",
+     "title": "Nörogelişimsel Tanı Süreci Basamakları",
+     "steps": [
+      "1. Gelişimsel İnceleme: Bireyin fiziksel ve psikososyal olgunlaşma basamakları değerlendirilir.",
+      "2. Belirti Profilleme: Birden çok semptomun kombinasyonu ve şiddeti klinik olarak betimlenir.",
+      "3. Ayırıcı Tanı: Organik patolojiler dışlanarak nörogelişimsel sendrom tanısı netleştirilir."
+     ],
+     "id": "k42-s01-e3"
+    },
+    {
+     "type": "active_recall",
+     "id": "k42-s01-e4",
+     "question": "Nörogelişimsel bozuklukların tanısında 'patognomonik etiyoloji' neden bulunmaz?",
+     "answer": "Çünkü bu tanılar tek bir biyolojik nedenden değil, merkezi sinir sistemi gelişimini etkileyen heterojen genetik ve çevresel etmenlerin belirti kombinasyonlarından oluşur."
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Nörogelişimsel Bozukluk Kavramı",
+     "id": "k42-s01-e5",
+     "items": [
+      {
+       "text": "Nörogelişimsel bozukluklar zihinsel işlevlerin gelişim sürecinde ortaya çıkan tablolardır.",
+       "isLie": false,
+       "explanation": "Nörogelişimsel bozukluklar zihinsel işlevlerin gelişim sürecinde ortaya çıkan tablolardır. ifadesi nörogelişimsel bozukluklar ilkeleri açısından incelendiğinde bu klinik durumun gerekçesini açıkça ortaya koyar. Bu bilgi dersin temel kavramsal tanımıdır."
+      },
+      {
+       "text": "Tanı patognomonik bir klinik bulguya dayanmak zorundadır.",
+       "isLie": true,
+       "explanation": "Tanı patognomonik bir klinik bulguya dayanmak zorundadır. ifadesi nörogelişimsel bozukluklar ilkeleri açısından incelendiğinde bu klinik durumun gerekçesini açıkça ortaya koyar. Tanı patognomonik tek bir bulguya değil, belirtilerin betimlenmesine dayanır."
+      },
+      {
+       "text": "Klinik tablo birden çok belirtinin kombinasyonundan meydana gelir.",
+       "isLie": false,
+       "explanation": "Klinik tablo birden çok belirtinin kombinasyonundan meydana gelir. ifadesi nörogelişimsel bozukluklar ilkeleri açısından incelendiğinde bu klinik durumun gerekçesini açıkça ortaya koyar. Farklı semptomların bir aradalığı klinik heterojenliği oluşturur."
+      }
+     ]
+    }
+   ],
+   "synthesisNarrative": "Nörogelişimsel bozukluklar, merkezi sinir sisteminin olgunlaşma sürecinde ortaya çıkan ve bireyin zihinsel işlevleri ile kimlik gelişimini doğrudan biçimlendiren heterojen klinik tablolardır.\n\n- **Klinik Tanımlama:** Tanı tek bir spesifik etiyolojiye veya patognomonik laboratuvar bulgusuna değil, klinik belirti kümelerinin ayrıntılı betimlenmesine dayanır.\n- **Belirti Kombinasyonu:** Klinik görünüm birden çok semptomun farklı varyasyonlarından meydana gelir ve bireysel farklılıklar ön plandadır.\n- **Gelişimsel Süreç:** Belirtiler zihinsel işlevlerin inşa edildiği kritik gelişim pencerelerinde şekillenir.\n\n> [!NOTE]\n> Nörogelişimsel tablolarda laboratuvar veya görüntüleme bulgusu tanı koydurucu değil, ayırıcı tanıda dışlayıcıdır; klinik muhakeme esastır."
+  },
+  {
+   "id": "k2-42-d-s02",
+   "slideNumber": 2,
+   "title": "Nörogelişimsel Bozukluklar: Başlangıç Dönemi ve Komorbidite",
+   "bolum": "1",
+   "pdfSayfalari": [
+    3,
+    3
+   ],
+   "sourcePdf": {
+    "startPage": 3,
+    "endPage": 3
+   },
+   "content": "Gelişimsel yetersizlikler, bireyin fiziksel ve psikososyal büyüme sürecinin erken evrelerinde, sıklıkla çocuk henüz okula başlamadan önce görünür hale gelir.\n\n- **İşlevsellik Alanları:** Yetersizlikler bireysel, akademik, sosyal, uğraş ve mesleki alanlarda belirgin bozulmalarla seyreder.\n- **Kapsam Yelpazesi:** Yetersizlik yalnızca özgül öğrenme veya yürütücü işlevlerle sınırlı kalabileceği gibi, sosyal ve zihinsel alanda genel bir kısıtlılığa kadar uzanabilir.\n- **Komorbidite Sıklığı:** Nörogelişimsel bozukluklar nadiren tekil seyreder; klinikte çoğunlukla birden fazla tanı iç içe geçer.\n\n> [!IMPORTANT]\n> Bir nörogelişimsel bozukluk saptandığında, yüksek komorbidite oranı nedeniyle diğer gelişimsel alanlar da mutlaka taranmalıdır.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Nörogelişimsel bozuklukların başlangıcı ve birlikteliği ile ilgili hangisi doğrudur?",
+     "options": [
+      {
+       "text": "Belirtiler genellikle çocuk okula başlamadan önceki erken dönemde ortaya çıkar.",
+       "isCorrect": true,
+       "explanation": "Belirtiler genellikle çocuk okula başlamadan önceki erken dönemde ortaya çıkar. doğru yanıttır; çünkü bu spesifik klinik ve gelişimsel mekanizma doğrudan hedeflenen tanı ölçütünü kurar. Gelişimsel yetersizlikler sıklıkla okul öncesi erken çocuklukta görünür hale gelir."
+      },
+      {
+       "text": "Farklı nörogelişimsel bozukluklar hiçbir zaman aynı bireyde bir arada görülmez.",
+       "isCorrect": false,
+       "explanation": "Farklı nörogelişimsel bozukluklar hiçbir zaman aynı bireyde bir arada görülmez. kavramı bu klinik tabloyu oluşturmaz; ilgili nörogelişimsel süreçte farklı bir alanda fonksiyon gösterir. Nörogelişimsel bozukluklar çok yüksek oranda komorbid seyreder."
+      },
+      {
+       "text": "Bozulma yalnızca mesleki alanla sınırlıdır, sosyal alanı etkilemez.",
+       "isCorrect": false,
+       "explanation": "Bozulma yalnızca mesleki alanla sınırlıdır, sosyal alanı etkilemez. kavramı bu klinik tabloyu oluşturmaz; ilgili nörogelişimsel süreçte farklı bir alanda fonksiyon gösterir. Akademik, sosyal, uğraş ve bireysel işlevsellik birlikte bozulur."
+      },
+      {
+       "text": "Yürütücü fonksiyon bozuklukları nörogelişimsel tablolara hiçbir zaman eşlik etmez.",
+       "isCorrect": false,
+       "explanation": "Yürütücü fonksiyon bozuklukları nörogelişimsel tablolara hiçbir zaman eşlik etmez. kavramı bu klinik tabloyu oluşturmaz; ilgili nörogelişimsel süreçte farklı bir alanda fonksiyon gösterir. Yürütücü işlev kısıtlılıkları sık görülen bir bileşendir."
+      }
+     ],
+     "id": "k42-s02-e1"
+    },
+    {
+     "type": "cloze_masking",
+     "maskedTerm": "okula",
+     "hint": "Nörogelişimsel bozukluklar kapsamında ilgili klinik veya gelişimsel kavramdır.",
+     "id": "k42-s02-e2",
+     "sentence": "Gelişimsel yetersizlikler sıklıkla çocuk okula başlamadan önce belirti vererek akademik ve sosyal bozulma oluşturur."
+    },
+    {
+     "type": "active_recall",
+     "id": "k42-s02-e3",
+     "question": "Nörogelişimsel bozukluklarda komorbidite neden klinikte bu kadar önemlidir?",
+     "answer": "Çünkü nörogelişimsel bozukluklar sıklıkla bir arada görülür; tek bir tanıya odaklanmak diğer gelişimsel eksikliklerin gözden kaçmasına yol açabilir."
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Gelişimsel Başlangıç Özellikleri",
+     "id": "k42-s02-e4",
+     "items": [
+      {
+       "text": "Gelişimsel yetersizlikler sıklıkla okul öncesi erken dönemde başlar.",
+       "isLie": false,
+       "explanation": "Gelişimsel yetersizlikler sıklıkla okul öncesi erken dönemde başlar. ifadesi nörogelişimsel bozukluklar ilkeleri açısından incelendiğinde bu klinik durumun gerekçesini açıkça ortaya koyar. Fiziksel ve psikososyal gelişimin erken döneminde ortaya çıkar."
+      },
+      {
+       "text": "Nörogelişimsel tanılar klinikte neredeyse daima izole görülür, komorbidite beklenmez.",
+       "isLie": true,
+       "explanation": "Nörogelişimsel tanılar klinikte neredeyse daima izole görülür, komorbidite beklenmez. ifadesi nörogelişimsel bozukluklar ilkeleri açısından incelendiğinde bu klinik durumun gerekçesini açıkça ortaya koyar. Nörogelişimsel bozukluklar sıklıkla bir arada (komorbid) görülür."
+      },
+      {
+       "text": "Bozulma sadece öğrenme ile sınırlı kalabileceği gibi genel bir alana da yayılabilir.",
+       "isLie": false,
+       "explanation": "Bozulma sadece öğrenme ile sınırlı kalabileceği gibi genel bir alana da yayılabilir. ifadesi nörogelişimsel bozukluklar ilkeleri açısından incelendiğinde bu klinik durumun gerekçesini açıkça ortaya koyar. Klinik tablo özgülden globale kadar geniş bir yelpazedir."
+      }
+     ]
+    }
+   ],
+   "synthesisNarrative": "Gelişimsel yetersizlikler, bireyin fiziksel ve psikososyal büyüme sürecinin erken evrelerinde, sıklıkla çocuk henüz okula başlamadan önce görünür hale gelir.\n\n- **İşlevsellik Alanları:** Yetersizlikler bireysel, akademik, sosyal, uğraş ve mesleki alanlarda belirgin bozulmalarla seyreder.\n- **Kapsam Yelpazesi:** Yetersizlik yalnızca özgül öğrenme veya yürütücü işlevlerle sınırlı kalabileceği gibi, sosyal ve zihinsel alanda genel bir kısıtlılığa kadar uzanabilir.\n- **Komorbidite Sıklığı:** Nörogelişimsel bozukluklar nadiren tekil seyreder; klinikte çoğunlukla birden fazla tanı iç içe geçer.\n\n> [!IMPORTANT]\n> Bir nörogelişimsel bozukluk saptandığında, yüksek komorbidite oranı nedeniyle diğer gelişimsel alanlar da mutlaka taranmalıdır."
+  },
+  {
+   "id": "k2-42-d-s03",
+   "slideNumber": 3,
+   "title": "Nörogelişimsel Bozukluklar: Klinik Seyir ve Koruyucu Ruh Sağlığı",
+   "bolum": "1",
+   "pdfSayfalari": [
+    4,
+    4
+   ],
+   "sourcePdf": {
+    "startPage": 4,
+    "endPage": 4
+   },
+   "content": "Nörogelişimsel bozuklukların erken dönemde tanımlanması, bireyin tipik gelişim basamaklarının kesintiye uğramasını önleyen en kritik basamaktır.\n\n- **Dinamik Belirti Profili:** Çocukluktan ergenlik ve erişkinliğe doğru ilerlerken yaşam evreleri içinde tabloya yeni belirtiler eklenebilir veya bazı belirtiler sönebilir.\n- **Klinisyenin Rolü:** Belirti profilindeki dinamik evrilmenin fark edilmesi, yaşam boyu ortaya çıkması muhtemel ek psikopatolojilerin önlenmesini sağlar.\n- **Koruyucu Ruh Sağlığı:** Erken tanı ve uygun müdahale, hasta ve aileyi koruyucu ruh sağlığı şemsiyesi altına alarak yaşam kalitesini korur.\n\n> [!NOTE]\n> Çocuklukta aşırı hareketlilikle başlayan bir tablo, erişkinlikte dikkat eksikliği ve içsel huzursuzluk belirtilerine evrilebilir.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Nörogelişimsel bozuklukların yaşam boyu seyriyle ilgili en doğru yaklaşım hangisidir?",
+     "options": [
+      {
+       "text": "Klinik belirti profili yaşam evreleri boyunca tamamen sabit ve hareketsiz kalır.",
+       "isCorrect": false,
+       "explanation": "Klinik belirti profili yaşam evreleri boyunca tamamen sabit ve hareketsiz kalır. kavramı bu klinik tabloyu oluşturmaz; ilgili nörogelişimsel süreçte farklı bir alanda fonksiyon gösterir. Belirti profili yaşam evrelerinde eklenen veya eksilen dinamik bir yapı gösterir."
+      },
+      {
+       "text": "Yaşam evreleri içinde klinik tabloya yeni belirtiler eklenebilir veya mevcutlar azalabilir.",
+       "isCorrect": true,
+       "explanation": "Yaşam evreleri içinde klinik tabloya yeni belirtiler eklenebilir veya mevcutlar azalabilir. doğru yanıttır; çünkü bu spesifik klinik ve gelişimsel mekanizma doğrudan hedeflenen tanı ölçütünü kurar. Çocukluktan erişkinliğe seyrederken semptom profili evrilir."
+      },
+      {
+       "text": "Erken müdahalenin koruyucu ruh sağlığı açısından hiçbir koruyucu değeri yoktur.",
+       "isCorrect": false,
+       "explanation": "Erken müdahalenin koruyucu ruh sağlığı açısından hiçbir koruyucu değeri yoktur. kavramı bu klinik tabloyu oluşturmaz; ilgili nörogelişimsel süreçte farklı bir alanda fonksiyon gösterir. Erken tanı ve müdahale ikincil psikopatolojileri engeller."
+      },
+      {
+       "text": "Tüm belirtiler ergenliğe ulaşıldığında kendiliğinden tamamen yok olur.",
+       "isCorrect": false,
+       "explanation": "Tüm belirtiler ergenliğe ulaşıldığında kendiliğinden tamamen yok olur. kavramı bu klinik tabloyu oluşturmaz; ilgili nörogelişimsel süreçte farklı bir alanda fonksiyon gösterir. Bu bozukluklar süreğen nörogelişimsel tabiat taşır."
+      }
+     ],
+     "id": "k42-s03-e1"
+    },
+    {
+     "type": "cloze_masking",
+     "maskedTerm": "koruyucu",
+     "hint": "Nörogelişimsel bozukluklar kapsamında ilgili klinik veya gelişimsel kavramdır.",
+     "id": "k42-s03-e2",
+     "sentence": "Klinisyenin yaşam evrelerindeki belirti değişimini fark etmesi, hastanın koruyucu ruh sağlığı kapsamında ele alınmasını sağlar."
+    },
+    {
+     "type": "active_recall",
+     "id": "k42-s03-e3",
+     "question": "Nörogelişimsel bozukluklarda yaşam evreleri boyunca belirti profilinin değişmesi ne anlama gelir?",
+     "answer": "Büyüme sürecinde bazı semptomların hafifleyebileceğini (örn. motor hareketlilik), ancak yeni zorlukların (örn. akademik/sosyal uyum sorunları) tabloya eklenebileceğini ifade eder."
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Yaşam Boyu Seyir İlkeleri",
+     "id": "k42-s03-e4",
+     "items": [
+      {
+       "text": "Yaşam evrelerinde tabloya yeni belirtiler eklenebilir veya mevcutlar eksilebilir.",
+       "isLie": false,
+       "explanation": "Yaşam evrelerinde tabloya yeni belirtiler eklenebilir veya mevcutlar eksilebilir. ifadesi nörogelişimsel bozukluklar ilkeleri açısından incelendiğinde bu klinik durumun gerekçesini açıkça ortaya koyar. Belirti profili dinamik değişim gösterir."
+      },
+      {
+       "text": "Erken tedavi yapılmasa bile bireyin tipik gelişimi hiçbir şekilde sekteye uğramaz.",
+       "isLie": true,
+       "explanation": "Erken tedavi yapılmasa bile bireyin tipik gelişimi hiçbir şekilde sekteye uğramaz. ifadesi nörogelişimsel bozukluklar ilkeleri açısından incelendiğinde bu klinik durumun gerekçesini açıkça ortaya koyar. Tedavi edilmediğinde bireyin tipik gelişimi ciddi biçimde sekteye uğrar."
+      },
+      {
+       "text": "Erken tanı hasta ve ailenin koruyucu ruh sağlığı desteği almasını sağlar.",
+       "isLie": false,
+       "explanation": "Erken tanı hasta ve ailenin koruyucu ruh sağlığı desteği almasını sağlar. ifadesi nörogelişimsel bozukluklar ilkeleri açısından incelendiğinde bu klinik durumun gerekçesini açıkça ortaya koyar. Koruyucu yaklaşım gelecekteki ek zorlukları önler."
+      }
+     ]
+    }
+   ],
+   "synthesisNarrative": "Nörogelişimsel bozuklukların erken dönemde tanımlanması, bireyin tipik gelişim basamaklarının kesintiye uğramasını önleyen en kritik basamaktır.\n\n- **Dinamik Belirti Profili:** Çocukluktan ergenlik ve erişkinliğe doğru ilerlerken yaşam evreleri içinde tabloya yeni belirtiler eklenebilir veya bazı belirtiler sönebilir.\n- **Klinisyenin Rolü:** Belirti profilindeki dinamik evrilmenin fark edilmesi, yaşam boyu ortaya çıkması muhtemel ek psikopatolojilerin önlenmesini sağlar.\n- **Koruyucu Ruh Sağlığı:** Erken tanı ve uygun müdahale, hasta ve aileyi koruyucu ruh sağlığı şemsiyesi altına alarak yaşam kalitesini korur.\n\n> [!NOTE]\n> Çocuklukta aşırı hareketlilikle başlayan bir tablo, erişkinlikte dikkat eksikliği ve içsel huzursuzluk belirtilerine evrilebilir."
+  },
+  {
+   "id": "k2-42-d-s04",
+   "slideNumber": 4,
+   "title": "Nörogelişimsel Bozukluklar: DSM-5 Sınıflama Sistemi",
+   "bolum": "1",
+   "pdfSayfalari": [
+    5,
+    5
+   ],
+   "sourcePdf": {
+    "startPage": 5,
+    "endPage": 5
+   },
+   "content": "Amerikan Psikiyatri Birliği DSM-5 sınıflamasında nörogelişimsel bozuklukları tek bir çatı altında toplayarak yedi ana tanı kategorisi tanımlamıştır.\n\n- **Temel Kategoriler:**\n  1. Zihinsel yetersizlikler (İntellektüel gelişimsel bozukluk)\n  2. Otizm spektrum bozukluğu (OSB)\n  3. Dikkat eksikliği hiperaktivite bozukluğu (DEHB)\n  4. Özgül öğrenme bozukluğu (ÖÖB)\n  5. İletişim bozuklukları\n  6. Motor bozukluklar (Tik bozuklukları, gelişimsel koordinasyon bozukluğu)\n  7. Diğer tanımlanmış veya tanımlanmamış nörogelişimsel bozukluklar\n\n> [!IMPORTANT]\n> Bu sınıflama, bilişsel, iletişimsel, davranışsal ve motor gelişim kusurlarını ortak nörogelişimsel etiyoloji temelinde birleştirir.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Aşağıdakilerden hangisi DSM-5 nörogelişimsel bozukluklar sınıflama kategorilerinden biri değildir?",
+     "options": [
+      {
+       "text": "Zihinsel Yetersizlikler",
+       "isCorrect": false,
+       "explanation": "Zihinsel Yetersizlikler kavramı bu klinik tabloyu oluşturmaz; ilgili nörogelişimsel süreçte farklı bir alanda fonksiyon gösterir. Zihinsel yetersizlikler ana kategorilerden biridir."
+      },
+      {
+       "text": "Otizm Spektrum Bozukluğu",
+       "isCorrect": false,
+       "explanation": "Otizm Spektrum Bozukluğu kavramı bu klinik tabloyu oluşturmaz; ilgili nörogelişimsel süreçte farklı bir alanda fonksiyon gösterir. Otizm spektrum bozukluğu temel nörogelişimsel başlıktır."
+      },
+      {
+       "text": "Dikkat Eksikliği Hiperaktivite Bozukluğu",
+       "isCorrect": false,
+       "explanation": "Dikkat Eksikliği Hiperaktivite Bozukluğu kavramı bu klinik tabloyu oluşturmaz; ilgili nörogelişimsel süreçte farklı bir alanda fonksiyon gösterir. DEHB sınıflamanın üçüncü ana maddesidir."
+      },
+      {
+       "text": "Bipolar Duygudurum Bozukluğu",
+       "isCorrect": true,
+       "explanation": "Bipolar Duygudurum Bozukluğu doğru yanıttır; çünkü bu spesifik klinik ve gelişimsel mekanizma doğrudan hedeflenen tanı ölçütünü kurar. Bipolar bozukluk nörogelişimsel değil duygudurum bozuklukları sınıfındadır."
+      }
+     ],
+     "id": "k42-s04-e1"
+    },
+    {
+     "type": "cloze_masking",
+     "maskedTerm": "otizm",
+     "hint": "Nörogelişimsel bozukluklar kapsamında ilgili klinik veya gelişimsel kavramdır.",
+     "id": "k42-s04-e2",
+     "sentence": "Amerikan Psikiyatri Birliği güncel DSM-5 sınıflamasında otizm spektrum bozukluğunu nörogelişimsel ana başlığı altına almıştır."
+    },
+    {
+     "type": "swipe_matching",
+     "title": "Bozukluk Kategorisi Eşlemesi",
+     "cards": [
+      {
+       "text": "Özgül Öğrenme Bozukluğu",
+       "category": "left",
+       "explanation": "Özgül Öğrenme Bozukluğu kavramı ilgili tanısal kategori altında incelenen temel klinik bileşendir. ÖÖB DSM-5 nörogelişimsel bozukluklar kategorisindedir."
+      },
+      {
+       "text": "Tik Bozuklukları (Motor Bozukluklar)",
+       "category": "left",
+       "explanation": "Tik Bozuklukları (Motor Bozukluklar) kavramı ilgili tanısal kategori altında incelenen temel klinik bileşendir. Tikler motor nörogelişimsel bozukluklar grubundadır."
+      },
+      {
+       "text": "Panik Bozukluk",
+       "category": "right",
+       "explanation": "Panik Bozukluk kavramı ilgili tanısal kategori altında incelenen temel klinik bileşendir. Panik bozukluk anksiyete bozuklukları sınıfındadır."
+      },
+      {
+       "text": "Majör Depresif Bozukluk",
+       "category": "right",
+       "explanation": "Majör Depresif Bozukluk kavramı ilgili tanısal kategori altında incelenen temel klinik bileşendir. Depresyon duygudurum bozuklukları kümesindedir."
+      }
+     ],
+     "id": "k42-s04-e3",
+     "leftCategory": "Nörogelişimsel Bozukluk",
+     "rightCategory": "Farklı Psikiyatrik Sınıf"
+    },
+    {
+     "type": "active_recall",
+     "id": "k42-s04-e4",
+     "question": "DSM-5 sınıflamasında motor bozukluklar başlığı altında hangi temel klinik tablolar yer alır?",
+     "answer": "Gelişimsel koordinasyon bozukluğu, stereotipik hareket bozukluğu ve Tik bozuklukları (Tourette bozukluğu dahil) yer alır."
+    }
+   ],
+   "synthesisNarrative": "Amerikan Psikiyatri Birliği DSM-5 sınıflamasında nörogelişimsel bozuklukları tek bir çatı altında toplayarak yedi ana tanı kategorisi tanımlamıştır.\n\n- **Temel Kategoriler:**\n  1. Zihinsel yetersizlikler (İntellektüel gelişimsel bozukluk)\n  2. Otizm spektrum bozukluğu (OSB)\n  3. Dikkat eksikliği hiperaktivite bozukluğu (DEHB)\n  4. Özgül öğrenme bozukluğu (ÖÖB)\n  5. İletişim bozuklukları\n  6. Motor bozukluklar (Tik bozuklukları, gelişimsel koordinasyon bozukluğu)\n  7. Diğer tanımlanmış veya tanımlanmamış nörogelişimsel bozukluklar\n\n> [!IMPORTANT]\n> Bu sınıflama, bilişsel, iletişimsel, davranışsal ve motor gelişim kusurlarını ortak nörogelişimsel etiyoloji temelinde birleştirir."
+  },
+  {
+   "id": "k2-42-d-s05",
+   "slideNumber": 5,
+   "title": "Nörogelişimsel Bozukluklar: Yaşam Boyu Düzenleme ve Atipik Gelişim",
+   "bolum": "1",
+   "pdfSayfalari": [
+    6,
+    7
+   ],
+   "sourcePdf": {
+    "startPage": 6,
+    "endPage": 7
+   },
+   "content": "DSM-5 ve ICD-11'de yapılan tanısal düzenlemelerde köklü bir kavramsal değişime gidilerek bu tanılar çocukluk başlangıçlı ayrı başlık olmaktan çıkarılmıştır.\n\n- **Yaşam Boyu Entegrasyon:** Bozukluklar yetişkin psikiyatri sınıflaması içine entegre edilmiş ve yaşam boyu süren nitelikleri tescillenmiştir.\n- **Doğuştan Atipik Gelişim:** Bu tanılar doğuştan ya da yaşamın ilk evrelerinden itibaren mevcut olan veya biçimlenen atipik nörogelişimsel süreçlerden kaynaklanır.\n- **Kusurların Görünümü:** Gelişimdeki kusurlar OSB'de sosyal-iletişimsel, ÖÖG'de bilişsel-akademik, zihinsel yetersizlikte ise global kapasite kısıtlılığı olarak ortaya çıkar.\n\n> [!NOTE]\n> Çocukluk başlangıçlı tanımının kalkması, erişkin yaşta da nörogelişimsel tanıların (örn. erişkin DEHB) konulabilmesinin önünü açmıştır.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "DSM-5 ve ICD-11'de çocukluk başlangıçlı tanılarla ilgili yapılan düzenleme hangisidir?",
+     "options": [
+      {
+       "text": "Bu tanıların 18 yaşından sonra tamamen geçersiz sayılması.",
+       "isCorrect": false,
+       "explanation": "Bu tanıların 18 yaşından sonra tamamen geçersiz sayılması. kavramı bu klinik tabloyu oluşturmaz; ilgili nörogelişimsel süreçte farklı bir alanda fonksiyon gösterir. Aksine yaşam boyu devam ettiği kabul edilmiştir."
+      },
+      {
+       "text": "Çocukluk başlangıçlı ayrı bir başlık olarak tutulmayıp yaşam boyu seyri içerecek şekilde genel sınıflamaya entegre edilmeleri.",
+       "isCorrect": true,
+       "explanation": "Çocukluk başlangıçlı ayrı bir başlık olarak tutulmayıp yaşam boyu seyri içerecek şekilde genel sınıflamaya entegre edilmeleri. doğru yanıttır; çünkü bu spesifik klinik ve gelişimsel mekanizma doğrudan hedeflenen tanı ölçütünü kurar. Yaşam boyu devam eden nitelikleri vurgulanarak genel sınıflamaya alınmışlardır."
+      },
+      {
+       "text": "Sadece geriatrik yaş grubuna özgü kılınmaları.",
+       "isCorrect": false,
+       "explanation": "Sadece geriatrik yaş grubuna özgü kılınmaları. kavramı bu klinik tabloyu oluşturmaz; ilgili nörogelişimsel süreçte farklı bir alanda fonksiyon gösterir. Doğuştan veya erken çocuklukta başlarlar."
+      },
+      {
+       "text": "Otizmin zihinsel yetersizlik ile birleştirilerek tek tanıya indirilmesi.",
+       "isCorrect": false,
+       "explanation": "Otizmin zihinsel yetersizlik ile birleştirilerek tek tanıya indirilmesi. kavramı bu klinik tabloyu oluşturmaz; ilgili nörogelişimsel süreçte farklı bir alanda fonksiyon gösterir. İki tanı bağımsız kategoriler olarak korunmuştur."
+      }
+     ],
+     "id": "k42-s05-e1"
+    },
+    {
+     "type": "cloze_masking",
+     "maskedTerm": "atipik",
+     "hint": "Nörogelişimsel bozukluklar kapsamında ilgili klinik veya gelişimsel kavramdır.",
+     "id": "k42-s05-e2",
+     "sentence": "Nörogelişimsel bozukluklar doğuştan veya yaşamın ilk evrelerinden itibaren atipik gelişim örüntüleriyle biçimlenir."
+    },
+    {
+     "type": "causal_chain",
+     "title": "Atipik Gelişim Seyri",
+     "steps": [
+      "1. Erken Kusur: Yaşamın ilk evresinde nöral devrelerin olgunlaşmasında kusurlar biçimlenir.",
+      "2. Atipik İşlevsellik: Çocuklukta sosyal, motor veya akademik alanda gelişimsel aksamalar belirir.",
+      "3. Yaşam Boyu Seyir: Belirti profili evrilerek erişkinlik evresinde de işlevselliği etkilemeyi sürdürür."
+     ],
+     "id": "k42-s05-e3"
+    },
+    {
+     "type": "active_recall",
+     "id": "k42-s05-e4",
+     "question": "ICD-11 ve DSM-5'in nörogelişimsel bozuklukları genel sınıflamaya almasının klinik faydası nedir?",
+     "answer": "Bu bozuklukların 18 yaş ile bitmediğini, erişkinlikte de devam eden nörobiyolojik durumlar olduğunu kabul ederek yaşam boyu izlem ve tedavi imkanı sağlamasıdır."
+    }
+   ],
+   "synthesisNarrative": "DSM-5 ve ICD-11'de yapılan tanısal düzenlemelerde köklü bir kavramsal değişime gidilerek bu tanılar çocukluk başlangıçlı ayrı başlık olmaktan çıkarılmıştır.\n\n- **Yaşam Boyu Entegrasyon:** Bozukluklar yetişkin psikiyatri sınıflaması içine entegre edilmiş ve yaşam boyu süren nitelikleri tescillenmiştir.\n- **Doğuştan Atipik Gelişim:** Bu tanılar doğuştan ya da yaşamın ilk evrelerinden itibaren mevcut olan veya biçimlenen atipik nörogelişimsel süreçlerden kaynaklanır.\n- **Kusurların Görünümü:** Gelişimdeki kusurlar OSB'de sosyal-iletişimsel, ÖÖG'de bilişsel-akademik, zihinsel yetersizlikte ise global kapasite kısıtlılığı olarak ortaya çıkar.\n\n> [!NOTE]\n> Çocukluk başlangıçlı tanımının kalkması, erişkin yaşta da nörogelişimsel tanıların (örn. erişkin DEHB) konulabilmesinin önünü açmıştır."
+  },
+  {
+   "id": "k2-42-d-s06",
+   "slideNumber": 6,
+   "title": "[TEKRAR SAYFASI - CHECKPOINT 1] Bölüm 1 Pekiştirmesi",
+   "bolum": "1",
+   "isCheckpoint": true,
+   "pdfSayfalari": [
+    1,
+    7
+   ],
+   "sourcePdf": {
+    "startPage": 1,
+    "endPage": 7
+   },
+   "content": "Bu tekrar sayfasında nörogelişimsel bozuklukların kavramsal tanımı, erken başlangıç özellikleri, yüksek komorbidite oranları ve DSM-5/ICD-11 sınıflama ilkeleri pekiştirilmektedir.\n\n- **Tanı Temeli:** Biyobelirteç değil, klinik belirti kümelerinin betimlenmesi.\n- **Gelişim:** Okul öncesi erken evrede başlar ve yaşam boyu devam eder.\n- **Sınıflama:** Yedi ana kategori genel psikiyatri şemsiyesinde yaşam boyu entegre edilmiştir.\n\n> [!IMPORTANT]\n> Nörogelişimsel bozuklukların komorbid seyrettiğini ve belirtilerin dinamik olarak evrilebileceğini unutmayınız.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Nörogelişimsel bozuklukların genel ilkeleri hakkında aşağıdaki önermelerden hangisi yanlıştır?",
+     "options": [
+      {
+       "text": "Tanı klinik belirtilerin betimlenmesine dayanır.",
+       "isCorrect": false,
+       "explanation": "Tanı klinik belirtilerin betimlenmesine dayanır. kavramı bu klinik tabloyu oluşturmaz; ilgili nörogelişimsel süreçte farklı bir alanda fonksiyon gösterir. Bu ifade doğrudur."
+      },
+      {
+       "text": "Sıklıkla çocuk okula başlamadan önceki erken dönemde ortaya çıkar.",
+       "isCorrect": false,
+       "explanation": "Sıklıkla çocuk okula başlamadan önceki erken dönemde ortaya çıkar. kavramı bu klinik tabloyu oluşturmaz; ilgili nörogelişimsel süreçte farklı bir alanda fonksiyon gösterir. Bu ifade doğrudur."
+      },
+      {
+       "text": "Farklı nörogelişimsel bozukluklar yüksek oranda komorbid seyreder.",
+       "isCorrect": false,
+       "explanation": "Farklı nörogelişimsel bozukluklar yüksek oranda komorbid seyreder. kavramı bu klinik tabloyu oluşturmaz; ilgili nörogelişimsel süreçte farklı bir alanda fonksiyon gösterir. Bu ifade doğrudur."
+      },
+      {
+       "text": "Tek bir patognomonik biyolojik gen testiyle kesin tanı konur.",
+       "isCorrect": true,
+       "explanation": "Tek bir patognomonik biyolojik gen testiyle kesin tanı konur. doğru yanıttır; çünkü bu spesifik klinik ve gelişimsel mekanizma doğrudan hedeflenen tanı ölçütünü kurar. Bu ifade yanlıştır; tanı klinik betimlemeye dayanır."
+      }
+     ],
+     "id": "k42-s06-e1"
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Bölüm 1 Temel Kazanımları",
+     "id": "k42-s06-e2",
+     "items": [
+      {
+       "text": "Nörogelişimsel bozukluklar DSM-5 ve ICD-11'de yaşam boyu süren nitelikleriyle kodlanır.",
+       "isLie": false,
+       "explanation": "Nörogelişimsel bozukluklar DSM-5 ve ICD-11'de yaşam boyu süren nitelikleriyle kodlanır. ifadesi nörogelişimsel bozukluklar ilkeleri açısından incelendiğinde bu klinik durumun gerekçesini açıkça ortaya koyar. Çocuklukla sınırlı tutulmamışlardır."
+      },
+      {
+       "text": "Klinik tablo yaşam evrelerinde yeni belirtiler eklenerek dinamik değişim gösterebilir.",
+       "isLie": false,
+       "explanation": "Klinik tablo yaşam evrelerinde yeni belirtiler eklenerek dinamik değişim gösterebilir. ifadesi nörogelişimsel bozukluklar ilkeleri açısından incelendiğinde bu klinik durumun gerekçesini açıkça ortaya koyar. Belirti profili evrilebilir."
+      },
+      {
+       "text": "Nörogelişimsel bozukluklar yalnızca 65 yaş üstü geriatrik hastalarda ortaya çıkar.",
+       "isLie": true,
+       "explanation": "Nörogelişimsel bozukluklar yalnızca 65 yaş üstü geriatrik hastalarda ortaya çıkar. ifadesi nörogelişimsel bozukluklar ilkeleri açısından incelendiğinde bu klinik durumun gerekçesini açıkça ortaya koyar. Nörogelişimsel bozukluklar erken çocukluk döneminde başlar."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "id": "k42-s06-e3",
+     "question": "Nörogelişimsel bozuklukların en temel üç klinik ortak özelliği nedir?",
+     "answer": "1) Erken gelişimsel dönemde başlama, 2) Klinik belirti profiliyle betimlenme, 3) Yüksek komorbidite ve yaşam boyu dinamik seyir gösterme."
+    },
+    {
+     "type": "cloze_masking",
+     "maskedTerm": "atipik",
+     "hint": "Nörogelişimsel bozukluklar kapsamında ilgili klinik veya gelişimsel kavramdır.",
+     "id": "k42-s06-e4",
+     "sentence": "Nörogelişimsel bozukluklar doğuştan ya da yaşamın ilk evrelerinden itibaren atipik gelişim süreçleriyle kendini gösterir."
+    }
+   ],
+   "synthesisNarrative": "Bu tekrar sayfasında nörogelişimsel bozuklukların kavramsal tanımı, erken başlangıç özellikleri, yüksek komorbidite oranları ve DSM-5/ICD-11 sınıflama ilkeleri pekiştirilmektedir.\n\n- **Tanı Temeli:** Biyobelirteç değil, klinik belirti kümelerinin betimlenmesi.\n- **Gelişim:** Okul öncesi erken evrede başlar ve yaşam boyu devam eder.\n- **Sınıflama:** Yedi ana kategori genel psikiyatri şemsiyesinde yaşam boyu entegre edilmiştir.\n\n> [!IMPORTANT]\n> Nörogelişimsel bozuklukların komorbid seyrettiğini ve belirtilerin dinamik olarak evrilebileceğini unutmayınız."
+  },
+  {
+   "id": "k2-42-d-s07",
+   "slideNumber": 7,
+   "title": "Zihinsel Yetersizlikler: Bilişsel Kapasite ve Başvuru Nedenleri",
+   "bolum": "2",
+   "pdfSayfalari": [
+    8,
+    9
+   ],
+   "sourcePdf": {
+    "startPage": 8,
+    "endPage": 9
+   },
+   "content": "Zihinsel yetersizlik; akıl yürütme, plan yapma, problem çözme, soyut düşünme, karmaşık fikirleri kavrama ve deneyimlerden öğrenme gibi genel bilişsel kapasitelerdeki belirgin kısıtlılıktır.\n\n- **Uyum Alanları:** Bilişsel eksiklik kavramsal, sosyal ve pratik uyum alanlarında bağımsız yaşamı sınırlar.\n- **En Sık Başvuru Nedeni:** Küçük yaş grubunda çocuk psikiyatrisi polikliniğine en sık başvuru nedeni **konuşmada gecikme** yakınmasıdır.\n- **Eşlik Eden Bulgular:** Komutlara uymama, tuvalet kontrolünü kazanamama ve yaşıtlarla ilişki kuramama konuşma gecikmesine sıklıkla eşlik eder.\n\n> [!NOTE]\n> Aileler başlangıçta zihinsel geriliği değil, çocuğun 'henüz konuşamadığını' fark ederek hekime başvururlar.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Küçük yaş grubunda zihinsel yetersizlik şüphesiyle en sık hekime başvuru nedeni hangisidir?",
+     "options": [
+      {
+       "text": "Konuşmada gecikme yakınması",
+       "isCorrect": true,
+       "explanation": "Konuşmada gecikme yakınması doğru yanıttır; çünkü bu spesifik klinik ve gelişimsel mekanizma doğrudan hedeflenen tanı ölçütünü kurar. Küçük yaş grubunda en sık başvuru nedeni konuşmada gecikmedir."
+      },
+      {
+       "text": "Aşırı matematik merakı",
+       "isCorrect": false,
+       "explanation": "Aşırı matematik merakı kavramı bu klinik tabloyu oluşturmaz; ilgili nörogelişimsel süreçte farklı bir alanda fonksiyon gösterir. Zihinsel yetersizlikte bilişsel gecikme görülür."
+      },
+      {
+       "text": "Ani başlayan tikler",
+       "isCorrect": false,
+       "explanation": "Ani başlayan tikler kavramı bu klinik tabloyu oluşturmaz; ilgili nörogelişimsel süreçte farklı bir alanda fonksiyon gösterir. Tikler hareket bozukluklarına aittir."
+      },
+      {
+       "text": "Gece diş gıcırdatma",
+       "isCorrect": false,
+       "explanation": "Gece diş gıcırdatma kavramı bu klinik tabloyu oluşturmaz; ilgili nörogelişimsel süreçte farklı bir alanda fonksiyon gösterir. Diş gıcırdatma zihinsel yetersizliğin temel başvuru sebebi değildir."
+      }
+     ],
+     "id": "k42-s07-e1"
+    },
+    {
+     "type": "cloze_masking",
+     "maskedTerm": "konuşmada",
+     "hint": "Nörogelişimsel bozukluklar kapsamında ilgili klinik veya gelişimsel kavramdır.",
+     "id": "k42-s07-e2",
+     "sentence": "Küçük yaş grubunda zihinsel yetersizlik tablosunda en sık başvuru nedeni konuşmada gecikme yakınmasıdır."
+    },
+    {
+     "type": "active_recall",
+     "id": "k42-s07-e3",
+     "question": "Zihinsel kapasite hangi temel bilişsel süreçleri kapsar?",
+     "answer": "Akıl yürütme, plan yapma, problem çözme, soyut düşünme, karmaşık fikirleri anlama, hızlı öğrenme ve deneyimlerden yararlanma süreçlerini kapsar."
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Zihinsel Yetersizlik Başvuru Bulguları",
+     "id": "k42-s07-e4",
+     "items": [
+      {
+       "text": "Zihinsel kapasite akıl yürütme ve problem çözme gibi süreçleri içerir.",
+       "isLie": false,
+       "explanation": "Zihinsel kapasite akıl yürütme ve problem çözme gibi süreçleri içerir. ifadesi nörogelişimsel bozukluklar ilkeleri açısından incelendiğinde bu klinik durumun gerekçesini açıkça ortaya koyar. Bilişsel yetenek tanımı bu alanları kapsar."
+      },
+      {
+       "text": "Küçük yaşta en sık başvuru nedeni konuşmada gecikmedir.",
+       "isLie": false,
+       "explanation": "Küçük yaşta en sık başvuru nedeni konuşmada gecikmedir. ifadesi nörogelişimsel bozukluklar ilkeleri açısından incelendiğinde bu klinik durumun gerekçesini açıkça ortaya koyar. Dil gelişimi geriliği birincil alarmdır."
+      },
+      {
+       "text": "Zihinsel yetersizliği olan çocuklarda tuvalet kontrolü daima yaşıtlarından önce kazanılır.",
+       "isLie": true,
+       "explanation": "Zihinsel yetersizliği olan çocuklarda tuvalet kontrolü daima yaşıtlarından önce kazanılır. ifadesi nörogelişimsel bozukluklar ilkeleri açısından incelendiğinde bu klinik durumun gerekçesini açıkça ortaya koyar. Tuvalet kontrolünü kazanamama veya gecikme sık görülen bir sorundur."
+      }
+     ]
+    }
+   ],
+   "synthesisNarrative": "Zihinsel yetersizlik; akıl yürütme, plan yapma, problem çözme, soyut düşünme, karmaşık fikirleri kavrama ve deneyimlerden öğrenme gibi genel bilişsel kapasitelerdeki belirgin kısıtlılıktır.\n\n- **Uyum Alanları:** Bilişsel eksiklik kavramsal, sosyal ve pratik uyum alanlarında bağımsız yaşamı sınırlar.\n- **En Sık Başvuru Nedeni:** Küçük yaş grubunda çocuk psikiyatrisi polikliniğine en sık başvuru nedeni **konuşmada gecikme** yakınmasıdır.\n- **Eşlik Eden Bulgular:** Komutlara uymama, tuvalet kontrolünü kazanamama ve yaşıtlarla ilişki kuramama konuşma gecikmesine sıklıkla eşlik eder.\n\n> [!NOTE]\n> Aileler başlangıçta zihinsel geriliği değil, çocuğun 'henüz konuşamadığını' fark ederek hekime başvururlar."
+  },
+  {
+   "id": "k2-42-d-s08",
+   "slideNumber": 8,
+   "title": "Zihinsel Yetersizlikler: Etiyoloji ve Prenatal Kromozomal Nedenler",
+   "bolum": "2",
+   "pdfSayfalari": [
+    10,
+    11
+   ],
+   "sourcePdf": {
+    "startPage": 10,
+    "endPage": 11
+   },
+   "content": "Zihinsel yetersizliğin etiyolojisi son derece heterojendir; genetik, gelişimsel ve edinsel faktörler tek başına veya bir arada rol oynar.\n\n- **Şiddet-Etiyoloji Kuralı:** Zihinsel yetersizlik klinik olarak ne kadar belirgin ve ağırsa, altta yatan organik/biyolojik etiyoloji de o kadar belirgindir.\n- **Otozomal Bozukluklar:** Down sendromu (Trizomi 21), Prader-Willi sendromu ve Angelman sendromu en sık otozomal genetik nedenlerdir.\n- **Gonozomal Bozukluklar:** Frajil X sendromu en sık kalıtsal zihinsel yetersizlik nedenidir; Turner ve Klinefelter sendromları da eşlik edebilir.\n\n> [!IMPORTANT]\n> Ağır zihinsel yetersizlik olgularında organik genetik etiyoloji saptama oranı hafif olgulara göre çok daha yüksektir.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Zihinsel yetersizlik etiyolojisiyle ilgili altın kural aşağıdakilerden hangisidir?",
+     "options": [
+      {
+       "text": "Zihinsel yetersizlik ne kadar ağırsa, etiyoloji de o kadar belirgindir.",
+       "isCorrect": true,
+       "explanation": "Zihinsel yetersizlik ne kadar ağırsa, etiyoloji de o kadar belirgindir. doğru yanıttır; çünkü bu spesifik klinik ve gelişimsel mekanizma doğrudan hedeflenen tanı ölçütünü kurar. Klinik şiddet arttıkça spesifik biyolojik nedenin bulunma olasılığı artar."
+      },
+      {
+       "text": "Tüm olgularda etiyoloji sadece doğum travmasından ibarettir.",
+       "isCorrect": false,
+       "explanation": "Tüm olgularda etiyoloji sadece doğum travmasından ibarettir. kavramı bu klinik tabloyu oluşturmaz; ilgili nörogelişimsel süreçte farklı bir alanda fonksiyon gösterir. Etiyoloji genetikten edinsele çok heterojendir."
+      },
+      {
+       "text": "Hafif vakalarda monogenik mutasyon oranı ağır vakalardan yüksektir.",
+       "isCorrect": false,
+       "explanation": "Hafif vakalarda monogenik mutasyon oranı ağır vakalardan yüksektir. kavramı bu klinik tabloyu oluşturmaz; ilgili nörogelişimsel süreçte farklı bir alanda fonksiyon gösterir. Ağır tablolarda genetik/kromozomal bozukluk oranı çok daha yüksektir."
+      },
+      {
+       "text": "Down sendromu gonozomal bir anöploididir.",
+       "isCorrect": false,
+       "explanation": "Down sendromu gonozomal bir anöploididir, bu nedenle kavramı bu klinik tabloyu oluşturmaz; ilgili nörogelişimsel süreçte farklı bir alanda fonksiyon gösterir. Down sendromu otozomal (21. kromozom) bir bozukluktur."
+      }
+     ],
+     "id": "k42-s08-e1"
+    },
+    {
+     "type": "cloze_masking",
+     "maskedTerm": "etiyoloji",
+     "hint": "Nörogelişimsel bozukluklar kapsamında ilgili klinik veya gelişimsel kavramdır.",
+     "id": "k42-s08-e2",
+     "sentence": "Zihinsel yetersizlik klinik olarak ne kadar belirginse altta yatan organik etiyoloji de o kadar belirgindir."
+    },
+    {
+     "type": "swipe_matching",
+     "title": "Genetik Nedenler Sınıflaması",
+     "cards": [
+      {
+       "text": "Down Sendromu (Trizomi 21)",
+       "category": "left",
+       "explanation": "Down Sendromu (Trizomi 21) kavramı ilgili tanısal kategori altında incelenen temel klinik bileşendir. 21. otozomal kromozom trizomisidir."
+      },
+      {
+       "text": "Prader-Willi Sendromu",
+       "category": "left",
+       "explanation": "Prader-Willi Sendromu kavramı ilgili tanısal kategori altında incelenen temel klinik bileşendir. 15. otozomal kromozom mikrodelesyonudur."
+      },
+      {
+       "text": "Frajil X Sendromu",
+       "category": "right",
+       "explanation": "Frajil X Sendromu kavramı ilgili tanısal kategori altında incelenen temel klinik bileşendir. X gonozomundaki FMR1 mutasyonudur."
+      },
+      {
+       "text": "Angelman Sendromu",
+       "category": "left",
+       "explanation": "Angelman Sendromu kavramı ilgili tanısal kategori altında incelenen temel klinik bileşendir. 15. otozomal kromozom maternal delesyonudur."
+      }
+     ],
+     "id": "k42-s08-e3",
+     "leftCategory": "Otozomal Bozukluk",
+     "rightCategory": "Gonozomal (Cinsiyet) Bozukluk"
+    },
+    {
+     "type": "active_recall",
+     "id": "k42-s08-e4",
+     "question": "En sık görülen kalıtsal zihinsel yetersizlik nedeni nedir?",
+     "answer": "Frajil X sendromudur (X kromozomu FMR1 genindeki CGG trinükleotid tekrar artışına bağlıdır)."
+    }
+   ],
+   "synthesisNarrative": "Zihinsel yetersizliğin etiyolojisi son derece heterojendir; genetik, gelişimsel ve edinsel faktörler tek başına veya bir arada rol oynar.\n\n- **Şiddet-Etiyoloji Kuralı:** Zihinsel yetersizlik klinik olarak ne kadar belirgin ve ağırsa, altta yatan organik/biyolojik etiyoloji de o kadar belirgindir.\n- **Otozomal Bozukluklar:** Down sendromu (Trizomi 21), Prader-Willi sendromu ve Angelman sendromu en sık otozomal genetik nedenlerdir.\n- **Gonozomal Bozukluklar:** Frajil X sendromu en sık kalıtsal zihinsel yetersizlik nedenidir; Turner ve Klinefelter sendromları da eşlik edebilir.\n\n> [!IMPORTANT]\n> Ağır zihinsel yetersizlik olgularında organik genetik etiyoloji saptama oranı hafif olgulara göre çok daha yüksektir."
+  },
+  {
+   "id": "k2-42-d-s09",
+   "slideNumber": 9,
+   "title": "Zihinsel Yetersizlikler: Maternal Faktörler ve Perinatal Nedenler",
+   "bolum": "2",
+   "pdfSayfalari": [
+    12,
+    13
+   ],
+   "sourcePdf": {
+    "startPage": 12,
+    "endPage": 13
+   },
+   "content": "Prenatal dönemde anneye ait biyolojik ve çevresel şartlar ile perinatal olaylar merkezi sinir sistemi gelişiminde belirleyicidir.\n\n- **Maternal Yaş:** Annenin 16 yaşından küçük veya 40 yaşından büyük olması (ilk doğum için 35 yaş üstü) zihinsel yetersizlik riskini katlar.\n- **Akrabalık ve Çevre:** Akraba evlilikleri otozomal resesif geçişleri artırır; sosyoekonomik yetersizlik ve kötü beslenme riski pekiştirir.\n- **Maternal Enfeksiyon ve Teratojenler:** TORCH enfeksiyonları, alkol maruziyeti (fetal alkol sendromu) ve antikonvülzanlar nöral hasar oluşturur.\n- **Perinatal ve Gebelik Komplikasyonları:** Gebelikte hemorajik şok, polihidramnios, uzamış doğum eylemi, doğum asfiksisine bağlı hipoksi ve prematürite santral hasardandır.\n\n> [!IMPORTANT]\n> Perinatal doğum asfiksisine bağlı hipoksik-iskemik ensefalopati, önlenebilir zihinsel yetersizlik nedenlerinin başında gelir.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Aşağıdakilerden hangisi zihinsel yetersizlik açısından yüksek maternal risk faktörlerinden biridir?",
+     "options": [
+      {
+       "text": "Annenin 25 yaşında ilk doğumunu yapması",
+       "isCorrect": false,
+       "explanation": "Annenin 25 yaşında ilk doğumunu yapması kavramı bu klinik tabloyu oluşturmaz; ilgili nörogelişimsel süreçte farklı bir alanda fonksiyon gösterir. 25 yaş optimal maternal yaş aralığıdır."
+      },
+      {
+       "text": "Annenin 16 yaşından küçük veya 40 yaşından büyük olması",
+       "isCorrect": true,
+       "explanation": "Annenin 16 yaşından küçük veya 40 yaşından büyük olması doğru yanıttır; çünkü bu spesifik klinik ve gelişimsel mekanizma doğrudan hedeflenen tanı ölçütünü kurar. Uç maternal yaşlar (<16 veya >40 yaş) kromozomal ve gelişimsel riski artırır."
+      },
+      {
+       "text": "Gebelikte dengeli Akdeniz diyeti uygulanması",
+       "isCorrect": false,
+       "explanation": "Gebelikte dengeli Akdeniz diyeti uygulanması kavramı bu klinik tabloyu oluşturmaz; ilgili nörogelişimsel süreçte farklı bir alanda fonksiyon gösterir. Dengeli beslenme koruyucu bir faktördür."
+      },
+      {
+       "text": "Maternal enfeksiyon taramalarının temiz çıkması",
+       "isCorrect": false,
+       "explanation": "Maternal enfeksiyon taramalarının temiz çıkması kavramı bu klinik tabloyu oluşturmaz; ilgili nörogelişimsel süreçte farklı bir alanda fonksiyon gösterir. Enfeksiyon yokluğu riski azaltır."
+      }
+     ],
+     "id": "k42-s09-e1"
+    },
+    {
+     "type": "cloze_masking",
+     "maskedTerm": "asfiksi",
+     "hint": "Nörogelişimsel bozukluklar kapsamında ilgili klinik veya gelişimsel kavramdır.",
+     "id": "k42-s09-e2",
+     "sentence": "Gebelikte gelişen hemorajik şok ve doğum sırasında yaşanan asfiksi santral sinir sistemi hasarıyla zihinsel yetersizlik doğurabilir."
+    },
+    {
+     "type": "before_after_slider",
+     "leftTitle": "Maternal Risk Faktörleri",
+     "rightTitle": "Perinatal Komplikasyonlar",
+     "leftPoints": [
+      "İleri maternal yaş (>40 yaş)",
+      "Akraba evliliği ve resesif genler",
+      "TORCH enfeksiyonları ve teratojenler"
+     ],
+     "rightPoints": [
+      "Doğum asfiksisine bağlı hipoksi",
+      "Prematürite ve düşük doğum ağırlığı",
+      "Zor doğum travması ve sezaryen gecikmesi"
+     ],
+     "id": "k42-s09-e3"
+    },
+    {
+     "type": "active_recall",
+     "id": "k42-s09-e4",
+     "question": "Zihinsel yetersizliğe yol açan maternal TORCH enfeksiyonları neleri kapsar?",
+     "answer": "Toksoplazma, Rubella (Kızamıkçık), Sitomegalovirüs (CMV) ve Herpes Simpleks Virüsünü (HSV) kapsar."
+    }
+   ],
+   "synthesisNarrative": "Prenatal dönemde anneye ait biyolojik ve çevresel şartlar ile perinatal olaylar merkezi sinir sistemi gelişiminde belirleyicidir.\n\n- **Maternal Yaş:** Annenin 16 yaşından küçük veya 40 yaşından büyük olması (ilk doğum için 35 yaş üstü) zihinsel yetersizlik riskini katlar.\n- **Akrabalık ve Çevre:** Akraba evlilikleri otozomal resesif geçişleri artırır; sosyoekonomik yetersizlik ve kötü beslenme riski pekiştirir.\n- **Maternal Enfeksiyon ve Teratojenler:** TORCH enfeksiyonları, alkol maruziyeti (fetal alkol sendromu) ve antikonvülzanlar nöral hasar oluşturur.\n- **Perinatal ve Gebelik Komplikasyonları:** Gebelikte hemorajik şok, polihidramnios, uzamış doğum eylemi, doğum asfiksisine bağlı hipoksi ve prematürite santral hasardandır.\n\n> [!IMPORTANT]\n> Perinatal doğum asfiksisine bağlı hipoksik-iskemik ensefalopati, önlenebilir zihinsel yetersizlik nedenlerinin başında gelir."
+  },
+  {
+   "id": "k2-42-d-s10",
+   "slideNumber": 10,
+   "title": "Zihinsel Yetersizlikler: IQ Düzeyleri ve Klinik Evreleme",
+   "bolum": "2",
+   "pdfSayfalari": [
+    14,
+    15
+   ],
+   "sourcePdf": {
+    "startPage": 14,
+    "endPage": 15
+   },
+   "content": "Zihinsel gelişim bozuklukları zeka katsayısı (IQ) ve uyumsal işlevsellik düzeylerine göre dört ana evreye ayrılır.\n\n- **Hafif Zihinsel Yetersizlik (IQ 50-69 puan):** Olguların yaklaşık yüzde 85'ini oluşturur. Konuşmada hafif gecikme vardır; okul çağında akademik taleplerle fark edilirler. Somut düşünce egemendir, mesleki bağımsızlık kazanabilirler.\n- **Orta Zihinsel Yetersizlik (IQ 35-49 puan):** Dil ve iletişim becerileri sınırlıdır. Öz bakımda kısmi destek gerekir; denetimli ortamlarda basit işler yapabilirler.\n- **Ağır Zihinsel Yetersizlik (IQ 20-34 puan):** Belirgin motor gerilik mevcuttur. Dil yetileri çok az gelişir veya gelişmez; sürekli gözetim ve bakım gereksinimi vardır.\n- **Çok Ağır Zihinsel Yetersizlik (IQ <20 puan):** Tamamen bakıma muhtaçtır; sıklıkla ağır nörolojik komplikasyonlar eşlik eder.\n\n> [!NOTE]\n> Hafif gruptaki bireyler uygun özel eğitim ve mesleki yönlendirmeyle toplum içinde bağımsız bir hayat sürdürebilirler.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Zihinsel yetersizlik evrelemesi hakkında aşağıdaki eşleştirmelerden hangisi doğrudur?",
+     "options": [
+      {
+       "text": "Hafif Zihinsel Yetersizlik: IQ 50-69 puan",
+       "isCorrect": true,
+       "explanation": "Hafif Zihinsel Yetersizlik: IQ 50-69 puan doğru yanıttır; çünkü bu spesifik klinik ve gelişimsel mekanizma doğrudan hedeflenen tanı ölçütünü kurar. 50-69 puan aralığı hafif zihinsel gelişim bozukluğunu tanımlar."
+      },
+      {
+       "text": "Ağır Zihinsel Yetersizlik: IQ 70-84 puan",
+       "isCorrect": false,
+       "explanation": "Ağır Zihinsel Yetersizlik: IQ 70-84 puan kavramı bu klinik tabloyu oluşturmaz; ilgili nörogelişimsel süreçte farklı bir alanda fonksiyon gösterir. 70-84 puan aralığı sınır zeka düzeyidir."
+      },
+      {
+       "text": "Orta Zihinsel Yetersizlik: IQ 20 puanın altı",
+       "isCorrect": false,
+       "explanation": "Orta Zihinsel Yetersizlik: IQ 20 puanın altı kavramı bu klinik tabloyu oluşturmaz; ilgili nörogelişimsel süreçte farklı bir alanda fonksiyon gösterir. 20 altı çok ağır zihinsel yetersizliktir."
+      },
+      {
+       "text": "Çok Ağır Zihinsel Yetersizlik: IQ 50-60 puan",
+       "isCorrect": false,
+       "explanation": "Çok Ağır Zihinsel Yetersizlik: IQ 50-60 puan kavramı bu klinik tabloyu oluşturmaz; ilgili nörogelişimsel süreçte farklı bir alanda fonksiyon gösterir. Bu aralık hafif gruba aittir."
+      }
+     ],
+     "id": "k42-s10-e1"
+    },
+    {
+     "type": "cloze_masking",
+     "maskedTerm": "hafif",
+     "hint": "Nörogelişimsel bozukluklar kapsamında ilgili klinik veya gelişimsel kavramdır.",
+     "id": "k42-s10-e2",
+     "sentence": "Toplumdaki zihinsel yetersizlik olgularının yaklaşık yüzde 85'ini oluşturan grup hafif zihinsel gelişim bozukluğudur."
+    },
+    {
+     "type": "interactive_table",
+     "tableTitle": "Zihinsel Yetersizlik IQ Evreleri ve Klinik Kapasite",
+     "id": "k42-s10-e3",
+     "tableHeaders": [
+      "Evre",
+      "IQ Puanı",
+      "İletişim Yetisi",
+      "Bağımsız Yaşam"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Hafif",
+         "isMasked": false,
+         "hint": "Nörogelişimsel bozukluklar kapsamında ilgili klinik kavramdır."
+        },
+        {
+         "text": "50-69 puan",
+         "isMasked": true,
+         "hint": "Elliden başlayıp yetmişin altına kadar"
+        },
+        {
+         "text": "Konuşma iyi gelişir, somut düşünce",
+         "isMasked": false,
+         "hint": "Nörogelişimsel bozukluklar kapsamında ilgili klinik kavramdır."
+        },
+        {
+         "text": "Mesleki bağımsızlık kazanabilir",
+         "isMasked": false,
+         "hint": "Nörogelişimsel bozukluklar kapsamında ilgili klinik kavramdır."
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Orta",
+         "isMasked": false,
+         "hint": "Nörogelişimsel bozukluklar kapsamında ilgili klinik kavramdır."
+        },
+        {
+         "text": "35-49 puan",
+         "isMasked": false,
+         "hint": "Nörogelişimsel bozukluklar kapsamında ilgili klinik kavramdır."
+        },
+        {
+         "text": "Sınırlı iletişim becerisi",
+         "isMasked": false,
+         "hint": "Nörogelişimsel bozukluklar kapsamında ilgili klinik kavramdır."
+        },
+        {
+         "text": "Denetimli ortamda basit işler",
+         "isMasked": true,
+         "hint": "Kısmi destekle yarı bağımsız"
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Ağır",
+         "isMasked": false,
+         "hint": "Nörogelişimsel bozukluklar kapsamında ilgili klinik kavramdır."
+        },
+        {
+         "text": "20-34 puan",
+         "isMasked": false,
+         "hint": "Nörogelişimsel bozukluklar kapsamında ilgili klinik kavramdır."
+        },
+        {
+         "text": "Dil yetileri çok kısıtlı veya yok",
+         "isMasked": true,
+         "hint": "Konuşma gelişimi ileri derecede yetersiz"
+        },
+        {
+         "text": "Sürekli bakım ve gözetim gerekir",
+         "isMasked": false,
+         "hint": "Nörogelişimsel bozukluklar kapsamında ilgili klinik kavramdır."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "id": "k42-s10-e4",
+     "question": "Hafif zihinsel yetersizliği olan çocukların okul öncesinde fark edilmeyip ilkokulda hekime getirilmesinin nedeni nedir?",
+     "answer": "Çünkü günlük basit işlevleri başarabilirler; ancak ilkokulda soyut düşünme, okuma-yazma ve karmaşık akademik kurallar devreye girdiğinde bilişsel açık belirginleşir."
+    }
+   ],
+   "synthesisNarrative": "Zihinsel gelişim bozuklukları zeka katsayısı (IQ) ve uyumsal işlevsellik düzeylerine göre dört ana evreye ayrılır.\n\n- **Hafif Zihinsel Yetersizlik (IQ 50-69 puan):** Olguların yaklaşık yüzde 85'ini oluşturur. Konuşmada hafif gecikme vardır; okul çağında akademik taleplerle fark edilirler. Somut düşünce egemendir, mesleki bağımsızlık kazanabilirler.\n- **Orta Zihinsel Yetersizlik (IQ 35-49 puan):** Dil ve iletişim becerileri sınırlıdır. Öz bakımda kısmi destek gerekir; denetimli ortamlarda basit işler yapabilirler.\n- **Ağır Zihinsel Yetersizlik (IQ 20-34 puan):** Belirgin motor gerilik mevcuttur. Dil yetileri çok az gelişir veya gelişmez; sürekli gözetim ve bakım gereksinimi vardır.\n- **Çok Ağır Zihinsel Yetersizlik (IQ <20 puan):** Tamamen bakıma muhtaçtır; sıklıkla ağır nörolojik komplikasyonlar eşlik eder.\n\n> [!NOTE]\n> Hafif gruptaki bireyler uygun özel eğitim ve mesleki yönlendirmeyle toplum içinde bağımsız bir hayat sürdürebilirler."
+  },
+  {
+   "id": "k2-42-d-s11",
+   "slideNumber": 11,
+   "title": "Zihinsel Yetersizlikler: Özel Eğitim ve Sağaltım Yaklaşımı",
+   "bolum": "2",
+   "pdfSayfalari": [
+    16,
+    16
+   ],
+   "sourcePdf": {
+    "startPage": 16,
+    "endPage": 16
+   },
+   "content": "Zihinsel yetersizliğin sağaltımı medikal bir iyileşmeden ziyade, bireyin var olan potansiyelini en üst düzeye çıkarmayı amaçlayan çok yönlü rehabilitasyon sürecidir.\n\n- **Özel Eğitim:** Sağaltımın temel direğidir; bilişsel, öz bakım, dil ve sosyal becerileri yapılandırılmış ortamda öğretir.\n- **Koruyucu Önlemler:** İkincil psikiyatrik sorunları, istismarı ve kazaları önlemeye yönelik çevresel güvenlik önlemleri alınır.\n- **Aile ile İş Birliği:** Ailenin eğitimi ve kabullenme süreci çocuğun gelişimsel kazanımlarının sürekliliği için vazgeçilmezdir.\n- **Davranış Sağaltımı ve İlaçlar:** İlaçlar zekayı artırmaz; agresyon, öfke nöbetleri ve aşırı hareketlilik gibi eşlik eden davranış problemlerinde kullanılır.\n\n> [!IMPORTANT]\n> Zihinsel yetersizliği ortadan kaldıran herhangi bir ilaç tedavisi yoktur; temel sağaltım aracı özel eğitimdir.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Zihinsel yetersizlik sağaltımında ilaç tedavisinin rolü nedir?",
+     "options": [
+      {
+       "text": "Zeka katsayısını kalıcı olarak normale yükseltmek",
+       "isCorrect": false,
+       "explanation": "Zeka katsayısını kalıcı olarak normale yükseltmek kavramı bu klinik tabloyu oluşturmaz; ilgili nörogelişimsel süreçte farklı bir alanda fonksiyon gösterir. İlaçlar zekayı artıramaz."
+      },
+      {
+       "text": "Yalnızca eşlik eden agresyon ve hiperaktivite gibi davranış sorunlarını semptomatik kontrol etmek",
+       "isCorrect": true,
+       "explanation": "Yalnızca eşlik eden agresyon ve hiperaktivite gibi davranış sorunlarını semptomatik kontrol etmek doğru yanıttır; çünkü bu spesifik klinik ve gelişimsel mekanizma doğrudan hedeflenen tanı ölçütünü kurar. Farmakoterapi sadece eşlik eden davranış problemlerinde semptomatiktir."
+      },
+      {
+       "text": "Özel eğitimin yerine geçerek tek başına tedavi sağlamak",
+       "isCorrect": false,
+       "explanation": "Özel eğitimin yerine geçerek tek başına tedavi sağlamak kavramı bu klinik tabloyu oluşturmaz; ilgili nörogelişimsel süreçte farklı bir alanda fonksiyon gösterir. Özel eğitim tedavinin ana omurgasıdır."
+      },
+      {
+       "text": "Kromozomal anöploidiyi hücresel düzeyde onarmak",
+       "isCorrect": false,
+       "explanation": "Kromozomal anöploidiyi hücresel düzeyde onarmak kavramı bu klinik tabloyu oluşturmaz; ilgili nörogelişimsel süreçte farklı bir alanda fonksiyon gösterir. Genetik anöploidiler ilaçla düzeltilemez."
+      }
+     ],
+     "id": "k42-s11-e1"
+    },
+    {
+     "type": "cloze_masking",
+     "maskedTerm": "özel",
+     "hint": "Nörogelişimsel bozukluklar kapsamında ilgili klinik veya gelişimsel kavramdır.",
+     "id": "k42-s11-e2",
+     "sentence": "Zihinsel yetersizlik sağaltımında uyumsal becerileri geliştiren en temel ve kanıtlanmış yaklaşım bireysel özel eğitimidir."
+    },
+    {
+     "type": "active_recall",
+     "id": "k42-s11-e3",
+     "question": "Zihinsel yetersizlikte aile ile iş birliği neden kritik bir tedavi bileşenidir?",
+     "answer": "Özel eğitim merkezinde öğrenilen uyum becerilerinin günlük ev yaşantısında tekrar edilmesi ve pekiştirilmesi ailenin tutarlı yaklaşımına bağlıdır."
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Zihinsel Yetersizlik Sağaltım İlkeleri",
+     "id": "k42-s11-e4",
+     "items": [
+      {
+       "text": "Zihinsel yetersizliğin temel sağaltım yöntemi özel eğitimdir.",
+       "isLie": false,
+       "explanation": "Zihinsel yetersizliğin temel sağaltım yöntemi özel eğitimdir. ifadesi nörogelişimsel bozukluklar ilkeleri açısından incelendiğinde bu klinik durumun gerekçesini açıkça ortaya koyar. Özel eğitim en etkili temel yöntemdir."
+      },
+      {
+       "text": "Zekayı doğrudan 20 puan yükselten mucizevi bir ilaç tedavisi mevcuttur.",
+       "isLie": true,
+       "explanation": "Zekayı doğrudan 20 puan yükselten mucizevi bir ilaç tedavisi mevcuttur. ifadesi nörogelişimsel bozukluklar ilkeleri açısından incelendiğinde bu klinik durumun gerekçesini açıkça ortaya koyar. Zekayı artıran farmakolojik bir ilaç bulunmamaktadır."
+      },
+      {
+       "text": "Aile iş birliği ve koruyucu önlemler rehabilitasyonun ayrılmaz parçasıdır.",
+       "isLie": false,
+       "explanation": "Aile iş birliği ve koruyucu önlemler rehabilitasyonun ayrılmaz parçasıdır. ifadesi nörogelişimsel bozukluklar ilkeleri açısından incelendiğinde bu klinik durumun gerekçesini açıkça ortaya koyar. Ailenin sürece katılımı başarıyı doğrudan belirler."
+      }
+     ]
+    }
+   ],
+   "synthesisNarrative": "Zihinsel yetersizliğin sağaltımı medikal bir iyileşmeden ziyade, bireyin var olan potansiyelini en üst düzeye çıkarmayı amaçlayan çok yönlü rehabilitasyon sürecidir.\n\n- **Özel Eğitim:** Sağaltımın temel direğidir; bilişsel, öz bakım, dil ve sosyal becerileri yapılandırılmış ortamda öğretir.\n- **Koruyucu Önlemler:** İkincil psikiyatrik sorunları, istismarı ve kazaları önlemeye yönelik çevresel güvenlik önlemleri alınır.\n- **Aile ile İş Birliği:** Ailenin eğitimi ve kabullenme süreci çocuğun gelişimsel kazanımlarının sürekliliği için vazgeçilmezdir.\n- **Davranış Sağaltımı ve İlaçlar:** İlaçlar zekayı artırmaz; agresyon, öfke nöbetleri ve aşırı hareketlilik gibi eşlik eden davranış problemlerinde kullanılır.\n\n> [!IMPORTANT]\n> Zihinsel yetersizliği ortadan kaldıran herhangi bir ilaç tedavisi yoktur; temel sağaltım aracı özel eğitimdir."
+  },
+  {
+   "id": "k2-42-d-s12",
+   "slideNumber": 12,
+   "title": "[TEKRAR SAYFASI - CHECKPOINT 2] Bölüm 2 Pekiştirmesi",
+   "bolum": "2",
+   "isCheckpoint": true,
+   "pdfSayfalari": [
+    8,
+    16
+   ],
+   "sourcePdf": {
+    "startPage": 8,
+    "endPage": 16
+   },
+   "content": "Bu tekrar sayfasında zihinsel yetersizliklerin tanımı, konuşma gecikmesiyle başvuru, etiyolojik şiddet kuralı, kromozomal-maternal nedenler, IQ evrelemesi ve özel eğitim temelli sağaltım pekiştirilmektedir.\n\n- **Başvuru:** Küçük yaşta konuşmada gecikme ile başlar.\n- **Etiyoloji:** Ağır vakalarda genetik/organik nedenler belirgindir (Down, Frajil X).\n- **Evreleme:** Hafif grup (IQ 50-69) yüzde 85 çoğunluktadır ve mesleki bağımsızlık kazanabilir.\n- **Tedavi:** İlaç semptomatiktir; esas yaklaşım özel eğitimdir.\n\n> [!NOTE]\n> Bilişsel yetersizlik şüphesinde erken dönemde dil ve adaptif becerilerin değerlendirilmesi hayati önem taşır.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Zihinsel yetersizliklerle ilgili aşağıdaki klinik bilgilerden hangisi yanlıştır?",
+     "options": [
+      {
+       "text": "En sık görülen grup hafif zihinsel yetersizliktir (IQ 50-69).",
+       "isCorrect": false,
+       "explanation": "En sık görülen grup hafif zihinsel yetersizliktir (IQ 50-69). kavramı bu klinik tabloyu oluşturmaz; ilgili nörogelişimsel süreçte farklı bir alanda fonksiyon gösterir. Bu bilgi doğrudur (%85 oranındadır)."
+      },
+      {
+       "text": "Küçük yaşta en sık hekime başvuru nedeni konuşmada gecikmedir.",
+       "isCorrect": false,
+       "explanation": "Küçük yaşta en sık hekime başvuru nedeni konuşmada gecikmedir. kavramı bu klinik tabloyu oluşturmaz; ilgili nörogelişimsel süreçte farklı bir alanda fonksiyon gösterir. Bu bilgi doğrudur."
+      },
+      {
+       "text": "Down sendromu zihinsel yetersizliğe yol açan otozomal bir durumdur.",
+       "isCorrect": false,
+       "explanation": "Down sendromu zihinsel yetersizliğe yol açan otozomal bir durumdur. kavramı bu klinik tabloyu oluşturmaz; ilgili nörogelişimsel süreçte farklı bir alanda fonksiyon gösterir. Bu bilgi doğrudur (Trizomi 21)."
+      },
+      {
+       "text": "Ağır zihinsel yetersizlikte dil yetileri tamamen sağlam kalır ve konuşma kusursuzdur.",
+       "isCorrect": true,
+       "explanation": "Ağır zihinsel yetersizlikte dil yetileri tamamen sağlam kalır ve konuşma kusursuzdur. doğru yanıttır; çünkü bu spesifik klinik ve gelişimsel mekanizma doğrudan hedeflenen tanı ölçütünü kurar. Bu bilgi yanlıştır; ağır grupta dil yetileri çok az gelişir veya hiç gelişmez."
+      }
+     ],
+     "id": "k42-s12-e1"
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Bölüm 2 Temel Kazanımları",
+     "id": "k42-s12-e2",
+     "items": [
+      {
+       "text": "Zihinsel yetersizlik ne kadar belirginse etiyoloji de o kadar belirgindir.",
+       "isLie": false,
+       "explanation": "Zihinsel yetersizlik ne kadar belirginse etiyoloji de o kadar belirgindir. ifadesi nörogelişimsel bozukluklar ilkeleri açısından incelendiğinde bu klinik durumun gerekçesini açıkça ortaya koyar. Şiddet-etiyoloji ilişkisi doğrulanmıştır."
+      },
+      {
+       "text": "İlaçlar zihinsel yetersizliği tamamen yok edip zekayı normale çevirir.",
+       "isLie": true,
+       "explanation": "İlaçlar zihinsel yetersizliği tamamen yok edip zekayı normale çevirir. ifadesi nörogelişimsel bozukluklar ilkeleri açısından incelendiğinde bu klinik durumun gerekçesini açıkça ortaya koyar. İlaçlar yalnızca eşlik eden davranış problemlerini hedefler."
+      },
+      {
+       "text": "Hafif zihinsel yetersizliği olan bireyler mesleki bağımsızlık kazanabilir.",
+       "isLie": false,
+       "explanation": "Hafif zihinsel yetersizliği olan bireyler mesleki bağımsızlık kazanabilir. ifadesi nörogelişimsel bozukluklar ilkeleri açısından incelendiğinde bu klinik durumun gerekçesini açıkça ortaya koyar. Toplumda bağımsız yaşayabilmektedirler."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "id": "k42-s12-e3",
+     "question": "Zihinsel yetersizlik etiyolojisinde Frajil X sendromunun önemi nedir?",
+     "answer": "Kalıtsal (ailesel geçişli) zihinsel yetersizliğin en sık görülen nedenidir; gonozomal X kromozomu genetik bozukluğudur."
+    },
+    {
+     "type": "cloze_masking",
+     "maskedTerm": "özel",
+     "hint": "Nörogelişimsel bozukluklar kapsamında ilgili klinik veya gelişimsel kavramdır.",
+     "id": "k42-s12-e4",
+     "sentence": "Zihinsel yetersizlik sağaltımında temel yaklaşımı bireysel özel eğitim programları oluşturur."
+    }
+   ],
+   "synthesisNarrative": "Bu tekrar sayfasında zihinsel yetersizliklerin tanımı, konuşma gecikmesiyle başvuru, etiyolojik şiddet kuralı, kromozomal-maternal nedenler, IQ evrelemesi ve özel eğitim temelli sağaltım pekiştirilmektedir.\n\n- **Başvuru:** Küçük yaşta konuşmada gecikme ile başlar.\n- **Etiyoloji:** Ağır vakalarda genetik/organik nedenler belirgindir (Down, Frajil X).\n- **Evreleme:** Hafif grup (IQ 50-69) yüzde 85 çoğunluktadır ve mesleki bağımsızlık kazanabilir.\n- **Tedavi:** İlaç semptomatiktir; esas yaklaşım özel eğitimdir.\n\n> [!NOTE]\n> Bilişsel yetersizlik şüphesinde erken dönemde dil ve adaptif becerilerin değerlendirilmesi hayati önem taşır."
+  },
+  {
+   "id": "k2-42-d-s13",
+   "slideNumber": 13,
+   "title": "Otizm Spektrum Bozukluğu: Çekirdek Belirtiler ve Başlangıç",
+   "bolum": "3",
+   "pdfSayfalari": [
+    17,
+    18
+   ],
+   "sourcePdf": {
+    "startPage": 17,
+    "endPage": 18
+   },
+   "content": "Otizm Yelpazesi Bozukluğu (OYB / OSB), erken çocukluk döneminde başlayan ve yaşam boyu devam eden karmaşık bir nörogelişimsel bozukluktur.\n\n- **İki Temel Belirti Alanı:**\n  1. Sosyal etkileşim ve iletişimde süreğen kısıtlılık (karşılıklı sohbet edememe, göz teması yokluğu, duyguları paylaşamama).\n  2. Sınırlı, tekrarlayıcı ilgi ve stereotipik davranış örüntüleri (el çırpma, parmak ucunda yürüme, dönen nesnelere aşırı ilgi, aynılıkta ısrar).\n- **Başlangıç Yaşı:** Belirtiler tipik olarak **12-24. aylar** arasında fark edilebilir hale gelir.\n- **Gelişimsel Regresyon:** Kimi çocuklarda ilk 1-2 yıl normal gelişim basamakları izlenirken, kazanılmış kelimelerin ve sosyal ilginin aniden kaybedildiği regresyon tablosu görülebilir.\n\n> [!IMPORTANT]\n> Daha önce 'anne, baba' diyen veya el sallayan bir çocuğun 18. ay civarında bu becerilerini kaybetmesi otizm regresyonu alarmıdır.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Otizm spektrum bozukluğunda belirtilerin tipik başlangıç ve belirginleşme dönemi hangisidir?",
+     "options": [
+      {
+       "text": "12 - 24. aylar arası",
+       "isCorrect": true,
+       "explanation": "12 - 24. aylar arası doğru yanıttır; çünkü bu spesifik klinik ve gelişimsel mekanizma doğrudan hedeflenen tanı ölçütünü kurar. Belirtiler tipik olarak 12-24 aylar arasında belirgin hale gelir."
+      },
+      {
+       "text": "15 - 18 yaş arası",
+       "isCorrect": false,
+       "explanation": "15 - 18 yaş arası kavramı bu klinik tabloyu oluşturmaz; ilgili nörogelişimsel süreçte farklı bir alanda fonksiyon gösterir. Bu ergenlik dönemi olup otizm erken çocuklukta başlar."
+      },
+      {
+       "text": "Yalnızca 60 yaş sonrası",
+       "isCorrect": false,
+       "explanation": "Yalnızca 60 yaş sonrası kavramı bu klinik tabloyu oluşturmaz; ilgili nörogelişimsel süreçte farklı bir alanda fonksiyon gösterir. Otizm nörodejeneratif bir yaşlılık hastalığı değildir."
+      },
+      {
+       "text": "İlkokul mezuniyeti sonrası",
+       "isCorrect": false,
+       "explanation": "İlkokul mezuniyeti sonrası kavramı bu klinik tabloyu oluşturmaz; ilgili nörogelişimsel süreçte farklı bir alanda fonksiyon gösterir. Otizm erken çocukluk döneminde görünür olur."
+      }
+     ],
+     "id": "k42-s13-e1"
+    },
+    {
+     "type": "cloze_masking",
+     "maskedTerm": "regresyon",
+     "hint": "Nörogelişimsel bozukluklar kapsamında ilgili klinik veya gelişimsel kavramdır.",
+     "id": "k42-s13-e2",
+     "sentence": "Otizm spektrum bozukluğunda bazı çocuklarda daha önce kazanılmış kelime ve sosyal becerilerin kaybedilmesine gelişimsel regresyon adı verilir."
+    },
+    {
+     "type": "before_after_slider",
+     "leftTitle": "Sosyal Etkileşim Kısıtlılığı",
+     "rightTitle": "Tekrarlayıcı Davranış Örüntüsü",
+     "leftPoints": [
+      "Göz teması kurmama ve adına bakmama",
+      "Sosyal-duygusal karşılıklılık yokluğu",
+      "Duyguları ve ilgiyi akranlarla paylaşamama"
+     ],
+     "rightPoints": [
+      "Stereotipik el çırpma veya sallanma",
+      "Rutinlere aşırı katı bağlılık (aynılık ısrarı)",
+      "Nesnelerin parçalarıyla (tekerlek) dönme ilgisi"
+     ],
+     "id": "k42-s13-e3"
+    },
+    {
+     "type": "active_recall",
+     "id": "k42-s13-e4",
+     "question": "Otizm spektrum bozukluğunun iki ana tanısal çekirdek alanı nelerdir?",
+     "answer": "1) Sosyal etkileşim ve iletişimdeki süreğen kısıtlılık, 2) Sınırlı, tekrarlayıcı ve stereotipik davranış, ilgi örüntüleri."
+    }
+   ],
+   "synthesisNarrative": "Otizm Yelpazesi Bozukluğu (OYB / OSB), erken çocukluk döneminde başlayan ve yaşam boyu devam eden karmaşık bir nörogelişimsel bozukluktur.\n\n- **İki Temel Belirti Alanı:**\n  1. Sosyal etkileşim ve iletişimde süreğen kısıtlılık (karşılıklı sohbet edememe, göz teması yokluğu, duyguları paylaşamama).\n  2. Sınırlı, tekrarlayıcı ilgi ve stereotipik davranış örüntüleri (el çırpma, parmak ucunda yürüme, dönen nesnelere aşırı ilgi, aynılıkta ısrar).\n- **Başlangıç Yaşı:** Belirtiler tipik olarak **12-24. aylar** arasında fark edilebilir hale gelir.\n- **Gelişimsel Regresyon:** Kimi çocuklarda ilk 1-2 yıl normal gelişim basamakları izlenirken, kazanılmış kelimelerin ve sosyal ilginin aniden kaybedildiği regresyon tablosu görülebilir.\n\n> [!IMPORTANT]\n> Daha önce 'anne, baba' diyen veya el sallayan bir çocuğun 18. ay civarında bu becerilerini kaybetmesi otizm regresyonu alarmıdır."
+  },
+  {
+   "id": "k2-42-d-s14",
+   "slideNumber": 14,
+   "title": "Otizm Spektrum Bozukluğu: Erken Bebeklik ve 36 Ay Öncesi Belirtiler",
+   "bolum": "3",
+   "pdfSayfalari": [
+    19,
+    20
+   ],
+   "sourcePdf": {
+    "startPage": 19,
+    "endPage": 20
+   },
+   "content": "Erken tanı ve erken müdahale otizmde prognozu değiştiren en güçlü faktör olduğundan, 36 ay öncesindeki klinik ipuçları hayati öneme sahiptir.\n\n- **Erken Bebeklik İpuçları:** Göz teması kurmaması, kucağa alındığında rahatlamaması, sakinleştirilmekten hoşlanmaması, sosyal gülümsemeye karşılık vermemesi.\n- **İşitme Yanılsaması:** Adına seslenildiğinde dönüp bakmaması nedeniyle aileler sıklıkla çocuğun 'işitme engelli' olduğunu düşünür.\n- **36 Ay Öncesi Kritik Bulgular:**\n  - Karşılıklı konuşma sesleri ile ritmik etkileşimin olmaması,\n  - **Ortak dikkat yokluğu:** Parmakla bir nesneyi işaret etmeme ve gösterilen yöne bakmama,\n  - Taklit oyunlarının (mış gibi yapma) gelişmemesi,\n  - Ekolali (duyduğu kelimeleri aynen yankılama) ve oyuncakların amacına uygun oynanmaması.\n\n> [!IMPORTANT]\n> Bir çocuğun 18 aylıkken parmakla istediği nesneyi işaret etmemesi otizm erken tanısı için en kritik klinik kırmızı bayraktır.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "36 ay öncesinde çocuk psikiyatristine getirilen bir bebekte otizm spektrumunu en çok düşündüren erken bulgu hangisidir?",
+     "options": [
+      {
+       "text": "İşaret edilen yere bakmama ve ortak dikkat kuramama",
+       "isCorrect": true,
+       "explanation": "İşaret edilen yere bakmama ve ortak dikkat kuramama doğru yanıttır; çünkü bu spesifik klinik ve gelişimsel mekanizma doğrudan hedeflenen tanı ölçütünü kurar. Ortak dikkatin olmaması otizm erken tanısının en güçlü göstergesidir."
+      },
+      {
+       "text": "Aşı sonrası hafif ateş yükselmesi",
+       "isCorrect": false,
+       "explanation": "Aşı sonrası hafif ateş yükselmesi kavramı bu klinik tabloyu oluşturmaz; ilgili nörogelişimsel süreçte farklı bir alanda fonksiyon gösterir. Aşı ateşi fizyolojik bir immün yanıttır."
+      },
+      {
+       "text": "Yabancı görünce annenin kucağına saklanma",
+       "isCorrect": false,
+       "explanation": "Yabancı görünce annenin kucağına saklanma kavramı bu klinik tabloyu oluşturmaz; ilgili nörogelişimsel süreçte farklı bir alanda fonksiyon gösterir. Bu durum sağlıklı bağlanma ve yabancı kaygısı belirtisidir."
+      },
+      {
+       "text": "Oyuncak arabayı halıda ileri geri sürme",
+       "isCorrect": false,
+       "explanation": "Oyuncak arabayı halıda ileri geri sürme kavramı bu klinik tabloyu oluşturmaz; ilgili nörogelişimsel süreçte farklı bir alanda fonksiyon gösterir. Bu amaca uygun fonksiyonel bir oyundur."
+      },
+      {
+       "text": "Acıkınca ağlayarak anneden yemek isteme",
+       "isCorrect": false,
+       "explanation": "Acıkınca ağlayarak anneden yemek isteme kavramı bu klinik tabloyu oluşturmaz; ilgili nörogelişimsel süreçte farklı bir alanda fonksiyon gösterir. İhtiyacını sosyal yolla iletme normal gelişimdir."
+      }
+     ],
+     "id": "k42-s14-e1"
+    },
+    {
+     "type": "cloze_masking",
+     "maskedTerm": "ortak",
+     "hint": "Nörogelişimsel bozukluklar kapsamında ilgili klinik veya gelişimsel kavramdır.",
+     "id": "k42-s14-e2",
+     "sentence": "Otizmde 36 ay öncesinde parmakla işaret etmeme ve ilgiyi paylaşmama tablosu ortak dikkat eksikliği olarak tanımlanır."
+    },
+    {
+     "type": "active_recall",
+     "id": "k42-s14-e3",
+     "question": "Otizmli çocukların aileleri adına seslenildiğinde bakmayan çocukları için ilk olarak hangi branşa başvururlar?",
+     "answer": "Çocuğun sağırlık nedeniyle işitmediğini düşünerek sıklıkla Kulak Burun Boğaz veya Odyoloji polikliniğine başvururlar."
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Erken Otizm İpuçları",
+     "id": "k42-s14-e4",
+     "items": [
+      {
+       "text": "Bebeklikte göz teması kurmama ve kucakta sakinleşmeme erken alarmdır.",
+       "isLie": false,
+       "explanation": "Bebeklikte göz teması kurmama ve kucakta sakinleşmeme erken alarmdır. ifadesi nörogelişimsel bozukluklar ilkeleri açısından incelendiğinde bu klinik durumun gerekçesini açıkça ortaya koyar. Erken bebeklik ipuçları arasında yer alır."
+      },
+      {
+       "text": "Ortak dikkat yokluğu ve parmakla işaret etmeme kritik tanısal göstergedir.",
+       "isLie": false,
+       "explanation": "Ortak dikkat yokluğu ve parmakla işaret etmeme kritik tanısal göstergedir. ifadesi nörogelişimsel bozukluklar ilkeleri açısından incelendiğinde bu klinik durumun gerekçesini açıkça ortaya koyar. Sosyal iletişimin en temel erken basamağıdır."
+      },
+      {
+       "text": "Otizmli bebekler her seslenildiğinde hemen göz teması kurup neşeyle gülerler.",
+       "isLie": true,
+       "explanation": "Otizmli bebekler her seslenildiğinde hemen göz teması kurup neşeyle gülerler. ifadesi nörogelişimsel bozukluklar ilkeleri açısından incelendiğinde bu klinik durumun gerekçesini açıkça ortaya koyar. Aksine adına bakmama ve göz teması kurmama karakteristiktir."
+      }
+     ]
+    }
+   ],
+   "synthesisNarrative": "Erken tanı ve erken müdahale otizmde prognozu değiştiren en güçlü faktör olduğundan, 36 ay öncesindeki klinik ipuçları hayati öneme sahiptir.\n\n- **Erken Bebeklik İpuçları:** Göz teması kurmaması, kucağa alındığında rahatlamaması, sakinleştirilmekten hoşlanmaması, sosyal gülümsemeye karşılık vermemesi.\n- **İşitme Yanılsaması:** Adına seslenildiğinde dönüp bakmaması nedeniyle aileler sıklıkla çocuğun 'işitme engelli' olduğunu düşünür.\n- **36 Ay Öncesi Kritik Bulgular:**\n  - Karşılıklı konuşma sesleri ile ritmik etkileşimin olmaması,\n  - **Ortak dikkat yokluğu:** Parmakla bir nesneyi işaret etmeme ve gösterilen yöne bakmama,\n  - Taklit oyunlarının (mış gibi yapma) gelişmemesi,\n  - Ekolali (duyduğu kelimeleri aynen yankılama) ve oyuncakların amacına uygun oynanmaması.\n\n> [!IMPORTANT]\n> Bir çocuğun 18 aylıkken parmakla istediği nesneyi işaret etmemesi otizm erken tanısı için en kritik klinik kırmızı bayraktır."
+  },
+  {
+   "id": "k2-42-d-s15",
+   "slideNumber": 15,
+   "title": "Otizm Spektrum Bozukluğu: Patogenez ve Çok Boyutlu Sağaltım",
+   "bolum": "3",
+   "pdfSayfalari": [
+    21,
+    22
+   ],
+   "sourcePdf": {
+    "startPage": 21,
+    "endPage": 22
+   },
+   "content": "Otizm spektrum bozukluğunun etiyolojisinde nörobiyolojik ve kalıtım etkenleri baskın rol oynar; ikiz çalışmalarında kalıtılabilirlik oranı yüzde 80'in üzerindedir.\n\n- **Nörobiyoloji:** Erken beyin gelişiminde sinaptik budanma kusurları, kortikal aşırı büyüme ve nöral bağlantı düzensizlikleri saptanmıştır.\n- **Çok Boyutlu Sağaltım:** Tedavi iki temel ilkeye dayanır: 1) Bireye yönelik planlanması, 2) Çevresel bağlamın (aile, okul, sosyal ortam) ele alınması.\n- **Özel Eğitimin Gücü:** Erken, yoğun ve yapılandırılmış davranışsal özel eğitim (örn. ABA) tek kanıtlanmış birincil müdahaledir.\n- **İlaçların Yeri:** Çekirdek otizm belirtilerini düzelten ilaç yoktur; atipik antipsikotikler (risperidon, aripiprazol) eşlik eden irritabilite, kendine zarar verme ve agresyonda kullanılır.\n\n> [!NOTE]\n> Ne aşılar ne de ebeveyn tutumları otizme yol açar; biyolojik temelli bir nörogelişimsel süreçtir.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Otizm spektrum bozukluğu sağaltımı ile ilgili aşağıdaki ilkelerden hangisi doğrudur?",
+     "options": [
+      {
+       "text": "Temel tedavi yöntemi erken, yoğun ve bireyselleştirilmiş özel eğitimdir.",
+       "isCorrect": true,
+       "explanation": "Temel tedavi yöntemi erken, yoğun ve bireyselleştirilmiş özel eğitimdir. doğru yanıttır; çünkü bu spesifik klinik ve gelişimsel mekanizma doğrudan hedeflenen tanı ölçütünü kurar. Özel eğitim otizmin çekirdek alanlarını geliştiren tek kanıtlanmış yöntemdir."
+      },
+      {
+       "text": "Sosyal iletişimi düzelten mucizevi bir antibiyotik tedavisi vardır.",
+       "isCorrect": false,
+       "explanation": "Sosyal iletişimi düzelten mucizevi bir antibiyotik tedavisi vardır. kavramı bu klinik tabloyu oluşturmaz; ilgili nörogelişimsel süreçte farklı bir alanda fonksiyon gösterir. Otizm enfeksiyon değildir ve antibiyotikle tedavi edilmez."
+      },
+      {
+       "text": "İlaçlar otizmin sosyal iletişim kısıtlılığını tamamen yok eder.",
+       "isCorrect": false,
+       "explanation": "İlaçlar otizmin sosyal iletişim kısıtlılığını tamamen yok eder. kavramı bu klinik tabloyu oluşturmaz; ilgili nörogelişimsel süreçte farklı bir alanda fonksiyon gösterir. İlaçlar yalnızca eşlik eden agresyon ve irritabilitede kullanılır."
+      },
+      {
+       "text": "Ailenin eğitime katılması çocuğun gelişimsel ilerlemesini bozar.",
+       "isCorrect": false,
+       "explanation": "Ailenin eğitime katılması çocuğun gelişimsel ilerlemesini bozar. kavramı bu klinik tabloyu oluşturmaz; ilgili nörogelişimsel süreçte farklı bir alanda fonksiyon gösterir. Çevresel ve ailevi bağlam tedavinin ayrılmaz parçasıdır."
+      }
+     ],
+     "id": "k42-s15-e1"
+    },
+    {
+     "type": "cloze_masking",
+     "maskedTerm": "çevresel",
+     "hint": "Nörogelişimsel bozukluklar kapsamında ilgili klinik veya gelişimsel kavramdır.",
+     "id": "k42-s15-e2",
+     "sentence": "Otizm spektrum bozukluğu sağaltımı hem bireye yönelik planlanmalı hem de çevresel bağlamı kapsayan çok boyutlu bir yapıda olmalıdır."
+    },
+    {
+     "type": "active_recall",
+     "id": "k42-s15-e3",
+     "question": "Otizmde kullanılan risperidon veya aripiprazol hangi semptomları hedeflemektedir?",
+     "answer": "Otizmin kendisini veya sosyal becerileri değil; eşlik eden ağır irritabiliteyi, kendine ve çevreye yönelik agresyonu ve kontrolsüz öfke patlamalarını hedefler."
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Otizm Etiyoloji ve Sağaltımı",
+     "id": "k42-s15-e4",
+     "items": [
+      {
+       "text": "Otizm patogenezinde nörobiyolojik ve güçlü kalıtım etkenleri etkilidir.",
+       "isLie": false,
+       "explanation": "Otizm patogenezinde nörobiyolojik ve güçlü kalıtım etkenleri etkilidir. ifadesi nörogelişimsel bozukluklar ilkeleri açısından incelendiğinde bu klinik durumun gerekçesini açıkça ortaya koyar. Kalıtılabilirlik oranı çok yüksektir."
+      },
+      {
+       "text": "Çekirdek otizm belirtilerini tamamen iyileştiren spesifik bir ilaç tedavisi mevcuttur.",
+       "isLie": true,
+       "explanation": "Çekirdek otizm belirtilerini tamamen iyileştiren spesifik bir ilaç tedavisi mevcuttur. ifadesi nörogelişimsel bozukluklar ilkeleri açısından incelendiğinde bu klinik durumun gerekçesini açıkça ortaya koyar. Çekirdek belirtilere yönelik spesifik bir ilaç yoktur, temel sağaltım özel eğitimdir."
+      },
+      {
+       "text": "Sağaltım çok boyutlu olup bireysel eğitim ve aile desteğini kapsar.",
+       "isLie": false,
+       "explanation": "Sağaltım çok boyutlu olup bireysel eğitim ve aile desteğini kapsar. ifadesi nörogelişimsel bozukluklar ilkeleri açısından incelendiğinde bu klinik durumun gerekçesini açıkça ortaya koyar. İki temel ilke birey ve çevresel bağlamdır."
+      }
+     ]
+    }
+   ],
+   "synthesisNarrative": "Otizm spektrum bozukluğunun etiyolojisinde nörobiyolojik ve kalıtım etkenleri baskın rol oynar; ikiz çalışmalarında kalıtılabilirlik oranı yüzde 80'in üzerindedir.\n\n- **Nörobiyoloji:** Erken beyin gelişiminde sinaptik budanma kusurları, kortikal aşırı büyüme ve nöral bağlantı düzensizlikleri saptanmıştır.\n- **Çok Boyutlu Sağaltım:** Tedavi iki temel ilkeye dayanır: 1) Bireye yönelik planlanması, 2) Çevresel bağlamın (aile, okul, sosyal ortam) ele alınması.\n- **Özel Eğitimin Gücü:** Erken, yoğun ve yapılandırılmış davranışsal özel eğitim (örn. ABA) tek kanıtlanmış birincil müdahaledir.\n- **İlaçların Yeri:** Çekirdek otizm belirtilerini düzelten ilaç yoktur; atipik antipsikotikler (risperidon, aripiprazol) eşlik eden irritabilite, kendine zarar verme ve agresyonda kullanılır.\n\n> [!NOTE]\n> Ne aşılar ne de ebeveyn tutumları otizme yol açar; biyolojik temelli bir nörogelişimsel süreçtir."
+  },
+  {
+   "id": "k2-42-d-s16",
+   "slideNumber": 16,
+   "title": "DEHB: Temel Belirti Triadı, Üç Alttür ve Epidemiyoloji",
+   "bolum": "4",
+   "pdfSayfalari": [
+    23,
+    25
+   ],
+   "sourcePdf": {
+    "startPage": 23,
+    "endPage": 25
+   },
+   "content": "Dikkat Eksikliği ve Hiperaktivite Bozukluğu (DEHB), gelişimsel düzeye uygun olmayan dikkatsizlik, aşırı hareketlilik ve dürtüsellik belirtileriyle karakterizedir.\n\n- **Üç Klinik Alttür:**\n  1. **Bileşik Tip:** Hem dikkatsizlik hem hiperaktivite/dürtüsellik ölçütleri karşılanır (klinikte en sık görülen tip).\n  2. **Dikkatsizliğin Baskın Olduğu Tip:** Aşırı hareketlilik olmaksızın sadece odaklanma ve dikkat sürdürme güçlüğü.\n  3. **Hiperaktivite/Dürtüselliğin Baskın Olduğu Tip:** Odaklanma sorunu olmadan motor huzursuzluk ve sabırsızlık.\n- **Epidemiyoloji:** Dünya genelinde yaygınlık oranı **%6.48**, Türkiye'de ise **%8.1 - 8.4** civarında saptanmıştır.\n- **Cinsiyet Dağılımı:** Erkek çocuklarda kızlara göre belirgin olarak daha sıktır.\n\n> [!IMPORTANT]\n> Tanı konulabilmesi için belirtilerin en az 6 aydır sürmesi ve hem ev hem okul olmak üzere en az iki ortamda işlev kaybı yapması zorunludur.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "DEHB'nin klinik alttürleri ve sıklığı ile ilgili aşağıdaki ifadelerden hangisi doğrudur?",
+     "options": [
+      {
+       "text": "En sık görülen alttür bileşik tiptir ve erkek çocuklarda kızlara göre daha sıktır.",
+       "isCorrect": true,
+       "explanation": "En sık görülen alttür bileşik tiptir ve erkek çocuklarda kızlara göre daha sıktır. doğru yanıttır; çünkü bu spesifik klinik ve gelişimsel mekanizma doğrudan hedeflenen tanı ölçütünü kurar. Bileşik tip en yaygın tablodur ve belirgin erkek cinsiyet baskınlığı vardır."
+      },
+      {
+       "text": "DEHB yalnızca tek bir ortamda (sadece evde) ortaya çıkarsa kesin tanı konur.",
+       "isCorrect": false,
+       "explanation": "DEHB yalnızca tek bir ortamda (sadece evde) ortaya çıkarsa kesin tanı konur. kavramı bu klinik tabloyu oluşturmaz; ilgili nörogelişimsel süreçte farklı bir alanda fonksiyon gösterir. Tanı için en az iki farklı ortamda (ev ve okul) bozulma şarttır."
+      },
+      {
+       "text": "Türkiye'de DEHB sıklığı dünya ortalamasının onda biridir.",
+       "isCorrect": false,
+       "explanation": "Türkiye'de DEHB sıklığı dünya ortalamasının onda biridir, bu nedenle kavramı bu klinik tabloyu oluşturmaz; ilgili nörogelişimsel süreçte farklı bir alanda fonksiyon gösterir ve türkiye sıklığı (%8. 1-8 4) dünya ortalaması (%6 48) ile uyumludur."
+      },
+      {
+       "text": "Dikkatsizlik ve hiperaktivite belirtilerinin tanı için 2 hafta sürmesi yeterlidir.",
+       "isCorrect": false,
+       "explanation": "Dikkatsizlik ve hiperaktivite belirtilerinin tanı için 2 hafta sürmesi yeterlidir. kavramı bu klinik tabloyu oluşturmaz; ilgili nörogelişimsel süreçte farklı bir alanda fonksiyon gösterir. Tanı için belirtilerin en az 6 aydır devam etmesi gerekir."
+      }
+     ],
+     "id": "k42-s16-e1"
+    },
+    {
+     "type": "cloze_masking",
+     "maskedTerm": "bileşik",
+     "hint": "Nörogelişimsel bozukluklar kapsamında ilgili klinik veya gelişimsel kavramdır.",
+     "id": "k42-s16-e2",
+     "sentence": "DEHB'de hem dikkatsizlik hem de hiperaktivite/dürtüsellik ölçütlerinin birlikte bulunduğu en sık görülen alttür bileşik tiptir."
+    },
+    {
+     "type": "interactive_table",
+     "tableTitle": "DEHB Üç Klinik Alttürü ve Temel Görünüm",
+     "id": "k42-s16-e3",
+     "tableHeaders": [
+      "Alttür",
+      "Dikkatsizlik",
+      "Hiperaktivite / Dürtüsellik",
+      "Görülme Sıklığı"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Bileşik Tip",
+         "isMasked": false,
+         "hint": "Nörogelişimsel bozukluklar kapsamında ilgili klinik kavramdır."
+        },
+        {
+         "text": "Belirgin düzeyde var",
+         "isMasked": false,
+         "hint": "Nörogelişimsel bozukluklar kapsamında ilgili klinik kavramdır."
+        },
+        {
+         "text": "Belirgin düzeyde var",
+         "isMasked": false,
+         "hint": "Nörogelişimsel bozukluklar kapsamında ilgili klinik kavramdır."
+        },
+        {
+         "text": "En sık görülen alttür",
+         "isMasked": true,
+         "hint": "Klinikte en yaygın form"
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Dikkatsizliğin Baskın Olduğu Tip",
+         "isMasked": false,
+         "hint": "Nörogelişimsel bozukluklar kapsamında ilgili klinik kavramdır."
+        },
+        {
+         "text": "Ön planda ve baskın",
+         "isMasked": true,
+         "hint": "Odaklanma sorunu temel şikayet"
+        },
+        {
+         "text": "Eşik altı veya yok",
+         "isMasked": false,
+         "hint": "Nörogelişimsel bozukluklar kapsamında ilgili klinik kavramdır."
+        },
+        {
+         "text": "Kızlarda daha sık",
+         "isMasked": false,
+         "hint": "Nörogelişimsel bozukluklar kapsamında ilgili klinik kavramdır."
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Hiperaktif / Dürtüsel Tip",
+         "isMasked": false,
+         "hint": "Nörogelişimsel bozukluklar kapsamında ilgili klinik kavramdır."
+        },
+        {
+         "text": "Eşik altı veya yok",
+         "isMasked": false,
+         "hint": "Nörogelişimsel bozukluklar kapsamında ilgili klinik kavramdır."
+        },
+        {
+         "text": "Ön planda ve motor taşkınlık",
+         "isMasked": false,
+         "hint": "Nörogelişimsel bozukluklar kapsamında ilgili klinik kavramdır."
+        },
+        {
+         "text": "Okul öncesinde belirgin",
+         "isMasked": false,
+         "hint": "Nörogelişimsel bozukluklar kapsamında ilgili klinik kavramdır."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "id": "k42-s16-e4",
+     "question": "DEHB tanısı için DSM-5'e göre 'iki farklı ortam' kriteri neden aranır?",
+     "answer": "Çünkü sadece evde veya sadece bir öğretmenle yaşanan sorunlar çevresel veya ilişkisel çatışmalardan kaynaklanabilir; nörogelişimsel bir bozukluğun en az iki ortamda (ev ve okul) süreğen işlev kaybı yapması beklenir."
+    }
+   ],
+   "synthesisNarrative": "Dikkat Eksikliği ve Hiperaktivite Bozukluğu (DEHB), gelişimsel düzeye uygun olmayan dikkatsizlik, aşırı hareketlilik ve dürtüsellik belirtileriyle karakterizedir.\n\n- **Üç Klinik Alttür:**\n  1. **Bileşik Tip:** Hem dikkatsizlik hem hiperaktivite/dürtüsellik ölçütleri karşılanır (klinikte en sık görülen tip).\n  2. **Dikkatsizliğin Baskın Olduğu Tip:** Aşırı hareketlilik olmaksızın sadece odaklanma ve dikkat sürdürme güçlüğü.\n  3. **Hiperaktivite/Dürtüselliğin Baskın Olduğu Tip:** Odaklanma sorunu olmadan motor huzursuzluk ve sabırsızlık.\n- **Epidemiyoloji:** Dünya genelinde yaygınlık oranı **%6.48**, Türkiye'de ise **%8.1 - 8.4** civarında saptanmıştır.\n- **Cinsiyet Dağılımı:** Erkek çocuklarda kızlara göre belirgin olarak daha sıktır.\n\n> [!IMPORTANT]\n> Tanı konulabilmesi için belirtilerin en az 6 aydır sürmesi ve hem ev hem okul olmak üzere en az iki ortamda işlev kaybı yapması zorunludur."
+  },
+  {
+   "id": "k2-42-d-s17",
+   "slideNumber": 17,
+   "title": "DEHB: Belirti Ayrıntıları, Frontostriatal Etiyoloji ve Psikostimülanlar",
+   "bolum": "4",
+   "pdfSayfalari": [
+    26,
+    29
+   ],
+   "sourcePdf": {
+    "startPage": 26,
+    "endPage": 29
+   },
+   "content": "DEHB belirtileri yaşla birlikte evrilir; çocuklukta motor hiperaktivite ön plandayken ergenlikte dikkatsizlik ve içsel huzursuzluk belirginleşir.\n\n- **Dikkatsizlik:** Ödevlerden çabuk sıkılma, ayrıntılara dikkat etmeme, eşya kaybetme, dalgınlık ve unutkanlık.\n- **Hiperaktivite/Dürtüsellik:** Yerinde duramama, kıpırdanma, sırasını bekleyememe, söz kesme ve tehlikeli eylemlere düşünmeden girişme.\n- **Etiyoloji ve Nörobiyoloji:** Çok genli (poligenik) kalıtım modeli mevcuttur. Prefrontal korteks ile bazal gangliyonlar arasındaki **frontostriatal dopaminerjik ve noradrenerjik** devrelerde iletim yetersizliği bulunur.\n- **Sağaltım:** Birinci basamak farmakoterapide **psikostimülanlar (metilfenidat)** ilk tercihtir; psikososyal girişimler ve okul desteğiyle birleştirilir.\n\n> [!IMPORTANT]\n> Metilfenidat presinaptik dopamin ve noradrenalin taşıyıcılarını bloke ederek prefrontal kortekste sinaptik transmiter düzeyini artırır ve dikkati toplar.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "DEHB'nin nörobiyolojik etiyolojisi ve ilk basamak farmakoterapisi ile ilgili hangisi doğrudur?",
+     "options": [
+      {
+       "text": "Frontostriatal dopamin/noradrenalin yetersizliği rol alır ve ilk seçenek psikostimülanlardır.",
+       "isCorrect": true,
+       "explanation": "Frontostriatal dopamin/noradrenalin yetersizliği rol alır ve ilk seçenek psikostimülanlardır. doğru yanıttır; çünkü bu spesifik klinik ve gelişimsel mekanizma doğrudan hedeflenen tanı ölçütünü kurar. Metilfenidat bu devrelerde gerialımı bloke ederek transmiteri artırır."
+      },
+      {
+       "text": "Beyincik aşırı büyümesi tek nedendir ve cerrahi ablasyon gerekir.",
+       "isCorrect": false,
+       "explanation": "Beyincik aşırı büyümesi tek nedendir ve cerrahi ablasyon gerekir. kavramı bu klinik tabloyu oluşturmaz; ilgili nörogelişimsel süreçte farklı bir alanda fonksiyon gösterir. DEHB cerrahi bir patoloji değildir."
+      },
+      {
+       "text": "Parasempatik vagal hiperaktiviteye bağlıdır ve atropinle tedavi edilir.",
+       "isCorrect": false,
+       "explanation": "Parasempatik vagal hiperaktiviteye bağlıdır ve atropinle tedavi edilir. kavramı bu klinik tabloyu oluşturmaz; ilgili nörogelişimsel süreçte farklı bir alanda fonksiyon gösterir. DEHB otonomik vagal bir hastalık değildir."
+      },
+      {
+       "text": "DEHB tamamen genetik dışı olup yalnızca şeker tüketiminden kaynaklanır.",
+       "isCorrect": false,
+       "explanation": "DEHB tamamen genetik dışı olup yalnızca şeker tüketiminden kaynaklanır. kavramı bu klinik tabloyu oluşturmaz; ilgili nörogelişimsel süreçte farklı bir alanda fonksiyon gösterir. Yüksek genetik poligenik altyapıya sahiptir; şeker efsanesi çürütülmüştür."
+      }
+     ],
+     "id": "k42-s17-e1"
+    },
+    {
+     "type": "cloze_masking",
+     "maskedTerm": "psikostimülan",
+     "hint": "Nörogelişimsel bozukluklar kapsamında ilgili klinik veya gelişimsel kavramdır.",
+     "id": "k42-s17-e2",
+     "sentence": "DEHB sağaltımında dopamin ve noradrenalin gerialımını engelleyerek ilk seçenek olarak kullanılan ilaç grubu psikostimülan ilaçlardır."
+    },
+    {
+     "type": "causal_chain",
+     "title": "DEHB Patofizyolojisi ve Tedavi Mekanizması",
+     "steps": [
+      "1. Nörobiyolojik Açık: Frontostriatal devrelerde dopamin ve noradrenalin sinaptik iletimi yetersiz kalır.",
+      "2. Yürütücü Kusur: Prefrontal korteks impuls kontrolünü ve dikkatin odaklanmasını sürdüremez.",
+      "3. Farmakoterapi: Psikostimülan (metilfenidat) gerialımı bloke ederek sinaptik dopamin ve noradrenalini normale çıkarır."
+     ],
+     "id": "k42-s17-e3"
+    },
+    {
+     "type": "active_recall",
+     "id": "k42-s17-e4",
+     "question": "DEHB'li çocuklarda yaş büyüdükçe hiperaktivite ve dikkatsizlik belirtileri nasıl bir değişim gösterir?",
+     "answer": "Gözle görülen aşırı motor hareketlilik yaşla birlikte azalma eğilimindedir; buna karşın dikkatsizlik, organizasyon bozukluğu ve içsel huzursuzluk ergenlik ve erişkinlikte devam eder."
+    }
+   ],
+   "synthesisNarrative": "DEHB belirtileri yaşla birlikte evrilir; çocuklukta motor hiperaktivite ön plandayken ergenlikte dikkatsizlik ve içsel huzursuzluk belirginleşir.\n\n- **Dikkatsizlik:** Ödevlerden çabuk sıkılma, ayrıntılara dikkat etmeme, eşya kaybetme, dalgınlık ve unutkanlık.\n- **Hiperaktivite/Dürtüsellik:** Yerinde duramama, kıpırdanma, sırasını bekleyememe, söz kesme ve tehlikeli eylemlere düşünmeden girişme.\n- **Etiyoloji ve Nörobiyoloji:** Çok genli (poligenik) kalıtım modeli mevcuttur. Prefrontal korteks ile bazal gangliyonlar arasındaki **frontostriatal dopaminerjik ve noradrenerjik** devrelerde iletim yetersizliği bulunur.\n- **Sağaltım:** Birinci basamak farmakoterapide **psikostimülanlar (metilfenidat)** ilk tercihtir; psikososyal girişimler ve okul desteğiyle birleştirilir.\n\n> [!IMPORTANT]\n> Metilfenidat presinaptik dopamin ve noradrenalin taşıyıcılarını bloke ederek prefrontal kortekste sinaptik transmiter düzeyini artırır ve dikkati toplar."
+  },
+  {
+   "id": "k2-42-d-s18",
+   "slideNumber": 18,
+   "title": "[TEKRAR SAYFASI - CHECKPOINT 3] Bölüm 3 ve 4 Pekiştirmesi",
+   "bolum": "3",
+   "isCheckpoint": true,
+   "pdfSayfalari": [
+    17,
+    29
+   ],
+   "sourcePdf": {
+    "startPage": 17,
+    "endPage": 29
+   },
+   "content": "Bu tekrar sayfasında Otizm Spektrum Bozukluğu ve Dikkat Eksikliği Hiperaktivite Bozukluğunun temel klinik ayrımı, başlangıç yaşları, etiyolojileri ve sağaltım modelleri pekiştirilmektedir.\n\n- **OSB:** Sosyal-iletişimsel kısıtlılık ve tekrarlayıcı davranışlar; 12-24. aylarda başlar; temel tedavi özel eğitimdir.\n- **DEHB:** Dikkatsizlik, aşırı hareketlilik, dürtüsellik; en sık bileşik tip; frontostriatal iletim kusuru; ilk tercih psikostimülanlardır.\n\n> [!IMPORTANT]\n> OSB'de temel eksiklik sosyal karşılıklılık ve ortak dikkat iken, DEHB'de temel eksiklik dürtü kontrolü ve dikkat sürdürme yetisidir.",
+   "interactiveElements": [
+    {
+     "type": "venn_grid",
+     "title": "OSB ve DEHB Klinik Karşılaştırması",
+     "id": "k42-s18-e1",
+     "labelA": "Otizm Spektrum Bozukluğu",
+     "labelB": "Dikkat Eksikliği ve Hiperaktivite Bozukluğu",
+     "items": [
+      {
+       "criterion": "Ortak dikkat yokluğu ve göz teması kuramama çekirdek belirtidir",
+       "correct": "A"
+      },
+      {
+       "criterion": "Bileşik, dikkatsiz ve hiperaktif olmak üzere üç alttürü tanımlanmıştır",
+       "correct": "B"
+      },
+      {
+       "criterion": "Erken çocuklukta başlayan nörogelişimsel bir bozukluktur",
+       "correct": "both"
+      },
+      {
+       "criterion": "Yalnızca 60 yaş sonrası demans zemininde ortaya çıkar",
+       "correct": "neither"
+      }
+     ]
+    },
+    {
+     "type": "micro_quiz",
+     "question": "DEHB ve OSB sağaltım yaklaşımları karşılaştırıldığında hangisi doğrudur?",
+     "options": [
+      {
+       "text": "DEHB'de birinci basamakta psikostimülan ilaçlar kullanılırken, OSB'de temel yöntem yoğun özel eğitimdir.",
+       "isCorrect": true,
+       "explanation": "DEHB'de birinci basamakta psikostimülan ilaçlar kullanılırken, OSB'de temel yöntem yoğun özel eğitimdir. doğru yanıttır; çünkü bu spesifik klinik ve gelişimsel mekanizma doğrudan hedeflenen tanı ölçütünü kurar. DEHB farmakoterapiye yüksek yanıt verir; OSB'nin temeli özel eğitimdir."
+      },
+      {
+       "text": "Her iki bozuklukta da cerrahi lobektomi ilk seçenektir.",
+       "isCorrect": false,
+       "explanation": "Her iki bozuklukta da cerrahi lobektomi ilk seçenektir. kavramı bu klinik tabloyu oluşturmaz; ilgili nörogelişimsel süreçte farklı bir alanda fonksiyon gösterir. Cerrahi endikasyon kesinlikle yoktur."
+      },
+      {
+       "text": "OSB'de sosyal iletişimi tamamen iyileştiren spesifik bir aşı mevcuttur.",
+       "isCorrect": false,
+       "explanation": "OSB'de sosyal iletişimi tamamen iyileştiren spesifik bir aşı mevcuttur. kavramı bu klinik tabloyu oluşturmaz; ilgili nörogelişimsel süreçte farklı bir alanda fonksiyon gösterir. Otizm için koruyucu veya tedavi edici bir aşı yoktur."
+      },
+      {
+       "text": "DEHB sağaltımında psikostimülanların kullanımı kesinlikle yasaktır.",
+       "isCorrect": false,
+       "explanation": "DEHB sağaltımında psikostimülanların kullanımı kesinlikle yasaktır. kavramı bu klinik tabloyu oluşturmaz; ilgili nörogelişimsel süreçte farklı bir alanda fonksiyon gösterir. Psikostimülanlar (metilfenidat) ilk tercih kanıtlanmış ilaçlardır."
+      }
+     ],
+     "id": "k42-s18-e2"
+    },
+    {
+     "type": "active_recall",
+     "id": "k42-s18-e3",
+     "question": "DEHB tanısı için belirtilerin en az kaç ay sürmesi ve kaç farklı ortamda işlevselliği bozması şarttır?",
+     "answer": "En az 6 aydır devam etmesi ve en az 2 farklı ortamda (örn. ev ve okul) işlevselliği belirgin bozması şarttır."
+    },
+    {
+     "type": "cloze_masking",
+     "maskedTerm": "frontostriatal",
+     "hint": "Nörogelişimsel bozukluklar kapsamında ilgili klinik veya gelişimsel kavramdır.",
+     "id": "k42-s18-e4",
+     "sentence": "DEHB etiyolojisinde prefrontal korteks ile bazal gangliyonlar arasındaki frontostriatal devrelerde dopamin ve noradrenalin iletim kusuru bulunur."
+    }
+   ],
+   "synthesisNarrative": "Bu tekrar sayfasında Otizm Spektrum Bozukluğu ve Dikkat Eksikliği Hiperaktivite Bozukluğunun temel klinik ayrımı, başlangıç yaşları, etiyolojileri ve sağaltım modelleri pekiştirilmektedir.\n\n- **OSB:** Sosyal-iletişimsel kısıtlılık ve tekrarlayıcı davranışlar; 12-24. aylarda başlar; temel tedavi özel eğitimdir.\n- **DEHB:** Dikkatsizlik, aşırı hareketlilik, dürtüsellik; en sık bileşik tip; frontostriatal iletim kusuru; ilk tercih psikostimülanlardır.\n\n> [!IMPORTANT]\n> OSB'de temel eksiklik sosyal karşılıklılık ve ortak dikkat iken, DEHB'de temel eksiklik dürtü kontrolü ve dikkat sürdürme yetisidir."
+  },
+  {
+   "id": "k2-42-d-s19",
+   "slideNumber": 19,
+   "title": "Özgül Öğrenme Güçlüğü: Tanım, Okul Öncesi Belirtiler ve Disleksi",
+   "bolum": "5",
+   "pdfSayfalari": [
+    30,
+    32
+   ],
+   "sourcePdf": {
+    "startPage": 30,
+    "endPage": 32
+   },
+   "content": "Özgül Öğrenme Güçlüğü (ÖÖG / ÖÖB), bireyin genel zekasında hiçbir sorun olmadığı halde okuma, yazılı anlatım veya matematik gibi özgül bilişsel alanlarda belirgin eksiklikle seyreden bozukluktur.\n\n- **Zeka Kriteri:** Genel bilişsel işlevler ve zeka katsayısı (IQ) normal veya normalin üstündedir; zihinsel yetersizlikle karıştırılmamalıdır.\n- **Okul Öncesi Erken Belirtiler:** Tanı için erken olsa da dil gelişiminde gecikme, tekerleme ezberleyememe, renk, şekil ve yön kavramlarında zorlanma, düğme ilikleme gibi ince motor koordinasyon zayıflığı erken sinyallerdir.\n- **Okul Çağı ve Disleksi:** En sık başvuru ilkokulda akademik başarısızlıkla olur. Harf-ses ilişkisini kuramama, b-d, p-q gibi benzer harfleri karıştırma, kelime atlama ve yavaş/hatalı okuma **Disleksi** (okuma bozukluğu) tablosunu oluşturur.\n\n> [!NOTE]\n> Disleksili çocuklar 'b' yerine 'd', 'ev' yerine 've' okuyabilir; bu durum görme kusuru değil, fonolojik işlemleme kusurudur.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Özgül öğrenme güçlüğünü zihinsel yetersizlikten ayıran en temel tanısal kriter hangisidir?",
+     "options": [
+      {
+       "text": "Bireyin genel zekasının (IQ) normal veya normalin üstünde olması",
+       "isCorrect": true,
+       "explanation": "Bireyin genel zekasının (IQ) normal veya normalin üstünde olması doğru yanıttır; çünkü bu spesifik klinik ve gelişimsel mekanizma doğrudan hedeflenen tanı ölçütünü kurar. ÖÖG'de genel zeka normaldir, kusur özgül akademik alanla sınırlıdır."
+      },
+      {
+       "text": "Yalnızca 50 yaşından sonra başlaması",
+       "isCorrect": false,
+       "explanation": "Yalnızca 50 yaşından sonra başlaması kavramı bu klinik tabloyu oluşturmaz; ilgili nörogelişimsel süreçte farklı bir alanda fonksiyon gösterir. ÖÖG erken gelişimsel ve okul çağı bozukluğudur."
+      },
+      {
+       "text": "Bireyin hiçbir zaman konuşamaması",
+       "isCorrect": false,
+       "explanation": "Bireyin hiçbir zaman konuşamaması kavramı bu klinik tabloyu oluşturmaz; ilgili nörogelişimsel süreçte farklı bir alanda fonksiyon gösterir. ÖÖG'de konuşma mevcuttur."
+      },
+      {
+       "text": "Görme duyusunun tamamen kaybolmuş olması",
+       "isCorrect": false,
+       "explanation": "Görme duyusunun tamamen kaybolmuş olması kavramı bu klinik tabloyu oluşturmaz; ilgili nörogelişimsel süreçte farklı bir alanda fonksiyon gösterir. Duyu kaybı dışlama kriteridir."
+      }
+     ],
+     "id": "k42-s19-e1"
+    },
+    {
+     "type": "cloze_masking",
+     "maskedTerm": "disleksi",
+     "hint": "Nörogelişimsel bozukluklar kapsamında ilgili klinik veya gelişimsel kavramdır.",
+     "id": "k42-s19-e2",
+     "sentence": "Harf-ses uyumunun kurulamaması, simetrik harflerin karıştırılması ve hatalı okuma ile seyreden öğrenme bozukluğuna disleksi denir."
+    },
+    {
+     "type": "active_recall",
+     "id": "k42-s19-e3",
+     "question": "Okul öncesi dönemde bir çocukta gelecekte disleksi gelişebileceğini düşündüren erken belirtiler nelerdir?",
+     "answer": "Kelimeleri yanlış telaffuz etme, tekerlemeleri öğrenememe, renk ve yön kavramlarını karıştırma ve ayakkabı bağlama/düğme iliklemede motor sakarlık."
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Özgül Öğrenme Güçlüğü Tanımı",
+     "id": "k42-s19-e4",
+     "items": [
+      {
+       "text": "Özgül öğrenme güçlüğü olan bireylerin genel zekası normal veya normalin üstündedir.",
+       "isLie": false,
+       "explanation": "Özgül öğrenme güçlüğü olan bireylerin genel zekası normal veya normalin üstündedir. ifadesi nörogelişimsel bozukluklar ilkeleri açısından incelendiğinde bu klinik durumun gerekçesini açıkça ortaya koyar. Tanımın temel koşuludur."
+      },
+      {
+       "text": "Disleksi tablosunda harfleri ters algılama ve heceleme güçlüğü tipiktir.",
+       "isLie": false,
+       "explanation": "Disleksi tablosunda harfleri ters algılama ve heceleme güçlüğü tipiktir. ifadesi nörogelişimsel bozukluklar ilkeleri açısından incelendiğinde bu klinik durumun gerekçesini açıkça ortaya koyar. Fonolojik işlemleme kusurunun sonucudur."
+      },
+      {
+       "text": "ÖÖG tanısı konması için çocuğun zeka katsayısının 50'nin altında olması zorunludur.",
+       "isLie": true,
+       "explanation": "ÖÖG tanısı konması için çocuğun zeka katsayısının 50'nin altında olması zorunludur. ifadesi nörogelişimsel bozukluklar ilkeleri açısından incelendiğinde bu klinik durumun gerekçesini açıkça ortaya koyar. Zekanın 50'nin altında olması zihinsel yetersizlik tanısıdır, ÖÖG'yi dışlar."
+      }
+     ]
+    }
+   ],
+   "synthesisNarrative": "Özgül Öğrenme Güçlüğü (ÖÖG / ÖÖB), bireyin genel zekasında hiçbir sorun olmadığı halde okuma, yazılı anlatım veya matematik gibi özgül bilişsel alanlarda belirgin eksiklikle seyreden bozukluktur.\n\n- **Zeka Kriteri:** Genel bilişsel işlevler ve zeka katsayısı (IQ) normal veya normalin üstündedir; zihinsel yetersizlikle karıştırılmamalıdır.\n- **Okul Öncesi Erken Belirtiler:** Tanı için erken olsa da dil gelişiminde gecikme, tekerleme ezberleyememe, renk, şekil ve yön kavramlarında zorlanma, düğme ilikleme gibi ince motor koordinasyon zayıflığı erken sinyallerdir.\n- **Okul Çağı ve Disleksi:** En sık başvuru ilkokulda akademik başarısızlıkla olur. Harf-ses ilişkisini kuramama, b-d, p-q gibi benzer harfleri karıştırma, kelime atlama ve yavaş/hatalı okuma **Disleksi** (okuma bozukluğu) tablosunu oluşturur.\n\n> [!NOTE]\n> Disleksili çocuklar 'b' yerine 'd', 'ev' yerine 've' okuyabilir; bu durum görme kusuru değil, fonolojik işlemleme kusurudur."
+  },
+  {
+   "id": "k2-42-d-s20",
+   "slideNumber": 20,
+   "title": "Özgül Öğrenme Güçlüğü: Disgrafi, Diskalkuli, Tanı Testleri ve Sağaltım",
+   "bolum": "5",
+   "pdfSayfalari": [
+    33,
+    35
+   ],
+   "sourcePdf": {
+    "startPage": 33,
+    "endPage": 35
+   },
+   "content": "ÖÖG okuma dışında yazılı anlatım ve matematik alanlarını da etkileyen alt tiplere sahiptir.\n\n- **Disgrafi (Yazma Bozukluğu):** Kelimeleri okunaksız yazma, harf atlama, hece ekleme, noktalama işaretlerini kullanamama ve gramer hataları.\n- **Diskalkuli (Matematik Bozukluğu):** Sayı kavramını anlayamama, dört işlem sembollerini (+, -, x) karıştırma, çarpım tablosunu ezberleyememe, saat, yer ve yön saptamada zorluk.\n- **Tanısal Testler:** Tanı klinik görüşmeyle konur. Zihinsel yetersizliği dışlamak için **WISC-R zeka testi**; algısal olgunlaşmayı ölçmek için Bender-Gestalt ve Benton görsel bellek testleri uygulanır.\n- **Sağaltım:** Günümüzde ÖÖG'nin kanıtlanmış bir ilaç tedavisi **yoktur**. Temel yaklaşım bireysel özel eğitim ve fonolojik farkındalık çalışmalarıdır.\n\n> [!IMPORTANT]\n> ÖÖG'de ilaç tedavisi öğrenme kusurunu düzeltmez; ancak komorbid DEHB varsa dikkat ilacı özel eğitime odaklanmayı kolaylaştırır.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Özgül öğrenme güçlüğü sağaltımı ile ilgili aşağıdaki ifadelerden hangisi doğrudur?",
+     "options": [
+      {
+       "text": "Kanıtlanmış bir ilaç tedavisi yoktur; temel yaklaşım bireysel özel eğitimdir.",
+       "isCorrect": true,
+       "explanation": "Kanıtlanmış bir ilaç tedavisi yoktur; temel yaklaşım bireysel özel eğitimdir. doğru yanıttır; çünkü bu spesifik klinik ve gelişimsel mekanizma doğrudan hedeflenen tanı ölçütünü kurar. Özel eğitim ÖÖG'nin kanıtlanmış tek birincil tedavi yöntemidir."
+      },
+      {
+       "text": "Diskalkuli yüksek doz antibiyotik tedavisi ile 1 haftada iyileşir.",
+       "isCorrect": false,
+       "explanation": "Diskalkuli yüksek doz antibiyotik tedavisi ile 1 haftada iyileşir. kavramı bu klinik tabloyu oluşturmaz; ilgili nörogelişimsel süreçte farklı bir alanda fonksiyon gösterir. Öğrenme bozuklukları enfeksiyon değildir."
+      },
+      {
+       "text": "WISC-R testi diskalkuliye özel bir ilaç dozu hesaplama testidir.",
+       "isCorrect": false,
+       "explanation": "WISC-R testi diskalkuliye özel bir ilaç dozu hesaplama testidir. kavramı bu klinik tabloyu oluşturmaz; ilgili nörogelişimsel süreçte farklı bir alanda fonksiyon gösterir. WISC-R zihinsel kapasiteyi ölçen standart bir zeka ölçeğidir."
+      },
+      {
+       "text": "Disgrafi sadece görme kaybı olan olgularda konulan bir tanıdır.",
+       "isCorrect": false,
+       "explanation": "Disgrafi sadece görme kaybı olan olgularda konulan bir tanıdır. kavramı bu klinik tabloyu oluşturmaz; ilgili nörogelişimsel süreçte farklı bir alanda fonksiyon gösterir. Disgrafi nörogelişimsel yazılı anlatım kusurudur."
+      }
+     ],
+     "id": "k42-s20-e1"
+    },
+    {
+     "type": "cloze_masking",
+     "maskedTerm": "diskalkuli",
+     "hint": "Nörogelişimsel bozukluklar kapsamında ilgili klinik veya gelişimsel kavramdır.",
+     "id": "k42-s20-e2",
+     "sentence": "Sayı kavramını anlayamama, dört işlem yapamama ve zaman-saat öğrenmede güçlük tablosuna diskalkuli denir."
+    },
+    {
+     "type": "swipe_matching",
+     "title": "ÖÖG Alt Tipleri Eşlemesi",
+     "cards": [
+      {
+       "text": "Okunaksız yazı ve harf atlama",
+       "category": "left",
+       "explanation": "Okunaksız yazı ve harf atlama kavramı ilgili tanısal kategori altında incelenen temel klinik bileşendir. Disgrafi belirtisidir."
+      },
+      {
+       "text": "Dört işlem sembollerini karıştırma",
+       "category": "right",
+       "explanation": "Dört işlem sembollerini karıştırma kavramı ilgili tanısal kategori altında incelenen temel klinik bileşendir. Diskalkuli belirtisidir."
+      },
+      {
+       "text": "Gramer ve heceleme kusurları",
+       "category": "left",
+       "explanation": "Gramer ve heceleme kusurları kavramı ilgili tanısal kategori altında incelenen temel klinik bileşendir. Yazılı anlatım bozukluğudur."
+      },
+      {
+       "text": "Saat ve çarpım tablosu öğrenememe",
+       "category": "right",
+       "explanation": "Saat ve çarpım tablosu öğrenememe kavramı ilgili tanısal kategori altında incelenen temel klinik bileşendir. Matematiksel kavram güçlüğüdür."
+      }
+     ],
+     "id": "k42-s20-e3",
+     "leftCategory": "Disgrafi (Yazma)",
+     "rightCategory": "Diskalkuli (Matematik)"
+    },
+    {
+     "type": "active_recall",
+     "id": "k42-s20-e4",
+     "question": "Özgül öğrenme güçlüğü tanısında WISC-R zeka testinin yapılmasındaki asıl amaç nedir?",
+     "answer": "Akademik başarısızlığın zihinsel yetersizlikten (zeka geriliğinden) kaynaklanmadığını, çocuğun zekasının normal veya normalin üstünde olduğunu teyit etmektir."
+    }
+   ],
+   "synthesisNarrative": "ÖÖG okuma dışında yazılı anlatım ve matematik alanlarını da etkileyen alt tiplere sahiptir.\n\n- **Disgrafi (Yazma Bozukluğu):** Kelimeleri okunaksız yazma, harf atlama, hece ekleme, noktalama işaretlerini kullanamama ve gramer hataları.\n- **Diskalkuli (Matematik Bozukluğu):** Sayı kavramını anlayamama, dört işlem sembollerini (+, -, x) karıştırma, çarpım tablosunu ezberleyememe, saat, yer ve yön saptamada zorluk.\n- **Tanısal Testler:** Tanı klinik görüşmeyle konur. Zihinsel yetersizliği dışlamak için **WISC-R zeka testi**; algısal olgunlaşmayı ölçmek için Bender-Gestalt ve Benton görsel bellek testleri uygulanır.\n- **Sağaltım:** Günümüzde ÖÖG'nin kanıtlanmış bir ilaç tedavisi **yoktur**. Temel yaklaşım bireysel özel eğitim ve fonolojik farkındalık çalışmalarıdır.\n\n> [!IMPORTANT]\n> ÖÖG'de ilaç tedavisi öğrenme kusurunu düzeltmez; ancak komorbid DEHB varsa dikkat ilacı özel eğitime odaklanmayı kolaylaştırır."
+  },
+  {
+   "id": "k2-42-d-s21",
+   "slideNumber": 21,
+   "title": "Tik Bozuklukları: Tanım, Sınıflama ve Ayırıcı Klinik Özellikler",
+   "bolum": "6",
+   "pdfSayfalari": [
+    36,
+    37
+   ],
+   "sourcePdf": {
+    "startPage": 36,
+    "endPage": 37
+   },
+   "content": "Tikler, bir kas veya kas grubunun kasılması sonucu ortaya çıkan ani, hızlı, yineleyici ve ritmik olmayan motor hareketler ya da ses çıkarmalardır.\n\n- **Sınıflama:**\n  - *Motor Tikler:* Basit (göz kırpma, boyun atma, omuz silkme) veya kompleks (dokunma, çömelme, adımlama).\n  - *Vokal Tikler:* Basit (boğaz temizleme, burun çekme, öksürme, ses çıkarma) veya kompleks (kelime tekrarı, ekolali, koprolali).\n- **Ayırıcı Klinik Özellikler:**\n  1. **İstemli Baskılanabilme:** Diğer hareket bozukluklarından (kore, distoni) farklı olarak **kısa bir süre için istemli biçimde baskılanabilir!**\n  2. **Premonitör Dürtü:** Tik öncesinde içsel bir gerginlik veya rahatsızlık hissi duyulur; tik yapılınca geçici rahatlama sağlanır.\n  3. **Dalgalı Seyir:** Alevlenme ve sönmelerle seyreder; stres, kaygı ve yorgunlukla artar; dikkati odaklama ve uykuda belirgin azalır.\n\n> [!IMPORTANT]\n> Çocuğun tiklerini sınıfta bir süre tutabilmesi, sonrasında ise yoğun bir boşalmayla tik yapması tipik premonitör dürtü örneğidir.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Tikleri çocukluk çağındaki kore ve distoni gibi diğer hareket bozukluklarından ayıran en belirleyici özellik hangisidir?",
+     "options": [
+      {
+       "text": "İstemli olarak kısa bir süre için baskılanabilmesi ve öncesinde gerginlik hissi olması",
+       "isCorrect": true,
+       "explanation": "İstemli olarak kısa bir süre için baskılanabilmesi ve öncesinde gerginlik hissi olması doğru yanıttır; çünkü bu spesifik klinik ve gelişimsel mekanizma doğrudan hedeflenen tanı ölçütünü kurar. İstemli kısa süreli süpresyon ve premonitör dürtü tiklerin en ayırıcı vasfıdır."
+      },
+      {
+       "text": "Uykuda şiddetinin belirgin şekilde artması",
+       "isCorrect": false,
+       "explanation": "Uykuda şiddetinin belirgin şekilde artması kavramı bu klinik tabloyu oluşturmaz; ilgili nörogelişimsel süreçte farklı bir alanda fonksiyon gösterir. Tikler uykuda belirgin şekilde azalır."
+      },
+      {
+       "text": "Ömür boyu hiçbir alevlenme veya sönme göstermemesi",
+       "isCorrect": false,
+       "explanation": "Ömür boyu hiçbir alevlenme veya sönme göstermemesi kavramı bu klinik tabloyu oluşturmaz; ilgili nörogelişimsel süreçte farklı bir alanda fonksiyon gösterir. Tikler dalgalı ve alevlenmeli bir seyir izler."
+      },
+      {
+       "text": "Sadece 70 yaş üstü bireylerde ortaya çıkması",
+       "isCorrect": false,
+       "explanation": "Sadece 70 yaş üstü bireylerde ortaya çıkması kavramı bu klinik tabloyu oluşturmaz; ilgili nörogelişimsel süreçte farklı bir alanda fonksiyon gösterir. Tikler tipik olarak çocukluk çağında başlar."
+      }
+     ],
+     "id": "k42-s21-e1"
+    },
+    {
+     "type": "cloze_masking",
+     "maskedTerm": "premonitör",
+     "hint": "Nörogelişimsel bozukluklar kapsamında ilgili klinik veya gelişimsel kavramdır.",
+     "id": "k42-s21-e2",
+     "sentence": "Tiklerin ortaya çıkmasından hemen önce hissedilen içsel gerginlik ve rahatsızlık hissine premonitör dürtü adı verilir."
+    },
+    {
+     "type": "before_after_slider",
+     "leftTitle": "Tiklerin Arttığı Durumlar",
+     "rightTitle": "Tiklerin Azaldığı Durumlar",
+     "leftPoints": [
+      "Duygusal stres ve sınav kaygısı",
+      "Aşırı fiziksel veya zihinsel yorgunluk",
+      "Sıkıntı ve boş kalma anları"
+     ],
+     "rightPoints": [
+      "Dikkatin yoğun odaklandığı aktiviteler",
+      "Sevilen bir uğraşla meşgul olma",
+      "Derin uyku ve dinlenme evreleri"
+     ],
+     "id": "k42-s21-e3"
+    },
+    {
+     "type": "active_recall",
+     "id": "k42-s21-e4",
+     "question": "Vokal tikler basit ve kompleks olarak nasıl ayrılır?",
+     "answer": "Basit vokal tikler boğaz temizleme, burun çekme, öksürme ve homurdanma gibi anlamsız seslerdir; kompleks vokal tikler ise kelime tekrarları, ekolali ve uygunsuz söz söylemeyi (koprolali) içerir."
+    }
+   ],
+   "synthesisNarrative": "Tikler, bir kas veya kas grubunun kasılması sonucu ortaya çıkan ani, hızlı, yineleyici ve ritmik olmayan motor hareketler ya da ses çıkarmalardır.\n\n- **Sınıflama:**\n  - *Motor Tikler:* Basit (göz kırpma, boyun atma, omuz silkme) veya kompleks (dokunma, çömelme, adımlama).\n  - *Vokal Tikler:* Basit (boğaz temizleme, burun çekme, öksürme, ses çıkarma) veya kompleks (kelime tekrarı, ekolali, koprolali).\n- **Ayırıcı Klinik Özellikler:**\n  1. **İstemli Baskılanabilme:** Diğer hareket bozukluklarından (kore, distoni) farklı olarak **kısa bir süre için istemli biçimde baskılanabilir!**\n  2. **Premonitör Dürtü:** Tik öncesinde içsel bir gerginlik veya rahatsızlık hissi duyulur; tik yapılınca geçici rahatlama sağlanır.\n  3. **Dalgalı Seyir:** Alevlenme ve sönmelerle seyreder; stres, kaygı ve yorgunlukla artar; dikkati odaklama ve uykuda belirgin azalır.\n\n> [!IMPORTANT]\n> Çocuğun tiklerini sınıfta bir süre tutabilmesi, sonrasında ise yoğun bir boşalmayla tik yapması tipik premonitör dürtü örneğidir."
+  },
+  {
+   "id": "k2-42-d-s22",
+   "slideNumber": 22,
+   "title": "Tourette Bozukluğu: Tanı Kriterleri, Komorbidite ve Sağaltım",
+   "bolum": "6",
+   "pdfSayfalari": [
+    38,
+    40
+   ],
+   "sourcePdf": {
+    "startPage": 38,
+    "endPage": 40
+   },
+   "content": "Tourette Bozukluğu, tik spektrumunun en şiddetli ve süreğen formunu temsil eden nörogelişimsel bir tablodur.\n\n- **Tanı Kriterleri:**\n  1. Çoklu motor tikler ile en az bir vokal tikin bir arada bulunması (aynı anda ortaya çıkması şart değildir),\n  2. Tiklerin **en az 1 yıldan uzun süredir** devam etmesi (alevlenme-sönmelerle),\n  3. Başlangıç yaşının **18 yaşından küçük** olması,\n  4. Bir maddenin veya genel tıbbi durumun etkisine bağlı olmaması.\n- **Koprolali Efsanesi:** Koprolali (istemsiz küfürlü konuşma) Tourette olgularının yalnızca **%10-20'sinde** görülür; tanı için kesinlikle şart değildir!\n- **Komorbidite:** Olguların büyük kısmına **DEHB ve Obsesif Kompulsif Bozukluk (OKB)** eşlik eder.\n- **Sağaltım İlkeleri:** Hafif vakalarda psikoedukasyon ve takip yeterlidir. İşlevsellik bozulduğunda davranışçı tedaviler (Alışkanlığı Tersine Çevirme Eğitimi - HRT) ve ilaçlar (alfa-2 agonistler klonidin/guanfasin veya antipsikotikler aripiprazol/risperidon) kullanılır.\n\n> [!IMPORTANT]\n> Tourette tanısı için hastanın küfür etmesi şart değildir; birden çok motor tik ve en az bir ses tikinin 1 yıldan uzun sürmesi yeterlidir.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Tourette bozukluğu tanı kriterleri hakkında aşağıdaki ifadelerden hangisi yanlıştır?",
+     "options": [
+      {
+       "text": "Hem çoklu motor tikler hem de en az bir vokal tik bulunmalıdır.",
+       "isCorrect": false,
+       "explanation": "Hem çoklu motor tikler hem de en az bir vokal tik bulunmalıdır. kavramı bu klinik tabloyu oluşturmaz; ilgili nörogelişimsel süreçte farklı bir alanda fonksiyon gösterir. Bu ifade doğrudur."
+      },
+      {
+       "text": "Tikler en az 1 yıl süreyle alevlenip sönerek devam etmelidir.",
+       "isCorrect": false,
+       "explanation": "Tikler en az 1 yıl süreyle alevlenip sönerek devam etmelidir. kavramı bu klinik tabloyu oluşturmaz; ilgili nörogelişimsel süreçte farklı bir alanda fonksiyon gösterir. Bu ifade doğrudur."
+      },
+      {
+       "text": "Tanı konulabilmesi için mutlaka koprolali (küfürlü konuşma) varlığı zorunludur.",
+       "isCorrect": true,
+       "explanation": "Tanı konulabilmesi için mutlaka koprolali (küfürlü konuşma) varlığı zorunludur. doğru yanıttır; çünkü bu spesifik klinik ve gelişimsel mekanizma doğrudan hedeflenen tanı ölçütünü kurar. Bu ifade yanlıştır; koprolali hastaların sadece %10-20'sinde görülür ve tanı için şart değildir."
+      },
+      {
+       "text": "Belirtiler 18 yaşından önce başlamış olmalıdır.",
+       "isCorrect": false,
+       "explanation": "Belirtiler 18 yaşından önce başlamış olmalıdır. kavramı bu klinik tabloyu oluşturmaz; ilgili nörogelişimsel süreçte farklı bir alanda fonksiyon gösterir. Bu ifade doğrudur."
+      },
+      {
+       "text": "DEHB ve Obsesif Kompulsif Bozukluk sıklıkla tabloya eşlik eder.",
+       "isCorrect": false,
+       "explanation": "DEHB ve Obsesif Kompulsif Bozukluk sıklıkla tabloya eşlik eder. kavramı bu klinik tabloyu oluşturmaz; ilgili nörogelişimsel süreçte farklı bir alanda fonksiyon gösterir. Bu ifade doğrudur."
+      }
+     ],
+     "id": "k42-s22-e1"
+    },
+    {
+     "type": "cloze_masking",
+     "maskedTerm": "vokal",
+     "hint": "Nörogelişimsel bozukluklar kapsamında ilgili klinik veya gelişimsel kavramdır.",
+     "id": "k42-s22-e2",
+     "sentence": "Tourette bozukluğunda çoklu motor tiklerin yanı sıra en az bir vokal tikin en az bir yıl sürmesi tanı için şarttır."
+    },
+    {
+     "type": "causal_chain",
+     "title": "Tourette Bozukluğu Basamaklı Sağaltım Modeli",
+     "steps": [
+      "1. Psikoedukasyon: Hasta, aile ve okul bilgilendirilir; kaygı ve damgalama azaltılır.",
+      "2. Davranışçı Terapi: Alışkanlığı tersine çevirme eğitimiyle tik öncesi dürtüye yarışan yanıt öğretilir.",
+      "3. Farmakoterapi: İşlevsellik belirgin bozulduğunda alfa-2 agonistler veya atipik antipsikotikler başlanır."
+     ],
+     "id": "k42-s22-e3"
+    },
+    {
+     "type": "active_recall",
+     "id": "k42-s22-e4",
+     "question": "Tourette sendromunda koprolali bulunma oranı nedir ve tanı için gerekli midir?",
+     "answer": "Koprolali olguların yalnızca %10-20'sinde görülür ve tanı koymak için kesinlikle zorunlu değildir."
+    }
+   ],
+   "synthesisNarrative": "Tourette Bozukluğu, tik spektrumunun en şiddetli ve süreğen formunu temsil eden nörogelişimsel bir tablodur.\n\n- **Tanı Kriterleri:**\n  1. Çoklu motor tikler ile en az bir vokal tikin bir arada bulunması (aynı anda ortaya çıkması şart değildir),\n  2. Tiklerin **en az 1 yıldan uzun süredir** devam etmesi (alevlenme-sönmelerle),\n  3. Başlangıç yaşının **18 yaşından küçük** olması,\n  4. Bir maddenin veya genel tıbbi durumun etkisine bağlı olmaması.\n- **Koprolali Efsanesi:** Koprolali (istemsiz küfürlü konuşma) Tourette olgularının yalnızca **%10-20'sinde** görülür; tanı için kesinlikle şart değildir!\n- **Komorbidite:** Olguların büyük kısmına **DEHB ve Obsesif Kompulsif Bozukluk (OKB)** eşlik eder.\n- **Sağaltım İlkeleri:** Hafif vakalarda psikoedukasyon ve takip yeterlidir. İşlevsellik bozulduğunda davranışçı tedaviler (Alışkanlığı Tersine Çevirme Eğitimi - HRT) ve ilaçlar (alfa-2 agonistler klonidin/guanfasin veya antipsikotikler aripiprazol/risperidon) kullanılır.\n\n> [!IMPORTANT]\n> Tourette tanısı için hastanın küfür etmesi şart değildir; birden çok motor tik ve en az bir ses tikinin 1 yıldan uzun sürmesi yeterlidir."
+  },
+  {
+   "id": "k2-42-d-s23",
+   "slideNumber": 23,
+   "title": "[TEKRAR SAYFASI - CHECKPOINT 4] Bölüm 5 ve 6 Pekiştirmesi",
+   "bolum": "5",
+   "isCheckpoint": true,
+   "pdfSayfalari": [
+    30,
+    40
+   ],
+   "sourcePdf": {
+    "startPage": 30,
+    "endPage": 40
+   },
+   "content": "Bu tekrar sayfasında Özgül Öğrenme Güçlüğü (disleksi, disgrafi, diskalkuli) ile Tik Bozuklukları ve Tourette sendromunun temel tanısal ilkeleri pekiştirilmektedir.\n\n- **ÖÖG:** Zeka normaldir; okuma, yazma veya matematik alanına özgü kısıtlılıktır; temel sağaltım bireysel özel eğitimdir.\n- **Tikler:** İstemli baskılanabilir, premonitör dürtü içerir ve dalgalı seyreder.\n- **Tourette:** Çoklu motor + en az 1 vokal tik en az 1 yıl sürer; koprolali tanı için şart değildir.\n\n> [!NOTE]\n> Hem ÖÖG hem de Tourette bozukluğunda erken tanı, çocuğun okulda damgalanmasını önleyen en güçlü kalkandır.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "ÖÖG ve Tourette bozukluğu ile ilgili aşağıdaki ortak veya ayırt edici özelliklerden hangisi doğrudur?",
+     "options": [
+      {
+       "text": "ÖÖG'de genel zeka normaldir; Tourette'te motor ve vokal tikler istemli kısa süre baskılanabilir.",
+       "isCorrect": true,
+       "explanation": "ÖÖG'de genel zeka normaldir; Tourette'te motor ve vokal tikler istemli kısa süre baskılanabilir. doğru yanıttır; çünkü bu spesifik klinik ve gelişimsel mekanizma doğrudan hedeflenen tanı ölçütünü kurar. Her iki tanısal özellik dersin temel ayrım prensibidir."
+      },
+      {
+       "text": "Her iki tabloda da tek başına antibiyotik tedavisi kür sağlar.",
+       "isCorrect": false,
+       "explanation": "Her iki tabloda da tek başına antibiyotik tedavisi kür sağlar. kavramı bu klinik tabloyu oluşturmaz; ilgili nörogelişimsel süreçte farklı bir alanda fonksiyon gösterir. İki bozukluk da enfeksiyon değildir."
+      },
+      {
+       "text": "ÖÖG'de disleksi hastaları tamamen sağırdır.",
+       "isCorrect": false,
+       "explanation": "ÖÖG'de disleksi hastaları tamamen sağırdır. kavramı bu klinik tabloyu oluşturmaz; ilgili nörogelişimsel süreçte farklı bir alanda fonksiyon gösterir. Disleksi sağırlık değil okuma bozukluğudur."
+      },
+      {
+       "text": "Tourette tanısı koymak için mutlaka zeka geriliği bulunması şarttır.",
+       "isCorrect": false,
+       "explanation": "Tourette tanısı koymak için mutlaka zeka geriliği bulunması şarttır. kavramı bu klinik tabloyu oluşturmaz; ilgili nörogelişimsel süreçte farklı bir alanda fonksiyon gösterir. Tourette zeka geriliği gerektirmez."
+      }
+     ],
+     "id": "k42-s23-e1"
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Bölüm 5 ve 6 Temel Kazanımları",
+     "id": "k42-s23-e2",
+     "items": [
+      {
+       "text": "Özgül öğrenme güçlüğünün kanıtlanmış bir ilaç tedavisi yoktur, özel eğitim esastır.",
+       "isLie": false,
+       "explanation": "Özgül öğrenme güçlüğünün kanıtlanmış bir ilaç tedavisi yoktur, özel eğitim esastır. ifadesi nörogelişimsel bozukluklar ilkeleri açısından incelendiğinde bu klinik durumun gerekçesini açıkça ortaya koyar. Doğru ilkedir."
+      },
+      {
+       "text": "Tikler kore ve distoniden farklı olarak istemli şekilde kısa süre tutulabilir.",
+       "isLie": false,
+       "explanation": "Tikler kore ve distoniden farklı olarak istemli şekilde kısa süre tutulabilir. ifadesi nörogelişimsel bozukluklar ilkeleri açısından incelendiğinde bu klinik durumun gerekçesini açıkça ortaya koyar. Doğru ayırıcı tanı özelliğidir."
+      },
+      {
+       "text": "Tourette sendromu tanısı koymak için her hastanın mutlaka küfür etmesi şarttır.",
+       "isLie": true,
+       "explanation": "Tourette sendromu tanısı koymak için her hastanın mutlaka küfür etmesi şarttır. ifadesi nörogelişimsel bozukluklar ilkeleri açısından incelendiğinde bu klinik durumun gerekçesini açıkça ortaya koyar. Koprolali hastaların sadece %10-20'sinde görülür ve tanı için şart değildir."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "id": "k42-s23-e3",
+     "question": "Diskalkuli ve disgrafi arasındaki temel fark nedir?",
+     "answer": "Disgrafi yazılı anlatım, harf yazımı ve hecelemedeki bozukluk iken; diskalkuli sayı algısı, dört işlem ve matematiksel hesaplama alanındaki bozukluktur."
+    },
+    {
+     "type": "cloze_masking",
+     "maskedTerm": "DEHB",
+     "hint": "Nörogelişimsel bozukluklar kapsamında ilgili klinik veya gelişimsel kavramdır.",
+     "id": "k42-s23-e4",
+     "sentence": "Tourette bozukluğunda motor ve ses tiklerinin yanı sıra sıklıkla DEHB ve obsesif kompulsif bozukluk komorbiditesi eşlik eder."
+    }
+   ],
+   "synthesisNarrative": "Bu tekrar sayfasında Özgül Öğrenme Güçlüğü (disleksi, disgrafi, diskalkuli) ile Tik Bozuklukları ve Tourette sendromunun temel tanısal ilkeleri pekiştirilmektedir.\n\n- **ÖÖG:** Zeka normaldir; okuma, yazma veya matematik alanına özgü kısıtlılıktır; temel sağaltım bireysel özel eğitimdir.\n- **Tikler:** İstemli baskılanabilir, premonitör dürtü içerir ve dalgalı seyreder.\n- **Tourette:** Çoklu motor + en az 1 vokal tik en az 1 yıl sürer; koprolali tanı için şart değildir.\n\n> [!NOTE]\n> Hem ÖÖG hem de Tourette bozukluğunda erken tanı, çocuğun okulda damgalanmasını önleyen en güçlü kalkandır."
+  },
+  {
+   "id": "k2-42-d-s24",
+   "slideNumber": 24,
+   "title": "[OYUN SAYFASI] Ders Sonu Oyunları: Nörogelişimsel Bozukluklar",
+   "bolum": "6",
+   "isGameFinale": true,
+   "pdfSayfalari": [
+    1,
+    40
+   ],
+   "sourcePdf": {
+    "startPage": 1,
+    "endPage": 40
+   },
+   "content": "Tebrikler! Nörogelişimsel Bozukluklar dersinin tüm bölümlerini sıfır bilgi kaybı ve eksiksiz mekanizma analizleriyle tamamladınız.\n\n- **Özet:** Zihinsel yetersizlik, Otizm Spektrum Bozukluğu, DEHB, Özgül Öğrenme Güçlüğü ve Tik Bozukluklarının tüm klinik, etiyolojik ve sağaltım ilkelerini öğrendiniz.\n- **Son Aşama:** Bilgilerinizi kalıcı hafızaya aktarmak için ders sonu oyunlarını tamamlayınız!\n\n> [!IMPORTANT]\n> Tüm oyunları çözerek klinik karar verme ve ayırıcı tanı reflekslerinizi pekiştiriniz.",
+   "interactiveElements": [
+    {
+     "type": "sequence_order",
+     "title": "Gelişimsel Tanı ve Sağaltım Kronolojisi",
+     "id": "k42-s24-e1",
+     "prompt": "Gelişimsel Tanı ve Sağaltım Kronolojisi",
+     "steps": [
+      "Erken Bebeklik: Göz teması yokluğu ve sakinleşmeme ipuçlarının belirmesi",
+      "12-24. Aylar: Konuşma gecikmesi veya kazanılmış kelimelerin regresyonu",
+      "36 Ay Öncesi: Ortak dikkat eksikliği ve parmakla işaret etmeme tespiti",
+      "Okul Çağı: Akademik başarısızlıkla disleksi veya DEHB bileşik tip tanısı"
+     ],
+     "explanation": "Gelişimsel basamaklar erken bebeklikten okul çağına doğru kronolojik olarak ilerler."
+    },
+    {
+     "type": "estimate_slider",
+     "min": 1,
+     "max": 20,
+     "unit": "%",
+     "tolerance": 1,
+     "explanation": "Ders notuna göre dünya genelinde %6.48 olan DEHB yaygınlığı Türkiye'de %8.1-8.4 (yaklaşık %8) olarak saptanmıştır.",
+     "id": "k42-s24-e2",
+     "prompt": "Türkiye'de yapılan epidemiyolojik çalışmalarda DEHB yaygınlık oranı yüzde kaçtır?",
+     "answer": 8
+    },
+    {
+     "type": "perturbation",
+     "scenario": "DEHB tanısı konulan 8 yaşındaki bir çocukta frontostriatal devrelerde dopamin ve noradrenalin iletimini artırmak amacıyla psikostimülan metilfenidat başlanıyor.",
+     "id": "k42-s24-e3",
+     "parameters": [
+      {
+       "name": "Sinaptik Dopamin Düzeyi",
+       "correct": "up",
+       "explanation": "Metilfenidat presinaptik dopamin taşıyıcısını bloke ederek sinaptik aralıktaki dopamin miktarını belirgin artırır."
+      },
+      {
+       "name": "Frontostriatal İletim Kusuru",
+       "correct": "down",
+       "explanation": "Yükselen sinaptik aminler prefrontal korteks fonksiyonlarını destekleyerek yürütücü kontrol yetersizliğini azaltır."
+      },
+      {
+       "name": "Dikkatin Sürdürülmesi ve Odaklanma",
+       "correct": "up",
+       "explanation": "Prefrontal dopamin ve noradrenalin düzeylerinin artmasıyla dikkat süresi ve odaklanma belirgin düzelir."
+      }
+     ]
+    },
+    {
+     "type": "fix_the_text",
+     "id": "k42-s24-e4",
+     "text": "Tourette bozukluğu tanısı koymak için hastada mutlaka küfürlü konuşma bulunması zorunludur ve tikler hiçbir zaman istemli biçimde baskılanamaz.",
+     "errors": [
+      {
+       "wrong": "zorunludur",
+       "correct": "şart değildir",
+       "options": [
+        "zorunludur",
+        "şart değildir",
+        "yasaktır"
+       ],
+       "explanation": "Koprolali olguların yalnızca yüzde 10-20'sinde görülür, tanı için zorunlu bir kriter değildir."
+      },
+      {
+       "wrong": "hiçbir zaman istemli biçimde baskılanamaz",
+       "correct": "kısa süre istemli baskılanabilir",
+       "options": [
+        "hiçbir zaman istemli biçimde baskılanamaz",
+        "kısa süre istemli baskılanabilir",
+        "sürekli istemli durdurulur"
+       ],
+       "explanation": "Tikler diğer hareket bozukluklarından farklı olarak kısa süre için istemli olarak baskılanabilir."
+      }
+     ]
+    }
+   ],
+   "synthesisNarrative": "Tebrikler! Nörogelişimsel Bozukluklar dersinin tüm bölümlerini sıfır bilgi kaybı ve eksiksiz mekanizma analizleriyle tamamladınız.\n\n- **Özet:** Zihinsel yetersizlik, Otizm Spektrum Bozukluğu, DEHB, Özgül Öğrenme Güçlüğü ve Tik Bozukluklarının tüm klinik, etiyolojik ve sağaltım ilkelerini öğrendiniz.\n- **Son Aşama:** Bilgilerinizi kalıcı hafızaya aktarmak için ders sonu oyunlarını tamamlayınız!\n\n> [!IMPORTANT]\n> Tüm oyunları çözerek klinik karar verme ve ayırıcı tanı reflekslerinizi pekiştiriniz."
+  }
+ ],
+ "courseId": "y25-k2-42-norogelisimsel-bozukluklar",
+ "discipline": "psikiyatri",
+ "arsiv": true,
+ "confidence": "high",
+ "matchedPastQuestionsCount": 0,
+ "sinama": {
+  "etiket": "2025-2026 Arşiv",
+  "aciklama": "Bu ders 2025-2026 dönemi (geçen yıl) slaytlarından hazırlanmıştır; 2026-2027 güncel müfredat dersleriyle karışmaz."
+ }
+}

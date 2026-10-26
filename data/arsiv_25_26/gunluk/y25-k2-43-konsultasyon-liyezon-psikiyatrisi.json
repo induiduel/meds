@@ -1,0 +1,34 @@
+{
+  "key": "y25-k2-43-konsultasyon-liyezon-psikiyatrisi",
+  "donem": "2025-2026",
+  "kurul": 2,
+  "brans": "Psikiyatri",
+  "baslik": "Konsültasyon Liyezon Psikiyatrisi",
+  "kayitlar": [
+    {
+      "surum": 1,
+      "tarih": "2026-10-26 06:55",
+      "neden": "2025-2026 geçmiş yıl arşiv dersi ilk üretimi ve Kurul 2 tam otomatik hat kapı doğrulaması",
+      "hatali_bilgiler": [
+        "İlk üretim kontrolü: H1–H55 hata defterindeki kısaltma okunuşu, sayfa atlama ve şık açıklama kusurları tarandı; 0 hata doğrulandı."
+      ],
+      "degisiklikler": [
+        "2025-2026 dönemi klp sınıf 3 2025 .pdf (29 sayfa) kaynağından 0 atlanan sayfa ile 33 paragraf / 67 cümlelik sesli anlatım üretildi.",
+        "22 adımlı etkileşimli Öğren destesi (11 model + ders sonu oyunları) ve 0 canlı çizim katmanı eklendi.",
+        "EMA Lightning GPU ile 6.4 dakikalık ses sentezlendi, cümle/kelime zamanlaması ve .medspak paketi doğrulandı."
+      ],
+      "metrikler": {
+        "sureSn": 385,
+        "sureDk": 6.4,
+        "sayfaSayisi": 29,
+        "atlananSayfa": 0,
+        "bolumSayisi": 6,
+        "paragrafSayisi": 33,
+        "cumleSayisi": 67,
+        "slaytAdimSayisi": 22,
+        "cizimSayisi": 0,
+        "cikmisEslesme": 8
+      }
+    }
+  ]
+}

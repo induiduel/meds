@@ -86,9 +86,9 @@ KUYRUK_KILIT = threading.RLock()
 # Ortam değişkenleri yalnız ilk varsayılandır; panelden kaydedilen değer her döngüde okunur (yeniden başlatma gerekmez).
 AYAR = STATE / "ayar.json"
 AYAR_TANIM: dict[str, tuple] = {  # anahtar → (tür, varsayılan, alt, üst)
-    "duraklat": (bool, False, None, None),               # işleme başlama durur (Drive taraması sürer)
-    "otomatik_tarama": (bool, True, None, None),         # Drive'ı düzenli tara
-    "otomatik_kuyruk": (bool, True, None, None),         # taramada yeni PDF'leri kendiliğinden kuyruğa al
+    "duraklat": (bool, True, None, None),                # işleme başlama durur (Kullanıcı talimatı: Manuel Mod)
+    "otomatik_tarama": (bool, False, None, None),        # Drive otomatik taraması kapalı (manuel tetikleme)
+    "otomatik_kuyruk": (bool, False, None, None),        # taramada yeni PDF'leri kendiliğinden kuyruğa alma
     "onay_iste": (bool, True, None, None),               # kullanıcı kararı (2026-10-24): yeni PDF önce yönetici onayı bekler
                                                           # (telefon bildirimi; not/ses ekleyip ya da yalnız PDF ile başlatır)
     "gunluk_sinir": (int, 8, 0, 48),                     # kullanıcı kararı (2026-10-15): günde en çok 8 ders
@@ -96,7 +96,7 @@ AYAR_TANIM: dict[str, tuple] = {  # anahtar → (tür, varsayılan, alt, üst)
     "saat_bas": (int, 0, 0, 23),                         # işleme penceresi başlangıç saati (TR)
     "saat_bit": (int, 24, 1, 24),                        # bitiş saati (24 = gece yarısı); bas>bit gece aşırı pencere
     "tarama_dk": (int, 60, 10, 1440),                    # Drive tarama aralığı
-    "hizli_bakis_dk": (int, 5, 0, 60),                   # 2026-10-24: kök + aktif kurul klasörü hafif yoklaması (0 = kapalı)
+    "hizli_bakis_dk": (int, 0, 0, 60),                   # hafif yoklama (0 = kapalı)
     "model": (str, CLAUDE_MODEL, None, None),
     "effort": (str, CLAUDE_EFFORT, None, None),          # low | medium | high | "" (CLI varsayılanı)
     "sadakat_esigi": (float, 0.80, 0.0, 1.0),            # yayın denetimi: ders notu sadakat alt sınırı

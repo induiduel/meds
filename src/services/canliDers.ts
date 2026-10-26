@@ -36,6 +36,7 @@ const P = {
   cizim: (k: string) => path.join(kokSec(k), 'cizim', `${k}.json`),
   v2: (k: string) => path.join(kokSec(k), 'v2', `${k}.json`),
   cikmisKonum: (k: string) => path.join(kokSec(k), 'cikmis_konum', `${k}.json`),
+  terim: (k: string) => path.join(kokSec(k), 'terim', `${k}.json`),
   ogrenciNot: (fileId: string) => path.join(KOK, 'ogrenci_not', `${fileId.replace(/[^\w-]/g, '')}.json`),
   gunluk: (k: string) => path.join(arsivMi(k) ? ARSIV_GUNLUK_KOK : GUNLUK_KOK, `${k}.json`),
 };
@@ -403,6 +404,12 @@ export function registerCanliDersRoutes(app: Express) {
           if (n?.s && Object.keys(n.s).length) out[String(i)] = n.s;
         });
         return Object.keys(out).length ? out : null;
+      })(),
+      // PDF terim yardımcısı (scripts/sesli_anlatim/terim_sozlugu.py): { "<dosya>": { "<sayfa>": { bos, t: [{ t, a, k, f?, b }] } } }
+      // PDF'e bağlıdır (metin değişse de geçerli)
+      terim: (() => {
+        const t = oku<any>(P.terim(key), null);
+        return t?.d && Object.keys(t.d).length ? t.d : null;
       })(),
     });
   });

@@ -1,0 +1,34 @@
+{
+  "key": "y25-k2-35-kisilik-bozukluklari",
+  "donem": "2025-2026",
+  "kurul": 2,
+  "brans": "Psikiyatri",
+  "baslik": "Kişilik Bozuklukları",
+  "kayitlar": [
+    {
+      "surum": 1,
+      "tarih": "2026-10-26 05:13",
+      "neden": "2025-2026 geçmiş yıl arşiv dersi ilk üretimi ve Kurul 2 tam otomatik hat kapı doğrulaması",
+      "hatali_bilgiler": [
+        "İlk üretim kontrolü: H1–H55 hata defterindeki kısaltma okunuşu, sayfa atlama ve şık açıklama kusurları tarandı; 0 hata doğrulandı."
+      ],
+      "degisiklikler": [
+        "2025-2026 dönemi Kişilik Bozuklukları kopyası.pdf (41 sayfa) kaynağından 0 atlanan sayfa ile 39 paragraf / 78 cümlelik sesli anlatım üretildi.",
+        "22 adımlı etkileşimli Öğren destesi (11 model + ders sonu oyunları) ve 1 canlı çizim katmanı eklendi.",
+        "EMA Lightning GPU ile 8.4 dakikalık ses sentezlendi, cümle/kelime zamanlaması ve .medspak paketi doğrulandı."
+      ],
+      "metrikler": {
+        "sureSn": 503,
+        "sureDk": 8.4,
+        "sayfaSayisi": 41,
+        "atlananSayfa": 0,
+        "bolumSayisi": 6,
+        "paragrafSayisi": 39,
+        "cumleSayisi": 78,
+        "slaytAdimSayisi": 22,
+        "cizimSayisi": 1,
+        "cikmisEslesme": 19
+      }
+    }
+  ]
+}

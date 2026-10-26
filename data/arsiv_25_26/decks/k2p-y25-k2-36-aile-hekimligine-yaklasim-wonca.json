@@ -1,0 +1,2130 @@
+{
+ "id": "k2p-y25-k2-36-aile-hekimligine-yaklasim-wonca",
+ "deckId": "k2p-y25-k2-36-aile-hekimligine-yaklasim-wonca",
+ "title": "Aile Hekimliğine Yaklaşım (WONCA Ağacı)",
+ "discipline": "Aile Hekimliği",
+ "committee": "donem3-kurul2",
+ "donem": "2025-2026",
+ "arsiv": true,
+ "confidence": "high",
+ "sayfaHaritasi": "teyitli",
+ "totalSlides": 18,
+ "slides": [
+  {
+   "slideNumber": 1,
+   "title": "Giriş ve Aile Hekimliği Tanımı",
+   "content": "Aile hekimliği, kişiye yönelik koruyucu sağlık hizmetleri ile birinci basamak tanı, tedavi ve rehabilite edici sağlık hizmetlerini yaş, cinsiyet ve hastalık ayrımı yapmaksızın kapsamlı ve devamlı olarak sunan bağımsız bir tıp disiplinidir.\n\n- **Birinci Basamak Sağlık Hizmeti:** Bireylerin sağlık sistemiyle ilk temas noktasını oluşturur ve en kolay erişilebilir temel bakım basamağıdır.\n- **Kapsamlı ve Devamlı Bakım:** Sağlık sorunlarını akut ve kronik süreçleriyle birlikte yaşam boyu kesintisiz izlemeyi hedefler.\n- **Tam Gün Çalışma Esası:** Hekimler tam gün esasına göre çalışarak kayıtlı nüfusun sağlığını korumakla yükümlüdür.\n\n> [!IMPORTANT]\n> Aile hekimliği yalnızca reçete yazılan bir birim değil; koruyucu, tedavi edici ve rehabilite edici sağlık hizmetlerini bireye özgü sunan temel uzmanlık alanıdır.",
+   "interactiveElements": [
+    {
+     "id": "k36-s1-q1",
+     "type": "micro_quiz",
+     "question": "Aile hekimliği disiplininin mevzuattaki yasal tanımı ve çalışma esasıyla ilgili hangisi doğrudur?",
+     "options": [
+      {
+       "text": "Kişiye yönelik koruyucu, birinci basamak tanı, tedavi ve rehabilitasyon hizmetlerini tam gün esasıyla sunar.",
+       "isCorrect": true,
+       "explanation": "Aile hekimliği birinci basamakta koruyucu ve sağaltıcı hizmetleri entegre biçimde sunar. Bu tanım mevzuattaki yasal çerçeveyle tam olarak örtüşmektedir."
+      },
+      {
+       "text": "Yalnızca üçüncü basamak hastanelerde ameliyat ve yoğun bakım hizmetlerini yürütür.",
+       "isCorrect": false,
+       "explanation": "Şıkta belirtilen yalnızca üçüncü basamak hastanelerde ameliyat ve yoğun bakım hizmetlerini yürütür ifadesi, farklı bir klinik durum veya basamağa ait bir uygulamayı temsil eder. Bu soruda hedeflenen birinci basamak aile hekimliği çekirdek ilkeleriyle doğrudan örtüşmemektedir."
+      },
+      {
+       "text": "Sadece 65 yaş üstü geriatrik hastalara reçete yazımı ile sınırlandırılmıştır.",
+       "isCorrect": false,
+       "explanation": "Şıkta belirtilen sadece 65 yaş üstü geriatrik hastalara reçete yazımı ile sınırlandırılmıştır ifadesi, farklı bir klinik durum veya basamağa ait bir uygulamayı temsil eder. Bu soruda hedeflenen birinci basamak aile hekimliği çekirdek ilkeleriyle doğrudan örtüşmemektedir."
+      },
+      {
+       "text": "Koruyucu sağlık hizmetlerini tamamen dışlayarak sadece akut travma vakalarını kabul eder.",
+       "isCorrect": false,
+       "explanation": "Şıkta belirtilen koruyucu sağlık hizmetlerini tamamen dışlayarak sadece akut travma vakalarını kabul eder ifadesi, farklı bir klinik durum veya basamağa ait bir uygulamayı temsil eder. Bu soruda hedeflenen birinci basamak aile hekimliği çekirdek ilkeleriyle doğrudan örtüşmemektedir."
+      }
+     ]
+    },
+    {
+     "id": "k36-s1-c1",
+     "type": "cloze_masking",
+     "sentence": "Aile hekimliği sağlık hizmetlerini yaş, cinsiyet ve hastalık ayrımı yapmaksızın kapsamlı ve devamlı olarak sunan bağımsız bir tıp disiplinidir.",
+     "maskedTerm": "devamlı",
+     "hint": "Zaman içinde kesintisiz ve sürekli olan klinik bakım niteliği."
+    },
+    {
+     "id": "k36-s1-t1",
+     "type": "interactive_table",
+     "title": "Aile Hekimliği Temel İlkeleri Tablosu",
+     "tableHeaders": [
+      "Hizmet Alanı",
+      "Uygulama Biçimi",
+      "Temel Amaç"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Koruyucu Hizmetler",
+         "isMasked": false
+        },
+        {
+         "text": "Aşılama, izlem ve kanser taramaları",
+         "isMasked": true,
+         "hint": "Hastalık ortaya çıkmadan önlem alma girişimleri."
+        },
+        {
+         "text": "Mortalite ve morbiditeyi önleme",
+         "isMasked": false
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Birinci Basamak Tedavi",
+         "isMasked": false
+        },
+        {
+         "text": "Akut ve kronik hastalık sağaltımı",
+         "isMasked": true,
+         "hint": "Sık görülen patolojilerin ilk basamakta çözümü."
+        },
+        {
+         "text": "Hastaneye gereksiz başvuruları azaltma",
+         "isMasked": false
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k36-s1-l1",
+     "type": "spot_the_lie",
+     "topic": "Aile Hekimliği Tanım İlkeleri",
+     "items": [
+      {
+       "text": "Aile hekimliği sağlık sistemine ilk temas noktasını oluşturur ve açık erişim sağlar.",
+       "isLie": false,
+       "explanation": "Birinci basamak topluma en yakın ve doğrudan başvurulan ilk temas noktasıdır."
+      },
+      {
+       "text": "Aile hekimliği sadece akut acil ameliyatların yapıldığı bir cerrahi branştır.",
+       "isLie": true,
+       "explanation": "Aile hekimliği cerrahi ameliyat branşı değildir; koruyucu ve temel tedavi hizmetlerini kapsar."
+      },
+      {
+       "text": "Aile hekimi kendisine kayıtlı bireyleri yaş ve cinsiyet ayrımı yapmadan izler.",
+       "isLie": false,
+       "explanation": "Tüm yaş gruplarına hizmet vermek disiplinin en temel kapsayıcı kuralıdır."
+      }
+     ]
+    }
+   ],
+   "bolum": 1,
+   "pdfSayfalari": [
+    2,
+    3
+   ],
+   "sourcePdf": {
+    "name": "y25-k2-36-aile-hekimligine-yaklasim-wonca.pdf",
+    "startPage": 2,
+    "endPage": 3
+   }
+  },
+  {
+   "slideNumber": 2,
+   "title": "Aile Hekiminin Görev ve Sorumlulukları",
+   "content": "Aile hekimleri kendilerine kayıtlı kişilerin sağlık durumunu bir bütün olarak ele alır ve geniş bir yelpazede hizmet sunar.\n\n- **İlk Değerlendirme ve Ev Ziyareti:** Kendisine kayıtlı kişilerin ilk değerlendirmesini yapmak üzere altı ay içinde ev ziyaretinde bulunur veya doğrudan iletişime geçer.\n- **İzlem ve Taramalar:** Gebe, loğusa, bebek, çocuk, adölesan ve yaşlı sağlığı izlemlerini ulusal protokollerle yürütür.\n- **Periyodik Muayeneler:** Kayıtlı kişileri yılda en az bir defa değerlendirerek sağlık kayıtlarını ve risk faktörlerini günceller.\n- **Saha Görevleri:** Gerektiğinde gezici sağlık hizmeti, evde sağlık ve palyatif bakım hizmetlerini organize eder.\n\n> [!NOTE]\n> Aile hekimi yalnızca poliklinik odasında bekleyen değil; sahaya inerek ev ziyareti ve gezici hizmet sunan aktif bir toplum hekimidir.",
+   "interactiveElements": [
+    {
+     "id": "k36-s2-q1",
+     "type": "micro_quiz",
+     "question": "Aile hekiminin kayıtlı kişilere yönelik ev ziyareti ve periyodik muayene takvimi ile ilgili hangisi doğrudur?",
+     "options": [
+      {
+       "text": "Kayıtlı kişileri ilk altı ay içinde değerlendirmeli ve yılda en az bir kez periyodik muayene yapmalıdır.",
+       "isCorrect": true,
+       "explanation": "Mevzuatta belirlenen standartlara göre ilk altı ay içinde tanıma ve yılda en az bir kez periyodik kontrol zorunludur. Doğru saha yaklaşımıdır."
+      },
+      {
+       "text": "Ev ziyaretleri yasaklanmıştır ve hastalar yılda en fazla on yılda bir aranabilir.",
+       "isCorrect": false,
+       "explanation": "Şıkta belirtilen ev ziyaretleri yasaklanmıştır ve hastalar yılda en fazla on yılda bir aranabilir ifadesi, farklı bir klinik durum veya basamağa ait bir uygulamayı temsil eder. Bu soruda hedeflenen birinci basamak aile hekimliği çekirdek ilkeleriyle doğrudan örtüşmemektedir."
+      },
+      {
+       "text": "Yalnızca hastane acil servisinde yatan komadaki hastalara ev ziyareti yapılır.",
+       "isCorrect": false,
+       "explanation": "Şıkta belirtilen yalnızca hastane acil servisinde yatan komadaki hastalara ev ziyareti yapılır ifadesi, farklı bir klinik durum veya basamağa ait bir uygulamayı temsil eder. Bu soruda hedeflenen birinci basamak aile hekimliği çekirdek ilkeleriyle doğrudan örtüşmemektedir."
+      },
+      {
+       "text": "Periyodik muayeneler sadece çocukluk çağıyla sınırlıdır ve yetişkinler asla taranmaz.",
+       "isCorrect": false,
+       "explanation": "Şıkta belirtilen periyodik muayeneler sadece çocukluk çağıyla sınırlıdır ve yetişkinler asla taranmaz ifadesi, farklı bir klinik durum veya basamağa ait bir uygulamayı temsil eder. Bu soruda hedeflenen birinci basamak aile hekimliği çekirdek ilkeleriyle doğrudan örtüşmemektedir."
+      }
+     ]
+    },
+    {
+     "id": "k36-s2-c1",
+     "type": "cloze_masking",
+     "sentence": "Aile hekimi kendisine kayıtlı kişilerin ilk değerlendirmesini yapmak üzere altı ay içinde ev ziyaretinde bulunur veya iletişime geçer.",
+     "maskedTerm": "altı ay",
+     "hint": "Yarım yıllık yasal mevzuat süresi."
+    },
+    {
+     "id": "k36-s2-t1",
+     "type": "interactive_table",
+     "title": "Aile Hekimliği Saha ve İzlem Görevleri",
+     "tableHeaders": [
+      "Görev Alanı",
+      "Hedef Kitle",
+      "Yasal Periyot"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "İlk İletişim / Ev Ziyareti",
+         "isMasked": false
+        },
+        {
+         "text": "Yeni kayıtlı vatandaşlar",
+         "isMasked": true,
+         "hint": "Aile hekimliği birimine son dönemde bağlanan nüfus."
+        },
+        {
+         "text": "İlk altı ay içinde",
+         "isMasked": false
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Periyodik Sağlık Muayenesi",
+         "isMasked": false
+        },
+        {
+         "text": "Tüm kayıtlı nüfus",
+         "isMasked": true,
+         "hint": "Listede yer alan her yaştan kişi."
+        },
+        {
+         "text": "Yılda en az bir kez",
+         "isMasked": false
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k36-s2-l1",
+     "type": "spot_the_lie",
+     "topic": "Aile Hekimi Yükümlülükleri",
+     "items": [
+      {
+       "text": "Gebe ve bebek aşı izlemleri aile hekiminin birincil koruyucu görevlerindendir.",
+       "isLie": false,
+       "explanation": "Ana çocuk sağlığı ve aşı takvimi birinci basamağın temel sorumluluk alanıdır."
+      },
+      {
+       "text": "Aile hekimi üçüncü basamak cerrahi ameliyatları bizzat yürütmekle yükümlüdür.",
+       "isLie": true,
+       "explanation": "Tersiyer cerrahi ameliyatlar hastane cerrahlarının işidir, aile hekiminin görevi değildir."
+      },
+      {
+       "text": "Ulaşımı zor kırsal bölgelere gezici sağlık hizmeti sunulması sistemin bir parçasıdır.",
+       "isLie": false,
+       "explanation": "Gezici sağlık hizmeti kırsal nüfusun sağlık hakkını güvenceye alan yasal bir uygulamadır."
+      }
+     ]
+    }
+   ],
+   "bolum": 1,
+   "pdfSayfalari": [
+    4,
+    5
+   ],
+   "sourcePdf": {
+    "name": "y25-k2-36-aile-hekimligine-yaklasim-wonca.pdf",
+    "startPage": 4,
+    "endPage": 5
+   }
+  },
+  {
+   "slideNumber": 3,
+   "title": "Sağlık Ocağı ile Farklar ve Kişiselleşmiş Bakım",
+   "content": "Ülkemizdeki aile hekimliği uygulamasını eski sağlık ocağı modelinden ayıran yapısal farklar birinci basamağın niteliğini dönüştürmüştür.\n\n- **Liste Tabanlı Sistem:** Sağlık ocakları katı coğrafi bölge sınırlarıyla çalışırken, aile hekimliği hekime kayıtlı birey listesi üzerinden hizmet verir.\n- **Kişiselleşmiş Bakım:** Hekim, hastasını ailesi, geçmişi ve sosyokültürel dinamikleriyle uzun süreli tanıyarak kişiye özel klinik yaklaşım geliştirir.\n- **Hekim Seçme Özgürlüğü:** Vatandaşlar kendi aile hekimini özgürce seçebilir ve mevzuatta belirlenen aralıklarla hekimini değiştirebilir.\n\n> [!IMPORTANT]\n> Kişiselleşmiş bakım, aile hekimliğini yalnızca mekan odaklı bir poliklinikten çıkarıp, güvene dayalı sürekli bir hekim-hasta ortaklığına dönüştürür.",
+   "interactiveElements": [
+    {
+     "id": "k36-s3-q1",
+     "type": "micro_quiz",
+     "question": "Ülkemizdeki aile hekimliği uygulamasını önceki sağlık ocağı hekimliğinden ayıran en temel fark hangisidir?",
+     "options": [
+      {
+       "text": "Coğrafi bölge yerine liste tabanlı çalışılması ve kişiselleşmiş bakım sunulmasıdır.",
+       "isCorrect": true,
+       "explanation": "Coğrafi bölge yerine liste tabanlı çalışılması ve kişiselleşmiş bakım sunulmasıdır, aile hekimliği disiplininin temel ilkeleriyle ve mevzuattaki yasal çerçeveyle tam olarak örtüşmektedir. Bu klinik yaklaşım birinci basamakta yüksek nitelikli ve sürekli sağlık bakımının güvencesidir."
+      },
+      {
+       "text": "Tüm koruyucu aşıların durdurulup sadece ücretli ilaç yazılmasıdır.",
+       "isCorrect": false,
+       "explanation": "Şıkta belirtilen tüm koruyucu aşıların durdurulup sadece ücretli ilaç yazılmasıdır ifadesi, farklı bir klinik durum veya basamağa ait bir uygulamayı temsil eder. Bu soruda hedeflenen birinci basamak aile hekimliği çekirdek ilkeleriyle doğrudan örtüşmemektedir."
+      },
+      {
+       "text": "Vatandaşların hekim seçme hakkının tamamen ortadan kaldırılmasıdır.",
+       "isCorrect": false,
+       "explanation": "Şıkta belirtilen vatandaşların hekim seçme hakkının tamamen ortadan kaldırılmasıdır ifadesi, farklı bir klinik durum veya basamağa ait bir uygulamayı temsil eder. Bu soruda hedeflenen birinci basamak aile hekimliği çekirdek ilkeleriyle doğrudan örtüşmemektedir."
+      },
+      {
+       "text": "Birinci basamak hekimlerinin sadece hastane yoğun bakımlarında nöbet tutmasıdır.",
+       "isCorrect": false,
+       "explanation": "Şıkta belirtilen birinci basamak hekimlerinin sadece hastane yoğun bakımlarında nöbet tutmasıdır ifadesi, farklı bir klinik durum veya basamağa ait bir uygulamayı temsil eder. Bu soruda hedeflenen birinci basamak aile hekimliği çekirdek ilkeleriyle doğrudan örtüşmemektedir."
+      }
+     ]
+    },
+    {
+     "id": "k36-s3-c1",
+     "type": "cloze_masking",
+     "sentence": "Sağlık ocakları coğrafi bölgeye göre çalışırken, aile hekimliği liste tabanlı çalışarak kişiselleşmiş bakım sunar.",
+     "maskedTerm": "kişiselleşmiş",
+     "hint": "Bireye özgü ve hekim hasta ilişkisini merkeze alan hizmet niteliği."
+    },
+    {
+     "id": "k36-s3-w1",
+     "type": "swipe_matching",
+     "title": "Sağlık Ocağı ve Aile Hekimliği Karşılaştırması",
+     "leftCategory": "Sağlık Ocağı Modeli",
+     "rightCategory": "Aile Hekimliği Modeli",
+     "cards": [
+      {
+       "text": "Bölgesel ve coğrafi nüfusa dayalı çalışma",
+       "category": "left"
+      },
+      {
+       "text": "Hekime kayıtlı birey listesi ve kişiselleşmiş bakım",
+       "category": "right"
+      },
+      {
+       "text": "Hekim seçme özgürlüğünün bulunmaması",
+       "category": "left"
+      },
+      {
+       "text": "Vatandaşın hekimini özgürce seçebilmesi ve değiştirebilmesi",
+       "category": "right"
+      }
+     ]
+    },
+    {
+     "id": "k36-s3-l1",
+     "type": "spot_the_lie",
+     "topic": "Birinci Basamak Yapısal Dönüşümü",
+     "items": [
+      {
+       "text": "Aile hekimliğinde hasta hekimini serbestçe seçme hakkına sahiptir.",
+       "isLie": false,
+       "explanation": "Seçme hakkı hasta özerkliğini güçlendiren temel sistemik kazanımdır."
+      },
+      {
+       "text": "Aile hekimliği sistemi eski sağlık ocağı gibi katı coğrafi bölgeye bağlı kalır.",
+       "isLie": true,
+       "explanation": "Aile hekimliği coğrafi sınıra değil, hekimin kayıtlı kişi listesine dayanır."
+      },
+      {
+       "text": "Kişiselleşmiş bakım süreklilik ve güven esasına dayalı olarak inşa edilir.",
+       "isLie": false,
+       "explanation": "Kişiyi zaman içinde tanımak tanısal isabeti ve tedavi uyumunu artırır."
+      }
+     ]
+    }
+   ],
+   "bolum": 1,
+   "pdfSayfalari": [
+    6,
+    6
+   ],
+   "sourcePdf": {
+    "name": "y25-k2-36-aile-hekimligine-yaklasim-wonca.pdf",
+    "startPage": 6,
+    "endPage": 6
+   }
+  },
+  {
+   "slideNumber": 4,
+   "title": "[TEKRAR SAYFASI - CHECKPOINT 1] Disiplin Tanımı ve Temel Sorumluluklar",
+   "isCheckpoint": true,
+   "content": "Bu bölümde aile hekimliğinin yasal tanımını, görevlerini ve eski sistemden farklarını inceledik.\n\n- **Tanım:** Yaş, cinsiyet ayrımı yapmaksızın koruyucu, tanı, tedavi ve rehabilitasyon hizmetlerinin tam gün esasıyla verilmesi.\n- **Yasal Süreler:** Kayıtlı kişilerin ilk değerlendirmesi altı ay içinde; periyodik muayeneler ise yılda en az bir kez yapılır.\n- **Kişiselleşmiş Bakım:** Coğrafi mekan yerine liste tabanlı hasta hekim ortaklığı esastır.\n\n> [!NOTE]\n> Bu kazanımlar birinci basamağın organizasyonel temelini oluşturur.",
+   "interactiveElements": [
+    {
+     "id": "k36-s4-q1",
+     "type": "micro_quiz",
+     "question": "Aşağıdakilerden hangisi aile hekimliğinin çekirdek organizasyonel ilkelerinden biridir?",
+     "options": [
+      {
+       "text": "Kişiselleşmiş bakım, liste tabanlı çalışma ve hekim seçme özgürlüğü",
+       "isCorrect": true,
+       "explanation": "Kişiselleşmiş bakım, liste tabanlı çalışma ve hekim seçme özgürlüğü, aile hekimliği disiplininin temel ilkeleriyle ve mevzuattaki yasal çerçeveyle tam olarak örtüşmektedir. Bu klinik yaklaşım birinci basamakta yüksek nitelikli ve sürekli sağlık bakımının güvencesidir."
+      },
+      {
+       "text": "Yalnızca cerrahi organ nakillerine odaklanma",
+       "isCorrect": false,
+       "explanation": "Şıkta belirtilen yalnızca cerrahi organ nakillerine odaklanma ifadesi, farklı bir klinik durum veya basamağa ait bir uygulamayı temsil eder. Bu soruda hedeflenen birinci basamak aile hekimliği çekirdek ilkeleriyle doğrudan örtüşmemektedir."
+      },
+      {
+       "text": "Bebek aşılarının tamamen durdurulması",
+       "isCorrect": false,
+       "explanation": "Şıkta belirtilen bebek aşılarının tamamen durdurulması ifadesi, farklı bir klinik durum veya basamağa ait bir uygulamayı temsil eder. Bu soruda hedeflenen birinci basamak aile hekimliği çekirdek ilkeleriyle doğrudan örtüşmemektedir."
+      },
+      {
+       "text": "Hastaların yılda en fazla bir gün muayene olabilmesi",
+       "isCorrect": false,
+       "explanation": "Şıkta belirtilen hastaların yılda en fazla bir gün muayene olabilmesi ifadesi, farklı bir klinik durum veya basamağa ait bir uygulamayı temsil eder. Bu soruda hedeflenen birinci basamak aile hekimliği çekirdek ilkeleriyle doğrudan örtüşmemektedir."
+      }
+     ]
+    },
+    {
+     "id": "k36-s4-t1",
+     "type": "interactive_table",
+     "title": "Bölüm 1 Temel Kazanımlar Özeti",
+     "tableHeaders": [
+      "Kavram",
+      "Temel Özellik",
+      "Klinik Yansıma"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Kişiselleşmiş Bakım",
+         "isMasked": false
+        },
+        {
+         "text": "Liste tabanlı sürekli takip",
+         "isMasked": true,
+         "hint": "Hekimin kendi kayıtlı hastasını bilmesi."
+        },
+        {
+         "text": "Yüksek hasta uyumu ve güven",
+         "isMasked": false
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Ev Ziyareti",
+         "isMasked": false
+        },
+        {
+         "text": "İlk altı ayda tanıma",
+         "isMasked": true,
+         "hint": "Yeni kayıtlara yönelik saha süresi."
+        },
+        {
+         "text": "Risk faktörlerinin yerinde tespiti",
+         "isMasked": false
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k36-s4-w1",
+     "type": "swipe_matching",
+     "title": "Hizmet Türü Eşleme",
+     "leftCategory": "Koruyucu Hizmet",
+     "rightCategory": "Tedavi Edici Hizmet",
+     "cards": [
+      {
+       "text": "Gebe izlemi ve çocukluk çağı aşıları",
+       "category": "left"
+      },
+      {
+       "text": "Akut farenjit veya hipertansiyon reçetesi",
+       "category": "right"
+      },
+      {
+       "text": "Kolorektal ve serviks kanseri taramaları",
+       "category": "left"
+      },
+      {
+       "text": "Diyabetik hastanın kan şekeri regülasyonu",
+       "category": "right"
+      }
+     ]
+    },
+    {
+     "id": "k36-s4-l1",
+     "type": "spot_the_lie",
+     "topic": "Bölüm 1 Pekiştirme Tuzak Avı",
+     "items": [
+      {
+       "text": "Aile hekimliği bağımsız eğitim içeriği ve araştırması olan bir uzmanlık dalıdır.",
+       "isLie": false,
+       "explanation": "Tıp dünyasında kendine özgü metodolojisi olan bağımsız bir klinik disiplindir."
+      },
+      {
+       "text": "Aile hekimleri hastalarını asla ikinci basamağa sevk edemezler.",
+       "isLie": true,
+       "explanation": "İhtiyaç halinde hastayı üst basamağa sevk etmek ve koordinasyonu sağlamak temel görevdir."
+      },
+      {
+       "text": "Periyodik sağlık muayeneleri yılda en az bir defa planlanır.",
+       "isLie": false,
+       "explanation": "Yıllık periyodik değerlendirme koruyucu hekimlik kılavuzlarının gereğidir."
+      }
+     ]
+    }
+   ],
+   "bolum": null,
+   "pdfSayfalari": [],
+   "sourcePdf": null
+  },
+  {
+   "slideNumber": 5,
+   "title": "Aile Hekimliği Disiplini ve Leeuwenhorst Grubu",
+   "content": "Aile hekimliği, kendine özgü klinik araştırma alanı, kanıta dayalı eğitim müfredatı ve birinci basamağa özel uygulama metodolojisi olan akademik bir disiplindir.\n\n- **1974 Leeuwenhorst Bildirgesi:** Avrupa'da genel pratisyenlik ve aile hekimliği görev tanımını yapan ilk uluslararası belgedir.\n- **Leeuwenhorst Tanımı:** Aile hekimi; bireye ve aileye, yaş ve cinsiyet ayrımı yapmadan kişisel, kapsamlı ve sürekli bakım sunan, toplum kaynaklarını verimli kullanan tıp doktorudur.\n- **Klinik Özerklik:** Hekim, hastanın ilk temasından itibaren tanı ve sağaltım sürecinde bağımsız profesyonel kararlar üretir.\n\n> [!NOTE]\n> Leeuwenhorst Grubu'nun ilkeleri günümüz modern aile hekimliğinin anayasası olarak kabul edilir.",
+   "interactiveElements": [
+    {
+     "id": "k36-s5-q1",
+     "type": "micro_quiz",
+     "question": "1974 yılında Leeuwenhorst Grubu tarafından yayınlanan aile hekimliği tanımında hangi ilke öne çıkmaktadır?",
+     "options": [
+      {
+       "text": "Bireye ve aileye yaş, cinsiyet ayrımı yapmaksızın kişisel, kapsamlı ve sürekli bakım sunulması",
+       "isCorrect": true,
+       "explanation": "Bireye ve aileye yaş, cinsiyet ayrımı yapmaksızın kişisel, kapsamlı ve sürekli bakım sunulması, aile hekimliği disiplininin temel ilkeleriyle ve mevzuattaki yasal çerçeveyle tam olarak örtüşmektedir. Bu klinik yaklaşım birinci basamakta yüksek nitelikli ve sürekli sağlık bakımının güvencesidir."
+      },
+      {
+       "text": "Sadece hastane acil servislerinde travma cerrahisi yapılması",
+       "isCorrect": false,
+       "explanation": "Şıkta belirtilen sadece hastane acil servislerinde travma cerrahisi yapılması ifadesi, farklı bir klinik durum veya basamağa ait bir uygulamayı temsil eder. Bu soruda hedeflenen birinci basamak aile hekimliği çekirdek ilkeleriyle doğrudan örtüşmemektedir."
+      },
+      {
+       "text": "Koruyucu hekimliğin yasaklanıp yalnızca ilaç satılması",
+       "isCorrect": false,
+       "explanation": "Şıkta belirtilen koruyucu hekimliğin yasaklanıp yalnızca ilaç satılması ifadesi, farklı bir klinik durum veya basamağa ait bir uygulamayı temsil eder. Bu soruda hedeflenen birinci basamak aile hekimliği çekirdek ilkeleriyle doğrudan örtüşmemektedir."
+      },
+      {
+       "text": "Hekimlerin hastalarıyla hiçbir kişisel bağ kurmaması",
+       "isCorrect": false,
+       "explanation": "Şıkta belirtilen hekimlerin hastalarıyla hiçbir kişisel bağ kurmaması ifadesi, farklı bir klinik durum veya basamağa ait bir uygulamayı temsil eder. Bu soruda hedeflenen birinci basamak aile hekimliği çekirdek ilkeleriyle doğrudan örtüşmemektedir."
+      }
+     ]
+    },
+    {
+     "id": "k36-s5-c1",
+     "type": "cloze_masking",
+     "sentence": "1974 yılında toplanan Leeuwenhorst Grubu Avrupa'da aile hekimliği disiplininin ilk kapsamlı tanımını yapmıştır.",
+     "maskedTerm": "Leeuwenhorst",
+     "hint": "1974'te toplanan tarihi Hollanda çalışma grubu."
+    },
+    {
+     "id": "k36-s5-t1",
+     "type": "interactive_table",
+     "title": "Leeuwenhorst İlkeleri Analiz Tablosu",
+     "tableHeaders": [
+      "Ölçüt Alanı",
+      "Leeuwenhorst Vurgusu",
+      "Klinik Anlamı"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Kişisel Bakım",
+         "isMasked": false
+        },
+        {
+         "text": "Bireyi ailesiyle birlikte tanıma",
+         "isMasked": true,
+         "hint": "Kişiyi sosyal çevresi içinde değerlendirme."
+        },
+        {
+         "text": "Güvene dayalı hekim hasta ilişkisi",
+         "isMasked": false
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Süreklilik",
+         "isMasked": false
+        },
+        {
+         "text": "Hastalık öncesi ve sonrasında izlem",
+         "isMasked": true,
+         "hint": "Zaman içinde kesintisiz devam eden bakım."
+        },
+        {
+         "text": "Kronik hastalıklarda yüksek başarı",
+         "isMasked": false
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k36-s5-l1",
+     "type": "spot_the_lie",
+     "topic": "Leeuwenhorst ve Disiplin Kimliği",
+     "items": [
+      {
+       "text": "Leeuwenhorst bildirgesi aile hekimliğini bağımsız akademik bir disiplin olarak tanıtmıştır.",
+       "isLie": false,
+       "explanation": "Bu bildirge genel pratisyenliğin akademik meşruiyetini kurmuştur."
+      },
+      {
+       "text": "Leeuwenhorst tanımına göre aile hekimleri sadece pediatrik hastaları muayene eder.",
+       "isLie": true,
+       "explanation": "Tanım yaş ve cinsiyet ayrımı yapmaksızın tüm bireyleri ve aileyi kapsar."
+      },
+      {
+       "text": "Kapsamlı ve sürekli bakım disiplinin vazgeçilmez temel bileşenlerindendir.",
+       "isLie": false,
+       "explanation": "Süreklilik ve kapsamlılık aile hekimliğinin ayırt edici gücüdür."
+      }
+     ]
+    }
+   ],
+   "bolum": 2,
+   "pdfSayfalari": [
+    7,
+    8
+   ],
+   "sourcePdf": {
+    "name": "y25-k2-36-aile-hekimligine-yaklasim-wonca.pdf",
+    "startPage": 7,
+    "endPage": 8
+   }
+  },
+  {
+   "slideNumber": 6,
+   "title": "WONCA: Kuruluşu, Misyonu ve Küresel Rolü",
+   "content": "Dünya Aile Hekimleri Birliği (WONCA), 1972 yılında Melbourne'de kurulmuş küresel çatı meslek örgütüdür.\n\n- **Açılımı:** World Organization of National Colleges, Academies and Academic Associations of General Practitioners/Family Physicians.\n- **Küresel Misyonu:** Birinci basamak sağlık hizmetlerinin kalitesini artırmak, aile hekimliği eğitimini standartlaştırmak ve dünya nüfusunun temel sağlık hizmetlerine eşit erişimini sağlamaktır.\n- **WONCA'nın Aile Hekimliği Tanımı:** Sağlık sistemine ilk temas noktasını oluşturan, açık ve sınırsız erişim güvencesi veren, kişi merkezli ve sürekli bakım sunan uzmanlık alanıdır.\n\n> [!IMPORTANT]\n> WONCA, Dünya Sağlık Örgütü (DSÖ) ile yakın işbirliği içinde çalışarak birinci basamağın küresel sağlık politikalarındaki sözcüsüdür.",
+   "interactiveElements": [
+    {
+     "id": "k36-s6-q1",
+     "type": "micro_quiz",
+     "question": "Dünya Aile Hekimleri Birliği (WONCA) hangi yılda kurulmuştur ve küresel temel misyonu nedir?",
+     "options": [
+      {
+       "text": "1972 yılında kurulmuş olup birinci basamağın kalitesini ve sağlıkta eşitliği yükseltmeyi hedefler.",
+       "isCorrect": true,
+       "explanation": "WONCA 1972 yılında Melbourne'de kurulmuş ve küresel aile hekimliği standartlarını geliştirmeyi amaç edinmiştir. Doğru tarih ve misyondur."
+      },
+      {
+       "text": "1850 yılında kurulmuş olup yalnızca askeri savaş cerrahlarını temsil eder.",
+       "isCorrect": false,
+       "explanation": "Şıkta belirtilen 1850 yılında kurulmuş olup yalnızca askeri savaş cerrahlarını temsil eder ifadesi, farklı bir klinik durum veya basamağa ait bir uygulamayı temsil eder. Bu soruda hedeflenen birinci basamak aile hekimliği çekirdek ilkeleriyle doğrudan örtüşmemektedir."
+      },
+      {
+       "text": "2020 yılında sadece aşı patentlerini toplamak amacıyla kurulmuş bir şirkettir.",
+       "isCorrect": false,
+       "explanation": "Şıkta belirtilen 2020 yılında sadece aşı patentlerini toplamak amacıyla kurulmuş bir şirkettir ifadesi, farklı bir klinik durum veya basamağa ait bir uygulamayı temsil eder. Bu soruda hedeflenen birinci basamak aile hekimliği çekirdek ilkeleriyle doğrudan örtüşmemektedir."
+      },
+      {
+       "text": "1900 yılında tüm aile hekimliği kliniklerini kapatmak için kurulmuştur.",
+       "isCorrect": false,
+       "explanation": "Şıkta belirtilen 1900 yılında tüm aile hekimliği kliniklerini kapatmak için kurulmuştur ifadesi, farklı bir klinik durum veya basamağa ait bir uygulamayı temsil eder. Bu soruda hedeflenen birinci basamak aile hekimliği çekirdek ilkeleriyle doğrudan örtüşmemektedir."
+      }
+     ]
+    },
+    {
+     "id": "k36-s6-c1",
+     "type": "cloze_masking",
+     "sentence": "Dünya Aile Hekimleri Birliği WONCA 1972 yılında kurulmuş küresel çatı meslek örgütüdür.",
+     "maskedTerm": "1972",
+     "hint": "Örgütün kuruluş yılı olan bin dokuz yüz yetmişli tarih."
+    },
+    {
+     "id": "k36-s6-t1",
+     "type": "interactive_table",
+     "title": "WONCA Küresel Yapısı",
+     "tableHeaders": [
+      "Kurumsal Öge",
+      "Açıklama",
+      "Klinik Hedef"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Kuruluş Yılı",
+         "isMasked": false
+        },
+        {
+         "text": "1972 Melbourne",
+         "isMasked": true,
+         "hint": "Örgütün kurulduğu tarihi kongre."
+        },
+        {
+         "text": "Küresel mesleki dayanışma",
+         "isMasked": false
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "İlk Temas İlkesi",
+         "isMasked": false
+        },
+        {
+         "text": "Açık ve sınırsız erişim",
+         "isMasked": true,
+         "hint": "Tüm vatandaşların kolayca başvurabilmesi."
+        },
+        {
+         "text": "Sağlıkta fırsat eşitliği sağlama",
+         "isMasked": false
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k36-s6-l1",
+     "type": "spot_the_lie",
+     "topic": "WONCA Kuruluşu ve Misyonu",
+     "items": [
+      {
+       "text": "WONCA Dünya Sağlık Örgütü ile birinci basamak politikalarında işbirliği yapar.",
+       "isLie": false,
+       "explanation": "DSÖ ile resmi ortaklık içinde küresel sağlık hedeflerini yürütür."
+      },
+      {
+       "text": "WONCA aile hekimliğini sağlık sistemine ilk temas noktası olarak tanımlar.",
+       "isLie": false,
+       "explanation": "İlk temas güvencesi tanımın çekirdek unsurudur."
+      },
+      {
+       "text": "WONCA yalnızca özel muayenehane sahiplerinin kâr oranlarını belirleyen bir bankadır.",
+       "isLie": true,
+       "explanation": "WONCA kâr amacı gütmeyen akademik ve mesleki bir dünya birliğidir."
+      }
+     ]
+    }
+   ],
+   "bolum": 2,
+   "pdfSayfalari": [
+    9,
+    10
+   ],
+   "sourcePdf": {
+    "name": "y25-k2-36-aile-hekimligine-yaklasim-wonca.pdf",
+    "startPage": 9,
+    "endPage": 10
+   }
+  },
+  {
+   "slideNumber": 7,
+   "title": "Aile Hekimliğinin Temel Yeterlikleri ve Sınıflaması",
+   "content": "2002 yılında WONCA Avrupa, aile hekimliği disiplininin 11 temel özelliğini ve bunları hayata geçiren 6 çekirdek yeterliliği resmen ilan etmiştir.\n\n- **11 Temel Özellik:** Disiplinin felsefesini, etiğini, toplumla bağını ve bilimsel metodolojisini yansıtır.\n- **Üç Temel Alan:** Bu özellikler bağlamsal (çevre ve toplum), tutumsal (etik ve hekim duruşu) ve bilimsel (araştırma ve kanıt) olmak üzere 3 alanda kümelenir.\n- **Altı Çekirdek Yeterlilik:** Birinci basamak yönetimi, kişi merkezli bakım, özgül problem çözme becerileri, kapsamlı yaklaşım, toplum yönelimli olma ve bütüncül yaklaşımdır.\n\n> [!NOTE]\n> Bu yeterlilikler tıp fakültesi ve uzmanlık eğitiminde hekimin kazanması gereken standart klinik yetkinlikleri belirler.",
+   "interactiveElements": [
+    {
+     "id": "k36-s7-q1",
+     "type": "micro_quiz",
+     "question": "2002 yılında WONCA Avrupa tarafından tanımlanan çekirdek yeterlilik sayısı kaçtır?",
+     "options": [
+      {
+       "text": "Altı çekirdek yeterlilik",
+       "isCorrect": true,
+       "explanation": "Altı çekirdek yeterlilik, aile hekimliği disiplininin temel ilkeleriyle ve mevzuattaki yasal çerçeveyle tam olarak örtüşmektedir. Bu klinik yaklaşım birinci basamakta yüksek nitelikli ve sürekli sağlık bakımının güvencesidir."
+      },
+      {
+       "text": "Yalnızca bir çekirdek yeterlilik",
+       "isCorrect": false,
+       "explanation": "Şıkta belirtilen yalnızca bir çekirdek yeterlilik ifadesi, farklı bir klinik durum veya basamağa ait bir uygulamayı temsil eder. Bu soruda hedeflenen birinci basamak aile hekimliği çekirdek ilkeleriyle doğrudan örtüşmemektedir."
+      },
+      {
+       "text": "Yirmi beş çekirdek yeterlilik",
+       "isCorrect": false,
+       "explanation": "Şıkta belirtilen yirmi beş çekirdek yeterlilik ifadesi, farklı bir klinik durum veya basamağa ait bir uygulamayı temsil eder. Bu soruda hedeflenen birinci basamak aile hekimliği çekirdek ilkeleriyle doğrudan örtüşmemektedir."
+      },
+      {
+       "text": "Sıfır yeterlilik",
+       "isCorrect": false,
+       "explanation": "Şıkta belirtilen sıfır yeterlilik ifadesi, farklı bir klinik durum veya basamağa ait bir uygulamayı temsil eder. Bu soruda hedeflenen birinci basamak aile hekimliği çekirdek ilkeleriyle doğrudan örtüşmemektedir."
+      }
+     ]
+    },
+    {
+     "id": "k36-s7-c1",
+     "type": "cloze_masking",
+     "sentence": "WONCA Avrupa aile hekimliği disiplinini altı çekirdek yeterlilik ve on bir temel özellik ile tanımlamıştır.",
+     "maskedTerm": "altı",
+     "hint": "Bir düzinenin yarısı olan temel yeterlilik sayısı."
+    },
+    {
+     "id": "k36-s7-t1",
+     "type": "interactive_table",
+     "title": "Yeterlilik Çerçevesi Sınıflaması",
+     "tableHeaders": [
+      "Düzey",
+      "Bileşen Sayısı",
+      "İçerik Niteliği"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Temel Özellikler",
+         "isMasked": false
+        },
+        {
+         "text": "11 özellik",
+         "isMasked": true,
+         "hint": "On birden oluşan disiplin nitelikleri."
+        },
+        {
+         "text": "Felsefi ve mesleki çerçeve",
+         "isMasked": false
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Çekirdek Yeterlilikler",
+         "isMasked": false
+        },
+        {
+         "text": "6 yeterlilik",
+         "isMasked": true,
+         "hint": "Altı temel klinik yetkinlik alanı."
+        },
+        {
+         "text": "Uygulamalı klinik beceriler",
+         "isMasked": false
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k36-s7-l1",
+     "type": "spot_the_lie",
+     "topic": "WONCA Avrupa Çerçevesi",
+     "items": [
+      {
+       "text": "WONCA Avrupa yeterlilik modeli 2002 yılında kabul edilmiştir.",
+       "isLie": false,
+       "explanation": "2002 yılı Avrupa aile hekimliği yeterlilik çerçevesinin resmi miladıdır."
+      },
+      {
+       "text": "Çekirdek yeterlilikler hekimin klinik beceri ve tutumlarını yapılandırır.",
+       "isLie": false,
+       "explanation": "Eğitim ve pratik uygulamada rehber standart olarak kullanılır."
+      },
+      {
+       "text": "Modelde hiçbir bilimsel veya etik özelliğe yer verilmemiştir.",
+       "isLie": true,
+       "explanation": "Bilimsel ve etik tutumsal özellikler modelin temel köklerini oluşturur."
+      }
+     ]
+    }
+   ],
+   "bolum": 3,
+   "pdfSayfalari": [
+    11,
+    13
+   ],
+   "sourcePdf": {
+    "name": "y25-k2-36-aile-hekimligine-yaklasim-wonca.pdf",
+    "startPage": 11,
+    "endPage": 13
+   }
+  },
+  {
+   "slideNumber": 8,
+   "title": "WONCA Ağacı Modeli ve Morfolojik Yapısı",
+   "content": "İsviçre Birinci Basamak Koleji, WONCA Avrupa yeterlilik çerçevesini somutlaştırmak için 'WONCA Ağacı' görsel metaforunu geliştirmiştir.\n\n- **Ağacın Kökleri:** Disiplinin temel özelliklerini simgeler. Topraktan beslenen 3 kök alanı vardır: Bağlamsal özellikler, Tutumsal özellikler ve Bilimsel özellikler.\n- **Ağacın Gövdesi:** Disiplinin taşıyıcı ana kolonudur. Burada 6 çekirdek yeterlilik bir arada yükselir.\n- **Ağacın Dalları ve Yaprakları:** Klinik uygulama alanlarını ve toplumda sunulan somut hizmetleri (akut bakım, kronik bakım, koruma) simgeler.\n\n> [!IMPORTANT]\n> Ağacın kökleri zayıflarsa gövde ayakta duramaz; yani hekimin tutumu ve bilimsel temeli olmadan klinik yeterlilikler icra edilemez.",
+   "interactiveElements": [
+    {
+     "id": "k36-s8-q1",
+     "type": "micro_quiz",
+     "question": "WONCA Ağacı modelinde ağacın KÖKLERİ neyi temsil etmektedir?",
+     "options": [
+      {
+       "text": "Hekimin bağlamsal, tutumsal ve bilimsel temel özelliklerini",
+       "isCorrect": true,
+       "explanation": "Hekimin bağlamsal, tutumsal ve bilimsel temel özelliklerini, aile hekimliği disiplininin temel ilkeleriyle ve mevzuattaki yasal çerçeveyle tam olarak örtüşmektedir. Bu klinik yaklaşım birinci basamakta yüksek nitelikli ve sürekli sağlık bakımının güvencesidir."
+      },
+      {
+       "text": "İlaç depolarının finansal gelir tablolarını",
+       "isCorrect": false,
+       "explanation": "Şıkta belirtilen i̇laç depolarının finansal gelir tablolarını ifadesi, farklı bir klinik durum veya basamağa ait bir uygulamayı temsil eder. Bu soruda hedeflenen birinci basamak aile hekimliği çekirdek ilkeleriyle doğrudan örtüşmemektedir."
+      },
+      {
+       "text": "Üçüncü basamak acil ameliyathanelerini",
+       "isCorrect": false,
+       "explanation": "Şıkta belirtilen üçüncü basamak acil ameliyathanelerini ifadesi, farklı bir klinik durum veya basamağa ait bir uygulamayı temsil eder. Bu soruda hedeflenen birinci basamak aile hekimliği çekirdek ilkeleriyle doğrudan örtüşmemektedir."
+      },
+      {
+       "text": "Hastanelerin otopark kapasitesini",
+       "isCorrect": false,
+       "explanation": "Şıkta belirtilen hastanelerin otopark kapasitesini ifadesi, farklı bir klinik durum veya basamağa ait bir uygulamayı temsil eder. Bu soruda hedeflenen birinci basamak aile hekimliği çekirdek ilkeleriyle doğrudan örtüşmemektedir."
+      }
+     ]
+    },
+    {
+     "id": "k36-s8-c1",
+     "type": "cloze_masking",
+     "sentence": "WONCA Ağacı modelinde ağacın gövdesi altı çekirdek yeterliliği simgeler.",
+     "maskedTerm": "gövdesi",
+     "hint": "Ağacın kökleri üzerinde yükselen ana taşıyıcı sütun."
+    },
+    {
+     "id": "k36-s8-w1",
+     "type": "swipe_matching",
+     "title": "WONCA Ağacı Morfoloji Eşleme",
+     "leftCategory": "Kökler ve Gövde",
+     "rightCategory": "Dallar ve Yapraklar",
+     "cards": [
+      {
+       "text": "Temel özellikler: bağlamsal, tutumsal, bilimsel",
+       "category": "left"
+      },
+      {
+       "text": "Klinik pratik ve koruyucu uygulama alanları",
+       "category": "right"
+      },
+      {
+       "text": "Altı çekirdek yeterliliğin oluşturduğu ana kolon",
+       "category": "left"
+      },
+      {
+       "text": "Akut bakım, kronik hastalık yönetimi ve evde sağlık",
+       "category": "right"
+      }
+     ]
+    },
+    {
+     "id": "k36-s8-l1",
+     "type": "spot_the_lie",
+     "topic": "WONCA Ağacı Morfolojisi",
+     "items": [
+      {
+       "text": "Model İsviçre Birinci Basamak Koleji tarafından tasarlanmıştır.",
+       "isLie": false,
+       "explanation": "Bu pedagojik görselleştirme İsviçre koleji tarafından geliştirilmiştir."
+      },
+      {
+       "text": "Ağacın gövdesinde altı çekirdek yeterlilik yer alır.",
+       "isLie": false,
+       "explanation": "Gövde yeterliliklerin entegre biçimde taşındığı sütundur."
+      },
+      {
+       "text": "Ağacın yaprakları hekimlerin maaş bordrolarını simgelemektedir.",
+       "isLie": true,
+       "explanation": "Yapraklar ve dallar klinik uygulama alanlarını simgeler, mali bordro değildir."
+      }
+     ]
+    }
+   ],
+   "bolum": 3,
+   "pdfSayfalari": [
+    14,
+    16
+   ],
+   "sourcePdf": {
+    "name": "y25-k2-36-aile-hekimligine-yaklasim-wonca.pdf",
+    "startPage": 14,
+    "endPage": 16
+   }
+  },
+  {
+   "slideNumber": 9,
+   "title": "[TEKRAR SAYFASI - CHECKPOINT 2] WONCA Modeli ve Ağacın Kökleri",
+   "isCheckpoint": true,
+   "content": "Bu bölümde Leeuwenhorst ilkelerini, WONCA'nın küresel misyonunu ve WONCA Ağacı'nın morfolojisini pekiştirdik.\n\n- **Leeuwenhorst (1974):** Kişisel, kapsamlı ve sürekli birinci basamak bakımının ilk akademik bildirgesidir.\n- **WONCA (1972):** Aile hekimliği kolejlerinin çatı küresel örgütüdür.\n- **Ağaç Yapısı:** Kökler = 3 temel özellik; Gövde = 6 çekirdek yeterlilik; Dallar = Klinik uygulamalar.\n\n> [!NOTE]\n> Ağacın kökleri, hekimin çalıştığı topluma duyarlı olmasını ve etik değerlerle donanmasını sağlar.",
+   "interactiveElements": [
+    {
+     "id": "k36-s9-q1",
+     "type": "micro_quiz",
+     "question": "WONCA Ağacı'nın morfolojik bölümleri ve simgeledikleri alanlarla ilgili hangisi tamamen doğrudur?",
+     "options": [
+      {
+       "text": "Kökler temel özellikleri, gövde 6 çekirdek yeterliliği, dallar klinik uygulamaları simgeler.",
+       "isCorrect": true,
+       "explanation": "Kökler temel özellikleri, gövde 6 çekirdek yeterliliği, dallar klinik uygulamaları simgeler, aile hekimliği disiplininin temel ilkeleriyle ve mevzuattaki yasal çerçeveyle tam olarak örtüşmektedir. Bu klinik yaklaşım birinci basamakta yüksek nitelikli ve sürekli sağlık bakımının güvencesidir."
+      },
+      {
+       "text": "Kökler cerrahi ameliyatları, gövde ilaç fiyatlarını simgeler.",
+       "isCorrect": false,
+       "explanation": "Şıkta belirtilen kökler cerrahi ameliyatları, gövde ilaç fiyatlarını simgeler ifadesi, farklı bir klinik durum veya basamağa ait bir uygulamayı temsil eder. Bu soruda hedeflenen birinci basamak aile hekimliği çekirdek ilkeleriyle doğrudan örtüşmemektedir."
+      },
+      {
+       "text": "Gövde sadece hekimin diploma notunu simgeleyen tek bir çizgidir.",
+       "isCorrect": false,
+       "explanation": "Şıkta belirtilen gövde sadece hekimin diploma notunu simgeleyen tek bir çizgidir ifadesi, farklı bir klinik durum veya basamağa ait bir uygulamayı temsil eder. Bu soruda hedeflenen birinci basamak aile hekimliği çekirdek ilkeleriyle doğrudan örtüşmemektedir."
+      },
+      {
+       "text": "Dallar hekimlerin emeklilik yaşını gösteren takvimdir.",
+       "isCorrect": false,
+       "explanation": "Şıkta belirtilen dallar hekimlerin emeklilik yaşını gösteren takvimdir ifadesi, farklı bir klinik durum veya basamağa ait bir uygulamayı temsil eder. Bu soruda hedeflenen birinci basamak aile hekimliği çekirdek ilkeleriyle doğrudan örtüşmemektedir."
+      }
+     ]
+    },
+    {
+     "id": "k36-s9-t1",
+     "type": "interactive_table",
+     "title": "Bölüm 2 Pekiştirme Tablosu",
+     "tableHeaders": [
+      "Tarihsel / Yapısal Öge",
+      "Açıklama",
+      "Klinik Çıktı"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Leeuwenhorst 1974",
+         "isMasked": false
+        },
+        {
+         "text": "Avrupa ilk görev tanımı",
+         "isMasked": true,
+         "hint": "Kıta genelinde kabul edilen öncü kurucu belge."
+        },
+        {
+         "text": "Disiplin bağımsızlığı",
+         "isMasked": false
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "WONCA 1972",
+         "isMasked": false
+        },
+        {
+         "text": "Dünya Aile Hekimleri Birliği",
+         "isMasked": true,
+         "hint": "Küresel çatı meslek örgütü."
+        },
+        {
+         "text": "Küresel eğitim standardı",
+         "isMasked": false
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k36-s9-w1",
+     "type": "swipe_matching",
+     "title": "Kök Özellikleri Eşleme",
+     "leftCategory": "Bağlamsal Özellik",
+     "rightCategory": "Tutumsal Özellik",
+     "cards": [
+      {
+       "text": "Çalışılan yerel toplumun kültürüne ve koşullarına uyum sağlama",
+       "category": "left"
+      },
+      {
+       "text": "Mesleki etik, empati ve hasta haklarına saygılı duruş sergileme",
+       "category": "right"
+      },
+      {
+       "text": "Bölgenin sosyoekonomik dinamiklerini ve olanaklarını gözetme",
+       "category": "left"
+      },
+      {
+       "text": "Hastayla iletişimde özerkliğe saygı duyma ve güven ilişkisi kurma",
+       "category": "right"
+      }
+     ]
+    },
+    {
+     "id": "k36-s9-l1",
+     "type": "spot_the_lie",
+     "topic": "WONCA Tarihçe ve Model",
+     "items": [
+      {
+       "text": "Ağacın kökleri bağlamsal, tutumsal ve bilimsel boyutlardan beslenir.",
+       "isLie": false,
+       "explanation": "Bu 3 alan hekimin zihinsel ve ahlaki kökleridir."
+      },
+      {
+       "text": "WONCA Ağacı'nın gövdesinde yüz elli farklı çekirdek yeterlilik bulunur.",
+       "isLie": true,
+       "explanation": "Gövdede yüz elli değil, tam olarak altı çekirdek yeterlilik yer alır."
+      },
+      {
+       "text": "Leeuwenhorst grubu Avrupa'da disiplinin akademik temelini atmıştır.",
+       "isLie": false,
+       "explanation": "1974 bildirgesi modern aile hekimliğinin kurucu belgesidir."
+      }
+     ]
+    }
+   ],
+   "bolum": null,
+   "pdfSayfalari": [],
+   "sourcePdf": null
+  },
+  {
+   "slideNumber": 10,
+   "title": "WONCA Ağacı Kökleri: Bağlamsal, Tutumsal ve Bilimsel Özellikler",
+   "content": "Ağacın kökleri, aile hekiminin mesleğini icra ederken dayandığı zihinsel, etik ve bilimsel zemini temsil eder.\n\n- **Bağlamsal Özellikler (Contextual):** Hekimin hizmet verdiği toplumun sosyoekonomik koşullarını, kültürel inançlarını, yerel olanaklarını ve sağlık sisteminin sınırlarını dikkate almasıdır.\n- **Tutumsal Özellikler (Attitudinal):** Hekimin mesleki etik değerlere tam bağlılığı, empatik duruşu, hastanın özerkliğine saygısı ve kendini sürekli geliştirme motivasyonudur.\n- **Bilimsel Özellikler (Scientific):** Klinik kararlarda kanıta dayalı tıp ilkelerini benimseme, eleştirel düşünme ve sürekli tıp eğitimiyle bilgilerini yenileme yetisidir.\n\n> [!NOTE]\n> Birinci basamakta hekim, bilimsel kanıtı yerel toplumun bağlamı ve insani tutumuyla harmanlayarak sanata dönüştürür.",
+   "interactiveElements": [
+    {
+     "id": "k36-s10-q1",
+     "type": "micro_quiz",
+     "question": "Aile hekiminin hastasına yaklaşırken onun inançlarını, yaşam koşullarını ve aile çevresini dikkate alması ağacın hangi kök özelliğidir?",
+     "options": [
+      {
+       "text": "Bağlamsal özellikler",
+       "isCorrect": true,
+       "explanation": "Bağlamsal özellikler, aile hekimliği disiplininin temel ilkeleriyle ve mevzuattaki yasal çerçeveyle tam olarak örtüşmektedir. Bu klinik yaklaşım birinci basamakta yüksek nitelikli ve sürekli sağlık bakımının güvencesidir."
+      },
+      {
+       "text": "Yalnızca cerrahi el becerisi",
+       "isCorrect": false,
+       "explanation": "Şıkta belirtilen yalnızca cerrahi el becerisi ifadesi, farklı bir klinik durum veya basamağa ait bir uygulamayı temsil eder. Bu soruda hedeflenen birinci basamak aile hekimliği çekirdek ilkeleriyle doğrudan örtüşmemektedir."
+      },
+      {
+       "text": "Finansal muhasebe kuralı",
+       "isCorrect": false,
+       "explanation": "Şıkta belirtilen finansal muhasebe kuralı ifadesi, farklı bir klinik durum veya basamağa ait bir uygulamayı temsil eder. Bu soruda hedeflenen birinci basamak aile hekimliği çekirdek ilkeleriyle doğrudan örtüşmemektedir."
+      },
+      {
+       "text": "Radyolojik skopi kullanımı",
+       "isCorrect": false,
+       "explanation": "Şıkta belirtilen radyolojik skopi kullanımı ifadesi, farklı bir klinik durum veya basamağa ait bir uygulamayı temsil eder. Bu soruda hedeflenen birinci basamak aile hekimliği çekirdek ilkeleriyle doğrudan örtüşmemektedir."
+      }
+     ]
+    },
+    {
+     "id": "k36-s10-c1",
+     "type": "cloze_masking",
+     "sentence": "Hekimin etik ilkeleri ve empati yetisi WONCA Ağacı köklerindeki tutumsal özellikler alanında yer alır.",
+     "maskedTerm": "tutumsal",
+     "hint": "Değerler ve ahlaki yaklaşımla ilgili kök boyutu."
+    },
+    {
+     "id": "k36-s10-t1",
+     "type": "interactive_table",
+     "title": "Kök Özellikleri Dağılımı",
+     "tableHeaders": [
+      "Kök Alanı",
+      "Çekirdek Tanım",
+      "Klinik Örnek"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Bağlamsal",
+         "isMasked": false
+        },
+        {
+         "text": "Toplum ve çevre uyumu",
+         "isMasked": true,
+         "hint": "Yerel yaşam şartlarını ve kültürel dokuyu hesaba katma."
+        },
+        {
+         "text": "Yoksul bölgede maliyeti düşük akılcı ilaç seçimi",
+         "isMasked": false
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Bilimsel",
+         "isMasked": false
+        },
+        {
+         "text": "Kanıta dayalı yaklaşım",
+         "isMasked": true,
+         "hint": "Güncel tıp kılavuzlarını izleme."
+        },
+        {
+         "text": "Gereksiz antibiyotik yazımından kaçınma",
+         "isMasked": false
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k36-s10-l1",
+     "type": "spot_the_lie",
+     "topic": "Ağacın Kök İlkeleri",
+     "items": [
+      {
+       "text": "Tutumsal özellikler hekimin etik duruşunu ve empati kapasitesini kapsar.",
+       "isLie": false,
+       "explanation": "Etik ve empati hekimliğin tutumsal omurgasıdır."
+      },
+      {
+       "text": "Bilimsel özellikler hekimin hurafelere göre tedavi vermesini emreder.",
+       "isLie": true,
+       "explanation": "Tam aksine bilimsel özellikler kanıta dayalı tıbbı ve eleştirel düşünceyi zorunlu kılar."
+      },
+      {
+       "text": "Bağlamsal özellikler toplumun kültürel dinamiklerini gözetmeyi gerektirir.",
+       "isLie": false,
+       "explanation": "Toplumsal bağlam klinik iletişimin başarısını doğrudan belirler."
+      }
+     ]
+    }
+   ],
+   "bolum": 4,
+   "pdfSayfalari": [
+    17,
+    19
+   ],
+   "sourcePdf": {
+    "name": "y25-k2-36-aile-hekimligine-yaklasim-wonca.pdf",
+    "startPage": 17,
+    "endPage": 19
+   }
+  },
+  {
+   "slideNumber": 11,
+   "title": "Çekirdek Yeterlilik 1: Birinci Basamak Yönetimi",
+   "content": "Birinci Basamak Yönetimi (Primary Care Management), aile hekimliği disiplininin ilk ve en temel çekirdek yeterliliğidir.\n\n- **İlk Temas Noktası:** Sağlık sistemiyle ilk tıbbi karşılaşmayı sağlar; yaş, cinsiyet veya hastalık kısıtlaması olmaksızın herkese açıktır.\n- **Ayrışmamış Sağlık Sorunları:** Hastalar sıklıkla henüz net bir tanı almamış, birden çok organı ilgilendiren belirsiz semptomlarla başvurur. Hekim bu karmaşık tabloları birinci basamakta karşılar.\n- **Sevk Zinciri Koordinasyonu:** Gerektiğinde hastayı ikinci veya üçüncü basamağa sevk eder; konsültasyon sonuçlarını takip ederek hastanın bakımını koordine eder.\n\n> [!IMPORTANT]\n> Aile hekimi bir 'kapı tutucu' (gatekeeper) değil, hastanın sağlık sistemi içindeki 'rehberi ve savunucusu' (navigator and advocate) konumundadır.",
+   "interactiveElements": [
+    {
+     "id": "k36-s11-q1",
+     "type": "micro_quiz",
+     "question": "WONCA'nın birinci basamak yönetimi yeterliliği kapsamında aile hekiminin üstlendiği rol hangisidir?",
+     "options": [
+      {
+       "text": "İlk temas noktası olma, ayrışmamış semptomları karşılama ve sevk zincirini koordine etme",
+       "isCorrect": true,
+       "explanation": "Birinci basamak yönetimi sağlık sistemine açık erişim, ayrışmamış sorun yönetimi ve basamaklar arası koordinasyonu içerir. Doğru yeterlilik tanımıdır."
+      },
+      {
+       "text": "Hastaların hastaneye gitmesini polis zoruyla engelleme",
+       "isCorrect": false,
+       "explanation": "Şıkta belirtilen hastaların hastaneye gitmesini polis zoruyla engelleme ifadesi, farklı bir klinik durum veya basamağa ait bir uygulamayı temsil eder. Bu soruda hedeflenen birinci basamak aile hekimliği çekirdek ilkeleriyle doğrudan örtüşmemektedir."
+      },
+      {
+       "text": "Sadece laboratuvar kan tüplerini yıkama görevi",
+       "isCorrect": false,
+       "explanation": "Şıkta belirtilen sadece laboratuvar kan tüplerini yıkama görevi ifadesi, farklı bir klinik durum veya basamağa ait bir uygulamayı temsil eder. Bu soruda hedeflenen birinci basamak aile hekimliği çekirdek ilkeleriyle doğrudan örtüşmemektedir."
+      },
+      {
+       "text": "Hiçbir hastayı kabul etmeyip tüm başvuruları reddetme",
+       "isCorrect": false,
+       "explanation": "Şıkta belirtilen hiçbir hastayı kabul etmeyip tüm başvuruları reddetme ifadesi, farklı bir klinik durum veya basamağa ait bir uygulamayı temsil eder. Bu soruda hedeflenen birinci basamak aile hekimliği çekirdek ilkeleriyle doğrudan örtüşmemektedir."
+      }
+     ]
+    },
+    {
+     "id": "k36-s11-c1",
+     "type": "cloze_masking",
+     "sentence": "Birinci basamak yönetimi sağlık sistemiyle ilk tıbbi temas noktasını oluşturur ve açık erişim sağlar.",
+     "maskedTerm": "ilk tıbbi temas",
+     "hint": "Sağlık sistemine hastanın adım attığı başlangıç noktası."
+    },
+    {
+     "id": "k36-s11-t1",
+     "type": "interactive_table",
+     "title": "Birinci Basamak Yönetimi Boyutları",
+     "tableHeaders": [
+      "Yönetim Boyutu",
+      "Klinik Eylem",
+      "Sistemik Yarar"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "İlk Temas Noktası",
+         "isMasked": false
+        },
+        {
+         "text": "Açık ve sınırsız erişim sunma",
+         "isMasked": true,
+         "hint": "Herkesin rahatça başvurabilmesi."
+        },
+        {
+         "text": "Erken tanı ve acil müdahale fırsatı",
+         "isMasked": false
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Koordinasyon",
+         "isMasked": false
+        },
+        {
+         "text": "Diğer uzmanlıklarla iletişim kurma",
+         "isMasked": true,
+         "hint": "Basamaklar arası bilgi akışını sağlama."
+        },
+        {
+         "text": "Mükerrer tetkik ve harcamayı önleme",
+         "isMasked": false
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k36-s11-l1",
+     "type": "spot_the_lie",
+     "topic": "Birinci Basamak Yönetimi",
+     "items": [
+      {
+       "text": "Aile hekimi ayrışmamış erken dönem semptomları başarıyla karşılar.",
+       "isLie": false,
+       "explanation": "Birinci basamağa gelen olguların çoğu henüz ayrışmamış semptom düzeyindedir."
+      },
+      {
+       "text": "Aile hekimliği birinci basamakta sevk zincirinin koordinatörüdür.",
+       "isLie": false,
+       "explanation": "Hastanın üst basamaklardaki sürecini takip ederek süreklilik sağlar."
+      },
+      {
+       "text": "Birinci basamak yönetimi sadece terminal kanser hastalarının yataklı bakımını kapsar.",
+       "isLie": true,
+       "explanation": "Birinci basamak yönetimi tüm sağlıklı ve hasta nüfusun başlangıç ve izlem basamağıdır."
+      }
+     ]
+    }
+   ],
+   "bolum": 4,
+   "pdfSayfalari": [
+    20,
+    21
+   ],
+   "sourcePdf": {
+    "name": "y25-k2-36-aile-hekimligine-yaklasim-wonca.pdf",
+    "startPage": 20,
+    "endPage": 21
+   }
+  },
+  {
+   "slideNumber": 12,
+   "title": "Çekirdek Yeterlilik 2: Kişi Merkezli Bakım ve Ortak Karar",
+   "content": "Kişi Merkezli Bakım (Person-Centred Care), aile hekimliğinin kalbini oluşturan ikinci çekirdek yeterliliktir.\n\n- **Bireye Odaklanma:** Hekim sadece hastalığı (disease) değil, hastanın bu durumu nasıl deneyimlediğini (illness) ve acısını anlamaya odaklanır.\n- **Hekim-Hasta Ortaklığı:** Paternalist (baskıcı) model yerine, hekim ve hastanın eşit ortaklar olarak tedavi hedeflerini birlikte belirlediği modeldir.\n- **Ortak Karar Verme (Shared Decision Making):** Hekim tıbbi seçenekleri, fayda ve riskleri açıklar; hastanın inanç, değer ve yaşam tarzına en uygun tedaviye birlikte karar verilir.\n\n> [!IMPORTANT]\n> Aile hekimliği 'hastalık merkezli' değil, 'kişi merkezli' bir tıp felsefesini savunur.",
+   "interactiveElements": [
+    {
+     "id": "k36-s12-q1",
+     "type": "micro_quiz",
+     "question": "Kişi merkezli bakım yaklaşımının paternalist (otoriter) hekimlik modelinden en belirgin farkı nedir?",
+     "options": [
+      {
+       "text": "Tedavi kararlarının hastanın değerleri gözetilerek ortak karar verme süreciyle alınması",
+       "isCorrect": true,
+       "explanation": "Tedavi kararlarının hastanın değerleri gözetilerek ortak karar verme süreciyle alınması, aile hekimliği disiplininin temel ilkeleriyle ve mevzuattaki yasal çerçeveyle tam olarak örtüşmektedir. Bu klinik yaklaşım birinci basamakta yüksek nitelikli ve sürekli sağlık bakımının güvencesidir."
+      },
+      {
+       "text": "Hekimin hastaya hiçbir bilgi vermeden sadece emirler yağdırması",
+       "isCorrect": false,
+       "explanation": "Şıkta belirtilen hekimin hastaya hiçbir bilgi vermeden sadece emirler yağdırması ifadesi, farklı bir klinik durum veya basamağa ait bir uygulamayı temsil eder. Bu soruda hedeflenen birinci basamak aile hekimliği çekirdek ilkeleriyle doğrudan örtüşmemektedir."
+      },
+      {
+       "text": "Hastanın sadece laboratuvardaki kan tüpü olarak görülmesi",
+       "isCorrect": false,
+       "explanation": "Şıkta belirtilen hastanın sadece laboratuvardaki kan tüpü olarak görülmesi ifadesi, farklı bir klinik durum veya basamağa ait bir uygulamayı temsil eder. Bu soruda hedeflenen birinci basamak aile hekimliği çekirdek ilkeleriyle doğrudan örtüşmemektedir."
+      },
+      {
+       "text": "Hekimin hastayla görüşmeyi beş saniyede bitirmesi",
+       "isCorrect": false,
+       "explanation": "Şıkta belirtilen hekimin hastayla görüşmeyi beş saniyede bitirmesi ifadesi, farklı bir klinik durum veya basamağa ait bir uygulamayı temsil eder. Bu soruda hedeflenen birinci basamak aile hekimliği çekirdek ilkeleriyle doğrudan örtüşmemektedir."
+      }
+     ]
+    },
+    {
+     "id": "k36-s12-c1",
+     "type": "cloze_masking",
+     "sentence": "Aile hekimliği hastalık merkezli tıp anlayışı yerine kişi merkezli yaklaşımı temel alır.",
+     "maskedTerm": "kişi merkezli",
+     "hint": "Bireyi ve insanı odağına alan klinik yaklaşım modeli."
+    },
+    {
+     "id": "k36-s12-w1",
+     "type": "swipe_matching",
+     "title": "Hastalık ve Kişi Merkezli Ayrımı",
+     "leftCategory": "Hastalık Merkezli Model",
+     "rightCategory": "Kişi Merkezli Model",
+     "cards": [
+      {
+       "text": "Yalnızca organ patolojisine ve laboratuvar değerine odaklanma",
+       "category": "left"
+      },
+      {
+       "text": "Hastanın korkularını, beklentilerini ve duygusal deneyimini anlama",
+       "category": "right"
+      },
+      {
+       "text": "Hekimin tek taraflı olarak tedavi planını dikte etmesi",
+       "category": "left"
+      },
+      {
+       "text": "Hekim ve hastanın tedavi seçeneklerinde ortak uzlaşmaya varması",
+       "category": "right"
+      }
+     ]
+    },
+    {
+     "id": "k36-s12-l1",
+     "type": "spot_the_lie",
+     "topic": "Kişi Merkezli Bakım İlkeleri",
+     "items": [
+      {
+       "text": "Ortak karar verme sürecinde hastanın değer ve tercihleri saygıyla dinlenir.",
+       "isLie": false,
+       "explanation": "Hastanın değerleri tedavinin sürdürülebilirliğini sağlar."
+      },
+      {
+       "text": "Kişi merkezli yaklaşım hekim ile hasta arasında uzun süreli güven ilişkisi kurar.",
+       "isLie": false,
+       "explanation": "Güven ortamı tanısal doğruluğu ve sağaltım başarısını artırır."
+      },
+      {
+       "text": "Kişi merkezli bakımda hastanın hiçbir soru sormasına izin verilmez.",
+       "isLie": true,
+       "explanation": "Tam aksine soru sorma, bilgi alma ve tartışma kişi merkezli bakımın esasıdır."
+      }
+     ]
+    }
+   ],
+   "bolum": 5,
+   "pdfSayfalari": [
+    22,
+    25
+   ],
+   "sourcePdf": {
+    "name": "y25-k2-36-aile-hekimligine-yaklasim-wonca.pdf",
+    "startPage": 22,
+    "endPage": 25
+   }
+  },
+  {
+   "slideNumber": 13,
+   "title": "Çekirdek Yeterlilik 3: Özgül Problem Çözme Becerileri",
+   "content": "Özgül Problem Çözme Becerileri (Specific Problem Solving Skills), birinci basamağın klinik epidemiyolojisine dayanan üçüncü çekirdek yeterliliktir.\n\n- **Ayrışmamış Erken Semptomlar:** Birinci basamakta hastalıklar hastanedeki gibi klasik ders kitabı tablolarıyla gelmez; halsizlik, baş ağrısı gibi belirsiz şikayetlerle başlar.\n- **Prevalans ve Epidemiyoloji:** Hekim tanı koyarken yerel toplumdaki hastalık sıklığını (prevalans) gözetir; nadir hastalıklar yerine sık görülen nedenleri öncelikle eler.\n- **Zamanı Tanı Aracı Olarak Kullanma:** Acil kırmızı bayrak bulguları olmayan hastalarda, semptomların zamana bağlı seyrini izlemek gereksiz tetkik yükünü engeller.\n\n> [!NOTE]\n> Aile hekimi 'zamanın tanısal gücünü' ve yakın takip randevularını çok güçlü bir teşhis yöntemi olarak kullanır.",
+   "interactiveElements": [
+    {
+     "id": "k36-s13-q1",
+     "type": "micro_quiz",
+     "question": "Birinci basamakta belirsiz semptomlarla başvuran ve alarm bulgusu olmayan hastada hekimin zamanı tanı aracı olarak kullanması ne demektir?",
+     "options": [
+      {
+       "text": "Acil tehlike olmayan hastayı yakın takip randevusuna çağırarak semptomun seyrini izlemek",
+       "isCorrect": true,
+       "explanation": "Acil tehlike olmayan hastayı yakın takip randevusuna çağırarak semptomun seyrini izlemek, aile hekimliği disiplininin temel ilkeleriyle ve mevzuattaki yasal çerçeveyle tam olarak örtüşmektedir. Bu klinik yaklaşım birinci basamakta yüksek nitelikli ve sürekli sağlık bakımının güvencesidir."
+      },
+      {
+       "text": "Hastayı poliklinik bekleme odasında saatlerce oturtmak",
+       "isCorrect": false,
+       "explanation": "Şıkta belirtilen hastayı poliklinik bekleme odasında saatlerce oturtmak ifadesi, farklı bir klinik durum veya basamağa ait bir uygulamayı temsil eder. Bu soruda hedeflenen birinci basamak aile hekimliği çekirdek ilkeleriyle doğrudan örtüşmemektedir."
+      },
+      {
+       "text": "Hastalığın seyrini izlemeden hemen en pahalı tomografiyi çektirmek",
+       "isCorrect": false,
+       "explanation": "Şıkta belirtilen hastalığın seyrini izlemeden hemen en pahalı tomografiyi çektirmek ifadesi, farklı bir klinik durum veya basamağa ait bir uygulamayı temsil eder. Bu soruda hedeflenen birinci basamak aile hekimliği çekirdek ilkeleriyle doğrudan örtüşmemektedir."
+      },
+      {
+       "text": "Hastaya bir daha asla sağlık merkezine gelmemesini söylemek",
+       "isCorrect": false,
+       "explanation": "Şıkta belirtilen hastaya bir daha asla sağlık merkezine gelmemesini söylemek ifadesi, farklı bir klinik durum veya basamağa ait bir uygulamayı temsil eder. Bu soruda hedeflenen birinci basamak aile hekimliği çekirdek ilkeleriyle doğrudan örtüşmemektedir."
+      }
+     ]
+    },
+    {
+     "id": "k36-s13-c1",
+     "type": "cloze_masking",
+     "sentence": "Aile hekimliği özgül problem çözme yeterliliğinde zamanı tanı aracı olarak kullanarak gereksiz tetkikleri önler.",
+     "maskedTerm": "zamanı tanı aracı",
+     "hint": "Semptomların doğal seyrini izleme stratejisi."
+    },
+    {
+     "id": "k36-s13-t1",
+     "type": "interactive_table",
+     "title": "Problem Çözme Karar Matrisi",
+     "tableHeaders": [
+      "Klinik Durum",
+      "Hekimin Yaklaşımı",
+      "Yöntem İlkesi"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Kırmızı Bayrak (Alarm)",
+         "isMasked": false
+        },
+        {
+         "text": "Acil tetkik ve hastane sevki",
+         "isMasked": true,
+         "hint": "Hayati tehlikeyi derhal ele alma."
+        },
+        {
+         "text": "Hızlı müdahale ve yaşam kurtarma",
+         "isMasked": false
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Ayrışmamış Hafif Semptom",
+         "isMasked": false
+        },
+        {
+         "text": "Güvenli izlem ve zamanı kullanma",
+         "isMasked": true,
+         "hint": "Alarm bulgusu yoksa doğal klinik sürece fırsat tanıma."
+        },
+        {
+         "text": "Gereksiz radyasyon ve maliyetten kaçınma",
+         "isMasked": false
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k36-s13-l1",
+     "type": "spot_the_lie",
+     "topic": "Özgül Problem Çözme İlkeleri",
+     "items": [
+      {
+       "text": "Aile hekimliği ayrışmamış semptomları epidemiyolojik sıklık bilgisiyle yönetir.",
+       "isLie": false,
+       "explanation": "Toplumdaki prevalans verisi birinci basamakta olasılık hesabının temelidir."
+      },
+      {
+       "text": "Aile hekimi her basit baş ağrısına aynı gün anjiyografi ve beyin biyopsisi yaptırmalıdır.",
+       "isLie": true,
+       "explanation": "Gereksiz invaziv tetkikler hastaya zarar verir; basamaklı tanısal yaklaşım esastır."
+      },
+      {
+       "text": "Zamanı tanı aracı olarak kullanırken hastaya net alarm bulguları anlatılır.",
+       "isLie": false,
+       "explanation": "Güvenli izlemin vazgeçilmez kuralı hastayı kırmızı bayraklar konusunda eğitmektir."
+      }
+     ]
+    }
+   ],
+   "bolum": 5,
+   "pdfSayfalari": [
+    26,
+    27
+   ],
+   "sourcePdf": {
+    "name": "y25-k2-36-aile-hekimligine-yaklasim-wonca.pdf",
+    "startPage": 26,
+    "endPage": 27
+   }
+  },
+  {
+   "slideNumber": 14,
+   "title": "[TEKRAR SAYFASI - CHECKPOINT 3] İlk Üç Çekirdek Yeterlilik",
+   "isCheckpoint": true,
+   "content": "Bu bölümde WONCA Ağacı gövdesindeki ilk üç çekirdek yeterliliği pekiştirdik.\n\n- **1. Birinci Basamak Yönetimi:** Açık erişim, ilk temas noktası olma, ayrışmamış sorunlar ve basamaklar arası koordinasyon.\n- **2. Kişi Merkezli Bakım:** Hastalık değil kişi odaklı yaklaşım, hekim-hasta ortaklığı ve ortak karar verme.\n- **3. Özgül Problem Çözme Becerileri:** Erken evre semptomlar, prevalans hesabı ve zamanı tanı aracı olarak kullanma.\n\n> [!NOTE]\n> Bu üç yeterlilik hekimin klinik odasındaki günlük karar verme algoritmasını doğrudan belirler.",
+   "interactiveElements": [
+    {
+     "id": "k36-s14-q1",
+     "type": "micro_quiz",
+     "question": "Aşağıdakilerden hangisi WONCA'nın ilk üç çekirdek yeterliliğinden biri değildir?",
+     "options": [
+      {
+       "text": "Yalnızca üçüncü basamak beyin cerrahisi ameliyatlarını yönetme",
+       "isCorrect": true,
+       "explanation": "Yalnızca üçüncü basamak beyin cerrahisi ameliyatlarını yönetme, aile hekimliği disiplininin temel ilkeleriyle ve mevzuattaki yasal çerçeveyle tam olarak örtüşmektedir. Bu klinik yaklaşım birinci basamakta yüksek nitelikli ve sürekli sağlık bakımının güvencesidir."
+      },
+      {
+       "text": "Birinci basamak yönetimi",
+       "isCorrect": false,
+       "explanation": "Şıkta belirtilen birinci basamak yönetimi ifadesi, farklı bir klinik durum veya basamağa ait bir uygulamayı temsil eder. Bu soruda hedeflenen birinci basamak aile hekimliği çekirdek ilkeleriyle doğrudan örtüşmemektedir."
+      },
+      {
+       "text": "Kişi merkezli bakım",
+       "isCorrect": false,
+       "explanation": "Şıkta belirtilen kişi merkezli bakım ifadesi, farklı bir klinik durum veya basamağa ait bir uygulamayı temsil eder. Bu soruda hedeflenen birinci basamak aile hekimliği çekirdek ilkeleriyle doğrudan örtüşmemektedir."
+      },
+      {
+       "text": "Özgül problem çözme becerileri",
+       "isCorrect": false,
+       "explanation": "Şıkta belirtilen özgül problem çözme becerileri ifadesi, farklı bir klinik durum veya basamağa ait bir uygulamayı temsil eder. Bu soruda hedeflenen birinci basamak aile hekimliği çekirdek ilkeleriyle doğrudan örtüşmemektedir."
+      }
+     ]
+    },
+    {
+     "id": "k36-s14-t1",
+     "type": "interactive_table",
+     "title": "İlk Üç Çekirdek Yeterlilik Özeti",
+     "tableHeaders": [
+      "Yeterlilik No",
+      "Yeterlilik Adı",
+      "Çekirdek Eylem"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "1. Yeterlilik",
+         "isMasked": false
+        },
+        {
+         "text": "Birinci Basamak Yönetimi",
+         "isMasked": true,
+         "hint": "İlk temas ve koordinasyon yeterliliği."
+        },
+        {
+         "text": "Açık erişim ve sevk koordinasyonu",
+         "isMasked": false
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "2. Yeterlilik",
+         "isMasked": false
+        },
+        {
+         "text": "Kişi Merkezli Bakım",
+         "isMasked": true,
+         "hint": "Bireyi odağına alan klinik yaklaşım."
+        },
+        {
+         "text": "Ortak karar verme ve güven",
+         "isMasked": false
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "3. Yeterlilik",
+         "isMasked": false
+        },
+        {
+         "text": "Özgül Problem Çözme",
+         "isMasked": true,
+         "hint": "Ayrışmamış semptom yönetimi."
+        },
+        {
+         "text": "Zamanı tanı aracı olarak kullanma",
+         "isMasked": false
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k36-s14-w1",
+     "type": "swipe_matching",
+     "title": "Yeterlilik Kavram Eşleme",
+     "leftCategory": "Yönetim ve İletişim",
+     "rightCategory": "Klinik Problem Çözme",
+     "cards": [
+      {
+       "text": "Sağlık sistemine ilk temas noktası oluşturma",
+       "category": "left"
+      },
+      {
+       "text": "Ayrışmamış semptomlarda prevalansı gözetme",
+       "category": "right"
+      },
+      {
+       "text": "Hasta ile ortak klinik karar verme süreci",
+       "category": "left"
+      },
+      {
+       "text": "Zamanı tanısal bir izlem aracı olarak kullanma",
+       "category": "right"
+      }
+     ]
+    },
+    {
+     "id": "k36-s14-l1",
+     "type": "spot_the_lie",
+     "topic": "İlk Üç Yeterlilik Pekiştirme",
+     "items": [
+      {
+       "text": "Kişi merkezli bakım hastanın değerlerini ve korkularını anlamayı hedefler.",
+       "isLie": false,
+       "explanation": "Hastanın içsel deneyimi bakımın merkezindedir."
+      },
+      {
+       "text": "Aile hekimi sevk zincirini koordine ederek hastayı yalnız bırakmaz.",
+       "isLie": false,
+       "explanation": "Süreklilik sevk sonrasında da devam eder."
+      },
+      {
+       "text": "Aile hekimliğinde tüm tanılar ilk otuz saniyede konmak zorundadır, zaman kullanılamaz.",
+       "isLie": true,
+       "explanation": "Zamanı tanı aracı olarak kullanmak disiplinin en güçlü ayırt edici metodudur."
+      }
+     ]
+    }
+   ],
+   "bolum": null,
+   "pdfSayfalari": [],
+   "sourcePdf": null
+  },
+  {
+   "slideNumber": 15,
+   "title": "Çekirdek Yeterlilik 4: Kapsamlı Yaklaşım ve Süreklilik",
+   "content": "Kapsamlı Yaklaşım (Comprehensive Approach), aile hekiminin dördüncü çekirdek yeterliliğidir ve sağlık hizmetlerinin entegrasyonunu sağlar.\n\n- **Eşzamanlı Yönetim:** Aile hekimi akut şikayetle (örneğin boğaz ağrısı) gelen bir hastanın aynı vizitte kronik hastalıklarını (hipertansiyon, diyabet) da kontrol eder.\n- **Koruyucu Hizmet Fırsatları:** Her poliklinik başvurusu kanser taramaları, aşı güncellemesi ve sigara bırakma danışmanlığı için bir koruyucu hekimlik fırsatı olarak değerlendirilir.\n- **Bakımın Sürekliliği (Continuity of Care):** Hasta hekim ilişkisi tek bir hastalık dönemiyle sınırlı değildir; doğumdan ölüme kadar yaşamın tüm evrelerinde devam eder.\n\n> [!IMPORTANT]\n> Aile hekimliği sağlık sorunlarını birbirinden kopuk parçalar halinde değil, tek bir yaşam çizgisi üzerinde kapsamlı olarak yönetir.",
+   "interactiveElements": [
+    {
+     "id": "k36-s15-q1",
+     "type": "micro_quiz",
+     "question": "Aile hekiminin akut farenjit şikayetiyle gelen 52 yaşındaki bir hastada aynı vizitte tansiyon ölçümü yapması ve kolorektal kanser tarama kitini vermesi hangi yeterliliği gösterir?",
+     "options": [
+      {
+       "text": "Kapsamlı yaklaşım",
+       "isCorrect": true,
+       "explanation": "Kapsamlı yaklaşım, aile hekimliği disiplininin temel ilkeleriyle ve mevzuattaki yasal çerçeveyle tam olarak örtüşmektedir. Bu klinik yaklaşım birinci basamakta yüksek nitelikli ve sürekli sağlık bakımının güvencesidir."
+      },
+      {
+       "text": "Yalnızca adli tıp otopsi yönetimi",
+       "isCorrect": false,
+       "explanation": "Şıkta belirtilen yalnızca adli tıp otopsi yönetimi ifadesi, farklı bir klinik durum veya basamağa ait bir uygulamayı temsil eder. Bu soruda hedeflenen birinci basamak aile hekimliği çekirdek ilkeleriyle doğrudan örtüşmemektedir."
+      },
+      {
+       "text": "Acil cerrahi laparotomi endikasyonu",
+       "isCorrect": false,
+       "explanation": "Şıkta belirtilen acil cerrahi laparotomi endikasyonu ifadesi, farklı bir klinik durum veya basamağa ait bir uygulamayı temsil eder. Bu soruda hedeflenen birinci basamak aile hekimliği çekirdek ilkeleriyle doğrudan örtüşmemektedir."
+      },
+      {
+       "text": "Hastaya gereksiz yere ceza verme tutumu",
+       "isCorrect": false,
+       "explanation": "Şıkta belirtilen hastaya gereksiz yere ceza verme tutumu ifadesi, farklı bir klinik durum veya basamağa ait bir uygulamayı temsil eder. Bu soruda hedeflenen birinci basamak aile hekimliği çekirdek ilkeleriyle doğrudan örtüşmemektedir."
+      }
+     ]
+    },
+    {
+     "id": "k36-s15-c1",
+     "type": "cloze_masking",
+     "sentence": "Kapsamlı yaklaşım akut ve kronik sağlık sorunlarını aynı vizitte yöneterek koruyucu hekimliği entegre eder.",
+     "maskedTerm": "Kapsamlı yaklaşım",
+     "hint": "Tüm sağlık boyutlarını birleştiren dördüncü çekirdek yeterlilik."
+    },
+    {
+     "id": "k36-s15-t1",
+     "type": "interactive_table",
+     "title": "Kapsamlı Yaklaşım ve Süreklilik Matrisi",
+     "tableHeaders": [
+      "Hizmet Boyutu",
+      "Klinik Uygulama",
+      "Uzun Vadeli Kazanım"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Akut ve Kronik Entegrasyon",
+         "isMasked": false
+        },
+        {
+         "text": "Eşzamanlı hastalık yönetimi",
+         "isMasked": true,
+         "hint": "Birden çok patolojiyi aynı anda ele alma."
+        },
+        {
+         "text": "Komplikasyonların erken önlenmesi",
+         "isMasked": false
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "İlişkisel Süreklilik",
+         "isMasked": false
+        },
+        {
+         "text": "Yaşam boyu takip ve güven",
+         "isMasked": true,
+         "hint": "Yıllar süren hekim hasta bağı."
+        },
+        {
+         "text": "Gereksiz hastane yatışlarında azalma",
+         "isMasked": false
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k36-s15-l1",
+     "type": "spot_the_lie",
+     "topic": "Kapsamlı Yaklaşım İlkeleri",
+     "items": [
+      {
+       "text": "Kapsamlı yaklaşımda her vizit koruyucu hekimlik için bir fırsat penceresidir.",
+       "isLie": false,
+       "explanation": "Fırsatçı tarama ve sağlığı geliştirme birinci basamağın temel kuralıdır."
+      },
+      {
+       "text": "Aile hekimi sadece hastanın söylediği tek bir şikayete bakar, tansiyonu 200 olsa bile ölçmez.",
+       "isLie": true,
+       "explanation": "Kapsamlı yaklaşım hastayı bütüncül değerlendirmeyi ve riskleri tespit etmeyi gerektirir."
+      },
+      {
+       "text": "Bakımın sürekliliği tanısal doğruluğu ve hastanın tedavi uyumunu belirgin artırır.",
+       "isLie": false,
+       "explanation": "Süreklilik birinci basamağın kanıtlanmış en güçlü klinik avantajıdır."
+      }
+     ]
+    }
+   ],
+   "bolum": 6,
+   "pdfSayfalari": [
+    28,
+    29
+   ],
+   "sourcePdf": {
+    "name": "y25-k2-36-aile-hekimligine-yaklasim-wonca.pdf",
+    "startPage": 28,
+    "endPage": 29
+   }
+  },
+  {
+   "slideNumber": 16,
+   "title": "Çekirdek Yeterlilik 5: Toplum Yönelimli Olma ve Yerel İhtiyaçlar",
+   "content": "Toplum Yönelimli Olma (Community Orientation), hekimin bireysel bakım ile halk sağlığı arasında kurduğu köprüdür.\n\n- **Bireyden Topluma:** Aile hekimi sadece muayenehanesine başvuran bireyi değil, kendisine kayıtlı tüm nüfusu ve içinde yaşadığı mahalleyi düşünür.\n- **Yerel Epidemiyoloji:** Bölgede sık görülen bulaşıcı hastalıkları, su ve çevre sanitasyonu sorunlarını, mesleki maruziyetleri yakından izler.\n- **Toplum Kaynaklarını Kullanma:** Sosyal yardım kurumları, yerel yönetimler ve toplum merkezleriyle işbirliği yaparak dezavantajlı grupları korur.\n\n> [!NOTE]\n> Toplum yönelimli aile hekimi, 'klinikte tek bir ağacı tedavi ederken bütün ormanın sağlığını gözeten' bilge bir hekimdir.",
+   "interactiveElements": [
+    {
+     "id": "k36-s16-q1",
+     "type": "micro_quiz",
+     "question": "WONCA'nın toplum yönelimli olma çekirdek yeterliliği hekimden neyi talep eder?",
+     "options": [
+      {
+       "text": "Bireysel klinik bakımı kayıtlı toplumun sağlık gereksinimleri ve yerel epidemiyolojisiyle harmanlamayı",
+       "isCorrect": true,
+       "explanation": "Toplum yönelimi birey ile yerel halk sağlığı arasında bağ kurmayı ve kaynakları toplum yararına kullanmayı gerektirir. Doğru yeterlilik ilkesidir."
+      },
+      {
+       "text": "Yalnızca zengin semtlerde özel muayenehane açarak toplumu dışlamayı",
+       "isCorrect": false,
+       "explanation": "Şıkta belirtilen yalnızca zengin semtlerde özel muayenehane açarak toplumu dışlamayı ifadesi, farklı bir klinik durum veya basamağa ait bir uygulamayı temsil eder. Bu soruda hedeflenen birinci basamak aile hekimliği çekirdek ilkeleriyle doğrudan örtüşmemektedir."
+      },
+      {
+       "text": "Bölgede salgın hastalık çıktığında sağlık müdürlüğünden saklamayı",
+       "isCorrect": false,
+       "explanation": "Şıkta belirtilen bölgede salgın hastalık çıktığında sağlık müdürlüğünden saklamayı ifadesi, farklı bir klinik durum veya basamağa ait bir uygulamayı temsil eder. Bu soruda hedeflenen birinci basamak aile hekimliği çekirdek ilkeleriyle doğrudan örtüşmemektedir."
+      },
+      {
+       "text": "Kayıtlı nüfusun aşı oranlarını sıfıra indirmeyi",
+       "isCorrect": false,
+       "explanation": "Şıkta belirtilen kayıtlı nüfusun aşı oranlarını sıfıra indirmeyi ifadesi, farklı bir klinik durum veya basamağa ait bir uygulamayı temsil eder. Bu soruda hedeflenen birinci basamak aile hekimliği çekirdek ilkeleriyle doğrudan örtüşmemektedir."
+      }
+     ]
+    },
+    {
+     "id": "k36-s16-c1",
+     "type": "cloze_masking",
+     "sentence": "Toplum yönelimli olma yeterliliği bireysel klinik uygulamayı yerel toplumun epidemiyolojik verileriyle harmanlar.",
+     "maskedTerm": "Toplum yönelimli",
+     "hint": "Kayıtlı nüfusun gereksinimlerini gözeten beşinci çekirdek yeterlilik."
+    },
+    {
+     "id": "k36-s16-t1",
+     "type": "interactive_table",
+     "title": "Toplum Yönelimi Uygulama Alanları",
+     "tableHeaders": [
+      "Eylem Alanı",
+      "Hekimin Rolü",
+      "Toplumsal Sonuç"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Yerel Salgın Kontrolü",
+         "isMasked": false
+        },
+        {
+         "text": "Vakaları erken bildirip filyasyonu destekleme",
+         "isMasked": true,
+         "hint": "Bulaşıcı hastalığı kaynağında kesme."
+        },
+        {
+         "text": "Bulaş zincirinin kırılması",
+         "isMasked": false
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Kırılgan Grup İzlemi",
+         "isMasked": false
+        },
+        {
+         "text": "Yalnız yaşayan yaşlı ve engellileri tarama",
+         "isMasked": true,
+         "hint": "Dezavantajlı nüfusa yerinde ulaşma."
+        },
+        {
+         "text": "Sosyal adaletin ve sağlığın korunması",
+         "isMasked": false
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k36-s16-l1",
+     "type": "spot_the_lie",
+     "topic": "Toplum Yönelimli Olma İlkeleri",
+     "items": [
+      {
+       "text": "Aile hekimi bölgesindeki sosyoekonomik risk faktörlerini hesaba katar.",
+       "isLie": false,
+       "explanation": "Sosyoekonomik durum hastalıkların sıklığını ve tedavisini doğrudan etkiler."
+      },
+      {
+       "text": "Toplum kaynakları ve sosyal kurumlarla işbirliği yapmak hekimin gücünü artırır.",
+       "isLie": false,
+       "explanation": "Entegre toplum desteği hastanın iyilik halini yükseltir."
+      },
+      {
+       "text": "Aile hekimi toplumun sağlık gereksinimlerini tamamen görmezden gelmek zorundadır.",
+       "isLie": true,
+       "explanation": "Toplum gereksinimlerini gözetmek beşinci çekirdek yeterliliğin temel şartıdır."
+      }
+     ]
+    }
+   ],
+   "bolum": 6,
+   "pdfSayfalari": [
+    30,
+    31
+   ],
+   "sourcePdf": {
+    "name": "y25-k2-36-aile-hekimligine-yaklasim-wonca.pdf",
+    "startPage": 30,
+    "endPage": 31
+   }
+  },
+  {
+   "slideNumber": 17,
+   "title": "Çekirdek Yeterlilik 6: Bütüncül (Holistik) Yaklaşım ve Biyopsikososyal Model",
+   "content": "Bütüncül Yaklaşım (Holistic Approach), George Engel'in Biyopsikososyal Modeli'ni temel alan altıncı çekirdek yeterliliktir.\n\n- **Biyopsikososyal Model:** İnsan sağlığı ve hastalıkları yalnızca biyolojik mekanizmalarla açıklanamaz; psikolojik süreçler, sosyal çevre, kültürel inanışlar ve varoluşsal boyutlar bir bütündür.\n- **Klinik Entegrasyon:** Karın ağrısı veya baş ağrısı ile gelen bir hastada altta yatan kaygı bozukluğu, aile içi şiddet, iş kaybı veya kültürel yas süreçleri mutlaka değerlendirilir.\n- **İnsanı Anlama Sanatı:** Hekim hastayı laboratuvar değerleri toplamı olarak değil; hikayesi, umutları ve acıları olan saygın bir varlık olarak kabul eder.\n\n> [!IMPORTANT]\n> Bütüncül yaklaşım, hekimliğin antik çağlardan gelen 'hastalık yoktur, hasta vardır' kadim bilgeliğinin modern bilimsel sentezidir.",
+   "interactiveElements": [
+    {
+     "id": "k36-s17-q1",
+     "type": "micro_quiz",
+     "question": "WONCA'nın bütüncül (holistik) yaklaşım çekirdek yeterliliğinin klinik temelini hangi model oluşturur?",
+     "options": [
+      {
+       "text": "Biyopsikososyal model (biyolojik, psikolojik, sosyal ve kültürel boyutların sentezi)",
+       "isCorrect": true,
+       "explanation": "Bütüncül yaklaşım hastayı biyopsikososyal model temelinde tüm boyutlarıyla bir bütün olarak ele alır. Doğru kuramsal ve klinik modeldir."
+      },
+      {
+       "text": "Kartezyen mekanik organ arıza modeli",
+       "isCorrect": false,
+       "explanation": "Şıkta belirtilen kartezyen mekanik organ arıza modeli ifadesi, farklı bir klinik durum veya basamağa ait bir uygulamayı temsil eder. Bu soruda hedeflenen birinci basamak aile hekimliği çekirdek ilkeleriyle doğrudan örtüşmemektedir."
+      },
+      {
+       "text": "Saf ticari pazarlama ve kâr modeli",
+       "isCorrect": false,
+       "explanation": "Şıkta belirtilen saf ticari pazarlama ve kâr modeli ifadesi, farklı bir klinik durum veya basamağa ait bir uygulamayı temsil eder. Bu soruda hedeflenen birinci basamak aile hekimliği çekirdek ilkeleriyle doğrudan örtüşmemektedir."
+      },
+      {
+       "text": "Astrolojik burç haritası yorumlama modeli",
+       "isCorrect": false,
+       "explanation": "Şıkta belirtilen astrolojik burç haritası yorumlama modeli ifadesi, farklı bir klinik durum veya basamağa ait bir uygulamayı temsil eder. Bu soruda hedeflenen birinci basamak aile hekimliği çekirdek ilkeleriyle doğrudan örtüşmemektedir."
+      }
+     ]
+    },
+    {
+     "id": "k36-s17-c1",
+     "type": "cloze_masking",
+     "sentence": "Bütüncül yaklaşım sağlık sorunlarını biyopsikososyal model çerçevesinde tüm boyutlarıyla ele alır.",
+     "maskedTerm": "biyopsikososyal",
+     "hint": "Biyolojik, ruhsal ve toplumsal etkenleri birleştiren model."
+    },
+    {
+     "id": "k36-s17-t1",
+     "type": "interactive_table",
+     "title": "Biyopsikososyal Boyutlar ve Klinik Yansımalar",
+     "tableHeaders": [
+      "Boyut Alanı",
+      "İncelenen Faktör",
+      "Klinik Örnek"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Biyolojik Boyut",
+         "isMasked": false
+        },
+        {
+         "text": "Hücresel patoloji ve genetik zemin",
+         "isMasked": true,
+         "hint": "Organizmada gelişen bedensel arıza."
+        },
+        {
+         "text": "Hipertansiyon ve endotel disfonksiyonu",
+         "isMasked": false
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Psikososyal Boyut",
+         "isMasked": false
+        },
+        {
+         "text": "Stres, aile dinamikleri ve yas",
+         "isMasked": true,
+         "hint": "Ruhsal çatışmalar ve toplumsal ilişkiler."
+        },
+        {
+         "text": "İş kaybına bağlı anksiyetenin tansiyonu yükseltmesi",
+         "isMasked": false
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k36-s17-l1",
+     "type": "spot_the_lie",
+     "topic": "Bütüncül Yaklaşım İlkeleri",
+     "items": [
+      {
+       "text": "Bütüncül yaklaşım hastayı bedensel, ruhsal ve toplumsal boyutlarıyla kavrar.",
+       "isLie": false,
+       "explanation": "Tüm boyutların sentezi holistik hekimliğin esasıdır."
+      },
+      {
+       "text": "Bütüncül hekimlik hastanın psikolojik stresörlerini tamamen anlamsız kabul eder.",
+       "isLie": true,
+       "explanation": "Psikolojik stresörler somatik yakınmaların ana tetikleyicisi olarak derinlemesine incelenir."
+      },
+      {
+       "text": "Kültürel ve varoluşsal inançlar hastanın tedaviye uyumunda kilit rol oynar.",
+       "isLie": false,
+       "explanation": "Hastanın inanç sistemine saygı tedavi başarısını doğrudan artırır."
+      }
+     ]
+    }
+   ],
+   "bolum": 6,
+   "pdfSayfalari": [
+    32,
+    33
+   ],
+   "sourcePdf": {
+    "name": "y25-k2-36-aile-hekimligine-yaklasim-wonca.pdf",
+    "startPage": 32,
+    "endPage": 33
+   }
+  },
+  {
+   "slideNumber": 18,
+   "title": "[OYUN SAYFASI] Ders Sonu Oyunları: Aile Hekimliğine Yaklaşım",
+   "isGameFinale": true,
+   "content": "Tebrikler! Aile Hekimliğine Yaklaşım ve WONCA Ağacı dersini tamamladınız.\n\nBu final aşamasında, WONCA çekirdek yeterliliklerini ve birinci basamak klinik algoritmalarını interaktif oyunlarla pekiştireceksiniz.",
+   "interactiveElements": [
+    {
+     "id": "k36-s18-g1",
+     "type": "sequence_order",
+     "prompt": "Birinci basamakta belirsiz ve ayrışmamış semptomlarla başvuran bir hastada uygulanması gereken doğru klinik problem çözme adımlarını sıralayınız:",
+     "steps": [
+      "1. Kırmızı bayrak (alarm) belirtilerini hızla tarayarak acil hayati tehlikeyi ekarte etmek",
+      "2. Kişi merkezli görüşmeyle hastanın şikayetini, korkularını ve beklentilerini dinlemek",
+      "3. Yerel toplum epidemiyolojisini ve hastalık prevalansını hesaba katarak ön tanı oluşturmak",
+      "4. Akut tehlike yoksa zamanı tanı aracı olarak kullanarak güvenli aralıklarla izlem planlamak"
+     ],
+     "explanation": "Önce hayati kırmızı bayraklar dışlanır, ardından kişi dinlenir, prevalans gözetilerek ön tanı kurulur ve zaman tanı aracı yapılarak güvenli takibe alınır."
+    },
+    {
+     "id": "k36-s18-g2",
+     "type": "estimate_slider",
+     "items": [
+      {
+       "prompt": "Dünya Aile Hekimleri Birliği (WONCA) kaç yılında kurulmuştur?",
+       "unit": "yılı",
+       "min": 1950,
+       "max": 2000,
+       "answer": 1972,
+       "tolerance": 2,
+       "explanation": "WONCA 1972 yılında Melbourne'de ulusal kolejlerin katılımıyla resmen kurulmuştur."
+      }
+     ]
+    },
+    {
+     "id": "k36-s18-g3",
+     "type": "perturbation",
+     "scenario": "Bir aile sağlığı merkezinde hekimin 'hastalık merkezli' yaklaşımı terk edip 'kişi merkezli ve kapsamlı bakım' modeline geçtiği bir klinik simülasyon kurgulanmaktadır.",
+     "question": "Bu müdahale sonrasında merkezdeki klinik ve yönetsel parametreler nasıl değişir?",
+     "parameters": [
+      {
+       "name": "Hastaların tedaviye ve hekim önerilerine uyum düzeyi",
+       "correct": "up",
+       "explanation": "Ortak karar verme ve güven ilişkisi hastanın tedaviye uyumunu belirgin şekilde artırır."
+      },
+      {
+       "name": "Gereksiz acil servis ve hastane poliklinik başvuruları",
+       "correct": "down",
+       "explanation": "Sorunların birinci basamakta kapsamlı çözülmesi hastanelerdeki gereksiz poliklinik yığılmasını azaltır."
+      },
+      {
+       "name": "Kayıtlı nüfusta kronik hastalık tarama ve aşılama oranları",
+       "correct": "up",
+       "explanation": "Her vizitin koruyucu fırsata dönüştürülmesi kanser tarama ve aşı oranlarını yükseltir."
+      }
+     ]
+    },
+    {
+     "id": "k36-s18-g4",
+     "type": "fix_the_text",
+     "text": "Aile hekimliği yalnızca hastalık merkezli çalışan ve sağlık ocakları gibi katı coğrafi bölge sınırlarıyla hizmet veren bir acil cerrahi servisidir.",
+     "errors": [
+      {
+       "wrong": "hastalık merkezli",
+       "correct": "kişi merkezli",
+       "options": [
+        "kişi merkezli",
+        "organ odaklı",
+        "hastane tabanlı"
+       ],
+       "explanation": "Aile hekimliği hastalık merkezli değil, kişi merkezli bir klinik disiplindir."
+      },
+      {
+       "wrong": "katı coğrafi bölge",
+       "correct": "liste tabanlı",
+       "options": [
+        "liste tabanlı",
+        "şehirlerarası",
+        "uluslararası"
+       ],
+       "explanation": "Aile hekimliği coğrafi sınırlara değil, hekime kayıtlı birey listesine dayanır."
+      },
+      {
+       "wrong": "acil cerrahi servisidir",
+       "correct": "birinci basamak tıp disiplinidir",
+       "options": [
+        "birinci basamak tıp disiplinidir",
+        "üçüncü basamak ameliyathanesidir",
+        "eczane merkezidir"
+       ],
+       "explanation": "Aile hekimliği acil cerrahi servisi değil, bağımsız bir birinci basamak tıp disiplinidir."
+      }
+     ]
+    }
+   ],
+   "bolum": null,
+   "pdfSayfalari": [],
+   "sourcePdf": null
+  }
+ ],
+ "matchedPastQuestionsCount": 5,
+ "sinama": {
+  "etiket": "2025-2026 Arşiv",
+  "aciklama": "Bu ders 2025-2026 dönemi (geçen yıl) slaytlarından hazırlanmıştır; 2026-2027 güncel müfredat dersleriyle karışmaz."
+ }
+}

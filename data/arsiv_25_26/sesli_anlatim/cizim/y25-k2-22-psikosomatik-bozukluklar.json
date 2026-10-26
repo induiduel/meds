@@ -1,0 +1,2688 @@
+{
+ "surum": 1,
+ "metinHash": "07e335d3fdafe50f67307276ba1cd160cf277515",
+ "p": {
+  "0": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "terim_tanim",
+     "sablon_ad": "Terim → tanım",
+     "duzen": "tablo",
+     "basliklar": [
+      "Terim",
+      "Tanım"
+     ],
+     "satirlar": [
+      [
+       "psike",
+       "ruh"
+      ],
+      [
+       "soma",
+       "beden"
+      ]
+     ],
+     "s": 2,
+     "k": [
+      20,
+      68
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.16,
+      0.62
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.253,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ]
+  },
+  "2": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "neden_sonuc",
+     "sablon_ad": "Neden → sonuç",
+     "duzen": "zincir",
+     "bag": "yol açar",
+     "ogeler": [
+      "bilinçdışı çatışma, bastırılmış duygu, travmatik anı",
+      "bedensel tutuluş (felç, duyu kaybı)"
+     ],
+     "s": 4,
+     "k": [
+      74,
+      281
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.62,
+      0.03
+     ],
+     "genislik": 0.34,
+     "doluluk": 0.0,
+     "kutu_h": 0.363,
+     "yon": "dikey",
+     "olcek": 1.0
+    }
+   ],
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "mekanizma_adimlari",
+     "sablon_ad": "Mekanizma basamakları",
+     "duzen": "zincir",
+     "ogeler": [
+      "bilinçdışı çatışma",
+      "konversiyon belirtisi (çözüm yolu)",
+      "birincil kazanç: çatışmanın bilincine varılmaz"
+     ],
+     "s": 4,
+     "k": [
+      93,
+      233
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.13,
+      0.76
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.35,
+     "yon": "dikey",
+     "olcek": 1.0,
+     "ek_alt": 0.1296,
+     "ek_renk": "#c5dee5"
+    }
+   ],
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "mekanizma_adimlari",
+     "sablon_ad": "Mekanizma basamakları",
+     "duzen": "zincir",
+     "ogeler": [
+      "biriken psişik enerji",
+      "fizyolojik çıkışlarla boşalım",
+      "kaygı yerine bedensel belirti"
+     ],
+     "s": 4,
+     "k": [
+      13,
+      261
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.13,
+      0.76
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.35,
+     "yon": "dikey",
+     "olcek": 1.0,
+     "ek_alt": 0.1296,
+     "ek_renk": "#c5dee5"
+    }
+   ]
+  },
+  "3": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "neden_sonuc",
+     "sablon_ad": "Neden → sonuç",
+     "duzen": "zincir",
+     "bag": "yol açar",
+     "ogeler": [
+      "sözelleştirilemeyen duygu ve düşünceler",
+      "beden dili ile ifade (organ dili)"
+     ],
+     "s": 5,
+     "k": [
+      106,
+      174
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.14,
+      0.79
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.283,
+     "yon": "dikey",
+     "olcek": 1.0,
+     "ek_alt": 0.0934,
+     "ek_renk": "#c5dee5"
+    }
+   ],
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "mekanizma_adimlari",
+     "sablon_ad": "Mekanizma basamakları",
+     "duzen": "zincir",
+     "ogeler": [
+      "gerilime uğramış sistem",
+      "en yatkın organ seçilir",
+      "organın çalışması bozulur, boşalım",
+      "denge başka biçimde kurulur"
+     ],
+     "s": 5,
+     "k": [
+      0,
+      174
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.14,
+      0.79
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.45,
+     "yon": "dikey",
+     "olcek": 1.0,
+     "ek_alt": 0.2597,
+     "ek_renk": "#c5dee5"
+    }
+   ]
+  },
+  "5": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "somatik belirti bozukluğu",
+      "hastalık kaygısı bozukluğu",
+      "konversiyon bozukluğu",
+      "diğer tıbbi durumları etkileyen psikolojik etkenler",
+      "yapay bozukluk",
+      "belirlenmiş / belirlenmemiş diğer"
+     ],
+     "baslik": "Somatik belirti ve ilişkili bozukluklar",
+     "s": 7,
+     "k": [
+      23,
+      308
+     ],
+     "tip": "liste",
+     "konum": [
+      0.53,
+      0.2
+     ],
+     "genislik": 0.42,
+     "doluluk": 0.0,
+     "kutu_h": 0.514,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ],
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "güçsüzlük ya da paralizi",
+      "olağan dışı devinim",
+      "yutma belirtileri",
+      "konuşma belirtisi",
+      "ataklar ya da katılmalar",
+      "anestezi ya da duyu kaybı",
+      "özel duyusal belirti",
+      "karma belirtiler"
+     ],
+     "baslik": "Konversiyon bozukluğu alt tipleri",
+     "s": 7,
+     "k": [
+      0,
+      326
+     ],
+     "tip": "liste",
+     "konum": [
+      0.03,
+      1.015
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.585,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.6202,
+     "ek_renk": "#c5dee5"
+    }
+   ]
+  },
+  "6": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "karsilastirma",
+     "sablon_ad": "İki durumun karşılaştırması",
+     "duzen": "karsit",
+     "basliklar": [
+      "Özellik"
+     ],
+     "satirlar": [
+      [
+       "Zihinsel uğraş",
+       "Sanrısal olmayan",
+       "Sanrısal"
+      ]
+     ],
+     "kutuplar": [
+      "Bedensel belirti bozukluğu",
+      "Psikotik bozukluk"
+     ],
+     "s": 8,
+     "k": [
+      132,
+      235
+     ],
+     "tip": "karsit",
+     "konum": [
+      0.17,
+      0.59
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.236,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ]
+  },
+  "7": {
+   "3": [
+    {
+     "tur": "sema",
+     "sablon": "neden_sonuc",
+     "sablon_ad": "Neden → sonuç",
+     "duzen": "zincir",
+     "bag": "yol açar",
+     "ogeler": [
+      "Temel semptom ağrı",
+      "Aşırı ağrı kesici kullanımı riski"
+     ],
+     "s": 9,
+     "k": [
+      0,
+      71
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.03,
+      1.015
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.186,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.2213,
+     "ek_renk": "#c5dee5"
+    }
+   ]
+  },
+  "10": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "neden_sonuc",
+     "sablon_ad": "Neden → sonuç",
+     "duzen": "zincir",
+     "bag": "yol açar",
+     "ogeler": [
+      "Saldırgan ve düşmanca arzular",
+      "Fiziksel yakınmalara aktarılır"
+     ],
+     "s": 12,
+     "k": [
+      34,
+      119
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.15,
+      0.79
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.283,
+     "yon": "dikey",
+     "olcek": 1.0,
+     "ek_alt": 0.0934,
+     "ek_renk": "#c5dee5"
+    }
+   ],
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "mekanizma_adimlari",
+     "sablon_ad": "Mekanizma basamakları",
+     "duzen": "zincir",
+     "ogeler": [
+      "Suçluluk, düşük benlik saygısı",
+      "Savunma olarak ağrı ve bedensel acı",
+      "Kefaret ve cezaya dönüşür"
+     ],
+     "s": 12,
+     "k": [
+      13,
+      186
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.15,
+      0.79
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.35,
+     "yon": "dikey",
+     "olcek": 1.0,
+     "ek_alt": 0.1596,
+     "ek_renk": "#c5dee5"
+    }
+   ]
+  },
+  "11": {
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "cok_neden_tek_sonuc",
+     "sablon_ad": "Birçok neden → tek sonuç",
+     "duzen": "grup",
+     "bag": "neden olur",
+     "kaynaklar": [
+      "Negatif laboratuvar sonuçları",
+      "Hekim güvencesi",
+      "İyi klinik seyir"
+     ],
+     "sonuc": "Hasta rahatlamaz",
+     "s": 13,
+     "k": [
+      0,
+      102
+     ],
+     "tip": "grup",
+     "konum": [
+      0.14,
+      0.82
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.303,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.1434,
+     "ek_renk": "#c5dee5"
+    }
+   ]
+  },
+  "13": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "yüksek sosyoekonomik düzey",
+      "tedaviye yanıt veren depresyon/anksiyete eşliği",
+      "kişilik bozukluğu eşlik etmemesi"
+     ],
+     "baslik": "İyi prognoz etmenleri",
+     "s": 15,
+     "k": [
+      0,
+      165
+     ],
+     "tip": "liste",
+     "konum": [
+      0.03,
+      1.015
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.308,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.343,
+     "ek_renk": "#c5dee5"
+    }
+   ]
+  },
+  "14": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "neden_sonuc",
+     "sablon_ad": "Neden → sonuç",
+     "duzen": "zincir",
+     "bag": "yol açar",
+     "ogeler": [
+      "sorunlarını fiziksel görürler",
+      "psikiyatrik tedaviye dirençli",
+      "grup tedavisi ve BDT tercih edilir"
+     ],
+     "s": 16,
+     "k": [
+      87,
+      193
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.03,
+      1.015
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.417,
+     "yon": "dikey",
+     "olcek": 1.0,
+     "ek_alt": 0.4523,
+     "ek_renk": "#c5dee5"
+    }
+   ],
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "grup tedavisi ve bilişsel davranışçı terapi",
+      "sık ve düzenli fizik muayene",
+      "invaziv tanı girişimlerinden kaçınma",
+      "farmakoterapi: eşlik eden depresyon/anksiyete"
+     ],
+     "baslik": "Bedensel belirti bozukluğunda tedavi",
+     "s": 16,
+     "k": [
+      89,
+      174
+     ],
+     "tip": "liste",
+     "konum": [
+      0.03,
+      1.015
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.363,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.3984,
+     "ek_renk": "#c5dee5"
+    }
+   ]
+  },
+  "15": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "karar",
+     "sablon_ad": "Karar dalı",
+     "duzen": "dal",
+     "soru": "Bedensel belirti var mı?",
+     "dallar": [
+      [
+       "var",
+       "bedensel belirti bozukluğu"
+      ],
+      [
+       "yok",
+       "hastalık kaygısı bozukluğu"
+      ]
+     ],
+     "s": 17,
+     "k": [
+      43,
+      150
+     ],
+     "tip": "dal",
+     "konum": [
+      0.15,
+      0.88
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.274,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.1741,
+     "ek_renk": "#c5dee5"
+    }
+   ]
+  },
+  "16": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "bulgu_dusundurur",
+     "sablon_ad": "Bulgu → düşündürdüğü tanı",
+     "duzen": "tablo",
+     "basliklar": [
+      "Bulgu",
+      "Düşündürdüğü"
+     ],
+     "satirlar": [
+      [
+       "tıbbi şikâyet yok, kanser olmaktan aşırı korku",
+       "hastalık kaygısı bozukluğu"
+      ]
+     ],
+     "s": 18,
+     "k": [
+      89,
+      208
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.15,
+      0.63
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.276,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ],
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "neden_sonuc",
+     "sablon_ad": "Neden → sonuç",
+     "duzen": "zincir",
+     "bag": "yol açar",
+     "ogeler": [
+      "internetten hastalık araştırması (siberkondri)",
+      "kaygı daha da beslenir"
+     ],
+     "s": 18,
+     "k": [
+      12,
+      151
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.66,
+      0.58
+     ],
+     "genislik": 0.3,
+     "doluluk": 0.0,
+     "kutu_h": 0.323,
+     "yon": "dikey",
+     "olcek": 1.0
+    }
+   ]
+  },
+  "18": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "neden_sonuc",
+     "sablon_ad": "Neden → sonuç",
+     "duzen": "zincir",
+     "bag": "yol açar",
+     "ogeler": [
+      "çatışmalar ve stresörler",
+      "ani motor ya da duyusal kayıp"
+     ],
+     "s": 20,
+     "k": [
+      93,
+      279
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.03,
+      1.015
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.186,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.2213,
+     "ek_renk": "#c5dee5"
+    }
+   ]
+  },
+  "19": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "istemli değildir",
+      "madde kullanımına bağlı ortaya çıkmaz",
+      "birincil kazanç psikolojiktir (sosyal, mali, hukuki değil)"
+     ],
+     "baslik": "Konversiyon belirtileri",
+     "s": 21,
+     "k": [
+      0,
+      149
+     ],
+     "tip": "liste",
+     "konum": [
+      0.16,
+      0.13
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.002,
+     "kutu_h": 0.348,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ]
+  },
+  "22": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "bulgu_dusundurur",
+     "sablon_ad": "Bulgu → düşündürdüğü tanı",
+     "duzen": "tablo",
+     "basliklar": [
+      "Bulgu",
+      "Düşündürdüğü"
+     ],
+     "satirlar": [
+      [
+       "35 yaşından sonra (geç) başlangıç",
+       "nörolojik hastalık araştırılmalı"
+      ]
+     ],
+     "s": 24,
+     "k": [
+      62,
+      194
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.17,
+      0.07
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.236,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ],
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "cok_neden_tek_sonuc",
+     "sablon_ad": "Birçok neden → tek sonuç",
+     "duzen": "grup",
+     "bag": "neden olur",
+     "kaynaklar": [
+      "kırsalda yaşamak",
+      "düşük eğitim seviyesi",
+      "düşük sosyoekonomik durum",
+      "düşük zekâ düzeyi",
+      "çatışmaya maruz askeri personel"
+     ],
+     "sonuc": "konversiyon daha sık",
+     "s": 24,
+     "k": [
+      0,
+      153
+     ],
+     "tip": "grup",
+     "konum": [
+      0.03,
+      1.015
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.377,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.4123,
+     "ek_renk": "#c5dee5"
+    }
+   ]
+  },
+  "23": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "somatizasyon eğilimi",
+      "o sırada ya da geçmişte cinsel kötüye kullanım",
+      "iletişim yeteneğinin kötü olması",
+      "altta yatan psikonörolojik hastalıklar"
+     ],
+     "baslik": "Yatkınlaştırıcı etmenler",
+     "s": 25,
+     "k": [
+      0,
+      185
+     ],
+     "tip": "liste",
+     "konum": [
+      0.69,
+      0.42
+     ],
+     "genislik": 0.3,
+     "doluluk": 0.0,
+     "kutu_h": 0.484,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ],
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "yaşam olayları",
+      "travmatik deneyimler"
+     ],
+     "baslik": "Ortaya çıkarıcı etmenler",
+     "s": 25,
+     "k": [
+      0,
+      67
+     ],
+     "tip": "liste",
+     "konum": [
+      0.57,
+      0.1
+     ],
+     "genislik": 0.42,
+     "doluluk": 0.0,
+     "kutu_h": 0.253,
+     "yon": "yatay",
+     "olcek": 1.0
+    },
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "konversiyonun çözüme katkısının olması",
+      "hasta rolünün benimsenmesi"
+     ],
+     "baslik": "Sürdürücü etmenler (tedavinin hedefi)",
+     "s": 25,
+     "k": [
+      68,
+      212
+     ],
+     "tip": "liste",
+     "konum": [
+      0.03,
+      1.015
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.253,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.2876,
+     "ek_renk": "#c5dee5"
+    }
+   ]
+  },
+  "24": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "anestezi",
+      "parestezi",
+      "körlük"
+     ],
+     "baslik": "Duyusal belirtiler",
+     "s": 26,
+     "k": [
+      0,
+      52
+     ],
+     "tip": "liste",
+     "konum": [
+      0.63,
+      0.2
+     ],
+     "genislik": 0.34,
+     "doluluk": 0.0,
+     "kutu_h": 0.308,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ],
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "bulgu_dusundurur",
+     "sablon_ad": "Bulgu → düşündürdüğü tanı",
+     "duzen": "tablo",
+     "basliklar": [
+      "Bulgu",
+      "Düşündürdüğü"
+     ],
+     "satirlar": [
+      [
+       "Dikkat kişinin üstündeyken belirtilerin kötüleşmesi",
+       "konversiyon"
+      ]
+     ],
+     "s": 26,
+     "k": [
+      135,
+      238
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.03,
+      1.015
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.236,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.2706,
+     "ek_renk": "#c5dee5"
+    }
+   ]
+  },
+  "25": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "karsilastirma",
+     "sablon_ad": "İki durumun karşılaştırması",
+     "duzen": "karsit",
+     "basliklar": [
+      "Özellik"
+     ],
+     "satirlar": [
+      [
+       "Tanım",
+       "içsel çatışmanın son bulması",
+       "destek ve yardım alma"
+      ],
+      [
+       "Kaynak",
+       "psişik",
+       "dış ortam"
+      ]
+     ],
+     "kutuplar": [
+      "birincil kazanç",
+      "ikincil kazanç"
+     ],
+     "s": 27,
+     "k": [
+      0,
+      224
+     ],
+     "tip": "karsit",
+     "konum": [
+      0.12,
+      0.8
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.293,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.1126,
+     "ek_renk": "#c5dee5"
+    }
+   ],
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "bulgu_dusundurur",
+     "sablon_ad": "Bulgu → düşündürdüğü tanı",
+     "duzen": "tablo",
+     "basliklar": [
+      "Bulgu",
+      "Düşündürdüğü"
+     ],
+     "satirlar": [
+      [
+       "Felçli ama kaygısız hasta (güzel aldırmazlık)",
+       "konversiyon"
+      ]
+     ],
+     "s": 27,
+     "k": [
+      0,
+      171
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.35,
+      0.75
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.236,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ],
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "terim_tanim",
+     "sablon_ad": "Terim → tanım",
+     "duzen": "tablo",
+     "basliklar": [
+      "Terim",
+      "Tanım"
+     ],
+     "satirlar": [
+      [
+       "Özdeşim",
+       "önemli kişilerin belirtilerinin bilinçdışı örnek alınması"
+      ],
+      [
+       "Özellikle görüldüğü durum",
+       "yas → öyküde yakın kayıp sorgulanır"
+      ]
+     ],
+     "s": 27,
+     "k": [
+      0,
+      168
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.12,
+      0.8
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.373,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.1927,
+     "ek_renk": "#c5dee5"
+    }
+   ]
+  },
+  "27": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "karsilastirma",
+     "sablon_ad": "İki durumun karşılaştırması",
+     "duzen": "karsit",
+     "basliklar": [
+      "Özellik"
+     ],
+     "satirlar": [
+      [
+       "Telkin, hipnoz, amobarbital, benzodiazepin",
+       "belirtiler ortadan kalkar",
+       "düzelmez"
+      ]
+     ],
+     "kutuplar": [
+      "konversiyon",
+      "organik defisit"
+     ],
+     "s": 29,
+     "k": [
+      0,
+      163
+     ],
+     "tip": "karsit",
+     "konum": [
+      0.14,
+      0.86
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.276,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.1557,
+     "ek_renk": "#c5dee5"
+    }
+   ]
+  },
+  "30": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "ani başlangıçlıdır",
+      "akut olguların %95'i kendiliğinden geriler",
+      "hastanede yatanlar genellikle 2 haftada iyileşir"
+     ],
+     "baslik": "Konversiyonun gidişi",
+     "s": 32,
+     "k": [
+      0,
+      147
+     ],
+     "tip": "liste",
+     "konum": [
+      0.12,
+      0.74
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.348,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.108,
+     "ek_renk": "#c5dee5"
+    }
+   ],
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "neden_sonuc",
+     "sablon_ad": "Neden → sonuç",
+     "duzen": "zincir",
+     "bag": "yol açar",
+     "ogeler": [
+      "ilk ataktaki seyir",
+      "prognozu öngörür"
+     ],
+     "s": 32,
+     "k": [
+      47,
+      129
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.13,
+      0.74
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.186,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ]
+  },
+  "31": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "zaman_gorunum",
+     "sablon_ad": "Süre → görünüm / bulgu",
+     "duzen": "tablo",
+     "basliklar": [
+      "Süre",
+      "Görünüm / bulgu"
+     ],
+     "satirlar": [
+      [
+       "İlk değerlendirme",
+       "%30'unda nörolojik/tıbbi hastalık saptanır"
+      ],
+      [
+       "10 yıllık izlem",
+       "oran %50'ye çıkar"
+      ]
+     ],
+     "s": 33,
+     "k": [
+      0,
+      182
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.03,
+      1.015
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.293,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.3276,
+     "ek_renk": "#c5dee5"
+    }
+   ],
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "1/3: yalnız psödonöbet",
+      "1/3: psödonöbet + epilepsi",
+      "1/3: yalnız epilepsi"
+     ],
+     "baslik": "Psödonöbet olarak değerlendirilen hastalar",
+     "s": 33,
+     "k": [
+      0,
+      165
+     ],
+     "tip": "liste",
+     "konum": [
+      0.61,
+      0.67
+     ],
+     "genislik": 0.34,
+     "doluluk": 0.0,
+     "kutu_h": 0.308,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ]
+  },
+  "32": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "ani başlangıç",
+      "motor belirti hâkimiyeti",
+      "belirti–tedavi arası sürenin kısa olması",
+      "içgörü varlığı",
+      "komorbid psikonörolojik hastalık olmaması",
+      "çocukluk çağı travması bulunmaması",
+      "ergen ya da genç olmak",
+      "sosyal desteğin iyi olması"
+     ],
+     "baslik": "İyi prognoz etmenleri",
+     "s": 34,
+     "k": [
+      0,
+      258
+     ],
+     "tip": "liste",
+     "konum": [
+      0.03,
+      1.015
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.585,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.6202,
+     "ek_renk": "#c5dee5"
+    }
+   ]
+  },
+  "35": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "algoritma",
+     "sablon_ad": "Yaklaşım basamakları",
+     "duzen": "adimlar",
+     "ogeler": [
+      "organik etyolojiyi araştır",
+      "ruhsal durumu aile içi konum ve sorunlarla değerlendir",
+      "ailesel ve çevresel şartları düzelt"
+     ],
+     "s": 37,
+     "k": [
+      0,
+      193
+     ],
+     "tip": "adimlar",
+     "konum": [
+      0.14,
+      0.77
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.299,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.0888,
+     "ek_renk": "#c5dee5"
+    }
+   ],
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "karar",
+     "sablon_ad": "Karar dalı",
+     "duzen": "dal",
+     "soru": "Eşlik eden durum?",
+     "dallar": [
+      [
+       "depresyon ya da bunaltı bozukluğu",
+       "antidepresan tedavi"
+      ],
+      [
+       "kronik dirençli olgu",
+       "elektrokonvülsif tedavi"
+      ]
+     ],
+     "s": 37,
+     "k": [
+      0,
+      145
+     ],
+     "tip": "dal",
+     "konum": [
+      0.14,
+      0.77
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.274,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.0641,
+     "ek_renk": "#c5dee5"
+    }
+   ]
+  },
+  "36": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "taklit eder",
+      "başlatır",
+      "alevlendirir"
+     ],
+     "baslik": "Tıbbi ilgi görmek adına hastalığı",
+     "s": 38,
+     "k": [
+      22,
+      97
+     ],
+     "tip": "liste",
+     "konum": [
+      0.03,
+      1.015
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.308,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.343,
+     "ek_renk": "#c5dee5"
+    }
+   ]
+  },
+  "37": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "cok_neden_tek_sonuc",
+     "sablon_ad": "Birçok neden → tek sonuç",
+     "duzen": "grup",
+     "bag": "neden olur",
+     "kaynaklar": [
+      "olağan dışı ve dramatik belirtiler",
+      "tedavi ve ilaçlara yanıt vermeyen belirtiler",
+      "diğerleri çözülürken yeni belirtiler"
+     ],
+     "sonuc": "yapay bozukluğu düşündürür",
+     "s": 39,
+     "k": [
+      15,
+      252
+     ],
+     "tip": "grup",
+     "konum": [
+      0.03,
+      1.015
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.303,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.3384,
+     "ek_renk": "#c5dee5"
+    }
+   ],
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "geniş tıbbi öykü, çoklu cerrahi girişim",
+      "çoklu ilaç alerjileri",
+      "tıbbi meslek",
+      "az ziyaretçi",
+      "olağan dışı gelişimi önceden tahmin etme"
+     ],
+     "baslik": "Yapay bozukluğun diğer ipuçları",
+     "s": 39,
+     "k": [
+      0,
+      227
+     ],
+     "tip": "liste",
+     "konum": [
+      0.03,
+      1.015
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.419,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.4539,
+     "ek_renk": "#c5dee5"
+    }
+   ]
+  },
+  "38": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "normal ya da normal üstü zekâ",
+      "zayıf kimlik algısı",
+      "bozulmamış düşünce yapısı",
+      "düşük engellenme eşiği",
+      "zayıf cinsel uyum",
+      "güçlü bağımlılık ihtiyacı"
+     ],
+     "baslik": "Psikolojik testlerde",
+     "s": 40,
+     "k": [
+      53,
+      223
+     ],
+     "tip": "liste",
+     "konum": [
+      0.64,
+      0.06
+     ],
+     "genislik": 0.34,
+     "doluluk": 0.0,
+     "kutu_h": 0.514,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ],
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "tani_tetkik",
+     "sablon_ad": "Durum → bakılacak tetkik",
+     "duzen": "tablo",
+     "basliklar": [
+      "Durum / şüphe",
+      "Bakılacak tetkik"
+     ],
+     "satirlar": [
+      [
+       "Yapay bozukluk: laboratuvar testi",
+       "tanıya yardımcı test yok"
+      ],
+      [
+       "Yapay bozukluk: Minnesota çok yönlü kişilik envanteri",
+       "sahte kötü profili"
+      ]
+     ],
+     "s": 40,
+     "k": [
+      0,
+      63
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.03,
+      1.015
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.293,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.3276,
+     "ek_renk": "#c5dee5"
+    }
+   ]
+  },
+  "39": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "kişilik bozukluğu",
+      "madde kullanım bozukluğu",
+      "duygudurum bozukluğu"
+     ],
+     "baslik": "Sık eştanılar",
+     "s": 41,
+     "k": [
+      0,
+      112
+     ],
+     "tip": "liste",
+     "konum": [
+      0.14,
+      0.76
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.308,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.088,
+     "ek_renk": "#c5dee5"
+    }
+   ],
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "karsilastirma",
+     "sablon_ad": "İki durumun karşılaştırması",
+     "duzen": "karsit",
+     "basliklar": [
+      "Özellik"
+     ],
+     "satirlar": [
+      [
+       "Bilinç ve istem",
+       "bilinçdışı, istemdışı",
+       "bilinçli, istemli"
+      ]
+     ],
+     "kutuplar": [
+      "Somatoform bozukluk",
+      "Temaruz"
+     ],
+     "s": 41,
+     "k": [
+      16,
+      131
+     ],
+     "tip": "karsit",
+     "konum": [
+      0.46,
+      0.71
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.236,
+     "yon": "yatay",
+     "olcek": 1.0
+    },
+    {
+     "tur": "sema",
+     "sablon": "karsilastirma",
+     "sablon_ad": "İki durumun karşılaştırması",
+     "duzen": "karsit",
+     "basliklar": [
+      "Özellik"
+     ],
+     "satirlar": [
+      [
+       "Amaç",
+       "hasta rolüne bürünmek",
+       "dış bir yarar"
+      ]
+     ],
+     "kutuplar": [
+      "Yapay bozukluk",
+      "Temaruz"
+     ],
+     "s": 41,
+     "k": [
+      132,
+      210
+     ],
+     "tip": "karsit",
+     "konum": [
+      0.63,
+      0.03
+     ],
+     "genislik": 0.34,
+     "doluluk": 0.0,
+     "kutu_h": 0.276,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ]
+  },
+  "40": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "çocuklukta gerçek fiziksel hastalık tedavisi",
+      "erken erişkinlikte sinsi başlangıç",
+      "hastane yatışları uzar",
+      "birey tıbbi konuları öğrenir"
+     ],
+     "baslik": "Yapay bozukluğun gidişi",
+     "numarali": true,
+     "s": 42,
+     "k": [
+      0,
+      204
+     ],
+     "tip": "liste",
+     "konum": [
+      0.03,
+      1.015
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.363,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.3984,
+     "ek_renk": "#c5dee5"
+    }
+   ],
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "neden_sonuc",
+     "sablon_ad": "Neden → sonuç",
+     "duzen": "zincir",
+     "bag": "yol açar",
+     "ogeler": [
+      "gereksiz tıbbi girişimler",
+      "ölüm (kötü prognoz)"
+     ],
+     "s": 42,
+     "k": [
+      0,
+      81
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.13,
+      0.73
+     ],
+     "genislik": 0.6,
+     "doluluk": 0.0,
+     "kutu_h": 0.186,
+     "yon": "yatay",
+     "olcek": 1.0
+    },
+    {
+     "tur": "sema",
+     "sablon": "neden_sonuc",
+     "sablon_ad": "Neden → sonuç",
+     "duzen": "zincir",
+     "bag": "yol açar",
+     "ogeler": [
+      "tanıyı erken koymak",
+      "gereksiz girişimler azalır"
+     ],
+     "s": 42,
+     "k": [
+      93,
+      142
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.63,
+      0.05
+     ],
+     "genislik": 0.34,
+     "doluluk": 0.0,
+     "kutu_h": 0.283,
+     "yon": "dikey",
+     "olcek": 1.0
+    }
+   ]
+  },
+  "4": {
+   "0": [
+    {
+     "tur": "akis",
+     "a": [
+      0.356,
+      0.5
+     ],
+     "b": [
+      0.594,
+      0.5
+     ],
+     "etiket": "Freud karikatürü: her şey sinirsel",
+     "odak": [
+      0.25,
+      0.35,
+      0.75,
+      0.8
+     ],
+     "s": 6,
+     "k": [
+      13,
+      91
+     ],
+     "yol": [
+      [
+       0.356,
+       0.5
+      ],
+      [
+       0.594,
+       0.5
+      ]
+     ],
+     "rota": "kavis",
+     "etiket_konum": [
+      0.12,
+      0.92
+     ],
+     "etiket_genislik": 0.42,
+     "etiket_hedef": [
+      0.33,
+      0.8
+     ],
+     "etiket_boy": 0.0443
+    }
+   ]
+  },
+  "28": {
+   "1": [
+    {
+     "tur": "akis",
+     "a": [
+      0.20600000000000002,
+      0.42
+     ],
+     "b": [
+      0.544,
+      0.42
+     ],
+     "etiket": "hemianestezi orta hat kontrolü",
+     "odak": [
+      0.15,
+      0.38,
+      0.9,
+      0.46
+     ],
+     "s": 30,
+     "k": [
+      79,
+      155
+     ],
+     "yol": [
+      [
+       0.206,
+       0.42
+      ],
+      [
+       0.2271,
+       0.4319
+      ],
+      [
+       0.2483,
+       0.4422
+      ],
+      [
+       0.2694,
+       0.4509
+      ],
+      [
+       0.2905,
+       0.458
+      ],
+      [
+       0.3116,
+       0.4636
+      ],
+      [
+       0.3327,
+       0.4675
+      ],
+      [
+       0.3539,
+       0.4699
+      ],
+      [
+       0.375,
+       0.4707
+      ],
+      [
+       0.3961,
+       0.4699
+      ],
+      [
+       0.4173,
+       0.4675
+      ],
+      [
+       0.4384,
+       0.4636
+      ],
+      [
+       0.4595,
+       0.458
+      ],
+      [
+       0.4806,
+       0.4509
+      ],
+      [
+       0.5018,
+       0.4422
+      ],
+      [
+       0.5229,
+       0.4319
+      ],
+      [
+       0.544,
+       0.42
+      ]
+     ],
+     "rota": "kavis",
+     "etiket_konum": [
+      0.15,
+      0.3297
+     ],
+     "etiket_genislik": 0.416,
+     "yakin": [
+      0.09,
+      0.2697,
+      0.96,
+      0.5307
+     ]
+    }
+   ],
+   "2": [
+    {
+     "tur": "akis",
+     "a": [
+      0.20600000000000002,
+      0.55
+     ],
+     "b": [
+      0.544,
+      0.55
+     ],
+     "etiket": "Hoover testi ve el düşürme",
+     "odak": [
+      0.15,
+      0.5,
+      0.9,
+      0.6
+     ],
+     "s": 30,
+     "k": [
+      91,
+      206
+     ],
+     "yol": [
+      [
+       0.206,
+       0.55
+      ],
+      [
+       0.2271,
+       0.5381
+      ],
+      [
+       0.2483,
+       0.5278
+      ],
+      [
+       0.2694,
+       0.5191
+      ],
+      [
+       0.2905,
+       0.512
+      ],
+      [
+       0.3116,
+       0.5064
+      ],
+      [
+       0.3327,
+       0.5025
+      ],
+      [
+       0.3539,
+       0.5001
+      ],
+      [
+       0.375,
+       0.4993
+      ],
+      [
+       0.3961,
+       0.5001
+      ],
+      [
+       0.4173,
+       0.5025
+      ],
+      [
+       0.4384,
+       0.5064
+      ],
+      [
+       0.4595,
+       0.512
+      ],
+      [
+       0.4806,
+       0.5191
+      ],
+      [
+       0.5018,
+       0.5278
+      ],
+      [
+       0.5229,
+       0.5381
+      ],
+      [
+       0.544,
+       0.55
+      ]
+     ],
+     "rota": "kavis",
+     "etiket_konum": [
+      0.15,
+      0.4497
+     ],
+     "etiket_genislik": 0.366,
+     "yakin": [
+      0.09,
+      0.3897,
+      0.96,
+      0.66
+     ]
+    }
+   ],
+   "3": [
+    {
+     "tur": "akis",
+     "a": [
+      0.20600000000000002,
+      0.75
+     ],
+     "b": [
+      0.544,
+      0.75
+     ],
+     "etiket": "dirençli göz açma ve afoni",
+     "odak": [
+      0.15,
+      0.7,
+      0.9,
+      0.82
+     ],
+     "s": 30,
+     "k": [
+      13,
+      136
+     ],
+     "yol": [
+      [
+       0.206,
+       0.75
+      ],
+      [
+       0.544,
+       0.75
+      ]
+     ],
+     "rota": "kavis",
+     "etiket_konum": [
+      0.15,
+      0.6497
+     ],
+     "etiket_genislik": 0.366,
+     "yakin": [
+      0.09,
+      0.5897,
+      0.96,
+      0.88
+     ]
+    }
+   ]
+  },
+  "33": {
+   "0": [
+    {
+     "tur": "akis",
+     "a": [
+      0.2948571099175347,
+      0.21796758128978588
+     ],
+     "b": [
+      0.6160833248562283,
+      0.24368054425274882
+     ],
+     "etiket": "nöbet süresi ayırımı",
+     "odak": [
+      0.05,
+      0.18,
+      0.95,
+      0.26
+     ],
+     "s": 35,
+     "k": [
+      49,
+      198
+     ],
+     "yol": [
+      [
+       0.2949,
+       0.218
+      ],
+      [
+       0.2949,
+       0.2437
+      ],
+      [
+       0.6161,
+       0.2437
+      ]
+     ],
+     "rota": "dirsek",
+     "kaynak_kutu": [
+      0.2386,
+      0.1816,
+      0.3511,
+      0.216
+     ],
+     "hedef_kutu": [
+      0.6181,
+      0.2265,
+      0.7577,
+      0.2609
+     ],
+     "etiket_konum": [
+      0.3,
+      0.22
+     ],
+     "etiket_genislik": 0.29
+    }
+   ],
+   "1": [
+    {
+     "tur": "sema",
+     "s": 35,
+     "k": [
+      90,
+      310
+     ],
+     "dugum": [
+      {
+       "id": "d0",
+       "metin": "Her hangi bir yer, korunmasız"
+      },
+      {
+       "id": "d1",
+       "metin": "Genelde insanların olduğu yerlerde"
+      }
+     ],
+     "kenar": [
+      {
+       "a": "d0",
+       "b": "d1",
+       "tur": "aktive",
+       "etiket": "dil ısırması ve düşme ayırımı"
+      }
+     ],
+     "kaynak": "ok",
+     "tip": "zincir",
+     "konum": [
+      0.27,
+      0.97
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.253,
+     "yon": "dikey",
+     "olcek": 1.0,
+     "ek_alt": 0.2426,
+     "ek_renk": "#c5dee5"
+    }
+   ],
+   "2": [
+    {
+     "tur": "akis",
+     "a": [
+      0.27346690495808923,
+      0.539090266474971
+     ],
+     "b": [
+      0.6160833248562283,
+      0.5518727337872541
+     ],
+     "etiket": "kornea refleksi ve bilinç kaybı",
+     "odak": [
+      0.05,
+      0.5,
+      0.95,
+      0.6
+     ],
+     "s": 35,
+     "k": [
+      58,
+      322
+     ],
+     "yol": [
+      [
+       0.2735,
+       0.5391
+      ],
+      [
+       0.2735,
+       0.5519
+      ],
+      [
+       0.6161,
+       0.5519
+      ]
+     ],
+     "rota": "dirsek",
+     "kaynak_kutu": [
+      0.2386,
+      0.5027,
+      0.3083,
+      0.5371
+     ],
+     "hedef_kutu": [
+      0.6181,
+      0.5347,
+      0.7962,
+      0.5691
+     ],
+     "etiket_konum": [
+      0.04,
+      0.32
+     ],
+     "etiket_genislik": 0.42,
+     "etiket_hedef": [
+      0.25,
+      0.5
+     ],
+     "etiket_boy": 0.0443
+    }
+   ],
+   "3": [
+    {
+     "tur": "sema",
+     "s": 35,
+     "k": [
+      54,
+      194
+     ],
+     "dugum": [
+      {
+       "id": "d0",
+       "metin": "Nöbet sonrasında uyku ve uyanırken"
+      },
+      {
+       "id": "d1",
+       "metin": "Nöbet ağıtlar, sıkıntılı görünümle…"
+      }
+     ],
+     "kenar": [
+      {
+       "a": "d0",
+       "b": "d1",
+       "tur": "aktive",
+       "etiket": "EEG ve uyanma konfüzyonu"
+      }
+     ],
+     "kaynak": "ok",
+     "tip": "zincir",
+     "konum": [
+      0.16,
+      0.97
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.253,
+     "yon": "dikey",
+     "olcek": 1.0,
+     "ek_alt": 0.2426,
+     "ek_renk": "#c5dee5"
+    }
+   ]
+  },
+  "34": {
+   "0": [
+    {
+     "tur": "akis",
+     "a": [
+      0.26631860775417754,
+      0.2928448853669343
+     ],
+     "b": [
+      0.6227083519829644,
+      0.2928448853669343
+     ],
+     "etiket": "lezyon yeri: SVO vs konversiyon",
+     "odak": [
+      0.05,
+      0.2,
+      0.95,
+      0.3
+     ],
+     "s": 36,
+     "k": [
+      60,
+      273
+     ],
+     "yol": [
+      [
+       0.2663,
+       0.2928
+      ],
+      [
+       0.2886,
+       0.2991
+      ],
+      [
+       0.3109,
+       0.3045
+      ],
+      [
+       0.3331,
+       0.3091
+      ],
+      [
+       0.3554,
+       0.3129
+      ],
+      [
+       0.3777,
+       0.3158
+      ],
+      [
+       0.4,
+       0.3179
+      ],
+      [
+       0.4222,
+       0.3192
+      ],
+      [
+       0.4445,
+       0.3196
+      ],
+      [
+       0.4668,
+       0.3192
+      ],
+      [
+       0.4891,
+       0.3179
+      ],
+      [
+       0.5113,
+       0.3158
+      ],
+      [
+       0.5336,
+       0.3129
+      ],
+      [
+       0.5559,
+       0.3091
+      ],
+      [
+       0.5782,
+       0.3045
+      ],
+      [
+       0.6004,
+       0.2991
+      ],
+      [
+       0.6227,
+       0.2928
+      ]
+     ],
+     "rota": "kavis",
+     "kaynak_kutu": [
+      0.006,
+      0.2742,
+      0.2643,
+      0.3115
+     ],
+     "hedef_kutu": [
+      0.6247,
+      0.2742,
+      0.7218,
+      0.3115
+     ],
+     "etiket_konum": [
+      0.05,
+      0.312
+     ],
+     "etiket_genislik": 0.42
+    }
+   ],
+   "1": [
+    {
+     "tur": "sema",
+     "s": 36,
+     "k": [
+      31,
+      147
+     ],
+     "dugum": [
+      {
+       "id": "d0",
+       "metin": "DTR artmış, patolojik refleks"
+      },
+      {
+       "id": "d1",
+       "metin": "Sfinkter bozukluğu var"
+      }
+     ],
+     "kenar": [
+      {
+       "a": "d0",
+       "b": "d1",
+       "tur": "aktive",
+       "etiket": "I. motor nöron: DTR artışı ve spastisite"
+      }
+     ],
+     "kaynak": "ok",
+     "tip": "zincir",
+     "konum": [
+      0.03,
+      0.97
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.253,
+     "yon": "dikey",
+     "olcek": 1.0,
+     "ek_alt": 0.2426,
+     "ek_renk": "#e9ecf4"
+    }
+   ],
+   "2": [
+    {
+     "tur": "sema",
+     "s": 36,
+     "k": [
+      30,
+      162
+     ],
+     "dugum": [
+      {
+       "id": "d0",
+       "metin": "DTR azalmış veya kaybolmuş"
+      },
+      {
+       "id": "d1",
+       "metin": "Sfinkter bozukluğu olabilir"
+      }
+     ],
+     "kenar": [
+      {
+       "a": "d0",
+       "b": "d1",
+       "tur": "aktive",
+       "etiket": "II. motor nöron: DTR kaybı ve flask paralizi"
+      }
+     ],
+     "kaynak": "ok",
+     "tip": "zincir",
+     "konum": [
+      0.03,
+      0.97
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.253,
+     "yon": "dikey",
+     "olcek": 1.0,
+     "ek_alt": 0.2426,
+     "ek_renk": "#e9ecf4"
+    }
+   ],
+   "3": [
+    {
+     "tur": "akis",
+     "a": [
+      0.6810287263658312,
+      0.4073217502170139
+     ],
+     "b": [
+      0.6810287263658312,
+      0.6593842502170139
+     ],
+     "etiket": "konversiyon: güzel aldırmazlık",
+     "odak": [
+      0.66,
+      0.32,
+      0.95,
+      0.75
+     ],
+     "s": 36,
+     "k": [
+      58,
+      239
+     ],
+     "yol": [
+      [
+       0.681,
+       0.4073
+      ],
+      [
+       0.681,
+       0.6594
+      ]
+     ],
+     "rota": "duz",
+     "kaynak_kutu": [
+      0.6247,
+      0.3681,
+      0.7373,
+      0.4053
+     ],
+     "hedef_kutu": [
+      0.6247,
+      0.6614,
+      0.8002,
+      0.6986
+     ],
+     "etiket_konum": [
+      0.2316,
+      0.5128
+     ],
+     "etiket_genislik": 0.416
+    }
+   ]
+  }
+ },
+ "rapor": {
+  "aday": 75,
+  "gecti": 62,
+  "ret": {
+   "panel metni 'Biyopsikososyal model' henüz anlatılmamış terim": 1,
+   "panel metni 'Örnek' henüz anlatılmamış terim içeriyor (ileri": 1,
+   "noktaların %20'i çizgi üstünde (en az %70)": 1,
+   "noktaların %7'i çizgi üstünde (en az %70)": 1,
+   "noktaların %13'i çizgi üstünde (en az %70)": 1,
+   "noktaların %27'i çizgi üstünde (en az %70)": 1,
+   "panel metni 'AIDS' henüz anlatılmamış terim içeriyor (ileri ": 1,
+   "maske: görünen + 1–4 altta": 2,
+   "panel metni 'Guillain-Barré sendromu' henüz anlatılmamış ter": 1,
+   "panel metni 'Birincil amaç' henüz anlatılmamış terim içeriyo": 1,
+   "panel metni 'ölüm' henüz anlatılmamış terim içeriyor (ileri ": 1,
+   "panel metni 'Hastanın tutumu' henüz anlatılmamış terim içeri": 1
+  },
+  "ret_ayrinti": [
+   {
+    "cumle": "P1.C0",
+    "sayfa": 3,
+    "tur": "sema",
+    "neden": "panel metni 'Biyopsikososyal model' henüz anlatılmamış terim içeriyor (ileri sızıntı)",
+    "komut": {}
+   },
+   {
+    "cumle": "P7.C2",
+    "sayfa": 9,
+    "tur": "sema",
+    "neden": "panel metni 'Örnek' henüz anlatılmamış terim içeriyor (ileri sızıntı)",
+    "komut": {}
+   },
+   {
+    "cumle": "P8.C0",
+    "sayfa": 10,
+    "tur": "kontur",
+    "neden": "noktaların %20'i çizgi üstünde (en az %70)",
+    "komut": {
+     "nokta": [
+      [
+       0.178,
+       0.24
+      ],
+      [
+       0.55,
+       0.24
+      ],
+      [
+       0.912,
+       0.24
+      ],
+      [
+       0.912,
+       0.285
+      ],
+      [
+       0.912,
+       0.33
+      ],
+      [
+       0.55,
+       0.33
+      ],
+      [
+       0.178,
+       0.33
+      ],
+      [
+       0.178,
+       0.285
+      ]
+     ],
+     "etiket": "A ölçütü: bedensel belirti"
+    }
+   },
+   {
+    "cumle": "P8.C1",
+    "sayfa": 10,
+    "tur": "kontur",
+    "neden": "noktaların %7'i çizgi üstünde (en az %70)",
+    "komut": {
+     "nokta": [
+      [
+       0.178,
+       0.355
+      ],
+      [
+       0.55,
+       0.355
+      ],
+      [
+       0.912,
+       0.355
+      ],
+      [
+       0.912,
+       0.425
+      ],
+      [
+       0.912,
+       0.495
+      ],
+      [
+       0.55,
+       0.495
+      ],
+      [
+       0.178,
+       0.495
+      ],
+      [
+       0.178,
+       0.425
+      ]
+     ],
+     "etiket": "B ölçütü: aşırı düşünce, duygu, davranış"
+    }
+   },
+   {
+    "cumle": "P8.C1",
+    "sayfa": 10,
+    "tur": "kontur",
+    "neden": "noktaların %13'i çizgi üstünde (en az %70)",
+    "komut": {
+     "nokta": [
+      [
+       0.225,
+       0.515
+      ],
+      [
+       0.55,
+       0.515
+      ],
+      [
+       0.912,
+       0.515
+      ],
+      [
+       0.912,
+       0.65
+      ],
+      [
+       0.912,
+       0.785
+      ],
+      [
+       0.55,
+       0.785
+      ],
+      [
+       0.225,
+       0.785
+      ],
+      [
+       0.225,
+       0.65
+      ]
+     ],
+     "etiket": "üçünden en az biri"
+    }
+   },
+   {
+    "cumle": "P8.C2",
+    "sayfa": 10,
+    "tur": "kontur",
+    "neden": "noktaların %27'i çizgi üstünde (en az %70)",
+    "komut": {
+     "nokta": [
+      [
+       0.178,
+       0.805
+      ],
+      [
+       0.55,
+       0.805
+      ],
+      [
+       0.912,
+       0.805
+      ],
+      [
+       0.912,
+       0.855
+      ],
+      [
+       0.912,
+       0.902
+      ],
+      [
+       0.55,
+       0.902
+      ],
+      [
+       0.178,
+       0.902
+      ],
+      [
+       0.178,
+       0.855
+      ]
+     ],
+     "etiket": "C ölçütü: altı aydan uzun"
+    }
+   },
+   {
+    "cumle": "P12.C0",
+    "sayfa": 14,
+    "tur": "sema",
+    "neden": "panel metni 'AIDS' henüz anlatılmamış terim içeriyor (ileri sızıntı)",
+    "komut": {}
+   },
+   {
+    "cumle": "P29.C0",
+    "sayfa": 31,
+    "tur": "sema",
+    "neden": "panel metni 'Guillain-Barré sendromu' henüz anlatılmamış terim içeriyor (ileri sızıntı)",
+    "komut": {}
+   },
+   {
+    "cumle": "P36.C0",
+    "sayfa": 38,
+    "tur": "sema",
+    "neden": "panel metni 'Birincil amaç' henüz anlatılmamış terim içeriyor (ileri sızıntı)",
+    "komut": {}
+   },
+   {
+    "cumle": "P36.C1",
+    "sayfa": 38,
+    "tur": "sema",
+    "neden": "panel metni 'ölüm' henüz anlatılmamış terim içeriyor (ileri sızıntı)",
+    "komut": {}
+   },
+   {
+    "cumle": "P37.C1",
+    "sayfa": 39,
+    "tur": "sema",
+    "neden": "panel metni 'Hastanın tutumu' henüz anlatılmamış terim içeriyor (ileri sızıntı)",
+    "komut": {}
+   }
+  ]
+ }
+}

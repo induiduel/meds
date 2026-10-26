@@ -1143,3 +1143,33 @@
 :root.cd-tam-ekran .cd-dock.is-tam.is-kucuk .cd-kucuk-ilerleme { width: 100%; }
 :root.cd-tam-ekran .cd-dock.is-tam.is-kucuk .cd-kucuk .cd-ib { width: 32px; height: 32px; color: #fff; background: transparent; border: 0; }
 :root.cd-tam-oynatici:has(.cd-dock.is-kucuk) .cd-ders.is-tam :is(.cd-metin, .pdv) { padding-bottom: 64px; }
+
+/* ── PDF terim yardımcısı (CdTerimKatman.tsx, 2026-10-26) ─────────────────────────────────────────── */
+.cd-trm-btn > svg { color: var(--color-accent); }
+.cd-trm-btn.is-on { border-color: var(--color-accent); color: var(--color-accent); background: color-mix(in srgb, var(--color-accent) 8%, var(--color-white)); }
+.cd-trm-kat { position: absolute; inset: 0; z-index: 6; pointer-events: none; }
+.cd-trm { position: absolute; pointer-events: auto; padding: 0; margin: 0; background: transparent; border: 0;
+  border-bottom: 1.5px dashed color-mix(in srgb, var(--color-accent) 75%, transparent); border-radius: 2px; cursor: help; }
+.cd-trm.is-karisan { border-bottom-color: color-mix(in srgb, var(--color-warn, #d97706) 85%, transparent); }
+.cd-trm:hover, .cd-trm[data-state="open"] { background: color-mix(in srgb, var(--color-accent) 12%, transparent); }
+.cd-trm:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 1px; }
+.cd-trm-kart { width: min(320px, calc(100vw - 32px)); padding: 12px 14px; border-radius: 12px; border: 1px solid var(--color-line);
+  background: var(--color-white); box-shadow: 0 10px 30px rgb(0 0 0 / .14); font-size: 13.5px; line-height: 1.5; color: var(--color-ink); }
+.cd-trm-kart p { margin: 6px 0 0; }
+.cd-trm-kart-bas { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.cd-trm-kart-bas > b { font-size: 15px; }
+.cd-trm-f { color: var(--color-ink-2); font-size: 12.5px; }
+.cd-trm-tur { font-size: 10.5px; font-weight: 700; letter-spacing: .02em; padding: 1px 7px; border-radius: 999px;
+  background: color-mix(in srgb, var(--color-accent) 12%, transparent); color: var(--color-accent); white-space: nowrap; }
+.cd-trm-tur.is-latince { background: color-mix(in srgb, #7c3aed 12%, transparent); color: #7c3aed; }
+.cd-trm-tur.is-karisan { background: color-mix(in srgb, #d97706 14%, transparent); color: #b45309; }
+.cd-trm-tur.is-kisaltma { background: color-mix(in srgb, #0891b2 12%, transparent); color: #0e7490; }
+.cd-trm-panel { position: absolute; left: 3%; right: 3%; pointer-events: auto; display: grid; gap: 6px 14px;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); padding: 10px 12px; border-radius: 10px;
+  border: 1px solid var(--color-line); background: color-mix(in srgb, var(--color-white) 94%, var(--color-accent));
+  box-shadow: 0 2px 10px rgb(0 0 0 / .06); color: var(--color-ink); font-size: 12px; line-height: 1.42; }
+.cd-trm-oge { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.cd-trm-oge-t { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+.cd-trm-oge-t > b { font-size: 12.5px; }
+.cd-trm-oge-a { color: var(--color-ink-2); }
+.cd-trm-oge-a i { color: var(--color-ink-3); }

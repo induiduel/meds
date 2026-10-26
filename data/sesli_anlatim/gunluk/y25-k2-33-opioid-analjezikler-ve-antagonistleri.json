@@ -1,0 +1,34 @@
+{
+  "key": "y25-k2-33-opioid-analjezikler-ve-antagonistleri",
+  "donem": "2025-2026",
+  "kurul": 2,
+  "brans": "Tıbbi Farmakoloji",
+  "baslik": "Opioid Analjezikler ve Antagonistleri",
+  "kayitlar": [
+    {
+      "surum": 1,
+      "tarih": "2026-10-26 04:44",
+      "neden": "2025-2026 geçmiş yıl arşiv dersi ilk üretimi ve Kurul 2 tam otomatik hat kapı doğrulaması",
+      "hatali_bilgiler": [
+        "İlk üretim kontrolü: H1–H55 hata defterindeki kısaltma okunuşu, sayfa atlama ve şık açıklama kusurları tarandı; 0 hata doğrulandı."
+      ],
+      "degisiklikler": [
+        "2025-2026 dönemi 31 Opioid Analjezikler ve Antagonistleri.pdf (71 sayfa) kaynağından 0 atlanan sayfa ile 69 paragraf / 145 cümlelik sesli anlatım üretildi.",
+        "37 adımlı etkileşimli Öğren destesi (11 model + ders sonu oyunları) ve 8 canlı çizim katmanı eklendi.",
+        "EMA Lightning GPU ile 16.2 dakikalık ses sentezlendi, cümle/kelime zamanlaması ve .medspak paketi doğrulandı."
+      ],
+      "metrikler": {
+        "sureSn": 973,
+        "sureDk": 16.2,
+        "sayfaSayisi": 71,
+        "atlananSayfa": 0,
+        "bolumSayisi": 18,
+        "paragrafSayisi": 69,
+        "cumleSayisi": 145,
+        "slaytAdimSayisi": 37,
+        "cizimSayisi": 8,
+        "cikmisEslesme": 23
+      }
+    }
+  ]
+}

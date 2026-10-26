@@ -1,0 +1,110 @@
+{
+  "key": "y25-k2-01-norolojik-hastaya-yaklasim",
+  "donem": "2025-2026",
+  "kurul": 2,
+  "brans": "Nöroloji",
+  "baslik": "Nörolojik Hastaya Yaklaşım",
+  "kayitlar": [
+    {
+      "surum": 1,
+      "tarih": "2026-10-24 23:38",
+      "neden": "Kurul 2 2025-2026 Arşivi İlk Üretim ve Kalite Kapısı Doğrulaması",
+      "hatali_bilgiler": [
+        "Taslak aşamasında deck.json 1. adım pdfSayfalari [1,2] kapak sayfasını içeriyordu; sayfa_haritasi.json ile uyumlu olarak [2,2] (içerik sayfası) şeklinde düzeltildi.",
+        "konusma_v2.json içinde cikmis_baglantilari.json ile eşleşen 7 çıkmış sorunun (Parkinson ilk izlenim, MS atak-düzelme, migren anamnez tanısı, akut hemipleji, akut inmede BBT/MRG) sesli vurguları 'sınavda soruldu / bu bilgi çıkmışta soruldu' kalıbıyla tamamlandı."
+      ],
+      "degisiklikler": [
+        "9 sayfalık PDF eksiksiz işlendi (sayfa 1 kapak, sayfa 2-9 içerik); tüm şekil ve tablolar sayfa_haritasi.json ve konusma_v2.json içinde açıklandı.",
+        "7 çıkmış soru bağlantısı hem sesli anlatımda (cikmis + vurgu tur=cikmis) hem bge-m3 tabanlı vurgu/cikmis_konum katmanlarında işaretlendi.",
+        "12 adımlı Öğren destesi (2 Checkpoint + 1 Ders Sonu Oyunları sayfası) ve PDF gömülü .medspak (ek tablosu tur='ders_pdf', meta.ekler=1) üretildi."
+      ],
+      "metrikler": {
+        "sureSn": 997,
+        "sureDk": 16.6,
+        "sayfaSayisi": 9,
+        "atlananSayfa": 0,
+        "bolumSayisi": 7,
+        "paragrafSayisi": 14,
+        "cumleSayisi": 114,
+        "slaytAdimSayisi": 12,
+        "cizimSayisi": 15,
+        "cikmisEslesme": 22
+      }
+    },
+    {
+      "surum": 2,
+      "tarih": "2026-10-25 19:30",
+      "neden": "9 slaytın tamamını kapsayan 113 cümlelik amfi derinliğinde metin, 7 çıkmış soru bağlantısı ve 14 semantik çizim ile yayın",
+      "hatali_bilgiler": [
+        "İlk üretim kontrolü: H1–H55 hata defterindeki kısaltma okunuşu, sayfa atlama ve şık açıklama kusurları tarandı; 0 hata doğrulandı."
+      ],
+      "degisiklikler": [
+        "2025-2026 dönemi nörolojik hastaya yaklaşım.pdf (9 sayfa) kaynağından 0 atlanan sayfa ile 14 paragraf / 113 cümlelik sesli anlatım üretildi.",
+        "12 adımlı etkileşimli Öğren destesi (11 model + ders sonu oyunları) ve 14 canlı çizim katmanı eklendi.",
+        "EMA Lightning GPU ile 16.2 dakikalık ses sentezlendi, cümle/kelime zamanlaması ve .medspak paketi doğrulandı."
+      ],
+      "metrikler": {
+        "sureSn": 972,
+        "sureDk": 16.2,
+        "sayfaSayisi": 9,
+        "atlananSayfa": 0,
+        "bolumSayisi": 9,
+        "paragrafSayisi": 14,
+        "cumleSayisi": 113,
+        "slaytAdimSayisi": 12,
+        "cizimSayisi": 14,
+        "cikmisEslesme": 17
+      }
+    },
+    {
+      "surum": 3,
+      "tarih": "2026-10-25 20:55",
+      "neden": "2025-2026 geçmiş yıl arşiv dersi ilk üretimi ve Kurul 2 tam otomatik hat kapı doğrulaması",
+      "hatali_bilgiler": [
+        "İlk üretim kontrolü: H1–H55 hata defterindeki kısaltma okunuşu, sayfa atlama ve şık açıklama kusurları tarandı; 0 hata doğrulandı."
+      ],
+      "degisiklikler": [
+        "2025-2026 dönemi nörolojik hastaya yaklaşım.pdf (9 sayfa) kaynağından 0 atlanan sayfa ile 14 paragraf / 113 cümlelik sesli anlatım üretildi.",
+        "12 adımlı etkileşimli Öğren destesi (11 model + ders sonu oyunları) ve 14 canlı çizim katmanı eklendi.",
+        "EMA Lightning GPU ile 16.2 dakikalık ses sentezlendi, cümle/kelime zamanlaması ve .medspak paketi doğrulandı."
+      ],
+      "metrikler": {
+        "sureSn": 972,
+        "sureDk": 16.2,
+        "sayfaSayisi": 9,
+        "atlananSayfa": 0,
+        "bolumSayisi": 9,
+        "paragrafSayisi": 14,
+        "cumleSayisi": 113,
+        "slaytAdimSayisi": 12,
+        "cizimSayisi": 14,
+        "cikmisEslesme": 17
+      }
+    },
+    {
+      "surum": 4,
+      "tarih": "2026-10-25 20:55",
+      "neden": "2025-2026 geçmiş yıl arşiv dersi ilk üretimi ve Kurul 2 tam otomatik hat kapı doğrulaması",
+      "hatali_bilgiler": [
+        "İlk üretim kontrolü: H1–H55 hata defterindeki kısaltma okunuşu, sayfa atlama ve şık açıklama kusurları tarandı; 0 hata doğrulandı."
+      ],
+      "degisiklikler": [
+        "2025-2026 dönemi nörolojik hastaya yaklaşım.pdf (9 sayfa) kaynağından 0 atlanan sayfa ile 14 paragraf / 113 cümlelik sesli anlatım üretildi.",
+        "12 adımlı etkileşimli Öğren destesi (11 model + ders sonu oyunları) ve 14 canlı çizim katmanı eklendi.",
+        "EMA Lightning GPU ile 16.2 dakikalık ses sentezlendi, cümle/kelime zamanlaması ve .medspak paketi doğrulandı."
+      ],
+      "metrikler": {
+        "sureSn": 972,
+        "sureDk": 16.2,
+        "sayfaSayisi": 9,
+        "atlananSayfa": 0,
+        "bolumSayisi": 9,
+        "paragrafSayisi": 14,
+        "cumleSayisi": 113,
+        "slaytAdimSayisi": 12,
+        "cizimSayisi": 14,
+        "cikmisEslesme": 17
+      }
+    }
+  ]
+}

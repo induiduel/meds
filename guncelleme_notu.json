@@ -1,26 +1,26 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 366,
-  "baslik": "Kurul 2 Arşiv Tamamlama: Adrenoseptör Antagonist İlaçlar Kapsamlı Anlatımla Yayında (61. Ders)",
+  "onem": 367,
+  "baslik": "Tüm AI Hatları Manuel Moda Alındı ve Öğrenci Drive Entegrasyonu Yayında",
   "maddeler": [
-    "Kurul 2 Tıbbi Farmakoloji arşiv dersi 'Adrenoseptör Antagonist İlaçlar' (Ders 47) H70 Sıfır Bilgi Kaybı standardıyla baştan sona yeniden yazılarak Oracle canlı ortamına alındı.",
-    "70 sayfalık amfi ders notunun tamamı 259 cümle ve 3946 kelimelik zengin metinle (~28.2 dk kesintisiz EMA Lightning GPU seslendirmesi), 34 adımlık interaktif Öğren destesi ve ders sonu oyunlarıyla işlendi.",
-    "Tirozin hidroksilaz hız kısıtlayıcı basamağı, metirozin, Dale epinefrin vazomotor tersinmesi, fentolamin disinhibisyonu, prazosin ilk doz senkopu, tamsulosin/silodosin alfa-1A üroseçiciliği ve katarakt cerrahisinde IFIS riski detaylandırıldı.",
-    "Feokromasitomada cerrahi öncesi alfa-önce beta-sonra kuralı, beta blokör kinetiği, ISA (pindolol), MSA korneal anestezi riski, açık açılı glokom, kalp yetmezliğinde mortalite faydası (metoprolol süksinat, bisoprolol, karvedilol), tiroid fırtınası, diyabette hipoglisemi maskelenmesi ve glukagon antidot protokolü eksiksiz kapsandı.",
-    "Piyasada bulunan ticari preparatlar (Dideral, Beloc, Lopresor, Tensinor, Dilatrend, Trandate, Cardura, Flomax/Floprost) ile uluslararası monograflar (Esmolol, Sotalol QT uzaması/Torsades, Karvedilol, Bupranolol, Bucindolol, Tiyoridazin, Zuklopentiksol, Tiyoproperazin) aktarıldı.",
-    "Oracle canlı ortamındaki aktif arşiv paketi sayısı 61'e ulaştı."
+    "Kullanıcı talimatı doğrultusunda arka planda otonom çalışan tüm yapay zeka, LLM ve API süreçleri durduruldu; sistem tam manuel yönetim moduna geçirildi.",
+    "Öğrenci notları ve amfi ses kayıtlarının paylaşılacağı yeni Google Drive klasörü (17K7doMGg0xupQekTD5_Vz9xMXc5gd7BA) sisteme entegre edildi.",
+    "Ders işçisi ve izleyiciler manuel kontrol moduna alındı; yeni resmi okul PDF'leri yalnızca 'PDF görüldü, işlenmedi' olarak kayıt altına alınıyor.",
+    "Kullanıcı talimat verdiğinde öğrenci amfi sesleri/notları ile resmi hoca slaytlarını birlikte değerlendirip sentezleyen entegrasyon hattı ve yönetim API uçları (/api/admin/ogrenci-drive) devreye alındı.",
+    "Kurul 2 arşiv ve canlı ders iyileştirmeleri güncellendi."
   ],
   "eklenen": [
-    "meds_database_25_26/medspak/kurul2/y25-k2-47-adrenoseptor-antagonist-ilaclar.medspak",
-    "meds/data/arsiv_25_26/decks/k2p-y25-k2-47-adrenoseptor-antagonist-ilaclar.json"
+    "scripts/ogrenci_drive/ogrenci_drive.py",
+    "src/services/ogrenciDriveRoutes.ts"
   ],
   "degisen": [
-    "meds/data/arsiv_25_26/sesli_anlatim/kayit.json",
-    "meds/data/arsiv_25_26/sesli_anlatim/v2/y25-k2-47-adrenoseptor-antagonist-ilaclar.json",
-    "meds/data/arsiv_25_26/sesli_anlatim/metin/y25-k2-47-adrenoseptor-antagonist-ilaclar.md"
+    "scripts/agents/watchdog.py",
+    "scripts/ders_isci/ayarlar.py",
+    "scripts/pipeline/config.mjs",
+    "server.ts"
   ],
   "duzeltilen": [
-    "Ders 47'deki yüzeysel 140 cümlelik şablon tamamen kaldırılarak amfi derinliğinde 259 cümlelik zengin içerik standardı (H70) kalıcı olarak uygulandı"
+    "Otonom arka plan süreçlerinin kontrolsüz API çağırması engellendi, manuel yönetim sağlandı."
   ],
   "silinen": []
 }

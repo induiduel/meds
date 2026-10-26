@@ -1,0 +1,2136 @@
+{
+ "id": "k2p-y25-k2-34-unipolar-depresyon",
+ "deckId": "k2p-y25-k2-34-unipolar-depresyon",
+ "title": "Unipolar Depresyon",
+ "discipline": "Psikiyatri",
+ "committee": "donem3-kurul2",
+ "donem": "2025-2026",
+ "arsiv": true,
+ "confidence": "high",
+ "sayfaHaritasi": "teyitli",
+ "totalSlides": 22,
+ "slides": [
+  {
+   "slideNumber": 1,
+   "title": "Depresyon Kavramı: Etimoloji, Tanım ve Tarihsel Arka Plan",
+   "section": "Depresyon Kavramı, Tanımı ve Epidemiyoloji",
+   "content": "Depresyon sözcüğü Latince **depresus** (aşağı doğru bastırmak, kederli olmak) kökünden türemiştir ve tıbbi terminolojide **çökkünlük** olarak karşılanır.\n\n- **Kavramsal Çerçeve:** Gündelik dildeki geçici mutsuzluklardan farklı olarak psikiyatride depresyon, duygudurumda keder ve elem yönünde sürekli artış ve belirgin işlevsellik kaybı yapan klinik bir sendromdur.\n- **Temel Klinik Boyut:** Bireyin kendilik algısında derin bir çaresizlik duygusu egemendir ve kişilerarası ilişkilerde belirgin yeti yitimi saptanır.\n\n> [!NOTE]\n> Sylvia Plath'ın belirttiği gibi depresyon, insan zihninin en karanlık cehennemi olarak deneyimlenen derin bir umutsuzluk tablosudur.",
+   "interactiveElements": [
+    {
+     "id": "k34-s1-q1",
+     "type": "micro_quiz",
+     "question": "Depresyon teriminin Latince etimolojik kökeni ve tıbbi terminolojideki tam karşılığı nedir?",
+     "options": [
+      {
+       "text": "Depresus kökünden türemiş olup tıbbi dilde çökkünlük olarak ifade edilir.",
+       "isCorrect": true,
+       "explanation": "Depresus aşağı bastırmak anlamına gelen köktür. Bu kavram tıbbi terminolojide çökkünlük tablosunu eksiksiz biçimde karşılamaktadır. Bu klinik özellik ayırıcı tanıda ve doğru sağaltım planlamasında temel önem taşımaktadır."
+      },
+      {
+       "text": "Anhedonia kökünden türemiş olup yalnızca geçici bir isteksizlik durumunu ifade eder.",
+       "isCorrect": false,
+       "explanation": "Anhedoni zevk alamama belirtisini tanımlayan klinik terimdir. Bu sözcük depresyon teriminin etimolojik kökenini oluşturmaz. Bu klinik özellik ayırıcı tanıda ve doğru sağaltım planlamasında temel önem taşımaktadır."
+      },
+      {
+       "text": "Mania kökünden türemiş olup duygu durumda taşkınlık ve aşırı neşe anlamına gelir.",
+       "isCorrect": false,
+       "explanation": "Mani duygudurumun aşırı yükseldiği taşkınlık dönemidir. Çökkünlük sendromunun etimolojik kökeniyle doğrudan zıt bir anlam taşır. Bu klinik özellik ayırıcı tanıda ve doğru sağaltım planlamasında temel önem taşımaktadır."
+      },
+      {
+       "text": "Disfori kökünden türemiş olup yalnızca bedensel ağrıları tanımlayan bir kavramdır.",
+       "isCorrect": false,
+       "explanation": "Disfori genel huzursuzluk ve sıkıntı halini ifade eden klinik bir terimdir. Depresyon kelimesinin türediği Latince kök değildir."
+      }
+     ]
+    },
+    {
+     "id": "k34-s1-c1",
+     "type": "cloze_masking",
+     "sentence": "Depresyon sözcüğünün Latince kökü depresus dur ve tıbbi terminolojide çökkünlük olarak adlandırılır.",
+     "maskedTerm": "çökkünlük",
+     "hint": "Ruh halinin aşağı çekilme durumu"
+    },
+    {
+     "id": "k34-s1-t1",
+     "type": "interactive_table",
+     "tableHeaders": [
+      "Kavram",
+      "Köken / Anlam",
+      "Klinik Özellik"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Depresus",
+         "isMasked": false
+        },
+        {
+         "text": "Aşağı bastırmak",
+         "isMasked": true,
+         "hint": "Kökün fiziksel baskı yönündeki etimolojisi"
+        },
+        {
+         "text": "Çökkünlük temeli",
+         "isMasked": false
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Psikiyatrik Sendrom",
+         "isMasked": false
+        },
+        {
+         "text": "Klinik keder ve yeti yitimi",
+         "isMasked": false
+        },
+        {
+         "text": "İşlevsellikte bozulma",
+         "isMasked": true,
+         "hint": "Mesleki ve sosyal kapasite kaybı"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k34-s1-l1",
+     "type": "spot_the_lie",
+     "topic": "Depresyon Kavramı ve Tanımı",
+     "items": [
+      {
+       "text": "Depresyon gündelik dildeki geçici mutsuzluklardan daha uzun süreli ve şiddetli bir sendromdur.",
+       "isLie": false,
+       "explanation": "Klinik sendrom süreğen keder ve yeti yitimiyle gündelik üzüntüden ayrılır."
+      },
+      {
+       "text": "Tıbbi terminolojide depresyon teriminin temel Türkçe karşılığı çökkünlük olarak tanımlanır.",
+       "isLie": false,
+       "explanation": "Çökkünlük terimi depresus kökünün psikiyatrideki yerleşik Türkçe terminolojik adıdır."
+      },
+      {
+       "text": "Depresyon yalnızca hiçbir psikososyal belirtisi olmayan basit bir fiziksel kas yorgunluğudur.",
+       "isLie": true,
+       "explanation": "Depresyon karmaşık biyopsikososyal bir sendromdur; basit bir kas yorgunluğuyla açıklanamaz."
+      }
+     ]
+    }
+   ],
+   "pdfSayfalari": [
+    2,
+    3
+   ],
+   "sourcePdf": {
+    "startPage": 2,
+    "endPage": 3,
+    "name": "y25-k2-34-unipolar-depresyon.pdf"
+   },
+   "bolum": "1"
+  },
+  {
+   "slideNumber": 2,
+   "title": "DSM-5'e Göre Depresif Bozukluk Alt Grupları",
+   "section": "Depresyon Kavramı, Tanımı ve Epidemiyoloji",
+   "content": "DSM-5 sınıflama sisteminde duygudurum bozuklukları başlığı altında depresif bozukluklar ayrı bir kategori olarak yapılandırılmıştır.\n\n- **Temel Klinik Kategoriler:** Majör depresif bozukluk (MDB) ve distimik bozukluk (persistan depresif bozukluk) en sık karşılaşılan tablolardır.\n- **Tanımlanan Yeni Antiteler:** Yıkıcı duygudurumu düzenleyememe bozukluğu çocuklarda irritabiliteyi tanımlar; premenstrüel disforik bozukluk luteal fazda ortaya çıkar.\n- **Etiyolojik Alt Tipler:** Madde veya ilaç kaynaklı depresif bozukluk ile başka bir tıbbi duruma bağlı depresif bozukluklar ayrılır.\n\n> [!IMPORTANT]\n> DSM-5 tanı sisteminde depresif bozukluklar bipolar bozukluklardan tamamen ayrı bir tanı kümesi olarak ele alınmaktadır.",
+   "interactiveElements": [
+    {
+     "id": "k34-s2-q1",
+     "type": "micro_quiz",
+     "question": "Aşağıdakilerden hangisi DSM-5 tanı sisteminde yer alan depresif bozukluk alt gruplarından biridir?",
+     "options": [
+      {
+       "text": "Yıkıcı duygudurumu düzenleyememe bozukluğu ve premenstrüel disforik bozukluk",
+       "isCorrect": true,
+       "explanation": "Bu iki antite DSM-5 sınıflamasında depresif bozukluklar kümesine eklenmiştir. Çocukluk çağı irritabilitesi ve luteal faz disforisini karşılarlar."
+      },
+      {
+       "text": "Şizofreni ve paranoid hezeyanlı psikotik bozukluk tabloları",
+       "isCorrect": false,
+       "explanation": "Şizofreni psikotik bozukluklar ana kümesinde yer alan bir hastalıktır. Depresif bozukluklar kategorisine dahil edilmemektedir. Bu klinik özellik ayırıcı tanıda ve doğru sağaltım planlamasında temel önem taşımaktadır."
+      },
+      {
+       "text": "Antisosyal ve narsisistik kişilik bozukluğu tanı kategorileri",
+       "isCorrect": false,
+       "explanation": "Kişilik bozuklukları bireyin gelişimsel uyum paternlerini inceleyen ayrı bir gruptur. Duygudurum bozuklukları sınıflamasına girmez. Bu klinik özellik ayırıcı tanıda ve doğru sağaltım planlamasında temel önem taşımaktadır."
+      },
+      {
+       "text": "Agorafobi ve yaygın anksiyete bozukluğu gibi saf nevrozlar",
+       "isCorrect": false,
+       "explanation": "Anksiyete bozuklukları aşırı kaygı ve kaçınma belirtileriyle giden bağımsız bir kümedir. Depresif bozukluk kategorisi sayılmaz. Bu klinik özellik ayırıcı tanıda ve doğru sağaltım planlamasında temel önem taşımaktadır."
+      }
+     ]
+    },
+    {
+     "id": "k34-s2-c1",
+     "type": "cloze_masking",
+     "sentence": "DSM-5 sınıflamasında kronik çökkünlük tablosu distimik bozukluk olarak adlandırılır.",
+     "maskedTerm": "distimik bozukluk",
+     "hint": "Kronik hafif seyirli persistan sendrom"
+    },
+    {
+     "id": "k34-s2-b1",
+     "type": "branching_logic",
+     "scenario": "Bir klinisyen çocukluk çağında haftada en az üç kez ortaya çıkan şiddetli öfke patlamaları ve sürekli irritabilite gösteren bir olguyu DSM-5'e göre sınıflandırmak istemektedir.",
+     "options": [
+      {
+       "text": "Yıkıcı duygudurumu düzenleyememe bozukluğu tanısı değerlendirilmelidir.",
+       "isCorrect": true,
+       "feedback": "Yıkıcı duygudurumu düzenleyememe bozukluğu çocukluktaki kronik irritabiliteyi tanımlar. Bu olguda aranan temel tanı ölçütünü tam olarak karşılar."
+      },
+      {
+       "text": "Hemen klasik şizofreni tanısı konularak antipsikotik başlanmalıdır.",
+       "isCorrect": false,
+       "feedback": "Şizofreni hezeyan ve varsanılarla seyreden primer psikotik tablodur. Bu olgudaki saf irritabilite ve öfke nöbetlerini açıklamakta kullanılamaz."
+      }
+     ]
+    },
+    {
+     "id": "k34-s2-l1",
+     "type": "spot_the_lie",
+     "topic": "DSM-5 Depresif Bozukluk Sınıflaması",
+     "items": [
+      {
+       "text": "Majör depresif bozukluk DSM-5 depresif bozukluklar sınıflamasının temel prototipidir.",
+       "isLie": false,
+       "explanation": "MDB klinikte en yaygın görülen ana depresif bozukluk tablosudur."
+      },
+      {
+       "text": "Premenstrüel disforik bozukluk DSM-5 ile depresif bozukluklar kategorisine resmi olarak dahil edilmiştir.",
+       "isLie": false,
+       "explanation": "Luteal fazdaki duygudurum bozulması DSM-5'te bağımsız tanı kategorisi yapılmıştır."
+      },
+      {
+       "text": "Tıbbi duruma veya ilaca bağlı gelişen depresif tablolar DSM-5 sınıflamasında tamamen reddedilmiştir.",
+       "isLie": true,
+       "explanation": "DSM-5'te madde/ilaç kaynaklı ve genel tıbbi duruma bağlı depresyon resmi tanı kodudur."
+      }
+     ]
+    }
+   ],
+   "pdfSayfalari": [
+    5,
+    5
+   ],
+   "sourcePdf": {
+    "startPage": 5,
+    "endPage": 5,
+    "name": "y25-k2-34-unipolar-depresyon.pdf"
+   },
+   "bolum": "1"
+  },
+  {
+   "slideNumber": 3,
+   "title": "Epidemiyoloji: Yaygınlık, Cinsiyet Oranı ve Hastalık Yükü",
+   "section": "Depresyon Kavramı, Tanımı ve Epidemiyoloji",
+   "content": "Depresyon tüm dünyada ve ülkemizde toplum sağlığını en çok tehdit eden öncelikli psikiyatrik rahatsızlıktır.\n\n- **Cinsiyet Dağılımı:** Kadınlarda erkeklere oranla **iki kat** daha sık görülür (K/E oranı = 2). Yaşam boyu risk kadınlarda %10-25, erkeklerde %5-12 düzeyindedir.\n- **Hastalık Yükü (WHO):** Dünya Sağlık Örgütü verilerine göre majör depresyon, iskemik kalp hastalıklarının ardından dünyada **en çok yeti yitimi yapan 2. hastalık** konumundadır.\n- **Kronikleşme ve İntihar:** Tanı güçlükleri içermesi, kronikleşme eğilimi ve yüksek intihar riski depresyonun klinik önemini katlar.\n\n> [!IMPORTANT]\n> Sağlık kuruluşlarına herhangi bir bedensel yakınmayla başvuran hastaların yaklaşık %10-15'inde altta yatan majör depresyon mevcuttur.",
+   "interactiveElements": [
+    {
+     "id": "k34-s3-q1",
+     "type": "micro_quiz",
+     "question": "Dünya Sağlık Örgütü verilerine göre majör depresyon küresel hastalık yükü sıralamasında kaçıncı sırada yer almaktadır?",
+     "options": [
+      {
+       "text": "İskemik kalp hastalıklarından sonra ikinci sırada yer alır.",
+       "isCorrect": true,
+       "explanation": "Dünya Sağlık Örgütü projeksiyonlarında depresyon en üst sıralardadır. İskemik kalp hastalıklarının hemen ardından ikinci sırada yeti yitimi yapar."
+      },
+      {
+       "text": "Trafik kazalarından sonra ancak ellinci sırada yer bulur.",
+       "isCorrect": false,
+       "explanation": "Depresyon küresel ölçekte en yaygın morbidite kaynaklarından biridir. Elli gibi alt sıralarda yer alması gerçek klinik tabloyla uyuşmaz."
+      },
+      {
+       "text": "Bulaşıcı enfeksiyon hastalıklarının ardından yirminci sıradadır.",
+       "isCorrect": false,
+       "explanation": "Depresyon kronik yeti yitimi araştırmalarında ön sıralarda saptanmaktadır. Yirminci sıra depresyonun küresel yükünü yansıtmaktan uzaktır. Bu klinik özellik ayırıcı tanıda ve doğru sağaltım planlamasında temel önem taşımaktadır."
+      },
+      {
+       "text": "Yalnızca gelişmiş batı ülkelerinde onuncu sırada bildirilmektedir.",
+       "isCorrect": false,
+       "explanation": "Depresyon evrensel ölçekte tüm toplumlarda yüksek yaygınlık gösterir. Onuncu sıra verisi Dünya Sağlık Örgütü raporuyla örtüşmez."
+      }
+     ]
+    },
+    {
+     "id": "k34-s3-c1",
+     "type": "cloze_masking",
+     "sentence": "Majör depresif bozukluk kadınlarda erkeklere oranla iki kat daha sık saptanır.",
+     "maskedTerm": "iki kat",
+     "hint": "Epidemiyolojik çiftleme çarpanı"
+    },
+    {
+     "id": "k34-s3-a1",
+     "type": "active_recall",
+     "question": "Kadın ve erkeklerde majör depresif bozukluk yaşam boyu yaygınlık oranları yüzde kaçtır?",
+     "answer": "Kadınlarda yaşam boyu yaygınlık %10-25, erkeklerde %5-12 olarak belirlenmiştir; kadınlarda risk yaklaşık iki kat yüksektir."
+    },
+    {
+     "id": "k34-s3-l1",
+     "type": "spot_the_lie",
+     "topic": "Depresyon Epidemiyolojisi",
+     "items": [
+      {
+       "text": "Depresyon yarattığı iş gücü kaybı ve yeti yitimi nedeniyle küresel ekonomik maliyeti en yüksek tablolardandır.",
+       "isLie": false,
+       "explanation": "Yeti yitimi sıralamasında ilk sıralarda yer alması yüksek ekonomik yük doğurur."
+      },
+      {
+       "text": "Majör depresyon yaşam boyu kadınlarda erkeklere göre yaklaşık 2 kat daha fazla görülür.",
+       "isLie": false,
+       "explanation": "Epidemiyolojik çalışmalarda kadın/erkek oranı tutarlı biçimde 2 olarak saptanır."
+      },
+      {
+       "text": "Erkeklerde majör depresyon görülme sıklığı kadınların üç katı düzeyinde seyretmektedir.",
+       "isLie": true,
+       "explanation": "Erkeklerde daha sık değildir; tam tersine kadınlarda erkeklerin iki katı sıklıktadır."
+      }
+     ]
+    }
+   ],
+   "pdfSayfalari": [
+    4,
+    8
+   ],
+   "sourcePdf": {
+    "startPage": 4,
+    "endPage": 8,
+    "name": "y25-k2-34-unipolar-depresyon.pdf"
+   },
+   "bolum": "1"
+  },
+  {
+   "slideNumber": 4,
+   "title": "Biyolojik Etyoloji: Monoamin Hipotezi ve Nörotransmitterler",
+   "section": "Biyolojik Etyoloji ve Nörobiyokimyasal Mekanizmalar",
+   "content": "Depresyonun nörobiyolojik temelinde merkezi sinir sistemindeki amin nörotransmitterlerinin işlev bozukluğu yer alır.\n\n- **Monoamin Teorisi:** Özellikle **noradrenalin, serotonin ve dopamin** düzeylerinde veya sinaptik iletimindeki yetersizlik ana mekanizmadır.\n- **Noradrenerjik Sistem:** Beyin sapında Locus coeruleus, medulla oblongata ve ponsta yer alan noradrenerjik nöronların inaktivasyonu enerji kaybı, dikkat dağınıklığı ve psikomotor yavaşlamaya yol açar.\n- **Serotonerjik ve Dopaminerjik İletim:** Serotonin yetersizliği keder, anksiyete ve obsesif ruminasyonları tetiklerken; dopamin eksikliği anhedoni ve motivasyon kaybından sorumludur.\n\n> [!NOTE]\n> Klasik antidepresan ilaçların tamamı bu monoaminlerin sinaptik aralıktaki miktarını artırarak terapötik etkinlik gösterir.",
+   "interactiveElements": [
+    {
+     "id": "k34-s4-q1",
+     "type": "micro_quiz",
+     "question": "Monoamin hipotezine göre depresyon patogenezinde iletimi yetersiz bulunan üç temel nörotransmitter hangisidir?",
+     "options": [
+      {
+       "text": "Serotonin, noradrenalin ve dopamin",
+       "isCorrect": true,
+       "explanation": "Bu üç molekül duygu durum ve motivasyon devrelerini yönetir. Monoamin hipotezinde yetersizlikleri primer patoloji kabul edilir."
+      },
+      {
+       "text": "Glutamat, aspartat ve substans P",
+       "isCorrect": false,
+       "explanation": "Glutamat ve aspartat beynin ana eksitatör aminoasitleridir. Klasik monoamin hipotezinin üçlü ayağında yer almazlar. Bu klinik özellik ayırıcı tanıda ve doğru sağaltım planlamasında temel önem taşımaktadır."
+      },
+      {
+       "text": "GABA, glisin ve taurin",
+       "isCorrect": false,
+       "explanation": "GABA ve glisin merkezi sinir sisteminin inhibitör iletimini sağlar. Monoaminerjik yolakların primer taşıyıcıları sayılmazlar. Bu klinik özellik ayırıcı tanıda ve doğru sağaltım planlamasında temel önem taşımaktadır."
+      },
+      {
+       "text": "Asetilkolin, nitrik oksit ve histamin",
+       "isCorrect": false,
+       "explanation": "Asetilkolin parasempatik ve bilişsel iletimde temel rol oynar. Klasik monoamin teorisinin ana eksenini oluşturmaz. Bu klinik özellik ayırıcı tanıda ve doğru sağaltım planlamasında temel önem taşımaktadır."
+      }
+     ]
+    },
+    {
+     "id": "k34-s4-c1",
+     "type": "cloze_masking",
+     "sentence": "Beyin sapında noradrenalin sentezleyen temel merkez Locus coeruleus çekirdeğidir.",
+     "maskedTerm": "Locus coeruleus",
+     "hint": "Mavi çekirdek santrali"
+    },
+    {
+     "id": "k34-s4-ch1",
+     "type": "causal_chain",
+     "title": "Monoamin Eksikliğinden Depresif Belirtilere Mekanizma",
+     "steps": [
+      "1. Sinaptik aralıkta noradrenalin ve serotonin gerialımının aşırı olması veya sentezin azalması",
+      "2. Postsinaptik reseptör uyarımının yetersiz kalması ve hücre içi sinyal iletiminin zayıflaması",
+      "3. Duygudurum düzenleyici prefrontal devrelerde işlevsel küntleşme gelişmesi",
+      "4. Klinikte keder, motivasyon kaybı, enerji tükenmesi ve anhedoninin ortaya çıkması"
+     ]
+    },
+    {
+     "id": "k34-s4-l1",
+     "type": "spot_the_lie",
+     "topic": "Monoamin Hipotezi",
+     "items": [
+      {
+       "text": "Serotonin azlığı keder ve dürtüsellik ile ilişkiliyken, dopamin azlığı anhedoniye zemin hazırlar.",
+       "isLie": false,
+       "explanation": "Dopamin ödül ve zevk yolağını yönetir; eksikliğinde anhedoni gelişir."
+      },
+      {
+       "text": "Locus coeruleus merkezi sinir sistemine yaygın noradrenerjik projeksiyonlar gönderir.",
+       "isLie": false,
+       "explanation": "Locus coeruleus beyindeki ana noradrenalin santralidir."
+      },
+      {
+       "text": "Depresyon sırasında merkezi sinir sisteminde serotonin ve noradrenalin miktarı normalin on katına çıkar.",
+       "isLie": true,
+       "explanation": "Depresyonda monoamin artışı değil, belirgin fonksiyonel azalma ve yetersizlik saptanır."
+      }
+     ]
+    }
+   ],
+   "pdfSayfalari": [
+    9,
+    10
+   ],
+   "sourcePdf": {
+    "startPage": 9,
+    "endPage": 10,
+    "name": "y25-k2-34-unipolar-depresyon.pdf"
+   },
+   "bolum": "2"
+  },
+  {
+   "slideNumber": 5,
+   "title": "Biyolojik Etyoloji: Genetik Yatkınlık, Nöroendokrin Aks ve Anatomi",
+   "section": "Biyolojik Etyoloji ve Nörobiyokimyasal Mekanizmalar",
+   "content": "Depresyon biyolojisi nörotransmitterlerin ötesinde karmaşık genetik ve nöroendokrin sistemlerle kontrol edilir.\n\n- **Genetik Yük:** Birinci derece akrabalarında depresyon olan bireylerde hastalık riski **2 ila 3 kat** artmaktadır. Kalıtım tek gene bağlı olmayıp heterojen ve poligeniktir.\n- **Nöroanatomik Değişiklikler:** Yapılan nörogörüntüleme çalışmalarında prefrontal korteks, amigdala ve hipokampus devrelerinde hacim ve nöroplastisite azalması gösterilmiştir.\n- **Nöroendokrin Faktörler:** Hipotalamo-hipofiz-adrenal (HPA) aks hiperaktivitesi sonucu kortizol yüksekliği ve deksametazon baskılama testine direnç sık görülür.\n\n> [!IMPORTANT]\n> Depresyonda beyin kaynaklı nörotrofik faktör (BDNF) düzeylerindeki azalma hipokampal atrofiyi tetikler; antidepresan tedavi BDNF düzeyini artırarak nöroplastisiteyi restore eder.",
+   "interactiveElements": [
+    {
+     "id": "k34-s5-q1",
+     "type": "micro_quiz",
+     "question": "Depresyonun genetik ve nöroanatomik özellikleri ile ilgili aşağıdaki ifadelerden hangisi doğrudur?",
+     "options": [
+      {
+       "text": "Birinci derece akrabalarda risk iki ila üç kat fazladır ve prefrontal kortekste işlev kaybı saptanır.",
+       "isCorrect": true,
+       "explanation": "Aile çalışmaları genetik yatkınlığı doğrular. Görüntüleme yöntemleri prefrontal korteks ve hipokampal plastisitede azalmayı gösterir. Bu klinik özellik ayırıcı tanıda ve doğru sağaltım planlamasında temel önem taşımaktadır."
+      },
+      {
+       "text": "Hastalık tek bir otozomal resesif gen mutasyonunun homozigot taşınmasıyla oluşur.",
+       "isCorrect": false,
+       "explanation": "Depresyon tek gen üzerinden Mendeliyen kalıtım göstermez. Multifaktöriyel ve poligenik geçiş özellikleri sergiler. Bu klinik özellik ayırıcı tanıda ve doğru sağaltım planlamasında temel önem taşımaktadır."
+      },
+      {
+       "text": "Depresyon hastalarında hipokampus hacmi sağlıklı bireylerden yüzde kırk daha büyüktür.",
+       "isCorrect": false,
+       "explanation": "Hipokampus stres ve kortizol etkisiyle hacim kaybına uğrar. Hacimde büyüme değil nöronal küçülme izlenir. Bu klinik özellik ayırıcı tanıda ve doğru sağaltım planlamasında temel önem taşımaktadır."
+      },
+      {
+       "text": "Depresyonda adrenal bez tamamen körelir ve kortizol sentezi sıfırlanır.",
+       "isCorrect": false,
+       "explanation": "Adrenal bez HPA aks uyarısıyla aşırı hormon üretir. Plazma kortizol seviyelerinde belirgin artış gözlenir. Bu klinik özellik ayırıcı tanıda ve doğru sağaltım planlamasında temel önem taşımaktadır."
+      }
+     ]
+    },
+    {
+     "id": "k34-s5-c1",
+     "type": "cloze_masking",
+     "sentence": "Depresyon hastalarının birinci derece akrabalarında depresyona yakalanma olasılığı iki ila üç kat fazladır.",
+     "maskedTerm": "üç kat",
+     "hint": "Akrabalardaki risk yükselme çarpanı"
+    },
+    {
+     "id": "k34-s5-a1",
+     "type": "active_recall",
+     "question": "Depresyonda HPA aksında ve hipokampal nöroplastisitede saptanan temel hormonal bozukluk nedir?",
+     "answer": "HPA aks hiperaktivitesi sonucu plazma kortizol düzeyi yükselir; BDNF azalmasıyla birlikte hipokampal nöroplastisite bozulur."
+    },
+    {
+     "id": "k34-s5-l1",
+     "type": "spot_the_lie",
+     "topic": "Genetik ve Nöroendokrin Etyoloji",
+     "items": [
+      {
+       "text": "Depresyonda prefrontal korteks ve hipokampus devrelerinde işlevsel bozulma izlenir.",
+       "isLie": false,
+       "explanation": "Nörogörüntüleme çalışmaları bu devrelerde aktivite ve hacim kaybını doğrulamaktadır."
+      },
+      {
+       "text": "HPA aksının aşırı uyarılması depresyonda kortizol yüksekliğine yol açabilir.",
+       "isLie": false,
+       "explanation": "Kortizol yüksekliği ve deksametazon supresyon testi bozukluğu klasik biyolojik bulgudur."
+      },
+      {
+       "text": "Depresyon tamamen genetikten bağımsızdır; aile öyküsü riski hiçbir şekilde artırmaz.",
+       "isLie": true,
+       "explanation": "Aile ve ikiz çalışmaları genetik faktörlerin riski 2-3 kat artırdığını net olarak gösterir."
+      }
+     ]
+    }
+   ],
+   "pdfSayfalari": [
+    11,
+    11
+   ],
+   "sourcePdf": {
+    "startPage": 11,
+    "endPage": 11,
+    "name": "y25-k2-34-unipolar-depresyon.pdf"
+   },
+   "bolum": "2"
+  },
+  {
+   "slideNumber": 6,
+   "title": "[TEKRAR SAYFASI - CHECKPOINT 1] Kavram, Epidemiyoloji ve Biyolojik Etyoloji",
+   "section": "Depresyon Kavramı, Tanımı ve Epidemiyoloji",
+   "content": "Bu bölüme kadar majör depresyonun kavramsal tanımını, DSM-5 sınıflamasını, epidemiyolojik yükünü ve altta yatan nörobiyolojik mekanizmaları inceledik.\n\n- **Kavram:** Depresus kökünden gelen çökkünlük hali; gündelik mutsuzluktan yeti yitimi ve süreğenliğiyle ayrılır.\n- **Epidemiyoloji:** Kadın/erkek oranı 2'dir; Dünya Sağlık Örgütü verilerinde küresel yeti yitiminde 2. sıradadır.\n- **Nörobiyoloji:** Serotonin, noradrenalin (Locus coeruleus) ve dopamin yetersizliği temeldir; 1. derece akrabada risk 2-3 kat artar; HPA aks hiperaktiftir.\n\n> [!IMPORTANT]\n> Şimdiye kadar işlenen bu temel kavramlar, bir sonraki bölümde inceleyeceğimiz psikososyal kuramların anlaşılması için kritik zemin oluşturur.",
+   "interactiveElements": [
+    {
+     "id": "k34-s6-q1",
+     "type": "micro_quiz",
+     "question": "İlk bölümde işlenen kavramlar dikkate alındığında aşağıdaki eşleştirmelerden hangisi doğrudur?",
+     "options": [
+      {
+       "text": "WHO hastalık yükü sıralaması: İkinci sıra | Cinsiyet oranı: Kadınlarda 2 kat fazla",
+       "isCorrect": true,
+       "explanation": "Bu iki veri epidemiyolojinin temel göstergeleridir. Depresyon küresel yeti yitiminde ikinci sırada yer alırken kadınlarda iki kat sıktır."
+      },
+      {
+       "text": "Etimolojik kök: Mania | En sık tutulan nörotransmitter: Yalnızca asetilkolin",
+       "isCorrect": false,
+       "explanation": "Etimolojik kök depresus olup çökkünlüğü anlatır. Temel monoamin eksikliği ise serotonin ve noradrenalin üzerinden şekillenir. Bu klinik özellik ayırıcı tanıda ve doğru sağaltım planlamasında temel önem taşımaktadır."
+      },
+      {
+       "text": "Genetik risk: Sıfır artış | HPA aks durumu: Tam hipoaktivite",
+       "isCorrect": false,
+       "explanation": "Akrabalarda risk iki üç kat artış gösterir. HPA aksında hipoaktivite değil aşırı uyarılma saptanır. Bu klinik özellik ayırıcı tanıda ve doğru sağaltım planlamasında temel önem taşımaktadır."
+      },
+      {
+       "text": "Tanı sınıflaması: Şizofreni alt grubu | Noradrenalin merkezi: Hipofiz bezi",
+       "isCorrect": false,
+       "explanation": "Depresif bozukluklar bağımsız bir tanı kategorisidir. Noradrenalin sentezleyen ana yapı beyin sapındaki Locus coeruleustur. Bu klinik özellik ayırıcı tanıda ve doğru sağaltım planlamasında temel önem taşımaktadır."
+      }
+     ]
+    },
+    {
+     "id": "k34-s6-t1",
+     "type": "interactive_table",
+     "tableHeaders": [
+      "Alan",
+      "Temel Bulgu / Değer",
+      "Klinik Yansıması"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "WHO Sıralaması",
+         "isMasked": false
+        },
+        {
+         "text": "2. sıra",
+         "isMasked": true,
+         "hint": "Kardiyak hastalıklardan hemen sonraki küresel basamak"
+        },
+        {
+         "text": "Ağır küresel hastalık yükü",
+         "isMasked": false
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Cinsiyet Oranı",
+         "isMasked": false
+        },
+        {
+         "text": "K/E = 2",
+         "isMasked": false
+        },
+        {
+         "text": "Kadınlarda belirgin yatkınlık",
+         "isMasked": true,
+         "hint": "Dişi cinsiyetteki epidemiyolojik yük"
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Genetik Risk",
+         "isMasked": false
+        },
+        {
+         "text": "2-3 kat artış",
+         "isMasked": true,
+         "hint": "Akrabalarda riskin misliyle yükselmesi"
+        },
+        {
+         "text": "Ailesel kümelenme",
+         "isMasked": false
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k34-s6-c1",
+     "type": "cloze_masking",
+     "sentence": "Depresyon patogenezinde monoamin teorisi serotonin ve noradrenalin iletimindeki eksikliği temel alır.",
+     "maskedTerm": "serotonin",
+     "hint": "Keder ve anksiyete regülasyonunda rol alan temel indolamin transmitter"
+    },
+    {
+     "id": "k34-s6-l1",
+     "type": "spot_the_lie",
+     "topic": "Checkpoint 1 Pekiştirme",
+     "items": [
+      {
+       "text": "Depresus sözcüğü aşağı doğru bastırmak anlamına gelir ve tıpta çökkünlük olarak karşılanır.",
+       "isLie": false,
+       "explanation": "Etimolojik kök ve Türkçe terminoloji ilk derste ayrıntılı tanımlanmıştır."
+      },
+      {
+       "text": "Prefrontal korteks ve hipokampus depresyonun nöroanatomik devreleri arasındadır.",
+       "isLie": false,
+       "explanation": "Nörogörüntüleme bu alanlardaki yapısal ve işlevsel kayıpları göstermektedir."
+      },
+      {
+       "text": "Depresyon Dünya Sağlık Örgütü verilerine göre dünyanın en az yeti yitimi yapan hastalığıdır.",
+       "isLie": true,
+       "explanation": "Tam tersine iskemik kalp hastalıklarından sonra 2. en çok yeti yitimi yapan hastalıktır."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slideNumber": 7,
+   "title": "Psikososyal Etkenler: Psikoanalitik Yaklaşım ve Yas Ayrımı",
+   "section": "Psikososyal Etkenler ve Kuramsal Modeller",
+   "content": "Freud ve klasik psikoanalitik kuram, depresyonun kökenini kayıp deneyimi ve sevgi nesnesine yönelik ambivalan duygularla açıklar.\n\n- **Normal Yas Reaksiyonu:** Gerçek bir sevgi nesnesinin ardından duyulan derin keder, elem ve ağlama zaman içinde yavaş yavaş azalır; en kritik nokta bireyin **benlik saygısını (self-esteem) korumasıdır**.\n- **Depresif Tablo:** Gerçek bir nesne yitimi olmasa dahi, bilinçdışı imgesel bir yitim duygusu eşliğinde **benlik saygısı çöker**.\n- **İçe Yönelmiş Öfke:** Kaybedilen nesneye duyulan bastırılmış öfke ve düşmanlık duyguları egoya yansıtılarak içe çevrilir ve suçluluk üretir.\n\n> [!IMPORTANT]\n> Yas reaksiyonunda dünya fakirleşmiş ve boş görünürken, depresyonda bizzat kişinin kendi benliği boşalmış ve değersizleşmiştir.",
+   "interactiveElements": [
+    {
+     "id": "k34-s7-q1",
+     "type": "micro_quiz",
+     "question": "Psikanalitik kurama göre normal yas reaksiyonu ile majör depresyon arasındaki en temel ayırıcı fark nedir?",
+     "options": [
+      {
+       "text": "Yasta benlik saygısı korunurken, depresyonda derin bir değersizlik hissiyle benlik saygısının çökmesi",
+       "isCorrect": true,
+       "explanation": "Benlik saygısının korunması yasın fizyolojik işaretidir. Depresyonda ise imgesel kayıp ve içe yönelen öfkeyle benlik saygısı çöker."
+      },
+      {
+       "text": "Yasta hiçbir zaman hüzün duyulmazken, depresyonda yalnızca fiziksel kas felci gelişmesi",
+       "isCorrect": false,
+       "explanation": "Yas derin bir hüzün ve elem tablosudur. Depresyon ise organik kas felciyle tanımlanan nörolojik bir hastalık değildir."
+      },
+      {
+       "text": "Depresyonda öfkenin doğrudan çevreye yöneltilmesi, yasta ise tamamen bastırılması",
+       "isCorrect": false,
+       "explanation": "Psikanalitik modelde depresif öfke çevreye yönelmez. Bireyin kendi benliğini hedef alarak suçluluk duygusu üretir. Bu klinik özellik ayırıcı tanıda ve doğru sağaltım planlamasında temel önem taşımaktadır."
+      },
+      {
+       "text": "Yasta intihar düşüncelerinin her hastada zorunlu olması, depresyonda ise imkansız olması",
+       "isCorrect": false,
+       "explanation": "Fizyolojik yasta intihar zorunlu bir semptom değildir. Ağır depresyonda ise intihar riski hayatı doğrudan tehdit eder."
+      }
+     ]
+    },
+    {
+     "id": "k34-s7-c1",
+     "type": "cloze_masking",
+     "sentence": "Yas reaksiyonunda kişi benlik saygısını yitirmez iken depresyonda benlik saygısı çöker.",
+     "maskedTerm": "benlik saygısını",
+     "hint": "Bireyin kendi öznel değerine beslediği psikanalitik inanç"
+    },
+    {
+     "id": "k34-s7-a1",
+     "type": "active_recall",
+     "question": "Psikanalitik açıdan depresyonda kaybedilen nesneye yönelik düşmanlık duyguları nereye yönlendirilir?",
+     "answer": "Kaybedilen nesneye duyulan bastırılmış öfke ve ambivalan duygular kişinin kendi benliğine (egosuna) yöneltilerek ağır suçluluk ve değersizlik üretir."
+    },
+    {
+     "id": "k34-s7-l1",
+     "type": "spot_the_lie",
+     "topic": "Psikoanalitik Kuram ve Yas Ayrımı",
+     "items": [
+      {
+       "text": "Normal yasta zaman içinde üzüntü azalır ve birey yaşamına devam edebilecek gücü bulur.",
+       "isLie": false,
+       "explanation": "Yas fizyolojik ve geçici bir kayıp sürecidir; zamanla semptomlar yatışır."
+      },
+      {
+       "text": "Depresyonda gerçek bir kayıp olmasa dahi imgesel bir yitim ve suçluluk yaşanabilir.",
+       "isLie": false,
+       "explanation": "Bilinçdışı imgesel kayıplar psikanalitik dinamiklerde sıkça saptanır."
+      },
+      {
+       "text": "Freud'a göre yas reaksiyonunda benlik saygısı tamamen yok olurken depresyonda benlik saygısı artar.",
+       "isLie": true,
+       "explanation": "Tam tersine yasta benlik saygısı korunur, depresyonda ise benlik saygısı çöker."
+      }
+     ]
+    }
+   ],
+   "pdfSayfalari": [
+    12,
+    12
+   ],
+   "sourcePdf": {
+    "startPage": 12,
+    "endPage": 12,
+    "name": "y25-k2-34-unipolar-depresyon.pdf"
+   },
+   "bolum": "3"
+  },
+  {
+   "slideNumber": 8,
+   "title": "Psikososyal Etkenler: Bilişsel Model (Beck) ve Öğrenilmiş Çaresizlik",
+   "section": "Psikososyal Etkenler ve Kuramsal Modeller",
+   "content": "Bilişsel ve davranışçı modeller, depresyonun ortaya çıkışını ve sürdürülmesini hatalı düşünce kalıplarıyla açıklar.\n\n- **Bilişsel Model (Aaron Beck):** Çocukluk yaşantıları öğrenme yoluyla olumsuz bilişsel şemalar (yetersizlik, kusurluluk, sevilmezlik) oluşturur. Bu şemalar **kognitif üçlü (triad)** aracılığıyla dünyaya yansır:\n  1. **Kendine olumsuz bakış:** \"Ben başarısız ve değersizim.\"\n  2. **Dış dünyaya olumsuz bakış:** \"Dünya engellerle ve adaletsizlikle dolu.\"\n  3. **Geleceğe olumsuz bakış:** \"Hiçbir şey düzelmeyecek, gelecek umutsuz.\"\n- **Öğrenilmiş Çaresizlik (Seligman):** Bireyin olumsuz pekiştireçleri kontrol edemeyeceğini deneyimlemesi sonucu pasifleşmesi ve çabalamayı bırakmasıdır.\n\n> [!NOTE]\n> Bilişsel davranışçı terapi (BDT), bu katı olumsuz şemaları ve kognitif üçlüyü yeniden yapılandırmayı hedefler.",
+   "interactiveElements": [
+    {
+     "id": "k34-s8-q1",
+     "type": "micro_quiz",
+     "question": "Aaron Beck tarafından tanımlanan bilişsel üçlü (kognitif triad) hangi üç alana yönelik olumsuz bakışı kapsar?",
+     "options": [
+      {
+       "text": "Kendisine, dış dünyaya ve geleceğe yönelik olumsuz bilişsel yargılar",
+       "isCorrect": true,
+       "explanation": "Bu üçlü Beck'in kognitif triad modelini oluşturur. Birey kendisini kusurlu, dış dünyayı adaletsiz ve geleceği umutsuz algılar."
+      },
+      {
+       "text": "Yalnızca geçmişteki çocukluk arkadaşlarına ve okul öğretmenlerine yönelik öfke",
+       "isCorrect": false,
+       "explanation": "Geçmişteki spesifik kişilere öfke bilişsel triadı tanımlamaz. Beck modeli kendilik, dünya ve gelecek eksenine dayanır. Bu klinik özellik ayırıcı tanıda ve doğru sağaltım planlamasında temel önem taşımaktadır."
+      },
+      {
+       "text": "Beden sağlığına, ilaç firmalarına ve hekimlere yönelik şüpheci tutum",
+       "isCorrect": false,
+       "explanation": "Bu hezeyani ve hipokondriyak içerikli bir yaklaşımdır. Bilişsel depresyon modelinin üçlü formülasyonu değildir. Bu klinik özellik ayırıcı tanıda ve doğru sağaltım planlamasında temel önem taşımaktadır."
+      },
+      {
+       "text": "Siyasal düzene, ekonomik piyasalara ve hava durumuna yönelik şikayetler",
+       "isCorrect": false,
+       "explanation": "Toplumsal ve çevresel yakınmalar genel stresörlerdir. Bilişsel kuramın triad yapısını açıklamakta kullanılamazlar. Bu klinik özellik ayırıcı tanıda ve doğru sağaltım planlamasında temel önem taşımaktadır."
+      }
+     ]
+    },
+    {
+     "id": "k34-s8-c1",
+     "type": "cloze_masking",
+     "sentence": "Seligman tarafından geliştirilen davranışçı model öğrenilmiş çaresizlik kuramıdır.",
+     "maskedTerm": "öğrenilmiş çaresizlik",
+     "hint": "Deneyimlenen olumsuzluklar karşısında kontrol inancını yitirme durumu"
+    },
+    {
+     "id": "k34-s8-t1",
+     "type": "interactive_table",
+     "tableHeaders": [
+      "Kuramcı",
+      "Model Adı",
+      "Temel Mekanizma"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Aaron Beck",
+         "isMasked": false
+        },
+        {
+         "text": "Bilişsel Model",
+         "isMasked": false
+        },
+        {
+         "text": "Kognitif triad olumsuz şemaları",
+         "isMasked": true,
+         "hint": "Bireyin kendisini kusurlu gördüğü bilişsel yapı"
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Martin Seligman",
+         "isMasked": false
+        },
+        {
+         "text": "Davranışçı Çaresizlik",
+         "isMasked": true,
+         "hint": "Olayları değiştirememe inancıyla gelişen teslimiyet"
+        },
+        {
+         "text": "Çabalamayı bırakma ve pasif teslimiyet",
+         "isMasked": false
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k34-s8-l1",
+     "type": "spot_the_lie",
+     "topic": "Bilişsel ve Davranışçı Kuramlar",
+     "items": [
+      {
+       "text": "Beck'in bilişsel modelinde olumsuz otomatik düşünceler ve bilişsel çarpıtmalar yer alır.",
+       "isLie": false,
+       "explanation": "Bilişsel terapi şemalar ve otomatik düşünceler üzerinde çalışır."
+      },
+      {
+       "text": "Öğrenilmiş çaresizlikte birey olumsuz durumları değiştirebileceğine dair inancını tamamen yitirir.",
+       "isLie": false,
+       "explanation": "Kontrol hissinin kaybı çaresizlik davranışını pekiştirir."
+      },
+      {
+       "text": "Beck kuramına göre depresyondaki birey kendisini mükemmel, geleceğini ise kusursuz görür.",
+       "isLie": true,
+       "explanation": "Tam tersine depresyondaki birey kendini kusurlu ve değersiz, geleceğini ise umutsuz görür."
+      }
+     ]
+    }
+   ],
+   "pdfSayfalari": [
+    13,
+    13
+   ],
+   "sourcePdf": {
+    "startPage": 13,
+    "endPage": 13,
+    "name": "y25-k2-34-unipolar-depresyon.pdf"
+   },
+   "bolum": "3"
+  },
+  {
+   "slideNumber": 9,
+   "title": "Psikososyal Etkenler: Yaşam Olayları, Kayıplar ve Risk Faktörleri",
+   "section": "Psikososyal Etkenler ve Kuramsal Modeller",
+   "content": "Depresyonun tetiklenmesinde ve kronikleşmesinde yaşam olayları ve sosyodemografik risk faktörleri belirleyici rol oynar.\n\n- **Yaşam Olayları:** Kişilerarası çatışmalar, boşanma, sevilen birinin kaybı, işsizlik ve ekonomik iflas gibi majör yaşam olayları depresif epizodu tetikleyebilir.\n- **Erken Çocukluk Yaşantıları:** Ebeveyn kaybı, çocukluk çağı fiziksel/cinsel istismarı ve ihmal, yetişkinlikte stres faktörlerine karşı biyolojik kırılganlık yaratır.\n- **Demografik Riskler:** Kadın cinsiyet, 20-40 yaş aralığı, düşük sosyoekonomik düzey, ayrı yaşama veya boşanmış olma majör depresyon riskini anlamlı derecede artırır.\n\n> [!IMPORTANT]\n> Yaşam olayları özellikle ilk depresif epizodun başlamasında güçlü bir tetikleyicidir; tekrarlayan epizodlarda biyolojik ritim öne çıkar ve olay bağımsız başlayabilir.",
+   "interactiveElements": [
+    {
+     "id": "k34-s9-q1",
+     "type": "micro_quiz",
+     "question": "Aşağıdaki sosyodemografik ve klinik faktörlerden hangisi majör depresif bozukluk için kanıtlanmış bir risk faktörüdür?",
+     "options": [
+      {
+       "text": "Kadın cinsiyet, boşanmış/ayrı yaşama ve birinci derece akrabada duygudurum bozukluğu",
+       "isCorrect": true,
+       "explanation": "Bu etkenler depresyona yatkınlığı artıran ana faktörlerdir. Kadın cinsiyet ve medeni ayrılık klinik riski katlar. Bu klinik özellik ayırıcı tanıda ve doğru sağaltım planlamasında temel önem taşımaktadır."
+      },
+      {
+       "text": "Erkek cinsiyet, evli olma ve ailede hiçbir psikiyatrik öykünün bulunmaması",
+       "isCorrect": false,
+       "explanation": "Evlilik ve ailede hastalık olmaması koruyucu yönde etki eder. Depresyon riskini artıran etkenler grubunda değildir. Bu klinik özellik ayırıcı tanıda ve doğru sağaltım planlamasında temel önem taşımaktadır."
+      },
+      {
+       "text": "Çok yüksek gelir düzeyi ve mükemmel premorbid sosyal destek sistemleri",
+       "isCorrect": false,
+       "explanation": "Güçlü sosyal destek psikolojik dayanıklılığı artıran bir unsurdur. Depresyon risk faktörü olarak tanımlanmaz. Bu klinik özellik ayırıcı tanıda ve doğru sağaltım planlamasında temel önem taşımaktadır."
+      },
+      {
+       "text": "Yalnızca on yaşın altındaki erkek çocuk olmak",
+       "isCorrect": false,
+       "explanation": "Depresyon yaygınlığı erişkinlikte ve özellikle kadınlarda zirve yapar. Çocuklukta erkek olmak majör risk etmeni değildir. Bu klinik özellik ayırıcı tanıda ve doğru sağaltım planlamasında temel önem taşımaktadır."
+      }
+     ]
+    },
+    {
+     "id": "k34-s9-c1",
+     "type": "cloze_masking",
+     "sentence": "Çocukluk çağında ebeveyn kaybı yaşayan bireylerde yetişkinlikte depresyon gelişme riski belirgin artış gösterir.",
+     "maskedTerm": "ebeveyn kaybı",
+     "hint": "Erken çocuklukta anne veya baba yitimi"
+    },
+    {
+     "id": "k34-s9-a1",
+     "type": "active_recall",
+     "question": "Depresyon epizodlarının ortaya çıkışında yaşam olaylarının rolü ilk epizod ile tekrarlayan epizodlar arasında nasıl değişir?",
+     "answer": "İlk depresif epizod genellikle belirgin bir psikososyal yaşam olayı veya kayıpla tetiklenir; ancak sonraki tekrarlayan epizodlarda nörobiyolojik duyarlılaşma nedeniyle epizodlar dış stresörlerden bağımsız başlayabilir."
+    },
+    {
+     "id": "k34-s9-l1",
+     "type": "spot_the_lie",
+     "topic": "Depresyon Risk Faktörleri",
+     "items": [
+      {
+       "text": "Boşanmış, ayrı yaşayan veya dul bireylerde depresyon sıklığı evlilere oranla daha fazladır.",
+       "isLie": false,
+       "explanation": "Sosyal bağların kopması ve kayıp duygusu depresyon riskini artırır."
+      },
+      {
+       "text": "Düşük sosyoekonomik düzey ve işsizlik depresyon gelişimi için önemli bir zemin oluşturur.",
+       "isLie": false,
+       "explanation": "Ekonomik güçlükler ve sosyal güvencesizlik risk faktörleri arasındadır."
+      },
+      {
+       "text": "Çocukluk çağındaki ağır travmalar yetişkinlikte depresyon riskini tamamen ortadan kaldırır.",
+       "isLie": true,
+       "explanation": "Tam aksine çocukluk çağı travmaları yetişkinlikte depresyon riskini katlayarak artırır."
+      }
+     ]
+    }
+   ],
+   "pdfSayfalari": [
+    14,
+    16
+   ],
+   "sourcePdf": {
+    "startPage": 14,
+    "endPage": 16,
+    "name": "y25-k2-34-unipolar-depresyon.pdf"
+   },
+   "bolum": "3"
+  },
+  {
+   "slideNumber": 10,
+   "title": "[TEKRAR SAYFASI - CHECKPOINT 2] Psikososyal Kuramlar ve Risk Faktörleri",
+   "section": "Psikososyal Etkenler ve Kuramsal Modeller",
+   "content": "Bu bölüme kadar psikanalitik kuramın yas-depresyon ayrımını, Beck'in bilişsel üçlüsünü, Seligman'ın öğrenilmiş çaresizliğini ve sosyodemografik riskleri ele aldık.\n\n- **Psikanaliz:** Yasta benlik saygısı korunurken, depresyonda içe yönelen öfkeyle benlik saygısı çöker.\n- **Bilişsel Model:** Beck'in kognitif üçlüsü (kendisi, dünya, gelecek olumsuz algısı) ve Seligman'ın öğrenilmiş çaresizliği temeldir.\n- **Risk Faktörleri:** Kadın cinsiyet (2 kat), boşanmış/ayrı yaşayanlar, düşük sosyoekonomik düzey ve erken ebeveyn kaybı riski artırır.\n\n> [!IMPORTANT]\n> Bu psikososyal altyapı, bir sonraki bölümde inceleyeceğimiz DSM-5'in nesnel tanı kriterlerinin klinik mantığını kavramamızı sağlar.",
+   "interactiveElements": [
+    {
+     "id": "k34-s10-q1",
+     "type": "micro_quiz",
+     "question": "İkinci bölümde işlenen psikososyal kuramlar açısından aşağıdaki eşleştirmelerden hangisi doğrudur?",
+     "options": [
+      {
+       "text": "Freud: İçe yönelmiş öfke ve benlik saygısı kaybı | Beck: Kognitif üçlü modeli",
+       "isCorrect": true,
+       "explanation": "Bu iki kuramcı temel psikososyal ekolleri temsil eder. Freud benlik saygısı çöküşünü, Beck ise bilişsel triadı tanımlamıştır."
+      },
+      {
+       "text": "Seligman: Tam kontrol inancı ve aşırı neşe | Freud: Kognitif üçlü modeli",
+       "isCorrect": false,
+       "explanation": "Seligman öğrenilmiş çaresizliği kuramsallaştırmıştır. Kognitif üçlü ise Freud'a değil Aaron Beck'e ait bir kavramdır."
+      },
+      {
+       "text": "Beck: Yas reaksiyonunda benlik saygısının çökmesi | Seligman: Psikanalitik libido kuramı",
+       "isCorrect": false,
+       "explanation": "Yasta benlik saygısı korunur ve bu psikanalitik bir kavramdır. Seligman ise davranışçı ekolün temsilcisidir. Bu klinik özellik ayırıcı tanıda ve doğru sağaltım planlamasında temel önem taşımaktadır."
+      },
+      {
+       "text": "Freud: Öğrenilmiş çaresizlik modeli | Beck: Monoamin parçalanma teorisi",
+       "isCorrect": false,
+       "explanation": "Öğrenilmiş çaresizlik davranışçı bir modeldir. Monoamin parçalanması ise biyokimyasal bir hipotezdir. Bu klinik özellik ayırıcı tanıda ve doğru sağaltım planlamasında temel önem taşımaktadır."
+      }
+     ]
+    },
+    {
+     "id": "k34-s10-t1",
+     "type": "interactive_table",
+     "tableHeaders": [
+      "Kuram / Durum",
+      "Benlik Saygısı Durumu",
+      "Ana Patoloji"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Normal Yas",
+         "isMasked": false
+        },
+        {
+         "text": "Korunur",
+         "isMasked": true,
+         "hint": "Özdeğer hissinin zedelenmediği durum"
+        },
+        {
+         "text": "Gerçek nesne kaybına bağlı geçici keder",
+         "isMasked": false
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Majör Depresyon",
+         "isMasked": false
+        },
+        {
+         "text": "Çöker ve değersizleşir",
+         "isMasked": false
+        },
+        {
+         "text": "İçe yönelmiş öfke ve imgesel kayıp",
+         "isMasked": true,
+         "hint": "Kişinin kendi benliğini suçladığı dinamik süreç"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k34-s10-c1",
+     "type": "cloze_masking",
+     "sentence": "Beck modelinde kişinin kendisine, dış dünyaya ve geleceğe olumsuz bakışı kognitif üçlü olarak adlandırılır.",
+     "maskedTerm": "kognitif üçlü",
+     "hint": "Kendilik, çevre ve gelecek algısını bozan triad"
+    },
+    {
+     "id": "k34-s10-l1",
+     "type": "spot_the_lie",
+     "topic": "Checkpoint 2 Pekiştirme",
+     "items": [
+      {
+       "text": "Normal yasta kişi derin acı çekse dahi kendi öz değerini ve benlik saygısını koruyabilir.",
+       "isLie": false,
+       "explanation": "Freud'un yas ile depresyon ayrımındaki en belirgin kriter benlik saygısıdır."
+      },
+      {
+       "text": "Öğrenilmiş çaresizlik modelinde birey çabalamanın hiçbir şeyi değiştirmeyeceğini varsayar.",
+       "isLie": false,
+       "explanation": "Pekiştireç kontrolünün kaybı inancı pasifliğe yol açar."
+      },
+      {
+       "text": "Majör depresyon tanısı konulabilmesi için bireyin mutlaka çok zengin ve evli olması şarttır.",
+       "isLie": true,
+       "explanation": "Tam aksine boşanmış olma ve düşük sosyoekonomik düzey depresyon için risk faktörüdür."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slideNumber": 11,
+   "title": "DSM-5 Majör Depresif Epizod Tanı Ölçütleri: 2 Hafta ve 5/9 Kuralı",
+   "section": "DSM-5 Tanı Kriterleri ve Klinik Belirleyiciler",
+   "content": "DSM-5'e göre majör depresif bozukluk tanısı koyabilmek için katı tanı ölçütlerinin eksiksiz karşılanması gerekir.\n\n- **Süre Eşiği:** Belirtiler **en az 2 hafta** boyunca hemen her gün, günün büyük bir bölümünde sürmelidir.\n- **5 / 9 Kuralı:** Tanımlanan 9 temel belirtiden **en az 5'i** bulunmalıdır.\n- **Temel Zorunlu Belirtiler:** Bu 5 belirtiden en az biri mutlaka:\n  1. **Çökkün duygudurum** (hüzün, keder, boşluk hissi) YA DA\n  2. **Anhedoni** (etkinliklere karşı belirgin ilgi ve zevk kaybı) olmak zorundadır.\n- **Dışlama Ölçütleri:** Tablo bir maddenin fizyolojik etkilerine veya genel tıbbi bir duruma bağlı olmamalı; daha önce manik veya hipomanik epizod geçirilmemiş olmalıdır.\n\n> [!IMPORTANT]\n> Dokuz belirtiden sekizi bulunsa dahi, aralarında çökkün duygudurum veya anhedoni yoksa majör depresif epizod tanısı konulamaz!",
+   "interactiveElements": [
+    {
+     "id": "k34-s11-q1",
+     "type": "micro_quiz",
+     "question": "DSM-5'e göre majör depresif epizod tanısı koyabilmek için gereken süre eşiği ve belirti kuralı nedir?",
+     "options": [
+      {
+       "text": "En az 2 hafta süreyle 9 belirtiden en az 5'i (biri mutlaka çökkünlük veya anhedoni olmak üzere)",
+       "isCorrect": true,
+       "explanation": "Bu kural DSM-5 tanı sisteminin altın standardıdır. İki haftalık süre ve beş belirti zorunluluğu tanı koydurur."
+      },
+      {
+       "text": "En az 3 gün süreyle 4 belirtiden herhangi birinin bulunması yeterlidir.",
+       "isCorrect": false,
+       "explanation": "Üç günlük süre tanı için yetersizdir. Ayrıca tek bir belirtiyle depresyon tanısı konulması psikiyatrik standartlara aykırıdır."
+      },
+      {
+       "text": "En az 2 yıl boyunca hiçbir belirti olmaksızın yalnızca hafif yorgunluk hissedilmesi",
+       "isCorrect": false,
+       "explanation": "İki yıllık kronik süre distimik bozukluğu tanımlar. Epizod tanısı için akut beş belirtinin varlığı aranır. Bu klinik özellik ayırıcı tanıda ve doğru sağaltım planlamasında temel önem taşımaktadır."
+      },
+      {
+       "text": "Yalnızca hastanın ailesinin beyanıyla hiçbir tanı ölçütüne bakılmaksızın tanı konulur.",
+       "isCorrect": false,
+       "explanation": "Psikiyatrik tanı yapılandırılmış semptom listesine dayanır. Yalnızca aile beyanıyla tanı kesinleştirilemez. Bu klinik özellik ayırıcı tanıda ve doğru sağaltım planlamasında temel önem taşımaktadır."
+      }
+     ]
+    },
+    {
+     "id": "k34-s11-c1",
+     "type": "cloze_masking",
+     "sentence": "Majör depresyon tanısı için dokuz belirtiden en az beş tanesi bulunmalıdır.",
+     "maskedTerm": "beş tanesi",
+     "hint": "Dört ile altı arasındaki adet"
+    },
+    {
+     "id": "k34-s11-b1",
+     "type": "branching_logic",
+     "scenario": "Bir hasta 3 haftadır uykusuzluk, iştahsızlık, yorgunluk, dikkat dağınıklığı ve suçluluk yakınmalarıyla başvurmuştur. Ancak ne çökkün duygudurum ne de anhedoni tariflememektedir.",
+     "options": [
+      {
+       "text": "Majör depresif epizod tanısı konulamaz çünkü temel iki zorunlu belirtiden biri yoktur.",
+       "isCorrect": true,
+       "feedback": "Temel iki belirti (çökkün duygudurum veya anhedoni) olmaksızın diğer belirtiler tek başına majör depresyon tanısı koyduramaz."
+      },
+      {
+       "text": "Beş belirti tamamlandığı için derhal majör depresif bozukluk tanısı kesinleştirilmelidir.",
+       "isCorrect": false,
+       "feedback": "DSM-5 tanı kuralı temel iki belirtiden en az birini zorunlu kılar. Bu koşul sağlanmadan MDB tanısı verilemez."
+      }
+     ]
+    },
+    {
+     "id": "k34-s11-l1",
+     "type": "spot_the_lie",
+     "topic": "DSM-5 Tanı Kriterleri",
+     "items": [
+      {
+       "text": "Majör depresyon tanısı için belirtiler en az 2 hafta kesintisiz devam etmelidir.",
+       "isLie": false,
+       "explanation": "İki haftalık süre eşiği DSM-5'in temel zaman kriteridir."
+      },
+      {
+       "text": "Anhedoni, daha önce zevk alınan aktivitelere karşı tam bir ilgi ve zevk kaybını tanımlar.",
+       "isLie": false,
+       "explanation": "Anhedoni majör depresyonun iki temel zorunlu belirtisinden biridir."
+      },
+      {
+       "text": "Geçmişinde mani atağı olan bir hastaya unipolar majör depresif bozukluk tanısı rahatlıkla konulabilir.",
+       "isLie": true,
+       "explanation": "Mani atağı olan hastanın tanısı bipolar bozukluk olur; unipolar depresyon tanısı dışlanır."
+      }
+     ]
+    }
+   ],
+   "pdfSayfalari": [
+    17,
+    18
+   ],
+   "sourcePdf": {
+    "startPage": 17,
+    "endPage": 18,
+    "name": "y25-k2-34-unipolar-depresyon.pdf"
+   },
+   "bolum": "4"
+  },
+  {
+   "slideNumber": 12,
+   "title": "Klinik Görünüm: Dört Alanda Bozukluk (Duygulanım, Biliş, Davranış, Beden)",
+   "section": "DSM-5 Tanı Kriterleri ve Klinik Belirleyiciler",
+   "content": "Majör depresyon hastanın psikiyatrik ve bedensel işlevlerini dört temel alanda bozar:\n\n- **1. Duygulanım Alanı:** Sürekli elem, keder, çaresizlik, boşluk hissi ve tüm aktivitelere karşı mutlak **anhedoni** (ilgi/zevk kaybı).\n- **2. Bilişsel Alan:** Konsantrasyon güçlüğü, karar vermede kararsızlık, aşırı değersizlik ve suçluluk düşünceleri, ölüm ve **intihar fikirleri**.\n- **3. Davranışsal Alan:** Psikomotor yavaşlama (konuşmada ve hareketlerde belirgin gecikme) ya da huzursuzluk hissiyle giden **psikomotor ajitasyon**.\n- **4. Bedensel (Vejetatif) Alan:** Uykusuzluk (özellikle sabah erken uyanma - terminal insomni) ya da aşırı uyku, belirgin iştah ve kilo kaybı (veya kilo alımı), sürekli enerji azlığı ve bitkinlik.\n\n> [!NOTE]\n> Sabah erken uyanıp tekrar uyuyamama (terminal insomni) ve sabahları duygudurumun daha kötü olması melankolik biyolojik depresyonun klasik işaretidir.",
+   "interactiveElements": [
+    {
+     "id": "k34-s12-q1",
+     "type": "micro_quiz",
+     "question": "Aşağıdakilerden hangisi majör depresyonun bilişsel alanında ortaya çıkan temel belirtilerden biridir?",
+     "options": [
+      {
+       "text": "Aşırı değersizlik, yersiz suçluluk düşünceleri ve konsantrasyon güçlüğü",
+       "isCorrect": true,
+       "explanation": "Bu belirtiler doğrudan düşünce içeriği ve odaklanma süreçlerini bozar. Depresyonun bilişsel alan tutulumunun ana unsurlarıdır. Bu klinik özellik ayırıcı tanıda ve doğru sağaltım planlamasında temel önem taşımaktadır."
+      },
+      {
+       "text": "Terminal insomni ve sabah erken saatte uyanma tablosu",
+       "isCorrect": false,
+       "explanation": "Uyku paterni değişiklikleri biyolojik vejetatif süreci yansıtır. Bilişsel düşünce alanında değil bedensel alanda sınıflanır. Bu klinik özellik ayırıcı tanıda ve doğru sağaltım planlamasında temel önem taşımaktadır."
+      },
+      {
+       "text": "Psikomotor retardasyon ve hareketlerde yavaşlama",
+       "isCorrect": false,
+       "explanation": "Hareketlerin ve konuşmanın yavaşlaması motor bir olgudur. Bilişsel alanla değil davranışsal alanla ilişkilendirilir. Bu klinik özellik ayırıcı tanıda ve doğru sağaltım planlamasında temel önem taşımaktadır."
+      },
+      {
+       "text": "İştah kaybına bağlı olarak hızla kilo verilmesi",
+       "isCorrect": false,
+       "explanation": "Kilo ve beslenme düzeni metabolik vejetatif fonksiyonlardır. Bilişsel şemaların doğrudan bir parçası değildir. Bu klinik özellik ayırıcı tanıda ve doğru sağaltım planlamasında temel önem taşımaktadır."
+      }
+     ]
+    },
+    {
+     "id": "k34-s12-c1",
+     "type": "cloze_masking",
+     "sentence": "Depresyonda zevk alamama ve ilgi kaybı durumu anhedoni terimiyle tanımlanır.",
+     "maskedTerm": "anhedoni",
+     "hint": "Yaşamdan ve aktivitelerden zevk alamama semptomu"
+    },
+    {
+     "id": "k34-s12-t1",
+     "type": "interactive_table",
+     "tableHeaders": [
+      "Bozukluk Alanı",
+      "Örnek Belirti",
+      "Klinik Yansıması"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Bilişsel Alan",
+         "isMasked": false
+        },
+        {
+         "text": "Suçluluk ve değersizlik",
+         "isMasked": true,
+         "hint": "Bireyin kendini haksız yere kusurlu bulduğu düşünce"
+        },
+        {
+         "text": "Öz kıyım riski artışı",
+         "isMasked": false
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Bedensel Alan",
+         "isMasked": false
+        },
+        {
+         "text": "Terminal insomni",
+         "isMasked": false
+        },
+        {
+         "text": "Sabah erken uyanma",
+         "isMasked": true,
+         "hint": "Gecenin nihayetinde uykunun vaktinden önce bölünmesi"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k34-s12-l1",
+     "type": "spot_the_lie",
+     "topic": "Depresyonda Dört Alanda Bozukluk",
+     "items": [
+      {
+       "text": "Depresyonda hem psikomotor yavaşlama hem de ajitasyon görülebilir.",
+       "isLie": false,
+       "explanation": "Hastaların bir kısmında retardasyon, ajite tiplerde ise huzursuz ajitasyon görülür."
+      },
+      {
+       "text": "Bedensel alanda vejetatif belirtiler olarak uyku, iştah ve enerji değişiklikleri izlenir.",
+       "isLie": false,
+       "explanation": "Vejetatif belirtiler biyolojik eksenin temel göstergeleridir."
+      },
+      {
+       "text": "Majör depresyon hastalarında bilişsel işlevler ve konsantrasyon her zaman normalin üstünde keskinleşir.",
+       "isLie": true,
+       "explanation": "Tam tersine dikkat dağınıklığı, kararsızlık ve konsantrasyon kaybı belirgindir."
+      }
+     ]
+    }
+   ],
+   "pdfSayfalari": [
+    19,
+    20
+   ],
+   "sourcePdf": {
+    "startPage": 19,
+    "endPage": 20,
+    "name": "y25-k2-34-unipolar-depresyon.pdf"
+   },
+   "bolum": "4"
+  },
+  {
+   "slideNumber": 13,
+   "title": "Klinik Belirleyiciler: Psikotik, Melankolik, Katatonik ve Mevsimsel",
+   "section": "DSM-5 Tanı Kriterleri ve Klinik Belirleyiciler",
+   "content": "DSM-5'te depresif epizodun klinik özelliklerine ve gidişatına göre özgül belirleyiciler tanımlanır:\n\n- **Melankolik Özellikli:** Neredeyse hiçbir aktiviteden zevk alamama (tam anhedoni), olumlu uyaranlara duygudurum reaktivitesinin olmaması, sabahları belirgin kötüleşme, sabah erken uyanma (terminal insomni) ve anoreksi.\n- **Psikotik Özellikli:** Duygudurumla uyumlu (günahkarlık, yoksulluk, nihilistik - Cotard sendromu) ya da uyumsuz hezeyan ve halüsinasyonların eşlik ettiği ağır form.\n- **Katatonik Özellikli:** Katalepsi, balmumu esnekliği, stupor, mutizm, negativizm veya stereotipik hareketlerle giden tablo.\n- **Mevsimsel Örüntü:** Epizodların yılın belirli bir mevsiminde (genellikle sonbahar-kış) başlayıp ilkbaharda tam remisyona girmesi.\n\n> [!IMPORTANT]\n> Melankolik ve psikotik depresyonda intihar riski en üst düzeydedir; psikotik depresyonda antidepresan tek başına yetersizdir, mutlaka antipsikotik eklenmeli veya EKT düşünülmelidir.",
+   "interactiveElements": [
+    {
+     "id": "k34-s13-q1",
+     "type": "micro_quiz",
+     "question": "Tam anhedoni, olumlu olaylara duygudurum tepkisizliği, sabah erken uyanma ve sabahları daha kötü hissetme hangi belirleyicinin tipik özelliğidir?",
+     "options": [
+      {
+       "text": "Melankolik özellikler gösteren majör depresyon",
+       "isCorrect": true,
+       "explanation": "Bu özellikler biyolojik temelli melankolik depresyonun çekirdeğidir. Sabah kötüleşmesi ve tepkisizlik melankoliye özgüdür. Bu klinik özellik ayırıcı tanıda ve doğru sağaltım planlamasında temel önem taşımaktadır."
+      },
+      {
+       "text": "Atipik özellikler gösteren majör depresyon",
+       "isCorrect": false,
+       "explanation": "Atipik depresyon olumlu olaylara reaktivite ve aşırı uykuyla karakterizedir. Melankolik tepkisizlikle zıt klinik özellik taşır. Bu klinik özellik ayırıcı tanıda ve doğru sağaltım planlamasında temel önem taşımaktadır."
+      },
+      {
+       "text": "Katatonik özellikli majör depresyon",
+       "isCorrect": false,
+       "explanation": "Katatonide stupor ve balmumu esnekliği gibi motor patolojiler hakimdir. Saf melankolik vejetatif triadla açıklanamaz. Bu klinik özellik ayırıcı tanıda ve doğru sağaltım planlamasında temel önem taşımaktadır."
+      },
+      {
+       "text": "Hafif şiddetteki reaktif uyum bozukluğu",
+       "isCorrect": false,
+       "explanation": "Uyum bozukluğu stresörlere karşı gelişen hafif bir tablodur. Ağır melankolik nörobiyolojik belirtiler sergilemez. Bu klinik özellik ayırıcı tanıda ve doğru sağaltım planlamasında temel önem taşımaktadır."
+      }
+     ]
+    },
+    {
+     "id": "k34-s13-c1",
+     "type": "cloze_masking",
+     "sentence": "Motor hareketsizlik, balmumu esnekliği ve stupor ile seyreden depresyon katatonik özellikli olarak adlandırılır.",
+     "maskedTerm": "katatonik",
+     "hint": "Motor donukluk ve balmumu esnekliği gösteren psikiyatrik belirleyici"
+    },
+    {
+     "id": "k34-s13-a1",
+     "type": "active_recall",
+     "question": "Psikotik özellikli majör depresyonda tek başına antidepresan tedavisi neden yeterli değildir?",
+     "answer": "Psikotik depresyonda hezeyan ve halüsinasyonlar mevcuttur; bu nedenle tedaviye mutlaka antipsikotik bir ajan eklenmeli ya da hızlı yanıt için elektrokonvülsif tedavi (EKT) uygulanmalıdır."
+    },
+    {
+     "id": "k34-s13-l1",
+     "type": "spot_the_lie",
+     "topic": "Klinik Belirleyiciler",
+     "items": [
+      {
+       "text": "Mevsimsel özellik gösteren depresyon genellikle kış aylarında başlar ve ışık tedavisine yanıt verebilir.",
+       "isLie": false,
+       "explanation": "Mevsimsel depresyonda fototerapi (ışık tedavisi) etkili bir seçenektir."
+      },
+      {
+       "text": "Psikotik depresyondaki hezeyanlar sıklıkla suçluluk, günahkarlık ve yoksulluk temalıdır.",
+       "isLie": false,
+       "explanation": "Duygudurumla uyumlu hezeyanlar depresif içeriğe paralel gelişir."
+      },
+      {
+       "text": "Melankolik depresyon hastaları olumlu bir haber aldıklarında günlerce aşırı neşeli ve coşkulu kalırlar.",
+       "isLie": true,
+       "explanation": "Tam tersine melankolik depresyonda olumlu olaylara duygudurum reaktivitesi tamamen kaybolmuştur."
+      }
+     ]
+    }
+   ],
+   "pdfSayfalari": [
+    21,
+    21
+   ],
+   "sourcePdf": {
+    "startPage": 21,
+    "endPage": 21,
+    "name": "y25-k2-34-unipolar-depresyon.pdf"
+   },
+   "bolum": "4"
+  },
+  {
+   "slideNumber": 14,
+   "title": "Klinik Belirleyiciler: Atipik Özellikler ve Peripartum Başlangıç",
+   "section": "DSM-5 Tanı Kriterleri ve Klinik Belirleyiciler",
+   "content": "Atipik özellikler ve peripartum başlangıç, özel klinik yaklaşım gerektiren iki önemli belirleyicidir:\n\n- **Atipik Özellikli Depresyon:** Klasik melankolinin tersi bir tablo çizer:\n  1. **Duygudurum Reaktivitesi:** Olumlu bir olay karşısında duygudurumun geçici olarak düzelmesi (zorunlu ölçüt).\n  2. **Ters Vejetatif Belirtiler:** İştah artışı ve kilo alma (hiperfaji) ile aşırı uyuma (hipersomni).\n  3. **Kurşun Boru Ağırlığı:** Kollarda ve bacaklarda ağırlık ve felç hissi (leaden paralysis).\n  4. **Kişilerarası Reddedilme Hassasiyeti:** İlişkilerde aşırı alınganlık ve reddedilmeye aşırı duyarlılık.\n- **Peripartum Başlangıç:** Depresif epizodun gebelik sırasında veya **doğumdan sonraki ilk 4 hafta** içinde başlaması durumudur.\n\n> [!NOTE]\n> Atipik depresyon genç kadınlarda daha sıktır; trisiklik antidepresanlardan ziyade SSRI ve MAO inhibitörlerine daha iyi yanıt verir.",
+   "interactiveElements": [
+    {
+     "id": "k34-s14-q1",
+     "type": "micro_quiz",
+     "question": "Aşağıdakilerden hangisi atipik özellikler gösteren majör depresif bozukluğun tanı kriterleri arasında yer alır?",
+     "options": [
+      {
+       "text": "Olumlu olaylara duygudurum reaktivitesi, kilo alma, aşırı uyku ve kurşun boru ağırlığı",
+       "isCorrect": true,
+       "explanation": "Bu dört belirti atipik depresyonun klinik tetradını oluşturur. Reaktivite ve tersine vejetatif bulgular karakteristiktir. Bu klinik özellik ayırıcı tanıda ve doğru sağaltım planlamasında temel önem taşımaktadır."
+      },
+      {
+       "text": "Sabah erken uyanma, şiddetli kilo kaybı ve olumlu olaylara tam tepkisizlik",
+       "isCorrect": false,
+       "explanation": "Bu tablo klasik melankolik depresyonun klinik tablosudur. Atipik depresyonda reaktivite ve aşırı uyku saptanır. Bu klinik özellik ayırıcı tanıda ve doğru sağaltım planlamasında temel önem taşımaktadır."
+      },
+      {
+       "text": "Yalnızca yaz aylarında ortaya çıkan aşırı enerji artışı ve uykusuzluk",
+       "isCorrect": false,
+       "explanation": "Yaz aylarındaki aşırı enerji artışı mani veya hipomaniyi düşündürür. Atipik depresyon sınıflamasına girmez. Bu klinik özellik ayırıcı tanıda ve doğru sağaltım planlamasında temel önem taşımaktadır."
+      },
+      {
+       "text": "Balmumu esnekliği ve tam motor hareketsizlikle seyreden stupor tablosu",
+       "isCorrect": false,
+       "explanation": "Balmumu esnekliği katatoni tablosunun patognomonik motor belirtisidir. Atipik depresyon tanı kriteri değildir. Bu klinik özellik ayırıcı tanıda ve doğru sağaltım planlamasında temel önem taşımaktadır."
+      }
+     ]
+    },
+    {
+     "id": "k34-s14-c1",
+     "type": "cloze_masking",
+     "sentence": "Depresif belirtilerin doğumdan sonraki ilk 4 hafta içinde başlaması peripartum başlangıçlı belirleyici olarak adlandırılır.",
+     "maskedTerm": "peripartum",
+     "hint": "Gebelik ve lohusalık sürecini kapsayan başlangıç dönemi"
+    },
+    {
+     "id": "k34-s14-sl1",
+     "type": "before_after_slider",
+     "title": "Melankolik Depresyon ile Atipik Depresyon Karşılaştırması",
+     "leftTitle": "Melankolik Özellikli",
+     "rightTitle": "Atipik Özellikli",
+     "leftPoints": [
+      "Tepkisizlik (olumlu olayla neşelenemez)",
+      "Terminal insomni (sabah erken uyanma)",
+      "Anoreksi ve belirgin kilo kaybı",
+      "Psikomotor retardasyon veya ajitasyon"
+     ],
+     "rightPoints": [
+      "Reaktivite (olumlu olayla geçici düzelir)",
+      "Hipersomni (günde >10 saat aşırı uyku)",
+      "Hiperfaji, karbonhidrat aşermesi ve kilo alımı",
+      "Kurşun boru ağırlığı (ekstremitelerde ağırlık)"
+     ]
+    },
+    {
+     "id": "k34-s14-l1",
+     "type": "spot_the_lie",
+     "topic": "Atipik ve Peripartum Depresyon",
+     "items": [
+      {
+       "text": "Atipik depresyonda kişilerarası reddedilmeye karşı aşırı alınganlık ve duyarlılık görülür.",
+       "isLie": false,
+       "explanation": "Reddedilme aşırı duyarlılığı atipik depresyonun belirgin özelliğidir."
+      },
+      {
+       "text": "Peripartum başlangıçlı depresyon gebelikte veya doğum sonrası ilk haftalarda başlar.",
+       "isLie": false,
+       "explanation": "DSM-5 peripartum tanımı gebelik ve postpartum 4 haftayı kapsar."
+      },
+      {
+       "text": "Atipik depresyonda hasta hiçbir olumlu haberle mutlu olamaz ve sürekli yemekten tiksinir.",
+       "isLie": true,
+       "explanation": "Tam tersine atipik tipte reaktivite ve aşırı yeme (hiperfaji) karakteristiktir."
+      }
+     ]
+    }
+   ],
+   "pdfSayfalari": [
+    22,
+    22
+   ],
+   "sourcePdf": {
+    "startPage": 22,
+    "endPage": 22,
+    "name": "y25-k2-34-unipolar-depresyon.pdf"
+   },
+   "bolum": "4"
+  },
+  {
+   "slideNumber": 15,
+   "title": "[TEKRAR SAYFASI - CHECKPOINT 3] Tanı Kriterleri ve Klinik Belirleyiciler",
+   "section": "DSM-5 Tanı Kriterleri ve Klinik Belirleyiciler",
+   "content": "Bu bölümde DSM-5 tanı sistemini, 4 alanda bozulmayı ve klinik belirleyicileri (melankolik, atipik, psikotik, peripartum) pekiştirdik.\n\n- **Tanı Kriteri:** En az 2 hafta süreli 5/9 belirti; çökkün duygudurum veya anhedoniden en az biri zorunlu.\n- **Dört Alan:** Duygulanım (anhedoni), biliş (suçluluk, intihar), beden (uyku, iştah) ve davranış (retardasyon/ajitasyon).\n- **Melankolik ve Atipik Farkı:** Melankolide anoreksi ve terminal insomni varken; atipik tipte reaktivite, aşırı yeme, aşırı uyku ve kurşun boru ağırlığı bulunur.\n\n> [!IMPORTANT]\n> Bu klinik ayrımlar, hastaya uygulanacak farmakoterapi seçimini ve tedavi stratejisini doğrudan belirler.",
+   "interactiveElements": [
+    {
+     "id": "k34-s15-q1",
+     "type": "micro_quiz",
+     "question": "Aşağıdaki klinik tablolardan hangisinde hastada 'atipik özellikli depresyon' düşünülmelidir?",
+     "options": [
+      {
+       "text": "Günde 12 saat uyuyan, sürekli tatlı aşeren, olumlu haberle neşelenen ve kollarında ağırlık hisseden hasta",
+       "isCorrect": true,
+       "explanation": "Hipersomni, hiperfaji, duygudurum reaktivitesi ve kurşun boru ağırlığı atipik depresyonun klasik göstergeleridir. Bu klinik özellik ayırıcı tanıda ve doğru sağaltım planlamasında temel önem taşımaktadır."
+      },
+      {
+       "text": "Sabah 04:00'te uyanan, yemekten tiksinip 8 kilo veren ve hiçbir şeye gülümsemeyen yaşlı hasta",
+       "isCorrect": false,
+       "explanation": "Bu klinik tablo klasik melankolik depresyon tablosudur. İştahsızlık ve terminal insomni melankoliye işaret eder. Bu klinik özellik ayırıcı tanıda ve doğru sağaltım planlamasında temel önem taşımaktadır."
+      },
+      {
+       "text": "Balmumu esnekliği gösteren ve günlerce tek kelime konuşmayan mutistik hasta",
+       "isCorrect": false,
+       "explanation": "Bu tablo katatonik belirleyici gösteren majör depresyondur. Atipik duygudurum paternleriyle örtüşmez. Bu klinik özellik ayırıcı tanıda ve doğru sağaltım planlamasında temel önem taşımaktadır."
+      },
+      {
+       "text": "Yoksulluk ve organlarının çürüdüğü hezeyanları olan psikotik hasta",
+       "isCorrect": false,
+       "explanation": "Bu durum nihilistik hezeyanların eşlik ettiği psikotik depresyondur. Atipik vejetatif bulgular içermez. Bu klinik özellik ayırıcı tanıda ve doğru sağaltım planlamasında temel önem taşımaktadır."
+      }
+     ]
+    },
+    {
+     "id": "k34-s15-t1",
+     "type": "interactive_table",
+     "tableHeaders": [
+      "Belirleyici Türü",
+      "Temel Tanı Belirtisi",
+      "Tedavi Yaklaşımı"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Melankolik Tip",
+         "isMasked": false
+        },
+        {
+         "text": "Sabah erken uyanma ve anoreksi",
+         "isMasked": true,
+         "hint": "Şafağın ilk ışıklarında göz açma ile iştah kapanması"
+        },
+        {
+         "text": "Antidepresan farmakoterapi",
+         "isMasked": false
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Psikotik Tip",
+         "isMasked": false
+        },
+        {
+         "text": "Suçluluk hezeyanları ve halüsinasyon",
+         "isMasked": false
+        },
+        {
+         "text": "Antidepresan ve antipsikotik kombinasyonu",
+         "isMasked": true,
+         "hint": "Çiftli ilaç sağaltım protokolü"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k34-s15-c1",
+     "type": "cloze_masking",
+     "sentence": "Melankolik depresyonda sabah erken uyanma terminal insomni olarak adlandırılır.",
+     "maskedTerm": "terminal insomni",
+     "hint": "Şafağın ilk ışıklarında erkenden göz açma"
+    },
+    {
+     "id": "k34-s15-l1",
+     "type": "spot_the_lie",
+     "topic": "Checkpoint 3 Pekiştirme",
+     "items": [
+      {
+       "text": "Majör depresyon tanısı için 9 belirtiden en az 5 tanesi 2 hafta boyunca bulunmalıdır.",
+       "isLie": false,
+       "explanation": "DSM-5 tanı kuralı süre ve semptom sayısını kesin olarak tanımlar."
+      },
+      {
+       "text": "Peripartum başlangıç gebelik süresince veya doğumdan sonraki 4 hafta içinde başlar.",
+       "isLie": false,
+       "explanation": "Peripartum belirleyicinin resmi DSM-5 süresi 4 haftadır."
+      },
+      {
+       "text": "Melankolik depresyonda hasta akşam saatlerinde ağırlaşır, sabahları ise tamamen neşelidir.",
+       "isLie": true,
+       "explanation": "Tam tersine melankolide sabah belirgin kötüleşme (diurnal varyasyon) karakteristiktir."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slideNumber": 16,
+   "title": "Özel Popülasyonlar: Çocuk, Ergen, Yaşlı Depresyonu ve Psödodemans",
+   "section": "Özel Popülasyonlar ve Klinik Görünümler",
+   "content": "Depresyonun klinik tablosu bireyin yaşam evresine göre belirgin farklılıklar gösterir:\n\n- **Çocuklarda:** Klasik keder yerine **hırçınlık, öfke patlamaları, okul başarısızlığı**, ayrılık anksiyetesi ve somatik (karın ağrısı, baş ağrısı) yakınmalar ön plandadır.\n- **Ergenlerde:** İrritabilite, otoriteye başkaldırı, riskli davranışlar, madde kullanımı, kendine zarar verme ve akademik düşüş sık görülür.\n- **Yaşlılarda (Geriatrik Depresyon):** Çökkünlükten ziyade hipokondriazis, bedensel ağrılar ve kognitif yavaşlama hakimdir.\n- **Psödodemans (Depresif Yalancı Demans):** Yaşlı depresif hastalarda dikkat, bellek ve yürütücü işlev bozukluğunun gerçek demansı taklit etmesidir. Hasta unutkanlığından yakınır ve çaba göstermez; antidepresan tedaviyle tablo tamamen düzelir.\n\n> [!IMPORTANT]\n> Gerçek demansta hasta açıklarını kapatmaya çalışır (konfabulasyon); psödodemansta ise hasta 'bilmiyorum' diyerek çaba sarf etmez ve antidepresanla bilişsel fonksiyonlar geri döner.",
+   "interactiveElements": [
+    {
+     "id": "k34-s16-q1",
+     "type": "micro_quiz",
+     "question": "Yaşlı bir hastada unutkanlık ve kognitif yavaşlamanın gerçek demans yerine 'psödodemans' olduğunu düşündüren en kritik klinik ipucu nedir?",
+     "options": [
+      {
+       "text": "Hastanın unutkanlığından yakınması, çaba göstermemesi ve antidepresanla tablonun tamamen düzelmesi",
+       "isCorrect": true,
+       "explanation": "Psödodemans depresif çökkünlüğe ikincildir. Hasta unutkanlığından dert yanar ve antidepresan tedaviyle kognitif işlevler tamamen düzelir. Bu klinik özellik ayırıcı tanıda ve doğru sağaltım planlamasında temel önem taşımaktadır."
+      },
+      {
+       "text": "Beyin tomografisinde yaygın kortikal atrofi ve ventriküler genişleme saptanması",
+       "isCorrect": false,
+       "explanation": "Kortikal atrofi nörodejeneratif yapısal demansın radyolojik işaretidir. Geri dönüşlü psödodemansa özgü değildir. Bu klinik özellik ayırıcı tanıda ve doğru sağaltım planlamasında temel önem taşımaktadır."
+      },
+      {
+       "text": "Hastanın bellek açıklarını kapatmak için masallar (konfabulasyon) uydurması",
+       "isCorrect": false,
+       "explanation": "Konfabulasyon Alzheimer tipi gerçek demansta açığı kapatma çabasıdır. Psödodemansta hasta çaba göstermeksizin bilmiyorum der. Bu klinik özellik ayırıcı tanıda ve doğru sağaltım planlamasında temel önem taşımaktadır."
+      },
+      {
+       "text": "Tablonun hiçbir psikiyatrik belirti olmaksızın on yıldır sinsice ilerlemesi",
+       "isCorrect": false,
+       "explanation": "On yıllık sinsi seyir dejeneratif demansların doğal gidişatıdır. Depresif psödodemans daha belirgin başlangıçlıdır. Bu klinik özellik ayırıcı tanıda ve doğru sağaltım planlamasında temel önem taşımaktadır."
+      }
+     ]
+    },
+    {
+     "id": "k34-s16-c1",
+     "type": "cloze_masking",
+     "sentence": "Yaşlı depresyonunda kognitif işlev kaybının demansı taklit ettiği geri dönüşlü tablo psödodemans olarak adlandırılır.",
+     "maskedTerm": "psödodemans",
+     "hint": "Depresif yalancı bilişsel yıkım tablosu"
+    },
+    {
+     "id": "k34-s16-sl1",
+     "type": "before_after_slider",
+     "title": "Gerçek Demans ile Psödodemans Ayrımı",
+     "leftTitle": "Gerçek Demans",
+     "rightTitle": "Psödodemans (Depresif)",
+     "leftPoints": [
+      "Sinsi başlangıç, yavaş ve ilerleyici seyir",
+      "Kusuru gizleme çabası, inkar ve konfabulasyon",
+      "Tüm çabaya rağmen yanlış yanıtlar verme",
+      "Geri dönüşsüz veya çok sınırlı yanıt"
+     ],
+     "rightPoints": [
+      "Belirgin başlangıç, hızlı gelişen klinik tablo",
+      "Unutkanlıktan aşırı yakınma ve çaresizlik hissi",
+      "'Bilmiyorum' diyerek çaba sarf etmeme",
+      "Antidepresan ile kognitif işlevlerin tam düzelmesi"
+     ]
+    },
+    {
+     "id": "k34-s16-l1",
+     "type": "spot_the_lie",
+     "topic": "Özel Popülasyonlarda Depresyon",
+     "items": [
+      {
+       "text": "Çocuklarda depresyon genellikle hırçınlık, okul başarısızlığı ve karın ağrısıyla maskelenir.",
+       "isLie": false,
+       "explanation": "Çocukluk çağı depresyonunda somatizasyon ve hırçınlık çok sıktır."
+      },
+      {
+       "text": "Ergenlikte irritabilite ve otoriteye karşı gelme depresyonun yansıması olabilir.",
+       "isLie": false,
+       "explanation": "Ergen depresyonunda irritabilite klasik tanı kriteri sayılır."
+      },
+      {
+       "text": "Psödodemans hastaları gerçek demans hastaları gibi bellek kayıplarını inkar edip saklamaya çalışırlar.",
+       "isLie": true,
+       "explanation": "Tam tersine psödodemansta hasta unutkanlığından sürekli dert yanar ve abartır."
+      }
+     ]
+    }
+   ],
+   "pdfSayfalari": [
+    24,
+    27
+   ],
+   "sourcePdf": {
+    "startPage": 24,
+    "endPage": 27,
+    "name": "y25-k2-34-unipolar-depresyon.pdf"
+   },
+   "bolum": "5"
+  },
+  {
+   "slideNumber": 17,
+   "title": "Unipolar Depresyon ile Bipolar Depresyon Ayrımı",
+   "section": "Özel Popülasyonlar ve Klinik Görünümler",
+   "content": "Duygudurum bozukluklarında doğru tedavi stratejisi için unipolar depresyon ile bipolar depresyon ayrımı hayati önem taşır:\n\n- **Unipolar Depresyon:** Bireyin yaşam öyküsünde **yalnızca majör depresif epizodlar** mevcuttur; hiçbir zaman mani veya hipomani yaşanmamıştır.\n- **Bipolar Depresyon:** Çökkünlük epizodu geçiren hastanın geçmiş öyküsünde **en az bir mani (Bipolar I) veya hipomani (Bipolar II)** dönemi bulunmaktadır.\n- **Klinik İpuçları:** Bipolar depresyonda erken başlangıç yaşı (<25 yaş), ailede bipolar öyküsü, atipik belirtiler (aşırı uyku/aşırı yeme), psikotik özellikler ve postpartum başlangıç daha sıktır.\n- **Tedavi Riski:** Bipolar depresyonlu bir hastaya tek başına antidepresan verilmesi **manik kaymaya (switch)** veya hızlı döngülülüğe yol açabilir; duygudurum dengeleyici (lityum, valproat vb.) şarttır.\n\n> [!IMPORTANT]\n> Her depresyon olgusunda geçmişte yaşanmış hafif taşkınlık, az uykuyla enerjik olma (hipomani) dönemleri mutlaka ayrıntılı sorgulanmalıdır.",
+   "interactiveElements": [
+    {
+     "id": "k34-s17-q1",
+     "type": "micro_quiz",
+     "question": "Bipolar depresyonu unipolar depresyondan ayıran en temel tanısal özellik ve tedavi riski nedir?",
+     "options": [
+      {
+       "text": "Geçmişte mani/hipomani öyküsünün olması ve tek başına antidepresanın manik kayma riski yaratması",
+       "isCorrect": true,
+       "explanation": "Öyküdeki taşkınlık dönemleri bipolar tanısını koydurur. Antidepresan monoterapisi manik kaymayı tetikleyebileceği için risklidir. Bu klinik özellik ayırıcı tanıda ve doğru sağaltım planlamasında temel önem taşımaktadır."
+      },
+      {
+       "text": "Bipolar depresyonda hiçbir zaman intihar düşüncesinin görülmemesi",
+       "isCorrect": false,
+       "explanation": "Bipolar depresyon intihar riski açısından son derece tehlikelidir. İntihar düşüncesinin olmaması gibi bir kural bulunmaz. Bu klinik özellik ayırıcı tanıda ve doğru sağaltım planlamasında temel önem taşımaktadır."
+      },
+      {
+       "text": "Unipolar depresyonda tedavide lityumun zorunlu tek seçenek olması",
+       "isCorrect": false,
+       "explanation": "Lityum bipolar bozukluğun temel duygudurum dengeleyicisidir. Unipolar depresyonda ilk basamak tedavi seçeneği değildir. Bu klinik özellik ayırıcı tanıda ve doğru sağaltım planlamasında temel önem taşımaktadır."
+      },
+      {
+       "text": "Bipolar depresyonun yalnızca yetmiş yaşından sonra ortaya çıkan bir tablo olması",
+       "isCorrect": false,
+       "explanation": "Bipolar bozukluk genç erişkinlikte yirmili yaşlarda başlar. Yetmiş yaş sonrası ortaya çıkış tipik değildir. Bu klinik özellik ayırıcı tanıda ve doğru sağaltım planlamasında temel önem taşımaktadır."
+      }
+     ]
+    },
+    {
+     "id": "k34-s17-c1",
+     "type": "cloze_masking",
+     "sentence": "Bipolar depresyon hastalarında tek başına antidepresan kullanımı manik kaymaya yol açabilir.",
+     "maskedTerm": "manik kaymaya",
+     "hint": "Duygudurumun coşku kutbuna sıçraması"
+    },
+    {
+     "id": "k34-s17-b1",
+     "type": "branching_logic",
+     "scenario": "Ağır çökkünlükle başvuran 22 yaşındaki bir hastanın öyküsünde iki yıl önce 4 gün süren az uyuma, aşırı para harcama ve çok konuşma dönemi saptanmıştır.",
+     "options": [
+      {
+       "text": "Hasta Bipolar II depresyon kabul edilmeli, duygudurum dengeleyici öncelikli planlanmalıdır.",
+       "isCorrect": true,
+       "feedback": "Hipomani öyküsü bipolar tanısını doğrular. Duygudurum dengeleyici eklenmeden tek başına antidepresan verilmesi sakıncalıdır. Bu klinik özellik ayırıcı tanıda ve doğru sağaltım planlamasında temel önem taşımaktadır."
+      },
+      {
+       "text": "Unipolar kabul edilerek yüksek doz trisiklik antidepresan monoterapisi başlanmalıdır.",
+       "isCorrect": false,
+       "feedback": "Bu yaklaşım hastada şiddetli manik kaymayı tetikler. Hipomani öyküsü varlığında tek başına trisiklik kullanımı hatalıdır. Bu klinik özellik ayırıcı tanıda ve doğru sağaltım planlamasında temel önem taşımaktadır."
+      }
+     ]
+    },
+    {
+     "id": "k34-s17-l1",
+     "type": "spot_the_lie",
+     "topic": "Unipolar ve Bipolar Ayrımı",
+     "items": [
+      {
+       "text": "Unipolar depresyon hastalarında yaşam boyu hiçbir mani veya hipomani epizodu gelişmez.",
+       "isLie": false,
+       "explanation": "Mani veya hipomani görülmesi tanıyı derhal bipolar bozukluğa çevirir."
+      },
+      {
+       "text": "Bipolar depresyonda atipik özellikler ve aşırı uyku unipolar tipten daha sık görülebilir.",
+       "isLie": false,
+       "explanation": "Bipolar depresyon sıklıkla hipersomni ve psikomotor retardasyonla seyreder."
+      },
+      {
+       "text": "Bipolar depresyon hastalarında antidepresan ilaçlar tek başına güvenle ömür boyu kullanılır.",
+       "isLie": true,
+       "explanation": "Tek başına antidepresan manik kayma ve hızlı döngü riski nedeniyle bipolar bozuklukta kontrendikedir."
+      }
+     ]
+    }
+   ],
+   "pdfSayfalari": [
+    23,
+    23
+   ],
+   "sourcePdf": {
+    "startPage": 23,
+    "endPage": 23,
+    "name": "y25-k2-34-unipolar-depresyon.pdf"
+   },
+   "bolum": "5"
+  },
+  {
+   "slideNumber": 18,
+   "title": "Etyolojik Faktörler: Tıbbi Komorbidite ve İyatrojenik İlaçlar",
+   "section": "Tıbbi Komorbidite, İyatrojenik İlaçlar ve Ayırıcı Tanı",
+   "content": "Pek çok genel tıbbi hastalık ve farmakolojik ajan, santral mekanizmaları etkileyerek sekonder depresyona yol açabilir:\n\n- **Eşlik Eden Malignansiler:** Özellikle **pankreas karsinomunda** hastaların %40'ında tanı öncesinde veya sürecinde ağır depresyon gelişir; beyin tümörleri de sıktır.\n- **Endokrin Nedenler:** **Hipotiroidizm**, Cushing sendromu, Addison hastalığı ve paratiroid disfonksiyonları depresyonu taklit eder veya tetikler.\n- **Nörolojik Hastalıklar:** İnme (özellikle sol frontal), Parkinson hastalığı, Huntington koresi ve Multipl Skleroz (MS).\n- **Depresyona Yol Açan İlaçlar:**\n  1. *Kardiyovasküler:* **Beta blokerler, rezerpin**, klonidin, metildopa, digoksin.\n  2. *Steroidler:* **Kortikosteroidler**, oral kontraseptifler.\n  3. *Diğer:* **İnterferon-alfa**, indometazin, L-dopa.\n\n> [!IMPORTANT]\n> Yeni başlayan her depresyon olgusunda mutlaka tiroid fonksiyon testleri (TSH, sT4) ve tam biyokimya istenmeli, kullanılan medikal ilaçlar taranmalıdır.",
+   "interactiveElements": [
+    {
+     "id": "k34-s18-q1",
+     "type": "micro_quiz",
+     "question": "Aşağıdaki malignitelerden hangisinde paraneoplastik mekanizmalarla majör depresyon görülme oranı en yüksektir?",
+     "options": [
+      {
+       "text": "Pankreas karsinomu",
+       "isCorrect": true,
+       "explanation": "Pankreas tümörlerinde paraneoplastik nöroendokrin mekanizmalarla hastaların yüzde kırkında depresyon gelişir. Erken tanı ipucu olabilir. Bu klinik özellik ayırıcı tanıda ve doğru sağaltım planlamasında temel önem taşımaktadır."
+      },
+      {
+       "text": "Bazal hücreli cilt karsinomu",
+       "isCorrect": false,
+       "explanation": "Cildin lokal seyirli bazal hücreli tümörüdür. Santral sinir sistemini etkileyen paraneoplastik depresyona neden olmaz. Bu klinik özellik ayırıcı tanıda ve doğru sağaltım planlamasında temel önem taşımaktadır."
+      },
+      {
+       "text": "Benign over kisti",
+       "isCorrect": false,
+       "explanation": "Overin iyi huylu kistik patolojisidir. Paraneoplastik santral depresyon sendromlarıyla doğrudan bir ilişkisi saptanmaz. Bu klinik özellik ayırıcı tanıda ve doğru sağaltım planlamasında temel önem taşımaktadır."
+      },
+      {
+       "text": "Dudak hemanjiyomu",
+       "isCorrect": false,
+       "explanation": "Vasküler endotelden köken alan benign bir lezyondur. Sistemik veya nöropsikiyatrik depresyon patolojisi oluşturmaz. Bu klinik özellik ayırıcı tanıda ve doğru sağaltım planlamasında temel önem taşımaktadır."
+      }
+     ]
+    },
+    {
+     "id": "k34-s18-c1",
+     "type": "cloze_masking",
+     "sentence": "Hipertansiyon tedavisinde kullanılan rezerpin ve beta blokerler iyatrojenik depresyona yol açabilir.",
+     "maskedTerm": "rezerpin",
+     "hint": "Veziküler amin depolarını boşaltan tansiyon ilacı"
+    },
+    {
+     "id": "k34-s18-t1",
+     "type": "interactive_table",
+     "tableHeaders": [
+      "Tıbbi Kategori",
+      "Örnek Hastalık / İlaç",
+      "Depresif Mekanizma"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Endokrin",
+         "isMasked": false
+        },
+        {
+         "text": "Hipotiroidizm",
+         "isMasked": true,
+         "hint": "Metabolik yavaşlamayla giden endokrin yetersizlik"
+        },
+        {
+         "text": "Metabolik ve santral iletim yavaşlaması",
+         "isMasked": false
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Kardiyovasküler İlaç",
+         "isMasked": false
+        },
+        {
+         "text": "Beta blokerler",
+         "isMasked": false
+        },
+        {
+         "text": "Santral adrenerjik blokaj",
+         "isMasked": true,
+         "hint": "Sempatik ileti yolağının ilaçla durdurulması"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k34-s18-l1",
+     "type": "spot_the_lie",
+     "topic": "Tıbbi Hastalıklar ve İlaçlar",
+     "items": [
+      {
+       "text": "İnterferon tedavisi alan hepatit veya onkoloji hastalarında depresyon gelişme riski yüksektir.",
+       "isLie": false,
+       "explanation": "İnterferon sitokin mekanizmasıyla şiddetli depresyonu tetikleyebilir."
+      },
+      {
+       "text": "Parkinson hastalığı ve inme gibi nörolojik patolojilerde depresyon sıklığı belirgin artar.",
+       "isLie": false,
+       "explanation": "Nörodejeneratif ve vasküler lezyonlar duygudurum devrelerini bozar."
+      },
+      {
+       "text": "Kortikosteroidlerin ve oral kontraseptiflerin duygudurum üzerinde hiçbir olumsuz etkisi olamaz.",
+       "isLie": true,
+       "explanation": "Steroidler ve hormonlar depresyon ve duygusal dalgalanmayı sıkça tetikler."
+      }
+     ]
+    }
+   ],
+   "pdfSayfalari": [
+    28,
+    30
+   ],
+   "sourcePdf": {
+    "startPage": 28,
+    "endPage": 30,
+    "name": "y25-k2-34-unipolar-depresyon.pdf"
+   },
+   "bolum": "6"
+  },
+  {
+   "slideNumber": 19,
+   "title": "Klinik Gidişat: Ayırıcı Tanı, Seyir, Rekürrens ve Kötü Prognoz",
+   "section": "Klinik Seyir, Prognoz ve Tedavi İlkeleri",
+   "content": "Majör depresif bozukluk tedaviye iyi yanıt verse de kronikleşme ve yineleme eğilimi yüksek bir hastalıktır:\n\n- **Ayırıcı Tanı:** Uyum bozukluğu, anksiyete bozuklukları, şizoaffektif bozukluk, demans ve madde kullanımına bağlı çökkünlükler dışlanmalıdır.\n- **Seyir ve Rekürrens:** Tedavi edilmeyen bir depresif epizod ortalama **6-9 ay** sürer. İki veya daha fazla epizod geçirenlerde yaşam boyu yineleme (**rekürrens**) riski **%50-85**'tir. Hastaların %15-20'sinde tablo kronikleşir.\n- **Kötü Prognoz Belirteçleri:**\n  1. Eşlik eden kişilik bozukluğu veya alkol/madde bağımlılığı,\n  2. Kronik psikososyal stresörlerin varlığı ve zayıf sosyal destek,\n  3. İleri yaş ve erken yaşta başlangıç,\n  4. Sık ataklar, epizodlar arası sürenin kısa olması ve hipokondriak belirtiler.\n\n> [!IMPORTANT]\n> Depresyon hastalarında yaşam boyu intihar riski yüksektir; remisyon sağlansa bile 5 yıl içinde yineleme oranı %70 düzeyindedir.",
+   "interactiveElements": [
+    {
+     "id": "k34-s19-q1",
+     "type": "micro_quiz",
+     "question": "Majör depresif bozuklukta aşağıdaki klinik durumlardan hangisi kötü prognoz göstergesidir?",
+     "options": [
+      {
+       "text": "Eşlik eden kişilik bozukluğu, madde bağımlılığı ve kronik psikososyal sorunlar",
+       "isCorrect": true,
+       "explanation": "Bu komorbiditeler tedavi uyumunu ve biyolojik yanıtı bozar. Epizodların sıklaşmasına ve kronikleşmesine yol açar. Bu klinik özellik ayırıcı tanıda ve doğru sağaltım planlamasında temel önem taşımaktadır."
+      },
+      {
+       "text": "Epizodun akut başlaması ve hastanın sosyal desteğinin kusursuz olması",
+       "isCorrect": false,
+       "explanation": "Akut başlangıç ve sosyal destek koruyucu faktörlerdir. Depresyonda iyi klinik prognozla ilişkilendirilirler. Bu klinik özellik ayırıcı tanıda ve doğru sağaltım planlamasında temel önem taşımaktadır."
+      },
+      {
+       "text": "Ailede hiçbir psikiyatrik öykünün olmaması ve premorbid işlevselliğin tam olması",
+       "isCorrect": false,
+       "explanation": "Düşük genetik yük ve yüksek premorbid işlevsellik olumlu belirteçtir. Kötü prognoz faktörü sayılmaz. Bu klinik özellik ayırıcı tanıda ve doğru sağaltım planlamasında temel önem taşımaktadır."
+      },
+      {
+       "text": "Hastanın tedaviye ilk 2 haftada tam klinik remisyonla yanıt vermesi",
+       "isCorrect": false,
+       "explanation": "Erken remisyon sağaltımın başarısını kanıtlayan olumlu bir bulgudur. Seyrin kötüleşeceğine işaret etmez. Bu klinik özellik ayırıcı tanıda ve doğru sağaltım planlamasında temel önem taşımaktadır."
+      }
+     ]
+    },
+    {
+     "id": "k34-s19-c1",
+     "type": "cloze_masking",
+     "sentence": "Tedavi edilmeyen bir majör depresif epizod ortalama altı ila dokuz ayda kendiliğinden sonlanabilir.",
+     "maskedTerm": "dokuz ayda",
+     "hint": "Ortalama üç mevsimlik süre"
+    },
+    {
+     "id": "k34-s19-a1",
+     "type": "active_recall",
+     "question": "Majör depresyonda iki veya daha fazla epizod geçiren bir hastada yaşam boyu rekürrens (yineleme) riski yüzde kaçtır?",
+     "answer": "İki veya daha fazla epizod geçiren hastalarda yaşam boyu en az bir kez daha yineleme (rekürrens) riski %50 ila %85 arasındadır."
+    },
+    {
+     "id": "k34-s19-l1",
+     "type": "spot_the_lie",
+     "topic": "Depresyon Seyri ve Prognozu",
+     "items": [
+      {
+       "text": "Majör depresif bozukluk yaklaşık yüzde 15 ila 20 oranında kronikleşme riski taşır.",
+       "isLie": false,
+       "explanation": "Hastaların beşte birinde belirtiler kronikleşerek devam eder."
+      },
+      {
+       "text": "Depresyonlu hastalarda intihar riski yüksektir ve yakın klinik takip gerektirir.",
+       "isLie": false,
+       "explanation": "İntihar riski majör depresyonun en acil ve ölümcül komplikasyonudur."
+      },
+      {
+       "text": "Bir kez majör depresyon geçiren bir bireyde hastalık bir daha hayat boyu asla tekrarlamaz.",
+       "isLie": true,
+       "explanation": "Tam tersine rekürrens riski çok yüksektir; hastaların çoğunda tekrarlar görülür."
+      }
+     ]
+    }
+   ],
+   "pdfSayfalari": [
+    31,
+    34
+   ],
+   "sourcePdf": {
+    "startPage": 31,
+    "endPage": 34,
+    "name": "y25-k2-34-unipolar-depresyon.pdf"
+   },
+   "bolum": "6"
+  },
+  {
+   "slideNumber": 20,
+   "title": "Tedavi İlkeleri: Farmakoterapi, Psikoterapi ve Elektrokonvülsif Tedavi",
+   "section": "Klinik Seyir, Prognoz ve Tedavi İlkeleri",
+   "content": "Depresyon tedavisinde temel amaç yalnızca semptomları yatıştırmak değil, tam **remisyona** ulaşmak ve yinelemeleri önlemektir:\n\n- **Farmakoterapi Sınıfları:**\n  1. *SSRI (İlk Seçenek):* Sertralin, fluoksetin, essitalopram, paroksetin. Güvenli ve tolere edilebilir.\n  2. *SNRI:* Venlafaksin, duloksetin (serotonin ve noradrenalin gerialım inhibitörleri).\n  3. *Trisiklik Antidepresanlar (TBA):* İmipramin, amitriptilin (antikolinerjik ve kardiyotoksik yan etkiler).\n  4. *Atipikler:* Mirtazapin (alfa-2 antagonist), bupropion (dopamin-noradrenalin gerialım inhibitörü).\n- **Psikoterapi:** Bilişsel Davranışçı Terapi (BDT) ve Kişilerarası İlişkiler Terapisi farmakoterapiyle kombine edildiğinde başarıyı artırır.\n- **Elektrokonvülsif Tedavi (EKT):** Ağır psikotik depresyonda, katatonide, yemeyi reddeden olgularda ve **acil intihar riski** taşıyan hastalarda hayat kurtarıcı, hızlı ve en etkili biyolojik tedavidir.\n\n> [!IMPORTANT]\n> Antidepresan ilaçların klinik etkisinin ortaya çıkması için en az 2-4 hafta düzenli kullanım gereklidir; ilk epizodda tedavi remisyondan sonra en az 6-9 ay sürdürülmelidir.",
+   "interactiveElements": [
+    {
+     "id": "k34-s20-q1",
+     "type": "micro_quiz",
+     "question": "Majör depresyon tedavisinde elektrokonvülsif tedavi (EKT) uygulanmasını gerektiren en öncelikli ve acil endikasyon hangisidir?",
+     "options": [
+      {
+       "text": "Yüksek ve acil intihar riski, besin alımını durduran psikotik depresyon ve katatoni",
+       "isCorrect": true,
+       "explanation": "EKT hayati tehlike durumlarında ilk tercihtir. Yüksek intihar riski ve beslenme reddinde hızlı yanıt sağlayarak hayat kurtarır."
+      },
+      {
+       "text": "Yalnızca hafif düzeyde sınav stresi yaşayan genç üniversite öğrencisi",
+       "isCorrect": false,
+       "explanation": "Hafif sınav stresi fizyolojik bir uyum sürecidir. Elektrokonvülsif tedavi gibi invaziv bir yöntemin endikasyonu olamaz. Bu klinik özellik ayırıcı tanıda ve doğru sağaltım planlamasında temel önem taşımaktadır."
+      },
+      {
+       "text": "Günde 8 saat uyuyan ve hafif iştah artıran atipik depresyonlu stabil hasta",
+       "isCorrect": false,
+       "explanation": "Stabil atipik depresyonda oral antidepresanlar tercih edilir. Acil hayati risk bulunmadıkça EKT uygulanmaz. Bu klinik özellik ayırıcı tanıda ve doğru sağaltım planlamasında temel önem taşımaktadır."
+      },
+      {
+       "text": "Antidepresan ilacın ilk gününde hafif bulantı tarifleyen hasta",
+       "isCorrect": false,
+       "explanation": "İlacın ilk gün bulantısı geçici bir yan etkidir. Biyolojik şok tedavisi uygulanmasını gerektirmez. Bu klinik özellik ayırıcı tanıda ve doğru sağaltım planlamasında temel önem taşımaktadır."
+      }
+     ]
+    },
+    {
+     "id": "k34-s20-c1",
+     "type": "cloze_masking",
+     "sentence": "Depresyon tedavisinde günümüzde etkinliği ve güvenliği nedeniyle ilk seçenek ilaç grubu SSRI antidepresanlardır.",
+     "maskedTerm": "SSRI",
+     "hint": "Serotonin taşıyıcı inhibitörlerinin farmakolojik kısaltması"
+    },
+    {
+     "id": "k34-s20-ch1",
+     "type": "causal_chain",
+     "title": "Antidepresan Tedavi Aşamaları ve İdame Süreci",
+     "steps": [
+      "1. Akut dönem tedavisi: Yeterli dozda antidepresan başlanması ve 2-4 haftalık latent etkinin beklenmesi",
+      "2. Yanıt ve remisyon: Semptomların gerilemesi ve tam klinik remisyona ulaşılması",
+      "3. Sürdürüm dönemi: Nüksü (relaps) önlemek için ilacın en az 6 ila 9 ay aynı dozda korunması",
+      "4. İdame/Koruma dönemi: Çoklu atak geçiren riskli hastalarda rekürrensi önlemek için yıllarca süren koruyucu tedavi"
+     ]
+    },
+    {
+     "id": "k34-s20-l1",
+     "type": "spot_the_lie",
+     "topic": "Depresyon Tedavi İlkeleri",
+     "items": [
+      {
+       "text": "Antidepresan ilaçların klinik etkisinin belirginleşmesi genellikle 2 ila 4 hafta sürer.",
+       "isLie": false,
+       "explanation": "Reseptör düzeyindeki adaptasyon ve BDNF artışı zaman alır."
+      },
+      {
+       "text": "Bilişsel davranışçı terapi farmakoterapi ile kombine edildiğinde yinelemeleri önlemede çok etkilidir.",
+       "isLie": false,
+       "explanation": "Kombine tedavi nüks oranlarını anlamlı derecede azaltır."
+      },
+      {
+       "text": "Hasta kendisini iyi hissettiği anda, tedavinin ilk haftasında antidepresan ilaç hemen kesilmelidir.",
+       "isLie": true,
+       "explanation": "Erken kesilme şiddetli relapsa yol açar; tedavi remisyondan sonra en az 6-9 ay sürmelidir."
+      }
+     ]
+    }
+   ],
+   "pdfSayfalari": [
+    35,
+    37
+   ],
+   "sourcePdf": {
+    "startPage": 35,
+    "endPage": 37,
+    "name": "y25-k2-34-unipolar-depresyon.pdf"
+   },
+   "bolum": "6"
+  },
+  {
+   "slideNumber": 21,
+   "title": "Kronik Çökkünlük: Distimik Bozukluk ve Majör Depresyon Ayrımı",
+   "section": "Distimik Bozukluk ve Karşılaştırma",
+   "content": "Distimik bozukluk (DSM-5 adıyla Persistan Depresif Bozukluk), majör depresyondan süre ve şiddet yönüyle ayrılır:\n\n- **Tanı Kriteri (Süre):** Erişkinlerde **en az 2 yıl** (çocuk ve ergenlerde en az 1 yıl) boyunca çoğu gün, günün büyük bölümünde süren kronik çökkün duygudurum.\n- **Eşlik Eden Belirtiler:** İştah azalması/artması, uyku bozukluğu, düşük enerji/yorgunluk, düşük benlik saygısı, konsantrasyon kaybı ve umutsuzluk belirtilerinden **en az 2 tanesi** bulunmalıdır.\n- **Majör Depresyondan Temel Farklar:**\n  1. *Psikoz:* MDB'de psikotik belirtiler görülebilir; distimide **asla psikoz yoktur**.\n  2. *Şiddet:* MDB daha şiddetli ve yeti yitimi yüksektir; distimi hafif-orta şiddettedir.\n  3. *Süre:* MDB tedavisiz 6-9 ayda sonlanabilir; distimi ise en az 2 yıl süren kronik bir tablodur.\n  4. *İntihar:* Distimide intihar düşüncesi MDB'ye oranla daha nadirdir.\n\n> [!IMPORTANT]\n> Distimik bozukluğu olan bir hastanın üzerine zaman zaman majör depresif epizod eklenebilir; bu klinik tabloya **çifte depresyon (double depression)** adı verilir.",
+   "interactiveElements": [
+    {
+     "id": "k34-s21-q1",
+     "type": "micro_quiz",
+     "question": "Distimik bozukluk ile majör depresif bozukluk arasındaki klinik farklarla ilgili aşağıdaki ifadelerden hangisi doğrudur?",
+     "options": [
+      {
+       "text": "Distimik bozukluk en az iki yıl sürer ve psikotik belirtiler içermez.",
+       "isCorrect": true,
+       "explanation": "Bu iki özellik distiminin temel tanımıdır. Distimi en az iki yıl persistan sürer ve hezeyan gibi psikoz içermez."
+      },
+      {
+       "text": "Distimik bozuklukta her hastada mutlaka katatonik stupor ve hezeyan gelişir.",
+       "isCorrect": false,
+       "explanation": "Distimi hafif orta şiddette seyreden kronik çökkünlüktür. Katatoni ve hezeyan gibi ağır tablolar barındırmaz. Bu klinik özellik ayırıcı tanıda ve doğru sağaltım planlamasında temel önem taşımaktadır."
+      },
+      {
+       "text": "Majör depresif epizod tedavi edilmese bile mutlaka ömür boyu kesintisiz devam eder.",
+       "isCorrect": false,
+       "explanation": "Majör depresif epizod genellikle epizodik seyreder. Tedavisiz kaldığında da altı ila dokuz ayda sonlanabilir. Bu klinik özellik ayırıcı tanıda ve doğru sağaltım planlamasında temel önem taşımaktadır."
+      },
+      {
+       "text": "Distimik bozukluk yalnızca çocuklarda görülen ve bir haftada düzelen bir durumdur.",
+       "isCorrect": false,
+       "explanation": "Distimi erişkinde en az iki yıl, çocukta en az bir yıl sürmelidir. Bir haftalık geçici durumlarla uyuşmaz."
+      }
+     ]
+    },
+    {
+     "id": "k34-s21-c1",
+     "type": "cloze_masking",
+     "sentence": "Distimik bozukluk tanısı koyabilmek için çökkün duygudurum erişkinlerde en az iki yıl sürmelidir.",
+     "maskedTerm": "iki yıl",
+     "hint": "Yirmi dört aylık asgari zaman dilimi"
+    },
+    {
+     "id": "k34-s21-sl1",
+     "type": "before_after_slider",
+     "title": "Majör Depresif Bozukluk ile Distimik Bozukluk Karşılaştırması",
+     "leftTitle": "Majör Depresif Bozukluk",
+     "rightTitle": "Distimik Bozukluk",
+     "leftPoints": [
+      "En az 2 haftalık akut epizod",
+      "Şiddetli yeti yitimi ve disfonksiyon",
+      "Ağır tiplerde hezeyan veya halüsinasyon görülebilir",
+      "Yüksek ve acil klinik intihar riski taşır"
+     ],
+     "rightPoints": [
+      "En az 2 yıl süren persistan kronik tablo",
+      "Hafif ila orta şiddette süreğen keder",
+      "Psikotik belirtiler kesinlikle bulunmaz",
+      "MDB'ye oranla daha düşük sıklıktadır"
+     ]
+    },
+    {
+     "id": "k34-s21-l1",
+     "type": "spot_the_lie",
+     "topic": "Distimik Bozukluk",
+     "items": [
+      {
+       "text": "Distimi zemininde majör depresyon atağı gelişmesine çifte depresyon adı verilir.",
+       "isLie": false,
+       "explanation": "Çifte depresyon (double depression) klinikte sık görülen bir komorbiditedir."
+      },
+      {
+       "text": "Çocuk ve ergenlerde distimik bozukluk tanısı için 1 yıllık süre eşiği yeterli kabul edilir.",
+       "isLie": false,
+       "explanation": "DSM-5 çocuk ve ergenlerde süre eşiğini 1 yıl olarak belirlemiştir."
+      },
+      {
+       "text": "Distimik bozukluk hastalarında hezeyan ve halüsinasyon gibi psikotik bulgular zorunlu tanı kriteridir.",
+       "isLie": true,
+       "explanation": "Tam tersine distimide psikotik bulgular bulunmaz; psikoz varsa tanı MDB veya şizoaffektiftir."
+      }
+     ]
+    }
+   ],
+   "pdfSayfalari": [
+    38,
+    39
+   ],
+   "sourcePdf": {
+    "startPage": 38,
+    "endPage": 39,
+    "name": "y25-k2-34-unipolar-depresyon.pdf"
+   },
+   "bolum": "7"
+  },
+  {
+   "slideNumber": 22,
+   "title": "[OYUN SAYFASI] Ders Sonu Oyunları: Unipolar Depresyon",
+   "section": "Distimik Bozukluk ve Karşılaştırma",
+   "badge": "Ders Sonu Oyunları",
+   "isGameFinale": true,
+   "content": "Tebrikler! Unipolar Depresyon dersini başarıyla tamamladınız. Bu son sayfada yer alan dört etkileşimli pekiştirme oyunu ile öğrendiğiniz tanı kriterlerini, biyolojik mekanizmaları ve tedavi protokollerini sınayabilirsiniz.\n\n- **Sıralama:** Depresif epizodun tanıdan idame tedavisine klinik basamaklarını sıraya dizin.\n- **Tahmin:** Epidemiyolojik oranları ve süre eşiklerini kaydırıcı ile tahmin edin.\n- **Pertürbasyon:** Klinik bir senaryoda tedavi dengesini bozan faktörleri analiz edin.\n- **Metin Onarma:** Hatalı ifadeleri düzelterek doğru klinik bilgiyi yapılandırın.",
+   "interactiveElements": [
+    {
+     "id": "k34-s22-g1",
+     "type": "sequence_order",
+     "prompt": "Majör depresif bozukluk tanısı alan bir hastada standart klinik yönetim basamaklarını doğru kronolojik sıraya diziniz:",
+     "steps": [
+      "1. DSM-5 tanı kriterlerine göre en az iki haftalık sürede 5/9 belirti ve intihar riskinin taranması",
+      "2. Organik taklitçileri dışlamak için tiroid fonksiyon testleri ve tam biyokimyasal tarama yapılması",
+      "3. İlk basamak farmakoterapi olarak uygun dozda SSRI başlanması ve latent etkinin izlenmesi",
+      "4. Tam remisyon sağlandıktan sonra nüksü önlemek amacıyla ilacın en az altı ila dokuz ay idame ettirilmesi"
+     ],
+     "explanation": "Klinik yönetimde önce DSM-5 tanı ve intihar riski taranır, organik nedenler dışlanır, ardından SSRI başlanıp remisyon sonrası 6-9 ay idame sürdürülür."
+    },
+    {
+     "id": "k34-s22-g2",
+     "type": "estimate_slider",
+     "items": [
+      {
+       "prompt": "Dünya Sağlık Örgütü verilerine göre majör depresyon küresel yeti yitimi sıralamasında kaçıncı sırada yer almaktadır?",
+       "unit": ". sıra",
+       "min": 1,
+       "max": 10,
+       "step": 1,
+       "answer": 2,
+       "tolerance": 0,
+       "explanation": "Dünya Sağlık Örgütü projeksiyonlarında depresyon iskemik kalp hastalıklarının ardından 2. sırada yer almaktadır."
+      }
+     ]
+    },
+    {
+     "id": "k34-s22-g3",
+     "type": "perturbation",
+     "scenario": "Ağır majör depresyonla takip edilen bir hastanın tedavisine duygudurum dengeleyici verilmeksizin yüksek doz trisiklik antidepresan eklenmiştir.",
+     "question": "Bu müdahale sonrasında hastadaki klinik parametreler nasıl değişir?",
+     "parameters": [
+      {
+       "name": "Bipolar yatkınlıkta manik kayma (switch) riski",
+       "correct": "up",
+       "explanation": "Tek başına antidepresan kullanımı örtük bipolar olgularda taşkınlık ve manik kayma riskini belirgin artırır."
+      },
+      {
+       "name": "Trisiklik ilaca bağlı antikolinerjik yan etki yükü",
+       "correct": "up",
+       "explanation": "Trisiklik antidepresanlar muskarinik reseptörleri bloke ederek ağız kuruluğu, kabızlık ve görme bulanıklığını artırır."
+      },
+      {
+       "name": "Kardiyak iletim hızı ve ritim stabilitesi",
+       "correct": "down",
+       "explanation": "Trisiklik antidepresanlar kardiyotoksik potansiyel taşır; iletiyi yavaşlatarak aritmi riskini artırır ve stabiliteyi düşürür."
+      }
+     ]
+    },
+    {
+     "id": "k34-s22-g4",
+     "type": "fix_the_text",
+     "text": "Distimik bozukluk en az iki hafta süren ve her hastada mutlaka ağır hezeyanların bulunduğu akut bir psikoz tablosudur.",
+     "errors": [
+      {
+       "wrong": "iki hafta",
+       "correct": "iki yıl",
+       "options": [
+        "üç ay",
+        "bir hafta"
+       ],
+       "explanation": "Distimik bozukluk akut değil, erişkinde en az iki yıl süren persistan bir tablodur."
+      },
+      {
+       "wrong": "ağır hezeyanların",
+       "correct": "çökkün duygudurumun",
+       "options": [
+        "öforik neşenin",
+        "varsanıların"
+       ],
+       "explanation": "Distimik bozuklukta hezeyan veya varsanı gibi psikotik bulgular bulunmaz."
+      },
+      {
+       "wrong": "akut bir psikoz",
+       "correct": "kronik bir çökkünlük",
+       "options": [
+        "organik bir demans",
+        "geçici bir taşkınlık"
+       ],
+       "explanation": "Distimi bir psikoz değildir; hafif-orta şiddette süregiden kronik duygudurum bozukluğudur."
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "matchedPastQuestionsCount": 11,
+ "sinama": {
+  "etiket": "2025-2026 Arşiv",
+  "aciklama": "Bu ders 2025-2026 dönemi (geçen yıl) slaytlarından hazırlanmıştır; 2026-2027 güncel müfredat dersleriyle karışmaz."
+ }
+}

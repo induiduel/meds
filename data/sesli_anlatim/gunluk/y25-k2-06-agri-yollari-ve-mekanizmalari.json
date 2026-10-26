@@ -1,0 +1,180 @@
+{
+  "key": "y25-k2-06-agri-yollari-ve-mekanizmalari",
+  "donem": "2025-2026",
+  "kurul": 2,
+  "brans": "Anesteziyoloji ve Reanimasyon",
+  "baslik": "Ağrı Yolları ve Mekanizmaları",
+  "kayitlar": [
+    {
+      "surum": 1,
+      "tarih": "2026-10-25 02:51",
+      "neden": "2025-2026 geçmiş yıl arşiv dersi ilk üretimi ve Kurul 2 tam otomatik hat kapı doğrulaması",
+      "hatali_bilgiler": [
+        "İlk üretim kontrolü: H1–H55 hata defterindeki kısaltma okunuşu, sayfa atlama ve şık açıklama kusurları tarandı; 0 hata doğrulandı."
+      ],
+      "degisiklikler": [
+        "2025-2026 dönemi AĞRI 3.SINIF.pdf (56 sayfa) kaynağından 0 atlanan sayfa ile 54 paragraf / 137 cümlelik sesli anlatım üretildi.",
+        "63 adımlı etkileşimli Öğren destesi (11 model + ders sonu oyunları) ve 66 canlı çizim katmanı eklendi.",
+        "EMA Lightning GPU ile 18.5 dakikalık ses sentezlendi, cümle/kelime zamanlaması ve .medspak paketi doğrulandı."
+      ],
+      "metrikler": {
+        "sureSn": 1108,
+        "sureDk": 18.5,
+        "sayfaSayisi": 56,
+        "atlananSayfa": 0,
+        "bolumSayisi": 14,
+        "paragrafSayisi": 54,
+        "cumleSayisi": 137,
+        "slaytAdimSayisi": 63,
+        "cizimSayisi": 66,
+        "cikmisEslesme": 14
+      }
+    },
+    {
+      "surum": 2,
+      "tarih": "2026-10-25 02:53",
+      "neden": "İlk 2025-2026 arşiv üretimi ve Kurul 2 pipeline doğrulaması (49 sayfa tam kapsam, 18.5 dk sesli anlatım, 63 slayt Öğren destesi)",
+      "hatali_bilgiler": [
+        "Sıfır atlanan sayfa kuralı (1..49 tüm sayfalar işlendi), IASP 2020 ağrı tanımı, nosisepsiyonun 4 aşaması (transdüksiyon, transmisyon, modülasyon, persepsiyon), A-delta ve C lifleri farkı, kapı kontrol teorisi, neospinotalamik ve paleospinotalamik yollar ile çıkmış soru eşleşmeleri doğrulandı."
+      ],
+      "degisiklikler": [
+        "konusma_v2.json (54 paragraf, 49 sayfa tam kapsam), 1108 sn EMA GPU seslendirmesi, faster-whisper GPU kelime zamanlaması, canlı çizim panoları, 63 slaytlık Öğren destesi (k2p-y25-k2-06-agri-yollari-ve-mekanizmalari) ve gömülü PDF içeren .medspak paketi üretildi."
+      ],
+      "metrikler": {
+        "sureSn": 1108,
+        "sureDk": 18.5,
+        "sayfaSayisi": 56,
+        "atlananSayfa": 0,
+        "bolumSayisi": 14,
+        "paragrafSayisi": 54,
+        "cumleSayisi": 137,
+        "slaytAdimSayisi": 63,
+        "cizimSayisi": 66,
+        "cikmisEslesme": 14
+      }
+    },
+    {
+      "surum": 3,
+      "tarih": "2026-10-25 02:54",
+      "neden": "İlk 2025-2026 arşiv üretimi ve Kurul 2 pipeline doğrulaması (56 sayfa tam kapsam, 18.5 dk sesli anlatım, 63 slayt Öğren destesi)",
+      "hatali_bilgiler": [
+        "Sıfır atlanan sayfa kuralı (1..56 tüm sayfalar işlendi), IASP 2020 ağrı tanımı, nosisepsiyonun 4 aşaması (transdüksiyon, transmisyon, modülasyon, persepsiyon), A-delta ve C lifleri farkı, kapı kontrol teorisi, neospinotalamik ve paleospinotalamik yollar ile çıkmış soru eşleşmeleri doğrulandı; s.44, s.49 ve s.52 çizim panolarındaki iç/alt taşma giderildi."
+      ],
+      "degisiklikler": [
+        "konusma_v2.json (54 paragraf, 56 sayfa tam kapsam), 1108 sn EMA GPU seslendirmesi, faster-whisper GPU kelime zamanlaması, 66 canlı çizim panosu (0 taşma), 63 slaytlık Öğren destesi (k2p-y25-k2-06-agri-yollari-ve-mekanizmalari) ve gömülü PDF içeren 5.49 MB .medspak paketi üretildi."
+      ],
+      "metrikler": {
+        "sureSn": 1108,
+        "sureDk": 18.5,
+        "sayfaSayisi": 56,
+        "atlananSayfa": 0,
+        "bolumSayisi": 14,
+        "paragrafSayisi": 54,
+        "cumleSayisi": 137,
+        "slaytAdimSayisi": 63,
+        "cizimSayisi": 64,
+        "cikmisEslesme": 14
+      }
+    },
+    {
+      "surum": 4,
+      "tarih": "2026-10-25 16:32",
+      "neden": "Sayfa 32 sempatik ağrı ve kozalji kapsamı eklendi",
+      "hatali_bilgiler": [
+        "İlk üretim kontrolü: H1–H55 hata defterindeki kısaltma okunuşu, sayfa atlama ve şık açıklama kusurları tarandı; 0 hata doğrulandı."
+      ],
+      "degisiklikler": [
+        "2025-2026 dönemi AĞRI 3.SINIF.pdf (56 sayfa) kaynağından 0 atlanan sayfa ile 55 paragraf / 140 cümlelik sesli anlatım üretildi.",
+        "63 adımlı etkileşimli Öğren destesi (11 model + ders sonu oyunları) ve 38 canlı çizim katmanı eklendi.",
+        "EMA Lightning GPU ile 18.8 dakikalık ses sentezlendi, cümle/kelime zamanlaması ve .medspak paketi doğrulandı."
+      ],
+      "metrikler": {
+        "sureSn": 1127,
+        "sureDk": 18.8,
+        "sayfaSayisi": 56,
+        "atlananSayfa": 0,
+        "bolumSayisi": 14,
+        "paragrafSayisi": 55,
+        "cumleSayisi": 140,
+        "slaytAdimSayisi": 63,
+        "cizimSayisi": 38,
+        "cikmisEslesme": 14
+      }
+    },
+    {
+      "surum": 5,
+      "tarih": "2026-10-25 18:55",
+      "neden": "56 sayfalık ağrı mekanizmaları dersinin 0 seyrek sayfa ile amfi derinliğinde genişletilmesi ve 15 çizimle yayını",
+      "hatali_bilgiler": [
+        "İlk üretim kontrolü: H1–H55 hata defterindeki kısaltma okunuşu, sayfa atlama ve şık açıklama kusurları tarandı; 0 hata doğrulandı."
+      ],
+      "degisiklikler": [
+        "2025-2026 dönemi AĞRI 3.SINIF.pdf (56 sayfa) kaynağından 0 atlanan sayfa ile 55 paragraf / 171 cümlelik sesli anlatım üretildi.",
+        "63 adımlı etkileşimli Öğren destesi (11 model + ders sonu oyunları) ve 10 canlı çizim katmanı eklendi.",
+        "EMA Lightning GPU ile 30.2 dakikalık ses sentezlendi, cümle/kelime zamanlaması ve .medspak paketi doğrulandı."
+      ],
+      "metrikler": {
+        "sureSn": 1811,
+        "sureDk": 30.2,
+        "sayfaSayisi": 56,
+        "atlananSayfa": 0,
+        "bolumSayisi": 14,
+        "paragrafSayisi": 55,
+        "cumleSayisi": 171,
+        "slaytAdimSayisi": 63,
+        "cizimSayisi": 10,
+        "cikmisEslesme": 14
+      }
+    },
+    {
+      "surum": 6,
+      "tarih": "2026-10-25 20:11",
+      "neden": "56 sayfanın tamamı 0 seyrek sayfa ile amfi derinliğinde zenginleştirildi ve 15 çizimle yayına alındı",
+      "hatali_bilgiler": [
+        "İlk üretim kontrolü: H1–H55 hata defterindeki kısaltma okunuşu, sayfa atlama ve şık açıklama kusurları tarandı; 0 hata doğrulandı."
+      ],
+      "degisiklikler": [
+        "2025-2026 dönemi AĞRI 3.SINIF.pdf (56 sayfa) kaynağından 0 atlanan sayfa ile 56 paragraf / 174 cümlelik sesli anlatım üretildi.",
+        "63 adımlı etkileşimli Öğren destesi (11 model + ders sonu oyunları) ve 10 canlı çizim katmanı eklendi.",
+        "EMA Lightning GPU ile 30.7 dakikalık ses sentezlendi, cümle/kelime zamanlaması ve .medspak paketi doğrulandı."
+      ],
+      "metrikler": {
+        "sureSn": 1841,
+        "sureDk": 30.7,
+        "sayfaSayisi": 56,
+        "atlananSayfa": 0,
+        "bolumSayisi": 14,
+        "paragrafSayisi": 56,
+        "cumleSayisi": 174,
+        "slaytAdimSayisi": 63,
+        "cizimSayisi": 10,
+        "cikmisEslesme": 14
+      }
+    },
+    {
+      "surum": 7,
+      "tarih": "2026-10-25 21:08",
+      "neden": "2025-2026 geçmiş yıl arşiv dersi ilk üretimi ve Kurul 2 tam otomatik hat kapı doğrulaması",
+      "hatali_bilgiler": [
+        "İlk üretim kontrolü: H1–H55 hata defterindeki kısaltma okunuşu, sayfa atlama ve şık açıklama kusurları tarandı; 0 hata doğrulandı."
+      ],
+      "degisiklikler": [
+        "2025-2026 dönemi AĞRI 3.SINIF.pdf (56 sayfa) kaynağından 0 atlanan sayfa ile 56 paragraf / 174 cümlelik sesli anlatım üretildi.",
+        "63 adımlı etkileşimli Öğren destesi (11 model + ders sonu oyunları) ve 10 canlı çizim katmanı eklendi.",
+        "EMA Lightning GPU ile 30.7 dakikalık ses sentezlendi, cümle/kelime zamanlaması ve .medspak paketi doğrulandı."
+      ],
+      "metrikler": {
+        "sureSn": 1841,
+        "sureDk": 30.7,
+        "sayfaSayisi": 56,
+        "atlananSayfa": 0,
+        "bolumSayisi": 14,
+        "paragrafSayisi": 56,
+        "cumleSayisi": 174,
+        "slaytAdimSayisi": 63,
+        "cizimSayisi": 10,
+        "cikmisEslesme": 14
+      }
+    }
+  ]
+}

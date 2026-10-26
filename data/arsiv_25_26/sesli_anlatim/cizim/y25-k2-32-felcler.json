@@ -1,0 +1,753 @@
+{
+ "surum": 1,
+ "metinHash": "25abbf3a21f6bb143bab2fcd5bad1b3f64c0d1c3",
+ "p": {
+  "1": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "karsilastirma",
+     "sablon_ad": "İki durumun karşılaştırması",
+     "duzen": "karsit",
+     "basliklar": [
+      "Özellik"
+     ],
+     "satirlar": [
+      [
+       "Kuvvet kaybı",
+       "Kısmi kuvvet kaybı",
+       "Tam güç kaybı"
+      ]
+     ],
+     "kutuplar": [
+      "Parezi",
+      "Paralizi"
+     ],
+     "s": 2,
+     "k": [
+      0,
+      29
+     ],
+     "tip": "karsit",
+     "konum": [
+      0.3,
+      0.09
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.236,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ]
+  },
+  "3": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Birinci motor nöron",
+      "İkinci motor nöron",
+      "Sinir kas bağlantısı",
+      "Çizgili kas"
+     ],
+     "baslik": "Motor Düzeyler",
+     "s": 4,
+     "k": [
+      0,
+      35
+     ],
+     "tip": "liste",
+     "konum": [
+      0.37,
+      0.39
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.363,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ]
+  },
+  "5": {
+   "0": [
+    {
+     "tur": "akis",
+     "a": [
+      0.186,
+      0.5
+     ],
+     "b": [
+      0.374,
+      0.5
+     ],
+     "iliski": "aktive",
+     "etiket": "Korteksten inen piramidal lifler",
+     "odak": [
+      0.15,
+      0.35,
+      0.45,
+      0.65
+     ],
+     "s": 6,
+     "k": [
+      0,
+      41
+     ],
+     "yol": [
+      [
+       0.186,
+       0.5
+      ],
+      [
+       0.374,
+       0.5
+      ]
+     ],
+     "rota": "kavis",
+     "etiket_konum": [
+      0.35,
+      0.44
+     ],
+     "etiket_genislik": 0.42,
+     "yakin": [
+      0.09,
+      0.29,
+      0.83,
+      0.71
+     ]
+    }
+   ],
+   "1": [
+    {
+     "tur": "akis",
+     "a": [
+      0.586,
+      0.5
+     ],
+     "b": [
+      0.774,
+      0.5
+     ],
+     "iliski": "aktive",
+     "etiket": "Bulbus piramisinde çaprazlaşma",
+     "odak": [
+      0.55,
+      0.35,
+      0.85,
+      0.65
+     ],
+     "s": 6,
+     "k": [
+      0,
+      39
+     ],
+     "yol": [
+      [
+       0.586,
+       0.5
+      ],
+      [
+       0.774,
+       0.5
+      ]
+     ],
+     "rota": "kavis",
+     "etiket_konum": [
+      0.55,
+      0.2997
+     ],
+     "etiket_genislik": 0.416,
+     "yakin": [
+      0.49,
+      0.2397,
+      1,
+      0.71
+     ]
+    }
+   ]
+  },
+  "9": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "karsilastirma",
+     "sablon_ad": "İki durumun karşılaştırması",
+     "duzen": "karsit",
+     "basliklar": [
+      "Özellik"
+     ],
+     "satirlar": [
+      [
+       "Zaaf dağılımı",
+       "Kollarda ekstansör",
+       "Bacaklarda fleksör"
+      ]
+     ],
+     "kutuplar": [
+      "Kollar",
+      "Bacaklar"
+     ],
+     "s": 10,
+     "k": [
+      0,
+      35
+     ],
+     "tip": "karsit",
+     "konum": [
+      0.56,
+      0.08
+     ],
+     "genislik": 0.42,
+     "doluluk": 0.0,
+     "kutu_h": 0.236,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ]
+  },
+  "10": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "karsilastirma",
+     "sablon_ad": "İki durumun karşılaştırması",
+     "duzen": "karsit",
+     "basliklar": [
+      "Özellik"
+     ],
+     "satirlar": [
+      [
+       "Kas tonusu",
+       "Spastisite ve çakı arazı",
+       "Gevşek flask felç"
+      ]
+     ],
+     "kutuplar": [
+      "Birinci Motor Nöron",
+      "İkinci Motor Nöron"
+     ],
+     "s": 11,
+     "k": [
+      0,
+      38
+     ],
+     "tip": "karsit",
+     "konum": [
+      0.28,
+      0.09
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.236,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ]
+  },
+  "12": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Babinski delilleri",
+      "Hoffmann delilleri",
+      "Klonus"
+     ],
+     "baslik": "Patolojik Bulgular",
+     "s": 13,
+     "k": [
+      0,
+      50
+     ],
+     "tip": "liste",
+     "konum": [
+      0.27,
+      0.5
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.308,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ]
+  },
+  "16": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "karsilastirma",
+     "sablon_ad": "İki durumun karşılaştırması",
+     "duzen": "karsit",
+     "basliklar": [
+      "Özellik"
+     ],
+     "satirlar": [
+      [
+       "Kas tonusu",
+       "Spastisite",
+       "Flask felç"
+      ],
+      [
+       "Refleksler",
+       "Patolojik refleks",
+       "Kayıp"
+      ],
+      [
+       "Kas erimesi",
+       "Erken dönemde yok",
+       "Belirgin kas atrofisi"
+      ]
+     ],
+     "kutuplar": [
+      "Birinci Motor Nöron",
+      "İkinci Motor Nöron"
+     ],
+     "s": 17,
+     "k": [
+      0,
+      37
+     ],
+     "tip": "karsit",
+     "konum": [
+      0.05,
+      0.97
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.31,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.2995,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "19": {
+   "0": [
+    {
+     "tur": "akis",
+     "a": [
+      0.4812533060709635,
+      0.13915534860116463
+     ],
+     "b": [
+      0.4812533060709635,
+      0.23950923326280382
+     ],
+     "iliski": "aktive",
+     "etiket": "Motor korteks ve homunkulus",
+     "odak": [
+      0.62,
+      0.15,
+      0.92,
+      0.38
+     ],
+     "s": 20,
+     "k": [
+      0,
+      49
+     ],
+     "yol": [
+      [
+       0.4813,
+       0.1392
+      ],
+      [
+       0.4813,
+       0.2395
+      ]
+     ],
+     "rota": "duz",
+     "kaynak_kutu": [
+      0.0901,
+      0.1412,
+      0.8724,
+      0.2375
+     ],
+     "hedef_kutu": [
+      0.0901,
+      0.1412,
+      0.8724,
+      0.2375
+     ],
+     "etiket_konum": [
+      0.62,
+      0.24
+     ],
+     "etiket_genislik": 0.378
+    }
+   ],
+   "1": [
+    {
+     "tur": "akis",
+     "a": [
+      0.656,
+      0.66
+     ],
+     "b": [
+      0.844,
+      0.66
+     ],
+     "iliski": "aktive",
+     "etiket": "Kortikal epileptojenik odak",
+     "odak": [
+      0.62,
+      0.44,
+      0.92,
+      0.88
+     ],
+     "s": 20,
+     "k": [
+      0,
+      46
+     ],
+     "yol": [
+      [
+       0.656,
+       0.66
+      ],
+      [
+       0.6677,
+       0.6666
+      ],
+      [
+       0.6795,
+       0.6723
+      ],
+      [
+       0.6913,
+       0.6772
+      ],
+      [
+       0.703,
+       0.6812
+      ],
+      [
+       0.7147,
+       0.6842
+      ],
+      [
+       0.7265,
+       0.6864
+      ],
+      [
+       0.7382,
+       0.6878
+      ],
+      [
+       0.75,
+       0.6882
+      ],
+      [
+       0.7618,
+       0.6878
+      ],
+      [
+       0.7735,
+       0.6864
+      ],
+      [
+       0.7853,
+       0.6842
+      ],
+      [
+       0.797,
+       0.6812
+      ],
+      [
+       0.8087,
+       0.6772
+      ],
+      [
+       0.8205,
+       0.6723
+      ],
+      [
+       0.8323,
+       0.6666
+      ],
+      [
+       0.844,
+       0.66
+      ]
+     ],
+     "rota": "kavis",
+     "etiket_konum": [
+      0.62,
+      0.47
+     ],
+     "etiket_genislik": 0.378
+    }
+   ]
+  },
+  "20": {
+   "0": [
+    {
+     "tur": "akis",
+     "a": [
+      0.30413280063205295,
+      0.7176311170789931
+     ],
+     "b": [
+      0.30413280063205295,
+      0.7627294085467303
+     ],
+     "iliski": "aktive",
+     "etiket": "Kapsüla interna kompakt lifler",
+     "odak": [
+      0.35,
+      0.58,
+      0.6,
+      0.95
+     ],
+     "s": 21,
+     "k": [
+      0,
+      38
+     ],
+     "yol": [
+      [
+       0.3041,
+       0.7176
+      ],
+      [
+       0.3041,
+       0.7627
+      ]
+     ],
+     "rota": "duz",
+     "kaynak_kutu": [
+      0.0991,
+      0.7196,
+      0.5091,
+      0.7607
+     ],
+     "hedef_kutu": [
+      0.0991,
+      0.7196,
+      0.5091,
+      0.7607
+     ],
+     "etiket_konum": [
+      0.58,
+      0.58
+     ],
+     "etiket_genislik": 0.416
+    }
+   ],
+   "1": [
+    {
+     "tur": "akis",
+     "a": [
+      0.626,
+      0.76
+     ],
+     "b": [
+      0.794,
+      0.76
+     ],
+     "iliski": "aktive",
+     "etiket": "Beyin sapında çapraz felç",
+     "odak": [
+      0.6,
+      0.58,
+      0.86,
+      0.95
+     ],
+     "s": 21,
+     "k": [
+      0,
+      41
+     ],
+     "yol": [
+      [
+       0.626,
+       0.76
+      ],
+      [
+       0.794,
+       0.76
+      ]
+     ],
+     "rota": "kavis",
+     "etiket_konum": [
+      0.56,
+      0.67
+     ],
+     "etiket_genislik": 0.353
+    }
+   ]
+  },
+  "22": {
+   "1": [
+    {
+     "tur": "akis",
+     "a": [
+      0.8178431939019097,
+      0.4884765766285084
+     ],
+     "b": [
+      0.88,
+      0.456
+     ],
+     "iliski": "aktive",
+     "etiket": "Karşı tarafta ağrı ve ısı kaybı",
+     "odak": [
+      0.72,
+      0.25,
+      0.92,
+      0.65
+     ],
+     "s": 23,
+     "k": [
+      0,
+      34
+     ],
+     "yol": [
+      [
+       0.8178,
+       0.4885
+      ],
+      [
+       0.88,
+       0.4885
+      ],
+      [
+       0.88,
+       0.456
+      ]
+     ],
+     "rota": "dirsek",
+     "kaynak_kutu": [
+      0.0991,
+      0.4679,
+      0.8158,
+      0.509
+     ],
+     "etiket_konum": [
+      0.54,
+      0.52
+     ],
+     "etiket_genislik": 0.42
+    }
+   ]
+  },
+  "25": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "İki yanlı lezyon",
+      "Yutma güçlüğü",
+      "Patolojik gülme ve ağlama"
+     ],
+     "baslik": "Psödobulber Bulgular",
+     "s": 26,
+     "k": [
+      0,
+      47
+     ],
+     "tip": "liste",
+     "konum": [
+      0.57,
+      0.02
+     ],
+     "genislik": 0.42,
+     "doluluk": 0.0,
+     "kutu_h": 0.308,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ]
+  },
+  "27": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "karsilastirma",
+     "sablon_ad": "İki durumun karşılaştırması",
+     "duzen": "karsit",
+     "basliklar": [
+      "Özellik"
+     ],
+     "satirlar": [
+      [
+       "Alın kasları",
+       "Üst yüz korunur",
+       "Tüm yüz yarısı felçli"
+      ]
+     ],
+     "kutuplar": [
+      "Santral Felç",
+      "Periferik Felç"
+     ],
+     "s": 28,
+     "k": [
+      0,
+      33
+     ],
+     "tip": "karsit",
+     "konum": [
+      0.39,
+      0.06
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.236,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ]
+  },
+  "31": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Miyastenia gravis",
+      "Kolay yorulma",
+      "Artan güçsüzlük"
+     ],
+     "baslik": "Nöromüsküler Kavşak",
+     "s": 32,
+     "k": [
+      0,
+      32
+     ],
+     "tip": "liste",
+     "konum": [
+      0.37,
+      0.63
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.308,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ]
+  }
+ },
+ "rapor": {
+  "aday": 17,
+  "gecti": 16,
+  "ret": {
+   "resim anlatılırken panel (H59)": 1
+  }
+ }
+}

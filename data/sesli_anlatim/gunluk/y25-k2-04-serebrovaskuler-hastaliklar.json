@@ -1,0 +1,85 @@
+{
+  "key": "y25-k2-04-serebrovaskuler-hastaliklar",
+  "donem": "2025-2026",
+  "kurul": 2,
+  "brans": "Tıbbi Patoloji",
+  "baslik": "Serebrovasküler Hastalıklar ve İnme",
+  "kayitlar": [
+    {
+      "surum": 1,
+      "tarih": "2026-10-25 02:30",
+      "neden": "Kurul 2 2025-2026 Arşivi İlk Üretim, Görsel/Makroskopik Doğrulama ve Çıkmış Soru Vurgusu",
+      "hatali_bilgiler": [
+        "PDF'teki 2 şekil sayfasında (sayfa 30 putamen/bazal ganglion masif hipertansif hemorajisi ve ventriküle açılma, sayfa 35 Willis poligonu sakküler anevrizma dağılım oranları: %40 ACom, %34 MCA, %20 ICA-PCom, %4 baziler) görsel inceleme yapılarak sayfa_haritasi.json ve konusma_v2.json içinde tüm detaylar açıklandı.",
+        "Veritabanındaki 14 çıkmış soru (nontravmatik SAK en sık nedeni sakküler anevrizma, gök gürültüsü baş ağrısı, OD polikistik böbrek hastalığı ve Berry anevrizması, serebral amiloid anjiyopati ve lober kanama, baziler arter fuziform aterosklerotik anevrizması, en sık vasküler malformasyon AVM, hipertansiyon risk faktörü) hem sesli ('bu bilgi çıkmışta soruldu / sınavda soruldu') hem ekran ('tur: cikmis') vurgularıyla işlendi."
+      ],
+      "degisiklikler": [
+        "49 sayfalık PDF eksiksiz işlendi (13 bölüm, 49 paragraf, 140 cümle, 2771 kelime); 0 atlanan sayfa ile tüm serebrovasküler patoloji mekanizmaları açıklandı.",
+        "28 canlı çizim komutu (H51 kuralına uygun olarak yalnızca metin sayfalarında) ve 20 adımlı Öğren destesi (80 etkileşim + 2 Checkpoint + Ders Sonu Oyunları) oluşturuldu.",
+        "EMA Lightning GPU seslendirme, cümle/kelime zamanlaması ve PDF gömülü .medspak paketi (meta.ekler=1) üretildi."
+      ],
+      "metrikler": {
+        "sureSn": 1215,
+        "sureDk": 20.2,
+        "sayfaSayisi": 49,
+        "atlananSayfa": 0,
+        "bolumSayisi": 13,
+        "paragrafSayisi": 49,
+        "cumleSayisi": 140,
+        "slaytAdimSayisi": 20,
+        "cizimSayisi": 28,
+        "cikmisEslesme": 27
+      }
+    },
+    {
+      "surum": 2,
+      "tarih": "2026-10-25 03:01",
+      "neden": "2025-2026 geçmiş yıl arşiv dersi ilk üretimi ve Kurul 2 tam otomatik hat kapı doğrulaması",
+      "hatali_bilgiler": [
+        "İlk üretim kontrolü: H1–H55 hata defterindeki kısaltma okunuşu, sayfa atlama ve şık açıklama kusurları tarandı; 0 hata doğrulandı."
+      ],
+      "degisiklikler": [
+        "2025-2026 dönemi 1. SBV Hastalıklar.pdf (49 sayfa) kaynağından 0 atlanan sayfa ile 49 paragraf / 140 cümlelik sesli anlatım üretildi.",
+        "20 adımlı etkileşimli Öğren destesi (11 model + ders sonu oyunları) ve 81 canlı çizim katmanı eklendi.",
+        "EMA Lightning GPU ile 20.2 dakikalık ses sentezlendi, cümle/kelime zamanlaması ve .medspak paketi doğrulandı."
+      ],
+      "metrikler": {
+        "sureSn": 1215,
+        "sureDk": 20.2,
+        "sayfaSayisi": 49,
+        "atlananSayfa": 0,
+        "bolumSayisi": 13,
+        "paragrafSayisi": 49,
+        "cumleSayisi": 140,
+        "slaytAdimSayisi": 20,
+        "cizimSayisi": 81,
+        "cikmisEslesme": 27
+      }
+    },
+    {
+      "surum": 3,
+      "tarih": "2026-10-25 19:42",
+      "neden": "49 sayfalık serebrovasküler hastalıklar dersinin 0 seyrek sayfa ile amfi derinliğinde genişletilmesi ve yayını",
+      "hatali_bilgiler": [
+        "İlk üretim kontrolü: H1–H55 hata defterindeki kısaltma okunuşu, sayfa atlama ve şık açıklama kusurları tarandı; 0 hata doğrulandı."
+      ],
+      "degisiklikler": [
+        "2025-2026 dönemi 1. SBV Hastalıklar.pdf (49 sayfa) kaynağından 0 atlanan sayfa ile 49 paragraf / 142 cümlelik sesli anlatım üretildi.",
+        "20 adımlı etkileşimli Öğren destesi (11 model + ders sonu oyunları) ve 81 canlı çizim katmanı eklendi.",
+        "EMA Lightning GPU ile 20.6 dakikalık ses sentezlendi, cümle/kelime zamanlaması ve .medspak paketi doğrulandı."
+      ],
+      "metrikler": {
+        "sureSn": 1236,
+        "sureDk": 20.6,
+        "sayfaSayisi": 49,
+        "atlananSayfa": 0,
+        "bolumSayisi": 13,
+        "paragrafSayisi": 49,
+        "cumleSayisi": 142,
+        "slaytAdimSayisi": 20,
+        "cizimSayisi": 81,
+        "cikmisEslesme": 27
+      }
+    }
+  ]
+}

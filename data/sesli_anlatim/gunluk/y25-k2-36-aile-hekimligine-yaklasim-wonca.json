@@ -1,0 +1,34 @@
+{
+  "key": "y25-k2-36-aile-hekimligine-yaklasim-wonca",
+  "donem": "2025-2026",
+  "kurul": 2,
+  "brans": "Aile Hekimliği",
+  "baslik": "Aile Hekimliğine Yaklaşım (WONCA Ağacı)",
+  "kayitlar": [
+    {
+      "surum": 1,
+      "tarih": "2026-10-26 05:20",
+      "neden": "2025-2026 geçmiş yıl arşiv dersi ilk üretimi ve Kurul 2 tam otomatik hat kapı doğrulaması",
+      "hatali_bilgiler": [
+        "İlk üretim kontrolü: H1–H55 hata defterindeki kısaltma okunuşu, sayfa atlama ve şık açıklama kusurları tarandı; 0 hata doğrulandı."
+      ],
+      "degisiklikler": [
+        "2025-2026 dönemi WONCA Ağacı 12.11.2024.pdf (33 sayfa) kaynağından 0 atlanan sayfa ile 32 paragraf / 64 cümlelik sesli anlatım üretildi.",
+        "18 adımlı etkileşimli Öğren destesi (11 model + ders sonu oyunları) ve 1 canlı çizim katmanı eklendi.",
+        "EMA Lightning GPU ile 6.9 dakikalık ses sentezlendi, cümle/kelime zamanlaması ve .medspak paketi doğrulandı."
+      ],
+      "metrikler": {
+        "sureSn": 415,
+        "sureDk": 6.9,
+        "sayfaSayisi": 33,
+        "atlananSayfa": 0,
+        "bolumSayisi": 6,
+        "paragrafSayisi": 32,
+        "cumleSayisi": 64,
+        "slaytAdimSayisi": 18,
+        "cizimSayisi": 1,
+        "cikmisEslesme": 13
+      }
+    }
+  ]
+}

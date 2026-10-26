@@ -1,0 +1,1081 @@
+{
+ "surum": 1,
+ "metinHash": "89a9ec83eb2d96138d0fd4f96588a1507b016a8e",
+ "p": {
+  "0": {
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "mekanizma_adimlari",
+     "sablon_ad": "Mekanizma basamakları",
+     "duzen": "zincir",
+     "ogeler": [
+      "aile-çocuk etkileşimi",
+      "ailenin cinselliğe verdiği değer ve tepki",
+      "cinsel işlev bozukluklarına yatkınlık"
+     ],
+     "s": 2,
+     "k": [
+      30,
+      274
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.17,
+      0.81
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.35,
+     "yon": "dikey",
+     "olcek": 1.0,
+     "ek_alt": 0.1796,
+     "ek_renk": "#e7e7e9"
+    }
+   ]
+  },
+  "3": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "karsilastirma",
+     "sablon_ad": "İki durumun karşılaştırması",
+     "duzen": "karsit",
+     "basliklar": [
+      "Özellik"
+     ],
+     "satirlar": [
+      [
+       "Anlattığı",
+       "kim olduğum",
+       "kime çekim duyduğum"
+      ]
+     ],
+     "kutuplar": [
+      "Cinsiyet kimliği",
+      "Cinsel yönelim"
+     ],
+     "s": 5,
+     "k": [
+      128,
+      191
+     ],
+     "tip": "karsit",
+     "konum": [
+      0.6,
+      0.02
+     ],
+     "genislik": 0.34,
+     "doluluk": 0.0,
+     "kutu_h": 0.276,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ],
+   "5": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "heteroseksüel: karşı cinsiyete ilgi",
+      "homoseksüel: kendi cinsiyetine ilgi",
+      "biseksüel: her iki cinsiyete ilgi"
+     ],
+     "baslik": "Cinsel yönelim (hiçbiri bozukluk değildir)",
+     "s": 5,
+     "k": [
+      15,
+      49
+     ],
+     "tip": "liste",
+     "konum": [
+      0.14,
+      0.83
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.308,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.158,
+     "ek_renk": "#e7e7e9"
+    }
+   ]
+  },
+  "4": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "mekanizma_adimlari",
+     "sablon_ad": "Mekanizma basamakları",
+     "duzen": "zincir",
+     "ogeler": [
+      "yaygın olan heteroseksüalite normal kabul edilir",
+      "homoseksüel ve biseksüel yönelimler azınlıkta kalır",
+      "kişide kaygı"
+     ],
+     "s": 6,
+     "k": [
+      0,
+      135
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.03,
+      1.015
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.35,
+     "yon": "dikey",
+     "olcek": 1.0,
+     "ek_alt": 0.3846,
+     "ek_renk": "#e7e7e9"
+    }
+   ]
+  },
+  "5": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "karsilastirma",
+     "sablon_ad": "İki durumun karşılaştırması",
+     "duzen": "karsit",
+     "basliklar": [
+      "Özellik"
+     ],
+     "satirlar": [
+      [
+       "Hedef",
+       "yönelimi değiştirmek",
+       "kişinin kendisiyle barışması"
+      ],
+      [
+       "Durum",
+       "yöntemi yok, etik değil",
+       "gerekebilir"
+      ]
+     ],
+     "kutuplar": [
+      "Yönelimi değiştirme girişimi",
+      "Psikoterapötik yardım"
+     ],
+     "s": 7,
+     "k": [
+      94,
+      223
+     ],
+     "tip": "karsit",
+     "konum": [
+      0.12,
+      0.72
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.333,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.0726,
+     "ek_renk": "#e7e7e9"
+    }
+   ]
+  },
+  "6": {
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "bulgu_dusundurur",
+     "sablon_ad": "Bulgu → düşündürdüğü tanı",
+     "duzen": "tablo",
+     "basliklar": [
+      "Bulgu",
+      "Düşündürdüğü"
+     ],
+     "satirlar": [
+      [
+       "Doğuştan anatomik özellikleri kabul etmeme",
+       "Cinsel kimlik bozukluğu"
+      ],
+      [
+       "Kendi cinsiyetinin kıyafetlerine iğrenme",
+       "Cinsel kimlik bozukluğu (vaka ipucu)"
+      ]
+     ],
+     "s": 8,
+     "k": [
+      0,
+      214
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.16,
+      0.85
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.333,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.2026,
+     "ek_renk": "#e7e7e9"
+    }
+   ]
+  },
+  "8": {
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Tam fiziksel muayene",
+      "Laboratuvar incelemesi",
+      "Olumsuz etkiler hakkında bilgilendirme"
+     ],
+     "baslik": "Hormon tedavisi öncesi",
+     "s": 10,
+     "k": [
+      0,
+      139
+     ],
+     "tip": "liste",
+     "konum": [
+      0.14,
+      0.75
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.308,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.078,
+     "ek_renk": "#e7e7e9"
+    }
+   ]
+  },
+  "10": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Tutumlar",
+      "Davranışlar",
+      "Beklentiler",
+      "Sorumluluklar"
+     ],
+     "baslik": "Toplumsal cinsiyet rolleri",
+     "s": 12,
+     "k": [
+      0,
+      138
+     ],
+     "tip": "liste",
+     "konum": [
+      0.03,
+      1.015
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.363,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.3984,
+     "ek_renk": "#e7e7e9"
+    }
+   ]
+  },
+  "11": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Uyarılma",
+      "Plato",
+      "Orgazm",
+      "Çözülme"
+     ],
+     "baslik": "Cinsel yanıt döngüsü (Masters-Johnson)",
+     "numarali": true,
+     "s": 13,
+     "k": [
+      12,
+      94
+     ],
+     "tip": "liste",
+     "konum": [
+      0.52,
+      0.59
+     ],
+     "genislik": 0.42,
+     "doluluk": 0.0,
+     "kutu_h": 0.363,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ]
+  },
+  "12": {
+   "1": [
+    {
+     "tur": "akis",
+     "a": [
+      0.36,
+      0.589
+     ],
+     "b": [
+      0.5114583435058594,
+      0.5623413368507668
+     ],
+     "iliski": "aktive",
+     "etiket": "uyarılma ↔ orgazm karşılıklı",
+     "s": 14,
+     "k": [
+      0,
+      69
+     ],
+     "yol": [
+      [
+       0.36,
+       0.589
+      ],
+      [
+       0.36,
+       0.5623
+      ],
+      [
+       0.5115,
+       0.5623
+      ]
+     ],
+     "rota": "dirsek",
+     "hedef_kutu": [
+      0.5135,
+      0.528,
+      0.6724,
+      0.5967
+     ],
+     "etiket_konum": [
+      0.36,
+      0.679
+     ],
+     "etiket_genislik": 0.391,
+     "etiket_hedef": [
+      0.5555,
+      0.5967
+     ],
+     "etiket_boy": 0.0443,
+     "yakin": [
+      0.3,
+      0.468,
+      0.811,
+      0.7833
+     ]
+    }
+   ]
+  },
+  "13": {
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "karsilastirma",
+     "sablon_ad": "İki durumun karşılaştırması",
+     "duzen": "karsit",
+     "basliklar": [
+      "Özellik"
+     ],
+     "satirlar": [
+      [
+       "Kapsam",
+       "Vajinal lubrikasyon, penil ereksiyon",
+       "Refleks klonik kas kontraksiyonları"
+      ],
+      [
+       "Masters-Johnson karşılığı",
+       "Uyarılma ve plato evreleri",
+       "Orgazm"
+      ],
+      [
+       "İnervasyon",
+       "Parasempatik",
+       "Sempatik"
+      ]
+     ],
+     "kutuplar": [
+      "Genital vazokonjesyon",
+      "Kontraksiyon aşaması"
+     ],
+     "s": 15,
+     "k": [
+      0,
+      172
+     ],
+     "tip": "karsit",
+     "konum": [
+      0.15,
+      0.9
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.43,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.3497,
+     "ek_renk": "#e7e7e9"
+    }
+   ]
+  },
+  "14": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "cok_neden_tek_sonuc",
+     "sablon_ad": "Birçok neden → tek sonuç",
+     "duzen": "grup",
+     "bag": "neden olur",
+     "kaynaklar": [
+      "İstek evresinde aksama",
+      "Uyarılma evresinde aksama",
+      "Orgazm evresinde aksama"
+     ],
+     "sonuc": "Cinsel işlev bozukluğu",
+     "s": 16,
+     "k": [
+      61,
+      173
+     ],
+     "tip": "grup",
+     "konum": [
+      0.03,
+      1.015
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.263,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.2983,
+     "ek_renk": "#e7e7e9"
+    }
+   ]
+  },
+  "18": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Performans anksiyetesi",
+      "İlişkide yaşanan sorunlar, cinsel mitler",
+      "Çekicilik kaybı, zayıf iletişim",
+      "Suçluluk duyguları",
+      "Psikiyatrik ve bedensel hastalıklar",
+      "İlaç yan etkisi, alkol ve madde",
+      "Yakın ilişkiye girme korkusu",
+      "Kısıtlı önsevişme"
+     ],
+     "baslik": "Sürdürücü etkenler",
+     "s": 20,
+     "k": [
+      0,
+      305
+     ],
+     "tip": "liste",
+     "konum": [
+      0.03,
+      1.015
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.585,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.6202,
+     "ek_renk": "#e7e7e9"
+    }
+   ],
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "karsilastirma",
+     "sablon_ad": "İki durumun karşılaştırması",
+     "duzen": "karsit",
+     "basliklar": [
+      "Özellik"
+     ],
+     "satirlar": [
+      [
+       "Performans",
+       "performans beklentisi",
+       "performans anksiyetesi"
+      ],
+      [
+       "Psikiyatrik / bedensel hastalık",
+       "listede var",
+       "listede var"
+      ],
+      [
+       "İlaç, alkol ve madde",
+       "listede var",
+       "listede var"
+      ]
+     ],
+     "kutuplar": [
+      "Başlatıcı",
+      "Sürdürücü"
+     ],
+     "s": 20,
+     "k": [
+      15,
+      204
+     ],
+     "tip": "karsit",
+     "konum": [
+      0.03,
+      1.015
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.35,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.3846,
+     "ek_renk": "#e7e7e9"
+    }
+   ]
+  },
+  "19": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "karsilastirma",
+     "sablon_ad": "İki durumun karşılaştırması",
+     "duzen": "karsit",
+     "basliklar": [
+      "Özellik"
+     ],
+     "satirlar": [
+      [
+       "Başlangıç",
+       "yavaş seyir",
+       "akut"
+      ],
+      [
+       "Koşullar",
+       "yaygın",
+       "durumsal"
+      ],
+      [
+       "Gelişim",
+       "sabit",
+       "değişken"
+      ]
+     ],
+     "kutuplar": [
+      "Organik",
+      "Psikojenik"
+     ],
+     "s": 21,
+     "k": [
+      9,
+      202
+     ],
+     "tip": "karsit",
+     "konum": [
+      0.03,
+      1.015
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.31,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.3445,
+     "ek_renk": "#e7e7e9"
+    }
+   ],
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "bulgu_dusundurur",
+     "sablon_ad": "Bulgu → düşündürdüğü tanı",
+     "duzen": "tablo",
+     "basliklar": [
+      "Bulgu",
+      "Düşündürdüğü"
+     ],
+     "satirlar": [
+      [
+       "Koit dışı / sabah ereksiyonu korunuyor",
+       "psikojenik neden"
+      ],
+      [
+       "Koit dışı ereksiyon yetersiz",
+       "organik neden"
+      ]
+     ],
+     "s": 21,
+     "k": [
+      0,
+      133
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.03,
+      1.015
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.253,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.2876,
+     "ek_renk": "#e7e7e9"
+    }
+   ],
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "karsilastirma",
+     "sablon_ad": "İki durumun karşılaştırması",
+     "duzen": "karsit",
+     "basliklar": [
+      "Özellik"
+     ],
+     "satirlar": [
+      [
+       "Psikoseksüel sorunlar",
+       "sekonder",
+       "primer"
+      ],
+      [
+       "Partner sorunları",
+       "sekonder",
+       "primer"
+      ],
+      [
+       "Anksiyete ya da korku",
+       "sekonder",
+       "primer"
+      ]
+     ],
+     "kutuplar": [
+      "Organik",
+      "Psikojenik"
+     ],
+     "s": 21,
+     "k": [
+      0,
+      131
+     ],
+     "tip": "karsit",
+     "konum": [
+      0.03,
+      1.015
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.31,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.3445,
+     "ek_renk": "#e7e7e9"
+    }
+   ],
+   "3": [
+    {
+     "tur": "sema",
+     "sablon": "tani_tetkik",
+     "sablon_ad": "Durum → bakılacak tetkik",
+     "duzen": "tablo",
+     "basliklar": [
+      "Durum / şüphe",
+      "Bakılacak tetkik"
+     ],
+     "satirlar": [
+      [
+       "Cinsel işlev bozukluğu: organik neden dışlanacak",
+       "tıbbi durum ve kullanılan ilaçlar"
+      ]
+     ],
+     "s": 21,
+     "k": [
+      28,
+      146
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.03,
+      1.015
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.236,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.2706,
+     "ek_renk": "#e7e7e9"
+    }
+   ]
+  },
+  "20": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Alışılmadık nesne, eylem veya durum",
+      "Tekrarlayıcı ve yoğun dürtü, fantezi, davranış",
+      "Uyarılma ve orgazm için zorunlu"
+     ],
+     "baslik": "Parafili",
+     "s": 22,
+     "k": [
+      0,
+      206
+     ],
+     "tip": "liste",
+     "konum": [
+      0.36,
+      0.66
+     ],
+     "genislik": 0.6,
+     "doluluk": 0.0,
+     "kutu_h": 0.308,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ],
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "karar",
+     "sablon_ad": "Karar dalı",
+     "duzen": "dal",
+     "soru": "Alışılmadık fantezi",
+     "dallar": [
+      [
+       "tekrarlayıcı, yoğun ve zorunlu",
+       "parafili"
+      ],
+      [
+       "bu özellikler yoksa",
+       "cinsel davranış varyasyonu"
+      ]
+     ],
+     "s": 22,
+     "k": [
+      20,
+      167
+     ],
+     "tip": "dal",
+     "konum": [
+      0.03,
+      1.015
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.274,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.3091,
+     "ek_renk": "#e7e7e9"
+    }
+   ]
+  },
+  "21": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "karsilastirma",
+     "sablon_ad": "İki durumun karşılaştırması",
+     "duzen": "karsit",
+     "basliklar": [
+      "Özellik"
+     ],
+     "satirlar": [
+      [
+       "Diğer adı",
+       "teşhircilik, göstermecilik",
+       "gözetlemecilik"
+      ],
+      [
+       "Eylem",
+       "genitalini beklemeyen yabancıya gösterme",
+       "başkalarını gizlice gözetleme"
+      ]
+     ],
+     "kutuplar": [
+      "Egzibisyonizm",
+      "Voyörizm"
+     ],
+     "s": 23,
+     "k": [
+      0,
+      259
+     ],
+     "tip": "karsit",
+     "konum": [
+      0.13,
+      0.92
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.373,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.3127,
+     "ek_renk": "#e7e7e9"
+    }
+   ],
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "karsilastirma",
+     "sablon_ad": "İki durumun karşılaştırması",
+     "duzen": "karsit",
+     "basliklar": [
+      "Özellik"
+     ],
+     "satirlar": [
+      [
+       "Doyum kaynağı",
+       "simgesel çekicilik kazanmış nesne",
+       "rızası olmayan kişiye dokunma, sürtünme"
+      ]
+     ],
+     "kutuplar": [
+      "Fetişizm",
+      "Frottörizm"
+     ],
+     "s": 23,
+     "k": [
+      0,
+      237
+     ],
+     "tip": "karsit",
+     "konum": [
+      0.13,
+      0.92
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.276,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.2157,
+     "ek_renk": "#e7e7e9"
+    }
+   ],
+   "4": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Zoofili: hayvanlar",
+      "Nekrofili: cesetler",
+      "Ürofili: idrar",
+      "Koprofili: gaita",
+      "Klizmafili: lavman"
+     ],
+     "baslik": "Diğer parafililer",
+     "s": 23,
+     "k": [
+      0,
+      152
+     ],
+     "tip": "liste",
+     "konum": [
+      0.13,
+      0.92
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.419,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.3589,
+     "ek_renk": "#e7e7e9"
+    }
+   ]
+  },
+  "22": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "mekanizma_adimlari",
+     "sablon_ad": "Mekanizma basamakları",
+     "duzen": "zincir",
+     "ogeler": [
+      "Parafilik davranış haz verici",
+      "Değişim isteği zayıf",
+      "Tedavi zor"
+     ],
+     "s": 24,
+     "k": [
+      0,
+      145
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.16,
+      0.74
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.35,
+     "yon": "dikey",
+     "olcek": 1.0,
+     "ek_alt": 0.1096,
+     "ek_renk": "#e7e7e9"
+    }
+   ],
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "cok_neden_tek_sonuc",
+     "sablon_ad": "Birçok neden → tek sonuç",
+     "duzen": "grup",
+     "bag": "neden olur",
+     "kaynaklar": [
+      "Eşlik eden kişilik bozukluğu",
+      "Komorbid durumlar"
+     ],
+     "sonuc": "Tedavi daha da zor",
+     "s": 24,
+     "k": [
+      0,
+      105
+     ],
+     "tip": "grup",
+     "konum": [
+      0.15,
+      0.74
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.246,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ]
+  },
+  "23": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Bilişsel davranışçı tedaviler, grup terapileri",
+      "Cinsel dürtüleri azaltıcı ilaçlar",
+      "Dinamik / psikanalitik psikoterapi",
+      "Komorbid durumların tedavisi"
+     ],
+     "baslik": "Temel tedavi yaklaşımları",
+     "s": 25,
+     "k": [
+      0,
+      198
+     ],
+     "tip": "liste",
+     "konum": [
+      0.03,
+      1.015
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.363,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.3984,
+     "ek_renk": "#e7e7e9"
+    }
+   ]
+  }
+ },
+ "rapor": {
+  "aday": 33,
+  "gecti": 26,
+  "ret": {
+   "panel metni 'İlgili olduğu' henüz anlatılmamış terim içeriyo": 1,
+   "panel metni 'Ek psikiyatrik bozukluk varsa ' henüz anlatılma": 1,
+   "panel metni 'Öneren hekimin tanıma süresi' henüz anlatılmamı": 1,
+   "a/b noktası geçersiz": 1,
+   "panel metni 'Örnek' henüz anlatılmamış terim içeriyor (ileri": 1,
+   "panel metni 'Istırabı çeken' henüz anlatılmamış terim içeriy": 1,
+   "panel metni 'Doğru yaklaşım' henüz anlatılmamış terim içeriy": 1
+  },
+  "ret_ayrinti": [
+   {
+    "cumle": "P2.C0",
+    "sayfa": 4,
+    "tur": "sema",
+    "neden": "panel metni 'İlgili olduğu' henüz anlatılmamış terim içeriyor (ileri sızıntı)",
+    "komut": {}
+   },
+   {
+    "cumle": "P7.C2",
+    "sayfa": 9,
+    "tur": "sema",
+    "neden": "panel metni 'Ek psikiyatrik bozukluk varsa ' henüz anlatılmamış terim içeriyor (ileri sızıntı)",
+    "komut": {}
+   },
+   {
+    "cumle": "P9.C2",
+    "sayfa": 11,
+    "tur": "sema",
+    "neden": "panel metni 'Öneren hekimin tanıma süresi' henüz anlatılmamış terim içeriyor (ileri sızıntı)",
+    "komut": {}
+   },
+   {
+    "cumle": "P12.C0",
+    "sayfa": 14,
+    "tur": "akis",
+    "neden": "a/b noktası geçersiz",
+    "komut": {
+     "a": [
+      0.5,
+      0.36
+     ]
+    }
+   },
+   {
+    "cumle": "P17.C0",
+    "sayfa": 19,
+    "tur": "sema",
+    "neden": "panel metni 'Örnek' henüz anlatılmamış terim içeriyor (ileri sızıntı)",
+    "komut": {}
+   },
+   {
+    "cumle": "P21.C3",
+    "sayfa": 23,
+    "tur": "sema",
+    "neden": "panel metni 'Istırabı çeken' henüz anlatılmamış terim içeriyor (ileri sızıntı)",
+    "komut": {}
+   },
+   {
+    "cumle": "P22.C2",
+    "sayfa": 24,
+    "tur": "sema",
+    "neden": "panel metni 'Doğru yaklaşım' henüz anlatılmamış terim içeriyor (ileri sızıntı)",
+    "komut": {}
+   }
+  ]
+ }
+}

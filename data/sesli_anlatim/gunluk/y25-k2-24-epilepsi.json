@@ -1,0 +1,34 @@
+{
+  "key": "y25-k2-24-epilepsi",
+  "donem": "2025-2026",
+  "kurul": 2,
+  "brans": "Nöroloji",
+  "baslik": "Epilepsi",
+  "kayitlar": [
+    {
+      "surum": 1,
+      "tarih": "2026-10-26 01:38",
+      "neden": "2025-2026 geçmiş yıl arşiv dersi ilk üretimi ve Kurul 2 tam otomatik hat kapı doğrulaması",
+      "hatali_bilgiler": [
+        "İlk üretim kontrolü: H1–H55 hata defterindeki kısaltma okunuşu, sayfa atlama ve şık açıklama kusurları tarandı; 0 hata doğrulandı."
+      ],
+      "degisiklikler": [
+        "2025-2026 dönemi 8. Epilepsi.pdf (51 sayfa) kaynağından 0 atlanan sayfa ile 48 paragraf / 141 cümlelik sesli anlatım üretildi.",
+        "68 adımlı etkileşimli Öğren destesi (11 model + ders sonu oyunları) ve 73 canlı çizim katmanı eklendi.",
+        "EMA Lightning GPU ile 26.5 dakikalık ses sentezlendi, cümle/kelime zamanlaması ve .medspak paketi doğrulandı."
+      ],
+      "metrikler": {
+        "sureSn": 1590,
+        "sureDk": 26.5,
+        "sayfaSayisi": 51,
+        "atlananSayfa": 0,
+        "bolumSayisi": 13,
+        "paragrafSayisi": 48,
+        "cumleSayisi": 141,
+        "slaytAdimSayisi": 68,
+        "cizimSayisi": 73,
+        "cikmisEslesme": 22
+      }
+    }
+  ]
+}

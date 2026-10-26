@@ -1,0 +1,2000 @@
+{
+ "id": "k2p-y25-k2-38-travma-ve-stres-baglantili-bozukluklar",
+ "deckId": "k2p-y25-k2-38-travma-ve-stres-baglantili-bozukluklar",
+ "title": "Travma ve Stres Bağlantılı Bozukluklar",
+ "discipline": "Psikiyatri",
+ "committee": "donem3-kurul2",
+ "donem": "2025-2026",
+ "arsiv": true,
+ "confidence": "high",
+ "sayfaHaritasi": "teyitli",
+ "totalSlides": 18,
+ "slides": [
+  {
+   "slideNumber": 1,
+   "title": "Travma ve Stres Bağlantılı Bozukluklar Sınıflaması",
+   "bolum": 1,
+   "pdfSayfalari": [
+    2,
+    3
+   ],
+   "sourcePdf": {
+    "name": "y25-k2-38-travma-ve-stres-baglantili-bozukluklar.pdf",
+    "startPage": 2,
+    "endPage": 3
+   },
+   "content": "Travma ve Stres Bağlantılı Bozukluklar, DSM-5 sınıflamasıyla anksiyete bozukluklarından ayrılarak bağımsız bir tanı kategorisi haline getirilmiştir.\n\n- **Bağımsız Kategori:** Bu kümede Travma Sonrası Stres Bozukluğu (TSSB), Akut Stres Bozukluğu, Uyum Bozuklukları, Tepkisel Bağlanma Bozukluğu ve Sınırsız Toplumsal Katılım Bozukluğu yer alır.\n- **TSSB Tanımı:** Kişinin gerçek bir ölüm, ölüm tehdidi, ağır yaralanma ya da fiziksel bütünlüğüne yönelik ağır bir tehdit yaşaması veya tanık olması sonucu gelişir.\n- **Süre Eşiği:** TSSB tanısı için belirtilerin en az bir aydan uzun sürmesi şarttır (3 aydan uzunu kronik TSSB'dir). Akut stres bozukluğu ise travma sonrası ilk 4 haftada başlar ve 3 gün ile 4 hafta arasında sınırlı kalır.\n\n> [!IMPORTANT]\n> Belirtilerin travma sonrası 1 ayı aşması tablonun Akut Stres Bozukluğundan Travma Sonrası Stres Bozukluğuna (TSSB) evrildiğini gösteren en kritik tanısal sınırdır.",
+   "interactiveElements": [
+    {
+     "id": "k38-s1-q1",
+     "type": "micro_quiz",
+     "question": "DSM-5 sınıflamasına göre TSSB ve Akut Stres Bozukluğu arasındaki temel ayırıcı süre ölçütü hangisidir?",
+     "options": [
+      {
+       "text": "Akut Stres Bozukluğu 3 gün ile 4 hafta sürer; belirtiler bir ayı aştığında TSSB tanısı konur.",
+       "isCorrect": true,
+       "explanation": "Akut Stres Bozukluğu 3 gün ile 4 hafta sürer; belirtiler bir ayı aştığında TSSB tanısı konur, travma ve stres bağlantılı bozukluklar kılavuzlarındaki tanısal ve klinik ilkelerle tam bir uyum içindedir. Bu yaklaşım psikiyatride kanıta dayalı hasta yönetiminin temel referansıdır."
+      },
+      {
+       "text": "Akut Stres Bozukluğu en az iki yıl sürerken TSSB yalnızca ilk yarım saatte sonlanır.",
+       "isCorrect": false,
+       "explanation": "Şıkta sözü edilen akut stres bozukluğu en az iki yıl sürerken tssb yalnızca ilk yarım saatte sonlanır kavramı, farklı bir psikiyatrik sendromun veya başka bir basamağın özelliklerini yansıtır. Bu soruda hedeflenen klinik ilkelerle ve patofizyolojik dinamiklerle doğrudan örtüşmemektedir."
+      },
+      {
+       "text": "TSSB yalnızca çocuklukta başlar; Akut Stres Bozukluğu ise sadece geriatrik yaşta görülür.",
+       "isCorrect": false,
+       "explanation": "Şıkta sözü edilen tssb yalnızca çocuklukta başlar; akut stres bozukluğu ise sadece geriatrik yaşta görülür kavramı, farklı bir psikiyatrik sendromun veya başka bir basamağın özelliklerini yansıtır. Bu soruda hedeflenen klinik ilkelerle ve patofizyolojik dinamiklerle doğrudan örtüşmemektedir."
+      },
+      {
+       "text": "Akut Stres Bozukluğunda kafa kemik kırığı şartken TSSB'de yalnızca ekonomik kriz yeterlidir.",
+       "isCorrect": false,
+       "explanation": "Şıkta sözü edilen akut stres bozukluğunda kafa kemik kırığı şartken tssb'de yalnızca ekonomik kriz yeterlidir kavramı, farklı bir psikiyatrik sendromun veya başka bir basamağın özelliklerini yansıtır. Bu soruda hedeflenen klinik ilkelerle ve patofizyolojik dinamiklerle doğrudan örtüşmemektedir."
+      }
+     ]
+    },
+    {
+     "id": "k38-s1-c1",
+     "type": "cloze_masking",
+     "sentence": "TSSB klinik tanısının kesinleşebilmesi için travma sonrası belirtilerin en az bir aydan uzun sürmesi zorunludur.",
+     "maskedTerm": "bir aydan",
+     "hint": "Otuz günlük asgari tanısal süre barajı."
+    },
+    {
+     "id": "k38-s1-t1",
+     "type": "interactive_table",
+     "title": "Travma Spektrumu Süre Ölçütleri Tablosu",
+     "tableHeaders": [
+      "Klinik Tablo",
+      "Başlangıç Penceresi",
+      "Belirti Süresi"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Akut Stres Bozukluğu",
+         "isMasked": false
+        },
+        {
+         "text": "İlk dört hafta içinde",
+         "isMasked": true,
+         "hint": "Olayın hemen sonrasındaki bir aylık erken aralık."
+        },
+        {
+         "text": "Üç gün ile dört hafta arası",
+         "isMasked": false
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "TSSB",
+         "isMasked": false
+        },
+        {
+         "text": "Travmadan hemen sonra veya gecikmiş",
+         "isMasked": true,
+         "hint": "Vakaların başlangıç zamanlamasındaki esneklik."
+        },
+        {
+         "text": "En az bir aydan uzun",
+         "isMasked": false
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k38-s1-l1",
+     "type": "spot_the_lie",
+     "topic": "Travma Spektrumu Tanı İlkeleri",
+     "items": [
+      {
+       "text": "TSSB ve Uyum Bozuklukları DSM-5'te bağımsız bir kategori altında toplanmıştır.",
+       "isLie": false,
+       "explanation": "Bu iki tablo anksiyete bozukluklarından çıkarılarak bağımsız kümede sınıflanmıştır."
+      },
+      {
+       "text": "Üç aydan daha uzun süren TSSB vakaları kronik TSSB olarak adlandırılır.",
+       "isLie": false,
+       "explanation": "Kılavuzlar üç ayı aşan klinik tabloları kronik gidişat olarak nitelendirir."
+      },
+      {
+       "text": "Akut Stres Bozukluğu tanısı için travma belirtilerinin en az bir yıl sürmesi şarttır.",
+       "isLie": true,
+       "explanation": "Akut stres tablosu 3 gün ile en fazla 4 hafta arasında sürer; 1 ayı aşarsa tanı TSSB olur."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slideNumber": 2,
+   "title": "Travmatojenite Gücü ve Öznel Anlam",
+   "bolum": 1,
+   "pdfSayfalari": [
+    4,
+    5
+   ],
+   "sourcePdf": {
+    "name": "y25-k2-38-travma-ve-stres-baglantili-bozukluklar.pdf",
+    "startPage": 4,
+    "endPage": 5
+   },
+   "content": "Bir yaşam olayının bireyde travmatik hasar oluşturma kapasitesine 'travmatojenite gücü' adı verilir.\n\n- **Bireysel Farklılık:** Bir olay hakkında kesin ve evrensel travmatojenite ölçüleri koymak kolay değildir; aynı olay bir kişi için ağır travma iken başkası için örseleyici olmayabilir.\n- **Öznel Anlamlandırma:** Olayın birey için ifade ettiği duygusal anlam, kişinin olayı algılama ve bilişsel yorumlama biçimi belirleyicidir.\n- **Geçmiş Yaşantılar:** Kişinin çocukluk dönemi örselenmeleri, daha önceki kayıpları ve baş etme mekanizmaları olayın travmatik etkisini doğrudan biçimlendirir.\n\n> [!NOTE]\n> Travmanın nesnel büyüklüğü kadar, kurbanın çaresizlik hissi ve olaya yüklediği zihinsel anlam klinik patolojiyi belirleyen ana unsurdur.",
+   "interactiveElements": [
+    {
+     "id": "k38-s2-q1",
+     "type": "micro_quiz",
+     "question": "Bir olayın bireyde travmatojenik etki ve TSSB oluşturma potansiyelini belirleyen temel faktör hangisidir?",
+     "options": [
+      {
+       "text": "Olayın kişi için ifade ettiği duygusal anlam, bilişsel algılama biçimi ve geçmiş yaşantılarıdır.",
+       "isCorrect": true,
+       "explanation": "Olayın kişi için ifade ettiği duygusal anlam, bilişsel algılama biçimi ve geçmiş yaşantılarıdır, travma ve stres bağlantılı bozukluklar kılavuzlarındaki tanısal ve klinik ilkelerle tam bir uyum içindedir. Bu yaklaşım psikiyatride kanıta dayalı hasta yönetiminin temel referansıdır."
+      },
+      {
+       "text": "Bireyin yalnızca ayakkabı numarası ve kan kolesterol seviyesidir.",
+       "isCorrect": false,
+       "explanation": "Şıkta sözü edilen bireyin yalnızca ayakkabı numarası ve kan kolesterol seviyesidir kavramı, farklı bir psikiyatrik sendromun veya başka bir basamağın özelliklerini yansıtır. Bu soruda hedeflenen klinik ilkelerle ve patofizyolojik dinamiklerle doğrudan örtüşmemektedir."
+      },
+      {
+       "text": "Olayın gerçekleştiği yerin deniz seviyesinden yüksekliğidir.",
+       "isCorrect": false,
+       "explanation": "Şıkta sözü edilen olayın gerçekleştiği yerin deniz seviyesinden yüksekliğidir kavramı, farklı bir psikiyatrik sendromun veya başka bir basamağın özelliklerini yansıtır. Bu soruda hedeflenen klinik ilkelerle ve patofizyolojik dinamiklerle doğrudan örtüşmemektedir."
+      },
+      {
+       "text": "Kişinin hiçbir psikolojik algılama yapmadan olayı anında unutmasıdır.",
+       "isCorrect": false,
+       "explanation": "Şıkta sözü edilen kişinin hiçbir psikolojik algılama yapmadan olayı anında unutmasıdır kavramı, farklı bir psikiyatrik sendromun veya başka bir basamağın özelliklerini yansıtır. Bu soruda hedeflenen klinik ilkelerle ve patofizyolojik dinamiklerle doğrudan örtüşmemektedir."
+      }
+     ]
+    },
+    {
+     "id": "k38-s2-c1",
+     "type": "cloze_masking",
+     "sentence": "Bir olayın bireyde psikolojik hasar ve travma yaratabilme gücüne klinik psikiyatride travmatojenite adı verilir.",
+     "maskedTerm": "travmatojenite",
+     "hint": "Yaşam olayının örseleyici potansiyelini tanımlayan kavram."
+    },
+    {
+     "id": "k38-s2-r1",
+     "type": "active_recall",
+     "question": "Aynı trafik kazasını yaşayan iki kişiden birinde TSSB gelişip diğerinde gelişmemesini açıklayan temel etken nedir?",
+     "answer": "Olayın bireyler için taşıdığı öznel anlam, bilişsel algılama ve yorumlama farklılıkları ile geçmiş travma ve baş etme becerileridir."
+    },
+    {
+     "id": "k38-s2-l1",
+     "type": "spot_the_lie",
+     "topic": "Travmatojenite Dinamikleri",
+     "items": [
+      {
+       "text": "Herhangi bir olay bir birey için travmatojen iken başka biri için olmayabilir.",
+       "isLie": false,
+       "explanation": "Öznel algı ve psikolojik dayanıklılık kişiden kişiye büyük farklılık gösterir."
+      },
+      {
+       "text": "Geçmiş çocukluk çağı örselenmeleri sonraki travmaların etkisini artırabilir.",
+       "isLie": false,
+       "explanation": "Erken dönem travmaları bireyin kırılganlığını artırarak duyarlılaşmaya yol açar."
+      },
+      {
+       "text": "Travmatojenite gücü yalnızca olayın desibel cinsinden fiziksel ses şiddetiyle ölçülür.",
+       "isLie": true,
+       "explanation": "Travmatojenite fiziksel bir ses şiddeti değil, bilişsel ve duygusal bir algılama sürecidir."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slideNumber": 3,
+   "title": "TSSB Epidemiyolojisi ve Risk Grupları",
+   "bolum": 1,
+   "pdfSayfalari": [
+    6,
+    6
+   ],
+   "sourcePdf": {
+    "name": "y25-k2-38-travma-ve-stres-baglantili-bozukluklar.pdf",
+    "startPage": 6,
+    "endPage": 6
+   },
+   "content": "Travma Sonrası Stres Bozukluğu toplum genelinde ve yüksek riskli gruplarda sık görülen bir psikiyatrik tablodur.\n\n- **Genel Toplum Yaygınlığı:** Toplumda bozukluğun yaşam boyu yaygınlığı yaklaşık %8 olarak bildirilmektedir.\n- **Yüksek Riskli Gruplar:** Savaş gazileri, tecavüz kurbanları, işkence mağdurları ve büyük doğal afetzedelerde yaşam boyu yaygınlık %5 ile %75 arasında değişebilmektedir.\n- **Cinsiyet Dağılımı:** Kadınlarda TSSB görülme sıklığı erkeklere kıyasla 2 kat daha fazladır.\n- **Yaş Dağılımı:** Bozukluk çocukluktan ileri yaşa kadar her yaş döneminde ortaya çıkabilmektedir.\n\n> [!IMPORTANT]\n> Kadınlarda sıklığın 2 kat fazla olması; hem cinsel şiddete maruziyet riskinin yüksekliği hem de nöroendokrin HPA aksı duyarlılığı ile ilişkilidir.",
+   "interactiveElements": [
+    {
+     "id": "k38-s3-q1",
+     "type": "micro_quiz",
+     "question": "TSSB epidemiyolojisi ve cinsiyet dağılımı ile ilgili aşağıdaki bilgilerden hangisi doğrudur?",
+     "options": [
+      {
+       "text": "Toplumda yaşam boyu yaygınlığı yaklaşık %8'dir ve kadınlarda erkeklere göre iki kat fazladır.",
+       "isCorrect": true,
+       "explanation": "Toplumda yaşam boyu yaygınlığı yaklaşık %8'dir ve kadınlarda erkeklere göre iki kat fazladır, travma ve stres bağlantılı bozukluklar kılavuzlarındaki tanısal ve klinik ilkelerle tam bir uyum içindedir. Bu yaklaşım psikiyatride kanıta dayalı hasta yönetiminin temel referansıdır."
+      },
+      {
+       "text": "Yalnızca 70 yaş üstü erkeklerde görülüp toplum yaygınlığı yüzde doksan beştir.",
+       "isCorrect": false,
+       "explanation": "Şıkta sözü edilen yalnızca 70 yaş üstü erkeklerde görülüp toplum yaygınlığı yüzde doksan beştir kavramı, farklı bir psikiyatrik sendromun veya başka bir basamağın özelliklerini yansıtır. Bu soruda hedeflenen klinik ilkelerle ve patofizyolojik dinamiklerle doğrudan örtüşmemektedir."
+      },
+      {
+       "text": "Erkeklerde kadınlardan on kat daha sık görülür ve toplumda yaygınlığı binde birdir.",
+       "isCorrect": false,
+       "explanation": "Şıkta sözü edilen erkeklerde kadınlardan on kat daha sık görülür ve toplumda yaygınlığı binde birdir kavramı, farklı bir psikiyatrik sendromun veya başka bir basamağın özelliklerini yansıtır. Bu soruda hedeflenen klinik ilkelerle ve patofizyolojik dinamiklerle doğrudan örtüşmemektedir."
+      },
+      {
+       "text": "Ağır afet ve savaş yaşayan gruplarda bile görülme oranı her zaman sıfırdır.",
+       "isCorrect": false,
+       "explanation": "Şıkta sözü edilen ağır afet ve savaş yaşayan gruplarda bile görülme oranı her zaman sıfırdır kavramı, farklı bir psikiyatrik sendromun veya başka bir basamağın özelliklerini yansıtır. Bu soruda hedeflenen klinik ilkelerle ve patofizyolojik dinamiklerle doğrudan örtüşmemektedir."
+      }
+     ]
+    },
+    {
+     "id": "k38-s3-c1",
+     "type": "cloze_masking",
+     "sentence": "Kadınlarda travma sonrası stres bozukluğu görülme sıklığı erkeklere kıyasla iki kat daha fazladır.",
+     "maskedTerm": "iki kat",
+     "hint": "Dişil gruptaki çifte prevalans artışı."
+    },
+    {
+     "id": "k38-s3-t1",
+     "type": "interactive_table",
+     "title": "TSSB Epidemiyolojik Göstergeleri",
+     "tableHeaders": [
+      "Popülasyon",
+      "Görülme Oranı",
+      "Cinsiyet Dağılımı"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Genel Toplum",
+         "isMasked": false
+        },
+        {
+         "text": "Yaklaşık yüzde sekiz",
+         "isMasked": true,
+         "hint": "Genel popülasyondaki yaşam boyu prevalans dilimi."
+        },
+        {
+         "text": "Kadınlarda iki kat baskın",
+         "isMasked": false
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Yüksek Riskli Gruplar",
+         "isMasked": false
+        },
+        {
+         "text": "Yüzde beş ile yetmiş beş arası",
+         "isMasked": true,
+         "hint": "Savaş veya tecavüz mağdurlarındaki yaygınlık aralığı."
+        },
+        {
+         "text": "Maruziyet şiddetine bağlı",
+         "isMasked": false
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k38-s3-l1",
+     "type": "spot_the_lie",
+     "topic": "TSSB Epidemiyolojik Özellikleri",
+     "items": [
+      {
+       "text": "TSSB çocukluk, ergenlik ve erişkinlik dahil her yaşta gelişebilir.",
+       "isLie": false,
+       "explanation": "Yaş sınırlaması olmaksızın travmaya maruz kalan her bireyde ortaya çıkabilir."
+      },
+      {
+       "text": "Ağır travma yaşayan riskli gruplarda yaygınlık %75 düzeyine kadar ulaşabilir.",
+       "isLie": false,
+       "explanation": "Tecavüz ve esaret gibi ağır travmatik yaşantılarda risk zirveye çıkar."
+      },
+      {
+       "text": "Erkek popülasyonda TSSB görülme sıklığı kadınlardan belirgin olarak daha yüksektir.",
+       "isLie": true,
+       "explanation": "Klinik ve epidemiyolojik veriler kadınlarda görülme sıklığının erkeklerin iki katı olduğunu kanıtlar."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slideNumber": 4,
+   "title": "[TEKRAR SAYFASI - CHECKPOINT 1] Sınıflama, Tanım ve Epidemiyoloji",
+   "bolum": 1,
+   "pdfSayfalari": [
+    2,
+    6
+   ],
+   "sourcePdf": {
+    "name": "y25-k2-38-travma-ve-stres-baglantili-bozukluklar.pdf",
+    "startPage": 2,
+    "endPage": 6
+   },
+   "content": "Bu ilk bölümde Travma ve Stres Bağlantılı Bozuklukların DSM-5 sınıflamasındaki bağımsız konumunu ve TSSB'nin temel ölçütlerini pekiştirdik.\n\n- **Tanısal Kriterler:** TSSB semptomları 1 aydan uzun sürmelidir; 3 gün ile 4 hafta arasında kalan tablolar Akut Stres Bozukluğudur.\n- **Travmatojenite:** Olayın nesnel şiddetinden ziyade bireyin olayı öznel algılaması ve geçmiş yaşantıları belirleyicidir.\n- **Yaygınlık:** Toplum genelinde %8 oranında saptanır ve kadınlarda erkeklere göre 2 kat daha sıktır.\n\n> [!NOTE]\n> Akut Stres Bozukluğunun kronikleşerek TSSB'ye dönüşmesini engellemek için erken psikososyal kriz müdahaleleri büyük önem taşır.",
+   "interactiveElements": [
+    {
+     "id": "k38-s4-q1",
+     "type": "micro_quiz",
+     "question": "İlk bölümde işlenen kavramlar doğrultusunda, bir travma olgusunun Akut Stres Bozukluğu yerine TSSB tanısı alması için hangi koşul gereklidir?",
+     "options": [
+      {
+       "text": "Travmaya bağlı belirtilerin en az bir aydan daha uzun süre devam etmesi.",
+       "isCorrect": true,
+       "explanation": "Travmaya bağlı belirtilerin en az bir aydan daha uzun süre devam etmesi, travma ve stres bağlantılı bozukluklar kılavuzlarındaki tanısal ve klinik ilkelerle tam bir uyum içindedir. Bu yaklaşım psikiyatride kanıta dayalı hasta yönetiminin temel referansıdır."
+      },
+      {
+       "text": "Kişinin yalnızca kış aylarında üzüntü hissetmesi.",
+       "isCorrect": false,
+       "explanation": "Şıkta sözü edilen kişinin yalnızca kış aylarında üzüntü hissetmesi kavramı, farklı bir psikiyatrik sendromun veya başka bir basamağın özelliklerini yansıtır. Bu soruda hedeflenen klinik ilkelerle ve patofizyolojik dinamiklerle doğrudan örtüşmemektedir."
+      },
+      {
+       "text": "Olayın ardından hiçbir psikolojik sıkıntı yaşanmaması.",
+       "isCorrect": false,
+       "explanation": "Şıkta sözü edilen olayın ardından hiçbir psikolojik sıkıntı yaşanmaması kavramı, farklı bir psikiyatrik sendromun veya başka bir basamağın özelliklerini yansıtır. Bu soruda hedeflenen klinik ilkelerle ve patofizyolojik dinamiklerle doğrudan örtüşmemektedir."
+      },
+      {
+       "text": "Belirtilerin 24 saat içinde kendiliğinden tamamen kaybolması.",
+       "isCorrect": false,
+       "explanation": "Şıkta sözü edilen belirtilerin 24 saat içinde kendiliğinden tamamen kaybolması kavramı, farklı bir psikiyatrik sendromun veya başka bir basamağın özelliklerini yansıtır. Bu soruda hedeflenen klinik ilkelerle ve patofizyolojik dinamiklerle doğrudan örtüşmemektedir."
+      }
+     ]
+    },
+    {
+     "id": "k38-s4-s1",
+     "type": "swipe_matching",
+     "title": "Travma Tabloları Süre Eşleştirmesi",
+     "leftCategory": "Akut Stres Bozukluğu",
+     "rightCategory": "TSSB",
+     "cards": [
+      {
+       "text": "Depremden 5 gün sonra başlayıp 2. haftada azalarak sonlanan tablo",
+       "category": "left"
+      },
+      {
+       "text": "Trafik kazasından 6 ay sonra hala devam eden kabus ve kaçınmalar",
+       "category": "right"
+      },
+      {
+       "text": "Travma sonrası 3 gün ile 4 hafta arasında sınırlı kalan belirtiler",
+       "category": "left"
+      },
+      {
+       "text": "Semptomların en az bir aydan uzun sürerek kronikleşme eğilimi göstermesi",
+       "category": "right"
+      }
+     ]
+    },
+    {
+     "id": "k38-s4-c1",
+     "type": "cloze_masking",
+     "sentence": "Semptomların üç aydan fazla devam etmesi tablonun kronik TSSB olarak adlandırılmasına neden olur.",
+     "maskedTerm": "üç aydan",
+     "hint": "Doksan günü aşan süre eşiği."
+    },
+    {
+     "id": "k38-s4-t1",
+     "type": "interactive_table",
+     "title": "Bölüm 1 Çekirdek Özet Tablosu",
+     "tableHeaders": [
+      "Kavram",
+      "Tanımlayıcı Eşik",
+      "Klinik Özellik"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Akut Stres Süresi",
+         "isMasked": false
+        },
+        {
+         "text": "Üç gün ile dört hafta",
+         "isMasked": true,
+         "hint": "Travma sonrası erken tablonun süresi."
+        },
+        {
+         "text": "Geçici stres tablosu",
+         "isMasked": false
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "TSSB Süresi",
+         "isMasked": false
+        },
+        {
+         "text": "Bir aydan uzun",
+         "isMasked": true,
+         "hint": "Kronikleşme yönündeki asgari sınır."
+        },
+        {
+         "text": "Kalıcı işlevsellik kaybı",
+         "isMasked": false
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slideNumber": 5,
+   "title": "TSSB Etyolojisi ve Nörobiyolojik Sistemler",
+   "bolum": 2,
+   "pdfSayfalari": [
+    7,
+    7
+   ],
+   "sourcePdf": {
+    "name": "y25-k2-38-travma-ve-stres-baglantili-bozukluklar.pdf",
+    "startPage": 7,
+    "endPage": 7
+   },
+   "content": "TSSB gelişiminde stresör olayın kendisi birincil tetikleyici olmakla birlikte, karmaşık nörobiyolojik sistem bozuklukları eşlik eder.\n\n- **Stresör Etken:** Gerçek bir ölüm, ağır yaralanma veya cinsel saldırı temel etyolojik başlatıcıdır.\n- **Noradrenerjik Sistem:** Lokus seruleus kaynaklı noradrenerjik hiperaktivite; taşikardi, terleme, panik hali ve aşırı uyarılmışlığa yol açan temel biyolojik mekanizmadır.\n- **HPA Aksı:** Hipotalamo-hipofizer-adrenal aksta duyarlılık artışı ve kortizol geri bildirim mekanizmalarında aksama saptanır.\n- **Opiat ve Serotonin:** Endojen opiat sistemi travma sırasındaki ağrı duyarsızlaşması ve disosiyasyonda; serotonerjik disregulasyon ise duygudurum ve dürtü kontrol bozukluklarında rol oynar.\n\n> [!IMPORTANT]\n> Nörobiyolojik araştırmalar, travma kurbanlarında hipokampus hacminde azalma ve amigdala hiperaktivitesinin korku şartlanmasını kalıcı kıldığını göstermektedir.",
+   "interactiveElements": [
+    {
+     "id": "k38-s5-q1",
+     "type": "micro_quiz",
+     "question": "TSSB patofizyolojisinde aşırı uyarılmışlık, irkilme tepkisi ve taşikardiden birincil sorumlu nörotransmitter sistemi hangisidir?",
+     "options": [
+      {
+       "text": "Lokus seruleus kaynaklı noradrenerjik sistem hiperaktivitesi.",
+       "isCorrect": true,
+       "explanation": "Lokus seruleus kaynaklı noradrenerjik sistem hiperaktivitesi, travma ve stres bağlantılı bozukluklar kılavuzlarındaki tanısal ve klinik ilkelerle tam bir uyum içindedir. Bu yaklaşım psikiyatride kanıta dayalı hasta yönetiminin temel referansıdır."
+      },
+      {
+       "text": "Pankreatik glukagon hormonunun aşırı salgılanması.",
+       "isCorrect": false,
+       "explanation": "Şıkta sözü edilen pankreatik glukagon hormonunun aşırı salgılanması kavramı, farklı bir psikiyatrik sendromun veya başka bir basamağın özelliklerini yansıtır. Bu soruda hedeflenen klinik ilkelerle ve patofizyolojik dinamiklerle doğrudan örtüşmemektedir."
+      },
+      {
+       "text": "Serebellar Purkinje hücrelerinde tam asetilkolin tükenmesi.",
+       "isCorrect": false,
+       "explanation": "Şıkta sözü edilen serebellar purkinje hücrelerinde tam asetilkolin tükenmesi kavramı, farklı bir psikiyatrik sendromun veya başka bir basamağın özelliklerini yansıtır. Bu soruda hedeflenen klinik ilkelerle ve patofizyolojik dinamiklerle doğrudan örtüşmemektedir."
+      },
+      {
+       "text": "Yalnızca mide asit salgısını artıran gastrin artışı.",
+       "isCorrect": false,
+       "explanation": "Şıkta sözü edilen yalnızca mide asit salgısını artıran gastrin artışı kavramı, farklı bir psikiyatrik sendromun veya başka bir basamağın özelliklerini yansıtır. Bu soruda hedeflenen klinik ilkelerle ve patofizyolojik dinamiklerle doğrudan örtüşmemektedir."
+      }
+     ]
+    },
+    {
+     "id": "k38-s5-c1",
+     "type": "cloze_masking",
+     "sentence": "TSSB'de sempatik tonus artışı ve aşırı uyarılmışlık belirtilerinden noradrenerjik sistem hiperaktivitesi sorumludur.",
+     "maskedTerm": "noradrenerjik",
+     "hint": "Lokus seruleustan köken alan adrenerjik nörotransmitter yolağı."
+    },
+    {
+     "id": "k38-s5-h1",
+     "type": "causal_chain",
+     "title": "TSSB Nörobiyolojik Yanıt Mekanizması",
+     "steps": [
+      "1. Travmatik Tehdit: Ağır yaşam tehdidi amigdala tarafından birincil alarm olarak algılanır.",
+      "2. Noradrenerjik Boşalım: Lokus seruleus uyarısıyla aşırı sempatik deşarj gerçekleşir.",
+      "3. HPA Aksı Duyarlılığı: Hipotalamo-hipofizer-adrenal döngüde stres yanıtı dengesi bozulur.",
+      "4. Aşırı Uyarılmışlık: Hipervijilans, irkilme tepkisi ve kalıcı uyku bozukluğu yerleşir."
+     ]
+    },
+    {
+     "id": "k38-s5-l1",
+     "type": "spot_the_lie",
+     "topic": "TSSB Biyolojik Etyolojisi",
+     "items": [
+      {
+       "text": "HPA aksı ve endojen opiat sistemi TSSB patogenezinde rol oynar.",
+       "isLie": false,
+       "explanation": "Stres hormonu regülasyonu ve disosiyatif tepkiler bu sistemlerle doğrudan bağlantılıdır."
+      },
+      {
+       "text": "Serotonerjik yolaklar duygudurum çökkünlüğü ve anksiyete regülasyonunda etkilidir.",
+       "isLie": false,
+       "explanation": "SSRI grubu ilaçların etkinliği serotonerjik sistemin kilit rolünü kanıtlamaktadır."
+      },
+      {
+       "text": "TSSB hastalarında sempatik sinir sistemi tamamen felç olur ve nabız sıfıra düşer.",
+       "isLie": true,
+       "explanation": "Sempatik sistem felç olmaz, tam tersine aşırı hiperaktif olarak taşikardi ve çarpıntı yapar."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slideNumber": 6,
+   "title": "Bilişsel Model ve Risk Faktörleri",
+   "bolum": 2,
+   "pdfSayfalari": [
+    8,
+    9
+   ],
+   "sourcePdf": {
+    "name": "y25-k2-38-travma-ve-stres-baglantili-bozukluklar.pdf",
+    "startPage": 8,
+    "endPage": 9
+   },
+   "content": "Bilişsel-davranışçı modele göre travma anındaki tepkiler ile sonrasındaki koşullanmalar hastalığın sürmesini sağlar.\n\n- **Gerçek ve Öğrenilmiş Alarm:** Travma anında yaşanan dehşet 'gerçek alarm'dır. Sonrasında travmayı çağrıştıran nötr uyaranların da tehlike olarak kodlanması 'öğrenilmiş alarm' döngüsünü kurar.\n- **Kaçınma ve Donukluk:** Öğrenilmiş alarm anksiyeteyi tırmandırır; hasta uyaranlardan kaçınarak ya da duygusal donukluğa sığınarak rahatlamaya çalışır.\n- **Kırılganlık ve Risk Faktörleri:** Biyolojik ve psikolojik yatkınlık zemininde; geçmiş travma öyküsü, önceden var olan psikiyatrik hastalık ve zayıf sosyal destek TSSB gelişme riskini belirgin artırır.\n\n> [!NOTE]\n> Kaçınma davranışı hastanın travmatik anıyı güvenli koşullarda zihninde yeniden işlemesini (processing) engelleyerek patolojiyi kronikleştirir.",
+   "interactiveElements": [
+    {
+     "id": "k38-s6-q1",
+     "type": "micro_quiz",
+     "question": "Bilişsel-davranışçı TSSB modelinde travmayı çağrıştıran güvenli durumlarda tetiklenen koşullanmış anksiyete tepkisi ne olarak adlandırılır?",
+     "options": [
+      {
+       "text": "Öğrenilmiş alarm mekanizması.",
+       "isCorrect": true,
+       "explanation": "Öğrenilmiş alarm mekanizması, travma ve stres bağlantılı bozukluklar kılavuzlarındaki tanısal ve klinik ilkelerle tam bir uyum içindedir. Bu yaklaşım psikiyatride kanıta dayalı hasta yönetiminin temel referansıdır."
+      },
+      {
+       "text": "Kalıcı motor hemipleji tablosu.",
+       "isCorrect": false,
+       "explanation": "Şıkta sözü edilen kalıcı motor hemipleji tablosu kavramı, farklı bir psikiyatrik sendromun veya başka bir basamağın özelliklerini yansıtır. Bu soruda hedeflenen klinik ilkelerle ve patofizyolojik dinamiklerle doğrudan örtüşmemektedir."
+      },
+      {
+       "text": "Fizyolojik derin uyku evresi.",
+       "isCorrect": false,
+       "explanation": "Şıkta sözü edilen fizyolojik derin uyku evresi kavramı, farklı bir psikiyatrik sendromun veya başka bir basamağın özelliklerini yansıtır. Bu soruda hedeflenen klinik ilkelerle ve patofizyolojik dinamiklerle doğrudan örtüşmemektedir."
+      },
+      {
+       "text": "Bilinçli rol yapma manevrası.",
+       "isCorrect": false,
+       "explanation": "Şıkta sözü edilen bilinçli rol yapma manevrası kavramı, farklı bir psikiyatrik sendromun veya başka bir basamağın özelliklerini yansıtır. Bu soruda hedeflenen klinik ilkelerle ve patofizyolojik dinamiklerle doğrudan örtüşmemektedir."
+      }
+     ]
+    },
+    {
+     "id": "k38-s6-c1",
+     "type": "cloze_masking",
+     "sentence": "Bilişsel modelde travmayı çağrıştıran durumlarda devreye giren şartlı tepkiye öğrenilmiş alarm adı verilir.",
+     "maskedTerm": "öğrenilmiş alarm",
+     "hint": "Koşullanma sonucu gelişen patolojik korku uyarısı."
+    },
+    {
+     "id": "k38-s6-t1",
+     "type": "interactive_table",
+     "title": "Bilişsel Model Bileşenleri ve Riskler",
+     "tableHeaders": [
+      "Aşama",
+      "Klinik Süreç",
+      "Risk Faktörü"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Travma Anı",
+         "isMasked": false
+        },
+        {
+         "text": "Gerçek alarm ve yoğun dehşet",
+         "isMasked": true,
+         "hint": "Ölüm tehdidi anındaki birincil tepki."
+        },
+        {
+         "text": "Önceki travma öyküsü",
+         "isMasked": false
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Tetikleyici Ortam",
+         "isMasked": false
+        },
+        {
+         "text": "Öğrenilmiş alarm ve kaçınma",
+         "isMasked": true,
+         "hint": "Çağrıştırıcı ipuçlarına verilen koşullu reaksiyon."
+        },
+        {
+         "text": "Zayıf sosyal destek",
+         "isMasked": false
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k38-s6-l1",
+     "type": "spot_the_lie",
+     "topic": "TSSB Risk Faktörleri ve Bilişsel Model",
+     "items": [
+      {
+       "text": "Önceden geçirilmiş psikiyatrik hastalık öyküsü TSSB riskini artırır.",
+       "isLie": false,
+       "explanation": "Ruhsal kırılganlık travma karşısında baş etme kapasitesini zorlaştırır."
+      },
+      {
+       "text": "Sosyal desteği ve baş etme becerileri zayıf bireylerde TSSB daha kolay yerleşir.",
+       "isLie": false,
+       "explanation": "Sosyal destek eksikliği travmanın kronikleşmesindeki en kritik çevresel faktördür."
+      },
+      {
+       "text": "Kaçınma davranışları hastanın travmayı zihninde tamamen çözmesini ve iyileşmesini sağlar.",
+       "isLie": true,
+       "explanation": "Kaçınma iyileştirmez; tam tersine anının duyarsızlaşmasını engelleyerek korkuyu besler."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slideNumber": 7,
+   "title": "TSSB Çekirdek Klinik Belirtileri",
+   "bolum": 3,
+   "pdfSayfalari": [
+    10,
+    11
+   ],
+   "sourcePdf": {
+    "name": "y25-k2-38-travma-ve-stres-baglantili-bozukluklar.pdf",
+    "startPage": 10,
+    "endPage": 11
+   },
+   "content": "TSSB kliniği üç ana belirti kümesi üzerinde şekillenir: yeniden yaşantılama, kaçınma ve aşırı uyarılmışlık.\n\n- **Yeniden Yaşantılama (İntrüzyon):** Kişi travmatik olayı istemsizce tekrar anımsar, sıkıntı veren kabuslar görür ya da olayı o an yeniden yaşıyormuş gibi hissettiren disosiyatif flaşbekler deneyimler.\n- **Kaçınma Davranışları:** Travmayı hatırlatan düşüncelerden, duygulardan, konuşmalardan, insanlardan ve mekanlardan ısrarla uzak durulur.\n- **Aşırı Uyarılmışlık:** Uykuya dalma ve sürdürme güçlüğü, irritabilite, nedensiz öfke patlamaları, konsantrasyon kaybı ve abartılı irkilme tepkisi (hipervijilans) gözlenir.\n- **Bilişsel ve Duygudurum Çöküşü:** İlgi ve istekte azalma, insanlara yabancılaşma, sevgi hissedememe (duygusal kısıtlılık) ve suçluluk duyguları eşlik eder.\n\n> [!IMPORTANT]\n> Flaşbekler sırasında hasta içinde bulunduğu zaman ve mekanı unutarak travma anına geri döner; bu durum disosiyatif bir illüzyon yaşantısıdır.",
+   "interactiveElements": [
+    {
+     "id": "k38-s7-q1",
+     "type": "micro_quiz",
+     "question": "Aşağıdakilerden hangisi TSSB'nin 'aşırı uyarılmışlık' belirti kümesine ait bir bulgudur?",
+     "options": [
+      {
+       "text": "Uykuya dalma güçlüğü, irkilme tepkisi, irritabilite ve öfke patlamaları.",
+       "isCorrect": true,
+       "explanation": "Uykuya dalma güçlüğü, irkilme tepkisi, irritabilite ve öfke patlamaları, travma ve stres bağlantılı bozukluklar kılavuzlarındaki tanısal ve klinik ilkelerle tam bir uyum içindedir. Bu yaklaşım psikiyatride kanıta dayalı hasta yönetiminin temel referansıdır."
+      },
+      {
+       "text": "Günde yirmi saat kesintisiz ve derin bir koma uykusunda kalmak.",
+       "isCorrect": false,
+       "explanation": "Şıkta sözü edilen günde yirmi saat kesintisiz ve derin bir koma uykusunda kalmak kavramı, farklı bir psikiyatrik sendromun veya başka bir basamağın özelliklerini yansıtır. Bu soruda hedeflenen klinik ilkelerle ve patofizyolojik dinamiklerle doğrudan örtüşmemektedir."
+      },
+      {
+       "text": "Kişinin kendisini bir kuş gibi hafif hissedip uçabileceğine inanması.",
+       "isCorrect": false,
+       "explanation": "Şıkta sözü edilen kişinin kendisini bir kuş gibi hafif hissedip uçabileceğine inanması kavramı, farklı bir psikiyatrik sendromun veya başka bir basamağın özelliklerini yansıtır. Bu soruda hedeflenen klinik ilkelerle ve patofizyolojik dinamiklerle doğrudan örtüşmemektedir."
+      },
+      {
+       "text": "Tüm çevresine karşı aşırı neşeli ve taşkın espriler yapması.",
+       "isCorrect": false,
+       "explanation": "Şıkta sözü edilen tüm çevresine karşı aşırı neşeli ve taşkın espriler yapması kavramı, farklı bir psikiyatrik sendromun veya başka bir basamağın özelliklerini yansıtır. Bu soruda hedeflenen klinik ilkelerle ve patofizyolojik dinamiklerle doğrudan örtüşmemektedir."
+      }
+     ]
+    },
+    {
+     "id": "k38-s7-c1",
+     "type": "cloze_masking",
+     "sentence": "Kişinin travmatik olayı o an tekrar yaşıyormuş gibi hissettiği disosiyatif geri dönüşlere flaşbek adı verilir.",
+     "maskedTerm": "flaşbek",
+     "hint": "Geriye dönüş şeklinde yaşanan istemsiz canlı anımsama."
+    },
+    {
+     "id": "k38-s7-r1",
+     "type": "active_recall",
+     "question": "TSSB'de 'duygusal kısıtlılık' ne anlama gelir ve hastanın günlük yaşantısını nasıl etkiler?",
+     "answer": "Kişinin sevgi, sevinç ve şefkat gibi olumlu duyguları hissedememesi, insanlara yabancılaşması ve geleceğe yönelik bir umut ya da beklenti kuramamasıdır."
+    },
+    {
+     "id": "k38-s7-l1",
+     "type": "spot_the_lie",
+     "topic": "TSSB Çekirdek Belirtileri",
+     "items": [
+      {
+       "text": "Yeniden yaşantılama belirtileri kabuslar ve istemsiz anımsamalar şeklinde belirir.",
+       "isLie": false,
+       "explanation": "Kabus ve intrüzyonlar travmatik bellek kayıtlarının istemsiz tetiklenmesidir."
+      },
+      {
+       "text": "Hastalar travmayı anımsatan mekan ve insanlardan ısrarla kaçınırlar.",
+       "isLie": false,
+       "explanation": "Kaçınma anksiyete tırmanışını durdurmak için sergilenen temel savunmadır."
+      },
+      {
+       "text": "TSSB hastalarında uykuya dalma son derece kolaydır ve uykuları derin ve dinlendiricidir.",
+       "isLie": true,
+       "explanation": "Aksine, hipervijilans nedeniyle uykuya dalma güçlüğü ve sık kabuslarla uyanma çok yaygındır."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slideNumber": 8,
+   "title": "Seyir, Yıldönümü Reaksiyonu ve Ayırıcı Tanı",
+   "bolum": 3,
+   "pdfSayfalari": [
+    12,
+    13
+   ],
+   "sourcePdf": {
+    "name": "y25-k2-38-travma-ve-stres-baglantili-bozukluklar.pdf",
+    "startPage": 12,
+    "endPage": 13
+   },
+   "content": "TSSB kronik ve dalgalı seyir gösteren bir rahatsızlıktır; hastaların yaşam boyu takibi gerekir.\n\n- **Başlangıç:** Belirtiler travmadan hemen sonra başlayabileceği gibi aylar hatta yıllar sonra da (gecikmiş başlangıç) ortaya çıkabilir.\n- **Yıldönümü Reaksiyonu:** Travmanın gerçekleştiği tarihlerde, benzer hava koşullarında veya anma günlerinde belirtilerde belirgin alevlenmeler izlenir.\n- **İyi Prognoz Belirteçleri:** Semptomların ani başlaması, premorbid sosyal uyumun iyi olması, güçlü sosyal destek varlığı ve ek psikiyatrik/tıbbi komorbiditenin bulunmaması iyi gidişata işaret eder.\n- **Ayırıcı Tanı:** Organik mental bozukluklar (kafa travması sonrası deliryum/amnezi), kısa psikotik bozukluk, majör depresyon, fobik bozukluk ve yaygın anksiyete bozukluğundan ayırt edilmelidir.\n\n> [!NOTE]\n> Majör depresyonda suçluluk ve anhedoni bulunsa da TSSB'ye özgü travmatik flaşbekler ve kaçınmalar izlenmez.",
+   "interactiveElements": [
+    {
+     "id": "k38-s8-q1",
+     "type": "micro_quiz",
+     "question": "TSSB'nin klinik seyri ve prognozu ile ilgili aşağıdaki ifadelerden hangisi doğrudur?",
+     "options": [
+      {
+       "text": "Travmanın yıldönümlerinde belirtiler alevlenebilir; güçlü sosyal destek ve iyi premorbid uyum iyi prognoz göstergesidir.",
+       "isCorrect": true,
+       "explanation": "Travmanın yıldönümlerinde belirtiler alevlenebilir; güçlü sosyal destek ve iyi premorbid uyum iyi prognoz göstergesidir, travma ve stres bağlantılı bozukluklar kılavuzlarındaki tanısal ve klinik ilkelerle tam bir uyum içindedir. Bu yaklaşım psikiyatride kanıta dayalı hasta yönetiminin temel referansıdır."
+      },
+      {
+       "text": "Hastalık istisnasız tüm vakalarda travmadan 3 dakika sonra başlayıp 1 saatte biter.",
+       "isCorrect": false,
+       "explanation": "Şıkta sözü edilen hastalık istisnasız tüm vakalarda travmadan 3 dakika sonra başlayıp 1 saatte biter kavramı, farklı bir psikiyatrik sendromun veya başka bir basamağın özelliklerini yansıtır. Bu soruda hedeflenen klinik ilkelerle ve patofizyolojik dinamiklerle doğrudan örtüşmemektedir."
+      },
+      {
+       "text": "Sosyal desteğin zayıf olması tablonun kendiliğinden hızla düzelmesini sağlar.",
+       "isCorrect": false,
+       "explanation": "Şıkta sözü edilen sosyal desteğin zayıf olması tablonun kendiliğinden hızla düzelmesini sağlar kavramı, farklı bir psikiyatrik sendromun veya başka bir basamağın özelliklerini yansıtır. Bu soruda hedeflenen klinik ilkelerle ve patofizyolojik dinamiklerle doğrudan örtüşmemektedir."
+      },
+      {
+       "text": "TSSB'de gecikmiş başlangıçlı klinik form tıbben asla görülemez.",
+       "isCorrect": false,
+       "explanation": "Şıkta sözü edilen tssb'de gecikmiş başlangıçlı klinik form tıbben asla görülemez kavramı, farklı bir psikiyatrik sendromun veya başka bir basamağın özelliklerini yansıtır. Bu soruda hedeflenen klinik ilkelerle ve patofizyolojik dinamiklerle doğrudan örtüşmemektedir."
+      }
+     ]
+    },
+    {
+     "id": "k38-s8-c1",
+     "type": "cloze_masking",
+     "sentence": "Travmanın gerçekleştiği takvim tarihlerinde veya benzer ortamlarda belirtilerin şiddetlenmesine yıldönümü tepkisi denir.",
+     "maskedTerm": "yıldönümü tepkisi",
+     "hint": "Travmanın takvimsel tekerrüründe yaşanan alevlenme."
+    },
+    {
+     "id": "k38-s8-t1",
+     "type": "interactive_table",
+     "title": "TSSB Prognoz Faktörleri Tablosu",
+     "tableHeaders": [
+      "Klinik Parametre",
+      "İyi Prognoz İşareti",
+      "Kötü Prognoz İşareti"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Başlangıç Biçimi",
+         "isMasked": false
+        },
+        {
+         "text": "Semptomların ani başlaması",
+         "isMasked": true,
+         "hint": "Klinik tablonun olay akabinde hızla belirmesi."
+        },
+        {
+         "text": "Sinsi ve gecikmiş başlangıç",
+         "isMasked": false
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Sosyal Çevre",
+         "isMasked": false
+        },
+        {
+         "text": "Güçlü aile ve sosyal destek",
+         "isMasked": true,
+         "hint": "Bireye sunulan dayanışma ve bakım ağı."
+        },
+        {
+         "text": "Yalnızlık ve izolasyon",
+         "isMasked": false
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k38-s8-l1",
+     "type": "spot_the_lie",
+     "topic": "TSSB Seyir ve Ayırıcı Tanı",
+     "items": [
+      {
+       "text": "TSSB travmadan aylar ya da yıllar sonra da ortaya çıkabilir.",
+       "isLie": false,
+       "explanation": "Gecikmiş başlangıçlı TSSB stresör tetikleyicilerle sonradan uyanabilir."
+      },
+      {
+       "text": "Ayırıcı tanıda kafa travmasına bağlı organik mental tablolar dışlanmalıdır.",
+       "isLie": false,
+       "explanation": "Organik beyin hasarları ve kafa travması benzer amnestik bulgular yapabilir."
+      },
+      {
+       "text": "Premorbid uyumu bozuk ve ek psikiyatrik hastalığı olanlarda TSSB hemen iyileşir.",
+       "isLie": true,
+       "explanation": "Aksine, ek psikiyatrik komorbidite kötü prognoz ve tedavi direnci göstergesidir."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slideNumber": 9,
+   "title": "TSSB Tedavisi: Farmakoterapi ve Psikoterapi",
+   "bolum": 3,
+   "pdfSayfalari": [
+    14,
+    15
+   ],
+   "sourcePdf": {
+    "name": "y25-k2-38-travma-ve-stres-baglantili-bozukluklar.pdf",
+    "startPage": 14,
+    "endPage": 15
+   },
+   "content": "TSSB sağaltımında farmakoterapi ile kanıta dayalı psikoterapötik yöntemlerin entegrasyonu esastır.\n\n- **İlk Basamak Farmakoterapi:** Seçici Serotonin Geri Alım İnhibitörleri (SSRI - sertralin, paroksetin) ve venlafaksin (SNRI) etkinlik ve tolere edilebilirlikleri nedeniyle ilk tercihtir.\n- **Etki ve İdame Süresi:** Antiobsesyonel/antitravmatik belirtilerin yatışması 2-3 ay alabilmektedir. Yanıt veren hastalarda tedavi en az 12 ay sürdürülmeli; kronik olgularda bu süre 24 aya uzatılmalıdır.\n- **Dirençli Olgular:** SSRI ve venlafaksin yetersizliğinde trisiklik antidepresanlar, antikonvülzanlar (valproat, karbamazepin) veya atipik antipsikotikler eklenebilir.\n- **Psikoterapi:** Bilişsel Davranışçı Terapi (BDT) ve Göz Hareketleriyle Duyarsızlaştırma ve Yeniden İşleme (EMDR) altın standarttır.\n\n> [!IMPORTANT]\n> TSSB'de benzodiazepinlerin yeri yoktur; bağımlılık riski yaratmalarının yanı sıra travmatik anının bilişsel işlenme sürecini bozar.",
+   "interactiveElements": [
+    {
+     "id": "k38-s9-q1",
+     "type": "micro_quiz",
+     "question": "TSSB tedavisinde farmakoterapi ve psikoterapi ilkeleriyle ilgili hangisi doğrudur?",
+     "options": [
+      {
+       "text": "İlk seçenekler SSRI ve venlafaksindir; psikoterapide BDT ve EMDR altın standarttır.",
+       "isCorrect": true,
+       "explanation": "İlk seçenekler SSRI ve venlafaksindir; psikoterapide BDT ve EMDR altın standarttır, travma ve stres bağlantılı bozukluklar kılavuzlarındaki tanısal ve klinik ilkelerle tam bir uyum içindedir. Bu yaklaşım psikiyatride kanıta dayalı hasta yönetiminin temel referansıdır."
+      },
+      {
+       "text": "Hastalara yalnızca yüksek doz bağımlılık yapıcı benzodiazepin monoterapi verilmelidir.",
+       "isCorrect": false,
+       "explanation": "Şıkta sözü edilen hastalara yalnızca yüksek doz bağımlılık yapıcı benzodiazepin monoterapi verilmelidir kavramı, farklı bir psikiyatrik sendromun veya başka bir basamağın özelliklerini yansıtır. Bu soruda hedeflenen klinik ilkelerle ve patofizyolojik dinamiklerle doğrudan örtüşmemektedir."
+      },
+      {
+       "text": "İlaç tedavisi belirtiler düzeldikten hemen sonra 24 saat içinde kesilmelidir.",
+       "isCorrect": false,
+       "explanation": "Şıkta sözü edilen i̇laç tedavisi belirtiler düzeldikten hemen sonra 24 saat içinde kesilmelidir kavramı, farklı bir psikiyatrik sendromun veya başka bir basamağın özelliklerini yansıtır. Bu soruda hedeflenen klinik ilkelerle ve patofizyolojik dinamiklerle doğrudan örtüşmemektedir."
+      },
+      {
+       "text": "EMDR yöntemi yalnızca genel anestezi altında cerrahi olarak uygulanabilir.",
+       "isCorrect": false,
+       "explanation": "Şıkta sözü edilen emdr yöntemi yalnızca genel anestezi altında cerrahi olarak uygulanabilir kavramı, farklı bir psikiyatrik sendromun veya başka bir basamağın özelliklerini yansıtır. Bu soruda hedeflenen klinik ilkelerle ve patofizyolojik dinamiklerle doğrudan örtüşmemektedir."
+      }
+     ]
+    },
+    {
+     "id": "k38-s9-c1",
+     "type": "cloze_masking",
+     "sentence": "TSSB psikoterapisinde göz hareketleriyle duyarsızlaştırma sağlayan yönteme kısaca EMDR adı verilir.",
+     "maskedTerm": "EMDR",
+     "hint": "Göz hareketleriyle duyarsızlaştırma tekniğinin uluslararası kısaltması."
+    },
+    {
+     "id": "k38-s9-t1",
+     "type": "interactive_table",
+     "title": "TSSB Tedavi Stratejileri Karşılaştırması",
+     "tableHeaders": [
+      "Tedavi Alanı",
+      "İlk Tercih Seçenek",
+      "İdame / Protokol"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "İlaç Sağaltımı",
+         "isMasked": false
+        },
+        {
+         "text": "SSRI ve venlafaksin",
+         "isMasked": true,
+         "hint": "Serotonerjik ve noradrenerjik ilk basamak ajanlar."
+        },
+        {
+         "text": "En az on iki ay idame",
+         "isMasked": false
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Psikoterapi",
+         "isMasked": false
+        },
+        {
+         "text": "BDT ve EMDR yöntemi",
+         "isMasked": true,
+         "hint": "Göz hareketleri ve yüzleştirmeye dayalı terapiler."
+        },
+        {
+         "text": "Travmatik anıyı yeniden işleme",
+         "isMasked": false
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k38-s9-l1",
+     "type": "spot_the_lie",
+     "topic": "TSSB Tedavi İlkeleri",
+     "items": [
+      {
+       "text": "TSSB'de antidepresan ilaç yanıtının tam oturması 2-3 ay alabilir.",
+       "isLie": false,
+       "explanation": "Klinik belirtilerin sönmesi zaman alır, erken dönemde ilaç kesilmemelidir."
+      },
+      {
+       "text": "Kronik TSSB olgularında idame farmakoterapisi 24 aya kadar uzatılabilir.",
+       "isLie": false,
+       "explanation": "Nüksleri önlemek amacıyla kronik tablolarda 2 yıla kadar idame önerilir."
+      },
+      {
+       "text": "Benzodiazepinler TSSB tedavisinde travmayı tamamen yok eden en etkili ana ilaçtır.",
+       "isLie": true,
+       "explanation": "Benzodiazepinler travma işlemlenmesini bozar, bağımlılık yapar ve kılavuzlarca önerilmez."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slideNumber": 10,
+   "title": "[TEKRAR SAYFASI - CHECKPOINT 2] TSSB Etyoloji, Klinik ve Sağaltım",
+   "bolum": 3,
+   "pdfSayfalari": [
+    7,
+    15
+   ],
+   "sourcePdf": {
+    "name": "y25-k2-38-travma-ve-stres-baglantili-bozukluklar.pdf",
+    "startPage": 7,
+    "endPage": 15
+   },
+   "content": "Bu bölümde TSSB'nin nörobiyolojisini, bilişsel modelini, klinik belirtilerini ve tedavi protokollerini pekiştirdik.\n\n- **Nörobiyoloji:** Lokus seruleus kaynaklı noradrenerjik hiperaktivite ve HPA aksı bozukluğu uyarılmışlığı sürdürür.\n- **Klinik Belirtiler:** Yeniden yaşantılama (flaşbek), kaçınma, aşırı uyarılmışlık ve yabancılaşma çekirdek tablodur.\n- **Seyir ve Prognoz:** Yıldönümlerinde alevlenme sıktır; güçlü sosyal destek iyileşmeyi hızlandırır.\n- **Sağaltım:** SSRI ve venlafaksin ilk seçenektir (12-24 ay idame); BDT ve EMDR kanıta dayalı psikoterapilerdir.\n\n> [!NOTE]\n> Travma tedavisinde amaç anıyı hafızadan silmek değil; anının yarattığı otonomik aşırı uyarılmışlığı duyarsızlaştırmaktır.",
+   "interactiveElements": [
+    {
+     "id": "k38-s10-q1",
+     "type": "micro_quiz",
+     "question": "Aşağıdakilerden hangisi TSSB'nin patofizyolojik ve klinik sağaltım özelliklerini en doğru özetler?",
+     "options": [
+      {
+       "text": "Noradrenerjik hiperaktivite vardır; flaşbek ve kaçınma görülür; SSRI, venlafaksin ve EMDR etkilidir.",
+       "isCorrect": true,
+       "explanation": "Noradrenerjik hiperaktivite vardır; flaşbek ve kaçınma görülür; SSRI, venlafaksin ve EMDR etkilidir, travma ve stres bağlantılı bozukluklar kılavuzlarındaki tanısal ve klinik ilkelerle tam bir uyum içindedir. Bu yaklaşım psikiyatride kanıta dayalı hasta yönetiminin temel referansıdır."
+      },
+      {
+       "text": "Pankreatik yetmezlik temeldir; hasta sürekli manik coşku yaşar; sadece insülin verilir.",
+       "isCorrect": false,
+       "explanation": "Şıkta sözü edilen pankreatik yetmezlik temeldir; hasta sürekli manik coşku yaşar; sadece insülin verilir kavramı, farklı bir psikiyatrik sendromun veya başka bir basamağın özelliklerini yansıtır. Bu soruda hedeflenen klinik ilkelerle ve patofizyolojik dinamiklerle doğrudan örtüşmemektedir."
+      },
+      {
+       "text": "Beyin sapı tamamen körelmiştir; hasta uykusunda hiç rüya görmez; ilaç yasaktır.",
+       "isCorrect": false,
+       "explanation": "Şıkta sözü edilen beyin sapı tamamen körelmiştir; hasta uykusunda hiç rüya görmez; ilaç yasaktır kavramı, farklı bir psikiyatrik sendromun veya başka bir basamağın özelliklerini yansıtır. Bu soruda hedeflenen klinik ilkelerle ve patofizyolojik dinamiklerle doğrudan örtüşmemektedir."
+      },
+      {
+       "text": "Hastalar hiçbir zaman kaçınma sergilemezler; en etkili tedavi ömür boyu barbitürattır.",
+       "isCorrect": false,
+       "explanation": "Şıkta sözü edilen hastalar hiçbir zaman kaçınma sergilemezler; en etkili tedavi ömür boyu barbitürattır kavramı, farklı bir psikiyatrik sendromun veya başka bir basamağın özelliklerini yansıtır. Bu soruda hedeflenen klinik ilkelerle ve patofizyolojik dinamiklerle doğrudan örtüşmemektedir."
+      }
+     ]
+    },
+    {
+     "id": "k38-s10-s1",
+     "type": "swipe_matching",
+     "title": "TSSB Belirti ve Müdahale Eşleştirmesi",
+     "leftCategory": "Klinik Belirti",
+     "rightCategory": "Tedavi Müdahalesi",
+     "cards": [
+      {
+       "text": "İstemsiz flaşbekler ve travmatik kabuslarla uyanma",
+       "category": "left"
+      },
+      {
+       "text": "İlk basamakta SSRI veya venlafaksin başlanması",
+       "category": "right"
+      },
+      {
+       "text": "Hipervijilans ve abartılı irkilme tepkisi",
+       "category": "left"
+      },
+      {
+       "text": "EMDR ile çift yönlü uyarım ve duyarsızlaştırma seansları",
+       "category": "right"
+      }
+     ]
+    },
+    {
+     "id": "k38-s10-c1",
+     "type": "cloze_masking",
+     "sentence": "TSSB farmakoterapisinde iyileşme sağlandıktan sonra nüksü önlemek için idame tedavisi en az on iki ay sürdürülmelidir.",
+     "maskedTerm": "on iki ay",
+     "hint": "Bir yıllık asgari idame sağaltım zamanı."
+    },
+    {
+     "id": "k38-s10-t1",
+     "type": "interactive_table",
+     "title": "Bölüm 2 ve 3 Çekirdek Matrisi",
+     "tableHeaders": [
+      "Alan",
+      "Kritik Süreç",
+      "Klinik Karşılık"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Nörobiyoloji",
+         "isMasked": false
+        },
+        {
+         "text": "Noradrenerjik hiperaktivite",
+         "isMasked": true,
+         "hint": "Lokus seruleus sempatik deşarjı."
+        },
+        {
+         "text": "Taşikardi ve aşırı uyarılmışlık",
+         "isMasked": false
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Tedavi Süresi",
+         "isMasked": false
+        },
+        {
+         "text": "On iki ile yirmi dört ay arası",
+         "isMasked": true,
+         "hint": "Kronik nüksleri engelleyen idame dönemi."
+        },
+        {
+         "text": "Kalıcı remisyon sağlama",
+         "isMasked": false
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slideNumber": 11,
+   "title": "Uyum Bozuklukları Tanımı ve Epidemiyolojisi",
+   "bolum": 4,
+   "pdfSayfalari": [
+    16,
+    18
+   ],
+   "sourcePdf": {
+    "name": "y25-k2-38-travma-ve-stres-baglantili-bozukluklar.pdf",
+    "startPage": 16,
+    "endPage": 18
+   },
+   "content": "Uyum bozuklukları, yaşam koşullarındaki önemli bir değişikliğe ya da stresli bir yaşam olayının sonuçlarına uyum sağlama sürecinde ortaya çıkan tablolardır.\n\n- **Klinik Tanım:** Belirlenebilir bir psikososyal stres etkenine tepki olarak gelişen; belirgin sıkıntı, duygusal ve davranışsal belirtilerle giden ruhsal bozukluktur.\n- **İşlevsellik Kaybı:** Kişinin toplumsal, mesleki veya eğitimsel işlevselliğinde belirgin bozulma yaratır.\n- **Poliklinik Sıklığı:** Genel psikiyatri polikliniklerine başvuran hastaların yaklaşık %5-10'u uyum bozukluğu tanısı almaktadır.\n- **Konsültasyon Sıklığı:** Genel hastanelerde yatan ve diğer kliniklerden psikiyatri konsültasyonu istenen medikal/cerrahi hastalarda bu oran %50'ye kadar ulaşabilmektedir.\n- **Cinsiyet:** Kadınlarda görülme sıklığı erkeklere göre 2 kat fazladır.\n\n> [!IMPORTANT]\n> Konsültasyon-liyezon psikiyatrisinde en sık konulan tanılardan biri uyum bozukluğudur; fiziksel hastalık tanısı almak ve hastaneye yatış başlı başına güçlü bir stresördür.",
+   "interactiveElements": [
+    {
+     "id": "k38-s11-q1",
+     "type": "micro_quiz",
+     "question": "Uyum bozukluğunun epidemiyolojik dağılımı ve genel hastane konsültasyonlarındaki sıklığı hakkında hangisi doğrudur?",
+     "options": [
+      {
+       "text": "Psikiyatri polikliniklerinde %5-10, konsültasyon istenen yatan hastalarda %50'ye kadar varır; kadınlarda iki kat sıktır.",
+       "isCorrect": true,
+       "explanation": "Psikiyatri polikliniklerinde %5-10, konsültasyon istenen yatan hastalarda %50'ye kadar varır; kadınlarda iki kat sıktır, travma ve stres bağlantılı bozukluklar kılavuzlarındaki tanısal ve klinik ilkelerle tam bir uyum içindedir. Bu yaklaşım psikiyatride kanıta dayalı hasta yönetiminin temel referansıdır."
+      },
+      {
+       "text": "Genel hastanede yatan hastalarda sıklığı daima sıfırdır, asla konsültasyon istenmez.",
+       "isCorrect": false,
+       "explanation": "Şıkta sözü edilen genel hastanede yatan hastalarda sıklığı daima sıfırdır, asla konsültasyon istenmez kavramı, farklı bir psikiyatrik sendromun veya başka bir basamağın özelliklerini yansıtır. Bu soruda hedeflenen klinik ilkelerle ve patofizyolojik dinamiklerle doğrudan örtüşmemektedir."
+      },
+      {
+       "text": "Erkeklerde kadınlara göre on kat daha sık görülür ve yalnızca bebeklikte tanı alır.",
+       "isCorrect": false,
+       "explanation": "Şıkta sözü edilen erkeklerde kadınlara göre on kat daha sık görülür ve yalnızca bebeklikte tanı alır kavramı, farklı bir psikiyatrik sendromun veya başka bir basamağın özelliklerini yansıtır. Bu soruda hedeflenen klinik ilkelerle ve patofizyolojik dinamiklerle doğrudan örtüşmemektedir."
+      },
+      {
+       "text": "Kişinin mesleki veya sosyal işlevselliğinde hiçbir zaman bozulma yaratmaz.",
+       "isCorrect": false,
+       "explanation": "Şıkta sözü edilen kişinin mesleki veya sosyal işlevselliğinde hiçbir zaman bozulma yaratmaz kavramı, farklı bir psikiyatrik sendromun veya başka bir basamağın özelliklerini yansıtır. Bu soruda hedeflenen klinik ilkelerle ve patofizyolojik dinamiklerle doğrudan örtüşmemektedir."
+      }
+     ]
+    },
+    {
+     "id": "k38-s11-c1",
+     "type": "cloze_masking",
+     "sentence": "Genel hastanede yatan ve psikiyatri konsültasyonu istenen hastaların yüzde ellisine varan kısmında uyum bozukluğu saptanır.",
+     "maskedTerm": "yüzde ellisine",
+     "hint": "Servislerde yatan hastalardaki yarı yarıya oran."
+    },
+    {
+     "id": "k38-s11-t1",
+     "type": "interactive_table",
+     "title": "Uyum Bozukluğu Başvuru Alanları Prevalansı",
+     "tableHeaders": [
+      "Klinik Ortam",
+      "Görülme Sıklığı",
+      "Cinsiyet Eğilimi"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Ayaktan Psikiyatri Polikliniği",
+         "isMasked": false
+        },
+        {
+         "text": "Yüzde beş ile on arası",
+         "isMasked": true,
+         "hint": "Ayaktan başvuran hastalardaki oran."
+        },
+        {
+         "text": "Kadınlarda iki kat sık",
+         "isMasked": false
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Yatan Hasta Konsültasyonu",
+         "isMasked": false
+        },
+        {
+         "text": "Yüzde elliye kadar ulaşır",
+         "isMasked": true,
+         "hint": "Fiziksel servislerde yatan konsültasyon sıklığı."
+        },
+        {
+         "text": "Cerrahi ve onkolojide yüksek",
+         "isMasked": false
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k38-s11-l1",
+     "type": "spot_the_lie",
+     "topic": "Uyum Bozukluğu Epidemiyolojisi",
+     "items": [
+      {
+       "text": "Uyum bozukluğu çocukluktan ileri yaşa kadar hemen her yaşta gelişebilir.",
+       "isLie": false,
+       "explanation": "Her yaş dönemi kendine özgü yaşam stresörleriyle tabloyu tetikleyebilir."
+      },
+      {
+       "text": "Kadınlarda görülme sıklığı erkeklere kıyasla 2 kat daha fazladır.",
+       "isLie": false,
+       "explanation": "Epidemiyolojik kayıtlar kadınlarda iki katlık belirgin bir baskınlık gösterir."
+      },
+      {
+       "text": "Uyum bozukluğu olan bireyler hiçbir duygusal ya da davranışsal sıkıntı yaşamazlar.",
+       "isLie": true,
+       "explanation": "Aksine, belirgin sıkıntı ve işlevsellik kaybı tablonun zorunlu tanı ölçütüdür."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slideNumber": 12,
+   "title": "Uyum Bozukluğu Etyolojisi ve Kırılma Noktası",
+   "bolum": 4,
+   "pdfSayfalari": [
+    19,
+    20
+   ],
+   "sourcePdf": {
+    "name": "y25-k2-38-travma-ve-stres-baglantili-bozukluklar.pdf",
+    "startPage": 19,
+    "endPage": 20
+   },
+   "content": "Uyum bozukluğunun etyolojisinde tetikleyici psikososyal stresör ile bireyin kırılganlığı arasındaki etkileşim belirleyicidir.\n\n- **Psikososyal Stresörler:** Tek bir olaya bağlı olabileceği gibi çoklu, tekrarlayıcı veya kronik nitelikte olabilir. Tek bir bireyi, aileyi veya toplumu (göç, doğal afet) etkileyebilir.\n- **Yaşa Göre Stresör Dağılımı:**\n  - *Ergenlerde:* Okul sorunları, akademik başarısızlık, akran zorbalığı, ebeveyn çatışmaları veya boşanma.\n  - *Yetişkinlerde:* Evlilik sorunları, boşanma, iflas, işsizlik ve kronik fiziksel sağlık sorunları.\n- **Bireysel Kırılma Noktası:** Her insanın baş etme kapasitesi ve kırılma noktası farklıdır; stresörün şiddeti, örseleyici çocukluk yaşantıları ve kişilik özellikleri (mükemmeliyetçilik vb.) riski tayin eder.\n\n> [!NOTE]\n> Stres etkeni mutlaka kurbanın kendi öznel algılama çerçevesinde değerlendirilmelidir; dışarıdan önemsiz görünen bir olay kişi için varoluşsal bir kriz olabilir.",
+   "interactiveElements": [
+    {
+     "id": "k38-s12-q1",
+     "type": "micro_quiz",
+     "question": "Uyum bozukluğunun etyolojik dinamikleri ve yaş gruplarına göre stresör dağılımıyla ilgili hangisi doğrudur?",
+     "options": [
+      {
+       "text": "Ergenlerde okul, akran ve boşanma sorunları; yetişkinlerde evlilik, işsizlik ve sağlık sorunları öndedir.",
+       "isCorrect": true,
+       "explanation": "Ergenlerde okul, akran ve boşanma sorunları; yetişkinlerde evlilik, işsizlik ve sağlık sorunları öndedir, travma ve stres bağlantılı bozukluklar kılavuzlarındaki tanısal ve klinik ilkelerle tam bir uyum içindedir. Bu yaklaşım psikiyatride kanıta dayalı hasta yönetiminin temel referansıdır."
+      },
+      {
+       "text": "Yetişkinlerde yalnızca okuldan kaçma; ergenlerde ise sadece emeklilik problemleri görülür.",
+       "isCorrect": false,
+       "explanation": "Şıkta sözü edilen yetişkinlerde yalnızca okuldan kaçma; ergenlerde ise sadece emeklilik problemleri görülür kavramı, farklı bir psikiyatrik sendromun veya başka bir basamağın özelliklerini yansıtır. Bu soruda hedeflenen klinik ilkelerle ve patofizyolojik dinamiklerle doğrudan örtüşmemektedir."
+      },
+      {
+       "text": "Tüm insanların kırılma noktası ve psikolojik dayanıklılığı matematiksel olarak tamamen aynıdır.",
+       "isCorrect": false,
+       "explanation": "Şıkta sözü edilen tüm insanların kırılma noktası ve psikolojik dayanıklılığı matematiksel olarak tamamen aynıdır kavramı, farklı bir psikiyatrik sendromun veya başka bir basamağın özelliklerini yansıtır. Bu soruda hedeflenen klinik ilkelerle ve patofizyolojik dinamiklerle doğrudan örtüşmemektedir."
+      },
+      {
+       "text": "Uyum bozukluğunda hiçbir psikososyal stresör bulunmaz; tamamen genetik mutasyondur.",
+       "isCorrect": false,
+       "explanation": "Şıkta sözü edilen uyum bozukluğunda hiçbir psikososyal stresör bulunmaz; tamamen genetik mutasyondur kavramı, farklı bir psikiyatrik sendromun veya başka bir basamağın özelliklerini yansıtır. Bu soruda hedeflenen klinik ilkelerle ve patofizyolojik dinamiklerle doğrudan örtüşmemektedir."
+      }
+     ]
+    },
+    {
+     "id": "k38-s12-c1",
+     "type": "cloze_masking",
+     "sentence": "Kişilik özellikleri ve çocukluk yaşantılarına bağlı olarak her bireyin stres karşısında dekompanse olduğu kırılma noktası farklıdır.",
+     "maskedTerm": "kırılma noktası",
+     "hint": "Bireyin psikolojik tolerans eşiğini ifade eden kavram."
+    },
+    {
+     "id": "k38-s12-t1",
+     "type": "interactive_table",
+     "title": "Yaş Dönemlerine Göre Tipik Stresörler",
+     "tableHeaders": [
+      "Gelişimsel Dönem",
+      "En Sık Psikososyal Stresör",
+      "Etyolojik Odak"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Ergenlik Dönemi",
+         "isMasked": false
+        },
+        {
+         "text": "Okul ve akran sorunları",
+         "isMasked": true,
+         "hint": "Eğitim ve arkadaş çevresi çatışmaları."
+        },
+        {
+         "text": "Anne-baba boşanması",
+         "isMasked": false
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Yetişkinlik Dönemi",
+         "isMasked": false
+        },
+        {
+         "text": "Evlilik ve ekonomik krizler",
+         "isMasked": true,
+         "hint": "Ailesel geçimsizlik ve maddi kayıplar."
+        },
+        {
+         "text": "Kronik medikal hastalıklar",
+         "isMasked": false
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k38-s12-l1",
+     "type": "spot_the_lie",
+     "topic": "Uyum Bozukluğu Etyolojisi",
+     "items": [
+      {
+       "text": "Stres etkeni tek bir bireyi etkileyebileceği gibi göç gibi tüm toplumu da etkileyebilir.",
+       "isLie": false,
+       "explanation": "Toplumsal ve kitlesel stresörler geniş gruplarda uyum sorunları doğurabilir."
+      },
+      {
+       "text": "Mükemmeliyetçi kişilik özellikleri uyum bozukluğu gelişimi için bir risk etkenidir.",
+       "isLie": false,
+       "explanation": "Katı ve mükemmeliyetçi bireyler değişimlere uyum sağlamakta daha fazla zorlanırlar."
+      },
+      {
+       "text": "Stresörün kişinin dünyasındaki öznel algısının hiçbir klinik önemi bulunmaz.",
+       "isLie": true,
+       "explanation": "Stres etkeni mutlaka bireyin öznel algılaması ve yüklediği anlam çerçevesinde değerlendirilir."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slideNumber": 13,
+   "title": "Klinik Alt Tipler ve Tanı Ölçütleri",
+   "bolum": 4,
+   "pdfSayfalari": [
+    21,
+    23
+   ],
+   "sourcePdf": {
+    "name": "y25-k2-38-travma-ve-stres-baglantili-bozukluklar.pdf",
+    "startPage": 21,
+    "endPage": 23
+   },
+   "content": "Uyum bozukluğu, stresörün ortaya çıkışından sonra genellikle 3 ay içinde başlar ve klinik görünümüne göre alt tiplere ayrılır.\n\n- **Klinik Alt Tipler:**\n  - *Depresif Duygudurumlu:* Çökkün mizaç, ağlama nöbetleri ve umutsuzluk.\n  - *Anksiyeteli:* Aşırı kaygı, sinirlilik, çarpıntı ve hiperventilasyon.\n  - *Davranım Bozukluğu ile Giden:* Saldırganlık, kavga etme, kuralları çiğneme, okuldan kaçma.\n  - *Karma Tipler:* Depresyon ve anksiyetenin ya da duygusal ve davranım sorunlarının bir arada olduğu formlar.\n- **Yaş Gruplarına Göre Görünüm:** Ergenlerde davranım bozukluğu belirtileri önde iken, yetişkinlerde anksiyete ve depresif belirtiler baskındır.\n- **Kritik Süre Sınırı:** Tetikleyici stresör veya sonuçları ortadan kalktıktan sonra belirtiler bir 6 aydan daha uzun süre devam edemez.\n\n> [!IMPORTANT]\n> Alkol-madde kullanımı veya B kümesi kişilik bozukluğu eşlik eden uyum bozukluğu hastalarında intihar eğilimi belirgin biçimde artış gösterir.",
+   "interactiveElements": [
+    {
+     "id": "k38-s13-q1",
+     "type": "micro_quiz",
+     "question": "Uyum bozukluğu tanı ölçütleri ve klinik alt tipleri ile ilgili aşağıdaki ifadelerden hangisi doğrudur?",
+     "options": [
+      {
+       "text": "Stresörden sonra 3 ayda başlar; stresör bitince 6 ayı geçmez; ergenlerde davranım, yetişkinlerde anksiyete/depresyon öndedir.",
+       "isCorrect": true,
+       "explanation": "Stresörden sonra 3 ayda başlar; stresör bitince 6 ayı geçmez; ergenlerde davranım, yetişkinlerde anksiyete/depresyon öndedir, travma ve stres bağlantılı bozukluklar kılavuzlarındaki tanısal ve klinik ilkelerle tam bir uyum içindedir. Bu yaklaşım psikiyatride kanıta dayalı hasta yönetiminin temel referansıdır."
+      },
+      {
+       "text": "Stresör bittikten sonra tam 15 yıl boyunca aralıksız sürmesi zorunlu tanı şartıdır.",
+       "isCorrect": false,
+       "explanation": "Şıkta sözü edilen stresör bittikten sonra tam 15 yıl boyunca aralıksız sürmesi zorunlu tanı şartıdır kavramı, farklı bir psikiyatrik sendromun veya başka bir basamağın özelliklerini yansıtır. Bu soruda hedeflenen klinik ilkelerle ve patofizyolojik dinamiklerle doğrudan örtüşmemektedir."
+      },
+      {
+       "text": "Ergenlerde yalnızca derin katatonik uyku görülür; davranım sorunları asla gelişmez.",
+       "isCorrect": false,
+       "explanation": "Şıkta sözü edilen ergenlerde yalnızca derin katatonik uyku görülür; davranım sorunları asla gelişmez kavramı, farklı bir psikiyatrik sendromun veya başka bir basamağın özelliklerini yansıtır. Bu soruda hedeflenen klinik ilkelerle ve patofizyolojik dinamiklerle doğrudan örtüşmemektedir."
+      },
+      {
+       "text": "Alkol ve madde kullanımı eşlik ettiğinde intihar riski tamamen sıfırlanır.",
+       "isCorrect": false,
+       "explanation": "Şıkta sözü edilen alkol ve madde kullanımı eşlik ettiğinde intihar riski tamamen sıfırlanır kavramı, farklı bir psikiyatrik sendromun veya başka bir basamağın özelliklerini yansıtır. Bu soruda hedeflenen klinik ilkelerle ve patofizyolojik dinamiklerle doğrudan örtüşmemektedir."
+      }
+     ]
+    },
+    {
+     "id": "k38-s13-c1",
+     "type": "cloze_masking",
+     "sentence": "Uyum bozukluğunda tetikleyici stres etkeni sonlandıktan sonra belirtiler en fazla altı ay daha devam edebilir.",
+     "maskedTerm": "altı ay",
+     "hint": "Stresör kalktıktan sonraki azami klinik süre sınırı."
+    },
+    {
+     "id": "k38-s13-t1",
+     "type": "interactive_table",
+     "title": "Uyum Bozukluğu Klinik Alt Tipleri Tablosu",
+     "tableHeaders": [
+      "Alt Tip Adı",
+      "Baskın Belirtiler",
+      "En Sık Görülen Popülasyon"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Depresif / Anksiyeteli",
+         "isMasked": false
+        },
+        {
+         "text": "Çökkünlük, kaygı ve çarpıntı",
+         "isMasked": true,
+         "hint": "İçselleştirilmiş duygudurum belirtileri."
+        },
+        {
+         "text": "Yetişkin hastalar",
+         "isMasked": false
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Davranım Bozukluğu ile Giden",
+         "isMasked": false
+        },
+        {
+         "text": "Kavga, saldırganlık ve okuldan kaçma",
+         "isMasked": true,
+         "hint": "Dışa vuran kural tanımaz davranışlar."
+        },
+        {
+         "text": "Ergen olgular",
+         "isMasked": false
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k38-s13-l1",
+     "type": "spot_the_lie",
+     "topic": "Uyum Bozukluğu Klinik Özellikleri",
+     "items": [
+      {
+       "text": "Uyum bozukluğu belirtileri olağan yas tepkisi sınırlarını aşan bir klinik tablodur.",
+       "isLie": false,
+       "explanation": "Kültürel olarak beklenen normal yas reaksiyonları uyum bozukluğu sayılmaz."
+      },
+      {
+       "text": "Ergenlerde uyum bozukluğu sıklıkla okuldan kaçma ve kavga etme gibi davranım sorunlarıyla dışa vurur.",
+       "isLie": false,
+       "explanation": "Gelişimsel olarak ergenler içsel sıkıntılarını eyleme vurma davranışıyla sergilerler."
+      },
+      {
+       "text": "Stresör ortadan kalksa bile uyum bozukluğu tanısı için belirtilerin 5 yıl sürmesi şarttır.",
+       "isLie": true,
+       "explanation": "Stresör bittikten sonra belirtiler 6 aydan daha uzun süre devam edemez."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slideNumber": 14,
+   "title": "Uyum Bozukluğunda Ayırıcı Tanı ve Prognoz",
+   "bolum": 5,
+   "pdfSayfalari": [
+    24,
+    25
+   ],
+   "sourcePdf": {
+    "name": "y25-k2-38-travma-ve-stres-baglantili-bozukluklar.pdf",
+    "startPage": 24,
+    "endPage": 25
+   },
+   "content": "Uyum bozukluğu, psikiyatride başka bir özgül ruhsal bozukluk tanısının konamadığı klinik durumları tanımlayan 'artık bir tanıdır'.\n\n- **Ayırıcı Tanı:** Majör depresyon, yaygın anksiyete bozukluğu, panik bozukluk, TSSB, yas tepkisi ve kişilik bozuklukları dışlanmalıdır. Eğer tablo majör depresyon tanı ölçütlerini tam karşılıyorsa uyum bozukluğu değil, majör depresyon tanısı konur.\n- **Seyir ve İyileşme:** Stres etkeni sonlandıktan sonra genellikle 6 ay içinde tam iyileşme izlenir.\n- **Ergen ve Yetişkin Prognoz Farkı:** Yetişkinlerde seyir belirgin şekilde daha olumludur.\n  - *Yetişkinlerde:* Beş yıllık izlem sonunda %79 oranında tam iyilik saptanır.\n  - *Ergenlerde:* Beş yıllık izlemde iyilik oranı %57'de kalır; olguların %43'ü izlem sürecinde şizofreni, majör depresyon, madde bağımlılığı veya antisosyal kişilik bozukluğu tanıları alır.\n\n> [!IMPORTANT]\n> Ergenlikteki uyum bozukluğu, gelecekte gelişebilecek daha ağır psikiyatrik tabloların erken habercisi olabileceği için dikkatle izlenmelidir.",
+   "interactiveElements": [
+    {
+     "id": "k38-s14-q1",
+     "type": "micro_quiz",
+     "question": "Uyum bozukluğunun 'artık tanı' özelliği ve uzun dönem prognozu hakkında hangisi doğrudur?",
+     "options": [
+      {
+       "text": "Başka bir özgül tanı konamadığında konur; yetişkinlerde prognoz (%79 iyilik) ergenlere göre çok daha iyidir.",
+       "isCorrect": true,
+       "explanation": "Başka bir özgül tanı konamadığında konur; yetişkinlerde prognoz (%79 iyilik) ergenlere göre çok daha iyidir, travma ve stres bağlantılı bozukluklar kılavuzlarındaki tanısal ve klinik ilkelerle tam bir uyum içindedir. Bu yaklaşım psikiyatride kanıta dayalı hasta yönetiminin temel referansıdır."
+      },
+      {
+       "text": "Tablo majör depresyon ölçütlerini tam karşılasa bile daima uyum bozukluğu denir.",
+       "isCorrect": false,
+       "explanation": "Şıkta sözü edilen tablo majör depresyon ölçütlerini tam karşılasa bile daima uyum bozukluğu denir kavramı, farklı bir psikiyatrik sendromun veya başka bir basamağın özelliklerini yansıtır. Bu soruda hedeflenen klinik ilkelerle ve patofizyolojik dinamiklerle doğrudan örtüşmemektedir."
+      },
+      {
+       "text": "Ergenlerin %100'ü hemen iyileşirken yetişkinlerin tamamı antisosyal kişilik olur.",
+       "isCorrect": false,
+       "explanation": "Şıkta sözü edilen ergenlerin %100'ü hemen iyileşirken yetişkinlerin tamamı antisosyal kişilik olur kavramı, farklı bir psikiyatrik sendromun veya başka bir basamağın özelliklerini yansıtır. Bu soruda hedeflenen klinik ilkelerle ve patofizyolojik dinamiklerle doğrudan örtüşmemektedir."
+      },
+      {
+       "text": "Uyum bozukluğu hiçbir zaman organik hastalıklardan veya yastan ayırt edilemez.",
+       "isCorrect": false,
+       "explanation": "Şıkta sözü edilen uyum bozukluğu hiçbir zaman organik hastalıklardan veya yastan ayırt edilemez kavramı, farklı bir psikiyatrik sendromun veya başka bir basamağın özelliklerini yansıtır. Bu soruda hedeflenen klinik ilkelerle ve patofizyolojik dinamiklerle doğrudan örtüşmemektedir."
+      }
+     ]
+    },
+    {
+     "id": "k38-s14-c1",
+     "type": "cloze_masking",
+     "sentence": "Başka bir özgül psikiyatrik bozukluk ölçütü tam karşılanamadığında konulan dışlama tanısına artık tanı adı verilir.",
+     "maskedTerm": "artık tanı",
+     "hint": "Özgül kategoriler elendikten sonra kalan teşhis biçimi."
+    },
+    {
+     "id": "k38-s14-t1",
+     "type": "interactive_table",
+     "title": "Beş Yıllık İzlemde Uyum Bozukluğu Prognozu",
+     "tableHeaders": [
+      "Grup",
+      "Tam İyilik Oranı",
+      "Ağır Psikiyatrik Tanı Riski"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Yetişkin Hastalar",
+         "isMasked": false
+        },
+        {
+         "text": "Yüzde yetmiş dokuz",
+         "isMasked": true,
+         "hint": "Büyük çoğunluğu kapsayan iyilik oranı."
+        },
+        {
+         "text": "Düşük oranda kronikleşme",
+         "isMasked": false
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Ergen Hastalar",
+         "isMasked": false
+        },
+        {
+         "text": "Yüzde elli yedi",
+         "isMasked": true,
+         "hint": "Ergenlerdeki daha sınırlı iyilik oranı."
+        },
+        {
+         "text": "Yüzde kırk üç majör tanıya evrilme",
+         "isMasked": false
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k38-s14-l1",
+     "type": "spot_the_lie",
+     "topic": "Uyum Bozukluğunda Ayırıcı Tanı ve Prognoz",
+     "items": [
+      {
+       "text": "Uyum bozukluğu bir dışlama tanısıdır ve ayırıcı tanı titizlikle yapılmalıdır.",
+       "isLie": false,
+       "explanation": "Majör depresyon gibi özgül bir tanı varlığında uyum bozukluğu tanısı konamaz."
+      },
+      {
+       "text": "Ergenlerde izlem sürecinde madde kullanımı veya antisosyal kişilik gelişme riski mevcuttur.",
+       "isLie": false,
+       "explanation": "İzlem çalışmalarında ergenlerin %43'ünde başka majör tanılar saptanmıştır."
+      },
+      {
+       "text": "Yetişkinlerde uyum bozukluğunun gidişatı ergenlere kıyasla çok daha kötüdür.",
+       "isLie": true,
+       "explanation": "Aksine, yetişkinlerde %79 iyileşme ile prognoz ergenlere göre belirgin şekilde daha olumludur."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slideNumber": 15,
+   "title": "Uyum Bozukluğunda Farmakoterapi İlkeleri",
+   "bolum": 5,
+   "pdfSayfalari": [
+    26,
+    26
+   ],
+   "sourcePdf": {
+    "name": "y25-k2-38-travma-ve-stres-baglantili-bozukluklar.pdf",
+    "startPage": 26,
+    "endPage": 26
+   },
+   "content": "Uyum bozukluğunda ilaç tedavisi birincil küratif yaklaşım değildir; farmakoterapi semptom kontrolüyle sınırlandırılmalıdır.\n\n- **Semptom Odaklı Seçim:** İlaç seçimi hastada önde olan klinik belirtiye göre yapılır.\n  - *Şiddetli Anksiyete:* Kısa süreli ve kontrollü benzodiazepin kullanımı düşünülebilir.\n  - *Uykusuzluk ve Gece Sıkıntısı:* Bağımlılık yapmayan sedatif ajanlar (hidroksizin, düşük doz trazodon veya mianserin) gece uykusunu düzenlemek için kısa süreli verilebilir.\n  - *Dirençli Depresif Belirtiler:* Anhedonisi belirgin olan ve psikoterapiden tek başına yarar görmeyen olgularda antidepresanlar kısa süreli eklenebilir.\n- **Gereksiz İlaçtan Kaçınma İlkesi:** Ağır belirtilerle seyretmeyen hafif ve orta uyum bozukluğu tablolarında psikotrop ilaç kullanımından kesinlikle kaçınılmalıdır.\n\n> [!IMPORTANT]\n> Uyum bozukluğu doğal baş etme mekanizmalarının zorlandığı bir tablodur; gereksiz uzun süreli psikotrop kullanımı hastanın kendi problem çözme yetisini köreltebilir.",
+   "interactiveElements": [
+    {
+     "id": "k38-s15-q1",
+     "type": "micro_quiz",
+     "question": "Uyum bozukluğunda farmakoterapi ilkeleri ve ilaç kullanım endikasyonlarıyla ilgili hangisi doğrudur?",
+     "options": [
+      {
+       "text": "İlaçlar önde olan semptomlara yönelik kısa süreli kullanılır; hafif olgularda psikotropiklerden kaçınılır.",
+       "isCorrect": true,
+       "explanation": "İlaçlar önde olan semptomlara yönelik kısa süreli kullanılır; hafif olgularda psikotropiklerden kaçınılır, travma ve stres bağlantılı bozukluklar kılavuzlarındaki tanısal ve klinik ilkelerle tam bir uyum içindedir. Bu yaklaşım psikiyatride kanıta dayalı hasta yönetiminin temel referansıdır."
+      },
+      {
+       "text": "Tüm hastalara tanı konur konmaz ömür boyu kesintisiz üçlü antipsikotik başlanır.",
+       "isCorrect": false,
+       "explanation": "Şıkta sözü edilen tüm hastalara tanı konur konmaz ömür boyu kesintisiz üçlü antipsikotik başlanır kavramı, farklı bir psikiyatrik sendromun veya başka bir basamağın özelliklerini yansıtır. Bu soruda hedeflenen klinik ilkelerle ve patofizyolojik dinamiklerle doğrudan örtüşmemektedir."
+      },
+      {
+       "text": "Anksiyete için hastaya ömür boyu yüksek doz morfin reçete edilmelidir.",
+       "isCorrect": false,
+       "explanation": "Şıkta sözü edilen anksiyete için hastaya ömür boyu yüksek doz morfin reçete edilmelidir kavramı, farklı bir psikiyatrik sendromun veya başka bir basamağın özelliklerini yansıtır. Bu soruda hedeflenen klinik ilkelerle ve patofizyolojik dinamiklerle doğrudan örtüşmemektedir."
+      },
+      {
+       "text": "Uykusuzluk çeken hastalara hiçbir destek verilmeden sadece uyanık kalmaları söylenir.",
+       "isCorrect": false,
+       "explanation": "Şıkta sözü edilen uykusuzluk çeken hastalara hiçbir destek verilmeden sadece uyanık kalmaları söylenir kavramı, farklı bir psikiyatrik sendromun veya başka bir basamağın özelliklerini yansıtır. Bu soruda hedeflenen klinik ilkelerle ve patofizyolojik dinamiklerle doğrudan örtüşmemektedir."
+      }
+     ]
+    },
+    {
+     "id": "k38-s15-c1",
+     "type": "cloze_masking",
+     "sentence": "Uyum bozukluğu tedavisinde uykusuzluğu düzenlemek için bağımlılık yapmayan sedatif ilaçlar kısa süreli kullanılabilir.",
+     "maskedTerm": "kısa süreli",
+     "hint": "Aylarca sürdürülmeyen geçici kullanım yaklaşımı."
+    },
+    {
+     "id": "k38-s15-r1",
+     "type": "active_recall",
+     "question": "Hafif seyirli bir uyum bozukluğu olgusunda hekimin ilaç tedavisinden kaçınmasının temel klinik gerekçesi nedir?",
+     "answer": "Gereksiz psikotrop kullanımının yan etki doğurabilmesi ve hastanın kendi doğal baş etme ve problem çözme becerilerini geliştirmesini engellemesidir."
+    },
+    {
+     "id": "k38-s15-l1",
+     "type": "spot_the_lie",
+     "topic": "Uyum Bozukluğu Farmakoterapisi",
+     "items": [
+      {
+       "text": "Anksiyete belirtileri belirgin hastalarda kısa süreli benzodiazepin verilebilir.",
+       "isLie": false,
+       "explanation": "Kısa süreli semptomatik rahatlama sağlamak amacıyla düşük doz tercih edilebilir."
+      },
+      {
+       "text": "Uykusuzluk için trazodon veya hidroksizin gibi sedatif etkili ajanlar seçilebilir.",
+       "isLie": false,
+       "explanation": "Uyku mimarisini toparlamak için bağımlılık yapmayan bu ajanlar yararlıdır."
+      },
+      {
+       "text": "Uyum bozukluğunda ilk adım istisnasız tüm hastalara 5 yıllık yüksek doz lityum başlamaktır.",
+       "isLie": true,
+       "explanation": "Lityum bipolar bozukluk için duygudurum dengeleyicisidir; uyum bozukluğunda yeri yoktur."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slideNumber": 16,
+   "title": "Psikososyal Tedaviler ve Müdahaleler",
+   "bolum": 5,
+   "pdfSayfalari": [
+    27,
+    27
+   ],
+   "sourcePdf": {
+    "name": "y25-k2-38-travma-ve-stres-baglantili-bozukluklar.pdf",
+    "startPage": 27,
+    "endPage": 27
+   },
+   "content": "Uyum bozukluğunun tedavisinde en etkili ve kalıcı yöntem psikososyal müdahaleler ve psikoterapötik yaklaşımlardır.\n\n- **Tedavi Biçimleri:** Hastanın ihtiyacına göre bireysel psikoterapi, aile terapisi veya grup terapileri uygulanır.\n- **Bireysel Terapiler:**\n  - *Bilişsel Davranışçı Terapi (BDT):* Stresörün algılanışındaki felaketleştirici bilişsel çarpıtmaları düzeltmeyi ve problem çözme becerisi kazandırmayı amaçlar.\n  - *Destekleyici Psikoterapi:* Terapötik ittifak kurarak hastanın benlik saygısını güçlendirir ve kriz anındaki çaresizlik hissini yatıştırır.\n  - *Kişilerarası Psikoterapi:* Rol geçişleri, boşanma ve ilişki çatışmalarına uyum sağlamada odaklanır.\n  - *Psikodinamik Psikoterapi:* Stresörün tetiklediği bilinçdışı çatışmaları ve geçmiş yaşantı bağlantılarını aydınlatır.\n\n> [!IMPORTANT]\n> Aile terapisi, özellikle ergen olgularda ebeveyn-çocuk çatışmalarını çözerek tablonun kronikleşmesini ve davranım bozukluğuna evrilmesini önlemede kritiktir.",
+   "interactiveElements": [
+    {
+     "id": "k38-s16-q1",
+     "type": "micro_quiz",
+     "question": "Uyum bozukluğu tedavisinde uygulanan psikososyal yaklaşımlar ve terapilerle ilgili hangisi doğrudur?",
+     "options": [
+      {
+       "text": "Bilişsel davranışçı, destekleyici, kişilerarası terapiler ve aile müdahaleleri temel tedavidir.",
+       "isCorrect": true,
+       "explanation": "Bilişsel davranışçı, destekleyici, kişilerarası terapiler ve aile müdahaleleri temel tedavidir, travma ve stres bağlantılı bozukluklar kılavuzlarındaki tanısal ve klinik ilkelerle tam bir uyum içindedir. Bu yaklaşım psikiyatride kanıta dayalı hasta yönetiminin temel referansıdır."
+      },
+      {
+       "text": "Hastalar toplumdan tamamen izole edilerek konuşmaları kesin olarak yasaklanmalıdır.",
+       "isCorrect": false,
+       "explanation": "Şıkta sözü edilen hastalar toplumdan tamamen izole edilerek konuşmaları kesin olarak yasaklanmalıdır kavramı, farklı bir psikiyatrik sendromun veya başka bir basamağın özelliklerini yansıtır. Bu soruda hedeflenen klinik ilkelerle ve patofizyolojik dinamiklerle doğrudan örtüşmemektedir."
+      },
+      {
+       "text": "Aile görüşmeleri hastanın durumunu her zaman kötüleştirdiği için tıbben kontrendikedir.",
+       "isCorrect": false,
+       "explanation": "Şıkta sözü edilen aile görüşmeleri hastanın durumunu her zaman kötüleştirdiği için tıbben kontrendikedir kavramı, farklı bir psikiyatrik sendromun veya başka bir basamağın özelliklerini yansıtır. Bu soruda hedeflenen klinik ilkelerle ve patofizyolojik dinamiklerle doğrudan örtüşmemektedir."
+      },
+      {
+       "text": "Uyum bozukluğunda psikoterapinin hiçbir faydası yoktur, yalnızca cerrahi uygulanır.",
+       "isCorrect": false,
+       "explanation": "Şıkta sözü edilen uyum bozukluğunda psikoterapinin hiçbir faydası yoktur, yalnızca cerrahi uygulanır kavramı, farklı bir psikiyatrik sendromun veya başka bir basamağın özelliklerini yansıtır. Bu soruda hedeflenen klinik ilkelerle ve patofizyolojik dinamiklerle doğrudan örtüşmemektedir."
+      }
+     ]
+    },
+    {
+     "id": "k38-s16-c1",
+     "type": "cloze_masking",
+     "sentence": "Ergenlerde uyum bozukluğu sağaltımında ebeveyn çatışmalarını çözmek için aile tedavileri uygulanır.",
+     "maskedTerm": "aile tedavileri",
+     "hint": "Ebeveyn ve çocuk dinamiklerini hedef alan sistemik terapi."
+    },
+    {
+     "id": "k38-s16-t1",
+     "type": "interactive_table",
+     "title": "Uyum Bozukluğu Psikoterapi Modaliteleri",
+     "tableHeaders": [
+      "Terapi Türü",
+      "Temel Amaç",
+      "Klinik Yarar"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Bilişsel Davranışçı Terapi",
+         "isMasked": false
+        },
+        {
+         "text": "Bilişsel çarpıtmaları onarma",
+         "isMasked": true,
+         "hint": "Stresörün algılanışındaki hataları düzeltme."
+        },
+        {
+         "text": "Problem çözme becerisi",
+         "isMasked": false
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Destekleyici Terapi",
+         "isMasked": false
+        },
+        {
+         "text": "Ego gücünü ve benliği pekiştirme",
+         "isMasked": true,
+         "hint": "Kriz anındaki çaresizliği dindirme çabası."
+        },
+        {
+         "text": "Uyum kapasitesini artırma",
+         "isMasked": false
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k38-s16-l1",
+     "type": "spot_the_lie",
+     "topic": "Psikososyal Tedavi İlkeleri",
+     "items": [
+      {
+       "text": "Bireysel, aile ve grup tedavileri uyum bozukluğunda uygulanabilir.",
+       "isLie": false,
+       "explanation": "Farklı terapi formatları stresörün niteliğine göre başarıyla entegre edilir."
+      },
+      {
+       "text": "Kişilerarası psikoterapi boşanma ve rol geçişi stresörlerinde oldukça etkilidir.",
+       "isLie": false,
+       "explanation": "Kişilerarası ilişkilerdeki çatışmaları ve kayıpları odak noktası yapar."
+      },
+      {
+       "text": "Uyum bozukluğu olan bireyler hiçbir zaman psikoterapiye yanıt vermezler.",
+       "isLie": true,
+       "explanation": "Aksine, psikoterapi uyum bozukluğunda en yüksek kanıt düzeyine sahip birincil tedavidir."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slideNumber": 17,
+   "title": "[TEKRAR SAYFASI - CHECKPOINT 3] Uyum Bozuklukları ve Klinik Yönetim",
+   "bolum": 5,
+   "pdfSayfalari": [
+    16,
+    27
+   ],
+   "sourcePdf": {
+    "name": "y25-k2-38-travma-ve-stres-baglantili-bozukluklar.pdf",
+    "startPage": 16,
+    "endPage": 27
+   },
+   "content": "Bu bölümde Uyum Bozukluğunun tanısal sınırlarını, prognozunu ve tedavi yönetimini pekiştirdik.\n\n- **Tanı Kriteri:** Psikososyal stresörden sonra 3 ay içinde gelişir; stresör kalkınca en fazla 6 ay sürer.\n- **Artık Tanı:** Majör depresyon gibi özgül bir antite varsa o tanı konur; uyum bozukluğu dışlama tanısıdır.\n- **Prognoz:** Yetişkinlerde %79 tam iyilik saptanırken, ergenlerde %43 olguda diğer majör psikiyatrik tanılar gelişir.\n- **Yönetim:** Psikososyal ve bilişsel terapiler esastır; farmakoterapi semptom kontrolü için kısa süreli verilir.\n\n> [!NOTE]\n> Özellikle fiziksel hastalık nedeniyle hastanede yatan hastaların %50'sinde uyum bozukluğu saptanabilmesi, konsültasyon psikiyatrisinin önemini ortaya koyar.",
+   "interactiveElements": [
+    {
+     "id": "k38-s17-q1",
+     "type": "micro_quiz",
+     "question": "Aşağıdakilerden hangisi uyum bozukluğunun klinik yönetimi için doğru bir yaklaşımdır?",
+     "options": [
+      {
+       "text": "Psikososyal ve bilişsel terapiler esastır; ilaçlar semptom odaklı ve kısa süreli uygulanır.",
+       "isCorrect": true,
+       "explanation": "Psikososyal ve bilişsel terapiler esastır; ilaçlar semptom odaklı ve kısa süreli uygulanır, travma ve stres bağlantılı bozukluklar kılavuzlarındaki tanısal ve klinik ilkelerle tam bir uyum içindedir. Bu yaklaşım psikiyatride kanıta dayalı hasta yönetiminin temel referansıdır."
+      },
+      {
+       "text": "Tanı konur konmaz tüm hastalara ömür boyu elektroşok tedavisi başlanmalıdır.",
+       "isCorrect": false,
+       "explanation": "Şıkta sözü edilen tanı konur konmaz tüm hastalara ömür boyu elektroşok tedavisi başlanmalıdır kavramı, farklı bir psikiyatrik sendromun veya başka bir basamağın özelliklerini yansıtır. Bu soruda hedeflenen klinik ilkelerle ve patofizyolojik dinamiklerle doğrudan örtüşmemektedir."
+      },
+      {
+       "text": "Ergen hastalar hiçbir takibe alınmadan derhal okuldan tamamen atılmalıdır.",
+       "isCorrect": false,
+       "explanation": "Şıkta sözü edilen ergen hastalar hiçbir takibe alınmadan derhal okuldan tamamen atılmalıdır kavramı, farklı bir psikiyatrik sendromun veya başka bir basamağın özelliklerini yansıtır. Bu soruda hedeflenen klinik ilkelerle ve patofizyolojik dinamiklerle doğrudan örtüşmemektedir."
+      },
+      {
+       "text": "Stresör faktör kalksa bile hasta zorla en az yirmi yıl tedavi altında tutulur.",
+       "isCorrect": false,
+       "explanation": "Şıkta sözü edilen stresör faktör kalksa bile hasta zorla en az yirmi yıl tedavi altında tutulur kavramı, farklı bir psikiyatrik sendromun veya başka bir basamağın özelliklerini yansıtır. Bu soruda hedeflenen klinik ilkelerle ve patofizyolojik dinamiklerle doğrudan örtüşmemektedir."
+      }
+     ]
+    },
+    {
+     "id": "k38-s17-s1",
+     "type": "swipe_matching",
+     "title": "TSSB ve Uyum Bozukluğu Karşılaştırması",
+     "leftCategory": "Travma Sonrası Stres Bozukluğu",
+     "rightCategory": "Uyum Bozukluğu",
+     "cards": [
+      {
+       "text": "Ağır ölüm tehdidi veya cinsel saldırı sonrası en az 1 ay süren tablo",
+       "category": "left"
+      },
+      {
+       "text": "Boşanma veya iş kaybı gibi stresöre tepki olarak 3 ayda başlayan tablo",
+       "category": "right"
+      },
+      {
+       "text": "İntrüzyon, flaşbek ve lokus seruleus noradrenerjik hiperaktivitesi",
+       "category": "left"
+      },
+      {
+       "text": "Stresör kalktıktan sonra en geç 6 ay içinde kendiliğinden düzelen artık tanı",
+       "category": "right"
+      }
+     ]
+    },
+    {
+     "id": "k38-s17-c1",
+     "type": "cloze_masking",
+     "sentence": "Uyum bozukluğu başka bir özgül psikiyatrik tanı konamadığında kullanılan bir artık tanı örneğidir.",
+     "maskedTerm": "artık tanı",
+     "hint": "Özgül klinik antite bulunmadığında varılan sonuç."
+    },
+    {
+     "id": "k38-s17-t1",
+     "type": "interactive_table",
+     "title": "İki Tablonun Karşılaştırmalı Özeti",
+     "tableHeaders": [
+      "Ölçüt",
+      "TSSB",
+      "Uyum Bozukluğu"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Tetikleyici Şiddeti",
+         "isMasked": false
+        },
+        {
+         "text": "Ağır ölüm tehdidi veya tecavüz",
+         "isMasked": true,
+         "hint": "Hayati tehlike ve fiziksel bütünlük hasarı."
+        },
+        {
+         "text": "Psikososyal yaşam olayları",
+         "isMasked": false
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Tedavi Omurgası",
+         "isMasked": false
+        },
+        {
+         "text": "SSRI, venlafaksin ve EMDR",
+         "isMasked": true,
+         "hint": "Antidepresan ve göz hareketleri terapisi."
+        },
+        {
+         "text": "Psikososyal destek ve kısa ilaç",
+         "isMasked": false
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slideNumber": 18,
+   "title": "[OYUN SAYFASI] Ders Sonu Oyunları: Travma ve Stres Bozuklukları",
+   "bolum": 5,
+   "pdfSayfalari": [
+    1,
+    28
+   ],
+   "sourcePdf": {
+    "name": "y25-k2-38-travma-ve-stres-baglantili-bozukluklar.pdf",
+    "startPage": 1,
+    "endPage": 28
+   },
+   "isGameFinale": true,
+   "content": "Tebrikler! Travma ve Stres Bağlantılı Bozukluklar dersini başarıyla tamamladınız.\n\n- **Ders Sonu Değerlendirmesi:** Bu son aşamada dört farklı oyun kurgusu ile ders boyunca işlediğimiz TSSB sürelerini, bilişsel alarm basamaklarını, uyum bozukluğu prognoz oranlarını ve ayırıcı tanı parametrelerini test edeceğiz.\n- **Oyun Modelleri:** Sıralama, sayısal tahmin, klinik parametre simülasyonu ve metin onarımı oyunlarını çözerek bilgilerinizi pekiştirin.\n\n> [!NOTE]\n> TSSB'de 1 ay kuralı, Uyum Bozukluğunda 3 ay ve 6 ay süre sınırları sınavların en klasik spot bilgileridir.",
+   "interactiveElements": [
+    {
+     "id": "k38-s18-g1",
+     "type": "sequence_order",
+     "prompt": "Bilişsel modelde travmatik yaşantının patolojik kaçınmaya dönüşme basamaklarını sırasıyla diziniz:",
+     "steps": [
+      "1. Travma Yaşantısı: Kişinin ağır ölüm tehdidi veya dehşet anıyla doğrudan karşılaşması",
+      "2. Gerçek Alarm Tepkisi: Travma anında yaşanan aşırı sempatik deşarj ve dehşet hissi",
+      "3. Öğrenilmiş Alarm: Travmayı anımsatan nötr ipuçlarının da tehlike olarak kodlanması",
+      "4. Kaçınma ve Donukluk: Tırmanan kaygıyı dindirmek amacıyla ortamlardan kaçınma ve duygusal uyuşma"
+     ],
+     "explanation": "Önce travma yaşanır ve gerçek alarm verir; ardından benzer uyaranlar öğrenilmiş alarmı tetikler ve kişi kaçınma davranışı sergiler."
+    },
+    {
+     "id": "k38-s18-g2",
+     "type": "estimate_slider",
+     "items": [
+      {
+       "prompt": "Toplumda Travma Sonrası Stres Bozukluğunun yaşam boyu yaygınlığı yaklaşık yüzde kaçtır?",
+       "unit": "%",
+       "min": 1,
+       "max": 30,
+       "answer": 8,
+       "tolerance": 1,
+       "explanation": "Epidemiyolojik çalışmalara göre genel toplumda TSSB yaşam boyu yaygınlığı %8 civarındadır."
+      },
+      {
+       "prompt": "Uyum bozukluğu belirtileri stresör faktör ortadan kalktıktan sonra en fazla kaç ay sürebilir?",
+       "unit": "ay",
+       "min": 1,
+       "max": 24,
+       "answer": 6,
+       "tolerance": 1,
+       "explanation": "DSM-5 tanı kriterlerine göre tetikleyici etken kalktıktan sonra belirtiler en fazla 6 ay daha sürebilir."
+      }
+     ]
+    },
+    {
+     "id": "k38-s18-g3",
+     "type": "perturbation",
+     "scenario": "Bir psikiyatri kliniğinde TSSB tanısı alan hastaya 'Bilişsel Davranışçı Terapi ve EMDR' tedavisi başlandığı bir klinik simülasyon kurgulanmaktadır.",
+     "question": "Bu müdahale sonrasında hastadaki klinik ve davranışsal parametreler nasıl değişir?",
+     "parameters": [
+      {
+       "name": "Travmayı hatırlatan mekan ve insanlardan kaçınma davranışlarının sıklığı",
+       "correct": "down",
+       "explanation": "Terapide duyarsızlaştırma sağlandıkça kaçınma davranışları zamanla söner."
+      },
+      {
+       "name": "Hastanın gece uykusunda gördüğü travmatik kabus ve flaşbek ataklarının sıklığı",
+       "correct": "down",
+       "explanation": "Travmatik anının yeniden işlenmesi istemsiz intrüzyonları belirgin azaltır."
+      },
+      {
+       "name": "Hastanın sosyal ve mesleki alanlardaki genel işlevsellik düzeyi",
+       "correct": "up",
+       "explanation": "Aşırı uyarılmışlığın yatışması hastanın günlük yaşam kalitesini ve işlevselliğini yükseltir."
+      }
+     ]
+    },
+    {
+     "id": "k38-s18-g4",
+     "type": "fix_the_text",
+     "text": "Akut Stres Bozukluğu belirtileri en az bir yıl sürer ve birinci basamak tedavide yalnızca yüksek doz bağımlılık yapan morfin infüzyonları uygulanır.",
+     "errors": [
+      {
+       "wrong": "en az bir yıl",
+       "correct": "üç gün ile dört hafta",
+       "options": [
+        "üç gün ile dört hafta",
+        "en az bir yıl",
+        "on beş yıl"
+       ],
+       "explanation": "Akut Stres Bozukluğu 3 gün ile en fazla 4 hafta arasında sürer."
+      },
+      {
+       "wrong": "bağımlılık yapan morfin infüzyonları",
+       "correct": "SSRI ve psikososyal destek",
+       "options": [
+        "SSRI ve psikososyal destek",
+        "bağımlılık yapan morfin infüzyonları",
+        "genel anestezi"
+       ],
+       "explanation": "Tedavide morfin değil, SSRI farmakoterapisi ve psikososyal destek yaklaşımları esastır."
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "matchedPastQuestionsCount": 0,
+ "sinama": {
+  "etiket": "2025-2026 Arşiv",
+  "aciklama": "Bu ders 2025-2026 dönemi (geçen yıl) slaytlarından hazırlanmıştır; 2026-2027 güncel müfredat dersleriyle karışmaz."
+ }
+}

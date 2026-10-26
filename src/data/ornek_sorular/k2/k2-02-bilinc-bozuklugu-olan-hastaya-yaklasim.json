@@ -1,0 +1,531 @@
+{
+ "id": "k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim",
+ "sira": 2,
+ "kurul": 1,
+ "ders": "Nöroloji",
+ "konu": "Bilinç Bozukluğu Olan Hastaya Yaklaşım",
+ "ogretim_uyesi": "Dr. Dursun Ceylan",
+ "tarih": null,
+ "kazanimlar": [
+  {
+   "no": 1,
+   "metin": "Bilinç Bozukluğu Olan Hastaya Yaklaşım konusunun temel kavramlarını, etiyolojisini ve patofizyolojik mekanizmalarını açıklar.",
+   "sorular": [
+    {
+     "id": "k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim-q01",
+     "kazanim": 1,
+     "zorluk": "kolay",
+     "soru": "Derste verilen oranlara göre acil serviste görülen bilinç değişikliklerinin çoğunluğu hangi nedenlerden kaynaklanır?",
+     "secenekler": {
+      "A": "Metabolik ve sistemik nedenler",
+      "B": "Santral sinir sistemine ait yapısal nedenler",
+      "C": "Psikojen yanıtsızlık",
+      "D": "Serebral herniasyon",
+      "E": "Status epileptikus"
+     },
+     "dogru": "A",
+     "aciklama": "Derste bilinç değişikliklerinin %85'inin metabolik ve sistemik, yalnız %15'inin santral sinir sistemine ait nedenlerden kaynaklandığı belirtilir (sayfa 2). Bu nedenle ilk tetkiklerde metabolik ve sistemik nedenler mutlaka taranır.",
+     "sik_aciklamalari": {
+      "A": "Doğru seçenek: Metabolik ve sistemik nedenler hipoksi, hipoglisemi, elektrolit bozukluğu, organ yetmezliği ve toksinler gibi beyni dışarıdan ve yaygın biçimde etkileyen durumlardır. Derste bilinç değişikliklerinin %85'inin bu gruptan kaynaklandığı vurgulanır (sayfa 2).",
+      "B": "Santral sinir sistemine ait nedenler travma, kanama, inme ve kitle gibi beynin kendisinden kaynaklanan durumlardır. Acil görüntüleme gerektirirler ama derste yalnız %15'lik payları olduğu belirtilir (sayfa 2), bu yüzden çoğunluğu oluşturmazlar.",
+      "C": "Psikojen yanıtsızlık, bilinç gerçekte açıkken hastanın yanıt vermediği bir koma taklitçisidir. Algoritmada bilinç kapalı değilse düşünülen durumlar arasında sayılır (sayfa 48); bilinç değişikliklerinin ana kaynağı olarak verilmez.",
+      "D": "Serebral herniasyon, kitle etkisiyle beyin dokusunun bir bölmeden diğerine yer değiştirmesidir ve SSS kaynaklı ağır bir tablodur (sayfa 14). SSS nedenlerinin tamamı %15 olduğundan çoğunluğu açıklayamaz.",
+      "E": "Status epileptikus, nöbetin sonlanmadan sürdüğü durumdur ve derste SSS'ye ait nedenler arasında sayılır (sayfa 13). SSS nedenleri toplamda %15 olduğundan bu seçenek çoğunluğu temsil etmez."
+     },
+     "bilgi": [
+      2
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 2,
+      "alinti": "% 85 metabolik ve sistemik neden % 15 SSS ait neden"
+     }
+    },
+    {
+     "id": "k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim-q02",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Normal uyku-uyanıklık ve uyarılabilirliği sağlayan eksitatör aktivite (ARAS) beynin hangi bölgesindeki santral gri cevherden kaynaklanır?",
+     "secenekler": {
+      "A": "Medulla oblongata",
+      "B": "Rostral pons ve mezensefalon",
+      "C": "Serebellum",
+      "D": "Bazal ganglionlar",
+      "E": "Oksipital korteks"
+     },
+     "dogru": "B",
+     "aciklama": "Derste uyanıklık ve uyarılabilirliğin rostral pons ve mezensefalondaki santral gri cevherden çıkan eksitatör aktiviteye (ARAS) bağlı olduğu belirtilir (sayfa 5). Bu aktivite talamus, bazal ön beyin, hipotalamus ve kortekse iletilerek bilinci sürdürür.",
+     "sik_aciklamalari": {
+      "A": "Medulla oblongata solunum ve dolaşım merkezlerini içeren en kaudal beyin sapı bölümüdür. Derste medulla lezyonu ataksik solunumla ilişkilendirilir (sayfa 40); ARAS'ın kaynak bölgesi olarak gösterilmez.",
+      "B": "Doğru seçenek: Rostral pons ve mezensefalondaki santral gri cevher, uyanıklığı sağlayan eksitatör ARAS aktivitesinin çıktığı bölgedir (sayfa 5). Buradan çıkan uyarı talamus ve kortekse ulaşarak uyanıklığı sürdürür.",
+      "C": "Serebellum hareketin koordinasyonu ve dengeyle ilgili yapıdır. Derste uyanıklığın kaynağı olarak anılmaz; ARAS'ın kökeni beyin sapının rostral kısmıdır (sayfa 5).",
+      "D": "Bazal ganglionlar hareketin başlatılması ve düzenlenmesiyle ilgili derin gri cevher çekirdekleridir. Derste uyanıklık ağının parçası olarak sayılan yapılar talamik IL/CM nükleusları, bazal ön beyin, hipotalamus ve kortekstir (sayfa 5); bazal ganglionlar ARAS'ın kaynağı değildir.",
+      "E": "Oksipital korteks görme bilgisini işleyen korteks alanıdır. Korteks ARAS uyarısını alan hedeflerden biridir ama eksitatör aktivitenin çıktığı yer değildir (sayfa 5)."
+     },
+     "bilgi": [
+      4,
+      5
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 5,
+      "alinti": "Rostral pons ve mezensefalondaki santral gri cevherden çıkan eksitatör aktivitenin (ARAS)"
+     }
+    },
+    {
+     "id": "k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim-q03",
+     "kazanim": 1,
+     "zorluk": "zor",
+     "soru": "Lateral yerleşimli bir kanama kitlesi unkusu tentoryum kenarından aşağı iterse en erken beklenen pupil bulgusu hangisidir?",
+     "secenekler": {
+      "A": "İki taraflı iğne ucu pupil",
+      "B": "Küçük ve reaktif pupiller",
+      "C": "Aynı tarafta dilate ve fikse pupil",
+      "D": "Orta büyüklükte ve fikse pupiller",
+      "E": "İleri miyotik pupil"
+     },
+     "dogru": "C",
+     "aciklama": "Lateral kitle unkal herniasyona yol açar ve aynı taraf III. kraniyal sinire bası yapar (sayfa 14). Derste III. sinir (unkal) basısında pupilin dilate ve fikse olduğu belirtilir (sayfa 32); bu, herniasyonun erken uyarı bulgusudur.",
+     "sik_aciklamalari": {
+      "A": "İğne ucu (pinpoint) pupil pons lezyonunda görülen pupil bulgusudur (sayfa 32). Unkal herniasyonun ilk evresinde etkilenen yapı III. sinir olduğundan bu bulgu beklenmez.",
+      "B": "Küçük ve reaktif pupiller metabolik ensefalopati ve diensefalik lezyonda görülür (sayfa 32). Işık refleksi korunduğu için yapısal bir III. sinir basısını değil, yaygın metabolik etkilenmeyi düşündürür.",
+      "C": "Doğru seçenek: Unkus tentoryum kenarından aşağı kayınca aynı taraftaki üçüncü kraniyal sinire bası yapar ve parasempatik lifler etkilenir. Derste üçüncü sinirin unkal basısında pupilin dilate ve fikse olduğu belirtilir (sayfa 32).",
+      "D": "Orta büyüklükte ve fikse pupiller mezensefalik lezyonun bulgusudur (sayfa 32). Herniasyon ilerleyip orta beyni tuttuğunda görülür; erken unkal basının tipik bulgusu değildir.",
+      "E": "İleri miyotik pupil derste opiat intoksikasyonuyla ilişkilendirilir (sayfa 33). Toksik bir nedendir ve iki taraflıdır; lateral kitlenin yaptığı mekanik sinir basısını açıklamaz."
+     },
+     "bilgi": [
+      24,
+      42
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 32,
+      "alinti": "III KS(unkal): dilate, fikse"
+     }
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 2,
+   "metin": "Bilinç Bozukluğu Olan Hastaya Yaklaşım ile ilişkili klinik semptomları, tanı kriterlerini ve ayırıcı tanı basamaklarını değerlendirir.",
+   "sorular": [
+    {
+     "id": "k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim-q04",
+     "kazanim": 2,
+     "zorluk": "kolay",
+     "soru": "Glasgow koma skalasında yalnız ağrılı uyaranla gözlerini açan bir hastanın göz açma (E) puanı kaçtır?",
+     "secenekler": {
+      "A": "1",
+      "B": "2",
+      "C": "3",
+      "D": "4",
+      "E": "5"
+     },
+     "dogru": "B",
+     "aciklama": "Glasgow göz açma bileşeninde 4 spontan, 3 sözel uyaranla, 2 ağrılı uyaranla, 1 hiç açmama puanıdır (sayfa 22). Yalnız ağrıyla göz açan hasta E2 alır.",
+     "sik_aciklamalari": {
+      "A": "1 puan, hastanın hiçbir uyaranla gözlerini açmadığı durumdur (sayfa 22). Bu hasta ağrılı uyaranla gözlerini açtığı için 1 puandan yüksek alır.",
+      "B": "Doğru seçenek: Göz açma bileşeninde ağrılı uyaranla göz açma 2 puandır (sayfa 22). Bu puan, hastanın ancak güçlü bir uyaranla uyarılabildiğini gösterir.",
+      "C": "3 puan, hastanın sözel uyaranla, yani seslenince gözlerini açtığı durumdur (sayfa 22). Bu hasta seslenmeye değil yalnız ağrıya yanıt verdiği için 3 puan alamaz.",
+      "D": "4 puan, gözlerin spontan açık olduğu, en iyi göz yanıtıdır (sayfa 22). Gözlerini açmak için ağrılı uyaran gereken bir hasta bu puanı alamaz.",
+      "E": "Göz açma bileşeninin en yüksek puanı 4'tür (sayfa 22). 5 puan yalnız sözel yanıt bileşeninde (oryante) bulunur (sayfa 30), bu nedenle göz açma için geçersizdir."
+     },
+     "bilgi": [
+      33
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 22,
+      "alinti": "4- Spontan açık 3- Verbal uyaranla 2- Ağrılı uyaranla 1- Açmıyor"
+     }
+    },
+    {
+     "id": "k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim-q05",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Ağrılı uyarana kollarını ekstansiyon ve iç rotasyona getirerek yanıt veren komadaki bir hastanın Glasgow motor (M) puanı ve bu postürün anlamı hangisidir?",
+     "secenekler": {
+      "A": "M4; ağrıdan çekme yanıtı",
+      "B": "M3; dekortike postür, hemisferik lezyon",
+      "C": "M2; deserebre postür, daha derin beyin sapı hasarı",
+      "D": "M5; ağrıyı lokalize etme",
+      "E": "M1; motor yanıt yok"
+     },
+     "dogru": "C",
+     "aciklama": "Kollarda ekstansiyon ve iç rotasyon deserebre postürdür ve Glasgow motor bileşeninde 2 puan alır (sayfa 24, 26). Derste deserebre (ekstansör) postür üst pontin hasarla ilişkilendirilir (sayfa 28); dekortike postüre göre daha derin hasarı gösterir.",
+     "sik_aciklamalari": {
+      "A": "M4, hastanın ağrılı uyarandan uzvunu çektiği fleksör yanıttır (sayfa 24). Bu yanıtta anormal postür yoktur; ekstansiyon ve iç rotasyon ise patolojik bir postürdür.",
+      "B": "M3 dekortike postürdür ve kollarda fleksiyon, bacaklarda ekstansiyonla karakterizedir (sayfa 26). Hemisferik lezyonla ilişkilidir (sayfa 28); bu hastada ise kollar ekstansiyondadır.",
+      "C": "Doğru seçenek: Deserebre postürde kollar ekstansiyon ve iç rotasyondadır ve M2 puan alır (sayfa 24, 26). Derste ekstansör postür üst pontin hasarla eşleştirilir (sayfa 28), yani dekortikeden daha kaudal ve ağır bir lezyonu gösterir.",
+      "D": "M5, hastanın ağrılı uyaranın yerini bulup ona yöneldiği yanıttır (sayfa 24). Amaçlı bir harekettir ve korunmuş kortikal işlevi gösterir; stereotipik ekstansör postürle karıştırılmamalıdır.",
+      "E": "M1, ağrılı uyarana hiçbir motor yanıtın olmadığı durumdur (sayfa 24). Bu hastada ekstansör postür şeklinde bir yanıt bulunduğu için M1 verilmez."
+     },
+     "bilgi": [
+      34,
+      35,
+      36
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 24,
+      "alinti": "6-Emre uyma 5-Ağrıyı lokalize 4-Fleksör Yanıt 3-Dekortike 2-Deserebe 1-Yanıt yok"
+     }
+    },
+    {
+     "id": "k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim-q06",
+     "kazanim": 2,
+     "zorluk": "zor",
+     "soru": "Komadaki bir hastada solunum, hiperpne ve apnenin kreşendo-dekreşendo biçiminde dalgalı olarak birbirini izlemesiyle seyrediyor. Bu solunum paterni en olası hangi düzeyde tutulumu gösterir?",
+     "secenekler": {
+      "A": "Medulla",
+      "B": "Alt pons",
+      "C": "Pons (apnestik merkez)",
+      "D": "Bilateral hemisfer veya diensefalon",
+      "E": "Mezensefalon-üst pons"
+     },
+     "dogru": "D",
+     "aciklama": "Tanımlanan patern Cheyne-Stokes solunumudur; derste bilateral hemisfer veya diensefalon tutulumunda (A düzeyi) görüldüğü belirtilir (sayfa 39, 40). Solunum paternleri içinde en rostral düzeyi gösterir ve metabolik ensefalopatide de görülebilir.",
+     "sik_aciklamalari": {
+      "A": "Medulla lezyonunda düzensiz, ritmi olmayan ataksik solunum görülür (sayfa 40). Ataksik solunum ritimsizdir ve apneye ilerleyebilir; düzenli kreşendo-dekreşendo dalgalanma göstermez.",
+      "B": "Alt pons lezyonunda küme solunumu görülür (sayfa 40). Bu paternde solunumlar düzensiz kümeler hâlinde gelir; tanımlanan dalgalı hiperpne-apne döngüsü değildir.",
+      "C": "Pons düzeyi lezyonunda apnestik solunum görülür; bu patern inspiryum sonunda duraklamayla tanınır (sayfa 40). Burada tarif edilen hiperpne-apne dalgalanması apnestik solunuma uymaz.",
+      "D": "Doğru seçenek: Cheyne-Stokes solunumu, hiperpne ve apnenin dalgalı dönüşümüdür ve bilateral hemisfer veya diensefalon tutulumunda görülür (sayfa 40). Rostrokaudal sıralamada en üst düzeyi gösteren solunum paternidir.",
+      "E": "Mezensefalon-üst pons lezyonunda santral nörojenik hiperventilasyon görülür (sayfa 40). Bu paternde hızlı ve derin solunum süreklidir; apne dönemleri yoktur."
+     },
+     "bilgi": [
+      51,
+      52,
+      53
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 40,
+      "alinti": "Cheyne-Stokes solunumu Santral nörojenik hiperventilasyon Apnestik solunum"
+     }
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 3,
+   "metin": "Bilinç Bozukluğu Olan Hastaya Yaklaşım klinik yönetimini, farmakoterapi ilkelerini ve komplikasyonlardan korunma yaklaşımlarını sıralar.",
+   "sorular": [
+    {
+     "id": "k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim-q07",
+     "kazanim": 3,
+     "zorluk": "kolay",
+     "soru": "Bilinç bozukluğu olan hastaya ilk müdahalede aşağıdakilerden hangisi derste sayılan temel destek önlemlerinden biri değildir?",
+     "secenekler": {
+      "A": "Oksijen verilmesi",
+      "B": "İki geniş damar yolu açılması",
+      "C": "EKG çekilmesi",
+      "D": "Kardiyak monitörizasyon",
+      "E": "Lomber ponksiyonla BOS alınması"
+     },
+     "dogru": "E",
+     "aciklama": "Derste ilk müdahale O2, iki geniş damar yolu, EKG ve kardiyak monitörizasyon olarak sayılır (sayfa 9). BOS incelemesi ise algoritmanın ileri basamağında, görüntüleme sonrasında enfeksiyon araştırması için yapılır (sayfa 56, 60).",
+     "sik_aciklamalari": {
+      "A": "Yanlış seçenek; ifade doğrudur: oksijen verilmesi ilk müdahalede sayılan temel önlemlerdendir (sayfa 9). Hipoksi bilinç bozukluğunu hem açıklayabilir hem ağırlaştırabilir, bu yüzden oksijenasyon en başta sağlanır.",
+      "B": "Yanlış seçenek; ifade doğrudur: iki geniş damar yolu ilk müdahale önlemleri arasında yer alır (sayfa 9). Bu yol IV glukoz, nalokson gibi ampirik tedavilerin ve sıvı desteğinin hızla verilmesini sağlar.",
+      "C": "Yanlış seçenek; ifade doğrudur: EKG ilk müdahalede sayılır (sayfa 9). Düşük kardiyak debi ve ritim bozuklukları beyin perfüzyonunu bozarak bilinç kaybına yol açabilir (sayfa 12).",
+      "D": "Yanlış seçenek; ifade doğrudur: kardiyak monitörizasyon ilk müdahalede sayılan önlemlerdendir (sayfa 9). Hastanın dolaşımı sürekli izlenerek ani kötüleşme erken yakalanır.",
+      "E": "Doğru seçenek: Lomber ponksiyonla BOS incelemesi SSS enfeksiyonunu araştıran bir tetkiktir ve algoritmada BT'den sonra, acil incelemeler basamağında yer alır (sayfa 56, 60). İlk müdahale ise O2, damar yolu ve monitörizasyon gibi temel destekten oluşur."
+     },
+     "bilgi": [
+      12,
+      69,
+      72
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 9,
+      "alinti": "O2, iki geniş IV yol, EKG, kardiak monitorizasyon"
+     }
+    },
+    {
+     "id": "k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim-q08",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Bilinci kapalı olduğu doğrulanan hastada metabolik ve toksik tarama örnekleri alınırken derste ampirik olarak verilmesi önerilen ilaç üçlüsü hangisidir?",
+     "secenekler": {
+      "A": "IV glukoz, nalokson, flumazenil",
+      "B": "Mannitol, deksametazon, fenitoin",
+      "C": "Atropin, adrenalin, amiodaron",
+      "D": "Asiklovir, seftriakson, vankomisin",
+      "E": "Heparin, aspirin, klopidogrel"
+     },
+     "dogru": "A",
+     "aciklama": "Algoritmada bilinci kapalı hastada tetkiklerle birlikte IV glukoz, nalokson ve flumazenil verilir (sayfa 51). Glukoz hipoglisemiyi, nalokson opioid, flumazenil benzodiazepin etkisini hızla geri döndürür.",
+     "sik_aciklamalari": {
+      "A": "Doğru seçenek: IV glukoz hipoglisemiyi, nalokson opioid zehirlenmesini, flumazenil benzodiazepin etkisini hızla tersine çevirir. Derste bu üçlü bilinci kapalı hastada ampirik olarak sayılır (sayfa 51).",
+      "B": "Mannitol, deksametazon ve fenitoin sırasıyla kafa içi basıncı düşürme, ödemi azaltma ve nöbet kontrolü için kullanılan ilaçlardır. Derste bilinci kapalı hastanın ampirik tedavisi olarak sayılmazlar (sayfa 51).",
+      "C": "Atropin, adrenalin ve amiodaron kardiyak arrest ve ritim bozukluklarında kullanılan ilaçlardır. Derste ampirik koma tedavisinde yer almazlar; hatta atropin midriyatik yanıtsız pupil nedeni olarak anılır (sayfa 33).",
+      "D": "Asiklovir, seftriakson ve vankomisin SSS enfeksiyonunun ampirik antimikrobiyal tedavisinde kullanılır. Derste ise enfeksiyon için BOS incelemesi önerilir (sayfa 56); bu ilaçlar bilinci kapalı hastanın ampirik üçlüsü olarak verilmez.",
+      "E": "Heparin, aspirin ve klopidogrel pıhtılaşmayı ve trombosit kümelenmesini önleyen ilaçlardır. Kanama nedenli komayı ağırlaştırabilirler ve derste ampirik tedavide sayılmazlar (sayfa 51)."
+     },
+     "bilgi": [
+      66
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 51,
+      "alinti": "tox tarama, ıv glu, naloksan, flumazenil"
+     }
+    },
+    {
+     "id": "k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim-q09",
+     "kazanim": 3,
+     "zorluk": "zor",
+     "soru": "Kronik alkolizmi olan, komada getirilen bir hastada beyin sapı bulguları saptanıyor. Bu dalda derste sayılan incelemeler ve tedavi bağlamında hangi uygulama özellikle önemlidir?",
+     "secenekler": {
+      "A": "Yalnız alkol düzeyine bakıp gözlemle izlemek",
+      "B": "BBT/MR ile birlikte glukoz ve tiamin vermek",
+      "C": "Görüntüleme yapmadan doğrudan EEG çekmek",
+      "D": "Yalnız BOS incelemesi yapmak",
+      "E": "Flumazenil verip taburcu etmek"
+     },
+     "dogru": "B",
+     "aciklama": "Beyin sapı bulgulu dalda BBT/MRI, glukoz, tiamin ve metabolik-toksik tarama sayılır (sayfa 59). Alkolik hastada tiamin Wernicke ensefalopatisine karşı verilir (sayfa 11); ayrıca alkol başka bir etiyolojiyi (SAK, subdural) maskeleyebileceğinden görüntüleme ihmal edilmez (sayfa 18).",
+     "sik_aciklamalari": {
+      "A": "Alkol düzeyine bakıp yalnız izlemek, komayı alkole bağlayıp altta yatan nedeni atlamak demektir. Derste koma nedeni alkol gibi görünse de SAK veya subdural kanama aranması gerektiği vurgulanır (sayfa 18).",
+      "B": "Doğru seçenek: Beyin sapı bulgulu dalda BBT/MR, glukoz, tiamin ve metabolik-toksik tarama yapılır (sayfa 59). Tiamin, alkolik hastada Wernicke ensefalopatisini önler ve tedavi eder; kronik alkolizmde hipoglisemi de sık bir etiyolojidir (sayfa 42).",
+      "C": "EEG nonkonvülzif status epileptikusu göstermek için kullanılır ve algoritmada ancak BT, BOS ve kan gazı değerlendirmesinden sonra yer alır (sayfa 60). Beyin sapı bulgusu olan hastada önce yapısal lezyon görüntülemeyle dışlanmalıdır.",
+      "D": "BOS incelemesi SSS enfeksiyonunu araştırır ve beyin sapı bulgusu olmayan dalın acil incelemeleri arasında sayılır (sayfa 56). Posterior fossa lezyonu ve herniasyon olasılığı varken tek başına yeterli değildir.",
+      "E": "Flumazenil benzodiazepin etkisini geri döndüren bir ilaçtır ve ampirik olarak verilebilir (sayfa 51). Ancak beyin sapı bulgusu olan hastada yapısal lezyon dışlanmadan taburculuk düşünülemez."
+     },
+     "bilgi": [
+      16,
+      30,
+      57,
+      71
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 59,
+      "alinti": "BBT/MRI, glu, tiamin, metobolik ve toksik tarama"
+     }
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 4,
+   "metin": "Dr. Dursun CEYLAN nöroloji bİLİNÇ bOZUKLUKLARINAYAKLAŞIM mekanizmasını ve klinik önemini analiz eder.",
+   "sorular": [
+    {
+     "id": "k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim-q10",
+     "kazanim": 4,
+     "zorluk": "kolay",
+     "soru": "Bilinç bozukluğu olan hastaya yaklaşımın ilk aşamasında temel (primer) amaç nedir?",
+     "secenekler": {
+      "A": "Glasgow skorunu kesin olarak hesaplamak",
+      "B": "Fokal yapısal SSS lezyonlarını global metabolik problemlerden ayırmak",
+      "C": "Hastanın prognozunu belirlemek",
+      "D": "Beyin ölümü tanısı koymak",
+      "E": "Psikiyatrik değerlendirme yapmak"
+     },
+     "dogru": "B",
+     "aciklama": "Derste ilk aşamanın primer amacı, fokal yapısal SSS lezyonlarını global metabolik problemlerden ayırmak olarak verilir (sayfa 9). Bu ayrım hangi tetkiklerin ve tedavilerin öncelikleneceğini belirler.",
+     "sik_aciklamalari": {
+      "A": "Glasgow koma skalası bilinç düzeyini sayısallaştıran ve izlemde karşılaştırma sağlayan bir araçtır (sayfa 20). Muayenenin parçasıdır ama derste ilk aşamanın ana amacı olarak tanımlanmaz.",
+      "B": "Doğru seçenek: Fokal yapısal lezyon acil görüntüleme ve gerekirse cerrahi gerektirir, global metabolik sorun ise laboratuvar ve ampirik tedaviyle düzeltilir. Derste bu ayrım ilk aşamanın primer amacı olarak verilir (sayfa 9).",
+      "C": "Prognoz belirleme, etiyoloji aydınlatıldıktan ve tedavi başlatıldıktan sonra yapılan bir değerlendirmedir. Derste erken tanı ve tedavinin prognozu iyi yönde etkilediği belirtilir (sayfa 61); ama ilk aşamanın amacı bu değildir.",
+      "D": "Beyin ölümü, derste bilinç bozuklukları terimleri arasında sayılan geri dönüşsüz bir tablodur (sayfa 7). İlk aşamada amaç geri döndürülebilir nedeni bulmaktır, beyin ölümü tanısı koymak değildir.",
+      "E": "Psikiyatrik değerlendirme, psikojen yanıtsızlık gibi koma taklitçileri düşünüldüğünde gündeme gelir (sayfa 48). İlk aşamanın primer amacı ise yapısal lezyonu metabolik sorundan ayırmaktır."
+     },
+     "bilgi": [
+      10
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 9,
+      "alinti": "Primer Amaç: Fokal yapısal SSS lezyonlarının, global metabolik problemlerden ayrımını yapmak"
+     }
+    },
+    {
+     "id": "k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim-q11",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Yanıt alınamayan bir hastada ABC ve oksijenasyon sağlandıktan sonra bilincin gerçekte kapalı olmadığı anlaşılıyor. Algoritmaya göre bu durumda aşağıdakilerden hangisi düşünülmez?",
+     "secenekler": {
+      "A": "Psikojen yanıtsızlık",
+      "B": "Locked-in sendromu",
+      "C": "Nöromüsküler paralizi",
+      "D": "Rijidite",
+      "E": "Hipoglisemik koma"
+     },
+     "dogru": "E",
+     "aciklama": "Algoritmada bilinç kapalı değilse ('hayır' dalı) psikojen yanıtsızlık, locked-in sendromu, nöromüsküler paralizi ve rijidite düşünülür (sayfa 47, 48). Hipoglisemik koma ise bilincin gerçekten kapalı olduğu metabolik bir nedendir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış seçenek; ifade doğrudur: psikojen yanıtsızlık, bilincin açık olduğu ama hastanın yanıt vermediği bir koma taklitçisidir. Derste 'hayır' dalında sayılır (sayfa 48).",
+      "B": "Yanlış seçenek; ifade doğrudur: locked-in sendromu farkındalığın korunduğu ama hastanın konuşamadığı ve hareket edemediği bir tablodur. Algoritmada bilinç kapalı değilse düşünülen durumlardandır (sayfa 48).",
+      "C": "Yanlış seçenek; ifade doğrudur: nöromüsküler paralizide bilinç açıktır ama kas güçsüzlüğü yanıt vermeyi engeller. Derste koma taklitçileri arasında sayılır (sayfa 48).",
+      "D": "Yanlış seçenek; ifade doğrudur: rijidite, kasların sertleşip hastanın hareket edememesiyle komayı taklit edebilir. Algoritmada 'hayır' dalında sayılır (sayfa 48, 50).",
+      "E": "Doğru seçenek: Hipoglisemi beyni difüz etkileyerek gerçek bilinç kaybı yapan metabolik bir nedendir (sayfa 11). Bu nedenle 'evet' dalında, metabolik tarama ve IV glukozla ele alınır (sayfa 51); koma taklitçisi değildir."
+     },
+     "bilgi": [
+      61,
+      62,
+      63,
+      64
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 48,
+      "alinti": "Psikojen, locked-in synd, N-M paralizi, rijidite"
+     }
+    },
+    {
+     "id": "k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim-q12",
+     "kazanim": 4,
+     "zorluk": "zor",
+     "soru": "Komalı hastada BT'de yapısal hasar, BOS'ta enfeksiyon bulunmuyor; arteriyel kan gazı normal ve osmolar açık pozitif çıkıyor. Algoritmaya göre en olası etiyolojik grup hangisidir?",
+     "secenekler": {
+      "A": "Anoksik ensefalopati",
+      "B": "Baziler arter tıkanması",
+      "C": "Metanol veya etilen glikol gibi toksik alkoller",
+      "D": "Nonkonvülzif status epileptikus",
+      "E": "Demiyelinizan hastalık"
+     },
+     "dogru": "C",
+     "aciklama": "Algoritmada BT ve BOS normalse kan gazına, kan gazı da normalse osmolar açığa bakılır (sayfa 60). Osmolar açık pozitifse metanol, izopropil alkol, etil eter, etilen glikol, aseton ve trikloroetan düşünülür; negatifse anoksi, demiyelinizan hastalık, baziler tıkanma ve nonkonvülzif SE araştırılır.",
+     "sik_aciklamalari": {
+      "A": "Anoksik ensefalopati, beynin oksijensiz kalmasıyla oluşan yaygın hasardır. Algoritmada osmolar açığın negatif olduğu dalda yer alır (sayfa 60), bu nedenle pozitif açıkla uyumlu değildir.",
+      "B": "Baziler arter tıkanması beyin sapını besleyen arterin tıkanmasıdır ve MR ile tanınır. Derste osmolar açık negatif dalında sayılır (sayfa 60); ozmotik aktif bir madde birikimi yapmaz.",
+      "C": "Doğru seçenek: Metanol ve etilen glikol gibi toksik alkoller kanda ölçülemeyen ozmotik aktif madde biriktirerek osmolar açığı yükseltir. Algoritmada osmolar açık pozitif dalında bu ajanlar sayılır (sayfa 60).",
+      "D": "Nonkonvülzif status epileptikus, belirgin kasılma olmadan süren nöbet aktivitesidir ve EEG ile tanınır. Algoritmada osmolar açık negatif dalında yer alır (sayfa 60).",
+      "E": "Demiyelinizan hastalık, miyelin kılıfın hasar gördüğü ve MR ile gösterilen bir tablodur. Derste osmolar açık negatif dalında sayılır (sayfa 60); pozitif açığı açıklamaz."
+     },
+     "bilgi": [
+      72,
+      75
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 60,
+      "gorsel": "Osmolar açık kutusundan pozitif ve negatif dallar, MR, EEG ve T3 T4 TSH etiketleriyle gösterilmiş"
+     }
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 5,
+   "metin": "Bilinç Mekanizmaları ve tanımlar mekanizmasını ve klinik önemini analiz eder.",
+   "sorular": [
+    {
+     "id": "k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim-q13",
+     "kazanim": 5,
+     "zorluk": "kolay",
+     "soru": "Uyandırılabilen ancak çevresinin farkında olmayan hastanın bilinç durumu hangisidir?",
+     "secenekler": {
+      "A": "Somnolans",
+      "B": "Stupor",
+      "C": "Koma",
+      "D": "Vejetatif durum",
+      "E": "Bilinç açık"
+     },
+     "dogru": "D",
+     "aciklama": "Derste vejetatif durum, hastanın uyandırılabildiği ancak farkında olmadığı durum olarak tanımlanır (sayfa 6). Bu tanım uyanıklık ile farkındalığın birbirinden ayrışabildiğini gösterir.",
+     "sik_aciklamalari": {
+      "A": "Somnolans, hastanın çabuk uyandırılabildiği ve farkında olduğu hafif bilinç bozukluğudur (sayfa 6). Bu hastada farkındalık korunduğu için soruda tarif edilen tabloya uymaz.",
+      "B": "Stupor, hastanın zorlukla uyandırılabildiği ve farkındalığının azaldığı durumdur (sayfa 6). Uyandırmanın güç olması ve farkındalığın tamamen kaybolmaması onu vejetatif durumdan ayırır.",
+      "C": "Koma, hastanın hiçbir uyaranla uyandırılamadığı ve çevresinin farkında olmadığı durumdur (sayfa 6). Soruda tarif edilen hasta uyandırılabildiği için koma tanımına girmez.",
+      "D": "Doğru seçenek: Vejetatif durumda hasta uyandırılabilir, gözleri açılabilir, ama çevresinin farkında değildir (sayfa 6). Uyanıklık korunurken farkındalığın kaybolması bu durumun belirleyici özelliğidir.",
+      "E": "Bilinç açık hasta hem uyanık hem de çevresinin tam olarak farkındadır (sayfa 6). Bu, normal bilinç durumudur; soruda farkındalığın olmaması bu seçeneği dışlar."
+     },
+     "bilgi": [
+      6,
+      7,
+      8
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 6,
+      "alinti": "Vejetatif durum: uyandırılıyor ancak farkında değil"
+     }
+    },
+    {
+     "id": "k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim-q14",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Komadaki bir hastada baş 30 derecedeyken iki yana çevrildiğinde gözlerin başın tersine hareket ettiği (bebek gözü pozitif) görülüyor. Bu bulgu neyi gösterir?",
+     "secenekler": {
+      "A": "Beyin sapının sağlam olduğunu",
+      "B": "Alt beyin sapı lezyonunu",
+      "C": "Beyin ölümünü",
+      "D": "Psikojen yanıtsızlığı",
+      "E": "Pons düzeyinde kanamayı"
+     },
+     "dogru": "A",
+     "aciklama": "Okülosefalik refleks testinde bilinci kapalı ama beyin sapı sağlam hastada gözler başın tersine hareket eder (sayfa 34). Beyin sapı hasarlı komada bu refleks kaybolur ve gözler başla birlikte hareket eder (sayfa 35).",
+     "sik_aciklamalari": {
+      "A": "Doğru seçenek: Okülosefalik refleks vestibüler çekirdekler, MLF ve göz hareket sinirleri üzerinden işler. Gözlerin başın tersine dönmesi bu yolun, yani beyin sapının sağlam olduğunu gösterir (sayfa 34).",
+      "B": "Alt beyin sapı lezyonunda vestibülo-oküler refleks yolu bozulur ve gözler uyarana yanıt vermez (sayfa 35, 38). Bu nedenle korunmuş bebek gözü yanıtı alt beyin sapı lezyonuyla uyumlu değildir.",
+      "C": "Beyin ölümünde tüm beyin sapı refleksleri kaybolur. Korunmuş okülosefalik refleks beyin sapının işlediğini gösterdiği için beyin ölümünü dışlar (sayfa 34, 35).",
+      "D": "Psikojen yanıtsızlık bilincin açık olduğu bir koma taklitçisidir (sayfa 48). Okülosefalik refleks bilinci kapalı hastada beyin sapının bütünlüğünü test eder; bu bulgu psikojen yanıtsızlığı göstermez.",
+      "E": "Pons lezyonunda iğne ucu pupil (sayfa 32) ve konjuge göz hareketlerini sağlayan yolların bozulması beklenir (sayfa 31). Korunmuş bebek gözü yanıtı pons hasarını değil sağlam beyin sapını düşündürür."
+     },
+     "bilgi": [
+      46,
+      47
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 34,
+      "alinti": "Baş 30 derecede: her iki tarafa çevrilir ve göz hareketleri gözlenir Bilinç kapalı Beyin sapı sağlam"
+     }
+    },
+    {
+     "id": "k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim-q15",
+     "kazanim": 5,
+     "zorluk": "zor",
+     "soru": "Komadaki bir hastada solunum tamamen düzensiz, ritim ve derinliği öngörülemez biçimde ilerliyor ve apneye dönüşme eğiliminde. Bu solunum paterni ve lezyon düzeyi eşleştirmesi hangisidir?",
+     "secenekler": {
+      "A": "Küme solunumu – alt pons",
+      "B": "Apnestik solunum – pons",
+      "C": "Santral nörojenik hiperventilasyon – mezensefalon-üst pons",
+      "D": "Ataksik solunum – medulla",
+      "E": "Cheyne-Stokes solunumu – diensefalon"
+     },
+     "dogru": "D",
+     "aciklama": "Derste ataksik (düzensiz) solunum medulla lezyonuyla ilişkilendirilir ve apneye ilerleyebileceği belirtilir (sayfa 39, 40). Solunum paternleri içinde en kaudal düzeyi gösterir.",
+     "sik_aciklamalari": {
+      "A": "Küme solunumu alt pons lezyonunda görülür (sayfa 40). Solunumlar düzensiz kümeler hâlinde, aralarında duraklamalarla gelir; tamamen öngörülemez bir ritimsizlik değildir.",
+      "B": "Apnestik solunum pons düzeyi lezyonunda görülür ve inspiryum sonunda duraklamayla tanınır (sayfa 40). Belirli bir kalıbı vardır, tarif edilen tam düzensizlikle uyuşmaz.",
+      "C": "Santral nörojenik hiperventilasyon mezensefalon-üst pons lezyonunda görülen sürekli hızlı ve derin solunumdur (sayfa 40). Düzenli bir patern olduğu için ataksik solunumdan ayrılır.",
+      "D": "Doğru seçenek: Ataksik solunum, ritmi ve derinliği düzensiz olan solunumdur ve medulladaki solunum nöronlarının hasarını gösterir (sayfa 40). Apneye ilerleyebildiği için erken hava yolu güvenliği gerekir.",
+      "E": "Cheyne-Stokes solunumu hiperpne ve apnenin kreşendo-dekreşendo dalgalanmasıdır ve bilateral hemisfer veya diensefalon tutulumunda görülür (sayfa 40). Düzenli bir döngüsü vardır ve en rostral düzeyi gösterir."
+     },
+     "bilgi": [
+      51,
+      54
+     ],
+     "benzer_cikmis": [
+      "d3-b-057"
+     ],
+     "kanit": {
+      "sayfa": 40,
+      "gorsel": "Küme solunumu ve ataksik solunum traseleri ile koronal MR üzerinde düzey çizgileri"
+     }
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "d3-b-057",
+     "soru": "Komadaki bir hastada beyin sapının, özellikle bulbusun etkilendiği durumlarda görülen, düzensiz bir şekilde devam eden solunum paterni aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Küme solunumu",
+      "B": "Apnestik solunum",
+      "C": "Santral nörojenik hiperventilasyon",
+      "D": "Ataksik solunum",
+      "E": "Cheyne-Stokes solunumu"
+     },
+     "cevap": "D"
+    }
+   ]
+  }
+ ],
+ "soru_sayisi": 15
+}

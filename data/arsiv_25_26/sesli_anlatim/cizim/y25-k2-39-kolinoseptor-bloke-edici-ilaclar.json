@@ -1,0 +1,155 @@
+{
+ "surum": 1,
+ "metinHash": "114a5d95ee9ee73a7c7ad15272334e124746ab0b",
+ "p": {
+  "2": {
+   "1": [
+    {
+     "tur": "akis",
+     "etiket": "Kuvaterner ve tersiyer amin yapılı antimuskarinikler",
+     "odak": [
+      0.15,
+      0.1,
+      0.85,
+      0.85
+     ],
+     "s": 6,
+     "k": [
+      12,
+      54
+     ],
+     "etiket_konum": [
+      0.55,
+      0.06
+     ],
+     "etiket_genislik": 0.42
+    }
+   ]
+  },
+  "5": {
+   "1": [
+    {
+     "tur": "akis",
+     "etiket": "Reseptör alt tip seçiciliği ve konsantrasyon-yanıt eğrisi",
+     "odak": [
+      0.05,
+      0.35,
+      0.95,
+      0.9
+     ],
+     "s": 11,
+     "k": [
+      13,
+      55
+     ],
+     "etiket_konum": [
+      0.53,
+      0.2607
+     ],
+     "etiket_genislik": 0.42
+    }
+   ]
+  },
+  "6": {
+   "1": [
+    {
+     "tur": "akis",
+     "etiket": "Pupilla sfinkteri ve siliyer kas muskarinik blokajı",
+     "odak": [
+      0.1,
+      0.35,
+      0.9,
+      0.85
+     ],
+     "s": 13,
+     "k": [
+      15,
+      46
+     ],
+     "etiket_konum": [
+      0.1,
+      0.2667
+     ],
+     "etiket_genislik": 0.42
+    }
+   ]
+  },
+  "8": {
+   "2": [
+    {
+     "tur": "akis",
+     "etiket": "Atropin doza bağımlı organ yanıt eğrisi",
+     "odak": [
+      0.3,
+      0.05,
+      0.7,
+      0.6
+     ],
+     "s": 20,
+     "k": [
+      14,
+      44
+     ],
+     "etiket_konum": [
+      0.5,
+      0.01
+     ],
+     "etiket_genislik": 0.42
+    }
+   ]
+  },
+  "10": {
+   "1": [
+    {
+     "tur": "akis",
+     "etiket": "Oftalmolojik antimuskarinikler etki süreleri tablosu",
+     "odak": [
+      0.25,
+      0.25,
+      0.75,
+      0.6
+     ],
+     "s": 25,
+     "k": [
+      23,
+      59
+     ],
+     "etiket_konum": [
+      0.55,
+      0.21
+     ],
+     "etiket_genislik": 0.42
+    }
+   ]
+  },
+  "12": {
+   "1": [
+    {
+     "tur": "akis",
+     "etiket": "Gastrointestinal ve genitoüriner antimuskarinikler doz tablosu",
+     "odak": [
+      0.32,
+      0.08,
+      0.68,
+      0.85
+     ],
+     "s": 32,
+     "k": [
+      16,
+      58
+     ],
+     "etiket_konum": [
+      0.58,
+      0.04
+     ],
+     "etiket_genislik": 0.42
+    }
+   ]
+  }
+ },
+ "rapor": {
+  "aday": 6,
+  "gecti": 6,
+  "ret": {}
+ }
+}

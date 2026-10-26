@@ -16,4 +16,5 @@ export const DRIVE_ROOTS = [
   { key: 'cikmis_sorular', name: '4) Çıkmış Sorular', id: '16ianUX4Nnl-dU9SZOSOgvDDuEaM1x6vZ' },
   { key: 'sinif3', name: '5) 3. Sınıf', id: '1FAqqW0iAeg3NNjkPBeY3zG9X4FXaJuVM' },
   { key: 'd3_cikmis_toplama', name: '6) Dönem 3 Çıkmış Toplama', id: '1QKbD3800KBa3AUWP8apMSiKCMV0jiA21' },
+  { key: 'ogrenci_drive', name: '7) Öğrenci Notları ve Sesleri', id: '17K7doMGg0xupQekTD5_Vz9xMXc5gd7BA' },
 ];

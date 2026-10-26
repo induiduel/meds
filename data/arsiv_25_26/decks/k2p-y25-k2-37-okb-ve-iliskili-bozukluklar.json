@@ -1,0 +1,1975 @@
+{
+ "id": "k2p-y25-k2-37-okb-ve-iliskili-bozukluklar",
+ "deckId": "k2p-y25-k2-37-okb-ve-iliskili-bozukluklar",
+ "title": "OKB ve İlişkili Bozukluklar",
+ "discipline": "Psikiyatri",
+ "committee": "donem3-kurul2",
+ "donem": "2025-2026",
+ "arsiv": true,
+ "confidence": "high",
+ "sayfaHaritasi": "teyitli",
+ "totalSlides": 18,
+ "slides": [
+  {
+   "slideNumber": 1,
+   "title": "OKB Tanımı ve Sınıflamadaki Yeri",
+   "bolum": 1,
+   "pdfSayfalari": [
+    2,
+    3
+   ],
+   "sourcePdf": {
+    "name": "y25-k2-37-okb-ve-iliskili-bozukluklar.pdf",
+    "startPage": 2,
+    "endPage": 3
+   },
+   "content": "Obsesif Kompulsif Bozukluk (OKB), DSM-5 sınıflamasıyla birlikte anksiyete bozuklukları kategorisinden ayrılarak bağımsız bir tanı kümesi olarak tanımlanmıştır.\n\n- **Bağımsız Tanı Kümesi:** OKB artık Beden Dismorfik Bozukluğu, İstifçilik, Trikotillomani ve Deri Yolma bozuklukları ile birlikte 'OKB ve İlişkili Bozukluklar' başlığı altında yer alır.\n- **Klinik Çekirdek:** İstemsizce zihne giren tekrarlayıcı düşünceler (obsesyonlar) ile bunların yarattığı anksiyeteyi gidermek amacıyla sergilenen törensel davranışlardan (kompulsiyonlar) oluşur.\n- **İşlevsellik Kaybı:** Bu belirtiler bireyin belirgin biçimde zamanını alır (günde 1 saatten fazla) ve mesleki ya da sosyal uyumunu bozar.\n\n> [!IMPORTANT]\n> OKB'nin anksiyete bozukluklarından ayrılmasının nedeni; farklı nörobiyolojik döngülere (CSTC döngüsü) ve özgün tedavi yanıtlarına (yüksek doz SSRI ihtiyacı) sahip olmasıdır.",
+   "interactiveElements": [
+    {
+     "id": "k37-s1-q1",
+     "type": "micro_quiz",
+     "question": "DSM-5 sınıflamasında OKB'nin tanısal konumu ve sınıflama özelliği hangisinde doğru verilmiştir?",
+     "options": [
+      {
+       "text": "Anksiyete bozukluklarından ayrılarak 'OKB ve İlişkili Bozukluklar' ana kategorisine taşınmıştır.",
+       "isCorrect": true,
+       "explanation": "Anksiyete bozukluklarından ayrılarak 'OKB ve İlişkili Bozukluklar' ana kategorisine taşınmıştır, klinik psikiyatri kılavuzlarında tanımlanan tanısal ilkeler ve nörobiyolojik mekanizmalarla tam bir uyum gösterir. Bu yaklaşım OKB ve ilişkili bozuklukların değerlendirilmesinde temel referans kabul edilmektedir."
+      },
+      {
+       "text": "Şizofreni spektrumu ve psikotik bozukluklar ana kümesine dahil edilmiştir.",
+       "isCorrect": false,
+       "explanation": "Şıkta sözü edilen şizofreni spektrumu ve psikotik bozukluklar ana kümesine dahil edilmiştir kavramı, farklı bir psikiyatrik sendromun veya bambaşka bir klinik tablonun niteliklerini yansıtır. Bu soruda hedeflenen temel OKB dinamikleri ve patofizyolojik ilkelerle doğrudan örtüşmemektedir."
+      },
+      {
+       "text": "Yalnızca çocukluk çağında görülen gelişimsel nörolojik bir antiteye indirgenmiştir.",
+       "isCorrect": false,
+       "explanation": "Şıkta sözü edilen yalnızca çocukluk çağında görülen gelişimsel nörolojik bir antiteye indirgenmiştir kavramı, farklı bir psikiyatrik sendromun veya bambaşka bir klinik tablonun niteliklerini yansıtır. Bu soruda hedeflenen temel OKB dinamikleri ve patofizyolojik ilkelerle doğrudan örtüşmemektedir."
+      },
+      {
+       "text": "Duygudurum bozuklukları kategorisinde unipolar depresyonun alt tipi yapılmıştır.",
+       "isCorrect": false,
+       "explanation": "Şıkta sözü edilen duygudurum bozuklukları kategorisinde unipolar depresyonun alt tipi yapılmıştır kavramı, farklı bir psikiyatrik sendromun veya bambaşka bir klinik tablonun niteliklerini yansıtır. Bu soruda hedeflenen temel OKB dinamikleri ve patofizyolojik ilkelerle doğrudan örtüşmemektedir."
+      }
+     ]
+    },
+    {
+     "id": "k37-s1-c1",
+     "type": "cloze_masking",
+     "sentence": "OKB belirtilerinin klinik tanı alabilmesi için hastanın gün içinde en az bir saatten fazla zamanını alması ve işlevselliği bozması şarttır.",
+     "maskedTerm": "zamanını",
+     "hint": "Günlük yaşam aktivitelerini kısıtlayan süre harcaması."
+    },
+    {
+     "id": "k37-s1-t1",
+     "type": "interactive_table",
+     "title": "OKB Tanı Ölçütleri Özeti",
+     "tableHeaders": [
+      "Ölçüt Alanı",
+      "Klinik Özellik",
+      "Tanısal Koşul"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Zaman Eşiği",
+         "isMasked": false
+        },
+        {
+         "text": "Günde bir saatten uzun sürme",
+         "isMasked": true,
+         "hint": "Belirtilerin gün boyu kapladığı asgari süre sınırı."
+        },
+        {
+         "text": "Klinik önem taşıma",
+         "isMasked": false
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "İşlevsellik",
+         "isMasked": false
+        },
+        {
+         "text": "Sosyal ve mesleki bozulma",
+         "isMasked": true,
+         "hint": "Kişinin toplumsal ve çalışma hayatındaki bariz gerileme."
+        },
+        {
+         "text": "Hastalık yükü oluşturma",
+         "isMasked": false
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k37-s1-l1",
+     "type": "spot_the_lie",
+     "topic": "OKB Sınıflama Özellikleri",
+     "items": [
+      {
+       "text": "OKB hastalarında takıntılar belirgin sıkıntıya ve zaman kaybına yol açar.",
+       "isLie": false,
+       "explanation": "Zaman kaybı ve yaşam kalitesindeki çöküş OKB'nin temel klinik göstergeleridir."
+      },
+      {
+       "text": "DSM-5 sınıflamasında OKB anksiyete bozukluklarının zorunlu bir alt grubu olarak kalmıştır.",
+       "isLie": true,
+       "explanation": "DSM-5 sınıflamasında OKB anksiyete bozukluklarından çıkarılmış ve ilişkili bozukluklarla bağımsız bir kategori yapılmıştır."
+      },
+      {
+       "text": "İstifçilik ve Beden Dismorfik Bozukluğu OKB ilişkili bozukluklar kümesinde yer alır.",
+       "isLie": false,
+       "explanation": "Bu antiteler OKB ile ortak klinik ve etyolojik paydada buluşarak aynı kümede sınıflanır."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slideNumber": 2,
+   "title": "Obsesyonların Klinik Nitelikleri",
+   "bolum": 1,
+   "pdfSayfalari": [
+    4,
+    4
+   ],
+   "sourcePdf": {
+    "name": "y25-k2-37-okb-ve-iliskili-bozukluklar.pdf",
+    "startPage": 4,
+    "endPage": 4
+   },
+   "content": "Obsesyonlar, kişinin isteği dışında yineleyici ve ısrarcı biçimde zihnine giren, belirgin anksiyete ya da sıkıntıya yol açan düşünce, dürtü veya düşlemlerdir.\n\n- **Ego-distonik Yapı:** Obsesyonlar bireyin kendi benlik algısına, ahlaki değerlerine ve mantığına yabancıdır (ego-distonik); kişi bu düşünceleri saçma bulur ancak zihninden uzaklaştıramaz.\n- **İçsel Kaynaklı Olma:** Hasta bu düşüncelerin dışarıdan zihnine sokulmadığını, kendi zihninin bir ürünü olduğunu bilir (şizofrenideki düşünce sokulmasından temel farkı).\n- **Baskılama ve Nötrleştirme:** Kişi bu istenmeyen düşünceleri görmezden gelmeye, bastırmaya ya da başka bir düşünce veya eylemle nötrleştirmeye çalışır.\n\n> [!NOTE]\n> Ego-distonik nitelik, hastanın takıntısından yoğun rahatsızlık duymasına ve bunu benliğiyle bağdaştıramamasına yol açan en kritik klinik belirteçtir.",
+   "interactiveElements": [
+    {
+     "id": "k37-s2-q1",
+     "type": "micro_quiz",
+     "question": "Obsesyonların klinik özellikleri ve hastanın bu düşüncelere bakış açısıyla ilgili hangisi doğrudur?",
+     "options": [
+      {
+       "text": "Ego-distoniktir; hasta düşünceleri yabancı ve saçma bulur, kendi zihninin ürünü olduğunu kabul eder.",
+       "isCorrect": true,
+       "explanation": "Ego-distoniktir; hasta düşünceleri yabancı ve saçma bulur, kendi zihninin ürünü olduğunu kabul eder, klinik psikiyatri kılavuzlarında tanımlanan tanısal ilkeler ve nörobiyolojik mekanizmalarla tam bir uyum gösterir. Bu yaklaşım OKB ve ilişkili bozuklukların değerlendirilmesinde temel referans kabul edilmektedir."
+      },
+      {
+       "text": "Ego-sintoniktir; hasta düşüncelerin doğruluğuna sarsılmaz biçimde inanır ve savunur.",
+       "isCorrect": false,
+       "explanation": "Şıkta sözü edilen ego-sintoniktir; hasta düşüncelerin doğruluğuna sarsılmaz biçimde inanır ve savunur kavramı, farklı bir psikiyatrik sendromun veya bambaşka bir klinik tablonun niteliklerini yansıtır. Bu soruda hedeflenen temel OKB dinamikleri ve patofizyolojik ilkelerle doğrudan örtüşmemektedir."
+      },
+      {
+       "text": "Düşüncelerin dış bir radyo dalgasıyla zihnine yerleştirildiğine dair hezeyanı vardır.",
+       "isCorrect": false,
+       "explanation": "Şıkta sözü edilen düşüncelerin dış bir radyo dalgasıyla zihnine yerleştirildiğine dair hezeyanı vardır kavramı, farklı bir psikiyatrik sendromun veya bambaşka bir klinik tablonun niteliklerini yansıtır. Bu soruda hedeflenen temel OKB dinamikleri ve patofizyolojik ilkelerle doğrudan örtüşmemektedir."
+      },
+      {
+       "text": "Obsesyonlar yalnızca motor kas spazmlarından ibaret bedensel reflekslerdir.",
+       "isCorrect": false,
+       "explanation": "Şıkta sözü edilen obsesyonlar yalnızca motor kas spazmlarından ibaret bedensel reflekslerdir kavramı, farklı bir psikiyatrik sendromun veya bambaşka bir klinik tablonun niteliklerini yansıtır. Bu soruda hedeflenen temel OKB dinamikleri ve patofizyolojik ilkelerle doğrudan örtüşmemektedir."
+      }
+     ]
+    },
+    {
+     "id": "k37-s2-c1",
+     "type": "cloze_masking",
+     "sentence": "Obsesyonların benliğe yabancı, ahlak ve mantıkla bağdaşmayan yapısına psikiyatride ego-distonik nitelik adı verilir.",
+     "maskedTerm": "ego-distonik",
+     "hint": "Kişinin benlik algısına ve ahlak anlayışına zıt düşen durum."
+    },
+    {
+     "id": "k37-s2-r1",
+     "type": "active_recall",
+     "question": "Obsesyon ile psikotik düşünce sokulması arasındaki temel ayrım noktası nedir?",
+     "answer": "OKB hastası obsesyonların kendi zihninin ürünü olduğunu kabul eder ve içgörüsü vardır; psikotik düşünce sokulmasında ise hasta düşüncelerin dış bir güç tarafından zihnine sokulduğuna inanır."
+    },
+    {
+     "id": "k37-s2-l1",
+     "type": "spot_the_lie",
+     "topic": "Obsesyonların Özellikleri",
+     "items": [
+      {
+       "text": "Obsesyonlar zihne istemsizce giren ve yoğun sıkıntı uyandıran düşüncelerdir.",
+       "isLie": false,
+       "explanation": "İstemsiz giriş ve anksiyete oluşturma obsesyonların temel doğasıdır."
+      },
+      {
+       "text": "Hasta bu düşünceleri kendi ahlaki değerleriyle tamamen uyumlu bulup benimser.",
+       "isLie": true,
+       "explanation": "Obsesyonlar ego-distoniktir; kişi onları ahlakına ve değerlerine tamamen aykırı bularak suçluluk ve utanç duyar."
+      },
+      {
+       "text": "Kişi obsesyonun yol açtığı gerilimi düşürmek için nötrleştirme çabasına girer.",
+       "isLie": false,
+       "explanation": "Anksiyeteyi dindirme çabası kompulsif ritüellerin ve bilişsel nötrleştirmelerin tetiğini çeker."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slideNumber": 3,
+   "title": "Kompulsiyonlar ve Epidemiyoloji",
+   "bolum": 1,
+   "pdfSayfalari": [
+    5,
+    6
+   ],
+   "sourcePdf": {
+    "name": "y25-k2-37-okb-ve-iliskili-bozukluklar.pdf",
+    "startPage": 5,
+    "endPage": 6
+   },
+   "content": "Kompulsiyonlar, kişinin obsesyona tepki olarak ya da katı kurallara göre yapmaktan kendini alıkoyamadığı yineleyici davranışlar (el yıkama, kontrol etme) veya zihinsel eylemlerdir (dua etme, sayma).\n\n- **Amacı:** Obsesyonun doğurduğu anksiyeteyi azaltmak ya da korkulan bir felaketi önlemektir; ancak bu eylemler önlenmek istenen olayla mantıksal olarak bağlantılı değildir ya da aşırıdır.\n- **Haz Vermeme İlkesi:** Kompulsiyonlar hastaya haz veya zevk vermez; yalnızca sıkıntıyı geçici olarak dindirir (bu yönüyle madde bağımlılığı veya kumar oynama dürtüsünden ayrılır).\n- **Epidemiyoloji:** Yaşam boyu yaygınlığı yaklaşık %2-3'tür. Erişkinlikte kadın ve erkeklerde eşit oranda görülürken, çocukluk ve erken ergenlik başlangıçlı olgularda erkek baskınlığı dikkat çeker.\n\n> [!IMPORTANT]\n> Kompulsiyonların ortalama başlangıç yaşı 20 civarıdır; sinsi ve kademeli başlayıp tedavi edilmezse kronik dalgalı bir gidiş gösterir.",
+   "interactiveElements": [
+    {
+     "id": "k37-s3-q1",
+     "type": "micro_quiz",
+     "question": "Kompulsiyonların işlevi ve OKB'nin epidemiyolojik nitelikleri hakkında hangisi doğrudur?",
+     "options": [
+      {
+       "text": "Anksiyeteyi geçici azaltmak için yapılır, haz vermez; erişkinlerde kadın-erkek oranı eşittir.",
+       "isCorrect": true,
+       "explanation": "Anksiyeteyi geçici azaltmak için yapılır, haz vermez; erişkinlerde kadın-erkek oranı eşittir, klinik psikiyatri kılavuzlarında tanımlanan tanısal ilkeler ve nörobiyolojik mekanizmalarla tam bir uyum gösterir. Bu yaklaşım OKB ve ilişkili bozuklukların değerlendirilmesinde temel referans kabul edilmektedir."
+      },
+      {
+       "text": "Kişiye derin bir haz ve coşku verir; toplumda kadınlarda on kat daha yaygındır.",
+       "isCorrect": false,
+       "explanation": "Şıkta sözü edilen kişiye derin bir haz ve coşku verir; toplumda kadınlarda on kat daha yaygındır kavramı, farklı bir psikiyatrik sendromun veya bambaşka bir klinik tablonun niteliklerini yansıtır. Bu soruda hedeflenen temel OKB dinamikleri ve patofizyolojik ilkelerle doğrudan örtüşmemektedir."
+      },
+      {
+       "text": "Yalnızca 65 yaş üzerinde aniden ortaya çıkan geç başlangıçlı bir tablodur.",
+       "isCorrect": false,
+       "explanation": "Şıkta sözü edilen yalnızca 65 yaş üzerinde aniden ortaya çıkan geç başlangıçlı bir tablodur kavramı, farklı bir psikiyatrik sendromun veya bambaşka bir klinik tablonun niteliklerini yansıtır. Bu soruda hedeflenen temel OKB dinamikleri ve patofizyolojik ilkelerle doğrudan örtüşmemektedir."
+      },
+      {
+       "text": "Kompulsif eylemler korkulan felaketle doğrudan tam orantılı ve rasyoneldir.",
+       "isCorrect": false,
+       "explanation": "Şıkta sözü edilen kompulsif eylemler korkulan felaketle doğrudan tam orantılı ve rasyoneldir kavramı, farklı bir psikiyatrik sendromun veya bambaşka bir klinik tablonun niteliklerini yansıtır. Bu soruda hedeflenen temel OKB dinamikleri ve patofizyolojik ilkelerle doğrudan örtüşmemektedir."
+      }
+     ]
+    },
+    {
+     "id": "k37-s3-c1",
+     "type": "cloze_masking",
+     "sentence": "Kompulsif ritüeller hastaya hiçbir zaman zevk veya haz vermez, sadece anksiyeteyi geçici dindirir.",
+     "maskedTerm": "haz",
+     "hint": "Bağımlılıklarda hissedilen ancak kompulsiyonlarda bulunmayan hoşnutluk hissi."
+    },
+    {
+     "id": "k37-s3-t1",
+     "type": "interactive_table",
+     "title": "Obsesyon ve Kompulsiyon Karşılaştırması",
+     "tableHeaders": [
+      "Kavram",
+      "Bileşen Türü",
+      "Temel İşlev"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Obsesyon",
+         "isMasked": false
+        },
+        {
+         "text": "Düşünce, dürtü veya imge",
+         "isMasked": true,
+         "hint": "Zihinsel alanda beliren istemsiz içerik."
+        },
+        {
+         "text": "Anksiyete ve sıkıntı yaratma",
+         "isMasked": false
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Kompulsiyon",
+         "isMasked": false
+        },
+        {
+         "text": "Yineleyici davranış veya zihinsel eylem",
+         "isMasked": true,
+         "hint": "Kişinin yapmaktan kendini alamadığı törensel ritüel."
+        },
+        {
+         "text": "Anksiyeteyi geçici nötrleme",
+         "isMasked": false
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k37-s3-l1",
+     "type": "spot_the_lie",
+     "topic": "OKB Epidemiyolojisi ve Kompulsiyonlar",
+     "items": [
+      {
+       "text": "OKB'nin yaşam boyu görülme sıklığı yaklaşık yüzde iki ila üç civarındadır.",
+       "isLie": false,
+       "explanation": "Epidemiyolojik çalışmalar toplum genelinde yaygınlığın %2-3 olduğunu kanıtlamıştır."
+      },
+      {
+       "text": "Çocukluk çağında başlayan OKB olgularında kız çocukları belirgin şekilde çoğunluktadır.",
+       "isLie": true,
+       "explanation": "Çocukluk ve erken ergenlikte başlayan OKB'de erkek çocuk baskınlığı görülür; erişkinlikte oran eşitlenir."
+      },
+      {
+       "text": "Kompulsiyonlar zihinsel ritüeller şeklinde de sergilenebilir.",
+       "isLie": false,
+       "explanation": "Sessizce dua etme, sayma veya kelimeleri tekrarlama zihinsel kompulsiyon örnekleridir."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slideNumber": 4,
+   "title": "[TEKRAR SAYFASI - CHECKPOINT 1] OKB Tanım ve Temel Kavramlar",
+   "bolum": 1,
+   "pdfSayfalari": [
+    1,
+    6
+   ],
+   "sourcePdf": {
+    "name": "y25-k2-37-okb-ve-iliskili-bozukluklar.pdf",
+    "startPage": 1,
+    "endPage": 6
+   },
+   "content": "Bu bölümde Obsesif Kompulsif Bozukluğun sınıflamadaki bağımsız yerini, obsesyon ve kompulsiyonların tanımlayıcı klinik özelliklerini inceledik.\n\n- **Ego-distonik Karakter:** Düşünceler hastanın ahlak ve mantığına terstir; hasta bunların saçma olduğunu bilir ancak zihninden atamaz.\n- **Kompulsiyonların Amacı:** Zevk almak değil, obsesyonun doğurduğu şiddetli anksiyeteyi geçici olarak yatıştırmaktır.\n- **Tanı Eşiği ve Yaygınlık:** Belirtiler günde 1 saatten fazla sürer; toplumda %2-3 sıklıkta görülür ve erişkinlerde kadın-erkek oranı eşittir.\n\n> [!NOTE]\n> OKB'deki içgörü düzeyi ve ego-distonik yapı, tabloyu psikotik hezeyanlardan ve benlikle barışık kişilik örüntülerinden ayıran en temel klinik köprüdür.",
+   "interactiveElements": [
+    {
+     "id": "k37-s4-q1",
+     "type": "micro_quiz",
+     "question": "İlk bölümde işlenen kavramlar ışığında, OKB tanısı için aşağıdakilerden hangisi karakteristik bir bulgudur?",
+     "options": [
+      {
+       "text": "Hastanın düşüncelerini saçma ve benliğe aykırı bulmasına rağmen engelleyememesi.",
+       "isCorrect": true,
+       "explanation": "Hastanın düşüncelerini saçma ve benliğe aykırı bulmasına rağmen engelleyememesi, klinik psikiyatri kılavuzlarında tanımlanan tanısal ilkeler ve nörobiyolojik mekanizmalarla tam bir uyum gösterir. Bu yaklaşım OKB ve ilişkili bozuklukların değerlendirilmesinde temel referans kabul edilmektedir."
+      },
+      {
+       "text": "Kompulsif eylemlerin hastaya yoğun bedensel coşku ve doyum sağlaması.",
+       "isCorrect": false,
+       "explanation": "Şıkta sözü edilen kompulsif eylemlerin hastaya yoğun bedensel coşku ve doyum sağlaması kavramı, farklı bir psikiyatrik sendromun veya bambaşka bir klinik tablonun niteliklerini yansıtır. Bu soruda hedeflenen temel OKB dinamikleri ve patofizyolojik ilkelerle doğrudan örtüşmemektedir."
+      },
+      {
+       "text": "Düşüncelerin hastaya gaipten radyo vericileriyle gönderildiğinin iddia edilmesi.",
+       "isCorrect": false,
+       "explanation": "Şıkta sözü edilen düşüncelerin hastaya gaipten radyo vericileriyle gönderildiğinin iddia edilmesi kavramı, farklı bir psikiyatrik sendromun veya bambaşka bir klinik tablonun niteliklerini yansıtır. Bu soruda hedeflenen temel OKB dinamikleri ve patofizyolojik ilkelerle doğrudan örtüşmemektedir."
+      },
+      {
+       "text": "Erişkin popülasyonda kadınların erkeklerden en az sekiz kat daha sık etkilenmesi.",
+       "isCorrect": false,
+       "explanation": "Şıkta sözü edilen erişkin popülasyonda kadınların erkeklerden en az sekiz kat daha sık etkilenmesi kavramı, farklı bir psikiyatrik sendromun veya bambaşka bir klinik tablonun niteliklerini yansıtır. Bu soruda hedeflenen temel OKB dinamikleri ve patofizyolojik ilkelerle doğrudan örtüşmemektedir."
+      }
+     ]
+    },
+    {
+     "id": "k37-s4-s1",
+     "type": "swipe_matching",
+     "title": "Obsesyon ve Kompulsiyon Eşleştirmesi",
+     "leftCategory": "Obsesyon (Düşünce/Dürtü)",
+     "rightCategory": "Kompulsiyon (Eylem/Ritüel)",
+     "cards": [
+      {
+       "text": "Kapı koluna dokununca mikrop bulaştığı zihinsel kaygısı",
+       "category": "left"
+      },
+      {
+       "text": "Elleri aralıksız beş kez sabunla köpürterek yıkamak",
+       "category": "right"
+      },
+      {
+       "text": "Ocağın açık kalıp yangın çıkaracağı kuşkusu",
+       "category": "left"
+      },
+      {
+       "text": "Evden çıkmadan önce kilitleri dört kez kontrol etmek",
+       "category": "right"
+      }
+     ]
+    },
+    {
+     "id": "k37-s4-c1",
+     "type": "cloze_masking",
+     "sentence": "Kişinin zihnindeki düşünceleri saçma bulmasına rağmen kurtulamaması tablonun ego-distonik olduğunu kanıtlar.",
+     "maskedTerm": "ego-distonik",
+     "hint": "Benliğin kabul etmediği yabancı klinik yapı."
+    },
+    {
+     "id": "k37-s4-t1",
+     "type": "interactive_table",
+     "title": "Bölüm 1 Çekirdek Parametreleri",
+     "tableHeaders": [
+      "Klinik Ölçüt",
+      "Gereken Koşul",
+      "Klinik Yorum"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Zaman Sınırı",
+         "isMasked": false
+        },
+        {
+         "text": "Günde bir saati aşan süre",
+         "isMasked": true,
+         "hint": "Tanı için günlük en az zaman eşiği."
+        },
+        {
+         "text": "Belirgin zaman kaybı",
+         "isMasked": false
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "İçgörü Niteliği",
+         "isMasked": false
+        },
+        {
+         "text": "Düşüncenin kendi zihninden çıktığını bilme",
+         "isMasked": true,
+         "hint": "Takıntıların dış bir kaynaktan değil öznel bilinçten doğduğunu kavrama."
+        },
+        {
+         "text": "Psikozdan ayrım",
+         "isMasked": false
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slideNumber": 5,
+   "title": "Nörobiyoloji ve Etyopatogenez",
+   "bolum": 2,
+   "pdfSayfalari": [
+    7,
+    7
+   ],
+   "sourcePdf": {
+    "name": "y25-k2-37-okb-ve-iliskili-bozukluklar.pdf",
+    "startPage": 7,
+    "endPage": 7
+   },
+   "content": "OKB patofizyolojisinde en iyi tanımlanmış nöral mekanizma Kortiko-Striato-Talamo-Kortikal (CSTC) döngüdeki işlevsel bozukluk ve hiperaktivitedir.\n\n- **CSTC Döngüsü:** Orbitofrontal korteks (OFC), anterior singulat korteks ve bazal ganglionlar (özellikle kaudat çekirdek) arasındaki iletişim filtresinin aksaması takıntıların döngüsel sürmesine neden olur.\n- **Serotonerjik Sistem:** OKB'nin seçici serotonin geri alım inhibitörlerine (SSRI) yüksek dozda yanıt vermesi, serotonerjik nörotransmisyonun kilit rolünü gösterir.\n- **Genetik ve İmmün Etkenler:** Birinci derece akrabalarda risk 3-5 kat artmıştır. Çocuklukta A grubu beta hemolitik streptokok enfeksiyonları sonrası gelişen bazal ganglion otoantikorları 'PANDAS' tablosuna yol açabilir.\n\n> [!IMPORTANT]\n> Orbitofrontal korteks tehlike algısını abartırken, kaudat çekirdeğin filtreleme işlevini yapamaması gereksiz uyarıların talamus üzerinden kortekse geri dönmesine yol açar.",
+   "interactiveElements": [
+    {
+     "id": "k37-s5-q1",
+     "type": "micro_quiz",
+     "question": "OKB patofizyolojisinde rol oynayan nöroanatomik devre ve yapılarla ilgili hangisi doğrudur?",
+     "options": [
+      {
+       "text": "Orbitofrontal korteks, kaudat çekirdek ve talamusu içeren CSTC döngüsünde hiperaktivite vardır.",
+       "isCorrect": true,
+       "explanation": "Orbitofrontal korteks, kaudat çekirdek ve talamusu içeren CSTC döngüsünde hiperaktivite vardır, klinik psikiyatri kılavuzlarında tanımlanan tanısal ilkeler ve nörobiyolojik mekanizmalarla tam bir uyum gösterir. Bu yaklaşım OKB ve ilişkili bozuklukların değerlendirilmesinde temel referans kabul edilmektedir."
+      },
+      {
+       "text": "Yalnızca spinal kord ön boynuz motor nöronlarında geri dönüşsüz demiyelinizasyon izlenir.",
+       "isCorrect": false,
+       "explanation": "Şıkta sözü edilen yalnızca spinal kord ön boynuz motor nöronlarında geri dönüşsüz demiyelinizasyon izlenir kavramı, farklı bir psikiyatrik sendromun veya bambaşka bir klinik tablonun niteliklerini yansıtır. Bu soruda hedeflenen temel OKB dinamikleri ve patofizyolojik ilkelerle doğrudan örtüşmemektedir."
+      },
+      {
+       "text": "Serebellar vermisin tam aplazisi ve dördüncü ventrikül tıkanıklığı asıl nedendir.",
+       "isCorrect": false,
+       "explanation": "Şıkta sözü edilen serebellar vermisin tam aplazisi ve dördüncü ventrikül tıkanıklığı asıl nedendir kavramı, farklı bir psikiyatrik sendromun veya bambaşka bir klinik tablonun niteliklerini yansıtır. Bu soruda hedeflenen temel OKB dinamikleri ve patofizyolojik ilkelerle doğrudan örtüşmemektedir."
+      },
+      {
+       "text": "Lokus seruleusta aşırı dopamin birikimi sonucu tek taraflı amigdala nekrozu gelişir.",
+       "isCorrect": false,
+       "explanation": "Şıkta sözü edilen lokus seruleusta aşırı dopamin birikimi sonucu tek taraflı amigdala nekrozu gelişir kavramı, farklı bir psikiyatrik sendromun veya bambaşka bir klinik tablonun niteliklerini yansıtır. Bu soruda hedeflenen temel OKB dinamikleri ve patofizyolojik ilkelerle doğrudan örtüşmemektedir."
+      }
+     ]
+    },
+    {
+     "id": "k37-s5-c1",
+     "type": "cloze_masking",
+     "sentence": "OKB patofizyolojisinden sorumlu temel nöroanatomik devre kortiko-striato-talamo-kortikal döngü olarak adlandırılır.",
+     "maskedTerm": "kortiko-striato-talamo-kortikal",
+     "hint": "Korteks, çizgili cisim ve talamus arasındaki nöral yolak."
+    },
+    {
+     "id": "k37-s5-h1",
+     "type": "causal_chain",
+     "title": "CSTC Döngüsü ve Takıntı Oluşum Mekanizması",
+     "steps": [
+      "1. Orbitofrontal Korteks Uyarısı: Çevresel tetikleyici tehlike ve hata sinyali olarak algılanır.",
+      "2. Kaudat Çekirdekte Filtreleme Hatası: Striatum uygunsuz uyarıyı baskılayamaz ve filtreleyemez.",
+      "3. Talamik Geri Besleme: Filtrelenemeyen sinyal talamus üzerinden kortekse kontrolsüz geri döner.",
+      "4. Obsesif Kısır Döngü: Zihne hücum eden takıntı kompulsif eylem ihtiyacı doğurur."
+     ]
+    },
+    {
+     "id": "k37-s5-l1",
+     "type": "spot_the_lie",
+     "topic": "OKB Nörobiyolojisi ve Etyoloji",
+     "items": [
+      {
+       "text": "Streptokok enfeksiyonları sonrası çocuklarda otoimmün kökenli PANDAS tablosu görülebilir.",
+       "isLie": false,
+       "explanation": "Streptokokal enfeksiyon bazal ganglion otoantikorlarını tetikleyerek ani başlangıçlı OKB yapabilir."
+      },
+      {
+       "text": "OKB tedavisinde serotonerjik iletimi artıran SSRI ilaçlar yüksek dozda etkilidir.",
+       "isLie": false,
+       "explanation": "Serotonin iletiminin güçlendirilmesi CSTC döngüsündeki iletim dengesizliğini onarmada birincil yoldur."
+      },
+      {
+       "text": "Kaudat çekirdek OKB hastalarında aşırı derecede hipoaktif olup tamamen körelmiştir.",
+       "isLie": true,
+       "explanation": "Kaudat çekirdek ve orbitofrontal kortekste tam tersine anormal hiperaktivite ve filtreleme aksaması saptanır."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slideNumber": 6,
+   "title": "Bilişsel Model ve Nötrleştirme Döngüsü",
+   "bolum": 2,
+   "pdfSayfalari": [
+    8,
+    8
+   ],
+   "sourcePdf": {
+    "name": "y25-k2-37-okb-ve-iliskili-bozukluklar.pdf",
+    "startPage": 8,
+    "endPage": 8
+   },
+   "content": "Bilişsel-davranışçı modele göre herkesin aklına istenmeyen düşünceler gelebilir; ancak OKB hastası bu düşüncelere felaket getirici anlamlar yükler.\n\n- **Düşünce-Eylem Kaynaşması (Thought-Action Fusion):** Hastada iki temel inanç gelişir: 'Kötü bir şeyi düşünmek, onu yapmak kadar ahlaksızlıktır' (moral) ve 'Kötü bir şeyi düşünmek, onun gerçekleşme olasılığını artırır' (olasılıksal).\n- **Abartılmış Sorumluluk:** Hasta olası bir zararı önleme konusunda kendini aşırı derecede sorumlu hisseder.\n- **Nötrleştirme Tuzağı:** Kaygıyı bastırmak için yapılan kompulsiyon veya kaçınma anlık rahatlama sağlar; ancak düşüncenin tehlikeli olduğu inancını pekiştirerek kısır döngüyü sürdürür.\n\n> [!NOTE]\n> Kompulsif kaçınma davranışları, hastanın 'kötü düşünsem bile felaket gerçekleşmez' gerçeğini yaşantısal olarak test etmesini engeller.",
+   "interactiveElements": [
+    {
+     "id": "k37-s6-q1",
+     "type": "micro_quiz",
+     "question": "OKB bilişsel modelindeki 'düşünce-eylem kaynaşması' kavramının tanımı hangisinde doğru verilmiştir?",
+     "options": [
+      {
+       "text": "Kötü bir düşünceyi zihinden geçirmenin eylemi yapmakla eşdeğer ve felaketi çağırıcı görülmesidir.",
+       "isCorrect": true,
+       "explanation": "Kötü bir düşünceyi zihinden geçirmenin eylemi yapmakla eşdeğer ve felaketi çağırıcı görülmesidir, klinik psikiyatri kılavuzlarında tanımlanan tanısal ilkeler ve nörobiyolojik mekanizmalarla tam bir uyum gösterir. Bu yaklaşım OKB ve ilişkili bozuklukların değerlendirilmesinde temel referans kabul edilmektedir."
+      },
+      {
+       "text": "Kişinin yaptığı motor hareketleri zihninde tamamen unutup hatırlayamamasıdır.",
+       "isCorrect": false,
+       "explanation": "Şıkta sözü edilen kişinin yaptığı motor hareketleri zihninde tamamen unutup hatırlayamamasıdır kavramı, farklı bir psikiyatrik sendromun veya bambaşka bir klinik tablonun niteliklerini yansıtır. Bu soruda hedeflenen temel OKB dinamikleri ve patofizyolojik ilkelerle doğrudan örtüşmemektedir."
+      },
+      {
+       "text": "Hastanın çevresindeki tüm insanların zihnini telepatik olarak okuduğuna inanmasıdır.",
+       "isCorrect": false,
+       "explanation": "Şıkta sözü edilen hastanın çevresindeki tüm insanların zihnini telepatik olarak okuduğuna inanmasıdır kavramı, farklı bir psikiyatrik sendromun veya bambaşka bir klinik tablonun niteliklerini yansıtır. Bu soruda hedeflenen temel OKB dinamikleri ve patofizyolojik ilkelerle doğrudan örtüşmemektedir."
+      },
+      {
+       "text": "Kişinin hiçbir kompulsiyon yapmadan tamamen pasif biçimde beklemesidir.",
+       "isCorrect": false,
+       "explanation": "Şıkta sözü edilen kişinin hiçbir kompulsiyon yapmadan tamamen pasif biçimde beklemesidir kavramı, farklı bir psikiyatrik sendromun veya bambaşka bir klinik tablonun niteliklerini yansıtır. Bu soruda hedeflenen temel OKB dinamikleri ve patofizyolojik ilkelerle doğrudan örtüşmemektedir."
+      }
+     ]
+    },
+    {
+     "id": "k37-s6-c1",
+     "type": "cloze_masking",
+     "sentence": "Kötü bir şeyi aklından geçirmenin felaketin gerçekleşme olasılığını artıracağına inanılmasına düşünce-eylem kaynaşması adı verilir.",
+     "maskedTerm": "düşünce-eylem kaynaşması",
+     "hint": "Zihinsel kurgu ile fiiliyatı birbirine yapıştıran bilişsel çarpıtma."
+    },
+    {
+     "id": "k37-s6-t1",
+     "type": "interactive_table",
+     "title": "Bilişsel Model Döngüsü Basamakları",
+     "tableHeaders": [
+      "Aşama",
+      "Bilişsel Süreç",
+      "Sonuç"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Tetikleyici",
+         "isMasked": false
+        },
+        {
+         "text": "Zihne giren istemsiz düşünce",
+         "isMasked": true,
+         "hint": "Her insanda belirebilen olağan zihinsel kıvılcım."
+        },
+        {
+         "text": "Bilinç alanına ulaşma",
+         "isMasked": false
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Yanlış Yorum",
+         "isMasked": false
+        },
+        {
+         "text": "Aşırı sorumluluk ve felaketleştirme",
+         "isMasked": true,
+         "hint": "Düşünceyi tehlike ve suçluluk olarak etiketleme."
+        },
+        {
+         "text": "Şiddetli anksiyete artışı",
+         "isMasked": false
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k37-s6-l1",
+     "type": "spot_the_lie",
+     "topic": "Bilişsel-Davranışçı Model İlkeleri",
+     "items": [
+      {
+       "text": "İstemsiz düşünceler sağlıklı bireylerin zihnine de sıklıkla gelebilir.",
+       "isLie": false,
+       "explanation": "Araştırmalar sağlıklı insanların %90'ında da benzer istemsiz düşüncelerin belirdiğini göstermektedir."
+      },
+      {
+       "text": "Kompulsif nötrleştirme davranışı uzun vadede takıntıyı tamamen yok eder.",
+       "isLie": true,
+       "explanation": "Nötrleştirme kaygıyı sadece anlık düşürür; uzun vadede düşüncenin tehlikeli olduğu inancını pekiştirerek hastalığı besler."
+      },
+      {
+       "text": "Abartılmış sorumluluk duygusu hastayı felaketi önleme ritüellerine zorlar.",
+       "isLie": false,
+       "explanation": "Sorumluluk algısının aşırı yüksekliği kompulsif önlemleri körükleyen temel inançtır."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slideNumber": 7,
+   "title": "Bulaşma ve Kuşku Belirtileri",
+   "bolum": 3,
+   "pdfSayfalari": [
+    9,
+    9
+   ],
+   "sourcePdf": {
+    "name": "y25-k2-37-okb-ve-iliskili-bozukluklar.pdf",
+    "startPage": 9,
+    "endPage": 9
+   },
+   "content": "OKB hastalarında klinik görünümler belirli temalar etrafında toplanır. En yaygın iki alt tip bulaşma ve kuşkudur.\n\n- **Bulaşma Obsesyonu ve Yıkama Kompulsiyonu:** En sık rastlanan klinik tablodur. Kişi kir, mikrop, idrar, dışkı veya zehirli maddelerin bulaşmasından korkar; ellerini saatlerce soyulana kadar yıkar ya da banyoda uzun süre kalır.\n- **Kuşku Obsesyonu ve Kontrol Kompulsiyonu:** İkinci sıklıkta görülür. Kişi kapıyı kilitleyip kilitlemediğinden, ocağı veya ütüyü açık unuttuğundan kuşkulanır.\n- **Güvence Arayışı:** Hasta olası bir yangın ya da hırsızlığı önlemek için defalarca kilit ve düğmeleri kontrol eder, yakınlarından onay ister.\n\n> [!IMPORTANT]\n> Bulaşma takıntısı olan hastalar kirlenme korkusuyla dış dünyayla teması kesebilir ve evlerini katı kurallarla steril alanlara bölerek aile bireylerine de bu ritüelleri dayatabilir.",
+   "interactiveElements": [
+    {
+     "id": "k37-s7-q1",
+     "type": "micro_quiz",
+     "question": "OKB'de en sık görülen belirti boyutu ve eşlik eden kompulsiyon türü hangisidir?",
+     "options": [
+      {
+       "text": "Bulaşma obsesyonu ve buna eşlik eden aşırı temizlik/yıkama kompulsiyonu.",
+       "isCorrect": true,
+       "explanation": "Bulaşma obsesyonu ve buna eşlik eden aşırı temizlik/yıkama kompulsiyonu, klinik psikiyatri kılavuzlarında tanımlanan tanısal ilkeler ve nörobiyolojik mekanizmalarla tam bir uyum gösterir. Bu yaklaşım OKB ve ilişkili bozuklukların değerlendirilmesinde temel referans kabul edilmektedir."
+      },
+      {
+       "text": "Yalnızca yabancı dilde şarkı sözü ezberleme obsesyonu.",
+       "isCorrect": false,
+       "explanation": "Şıkta sözü edilen yalnızca yabancı dilde şarkı sözü ezberleme obsesyonu kavramı, farklı bir psikiyatrik sendromun veya bambaşka bir klinik tablonun niteliklerini yansıtır. Bu soruda hedeflenen temel OKB dinamikleri ve patofizyolojik ilkelerle doğrudan örtüşmemektedir."
+      },
+      {
+       "text": "Sürekli antika saat toplama ve tamir etme kompulsiyonu.",
+       "isCorrect": false,
+       "explanation": "Şıkta sözü edilen sürekli antika saat toplama ve tamir etme kompulsiyonu kavramı, farklı bir psikiyatrik sendromun veya bambaşka bir klinik tablonun niteliklerini yansıtır. Bu soruda hedeflenen temel OKB dinamikleri ve patofizyolojik ilkelerle doğrudan örtüşmemektedir."
+      },
+      {
+       "text": "Açık alanlarda istemsiz koşma ve bağırma dürtüsü.",
+       "isCorrect": false,
+       "explanation": "Şıkta sözü edilen açık alanlarda istemsiz koşma ve bağırma dürtüsü kavramı, farklı bir psikiyatrik sendromun veya bambaşka bir klinik tablonun niteliklerini yansıtır. Bu soruda hedeflenen temel OKB dinamikleri ve patofizyolojik ilkelerle doğrudan örtüşmemektedir."
+      }
+     ]
+    },
+    {
+     "id": "k37-s7-c1",
+     "type": "cloze_masking",
+     "sentence": "OKB'de en sık rastlanan klinik alt tip bulaşma obsesyonu ve temizlik kompulsiyonudur.",
+     "maskedTerm": "bulaşma",
+     "hint": "Kir, toksin veya patojen mikrop temasından kaynaklanan kontaminasyon korkusu."
+    },
+    {
+     "id": "k37-s7-r1",
+     "type": "active_recall",
+     "question": "Kuşku obsesyonu olan bir hastanın sergilediği en tipik kompulsiyon eylemi nedir?",
+     "answer": "Kilitleri, ocağı, elektrik düğmelerini veya vanaları defalarca kontrol etme (kontrol kompulsiyonu) ve yakınlarından güvence isteme davranışıdır."
+    },
+    {
+     "id": "k37-s7-l1",
+     "type": "spot_the_lie",
+     "topic": "Bulaşma ve Kuşku Belirtileri",
+     "items": [
+      {
+       "text": "Bulaşma takıntısı olan bireyler aşırı el yıkama nedeniyle cilt bütünlüğünü bozabilir.",
+       "isLie": false,
+       "explanation": "Deterjan ve sabunla aşırı yıkama ellerde kontakt dermatite ve çatlaklara yol açar."
+      },
+      {
+       "text": "Kuşku takıntısı yaşayan hastalar evden tek bir kontrol yapmadan çok rahat çıkarlar.",
+       "isLie": true,
+       "explanation": "Kuşku hastaları kapı, kilit ve ocakları defalarca kontrol etmekten evden çıkmakta büyük güçlük yaşarlar."
+      },
+      {
+       "text": "Kuşku obsesyonuna sıklıkla kontrol etme kompulsiyonu eşlik eder.",
+       "isLie": false,
+       "explanation": "Kuşkunun doğurduğu anksiyete doğrudan kontrol ritüelleriyle nötrlenmeye çalışılır."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slideNumber": 8,
+   "title": "Simetri, Düzen ve Tabu Obsesyonlar",
+   "bolum": 3,
+   "pdfSayfalari": [
+    10,
+    10
+   ],
+   "sourcePdf": {
+    "name": "y25-k2-37-okb-ve-iliskili-bozukluklar.pdf",
+    "startPage": 10,
+    "endPage": 10
+   },
+   "content": "Bulaşma ve kuşku dışında simetri, düzen ihtiyacı ve zihne giren tabu düşünceler diğer önemli belirti boyutlarıdır.\n\n- **Simetri ve Düzen:** Nesnelerin kusursuz bir hizada veya belirli bir sırada olması istenir. Buradaki temel tetikleyici genellikle felaket korkusundan ziyade 'tam olmama hissi' (not-just-right experience) ve içsel rahatsızlıktır.\n- **Tabu Düşünceler (Saldırganlık, Cinsellik, Dini):** Bireyin en çok değer verdiği kutsallara, sevdiklerine veya ahlaki kurallarına zıt düşüncelerdir (örneğin ibadet sırasında küfür etme, bebeğine zarar verme korkusu).\n- **Suçluluk ve Gizleme:** Hasta bu düşüncelerden ötürü derin bir ahlaki suçluluk ve utanç duyar; bu nedenle hekime başvurmayı yıllarca erteleyebilir.\n\n> [!NOTE]\n> Tabu obsesyonu olan hastalar korktukları eylemi asla gerçekleştirmezler; tam aksine eylemden dehşete düştükleri için bıçakları saklar veya sevdiklerinden uzak dururlar.",
+   "interactiveElements": [
+    {
+     "id": "k37-s8-q1",
+     "type": "micro_quiz",
+     "question": "Simetri obsesyonlarında ve tabu düşüncelerde görülen klinik özelliklerle ilgili hangisi doğrudur?",
+     "options": [
+      {
+       "text": "Simetride 'tam olmama hissi' hakimdir; tabu düşüncelerde hasta eylemden dehşete düşer ve asla yapmaz.",
+       "isCorrect": true,
+       "explanation": "Simetride 'tam olmama hissi' hakimdir; tabu düşüncelerde hasta eylemden dehşete düşer ve asla yapmaz, klinik psikiyatri kılavuzlarında tanımlanan tanısal ilkeler ve nörobiyolojik mekanizmalarla tam bir uyum gösterir. Bu yaklaşım OKB ve ilişkili bozuklukların değerlendirilmesinde temel referans kabul edilmektedir."
+      },
+      {
+       "text": "Tabu düşüncelere sahip hastalar düşündükleri cinayetleri soğukkanlılıkla işlerler.",
+       "isCorrect": false,
+       "explanation": "Şıkta sözü edilen tabu düşüncelere sahip hastalar düşündükleri cinayetleri soğukkanlılıkla işlerler kavramı, farklı bir psikiyatrik sendromun veya bambaşka bir klinik tablonun niteliklerini yansıtır. Bu soruda hedeflenen temel OKB dinamikleri ve patofizyolojik ilkelerle doğrudan örtüşmemektedir."
+      },
+      {
+       "text": "Simetri takıntısı olan bireyler eşyaların dağınık ve düzensiz olmasını özellikle talep eder.",
+       "isCorrect": false,
+       "explanation": "Şıkta sözü edilen simetri takıntısı olan bireyler eşyaların dağınık ve düzensiz olmasını özellikle talep eder kavramı, farklı bir psikiyatrik sendromun veya bambaşka bir klinik tablonun niteliklerini yansıtır. Bu soruda hedeflenen temel OKB dinamikleri ve patofizyolojik ilkelerle doğrudan örtüşmemektedir."
+      },
+      {
+       "text": "Dini takıntılar yalnızca belirli bir inanç grubunda görülüp ateistlerde hiç rastlanmaz.",
+       "isCorrect": false,
+       "explanation": "Şıkta sözü edilen dini takıntılar yalnızca belirli bir inanç grubunda görülüp ateistlerde hiç rastlanmaz kavramı, farklı bir psikiyatrik sendromun veya bambaşka bir klinik tablonun niteliklerini yansıtır. Bu soruda hedeflenen temel OKB dinamikleri ve patofizyolojik ilkelerle doğrudan örtüşmemektedir."
+      }
+     ]
+    },
+    {
+     "id": "k37-s8-c1",
+     "type": "cloze_masking",
+     "sentence": "Simetri ve düzen takıntılarında felaket beklentisinden ziyade eşyaların tam oturmadığını bildiren tam olmama hissi belirleyicidir.",
+     "maskedTerm": "tam olmama hissi",
+     "hint": "Kusursuz dizilimin sağlanamadığına dair yaşanan içsel huzursuzluk hali."
+    },
+    {
+     "id": "k37-s8-t1",
+     "type": "interactive_table",
+     "title": "Belirti Tipleri ve Klinik Yansımaları",
+     "tableHeaders": [
+      "Belirti Boyutu",
+      "Tetikleyici Düşünce",
+      "Kompulsif Tepki"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Simetri",
+         "isMasked": false
+        },
+        {
+         "text": "Hizasızlık ve tam olmama hissi",
+         "isMasked": true,
+         "hint": "Kusursuz dizilimin bozulduğu algısı."
+        },
+        {
+         "text": "Milimetrik düzeltme ve sıralama",
+         "isMasked": false
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Tabu Düşünce",
+         "isMasked": false
+        },
+        {
+         "text": "Ahlaka zıt dürtü ve kutsala saygısızlık",
+         "isMasked": true,
+         "hint": "Kişinin değerlerine en aykırı zihinsel imge."
+        },
+        {
+         "text": "Dua etme ve zihinsel nötrleme",
+         "isMasked": false
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k37-s8-l1",
+     "type": "spot_the_lie",
+     "topic": "Simetri ve Tabu Obsesyonları",
+     "items": [
+      {
+       "text": "Hastalar zihne gelen tabu düşünceler nedeniyle derin bir suçluluk duyup gizlenebilir.",
+       "isLie": false,
+       "explanation": "Ahlaki utanç hekime başvuruyu ortalama 7-10 yıl geciktirebilen temel faktördür."
+      },
+      {
+       "text": "Simetri arayışında kompulsiyonlar nesnelerin belirli bir sıraya göre dizilmesini içerir.",
+       "isLie": false,
+       "explanation": "Kitapların boy sırasına veya renk uyumuna göre dizilmesi tipik simetri kompulsiyonudur."
+      },
+      {
+       "text": "Zarar verme obsesyonu olan anne bebeğini korumak yerine ona kasten zarar verir.",
+       "isLie": true,
+       "explanation": "Anne bebeğine zarar vermekten ödün koparak bebeğin yanına yaklaşamaz veya bıçakları kilitler; zarar vermez."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slideNumber": 9,
+   "title": "Seyir, Prognoz ve Ayırıcı Tanı",
+   "bolum": 3,
+   "pdfSayfalari": [
+    11,
+    12
+   ],
+   "sourcePdf": {
+    "name": "y25-k2-37-okb-ve-iliskili-bozukluklar.pdf",
+    "startPage": 11,
+    "endPage": 12
+   },
+   "content": "OKB kronik ve dalgalı seyir gösteren bir bozukluktur; hastaların büyük kısmında stres faktörleriyle alevlenmeler izlenir.\n\n- **Prognoz:** Olguların %20-30'unda belirgin düzelme, %40-50'sinde orta düzeyde iyileşme görülürken, %20-40'ında kronik dirençli tablo sürer. Kompulsiyonlara teslim olma ve erken başlangıç kötü prognoz işaretidir.\n- **OKB ve OKKB Ayrımı:** Obsesif Kompulsif Kişilik Bozukluğu (OKKB) ego-sintoniktir; kişi mükemmeliyetçiliğini ve kuralcılığını bir meziyet olarak görür ve yakınmaz. OKB ise ego-distoniktir; hasta takıntılarından şiddetle yakınır ve kurtulmak ister.\n- **Şizofreni ile Karşılaştırmalı Özellikler:** OKB'de gerçeği değerlendirme yetisi korunmuştur ve içgörü vardır; şizofrenide hezeyanlar benlikle uyumludur ve içgörü yoktur.\n\n> [!IMPORTANT]\n> OKKB'de belirgin obsesyon ve kompulsiyonlar bulunmaz; genel bir mükemmeliyetçilik, cimrilik, katılık ve kontrol ihtiyacı yaşam tarzı haline gelmiştir.",
+   "interactiveElements": [
+    {
+     "id": "k37-s9-q1",
+     "type": "micro_quiz",
+     "question": "OKB ile Obsesif Kompulsif Kişilik Bozukluğu (OKKB) arasındaki temel ayırıcı tanı kriteri hangisidir?",
+     "options": [
+      {
+       "text": "OKB belirtileri ego-distoniktir ve hasta yakınır; OKKB özellikleri ego-sintoniktir ve kişi tarzından memnundur.",
+       "isCorrect": true,
+       "explanation": "OKB belirtileri ego-distoniktir ve hasta yakınır; OKKB özellikleri ego-sintoniktir ve kişi tarzından memnundur, klinik psikiyatri kılavuzlarında tanımlanan tanısal ilkeler ve nörobiyolojik mekanizmalarla tam bir uyum gösterir. Bu yaklaşım OKB ve ilişkili bozuklukların değerlendirilmesinde temel referans kabul edilmektedir."
+      },
+      {
+       "text": "OKKB'de hastalar sürekli ellerini günde kırk kez sabunla köpürterek yıkarlar.",
+       "isCorrect": false,
+       "explanation": "Şıkta sözü edilen okkb'de hastalar sürekli ellerini günde kırk kez sabunla köpürterek yıkarlar kavramı, farklı bir psikiyatrik sendromun veya bambaşka bir klinik tablonun niteliklerini yansıtır. Bu soruda hedeflenen temel OKB dinamikleri ve patofizyolojik ilkelerle doğrudan örtüşmemektedir."
+      },
+      {
+       "text": "OKB yalnızca ileri yaşta başlarken OKKB doğuştan gelen kromozomal bir anomalidir.",
+       "isCorrect": false,
+       "explanation": "Şıkta sözü edilen okb yalnızca ileri yaşta başlarken okkb doğuştan gelen kromozomal bir anomalidir kavramı, farklı bir psikiyatrik sendromun veya bambaşka bir klinik tablonun niteliklerini yansıtır. Bu soruda hedeflenen temel OKB dinamikleri ve patofizyolojik ilkelerle doğrudan örtüşmemektedir."
+      },
+      {
+       "text": "OKB hastalarında içgörü tamamen yokken OKKB'liler hezeyan tedavisi görürler.",
+       "isCorrect": false,
+       "explanation": "Şıkta sözü edilen okb hastalarında içgörü tamamen yokken okkb'liler hezeyan tedavisi görürler kavramı, farklı bir psikiyatrik sendromun veya bambaşka bir klinik tablonun niteliklerini yansıtır. Bu soruda hedeflenen temel OKB dinamikleri ve patofizyolojik ilkelerle doğrudan örtüşmemektedir."
+      }
+     ]
+    },
+    {
+     "id": "k37-s9-c1",
+     "type": "cloze_masking",
+     "sentence": "Kişilik bozukluğundaki katı kuralların benlikle uyumlu ve şikayetsiz benimsenmesine ego-sintonik yapı denir.",
+     "maskedTerm": "ego-sintonik",
+     "hint": "Bireyin kendi kişilik özelliklerini normal ve doğru bulması."
+    },
+    {
+     "id": "k37-s9-t1",
+     "type": "interactive_table",
+     "title": "OKB ve OKKB Ayırıcı Tanı Tablosu",
+     "tableHeaders": [
+      "Özellik",
+      "OKB",
+      "OKKB"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Benlikle Uyum",
+         "isMasked": false
+        },
+        {
+         "text": "Ego-distonik (rahatsız edici)",
+         "isMasked": true,
+         "hint": "Kişinin yakınarak kurtulmak istediği hal."
+        },
+        {
+         "text": "Ego-sintonik (benimsenmiş)",
+         "isMasked": false
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Belirti Varlığı",
+         "isMasked": false
+        },
+        {
+         "text": "Net obsesyon ve kompulsiyonlar",
+         "isMasked": true,
+         "hint": "Spesifik ritüel ve zihinsel takıntılar."
+        },
+        {
+         "text": "Yaygın katı kuralcılık ve cimrilik",
+         "isMasked": false
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k37-s9-l1",
+     "type": "spot_the_lie",
+     "topic": "OKB Seyri ve Ayırıcı Tanı",
+     "items": [
+      {
+       "text": "OKB tedavisiz bırakıldığında dalgalı ve kronik bir gidişat sergiler.",
+       "isLie": false,
+       "explanation": "Hastalık genellikle ömür boyu dalgalanmalar göstererek devam eder."
+      },
+      {
+       "text": "Şizofrenideki hezeyanlar da tıpkı OKB gibi ego-distonik algılanır.",
+       "isLie": true,
+       "explanation": "Şizofrenideki hezeyanlar ego-sintoniktir; hasta hezeyanlarının mutlak gerçek olduğuna inanır ve içgörüsü yoktur."
+      },
+      {
+       "text": "Kompulsiyonlara direnç göstermemek ve erken başlangıç kötü prognoz işaretidir.",
+       "isLie": false,
+       "explanation": "Erken yaşta başlama ve ritüellere teslim olma klinik gidişatın daha dirençli olacağını düşündürür."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slideNumber": 10,
+   "title": "[TEKRAR SAYFASI - CHECKPOINT 2] Nörobiyoloji ve Klinik Belirtiler",
+   "bolum": 3,
+   "pdfSayfalari": [
+    7,
+    12
+   ],
+   "sourcePdf": {
+    "name": "y25-k2-37-okb-ve-iliskili-bozukluklar.pdf",
+    "startPage": 7,
+    "endPage": 12
+   },
+   "content": "Bu bölümde OKB'nin nörobiyolojik temelini, bilişsel modelini ve klinik alt tiplerinin ayırıcı tanısını pekiştirdik.\n\n- **Nöral Devre:** Kortiko-striato-talamo-kortikal (CSTC) döngüde hiperaktivite ve kaudat filtreleme kusuru esastır.\n- **Bilişsel Çarpıtma:** Düşünce-eylem kaynaşması ve abartılmış sorumluluk duygusu hastayı nötrleştirme ritüellerine iter.\n- **Belirti Çeşitliliği:** Bulaşma-yıkama en sık görülen alt tiptir; kuşku-kontrol, simetri ve tabu düşünceler diğer boyutlardır.\n- **Ayırıcı Tanı:** OKB ego-distoniktir (hasta acı çeker); OKKB ego-sintoniktir (kişi mükemmeliyetçiliğinden memnundur).\n\n> [!NOTE]\n> Bilişsel modeldeki düşünce-eylem kaynaşması kavramı psikiyatri sınavlarında en sık sorgulanan çekirdek teorik mekanizmadır.",
+   "interactiveElements": [
+    {
+     "id": "k37-s10-q1",
+     "type": "micro_quiz",
+     "question": "Aşağıdakilerden hangisi OKB'nin patofizyolojik ve klinik özelliklerini en doğru özetler?",
+     "options": [
+      {
+       "text": "CSTC döngüsü hiperaktiftir, düşünce-eylem kaynaşması vardır ve belirtiler ego-distoniktir.",
+       "isCorrect": true,
+       "explanation": "CSTC döngüsü hiperaktiftir, düşünce-eylem kaynaşması vardır ve belirtiler ego-distoniktir, klinik psikiyatri kılavuzlarında tanımlanan tanısal ilkeler ve nörobiyolojik mekanizmalarla tam bir uyum gösterir. Bu yaklaşım OKB ve ilişkili bozuklukların değerlendirilmesinde temel referans kabul edilmektedir."
+      },
+      {
+       "text": "Limbik sistem tamamen körelmiştir, belirtiler ego-sintoniktir ve en sık alt tip istifçiliktir.",
+       "isCorrect": false,
+       "explanation": "Şıkta sözü edilen limbik sistem tamamen körelmiştir, belirtiler ego-sintoniktir ve en sık alt tip istifçiliktir kavramı, farklı bir psikiyatrik sendromun veya bambaşka bir klinik tablonun niteliklerini yansıtır. Bu soruda hedeflenen temel OKB dinamikleri ve patofizyolojik ilkelerle doğrudan örtüşmemektedir."
+      },
+      {
+       "text": "Dopamin eksikliği tek etkendir, hasta düşüncelerini gaipten gelen sesler olarak işitir.",
+       "isCorrect": false,
+       "explanation": "Şıkta sözü edilen dopamin eksikliği tek etkendir, hasta düşüncelerini gaipten gelen sesler olarak işitir kavramı, farklı bir psikiyatrik sendromun veya bambaşka bir klinik tablonun niteliklerini yansıtır. Bu soruda hedeflenen temel OKB dinamikleri ve patofizyolojik ilkelerle doğrudan örtüşmemektedir."
+      },
+      {
+       "text": "Kişi kurallarından çok memnundur, hiçbir zaman anksiyete duymaz ve tedaviyi kesinlikle reddeder.",
+       "isCorrect": false,
+       "explanation": "Şıkta sözü edilen kişi kurallarından çok memnundur, hiçbir zaman anksiyete duymaz ve tedaviyi kesinlikle reddeder kavramı, farklı bir psikiyatrik sendromun veya bambaşka bir klinik tablonun niteliklerini yansıtır. Bu soruda hedeflenen temel OKB dinamikleri ve patofizyolojik ilkelerle doğrudan örtüşmemektedir."
+      }
+     ]
+    },
+    {
+     "id": "k37-s10-s1",
+     "type": "swipe_matching",
+     "title": "OKB ve OKKB Ayırıcı Kartları",
+     "leftCategory": "OKB (Ego-distonik)",
+     "rightCategory": "OKKB (Ego-sintonik)",
+     "cards": [
+      {
+       "text": "Takıntılardan yoğun acı çekme ve kurtulmak için psikiyatriste başvurma",
+       "category": "left"
+      },
+      {
+       "text": "Aşırı kuralcılık ve mükemmeliyetçiliği bir erdem olarak savunma",
+       "category": "right"
+      },
+      {
+       "text": "Kapıyı kilitlediğini bilmesine rağmen kuşkudan kurtulamayıp tekrar kontrol etme",
+       "category": "left"
+      },
+      {
+       "text": "Eski ve değersiz eşyaları cimrilik gereği kimseyle paylaşmayıp saklama",
+       "category": "right"
+      }
+     ]
+    },
+    {
+     "id": "k37-s10-c1",
+     "type": "cloze_masking",
+     "sentence": "OKB'de nöral ileti aksaklığının odaklandığı devre kortiko-striato-talamo-kortikal döngü olarak bilinir.",
+     "maskedTerm": "kortiko-striato-talamo-kortikal",
+     "hint": "CSTC kısaltmasıyla bilinen beyin devresi."
+    },
+    {
+     "id": "k37-s10-t1",
+     "type": "interactive_table",
+     "title": "Bölüm 2 ve 3 Çekirdek Özeti",
+     "tableHeaders": [
+      "Alan",
+      "Kritik Patoloji",
+      "Klinik Yansıma"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Nörobiyoloji",
+         "isMasked": false
+        },
+        {
+         "text": "CSTC döngüsü hiperaktivitesi",
+         "isMasked": true,
+         "hint": "Frontal ve subkortikal devrelerdeki aşırı uyarım."
+        },
+        {
+         "text": "Filtreleme mekanizmasında bozulma",
+         "isMasked": false
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Bilişsel Alan",
+         "isMasked": false
+        },
+        {
+         "text": "Düşünce-eylem kaynaşması",
+         "isMasked": true,
+         "hint": "Zihinsel tasarımı fiili cürümle eşdeğer kabul eden bilişsel yanılgı."
+        },
+        {
+         "text": "Abartılmış sorumluluk ve anksiyete",
+         "isMasked": false
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slideNumber": 11,
+   "title": "Farmakoterapi İlkeleri ve Antidepresanlar",
+   "bolum": 4,
+   "pdfSayfalari": [
+    13,
+    14
+   ],
+   "sourcePdf": {
+    "name": "y25-k2-37-okb-ve-iliskili-bozukluklar.pdf",
+    "startPage": 13,
+    "endPage": 14
+   },
+   "content": "OKB tedavisinde farmakoterapinin temel taşını serotonerjik iletimi artıran ilaçlar oluşturur.\n\n- **İlk Basamak Tedavi:** Seçici Serotonin Geri Alım İnhibitörleri (SSRI - sertralin, fluoksetin, fluvoksamin, paroksetin, essitalopram) ilk seçenektir.\n- **Klomipramin:** Güçlü serotonerjik etkili bir trisiklik antidepresandır; etkinliği çok yüksek olmakla birlikte antikolinerjik ve kardiyotoksik yan etkileri nedeniyle genellikle SSRI başarısızlığında tercih edilir.\n- **Yüksek Doz İlkesi:** OKB'de gereken antidepresan dozları majör depresyonda kullanılan dozların belirgin şekilde üzerindedir (örneğin sertralin 200 mg, fluoksetin 60-80 mg).\n- **Geç Yanıt Süresi:** Depresyonda 2-4 haftada yanıt alınabilirken, OKB'de klinik yanıtın ortaya çıkması en az 10-12 haftayı bulur.\n\n> [!IMPORTANT]\n> OKB tedavisinde yeterli doz ve yeterli süre (en az 10-12 hafta) denenmeden bir ilacın etkisiz olduğuna karar verilemez.",
+   "interactiveElements": [
+    {
+     "id": "k37-s11-q1",
+     "type": "micro_quiz",
+     "question": "OKB tedavisinde antidepresan kullanımıyla ilgili aşağıdaki kurallardan hangisi doğrudur?",
+     "options": [
+      {
+       "text": "Depresyona göre daha yüksek dozlar gerekir ve terapötik yanıt için en az 10-12 hafta beklenmelidir.",
+       "isCorrect": true,
+       "explanation": "Depresyona göre daha yüksek dozlar gerekir ve terapötik yanıt için en az 10-12 hafta beklenmelidir, klinik psikiyatri kılavuzlarında tanımlanan tanısal ilkeler ve nörobiyolojik mekanizmalarla tam bir uyum gösterir. Bu yaklaşım OKB ve ilişkili bozuklukların değerlendirilmesinde temel referans kabul edilmektedir."
+      },
+      {
+       "text": "İlaçlar en düşük başlangıç dozunda yalnızca 3 gün kullanılıp kesilmelidir.",
+       "isCorrect": false,
+       "explanation": "Şıkta sözü edilen i̇laçlar en düşük başlangıç dozunda yalnızca 3 gün kullanılıp kesilmelidir kavramı, farklı bir psikiyatrik sendromun veya bambaşka bir klinik tablonun niteliklerini yansıtır. Bu soruda hedeflenen temel OKB dinamikleri ve patofizyolojik ilkelerle doğrudan örtüşmemektedir."
+      },
+      {
+       "text": "İlk basamakta yalnızca bağımlılık yapıcı benzodiazepinler tek başına monoterapi verilir.",
+       "isCorrect": false,
+       "explanation": "Şıkta sözü edilen i̇lk basamakta yalnızca bağımlılık yapıcı benzodiazepinler tek başına monoterapi verilir kavramı, farklı bir psikiyatrik sendromun veya bambaşka bir klinik tablonun niteliklerini yansıtır. Bu soruda hedeflenen temel OKB dinamikleri ve patofizyolojik ilkelerle doğrudan örtüşmemektedir."
+      },
+      {
+       "text": "Klomipramin tamamen yan etkisiz olduğu için bebeklikten itibaren ilk tercihtir.",
+       "isCorrect": false,
+       "explanation": "Şıkta sözü edilen klomipramin tamamen yan etkisiz olduğu için bebeklikten itibaren ilk tercihtir kavramı, farklı bir psikiyatrik sendromun veya bambaşka bir klinik tablonun niteliklerini yansıtır. Bu soruda hedeflenen temel OKB dinamikleri ve patofizyolojik ilkelerle doğrudan örtüşmemektedir."
+      }
+     ]
+    },
+    {
+     "id": "k37-s11-c1",
+     "type": "cloze_masking",
+     "sentence": "OKB'de antidepresan tedavisinin etkinliğini objektif değerlendirmek için en az on iki haftalık süre gereklidir.",
+     "maskedTerm": "on iki",
+     "hint": "Tedavi yanıtı için beklenen üç aylık hafta sayısı."
+    },
+    {
+     "id": "k37-s11-t1",
+     "type": "interactive_table",
+     "title": "OKB ve Depresyon Tedavi Parametreleri",
+     "tableHeaders": [
+      "Tedavi Ölçütü",
+      "Majör Depresyon",
+      "OKB"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "İlaç Dozu",
+         "isMasked": false
+        },
+        {
+         "text": "Standart terapötik doz",
+         "isMasked": true,
+         "hint": "Olağan başlangıç ve idame aralığı."
+        },
+        {
+         "text": "Yüksek / Maksimal doz",
+         "isMasked": false
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Yanıt Süresi",
+         "isMasked": false
+        },
+        {
+         "text": "İki ila dört hafta",
+         "isMasked": true,
+         "hint": "İlk klinik yanıtın gözlendiği erken aralık."
+        },
+        {
+         "text": "On ila on iki hafta",
+         "isMasked": false
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k37-s11-l1",
+     "type": "spot_the_lie",
+     "topic": "OKB Farmakoterapisi İlkeleri",
+     "items": [
+      {
+       "text": "SSRI grubu ilaçlar OKB tedavisinde birinci basamak farmakolojik seçenektir.",
+       "isLie": false,
+       "explanation": "Tolere edilebilirlikleri ve kanıtlanmış etkinlikleri nedeniyle SSRI'lar ilk tercihtir."
+      },
+      {
+       "text": "Klomipramin güçlü serotonerjik etkisi olan bir trisiklik antidepresandır.",
+       "isLie": false,
+       "explanation": "Klomipramin serotonerjik geri alımı güçlü biçimde bloke eden altın standart moleküllerden biridir."
+      },
+      {
+       "text": "OKB hastaları depresyon dozunun yarısıyla bir haftada tamamen iyileşir.",
+       "isLie": true,
+       "explanation": "OKB hastaları tam tersine depresyondan çok daha yüksek dozlara ve çok daha uzun sürelere (10-12 hafta) ihtiyaç duyar."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slideNumber": 12,
+   "title": "Tedavi Süresi ve Dirençli Olgular",
+   "bolum": 4,
+   "pdfSayfalari": [
+    15,
+    15
+   ],
+   "sourcePdf": {
+    "name": "y25-k2-37-okb-ve-iliskili-bozukluklar.pdf",
+    "startPage": 15,
+    "endPage": 15
+   },
+   "content": "OKB'de farmakolojik tedavi ile remisyon sağlandıktan sonra ilaç hemen kesilmemeli, en az 1-2 yıl idame tedavisine devam edilmelidir.\n\n- **İlaç Kesimi Riski:** İlaç erken kesilirse nüks oranı %80-90'lara kadar çıkmaktadır. Bu nedenle kesim düşünüldüğünde doz aylar içinde çok yavaş azaltılmalıdır.\n- **Tedaviye Direnç:** İki farklı SSRI ve klomipramin yeterli süre ve dozda kullanılmasına rağmen yeterli yanıt alınamaması durumudur.\n- **Güçlendirme Stratejileri:** SSRI tedavisine düşük doz atipik antipsikotik (risperidon, aripiprazol) eklenmesi en güçlü kanıta sahip güçlendirme yaklaşımıdır.\n- **İleri Yöntemler:** Çok ağır, tedaviye tam dirençli ve yaşamı felce uğramış olgularda Derin Beyin Stimülasyonu (DBS) veya cerrahi ablasyon (kapsülotomi, singulotomi) düşünülebilir.\n\n> [!NOTE]\n> Atipik antipsikotik eklenmesi, dopaminerjik sistemin CSTC döngüsündeki düzenleyici etkisini hedef alarak tedavi yanıtını belirgin artırır.",
+   "interactiveElements": [
+    {
+     "id": "k37-s12-q1",
+     "type": "micro_quiz",
+     "question": "Yeterli doz ve sürede SSRI kullanımına rağmen düzelmeyen dirençli bir OKB hastasında en uygun güçlendirme adımı hangisidir?",
+     "options": [
+      {
+       "text": "Mevcut SSRI tedavisine düşük doz atipik antipsikotik (risperidon veya aripiprazol) eklenmesi.",
+       "isCorrect": true,
+       "explanation": "Mevcut SSRI tedavisine düşük doz atipik antipsikotik (risperidon veya aripiprazol) eklenmesi, klinik psikiyatri kılavuzlarında tanımlanan tanısal ilkeler ve nörobiyolojik mekanizmalarla tam bir uyum gösterir. Bu yaklaşım OKB ve ilişkili bozuklukların değerlendirilmesinde temel referans kabul edilmektedir."
+      },
+      {
+       "text": "Tüm ilaçları kesip hastayı hiçbir takip olmadan kendi haline bırakmak.",
+       "isCorrect": false,
+       "explanation": "Şıkta sözü edilen tüm ilaçları kesip hastayı hiçbir takip olmadan kendi haline bırakmak kavramı, farklı bir psikiyatrik sendromun veya bambaşka bir klinik tablonun niteliklerini yansıtır. Bu soruda hedeflenen temel OKB dinamikleri ve patofizyolojik ilkelerle doğrudan örtüşmemektedir."
+      },
+      {
+       "text": "Yüksek doz barbitürat başlayarak hastayı sedasyonda uyutmak.",
+       "isCorrect": false,
+       "explanation": "Şıkta sözü edilen yüksek doz barbitürat başlayarak hastayı sedasyonda uyutmak kavramı, farklı bir psikiyatrik sendromun veya bambaşka bir klinik tablonun niteliklerini yansıtır. Bu soruda hedeflenen temel OKB dinamikleri ve patofizyolojik ilkelerle doğrudan örtüşmemektedir."
+      },
+      {
+       "text": "Hemen ilk adımda acil bilateral prefrontal lobotomi uygulamak.",
+       "isCorrect": false,
+       "explanation": "Şıkta sözü edilen hemen ilk adımda acil bilateral prefrontal lobotomi uygulamak kavramı, farklı bir psikiyatrik sendromun veya bambaşka bir klinik tablonun niteliklerini yansıtır. Bu soruda hedeflenen temel OKB dinamikleri ve patofizyolojik ilkelerle doğrudan örtüşmemektedir."
+      }
+     ]
+    },
+    {
+     "id": "k37-s12-c1",
+     "type": "cloze_masking",
+     "sentence": "Dirençli OKB olgularında SSRI monoterapisine düşük doz atipik antipsikotik eklenmesi en yaygın güçlendirme stratejisidir.",
+     "maskedTerm": "atipik antipsikotik",
+     "hint": "Risperidon ve aripiprazol gibi yeni kuşak dopamin/serotonin modülatörleri."
+    },
+    {
+     "id": "k37-s12-r1",
+     "type": "active_recall",
+     "question": "OKB tedavisinde remisyon elde edildikten sonra idame tedavisinin asgari ne kadar sürdürülmesi önerilir?",
+     "answer": "Nüks riskini önlemek için idame farmakoterapisinin en az 1-2 yıl boyunca sürdürülmesi ve kesilecekse çok yavaş azaltılması önerilir."
+    },
+    {
+     "id": "k37-s12-l1",
+     "type": "spot_the_lie",
+     "topic": "Tedavi Süresi ve Direnç Yönetimi",
+     "items": [
+      {
+       "text": "İlaç tedavisi aniden kesildiğinde hastaların büyük çoğunluğunda nüks görülür.",
+       "isLie": false,
+       "explanation": "Tedavinin erken sonlandırılmasında nüks oranları %80-90 gibi çok yüksek seviyelerdedir."
+      },
+      {
+       "text": "Dirençli vakalarda derin beyin stimülasyonu onaylı bir cerrahi nöromodülasyon seçeneğidir.",
+       "isLie": false,
+       "explanation": "Ağır ve hiçbir tedaviye yanıt vermeyen olgularda DBS etkin bir son basamak seçeneğidir."
+      },
+      {
+       "text": "Atipik antipsikotik eklenmesi OKB hastalarında obsesyonları her zaman şiddetlendirir.",
+       "isLie": true,
+       "explanation": "Aksine, düşük doz atipik antipsikotik eklenmesi dirençli olgularda yanıt oranını belirgin artıran kılavuz önerisidir."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slideNumber": 13,
+   "title": "Bilişsel Davranışçı Terapi ve ERP",
+   "bolum": 4,
+   "pdfSayfalari": [
+    16,
+    16
+   ],
+   "sourcePdf": {
+    "name": "y25-k2-37-okb-ve-iliskili-bozukluklar.pdf",
+    "startPage": 16,
+    "endPage": 16
+   },
+   "content": "OKB'de psikoterapi yaklaşımları içinde etkinliği kanıtlanmış altın standart yöntem Bilişsel Davranışçı Terapidir (BDT).\n\n- **Tepki Önleme ile Maruz Bırakma (ERP):** Maruz Bırakma (Exposure) ve Tepkiyi Önleme (Response Prevention) tekniğidir. Terapinin ana omurgasını oluşturur.\n- **Maruz Bırakma:** Hasta kaygı uyandıran obsesif uyarana (örneğin kapı koluna dokunma) hiyerarşik olarak maruz bırakılır.\n- **Tepkiyi Önleme:** Hastanın kaygıyı dindirmek için başvurduğu kompulsif ritüeli (el yıkama, kontrol etme) yapması kesinlikle engellenir.\n- **Alışma (Habituasyon):** Kompulsiyon yapılmadığında, başlangıçta tırmanan anksiyete fizyolojik olarak zamanla plato çizer ve kendiliğinden düşer.\n\n> [!IMPORTANT]\n> ERP sayesinde hasta korktuğu felaketin kompulsiyon yapmasa bile gerçekleşmediğini yaşantısal olarak öğrenir; böylece düşünce-eylem kaynaşması kırılır.",
+   "interactiveElements": [
+    {
+     "id": "k37-s13-q1",
+     "type": "micro_quiz",
+     "question": "OKB psikoterapisinde uygulanan ERP (Tepki Önleme ile Maruz Bırakma) tekniğinin temel işleyiş mekanizması hangisidir?",
+     "options": [
+      {
+       "text": "Kişi obsesif uyarana maruz bırakılırken kompulsif ritüeli yapması engellenir; anksiyetenin kendiliğinden sönmesi sağlanır.",
+       "isCorrect": true,
+       "explanation": "Kişi obsesif uyarana maruz bırakılırken kompulsif ritüeli yapması engellenir; anksiyetenin kendiliğinden sönmesi sağlanır, klinik psikiyatri kılavuzlarında tanımlanan tanısal ilkeler ve nörobiyolojik mekanizmalarla tam bir uyum gösterir. Bu yaklaşım OKB ve ilişkili bozuklukların değerlendirilmesinde temel referans kabul edilmektedir."
+      },
+      {
+       "text": "Hastaya her takıntı geldiğinde ellerini on dakika daha fazla yıkaması tembihlenir.",
+       "isCorrect": false,
+       "explanation": "Şıkta sözü edilen hastaya her takıntı geldiğinde ellerini on dakika daha fazla yıkaması tembihlenir kavramı, farklı bir psikiyatrik sendromun veya bambaşka bir klinik tablonun niteliklerini yansıtır. Bu soruda hedeflenen temel OKB dinamikleri ve patofizyolojik ilkelerle doğrudan örtüşmemektedir."
+      },
+      {
+       "text": "Hastanın çocukluk anıları analiz edilerek takıntıları tamamen görmezden gelinir.",
+       "isCorrect": false,
+       "explanation": "Şıkta sözü edilen hastanın çocukluk anıları analiz edilerek takıntıları tamamen görmezden gelinir kavramı, farklı bir psikiyatrik sendromun veya bambaşka bir klinik tablonun niteliklerini yansıtır. Bu soruda hedeflenen temel OKB dinamikleri ve patofizyolojik ilkelerle doğrudan örtüşmemektedir."
+      },
+      {
+       "text": "Hasta derin hipnoz altına alınarak tüm korktuğu nesnelerden sonsuza kadar kaçması söylenir.",
+       "isCorrect": false,
+       "explanation": "Şıkta sözü edilen hasta derin hipnoz altına alınarak tüm korktuğu nesnelerden sonsuza kadar kaçması söylenir kavramı, farklı bir psikiyatrik sendromun veya bambaşka bir klinik tablonun niteliklerini yansıtır. Bu soruda hedeflenen temel OKB dinamikleri ve patofizyolojik ilkelerle doğrudan örtüşmemektedir."
+      }
+     ]
+    },
+    {
+     "id": "k37-s13-c1",
+     "type": "cloze_masking",
+     "sentence": "ERP tedavisinde kompulsiyon yapılmadığında anksiyetenin zaman içinde kendiliğinden azalması sürecine alışma veya habituasyon denir.",
+     "maskedTerm": "habituasyon",
+     "hint": "Uyarana sürekli maruz kalınca verilen fizyolojik tepkinin sönmesi."
+    },
+    {
+     "id": "k37-s13-h1",
+     "type": "causal_chain",
+     "title": "ERP Terapisinde İyileşme Mekanizması",
+     "steps": [
+      "1. Maruz Bırakma: Hasta kaygı uyandıran nesne veya düşünceyle yüzleştirilir.",
+      "2. Tepki Önleme: Anksiyeteyi dindiren kompulsif ritüel bilinçli olarak durdurulur.",
+      "3. Anksiyete Zirvesi ve Plato: Gerilim yükselir ancak zamanla artışı durur.",
+      "4. Habituasyon ve Bilişsel Kırılma: Korkulan felaketin gerçekleşmediği yaşantısal olarak öğrenilir."
+     ]
+    },
+    {
+     "id": "k37-s13-l1",
+     "type": "spot_the_lie",
+     "topic": "Bilişsel Davranışçı Terapi ve ERP İlkeleri",
+     "items": [
+      {
+       "text": "ERP tekniği OKB tedavisinde kanıta dayalı altın standart psikoterapidir.",
+       "isLie": false,
+       "explanation": "Uluslararası kılavuzlar ERP'yi ilk basamak psikoterapi yöntemi olarak kabul eder."
+      },
+      {
+       "text": "ERP sürecinde hastanın kaygıdan tamamen kaçması ve izole olması hedeflenir.",
+       "isLie": true,
+       "explanation": "ERP kaçmayı değil, kaygı uyaranıyla kontrollü yüzleşmeyi ve kompulsiyonu durdurmayı amaçlar."
+      },
+      {
+       "text": "Kompulsiyon yapılmadığında bile anksiyetenin kendiliğinden düştüğü deneyimlenir.",
+       "isLie": false,
+       "explanation": "Fizyolojik habituasyon sayesinde anksiyete belirli bir süre sonra plato çizip düşer."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slideNumber": 14,
+   "title": "Beden Dismorfik Bozukluğu",
+   "bolum": 5,
+   "pdfSayfalari": [
+    17,
+    18
+   ],
+   "sourcePdf": {
+    "name": "y25-k2-37-okb-ve-iliskili-bozukluklar.pdf",
+    "startPage": 17,
+    "endPage": 18
+   },
+   "content": "Beden Dismorfik Bozukluğu (Dismorfofobi), kişinin dış görünümünde başkaları tarafından fark edilmeyen ya da önemsiz olan hayali bir kusurla aşırı derecede zihinsel uğraş sergilemesidir.\n\n- **Odak Noktaları:** En sık yüz, burun, cilt (sivilce, leke), saç dökülmesi, çene veya asimetri takıntıları görülür.\n- **Kompulsif Davranışlar:** Sürekli aynaya bakma veya aynalardan tamamen kaçınma, kusuru makyajla kapatmaya çalışma, kendini sürekli başkalarıyla kıyaslama.\n- **Tıbbi Arayışlar:** Hastalar psikiyatriden önce defalarca dermatoloji ve plastik cerrahi kliniklerine başvururlar; ancak cerrahi müdahaleler tatmin sağlamaz, tabloyu daha da ağırlaştırır.\n- **Tedavi:** Yüksek doz SSRI farmakoterapisi ve bilişsel davranışçı terapi esastır.\n\n> [!IMPORTANT]\n> Plastik cerrahi operasyonları beden dismorfik bozukluğunda kontrendikedir; operasyon sonrası hasta hekime dava açabilir ya da takıntısını vücudunun başka bir yerine kaydırır.",
+   "interactiveElements": [
+    {
+     "id": "k37-s14-q1",
+     "type": "micro_quiz",
+     "question": "Beden Dismorfik Bozukluğu olan bir hastanın klinik yönetimi ve seyriyle ilgili hangisi doğrudur?",
+     "options": [
+      {
+       "text": "Plastik cerrahi girişimler tabloyu düzeltmez; tedavi yüksek doz SSRI ve bilişsel davranışçı terapidir.",
+       "isCorrect": true,
+       "explanation": "Plastik cerrahi girişimler tabloyu düzeltmez; tedavi yüksek doz SSRI ve bilişsel davranışçı terapidir, klinik psikiyatri kılavuzlarında tanımlanan tanısal ilkeler ve nörobiyolojik mekanizmalarla tam bir uyum gösterir. Bu yaklaşım OKB ve ilişkili bozuklukların değerlendirilmesinde temel referans kabul edilmektedir."
+      },
+      {
+       "text": "Kişiye acilen talep ettiği burun ve çene estetik ameliyatları yapılmalıdır.",
+       "isCorrect": false,
+       "explanation": "Şıkta sözü edilen kişiye acilen talep ettiği burun ve çene estetik ameliyatları yapılmalıdır kavramı, farklı bir psikiyatrik sendromun veya bambaşka bir klinik tablonun niteliklerini yansıtır. Bu soruda hedeflenen temel OKB dinamikleri ve patofizyolojik ilkelerle doğrudan örtüşmemektedir."
+      },
+      {
+       "text": "Yalnızca gerçek, bariz ve ağır fiziksel yanık izi olan bireylere bu tanı konur.",
+       "isCorrect": false,
+       "explanation": "Şıkta sözü edilen yalnızca gerçek, bariz ve ağır fiziksel yanık izi olan bireylere bu tanı konur kavramı, farklı bir psikiyatrik sendromun veya bambaşka bir klinik tablonun niteliklerini yansıtır. Bu soruda hedeflenen temel OKB dinamikleri ve patofizyolojik ilkelerle doğrudan örtüşmemektedir."
+      },
+      {
+       "text": "Aynaya bakma davranışı bu hastalarda hiçbir zaman görülmez.",
+       "isCorrect": false,
+       "explanation": "Şıkta sözü edilen aynaya bakma davranışı bu hastalarda hiçbir zaman görülmez kavramı, farklı bir psikiyatrik sendromun veya bambaşka bir klinik tablonun niteliklerini yansıtır. Bu soruda hedeflenen temel OKB dinamikleri ve patofizyolojik ilkelerle doğrudan örtüşmemektedir."
+      }
+     ]
+    },
+    {
+     "id": "k37-s14-c1",
+     "type": "cloze_masking",
+     "sentence": "Beden Dismorfik Bozukluğu olan hastalar estetik cerrahi operasyonlardan hiçbir zaman kalıcı tatmin sağlayamazlar.",
+     "maskedTerm": "estetik cerrahi",
+     "hint": "Hastaların sıkça başvurduğu ancak tablosunu düzeltmeyen operatif tıp alanı."
+    },
+    {
+     "id": "k37-s14-t1",
+     "type": "interactive_table",
+     "title": "Beden Dismorfik Bozukluğu Klinik Özellikleri",
+     "tableHeaders": [
+      "Klinik Alan",
+      "Tipik Görünüm",
+      "Yönetim İlkesi"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Kusur Algısı",
+         "isMasked": false
+        },
+        {
+         "text": "Hayali veya mikroskobik kusur",
+         "isMasked": true,
+         "hint": "Başkalarınca fark edilemeyen minimal morfolojik asimetri algısı."
+        },
+        {
+         "text": "Yoğun zihinsel meşguliyet",
+         "isMasked": false
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Cerrahi Yaklaşım",
+         "isMasked": false
+        },
+        {
+         "text": "Operasyondan kesinlikle kaçınma",
+         "isMasked": true,
+         "hint": "Kozmetik müdahalelerden uzak durma kuralı."
+        },
+        {
+         "text": "Yüksek doz SSRI ve BDT",
+         "isMasked": false
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k37-s14-l1",
+     "type": "spot_the_lie",
+     "topic": "Beden Dismorfik Bozukluğu Özellikleri",
+     "items": [
+      {
+       "text": "Hastalar sıklıkla dermatoloji ve estetik cerrahi kliniklerine başvururlar.",
+       "isLie": false,
+       "explanation": "Kusurun fiziksel olduğuna inandıkları için ilk başvurular cerrahi ve cildiyeye olur."
+      },
+      {
+       "text": "Estetik operasyon yapıldığında hastanın tüm zihinsel uğraşları tamamen biter.",
+       "isLie": true,
+       "explanation": "Operasyon sonrası hasta ya sonuçtan hiç memnun kalmaz ya da kusurunu başka bir organına kaydırır."
+      },
+      {
+       "text": "Tedavide yüksek doz SSRI ve bilişsel davranışçı terapi uygulanır.",
+       "isLie": false,
+       "explanation": "OKB ilişkili bozukluk spektrumunda olduğu için aynı yüksek doz farmakoterapi protokolü geçerlidir."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slideNumber": 15,
+   "title": "İstifçilik ve Trikotillomani",
+   "bolum": 5,
+   "pdfSayfalari": [
+    19,
+    20
+   ],
+   "sourcePdf": {
+    "name": "y25-k2-37-okb-ve-iliskili-bozukluklar.pdf",
+    "startPage": 19,
+    "endPage": 20
+   },
+   "content": "OKB spektrumunda yer alan diğer iki önemli durum İstifçilik (Hoarding) ve Trikotillomanidir.\n\n- **İstifçilik Bozukluğu:** Gerçek değerine bakılmaksızın eşyaları elden çıkarma veya onlardan ayrılmada sürekli güçlük yaşanmasıdır. Yaşam alanları yaşanamaz derecede eşyayla dolar; atma düşüncesi yoğun sıkıntı doğurur.\n- **Koleksiyonculuktan Farkı:** Koleksiyoncu eşyalarını düzenli, tematik ve gururla sergiler; istifçide ise kaos, dağınıklık ve işlevsiz birikim hakimdir.\n- **Trikotillomani (Saç Yolma Bozukluğu):** Belirgin saç kaybı ile sonuçlanacak şekilde yineleyici saç yolma eylemidir. En sık kafa derisi, kaş ve kirpikler yolunur.\n- **Yolma Dinamiği:** Yolma öncesinde artan gerginlik hissi veya yolmaya karşı koymaya çalışırken sıkıntı, yolma anında ise rahatlama veya doyum yaşanır.\n\n> [!NOTE]\n> Trikotillomanide koparılan saçların yenmesi (trikofaji) midede saç yumağı oluşumuna (trikobezoar / Rapunzel sendromu) ve bağırsak tıkanıklığına yol açabilir.",
+   "interactiveElements": [
+    {
+     "id": "k37-s15-q1",
+     "type": "micro_quiz",
+     "question": "İstifçilik bozukluğu ile sağlıklı koleksiyonculuk arasındaki en temel ayırıcı fark hangisidir?",
+     "options": [
+      {
+       "text": "İstifçilikte yaşam alanlarını tıkayan kaotik ve değersiz eşya birikimi vardır; koleksiyonculuk düzenli ve seçicidir.",
+       "isCorrect": true,
+       "explanation": "İstifçilikte yaşam alanlarını tıkayan kaotik ve değersiz eşya birikimi vardır; koleksiyonculuk düzenli ve seçicidir, klinik psikiyatri kılavuzlarında tanımlanan tanısal ilkeler ve nörobiyolojik mekanizmalarla tam bir uyum gösterir. Bu yaklaşım OKB ve ilişkili bozuklukların değerlendirilmesinde temel referans kabul edilmektedir."
+      },
+      {
+       "text": "İstifçilik yalnızca antika altın paraların kasada kilitlenmesidir.",
+       "isCorrect": false,
+       "explanation": "Şıkta sözü edilen i̇stifçilik yalnızca antika altın paraların kasada kilitlenmesidir kavramı, farklı bir psikiyatrik sendromun veya bambaşka bir klinik tablonun niteliklerini yansıtır. Bu soruda hedeflenen temel OKB dinamikleri ve patofizyolojik ilkelerle doğrudan örtüşmemektedir."
+      },
+      {
+       "text": "Trikotillomani hastaları saçlarını asla kendileri çekip koparmazlar.",
+       "isCorrect": false,
+       "explanation": "Şıkta sözü edilen trikotillomani hastaları saçlarını asla kendileri çekip koparmazlar kavramı, farklı bir psikiyatrik sendromun veya bambaşka bir klinik tablonun niteliklerini yansıtır. Bu soruda hedeflenen temel OKB dinamikleri ve patofizyolojik ilkelerle doğrudan örtüşmemektedir."
+      },
+      {
+       "text": "İstifçilikte hasta evdeki eşyaların atılmasından büyük mutluluk ve ferahlık duyar.",
+       "isCorrect": false,
+       "explanation": "Şıkta sözü edilen i̇stifçilikte hasta evdeki eşyaların atılmasından büyük mutluluk ve ferahlık duyar kavramı, farklı bir psikiyatrik sendromun veya bambaşka bir klinik tablonun niteliklerini yansıtır. Bu soruda hedeflenen temel OKB dinamikleri ve patofizyolojik ilkelerle doğrudan örtüşmemektedir."
+      }
+     ]
+    },
+    {
+     "id": "k37-s15-c1",
+     "type": "cloze_masking",
+     "sentence": "Trikotillomanide hastanın kopardığı saçları yutması sonucu sindirim sisteminde oluşan saç yumağına trikobezoar adı verilir.",
+     "maskedTerm": "trikobezoar",
+     "hint": "Gastrointestinal sistemde biriken devasa saç kitlesi."
+    },
+    {
+     "id": "k37-s15-t1",
+     "type": "interactive_table",
+     "title": "İstifçilik ve Trikotillomani Karşılaştırması",
+     "tableHeaders": [
+      "Bozukluk",
+      "Temel Davranış",
+      "Klinik Risk"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "İstifçilik",
+         "isMasked": false
+        },
+        {
+         "text": "Değersiz eşyaları atamama",
+         "isMasked": true,
+         "hint": "Eşyadan ayrılmada yaşanan şiddetli güçlük."
+        },
+        {
+         "text": "Evde yangın ve hijyen çöküşü",
+         "isMasked": false
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Trikotillomani",
+         "isMasked": false
+        },
+        {
+         "text": "Saç, kaş ve kirpikleri yolma",
+         "isMasked": true,
+         "hint": "Kıl kaybına yol açan mekanik çekme eylemi."
+        },
+        {
+         "text": "Alopesi ve trikobezoar tıkanıklığı",
+         "isMasked": false
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k37-s15-l1",
+     "type": "spot_the_lie",
+     "topic": "İstifçilik ve Trikotillomani",
+     "items": [
+      {
+       "text": "İstifçilik bozukluğunda yaşam alanları fonksiyonunu yitirecek boyutta eşyayla dolar.",
+       "isLie": false,
+       "explanation": "Yatak odası veya mutfağın kullanılamaz hale gelmesi en tipik tanı kriteridir."
+      },
+      {
+       "text": "Trikotillomanide en sık yolunan bölge saçlı deridir.",
+       "isLie": false,
+       "explanation": "Kafa derisi hastaların %70'inden fazlasında birincil yolma odağıdır."
+      },
+      {
+       "text": "İstifçilik hastaları evlerinin temizlenmesini büyük bir sevinçle talep ederler.",
+       "isLie": true,
+       "explanation": "İstifçiler evlerine müdahale edilmesine şiddetle direnir ve eşyalarının atılmasına katlanamazlar."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slideNumber": 16,
+   "title": "Ekskoriasyon ve İlişkili Bozukluklarda Tedavi",
+   "bolum": 5,
+   "pdfSayfalari": [
+    21,
+    22
+   ],
+   "sourcePdf": {
+    "name": "y25-k2-37-okb-ve-iliskili-bozukluklar.pdf",
+    "startPage": 21,
+    "endPage": 22
+   },
+   "content": "Deri Yolma Bozukluğu (Ekskoriasyon), cilt lezyonlarına ve enfeksiyonlara yol açacak derecede deriyi yineleyici olarak yolma eylemidir.\n\n- **Klinik Görünüm:** En sık yüz, kollar ve eller yolunur. Hastalar tırnakları, cımbız veya iğne gibi araçlar kullanabilir; yara kabuklarını tekrar tekrar koparırlar.\n- **Dermatolojik Tablolarla Ayırıcı Tanı:** Ayırıcı tanıda uyuz, egzama gibi primer dermatolojik hastalıklar dışlanmalıdır.\n- **Tedavi Stratejileri:**\n  - **İlaç Tedavisi:** SSRI grubu antidepresanlar bu bozukluklarda da temel seçenektir.\n  - **Alışkanlığı Tersine Çevirme Eğitimi:** Trikotillomani ve deri yolma bozukluğunda kanıta dayalı en etkili davranışçı tekniktir; hasta yolma dürtüsü geldiğinde ellerini yumruk yapma veya nesne tutma gibi yarışan bir tepki geliştirir.\n  - **N-Asetil Sistein (NAC):** Glutamaterjik sistemi modüle ederek deri yolma ve saç yolma dürtüsünü azaltmada destekleyici olarak kullanılır.\n\n> [!IMPORTANT]\n> Alışkanlığı tersine çevirme eğitimi (Habit Reversal Training), tekrarlayıcı beden odaklı davranışlarda refleksif döngüyü kırmada altın standarttır.",
+   "interactiveElements": [
+    {
+     "id": "k37-s16-q1",
+     "type": "micro_quiz",
+     "question": "Deri yolma ve saç yolma gibi beden odaklı yineleyici bozukluklarda en etkili davranışçı psikoterapi tekniği hangisidir?",
+     "options": [
+      {
+       "text": "Alışkanlığı tersine çevirme eğitimi (Habit reversal training).",
+       "isCorrect": true,
+       "explanation": "Alışkanlığı tersine çevirme eğitimi (Habit reversal training), klinik psikiyatri kılavuzlarında tanımlanan tanısal ilkeler ve nörobiyolojik mekanizmalarla tam bir uyum gösterir. Bu yaklaşım OKB ve ilişkili bozuklukların değerlendirilmesinde temel referans kabul edilmektedir."
+      },
+      {
+       "text": "Hastanın ellerini sürekli yatağa bağlayarak cezalandırıcı şartlandırma yapmak.",
+       "isCorrect": false,
+       "explanation": "Şıkta sözü edilen hastanın ellerini sürekli yatağa bağlayarak cezalandırıcı şartlandırma yapmak kavramı, farklı bir psikiyatrik sendromun veya bambaşka bir klinik tablonun niteliklerini yansıtır. Bu soruda hedeflenen temel OKB dinamikleri ve patofizyolojik ilkelerle doğrudan örtüşmemektedir."
+      },
+      {
+       "text": "Tüm vücuda koruyucu alçı uygulayarak deriye teması tamamen imkansız kılmak.",
+       "isCorrect": false,
+       "explanation": "Şıkta sözü edilen tüm vücuda koruyucu alçı uygulayarak deriye teması tamamen imkansız kılmak kavramı, farklı bir psikiyatrik sendromun veya bambaşka bir klinik tablonun niteliklerini yansıtır. Bu soruda hedeflenen temel OKB dinamikleri ve patofizyolojik ilkelerle doğrudan örtüşmemektedir."
+      },
+      {
+       "text": "Yalnızca yüksek doz genel anestezi altında elektroşok terapisi uygulamak.",
+       "isCorrect": false,
+       "explanation": "Şıkta sözü edilen yalnızca yüksek doz genel anestezi altında elektroşok terapisi uygulamak kavramı, farklı bir psikiyatrik sendromun veya bambaşka bir klinik tablonun niteliklerini yansıtır. Bu soruda hedeflenen temel OKB dinamikleri ve patofizyolojik ilkelerle doğrudan örtüşmemektedir."
+      }
+     ]
+    },
+    {
+     "id": "k37-s16-c1",
+     "type": "cloze_masking",
+     "sentence": "Trikotillomani ve deri yolma tedavisinde yarışan bir tepki geliştirmeyi hedefleyen davranışçı tekniğe alışkanlığı tersine çevirme eğitimi denir.",
+     "maskedTerm": "alışkanlığı tersine çevirme",
+     "hint": "Dürtü anında zıt motor tepki koymayı öğreten psikoterapi yöntemi."
+    },
+    {
+     "id": "k37-s16-t1",
+     "type": "interactive_table",
+     "title": "İlişkili Bozukluklarda Tedavi Özet Tablosu",
+     "tableHeaders": [
+      "Bozukluk",
+      "Davranışçı Terapi",
+      "Farmakolojik Seçenek"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Beden Dismorfik",
+         "isMasked": false
+        },
+        {
+         "text": "Bilişsel Davranışçı Terapi (BDT)",
+         "isMasked": true,
+         "hint": "Ayna kontrolünü ve kusur inançlarını hedefleyen yapılandırılmış seanslar."
+        },
+        {
+         "text": "Yüksek doz SSRI",
+         "isMasked": false
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Trikotillomani / Ekskoriasyon",
+         "isMasked": false
+        },
+        {
+         "text": "Alışkanlığı tersine çevirme",
+         "isMasked": true,
+         "hint": "Dürtü geldiğinde alternatif motor yanıt geliştirme."
+        },
+        {
+         "text": "SSRI ve N-Asetil Sistein (NAC)",
+         "isMasked": false
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k37-s16-l1",
+     "type": "spot_the_lie",
+     "topic": "Deri Yolma ve Spektrum Tedavisi",
+     "items": [
+      {
+       "text": "Ekskoriasyon hastaları derilerini tırnak veya cımbızla yolarak lezyon açabilirler.",
+       "isLie": false,
+       "explanation": "Deri yolma araçları doku hasarına ve sekonder bakteriyel enfeksiyonlara yol açar."
+      },
+      {
+       "text": "N-asetil sistein (NAC) glutamat modülasyonu ile dürtü kontrolünde destekleyicidir.",
+       "isLie": false,
+       "explanation": "NAC çalışmaları saç ve deri yolma dürtüsünün azaltılmasında anlamlı yarar göstermiştir."
+      },
+      {
+       "text": "Deri yolma bozukluğunda dermatolojik nedenleri araştırmaya gerek yoktur.",
+       "isLie": true,
+       "explanation": "Ayırıcı tanıda uyuz, atopik dermatit ve diğer organik kaşıntı nedenleri mutlaka dışlanmalıdır."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slideNumber": 17,
+   "title": "[TEKRAR SAYFASI - CHECKPOINT 3] Tedavi ve İlişkili Bozukluklar",
+   "bolum": 5,
+   "pdfSayfalari": [
+    13,
+    23
+   ],
+   "sourcePdf": {
+    "name": "y25-k2-37-okb-ve-iliskili-bozukluklar.pdf",
+    "startPage": 13,
+    "endPage": 23
+   },
+   "content": "Bu bölümde OKB'nin farmakolojik ve psikoterapötik tedavisini, ilişkili bozukluklar spektrumunu ve klinik yönetim ilkelerini pekiştirdik.\n\n- **Farmakoterapi Kuralları:** Yüksek doz SSRI, yanıt için en az 10-12 hafta bekleme ve nüksü önlemek için 1-2 yıl idame.\n- **Psikoterapi:** BDT'nin ERP (Tepki Önleme ile Maruz Bırakma) tekniği anksiyete habituasyonu sağlayarak altın standarttır.\n- **Beden Dismorfik Bozukluğu:** Hayali kusur takıntısı; plastik cerrahi kontrendikedir, yüksek doz SSRI ve BDT verilir.\n- **Beden Odaklı Bozukluklar:** Trikotillomani ve ekskoriasyonda 'Alışkanlığı Tersine Çevirme Eğitimi' ve NAC kullanılır.\n\n> [!NOTE]\n> OKB spektrum bozukluklarının tamamında ortak payda kompulsif-tekrarlayıcı eylemler ve serotonerjik-davranışçı tedaviye yanıttır.",
+   "interactiveElements": [
+    {
+     "id": "k37-s17-q1",
+     "type": "micro_quiz",
+     "question": "Aşağıdakilerden hangisi OKB ve ilişkili bozuklukların tedavisinde doğru bir klinik yaklaşımdır?",
+     "options": [
+      {
+       "text": "OKB'de yüksek doz SSRI ve ERP uygulanır; Beden Dismorfik Bozukluğunda estetik cerrahiden kesinlikle kaçınılır.",
+       "isCorrect": true,
+       "explanation": "OKB'de yüksek doz SSRI ve ERP uygulanır; Beden Dismorfik Bozukluğunda estetik cerrahiden kesinlikle kaçınılır, klinik psikiyatri kılavuzlarında tanımlanan tanısal ilkeler ve nörobiyolojik mekanizmalarla tam bir uyum gösterir. Bu yaklaşım OKB ve ilişkili bozuklukların değerlendirilmesinde temel referans kabul edilmektedir."
+      },
+      {
+       "text": "İstifçilik hastalarının eşyaları hasta uyurken gizlice çöpe atılmalıdır.",
+       "isCorrect": false,
+       "explanation": "Şıkta sözü edilen i̇stifçilik hastalarının eşyaları hasta uyurken gizlice çöpe atılmalıdır kavramı, farklı bir psikiyatrik sendromun veya bambaşka bir klinik tablonun niteliklerini yansıtır. Bu soruda hedeflenen temel OKB dinamikleri ve patofizyolojik ilkelerle doğrudan örtüşmemektedir."
+      },
+      {
+       "text": "Trikotillomanide hastanın tüm saçları kalıcı lazerle yok edilmelidir.",
+       "isCorrect": false,
+       "explanation": "Şıkta sözü edilen trikotillomanide hastanın tüm saçları kalıcı lazerle yok edilmelidir kavramı, farklı bir psikiyatrik sendromun veya bambaşka bir klinik tablonun niteliklerini yansıtır. Bu soruda hedeflenen temel OKB dinamikleri ve patofizyolojik ilkelerle doğrudan örtüşmemektedir."
+      },
+      {
+       "text": "OKB'de antidepresan ilaçlar ikinci haftanın sonunda hemen kesilmelidir.",
+       "isCorrect": false,
+       "explanation": "Şıkta sözü edilen okb'de antidepresan ilaçlar ikinci haftanın sonunda hemen kesilmelidir kavramı, farklı bir psikiyatrik sendromun veya bambaşka bir klinik tablonun niteliklerini yansıtır. Bu soruda hedeflenen temel OKB dinamikleri ve patofizyolojik ilkelerle doğrudan örtüşmemektedir."
+      }
+     ]
+    },
+    {
+     "id": "k37-s17-s1",
+     "type": "swipe_matching",
+     "title": "Bozukluk ve Birincil Müdahale Eşleştirmesi",
+     "leftCategory": "Beden Dismorfik Bozukluğu",
+     "rightCategory": "Trikotillomani / Ekskoriasyon",
+     "cards": [
+      {
+       "text": "Estetik ameliyat talebini reddedip yüksek doz SSRI ve BDT başlamak",
+       "category": "left"
+      },
+      {
+       "text": "Yolma dürtüsü geldiğinde yumruk sıkma gibi alışkanlığı tersine çevirme eğitimi vermek",
+       "category": "right"
+      },
+      {
+       "text": "Aynada mikroskobik kusurları inceleme kompulsiyonunu hedeflemek",
+       "category": "left"
+      },
+      {
+       "text": "N-asetil sistein desteğiyle kıl veya deri koparma davranışını azaltmak",
+       "category": "right"
+      }
+     ]
+    },
+    {
+     "id": "k37-s17-c1",
+     "type": "cloze_masking",
+     "sentence": "OKB tedavisinde altın standart psikoterapi Tepki Önleme ile Maruz Bırakma tekniğidir.",
+     "maskedTerm": "Tepki Önleme ile Maruz Bırakma",
+     "hint": "ERP kısaltmasıyla bilinen yüzleştirme ve ritüeli engelleme yöntemi."
+    },
+    {
+     "id": "k37-s17-t1",
+     "type": "interactive_table",
+     "title": "Tedavi Stratejileri Karşılaştırması",
+     "tableHeaders": [
+      "Durum",
+      "İlk Basamak İlaç",
+      "Hedef Psikoterapi"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "OKB Çekirdek Tablosu",
+         "isMasked": false
+        },
+        {
+         "text": "Yüksek Doz SSRI / Klomipramin",
+         "isMasked": true,
+         "hint": "Serotonerjik geri alımı güçlü bloke eden ajanlar."
+        },
+        {
+         "text": "ERP (Tepki Önleme ile Maruz Bırakma)",
+         "isMasked": false
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Beden Odaklı (Yolma)",
+         "isMasked": false
+        },
+        {
+         "text": "SSRI ve N-Asetil Sistein",
+         "isMasked": true,
+         "hint": "Glutamat ve serotonin modülatörleri."
+        },
+        {
+         "text": "Alışkanlığı Tersine Çevirme Eğitimi",
+         "isMasked": false
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slideNumber": 18,
+   "title": "[OYUN SAYFASI] Ders Sonu Oyunları: OKB ve İlişkili Bozukluklar",
+   "bolum": 5,
+   "pdfSayfalari": [
+    1,
+    23
+   ],
+   "sourcePdf": {
+    "name": "y25-k2-37-okb-ve-iliskili-bozukluklar.pdf",
+    "startPage": 1,
+    "endPage": 23
+   },
+   "isGameFinale": true,
+   "content": "Tebrikler! Obsesif Kompulsif Bozukluk ve İlişkili Bozukluklar dersini başarıyla tamamladınız.\n\n- **Ders Sonu Değerlendirmesi:** Bu son aşamada dört farklı oyun kurgusu ile ders boyunca edindiğiniz kritik klinik refleksleri, nörobiyolojik döngüleri, süre eşiklerini ve ayırıcı tanı parametrelerini test edeceğiz.\n- **Oyun Alanları:** Sıralama, sayısal tahmin, klinik parametre simülasyonu ve metin onarımı oyunlarını çözerek kazanımlarınızı pekiştirin.\n\n> [!NOTE]\n> OKB'de yüksek doz ilaç, yeterli süre (10-12 hafta) ve ERP psikoterapisi klinik başarının üç temel ayağıdır.",
+   "interactiveElements": [
+    {
+     "id": "k37-s18-g1",
+     "type": "sequence_order",
+     "prompt": "Bilişsel modelde takıntının kompulsif nötrleştirme döngüsüne dönüşme basamaklarını sırasıyla diziniz:",
+     "steps": [
+      "1. İstemsiz Düşünce: Zihne davetsizce giren ego-distonik düşünce veya dürtünün belirmesi",
+      "2. Bilişsel Çarpıtma: Düşünce-eylem kaynaşması ve abartılmış sorumluluk algısının devreye girmesi",
+      "3. Şiddetli Anksiyete: Tehlike ve felaket beklentisiyle yoğun içsel gerilimin yükselmesi",
+      "4. Kompulsif Nötrleştirme: Anksiyeteyi geçici dindirmek amacıyla törensel ritüelin icra edilmesi"
+     ],
+     "explanation": "Önce istemsiz düşünce zihne girer, ardından düşünce-eylem kaynaşmasıyla felaketleştirilir, artan anksiyete neticesinde hasta kompulsif eyleme başvurur."
+    },
+    {
+     "id": "k37-s18-g2",
+     "type": "estimate_slider",
+     "items": [
+      {
+       "prompt": "OKB'de antidepresan farmakoterapisinin etkinliğini değerlendirmek için en az kaç hafta beklenmelidir?",
+       "unit": "hafta",
+       "min": 2,
+       "max": 24,
+       "answer": 12,
+       "tolerance": 2,
+       "explanation": "OKB'de farmakolojik tedavi yanıtı depresyona kıyasla daha geç belirir; objektif değerlendirme için en az 10-12 hafta gerekir."
+      },
+      {
+       "prompt": "OKB belirtilerinin tanı alabilmesi için günde en az kaç saat zaman alması gerekir?",
+       "unit": "saat",
+       "min": 0,
+       "max": 6,
+       "answer": 1,
+       "tolerance": 0.5,
+       "explanation": "DSM-5 tanı ölçütlerine göre takıntıların günde en az bir saatten uzun sürmesi veya belirgin işlevsellik kaybı yaratması şarttır."
+      }
+     ]
+    },
+    {
+     "id": "k37-s18-g3",
+     "type": "perturbation",
+     "scenario": "Bir OKB polikliniğinde hastaya 'Tepki Önleme ile Maruz Bırakma (ERP)' psikoterapisi başlandığı bir klinik simülasyon kurgulanmaktadır.",
+     "question": "Bu müdahale sonrasında hastadaki klinik ve davranışsal parametreler nasıl değişir?",
+     "parameters": [
+      {
+       "name": "Hastanın sergilediği kompulsif kaçınma ve temizlik ritüellerinin sıklığı",
+       "correct": "down",
+       "explanation": "Tepki önleme eğitimi sayesinde kompulsif kaçınma ve törensel ritüeller zamanla söner."
+      },
+      {
+       "name": "Kompulsiyon yapılmadığında ilk seanslarda hissedilen anlık anksiyete düzeyi",
+       "correct": "up",
+       "explanation": "Kompulsif nötrleştirme durdurulduğunda anksiyete başlangıçta tepe noktasına tırmanır, ardından habituasyonla düşer."
+      },
+      {
+       "name": "Hastanın sosyal ve mesleki alanlardaki genel işlevsellik düzeyi",
+       "correct": "up",
+       "explanation": "Günde saatler alan ritüellerin terk edilmesi hastanın toplumsal ve mesleki başarısını belirgin yükseltir."
+      }
+     ]
+    },
+    {
+     "id": "k37-s18-g4",
+     "type": "fix_the_text",
+     "text": "OKB belirtileri benlikle tamamen barışık ve ego-sintonik olup hastalar durumlarından çok memnundur; bu nedenle ilk basamak tedavide hemen estetik cerrahi operasyonları uygulanır.",
+     "errors": [
+      {
+       "wrong": "ego-sintonik",
+       "correct": "ego-distonik",
+       "options": [
+        "ego-distonik",
+        "ego-sintonik",
+        "manik"
+       ],
+       "explanation": "OKB belirtileri benliğe yabancı, rahatsız edici ve ego-distoniktir."
+      },
+      {
+       "wrong": "çok memnundur",
+       "correct": "şiddetli acı çeker",
+       "options": [
+        "şiddetli acı çeker",
+        "çok memnundur",
+        "coşku duyar"
+       ],
+       "explanation": "OKB hastası takıntılarından ötürü derin anksiyete ve acı çeker."
+      },
+      {
+       "wrong": "estetik cerrahi operasyonları",
+       "correct": "yüksek doz SSRI ve ERP",
+       "options": [
+        "yüksek doz SSRI ve ERP",
+        "estetik cerrahi operasyonları",
+        "acil lobotomi"
+       ],
+       "explanation": "Tedavide cerrahi değil, yüksek doz SSRI ve Tepki Önleme ile Maruz Bırakma (ERP) esastır."
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "matchedPastQuestionsCount": 3,
+ "sinama": {
+  "etiket": "2025-2026 Arşiv",
+  "aciklama": "Bu ders 2025-2026 dönemi (geçen yıl) slaytlarından hazırlanmıştır; 2026-2027 güncel müfredat dersleriyle karışmaz."
+ }
+}

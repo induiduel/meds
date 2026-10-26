@@ -1,0 +1,757 @@
+{
+ "id": "k2-07-genel-anestezik-ilaclar",
+ "sira": 7,
+ "kurul": 1,
+ "ders": "Tıbbi Farmakoloji",
+ "konu": "Genel Anestezik İlaçlar",
+ "ogretim_uyesi": null,
+ "tarih": null,
+ "kazanimlar": [
+  {
+   "no": 1,
+   "metin": "Genel Anestezik İlaçlar konusunun temel kavramlarını, etiyolojisini ve patofizyolojik mekanizmalarını açıklar.",
+   "sorular": [
+    {
+     "id": "k2-07-genel-anestezik-ilaclar-q01",
+     "kazanim": 1,
+     "zorluk": "kolay",
+     "soru": "Genel anesteziklerin sinapslarda etki ettiği inhibitör iyon kanalı hedeflerinden, klorür kanalıyla çalışan reseptör hangisidir?",
+     "secenekler": {
+      "A": "NMDA reseptörü",
+      "B": "AMPA reseptörü",
+      "C": "GABA-A reseptörü",
+      "D": "Nikotinik asetilkolin reseptörü",
+      "E": "5-HT3 reseptörü"
+     },
+     "dogru": "C",
+     "aciklama": "Derste genel anesteziklerin inhibitör hedefleri klorür kanalıyla çalışan GABA-A ve glisin reseptörleri ile potasyum kanalları olarak verilir (s. 16). Bu reseptörlerin etkisinin artması nöronu hiperpolarize eder ve bilinç kaybına katkıda bulunur.",
+     "sik_aciklamalari": {
+      "A": "NMDA, glutamatın bağlandığı eksitatör iyonotropik reseptördür ve ketaminin temel hedefidir. Anestezikler onu inhibe eder; klorür kanalıyla çalışan inhibitör hedef grubunda yer almaz (s. 16).",
+      "B": "AMPA, glutamatın hızlı eksitatör iletimini sağlayan katyon kanalıdır. Derste eksitatör hedefler arasında sayılır, bu nedenle klorür kanallı inhibitör reseptör sorusunun yanıtı olamaz (s. 16).",
+      "C": "Doğru. GABA-A, GABA bağlanınca klorür kanalını açan inhibitör reseptördür; derste genel anesteziklerin inhibitör hedefi olarak ilk sırada yer alır (s. 16).",
+      "D": "Nikotinik asetilkolin reseptörü katyon geçiren eksitatör bir kanaldır. Derste anesteziklerin inhibe ettiği eksitatör hedefler arasında sayıldığı için klorür kanallı inhibitör reseptör tanımına uymaz (s. 16).",
+      "E": "5-HT3, serotoninle açılan katyon kanallı bir eksitatör reseptördür. Derste eksitatör hedeflere eklenebilecek reseptör olarak geçer; klorür kanalı taşıyan inhibitör hedef grubunda yer almaz (s. 16)."
+     },
+     "bilgi": [
+      27,
+      28
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 16,
+      "alinti": "Inhibitör iyon kanalları özellikle klorür kanalıyla GABAA ve glisin reseptörleri ile potasyum kanallarıdır"
+     }
+    },
+    {
+     "id": "k2-07-genel-anestezik-ilaclar-q02",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Fensiklidin türevi olan, analjezik etkinliğiyle diğer anesteziklerden ayrılan bir intravenöz anesteziğin temel etki mekanizması hangisidir?",
+     "secenekler": {
+      "A": "GABA-A aracılı klorür akımını artırmak",
+      "B": "NMDA reseptör kompleksini inhibe etmek",
+      "C": "Seçici α2 adrenerjik reseptörleri uyarmak",
+      "D": "Opioid μ reseptörlerini uyarmak",
+      "E": "Retiküler aktive edici sistemde GABA iletimini artırmak"
+     },
+     "dogru": "B",
+     "aciklama": "Tarif edilen ilaç ketamindir. Ketamin lipid çözünürlüğü yüksek bir fensiklidin türevidir ve temel mekanizması NMDA reseptör kompleksini inhibe etmektir (s. 47); bu, analjezik etkisini ve disosiyatif anestezi tablosunu açıklar.",
+     "sik_aciklamalari": {
+      "A": "GABA-A aracılı klorür akımının artması propofolün düşünülen mekanizmasıdır. Propofol hipnotiktir ve analjezik etkisi bulunmadığı için analjezisiyle öne çıkan ilaç tarifine uymaz (s. 28, 30).",
+      "B": "Doğru. Ketamin NMDA reseptör kompleksini inhibe eder; bu glutamaterjik blokaj hem güçlü analjeziyi hem de gözlerin açık kaldığı disosiyatif anesteziyi oluşturur (s. 47).",
+      "C": "Seçici α2 agonizmi deksmedetomidinin mekanizmasıdır. Deksmedetomidin hipnotik ve omurilik düzeyinde analjezik bir ilaçtır; başlıca yoğun bakım sedasyonunda kullanılır ve fensiklidin türevi değildir (s. 51).",
+      "D": "μ reseptör uyarısı fentanil gibi opioidlerin mekanizmasıdır. Opioidler analjezik ajanlardır fakat fensiklidin türevi değildirler ve tek başına yeterli amnezi oluşturamazlar (s. 54).",
+      "E": "Retiküler aktive edici sistemde GABA iletimini artırmak barbitüratların mekanizmasıdır. Barbitüratlar analjezi oluşturmayıp hiperaljezi yapabildiği için bu tarife uymaz (s. 34)."
+     },
+     "bilgi": [
+      88,
+      89
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 47,
+      "alinti": "NMDA reseptör kompleksini inhibe etmesi temel mekanizma olarak bilinir"
+     }
+    },
+    {
+     "id": "k2-07-genel-anestezik-ilaclar-q03",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Minimal alveolar konsantrasyon (MAK) kavramı için aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Deneklerin %95'inde cilt kesisine yanıtı engelleyen arteriyel konsantrasyondur",
+      "B": "MAK değeri büyüdükçe anesteziğin gücü artar",
+      "C": "1 atm basınçta deneklerin %50'sinde ağrılı uyarana yanıtı engelleyen minimum alveolar konsantrasyondur",
+      "D": "İnhaler anesteziklerin birlikte kullanımı MAK üzerinde antagonistik etki yapar",
+      "E": "Vücut ısısındaki her 1 °C düşüş MAK'ı %3-4 artırır"
+     },
+     "dogru": "C",
+     "aciklama": "MAK, 1 atm basınçta deneklerin %50'sinde ağrılı herhangi bir uyarana yanıtı engelleyen minimum alveolar konsantrasyondur ve beyindeki parsiyel basıncı yansıtır (s. 11). Değer küçüldükçe ajan güçlüdür; kombinasyonlar aditiftir, hipotermi MAK'ı azaltır.",
+     "sik_aciklamalari": {
+      "A": "Bu ifade tanımı bozar: MAK %95 değil %50 denekte yanıtın engellenmesine dayanır. Ayrıca arteriyel değil alveolar konsantrasyon ölçülür; alveolar değer beyindeki parsiyel basıncı yansıtır (s. 11).",
+      "B": "MAK ile güç ters orantılıdır; metoksifluranın MAK'ı 0,16 ile en güçlü, azot protoksitinki >100 ile en zayıftır. Bu nedenle büyük MAK zayıf ajanı gösterir (s. 13).",
+      "C": "Doğru. Derste MAK, 1 atm basınçta deneklerin %50'sinde ağrılı uyarana yanıtı engelleyen minimum alveolar konsantrasyon olarak tanımlanır (s. 11).",
+      "D": "İnhaler anesteziklerin kombinasyonu MAK üzerinde aditif etkilidir. Bu sayede azot protoksit eklenince volatil ajanın gereken konsantrasyonu düşer; antagonizma söz konusu olamaz (s. 11).",
+      "E": "Yön ters verilmiştir: vücut ısısındaki her 1 °C düşüş MAK'ı %3-4 azaltır. Hipotermide beyin daha az anestezik gerektirir, hipertermide ise gereksinim artar (s. 11)."
+     },
+     "bilgi": [
+      16,
+      17
+     ],
+     "benzer_cikmis": [
+      "ed16daa87d2c"
+     ],
+     "kanit": {
+      "sayfa": 11,
+      "alinti": "deneklerin %50’sinde ağrılı herhangi bir uyarana karsı bir yanıt oluşmasını engellemek için gerekli olan minimum alveolar konsantrasyondur"
+     }
+    },
+    {
+     "id": "k2-07-genel-anestezik-ilaclar-q04",
+     "kazanim": 1,
+     "zorluk": "zor",
+     "soru": "Kan-gaz partisyon katsayıları ksenon 0,14, desfluran 0,42, halotan 2,4 ve metoksifluran 12 olan ajanlar için aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Metoksifluranla indüksiyon en hızlıdır",
+      "B": "Halotanla uyanma desflurandan hızlıdır",
+      "C": "Ksenonla indüksiyon ve uyanma en hızlıdır",
+      "D": "Katsayının büyüklüğü indüksiyon hızını etkilemez",
+      "E": "Desfluran kana çok çözündüğü için alveolar basınç geç yükselir"
+     },
+     "dogru": "C",
+     "aciklama": "Kan-gaz partisyon katsayısı büyüdükçe ajan kanda daha çok çözünür, alveolar ve beyin parsiyel basıncı geç yükselir ve indüksiyon yavaşlar (s. 12). Tablo 25.1'de en düşük katsayılı ksenon en hızlı indüksiyon-uyanmayı sağlar (s. 13).",
+     "sik_aciklamalari": {
+      "A": "Metoksifluranın katsayısı 12 ile en yüksektir; kanda çok çözündüğü için alveolar basınç yavaş yükselir. Derste eterle birlikte indüksiyonu yavaş ajan olarak yer alır (s. 13).",
+      "B": "Halotanın katsayısı desflurandan yüksektir, bu nedenle kandan ve dokudan daha yavaş temizlenir. Uyanma desfluranda daha hızlıdır; katsayı arttıkça hem indüksiyon hem uyanma uzar (s. 12-13).",
+      "C": "Doğru. Ksenonun katsayısı 0,14'tür; kana az çözündüğü için alveolar basınç hızla dengelenir ve tabloda indüksiyon-uyanması en hızlı ajan olarak işaretlenir (s. 13).",
+      "D": "Derste açıkça katsayı ne kadar büyükse indüksiyonun o kadar yavaş olduğu vurgulanır. Katsayı, ajanın kandan beyne geçişinin hızını belirleyen temel özelliktir (s. 12).",
+      "E": "Desfluranın katsayısı 0,42 ile düşüktür; kana az çözünür ve alveolar basıncı hızla yükselir. Bu yüzden derste indüksiyonu ve uyanması çok hızlı ajanlar arasında sayılır (s. 13)."
+     },
+     "bilgi": [
+      19,
+      20
+     ],
+     "benzer_cikmis": [
+      "bbb23be71d55"
+     ],
+     "kanit": {
+      "sayfa": 12,
+      "alinti": "Kan-gaz partisyon katsayısı ne kadar büyükse anestezi indüksiyonu o kadar yavaştır"
+     }
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "ed16daa87d2c",
+     "soru": "Aşağıdaki inhaler anesteziklerden hangisi en zayıf anestezi verir?",
+     "secenekler": {
+      "A": "Metoksifluran",
+      "B": "Desfluran",
+      "C": "Sevofluran",
+      "D": "Siklopropan",
+      "E": "Azot protoksit"
+     },
+     "cevap": null
+    },
+    {
+     "id": "bbb23be71d55",
+     "soru": "FA/Fi konsantrasyonu (Yekseninde) zamana (X- Ekseni) karşı en yüksek olan hangisi olur?",
+     "secenekler": {
+      "A": "Halotan",
+      "B": "Nitröz oksit",
+      "C": "İzofluran",
+      "D": "Sevofluran",
+      "E": "Desfluran"
+     },
+     "cevap": "B"
+    }
+   ]
+  },
+  {
+   "no": 2,
+   "metin": "Genel Anestezik İlaçlar ile ilişkili klinik semptomları, tanı kriterlerini ve ayırıcı tanı basamaklarını değerlendirir.",
+   "sorular": [
+    {
+     "id": "k2-07-genel-anestezik-ilaclar-q05",
+     "kazanim": 2,
+     "zorluk": "kolay",
+     "soru": "Klasik anestezi evrelerinden hangisinde hasta deliryuma geçer, tamamen amneziktir ve solunum hızı, kalp hızı ve kan basıncı artmıştır?",
+     "secenekler": {
+      "A": "Analjezi evresi",
+      "B": "Eksitasyon evresi",
+      "C": "Cerrahi anestezi evresi",
+      "D": "Meduller depresyon evresi",
+      "E": "Monitörize anestezi bakımı"
+     },
+     "dogru": "B",
+     "aciklama": "Derste eksitasyon döneminde hastanın deliryuma geçtiği, tamamen amnezik olduğu, solunumun hızlandığı, kalp hızı ve kan basıncının arttığı anlatılır (s. 21). Bu evre indüksiyonda hızla geçilmesi istenen dönemdir.",
+     "sik_aciklamalari": {
+      "A": "Analjezi evresi ilk evredir; hasta önce amnezi olmadan analjezi duyar, sonunda analjezi ve amnezi birlikte bulunur. Deliryum ve sempatik artış bu dönemin özelliği sayılamaz (s. 21).",
+      "B": "Doğru. Eksitasyon evresinde hasta deliryumdadır ve tamamen amneziktir; solunum hızlanır, kalp hızı ve kan basıncı yükselir, bu dönem indüksiyonda hızla geçilmelidir (s. 21).",
+      "C": "Cerrahi anestezi evresi solunum ve kalp hızının yavaşlamasıyla başlar ve apneye kadar sürer. Yavaşlama ile giden bu dönem, deliryum ve taşikardi tablosuyla çelişir (s. 21).",
+      "D": "Meduller depresyon evresinde vazomotor ve solunum merkezleri baskılanır; destek verilmezse ölüm hızla gelir. Bu en derin dönemdir ve uyarılmışlık tablosu taşımaz (s. 21).",
+      "E": "Monitörize anestezi bakımı bir evre değil, küçük girişimlerde sedatif ile lokal anesteziğin birleştirildiği tekniktir. Hasta hava yolunu korur ve sözel komutlara yanıt verir (s. 15)."
+     },
+     "bilgi": [
+      38,
+      39
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 21,
+      "alinti": "Eksitasyon dönemi : Bu dönemde hasta deliryuma geçer. Tamamen amneziktir"
+     }
+    },
+    {
+     "id": "k2-07-genel-anestezik-ilaclar-q06",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Ameliyat sırasında anestezi derinliği izlenirken derse göre EN ÖNEMLİ ölçü hangisidir?",
+     "secenekler": {
+      "A": "Yalnız pupil çapının ölçülmesi",
+      "B": "Kirpik refleksinin kaybolması",
+      "C": "Cerrahi kesinin kan basıncı, kalp hızı, solunum ve diğer belirtilerde yol açtığı değişiklik",
+      "D": "Gözyaşı salgısının varlığı",
+      "E": "Diyafram solunumunun başlaması"
+     },
+     "dogru": "C",
+     "aciklama": "Anestezi derinliği kirpik-kornea refleksi, pupil, göz hareketleri, gözyaşı, kan basıncı, kalp hızı, solunum, terleme ve diyafram solunumuyla izlenir; ancak derste en önemli ölçünün cerrahi kesinin bu belirtilerde yol açtığı değişiklik olduğu vurgulanır (s. 4).",
+     "sik_aciklamalari": {
+      "A": "Pupil büyüklüğü ve ışık yanıtı derinliği gösteren belirtilerden biridir. Tek başına değerlendirildiğinde ilaçlardan ve hastadan etkilendiği için en önemli ölçü olarak kabul edilemez (s. 4).",
+      "B": "Kirpik refleksi izlenen belirtiler arasındadır ve kaybı yüzeysel anestezinin geçildiğini düşündürür. Yine de cerrahi uyarana verilen yanıt kadar belirleyici bir ölçü sayılmaz (s. 4).",
+      "C": "Doğru. Cerrahi kesi en güçlü uyarandır; bu uyarana kan basıncı, kalp hızı, solunum ve diğer belirtilerin verdiği yanıt derinliğin en önemli ölçüsüdür (s. 4).",
+      "D": "Gözyaşı salgısı izlenen otonomik belirtilerden biridir. Yüzeysel anestezide artabilir; fakat derste en önemli ölçü olarak cerrahi kesinin oluşturduğu değişiklik gösterilmiştir (s. 4).",
+      "E": "Diyafram solunumu derin anestezide interkostal kasların baskılanmasıyla ortaya çıkan bir bulgudur. Yararlı bir işarettir ancak en önemli ölçü kesiye verilen yanıttır (s. 4)."
+     },
+     "bilgi": [
+      6,
+      5
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 4,
+      "alinti": "Burada en önemli ölçü, cerrahi kesinin bu belirtilerde yol açtığı değişikliklerdir"
+     }
+    },
+    {
+     "id": "k2-07-genel-anestezik-ilaclar-q07",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Ketamin anestezisinden uyanan bir çocukta canlı ve renkli rüyalar, halüsinasyonlar ve şiddetli korku görülüyor. Bu tabloyla ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Bu reaksiyonlar erişkinlerde çocuklardan daha sık ve şiddetlidir",
+      "B": "Ketaminin öforik etkisi kötüye kullanım potansiyelini artırır",
+      "C": "Tablo ketaminin belirgin solunum depresyonuna bağlıdır",
+      "D": "Bu reaksiyonlar flumazenille geri çevrilir",
+      "E": "Tablo ketaminin serebral kan akımını azaltmasından kaynaklanır"
+     },
+     "dogru": "B",
+     "aciklama": "Ketaminden sonra canlı rüyalar, halüsinasyonlar, beden dışı deneyimler, korku ve konfüzyon görülebilir; öforik etkisi nedeniyle kötüye kullanım potansiyeli yüksektir ve reaksiyonlar çocuklarda daha sık ve şiddetlidir (s. 48).",
+     "sik_aciklamalari": {
+      "A": "Yön ters verilmiştir: derste bu uyanma reaksiyonlarının çocuklarda daha sık ve şiddetli olduğu belirtilir. Bu nedenle çocukta görülen tablo beklenen bir yan etkidir (s. 48).",
+      "B": "Doğru. Ketaminin öfori yapması kötüye kullanım potansiyelini yükseltir; halüsinasyon ve beden dışı deneyimler de bu psikomimetik etkinin parçasıdır (s. 48).",
+      "C": "Ketaminin solunum depresyonu belirgin olmadığı için ilaç bu yönüyle avantajlı sayılır. Uyanma reaksiyonlarını açıklayan mekanizma solunum baskısı olamaz (s. 48-49).",
+      "D": "Flumazenil benzodiazepinlerin antagonistidir ve midazolamın etkisini geri döndürür. Ketaminin NMDA blokajına bağlı psikomimetik reaksiyonlarında antagonist olarak kullanılamaz (s. 39, 62).",
+      "E": "Ketamin diğer IV anesteziklerin tersine serebral vazodilatördür ve beyin kan akımını artırır. Bu nedenle serebral kan akımında azalma tabloyu açıklayamaz (s. 47)."
+     },
+     "bilgi": [
+      91,
+      92
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 48,
+      "alinti": "canlı ve renkli rüyalar, halüsinasyonlar, beden dışı deneyimler"
+     }
+    },
+    {
+     "id": "k2-07-genel-anestezik-ilaclar-q08",
+     "kazanim": 2,
+     "zorluk": "zor",
+     "soru": "Aşağıdaki durumlardan hangisi minimal alveolar konsantrasyonu (MAK) ARTIRIR?",
+     "secenekler": {
+      "A": "Gebelik",
+      "B": "Akut alkol alımı",
+      "C": "Klonidin kullanımı",
+      "D": "Kronik alkolizm",
+      "E": "Hipotermi"
+     },
+     "dogru": "D",
+     "aciklama": "Derste MAK'ı yaş, gebelik, hipotermi, akut alkol, opioid, benzodiazepin, antihipertansifler ve klonidin gibi α2 agonistlerin azalttığı; hipertermi, MAO inhibitörleri ve kronik alkolizmin artırdığı belirtilir (s. 11). Kronik alkolikte daha yüksek anestezik konsantrasyonu gerekir.",
+     "sik_aciklamalari": {
+      "A": "Gebelik MAK'ı azaltan durumlar arasındadır. Gebe hasta aynı etkiyi daha düşük alveolar konsantrasyonla elde eder; bu nedenle anestezik gereksinimi artmaz, azalır (s. 11).",
+      "B": "Akut alkol alımı SSS'yi deprese ederek MAK'ı azaltır. Kronik alkolizmin ters yönlü etkisiyle karıştırılması klasik bir sınav tuzağıdır (s. 11).",
+      "C": "Klonidin α2 adrenerjik agonisttir ve santral sempatik çıkışı azaltarak MAK'ı düşürür. Bu özellik deksmedetomidin gibi α2 agonistlerin anesteziye katkısıyla da uyumludur (s. 11).",
+      "D": "Doğru. Kronik alkolizm toleransa bağlı olarak MAK'ı artırır; hipertermi ve MAO inhibitörleri de aynı yönde etki eden durumlardır (s. 11).",
+      "E": "Hipotermi MAK'ı azaltır; vücut ısısındaki her 1 °C düşüş MAK'ı %3-4 düşürür. Artıran ısı değişikliği hipertermidir (s. 11)."
+     },
+     "bilgi": [
+      18,
+      17
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 11,
+      "alinti": "Alkol bağımlılığı (kronik alkolizm) ✓Cinsiyet MAK’ı değiştirmez"
+     }
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 3,
+   "metin": "Genel Anestezik İlaçlar klinik yönetimini, farmakoterapi ilkelerini ve komplikasyonlardan korunma yaklaşımlarını sıralar.",
+   "sorular": [
+    {
+     "id": "k2-07-genel-anestezik-ilaclar-q09",
+     "kazanim": 3,
+     "zorluk": "kolay",
+     "soru": "Uçucu anestezik ve süksinilkolin ile tetiklenen malign hipertermi tedavisinde kullanılan ilaç hangisidir?",
+     "secenekler": {
+      "A": "Dantrolen",
+      "B": "Flumazenil",
+      "C": "Nalokson",
+      "D": "Propofol",
+      "E": "Lidokain"
+     },
+     "dogru": "A",
+     "aciklama": "Malign hipertermi genetik yatkın bireylerde uçucu anesteziklerin oluşturduğu, süksinilkolinin tetiklediği ve ryanodin reseptörünün (RyR1) aracılık ettiği bir tablodur; tedavide sarkoplazmik retikulumdan Ca++ çıkışını azaltan dantrolen verilir (s. 25).",
+     "sik_aciklamalari": {
+      "A": "Doğru. Ryanodin reseptörü üzerinden etki eden dantrolen sarkoplazmik retikulumdan Ca++ çıkışını azaltarak kontrolsüz kas kasılmasını ve ısı üretimini durdurur; malign hiperterminin özgül tedavisidir (s. 25).",
+      "B": "Flumazenil benzodiazepin reseptör antagonistidir; midazolam sonrası gecikmiş ayılmada kullanılır. RyR1 aracılı kalsiyum salınımı üzerinde etkisi bulunmadığından malign hipertermide işe yaramaz (s. 40).",
+      "C": "Nalokson opioid reseptör antagonistidir ve fentanilin solunum depresyonu dahil etkilerini geri çevirir. Malign hiperterminin kas kalsiyumu kaynaklı mekanizmasına etki edemez (s. 62).",
+      "D": "Propofol GABA-A aracılı etki eden hipnotik bir IV anesteziktir. Tetikleyici olmayan anestezi seçeneği olabilir, fakat başlamış malign hipertermiyi tedavi eden ilaç sayılmaz (s. 28).",
+      "E": "Lidokain lokal anesteziktir; derste tiyopentalin yanlışlıkla intraarteriyel verilmesinde aynı yerden uygulanır. Malign hipertermide kas kalsiyum salınımını düzelten ilaç değildir (s. 35)."
+     },
+     "bilgi": [
+      49
+     ],
+     "benzer_cikmis": [
+      "q-No_ropsikiyatri_gis_kardiyo_-2023-2024-C__km_s_lar__240625_053302__2_-7"
+     ],
+     "kanit": {
+      "sayfa": 25,
+      "alinti": "Tedavisinde sarkoplazmik retikulumdan Ca++ çıkışını azaltmak için dantrolen verilir"
+     }
+    },
+    {
+     "id": "k2-07-genel-anestezik-ilaclar-q10",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Anestezi indüksiyonu sırasında tiyopental yanlışlıkla arter içine verilmiş ve hastada şiddetli ağrı başlamıştır. Derste önerilen ilk yaklaşım hangisidir?",
+     "secenekler": {
+      "A": "İğneyi hemen çekip bölgeye sıcak uygulamak",
+      "B": "Aynı yerden lidokain veya papaverin vermek",
+      "C": "Flumazenil uygulamak",
+      "D": "Damar yolundan dantrolen vermek",
+      "E": "Ketamine geçerek indüksiyonu sürdürmek"
+     },
+     "dogru": "B",
+     "aciklama": "Tiyopental alkali (pH>10) olduğu için arter içine verilirse şiddetli ağrı, vazokonstriksiyon, doku hasarı ve nekroz yapar. Derhal aynı yerden lidokain (%1'lik 5-10 mL) veya papaverin verilir; brakiyal ya da stellat ganglion bloğu ve heparinizasyon eklenir (s. 35).",
+     "sik_aciklamalari": {
+      "A": "Kanülü hemen çekmek ilaç verme yolunu kaybettirir; vazodilatör ve lokal anesteziğin aynı yerden verilmesi gerekir. Sıcak uygulama derste önerilen bir yöntem olarak geçmemektedir (s. 35).",
+      "B": "Doğru. Aynı kanülden verilen lidokain ağrıyı ve vazospazmı, papaverin ise vazokonstriksiyonu giderir; böylece doku perfüzyonu korunur, ardından blok ve heparinizasyonla iskemi sınırlandırılır (s. 35).",
+      "C": "Flumazenil benzodiazepin reseptörlerine bağlanan antagonisttir; barbitürat olan tiyopentalin etkisini geri döndüremez. Ayrıca sorun sistemik etki değil, arterdeki yerel vazokonstriksiyondur (s. 39).",
+      "D": "Dantrolen malign hipertermide kas kalsiyum salınımını azaltır. Arter içi tiyopentalin yol açtığı vazokonstriksiyon ve iskemi üzerinde yararı bulunmamaktadır (s. 25).",
+      "E": "Ketamine geçmek indüksiyonu sürdürmeyi sağlar ama arterdeki iskemiyi tedavi edemez. Öncelik doku hasarını ve nekrozu önleyecek yerel müdahaledir (s. 35)."
+     },
+     "bilgi": [
+      69,
+      68
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 35,
+      "alinti": "Derhal aynı yerden lidokain ( % 1’lik 5-10 ml) veya papaverin"
+     }
+    },
+    {
+     "id": "k2-07-genel-anestezik-ilaclar-q11",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Hemodinamik etkileri minimal olduğu için miyokard kontraktilite sorunu olan hastada indüksiyonda tercih edilen imidazol türevi ajanın önemli yan etkisi hangisidir?",
+     "secenekler": {
+      "A": "Malign hipertermi",
+      "B": "Kolesterolün kortizole dönüşümünü baskılayarak adrenokortikal supresyon",
+      "C": "Porfiri krizinin tetiklenmesi",
+      "D": "Belirgin bronkokonstriksiyon",
+      "E": "Güçlü serebral vazodilatasyon ile kafa içi basınç artışı"
+     },
+     "dogru": "B",
+     "aciklama": "Tarif edilen ajan etomidattır. Etomidat kolesterolün kortizole dönüşümünü baskılayarak 5 saat veya daha uzun süren adrenokortikal supresyon yapar; ayrıca hastaların %50'den fazlasında spontan miyoklonus görülür (s. 45).",
+     "sik_aciklamalari": {
+      "A": "Malign hipertermi uçucu anesteziklerle ve süksinilkolinle tetiklenen genetik bir tablodur. Etomidatın yan etki profilinde öne çıkan sorun bu değildir (s. 25, 45).",
+      "B": "Doğru. Etomidat kolesterolün kortizole dönüşümünü baskılayarak adrenokortikal supresyon yapar; bu etki tek dozdan sonra bile 5 saat veya daha uzun sürebilir (s. 45).",
+      "C": "Porfiride kesin kontrendike olan ve ölüme yol açabilen ilaç tiyopentaldir. Barbitüratların bu riski etomidatın tanımlanan yan etkisiyle karıştırılmamalıdır (s. 35).",
+      "D": "Bronkokonstriksiyon etomidatın tanımlanan bir yan etkisi olarak derste yer almıyor. Bronkodilatasyon ise ketamin ve uçucu anesteziklerin olumlu özelliği olarak anlatılır (s. 23, 49).",
+      "E": "Etomidat kafa içi basıncını düşürür ve güçlü vazokonstriktördür; bu özellik onu nöroşirürjide avantajlı kılar. Serebral vazodilatasyonla kafa içi basıncını artıran ajan ketamindir (s. 44, 47)."
+     },
+     "bilgi": [
+      86,
+      83,
+      84
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 45,
+      "alinti": "Etomidat adrenokortikal supresyon yaparak kolesterolün kortizol dönüşümünü suprese eder"
+     }
+    },
+    {
+     "id": "k2-07-genel-anestezik-ilaclar-q12",
+     "kazanim": 3,
+     "zorluk": "zor",
+     "soru": "Kafa içi basıncı artmış bir hastada genel anestezi indüksiyonu planlanıyor. Aşağıdaki ajanlardan hangisi bu hastaya ÖNERİLMEZ?",
+     "secenekler": {
+      "A": "Tiyopental",
+      "B": "Propofol",
+      "C": "Etomidat",
+      "D": "Ketamin",
+      "E": "Metoheksital"
+     },
+     "dogru": "D",
+     "aciklama": "Ketamin diğer IV anesteziklerin tersine beyin kan akımını artıran serebral vazodilatördür; bu nedenle kafa içi basıncı artmış kişilere önerilmez (s. 47). Tiyopental, metoheksital ve etomidat ise kafa içi basıncını düşürür (s. 36, 44).",
+     "sik_aciklamalari": {
+      "A": "Tiyopental beyin kan akımını, kan hacmini ve kafa içi basıncını azaltır, fokal iskemide koruma da sağlar. Bu özellikleriyle kafa içi basıncı yüksek hastada uygun bir seçenektir (s. 36).",
+      "B": "Propofol SSS'yi deprese eden hipnotik bir ajandır ve barbitüratların yerini almıştır. Ders onu kafa içi basınç artışında kaçınılacak ilaç olarak göstermez; asıl risk ketamindedir (s. 28, 30).",
+      "C": "Etomidat kafa içi basıncını düşürür ve hemodinamik etkileri minimaldir. Bu nedenle kafa içi basıncı artmış hastada kaçınılacak ajan olarak düşünülemez (s. 44).",
+      "D": "Doğru. NMDA antagonisti ketamin serebral vazodilatasyonla beyin kan akımını artırır; kafa içi basıncı artmış hastada basıncı daha da yükselteceği için önerilmez (s. 47).",
+      "E": "Metoheksital tiyopental gibi GABA-A üzerinden etkili bir barbitürattır ve beyin kan akımını, kafa içi basıncını azaltır. Epileptik odakları aktive etmesi ayrı bir özelliğidir (s. 36)."
+     },
+     "bilgi": [
+      90,
+      71,
+      84
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 47,
+      "alinti": "Intrakranial basıncı artmış kişilere önerilmez"
+     }
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "q-No_ropsikiyatri_gis_kardiyo_-2023-2024-C__km_s_lar__240625_053302__2_-7",
+     "soru": "Malign hipertermi tedavisinde kullanılan ilaç aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Süksinilkolin",
+      "B": "Dantrolen",
+      "C": "Neostigmin",
+      "D": "Baklofen",
+      "E": "Pankuronyum"
+     },
+     "cevap": "B"
+    }
+   ]
+  },
+  {
+   "no": 4,
+   "metin": "BİLİCİ tababet sanatı üç şeydir: 1. el mahareti ile aletler, 2. ilaç, 3. ahlaktır mekanizmasını ve klinik önemini analiz eder.",
+   "sorular": [
+    {
+     "id": "k2-07-genel-anestezik-ilaclar-q13",
+     "kazanim": 4,
+     "zorluk": "kolay",
+     "soru": "Derse göre günümüzde bilinen halka açık ilk genel anestezi hangi yılda yapılmıştır?",
+     "secenekler": {
+      "A": "1776",
+      "B": "1846",
+      "C": "1896",
+      "D": "1925",
+      "E": "1956"
+     },
+     "dogru": "B",
+     "aciklama": "Derste ağrısız cerrahinin İbni Sina, Zehravi ve Sabuncuoğlu Şerefeddin gibi İslam hekimlerince anlatıldığı, halka açık ilk genel anestezinin ise 1846 yılında yapıldığı belirtilir (s. 2).",
+     "sik_aciklamalari": {
+      "A": "1776, derste anestezi tarihi için verilen bir tarih olarak geçmiyor. Halka açık ilk genel anestezi bundan yaklaşık yetmiş yıl sonra gerçekleştirilmiştir (s. 2).",
+      "B": "Doğru. Günümüzde bilinen halka açık ilk genel anestezi 1846 yılında yapılmıştır; bu olay modern anestezinin başlangıcı kabul edilir (s. 2).",
+      "C": "1896, halka açık ilk genel anesteziden sonraki bir tarihtir. Derste anestezinin dönüm noktası olarak verilen yıl 1846'dır (s. 2).",
+      "D": "1925 modern anestezi döneminin içinde kalan bir yıldır. Derste ilk halka açık genel anestezi için bu tarih verilmemektedir; doğru yıl 1846'dır (s. 2).",
+      "E": "1956, inhalasyon ajanlarının geliştiği daha yakın bir döneme denk gelir. İlk halka açık genel anestezinin tarihi derste 1846 olarak belirtilmiştir (s. 2)."
+     },
+     "bilgi": [
+      2,
+      1
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 2,
+      "alinti": "Günümüzde bilinen halka açık ilk genel anestezi 1846 yılında yapılmıştır"
+     }
+    },
+    {
+     "id": "k2-07-genel-anestezik-ilaclar-q14",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Aşağıdakilerden hangisi genel anestezinin ögelerinden biri DEĞİLDİR?",
+     "secenekler": {
+      "A": "Bilinç kaybı",
+      "B": "Amnezi",
+      "C": "Analjezi",
+      "D": "Hareketsizlik",
+      "E": "Otonom reflekslerin artması"
+     },
+     "dogru": "E",
+     "aciklama": "Genel anestezinin ögeleri bilinç kaybı, duyu kaybı, amnezi, analjezi ve hareketsizliktir; amaç cerrahi uyaranlara karşı otonomik, somatik ve duyusal reflekslerin sorunsuz baskılanmasıdır (s. 3). Otonom reflekslerin artması bu amaca terstir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış seçenek; ifade doğrudur: bilinç kaybı genel anestezinin temel ögesidir ve korteks, talamus ile retiküler formasyonun baskılanmasıyla oluşur (s. 3, 19).",
+      "B": "Yanlış seçenek; ifade doğrudur: amnezi genel anestezinin ögelerindendir. Belleğin ortadan kalkmasında hipokampus, amigdala, prefrontal ve motor korteks rol oynar (s. 3, 19).",
+      "C": "Yanlış seçenek; ifade doğrudur: analjezi genel anestezinin ögesidir ve cerrahi uyaranın ağrı yanıtını ortadan kaldırır. Analjezi gücü zayıf ajanlara opioid eklenmesinin gerekçesi de budur (s. 3).",
+      "D": "Yanlış seçenek; ifade doğrudur: hareketsizlik (immobilite) genel anestezinin ögesidir. Derste immobilitenin MAK ile hedef dokuda etki sağlama gücü olduğu anlatılır (s. 3, 19).",
+      "E": "Doğru yanıt. Genel anestezide otonom refleksler artırılmaz, baskılanır; cerrahi uyaranlara karşı otonomik ve somatik reflekslerin sorunsuz baskılanması anestezinin amacıdır (s. 3, 15)."
+     },
+     "bilgi": [
+      4,
+      24
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 3,
+      "alinti": "Cerrahi uyaranlara karsı olusan otonomik, ve somatik ve sensoryal davranışların (reflekslerin) sorunsuz baskılanmasıdır"
+     }
+    },
+    {
+     "id": "k2-07-genel-anestezik-ilaclar-q15",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Büyük cerrahide inhalasyon anestezikleri, sedatif-hipnotikler, opioidler ve nöromüsküler blokerlerin birlikte kullanılmasının (dengeli anestezi) temel gerekçesi hangisidir?",
+     "secenekler": {
+      "A": "Her ilacın ayrı ayrı daha güçlü genel anestezi sağlaması",
+      "B": "Hiçbir anestezik maddenin bilinç kaybı, amnezi, analjezi, otonom refleks inhibisyonu ve kas gevşemesini tek başına sağlayamaması",
+      "C": "Kombinasyonun MAK'ı artırması",
+      "D": "Opioidlerin tek başına yeterli amnezi oluşturması",
+      "E": "İlaçların birbirinin metabolizmasını hızlandırması"
+     },
+     "dogru": "B",
+     "aciklama": "Derste hiçbir anestezik maddenin beş tesiri (bilinç kaybı, amnezi, analjezi, otonom reflekslerin inhibisyonu ve kas gevşemesi) tek başına gösteremeyeceği vurgulanır (s. 15). Bu nedenle birden fazla ilaç birlikte kullanılarak hem etki tamamlanır hem yan etkiler azaltılır (s. 27).",
+     "sik_aciklamalari": {
+      "A": "Kombinasyonun amacı her ilacın tek başına güçlenmesi değildir. Farklı ilaçlar farklı ögeleri sağlar ve her birinin daha düşük dozda kullanılmasına izin verir (s. 27).",
+      "B": "Doğru. Hiçbir ajan genel anestezinin beş ögesini tek başına oluşturamaz; dengeli anestezi bu eksikliği farklı ilaçları birleştirerek kapatır (s. 15, 27).",
+      "C": "İnhaler ajanların kombinasyonu MAK üzerinde aditif etki yapar; opioid ve benzodiazepinler de MAK'ı azaltır. Dolayısıyla kombinasyon gereken konsantrasyonu düşürür, yükseltmez (s. 11).",
+      "D": "Opioidler yüksek dozda bile benzodiazepin kullanılmadıkça yeterli amnezi oluşturamaz. Bu yüzden opioid dengeli anestezide analjezi bileşeni olarak yer alır (s. 54).",
+      "E": "Dengeli anestezinin gerekçesi metabolik etkileşim değil, ögelerin tamamlanmasıdır. Derste kombinasyon, advers etki ve riskleri azaltmak amacıyla anlatılır (s. 15, 27)."
+     },
+     "bilgi": [
+      24,
+      53,
+      25
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 15,
+      "alinti": "Hiçbir anestezik madde bu 5 tesiri tek başına gösterebilecek durumda değildir"
+     }
+    },
+    {
+     "id": "k2-07-genel-anestezik-ilaclar-q16",
+     "kazanim": 4,
+     "zorluk": "zor",
+     "soru": "İntravenöz anestezi türlerinden 'nörolept anestezi' hangi ilaç kombinasyonuyla yapılır?",
+     "secenekler": {
+      "A": "Propofol + remifentanil",
+      "B": "Ketamin + midazolam",
+      "C": "Fentanil + droperidol",
+      "D": "Tiyopental + süksinilkolin",
+      "E": "İzofluran + azot protoksit"
+     },
+     "dogru": "C",
+     "aciklama": "Derste nörolept anestezinin fentanil ile droperidolün birlikte kullanılmasıyla yapıldığı belirtilir (s. 14). Bu tür, total intravenöz ve disosiyatif anestezi ile birlikte intravenöz anestezinin alt türlerinden biridir (s. 5).",
+     "sik_aciklamalari": {
+      "A": "Propofol ve remifentanil kısa etkili bir hipnotik ile opioidin birleşimidir ve total intravenöz anestezi örneğidir. Nöroleptik bileşen içermediği için nörolept anestezi sayılamaz (s. 5, 14).",
+      "B": "Ketamin disosiyatif anestezi yapan NMDA antagonistidir; midazolam benzodiazepindir. Bu birliktelik nöroleptik ilaç içermez ve disosiyatif anestezi kavramıyla ilişkilidir (s. 47).",
+      "C": "Doğru. Nörolept anestezi, güçlü bir opioid analjezik olan fentanil ile nöroleptik droperidolün birlikte kullanılmasıyla oluşturulur; intravenöz anestezinin alt türüdür (s. 14).",
+      "D": "Tiyopental hızlı indüksiyon yapan barbitürattır, süksinilkolin ise nöromüsküler blokerdir. Bu ikili indüksiyon ve entübasyonda kullanılabilir ama nörolept anestezi tanımına uymaz (s. 15).",
+      "E": "İzofluran ile azot protoksit inhalasyon ajanlarıdır. Fentanil eklendiğinde derste dengeli anestezi örneği olarak geçer; intravenöz nörolept anestezi kapsamına girmez (s. 5)."
+     },
+     "bilgi": [
+      23,
+      7
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 14,
+      "alinti": "Nörolept anestezi Fentanil+ Droperidol"
+     }
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 5,
+   "metin": "1. İnhalasyon anestezisi 1. Total inhalasyon anest mekanizmasını ve klinik önemini analiz eder.",
+   "sorular": [
+    {
+     "id": "k2-07-genel-anestezik-ilaclar-q17",
+     "kazanim": 5,
+     "zorluk": "kolay",
+     "soru": "Aşağıdaki inhalasyon anesteziklerinden hangisi buhar basıncı yüksek, kaynama noktası düşük olduğu için oda sıcaklığında gaz formundadır?",
+     "secenekler": {
+      "A": "Halotan",
+      "B": "Sevofluran",
+      "C": "İzofluran",
+      "D": "Nitröz oksit",
+      "E": "Desfluran"
+     },
+     "dogru": "D",
+     "aciklama": "Derste nitröz oksit ve ksenonun buhar basınçlarının yüksek, kaynama noktalarının düşük olduğu ve oda sıcaklığında gaz formunda bulundukları belirtilir (s. 17). Halotan, enfluran, izofluran, desfluran ve sevofluran ise oda sıcaklığında sıvı olan uçucu ajanlardır.",
+     "sik_aciklamalari": {
+      "A": "Halotan uçucu bir anesteziktir; buhar basıncı düşük, kaynama noktası yüksektir. Oda sıcaklığında sıvıdır ve vaporizatörde buharlaştırılarak verilir (s. 7, 17).",
+      "B": "Sevofluran halojenli yapıda olan ve oda sıcaklığında sıvı bulunan uçucu anesteziktir. Vaporizatörle buharlaştırılır; düşük çözünürlüğüyle hızlı indüksiyon sağlar (s. 7, 17).",
+      "C": "İzofluran uçucu grubun üyesidir ve oda sıcaklığında sıvıdır. Vazodilatasyonla kalp debisini koruması onu miyokard fonksiyonu bozuk hastada seçenek yapar (s. 17, 22).",
+      "D": "Doğru. Nitröz oksit buhar basıncı yüksek, kaynama noktası düşük bir ajandır; ksenonla birlikte oda sıcaklığında gaz hâlinde bulunur (s. 17).",
+      "E": "Desfluran da uçucu ajanlar arasında sayılır ve oda sıcaklığında sıvıdır. Keskin kokusu öksürük ve solunum tutmaya yol açabilir (s. 17, 23)."
+     },
+     "bilgi": [
+      30,
+      29
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 17,
+      "alinti": "Nitroz oksit ve ksenon buhar basınçları yüksek kaynama noktaları düşüktür"
+     }
+    },
+    {
+     "id": "k2-07-genel-anestezik-ilaclar-q18",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Havalandırması yetersiz diş hekimliği odalarında uzun süre çalışan bir hekimde megaloblastik anemi saptanıyor. Bu tablodan en olası sorumlu inhalasyon anesteziği hangisidir?",
+     "secenekler": {
+      "A": "Sevofluran",
+      "B": "Halotan",
+      "C": "Nitröz oksit",
+      "D": "Enfluran",
+      "E": "Desfluran"
+     },
+     "dogru": "C",
+     "aciklama": "Derste hematolojik olarak nitröz oksidin megaloblastik anemiye neden olduğu ve havalandırması yetersiz diş hekimliği odalarında meslek hastalığı olarak görüldüğü belirtilir (s. 25).",
+     "sik_aciklamalari": {
+      "A": "Sevofluran yalnız metabolitlerinden açığa çıkan florür iyonlarıyla nefrotoksisiteye bağlanan uçucu ajandır. Megaloblastik anemi onun tanımlanan toksisitesi olarak geçmemektedir (s. 25).",
+      "B": "Halotanın tanımlı toksisitesi karaciğerdir; maruz kalanlarda yaklaşık 1/30.000 sıklıkta fulminan hepatit görülür. Kan yapımına etkisi derste anlatılmamaktadır (s. 26).",
+      "C": "Doğru. Nitröz oksit megaloblastik anemiye neden olur ve havalandırması yetersiz diş hekimliği odalarında meslek hastalığı olarak ortaya çıkar (s. 25).",
+      "D": "Enfluran halojenli bir uçucu ajandır ve toksisitesi florür iyonlarının açığa çıkmasıyla gelişen nefrotoksisitedir. Hekimdeki hematolojik tabloyu açıklayan ajan olarak düşünülemez (s. 25).",
+      "E": "Desfluran metabolizması çok düşük (<%0,05) bir uçucu ajandır; keskin kokusu solunum yolunu irrite edebilir. Megaloblastik anemi onunla ilişkilendirilmiş bir etki sayılmaz (s. 13, 23)."
+     },
+     "bilgi": [
+      48
+     ],
+     "benzer_cikmis": [
+      "past-q-21_22-9",
+      "d3-k2-far-011"
+     ],
+     "kanit": {
+      "sayfa": 25,
+      "alinti": "Hematolojik olarak nitröz oksit megaloblastik anemiye neden olur"
+     }
+    },
+    {
+     "id": "k2-07-genel-anestezik-ilaclar-q19",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Miyokard fonksiyonu bozulmuş bir hastada idame için en uygun inhalasyon anesteziği hangisidir?",
+     "secenekler": {
+      "A": "Halotan",
+      "B": "Enfluran",
+      "C": "Sevofluran",
+      "D": "Metoksifluran",
+      "E": "Siklopropan"
+     },
+     "dogru": "C",
+     "aciklama": "İzofluran, desfluran ve sevofluran vazodilatasyon yaparak ön ve art yükü azaltır ve kalp debisini korur; bu nedenle derste miyokard fonksiyonu bozuk hastalarda iyi seçenek olarak gösterilir (s. 22).",
+     "sik_aciklamalari": {
+      "A": "Halotan kontraktiliteyi deprese eder ve miyokardı başta adrenalin olmak üzere katekolaminlere duyarlı kılar. Bu aritmi riski nedeniyle kalbi bozuk hastada iyi bir seçenek olamaz (s. 22-23).",
+      "B": "Enfluran kalp kontraktilitesini deprese eden uçucu ajanlardandır. Kalp debisini koruyan vazodilatör grup içinde sayılmadığı için ilk tercih olamaz (s. 22).",
+      "C": "Doğru. Sevofluran vazodilatasyonla ön ve art yükü azaltır, böylece kalp debisini korur; miyokard fonksiyonu bozuk hastada iyi seçenektir (s. 22).",
+      "D": "Metoksifluran MAK'ı 0,16 olan en güçlü ancak metabolizma oranı >%70 olan ajandır. Kalp debisini koruyan vazodilatör grupta sayılmaz; yüksek çözünürlüğü nedeniyle indüksiyonu da yavaştır (s. 13, 22).",
+      "E": "Siklopropan derste artık kullanılmayan inhalasyon anesteziği olarak geçer. Güncel uygulamada yeri bulunmadığından bu hastada seçilecek bir ajan olamaz (s. 6)."
+     },
+     "bilgi": [
+      41,
+      40,
+      42
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 22,
+      "alinti": "Dolayısıyla miyokart fonksiyonu bozulmuş hastalarda iyi bir seçenektirler"
+     }
+    },
+    {
+     "id": "k2-07-genel-anestezik-ilaclar-q20",
+     "kazanim": 5,
+     "zorluk": "zor",
+     "soru": "Halojenli inhalasyon anesteziklerinin organ etkileriyle ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Glomerüler filtrasyon hızını ve böbrek kan akımını artırırlar",
+      "B": "Uterus kasını konsantrasyon bağımlı gevşeterek uterus kanamasını artırabilirler",
+      "C": "Astımlı hastada bronkokonstriksiyon yaparlar",
+      "D": "Halotan 12 yaşından küçük çocuklarda belirgin hepatotoksiktir",
+      "E": "Beyin metabolik aktivitesini artırırlar"
+     },
+     "dogru": "B",
+     "aciklama": "Halojenli anestezikler uterus kasını güçlü ve konsantrasyon bağımlı gevşetir; bu doğumda ya da plasenta retansiyonunda manuel müdahaleyi kolaylaştırır ama uterus kanamasını artırır (s. 24). Diğer seçenekler dersteki organ etkileriyle çelişir.",
+     "sik_aciklamalari": {
+      "A": "Genel anestezikler glomerüler filtrasyon hızını, idrar akışını ve böbrek kan akımını azaltır. Bu nedenle renal fonksiyonun arttığını söyleyen ifade derse aykırıdır (s. 24).",
+      "B": "Doğru. Halojenli ajanların uterus kasında yaptığı güçlü gevşeme manuel müdahaleyi kolaylaştırır; aynı etki kontraksiyonla sağlanan hemostazı bozduğu için kanamayı artırır (s. 24).",
+      "C": "Tüm uçucu anestezikler değişik derecelerde bronkodilatördür ve wheezing ya da astımı olan hastada yararlıdır. Desfluran ve halotanın irritasyonu öksürük yapabilir ama bronkodilatasyon esastır (s. 23).",
+      "D": "Yön ters verilmiştir: derste halotanın 12 yaşından küçüklerde hepatotoksik olmadığı belirtilir. Fulminan hepatit riski maruz kalan bireylerde yaklaşık 1/30.000'dir (s. 24, 26).",
+      "E": "İnhalasyon anestezikleri beyin metabolik aktivitesini azaltır. Beyin kan akımındaki artış ise kafa içi basıncını yükselteceği için istenmeyen bir etkidir (s. 20)."
+     },
+     "bilgi": [
+      45,
+      44,
+      46,
+      43
+     ],
+     "benzer_cikmis": [
+      "past-1790877044523-915244"
+     ],
+     "kanit": {
+      "sayfa": 24,
+      "alinti": "Halojenli anestezikler uterusu kaslarını güçlü bir şekilde ve konsantrasyon bağımlı gevşetirler"
+     }
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "past-q-21_22-9",
+     "soru": "İnhaler anesteziklerden nitröz oksit (N2O) için aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Güçlü analjezik etki verir, halotan kullanım hacmini değiştirmez.",
+      "B": "Anestezi etkisi hemen başlar.",
+      "C": "Oksijenle %85-95 oranında kombine verilir.",
+      "D": "Sevofluran ile kombine edilecekse preanestezik olarak propofol verilmelidir.",
+      "E": "Yan etkisi difüzyon hipoksisidir, B12 metabolizmasını bozar."
+     },
+     "cevap": "E"
+    },
+    {
+     "id": "d3-k2-far-011",
+     "soru": "Azot protoksit (N2O) gaz anestezik maddesi ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Güçlü kas gevşetici etkisi vardır",
+      "B": "Minimal alveoler konsantrasyonu (MAC) çok düşüktür (%1'in altında)",
+      "C": "Güçlü analjezik etkisi vardır; difüzyon hipoksisi yapabilir ve kronik maruziyette B12 vitaminini inaktive eder",
+      "D": "Tek başına cerrahi derinlikte genel anestezi sağlamak için yeterlidir",
+      "E": "Hepatotoksisitesi en yüksek inhalasyon anestezik ajandır"
+     },
+     "cevap": "C"
+    },
+    {
+     "id": "past-1790877044523-915244",
+     "soru": "I. Genel anestezikler glomerüler filtrasyon hızını ve idrar akışını artırma eğilimindedir; böbrek kan akımında da artış yaparlar.\nII. Halotan dışındaki ajanların karaciğer üzerine ciddi bir etkisi yoktur; halotan 12 yaşından küçüklerde hepatotoksik değildir ve bunun nedeni bilinmemektedir.\nIII. Halojenli anesteziklerden propofol-ketamin ikilisi uterus kaslarını güçlü bir şekilde kasar.\nIV. Doğum esnasında veya plasenta retansiyonunda manuel müdahale için gerekli gevşemeyi sağlarlar; ancak bu gevşemenin uterusta kanamayı da beraberinde getireceği unutulmamalıdır.\nGenel anestezik ajanlar için aşağıdaki ifadelerden hangisi ya da hangileri doğrudur?",
+     "secenekler": {
+      "A": "I, II ve III",
+      "B": "I ve III",
+      "C": "II ve IV",
+      "D": "Yalnız IV",
+      "E": "I, II, III ve IV"
+     },
+     "cevap": "C"
+    }
+   ]
+  }
+ ],
+ "soru_sayisi": 20
+}

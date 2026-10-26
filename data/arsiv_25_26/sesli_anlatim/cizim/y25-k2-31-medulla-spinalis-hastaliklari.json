@@ -1,0 +1,2271 @@
+{
+ "surum": 1,
+ "metinHash": "7415e3743dbcdb4f31cc27371d81f9ab86253c1f",
+ "p": {
+  "0": {
+   "1": [
+    {
+     "tur": "akis",
+     "a": [
+      0.586,
+      0.62
+     ],
+     "b": [
+      0.714,
+      0.62
+     ],
+     "iliski": "aktive",
+     "etiket": "Konus medüllaris (L1-L2 sonlanma düzeyi)",
+     "odak": [
+      0.65,
+      0.55,
+      0.85,
+      0.72
+     ],
+     "s": 2,
+     "k": [
+      102,
+      118
+     ],
+     "yol": [
+      [
+       0.586,
+       0.62
+      ],
+      [
+       0.714,
+       0.62
+      ]
+     ],
+     "rota": "kavis",
+     "etiket_konum": [
+      0.58,
+      0.462
+     ],
+     "etiket_genislik": 0.42,
+     "yakin": [
+      0.52,
+      0.402,
+      1,
+      0.78
+     ]
+    }
+   ]
+  },
+  "1": {
+   "0": [
+    {
+     "tur": "akis",
+     "a": [
+      0.326,
+      0.62
+     ],
+     "b": [
+      0.444,
+      0.62
+     ],
+     "iliski": "aktive",
+     "etiket": "Kauda ekuina sinir kökleri",
+     "odak": [
+      0.4,
+      0.5,
+      0.65,
+      0.75
+     ],
+     "s": 3,
+     "k": [
+      115,
+      127
+     ],
+     "yol": [
+      [
+       0.326,
+       0.62
+      ],
+      [
+       0.444,
+       0.62
+      ]
+     ],
+     "rota": "kavis",
+     "etiket_konum": [
+      0.4,
+      0.762
+     ],
+     "etiket_genislik": 0.366,
+     "yakin": [
+      0.266,
+      0.44,
+      0.826,
+      0.862
+     ]
+    }
+   ]
+  },
+  "2": {
+   "0": [
+    {
+     "tur": "akis",
+     "a": [
+      0.28600000000000003,
+      0.5
+     ],
+     "b": [
+      0.414,
+      0.5
+     ],
+     "iliski": "aktive",
+     "etiket": "Gri ve beyaz cevher organizasyonu",
+     "odak": [
+      0.35,
+      0.4,
+      0.65,
+      0.65
+     ],
+     "s": 4,
+     "k": [
+      0,
+      34
+     ],
+     "yol": [
+      [
+       0.286,
+       0.5
+      ],
+      [
+       0.294,
+       0.5022
+      ],
+      [
+       0.302,
+       0.5042
+      ],
+      [
+       0.31,
+       0.5059
+      ],
+      [
+       0.318,
+       0.5072
+      ],
+      [
+       0.326,
+       0.5082
+      ],
+      [
+       0.334,
+       0.509
+      ],
+      [
+       0.342,
+       0.5094
+      ],
+      [
+       0.35,
+       0.5096
+      ],
+      [
+       0.358,
+       0.5094
+      ],
+      [
+       0.366,
+       0.509
+      ],
+      [
+       0.374,
+       0.5082
+      ],
+      [
+       0.382,
+       0.5072
+      ],
+      [
+       0.39,
+       0.5059
+      ],
+      [
+       0.398,
+       0.5042
+      ],
+      [
+       0.406,
+       0.5022
+      ],
+      [
+       0.414,
+       0.5
+      ]
+     ],
+     "rota": "kavis",
+     "etiket_konum": [
+      0.55,
+      0.36
+     ],
+     "etiket_genislik": 0.42,
+     "yakin": [
+      0.226,
+      0.3,
+      1,
+      0.71
+     ]
+    }
+   ]
+  },
+  "3": {
+   "0": [
+    {
+     "tur": "akis",
+     "a": [
+      0.226,
+      0.75
+     ],
+     "b": [
+      0.374,
+      0.75
+     ],
+     "iliski": "aktive",
+     "etiket": "Ön motor kök ve spinal sinir",
+     "odak": [
+      0.3,
+      0.65,
+      0.55,
+      0.85
+     ],
+     "s": 5,
+     "k": [
+      27,
+      39
+     ],
+     "yol": [
+      [
+       0.226,
+       0.75
+      ],
+      [
+       0.2353,
+       0.7526
+      ],
+      [
+       0.2445,
+       0.7549
+      ],
+      [
+       0.2538,
+       0.7568
+      ],
+      [
+       0.263,
+       0.7583
+      ],
+      [
+       0.2722,
+       0.7595
+      ],
+      [
+       0.2815,
+       0.7604
+      ],
+      [
+       0.2907,
+       0.7609
+      ],
+      [
+       0.3,
+       0.7611
+      ],
+      [
+       0.3092,
+       0.7609
+      ],
+      [
+       0.3185,
+       0.7604
+      ],
+      [
+       0.3277,
+       0.7595
+      ],
+      [
+       0.337,
+       0.7583
+      ],
+      [
+       0.3463,
+       0.7568
+      ],
+      [
+       0.3555,
+       0.7549
+      ],
+      [
+       0.3648,
+       0.7526
+      ],
+      [
+       0.374,
+       0.75
+      ]
+     ],
+     "rota": "kavis",
+     "etiket_konum": [
+      0.59,
+      0.74
+     ],
+     "etiket_genislik": 0.391,
+     "etiket_hedef": [
+      0.55,
+      0.7635
+     ],
+     "etiket_boy": 0.0471,
+     "yakin": [
+      0.166,
+      0.59,
+      1,
+      0.91
+     ]
+    }
+   ],
+   "1": [
+    {
+     "tur": "akis",
+     "a": [
+      0.52,
+      0.45
+     ],
+     "b": [
+      0.65,
+      0.45
+     ],
+     "iliski": "aktive",
+     "etiket": "Spinal ganglion (psödounipolar duyu nöronları)",
+     "odak": [
+      0.5,
+      0.43,
+      0.67,
+      0.47
+     ],
+     "s": 5,
+     "k": [
+      29,
+      44
+     ],
+     "etiket_konum": [
+      0.02,
+      0.6
+     ],
+     "etiket_genislik": 0.42,
+     "etiket_hedef": [
+      0.5,
+      0.47
+     ],
+     "etiket_boy": 0.082,
+     "yakin": [
+      0,
+      0.37,
+      0.73,
+      0.742
+     ]
+    }
+   ]
+  },
+  "4": {
+   "0": [
+    {
+     "tur": "akis",
+     "a": [
+      0.326,
+      0.25
+     ],
+     "b": [
+      0.474,
+      0.25
+     ],
+     "iliski": "aktive",
+     "etiket": "Fasikülüs grasilis ve kuneatus (arka kordon)",
+     "odak": [
+      0.42,
+      0.18,
+      0.65,
+      0.35
+     ],
+     "s": 6,
+     "k": [
+      23,
+      78
+     ],
+     "yol": [
+      [
+       0.326,
+       0.25
+      ],
+      [
+       0.3353,
+       0.2552
+      ],
+      [
+       0.3445,
+       0.2597
+      ],
+      [
+       0.3538,
+       0.2635
+      ],
+      [
+       0.363,
+       0.2666
+      ],
+      [
+       0.3722,
+       0.2691
+      ],
+      [
+       0.3815,
+       0.2708
+      ],
+      [
+       0.3908,
+       0.2719
+      ],
+      [
+       0.4,
+       0.2722
+      ],
+      [
+       0.4093,
+       0.2719
+      ],
+      [
+       0.4185,
+       0.2708
+      ],
+      [
+       0.4277,
+       0.2691
+      ],
+      [
+       0.437,
+       0.2666
+      ],
+      [
+       0.4462,
+       0.2635
+      ],
+      [
+       0.4555,
+       0.2597
+      ],
+      [
+       0.4647,
+       0.2552
+      ],
+      [
+       0.474,
+       0.25
+      ]
+     ],
+     "rota": "kavis",
+     "etiket_konum": [
+      0.42,
+      0.086
+     ],
+     "etiket_genislik": 0.42,
+     "yakin": [
+      0.266,
+      0.026,
+      0.9,
+      0.41
+     ]
+    }
+   ],
+   "1": [
+    {
+     "tur": "akis",
+     "a": [
+      0.55,
+      0.5
+     ],
+     "b": [
+      0.68,
+      0.5
+     ],
+     "iliski": "aktive",
+     "etiket": "Lateral kortikospinal traktus (motor yol)",
+     "odak": [
+      0.53,
+      0.48,
+      0.7,
+      0.52
+     ],
+     "s": 6,
+     "k": [
+      29,
+      58
+     ],
+     "etiket_konum": [
+      0.098,
+      0.48
+     ],
+     "etiket_genislik": 0.42,
+     "yakin": [
+      0.038,
+      0.42,
+      0.76,
+      0.58
+     ]
+    }
+   ]
+  },
+  "6": {
+   "1": [
+    {
+     "tur": "akis",
+     "a": [
+      0.356,
+      0.55
+     ],
+     "b": [
+      0.474,
+      0.55
+     ],
+     "iliski": "aktive",
+     "etiket": "Torakal yan boynuz (sempatik nöronlar)",
+     "odak": [
+      0.45,
+      0.45,
+      0.65,
+      0.65
+     ],
+     "s": 8,
+     "k": [
+      119,
+      129
+     ],
+     "yol": [
+      [
+       0.356,
+       0.55
+      ],
+      [
+       0.3634,
+       0.5459
+      ],
+      [
+       0.3707,
+       0.5423
+      ],
+      [
+       0.3781,
+       0.5392
+      ],
+      [
+       0.3855,
+       0.5367
+      ],
+      [
+       0.3929,
+       0.5348
+      ],
+      [
+       0.4002,
+       0.5334
+      ],
+      [
+       0.4076,
+       0.5326
+      ],
+      [
+       0.415,
+       0.5323
+      ],
+      [
+       0.4224,
+       0.5326
+      ],
+      [
+       0.4297,
+       0.5334
+      ],
+      [
+       0.4371,
+       0.5348
+      ],
+      [
+       0.4445,
+       0.5367
+      ],
+      [
+       0.4519,
+       0.5392
+      ],
+      [
+       0.4592,
+       0.5423
+      ],
+      [
+       0.4666,
+       0.5459
+      ],
+      [
+       0.474,
+       0.55
+      ]
+     ],
+     "rota": "kavis",
+     "etiket_konum": [
+      0.55,
+      0.41
+     ],
+     "etiket_genislik": 0.42,
+     "yakin": [
+      0.296,
+      0.35,
+      1,
+      0.71
+     ]
+    }
+   ]
+  },
+  "7": {
+   "0": [
+    {
+     "tur": "akis",
+     "a": [
+      0.256,
+      0.6
+     ],
+     "b": [
+      0.414,
+      0.6
+     ],
+     "iliski": "aktive",
+     "etiket": "Somatotopik laminasyon (dışta sakral, içte servikal)",
+     "odak": [
+      0.35,
+      0.45,
+      0.65,
+      0.75
+     ],
+     "s": 9,
+     "k": [
+      128,
+      151
+     ],
+     "yol": [
+      [
+       0.256,
+       0.6
+      ],
+      [
+       0.2659,
+       0.6056
+      ],
+      [
+       0.2758,
+       0.6104
+      ],
+      [
+       0.2856,
+       0.6144
+      ],
+      [
+       0.2955,
+       0.6178
+      ],
+      [
+       0.3054,
+       0.6204
+      ],
+      [
+       0.3152,
+       0.6222
+      ],
+      [
+       0.3251,
+       0.6233
+      ],
+      [
+       0.335,
+       0.6237
+      ],
+      [
+       0.3449,
+       0.6233
+      ],
+      [
+       0.3548,
+       0.6222
+      ],
+      [
+       0.3646,
+       0.6204
+      ],
+      [
+       0.3745,
+       0.6178
+      ],
+      [
+       0.3844,
+       0.6144
+      ],
+      [
+       0.3942,
+       0.6104
+      ],
+      [
+       0.4041,
+       0.6056
+      ],
+      [
+       0.414,
+       0.6
+      ]
+     ],
+     "rota": "kavis",
+     "etiket_konum": [
+      0.55,
+      0.41
+     ],
+     "etiket_genislik": 0.42,
+     "yakin": [
+      0.196,
+      0.35,
+      1,
+      0.81
+     ]
+    }
+   ],
+   "1": [
+    {
+     "tur": "akis",
+     "a": [
+      0.186,
+      0.45
+     ],
+     "b": [
+      0.314,
+      0.45
+     ],
+     "iliski": "aktive",
+     "etiket": "Ekstramedüller lezyon: erken sakral lif basısı",
+     "odak": [
+      0.25,
+      0.35,
+      0.55,
+      0.65
+     ],
+     "s": 9,
+     "k": [
+      49,
+      73
+     ],
+     "yol": [
+      [
+       0.186,
+       0.45
+      ],
+      [
+       0.194,
+       0.4478
+      ],
+      [
+       0.202,
+       0.4458
+      ],
+      [
+       0.21,
+       0.4441
+      ],
+      [
+       0.218,
+       0.4428
+      ],
+      [
+       0.226,
+       0.4418
+      ],
+      [
+       0.234,
+       0.441
+      ],
+      [
+       0.242,
+       0.4405
+      ],
+      [
+       0.25,
+       0.4404
+      ],
+      [
+       0.258,
+       0.4405
+      ],
+      [
+       0.266,
+       0.441
+      ],
+      [
+       0.274,
+       0.4418
+      ],
+      [
+       0.282,
+       0.4428
+      ],
+      [
+       0.29,
+       0.4441
+      ],
+      [
+       0.298,
+       0.4458
+      ],
+      [
+       0.306,
+       0.4477
+      ],
+      [
+       0.314,
+       0.45
+      ]
+     ],
+     "rota": "kavis",
+     "etiket_konum": [
+      0.55,
+      0.23
+     ],
+     "etiket_genislik": 0.42,
+     "etiket_hedef": [
+      0.55,
+      0.35
+     ],
+     "etiket_boy": 0.082
+    }
+   ]
+  },
+  "8": {
+   "0": [
+    {
+     "tur": "akis",
+     "a": [
+      0.226,
+      0.55
+     ],
+     "b": [
+      0.374,
+      0.55
+     ],
+     "iliski": "aktive",
+     "etiket": "Brown-Séquard: tek taraflı kord hemiseksiyonu",
+     "odak": [
+      0.3,
+      0.4,
+      0.7,
+      0.7
+     ],
+     "s": 10,
+     "k": [
+      54,
+      89
+     ],
+     "yol": [
+      [
+       0.226,
+       0.55
+      ],
+      [
+       0.2353,
+       0.5448
+      ],
+      [
+       0.2445,
+       0.5403
+      ],
+      [
+       0.2538,
+       0.5365
+      ],
+      [
+       0.263,
+       0.5334
+      ],
+      [
+       0.2722,
+       0.5309
+      ],
+      [
+       0.2815,
+       0.5292
+      ],
+      [
+       0.2907,
+       0.5281
+      ],
+      [
+       0.3,
+       0.5278
+      ],
+      [
+       0.3092,
+       0.5281
+      ],
+      [
+       0.3185,
+       0.5292
+      ],
+      [
+       0.3277,
+       0.5309
+      ],
+      [
+       0.337,
+       0.5333
+      ],
+      [
+       0.3463,
+       0.5365
+      ],
+      [
+       0.3555,
+       0.5403
+      ],
+      [
+       0.3648,
+       0.5448
+      ],
+      [
+       0.374,
+       0.55
+      ]
+     ],
+     "rota": "kavis",
+     "etiket_konum": [
+      0.0,
+      0.22
+     ],
+     "etiket_genislik": 0.42,
+     "etiket_hedef": [
+      0.3,
+      0.4
+     ],
+     "etiket_boy": 0.082
+    }
+   ],
+   "1": [
+    {
+     "tur": "akis",
+     "a": [
+      0.386,
+      0.6
+     ],
+     "b": [
+      0.514,
+      0.6
+     ],
+     "iliski": "aktive",
+     "etiket": "Aynı taraf motor/derin duyu, karşı taraf ağrı-ısı kaybı",
+     "odak": [
+      0.45,
+      0.45,
+      0.75,
+      0.75
+     ],
+     "s": 10,
+     "k": [
+      41,
+      72
+     ],
+     "yol": [
+      [
+       0.386,
+       0.6
+      ],
+      [
+       0.394,
+       0.6045
+      ],
+      [
+       0.402,
+       0.6084
+      ],
+      [
+       0.41,
+       0.6117
+      ],
+      [
+       0.418,
+       0.6144
+      ],
+      [
+       0.426,
+       0.6165
+      ],
+      [
+       0.434,
+       0.618
+      ],
+      [
+       0.442,
+       0.6189
+      ],
+      [
+       0.45,
+       0.6192
+      ],
+      [
+       0.458,
+       0.6189
+      ],
+      [
+       0.466,
+       0.618
+      ],
+      [
+       0.474,
+       0.6165
+      ],
+      [
+       0.482,
+       0.6144
+      ],
+      [
+       0.49,
+       0.6117
+      ],
+      [
+       0.498,
+       0.6084
+      ],
+      [
+       0.506,
+       0.6045
+      ],
+      [
+       0.514,
+       0.6
+      ]
+     ],
+     "rota": "kavis",
+     "etiket_konum": [
+      0.55,
+      0.45
+     ],
+     "etiket_genislik": 0.42
+    }
+   ]
+  },
+  "10": {
+   "0": [
+    {
+     "tur": "akis",
+     "a": [
+      0.28,
+      0.48
+     ],
+     "b": [
+      0.42,
+      0.48
+     ],
+     "iliski": "aktive",
+     "etiket": "Piramis çaprazı (%85 motor lif)",
+     "odak": [
+      0.26,
+      0.46,
+      0.44,
+      0.5
+     ],
+     "s": 12,
+     "k": [
+      77,
+      95
+     ],
+     "etiket_konum": [
+      0.48,
+      0.49
+     ],
+     "etiket_genislik": 0.42,
+     "etiket_hedef": [
+      0.44,
+      0.5
+     ],
+     "etiket_boy": 0.0471,
+     "yakin": [
+      0.2,
+      0.4,
+      0.96,
+      0.5971
+     ]
+    }
+   ],
+   "1": [
+    {
+     "tur": "akis",
+     "a": [
+      0.326,
+      0.68
+     ],
+     "b": [
+      0.454,
+      0.68
+     ],
+     "iliski": "aktive",
+     "etiket": "Lateral kortikospinal yol (çaprazlaşan inen yol)",
+     "odak": [
+      0.4,
+      0.55,
+      0.7,
+      0.85
+     ],
+     "s": 12,
+     "k": [
+      22,
+      50
+     ],
+     "yol": [
+      [
+       0.326,
+       0.68
+      ],
+      [
+       0.334,
+       0.6823
+      ],
+      [
+       0.342,
+       0.6842
+      ],
+      [
+       0.35,
+       0.6859
+      ],
+      [
+       0.358,
+       0.6872
+      ],
+      [
+       0.366,
+       0.6883
+      ],
+      [
+       0.374,
+       0.689
+      ],
+      [
+       0.382,
+       0.6895
+      ],
+      [
+       0.39,
+       0.6896
+      ],
+      [
+       0.398,
+       0.6895
+      ],
+      [
+       0.406,
+       0.689
+      ],
+      [
+       0.414,
+       0.6883
+      ],
+      [
+       0.422,
+       0.6872
+      ],
+      [
+       0.43,
+       0.6859
+      ],
+      [
+       0.438,
+       0.6842
+      ],
+      [
+       0.446,
+       0.6823
+      ],
+      [
+       0.454,
+       0.68
+      ]
+     ],
+     "rota": "kavis",
+     "etiket_konum": [
+      0.5,
+      0.55
+     ],
+     "etiket_genislik": 0.42,
+     "yakin": [
+      0.266,
+      0.49,
+      0.98,
+      0.91
+     ]
+    }
+   ]
+  },
+  "11": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "karsilastirma",
+     "sablon_ad": "İki durumun karşılaştırması",
+     "duzen": "karsit",
+     "basliklar": [
+      "Özellik"
+     ],
+     "satirlar": [
+      [
+       "Tutulan alan",
+       "Yalnız gri cevher",
+       "Yalnız beyaz cevher"
+      ]
+     ],
+     "kutuplar": [
+      "Poliomiyelit",
+      "Lökomiyelit"
+     ],
+     "s": 13,
+     "k": [
+      0,
+      54
+     ],
+     "tip": "karsit",
+     "konum": [
+      0.01,
+      0.04
+     ],
+     "genislik": 0.42,
+     "doluluk": 0.0,
+     "kutu_h": 0.25,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ]
+  },
+  "12": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Miyelitler",
+      "Toksik ve nutrisyonel nedenler",
+      "Nekrotizan omurilik lezyonları"
+     ],
+     "baslik": "Miyelopati nedenleri",
+     "s": 14,
+     "k": [
+      0,
+      45
+     ],
+     "tip": "liste",
+     "konum": [
+      0.03,
+      0.72
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.327,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.0671,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "13": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "mekanizma_adimlari",
+     "sablon_ad": "Mekanizma basamakları",
+     "duzen": "zincir",
+     "ogeler": [
+      "Akut transvers lezyon ve spinal şok",
+      "Flask paralizi ve arefleksi",
+      "Haftalar sonra spastisite ve hiperrefleksi"
+     ],
+     "numarali": true,
+     "s": 15,
+     "k": [
+      0,
+      27
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.03,
+      0.92
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.371,
+     "yon": "dikey",
+     "olcek": 1.0,
+     "ek_alt": 0.3112,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "16": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Akut dissemine ensefalomiyelit",
+      "Multipl skleroz demiyelinizasyonu",
+      "Aşılama veya enfeksiyon sonrası otoimmün yanıt"
+     ],
+     "baslik": "Postenfeksiyöz miyelit",
+     "s": 18,
+     "k": [
+      0,
+      41
+     ],
+     "tip": "liste",
+     "konum": [
+      0.18,
+      0.6
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.37,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ]
+  },
+  "18": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "neden_sonuc",
+     "sablon_ad": "Neden → sonuç",
+     "duzen": "zincir",
+     "bag": "yol açar",
+     "ogeler": [
+      "Poliovirüs enfeksiyonu",
+      "Ön boynuz motor nöron harabiyeti"
+     ],
+     "s": 20,
+     "k": [
+      0,
+      45
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.35,
+      0.55
+     ],
+     "genislik": 0.34,
+     "doluluk": 0.0,
+     "kutu_h": 0.343,
+     "yon": "dikey",
+     "olcek": 1.0
+    }
+   ]
+  },
+  "19": {
+   "0": [
+    {
+     "tur": "akis",
+     "a": [
+      0.28600000000000003,
+      0.58
+     ],
+     "b": [
+      0.414,
+      0.58
+     ],
+     "iliski": "aktive",
+     "etiket": "Ön boynuz motor nöron harabiyeti (flask paralizi)",
+     "odak": [
+      0.35,
+      0.45,
+      0.7,
+      0.75
+     ],
+     "s": 22,
+     "k": [
+      60,
+      89
+     ],
+     "yol": [
+      [
+       0.286,
+       0.58
+      ],
+      [
+       0.294,
+       0.5845
+      ],
+      [
+       0.302,
+       0.5884
+      ],
+      [
+       0.31,
+       0.5917
+      ],
+      [
+       0.318,
+       0.5944
+      ],
+      [
+       0.326,
+       0.5965
+      ],
+      [
+       0.334,
+       0.598
+      ],
+      [
+       0.342,
+       0.5989
+      ],
+      [
+       0.35,
+       0.5992
+      ],
+      [
+       0.358,
+       0.5989
+      ],
+      [
+       0.366,
+       0.598
+      ],
+      [
+       0.374,
+       0.5965
+      ],
+      [
+       0.382,
+       0.5944
+      ],
+      [
+       0.39,
+       0.5917
+      ],
+      [
+       0.398,
+       0.5884
+      ],
+      [
+       0.406,
+       0.5845
+      ],
+      [
+       0.414,
+       0.58
+      ]
+     ],
+     "rota": "kavis",
+     "etiket_konum": [
+      0.5,
+      0.45
+     ],
+     "etiket_genislik": 0.42
+    }
+   ]
+  },
+  "24": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "lezyon_bulgu",
+     "sablon_ad": "Lezyon yeri → bulgu",
+     "duzen": "tablo",
+     "basliklar": [
+      "Lezyon düzeyi",
+      "Bulgu"
+     ],
+     "satirlar": [
+      [
+       "Argyll Robertson pupillası",
+       "Işığa yanıtsız fakat akomodasyon korunur"
+      ]
+     ],
+     "s": 26,
+     "k": [
+      0,
+      49
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.69,
+      0.42
+     ],
+     "genislik": 0.3,
+     "doluluk": 0.0,
+     "kutu_h": 0.335,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ]
+  },
+  "27": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "karsilastirma",
+     "sablon_ad": "İki durumun karşılaştırması",
+     "duzen": "karsit",
+     "basliklar": [
+      "Özellik"
+     ],
+     "satirlar": [
+      [
+       "Tutulan segment sayısı",
+       "Bir iki segment",
+       "Üç veya fazla segment"
+      ],
+      [
+       "Klinik tablo",
+       "Hafif lezyon",
+       "Ağır parapleji"
+      ]
+     ],
+     "kutuplar": [
+      "Multipl skleroz",
+      "Nöromiyelit optika"
+     ],
+     "s": 29,
+     "k": [
+      0,
+      43
+     ],
+     "tip": "karsit",
+     "konum": [
+      0.05,
+      0.91
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.268,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.1982,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "28": {
+   "1": [
+    {
+     "tur": "akis",
+     "a": [
+      0.55,
+      0.68
+     ],
+     "b": [
+      0.68,
+      0.68
+     ],
+     "iliski": "aktive",
+     "etiket": "Anterior spinal arter sulama alanı (ön 2/3 kord)",
+     "odak": [
+      0.53,
+      0.66,
+      0.7,
+      0.7
+     ],
+     "s": 31,
+     "k": [
+      9,
+      30
+     ],
+     "etiket_konum": [
+      0.0,
+      0.86
+     ],
+     "etiket_genislik": 0.42,
+     "etiket_hedef": [
+      0.53,
+      0.7
+     ],
+     "etiket_boy": 0.082
+    }
+   ]
+  },
+  "30": {
+   "1": [
+    {
+     "tur": "akis",
+     "a": [
+      0.28,
+      0.12
+     ],
+     "b": [
+      0.42,
+      0.12
+     ],
+     "iliski": "aktive",
+     "etiket": "Hematomiyeli: omurilik parankim içi kanaması",
+     "odak": [
+      0.26,
+      0.1,
+      0.44,
+      0.14
+     ],
+     "s": 32,
+     "k": [
+      61,
+      77
+     ],
+     "etiket_konum": [
+      0.26,
+      0.006
+     ],
+     "etiket_genislik": 0.42
+    }
+   ]
+  },
+  "31": {
+   "0": [
+    {
+     "tur": "akis",
+     "a": [
+      0.55,
+      0.56
+     ],
+     "b": [
+      0.68,
+      0.56
+     ],
+     "iliski": "aktive",
+     "etiket": "Dural arteriyovenöz fistül ve venöz konjesyon",
+     "odak": [
+      0.53,
+      0.54,
+      0.7,
+      0.58
+     ],
+     "s": 34,
+     "k": [
+      43,
+      67
+     ],
+     "etiket_konum": [
+      0.5,
+      0.57
+     ],
+     "etiket_genislik": 0.42
+    }
+   ]
+  },
+  "33": {
+   "0": [
+    {
+     "tur": "akis",
+     "a": [
+      0.55,
+      0.6
+     ],
+     "b": [
+      0.68,
+      0.6
+     ],
+     "iliski": "aktive",
+     "etiket": "B12 eksikliği: arka ve lateral kordon vakuoler hasarı",
+     "odak": [
+      0.53,
+      0.58,
+      0.7,
+      0.62
+     ],
+     "s": 35,
+     "k": [
+      88,
+      107
+     ],
+     "etiket_konum": [
+      0.098,
+      0.58
+     ],
+     "etiket_genislik": 0.42
+    }
+   ]
+  },
+  "34": {
+   "0": [
+    {
+     "tur": "akis",
+     "a": [
+      0.306,
+      0.52
+     ],
+     "b": [
+      0.414,
+      0.52
+     ],
+     "iliski": "aktive",
+     "etiket": "T2 MRI: Arka kordonlarda simetrik ters V işareti",
+     "odak": [
+      0.38,
+      0.4,
+      0.6,
+      0.65
+     ],
+     "s": 36,
+     "k": [
+      110,
+      124
+     ],
+     "yol": [
+      [
+       0.306,
+       0.52
+      ],
+      [
+       0.414,
+       0.52
+      ]
+     ],
+     "rota": "kavis",
+     "etiket_konum": [
+      0.58,
+      0.36
+     ],
+     "etiket_genislik": 0.42
+    }
+   ]
+  },
+  "35": {
+   "0": [
+    {
+     "tur": "akis",
+     "a": [
+      0.47131940072281275,
+      0.2652797699680144
+     ],
+     "b": [
+      0.47131940072281275,
+      0.32935058326929645
+     ],
+     "iliski": "aktive",
+     "etiket": "İntramedüller kompartman",
+     "odak": [
+      0.2,
+      0.2,
+      0.55,
+      0.5
+     ],
+     "s": 37,
+     "k": [
+      40,
+      71
+     ],
+     "yol": [
+      [
+       0.4713,
+       0.2653
+      ],
+      [
+       0.4713,
+       0.3294
+      ]
+     ],
+     "rota": "duz",
+     "kaynak_kutu": [
+      0.1509,
+      0.2673,
+      0.7917,
+      0.3274
+     ],
+     "hedef_kutu": [
+      0.1509,
+      0.2673,
+      0.7917,
+      0.3274
+     ],
+     "etiket_konum": [
+      0.55,
+      0.2
+     ],
+     "etiket_genislik": 0.34,
+     "yakin": [
+      0.0909,
+      0.14,
+      0.95,
+      0.56
+     ]
+    }
+   ],
+   "1": [
+    {
+     "tur": "akis",
+     "a": [
+      0.47131940072281275,
+      0.2652797699680144
+     ],
+     "b": [
+      0.47131940072281275,
+      0.32935058326929645
+     ],
+     "iliski": "aktive",
+     "etiket": "Ekstramedüller (intradural/ekstradural)",
+     "odak": [
+      0.5,
+      0.2,
+      0.85,
+      0.5
+     ],
+     "s": 37,
+     "k": [
+      61,
+      95
+     ],
+     "yol": [
+      [
+       0.4713,
+       0.2653
+      ],
+      [
+       0.4713,
+       0.3294
+      ]
+     ],
+     "rota": "duz",
+     "kaynak_kutu": [
+      0.1509,
+      0.2673,
+      0.7917,
+      0.3274
+     ],
+     "hedef_kutu": [
+      0.1509,
+      0.2673,
+      0.7917,
+      0.3274
+     ],
+     "etiket_konum": [
+      0.5,
+      0.512
+     ],
+     "etiket_genislik": 0.42
+    }
+   ]
+  },
+  "36": {
+   "0": [
+    {
+     "tur": "akis",
+     "a": [
+      0.12,
+      0.674
+     ],
+     "b": [
+      0.2344274265360641,
+      0.6628016968543111
+     ],
+     "iliski": "aktive",
+     "etiket": "Ependimom ve astrositom (parankimal glial)",
+     "odak": [
+      0.2,
+      0.55,
+      0.55,
+      0.85
+     ],
+     "s": 37,
+     "k": [
+      85,
+      108
+     ],
+     "yol": [
+      [
+       0.12,
+       0.674
+      ],
+      [
+       0.12,
+       0.6628
+      ],
+      [
+       0.2344,
+       0.6628
+      ]
+     ],
+     "rota": "dirsek",
+     "hedef_kutu": [
+      0.2364,
+      0.6363,
+      0.3988,
+      0.6893
+     ],
+     "etiket_konum": [
+      0.55,
+      0.64
+     ],
+     "etiket_genislik": 0.42,
+     "yakin": [
+      0.06,
+      0.49,
+      1,
+      0.91
+     ]
+    }
+   ],
+   "1": [
+    {
+     "tur": "akis",
+     "a": [
+      0.4007645568394739,
+      0.6628016968543111
+     ],
+     "b": [
+      0.56,
+      0.674
+     ],
+     "iliski": "aktive",
+     "etiket": "Schwannom ve meninjiom (sinir kılıfı/araknoid)",
+     "odak": [
+      0.5,
+      0.55,
+      0.85,
+      0.85
+     ],
+     "s": 37,
+     "k": [
+      66,
+      111
+     ],
+     "yol": [
+      [
+       0.4008,
+       0.6628
+      ],
+      [
+       0.56,
+       0.6628
+      ],
+      [
+       0.56,
+       0.674
+      ]
+     ],
+     "rota": "dirsek",
+     "kaynak_kutu": [
+      0.2364,
+      0.6363,
+      0.3988,
+      0.6893
+     ],
+     "etiket_konum": [
+      0.5,
+      0.862
+     ],
+     "etiket_genislik": 0.42,
+     "yakin": [
+      0.3408,
+      0.49,
+      0.98,
+      0.962
+     ]
+    }
+   ]
+  },
+  "38": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "mekanizma_adimlari",
+     "sablon_ad": "Mekanizma basamakları",
+     "duzen": "zincir",
+     "ogeler": [
+      "Santral kanal çevresinde kavite oluşumu",
+      "Ön beyaz komissürde çaprazlaşan lif hasarı",
+      "Kollarda pelerin tarzı disosiye duyu kaybı"
+     ],
+     "numarali": true,
+     "s": 40,
+     "k": [
+      0,
+      38
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.03,
+      0.92
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.371,
+     "yon": "dikey",
+     "olcek": 1.0,
+     "ek_alt": 0.3112,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "39": {
+   "0": [
+    {
+     "tur": "akis",
+     "a": [
+      0.6417661740084224,
+      0.2010003980241337
+     ],
+     "b": [
+      0.76,
+      0.244
+     ],
+     "iliski": "aktive",
+     "etiket": "Konus medüllaris: erken sfinkter ve eyer tarzı duyu kusuru",
+     "odak": [
+      0.73,
+      0.12,
+      0.89,
+      0.4
+     ],
+     "s": 41,
+     "k": [
+      113,
+      135
+     ],
+     "yol": [
+      [
+       0.6418,
+       0.201
+      ],
+      [
+       0.76,
+       0.201
+      ],
+      [
+       0.76,
+       0.244
+      ]
+     ],
+     "rota": "dirsek",
+     "kaynak_kutu": [
+      0.1056,
+      0.1801,
+      0.6398,
+      0.2219
+     ],
+     "etiket_konum": [
+      0.4,
+      0.04
+     ],
+     "etiket_genislik": 0.42
+    }
+   ]
+  },
+  "40": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "karsilastirma",
+     "sablon_ad": "İki durumun karşılaştırması",
+     "duzen": "karsit",
+     "basliklar": [
+      "Özellik"
+     ],
+     "satirlar": [
+      [
+       "Sfinkter kusuru",
+       "Erken ve ağır",
+       "Geç dönem"
+      ],
+      [
+       "Duyu kusuru",
+       "Simetrik eyer tarzı",
+       "Asimetrik radiküler"
+      ]
+     ],
+     "kutuplar": [
+      "Konus medüllaris",
+      "Kauda ekuina"
+     ],
+     "s": 42,
+     "k": [
+      0,
+      37
+     ],
+     "tip": "karsit",
+     "konum": [
+      0.15,
+      0.46
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.353,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ]
+  },
+  "41": {
+   "0": [
+    {
+     "tur": "akis",
+     "a": [
+      0.12812558335768218,
+      0.1759880045778163
+     ],
+     "b": [
+      0.12812558335768218,
+      0.221780135511901
+     ],
+     "iliski": "aktive",
+     "etiket": "Konus medüllaris (ani/bilateral) vs Kauda ekuina (asimetrik)",
+     "odak": [
+      0.1,
+      0.1,
+      0.9,
+      0.35
+     ],
+     "s": 43,
+     "k": [
+      26,
+      59
+     ],
+     "yol": [
+      [
+       0.1281,
+       0.176
+      ],
+      [
+       0.1281,
+       0.2218
+      ]
+     ],
+     "rota": "duz",
+     "kaynak_kutu": [
+      0.0764,
+      0.178,
+      0.1799,
+      0.2198
+     ],
+     "hedef_kutu": [
+      0.0764,
+      0.178,
+      0.1799,
+      0.2198
+     ],
+     "etiket_konum": [
+      0.1,
+      0.012
+     ],
+     "etiket_genislik": 0.42
+    }
+   ],
+   "1": [
+    {
+     "tur": "akis",
+     "a": [
+      0.13548316400742524,
+      0.27446636914144595
+     ],
+     "b": [
+      0.13548316400742524,
+      0.3202585000755307
+     ],
+     "iliski": "aktive",
+     "etiket": "Refleks ayrımı: Konusta patella korunur, kaudada her ikisi kayıp",
+     "odak": [
+      0.1,
+      0.25,
+      0.9,
+      0.45
+     ],
+     "s": 43,
+     "k": [
+      0,
+      61
+     ],
+     "yol": [
+      [
+       0.1355,
+       0.2745
+      ],
+      [
+       0.1355,
+       0.3203
+      ]
+     ],
+     "rota": "duz",
+     "kaynak_kutu": [
+      0.0764,
+      0.2765,
+      0.1946,
+      0.3183
+     ],
+     "hedef_kutu": [
+      0.0764,
+      0.2765,
+      0.1946,
+      0.3183
+     ],
+     "etiket_konum": [
+      0.58,
+      0.66
+     ],
+     "etiket_genislik": 0.42,
+     "etiket_hedef": [
+      0.79,
+      0.45
+     ],
+     "etiket_boy": 0.082
+    }
+   ]
+  },
+  "42": {
+   "0": [
+    {
+     "tur": "akis",
+     "a": [
+      0.326,
+      0.78
+     ],
+     "b": [
+      0.434,
+      0.78
+     ],
+     "iliski": "aktive",
+     "etiket": "Friedreich ataksisi: arka kordon ve spinoserebellar tutulum",
+     "odak": [
+      0.41,
+      0.65,
+      0.59,
+      0.92
+     ],
+     "s": 43,
+     "k": [
+      52,
+      71
+     ],
+     "yol": [
+      [
+       0.326,
+       0.78
+      ],
+      [
+       0.434,
+       0.78
+      ]
+     ],
+     "rota": "kavis",
+     "etiket_konum": [
+      0.0,
+      0.7
+     ],
+     "etiket_genislik": 0.42
+    }
+   ]
+  }
+ },
+ "rapor": {
+  "aday": 37,
+  "gecti": 37,
+  "ret": {}
+ }
+}

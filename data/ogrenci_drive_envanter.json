@@ -1,0 +1,59 @@
+{
+  "taranma_zamani": "2026-10-26 16:27:12",
+  "kok_id": "17K7doMGg0xupQekTD5_Vz9xMXc5gd7BA",
+  "kurullar": {
+    "2": {
+      "klasor_adi": "Kurul 2",
+      "id": "1jdrl1EAtM0hliVP4XuS3HKFrssiTYOJ9",
+      "branslar": {
+        "Farmakoloji": {
+          "id": "1cx9PaxP3SuyTJBdvd5gkmxqOEzqZJivC",
+          "dosyalar": []
+        },
+        "Nöroloji": {
+          "id": "1xSitE23YUDZppxpCKRRt8D821friTC1J",
+          "dosyalar": [
+            {
+              "id": "13zAmHjeOCQJwgfxBQWxTgUMbs3eNF-de",
+              "name": "Nöro 1 Nörolojik Hastaya Yaklaşım.m4a",
+              "mime": "audio/mpeg",
+              "uzanti": ".m4a",
+              "tur": "ses",
+              "path": "Kurullar/Kurul 2/Nöroloji/Nöro 1 Nörolojik Hastaya Yaklaşım.m4a"
+            },
+            {
+              "id": "1u_re92g2t---6pcWQ7FFbJFVrfpvcefX",
+              "name": "Nöro 2 Bilinç Bozukluklarına Yaklaşım.m4a",
+              "mime": "audio/mp4",
+              "uzanti": ".m4a",
+              "tur": "ses",
+              "path": "Kurullar/Kurul 2/Nöroloji/Nöro 2 Bilinç Bozukluklarına Yaklaşım.m4a"
+            }
+          ]
+        },
+        "Tıbbi Patoloji": {
+          "id": "1rthgw076C49fuVepo_Smi9KJUw0kNLpM",
+          "dosyalar": [
+            {
+              "id": "1DseZsQT8_XXGkcCFKWDqEEpO09qoHN2I",
+              "name": "Patoloji K2_1.m4a",
+              "mime": "audio/mp4",
+              "uzanti": ".m4a",
+              "tur": "ses",
+              "path": "Kurullar/Kurul 2/Tıbbi Patoloji/Patoloji K2_1.m4a"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "ek_notlar": [],
+  "cikmis": [],
+  "diger": [
+    {
+      "id": "12JFFW_ew4SsnrOMH-T9TqaO_ZL_Xloah",
+      "name": "Yapay Zeka Çıktıları",
+      "mime": "application/vnd.google-apps.folder"
+    }
+  ]
+}

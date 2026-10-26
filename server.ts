@@ -2,6 +2,7 @@ import express from 'express';
 import { dersIsciRouter } from './src/services/dersIsciProxy';
 import { dersIsciEkRouter } from './src/services/dersIsciEkRoutes';
 import { dersRevizeRouter } from './src/services/dersRevizeRoutes';
+import { ogrenciDriveRouter } from './src/services/ogrenciDriveRoutes';
 import compression from 'compression';
 import { createServer as createViteServer } from 'vite';
 import { Type } from '@google/genai';
@@ -4707,6 +4708,8 @@ app.put('/api/past-question-reviews/:id/proposal', requireAdmin, (req, res) => {
 // Onay kapısı ekleri (öğrenci notu / ses kaydı): diske akan yükleme; işçi aynı klasörü salt okunur görür
 app.use('/api/admin/ders-isci-ek', requireAdmin, dersIsciEkRouter());
 app.use('/api/admin/ders-isci', requireAdmin, dersIsciRouter());
+// Öğrenci Drive klasörü yönetimi (öğrenci ses kayıtları ve notları entegrasyonu)
+app.use('/api/admin/ogrenci-drive', requireAdmin, ogrenciDriveRouter());
 // Revize ders işçisi (cihazda yeniden üretilen taslaklar; yer değiştir / ekle / kaldır / her ikisini tut)
 app.use('/api/admin/ders-revize', requireAdmin, dersRevizeRouter(__dirname));
 

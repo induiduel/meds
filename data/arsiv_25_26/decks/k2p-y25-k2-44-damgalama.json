@@ -1,0 +1,1844 @@
+{
+ "id": "k2p-y25-k2-44-damgalama",
+ "title": "Damgalama",
+ "courseId": "y25-k2-44-damgalama",
+ "committee": "donem3-kurul2",
+ "discipline": "psikiyatri",
+ "sayfaHaritasi": "teyitli",
+ "slides": [
+  {
+   "id": "k2-44-d-s01",
+   "slideNumber": 1,
+   "title": "Damgalama: Tanım ve Kapsam",
+   "bolum": "1",
+   "content": "Damgalama, bir kişinin ya da grubun belirli özelliklerine dayanarak kusurlu veya gözden düşmüş olarak olumsuz değerlendirilmesidir.\n\n- **Kavramsal Tanım:** Bireyin ruhsal hastalık, etnik kimlik veya fiziksel yetersizlik gibi nitelikleri gerekçe gösterilerek toplum tarafından değersizleştirilmesidir.\n- **En Savunmasız Grup:** Erken çağlardan bu yana damgalama ve ayrımcılığa kesintisiz olarak en fazla maruz kalan kesim ruhsal hastalığı olan kişilerdir.\n- **Toplumsal Etki:** Damgalama bireyi sosyal izolasyona sürüklerken sağlık hizmetlerine ve psikiyatrik yardıma erişimi de ciddi biçimde geciktirir.\n\n> [!NOTE]\n> Damgalama yalnızca bireysel bir tutum değil, sosyal kabulü ve sağlık hakkını sınırlayan yaygın bir olumsuz değerlendirme sürecidir.",
+   "synthesisNarrative": "Damgalama, bir kişinin ya da grubun belirli özelliklerine dayanarak kusurlu veya gözden düşmüş olarak olumsuz değerlendirilmesidir.\n\n- **Kavramsal Tanım:** Bireyin ruhsal hastalık, etnik kimlik veya fiziksel yetersizlik gibi nitelikleri gerekçe gösterilerek toplum tarafından değersizleştirilmesidir.\n- **En Savunmasız Grup:** Erken çağlardan bu yana damgalama ve ayrımcılığa kesintisiz olarak en fazla maruz kalan kesim ruhsal hastalığı olan kişilerdir.\n- **Toplumsal Etki:** Damgalama bireyi sosyal izolasyona sürüklerken sağlık hizmetlerine ve psikiyatrik yardıma erişimi de ciddi biçimde geciktirir.\n\n> [!NOTE]\n> Damgalama yalnızca bireysel bir tutum değil, sosyal kabulü ve sağlık hakkını sınırlayan yaygın bir olumsuz değerlendirme sürecidir.",
+   "interactiveElements": [
+    {
+     "id": "k44-s01-e1",
+     "type": "micro_quiz",
+     "question": "Damgalama kavramının temel sosyolojik ve psikiyatrik tanımı aşağıdakilerden hangisidir?",
+     "options": [
+      {
+       "text": "Bireyin belirli nitelikleri nedeniyle kusurlu ve gözden düşmüş olarak olumsuz değerlendirilmesidir",
+       "isCorrect": true,
+       "explanation": "Bireyin belirli nitelikleri nedeniyle kusurlu ve gözden düşmüş olarak olumsuz değerlendirilmesidir seçeneği ruhsal hastalıklarda damgalama sürecini açıklayan temel klinik ve bilimsel yaklaşımı temsil eder. Bu ilke doğrultusunda soruda hedeflenen klinik ve toplumsal mekanizma eksiksiz olarak doğrulanmaktadır."
+      },
+      {
+       "text": "Yalnızca adli suç işlemiş bireylere mahkeme kararıyla uygulanan cezaidir",
+       "isCorrect": false,
+       "explanation": "Yalnızca adli suç işlemiş bireylere mahkeme kararıyla uygulanan cezaidir kavramı tıp ve psikiyatri pratiğinde farklı kuramsal veya idari süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen klinik durumla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Hastaların tedavi uyumunu ölçmek amacıyla hekimlerce doldurulan klinik ölçektir",
+       "isCorrect": false,
+       "explanation": "Hastaların tedavi uyumunu ölçmek amacıyla hekimlerce doldurulan klinik ölçektir kavramı tıp ve psikiyatri pratiğinde farklı kuramsal veya idari süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen klinik durumla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Toplumda yalnızca fiziksel bulaşıcı hastalık taşıyanlara özgü geçici bir tutumdur",
+       "isCorrect": false,
+       "explanation": "Toplumda yalnızca fiziksel bulaşıcı hastalık taşıyanlara özgü geçici bir tutumdur kavramı tıp ve psikiyatri pratiğinde farklı kuramsal veya idari süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen klinik durumla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      }
+     ]
+    },
+    {
+     "id": "k44-s01-e2",
+     "type": "cloze_masking",
+     "sentence": "Tarih boyunca damgalama ve ayrımcılığa en fazla maruz kalan kesim ruhsal hastalığı olan kişilerdir.",
+     "maskedTerm": "ruhsal hastalığı olan",
+     "hint": "Tıp eğitimi ve psikiyatri alanındaki temel kavramdır."
+    },
+    {
+     "id": "k44-s01-e3",
+     "type": "spot_the_lie",
+     "topic": "Damgalamanın Temel Özellikleri",
+     "items": [
+      {
+       "text": "Damgalama bir kişinin kusurlu ve gözden düşmüş olarak olumsuz değerlendirilmesidir.",
+       "isLie": false,
+       "explanation": "Damgalama bir kişinin kusurlu ve gözden düşmüş olarak olumsuz değerlendirilmesidir. ifadesi psikiyatride damgalama dinamiklerini doğru yansıtır. Toplumsal araştırmalar bu yaklaşımı desteklemektedir."
+      },
+      {
+       "text": "Tarih boyunca en yoğun damgalamaya ruhsal hastalığı olan bireyler maruz kalmıştır.",
+       "isLie": false,
+       "explanation": "Tarih boyunca en yoğun damgalamaya ruhsal hastalığı olan bireyler maruz kalmıştır. ifadesi psikiyatride damgalama dinamiklerini doğru yansıtır. Toplumsal araştırmalar bu yaklaşımı desteklemektedir."
+      },
+      {
+       "text": "Damgalama yalnızca modern çağda ortaya çıkmış olup eski toplumlarda hiç görülmemiştir.",
+       "isLie": true,
+       "explanation": "Damgalama yalnızca modern çağda ortaya çıkmış olup eski toplumlarda hiç görülmemiştir. ifadesi bilimsel ve klinik gerçeklerle çelişmektedir. Damgalama sürecinde bu durum gerçeğe aykırı bir algıdır."
+      }
+     ]
+    },
+    {
+     "id": "k44-s01-e4",
+     "type": "active_recall",
+     "question": "Damgalamanın evrensel tanımı ve en çok hedef aldığı grup hangisidir?",
+     "answer": "Kişinin özellikleri nedeniyle kusurlu/gözden düşmüş olarak olumsuz değerlendirilmesidir; en çok ruhsal hastalığı olan bireyler maruz kalır."
+    }
+   ],
+   "pdfSayfalari": [
+    1,
+    2
+   ],
+   "sourcePdf": {
+    "startPage": 1,
+    "endPage": 2
+   }
+  },
+  {
+   "id": "k2-44-d-s02",
+   "slideNumber": 2,
+   "title": "Tarihsel Süreçte Damgalanan Hastalıklar",
+   "bolum": "1",
+   "content": "Tarih boyunca tıp dünyasında pek çok organik ve enfeksiyöz hastalık toplumlar tarafından ağır damgalamaya maruz bırakılmıştır.\n\n- **Cüzzam:** İlk damgalanan hastalıklardandır; Tanrının insana verdiği bir kötülük ve ceza olarak algılanıp hastalar toplumdan tecrit edilmiştir.\n- **Frengi:** 15. yüzyılda frengiye yakalananlar ahlaki sapma gösterdikleri düşünülerek toplum tarafından lanetlenmiştir.\n- **Tüberküloz:** 18. yüzyılda adı konan tüberküloz, yoksulluk ve sefaletle ilişkilendirilerek alt sınıfa ait aşağılayıcı bir hastalık olarak görülmüştür.\n- **Kanser ve AIDS:** 1900'lerde kanser hastaları dışlanmış, 1980'lerde AIDS ise günahkarlara verilen ilahi bir ceza olarak yaftalanmıştır.\n\n> [!IMPORTANT]\n> Tıbbi bilgi ve tedaviler geliştikçe organik hastalıkların damgalanması gerilerken, ruhsal hastalıkların damgalanması halen güçlü biçimde sürmektedir.",
+   "synthesisNarrative": "Tarih boyunca tıp dünyasında pek çok organik ve enfeksiyöz hastalık toplumlar tarafından ağır damgalamaya maruz bırakılmıştır.\n\n- **Cüzzam:** İlk damgalanan hastalıklardandır; Tanrının insana verdiği bir kötülük ve ceza olarak algılanıp hastalar toplumdan tecrit edilmiştir.\n- **Frengi:** 15. yüzyılda frengiye yakalananlar ahlaki sapma gösterdikleri düşünülerek toplum tarafından lanetlenmiştir.\n- **Tüberküloz:** 18. yüzyılda adı konan tüberküloz, yoksulluk ve sefaletle ilişkilendirilerek alt sınıfa ait aşağılayıcı bir hastalık olarak görülmüştür.\n- **Kanser ve AIDS:** 1900'lerde kanser hastaları dışlanmış, 1980'lerde AIDS ise günahkarlara verilen ilahi bir ceza olarak yaftalanmıştır.\n\n> [!IMPORTANT]\n> Tıbbi bilgi ve tedaviler geliştikçe organik hastalıkların damgalanması gerilerken, ruhsal hastalıkların damgalanması halen güçlü biçimde sürmektedir.",
+   "interactiveElements": [
+    {
+     "id": "k44-s02-e1",
+     "type": "swipe_matching",
+     "leftCategory": "Tarihsel Enfeksiyöz Damgalama",
+     "rightCategory": "Modern Dönem Damgalaması",
+     "cards": [
+      {
+       "text": "Tanrının insana verdiği kötülük sayılan Cüzzam",
+       "category": "left",
+       "explanation": "Tanrının insana verdiği kötülük sayılan Cüzzam kavramı ilgili damgalama kategorisi altında değerlendirilen temel unsurdur. Sosyal psikiyatri pratiğinde bu eşleme kritik önem taşır."
+      },
+      {
+       "text": "15. yüzyılda lanetlenen Frengi hastalığı",
+       "category": "left",
+       "explanation": "15. yüzyılda lanetlenen Frengi hastalığı kavramı ilgili damgalama kategorisi altında değerlendirilen temel unsurdur. Sosyal psikiyatri pratiğinde bu eşleme kritik önem taşır."
+      },
+      {
+       "text": "1980'lerde ceza olarak yaftalanan AIDS tablosu",
+       "category": "right",
+       "explanation": "1980'lerde ceza olarak yaftalanan AIDS tablosu kavramı ilgili damgalama kategorisi altında değerlendirilen temel unsurdur. Sosyal psikiyatri pratiğinde bu eşleme kritik önem taşır."
+      },
+      {
+       "text": "1900'lü yıllarda dışlanan Kanser hastaları",
+       "category": "right",
+       "explanation": "1900'lü yıllarda dışlanan Kanser hastaları kavramı ilgili damgalama kategorisi altında değerlendirilen temel unsurdur. Sosyal psikiyatri pratiğinde bu eşleme kritik önem taşır."
+      }
+     ]
+    },
+    {
+     "id": "k44-s02-e2",
+     "type": "micro_quiz",
+     "question": "18. yüzyılda adı konan ve toplum tarafından 'alt sınıfa ait bir hastalık' olarak damgalanan patoloji hangisidir?",
+     "options": [
+      {
+       "text": "Tüberküloz",
+       "isCorrect": true,
+       "explanation": "Tüberküloz seçeneği ruhsal hastalıklarda damgalama sürecini açıklayan temel klinik ve bilimsel yaklaşımı temsil eder. Bu ilke doğrultusunda soruda hedeflenen klinik ve toplumsal mekanizma eksiksiz olarak doğrulanmaktadır."
+      },
+      {
+       "text": "Cüzzam",
+       "isCorrect": false,
+       "explanation": "Cüzzam kavramı tıp ve psikiyatri pratiğinde farklı kuramsal veya idari süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen klinik durumla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Frengi",
+       "isCorrect": false,
+       "explanation": "Frengi kavramı tıp ve psikiyatri pratiğinde farklı kuramsal veya idari süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen klinik durumla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "AIDS",
+       "isCorrect": false,
+       "explanation": "AIDS kavramı tıp ve psikiyatri pratiğinde farklı kuramsal veya idari süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen klinik durumla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      }
+     ]
+    },
+    {
+     "id": "k44-s02-e3",
+     "type": "cloze_masking",
+     "sentence": "İlk damgalanan hastalıklardan olan cüzzam tanrının insana verdiği bir kötülük olarak görülmüştür.",
+     "maskedTerm": "cüzzam",
+     "hint": "Tıp eğitimi ve psikiyatri alanındaki temel kavramdır."
+    },
+    {
+     "id": "k44-s02-e4",
+     "type": "active_recall",
+     "question": "Tarihte damgalanan başlıca fiziksel hastalıklar ve atfedilen mitler nelerdir?",
+     "answer": "Cüzzam (tanrı kötülüğü), Frengi (toplum laneti), Tüberküloz (alt sınıf hastalığı), Kanser (dışlanma), AIDS (ilahi ceza)."
+    }
+   ],
+   "pdfSayfalari": [
+    3,
+    3
+   ],
+   "sourcePdf": {
+    "startPage": 3,
+    "endPage": 3
+   }
+  },
+  {
+   "id": "k2-44-d-s03",
+   "slideNumber": 3,
+   "title": "Toplumsal Tutumlar: Tehlikelilik ve Öngörülemezlik",
+   "bolum": "1",
+   "content": "Toplumun ruhsal hastalıklara yönelik olumsuz tutumlarını belirleyen en güçlü etken tehlikelilik ve öngörülemezlik algısıdır.\n\n- **Tehlikeli ve Öngörülemez Algısı:** Toplum, ruhsal hastalığı olan kişileri 'ne zaman ne yapacağı bilinmeyen' ve potansiyel olarak 'saldırgan' ögeler olarak görür.\n- **Kaygı ve Dışlama Refleksi:** Hastaların kestirilemeyen ve düzeni bozan davranışları bireylerde kaygı uyandırır; birey ürktüğü durumu kendisinden dışlayıp yabancılaştırır.\n- **Ayrımcılığın Başlangıcı:** Bu yabancılaştırma refleksi, hastanın toplum dışına itilmesiyle ayrımcılık sürecinin fiilen başlamasına neden olur.\n\n> [!NOTE]\n> Düzeni bozan, huzursuzluk yaratan ve toplumsal yaşantı için tekin olmadığı düşünülen bireyler damgalanarak toplum dışına itilir.",
+   "synthesisNarrative": "Toplumun ruhsal hastalıklara yönelik olumsuz tutumlarını belirleyen en güçlü etken tehlikelilik ve öngörülemezlik algısıdır.\n\n- **Tehlikeli ve Öngörülemez Algısı:** Toplum, ruhsal hastalığı olan kişileri 'ne zaman ne yapacağı bilinmeyen' ve potansiyel olarak 'saldırgan' ögeler olarak görür.\n- **Kaygı ve Dışlama Refleksi:** Hastaların kestirilemeyen ve düzeni bozan davranışları bireylerde kaygı uyandırır; birey ürktüğü durumu kendisinden dışlayıp yabancılaştırır.\n- **Ayrımcılığın Başlangıcı:** Bu yabancılaştırma refleksi, hastanın toplum dışına itilmesiyle ayrımcılık sürecinin fiilen başlamasına neden olur.\n\n> [!NOTE]\n> Düzeni bozan, huzursuzluk yaratan ve toplumsal yaşantı için tekin olmadığı düşünülen bireyler damgalanarak toplum dışına itilir.",
+   "interactiveElements": [
+    {
+     "id": "k44-s03-e1",
+     "type": "micro_quiz",
+     "question": "Toplumun ruhsal hastalıklara ilişkin dışlayıcı tutumlarını belirleyen en önemli algısal değişken hangisidir?",
+     "options": [
+      {
+       "text": "Hastaların tehlikeli ve ne zaman ne yapacağı bilinmeyen kişiler olarak algılanması",
+       "isCorrect": true,
+       "explanation": "Hastaların tehlikeli ve ne zaman ne yapacağı bilinmeyen kişiler olarak algılanması seçeneği ruhsal hastalıklarda damgalama sürecini açıklayan temel klinik ve bilimsel yaklaşımı temsil eder. Bu ilke doğrultusunda soruda hedeflenen klinik ve toplumsal mekanizma eksiksiz olarak doğrulanmaktadır."
+      },
+      {
+       "text": "Ruhsal hastalıkların bulaşıcı mikroorganizmalarla toplum geneline yayılacağı korkusu",
+       "isCorrect": false,
+       "explanation": "Ruhsal hastalıkların bulaşıcı mikroorganizmalarla toplum geneline yayılacağı korkusu kavramı tıp ve psikiyatri pratiğinde farklı kuramsal veya idari süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen klinik durumla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Psikiyatri ilaçlarının devlet bütçesine getirdiği mali yükün yüksek bulunması",
+       "isCorrect": false,
+       "explanation": "Psikiyatri ilaçlarının devlet bütçesine getirdiği mali yükün yüksek bulunması kavramı tıp ve psikiyatri pratiğinde farklı kuramsal veya idari süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen klinik durumla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Hastaların hastanede kalış sürelerinin diğer klinik branşlara göre kısa olması",
+       "isCorrect": false,
+       "explanation": "Hastaların hastanede kalış sürelerinin diğer klinik branşlara göre kısa olması kavramı tıp ve psikiyatri pratiğinde farklı kuramsal veya idari süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen klinik durumla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      }
+     ]
+    },
+    {
+     "id": "k44-s03-e2",
+     "type": "spot_the_lie",
+     "topic": "Toplumsal Tutum ve Ayrımcılık Başlangıcı",
+     "items": [
+      {
+       "text": "Toplum kendisini ürküten ve rahatsız eden bir durumla karşılaştığında onu dışlama yoluna gider.",
+       "isLie": false,
+       "explanation": "Toplum kendisini ürküten ve rahatsız eden bir durumla karşılaştığında onu dışlama yoluna gider. ifadesi psikiyatride damgalama dinamiklerini doğru yansıtır. Toplumsal araştırmalar bu yaklaşımı desteklemektedir."
+      },
+      {
+       "text": "Önceden kestirilemeyen davranışlar toplumda huzursuzluk ve kaygı yaratır.",
+       "isLie": false,
+       "explanation": "Önceden kestirilemeyen davranışlar toplumda huzursuzluk ve kaygı yaratır. ifadesi psikiyatride damgalama dinamiklerini doğru yansıtır. Toplumsal araştırmalar bu yaklaşımı desteklemektedir."
+      },
+      {
+       "text": "Ruhsal hastalıklı bireyler toplum tarafından daima öngörülebilir ve güvenli kabul edilir.",
+       "isLie": true,
+       "explanation": "Ruhsal hastalıklı bireyler toplum tarafından daima öngörülebilir ve güvenli kabul edilir. ifadesi bilimsel ve klinik gerçeklerle çelişmektedir. Damgalama sürecinde bu durum gerçeğe aykırı bir algıdır."
+      }
+     ]
+    },
+    {
+     "id": "k44-s03-e3",
+     "type": "cloze_masking",
+     "sentence": "Toplumun ruhsal hastalıklara tutumunu belirleyen en kritik algı hastaların tehlikeli ve ne zaman ne yapacağı bilinmeyen kişiler olarak görülmesidir.",
+     "maskedTerm": "tehlikeli",
+     "hint": "Tıp eğitimi ve psikiyatri alanındaki temel kavramdır."
+    },
+    {
+     "id": "k44-s03-e4",
+     "type": "active_recall",
+     "question": "Toplumun ruhsal hastaları dışlamasındaki temel psikolojik mekanizma nedir?",
+     "answer": "Tehlikeli ve öngörülemez algısının kaygı uyandırması; toplumun ürktüğü durumu kendisinden dışlayıp yabancılaştırmasıdır."
+    }
+   ],
+   "pdfSayfalari": [
+    4,
+    4
+   ],
+   "sourcePdf": {
+    "startPage": 4,
+    "endPage": 4
+   }
+  },
+  {
+   "id": "k2-44-d-s04",
+   "slideNumber": 4,
+   "title": "Damgalamayı Besleyen Üç Etken",
+   "bolum": "1",
+   "content": "Damgalayıcı tutumların oluşumunda ve sürdürülmesinde literatürde üç temel etken tanımlanmıştır.\n\n- **1. Korku ve Dışarıda Bırakma:** Ruhsal hastalığı olan bireylerden korkulmalıdır ve bu nedenle toplumun fiziksel/sosyal sınırları dışında tutulmalıdırlar.\n- **2. Otoriterlik:** Ruhsal hastalıklı bireyler sorumsuzdur ve kendi kararlarını veremezler; bu nedenle tüm kararlar başkaları tarafından verilmelidir.\n- **3. Yardımseverlik (Paternalizm):** Şiddetli ruhsal hastalığı olan bireyler çocuk gibidir ve bakıma muhtaçtırlar; bu yaklaşım koruyucu görünse de bireyi yetersizleştirir.\n- **Kişisel Sorumluluk Yükleme:** Toplum bu bireyleri hastalıklarının nedeni için bizzat sorumlu tutmakta ve bu tutumlar doğrudan ayrımcı davranışları doğurmaktadır.\n\n> [!IMPORTANT]\n> Yardımseverlik iyi niyetli görünse bile hastayı özerkliği olmayan bir 'çocuk' konumuna indirgeyerek damgalamayı pekiştirir.",
+   "synthesisNarrative": "Damgalayıcı tutumların oluşumunda ve sürdürülmesinde literatürde üç temel etken tanımlanmıştır.\n\n- **1. Korku ve Dışarıda Bırakma:** Ruhsal hastalığı olan bireylerden korkulmalıdır ve bu nedenle toplumun fiziksel/sosyal sınırları dışında tutulmalıdırlar.\n- **2. Otoriterlik:** Ruhsal hastalıklı bireyler sorumsuzdur ve kendi kararlarını veremezler; bu nedenle tüm kararlar başkaları tarafından verilmelidir.\n- **3. Yardımseverlik (Paternalizm):** Şiddetli ruhsal hastalığı olan bireyler çocuk gibidir ve bakıma muhtaçtırlar; bu yaklaşım koruyucu görünse de bireyi yetersizleştirir.\n- **Kişisel Sorumluluk Yükleme:** Toplum bu bireyleri hastalıklarının nedeni için bizzat sorumlu tutmakta ve bu tutumlar doğrudan ayrımcı davranışları doğurmaktadır.\n\n> [!IMPORTANT]\n> Yardımseverlik iyi niyetli görünse bile hastayı özerkliği olmayan bir 'çocuk' konumuna indirgeyerek damgalamayı pekiştirir.",
+   "interactiveElements": [
+    {
+     "id": "k44-s04-e1",
+     "type": "interactive_table",
+     "tableHeaders": [
+      "Damgalama Etkeni",
+      "Toplumsal İnanç",
+      "Davranışsal Sonuç"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Korku ve Dışarıda Bırakma",
+         "isMasked": false,
+         "hint": ""
+        },
+        {
+         "text": "Hastalar tehlikelidir ve korkulmalıdır",
+         "isMasked": false,
+         "hint": ""
+        },
+        {
+         "text": "Toplumun tamamen dışında tutma ve tecrit",
+         "isMasked": true,
+         "hint": "Tıp eğitimi ve psikiyatri alanındaki temel kavramdır."
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Otoriterlik",
+         "isMasked": false,
+         "hint": ""
+        },
+        {
+         "text": "Hastalar sorumsuzdur ve iradeleri yoktur",
+         "isMasked": false,
+         "hint": ""
+        },
+        {
+         "text": "Tüm kararların başkaları tarafından verilmesi",
+         "isMasked": true,
+         "hint": "Tıp eğitimi ve psikiyatri alanındaki temel kavramdır."
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Yardımseverlik",
+         "isMasked": false,
+         "hint": ""
+        },
+        {
+         "text": "Ağır ruhsal hastalar çocuk gibidir",
+         "isMasked": false,
+         "hint": ""
+        },
+        {
+         "text": "Aşırı vesayet ve yetişkin rolünden men etme",
+         "isMasked": true,
+         "hint": "Tıp eğitimi ve psikiyatri alanındaki temel kavramdır."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k44-s04-e2",
+     "type": "micro_quiz",
+     "question": "Damgalamayı besleyen tutumlardan 'Yardımseverlik' etkeni hastaları hangi rolde konumlandırarak olumsuz etki yaratır?",
+     "options": [
+      {
+       "text": "Hastaları çocuk gibi görerek sürekli bakıma muhtaç ve özerklikten yoksun kabul eder",
+       "isCorrect": true,
+       "explanation": "Hastaları çocuk gibi görerek sürekli bakıma muhtaç ve özerklikten yoksun kabul eder seçeneği ruhsal hastalıklarda damgalama sürecini açıklayan temel klinik ve bilimsel yaklaşımı temsil eder. Bu ilke doğrultusunda soruda hedeflenen klinik ve toplumsal mekanizma eksiksiz olarak doğrulanmaktadır."
+      },
+      {
+       "text": "Hastaları doğrudan adli suç örgütlerinin lideri olarak konumlandırır",
+       "isCorrect": false,
+       "explanation": "Hastaları doğrudan adli suç örgütlerinin lideri olarak konumlandırır kavramı tıp ve psikiyatri pratiğinde farklı kuramsal veya idari süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen klinik durumla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Hastaların tüm hukuki haklarını mahkemede bizzat savunmasını şart koşar",
+       "isCorrect": false,
+       "explanation": "Hastaların tüm hukuki haklarını mahkemede bizzat savunmasını şart koşar kavramı tıp ve psikiyatri pratiğinde farklı kuramsal veya idari süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen klinik durumla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Hastaları sağlık politikalarını belirleyen uzman hekimler olarak tanımlar",
+       "isCorrect": false,
+       "explanation": "Hastaları sağlık politikalarını belirleyen uzman hekimler olarak tanımlar kavramı tıp ve psikiyatri pratiğinde farklı kuramsal veya idari süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen klinik durumla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      }
+     ]
+    },
+    {
+     "id": "k44-s04-e3",
+     "type": "cloze_masking",
+     "sentence": "Otoriterlik etkenine göre ruhsal hastalıklı bireyler sorumsuzdur ve kararlar diğerleri tarafından verilmelidir.",
+     "maskedTerm": "Otoriterlik",
+     "hint": "Tıp eğitimi ve psikiyatri alanındaki temel kavramdır."
+    },
+    {
+     "id": "k44-s04-e4",
+     "type": "active_recall",
+     "question": "Damgalamada tanımlanan üç temel etken nelerdir?",
+     "answer": "1. Korku ve dışarıda bırakma, 2. Otoriterlik (kararları başkalarının vermesi), 3. Yardımseverlik (çocuk gibi görme)."
+    }
+   ],
+   "pdfSayfalari": [
+    5,
+    5
+   ],
+   "sourcePdf": {
+    "startPage": 5,
+    "endPage": 5
+   }
+  },
+  {
+   "id": "k2-44-d-s05",
+   "slideNumber": 5,
+   "title": "Damgalanmanın Bireysel ve Sosyal Bedeli",
+   "bolum": "1",
+   "content": "Ruhsal hastalığa sahip bireylerde damgalamanın en yıkıcı sonucu, toplumun bir üyesi olmadığı duygusuna hapsolmalarıdır.\n\n- **Ait Olmama Duygusu:** Damgalama bireyde topluma ait olmadığı, dışlandığı ve yabancı bir unsur olduğu hissini kemikleştirir.\n- **Değersizleştirilme İnancı:** Hastalar toplumun kendilerini reddedeceğine ve değersiz bulacağına kesin olarak inanmaya başlarlar.\n- **Çok Boyutlu Kayıplar:** Bu süreç moral bozukluğu, benlik saygısında çöküş, sosyal uyumda bozulma, işsizlik ve gelir kaybıyla sonuçlanır.\n- **Tedavi Uyumunda Bozulma:** Damgalanma korkusu yaşayan birey psikiyatrik tedaviye başvurmaktan kaçınır veya tedaviyi yarıda bırakır.\n\n> [!NOTE]\n> Damgalanma yalnızca ruhsal bir acı değil; istihdam, sosyal bağlar ve sağlık hizmetlerine uyum zincirini kıran yapısal bir yıkımdır.",
+   "synthesisNarrative": "Ruhsal hastalığa sahip bireylerde damgalamanın en yıkıcı sonucu, toplumun bir üyesi olmadığı duygusuna hapsolmalarıdır.\n\n- **Ait Olmama Duygusu:** Damgalama bireyde topluma ait olmadığı, dışlandığı ve yabancı bir unsur olduğu hissini kemikleştirir.\n- **Değersizleştirilme İnancı:** Hastalar toplumun kendilerini reddedeceğine ve değersiz bulacağına kesin olarak inanmaya başlarlar.\n- **Çok Boyutlu Kayıplar:** Bu süreç moral bozukluğu, benlik saygısında çöküş, sosyal uyumda bozulma, işsizlik ve gelir kaybıyla sonuçlanır.\n- **Tedavi Uyumunda Bozulma:** Damgalanma korkusu yaşayan birey psikiyatrik tedaviye başvurmaktan kaçınır veya tedaviyi yarıda bırakır.\n\n> [!NOTE]\n> Damgalanma yalnızca ruhsal bir acı değil; istihdam, sosyal bağlar ve sağlık hizmetlerine uyum zincirini kıran yapısal bir yıkımdır.",
+   "interactiveElements": [
+    {
+     "id": "k44-s05-e1",
+     "type": "micro_quiz",
+     "question": "Damgalamanın hasta üzerinde yarattığı en acı ve yıkıcı subjektif duygu aşağıdakilerden hangisidir?",
+     "options": [
+      {
+       "text": "Kendisinin artık toplumun eşit bir üyesi olmadığı duygusu",
+       "isCorrect": true,
+       "explanation": "Kendisinin artık toplumun eşit bir üyesi olmadığı duygusu seçeneği ruhsal hastalıklarda damgalama sürecini açıklayan temel klinik ve bilimsel yaklaşımı temsil eder. Bu ilke doğrultusunda soruda hedeflenen klinik ve toplumsal mekanizma eksiksiz olarak doğrulanmaktadır."
+      },
+      {
+       "text": "Fiziksel dayanıklılığının ve kas gücünün arttığı yanılsaması",
+       "isCorrect": false,
+       "explanation": "Fiziksel dayanıklılığının ve kas gücünün arttığı yanılsaması kavramı tıp ve psikiyatri pratiğinde farklı kuramsal veya idari süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen klinik durumla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Tüm toplumsal kanunları değiştirebilecek siyasi güce ulaştığı hissi",
+       "isCorrect": false,
+       "explanation": "Tüm toplumsal kanunları değiştirebilecek siyasi güce ulaştığı hissi kavramı tıp ve psikiyatri pratiğinde farklı kuramsal veya idari süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen klinik durumla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Biyokimyasal tahlil sonuçlarının kendiliğinden normale döneceği inancı",
+       "isCorrect": false,
+       "explanation": "Biyokimyasal tahlil sonuçlarının kendiliğinden normale döneceği inancı kavramı tıp ve psikiyatri pratiğinde farklı kuramsal veya idari süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen klinik durumla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      }
+     ]
+    },
+    {
+     "id": "k44-s05-e2",
+     "type": "spot_the_lie",
+     "topic": "Damgalamanın Bireysel ve Sosyal Sonuçları",
+     "items": [
+      {
+       "text": "Damgalanan bireylerde benlik saygısında azalma ve işsizlik riski belirgin artar.",
+       "isLie": false,
+       "explanation": "Damgalanan bireylerde benlik saygısında azalma ve işsizlik riski belirgin artar. ifadesi psikiyatride damgalama dinamiklerini doğru yansıtır. Toplumsal araştırmalar bu yaklaşımı desteklemektedir."
+      },
+      {
+       "text": "Damgalanma korkusu hastaların psikiyatrik tedaviye uyumunu azaltır.",
+       "isLie": false,
+       "explanation": "Damgalanma korkusu hastaların psikiyatrik tedaviye uyumunu azaltır. ifadesi psikiyatride damgalama dinamiklerini doğru yansıtır. Toplumsal araştırmalar bu yaklaşımı desteklemektedir."
+      },
+      {
+       "text": "Damgalanan bireyler toplum tarafından hızla kabul edilip istihdamda öncelik kazanırlar.",
+       "isLie": true,
+       "explanation": "Damgalanan bireyler toplum tarafından hızla kabul edilip istihdamda öncelik kazanırlar. ifadesi bilimsel ve klinik gerçeklerle çelişmektedir. Damgalama sürecinde bu durum gerçeğe aykırı bir algıdır."
+      }
+     ]
+    },
+    {
+     "id": "k44-s05-e3",
+     "type": "cloze_masking",
+     "sentence": "Ruhsal hastalığa sahip bireylerde damgalamanın en yıkıcı etkisi toplumun bir üyesi olmadığı duygusunu yaşamalarıdır.",
+     "maskedTerm": "toplumun bir üyesi olmadığı",
+     "hint": "Tıp eğitimi ve psikiyatri alanındaki temel kavramdır."
+    },
+    {
+     "id": "k44-s05-e4",
+     "type": "active_recall",
+     "question": "Damgalamanın hastanın hayatında yarattığı başlıca olumsuz sonuçlar nelerdir?",
+     "answer": "Topluma ait olmama hissi, moral bozukluğu, düşük benlik saygısı, sosyal uyumsuzluk, işsizlik, gelir kaybı ve tedavi uyumsuzluğu."
+    }
+   ],
+   "pdfSayfalari": [
+    6,
+    6
+   ],
+   "sourcePdf": {
+    "startPage": 6,
+    "endPage": 6
+   }
+  },
+  {
+   "id": "k2-44-d-s06",
+   "slideNumber": 6,
+   "title": "[TEKRAR SAYFASI - CHECKPOINT 1] Damgalamanın Tanımı ve Tarihsel Kökenleri",
+   "bolum": "1",
+   "content": "Bu tekrar sayfasında damgalamanın tanımı, tarihsel dönüşümü, toplumdaki algısal kökleri ve üç temel etkeni pekiştirilmektedir.\n\n- **Damgalama Tanımı:** Özellikleri gerekçe gösterilerek kişinin kusurlu ve gözden düşmüş sayılmasıdır; en çok ruhsal hastalar maruz kalır.\n- **Tarihsel Tablolar:** Cüzzam (ilahi kötülük), Frengi (toplum laneti), Tüberküloz (alt sınıf hastalığı), Kanser ve AIDS (günahkarlık yaftası).\n- **Algısal Kaynak:** Hastaların kestirilemeyen, düzeni bozan, tehlikeli unsurlar olarak algılanması toplumda kaygı uyandırır ve dışlamayı başlatır.\n- **Üç Temel Etken:** Korku/Dışlama (tecrit), Otoriterlik (karar hakkını alma), Yardımseverlik (çocuk gibi görüp yetersizleştirme).\n\n> [!NOTE]\n> Damgalamanın kavranması, ruhsal bozukluk yaşayan bireyin karşılaştığı sosyal bariyerlerin çözülmesinde ilk basamaktır.",
+   "synthesisNarrative": "Bu tekrar sayfasında damgalamanın tanımı, tarihsel dönüşümü, toplumdaki algısal kökleri ve üç temel etkeni pekiştirilmektedir.\n\n- **Damgalama Tanımı:** Özellikleri gerekçe gösterilerek kişinin kusurlu ve gözden düşmüş sayılmasıdır; en çok ruhsal hastalar maruz kalır.\n- **Tarihsel Tablolar:** Cüzzam (ilahi kötülük), Frengi (toplum laneti), Tüberküloz (alt sınıf hastalığı), Kanser ve AIDS (günahkarlık yaftası).\n- **Algısal Kaynak:** Hastaların kestirilemeyen, düzeni bozan, tehlikeli unsurlar olarak algılanması toplumda kaygı uyandırır ve dışlamayı başlatır.\n- **Üç Temel Etken:** Korku/Dışlama (tecrit), Otoriterlik (karar hakkını alma), Yardımseverlik (çocuk gibi görüp yetersizleştirme).\n\n> [!NOTE]\n> Damgalamanın kavranması, ruhsal bozukluk yaşayan bireyin karşılaştığı sosyal bariyerlerin çözülmesinde ilk basamaktır.",
+   "interactiveElements": [
+    {
+     "id": "k44-s06-e1",
+     "type": "micro_quiz",
+     "question": "Aşağıdakilerden hangisi damgalamayı besleyen üç temel etkenden biri değildir?",
+     "options": [
+      {
+       "text": "Biyolojik eşitlikçilik ve tam özerklik tanıma",
+       "isCorrect": true,
+       "explanation": "Biyolojik eşitlikçilik ve tam özerklik tanıma seçeneği ruhsal hastalıklarda damgalama sürecini açıklayan temel klinik ve bilimsel yaklaşımı temsil eder. Bu ilke doğrultusunda soruda hedeflenen klinik ve toplumsal mekanizma eksiksiz olarak doğrulanmaktadır."
+      },
+      {
+       "text": "Korku ve dışarıda bırakma",
+       "isCorrect": false,
+       "explanation": "Korku ve dışarıda bırakma kavramı tıp ve psikiyatri pratiğinde farklı kuramsal veya idari süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen klinik durumla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Otoriterlik ve iradeyi yok sayma",
+       "isCorrect": false,
+       "explanation": "Otoriterlik ve iradeyi yok sayma kavramı tıp ve psikiyatri pratiğinde farklı kuramsal veya idari süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen klinik durumla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Yardımseverlik ve çocuksu görme",
+       "isCorrect": false,
+       "explanation": "Yardımseverlik ve çocuksu görme kavramı tıp ve psikiyatri pratiğinde farklı kuramsal veya idari süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen klinik durumla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      }
+     ]
+    },
+    {
+     "id": "k44-s06-e2",
+     "type": "swipe_matching",
+     "leftCategory": "Tarihsel Hastalık Damgası",
+     "rightCategory": "Damgalama Etkeni/Tutum",
+     "cards": [
+      {
+       "text": "Frengi: Lanetlenmiş kabul edilme",
+       "category": "left",
+       "explanation": "Frengi: Lanetlenmiş kabul edilme kavramı ilgili damgalama kategorisi altında değerlendirilen temel unsurdur. Sosyal psikiyatri pratiğinde bu eşleme kritik önem taşır."
+      },
+      {
+       "text": "Tüberküloz: Alt sınıfa ait görülme",
+       "category": "left",
+       "explanation": "Tüberküloz: Alt sınıfa ait görülme kavramı ilgili damgalama kategorisi altında değerlendirilen temel unsurdur. Sosyal psikiyatri pratiğinde bu eşleme kritik önem taşır."
+      },
+      {
+       "text": "Otoriterlik: Kararları başkalarının vermesi",
+       "category": "right",
+       "explanation": "Otoriterlik: Kararları başkalarının vermesi kavramı ilgili damgalama kategorisi altında değerlendirilen temel unsurdur. Sosyal psikiyatri pratiğinde bu eşleme kritik önem taşır."
+      },
+      {
+       "text": "Yardımseverlik: Hastayı çocuk gibi algılama",
+       "category": "right",
+       "explanation": "Yardımseverlik: Hastayı çocuk gibi algılama kavramı ilgili damgalama kategorisi altında değerlendirilen temel unsurdur. Sosyal psikiyatri pratiğinde bu eşleme kritik önem taşır."
+      }
+     ]
+    },
+    {
+     "id": "k44-s06-e3",
+     "type": "spot_the_lie",
+     "topic": "Damgalama Temelleri Özeti",
+     "items": [
+      {
+       "text": "Toplumun hastaları tehlikeli ve öngörülemez görmesi dışlama sürecinin temel yol açan temel etkendir.",
+       "isLie": false,
+       "explanation": "Toplumun hastaları tehlikeli ve öngörülemez görmesi dışlama sürecinin temel yol açan temel etkendir. ifadesi psikiyatride damgalama dinamiklerini doğru yansıtır. Toplumsal araştırmalar bu yaklaşımı desteklemektedir."
+      },
+      {
+       "text": "Ruhsal hastalıklarda damgalama bireyde ait olmama ve derin benlik saygısı kaybı yaratır.",
+       "isLie": false,
+       "explanation": "Ruhsal hastalıklarda damgalama bireyde ait olmama ve derin benlik saygısı kaybı yaratır. ifadesi psikiyatride damgalama dinamiklerini doğru yansıtır. Toplumsal araştırmalar bu yaklaşımı desteklemektedir."
+      },
+      {
+       "text": "Tarih boyunca cüzzam ve tüberküloz gibi hastalıklara hiçbir zaman damgalama uygulanmamıştır.",
+       "isLie": true,
+       "explanation": "Tarih boyunca cüzzam ve tüberküloz gibi hastalıklara hiçbir zaman damgalama uygulanmamıştır. ifadesi bilimsel ve klinik gerçeklerle çelişmektedir. Damgalama sürecinde bu durum gerçeğe aykırı bir algıdır."
+      }
+     ]
+    },
+    {
+     "id": "k44-s06-e4",
+     "type": "active_recall",
+     "question": "Damgalamanın tarihsel gelişimi ve üç ana etkenini özetleyiniz.",
+     "answer": "Cüzzam/frengi/TB/kanser/AIDS'ten günümüze süren dışlama; Korku/dışlama, Otoriterlik ve Yardımseverlik etkenleriyle beslenir."
+    }
+   ],
+   "isCheckpoint": true
+  },
+  {
+   "id": "k2-44-d-s07",
+   "slideNumber": 7,
+   "title": "Sosyal Biliş Modeli: Stereotipi, Önyargı, Ayrımcılık",
+   "bolum": "2",
+   "content": "Sosyal biliş modeli, damgalama olgusunu zihinsel bilgi yapılarından başlayarak adım adım davranışa dönüşen bir süreç olarak inceler.\n\n- **Basmakalıp Düşünceler (Stereotipi):** Sosyal bir grubun birçok üyesi tarafından bilinen kolektif bilgi yapılarıdır; suçlama, tehlike ve yetersizlik içerir.\n- **Farkındalık ve Onaylama Farkı:** Pek çok insan bu basmakalıp düşüncelerin farkındadır ancak herkes bunları onaylamaz veya doğru bulmaz.\n- **Önyargı (Duygusal Onay):** Önyargılı insanlar bu olumsuz basmakalıpları bizzat onaylarlar ('hepsi saldırgandır') ve korku/öfke gibi duygusal tepkiler verirler.\n- **Ayrımcılık (Davranışsal Tepki):** Önyargı ve korku kaçınma davranışına dönüşür; örneğin işverenler ruh hastalarını işe almaz ve ücret ödemez.\n\n> [!IMPORTANT]\n> Sosyal biliş modelinde basamaklar kesindir: Stereotipi (bilişsel kalıp) -> Önyargı (duygusal onay) -> Ayrımcılık (davranışsal dışlama).",
+   "synthesisNarrative": "Sosyal biliş modeli, damgalama olgusunu zihinsel bilgi yapılarından başlayarak adım adım davranışa dönüşen bir süreç olarak inceler.\n\n- **Basmakalıp Düşünceler (Stereotipi):** Sosyal bir grubun birçok üyesi tarafından bilinen kolektif bilgi yapılarıdır; suçlama, tehlike ve yetersizlik içerir.\n- **Farkındalık ve Onaylama Farkı:** Pek çok insan bu basmakalıp düşüncelerin farkındadır ancak herkes bunları onaylamaz veya doğru bulmaz.\n- **Önyargı (Duygusal Onay):** Önyargılı insanlar bu olumsuz basmakalıpları bizzat onaylarlar ('hepsi saldırgandır') ve korku/öfke gibi duygusal tepkiler verirler.\n- **Ayrımcılık (Davranışsal Tepki):** Önyargı ve korku kaçınma davranışına dönüşür; örneğin işverenler ruh hastalarını işe almaz ve ücret ödemez.\n\n> [!IMPORTANT]\n> Sosyal biliş modelinde basamaklar kesindir: Stereotipi (bilişsel kalıp) -> Önyargı (duygusal onay) -> Ayrımcılık (davranışsal dışlama).",
+   "interactiveElements": [
+    {
+     "id": "k44-s07-e1",
+     "type": "causal_chain",
+     "title": "Sosyal Biliş Modeli Basamakları",
+     "steps": [
+      "1. Basmakalıp Düşünce (Stereotipi): Toplumda yaygın tehlikelilik ve yetersizlik kalıplarının bilinmesi.",
+      "2. Önyargı Gelişimi: Bireyin bu kalıpları onaylayıp 'hepsi beni ürkütür' diyerek korku duyması.",
+      "3. Ayrımcı Davranış: Bireyin korku nedeniyle hastayı işe almaması ve sosyal mesafeyi açması."
+     ]
+    },
+    {
+     "id": "k44-s07-e2",
+     "type": "micro_quiz",
+     "question": "Sosyal biliş modeline göre 'stereotipi' ile 'önyargı' arasındaki temel ayrım aşağıdakilerden hangisidir?",
+     "options": [
+      {
+       "text": "Stereotipi toplumdaki bilişsel kalıbı temsil ederken, önyargı bu kalıbın onaylanıp duygusal tepki verilmesidir",
+       "isCorrect": true,
+       "explanation": "Stereotipi toplumdaki bilişsel kalıbı temsil ederken, önyargı bu kalıbın onaylanıp duygusal tepki verilmesidir seçeneği ruhsal hastalıklarda damgalama sürecini açıklayan temel klinik ve bilimsel yaklaşımı temsil eder. Bu ilke doğrultusunda soruda hedeflenen klinik ve toplumsal mekanizma eksiksiz olarak doğrulanmaktadır."
+      },
+      {
+       "text": "Stereotipi yalnızca hekimlerde görülürken, önyargı yalnızca hasta yakınlarında ortaya çıkar",
+       "isCorrect": false,
+       "explanation": "Stereotipi yalnızca hekimlerde görülürken, önyargı yalnızca hasta yakınlarında ortaya çıkar kavramı tıp ve psikiyatri pratiğinde farklı kuramsal veya idari süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen klinik durumla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Stereotipi yasal bir suç teşkil ederken, önyargı devlet tarafından ödüllendirilen bir tutumdur",
+       "isCorrect": false,
+       "explanation": "Stereotipi yasal bir suç teşkil ederken, önyargı devlet tarafından ödüllendirilen bir tutumdur kavramı tıp ve psikiyatri pratiğinde farklı kuramsal veya idari süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen klinik durumla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Stereotipi davranışsal ayrımcılığı bitirirken, önyargı hastanın topluma entegrasyonunu hızlandırır",
+       "isCorrect": false,
+       "explanation": "Stereotipi davranışsal ayrımcılığı bitirirken, önyargı hastanın topluma entegrasyonunu hızlandırır kavramı tıp ve psikiyatri pratiğinde farklı kuramsal veya idari süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen klinik durumla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      }
+     ]
+    },
+    {
+     "id": "k44-s07-e3",
+     "type": "cloze_masking",
+     "sentence": "Sosyal biliş modelinde önyargı olumsuz basmakalıpları onaylayarak duygusal tepki gösterme aşamasıdır.",
+     "maskedTerm": "önyargı",
+     "hint": "Tıp eğitimi ve psikiyatri alanındaki temel kavramdır."
+    },
+    {
+     "id": "k44-s07-e4",
+     "type": "active_recall",
+     "question": "Sosyal biliş modelinin üç aşaması ve karşılık geldikleri psikolojik boyutlar nelerdir?",
+     "answer": "1. Stereotipi (Bilişsel boyut), 2. Önyargı (Duygusal boyut), 3. Ayrımcılık (Davranışsal boyut)."
+    }
+   ],
+   "pdfSayfalari": [
+    7,
+    7
+   ],
+   "sourcePdf": {
+    "startPage": 7,
+    "endPage": 7
+   }
+  },
+  {
+   "id": "k2-44-d-s08",
+   "slideNumber": 8,
+   "title": "Damgalanmanın Sistematik Seyri ve Klinik İlişkisi",
+   "bolum": "2",
+   "content": "Damgalanma süreci rastlantısal değil, aşamalar halinde sistematik olarak işleyen ve zamanla kemikleşen bir yapıdır.\n\n- **Yaşam Kalitesinde Çöküş:** Süreç yaşam kalitesinden ödün verme, derin benlik saygısı kaybı ve depresif belirtilerle kendini gösterir.\n- **Sosyal Ağın Daralması:** Ayrımcı tutumlar işsizlik, gelir kaybı ve sosyal çevrenin giderek dramatik biçimde daralmasıyla sonuçlanır.\n- **Hastalık Şiddeti ve İçsel Damgalanma:** Hastalığın klinik şiddeti arttıkça içsel damgalanma düzeyi de doğru orantılı olarak artış gösterir.\n- **Klinik İyileşmenin İyileştirici Gücü:** Tedaviye uyum sağlandıkça ve klinik semptomlar düzeldikçe içsel damgalanmanın azaldığı kanıtlanmıştır.\n\n> [!NOTE]\n> Damgalanmanın sistematik basamaklarının anlaşılması, hem klinik gidişatı öngörmeyi hem de müdahale noktalarını belirlemeyi sağlar.",
+   "synthesisNarrative": "Damgalanma süreci rastlantısal değil, aşamalar halinde sistematik olarak işleyen ve zamanla kemikleşen bir yapıdır.\n\n- **Yaşam Kalitesinde Çöküş:** Süreç yaşam kalitesinden ödün verme, derin benlik saygısı kaybı ve depresif belirtilerle kendini gösterir.\n- **Sosyal Ağın Daralması:** Ayrımcı tutumlar işsizlik, gelir kaybı ve sosyal çevrenin giderek dramatik biçimde daralmasıyla sonuçlanır.\n- **Hastalık Şiddeti ve İçsel Damgalanma:** Hastalığın klinik şiddeti arttıkça içsel damgalanma düzeyi de doğru orantılı olarak artış gösterir.\n- **Klinik İyileşmenin İyileştirici Gücü:** Tedaviye uyum sağlandıkça ve klinik semptomlar düzeldikçe içsel damgalanmanın azaldığı kanıtlanmıştır.\n\n> [!NOTE]\n> Damgalanmanın sistematik basamaklarının anlaşılması, hem klinik gidişatı öngörmeyi hem de müdahale noktalarını belirlemeyi sağlar.",
+   "interactiveElements": [
+    {
+     "id": "k44-s08-e1",
+     "type": "micro_quiz",
+     "question": "Klinik çalışmalara göre hastalık şiddeti ve tedaviye uyum ile içsel damgalanma arasındaki ilişki nasıldır?",
+     "options": [
+      {
+       "text": "Hastalık şiddeti arttıkça içsel damgalanma artar; tedaviye uyum ve düzelmeyle birlikte azalır",
+       "isCorrect": true,
+       "explanation": "Hastalık şiddeti arttıkça içsel damgalanma artar; tedaviye uyum ve düzelmeyle birlikte azalır seçeneği ruhsal hastalıklarda damgalama sürecini açıklayan temel klinik ve bilimsel yaklaşımı temsil eder. Bu ilke doğrultusunda soruda hedeflenen klinik ve toplumsal mekanizma eksiksiz olarak doğrulanmaktadır."
+      },
+      {
+       "text": "Hastalık şiddeti arttıkça içsel damgalanma sıfırlanır ve hasta tamamen rahatlar",
+       "isCorrect": false,
+       "explanation": "Hastalık şiddeti arttıkça içsel damgalanma sıfırlanır ve hasta tamamen rahatlar kavramı tıp ve psikiyatri pratiğinde farklı kuramsal veya idari süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen klinik durumla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Tedaviye tam uyum sağlayan hastalarda içsel damgalanma daima en yüksek seviyeye fırlar",
+       "isCorrect": false,
+       "explanation": "Tedaviye tam uyum sağlayan hastalarda içsel damgalanma daima en yüksek seviyeye fırlar kavramı tıp ve psikiyatri pratiğinde farklı kuramsal veya idari süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen klinik durumla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "İçsel damgalanma ile klinik belirtiler arasında hiçbir bilimsel korelasyon bulunmaz",
+       "isCorrect": false,
+       "explanation": "İçsel damgalanma ile klinik belirtiler arasında hiçbir bilimsel korelasyon bulunmaz kavramı tıp ve psikiyatri pratiğinde farklı kuramsal veya idari süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen klinik durumla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      }
+     ]
+    },
+    {
+     "id": "k44-s08-e2",
+     "type": "spot_the_lie",
+     "topic": "Damgalanma Sürecinin Seyri ve Sonuçları",
+     "items": [
+      {
+       "text": "Damgalanma süreci aşamalar halinde gerçekleşir ve zamanla basmakalıplaşır.",
+       "isLie": false,
+       "explanation": "Damgalanma süreci aşamalar halinde gerçekleşir ve zamanla basmakalıplaşır. ifadesi psikiyatride damgalama dinamiklerini doğru yansıtır. Toplumsal araştırmalar bu yaklaşımı desteklemektedir."
+      },
+      {
+       "text": "Tedavideki düzelme ve semptom kontrolü içsel damgalanmanın gerilemesine katkı sağlar.",
+       "isLie": false,
+       "explanation": "Tedavideki düzelme ve semptom kontrolü içsel damgalanmanın gerilemesine katkı sağlar. ifadesi psikiyatride damgalama dinamiklerini doğru yansıtır. Toplumsal araştırmalar bu yaklaşımı desteklemektedir."
+      },
+      {
+       "text": "Damgalanma süreci hastanın gelir düzeyini ve iş bulma şansını daima olumlu etkiler.",
+       "isLie": true,
+       "explanation": "Damgalanma süreci hastanın gelir düzeyini ve iş bulma şansını daima olumlu etkiler. ifadesi bilimsel ve klinik gerçeklerle çelişmektedir. Damgalama sürecinde bu durum gerçeğe aykırı bir algıdır."
+      }
+     ]
+    },
+    {
+     "id": "k44-s08-e3",
+     "type": "cloze_masking",
+     "sentence": "Hastalığın şiddeti arttıkça içsel damgalanmanın arttığı tedaviye uyumla birlikte azaldığı belirlenmiştir.",
+     "maskedTerm": "içsel damgalanmanın",
+     "hint": "Tıp eğitimi ve psikiyatri alanındaki temel kavramdır."
+    },
+    {
+     "id": "k44-s08-e4",
+     "type": "active_recall",
+     "question": "Hastalık şiddeti ve tedavi başarısının içsel damgalanma üzerindeki etkisi nasıldır?",
+     "answer": "Hastalık şiddeti arttıkça içsel damgalanma artar; tedaviye uyum ve semptomlarda düzelme sağlandıkça içsel damgalanma azalır."
+    }
+   ],
+   "pdfSayfalari": [
+    8,
+    9
+   ],
+   "sourcePdf": {
+    "startPage": 8,
+    "endPage": 9
+   }
+  },
+  {
+   "id": "k2-44-d-s09",
+   "slideNumber": 9,
+   "title": "Stereotipiler: Toplumsal Basmakalıp Görüşler",
+   "bolum": "2",
+   "content": "Stereotipiler toplumların ortak görüşünü temsil eden ve ruhsal hastalığı olanların nasıl olduğunu varsayan kolektif kalıplardır.\n\n- **Kolektif Görüş:** Toplumun geniş kesimlerince paylaşılan, sorgulanmadan doğru kabul edilen basmakalıp yargılardır.\n- **Tehlikelilik İnancı:** En yaygın stereotipi ruhsal hastalığı olan kişilerin şiddete eğilimli, saldırgan ve kontrol edilemez olduğu varsayımıdır.\n- **Yetersizlik ve Sorumsuzluk:** Hastaların hiçbir işte çalışamayacağı, aile kuramayacağı ve karar verme yetisinden yoksun olduğu inancıdır.\n- **Hastalığın Nedeni İçin Suçlama:** Kişinin zayıf iradeli olduğu veya günah işlediği için ruhsal hastalığa yakalandığı yönündeki temelsiz atıflardır.\n\n> [!IMPORTANT]\n> Stereotipi aşamasında kişi bu düşünceleri sadece duymuş veya biliyor olabilir; bunları kişisel inancı haline getirmesi önyargı aşamasıdır.",
+   "synthesisNarrative": "Stereotipiler toplumların ortak görüşünü temsil eden ve ruhsal hastalığı olanların nasıl olduğunu varsayan kolektif kalıplardır.\n\n- **Kolektif Görüş:** Toplumun geniş kesimlerince paylaşılan, sorgulanmadan doğru kabul edilen basmakalıp yargılardır.\n- **Tehlikelilik İnancı:** En yaygın stereotipi ruhsal hastalığı olan kişilerin şiddete eğilimli, saldırgan ve kontrol edilemez olduğu varsayımıdır.\n- **Yetersizlik ve Sorumsuzluk:** Hastaların hiçbir işte çalışamayacağı, aile kuramayacağı ve karar verme yetisinden yoksun olduğu inancıdır.\n- **Hastalığın Nedeni İçin Suçlama:** Kişinin zayıf iradeli olduğu veya günah işlediği için ruhsal hastalığa yakalandığı yönündeki temelsiz atıflardır.\n\n> [!IMPORTANT]\n> Stereotipi aşamasında kişi bu düşünceleri sadece duymuş veya biliyor olabilir; bunları kişisel inancı haline getirmesi önyargı aşamasıdır.",
+   "interactiveElements": [
+    {
+     "id": "k44-s09-e1",
+     "type": "interactive_table",
+     "tableHeaders": [
+      "Stereotipi Türü",
+      "Toplumsal Basmakalıp İfade",
+      "Klinik Gerçeklik"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Tehlikelilik Stereotipisi",
+         "isMasked": false,
+         "hint": ""
+        },
+        {
+         "text": "Ruhsal hastaların hepsi saldırgan ve kontrolsüzdür",
+         "isMasked": false,
+         "hint": ""
+        },
+        {
+         "text": "Şiddet riski toplum ortalamasına yakındır ve tedaviyle kontrol edilir",
+         "isMasked": true,
+         "hint": "Tıp eğitimi ve psikiyatri alanındaki temel kavramdır."
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Yetersizlik Stereotipisi",
+         "isMasked": false,
+         "hint": ""
+        },
+        {
+         "text": "Ruhsal hastalar hiçbir işte çalışamaz ve karar alamaz",
+         "isMasked": false,
+         "hint": ""
+        },
+        {
+         "text": "Uygun destek ve tedaviyle hastalar başarıyla çalışabilir",
+         "isMasked": true,
+         "hint": "Tıp eğitimi ve psikiyatri alanındaki temel kavramdır."
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Suçlama Stereotipisi",
+         "isMasked": false,
+         "hint": ""
+        },
+        {
+         "text": "Kişi zayıf iradesi yüzünden hastalanmıştır",
+         "isMasked": false,
+         "hint": ""
+        },
+        {
+         "text": "Ruhsal hastalıklar biyopsikososyal etiyolojiye sahip tıbbi durumlardır",
+         "isMasked": true,
+         "hint": "Tıp eğitimi ve psikiyatri alanındaki temel kavramdır."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k44-s09-e2",
+     "type": "micro_quiz",
+     "question": "Toplumda ruhsal hastalığı olan bireylere yönelik en sık rastlanan stereotipi grubu aşağıdakilerden hangisidir?",
+     "options": [
+      {
+       "text": "Tehlikelilik, yetersizlik ve irade zayıflığıyla suçlama",
+       "isCorrect": true,
+       "explanation": "Tehlikelilik, yetersizlik ve irade zayıflığıyla suçlama seçeneği ruhsal hastalıklarda damgalama sürecini açıklayan temel klinik ve bilimsel yaklaşımı temsil eder. Bu ilke doğrultusunda soruda hedeflenen klinik ve toplumsal mekanizma eksiksiz olarak doğrulanmaktadır."
+      },
+      {
+       "text": "Üstün zekalı olma ve tüm dilleri anında konuşabilme",
+       "isCorrect": false,
+       "explanation": "Üstün zekalı olma ve tüm dilleri anında konuşabilme kavramı tıp ve psikiyatri pratiğinde farklı kuramsal veya idari süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen klinik durumla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Fiziksel cerrahi operasyonları hatasız yapabilme yeteneği",
+       "isCorrect": false,
+       "explanation": "Fiziksel cerrahi operasyonları hatasız yapabilme yeteneği kavramı tıp ve psikiyatri pratiğinde farklı kuramsal veya idari süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen klinik durumla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Ekonomik piyasaları kusursuz tahmin etme yetisi",
+       "isCorrect": false,
+       "explanation": "Ekonomik piyasaları kusursuz tahmin etme yetisi kavramı tıp ve psikiyatri pratiğinde farklı kuramsal veya idari süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen klinik durumla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      }
+     ]
+    },
+    {
+     "id": "k44-s09-e3",
+     "type": "cloze_masking",
+     "sentence": "Stereotipiler toplumların ortak görüşünü temsil eden ve ruhsal hastalığı olanların nasıl olduğunu tanımlayan bilgi yapılarıdır.",
+     "maskedTerm": "Stereotipiler",
+     "hint": "Tıp eğitimi ve psikiyatri alanındaki temel kavramdır."
+    },
+    {
+     "id": "k44-s09-e4",
+     "type": "active_recall",
+     "question": "Toplumda ruhsal hastalıklara yönelik üretilen üç temel stereotipi içeriği nedir?",
+     "answer": "1. Tehlikelilik (saldırganlık inancı), 2. Yetersizlik (sorumsuzluk ve iş göremezlik), 3. Suçlama (hastalığından sorumlu tutma)."
+    }
+   ],
+   "pdfSayfalari": [
+    10,
+    10
+   ],
+   "sourcePdf": {
+    "startPage": 10,
+    "endPage": 10
+   }
+  },
+  {
+   "id": "k2-44-d-s10",
+   "slideNumber": 10,
+   "title": "Önyargıdan Ayrımcılığa: Sosyal Mesafe ve Dışlama",
+   "bolum": "2",
+   "content": "Sosyal biliş modelinde önyargı basmakalıpları onaylayıp öfke ve korku duymaktır; ayrımcılık ise bunu dışlayıcı davranışa dökmektir.\n\n- **Önyargı (Duygusal Tepki):** Birey 'bütün ruh hastaları tehlikelidir' kalıbını doğru kabul eder ve bu kabul yoğun korku ve kaçınma hissine yol açar.\n- **Ayrımcılık (Davranış):** Birey ya da kurumların önyargı sonucu sergilediği somut dışlayıcı eylemlerdir (iş vermeme, ev kiralamama, arkadaş olmama).\n- **Sosyal Mesafe:** İnsanların ruhsal hastalığı olan biriyle komşu, ev arkadaşı veya iş ortağı olmaktan kaçınmasıyla somutlaşır.\n- **İstihdam Engelleri:** İşverenlerin ruhsal hastalığı olan bireyleri çalıştırmak istememesi ekonomik bağımsızlığı tamamen yok eder.\n\n> [!NOTE]\n> Bireysel ayrımcılık hastanın sosyal çevresini daraltırken, onu toplumsal ve ekonomik yaşamın dışına iter.",
+   "synthesisNarrative": "Sosyal biliş modelinde önyargı basmakalıpları onaylayıp öfke ve korku duymaktır; ayrımcılık ise bunu dışlayıcı davranışa dökmektir.\n\n- **Önyargı (Duygusal Tepki):** Birey 'bütün ruh hastaları tehlikelidir' kalıbını doğru kabul eder ve bu kabul yoğun korku ve kaçınma hissine yol açar.\n- **Ayrımcılık (Davranış):** Birey ya da kurumların önyargı sonucu sergilediği somut dışlayıcı eylemlerdir (iş vermeme, ev kiralamama, arkadaş olmama).\n- **Sosyal Mesafe:** İnsanların ruhsal hastalığı olan biriyle komşu, ev arkadaşı veya iş ortağı olmaktan kaçınmasıyla somutlaşır.\n- **İstihdam Engelleri:** İşverenlerin ruhsal hastalığı olan bireyleri çalıştırmak istememesi ekonomik bağımsızlığı tamamen yok eder.\n\n> [!NOTE]\n> Bireysel ayrımcılık hastanın sosyal çevresini daraltırken, onu toplumsal ve ekonomik yaşamın dışına iter.",
+   "interactiveElements": [
+    {
+     "id": "k44-s10-e1",
+     "type": "swipe_matching",
+     "leftCategory": "Önyargı (Duygusal Onay)",
+     "rightCategory": "Ayrımcılık (Davranışsal Eylem)",
+     "cards": [
+      {
+       "text": "Ruhsal hastalığı olan birini görünce yoğun korku duyma",
+       "category": "left",
+       "explanation": "Ruhsal hastalığı olan birini görünce yoğun korku duyma kavramı ilgili damgalama kategorisi altında değerlendirilen temel unsurdur. Sosyal psikiyatri pratiğinde bu eşleme kritik önem taşır."
+      },
+      {
+       "text": "Tüm hastaların saldırgan olduğuna kalben inanma",
+       "category": "left",
+       "explanation": "Tüm hastaların saldırgan olduğuna kalben inanma kavramı ilgili damgalama kategorisi altında değerlendirilen temel unsurdur. Sosyal psikiyatri pratiğinde bu eşleme kritik önem taşır."
+      },
+      {
+       "text": "Ruhsal hastalığı olan adaya iş vermeyi reddetme",
+       "category": "right",
+       "explanation": "Ruhsal hastalığı olan adaya iş vermeyi reddetme kavramı ilgili damgalama kategorisi altında değerlendirilen temel unsurdur. Sosyal psikiyatri pratiğinde bu eşleme kritik önem taşır."
+      },
+      {
+       "text": "Eski psikiyatri hastasına ev kiralamaktan kaçınma",
+       "category": "right",
+       "explanation": "Eski psikiyatri hastasına ev kiralamaktan kaçınma kavramı ilgili damgalama kategorisi altında değerlendirilen temel unsurdur. Sosyal psikiyatri pratiğinde bu eşleme kritik önem taşır."
+      }
+     ]
+    },
+    {
+     "id": "k44-s10-e2",
+     "type": "micro_quiz",
+     "question": "Aşağıdakilerden hangisi doğrudan 'ayrımcılık' (davranışsal tepki) basamağını örnekler?",
+     "options": [
+      {
+       "text": "Bir işverenin işe alım kriterlerini karşılayan adayı psikiyatrik tanısı nedeniyle reddetmesi",
+       "isCorrect": true,
+       "explanation": "Bir işverenin işe alım kriterlerini karşılayan adayı psikiyatrik tanısı nedeniyle reddetmesi seçeneği ruhsal hastalıklarda damgalama sürecini açıklayan temel klinik ve bilimsel yaklaşımı temsil eder. Bu ilke doğrultusunda soruda hedeflenen klinik ve toplumsal mekanizma eksiksiz olarak doğrulanmaktadır."
+      },
+      {
+       "text": "Bir kişinin ruhsal hastalıklarla ilgili bir haber bültenini televizyonda izlemesi",
+       "isCorrect": false,
+       "explanation": "Bir kişinin ruhsal hastalıklarla ilgili bir haber bültenini televizyonda izlemesi kavramı tıp ve psikiyatri pratiğinde farklı kuramsal veya idari süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen klinik durumla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Bir araştırmacının anket formundaki basmakalıp yargıları okuması",
+       "isCorrect": false,
+       "explanation": "Bir araştırmacının anket formundaki basmakalıp yargıları okuması kavramı tıp ve psikiyatri pratiğinde farklı kuramsal veya idari süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen klinik durumla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Bir hekimin hastasına reçete ettiği ilacın prospektüsünü incelemesi",
+       "isCorrect": false,
+       "explanation": "Bir hekimin hastasına reçete ettiği ilacın prospektüsünü incelemesi kavramı tıp ve psikiyatri pratiğinde farklı kuramsal veya idari süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen klinik durumla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      }
+     ]
+    },
+    {
+     "id": "k44-s10-e3",
+     "type": "cloze_masking",
+     "sentence": "Önyargılı insanlar basmakalıpları onaylayarak korku hisseder ve davranışsal tepki olarak ayrımcılık yaparlar.",
+     "maskedTerm": "ayrımcılık",
+     "hint": "Tıp eğitimi ve psikiyatri alanındaki temel kavramdır."
+    },
+    {
+     "id": "k44-s10-e4",
+     "type": "active_recall",
+     "question": "Önyargı ile ayrımcılık arasındaki davranışsal köprü nasıl kurulur?",
+     "answer": "Basmakalıp inanç onaylanır (önyargı), korku doğar; bu korku kaçınmaya ve iş/ev vermeme gibi eylemlere (ayrımcılık) yol açar."
+    }
+   ],
+   "pdfSayfalari": [
+    11,
+    13
+   ],
+   "sourcePdf": {
+    "startPage": 11,
+    "endPage": 13
+   }
+  },
+  {
+   "id": "k2-44-d-s11",
+   "slideNumber": 11,
+   "title": "[TEKRAR SAYFASI - CHECKPOINT 2] Sosyal Biliş Modeli ve Ayrımcılık",
+   "bolum": "2",
+   "content": "Bu tekrar sayfasında sosyal biliş modelinin aşamaları (stereotipi, önyargı, ayrımcılık) ve klinik ilişkisi pekiştirilmektedir.\n\n- **Sosyal Biliş Basamakları:** Stereotipi (bilgi yapısı) bilinir; önyargılı kişi bunu onaylayıp korku duyar; ayrımcılıkta ise eyleme döker.\n- **Temel Stereotipler:** Ruhsal hastaların tehlikeli, aciz, yetersiz olduğu ve hastalıklarından bizzat sorumlu oldukları mitleridir.\n- **Klinik Korelasyon:** Hastalık şiddeti arttıkça içsel damgalanma tırmanır; semptomlar düzeldikçe ve tedaviye uyuldukça içsel damgalanma geriler.\n- **Davranışsal Sonuçlar:** Sosyal mesafenin açılması, işsizlik, barınma engelleri ve hastanın toplumdan izole edilmesi.\n\n> [!NOTE]\n> Bilişsel kalıbın farkında olmakla onu onaylamak arasındaki fark, önyargı ve ayrımcılığı önlemede kilit noktadır.",
+   "synthesisNarrative": "Bu tekrar sayfasında sosyal biliş modelinin aşamaları (stereotipi, önyargı, ayrımcılık) ve klinik ilişkisi pekiştirilmektedir.\n\n- **Sosyal Biliş Basamakları:** Stereotipi (bilgi yapısı) bilinir; önyargılı kişi bunu onaylayıp korku duyar; ayrımcılıkta ise eyleme döker.\n- **Temel Stereotipler:** Ruhsal hastaların tehlikeli, aciz, yetersiz olduğu ve hastalıklarından bizzat sorumlu oldukları mitleridir.\n- **Klinik Korelasyon:** Hastalık şiddeti arttıkça içsel damgalanma tırmanır; semptomlar düzeldikçe ve tedaviye uyuldukça içsel damgalanma geriler.\n- **Davranışsal Sonuçlar:** Sosyal mesafenin açılması, işsizlik, barınma engelleri ve hastanın toplumdan izole edilmesi.\n\n> [!NOTE]\n> Bilişsel kalıbın farkında olmakla onu onaylamak arasındaki fark, önyargı ve ayrımcılığı önlemede kilit noktadır.",
+   "interactiveElements": [
+    {
+     "id": "k44-s11-e1",
+     "type": "micro_quiz",
+     "question": "Sosyal biliş modelinde 'stereotipi', 'önyargı' ve 'ayrımcılık' kavramlarının doğru sıralanışı hangisidir?",
+     "options": [
+      {
+       "text": "Stereotipi (Bilişsel kalıp) -> Önyargı (Duygusal onay) -> Ayrımcılık (Davranışsal dışlama)",
+       "isCorrect": true,
+       "explanation": "Stereotipi (Bilişsel kalıp) -> Önyargı (Duygusal onay) -> Ayrımcılık (Davranışsal dışlama) seçeneği ruhsal hastalıklarda damgalama sürecini açıklayan temel klinik ve bilimsel yaklaşımı temsil eder. Bu ilke doğrultusunda soruda hedeflenen klinik ve toplumsal mekanizma eksiksiz olarak doğrulanmaktadır."
+      },
+      {
+       "text": "Ayrımcılık -> Stereotipi -> Önyargı",
+       "isCorrect": false,
+       "explanation": "Ayrımcılık -> Stereotipi -> Önyargı kavramı tıp ve psikiyatri pratiğinde farklı kuramsal veya idari süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen klinik durumla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Önyargı -> Ayrımcılık -> Stereotipi",
+       "isCorrect": false,
+       "explanation": "Önyargı -> Ayrımcılık -> Stereotipi kavramı tıp ve psikiyatri pratiğinde farklı kuramsal veya idari süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen klinik durumla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Stereotipi -> Ayrımcılık -> Önyargı",
+       "isCorrect": false,
+       "explanation": "Stereotipi -> Ayrımcılık -> Önyargı kavramı tıp ve psikiyatri pratiğinde farklı kuramsal veya idari süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen klinik durumla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      }
+     ]
+    },
+    {
+     "id": "k44-s11-e2",
+     "type": "spot_the_lie",
+     "topic": "Sosyal Biliş Modeli Kontrol Önermeleri",
+     "items": [
+      {
+       "text": "Toplumdaki basmakalıpların farkında olan her birey mutlaka önyargılı olmak zorunda değildir.",
+       "isLie": false,
+       "explanation": "Toplumdaki basmakalıpların farkında olan her birey mutlaka önyargılı olmak zorunda değildir. ifadesi psikiyatride damgalama dinamiklerini doğru yansıtır. Toplumsal araştırmalar bu yaklaşımı desteklemektedir."
+      },
+      {
+       "text": "Önyargılı bireyler olumsuz basmakalıpları onaylar ve korku gibi duygusal tepkiler verirler.",
+       "isLie": false,
+       "explanation": "Önyargılı bireyler olumsuz basmakalıpları onaylar ve korku gibi duygusal tepkiler verirler. ifadesi psikiyatride damgalama dinamiklerini doğru yansıtır. Toplumsal araştırmalar bu yaklaşımı desteklemektedir."
+      },
+      {
+       "text": "Klinik semptomların kontrol altına alınması içsel damgalanmayı daima daha da şiddetlendirir.",
+       "isLie": true,
+       "explanation": "Klinik semptomların kontrol altına alınması içsel damgalanmayı daima daha da şiddetlendirir. ifadesi bilimsel ve klinik gerçeklerle çelişmektedir. Damgalama sürecinde bu durum gerçeğe aykırı bir algıdır."
+      }
+     ]
+    },
+    {
+     "id": "k44-s11-e3",
+     "type": "interactive_table",
+     "tableHeaders": [
+      "Aşama",
+      "Psikolojik Alan",
+      "Örnek Durum"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Stereotipi",
+         "isMasked": false,
+         "hint": ""
+        },
+        {
+         "text": "Bilişsel Bilgi Yapısı",
+         "isMasked": false,
+         "hint": ""
+        },
+        {
+         "text": "Ruhsal hastaların saldırgan olduğuna dair genel inanç",
+         "isMasked": true,
+         "hint": "Tıp eğitimi ve psikiyatri alanındaki temel kavramdır."
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Önyargı",
+         "isMasked": false,
+         "hint": ""
+        },
+        {
+         "text": "Duygusal Onaylama",
+         "isMasked": false,
+         "hint": ""
+        },
+        {
+         "text": "Bu inancı onaylayıp hastadan korkma ve irkilme",
+         "isMasked": true,
+         "hint": "Tıp eğitimi ve psikiyatri alanındaki temel kavramdır."
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Ayrımcılık",
+         "isMasked": false,
+         "hint": ""
+        },
+        {
+         "text": "Davranışsal Eylem",
+         "isMasked": false,
+         "hint": ""
+        },
+        {
+         "text": "Korku nedeniyle hastaya ev kiralamayı reddetme",
+         "isMasked": true,
+         "hint": "Tıp eğitimi ve psikiyatri alanındaki temel kavramdır."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k44-s11-e4",
+     "type": "active_recall",
+     "question": "Sosyal biliş modelinde farkındalık ile önyargı arasındaki fark nedir?",
+     "answer": "Farkındalıkta toplumdaki basmakalıp bilinir ama reddedilebilir; önyargıda ise kişi bu kalıbı doğru kabul edip duygusal tepki verir."
+    }
+   ],
+   "isCheckpoint": true
+  },
+  {
+   "id": "k2-44-d-s12",
+   "slideNumber": 12,
+   "title": "Ayrımcılığın Üç Düzeyi ve Toplumsal Mitler",
+   "bolum": "3",
+   "content": "Toplumda ayrımcılık üç temel düzeyde işler ve ruhsal bozukluklar hakkında köklü mitlerle beslenir.\n\n- **Ayrımcılığın Üç Düzeyi:** 1. Bireysel ayrımcılık, 2. Toplumsal ve yapısal ayrımcılık, 3. Kendini damgalama (içselleştirilmiş öz damgalama).\n- **İyileşemez Miti:** 'Ruhsal bozukluğu olan kişiler asla iyileşemezler' inancı, modern psikiyatrik tedavilerin başarısını tamamen inkar eder.\n- **Kilit Altında Tutulma Miti:** 'Ruhsal hastalıklı bireyler daima kapalı kurumlarda veya kilit altında tutulmalıdır' anlayışı insan haklarını ihlal eder.\n- **Çocuksu Görme Miti:** 'Şiddetli ruhsal bozukluğu olanlar çocuk gibidir' miti bireyin medeni haklarını ve özerk karar alma iradesini gasbeder.\n\n> [!IMPORTANT]\n> Bu mitler toplumun zihnine yerleşerek yapısal ayrımcılığın ve kurumsal dışlamanın meşrulaştırılmasına zemin hazırlar.",
+   "synthesisNarrative": "Toplumda ayrımcılık üç temel düzeyde işler ve ruhsal bozukluklar hakkında köklü mitlerle beslenir.\n\n- **Ayrımcılığın Üç Düzeyi:** 1. Bireysel ayrımcılık, 2. Toplumsal ve yapısal ayrımcılık, 3. Kendini damgalama (içselleştirilmiş öz damgalama).\n- **İyileşemez Miti:** 'Ruhsal bozukluğu olan kişiler asla iyileşemezler' inancı, modern psikiyatrik tedavilerin başarısını tamamen inkar eder.\n- **Kilit Altında Tutulma Miti:** 'Ruhsal hastalıklı bireyler daima kapalı kurumlarda veya kilit altında tutulmalıdır' anlayışı insan haklarını ihlal eder.\n- **Çocuksu Görme Miti:** 'Şiddetli ruhsal bozukluğu olanlar çocuk gibidir' miti bireyin medeni haklarını ve özerk karar alma iradesini gasbeder.\n\n> [!IMPORTANT]\n> Bu mitler toplumun zihnine yerleşerek yapısal ayrımcılığın ve kurumsal dışlamanın meşrulaştırılmasına zemin hazırlar.",
+   "interactiveElements": [
+    {
+     "id": "k44-s12-e1",
+     "type": "micro_quiz",
+     "question": "Aşağıdakilerden hangisi toplumda ruhsal hastalıklara ilişkin yaygın kabul gören gerçeğe aykırı mitlerden biridir?",
+     "options": [
+      {
+       "text": "Ruhsal bozukluğu olan bireyler asla iyileşemez ve daima kilit altında tutulmalıdır",
+       "isCorrect": true,
+       "explanation": "Ruhsal bozukluğu olan bireyler asla iyileşemez ve daima kilit altında tutulmalıdır seçeneği ruhsal hastalıklarda damgalama sürecini açıklayan temel klinik ve bilimsel yaklaşımı temsil eder. Bu ilke doğrultusunda soruda hedeflenen klinik ve toplumsal mekanizma eksiksiz olarak doğrulanmaktadır."
+      },
+      {
+       "text": "Ruhsal bozukluklar biyolojik ve psikososyal bileşenleri olan tıbbi durumlardır",
+       "isCorrect": false,
+       "explanation": "Ruhsal bozukluklar biyolojik ve psikososyal bileşenleri olan tıbbi durumlardır kavramı tıp ve psikiyatri pratiğinde farklı kuramsal veya idari süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen klinik durumla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Tedaviye erken başlanması klinik prognozu ve sosyal işlevselliği olumlu etkiler",
+       "isCorrect": false,
+       "explanation": "Tedaviye erken başlanması klinik prognozu ve sosyal işlevselliği olumlu etkiler kavramı tıp ve psikiyatri pratiğinde farklı kuramsal veya idari süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen klinik durumla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Toplum temelli psikososyal destek programları hastaların uyumunu artırır",
+       "isCorrect": false,
+       "explanation": "Toplum temelli psikososyal destek programları hastaların uyumunu artırır kavramı tıp ve psikiyatri pratiğinde farklı kuramsal veya idari süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen klinik durumla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      }
+     ]
+    },
+    {
+     "id": "k44-s12-e2",
+     "type": "spot_the_lie",
+     "topic": "Ayrımcılık Düzeyleri ve Mitler",
+     "items": [
+      {
+       "text": "Ayrımcılık bireysel, yapısal ve kendini damgalama olmak üzere üç temel düzeyde gerçekleşir.",
+       "isLie": false,
+       "explanation": "Ayrımcılık bireysel, yapısal ve kendini damgalama olmak üzere üç temel düzeyde gerçekleşir. ifadesi psikiyatride damgalama dinamiklerini doğru yansıtır. Toplumsal araştırmalar bu yaklaşımı desteklemektedir."
+      },
+      {
+       "text": "Ruhsal bozukluğu olan kişilerin hiçbir zaman iyileşemeyeceği bilimsel bir gerçektir.",
+       "isLie": true,
+       "explanation": "Ruhsal bozukluğu olan kişilerin hiçbir zaman iyileşemeyeceği bilimsel bir gerçektir. ifadesi bilimsel ve klinik gerçeklerle çelişmektedir. Damgalama sürecinde bu durum gerçeğe aykırı bir algıdır."
+      },
+      {
+       "text": "Ruhsal hastaları çocuk gibi görmek onların yetişkin hak ve sorumluluklarını kısıtlar.",
+       "isLie": false,
+       "explanation": "Ruhsal hastaları çocuk gibi görmek onların yetişkin hak ve sorumluluklarını kısıtlar. ifadesi psikiyatride damgalama dinamiklerini doğru yansıtır. Toplumsal araştırmalar bu yaklaşımı desteklemektedir."
+      }
+     ]
+    },
+    {
+     "id": "k44-s12-e3",
+     "type": "cloze_masking",
+     "sentence": "Toplumda ruhsal bozukluğu olan kişilerin asla iyileşemeyeceği inancı yaygın bir mittir.",
+     "maskedTerm": "asla iyileşemeyeceği",
+     "hint": "Tıp eğitimi ve psikiyatri alanındaki temel kavramdır."
+    },
+    {
+     "id": "k44-s12-e4",
+     "type": "active_recall",
+     "question": "Ayrımcılığın üç düzeyi ve en yaygın iki toplumsal mit nedir?",
+     "answer": "Düzeyler: Bireysel, Yapısal, Kendini damgalama. Mitler: Asla iyileşemezler; daima kilit altında tutulmalıdırlar."
+    }
+   ],
+   "pdfSayfalari": [
+    14,
+    15
+   ],
+   "sourcePdf": {
+    "startPage": 14,
+    "endPage": 15
+   }
+  },
+  {
+   "id": "k2-44-d-s13",
+   "slideNumber": 13,
+   "title": "İş Yaşamında Ayrımcılık ve Kariyer Engelleri",
+   "bolum": "3",
+   "content": "Ayrımcılık yalnızca tekil bireylerin olumsuz yaklaşımlarından ibaret olmayıp iş ve sosyal hayatta kurumsallaşabilmektedir.\n\n- **İş Yaşamında Düşük Statü Miti:** 'İyileşen ruhsal bozukluğu olanlar önemli pozisyonlara gelemez, yalnızca düşük iş seviyelerinde çalışabilir' inancı yaygındır.\n- **Kişisel Hata Yaftalaması:** 'Ruhsal bozukluğu olan kişiler kendi hataları nedeniyle hastalanırlar' miti, biyolojik temelleri yok sayarak hastayı suçlar.\n- **Kariyer Engelleri:** Bu mitler nedeniyle iyileşmiş hastalar terfi ettirilmez, yetki verilmez ve kritik görevlerden men edilir.\n- **Sosyal Yabancılaşma:** Birey ne kadar çabalarsa çabalasın geçmiş psikiyatri öyküsü kariyerinde aşılmaz bir bariyer olarak önüne çıkarılır.\n\n> [!NOTE]\n> İyileşmiş bir bireye bile yetki ve sorumluluk vermemek, ayrımcılığın iş hayatındaki sistematik tezahürüdür.",
+   "synthesisNarrative": "Ayrımcılık yalnızca tekil bireylerin olumsuz yaklaşımlarından ibaret olmayıp iş ve sosyal hayatta kurumsallaşabilmektedir.\n\n- **İş Yaşamında Düşük Statü Miti:** 'İyileşen ruhsal bozukluğu olanlar önemli pozisyonlara gelemez, yalnızca düşük iş seviyelerinde çalışabilir' inancı yaygındır.\n- **Kişisel Hata Yaftalaması:** 'Ruhsal bozukluğu olan kişiler kendi hataları nedeniyle hastalanırlar' miti, biyolojik temelleri yok sayarak hastayı suçlar.\n- **Kariyer Engelleri:** Bu mitler nedeniyle iyileşmiş hastalar terfi ettirilmez, yetki verilmez ve kritik görevlerden men edilir.\n- **Sosyal Yabancılaşma:** Birey ne kadar çabalarsa çabalasın geçmiş psikiyatri öyküsü kariyerinde aşılmaz bir bariyer olarak önüne çıkarılır.\n\n> [!NOTE]\n> İyileşmiş bir bireye bile yetki ve sorumluluk vermemek, ayrımcılığın iş hayatındaki sistematik tezahürüdür.",
+   "interactiveElements": [
+    {
+     "id": "k44-s13-e1",
+     "type": "micro_quiz",
+     "question": "Toplumda ve iş yaşamında iyileşmiş ruhsal bozukluğu olan bireylere yönelik hangi haksız mit kariyer gelişimini engeller?",
+     "options": [
+      {
+       "text": "İyileşseler bile sorumlu pozisyonlara uygun olamayacakları ve ancak düşük işlerde çalışabilecekleri miti",
+       "isCorrect": true,
+       "explanation": "İyileşseler bile sorumlu pozisyonlara uygun olamayacakları ve ancak düşük işlerde çalışabilecekleri miti seçeneği ruhsal hastalıklarda damgalama sürecini açıklayan temel klinik ve bilimsel yaklaşımı temsil eder. Bu ilke doğrultusunda soruda hedeflenen klinik ve toplumsal mekanizma eksiksiz olarak doğrulanmaktadır."
+      },
+      {
+       "text": "İyileşen hastaların doğrudan şirket yönetim kuruluna atanması gerektiği inancı",
+       "isCorrect": false,
+       "explanation": "İyileşen hastaların doğrudan şirket yönetim kuruluna atanması gerektiği inancı kavramı tıp ve psikiyatri pratiğinde farklı kuramsal veya idari süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen klinik durumla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Tüm psikiyatrik tedavilerin iş verimini zorunlu olarak iki katına çıkardığı düşüncesi",
+       "isCorrect": false,
+       "explanation": "Tüm psikiyatrik tedavilerin iş verimini zorunlu olarak iki katına çıkardığı düşüncesi kavramı tıp ve psikiyatri pratiğinde farklı kuramsal veya idari süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen klinik durumla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Hastalık öyküsü olanların çalışma saatlerinin yasal olarak sıfırlanması gerektiği",
+       "isCorrect": false,
+       "explanation": "Hastalık öyküsü olanların çalışma saatlerinin yasal olarak sıfırlanması gerektiği kavramı tıp ve psikiyatri pratiğinde farklı kuramsal veya idari süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen klinik durumla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      }
+     ]
+    },
+    {
+     "id": "k44-s13-e2",
+     "type": "spot_the_lie",
+     "topic": "İş Yaşamında Ayrımcılık ve Suçlama",
+     "items": [
+      {
+       "text": "Ruhsal bozukluğu olanların kendi hataları yüzünden hastalandığı inancı bilim dışı bir suçlamadır.",
+       "isLie": false,
+       "explanation": "Ruhsal bozukluğu olanların kendi hataları yüzünden hastalandığı inancı bilim dışı bir suçlamadır. ifadesi psikiyatride damgalama dinamiklerini doğru yansıtır. Toplumsal araştırmalar bu yaklaşımı desteklemektedir."
+      },
+      {
+       "text": "İyileşmiş psikiyatri hastaları uygun şartlarda her türlü sorumlu pozisyonda başarıyla görev alabilir.",
+       "isLie": false,
+       "explanation": "İyileşmiş psikiyatri hastaları uygun şartlarda her türlü sorumlu pozisyonda başarıyla görev alabilir. ifadesi psikiyatride damgalama dinamiklerini doğru yansıtır. Toplumsal araştırmalar bu yaklaşımı desteklemektedir."
+      },
+      {
+       "text": "Ruhsal hastalığı atlatan bireylerin önemli pozisyonlara getirilmemesi tıbbi bir zorunluluktur.",
+       "isLie": true,
+       "explanation": "Ruhsal hastalığı atlatan bireylerin önemli pozisyonlara getirilmemesi tıbbi bir zorunluluktur. ifadesi bilimsel ve klinik gerçeklerle çelişmektedir. Damgalama sürecinde bu durum gerçeğe aykırı bir algıdır."
+      }
+     ]
+    },
+    {
+     "id": "k44-s13-e3",
+     "type": "cloze_masking",
+     "sentence": "Toplumda ruhsal bozukluğu olan kişilerin kendi hataları nedeniyle hastalandığı inancı yaygın bir suçlamadır.",
+     "maskedTerm": "kendi hataları",
+     "hint": "Tıp eğitimi ve psikiyatri alanındaki temel kavramdır."
+    },
+    {
+     "id": "k44-s13-e4",
+     "type": "active_recall",
+     "question": "İş yaşamında iyileşmiş hastalara yönelik sergilenen temel ayrımcı mit nedir?",
+     "answer": "İyileşseler bile sorumlu pozisyonlara uygun olmadıkları ve sadece düşük seviyeli işlerde çalışabilecekleri inancıdır."
+    }
+   ],
+   "pdfSayfalari": [
+    16,
+    16
+   ],
+   "sourcePdf": {
+    "startPage": 16,
+    "endPage": 16
+   }
+  },
+  {
+   "id": "k2-44-d-s14",
+   "slideNumber": 14,
+   "title": "Yapısal Ayrımcılık: Sigorta ve Mevzuat Engelleri",
+   "bolum": "3",
+   "content": "Ayrımcılık yalnızca bireysel tutumların basit bir sonucu değildir; kurallar ve düzenlemelerle kurumsallaşabilir.\n\n- **Yapısal Ayrımcılık Tanımı:** Ruhsal hastalığı olan bireyleri, toplumsal kuralların, yasaların ve kurumsal düzenlemelerin sistematik olarak dezavantajlı kılmasıdır.\n- **Sağlık Sigortası Kısıtlamaları:** Özel veya kamusal sağlık sigortası poliçelerinde ruhsal hastalıkların kapsam dışı bırakılması en bariz yapısal ayrımcılık örneğidir.\n- **Bütçe ve Kaynak Yetersizliği:** Genel sağlık bütçesi içinde psikiyatri bakım hizmetlerine ve araştırmalarına ayrılan payın kasıtlı olarak düşük tutulmasıdır.\n- **Yönetmelik ve Mevzuat Engelleri:** İstihdam ve ehliyet gibi alanlarda ruhsal bozukluk öyküsü olanlara orantısız ve peşin kısıtlamalar getirilmesidir.\n\n> [!IMPORTANT]\n> Yapısal ayrımcılık bireysel önyargılardan bağımsız olarak sistemin kendi çarkları eliyle hastayı mağdur eden kurumsal bir süreçtir.",
+   "synthesisNarrative": "Ayrımcılık yalnızca bireysel tutumların basit bir sonucu değildir; kurallar ve düzenlemelerle kurumsallaşabilir.\n\n- **Yapısal Ayrımcılık Tanımı:** Ruhsal hastalığı olan bireyleri, toplumsal kuralların, yasaların ve kurumsal düzenlemelerin sistematik olarak dezavantajlı kılmasıdır.\n- **Sağlık Sigortası Kısıtlamaları:** Özel veya kamusal sağlık sigortası poliçelerinde ruhsal hastalıkların kapsam dışı bırakılması en bariz yapısal ayrımcılık örneğidir.\n- **Bütçe ve Kaynak Yetersizliği:** Genel sağlık bütçesi içinde psikiyatri bakım hizmetlerine ve araştırmalarına ayrılan payın kasıtlı olarak düşük tutulmasıdır.\n- **Yönetmelik ve Mevzuat Engelleri:** İstihdam ve ehliyet gibi alanlarda ruhsal bozukluk öyküsü olanlara orantısız ve peşin kısıtlamalar getirilmesidir.\n\n> [!IMPORTANT]\n> Yapısal ayrımcılık bireysel önyargılardan bağımsız olarak sistemin kendi çarkları eliyle hastayı mağdur eden kurumsal bir süreçtir.",
+   "interactiveElements": [
+    {
+     "id": "k44-s14-e1",
+     "type": "micro_quiz",
+     "question": "Aşağıdakilerden hangisi doğrudan 'yapısal ayrımcılık' (structural discrimination) kavramını örnekler?",
+     "options": [
+      {
+       "text": "Ruhsal hastalıkların sağlık sigortası kapsamı dışında bırakılması veya psikiyatri bütçesinin kısıtlanması",
+       "isCorrect": true,
+       "explanation": "Ruhsal hastalıkların sağlık sigortası kapsamı dışında bırakılması veya psikiyatri bütçesinin kısıtlanması seçeneği ruhsal hastalıklarda damgalama sürecini açıklayan temel klinik ve bilimsel yaklaşımı temsil eder. Bu ilke doğrultusunda soruda hedeflenen klinik ve toplumsal mekanizma eksiksiz olarak doğrulanmaktadır."
+      },
+      {
+       "text": "Bir kişinin sokakta karşılaştığı psikiyatri hastasından korkup yolunu değiştirmesi",
+       "isCorrect": false,
+       "explanation": "Bir kişinin sokakta karşılaştığı psikiyatri hastasından korkup yolunu değiştirmesi kavramı tıp ve psikiyatri pratiğinde farklı kuramsal veya idari süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen klinik durumla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Bir babanın çocuğuna psikiyatri hastalarıyla arkadaş olmamasını tembihlemesi",
+       "isCorrect": false,
+       "explanation": "Bir babanın çocuğuna psikiyatri hastalarıyla arkadaş olmamasını tembihlemesi kavramı tıp ve psikiyatri pratiğinde farklı kuramsal veya idari süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen klinik durumla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Hastanın kendi kendine yetersiz olduğunu düşünüp kliniğe gitmekten utanması",
+       "isCorrect": false,
+       "explanation": "Hastanın kendi kendine yetersiz olduğunu düşünüp kliniğe gitmekten utanması kavramı tıp ve psikiyatri pratiğinde farklı kuramsal veya idari süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen klinik durumla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      }
+     ]
+    },
+    {
+     "id": "k44-s14-e2",
+     "type": "swipe_matching",
+     "leftCategory": "Bireysel Ayrımcılık",
+     "rightCategory": "Yapısal / Kurumsal Ayrımcılık",
+     "cards": [
+      {
+       "text": "Ev sahibinin ruhsal hastalığı olan kişiye daire kiralamaması",
+       "category": "left",
+       "explanation": "Ev sahibinin ruhsal hastalığı olan kişiye daire kiralamaması kavramı ilgili damgalama kategorisi altında değerlendirilen temel unsurdur. Sosyal psikiyatri pratiğinde bu eşleme kritik önem taşır."
+      },
+      {
+       "text": "Komşuların hasta bireyle selamlaşmayı kesmesi",
+       "category": "left",
+       "explanation": "Komşuların hasta bireyle selamlaşmayı kesmesi kavramı ilgili damgalama kategorisi altında değerlendirilen temel unsurdur. Sosyal psikiyatri pratiğinde bu eşleme kritik önem taşır."
+      },
+      {
+       "text": "Sağlık sigortasının psikiyatrik tedavileri teminat dışı tutması",
+       "category": "right",
+       "explanation": "Sağlık sigortasının psikiyatrik tedavileri teminat dışı tutması kavramı ilgili damgalama kategorisi altında değerlendirilen temel unsurdur. Sosyal psikiyatri pratiğinde bu eşleme kritik önem taşır."
+      },
+      {
+       "text": "Ruh sağlığı hizmetlerine devlet bütçesinden yetersiz pay ayrılması",
+       "category": "right",
+       "explanation": "Ruh sağlığı hizmetlerine devlet bütçesinden yetersiz pay ayrılması kavramı ilgili damgalama kategorisi altında değerlendirilen temel unsurdur. Sosyal psikiyatri pratiğinde bu eşleme kritik önem taşır."
+      }
+     ]
+    },
+    {
+     "id": "k44-s14-e3",
+     "type": "cloze_masking",
+     "sentence": "Ruhsal hastalığı olan bireyleri toplumsal kurallar ve düzenlemelerin sistematik olarak sıkıntıya sokmasına yapısal ayrımcılık denir.",
+     "maskedTerm": "yapısal ayrımcılık",
+     "hint": "Tıp eğitimi ve psikiyatri alanındaki temel kavramdır."
+    },
+    {
+     "id": "k44-s14-e4",
+     "type": "active_recall",
+     "question": "Yapısal ayrımcılığın sağlık sistemi ve mevzuattaki iki somut örneği nedir?",
+     "answer": "1. Ruhsal hastalıkların sağlık sigortası kapsamı dışı bırakılması, 2. Psikiyatri bütçe ve araştırmalarının kısıtlanması."
+    }
+   ],
+   "pdfSayfalari": [
+    17,
+    17
+   ],
+   "sourcePdf": {
+    "startPage": 17,
+    "endPage": 17
+   }
+  },
+  {
+   "id": "k2-44-d-s15",
+   "slideNumber": 15,
+   "title": "[TEKRAR SAYFASI - CHECKPOINT 3] Ayrımcılığın Boyutları ve Yapısal Engeller",
+   "bolum": "3",
+   "content": "Bu tekrar sayfasında ayrımcılığın üç düzeyi, yaygın toplumsal mitler ve yapısal ayrımcılık dinamikleri pekiştirilmektedir.\n\n- **Ayrımcılık Düzeyleri:** Bireysel (şahsi dışlama), Yapısal (yasalar, sigorta ve bütçe kısıtları), Kendini damgalama (hastanın mitleri benimsemesi).\n- **Yıkıcı Mitler:** Ruh hastaları asla iyileşemez, kilit altında tutulmalıdır, çocuk gibidir, kendi hatalarından hastalanmışlardır.\n- **İş Hayatında Bariyer:** İyileşen hastaların bile kritik ve sorumlu pozisyonlara layık görülmemesi kurumsal liyakati yok eder.\n- **Yapısal Boyut:** Sigorta şirketlerinin psikiyatriyi teminat dışı bırakması ve kamu bütçesindeki kısıtlamalar kurumsal ayrımcılıktır.\n\n> [!NOTE]\n> Yapısal ayrımcılıkla mücadele edilmeden yalnızca bireysel tutumları değiştirmek damgalamayı bütünüyle ortadan kaldıramaz.",
+   "synthesisNarrative": "Bu tekrar sayfasında ayrımcılığın üç düzeyi, yaygın toplumsal mitler ve yapısal ayrımcılık dinamikleri pekiştirilmektedir.\n\n- **Ayrımcılık Düzeyleri:** Bireysel (şahsi dışlama), Yapısal (yasalar, sigorta ve bütçe kısıtları), Kendini damgalama (hastanın mitleri benimsemesi).\n- **Yıkıcı Mitler:** Ruh hastaları asla iyileşemez, kilit altında tutulmalıdır, çocuk gibidir, kendi hatalarından hastalanmışlardır.\n- **İş Hayatında Bariyer:** İyileşen hastaların bile kritik ve sorumlu pozisyonlara layık görülmemesi kurumsal liyakati yok eder.\n- **Yapısal Boyut:** Sigorta şirketlerinin psikiyatriyi teminat dışı bırakması ve kamu bütçesindeki kısıtlamalar kurumsal ayrımcılıktır.\n\n> [!NOTE]\n> Yapısal ayrımcılıkla mücadele edilmeden yalnızca bireysel tutumları değiştirmek damgalamayı bütünüyle ortadan kaldıramaz.",
+   "interactiveElements": [
+    {
+     "id": "k44-s15-e1",
+     "type": "micro_quiz",
+     "question": "Aşağıdakilerden hangisi yapısal ayrımcılığı bireysel ayrımcılıktan ayıran en temel farktır?",
+     "options": [
+      {
+       "text": "Sistematik yasalar, sigorta kuralları ve kurumsal yönetmeliklerle yürütülmesi",
+       "isCorrect": true,
+       "explanation": "Sistematik yasalar, sigorta kuralları ve kurumsal yönetmeliklerle yürütülmesi seçeneği ruhsal hastalıklarda damgalama sürecini açıklayan temel klinik ve bilimsel yaklaşımı temsil eder. Bu ilke doğrultusunda soruda hedeflenen klinik ve toplumsal mekanizma eksiksiz olarak doğrulanmaktadır."
+      },
+      {
+       "text": "Yalnızca hastane koridorlarında sözlü olarak ifade edilmesi",
+       "isCorrect": false,
+       "explanation": "Yalnızca hastane koridorlarında sözlü olarak ifade edilmesi kavramı tıp ve psikiyatri pratiğinde farklı kuramsal veya idari süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen klinik durumla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Sadece çocukluk çağı ruhsal bozukluklarında görülmesi",
+       "isCorrect": false,
+       "explanation": "Sadece çocukluk çağı ruhsal bozukluklarında görülmesi kavramı tıp ve psikiyatri pratiğinde farklı kuramsal veya idari süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen klinik durumla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Hastanın kendi kendine yarattığı içsel bir yetersizlik hissi olması",
+       "isCorrect": false,
+       "explanation": "Hastanın kendi kendine yarattığı içsel bir yetersizlik hissi olması kavramı tıp ve psikiyatri pratiğinde farklı kuramsal veya idari süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen klinik durumla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      }
+     ]
+    },
+    {
+     "id": "k44-s15-e2",
+     "type": "interactive_table",
+     "tableHeaders": [
+      "Ayrımcılık Düzeyi",
+      "Uygulayıcı Özne",
+      "Tezahür Biçimi"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Bireysel Düzey",
+         "isMasked": false,
+         "hint": ""
+        },
+        {
+         "text": "Tekil Bireyler ve İşverenler",
+         "isMasked": false,
+         "hint": ""
+        },
+        {
+         "text": "Sosyal mesafe koyma ve iş vermekten kaçınma",
+         "isMasked": true,
+         "hint": "Tıp eğitimi ve psikiyatri alanındaki temel kavramdır."
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Yapısal Düzey",
+         "isMasked": false,
+         "hint": ""
+        },
+        {
+         "text": "Mevzuat ve Sigorta Kurumları",
+         "isMasked": false,
+         "hint": ""
+        },
+        {
+         "text": "Sigorta kapsamı dışı bırakma ve düşük bütçe",
+         "isMasked": true,
+         "hint": "Tıp eğitimi ve psikiyatri alanındaki temel kavramdır."
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Öz Damgalama",
+         "isMasked": false,
+         "hint": ""
+        },
+        {
+         "text": "Hastanın Kendisi",
+         "isMasked": false,
+         "hint": ""
+        },
+        {
+         "text": "Utanma, geri çekilme ve tedavi uyumsuzluğu",
+         "isMasked": true,
+         "hint": "Tıp eğitimi ve psikiyatri alanındaki temel kavramdır."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k44-s15-e3",
+     "type": "spot_the_lie",
+     "topic": "Ayrımcılık Düzeyleri ve Mitler Özeti",
+     "items": [
+      {
+       "text": "Ruhsal hastalıkların sigorta teminatı dışına itilmesi yapısal ayrımcılıktır.",
+       "isLie": false,
+       "explanation": "Ruhsal hastalıkların sigorta teminatı dışına itilmesi yapısal ayrımcılıktır. ifadesi psikiyatride damgalama dinamiklerini doğru yansıtır. Toplumsal araştırmalar bu yaklaşımı desteklemektedir."
+      },
+      {
+       "text": "İyileşen hastaların önemli pozisyonlara layık görülmemesi adil bir istihdam kuralıdır.",
+       "isLie": true,
+       "explanation": "İyileşen hastaların önemli pozisyonlara layık görülmemesi adil bir istihdam kuralıdır. ifadesi bilimsel ve klinik gerçeklerle çelişmektedir. Damgalama sürecinde bu durum gerçeğe aykırı bir algıdır."
+      },
+      {
+       "text": "Ayrımcılık bireysel, yapısal ve içselleştirilmiş olmak üzere üç düzeyde incelenir.",
+       "isLie": false,
+       "explanation": "Ayrımcılık bireysel, yapısal ve içselleştirilmiş olmak üzere üç düzeyde incelenir. ifadesi psikiyatride damgalama dinamiklerini doğru yansıtır. Toplumsal araştırmalar bu yaklaşımı desteklemektedir."
+      }
+     ]
+    },
+    {
+     "id": "k44-s15-e4",
+     "type": "active_recall",
+     "question": "Yapısal ayrımcılık ile bireysel ayrımcılığın farkı nedir?",
+     "answer": "Bireysel ayrımcılık şahsi tutum ve dışlamadır; yapısal ayrımcılık yasalar, sigorta politikaları ve bütçe gibi kurumsal mekanizmalarla yapılır."
+    }
+   ],
+   "isCheckpoint": true
+  },
+  {
+   "id": "k2-44-d-s16",
+   "slideNumber": 16,
+   "title": "İçselleştirilmiş (Öz) Damgalama",
+   "bolum": "4",
+   "content": "İçselleştirilmiş damgalama (öz damgalama), genel toplumun inandığı olumsuz basmakalıpların hasta tarafından benimsenmesidir.\n\n- **Kavramsal Mekanizma:** Birey açık bir ayrımcılığa maruz kalmasa dahi tanı aldıktan sonra kendisini damgalanmış hisseder ve etiketleri içselleştirir.\n- **Klinik Yansımalar:** Durumundan derin utanma, yetersizlik duyguları, olumsuz otomatik düşüncelerde patlama ve sosyal ilişkilerden kaçınma başlar.\n- **Kendilik Değerinde Çöküş:** Hasta 'ben başkaları için tehlikeliyim' veya 'kendi hayatımı yönetmede acizim' gibi uyumsuz inançlara tutunur.\n- **Tanının Damgalayıcı Yükü:** Kullanılan psikiyatrik tanının damgalayıcı içeriği ne kadar ağır ise belirtilerin şiddeti de o kadar artar.\n\n> [!IMPORTANT]\n> Öz damgalama hastanın tedaviye inancını kırarak klinik seyri bozan en tehlikeli psikolojik komplikasyondur.",
+   "synthesisNarrative": "İçselleştirilmiş damgalama (öz damgalama), genel toplumun inandığı olumsuz basmakalıpların hasta tarafından benimsenmesidir.\n\n- **Kavramsal Mekanizma:** Birey açık bir ayrımcılığa maruz kalmasa dahi tanı aldıktan sonra kendisini damgalanmış hisseder ve etiketleri içselleştirir.\n- **Klinik Yansımalar:** Durumundan derin utanma, yetersizlik duyguları, olumsuz otomatik düşüncelerde patlama ve sosyal ilişkilerden kaçınma başlar.\n- **Kendilik Değerinde Çöküş:** Hasta 'ben başkaları için tehlikeliyim' veya 'kendi hayatımı yönetmede acizim' gibi uyumsuz inançlara tutunur.\n- **Tanının Damgalayıcı Yükü:** Kullanılan psikiyatrik tanının damgalayıcı içeriği ne kadar ağır ise belirtilerin şiddeti de o kadar artar.\n\n> [!IMPORTANT]\n> Öz damgalama hastanın tedaviye inancını kırarak klinik seyri bozan en tehlikeli psikolojik komplikasyondur.",
+   "interactiveElements": [
+    {
+     "id": "k44-s16-e1",
+     "type": "micro_quiz",
+     "question": "İçselleştirilmiş damgalamanın (öz damgalama) temel patofizyolojik ve bilişsel mekanizması nedir?",
+     "options": [
+      {
+       "text": "Toplumdaki tehlikelilik ve yetersizlik stereotiplerinin hasta tarafından benimsenip kendine mal edilmesi",
+       "isCorrect": true,
+       "explanation": "Toplumdaki tehlikelilik ve yetersizlik stereotiplerinin hasta tarafından benimsenip kendine mal edilmesi seçeneği ruhsal hastalıklarda damgalama sürecini açıklayan temel klinik ve bilimsel yaklaşımı temsil eder. Bu ilke doğrultusunda soruda hedeflenen klinik ve toplumsal mekanizma eksiksiz olarak doğrulanmaktadır."
+      },
+      {
+       "text": "Hastanın çevresindeki tüm hekimleri mahkemeye vererek tazminat davası açması",
+       "isCorrect": false,
+       "explanation": "Hastanın çevresindeki tüm hekimleri mahkemeye vererek tazminat davası açması kavramı tıp ve psikiyatri pratiğinde farklı kuramsal veya idari süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen klinik durumla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Beyindeki nöron sayısının viral enfeksiyonlar nedeniyle hızla azalması",
+       "isCorrect": false,
+       "explanation": "Beyindeki nöron sayısının viral enfeksiyonlar nedeniyle hızla azalması kavramı tıp ve psikiyatri pratiğinde farklı kuramsal veya idari süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen klinik durumla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Hastanın kendisine reçete edilen ilaçları eczaneden ücretsiz temin edebilmesi",
+       "isCorrect": false,
+       "explanation": "Hastanın kendisine reçete edilen ilaçları eczaneden ücretsiz temin edebilmesi kavramı tıp ve psikiyatri pratiğinde farklı kuramsal veya idari süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen klinik durumla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      }
+     ]
+    },
+    {
+     "id": "k44-s16-e2",
+     "type": "spot_the_lie",
+     "topic": "İçselleştirilmiş (Öz) Damgalama Özellikleri",
+     "items": [
+      {
+       "text": "Kişi açık bir ayrımcılık görmese bile psikiyatrik tanı aldıktan sonra kendini damgalanmış hissedebilir.",
+       "isLie": false,
+       "explanation": "Kişi açık bir ayrımcılık görmese bile psikiyatrik tanı aldıktan sonra kendini damgalanmış hissedebilir. ifadesi psikiyatride damgalama dinamiklerini doğru yansıtır. Toplumsal araştırmalar bu yaklaşımı desteklemektedir."
+      },
+      {
+       "text": "Kullanılan psikiyatrik tanının damgalayıcı içeriği arttıkça öz damgalamanın şiddeti de artar.",
+       "isLie": false,
+       "explanation": "Kullanılan psikiyatrik tanının damgalayıcı içeriği arttıkça öz damgalamanın şiddeti de artar. ifadesi psikiyatride damgalama dinamiklerini doğru yansıtır. Toplumsal araştırmalar bu yaklaşımı desteklemektedir."
+      },
+      {
+       "text": "Öz damgalama yaşayan hastaların benlik saygısı ve tedaviye uyumu en üst düzeye çıkar.",
+       "isLie": true,
+       "explanation": "Öz damgalama yaşayan hastaların benlik saygısı ve tedaviye uyumu en üst düzeye çıkar. ifadesi bilimsel ve klinik gerçeklerle çelişmektedir. Damgalama sürecinde bu durum gerçeğe aykırı bir algıdır."
+      }
+     ]
+    },
+    {
+     "id": "k44-s16-e3",
+     "type": "cloze_masking",
+     "sentence": "İçselleştirilmiş damgalama genel halkın inandığı yetersizlik görüşlerinin hasta tarafından benimsenmesidir.",
+     "maskedTerm": "İçselleştirilmiş damgalama",
+     "hint": "Tıp eğitimi ve psikiyatri alanındaki temel kavramdır."
+    },
+    {
+     "id": "k44-s16-e4",
+     "type": "active_recall",
+     "question": "İçselleştirilmiş damgalama hastanın psikolojisinde ve davranışlarında ne gibi değişikliklere yol açar?",
+     "answer": "Utanç, yetersizlik hissi, olumsuz otomatik düşünceler, sosyal geri çekilme, benlik saygısında çöküş ve tedavi uyumsuzluğu."
+    }
+   ],
+   "pdfSayfalari": [
+    18,
+    19
+   ],
+   "sourcePdf": {
+    "startPage": 18,
+    "endPage": 19
+   }
+  },
+  {
+   "id": "k2-44-d-s17",
+   "slideNumber": 17,
+   "title": "Tanı Grupları, Medya ve Öz Damgalama",
+   "bolum": "4",
+   "content": "Kültürel basmakalıplar, medya betimlemeleri ve tanı grupları öz damgalamanın şiddetlenmesinde belirleyici rol oynar.\n\n- **En Yaygın Tanı Grupları:** Damgalanmaya en yoğun maruz kalanlar; psikotik bozukluklar, bipolar bozukluk, depresif bozukluklar, anksiyete bozuklukları ve madde kullanım bozukluklarıdır.\n- **Akıl Hastası Etiketlemesi:** Bireyler 'akıl hastası' olarak etiketlendiklerinde, kendilerini hedefteki grubun bir parçası olarak görmeye başlarlar.\n- **Medya ve Olumsuz Şakalar:** Kültürel basmakalıplar, televizyon betimlemeleri ve aşağılayıcı mizah devam ettikçe öz damgalama sürekli beslenir.\n- **Sosyal Yabancılaşmanın Derinleşmesi:** Medyadaki şiddet içerikli tiplemeler hastanın kendisinden korkmasına ve toplumdan büsbütün kopmasına yol açar.\n\n> [!NOTE]\n> Medyadaki olumsuz temsiller ve ayrımcı dil düzeltilmedikçe klinik ortamdaki tedavi çabaları sürekli darbe alır.",
+   "synthesisNarrative": "Kültürel basmakalıplar, medya betimlemeleri ve tanı grupları öz damgalamanın şiddetlenmesinde belirleyici rol oynar.\n\n- **En Yaygın Tanı Grupları:** Damgalanmaya en yoğun maruz kalanlar; psikotik bozukluklar, bipolar bozukluk, depresif bozukluklar, anksiyete bozuklukları ve madde kullanım bozukluklarıdır.\n- **Akıl Hastası Etiketlemesi:** Bireyler 'akıl hastası' olarak etiketlendiklerinde, kendilerini hedefteki grubun bir parçası olarak görmeye başlarlar.\n- **Medya ve Olumsuz Şakalar:** Kültürel basmakalıplar, televizyon betimlemeleri ve aşağılayıcı mizah devam ettikçe öz damgalama sürekli beslenir.\n- **Sosyal Yabancılaşmanın Derinleşmesi:** Medyadaki şiddet içerikli tiplemeler hastanın kendisinden korkmasına ve toplumdan büsbütün kopmasına yol açar.\n\n> [!NOTE]\n> Medyadaki olumsuz temsiller ve ayrımcı dil düzeltilmedikçe klinik ortamdaki tedavi çabaları sürekli darbe alır.",
+   "interactiveElements": [
+    {
+     "id": "k44-s17-e1",
+     "type": "micro_quiz",
+     "question": "Ders notlarına göre damgalanmaya en yoğun maruz kalan tanı grupları arasında aşağıdakilerden hangisi yer almaz?",
+     "options": [
+      {
+       "text": "Komplike olmayan geçici gerilim tipi baş ağrısı",
+       "isCorrect": true,
+       "explanation": "Komplike olmayan geçici gerilim tipi baş ağrısı seçeneği ruhsal hastalıklarda damgalama sürecini açıklayan temel klinik ve bilimsel yaklaşımı temsil eder. Bu ilke doğrultusunda soruda hedeflenen klinik ve toplumsal mekanizma eksiksiz olarak doğrulanmaktadır."
+      },
+      {
+       "text": "Psikotik bozukluklar",
+       "isCorrect": false,
+       "explanation": "Psikotik bozukluklar kavramı tıp ve psikiyatri pratiğinde farklı kuramsal veya idari süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen klinik durumla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Bipolar bozukluk ve depresif bozukluklar",
+       "isCorrect": false,
+       "explanation": "Bipolar bozukluk ve depresif bozukluklar kavramı tıp ve psikiyatri pratiğinde farklı kuramsal veya idari süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen klinik durumla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Madde kullanım bozuklukları",
+       "isCorrect": false,
+       "explanation": "Madde kullanım bozuklukları kavramı tıp ve psikiyatri pratiğinde farklı kuramsal veya idari süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen klinik durumla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      }
+     ]
+    },
+    {
+     "id": "k44-s17-e2",
+     "type": "spot_the_lie",
+     "topic": "Öz Damgalamayı Besleyen Faktörler",
+     "items": [
+      {
+       "text": "Medyadaki olumsuz tiplemeler ve ayrımcı şakalar içselleştirilmiş damgalamayı artırır.",
+       "isLie": false,
+       "explanation": "Medyadaki olumsuz tiplemeler ve ayrımcı şakalar içselleştirilmiş damgalamayı artırır. ifadesi psikiyatride damgalama dinamiklerini doğru yansıtır. Toplumsal araştırmalar bu yaklaşımı desteklemektedir."
+      },
+      {
+       "text": "Madde kullanım bozuklukları ve psikoz en çok damgalanan tanı grupları arasındadır.",
+       "isLie": false,
+       "explanation": "Madde kullanım bozuklukları ve psikoz en çok damgalanan tanı grupları arasındadır. ifadesi psikiyatride damgalama dinamiklerini doğru yansıtır. Toplumsal araştırmalar bu yaklaşımı desteklemektedir."
+      },
+      {
+       "text": "Birey 'akıl hastası' olarak etiketlense dahi kendini asla bu grubun üyesi saymaz.",
+       "isLie": true,
+       "explanation": "Birey 'akıl hastası' olarak etiketlense dahi kendini asla bu grubun üyesi saymaz. ifadesi bilimsel ve klinik gerçeklerle çelişmektedir. Damgalama sürecinde bu durum gerçeğe aykırı bir algıdır."
+      }
+     ]
+    },
+    {
+     "id": "k44-s17-e3",
+     "type": "cloze_masking",
+     "sentence": "Kişi ruhsal hastalıklı kişiler hakkındaki olumsuz medya betimlemelerine maruz kaldıkça içselleştirilmiş damgalama artar.",
+     "maskedTerm": "medya betimlemelerine",
+     "hint": "Tıp eğitimi ve psikiyatri alanındaki temel kavramdır."
+    },
+    {
+     "id": "k44-s17-e4",
+     "type": "active_recall",
+     "question": "Damgalamaya en çok maruz kalan 5 psikiyatrik tanı grubu hangileridir?",
+     "answer": "1. Psikotik bozukluklar, 2. Bipolar bozukluk, 3. Depresif bozukluklar, 4. Anksiyete bozuklukları, 5. Madde kullanım bozuklukları."
+    }
+   ],
+   "pdfSayfalari": [
+    20,
+    20
+   ],
+   "sourcePdf": {
+    "startPage": 20,
+    "endPage": 20
+   }
+  },
+  {
+   "id": "k2-44-d-s18",
+   "slideNumber": 18,
+   "title": "Damgalamayla Mücadele: Eğitim ve İletişim",
+   "bolum": "5",
+   "content": "Psikiyatrik bozukluklarda damgalayıcı tutumları değiştirmek amacıyla öne çıkan iki temel müdahale koşulu vardır.\n\n- **1. Eğitim Temelli Müdahaleler:** Psikiyatrik bozukluklar hakkındaki yaygın mitleri doğru bilimsel kavramlarla değiştirmeyi hedefler.\n- **Bilişsel Düzeltme:** Eğitim yoluyla ruhsal hastalıkların biyolojik temelleri, tedavi edilebilirlikleri ve tehlikeli olmadıkları topluma anlatılır.\n- **2. İletişim (Temas) Temelli Müdahaleler:** Psikiyatrik bozukluk tanısı almış bireylerle toplumun doğrudan etkileşim kurmasını sağlar.\n- **Duygusal ve Davranışsal Dönüşüm:** Doğrudan iletişim, önyargılı kişilerin korkularıyla yüzleşmesini ve damgalayıcı tutuma meydan okumasını mümkün kılar.\n\n> [!IMPORTANT]\n> Eğitim bilişsel mitleri yıkarken; doğrudan temas ve iletişim duygusal önyargıları ve davranışsal ayrımcılığı ortadan kaldırır.",
+   "synthesisNarrative": "Psikiyatrik bozukluklarda damgalayıcı tutumları değiştirmek amacıyla öne çıkan iki temel müdahale koşulu vardır.\n\n- **1. Eğitim Temelli Müdahaleler:** Psikiyatrik bozukluklar hakkındaki yaygın mitleri doğru bilimsel kavramlarla değiştirmeyi hedefler.\n- **Bilişsel Düzeltme:** Eğitim yoluyla ruhsal hastalıkların biyolojik temelleri, tedavi edilebilirlikleri ve tehlikeli olmadıkları topluma anlatılır.\n- **2. İletişim (Temas) Temelli Müdahaleler:** Psikiyatrik bozukluk tanısı almış bireylerle toplumun doğrudan etkileşim kurmasını sağlar.\n- **Duygusal ve Davranışsal Dönüşüm:** Doğrudan iletişim, önyargılı kişilerin korkularıyla yüzleşmesini ve damgalayıcı tutuma meydan okumasını mümkün kılar.\n\n> [!IMPORTANT]\n> Eğitim bilişsel mitleri yıkarken; doğrudan temas ve iletişim duygusal önyargıları ve davranışsal ayrımcılığı ortadan kaldırır.",
+   "interactiveElements": [
+    {
+     "id": "k44-s18-e1",
+     "type": "swipe_matching",
+     "leftCategory": "Eğitim Temelli Müdahale",
+     "rightCategory": "İletişim / Temas Temelli Müdahale",
+     "cards": [
+      {
+       "text": "Ruhsal hastalık mitlerini bilimsel gerçeklerle değiştirme",
+       "category": "left",
+       "explanation": "Ruhsal hastalık mitlerini bilimsel gerçeklerle değiştirme kavramı ilgili damgalama kategorisi altında değerlendirilen temel unsurdur. Sosyal psikiyatri pratiğinde bu eşleme kritik önem taşır."
+      },
+      {
+       "text": "Bilişsel basmakalıpları ve yanlış inançları hedef alma",
+       "category": "left",
+       "explanation": "Bilişsel basmakalıpları ve yanlış inançları hedef alma kavramı ilgili damgalama kategorisi altında değerlendirilen temel unsurdur. Sosyal psikiyatri pratiğinde bu eşleme kritik önem taşır."
+      },
+      {
+       "text": "Tanı almış hastalarla doğrudan yüz yüze etkileşim kurma",
+       "category": "right",
+       "explanation": "Tanı almış hastalarla doğrudan yüz yüze etkileşim kurma kavramı ilgili damgalama kategorisi altında değerlendirilen temel unsurdur. Sosyal psikiyatri pratiğinde bu eşleme kritik önem taşır."
+      },
+      {
+       "text": "Hastalarla ortak sosyal projelerde bir araya gelme",
+       "category": "right",
+       "explanation": "Hastalarla ortak sosyal projelerde bir araya gelme kavramı ilgili damgalama kategorisi altında değerlendirilen temel unsurdur. Sosyal psikiyatri pratiğinde bu eşleme kritik önem taşır."
+      }
+     ]
+    },
+    {
+     "id": "k44-s18-e2",
+     "type": "micro_quiz",
+     "question": "Damgalamayla mücadelede 'Eğitim' ile 'İletişim' arasındaki temel işlevsel fark nedir?",
+     "options": [
+      {
+       "text": "Eğitim mitleri doğru bilgilerle değiştirmeyi; iletişim ise doğrudan etkileşimle önyargıya meydan okumayı hedefler",
+       "isCorrect": true,
+       "explanation": "Eğitim mitleri doğru bilgilerle değiştirmeyi; iletişim ise doğrudan etkileşimle önyargıya meydan okumayı hedefler seçeneği ruhsal hastalıklarda damgalama sürecini açıklayan temel klinik ve bilimsel yaklaşımı temsil eder. Bu ilke doğrultusunda soruda hedeflenen klinik ve toplumsal mekanizma eksiksiz olarak doğrulanmaktadır."
+      },
+      {
+       "text": "Eğitim yalnızca hastalara verilirken, iletişim yalnızca hekimler arasında yapılır",
+       "isCorrect": false,
+       "explanation": "Eğitim yalnızca hastalara verilirken, iletişim yalnızca hekimler arasında yapılır kavramı tıp ve psikiyatri pratiğinde farklı kuramsal veya idari süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen klinik durumla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Eğitim damgalamayı artırırken, iletişim ayrımcılığı teşvik eder",
+       "isCorrect": false,
+       "explanation": "Eğitim damgalamayı artırırken, iletişim ayrımcılığı teşvik eder kavramı tıp ve psikiyatri pratiğinde farklı kuramsal veya idari süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen klinik durumla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Eğitim yasal ceza keserken, iletişim hastaları zorla tecrit eder",
+       "isCorrect": false,
+       "explanation": "Eğitim yasal ceza keserken, iletişim hastaları zorla tecrit eder kavramı tıp ve psikiyatri pratiğinde farklı kuramsal veya idari süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen klinik durumla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      }
+     ]
+    },
+    {
+     "id": "k44-s18-e3",
+     "type": "cloze_masking",
+     "sentence": "İletişim psikiyatrik bozukluk tanısı almış kişilerle doğrudan etkileşim kurarak damgalayıcı tutuma meydan okumayı amaçlar.",
+     "maskedTerm": "doğrudan etkileşim",
+     "hint": "Tıp eğitimi ve psikiyatri alanındaki temel kavramdır."
+    },
+    {
+     "id": "k44-s18-e4",
+     "type": "active_recall",
+     "question": "Damgalamayı değiştirmede öne çıkan iki önemli müdahale koşulu nedir?",
+     "answer": "1. Eğitim (mitleri doğru bilgilerle değiştirme), 2. İletişim (tanı almış bireylerle doğrudan temas ve etkileşim kurma)."
+    }
+   ],
+   "pdfSayfalari": [
+    21,
+    22
+   ],
+   "sourcePdf": {
+    "startPage": 21,
+    "endPage": 22
+   }
+  },
+  {
+   "id": "k2-44-d-s19",
+   "slideNumber": 19,
+   "title": "İletişim Temelli Müdahaleler ve Kalıcı Çözüm",
+   "bolum": "5",
+   "content": "Araştırmalar, iletişim temelli müdahalelerin hem yapısal hem de öz damgalamayı azaltmada en güçlü araç olduğunu göstermektedir.\n\n- **Yapısal ve Öz Damgalamayı Azaltma:** Kişilerarası temas, toplumdaki damgalayıcı tutumları silerken hastaların damgalanmış hissetmelerini engeller.\n- **Tatmin Edici Yaşam Modeli:** Temas programları, psikiyatrik bozukluğu olanların bu duruma rağmen tatmin edici bir yaşam sürebileceklerini somut olarak kanıtlar.\n- **Umut ve Tedavi Uyumu:** Hastaların tedaviye olan umut ve inançları artar; bu da doğrudan iyileşme sürecini hızlandırır.\n- **Hedefe Yönelik Sosyal Programlar:** Toplumun farklı unsurlarına (öğrenciler, işverenler, sağlık çalışanları) özgü yapılandırılmış temas programları başarının anahtarıdır.\n\n> [!NOTE]\n> Damgalamaya karşı mücadele yanlış inançları düzeltmekle başlar, doğrudan insani temasla kalıcı başarıya ulaşır.",
+   "synthesisNarrative": "Araştırmalar, iletişim temelli müdahalelerin hem yapısal hem de öz damgalamayı azaltmada en güçlü araç olduğunu göstermektedir.\n\n- **Yapısal ve Öz Damgalamayı Azaltma:** Kişilerarası temas, toplumdaki damgalayıcı tutumları silerken hastaların damgalanmış hissetmelerini engeller.\n- **Tatmin Edici Yaşam Modeli:** Temas programları, psikiyatrik bozukluğu olanların bu duruma rağmen tatmin edici bir yaşam sürebileceklerini somut olarak kanıtlar.\n- **Umut ve Tedavi Uyumu:** Hastaların tedaviye olan umut ve inançları artar; bu da doğrudan iyileşme sürecini hızlandırır.\n- **Hedefe Yönelik Sosyal Programlar:** Toplumun farklı unsurlarına (öğrenciler, işverenler, sağlık çalışanları) özgü yapılandırılmış temas programları başarının anahtarıdır.\n\n> [!NOTE]\n> Damgalamaya karşı mücadele yanlış inançları düzeltmekle başlar, doğrudan insani temasla kalıcı başarıya ulaşır.",
+   "interactiveElements": [
+    {
+     "id": "k44-s19-e1",
+     "type": "micro_quiz",
+     "question": "İletişim temelli müdahale programlarının hastalar üzerindeki en önemli psikolojik ve klinik kazanımı nedir?",
+     "options": [
+      {
+       "text": "Bozukluklarına rağmen tatmin edici bir yaşam sürebileceklerini görüp tedaviye umut ve inançlarının artması",
+       "isCorrect": true,
+       "explanation": "Bozukluklarına rağmen tatmin edici bir yaşam sürebileceklerini görüp tedaviye umut ve inançlarının artması seçeneği ruhsal hastalıklarda damgalama sürecini açıklayan temel klinik ve bilimsel yaklaşımı temsil eder. Bu ilke doğrultusunda soruda hedeflenen klinik ve toplumsal mekanizma eksiksiz olarak doğrulanmaktadır."
+      },
+      {
+       "text": "Tüm psikiyatrik ilaçları hemen kesip hekime gitmeyi bırakmaları",
+       "isCorrect": false,
+       "explanation": "Tüm psikiyatrik ilaçları hemen kesip hekime gitmeyi bırakmaları kavramı tıp ve psikiyatri pratiğinde farklı kuramsal veya idari süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen klinik durumla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Toplumdan tamamen ayrılarak izole köylerde yaşamaya ikna olmaları",
+       "isCorrect": false,
+       "explanation": "Toplumdan tamamen ayrılarak izole köylerde yaşamaya ikna olmaları kavramı tıp ve psikiyatri pratiğinde farklı kuramsal veya idari süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen klinik durumla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Kendilerini toplumun en yetersiz bireyleri olarak kabul etmeleri",
+       "isCorrect": false,
+       "explanation": "Kendilerini toplumun en yetersiz bireyleri olarak kabul etmeleri kavramı tıp ve psikiyatri pratiğinde farklı kuramsal veya idari süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen klinik durumla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      }
+     ]
+    },
+    {
+     "id": "k44-s19-e2",
+     "type": "spot_the_lie",
+     "topic": "İletişim Temelli Müdahalelerin Kanıt Düzeyi",
+     "items": [
+      {
+       "text": "İletişim temelli müdahaleler yapısal damgalama ve öz damgalamanın etkilerini anlamlı derecede azaltır.",
+       "isLie": false,
+       "explanation": "İletişim temelli müdahaleler yapısal damgalama ve öz damgalamanın etkilerini anlamlı derecede azaltır. ifadesi psikiyatride damgalama dinamiklerini doğru yansıtır. Toplumsal araştırmalar bu yaklaşımı desteklemektedir."
+      },
+      {
+       "text": "Toplumun farklı sosyal gruplarına yönelik özelleştirilmiş temas programları başarıyı artırır.",
+       "isLie": false,
+       "explanation": "Toplumun farklı sosyal gruplarına yönelik özelleştirilmiş temas programları başarıyı artırır. ifadesi psikiyatride damgalama dinamiklerini doğru yansıtır. Toplumsal araştırmalar bu yaklaşımı desteklemektedir."
+      },
+      {
+       "text": "Kişilerarası temas kurmak toplumdaki damgalamayı ve hastaların korkusunu daima ikiye katlar.",
+       "isLie": true,
+       "explanation": "Kişilerarası temas kurmak toplumdaki damgalamayı ve hastaların korkusunu daima ikiye katlar. ifadesi bilimsel ve klinik gerçeklerle çelişmektedir. Damgalama sürecinde bu durum gerçeğe aykırı bir algıdır."
+      }
+     ]
+    },
+    {
+     "id": "k44-s19-e3",
+     "type": "cloze_masking",
+     "sentence": "İletişim temelli müdahaleler psikiyatrik bozukluğu olan kişilerin bozukluklarına rağmen tatmin edici bir yaşam sürebileceklerini deneyimle gösterir.",
+     "maskedTerm": "tatmin edici bir yaşam",
+     "hint": "Tıp eğitimi ve psikiyatri alanındaki temel kavramdır."
+    },
+    {
+     "id": "k44-s19-e4",
+     "type": "active_recall",
+     "question": "İletişim temelli müdahaleler damgalamanın hangi boyutları üzerinde olumlu etki gösterir?",
+     "answer": "Yapısal damgalama, sosyal damgalama ve içselleştirilmiş öz damgalama üzerinde kanıtlanmış olumlu etki gösterir."
+    }
+   ],
+   "pdfSayfalari": [
+    23,
+    25
+   ],
+   "sourcePdf": {
+    "startPage": 23,
+    "endPage": 25
+   }
+  },
+  {
+   "id": "k2-44-d-s20",
+   "slideNumber": 20,
+   "title": "[OYUN SAYFASI] Ders Sonu Oyunları: Damgalama",
+   "bolum": "5",
+   "content": "Bu oyun sayfasında damgalama sürecinin aşamaları, parametrik değişimleri ve metin içi kritik kavramları test edilmektedir.\n\n- **Sıralama Oyunu:** Damgalama zincirini sosyal biliş ve eylem basamaklarına göre doğru kronolojiye diziniz.\n- **Tahmin Kaydırıcısı:** Toplumda ve klinik çalışmalarda damgalamaya dair sayısal parametreyi tahmin ediniz.\n- **Bozunum (Pertürbasyon) Analizi:** Damgalamayla mücadele müdahaleleri devreye girdiğinde klinik ve sosyal değişkenlerin yönünü belirleyiniz.\n- **Metin Düzeltme:** Paragraftaki tıbbi ve kavramsal hatayı tespit edip doğru seçenekle düzeltiniz.\n\n> [!NOTE]\n> Ders sonu oyunları, öğrenilen mekanizmaların pekiştirilmesini ve akılda kalıcılığını sağlayan interaktif pratiklerdir.",
+   "synthesisNarrative": "Bu oyun sayfasında damgalama sürecinin aşamaları, parametrik değişimleri ve metin içi kritik kavramları test edilmektedir.\n\n- **Sıralama Oyunu:** Damgalama zincirini sosyal biliş ve eylem basamaklarına göre doğru kronolojiye diziniz.\n- **Tahmin Kaydırıcısı:** Toplumda ve klinik çalışmalarda damgalamaya dair sayısal parametreyi tahmin ediniz.\n- **Bozunum (Pertürbasyon) Analizi:** Damgalamayla mücadele müdahaleleri devreye girdiğinde klinik ve sosyal değişkenlerin yönünü belirleyiniz.\n- **Metin Düzeltme:** Paragraftaki tıbbi ve kavramsal hatayı tespit edip doğru seçenekle düzeltiniz.\n\n> [!NOTE]\n> Ders sonu oyunları, öğrenilen mekanizmaların pekiştirilmesini ve akılda kalıcılığını sağlayan interaktif pratiklerdir.",
+   "interactiveElements": [
+    {
+     "id": "k44-s20-e1",
+     "type": "sequence_order",
+     "prompt": "Sosyal biliş modelinde damgalama sürecinin basamaklarını doğru kronolojik sıraya diziniz.",
+     "steps": [
+      "1. Toplumda yaygın olumsuz basmakalıp düşüncelerin (stereotipi) bilinmesi",
+      "2. Basmakalıpların onaylanarak önyargı ve korku duygusunun gelişmesi",
+      "3. Önyargının eyleme dökülerek sosyal mesafe ve ayrımcı davranışın başlaması",
+      "4. Ayrımcılığa maruz kalan bireyde içselleştirilmiş öz damgalamanın kemikleşmesi"
+     ],
+     "explanation": "Damgalama süreci stereotipiden başlayıp duygusal önyargıya, ardından ayrımcı davranışa doğru aşamalı bir seyir izler."
+    },
+    {
+     "id": "k44-s20-e2",
+     "type": "estimate_slider",
+     "prompt": "1980'li yıllarda AIDS tablosunun ortaya çıkışıyla birlikte ilahi ceza söylemlerinin ve damgalamanın pik yaptığı dönemi (yılı) tahmin ediniz.",
+     "min": 1970,
+     "max": 2000,
+     "unit": "yıl",
+     "answer": 1980,
+     "tolerance": 5,
+     "explanation": "AIDS 1980'lerde ortaya çıkmış ve toplum tarafından günahkarlara verilen bir ceza olarak ağır biçimde damgalanmıştır."
+    },
+    {
+     "id": "k44-s20-e3",
+     "type": "perturbation",
+     "scenario": "Bir toplumda ruhsal hastalıklara yönelik yapılandırılmış 'Eğitim ve İletişim Temelli Temas Programı' eş zamanlı olarak uygulanıyor.",
+     "parameters": [
+      {
+       "name": "Toplumdaki Bilişsel Mitler ve Önyargılar",
+       "correct": "down",
+       "explanation": "Eğitim programları mitleri bilimsel gerçeklerle değiştirerek bilişsel önyargıları azaltır."
+      },
+      {
+       "name": "Hastaların Tedaviye İnancı ve Umut Düzeyi",
+       "correct": "up",
+       "explanation": "Temas temelli programlar hastaların tatmin edici bir yaşam sürebileceğini kanıtlayarak umudu artırır."
+      },
+      {
+       "name": "Hastaların Yaşadığı İçselleştirilmiş Öz Damgalama",
+       "correct": "down",
+       "explanation": "Toplumsal kabul ve temas arttıkça hastaların kendi kendilerini damgalama düzeyi geriler."
+      },
+      {
+       "name": "Hastaların Psikiyatrik Tedaviye Uyum Düzeyi",
+       "correct": "up",
+       "explanation": "Damgalanma korkusu azalan hastalar tedaviye çok daha yüksek uyum gösterirler."
+      }
+     ]
+    },
+    {
+     "id": "k44-s20-e4",
+     "type": "fix_the_text",
+     "text": "Damgalamayla mücadelede eğitim ve doğrudan iletişim programlarının amacı hastaların asla iyileşemeyeceklerini kabul ettirip onları kapalı kurumlarda tutmaktır.",
+     "errors": [
+      {
+       "wrong": "hastaların asla iyileşemeyeceklerini kabul ettirip onları kapalı kurumlarda tutmaktır",
+       "correct": "hastalara rağmen tatmin edici bir yaşam sürebileceklerini gösterip önyargıları yıkmaktır",
+       "options": [
+        "hastaların asla iyileşemeyeceklerini kabul ettirip onları kapalı kurumlarda tutmaktır",
+        "hastalara rağmen tatmin edici bir yaşam sürebileceklerini gösterip önyargıları yıkmaktır",
+        "hastaların aileleriyle tüm bağlarını hukuken tamamen koparmaktır"
+       ],
+       "explanation": "Damgalamayla mücadelenin esası mitleri yıkmak, önyargılara meydan okumak ve hastanın toplum içinde tatmin edici bir yaşam sürmesini sağlamaktır."
+      }
+     ]
+    }
+   ],
+   "isGameFinale": true
+  }
+ ],
+ "deckId": "k2p-y25-k2-44-damgalama",
+ "donem": "2025-2026",
+ "arsiv": true,
+ "confidence": "high",
+ "totalSlides": 20,
+ "matchedPastQuestionsCount": 0,
+ "sinama": {
+  "etiket": "2025-2026 Arşiv",
+  "aciklama": "Bu ders 2025-2026 dönemi (geçen yıl) slaytlarından hazırlanmıştır; 2026-2027 güncel müfredat dersleriyle karışmaz."
+ }
+}

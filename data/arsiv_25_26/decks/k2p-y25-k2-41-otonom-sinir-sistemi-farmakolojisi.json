@@ -1,0 +1,2258 @@
+{
+ "dersKodu": "k2-41",
+ "desteId": "k2p-y25-k2-41-otonom-sinir-sistemi-farmakolojisi",
+ "committeeId": "donem3-kurul2",
+ "sayfaHaritasi": "teyitli",
+ "slides": [
+  {
+   "slideNumber": 1,
+   "title": "Otonom Sinir Sisteminin Genel Organizasyonu ve Sempatoadrenal Sistem",
+   "sourcePdf": {
+    "file": "y25-k2-41-otonom-sinir-sistemi-farmakolojisi.pdf",
+    "startPage": 2,
+    "endPage": 25
+   },
+   "content": "Otonom sinir sistemi, iç organ fonksiyonlarını ve vasküler tonusu bilinçdışı olarak koordine eden hayati efferent nöronal ağdır.\n\n- **Santral Çekirdekler:** Beyin sapı hayati merkezleri ile hipotalamus (arka-lateral sempatik, ön-medial parasempatik) tarafından regüle edilir.\n- **Sempatoadrenal Sistem:** Sempatik lifler torakolomber düzeyden çıkar; adrenal medulla kromafin hücreleri sempatik sistemin endokrin uzantısı olarak epinefrin salgılar.\n- **Parasempatik Mimari:** Kraniosakral çıkışlı olup sadece sinirsel bir şebekeden ibarettir; hormonal bileşeni bulunmaz ve modüler bağımsız çalışır.\n\n> [!NOTE]\n> Sempatik sistem yaygın 'savaş veya kaç' cevabı üretirken, parasempatik sistem lokalize ve seçici 'dinlen ve beslen' fonksiyonlarını yürütür.",
+   "synthesisNarrative": "Otonom sinir sistemi, iç organ fonksiyonlarını ve vasküler tonusu bilinçdışı olarak koordine eden hayati efferent nöronal ağdır.\n\n- **Santral Çekirdekler:** Beyin sapı hayati merkezleri ile hipotalamus (arka-lateral sempatik, ön-medial parasempatik) tarafından regüle edilir.\n- **Sempatoadrenal Sistem:** Sempatik lifler torakolomber düzeyden çıkar; adrenal medulla kromafin hücreleri sempatik sistemin endokrin uzantısı olarak epinefrin salgılar.\n- **Parasempatik Mimari:** Kraniosakral çıkışlı olup sadece sinirsel bir şebekeden ibarettir; hormonal bileşeni bulunmaz ve modüler bağımsız çalışır.\n\n> [!NOTE]\n> Sempatik sistem yaygın 'savaş veya kaç' cevabı üretirken, parasempatik sistem lokalize ve seçici 'dinlen ve beslen' fonksiyonlarını yürütür.",
+   "keyTakeaways": [
+    "Otonom sinir sistemi santral merkezler ve periferik efferent yollardan oluşur.",
+    "Sempatik sistem adrenal medulla ile birleşerek sempatoadrenal hormonal bütünlüğü kurar.",
+    "Parasempatik sistem hormonal kompanenti olmayan lokal ve seçici bir sinir şebekesidir."
+   ],
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Sempatik sistemin fonksiyonel organizasyonunu pekiştiren hormonal bileşen aşağıdakilerden hangisidir?",
+     "options": [
+      {
+       "text": "Adrenal medulladan salgılanan katekolaminler",
+       "isCorrect": true,
+       "explanation": "Adrenal medulla kromafin hücreleri sempatik preganglionik liflerle uyarılır ve dolaşıma epinefrin ile noradrenalin salarak sempatoadrenal sistemi oluşturur."
+      },
+      {
+       "text": "Adrenal korteksten salgılanan kortizol",
+       "isCorrect": false,
+       "explanation": "Adrenal korteksten salgılanan kortizol kavramı bu fizyolojik etkiyi oluşturmaz; ilgili klinik mekanizmada zıt veya farklı bir otonomik yolak üzerinden fonksiyon gösterir. Kortizol adrenal korteksten salınan glukokortikoid bir hormon olup sempatik sistemin doğrudan efferent hormon bileşeni değildir."
+      },
+      {
+       "text": "Nörohipofizden salgılanan vazopressin",
+       "isCorrect": false,
+       "explanation": "Nörohipofizden salgılanan vazopressin kavramı bu fizyolojik etkiyi oluşturmaz; ilgili klinik mekanizmada zıt veya farklı bir otonomik yolak üzerinden fonksiyon gösterir. Vazopressin hipotalamusta sentezlenip nörohipofizden salınan peptiddir; sempatoadrenal sistemin primer parçası değildir."
+      },
+      {
+       "text": "Tiroid bezinden salgılanan tiroksin",
+       "isCorrect": false,
+       "explanation": "Tiroid bezinden salgılanan tiroksin kavramı bu fizyolojik etkiyi oluşturmaz; ilgili klinik mekanizmada zıt veya farklı bir otonomik yolak üzerinden fonksiyon gösterir. Tiroksin metabolizma hızını düzenleyen bir tiroid hormonudur; sempatoadrenal sistemin anlık efferent bileşeni değildir."
+      }
+     ],
+     "id": "k41-s01-e1"
+    },
+    {
+     "type": "swipe_matching",
+     "leftCategory": "Sempatik Sistem",
+     "rightCategory": "Parasempatik Sistem",
+     "cards": [
+      {
+       "text": "Sempatoadrenal endokrin hormonal bileşen içerir",
+       "category": "left",
+       "explanation": "Adrenal medulla sempatik sistemin endokrin bileşeni olarak dolaşıma epinefrin salgılar."
+      },
+      {
+       "text": "Hormonal komponenti bulunmayan lokal sinir şebekesidir",
+       "category": "right",
+       "explanation": "Parasempatik sistem bağımsız modüler birimler halinde lokal aktivasyon gösterir."
+      },
+      {
+       "text": "Hipotalamusta posterior ve lateral çekirdeklerle temsil edilir",
+       "category": "left",
+       "explanation": "Hipotalamusun posterior ve lateral alanları sempatik aktivasyon merkezleridir."
+      },
+      {
+       "text": "Hipotalamusta anterior ve orta hat çekirdekleriyle temsil edilir",
+       "category": "right",
+       "explanation": "Hipotalamusun anterior ve periventriküler alanları parasempatik kontrolü yürütür."
+      }
+     ],
+     "id": "k41-s01-e2"
+    },
+    {
+     "type": "cloze_masking",
+     "maskedTerm": "sempatoadrenal sistem",
+     "hint": "Bu kavram otonomik innervasyonu niteleyen temel terimdir.",
+     "id": "k41-s01-e3",
+     "sentence": "Sempatik bölümün sinirsel kısmı yanında, adrenal medulladan oluşan hormonal parçasıyla birlikte sempatoadrenal sistem adı verilir."
+    },
+    {
+     "type": "active_recall",
+     "question": "Parasempatik sistemin sempatik sistemden farklı olan fonksiyonel aktivasyon özelliği nedir?",
+     "answer": "Parasempatik sistem bağımsız birimlerden oluşur ve hormonal bileşeni olmadan koşullara göre lokal ve seçici şekilde aktive edilir.",
+     "id": "k41-s01-e4"
+    }
+   ],
+   "id": "k2-41-d-s01",
+   "pdfSayfalari": [
+    2,
+    25
+   ],
+   "bolum": 1
+  },
+  {
+   "slideNumber": 2,
+   "title": "Nöronal İletim, Otonom Ganglionlar ve Kotransmitterler",
+   "sourcePdf": {
+    "file": "y25-k2-41-otonom-sinir-sistemi-farmakolojisi.pdf",
+    "startPage": 26,
+    "endPage": 32
+   },
+   "content": "Otonom efferent yollar merkezi sinir sisteminden efektör organa iki nöronlu bir zincirle ulaşır.\n\n- **Ganglionik Aşırım:** Preganglionik miyelinli lifler otonom ganglionlarda postganglionik miyelinsiz hücre gövdeleriyle sinaps yapar.\n- **Temel Nörotransmitterler:** Preganglionik liflerin tamamında asetilkolin (nikotinik reseptör) salınırken, postganglionik uçlarda asetilkolin veya noradrenalin kullanılır.\n- **Kotransmitter Salıverilmesi:** Klasik transmiterlerin yanında veziküllerde VIP, ATP ve Nöropeptid Y (NPY) depolanır.\n- **NANK Lifleri:** Ne adrenerjik ne de kolinerjik olan lifler vazodilatasyon ve bronkodilatasyonda yardımcı iletim sağlar.\n\n> [!NOTE]\n> Kotransmitterler hedef hücrede klasik transmitere göre daha yavaş fakat uzun süreli modülatör yanıtlar oluşturur.",
+   "synthesisNarrative": "Otonom efferent yollar merkezi sinir sisteminden efektör organa iki nöronlu bir zincirle ulaşır.\n\n- **Ganglionik Aşırım:** Preganglionik miyelinli lifler otonom ganglionlarda postganglionik miyelinsiz hücre gövdeleriyle sinaps yapar.\n- **Temel Nörotransmitterler:** Preganglionik liflerin tamamında asetilkolin (nikotinik reseptör) salınırken, postganglionik uçlarda asetilkolin veya noradrenalin kullanılır.\n- **Kotransmitter Salıverilmesi:** Klasik transmiterlerin yanında veziküllerde VIP, ATP ve Nöropeptid Y (NPY) depolanır.\n- **NANK Lifleri:** Ne adrenerjik ne de kolinerjik olan lifler vazodilatasyon ve bronkodilatasyonda yardımcı iletim sağlar.\n\n> [!NOTE]\n> Kotransmitterler hedef hücrede klasik transmitere göre daha yavaş fakat uzun süreli modülatör yanıtlar oluşturur.",
+   "keyTakeaways": [
+    "Otonomik efferent yollar preganglionik ve postganglionik nöron çiftinden oluşur.",
+    "Tüm otonom ganglionlarda preganglionik iletici asetilkolindir.",
+    "NANK lifleri ve kotransmitterler klasik iletime modülatör destek sağlar."
+   ],
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Otonomik pleksuslar içinde yer alan ve asetilkolin ya da noradrenalin salgılamayan lifler hangisidir?",
+     "options": [
+      {
+       "text": "Non-adrenerjik non-kolinerjik (NANK) lifler",
+       "isCorrect": true,
+       "explanation": "NANK sinir lifleri klasik amin veya ester ileticiler yerine VIP, ATP ve NO gibi alternatif kotransmitterler kullanırlar."
+      },
+      {
+       "text": "Postganglionik sempatik vazomotor lifler",
+       "isCorrect": false,
+       "explanation": "Postganglionik sempatik vazomotor lifler kavramı bu fizyolojik etkiyi oluşturmaz; ilgili klinik mekanizmada zıt veya farklı bir otonomik yolak üzerinden fonksiyon gösterir. Postganglionik sempatik vazomotor lifler klasik adrenerjik lifler olup noradrenalin salgılarlar."
+      },
+      {
+       "text": "Parasempatik preganglionik lifler",
+       "isCorrect": false,
+       "explanation": "Parasempatik preganglionik lifler kavramı bu fizyolojik etkiyi oluşturmaz; ilgili klinik mekanizmada zıt veya farklı bir otonomik yolak üzerinden fonksiyon gösterir. Parasempatik preganglionik lifler klasik kolinerjik liflerdir ve asetilkolin salıverirler."
+      },
+      {
+       "text": "Miyelinli somatomotor lifler",
+       "isCorrect": false,
+       "explanation": "Miyelinli somatomotor lifler kavramı bu fizyolojik etkiyi oluşturmaz; ilgili klinik mekanizmada zıt veya farklı bir otonomik yolak üzerinden fonksiyon gösterir. Somatomotor lifler otonomik olmayıp iskelet kasında asetilkolin ile istemli iletimi sağlarlar."
+      }
+     ],
+     "id": "k41-s02-e1"
+    },
+    {
+     "type": "spot_the_lie",
+     "items": [
+      {
+       "text": "Tüm otonom ganglionlarda preganglionik nöronlardan salınan primer iletici asetilkolindir.",
+       "isLie": false,
+       "explanation": "Tüm otonom ganglionlarda preganglionik nöronlardan salınan primer iletici asetilkolindir. ifadesi otonom farmakoloji ilkeleri açısından incelendiğinde bu klinik durumun gerekçesini açıkça ortaya koyar. Hem sempatik hem parasempatik ganglionlarda preganglionik transmiter istisnasız asetilkolindir."
+      },
+      {
+       "text": "Kotransmitterler klasik nörotransmitterlerle aynı vezikülde depolanıp birlikte salınabilirler.",
+       "isLie": false,
+       "explanation": "Kotransmitterler klasik nörotransmitterlerle aynı vezikülde depolanıp birlikte salınabilirler. ifadesi otonom farmakoloji ilkeleri açısından incelendiğinde bu klinik durumun gerekçesini açıkça ortaya koyar. ATP, VIP ve NPY veziküllerde depolanıp Ca2+ bağımlı ekzositozla birlikte salıverilirler."
+      },
+      {
+       "text": "NANK lifleri sadece çizgili kas nöromusküler kavşağında motor hareket oluştururlar.",
+       "isLie": true,
+       "explanation": "NANK lifleri sadece çizgili kas nöromusküler kavşağında motor hareket oluştururlar. ifadesi otonom farmakoloji ilkeleri açısından incelendiğinde bu klinik durumun gerekçesini açıkça ortaya koyar. NANK lifleri otonomik pleksuslarda ve düz kaslarda yerleşiktir; somatomotor çizgili kas kavşağında bulunmazlar."
+      },
+      {
+       "text": "Otonom efferent yollar merkezi sinir sistemi ile efektör arasında iki nöronlu bir zincir kurar.",
+       "isLie": false,
+       "explanation": "Otonom efferent yollar merkezi sinir sistemi ile efektör arasında iki nöronlu bir zincir kurar. ifadesi otonom farmakoloji ilkeleri açısından incelendiğinde bu klinik durumun gerekçesini açıkça ortaya koyar. Preganglionik nöron ganglionda postganglionik nöronla sinaps yaparak iki nöronlu efferent yolu oluşturur."
+      }
+     ],
+     "id": "k41-s02-e2",
+     "topic": "Nöronal İletim, Otonom Ganglionlar ve Kotransmitterler Klinik Önermeleri"
+    },
+    {
+     "type": "cloze_masking",
+     "maskedTerm": "ko-transmitter",
+     "hint": "Bu kavram otonomik innervasyonu niteleyen temel terimdir.",
+     "id": "k41-s02-e3",
+     "sentence": "Otonom sinir liflerinde asetilkolin ve noradrenalin dışında salınan peptid ve pürin yapılı ileticilere ko-transmitter denir."
+    },
+    {
+     "type": "active_recall",
+     "question": "Sempatik ve parasempatik preganglionik liflerin ortak nörotransmitteri nedir?",
+     "answer": "Her iki sistemde de preganglionik nörotransmitter asetilkolindir ve ganglionik nikotinik reseptörleri aktive eder.",
+     "id": "k41-s02-e4"
+    }
+   ],
+   "id": "k2-41-d-s02",
+   "pdfSayfalari": [
+    26,
+    32
+   ],
+   "bolum": 1
+  },
+  {
+   "slideNumber": 3,
+   "title": "Torakolomber ve Kraniosakral Çıkış ile Enterik Sinir Sistemi",
+   "sourcePdf": {
+    "file": "y25-k2-41-otonom-sinir-sistemi-farmakolojisi.pdf",
+    "startPage": 34,
+    "endPage": 39
+   },
+   "content": "Otonom sinir sisteminin periferik dalları anatomik çıkış yerleri ve enterik pleksuslarıyla özelleşmiştir.\n\n- **Torakolomber Çıkış (Sempatik):** T1-L2 spinal kord segmentlerinin lateral boynuzundan kaynaklanır; sempatik zincir ganglionlarına ulaşır.\n- **Kraniosakral Çıkış (Parasempatik):** Beyin sapı kraniyal çekirdekleri (III, VII, IX, X) ve S2-S4 sakral segmentlerden çıkar.\n- **Enterik Sinir Sistemi (ENS):** Bağırsak duvarında nöron sayısı omuriliğe yakın bağımsız bir mikrosistemdir.\n- **Auerbach ve Meissner Pleksusları:** Miyenterik (Auerbach) pleksus kas tabakaları arasında motiliteyi; Submukozal (Meissner) pleksus mukoza altında sekresyonu yönetir.\n\n> [!IMPORTANT]\n> Enterik sinir sistemi santral bağlantılar kopsa dahi peristaltik refleksleri otonom olarak yürütmeye devam edebilir.",
+   "synthesisNarrative": "Otonom sinir sisteminin periferik dalları anatomik çıkış yerleri ve enterik pleksuslarıyla özelleşmiştir.\n\n- **Torakolomber Çıkış (Sempatik):** T1-L2 spinal kord segmentlerinin lateral boynuzundan kaynaklanır; sempatik zincir ganglionlarına ulaşır.\n- **Kraniosakral Çıkış (Parasempatik):** Beyin sapı kraniyal çekirdekleri (III, VII, IX, X) ve S2-S4 sakral segmentlerden çıkar.\n- **Enterik Sinir Sistemi (ENS):** Bağırsak duvarında nöron sayısı omuriliğe yakın bağımsız bir mikrosistemdir.\n- **Auerbach ve Meissner Pleksusları:** Miyenterik (Auerbach) pleksus kas tabakaları arasında motiliteyi; Submukozal (Meissner) pleksus mukoza altında sekresyonu yönetir.\n\n> [!IMPORTANT]\n> Enterik sinir sistemi santral bağlantılar kopsa dahi peristaltik refleksleri otonom olarak yürütmeye devam edebilir.",
+   "keyTakeaways": [
+    "Sempatik sistem torakolomber (T1-L2), parasempatik sistem kraniosakral çıkışlıdır.",
+    "Enterik sinir sistemi Auerbach (motilite) ve Meissner (sekresyon) pleksuslarından oluşur.",
+    "Enterik ağ santral sinir sisteminden bağımsız lokal refleks arklarına sahiptir."
+   ],
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Gastrointestinal sistem duvarında sirküler ve longitudinal kaslar arasında yer alarak motiliteyi düzenleyen pleksus hangisidir?",
+     "options": [
+      {
+       "text": "Miyenterik (Auerbach) pleksusu",
+       "isCorrect": true,
+       "explanation": "Miyenterik (Auerbach) pleksusu doğru yanıttır; çünkü bu spesifik farmakolojik ve fizyolojik mekanizma doğrudan hedeflenen reseptör ve doku yanıtını oluşturur. Auerbach pleksusu kas tabakaları arasında yerleşerek bağırsak motilitesi ve peristaltik dalgaları kontrol eder."
+      },
+      {
+       "text": "Submukozal (Meissner) pleksusu",
+       "isCorrect": false,
+       "explanation": "Submukozal (Meissner) pleksusu kavramı bu fizyolojik etkiyi oluşturmaz; ilgili klinik mekanizmada zıt veya farklı bir otonomik yolak üzerinden fonksiyon gösterir. Meissner pleksusu mukoza altında yer alır ve sekresyon ile lokal kan akımını yönetir."
+      },
+      {
+       "text": "Çölyak prevertebral pleksusu",
+       "isCorrect": false,
+       "explanation": "Çölyak prevertebral pleksusu kavramı bu fizyolojik etkiyi oluşturmaz; ilgili klinik mekanizmada zıt veya farklı bir otonomik yolak üzerinden fonksiyon gösterir. Çölyak pleksus karın boşluğunda ana damarlar çevresindeki sempatik ganglionik pleksustur."
+      },
+      {
+       "text": "Hipogastrik alt pleksusu",
+       "isCorrect": false,
+       "explanation": "Hipogastrik alt pleksusu kavramı bu fizyolojik etkiyi oluşturmaz; ilgili klinik mekanizmada zıt veya farklı bir otonomik yolak üzerinden fonksiyon gösterir. Hipogastrik pleksus pelvik organların innervasyonunu sağlayan pleksustur; bağırsak kas tabakasında yer almaz."
+      }
+     ],
+     "id": "k41-s03-e1"
+    },
+    {
+     "type": "swipe_matching",
+     "leftCategory": "Miyenterik (Auerbach) Pleksus",
+     "rightCategory": "Submukozal (Meissner) Pleksus",
+     "cards": [
+      {
+       "text": "Sirküler ve longitudinal kas tabakaları arasında bulunur",
+       "category": "left",
+       "explanation": "Auerbach pleksusu iki düz kas tabakası arasına yerleşmiştir."
+      },
+      {
+       "text": "Gastrointestinal lümen sekresyonunu ve emilimi düzenler",
+       "category": "right",
+       "explanation": "Meissner pleksusu mukoza bezlerinin sekresyonunu ve lokal kan akımını kontrol eder."
+      },
+      {
+       "text": "Gastrointestinal peristaltizm ve motiliteden primer sorumludur",
+       "category": "left",
+       "explanation": "Auerbach pleksusu peristaltik kontraksiyonların ritmini ve gücünü yönetir."
+      },
+      {
+       "text": "Mukoza epiteli ile submukoza tabakası arasında yerleşir",
+       "category": "right",
+       "explanation": "Meissner pleksusu submukozal doku derinliğinde yer alır."
+      }
+     ],
+     "id": "k41-s03-e2"
+    },
+    {
+     "type": "cloze_masking",
+     "maskedTerm": "torakolomber",
+     "hint": "Bu kavram otonomik innervasyonu niteleyen temel terimdir.",
+     "id": "k41-s03-e3",
+     "sentence": "Sempatik preganglioner lifler T1-L2 spinal segmentlerden köken aldığı için torakolomber sistem olarak da adlandırılır."
+    },
+    {
+     "type": "active_recall",
+     "question": "Parasempatik sistemin kraniyal komponentini taşıyan 4 kraniyal sinir hangileridir?",
+     "answer": "N. oculomotorius (CN III), N. facialis (CN VII), N. glossopharyngeus (CN IX) ve N. vagus (CN X).",
+     "id": "k41-s03-e4"
+    }
+   ],
+   "id": "k2-41-d-s03",
+   "pdfSayfalari": [
+    34,
+    39
+   ],
+   "bolum": 1
+  },
+  {
+   "slideNumber": 4,
+   "title": "Kolinerjik Nörotransmisyonun 5 Evresi ve SNARE Kompleksi",
+   "sourcePdf": {
+    "file": "y25-k2-41-otonom-sinir-sistemi-farmakolojisi.pdf",
+    "startPage": 40,
+    "endPage": 47
+   },
+   "content": "Kolinerjik nörotransmisyon, asetilkolinin sentezinden yıkımına kadar 5 sıkı kontrol edilen basamakta gerçekleşir.\n\n- **1. Kolin Alımı:** Na+/kolin kotransportörü (CHT1) hız sınırlayıcı basamaktır; **Hemikolinyum** tarafından bloke edilir.\n- **2. Sentez ve Depolama:** Sitoplazmada ChAT enzimiyle üretilen ACh, veziküler taşıyıcı (VAChT) ile depolanır; **Vesamikol** depolamayı önler.\n- **3. Ekzositoz:** Ca2+ girişiyle SNARE proteinleri (sinaptobrevin, sintaksin, SNAP-25) füzyon poru açar. **Botulinum toksini** SNARE'leri parçalar; **Alfa-latrotoksin** masif deşarj yapar.\n- **4. Reseptör Aktivasyonu:** Muskarinik veya nikotinik reseptörlere bağlanarak postsinaptik yanıt oluşturur.\n- **5. Enzimatik Hidroliz:** Asetilkolinesteraz (AChE) sinaptik yarıkta ACh'yi mikrosaniyeler içinde asetat ve koline parçalar.\n\n> [!IMPORTANT]\n> Kolinerjik kavşakta iletim membran gerialımıyla değil, doğrudan AChE enziminin hızlı hidrolitik aktivitesiyle sonlandırılır.",
+   "synthesisNarrative": "Kolinerjik nörotransmisyon, asetilkolinin sentezinden yıkımına kadar 5 sıkı kontrol edilen basamakta gerçekleşir.\n\n- **1. Kolin Alımı:** Na+/kolin kotransportörü (CHT1) hız sınırlayıcı basamaktır; **Hemikolinyum** tarafından bloke edilir.\n- **2. Sentez ve Depolama:** Sitoplazmada ChAT enzimiyle üretilen ACh, veziküler taşıyıcı (VAChT) ile depolanır; **Vesamikol** depolamayı önler.\n- **3. Ekzositoz:** Ca2+ girişiyle SNARE proteinleri (sinaptobrevin, sintaksin, SNAP-25) füzyon poru açar. **Botulinum toksini** SNARE'leri parçalar; **Alfa-latrotoksin** masif deşarj yapar.\n- **4. Reseptör Aktivasyonu:** Muskarinik veya nikotinik reseptörlere bağlanarak postsinaptik yanıt oluşturur.\n- **5. Enzimatik Hidroliz:** Asetilkolinesteraz (AChE) sinaptik yarıkta ACh'yi mikrosaniyeler içinde asetat ve koline parçalar.\n\n> [!IMPORTANT]\n> Kolinerjik kavşakta iletim membran gerialımıyla değil, doğrudan AChE enziminin hızlı hidrolitik aktivitesiyle sonlandırılır.",
+   "keyTakeaways": [
+    "Kolin geri alımı (CHT1) hemikolinyum ile, veziküler depolanma (VAChT) vesamikol ile bloke edilir.",
+    "Veziküler ekzositoz SNARE kompleksi ile yürütülür ve botulinum toksini tarafından engellenir.",
+    "Sinaptik aralıktaki asetilkolin AChE hidrolizi ile mikrosaniyeler içinde sonlandırılır."
+   ],
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Asetilkolinin presinaptik veziküllere aktif taşınmasını engelleyerek kolinerjik depolanmayı durduran farmakolojik ajan hangisidir?",
+     "options": [
+      {
+       "text": "Vesamikol",
+       "isCorrect": true,
+       "explanation": "Vesamikol doğru yanıttır; çünkü bu spesifik farmakolojik ve fizyolojik mekanizma doğrudan hedeflenen reseptör ve doku yanıtını oluşturur. Vesamikol veziküler asetilkolin taşıyıcısı VAChT'ı selektif olarak bloke eder ve asetilkolin depolanmasını durdurur."
+      },
+      {
+       "text": "Hemikolinyum",
+       "isCorrect": false,
+       "explanation": "Hemikolinyum kavramı bu fizyolojik etkiyi oluşturmaz; ilgili klinik mekanizmada zıt veya farklı bir otonomik yolak üzerinden fonksiyon gösterir. Hemikolinyum plazma membranındaki CHT1 taşıyıcısını bloke ederek hücreye kolin girişini engeller."
+      },
+      {
+       "text": "Botulinum toksini",
+       "isCorrect": false,
+       "explanation": "Botulinum toksini kavramı bu fizyolojik etkiyi oluşturmaz; ilgili klinik mekanizmada zıt veya farklı bir otonomik yolak üzerinden fonksiyon gösterir. Botulinum toksini SNARE proteinlerini parçalayarak vezikül ekzositozunu bloke eder."
+      },
+      {
+       "text": "Rezerpin",
+       "isCorrect": false,
+       "explanation": "Rezerpin kavramı bu fizyolojik etkiyi oluşturmaz; ilgili klinik mekanizmada zıt veya farklı bir otonomik yolak üzerinden fonksiyon gösterir. Rezerpin adrenerjik nöronlarda veziküler monoamin taşıyıcısı VMAT-2'yi bloke eder."
+      }
+     ],
+     "id": "k41-s04-e1"
+    },
+    {
+     "type": "causal_chain",
+     "steps": [
+      "1. Kolin Alımı: Presinaptik membrana CHT1 aracılığıyla Na+ bağımlı kolin girişi gerçekleşir.",
+      "2. Asetilkolin Sentezi: ChAT enzimi kolin ile Asetil-KoA'yı sitoplazmada birleştirir.",
+      "3. Veziküler Depolanma: VAChT antiporteri asetilkolini vezikül içine pompalar.",
+      "4. Kalsiyum Bağımlı Füzyon: SNARE proteinleri (sinaptobrevin, sintaksin, SNAP-25) membranla kaynaşır.",
+      "5. Enzimatik Hidroliz: Sinaptik yarıkta AChE asetilkolini kolin ve asetata parçalayarak iletiyi sonlandırır."
+     ],
+     "id": "k41-s04-e2"
+    },
+    {
+     "type": "cloze_masking",
+     "maskedTerm": "SNARE",
+     "hint": "Bu kavram otonomik innervasyonu niteleyen temel terimdir.",
+     "id": "k41-s04-e3",
+     "sentence": "Asetilkolin salıverilmesini sağlayan sinaptobrevin, sintaksin ve SNAP-25 füzyon birimine SNARE kompleksi adı verilir."
+    },
+    {
+     "type": "active_recall",
+     "question": "Botulinum toksini kolinerjik nörotransmisyonu hangi moleküler mekanizmayla engeller?",
+     "answer": "SNARE kompleksindeki proteinleri proteolitik olarak parçalayarak veziküllerin presinaptik zara füzyonunu ve ACh ekzositozunu engeller.",
+     "id": "k41-s04-e4"
+    }
+   ],
+   "id": "k2-41-d-s04",
+   "pdfSayfalari": [
+    40,
+    47
+   ],
+   "bolum": 2
+  },
+  {
+   "slideNumber": 5,
+   "title": "Kolinerjik Reseptörler ve Kolinomimetik İlaç Sınıflandırması",
+   "sourcePdf": {
+    "file": "y25-k2-41-otonom-sinir-sistemi-farmakolojisi.pdf",
+    "startPage": 5,
+    "endPage": 33
+   },
+   "content": "Kolinerjik agonistler doğrudan reseptör aktivasyonu veya AChE inhibisyonu ile kolinerjik tonusu artırırlar.\n\n- **Muskarinik ve Nikotinik Ayrımı:** Muskarinik reseptörler (M1-M5) G proteini kenetli; Nikotinik reseptörler (Nm, Nn) pentamerik ligand kapılı iyon kanallarıdır.\n- **Doğrudan Kolinomimetikler:** Asetilkolin esterleri (betanekol, karbakol, metakolin) ve doğal alkaloidler (pilokarpin, muskarin, nikotin) doğrudan reseptör agonistidir.\n- **Dolaylı Kolinomimetikler (Antikolinesterazlar):** AChE enzimini reversibl veya irreversibl inhibe ederek sinaptik aralıkta endojen asetilkolini biriktirirler.\n- **Reversibl İnhibitörler:** Edrofonyum (kısa etkili alkol), neostigmin ve piridostigmin (karbamat esterleri) klinik tedavide öne çıkar.\n\n> [!NOTE]\n> Betanekol ve pilokarpin muskarinik reseptörlere yüksek seçicilik gösterirken, nikotinik reseptörler üzerinde pratik olarak etkisizdir.",
+   "synthesisNarrative": "Kolinerjik agonistler doğrudan reseptör aktivasyonu veya AChE inhibisyonu ile kolinerjik tonusu artırırlar.\n\n- **Muskarinik ve Nikotinik Ayrımı:** Muskarinik reseptörler (M1-M5) G proteini kenetli; Nikotinik reseptörler (Nm, Nn) pentamerik ligand kapılı iyon kanallarıdır.\n- **Doğrudan Kolinomimetikler:** Asetilkolin esterleri (betanekol, karbakol, metakolin) ve doğal alkaloidler (pilokarpin, muskarin, nikotin) doğrudan reseptör agonistidir.\n- **Dolaylı Kolinomimetikler (Antikolinesterazlar):** AChE enzimini reversibl veya irreversibl inhibe ederek sinaptik aralıkta endojen asetilkolini biriktirirler.\n- **Reversibl İnhibitörler:** Edrofonyum (kısa etkili alkol), neostigmin ve piridostigmin (karbamat esterleri) klinik tedavide öne çıkar.\n\n> [!NOTE]\n> Betanekol ve pilokarpin muskarinik reseptörlere yüksek seçicilik gösterirken, nikotinik reseptörler üzerinde pratik olarak etkisizdir.",
+   "keyTakeaways": [
+    "Kolinomimetikler doğrudan reseptör agonistleri ve dolaylı antikolinesterazlar olarak ikiye ayrılır.",
+    "Muskarinik reseptörler metabotropik (G protein), nikotinik reseptörler iyonotropiktir.",
+    "Karbamat türevi antikolinesterazlar (piridostigmin) reversibl etki gösterir."
+   ],
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Aşağıdaki kolinomimetik ilaçlardan hangisi doğrudan muskarinik reseptör agonisti olup nikotinik etki göstermez?",
+     "options": [
+      {
+       "text": "Betanekol",
+       "isCorrect": true,
+       "explanation": "Betanekol muskarinik reseptörlere son derece selektif bir kolin esteri olup nikotinik aktivite göstermeden düz kasları uyarır."
+      },
+      {
+       "text": "Karbakol",
+       "isCorrect": false,
+       "explanation": "Karbakol kavramı bu fizyolojik etkiyi oluşturmaz; ilgili klinik mekanizmada zıt veya farklı bir otonomik yolak üzerinden fonksiyon gösterir. Karbakol hem güçlü muskarinik hem de belirgin nikotinik ganglionik reseptör agonist etkisine sahip bir kolin esteridir."
+      },
+      {
+       "text": "Edrofonyum",
+       "isCorrect": false,
+       "explanation": "Edrofonyum kavramı bu fizyolojik etkiyi oluşturmaz; ilgili klinik mekanizmada zıt veya farklı bir otonomik yolak üzerinden fonksiyon gösterir. Edrofonyum doğrudan agonist değil reversibl bir asetilkolinesteraz enzim inhibitörüdür."
+      },
+      {
+       "text": "Neostigmin",
+       "isCorrect": false,
+       "explanation": "Neostigmin kavramı bu fizyolojik etkiyi oluşturmaz; ilgili klinik mekanizmada zıt veya farklı bir otonomik yolak üzerinden fonksiyon gösterir. Neostigmin antikolinesteraz bir ajan olup asetilkolini yıkan enzimi inhibe ederek dolaylı etki oluşturur."
+      }
+     ],
+     "id": "k41-s05-e1"
+    },
+    {
+     "type": "swipe_matching",
+     "leftCategory": "Doğrudan Kolinerjik Agonistler",
+     "rightCategory": "Dolaylı Antikolinesterazlar",
+     "cards": [
+      {
+       "text": "Betanekol ve Pilokarpin",
+       "category": "left",
+       "explanation": "Postsinaptik muskarinik reseptörlere doğrudan bağlanarak hücre içi sinyal yolağını aktive ederler."
+      },
+      {
+       "text": "Piridostigmin ve Neostigmin",
+       "category": "right",
+       "explanation": "Asetilkolinesteraz enzimini inhibe ederek sinaptik aralıkta endojen asetilkolin miktarını artırırlar."
+      },
+      {
+       "text": "Metakolin ve Karbakol",
+       "category": "left",
+       "explanation": "Doğrudan kolin esteri yapısında olup kolinerjik reseptörleri bizzat uyarırlar."
+      },
+      {
+       "text": "Edrofonyum ve Donepezil",
+       "category": "right",
+       "explanation": "Enzimatik hidrolizi durdurarak asetilkolinin sinapsta daha uzun süre kalmasını sağlarlar."
+      }
+     ],
+     "id": "k41-s05-e2"
+    },
+    {
+     "type": "cloze_masking",
+     "maskedTerm": "antikolinesteraz",
+     "hint": "Bu kavram otonomik innervasyonu niteleyen temel terimdir.",
+     "id": "k41-s05-e3",
+     "sentence": "Asetilkolinesteraz enzimini inhibe ederek sinapsta asetilkolin biriktiren ilaçlara antikolinesteraz denir."
+    },
+    {
+     "type": "active_recall",
+     "question": "Nikotinik reseptörler ile muskarinik reseptörlerin temel biyokimyasal yapı farkı nedir?",
+     "answer": "Nikotinik reseptörler pentamerik ligand kapılı iyon kanallarıdır; muskarinik reseptörler ise 7 transmembranlı G proteini kenetli reseptörlerdir.",
+     "id": "k41-s05-e4"
+    }
+   ],
+   "id": "k2-41-d-s05",
+   "pdfSayfalari": [
+    5,
+    33
+   ],
+   "bolum": 2
+  },
+  {
+   "slideNumber": 6,
+   "title": "Kolinomimetiklerin Klinik Kullanımı: MG, Nörojenik Mesane ve Glokom",
+   "sourcePdf": {
+    "file": "y25-k2-41-otonom-sinir-sistemi-farmakolojisi.pdf",
+    "startPage": 7,
+    "endPage": 9
+   },
+   "content": "Kolinomimetik ilaçlar organ spesifik farmakolojik etkileri sayesinde nöroloji, üroloji ve oftalmolojide vazgeçilmezdir.\n\n- **Myasthenia Gravis:** Nikotinik Nm reseptör kaybı mevcuttur; çok kısa etkili **edrofonyum** tanıda (Tensilon testi), **piridostigmin** idame tedavisinde kullanılır.\n- **Nörojenik Mesane ve İleus:** Cerrahi sonrası atonik mesanede ve paralitik ileusta detrusor ve bağırsak kasılmasını uyarmak için **betanekol** seçilir.\n- **Glokom Tedavisi:** **Pilokarpin** iris sfinkterini ve siliyer kası kasarak miyozis yapar; trabeküler ağı gerip Schlemm kanalını açarak göz içi basıncını düşürür.\n- **Kserostomi:** Sjögren sendromunda tükürük ve gözyaşı bezlerini uyarmak için **sevimelin** veya pilokarpin oral olarak verilir.\n\n> [!IMPORTANT]\n> Betanekol ve piridostigmin mekanik obstrüksiyon (taş, darlık, tümör) durumlarında asla kullanılmaz; perforasyona neden olabilir.",
+   "synthesisNarrative": "Kolinomimetik ilaçlar organ spesifik farmakolojik etkileri sayesinde nöroloji, üroloji ve oftalmolojide vazgeçilmezdir.\n\n- **Myasthenia Gravis:** Nikotinik Nm reseptör kaybı mevcuttur; çok kısa etkili **edrofonyum** tanıda (Tensilon testi), **piridostigmin** idame tedavisinde kullanılır.\n- **Nörojenik Mesane ve İleus:** Cerrahi sonrası atonik mesanede ve paralitik ileusta detrusor ve bağırsak kasılmasını uyarmak için **betanekol** seçilir.\n- **Glokom Tedavisi:** **Pilokarpin** iris sfinkterini ve siliyer kası kasarak miyozis yapar; trabeküler ağı gerip Schlemm kanalını açarak göz içi basıncını düşürür.\n- **Kserostomi:** Sjögren sendromunda tükürük ve gözyaşı bezlerini uyarmak için **sevimelin** veya pilokarpin oral olarak verilir.\n\n> [!IMPORTANT]\n> Betanekol ve piridostigmin mekanik obstrüksiyon (taş, darlık, tümör) durumlarında asla kullanılmaz; perforasyona neden olabilir.",
+   "keyTakeaways": [
+    "Myasthenia gravis tanısında edrofonyum, idame tedavisinde piridostigmin ilk basamaktır.",
+    "Postoperatif hipotonik mesane ve ileusta selektif muskarinik agonist betanekol kullanılır.",
+    "Glokomda pilokarpin siliyer kası kasıp trabeküler ağı açarak göz içi basıncını düşürür."
+   ],
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Oftalmolojide açık açılı glokom hastasında pilokarpinin göz içi basıncını düşürücü temel etki mekanizması nedir?",
+     "options": [
+      {
+       "text": "Siliyer kası kasarak trabeküler ağı gerer ve Schlemm kanalından drenajı artırır",
+       "isCorrect": true,
+       "explanation": "Pilokarpin siliyer kas ve sfinkter pupillayı kasarak trabeküler ağı genişletir ve hümör aközün dışa akımını kolaylaştırır."
+      },
+      {
+       "text": "Siliyer cisimde hümör aköz üretimini doğrudan durdurur",
+       "isCorrect": false,
+       "explanation": "Siliyer cisimde hümör aköz üretimini doğrudan durdurur kavramı bu fizyolojik etkiyi oluşturmaz; ilgili klinik mekanizmada zıt veya farklı bir otonomik yolak üzerinden fonksiyon gösterir. Hümör aköz üretimini azaltan ilaçlar beta blokörler (timolol) ve karbonik anhidraz inhibitörleridir; pilokarpin drenajı artırır."
+      },
+      {
+       "text": "İris dilatatör kasını kasarak pupillayı genişletir",
+       "isCorrect": false,
+       "explanation": "İris dilatatör kasını kasarak pupillayı genişletir kavramı bu fizyolojik etkiyi oluşturmaz; ilgili klinik mekanizmada zıt veya farklı bir otonomik yolak üzerinden fonksiyon gösterir. İris dilatatör kası sempatik alfa-1 uyarısıyla kasılır ve midriyazis yapar; pilokarpin miyozis oluşturur."
+      },
+      {
+       "text": "Retinal venlerde vazodilatasyonla kan göllenmesi yapar",
+       "isCorrect": false,
+       "explanation": "Retinal venlerde vazodilatasyonla kan göllenmesi yapar kavramı bu fizyolojik etkiyi oluşturmaz; ilgili klinik mekanizmada zıt veya farklı bir otonomik yolak üzerinden fonksiyon gösterir. Retinal venöz vazodilatasyon glokom tedavisinde bir mekanizma değildir ve göz içi basıncını düşürmez."
+      }
+     ],
+     "id": "k41-s06-e1"
+    },
+    {
+     "type": "spot_the_lie",
+     "items": [
+      {
+       "text": "Myasthenia gravis tanısal testinde çok kısa yarı ömürlü edrofonyum kullanılır.",
+       "isLie": false,
+       "explanation": "Myasthenia gravis tanısal testinde çok kısa yarı ömürlü edrofonyum kullanılır. ifadesi otonom farmakoloji ilkeleri açısından incelendiğinde bu klinik durumun gerekçesini açıkça ortaya koyar. Edrofonyum dakikalar içinde etki gösterip kaybolduğu için geçici kas gücü artışını gözlemlemede idealdir."
+      },
+      {
+       "text": "Betanekol hipotonik mesanede detrüsör kasını uyararak idrar boşalımını sağlar.",
+       "isLie": false,
+       "explanation": "Betanekol hipotonik mesanede detrüsör kasını uyararak idrar boşalımını sağlar. ifadesi otonom farmakoloji ilkeleri açısından incelendiğinde bu klinik durumun gerekçesini açıkça ortaya koyar. Betanekol mesane detrusor düz kasını M3 reseptörleri üzerinden güçlü şekilde kasar."
+      },
+      {
+       "text": "Pilokarpin dar açılı glokom krizinde midriyazis oluşturmak için ilk tercih edilen ajandır.",
+       "isLie": true,
+       "explanation": "Pilokarpin dar açılı glokom krizinde midriyazis oluşturmak için ilk tercih edilen ajandır. ifadesi otonom farmakoloji ilkeleri açısından incelendiğinde bu klinik durumun gerekçesini açıkça ortaya koyar. Pilokarpin miyozis yapar; midriyazis dar açılı glokomda açıyı kapatıp krizi ağırlaştırdığı için kontrendikedir."
+      },
+      {
+       "text": "Sjögren sendromuna bağlı ağız kuruluğunda oral sevimelin tükürük salgısını artırır.",
+       "isLie": false,
+       "explanation": "Sjögren sendromuna bağlı ağız kuruluğunda oral sevimelin tükürük salgısını artırır. ifadesi otonom farmakoloji ilkeleri açısından incelendiğinde bu klinik durumun gerekçesini açıkça ortaya koyar. Sevimelin ekzokrin tükürük bezlerindeki M3 reseptörlerini uyararak sekresyonu belirgin artırır."
+      }
+     ],
+     "id": "k41-s06-e2",
+     "topic": "Kolinomimetiklerin Klinik Kullanımı: MG, Nörojenik Mesane ve Glokom Klinik Önermeleri"
+    },
+    {
+     "type": "cloze_masking",
+     "maskedTerm": "Schlemm kanalı",
+     "hint": "Bu kavram otonomik innervasyonu niteleyen temel terimdir.",
+     "id": "k41-s06-e3",
+     "sentence": "Açık açılı glokomda trabeküler ağı gererek hümör aközün drenajını sağlayan venöz yapı Schlemm kanalıdır."
+    },
+    {
+     "type": "active_recall",
+     "question": "Myasthenia gravis hastasında piridostigminin tedavi edici mekanizması nedir?",
+     "answer": "AChE enzimini reversibl inhibe ederek sinaptik aralıkta asetilkolini artırır ve kalan nikotinik reseptörlerin daha fazla uyarılmasını sağlar.",
+     "id": "k41-s06-e4"
+    }
+   ],
+   "id": "k2-41-d-s06",
+   "pdfSayfalari": [
+    7,
+    9
+   ],
+   "bolum": 2
+  },
+  {
+   "slideNumber": 7,
+   "title": "Kolinerjik Toksisite (SLUDGE), Kontrendikasyonlar ve Antidot",
+   "sourcePdf": {
+    "file": "y25-k2-41-otonom-sinir-sistemi-farmakolojisi.pdf",
+    "startPage": 10,
+    "endPage": 12
+   },
+   "content": "Antikolinesterazların aşırı dozunda veya organofosfat temasında yaşamı tehdit eden kolinerjik kriz gelişir.\n\n- **SLUDGE / DUMBELS Belirtileri:** Salivasyon, Lakrimasyon, Ürinasyon, Defekasyon, GIS krampları, Emesis; bronkospazm, bronkore ve bradikardi.\n- **Nikotinik Toksisite:** Çizgili kaslarda fasikülasyonlar, kramplar ve ardından depolarizasyon bloğuna bağlı diyafram felci.\n- **Hayat Kurtarıcı Tedavi:** Muskarinik aşırı uyarım için yüksek doz **Atropin**; enzim reaktivasyonu için **Pralidoksim (PAM)** uygulanır.\n- **Enzim Yaşlanması (Aging):** Organofosfat-AChE bağından alkil grubu kopup bağ kalıcı hale gelmeden önce PAM erken verilmelidir.\n- **Kontrendikasyonlar:** Astım, KOAH, peptik ülser, mekanik bağırsak/idrar yolu tıkanıklığı.\n\n> [!IMPORTANT]\n> Atropin muskarinik semptomları düzeltir fakat nikotinik kas felcini düzeltemez; kas felci için enzim reaktivatörü pralidoksim şarttır.",
+   "synthesisNarrative": "Antikolinesterazların aşırı dozunda veya organofosfat temasında yaşamı tehdit eden kolinerjik kriz gelişir.\n\n- **SLUDGE / DUMBELS Belirtileri:** Salivasyon, Lakrimasyon, Ürinasyon, Defekasyon, GIS krampları, Emesis; bronkospazm, bronkore ve bradikardi.\n- **Nikotinik Toksisite:** Çizgili kaslarda fasikülasyonlar, kramplar ve ardından depolarizasyon bloğuna bağlı diyafram felci.\n- **Hayat Kurtarıcı Tedavi:** Muskarinik aşırı uyarım için yüksek doz **Atropin**; enzim reaktivasyonu için **Pralidoksim (PAM)** uygulanır.\n- **Enzim Yaşlanması (Aging):** Organofosfat-AChE bağından alkil grubu kopup bağ kalıcı hale gelmeden önce PAM erken verilmelidir.\n- **Kontrendikasyonlar:** Astım, KOAH, peptik ülser, mekanik bağırsak/idrar yolu tıkanıklığı.\n\n> [!IMPORTANT]\n> Atropin muskarinik semptomları düzeltir fakat nikotinik kas felcini düzeltemez; kas felci için enzim reaktivatörü pralidoksim şarttır.",
+   "keyTakeaways": [
+    "Kolinerjik kriz muskarinik aşırılık (SLUDGE) ve nikotinik solunum felciyle seyreder.",
+    "Atropin muskarinik semptomları düzeltirken, pralidoksim fosforillenmiş AChE'yi reaktive eder.",
+    "Organofosfat bağında enzim yaşlanması (aging) oluşmadan önce pralidoksim erken verilmelidir."
+   ],
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Organofosfat intoksikasyonunda pralidoksimin (PAM) erken saatlerde verilmesini zorunlu kılan biyokimyasal mekanizma hangisidir?",
+     "options": [
+      {
+       "text": "Fosforile AChE kompleksinden alkil grubu koparak enzimin reaktive edilemez hale gelmesi (enzim yaşlanması)",
+       "isCorrect": true,
+       "explanation": "Enzim yaşlanması (aging), fosforilasyon bağının kovalent olarak stabilize olmasıdır; bu süreç tamamlandıktan sonra oksimler bağı kıramaz."
+      },
+      {
+       "text": "Pralidoksimin karaciğerde hızla metabolize olup 1 saatte etkisini tamamen kaybetmesi",
+       "isCorrect": false,
+       "explanation": "Pralidoksimin karaciğerde hızla metabolize olup 1 saatte etkisini tamamen kaybetmesi kavramı bu fizyolojik etkiyi oluşturmaz; ilgili klinik mekanizmada zıt veya farklı bir otonomik yolak üzerinden fonksiyon gösterir. Erken uygulama zorunluluğu ilacın hepatik klirensiyle değil, enzimin kimyasal yaşlanma süreciyle ilgilidir."
+      },
+      {
+       "text": "Atropinin pralidoksim ile kimyasal kompleks oluşturup çökelmesi",
+       "isCorrect": false,
+       "explanation": "Atropinin pralidoksim ile kimyasal kompleks oluşturup çökelmesi kavramı bu fizyolojik etkiyi oluşturmaz; ilgili klinik mekanizmada zıt veya farklı bir otonomik yolak üzerinden fonksiyon gösterir. Atropin ve pralidoksim sinerjistik çalışan iki ayrı antidottur; birbirlerini çökeltmez veya inaktive etmezler."
+      },
+      {
+       "text": "Asetilkolin reseptörlerinin kalıcı olarak nöron içine çekilip lizozomda parçalanması",
+       "isCorrect": false,
+       "explanation": "Asetilkolin reseptörlerinin kalıcı olarak nöron içine çekilip lizozomda parçalanması kavramı bu fizyolojik etkiyi oluşturmaz; ilgili klinik mekanizmada zıt veya farklı bir otonomik yolak üzerinden fonksiyon gösterir. Krizdeki temel patoloji reseptör kaybı değil, sinaptik aralıkta aşırı asetilkolin birikmesidir."
+      }
+     ],
+     "id": "k41-s07-e1"
+    },
+    {
+     "type": "swipe_matching",
+     "leftCategory": "Atropin",
+     "rightCategory": "Pralidoksim (PAM)",
+     "cards": [
+      {
+       "text": "Bronkore, bronkospazm ve bradikardi gibi muskarinik semptomları bloke eder",
+       "category": "left",
+       "explanation": "Atropin muskarinik reseptörleri kompetitif bloke ederek sekresyonları kurutur."
+      },
+      {
+       "text": "Fosforillenmiş asetilkolinesteraz enzimini yeniden aktif hale getirir",
+       "category": "right",
+       "explanation": "PAM nükleofilik saldırı ile fosfat grubunu kopararak AChE enzimini serbestleştirir."
+      },
+      {
+       "text": "Nikotinik reseptörler ve çizgili kas felci üzerinde doğrudan etkisi yoktur",
+       "category": "left",
+       "explanation": "Atropin muskarinik spesifiktir; iskelet kası güçsüzlüğünü veya fasikülasyonları düzeltmez."
+      },
+      {
+       "text": "Nöromusküler kavşaktaki nikotinik kas güçsüzlüğü ve diyafram felcini düzeltir",
+       "category": "right",
+       "explanation": "PAM enzimi reaktive ederek nikotinik kavşakta biriken aşırı ACh'yi yıkar ve kas gücünü geri kazandırır."
+      }
+     ],
+     "id": "k41-s07-e2"
+    },
+    {
+     "type": "cloze_masking",
+     "maskedTerm": "enzim yaşlanması",
+     "hint": "Bu kavram otonomik innervasyonu niteleyen temel terimdir.",
+     "id": "k41-s07-e3",
+     "sentence": "Organofosfat-AChE kompleksinde alkil kopması sonucu bağın oksimlerle kırılamaz hale gelmesine enzim yaşlanması denir."
+    },
+    {
+     "type": "active_recall",
+     "question": "Kolinerjik krizde görülen SLUDGE sendromunun açılımındaki 6 temel semptom nedir?",
+     "answer": "Salivasyon (tükürük), Lakrimasyon (gözyaşı), Ürinasyon (işeme), Defekasyon (dışkılama), Gastrointestinal kramp ve Emesis (kusma).",
+     "id": "k41-s07-e4"
+    }
+   ],
+   "id": "k2-41-d-s07",
+   "pdfSayfalari": [
+    10,
+    12
+   ],
+   "bolum": 2
+  },
+  {
+   "slideNumber": 8,
+   "title": "[TEKRAR SAYFASI - CHECKPOINT 1] Otonom Sinir Sistemi Mimarisi ve Kolinerjik Sistem",
+   "isCheckpoint": true,
+   "content": "Bu bölümde otonom sinir sisteminin temel mimarisini ve kolinerjik nörotransmisyonu pekiştirdik.\n\n- **Anatomik Organizasyon:** Sempatik sistem torakolomber ve sempatoadrenal; parasempatik sistem kraniosakral ve modüler yapıdadır.\n- **Enterik ve NANK Sistem:** Auerbach motiliteyi, Meissner sekresyonu yönetir; NANK lifleri VIP, NO ve ATP salgılar.\n- **Kolinerjik Evreler:** CHT1 (hemikolinyum), VAChT (vesamikol), SNARE (botulinum toksini) ve AChE enzimatik hidrolizi.\n- **Klinik ve Toksisite:** Betanekol hipotonik mesanede, pilokarpin glokomda; organofosfat toksisitesinde ise atropin ve pralidoksim kullanılır.\n\n> [!NOTE]\n> Kolinerjik kavşakta iletim membran gerialımıyla değil, AChE'nin hızlı hidrolitik aktivitesiyle sonlandırılır.",
+   "synthesisNarrative": "Bu bölümde otonom sinir sisteminin temel mimarisini ve kolinerjik nörotransmisyonu pekiştirdik.\n\n- **Anatomik Organizasyon:** Sempatik sistem torakolomber ve sempatoadrenal; parasempatik sistem kraniosakral ve modüler yapıdadır.\n- **Enterik ve NANK Sistem:** Auerbach motiliteyi, Meissner sekresyonu yönetir; NANK lifleri VIP, NO ve ATP salgılar.\n- **Kolinerjik Evreler:** CHT1 (hemikolinyum), VAChT (vesamikol), SNARE (botulinum toksini) ve AChE enzimatik hidrolizi.\n- **Klinik ve Toksisite:** Betanekol hipotonik mesanede, pilokarpin glokomda; organofosfat toksisitesinde ise atropin ve pralidoksim kullanılır.\n\n> [!NOTE]\n> Kolinerjik kavşakta iletim membran gerialımıyla değil, AChE'nin hızlı hidrolitik aktivitesiyle sonlandırılır.",
+   "keyTakeaways": [
+    "Sempatik sistem torakolomber ve hormonal; parasempatik sistem kraniosakral ve lokaldir.",
+    "Kolinerjik aşırımda hemikolinyum kolin alımını, vesamikol vezikül depolanmasını, botulinum ekzositozu önler.",
+    "Organofosfat zehirlenmesinde atropin muskarinik semptomları, pralidoksim ise enzimi reaktive ederek nikotinik felci çözer."
+   ],
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Kolinerjik nörotransmisyonda rol alan basamaklar ve bunları inhibe eden ajan eşleştirmelerinden hangisi DOĞRUDUR?",
+     "options": [
+      {
+       "text": "Kolin geri alımı (CHT1) — Hemikolinyum",
+       "isCorrect": true,
+       "explanation": "Kolin geri alımı (CHT1) — Hemikolinyum doğru yanıttır; çünkü bu spesifik farmakolojik ve fizyolojik mekanizma doğrudan hedeflenen reseptör ve doku yanıtını oluşturur. Hemikolinyum presinaptik plazma membranında yerleşik Na+/kolin kotransportörü CHT1'i selektif olarak bloke eder."
+      },
+      {
+       "text": "ACh veziküler depolanması — Botulinum toksini",
+       "isCorrect": false,
+       "explanation": "ACh veziküler depolanması — Botulinum toksini kavramı bu fizyolojik etkiyi oluşturmaz; ilgili klinik mekanizmada zıt veya farklı bir otonomik yolak üzerinden fonksiyon gösterir. ACh veziküler depolanmasını vesamikol bloke eder; botulinum toksini vezikül ekzositozunu engeller."
+      },
+      {
+       "text": "SNARE füzyonu ve ekzositoz — Vesamikol",
+       "isCorrect": false,
+       "explanation": "SNARE füzyonu ve ekzositoz — Vesamikol kavramı bu fizyolojik etkiyi oluşturmaz; ilgili klinik mekanizmada zıt veya farklı bir otonomik yolak üzerinden fonksiyon gösterir. SNARE ekzositozunu botulinum toksini parçalar; vesamikol vezikül içine ACh taşınmasını engeller."
+      },
+      {
+       "text": "AChE hidrolizi — Pralidoksim",
+       "isCorrect": false,
+       "explanation": "AChE hidrolizi — Pralidoksim kavramı bu fizyolojik etkiyi oluşturmaz; ilgili klinik mekanizmada zıt veya farklı bir otonomik yolak üzerinden fonksiyon gösterir. Pralidoksim AChE inhibitörü değil, aksine fosforile olmuş enzimi reaktive eden bir oksim türevidir."
+      }
+     ],
+     "id": "k41-s08-e1"
+    },
+    {
+     "type": "venn_grid",
+     "labelA": "Sempatik Sistem",
+     "labelB": "Parasempatik Sistem",
+     "items": [
+      {
+       "criterion": "Adrenal medulladan salınan hormonlarla pekiştirilen endokrin bileşene sahiptir",
+       "correct": "A"
+      },
+      {
+       "criterion": "Preganglionik liflerinin tamamında asetilkolin salıverilir",
+       "correct": "both"
+      },
+      {
+       "criterion": "Hormonal komponenti bulunmayan, lokal ve bağımsız çalışan sinir şebekesidir",
+       "correct": "B"
+      },
+      {
+       "criterion": "Somatik istemli kas hareketlerini doğrudan kontrol eder",
+       "correct": "neither"
+      }
+     ],
+     "id": "k41-s08-e2",
+     "title": "Sempatik Sistem ve Parasempatik Sistem Karşılaştırması"
+    },
+    {
+     "type": "spot_the_lie",
+     "items": [
+      {
+       "text": "Betanekol doğrudan muskarinik agonist olup postoperatif atonik mesanede kullanılır.",
+       "isLie": false,
+       "explanation": "Betanekol doğrudan muskarinik agonist olup postoperatif atonik mesanede kullanılır. ifadesi otonom farmakoloji ilkeleri açısından incelendiğinde bu klinik durumun gerekçesini açıkça ortaya koyar. Betanekol mesane detrusor düz kasını uyararak idrar boşalımını tetikler."
+      },
+      {
+       "text": "Organofosfat zehirlenmesinde atropin nikotinik diyafram felcini tamamen çözer.",
+       "isLie": true,
+       "explanation": "Organofosfat zehirlenmesinde atropin nikotinik diyafram felcini tamamen çözer. ifadesi otonom farmakoloji ilkeleri açısından incelendiğinde bu klinik durumun gerekçesini açıkça ortaya koyar. Atropin muskarinik antagonisttir; nikotinik kavşaktaki kas felcini düzeltemez, bunun için pralidoksim gerekir."
+      },
+      {
+       "text": "Auerbach pleksusu sindirim kanalı kas tabakaları arasında yerleşip motiliteyi yönetir.",
+       "isLie": false,
+       "explanation": "Auerbach pleksusu sindirim kanalı kas tabakaları arasında yerleşip motiliteyi yönetir. ifadesi otonom farmakoloji ilkeleri açısından incelendiğinde bu klinik durumun gerekçesini açıkça ortaya koyar. Auerbach pleksusu kas tabakaları arasında yer alıp peristaltizmi organize eder."
+      },
+      {
+       "text": "Asetilkolin sinaptik aralıktan taşınarak değil doğrudan AChE ile hidroliz edilerek sonlandırılır.",
+       "isLie": false,
+       "explanation": "Asetilkolin sinaptik aralıktan taşınarak değil doğrudan AChE ile hidroliz edilerek sonlandırılır. ifadesi otonom farmakoloji ilkeleri açısından incelendiğinde bu klinik durumun gerekçesini açıkça ortaya koyar. ACh sinaptik aralıkta mikrosaniyeler içinde hidrolize uğrayarak inaktive edilir."
+      }
+     ],
+     "id": "k41-s08-e3",
+     "topic": "[TEKRAR SAYFASI - CHECKPOINT 1] Otonom Sinir Sistemi Mimarisi ve Kolinerjik Sistem Klinik Önermeleri"
+    },
+    {
+     "type": "cloze_masking",
+     "maskedTerm": "Meissner",
+     "hint": "Bu kavram otonomik innervasyonu niteleyen temel terimdir.",
+     "id": "k41-s08-e4",
+     "sentence": "Gastrointestinal duvarda mukoza bezlerinin sekresyonunu ve lokal kan akımını düzenleyen pleksus Meissner pleksusudur."
+    }
+   ],
+   "id": "k2-41-d-s08",
+   "bolum": 2
+  },
+  {
+   "slideNumber": 9,
+   "title": "Antimuskarinik İlaçlar, Kimyasal Yapı ve Solunum/Oftalmoloji",
+   "sourcePdf": {
+    "file": "y25-k2-41-otonom-sinir-sistemi-farmakolojisi.pdf",
+    "startPage": 13,
+    "endPage": 16
+   },
+   "content": "Antimuskarinik ilaçlar, muskarinik reseptörleri kompetitif olarak bloke ederek parasempatolitik etki oluştururlar.\n\n- **Kimyasal Yapı Sınıflandırması:**\n  - *Tersiyer Aminler (Atropin, Skopolamin):* Lipofiliktir; gastrointestinal kanaldan iyi emilir ve kan-beyin bariyerini (KBB) aşarak santral sinir sistemine geçerler.\n  - *Kuvaterner Aminler (İpratropiyum, Tiyotropiyum):* İyonize yapıdadır; KBB'yi geçmezler ve santral yan etki yapmazlar.\n- **Solunum Endikasyonları:** İpratropiyum ve tiyotropiyum inhaler olarak KOAH ve astımda bronkodilatasyon sağlamak ve bronş sekresyonlarını kurutmak için kullanılır.\n- **Oftalmolojik Kullanım:** Tropikamid ve siklopentolat göz muayenesinde kısa etkili midriyatik ve sikloplejik olarak tercih edilir.\n\n> [!NOTE]\n> Kuvaterner amonyum bileşikleri santral sinir sistemine ve göze sistemik geçiş yapamadıkları için bronkospazm tedavisinde yüksek güvenilirlik sunar.",
+   "synthesisNarrative": "Antimuskarinik ilaçlar, muskarinik reseptörleri kompetitif olarak bloke ederek parasempatolitik etki oluştururlar.\n\n- **Kimyasal Yapı Sınıflandırması:**\n  - *Tersiyer Aminler (Atropin, Skopolamin):* Lipofiliktir; gastrointestinal kanaldan iyi emilir ve kan-beyin bariyerini (KBB) aşarak santral sinir sistemine geçerler.\n  - *Kuvaterner Aminler (İpratropiyum, Tiyotropiyum):* İyonize yapıdadır; KBB'yi geçmezler ve santral yan etki yapmazlar.\n- **Solunum Endikasyonları:** İpratropiyum ve tiyotropiyum inhaler olarak KOAH ve astımda bronkodilatasyon sağlamak ve bronş sekresyonlarını kurutmak için kullanılır.\n- **Oftalmolojik Kullanım:** Tropikamid ve siklopentolat göz muayenesinde kısa etkili midriyatik ve sikloplejik olarak tercih edilir.\n\n> [!NOTE]\n> Kuvaterner amonyum bileşikleri santral sinir sistemine ve göze sistemik geçiş yapamadıkları için bronkospazm tedavisinde yüksek güvenilirlik sunar.",
+   "keyTakeaways": [
+    "Tersiyer aminler (atropin) KBB'yi geçerken, kuvaterner aminler (ipratropiyum) geçemez.",
+    "İpratropiyum ve tiyotropiyum KOAH'ta bronkodilatasyon için inhaler kullanılır.",
+    "Tropikamid kısa etkili midriyatik ve sikloplejik olarak oftalmolojide seçilir."
+   ],
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "KOAH tedavisinde inhaler kullanılan, kuvaterner amin yapısı nedeniyle kan-beyin bariyerini geçmeyen antimuskarinik hangisidir?",
+     "options": [
+      {
+       "text": "İpratropiyum bromür",
+       "isCorrect": true,
+       "explanation": "İpratropiyum bromür doğru yanıttır; çünkü bu spesifik farmakolojik ve fizyolojik mekanizma doğrudan hedeflenen reseptör ve doku yanıtını oluşturur. İpratropiyum kuvaterner amonyum yapısında polar bir bileşik olup KBB'yi geçmez ve lokal bronkodilatasyon sağlar."
+      },
+      {
+       "text": "Skopolamin",
+       "isCorrect": false,
+       "explanation": "Skopolamin kavramı bu fizyolojik etkiyi oluşturmaz; ilgili klinik mekanizmada zıt veya farklı bir otonomik yolak üzerinden fonksiyon gösterir. Skopolamin tersiyer amin yapısında olup KBB'yi hızla geçer ve belirgin sedasyon ile amnezi yapar."
+      },
+      {
+       "text": "Atropin",
+       "isCorrect": false,
+       "explanation": "Atropin kavramı bu fizyolojik etkiyi oluşturmaz; ilgili klinik mekanizmada zıt veya farklı bir otonomik yolak üzerinden fonksiyon gösterir. Atropin doğal bir tersiyer amin alkaloidi olup santral sinir sistemine geçiş gösterebilir."
+      },
+      {
+       "text": "Biperiden",
+       "isCorrect": false,
+       "explanation": "Biperiden kavramı bu fizyolojik etkiyi oluşturmaz; ilgili klinik mekanizmada zıt veya farklı bir otonomik yolak üzerinden fonksiyon gösterir. Biperiden santral etkili tersiyer amin olup Parkinson hastalığında tremor tedavisinde kullanılır."
+      }
+     ],
+     "id": "k41-s09-e1"
+    },
+    {
+     "type": "swipe_matching",
+     "leftCategory": "Tersiyer Aminler (Atropin, Skopolamin)",
+     "rightCategory": "Kuvaterner Aminler (İpratropiyum, Tiyotropiyum)",
+     "cards": [
+      {
+       "text": "Lipofiliktir ve kan-beyin bariyerini kolaylıkla geçer",
+       "category": "left",
+       "explanation": "Tersiyer aminler nötral ve lipofilik olduklarından beyin dokusuna penetre olurlar."
+      },
+      {
+       "text": "Kalıcı pozitif yüke sahiptir ve kan-beyin bariyerini geçemez",
+       "category": "right",
+       "explanation": "Kuvaterner amonyum tuzları iyonize oldukları için santral sinir sistemine giremezler."
+      },
+      {
+       "text": "Santral sedasyon, amnezi veya deliryum oluşturabilir",
+       "category": "left",
+       "explanation": "Skopolamin ve yüksek doz atropin santral muskarinik blokajla bilişsel etkiler yapabilir."
+      },
+      {
+       "text": "İnhaler yolla KOAH ve astımda bronkodilatasyon için tercih edilir",
+       "category": "right",
+       "explanation": "Kuvaterner yapıları sayesinde sistemik emilimleri kısıtlı kalır ve akciğerde lokal etki sağlarlar."
+      }
+     ],
+     "id": "k41-s09-e2"
+    },
+    {
+     "type": "cloze_masking",
+     "maskedTerm": "tropikamid",
+     "hint": "Bu kavram otonomik innervasyonu niteleyen temel terimdir.",
+     "id": "k41-s09-e3",
+     "sentence": "Göz dibi muayenesinde kısa etkili midriyazis ve siklopleji sağlamak için seçilen antimuskarinik tropikamiddir."
+    },
+    {
+     "type": "active_recall",
+     "question": "Atropinin muskarinik reseptörler üzerindeki temel farmakolojik etki mekanizması nedir?",
+     "answer": "Muskarinik reseptörler üzerinde asetilkolin ile yarışan kompetitif bir antagonisttir ve doz-yanıt eğrisini sağa kaydırır.",
+     "id": "k41-s09-e4"
+    }
+   ],
+   "id": "k2-41-d-s09",
+   "pdfSayfalari": [
+    13,
+    16
+   ],
+   "bolum": 3
+  },
+  {
+   "slideNumber": 10,
+   "title": "Antimuskariniklerin Organ Yanıtları, Yan Etkileri ve Geriatrik Yük",
+   "sourcePdf": {
+    "file": "y25-k2-41-otonom-sinir-sistemi-farmakolojisi.pdf",
+    "startPage": 17,
+    "endPage": 19
+   },
+   "content": "Muskarinik reseptör blokajı, parasempatik tonusun yüksek olduğu organ sistemlerinde belirgin fonksiyonel değişiklikler yapar.\n\n- **Göz:** İris sfinkterinin gevşemesiyle **midriyazis** (fotofobi), siliyer kasın gevşemesiyle **siklopleji** (yakını görememe) oluşur.\n- **Kardiyovasküler:** Sinoatriyal düğümdeki M2 blokajıyla vagal inhibitör kontrol ortadan kalkar; **taşikardi** ve iletim hızlanması gelişir.\n- **Gastrointestinal ve Üriner:** Tükürük bezi sekresyonu durur (**kserostomi**); bağırsak peristaltizmi azalır (**konstipasyon**); detrüsör gevşer (**idrar retansiyonu**).\n- **Termoregülasyon:** Ter bezleri bloke olur (**anhidrozis**); ısı kaybı engellenir ve **hipertermi** (atropin ateşi) riski doğar.\n- **Geriatrik Antikolinerjik Yük:** Yaşlılarda konfüzyon, sedasyon, deliryum ve düşme riskini dramatik olarak artırır.\n\n> [!IMPORTANT]\n> Dar açılı glokom ve prostat hipertrofisi olan hastalarda antimuskarinik ilaçlar kesinlikle kontrendikedir.",
+   "synthesisNarrative": "Muskarinik reseptör blokajı, parasempatik tonusun yüksek olduğu organ sistemlerinde belirgin fonksiyonel değişiklikler yapar.\n\n- **Göz:** İris sfinkterinin gevşemesiyle **midriyazis** (fotofobi), siliyer kasın gevşemesiyle **siklopleji** (yakını görememe) oluşur.\n- **Kardiyovasküler:** Sinoatriyal düğümdeki M2 blokajıyla vagal inhibitör kontrol ortadan kalkar; **taşikardi** ve iletim hızlanması gelişir.\n- **Gastrointestinal ve Üriner:** Tükürük bezi sekresyonu durur (**kserostomi**); bağırsak peristaltizmi azalır (**konstipasyon**); detrüsör gevşer (**idrar retansiyonu**).\n- **Termoregülasyon:** Ter bezleri bloke olur (**anhidrozis**); ısı kaybı engellenir ve **hipertermi** (atropin ateşi) riski doğar.\n- **Geriatrik Antikolinerjik Yük:** Yaşlılarda konfüzyon, sedasyon, deliryum ve düşme riskini dramatik olarak artırır.\n\n> [!IMPORTANT]\n> Dar açılı glokom ve prostat hipertrofisi olan hastalarda antimuskarinik ilaçlar kesinlikle kontrendikedir.",
+   "keyTakeaways": [
+    "Antimuskarinikler midriyazis, siklopleji, taşikardi, ağız kuruluğu ve idrar retansiyonu yapar.",
+    "Ter bezlerinin blokajı (anhidrozis) çocuklarda ve yaşlılarda hipertermiye yol açabilir.",
+    "Yüksek antikolinerjik yük geriatrik popülasyonda deliryum ve kognitif disfonksiyon riskini artırır."
+   ],
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Antimuskarinik ilaçların ter bezlerini bloke etmesi sonucu gelişen ve özellikle sıcak havalarda tehlikeli olan komplikasyon hangisidir?",
+     "options": [
+      {
+       "text": "Anhidrozis ve buna bağlı hipertermi (atropin ateşi)",
+       "isCorrect": true,
+       "explanation": "Ter bezleri sempatik kolinerjik innervasyona sahiptir; antimuskarinik blokaj terlemeyi durdurarak vücut ısısının tehlikeli yükselmesine yol açar."
+      },
+      {
+       "text": "Aşırı terleme ve buna bağlı derin hipotermi",
+       "isCorrect": false,
+       "explanation": "Aşırı terleme ve buna bağlı derin hipotermi kavramı bu fizyolojik etkiyi oluşturmaz; ilgili klinik mekanizmada zıt veya farklı bir otonomik yolak üzerinden fonksiyon gösterir. Antimuskarinikler ter bezlerini uyarmaz, aksine salgıyı tamamen kuruturlar."
+      },
+      {
+       "text": "Bronş sekresyonlarında aşırı artış ve asfiksi",
+       "isCorrect": false,
+       "explanation": "Bronş sekresyonlarında aşırı artış ve asfiksi kavramı bu fizyolojik etkiyi oluşturmaz; ilgili klinik mekanizmada zıt veya farklı bir otonomik yolak üzerinden fonksiyon gösterir. Antimuskarinikler bronşiyal sekresyonları azaltır ve kuruturlar."
+      },
+      {
+       "text": "Şiddetli ishal ve hipovolemik şok tablosu",
+       "isCorrect": false,
+       "explanation": "Şiddetli ishal ve hipovolemik şok tablosu kavramı bu fizyolojik etkiyi oluşturmaz; ilgili klinik mekanizmada zıt veya farklı bir otonomik yolak üzerinden fonksiyon gösterir. Antimuskarinikler bağırsak motilitesini yavaşlatarak konstipasyon yaparlar, ishal yapmazlar."
+      }
+     ],
+     "id": "k41-s10-e1"
+    },
+    {
+     "type": "spot_the_lie",
+     "items": [
+      {
+       "text": "Atropin SA düğümdeki M2 reseptörlerini bloke ederek taşikardiye neden olur.",
+       "isLie": false,
+       "explanation": "Atropin SA düğümdeki M2 reseptörlerini bloke ederek taşikardiye neden olur. ifadesi otonom farmakoloji ilkeleri açısından incelendiğinde bu klinik durumun gerekçesini açıkça ortaya koyar. Vagus sinirinin kardiyak inhibitör tonusu M2 blokajıyla ortadan kalkar ve kalp hızı artar."
+      },
+      {
+       "text": "Antimuskarinikler siliyer kası felç ederek yakına akomodasyonu bozar (siklopleji).",
+       "isLie": false,
+       "explanation": "Antimuskarinikler siliyer kası felç ederek yakına akomodasyonu bozar (siklopleji). ifadesi otonom farmakoloji ilkeleri açısından incelendiğinde bu klinik durumun gerekçesini açıkça ortaya koyar. Siliyer kasın gevşemesi lensin kalınlaşmasını engeller ve yakındaki nesnelere odaklanma kaybolur."
+      },
+      {
+       "text": "Antikolinerjik ilaçlar prostat hipertrofisi olan erkeklerde idrar akışını belirgin kolaylaştırır.",
+       "isLie": true,
+       "explanation": "Antikolinerjik ilaçlar prostat hipertrofisi olan erkeklerde idrar akışını belirgin kolaylaştırır. ifadesi otonom farmakoloji ilkeleri açısından incelendiğinde bu klinik durumun gerekçesini açıkça ortaya koyar. Detrusor kasını gevşetip sfinkter tonusunu artırdıkları için prostatik hastalarda akut idrar retansiyonu tetiklerler."
+      },
+      {
+       "text": "Yaşlı hastalarda kümülatif antikolinerjik yük kognitif gerileme ve deliryum riskini artırır.",
+       "isLie": false,
+       "explanation": "Yaşlı hastalarda kümülatif antikolinerjik yük kognitif gerileme ve deliryum riskini artırır. ifadesi otonom farmakoloji ilkeleri açısından incelendiğinde bu klinik durumun gerekçesini açıkça ortaya koyar. Santral kolinerjik iletimin baskılanması geriatrik grupta deliryum ve hafıza kusurlarına yol açar."
+      }
+     ],
+     "id": "k41-s10-e2",
+     "topic": "Antimuskariniklerin Organ Yanıtları, Yan Etkileri ve Geriatrik Yük Klinik Önermeleri"
+    },
+    {
+     "type": "cloze_masking",
+     "maskedTerm": "siklopleji",
+     "hint": "Bu kavram otonomik innervasyonu niteleyen temel terimdir.",
+     "id": "k41-s10-e3",
+     "sentence": "Antimuskariniklerin gözde siliyer kası felç ederek yakına odaklanmayı engellemesine siklopleji denir."
+    },
+    {
+     "type": "active_recall",
+     "question": "Antimuskarinik ilaçların dar açılı glokom hastalarında kontrendike olma sebebi nedir?",
+     "answer": "Midriyazis iris kökünü ön kamara açısına doğru iterek trabeküler ağı kapatır ve akut göz içi basıncı krizini tetikler.",
+     "id": "k41-s10-e4"
+    }
+   ],
+   "id": "k2-41-d-s10",
+   "pdfSayfalari": [
+    17,
+    19
+   ],
+   "bolum": 3
+  },
+  {
+   "slideNumber": 11,
+   "title": "Antikolinerjik Organ Etkileri Tablosu, Toksisite ve Fizostigmin",
+   "sourcePdf": {
+    "file": "y25-k2-41-otonom-sinir-sistemi-farmakolojisi.pdf",
+    "startPage": 20,
+    "endPage": 20
+   },
+   "content": "Antikolinerjik toksisite, yaygın muskarinik reseptör blokajı sonucu gelişen hayatı tehdit edici bir klinik tablodur.\n\n- **Organ Düzeyinde Yanıtlar:**\n  - *Göz:* İris sfinkteri gevşemesi $\rightarrow$ Işığa yanıtsız midriyazis ve fotofobi.\n  - *Kardiyovasküler:* Vagal denervasyon $\rightarrow$ Sinüzal taşikardi.\n  - *GIS / Mesane:* Salgı kuruması, atonik bağırsak ve dolu, hipotonik mesane retansiyonu.\n  - *Cilt:* Kırmızı, kuru ve sıcak cilt.\n- **Antikolinerjik Sendrom:** \"Kırmızı bir pancar, kuru bir kemik, kör bir yarasa, sıcak bir fırın, deli bir tavşan.\"\n- **Santral Toksisite:** Halüsinasyonlar, ajitasyon, deliryum ve koma.\n- **Spesifik Antidot:** Tersiyer amin yapılı reversibl antikolinesteraz **Fizostigmin**; KBB'yi geçerek hem santral hem periferik belirtileri geri çevirir.\n\n> [!IMPORTANT]\n> Kuvaterner neostigmin KBB'yi geçemediği için antikolinerjik santral deliryum tedavisinde etkisizdir; mutlaka tersiyer fizostigmin seçilmelidir.",
+   "synthesisNarrative": "Antikolinerjik toksisite, yaygın muskarinik reseptör blokajı sonucu gelişen hayatı tehdit edici bir klinik tablodur.\n\n- **Organ Düzeyinde Yanıtlar:**\n  - *Göz:* İris sfinkteri gevşemesi $\rightarrow$ Işığa yanıtsız midriyazis ve fotofobi.\n  - *Kardiyovasküler:* Vagal denervasyon $\rightarrow$ Sinüzal taşikardi.\n  - *GIS / Mesane:* Salgı kuruması, atonik bağırsak ve dolu, hipotonik mesane retansiyonu.\n  - *Cilt:* Kırmızı, kuru ve sıcak cilt.\n- **Antikolinerjik Sendrom:** \"Kırmızı bir pancar, kuru bir kemik, kör bir yarasa, sıcak bir fırın, deli bir tavşan.\"\n- **Santral Toksisite:** Halüsinasyonlar, ajitasyon, deliryum ve koma.\n- **Spesifik Antidot:** Tersiyer amin yapılı reversibl antikolinesteraz **Fizostigmin**; KBB'yi geçerek hem santral hem periferik belirtileri geri çevirir.\n\n> [!IMPORTANT]\n> Kuvaterner neostigmin KBB'yi geçemediği için antikolinerjik santral deliryum tedavisinde etkisizdir; mutlaka tersiyer fizostigmin seçilmelidir.",
+   "keyTakeaways": [
+    "Antikolinerjik sendrom taşikardi, midriyazis, hipertermi, kuru cilt ve deliryumla karakterizedir.",
+    "Santral sinir sistemi bulguları halüsinasyon, konfüzyon ve psikoza kadar ilerleyebilir.",
+    "Antidotu kan-beyin bariyerini geçen tersiyer amin yapılı fizostigmindir."
+   ],
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Atropin intoksikasyonuna bağlı santral deliryum ve ajitasyon tablosunu geri çevirmede neden neostigmin yerine fizostigmin tercih edilir?",
+     "options": [
+      {
+       "text": "Fizostigmin tersiyer amin yapısıyla kan-beyin bariyerini geçebilirken, neostigmin kuvaterner yapısıyla KBB'yi geçemez",
+       "isCorrect": true,
+       "explanation": "Fizostigmin yüksüz tersiyer amin yapısıyla KBB'yi aşarak santral muskarinik iletimi restore eder; neostigmin polar yapısıyla periferde kalır."
+      },
+      {
+       "text": "Fizostigmin atropini kimyasal olarak bağlayıp idrarla doğrudan atar",
+       "isCorrect": false,
+       "explanation": "Fizostigmin atropini kimyasal olarak bağlayıp idrarla doğrudan atar kavramı bu fizyolojik etkiyi oluşturmaz; ilgili klinik mekanizmada zıt veya farklı bir otonomik yolak üzerinden fonksiyon gösterir. Fizostigmin kimyasal şelatör değildir; AChE enzimini inhibe ederek endojen asetilkolin miktarını artırır."
+      },
+      {
+       "text": "Neostigmin atropinin muskarinik reseptör afinitesini daha da artırır",
+       "isCorrect": false,
+       "explanation": "Neostigmin atropinin muskarinik reseptör afinitesini daha da artırır kavramı bu fizyolojik etkiyi oluşturmaz; ilgili klinik mekanizmada zıt veya farklı bir otonomik yolak üzerinden fonksiyon gösterir. Neostigmin afiniteyi artırmaz fakat KBB'yi geçemediği için santral deliryumu tedavi edemez."
+      },
+      {
+       "text": "Fizostigmin nikotinik reseptörleri kalıcı olarak yıkarak gevşeme yapar",
+       "isCorrect": false,
+       "explanation": "Fizostigmin nikotinik reseptörleri kalıcı olarak yıkarak gevşeme yapar kavramı bu fizyolojik etkiyi oluşturmaz; ilgili klinik mekanizmada zıt veya farklı bir otonomik yolak üzerinden fonksiyon gösterir. Fizostigmin reseptör yıkımı yapmaz, reversibl bir enzim inhibitörüdür."
+      }
+     ],
+     "id": "k41-s11-e1"
+    },
+    {
+     "type": "interactive_table",
+     "tableHeaders": [
+      "Organ Sistemi",
+      "Antimuskarinik Yanıt",
+      "Klinik Yansıması"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Göz (İris sfinkteri)",
+         "isMasked": false
+        },
+        {
+         "text": "Gevşeme",
+         "isMasked": false
+        },
+        {
+         "text": "Midriyazis ve fotofobi",
+         "isMasked": true,
+         "hint": "Bu dokunun otonom farmakolojisinde beklenen temel yanıttır."
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Kalp (SA Düğümü)",
+         "isMasked": false
+        },
+        {
+         "text": "Vagal frenin kalkması",
+         "isMasked": false
+        },
+        {
+         "text": "Taşikardi",
+         "isMasked": true,
+         "hint": "Bu dokunun otonom farmakolojisinde beklenen temel yanıttır."
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Mesane (Detrusor)",
+         "isMasked": false
+        },
+        {
+         "text": "Gevşeme",
+         "isMasked": false
+        },
+        {
+         "text": "İdrar retansiyonu",
+         "isMasked": true,
+         "hint": "Bu dokunun otonom farmakolojisinde beklenen temel yanıttır."
+        }
+       ]
+      }
+     ],
+     "id": "k41-s11-e2"
+    },
+    {
+     "type": "cloze_masking",
+     "maskedTerm": "fizostigmin",
+     "hint": "Bu kavram otonomik innervasyonu niteleyen temel terimdir.",
+     "id": "k41-s11-e3",
+     "sentence": "Antikolinerjik zehirlenmede kan-beyin bariyerini geçerek santral deliryumu düzelten spesifik antidot fizostigmindir."
+    },
+    {
+     "type": "active_recall",
+     "question": "Atropin zehirlenmesini tanımlayan klasik 5 mnemoni ifadesi nedir?",
+     "answer": "Kırmızı bir pancar (flushing), kuru bir kemik (anhidrozis), kör bir yarasa (midriyazis/siklopleji), sıcak bir fırın (hipertermi), deli bir tavşan (deliryum).",
+     "id": "k41-s11-e4"
+    }
+   ],
+   "id": "k2-41-d-s11",
+   "pdfSayfalari": [
+    20,
+    20
+   ],
+   "bolum": 3
+  },
+  {
+   "slideNumber": 12,
+   "title": "Katekolamin Biyosentez Yolağı ve Hız Sınırlayıcı Tirozin Hidroksilaz",
+   "sourcePdf": {
+    "file": "y25-k2-41-otonom-sinir-sistemi-farmakolojisi.pdf",
+    "startPage": 48,
+    "endPage": 48
+   },
+   "content": "Adrenerjik nöronlarda noradrenalin sentezi, sitoplazmada başlayıp vezikül içinde tamamlanan enzimatik basamaklarla yürütülür.\n\n- **1. Tirozin Alımı ve Hidroksilasyon:** Dolaşımdaki tirozin amino asidi sodyum bağımlı taşıyıcıyla nörona alınır. Sitoplazmada **Tirozin Hidroksilaz** ile L-DOPA'ya dönüştürülür.\n- **Hız Kısıtlayıcı Basamak:** Tirozin hidroksilaz tüm biyosentezin hız sınırlayıcı enzimidir; noradrenalin tarafından negatif feedback ile son-ürün inhibisyonuna uğrar.\n- **2. Dekarboksilasyon:** L-DOPA, sitoplazmik DOPA Dekarboksilaz ile dopamine çevrilir.\n- **3. Veziküler Hidroksilasyon:** Dopamin vezikül içine taşınır ve vezikül içindeki **Dopamin beta-hidroksilaz** tarafından noradrenaline dönüştürülür.\n- **4. Adrenal Medulla Dönüşümü:** Adrenal medullada sitoplazmik PNMT enzimi noradrenalini adrenaline metiller.\n\n> [!NOTE]\n> Dopamin beta-hidroksilaz vezikül membranında yerleşik tek sentez enzimidir; ekzositoz sırasında noradrenalinle birlikte sinaps aralığına salınır.",
+   "synthesisNarrative": "Adrenerjik nöronlarda noradrenalin sentezi, sitoplazmada başlayıp vezikül içinde tamamlanan enzimatik basamaklarla yürütülür.\n\n- **1. Tirozin Alımı ve Hidroksilasyon:** Dolaşımdaki tirozin amino asidi sodyum bağımlı taşıyıcıyla nörona alınır. Sitoplazmada **Tirozin Hidroksilaz** ile L-DOPA'ya dönüştürülür.\n- **Hız Kısıtlayıcı Basamak:** Tirozin hidroksilaz tüm biyosentezin hız sınırlayıcı enzimidir; noradrenalin tarafından negatif feedback ile son-ürün inhibisyonuna uğrar.\n- **2. Dekarboksilasyon:** L-DOPA, sitoplazmik DOPA Dekarboksilaz ile dopamine çevrilir.\n- **3. Veziküler Hidroksilasyon:** Dopamin vezikül içine taşınır ve vezikül içindeki **Dopamin beta-hidroksilaz** tarafından noradrenaline dönüştürülür.\n- **4. Adrenal Medulla Dönüşümü:** Adrenal medullada sitoplazmik PNMT enzimi noradrenalini adrenaline metiller.\n\n> [!NOTE]\n> Dopamin beta-hidroksilaz vezikül membranında yerleşik tek sentez enzimidir; ekzositoz sırasında noradrenalinle birlikte sinaps aralığına salınır.",
+   "keyTakeaways": [
+    "Katekolamin biyosentezinde tirozin hidroksilaz hız sınırlayıcı anahtar enzimdir.",
+    "Dopamin beta-hidroksilaz vezikül içinde yerleşiktir ve dopamini noradrenaline çevirir.",
+    "Adrenal medullada PNMT enzimi noradrenalini adrenaline dönüştürür."
+   ],
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Katekolamin biyosentezinde tirozinden noradrenaline kadar uzanan enzimatik basamaklardan hangisi hız sınırlayıcıdır?",
+     "options": [
+      {
+       "text": "Tirozin hidroksilaz",
+       "isCorrect": true,
+       "explanation": "Tirozin hidroksilaz doğru yanıttır; çünkü bu spesifik farmakolojik ve fizyolojik mekanizma doğrudan hedeflenen reseptör ve doku yanıtını oluşturur. Tirozin hidroksilaz tirozini L-DOPA'ya çevirir ve katekolamin sentezinin hız sınırlayıcı kontrol basamağını oluşturur."
+      },
+      {
+       "text": "DOPA dekarboksilaz",
+       "isCorrect": false,
+       "explanation": "DOPA dekarboksilaz kavramı bu fizyolojik etkiyi oluşturmaz; ilgili klinik mekanizmada zıt veya farklı bir otonomik yolak üzerinden fonksiyon gösterir. DOPA dekarboksilaz yüksek kapasiteli ve son derece hızlı çalışan bir enzimdir, hız sınırlayıcı değildir."
+      },
+      {
+       "text": "Dopamin beta-hidroksilaz",
+       "isCorrect": false,
+       "explanation": "Dopamin beta-hidroksilaz kavramı bu fizyolojik etkiyi oluşturmaz; ilgili klinik mekanizmada zıt veya farklı bir otonomik yolak üzerinden fonksiyon gösterir. Dopamin beta-hidroksilaz vezikül içinde yerleşiktir fakat biyosentez hızını tayin eden primer basamak değildir."
+      },
+      {
+       "text": "Feniletanolamin N-metiltransferaz (PNMT)",
+       "isCorrect": false,
+       "explanation": "Feniletanolamin N-metiltransferaz (PNMT) kavramı bu fizyolojik etkiyi oluşturmaz; ilgili klinik mekanizmada zıt veya farklı bir otonomik yolak üzerinden fonksiyon gösterir. PNMT adrenal medullada epinefrin sentezini sağlar; hız sınırlayıcı ana basamak değildir."
+      }
+     ],
+     "id": "k41-s12-e1"
+    },
+    {
+     "type": "causal_chain",
+     "steps": [
+      "1. Tirozin Girişi: Presinaptik adrenerjik nöron membranından sitoplazmaya tirozin taşınır.",
+      "2. Hız Sınırlayıcı Hidroksilasyon: Tirozin hidroksilaz enzimi tirozini L-DOPA'ya dönüştürür.",
+      "3. Dekarboksilasyon: DOPA dekarboksilaz sitoplazmada L-DOPA'dan dopamin üretir.",
+      "4. Veziküler Aşırım: Dopamin VMAT-2 ile veziküle girer ve Dopamin beta-hidroksilaz ile noradrenalin sentezlenir."
+     ],
+     "id": "k41-s12-e2"
+    },
+    {
+     "type": "cloze_masking",
+     "maskedTerm": "tirozin hidroksilaz",
+     "hint": "Bu kavram otonomik innervasyonu niteleyen temel terimdir.",
+     "id": "k41-s12-e3",
+     "sentence": "Katekolamin biyosentezinde hız sınırlayıcı olan ve L-DOPA oluşumunu katalizleyen enzim tirozin hidroksilazdır."
+    },
+    {
+     "type": "active_recall",
+     "question": "Katekolamin sentez yolunda yer alan enzimlerden hangisi vezikül içinde bulunur?",
+     "answer": "Dopamin beta-hidroksilaz vezikül lümeninde yer alır ve dopamini noradrenaline çevirir.",
+     "id": "k41-s12-e4"
+    }
+   ],
+   "id": "k2-41-d-s12",
+   "pdfSayfalari": [
+    48,
+    48
+   ],
+   "bolum": 4
+  },
+  {
+   "slideNumber": 13,
+   "title": "Adrenerjik Veziküler Depolanma (VMAT-2), Salıverilme ve İndirekt Ajanlar",
+   "sourcePdf": {
+    "file": "y25-k2-41-otonom-sinir-sistemi-farmakolojisi.pdf",
+    "startPage": 49,
+    "endPage": 49
+   },
+   "content": "Sentezlenen katekolaminlerin veziküler depolanması ve ekzositozla salıverilmesi özgün taşıyıcı ve proteinlerle yürütülür.\n\n- **Veziküler Monoamin Taşıyıcısı (VMAT-2):** Dopamin ve noradrenalini sitoplazmik alandan veziküle aktif olarak pompalar.\n- **Rezerpin Etkisi:** VMAT-2'yi geri dönüşümsüz bloke eder; veziküle giremeyen aminler sitoplazmada MAO tarafından parçalanır ve katekolamin depoları tükenir.\n- **Ekzositoz Mekanizması:** Aksiyon potansiyeli Ca2+ kanallarını açar; Ca2+ girişi vezikül füzyonunu sağlar. **Guanetidin** ve **bretilyum** bu ekzositozu bloke eder.\n- **İndirekt Sempatomimetikler:** **Amfetamin** ve **tiramin**, kalsiyumdan ve aksiyon potansiyelinden bağımsız olarak veziküler depolardan noradrenalini sitoplazmaya ve oradan sinaps yarığına boşaltırlar (yer değiştirme mekanizması).\n\n> [!IMPORTANT]\n> Rezerpin ile önceden tedavi edilmiş bir kişide amfetamin veya tiraminin tansiyon yükseltici etkisi kaybolur çünkü veziküler depolar tükenmiştir.",
+   "synthesisNarrative": "Sentezlenen katekolaminlerin veziküler depolanması ve ekzositozla salıverilmesi özgün taşıyıcı ve proteinlerle yürütülür.\n\n- **Veziküler Monoamin Taşıyıcısı (VMAT-2):** Dopamin ve noradrenalini sitoplazmik alandan veziküle aktif olarak pompalar.\n- **Rezerpin Etkisi:** VMAT-2'yi geri dönüşümsüz bloke eder; veziküle giremeyen aminler sitoplazmada MAO tarafından parçalanır ve katekolamin depoları tükenir.\n- **Ekzositoz Mekanizması:** Aksiyon potansiyeli Ca2+ kanallarını açar; Ca2+ girişi vezikül füzyonunu sağlar. **Guanetidin** ve **bretilyum** bu ekzositozu bloke eder.\n- **İndirekt Sempatomimetikler:** **Amfetamin** ve **tiramin**, kalsiyumdan ve aksiyon potansiyelinden bağımsız olarak veziküler depolardan noradrenalini sitoplazmaya ve oradan sinaps yarığına boşaltırlar (yer değiştirme mekanizması).\n\n> [!IMPORTANT]\n> Rezerpin ile önceden tedavi edilmiş bir kişide amfetamin veya tiraminin tansiyon yükseltici etkisi kaybolur çünkü veziküler depolar tükenmiştir.",
+   "keyTakeaways": [
+    "VMAT-2 katekolaminleri veziküle pompalar ve rezerpin tarafından bloke edilir.",
+    "Guanetidin aksiyon potansiyeline bağlı ekzositozla noradrenalin salınımını engeller.",
+    "Amfetamin ve tiramin veziküler yer değiştirme mekanizmasıyla kalsiyumdan bağımsız transmitter salar."
+   ],
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Veziküler monoamin taşıyıcısını (VMAT-2) bloke ederek adrenerjik nöronlardaki katekolamin depolarını tüketen farmakolojik ajan hangisidir?",
+     "options": [
+      {
+       "text": "Rezerpin",
+       "isCorrect": true,
+       "explanation": "Rezerpin doğru yanıttır; çünkü bu spesifik farmakolojik ve fizyolojik mekanizma doğrudan hedeflenen reseptör ve doku yanıtını oluşturur. Rezerpin VMAT-2 pompasını irreversibl bloke eder; depolanamayan transmitterler MAO ile yıkılarak depolar tükenir."
+      },
+      {
+       "text": "Kokain",
+       "isCorrect": false,
+       "explanation": "Kokain kavramı bu fizyolojik etkiyi oluşturmaz; ilgili klinik mekanizmada zıt veya farklı bir otonomik yolak üzerinden fonksiyon gösterir. Kokain plazma membranındaki NET gerialım taşıyıcısını bloke eder, vezikül pompasını değil."
+      },
+      {
+       "text": "Guanetidin",
+       "isCorrect": false,
+       "explanation": "Guanetidin kavramı bu fizyolojik etkiyi oluşturmaz; ilgili klinik mekanizmada zıt veya farklı bir otonomik yolak üzerinden fonksiyon gösterir. Guanetidin vezikül membranında yer değiştirir ve aksiyon potansiyeliyle ekzositozu bloke eder."
+      },
+      {
+       "text": "Vesamikol",
+       "isCorrect": false,
+       "explanation": "Vesamikol kavramı bu fizyolojik etkiyi oluşturmaz; ilgili klinik mekanizmada zıt veya farklı bir otonomik yolak üzerinden fonksiyon gösterir. Vesamikol kolinerjik vezikül taşıyıcısı VAChT'ı bloke eder; adrenerjik vezikülleri etkilemez."
+      }
+     ],
+     "id": "k41-s13-e1"
+    },
+    {
+     "type": "swipe_matching",
+     "leftCategory": "Rezerpin",
+     "rightCategory": "Amfetamin / Tiramin",
+     "cards": [
+      {
+       "text": "VMAT-2 taşıyıcısını bloke ederek katekolamin depolarını tamamen tüketir",
+       "category": "left",
+       "explanation": "Rezerpin veziküler pompalamayı durdurarak sitoplazmada aminlerin yıkımına neden olur."
+      },
+      {
+       "text": "Veziküllere girip noradrenalinle yer değiştirerek kalsiyumdan bağımsız salıverilme yapar",
+       "category": "right",
+       "explanation": "İndirekt sempatomimetikler ekzositoz olmaksızın taşıyıcı tersine dönmesiyle amin salgılarlar."
+      },
+      {
+       "text": "Tansiyon düşürücü ve santral depresif etki oluşturur",
+       "category": "left",
+       "explanation": "Santral ve periferik katekolamin depolarının boşalması sempatolitik etki yapar."
+      },
+      {
+       "text": "Sinaptik aralıkta noradrenalin miktarını aniden artırarak sempatomimetik yanıt oluşturur",
+       "category": "right",
+       "explanation": "Taşıyıcı aracılığıyla aralığa boşalan noradrenalin adrenoseptörleri uyararak tansiyonu fırlatır."
+      }
+     ],
+     "id": "k41-s13-e2"
+    },
+    {
+     "type": "cloze_masking",
+     "maskedTerm": "VMAT-2",
+     "hint": "Bu kavram otonomik innervasyonu niteleyen temel terimdir.",
+     "id": "k41-s13-e3",
+     "sentence": "Dopamin ve noradrenalinin presinaptik veziküllere aktif taşınmasını sağlayan taşıyıcı VMAT-2dir."
+    },
+    {
+     "type": "active_recall",
+     "question": "Amfetaminin noradrenalin salıverme mekanizması klasik ekzositozdan nasıl ayrılır?",
+     "answer": "Aksiyon potansiyeli ve hücre dışı kalsiyum girişine ihtiyaç duymaz; veziküllerde noradrenalin ile yer değiştirip NET üzerinden tersine difüzyonla aralığa boşaltır.",
+     "id": "k41-s13-e4"
+    }
+   ],
+   "id": "k2-41-d-s13",
+   "pdfSayfalari": [
+    49,
+    49
+   ],
+   "bolum": 4
+  },
+  {
+   "slideNumber": 14,
+   "title": "Adrenerjik İletimin Sonlandırılması: NET ve Enzimatik Yıkım",
+   "sourcePdf": {
+    "file": "y25-k2-41-otonom-sinir-sistemi-farmakolojisi.pdf",
+    "startPage": 50,
+    "endPage": 50
+   },
+   "content": "Sinaptik aralığa salınan noradrenalinin etkisi, kolinerjik sistemden farklı olarak primer olarak gerialım ile sonlandırılır.\n\n- **Nöronal Gerialım (NET / Uptake-1):** Salınan noradrenalinin yaklaşık %80'i yüksek afiniteli presinaptik membran taşıyıcısı NET ile nörona geri alınır.\n- **NET Blokörleri:** **Kokain** ve **Trisiklik Antidepresanlar (TSA)** NET'i bloke ederek sinaptik aralıkta noradrenalin birikimine ve sempatik aşırı uyarılmaya yol açar.\n- **Ekstranöronal Alım (Uptake-2):** Dolaşıma kaçan aminler glial ve vasküler hücrelerce düşük afiniteyle alınır.\n- **Enzimatik Yıkım:**\n  - *MAO (Mitokondriyal):* Presinaptik sitoplazmadaki serbest aminleri oksidatif deaminasyonla yıkar.\n  - *COMT (Sitoplazmik/Ekstranöronal):* Katekol halkasını metiller.\n  - *Vanilmandelik Asit (VMA):* Katekolaminlerin son metaboliti olup feokromositoma tanısında 24 saatlik idrarda ölçülür.\n\n> [!IMPORTANT]\n> Kolinerjik kavşakta iletim AChE enzimiyle sonlandırılırken, adrenerjik kavşakta primer sonlanma mekanizması NET aracılı nöronal gerialımdır.",
+   "synthesisNarrative": "Sinaptik aralığa salınan noradrenalinin etkisi, kolinerjik sistemden farklı olarak primer olarak gerialım ile sonlandırılır.\n\n- **Nöronal Gerialım (NET / Uptake-1):** Salınan noradrenalinin yaklaşık %80'i yüksek afiniteli presinaptik membran taşıyıcısı NET ile nörona geri alınır.\n- **NET Blokörleri:** **Kokain** ve **Trisiklik Antidepresanlar (TSA)** NET'i bloke ederek sinaptik aralıkta noradrenalin birikimine ve sempatik aşırı uyarılmaya yol açar.\n- **Ekstranöronal Alım (Uptake-2):** Dolaşıma kaçan aminler glial ve vasküler hücrelerce düşük afiniteyle alınır.\n- **Enzimatik Yıkım:**\n  - *MAO (Mitokondriyal):* Presinaptik sitoplazmadaki serbest aminleri oksidatif deaminasyonla yıkar.\n  - *COMT (Sitoplazmik/Ekstranöronal):* Katekol halkasını metiller.\n  - *Vanilmandelik Asit (VMA):* Katekolaminlerin son metaboliti olup feokromositoma tanısında 24 saatlik idrarda ölçülür.\n\n> [!IMPORTANT]\n> Kolinerjik kavşakta iletim AChE enzimiyle sonlandırılırken, adrenerjik kavşakta primer sonlanma mekanizması NET aracılı nöronal gerialımdır.",
+   "keyTakeaways": [
+    "Noradrenalin etkisini sonlandıran ana mekanizma presinaptik NET (Uptake-1) gerialımıdır.",
+    "Kokain ve trisiklik antidepresanlar NET'i bloke ederek sinapsta noradrenalin biriktirir.",
+    "MAO ve COMT metabolizması sonucu oluşan VMA idrarla atılır ve feokromositoma tanısında kullanılır."
+   ],
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Sinaptik aralıktaki noradrenalinin presinaptik nörona gerialımını sağlayan NET (Uptake-1) taşıyıcısını bloke eden ajanlar hangisinde birlikte verilmiştir?",
+     "options": [
+      {
+       "text": "Kokain ve Trisiklik Antidepresanlar",
+       "isCorrect": true,
+       "explanation": "Kokain ve TSA'lar presinaptik NET pompasını güçlü şekilde inhibe ederek sinaptik aralıkta noradrenalin birikmesine neden olurlar."
+      },
+      {
+       "text": "Rezerpin ve Guanetidin",
+       "isCorrect": false,
+       "explanation": "Rezerpin ve Guanetidin kavramı bu fizyolojik etkiyi oluşturmaz; ilgili klinik mekanizmada zıt veya farklı bir otonomik yolak üzerinden fonksiyon gösterir. Rezerpin vezikül pompası VMAT-2'yi bloke eder; guanetidin ise ekzositozu engeller."
+      },
+      {
+       "text": "Hemikolinyum ve Vesamikol",
+       "isCorrect": false,
+       "explanation": "Hemikolinyum ve Vesamikol kavramı bu fizyolojik etkiyi oluşturmaz; ilgili klinik mekanizmada zıt veya farklı bir otonomik yolak üzerinden fonksiyon gösterir. Hemikolinyum ve vesamikol kolinerjik sistem iletim basamaklarını inhibe eden ajanlardır."
+      },
+      {
+       "text": "Atropin ve Skopolamin",
+       "isCorrect": false,
+       "explanation": "Atropin ve Skopolamin kavramı bu fizyolojik etkiyi oluşturmaz; ilgili klinik mekanizmada zıt veya farklı bir otonomik yolak üzerinden fonksiyon gösterir. Atropin ve skopolamin muskarinik kolinerjik reseptör antagonistleridir."
+      }
+     ],
+     "id": "k41-s14-e1"
+    },
+    {
+     "type": "swipe_matching",
+     "leftCategory": "Nöronal Gerialım (NET / Uptake-1)",
+     "rightCategory": "Enzimatik Yıkım (MAO / COMT)",
+     "cards": [
+      {
+       "text": "Sinaptik aralıktaki noradrenalin etkisini sonlandıran primer hızlı mekanizmadır",
+       "category": "left",
+       "explanation": "Salınan transmitterin yaklaşık %80'i bu yüksek afiniteli taşıyıcıyla hızla geri alınır."
+      },
+      {
+       "text": "Kokain ve trisiklik antidepresanlar tarafından selektif olarak bloke edilir",
+       "category": "left",
+       "explanation": "Bu ilaçlar gerialımı önleyerek sempatik tonusu aşırı yükseltirler."
+      },
+      {
+       "text": "Mitokondriyal ve ekstranöronal yerleşimli enzimlerle katekolaminleri inaktive eder",
+       "category": "right",
+       "explanation": "MAO mitokondride oksidatif deaminasyon, COMT ise sitoplazmada metilasyon yapar."
+      },
+      {
+       "text": "Son metabolit olarak 24 saatlik idrarda vanilmandelik asit (VMA) oluşturur",
+       "category": "right",
+       "explanation": "VMA katekolaminlerin terminal yıkım ürünü olup idrarla atılır."
+      }
+     ],
+     "id": "k41-s14-e2"
+    },
+    {
+     "type": "cloze_masking",
+     "maskedTerm": "NET",
+     "hint": "Bu kavram otonomik innervasyonu niteleyen temel terimdir.",
+     "id": "k41-s14-e3",
+     "sentence": "Sinaptik aralıktan noradrenalin gerialımını sağlayan yüksek afiniteli nöronal taşıyıcı NETdir."
+    },
+    {
+     "type": "active_recall",
+     "question": "Katekolaminlerin MAO ve COMT tarafından metabolize edilmesi sonucu oluşan ve feokromositoma tanısında idrarda bakılan son ürün nedir?",
+     "answer": "Vanilmandelik asit (VMA); idrardaki yüksekliği aşırı katekolamin üretimini gösterir.",
+     "id": "k41-s14-e4"
+    }
+   ],
+   "id": "k2-41-d-s14",
+   "pdfSayfalari": [
+    50,
+    50
+   ],
+   "bolum": 4
+  },
+  {
+   "slideNumber": 15,
+   "title": "[TEKRAR SAYFASI - CHECKPOINT 2] Antikolinerjikler ve Adrenerjik Nörotransmisyon",
+   "isCheckpoint": true,
+   "content": "Bu bölümde antimuskarinik ilaçların farmakolojisini ve adrenerjik nörotransmisyonu pekiştirdik.\n\n- **Antimuskarinik Farmakokinetik:** Tersiyer aminler (atropin) KBB'yi geçer; kuvaterner aminler (ipratropiyum) geçmez.\n- **Klinik Organ Etkileri:** Midriyazis, siklopleji, taşikardi, ağız kuruluğu, idrar retansiyonu ve anhidrozis (hipertermi).\n- **Antikolinerjik Toksisite:** Kırmızı, kuru, kör, deli, sıcak tablosu; antidotu KBB'yi geçen tersiyer amin **fizostigmin**dir.\n- **Katekolamin Biyosentezi:** Tirozin hidroksilaz hız sınırlayıcıdır; vezikülde dopamin beta-hidroksilaz görev yapar.\n- **Adrenerjik Depolama ve Gerialım:** VMAT-2 rezerpin ile bloke edilir; NET gerialımı kokain ve TSA ile engellenir.\n\n> [!NOTE]\n> Kolinerjik kavşakta iletim AChE enzimatik hidroliziyle sonlanırken, adrenerjik kavşakta ana sonlanma mekanizması NET gerialımıdır.",
+   "synthesisNarrative": "Bu bölümde antimuskarinik ilaçların farmakolojisini ve adrenerjik nörotransmisyonu pekiştirdik.\n\n- **Antimuskarinik Farmakokinetik:** Tersiyer aminler (atropin) KBB'yi geçer; kuvaterner aminler (ipratropiyum) geçmez.\n- **Klinik Organ Etkileri:** Midriyazis, siklopleji, taşikardi, ağız kuruluğu, idrar retansiyonu ve anhidrozis (hipertermi).\n- **Antikolinerjik Toksisite:** Kırmızı, kuru, kör, deli, sıcak tablosu; antidotu KBB'yi geçen tersiyer amin **fizostigmin**dir.\n- **Katekolamin Biyosentezi:** Tirozin hidroksilaz hız sınırlayıcıdır; vezikülde dopamin beta-hidroksilaz görev yapar.\n- **Adrenerjik Depolama ve Gerialım:** VMAT-2 rezerpin ile bloke edilir; NET gerialımı kokain ve TSA ile engellenir.\n\n> [!NOTE]\n> Kolinerjik kavşakta iletim AChE enzimatik hidroliziyle sonlanırken, adrenerjik kavşakta ana sonlanma mekanizması NET gerialımıdır.",
+   "keyTakeaways": [
+    "Antimuskarinik zehirlenmenin spesifik santral ve periferik antidotu fizostigmindir.",
+    "Katekolamin sentezinde hız sınırlayıcı basamak tirozin hidroksilaz enzimidir.",
+    "Noradrenalin iletimi primer olarak NET (Uptake-1) aracılı gerialımla sonlandırılır."
+   ],
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Adrenerjik nörotransmisyon mekanizmaları ile ilişkili aşağıdaki ifadelerden hangisi DOĞRUDUR?",
+     "options": [
+      {
+       "text": "Tirozin hidroksilaz katekolamin biyosentezinin hız sınırlayıcı basamağıdır",
+       "isCorrect": true,
+       "explanation": "Tirozin hidroksilaz katekolamin biyosentezinin hız sınırlayıcı basamağıdır doğru yanıttır; çünkü bu spesifik farmakolojik ve fizyolojik mekanizma doğrudan hedeflenen reseptör ve doku yanıtını oluşturur. Tirozinin L-DOPA'ya hidroksilasyonu hız sınırlayıcı kontrol basamağıdır ve son-ürün inhibisyonuna uğrar."
+      },
+      {
+       "text": "Kokain veziküler monoamin pompası VMAT-2'yi bloke eder",
+       "isCorrect": false,
+       "explanation": "Kokain veziküler monoamin pompası VMAT-2'yi bloke eder kavramı bu fizyolojik etkiyi oluşturmaz; ilgili klinik mekanizmada zıt veya farklı bir otonomik yolak üzerinden fonksiyon gösterir. Kokain plazma zarı taşıyıcısı NET'i bloke eder; VMAT-2'yi bloke eden rezerpindir."
+      },
+      {
+       "text": "Rezerpin sinaptik aralıktan noradrenalin gerialımını artırır",
+       "isCorrect": false,
+       "explanation": "Rezerpin sinaptik aralıktan noradrenalin gerialımını artırır kavramı bu fizyolojik etkiyi oluşturmaz; ilgili klinik mekanizmada zıt veya farklı bir otonomik yolak üzerinden fonksiyon gösterir. Rezerpin vezikül girişini engelleyerek katekolamin depolarını tamamen boşaltır."
+      },
+      {
+       "text": "Noradrenalin sinaptik aralıkta asetilkolinesteraz benzeri bir ekstrasellüler enzimle parçalanır",
+       "isCorrect": false,
+       "explanation": "Noradrenalin sinaptik aralıkta asetilkolinesteraz benzeri bir ekstrasellüler enzimle parçalanır kavramı bu fizyolojik etkiyi oluşturmaz; ilgili klinik mekanizmada zıt veya farklı bir otonomik yolak üzerinden fonksiyon gösterir. Noradrenalin ekstrasellüler enzimle değil, NET ile nörona geri alınarak inaktive edilir."
+      }
+     ],
+     "id": "k41-s15-e1"
+    },
+    {
+     "type": "venn_grid",
+     "labelA": "Kolinerjik Kavşak",
+     "labelB": "Adrenerjik Kavşak",
+     "items": [
+      {
+       "criterion": "İletim esas olarak sinaptik aralıkta enzimatik hidrolizle (AChE) sonlandırılır",
+       "correct": "A"
+      },
+      {
+       "criterion": "İletim esas olarak presinaptik membran taşıyıcısı (NET) ile gerialımla sonlandırılır",
+       "correct": "B"
+      },
+      {
+       "criterion": "Aksiyon potansiyeli ve voltaj kapılı kalsiyum girişi ile vezikül ekzositozu gerçekleşir",
+       "correct": "both"
+      },
+      {
+       "criterion": "Transmitter sinir ucunda gerialım olmaksızın sadece safra yoluyla atılarak sonlanır",
+       "correct": "neither"
+      }
+     ],
+     "id": "k41-s15-e2",
+     "title": "Kolinerjik Kavşak ve Adrenerjik Kavşak Karşılaştırması"
+    },
+    {
+     "type": "spot_the_lie",
+     "items": [
+      {
+       "text": "Fizostigmin tersiyer amin yapısıyla KBB'yi geçer ve antikolinerjik deliryumu düzeltir.",
+       "isLie": false,
+       "explanation": "Fizostigmin tersiyer amin yapısıyla KBB'yi geçer ve antikolinerjik deliryumu düzeltir. ifadesi otonom farmakoloji ilkeleri açısından incelendiğinde bu klinik durumun gerekçesini açıkça ortaya koyar. Fizostigmin kan-beyin bariyerini aşarak santral kolinerjik tonusu yükseltir."
+      },
+      {
+       "text": "İpratropiyum bromür polar kuvaterner amin olduğu için santral sinir sistemine geçemez.",
+       "isLie": false,
+       "explanation": "İpratropiyum bromür polar kuvaterner amin olduğu için santral sinir sistemine geçemez. ifadesi otonom farmakoloji ilkeleri açısından incelendiğinde bu klinik durumun gerekçesini açıkça ortaya koyar. Kuvaterner amonyum yapısı santral geçişi engelleyerek lokal bronkodilatasyon sağlar."
+      },
+      {
+       "text": "Amfetamin kalsiyum bağımlı ekzositoz porlarını uyararak transmitter salgılar.",
+       "isLie": true,
+       "explanation": "Amfetamin kalsiyum bağımlı ekzositoz porlarını uyararak transmitter salgılar. ifadesi otonom farmakoloji ilkeleri açısından incelendiğinde bu klinik durumun gerekçesini açıkça ortaya koyar. Amfetamin kalsiyumdan bağımsız olarak vezikülde yer değiştirme ve taşıyıcının tersine dönmesiyle amin boşaltır."
+      },
+      {
+       "text": "Katekolaminlerin son metaboliti olan VMA feokromositoma tanısında idrarda ölçülür.",
+       "isLie": false,
+       "explanation": "Katekolaminlerin son metaboliti olan VMA feokromositoma tanısında idrarda ölçülür. ifadesi otonom farmakoloji ilkeleri açısından incelendiğinde bu klinik durumun gerekçesini açıkça ortaya koyar. Vanilmandelik asit düzeyinin idrarda yükselmesi aşırı katekolamin üretimini doğrular."
+      }
+     ],
+     "id": "k41-s15-e3",
+     "topic": "[TEKRAR SAYFASI - CHECKPOINT 2] Antikolinerjikler ve Adrenerjik Nörotransmisyon Klinik Önermeleri"
+    },
+    {
+     "type": "cloze_masking",
+     "maskedTerm": "VMAT-2",
+     "hint": "Bu kavram otonomik innervasyonu niteleyen temel terimdir.",
+     "id": "k41-s15-e4",
+     "sentence": "Katekolamin depolama veziküllerine dopamin girişini sağlayan ve rezerpin ile bloke edilen taşıyıcı VMAT-2dir."
+    }
+   ],
+   "id": "k2-41-d-s15",
+   "bolum": 4
+  },
+  {
+   "slideNumber": 16,
+   "title": "Otonomik Reseptör Alt Tipleri: Muskarinik, Adrenerjik ve Dopaminerjik",
+   "sourcePdf": {
+    "file": "y25-k2-41-otonom-sinir-sistemi-farmakolojisi.pdf",
+    "startPage": 55,
+    "endPage": 57
+   },
+   "content": "Otonomik efektör yanıtlar, hedef hücre membranındaki spesifik reseptör aileleri ve alt tipleriyle yönetilir.\n\n- **Muskarinik Reseptörler (M1-M5):**\n  - *M1, M3, M5:* Gq kenetlidir; M1 santral nöronda, M3 ekzokrin bezlerde (sekresyon) ve düz kaslarda (kontraksiyon) yer alır.\n  - *M2, M4:* Gi kenetlidir; M2 sinoatriyal ve AV düğümde kalp hızını ve iletim hızını azaltır.\n- **Adrenerjik Reseptörler:**\n  - *Alfa-1 (Gq):* Vasküler düz kas kontraksiyonu, midriyazis, sfinkter kasılması.\n  - *Alfa-2 (Gi):* Presinaptik otoreseptör inhibisyonu, sedasyon, trombosit agregasyonu.\n  - *Beta-1 (Gs):* Kalpte pozitif inotrop, kronotrop, dromotrop; jukstaglomerüler hücrelerden renin salgılanması.\n  - *Beta-2 (Gs):* Bronkodilatasyon, iskelet kası damar dilatasyonu, hepatik glikojenoliz.\n  - *Beta-3 (Gs):* Yağ dokusunda lipoliz, mesane detrusor gevşemesi (mirabegron).\n- **Dopaminerjik Reseptörler:** D1 ve D5 (Gs) renal damar yatağında vazodilatasyon yapar; D2 (Gi) transmitter salınımını modüle eder.\n\n> [!NOTE]\n> M1, M3, M5 ve Alfa-1 hücre içi kalsiyumu artırırken; Beta ve D1 reseptörleri hücre içi cAMP düzeyini yükseltir.",
+   "synthesisNarrative": "Otonomik efektör yanıtlar, hedef hücre membranındaki spesifik reseptör aileleri ve alt tipleriyle yönetilir.\n\n- **Muskarinik Reseptörler (M1-M5):**\n  - *M1, M3, M5:* Gq kenetlidir; M1 santral nöronda, M3 ekzokrin bezlerde (sekresyon) ve düz kaslarda (kontraksiyon) yer alır.\n  - *M2, M4:* Gi kenetlidir; M2 sinoatriyal ve AV düğümde kalp hızını ve iletim hızını azaltır.\n- **Adrenerjik Reseptörler:**\n  - *Alfa-1 (Gq):* Vasküler düz kas kontraksiyonu, midriyazis, sfinkter kasılması.\n  - *Alfa-2 (Gi):* Presinaptik otoreseptör inhibisyonu, sedasyon, trombosit agregasyonu.\n  - *Beta-1 (Gs):* Kalpte pozitif inotrop, kronotrop, dromotrop; jukstaglomerüler hücrelerden renin salgılanması.\n  - *Beta-2 (Gs):* Bronkodilatasyon, iskelet kası damar dilatasyonu, hepatik glikojenoliz.\n  - *Beta-3 (Gs):* Yağ dokusunda lipoliz, mesane detrusor gevşemesi (mirabegron).\n- **Dopaminerjik Reseptörler:** D1 ve D5 (Gs) renal damar yatağında vazodilatasyon yapar; D2 (Gi) transmitter salınımını modüle eder.\n\n> [!NOTE]\n> M1, M3, M5 ve Alfa-1 hücre içi kalsiyumu artırırken; Beta ve D1 reseptörleri hücre içi cAMP düzeyini yükseltir.",
+   "keyTakeaways": [
+    "M1, M3, M5 ve Alfa-1 Gq kenetli olup hücre içi kalsiyumu artırır.",
+    "M2, M4 ve Alfa-2 Gi kenetli olup adenilat siklazı inhibe eder.",
+    "Beta-1, 2, 3 ve D1 Gs kenetli olup cAMP düzeyini yükseltir."
+   ],
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Kalpte sinoatriyal ve atriyoventriküler düğümde yer alarak kalp hızını ve iletimi yavaşlatan muskarinik reseptör alt tipi hangisidir?",
+     "options": [
+      {
+       "text": "Muskarinik M2 reseptörü",
+       "isCorrect": true,
+       "explanation": "M2 reseptörleri kardiyak düğüm dokusunda Gi proteini ile kenetlenerek adenilat siklazı inhibe eder, K+ akımını artırır ve bradikardi yapar."
+      },
+      {
+       "text": "Muskarinik M1 reseptörü",
+       "isCorrect": false,
+       "explanation": "Muskarinik M1 reseptörü kavramı bu fizyolojik etkiyi oluşturmaz; ilgili klinik mekanizmada zıt veya farklı bir otonomik yolak üzerinden fonksiyon gösterir. M1 reseptörleri santral sinir sistemi nöronlarında ve gastrik bezlerde bulunur; kalpte ana reseptör değildir."
+      },
+      {
+       "text": "Muskarinik M3 reseptörü",
+       "isCorrect": false,
+       "explanation": "Muskarinik M3 reseptörü kavramı bu fizyolojik etkiyi oluşturmaz; ilgili klinik mekanizmada zıt veya farklı bir otonomik yolak üzerinden fonksiyon gösterir. M3 reseptörleri ekzokrin bezler, bronşlar ve bağırsak düz kaslarında yerleşiktir."
+      },
+      {
+       "text": "Adrenerjik Beta-1 reseptörü",
+       "isCorrect": false,
+       "explanation": "Adrenerjik Beta-1 reseptörü kavramı bu fizyolojik etkiyi oluşturmaz; ilgili klinik mekanizmada zıt veya farklı bir otonomik yolak üzerinden fonksiyon gösterir. Beta-1 reseptörü kalpte hızı ve kasılma gücünü artıran pozitif etkili adrenerjik reseptördür."
+      }
+     ],
+     "id": "k41-s16-e1"
+    },
+    {
+     "type": "swipe_matching",
+     "leftCategory": "Gq Kenetli (Kalsiyum Artışı)",
+     "rightCategory": "Gs Kenetli (cAMP Artışı)",
+     "cards": [
+      {
+       "text": "Alfa-1 Adrenerjik Reseptör",
+       "category": "left",
+       "explanation": "Gq ile PLC'yi aktive eder, IP3 ve DAG üreterek düz kasları kasar."
+      },
+      {
+       "text": "Beta-1 Adrenerjik Reseptör",
+       "category": "right",
+       "explanation": "Gs ile adenilat siklazı aktive eder, cAMP ve PKA ile kalbi uyarır."
+      },
+      {
+       "text": "Muskarinik M3 Reseptör",
+       "category": "left",
+       "explanation": "Gq üzerinden hücre içi kalsiyumu artırarak sekresyon ve kasılma yapar."
+      },
+      {
+       "text": "Beta-2 Adrenerjik Reseptör",
+       "category": "right",
+       "explanation": "Gs ile bronş ve damar düz kasında cAMP'yi artırarak gevşeme sağlar."
+      }
+     ],
+     "id": "k41-s16-e2"
+    },
+    {
+     "type": "cloze_masking",
+     "maskedTerm": "D1",
+     "hint": "Bu kavram otonomik innervasyonu niteleyen temel terimdir.",
+     "id": "k41-s16-e3",
+     "sentence": "Renal ve koroner damar yataklarında vazodilatasyon yaparak kan akımını artıran dopamin reseptörü D1 reseptörüdür."
+    },
+    {
+     "type": "active_recall",
+     "question": "Alfa-1 ve Alfa-2 adrenerjik reseptörlerin bağlandığı G proteinleri sırasıyla nelerdir?",
+     "answer": "Alfa-1 reseptörleri Gq proteinine; Alfa-2 reseptörleri ise Gi proteinine kenetlidir.",
+     "id": "k41-s16-e4"
+    }
+   ],
+   "id": "k2-41-d-s16",
+   "pdfSayfalari": [
+    55,
+    57
+   ],
+   "bolum": 5
+  },
+  {
+   "slideNumber": 17,
+   "title": "İkinci Haberci Yolakları ve Presinaptik Negatif Feedback",
+   "sourcePdf": {
+    "file": "y25-k2-41-otonom-sinir-sistemi-farmakolojisi.pdf",
+    "startPage": 58,
+    "endPage": 59
+   },
+   "content": "Otonomik reseptörlerin uyarılması hücre içinde özgül ikinci haberci kaskadlarını ve presinaptik kontrol mekanizmalarını tetikler.\n\n- **Gq Yolağı (PLC / IP3 / DAG):** Fosfolipaz C membran PIP2'sini parçalar; **IP3** endoplazmik retikulumdan Ca2+ boşaltır, **DAG** ise Protein Kinaz C'yi (PKC) uyarır. Düz kas kasılması ve salgı gerçekleşir.\n- **Gi Yolağı (Adenilat Siklaz İnhibisyonu):** Hücre içi cAMP'yi azaltır ve K+ kanallarını açarak hiperpolarizasyon yapar.\n- **Gs Yolağı (Adenilat Siklaz Aktivasyonu):** cAMP artışı Protein Kinaz A'yı (PKA) aktive eder; kalpte kasılma, bronşta gevşeme sağlar.\n- **Presinaptik Otoreseptörler:** Adrenerjik uçta **Alfa-2**, kolinerjik uçta **M2** otoreseptörleri kendi transmitterlerinin salıverilmesini negatif feedback ile baskılar.\n- **Heteroreseptörler:** Bir terminaldeki reseptörün diğer transmiter tarafından uyarılmasıdır (örneğin kolinerjik uçtaki alfa-2'nin noradrenalinle uyarılıp ACh salınımını frenlemesi).\n\n> [!IMPORTANT]\n> Presinaptik Alfa-2 reseptör blokajı (ör. Yohimbin) negatif inhibitör kontrolü kaldırarak aralığa noradrenalin salınımını dramatik olarak artırır.",
+   "synthesisNarrative": "Otonomik reseptörlerin uyarılması hücre içinde özgül ikinci haberci kaskadlarını ve presinaptik kontrol mekanizmalarını tetikler.\n\n- **Gq Yolağı (PLC / IP3 / DAG):** Fosfolipaz C membran PIP2'sini parçalar; **IP3** endoplazmik retikulumdan Ca2+ boşaltır, **DAG** ise Protein Kinaz C'yi (PKC) uyarır. Düz kas kasılması ve salgı gerçekleşir.\n- **Gi Yolağı (Adenilat Siklaz İnhibisyonu):** Hücre içi cAMP'yi azaltır ve K+ kanallarını açarak hiperpolarizasyon yapar.\n- **Gs Yolağı (Adenilat Siklaz Aktivasyonu):** cAMP artışı Protein Kinaz A'yı (PKA) aktive eder; kalpte kasılma, bronşta gevşeme sağlar.\n- **Presinaptik Otoreseptörler:** Adrenerjik uçta **Alfa-2**, kolinerjik uçta **M2** otoreseptörleri kendi transmitterlerinin salıverilmesini negatif feedback ile baskılar.\n- **Heteroreseptörler:** Bir terminaldeki reseptörün diğer transmiter tarafından uyarılmasıdır (örneğin kolinerjik uçtaki alfa-2'nin noradrenalinle uyarılıp ACh salınımını frenlemesi).\n\n> [!IMPORTANT]\n> Presinaptik Alfa-2 reseptör blokajı (ör. Yohimbin) negatif inhibitör kontrolü kaldırarak aralığa noradrenalin salınımını dramatik olarak artırır.",
+   "keyTakeaways": [
+    "Gq IP3/DAG/Ca2+ kaskadını; Gs cAMP/PKA kaskadını tetikler.",
+    "Gi adenilat siklazı inhibe ederek hücre içi cAMP düzeyini düşürür.",
+    "Presinaptik Alfa-2 ve M2 otoreseptörleri negatif feedback ile ekzositozu sınırlar."
+   ],
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Presinaptik adrenerjik sinir terminalinde yerleşerek noradrenalin ekzositozunu negatif feedback mekanizması ile inhibe eden otoreseptör hangisidir?",
+     "options": [
+      {
+       "text": "Alfa-2 adrenerjik reseptör",
+       "isCorrect": true,
+       "explanation": "Presinaptik Alfa-2 otoreseptörleri Gi proteini aracılığıyla kalsiyum girişini azaltır ve noradrenalin salıverilmesini negatif feedback ile baskılar."
+      },
+      {
+       "text": "Alfa-1 adrenerjik reseptör",
+       "isCorrect": false,
+       "explanation": "Alfa-1 adrenerjik reseptör kavramı bu fizyolojik etkiyi oluşturmaz; ilgili klinik mekanizmada zıt veya farklı bir otonomik yolak üzerinden fonksiyon gösterir. Alfa-1 reseptörü postsinaptik düz kaslarda yerleşir ve kasılmaya aracılık eder."
+      },
+      {
+       "text": "Beta-1 adrenerjik reseptör",
+       "isCorrect": false,
+       "explanation": "Beta-1 adrenerjik reseptör kavramı bu fizyolojik etkiyi oluşturmaz; ilgili klinik mekanizmada zıt veya farklı bir otonomik yolak üzerinden fonksiyon gösterir. Beta-1 reseptörü kalpte yerleşiktir ve eksitatör kardiyak yanıtlar üretir."
+      },
+      {
+       "text": "Nikotinik Nm reseptörü",
+       "isCorrect": false,
+       "explanation": "Nikotinik Nm reseptörü kavramı bu fizyolojik etkiyi oluşturmaz; ilgili klinik mekanizmada zıt veya farklı bir otonomik yolak üzerinden fonksiyon gösterir. Nm reseptörü çizgili kas motor son plağında yer alır; otonomik otoreseptör değildir."
+      }
+     ],
+     "id": "k41-s17-e1"
+    },
+    {
+     "type": "spot_the_lie",
+     "items": [
+      {
+       "text": "Gq proteini aktivasyonu hücre içinde IP3 ve DAG düzeyini artırarak kalsiyumu yükseltir.",
+       "isLie": false,
+       "explanation": "Gq proteini aktivasyonu hücre içinde IP3 ve DAG düzeyini artırarak kalsiyumu yükseltir. ifadesi otonom farmakoloji ilkeleri açısından incelendiğinde bu klinik durumun gerekçesini açıkça ortaya koyar. PLC enzimi PIP2'yi yıkarak IP3 ve DAG ikinci habercilerini üretir."
+      },
+      {
+       "text": "Presinaptik M2 reseptörleri kolinerjik uçta asetilkolin salıverilmesini negatif feedback ile baskılar.",
+       "isLie": false,
+       "explanation": "Presinaptik M2 reseptörleri kolinerjik uçta asetilkolin salıverilmesini negatif feedback ile baskılar. ifadesi otonom farmakoloji ilkeleri açısından incelendiğinde bu klinik durumun gerekçesini açıkça ortaya koyar. M2 otoreseptörleri Gi kenetli olup aşırı asetilkolin deşarjını otoregülasyonla durdurur."
+      },
+      {
+       "text": "Gi proteini adenilat siklazı güçlü şekilde stimüle ederek hücre içi cAMP'yi katlar.",
+       "isLie": true,
+       "explanation": "Gi proteini adenilat siklazı güçlü şekilde stimüle ederek hücre içi cAMP'yi katlar. ifadesi otonom farmakoloji ilkeleri açısından incelendiğinde bu klinik durumun gerekçesini açıkça ortaya koyar. Gi inhibitör G proteinidir; adenilat siklazı inhibe eder ve cAMP düzeyini azaltır."
+      },
+      {
+       "text": "Heteroreseptörler bir transmiterin farklı bir sinir ucundan salıverilmeyi modüle etmesini sağlar.",
+       "isLie": false,
+       "explanation": "Heteroreseptörler bir transmiterin farklı bir sinir ucundan salıverilmeyi modüle etmesini sağlar. ifadesi otonom farmakoloji ilkeleri açısından incelendiğinde bu klinik durumun gerekçesini açıkça ortaya koyar. Heteroreseptörler çapraz otonomik dengeyi ve karşılıklı presinaptik inhibisyonu organize eder."
+      }
+     ],
+     "id": "k41-s17-e2",
+     "topic": "İkinci Haberci Yolakları ve Presinaptik Negatif Feedback Klinik Önermeleri"
+    },
+    {
+     "type": "cloze_masking",
+     "maskedTerm": "otoreseptör",
+     "hint": "Bu kavram otonomik innervasyonu niteleyen temel terimdir.",
+     "id": "k41-s17-e3",
+     "sentence": "Presinaptik nöronda yerleşip kendi nörotransmitterinin salınımını denetleyen reseptörlere otoreseptör denir."
+    },
+    {
+     "type": "active_recall",
+     "question": "Fosfolipaz C enziminin membran fosfolipidini parçalamasıyla açığa çıkan iki temel ikinci haberci molekül nedir?",
+     "answer": "İnozitol trifosfat (IP3) ve diaçilgliserol (DAG).",
+     "id": "k41-s17-e4"
+    }
+   ],
+   "id": "k2-41-d-s17",
+   "pdfSayfalari": [
+    58,
+    59
+   ],
+   "bolum": 5
+  },
+  {
+   "slideNumber": 18,
+   "title": "Postsinaptik Reseptör Regülasyonu: Desensitizasyon ve Uyum",
+   "sourcePdf": {
+    "file": "y25-k2-41-otonom-sinir-sistemi-farmakolojisi.pdf",
+    "startPage": 60,
+    "endPage": 60
+   },
+   "content": "Hedef hücreler, otonomik nörotransmitterlerin ve ilaçların sürekli varlığına dinamik reseptör regülasyonu ile uyum sağlar.\n\n- **Reseptör Desensitizasyonu:** Sürekli agonist maruziyetinde reseptör yanıtının dakikalar veya saatler içinde azalmasıdır.\n- **Homolog vs Heterolog:** Homolog desensitizasyonda yalnız uyarılan reseptör tipi; heterolog desensitizasyonda ortak ikinci haberci üzerinden diğer reseptörler de duyarsızlaşır.\n- **Aşağı Regülasyon (Down-regulation):** Uzun süreli agonist uyarımında reseptörlerin endositozla hücre içine alınması (internalizasyon) ve lizozomlarda yıkılmasıdır; yüzey reseptör sayısı azalır.\n- **Yukarı Regülasyon (Up-regulation):** Uzun süreli antagonist blokajında veya denervasyonda reseptör sayısının artmasıdır; ilaç aniden kesilirse aşırı duyarlılık (rebound fenomen) görülür (ör. beta blokör kesilme taşikardisi).\n\n> [!IMPORTANT]\n> Beta blokör tedavisi aniden kesilmemelidir; yukarı regüle olmuş reseptörler endojen katekolaminlerle aşırı uyarılarak rebound hipertansif kriz yapabilir.",
+   "synthesisNarrative": "Hedef hücreler, otonomik nörotransmitterlerin ve ilaçların sürekli varlığına dinamik reseptör regülasyonu ile uyum sağlar.\n\n- **Reseptör Desensitizasyonu:** Sürekli agonist maruziyetinde reseptör yanıtının dakikalar veya saatler içinde azalmasıdır.\n- **Homolog vs Heterolog:** Homolog desensitizasyonda yalnız uyarılan reseptör tipi; heterolog desensitizasyonda ortak ikinci haberci üzerinden diğer reseptörler de duyarsızlaşır.\n- **Aşağı Regülasyon (Down-regulation):** Uzun süreli agonist uyarımında reseptörlerin endositozla hücre içine alınması (internalizasyon) ve lizozomlarda yıkılmasıdır; yüzey reseptör sayısı azalır.\n- **Yukarı Regülasyon (Up-regulation):** Uzun süreli antagonist blokajında veya denervasyonda reseptör sayısının artmasıdır; ilaç aniden kesilirse aşırı duyarlılık (rebound fenomen) görülür (ör. beta blokör kesilme taşikardisi).\n\n> [!IMPORTANT]\n> Beta blokör tedavisi aniden kesilmemelidir; yukarı regüle olmuş reseptörler endojen katekolaminlerle aşırı uyarılarak rebound hipertansif kriz yapabilir.",
+   "keyTakeaways": [
+    "Sürekli agonist uyarımı desensitizasyon ve aşağı regülasyona (down-regulation) yol açar.",
+    "Uzun süreli antagonist blokajı hedef hücrede yukarı regülasyona (up-regulation) neden olur.",
+    "Antagonistlerin aniden kesilmesi yukarı regüle reseptörler nedeniyle rebound aşırı duyarlılık doğurur."
+   ],
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Uzun süreli antagonist maruziyeti veya cerrahi denervasyon sonrasında hedef hücre yüzeyindeki reseptör sayısının artması olgusu hangisidir?",
+     "options": [
+      {
+       "text": "Yukarı regülasyon (Up-regulation)",
+       "isCorrect": true,
+       "explanation": "Yukarı regülasyon (Up-regulation) doğru yanıttır; çünkü bu spesifik farmakolojik ve fizyolojik mekanizma doğrudan hedeflenen reseptör ve doku yanıtını oluşturur. Antagonist varlığında veya iletim kesildiğinde hücre membranındaki reseptör sentezi ve yoğunluğu artarak yukarı regülasyon oluşur."
+      },
+      {
+       "text": "Aşağı regülasyon (Down-regulation)",
+       "isCorrect": false,
+       "explanation": "Aşağı regülasyon (Down-regulation) kavramı bu fizyolojik etkiyi oluşturmaz; ilgili klinik mekanizmada zıt veya farklı bir otonomik yolak üzerinden fonksiyon gösterir. Aşağı regülasyon kronik agonist uyarımında reseptörlerin internalize edilip yıkılmasıdır."
+      },
+      {
+       "text": "Homolog desensitizasyon",
+       "isCorrect": false,
+       "explanation": "Homolog desensitizasyon kavramı bu fizyolojik etkiyi oluşturmaz; ilgili klinik mekanizmada zıt veya farklı bir otonomik yolak üzerinden fonksiyon gösterir. Desensitizasyon agonist varlığında reseptör yanıtının körelmesidir, reseptör artışı değildir."
+      },
+      {
+       "text": "Reversibl fosforilasyon",
+       "isCorrect": false,
+       "explanation": "Reversibl fosforilasyon kavramı bu fizyolojik etkiyi oluşturmaz; ilgili klinik mekanizmada zıt veya farklı bir otonomik yolak üzerinden fonksiyon gösterir. Fosforilasyon hızlı inaktivasyon mekanizmasıdır; reseptör sayısı değişikliğini tanımlamaz."
+      }
+     ],
+     "id": "k41-s18-e1"
+    },
+    {
+     "type": "swipe_matching",
+     "leftCategory": "Aşağı Regülasyon (Down-regulation)",
+     "rightCategory": "Yukarı Regülasyon (Up-regulation)",
+     "cards": [
+      {
+       "text": "Sürekli agonist uyarımı sonucu yüzey reseptör sayısının azalması",
+       "category": "left",
+       "explanation": "Hücre aşırı uyarılmaya karşı reseptörlerini endositozla içe alıp yıkar."
+      },
+      {
+       "text": "Kronik antagonist blokajı sonucu membran reseptör yoğunluğunun artması",
+       "category": "right",
+       "explanation": "Uyarısız kalan hücre yüzeydeki reseptör sentezini artırır."
+      },
+      {
+       "text": "Aynı doz ilaca karşı zamanla tolerans gelişmesine zemin hazırlar",
+       "category": "left",
+       "explanation": "Reseptör sayısının düşmesi cevabın küçülmesine neden olur."
+      },
+      {
+       "text": "İlacın aniden kesilmesi durumunda şiddetli rebound fenomene yol açar",
+       "category": "right",
+       "explanation": "Çok sayıdaki reseptör endojen transmitterle karşılaşınca abartılı yanıt verir."
+      }
+     ],
+     "id": "k41-s18-e2"
+    },
+    {
+     "type": "cloze_masking",
+     "maskedTerm": "internalizasyon",
+     "hint": "Bu kavram otonomik innervasyonu niteleyen temel terimdir.",
+     "id": "k41-s18-e3",
+     "sentence": "Kronik agonist uyarımında reseptörlerin klatrin kaplı veziküllerle hücre içine çekilmesine internalizasyon denir."
+    },
+    {
+     "type": "active_recall",
+     "question": "Kronik beta blokör kullanan bir hastada ilacın aniden kesilmesinin tehlikesi nedir?",
+     "answer": "Yukarı regüle olmuş beta reseptörleri endojen katekolaminlerle aşırı uyarılır; rebound taşikardi, aritmiler ve hipertansif kriz gelişebilir.",
+     "id": "k41-s18-e4"
+    }
+   ],
+   "id": "k2-41-d-s18",
+   "pdfSayfalari": [
+    60,
+    60
+   ],
+   "bolum": 5
+  },
+  {
+   "slideNumber": 19,
+   "title": "[TEKRAR SAYFASI - CHECKPOINT 3] Otonom Reseptörler, Sinyal İletimi ve Presinaptik Regülasyon",
+   "isCheckpoint": true,
+   "content": "Bu bölümde otonomik reseptör ailelerini, G proteini sinyal yolaklarını ve reseptör adaptasyonlarını pekiştirdik.\n\n- **Gq Ailesi (Alfa-1, M1, M3, M5):** PLC aktivasyonu, IP3/DAG artışı ve intraselüler kalsiyum salınımı ile kasılma ve sekresyon.\n- **Gi Ailesi (Alfa-2, M2, M4):** Adenilat siklaz inhibisyonu, cAMP düşüşü ve K+ kanalları üzerinden bradikardi ve presinaptik otoreseptör inhibitör kontrolü.\n- **Gs Ailesi (Beta-1, Beta-2, Beta-3, D1):** Adenilat siklaz aktivasyonu ve cAMP/PKA artışı ile kardiyak uyarılma ve bronkodilatasyon.\n- **Reseptör Uyumları:** Agonist maruziyetinde desensitizasyon ve internalizasyon (down-regulation); antagonist blokajında yukarı regülasyon (up-regulation).\n\n> [!NOTE]\n> Presinaptik Alfa-2 ve M2 otoreseptörleri, nöronun aşırı transmitter salmasını engelleyen fizyolojik emniyet frenleridir.",
+   "synthesisNarrative": "Bu bölümde otonomik reseptör ailelerini, G proteini sinyal yolaklarını ve reseptör adaptasyonlarını pekiştirdik.\n\n- **Gq Ailesi (Alfa-1, M1, M3, M5):** PLC aktivasyonu, IP3/DAG artışı ve intraselüler kalsiyum salınımı ile kasılma ve sekresyon.\n- **Gi Ailesi (Alfa-2, M2, M4):** Adenilat siklaz inhibisyonu, cAMP düşüşü ve K+ kanalları üzerinden bradikardi ve presinaptik otoreseptör inhibitör kontrolü.\n- **Gs Ailesi (Beta-1, Beta-2, Beta-3, D1):** Adenilat siklaz aktivasyonu ve cAMP/PKA artışı ile kardiyak uyarılma ve bronkodilatasyon.\n- **Reseptör Uyumları:** Agonist maruziyetinde desensitizasyon ve internalizasyon (down-regulation); antagonist blokajında yukarı regülasyon (up-regulation).\n\n> [!NOTE]\n> Presinaptik Alfa-2 ve M2 otoreseptörleri, nöronun aşırı transmitter salmasını engelleyen fizyolojik emniyet frenleridir.",
+   "keyTakeaways": [
+    "M1, M3 ve Alfa-1 Gq; M2 ve Alfa-2 Gi; Beta ve D1 Gs kenetlidir.",
+    "Presinaptik otoreseptörler (Alfa-2, M2) negatif feedback ile ekzositozu sınırlar.",
+    "Kronik antagonist tedavisi yukarı regülasyon ve kesilme rebound riskine yol açar."
+   ],
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Aşağıdaki reseptör ve kenetli olduğu G proteini eşleştirmelerinden hangisi DOĞRUDUR?",
+     "options": [
+      {
+       "text": "Muskarinik M3 — Gq proteini",
+       "isCorrect": true,
+       "explanation": "M3 reseptörleri Gq proteini kenetlidir; PLC aktivasyonu ile IP3 ve DAG üreterek düz kasları kasar ve bez salgılarını artırır."
+      },
+      {
+       "text": "Adrenerjik Alfa-1 — Gi proteini",
+       "isCorrect": false,
+       "explanation": "Adrenerjik Alfa-1 — Gi proteini kavramı bu fizyolojik etkiyi oluşturmaz; ilgili klinik mekanizmada zıt veya farklı bir otonomik yolak üzerinden fonksiyon gösterir. Alfa-1 reseptörleri Gi değil Gq kenetlidir; vazokonstriksiyon yapar."
+      },
+      {
+       "text": "Muskarinik M2 — Gs proteini",
+       "isCorrect": false,
+       "explanation": "Muskarinik M2 — Gs proteini kavramı bu fizyolojik etkiyi oluşturmaz; ilgili klinik mekanizmada zıt veya farklı bir otonomik yolak üzerinden fonksiyon gösterir. M2 reseptörleri Gs değil Gi kenetlidir; cAMP'yi azaltıp kalbi yavaşlatır."
+      },
+      {
+       "text": "Adrenerjik Beta-1 — Gq proteini",
+       "isCorrect": false,
+       "explanation": "Adrenerjik Beta-1 — Gq proteini kavramı bu fizyolojik etkiyi oluşturmaz; ilgili klinik mekanizmada zıt veya farklı bir otonomik yolak üzerinden fonksiyon gösterir. Beta-1 reseptörleri Gq değil Gs kenetlidir; kalpte cAMP'yi artırır."
+      }
+     ],
+     "id": "k41-s19-e1"
+    },
+    {
+     "type": "venn_grid",
+     "labelA": "Alfa-1 Reseptör",
+     "labelB": "Alfa-2 Reseptör",
+     "items": [
+      {
+       "criterion": "Gq proteini kenetli olup postsinaptik düz kas kontraksiyonu yapar",
+       "correct": "A"
+      },
+      {
+       "criterion": "Gi proteini kenetli olup presinaptik negatif feedback otoreseptörüdür",
+       "correct": "B"
+      },
+      {
+       "criterion": "Adrenerjik sistem katekolaminleri (noradrenalin/adrenalin) tarafından uyarılır",
+       "correct": "both"
+      },
+      {
+       "criterion": "Asetilkolin hidrolizi yaparak kolinerjik iletiyi doğrudan sonlandırır",
+       "correct": "neither"
+      }
+     ],
+     "id": "k41-s19-e2",
+     "title": "Alfa-1 Reseptör ve Alfa-2 Reseptör Karşılaştırması"
+    },
+    {
+     "type": "spot_the_lie",
+     "items": [
+      {
+       "text": "Beta-1 reseptörleri kalpte pozitif inotrop ve kronotrop etki oluşturur.",
+       "isLie": false,
+       "explanation": "Beta-1 reseptörleri kalpte pozitif inotrop ve kronotrop etki oluşturur. ifadesi otonom farmakoloji ilkeleri açısından incelendiğinde bu klinik durumun gerekçesini açıkça ortaya koyar. Beta-1 Gs kenetlidir ve sinoatriyal düğüm ile ventrikül kasını uyarır."
+      },
+      {
+       "text": "D1 dopamin reseptörleri böbrek damar yatağında vazodilatasyon yapar.",
+       "isLie": false,
+       "explanation": "D1 dopamin reseptörleri böbrek damar yatağında vazodilatasyon yapar. ifadesi otonom farmakoloji ilkeleri açısından incelendiğinde bu klinik durumun gerekçesini açıkça ortaya koyar. D1 reseptörleri Gs üzerinden cAMP artırarak renal arteriolleri gevşetir."
+      },
+      {
+       "text": "Kronik antagonist kullanımında hedef hücre yüzeyinde reseptör sayısı azalır.",
+       "isLie": true,
+       "explanation": "Kronik antagonist kullanımında hedef hücre yüzeyinde reseptör sayısı azalır. ifadesi otonom farmakoloji ilkeleri açısından incelendiğinde bu klinik durumun gerekçesini açıkça ortaya koyar. Antagonist kullanımı reseptör sayısını artırır (yukarı regülasyon); azaltan sürekli agonist maruziyetidir."
+      },
+      {
+       "text": "Presinaptik Alfa-2 reseptör aktivasyonu voltaj kapılı Ca2+ girişini engeller.",
+       "isLie": false,
+       "explanation": "Presinaptik Alfa-2 reseptör aktivasyonu voltaj kapılı Ca2+ girişini engeller. ifadesi otonom farmakoloji ilkeleri açısından incelendiğinde bu klinik durumun gerekçesini açıkça ortaya koyar. Gi kenetli Alfa-2 otoreseptörü presinaptik kalsiyum akımını azaltarak ekzositozu durdurur."
+      }
+     ],
+     "id": "k41-s19-e3",
+     "topic": "[TEKRAR SAYFASI - CHECKPOINT 3] Otonom Reseptörler, Sinyal İletimi ve Presinaptik Regülasyon Klinik Önermeleri"
+    },
+    {
+     "type": "cloze_masking",
+     "maskedTerm": "M2",
+     "hint": "Bu kavram otonomik innervasyonu niteleyen temel terimdir.",
+     "id": "k41-s19-e4",
+     "sentence": "Presinaptik kolinerjik sinir ucunda asetilkolin salıverilmesini negatif feedback ile frenleyen reseptör M2 otoreseptörüdür."
+    }
+   ],
+   "id": "k2-41-d-s19",
+   "bolum": 5
+  },
+  {
+   "slideNumber": 20,
+   "title": "Otonomik Tonus, Efektör Yanıtlar ve Baroreseptör Refleksi",
+   "sourcePdf": {
+    "file": "y25-k2-41-otonom-sinir-sistemi-farmakolojisi.pdf",
+    "startPage": 51,
+    "endPage": 54
+   },
+   "content": "Çoğu efektör organ her iki otonom sistemden de zıt innervasyon alır; net fonksiyon organın bazal otonomik tonusuna bağlıdır.\n\n- **Baskın Tonus İlkesi:**\n  - *Parasempatik Baskın Organlar:* Kalp (M2 vagal tonus), göz (iris sfinkteri ve siliyer kas), gastrointestinal sistem ve mesane. Ganglion blokörleri bu organlarda sempatik benzeri yanıtlar (taşikardi, midriyazis, konstipasyon, retansiyon) açığa çıkarır.\n  - *Sempatik Baskın Yapılar:* Kan damarları (vasküler tonus, Alfa-1) ve ter bezleri (kolinerjik sempatik). Ganglion blokajı vazodilatasyon ve hipotansiyon yapar.\n- **Baroreseptör Refleks Arkı:**\n  - Karotis sinüsü ve aort kavsindeki gerim reseptörleri ortalama arteryel basınç değişikliklerini algılar.\n  - Basınç artışında NTS vagal parasempatik deşarjı artırır ve sempatik tonusu baskılar; kalpte **refleks bradikardi** gelişir.\n  - Basınç düşüşünde (ör. vazodilatatör ilaçlar) sempatik deşarj artar ve **refleks taşikardi** ortaya çıkar.\n\n> [!IMPORTANT]\n> Saf vazokonstriktör (noradrenalin, fenilefrin) verildiğinde doğrudan kardiyak uyarılmaya rağmen baroreseptör refleksi baskın gelir ve refleks bradikardi görülür.",
+   "synthesisNarrative": "Çoğu efektör organ her iki otonom sistemden de zıt innervasyon alır; net fonksiyon organın bazal otonomik tonusuna bağlıdır.\n\n- **Baskın Tonus İlkesi:**\n  - *Parasempatik Baskın Organlar:* Kalp (M2 vagal tonus), göz (iris sfinkteri ve siliyer kas), gastrointestinal sistem ve mesane. Ganglion blokörleri bu organlarda sempatik benzeri yanıtlar (taşikardi, midriyazis, konstipasyon, retansiyon) açığa çıkarır.\n  - *Sempatik Baskın Yapılar:* Kan damarları (vasküler tonus, Alfa-1) ve ter bezleri (kolinerjik sempatik). Ganglion blokajı vazodilatasyon ve hipotansiyon yapar.\n- **Baroreseptör Refleks Arkı:**\n  - Karotis sinüsü ve aort kavsindeki gerim reseptörleri ortalama arteryel basınç değişikliklerini algılar.\n  - Basınç artışında NTS vagal parasempatik deşarjı artırır ve sempatik tonusu baskılar; kalpte **refleks bradikardi** gelişir.\n  - Basınç düşüşünde (ör. vazodilatatör ilaçlar) sempatik deşarj artar ve **refleks taşikardi** ortaya çıkar.\n\n> [!IMPORTANT]\n> Saf vazokonstriktör (noradrenalin, fenilefrin) verildiğinde doğrudan kardiyak uyarılmaya rağmen baroreseptör refleksi baskın gelir ve refleks bradikardi görülür.",
+   "keyTakeaways": [
+    "Kalp, göz ve GIS'te parasempatik tonus; kan damarlarında sempatik tonus baskındır.",
+    "Kan basıncı yükseldiğinde baroreseptör refleksi vagal uyarıyla refleks bradikardi yapar.",
+    "Ganglion blokajı hedef organda baskın olan otonomik tonusun zıttı yönde etki açığa çıkarır."
+   ],
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "İntravenöz yolla uygulanan saf alfa-1 agonisti fenilefrinin ortalama kan basıncını yükseltmesi sonrasında kalp hızında yavaşlama (refleks bradikardi) görülmesinin nedeni nedir?",
+     "options": [
+      {
+       "text": "Aort ve karotis baroreseptörlerinin uyarılmasıyla nükleus traktus solitarius üzerinden vagal parasempatik tonusun artması",
+       "isCorrect": true,
+       "explanation": "Kan basıncı artışı baroreseptörleri gerer; afferent uyarı beyin sapında vagal kardiyak inhibitör merkezi aktive ederek kalpte refleks bradikardi oluşturur."
+      },
+      {
+       "text": "Fenilefrinin kalpteki beta-1 adrenerjik reseptörleri doğrudan bloke etmesi",
+       "isCorrect": false,
+       "explanation": "Fenilefrinin kalpteki beta-1 adrenerjik reseptörleri doğrudan bloke etmesi kavramı bu fizyolojik etkiyi oluşturmaz; ilgili klinik mekanizmada zıt veya farklı bir otonomik yolak üzerinden fonksiyon gösterir. Fenilefrin bir beta blokör değildir; kardiyak yavaşlama doğrudan reseptör blokajından değil refleks mekanizmadan kaynaklanır."
+      },
+      {
+       "text": "Adrenal korteksten salınan aldosteronun sinoatriyal düğümü susturması",
+       "isCorrect": false,
+       "explanation": "Adrenal korteksten salınan aldosteronun sinoatriyal düğümü susturması kavramı bu fizyolojik etkiyi oluşturmaz; ilgili klinik mekanizmada zıt veya farklı bir otonomik yolak üzerinden fonksiyon gösterir. Aldosteron böbrekte tuz ve su tutulumunu yöneten steroiddir; saniyeler içinde gelişen kardiyak reflekslerde rol almaz."
+      },
+      {
+       "text": "Koroner damarlarda vazodilatasyon sonucu miyokardiyal iskemi gelişmesi",
+       "isCorrect": false,
+       "explanation": "Koroner damarlarda vazodilatasyon sonucu miyokardiyal iskemi gelişmesi kavramı bu fizyolojik etkiyi oluşturmaz; ilgili klinik mekanizmada zıt veya farklı bir otonomik yolak üzerinden fonksiyon gösterir. Refleks bradikardi fizyolojik bir kompanzasyondur; primer koroner iskemik felçle ilişkili değildir."
+      }
+     ],
+     "id": "k41-s20-e1"
+    },
+    {
+     "type": "swipe_matching",
+     "leftCategory": "Parasempatik Tonus Baskın",
+     "rightCategory": "Sempatik Tonus Baskın",
+     "cards": [
+      {
+       "text": "Kalp SA Düğümü (İstirahat kalp hızını belirleyen vagal tonus)",
+       "category": "left",
+       "explanation": "Kalp SA düğümünde istirahatte parasempatik vagal tonus baskındır."
+      },
+      {
+       "text": "Vasküler Sistem / Kan Damarları (Arteryel ve venöz tonus)",
+       "category": "right",
+       "explanation": "Kan damarlarında bazal tonusu sempatik vazomotor lifler belirler."
+      },
+      {
+       "text": "Gastrointestinal Sistem (Motilite ve salgı tonusu)",
+       "category": "left",
+       "explanation": "Sindirim kanalında peristaltizm ve sekresyonda parasempatik tonus öndedir."
+      },
+      {
+       "text": "Termoregülatuar Ter Bezleri (Vücut ısısını dengeleyen tonus)",
+       "category": "right",
+       "explanation": "Ter bezleri anatomik olarak sempatik sinir sistemi tarafından innerve edilir."
+      }
+     ],
+     "id": "k41-s20-e2"
+    },
+    {
+     "type": "cloze_masking",
+     "maskedTerm": "baroreseptör",
+     "hint": "Bu kavram otonomik innervasyonu niteleyen temel terimdir.",
+     "id": "k41-s20-e3",
+     "sentence": "Kan basıncı artışını algılayarak beyin sapına afferent sinyal gönderen karotis sinüsü ve aort kavsi mekanoreseptörlerine baroreseptör denir."
+    },
+    {
+     "type": "active_recall",
+     "question": "Otonomik ganglion blokörü uygulandığında istirahat halindeki bir bireyin kalp hızında ne yönde bir değişiklik beklenir?",
+     "answer": "Kalpte istirahatte parasempatik (vagal) tonus baskın olduğundan, ganglion blokajı vagal inhibitör kontrolü kaldırır ve kalp hızında artış (taşikardi) görülür.",
+     "id": "k41-s20-e4"
+    }
+   ],
+   "id": "k2-41-d-s20",
+   "pdfSayfalari": [
+    51,
+    54
+   ],
+   "bolum": 6
+  },
+  {
+   "slideNumber": 21,
+   "title": "İyon Kanalları ve Ekzositozu Hedefleyen Nörotoksinler",
+   "sourcePdf": {
+    "file": "y25-k2-41-otonom-sinir-sistemi-farmakolojisi.pdf",
+    "startPage": 61,
+    "endPage": 63
+   },
+   "content": "Nörotoksinler, aksiyon potansiyeli yayılımını ve transmitter ekzositozunu bloke ederek otonomik ve somatik iletimi felç ederler.\n\n- **Voltaj Kapılı Na+ Kanal Blokörleri:**\n  - *Tetrodotoksin (TTX):* Kirpi balığı (Fugu) ve semenderlerde bulunur; Na+ kanalının dış ağzına bağlanarak sodyum girişini ve aksiyon potansiyeli yayılımını engeller.\n  - *Saksitoksin (STX):* Kırmızı algler (red tide) ve kontamine midyelerde bulunur; benzer şekilde voltaj kapılı Na+ kanallarını tıkar.\n- **Voltaj Kapılı Ca2+ Kanal Blokörleri:**\n  - *Omega-Konutoksin:* Konus deniz salyangozu zehridir; presinaptik terminaldeki N-tipi voltaj kapılı Ca2+ kanallarını bloke ederek nörotransmitter ekzositozunu durdurur.\n- **SNARE Füzyon Toksinleri:**\n  - *Botulinum Toksini (Clostridium botulinum):* Çinko bağımlı endopeptidazdır; sinaptobrevin, sintaksin veya SNAP-25'i proteolitik olarak parçalayarak asetilkolin salınımını önler ve flask felç yapar.\n\n> [!NOTE]\n> TTX ve STX aksonal iletimi durdururken; konutoksin ve botulinum toksini spesifik olarak sinaptik kavşaktaki salıverilme mekanizmasını hedefler.",
+   "synthesisNarrative": "Nörotoksinler, aksiyon potansiyeli yayılımını ve transmitter ekzositozunu bloke ederek otonomik ve somatik iletimi felç ederler.\n\n- **Voltaj Kapılı Na+ Kanal Blokörleri:**\n  - *Tetrodotoksin (TTX):* Kirpi balığı (Fugu) ve semenderlerde bulunur; Na+ kanalının dış ağzına bağlanarak sodyum girişini ve aksiyon potansiyeli yayılımını engeller.\n  - *Saksitoksin (STX):* Kırmızı algler (red tide) ve kontamine midyelerde bulunur; benzer şekilde voltaj kapılı Na+ kanallarını tıkar.\n- **Voltaj Kapılı Ca2+ Kanal Blokörleri:**\n  - *Omega-Konutoksin:* Konus deniz salyangozu zehridir; presinaptik terminaldeki N-tipi voltaj kapılı Ca2+ kanallarını bloke ederek nörotransmitter ekzositozunu durdurur.\n- **SNARE Füzyon Toksinleri:**\n  - *Botulinum Toksini (Clostridium botulinum):* Çinko bağımlı endopeptidazdır; sinaptobrevin, sintaksin veya SNAP-25'i proteolitik olarak parçalayarak asetilkolin salınımını önler ve flask felç yapar.\n\n> [!NOTE]\n> TTX ve STX aksonal iletimi durdururken; konutoksin ve botulinum toksini spesifik olarak sinaptik kavşaktaki salıverilme mekanizmasını hedefler.",
+   "keyTakeaways": [
+    "Tetrodotoksin ve saksitoksin voltaj kapılı Na+ kanallarını tıkayarak aksiyon potansiyelini önler.",
+    "Konutoksin presinaptik N-tipi Ca2+ kanallarını bloke ederek transmitter salınımını engeller.",
+    "Botulinum toksini SNARE proteinlerini parçalayarak asetilkolin ekzositozunu durdurur."
+   ],
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Fugu balığı zehirlenmesinde rol alan ve akson membranındaki voltaj kapılı sodyum (Na+) kanallarını bloke eden toksin hangisidir?",
+     "options": [
+      {
+       "text": "Tetrodotoksin (TTX)",
+       "isCorrect": true,
+       "explanation": "Tetrodotoksin voltaj kapılı Na+ kanalının dış porunu tıkayarak aksiyon potansiyelini ve sinir iletimini tamamen felç eder."
+      },
+      {
+       "text": "Botulinum toksini",
+       "isCorrect": false,
+       "explanation": "Botulinum toksini kavramı bu fizyolojik etkiyi oluşturmaz; ilgili klinik mekanizmada zıt veya farklı bir otonomik yolak üzerinden fonksiyon gösterir. Botulinum toksini Na+ kanallarını değil presinaptik SNARE proteinlerini parçalar."
+      },
+      {
+       "text": "Omega-konutoksin",
+       "isCorrect": false,
+       "explanation": "Omega-konutoksin kavramı bu fizyolojik etkiyi oluşturmaz; ilgili klinik mekanizmada zıt veya farklı bir otonomik yolak üzerinden fonksiyon gösterir. Konutoksin Na+ kanallarını değil N-tipi kalsiyum kanallarını bloke eder."
+      },
+      {
+       "text": "Alfa-bungarotoksin",
+       "isCorrect": false,
+       "explanation": "Alfa-bungarotoksin kavramı bu fizyolojik etkiyi oluşturmaz; ilgili klinik mekanizmada zıt veya farklı bir otonomik yolak üzerinden fonksiyon gösterir. Alfa-bungarotoksin Na+ kanallarını değil nikotinik asetilkolin reseptörlerini bloke eder."
+      }
+     ],
+     "id": "k41-s21-e1"
+    },
+    {
+     "type": "swipe_matching",
+     "leftCategory": "Tetrodotoksin (TTX)",
+     "rightCategory": "Omega-Konutoksin",
+     "cards": [
+      {
+       "text": "Voltaj kapılı Na+ kanallarını dış porlarından bloke eder",
+       "category": "left",
+       "explanation": "TTX aksiyon potansiyeli oluşumunu ve yayılımını engeller."
+      },
+      {
+       "text": "Presinaptik N-tipi voltaj kapılı Ca2+ kanallarını bloke eder",
+       "category": "right",
+       "explanation": "Konutoksin ekzositoz için gereken Ca2+ girişini durdurur."
+      },
+      {
+       "text": "Kirpi balığı (Fugu) dokularında biriken ölümcül toksindir",
+       "category": "left",
+       "explanation": "Fugu balığı tüketimi sonrası gelişen felçten TTX sorumludur."
+      },
+      {
+       "text": "Deniz salyangozu (Conus) türlerinden izole edilen peptid toksindir",
+       "category": "right",
+       "explanation": "Konutoksin koni salyangozunun avını felç etmek için kullandığı zehirdir."
+      }
+     ],
+     "id": "k41-s21-e2"
+    },
+    {
+     "type": "cloze_masking",
+     "maskedTerm": "konutoksin",
+     "hint": "Bu kavram otonomik innervasyonu niteleyen temel terimdir.",
+     "id": "k41-s21-e3",
+     "sentence": "Presinaptik N-tipi kalsiyum kanallarını selektif bloke ederek transmiter ekzositozunu durduran deniz salyangozu zehri konutoksindir."
+    },
+    {
+     "type": "active_recall",
+     "question": "Botulinum toksini ile tetrodotoksinin sinir iletimini engelleme mekanizmaları arasındaki fark nedir?",
+     "answer": "Tetrodotoksin akson boyunca voltaj kapılı Na+ kanallarını bloke ederek aksiyon potansiyelini durdurur; Botulinum toksini ise sinir ucunda SNARE proteinlerini keserek ACh salıverilmesini önler.",
+     "id": "k41-s21-e4"
+    }
+   ],
+   "id": "k2-41-d-s21",
+   "pdfSayfalari": [
+    61,
+    63
+   ],
+   "bolum": 6
+  },
+  {
+   "slideNumber": 22,
+   "title": "Reseptör ve Enzim Toksinleri: Kürar, Latrotoksin, Atropin ve Malathion",
+   "sourcePdf": {
+    "file": "y25-k2-41-otonom-sinir-sistemi-farmakolojisi.pdf",
+    "startPage": 64,
+    "endPage": 65
+   },
+   "content": "Postsinaptik reseptörleri veya metabolik enzimleri hedef alan toksinler, otonomik dengede aşırı uyarım veya derin blokaj yaratırlar.\n\n- **Reseptör Blokörleri:**\n  - *D-Tubokürarin ve Alfa-Bungarotoksin:* Çizgili kas nikotinik (Nm) reseptörlerini bloke ederek gevşek kas felci oluşturur.\n  - *Atropin:* Atropa belladonna alkaloididir; muskarinik reseptörleri kompetitif bloke ederek parasempatolitik tablo oluşturur.\n- **Presinaptik Aşırı Boşalım Toksini:**\n  - *Alfa-Latrotoksin (Karadul Örümceği):* Presinaptik nöron zarına yerleşerek por açar; kontrolsüz Ca2+ girişiyle veziküllerdeki tüm nörotransmitteri masif şekilde boşaltır ve depoları tüketir.\n- **Enzim İnhibitör Toksinleri:**\n  - *Malathion ve Parathion:* Organofosfat pestisitleridir; asetilkolinesterazın aktif bölgesindeki serini irreversibl fosforilleyerek masif kolinerjik krize (SLUDGE) yol açar.\n\n> [!IMPORTANT]\n> Alfa-latrotoksin masif transmiter salınımıyla başlangıçta şiddetli spazmlar ve kramplar yaparken, vezikül depoları tükenince paraliziye neden olur.",
+   "synthesisNarrative": "Postsinaptik reseptörleri veya metabolik enzimleri hedef alan toksinler, otonomik dengede aşırı uyarım veya derin blokaj yaratırlar.\n\n- **Reseptör Blokörleri:**\n  - *D-Tubokürarin ve Alfa-Bungarotoksin:* Çizgili kas nikotinik (Nm) reseptörlerini bloke ederek gevşek kas felci oluşturur.\n  - *Atropin:* Atropa belladonna alkaloididir; muskarinik reseptörleri kompetitif bloke ederek parasempatolitik tablo oluşturur.\n- **Presinaptik Aşırı Boşalım Toksini:**\n  - *Alfa-Latrotoksin (Karadul Örümceği):* Presinaptik nöron zarına yerleşerek por açar; kontrolsüz Ca2+ girişiyle veziküllerdeki tüm nörotransmitteri masif şekilde boşaltır ve depoları tüketir.\n- **Enzim İnhibitör Toksinleri:**\n  - *Malathion ve Parathion:* Organofosfat pestisitleridir; asetilkolinesterazın aktif bölgesindeki serini irreversibl fosforilleyerek masif kolinerjik krize (SLUDGE) yol açar.\n\n> [!IMPORTANT]\n> Alfa-latrotoksin masif transmiter salınımıyla başlangıçta şiddetli spazmlar ve kramplar yaparken, vezikül depoları tükenince paraliziye neden olur.",
+   "keyTakeaways": [
+    "Alfa-latrotoksin presinaptik zara por açarak masif transmitter deşarjı ve tükenme yapar.",
+    "Kürar ve alfa-bungarotoksin nikotinik reseptörleri bloke ederek çizgili kas felci yapar.",
+    "Malathion AChE'yi irreversibl inhibe ederek ölümcül kolinerjik krize yol açar."
+   ],
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Karadul örümceği zehri olan alfa-latrotoksinin presinaptik sinir ucunda oluşturduğu primer toksikolojik mekanizma nedir?",
+     "options": [
+      {
+       "text": "Presinaptik zarda porlar oluşturarak kontrolsüz Ca2+ girişi ve masif nörotransmitter boşalması yapması",
+       "isCorrect": true,
+       "explanation": "Presinaptik zarda porlar oluşturarak kontrolsüz Ca2+ girişi ve masif nörotransmitter boşalması yapması doğru yanıttır; çünkü bu spesifik farmakolojik ve fizyolojik mekanizma doğrudan hedeflenen reseptör ve doku yanıtını oluşturur. Alfa-latrotoksin membran geçirgenliğini bozarak hücreye masif kalsiyum akıtır ve veziküllerdeki tüm transmiteri fırtına şeklinde boşaltır."
+      },
+      {
+       "text": "Asetilkolinesteraz enzimini kalıcı olarak fosforillemesi",
+       "isCorrect": false,
+       "explanation": "Asetilkolinesteraz enzimini kalıcı olarak fosforillemesi kavramı bu fizyolojik etkiyi oluşturmaz; ilgili klinik mekanizmada zıt veya farklı bir otonomik yolak üzerinden fonksiyon gösterir. AChE enzimini kalıcı fosforilleyenler organofosfat pestisitlerdir (malathion, parathion)."
+      },
+      {
+       "text": "Postsinaptik muskarinik reseptörleri kompetitif bloke etmesi",
+       "isCorrect": false,
+       "explanation": "Postsinaptik muskarinik reseptörleri kompetitif bloke etmesi kavramı bu fizyolojik etkiyi oluşturmaz; ilgili klinik mekanizmada zıt veya farklı bir otonomik yolak üzerinden fonksiyon gösterir. Muskarinik reseptörleri kompetitif bloke eden ajan atropindir."
+      },
+      {
+       "text": "Voltaj kapılı Na+ kanallarını tıkayarak aksiyon potansiyelini susturması",
+       "isCorrect": false,
+       "explanation": "Voltaj kapılı Na+ kanallarını tıkayarak aksiyon potansiyelini susturması kavramı bu fizyolojik etkiyi oluşturmaz; ilgili klinik mekanizmada zıt veya farklı bir otonomik yolak üzerinden fonksiyon gösterir. Voltaj kapılı Na+ kanallarını tıkayan ajan tetrodotoksindir."
+      }
+     ],
+     "id": "k41-s22-e1"
+    },
+    {
+     "type": "swipe_matching",
+     "leftCategory": "Alfa-Latrotoksin",
+     "rightCategory": "Malathion",
+     "cards": [
+      {
+       "text": "Karadul örümceği zehridir; presinaptik zarda porlar açar",
+       "category": "left",
+       "explanation": "Latrotoksin presinaptik terminal membranını hedef alır."
+      },
+      {
+       "text": "Organofosfat insektisitidir; asetilkolinesterazı irreversibl fosforiller",
+       "category": "right",
+       "explanation": "Malathion enzimin aktif bölgesine bağlanarak hidrolizi durdurur."
+      },
+      {
+       "text": "Kalsiyum bağımsız olarak da masif veziküler transmitter deşarjı yapar",
+       "category": "left",
+       "explanation": "Membran harabiyeti ve por oluşumu depolanmış vezikülleri hızla boşaltır."
+      },
+      {
+       "text": "Aşırı asetilkolin birikimiyle ölümcül SLUDGE kolinerjik kriz tablosu oluşturur",
+       "category": "right",
+       "explanation": "Enzim blokajı sinaptik yarıklarda aşırı asetilkolin göllenmesine yol açar."
+      }
+     ],
+     "id": "k41-s22-e2"
+    },
+    {
+     "type": "cloze_masking",
+     "maskedTerm": "malathion",
+     "hint": "Bu kavram otonomik innervasyonu niteleyen temel terimdir.",
+     "id": "k41-s22-e3",
+     "sentence": "Asetilkolinesteraz enzimini geri dönüşümsüz inhibe ederek tarımsal zehirlenmelere yol açan organofosfat insektisiti malathiondur."
+    },
+    {
+     "type": "active_recall",
+     "question": "D-tubokürarin ile botulinum toksininin çizgili kas felci oluşturma mekanizmaları arasındaki temel fark nedir?",
+     "answer": "Botulinum toksini presinaptik uçta SNARE proteinlerini keserek ACh salıverilmesini engeller; D-tubokürarin ise postsinaptik nikotinik Nm reseptörlerini bloke eder.",
+     "id": "k41-s22-e4"
+    }
+   ],
+   "id": "k2-41-d-s22",
+   "pdfSayfalari": [
+    64,
+    65
+   ],
+   "bolum": 6
+  },
+  {
+   "slideNumber": 23,
+   "title": "[TEKRAR SAYFASI - CHECKPOINT 4] Otonomik Entegrasyon ve Farmakolojik Toksinler",
+   "isCheckpoint": true,
+   "content": "Bu bölümde otonomik refleks entegrasyonunu ve nörotransmisyonu hedefleyen nörotoksinleri pekiştirdik.\n\n- **Otonomik Tonus:** Kan damarlarında ve ter bezlerinde sempatik; kalp, göz ve GIS'te parasempatik tonus baskındır.\n- **Baroreseptör Refleksi:** Basınç artışında NTS aracılığıyla vagal tonus artar ve refleks bradikardi gelişir.\n- **İyon Kanal Toksinleri:** Tetrodotoksin (TTX) ve saksitoksin (STX) voltaj kapılı Na+ kanallarını; konutoksin N-tipi Ca2+ kanallarını bloke eder.\n- **Veziküler ve Enzim Toksinleri:** Botulinum toksini SNARE'leri parçalar; alfa-latrotoksin masif deşarj yapar; malathion AChE'yi irreversibl inhibe eder.\n\n> [!NOTE]\n> Bütün bu farmakolojik ve toksikolojik araçlar otonomik sinapsın hassas biyokimyasal aşamalarını hedefleyerek etki gösterir.",
+   "synthesisNarrative": "Bu bölümde otonomik refleks entegrasyonunu ve nörotransmisyonu hedefleyen nörotoksinleri pekiştirdik.\n\n- **Otonomik Tonus:** Kan damarlarında ve ter bezlerinde sempatik; kalp, göz ve GIS'te parasempatik tonus baskındır.\n- **Baroreseptör Refleksi:** Basınç artışında NTS aracılığıyla vagal tonus artar ve refleks bradikardi gelişir.\n- **İyon Kanal Toksinleri:** Tetrodotoksin (TTX) ve saksitoksin (STX) voltaj kapılı Na+ kanallarını; konutoksin N-tipi Ca2+ kanallarını bloke eder.\n- **Veziküler ve Enzim Toksinleri:** Botulinum toksini SNARE'leri parçalar; alfa-latrotoksin masif deşarj yapar; malathion AChE'yi irreversibl inhibe eder.\n\n> [!NOTE]\n> Bütün bu farmakolojik ve toksikolojik araçlar otonomik sinapsın hassas biyokimyasal aşamalarını hedefleyerek etki gösterir.",
+   "keyTakeaways": [
+    "Kan damarlarında sempatik, kalpte parasempatik otonomik tonus baskındır.",
+    "TTX Na+ kanallarını, konutoksin Ca2+ kanallarını, botulinum SNARE'leri bloke eder.",
+    "Alfa-latrotoksin masif ekzositoz, malathion ise irreversibl AChE inhibisyonu yapar."
+   ],
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Nörotoksinler ve etki mekanizmaları ile ilgili aşağıdaki eşleştirmelerden hangisi DOĞRUDUR?",
+     "options": [
+      {
+       "text": "Botulinum toksini — SNARE füzyon proteinlerini parçalayarak ACh ekzositozunu durdurur",
+       "isCorrect": true,
+       "explanation": "Botulinum toksini — SNARE füzyon proteinlerini parçalayarak ACh ekzositozunu durdurur doğru yanıttır; çünkü bu spesifik farmakolojik ve fizyolojik mekanizma doğrudan hedeflenen reseptör ve doku yanıtını oluşturur. Botulinum nörotoksini sinaptobrevin, sintaksin veya SNAP-25'i proteolitik olarak keserek vezikül ekzositozunu engeller."
+      },
+      {
+       "text": "Tetrodotoksin — Presinaptik kalsiyum kanallarını bloke eder",
+       "isCorrect": false,
+       "explanation": "Tetrodotoksin — Presinaptik kalsiyum kanallarını bloke eder kavramı bu fizyolojik etkiyi oluşturmaz; ilgili klinik mekanizmada zıt veya farklı bir otonomik yolak üzerinden fonksiyon gösterir. Tetrodotoksin voltaj kapılı Na+ kanallarını bloke eder; Ca2+ kanallarını konutoksin bloke eder."
+      },
+      {
+       "text": "Konutoksin — Voltaj kapılı sodyum kanallarını tıkar",
+       "isCorrect": false,
+       "explanation": "Konutoksin — Voltaj kapılı sodyum kanallarını tıkar kavramı bu fizyolojik etkiyi oluşturmaz; ilgili klinik mekanizmada zıt veya farklı bir otonomik yolak üzerinden fonksiyon gösterir. Konutoksin N-tipi voltaj kapılı kalsiyum kanallarını bloke eder."
+      },
+      {
+       "text": "Alfa-latrotoksin — Asetilkolinesteraz enzimini kovalent fosforiller",
+       "isCorrect": false,
+       "explanation": "Alfa-latrotoksin — Asetilkolinesteraz enzimini kovalent fosforiller kavramı bu fizyolojik etkiyi oluşturmaz; ilgili klinik mekanizmada zıt veya farklı bir otonomik yolak üzerinden fonksiyon gösterir. AChE enzimini kovalent fosforilleyen ajan malathiondur; latrotoksin membrana por açar."
+      }
+     ],
+     "id": "k41-s23-e1"
+    },
+    {
+     "type": "venn_grid",
+     "labelA": "Tetrodotoksin (TTX)",
+     "labelB": "Botulinum Toksini",
+     "items": [
+      {
+       "criterion": "Voltaj kapılı Na+ kanallarını bloke ederek aksiyon potansiyelini durdurur",
+       "correct": "A"
+      },
+      {
+       "criterion": "Presinaptik uçta SNARE proteinlerini parçalayarak vezikül füzyonunu engeller",
+       "correct": "B"
+      },
+      {
+       "criterion": "Hedef nöronal sistemde iletimi keserek kas felcine yol açar",
+       "correct": "both"
+      },
+      {
+       "criterion": "Postsinaptik muskarinik reseptörleri kompetitif olarak uyararak tükürük salgısını artırır",
+       "correct": "neither"
+      }
+     ],
+     "id": "k41-s23-e2",
+     "title": "Tetrodotoksin (TTX) ve Botulinum Toksini Karşılaştırması"
+    },
+    {
+     "type": "spot_the_lie",
+     "items": [
+      {
+       "text": "Baroreseptör refleksi kan basıncı fırladığında vagal uyarıyla refleks bradikardi yapar.",
+       "isLie": false,
+       "explanation": "Baroreseptör refleksi kan basıncı fırladığında vagal uyarıyla refleks bradikardi yapar. ifadesi otonom farmakoloji ilkeleri açısından incelendiğinde bu klinik durumun gerekçesini açıkça ortaya koyar. Afferent baroreseptör deşarjı NTS aracılığıyla vagus sinirini uyararak kalbi yavaşlatır."
+      },
+      {
+       "text": "Alfa-latrotoksin presinaptik terminalde veziküllerin masif şekilde boşalmasına neden olur.",
+       "isLie": false,
+       "explanation": "Alfa-latrotoksin presinaptik terminalde veziküllerin masif şekilde boşalmasına neden olur. ifadesi otonom farmakoloji ilkeleri açısından incelendiğinde bu klinik durumun gerekçesini açıkça ortaya koyar. Por oluşumu ve kalsiyum akışı kontrolsüz transmitter deşarjına yol açar."
+      },
+      {
+       "text": "Malathion zehirlenmesinde gelişen kolinerjik semptomlar pralidoksim verilmeden atropin ile düzeltilemez.",
+       "isLie": true,
+       "explanation": "Atropin tek başına muskarinik semptomları hızla düzeltir; pralidoksim nikotinik kavşak ve enzim reaktivasyonu için eklenir."
+      },
+      {
+       "text": "Kan damarlarında bazal otonomik tonus sempatik sistem tarafından yürütülür.",
+       "isLie": false,
+       "explanation": "Kan damarlarında bazal otonomik tonus sempatik sistem tarafından yürütülür. ifadesi otonom farmakoloji ilkeleri açısından incelendiğinde bu klinik durumun gerekçesini açıkça ortaya koyar. Vasküler yatakta bazal arteriyolar vazomotor tonus sempatik sistem kontrolündedir."
+      }
+     ],
+     "id": "k41-s23-e3",
+     "topic": "[TEKRAR SAYFASI - CHECKPOINT 4] Otonomik Entegrasyon ve Farmakolojik Toksinler Klinik Önermeleri"
+    },
+    {
+     "type": "cloze_masking",
+     "maskedTerm": "malathion",
+     "hint": "Bu kavram otonomik innervasyonu niteleyen temel terimdir.",
+     "id": "k41-s23-e4",
+     "sentence": "Asetilkolinesteraz enzimini geri dönüşümsüz bloke eden fosforlu organik insektisit bileşiği malathiondur."
+    }
+   ],
+   "id": "k2-41-d-s23",
+   "bolum": 6
+  },
+  {
+   "slideNumber": 24,
+   "title": "[OYUN SAYFASI] Ders Sonu Oyunları: Otonom Sinir Sistemi Farmakolojisi",
+   "isGameFinale": true,
+   "content": "Tebrikler! Otonom Sinir Sistemi Farmakolojisi dersini başarıyla tamamladınız.\n\nAşağıdaki 4 interaktif ders sonu oyunu ile öğrendiğiniz tüm temel farmakolojik mekanizmaları, hız sınırlayıcı enzimleri, reseptör sinyallerini ve nörotoksin hedeflerini pekiştirin:\n- **Sıralama Oyunu:** Katekolamin sentez yolağındaki enzimatik aşamaları kronolojik sıraya dizin.\n- **Değer Tahmin Sürgüsü:** Nöronal NET taşıyıcısının geri alım oranını tahmin edin.\n- **Farmakolojik Pertürbasyon:** VMAT-2 blokajında tiramin uygulamasının etkisini analiz edin.\n- **Metin Düzeltme:** Klinik vaka anlatımındaki kritik kavram yanılgısını düzeltin.",
+   "synthesisNarrative": "Tebrikler! Otonom Sinir Sistemi Farmakolojisi dersini başarıyla tamamladınız.\n\nAşağıdaki 4 interaktif ders sonu oyunu ile öğrendiğiniz tüm temel farmakolojik mekanizmaları, hız sınırlayıcı enzimleri, reseptör sinyallerini ve nörotoksin hedeflerini pekiştirin:\n- **Sıralama Oyunu:** Katekolamin sentez yolağındaki enzimatik aşamaları kronolojik sıraya dizin.\n- **Değer Tahmin Sürgüsü:** Nöronal NET taşıyıcısının geri alım oranını tahmin edin.\n- **Farmakolojik Pertürbasyon:** VMAT-2 blokajında tiramin uygulamasının etkisini analiz edin.\n- **Metin Düzeltme:** Klinik vaka anlatımındaki kritik kavram yanılgısını düzeltin.",
+   "keyTakeaways": [
+    "Otonom sinir sistemi farmakolojisinin tüm temel taşları 4 interaktif oyunla pekiştirildi.",
+    "Sentez basamakları, gerialım dinamikleri, pertürbasyon senaryoları ve vaka analizleri test edildi.",
+    "Klinik farmakoloji pratiği için tam donanımlı hazırlık sağlandı."
+   ],
+   "interactiveElements": [
+    {
+     "type": "sequence_order",
+     "title": "Adrenerjik Katekolamin Biyosentezi ve Depolanma Sıralaması",
+     "explanation": "Katekolamin biyosentezi tirozin alımıyla başlar, hız kısıtlayıcı tirozin hidroksilaz ve DOPA dekarboksilaz ile sitoplazmada dopamin üretilir; dopamin VMAT-2 ile veziküle girer ve vezikülde Dopamin beta-hidroksilaz ile noradrenaline dönüştürülür.",
+     "id": "k41-s24-e1",
+     "prompt": "Tirozin amino asidinden başlayarak noradrenalin sentez ve depolanma adımlarını doğru kronolojik sıraya diziniz.",
+     "steps": [
+      "Tirozin amino asidinin sodyum bağımlı taşıyıcı ile presinaptik nöron sitoplazmasına alınması",
+      "Tirozin hidroksilaz enzimi tarafından tirozinin L-DOPA'ya dönüştürülmesi (hız sınırlayıcı basamak)",
+      "DOPA dekarboksilaz enziminin sitoplazmada L-DOPA'dan dopamin üretmesi",
+      "Sentezlenen dopaminin VMAT-2 taşıyıcısı ile vezikül içine pompalanması",
+      "Vezikül içindeki Dopamin beta-hidroksilaz enzimi tarafından noradrenalin sentezlenmesi"
+     ]
+    },
+    {
+     "type": "estimate_slider",
+     "title": "Noradrenalin Gerialım Oranı Tahmini",
+     "min": 0,
+     "max": 100,
+     "step": 5,
+     "tolerance": 10,
+     "unit": "%",
+     "explanation": "Salınan noradrenalinin yaklaşık %80'i yüksek afiniteli nöronal taşıyıcı NET (Uptake-1) aracılığıyla presinaptik terminale hızla geri alınarak iletim sonlandırılır.",
+     "id": "k41-s24-e2",
+     "prompt": "Sinaptik aralığa salınan noradrenalinin presinaptik nöronal membran taşıyıcısı NET (Uptake-1) aracılığıyla geri alınan yaklaşık yüzdesi kaçtır?",
+     "answer": 80
+    },
+    {
+     "type": "perturbation",
+     "title": "Farmakolojik Pertürbasyon: Rezerpin ve Tiramin Etkileşimi",
+     "scenario": "Bir deneysel çalışmada, veziküler monoamin taşıyıcısı VMAT-2'yi geri dönüşümsüz bloke eden rezerpin ile önceden tedavi edilmiş bir deney hayvanına intravenöz yolla tiramin enjekte ediliyor.",
+     "id": "k41-s24-e3",
+     "parameters": [
+      {
+       "name": "Ortalama Kan Basıncı Yanıtı",
+       "correct": "same",
+       "explanation": "Veziküler noradrenalin depoları önceden rezerpin ile tüketildiği için tiramin sempatik tansiyon artışı oluşturamaz."
+      },
+      {
+       "name": "Veziküler Noradrenalin Depo Düzeyi",
+       "correct": "down",
+       "explanation": "Rezerpin VMAT-2 pompasını geri dönüşümsüz bloke ettiği için depolanmış veziküler amin miktarı sıfıra inmiştir."
+      },
+      {
+       "name": "Postsinaptik Adrenoseptör Duyarlılığı",
+       "correct": "up",
+       "explanation": "Depoların tükenmesi ve iletimin kesilmesi nedeniyle postsinaptik reseptörlerde denervasyon aşırı duyarlılığı gelişir."
+      }
+     ]
+    },
+    {
+     "type": "fix_the_text",
+     "title": "Klinik Hata Avı: Kolinerjik Tedavi Analizi",
+     "explanation": "Myasthenia gravis idame tedavisinde nikotinik reseptör iletimini artıran reversibl antikolinesteraz Piridostigmindir; betanekol ise sadece muskarinik düz kasları uyaran bir kolin esteridir.",
+     "id": "k41-s24-e4",
+     "text": "Myasthenia gravis tanısı kesinleşen bir hastanın uzun dönem idame tedavisinde, nöromusküler kavşaktaki nikotinik iletiyi güçlendirmek amacıyla ilk basamak ilaç olarak doğrudan muskarinik agonist olan Betanekol oral yolla başlanır.",
+     "errors": [
+      {
+       "wrong": "Betanekol",
+       "correct": "Piridostigmin",
+       "options": [
+        "Atropin",
+        "Pilokarpin"
+       ],
+       "explanation": "Myasthenia gravis idame tedavisinde nikotinik reseptör iletimini artıran reversibl antikolinesteraz Piridostigmindir; betanekol ise sadece muskarinik düz kasları uyaran bir kolin esteridir."
+      }
+     ]
+    }
+   ],
+   "id": "k2-41-d-s24",
+   "bolum": 6
+  }
+ ],
+ "id": "k2p-y25-k2-41-otonom-sinir-sistemi-farmakolojisi",
+ "title": "Otonom Sinir Sistemi Farmakolojisi",
+ "courseId": "y25-k2-41-otonom-sinir-sistemi-farmakolojisi",
+ "committee": "donem3-kurul2",
+ "discipline": "farmakoloji",
+ "deckId": "k2p-y25-k2-41-otonom-sinir-sistemi-farmakolojisi",
+ "donem": "2025-2026",
+ "arsiv": true,
+ "confidence": "high",
+ "totalSlides": 24,
+ "matchedPastQuestionsCount": 0,
+ "sinama": {
+  "etiket": "2025-2026 Arşiv",
+  "aciklama": "Bu ders 2025-2026 dönemi (geçen yıl) slaytlarından hazırlanmıştır; 2026-2027 güncel müfredat dersleriyle karışmaz."
+ }
+}

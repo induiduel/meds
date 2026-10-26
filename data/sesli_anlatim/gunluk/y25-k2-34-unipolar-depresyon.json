@@ -1,0 +1,34 @@
+{
+  "key": "y25-k2-34-unipolar-depresyon",
+  "donem": "2025-2026",
+  "kurul": 2,
+  "brans": "Psikiyatri",
+  "baslik": "Unipolar Depresyon",
+  "kayitlar": [
+    {
+      "surum": 1,
+      "tarih": "2026-10-26 04:59",
+      "neden": "2025-2026 geçmiş yıl arşiv dersi ilk üretimi ve Kurul 2 tam otomatik hat kapı doğrulaması",
+      "hatali_bilgiler": [
+        "İlk üretim kontrolü: H1–H55 hata defterindeki kısaltma okunuşu, sayfa atlama ve şık açıklama kusurları tarandı; 0 hata doğrulandı."
+      ],
+      "degisiklikler": [
+        "2025-2026 dönemi Depresyon-3.SINIF.pdf (40 sayfa) kaynağından 0 atlanan sayfa ile 38 paragraf / 91 cümlelik sesli anlatım üretildi.",
+        "22 adımlı etkileşimli Öğren destesi (11 model + ders sonu oyunları) ve 6 canlı çizim katmanı eklendi.",
+        "EMA Lightning GPU ile 10.5 dakikalık ses sentezlendi, cümle/kelime zamanlaması ve .medspak paketi doğrulandı."
+      ],
+      "metrikler": {
+        "sureSn": 630,
+        "sureDk": 10.5,
+        "sayfaSayisi": 40,
+        "atlananSayfa": 0,
+        "bolumSayisi": 19,
+        "paragrafSayisi": 38,
+        "cumleSayisi": 91,
+        "slaytAdimSayisi": 22,
+        "cizimSayisi": 6,
+        "cikmisEslesme": 13
+      }
+    }
+  ]
+}

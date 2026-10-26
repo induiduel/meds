@@ -1,0 +1,6046 @@
+{
+ "surum": 1,
+ "metinHash": "e8c64fe6b062270891f443c4ae7885dd5abe9381",
+ "p": {
+  "0": {
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "neden_sonuc",
+     "sablon_ad": "Neden → sonuç",
+     "duzen": "zincir",
+     "bag": "yol açar",
+     "ogeler": [
+      "Nöronların anormal deşarjı",
+      "Sınırlı beyin fonksiyon bozukluğu atağı (nöbet)"
+     ],
+     "s": 2,
+     "k": [
+      0,
+      111
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.03,
+      0.96
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.186,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.1663,
+     "ek_renk": "#ffffff"
+    }
+   ],
+   "3": [
+    {
+     "tur": "sema",
+     "sablon": "cok_neden_tek_sonuc",
+     "sablon_ad": "Birçok neden → tek sonuç",
+     "duzen": "grup",
+     "bag": "neden olur",
+     "kaynaklar": [
+      "İnfeksiyon",
+      "Kanser",
+      "Kafa travması",
+      "Kalıtım (bazı alt gruplar)"
+     ],
+     "sonuc": "Nöbetler",
+     "s": 2,
+     "k": [
+      0,
+      188
+     ],
+     "tip": "grup",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.32,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.2803,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "1": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "GABAerjik (inhibitör) iletiyi artırma",
+      "Eksitatör (glutamaterjik) iletiyi zayıflatma",
+      "İyonik geçirgenliği değiştirme"
+     ],
+     "baslik": "Antiepileptiklerin üç mekanizması",
+     "numarali": true,
+     "s": 3,
+     "k": [
+      0,
+      179
+     ],
+     "tip": "liste",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.308,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.268,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "3": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Fokal farkında nöbet (eski basit parsiyel)",
+      "Odak bozukluğu olan farkındalık nöbeti (eski kompleks kısmi)",
+      "Fokal-bilateral tonik-klonik nöbet"
+     ],
+     "baslik": "Fokal başlangıçlı nöbetler",
+     "s": 5,
+     "k": [
+      58,
+      243
+     ],
+     "tip": "liste",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.308,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.268,
+     "ek_renk": "#ffffff"
+    }
+   ],
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Genelleştirilmiş tonik-klonik nöbet",
+      "Genelleştirilmiş absans nöbeti (eski petit mal)",
+      "Miyoklonik nöbet",
+      "Atonik nöbet",
+      "Epileptik spazmlar (West sendromu)"
+     ],
+     "baslik": "Genel başlangıçlı nöbetler",
+     "s": 5,
+     "k": [
+      0,
+      247
+     ],
+     "tip": "liste",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.419,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.3789,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "5": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Lennox-Gastaut sendromu",
+      "Erken infantil epileptik ensefalopati",
+      "Erken miyoklonik ensefalopati",
+      "İnfantil spazmlar",
+      "Dravet sendromu"
+     ],
+     "baslik": "İlaçla tedavisi zor epileptik ensefalopatiler",
+     "s": 7,
+     "k": [
+      44,
+      252
+     ],
+     "tip": "liste",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.419,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.3789,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "6": {
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "İlaca dirençli fokal nöbetler (onaylı)",
+      "Lennox-Gastaut tipi semptomatik jeneralize epilepsi",
+      "İnatçı atonik nöbetler"
+     ],
+     "baslik": "Vagus sinir uyarıcısı kullanımı",
+     "s": 8,
+     "k": [
+      25,
+      186
+     ],
+     "tip": "liste",
+     "konum": [
+      0.05,
+      1.015
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.308,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.343,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "8": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Miyoklonik epilepsiler",
+      "İnfantil spazmlar",
+      "Dravet sendromu",
+      "Tuberoz skleroz kompleksi ilişkili nöbetler"
+     ],
+     "baslik": "Diyet terapisinin özellikle faydalı olduğu tablolar",
+     "s": 10,
+     "k": [
+      24,
+      151
+     ],
+     "tip": "liste",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.363,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.3234,
+     "ek_renk": "#ffffff"
+    }
+   ],
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "zehir_antidot",
+     "sablon_ad": "Zehirlenme → antidot / tedavi",
+     "duzen": "tablo",
+     "basliklar": [
+      "Durum",
+      "Antidot / tedavi"
+     ],
+     "satirlar": [
+      [
+       "GLUT1 eksikliği sendromu (De Vivo hastalığı)",
+       "Ketojenik diyet (birinci basamak)"
+      ]
+     ],
+     "s": 10,
+     "k": [
+      0,
+      123
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.236,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.1956,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "9": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "cok_neden_tek_sonuc",
+     "sablon_ad": "Birçok neden → tek sonuç",
+     "duzen": "grup",
+     "bag": "neden olur",
+     "kaynaklar": [
+      "Aksiyon potansiyeli ateşleme yeteneği azalır",
+      "Nöronal senkronizasyon azalır"
+     ],
+     "sonuc": "Yerel nöbet deşarjlarının oluşumu engellenir",
+     "s": 11,
+     "k": [
+      16,
+      186
+     ],
+     "tip": "grup",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.246,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.2064,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "10": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Voltaj kapılı Na, Ca, K kanallarının modülasyonu",
+      "Hızlı GABA aracılı sinaptik inhibisyonun artırılması",
+      "Sinaptik salım süreçlerinin modifikasyonu",
+      "Hızlı glutamat aracılı uyarımın azaltılması"
+     ],
+     "baslik": "İlaçların spesifik etkileri",
+     "s": 12,
+     "k": [
+      28,
+      266
+     ],
+     "tip": "liste",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.363,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.3234,
+     "ek_renk": "#ffffff"
+    }
+   ],
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "cok_neden_tek_sonuc",
+     "sablon_ad": "Birçok neden → tek sonuç",
+     "duzen": "grup",
+     "bag": "neden olur",
+     "kaynaklar": [
+      "Aşırı uyarım",
+      "Azalmış inhibisyon"
+     ],
+     "sonuc": "Dengesizlik → nöbet oluşturma eğilimi",
+     "s": 12,
+     "k": [
+      122,
+      220
+     ],
+     "tip": "grup",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.206,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.1664,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "11": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "İçsel uyarılabilirlik: sodyum kanal blokerleri",
+      "Uyarıcı sinaptik iletim: glutamat salınımının modifikasyonu",
+      "Uyarıcı sinaptik iletim: AMPA reseptör antagonistleri"
+     ],
+     "baslik": "Uyarılmanın inhibisyonu",
+     "s": 13,
+     "k": [
+      0,
+      249
+     ],
+     "tip": "liste",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.308,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.268,
+     "ek_renk": "#ffffff"
+    }
+   ],
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "ilac_etki",
+     "sablon_ad": "İlaç → mekanizma → sonuç",
+     "duzen": "tablo",
+     "basliklar": [
+      "İlaç",
+      "Mekanizma",
+      "Sonuç"
+     ],
+     "satirlar": [
+      [
+       "Benzodiazepinler, fenobarbital",
+       "GABA A pozitif allosterik modülatörü",
+       "İnhibisyon güçlenir"
+      ],
+      [
+       "Tiagabin, vigabatrin",
+       "Nörotransmitter GABA artar",
+       "İnhibisyon güçlenir"
+      ]
+     ],
+     "s": 13,
+     "k": [
+      0,
+      189
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.03,
+      0.96
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.293,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.2726,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "12": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "neden_sonuc",
+     "sablon_ad": "Neden → sonuç",
+     "duzen": "zincir",
+     "bag": "yol açar",
+     "ogeler": [
+      "Dar terapötik pencere",
+      "Dozajda toksik maruziyetten kaçınılmalı"
+     ],
+     "s": 14,
+     "k": [
+      45,
+      135
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.03,
+      0.96
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.186,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.1663,
+     "ek_renk": "#ffffff"
+    }
+   ],
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Karbamazepin",
+      "Okskarbazepin",
+      "Eslikarbazepin asetat",
+      "Fenobarbital",
+      "Fenitoin",
+      "Primidon"
+     ],
+     "baslik": "Güçlü CYP450 ve glukuronil transferaz indükleyicileri",
+     "s": 14,
+     "k": [
+      0,
+      184
+     ],
+     "tip": "liste",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.474,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.4343,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "13": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Fenitoin",
+      "Tiagabin",
+      "Valproat",
+      "Diazepam",
+      "Perampanel",
+      "Stiripentol"
+     ],
+     "baslik": "Plazma proteinine >%90 bağlananlar",
+     "s": 15,
+     "k": [
+      75,
+      195
+     ],
+     "tip": "liste",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.474,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.4343,
+     "ek_renk": "#ffffff"
+    }
+   ],
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "mekanizma_adimlari",
+     "sablon_ad": "Mekanizma basamakları",
+     "duzen": "zincir",
+     "ogeler": [
+      "Diğer protein bağlı ilaç yer değiştirir",
+      "Serbest fraksiyon geçici artar",
+      "Serbest ilaç aktif: geçici toksisite"
+     ],
+     "s": 15,
+     "k": [
+      0,
+      190
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.35,
+     "yon": "dikey",
+     "olcek": 1.0,
+     "ek_alt": 0.3096,
+     "ek_renk": "#ffffff"
+    }
+   ],
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "mekanizma_adimlari",
+     "sablon_ad": "Mekanizma basamakları",
+     "duzen": "zincir",
+     "ogeler": [
+      "Serbest fraksiyon artar",
+      "Sistemik klirens artar",
+      "Serbest konsantrasyon düzelir"
+     ],
+     "s": 15,
+     "k": [
+      6,
+      127
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.35,
+     "yon": "dikey",
+     "olcek": 1.0,
+     "ek_alt": 0.3096,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "14": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Levetirasetam",
+      "Gabapentin",
+      "Pregabalin"
+     ],
+     "baslik": "İlaç etkileşimi bilinmeyenler",
+     "s": 16,
+     "k": [
+      0,
+      84
+     ],
+     "tip": "liste",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.308,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.268,
+     "ek_renk": "#ffffff"
+    }
+   ],
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "mekanizma_adimlari",
+     "sablon_ad": "Mekanizma basamakları",
+     "duzen": "zincir",
+     "ogeler": [
+      "Güçlü enzim indükleyiciler",
+      "Oral kontraseptif seviyesi azalır",
+      "Doğum kontrolü başarısız olur"
+     ],
+     "s": 16,
+     "k": [
+      69,
+      205
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.35,
+     "yon": "dikey",
+     "olcek": 1.0,
+     "ek_alt": 0.3096,
+     "ek_renk": "#ffffff"
+    }
+   ],
+   "3": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Zonisamid",
+      "Perampanel"
+     ],
+     "baslik": "Günde bir kez uygulanabilenler",
+     "s": 16,
+     "k": [
+      46,
+      109
+     ],
+     "tip": "liste",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.253,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.2126,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "15": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "neden_sonuc",
+     "sablon_ad": "Neden → sonuç",
+     "duzen": "zincir",
+     "bag": "yol açar",
+     "ogeler": [
+      "Anormal deşarjın minimal yayılması",
+      "Bilinç ve uyanıklık korunur: basit parsiyel nöbet"
+     ],
+     "s": 17,
+     "k": [
+      31,
+      129
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.283,
+     "yon": "dikey",
+     "olcek": 1.0,
+     "ek_alt": 0.2434,
+     "ek_renk": "#ffffff"
+    }
+   ],
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "klinik_seyir",
+     "sablon_ad": "Klinik seyir (sırayla gelişen evreler)",
+     "duzen": "adimlar",
+     "ogeler": [
+      "Ekstremitede ani klonik kasılma (60-90 sn)",
+      "Nöbet sonrası halsizlik (15-30 dk)"
+     ],
+     "s": 17,
+     "k": [
+      8,
+      174
+     ],
+     "tip": "adimlar",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.203,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.1633,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "16": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "neden_sonuc",
+     "sablon_ad": "Neden → sonuç",
+     "duzen": "zincir",
+     "bag": "yol açar",
+     "ogeler": [
+      "Temporal lob hipoksi ve infeksiyona duyarlı",
+      "Kompleks parsiyel nöbetin çoğu buradan kaynaklanır"
+     ],
+     "s": 18,
+     "k": [
+      29,
+      174
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.283,
+     "yon": "dikey",
+     "olcek": 1.0,
+     "ek_alt": 0.2434,
+     "ek_renk": "#ffffff"
+    }
+   ],
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "karsilastirma",
+     "sablon_ad": "İki durumun karşılaştırması",
+     "duzen": "karsit",
+     "basliklar": [
+      "Özellik"
+     ],
+     "satirlar": [
+      [
+       "Deşarj yayılımı",
+       "minimal",
+       "daha fazla, genellikle bilateral"
+      ],
+      [
+       "Bilinç",
+       "korunur",
+       "bozulur"
+      ],
+      [
+       "Nöbeti hatırlama",
+       "ayrıntılı anlatabilir",
+       "otomatizmleri hatırlamaz"
+      ]
+     ],
+     "kutuplar": [
+      "Basit parsiyel",
+      "Kompleks parsiyel"
+     ],
+     "s": 18,
+     "k": [
+      44,
+      205
+     ],
+     "tip": "karsit",
+     "konum": [
+      0.03,
+      0.96
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.35,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.3296,
+     "ek_renk": "#ffffff"
+    }
+   ],
+   "3": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Dudak şapırdatma",
+      "Yutkunma",
+      "Beceriksizce aranma",
+      "Kaşınma",
+      "Dolaşma"
+     ],
+     "baslik": "Tipik otomatizmler",
+     "s": 18,
+     "k": [
+      0,
+      101
+     ],
+     "tip": "liste",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.419,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.3789,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "17": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "klinik_seyir",
+     "sablon_ad": "Klinik seyir (sırayla gelişen evreler)",
+     "duzen": "adimlar",
+     "ogeler": [
+      "Parsiyel nöbet",
+      "Jeneralize tonik-klonik nöbet (sekonder jeneralize)"
+     ],
+     "s": 19,
+     "k": [
+      0,
+      133
+     ],
+     "tip": "adimlar",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.203,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.1633,
+     "ek_renk": "#ffffff"
+    }
+   ],
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "klinik_seyir",
+     "sablon_ad": "Klinik seyir (sırayla gelişen evreler)",
+     "duzen": "adimlar",
+     "ogeler": [
+      "Tüm ekstremitelerde tonik kasılma",
+      "15-30 sn sonra gevşemeyle tremor",
+      "Klonik faz: bedende kasılmalar",
+      "60-120 sn'de yavaşlama",
+      "Stupor"
+     ],
+     "s": 19,
+     "k": [
+      0,
+      175
+     ],
+     "tip": "adimlar",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.37,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.3296,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "23": {
+   "0": [
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.472,
+       0.363
+      ],
+      [
+       0.481,
+       0.347
+      ],
+      [
+       0.5,
+       0.342
+      ],
+      [
+       0.509,
+       0.353
+      ],
+      [
+       0.509,
+       0.37
+      ],
+      [
+       0.5,
+       0.38
+      ],
+      [
+       0.484,
+       0.385
+      ],
+      [
+       0.474,
+       0.377
+      ]
+     ],
+     "etiket": "voltaj kapılı Na+ kanalı",
+     "s": 25,
+     "k": [
+      37,
+      64
+     ],
+     "etiket_konum": [
+      0.319,
+      0.222
+     ],
+     "etiket_genislik": 0.34,
+     "etiket_hedef": [
+      0.4892,
+      0.342
+     ],
+     "etiket_boy": 0.0443,
+     "yakin": [
+      0.259,
+      0.162,
+      0.719,
+      0.445
+     ]
+    },
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.669,
+       0.133
+      ],
+      [
+       0.769,
+       0.133
+      ],
+      [
+       0.781,
+       0.15
+      ],
+      [
+       0.781,
+       0.325
+      ],
+      [
+       0.769,
+       0.342
+      ],
+      [
+       0.669,
+       0.342
+      ],
+      [
+       0.656,
+       0.325
+      ],
+      [
+       0.656,
+       0.15
+      ]
+     ],
+     "etiket": "Na+ kanalı blokörleri",
+     "s": 25,
+     "k": [
+      65,
+      162
+     ],
+     "etiket_konum": [
+      0.3416,
+      0.133
+     ],
+     "etiket_genislik": 0.302,
+     "yakin": [
+      0.2816,
+      0.073,
+      0.841,
+      0.402
+     ]
+    }
+   ],
+   "1": [
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.487,
+       0.425
+      ],
+      [
+       0.496,
+       0.412
+      ],
+      [
+       0.51,
+       0.393
+      ],
+      [
+       0.519,
+       0.397
+      ],
+      [
+       0.521,
+       0.412
+      ],
+      [
+       0.531,
+       0.422
+      ],
+      [
+       0.521,
+       0.433
+      ],
+      [
+       0.5,
+       0.447
+      ],
+      [
+       0.491,
+       0.442
+      ]
+     ],
+     "s": 25,
+     "k": [
+      0,
+      76
+     ],
+     "yakin": [
+      0.427,
+      0.333,
+      0.591,
+      0.507
+     ]
+    },
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.371,
+       0.405
+      ],
+      [
+       0.378,
+       0.398
+      ],
+      [
+       0.388,
+       0.4
+      ],
+      [
+       0.4,
+       0.412
+      ],
+      [
+       0.406,
+       0.425
+      ],
+      [
+       0.403,
+       0.438
+      ],
+      [
+       0.391,
+       0.438
+      ],
+      [
+       0.379,
+       0.428
+      ],
+      [
+       0.372,
+       0.417
+      ]
+     ],
+     "etiket": "GAT-1: tiagabin hedefi",
+     "s": 25,
+     "k": [
+      77,
+      114
+     ],
+     "etiket_konum": [
+      0.116,
+      0.338
+     ],
+     "etiket_genislik": 0.315,
+     "yakin": [
+      0.056,
+      0.278,
+      0.491,
+      0.498
+     ]
+    }
+   ],
+   "2": [
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.379,
+       0.675
+      ],
+      [
+       0.391,
+       0.675
+      ],
+      [
+       0.404,
+       0.68
+      ],
+      [
+       0.409,
+       0.7
+      ],
+      [
+       0.406,
+       0.728
+      ],
+      [
+       0.396,
+       0.743
+      ],
+      [
+       0.385,
+       0.745
+      ],
+      [
+       0.376,
+       0.728
+      ],
+      [
+       0.375,
+       0.7
+      ]
+     ],
+     "s": 25,
+     "k": [
+      21,
+      49
+     ],
+     "yakin": [
+      0.315,
+      0.615,
+      0.469,
+      0.805
+     ]
+    },
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.271,
+       0.63
+      ],
+      [
+       0.284,
+       0.622
+      ],
+      [
+       0.302,
+       0.638
+      ],
+      [
+       0.296,
+       0.655
+      ],
+      [
+       0.287,
+       0.68
+      ],
+      [
+       0.279,
+       0.683
+      ],
+      [
+       0.274,
+       0.667
+      ],
+      [
+       0.269,
+       0.645
+      ]
+     ],
+     "s": 25,
+     "k": [
+      50,
+      83
+     ],
+     "yakin": [
+      0.209,
+      0.562,
+      0.362,
+      0.743
+     ]
+    }
+   ]
+  },
+  "18": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "karsilastirma",
+     "sablon_ad": "İki durumun karşılaştırması",
+     "duzen": "karsit",
+     "basliklar": [
+      "Özellik"
+     ],
+     "satirlar": [
+      [
+       "Başlangıç",
+       "Lokalize başlangıç bulgusu yok",
+       "Genellikle parsiyel nöbet ardından"
+      ]
+     ],
+     "kutuplar": [
+      "Primer jeneralize",
+      "Sekonder jeneralize"
+     ],
+     "s": 20,
+     "k": [
+      0,
+      164
+     ],
+     "tip": "karsit",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.236,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.1956,
+     "ek_renk": "#ffffff"
+    }
+   ],
+   "3": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Bilinç bozulması",
+      "Göz kapağı ve ekstremitede hafif klonik seğirme",
+      "Postural tonus değişiklikleri",
+      "Otonomik olaylar",
+      "Otomatizmler"
+     ],
+     "baslik": "Absansta görülenler",
+     "s": 20,
+     "k": [
+      0,
+      170
+     ],
+     "tip": "liste",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.419,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.3789,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "19": {
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Grand mal",
+      "Parsiyel nöbetler",
+      "Absans nöbetleri",
+      "İnfantil spazmlar"
+     ],
+     "baslik": "Miyoklonik kasılmanın görüldüğü nöbetler",
+     "s": 21,
+     "k": [
+      0,
+      143
+     ],
+     "tip": "liste",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.363,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.3234,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "20": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "karsilastirma",
+     "sablon_ad": "İki durumun karşılaştırması",
+     "duzen": "karsit",
+     "basliklar": [
+      "Özellik"
+     ],
+     "satirlar": [
+      [
+       "Kaslar",
+       "Kaskatı, sertleşir",
+       "Gevşek, postural tonus kaybı"
+      ],
+      [
+       "Ayaktaysa",
+       "Düşer",
+       "Aniden yere düşer, yaralanabilir"
+      ]
+     ],
+     "kutuplar": [
+      "Tonik nöbet",
+      "Atonik nöbet"
+     ],
+     "s": 22,
+     "k": [
+      151,
+      226
+     ],
+     "tip": "karsit",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.333,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.2926,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "22": {
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Karaciğerde aktif metabolitlere dönüşür",
+      "Plazma klirensi görece yavaş",
+      "Eskilerin birçoğu güçlü mikrozomal enzim indükleyicisi"
+     ],
+     "baslik": "Antiepileptiklerde metabolizma",
+     "s": 24,
+     "k": [
+      0,
+      187
+     ],
+     "tip": "liste",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.308,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.268,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "24": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Fokal başlangıçlı nöbetler (prototip ilaç)",
+      "Tonik-klonik (grand mal) nöbetler"
+     ],
+     "baslik": "Karbamazepin endikasyonları",
+     "s": 26,
+     "k": [
+      0,
+      180
+     ],
+     "tip": "liste",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.253,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.2126,
+     "ek_renk": "#ffffff"
+    }
+   ],
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "mekanizma_adimlari",
+     "sablon_ad": "Mekanizma basamakları",
+     "duzen": "zincir",
+     "ogeler": [
+      "Karbamazepin",
+      "Miyoklonik ve absans nöbetleri şiddetlendirir",
+      "İdiyopatik jeneralize epilepside kaçınılır"
+     ],
+     "s": 26,
+     "k": [
+      0,
+      193
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.35,
+     "yon": "dikey",
+     "olcek": 1.0,
+     "ek_alt": 0.3096,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "25": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Okskarbazepin",
+      "Lamotrijin",
+      "Lakozamid",
+      "Levetirasetam (sık kullanılır)",
+      "Fenobarbital (maliyet sorunsa)"
+     ],
+     "baslik": "Fokal nöbetlerde karbamazepine ek ilaçlar",
+     "s": 27,
+     "k": [
+      0,
+      183
+     ],
+     "tip": "liste",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.419,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.3789,
+     "ek_renk": "#ffffff"
+    }
+   ],
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "neden_sonuc",
+     "sablon_ad": "Neden → sonuç",
+     "duzen": "zincir",
+     "bag": "yol açar",
+     "ogeler": [
+      "Vigabatrin ve felbamat: toksisite riski",
+      "Üçüncü basamak ilaç"
+     ],
+     "s": 27,
+     "k": [
+      0,
+      79
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.03,
+      0.96
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.186,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.1663,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "26": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Trigeminal nevralji (ilk endikasyon)",
+      "Epilepsi",
+      "Bipolar bozukluk (duygudurum düzenleyici)"
+     ],
+     "baslik": "Karbamazepin kullanım alanları",
+     "s": 28,
+     "k": [
+      0,
+      171
+     ],
+     "tip": "liste",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.308,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.268,
+     "ek_renk": "#ffffff"
+    }
+   ],
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "ilac_etki",
+     "sablon_ad": "İlaç → mekanizma → sonuç",
+     "duzen": "tablo",
+     "basliklar": [
+      "İlaç",
+      "Mekanizma",
+      "Sonuç"
+     ],
+     "satirlar": [
+      [
+       "Karbamazepin (fenitoin gibi)",
+       "Sodyum kanallarını bloke eder",
+       "Yüksek frekanslı tekrarlayan ateşleme inhibe"
+      ]
+     ],
+     "s": 28,
+     "k": [
+      0,
+      156
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.03,
+      0.96
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.236,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.2156,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "27": {
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "olcut_deger",
+     "sablon_ad": "Ölçüt ve değeri",
+     "duzen": "tablo",
+     "basliklar": [
+      "Ölçüt",
+      "Değer"
+     ],
+     "satirlar": [
+      [
+       "Oral biyoyararlanım",
+       "neredeyse %100"
+      ],
+      [
+       "Emilim oranı",
+       "hastalar arasında büyük farklılık"
+      ],
+      [
+       "Doruk seviye",
+       "6-8 saat"
+      ]
+     ],
+     "s": 29,
+     "k": [
+      0,
+      170
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.03,
+      0.96
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.31,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.2895,
+     "ek_renk": "#ffffff"
+    }
+   ],
+   "3": [
+    {
+     "tur": "sema",
+     "sablon": "mekanizma_adimlari",
+     "sablon_ad": "Mekanizma basamakları",
+     "duzen": "zincir",
+     "ogeler": [
+      "Yemeklerden sonra verme",
+      "Emilim yavaşlar",
+      "Yüksek günlük doz tolere edilir"
+     ],
+     "s": 29,
+     "k": [
+      0,
+      117
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.03,
+      0.96
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.149,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.1294,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "28": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "neden_sonuc",
+     "sablon_ad": "Neden → sonuç",
+     "duzen": "zincir",
+     "bag": "yol açar",
+     "ogeler": [
+      "Yarılanma ömrü 36 saatten 8-12 saate düşer",
+      "İlk haftalarda doz ayarlaması gerekir"
+     ],
+     "s": 30,
+     "k": [
+      0,
+      166
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.283,
+     "yon": "dikey",
+     "olcek": 1.0,
+     "ek_alt": 0.2434,
+     "ek_renk": "#ffffff"
+    }
+   ],
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Karaciğerde metabolize edilir",
+      "Yalnızca %5'i değişmeden atılır",
+      "Ana yol: karbamazepin-10,11-epoksit (nöbet önleyici)"
+     ],
+     "baslik": "Karbamazepin metabolizması",
+     "s": 30,
+     "k": [
+      0,
+      168
+     ],
+     "tip": "liste",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.308,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.268,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "29": {
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Primidon",
+      "Fenitoin",
+      "Etosüksimit",
+      "Valproik asit",
+      "Klonazepam"
+     ],
+     "baslik": "İndüksiyonla metabolizması artan antiepileptikler",
+     "s": 31,
+     "k": [
+      0,
+      142
+     ],
+     "tip": "liste",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.419,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.3789,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "30": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Hafif gastrointestinal rahatsızlık",
+      "Baş dönmesi",
+      "Bulanık görme, diplopi",
+      "Ataksi",
+      "Sedasyon (yalnız yüksek dozda)",
+      "Kilo alımı (nadiren)"
+     ],
+     "baslik": "Karbamazepinin doza bağlı yan etkileri",
+     "s": 32,
+     "k": [
+      0,
+      188
+     ],
+     "tip": "liste",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.474,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.4343,
+     "ek_renk": "#ffffff"
+    }
+   ],
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "zehir_antidot",
+     "sablon_ad": "Zehirlenme → antidot / tedavi",
+     "duzen": "tablo",
+     "basliklar": [
+      "Durum",
+      "Antidot / tedavi"
+     ],
+     "satirlar": [
+      [
+       "Diplopi (ilk yakınma, günde <1 saat)",
+       "Bölünmüş günlük dozu yeniden düzenle"
+      ]
+     ],
+     "s": 32,
+     "k": [
+      0,
+      173
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.03,
+      0.96
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.196,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.1756,
+     "ek_renk": "#ffffff"
+    }
+   ],
+   "3": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Fatal aplastik anemi",
+      "Agranülositoz"
+     ],
+     "baslik": "İdiyosenkratik kan diskrazileri",
+     "s": 32,
+     "k": [
+      0,
+      88
+     ],
+     "tip": "liste",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.253,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.2126,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "31": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "ilac_etki",
+     "sablon_ad": "İlaç → mekanizma → sonuç",
+     "duzen": "tablo",
+     "basliklar": [
+      "İlaç",
+      "Mekanizma",
+      "Sonuç"
+     ],
+     "satirlar": [
+      [
+       "Okskarbazepin",
+       "Voltaj kapılı Na kanal blokajı",
+       "Nöbetlere karşı koruma"
+      ]
+     ],
+     "s": 33,
+     "k": [
+      0,
+      123
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.236,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.1956,
+     "ek_renk": "#ffffff"
+    }
+   ],
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "neden_sonuc",
+     "sablon_ad": "Neden → sonuç",
+     "duzen": "zincir",
+     "bag": "yol açar",
+     "ogeler": [
+      "Okskarbazepin (t½ 1–2 saat)",
+      "10-hidroksi metabolit (aktif, t½ 8–12 saat)"
+     ],
+     "s": 33,
+     "k": [
+      0,
+      189
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.03,
+      0.96
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.186,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.1663,
+     "ek_renk": "#ffffff"
+    }
+   ],
+   "3": [
+    {
+     "tur": "sema",
+     "sablon": "karsilastirma",
+     "sablon_ad": "İki durumun karşılaştırması",
+     "duzen": "karsit",
+     "basliklar": [
+      "Özellik"
+     ],
+     "satirlar": [
+      [
+       "Hepatik enzim indüksiyonu",
+       "Daha az",
+       "Daha fazla"
+      ],
+      [
+       "Hiponatremi",
+       "Daha sık",
+       "Daha seyrek"
+      ],
+      [
+       "Diğer yan etkiler",
+       "Benzer",
+       "Benzer"
+      ]
+     ],
+     "kutuplar": [
+      "Okskarbazepin",
+      "Karbamazepin"
+     ],
+     "s": 33,
+     "k": [
+      0,
+      115
+     ],
+     "tip": "karsit",
+     "konum": [
+      0.03,
+      0.96
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.31,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.2895,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "32": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "ilac_etki",
+     "sablon_ad": "İlaç → mekanizma → sonuç",
+     "duzen": "tablo",
+     "basliklar": [
+      "İlaç",
+      "Mekanizma",
+      "Sonuç"
+     ],
+     "satirlar": [
+      [
+       "Eslikarbazepin asetat (ön ilaç)",
+       "Voltaj bağımlı Na kanal blokajı",
+       "Parsiyel başlangıçlı nöbette ek tedavi"
+      ]
+     ],
+     "s": 34,
+     "k": [
+      0,
+      217
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.236,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.1956,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "34": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "olcut_deger",
+     "sablon_ad": "Ölçüt ve değeri",
+     "duzen": "tablo",
+     "basliklar": [
+      "Ölçüt",
+      "Değer"
+     ],
+     "satirlar": [
+      [
+       "Uygulama",
+       "Günde iki kez"
+      ],
+      [
+       "Başlangıç",
+       "50 mg"
+      ],
+      [
+       "Artış",
+       "Haftada 100 mg"
+      ],
+      [
+       "Etkili doz",
+       "200 mg/gün"
+      ],
+      [
+       "Daha büyük etkinlik",
+       "400 ve 600 mg/gün"
+      ]
+     ],
+     "s": 36,
+     "k": [
+      0,
+      182
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.423,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.3835,
+     "ek_renk": "#ffffff"
+    }
+   ],
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Baş dönmesi",
+      "Baş ağrısı",
+      "Mide bulantısı",
+      "Diplopi"
+     ],
+     "baslik": "Lakozamidin olumsuz etkileri",
+     "s": 36,
+     "k": [
+      0,
+      71
+     ],
+     "tip": "liste",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.363,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.3234,
+     "ek_renk": "#ffffff"
+    },
+    {
+     "tur": "sema",
+     "sablon": "neden_sonuc",
+     "sablon_ad": "Neden → sonuç",
+     "duzen": "zincir",
+     "bag": "yol açar",
+     "ogeler": [
+      "Oral çözeltide aspartam",
+      "Fenilketonürili kişide zarar"
+     ],
+     "s": 36,
+     "k": [
+      132,
+      202
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.186,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.1463,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "35": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "olcut_deger",
+     "sablon_ad": "Ölçüt ve değeri",
+     "duzen": "tablo",
+     "basliklar": [
+      "Ölçüt",
+      "Değer"
+     ],
+     "satirlar": [
+      [
+       "Emilim",
+       "Hızlı, tam, besinden bağımsız"
+      ],
+      [
+       "Biyoyararlanım",
+       "%100'e yakın"
+      ],
+      [
+       "Doruk düzey",
+       "1–4 saat"
+      ],
+      [
+       "Yarılanma ömrü",
+       "13 saat"
+      ]
+     ],
+     "s": 37,
+     "k": [
+      0,
+      175
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.367,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.3265,
+     "ek_renk": "#ffffff"
+    }
+   ],
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "neden_sonuc",
+     "sablon_ad": "Neden → sonuç",
+     "duzen": "zincir",
+     "bag": "yol açar",
+     "ogeler": [
+      "CYP450 indüksiyonu ya da inhibisyonu yok",
+      "İlaç etkileşimleri minimum"
+     ],
+     "s": 37,
+     "k": [
+      59,
+      179
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.03,
+      0.66
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.186,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ]
+  },
+  "36": {
+   "1": [
+    {
+     "tur": "sema",
+     "etiket": "plazmada hızla dönüşür",
+     "sablon": "neden_sonuc",
+     "sablon_ad": "Neden → sonuç",
+     "duzen": "zincir",
+     "bag": "yol açar",
+     "ogeler": [
+      "fosfenitoin (parenteral ön ilaç)",
+      "fenitoin"
+     ],
+     "s": 38,
+     "k": [
+      34,
+      126
+     ],
+     "tip": "zincir",
+     "etiket_konum": [
+      0.5,
+      0.38
+     ],
+     "etiket_genislik": 0.315,
+     "etiket_hedef": [
+      0.5,
+      0.5
+     ],
+     "etiket_boy": 0.0443,
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.186,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.1463,
+     "ek_renk": "#ffffff"
+    }
+   ],
+   "3": [
+    {
+     "tur": "sema",
+     "sablon": "mekanizma_adimlari",
+     "sablon_ad": "Mekanizma basamakları",
+     "duzen": "zincir",
+     "ogeler": [
+      "inaktif sodyum kanalına bağlanma",
+      "kanalın inaktif kalma süresi uzar",
+      "kullanıma bağımlı sodyum etkisi"
+     ],
+     "s": 38,
+     "k": [
+      67,
+      176
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.35,
+     "yon": "dikey",
+     "olcek": 1.0,
+     "ek_alt": 0.3096,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "37": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "fenitoin",
+      "karbamazepin",
+      "lamotrijin",
+      "valproat"
+     ],
+     "baslik": "Kullanıma bağımlı sodyum etkisi",
+     "s": 39,
+     "k": [
+      3,
+      92
+     ],
+     "tip": "liste",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.363,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.3234,
+     "ek_renk": "#ffffff"
+    },
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "valproat",
+      "topiramat",
+      "etosüksimid",
+      "fenitoin"
+     ],
+     "baslik": "Kalıcı sodyum akımını engeller",
+     "s": 39,
+     "k": [
+      105,
+      188
+     ],
+     "tip": "liste",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.363,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.3234,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "38": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "ilac_etki",
+     "sablon_ad": "İlaç → mekanizma → sonuç",
+     "duzen": "tablo",
+     "basliklar": [
+      "İlaç",
+      "Mekanizma",
+      "Sonuç"
+     ],
+     "satirlar": [
+      [
+       "Fenitoin",
+       "glutamat salınımı ↓, GABA salınımı ↑",
+       "postsinaptik kayıtlarda görülür"
+      ],
+      [
+       "Fenitoin (ana etki)",
+       "sodyum kanal blokajı",
+       "hızlı tekrarlayan aksiyon potansiyeli inhibisyonu"
+      ]
+     ],
+     "s": 40,
+     "k": [
+      0,
+      239
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.03,
+      0.96
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.333,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.3126,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "39": {
+   "3": [
+    {
+     "tur": "sema",
+     "sablon": "mekanizma_adimlari",
+     "sablon_ad": "Mekanizma basamakları",
+     "duzen": "zincir",
+     "ogeler": [
+      "kan düzeyi artar",
+      "karaciğer maksimum metabolize kapasitesine yaklaşır",
+      "yarılanma ömrü belirgin uzar",
+      "hızla toksisite semptomları"
+     ],
+     "s": 41,
+     "k": [
+      0,
+      95
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.45,
+     "yon": "dikey",
+     "olcek": 1.0,
+     "ek_alt": 0.4097,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "40": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "olcut_deger",
+     "sablon_ad": "Ölçüt ve değeri",
+     "duzen": "tablo",
+     "basliklar": [
+      "Ölçüt",
+      "Değer"
+     ],
+     "satirlar": [
+      [
+       "Yarılanma ömrü (düşük-orta düzey)",
+       "12–36 saat, ortalama 24 saat"
+      ],
+      [
+       "Yarılanma ömrü (yüksek konsantrasyon)",
+       "daha uzun"
+      ]
+     ],
+     "s": 42,
+     "k": [
+      0,
+      162
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.03,
+      0.96
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.253,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.2326,
+     "ek_renk": "#ffffff"
+    }
+   ],
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "olcut_deger",
+     "sablon_ad": "Ölçüt ve değeri",
+     "duzen": "tablo",
+     "basliklar": [
+      "Ölçüt",
+      "Değer"
+     ],
+     "satirlar": [
+      [
+       "Erişkin oral başlangıç",
+       "300 mg/gün (ağırlıktan bağımsız)"
+      ],
+      [
+       "Çocukta kararlı durum sonrası ayar",
+       "5 mg/kg/gün"
+      ]
+     ],
+     "s": 42,
+     "k": [
+      0,
+      199
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.03,
+      0.96
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.253,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.2326,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "41": {
+   "3": [
+    {
+     "tur": "sema",
+     "sablon": "neden_sonuc",
+     "sablon_ad": "Neden → sonuç",
+     "duzen": "zincir",
+     "bag": "yol açar",
+     "ogeler": [
+      "uzun süreli fenitoin",
+      "D vitamini metabolizması bozukluğu",
+      "osteomalazi"
+     ],
+     "s": 43,
+     "k": [
+      132,
+      188
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.417,
+     "yon": "dikey",
+     "olcek": 1.0,
+     "ek_alt": 0.3773,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "42": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Fenasemid: geri çekildi",
+      "Mefenitoin: parsiyel ve tonik-klonik nöbet",
+      "Etotoin: parsiyel ve tonik-klonik nöbet"
+     ],
+     "baslik": "Fenitoin türevleri",
+     "s": 44,
+     "k": [
+      0,
+      175
+     ],
+     "tip": "liste",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.308,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.268,
+     "ek_renk": "#ffffff"
+    }
+   ],
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "mekanizma_adimlari",
+     "sablon_ad": "Mekanizma basamakları",
+     "duzen": "zincir",
+     "ogeler": [
+      "Mefenitoin",
+      "Demetilasyon",
+      "Nirvanol (aktif metabolit)"
+     ],
+     "s": 44,
+     "k": [
+      87,
+      147
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.149,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.1094,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "43": {
+   "3": [
+    {
+     "tur": "sema",
+     "sablon": "mekanizma_adimlari",
+     "sablon_ad": "Mekanizma basamakları",
+     "duzen": "zincir",
+     "ogeler": [
+      "Gabapentin",
+      "Beyinde GABA artışı",
+      "Sinaptik glutamat salıverilmesi azalır",
+      "Antiepileptik etki"
+     ],
+     "s": 45,
+     "k": [
+      0,
+      125
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.45,
+     "yon": "dikey",
+     "olcek": 1.0,
+     "ek_alt": 0.4097,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "44": {
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "neden_sonuc",
+     "sablon_ad": "Neden → sonuç",
+     "duzen": "zincir",
+     "bag": "yol açar",
+     "ogeler": [
+      "Pregabalinin intravenöz formu yok",
+      "Dirençli status epileptikusta kullanılmaz"
+     ],
+     "s": 46,
+     "k": [
+      176,
+      251
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.03,
+      0.96
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.186,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.1663,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "45": {
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "karsilastirma",
+     "sablon_ad": "İki durumun karşılaştırması",
+     "duzen": "karsit",
+     "basliklar": [
+      "Özellik"
+     ],
+     "satirlar": [
+      [
+       "Metabolizma",
+       "Metabolize olmaz",
+       "Metabolize edilmez"
+      ],
+      [
+       "Atılım",
+       "Böbrekten değişmeden",
+       "İdrarla değişmeden"
+      ],
+      [
+       "Proteine bağlanma",
+       "Yok",
+       "Yok"
+      ],
+      [
+       "Yarılanma ömrü",
+       "5–8 saat",
+       "4,5–7 saat"
+      ]
+     ],
+     "kutuplar": [
+      "Gabapentin",
+      "Pregabalin"
+     ],
+     "s": 47,
+     "k": [
+      0,
+      178
+     ],
+     "tip": "karsit",
+     "konum": [
+      0.03,
+      0.96
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.367,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.3465,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "46": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "ilac_etki",
+     "sablon_ad": "İlaç → mekanizma → sonuç",
+     "duzen": "tablo",
+     "basliklar": [
+      "İlaç",
+      "Mekanizma",
+      "Sonuç"
+     ],
+     "satirlar": [
+      [
+       "Tiagabin",
+       "Nöron ve gliada GABA geri alım inhibisyonu",
+       "Sinaptik GABA etkisi uzar, tonik inhibisyon güçlenir"
+      ]
+     ],
+     "s": 48,
+     "k": [
+      0,
+      161
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.03,
+      0.96
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.236,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.2156,
+     "ek_renk": "#ffffff"
+    }
+   ],
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "neden_sonuc",
+     "sablon_ad": "Neden → sonuç",
+     "duzen": "zincir",
+     "bag": "yol açar",
+     "ogeler": [
+      "Enzim indükleyiciler",
+      "Tiagabin yarılanma ömrü kısalır"
+     ],
+     "s": 48,
+     "k": [
+      103,
+      145
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.186,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.1463,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "48": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "olcut_deger",
+     "sablon_ad": "Ölçüt ve değeri",
+     "duzen": "tablo",
+     "basliklar": [
+      "Ölçüt",
+      "Değer"
+     ],
+     "satirlar": [
+      [
+       "Olağan doz",
+       "200 mg, günde bir kez"
+      ],
+      [
+       "400 mg doz",
+       "Yalnızca biraz daha etkili"
+      ]
+     ],
+     "s": 50,
+     "k": [
+      0,
+      94
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.253,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.2126,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "49": {
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "neden_sonuc",
+     "sablon_ad": "Neden → sonuç",
+     "duzen": "zincir",
+     "bag": "yol açar",
+     "ogeler": [
+      "50–60 saatlik uzun yarı ömür",
+      "Günde tek doz"
+     ],
+     "s": 51,
+     "k": [
+      48,
+      106
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.186,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.1463,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "50": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "ilac_etki",
+     "sablon_ad": "İlaç → mekanizma → sonuç",
+     "duzen": "tablo",
+     "basliklar": [
+      "İlaç",
+      "Mekanizma",
+      "Sonuç"
+     ],
+     "satirlar": [
+      [
+       "Lamotrijin",
+       "Sodyum kanalı blokajı",
+       "Fokal nöbetlerde etkili"
+      ],
+      [
+       "Lamotrijin",
+       "Voltaj bağımlı kalsiyum kanalı inhibisyonu",
+       "Absans dahil primer jeneralize nöbette etkinlik"
+      ]
+     ],
+     "s": 52,
+     "k": [
+      0,
+      165
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.03,
+      0.96
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.293,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.2726,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "51": {
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "neden_sonuc",
+     "sablon_ad": "Neden → sonuç",
+     "duzen": "zincir",
+     "bag": "yol açar",
+     "ogeler": [
+      "Enzim indükleyici ilaç",
+      "Lamotrijin yarılanma ömrü 24 saatten 13–15 saate düşer"
+     ],
+     "s": 53,
+     "k": [
+      72,
+      172
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.283,
+     "yon": "dikey",
+     "olcek": 1.0,
+     "ek_alt": 0.2434,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "52": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "mekanizma_adimlari",
+     "sablon_ad": "Mekanizma basamakları",
+     "duzen": "zincir",
+     "ogeler": [
+      "Valproat",
+      "Lamotrijin yarılanma ömrü iki katına çıkar",
+      "Lamotrijin başlangıç dozu 25 mg/gün"
+     ],
+     "s": 54,
+     "k": [
+      0,
+      124
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.35,
+     "yon": "dikey",
+     "olcek": 1.0,
+     "ek_alt": 0.3096,
+     "ek_renk": "#ffffff"
+    }
+   ],
+   "3": [
+    {
+     "tur": "sema",
+     "sablon": "mekanizma_adimlari",
+     "sablon_ad": "Mekanizma basamakları",
+     "duzen": "zincir",
+     "ogeler": [
+      "Levetirasetam SV2A'ya bağlanır",
+      "Veziküler işlev etkilenir",
+      "Glutamat ve GABA sinaptik salınımı değişir"
+     ],
+     "s": 54,
+     "k": [
+      38,
+      136
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.35,
+     "yon": "dikey",
+     "olcek": 1.0,
+     "ek_alt": 0.3096,
+     "ek_renk": "#ffffff"
+    }
+   ],
+   "4": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Erişkinde parsiyel nöbetler",
+      "Çocukta juvenil miyoklonik epilepsinin miyoklonik nöbetleri",
+      "Primer jeneralize tonik-klonik nöbetler"
+     ],
+     "baslik": "Levetirasetam ek tedavi endikasyonları",
+     "s": 54,
+     "k": [
+      0,
+      193
+     ],
+     "tip": "liste",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.308,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.268,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "53": {
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "neden_sonuc",
+     "sablon_ad": "Neden → sonuç",
+     "duzen": "zincir",
+     "bag": "yol açar",
+     "ogeler": [
+      "Sitokrom P450 ile metabolize edilmez",
+      "İlaç etkileşimleri minimal"
+     ],
+     "s": 55,
+     "k": [
+      0,
+      95
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.03,
+      0.96
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.186,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.1663,
+     "ek_renk": "#ffffff"
+    }
+   ],
+   "3": [
+    {
+     "tur": "sema",
+     "sablon": "olcut_deger",
+     "sablon_ad": "Ölçüt ve değeri",
+     "duzen": "tablo",
+     "basliklar": [
+      "Ölçüt",
+      "Değer"
+     ],
+     "satirlar": [
+      [
+       "Oral emilim",
+       "Neredeyse tam, hızlı, yiyecekten etkilenmez"
+      ],
+      [
+       "Yarılanma ömrü",
+       "6–8 saat (yaşlıda uzayabilir)"
+      ],
+      [
+       "Atılım",
+       "Üçte ikisi değişmeden idrarla"
+      ]
+     ],
+     "s": 55,
+     "k": [
+      0,
+      168
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.35,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.3096,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "54": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "ilac_etki",
+     "sablon_ad": "İlaç → mekanizma → sonuç",
+     "duzen": "tablo",
+     "basliklar": [
+      "İlaç",
+      "Mekanizma",
+      "Sonuç"
+     ],
+     "satirlar": [
+      [
+       "Brivarasetam (levetirasetam analoğu)",
+       "Yüksek afiniteli SV2A ligandı",
+       "Fokal başlangıçlı nöbetlerde onaylı"
+      ]
+     ],
+     "s": 56,
+     "k": [
+      44,
+      169
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.236,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.1956,
+     "ek_renk": "#ffffff"
+    }
+   ],
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "neden_sonuc",
+     "sablon_ad": "Neden → sonuç",
+     "duzen": "zincir",
+     "bag": "yol açar",
+     "ogeler": [
+      "Brivarasetam + karbamazepin",
+      "Karbamazepin epoksit maruziyeti artar",
+      "Karbamazepin dozunu azaltmak düşünülür"
+     ],
+     "s": 56,
+     "k": [
+      0,
+      159
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.417,
+     "yon": "dikey",
+     "olcek": 1.0,
+     "ek_alt": 0.3773,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "55": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "neden_sonuc",
+     "sablon_ad": "Neden → sonuç",
+     "duzen": "zincir",
+     "bag": "yol açar",
+     "ogeler": [
+      "Brivarasetam + levetirasetam",
+      "İkisi de aynı hedefte (SV2A)",
+      "Ek terapötik fayda yok"
+     ],
+     "s": 57,
+     "k": [
+      0,
+      122
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.417,
+     "yon": "dikey",
+     "olcek": 1.0,
+     "ek_alt": 0.3773,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "56": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "İdiyopatik jeneralize epilepside fokal nöbetler",
+      "Primer jeneralize tonik-klonik nöbetler"
+     ],
+     "baslik": "Perampanel endikasyonları",
+     "s": 57,
+     "k": [
+      0,
+      138
+     ],
+     "tip": "liste",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.253,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.2126,
+     "ek_renk": "#ffffff"
+    }
+   ],
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Sinaptik uyarımın ana aracısı: glutamat",
+      "İyonotropik glutamat reseptörü alt tipi: AMPA",
+      "Güçlü, rekabetçi olmayan antagonist"
+     ],
+     "baslik": "Perampanelin hedefi",
+     "s": 57,
+     "k": [
+      0,
+      177
+     ],
+     "tip": "liste",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.308,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.268,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "57": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "neden_sonuc",
+     "sablon_ad": "Neden → sonuç",
+     "duzen": "zincir",
+     "bag": "yol açar",
+     "ogeler": [
+      "Terapötik perampanel düzeyi",
+      "AMPA reseptörlerinin kısmi blokajı",
+      "Nöbet oluşma olasılığı azalır"
+     ],
+     "s": 58,
+     "k": [
+      0,
+      118
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.417,
+     "yon": "dikey",
+     "olcek": 1.0,
+     "ek_alt": 0.3773,
+     "ek_renk": "#ffffff"
+    }
+   ],
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "cok_neden_tek_sonuc",
+     "sablon_ad": "Birçok neden → tek sonuç",
+     "duzen": "grup",
+     "bag": "neden olur",
+     "kaynaklar": [
+      "Yüksek doz",
+      "Alkol (öfkeyi artırır)",
+      "Genç hasta",
+      "Öğrenme güçlüğü / demans"
+     ],
+     "sonuc": "Davranışsal yan etki: saldırganlık, öfke",
+     "s": 58,
+     "k": [
+      0,
+      250
+     ],
+     "tip": "grup",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.32,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.2803,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "58": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "olcut_deger",
+     "sablon_ad": "Ölçüt ve değeri",
+     "duzen": "tablo",
+     "basliklar": [
+      "Ölçüt",
+      "Değer"
+     ],
+     "satirlar": [
+      [
+       "Emilim",
+       "Hızlı"
+      ],
+      [
+       "Biyoyararlanım",
+       "Tam"
+      ],
+      [
+       "Proteine bağlanma",
+       "%95"
+      ],
+      [
+       "Metabolizma",
+       "CYP3A4 oksidasyonu → glukuronidasyon"
+      ]
+     ],
+     "s": 59,
+     "k": [
+      0,
+      170
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.03,
+      0.96
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.367,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.3465,
+     "ek_renk": "#ffffff"
+    }
+   ],
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "En önemli: güçlü indükleyiciler (KBZ, OXC, fenitoin)",
+      "Güçlü inhibitörler düzeyi artırır (daha az endişe)",
+      "Levonorgestrelli kontraseptif etkinliği azalır"
+     ],
+     "baslik": "Perampanel etkileşimleri",
+     "s": 59,
+     "k": [
+      0,
+      237
+     ],
+     "tip": "liste",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.308,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.268,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "59": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Fenobarbital",
+      "Mefobarbital",
+      "Metarbital",
+      "Primidon"
+     ],
+     "baslik": "Klinikte kullanılan barbitürik asit türevleri",
+     "s": 60,
+     "k": [
+      0,
+      104
+     ],
+     "tip": "liste",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.363,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.3234,
+     "ek_renk": "#ffffff"
+    }
+   ],
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "İnhibitör süreçleri kolaylaştırma",
+      "Eksitatör iletimi zayıflatma"
+     ],
+     "baslik": "Fenobarbital mekanizmasına katkılar",
+     "s": 60,
+     "k": [
+      0,
+      154
+     ],
+     "tip": "liste",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.253,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.2126,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "60": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "neden_sonuc",
+     "sablon_ad": "Neden → sonuç",
+     "duzen": "zincir",
+     "bag": "yol açar",
+     "ogeler": [
+      "Yüksek konsantrasyonda fenobarbital",
+      "Sodyum geçirgenliği etkilenir",
+      "Tekrarlayan ateşleme baskılanır"
+     ],
+     "s": 61,
+     "k": [
+      151,
+      263
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.417,
+     "yon": "dikey",
+     "olcek": 1.0,
+     "ek_alt": 0.3773,
+     "ek_renk": "#ffffff"
+    }
+   ],
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "mekanizma_adimlari",
+     "sablon_ad": "Mekanizma basamakları",
+     "duzen": "zincir",
+     "ogeler": [
+      "Fenobarbital",
+      "Klor kanalının açık kalma süresi uzar",
+      "GABA-A aracılı akım kuvvetlenir"
+     ],
+     "s": 61,
+     "k": [
+      0,
+      111
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.35,
+     "yon": "dikey",
+     "olcek": 1.0,
+     "ek_alt": 0.3096,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "61": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Parsiyel nöbetler",
+      "Tonik-klonik nöbetler"
+     ],
+     "baslik": "Fenobarbitalin asıl yararlı olduğu nöbetler",
+     "s": 62,
+     "k": [
+      42,
+      101
+     ],
+     "tip": "liste",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.253,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.2126,
+     "ek_renk": "#ffffff"
+    }
+   ],
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "olcut_deger",
+     "sablon_ad": "Ölçüt ve değeri",
+     "duzen": "tablo",
+     "basliklar": [
+      "Ölçüt",
+      "Değer"
+     ],
+     "satirlar": [
+      [
+       "Terapötik düzey",
+       "10–40 mcg/mL"
+      ],
+      [
+       "Etkinliğin en iyi örneği",
+       "Febril nöbetler"
+      ]
+     ],
+     "s": 62,
+     "k": [
+      13,
+      141
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.253,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.2126,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "63": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "olcut_deger",
+     "sablon_ad": "Ölçüt ve değeri",
+     "duzen": "tablo",
+     "basliklar": [
+      "Ölçüt",
+      "Değer"
+     ],
+     "satirlar": [
+      [
+       "Emilim",
+       "Tümüyle emilir"
+      ],
+      [
+       "Doruk düzey",
+       "Yaklaşık 3 saat"
+      ],
+      [
+       "Serbest dolaşan kısım",
+       "Yaklaşık %70"
+      ]
+     ],
+     "s": 64,
+     "k": [
+      89,
+      180
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.31,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.2695,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "64": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "cok_neden_tek_sonuc",
+     "sablon_ad": "Birçok neden → tek sonuç",
+     "duzen": "grup",
+     "bag": "neden olur",
+     "kaynaklar": [
+      "Aplastik anemi",
+      "Ciddi hepatit"
+     ],
+     "sonuc": "Felbamat dirençli vakalarda üçüncü ilaç",
+     "s": 65,
+     "k": [
+      63,
+      169
+     ],
+     "tip": "grup",
+     "konum": [
+      0.26,
+      0.65
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.229,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ],
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "olcut_deger",
+     "sablon_ad": "Ölçüt ve değeri",
+     "duzen": "tablo",
+     "basliklar": [
+      "Ölçüt",
+      "Değer"
+     ],
+     "satirlar": [
+      [
+       "Mekanizma",
+       "NMDA reseptöründe kullanıma bağımlı blok"
+      ],
+      [
+       "Yarılanma ömrü",
+       "20 saat"
+      ],
+      [
+       "Atılım",
+       "Önemli kısmı değişmeden idrarla"
+      ]
+     ],
+     "s": 65,
+     "k": [
+      36,
+      162
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.03,
+      0.96
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.31,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.2895,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "65": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Sodyum kanalları üzerindeki etki",
+      "NMDA aracılı eksitasyonun blokajı",
+      "GABA üzerindeki etki"
+     ],
+     "baslik": "Valproatın olası etki yolları",
+     "s": 66,
+     "k": [
+      26,
+      167
+     ],
+     "tip": "liste",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.308,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.268,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "66": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "mekanizma_adimlari",
+     "sablon_ad": "Mekanizma basamakları",
+     "duzen": "zincir",
+     "ogeler": [
+      "Çok yüksek konsantrasyonda valproat",
+      "GABA transaminaz inhibisyonu",
+      "GABA yıkımı önlenir"
+     ],
+     "s": 67,
+     "k": [
+      66,
+      141
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.35,
+     "yon": "dikey",
+     "olcek": 1.0,
+     "ek_alt": 0.3096,
+     "ek_renk": "#ffffff"
+    }
+   ],
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Absans nöbetleri",
+      "Bazı miyoklonik nöbet türleri",
+      "Primer jeneralize tonik-klonik nöbetler"
+     ],
+     "baslik": "Valproatın etkili olduğu nöbetler",
+     "s": 67,
+     "k": [
+      0,
+      148
+     ],
+     "tip": "liste",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.308,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.268,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "67": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Atonik nöbetler (bazı hastalar)",
+      "Parsiyel nöbetler",
+      "Status epileptikus (intravenöz form)",
+      "Migren profilaksisi",
+      "Bipolar bozukluk"
+     ],
+     "baslik": "Valproatın kullanım yerleri",
+     "s": 68,
+     "k": [
+      0,
+      88
+     ],
+     "tip": "liste",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.419,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.3789,
+     "ek_renk": "#ffffff"
+    }
+   ],
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "olcut_deger",
+     "sablon_ad": "Ölçüt ve değeri",
+     "duzen": "tablo",
+     "basliklar": [
+      "Ölçüt",
+      "Değer"
+     ],
+     "satirlar": [
+      [
+       "Oral biyoyararlanım",
+       "%80'den yüksek"
+      ],
+      [
+       "Doruk düzey",
+       "2 saat"
+      ],
+      [
+       "Yemekten sonra verilirse",
+       "Emilim gecikir, toksisite azalabilir"
+      ]
+     ],
+     "s": 68,
+     "k": [
+      0,
+      154
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.03,
+      0.96
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.31,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.2895,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "68": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "olcut_deger",
+     "sablon_ad": "Ölçüt ve değeri",
+     "duzen": "tablo",
+     "basliklar": [
+      "Ölçüt",
+      "Değer"
+     ],
+     "satirlar": [
+      [
+       "Plazma proteinlerine bağlanma",
+       "%90 (yüksek düzeyde bağlı fraksiyon azalır)"
+      ],
+      [
+       "Klirens",
+       "Düşük ve doz bağımlı"
+      ],
+      [
+       "Yarılanma ömrü",
+       "9–18 saat"
+      ]
+     ],
+     "s": 69,
+     "k": [
+      0,
+      187
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.35,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.3096,
+     "ek_renk": "#ffffff"
+    }
+   ],
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Sodyum tuzu tablet: nem emici",
+      "Serbest asit: mısır yağlı kapsül",
+      "Şurup: pediatrik kullanım",
+      "Enterik kaplı tablet: doruk 3–4 saat"
+     ],
+     "baslik": "Valproat formları",
+     "s": 69,
+     "k": [
+      0,
+      184
+     ],
+     "tip": "liste",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.363,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.3234,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "69": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "olcut_deger",
+     "sablon_ad": "Ölçüt ve değeri",
+     "duzen": "tablo",
+     "basliklar": [
+      "Ölçüt",
+      "Değer"
+     ],
+     "satirlar": [
+      [
+       "Yeterli doz (bazı hastalar)",
+       "25–30 mg/kg/gün"
+      ],
+      [
+       "Gereken doz (bazıları)",
+       "60 mg/kg/gün"
+      ],
+      [
+       "Tedavi düzeyi",
+       "50–100 mcg/mL"
+      ]
+     ],
+     "s": 70,
+     "k": [
+      0,
+      168
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.31,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.2695,
+     "ek_renk": "#ffffff"
+    }
+   ],
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "mekanizma_adimlari",
+     "sablon_ad": "Mekanizma basamakları",
+     "duzen": "zincir",
+     "ogeler": [
+      "Valproat",
+      "Fenobarbital, fenitoin, karbamazepin metabolizması inhibe",
+      "Kararlı durum düzeyleri artar"
+     ],
+     "s": 70,
+     "k": [
+      0,
+      175
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.35,
+     "yon": "dikey",
+     "olcek": 1.0,
+     "ek_alt": 0.3096,
+     "ek_renk": "#ffffff"
+    }
+   ],
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Bulantı",
+      "Kusma",
+      "Karın ağrısı",
+      "Mide yanması"
+     ],
+     "baslik": "Doz bağımlı gastrointestinal advers etkiler",
+     "s": 70,
+     "k": [
+      0,
+      116
+     ],
+     "tip": "liste",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.363,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.3234,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "70": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "karsilastirma",
+     "sablon_ad": "İki durumun karşılaştırması",
+     "duzen": "karsit",
+     "basliklar": [
+      "Özellik"
+     ],
+     "satirlar": [
+      [
+       "Sedasyon",
+       "Seyrek",
+       "Belirgin olabilir"
+      ]
+     ],
+     "kutuplar": [
+      "Valproat tek başına",
+      "Valproat + fenobarbital"
+     ],
+     "s": 71,
+     "k": [
+      0,
+      101
+     ],
+     "tip": "karsit",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.196,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.1556,
+     "ek_renk": "#ffffff"
+    }
+   ],
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "risk_artisi",
+     "sablon_ad": "Durum → risk artışı",
+     "duzen": "tablo",
+     "basliklar": [
+      "Durum",
+      "Risk artışı"
+     ],
+     "satirlar": [
+      [
+       "İki yaşın altı",
+       "Hepatotoksisite riski en yüksek"
+      ],
+      [
+       "Birden fazla ilaç alma",
+       "Hepatotoksisite riski en yüksek"
+      ],
+      [
+       "Tedavinin ilk 4 ayı",
+       "Ölümlerin çoğu bu dönemde"
+      ]
+     ],
+     "s": 71,
+     "k": [
+      55,
+      179
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.31,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.2695,
+     "ek_renk": "#ffffff"
+    }
+   ],
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "zehir_antidot",
+     "sablon_ad": "Zehirlenme → antidot / tedavi",
+     "duzen": "tablo",
+     "basliklar": [
+      "Durum",
+      "Antidot / tedavi"
+     ],
+     "satirlar": [
+      [
+       "Ciddi hepatotoksisite şüphesi",
+       "Oral ya da intravenöz L-karnitin"
+      ]
+     ],
+     "s": 71,
+     "k": [
+      0,
+      111
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.03,
+      0.96
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.196,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.1756,
+     "ek_renk": "#ffffff"
+    }
+   ],
+   "3": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "İdiyosenkratik: hepatotoksisite",
+      "İdiyosenkratik: trombositopeni",
+      "Gebelikte: bebekte spina bifida (teratojenite)"
+     ],
+     "baslik": "Valproatın ciddi riskleri",
+     "s": 71,
+     "k": [
+      0,
+      177
+     ],
+     "tip": "liste",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.308,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.268,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "71": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "mekanizma_adimlari",
+     "sablon_ad": "Mekanizma basamakları",
+     "duzen": "zincir",
+     "ogeler": [
+      "Topiramat",
+      "Voltaj bağımlı Na kanal blokajı (olası)",
+      "Tekrarlayan ateşlemeler bloke"
+     ],
+     "s": 72,
+     "k": [
+      0,
+      236
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.35,
+     "yon": "dikey",
+     "olcek": 1.0,
+     "ek_alt": 0.3096,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "72": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Lennox-Gastaut sendromu (onaylı)",
+      "İnfantil spazm",
+      "Absans nöbetleri",
+      "Migren (onaylı)"
+     ],
+     "baslik": "Topiramat kullanım alanları",
+     "s": 73,
+     "k": [
+      0,
+      143
+     ],
+     "tip": "liste",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.363,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.3234,
+     "ek_renk": "#ffffff"
+    }
+   ],
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "algoritma",
+     "sablon_ad": "Yaklaşım basamakları",
+     "duzen": "adimlar",
+     "ogeler": [
+      "25–50 mg/gün ile başla",
+      "Yan etkileri önlemek için yavaş artır",
+      "İdame: 200–400 mg/gün"
+     ],
+     "s": 73,
+     "k": [
+      100,
+      168
+     ],
+     "tip": "adimlar",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.259,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.2187,
+     "ek_renk": "#ffffff"
+    }
+   ],
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "İfade edici dil işlevinde bozulma",
+      "Sözel hafızada bozulma",
+      "Genel bilişsel yavaşlama"
+     ],
+     "baslik": "Topiramatın bilişsel yan etkileri (sık kesilme nedeni)",
+     "s": 73,
+     "k": [
+      0,
+      179
+     ],
+     "tip": "liste",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.308,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.268,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "73": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "uyuklama",
+      "yorgunluk",
+      "baş dönmesi",
+      "kognitif yavaşlama",
+      "parestezi",
+      "sinirlilik",
+      "konfüzyon"
+     ],
+     "baslik": "Doz bağımlı etkiler (ilk 4 hafta)",
+     "s": 74,
+     "k": [
+      0,
+      146
+     ],
+     "tip": "liste",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.53,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.4898,
+     "ek_renk": "#ffffff"
+    }
+   ],
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "cok_neden_tek_sonuc",
+     "sablon_ad": "Birçok neden → tek sonuç",
+     "duzen": "grup",
+     "bag": "neden olur",
+     "kaynaklar": [
+      "akut miyopi",
+      "glokom"
+     ],
+     "sonuc": "ilacın aniden kesilmesi gerekebilir",
+     "s": 74,
+     "k": [
+      0,
+      62
+     ],
+     "tip": "grup",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.206,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.1664,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "74": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "olcut_deger",
+     "sablon_ad": "Ölçüt ve değeri",
+     "duzen": "tablo",
+     "basliklar": [
+      "Ölçüt",
+      "Değer"
+     ],
+     "satirlar": [
+      [
+       "Emilim",
+       "hızlı, ~2 saat"
+      ],
+      [
+       "Biyoyararlanım",
+       "%80"
+      ],
+      [
+       "Besin etkisi",
+       "yok"
+      ],
+      [
+       "Proteine bağlanma",
+       "%15 (az)"
+      ]
+     ],
+     "s": 75,
+     "k": [
+      0,
+      145
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.367,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.3265,
+     "ek_renk": "#ffffff"
+    }
+   ],
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "karar",
+     "sablon_ad": "Karar dalı",
+     "duzen": "dal",
+     "soru": "Topiramat alan kadında doğum kontrolü",
+     "dallar": [
+      [
+       "günde >200 mg topiramat",
+       "alternatif yöntem önerilir"
+      ],
+      [
+       "50 mcg etinil estradiollü hap",
+       "tatmin edici olabilir"
+      ]
+     ],
+     "s": 75,
+     "k": [
+      68,
+      223
+     ],
+     "tip": "dal",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.274,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.2341,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "75": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Na+ kanalları (primer etki yeri)",
+      "T-tipi voltaj bağımlı Ca2+ kanalları"
+     ],
+     "baslik": "Zonisamid etki yerleri",
+     "s": 76,
+     "k": [
+      24,
+      117
+     ],
+     "tip": "liste",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.253,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.2126,
+     "ek_renk": "#ffffff"
+    }
+   ],
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "olcut_deger",
+     "sablon_ad": "Ölçüt ve değeri",
+     "duzen": "tablo",
+     "basliklar": [
+      "Ölçüt",
+      "Değer"
+     ],
+     "satirlar": [
+      [
+       "Biyoyararlanım",
+       "iyi"
+      ],
+      [
+       "Atılım",
+       "böbrek"
+      ],
+      [
+       "Yarılanma ömrü",
+       "1-3 gün"
+      ],
+      [
+       "İdame dozu (yetişkin)",
+       "200-400 mg/gün"
+      ]
+     ],
+     "s": 76,
+     "k": [
+      0,
+      139
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.367,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.3265,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "76": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "uyuşukluk",
+      "bilişsel bozukluk",
+      "böbrek taşları",
+      "ciddi deri döküntüleri"
+     ],
+     "baslik": "Zonisamid advers etkileri",
+     "s": 77,
+     "k": [
+      12,
+      120
+     ],
+     "tip": "liste",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.363,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.3234,
+     "ek_renk": "#ffffff"
+    }
+   ],
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "neden_sonuc",
+     "sablon_ad": "Neden → sonuç",
+     "duzen": "zincir",
+     "bag": "yol açar",
+     "ogeler": [
+      "uzun yarı ömür (1-3 gün)",
+      "günde bir kez verilebilir"
+     ],
+     "s": 77,
+     "k": [
+      47,
+      97
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.186,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.1463,
+     "ek_renk": "#ffffff"
+    }
+   ],
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "cok_neden_tek_sonuc",
+     "sablon_ad": "Birçok neden → tek sonuç",
+     "duzen": "grup",
+     "bag": "neden olur",
+     "kaynaklar": [
+      "zonisamid",
+      "topiramat"
+     ],
+     "sonuc": "kilo kaybı",
+     "s": 77,
+     "k": [
+      90,
+      131
+     ],
+     "tip": "grup",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.206,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.1664,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "77": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "karar",
+     "sablon_ad": "Karar dalı",
+     "duzen": "dal",
+     "soru": "Absansla birlikte jeneralize tonik-klonik nöbet var mı?",
+     "dallar": [
+      [
+       "yok",
+       "etosüksimid monoterapi"
+      ],
+      [
+       "var",
+       "valproat ya da etosüksimid + başka ilaç"
+      ]
+     ],
+     "s": 78,
+     "k": [
+      0,
+      165
+     ],
+     "tip": "dal",
+     "konum": [
+      0.03,
+      0.96
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.274,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.2541,
+     "ek_renk": "#ffffff"
+    }
+   ],
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "ilac_etki",
+     "sablon_ad": "İlaç → mekanizma → sonuç",
+     "duzen": "tablo",
+     "basliklar": [
+      "İlaç",
+      "Mekanizma",
+      "Sonuç"
+     ],
+     "satirlar": [
+      [
+       "Etosüksimid",
+       "Ca2+ akımları üzerine etki",
+       "düşük eşikli akım azalır"
+      ]
+     ],
+     "s": 78,
+     "k": [
+      0,
+      92
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.03,
+      0.96
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.196,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.1756,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "78": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "olcut_deger",
+     "sablon_ad": "Ölçüt ve değeri",
+     "duzen": "tablo",
+     "basliklar": [
+      "Ölçüt",
+      "Değer"
+     ],
+     "satirlar": [
+      [
+       "Klinik spektrum",
+       "çok dar (absans)"
+      ],
+      [
+       "Oral emilim",
+       "tam"
+      ],
+      [
+       "Doruk düzey",
+       "3-7 saat"
+      ]
+     ],
+     "s": 79,
+     "k": [
+      47,
+      143
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.31,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.2695,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "79": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "mekanizma_adimlari",
+     "sablon_ad": "Mekanizma basamakları",
+     "duzen": "zincir",
+     "ogeler": [
+      "Valproik asit + etosüksimid",
+      "Etosüksimid klirensi azalır, metabolizması inhibe",
+      "Kararlı durum düzeyi yükselir"
+     ],
+     "s": 80,
+     "k": [
+      0,
+      132
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.35,
+     "yon": "dikey",
+     "olcek": 1.0,
+     "ek_alt": 0.3096,
+     "ek_renk": "#ffffff"
+    }
+   ],
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "En sık: ağrı, bulantı, kusma (gastrik yakınmalar)",
+      "Geçici letarji",
+      "Daha seyrek: baş ağrısı, baş dönmesi, hıçkırık, öfori"
+     ],
+     "baslik": "Etosüksimid doz bağımlı advers etkileri",
+     "s": 80,
+     "k": [
+      0,
+      158
+     ],
+     "tip": "liste",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.308,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.268,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "81": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Uyku hali, sedasyon",
+      "Dizartri",
+      "Salya akması",
+      "Saldırganlık dahil davranış değişiklikleri"
+     ],
+     "baslik": "Klobazam doza bağlı yan etkileri",
+     "s": 82,
+     "k": [
+      0,
+      117
+     ],
+     "tip": "liste",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.363,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.3234,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "82": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "karsilastirma",
+     "sablon_ad": "İki durumun karşılaştırması",
+     "duzen": "karsit",
+     "basliklar": [
+      "Özellik"
+     ],
+     "satirlar": [
+      [
+       "Nöbet önleyici etki",
+       "Daha güçlü",
+       "Daha zayıf"
+      ],
+      [
+       "Kararlı durum düzeyi",
+       "Daha düşük",
+       "Çok daha yüksek"
+      ]
+     ],
+     "kutuplar": [
+      "Klobazam",
+      "Norklobazam"
+     ],
+     "s": 83,
+     "k": [
+      0,
+      174
+     ],
+     "tip": "karsit",
+     "konum": [
+      0.03,
+      0.96
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.253,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.2326,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "85": {
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "neden_sonuc",
+     "sablon_ad": "Neden → sonuç",
+     "duzen": "zincir",
+     "bag": "yol açar",
+     "ogeler": [
+      "SCN1A mutasyonunda Na kanal blokeri",
+      "Nöbetler kötüleşir: kontrendike"
+     ],
+     "s": 86,
+     "k": [
+      80,
+      183
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.03,
+      0.96
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.186,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.1663,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "86": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Dravet sendromu",
+      "Lennox-Gastaut sendromu",
+      "Tüberoz skleroz kompleksi"
+     ],
+     "baslik": "Kannabidiol: yararlı olduğu nöbetler",
+     "s": 87,
+     "k": [
+      0,
+      60
+     ],
+     "tip": "liste",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.308,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.268,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "87": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "ilac_etki",
+     "sablon_ad": "İlaç → mekanizma → sonuç",
+     "duzen": "tablo",
+     "basliklar": [
+      "İlaç",
+      "Mekanizma",
+      "Sonuç"
+     ],
+     "satirlar": [
+      [
+       "Kannabidiol",
+       "CB1 ve CB2 reseptör agonisti",
+       "Antiepileptik etki temeli bilinmiyor"
+      ]
+     ],
+     "s": 88,
+     "k": [
+      91,
+      206
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.236,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.1956,
+     "ek_renk": "#ffffff"
+    }
+   ],
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Uyku hali",
+      "İştah azalması",
+      "İshal",
+      "Yorgunluk"
+     ],
+     "baslik": "Kannabidiol: başlıca yan etkiler",
+     "s": 88,
+     "k": [
+      155,
+      225
+     ],
+     "tip": "liste",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.363,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.3234,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "88": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "risk_artisi",
+     "sablon_ad": "Durum → risk artışı",
+     "duzen": "tablo",
+     "basliklar": [
+      "Durum",
+      "Risk artışı"
+     ],
+     "satirlar": [
+      [
+       "Doz artışı",
+       "Karaciğer fonksiyon testi anormalliği"
+      ],
+      [
+       "Eş zamanlı valproat",
+       "Karaciğer test bozukluğu riski artar"
+      ]
+     ],
+     "s": 89,
+     "k": [
+      0,
+      105
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.03,
+      0.96
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.253,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.2326,
+     "ek_renk": "#ffffff"
+    }
+   ],
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "olcut_deger",
+     "sablon_ad": "Ölçüt ve değeri",
+     "duzen": "tablo",
+     "basliklar": [
+      "Ölçüt",
+      "Değer"
+     ],
+     "satirlar": [
+      [
+       "İdame dozu",
+       "10 mg/kg/gün, iki bölünmüş doz"
+      ],
+      [
+       "Gerekirse",
+       "20–25 mg/kg/gün"
+      ],
+      [
+       "Oral biyoyararlanım",
+       "%13–19 (çok düşük)"
+      ]
+     ],
+     "s": 89,
+     "k": [
+      0,
+      179
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.31,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.2695,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "89": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "mekanizma_adimlari",
+     "sablon_ad": "Mekanizma basamakları",
+     "duzen": "zincir",
+     "ogeler": [
+      "Enterosit miselleri kilomikronlara katar",
+      "Lenfatiklerle doğrudan sistemik dolaşım",
+      "Karaciğer ilk geçişi atlanır",
+      "Biyoyararlanım artar (yağlı öğünle daha çok)"
+     ],
+     "s": 90,
+     "k": [
+      0,
+      228
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.45,
+     "yon": "dikey",
+     "olcek": 1.0,
+     "ek_alt": 0.4097,
+     "ek_renk": "#ffffff"
+    }
+   ],
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Karaciğerde başlıca CYP2C19",
+      "Glukuronidasyon",
+      "Ana metabolit: 7-karboksi-kannabidiol"
+     ],
+     "baslik": "Kannabidiol metabolizması",
+     "s": 90,
+     "k": [
+      59,
+      209
+     ],
+     "tip": "liste",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.308,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.268,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "90": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Klobazam + valproata dirençli jeneralize tonik-klonik nöbet",
+      "Dravet sendromu"
+     ],
+     "baslik": "Stiripentol: ek tedavi endikasyonları",
+     "s": 91,
+     "k": [
+      54,
+      188
+     ],
+     "tip": "liste",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.253,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.2126,
+     "ek_renk": "#ffffff"
+    }
+   ],
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "ilac_etki",
+     "sablon_ad": "İlaç → mekanizma → sonuç",
+     "duzen": "tablo",
+     "basliklar": [
+      "İlaç",
+      "Mekanizma",
+      "Sonuç"
+     ],
+     "satirlar": [
+      [
+       "Stiripentol",
+       "GABA reseptör klor kanalı açık kalma süresi uzar",
+       "Barbitürat benzeri etki"
+      ],
+      [
+       "Stiripentol",
+       "Beyinde GABA düzeyini artırır",
+       "GABAerjik etki artar"
+      ],
+      [
+       "Stiripentol",
+       "Sitokrom inaktivasyonunu azaltır",
+       "Diğer antiepileptiklerin etkisi artar"
+      ]
+     ],
+     "s": 91,
+     "k": [
+      0,
+      219
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.03,
+      0.96
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.43,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.4097,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "91": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Dravet sendromu: konvülsif nöbetler",
+      "Lennox-Gastaut sendromu: atonik nöbetler"
+     ],
+     "baslik": "Fenfluramin etkili olduğu nöbetler",
+     "s": 92,
+     "k": [
+      0,
+      113
+     ],
+     "tip": "liste",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.253,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.2126,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "92": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "mekanizma_adimlari",
+     "sablon_ad": "Mekanizma basamakları",
+     "duzen": "zincir",
+     "ogeler": [
+      "Norfenfluramin",
+      "Kalp kapakçığı ve pulmoner arterde 5-HT2B aktivasyonu",
+      "Proliferatif fibromiksoid plaklar"
+     ],
+     "s": 93,
+     "k": [
+      0,
+      166
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.35,
+     "yon": "dikey",
+     "olcek": 1.0,
+     "ek_alt": 0.3096,
+     "ek_renk": "#ffffff"
+    },
+    {
+     "tur": "sema",
+     "sablon": "neden_sonuc",
+     "sablon_ad": "Neden → sonuç",
+     "duzen": "zincir",
+     "bag": "yol açar",
+     "ogeler": [
+      "Stiripentol: fenfluramin metabolizması inhibisyonu",
+      "Norfenfluramin azalır"
+     ],
+     "s": 93,
+     "k": [
+      167,
+      251
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.03,
+      0.96
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.186,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.1663,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "93": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "cok_neden_tek_sonuc",
+     "sablon_ad": "Birçok neden → tek sonuç",
+     "duzen": "grup",
+     "bag": "neden olur",
+     "kaynaklar": [
+      "GABA aminotransferaz geri dönüşümsüz inhibisyonu",
+      "Veziküler GABA taşıyıcısı inhibisyonu"
+     ],
+     "sonuc": "Beyinde hücre dışı GABA devamlı artar",
+     "s": 94,
+     "k": [
+      0,
+      113
+     ],
+     "tip": "grup",
+     "konum": [
+      0.03,
+      0.96
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.246,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.2264,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "94": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Tipik: uyuşukluk, baş dönmesi, kilo alma",
+      "Seyrek ama sorunlu: ajitasyon, konfüzyon, psikoz"
+     ],
+     "baslik": "Vigabatrin toksik etkileri",
+     "s": 95,
+     "k": [
+      62,
+      188
+     ],
+     "tip": "liste",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.253,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.2126,
+     "ek_renk": "#ffffff"
+    }
+   ],
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "neden_sonuc",
+     "sablon_ad": "Neden → sonuç",
+     "duzen": "zincir",
+     "bag": "yol açar",
+     "ogeler": [
+      "Uzun süreli vigabatrin",
+      "Retina lezyonu (maruziyetle artar)",
+      "Periferik görme alanı defekti (%30-50, kalıcı)"
+     ],
+     "s": 95,
+     "k": [
+      0,
+      188
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.417,
+     "yon": "dikey",
+     "olcek": 1.0,
+     "ek_alt": 0.3773,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "95": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "karsilastirma",
+     "sablon_ad": "İki durumun karşılaştırması",
+     "duzen": "karsit",
+     "basliklar": [
+      "Özellik"
+     ],
+     "satirlar": [
+      [
+       "Status epileptikusta etkinlik",
+       "IV veya rektal çok etkili",
+       "Diazepamdan daha etkin"
+      ],
+      [
+       "Etki süresi",
+       "Daha kısa",
+       "Daha uzun"
+      ]
+     ],
+     "kutuplar": [
+      "Diazepam",
+      "Lorazepam"
+     ],
+     "s": 96,
+     "k": [
+      0,
+      83
+     ],
+     "tip": "karsit",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.293,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.2526,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "96": {
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Diazepam: status epileptikusta IV/rektal",
+      "Lorazepam: status epileptikusta daha etkin, uzun",
+      "Midazolam IM: hastane dışı status epileptikus",
+      "Klonazepam: absans, en güçlü, başlangıçta sedasyon",
+      "Nitrazepam: infantil spazm, miyoklonik nöbet"
+     ],
+     "baslik": "Epilepside benzodiazepinler",
+     "s": 97,
+     "k": [
+      99,
+      168
+     ],
+     "tip": "liste",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.419,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.3789,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "97": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Belirgin sedatif etki (status ve kronik kullanım)",
+      "Tolerans: başta yanıt, birkaç ayda nüks"
+     ],
+     "baslik": "Benzodiazepinlerin kısıtlılıkları",
+     "s": 98,
+     "k": [
+      0,
+      211
+     ],
+     "tip": "liste",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.253,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.2126,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "98": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "mekanizma_adimlari",
+     "sablon_ad": "Mekanizma basamakları",
+     "duzen": "zincir",
+     "ogeler": [
+      "Karbonik anhidraz inhibisyonu",
+      "Beyinde hafif asidoz",
+      "Antiepileptik etki"
+     ],
+     "s": 99,
+     "k": [
+      25,
+      150
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.03,
+      0.96
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.149,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.1294,
+     "ek_renk": "#ffffff"
+    }
+   ],
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "neden_sonuc",
+     "sablon_ad": "Neden → sonuç",
+     "duzen": "zincir",
+     "bag": "yol açar",
+     "ogeler": [
+      "Hızla tolerans gelişir",
+      "Nöbetler birkaç haftada yeniden başlar"
+     ],
+     "s": 99,
+     "k": [
+      42,
+      112
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.03,
+      0.96
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.186,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.1663,
+     "ek_renk": "#ffffff"
+    }
+   ],
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "karsilastirma",
+     "sablon_ad": "İki durumun karşılaştırması",
+     "duzen": "karsit",
+     "basliklar": [
+      "Özellik"
+     ],
+     "satirlar": [
+      [
+       "Tolerans",
+       "Hızla gelişir",
+       "Gelişmeyebilir"
+      ],
+      [
+       "Kullanım",
+       "Bütün nöbet tipleri",
+       "Menstrüasyonda nöbeti artan kadınlar"
+      ]
+     ],
+     "kutuplar": [
+      "Sürekli kullanım",
+      "Sürekli verilmeyen kullanım"
+     ],
+     "s": 99,
+     "k": [
+      0,
+      125
+     ],
+     "tip": "karsit",
+     "konum": [
+      0.05,
+      0.94
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.293,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.2526,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  }
+ },
+ "rapor": {
+  "aday": 196,
+  "gecti": 162,
+  "ret": {
+   "panel metni 'Eski adı' henüz anlatılmamış terim içeriyor (il": 1,
+   "panel metni 'Evet, zor nöbetler' henüz anlatılmamış terim iç": 1,
+   "panel metni 'Sonuç' henüz anlatılmamış terim içeriyor (ileri": 1,
+   "hücre 60 karakterden uzun": 7,
+   "panel metni 'Uyarım yeri' henüz anlatılmamış terim içeriyor ": 1,
+   "panel metni 'Tonik-klonik nöbete eşlik eden' henüz anlatılma": 1,
+   "panel metni 'Kas hareketi' henüz anlatılmamış terim içeriyor": 1,
+   "panel metni 'Hareket' henüz anlatılmamış terim içeriyor (ile": 1,
+   "panel metni 'Dolaşıma ulaşan doz' henüz anlatılmamış terim i": 1,
+   "panel metni 'Oral form' henüz anlatılmamış terim içeriyor (i": 1,
+   "panel metni '800-1200 mg/gün' henüz anlatılmamış terim içeri": 1,
+   "panel metni 'CYP3A4 ve CYP2B6 up-regülasyon' henüz anlatılma": 1,
+   "panel metni 'Olguların çoğu' henüz anlatılmamış terim içeriy": 1,
+   "panel metni '400–1600 mg/gün' henüz anlatılmamış terim içeri": 1,
+   "panel metni 'Ortaya çıkış' henüz anlatılmamış terim içeriyor": 1,
+   "panel metni '2400 mg/güne kadar' henüz anlatılmamış terim iç": 1,
+   "panel metni '600–1200 mg/gün' henüz anlatılmamış terim içeri": 1,
+   "panel metni 'En çok 3000 mg/gün' henüz anlatılmamış terim iç": 1,
+   "panel metni 'Yarı ömür' henüz anlatılmamış terim içeriyor (i": 4,
+   "panel metni 'Kazanç' henüz anlatılmamış terim içeriyor (iler": 1,
+   "panel metni 'Feniletilmalonamid (PEMA)' henüz anlatılmamış t": 1,
+   "maske: görünen + 1–4 altta": 1,
+   "panel metni '1500 mg/gün' henüz anlatılmamış terim içeriyor ": 1,
+   "panel metni '3200 mg/gün' henüz anlatılmamış terim içeriyor ": 1,
+   "panel metni 'SCN1A geni mutasyonu (Na kanal' henüz anlatılma": 1
+  },
+  "ret_ayrinti": [
+   {
+    "cumle": "P2.C2",
+    "sayfa": 4,
+    "tur": "sema",
+    "neden": "panel metni 'Eski adı' henüz anlatılmamış terim içeriyor (ileri sızıntı)",
+    "komut": {}
+   },
+   {
+    "cumle": "P4.C3",
+    "sayfa": 6,
+    "tur": "sema",
+    "neden": "panel metni 'Evet, zor nöbetler' henüz anlatılmamış terim içeriyor (ileri sızıntı)",
+    "komut": {}
+   },
+   {
+    "cumle": "P5.C3",
+    "sayfa": 7,
+    "tur": "sema",
+    "neden": "panel metni 'Sonuç' henüz anlatılmamış terim içeriyor (ileri sızıntı)",
+    "komut": {}
+   },
+   {
+    "cumle": "P7.C1",
+    "sayfa": 9,
+    "tur": "sema",
+    "neden": "panel metni 'Uyarım yeri' henüz anlatılmamış terim içeriyor (ileri sızıntı)",
+    "komut": {}
+   },
+   {
+    "cumle": "P17.C3",
+    "sayfa": 19,
+    "tur": "sema",
+    "neden": "panel metni 'Tonik-klonik nöbete eşlik eden' henüz anlatılmamış terim içeriyor (ileri sızıntı)",
+    "komut": {}
+   },
+   {
+    "cumle": "P21.C1",
+    "sayfa": 23,
+    "tur": "sema",
+    "neden": "panel metni 'Kas hareketi' henüz anlatılmamış terim içeriyor (ileri sızıntı)",
+    "komut": {}
+   },
+   {
+    "cumle": "P21.C3",
+    "sayfa": 23,
+    "tur": "sema",
+    "neden": "panel metni 'Hareket' henüz anlatılmamış terim içeriyor (ileri sızıntı)",
+    "komut": {}
+   },
+   {
+    "cumle": "P22.C1",
+    "sayfa": 24,
+    "tur": "sema",
+    "neden": "panel metni 'Dolaşıma ulaşan doz' henüz anlatılmamış terim içeriyor (ileri sızıntı)",
+    "komut": {}
+   },
+   {
+    "cumle": "P28.C2",
+    "sayfa": 30,
+    "tur": "sema",
+    "neden": "panel metni 'Oral form' henüz anlatılmamış terim içeriyor (ileri sızıntı)",
+    "komut": {}
+   },
+   {
+    "cumle": "P29.C0",
+    "sayfa": 31,
+    "tur": "sema",
+    "neden": "panel metni '800-1200 mg/gün' henüz anlatılmamış terim içeriyor (ileri sızıntı)",
+    "komut": {}
+   },
+   {
+    "cumle": "P29.C1",
+    "sayfa": 31,
+    "tur": "sema",
+    "neden": "panel metni 'CYP3A4 ve CYP2B6 up-regülasyon' henüz anlatılmamış terim içeriyor (ileri sızıntı)",
+    "komut": {}
+   },
+   {
+    "cumle": "P30.C3",
+    "sayfa": 32,
+    "tur": "sema",
+    "neden": "panel metni 'Olguların çoğu' henüz anlatılmamış terim içeriyor (ileri sızıntı)",
+    "komut": {}
+   },
+   {
+    "cumle": "P32.C1",
+    "sayfa": 34,
+    "tur": "sema",
+    "neden": "panel metni '400–1600 mg/gün' henüz anlatılmamış terim içeriyor (ileri sızıntı)",
+    "komut": {}
+   },
+   {
+    "cumle": "P41.C1",
+    "sayfa": 43,
+    "tur": "sema",
+    "neden": "panel metni 'Ortaya çıkış' henüz anlatılmamış terim içeriyor (ileri sızıntı)",
+    "komut": {}
+   },
+   {
+    "cumle": "P44.C0",
+    "sayfa": 46,
+    "tur": "sema",
+    "neden": "panel metni '2400 mg/güne kadar' henüz anlatılmamış terim içeriyor (ileri sızıntı)",
+    "komut": {}
+   },
+   {
+    "cumle": "P47.C1",
+    "sayfa": 49,
+    "tur": "sema",
+    "neden": "panel metni '600–1200 mg/gün' henüz anlatılmamış terim içeriyor (ileri sızıntı)",
+    "komut": {}
+   },
+   {
+    "cumle": "P53.C0",
+    "sayfa": 55,
+    "tur": "sema",
+    "neden": "panel metni 'En çok 3000 mg/gün' henüz anlatılmamış terim içeriyor (ileri sızıntı)",
+    "komut": {}
+   },
+   {
+    "cumle": "P54.C1",
+    "sayfa": 56,
+    "tur": "sema",
+    "neden": "panel metni 'Yarı ömür' henüz anlatılmamış terim içeriyor (ileri sızıntı)",
+    "komut": {}
+   },
+   {
+    "cumle": "P57.C2",
+    "sayfa": 58,
+    "tur": "sema",
+    "neden": "panel metni 'Kazanç' henüz anlatılmamış terim içeriyor (ileri sızıntı)",
+    "komut": {}
+   },
+   {
+    "cumle": "P62.C0",
+    "sayfa": 63,
+    "tur": "sema",
+    "neden": "panel metni 'Feniletilmalonamid (PEMA)' henüz anlatılmamış terim içeriyor (ileri sızıntı)",
+    "komut": {}
+   },
+   {
+    "cumle": "P78.C1",
+    "sayfa": 79,
+    "tur": "sema",
+    "neden": "panel metni 'Yarı ömür' henüz anlatılmamış terim içeriyor (ileri sızıntı)",
+    "komut": {}
+   },
+   {
+    "cumle": "P79.C0",
+    "sayfa": 80,
+    "tur": "sema",
+    "neden": "panel metni '1500 mg/gün' henüz anlatılmamış terim içeriyor (ileri sızıntı)",
+    "komut": {}
+   },
+   {
+    "cumle": "P81.C1",
+    "sayfa": 82,
+    "tur": "sema",
+    "neden": "panel metni 'Yarı ömür' henüz anlatılmamış terim içeriyor (ileri sızıntı)",
+    "komut": {}
+   },
+   {
+    "cumle": "P83.C1",
+    "sayfa": 84,
+    "tur": "sema",
+    "neden": "panel metni '3200 mg/gün' henüz anlatılmamış terim içeriyor (ileri sızıntı)",
+    "komut": {}
+   },
+   {
+    "cumle": "P84.C1",
+    "sayfa": 85,
+    "tur": "sema",
+    "neden": "panel metni 'Yarı ömür' henüz anlatılmamış terim içeriyor (ileri sızıntı)",
+    "komut": {}
+   },
+   {
+    "cumle": "P85.C1",
+    "sayfa": 86,
+    "tur": "sema",
+    "neden": "panel metni 'SCN1A geni mutasyonu (Na kanal' henüz anlatılmamış terim içeriyor (ileri sızıntı)",
+    "komut": {}
+   }
+  ]
+ }
+}

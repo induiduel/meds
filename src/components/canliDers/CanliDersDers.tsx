@@ -68,6 +68,7 @@ function elementZoom(el: Element | null | undefined): number {
 
 const PdfDocView = lazy(() => import('../learn/pdf/PdfDocView'));
 import type { PdfMarks } from '../learn/pdf/PdfDocView';
+import { CdTerimKatman, TerimDugme, useTerimYardimci } from './CdTerimKatman';
 
 const TAKIP_ARA = 8000;
 
@@ -1512,6 +1513,23 @@ function CdPdfBolme({ detay, canli }: { detay: CdDetay; canli: boolean }) {
     }
     return Object.keys(out).length ? out : null;
   }, [detay.isaret, gor.dosya]);
+  // Terim yardımcısı paneli slayt altına sığmazsa sayfa yalnız gerektiği kadar uzar (CdTerimKatman ölçer)
+  const terimDosya = detay.terim?.[String(gor.dosya)] || null;
+  const terimAcik = useTerimYardimci();
+  const [terimEk, setTerimEk] = useState<Record<number, number>>({});
+  useEffect(() => { setTerimEk({}); }, [gor.dosya]);
+  const onTerimEk = useCallback((n: number, h: number) => {
+    setTerimEk((o) => ((o[n] || 0) === h ? o : { ...o, [n]: h }));
+  }, []);
+  const ekAltTum = useMemo(() => {
+    if (!terimAcik || !terimDosya) return ekAlt;
+    const out: Record<number, { h: number; renk?: string }> = { ...(ekAlt || {}) };
+    for (const [k, h] of Object.entries(terimEk)) {
+      const n = Number(k);
+      if (h > 0) out[n] = { h: (ekAlt?.[n]?.h || 0) + h, renk: ekAlt?.[n]?.renk };
+    }
+    return Object.keys(out).length ? out : null;
+  }, [ekAlt, terimEk, terimAcik, terimDosya]);
   // Kelime takibi yalnız işaret katmanında (useFocus): görüntüleyici cümle başına bir kez çizilir, kelimede yeniden çizilmez
   const marks = useMemo<PdfMarks | null>(() => {
     // Slayt aynıysa (gor.sayfa === isr.s) kullanıcı elle kaysa/durdursa bile işaret ve çizim gizlenmez (kullanıcı inceleyebilsin)
@@ -1545,7 +1563,10 @@ function CdPdfBolme({ detay, canli }: { detay: CdDetay; canli: boolean }) {
     const w = wrapRef.current;
     if (!w) return;
     // Çizim açıkken sayfaya dokunmak canlı takibi bırakmaz (kalemle çizilen sayfa anlatılan sayfa olabilir)
-    const on = () => { if (getDrawingGlobalState().activeMode === 'none') durdur(); };
+    const on = (e: Event) => {
+      if ((e.target as Element | null)?.closest?.('.cd-trm, .cd-trm-panel')) return; // terime dokunmak takibi bırakmaz
+      if (getDrawingGlobalState().activeMode === 'none') durdur();
+    };
     const hep = () => durdur();
     w.addEventListener('wheel', hep, { passive: true });
     w.addEventListener('touchmove', on, { passive: true });
@@ -1561,6 +1582,7 @@ function CdPdfBolme({ detay, canli }: { detay: CdDetay; canli: boolean }) {
     if (durdu) setElle({ dosya: gor.dosya, sayfa: p });
   }, [durdu, gor.dosya]);
 
+  const cizimAcik = useDrawingGlobalState().activeMode !== 'none';
   // Çizim kapsamı: ders + dosya + sayfa (tarayıcıda kalır); ekrandan çıkınca araç kapanır
   const cizimKok = `cd:${detay.key}:${dosya?.fileId || dosya?.name || gor.dosya}`;
   const pageOverlay = useCallback((n: number) => (
@@ -1571,8 +1593,11 @@ function CdPdfBolme({ detay, canli }: { detay: CdDetay; canli: boolean }) {
         </div>
       )}
       <SlideDrawingCanvas scope={`${cizimKok}:${n}`} controls={false} />
+      {terimDosya?.[String(n)] && (
+        <CdTerimKatman sayfa={terimDosya[String(n)]} n={n} bas={ekAlt?.[n]?.h || 0} gizle={cizimAcik} onEk={onTerimEk} />
+      )}
     </React.Fragment>
-  ), [cizimKok, cikYer, cikSec, gor.dosya]);
+  ), [cizimKok, cikYer, cikSec, gor.dosya, terimDosya, ekAlt, cizimAcik, onTerimEk]);
   const cikmisSec = useCallback((q: CdCikmisKonum | null) => {
     setCikSec(q);
     if (q) { setElle(null); durdur(); }
@@ -1597,6 +1622,7 @@ function CdPdfBolme({ detay, canli }: { detay: CdDetay; canli: boolean }) {
         )}
         <span className="cd-grow" />
         {!!detay.cikmisKonum?.length && <CikmisKonumDugme liste={detay.cikmisKonum} secili={cikSec} onSec={cikmisSec} />}
+        {terimDosya && <TerimDugme />}
         <CizimDugme />
         <button type="button" className="cd-ib" onClick={undoLastDrawing} disabled={!geriAlinir} aria-label="Son çizimi geri al" title="Son çizimi geri al"><Undo2 /></button>
         <button type="button" className="cd-ib" onClick={() => setZoom((z) => Math.max(0.5, +(z - 0.25).toFixed(2)))} aria-label="Uzaklaştır"><Minus /></button>
@@ -1623,7 +1649,7 @@ function CdPdfBolme({ detay, canli }: { detay: CdDetay; canli: boolean }) {
               onError={setHataMsj}
               fit="width"
               pageOverlay={pageOverlay}
-              ekAlt={ekAlt}
+              ekAlt={ekAltTum}
             />
           </Suspense>
         ) : (

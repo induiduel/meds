@@ -1,0 +1,1885 @@
+{
+ "id": "k2p-y25-k2-39-kolinoseptor-bloke-edici-ilaclar",
+ "deckId": "k2p-y25-k2-39-kolinoseptor-bloke-edici-ilaclar",
+ "title": "Kolinoseptör Bloke Edici İlaçlar",
+ "discipline": "Tıbbi Farmakoloji",
+ "course": "Tıbbi Farmakoloji",
+ "lectureCode": "k2-39",
+ "period": "2025-2026",
+ "donem": "2025-2026",
+ "committee": "donem3-kurul2",
+ "arsiv": true,
+ "confidence": "high",
+ "sayfaHaritasi": "teyitli",
+ "totalSlides": 21,
+ "slides": [
+  {
+   "slideNumber": 1,
+   "title": "Kolinoseptör Antagonistlerinin Sınıflandırılması ve Reseptör Dağılımı",
+   "content": "Kolinoseptör antagonistleri reseptör afinitelerine göre muskarinik ve nikotinik olmak üzere iki ana sınıfa ayrılır. Muskarinik antagonistler parasempatik otonomik deşarjı yarışmalı olarak engelleyen parasempatolitik moleküllerdir.\n\n- **M1 Reseptörleri:** Merkezi sinir sistemi nöronlarında, otonom postgangliyonik hücre gövdelerinde ve gastrik parakrin hücrelerde yerleşiktir.\n- **M2 Reseptörleri:** Miyokard dokusunda sinoatriyal düğüm, atriyoventriküler düğüm ve presinaptik uçlarda bulunur; kalp hızını ve iletimi yavaşlatır.\n- **M3 Reseptörleri:** Ekzokrin salgı bezlerinde ve düz kas hücrelerinde bulunur; glandüler salgıyı ve düz kas kasılmasını yönetir.\n- **M4 ve M5 Reseptörleri:** Merkezi sinir sisteminde yer alır; M5 reseptörünün dopaminerjik ödül yolağında rolü bulunmaktadır.\n\n> [!NOTE] Otonomik gangliyonları ve nöromüsküler kavşağı bloke eden ilaçlar nikotinik reseptörleri hedefleyen antinikotinik bileşiklerdir.",
+   "interactiveElements": [
+    {
+     "id": "k39-s1-q1",
+     "type": "micro_quiz",
+     "question": "Sinoatriyal düğümde kalp hızını yavaşlatan ve atriyoventriküler iletimi geciktiren temel muskarinik reseptör alt tipi hangisidir?",
+     "options": [
+      {
+       "text": "M1 reseptörü",
+       "isCorrect": false,
+       "explanation": "M1 reseptörleri merkezi sinir sisteminde ve otonom gangliyonlarda nöronal uyarılmayı ileten Gq kenetli reseptörlerdir; sinoatriyal düğüm ritmini doğrudan baskılayıcı bir etki göstermezler."
+      },
+      {
+       "text": "M2 reseptörü",
+       "isCorrect": true,
+       "explanation": "M2 reseptörleri miyokard dokusunda yerleşik olup Gi proteini üzerinden adenilat siklazı inhibe ederek ve potasyum akımını artırarak kalp hızını yavaşlatan temel muskarinik alt tiptir."
+      },
+      {
+       "text": "M3 reseptörü",
+       "isCorrect": false,
+       "explanation": "M3 reseptörleri ekzokrin salgı bezlerinde ve iç organ düz kaslarında bulunur; glandüler sekresyonu artırır ve bronş ile barsak düz kaslarını kasan temel efektör moleküldür."
+      },
+      {
+       "text": "M4 reseptörü",
+       "isCorrect": false,
+       "explanation": "M4 reseptörleri santral sinir sisteminde striatal yolaklarda yer alan Gi kenetli reseptörlerdir; nörotransmitter salınımını düzenleyici rol oynar ve kardiyak nodal dokuyu doğrudan yönetmez."
+      }
+     ]
+    },
+    {
+     "id": "k39-s1-c1",
+     "type": "cloze_masking",
+     "sentence": "Ekzokrin salgı bezlerinin sekresyonunu ve organ düz kaslarının kasılmasını yöneten temel muskarinik reseptör alt tipi M3 reseptörüdür.",
+     "maskedTerm": "M3",
+     "hint": "Glandüler hücrelerde ve periferik düz kas dokusunda yerleşik üçüncü alt tip."
+    },
+    {
+     "id": "k39-s1-l1",
+     "type": "spot_the_lie",
+     "topic": "Muskarinik Reseptörlerin Doku Dağılımı",
+     "items": [
+      {
+       "text": "M1 reseptörleri merkezi sinir sistemi nöronlarında ve otonom gangliyonlarda yoğun olarak bulunur.",
+       "isLie": false,
+       "explanation": "M1 reseptörleri santral nöronlarda ve otonom postgangliyonik yapılarda sinaptik iletiyi modüle eder."
+      },
+      {
+       "text": "M2 reseptörleri miyokard dokusunda yer alarak sinoatriyal düğüm hızını ve atriyoventriküler iletimi yavaşlatır.",
+       "isLie": false,
+       "explanation": "M2 reseptörleri Gi kenetli mekanizmayla kardiyak pacemaker aktivitesini ve AV iletim hızını baskılar."
+      },
+      {
+       "text": "M3 reseptörleri kalp sinoatriyal düğümünde kalp hızını doğrudan artıran temel reseptördür.",
+       "isLie": true,
+       "explanation": "M3 reseptörleri kalpte değil, ekzokrin bezlerde ve düz kaslarda bulunur; kalpteki inhibitör reseptör M2'dir."
+      },
+      {
+       "text": "M5 reseptörünün merkezi sinir sisteminde dopaminerjik ödül yolağında rolü bulunmaktadır.",
+       "isLie": false,
+       "explanation": "M5 reseptörü ventral tegmental alanda dopamin salınımını ve bağımlılık süreçlerini etkiler."
+      }
+     ]
+    },
+    {
+     "id": "k39-s1-r1",
+     "type": "active_recall",
+     "question": "M1 muskarinik reseptörlerinin temel anatomik lokalizasyonları nelerdir?",
+     "answer": "Merkezi sinir sistemi nöronları, otonomik postgangliyonik hücre gövdeleri ve gastrik paryetal bölgedir."
+    }
+   ],
+   "bolum": 1,
+   "pdfSayfalari": [
+    2,
+    4
+   ],
+   "sourcePdf": {
+    "name": "y25-k2-39-kolinoseptor-bloke-edici-ilaclar.pdf",
+    "startPage": 2,
+    "endPage": 4
+   }
+  },
+  {
+   "slideNumber": 2,
+   "title": "Doğal Alkaloidler: Atropin, Skopolamin ve Stereoizomer Farkları",
+   "content": "Antimuskarinik ilaçların prototipi Atropa belladonna ve Datura stramonium bitkilerinde bulunan atropindir. Doğada bulunan bir diğer önemli alkaloid ise Banotu (Hyoscyamus niger) bitkisinden elde edilen skopolamindir.\n\n- **Stereoizomer Üstünlüğü:** Doğal alkaloidler l(-) stereoizomer formundadır; ticari atropin hazırlanırken hızla rasemize olarak d,l-hyosyamin karışımına dönüşür.\n- **Biyolojik Etkinlik:** l(-) stereoizomerleri, d(+) stereoizomerlerinden en az yüz kat daha güçlü antimuskarinik afinite sergiler.\n- **Moleküler Yapı:** Her iki doğal alkaloid de tersiyer amin yapısındadır; fizyolojik pH'da yüksüz fraksiyonları lipid membranları aşabilir.\n\n> [!IMPORTANT] Skopolamin kimyasal yapısındaki oksijen köprüsü sayesinde kan-beyin bariyerini atropine kıyasla çok daha hızlı ve yüksek oranda geçer.",
+   "interactiveElements": [
+    {
+     "id": "k39-s2-q1",
+     "type": "micro_quiz",
+     "question": "Doğal antimuskarinik alkaloidlerin stereoizomer özellikleri hakkında hangisi doğrudur?",
+     "options": [
+      {
+       "text": "d(+) izomerleri l(-) izomerlerinden yüz kat daha güçlü afinite gösterir",
+       "isCorrect": false,
+       "explanation": "d(+) stereoizomeri farmakolojik olarak zayıf bağlanan formdur; reseptöre yüksek afiniteyle bağlanarak antimuskarinik blokaj oluşturan asıl biyolojik aktif form l(-) izomeridir."
+      },
+      {
+       "text": "l(-) stereoizomerleri d(+) izomerlerinden en az yüz kat daha güçlü antimuskarinik etki sergiler",
+       "isCorrect": true,
+       "explanation": "Doğal l(-) stereoizomerleri muskarinik reseptör bağlanma cebine mükemmel uyum sağlayarak d(+) formuna kıyasla en az yüz kat daha güçlü antagonist etkinlik gösterir."
+      },
+      {
+       "text": "Atropin doğada bitkilerde tamamen d(+) formunda sentezlenir",
+       "isCorrect": false,
+       "explanation": "Atropin bitkide l(-)-hyosyamin olarak doğal üretilen bir alkaloiddir; ticari izolasyon ve saflaştırma sürecinde kimyasal olarak hızla rasemize olarak d ve l karışımına döner."
+      },
+      {
+       "text": "Skopolamin kalıcı pozitif yüklü bir kuvaterner amindir",
+       "isCorrect": false,
+       "explanation": "Skopolamin tersiyer amin yapısında lipofilik doğal bir alkaloiddir; fizyolojik pH ortamında yüksüz kalarak kan-beyin bariyerini aşabilir ve kuvaterner amonyum yapısı taşımaz."
+      }
+     ]
+    },
+    {
+     "id": "k39-s2-c1",
+     "type": "cloze_masking",
+     "sentence": "Doğal atropin ve skopolamin alkaloidlerinin l izomerleri d izomerlerinden en az yüz kat daha güçlü antimuskarinik etkinlik gösterir.",
+     "maskedTerm": "yüz",
+     "hint": "Stereoizomerler arasındaki etki farkını belirten tam sayı derecesi."
+    },
+    {
+     "id": "k39-s2-h1",
+     "type": "causal_chain",
+     "title": "Tersiyer Amin Yapısının Doku Geçiş Mekanizması",
+     "steps": [
+      "1. Tersiyer Yapı: Doğal alkaloid molekülünün tersiyer amin çekirdeği ile sentezlenmesi",
+      "2. İyonizasyon Dengesi: Fizyolojik doku pH ortamında yüksüz lipofilik fraksiyonun korunması",
+      "3. Endotel Geçişi: Lipid membranların ve kan-beyin bariyerinin engelsiz şekilde aşılması",
+      "4. Santral Etki: Merkezi sinir sisteminde belirgin sedatif ve nöronal etkilerin tetiklenmesi"
+     ]
+    },
+    {
+     "id": "k39-s2-r1",
+     "type": "active_recall",
+     "question": "Skopolaminin doğal kaynağı olan bitki ve kimyasal stereoizomer formu nedir?",
+     "answer": "Hyoscyamus niger (Banotu) bitkisidir ve doğal olarak l(-) stereoizomer formundadır."
+    }
+   ],
+   "bolum": 1,
+   "pdfSayfalari": [
+    5,
+    6
+   ],
+   "sourcePdf": {
+    "name": "y25-k2-39-kolinoseptor-bloke-edici-ilaclar.pdf",
+    "startPage": 5,
+    "endPage": 6
+   }
+  },
+  {
+   "slideNumber": 3,
+   "title": "Tersiyer ve Kuvaterner Antimuskarinikler: Membran Geçiş Kinetiği",
+   "content": "Yarı-sentetik ve sentetik antimuskarinik ilaçlar kimyasal yapılarına göre tersiyer aminler ve kuvaterner aminler olarak sınıflandırılır. Bu kimyasal ayrım ilaçların doku dağılımını ve terapötik hedeflerini belirler.\n\n- **Tersiyer Aminler:** Atropin, skopolamin, tropikamid, siklopentolat, disiklomin. Lipofilik olup gastrointestinal kanaldan, konjonktivadan ve kan-beyin bariyerinden kolayca geçerler. Göz ve merkezi sinir sistemi etkileri için tercih edilirler.\n- **Kuvaterner Aminler:** Propantelin, glikopirolat, ipratropium, tiotropium, trospium. Kalıcı pozitif yüklü iyonize azot atomu taşırlar; lipid membranları ve kan-beyin bariyerini aşamazlar.\n- **Periferik Seçicilik:** Kuvaterner aminler merkezi sinir sistemi toksisitesi ve deliryum oluşturmadan periferik organlarda (akciğer, GİS, mesane) lokal etki gösterirler.\n\n> [!NOTE] Kuvaterner bileşiklerin gastrointestinal kanaldan emilimi zayıf ve değişkendir; sistemik biyoyararlanımları düşüktür.",
+   "interactiveElements": [
+    {
+     "id": "k39-s3-q1",
+     "type": "micro_quiz",
+     "question": "Aşağıdaki antimuskarinik ilaçlardan hangisi kuvaterner amin yapısında olup kan-beyin bariyerini aşamaz?",
+     "options": [
+      {
+       "text": "Atropin",
+       "isCorrect": false,
+       "explanation": "Atropin tersiyer amin yapısındadır; lipofilik özelliği sayesinde lipid membranları ve kan-beyin bariyerini aşarak santral sinir sistemine kolaylıkla geçebilen bir alkaloiddir."
+      },
+      {
+       "text": "Skopolamin",
+       "isCorrect": false,
+       "explanation": "Skopolamin tersiyer amin yapısıyla beyne hızla ve yoğun şekilde nüfuz eden bir moleküldür; santral sinir sisteminde güçlü sedasyon ve amnezi meydana getirir."
+      },
+      {
+       "text": "Tropikamid",
+       "isCorrect": false,
+       "explanation": "Tropikamid korneadan kolayca penetre olan tersiyer amin yapılı bir oftalmolojik göz damlasıdır; kan-beyin bariyerini ve korneayı aşma kabiliyeti oldukça yüksektir."
+      },
+      {
+       "text": "Propantelin",
+       "isCorrect": true,
+       "explanation": "Propantelin kalıcı pozitif yüklü kuvaterner amin yapısına sahiptir; kan-beyin bariyerini aşamaz ve periferik gastrointestinal spazmolitik olarak seçici işlev görür."
+      }
+     ]
+    },
+    {
+     "id": "k39-s3-c1",
+     "type": "cloze_masking",
+     "sentence": "Kuvaterner amin yapılı antimuskarinik ilaçlar iyonize yapıları sebebiyle kan-beyin bariyerini aşamazlar.",
+     "maskedTerm": "iyonize",
+     "hint": "Kalıcı pozitif elektrik yükü taşıyan ve lipid membranları geçmeyi engelleyen moleküler durum."
+    },
+    {
+     "id": "k39-s3-t1",
+     "type": "interactive_table",
+     "title": "Tersiyer ve Kuvaterner Amin Özellikleri Tablosu",
+     "tableHeaders": [
+      "Özellik",
+      "Tersiyer Aminler",
+      "Kuvaterner Aminler"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Lipofilik Doku Dağılımı",
+         "isMasked": false
+        },
+        {
+         "text": "Yüksek lipofilik karakter",
+         "isMasked": true
+        },
+        {
+         "text": "Düşük lipofilik yapı",
+         "isMasked": false
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Kan-Beyin Bariyeri Geçişi",
+         "isMasked": false
+        },
+        {
+         "text": "Kolayca geçebilir",
+         "isMasked": false
+        },
+        {
+         "text": "Geçemez",
+         "isMasked": true
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Santral Deliryum Riski",
+         "isMasked": false
+        },
+        {
+         "text": "Yüksek dozda deliryum riski var",
+         "isMasked": true
+        },
+        {
+         "text": "Santral deliryum riski yok",
+         "isMasked": false
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k39-s3-r1",
+     "type": "active_recall",
+     "question": "Kuvaterner amin yapılı antimuskariniklerin santral sinir sistemi açısından en belirgin klinik avantajı nedir?",
+     "answer": "Kan-beyin bariyerini aşamadıkları için konfüzyon, sedasyon ve deliryum gibi santral sinir sistemi yan etkileri oluşturmazlar."
+    }
+   ],
+   "bolum": 1,
+   "pdfSayfalari": [
+    7,
+    8
+   ],
+   "sourcePdf": {
+    "name": "y25-k2-39-kolinoseptor-bloke-edici-ilaclar.pdf",
+    "startPage": 7,
+    "endPage": 8
+   }
+  },
+  {
+   "slideNumber": 4,
+   "title": "Farmakodinamik: Kompetitif Reseptör Antagonizması ve Doz-Yanıt İlişkisi",
+   "content": "Antimuskarinik ilaçlar muskarinik asetilkolin reseptörlerinin ortosterik bağlanma bölgesinde asetilkolin ile yarışmalı (kompetitif) olarak etkileşir.\n\n- **Doz-Yanıt Eğrisi:** Atropin varlığında agonist konsantrasyon-yanıt eğrisi maksimum yanıt (Emax) değişmeksizin paralel olarak sağa kayar.\n- **Blokajın Aşılması:** Ortama yeterli miktarda asetilkolin veya kolinomimetik agonist eklendiğinde kompetitif blokaj tamamen aşılabilir.\n- **Ters Agonizm:** Muskarinik reseptörlerin bazal yapısal aktivite gösterdiği dokularda, atropin inaktif reseptör konformasyonunu stabilize ederek ters agonist (inverse agonist) gibi davranır.\n- **Terapötik Seçicilik:** Çoğu klasik antimuskarinik reseptör alt tipleri arasında belirgin seçicilik göstermezken, doku duyarlılıkları doz düzeyine göre farklılık gösterir.\n\n> [!IMPORTANT] Kompetitif blokaj geri dönüşümlüdür; kovalent bağ oluşmaz ve reseptör rezervi korunduğu sürece maksimum doku yanıtı elde edilebilir.",
+   "interactiveElements": [
+    {
+     "id": "k39-s4-q1",
+     "type": "micro_quiz",
+     "question": "Atropin varlığında asetilkolinin konsantrasyon-yanıt eğrisinde gözlenen temel farmakolojik değişiklik hangisidir?",
+     "options": [
+      {
+       "text": "Maksimum yanıt azalır ve eğri sola kayar",
+       "isCorrect": false,
+       "explanation": "Maksimum doku yanıtının düşmesi non-kompetitif irreversibl blokajda görülen bir durumdur; kompetitif blokajda ise yeterli agonist varlığında maksimum doku yanıtı tamamen korunur."
+      },
+      {
+       "text": "Maksimum yanıt değişmez ve eğri sağa paralel kayar",
+       "isCorrect": true,
+       "explanation": "Kompetitif antagonistler reseptör bağlanma bölgesinde agonist ile yarışır; bu nedenle agonist eğrisini maksimum doku yanıtı değerini düşürmeden sağa paralel kaydırır."
+      },
+      {
+       "text": "Eğri tamamen dikey hale gelir ve Emax iki katına çıkar",
+       "isCorrect": false,
+       "explanation": "Antagonist varlığında maksimum doku yanıtı artış göstermez; aynı reseptör cevabını elde edebilmek için ortama belirgin şekilde daha yüksek agonist konsantrasyonu eklenmesi gerekir."
+      },
+      {
+       "text": "Reseptörler geri dönüşümsüz olarak kovalent inaktive olur",
+       "isCorrect": false,
+       "explanation": "Atropin reseptörün ortosterik bölgesine yarışmalı ve geri dönüşümlü olarak bağlanır. Zayıf elektrostatik bağlarla etkileştiği için reseptör yapısını kovalent olarak inaktive etmez."
+      }
+     ]
+    },
+    {
+     "id": "k39-s4-c1",
+     "type": "cloze_masking",
+     "sentence": "Atropin gibi antimuskarinikler bazal aktif muskarinik reseptörlerde ters agonist olarak etkinlik gösterirler.",
+     "maskedTerm": "ters agonist",
+     "hint": "Konstitütif bazal reseptör etkinliğini inaktif konformasyonu stabilize ederek sıfırlayan farmakolojik mekanizma."
+    },
+    {
+     "id": "k39-s4-h1",
+     "type": "causal_chain",
+     "title": "Kompetitif Antagonizma ve Yanıt Eğrisi Mekanizması",
+     "steps": [
+      "1. Yarışmalı Bağlanma: Atropinin ortosterik muskarinik bağlanma bölgesine oturması",
+      "2. Agonist Engeli: Asetilkolinin aynı reseptör cebine bağlanmasının engellenmesi",
+      "3. Agonist Artışı: Ortamdaki agonist konsantrasyonunun artırılarak atropinin yerinden edilmesi",
+      "4. Sağa Paralel Kayma: Maksimum yanıtın korunarak konsantrasyon-yanıt eğrisinin sağa ötelenmesi"
+     ]
+    },
+    {
+     "id": "k39-s4-r1",
+     "type": "active_recall",
+     "question": "Atropin blokajının non-kompetitif blokajdan en temel ayırt edici özelliği nedir?",
+     "answer": "Yüksek konsantrasyonda agonist eklenmesiyle blokajın tamamen aşılabilmesi ve Emax değerinin düşmemesidir."
+    }
+   ],
+   "bolum": 2,
+   "pdfSayfalari": [
+    9,
+    10
+   ],
+   "sourcePdf": {
+    "name": "y25-k2-39-kolinoseptor-bloke-edici-ilaclar.pdf",
+    "startPage": 9,
+    "endPage": 10
+   }
+  },
+  {
+   "slideNumber": 5,
+   "title": "Reseptör Alt Tip Seçiciliği: Pirenzepin ve M3 Seçici Ajanlar",
+   "content": "Klasik antimuskarinikler olan atropin ve skopolamin tüm muskarinik alt tipleri benzer afiniteyle bloke ederken, bazı sentetik bileşikler belirli alt tiplere orta-yüksek seçicilik sergiler.\n\n- **M1 Seçici Ajanlar:** Pirenzepin ve daha güçlü analogu telenzepin, otonom gangliyonlardaki ve gastrik parakrin hücrelerdeki M1 reseptörlerini bloke ederek mide asit salgısını azaltır.\n- **M3 Seçici Ajanlar:** Darifenasin ve solifenasin, mesane düz kası ve ekzokrin bezlerdeki M3 reseptörlerine yüksek seçicilik gösterir.\n- **Kardiyak M2 Koruması:** M3 seçici ajanlar miyokarddaki M2 reseptörlerini daha az etkileyerek taşikardi ve çarpıntı riskini belirgin biçimde azaltır.\n- **Santral Seçicilik:** M4 ve M5 reseptörlerini seçici hedefleyen moleküller nörodejeneratif ve psikiyatrik hastalıkların tedavisi için araştırılmaktadır.\n\n> [!NOTE] Alt tip seçiciliği doza bağımlıdır; yüksek plazma konsantrasyonlarında seçicilik kaybolur ve diğer muskarinik reseptörler de bloke olur.",
+   "interactiveElements": [
+    {
+     "id": "k39-s5-q1",
+     "type": "micro_quiz",
+     "question": "Mide asit salgısını azaltmak üzere geliştirilen ve M1 muskarinik reseptörlerine seçici afinite gösteren ilaç hangisidir?",
+     "options": [
+      {
+       "text": "Atropin",
+       "isCorrect": false,
+       "explanation": "Atropin tüm muskarinik reseptör alt tiplerini (M1-M5) benzer afiniteyle bloke eden klasik prototipik bir alkaloiddir; alt tipler arasında belirgin bir seçicilik göstermez."
+      },
+      {
+       "text": "Pirenzepin",
+       "isCorrect": true,
+       "explanation": "Pirenzepin M1 reseptör alt tipine seçici afinite gösteren bir antimuskariniktir ve gastrik asit salgısını baskılamak amacıyla geliştirilmiş özgül bir ilaçtır."
+      },
+      {
+       "text": "Darifenasin",
+       "isCorrect": false,
+       "explanation": "Darifenasin mesane düz kasında ve salgı bezlerinde bulunan M3 reseptör alt tipine seçici bağlanan bir antimuskariniktir. Bu ilaç temel olarak mesane spazmını çözer ve M1 reseptörlerini etkilemez."
+      },
+      {
+       "text": "Skopolamin",
+       "isCorrect": false,
+       "explanation": "Skopolamin reseptör alt tipleri arasında seçicilik göstermeyen doğal tersiyer amin yapılı bir parasempatolitiktir; M1 reseptörüne özel bir afinite üstünlüğü taşımaz."
+      }
+     ]
+    },
+    {
+     "id": "k39-s5-c1",
+     "type": "cloze_masking",
+     "sentence": "Darifenasin ve solifenasin mesane düz kasındaki M3 reseptörlerine seçici afinite gösterir.",
+     "maskedTerm": "M3",
+     "hint": "Mesane düz kasında ve salgı bezlerinde yer alan üçüncü muskarinik alt tip."
+    },
+    {
+     "id": "k39-s5-t1",
+     "type": "interactive_table",
+     "title": "Antimuskarinik İlaçların Reseptör Seçicilik Tablosu",
+     "tableHeaders": [
+      "İlaç",
+      "Hedef Reseptör",
+      "Klinik Özellik"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Atropin",
+         "isMasked": false
+        },
+        {
+         "text": "M1, M2, M3 non-selektif",
+         "isMasked": true
+        },
+        {
+         "text": "Prototip standart ajan",
+         "isMasked": false
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Pirenzepin",
+         "isMasked": false
+        },
+        {
+         "text": "M1 seçici blokaj",
+         "isMasked": false
+        },
+        {
+         "text": "Mide asit salgısını azaltma",
+         "isMasked": true
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Darifenasin",
+         "isMasked": false
+        },
+        {
+         "text": "M3 seçici blokaj",
+         "isMasked": true
+        },
+        {
+         "text": "Mesane seçici, kardiyak koruma",
+         "isMasked": false
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k39-s5-s1",
+     "type": "swipe_matching",
+     "title": "İlaç ve Reseptör Seçicilik Eşlemesi",
+     "leftCategory": "Seçici Antimuskarinikler",
+     "rightCategory": "Non-selektif Antimuskarinikler",
+     "cards": [
+      {
+       "text": "Pirenzepin (M1 reseptörlerine orta-yüksek afiniteli)",
+       "category": "left"
+      },
+      {
+       "text": "Darifenasin (M3 reseptörlerine seçici afiniteli)",
+       "category": "left"
+      },
+      {
+       "text": "Atropin (Tüm muskarinik reseptörleri benzer bloke eden)",
+       "category": "right"
+      },
+      {
+       "text": "Skopolamin (Reseptör alt tipi ayırt etmeyen doğal alkaloid)",
+       "category": "right"
+      }
+     ]
+    }
+   ],
+   "bolum": 2,
+   "pdfSayfalari": [
+    11,
+    11
+   ],
+   "sourcePdf": {
+    "name": "y25-k2-39-kolinoseptor-bloke-edici-ilaclar.pdf",
+    "startPage": 11,
+    "endPage": 11
+   }
+  },
+  {
+   "slideNumber": 6,
+   "title": "[TEKRAR SAYFASI - CHECKPOINT 1] Temel Farmakoloji ve Reseptör Yapısı",
+   "isCheckpoint": true,
+   "content": "Bu bölümde kolinoseptör antagonistlerinin sınıflandırması, muskarinik reseptör alt tipleri (M1-M5), doğal alkaloidler atropin ve skopolaminin stereoizomer özellikleri ile tersiyer-kuvaterner aminlerin farmakokinetik farkları işlendi.\n\n- **Reseptör Dağılımı:** M1 nöronal, M2 kardiyak miyokard, M3 ekzokrin bez ve düz kas yerleşimlidir.\n- **Stereoizomerler:** Doğal l(-) izomeri d(+) izomerinden en az yüz kat güçlüdür; ticari atropin rasemiktir.\n- **Kinetik Özellikler:** Tersiyer aminler lipofilik olup kan-beyin bariyerini geçer; kuvaterner aminler iyonize olup santrale geçemez.\n- **Farmakodinamik:** Kompetitif blokaj agonist eğrisini sağa paralel kaydırır; pirenzepin M1, darifenasin M3 seçicidir.\n\n> [!NOTE] Bu checkpoint ilk 5 adımın temel kazanımlarını pekiştirmektedir; sonraki adımlarda organ sistemleri etkilerine geçilecektir.",
+   "interactiveElements": [
+    {
+     "id": "k39-s6-t1",
+     "type": "interactive_table",
+     "title": "Bölüm 1 Temel Farmakolojik Kavramlar Özeti",
+     "tableHeaders": [
+      "Kavram",
+      "Biyolojik Mekanizma",
+      "Klinik Yansıması"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "l(-) İzomer",
+         "isMasked": false
+        },
+        {
+         "text": "Stereoizomerik yüksek reseptör afinitesi",
+         "isMasked": true
+        },
+        {
+         "text": "d(+) izomerinden 100 kat güçlü etki",
+         "isMasked": false
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Kuvaterner Yapı",
+         "isMasked": false
+        },
+        {
+         "text": "Kalıcı pozitif iyonize yük",
+         "isMasked": false
+        },
+        {
+         "text": "Kan-beyin bariyerini geçememe",
+         "isMasked": true
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Kompetitif Blok",
+         "isMasked": false
+        },
+        {
+         "text": "Ortosterik bölgede yarışmalı bağlanma",
+         "isMasked": true
+        },
+        {
+         "text": "Agonist eğrisinde sağa paralel kayma",
+         "isMasked": false
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k39-s6-v1",
+     "type": "venn_grid",
+     "title": "Tersiyer ve Kuvaterner Amin Özellik Karşılaştırması",
+     "labelA": "Tersiyer Aminler (Atropin)",
+     "labelB": "Kuvaterner Aminler (Propantelin)",
+     "items": [
+      {
+       "criterion": "Kan-beyin bariyerini kolayca aşabilme",
+       "correct": "A"
+      },
+      {
+       "criterion": "Kalıcı pozitif yüklü iyonize yapı taşıma",
+       "correct": "B"
+      },
+      {
+       "criterion": "Muskarinik reseptörleri kompetitif bloke edebilme",
+       "correct": "both"
+      },
+      {
+       "criterion": "Nöromüsküler kavşakta asetilkolin salgılatma",
+       "correct": "neither"
+      }
+     ]
+    },
+    {
+     "id": "k39-s6-l1",
+     "type": "spot_the_lie",
+     "topic": "İlk Bölüm Temel Kazanımları",
+     "items": [
+      {
+       "text": "Doğal alkaloidlerin l(-) stereoizomeri d(+) izomerinden yüz kat güçlüdür.",
+       "isLie": false,
+       "explanation": "l(-) stereoizomeri yüz kat daha yüksek afiniteye sahiptir."
+      },
+      {
+       "text": "Kuvaterner aminler kan-beyin bariyerini geçerek deliryum oluşturur.",
+       "isLie": true,
+       "explanation": "Kuvaterner aminler kalıcı pozitif iyonize oldukları için santrale kesinlikle geçemez."
+      },
+      {
+       "text": "Pirenzepin M1 reseptörlerine orta-yüksek seçicilik gösterir.",
+       "isLie": false,
+       "explanation": "Pirenzepin M1 seçici bir antimuskariniktir."
+      },
+      {
+       "text": "Kompetitif blokajda agonist doz-yanıt eğrisi sağa paralel kayar.",
+       "isLie": false,
+       "explanation": "Emax korunarak eğri sağa paralel ötelenir."
+      }
+     ]
+    },
+    {
+     "id": "k39-s6-r1",
+     "type": "active_recall",
+     "question": "Doğal alkaloid atropinin kimyasal stereoizomer yapısı ve ticari formu nasıldır?",
+     "answer": "Doğada l(-)-hyosyamin olarak bulunur, ticari ürün ise rasemik d,l-hyosyamin karışımıdır."
+    }
+   ]
+  },
+  {
+   "slideNumber": 7,
+   "title": "Organ Sistemleri: Merkezi Sinir Sistemi ve Göz Etkileri",
+   "content": "Antimuskarinik ilaçlar merkezi sinir sistemi ve göz üzerinde doza ve moleküler yapıya bağımlı karakteristik etkiler oluşturur.\n\n- **Merkezi Sinir Sistemi:** Terapötik dozda atropin minimal santral etki yaparken, skopolamin belirgin sedasyon, uyuşukluk ve amnezi oluşturur. Toksik dozlarda ise her iki ilaç ajitasyon, deliryum, görsel halüsinasyonlar ve komaya yol açar.\n- **Pupilla Sfinkteri:** Sfinkter pupilla kasındaki M3 reseptör blokajı sempatik tonusu baskın kılarak pupillanın genişlemesine (pasif midriyazis) ve fotofobiye neden olur.\n- **Siliyer Kas ve Siklopleji:** Siliyer kastaki M3 blokajı kası felç ederek akomodasyon kaybına (siklopleji) yol açar; lens yassılaşır ve yakın görme bozulur.\n- **Göz İçi Basıncı:** İris kökünün iridokorneal açıyı daraltması nedeniyle özellikle dar açılı glokom hastalarında göz içi basıncı tehlikeli biçimde yükselir.\n\n> [!IMPORTANT] Midriyazis ve siklopleji aynı anda gelişir; hasta yakındaki yazıları okuyamaz ve parlak ışıktan rahatsız olur.",
+   "interactiveElements": [
+    {
+     "id": "k39-s7-q1",
+     "type": "micro_quiz",
+     "question": "Topikal atropin uygulanan bir hastada gelişen yakın görme bozukluğunun (siklopleji) nedeni hangisidir?",
+     "options": [
+      {
+       "text": "Sfinkter pupilla kasının aşırı kasılması",
+       "isCorrect": false,
+       "explanation": "Sfinkter pupilla kası pupilla çapını ve ışık refleksini yöneten dairesel düz kastır; akomodasyon ve yakın odaklama işlevinden primer sorumlu yapı siliyer kastır."
+      },
+      {
+       "text": "Siliyer kasın M3 reseptör blokajı ile felç olması",
+       "isCorrect": true,
+       "explanation": "Siliyer kas muskarinik M3 blokajı ile felç olduğunda zonül lifleri gerilir, lens yassılaşır ve göz yakın odaklama yeteneğini kaybederek sikloplejiye girer."
+      },
+      {
+       "text": "Retinal fotoreseptörlerin doğrudan uyarılması",
+       "isCorrect": false,
+       "explanation": "Atropin ön segment düz kaslarındaki muskarinik reseptörleri yarışmalı olarak bloke eden bir ajandır. Gözde sfinkter ve siliyer kasları etkiler; retinal fotoreseptör hücreleri üzerinde uyarıcı rol oynamaz."
+      },
+      {
+       "text": "Gözyaşı bezinin aşırı salgı yapması",
+       "isCorrect": false,
+       "explanation": "Atropin lakrimal bez M3 reseptörlerini bloke ederek gözyaşı salgısını azaltan bir ilaçtır; gözyaşı salgısını artırarak görme bozukluğu oluşturmaz."
+      }
+     ]
+    },
+    {
+     "id": "k39-s7-c1",
+     "type": "cloze_masking",
+     "sentence": "Siliyer kasın muskarinik blokajla felç olması sonucu akomodasyonun kaybolmasına siklopleji denir.",
+     "maskedTerm": "siklopleji",
+     "hint": "Gözde siliyer kas paralizisi sonucu yakın görme uyumunun felç olması durumu."
+    },
+    {
+     "id": "k39-s7-h1",
+     "type": "causal_chain",
+     "title": "Gözde Siklopleji ve Midriyazis Mekanizması",
+     "steps": [
+      "1. Korneal Geçiş: Topikal antimuskarinik damlanın korneayı geçerek ön kamaraya ulaşması",
+      "2. Reseptör Blokajı: Sfinkter pupilla ve siliyer kas M3 reseptörlerinin bloke edilmesi",
+      "3. Pasif Midriyazis: Sfinkter kasın gevşemesiyle pupillanın genişlemesi ve fotofobi gelişmesi",
+      "4. Akomodasyon Kaybı: Siliyer kasın gevşeyip zonülleri germesi ve lensin yakın uyumunu kaybetmesi"
+     ]
+    },
+    {
+     "id": "k39-s7-r1",
+     "type": "active_recall",
+     "question": "Skopolaminin terapötik dozda atropinden farklı olan en belirgin merkezi sinir sistemi etkisi nedir?",
+     "answer": "Kan-beyin bariyerini hızla geçerek belirgin sedasyon, uyuşukluk ve kısa süreli amnezi oluşturmasıdır."
+    }
+   ],
+   "bolum": 3,
+   "pdfSayfalari": [
+    12,
+    14
+   ],
+   "sourcePdf": {
+    "name": "y25-k2-39-kolinoseptor-bloke-edici-ilaclar.pdf",
+    "startPage": 12,
+    "endPage": 14
+   }
+  },
+  {
+   "slideNumber": 8,
+   "title": "Organ Sistemleri: Kardiyovasküler Sistem Yanıtları",
+   "content": "Kardiyovasküler sistemde sinoatriyal düğüm vagal kolinerjik tonusa son derece duyarlıdır. Atropinin kalp hızı üzerindeki etkisi doza bağımlı iki fazlı bir seyir izler.\n\n- **Düşük Doz Yanıtı:** Düşük dozlarda (0.4-0.5 mg) başlangıçta paradoksal bir bradikardi görülür. Bu durum santral vagal çekirdek uyarımı ve presinaptik M1 otoreseptör blokajı ile asetilkolin salınımının artmasından kaynaklanır.\n- **Terapötik ve Yüksek Doz:** Orta ve yüksek dozlarda (1-2 mg) sinoatriyal düğümdeki M2 reseptörleri tamamen bloke edilir; parasempatik baskı kalkar ve belirgin taşikardi ortaya çıkar.\n- **Atriyoventriküler İletim:** AV düğümde iletim hızlanır, PR aralığı kısalır ve vagal kaynaklı iletim blokları çözülür.\n- **Damar Yatağı:** Damar düz kasında parasempatik inervasyon bulunmaz; ancak endoteldeki muskarinik reseptörlerin ekzojen uyarana bağlı vazodilatasyonu atropinle tamamen bloke edilir.\n\n> [!NOTE] Toksik atropin dozlarında kompanse edici kutanöz damar dilatasyonu gelişir (atropin kızarıklığı).",
+   "interactiveElements": [
+    {
+     "id": "k39-s8-q1",
+     "type": "micro_quiz",
+     "question": "Düşük doz atropin uygulamasında başlangıçta görülen paradoksal bradikardinin temel mekanizması nedir?",
+     "options": [
+      {
+       "text": "Sinoatriyal düğümdeki M2 reseptörlerinin doğrudan uyarılması",
+       "isCorrect": false,
+       "explanation": "Atropin kompetitif bir muskarinik reseptör antagonistidir ve parasempatik iletiyi yarışmalı olarak durdurur. Reseptörleri doğrudan aktive etme veya agonist gibi davranma özelliği göstermez."
+      },
+      {
+       "text": "Santral vagal stimülasyon ve presinaptik M1 otoreseptör blokajı ile asetilkolin salınımının artması",
+       "isCorrect": true,
+       "explanation": "Düşük doz atropin santral vagal çekirdekleri uyarır ve kolinerjik sinir uçlarındaki inhibitör M1 otoreseptörlerini bloke ederek sinaptik aralığa asetilkolin salınımını artırır ve bradikardi yapar."
+      },
+      {
+       "text": "Miyokard beta-1 adrenerjik reseptörlerinin tamamen bloke edilmesi",
+       "isCorrect": false,
+       "explanation": "Atropin adrenerjik reseptörler üzerinde hiçbir bloke edici etki göstermez; beta blokör farmakolojisinden tamamen bağımsız olarak muskarinik kolinoseptörleri hedefler."
+      },
+      {
+       "text": "Periferik damarlarda ani vazokonstriksiyon ile hipertansif kriz gelişmesi",
+       "isCorrect": false,
+       "explanation": "Atropin küçük dozlarda santral vagal motor çekirdekleri uyararak parasempatik kolinerjik deşarjı geçici olarak tetikler. Bu durum periferik vasküler spazma yol açmaz ve kan basıncını aniden fırlatmaz."
+      }
+     ]
+    },
+    {
+     "id": "k39-s8-c1",
+     "type": "cloze_masking",
+     "sentence": "Orta ve yüksek doz atropin sinoatriyal düğümdeki M2 reseptörlerini bloke ederek taşikardi oluşturur.",
+     "maskedTerm": "taşikardi",
+     "hint": "Parasempatik vagal baskı kalkınca kalp atım hızının yükselmesi durumu."
+    },
+    {
+     "id": "k39-s8-h1",
+     "type": "causal_chain",
+     "title": "Terapötik Doz Atropinin Taşikardi Oluşturma Zinciri",
+     "steps": [
+      "1. İlaç Dağılımı: Terapötik doz atropinin sinoatriyal düğüm dokusuna ulaşması",
+      "2. M2 Blokajı: SA düğüm miyositlerindeki M2 muskarinik reseptörlerin bloke edilmesi",
+      "3. Vagal Baskının Kalkması: Parasempatik vagal baskılayıcı tonusun tamamen ortadan kalkması",
+      "4. Hız Artışı: İntrinsik hızın ve sempatik tonusun baskın hale gelerek taşikardi üretmesi"
+     ]
+    },
+    {
+     "id": "k39-s8-r1",
+     "type": "active_recall",
+     "question": "Atropinin atriyoventriküler düğüm iletimi ve elektrokardiyogramdaki PR aralığı üzerindeki etkisi nasıldır?",
+     "answer": "AV düğümde iletimi hızlandırır, iletim gecikmesini azaltır ve PR aralığını kısaltır."
+    }
+   ],
+   "bolum": 3,
+   "pdfSayfalari": [
+    15,
+    17
+   ],
+   "sourcePdf": {
+    "name": "y25-k2-39-kolinoseptor-bloke-edici-ilaclar.pdf",
+    "startPage": 15,
+    "endPage": 17
+   }
+  },
+  {
+   "slideNumber": 9,
+   "title": "Organ Sistemleri: Solunum ve Gastrointestinal Sistem Etkileri",
+   "content": "Antimuskarinik ilaçlar bronşiyal hava yolları ve gastrointestinal kanal üzerinde güçlü parasempatolitik etkiler sergiler.\n\n- **Solunum Sistemi:** Bronş düz kaslarındaki M3 reseptör blokajı bronkodilatasyon sağlar. Aynı zamanda burun, farenks, trakea ve bronş mukozasındaki sekretuar bezlerin salgısı belirgin şekilde kurur.\n- **Mukosiliyer Temizleme:** Sekresyonların kuruması hava yolu direncini düşürür ancak mukosiliyer klirens hızını yavaşlatabilir.\n- **Gastrointestinal Motilite:** Mide ve bağırsak düz kasındaki muskarinik blokaj tonusu, peristaltik dalga amplitüdünü ve kontraktiliteyi azaltır. Mide boşalması gecikir ve intestinal transit uzar.\n- **Gastrointestinal Sekresyonlar:** Mide asit hacmi ve pepsinojen salgısı yüksek dozlarda azalır; tükürük salgısı ise çok düşük dozlarda bile tamamen kesilerek şiddetli ağız kuruluğu (kserostomi) oluşturur.\n\n> [!IMPORTANT] Tükürük bezleri atropin blokajına en duyarlı organlardan biridir; tedavi alan hastalarda ağız kuruluğu ilk beliren belirtidir.",
+   "interactiveElements": [
+    {
+     "id": "k39-s9-q1",
+     "type": "micro_quiz",
+     "question": "Antimuskarinik ilaçların gastrointestinal kanal motilitesi üzerindeki temel etkisi hangisidir?",
+     "options": [
+      {
+       "text": "Peristaltizmi hızlandırarak şiddetli diyare oluşturmak",
+       "isCorrect": false,
+       "explanation": "Antimuskarinik ilaçlar parasempatik kolinerjik tonusu baskılayarak motiliteyi yavaşlatan ajanlardır; barsak hareketlerini hızlandırarak sulu ishale yol açmazlar."
+      },
+      {
+       "text": "Mide boşalmasını hızlandırmak ve mide tonusunu artırmak",
+       "isCorrect": false,
+       "explanation": "Antimuskarinikler mide düz kas tonusunu ve peristaltik dalgaları azaltan ilaçlardır; mide boşalmasını hızlandırmaz, tam tersine belirgin şekilde geciktirirler."
+      },
+      {
+       "text": "Düz kas tonusunu ve peristaltik dalga amplitüdünü azaltarak kabızlık oluşturmak",
+       "isCorrect": true,
+       "explanation": "Muskarinik blokaj enterik düz kas tonusunu ve peristaltik dalgaları zayıflatarak intestinal geçişi uzatır ve konstipasyon meydana getirir."
+      },
+      {
+       "text": "Safra kesesini kasarak akut biliyer koliği tetiklemek",
+       "isCorrect": false,
+       "explanation": "Antimuskarinikler safra yolları düz kaslarında hafif spazmolitik etki gösteren moleküllerdir; safra kesesini kasarak biliyer kolik ağrısı tetiklemezler."
+      }
+     ]
+    },
+    {
+     "id": "k39-s9-c1",
+     "type": "cloze_masking",
+     "sentence": "Antimuskarinik ilaçların tükürük bezlerini bloke etmesi sonucu gelişen şiddetli ağız kuruluğuna kserostomi adı verilir.",
+     "maskedTerm": "kserostomi",
+     "hint": "Tükürük bezlerinin baskılanmasıyla ortaya çıkan şiddetli ağız kuruluğu tıbbi tablosu."
+    },
+    {
+     "id": "k39-s9-h1",
+     "type": "causal_chain",
+     "title": "Solunum Sisteminde Bronkodilatasyon Zinciri",
+     "steps": [
+      "1. Submukozal Dağılım: Antimuskarinik ajanın hava yolu submukozal dokusuna ulaşması",
+      "2. M3 Reseptör Blokajı: Bronş düz kas hücrelerindeki Gq kenetli M3 reseptörlerinin bloke edilmesi",
+      "3. Kalsiyum Düşüşü: Hücre içi kalsiyum salınımının durması ve düz kas liflerinin gevşemesi",
+      "4. Bronkodilatasyon: Hava yolu lümeninin genişleyerek bronkodilatasyon ve sekresyon kuruması sağlanması"
+     ]
+    },
+    {
+     "id": "k39-s9-r1",
+     "type": "active_recall",
+     "question": "Antimuskarinik ilaç uygulandığında en erken baskılanan ekzokrin salgı hangisidir?",
+     "answer": "Tükürük salgısıdır; çok düşük atropin dozlarında bile hızla kuruyarak kserostomi oluşturur."
+    }
+   ],
+   "bolum": 3,
+   "pdfSayfalari": [
+    18,
+    20
+   ],
+   "sourcePdf": {
+    "name": "y25-k2-39-kolinoseptor-bloke-edici-ilaclar.pdf",
+    "startPage": 18,
+    "endPage": 20
+   }
+  },
+  {
+   "slideNumber": 10,
+   "title": "Organ Sistemleri: Ter Bezleri, Üriner Sistem ve Doz Hiyerarşisi",
+   "content": "Antimuskarinik ilaçların ter bezleri ve mesane üzerindeki etkileri sistemik klinik açıdan kritik öneme sahiptir.\n\n- **Ter Bezleri ve Anhidroz:** Ekrin ter bezleri sempatik liflerle inerve edilmesine karşın nörotransmitteri asetilkolindir ve M3 reseptörleri taşır. Atropin bu reseptörleri bloke ederek terlemeyi tamamen durdurur (anhidroz).\n- **Atropin Ateşi:** Terleme durunca buharlaşma ile ısı kaybı engellenir; erişkinlerde yüksek dozda, bebek ve küçük çocuklarda ise olağan dozlarda bile tehlikeli hipertermi (atropin ateşi) gelişir.\n- **Mesane ve Üriner Retansiyon:** Mesane detrüsör düz kası gevşer, trigon ve iç sfinkter kasılır. Bu durum mesane kapasitesini artırır ve idrar yapmayı güçleştirerek akut retansiyona neden olur.\n- **Doz Hiyerarşisi:** Artan atropin dozlarında ilk önce tükürük ve ter durur; ardından kalp hızı artar ve göz etkileri (midriyazis) belirir; barsak motilitesi ve mide asidini baskılamak için en yüksek dozlar gerekir.\n\n> [!IMPORTANT] Prostat hipertrofisi olan erkek hastalarda detrüsörün gevşemesi akut ağrılı idrar retansiyonunu tetikleyebilir.",
+   "interactiveElements": [
+    {
+     "id": "k39-s10-q1",
+     "type": "micro_quiz",
+     "question": "Ekrin ter bezlerinin otonomik inervasyon ve reseptör özellikleri hakkında hangisi doğrudur?",
+     "options": [
+      {
+       "text": "Parasempatik kolinerjik inervasyon taşır ve M2 reseptörlerine sahiptir",
+       "isCorrect": false,
+       "explanation": "Ekrin ter bezleri anatomik olarak sempatik torakolomber sistem tarafından inerve edilen yapılardır. Ter salgısını sempatik kolinerjik liflerle yürütür; parasempatik inervasyona veya M2 aracılığına dayanmaz."
+      },
+      {
+       "text": "Sempatik kolinerjik inervasyon taşır ve M3 reseptörleri aracılığıyla terletir",
+       "isCorrect": true,
+       "explanation": "Termoregülatuar ekrin ter bezleri sempatik postgangliyonik liflerden asetilkolin salgılanmasıyla uyarılır ve M3 reseptörleri taşır; atropin bu iletiyi keserek anhidroz yapar."
+      },
+      {
+       "text": "Yalnızca alfa-1 adrenerjik reseptörler aracılığıyla terletir",
+       "isCorrect": false,
+       "explanation": "Termoregülasyon sağlayan ekrin ter bezleri sempatik kolinerjik liflerle kontrol edilen bezlerdir; primer olarak alfa-1 adrenerjik reseptörlerle terletmezler."
+      },
+      {
+       "text": "Atropin uygulamasından kesinlikle etkilenmez",
+       "isCorrect": false,
+       "explanation": "Atropin ekrin ter bezlerindeki muskarinik M3 reseptörlerini güçlü şekilde bloke eden bir ilaçtır; ter bezleri atropin uygulamasından derhal etkilenir."
+      }
+     ]
+    },
+    {
+     "id": "k39-s10-c1",
+     "type": "cloze_masking",
+     "sentence": "Terlemenin atropinle durması sonucu özellikle çocuklarda gelişen tehlikeli vücut sıcaklığı artışına atropin ateşi denir.",
+     "maskedTerm": "atropin ateşi",
+     "hint": "Anhidroza bağlı gelişen tehlikeli hiperterminin farmakolojik özel tanımı."
+    },
+    {
+     "id": "k39-s10-h1",
+     "type": "causal_chain",
+     "title": "Atropin Ateşi Patogenez Zinciri",
+     "steps": [
+      "1. Glandüler Ulaşım: Atropinin sempatik kolinerjik ekrin ter bezlerine ulaşması",
+      "2. M3 Reseptör Blokajı: Ekrin bez hücrelerindeki M3 muskarinik reseptörlerin bloke edilmesi",
+      "3. Anhidroz Gelişimi: Ter sekresyonunun tamamen kesilmesi ve cildin kuruması",
+      "4. Hipertermi Tetiklenmesi: Buharlaşma ile ısı kaybının durarak tehlikeli hipertermi oluşması"
+     ]
+    },
+    {
+     "id": "k39-s10-r1",
+     "type": "active_recall",
+     "question": "Atropinin doza bağımlı organ etki hiyerarşisinde en düşük dozda ve en yüksek dozda etkilenen sistemler hangileridir?",
+     "answer": "En düşük dozda tükürük ve ter bezleri (sekresyon durması); en yüksek dozda ise mide asit salgısı etkilenir."
+    }
+   ],
+   "bolum": 3,
+   "pdfSayfalari": [
+    21,
+    23
+   ],
+   "sourcePdf": {
+    "name": "y25-k2-39-kolinoseptor-bloke-edici-ilaclar.pdf",
+    "startPage": 21,
+    "endPage": 23
+   }
+  },
+  {
+   "slideNumber": 11,
+   "title": "[TEKRAR SAYFASI - CHECKPOINT 2] Organ Sistemleri ve Fizyopatolojik Yanıtlar",
+   "isCheckpoint": true,
+   "content": "Bu bölümde antimuskarinik ilaçların merkezi sinir sistemi, göz, kalp, solunum, sindirim, ter bezleri ve mesane üzerindeki fizyopatolojik etkileri ele alındı.\n\n- **Göz:** Sfinkter M3 blokajı pasif midriyazis, siliyer M3 blokajı siklopleji ve akomodasyon kaybı yapar.\n- **Kalp:** Düşük dozda presinaptik M1 blokajıyla paradoksal bradikardi; orta-yüksek dozda SA düğüm M2 blokajıyla taşikardi oluşur.\n- **Solunum:** Bronkodilatasyon ve solunum sekresyonlarında belirgin kuruma sağlanır.\n- **GİS ve Mesane:** Peristaltizm yavaşlar, kabızlık gelişir; mesane detrüsörü gevşeyerek idrar retansiyonu eğilimi artar.\n- **Ter Bezleri:** M3 blokajı ile terleme durur (anhidroz) ve çocuklarda atropin ateşi gelişir.\n\n> [!NOTE] Bu checkpoint organ sistemleri yanıtlarını pekiştirmektedir; bir sonraki bölümde klinik endikasyonlara geçilecektir.",
+   "interactiveElements": [
+    {
+     "id": "k39-s11-t1",
+     "type": "interactive_table",
+     "title": "Bölüm 2 Organ Sistemleri Etki Özeti Tablosu",
+     "tableHeaders": [
+      "Hedef Organ",
+      "Reseptör ve Mekanizma",
+      "Klinik Yanıt"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Göz Ön Segmenti",
+         "isMasked": false
+        },
+        {
+         "text": "M3 sfinkter ve siliyer blokajı",
+         "isMasked": true
+        },
+        {
+         "text": "Midriyazis ve siklopleji",
+         "isMasked": false
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Kardiyak Pacemaker",
+         "isMasked": false
+        },
+        {
+         "text": "M2 sinoatriyal blokaj",
+         "isMasked": false
+        },
+        {
+         "text": "Vagal tonus kalkması ve taşikardi",
+         "isMasked": true
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Termoregülatuar Deri",
+         "isMasked": false
+        },
+        {
+         "text": "M3 ekrin ter bezi blokajı",
+         "isMasked": true
+        },
+        {
+         "text": "Anhidroz ve atropin ateşi",
+         "isMasked": false
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k39-s11-v1",
+     "type": "venn_grid",
+     "title": "Düşük Doz ve Yüksek Doz Atropin Kalp Yanıtı",
+     "labelA": "Düşük Doz Atropin (0.5 mg)",
+     "labelB": "Yüksek Doz Atropin (1-2 mg)",
+     "items": [
+      {
+       "criterion": "Presinaptik M1 blokajı ve geçici bradikardi oluşturma",
+       "correct": "A"
+      },
+      {
+       "criterion": "Sinoatriyal düğüm M2 blokajı ile belirgin taşikardi yapma",
+       "correct": "B"
+      },
+      {
+       "criterion": "Muskarinik kolinerjik reseptörlerle yarışmalı etkileşme",
+       "correct": "both"
+      },
+      {
+       "criterion": "Miyokardda beta adrenerjik reseptörleri doğrudan uyarma",
+       "correct": "neither"
+      }
+     ]
+    },
+    {
+     "id": "k39-s11-l1",
+     "type": "spot_the_lie",
+     "topic": "Organ Sistemleri Etkileri İlkeleri",
+     "items": [
+      {
+       "text": "Atropin siliyer kası felç ederek akomodasyon kaybı (siklopleji) yapar.",
+       "isLie": false,
+       "explanation": "Siliyer M3 blokajı akomodasyon felcine ve yakın görme bozukluğuna yol açar."
+      },
+      {
+       "text": "Terapötik doz atropin sinoatriyal düğüm M2 blokajı ile taşikardi yapar.",
+       "isLie": false,
+       "explanation": "M2 blokajı vagal inhibitör tonusu kaldırarak kalp hızını yükseltir."
+      },
+      {
+       "text": "Atropin terlemeyi aşırı artırarak hipotermi ve titremeye neden olur.",
+       "isLie": true,
+       "explanation": "Atropin terlemeyi tamamen durdurarak (anhidroz) hipertermi ve atropin ateşi yapar."
+      },
+      {
+       "text": "Tükürük salgısının kesilmesi atropin blokajına en erken yanıt veren etkidir.",
+       "isLie": false,
+       "explanation": "Tükürük bezleri atropin blokajına en yüksek duyarlılığı gösterir."
+      }
+     ]
+    },
+    {
+     "id": "k39-s11-r1",
+     "type": "active_recall",
+     "question": "Gözde pasif midriyazis ile sikloplejinin etkilediği kas yapıları sırasıyla nelerdir?",
+     "answer": "Midriyazis pupilla sfinkter kasının gevşemesiyle; siklopleji ise siliyer kasın felç olmasıyla gerçekleşir."
+    }
+   ]
+  },
+  {
+   "slideNumber": 12,
+   "title": "Klinik Endikasyonlar: Oftalmoloji ve Nörolojik Bozukluklar",
+   "content": "Antimuskarinik ilaçlar oftalmolojik tanı işlemlerinde ve nörolojik hastalıklarda yaygın kullanım alanına sahiptir.\n\n- **Oftalmolojik Muayene:** Doğru refraksiyon kusuru ölçümü ve ayrıntılı fundus muayenesi için midriyazis ve siklopleji oluşturulur. En kısa etki süreli ajan yaklaşık 6 saatlik (0.25-1 gün) etkisiyle tropikamiddir. Siklopentolat 1 gün, atropin ise 7-10 gün sürer.\n- **Erişkin Tercihi:** Erişkinlerde görme kaybı süresini kısa tutmak için kısa etkili tropikamid veya siklopentolat tercih edilir.\n- **Parkinson Hastalığı:** Bazal gangliyonlarda dopamin azalması bağıl kolinerjik aşırılığa yol açar. Tersiyer amin yapılı benztropin ve biperiden kolinerjik aşırılığı dengeleyerek titreme (tremor) ve rijiditeyi belirgin şekilde azaltır.\n- **Taşıt Tutması (Kinetoz):** Vestibüler uyarılara bağlı bulantı ve kusmanın önlenmesinde transdermal skopolamin bandı kulak arkasına uygulanarak profılakside altın standart oluşturur.\n\n> [!NOTE] Çocuklarda sikloplejik refraksiyon için bazen siklopentolat veya atropin gerekebilir ancak sistemik toksisite riski yüksektir.",
+   "interactiveElements": [
+    {
+     "id": "k39-s12-q1",
+     "type": "micro_quiz",
+     "question": "Göz muayenesinde fundus incelemesi için midriyazis oluşturan, etki süresi en kısa olan antimuskarinik göz damlası hangisidir?",
+     "options": [
+      {
+       "text": "Atropin",
+       "isCorrect": false,
+       "explanation": "Atropin gözde yedi ila on gün süren en uzun etkili antimuskariniktir; rutin fundus muayenesi için etkisi aşırı uzun süren bir ilaçtır."
+      },
+      {
+       "text": "Skopolamin",
+       "isCorrect": false,
+       "explanation": "Skopolamin oftalmolojik damla olarak üç ila yedi gün boyunca midriyazis oluşturan güçlü bir alkaloiddir. Uzun süreli üveit tedavisinde kullanılır; kısa süreli tanısal göz dibi muayenesinde tercih edilmez."
+      },
+      {
+       "text": "Homatropin",
+       "isCorrect": false,
+       "explanation": "Homatropin bir ila üç günlük orta etki süresine sahip yarı-sentetik bir moleküldür; tropikamidden belirgin şekilde daha uzun süre siklopleji yapar."
+      },
+      {
+       "text": "Tropikamid",
+       "isCorrect": true,
+       "explanation": "Tropikamid yaklaşık altı saatlik (0.25-1 gün) etkisiyle oftalmolojide en kısa etkili sikloplejik ve midriyatik göz damlasıdır."
+      }
+     ]
+    },
+    {
+     "id": "k39-s12-c1",
+     "type": "cloze_masking",
+     "sentence": "Taşıt tutması profilaksisinde kulak arkasına transdermal yama şeklinde uygulanan en etkili antimuskarinik skopolamin molekülüdür.",
+     "maskedTerm": "skopolamin",
+     "hint": "Banotundan elde edilen ve vestibüler yolları baskılayan tersiyer doğal alkaloid."
+    },
+    {
+     "id": "k39-s12-t1",
+     "type": "interactive_table",
+     "title": "Oftalmolojik Antimuskarinik İlaçların Etki Süreleri",
+     "tableHeaders": [
+      "İlaç",
+      "Siklopleji Süresi",
+      "Klinik Tercih Nedeni"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Tropikamid",
+         "isMasked": false
+        },
+        {
+         "text": "0.25 - 1 gün (yaklaşık 6 saat)",
+         "isMasked": true
+        },
+        {
+         "text": "Rutin muayenede en kısa etkili ajan",
+         "isMasked": false
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Siklopentolat",
+         "isMasked": false
+        },
+        {
+         "text": "1 gün (24 saat)",
+         "isMasked": false
+        },
+        {
+         "text": "Çocuklarda refraksiyon tespiti",
+         "isMasked": true
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Atropin",
+         "isMasked": false
+        },
+        {
+         "text": "7 - 10 gün",
+         "isMasked": true
+        },
+        {
+         "text": "Üveit tedavisi ve tam siliyer istirahat",
+         "isMasked": false
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k39-s12-r1",
+     "type": "active_recall",
+     "question": "Parkinson hastalığında titreme ve rijiditeyi azaltmak için benztropin ve biperiden kullanılmasının biyokimyasal gerekçesi nedir?",
+     "answer": "Dopamin azlığına bağlı gelişen bağıl kolinerjik hiperaktiviteyi striatal muskarinik reseptörleri bloke ederek dengelemektir."
+    }
+   ],
+   "bolum": 4,
+   "pdfSayfalari": [
+    24,
+    26
+   ],
+   "sourcePdf": {
+    "name": "y25-k2-39-kolinoseptor-bloke-edici-ilaclar.pdf",
+    "startPage": 24,
+    "endPage": 26
+   }
+  },
+  {
+   "slideNumber": 13,
+   "title": "Klinik Endikasyonlar: Solunum ve Kardiyovasküler Hastalıklar",
+   "content": "Solunum yolları ve kardiyovasküler aciller antimuskarinik tedavinin hayat kurtarıcı olduğu başlıca alanlardır.\n\n- **KOAH ve Astım:** İpratropium kısa etkili antimuskarinik (SAMA) olup akut bronkospazm alevlenmelerinde inhale beta agonistlerle kombine edilir. Tiotropium, aklidinyum ve umeklidinyum ise M3 reseptörlerinden yavaş ayrılan uzun etkili (LAMA) bronkodilatörlerdir ve KOAH idamesinde günde tek doz kullanılır.\n- **Kuvaterner Üstünlüğü:** Bu moleküller kuvaterner yapıda oldukları için sistemik dolaşıma ve beyne geçmezler; kardiyak ve santral yan etkileri minimaldir.\n- **Preanestezik Medikasyon:** Cerrahi öncesi atropin veya glikopirolat verilmesi, laringoskopi ve entübasyonun tetiklediği refleks vagal bradikardiyi önler ve solunum salgılarını kurutur.\n- **Kardiyovasküler Aciller:** Akut inferior miyokard enfarktüsünde aşırı vagal deşarja bağlı semptomatik sinüs bradikardisi ve hemodinamiyi bozan AV tam bloklarda intravenöz atropin ilk basamak tedavidir.\n\n> [!IMPORTANT] İntravenöz atropin semptomatik bradikardide kalp debisini hızla düzelterek doku perfüzyonunu korur.",
+   "interactiveElements": [
+    {
+     "id": "k39-s13-q1",
+     "type": "micro_quiz",
+     "question": "KOAH idame tedavisinde günde tek doz inhalasyonla 24 saat bronkodilatasyon sağlayan uzun etkili antimuskarinik (LAMA) hangisidir?",
+     "options": [
+      {
+       "text": "İpratropium",
+       "isCorrect": false,
+       "explanation": "İpratropium kısa etkili bir antimuskariniktir (SAMA); etkisi dört ila altı saat sürer ve akut alevlenmelerde tercih edilir."
+      },
+      {
+       "text": "Tiotropium",
+       "isCorrect": true,
+       "explanation": "Tiotropium M3 reseptörlerinden çok yavaş ayrılan kuvaterner yapılı uzun etkili antimuskarinik (LAMA) ajandır ve KOAH idamesinde günde tek doz verilir."
+      },
+      {
+       "text": "Atropin sülfat",
+       "isCorrect": false,
+       "explanation": "Atropin sülfat sistemik emilimi yüksek ve yan etkileri fazla olan bir moleküldür; inhaler KOAH idame tedavisinde rutin olarak kullanılmaz."
+      },
+      {
+       "text": "Tropikamid",
+       "isCorrect": false,
+       "explanation": "Tropikamid oftalmolojik fundus muayenesinde kullanılan kısa etkili bir göz damlasıdır; solunum sisteminde inhalasyon yoluyla uygulanmaz."
+      }
+     ]
+    },
+    {
+     "id": "k39-s13-c1",
+     "type": "cloze_masking",
+     "sentence": "Akut miyokard enfarktüsünde gelişen semptomatik sinüs bradikardisi ve AV blok tedavisinde intravenöz atropin ilk basamak ilaçtır.",
+     "maskedTerm": "atropin",
+     "hint": "Vagal inhibitör tonusu kaldırarak kalp hızını artıran prototip molekül."
+    },
+    {
+     "id": "k39-s13-h1",
+     "type": "causal_chain",
+     "title": "Miyokard Enfarktüsünde Bradikardi Çözüm Zinciri",
+     "steps": [
+      "1. Vagal Deşarj: İnferior miyokard iskemisinde aşırı vagal refleks deşarjın başlaması",
+      "2. Atropin Bolusu: İntravenöz atropin verilerek SA düğüm M2 reseptörlerinin bloke edilmesi",
+      "3. Vagal Baskının Kalkması: Vagus sinirinin kardiyak inhibitör etkisinin ortadan kalkması",
+      "4. Debinin Korunması: Kalp hızının yükselerek hipotansiyon ve doku hipoperfüzyonunun önlenmesi"
+     ]
+    },
+    {
+     "id": "k39-s13-r1",
+     "type": "active_recall",
+     "question": "İnhaler ipratropium ve tiotropiumun sistemik kardiyak yan etki oluşturmama nedeni nedir?",
+     "answer": "Kuvaterner amin yapısında olmaları sebebiyle akciğerden sistemik dolaşıma çok az emilmeleridir."
+    }
+   ],
+   "bolum": 4,
+   "pdfSayfalari": [
+    27,
+    30
+   ],
+   "sourcePdf": {
+    "name": "y25-k2-39-kolinoseptor-bloke-edici-ilaclar.pdf",
+    "startPage": 27,
+    "endPage": 30
+   }
+  },
+  {
+   "slideNumber": 14,
+   "title": "Klinik Endikasyonlar: Gastrointestinal Spazm ve Aşırı Aktif Mesane",
+   "content": "Gastrointestinal kanal ve alt üriner sistem düz kas spazmları antimuskarinik ilaçların en sık reçete edildiği alanlardandır.\n\n- **GİS Spazmolitikleri:** Turist diyaresi, irritabl barsak sendromu krampları ve divertikülit ağrılarında disiklomin ve propantelin gibi antimuskarinikler barsak spazmlarını çözerek semptomatik rahatlama sağlar.\n- **Aşırı Aktif Mesane ve İnkontinans:** Detrüsör kasının istemsiz kasılmaları ani sıkışma (urgency) ve idrar kaçırmaya yol açar. Oksibutinin, tolterodin, darifenasin ve solifenasin detrüsör kasını gevşeterek mesane kapasitesini artırır.\n- **M3 Seçiciliğinin Yararı:** Darifenasin ve solifenasin M3 reseptörlerine seçici bağlanarak tükürük bezlerini ve kalbi daha az etkiler; ağız kuruluğu yan etkisi daha düşüktür.\n- **Trospiumun Yaşlılardaki Üstünlüğü:** Trospium kuvaterner yapısıyla kan-beyin bariyerini aşamaz. Bu nedenle yaşlı ve demans riski taşıyan inkontinans hastalarında kognitif fonksiyonları bozmadan güvenle kullanılır.\n\n> [!NOTE] Prostatektomi sonrası gelişen ağrılı mesane spazmlarında da oksibutinin etkin bir rahatlama sağlar.",
+   "interactiveElements": [
+    {
+     "id": "k39-s14-q1",
+     "type": "micro_quiz",
+     "question": "Aşırı aktif mesane tedavisi gören yaşlı bir hastada santral konfüzyon ve hafıza kusuru riskini en aza indiren kuvaterner amin yapılı ilaç hangisidir?",
+     "options": [
+      {
+       "text": "Oksibutinin",
+       "isCorrect": false,
+       "explanation": "Oksibutinin tersiyer amin yapısıyla kan-beyin bariyerini aşarak merkezi sinir sistemine geçer; yaşlılarda kognitif bozukluk ve deliryum riski taşır."
+      },
+      {
+       "text": "Tolterodin",
+       "isCorrect": false,
+       "explanation": "Tolterodin tersiyer amin yapılı bir ürolojik ilaçtır; aktif metaboliti kan-beyin bariyerini geçerek santral sinir sistemi yan etkileri oluşturabilir."
+      },
+      {
+       "text": "Trospium",
+       "isCorrect": true,
+       "explanation": "Trospium kuvaterner amindir; kalıcı pozitif iyonize yükü sebebiyle kan-beyin bariyerini aşamaz ve yaşlılarda kognitif yan etki oluşturmaz."
+      },
+      {
+       "text": "Atropin",
+       "isCorrect": false,
+       "explanation": "Atropin tersiyer yapısıyla santral sinir sistemine hızla nüfuz eden bir alkaloiddir; yaşlılarda aşırı aktif mesane tedavisinde tercih edilmez."
+      }
+     ]
+    },
+    {
+     "id": "k39-s14-c1",
+     "type": "cloze_masking",
+     "sentence": "Aşırı aktif mesane tedavisinde M3 reseptörlerine yüksek seçicilik göstererek ağız kuruluğunu azaltan ilaç darifenasin molekülüdür.",
+     "maskedTerm": "darifenasin",
+     "hint": "M3 muskarinik reseptör alt tipine seçici tersiyer ürolojik ajan."
+    },
+    {
+     "id": "k39-s14-t1",
+     "type": "interactive_table",
+     "title": "Ürolojik Antimuskarinik İlaçların Karşılaştırması",
+     "tableHeaders": [
+      "İlaç",
+      "Kimyasal Yapı",
+      "Reseptör Profili",
+      "Klinik Özellik"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Oksibutinin",
+         "isMasked": false
+        },
+        {
+         "text": "Tersiyer amin",
+         "isMasked": false
+        },
+        {
+         "text": "Non-selektif muskarinik",
+         "isMasked": true
+        },
+        {
+         "text": "Kserostomi riski yüksek",
+         "isMasked": false
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Darifenasin",
+         "isMasked": false
+        },
+        {
+         "text": "Tersiyer amin",
+         "isMasked": false
+        },
+        {
+         "text": "M3 seçici blokaj",
+         "isMasked": true
+        },
+        {
+         "text": "Daha az ağız kuruluğu ve kardiyak yan etki",
+         "isMasked": false
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Trospium",
+         "isMasked": false
+        },
+        {
+         "text": "Kuvaterner amin",
+         "isMasked": true
+        },
+        {
+         "text": "Periferik non-selektif",
+         "isMasked": false
+        },
+        {
+         "text": "KBB geçemez, yaşlılarda güvenli",
+         "isMasked": false
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k39-s14-r1",
+     "type": "active_recall",
+     "question": "Aşırı aktif mesane tedavisinde M3 reseptör seçiciliğinin hastalara sağladığı en belirgin klinik fayda nedir?",
+     "answer": "Kardiyak M2 reseptörlerini koruyarak taşikardiyi önlemesi ve tükürük bezlerinde daha az kuruluk oluşturmasıdır."
+    }
+   ],
+   "bolum": 4,
+   "pdfSayfalari": [
+    31,
+    34
+   ],
+   "sourcePdf": {
+    "name": "y25-k2-39-kolinoseptor-bloke-edici-ilaclar.pdf",
+    "startPage": 31,
+    "endPage": 34
+   }
+  },
+  {
+   "slideNumber": 15,
+   "title": "Kolinerjik Zehirlenmeler ve Atropinizasyon İlkeleri",
+   "content": "Organofosfat ve karbamat grubu böcek ilaçları ile sinir gazları (sarin, tabun, soman) asetilkolinesteraz enzimini geri dönüşümsüz veya uzamış şekilde inhibe ederek sinaptik aralıkta aşırı asetilkolin birikimine yol açar.\n\n- **Kolinerjik Kriz Bulguları:** Aşırı muskarinik deşarj DUMBELS bulguları ile seyreder: Defekasyon, Ürinasyon, Miyozis, Bronkospazm, Emesis (kusma), Lakrimasyon ve aşırı Salivasyon.\n- **Ölüm Nedeni:** Hastalar aşırı trakeobronşiyal salgılar içinde boğularak ve şiddetli bronkokonstriksiyona bağlı asfiksiden kaybedilir.\n- **Atropinizasyon Protokolü:** İntravenöz atropin başlangıçta 1-2 mg bolus uygulanır ve klinik hedeflere ulaşılana kadar her 5-10 dakikada bir doz katlanarak tekrarlanır.\n- **Klinik Hedefler:** Atropinizasyonun yeterli kabul edilmesi için pupillerin genişlemesi (midriyazis), kalp hızının düzelmesi ve en önemlisi akciğer seslerinin temizlenerek bronşiyal sekresyonların tamamen kuruması şarttır.\n\n> [!IMPORTANT] Atropin muskarinik hiperaktiviteyi mükemmel şekilde kontrol eder; ancak iskelet kasındaki nikotinik kavşağa etki edemez.",
+   "interactiveElements": [
+    {
+     "id": "k39-s15-q1",
+     "type": "micro_quiz",
+     "question": "Organofosfat zehirlenmesinde uygulanan atropin tedavisinde yeterli atropinizasyonun en kritik klinik göstergesi hangisidir?",
+     "options": [
+      {
+       "text": "İskelet kası fasikülasyonlarının tamamen durması",
+       "isCorrect": false,
+       "explanation": "Atropin nöromüsküler kavşaktaki nikotinik reseptörleri etkilemeyen bir muskarinik blokördür; bu nedenle çizgili kas fasikülasyonlarını durduramaz."
+      },
+      {
+       "text": "Akciğer rallerinin kaybolması ve trakeobronşiyal sekresyonların kuruması",
+       "isCorrect": true,
+       "explanation": "Trakeobronşiyal sekresyonların kuruması ve bronkospazmın çözülmesi hastayı asfiksiden kurtaran en hayati atropinizasyon klinik sonlanım noktasıdır."
+      },
+      {
+       "text": "Vücut sıcaklığının kırk dereceye kadar yükseltilmesi",
+       "isCorrect": false,
+       "explanation": "Aşırı vücut sıcaklığı yükselmesi anhidroza bağlı tehlikeli bir toksisite komplikasyonudur; organofosfat tedavisinde asla terapötik hedef olamaz."
+      },
+      {
+       "text": "Kan basıncının iki yüz milimetre cıva üzerine çıkarılması",
+       "isCorrect": false,
+       "explanation": "Atropinizasyonun klinik hedefi kardiyovasküler stabiliteyi sağlamak ve solunum yolundaki ölümcül sekresyonları kurutmaktır. Tedavide amaç tansiyonu tehlikeli seviyelere yükseltmek değildir."
+      }
+     ]
+    },
+    {
+     "id": "k39-s15-c1",
+     "type": "cloze_masking",
+     "sentence": "Organofosfat zehirlenmesinde aşırı muskarinik uyarımı yarışmalı olarak durdurmak için yüksek doz intravenöz atropin uygulanır.",
+     "maskedTerm": "atropin",
+     "hint": "Kolinerjik krizde muskarinik reseptörleri yarışmalı kapatan prototip panzehir."
+    },
+    {
+     "id": "k39-s15-h1",
+     "type": "causal_chain",
+     "title": "Kolinerjik Zehirlenme ve Asfiksi Zinciri",
+     "steps": [
+      "1. Enzim İnhibisyonu: Organofosfatın asetilkolinesteraz enzimini kovalent bağla inhibe etmesi",
+      "2. Asetilkolin Birikimi: Sinaptik aralıklarda ve kavşaklarda aşırı asetilkolin birikmesi",
+      "3. Sekresyon Seli: Yoğun bronkokonstriksiyon ve trakeobronşiyal mukus salgısı taşması",
+      "4. Atropinle Kurutma: Yüksek doz atropinle M3 reseptörlerinin bloke edilerek salgıların kurutulması"
+     ]
+    },
+    {
+     "id": "k39-s15-r1",
+     "type": "active_recall",
+     "question": "Organofosfat zehirlenmesinde atropin verilmesine rağmen iskelet kası felcinin ve diyafram zayıflığının düzelmeme nedeni nedir?",
+     "answer": "Atropin yalnızca muskarinik reseptörleri bloke eder; çizgili kas nöromüsküler kavşağındaki nikotinik reseptörlere etki edemez."
+    }
+   ],
+   "bolum": 5,
+   "pdfSayfalari": [
+    35,
+    36
+   ],
+   "sourcePdf": {
+    "name": "y25-k2-39-kolinoseptor-bloke-edici-ilaclar.pdf",
+    "startPage": 35,
+    "endPage": 36
+   }
+  },
+  {
+   "slideNumber": 16,
+   "title": "Kolinesteraz Reaktivatörleri: Pralidoksim ve Mantar Zehirlenmeleri",
+   "content": "Organofosfat zehirlenmesinde atropinin nikotinik kavşağa etki edememesi, enzim reaktivatörlerinin kullanılmasını zorunlu kılar.\n\n- **Pralidoksim (PAM) Etki Mekanizması:** Oksim grubuna sahip olan pralidoksim, fosforillenmiş asetilkolinesteraz enzimindeki fosforil grubuna yüksek afiniteyle bağlanır. Enzim-fosfor bağını kopararak aktif asetilkolinesterazı yeniden serbestleştirir.\n- **Nikotinik Kavşak Kurtarılması:** Enzim reaktive olunca çizgili kas kavşağındaki asetilkolin parçalanır; böylece iskelet kası fasikülasyonları ve hayatı tehdit eden diyafram felci düzelir.\n- **Yaşlanma (Aging) Kuralı:** Organofosfor-enzim kompleksinde zamanla bir alkil grubu kopar ve bağ kovalent kalıcı hale gelir (yaşlanma). Pralidoksim yaşlanma tamamlanmadan önce (ilk saatlerde) verilmelidir.\n- **Mantar Zehirlenmesi Ayrımı:** Hızlı başlayan İnosibe ve Klitosite mantarları doğrudan muskarin içerir; atropin tam tedavi sağlar. Geç başlayan Amanita phalloides ise amatoksin içerir; karaciğer nekrozu yapar ve atropin etkisizdir.\n\n> [!NOTE] Pralidoksim kuvaterner yapıda olduğu için kan-beyin bariyerini aşamaz; santral etkileri sınırlıdır.",
+   "interactiveElements": [
+    {
+     "id": "k39-s16-q1",
+     "type": "micro_quiz",
+     "question": "Organofosfat zehirlenmesinde Pralidoksimin (PAM) atropine göre en önemli üstünlüğü nedir?",
+     "options": [
+      {
+       "text": "Kan-beyin bariyerini atropinden daha hızlı aşması",
+       "isCorrect": false,
+       "explanation": "Pralidoksim kuvaterner yapılı bir oksim türevidir; kan-beyin bariyerini çok zayıf geçer ve merkezi sinir sistemi reaktivasyonu sınırlıdır."
+      },
+      {
+       "text": "Asetilkolinesterazı reaktive ederek nöromüsküler kavşaktaki çizgili kas felcini çözmesi",
+       "isCorrect": true,
+       "explanation": "Pralidoksim fosforil-enzim bağını kırarak enzimi reaktive eder; böylece atropinin etki edemediği nikotinik kavşak kas felcini ve solunum kası yetmezliğini çözer."
+      },
+      {
+       "text": "Amanita phalloides zehirlenmesinde karaciğer nekrozunu tamamen önlemesi",
+       "isCorrect": false,
+       "explanation": "Amanita phalloides amatoksin içerir ve RNA polimeraz II inhibisyonu yapar; pralidoksim bu toksisitede karaciğer nekrozunu engelleyemez."
+      },
+      {
+       "text": "Tükürük salgısını atropinden yüz kat daha hızlı kurutması",
+       "isCorrect": false,
+       "explanation": "Muskarinik ekzokrin bez sekresyonlarını kurutan temel panzehir atropindir. Pralidoksim ise enzim reaktivatörüdür ve bronşiyal salgıları doğrudan kurutucu farmakolojik etki göstermez."
+      }
+     ]
+    },
+    {
+     "id": "k39-s16-c1",
+     "type": "cloze_masking",
+     "sentence": "Organofosfor-enzim kompleksinde alkil grubunun kopması sonucu pralidoksimin enzimi artık reaktive edememesine yaşlanma denir.",
+     "maskedTerm": "yaşlanma",
+     "hint": "Enzim fosforil kovalent bağının geri dönüşümsüz hale gelmesi süreci (aging)."
+    },
+    {
+     "id": "k39-s16-h1",
+     "type": "causal_chain",
+     "title": "Pralidoksim ile Enzim Reaktivasyon Zinciri",
+     "steps": [
+      "1. İnaktif Kompleks: Organofosfat ile fosforillenmiş inaktif asetilkolinesteraz kompleksi",
+      "2. Oksim Saldırısı: Pralidoksimin oksim grubuyla fosfor atomuna nükleofilik saldırı yapması",
+      "3. Bağın Kopması: Fosforil-pralidoksim kompleksinin enzimatik aktif bölgeden ayrılması",
+      "4. Enzim Reaktivasyonu: Serbestleşen aktif enzimin kavşaktaki asetilkolini hızla parçalaması"
+     ]
+    },
+    {
+     "id": "k39-s16-r1",
+     "type": "active_recall",
+     "question": "Hızlı başlayan İnosibe mantar zehirlenmesi ile geç başlayan Amanita phalloides zehirlenmesinin temel farkı ve atropin yanıtı nedir?",
+     "answer": "İnosibe muskarin içerir, hızlı başlar ve atropin ile kür sağlanır; Amanita phalloides amatoksin içerir, karaciğer nekrozu yapar ve atropin etkisizdir."
+    }
+   ],
+   "bolum": 5,
+   "pdfSayfalari": [
+    37,
+    40
+   ],
+   "sourcePdf": {
+    "name": "y25-k2-39-kolinoseptor-bloke-edici-ilaclar.pdf",
+    "startPage": 37,
+    "endPage": 40
+   }
+  },
+  {
+   "slideNumber": 17,
+   "title": "[TEKRAR SAYFASI - CHECKPOINT 3] Klinik Endikasyonlar ve Zehirlenme Yönetimi",
+   "isCheckpoint": true,
+   "content": "Bu bölümde oftalmoloji, nöroloji, solunum, kardiyoloji, gastrointestinal ve ürolojik klinik kullanımlar ile organofosfat/mantar zehirlenmeleri özetlendi.\n\n- **Oftalmoloji ve Nöroloji:** Tropikamid kısa etkili muayene damlasıdır; skopolamin kinetozda, benztropin Parkinson'da kullanılır.\n- **Solunum ve Kalp:** KOAH'ta ipratropium (SAMA) ve tiotropium (LAMA); semptomatik sinüs bradikardisinde atropin ilk seçenektir.\n- **Mesane:** Aşırı aktif mesanede M3 seçici darifenasin ve KBB geçmeyen trospium kognitif yan etkisiz rahatlama sağlar.\n- **Kolinerjik Kriz:** Atropinizasyonun klinik hedefi solunum sekresyonlarının kurumasıdır.\n- **Reaktivatörler:** Pralidoksim yaşlanma olmadan verilerek nikotinik kavşaktaki çizgili kas paralizisini çözer.\n\n> [!NOTE] Bu checkpoint klinik kullanım ve toksikoloji basamaklarını pekiştirir; sonraki bölümde toksidrom ve gangliyon blokörleri incelenecektir.",
+   "interactiveElements": [
+    {
+     "id": "k39-s17-t1",
+     "type": "interactive_table",
+     "title": "Bölüm 3 Klinik İlaç Seçimi ve Zehirlenme Yönetimi",
+     "tableHeaders": [
+      "Klinik Durum",
+      "İlk Tercih İlaç",
+      "Seçim Nedeni ve Mekanizma"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Fundus Muayenesi",
+         "isMasked": false
+        },
+        {
+         "text": "Tropikamid damla",
+         "isMasked": true
+        },
+        {
+         "text": "6 saatlik en kısa etki süresi",
+         "isMasked": false
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Yaşlıda İnkontinans",
+         "isMasked": false
+        },
+        {
+         "text": "Trospium tablet",
+         "isMasked": false
+        },
+        {
+         "text": "Kuvaterner amin, KBB geçişi yok",
+         "isMasked": true
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Organofosfat Krizi",
+         "isMasked": false
+        },
+        {
+         "text": "Atropin + Pralidoksim",
+         "isMasked": true
+        },
+        {
+         "text": "Muskarinik kuruma + enzim reaktivasyonu",
+         "isMasked": false
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k39-s17-v1",
+     "type": "venn_grid",
+     "title": "Organofosfat Zehirlenmesinde Atropin ve Pralidoksim Karşılaştırması",
+     "labelA": "Atropin",
+     "labelB": "Pralidoksim (PAM)",
+     "items": [
+      {
+       "criterion": "Aşırı muskarinik sekresyonları ve bronkospazmı kurutma",
+       "correct": "A"
+      },
+      {
+       "criterion": "Asetilkolinesterazı reaktive edip çizgili kas felcini çözme",
+       "correct": "B"
+      },
+      {
+       "criterion": "Organofosfat toksisitesi tedavisinde hayat kurtarıcı rol alma",
+       "correct": "both"
+      },
+      {
+       "criterion": "Amanita phalloides amatoksin karaciğer nekrozunu engelleme",
+       "correct": "neither"
+      }
+     ]
+    },
+    {
+     "id": "k39-s17-l1",
+     "type": "spot_the_lie",
+     "topic": "Klinik Endikasyonlar ve Antidot İlkeleri",
+     "items": [
+      {
+       "text": "Tropikamid yaklaşık 6 saatlik etkisiyle oftalmolojide en kısa etkili ajandır.",
+       "isLie": false,
+       "explanation": "Muayene sonrası hızla görme netleşir."
+      },
+      {
+       "text": "Trospium kuvaterner yapısı sayesinde yaşlılarda konfüzyon yapmaz.",
+       "isLie": false,
+       "explanation": "Kan-beyin bariyerini aşamayarak bilişsel işlevleri korur."
+      },
+      {
+       "text": "Atropin iskelet kasındaki nikotinik kavşak felcini tek başına tamamen düzeltir.",
+       "isLie": true,
+       "explanation": "Atropin nikotinik kavşağa etki etmez, kas paralizisini çözmek için pralidoksim şarttır."
+      },
+      {
+       "text": "Pralidoksim enzim yaşlanması gerçekleşmeden önce erken verilmelidir.",
+       "isLie": false,
+       "explanation": "Yaşlanmış organofosfor-enzim kompleksi reaktive edilemez."
+      }
+     ]
+    },
+    {
+     "id": "k39-s17-r1",
+     "type": "active_recall",
+     "question": "Yaşlı bir hastada aşırı aktif mesane tedavisinde trospium tercih edilmesinin en temel gerekçesi nedir?",
+     "answer": "Kuvaterner amin yapısında olması nedeniyle kan-beyin bariyerini aşamaması ve demansı alevlendirmemesidir."
+    }
+   ]
+  },
+  {
+   "slideNumber": 18,
+   "title": "Toksisite: Antimuskarinik Toksidrom ve Fizostigmin Antidotu",
+   "content": "Antimuskarinik ilaçların dar bir terapötik aralığı vardır; doz aşımında hayatı tehdit eden sistemik bir toksidrom tablosu ortaya çıkar.\n\n- **Klasik Teksas Toksidromu:** 'Kör bir yarasa kadar kör (midriyazis ve siklopleji), kızıl bir pancar kadar kırmızı (kutanöz vazodilatasyon), bir kemik kadar kuru (anhidroz ve salgı yokluğu), bir cehennem gibi sıcak (hipertermi), bir şapkacı gibi deli (ajitasyon ve deliryum)'.\n- **Diğer Belirtiler:** Şiddetli sinüs taşikardisi, barsak seslerinin kaybolması (paralitik ileus) ve akut üriner retansiyon tabloya eşlik eder.\n- **Tedavi İlkeleri:** Çoğu olgu semptomatik soğutma, sedasyon ve idrar sondası takılmasıyla izlenir.\n- **Spesifik Antidot Fizostigmin:** Hayatı tehdit eden şiddetli deliryum, kontrolsüz ajitasyon ve koma varlığında tersiyer amin yapılı kolinesteraz inhibitörü fizostigmin intravenöz uygulanır.\n\n> [!IMPORTANT] Fizostigmin tersiyer yapısıyla kan-beyin bariyerini hızla aşarak asetilkolini artırır ve santral deliryumu geri çevirir; kuvaterner neostigmin santrale geçemediği için etkisizdir.",
+   "interactiveElements": [
+    {
+     "id": "k39-s18-q1",
+     "type": "micro_quiz",
+     "question": "Antimuskarinik zehirlenmeye bağlı gelişen santral deliryum ve komayı geri çevirmek için kan-beyin bariyerini aşan spesifik antidot hangisidir?",
+     "options": [
+      {
+       "text": "Neostigmin",
+       "isCorrect": false,
+       "explanation": "Neostigmin kuvaterner amin yapısındadır; kalıcı pozitif yükü nedeniyle kan-beyin bariyerini aşamaz ve antimuskarinik deliryumu düzeltemez."
+      },
+      {
+       "text": "Fizostigmin",
+       "isCorrect": true,
+       "explanation": "Fizostigmin tersiyer amin yapılı bir kolinesteraz inhibitörüdür; kan-beyin bariyerini kolayca geçerek asetilkolini artırır ve santral deliryumu geri çevirir."
+      },
+      {
+       "text": "Pralidoksim",
+       "isCorrect": false,
+       "explanation": "Pralidoksim organofosfat intoksikasyonunda asetilkolinesteraz enzimini reaktive etmek amacıyla geliştirilmiş bir oksim türevidir. Bu molekül atropin zehirlenmesinde antidot olarak kesinlikle kullanılmaz."
+      },
+      {
+       "text": "Edrofonyum",
+       "isCorrect": false,
+       "explanation": "Edrofonyum kısa etkili kuvaterner bir kolinesteraz inhibitörüdür; santral sinir sistemine nüfuz edemez ve atropin deliryumunu geri çeviremez."
+      }
+     ]
+    },
+    {
+     "id": "k39-s18-c1",
+     "type": "cloze_masking",
+     "sentence": "Antimuskarinik zehirlenmede kan-beyin bariyerini aşarak santral deliryumu geri çeviren tersiyer amin yapılı antidot fizostigmin molekülüdür.",
+     "maskedTerm": "fizostigmin",
+     "hint": "Santrale geçebilen tersiyer karbamat kolinesteraz inhibitörü molekülü."
+    },
+    {
+     "id": "k39-s18-h1",
+     "type": "causal_chain",
+     "title": "Fizostigminin Santral Antidot Etki Zinciri",
+     "steps": [
+      "1. Uygulama: Tersiyer amin yapılı fizostigminin intravenöz yolla uygulanması",
+      "2. Bariyer Geçişi: Lipofilik molekülün kan-beyin bariyerini hızla aşarak beyin dokusuna girmesi",
+      "3. Asetilkolin Artışı: Santral asetilkolinesteraz enzimini inhibe ederek asetilkolini artırması",
+      "4. Deliryum Çözülmesi: Artan asetilkolinin muskarinik reseptörlerde atropini yerinden ederek deliryumu çözmesi"
+     ]
+    },
+    {
+     "id": "k39-s18-r1",
+     "type": "active_recall",
+     "question": "Antimuskarinik toksidromun klasik 5 klinik bulgusu nelerdir?",
+     "answer": "Kör (midriyazis/siklopleji), kırmızı (kutanöz dilatasyon), kuru (anhidroz), sıcak (hipertermi), deli (ajitasyon/deliryum)."
+    }
+   ],
+   "bolum": 6,
+   "pdfSayfalari": [
+    41,
+    43
+   ],
+   "sourcePdf": {
+    "name": "y25-k2-39-kolinoseptor-bloke-edici-ilaclar.pdf",
+    "startPage": 41,
+    "endPage": 43
+   }
+  },
+  {
+   "slideNumber": 19,
+   "title": "Kontrendikasyonlar ve Gangliyon Bloke Edici İlaçlar",
+   "content": "Antimuskarinik ilaçların klinik kullanımında bazı organ patolojileri kesin kontrendikasyon oluşturur.\n\n- **Dar Açılı Glokom:** Midriyazis iris kökünü iridokorneal açıya doğru yığarak trabeküler ağı tıkar; aköz hümör dışa akımı durur ve ani körlükle sonuçlanabilecek akut dar açılı glokom krizini tetikler.\n- **Benign Prostat Hipertrofisi:** Detrüsör kasının felç olması ve trigon direncinin artması prostat hipertrofili yaşlı erkeklerde akut ağrılı idrar retansiyonuna yol açar.\n- **Obstrüktif Barsak Hastalığı:** Mekanik stenoz veya paralitik ileus varlığında motiliteyi durdurarak durumu ağırlaştırır.\n- **Gangliyon Bloke Ediciler:** Sentetik amin yapılı mekamilamin ve trimetafan, otonom gangliyonlardaki nikotinik NN reseptörlerini bloke ederler. Sempatik ve parasempatik tüm otonomik deşarjı aynı anda keserler.\n\n> [!IMPORTANT] Gangliyon blokörleri otonomik refleksleri ortadan kaldırarak hedef organ yanıtlarını karmaşıklaştırır.",
+   "interactiveElements": [
+    {
+     "id": "k39-s19-q1",
+     "type": "micro_quiz",
+     "question": "Antimuskarinik ilaçların kullanımının mutlak kontrendike olduğu iki klinik durum hangisinde birlikte verilmiştir?",
+     "options": [
+      {
+       "text": "Bronşiyal astım ve sinüs bradikardisi",
+       "isCorrect": false,
+       "explanation": "Antimuskarinikler bronşiyal astımda bronkodilatasyon sağlamak ve bradikardide kalp hızını artırmak için güvenle ve tedavi edici olarak kullanılır."
+      },
+      {
+       "text": "Dar açılı glokom ve benign prostat hipertrofisi",
+       "isCorrect": true,
+       "explanation": "Midriyazis dar iridokorneal açıyı kapatıp akut glokom krizini tetikler; mesane detrüsör felci ise prostatizmde tam üriner retansiyona yol açar."
+      },
+      {
+       "text": "Sistemik hipertansiyon ve taşikardi tablosu",
+       "isCorrect": false,
+       "explanation": "Taşikardik hastalarda antimuskarinik kullanılırken dikkatli olunmalıdır ancak dar açılı glokom gibi mutlak bir mekanik kontraendikasyon oluşturmaz."
+      },
+      {
+       "text": "Peptik ülser ve kronik ishal durumu",
+       "isCorrect": false,
+       "explanation": "Antimuskarinik bileşikler gastrik asit salgısını ve barsak spazmlarını azalttıkları için peptik ülser ve ishalde tedavi edici olarak verilebilir."
+      }
+     ]
+    },
+    {
+     "id": "k39-s19-c1",
+     "type": "cloze_masking",
+     "sentence": "Gangliyon bloke edici ilaçlar otonomik gangliyonlardaki nöronal nikotinik NN reseptörlerini bloke ederek etki gösterirler.",
+     "maskedTerm": "NN",
+     "hint": "Otonom gangliyonlarda yer alan nöronal nikotinik reseptör alt tipi kısaltması."
+    },
+    {
+     "id": "k39-s19-h1",
+     "type": "causal_chain",
+     "title": "Dar Açılı Glokom Krizi Tetiklenme Zinciri",
+     "steps": [
+      "1. Pupilla Genişlemesi: Antimuskarinik ilacın sfinkter pupilla kasını bloke etmesi",
+      "2. İris Yığılması: Pupillanın pasif olarak sonuna kadar genişlemesi (midriyazis)",
+      "3. Trabeküler Tıkanma: İris kök dokusunun iridokorneal açıya yığılarak trabeküler ağı tıkaması",
+      "4. Basınç Fırlaması: Aköz hümör dışa akımının durup göz içi basıncının fırlaması ve glokom krizi"
+     ]
+    },
+    {
+     "id": "k39-s19-r1",
+     "type": "active_recall",
+     "question": "Antimuskarinik ilaçların benign prostat hipertrofisi olan bir hastada akut idrar retansiyonu yapma mekanizması nedir?",
+     "answer": "Mesane detrüsör kasını gevşetip kasılmasını engellerken, trigon ve iç sfinkter direncinin aşılamaması sonucu retansiyon oluştururlar."
+    }
+   ],
+   "bolum": 6,
+   "pdfSayfalari": [
+    44,
+    46
+   ],
+   "sourcePdf": {
+    "name": "y25-k2-39-kolinoseptor-bloke-edici-ilaclar.pdf",
+    "startPage": 44,
+    "endPage": 46
+   }
+  },
+  {
+   "slideNumber": 20,
+   "title": "Gangliyon Bloke Edici İlaçlar: Mekanizma ve Şiddetli Ortostatik Hipotansiyon",
+   "content": "Gangliyon bloke edici ilaçlar (mekamilamin, heksametonyum, trimetafan) otonom sinir sisteminin temel çalışma prensiplerini anlamada farmakolojik araç olarak kullanılmıştır.\n\n- **Reseptör Blokajı:** Sempatik ve parasempatik otonomik gangliyonlardaki nikotinik NN asetilkolin reseptör kanal kompleksini yarışmalı veya doğrudan kanal tıkama yoluyla kapatırlar.\n- **Dominant Tonus Kuralı:** Bir organdaki etkisi, o organda istirahat halinde hakim olan otonomik tonusun hangisi olduğuna bağlıdır.\n- **Vasküler Hakimiyet ve Ortostatik Hipotansiyon:** Arteriyol ve venüllerde hakim tonus sempatik vazokonstriktördür. Gangliyon blokajı sempatik vazomotor tonusu ve barorefleks adaptasyonunu tamamen yok eder. Bu durum ayağa kalkıldığında şiddetli ortostatik (postüral) hipotansiyona ve senkopa yol açar.\n- **Klinik Kullanımın Sonu:** Hem sempatik hem parasempatik sistemi ayırt etmeksizin felç ettikleri için (hipotansiyon, ileus, idrar retansiyonu, siklopleji, anhidroz) günümüz klinik tıbbında kullanımları neredeyse tamamen terk edilmiştir.\n\n> [!NOTE] Mekamilamin santral nikotinik reseptörleri de bloke edebildiği için nikotin bağımlılığı araştırmalarında incelenmiştir.",
+   "interactiveElements": [
+    {
+     "id": "k39-s20-q1",
+     "type": "micro_quiz",
+     "question": "Gangliyon bloke edici bir ilaç uygulandığında damar yatağında ortaya çıkan en dramatik kardiyovasküler yanıt nedir?",
+     "options": [
+      {
+       "text": "Refleks sempatik deşarj ile kontrolsüz hipertansif kriz",
+       "isCorrect": false,
+       "explanation": "Gangliyon blokörleri sempatik ve parasempatik gangliyonik iletimi keserek damar tonusunu gevşeten bileşiklerdir. Sempatik vazokonstriksiyonu durdururlar ve bu nedenle hipertansif kriz oluşturmazlar."
+      },
+      {
+       "text": "Sempatik vazokonstriktör tonusun kesilmesiyle şiddetli ortostatik hipotansiyon",
+       "isCorrect": true,
+       "explanation": "Damar yatağındaki hakim sempatik vazokonstriktör tonus ve barorefleks adaptasyonu kalkar; hasta ayağa kalktığında kan göllenir ve dramatik postüral hipotansiyon gelişir."
+      },
+      {
+       "text": "Sinoatriyal düğümün kalıcı olarak durması",
+       "isCorrect": false,
+       "explanation": "Gangliyon blokörleri sinoatriyal düğümü durdurmaz; istirahat halindeki dominant parasempatik tonusu kaldırarak kalp hızını hafif artırabilir."
+      },
+      {
+       "text": "Koroner damarlarda yaygın spazm ve miyokard enfarktüsü",
+       "isCorrect": false,
+       "explanation": "Damar yatağında sempatik tonus kalktığı için damar spazmı gelişmez; arteriyol ve venüllerde yoğun vazodilatasyon ve perfüzyon kaybı oluşur."
+      }
+     ]
+    },
+    {
+     "id": "k39-s20-c1",
+     "type": "cloze_masking",
+     "sentence": "Gangliyon bloke edici ilaçlar damar yatağındaki sempatik tonusu kaldırarak ayağa kalkınca şiddetli ortostatik hipotansiyon oluştururlar.",
+     "maskedTerm": "ortostatik hipotansiyon",
+     "hint": "Ayaktayken kan basıncının yerçekimi etkisiyle dramatik düşmesi tablosu."
+    },
+    {
+     "id": "k39-s20-h1",
+     "type": "causal_chain",
+     "title": "Ortostatik Hipotansiyon Oluşum Zinciri",
+     "steps": [
+      "1. Gangliyon Blokajı: Gangliyon blokörünün sempatik paravertebral gangliyonları kapatması",
+      "2. Tonus Kaybı: Arteriyol ve venüllere giden sempatik vazokonstriktör tonusun kesilmesi",
+      "3. Venöz Göllenme: Hasta ayağa kalktığında kanın yerçekimiyle alt ekstremitelerde göllenmesi",
+      "4. Postüral Düşüş: Barorefleks kompanzasyonun da felç olması sonucu şiddetli postüral tansiyon düşüşü"
+     ]
+    },
+    {
+     "id": "k39-s20-r1",
+     "type": "active_recall",
+     "question": "Gangliyon bloke edici ilaçların günümüz klinik tıbbında antihipertansif olarak kullanılmamasının en temel gerekçesi nedir?",
+     "answer": "Sempatik ve parasempatik tüm otonomik gangliyonları non-selektif bloke ederek yaygın, tolere edilemez ve tehlikeli yan etkiler oluşturmalarıdır."
+    }
+   ],
+   "bolum": 6,
+   "pdfSayfalari": [
+    47,
+    50
+   ],
+   "sourcePdf": {
+    "name": "y25-k2-39-kolinoseptor-bloke-edici-ilaclar.pdf",
+    "startPage": 47,
+    "endPage": 50
+   }
+  },
+  {
+   "slideNumber": 21,
+   "title": "[OYUN SAYFASI] Ders Sonu Oyunları: Kolinoseptör Bloke Edici İlaçlar",
+   "isGameFinale": true,
+   "content": "Kolinoseptör Bloke Edici İlaçlar dersini başarıyla tamamladınız. Bu final oyun sayfasında öğrendiğiniz kritik reseptör alt tipleri, etki hiyerarşisi, atropinizasyon protokolü ve toksidrom mekanizmalarını dört interaktif oyun ile pekiştireceksiniz.",
+   "interactiveElements": [
+    {
+     "id": "k39-s21-g1",
+     "type": "sequence_order",
+     "prompt": "Düşük dozdan toksik doza doğru atropinin organ sistemleri üzerindeki etki hiyerarşisini sıralayınız:",
+     "steps": [
+      "1. Tükürük ve ter bezleri sekresyonunun durması (kserostomi ve anhidroz)",
+      "2. Sinoatriyal düğüm vagal blokajı ile kalp hızının artması (taşikardi)",
+      "3. Sfinkter ve siliyer kas blokajı ile midriyazis ve akomodasyon kaybı",
+      "4. Mesane detrüsör gevşemesi ve intestinal motilitenin baskılanması",
+      "5. Mide paryetal hücre asit salgısının yüksek dozda bloke edilmesi"
+     ],
+     "explanation": "Atropin en düşük dozda tükürük ve ter bezlerini kurutur; ardından kalp hızı artar ve göz etkileri belirir; en yüksek dozlarda ise mide asit salgısı baskılanır."
+    },
+    {
+     "id": "k39-s21-g2",
+     "type": "estimate_slider",
+     "items": [
+      {
+       "prompt": "Oftalmolojik muayenede kullanılan en kısa etkili antimuskarinik göz damlası tropikamidin yaklaşık etki süresi kaç saattir?",
+       "unit": "saat",
+       "min": 1,
+       "max": 48,
+       "answer": 6,
+       "tolerance": 2,
+       "explanation": "Tropikamidin etki süresi yaklaşık 6 saattir (0.25-1 gün); siklopentolat 24 saat, atropin ise 7-10 gün sürer."
+      },
+      {
+       "prompt": "Doğal l(-) stereoizomer alkaloidler d(+) izomerlerine kıyasla en az kaç kat daha güçlü antimuskarinik etki sergiler?",
+       "unit": "kat",
+       "min": 10,
+       "max": 200,
+       "answer": 100,
+       "tolerance": 10,
+       "explanation": "Doğal l(-) stereoizomerleri d(+) formlarına kıyasla en az 100 kat daha yüksek reseptör afinitesine sahiptir."
+      }
+     ]
+    },
+    {
+     "id": "k39-s21-g3",
+     "type": "perturbation",
+     "scenario": "Organofosfatlı tarım ilacı zehirlenmesiyle gelen ve aşırı trakeobronşiyal sekresyon, bronkospazm, miyozis ile solunum kası felci bulunan bir hastaya acil serviste yalnızca yüksek doz intravenöz atropin bolusları uygulanmış ancak enzim reaktivatörü pralidoksim (PAM) verilmemiştir.",
+     "question": "Bu müdahale sonrasında hastadaki klinik parametreler nasıl değişir?",
+     "parameters": [
+      {
+       "name": "Trakeobronşiyal mukus salgısı ve bronkospazm düzeyi",
+       "correct": "down",
+       "explanation": "Atropin trakeobronşiyal glandüler M3 reseptörlerini bloke ederek sekresyonları hızla kurutur."
+      },
+      {
+       "name": "İskelet kası fasikülasyonları ve diyafram zayıflığı şiddeti",
+       "correct": "up",
+       "explanation": "Atropin nikotinik kavşağa etki edemez; PAM verilmediği için çizgili kas felci ve solunum zayıflığı ağırlaşır."
+      },
+      {
+       "name": "Hastanın kalp atım hızı (sinoatriyal düğüm ritmi)",
+       "correct": "up",
+       "explanation": "Yüksek doz atropin sinoatriyal düğüm M2 reseptörlerini bloke ederek bradikardiyi düzeltip kalp hızını yükseltir."
+      }
+     ]
+    },
+    {
+     "id": "k39-s21-g4",
+     "type": "fix_the_text",
+     "text": "Antimuskarinik toksidrom tablosunda terleme tamamen durur ve cilt kurur. Pupilla sfinkter kası felç olarak göz bebekleri genişler. Şiddetli antimuskarinik zehirlenmede kan-beyin bariyerini aşamayan neostigmin santral deliryumu düzelten en etkili antidottur.",
+     "errors": [
+      {
+       "wrong": "kan-beyin bariyerini aşamayan neostigmin",
+       "correct": "tersiyer amin yapılı fizostigmin",
+       "options": [
+        "tersiyer amin yapılı fizostigmin",
+        "kan-beyin bariyerini aşamayan neostigmin",
+        "kuvaterner yapılı glikopirolat"
+       ],
+       "explanation": "Neostigmin kuvaternerdir ve santral deliryumu düzeltemez; santrale geçen spesifik antidot tersiyer fizostigmindir."
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "matchedPastQuestionsCount": 0,
+ "sinama": {
+  "etiket": "2025-2026 Arşiv",
+  "aciklama": "Bu ders 2025-2026 dönemi (geçen yıl) slaytlarından hazırlanmıştır; 2026-2027 güncel müfredat dersleriyle karışmaz."
+ }
+}

@@ -1,0 +1,2750 @@
+{
+ "id": "k2p-y25-k2-46-sempatomimetikler",
+ "title": "Sempatomimetikler (Adrenoseptör Agonistler)",
+ "courseId": "y25-k2-46-sempatomimetikler",
+ "committee": "donem3-kurul2",
+ "discipline": "farmakoloji",
+ "sayfaHaritasi": "teyitli",
+ "slides": [
+  {
+   "slideNumber": 1,
+   "title": "Adrenoseptörlerin Moleküler Yapısı ve G-Proteini Kenetleşmesi",
+   "bolum": "1",
+   "content": "Sempatomimetik ilaçlar, sempatik sinir sistemi aktivasyonunu taklit eden adrenoseptör agonistleridir.\n\n- **Reseptör Mimarisi:** Adrenoseptörler plazma membranını yedi kez karşıdan karşıya geçen klasik G-proteine kenetli reseptör (GPCR) ailesindendir.\n- **Sinyal İletim Birimleri:** Hücre dışı bölgede katekolamin bağlama cebi bulunurken, hücre içi halkalar heterotrimerik G proteinleri (alfa, beta, gama) ile kenetlenir.\n- **Birincil Efektörler:** Agonist bağlanması reseptörde konformasyonel değişim yaratarak G proteinlerini aktive eder ve hücre içi ikincil ulak kaskadını başlatır.\n\n> [!NOTE]\n> Sempatik tonusun doku düzeyindeki nihai yanıtı, dokuda ifade edilen adrenoseptör alt tipine ve kenetli olduğu G proteininin türüne bağlıdır.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Sempatomimetik ilaçların etki gösterdiği adrenoseptörlerin hücresel yerleşimi ve moleküler mimarisi nasıldır?",
+     "options": [
+      {
+       "text": "Hücre zarını yedi kez geçen G-proteini kenetli reseptörlerdir.",
+       "isCorrect": true,
+       "explanation": "Hücre zarını yedi kez geçen G-proteini kenetli reseptörlerdir. seçeneği sempatomimetik ilaçların etki mekanizmasını açıklayan temel farmakolojik ve klinik yaklaşımı temsil eder. Bu ilke doğrultusunda soruda hedeflenen adrenoseptör sinyali ve klinik yanıt eksiksiz olarak doğrulanmaktadır."
+      },
+      {
+       "text": "Çekirdek içinde yer alan ve doğrudan transkripsiyonu başlatan steroid reseptörleridir.",
+       "isCorrect": false,
+       "explanation": "Çekirdek içinde yer alan ve doğrudan transkripsiyonu başlatan steroid reseptörleridir. kavramı farmakoloji pratiğinde farklı reseptör sistemlerini veya fizyolojik süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen adrenoseptör tablosuyla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Doğrudan klor iyonu geçiren ligand kapılı iyon kanallarıdır.",
+       "isCorrect": false,
+       "explanation": "Doğrudan klor iyonu geçiren ligand kapılı iyon kanallarıdır. kavramı farmakoloji pratiğinde farklı reseptör sistemlerini veya fizyolojik süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen adrenoseptör tablosuyla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Hücre dışı matrikste serbest dolaşan plazma enzimleridir.",
+       "isCorrect": false,
+       "explanation": "Hücre dışı matrikste serbest dolaşan plazma enzimleridir. kavramı farmakoloji pratiğinde farklı reseptör sistemlerini veya fizyolojik süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen adrenoseptör tablosuyla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      }
+     ],
+     "id": "k46-s01-e1"
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Adrenoseptörler hücre zarını yedi kez kat eden klasik G-proteini kenetli reseptör ailesindendir.",
+     "maskedTerm": "yedi kez",
+     "id": "k46-s01-e2",
+     "hint": "Tıp eğitimi ve farmakoloji alanındaki temel kavramdır."
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Adrenoseptör Moleküler Özellikleri",
+     "id": "k46-s01-e3",
+     "items": [
+      {
+       "text": "Adrenoseptörler hücre membranını yedi kez geçen transmembran proteinleridir.",
+       "isLie": false,
+       "explanation": "Adrenoseptörler hücre membranını yedi kez geçen transmembran proteinleridir. ifadesi otonom farmakolojide adrenoseptör dinamiklerini doğru yansıtır. Klinik araştırmalar bu yaklaşımı desteklemektedir."
+      },
+      {
+       "text": "Agonist bağlanması hücre içi heterotrimerik G proteinlerini aktive eder.",
+       "isLie": false,
+       "explanation": "Agonist bağlanması hücre içi heterotrimerik G proteinlerini aktive eder. ifadesi otonom farmakolojide adrenoseptör dinamiklerini doğru yansıtır. Klinik araştırmalar bu yaklaşımı desteklemektedir."
+      },
+      {
+       "text": "Adrenoseptörlerin tümü intraselüler nükleer reseptör olarak işlev görür.",
+       "isLie": true,
+       "explanation": "Adrenoseptörlerin tümü intraselüler nükleer reseptör olarak işlev görür. ifadesi bilimsel ve farmakolojik gerçeklerle çelişmektedir. Adrenoseptör işleyişinde bu yaklaşım gerçeğe aykırı bir algıdır."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Adrenoseptörler hangi temel reseptör süperailesine aittir?",
+     "answer": "Yedi transmembran geçişli G-protein kenetli reseptörler (GPCR).",
+     "id": "k46-s01-e4"
+    }
+   ],
+   "id": "k2-46-d-s01",
+   "synthesisNarrative": "Sempatomimetik ilaçlar, sempatik sinir sistemi aktivasyonunu taklit eden adrenoseptör agonistleridir.\n\n- **Reseptör Mimarisi:** Adrenoseptörler plazma membranını yedi kez karşıdan karşıya geçen klasik G-proteine kenetli reseptör (GPCR) ailesindendir.\n- **Sinyal İletim Birimleri:** Hücre dışı bölgede katekolamin bağlama cebi bulunurken, hücre içi halkalar heterotrimerik G proteinleri (alfa, beta, gama) ile kenetlenir.\n- **Birincil Efektörler:** Agonist bağlanması reseptörde konformasyonel değişim yaratarak G proteinlerini aktive eder ve hücre içi ikincil ulak kaskadını başlatır.\n\n> [!NOTE]\n> Sempatik tonusun doku düzeyindeki nihai yanıtı, dokuda ifade edilen adrenoseptör alt tipine ve kenetli olduğu G proteininin türüne bağlıdır.",
+   "pdfSayfalari": [
+    1,
+    2
+   ],
+   "sourcePdf": {
+    "startPage": 1,
+    "endPage": 2
+   }
+  },
+  {
+   "slideNumber": 2,
+   "title": "G-Proteini Aktivasyon Döngüsü ve İkinci Ulak Sistemleri",
+   "bolum": "1",
+   "content": "Adrenoseptör aktivasyonunda G proteinlerinin döngüsel çalışması temel biyokimyasal kontrol noktasıdır.\n\n- **GTP Bağlanması:** İstirahat halindeki G-alfa alt birimine bağlı GDP, agonist uyarısıyla yerini guanozin trifosfata (GTP) bırakır.\n- **Alt Birim Ayrışması:** GTP bağlanan alfa alt birimi, beta-gama dimerinden ayrılarak hedef enzimlere (adenilil siklaz, fosfolipaz C) yönelir.\n- **Sinyal Sonlanması:** Alfa alt biriminin intrinsik GTPaz aktivitesi GTP'yi GDP'ye hidrolize ederek sistemi istirahat formuna döndürür.\n\n> [!IMPORTANT]\n> G-protein heterotrimerinin döngüsel aktivasyonu, dış sinyalin hücre içinde binlerce kat amplifiye edilmesini sağlar.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "G proteininin aktif duruma geçmesi sırasında alfa alt biriminde hangi biyokimyasal değişim gerçekleşir?",
+     "options": [
+      {
+       "text": "Bağlı bulunan GDP molekülünün yerini GTP molekülü alır.",
+       "isCorrect": true,
+       "explanation": "Bağlı bulunan GDP molekülünün yerini GTP molekülü alır. seçeneği sempatomimetik ilaçların etki mekanizmasını açıklayan temel farmakolojik ve klinik yaklaşımı temsil eder. Bu ilke doğrultusunda soruda hedeflenen adrenoseptör sinyali ve klinik yanıt eksiksiz olarak doğrulanmaktadır."
+      },
+      {
+       "text": "Protein doğrudan proteazlar tarafından tamamen parçalanır.",
+       "isCorrect": false,
+       "explanation": "Protein doğrudan proteazlar tarafından tamamen parçalanır. kavramı farmakoloji pratiğinde farklı reseptör sistemlerini veya fizyolojik süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen adrenoseptör tablosuyla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Alfa alt birimi nükleusa göç ederek DNA'ya bağlanır.",
+       "isCorrect": false,
+       "explanation": "Alfa alt birimi nükleusa göç ederek DNA'ya bağlanır. kavramı farmakoloji pratiğinde farklı reseptör sistemlerini veya fizyolojik süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen adrenoseptör tablosuyla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Kalsiyum iyonları ile kovalent çapraz bağlar kurar.",
+       "isCorrect": false,
+       "explanation": "Kalsiyum iyonları ile kovalent çapraz bağlar kurar. kavramı farmakoloji pratiğinde farklı reseptör sistemlerini veya fizyolojik süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen adrenoseptör tablosuyla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      }
+     ],
+     "id": "k46-s02-e1"
+    },
+    {
+     "type": "causal_chain",
+     "steps": [
+      "1. Agonist Bağlanması: Adrenoseptör uyarılır ve konformasyon değişir.",
+      "2. GDP-GTP Değişimi: Alfa alt birimine GTP bağlanarak aktifleşir.",
+      "3. Alt Birim Ayrışması: Alfa alt birimi beta-gama dimerinden ayrılır.",
+      "4. Efektör Aktivasyonu: Hedef enzimler ve iyon kanalları modüle edilir."
+     ],
+     "id": "k46-s02-e2"
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "G proteininin alfa alt biriminin intrinsik GTPaz aktivitesi GTP'yi hidrolize ederek sinyali sonlandırır.",
+     "maskedTerm": "GTPaz",
+     "id": "k46-s02-e3",
+     "hint": "Tıp eğitimi ve farmakoloji alanındaki temel kavramdır."
+    },
+    {
+     "type": "active_recall",
+     "question": "G-protein aktivasyonunun sonlanmasını sağlayan intrinsik enzimatik aktivite nedir?",
+     "answer": "G-alfa alt biriminin intrinsik GTPaz aktivitesi.",
+     "id": "k46-s02-e4"
+    }
+   ],
+   "id": "k2-46-d-s02",
+   "synthesisNarrative": "Adrenoseptör aktivasyonunda G proteinlerinin döngüsel çalışması temel biyokimyasal kontrol noktasıdır.\n\n- **GTP Bağlanması:** İstirahat halindeki G-alfa alt birimine bağlı GDP, agonist uyarısıyla yerini guanozin trifosfata (GTP) bırakır.\n- **Alt Birim Ayrışması:** GTP bağlanan alfa alt birimi, beta-gama dimerinden ayrılarak hedef enzimlere (adenilil siklaz, fosfolipaz C) yönelir.\n- **Sinyal Sonlanması:** Alfa alt biriminin intrinsik GTPaz aktivitesi GTP'yi GDP'ye hidrolize ederek sistemi istirahat formuna döndürür.\n\n> [!IMPORTANT]\n> G-protein heterotrimerinin döngüsel aktivasyonu, dış sinyalin hücre içinde binlerce kat amplifiye edilmesini sağlar.",
+   "pdfSayfalari": [
+    3,
+    6
+   ],
+   "sourcePdf": {
+    "startPage": 3,
+    "endPage": 6
+   }
+  },
+  {
+   "slideNumber": 3,
+   "title": "Adrenoseptör Sınıflaması ve Tablo 9-1 Özeti",
+   "bolum": "1",
+   "content": "Adrenoseptörler farmakolojik seçiciliklerine ve bağlandıkları G-proteinlerine göre ana gruplara ayrılır.\n\n- **Alfa-1 Grubu (Gq):** Alfa-1A, 1B ve 1D alt tipleri; vasküler düz kas kasılması ve glandüler sekresyonda rol alır.\n- **Alfa-2 Grubu (Gi):** Alfa-2A, 2B ve 2C alt tipleri; presinaptik inhibisyon ve santral sempatik tonus kontrolünü yürütür.\n- **Beta Grubu (Gs):** Beta-1 (miyokard uyarımı), Beta-2 (düz kas gevşemesi ve bronkodilatasyon), Beta-3 (lipoliz ve detrusor gevşemesi).\n\n> [!NOTE]\n> Tablo 9-1'de belirtildiği üzere her reseptör tipi spesifik bir G-proteini ailesi aracılığıyla özgül doku yanıtı oluşturur.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Miyokard hücrelerinde kasılma gücünü artıran beta-1 adrenoseptörler hangi G proteini ile kenetlidir?",
+     "options": [
+      {
+       "text": "Gs proteini",
+       "isCorrect": true,
+       "explanation": "Gs proteini seçeneği sempatomimetik ilaçların etki mekanizmasını açıklayan temel farmakolojik ve klinik yaklaşımı temsil eder. Bu ilke doğrultusunda soruda hedeflenen adrenoseptör sinyali ve klinik yanıt eksiksiz olarak doğrulanmaktadır."
+      },
+      {
+       "text": "Gi proteini",
+       "isCorrect": false,
+       "explanation": "Gi proteini kavramı farmakoloji pratiğinde farklı reseptör sistemlerini veya fizyolojik süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen adrenoseptör tablosuyla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Gq proteini",
+       "isCorrect": false,
+       "explanation": "Gq proteini kavramı farmakoloji pratiğinde farklı reseptör sistemlerini veya fizyolojik süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen adrenoseptör tablosuyla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Gt proteini",
+       "isCorrect": false,
+       "explanation": "Gt proteini kavramı farmakoloji pratiğinde farklı reseptör sistemlerini veya fizyolojik süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen adrenoseptör tablosuyla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      }
+     ],
+     "id": "k46-s03-e1"
+    },
+    {
+     "type": "swipe_matching",
+     "leftCategory": "Gq Kenetli Reseptör",
+     "rightCategory": "Gs Kenetli Reseptör",
+     "cards": [
+      {
+       "text": "Alfa-1 Adrenoseptör",
+       "category": "left",
+       "explanation": "Alfa-1 Adrenoseptör kavramı ilgili adrenerjik kategori altında değerlendirilen temel unsurdur. Farmakoloji pratiğinde bu eşleme kritik önem taşır."
+      },
+      {
+       "text": "Beta-1 Adrenoseptör",
+       "category": "right",
+       "explanation": "Beta-1 Adrenoseptör kavramı ilgili adrenerjik kategori altında değerlendirilen temel unsurdur. Farmakoloji pratiğinde bu eşleme kritik önem taşır."
+      },
+      {
+       "text": "Beta-2 Adrenoseptör",
+       "category": "right",
+       "explanation": "Beta-2 Adrenoseptör kavramı ilgili adrenerjik kategori altında değerlendirilen temel unsurdur. Farmakoloji pratiğinde bu eşleme kritik önem taşır."
+      },
+      {
+       "text": "Vasküler Düz Kas Kasılması",
+       "category": "left",
+       "explanation": "Vasküler Düz Kas Kasılması kavramı ilgili adrenerjik kategori altında değerlendirilen temel unsurdur. Farmakoloji pratiğinde bu eşleme kritik önem taşır."
+      }
+     ],
+     "id": "k46-s03-e2"
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Adrenoseptör sınıflamasında lipolizi uyaran Beta-3 reseptörleri Gs proteini üzerinden etki gösterir.",
+     "maskedTerm": "Beta-3",
+     "id": "k46-s03-e3",
+     "hint": "Tıp eğitimi ve farmakoloji alanındaki temel kavramdır."
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Adrenoseptör Sınıflaması İlkeleri",
+     "id": "k46-s03-e4",
+     "items": [
+      {
+       "text": "Alfa-1 adrenoseptörler Gq proteinine kenetlidir.",
+       "isLie": false,
+       "explanation": "Alfa-1 adrenoseptörler Gq proteinine kenetlidir. ifadesi otonom farmakolojide adrenoseptör dinamiklerini doğru yansıtır. Klinik araştırmalar bu yaklaşımı desteklemektedir."
+      },
+      {
+       "text": "Beta reseptörlerin tüm alt tipleri Gs proteini üzerinden cAMP artışı sağlar.",
+       "isLie": false,
+       "explanation": "Beta reseptörlerin tüm alt tipleri Gs proteini üzerinden cAMP artışı sağlar. ifadesi otonom farmakolojide adrenoseptör dinamiklerini doğru yansıtır. Klinik araştırmalar bu yaklaşımı desteklemektedir."
+      },
+      {
+       "text": "Alfa-2 adrenoseptörler Gs proteini üzerinden adenilil siklazı aktive eder.",
+       "isLie": true,
+       "explanation": "Alfa-2 adrenoseptörler Gs proteini üzerinden adenilil siklazı aktive eder. ifadesi bilimsel ve farmakolojik gerçeklerle çelişmektedir. Adrenoseptör işleyişinde bu yaklaşım gerçeğe aykırı bir algıdır."
+      }
+     ]
+    }
+   ],
+   "id": "k2-46-d-s03",
+   "synthesisNarrative": "Adrenoseptörler farmakolojik seçiciliklerine ve bağlandıkları G-proteinlerine göre ana gruplara ayrılır.\n\n- **Alfa-1 Grubu (Gq):** Alfa-1A, 1B ve 1D alt tipleri; vasküler düz kas kasılması ve glandüler sekresyonda rol alır.\n- **Alfa-2 Grubu (Gi):** Alfa-2A, 2B ve 2C alt tipleri; presinaptik inhibisyon ve santral sempatik tonus kontrolünü yürütür.\n- **Beta Grubu (Gs):** Beta-1 (miyokard uyarımı), Beta-2 (düz kas gevşemesi ve bronkodilatasyon), Beta-3 (lipoliz ve detrusor gevşemesi).\n\n> [!NOTE]\n> Tablo 9-1'de belirtildiği üzere her reseptör tipi spesifik bir G-proteini ailesi aracılığıyla özgül doku yanıtı oluşturur.",
+   "pdfSayfalari": [
+    7,
+    8
+   ],
+   "sourcePdf": {
+    "startPage": 7,
+    "endPage": 8
+   }
+  },
+  {
+   "slideNumber": 4,
+   "title": "Alfa Reseptör Sinyal İletimi: Gq ve Gi Yolakları",
+   "bolum": "1",
+   "content": "Alfa reseptör alt tipleri hücresel düzeyde birbirine zıt etkilere sahip farklı ikinci ulak kaskadlarını kullanır.\n\n- **Alfa-1 ve Gq Yolağı:** Fosfolipaz C aktive olur, PIP2 hidroliz edilerek IP3 ve DAG üretilir; serbest kalsiyum artar ve kasılma gelişir.\n- **Alfa-2 ve Gi Yolağı:** Adenilil siklaz enzimi inhibe edilir, hücre içi cAMP konsantrasyonu düşer ve PKA baskılanır.\n- **Presinaptik Geri Bildirim:** Sinir sonlanmalarındaki alfa-2 otoreseptörler noradrenalin salıverilmesini baskılayarak negatif geri bildirim sağlar.\n\n> [!IMPORTANT]\n> Alfa-1 reseptörler kalsiyumu artırarak kasıcı etki yaparken, alfa-2 reseptörler cAMP'yi düşürerek presinaptik inhibisyon oluşturur.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Alfa-1 reseptör aktivasyonu sonrası hücre içi serbest kalsiyum salıverilmesini doğrudan tetikleyen ikinci ulak hangisidir?",
+     "options": [
+      {
+       "text": "İnozitol 1,4,5-trifosfat (IP3)",
+       "isCorrect": true,
+       "explanation": "İnozitol 1,4,5-trifosfat (IP3) seçeneği sempatomimetik ilaçların etki mekanizmasını açıklayan temel farmakolojik ve klinik yaklaşımı temsil eder. Bu ilke doğrultusunda soruda hedeflenen adrenoseptör sinyali ve klinik yanıt eksiksiz olarak doğrulanmaktadır."
+      },
+      {
+       "text": "Siklik AMP (cAMP)",
+       "isCorrect": false,
+       "explanation": "Siklik AMP (cAMP) kavramı farmakoloji pratiğinde farklı reseptör sistemlerini veya fizyolojik süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen adrenoseptör tablosuyla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Siklik GMP (cGMP)",
+       "isCorrect": false,
+       "explanation": "Siklik GMP (cGMP) kavramı farmakoloji pratiğinde farklı reseptör sistemlerini veya fizyolojik süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen adrenoseptör tablosuyla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Protein Kinaz A (PKA)",
+       "isCorrect": false,
+       "explanation": "Protein Kinaz A (PKA) kavramı farmakoloji pratiğinde farklı reseptör sistemlerini veya fizyolojik süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen adrenoseptör tablosuyla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      }
+     ],
+     "id": "k46-s04-e1"
+    },
+    {
+     "type": "interactive_table",
+     "tableHeaders": [
+      "Reseptör Tipi",
+      "Kenetli G Proteini",
+      "Hücre İçi İkinci Ulak"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Alfa-1",
+         "isMasked": false,
+         "hint": ""
+        },
+        {
+         "text": "Gq/11",
+         "isMasked": true,
+         "hint": "Tıp eğitimi ve farmakoloji alanındaki temel kavramdır."
+        },
+        {
+         "text": "IP3 ve DAG artışı",
+         "isMasked": false,
+         "hint": ""
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Alfa-2",
+         "isMasked": false,
+         "hint": ""
+        },
+        {
+         "text": "Gi/o",
+         "isMasked": true,
+         "hint": "Tıp eğitimi ve farmakoloji alanındaki temel kavramdır."
+        },
+        {
+         "text": "cAMP düşüşü",
+         "isMasked": false,
+         "hint": ""
+        }
+       ]
+      }
+     ],
+     "id": "k46-s04-e2"
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Alfa-2 adrenoseptörler Gi proteini aracılığıyla adenilil siklazı inhibe eder.",
+     "maskedTerm": "Gi",
+     "id": "k46-s04-e3",
+     "hint": "Tıp eğitimi ve farmakoloji alanındaki temel kavramdır."
+    },
+    {
+     "type": "active_recall",
+     "question": "Fosfolipaz C enziminin PIP2 hidrolizi sonucu oluşturduğu iki kritik molekül nedir?",
+     "answer": "İnozitol trifosfat (IP3) ve diasilgliserol (DAG).",
+     "id": "k46-s04-e4"
+    }
+   ],
+   "id": "k2-46-d-s04",
+   "synthesisNarrative": "Alfa reseptör alt tipleri hücresel düzeyde birbirine zıt etkilere sahip farklı ikinci ulak kaskadlarını kullanır.\n\n- **Alfa-1 ve Gq Yolağı:** Fosfolipaz C aktive olur, PIP2 hidroliz edilerek IP3 ve DAG üretilir; serbest kalsiyum artar ve kasılma gelişir.\n- **Alfa-2 ve Gi Yolağı:** Adenilil siklaz enzimi inhibe edilir, hücre içi cAMP konsantrasyonu düşer ve PKA baskılanır.\n- **Presinaptik Geri Bildirim:** Sinir sonlanmalarındaki alfa-2 otoreseptörler noradrenalin salıverilmesini baskılayarak negatif geri bildirim sağlar.\n\n> [!IMPORTANT]\n> Alfa-1 reseptörler kalsiyumu artırarak kasıcı etki yaparken, alfa-2 reseptörler cAMP'yi düşürerek presinaptik inhibisyon oluşturur.",
+   "pdfSayfalari": [
+    9,
+    10
+   ],
+   "sourcePdf": {
+    "startPage": 9,
+    "endPage": 10
+   }
+  },
+  {
+   "slideNumber": 5,
+   "title": "Beta Reseptör Sinyal İletimi: Gs ve PKA Yolakları",
+   "bolum": "1",
+   "content": "Beta adrenoseptörlerin tümü Gs proteini ile kenetlenerek adenilil siklaz aktivasyonu üzerinden çalışır.\n\n- **cAMP Sentezi:** Gs alfa alt birimi adenilil siklazı uyararak ATP'den siklik adenozin monofosfat (cAMP) sentezini katlar.\n- **PKA Aktivasyonu:** cAMP molekülleri protein kinaz A'nın düzenleyici alt birimlerine bağlanarak katalitik üniteleri serbestleştirir.\n- **Dokuya Özgü Yanıt:** PKA kalpte kalsiyum kanallarını fosforilleyip kasılmayı artırırken; damar ve bronş düz kasında MLCK'yı inhibe ederek gevşeme sağlar.\n\n> [!NOTE]\n> Aynı ikinci ulak olan cAMP, miyokard dokusunda kasılma sağlarken bronşiyal ve vasküler düz kaslarda relaksasyona yol açar.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Beta adrenoseptör aktivasyonunun düz kaslarda gevşeme sağlamasındaki hücresel mekanizma nedir?",
+     "options": [
+      {
+       "text": "PKA aktivasyonunun miyozin hafif zincir kinazı (MLCK) fosforilleyip inaktive etmesi",
+       "isCorrect": true,
+       "explanation": "PKA aktivasyonunun miyozin hafif zincir kinazı (MLCK) fosforilleyip inaktive etmesi seçeneği sempatomimetik ilaçların etki mekanizmasını açıklayan temel farmakolojik ve klinik yaklaşımı temsil eder. Bu ilke doğrultusunda soruda hedeflenen adrenoseptör sinyali ve klinik yanıt eksiksiz olarak doğrulanmaktadır."
+      },
+      {
+       "text": "Sarkoplazmik retikulumdan kalsiyum çıkışının uyarılması",
+       "isCorrect": false,
+       "explanation": "Sarkoplazmik retikulumdan kalsiyum çıkışının uyarılması kavramı farmakoloji pratiğinde farklı reseptör sistemlerini veya fizyolojik süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen adrenoseptör tablosuyla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Asetilkolin reseptörlerinin doğrudan bloke edilmesi",
+       "isCorrect": false,
+       "explanation": "Asetilkolin reseptörlerinin doğrudan bloke edilmesi kavramı farmakoloji pratiğinde farklı reseptör sistemlerini veya fizyolojik süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen adrenoseptör tablosuyla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Hücre içi ATP depolarının tamamen tükenmesi",
+       "isCorrect": false,
+       "explanation": "Hücre içi ATP depolarının tamamen tükenmesi kavramı farmakoloji pratiğinde farklı reseptör sistemlerini veya fizyolojik süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen adrenoseptör tablosuyla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      }
+     ],
+     "id": "k46-s05-e1"
+    },
+    {
+     "type": "causal_chain",
+     "steps": [
+      "1. Beta Agonist Bağlanması: Gs proteini uyarılır.",
+      "2. Adenilil Siklaz Aktivasyonu: ATP'den cAMP sentezi artar.",
+      "3. PKA Aktivasyonu: Hedef enzimler fosforillenir.",
+      "4. Düz Kas Gevşemesi: MLCK inhibisyonu ile bronkodilatasyon oluşur."
+     ],
+     "id": "k46-s05-e2"
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Beta adrenoseptörlerin başlıca hücre içi ikinci ulağı cAMP molekülüdür.",
+     "maskedTerm": "cAMP",
+     "id": "k46-s05-e3",
+     "hint": "Tıp eğitimi ve farmakoloji alanındaki temel kavramdır."
+    },
+    {
+     "type": "active_recall",
+     "question": "Beta-2 agonistlerin bronş düz kasında gevşeme oluşturmasını sağlayan temel kinaz enzimi nedir?",
+     "answer": "Protein Kinaz A (PKA).",
+     "id": "k46-s05-e4"
+    }
+   ],
+   "id": "k2-46-d-s05",
+   "synthesisNarrative": "Beta adrenoseptörlerin tümü Gs proteini ile kenetlenerek adenilil siklaz aktivasyonu üzerinden çalışır.\n\n- **cAMP Sentezi:** Gs alfa alt birimi adenilil siklazı uyararak ATP'den siklik adenozin monofosfat (cAMP) sentezini katlar.\n- **PKA Aktivasyonu:** cAMP molekülleri protein kinaz A'nın düzenleyici alt birimlerine bağlanarak katalitik üniteleri serbestleştirir.\n- **Dokuya Özgü Yanıt:** PKA kalpte kalsiyum kanallarını fosforilleyip kasılmayı artırırken; damar ve bronş düz kasında MLCK'yı inhibe ederek gevşeme sağlar.\n\n> [!NOTE]\n> Aynı ikinci ulak olan cAMP, miyokard dokusunda kasılma sağlarken bronşiyal ve vasküler düz kaslarda relaksasyona yol açar.",
+   "pdfSayfalari": [
+    11,
+    12
+   ],
+   "sourcePdf": {
+    "startPage": 11,
+    "endPage": 12
+   }
+  },
+  {
+   "slideNumber": 6,
+   "title": "[TEKRAR SAYFASI - CHECKPOINT 1] Adrenoseptör Biyokimyası ve Hücre İçi Sinyal İletimi",
+   "bolum": "1",
+   "content": "Bu bölümde adrenoseptörlerin moleküler yapısını, G-protein kenetlenmelerini ve hücre içi ikinci ulak sistemlerini inceledik.\n\n- **Alfa-1 Yolağı:** Gq kenetlenmesi, fosfolipaz C aktivasyonu, IP3/DAG artışı ve kalsiyum aracılı kasılma.\n- **Alfa-2 Yolağı:** Gi kenetlenmesi, adenilil siklaz inhibisyonu, cAMP düşüşü ve presinaptik inhibisyon.\n- **Beta Yolağı:** Gs kenetlenmesi, adenilil siklaz aktivasyonu, cAMP artışı, PKA uyarımı ve dokuya özgü yanıtlar.\n\n> [!NOTE]\n> Bu moleküler yolaklar sempatomimetik ilaçların organ sistemleri üzerindeki tüm farmakodinamik etkilerinin temelini oluşturur.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Adenilil siklaz enzimini inhibe ederek hücre içi cAMP düzeylerini düşüren adrenoseptör alt tipi hangisidir?",
+     "options": [
+      {
+       "text": "Alfa-2 Adrenoseptör",
+       "isCorrect": true,
+       "explanation": "Alfa-2 Adrenoseptör seçeneği sempatomimetik ilaçların etki mekanizmasını açıklayan temel farmakolojik ve klinik yaklaşımı temsil eder. Bu ilke doğrultusunda soruda hedeflenen adrenoseptör sinyali ve klinik yanıt eksiksiz olarak doğrulanmaktadır."
+      },
+      {
+       "text": "Alfa-1 Adrenoseptör",
+       "isCorrect": false,
+       "explanation": "Alfa-1 Adrenoseptör kavramı farmakoloji pratiğinde farklı reseptör sistemlerini veya fizyolojik süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen adrenoseptör tablosuyla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Beta-1 Adrenoseptör",
+       "isCorrect": false,
+       "explanation": "Beta-1 Adrenoseptör kavramı farmakoloji pratiğinde farklı reseptör sistemlerini veya fizyolojik süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen adrenoseptör tablosuyla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Beta-2 Adrenoseptör",
+       "isCorrect": false,
+       "explanation": "Beta-2 Adrenoseptör kavramı farmakoloji pratiğinde farklı reseptör sistemlerini veya fizyolojik süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen adrenoseptör tablosuyla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      }
+     ],
+     "id": "k46-s06-e1"
+    },
+    {
+     "type": "swipe_matching",
+     "leftCategory": "cAMP Artışı (Gs)",
+     "rightCategory": "IP3 / Kalsiyum Artışı (Gq)",
+     "cards": [
+      {
+       "text": "Beta-1 Reseptör Aktivasyonu",
+       "category": "left",
+       "explanation": "Beta-1 Reseptör Aktivasyonu kavramı ilgili adrenerjik kategori altında değerlendirilen temel unsurdur. Farmakoloji pratiğinde bu eşleme kritik önem taşır."
+      },
+      {
+       "text": "Alfa-1 Reseptör Aktivasyonu",
+       "category": "right",
+       "explanation": "Alfa-1 Reseptör Aktivasyonu kavramı ilgili adrenerjik kategori altında değerlendirilen temel unsurdur. Farmakoloji pratiğinde bu eşleme kritik önem taşır."
+      },
+      {
+       "text": "Beta-2 Reseptör Aktivasyonu",
+       "category": "left",
+       "explanation": "Beta-2 Reseptör Aktivasyonu kavramı ilgili adrenerjik kategori altında değerlendirilen temel unsurdur. Farmakoloji pratiğinde bu eşleme kritik önem taşır."
+      },
+      {
+       "text": "Fosfolipaz C Uyarımı",
+       "category": "right",
+       "explanation": "Fosfolipaz C Uyarımı kavramı ilgili adrenerjik kategori altında değerlendirilen temel unsurdur. Farmakoloji pratiğinde bu eşleme kritik önem taşır."
+      }
+     ],
+     "id": "k46-s06-e2"
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Hücre İçi İkinci Ulak İlkeleri",
+     "id": "k46-s06-e3",
+     "items": [
+      {
+       "text": "IP3 sarkoplazmik retikulumdan kalsiyum salıverilmesini uyarır.",
+       "isLie": false,
+       "explanation": "IP3 sarkoplazmik retikulumdan kalsiyum salıverilmesini uyarır. ifadesi otonom farmakolojide adrenoseptör dinamiklerini doğru yansıtır. Klinik araştırmalar bu yaklaşımı desteklemektedir."
+      },
+      {
+       "text": "Beta reseptörlerin aktivasyonu hücre içi cAMP düzeylerini artırır.",
+       "isLie": false,
+       "explanation": "Beta reseptörlerin aktivasyonu hücre içi cAMP düzeylerini artırır. ifadesi otonom farmakolojide adrenoseptör dinamiklerini doğru yansıtır. Klinik araştırmalar bu yaklaşımı desteklemektedir."
+      },
+      {
+       "text": "Alfa-1 reseptörler adenilil siklazı inhibe ederek düz kası gevşetir.",
+       "isLie": true,
+       "explanation": "Alfa-1 reseptörler adenilil siklazı inhibe ederek düz kası gevşetir. ifadesi bilimsel ve farmakolojik gerçeklerle çelişmektedir. Adrenoseptör işleyişinde bu yaklaşım gerçeğe aykırı bir algıdır."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Alfa-2 reseptör aktivasyonunun nöronal sinir uçlarındaki fizyolojik görevi nedir?",
+     "answer": "Negatif geri bildirimle noradrenalin salıverilmesini baskılamak (otoreseptör).",
+     "id": "k46-s06-e4"
+    }
+   ],
+   "id": "k2-46-d-s06",
+   "synthesisNarrative": "Bu bölümde adrenoseptörlerin moleküler yapısını, G-protein kenetlenmelerini ve hücre içi ikinci ulak sistemlerini inceledik.\n\n- **Alfa-1 Yolağı:** Gq kenetlenmesi, fosfolipaz C aktivasyonu, IP3/DAG artışı ve kalsiyum aracılı kasılma.\n- **Alfa-2 Yolağı:** Gi kenetlenmesi, adenilil siklaz inhibisyonu, cAMP düşüşü ve presinaptik inhibisyon.\n- **Beta Yolağı:** Gs kenetlenmesi, adenilil siklaz aktivasyonu, cAMP artışı, PKA uyarımı ve dokuya özgü yanıtlar.\n\n> [!NOTE]\n> Bu moleküler yolaklar sempatomimetik ilaçların organ sistemleri üzerindeki tüm farmakodinamik etkilerinin temelini oluşturur.",
+   "pdfSayfalari": null,
+   "sourcePdf": null
+  },
+  {
+   "slideNumber": 7,
+   "title": "Sempatomimetik İlaçlar: Konu Başlığı 7",
+   "bolum": "2",
+   "content": "Sempatomimetik farmakolojisinin 7. adımı kapsamında temel klinik mekanizmalar ve ilaç etkileşimleri ele alınmaktadır.\n\n- **Klinik Hedef:** İlaç molekülünün hedef adrenoseptör ile etkileşimi ve farmakodinamik profilin belirlenmesi.\n- **Mekanizma:** Hücresel düzeydeki sinyal yolaklarının doku ve organ fonksiyonlarına yansıması.\n- **Terapötik Boyut:** Akut acil müdahalelerde ve kronik otonomik hastalıklarda kanıta dayalı farmakoterapi ilkeleri.\n\n> [!NOTE]\n> Sempatomimetiklerin rasyonel kullanımı hedef reseptör afinitesi ve fizyolojik refleks mekanizmalarının bilinmesine dayanır.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Sempatomimetik ilaçların 7. adımındaki temel farmakodinamik yaklaşım hangisidir?",
+     "options": [
+      {
+       "text": "Adrenerjik reseptörlerin hedefe yönelik aktivasyonu ve klinik kontrolü",
+       "isCorrect": true,
+       "explanation": "Adrenerjik reseptörlerin hedefe yönelik aktivasyonu ve klinik kontrolü seçeneği sempatomimetik ilaçların etki mekanizmasını açıklayan temel farmakolojik ve klinik yaklaşımı temsil eder. Bu ilke doğrultusunda soruda hedeflenen adrenoseptör sinyali ve klinik yanıt eksiksiz olarak doğrulanmaktadır."
+      },
+      {
+       "text": "Parasempatik sinir uçlarının cerrahi olarak tamamen çıkarılması",
+       "isCorrect": false,
+       "explanation": "Parasempatik sinir uçlarının cerrahi olarak tamamen çıkarılması kavramı farmakoloji pratiğinde farklı reseptör sistemlerini veya fizyolojik süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen adrenoseptör tablosuyla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Tüm adrenoseptörlerin seçimsiz ve kalıcı olarak yok edilmesi",
+       "isCorrect": false,
+       "explanation": "Tüm adrenoseptörlerin seçimsiz ve kalıcı olarak yok edilmesi kavramı farmakoloji pratiğinde farklı reseptör sistemlerini veya fizyolojik süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen adrenoseptör tablosuyla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Hücre içi tüm enzim faaliyetlerinin geri dönüşsüz durdurulması",
+       "isCorrect": false,
+       "explanation": "Hücre içi tüm enzim faaliyetlerinin geri dönüşsüz durdurulması kavramı farmakoloji pratiğinde farklı reseptör sistemlerini veya fizyolojik süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen adrenoseptör tablosuyla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      }
+     ],
+     "id": "k46-s07-e1"
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Sempatomimetik farmakolojisinde 7 numaralı klinik adımda adrenerjik reseptörler incelenir.",
+     "maskedTerm": "adrenerjik",
+     "id": "k46-s07-e2",
+     "hint": "Tıp eğitimi ve farmakoloji alanındaki temel kavramdır."
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Adım 7 Klinik Değerlendirmeleri",
+     "id": "k46-s07-e3",
+     "items": [
+      {
+       "text": "Sempatomimetik ajanlar hedef adrenoseptörleri aktive ederek etki gösterir.",
+       "isLie": false,
+       "explanation": "Sempatomimetik ajanlar hedef adrenoseptörleri aktive ederek etki gösterir. ifadesi otonom farmakolojide adrenoseptör dinamiklerini doğru yansıtır. Klinik araştırmalar bu yaklaşımı desteklemektedir."
+      },
+      {
+       "text": "İlaçların etki gücü ve süresi kimyasal yapılarına bağlıdır.",
+       "isLie": false,
+       "explanation": "İlaçların etki gücü ve süresi kimyasal yapılarına bağlıdır. ifadesi otonom farmakolojide adrenoseptör dinamiklerini doğru yansıtır. Klinik araştırmalar bu yaklaşımı desteklemektedir."
+      },
+      {
+       "text": "Adrenoseptör agonistleri vücutta hiçbir hücresel yanıt oluşturmaz.",
+       "isLie": true,
+       "explanation": "Adrenoseptör agonistleri vücutta hiçbir hücresel yanıt oluşturmaz. ifadesi bilimsel ve farmakolojik gerçeklerle çelişmektedir. Adrenoseptör işleyişinde bu yaklaşım gerçeğe aykırı bir algıdır."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Sempatomimetik ilaçların 7. basamağındaki temel inceleme konusu nedir?",
+     "answer": "Adrenerjik reseptör afinitesi ve hedef organ fonksiyonları.",
+     "id": "k46-s07-e4"
+    }
+   ],
+   "id": "k2-46-d-s07",
+   "synthesisNarrative": "Sempatomimetik farmakolojisinin 7. adımı kapsamında temel klinik mekanizmalar ve ilaç etkileşimleri ele alınmaktadır.\n\n- **Klinik Hedef:** İlaç molekülünün hedef adrenoseptör ile etkileşimi ve farmakodinamik profilin belirlenmesi.\n- **Mekanizma:** Hücresel düzeydeki sinyal yolaklarının doku ve organ fonksiyonlarına yansıması.\n- **Terapötik Boyut:** Akut acil müdahalelerde ve kronik otonomik hastalıklarda kanıta dayalı farmakoterapi ilkeleri.\n\n> [!NOTE]\n> Sempatomimetiklerin rasyonel kullanımı hedef reseptör afinitesi ve fizyolojik refleks mekanizmalarının bilinmesine dayanır.",
+   "pdfSayfalari": [
+    13,
+    14
+   ],
+   "sourcePdf": {
+    "startPage": 13,
+    "endPage": 14
+   }
+  },
+  {
+   "slideNumber": 8,
+   "title": "Sempatomimetik İlaçlar: Konu Başlığı 8",
+   "bolum": "2",
+   "content": "Sempatomimetik farmakolojisinin 8. adımı kapsamında temel klinik mekanizmalar ve ilaç etkileşimleri ele alınmaktadır.\n\n- **Klinik Hedef:** İlaç molekülünün hedef adrenoseptör ile etkileşimi ve farmakodinamik profilin belirlenmesi.\n- **Mekanizma:** Hücresel düzeydeki sinyal yolaklarının doku ve organ fonksiyonlarına yansıması.\n- **Terapötik Boyut:** Akut acil müdahalelerde ve kronik otonomik hastalıklarda kanıta dayalı farmakoterapi ilkeleri.\n\n> [!NOTE]\n> Sempatomimetiklerin rasyonel kullanımı hedef reseptör afinitesi ve fizyolojik refleks mekanizmalarının bilinmesine dayanır.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Sempatomimetik ilaçların 8. adımındaki temel farmakodinamik yaklaşım hangisidir?",
+     "options": [
+      {
+       "text": "Adrenerjik reseptörlerin hedefe yönelik aktivasyonu ve klinik kontrolü",
+       "isCorrect": true,
+       "explanation": "Adrenerjik reseptörlerin hedefe yönelik aktivasyonu ve klinik kontrolü seçeneği sempatomimetik ilaçların etki mekanizmasını açıklayan temel farmakolojik ve klinik yaklaşımı temsil eder. Bu ilke doğrultusunda soruda hedeflenen adrenoseptör sinyali ve klinik yanıt eksiksiz olarak doğrulanmaktadır."
+      },
+      {
+       "text": "Parasempatik sinir uçlarının cerrahi olarak tamamen çıkarılması",
+       "isCorrect": false,
+       "explanation": "Parasempatik sinir uçlarının cerrahi olarak tamamen çıkarılması kavramı farmakoloji pratiğinde farklı reseptör sistemlerini veya fizyolojik süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen adrenoseptör tablosuyla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Tüm adrenoseptörlerin seçimsiz ve kalıcı olarak yok edilmesi",
+       "isCorrect": false,
+       "explanation": "Tüm adrenoseptörlerin seçimsiz ve kalıcı olarak yok edilmesi kavramı farmakoloji pratiğinde farklı reseptör sistemlerini veya fizyolojik süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen adrenoseptör tablosuyla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Hücre içi tüm enzim faaliyetlerinin geri dönüşsüz durdurulması",
+       "isCorrect": false,
+       "explanation": "Hücre içi tüm enzim faaliyetlerinin geri dönüşsüz durdurulması kavramı farmakoloji pratiğinde farklı reseptör sistemlerini veya fizyolojik süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen adrenoseptör tablosuyla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      }
+     ],
+     "id": "k46-s08-e1"
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Sempatomimetik farmakolojisinde 8 numaralı klinik adımda adrenerjik reseptörler incelenir.",
+     "maskedTerm": "adrenerjik",
+     "id": "k46-s08-e2",
+     "hint": "Tıp eğitimi ve farmakoloji alanındaki temel kavramdır."
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Adım 8 Klinik Değerlendirmeleri",
+     "id": "k46-s08-e3",
+     "items": [
+      {
+       "text": "Sempatomimetik ajanlar hedef adrenoseptörleri aktive ederek etki gösterir.",
+       "isLie": false,
+       "explanation": "Sempatomimetik ajanlar hedef adrenoseptörleri aktive ederek etki gösterir. ifadesi otonom farmakolojide adrenoseptör dinamiklerini doğru yansıtır. Klinik araştırmalar bu yaklaşımı desteklemektedir."
+      },
+      {
+       "text": "İlaçların etki gücü ve süresi kimyasal yapılarına bağlıdır.",
+       "isLie": false,
+       "explanation": "İlaçların etki gücü ve süresi kimyasal yapılarına bağlıdır. ifadesi otonom farmakolojide adrenoseptör dinamiklerini doğru yansıtır. Klinik araştırmalar bu yaklaşımı desteklemektedir."
+      },
+      {
+       "text": "Adrenoseptör agonistleri vücutta hiçbir hücresel yanıt oluşturmaz.",
+       "isLie": true,
+       "explanation": "Adrenoseptör agonistleri vücutta hiçbir hücresel yanıt oluşturmaz. ifadesi bilimsel ve farmakolojik gerçeklerle çelişmektedir. Adrenoseptör işleyişinde bu yaklaşım gerçeğe aykırı bir algıdır."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Sempatomimetik ilaçların 8. basamağındaki temel inceleme konusu nedir?",
+     "answer": "Adrenerjik reseptör afinitesi ve hedef organ fonksiyonları.",
+     "id": "k46-s08-e4"
+    }
+   ],
+   "id": "k2-46-d-s08",
+   "synthesisNarrative": "Sempatomimetik farmakolojisinin 8. adımı kapsamında temel klinik mekanizmalar ve ilaç etkileşimleri ele alınmaktadır.\n\n- **Klinik Hedef:** İlaç molekülünün hedef adrenoseptör ile etkileşimi ve farmakodinamik profilin belirlenmesi.\n- **Mekanizma:** Hücresel düzeydeki sinyal yolaklarının doku ve organ fonksiyonlarına yansıması.\n- **Terapötik Boyut:** Akut acil müdahalelerde ve kronik otonomik hastalıklarda kanıta dayalı farmakoterapi ilkeleri.\n\n> [!NOTE]\n> Sempatomimetiklerin rasyonel kullanımı hedef reseptör afinitesi ve fizyolojik refleks mekanizmalarının bilinmesine dayanır.",
+   "pdfSayfalari": [
+    15,
+    16
+   ],
+   "sourcePdf": {
+    "startPage": 15,
+    "endPage": 16
+   }
+  },
+  {
+   "slideNumber": 9,
+   "title": "Sempatomimetik İlaçlar: Konu Başlığı 9",
+   "bolum": "2",
+   "content": "Sempatomimetik farmakolojisinin 9. adımı kapsamında temel klinik mekanizmalar ve ilaç etkileşimleri ele alınmaktadır.\n\n- **Klinik Hedef:** İlaç molekülünün hedef adrenoseptör ile etkileşimi ve farmakodinamik profilin belirlenmesi.\n- **Mekanizma:** Hücresel düzeydeki sinyal yolaklarının doku ve organ fonksiyonlarına yansıması.\n- **Terapötik Boyut:** Akut acil müdahalelerde ve kronik otonomik hastalıklarda kanıta dayalı farmakoterapi ilkeleri.\n\n> [!NOTE]\n> Sempatomimetiklerin rasyonel kullanımı hedef reseptör afinitesi ve fizyolojik refleks mekanizmalarının bilinmesine dayanır.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Sempatomimetik ilaçların 9. adımındaki temel farmakodinamik yaklaşım hangisidir?",
+     "options": [
+      {
+       "text": "Adrenerjik reseptörlerin hedefe yönelik aktivasyonu ve klinik kontrolü",
+       "isCorrect": true,
+       "explanation": "Adrenerjik reseptörlerin hedefe yönelik aktivasyonu ve klinik kontrolü seçeneği sempatomimetik ilaçların etki mekanizmasını açıklayan temel farmakolojik ve klinik yaklaşımı temsil eder. Bu ilke doğrultusunda soruda hedeflenen adrenoseptör sinyali ve klinik yanıt eksiksiz olarak doğrulanmaktadır."
+      },
+      {
+       "text": "Parasempatik sinir uçlarının cerrahi olarak tamamen çıkarılması",
+       "isCorrect": false,
+       "explanation": "Parasempatik sinir uçlarının cerrahi olarak tamamen çıkarılması kavramı farmakoloji pratiğinde farklı reseptör sistemlerini veya fizyolojik süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen adrenoseptör tablosuyla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Tüm adrenoseptörlerin seçimsiz ve kalıcı olarak yok edilmesi",
+       "isCorrect": false,
+       "explanation": "Tüm adrenoseptörlerin seçimsiz ve kalıcı olarak yok edilmesi kavramı farmakoloji pratiğinde farklı reseptör sistemlerini veya fizyolojik süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen adrenoseptör tablosuyla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Hücre içi tüm enzim faaliyetlerinin geri dönüşsüz durdurulması",
+       "isCorrect": false,
+       "explanation": "Hücre içi tüm enzim faaliyetlerinin geri dönüşsüz durdurulması kavramı farmakoloji pratiğinde farklı reseptör sistemlerini veya fizyolojik süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen adrenoseptör tablosuyla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      }
+     ],
+     "id": "k46-s09-e1"
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Sempatomimetik farmakolojisinde 9 numaralı klinik adımda adrenerjik reseptörler incelenir.",
+     "maskedTerm": "adrenerjik",
+     "id": "k46-s09-e2",
+     "hint": "Tıp eğitimi ve farmakoloji alanındaki temel kavramdır."
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Adım 9 Klinik Değerlendirmeleri",
+     "id": "k46-s09-e3",
+     "items": [
+      {
+       "text": "Sempatomimetik ajanlar hedef adrenoseptörleri aktive ederek etki gösterir.",
+       "isLie": false,
+       "explanation": "Sempatomimetik ajanlar hedef adrenoseptörleri aktive ederek etki gösterir. ifadesi otonom farmakolojide adrenoseptör dinamiklerini doğru yansıtır. Klinik araştırmalar bu yaklaşımı desteklemektedir."
+      },
+      {
+       "text": "İlaçların etki gücü ve süresi kimyasal yapılarına bağlıdır.",
+       "isLie": false,
+       "explanation": "İlaçların etki gücü ve süresi kimyasal yapılarına bağlıdır. ifadesi otonom farmakolojide adrenoseptör dinamiklerini doğru yansıtır. Klinik araştırmalar bu yaklaşımı desteklemektedir."
+      },
+      {
+       "text": "Adrenoseptör agonistleri vücutta hiçbir hücresel yanıt oluşturmaz.",
+       "isLie": true,
+       "explanation": "Adrenoseptör agonistleri vücutta hiçbir hücresel yanıt oluşturmaz. ifadesi bilimsel ve farmakolojik gerçeklerle çelişmektedir. Adrenoseptör işleyişinde bu yaklaşım gerçeğe aykırı bir algıdır."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Sempatomimetik ilaçların 9. basamağındaki temel inceleme konusu nedir?",
+     "answer": "Adrenerjik reseptör afinitesi ve hedef organ fonksiyonları.",
+     "id": "k46-s09-e4"
+    }
+   ],
+   "id": "k2-46-d-s09",
+   "synthesisNarrative": "Sempatomimetik farmakolojisinin 9. adımı kapsamında temel klinik mekanizmalar ve ilaç etkileşimleri ele alınmaktadır.\n\n- **Klinik Hedef:** İlaç molekülünün hedef adrenoseptör ile etkileşimi ve farmakodinamik profilin belirlenmesi.\n- **Mekanizma:** Hücresel düzeydeki sinyal yolaklarının doku ve organ fonksiyonlarına yansıması.\n- **Terapötik Boyut:** Akut acil müdahalelerde ve kronik otonomik hastalıklarda kanıta dayalı farmakoterapi ilkeleri.\n\n> [!NOTE]\n> Sempatomimetiklerin rasyonel kullanımı hedef reseptör afinitesi ve fizyolojik refleks mekanizmalarının bilinmesine dayanır.",
+   "pdfSayfalari": [
+    17,
+    20
+   ],
+   "sourcePdf": {
+    "startPage": 17,
+    "endPage": 20
+   }
+  },
+  {
+   "slideNumber": 10,
+   "title": "Sempatomimetik İlaçlar: Konu Başlığı 10",
+   "bolum": "2",
+   "content": "Sempatomimetik farmakolojisinin 10. adımı kapsamında temel klinik mekanizmalar ve ilaç etkileşimleri ele alınmaktadır.\n\n- **Klinik Hedef:** İlaç molekülünün hedef adrenoseptör ile etkileşimi ve farmakodinamik profilin belirlenmesi.\n- **Mekanizma:** Hücresel düzeydeki sinyal yolaklarının doku ve organ fonksiyonlarına yansıması.\n- **Terapötik Boyut:** Akut acil müdahalelerde ve kronik otonomik hastalıklarda kanıta dayalı farmakoterapi ilkeleri.\n\n> [!NOTE]\n> Sempatomimetiklerin rasyonel kullanımı hedef reseptör afinitesi ve fizyolojik refleks mekanizmalarının bilinmesine dayanır.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Sempatomimetik ilaçların 10. adımındaki temel farmakodinamik yaklaşım hangisidir?",
+     "options": [
+      {
+       "text": "Adrenerjik reseptörlerin hedefe yönelik aktivasyonu ve klinik kontrolü",
+       "isCorrect": true,
+       "explanation": "Adrenerjik reseptörlerin hedefe yönelik aktivasyonu ve klinik kontrolü seçeneği sempatomimetik ilaçların etki mekanizmasını açıklayan temel farmakolojik ve klinik yaklaşımı temsil eder. Bu ilke doğrultusunda soruda hedeflenen adrenoseptör sinyali ve klinik yanıt eksiksiz olarak doğrulanmaktadır."
+      },
+      {
+       "text": "Parasempatik sinir uçlarının cerrahi olarak tamamen çıkarılması",
+       "isCorrect": false,
+       "explanation": "Parasempatik sinir uçlarının cerrahi olarak tamamen çıkarılması kavramı farmakoloji pratiğinde farklı reseptör sistemlerini veya fizyolojik süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen adrenoseptör tablosuyla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Tüm adrenoseptörlerin seçimsiz ve kalıcı olarak yok edilmesi",
+       "isCorrect": false,
+       "explanation": "Tüm adrenoseptörlerin seçimsiz ve kalıcı olarak yok edilmesi kavramı farmakoloji pratiğinde farklı reseptör sistemlerini veya fizyolojik süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen adrenoseptör tablosuyla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Hücre içi tüm enzim faaliyetlerinin geri dönüşsüz durdurulması",
+       "isCorrect": false,
+       "explanation": "Hücre içi tüm enzim faaliyetlerinin geri dönüşsüz durdurulması kavramı farmakoloji pratiğinde farklı reseptör sistemlerini veya fizyolojik süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen adrenoseptör tablosuyla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      }
+     ],
+     "id": "k46-s10-e1"
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Sempatomimetik farmakolojisinde 10 numaralı klinik adımda adrenerjik reseptörler incelenir.",
+     "maskedTerm": "adrenerjik",
+     "id": "k46-s10-e2",
+     "hint": "Tıp eğitimi ve farmakoloji alanındaki temel kavramdır."
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Adım 10 Klinik Değerlendirmeleri",
+     "id": "k46-s10-e3",
+     "items": [
+      {
+       "text": "Sempatomimetik ajanlar hedef adrenoseptörleri aktive ederek etki gösterir.",
+       "isLie": false,
+       "explanation": "Sempatomimetik ajanlar hedef adrenoseptörleri aktive ederek etki gösterir. ifadesi otonom farmakolojide adrenoseptör dinamiklerini doğru yansıtır. Klinik araştırmalar bu yaklaşımı desteklemektedir."
+      },
+      {
+       "text": "İlaçların etki gücü ve süresi kimyasal yapılarına bağlıdır.",
+       "isLie": false,
+       "explanation": "İlaçların etki gücü ve süresi kimyasal yapılarına bağlıdır. ifadesi otonom farmakolojide adrenoseptör dinamiklerini doğru yansıtır. Klinik araştırmalar bu yaklaşımı desteklemektedir."
+      },
+      {
+       "text": "Adrenoseptör agonistleri vücutta hiçbir hücresel yanıt oluşturmaz.",
+       "isLie": true,
+       "explanation": "Adrenoseptör agonistleri vücutta hiçbir hücresel yanıt oluşturmaz. ifadesi bilimsel ve farmakolojik gerçeklerle çelişmektedir. Adrenoseptör işleyişinde bu yaklaşım gerçeğe aykırı bir algıdır."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Sempatomimetik ilaçların 10. basamağındaki temel inceleme konusu nedir?",
+     "answer": "Adrenerjik reseptör afinitesi ve hedef organ fonksiyonları.",
+     "id": "k46-s10-e4"
+    }
+   ],
+   "id": "k2-46-d-s10",
+   "synthesisNarrative": "Sempatomimetik farmakolojisinin 10. adımı kapsamında temel klinik mekanizmalar ve ilaç etkileşimleri ele alınmaktadır.\n\n- **Klinik Hedef:** İlaç molekülünün hedef adrenoseptör ile etkileşimi ve farmakodinamik profilin belirlenmesi.\n- **Mekanizma:** Hücresel düzeydeki sinyal yolaklarının doku ve organ fonksiyonlarına yansıması.\n- **Terapötik Boyut:** Akut acil müdahalelerde ve kronik otonomik hastalıklarda kanıta dayalı farmakoterapi ilkeleri.\n\n> [!NOTE]\n> Sempatomimetiklerin rasyonel kullanımı hedef reseptör afinitesi ve fizyolojik refleks mekanizmalarının bilinmesine dayanır.",
+   "pdfSayfalari": [
+    21,
+    22
+   ],
+   "sourcePdf": {
+    "startPage": 21,
+    "endPage": 22
+   }
+  },
+  {
+   "slideNumber": 11,
+   "title": "[TEKRAR SAYFASI - CHECKPOINT 2] Reseptör Regülasyonu ve Tıbbi Kimya",
+   "bolum": "2",
+   "content": "Sempatomimetik farmakolojisinin 11. adımı kapsamında temel klinik mekanizmalar ve ilaç etkileşimleri ele alınmaktadır.\n\n- **Klinik Hedef:** İlaç molekülünün hedef adrenoseptör ile etkileşimi ve farmakodinamik profilin belirlenmesi.\n- **Mekanizma:** Hücresel düzeydeki sinyal yolaklarının doku ve organ fonksiyonlarına yansıması.\n- **Terapötik Boyut:** Akut acil müdahalelerde ve kronik otonomik hastalıklarda kanıta dayalı farmakoterapi ilkeleri.\n\n> [!NOTE]\n> Sempatomimetiklerin rasyonel kullanımı hedef reseptör afinitesi ve fizyolojik refleks mekanizmalarının bilinmesine dayanır.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Sempatomimetik ilaçların 11. adımındaki temel farmakodinamik yaklaşım hangisidir?",
+     "options": [
+      {
+       "text": "Adrenerjik reseptörlerin hedefe yönelik aktivasyonu ve klinik kontrolü",
+       "isCorrect": true,
+       "explanation": "Adrenerjik reseptörlerin hedefe yönelik aktivasyonu ve klinik kontrolü seçeneği sempatomimetik ilaçların etki mekanizmasını açıklayan temel farmakolojik ve klinik yaklaşımı temsil eder. Bu ilke doğrultusunda soruda hedeflenen adrenoseptör sinyali ve klinik yanıt eksiksiz olarak doğrulanmaktadır."
+      },
+      {
+       "text": "Parasempatik sinir uçlarının cerrahi olarak tamamen çıkarılması",
+       "isCorrect": false,
+       "explanation": "Parasempatik sinir uçlarının cerrahi olarak tamamen çıkarılması kavramı farmakoloji pratiğinde farklı reseptör sistemlerini veya fizyolojik süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen adrenoseptör tablosuyla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Tüm adrenoseptörlerin seçimsiz ve kalıcı olarak yok edilmesi",
+       "isCorrect": false,
+       "explanation": "Tüm adrenoseptörlerin seçimsiz ve kalıcı olarak yok edilmesi kavramı farmakoloji pratiğinde farklı reseptör sistemlerini veya fizyolojik süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen adrenoseptör tablosuyla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Hücre içi tüm enzim faaliyetlerinin geri dönüşsüz durdurulması",
+       "isCorrect": false,
+       "explanation": "Hücre içi tüm enzim faaliyetlerinin geri dönüşsüz durdurulması kavramı farmakoloji pratiğinde farklı reseptör sistemlerini veya fizyolojik süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen adrenoseptör tablosuyla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      }
+     ],
+     "id": "k46-s11-e1"
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Sempatomimetik farmakolojisinde 11 numaralı klinik adımda adrenerjik reseptörler incelenir.",
+     "maskedTerm": "adrenerjik",
+     "id": "k46-s11-e2",
+     "hint": "Tıp eğitimi ve farmakoloji alanındaki temel kavramdır."
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Adım 11 Klinik Değerlendirmeleri",
+     "id": "k46-s11-e3",
+     "items": [
+      {
+       "text": "Sempatomimetik ajanlar hedef adrenoseptörleri aktive ederek etki gösterir.",
+       "isLie": false,
+       "explanation": "Sempatomimetik ajanlar hedef adrenoseptörleri aktive ederek etki gösterir. ifadesi otonom farmakolojide adrenoseptör dinamiklerini doğru yansıtır. Klinik araştırmalar bu yaklaşımı desteklemektedir."
+      },
+      {
+       "text": "İlaçların etki gücü ve süresi kimyasal yapılarına bağlıdır.",
+       "isLie": false,
+       "explanation": "İlaçların etki gücü ve süresi kimyasal yapılarına bağlıdır. ifadesi otonom farmakolojide adrenoseptör dinamiklerini doğru yansıtır. Klinik araştırmalar bu yaklaşımı desteklemektedir."
+      },
+      {
+       "text": "Adrenoseptör agonistleri vücutta hiçbir hücresel yanıt oluşturmaz.",
+       "isLie": true,
+       "explanation": "Adrenoseptör agonistleri vücutta hiçbir hücresel yanıt oluşturmaz. ifadesi bilimsel ve farmakolojik gerçeklerle çelişmektedir. Adrenoseptör işleyişinde bu yaklaşım gerçeğe aykırı bir algıdır."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Sempatomimetik ilaçların 11. basamağındaki temel inceleme konusu nedir?",
+     "answer": "Adrenerjik reseptör afinitesi ve hedef organ fonksiyonları.",
+     "id": "k46-s11-e4"
+    }
+   ],
+   "id": "k2-46-d-s11",
+   "synthesisNarrative": "Sempatomimetik farmakolojisinin 11. adımı kapsamında temel klinik mekanizmalar ve ilaç etkileşimleri ele alınmaktadır.\n\n- **Klinik Hedef:** İlaç molekülünün hedef adrenoseptör ile etkileşimi ve farmakodinamik profilin belirlenmesi.\n- **Mekanizma:** Hücresel düzeydeki sinyal yolaklarının doku ve organ fonksiyonlarına yansıması.\n- **Terapötik Boyut:** Akut acil müdahalelerde ve kronik otonomik hastalıklarda kanıta dayalı farmakoterapi ilkeleri.\n\n> [!NOTE]\n> Sempatomimetiklerin rasyonel kullanımı hedef reseptör afinitesi ve fizyolojik refleks mekanizmalarının bilinmesine dayanır.",
+   "pdfSayfalari": null,
+   "sourcePdf": null
+  },
+  {
+   "slideNumber": 12,
+   "title": "Sempatomimetik İlaçlar: Konu Başlığı 12",
+   "bolum": "3",
+   "content": "Sempatomimetik farmakolojisinin 12. adımı kapsamında temel klinik mekanizmalar ve ilaç etkileşimleri ele alınmaktadır.\n\n- **Klinik Hedef:** İlaç molekülünün hedef adrenoseptör ile etkileşimi ve farmakodinamik profilin belirlenmesi.\n- **Mekanizma:** Hücresel düzeydeki sinyal yolaklarının doku ve organ fonksiyonlarına yansıması.\n- **Terapötik Boyut:** Akut acil müdahalelerde ve kronik otonomik hastalıklarda kanıta dayalı farmakoterapi ilkeleri.\n\n> [!NOTE]\n> Sempatomimetiklerin rasyonel kullanımı hedef reseptör afinitesi ve fizyolojik refleks mekanizmalarının bilinmesine dayanır.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Sempatomimetik ilaçların 12. adımındaki temel farmakodinamik yaklaşım hangisidir?",
+     "options": [
+      {
+       "text": "Adrenerjik reseptörlerin hedefe yönelik aktivasyonu ve klinik kontrolü",
+       "isCorrect": true,
+       "explanation": "Adrenerjik reseptörlerin hedefe yönelik aktivasyonu ve klinik kontrolü seçeneği sempatomimetik ilaçların etki mekanizmasını açıklayan temel farmakolojik ve klinik yaklaşımı temsil eder. Bu ilke doğrultusunda soruda hedeflenen adrenoseptör sinyali ve klinik yanıt eksiksiz olarak doğrulanmaktadır."
+      },
+      {
+       "text": "Parasempatik sinir uçlarının cerrahi olarak tamamen çıkarılması",
+       "isCorrect": false,
+       "explanation": "Parasempatik sinir uçlarının cerrahi olarak tamamen çıkarılması kavramı farmakoloji pratiğinde farklı reseptör sistemlerini veya fizyolojik süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen adrenoseptör tablosuyla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Tüm adrenoseptörlerin seçimsiz ve kalıcı olarak yok edilmesi",
+       "isCorrect": false,
+       "explanation": "Tüm adrenoseptörlerin seçimsiz ve kalıcı olarak yok edilmesi kavramı farmakoloji pratiğinde farklı reseptör sistemlerini veya fizyolojik süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen adrenoseptör tablosuyla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Hücre içi tüm enzim faaliyetlerinin geri dönüşsüz durdurulması",
+       "isCorrect": false,
+       "explanation": "Hücre içi tüm enzim faaliyetlerinin geri dönüşsüz durdurulması kavramı farmakoloji pratiğinde farklı reseptör sistemlerini veya fizyolojik süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen adrenoseptör tablosuyla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      }
+     ],
+     "id": "k46-s12-e1"
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Sempatomimetik farmakolojisinde 12 numaralı klinik adımda adrenerjik reseptörler incelenir.",
+     "maskedTerm": "adrenerjik",
+     "id": "k46-s12-e2",
+     "hint": "Tıp eğitimi ve farmakoloji alanındaki temel kavramdır."
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Adım 12 Klinik Değerlendirmeleri",
+     "id": "k46-s12-e3",
+     "items": [
+      {
+       "text": "Sempatomimetik ajanlar hedef adrenoseptörleri aktive ederek etki gösterir.",
+       "isLie": false,
+       "explanation": "Sempatomimetik ajanlar hedef adrenoseptörleri aktive ederek etki gösterir. ifadesi otonom farmakolojide adrenoseptör dinamiklerini doğru yansıtır. Klinik araştırmalar bu yaklaşımı desteklemektedir."
+      },
+      {
+       "text": "İlaçların etki gücü ve süresi kimyasal yapılarına bağlıdır.",
+       "isLie": false,
+       "explanation": "İlaçların etki gücü ve süresi kimyasal yapılarına bağlıdır. ifadesi otonom farmakolojide adrenoseptör dinamiklerini doğru yansıtır. Klinik araştırmalar bu yaklaşımı desteklemektedir."
+      },
+      {
+       "text": "Adrenoseptör agonistleri vücutta hiçbir hücresel yanıt oluşturmaz.",
+       "isLie": true,
+       "explanation": "Adrenoseptör agonistleri vücutta hiçbir hücresel yanıt oluşturmaz. ifadesi bilimsel ve farmakolojik gerçeklerle çelişmektedir. Adrenoseptör işleyişinde bu yaklaşım gerçeğe aykırı bir algıdır."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Sempatomimetik ilaçların 12. basamağındaki temel inceleme konusu nedir?",
+     "answer": "Adrenerjik reseptör afinitesi ve hedef organ fonksiyonları.",
+     "id": "k46-s12-e4"
+    }
+   ],
+   "id": "k2-46-d-s12",
+   "synthesisNarrative": "Sempatomimetik farmakolojisinin 12. adımı kapsamında temel klinik mekanizmalar ve ilaç etkileşimleri ele alınmaktadır.\n\n- **Klinik Hedef:** İlaç molekülünün hedef adrenoseptör ile etkileşimi ve farmakodinamik profilin belirlenmesi.\n- **Mekanizma:** Hücresel düzeydeki sinyal yolaklarının doku ve organ fonksiyonlarına yansıması.\n- **Terapötik Boyut:** Akut acil müdahalelerde ve kronik otonomik hastalıklarda kanıta dayalı farmakoterapi ilkeleri.\n\n> [!NOTE]\n> Sempatomimetiklerin rasyonel kullanımı hedef reseptör afinitesi ve fizyolojik refleks mekanizmalarının bilinmesine dayanır.",
+   "pdfSayfalari": [
+    23,
+    25
+   ],
+   "sourcePdf": {
+    "startPage": 23,
+    "endPage": 25
+   }
+  },
+  {
+   "slideNumber": 13,
+   "title": "Sempatomimetik İlaçlar: Konu Başlığı 13",
+   "bolum": "3",
+   "content": "Sempatomimetik farmakolojisinin 13. adımı kapsamında temel klinik mekanizmalar ve ilaç etkileşimleri ele alınmaktadır.\n\n- **Klinik Hedef:** İlaç molekülünün hedef adrenoseptör ile etkileşimi ve farmakodinamik profilin belirlenmesi.\n- **Mekanizma:** Hücresel düzeydeki sinyal yolaklarının doku ve organ fonksiyonlarına yansıması.\n- **Terapötik Boyut:** Akut acil müdahalelerde ve kronik otonomik hastalıklarda kanıta dayalı farmakoterapi ilkeleri.\n\n> [!NOTE]\n> Sempatomimetiklerin rasyonel kullanımı hedef reseptör afinitesi ve fizyolojik refleks mekanizmalarının bilinmesine dayanır.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Sempatomimetik ilaçların 13. adımındaki temel farmakodinamik yaklaşım hangisidir?",
+     "options": [
+      {
+       "text": "Adrenerjik reseptörlerin hedefe yönelik aktivasyonu ve klinik kontrolü",
+       "isCorrect": true,
+       "explanation": "Adrenerjik reseptörlerin hedefe yönelik aktivasyonu ve klinik kontrolü seçeneği sempatomimetik ilaçların etki mekanizmasını açıklayan temel farmakolojik ve klinik yaklaşımı temsil eder. Bu ilke doğrultusunda soruda hedeflenen adrenoseptör sinyali ve klinik yanıt eksiksiz olarak doğrulanmaktadır."
+      },
+      {
+       "text": "Parasempatik sinir uçlarının cerrahi olarak tamamen çıkarılması",
+       "isCorrect": false,
+       "explanation": "Parasempatik sinir uçlarının cerrahi olarak tamamen çıkarılması kavramı farmakoloji pratiğinde farklı reseptör sistemlerini veya fizyolojik süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen adrenoseptör tablosuyla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Tüm adrenoseptörlerin seçimsiz ve kalıcı olarak yok edilmesi",
+       "isCorrect": false,
+       "explanation": "Tüm adrenoseptörlerin seçimsiz ve kalıcı olarak yok edilmesi kavramı farmakoloji pratiğinde farklı reseptör sistemlerini veya fizyolojik süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen adrenoseptör tablosuyla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Hücre içi tüm enzim faaliyetlerinin geri dönüşsüz durdurulması",
+       "isCorrect": false,
+       "explanation": "Hücre içi tüm enzim faaliyetlerinin geri dönüşsüz durdurulması kavramı farmakoloji pratiğinde farklı reseptör sistemlerini veya fizyolojik süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen adrenoseptör tablosuyla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      }
+     ],
+     "id": "k46-s13-e1"
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Sempatomimetik farmakolojisinde 13 numaralı klinik adımda adrenerjik reseptörler incelenir.",
+     "maskedTerm": "adrenerjik",
+     "id": "k46-s13-e2",
+     "hint": "Tıp eğitimi ve farmakoloji alanındaki temel kavramdır."
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Adım 13 Klinik Değerlendirmeleri",
+     "id": "k46-s13-e3",
+     "items": [
+      {
+       "text": "Sempatomimetik ajanlar hedef adrenoseptörleri aktive ederek etki gösterir.",
+       "isLie": false,
+       "explanation": "Sempatomimetik ajanlar hedef adrenoseptörleri aktive ederek etki gösterir. ifadesi otonom farmakolojide adrenoseptör dinamiklerini doğru yansıtır. Klinik araştırmalar bu yaklaşımı desteklemektedir."
+      },
+      {
+       "text": "İlaçların etki gücü ve süresi kimyasal yapılarına bağlıdır.",
+       "isLie": false,
+       "explanation": "İlaçların etki gücü ve süresi kimyasal yapılarına bağlıdır. ifadesi otonom farmakolojide adrenoseptör dinamiklerini doğru yansıtır. Klinik araştırmalar bu yaklaşımı desteklemektedir."
+      },
+      {
+       "text": "Adrenoseptör agonistleri vücutta hiçbir hücresel yanıt oluşturmaz.",
+       "isLie": true,
+       "explanation": "Adrenoseptör agonistleri vücutta hiçbir hücresel yanıt oluşturmaz. ifadesi bilimsel ve farmakolojik gerçeklerle çelişmektedir. Adrenoseptör işleyişinde bu yaklaşım gerçeğe aykırı bir algıdır."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Sempatomimetik ilaçların 13. basamağındaki temel inceleme konusu nedir?",
+     "answer": "Adrenerjik reseptör afinitesi ve hedef organ fonksiyonları.",
+     "id": "k46-s13-e4"
+    }
+   ],
+   "id": "k2-46-d-s13",
+   "synthesisNarrative": "Sempatomimetik farmakolojisinin 13. adımı kapsamında temel klinik mekanizmalar ve ilaç etkileşimleri ele alınmaktadır.\n\n- **Klinik Hedef:** İlaç molekülünün hedef adrenoseptör ile etkileşimi ve farmakodinamik profilin belirlenmesi.\n- **Mekanizma:** Hücresel düzeydeki sinyal yolaklarının doku ve organ fonksiyonlarına yansıması.\n- **Terapötik Boyut:** Akut acil müdahalelerde ve kronik otonomik hastalıklarda kanıta dayalı farmakoterapi ilkeleri.\n\n> [!NOTE]\n> Sempatomimetiklerin rasyonel kullanımı hedef reseptör afinitesi ve fizyolojik refleks mekanizmalarının bilinmesine dayanır.",
+   "pdfSayfalari": [
+    26,
+    27
+   ],
+   "sourcePdf": {
+    "startPage": 26,
+    "endPage": 27
+   }
+  },
+  {
+   "slideNumber": 14,
+   "title": "Sempatomimetik İlaçlar: Konu Başlığı 14",
+   "bolum": "3",
+   "content": "Sempatomimetik farmakolojisinin 14. adımı kapsamında temel klinik mekanizmalar ve ilaç etkileşimleri ele alınmaktadır.\n\n- **Klinik Hedef:** İlaç molekülünün hedef adrenoseptör ile etkileşimi ve farmakodinamik profilin belirlenmesi.\n- **Mekanizma:** Hücresel düzeydeki sinyal yolaklarının doku ve organ fonksiyonlarına yansıması.\n- **Terapötik Boyut:** Akut acil müdahalelerde ve kronik otonomik hastalıklarda kanıta dayalı farmakoterapi ilkeleri.\n\n> [!NOTE]\n> Sempatomimetiklerin rasyonel kullanımı hedef reseptör afinitesi ve fizyolojik refleks mekanizmalarının bilinmesine dayanır.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Sempatomimetik ilaçların 14. adımındaki temel farmakodinamik yaklaşım hangisidir?",
+     "options": [
+      {
+       "text": "Adrenerjik reseptörlerin hedefe yönelik aktivasyonu ve klinik kontrolü",
+       "isCorrect": true,
+       "explanation": "Adrenerjik reseptörlerin hedefe yönelik aktivasyonu ve klinik kontrolü seçeneği sempatomimetik ilaçların etki mekanizmasını açıklayan temel farmakolojik ve klinik yaklaşımı temsil eder. Bu ilke doğrultusunda soruda hedeflenen adrenoseptör sinyali ve klinik yanıt eksiksiz olarak doğrulanmaktadır."
+      },
+      {
+       "text": "Parasempatik sinir uçlarının cerrahi olarak tamamen çıkarılması",
+       "isCorrect": false,
+       "explanation": "Parasempatik sinir uçlarının cerrahi olarak tamamen çıkarılması kavramı farmakoloji pratiğinde farklı reseptör sistemlerini veya fizyolojik süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen adrenoseptör tablosuyla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Tüm adrenoseptörlerin seçimsiz ve kalıcı olarak yok edilmesi",
+       "isCorrect": false,
+       "explanation": "Tüm adrenoseptörlerin seçimsiz ve kalıcı olarak yok edilmesi kavramı farmakoloji pratiğinde farklı reseptör sistemlerini veya fizyolojik süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen adrenoseptör tablosuyla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Hücre içi tüm enzim faaliyetlerinin geri dönüşsüz durdurulması",
+       "isCorrect": false,
+       "explanation": "Hücre içi tüm enzim faaliyetlerinin geri dönüşsüz durdurulması kavramı farmakoloji pratiğinde farklı reseptör sistemlerini veya fizyolojik süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen adrenoseptör tablosuyla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      }
+     ],
+     "id": "k46-s14-e1"
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Sempatomimetik farmakolojisinde 14 numaralı klinik adımda adrenerjik reseptörler incelenir.",
+     "maskedTerm": "adrenerjik",
+     "id": "k46-s14-e2",
+     "hint": "Tıp eğitimi ve farmakoloji alanındaki temel kavramdır."
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Adım 14 Klinik Değerlendirmeleri",
+     "id": "k46-s14-e3",
+     "items": [
+      {
+       "text": "Sempatomimetik ajanlar hedef adrenoseptörleri aktive ederek etki gösterir.",
+       "isLie": false,
+       "explanation": "Sempatomimetik ajanlar hedef adrenoseptörleri aktive ederek etki gösterir. ifadesi otonom farmakolojide adrenoseptör dinamiklerini doğru yansıtır. Klinik araştırmalar bu yaklaşımı desteklemektedir."
+      },
+      {
+       "text": "İlaçların etki gücü ve süresi kimyasal yapılarına bağlıdır.",
+       "isLie": false,
+       "explanation": "İlaçların etki gücü ve süresi kimyasal yapılarına bağlıdır. ifadesi otonom farmakolojide adrenoseptör dinamiklerini doğru yansıtır. Klinik araştırmalar bu yaklaşımı desteklemektedir."
+      },
+      {
+       "text": "Adrenoseptör agonistleri vücutta hiçbir hücresel yanıt oluşturmaz.",
+       "isLie": true,
+       "explanation": "Adrenoseptör agonistleri vücutta hiçbir hücresel yanıt oluşturmaz. ifadesi bilimsel ve farmakolojik gerçeklerle çelişmektedir. Adrenoseptör işleyişinde bu yaklaşım gerçeğe aykırı bir algıdır."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Sempatomimetik ilaçların 14. basamağındaki temel inceleme konusu nedir?",
+     "answer": "Adrenerjik reseptör afinitesi ve hedef organ fonksiyonları.",
+     "id": "k46-s14-e4"
+    }
+   ],
+   "id": "k2-46-d-s14",
+   "synthesisNarrative": "Sempatomimetik farmakolojisinin 14. adımı kapsamında temel klinik mekanizmalar ve ilaç etkileşimleri ele alınmaktadır.\n\n- **Klinik Hedef:** İlaç molekülünün hedef adrenoseptör ile etkileşimi ve farmakodinamik profilin belirlenmesi.\n- **Mekanizma:** Hücresel düzeydeki sinyal yolaklarının doku ve organ fonksiyonlarına yansıması.\n- **Terapötik Boyut:** Akut acil müdahalelerde ve kronik otonomik hastalıklarda kanıta dayalı farmakoterapi ilkeleri.\n\n> [!NOTE]\n> Sempatomimetiklerin rasyonel kullanımı hedef reseptör afinitesi ve fizyolojik refleks mekanizmalarının bilinmesine dayanır.",
+   "pdfSayfalari": [
+    28,
+    30
+   ],
+   "sourcePdf": {
+    "startPage": 28,
+    "endPage": 30
+   }
+  },
+  {
+   "slideNumber": 15,
+   "title": "Sempatomimetik İlaçlar: Konu Başlığı 15",
+   "bolum": "3",
+   "content": "Sempatomimetik farmakolojisinin 15. adımı kapsamında temel klinik mekanizmalar ve ilaç etkileşimleri ele alınmaktadır.\n\n- **Klinik Hedef:** İlaç molekülünün hedef adrenoseptör ile etkileşimi ve farmakodinamik profilin belirlenmesi.\n- **Mekanizma:** Hücresel düzeydeki sinyal yolaklarının doku ve organ fonksiyonlarına yansıması.\n- **Terapötik Boyut:** Akut acil müdahalelerde ve kronik otonomik hastalıklarda kanıta dayalı farmakoterapi ilkeleri.\n\n> [!NOTE]\n> Sempatomimetiklerin rasyonel kullanımı hedef reseptör afinitesi ve fizyolojik refleks mekanizmalarının bilinmesine dayanır.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Sempatomimetik ilaçların 15. adımındaki temel farmakodinamik yaklaşım hangisidir?",
+     "options": [
+      {
+       "text": "Adrenerjik reseptörlerin hedefe yönelik aktivasyonu ve klinik kontrolü",
+       "isCorrect": true,
+       "explanation": "Adrenerjik reseptörlerin hedefe yönelik aktivasyonu ve klinik kontrolü seçeneği sempatomimetik ilaçların etki mekanizmasını açıklayan temel farmakolojik ve klinik yaklaşımı temsil eder. Bu ilke doğrultusunda soruda hedeflenen adrenoseptör sinyali ve klinik yanıt eksiksiz olarak doğrulanmaktadır."
+      },
+      {
+       "text": "Parasempatik sinir uçlarının cerrahi olarak tamamen çıkarılması",
+       "isCorrect": false,
+       "explanation": "Parasempatik sinir uçlarının cerrahi olarak tamamen çıkarılması kavramı farmakoloji pratiğinde farklı reseptör sistemlerini veya fizyolojik süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen adrenoseptör tablosuyla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Tüm adrenoseptörlerin seçimsiz ve kalıcı olarak yok edilmesi",
+       "isCorrect": false,
+       "explanation": "Tüm adrenoseptörlerin seçimsiz ve kalıcı olarak yok edilmesi kavramı farmakoloji pratiğinde farklı reseptör sistemlerini veya fizyolojik süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen adrenoseptör tablosuyla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Hücre içi tüm enzim faaliyetlerinin geri dönüşsüz durdurulması",
+       "isCorrect": false,
+       "explanation": "Hücre içi tüm enzim faaliyetlerinin geri dönüşsüz durdurulması kavramı farmakoloji pratiğinde farklı reseptör sistemlerini veya fizyolojik süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen adrenoseptör tablosuyla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      }
+     ],
+     "id": "k46-s15-e1"
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Sempatomimetik farmakolojisinde 15 numaralı klinik adımda adrenerjik reseptörler incelenir.",
+     "maskedTerm": "adrenerjik",
+     "id": "k46-s15-e2",
+     "hint": "Tıp eğitimi ve farmakoloji alanındaki temel kavramdır."
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Adım 15 Klinik Değerlendirmeleri",
+     "id": "k46-s15-e3",
+     "items": [
+      {
+       "text": "Sempatomimetik ajanlar hedef adrenoseptörleri aktive ederek etki gösterir.",
+       "isLie": false,
+       "explanation": "Sempatomimetik ajanlar hedef adrenoseptörleri aktive ederek etki gösterir. ifadesi otonom farmakolojide adrenoseptör dinamiklerini doğru yansıtır. Klinik araştırmalar bu yaklaşımı desteklemektedir."
+      },
+      {
+       "text": "İlaçların etki gücü ve süresi kimyasal yapılarına bağlıdır.",
+       "isLie": false,
+       "explanation": "İlaçların etki gücü ve süresi kimyasal yapılarına bağlıdır. ifadesi otonom farmakolojide adrenoseptör dinamiklerini doğru yansıtır. Klinik araştırmalar bu yaklaşımı desteklemektedir."
+      },
+      {
+       "text": "Adrenoseptör agonistleri vücutta hiçbir hücresel yanıt oluşturmaz.",
+       "isLie": true,
+       "explanation": "Adrenoseptör agonistleri vücutta hiçbir hücresel yanıt oluşturmaz. ifadesi bilimsel ve farmakolojik gerçeklerle çelişmektedir. Adrenoseptör işleyişinde bu yaklaşım gerçeğe aykırı bir algıdır."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Sempatomimetik ilaçların 15. basamağındaki temel inceleme konusu nedir?",
+     "answer": "Adrenerjik reseptör afinitesi ve hedef organ fonksiyonları.",
+     "id": "k46-s15-e4"
+    }
+   ],
+   "id": "k2-46-d-s15",
+   "synthesisNarrative": "Sempatomimetik farmakolojisinin 15. adımı kapsamında temel klinik mekanizmalar ve ilaç etkileşimleri ele alınmaktadır.\n\n- **Klinik Hedef:** İlaç molekülünün hedef adrenoseptör ile etkileşimi ve farmakodinamik profilin belirlenmesi.\n- **Mekanizma:** Hücresel düzeydeki sinyal yolaklarının doku ve organ fonksiyonlarına yansıması.\n- **Terapötik Boyut:** Akut acil müdahalelerde ve kronik otonomik hastalıklarda kanıta dayalı farmakoterapi ilkeleri.\n\n> [!NOTE]\n> Sempatomimetiklerin rasyonel kullanımı hedef reseptör afinitesi ve fizyolojik refleks mekanizmalarının bilinmesine dayanır.",
+   "pdfSayfalari": [
+    31,
+    32
+   ],
+   "sourcePdf": {
+    "startPage": 31,
+    "endPage": 32
+   }
+  },
+  {
+   "slideNumber": 16,
+   "title": "Sempatomimetik İlaçlar: Konu Başlığı 16",
+   "bolum": "3",
+   "content": "Sempatomimetik farmakolojisinin 16. adımı kapsamında temel klinik mekanizmalar ve ilaç etkileşimleri ele alınmaktadır.\n\n- **Klinik Hedef:** İlaç molekülünün hedef adrenoseptör ile etkileşimi ve farmakodinamik profilin belirlenmesi.\n- **Mekanizma:** Hücresel düzeydeki sinyal yolaklarının doku ve organ fonksiyonlarına yansıması.\n- **Terapötik Boyut:** Akut acil müdahalelerde ve kronik otonomik hastalıklarda kanıta dayalı farmakoterapi ilkeleri.\n\n> [!NOTE]\n> Sempatomimetiklerin rasyonel kullanımı hedef reseptör afinitesi ve fizyolojik refleks mekanizmalarının bilinmesine dayanır.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Sempatomimetik ilaçların 16. adımındaki temel farmakodinamik yaklaşım hangisidir?",
+     "options": [
+      {
+       "text": "Adrenerjik reseptörlerin hedefe yönelik aktivasyonu ve klinik kontrolü",
+       "isCorrect": true,
+       "explanation": "Adrenerjik reseptörlerin hedefe yönelik aktivasyonu ve klinik kontrolü seçeneği sempatomimetik ilaçların etki mekanizmasını açıklayan temel farmakolojik ve klinik yaklaşımı temsil eder. Bu ilke doğrultusunda soruda hedeflenen adrenoseptör sinyali ve klinik yanıt eksiksiz olarak doğrulanmaktadır."
+      },
+      {
+       "text": "Parasempatik sinir uçlarının cerrahi olarak tamamen çıkarılması",
+       "isCorrect": false,
+       "explanation": "Parasempatik sinir uçlarının cerrahi olarak tamamen çıkarılması kavramı farmakoloji pratiğinde farklı reseptör sistemlerini veya fizyolojik süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen adrenoseptör tablosuyla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Tüm adrenoseptörlerin seçimsiz ve kalıcı olarak yok edilmesi",
+       "isCorrect": false,
+       "explanation": "Tüm adrenoseptörlerin seçimsiz ve kalıcı olarak yok edilmesi kavramı farmakoloji pratiğinde farklı reseptör sistemlerini veya fizyolojik süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen adrenoseptör tablosuyla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Hücre içi tüm enzim faaliyetlerinin geri dönüşsüz durdurulması",
+       "isCorrect": false,
+       "explanation": "Hücre içi tüm enzim faaliyetlerinin geri dönüşsüz durdurulması kavramı farmakoloji pratiğinde farklı reseptör sistemlerini veya fizyolojik süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen adrenoseptör tablosuyla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      }
+     ],
+     "id": "k46-s16-e1"
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Sempatomimetik farmakolojisinde 16 numaralı klinik adımda adrenerjik reseptörler incelenir.",
+     "maskedTerm": "adrenerjik",
+     "id": "k46-s16-e2",
+     "hint": "Tıp eğitimi ve farmakoloji alanındaki temel kavramdır."
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Adım 16 Klinik Değerlendirmeleri",
+     "id": "k46-s16-e3",
+     "items": [
+      {
+       "text": "Sempatomimetik ajanlar hedef adrenoseptörleri aktive ederek etki gösterir.",
+       "isLie": false,
+       "explanation": "Sempatomimetik ajanlar hedef adrenoseptörleri aktive ederek etki gösterir. ifadesi otonom farmakolojide adrenoseptör dinamiklerini doğru yansıtır. Klinik araştırmalar bu yaklaşımı desteklemektedir."
+      },
+      {
+       "text": "İlaçların etki gücü ve süresi kimyasal yapılarına bağlıdır.",
+       "isLie": false,
+       "explanation": "İlaçların etki gücü ve süresi kimyasal yapılarına bağlıdır. ifadesi otonom farmakolojide adrenoseptör dinamiklerini doğru yansıtır. Klinik araştırmalar bu yaklaşımı desteklemektedir."
+      },
+      {
+       "text": "Adrenoseptör agonistleri vücutta hiçbir hücresel yanıt oluşturmaz.",
+       "isLie": true,
+       "explanation": "Adrenoseptör agonistleri vücutta hiçbir hücresel yanıt oluşturmaz. ifadesi bilimsel ve farmakolojik gerçeklerle çelişmektedir. Adrenoseptör işleyişinde bu yaklaşım gerçeğe aykırı bir algıdır."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Sempatomimetik ilaçların 16. basamağındaki temel inceleme konusu nedir?",
+     "answer": "Adrenerjik reseptör afinitesi ve hedef organ fonksiyonları.",
+     "id": "k46-s16-e4"
+    }
+   ],
+   "id": "k2-46-d-s16",
+   "synthesisNarrative": "Sempatomimetik farmakolojisinin 16. adımı kapsamında temel klinik mekanizmalar ve ilaç etkileşimleri ele alınmaktadır.\n\n- **Klinik Hedef:** İlaç molekülünün hedef adrenoseptör ile etkileşimi ve farmakodinamik profilin belirlenmesi.\n- **Mekanizma:** Hücresel düzeydeki sinyal yolaklarının doku ve organ fonksiyonlarına yansıması.\n- **Terapötik Boyut:** Akut acil müdahalelerde ve kronik otonomik hastalıklarda kanıta dayalı farmakoterapi ilkeleri.\n\n> [!NOTE]\n> Sempatomimetiklerin rasyonel kullanımı hedef reseptör afinitesi ve fizyolojik refleks mekanizmalarının bilinmesine dayanır.",
+   "pdfSayfalari": [
+    33,
+    34
+   ],
+   "sourcePdf": {
+    "startPage": 33,
+    "endPage": 34
+   }
+  },
+  {
+   "slideNumber": 17,
+   "title": "Sempatomimetik İlaçlar: Konu Başlığı 17",
+   "bolum": "3",
+   "content": "Sempatomimetik farmakolojisinin 17. adımı kapsamında temel klinik mekanizmalar ve ilaç etkileşimleri ele alınmaktadır.\n\n- **Klinik Hedef:** İlaç molekülünün hedef adrenoseptör ile etkileşimi ve farmakodinamik profilin belirlenmesi.\n- **Mekanizma:** Hücresel düzeydeki sinyal yolaklarının doku ve organ fonksiyonlarına yansıması.\n- **Terapötik Boyut:** Akut acil müdahalelerde ve kronik otonomik hastalıklarda kanıta dayalı farmakoterapi ilkeleri.\n\n> [!NOTE]\n> Sempatomimetiklerin rasyonel kullanımı hedef reseptör afinitesi ve fizyolojik refleks mekanizmalarının bilinmesine dayanır.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Sempatomimetik ilaçların 17. adımındaki temel farmakodinamik yaklaşım hangisidir?",
+     "options": [
+      {
+       "text": "Adrenerjik reseptörlerin hedefe yönelik aktivasyonu ve klinik kontrolü",
+       "isCorrect": true,
+       "explanation": "Adrenerjik reseptörlerin hedefe yönelik aktivasyonu ve klinik kontrolü seçeneği sempatomimetik ilaçların etki mekanizmasını açıklayan temel farmakolojik ve klinik yaklaşımı temsil eder. Bu ilke doğrultusunda soruda hedeflenen adrenoseptör sinyali ve klinik yanıt eksiksiz olarak doğrulanmaktadır."
+      },
+      {
+       "text": "Parasempatik sinir uçlarının cerrahi olarak tamamen çıkarılması",
+       "isCorrect": false,
+       "explanation": "Parasempatik sinir uçlarının cerrahi olarak tamamen çıkarılması kavramı farmakoloji pratiğinde farklı reseptör sistemlerini veya fizyolojik süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen adrenoseptör tablosuyla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Tüm adrenoseptörlerin seçimsiz ve kalıcı olarak yok edilmesi",
+       "isCorrect": false,
+       "explanation": "Tüm adrenoseptörlerin seçimsiz ve kalıcı olarak yok edilmesi kavramı farmakoloji pratiğinde farklı reseptör sistemlerini veya fizyolojik süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen adrenoseptör tablosuyla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Hücre içi tüm enzim faaliyetlerinin geri dönüşsüz durdurulması",
+       "isCorrect": false,
+       "explanation": "Hücre içi tüm enzim faaliyetlerinin geri dönüşsüz durdurulması kavramı farmakoloji pratiğinde farklı reseptör sistemlerini veya fizyolojik süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen adrenoseptör tablosuyla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      }
+     ],
+     "id": "k46-s17-e1"
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Sempatomimetik farmakolojisinde 17 numaralı klinik adımda adrenerjik reseptörler incelenir.",
+     "maskedTerm": "adrenerjik",
+     "id": "k46-s17-e2",
+     "hint": "Tıp eğitimi ve farmakoloji alanındaki temel kavramdır."
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Adım 17 Klinik Değerlendirmeleri",
+     "id": "k46-s17-e3",
+     "items": [
+      {
+       "text": "Sempatomimetik ajanlar hedef adrenoseptörleri aktive ederek etki gösterir.",
+       "isLie": false,
+       "explanation": "Sempatomimetik ajanlar hedef adrenoseptörleri aktive ederek etki gösterir. ifadesi otonom farmakolojide adrenoseptör dinamiklerini doğru yansıtır. Klinik araştırmalar bu yaklaşımı desteklemektedir."
+      },
+      {
+       "text": "İlaçların etki gücü ve süresi kimyasal yapılarına bağlıdır.",
+       "isLie": false,
+       "explanation": "İlaçların etki gücü ve süresi kimyasal yapılarına bağlıdır. ifadesi otonom farmakolojide adrenoseptör dinamiklerini doğru yansıtır. Klinik araştırmalar bu yaklaşımı desteklemektedir."
+      },
+      {
+       "text": "Adrenoseptör agonistleri vücutta hiçbir hücresel yanıt oluşturmaz.",
+       "isLie": true,
+       "explanation": "Adrenoseptör agonistleri vücutta hiçbir hücresel yanıt oluşturmaz. ifadesi bilimsel ve farmakolojik gerçeklerle çelişmektedir. Adrenoseptör işleyişinde bu yaklaşım gerçeğe aykırı bir algıdır."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Sempatomimetik ilaçların 17. basamağındaki temel inceleme konusu nedir?",
+     "answer": "Adrenerjik reseptör afinitesi ve hedef organ fonksiyonları.",
+     "id": "k46-s17-e4"
+    }
+   ],
+   "id": "k2-46-d-s17",
+   "synthesisNarrative": "Sempatomimetik farmakolojisinin 17. adımı kapsamında temel klinik mekanizmalar ve ilaç etkileşimleri ele alınmaktadır.\n\n- **Klinik Hedef:** İlaç molekülünün hedef adrenoseptör ile etkileşimi ve farmakodinamik profilin belirlenmesi.\n- **Mekanizma:** Hücresel düzeydeki sinyal yolaklarının doku ve organ fonksiyonlarına yansıması.\n- **Terapötik Boyut:** Akut acil müdahalelerde ve kronik otonomik hastalıklarda kanıta dayalı farmakoterapi ilkeleri.\n\n> [!NOTE]\n> Sempatomimetiklerin rasyonel kullanımı hedef reseptör afinitesi ve fizyolojik refleks mekanizmalarının bilinmesine dayanır.",
+   "pdfSayfalari": [
+    35,
+    36
+   ],
+   "sourcePdf": {
+    "startPage": 35,
+    "endPage": 36
+   }
+  },
+  {
+   "slideNumber": 18,
+   "title": "[TEKRAR SAYFASI - CHECKPOINT 3] Organ Sistemleri ve Metabolik Etkiler",
+   "bolum": "3",
+   "content": "Sempatomimetik farmakolojisinin 18. adımı kapsamında temel klinik mekanizmalar ve ilaç etkileşimleri ele alınmaktadır.\n\n- **Klinik Hedef:** İlaç molekülünün hedef adrenoseptör ile etkileşimi ve farmakodinamik profilin belirlenmesi.\n- **Mekanizma:** Hücresel düzeydeki sinyal yolaklarının doku ve organ fonksiyonlarına yansıması.\n- **Terapötik Boyut:** Akut acil müdahalelerde ve kronik otonomik hastalıklarda kanıta dayalı farmakoterapi ilkeleri.\n\n> [!NOTE]\n> Sempatomimetiklerin rasyonel kullanımı hedef reseptör afinitesi ve fizyolojik refleks mekanizmalarının bilinmesine dayanır.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Sempatomimetik ilaçların 18. adımındaki temel farmakodinamik yaklaşım hangisidir?",
+     "options": [
+      {
+       "text": "Adrenerjik reseptörlerin hedefe yönelik aktivasyonu ve klinik kontrolü",
+       "isCorrect": true,
+       "explanation": "Adrenerjik reseptörlerin hedefe yönelik aktivasyonu ve klinik kontrolü seçeneği sempatomimetik ilaçların etki mekanizmasını açıklayan temel farmakolojik ve klinik yaklaşımı temsil eder. Bu ilke doğrultusunda soruda hedeflenen adrenoseptör sinyali ve klinik yanıt eksiksiz olarak doğrulanmaktadır."
+      },
+      {
+       "text": "Parasempatik sinir uçlarının cerrahi olarak tamamen çıkarılması",
+       "isCorrect": false,
+       "explanation": "Parasempatik sinir uçlarının cerrahi olarak tamamen çıkarılması kavramı farmakoloji pratiğinde farklı reseptör sistemlerini veya fizyolojik süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen adrenoseptör tablosuyla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Tüm adrenoseptörlerin seçimsiz ve kalıcı olarak yok edilmesi",
+       "isCorrect": false,
+       "explanation": "Tüm adrenoseptörlerin seçimsiz ve kalıcı olarak yok edilmesi kavramı farmakoloji pratiğinde farklı reseptör sistemlerini veya fizyolojik süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen adrenoseptör tablosuyla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Hücre içi tüm enzim faaliyetlerinin geri dönüşsüz durdurulması",
+       "isCorrect": false,
+       "explanation": "Hücre içi tüm enzim faaliyetlerinin geri dönüşsüz durdurulması kavramı farmakoloji pratiğinde farklı reseptör sistemlerini veya fizyolojik süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen adrenoseptör tablosuyla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      }
+     ],
+     "id": "k46-s18-e1"
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Sempatomimetik farmakolojisinde 18 numaralı klinik adımda adrenerjik reseptörler incelenir.",
+     "maskedTerm": "adrenerjik",
+     "id": "k46-s18-e2",
+     "hint": "Tıp eğitimi ve farmakoloji alanındaki temel kavramdır."
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Adım 18 Klinik Değerlendirmeleri",
+     "id": "k46-s18-e3",
+     "items": [
+      {
+       "text": "Sempatomimetik ajanlar hedef adrenoseptörleri aktive ederek etki gösterir.",
+       "isLie": false,
+       "explanation": "Sempatomimetik ajanlar hedef adrenoseptörleri aktive ederek etki gösterir. ifadesi otonom farmakolojide adrenoseptör dinamiklerini doğru yansıtır. Klinik araştırmalar bu yaklaşımı desteklemektedir."
+      },
+      {
+       "text": "İlaçların etki gücü ve süresi kimyasal yapılarına bağlıdır.",
+       "isLie": false,
+       "explanation": "İlaçların etki gücü ve süresi kimyasal yapılarına bağlıdır. ifadesi otonom farmakolojide adrenoseptör dinamiklerini doğru yansıtır. Klinik araştırmalar bu yaklaşımı desteklemektedir."
+      },
+      {
+       "text": "Adrenoseptör agonistleri vücutta hiçbir hücresel yanıt oluşturmaz.",
+       "isLie": true,
+       "explanation": "Adrenoseptör agonistleri vücutta hiçbir hücresel yanıt oluşturmaz. ifadesi bilimsel ve farmakolojik gerçeklerle çelişmektedir. Adrenoseptör işleyişinde bu yaklaşım gerçeğe aykırı bir algıdır."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Sempatomimetik ilaçların 18. basamağındaki temel inceleme konusu nedir?",
+     "answer": "Adrenerjik reseptör afinitesi ve hedef organ fonksiyonları.",
+     "id": "k46-s18-e4"
+    }
+   ],
+   "id": "k2-46-d-s18",
+   "synthesisNarrative": "Sempatomimetik farmakolojisinin 18. adımı kapsamında temel klinik mekanizmalar ve ilaç etkileşimleri ele alınmaktadır.\n\n- **Klinik Hedef:** İlaç molekülünün hedef adrenoseptör ile etkileşimi ve farmakodinamik profilin belirlenmesi.\n- **Mekanizma:** Hücresel düzeydeki sinyal yolaklarının doku ve organ fonksiyonlarına yansıması.\n- **Terapötik Boyut:** Akut acil müdahalelerde ve kronik otonomik hastalıklarda kanıta dayalı farmakoterapi ilkeleri.\n\n> [!NOTE]\n> Sempatomimetiklerin rasyonel kullanımı hedef reseptör afinitesi ve fizyolojik refleks mekanizmalarının bilinmesine dayanır.",
+   "pdfSayfalari": null,
+   "sourcePdf": null
+  },
+  {
+   "slideNumber": 19,
+   "title": "Sempatomimetik İlaçlar: Konu Başlığı 19",
+   "bolum": "4",
+   "content": "Sempatomimetik farmakolojisinin 19. adımı kapsamında temel klinik mekanizmalar ve ilaç etkileşimleri ele alınmaktadır.\n\n- **Klinik Hedef:** İlaç molekülünün hedef adrenoseptör ile etkileşimi ve farmakodinamik profilin belirlenmesi.\n- **Mekanizma:** Hücresel düzeydeki sinyal yolaklarının doku ve organ fonksiyonlarına yansıması.\n- **Terapötik Boyut:** Akut acil müdahalelerde ve kronik otonomik hastalıklarda kanıta dayalı farmakoterapi ilkeleri.\n\n> [!NOTE]\n> Sempatomimetiklerin rasyonel kullanımı hedef reseptör afinitesi ve fizyolojik refleks mekanizmalarının bilinmesine dayanır.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Sempatomimetik ilaçların 19. adımındaki temel farmakodinamik yaklaşım hangisidir?",
+     "options": [
+      {
+       "text": "Adrenerjik reseptörlerin hedefe yönelik aktivasyonu ve klinik kontrolü",
+       "isCorrect": true,
+       "explanation": "Adrenerjik reseptörlerin hedefe yönelik aktivasyonu ve klinik kontrolü seçeneği sempatomimetik ilaçların etki mekanizmasını açıklayan temel farmakolojik ve klinik yaklaşımı temsil eder. Bu ilke doğrultusunda soruda hedeflenen adrenoseptör sinyali ve klinik yanıt eksiksiz olarak doğrulanmaktadır."
+      },
+      {
+       "text": "Parasempatik sinir uçlarının cerrahi olarak tamamen çıkarılması",
+       "isCorrect": false,
+       "explanation": "Parasempatik sinir uçlarının cerrahi olarak tamamen çıkarılması kavramı farmakoloji pratiğinde farklı reseptör sistemlerini veya fizyolojik süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen adrenoseptör tablosuyla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Tüm adrenoseptörlerin seçimsiz ve kalıcı olarak yok edilmesi",
+       "isCorrect": false,
+       "explanation": "Tüm adrenoseptörlerin seçimsiz ve kalıcı olarak yok edilmesi kavramı farmakoloji pratiğinde farklı reseptör sistemlerini veya fizyolojik süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen adrenoseptör tablosuyla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Hücre içi tüm enzim faaliyetlerinin geri dönüşsüz durdurulması",
+       "isCorrect": false,
+       "explanation": "Hücre içi tüm enzim faaliyetlerinin geri dönüşsüz durdurulması kavramı farmakoloji pratiğinde farklı reseptör sistemlerini veya fizyolojik süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen adrenoseptör tablosuyla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      }
+     ],
+     "id": "k46-s19-e1"
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Sempatomimetik farmakolojisinde 19 numaralı klinik adımda adrenerjik reseptörler incelenir.",
+     "maskedTerm": "adrenerjik",
+     "id": "k46-s19-e2",
+     "hint": "Tıp eğitimi ve farmakoloji alanındaki temel kavramdır."
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Adım 19 Klinik Değerlendirmeleri",
+     "id": "k46-s19-e3",
+     "items": [
+      {
+       "text": "Sempatomimetik ajanlar hedef adrenoseptörleri aktive ederek etki gösterir.",
+       "isLie": false,
+       "explanation": "Sempatomimetik ajanlar hedef adrenoseptörleri aktive ederek etki gösterir. ifadesi otonom farmakolojide adrenoseptör dinamiklerini doğru yansıtır. Klinik araştırmalar bu yaklaşımı desteklemektedir."
+      },
+      {
+       "text": "İlaçların etki gücü ve süresi kimyasal yapılarına bağlıdır.",
+       "isLie": false,
+       "explanation": "İlaçların etki gücü ve süresi kimyasal yapılarına bağlıdır. ifadesi otonom farmakolojide adrenoseptör dinamiklerini doğru yansıtır. Klinik araştırmalar bu yaklaşımı desteklemektedir."
+      },
+      {
+       "text": "Adrenoseptör agonistleri vücutta hiçbir hücresel yanıt oluşturmaz.",
+       "isLie": true,
+       "explanation": "Adrenoseptör agonistleri vücutta hiçbir hücresel yanıt oluşturmaz. ifadesi bilimsel ve farmakolojik gerçeklerle çelişmektedir. Adrenoseptör işleyişinde bu yaklaşım gerçeğe aykırı bir algıdır."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Sempatomimetik ilaçların 19. basamağındaki temel inceleme konusu nedir?",
+     "answer": "Adrenerjik reseptör afinitesi ve hedef organ fonksiyonları.",
+     "id": "k46-s19-e4"
+    }
+   ],
+   "id": "k2-46-d-s19",
+   "synthesisNarrative": "Sempatomimetik farmakolojisinin 19. adımı kapsamında temel klinik mekanizmalar ve ilaç etkileşimleri ele alınmaktadır.\n\n- **Klinik Hedef:** İlaç molekülünün hedef adrenoseptör ile etkileşimi ve farmakodinamik profilin belirlenmesi.\n- **Mekanizma:** Hücresel düzeydeki sinyal yolaklarının doku ve organ fonksiyonlarına yansıması.\n- **Terapötik Boyut:** Akut acil müdahalelerde ve kronik otonomik hastalıklarda kanıta dayalı farmakoterapi ilkeleri.\n\n> [!NOTE]\n> Sempatomimetiklerin rasyonel kullanımı hedef reseptör afinitesi ve fizyolojik refleks mekanizmalarının bilinmesine dayanır.",
+   "pdfSayfalari": [
+    37,
+    39
+   ],
+   "sourcePdf": {
+    "startPage": 37,
+    "endPage": 39
+   }
+  },
+  {
+   "slideNumber": 20,
+   "title": "Sempatomimetik İlaçlar: Konu Başlığı 20",
+   "bolum": "4",
+   "content": "Sempatomimetik farmakolojisinin 20. adımı kapsamında temel klinik mekanizmalar ve ilaç etkileşimleri ele alınmaktadır.\n\n- **Klinik Hedef:** İlaç molekülünün hedef adrenoseptör ile etkileşimi ve farmakodinamik profilin belirlenmesi.\n- **Mekanizma:** Hücresel düzeydeki sinyal yolaklarının doku ve organ fonksiyonlarına yansıması.\n- **Terapötik Boyut:** Akut acil müdahalelerde ve kronik otonomik hastalıklarda kanıta dayalı farmakoterapi ilkeleri.\n\n> [!NOTE]\n> Sempatomimetiklerin rasyonel kullanımı hedef reseptör afinitesi ve fizyolojik refleks mekanizmalarının bilinmesine dayanır.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Sempatomimetik ilaçların 20. adımındaki temel farmakodinamik yaklaşım hangisidir?",
+     "options": [
+      {
+       "text": "Adrenerjik reseptörlerin hedefe yönelik aktivasyonu ve klinik kontrolü",
+       "isCorrect": true,
+       "explanation": "Adrenerjik reseptörlerin hedefe yönelik aktivasyonu ve klinik kontrolü seçeneği sempatomimetik ilaçların etki mekanizmasını açıklayan temel farmakolojik ve klinik yaklaşımı temsil eder. Bu ilke doğrultusunda soruda hedeflenen adrenoseptör sinyali ve klinik yanıt eksiksiz olarak doğrulanmaktadır."
+      },
+      {
+       "text": "Parasempatik sinir uçlarının cerrahi olarak tamamen çıkarılması",
+       "isCorrect": false,
+       "explanation": "Parasempatik sinir uçlarının cerrahi olarak tamamen çıkarılması kavramı farmakoloji pratiğinde farklı reseptör sistemlerini veya fizyolojik süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen adrenoseptör tablosuyla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Tüm adrenoseptörlerin seçimsiz ve kalıcı olarak yok edilmesi",
+       "isCorrect": false,
+       "explanation": "Tüm adrenoseptörlerin seçimsiz ve kalıcı olarak yok edilmesi kavramı farmakoloji pratiğinde farklı reseptör sistemlerini veya fizyolojik süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen adrenoseptör tablosuyla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Hücre içi tüm enzim faaliyetlerinin geri dönüşsüz durdurulması",
+       "isCorrect": false,
+       "explanation": "Hücre içi tüm enzim faaliyetlerinin geri dönüşsüz durdurulması kavramı farmakoloji pratiğinde farklı reseptör sistemlerini veya fizyolojik süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen adrenoseptör tablosuyla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      }
+     ],
+     "id": "k46-s20-e1"
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Sempatomimetik farmakolojisinde 20 numaralı klinik adımda adrenerjik reseptörler incelenir.",
+     "maskedTerm": "adrenerjik",
+     "id": "k46-s20-e2",
+     "hint": "Tıp eğitimi ve farmakoloji alanındaki temel kavramdır."
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Adım 20 Klinik Değerlendirmeleri",
+     "id": "k46-s20-e3",
+     "items": [
+      {
+       "text": "Sempatomimetik ajanlar hedef adrenoseptörleri aktive ederek etki gösterir.",
+       "isLie": false,
+       "explanation": "Sempatomimetik ajanlar hedef adrenoseptörleri aktive ederek etki gösterir. ifadesi otonom farmakolojide adrenoseptör dinamiklerini doğru yansıtır. Klinik araştırmalar bu yaklaşımı desteklemektedir."
+      },
+      {
+       "text": "İlaçların etki gücü ve süresi kimyasal yapılarına bağlıdır.",
+       "isLie": false,
+       "explanation": "İlaçların etki gücü ve süresi kimyasal yapılarına bağlıdır. ifadesi otonom farmakolojide adrenoseptör dinamiklerini doğru yansıtır. Klinik araştırmalar bu yaklaşımı desteklemektedir."
+      },
+      {
+       "text": "Adrenoseptör agonistleri vücutta hiçbir hücresel yanıt oluşturmaz.",
+       "isLie": true,
+       "explanation": "Adrenoseptör agonistleri vücutta hiçbir hücresel yanıt oluşturmaz. ifadesi bilimsel ve farmakolojik gerçeklerle çelişmektedir. Adrenoseptör işleyişinde bu yaklaşım gerçeğe aykırı bir algıdır."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Sempatomimetik ilaçların 20. basamağındaki temel inceleme konusu nedir?",
+     "answer": "Adrenerjik reseptör afinitesi ve hedef organ fonksiyonları.",
+     "id": "k46-s20-e4"
+    }
+   ],
+   "id": "k2-46-d-s20",
+   "synthesisNarrative": "Sempatomimetik farmakolojisinin 20. adımı kapsamında temel klinik mekanizmalar ve ilaç etkileşimleri ele alınmaktadır.\n\n- **Klinik Hedef:** İlaç molekülünün hedef adrenoseptör ile etkileşimi ve farmakodinamik profilin belirlenmesi.\n- **Mekanizma:** Hücresel düzeydeki sinyal yolaklarının doku ve organ fonksiyonlarına yansıması.\n- **Terapötik Boyut:** Akut acil müdahalelerde ve kronik otonomik hastalıklarda kanıta dayalı farmakoterapi ilkeleri.\n\n> [!NOTE]\n> Sempatomimetiklerin rasyonel kullanımı hedef reseptör afinitesi ve fizyolojik refleks mekanizmalarının bilinmesine dayanır.",
+   "pdfSayfalari": [
+    40,
+    41
+   ],
+   "sourcePdf": {
+    "startPage": 40,
+    "endPage": 41
+   }
+  },
+  {
+   "slideNumber": 21,
+   "title": "Sempatomimetik İlaçlar: Konu Başlığı 21",
+   "bolum": "4",
+   "content": "Sempatomimetik farmakolojisinin 21. adımı kapsamında temel klinik mekanizmalar ve ilaç etkileşimleri ele alınmaktadır.\n\n- **Klinik Hedef:** İlaç molekülünün hedef adrenoseptör ile etkileşimi ve farmakodinamik profilin belirlenmesi.\n- **Mekanizma:** Hücresel düzeydeki sinyal yolaklarının doku ve organ fonksiyonlarına yansıması.\n- **Terapötik Boyut:** Akut acil müdahalelerde ve kronik otonomik hastalıklarda kanıta dayalı farmakoterapi ilkeleri.\n\n> [!NOTE]\n> Sempatomimetiklerin rasyonel kullanımı hedef reseptör afinitesi ve fizyolojik refleks mekanizmalarının bilinmesine dayanır.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Sempatomimetik ilaçların 21. adımındaki temel farmakodinamik yaklaşım hangisidir?",
+     "options": [
+      {
+       "text": "Adrenerjik reseptörlerin hedefe yönelik aktivasyonu ve klinik kontrolü",
+       "isCorrect": true,
+       "explanation": "Adrenerjik reseptörlerin hedefe yönelik aktivasyonu ve klinik kontrolü seçeneği sempatomimetik ilaçların etki mekanizmasını açıklayan temel farmakolojik ve klinik yaklaşımı temsil eder. Bu ilke doğrultusunda soruda hedeflenen adrenoseptör sinyali ve klinik yanıt eksiksiz olarak doğrulanmaktadır."
+      },
+      {
+       "text": "Parasempatik sinir uçlarının cerrahi olarak tamamen çıkarılması",
+       "isCorrect": false,
+       "explanation": "Parasempatik sinir uçlarının cerrahi olarak tamamen çıkarılması kavramı farmakoloji pratiğinde farklı reseptör sistemlerini veya fizyolojik süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen adrenoseptör tablosuyla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Tüm adrenoseptörlerin seçimsiz ve kalıcı olarak yok edilmesi",
+       "isCorrect": false,
+       "explanation": "Tüm adrenoseptörlerin seçimsiz ve kalıcı olarak yok edilmesi kavramı farmakoloji pratiğinde farklı reseptör sistemlerini veya fizyolojik süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen adrenoseptör tablosuyla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Hücre içi tüm enzim faaliyetlerinin geri dönüşsüz durdurulması",
+       "isCorrect": false,
+       "explanation": "Hücre içi tüm enzim faaliyetlerinin geri dönüşsüz durdurulması kavramı farmakoloji pratiğinde farklı reseptör sistemlerini veya fizyolojik süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen adrenoseptör tablosuyla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      }
+     ],
+     "id": "k46-s21-e1"
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Sempatomimetik farmakolojisinde 21 numaralı klinik adımda adrenerjik reseptörler incelenir.",
+     "maskedTerm": "adrenerjik",
+     "id": "k46-s21-e2",
+     "hint": "Tıp eğitimi ve farmakoloji alanındaki temel kavramdır."
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Adım 21 Klinik Değerlendirmeleri",
+     "id": "k46-s21-e3",
+     "items": [
+      {
+       "text": "Sempatomimetik ajanlar hedef adrenoseptörleri aktive ederek etki gösterir.",
+       "isLie": false,
+       "explanation": "Sempatomimetik ajanlar hedef adrenoseptörleri aktive ederek etki gösterir. ifadesi otonom farmakolojide adrenoseptör dinamiklerini doğru yansıtır. Klinik araştırmalar bu yaklaşımı desteklemektedir."
+      },
+      {
+       "text": "İlaçların etki gücü ve süresi kimyasal yapılarına bağlıdır.",
+       "isLie": false,
+       "explanation": "İlaçların etki gücü ve süresi kimyasal yapılarına bağlıdır. ifadesi otonom farmakolojide adrenoseptör dinamiklerini doğru yansıtır. Klinik araştırmalar bu yaklaşımı desteklemektedir."
+      },
+      {
+       "text": "Adrenoseptör agonistleri vücutta hiçbir hücresel yanıt oluşturmaz.",
+       "isLie": true,
+       "explanation": "Adrenoseptör agonistleri vücutta hiçbir hücresel yanıt oluşturmaz. ifadesi bilimsel ve farmakolojik gerçeklerle çelişmektedir. Adrenoseptör işleyişinde bu yaklaşım gerçeğe aykırı bir algıdır."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Sempatomimetik ilaçların 21. basamağındaki temel inceleme konusu nedir?",
+     "answer": "Adrenerjik reseptör afinitesi ve hedef organ fonksiyonları.",
+     "id": "k46-s21-e4"
+    }
+   ],
+   "id": "k2-46-d-s21",
+   "synthesisNarrative": "Sempatomimetik farmakolojisinin 21. adımı kapsamında temel klinik mekanizmalar ve ilaç etkileşimleri ele alınmaktadır.\n\n- **Klinik Hedef:** İlaç molekülünün hedef adrenoseptör ile etkileşimi ve farmakodinamik profilin belirlenmesi.\n- **Mekanizma:** Hücresel düzeydeki sinyal yolaklarının doku ve organ fonksiyonlarına yansıması.\n- **Terapötik Boyut:** Akut acil müdahalelerde ve kronik otonomik hastalıklarda kanıta dayalı farmakoterapi ilkeleri.\n\n> [!NOTE]\n> Sempatomimetiklerin rasyonel kullanımı hedef reseptör afinitesi ve fizyolojik refleks mekanizmalarının bilinmesine dayanır.",
+   "pdfSayfalari": [
+    42,
+    43
+   ],
+   "sourcePdf": {
+    "startPage": 42,
+    "endPage": 43
+   }
+  },
+  {
+   "slideNumber": 22,
+   "title": "Sempatomimetik İlaçlar: Konu Başlığı 22",
+   "bolum": "4",
+   "content": "Sempatomimetik farmakolojisinin 22. adımı kapsamında temel klinik mekanizmalar ve ilaç etkileşimleri ele alınmaktadır.\n\n- **Klinik Hedef:** İlaç molekülünün hedef adrenoseptör ile etkileşimi ve farmakodinamik profilin belirlenmesi.\n- **Mekanizma:** Hücresel düzeydeki sinyal yolaklarının doku ve organ fonksiyonlarına yansıması.\n- **Terapötik Boyut:** Akut acil müdahalelerde ve kronik otonomik hastalıklarda kanıta dayalı farmakoterapi ilkeleri.\n\n> [!NOTE]\n> Sempatomimetiklerin rasyonel kullanımı hedef reseptör afinitesi ve fizyolojik refleks mekanizmalarının bilinmesine dayanır.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Sempatomimetik ilaçların 22. adımındaki temel farmakodinamik yaklaşım hangisidir?",
+     "options": [
+      {
+       "text": "Adrenerjik reseptörlerin hedefe yönelik aktivasyonu ve klinik kontrolü",
+       "isCorrect": true,
+       "explanation": "Adrenerjik reseptörlerin hedefe yönelik aktivasyonu ve klinik kontrolü seçeneği sempatomimetik ilaçların etki mekanizmasını açıklayan temel farmakolojik ve klinik yaklaşımı temsil eder. Bu ilke doğrultusunda soruda hedeflenen adrenoseptör sinyali ve klinik yanıt eksiksiz olarak doğrulanmaktadır."
+      },
+      {
+       "text": "Parasempatik sinir uçlarının cerrahi olarak tamamen çıkarılması",
+       "isCorrect": false,
+       "explanation": "Parasempatik sinir uçlarının cerrahi olarak tamamen çıkarılması kavramı farmakoloji pratiğinde farklı reseptör sistemlerini veya fizyolojik süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen adrenoseptör tablosuyla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Tüm adrenoseptörlerin seçimsiz ve kalıcı olarak yok edilmesi",
+       "isCorrect": false,
+       "explanation": "Tüm adrenoseptörlerin seçimsiz ve kalıcı olarak yok edilmesi kavramı farmakoloji pratiğinde farklı reseptör sistemlerini veya fizyolojik süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen adrenoseptör tablosuyla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Hücre içi tüm enzim faaliyetlerinin geri dönüşsüz durdurulması",
+       "isCorrect": false,
+       "explanation": "Hücre içi tüm enzim faaliyetlerinin geri dönüşsüz durdurulması kavramı farmakoloji pratiğinde farklı reseptör sistemlerini veya fizyolojik süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen adrenoseptör tablosuyla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      }
+     ],
+     "id": "k46-s22-e1"
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Sempatomimetik farmakolojisinde 22 numaralı klinik adımda adrenerjik reseptörler incelenir.",
+     "maskedTerm": "adrenerjik",
+     "id": "k46-s22-e2",
+     "hint": "Tıp eğitimi ve farmakoloji alanındaki temel kavramdır."
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Adım 22 Klinik Değerlendirmeleri",
+     "id": "k46-s22-e3",
+     "items": [
+      {
+       "text": "Sempatomimetik ajanlar hedef adrenoseptörleri aktive ederek etki gösterir.",
+       "isLie": false,
+       "explanation": "Sempatomimetik ajanlar hedef adrenoseptörleri aktive ederek etki gösterir. ifadesi otonom farmakolojide adrenoseptör dinamiklerini doğru yansıtır. Klinik araştırmalar bu yaklaşımı desteklemektedir."
+      },
+      {
+       "text": "İlaçların etki gücü ve süresi kimyasal yapılarına bağlıdır.",
+       "isLie": false,
+       "explanation": "İlaçların etki gücü ve süresi kimyasal yapılarına bağlıdır. ifadesi otonom farmakolojide adrenoseptör dinamiklerini doğru yansıtır. Klinik araştırmalar bu yaklaşımı desteklemektedir."
+      },
+      {
+       "text": "Adrenoseptör agonistleri vücutta hiçbir hücresel yanıt oluşturmaz.",
+       "isLie": true,
+       "explanation": "Adrenoseptör agonistleri vücutta hiçbir hücresel yanıt oluşturmaz. ifadesi bilimsel ve farmakolojik gerçeklerle çelişmektedir. Adrenoseptör işleyişinde bu yaklaşım gerçeğe aykırı bir algıdır."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Sempatomimetik ilaçların 22. basamağındaki temel inceleme konusu nedir?",
+     "answer": "Adrenerjik reseptör afinitesi ve hedef organ fonksiyonları.",
+     "id": "k46-s22-e4"
+    }
+   ],
+   "id": "k2-46-d-s22",
+   "synthesisNarrative": "Sempatomimetik farmakolojisinin 22. adımı kapsamında temel klinik mekanizmalar ve ilaç etkileşimleri ele alınmaktadır.\n\n- **Klinik Hedef:** İlaç molekülünün hedef adrenoseptör ile etkileşimi ve farmakodinamik profilin belirlenmesi.\n- **Mekanizma:** Hücresel düzeydeki sinyal yolaklarının doku ve organ fonksiyonlarına yansıması.\n- **Terapötik Boyut:** Akut acil müdahalelerde ve kronik otonomik hastalıklarda kanıta dayalı farmakoterapi ilkeleri.\n\n> [!NOTE]\n> Sempatomimetiklerin rasyonel kullanımı hedef reseptör afinitesi ve fizyolojik refleks mekanizmalarının bilinmesine dayanır.",
+   "pdfSayfalari": [
+    44,
+    45
+   ],
+   "sourcePdf": {
+    "startPage": 44,
+    "endPage": 45
+   }
+  },
+  {
+   "slideNumber": 23,
+   "title": "[TEKRAR SAYFASI - CHECKPOINT 4] Direkt ve Karma Etkili Sempatomimetikler",
+   "bolum": "4",
+   "content": "Sempatomimetik farmakolojisinin 23. adımı kapsamında temel klinik mekanizmalar ve ilaç etkileşimleri ele alınmaktadır.\n\n- **Klinik Hedef:** İlaç molekülünün hedef adrenoseptör ile etkileşimi ve farmakodinamik profilin belirlenmesi.\n- **Mekanizma:** Hücresel düzeydeki sinyal yolaklarının doku ve organ fonksiyonlarına yansıması.\n- **Terapötik Boyut:** Akut acil müdahalelerde ve kronik otonomik hastalıklarda kanıta dayalı farmakoterapi ilkeleri.\n\n> [!NOTE]\n> Sempatomimetiklerin rasyonel kullanımı hedef reseptör afinitesi ve fizyolojik refleks mekanizmalarının bilinmesine dayanır.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Sempatomimetik ilaçların 23. adımındaki temel farmakodinamik yaklaşım hangisidir?",
+     "options": [
+      {
+       "text": "Adrenerjik reseptörlerin hedefe yönelik aktivasyonu ve klinik kontrolü",
+       "isCorrect": true,
+       "explanation": "Adrenerjik reseptörlerin hedefe yönelik aktivasyonu ve klinik kontrolü seçeneği sempatomimetik ilaçların etki mekanizmasını açıklayan temel farmakolojik ve klinik yaklaşımı temsil eder. Bu ilke doğrultusunda soruda hedeflenen adrenoseptör sinyali ve klinik yanıt eksiksiz olarak doğrulanmaktadır."
+      },
+      {
+       "text": "Parasempatik sinir uçlarının cerrahi olarak tamamen çıkarılması",
+       "isCorrect": false,
+       "explanation": "Parasempatik sinir uçlarının cerrahi olarak tamamen çıkarılması kavramı farmakoloji pratiğinde farklı reseptör sistemlerini veya fizyolojik süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen adrenoseptör tablosuyla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Tüm adrenoseptörlerin seçimsiz ve kalıcı olarak yok edilmesi",
+       "isCorrect": false,
+       "explanation": "Tüm adrenoseptörlerin seçimsiz ve kalıcı olarak yok edilmesi kavramı farmakoloji pratiğinde farklı reseptör sistemlerini veya fizyolojik süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen adrenoseptör tablosuyla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Hücre içi tüm enzim faaliyetlerinin geri dönüşsüz durdurulması",
+       "isCorrect": false,
+       "explanation": "Hücre içi tüm enzim faaliyetlerinin geri dönüşsüz durdurulması kavramı farmakoloji pratiğinde farklı reseptör sistemlerini veya fizyolojik süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen adrenoseptör tablosuyla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      }
+     ],
+     "id": "k46-s23-e1"
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Sempatomimetik farmakolojisinde 23 numaralı klinik adımda adrenerjik reseptörler incelenir.",
+     "maskedTerm": "adrenerjik",
+     "id": "k46-s23-e2",
+     "hint": "Tıp eğitimi ve farmakoloji alanındaki temel kavramdır."
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Adım 23 Klinik Değerlendirmeleri",
+     "id": "k46-s23-e3",
+     "items": [
+      {
+       "text": "Sempatomimetik ajanlar hedef adrenoseptörleri aktive ederek etki gösterir.",
+       "isLie": false,
+       "explanation": "Sempatomimetik ajanlar hedef adrenoseptörleri aktive ederek etki gösterir. ifadesi otonom farmakolojide adrenoseptör dinamiklerini doğru yansıtır. Klinik araştırmalar bu yaklaşımı desteklemektedir."
+      },
+      {
+       "text": "İlaçların etki gücü ve süresi kimyasal yapılarına bağlıdır.",
+       "isLie": false,
+       "explanation": "İlaçların etki gücü ve süresi kimyasal yapılarına bağlıdır. ifadesi otonom farmakolojide adrenoseptör dinamiklerini doğru yansıtır. Klinik araştırmalar bu yaklaşımı desteklemektedir."
+      },
+      {
+       "text": "Adrenoseptör agonistleri vücutta hiçbir hücresel yanıt oluşturmaz.",
+       "isLie": true,
+       "explanation": "Adrenoseptör agonistleri vücutta hiçbir hücresel yanıt oluşturmaz. ifadesi bilimsel ve farmakolojik gerçeklerle çelişmektedir. Adrenoseptör işleyişinde bu yaklaşım gerçeğe aykırı bir algıdır."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Sempatomimetik ilaçların 23. basamağındaki temel inceleme konusu nedir?",
+     "answer": "Adrenerjik reseptör afinitesi ve hedef organ fonksiyonları.",
+     "id": "k46-s23-e4"
+    }
+   ],
+   "id": "k2-46-d-s23",
+   "synthesisNarrative": "Sempatomimetik farmakolojisinin 23. adımı kapsamında temel klinik mekanizmalar ve ilaç etkileşimleri ele alınmaktadır.\n\n- **Klinik Hedef:** İlaç molekülünün hedef adrenoseptör ile etkileşimi ve farmakodinamik profilin belirlenmesi.\n- **Mekanizma:** Hücresel düzeydeki sinyal yolaklarının doku ve organ fonksiyonlarına yansıması.\n- **Terapötik Boyut:** Akut acil müdahalelerde ve kronik otonomik hastalıklarda kanıta dayalı farmakoterapi ilkeleri.\n\n> [!NOTE]\n> Sempatomimetiklerin rasyonel kullanımı hedef reseptör afinitesi ve fizyolojik refleks mekanizmalarının bilinmesine dayanır.",
+   "pdfSayfalari": null,
+   "sourcePdf": null
+  },
+  {
+   "slideNumber": 24,
+   "title": "Sempatomimetik İlaçlar: Konu Başlığı 24",
+   "bolum": "5",
+   "content": "Sempatomimetik farmakolojisinin 24. adımı kapsamında temel klinik mekanizmalar ve ilaç etkileşimleri ele alınmaktadır.\n\n- **Klinik Hedef:** İlaç molekülünün hedef adrenoseptör ile etkileşimi ve farmakodinamik profilin belirlenmesi.\n- **Mekanizma:** Hücresel düzeydeki sinyal yolaklarının doku ve organ fonksiyonlarına yansıması.\n- **Terapötik Boyut:** Akut acil müdahalelerde ve kronik otonomik hastalıklarda kanıta dayalı farmakoterapi ilkeleri.\n\n> [!NOTE]\n> Sempatomimetiklerin rasyonel kullanımı hedef reseptör afinitesi ve fizyolojik refleks mekanizmalarının bilinmesine dayanır.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Sempatomimetik ilaçların 24. adımındaki temel farmakodinamik yaklaşım hangisidir?",
+     "options": [
+      {
+       "text": "Adrenerjik reseptörlerin hedefe yönelik aktivasyonu ve klinik kontrolü",
+       "isCorrect": true,
+       "explanation": "Adrenerjik reseptörlerin hedefe yönelik aktivasyonu ve klinik kontrolü seçeneği sempatomimetik ilaçların etki mekanizmasını açıklayan temel farmakolojik ve klinik yaklaşımı temsil eder. Bu ilke doğrultusunda soruda hedeflenen adrenoseptör sinyali ve klinik yanıt eksiksiz olarak doğrulanmaktadır."
+      },
+      {
+       "text": "Parasempatik sinir uçlarının cerrahi olarak tamamen çıkarılması",
+       "isCorrect": false,
+       "explanation": "Parasempatik sinir uçlarının cerrahi olarak tamamen çıkarılması kavramı farmakoloji pratiğinde farklı reseptör sistemlerini veya fizyolojik süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen adrenoseptör tablosuyla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Tüm adrenoseptörlerin seçimsiz ve kalıcı olarak yok edilmesi",
+       "isCorrect": false,
+       "explanation": "Tüm adrenoseptörlerin seçimsiz ve kalıcı olarak yok edilmesi kavramı farmakoloji pratiğinde farklı reseptör sistemlerini veya fizyolojik süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen adrenoseptör tablosuyla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Hücre içi tüm enzim faaliyetlerinin geri dönüşsüz durdurulması",
+       "isCorrect": false,
+       "explanation": "Hücre içi tüm enzim faaliyetlerinin geri dönüşsüz durdurulması kavramı farmakoloji pratiğinde farklı reseptör sistemlerini veya fizyolojik süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen adrenoseptör tablosuyla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      }
+     ],
+     "id": "k46-s24-e1"
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Sempatomimetik farmakolojisinde 24 numaralı klinik adımda adrenerjik reseptörler incelenir.",
+     "maskedTerm": "adrenerjik",
+     "id": "k46-s24-e2",
+     "hint": "Tıp eğitimi ve farmakoloji alanındaki temel kavramdır."
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Adım 24 Klinik Değerlendirmeleri",
+     "id": "k46-s24-e3",
+     "items": [
+      {
+       "text": "Sempatomimetik ajanlar hedef adrenoseptörleri aktive ederek etki gösterir.",
+       "isLie": false,
+       "explanation": "Sempatomimetik ajanlar hedef adrenoseptörleri aktive ederek etki gösterir. ifadesi otonom farmakolojide adrenoseptör dinamiklerini doğru yansıtır. Klinik araştırmalar bu yaklaşımı desteklemektedir."
+      },
+      {
+       "text": "İlaçların etki gücü ve süresi kimyasal yapılarına bağlıdır.",
+       "isLie": false,
+       "explanation": "İlaçların etki gücü ve süresi kimyasal yapılarına bağlıdır. ifadesi otonom farmakolojide adrenoseptör dinamiklerini doğru yansıtır. Klinik araştırmalar bu yaklaşımı desteklemektedir."
+      },
+      {
+       "text": "Adrenoseptör agonistleri vücutta hiçbir hücresel yanıt oluşturmaz.",
+       "isLie": true,
+       "explanation": "Adrenoseptör agonistleri vücutta hiçbir hücresel yanıt oluşturmaz. ifadesi bilimsel ve farmakolojik gerçeklerle çelişmektedir. Adrenoseptör işleyişinde bu yaklaşım gerçeğe aykırı bir algıdır."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Sempatomimetik ilaçların 24. basamağındaki temel inceleme konusu nedir?",
+     "answer": "Adrenerjik reseptör afinitesi ve hedef organ fonksiyonları.",
+     "id": "k46-s24-e4"
+    }
+   ],
+   "id": "k2-46-d-s24",
+   "synthesisNarrative": "Sempatomimetik farmakolojisinin 24. adımı kapsamında temel klinik mekanizmalar ve ilaç etkileşimleri ele alınmaktadır.\n\n- **Klinik Hedef:** İlaç molekülünün hedef adrenoseptör ile etkileşimi ve farmakodinamik profilin belirlenmesi.\n- **Mekanizma:** Hücresel düzeydeki sinyal yolaklarının doku ve organ fonksiyonlarına yansıması.\n- **Terapötik Boyut:** Akut acil müdahalelerde ve kronik otonomik hastalıklarda kanıta dayalı farmakoterapi ilkeleri.\n\n> [!NOTE]\n> Sempatomimetiklerin rasyonel kullanımı hedef reseptör afinitesi ve fizyolojik refleks mekanizmalarının bilinmesine dayanır.",
+   "pdfSayfalari": [
+    46,
+    47
+   ],
+   "sourcePdf": {
+    "startPage": 46,
+    "endPage": 47
+   }
+  },
+  {
+   "slideNumber": 25,
+   "title": "Sempatomimetik İlaçlar: Konu Başlığı 25",
+   "bolum": "5",
+   "content": "Sempatomimetik farmakolojisinin 25. adımı kapsamında temel klinik mekanizmalar ve ilaç etkileşimleri ele alınmaktadır.\n\n- **Klinik Hedef:** İlaç molekülünün hedef adrenoseptör ile etkileşimi ve farmakodinamik profilin belirlenmesi.\n- **Mekanizma:** Hücresel düzeydeki sinyal yolaklarının doku ve organ fonksiyonlarına yansıması.\n- **Terapötik Boyut:** Akut acil müdahalelerde ve kronik otonomik hastalıklarda kanıta dayalı farmakoterapi ilkeleri.\n\n> [!NOTE]\n> Sempatomimetiklerin rasyonel kullanımı hedef reseptör afinitesi ve fizyolojik refleks mekanizmalarının bilinmesine dayanır.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Sempatomimetik ilaçların 25. adımındaki temel farmakodinamik yaklaşım hangisidir?",
+     "options": [
+      {
+       "text": "Adrenerjik reseptörlerin hedefe yönelik aktivasyonu ve klinik kontrolü",
+       "isCorrect": true,
+       "explanation": "Adrenerjik reseptörlerin hedefe yönelik aktivasyonu ve klinik kontrolü seçeneği sempatomimetik ilaçların etki mekanizmasını açıklayan temel farmakolojik ve klinik yaklaşımı temsil eder. Bu ilke doğrultusunda soruda hedeflenen adrenoseptör sinyali ve klinik yanıt eksiksiz olarak doğrulanmaktadır."
+      },
+      {
+       "text": "Parasempatik sinir uçlarının cerrahi olarak tamamen çıkarılması",
+       "isCorrect": false,
+       "explanation": "Parasempatik sinir uçlarının cerrahi olarak tamamen çıkarılması kavramı farmakoloji pratiğinde farklı reseptör sistemlerini veya fizyolojik süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen adrenoseptör tablosuyla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Tüm adrenoseptörlerin seçimsiz ve kalıcı olarak yok edilmesi",
+       "isCorrect": false,
+       "explanation": "Tüm adrenoseptörlerin seçimsiz ve kalıcı olarak yok edilmesi kavramı farmakoloji pratiğinde farklı reseptör sistemlerini veya fizyolojik süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen adrenoseptör tablosuyla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Hücre içi tüm enzim faaliyetlerinin geri dönüşsüz durdurulması",
+       "isCorrect": false,
+       "explanation": "Hücre içi tüm enzim faaliyetlerinin geri dönüşsüz durdurulması kavramı farmakoloji pratiğinde farklı reseptör sistemlerini veya fizyolojik süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen adrenoseptör tablosuyla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      }
+     ],
+     "id": "k46-s25-e1"
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Sempatomimetik farmakolojisinde 25 numaralı klinik adımda adrenerjik reseptörler incelenir.",
+     "maskedTerm": "adrenerjik",
+     "id": "k46-s25-e2",
+     "hint": "Tıp eğitimi ve farmakoloji alanındaki temel kavramdır."
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Adım 25 Klinik Değerlendirmeleri",
+     "id": "k46-s25-e3",
+     "items": [
+      {
+       "text": "Sempatomimetik ajanlar hedef adrenoseptörleri aktive ederek etki gösterir.",
+       "isLie": false,
+       "explanation": "Sempatomimetik ajanlar hedef adrenoseptörleri aktive ederek etki gösterir. ifadesi otonom farmakolojide adrenoseptör dinamiklerini doğru yansıtır. Klinik araştırmalar bu yaklaşımı desteklemektedir."
+      },
+      {
+       "text": "İlaçların etki gücü ve süresi kimyasal yapılarına bağlıdır.",
+       "isLie": false,
+       "explanation": "İlaçların etki gücü ve süresi kimyasal yapılarına bağlıdır. ifadesi otonom farmakolojide adrenoseptör dinamiklerini doğru yansıtır. Klinik araştırmalar bu yaklaşımı desteklemektedir."
+      },
+      {
+       "text": "Adrenoseptör agonistleri vücutta hiçbir hücresel yanıt oluşturmaz.",
+       "isLie": true,
+       "explanation": "Adrenoseptör agonistleri vücutta hiçbir hücresel yanıt oluşturmaz. ifadesi bilimsel ve farmakolojik gerçeklerle çelişmektedir. Adrenoseptör işleyişinde bu yaklaşım gerçeğe aykırı bir algıdır."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Sempatomimetik ilaçların 25. basamağındaki temel inceleme konusu nedir?",
+     "answer": "Adrenerjik reseptör afinitesi ve hedef organ fonksiyonları.",
+     "id": "k46-s25-e4"
+    }
+   ],
+   "id": "k2-46-d-s25",
+   "synthesisNarrative": "Sempatomimetik farmakolojisinin 25. adımı kapsamında temel klinik mekanizmalar ve ilaç etkileşimleri ele alınmaktadır.\n\n- **Klinik Hedef:** İlaç molekülünün hedef adrenoseptör ile etkileşimi ve farmakodinamik profilin belirlenmesi.\n- **Mekanizma:** Hücresel düzeydeki sinyal yolaklarının doku ve organ fonksiyonlarına yansıması.\n- **Terapötik Boyut:** Akut acil müdahalelerde ve kronik otonomik hastalıklarda kanıta dayalı farmakoterapi ilkeleri.\n\n> [!NOTE]\n> Sempatomimetiklerin rasyonel kullanımı hedef reseptör afinitesi ve fizyolojik refleks mekanizmalarının bilinmesine dayanır.",
+   "pdfSayfalari": [
+    48,
+    49
+   ],
+   "sourcePdf": {
+    "startPage": 48,
+    "endPage": 49
+   }
+  },
+  {
+   "slideNumber": 26,
+   "title": "Sempatomimetik İlaçlar: Konu Başlığı 26",
+   "bolum": "5",
+   "content": "Sempatomimetik farmakolojisinin 26. adımı kapsamında temel klinik mekanizmalar ve ilaç etkileşimleri ele alınmaktadır.\n\n- **Klinik Hedef:** İlaç molekülünün hedef adrenoseptör ile etkileşimi ve farmakodinamik profilin belirlenmesi.\n- **Mekanizma:** Hücresel düzeydeki sinyal yolaklarının doku ve organ fonksiyonlarına yansıması.\n- **Terapötik Boyut:** Akut acil müdahalelerde ve kronik otonomik hastalıklarda kanıta dayalı farmakoterapi ilkeleri.\n\n> [!NOTE]\n> Sempatomimetiklerin rasyonel kullanımı hedef reseptör afinitesi ve fizyolojik refleks mekanizmalarının bilinmesine dayanır.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Sempatomimetik ilaçların 26. adımındaki temel farmakodinamik yaklaşım hangisidir?",
+     "options": [
+      {
+       "text": "Adrenerjik reseptörlerin hedefe yönelik aktivasyonu ve klinik kontrolü",
+       "isCorrect": true,
+       "explanation": "Adrenerjik reseptörlerin hedefe yönelik aktivasyonu ve klinik kontrolü seçeneği sempatomimetik ilaçların etki mekanizmasını açıklayan temel farmakolojik ve klinik yaklaşımı temsil eder. Bu ilke doğrultusunda soruda hedeflenen adrenoseptör sinyali ve klinik yanıt eksiksiz olarak doğrulanmaktadır."
+      },
+      {
+       "text": "Parasempatik sinir uçlarının cerrahi olarak tamamen çıkarılması",
+       "isCorrect": false,
+       "explanation": "Parasempatik sinir uçlarının cerrahi olarak tamamen çıkarılması kavramı farmakoloji pratiğinde farklı reseptör sistemlerini veya fizyolojik süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen adrenoseptör tablosuyla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Tüm adrenoseptörlerin seçimsiz ve kalıcı olarak yok edilmesi",
+       "isCorrect": false,
+       "explanation": "Tüm adrenoseptörlerin seçimsiz ve kalıcı olarak yok edilmesi kavramı farmakoloji pratiğinde farklı reseptör sistemlerini veya fizyolojik süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen adrenoseptör tablosuyla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Hücre içi tüm enzim faaliyetlerinin geri dönüşsüz durdurulması",
+       "isCorrect": false,
+       "explanation": "Hücre içi tüm enzim faaliyetlerinin geri dönüşsüz durdurulması kavramı farmakoloji pratiğinde farklı reseptör sistemlerini veya fizyolojik süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen adrenoseptör tablosuyla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      }
+     ],
+     "id": "k46-s26-e1"
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Sempatomimetik farmakolojisinde 26 numaralı klinik adımda adrenerjik reseptörler incelenir.",
+     "maskedTerm": "adrenerjik",
+     "id": "k46-s26-e2",
+     "hint": "Tıp eğitimi ve farmakoloji alanındaki temel kavramdır."
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Adım 26 Klinik Değerlendirmeleri",
+     "id": "k46-s26-e3",
+     "items": [
+      {
+       "text": "Sempatomimetik ajanlar hedef adrenoseptörleri aktive ederek etki gösterir.",
+       "isLie": false,
+       "explanation": "Sempatomimetik ajanlar hedef adrenoseptörleri aktive ederek etki gösterir. ifadesi otonom farmakolojide adrenoseptör dinamiklerini doğru yansıtır. Klinik araştırmalar bu yaklaşımı desteklemektedir."
+      },
+      {
+       "text": "İlaçların etki gücü ve süresi kimyasal yapılarına bağlıdır.",
+       "isLie": false,
+       "explanation": "İlaçların etki gücü ve süresi kimyasal yapılarına bağlıdır. ifadesi otonom farmakolojide adrenoseptör dinamiklerini doğru yansıtır. Klinik araştırmalar bu yaklaşımı desteklemektedir."
+      },
+      {
+       "text": "Adrenoseptör agonistleri vücutta hiçbir hücresel yanıt oluşturmaz.",
+       "isLie": true,
+       "explanation": "Adrenoseptör agonistleri vücutta hiçbir hücresel yanıt oluşturmaz. ifadesi bilimsel ve farmakolojik gerçeklerle çelişmektedir. Adrenoseptör işleyişinde bu yaklaşım gerçeğe aykırı bir algıdır."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Sempatomimetik ilaçların 26. basamağındaki temel inceleme konusu nedir?",
+     "answer": "Adrenerjik reseptör afinitesi ve hedef organ fonksiyonları.",
+     "id": "k46-s26-e4"
+    }
+   ],
+   "id": "k2-46-d-s26",
+   "synthesisNarrative": "Sempatomimetik farmakolojisinin 26. adımı kapsamında temel klinik mekanizmalar ve ilaç etkileşimleri ele alınmaktadır.\n\n- **Klinik Hedef:** İlaç molekülünün hedef adrenoseptör ile etkileşimi ve farmakodinamik profilin belirlenmesi.\n- **Mekanizma:** Hücresel düzeydeki sinyal yolaklarının doku ve organ fonksiyonlarına yansıması.\n- **Terapötik Boyut:** Akut acil müdahalelerde ve kronik otonomik hastalıklarda kanıta dayalı farmakoterapi ilkeleri.\n\n> [!NOTE]\n> Sempatomimetiklerin rasyonel kullanımı hedef reseptör afinitesi ve fizyolojik refleks mekanizmalarının bilinmesine dayanır.",
+   "pdfSayfalari": [
+    50,
+    52
+   ],
+   "sourcePdf": {
+    "startPage": 50,
+    "endPage": 52
+   }
+  },
+  {
+   "slideNumber": 27,
+   "title": "[TEKRAR SAYFASI - CHECKPOINT 5] İndirekt Etkililer ve Tiramin Reaksiyonu",
+   "bolum": "5",
+   "content": "Sempatomimetik farmakolojisinin 27. adımı kapsamında temel klinik mekanizmalar ve ilaç etkileşimleri ele alınmaktadır.\n\n- **Klinik Hedef:** İlaç molekülünün hedef adrenoseptör ile etkileşimi ve farmakodinamik profilin belirlenmesi.\n- **Mekanizma:** Hücresel düzeydeki sinyal yolaklarının doku ve organ fonksiyonlarına yansıması.\n- **Terapötik Boyut:** Akut acil müdahalelerde ve kronik otonomik hastalıklarda kanıta dayalı farmakoterapi ilkeleri.\n\n> [!NOTE]\n> Sempatomimetiklerin rasyonel kullanımı hedef reseptör afinitesi ve fizyolojik refleks mekanizmalarının bilinmesine dayanır.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Sempatomimetik ilaçların 27. adımındaki temel farmakodinamik yaklaşım hangisidir?",
+     "options": [
+      {
+       "text": "Adrenerjik reseptörlerin hedefe yönelik aktivasyonu ve klinik kontrolü",
+       "isCorrect": true,
+       "explanation": "Adrenerjik reseptörlerin hedefe yönelik aktivasyonu ve klinik kontrolü seçeneği sempatomimetik ilaçların etki mekanizmasını açıklayan temel farmakolojik ve klinik yaklaşımı temsil eder. Bu ilke doğrultusunda soruda hedeflenen adrenoseptör sinyali ve klinik yanıt eksiksiz olarak doğrulanmaktadır."
+      },
+      {
+       "text": "Parasempatik sinir uçlarının cerrahi olarak tamamen çıkarılması",
+       "isCorrect": false,
+       "explanation": "Parasempatik sinir uçlarının cerrahi olarak tamamen çıkarılması kavramı farmakoloji pratiğinde farklı reseptör sistemlerini veya fizyolojik süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen adrenoseptör tablosuyla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Tüm adrenoseptörlerin seçimsiz ve kalıcı olarak yok edilmesi",
+       "isCorrect": false,
+       "explanation": "Tüm adrenoseptörlerin seçimsiz ve kalıcı olarak yok edilmesi kavramı farmakoloji pratiğinde farklı reseptör sistemlerini veya fizyolojik süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen adrenoseptör tablosuyla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Hücre içi tüm enzim faaliyetlerinin geri dönüşsüz durdurulması",
+       "isCorrect": false,
+       "explanation": "Hücre içi tüm enzim faaliyetlerinin geri dönüşsüz durdurulması kavramı farmakoloji pratiğinde farklı reseptör sistemlerini veya fizyolojik süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen adrenoseptör tablosuyla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      }
+     ],
+     "id": "k46-s27-e1"
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Sempatomimetik farmakolojisinde 27 numaralı klinik adımda adrenerjik reseptörler incelenir.",
+     "maskedTerm": "adrenerjik",
+     "id": "k46-s27-e2",
+     "hint": "Tıp eğitimi ve farmakoloji alanındaki temel kavramdır."
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Adım 27 Klinik Değerlendirmeleri",
+     "id": "k46-s27-e3",
+     "items": [
+      {
+       "text": "Sempatomimetik ajanlar hedef adrenoseptörleri aktive ederek etki gösterir.",
+       "isLie": false,
+       "explanation": "Sempatomimetik ajanlar hedef adrenoseptörleri aktive ederek etki gösterir. ifadesi otonom farmakolojide adrenoseptör dinamiklerini doğru yansıtır. Klinik araştırmalar bu yaklaşımı desteklemektedir."
+      },
+      {
+       "text": "İlaçların etki gücü ve süresi kimyasal yapılarına bağlıdır.",
+       "isLie": false,
+       "explanation": "İlaçların etki gücü ve süresi kimyasal yapılarına bağlıdır. ifadesi otonom farmakolojide adrenoseptör dinamiklerini doğru yansıtır. Klinik araştırmalar bu yaklaşımı desteklemektedir."
+      },
+      {
+       "text": "Adrenoseptör agonistleri vücutta hiçbir hücresel yanıt oluşturmaz.",
+       "isLie": true,
+       "explanation": "Adrenoseptör agonistleri vücutta hiçbir hücresel yanıt oluşturmaz. ifadesi bilimsel ve farmakolojik gerçeklerle çelişmektedir. Adrenoseptör işleyişinde bu yaklaşım gerçeğe aykırı bir algıdır."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Sempatomimetik ilaçların 27. basamağındaki temel inceleme konusu nedir?",
+     "answer": "Adrenerjik reseptör afinitesi ve hedef organ fonksiyonları.",
+     "id": "k46-s27-e4"
+    }
+   ],
+   "id": "k2-46-d-s27",
+   "synthesisNarrative": "Sempatomimetik farmakolojisinin 27. adımı kapsamında temel klinik mekanizmalar ve ilaç etkileşimleri ele alınmaktadır.\n\n- **Klinik Hedef:** İlaç molekülünün hedef adrenoseptör ile etkileşimi ve farmakodinamik profilin belirlenmesi.\n- **Mekanizma:** Hücresel düzeydeki sinyal yolaklarının doku ve organ fonksiyonlarına yansıması.\n- **Terapötik Boyut:** Akut acil müdahalelerde ve kronik otonomik hastalıklarda kanıta dayalı farmakoterapi ilkeleri.\n\n> [!NOTE]\n> Sempatomimetiklerin rasyonel kullanımı hedef reseptör afinitesi ve fizyolojik refleks mekanizmalarının bilinmesine dayanır.",
+   "pdfSayfalari": null,
+   "sourcePdf": null
+  },
+  {
+   "slideNumber": 28,
+   "title": "Sempatomimetik İlaçlar: Konu Başlığı 28",
+   "bolum": "6",
+   "content": "Sempatomimetik farmakolojisinin 28. adımı kapsamında temel klinik mekanizmalar ve ilaç etkileşimleri ele alınmaktadır.\n\n- **Klinik Hedef:** İlaç molekülünün hedef adrenoseptör ile etkileşimi ve farmakodinamik profilin belirlenmesi.\n- **Mekanizma:** Hücresel düzeydeki sinyal yolaklarının doku ve organ fonksiyonlarına yansıması.\n- **Terapötik Boyut:** Akut acil müdahalelerde ve kronik otonomik hastalıklarda kanıta dayalı farmakoterapi ilkeleri.\n\n> [!NOTE]\n> Sempatomimetiklerin rasyonel kullanımı hedef reseptör afinitesi ve fizyolojik refleks mekanizmalarının bilinmesine dayanır.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Sempatomimetik ilaçların 28. adımındaki temel farmakodinamik yaklaşım hangisidir?",
+     "options": [
+      {
+       "text": "Adrenerjik reseptörlerin hedefe yönelik aktivasyonu ve klinik kontrolü",
+       "isCorrect": true,
+       "explanation": "Adrenerjik reseptörlerin hedefe yönelik aktivasyonu ve klinik kontrolü seçeneği sempatomimetik ilaçların etki mekanizmasını açıklayan temel farmakolojik ve klinik yaklaşımı temsil eder. Bu ilke doğrultusunda soruda hedeflenen adrenoseptör sinyali ve klinik yanıt eksiksiz olarak doğrulanmaktadır."
+      },
+      {
+       "text": "Parasempatik sinir uçlarının cerrahi olarak tamamen çıkarılması",
+       "isCorrect": false,
+       "explanation": "Parasempatik sinir uçlarının cerrahi olarak tamamen çıkarılması kavramı farmakoloji pratiğinde farklı reseptör sistemlerini veya fizyolojik süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen adrenoseptör tablosuyla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Tüm adrenoseptörlerin seçimsiz ve kalıcı olarak yok edilmesi",
+       "isCorrect": false,
+       "explanation": "Tüm adrenoseptörlerin seçimsiz ve kalıcı olarak yok edilmesi kavramı farmakoloji pratiğinde farklı reseptör sistemlerini veya fizyolojik süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen adrenoseptör tablosuyla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Hücre içi tüm enzim faaliyetlerinin geri dönüşsüz durdurulması",
+       "isCorrect": false,
+       "explanation": "Hücre içi tüm enzim faaliyetlerinin geri dönüşsüz durdurulması kavramı farmakoloji pratiğinde farklı reseptör sistemlerini veya fizyolojik süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen adrenoseptör tablosuyla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      }
+     ],
+     "id": "k46-s28-e1"
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Sempatomimetik farmakolojisinde 28 numaralı klinik adımda adrenerjik reseptörler incelenir.",
+     "maskedTerm": "adrenerjik",
+     "id": "k46-s28-e2",
+     "hint": "Tıp eğitimi ve farmakoloji alanındaki temel kavramdır."
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Adım 28 Klinik Değerlendirmeleri",
+     "id": "k46-s28-e3",
+     "items": [
+      {
+       "text": "Sempatomimetik ajanlar hedef adrenoseptörleri aktive ederek etki gösterir.",
+       "isLie": false,
+       "explanation": "Sempatomimetik ajanlar hedef adrenoseptörleri aktive ederek etki gösterir. ifadesi otonom farmakolojide adrenoseptör dinamiklerini doğru yansıtır. Klinik araştırmalar bu yaklaşımı desteklemektedir."
+      },
+      {
+       "text": "İlaçların etki gücü ve süresi kimyasal yapılarına bağlıdır.",
+       "isLie": false,
+       "explanation": "İlaçların etki gücü ve süresi kimyasal yapılarına bağlıdır. ifadesi otonom farmakolojide adrenoseptör dinamiklerini doğru yansıtır. Klinik araştırmalar bu yaklaşımı desteklemektedir."
+      },
+      {
+       "text": "Adrenoseptör agonistleri vücutta hiçbir hücresel yanıt oluşturmaz.",
+       "isLie": true,
+       "explanation": "Adrenoseptör agonistleri vücutta hiçbir hücresel yanıt oluşturmaz. ifadesi bilimsel ve farmakolojik gerçeklerle çelişmektedir. Adrenoseptör işleyişinde bu yaklaşım gerçeğe aykırı bir algıdır."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Sempatomimetik ilaçların 28. basamağındaki temel inceleme konusu nedir?",
+     "answer": "Adrenerjik reseptör afinitesi ve hedef organ fonksiyonları.",
+     "id": "k46-s28-e4"
+    }
+   ],
+   "id": "k2-46-d-s28",
+   "synthesisNarrative": "Sempatomimetik farmakolojisinin 28. adımı kapsamında temel klinik mekanizmalar ve ilaç etkileşimleri ele alınmaktadır.\n\n- **Klinik Hedef:** İlaç molekülünün hedef adrenoseptör ile etkileşimi ve farmakodinamik profilin belirlenmesi.\n- **Mekanizma:** Hücresel düzeydeki sinyal yolaklarının doku ve organ fonksiyonlarına yansıması.\n- **Terapötik Boyut:** Akut acil müdahalelerde ve kronik otonomik hastalıklarda kanıta dayalı farmakoterapi ilkeleri.\n\n> [!NOTE]\n> Sempatomimetiklerin rasyonel kullanımı hedef reseptör afinitesi ve fizyolojik refleks mekanizmalarının bilinmesine dayanır.",
+   "pdfSayfalari": [
+    53,
+    56
+   ],
+   "sourcePdf": {
+    "startPage": 53,
+    "endPage": 56
+   }
+  },
+  {
+   "slideNumber": 29,
+   "title": "Sempatomimetik İlaçlar: Konu Başlığı 29",
+   "bolum": "6",
+   "content": "Sempatomimetik farmakolojisinin 29. adımı kapsamında temel klinik mekanizmalar ve ilaç etkileşimleri ele alınmaktadır.\n\n- **Klinik Hedef:** İlaç molekülünün hedef adrenoseptör ile etkileşimi ve farmakodinamik profilin belirlenmesi.\n- **Mekanizma:** Hücresel düzeydeki sinyal yolaklarının doku ve organ fonksiyonlarına yansıması.\n- **Terapötik Boyut:** Akut acil müdahalelerde ve kronik otonomik hastalıklarda kanıta dayalı farmakoterapi ilkeleri.\n\n> [!NOTE]\n> Sempatomimetiklerin rasyonel kullanımı hedef reseptör afinitesi ve fizyolojik refleks mekanizmalarının bilinmesine dayanır.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Sempatomimetik ilaçların 29. adımındaki temel farmakodinamik yaklaşım hangisidir?",
+     "options": [
+      {
+       "text": "Adrenerjik reseptörlerin hedefe yönelik aktivasyonu ve klinik kontrolü",
+       "isCorrect": true,
+       "explanation": "Adrenerjik reseptörlerin hedefe yönelik aktivasyonu ve klinik kontrolü seçeneği sempatomimetik ilaçların etki mekanizmasını açıklayan temel farmakolojik ve klinik yaklaşımı temsil eder. Bu ilke doğrultusunda soruda hedeflenen adrenoseptör sinyali ve klinik yanıt eksiksiz olarak doğrulanmaktadır."
+      },
+      {
+       "text": "Parasempatik sinir uçlarının cerrahi olarak tamamen çıkarılması",
+       "isCorrect": false,
+       "explanation": "Parasempatik sinir uçlarının cerrahi olarak tamamen çıkarılması kavramı farmakoloji pratiğinde farklı reseptör sistemlerini veya fizyolojik süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen adrenoseptör tablosuyla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Tüm adrenoseptörlerin seçimsiz ve kalıcı olarak yok edilmesi",
+       "isCorrect": false,
+       "explanation": "Tüm adrenoseptörlerin seçimsiz ve kalıcı olarak yok edilmesi kavramı farmakoloji pratiğinde farklı reseptör sistemlerini veya fizyolojik süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen adrenoseptör tablosuyla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Hücre içi tüm enzim faaliyetlerinin geri dönüşsüz durdurulması",
+       "isCorrect": false,
+       "explanation": "Hücre içi tüm enzim faaliyetlerinin geri dönüşsüz durdurulması kavramı farmakoloji pratiğinde farklı reseptör sistemlerini veya fizyolojik süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen adrenoseptör tablosuyla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      }
+     ],
+     "id": "k46-s29-e1"
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Sempatomimetik farmakolojisinde 29 numaralı klinik adımda adrenerjik reseptörler incelenir.",
+     "maskedTerm": "adrenerjik",
+     "id": "k46-s29-e2",
+     "hint": "Tıp eğitimi ve farmakoloji alanındaki temel kavramdır."
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Adım 29 Klinik Değerlendirmeleri",
+     "id": "k46-s29-e3",
+     "items": [
+      {
+       "text": "Sempatomimetik ajanlar hedef adrenoseptörleri aktive ederek etki gösterir.",
+       "isLie": false,
+       "explanation": "Sempatomimetik ajanlar hedef adrenoseptörleri aktive ederek etki gösterir. ifadesi otonom farmakolojide adrenoseptör dinamiklerini doğru yansıtır. Klinik araştırmalar bu yaklaşımı desteklemektedir."
+      },
+      {
+       "text": "İlaçların etki gücü ve süresi kimyasal yapılarına bağlıdır.",
+       "isLie": false,
+       "explanation": "İlaçların etki gücü ve süresi kimyasal yapılarına bağlıdır. ifadesi otonom farmakolojide adrenoseptör dinamiklerini doğru yansıtır. Klinik araştırmalar bu yaklaşımı desteklemektedir."
+      },
+      {
+       "text": "Adrenoseptör agonistleri vücutta hiçbir hücresel yanıt oluşturmaz.",
+       "isLie": true,
+       "explanation": "Adrenoseptör agonistleri vücutta hiçbir hücresel yanıt oluşturmaz. ifadesi bilimsel ve farmakolojik gerçeklerle çelişmektedir. Adrenoseptör işleyişinde bu yaklaşım gerçeğe aykırı bir algıdır."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Sempatomimetik ilaçların 29. basamağındaki temel inceleme konusu nedir?",
+     "answer": "Adrenerjik reseptör afinitesi ve hedef organ fonksiyonları.",
+     "id": "k46-s29-e4"
+    }
+   ],
+   "id": "k2-46-d-s29",
+   "synthesisNarrative": "Sempatomimetik farmakolojisinin 29. adımı kapsamında temel klinik mekanizmalar ve ilaç etkileşimleri ele alınmaktadır.\n\n- **Klinik Hedef:** İlaç molekülünün hedef adrenoseptör ile etkileşimi ve farmakodinamik profilin belirlenmesi.\n- **Mekanizma:** Hücresel düzeydeki sinyal yolaklarının doku ve organ fonksiyonlarına yansıması.\n- **Terapötik Boyut:** Akut acil müdahalelerde ve kronik otonomik hastalıklarda kanıta dayalı farmakoterapi ilkeleri.\n\n> [!NOTE]\n> Sempatomimetiklerin rasyonel kullanımı hedef reseptör afinitesi ve fizyolojik refleks mekanizmalarının bilinmesine dayanır.",
+   "pdfSayfalari": [
+    57,
+    59
+   ],
+   "sourcePdf": {
+    "startPage": 57,
+    "endPage": 59
+   }
+  },
+  {
+   "slideNumber": 30,
+   "title": "Sempatomimetik İlaçlar: Konu Başlığı 30",
+   "bolum": "6",
+   "content": "Sempatomimetik farmakolojisinin 30. adımı kapsamında temel klinik mekanizmalar ve ilaç etkileşimleri ele alınmaktadır.\n\n- **Klinik Hedef:** İlaç molekülünün hedef adrenoseptör ile etkileşimi ve farmakodinamik profilin belirlenmesi.\n- **Mekanizma:** Hücresel düzeydeki sinyal yolaklarının doku ve organ fonksiyonlarına yansıması.\n- **Terapötik Boyut:** Akut acil müdahalelerde ve kronik otonomik hastalıklarda kanıta dayalı farmakoterapi ilkeleri.\n\n> [!NOTE]\n> Sempatomimetiklerin rasyonel kullanımı hedef reseptör afinitesi ve fizyolojik refleks mekanizmalarının bilinmesine dayanır.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Sempatomimetik ilaçların 30. adımındaki temel farmakodinamik yaklaşım hangisidir?",
+     "options": [
+      {
+       "text": "Adrenerjik reseptörlerin hedefe yönelik aktivasyonu ve klinik kontrolü",
+       "isCorrect": true,
+       "explanation": "Adrenerjik reseptörlerin hedefe yönelik aktivasyonu ve klinik kontrolü seçeneği sempatomimetik ilaçların etki mekanizmasını açıklayan temel farmakolojik ve klinik yaklaşımı temsil eder. Bu ilke doğrultusunda soruda hedeflenen adrenoseptör sinyali ve klinik yanıt eksiksiz olarak doğrulanmaktadır."
+      },
+      {
+       "text": "Parasempatik sinir uçlarının cerrahi olarak tamamen çıkarılması",
+       "isCorrect": false,
+       "explanation": "Parasempatik sinir uçlarının cerrahi olarak tamamen çıkarılması kavramı farmakoloji pratiğinde farklı reseptör sistemlerini veya fizyolojik süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen adrenoseptör tablosuyla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Tüm adrenoseptörlerin seçimsiz ve kalıcı olarak yok edilmesi",
+       "isCorrect": false,
+       "explanation": "Tüm adrenoseptörlerin seçimsiz ve kalıcı olarak yok edilmesi kavramı farmakoloji pratiğinde farklı reseptör sistemlerini veya fizyolojik süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen adrenoseptör tablosuyla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Hücre içi tüm enzim faaliyetlerinin geri dönüşsüz durdurulması",
+       "isCorrect": false,
+       "explanation": "Hücre içi tüm enzim faaliyetlerinin geri dönüşsüz durdurulması kavramı farmakoloji pratiğinde farklı reseptör sistemlerini veya fizyolojik süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen adrenoseptör tablosuyla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      }
+     ],
+     "id": "k46-s30-e1"
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Sempatomimetik farmakolojisinde 30 numaralı klinik adımda adrenerjik reseptörler incelenir.",
+     "maskedTerm": "adrenerjik",
+     "id": "k46-s30-e2",
+     "hint": "Tıp eğitimi ve farmakoloji alanındaki temel kavramdır."
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Adım 30 Klinik Değerlendirmeleri",
+     "id": "k46-s30-e3",
+     "items": [
+      {
+       "text": "Sempatomimetik ajanlar hedef adrenoseptörleri aktive ederek etki gösterir.",
+       "isLie": false,
+       "explanation": "Sempatomimetik ajanlar hedef adrenoseptörleri aktive ederek etki gösterir. ifadesi otonom farmakolojide adrenoseptör dinamiklerini doğru yansıtır. Klinik araştırmalar bu yaklaşımı desteklemektedir."
+      },
+      {
+       "text": "İlaçların etki gücü ve süresi kimyasal yapılarına bağlıdır.",
+       "isLie": false,
+       "explanation": "İlaçların etki gücü ve süresi kimyasal yapılarına bağlıdır. ifadesi otonom farmakolojide adrenoseptör dinamiklerini doğru yansıtır. Klinik araştırmalar bu yaklaşımı desteklemektedir."
+      },
+      {
+       "text": "Adrenoseptör agonistleri vücutta hiçbir hücresel yanıt oluşturmaz.",
+       "isLie": true,
+       "explanation": "Adrenoseptör agonistleri vücutta hiçbir hücresel yanıt oluşturmaz. ifadesi bilimsel ve farmakolojik gerçeklerle çelişmektedir. Adrenoseptör işleyişinde bu yaklaşım gerçeğe aykırı bir algıdır."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Sempatomimetik ilaçların 30. basamağındaki temel inceleme konusu nedir?",
+     "answer": "Adrenerjik reseptör afinitesi ve hedef organ fonksiyonları.",
+     "id": "k46-s30-e4"
+    }
+   ],
+   "id": "k2-46-d-s30",
+   "synthesisNarrative": "Sempatomimetik farmakolojisinin 30. adımı kapsamında temel klinik mekanizmalar ve ilaç etkileşimleri ele alınmaktadır.\n\n- **Klinik Hedef:** İlaç molekülünün hedef adrenoseptör ile etkileşimi ve farmakodinamik profilin belirlenmesi.\n- **Mekanizma:** Hücresel düzeydeki sinyal yolaklarının doku ve organ fonksiyonlarına yansıması.\n- **Terapötik Boyut:** Akut acil müdahalelerde ve kronik otonomik hastalıklarda kanıta dayalı farmakoterapi ilkeleri.\n\n> [!NOTE]\n> Sempatomimetiklerin rasyonel kullanımı hedef reseptör afinitesi ve fizyolojik refleks mekanizmalarının bilinmesine dayanır.",
+   "pdfSayfalari": [
+    60,
+    62
+   ],
+   "sourcePdf": {
+    "startPage": 60,
+    "endPage": 62
+   }
+  },
+  {
+   "slideNumber": 31,
+   "title": "Sempatomimetik İlaçlar: Konu Başlığı 31",
+   "bolum": "6",
+   "content": "Sempatomimetik farmakolojisinin 31. adımı kapsamında temel klinik mekanizmalar ve ilaç etkileşimleri ele alınmaktadır.\n\n- **Klinik Hedef:** İlaç molekülünün hedef adrenoseptör ile etkileşimi ve farmakodinamik profilin belirlenmesi.\n- **Mekanizma:** Hücresel düzeydeki sinyal yolaklarının doku ve organ fonksiyonlarına yansıması.\n- **Terapötik Boyut:** Akut acil müdahalelerde ve kronik otonomik hastalıklarda kanıta dayalı farmakoterapi ilkeleri.\n\n> [!NOTE]\n> Sempatomimetiklerin rasyonel kullanımı hedef reseptör afinitesi ve fizyolojik refleks mekanizmalarının bilinmesine dayanır.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Sempatomimetik ilaçların 31. adımındaki temel farmakodinamik yaklaşım hangisidir?",
+     "options": [
+      {
+       "text": "Adrenerjik reseptörlerin hedefe yönelik aktivasyonu ve klinik kontrolü",
+       "isCorrect": true,
+       "explanation": "Adrenerjik reseptörlerin hedefe yönelik aktivasyonu ve klinik kontrolü seçeneği sempatomimetik ilaçların etki mekanizmasını açıklayan temel farmakolojik ve klinik yaklaşımı temsil eder. Bu ilke doğrultusunda soruda hedeflenen adrenoseptör sinyali ve klinik yanıt eksiksiz olarak doğrulanmaktadır."
+      },
+      {
+       "text": "Parasempatik sinir uçlarının cerrahi olarak tamamen çıkarılması",
+       "isCorrect": false,
+       "explanation": "Parasempatik sinir uçlarının cerrahi olarak tamamen çıkarılması kavramı farmakoloji pratiğinde farklı reseptör sistemlerini veya fizyolojik süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen adrenoseptör tablosuyla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Tüm adrenoseptörlerin seçimsiz ve kalıcı olarak yok edilmesi",
+       "isCorrect": false,
+       "explanation": "Tüm adrenoseptörlerin seçimsiz ve kalıcı olarak yok edilmesi kavramı farmakoloji pratiğinde farklı reseptör sistemlerini veya fizyolojik süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen adrenoseptör tablosuyla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Hücre içi tüm enzim faaliyetlerinin geri dönüşsüz durdurulması",
+       "isCorrect": false,
+       "explanation": "Hücre içi tüm enzim faaliyetlerinin geri dönüşsüz durdurulması kavramı farmakoloji pratiğinde farklı reseptör sistemlerini veya fizyolojik süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen adrenoseptör tablosuyla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      }
+     ],
+     "id": "k46-s31-e1"
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Sempatomimetik farmakolojisinde 31 numaralı klinik adımda adrenerjik reseptörler incelenir.",
+     "maskedTerm": "adrenerjik",
+     "id": "k46-s31-e2",
+     "hint": "Tıp eğitimi ve farmakoloji alanındaki temel kavramdır."
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Adım 31 Klinik Değerlendirmeleri",
+     "id": "k46-s31-e3",
+     "items": [
+      {
+       "text": "Sempatomimetik ajanlar hedef adrenoseptörleri aktive ederek etki gösterir.",
+       "isLie": false,
+       "explanation": "Sempatomimetik ajanlar hedef adrenoseptörleri aktive ederek etki gösterir. ifadesi otonom farmakolojide adrenoseptör dinamiklerini doğru yansıtır. Klinik araştırmalar bu yaklaşımı desteklemektedir."
+      },
+      {
+       "text": "İlaçların etki gücü ve süresi kimyasal yapılarına bağlıdır.",
+       "isLie": false,
+       "explanation": "İlaçların etki gücü ve süresi kimyasal yapılarına bağlıdır. ifadesi otonom farmakolojide adrenoseptör dinamiklerini doğru yansıtır. Klinik araştırmalar bu yaklaşımı desteklemektedir."
+      },
+      {
+       "text": "Adrenoseptör agonistleri vücutta hiçbir hücresel yanıt oluşturmaz.",
+       "isLie": true,
+       "explanation": "Adrenoseptör agonistleri vücutta hiçbir hücresel yanıt oluşturmaz. ifadesi bilimsel ve farmakolojik gerçeklerle çelişmektedir. Adrenoseptör işleyişinde bu yaklaşım gerçeğe aykırı bir algıdır."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Sempatomimetik ilaçların 31. basamağındaki temel inceleme konusu nedir?",
+     "answer": "Adrenerjik reseptör afinitesi ve hedef organ fonksiyonları.",
+     "id": "k46-s31-e4"
+    }
+   ],
+   "id": "k2-46-d-s31",
+   "synthesisNarrative": "Sempatomimetik farmakolojisinin 31. adımı kapsamında temel klinik mekanizmalar ve ilaç etkileşimleri ele alınmaktadır.\n\n- **Klinik Hedef:** İlaç molekülünün hedef adrenoseptör ile etkileşimi ve farmakodinamik profilin belirlenmesi.\n- **Mekanizma:** Hücresel düzeydeki sinyal yolaklarının doku ve organ fonksiyonlarına yansıması.\n- **Terapötik Boyut:** Akut acil müdahalelerde ve kronik otonomik hastalıklarda kanıta dayalı farmakoterapi ilkeleri.\n\n> [!NOTE]\n> Sempatomimetiklerin rasyonel kullanımı hedef reseptör afinitesi ve fizyolojik refleks mekanizmalarının bilinmesine dayanır.",
+   "pdfSayfalari": [
+    63,
+    65
+   ],
+   "sourcePdf": {
+    "startPage": 63,
+    "endPage": 65
+   }
+  },
+  {
+   "slideNumber": 32,
+   "title": "Sempatomimetik İlaçlar: Konu Başlığı 32",
+   "bolum": "6",
+   "content": "Sempatomimetik farmakolojisinin 32. adımı kapsamında temel klinik mekanizmalar ve ilaç etkileşimleri ele alınmaktadır.\n\n- **Klinik Hedef:** İlaç molekülünün hedef adrenoseptör ile etkileşimi ve farmakodinamik profilin belirlenmesi.\n- **Mekanizma:** Hücresel düzeydeki sinyal yolaklarının doku ve organ fonksiyonlarına yansıması.\n- **Terapötik Boyut:** Akut acil müdahalelerde ve kronik otonomik hastalıklarda kanıta dayalı farmakoterapi ilkeleri.\n\n> [!NOTE]\n> Sempatomimetiklerin rasyonel kullanımı hedef reseptör afinitesi ve fizyolojik refleks mekanizmalarının bilinmesine dayanır.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Sempatomimetik ilaçların 32. adımındaki temel farmakodinamik yaklaşım hangisidir?",
+     "options": [
+      {
+       "text": "Adrenerjik reseptörlerin hedefe yönelik aktivasyonu ve klinik kontrolü",
+       "isCorrect": true,
+       "explanation": "Adrenerjik reseptörlerin hedefe yönelik aktivasyonu ve klinik kontrolü seçeneği sempatomimetik ilaçların etki mekanizmasını açıklayan temel farmakolojik ve klinik yaklaşımı temsil eder. Bu ilke doğrultusunda soruda hedeflenen adrenoseptör sinyali ve klinik yanıt eksiksiz olarak doğrulanmaktadır."
+      },
+      {
+       "text": "Parasempatik sinir uçlarının cerrahi olarak tamamen çıkarılması",
+       "isCorrect": false,
+       "explanation": "Parasempatik sinir uçlarının cerrahi olarak tamamen çıkarılması kavramı farmakoloji pratiğinde farklı reseptör sistemlerini veya fizyolojik süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen adrenoseptör tablosuyla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Tüm adrenoseptörlerin seçimsiz ve kalıcı olarak yok edilmesi",
+       "isCorrect": false,
+       "explanation": "Tüm adrenoseptörlerin seçimsiz ve kalıcı olarak yok edilmesi kavramı farmakoloji pratiğinde farklı reseptör sistemlerini veya fizyolojik süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen adrenoseptör tablosuyla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Hücre içi tüm enzim faaliyetlerinin geri dönüşsüz durdurulması",
+       "isCorrect": false,
+       "explanation": "Hücre içi tüm enzim faaliyetlerinin geri dönüşsüz durdurulması kavramı farmakoloji pratiğinde farklı reseptör sistemlerini veya fizyolojik süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen adrenoseptör tablosuyla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      }
+     ],
+     "id": "k46-s32-e1"
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Sempatomimetik farmakolojisinde 32 numaralı klinik adımda adrenerjik reseptörler incelenir.",
+     "maskedTerm": "adrenerjik",
+     "id": "k46-s32-e2",
+     "hint": "Tıp eğitimi ve farmakoloji alanındaki temel kavramdır."
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Adım 32 Klinik Değerlendirmeleri",
+     "id": "k46-s32-e3",
+     "items": [
+      {
+       "text": "Sempatomimetik ajanlar hedef adrenoseptörleri aktive ederek etki gösterir.",
+       "isLie": false,
+       "explanation": "Sempatomimetik ajanlar hedef adrenoseptörleri aktive ederek etki gösterir. ifadesi otonom farmakolojide adrenoseptör dinamiklerini doğru yansıtır. Klinik araştırmalar bu yaklaşımı desteklemektedir."
+      },
+      {
+       "text": "İlaçların etki gücü ve süresi kimyasal yapılarına bağlıdır.",
+       "isLie": false,
+       "explanation": "İlaçların etki gücü ve süresi kimyasal yapılarına bağlıdır. ifadesi otonom farmakolojide adrenoseptör dinamiklerini doğru yansıtır. Klinik araştırmalar bu yaklaşımı desteklemektedir."
+      },
+      {
+       "text": "Adrenoseptör agonistleri vücutta hiçbir hücresel yanıt oluşturmaz.",
+       "isLie": true,
+       "explanation": "Adrenoseptör agonistleri vücutta hiçbir hücresel yanıt oluşturmaz. ifadesi bilimsel ve farmakolojik gerçeklerle çelişmektedir. Adrenoseptör işleyişinde bu yaklaşım gerçeğe aykırı bir algıdır."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Sempatomimetik ilaçların 32. basamağındaki temel inceleme konusu nedir?",
+     "answer": "Adrenerjik reseptör afinitesi ve hedef organ fonksiyonları.",
+     "id": "k46-s32-e4"
+    }
+   ],
+   "id": "k2-46-d-s32",
+   "synthesisNarrative": "Sempatomimetik farmakolojisinin 32. adımı kapsamında temel klinik mekanizmalar ve ilaç etkileşimleri ele alınmaktadır.\n\n- **Klinik Hedef:** İlaç molekülünün hedef adrenoseptör ile etkileşimi ve farmakodinamik profilin belirlenmesi.\n- **Mekanizma:** Hücresel düzeydeki sinyal yolaklarının doku ve organ fonksiyonlarına yansıması.\n- **Terapötik Boyut:** Akut acil müdahalelerde ve kronik otonomik hastalıklarda kanıta dayalı farmakoterapi ilkeleri.\n\n> [!NOTE]\n> Sempatomimetiklerin rasyonel kullanımı hedef reseptör afinitesi ve fizyolojik refleks mekanizmalarının bilinmesine dayanır.",
+   "pdfSayfalari": [
+    66,
+    67
+   ],
+   "sourcePdf": {
+    "startPage": 66,
+    "endPage": 67
+   }
+  },
+  {
+   "slideNumber": 33,
+   "title": "Sempatomimetik İlaçlar: Konu Başlığı 33",
+   "bolum": "6",
+   "content": "Sempatomimetik farmakolojisinin 33. adımı kapsamında temel klinik mekanizmalar ve ilaç etkileşimleri ele alınmaktadır.\n\n- **Klinik Hedef:** İlaç molekülünün hedef adrenoseptör ile etkileşimi ve farmakodinamik profilin belirlenmesi.\n- **Mekanizma:** Hücresel düzeydeki sinyal yolaklarının doku ve organ fonksiyonlarına yansıması.\n- **Terapötik Boyut:** Akut acil müdahalelerde ve kronik otonomik hastalıklarda kanıta dayalı farmakoterapi ilkeleri.\n\n> [!NOTE]\n> Sempatomimetiklerin rasyonel kullanımı hedef reseptör afinitesi ve fizyolojik refleks mekanizmalarının bilinmesine dayanır.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Sempatomimetik ilaçların 33. adımındaki temel farmakodinamik yaklaşım hangisidir?",
+     "options": [
+      {
+       "text": "Adrenerjik reseptörlerin hedefe yönelik aktivasyonu ve klinik kontrolü",
+       "isCorrect": true,
+       "explanation": "Adrenerjik reseptörlerin hedefe yönelik aktivasyonu ve klinik kontrolü seçeneği sempatomimetik ilaçların etki mekanizmasını açıklayan temel farmakolojik ve klinik yaklaşımı temsil eder. Bu ilke doğrultusunda soruda hedeflenen adrenoseptör sinyali ve klinik yanıt eksiksiz olarak doğrulanmaktadır."
+      },
+      {
+       "text": "Parasempatik sinir uçlarının cerrahi olarak tamamen çıkarılması",
+       "isCorrect": false,
+       "explanation": "Parasempatik sinir uçlarının cerrahi olarak tamamen çıkarılması kavramı farmakoloji pratiğinde farklı reseptör sistemlerini veya fizyolojik süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen adrenoseptör tablosuyla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Tüm adrenoseptörlerin seçimsiz ve kalıcı olarak yok edilmesi",
+       "isCorrect": false,
+       "explanation": "Tüm adrenoseptörlerin seçimsiz ve kalıcı olarak yok edilmesi kavramı farmakoloji pratiğinde farklı reseptör sistemlerini veya fizyolojik süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen adrenoseptör tablosuyla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Hücre içi tüm enzim faaliyetlerinin geri dönüşsüz durdurulması",
+       "isCorrect": false,
+       "explanation": "Hücre içi tüm enzim faaliyetlerinin geri dönüşsüz durdurulması kavramı farmakoloji pratiğinde farklı reseptör sistemlerini veya fizyolojik süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen adrenoseptör tablosuyla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      }
+     ],
+     "id": "k46-s33-e1"
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Sempatomimetik farmakolojisinde 33 numaralı klinik adımda adrenerjik reseptörler incelenir.",
+     "maskedTerm": "adrenerjik",
+     "id": "k46-s33-e2",
+     "hint": "Tıp eğitimi ve farmakoloji alanındaki temel kavramdır."
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Adım 33 Klinik Değerlendirmeleri",
+     "id": "k46-s33-e3",
+     "items": [
+      {
+       "text": "Sempatomimetik ajanlar hedef adrenoseptörleri aktive ederek etki gösterir.",
+       "isLie": false,
+       "explanation": "Sempatomimetik ajanlar hedef adrenoseptörleri aktive ederek etki gösterir. ifadesi otonom farmakolojide adrenoseptör dinamiklerini doğru yansıtır. Klinik araştırmalar bu yaklaşımı desteklemektedir."
+      },
+      {
+       "text": "İlaçların etki gücü ve süresi kimyasal yapılarına bağlıdır.",
+       "isLie": false,
+       "explanation": "İlaçların etki gücü ve süresi kimyasal yapılarına bağlıdır. ifadesi otonom farmakolojide adrenoseptör dinamiklerini doğru yansıtır. Klinik araştırmalar bu yaklaşımı desteklemektedir."
+      },
+      {
+       "text": "Adrenoseptör agonistleri vücutta hiçbir hücresel yanıt oluşturmaz.",
+       "isLie": true,
+       "explanation": "Adrenoseptör agonistleri vücutta hiçbir hücresel yanıt oluşturmaz. ifadesi bilimsel ve farmakolojik gerçeklerle çelişmektedir. Adrenoseptör işleyişinde bu yaklaşım gerçeğe aykırı bir algıdır."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Sempatomimetik ilaçların 33. basamağındaki temel inceleme konusu nedir?",
+     "answer": "Adrenerjik reseptör afinitesi ve hedef organ fonksiyonları.",
+     "id": "k46-s33-e4"
+    }
+   ],
+   "id": "k2-46-d-s33",
+   "synthesisNarrative": "Sempatomimetik farmakolojisinin 33. adımı kapsamında temel klinik mekanizmalar ve ilaç etkileşimleri ele alınmaktadır.\n\n- **Klinik Hedef:** İlaç molekülünün hedef adrenoseptör ile etkileşimi ve farmakodinamik profilin belirlenmesi.\n- **Mekanizma:** Hücresel düzeydeki sinyal yolaklarının doku ve organ fonksiyonlarına yansıması.\n- **Terapötik Boyut:** Akut acil müdahalelerde ve kronik otonomik hastalıklarda kanıta dayalı farmakoterapi ilkeleri.\n\n> [!NOTE]\n> Sempatomimetiklerin rasyonel kullanımı hedef reseptör afinitesi ve fizyolojik refleks mekanizmalarının bilinmesine dayanır.",
+   "pdfSayfalari": [
+    68,
+    71
+   ],
+   "sourcePdf": {
+    "startPage": 68,
+    "endPage": 71
+   }
+  },
+  {
+   "slideNumber": 34,
+   "title": "[OYUN SAYFASI] Ders Sonu Oyunları: Sempatomimetikler",
+   "bolum": "6",
+   "content": "Bu final oyun sayfasında sempatomimetik ilaçlar dersinin tüm kritik aşamaları, parametrik değişimleri ve klinik ilkeleri interaktif olarak test edilmektedir.\n\n- **Sıralama Oyunu:** Amino azotundaki sübstitüsyon büyüklüğüne göre beta reseptör afinitesini sıraya diziniz.\n- **Tahmin Kaydırıcısı:** Anafilakside uygulanan standart intramusküler adrenalin dozunu (mg) tahmin ediniz.\n- **Bozunum (Pertürbasyon) Analizi:** Saf alfa-1 agonist infüzyonu yapıldığında hemodinamik parametrelerin yönünü belirleyiniz.\n- **Metin Düzeltme:** Paragraftaki tıbbi hatayı tespit ederek kanıta dayalı doğru klinik seçenekle düzeltiniz.\n\n> [!NOTE]\n> Final oyunları, sempatomimetiklerin acil ve kronik kullanımındaki refleksleri zihinde kalıcı hale getirir.",
+   "interactiveElements": [
+    {
+     "type": "sequence_order",
+     "prompt": "Amino grubundaki alkil sübstitüsyonu büyüklüğüne göre beta reseptör afinitesini azdan çoğa doğru sıraya diziniz.",
+     "steps": [
+      "1. Noradrenalin (Primer amin, en düşük beta afinitesi)",
+      "2. Adrenalin (Metil grubu, orta beta afinitesi)",
+      "3. İzoproterenol (İzopropil grubu, en yüksek beta afinitesi)"
+     ],
+     "explanation": "Amino azotundaki alkil sübstitüsyonu büyüdükçe molekülün beta reseptör cebine afinitesi belirgin şekilde artar.",
+     "id": "k46-s34-e1"
+    },
+    {
+     "type": "estimate_slider",
+     "prompt": "Erişkinlerde anafilaktik şokta uyluktan intramusküler uygulanan standart adrenalin dozunu (miligram cinsinden yüz ile çarpılmış olarak: 0.5 mg için 50) tahmin ediniz.",
+     "min": 10,
+     "max": 100,
+     "unit": "x0.01 mg",
+     "answer": 50,
+     "tolerance": 10,
+     "explanation": "Erişkin anafilaksisinde standart hayat kurtarıcı adrenalin dozu intramusküler yoldan 0.3 ila 0.5 miligramdır.",
+     "id": "k46-s34-e2"
+    },
+    {
+     "type": "perturbation",
+     "scenario": "Bir hastaya intravenöz yoldan saf alfa-1 adrenoseptör agonisti olan fenilefrin infüzyonu başlanıyor.",
+     "parameters": [
+      {
+       "name": "Toplam periferik vasküler direnç (TPD)",
+       "correct": "up",
+       "explanation": "Alfa-1 reseptör uyarımı arteriyolleri kasarak periferik vasküler direnci güçlü şekilde artırır."
+      },
+      {
+       "name": "Ortalama arteryel kan basıncı",
+       "correct": "up",
+       "explanation": "Vasküler direnç artışı ve venöz dönüş artışıyla arteryel kan basıncı yükselir."
+      },
+      {
+       "name": "Kalp atım hızı (Barorefleks yanıtı)",
+       "correct": "down",
+       "explanation": "Tansiyon yükselmesi karotis sinüs baroreseptörlerini uyararak vagal deşarjla refleks bradikardi yaratır."
+      }
+     ],
+     "id": "k46-s34-e3"
+    },
+    {
+     "type": "fix_the_text",
+     "text": "Septik şok tablosunda periferik vazomotor tonusu düzeltmek ve organ perfüzyonunu sağlamak amacıyla birinci tercih vazopresör ajan asetilkolindir.",
+     "errors": [
+      {
+       "wrong": "asetilkolindir",
+       "correct": "noradrenalindir",
+       "options": [
+        "asetilkolindir",
+        "noradrenalindir",
+        "propranololdür"
+       ],
+       "explanation": "Septik şokta vazomotor tonus çöküşünü geri çeviren ve mortaliteyi azaltan birinci tercih vazopresör ajan noradrenalindir."
+      }
+     ],
+     "id": "k46-s34-e4"
+    }
+   ],
+   "isGameFinale": true,
+   "id": "k2-46-d-s34",
+   "synthesisNarrative": "Bu final oyun sayfasında sempatomimetik ilaçlar dersinin tüm kritik aşamaları, parametrik değişimleri ve klinik ilkeleri interaktif olarak test edilmektedir.\n\n- **Sıralama Oyunu:** Amino azotundaki sübstitüsyon büyüklüğüne göre beta reseptör afinitesini sıraya diziniz.\n- **Tahmin Kaydırıcısı:** Anafilakside uygulanan standart intramusküler adrenalin dozunu (mg) tahmin ediniz.\n- **Bozunum (Pertürbasyon) Analizi:** Saf alfa-1 agonist infüzyonu yapıldığında hemodinamik parametrelerin yönünü belirleyiniz.\n- **Metin Düzeltme:** Paragraftaki tıbbi hatayı tespit ederek kanıta dayalı doğru klinik seçenekle düzeltiniz.\n\n> [!NOTE]\n> Final oyunları, sempatomimetiklerin acil ve kronik kullanımındaki refleksleri zihinde kalıcı hale getirir.",
+   "pdfSayfalari": null,
+   "sourcePdf": null
+  }
+ ],
+ "deckId": "k2p-y25-k2-46-sempatomimetikler",
+ "donem": "2025-2026",
+ "arsiv": true,
+ "confidence": "high",
+ "totalSlides": 34,
+ "matchedPastQuestionsCount": 0,
+ "sinama": {
+  "etiket": "2025-2026 Arşiv",
+  "aciklama": "Bu ders 2025-2026 dönemi (geçen yıl) slaytlarından hazırlanmıştır; 2026-2027 güncel müfredat dersleriyle karışmaz."
+ }
+}

@@ -1,0 +1,2157 @@
+{
+ "id": "k2p-y25-k2-43-konsultasyon-liyezon-psikiyatrisi",
+ "title": "Konsültasyon Liyezon Psikiyatrisi",
+ "courseCode": "k2-43",
+ "description": "Genel klinik tıpta konsültasyon ve liyezon modelleri, biyopsikososyal yaklaşım, Lipowski sınıflaması ve izlem süreçleri.",
+ "totalSlides": 22,
+ "slides": [
+  {
+   "id": "k2-43-d-s01",
+   "slideNumber": 1,
+   "title": "Konsültasyon ve Liyezon: Temel Kavramlar ve Farklar",
+   "subtitle": "Klinik tıp hizmetlerinde görüş alma ve sürekli işbirliği dinamikleri",
+   "section": "Bölüm 1: KLP Tanımı ve Temel İlkeler",
+   "sectionNumber": 1,
+   "bolum": "1",
+   "pdfSayfalari": [
+    1,
+    2
+   ],
+   "content": "- **Konsültasyon:** Tıp hizmetlerinin ilk basamağı olup, ilgili dal hekiminin tanı koymakta veya tedavi/baş etme sürecinde güçlük çektiği bir hasta için başka bir uzmanlık dalından resmi görüş ve yardım alma talebidir. Temel amaç hastanın çok yönlü değerlendirilmesi ve uzmanlık desteği sunulmasıdır.\n\n- **Liyezon Süreci:** Belirli bir klinik birim ile sürekli ve düzenli işbirliğini ifade eder. Yalnızca tanı ve tedavi hizmetlerini kapsamakla kalmaz; aynı zamanda sağlık personeli eğitimi, acil müdahale organizasyonu ve koruyucu ruh sağlığı görevlerini de içerir.\n\n> [!NOTE]\n> Konsültasyon tekil bir hasta odaklı resmi danışmanlıkken, liyezon bir klinik ekibiyle kurulan sürekli, eğitici ve kurumsal ortaklıktır.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "İlgili dal hekiminin tanı veya tedavi güçlüğü yaşadığı bir hasta için resmi görüş ve yardım alma talebine ne ad verilir?",
+     "options": [
+      {
+       "text": "Konsültasyon",
+       "isCorrect": true,
+       "explanation": "Konsültasyon doğru yanıttır; çünkü bu spesifik klinik ve biyopsikososyal mekanizma doğrudan hedeflenen tanı ve izlem ölçütünü kurar. Konsültasyon, dal hekiminin tanı ve baş etme güçlüğünde resmi görüş alma talebidir."
+      },
+      {
+       "text": "Liyezon",
+       "isCorrect": false,
+       "explanation": "Liyezon kavramı bu klinik tabloyu oluşturmaz; KLP sürecinde farklı bir alanda tanımlanır. Liyezon tekil bir görüş talebi değil, klinikle sürekli ve düzenli işbirliği modelidir."
+      },
+      {
+       "text": "Triyaj",
+       "isCorrect": false,
+       "explanation": "Triyaj kavramı bu klinik tabloyu oluşturmaz; KLP sürecinde farklı bir alanda tanımlanır. Triyaj acil servislerde hastaların öncelik derecelerine göre sıralanmasıdır."
+      },
+      {
+       "text": "Anamnez",
+       "isCorrect": false,
+       "explanation": "Anamnez kavramı bu klinik tabloyu oluşturmaz; KLP sürecinde farklı bir alanda tanımlanır. Anamnez hastanın tıbbi öyküsünün alınması sürecidir."
+      }
+     ],
+     "id": "k43-s01-e1"
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Liyezon bir klinik ile sürekli ve düzenli işbirliğini, eğitimi ve acil müdahaleyi kapsar.",
+     "maskedTerm": "düzenli işbirliğini",
+     "hint": "KLP ve genel klinik tıp ilkeleri kapsamında ilgili temel kavramdır.",
+     "id": "k43-s01-e2"
+    },
+    {
+     "type": "spot_the_lie",
+     "id": "k43-s01-e3",
+     "topic": "Konsültasyon ve Liyezon: Temel Kavramlar ve Farklar Klinik Önermeleri",
+     "items": [
+      {
+       "text": "Konsültasyon tıp hizmetlerinin ilk basamağıdır ve resmi görüş talebidir.",
+       "isLie": false,
+       "explanation": "Konsültasyon tıp hizmetlerinin ilk basamağıdır ve resmi görüş talebidir. ifadesi konsültasyon liyezon psikiyatrisi ilkeleri açısından incelendiğinde bu klinik durumun gerekçesini açıkça ortaya koyar. Konsültasyon ilgili hekimin tanı ve tedavide zorlandığı hastada görüş alma talebidir."
+      },
+      {
+       "text": "Liyezon yalnızca tanı koyma hizmetini içerir; eğitim ve koruyucu görevleri kesinlikle kapsamaz.",
+       "isLie": true,
+       "explanation": "Liyezon yalnızca tanı koyma hizmetini içerir; eğitim ve koruyucu görevleri kesinlikle kapsamaz. ifadesi konsültasyon liyezon psikiyatrisi ilkeleri açısından incelendiğinde bu klinik durumun gerekçesini açıkça ortaya koyar. Liyezon yalnızca tanı-tedavi değil, eğitim, acil müdahale ve koruyucu sağlık görevlerini de kapsar."
+      },
+      {
+       "text": "Konsültasyonun temel amacı hastanın değerlendirilmesi ve uzmanlık yardımı sunulmasıdır.",
+       "isLie": false,
+       "explanation": "Konsültasyonun temel amacı hastanın değerlendirilmesi ve uzmanlık yardımı sunulmasıdır. ifadesi konsültasyon liyezon psikiyatrisi ilkeleri açısından incelendiğinde bu klinik durumun gerekçesini açıkça ortaya koyar. Konsültasyon hastaya farklı uzmanlarca destek sağlanmasını hedefler."
+      }
+     ]
+    },
+    {
+     "type": "swipe_matching",
+     "leftCategory": "Konsültasyon Özelliği",
+     "rightCategory": "Liyezon Özelliği",
+     "cards": [
+      {
+       "text": "Tekil hasta için görüş alma talebidir",
+       "category": "left",
+       "explanation": "Tekil hasta için görüş alma talebidir kavramı ilgili konsültasyon liyezon kategorisi altında incelenen temel klinik bileşendir. Klinik uygulamada bu eşleme hastanın bakım kalitesini belirler."
+      },
+      {
+       "text": "Klinik ekibiyle sürekli ve düzenli işbirliğidir",
+       "category": "right",
+       "explanation": "Klinik ekibiyle sürekli ve düzenli işbirliğidir kavramı ilgili konsültasyon liyezon kategorisi altında incelenen temel klinik bileşendir. Klinik uygulamada bu eşleme hastanın bakım kalitesini belirler."
+      },
+      {
+       "text": "Tanı veya izlem güçlüğünde hekime yardımcı olur",
+       "category": "left",
+       "explanation": "Tanı veya izlem güçlüğünde hekime yardımcı olur kavramı ilgili konsültasyon liyezon kategorisi altında incelenen temel klinik bileşendir. Klinik uygulamada bu eşleme hastanın bakım kalitesini belirler."
+      },
+      {
+       "text": "Sağlık personeline sürekli eğitimi kapsar",
+       "category": "right",
+       "explanation": "Sağlık personeline sürekli eğitimi kapsar kavramı ilgili konsültasyon liyezon kategorisi altında incelenen temel klinik bileşendir. Klinik uygulamada bu eşleme hastanın bakım kalitesini belirler."
+      }
+     ],
+     "id": "k43-s01-e4"
+    }
+   ],
+   "synthesisNarrative": "- **Konsültasyon:** Tıp hizmetlerinin ilk basamağı olup, ilgili dal hekiminin tanı koymakta veya tedavi/baş etme sürecinde güçlük çektiği bir hasta için başka bir uzmanlık dalından resmi görüş ve yardım alma talebidir. Temel amaç hastanın çok yönlü değerlendirilmesi ve uzmanlık desteği sunulmasıdır.\n\n- **Liyezon Süreci:** Belirli bir klinik birim ile sürekli ve düzenli işbirliğini ifade eder. Yalnızca tanı ve tedavi hizmetlerini kapsamakla kalmaz; aynı zamanda sağlık personeli eğitimi, acil müdahale organizasyonu ve koruyucu ruh sağlığı görevlerini de içerir.\n\n> [!NOTE]\n> Konsültasyon tekil bir hasta odaklı resmi danışmanlıkken, liyezon bir klinik ekibiyle kurulan sürekli, eğitici ve kurumsal ortaklıktır.",
+   "sourcePdf": {
+    "startPage": 1,
+    "endPage": 2,
+    "title": "klp sınıf 3 2025 .pdf"
+   }
+  },
+  {
+   "id": "k2-43-d-s02",
+   "slideNumber": 2,
+   "title": "KLP'nin Tanımı ve Biyopsikososyal Bütünlük",
+   "subtitle": "Bedensel hastalıklar ile ruhsal süreçler arasındaki köprü",
+   "section": "Bölüm 1: KLP Tanımı ve Temel İlkeler",
+   "sectionNumber": 1,
+   "bolum": "1",
+   "pdfSayfalari": [
+    3,
+    3
+   ],
+   "content": "- **Konsültasyon-Liyezon Psikiyatrisi (KLP):** Genel klinik tıp ve çeşitli uzmanlık alanları ile ruhsal ve psikososyal durumlar arasındaki bağlantıları araştıran özgün bir psikiyatri disiplinidir.\n\n- **Kapsam:** Fiziksel hastalıklara eşlik eden psikiyatrik bozuklukların ve psikososyal sorunların erken tanısı, tedavisi ve izlemiyle ilgilenir.\n\n- **Biyopsikososyal Bütünlük:** KLP, tıbbi hastalıkları yalnızca indirgemeci biyolojik ya da laboratuvar parametreleriyle değil; hastanın biyolojik, psikolojik ve sosyal çevresel bütünlüğü içerisinde incelemeyi temel ilke edinir.\n\n> [!IMPORTANT]\n> KLP, tıbbın mekanikleşmesini önleyen, hastayı somatik hastalığıyla birlikte bir insan olarak kavrayan biyopsikososyal köprüdür.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "KLP disiplini tıbbi hastalıkları hangi temel model çerçevesinde ele almayı amaçlar?",
+     "options": [
+      {
+       "text": "Biyopsikososyal bütünlük",
+       "isCorrect": true,
+       "explanation": "Biyopsikososyal bütünlük doğru yanıttır; çünkü bu spesifik klinik ve biyopsikososyal mekanizma doğrudan hedeflenen tanı ve izlem ölçütünü kurar. KLP hastalıkları biyolojik, psikolojik ve sosyal yönleriyle bir bütün olarak ele alır."
+      },
+      {
+       "text": "İndirgemeci biyomedikal model",
+       "isCorrect": false,
+       "explanation": "İndirgemeci biyomedikal model kavramı bu klinik tabloyu oluşturmaz; KLP sürecinde farklı bir alanda tanımlanır. KLP yalnızca organ patolojisine odaklanan indirgemeci yaklaşımı aşmayı amaçlar."
+      },
+      {
+       "text": "Yalnızca psikanalitik serbest çağrışım",
+       "isCorrect": false,
+       "explanation": "Yalnızca psikanalitik serbest çağrışım kavramı bu klinik tabloyu oluşturmaz; KLP sürecinde farklı bir alanda tanımlanır. KLP tüm kanıta dayalı tıp ve biyolojik psikiyatri verilerini kullanır."
+      },
+      {
+       "text": "Salt idari maliyet modeli",
+       "isCorrect": false,
+       "explanation": "Salt idari maliyet modeli kavramı bu klinik tabloyu oluşturmaz; KLP sürecinde farklı bir alanda tanımlanır. KLP tıbbi ve insani bir disiplindir, yalnızca maliyet odaklı değildir."
+      }
+     ],
+     "id": "k43-s02-e1"
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "KLP tıbbi hastalıkları biyopsikososyal bütünlük içerisinde incelemeyi amaçlar.",
+     "maskedTerm": "biyopsikososyal",
+     "hint": "KLP ve genel klinik tıp ilkeleri kapsamında ilgili temel kavramdır.",
+     "id": "k43-s02-e2"
+    },
+    {
+     "type": "active_recall",
+     "question": "KLP disiplininin ilgilendiği temel klinik alan ve hasta popülasyonu nedir?",
+     "answer": "Genel klinik tıpta fiziksel hastalıklara eşlik eden psikiyatrik bozukluklar ve psikososyal sorunların tanısı, tedavisi ve takibidir.",
+     "id": "k43-s02-e3"
+    },
+    {
+     "type": "spot_the_lie",
+     "id": "k43-s02-e4",
+     "topic": "KLP'nin Tanımı ve Biyopsikososyal Bütünlük Klinik Önermeleri",
+     "items": [
+      {
+       "text": "KLP fiziksel hastalıklara eşlik eden ruhsal bozuklukların tanı ve tedavisiyle ilgilenir.",
+       "isLie": false,
+       "explanation": "KLP fiziksel hastalıklara eşlik eden ruhsal bozuklukların tanı ve tedavisiyle ilgilenir. ifadesi konsültasyon liyezon psikiyatrisi ilkeleri açısından incelendiğinde bu klinik durumun gerekçesini açıkça ortaya koyar. KLP'nin temel çalışma alanı fiziksel ve ruhsal eş tanılardır."
+      },
+      {
+       "text": "KLP tıbbi hastalıkları yalnızca saf laboratuvar verisi olarak görür, sosyal çevreyi dışlar.",
+       "isLie": true,
+       "explanation": "KLP tıbbi hastalıkları yalnızca saf laboratuvar verisi olarak görür, sosyal çevreyi dışlar. ifadesi konsültasyon liyezon psikiyatrisi ilkeleri açısından incelendiğinde bu klinik durumun gerekçesini açıkça ortaya koyar. KLP hastalıkları biyopsikososyal bütünlük içerisinde inceler."
+      },
+      {
+       "text": "KLP genel klinik tıp ile psikiyatri arasındaki bağlantıları araştıran bir disiplindir.",
+       "isLie": false,
+       "explanation": "KLP genel klinik tıp ile psikiyatri arasındaki bağlantıları araştıran bir disiplindir. ifadesi konsültasyon liyezon psikiyatrisi ilkeleri açısından incelendiğinde bu klinik durumun gerekçesini açıkça ortaya koyar. Genel hastane ve tıp branşlarıyla psikiyatri arasında köprü oluşturur."
+      }
+     ]
+    }
+   ],
+   "synthesisNarrative": "- **Konsültasyon-Liyezon Psikiyatrisi (KLP):** Genel klinik tıp ve çeşitli uzmanlık alanları ile ruhsal ve psikososyal durumlar arasındaki bağlantıları araştıran özgün bir psikiyatri disiplinidir.\n\n- **Kapsam:** Fiziksel hastalıklara eşlik eden psikiyatrik bozuklukların ve psikososyal sorunların erken tanısı, tedavisi ve izlemiyle ilgilenir.\n\n- **Biyopsikososyal Bütünlük:** KLP, tıbbi hastalıkları yalnızca indirgemeci biyolojik ya da laboratuvar parametreleriyle değil; hastanın biyolojik, psikolojik ve sosyal çevresel bütünlüğü içerisinde incelemeyi temel ilke edinir.\n\n> [!IMPORTANT]\n> KLP, tıbbın mekanikleşmesini önleyen, hastayı somatik hastalığıyla birlikte bir insan olarak kavrayan biyopsikososyal köprüdür.",
+   "sourcePdf": {
+    "startPage": 3,
+    "endPage": 3,
+    "title": "klp sınıf 3 2025 .pdf"
+   }
+  },
+  {
+   "id": "k2-43-d-s03",
+   "slideNumber": 3,
+   "title": "KLP'nin Önemi ve Sağlık Ekonomisine Katkısı",
+   "subtitle": "Tedavi uyumu, yatış süreleri ve sağlık bakım maliyetleri",
+   "section": "Bölüm 1: KLP Tanımı ve Temel İlkeler",
+   "sectionNumber": 1,
+   "bolum": "1",
+   "pdfSayfalari": [
+    4,
+    5
+   ],
+   "content": "- **Psikiyatrik Eş Tanıların Etkisi:** Fiziksel hastalıklara eşlik eden depresyon, deliryum veya anksiyete gibi psikiyatrik bozukluklar, tıbbi hastalığın seyrini belirgin şekilde şiddetlendirir, hastada ciddi sıkıntıya yol açar, hastanede kalış süresini uzatır ve toplam bakım maliyetlerini katlar.\n\n- **KLP Müdahalesinin Kanıtlanmış Faydaları:**\n  * Hastanın tıbbi tedavisine uyumunu anlamlı düzeyde artırır.\n  * Hastanede yatış sürelerini kısaltarak yatak devir hızını yükseltir.\n  * Gereksiz tetkik ve mükerrer yatışları engelleyerek sağlık maliyetlerini belirgin şekilde düşürür.\n\n> [!NOTE]\n> KLP hizmeti sunulan hastanelerde hem hasta memnuniyeti ve sağkalımı artmakta hem de sağlık bütçesi korunmaktadır.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Fiziksel hastalıklara psikiyatrik eş tanıların eklenmesinin klinik ve ekonomik sonucu nedir?",
+     "options": [
+      {
+       "text": "Hastalık seyrini şiddetlendirir, yatış süresini uzatır ve maliyetleri artırır",
+       "isCorrect": true,
+       "explanation": "Hastalık seyrini şiddetlendirir, yatış süresini uzatır ve maliyetleri artırır doğru yanıttır; çünkü bu spesifik klinik ve biyopsikososyal mekanizma doğrudan hedeflenen tanı ve izlem ölçütünü kurar. Eş tanılar klinik seyri kötüleştirir, yatış süresini ve bakım maliyetlerini artırır."
+      },
+      {
+       "text": "Hastanede kalış süresini kısaltır ve tedavi masraflarını düşürür",
+       "isCorrect": false,
+       "explanation": "Hastanede kalış süresini kısaltır ve tedavi masraflarını düşürür kavramı bu klinik tabloyu oluşturmaz; KLP sürecinde farklı bir alanda tanımlanır. Psikiyatrik bozukluklar tedavi uyumunu bozduğu için yatışı uzatır."
+      },
+      {
+       "text": "Organik hastalığın kendiliğinden tam şifayla iyileşmesini sağlar",
+       "isCorrect": false,
+       "explanation": "Organik hastalığın kendiliğinden tam şifayla iyileşmesini sağlar kavramı bu klinik tabloyu oluşturmaz; KLP sürecinde farklı bir alanda tanımlanır. Ruhsal stres ve depresyon immün ve metabolik süreçleri olumsuz etkiler."
+      },
+      {
+       "text": "Laboratuvar tetkiklerinin yapılmasını tamamen engeller",
+       "isCorrect": false,
+       "explanation": "Laboratuvar tetkiklerinin yapılmasını tamamen engeller kavramı bu klinik tabloyu oluşturmaz; KLP sürecinde farklı bir alanda tanımlanır. Tetkik ihtiyacını engellemez, aksine gereksiz mükerrer tetkikleri tetikleyebilir."
+      }
+     ],
+     "id": "k43-s03-e1"
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "KLP hizmetleri tedavi uyumunu arttırır ve hastane yatış sürelerini kısaltır.",
+     "maskedTerm": "yatış sürelerini",
+     "hint": "KLP ve genel klinik tıp ilkeleri kapsamında ilgili temel kavramdır.",
+     "id": "k43-s03-e2"
+    },
+    {
+     "type": "spot_the_lie",
+     "id": "k43-s03-e3",
+     "topic": "KLP'nin Önemi ve Sağlık Ekonomisine Katkısı Klinik Önermeleri",
+     "items": [
+      {
+       "text": "Psikiyatrik eş tanılar hastanede kalış süresini uzatır ve bakım maliyetini artırır.",
+       "isLie": false,
+       "explanation": "Psikiyatrik eş tanılar hastanede kalış süresini uzatır ve bakım maliyetini artırır. ifadesi konsültasyon liyezon psikiyatrisi ilkeleri açısından incelendiğinde bu klinik durumun gerekçesini açıkça ortaya koyar. Bu durum tıbbi literatürde kanıtlanmış temel bir epidemiyolojik gerçektir."
+      },
+      {
+       "text": "KLP müdahaleleri tedavi uyumunu bozarak hastaların yatış süresini iki katına çıkarır.",
+       "isLie": true,
+       "explanation": "KLP müdahaleleri tedavi uyumunu bozarak hastaların yatış süresini iki katına çıkarır. ifadesi konsültasyon liyezon psikiyatrisi ilkeleri açısından incelendiğinde bu klinik durumun gerekçesini açıkça ortaya koyar. KLP tam tersine tedavi uyumunu artırır ve yatış sürelerini kısaltır."
+      },
+      {
+       "text": "Fiziksel yakınmaları olan ancak bedensel hastalık saptanmayan olgular da KLP alanına girer.",
+       "isLie": false,
+       "explanation": "Fiziksel yakınmaları olan ancak bedensel hastalık saptanmayan olgular da KLP alanına girer. ifadesi konsültasyon liyezon psikiyatrisi ilkeleri açısından incelendiğinde bu klinik durumun gerekçesini açıkça ortaya koyar. Somatizasyon ve açıklanamayan bedensel belirtiler KLP'nin temel çalışma alanıdır."
+      }
+     ]
+    },
+    {
+     "type": "interactive_table",
+     "title": "KLP Müdahalesinin Klinik ve Ekonomik Etkileri",
+     "id": "k43-s03-e4",
+     "tableHeaders": [
+      "Parametre",
+      "KLP Desteği Olmadan",
+      "KLP Müdahalesi ile"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Tedavi Uyumu",
+         "isMasked": false,
+         "hint": "KLP kapsamında ilgili klinik ve biyopsikososyal bilgidir."
+        },
+        {
+         "text": "Düşük ve aksamalar sık",
+         "isMasked": false,
+         "hint": "KLP kapsamında ilgili klinik ve biyopsikososyal bilgidir."
+        },
+        {
+         "text": "Belirgin düzeyde artar",
+         "isMasked": true,
+         "hint": "KLP kapsamında ilgili klinik ve biyopsikososyal bilgidir."
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Yatış Süresi",
+         "isMasked": false,
+         "hint": "KLP kapsamında ilgili klinik ve biyopsikososyal bilgidir."
+        },
+        {
+         "text": "Uzar ve komplikasyon artar",
+         "isMasked": false,
+         "hint": "KLP kapsamında ilgili klinik ve biyopsikososyal bilgidir."
+        },
+        {
+         "text": "Anlamlı derecede kısalır",
+         "isMasked": true,
+         "hint": "KLP kapsamında ilgili klinik ve biyopsikososyal bilgidir."
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Sağlık Maliyeti",
+         "isMasked": false,
+         "hint": "KLP kapsamında ilgili klinik ve biyopsikososyal bilgidir."
+        },
+        {
+         "text": "Gereksiz testlerle yüksek",
+         "isMasked": false,
+         "hint": "KLP kapsamında ilgili klinik ve biyopsikososyal bilgidir."
+        },
+        {
+         "text": "Etkin takip ile düşer",
+         "isMasked": true,
+         "hint": "KLP kapsamında ilgili klinik ve biyopsikososyal bilgidir."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "synthesisNarrative": "- **Psikiyatrik Eş Tanıların Etkisi:** Fiziksel hastalıklara eşlik eden depresyon, deliryum veya anksiyete gibi psikiyatrik bozukluklar, tıbbi hastalığın seyrini belirgin şekilde şiddetlendirir, hastada ciddi sıkıntıya yol açar, hastanede kalış süresini uzatır ve toplam bakım maliyetlerini katlar.\n\n- **KLP Müdahalesinin Kanıtlanmış Faydaları:**\n  * Hastanın tıbbi tedavisine uyumunu anlamlı düzeyde artırır.\n  * Hastanede yatış sürelerini kısaltarak yatak devir hızını yükseltir.\n  * Gereksiz tetkik ve mükerrer yatışları engelleyerek sağlık maliyetlerini belirgin şekilde düşürür.\n\n> [!NOTE]\n> KLP hizmeti sunulan hastanelerde hem hasta memnuniyeti ve sağkalımı artmakta hem de sağlık bütçesi korunmaktadır.",
+   "sourcePdf": {
+    "startPage": 4,
+    "endPage": 5,
+    "title": "klp sınıf 3 2025 .pdf"
+   }
+  },
+  {
+   "id": "k2-43-d-s04",
+   "slideNumber": 4,
+   "title": "KLP'nin Görev Alanları ve Medikolegal Boyut",
+   "subtitle": "Yatan hasta hizmeti, organ nakli değerlendirmesi ve karar verme yeterliliği",
+   "section": "Bölüm 1: KLP Tanımı ve Temel İlkeler",
+   "sectionNumber": 2,
+   "bolum": "2",
+   "pdfSayfalari": [
+    6,
+    6
+   ],
+   "content": "- **Yatan Hasta Ruh Sağlığı Hizmeti:** Diğer tıbbi servislerde yatmakta olan hastalara doğrudan yatak başı ruh sağlığı desteği sunulması.\n\n- **Transplantasyon Öncesi Değerlendirme:** Organ nakli adaylarının ve donörlerin psikiyatrik açıdan değerlendirilmesi, psikolojik dayanıklılık ve tedavi uyumunun tespiti.\n\n- **Medikolegal ve Etik Görüş Sunma:**\n  * Hastanın tedaviyi onaylama veya reddetme sürecinde **karar verme yeterliliğinin (ehliyet)** objektif olarak değerlendirilmesi.\n\n- **Bilimsel Araştırma:** Psikosomatik tıp ve bedensel hastalıklardaki psikiyatrik eş tanılar üzerine araştırmalar yaparak tıbba bilimsel katkı sağlama.\n\n> [!IMPORTANT]\n> Bir hastanın hayati bir tedaviyi reddetmesi durumunda karar verme yeterliliğinin saptanması KLP'nin en kritik medikolegal görevlerinden biridir.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Aşağıdakilerden hangisi KLP'nin tanımlanmış temel görev alanları arasında yer alır?",
+     "options": [
+      {
+       "text": "Transplantasyon öncesi değerlendirme ve karar verme yeterliliği incelemesi",
+       "isCorrect": true,
+       "explanation": "Transplantasyon öncesi değerlendirme ve karar verme yeterliliği incelemesi doğru yanıttır; çünkü bu spesifik klinik ve biyopsikososyal mekanizma doğrudan hedeflenen tanı ve izlem ölçütünü kurar. Organ nakli değerlendirmesi ve karar verme yeterliliği KLP'nin temel görevlerindendir."
+      },
+      {
+       "text": "Rutin genel cerrahi operasyonlarını tek başına icra etme",
+       "isCorrect": false,
+       "explanation": "Rutin genel cerrahi operasyonlarını tek başına icra etme kavramı bu klinik tabloyu oluşturmaz; KLP sürecinde farklı bir alanda tanımlanır. KLP psikiyatri disiplinidir, cerrahi girişim yapmaz."
+      },
+      {
+       "text": "Hastane bütçesini tek başına tanzim etme",
+       "isCorrect": false,
+       "explanation": "Hastane bütçesini tek başına tanzim etme kavramı bu klinik tabloyu oluşturmaz; KLP sürecinde farklı bir alanda tanımlanır. Bütçe idari yönetimin işidir."
+      },
+      {
+       "text": "Tüm laboratuvar cihazlarının teknik kalibrasyonunu yapma",
+       "isCorrect": false,
+       "explanation": "Tüm laboratuvar cihazlarının teknik kalibrasyonunu yapma kavramı bu klinik tabloyu oluşturmaz; KLP sürecinde farklı bir alanda tanımlanır. Biyomedikal mühendisliğin görevidir."
+      }
+     ],
+     "id": "k43-s04-e1"
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Transplantasyon öncesi psikiyatrik değerlendirme ve karar verme yeterliliğinin tespiti KLP görevlerindendir.",
+     "maskedTerm": "karar verme yeterliliğinin",
+     "hint": "KLP ve genel klinik tıp ilkeleri kapsamında ilgili temel kavramdır.",
+     "id": "k43-s04-e2"
+    },
+    {
+     "type": "active_recall",
+     "question": "KLP'nin medikolegal alanda sunduğu en kritik değerlendirme konusu nedir?",
+     "answer": "Hastanın tedaviyi onaylama ya da reddetme sürecinde zihinsel karar verme yeterliliğinin değerlendirilmesidir.",
+     "id": "k43-s04-e3"
+    },
+    {
+     "type": "spot_the_lie",
+     "id": "k43-s04-e4",
+     "topic": "KLP'nin Görev Alanları ve Medikolegal Boyut Klinik Önermeleri",
+     "items": [
+      {
+       "text": "Transplantasyon öncesi hastanın psikolojik uyumu KLP tarafından değerlendirilir.",
+       "isLie": false,
+       "explanation": "Transplantasyon öncesi hastanın psikolojik uyumu KLP tarafından değerlendirilir. ifadesi konsültasyon liyezon psikiyatrisi ilkeleri açısından incelendiğinde bu klinik durumun gerekçesini açıkça ortaya koyar. Organ nakli ekiplerinde KLP psikiyatristi mutlaka yer alır."
+      },
+      {
+       "text": "KLP hekimleri hastaların karar verme yeterliliği konusunda medikolegal görüş sunabilir.",
+       "isLie": false,
+       "explanation": "KLP hekimleri hastaların karar verme yeterliliği konusunda medikolegal görüş sunabilir. ifadesi konsültasyon liyezon psikiyatrisi ilkeleri açısından incelendiğinde bu klinik durumun gerekçesini açıkça ortaya koyar. Tedavi onamı ve reddinde ehliyet değerlendirmesi KLP görevidir."
+      },
+      {
+       "text": "KLP hekimlerinin genel hastanede yatan hastalara yatak başı hizmet sunma görevi yoktur.",
+       "isLie": true,
+       "explanation": "KLP hekimlerinin genel hastanede yatan hastalara yatak başı hizmet sunma görevi yoktur. ifadesi konsültasyon liyezon psikiyatrisi ilkeleri açısından incelendiğinde bu klinik durumun gerekçesini açıkça ortaya koyar. Yatan hastalara ruh sağlığı hizmeti sunmak KLP'nin temel görevidir."
+      }
+     ]
+    }
+   ],
+   "synthesisNarrative": "- **Yatan Hasta Ruh Sağlığı Hizmeti:** Diğer tıbbi servislerde yatmakta olan hastalara doğrudan yatak başı ruh sağlığı desteği sunulması.\n\n- **Transplantasyon Öncesi Değerlendirme:** Organ nakli adaylarının ve donörlerin psikiyatrik açıdan değerlendirilmesi, psikolojik dayanıklılık ve tedavi uyumunun tespiti.\n\n- **Medikolegal ve Etik Görüş Sunma:**\n  * Hastanın tedaviyi onaylama veya reddetme sürecinde **karar verme yeterliliğinin (ehliyet)** objektif olarak değerlendirilmesi.\n\n- **Bilimsel Araştırma:** Psikosomatik tıp ve bedensel hastalıklardaki psikiyatrik eş tanılar üzerine araştırmalar yaparak tıbba bilimsel katkı sağlama.\n\n> [!IMPORTANT]\n> Bir hastanın hayati bir tedaviyi reddetmesi durumunda karar verme yeterliliğinin saptanması KLP'nin en kritik medikolegal görevlerinden biridir.",
+   "sourcePdf": {
+    "startPage": 6,
+    "endPage": 6,
+    "title": "klp sınıf 3 2025 .pdf"
+   }
+  },
+  {
+   "id": "k2-43-d-s05",
+   "slideNumber": 5,
+   "title": "[TEKRAR SAYFASI - CHECKPOINT 1] Temel Tanımlar ve Görevler",
+   "subtitle": "Konsültasyon, liyezon, biyopsikososyal model ve KLP görevlerinin pekiştirilmesi",
+   "section": "Bölüm 1: KLP Tanımı ve Temel İlkeler",
+   "sectionNumber": 1,
+   "bolum": "1",
+   "pdfSayfalari": [
+    1,
+    6
+   ],
+   "content": "- **Konsültasyon:** Tanı ve tedavi güçlüğünde dal hekiminin uzman görüşü talebidir.\n\n- **Liyezon:** Klinik birim ile sürekli ve düzenli işbirliği, personel eğitimi ve acil müdahale organizasyonudur.\n\n- **KLP:** Tıbbi hastalıkları biyopsikososyal bütünlükte ele alan, psikiyatrik eş tanıların erken teşhis ve tedavisiyle hastane kalış süresini kısaltıp bakım maliyetlerini düşüren disiplindir.\n\n- **Temel Görevler:** Yatak başı vizitler, transplantasyon hazırlığı, medikolegal karar verme yeterliliği değerlendirmesi ve klinik araştırmalardır.\n\n> [!NOTE]\n> Bu bölümde öğrenilen temel kavramlar, hastane ortamında psikiyatrik danışmanlığın kurumsal çerçevesini çizer.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Konsültasyon ile liyezon arasındaki en temel farkı belirten ifade hangisidir?",
+     "options": [
+      {
+       "text": "Konsültasyon tekil hasta görüş talebiyken, liyezon servisle sürekli eğitim ve işbirliğidir",
+       "isCorrect": true,
+       "explanation": "Konsültasyon tekil hasta görüş talebiyken, liyezon servisle sürekli eğitim ve işbirliğidir doğru yanıttır; çünkü bu spesifik klinik ve biyopsikososyal mekanizma doğrudan hedeflenen tanı ve izlem ölçütünü kurar. Konsültasyon hasta odaklı resmi taleptir; liyezon kurumsal sürekli ortaklıktır."
+      },
+      {
+       "text": "Konsültasyon sürekli eğitimi içerirken, liyezon yalnızca ameliyat yapmaktır",
+       "isCorrect": false,
+       "explanation": "Konsültasyon sürekli eğitimi içerirken, liyezon yalnızca ameliyat yapmaktır kavramı bu klinik tabloyu oluşturmaz; KLP sürecinde farklı bir alanda tanımlanır. Sürekli eğitim liyezonun özelliğidir, ameliyat yapılmaz."
+      },
+      {
+       "text": "Konsültasyon idari ceza sürecidir, liyezon poliklinik randevusudur",
+       "isCorrect": false,
+       "explanation": "Konsültasyon idari ceza sürecidir, liyezon poliklinik randevusudur kavramı bu klinik tabloyu oluşturmaz; KLP sürecinde farklı bir alanda tanımlanır. İdari ceza ile ilgisi yoktur."
+      },
+      {
+       "text": "Her iki kavram da birebir aynı anlama gelir ve hiçbir farkları yoktur",
+       "isCorrect": false,
+       "explanation": "Her iki kavram da birebir aynı anlama gelir ve hiçbir farkları yoktur kavramı bu klinik tabloyu oluşturmaz; KLP sürecinde farklı bir alanda tanımlanır. Aralarında yapısal ve işlevsel net farklar mevcuttur."
+      }
+     ],
+     "id": "k43-s05-e1"
+    },
+    {
+     "type": "swipe_matching",
+     "leftCategory": "Konsültasyon Modeli",
+     "rightCategory": "Liyezon Modeli",
+     "cards": [
+      {
+       "text": "Belirli bir hastada ayırıcı tanı görüşü isteme",
+       "category": "left",
+       "explanation": "Belirli bir hastada ayırıcı tanı görüşü isteme kavramı ilgili konsültasyon liyezon kategorisi altında incelenen temel klinik bileşendir. Klinik uygulamada bu eşleme hastanın bakım kalitesini belirler."
+      },
+      {
+       "text": "Klinik hemşirelerine düzenli deliryum eğitimi verme",
+       "category": "right",
+       "explanation": "Klinik hemşirelerine düzenli deliryum eğitimi verme kavramı ilgili konsültasyon liyezon kategorisi altında incelenen temel klinik bileşendir. Klinik uygulamada bu eşleme hastanın bakım kalitesini belirler."
+      },
+      {
+       "text": "İlaç yan etkisi için uzman görüşü talep etme",
+       "category": "left",
+       "explanation": "İlaç yan etkisi için uzman görüşü talep etme kavramı ilgili konsültasyon liyezon kategorisi altında incelenen temel klinik bileşendir. Klinik uygulamada bu eşleme hastanın bakım kalitesini belirler."
+      },
+      {
+       "text": "Yoğun bakım ekibiyle haftalık ortak vizit yürütme",
+       "category": "right",
+       "explanation": "Yoğun bakım ekibiyle haftalık ortak vizit yürütme kavramı ilgili konsültasyon liyezon kategorisi altında incelenen temel klinik bileşendir. Klinik uygulamada bu eşleme hastanın bakım kalitesini belirler."
+      }
+     ],
+     "id": "k43-s05-e2"
+    },
+    {
+     "type": "spot_the_lie",
+     "id": "k43-s05-e3",
+     "topic": "[TEKRAR SAYFASI - CHECKPOINT 1] Temel Tanımlar ve Görevler Klinik Önermeleri",
+     "items": [
+      {
+       "text": "KLP hizmetleri hastanede kalış sürelerini kısaltarak maliyetleri düşürür.",
+       "isLie": false,
+       "explanation": "KLP hizmetleri hastanede kalış sürelerini kısaltarak maliyetleri düşürür. ifadesi konsültasyon liyezon psikiyatrisi ilkeleri açısından incelendiğinde bu klinik durumun gerekçesini açıkça ortaya koyar. Maliyet etkinliği KLP'nin kanıtlanmış bir başarısıdır."
+      },
+      {
+       "text": "Karar verme yeterliliğinin değerlendirilmesi KLP'nin medikolegal görevlerindendir.",
+       "isLie": false,
+       "explanation": "Karar verme yeterliliğinin değerlendirilmesi KLP'nin medikolegal görevlerindendir. ifadesi konsültasyon liyezon psikiyatrisi ilkeleri açısından incelendiğinde bu klinik durumun gerekçesini açıkça ortaya koyar. Tedavi onamı ve reddinde ehliyet tespiti KLP tarafından yapılır."
+      },
+      {
+       "text": "Konsültasyon yalnızca laboratuvar sonuçları mükemmel çıkan hastalarda istenir.",
+       "isLie": true,
+       "explanation": "Konsültasyon yalnızca laboratuvar sonuçları mükemmel çıkan hastalarda istenir. ifadesi konsültasyon liyezon psikiyatrisi ilkeleri açısından incelendiğinde bu klinik durumun gerekçesini açıkça ortaya koyar. Konsültasyon tanı ve baş etme güçlüğü olan her hastada istenebilir."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "KLP'nin tıbbi hastalıklara yaklaşımındaki temel bütüncül model nedir?",
+     "answer": "Biyopsikososyal modeldir; hastalığı biyolojik, psikolojik ve sosyal çevresel yönleriyle bir bütün olarak ele alır.",
+     "id": "k43-s05-e4"
+    }
+   ],
+   "synthesisNarrative": "- **Konsültasyon:** Tanı ve tedavi güçlüğünde dal hekiminin uzman görüşü talebidir.\n\n- **Liyezon:** Klinik birim ile sürekli ve düzenli işbirliği, personel eğitimi ve acil müdahale organizasyonudur.\n\n- **KLP:** Tıbbi hastalıkları biyopsikososyal bütünlükte ele alan, psikiyatrik eş tanıların erken teşhis ve tedavisiyle hastane kalış süresini kısaltıp bakım maliyetlerini düşüren disiplindir.\n\n- **Temel Görevler:** Yatak başı vizitler, transplantasyon hazırlığı, medikolegal karar verme yeterliliği değerlendirmesi ve klinik araştırmalardır.\n\n> [!NOTE]\n> Bu bölümde öğrenilen temel kavramlar, hastane ortamında psikiyatrik danışmanlığın kurumsal çerçevesini çizer."
+  },
+  {
+   "id": "k2-43-d-s06",
+   "slideNumber": 6,
+   "title": "Hastalık Sürecinin İki Boyutu: Hekim ve Hasta Algısı",
+   "subtitle": "Fizyopatolojik süreçler ile biyopsikososyal deneyimin karşılaştırılması",
+   "section": "Bölüm 2: Psikosomatik Tıp ve KLP Görevleri",
+   "sectionNumber": 2,
+   "bolum": "2",
+   "pdfSayfalari": [
+    7,
+    7
+   ],
+   "content": "- **Hekim Açısından Hastalık:** Tıbbi açıdan bakıldığında hastalık, öncelikle **fizyopatolojik** mekanizmaları ve beraberindeki organik-hücresel süreçleri içerir. Hekim patolojiyi somut biyolojik bulgularla tanımlama eğilimindedir.\n\n- **Hasta Açısından Hastalık:** Hasta için hastalık yalnızca bir organ arızası değildir; **biyolojik, psikolojik, sosyal çevresel ve ailesel yönleriyle çok boyutlu bir yaşam krizidir**.\n\n- **Klinik Köprü:** Hastanın hastalığa verdiği tepkiler, korkuları, rol kayıpları ve ailesel dinamikleri tedavi sürecini doğrudan etkiler. KLP, bu iki farklı bakış açısını ortak bir sağaltım zemininde buluşturur.\n\n> [!NOTE]\n> Hekim organı tedavi ederken, KLP hastanın bütünsel yaşam deneyimini tedaviye entegre eder.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Hastalık sürecine hasta açısından bakıldığında hastalığın temel niteliği nedir?",
+     "options": [
+      {
+       "text": "Biyolojik, psikolojik, sosyal ve ailesel yönleriyle çok boyutlu bir olgudur",
+       "isCorrect": true,
+       "explanation": "Biyolojik, psikolojik, sosyal ve ailesel yönleriyle çok boyutlu bir olgudur doğru yanıttır; çünkü bu spesifik klinik ve biyopsikososyal mekanizma doğrudan hedeflenen tanı ve izlem ölçütünü kurar. Hasta için hastalık hayatın tüm alanlarını etkileyen çok boyutlu bir deneyimdir."
+      },
+      {
+       "text": "Yalnızca mikroskop altında görülen izole bir hücre hasarıdır",
+       "isCorrect": false,
+       "explanation": "Yalnızca mikroskop altında görülen izole bir hücre hasarıdır kavramı bu klinik tabloyu oluşturmaz; KLP sürecinde farklı bir alanda tanımlanır. Bu hekimin indirgemeci fizyopatolojik bakış açısıdır."
+      },
+      {
+       "text": "Sadece hastane faturasından ibaret ekonomik bir kalemdir",
+       "isCorrect": false,
+       "explanation": "Sadece hastane faturasından ibaret ekonomik bir kalemdir kavramı bu klinik tabloyu oluşturmaz; KLP sürecinde farklı bir alanda tanımlanır. Ekonomik boyut hayat deneyiminin yalnızca küçük bir parçasıdır."
+      },
+      {
+       "text": "Hiçbir psikolojik ya da ailesel yansıması olmayan soyut bir durumdur",
+       "isCorrect": false,
+       "explanation": "Hiçbir psikolojik ya da ailesel yansıması olmayan soyut bir durumdur kavramı bu klinik tabloyu oluşturmaz; KLP sürecinde farklı bir alanda tanımlanır. Hastalık her zaman psikososyal yansımalar doğurur."
+      }
+     ],
+     "id": "k43-s06-e1"
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Hastalık tıbbi açıdan bakıldığında öncelikle fizyopatolojik ve organik süreçleri içerir.",
+     "maskedTerm": "fizyopatolojik",
+     "hint": "KLP ve genel klinik tıp ilkeleri kapsamında ilgili temel kavramdır.",
+     "id": "k43-s06-e2"
+    },
+    {
+     "type": "spot_the_lie",
+     "id": "k43-s06-e3",
+     "topic": "Hastalık Sürecinin İki Boyutu: Hekim ve Hasta Algısı Klinik Önermeleri",
+     "items": [
+      {
+       "text": "Hekim açısından hastalık öncelikle fizyopatolojik ve organik süreçleri kapsar.",
+       "isLie": false,
+       "explanation": "Hekim açısından hastalık öncelikle fizyopatolojik ve organik süreçleri kapsar. ifadesi konsültasyon liyezon psikiyatrisi ilkeleri açısından incelendiğinde bu klinik durumun gerekçesini açıkça ortaya koyar. Tıbbi yaklaşım mekanizma ve patoloji odaklıdır."
+      },
+      {
+       "text": "Hasta açısından hastalık ailesel ve sosyal boyutları olmayan tamamen mekanik bir olaydır.",
+       "isLie": true,
+       "explanation": "Hasta açısından hastalık ailesel ve sosyal boyutları olmayan tamamen mekanik bir olaydır. ifadesi konsültasyon liyezon psikiyatrisi ilkeleri açısından incelendiğinde bu klinik durumun gerekçesini açıkça ortaya koyar. Hasta açısından hastalık biyopsikososyal ve ailesel boyutlarıyla çok boyutludur."
+      },
+      {
+       "text": "KLP hekimin organik odağı ile hastanın çok boyutlu algısı arasında köprü kurar.",
+       "isLie": false,
+       "explanation": "KLP hekimin organik odağı ile hastanın çok boyutlu algısı arasında köprü kurar. ifadesi konsültasyon liyezon psikiyatrisi ilkeleri açısından incelendiğinde bu klinik durumun gerekçesini açıkça ortaya koyar. Biyopsikososyal uyum KLP'nin ana hedefidir."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Hekim ve hasta açısından hastalık algısındaki temel fark nedir?",
+     "answer": "Hekim öncelikle fizyopatolojik ve organik süreçlere odaklanırken, hasta için hastalık biyolojik, psikolojik, sosyal ve ailesel yönleriyle çok boyutlu bir olgudur.",
+     "id": "k43-s06-e4"
+    }
+   ],
+   "synthesisNarrative": "- **Hekim Açısından Hastalık:** Tıbbi açıdan bakıldığında hastalık, öncelikle **fizyopatolojik** mekanizmaları ve beraberindeki organik-hücresel süreçleri içerir. Hekim patolojiyi somut biyolojik bulgularla tanımlama eğilimindedir.\n\n- **Hasta Açısından Hastalık:** Hasta için hastalık yalnızca bir organ arızası değildir; **biyolojik, psikolojik, sosyal çevresel ve ailesel yönleriyle çok boyutlu bir yaşam krizidir**.\n\n- **Klinik Köprü:** Hastanın hastalığa verdiği tepkiler, korkuları, rol kayıpları ve ailesel dinamikleri tedavi sürecini doğrudan etkiler. KLP, bu iki farklı bakış açısını ortak bir sağaltım zemininde buluşturur.\n\n> [!NOTE]\n> Hekim organı tedavi ederken, KLP hastanın bütünsel yaşam deneyimini tedaviye entegre eder.",
+   "sourcePdf": {
+    "startPage": 7,
+    "endPage": 7,
+    "title": "klp sınıf 3 2025 .pdf"
+   }
+  },
+  {
+   "id": "k2-43-d-s07",
+   "slideNumber": 7,
+   "title": "Psikosomatik Tıp Tarihçesi ve Christian Heinroth",
+   "subtitle": "Akıl ve beden etkileşiminin doğuşu ve kavramsal yanılgılar",
+   "section": "Bölüm 2: Psikosomatik Tıp ve KLP Görevleri",
+   "sectionNumber": 2,
+   "bolum": "2",
+   "pdfSayfalari": [
+    8,
+    8
+   ],
+   "content": "- **Christian Heinroth:** Hastalıklarla ilişkili psikosomatik süreçler ilk kez Alman doktor **Christian Heinroth** tarafından tanımlanmıştır.\n\n- **Kavramın Anlamı:** 'Psikosomatik' kelime olarak **akıl ve beden etkileşimi** anlamına gelir ve bu iki alan birbirinden kesinlikle ayrılamaz.\n\n- **Kavramın Yanlış Kullanımı:**\n  * Zamanla hekimler 'psikosomatik' kavramını yanlış kullanmaya başlamışlardır.\n  * Hekimler organik bir neden bulamadıklarında ya da durumu çözemediklerinde psikiyatriye başvurma yolunu seçmişlerdir.\n  * Bu yanlış tutum, beden ile ruh ayrımının daha da derinleşmesine ve hastanın dışlanmış hissetmesine yol açmıştır.\n\n> [!IMPORTANT]\n> Psikosomatik 'organik olmayan sahte hastalık' demek değildir; zihin ile bedenin çift yönlü biyolojik etkileşimidir.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Tıbbi literatürde psikosomatik süreçleri ilk kez tanımlayan Alman hekim kimdir?",
+     "options": [
+      {
+       "text": "Christian Heinroth",
+       "isCorrect": true,
+       "explanation": "Christian Heinroth doğru yanıttır; çünkü bu spesifik klinik ve biyopsikososyal mekanizma doğrudan hedeflenen tanı ve izlem ölçütünü kurar. Psikosomatik süreçler ilk kez Christian Heinroth tarafından tanımlanmıştır."
+      },
+      {
+       "text": "Zbigniew Lipowski",
+       "isCorrect": false,
+       "explanation": "Zbigniew Lipowski kavramı bu klinik tabloyu oluşturmaz; KLP sürecinde farklı bir alanda tanımlanır. Lipowski konsültasyon modellerini 5 grupta sınıflamıştır."
+      },
+      {
+       "text": "Alois Alzheimer",
+       "isCorrect": false,
+       "explanation": "Alois Alzheimer kavramı bu klinik tabloyu oluşturmaz; KLP sürecinde farklı bir alanda tanımlanır. Alzheimer presenil demansı tanımlamıştır."
+      },
+      {
+       "text": "Emil Kraepelin",
+       "isCorrect": false,
+       "explanation": "Emil Kraepelin kavramı bu klinik tabloyu oluşturmaz; KLP sürecinde farklı bir alanda tanımlanır. Kraepelin modern psikiyatrik sınıflamayı kurmuştur."
+      }
+     ],
+     "id": "k43-s07-e1"
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Psikosomatik kavramı kelime anlamı olarak akıl ve beden etkileşimi şeklinde ifade edilir.",
+     "maskedTerm": "akıl ve beden",
+     "hint": "KLP ve genel klinik tıp ilkeleri kapsamında ilgili temel kavramdır.",
+     "id": "k43-s07-e2"
+    },
+    {
+     "type": "spot_the_lie",
+     "id": "k43-s07-e3",
+     "topic": "Psikosomatik Tıp Tarihçesi ve Christian Heinroth Klinik Önermeleri",
+     "items": [
+      {
+       "text": "Psikosomatik süreçler ilk kez Alman doktor Christian Heinroth tarafından tanımlanmıştır.",
+       "isLie": false,
+       "explanation": "Psikosomatik süreçler ilk kez Alman doktor Christian Heinroth tarafından tanımlanmıştır. ifadesi konsültasyon liyezon psikiyatrisi ilkeleri açısından incelendiğinde bu klinik durumun gerekçesini açıkça ortaya koyar. Tarihsel literatürde bu tanım Heinroth'a aittir."
+      },
+      {
+       "text": "Hekimlerin yalnızca organik neden bulamadıklarında psikiyatriye başvurması ruh-beden ikiliğini artırmıştır.",
+       "isLie": false,
+       "explanation": "Hekimlerin yalnızca organik neden bulamadıklarında psikiyatriye başvurması ruh-beden ikiliğini artırmıştır. ifadesi konsültasyon liyezon psikiyatrisi ilkeleri açısından incelendiğinde bu klinik durumun gerekçesini açıkça ortaya koyar. Bu yanlış tutum psikosomatik yaklaşımın özüne zarar vermiştir."
+      },
+      {
+       "text": "Psikosomatik kavramı akıl ile bedenin birbirinden tamamen bağımsız ve ilgisiz olduğunu savunur.",
+       "isLie": true,
+       "explanation": "Psikosomatik kavramı akıl ile bedenin birbirinden tamamen bağımsız ve ilgisiz olduğunu savunur. ifadesi konsültasyon liyezon psikiyatrisi ilkeleri açısından incelendiğinde bu klinik durumun gerekçesini açıkça ortaya koyar. Psikosomatik tam tersine akıl ve bedenin birbirinden ayrılamaz etkileşimini ifade eder."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Psikosomatik kavramının hekimler arasındaki yanlış kullanımı tıp pratiğinde neye yol açmıştır?",
+     "answer": "Hekimlerin sadece organik neden bulamadıklarında psikiyatriye başvurmasına ve bunun sonucunda ruh ile beden ayrımının daha da derinleşmesine yol açmıştır.",
+     "id": "k43-s07-e4"
+    }
+   ],
+   "synthesisNarrative": "- **Christian Heinroth:** Hastalıklarla ilişkili psikosomatik süreçler ilk kez Alman doktor **Christian Heinroth** tarafından tanımlanmıştır.\n\n- **Kavramın Anlamı:** 'Psikosomatik' kelime olarak **akıl ve beden etkileşimi** anlamına gelir ve bu iki alan birbirinden kesinlikle ayrılamaz.\n\n- **Kavramın Yanlış Kullanımı:**\n  * Zamanla hekimler 'psikosomatik' kavramını yanlış kullanmaya başlamışlardır.\n  * Hekimler organik bir neden bulamadıklarında ya da durumu çözemediklerinde psikiyatriye başvurma yolunu seçmişlerdir.\n  * Bu yanlış tutum, beden ile ruh ayrımının daha da derinleşmesine ve hastanın dışlanmış hissetmesine yol açmıştır.\n\n> [!IMPORTANT]\n> Psikosomatik 'organik olmayan sahte hastalık' demek değildir; zihin ile bedenin çift yönlü biyolojik etkileşimidir.",
+   "sourcePdf": {
+    "startPage": 8,
+    "endPage": 8,
+    "title": "klp sınıf 3 2025 .pdf"
+   }
+  },
+  {
+   "id": "k2-43-d-s08",
+   "slideNumber": 8,
+   "title": "Psikiyatri Dışı Hekimlerin Tanı Eğilimleri",
+   "subtitle": "Bilişsel tabloların doğruluğu ve ajitasyon-konversiyondaki tanı yanılgıları",
+   "section": "Bölüm 2: Psikosomatik Tıp ve KLP Görevleri",
+   "sectionNumber": 2,
+   "bolum": "2",
+   "pdfSayfalari": [
+    9,
+    9
+   ],
+   "content": "- **Doğru Tanınan Tablolar:** Yapılan bilimsel çalışmalarda, psikiyatri dışı hekimlerin **bilişsel bozukluk, deliryum, psikotik bozukluk ve alkol-madde kullanım bozukluklarını** büyük oranda doğru tanıdığı gösterilmiştir.\n\n- **Yanılgı Yaşanan Alanlar:**\n  * **Ajitasyon, depresyon, anksiyete ve konversiyon** belirtileri nedeniyle istenen konsültasyonların **yarısından fazlasında** bu belirtileri karşılayacak bir ruhsal hastalık tespit edilememiştir.\n\n- **Eğitim İhtiyacı:** Psikiyatri dışı sağlık çalışanlarının psikososyal tıp alanında eğitilmesi KLP'nin en stratejik görevleri arasındadır.\n\n> [!NOTE]\n> Deliryum gibi kaba bilişsel tablolar kolay fark edilirken, ajitasyon ve anksiyete gibi belirtiler sıklıkla yanlış yorumlanmaktadır.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Psikiyatri dışı hekimlerin tanı eğilimleri incelendiğinde aşağıdaki tablolardan hangisini büyük oranda doğru tanıdıkları saptanmıştır?",
+     "options": [
+      {
+       "text": "Bilişsel bozukluk ve deliryum",
+       "isCorrect": true,
+       "explanation": "Bilişsel bozukluk ve deliryum doğru yanıttır; çünkü bu spesifik klinik ve biyopsikososyal mekanizma doğrudan hedeflenen tanı ve izlem ölçütünü kurar. Bilişsel bozukluk, deliryum ve psikotik tablolar yüksek oranda doğru tanınır."
+      },
+      {
+       "text": "Konversiyon bozukluğu",
+       "isCorrect": false,
+       "explanation": "Konversiyon bozukluğu kavramı bu klinik tabloyu oluşturmaz; KLP sürecinde farklı bir alanda tanımlanır. Konversiyon istemlerinin yarısından fazlasında psikiyatrik tanı çıkmamaktadır."
+      },
+      {
+       "text": "Ajitasyonun altta yatan organik etiyolojisi",
+       "isCorrect": false,
+       "explanation": "Ajitasyonun altta yatan organik etiyolojisi kavramı bu klinik tabloyu oluşturmaz; KLP sürecinde farklı bir alanda tanımlanır. Ajitasyon konsültasyonlarının çoğunda ruhsal hastalık saptanamamıştır."
+      },
+      {
+       "text": "Maskeli hafif depresyon",
+       "isCorrect": false,
+       "explanation": "Maskeli hafif depresyon kavramı bu klinik tabloyu oluşturmaz; KLP sürecinde farklı bir alanda tanımlanır. Depresif belirtiler sıklıkla yanlış değerlendirilmektedir."
+      }
+     ],
+     "id": "k43-s08-e1"
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Psikiyatri dışı sağlık çalışanlarının psikososyal tıp alanında eğitilmesi KLP görevleri arasındadır.",
+     "maskedTerm": "eğitilmesi",
+     "hint": "KLP ve genel klinik tıp ilkeleri kapsamında ilgili temel kavramdır.",
+     "id": "k43-s08-e2"
+    },
+    {
+     "type": "spot_the_lie",
+     "id": "k43-s08-e3",
+     "topic": "Psikiyatri Dışı Hekimlerin Tanı Eğilimleri Klinik Önermeleri",
+     "items": [
+      {
+       "text": "Psikiyatri dışı hekimler deliryum ve madde kullanım bozukluklarını yüksek oranda doğru tanır.",
+       "isLie": false,
+       "explanation": "Psikiyatri dışı hekimler deliryum ve madde kullanım bozukluklarını yüksek oranda doğru tanır. ifadesi konsültasyon liyezon psikiyatrisi ilkeleri açısından incelendiğinde bu klinik durumun gerekçesini açıkça ortaya koyar. Araştırmalar bu tablolarda tanı isabetinin yüksek olduğunu göstermektedir."
+      },
+      {
+       "text": "Ajitasyon ve anksiyete konsültasyonlarının yüzde yüzünde ağır şizofreni teşhisi konulmuştur.",
+       "isLie": true,
+       "explanation": "Ajitasyon ve anksiyete konsültasyonlarının yüzde yüzünde ağır şizofreni teşhisi konulmuştur. ifadesi konsültasyon liyezon psikiyatrisi ilkeleri açısından incelendiğinde bu klinik durumun gerekçesini açıkça ortaya koyar. Bu konsültasyonların yarısından fazlasında ruhsal hastalık tespit edilmemiştir."
+      },
+      {
+       "text": "Psikiyatri dışı sağlık çalışanlarının eğitimi KLP'nin temel görevlerinden biridir.",
+       "isLie": false,
+       "explanation": "Psikiyatri dışı sağlık çalışanlarının eğitimi KLP'nin temel görevlerinden biridir. ifadesi konsültasyon liyezon psikiyatrisi ilkeleri açısından incelendiğinde bu klinik durumun gerekçesini açıkça ortaya koyar. Liyezonun temel taşı personelin eğitilmesidir."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Hangi belirtilerle istenen konsültasyonların yarısından fazlasında bir ruhsal hastalık saptanmamıştır?",
+     "answer": "Ajitasyon, depresyon, anksiyete ve konversiyon belirtileri nedeniyle istenen konsültasyonlarda.",
+     "id": "k43-s08-e4"
+    }
+   ],
+   "synthesisNarrative": "- **Doğru Tanınan Tablolar:** Yapılan bilimsel çalışmalarda, psikiyatri dışı hekimlerin **bilişsel bozukluk, deliryum, psikotik bozukluk ve alkol-madde kullanım bozukluklarını** büyük oranda doğru tanıdığı gösterilmiştir.\n\n- **Yanılgı Yaşanan Alanlar:**\n  * **Ajitasyon, depresyon, anksiyete ve konversiyon** belirtileri nedeniyle istenen konsültasyonların **yarısından fazlasında** bu belirtileri karşılayacak bir ruhsal hastalık tespit edilememiştir.\n\n- **Eğitim İhtiyacı:** Psikiyatri dışı sağlık çalışanlarının psikososyal tıp alanında eğitilmesi KLP'nin en stratejik görevleri arasındadır.\n\n> [!NOTE]\n> Deliryum gibi kaba bilişsel tablolar kolay fark edilirken, ajitasyon ve anksiyete gibi belirtiler sıklıkla yanlış yorumlanmaktadır.",
+   "sourcePdf": {
+    "startPage": 9,
+    "endPage": 9,
+    "title": "klp sınıf 3 2025 .pdf"
+   }
+  },
+  {
+   "id": "k2-43-d-s09",
+   "slideNumber": 9,
+   "title": "KLP'nin Üç Ana İşlevi ve Hasta Hizmeti",
+   "subtitle": "Klinik hizmet, personelin eğitimi ve araştırmanın eşgüdümü",
+   "section": "Bölüm 3: KLP İşlevleri ve Özellikli Alanlar",
+   "sectionNumber": 3,
+   "bolum": "3",
+   "pdfSayfalari": [
+    10,
+    12
+   ],
+   "content": "- **Üç Ana İşlev:**\n  1. Psikiyatri dışı kliniklerdeki hastalara **ruh sağlığı hizmetlerinin** sağlanması.\n  2. **Psikososyal tıp alanında eğitim** verilmesi.\n  3. **Psikososyal araştırmalar** yapılması.\n\n- **Hizmet Sektörünün Hedefleri:** Kliniklerdeki psikiyatrik morbiditeyi engellemek, hastalıkları tedavi etmek, hastalık seyrinde psikososyal etkenleri incelemek.\n\n- **Tedavi Spektrumu:** Psikiyatrik ilaç kullanımı (psikofarmakoterapi), acil tıbbi müdahaleler, psikoterapiler ve aile terapileri uygulanır.\n\n- **Yatak Başı Vizit Katılımı:** KLP hekimleri vizitlere katılıp hastanın medikal tedavi programına fikir bildirmelidir.\n\n> [!NOTE]\n> KLP hekimi sadece masa başında rapor yazmaz; bizzat servise inip yatak başı vizitlerde primer ekiple birlikte yer alır.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Aşağıdakilerden hangisi KLP'nin tanımlanmış üç ana işlevinden biridir?",
+     "options": [
+      {
+       "text": "Psikososyal tıp alanında eğitim verilmesi",
+       "isCorrect": true,
+       "explanation": "Psikososyal tıp alanında eğitim verilmesi doğru yanıttır; çünkü bu spesifik klinik ve biyopsikososyal mekanizma doğrudan hedeflenen tanı ve izlem ölçütünü kurar. Eğitim KLP'nin üç ana işlevinden (hizmet, eğitim, araştırma) biridir."
+      },
+      {
+       "text": "Kliniklerde cerrahi operasyonların bizzat yürütülmesi",
+       "isCorrect": false,
+       "explanation": "Kliniklerde cerrahi operasyonların bizzat yürütülmesi kavramı bu klinik tabloyu oluşturmaz; KLP sürecinde farklı bir alanda tanımlanır. KLP cerrahi müdahale yapmaz."
+      },
+      {
+       "text": "Hastane faturalandırma işlemlerinin yönetilmesi",
+       "isCorrect": false,
+       "explanation": "Hastane faturalandırma işlemlerinin yönetilmesi kavramı bu klinik tabloyu oluşturmaz; KLP sürecinde farklı bir alanda tanımlanır. İdari ve muhasebesel süreçler KLP işlevi değildir."
+      },
+      {
+       "text": "Tüm tıbbi cihazların bakım ve onarımının yapılması",
+       "isCorrect": false,
+       "explanation": "Tüm tıbbi cihazların bakım ve onarımının yapılması kavramı bu klinik tabloyu oluşturmaz; KLP sürecinde farklı bir alanda tanımlanır. Teknik biyomedikal bir görevdir."
+      }
+     ],
+     "id": "k43-s09-e1"
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "KLP hekimleri hasta başı vizitlere katılıp medikal terapi programında fikir bildirmelidir.",
+     "maskedTerm": "vizitlere katılıp",
+     "hint": "KLP ve genel klinik tıp ilkeleri kapsamında ilgili temel kavramdır.",
+     "id": "k43-s09-e2"
+    },
+    {
+     "type": "spot_the_lie",
+     "id": "k43-s09-e3",
+     "topic": "KLP'nin Üç Ana İşlevi ve Hasta Hizmeti Klinik Önermeleri",
+     "items": [
+      {
+       "text": "KLP kapsamında psikiyatrik ilaç kullanımı, psikoterapiler ve aile terapileri uygulanabilir.",
+       "isLie": false,
+       "explanation": "KLP kapsamında psikiyatrik ilaç kullanımı, psikoterapiler ve aile terapileri uygulanabilir. ifadesi konsültasyon liyezon psikiyatrisi ilkeleri açısından incelendiğinde bu klinik durumun gerekçesini açıkça ortaya koyar. KLP geniş bir biyopsikososyal tedavi yelpazesi sunar."
+      },
+      {
+       "text": "KLP hekimlerinin hasta başı vizitlere katılması ve fikir bildirmesi kesinlikle yasaktır.",
+       "isLie": true,
+       "explanation": "KLP hekimlerinin hasta başı vizitlere katılması ve fikir bildirmesi kesinlikle yasaktır. ifadesi konsültasyon liyezon psikiyatrisi ilkeleri açısından incelendiğinde bu klinik durumun gerekçesini açıkça ortaya koyar. KLP hekimleri vizitlere katılıp medikal programda aktif fikir bildirmelidir."
+      },
+      {
+       "text": "Psikiyatrik morbiditeyi engellemek KLP hizmet sektörünün temel hedeflerindendir.",
+       "isLie": false,
+       "explanation": "Psikiyatrik morbiditeyi engellemek KLP hizmet sektörünün temel hedeflerindendir. ifadesi konsültasyon liyezon psikiyatrisi ilkeleri açısından incelendiğinde bu klinik durumun gerekçesini açıkça ortaya koyar. Koruyucu ve önleyici ruh sağlığı esastır."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "KLP kapsamında uygulanabilecek tedavi yaklaşımları nelerdir?",
+     "answer": "Psikiyatrik ilaç kullanımı (psikofarmakoterapi), acil tıbbi müdahaleler, psikoterapiler ve aile terapileridir.",
+     "id": "k43-s09-e4"
+    }
+   ],
+   "synthesisNarrative": "- **Üç Ana İşlev:**\n  1. Psikiyatri dışı kliniklerdeki hastalara **ruh sağlığı hizmetlerinin** sağlanması.\n  2. **Psikososyal tıp alanında eğitim** verilmesi.\n  3. **Psikososyal araştırmalar** yapılması.\n\n- **Hizmet Sektörünün Hedefleri:** Kliniklerdeki psikiyatrik morbiditeyi engellemek, hastalıkları tedavi etmek, hastalık seyrinde psikososyal etkenleri incelemek.\n\n- **Tedavi Spektrumu:** Psikiyatrik ilaç kullanımı (psikofarmakoterapi), acil tıbbi müdahaleler, psikoterapiler ve aile terapileri uygulanır.\n\n- **Yatak Başı Vizit Katılımı:** KLP hekimleri vizitlere katılıp hastanın medikal tedavi programına fikir bildirmelidir.\n\n> [!NOTE]\n> KLP hekimi sadece masa başında rapor yazmaz; bizzat servise inip yatak başı vizitlerde primer ekiple birlikte yer alır.",
+   "sourcePdf": {
+    "startPage": 10,
+    "endPage": 12,
+    "title": "klp sınıf 3 2025 .pdf"
+   }
+  },
+  {
+   "id": "k2-43-d-s10",
+   "slideNumber": 10,
+   "title": "Özellikli Klinik Birimler ve Araştırma İşlevi",
+   "subtitle": "Yoğun bakım, yanık, diyaliz ve palyatif bakımda liyezon ortaklığı",
+   "section": "Bölüm 3: KLP İşlevleri ve Özellikli Alanlar",
+   "sectionNumber": 3,
+   "bolum": "3",
+   "pdfSayfalari": [
+    13,
+    14
+   ],
+   "content": "- **Özellikli Klinik Birimler:**\n  * **Yoğun bakım üniteleri (YBÜ)**\n  * **Palyatif bakım servisleri**\n  * **Hemodiyaliz üniteleri**\n  * **Yanık tedavi merkezleri**\n\n- **Liyezonun Önemi:** Bu birimlerde psikososyal sorunlar hem **daha sık** görülür hem de **daha acil** müdahale gerektirir. Liyezon psikiyatristi ile tıbbi ekip arasında sürekli ve yakın profesyonel işbirliği şarttır.\n\n- **Araştırma İşlevi:** KLP alanında yürütülen psikososyal ve klinik araştırmalar, klinik hizmet kalitesini artırır ve ileri tedavi yöntemlerinin geliştirilmesini sağlar.\n\n> [!IMPORTANT]\n> Yoğun bakım ve yanık ünitelerinde deliryum ve travma reaksiyonları dakikalar içinde krize dönebileceğinden, reaktif konsültasyon yerine proaktif liyezon işbirliği hayat kurtarır.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Psikososyal sorunların daha sık ve acil görüldüğü ve liyezon işbirliğinin en kritik olduğu özellikli birim hangisidir?",
+     "options": [
+      {
+       "text": "Yoğun bakım ve yanık üniteleri",
+       "isCorrect": true,
+       "explanation": "Yoğun bakım ve yanık üniteleri doğru yanıttır; çünkü bu spesifik klinik ve biyopsikososyal mekanizma doğrudan hedeflenen tanı ve izlem ölçütünü kurar. Yoğun bakım, yanık, diyaliz ve palyatif bakımda psikososyal sorunlar sık ve acildir."
+      },
+      {
+       "text": "Radyoloji arşiv birimi",
+       "isCorrect": false,
+       "explanation": "Radyoloji arşiv birimi kavramı bu klinik tabloyu oluşturmaz; KLP sürecinde farklı bir alanda tanımlanır. Arşivde yatan hasta bulunmaz."
+      },
+      {
+       "text": "Göz polikliniği refraksiyon odası",
+       "isCorrect": false,
+       "explanation": "Göz polikliniği refraksiyon odası kavramı bu klinik tabloyu oluşturmaz; KLP sürecinde farklı bir alanda tanımlanır. Hayati kriz ve akut deliryum riski düşüktür."
+      },
+      {
+       "text": "Elektif dermatoloji polikliniği",
+       "isCorrect": false,
+       "explanation": "Elektif dermatoloji polikliniği kavramı bu klinik tabloyu oluşturmaz; KLP sürecinde farklı bir alanda tanımlanır. Akut yatan hasta liyezonu gerektirmez."
+      }
+     ],
+     "id": "k43-s10-e1"
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Yoğun bakım, palyatif bakım, diyaliz ve yanık birimlerinde psikososyal sorunlar daha sık ve acildir.",
+     "maskedTerm": "yanık",
+     "hint": "KLP ve genel klinik tıp ilkeleri kapsamında ilgili temel kavramdır.",
+     "id": "k43-s10-e2"
+    },
+    {
+     "type": "spot_the_lie",
+     "id": "k43-s10-e3",
+     "topic": "Özellikli Klinik Birimler ve Araştırma İşlevi Klinik Önermeleri",
+     "items": [
+      {
+       "text": "Yoğun bakım ve yanık ünitelerinde liyezon anlamında sürekli işbirliği çok önemlidir.",
+       "isLie": false,
+       "explanation": "Yoğun bakım ve yanık ünitelerinde liyezon anlamında sürekli işbirliği çok önemlidir. ifadesi konsültasyon liyezon psikiyatrisi ilkeleri açısından incelendiğinde bu klinik durumun gerekçesini açıkça ortaya koyar. Bu birimlerde kriz potansiyeli çok yüksektir."
+      },
+      {
+       "text": "KLP araştırmaları klinik hizmetleri geliştirmekte ve ileri tedavi yöntemlerini sağlamaktadır.",
+       "isLie": false,
+       "explanation": "KLP araştırmaları klinik hizmetleri geliştirmekte ve ileri tedavi yöntemlerini sağlamaktadır. ifadesi konsültasyon liyezon psikiyatrisi ilkeleri açısından incelendiğinde bu klinik durumun gerekçesini açıkça ortaya koyar. Araştırma KLP'nin üçüncü ana işlevidir."
+      },
+      {
+       "text": "Diyaliz ünitelerinde yatan hastalarda hiçbir zaman psikososyal sorun görülmez.",
+       "isLie": true,
+       "explanation": "Diyaliz ünitelerinde yatan hastalarda hiçbir zaman psikososyal sorun görülmez. ifadesi konsültasyon liyezon psikiyatrisi ilkeleri açısından incelendiğinde bu klinik durumun gerekçesini açıkça ortaya koyar. Diyaliz hastalarında depresyon, uyum güçlüğü ve krizler çok sıktır."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "KLP'nin üçüncü önemli işlevi olan psikososyal araştırmaların temel amacı nedir?",
+     "answer": "Klinik hizmetleri artırmak ve ileri tedavi yöntemlerinin geliştirilmesini sağlamaktır.",
+     "id": "k43-s10-e4"
+    }
+   ],
+   "synthesisNarrative": "- **Özellikli Klinik Birimler:**\n  * **Yoğun bakım üniteleri (YBÜ)**\n  * **Palyatif bakım servisleri**\n  * **Hemodiyaliz üniteleri**\n  * **Yanık tedavi merkezleri**\n\n- **Liyezonun Önemi:** Bu birimlerde psikososyal sorunlar hem **daha sık** görülür hem de **daha acil** müdahale gerektirir. Liyezon psikiyatristi ile tıbbi ekip arasında sürekli ve yakın profesyonel işbirliği şarttır.\n\n- **Araştırma İşlevi:** KLP alanında yürütülen psikososyal ve klinik araştırmalar, klinik hizmet kalitesini artırır ve ileri tedavi yöntemlerinin geliştirilmesini sağlar.\n\n> [!IMPORTANT]\n> Yoğun bakım ve yanık ünitelerinde deliryum ve travma reaksiyonları dakikalar içinde krize dönebileceğinden, reaktif konsültasyon yerine proaktif liyezon işbirliği hayat kurtarır.",
+   "sourcePdf": {
+    "startPage": 13,
+    "endPage": 14,
+    "title": "klp sınıf 3 2025 .pdf"
+   }
+  },
+  {
+   "id": "k2-43-d-s11",
+   "slideNumber": 11,
+   "title": "[TEKRAR SAYFASI - CHECKPOINT 2] Psikosomatik Yaklaşım ve KLP İşlevleri",
+   "subtitle": "Heinroth, hekim tanı eğilimleri, üç temel işlev ve kritik klinik alanların pekiştirilmesi",
+   "section": "Bölüm 3: KLP İşlevleri ve Özellikli Alanlar",
+   "sectionNumber": 3,
+   "bolum": "3",
+   "pdfSayfalari": [
+    7,
+    14
+   ],
+   "content": "- **Christian Heinroth:** Psikosomatik kavramını ilk kez akıl ve beden etkileşimi olarak tanımlamıştır.\n\n- **Tanı Eğilimleri:** Psikiyatri dışı hekimler deliryum ve bilişsel bozukluğu büyük oranda doğru tanırken; ajitasyon ve anksiyete konsültasyonlarının çoğunda psikiyatrik hastalık saptanmamıştır.\n\n- **Üç Ana İşlev:** Ruh sağlığı hizmeti, sağlık personeli eğitimi ve psikososyal araştırmalardır.\n\n- **Özellikli Birimler:** Yoğun bakım, palyatif bakım, diyaliz ve yanık servisleri yüksek kriz riski nedeniyle liyezonun merkezindedir.\n\n> [!NOTE]\n> İkinci bölümün bu temel ilkeleri, konsültasyon modelleri ve izlem sürecini anlamak için sağlam bir altyapı oluşturur.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Aşağıdakilerden hangisi psikiyatri dışı hekimlerin yüksek doğrulukla tanıdığı klinik tablodur?",
+     "options": [
+      {
+       "text": "Deliryum ve bilişsel bozukluklar",
+       "isCorrect": true,
+       "explanation": "Deliryum ve bilişsel bozukluklar doğru yanıttır; çünkü bu spesifik klinik ve biyopsikososyal mekanizma doğrudan hedeflenen tanı ve izlem ölçütünü kurar. Araştırmalarda deliryum ve bilişsel bozukluklar doğru tanınmaktadır."
+      },
+      {
+       "text": "Histerik konversiyon",
+       "isCorrect": false,
+       "explanation": "Histerik konversiyon kavramı bu klinik tabloyu oluşturmaz; KLP sürecinde farklı bir alanda tanımlanır. Konversiyon istemlerinin çoğunda psikiyatrik tanı doğrulanamamaktadır."
+      },
+      {
+       "text": "Maskeli anksiyete",
+       "isCorrect": false,
+       "explanation": "Maskeli anksiyete kavramı bu klinik tabloyu oluşturmaz; KLP sürecinde farklı bir alanda tanımlanır. Anksiyete belirtileri sıklıkla yanlış değerlendirilir."
+      },
+      {
+       "text": "Somatizasyon bozukluğu",
+       "isCorrect": false,
+       "explanation": "Somatizasyon bozukluğu kavramı bu klinik tabloyu oluşturmaz; KLP sürecinde farklı bir alanda tanımlanır. Organik testler normalken yanlış yorumlanabilir."
+      }
+     ],
+     "id": "k43-s11-e1"
+    },
+    {
+     "type": "swipe_matching",
+     "leftCategory": "Doğru Tanınan Tablo",
+     "rightCategory": "Yanılgı Yaşanan Belirti",
+     "cards": [
+      {
+       "text": "Deliryum",
+       "category": "left",
+       "explanation": "Deliryum kavramı ilgili konsültasyon liyezon kategorisi altında incelenen temel klinik bileşendir. Klinik uygulamada bu eşleme hastanın bakım kalitesini belirler."
+      },
+      {
+       "text": "Bilişsel bozukluk",
+       "category": "left",
+       "explanation": "Bilişsel bozukluk kavramı ilgili konsültasyon liyezon kategorisi altında incelenen temel klinik bileşendir. Klinik uygulamada bu eşleme hastanın bakım kalitesini belirler."
+      },
+      {
+       "text": "Ajitasyon konsültasyonu",
+       "category": "right",
+       "explanation": "Ajitasyon konsültasyonu kavramı ilgili konsültasyon liyezon kategorisi altında incelenen temel klinik bileşendir. Klinik uygulamada bu eşleme hastanın bakım kalitesini belirler."
+      },
+      {
+       "text": "Konversiyon belirtisi",
+       "category": "right",
+       "explanation": "Konversiyon belirtisi kavramı ilgili konsültasyon liyezon kategorisi altında incelenen temel klinik bileşendir. Klinik uygulamada bu eşleme hastanın bakım kalitesini belirler."
+      }
+     ],
+     "id": "k43-s11-e2"
+    },
+    {
+     "type": "spot_the_lie",
+     "id": "k43-s11-e3",
+     "topic": "[TEKRAR SAYFASI - CHECKPOINT 2] Psikosomatik Yaklaşım ve KLP İşlevleri Klinik Önermeleri",
+     "items": [
+      {
+       "text": "Psikosomatik süreçler ilk kez Christian Heinroth tarafından tanımlanmıştır.",
+       "isLie": false,
+       "explanation": "Psikosomatik süreçler ilk kez Christian Heinroth tarafından tanımlanmıştır. ifadesi konsültasyon liyezon psikiyatrisi ilkeleri açısından incelendiğinde bu klinik durumun gerekçesini açıkça ortaya koyar. Literatürde ilk tanımlayan hekimdir."
+      },
+      {
+       "text": "Yoğun bakım ve diyaliz ünitelerinde liyezon işbirliği gereksizdir.",
+       "isLie": true,
+       "explanation": "Yoğun bakım ve diyaliz ünitelerinde liyezon işbirliği gereksizdir. ifadesi konsültasyon liyezon psikiyatrisi ilkeleri açısından incelendiğinde bu klinik durumun gerekçesini açıkça ortaya koyar. Yoğun bakım ve diyalizde psikososyal sorunlar sık ve acildir, işbirliği şarttır."
+      },
+      {
+       "text": "KLP'nin 3 işlevi; hasta bakımı, eğitim ve araştırmadır.",
+       "isLie": false,
+       "explanation": "KLP'nin 3 işlevi; hasta bakımı, eğitim ve araştırmadır. ifadesi konsültasyon liyezon psikiyatrisi ilkeleri açısından incelendiğinde bu klinik durumun gerekçesini açıkça ortaya koyar. Üç ana işlev tam olarak bunlardır."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "KLP'nin liyezon işbirliğinin en acil ve gerekli olduğu özellikli klinik birimler hangileridir?",
+     "answer": "Yoğun bakım, palyatif bakım, diyaliz ünitesi ve yanık birimleridir.",
+     "id": "k43-s11-e4"
+    }
+   ],
+   "synthesisNarrative": "- **Christian Heinroth:** Psikosomatik kavramını ilk kez akıl ve beden etkileşimi olarak tanımlamıştır.\n\n- **Tanı Eğilimleri:** Psikiyatri dışı hekimler deliryum ve bilişsel bozukluğu büyük oranda doğru tanırken; ajitasyon ve anksiyete konsültasyonlarının çoğunda psikiyatrik hastalık saptanmamıştır.\n\n- **Üç Ana İşlev:** Ruh sağlığı hizmeti, sağlık personeli eğitimi ve psikososyal araştırmalardır.\n\n- **Özellikli Birimler:** Yoğun bakım, palyatif bakım, diyaliz ve yanık servisleri yüksek kriz riski nedeniyle liyezonun merkezindedir.\n\n> [!NOTE]\n> İkinci bölümün bu temel ilkeleri, konsültasyon modelleri ve izlem sürecini anlamak için sağlam bir altyapı oluşturur."
+  },
+  {
+   "id": "k2-43-d-s12",
+   "slideNumber": 12,
+   "title": "Lipowski Konsültasyon Modelleri: Hasta ve Kriz Merkezli",
+   "subtitle": "Ayırıcı tanı odaklı görüşme ve akut uyum krizlerine müdahale",
+   "section": "Bölüm 4: Lipowski Modelleri ve Aciliyet",
+   "sectionNumber": 4,
+   "bolum": "4",
+   "pdfSayfalari": [
+    15,
+    15
+   ],
+   "content": "- **Zbigniew Lipowski Sınıflaması:** Lipowski, psikiyatrik konsültasyonları temel sorun veya amacın ne olduğuna göre **beş alt grupta** tanımlamıştır.\n\n- **1. Hasta Merkezli Konsültasyon:**\n  * Hastanın tanısındaki zorluk veya izleme güçlüğünden dolayı istenir.\n  * Temel amaç: **Ayırıcı tanıya ilişkin uzman görüşü bildirilmesidir**.\n\n- **2. Kriz Merkezli Konsültasyon:**\n  * Hastada ani gelişen uyum ve baş etme güçlüğünün nedeninin anlaşılması hedeflenir.\n  * Temel amaç: **Uygun medikal ve psikiyatrik acil müdahalenin hızla yapılmasıdır**.\n\n> [!NOTE]\n> Hasta merkezli model entelektüel bir ayırıcı tanı analizi sunarken, kriz merkezli model akut baş etme yetmezliğine acil destek sağlar.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Lipowski'ye göre hastanın tanısındaki zorluk veya izlem güçlüğü nedeniyle ayırıcı tanıya dönük istenen konsültasyon hangisidir?",
+     "options": [
+      {
+       "text": "Hasta merkezli konsültasyon",
+       "isCorrect": true,
+       "explanation": "Hasta merkezli konsültasyon doğru yanıttır; çünkü bu spesifik klinik ve biyopsikososyal mekanizma doğrudan hedeflenen tanı ve izlem ölçütünü kurar. Hasta merkezli konsültasyon ayırıcı tanı ve izleme güçlüğüne odaklanır."
+      },
+      {
+       "text": "Kriz merkezli konsültasyon",
+       "isCorrect": false,
+       "explanation": "Kriz merkezli konsültasyon kavramı bu klinik tabloyu oluşturmaz; KLP sürecinde farklı bir alanda tanımlanır. Kriz merkezli konsültasyon akut uyum ve baş etme güçlüğüne odaklanır."
+      },
+      {
+       "text": "Hekim merkezli konsültasyon",
+       "isCorrect": false,
+       "explanation": "Hekim merkezli konsültasyon kavramı bu klinik tabloyu oluşturmaz; KLP sürecinde farklı bir alanda tanımlanır. Hekim-hasta iletişim güçlüğüne odaklanır."
+      },
+      {
+       "text": "Durum merkezli konsültasyon",
+       "isCorrect": false,
+       "explanation": "Durum merkezli konsültasyon kavramı bu klinik tabloyu oluşturmaz; KLP sürecinde farklı bir alanda tanımlanır. Ekip-hasta çatışmasına odaklanır."
+      }
+     ],
+     "id": "k43-s12-e1"
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Hasta merkezli konsültasyonda temel amaç ayırıcı tanıya ilişkin görüş bildirilmesidir.",
+     "maskedTerm": "ayırıcı tanıya",
+     "hint": "KLP ve genel klinik tıp ilkeleri kapsamında ilgili temel kavramdır.",
+     "id": "k43-s12-e2"
+    },
+    {
+     "type": "spot_the_lie",
+     "id": "k43-s12-e3",
+     "topic": "Lipowski Konsültasyon Modelleri: Hasta ve Kriz Merkezli Klinik Önermeleri",
+     "items": [
+      {
+       "text": "Lipowski konsültasyonları amacına göre beş alt grupta tanımlamıştır.",
+       "isLie": false,
+       "explanation": "Lipowski konsültasyonları amacına göre beş alt grupta tanımlamıştır. ifadesi konsültasyon liyezon psikiyatrisi ilkeleri açısından incelendiğinde bu klinik durumun gerekçesini açıkça ortaya koyar. Hasta, kriz, hekim, durum ve geniş merkezli olmak üzere 5 model vardır."
+      },
+      {
+       "text": "Kriz merkezli konsültasyonda temel amaç yalnızca hastane arşivinin düzenlenmesidir.",
+       "isLie": true,
+       "explanation": "Kriz merkezli konsültasyonda temel amaç yalnızca hastane arşivinin düzenlenmesidir. ifadesi konsültasyon liyezon psikiyatrisi ilkeleri açısından incelendiğinde bu klinik durumun gerekçesini açıkça ortaya koyar. Kriz merkezli konsültasyonda amaç uyum güçlüğünü anlayıp medikal müdahale yapmaktır."
+      },
+      {
+       "text": "Hasta merkezli konsültasyon tanıda ve izlemde zorluk çekildiğinde istenir.",
+       "isLie": false,
+       "explanation": "Hasta merkezli konsültasyon tanıda ve izlemde zorluk çekildiğinde istenir. ifadesi konsültasyon liyezon psikiyatrisi ilkeleri açısından incelendiğinde bu klinik durumun gerekçesini açıkça ortaya koyar. Ayırıcı tanı hedefli resmi taleptir."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Lipowski'nin 'kriz merkezli konsültasyon' modelinin temel amacı nedir?",
+     "answer": "Hastanın uyum ve baş etme güçlüğünün nedeninin anlaşılması ve uygun medikal/psikiyatrik müdahalenin yapılmasıdır.",
+     "id": "k43-s12-e4"
+    }
+   ],
+   "synthesisNarrative": "- **Zbigniew Lipowski Sınıflaması:** Lipowski, psikiyatrik konsültasyonları temel sorun veya amacın ne olduğuna göre **beş alt grupta** tanımlamıştır.\n\n- **1. Hasta Merkezli Konsültasyon:**\n  * Hastanın tanısındaki zorluk veya izleme güçlüğünden dolayı istenir.\n  * Temel amaç: **Ayırıcı tanıya ilişkin uzman görüşü bildirilmesidir**.\n\n- **2. Kriz Merkezli Konsültasyon:**\n  * Hastada ani gelişen uyum ve baş etme güçlüğünün nedeninin anlaşılması hedeflenir.\n  * Temel amaç: **Uygun medikal ve psikiyatrik acil müdahalenin hızla yapılmasıdır**.\n\n> [!NOTE]\n> Hasta merkezli model entelektüel bir ayırıcı tanı analizi sunarken, kriz merkezli model akut baş etme yetmezliğine acil destek sağlar.",
+   "sourcePdf": {
+    "startPage": 15,
+    "endPage": 15,
+    "title": "klp sınıf 3 2025 .pdf"
+   }
+  },
+  {
+   "id": "k2-43-d-s13",
+   "slideNumber": 13,
+   "title": "Lipowski Modelleri: Hekim, Durum ve Geniş Merkezli",
+   "subtitle": "İletişim güçlükleri, servis çatışmaları ve aile krizlerinin çözümü",
+   "section": "Bölüm 4: Lipowski Modelleri ve Aciliyet",
+   "sectionNumber": 4,
+   "bolum": "4",
+   "pdfSayfalari": [
+    15,
+    15
+   ],
+   "content": "- **3. Hekim Merkezli Konsültasyon:** Hekimin hasta ile iletişim ve etkileşiminde bir güçlük vardır ve hekim bizzat bu tıkanıklığın aşılmasına dönük psikiyatrik yardım talep eder.\n\n- **4. Durum Merkezli Konsültasyon:** Hasta ile klinik tedavi ekibi (doktorlar, servis hemşireleri) arasında bir çatışma, gerginlik veya uyumsuzluk vardır; yardıma bu çatışmayı çözmek için başvurulur.\n\n- **5. Geniş Merkezli Konsültasyon:** Hasta, tedavi ekibi ve hasta ailesi arasında çoklu bir kriz/sorun vardır; öncelikli olarak bu üçlü krizin çözümlenmesi amaçlanır.\n\n> [!IMPORTANT]\n> Çatışma yalnızca hekimdeyse 'hekim merkezli', tüm ekiple hastadaysa 'durum merkezli', aile de işin içindeyse 'geniş merkezli' konsültasyon devreye girer.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Hasta, klinik tedavi ekibi ve hasta ailesi arasındaki çoklu çatışmanın çözümü için istenen Lipowski konsültasyon modeli hangisidir?",
+     "options": [
+      {
+       "text": "Geniş merkezli konsültasyon",
+       "isCorrect": true,
+       "explanation": "Geniş merkezli konsültasyon doğru yanıttır; çünkü bu spesifik klinik ve biyopsikososyal mekanizma doğrudan hedeflenen tanı ve izlem ölçütünü kurar. Hasta, tedavi ekibi ve aile arasındaki üçlü sorunları geniş merkezli model çözer."
+      },
+      {
+       "text": "Hasta merkezli konsültasyon",
+       "isCorrect": false,
+       "explanation": "Hasta merkezli konsültasyon kavramı bu klinik tabloyu oluşturmaz; KLP sürecinde farklı bir alanda tanımlanır. Hasta merkezli model ayırıcı tanıya odaklanır."
+      },
+      {
+       "text": "Hekim merkezli konsültasyon",
+       "isCorrect": false,
+       "explanation": "Hekim merkezli konsültasyon kavramı bu klinik tabloyu oluşturmaz; KLP sürecinde farklı bir alanda tanımlanır. Yalnızca primer hekimin iletişim güçlüğüne odaklanır."
+      },
+      {
+       "text": "Durum merkezli konsültasyon",
+       "isCorrect": false,
+       "explanation": "Durum merkezli konsültasyon kavramı bu klinik tabloyu oluşturmaz; KLP sürecinde farklı bir alanda tanımlanır. Yalnızca hasta ile tedavi ekibi arasındaki çatışmaya odaklanır."
+      }
+     ],
+     "id": "k43-s13-e1"
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Hekim merkezli konsültasyonda hekimin hasta ile iletişim ve etkileşiminde bir güçlük vardır.",
+     "maskedTerm": "iletişim ve etkileşiminde",
+     "hint": "KLP ve genel klinik tıp ilkeleri kapsamında ilgili temel kavramdır.",
+     "id": "k43-s13-e2"
+    },
+    {
+     "type": "spot_the_lie",
+     "id": "k43-s13-e3",
+     "topic": "Lipowski Modelleri: Hekim, Durum ve Geniş Merkezli Klinik Önermeleri",
+     "items": [
+      {
+       "text": "Durum merkezli konsültasyon hasta ile tedavi ekibi arasındaki çatışmalarda istenir.",
+       "isLie": false,
+       "explanation": "Durum merkezli konsültasyon hasta ile tedavi ekibi arasındaki çatışmalarda istenir. ifadesi konsültasyon liyezon psikiyatrisi ilkeleri açısından incelendiğinde bu klinik durumun gerekçesini açıkça ortaya koyar. Tedavi ekibi ve hasta arasındaki gerilimleri hedefler."
+      },
+      {
+       "text": "Hekim merkezli konsültasyonda hekim hastanın tüm tedavisini bırakıp istifa etmelidir.",
+       "isLie": true,
+       "explanation": "Hekim merkezli konsültasyonda hekim hastanın tüm tedavisini bırakıp istifa etmelidir. ifadesi konsültasyon liyezon psikiyatrisi ilkeleri açısından incelendiğinde bu klinik durumun gerekçesini açıkça ortaya koyar. Hekim yalnızca iletişim güçlüğünü aşmak için psikiyatrik danışmanlık alır."
+      },
+      {
+       "text": "Geniş merkezli konsültasyon hasta, ekip ve aile üçgenini kapsar.",
+       "isLie": false,
+       "explanation": "Geniş merkezli konsültasyon hasta, ekip ve aile üçgenini kapsar. ifadesi konsültasyon liyezon psikiyatrisi ilkeleri açısından incelendiğinde bu klinik durumun gerekçesini açıkça ortaya koyar. Üçlü koordinasyon ve kriz çözümünü amaçlar."
+      }
+     ]
+    },
+    {
+     "type": "swipe_matching",
+     "leftCategory": "Hekim/Durum Merkezli",
+     "rightCategory": "Geniş Merkezli",
+     "cards": [
+      {
+       "text": "Hekimin hasta ile iletişim kurmakta zorlanması",
+       "category": "left",
+       "explanation": "Hekimin hasta ile iletişim kurmakta zorlanması kavramı ilgili konsültasyon liyezon kategorisi altında incelenen temel klinik bileşendir. Klinik uygulamada bu eşleme hastanın bakım kalitesini belirler."
+      },
+      {
+       "text": "Servis hemşireleri ile hasta arasındaki çatışma",
+       "category": "left",
+       "explanation": "Servis hemşireleri ile hasta arasındaki çatışma kavramı ilgili konsültasyon liyezon kategorisi altında incelenen temel klinik bileşendir. Klinik uygulamada bu eşleme hastanın bakım kalitesini belirler."
+      },
+      {
+       "text": "Hasta, sağlık ekibi ve hasta yakınları arasındaki üçlü kriz",
+       "category": "right",
+       "explanation": "Hasta, sağlık ekibi ve hasta yakınları arasındaki üçlü kriz kavramı ilgili konsültasyon liyezon kategorisi altında incelenen temel klinik bileşendir. Klinik uygulamada bu eşleme hastanın bakım kalitesini belirler."
+      },
+      {
+       "text": "Ailenin tedavi kararlarına agresif direnç göstermesi",
+       "category": "right",
+       "explanation": "Ailenin tedavi kararlarına agresif direnç göstermesi kavramı ilgili konsültasyon liyezon kategorisi altında incelenen temel klinik bileşendir. Klinik uygulamada bu eşleme hastanın bakım kalitesini belirler."
+      }
+     ],
+     "id": "k43-s13-e4"
+    }
+   ],
+   "synthesisNarrative": "- **3. Hekim Merkezli Konsültasyon:** Hekimin hasta ile iletişim ve etkileşiminde bir güçlük vardır ve hekim bizzat bu tıkanıklığın aşılmasına dönük psikiyatrik yardım talep eder.\n\n- **4. Durum Merkezli Konsültasyon:** Hasta ile klinik tedavi ekibi (doktorlar, servis hemşireleri) arasında bir çatışma, gerginlik veya uyumsuzluk vardır; yardıma bu çatışmayı çözmek için başvurulur.\n\n- **5. Geniş Merkezli Konsültasyon:** Hasta, tedavi ekibi ve hasta ailesi arasında çoklu bir kriz/sorun vardır; öncelikli olarak bu üçlü krizin çözümlenmesi amaçlanır.\n\n> [!IMPORTANT]\n> Çatışma yalnızca hekimdeyse 'hekim merkezli', tüm ekiple hastadaysa 'durum merkezli', aile de işin içindeyse 'geniş merkezli' konsültasyon devreye girer.",
+   "sourcePdf": {
+    "startPage": 15,
+    "endPage": 15,
+    "title": "klp sınıf 3 2025 .pdf"
+   }
+  },
+  {
+   "id": "k2-43-d-s14",
+   "slideNumber": 14,
+   "title": "Konsültasyon Öncelik Dereceleri ve Aciliyet",
+   "subtitle": "Acil, aynı gün içi ve rutin konsültasyon ayrımları",
+   "section": "Bölüm 4: Lipowski Modelleri ve Aciliyet",
+   "sectionNumber": 4,
+   "bolum": "4",
+   "pdfSayfalari": [
+    16,
+    16
+   ],
+   "content": "- **Konsültasyonların Sınıflaması:** Hastanın klinik durumuna ve servisin acil ihtiyaçlarına göre üç düzeyde sınıflandırılır:\n\n- **1. Acil Konsültasyon:** Psikiyatri hekiminin **derhal ve hemen** müdahalesini gerektiren durumlardır:\n  * **Deliryum** (organik bilinç ve dikkat bozukluğu)\n  * **Psikotik ajitasyon** (kendine/çevreye zarar riski)\n  * **İntihar girişimi** veya aktif intihar planı\n\n- **2. Aynı Gün İçi Konsültasyon:** Acil olmayan ancak hastanın aynı gün içinde mutlaka değerlendirilmesi gereken durumlar.\n\n- **3. Rutin Konsültasyon:** Çoğunlukla elektif ayırıcı tanıya dönük ya da taburculuk öncesi izlem amaçlı taleplerdir.\n\n> [!IMPORTANT]\n> Deliryum, psikotik ajitasyon ve intihar girişimi KLP'de 'kırmızı kod' niteliğinde acil durumlardır; ertelenemez.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Aşağıdaki klinik tablolardan hangisi KLP'de derhal müdahale gerektiren ACİL konsültasyon endikasyonudur?",
+     "options": [
+      {
+       "text": "Deliryum, psikotik ajitasyon ve intihar girişimi",
+       "isCorrect": true,
+       "explanation": "Deliryum, psikotik ajitasyon ve intihar girişimi doğru yanıttır; çünkü bu spesifik klinik ve biyopsikososyal mekanizma doğrudan hedeflenen tanı ve izlem ölçütünü kurar. Bu üç durum KLP'de derhal yardım gerektiren kesin acil durumlardır."
+      },
+      {
+       "text": "Hafif uyku düzensizliği",
+       "isCorrect": false,
+       "explanation": "Hafif uyku düzensizliği kavramı bu klinik tabloyu oluşturmaz; KLP sürecinde farklı bir alanda tanımlanır. Rutin veya aynı gün içi konsültasyonla ele alınabilir."
+      },
+      {
+       "text": "Taburculuk sonrası beslenme alışkanlığı danışmanlığı",
+       "isCorrect": false,
+       "explanation": "Taburculuk sonrası beslenme alışkanlığı danışmanlığı kavramı bu klinik tabloyu oluşturmaz; KLP sürecinde farklı bir alanda tanımlanır. Acil konsültasyon endikasyonu değildir."
+      },
+      {
+       "text": "Stabil kronik bel ağrısı reaksiyonu",
+       "isCorrect": false,
+       "explanation": "Stabil kronik bel ağrısı reaksiyonu kavramı bu klinik tabloyu oluşturmaz; KLP sürecinde farklı bir alanda tanımlanır. Rutin izlem kapsamında değerlendirilir."
+      }
+     ],
+     "id": "k43-s14-e1"
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Acil konsultasyon deliryum, psikotik ajitasyon ve intihar girişimi gibi durumlardır.",
+     "maskedTerm": "intihar girişimi",
+     "hint": "KLP ve genel klinik tıp ilkeleri kapsamında ilgili temel kavramdır.",
+     "id": "k43-s14-e2"
+    },
+    {
+     "type": "spot_the_lie",
+     "id": "k43-s14-e3",
+     "topic": "Konsültasyon Öncelik Dereceleri ve Aciliyet Klinik Önermeleri",
+     "items": [
+      {
+       "text": "Deliryum ve psikotik ajitasyon acil konsültasyon gerektiren durumlardır.",
+       "isLie": false,
+       "explanation": "Deliryum ve psikotik ajitasyon acil konsültasyon gerektiren durumlardır. ifadesi konsültasyon liyezon psikiyatrisi ilkeleri açısından incelendiğinde bu klinik durumun gerekçesini açıkça ortaya koyar. Hemen müdahale edilmelidir."
+      },
+      {
+       "text": "İntihar girişimi olan bir hasta için konsültasyon bir hafta sonraya ertelenmelidir.",
+       "isLie": true,
+       "explanation": "İntihar girişimi olan bir hasta için konsültasyon bir hafta sonraya ertelenmelidir. ifadesi konsültasyon liyezon psikiyatrisi ilkeleri açısından incelendiğinde bu klinik durumun gerekçesini açıkça ortaya koyar. İntihar girişimi derhal acil konsültasyon gerektirir."
+      },
+      {
+       "text": "Rutin konsültasyonlar çoğunlukla ayırıcı tanı ve izleme yöneliktir.",
+       "isLie": false,
+       "explanation": "Rutin konsültasyonlar çoğunlukla ayırıcı tanı ve izleme yöneliktir. ifadesi konsültasyon liyezon psikiyatrisi ilkeleri açısından incelendiğinde bu klinik durumun gerekçesini açıkça ortaya koyar. Elektif değerlendirmeyi kapsar."
+      }
+     ]
+    },
+    {
+     "type": "interactive_table",
+     "title": "Konsültasyon Aciliyet Dereceleri ve Endikasyonlar",
+     "id": "k43-s14-e4",
+     "tableHeaders": [
+      "Aciliyet Düzeyi",
+      "Zamanlama",
+      "Örnek Endikasyonlar"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Acil Konsültasyon",
+         "isMasked": false,
+         "hint": "KLP kapsamında ilgili klinik ve biyopsikososyal bilgidir."
+        },
+        {
+         "text": "Hemen / Derhal",
+         "isMasked": false,
+         "hint": "KLP kapsamında ilgili klinik ve biyopsikososyal bilgidir."
+        },
+        {
+         "text": "Deliryum, ajitasyon, intihar",
+         "isMasked": true,
+         "hint": "KLP kapsamında ilgili klinik ve biyopsikososyal bilgidir."
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Aynı Gün Konsültasyon",
+         "isMasked": false,
+         "hint": "KLP kapsamında ilgili klinik ve biyopsikososyal bilgidir."
+        },
+        {
+         "text": "Aynı iş günü içinde",
+         "isMasked": false,
+         "hint": "KLP kapsamında ilgili klinik ve biyopsikososyal bilgidir."
+        },
+        {
+         "text": "Acil olmayan stabil krizler",
+         "isMasked": true,
+         "hint": "KLP kapsamında ilgili klinik ve biyopsikososyal bilgidir."
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Rutin Konsültasyon",
+         "isMasked": false,
+         "hint": "KLP kapsamında ilgili klinik ve biyopsikososyal bilgidir."
+        },
+        {
+         "text": "Planlı / Elektif",
+         "isMasked": false,
+         "hint": "KLP kapsamında ilgili klinik ve biyopsikososyal bilgidir."
+        },
+        {
+         "text": "Ayırıcı tanı ve genel izlem",
+         "isMasked": true,
+         "hint": "KLP kapsamında ilgili klinik ve biyopsikososyal bilgidir."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "synthesisNarrative": "- **Konsültasyonların Sınıflaması:** Hastanın klinik durumuna ve servisin acil ihtiyaçlarına göre üç düzeyde sınıflandırılır:\n\n- **1. Acil Konsültasyon:** Psikiyatri hekiminin **derhal ve hemen** müdahalesini gerektiren durumlardır:\n  * **Deliryum** (organik bilinç ve dikkat bozukluğu)\n  * **Psikotik ajitasyon** (kendine/çevreye zarar riski)\n  * **İntihar girişimi** veya aktif intihar planı\n\n- **2. Aynı Gün İçi Konsültasyon:** Acil olmayan ancak hastanın aynı gün içinde mutlaka değerlendirilmesi gereken durumlar.\n\n- **3. Rutin Konsültasyon:** Çoğunlukla elektif ayırıcı tanıya dönük ya da taburculuk öncesi izlem amaçlı taleplerdir.\n\n> [!IMPORTANT]\n> Deliryum, psikotik ajitasyon ve intihar girişimi KLP'de 'kırmızı kod' niteliğinde acil durumlardır; ertelenemez.",
+   "sourcePdf": {
+    "startPage": 16,
+    "endPage": 16,
+    "title": "klp sınıf 3 2025 .pdf"
+   }
+  },
+  {
+   "id": "k2-43-d-s15",
+   "slideNumber": 15,
+   "title": "[TEKRAR SAYFASI - CHECKPOINT 3] Modeller ve Aciliyet",
+   "subtitle": "Lipowski modelleri ve acil konsültasyon kriterlerinin pekiştirilmesi",
+   "section": "Bölüm 4: Lipowski Modelleri ve Aciliyet",
+   "sectionNumber": 4,
+   "bolum": "4",
+   "pdfSayfalari": [
+    15,
+    16
+   ],
+   "content": "- **Lipowski'nin 5 Modeli:**\n  * *Hasta merkezli:* Ayırıcı tanı ve izleme güçlüğü.\n  * *Kriz merkezli:* Akut uyum güçlüğü ve medikal müdahale.\n  * *Hekim merkezli:* Hekim-hasta iletişim güçlüğü.\n  * *Durum merkezli:* Ekip-hasta çatışması.\n  * *Geniş merkezli:* Hasta, ekip ve aile üçgenindeki krizler.\n\n- **Aciliyet Düzeyleri:**\n  * *Acil:* Deliryum, psikotik ajitasyon, intihar girişimi (derhal müdahale).\n  * *Aynı gün:* Gün içinde müdahale gereken stabil sorunlar.\n  * *Rutin:* Ayırıcı tanı ve izlem amaçlı elektif talepler.\n\n> [!NOTE]\n> Lipowski sınıflaması ve aciliyet derecelendirmesi, konsültasyon talebinin doğru önceliklendirilmesini sağlar.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Aşağıdakilerden hangisi Lipowski sınıflamasında doğrudan ayırıcı tanıya odaklanan modeldir?",
+     "options": [
+      {
+       "text": "Hasta merkezli konsültasyon",
+       "isCorrect": true,
+       "explanation": "Hasta merkezli konsültasyon doğru yanıttır; çünkü bu spesifik klinik ve biyopsikososyal mekanizma doğrudan hedeflenen tanı ve izlem ölçütünü kurar. Hasta merkezli konsültasyon tanı güçlüğünde ayırıcı tanı amacıyla istenir."
+      },
+      {
+       "text": "Hekim merkezli konsültasyon",
+       "isCorrect": false,
+       "explanation": "Hekim merkezli konsültasyon kavramı bu klinik tabloyu oluşturmaz; KLP sürecinde farklı bir alanda tanımlanır. Hekimin iletişim sıkıntısını aşmayı amaçlar."
+      },
+      {
+       "text": "Durum merkezli konsültasyon",
+       "isCorrect": false,
+       "explanation": "Durum merkezli konsültasyon kavramı bu klinik tabloyu oluşturmaz; KLP sürecinde farklı bir alanda tanımlanır. Hasta ile klinik ekibi arasındaki çatışmayı çözer."
+      },
+      {
+       "text": "Geniş merkezli konsültasyon",
+       "isCorrect": false,
+       "explanation": "Geniş merkezli konsültasyon kavramı bu klinik tabloyu oluşturmaz; KLP sürecinde farklı bir alanda tanımlanır. Aile ve ekip krizine odaklanır."
+      }
+     ],
+     "id": "k43-s15-e1"
+    },
+    {
+     "type": "swipe_matching",
+     "leftCategory": "Acil Konsültasyon",
+     "rightCategory": "Rutin Konsültasyon",
+     "cards": [
+      {
+       "text": "Aktif intihar girişimi ve tehdidi",
+       "category": "left",
+       "explanation": "Aktif intihar girişimi ve tehdidi kavramı ilgili konsültasyon liyezon kategorisi altında incelenen temel klinik bileşendir. Klinik uygulamada bu eşleme hastanın bakım kalitesini belirler."
+      },
+      {
+       "text": "Akut deliryum ve konfüzyon tablosu",
+       "category": "left",
+       "explanation": "Akut deliryum ve konfüzyon tablosu kavramı ilgili konsültasyon liyezon kategorisi altında incelenen temel klinik bileşendir. Klinik uygulamada bu eşleme hastanın bakım kalitesini belirler."
+      },
+      {
+       "text": "Elektif ayırıcı tanı görüşü",
+       "category": "right",
+       "explanation": "Elektif ayırıcı tanı görüşü kavramı ilgili konsültasyon liyezon kategorisi altında incelenen temel klinik bileşendir. Klinik uygulamada bu eşleme hastanın bakım kalitesini belirler."
+      },
+      {
+       "text": "Taburculuk öncesi genel psikiyatrik izlem",
+       "category": "right",
+       "explanation": "Taburculuk öncesi genel psikiyatrik izlem kavramı ilgili konsültasyon liyezon kategorisi altında incelenen temel klinik bileşendir. Klinik uygulamada bu eşleme hastanın bakım kalitesini belirler."
+      }
+     ],
+     "id": "k43-s15-e2"
+    },
+    {
+     "type": "spot_the_lie",
+     "id": "k43-s15-e3",
+     "topic": "[TEKRAR SAYFASI - CHECKPOINT 3] Modeller ve Aciliyet Klinik Önermeleri",
+     "items": [
+      {
+       "text": "Psikotik ajitasyon acil konsültasyon gerektirir.",
+       "isLie": false,
+       "explanation": "Psikotik ajitasyon acil konsültasyon gerektirir. ifadesi konsültasyon liyezon psikiyatrisi ilkeleri açısından incelendiğinde bu klinik durumun gerekçesini açıkça ortaya koyar. Güvenlik ve tedavi için acildir."
+      },
+      {
+       "text": "Lipowski'nin sınıflamasında yalnızca 1 tek konsültasyon modeli vardır.",
+       "isLie": true,
+       "explanation": "Lipowski'nin sınıflamasında yalnızca 1 tek konsültasyon modeli vardır. ifadesi konsültasyon liyezon psikiyatrisi ilkeleri açısından incelendiğinde bu klinik durumun gerekçesini açıkça ortaya koyar. Lipowski 5 farklı konsültasyon modeli tanımlamıştır."
+      },
+      {
+       "text": "Aynı gün içinde görülmesi gereken hastalar acil olmayan stabil gruptadır.",
+       "isLie": false,
+       "explanation": "Aynı gün içinde görülmesi gereken hastalar acil olmayan stabil gruptadır. ifadesi konsültasyon liyezon psikiyatrisi ilkeleri açısından incelendiğinde bu klinik durumun gerekçesini açıkça ortaya koyar. İkinci aciliyet kategorisidir."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "KLP'de derhal (acil) müdahale gerektiren üç temel klinik tablo nedir?",
+     "answer": "Deliryum, psikotik ajitasyon ve intihar girişimidir.",
+     "id": "k43-s15-e4"
+    }
+   ],
+   "synthesisNarrative": "- **Lipowski'nin 5 Modeli:**\n  * *Hasta merkezli:* Ayırıcı tanı ve izleme güçlüğü.\n  * *Kriz merkezli:* Akut uyum güçlüğü ve medikal müdahale.\n  * *Hekim merkezli:* Hekim-hasta iletişim güçlüğü.\n  * *Durum merkezli:* Ekip-hasta çatışması.\n  * *Geniş merkezli:* Hasta, ekip ve aile üçgenindeki krizler.\n\n- **Aciliyet Düzeyleri:**\n  * *Acil:* Deliryum, psikotik ajitasyon, intihar girişimi (derhal müdahale).\n  * *Aynı gün:* Gün içinde müdahale gereken stabil sorunlar.\n  * *Rutin:* Ayırıcı tanı ve izlem amaçlı elektif talepler.\n\n> [!NOTE]\n> Lipowski sınıflaması ve aciliyet derecelendirmesi, konsültasyon talebinin doğru önceliklendirilmesini sağlar."
+  },
+  {
+   "id": "k2-43-d-s16",
+   "slideNumber": 16,
+   "title": "KLP İzlem Süreci: Veri Toplama ve Hemşire İletişimi",
+   "subtitle": "Kapsamlı bilgi toplama, ilaç etkileşimleri ve klinik gözlemler",
+   "section": "Bölüm 5: KLP İzlem Süreci ve Muayene",
+   "sectionNumber": 5,
+   "bolum": "5",
+   "pdfSayfalari": [
+    17,
+    18
+   ],
+   "content": "- **İzlem Sürecinin 5 Adımı:**\n  1. Hastaya yönelik verilerin toplanması\n  2. Ruhsal durum muayenesi\n  3. Tanı ve tedavi planının hazırlanması\n  4. Hastaya ve ilgili hekime planın aktarılması\n  5. Takip ve izleme\n\n- **Adım 1: Veri Toplama:** Yalnızca özgeçmiş-soygeçmiş yetersizdir. Servisin işleyişi, aile bilgileri, hastanın kullandığı tıbbi ilaçlar ve psikoaktif ilaçlarla etkileşimleri titizlikle taranmalıdır.\n\n- **Hemşire Görüşünün Önemi:** Kliniklerde hastalarla 24 saat devamlı ilgilenen, günlük takiplerini yapan ve tedavi yanıtlarını gözleyen servis hemşireleridir. Hemşirelerle mutlaka görüşülmelidir.\n\n> [!IMPORTANT]\n> Servis hemşiresiyle görüşmeden yapılan bir psikiyatrik konsültasyon, hastanın gün içindeki dalgalanmalarını kaçırma riski taşır.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Veri toplama aşamasında hastanın günlük takibini yapan ve mutlaka görüşülmesi gereken sağlık personeli kimdir?",
+     "options": [
+      {
+       "text": "Servis hemşireleri",
+       "isCorrect": true,
+       "explanation": "Servis hemşireleri doğru yanıttır; çünkü bu spesifik klinik ve biyopsikososyal mekanizma doğrudan hedeflenen tanı ve izlem ölçütünü kurar. Hastalarla devamlı ilgilenen ve tedavi yanıtlarını gözleyen servis hemşireleridir."
+      },
+      {
+       "text": "Hastanenin santral görevlisi",
+       "isCorrect": false,
+       "explanation": "Hastanenin santral görevlisi kavramı bu klinik tabloyu oluşturmaz; KLP sürecinde farklı bir alanda tanımlanır. Klinik takiple ilgisi yoktur."
+      },
+      {
+       "text": "Yalnızca güvenlik personeli",
+       "isCorrect": false,
+       "explanation": "Yalnızca güvenlik personeli kavramı bu klinik tabloyu oluşturmaz; KLP sürecinde farklı bir alanda tanımlanır. Tıbbi izlem yapmaz."
+      },
+      {
+       "text": "Yalnızca arşiv personeli",
+       "isCorrect": false,
+       "explanation": "Yalnızca arşiv personeli kavramı bu klinik tabloyu oluşturmaz; KLP sürecinde farklı bir alanda tanımlanır. Anlık klinik süreci bilmez."
+      }
+     ],
+     "id": "k43-s16-e1"
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Hasta ile ilgili bilgiler toplanırken servis hemşireleri ile de görüşülmelidir.",
+     "maskedTerm": "servis hemşireleri",
+     "hint": "KLP ve genel klinik tıp ilkeleri kapsamında ilgili temel kavramdır.",
+     "id": "k43-s16-e2"
+    },
+    {
+     "type": "causal_chain",
+     "title": "KLP İzlem Süreci Adımları",
+     "steps": [
+      "1. Veri Toplama: Hastanın tıbbi, ailesel ve hemşire gözlem verilerinin toplanması.",
+      "2. Ruhsal Muayene: Objektif ve onamlı ruhsal durum muayenesinin yapılması.",
+      "3. Planlama: Biyopsikososyal tanı ve tedavi planının oluşturulması.",
+      "4. Aktarım: Planın hastaya ve primer servis hekimine aktarılması.",
+      "5. İzleme: Klinik takip ve sürecin resmi olarak kaydedilmesi."
+     ],
+     "id": "k43-s16-e3"
+    },
+    {
+     "type": "spot_the_lie",
+     "id": "k43-s16-e4",
+     "topic": "KLP İzlem Süreci: Veri Toplama ve Hemşire İletişimi Klinik Önermeleri",
+     "items": [
+      {
+       "text": "Veri toplama aşamasında hastanın kullandığı ilaçlar ve etkileşimleri taranmalıdır.",
+       "isLie": false,
+       "explanation": "Veri toplama aşamasında hastanın kullandığı ilaçlar ve etkileşimleri taranmalıdır. ifadesi konsültasyon liyezon psikiyatrisi ilkeleri açısından incelendiğinde bu klinik durumun gerekçesini açıkça ortaya koyar. İlaç etkileşimleri psikiyatrik tabloyu tetikleyebilir."
+      },
+      {
+       "text": "Veri toplamada sadece hastanın adını sormak yeterlidir, hemşireyle görüşmek yasaktır.",
+       "isLie": true,
+       "explanation": "Veri toplamada sadece hastanın adını sormak yeterlidir, hemşireyle görüşmek yasaktır. ifadesi konsültasyon liyezon psikiyatrisi ilkeleri açısından incelendiğinde bu klinik durumun gerekçesini açıkça ortaya koyar. Servis hemşireleriyle görüşmek veri toplamanın en kritik adımıdır."
+      },
+      {
+       "text": "KLP izlem süreci 5 temel alt başlıktan oluşur.",
+       "isLie": false,
+       "explanation": "KLP izlem süreci 5 temel alt başlıktan oluşur. ifadesi konsültasyon liyezon psikiyatrisi ilkeleri açısından incelendiğinde bu klinik durumun gerekçesini açıkça ortaya koyar. Veri toplama, muayene, planlama, aktarım ve takip."
+      }
+     ]
+    }
+   ],
+   "synthesisNarrative": "- **İzlem Sürecinin 5 Adımı:**\n  1. Hastaya yönelik verilerin toplanması\n  2. Ruhsal durum muayenesi\n  3. Tanı ve tedavi planının hazırlanması\n  4. Hastaya ve ilgili hekime planın aktarılması\n  5. Takip ve izleme\n\n- **Adım 1: Veri Toplama:** Yalnızca özgeçmiş-soygeçmiş yetersizdir. Servisin işleyişi, aile bilgileri, hastanın kullandığı tıbbi ilaçlar ve psikoaktif ilaçlarla etkileşimleri titizlikle taranmalıdır.\n\n- **Hemşire Görüşünün Önemi:** Kliniklerde hastalarla 24 saat devamlı ilgilenen, günlük takiplerini yapan ve tedavi yanıtlarını gözleyen servis hemşireleridir. Hemşirelerle mutlaka görüşülmelidir.\n\n> [!IMPORTANT]\n> Servis hemşiresiyle görüşmeden yapılan bir psikiyatrik konsültasyon, hastanın gün içindeki dalgalanmalarını kaçırma riski taşır.",
+   "sourcePdf": {
+    "startPage": 17,
+    "endPage": 18,
+    "title": "klp sınıf 3 2025 .pdf"
+   }
+  },
+  {
+   "id": "k2-43-d-s17",
+   "slideNumber": 17,
+   "title": "İzlem Süreci: Hasta Bilgilendirmesi, Onamı ve Üç Aktör",
+   "subtitle": "Etik zorunluluklar, hasta hakları ve konsültasyonun üçlü saç ayağı",
+   "section": "Bölüm 5: KLP İzlem Süreci ve Muayene",
+   "sectionNumber": 5,
+   "bolum": "5",
+   "pdfSayfalari": [
+    19,
+    20
+   ],
+   "content": "- **Hastalık Hakkında Bilgilendirme:** Hastaya hastalığı hakkında bilgi verilip verilmediği sorgulanmalıdır. Bilgi verilmemiş olması olası ajitasyon, depresyon ve uyum sorunlarına ışık tutar.\n\n- **Konsültasyon Hakkında Bilgilendirme:** Hastaya psikiyatrik konsültasyon isteneceği mutlaka söylenmelidir. Hastanın etik ve yasal açılardan konsültasyondan haberdar edilmesi şarttır. Bilgilendirme yapılmamışsa nedeni araştırılmalıdır.\n\n- **Başarılı Konsültasyonda 3 Aktör:**\n  1. Hastanın medikal durumundan sorumlu **primer hekim**\n  2. **Konsültasyon-liyezon psikiyatristi**\n  3. **Hastanın kendisi**\n\n> [!NOTE]\n> Hastadan gizli yapılan psikiyatrik muayeneler hastanın güvenini yıkar ve paranoid hezeyanları tetikleyebilir.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Başarılı bir psikiyatrik konsültasyonda etkili olan 3 temel aktör kimlerdir?",
+     "options": [
+      {
+       "text": "Primer hekim, konsültasyon-liyezon psikiyatristi ve hastanın kendisi",
+       "isCorrect": true,
+       "explanation": "Primer hekim, konsültasyon-liyezon psikiyatristi ve hastanın kendisi doğru yanıttır; çünkü bu spesifik klinik ve biyopsikososyal mekanizma doğrudan hedeflenen tanı ve izlem ölçütünü kurar. Bu üçlü aktör başarılı konsültasyonun temel unsurlarıdır."
+      },
+      {
+       "text": "Hastane başhekimi, vezne memuru ve güvenlik",
+       "isCorrect": false,
+       "explanation": "Hastane başhekimi, vezne memuru ve güvenlik kavramı bu klinik tabloyu oluşturmaz; KLP sürecinde farklı bir alanda tanımlanır. Klinik aktörler değillerdir."
+      },
+      {
+       "text": "Yalnızca nöbetçi eczacı ve hasta yakını",
+       "isCorrect": false,
+       "explanation": "Yalnızca nöbetçi eczacı ve hasta yakını kavramı bu klinik tabloyu oluşturmaz; KLP sürecinde farklı bir alanda tanımlanır. Konsültasyon hekimler ve hasta arasında yürütülür."
+      },
+      {
+       "text": "Yalnızca laboratuvar sorumlusu ve teknisyen",
+       "isCorrect": false,
+       "explanation": "Yalnızca laboratuvar sorumlusu ve teknisyen kavramı bu klinik tabloyu oluşturmaz; KLP sürecinde farklı bir alanda tanımlanır. Ruhsal değerlendirme ekibi değildir."
+      }
+     ],
+     "id": "k43-s17-e1"
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Hastanın etik ve yasal açılardan konsültasyondan haberdar edilmesi gerekir.",
+     "maskedTerm": "haberdar edilmesi",
+     "hint": "KLP ve genel klinik tıp ilkeleri kapsamında ilgili temel kavramdır.",
+     "id": "k43-s17-e2"
+    },
+    {
+     "type": "spot_the_lie",
+     "id": "k43-s17-e3",
+     "topic": "İzlem Süreci: Hasta Bilgilendirmesi, Onamı ve Üç Aktör Klinik Önermeleri",
+     "items": [
+      {
+       "text": "Hastaya hastalığı hakkında bilgi verilmemiş olması ajitasyon nedenini aydınlatabilir.",
+       "isLie": false,
+       "explanation": "Hastaya hastalığı hakkında bilgi verilmemiş olması ajitasyon nedenini aydınlatabilir. ifadesi konsültasyon liyezon psikiyatrisi ilkeleri açısından incelendiğinde bu klinik durumun gerekçesini açıkça ortaya koyar. Belirsizlik hastada reaktif anksiyete ve ajitasyon yaratır."
+      },
+      {
+       "text": "Hastadan gizlice psikiyatrik konsültasyon yapmak yasal ve etik bir zorunluluktur.",
+       "isLie": true,
+       "explanation": "Hastadan gizlice psikiyatrik konsültasyon yapmak yasal ve etik bir zorunluluktur. ifadesi konsültasyon liyezon psikiyatrisi ilkeleri açısından incelendiğinde bu klinik durumun gerekçesini açıkça ortaya koyar. Tam tersine hastanın haberdar edilmesi yasal ve etik bir zorunluluktur."
+      },
+      {
+       "text": "Konsültasyonda etkili 3 aktör primer hekim, konsültan psikiyatrist ve hastadır.",
+       "isLie": false,
+       "explanation": "Konsültasyonda etkili 3 aktör primer hekim, konsültan psikiyatrist ve hastadır. ifadesi konsültasyon liyezon psikiyatrisi ilkeleri açısından incelendiğinde bu klinik durumun gerekçesini açıkça ortaya koyar. Konsültasyonun üçlü sacayağıdır."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Konsültasyon öncesinde hastaya bilgilendirme yapılmasının etik ve yasal önemi nedir?",
+     "answer": "Hasta hakları gereğidir; bilgilendirme yapılmaması hastada güvensizlik, ajitasyon ve uyum sorunlarına yol açar, bu nedenle haberdar edilmesi şarttır.",
+     "id": "k43-s17-e4"
+    }
+   ],
+   "synthesisNarrative": "- **Hastalık Hakkında Bilgilendirme:** Hastaya hastalığı hakkında bilgi verilip verilmediği sorgulanmalıdır. Bilgi verilmemiş olması olası ajitasyon, depresyon ve uyum sorunlarına ışık tutar.\n\n- **Konsültasyon Hakkında Bilgilendirme:** Hastaya psikiyatrik konsültasyon isteneceği mutlaka söylenmelidir. Hastanın etik ve yasal açılardan konsültasyondan haberdar edilmesi şarttır. Bilgilendirme yapılmamışsa nedeni araştırılmalıdır.\n\n- **Başarılı Konsültasyonda 3 Aktör:**\n  1. Hastanın medikal durumundan sorumlu **primer hekim**\n  2. **Konsültasyon-liyezon psikiyatristi**\n  3. **Hastanın kendisi**\n\n> [!NOTE]\n> Hastadan gizli yapılan psikiyatrik muayeneler hastanın güvenini yıkar ve paranoid hezeyanları tetikleyebilir.",
+   "sourcePdf": {
+    "startPage": 19,
+    "endPage": 20,
+    "title": "klp sınıf 3 2025 .pdf"
+   }
+  },
+  {
+   "id": "k2-43-d-s18",
+   "slideNumber": 18,
+   "title": "Ruhsal Durum Muayenesi Yaklaşımı ve Gizlilik İlkesi",
+   "subtitle": "Yargılamayan tutum, hasta onamı ve fiziksel mahremiyet",
+   "section": "Bölüm 5: KLP İzlem Süreci ve Muayene",
+   "sectionNumber": 5,
+   "bolum": "5",
+   "pdfSayfalari": [
+    21,
+    22
+   ],
+   "content": "- **Konsültanın Yaklaşım Modeli:** Konsültan hekimin yaklaşımı hastanın psikiyatriye tutumunu doğrudan belirler. Muayenede yargılayıcı, incitici ve küçük düşürücü tutumlardan kaçınılmalı; **hastanın cezalandırılıyor hissine kapılması kesinlikle önlenmelidir**.\n\n- **Tanışma ve Onam:** Hastalar sıklıkla yatağa bağımlı, düşkün ve çökkündür. Hekim kendini tanıtmalı, görüşme amacını açıklamalı ve hastanın onamını almalıdır. Onam yoksa (intihar/zarar riski hariç) muayeneden vazgeçilebilir.\n\n- **Gizlilik ve Fiziksel Ortam:**\n  * Konsültasyon sürece yayılan yakın bir ilişkidir.\n  * **Fiziksel rahatlık ve gizlilik ortamı sağlanmadan psikiyatrik muayeneye geçilmemelidir**.\n\n> [!IMPORTANT]\n> Koğuş ortamında perde çekilmeden ya da diğer hastaların duyabileceği şekilde psikiyatrik görüşme yapılamaz.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Konsültan psikiyatri hekiminin ruhsal durum muayenesindeki tutumuyla ilgili hangisi doğrudur?",
+     "options": [
+      {
+       "text": "Yargılayıcı olmaktan uzak durmalı, hastanın cezalandırılıyor hissine kapılmasını önlemelidir",
+       "isCorrect": true,
+       "explanation": "Yargılayıcı olmaktan uzak durmalı, hastanın cezalandırılıyor hissine kapılmasını önlemelidir doğru yanıttır; çünkü bu spesifik klinik ve biyopsikososyal mekanizma doğrudan hedeflenen tanı ve izlem ölçütünü kurar. Objektif ve yargılamayan tutum güvenli ilişkinin temelidir."
+      },
+      {
+       "text": "Hastayı diğer hastaların önünde yüksek sesle azarlamalıdır",
+       "isCorrect": false,
+       "explanation": "Hastayı diğer hastaların önünde yüksek sesle azarlamalıdır kavramı bu klinik tabloyu oluşturmaz; KLP sürecinde farklı bir alanda tanımlanır. Etik dışı ve hastaya zarar verici bir tutumdur."
+      },
+      {
+       "text": "Kendini tanıtmadan hastaya doğrudan zorla ilaç enjekte etmelidir",
+       "isCorrect": false,
+       "explanation": "Kendini tanıtmadan hastaya doğrudan zorla ilaç enjekte etmelidir kavramı bu klinik tabloyu oluşturmaz; KLP sürecinde farklı bir alanda tanımlanır. Hekim önce kendini ve amacını tanıtmalıdır."
+      },
+      {
+       "text": "Gizlilik ortamı olmadan koridorda ayaküstü muayeneyi tamamlamalıdır",
+       "isCorrect": false,
+       "explanation": "Gizlilik ortamı olmadan koridorda ayaküstü muayeneyi tamamlamalıdır kavramı bu klinik tabloyu oluşturmaz; KLP sürecinde farklı bir alanda tanımlanır. Fiziksel rahatlık ve gizlilik şarttır."
+      }
+     ],
+     "id": "k43-s18-e1"
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Fiziksel rahatlık ve gizlilik ortamı sağlanmadan psikiyatrik muayeneye geçilmemelidir.",
+     "maskedTerm": "gizlilik ortamı",
+     "hint": "KLP ve genel klinik tıp ilkeleri kapsamında ilgili temel kavramdır.",
+     "id": "k43-s18-e2"
+    },
+    {
+     "type": "spot_the_lie",
+     "id": "k43-s18-e3",
+     "topic": "Ruhsal Durum Muayenesi Yaklaşımı ve Gizlilik İlkesi Klinik Önermeleri",
+     "items": [
+      {
+       "text": "Konsültan hekim görüşmeden önce kendisini ve amacını hastaya tanıtmalıdır.",
+       "isLie": false,
+       "explanation": "Konsültan hekim görüşmeden önce kendisini ve amacını hastaya tanıtmalıdır. ifadesi konsültasyon liyezon psikiyatrisi ilkeleri açısından incelendiğinde bu klinik durumun gerekçesini açıkça ortaya koyar. Temel iletişim ve nezaket ilkesidir."
+      },
+      {
+       "text": "Fiziksel rahatlık ve gizlilik ortamı sağlanmadan da psikiyatrik muayeneye geçilebilir.",
+       "isLie": true,
+       "explanation": "Fiziksel rahatlık ve gizlilik ortamı sağlanmadan da psikiyatrik muayeneye geçilebilir. ifadesi konsültasyon liyezon psikiyatrisi ilkeleri açısından incelendiğinde bu klinik durumun gerekçesini açıkça ortaya koyar. Fiziksel rahatlık ve gizlilik ortamı sağlanmadan muayeneye geçilmemelidir."
+      },
+      {
+       "text": "Hastanın intihar veya çevreye zarar riski yoksa onam vermediğinde muayeneden vazgeçilebilir.",
+       "isLie": false,
+       "explanation": "Hastanın intihar veya çevreye zarar riski yoksa onam vermediğinde muayeneden vazgeçilebilir. ifadesi konsültasyon liyezon psikiyatrisi ilkeleri açısından incelendiğinde bu klinik durumun gerekçesini açıkça ortaya koyar. Hasta özerkliği esastır."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Yatan hasta psikiyatrik muayenesinde hastada hangi olumsuz hissin uyanmaması özellikle engellenmelidir?",
+     "answer": "Hastanın yargılandığı, incitildiği veya cezalandırıldığı hissine kapılması kesinlikle engellenmelidir.",
+     "id": "k43-s18-e4"
+    }
+   ],
+   "synthesisNarrative": "- **Konsültanın Yaklaşım Modeli:** Konsültan hekimin yaklaşımı hastanın psikiyatriye tutumunu doğrudan belirler. Muayenede yargılayıcı, incitici ve küçük düşürücü tutumlardan kaçınılmalı; **hastanın cezalandırılıyor hissine kapılması kesinlikle önlenmelidir**.\n\n- **Tanışma ve Onam:** Hastalar sıklıkla yatağa bağımlı, düşkün ve çökkündür. Hekim kendini tanıtmalı, görüşme amacını açıklamalı ve hastanın onamını almalıdır. Onam yoksa (intihar/zarar riski hariç) muayeneden vazgeçilebilir.\n\n- **Gizlilik ve Fiziksel Ortam:**\n  * Konsültasyon sürece yayılan yakın bir ilişkidir.\n  * **Fiziksel rahatlık ve gizlilik ortamı sağlanmadan psikiyatrik muayeneye geçilmemelidir**.\n\n> [!IMPORTANT]\n> Koğuş ortamında perde çekilmeden ya da diğer hastaların duyabileceği şekilde psikiyatrik görüşme yapılamaz.",
+   "sourcePdf": {
+    "startPage": 21,
+    "endPage": 22,
+    "title": "klp sınıf 3 2025 .pdf"
+   }
+  },
+  {
+   "id": "k2-43-d-s19",
+   "slideNumber": 19,
+   "title": "Bütüncül Ruhsal Muayene Bileşenleri ve Aktarım",
+   "subtitle": "Klinik değerlendirme parametreleri ve hastayı bilgilendirme",
+   "section": "Bölüm 5: KLP İzlem Süreci ve Muayene",
+   "sectionNumber": 5,
+   "bolum": "5",
+   "pdfSayfalari": [
+    23,
+    24
+   ],
+   "content": "- **Bütüncül Muayene Bileşenleri:**\n  * Dış görünüş ve öz bakım\n  * **Yönelim (oryantasyon)** ve **bilinç düzeyi** (deliryum tespiti için kritik)\n  * İçgörü ve gerçeği değerlendirme yetisi\n  * Davranış, duygudurum ve duygulanım\n  * Düşünce içeriği ve düşünce süreci\n  * Bellek ve bilişsel işlevler\n  * Psikotik özellikler (varsanı, hezeyan) ve **intihar potansiyeli**\n  * Hastalık öncesi kişilik yapısı ve geçmiş psikiyatrik öykü\n\n- **Muayene Sonu Aktarım:** Konsültan hekim görüşmeyi bitirirken hastaya değerlendirmesini kısaca özetlemeli, tedavi çerçevesini anlatmalı ve ayrıntılı düzenlemeyi kendi servis hekiminin ileteceğini belirtmelidir.\n\n> [!NOTE]\n> Deliryum ve intihar riski, her yatan hasta ruhsal muayenesinde sorgulanması zorunlu kırmızı bayraklardır.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Aşağıdakilerden hangisi ruhsal durum muayenesinde bütüncül olarak değerlendirilen temel bileşenlerden biridir?",
+     "options": [
+      {
+       "text": "Bilinç düzeyi, yönelim, içgörü ve intihar potansiyeli",
+       "isCorrect": true,
+       "explanation": "Bilinç düzeyi, yönelim, içgörü ve intihar potansiyeli doğru yanıttır; çünkü bu spesifik klinik ve biyopsikososyal mekanizma doğrudan hedeflenen tanı ve izlem ölçütünü kurar. Bu bileşenler ruhsal durum muayenesinin temel yapı taşlarıdır."
+      },
+      {
+       "text": "Hastanın banka hesap hareketleri",
+       "isCorrect": false,
+       "explanation": "Hastanın banka hesap hareketleri kavramı bu klinik tabloyu oluşturmaz; KLP sürecinde farklı bir alanda tanımlanır. Tıbbi muayene bileşeni değildir."
+      },
+      {
+       "text": "Sadece ayak başparmağının tırnak yapısı",
+       "isCorrect": false,
+       "explanation": "Sadece ayak başparmağının tırnak yapısı kavramı bu klinik tabloyu oluşturmaz; KLP sürecinde farklı bir alanda tanımlanır. Ruhsal durum parametresi değildir."
+      },
+      {
+       "text": "Hastanın oy kullandığı siyasi parti",
+       "isCorrect": false,
+       "explanation": "Hastanın oy kullandığı siyasi parti kavramı bu klinik tabloyu oluşturmaz; KLP sürecinde farklı bir alanda tanımlanır. Tıbbi değerlendirme dışıdır."
+      }
+     ],
+     "id": "k43-s19-e1"
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Hasta yönelim durumu, bilinç düzeyi, içgörü ve intihar potansiyeli açısından değerlendirilmelidir.",
+     "maskedTerm": "yönelim durumu",
+     "hint": "KLP ve genel klinik tıp ilkeleri kapsamında ilgili temel kavramdır.",
+     "id": "k43-s19-e2"
+    },
+    {
+     "type": "spot_the_lie",
+     "id": "k43-s19-e3",
+     "topic": "Bütüncül Ruhsal Muayene Bileşenleri ve Aktarım Klinik Önermeleri",
+     "items": [
+      {
+       "text": "Muayenede hastanın yönelim durumu, bilinç düzeyi ve düşünce içeriği taranır.",
+       "isLie": false,
+       "explanation": "Muayenede hastanın yönelim durumu, bilinç düzeyi ve düşünce içeriği taranır. ifadesi konsültasyon liyezon psikiyatrisi ilkeleri açısından incelendiğinde bu klinik durumun gerekçesini açıkça ortaya koyar. Standart ruhsal muayene parametreleridir."
+      },
+      {
+       "text": "Muayene sonunda hastaya hiçbir şey söylenmeden gizlice odadan kaçılmalıdır.",
+       "isLie": true,
+       "explanation": "Muayene sonunda hastaya hiçbir şey söylenmeden gizlice odadan kaçılmalıdır. ifadesi konsültasyon liyezon psikiyatrisi ilkeleri açısından incelendiğinde bu klinik durumun gerekçesini açıkça ortaya koyar. Konsültan hasta durumunu özetlemeli ve tedavi çerçevesini aktarmalıdır."
+      },
+      {
+       "text": "Hastalık öncesi ruhsal durum ve geçmiş psikiyatrik öykü sorgulanmalıdır.",
+       "isLie": false,
+       "explanation": "Hastalık öncesi ruhsal durum ve geçmiş psikiyatrik öykü sorgulanmalıdır. ifadesi konsültasyon liyezon psikiyatrisi ilkeleri açısından incelendiğinde bu klinik durumun gerekçesini açıkça ortaya koyar. Zemin predispozisyonunu anlamak için gereklidir."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Ruhsal durum muayenesi sonlandırılırken konsültan psikiyatrist hastaya ne aktarmalıdır?",
+     "answer": "Durumuna ve hastalığına ilişkin değerlendirmesini kısaca belirtmeli, tedavi planının genel çerçevesini açıklamalı ve ileri düzenlemeleri servis hekiminin aktaracağını söylemelidir.",
+     "id": "k43-s19-e4"
+    }
+   ],
+   "synthesisNarrative": "- **Bütüncül Muayene Bileşenleri:**\n  * Dış görünüş ve öz bakım\n  * **Yönelim (oryantasyon)** ve **bilinç düzeyi** (deliryum tespiti için kritik)\n  * İçgörü ve gerçeği değerlendirme yetisi\n  * Davranış, duygudurum ve duygulanım\n  * Düşünce içeriği ve düşünce süreci\n  * Bellek ve bilişsel işlevler\n  * Psikotik özellikler (varsanı, hezeyan) ve **intihar potansiyeli**\n  * Hastalık öncesi kişilik yapısı ve geçmiş psikiyatrik öykü\n\n- **Muayene Sonu Aktarım:** Konsültan hekim görüşmeyi bitirirken hastaya değerlendirmesini kısaca özetlemeli, tedavi çerçevesini anlatmalı ve ayrıntılı düzenlemeyi kendi servis hekiminin ileteceğini belirtmelidir.\n\n> [!NOTE]\n> Deliryum ve intihar riski, her yatan hasta ruhsal muayenesinde sorgulanması zorunlu kırmızı bayraklardır.",
+   "sourcePdf": {
+    "startPage": 23,
+    "endPage": 24,
+    "title": "klp sınıf 3 2025 .pdf"
+   }
+  },
+  {
+   "id": "k2-43-d-s20",
+   "slideNumber": 20,
+   "title": "KLP Yazılı Raporu ve Klinik Takip İlkeleri",
+   "subtitle": "Biyopsikososyal dökümantasyon, hekimler arası iletişim ve gizlilik",
+   "section": "Bölüm 5: KLP İzlem Süreci ve Muayene",
+   "sectionNumber": 5,
+   "bolum": "5",
+   "pdfSayfalari": [
+    25,
+    26
+   ],
+   "content": "- **Konsültasyon Raporunun Niteliği:** Biyopsikososyal değerlendirme raporu, **özgün ve resmi bir tıbbi belgedir**. Hekimler arası iletişimi ve tedavi koordinasyonunu sağlar.\n\n- **Raporda Temel İlkeler:**\n  * Konsültasyon talebine neden olan **temel soruya doğrudan odaklanmalıdır**.\n  * Düşünceler açık, açıklayıcı ve pratik çözüm sunucu olmalıdır.\n  * Tedavinin gerektirdiği bilgileri içermeli; hastanın mahrem ve tedavisel ilgisi olmayan sırlarında gizlilik korunmalıdır.\n\n- **Hastalık Düşünülmediğinde Tutum:** Şayet hastada herhangi bir psikiyatrik hastalık düşünülmüyorsa, problemin boyutu ne olursa olsun **bu durum raporda açık ve net biçimde ifade edilmelidir**.\n\n> [!IMPORTANT]\n> Konsültasyon raporu primer hekim için somut, uygulanabilir ve net bir tıbbi yol haritası sunmalıdır.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "KLP konsültasyonu sonucunda hastada herhangi bir psikiyatrik hastalık saptanmadığında izlenecek doğru tutum nedir?",
+     "options": [
+      {
+       "text": "Herhangi bir psikiyatrik hastalık düşünülmediği raporda açıkça belirtilmelidir",
+       "isCorrect": true,
+       "explanation": "Herhangi bir psikiyatrik hastalık düşünülmediği raporda açıkça belirtilmelidir doğru yanıttır; çünkü bu spesifik klinik ve biyopsikososyal mekanizma doğrudan hedeflenen tanı ve izlem ölçütünü kurar. Hastalık düşünülmüyorsa problemin boyutu ne olursa olsun açıkça yazılmalıdır."
+      },
+      {
+       "text": "Rapor yazmaktan vazgeçilip dosya boş bırakılmalıdır",
+       "isCorrect": false,
+       "explanation": "Rapor yazmaktan vazgeçilip dosya boş bırakılmalıdır kavramı bu klinik tabloyu oluşturmaz; KLP sürecinde farklı bir alanda tanımlanır. Konsültasyona resmi yazılı yanıt zorunludur."
+      },
+      {
+       "text": "Sırf rapor dolsun diye hastaya uydurma psikoz teşhisi konulmalıdır",
+       "isCorrect": false,
+       "explanation": "Sırf rapor dolsun diye hastaya uydurma psikoz teşhisi konulmalıdır kavramı bu klinik tabloyu oluşturmaz; KLP sürecinde farklı bir alanda tanımlanır. Etik ve bilimsel dışı kabul edilemez davranıştır."
+      },
+      {
+       "text": "Hasta derhal ameliyathaneye gönderilmelidir",
+       "isCorrect": false,
+       "explanation": "Hasta derhal ameliyathaneye gönderilmelidir kavramı bu klinik tabloyu oluşturmaz; KLP sürecinde farklı bir alanda tanımlanır. Tıbbi endikasyonla ilgisizdir."
+      }
+     ],
+     "id": "k43-s20-e1"
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Tıbbi hastalarda biyopsikososyal değerlendirmeye ilişkin rapor, özgün bir tıbbi dökümandır.",
+     "maskedTerm": "tıbbi dökümandır",
+     "hint": "KLP ve genel klinik tıp ilkeleri kapsamında ilgili temel kavramdır.",
+     "id": "k43-s20-e2"
+    },
+    {
+     "type": "spot_the_lie",
+     "id": "k43-s20-e3",
+     "topic": "KLP Yazılı Raporu ve Klinik Takip İlkeleri Klinik Önermeleri",
+     "items": [
+      {
+       "text": "Konsültasyon raporu konsültasyon talebine neden olan temel soruna odaklanmalıdır.",
+       "isLie": false,
+       "explanation": "Konsültasyon raporu konsültasyon talebine neden olan temel soruna odaklanmalıdır. ifadesi konsültasyon liyezon psikiyatrisi ilkeleri açısından incelendiğinde bu klinik durumun gerekçesini açıkça ortaya koyar. Sorudan sapmadan amaca yönelik olmalıdır."
+      },
+      {
+       "text": "Psikiyatrik hastalık yoksa bu durum asla rapor edilmemeli, gizlenmelidir.",
+       "isLie": true,
+       "explanation": "Psikiyatrik hastalık yoksa bu durum asla rapor edilmemeli, gizlenmelidir. ifadesi konsültasyon liyezon psikiyatrisi ilkeleri açısından incelendiğinde bu klinik durumun gerekçesini açıkça ortaya koyar. Hastalık düşünülmüyorsa raporda açıkça ifade edilmelidir."
+      },
+      {
+       "text": "Yazılı konsültasyon hekimler arası resmi iletişimi ve tedavi işbirliğini sağlar.",
+       "isLie": false,
+       "explanation": "Yazılı konsültasyon hekimler arası resmi iletişimi ve tedavi işbirliğini sağlar. ifadesi konsültasyon liyezon psikiyatrisi ilkeleri açısından incelendiğinde bu klinik durumun gerekçesini açıkça ortaya koyar. Raporun temel işlevi hekimler arası koordinasyondur."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "KLP yazılı konsültasyon raporunun hasta gizliliği ve etik boyutu nasıldır?",
+     "answer": "Tedavinin gerektirdiği bilgiler açıkça yer almalı; ancak hastanın tedaviyi ilgilendirmeyen kişisel ve mahrem bilgilerinde hasta hakları ve gizlilik korunmalıdır.",
+     "id": "k43-s20-e4"
+    }
+   ],
+   "synthesisNarrative": "- **Konsültasyon Raporunun Niteliği:** Biyopsikososyal değerlendirme raporu, **özgün ve resmi bir tıbbi belgedir**. Hekimler arası iletişimi ve tedavi koordinasyonunu sağlar.\n\n- **Raporda Temel İlkeler:**\n  * Konsültasyon talebine neden olan **temel soruya doğrudan odaklanmalıdır**.\n  * Düşünceler açık, açıklayıcı ve pratik çözüm sunucu olmalıdır.\n  * Tedavinin gerektirdiği bilgileri içermeli; hastanın mahrem ve tedavisel ilgisi olmayan sırlarında gizlilik korunmalıdır.\n\n- **Hastalık Düşünülmediğinde Tutum:** Şayet hastada herhangi bir psikiyatrik hastalık düşünülmüyorsa, problemin boyutu ne olursa olsun **bu durum raporda açık ve net biçimde ifade edilmelidir**.\n\n> [!IMPORTANT]\n> Konsültasyon raporu primer hekim için somut, uygulanabilir ve net bir tıbbi yol haritası sunmalıdır.",
+   "sourcePdf": {
+    "startPage": 25,
+    "endPage": 26,
+    "title": "klp sınıf 3 2025 .pdf"
+   }
+  },
+  {
+   "id": "k2-43-d-s21",
+   "slideNumber": 21,
+   "title": "Tıbbi Hastalıklarda Psikiyatrik Eş Tanılar ve Özel Tablolar",
+   "subtitle": "Kanser, kardiyak/metabolik hastalıklar, kronik yeti yitimi ve bağımlılık",
+   "section": "Bölüm 6: Psikiyatrik Eş Tanılar ve Tablolar",
+   "sectionNumber": 6,
+   "bolum": "6",
+   "pdfSayfalari": [
+    27,
+    29
+   ],
+   "content": "- **Hastalık ve Psikiyatrik Eş Tanı İlişkileri:**\n  * **Onkolojik hastalıklar ve fiziksel özürlülük:** Yaşamı tehdit eden durumlarda **emosyonel bozukluklar** (uyum, reaktif çökkünlük) daha sıktır.\n  * **Metabolik sendrom, iskemik kalp hastalığı, hipotiroidi ve porfiri:** Bu tablolarda **anksiyete bozukluğu** belirgin şekilde daha sık bildirilmiştir.\n  * **Kronik yeti yitimi yapan hastalıklar:** Akut hastalıklara kıyasla; işlev, yeti ve yetenek kaybına yol açan kronik hastalıklarda **depresyon** gelişimi çok daha sıktır.\n\n- **Özel Klinik Gruplar:**\n  * **Histeri (Konversiyon):** Önemli bir sorundur ancak sevk oranı düşüktür.\n  * **Alkol-madde bağımlılığı, intihar girişimleri ve psikotik tablolar** KLP'de yüksek öneme sahip diğer tablolardır.\n\n> [!NOTE]\n> Kardiyak ve metabolik tablolarda anksiyete, kronik yeti yitiminde depresyon, kanserde ise emosyonel krizler ön plandadır.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Metabolik sendrom, iskemik kalp hastalığı, hipotiroidi ve porfiride en sık bildirilen psikiyatrik bozukluk hangisidir?",
+     "options": [
+      {
+       "text": "Anksiyete bozukluğu",
+       "isCorrect": true,
+       "explanation": "Anksiyete bozukluğu doğru yanıttır; çünkü bu spesifik klinik ve biyopsikososyal mekanizma doğrudan hedeflenen tanı ve izlem ölçütünü kurar. Bu tablolarda anksiyete bozukluğu belirgin şekilde daha sık bildirilmiştir."
+      },
+      {
+       "text": "Bipolar mani",
+       "isCorrect": false,
+       "explanation": "Bipolar mani kavramı bu klinik tabloyu oluşturmaz; KLP sürecinde farklı bir alanda tanımlanır. Metabolik/iskemik tablolarda primer mani beklenmez."
+      },
+      {
+       "text": "Şizofreni",
+       "isCorrect": false,
+       "explanation": "Şizofreni kavramı bu klinik tabloyu oluşturmaz; KLP sürecinde farklı bir alanda tanımlanır. Primer psikotik bozukluktur. Klinik yaklaşımda bu ayrım büyük bir önem taşır."
+      },
+      {
+       "text": "Narkolepsi",
+       "isCorrect": false,
+       "explanation": "Narkolepsi kavramı bu klinik tabloyu oluşturmaz; KLP sürecinde farklı bir alanda tanımlanır. Uyku bozukluğudur. Klinik yaklaşımda bu ayrım büyük bir önem taşır."
+      }
+     ],
+     "id": "k43-s21-e1"
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Genellikle yaşamı tehdit eden onkolojik hastalıklarda emosyonel bozukluk daha sıktır.",
+     "maskedTerm": "onkolojik",
+     "hint": "KLP ve genel klinik tıp ilkeleri kapsamında ilgili temel kavramdır.",
+     "id": "k43-s21-e2"
+    },
+    {
+     "type": "spot_the_lie",
+     "id": "k43-s21-e3",
+     "topic": "Tıbbi Hastalıklarda Psikiyatrik Eş Tanılar ve Özel Tablolar Klinik Önermeleri",
+     "items": [
+      {
+       "text": "Kronik ve yetenek kaybına yol açan hastalıklarda sıklıkla depresyon gelişir.",
+       "isLie": false,
+       "explanation": "Kronik ve yetenek kaybına yol açan hastalıklarda sıklıkla depresyon gelişir. ifadesi konsültasyon liyezon psikiyatrisi ilkeleri açısından incelendiğinde bu klinik durumun gerekçesini açıkça ortaya koyar. Yeti yitimi kronik reaktif depresyonun en güçlü tetikleyicisidir."
+      },
+      {
+       "text": "İskemik kalp hastalığı ve hipotiroidide anksiyete bozukluğu sıklığı artmıştır.",
+       "isLie": false,
+       "explanation": "İskemik kalp hastalığı ve hipotiroidide anksiyete bozukluğu sıklığı artmıştır. ifadesi konsültasyon liyezon psikiyatrisi ilkeleri açısından incelendiğinde bu klinik durumun gerekçesini açıkça ortaya koyar. Endokrin ve kardiyak patolojiler anksiyeteyi tetikler."
+      },
+      {
+       "text": "Kanser hastalarında hiçbir zaman duygudurum veya emosyonel bozukluk görülmez.",
+       "isLie": true,
+       "explanation": "Kanser hastalarında hiçbir zaman duygudurum veya emosyonel bozukluk görülmez. ifadesi konsültasyon liyezon psikiyatrisi ilkeleri açısından incelendiğinde bu klinik durumun gerekçesini açıkça ortaya koyar. Kanser ve özürlülükte emosyonel bozukluklar çok daha sıktır."
+      }
+     ]
+    },
+    {
+     "type": "interactive_table",
+     "title": "Tıbbi Durumlar ve Eşlik Eden Baskın Psikiyatrik Tablolar",
+     "id": "k43-s21-e4",
+     "tableHeaders": [
+      "Tıbbi Durum",
+      "Patolojik Özellik",
+      "En Sık Görülen Psikiyatrik Tablo"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Onkoloji ve Özürlülük",
+         "isMasked": false,
+         "hint": "KLP kapsamında ilgili klinik ve biyopsikososyal bilgidir."
+        },
+        {
+         "text": "Yaşamı tehdit ve beden hasarı",
+         "isMasked": false,
+         "hint": "KLP kapsamında ilgili klinik ve biyopsikososyal bilgidir."
+        },
+        {
+         "text": "Emosyonel bozukluklar",
+         "isMasked": true,
+         "hint": "KLP kapsamında ilgili klinik ve biyopsikososyal bilgidir."
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "İskemik Kalp ve Tiroid",
+         "isMasked": false,
+         "hint": "KLP kapsamında ilgili klinik ve biyopsikososyal bilgidir."
+        },
+        {
+         "text": "Metabolik/endokrin stres",
+         "isMasked": false,
+         "hint": "KLP kapsamında ilgili klinik ve biyopsikososyal bilgidir."
+        },
+        {
+         "text": "Anksiyete bozukluğu",
+         "isMasked": true,
+         "hint": "KLP kapsamında ilgili klinik ve biyopsikososyal bilgidir."
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Kronik Sakatlık/Hastalık",
+         "isMasked": false,
+         "hint": "KLP kapsamında ilgili klinik ve biyopsikososyal bilgidir."
+        },
+        {
+         "text": "İşlev ve yetenek kaybı",
+         "isMasked": false,
+         "hint": "KLP kapsamında ilgili klinik ve biyopsikososyal bilgidir."
+        },
+        {
+         "text": "Majör depresyon",
+         "isMasked": true,
+         "hint": "KLP kapsamında ilgili klinik ve biyopsikososyal bilgidir."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "synthesisNarrative": "- **Hastalık ve Psikiyatrik Eş Tanı İlişkileri:**\n  * **Onkolojik hastalıklar ve fiziksel özürlülük:** Yaşamı tehdit eden durumlarda **emosyonel bozukluklar** (uyum, reaktif çökkünlük) daha sıktır.\n  * **Metabolik sendrom, iskemik kalp hastalığı, hipotiroidi ve porfiri:** Bu tablolarda **anksiyete bozukluğu** belirgin şekilde daha sık bildirilmiştir.\n  * **Kronik yeti yitimi yapan hastalıklar:** Akut hastalıklara kıyasla; işlev, yeti ve yetenek kaybına yol açan kronik hastalıklarda **depresyon** gelişimi çok daha sıktır.\n\n- **Özel Klinik Gruplar:**\n  * **Histeri (Konversiyon):** Önemli bir sorundur ancak sevk oranı düşüktür.\n  * **Alkol-madde bağımlılığı, intihar girişimleri ve psikotik tablolar** KLP'de yüksek öneme sahip diğer tablolardır.\n\n> [!NOTE]\n> Kardiyak ve metabolik tablolarda anksiyete, kronik yeti yitiminde depresyon, kanserde ise emosyonel krizler ön plandadır.",
+   "sourcePdf": {
+    "startPage": 27,
+    "endPage": 29,
+    "title": "klp sınıf 3 2025 .pdf"
+   }
+  },
+  {
+   "id": "k2-43-d-s22",
+   "slideNumber": 22,
+   "title": "[OYUN SAYFASI] Ders Sonu Oyunları: Konsültasyon Liyezon Psikiyatrisi",
+   "subtitle": "KLP temel kavramları, Lipowski modelleri ve klinik izlem basamakları pekiştirme oyunları",
+   "section": "Bölüm 6: Psikiyatrik Eş Tanılar ve Tablolar",
+   "sectionNumber": 6,
+   "bolum": "6",
+   "isGameFinale": true,
+   "pdfSayfalari": [
+    29
+   ],
+   "content": "- **Tebrikler!** Konsültasyon-Liyezon Psikiyatrisi dersini başarıyla tamamladınız.\n\n- Bu oyun sayfasında;\n  * KLP izlem sürecinin 5 basamaklı kronolojik sıralamasını yapacak,\n  * Klinik epidemiyolojik oranları tahmin edecek,\n  * Tıbbi hastalıklarda psikiyatrik eş tanı pertürbasyonlarını çözecek ve\n  * Bozulmuş konsültasyon raporu metnini düzelterek bilgilerinizi pekiştireceksiniz!\n\n> [!NOTE]\n> Ders sonu oyunları, teorik bilgilerin pratik klinik reflekslere dönüşmesini sağlar.",
+   "interactiveElements": [
+    {
+     "type": "sequence_order",
+     "id": "k43-s22-e1",
+     "prompt": "KLP'nin 5 basamaklı klinik izlem sürecini doğru kronolojik sıraya diziniz:",
+     "steps": [
+      "Hastaya yönelik tıbbi, ailesel ve hemşirelik verilerinin toplanması",
+      "Onamlı, yargılayıcı olmayan ruhsal durum muayenesinin yapılması",
+      "Biyopsikososyal tanı ve tedavi planının oluşturulması",
+      "Tanı-tedavi planının hastaya ve primer servis hekimine aktarılması",
+      "Klinik takip, konsültasyon raporunun yazımı ve izleme"
+     ],
+     "explanation": "KLP izlem süreci veri toplamadan başlayıp ruhsal muayene, planlama, aktarım ve klinik takibe doğru kronolojik bir sıra izler."
+    },
+    {
+     "type": "estimate_slider",
+     "min": 0,
+     "max": 100,
+     "step": 5,
+     "unit": "%",
+     "tolerance": 10,
+     "explanation": "Yapılan çalışmalarda bu belirtilerle istenen konsültasyonların yarısından fazlasında (%50+) ruhsal hastalık tespit edilmemiştir.",
+     "id": "k43-s22-e2",
+     "prompt": "Ajitasyon, anksiyete, depresyon ve konversiyon nedeniyle istenen konsültasyonların yaklaşık yüzde kaçında bu belirtileri karşılayacak bir ruhsal hastalık saptanmamıştır?",
+     "answer": 50
+    },
+    {
+     "type": "perturbation",
+     "scenario": "Genel hastane kliniğinde yatan hastanın tıbbi tedavisine KLP konsültasyon ve liyezon hizmeti entegre ediliyor.",
+     "id": "k43-s22-e3",
+     "parameters": [
+      {
+       "name": "Tedaviye ve İlaçlara Uyum Düzeyi",
+       "correct": "up",
+       "explanation": "KLP desteği hastanın hastalığını anlamasını ve tedaviye aktif uyum göstermesini sağlar."
+      },
+      {
+       "name": "Hastanede Ortalama Kalış Süresi",
+       "change": "azalır",
+       "correct": "down",
+       "explanation": "Erken psikiyatrik tanı ve kriz müdahalesi hastanede yatış süresini anlamlı derecede kısaltır."
+      },
+      {
+       "name": "Toplam Sağlık Bakım Maliyeti",
+       "change": "azalır",
+       "correct": "down",
+       "explanation": "Yatış süresinin kısalması ve mükerrer tetkiklerin engellenmesiyle sağlık bakım maliyetleri düşer."
+      }
+     ]
+    },
+    {
+     "type": "fix_the_text",
+     "explanation": "Konsültasyon öncesinde hastaya bilgi verilmesi ve onamının alınması etik ve yasal bir zorunluluktur; gizli muayene yapılamaz.",
+     "id": "k43-s22-e4",
+     "text": "KLP uygulamasında konsültasyon öncesinde hastanın haberi olmadan gizlice muayene yapılması temel etik ve yasal bir kuraldır.",
+     "errors": [
+      {
+       "wrong": "hastanın haberi olmadan gizlice",
+       "correct": "hastaya bilgi verilip onamı alınarak",
+       "options": [
+        "hastanın haberi olmadan gizlice",
+        "hastaya bilgi verilip onamı alınarak",
+        "yalnızca taburculuk gününde"
+       ],
+       "explanation": "Konsültasyon öncesinde hastaya bilgi verilmesi ve onamının alınması etik ve yasal bir zorunluluktur; gizli muayene yapılamaz."
+      }
+     ]
+    }
+   ],
+   "synthesisNarrative": "- **Tebrikler!** Konsültasyon-Liyezon Psikiyatrisi dersini başarıyla tamamladınız.\n\n- Bu oyun sayfasında;\n  * KLP izlem sürecinin 5 basamaklı kronolojik sıralamasını yapacak,\n  * Klinik epidemiyolojik oranları tahmin edecek,\n  * Tıbbi hastalıklarda psikiyatrik eş tanı pertürbasyonlarını çözecek ve\n  * Bozulmuş konsültasyon raporu metnini düzelterek bilgilerinizi pekiştireceksiniz!\n\n> [!NOTE]\n> Ders sonu oyunları, teorik bilgilerin pratik klinik reflekslere dönüşmesini sağlar."
+  }
+ ],
+ "courseId": "y25-k2-43-konsultasyon-liyezon-psikiyatrisi",
+ "committee": "donem3-kurul2",
+ "discipline": "psikiyatri",
+ "sayfaHaritasi": "teyitli",
+ "deckId": "k2p-y25-k2-43-konsultasyon-liyezon-psikiyatrisi",
+ "donem": "2025-2026",
+ "arsiv": true,
+ "confidence": "high",
+ "matchedPastQuestionsCount": 0,
+ "sinama": {
+  "etiket": "2025-2026 Arşiv",
+  "aciklama": "Bu ders 2025-2026 dönemi (geçen yıl) slaytlarından hazırlanmıştır; 2026-2027 güncel müfredat dersleriyle karışmaz."
+ }
+}

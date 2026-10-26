@@ -220,6 +220,20 @@
       ]
     },
     {
+      "id": "pdf_terim",
+      "kapsam": "ders",
+      "durum": "hazir",
+      "gerekir": [
+        "yayin"
+      ],
+      "komut": "ders_zinciri.py adımı `terim` · scripts/sesli_anlatim/terim_sozlugu.py + TALIMAT_TERIM.md",
+      "kapi": "scripts/sesli_anlatim/terim_sozlugu.py dogrula <key> terimler.json",
+      "cikti": [
+        "data/sesli_anlatim/terim/<key>.json (cihaz + Oracle)"
+      ],
+      "not": "Sesli ders PDF terim yardımcısı (2026-10-26): ⓘ açıkken slayt altı panel, kapalıyken kesikli altı çizili terim + açılır kart. Claude düşerse doğrulanmış sözlükten otomatik yol."
+    },
+    {
       "id": "bilgi_deposu",
       "kapsam": "kurul",
       "durum": "hazir",

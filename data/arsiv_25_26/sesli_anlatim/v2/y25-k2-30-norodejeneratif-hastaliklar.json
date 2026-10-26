@@ -1,0 +1,3578 @@
+{
+ "surum": 2,
+ "ders_id": "k2-30",
+ "baslik": "Nörodejeneratif Hastalıklar",
+ "bolumler": [
+  {
+   "id": "k2-30-b01",
+   "baslik": "Nörodejeneratif hastalıkların ortak özellikleri",
+   "paragraflar": [
+    {
+     "id": "k2-30-p001",
+     "sayfa": 2,
+     "cumleler": [
+      {
+       "id": "k2-30-c0001",
+       "ses": "Santral sinir sisteminin dejeneratif hastalıkları, beyindeki fiziksel lokalizasyonlarından çok fonksiyonları nedeniyle ortak özelliklere sahip nöron gruplarının dejenerasyonu ile karakterizedir; yani hastalığı belirleyen yer değil, işlevsel olarak birbirine bağlı nöron ailesidir.",
+       "ekran": "SSS dejeneratif hastalıkları: **işlevsel olarak ortak nöron gruplarının** dejenerasyonu",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "işlevsel olarak ortak nöron gruplarının",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "SSS'nin dejeneratif hastalıkları, beyindeki fiziksel lokalizasyonlarından çok fonksiyonları nedeniyle ortak özelliklere sahip nöron gruplarının dejenerasyonu ile karakterizedir."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-30-c0002",
+       "ses": "Bu hastalıkların çoğunda spesifik hastalığı gösteren anormal proteinler birikir; bu nedenle patolojide hangi proteinin biriktiğine bakmak tanının temelidir.",
+       "ekran": "Çoğunda hastalığa özgü **anormal protein birikimi**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "anormal protein birikimi",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "Bu hastalıkların çoğunda spesifik hastalığı gösteren anormal proteinler birikir."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-30-c0003",
+       "ses": "Önemli ancak henüz cevaplanmamış bir soru şudur: bu proteinler tüm sinir sistemi boyunca tüm nöronlarda eksprese edildiği hâlde, birikim ve hastalık neden bazı nöronları özellikle tercih ediyor?",
+       "ekran": "Açık soru: protein her nöronda eksprese edilir, birikim neden **seçici** nöronlarda?",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "Önemli ancak henüz cevaplanmamış bir soru, bu proteinlerin tüm sinir sistemi boyunca tüm nöronlarda eksprese edilmelerine karşın, birikimin ve hastalıkların neden bazı nöronları özellikle tercih ettiğidir."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-30-p002",
+     "sayfa": 3,
+     "cumleler": [
+      {
+       "id": "k2-30-c0004",
+       "ses": "Serebral kortikal nöronların etkilenmesi hafıza, dil, anlama ve planlamanın kaybıyla, tüm komponentleriyle demansa yol açar.",
+       "ekran": "Kortikal nöron tutulumu → **demans**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "demans",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "Serebral kortikal nöronların etkilenmesi hafıza, dil, anlama, planlamanın kaybıyla tüm komponentleriyle demansa,"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-30-c0005",
+       "ses": "Bazal ganglionlardaki nöronların etkilenmesi hareket bozukluklarına, serebellumun etkilenmesi ataksiye, motor nöronların etkilenmesi ise güçsüzlüğe neden olur; böylece klinik tablo hangi nöron grubunun kaybedildiğini doğrudan yansıtır.",
+       "ekran": "Bazal ganglion → **hareket bozukluğu**; serebellum → **ataksi**; motor nöron → **güçsüzlük**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "hareket bozukluğu",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [
+        "ed41695f77aa",
+        "d3-k2-nor-004",
+        "past-1790877040564-780438"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "bazal ganglionlardaki nöronların etkilenmesi hareket bozukluklarına,",
+         "serebellumun etkilenmesi ataksiye,",
+         "motor nöronların etkilenmesi güçsüzlüğe neden olur."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-30-p003",
+     "sayfa": 4,
+     "cumleler": [
+      {
+       "id": "k2-30-c0006",
+       "ses": "Çoğu dejeneratif hastalıkta primer bir hedef bölge olmasına rağmen, diğer beyin bölgeleri de hastalığın gidişi sırasında etkilenebilir.",
+       "ekran": "Primer hedef bölge var, ama seyir içinde **diğer bölgeler de** tutulabilir",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 4,
+        "satir": [
+         "Çoğu dejeneratif hastalıkta primer bir hedef bölge olmasına rağmen, diğer beyin bölgeleri de hastalığın gidişi sırasında etkilenebilir."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-30-c0007",
+       "ses": "Örneğin Huntington hastalığında erken semptom hareket bozukluğudur, daha sonra kortikal tutulumla birlikte bilişsel patolojiler de ortaya çıkar.",
+       "ekran": "Huntington: önce **hareket bozukluğu**, sonra kortikal tutulumla bilişsel bozulma",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 4,
+        "satir": [
+         "Huntington hastalığında erken semptom hareket bozukluğudur, daha sonra kortikal tutulumla birlikte bilişsel patolojiler de ortaya çıkar."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-30-c0008",
+       "ses": "Demans, bilincin normal olarak korunmasına rağmen bellek bozukluğu ve diğer bilişsel kusurların ortaya çıkması olarak tanımlanır; bilinç kaybı olan tabloyu demans saymayız.",
+       "ekran": "Demans: **bilinç korunurken** bellek ve bilişsel kusur",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "bilinç korunurken",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 4,
+        "satir": [
+         "Demans, bilincin normal olarak korunmasına rağmen, bellek bozukluğu ve diğer bilişsel kusurların ortaya çıkması olarak tanımlanır."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-30-c0009",
+       "ses": "Demans birçok nörodejeneratif hastalık sırasında ortaya çıkar, serebral korteksi etkileyen hastalıklarda da görülür ve yaşlı popülasyonda artan bir halk sağlığı sorunudur.",
+       "ekran": "Demans: yaşlı popülasyonda **artan halk sağlığı sorunu**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "artan halk sağlığı sorunu",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [
+        "d3-k2-nor-010"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 4,
+        "satir": [
+         "Yaşlı populasyonda artan bir halk sağlığı sorunudur."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-30-b02",
+   "baslik": "Alzheimer hastalığı: klinik ve epidemiyoloji",
+   "paragraflar": [
+    {
+     "id": "k2-30-p004",
+     "sayfa": 5,
+     "cumleler": [
+      {
+       "id": "k2-30-c0010",
+       "ses": "Alzheimer hastalığı yaşlılarda demansın en sık nedenidir.",
+       "ekran": "Alzheimer: yaşlılarda **demansın en sık nedeni**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "demansın en sık nedeni",
+         "tur": "terim"
+        },
+        {
+         "metin": "demansın en sık nedeni",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [
+        "past-1790877042007-733748"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "Alzheimer hastalığı yaşlılarda demansın en sık nedenidir."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-30-c0011",
+       "ses": "Hastalık genellikle yüksek entelektüel işlevin çok yavaş bozulması ve duygu durumu ile davranış değişiklikleriyle kendini gösterir.",
+       "ekran": "Başlangıç: yüksek entelektüel işlevde **çok yavaş bozulma**, duygu durumu ve davranış değişikliği",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "Hastalık genellikle yüksek entellektüel işlevin çok yavaş bozulması ve duygu, durum ile davranış değişiklikleri ile kendini gösterir."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-30-c0012",
+       "ses": "Daha sonra dezoryantasyon, bellek kaybı ve afazi gibi ağır korteks işlev bozuklukları ortaya çıkacaktır.",
+       "ekran": "Sonra: **dezoryantasyon, bellek kaybı, afazi**",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "Daha sonra dezoryantasyon, bellek kaybı ve afazi gibi ağır korteks işlev bozuklukları ortaya çıkacaktır."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-30-c0013",
+       "ses": "İzleyen beş ila on yılda hasta belirgin şekilde iş göremez, suskun ve hareketsiz hâle gelir.",
+       "ekran": "**5–10 yılda** iş göremez, suskun, hareketsiz",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "5–10 yılda",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "İzleyen 5 ila 10 yılda hasta belirgin şekilde iş göremez, suskun ve hareketsiz hale gelir."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-30-p005",
+     "sayfa": 6,
+     "cumleler": [
+      {
+       "id": "k2-30-c0014",
+       "ses": "Ölüm genellikle eklenen pnömoni ya da diğer enfeksiyonlarla gerçekleşir; yani hastayı kaybettiren çoğu zaman hastalığın kendisi değil, hareketsizliğe eklenen enfeksiyondur.",
+       "ekran": "Ölüm: eklenen **pnömoni** ya da diğer enfeksiyonlar",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "Ölüm genellikle eklenen pnömoni ya da diğer enfeksiyonlarla gerçekleşir."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-30-c0015",
+       "ses": "Alzheimer hastalığında yaş önemli bir risk faktörüdür: insidans altmış beş ile yetmiş dört yaş grubunda yüzde üç, yetmiş beş ile seksen dört yaş grubunda yüzde on dokuz, seksen dört yaş ve üstünde yüzde kırk yedidir.",
+       "ekran": "Yaş risk faktörü: insidans 65–74 yaşta **%3**, 75–84 yaşta **%19**, ≥84 yaşta **%47**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "%47",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "AH'da yaş önemli bir risk faktörüdür.",
+         "İnsidens 65-74 yaş grubunda %3, 75-84 yaş grubunda %19 ve 84 yaş ve üstündekilerde %47'dir."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-30-c0016",
+       "ses": "Olguların çoğu sporadiktir, yüzde beş ile on kadarı ise ailesel geçişlidir.",
+       "ekran": "Çoğu **sporadik**; **%5–10** ailesel",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "%5–10",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "Olguların çoğu sporadiktir, %5-10’u ise ailesel geçişlidir."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-30-c0017",
+       "ses": "Sporadik vakalar genel olarak nadiren elli yaşından önce belirti verir, ancak hastalığın kalıtsal geçişli bazı formlarında erken başlangıç görülebilir.",
+       "ekran": "Sporadik: nadiren **50 yaş öncesi**; kalıtsal formlarda erken başlangıç",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "Sporadik vakalar genel olarak nadiren 50 yaşından önce belirti verir, ancak hastalığın kalıtsal geçişli bazı formlarında erken başlangıç görülebilir."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-30-b03",
+   "baslik": "Alzheimer hastalığının patogenezi",
+   "paragraflar": [
+    {
+     "id": "k2-30-p006",
+     "sayfa": 7,
+     "cumleler": [
+      {
+       "id": "k2-30-c0018",
+       "ses": "Ailesel biçimlerden elde edilen kanıtlar, beta amiloid adı verilen bir peptidin beyinde birikmesinin, zaman içinde Alzheimer hastalığıyla sonlanan bir olaylar zincirini başlattığına işaret eder.",
+       "ekran": "Ailesel formlar: **beta amiloid birikimi** hastalık zincirini başlatır",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "beta amiloid birikimi",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "Ailesel biçimlerinden elde edilen kanıtlar, beta amiloid (Aβ) olarak isimlendirilen bir peptidin beyinde birikmesinin, zaman içerisinde Alzheimer hastalığı ile sonlanan bir dizi olaylar zincirini başlattığına işaret etmektedir."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-30-c0019",
+       "ses": "Beta amiloid, amiloid öncü proteini denen büyük bir transmembran proteinden, beta amiloid dönüştürücü enzim ve gama sekretaz adlı iki enzimle bölünerek türetilir.",
+       "ekran": "Aβ: **APP**'den **BACE + γ-sekretaz** ile bölünerek oluşur",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "BACE + γ-sekretaz",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "Aβ amiloid öncü proteini (APP) olarak bilinen büyük bir transmembran proteininden, β-amiloid konverting enzim (BACE) ve γ-sekretaz ismi verilen iki enzim aracılığıyla bölünerek türetilir."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-30-c0020",
+       "ses": "Amiloid öncü proteini ayrıca alfa sekretaz ve gama sekretazla da bölünebilir; bu yol patojenik olmayan başka bir peptid açığa çıkarır, yani kesimi ilk hangi enzimin yaptığı sonucu belirler.",
+       "ekran": "APP **α-sekretaz + γ-sekretaz** ile bölünürse → patojenik olmayan peptid",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "α-sekretaz + γ-sekretaz",
+         "tur": "tuzak"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "APP ayrıca α-sekretaz ve γ-sekretaz ile bölünebilir, bu da patojenik olmayan başka bir peptid açığa çıkarır."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-30-p007",
+     "sayfa": 8,
+     "cumleler": [
+      {
+       "id": "k2-30-c0021",
+       "ses": "Amiloid öncü proteininde veya gama sekretazın bileşenleri olan presenilin bir ve presenilin ikide mutasyon, beta amiloid miktarını artırarak ailesel Alzheimer hastalığına yol açar; bu bilgi çıkmışta soruldu, presenilin mutasyonları geç başlangıçlı değil ailesel, erken başlangıçlı formla ilişkilidir.",
+       "ekran": "**APP** ya da γ-sekretaz bileşeni **presenilin-1/2** mutasyonu → Aβ artışı → ailesel AH",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "presenilin-1/2",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [
+        "d3-k2-tbg-002"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "APP’de veya γ-sekretaz bileşenlerinde mutasyon (presenilin-1 veya presenilin-2) Aβ miktarını arttırarak ailesel AH’ye yol açar."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-30-c0022",
+       "ses": "Amiloid öncü proteininin geni yirmi birinci kromozomda yer alır.",
+       "ekran": "APP geni **21. kromozomda**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "21. kromozomda",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "APP geni 21. kromozomda yer alır."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-30-c0023",
+       "ses": "Bu yüzden fazladan bir amiloid öncü proteini geni taşıyan trizomi yirmi bir, yani Down sendromlu hastalarda ve bu genin küçük interstisyel duplikasyonlarının görüldüğü kişilerde Alzheimer riski yüksektir; gen dozu arttıkça beta amiloid de artar.",
+       "ekran": "**Trizomi 21** ve APP duplikasyonu → fazla gen dozu → AH riski yüksek",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Trizomi 21",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "AH riski fazladan bir APP geni bulunan trisomi 21 (Down sendromlu) hastalarında ve APP’nin küçük interstisyel duplikasyonlarının görüldüğü kişilerde yüksektir."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-30-p008",
+     "sayfa": 9,
+     "cumleler": [
+      {
+       "id": "k2-30-c0024",
+       "ses": "Diğer majör genetik risk faktörü, apoprotein E'nin epsilon dört varyantı olan apo e dörttür.",
+       "ekran": "Majör genetik risk: **ApoE4** (apoprotein E ε4)",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "ApoE4",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [
+         "Diğer bir majör genetik risk faktörü apoprotein E’nin bir varyantı olan ɛ4’dür (ApoE4)."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-30-c0025",
+       "ses": "Her bir apo e dört aleli Alzheimer riskini yaklaşık dört kat artırır ve bu alelin varlığı erken hastalık başlangıcıyla ilişkili görünmektedir.",
+       "ekran": "Her ApoE4 aleli riski **≈4 kat** artırır; erken başlangıçla ilişkili",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "≈4 kat",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [
+         "Her bir ApoE4 aleli AH riskini yaklaşık dört kat arttırır ve ApoE4 varlığı erken hastalık başlangıcı ile ilişkili görünmektedir."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-30-c0026",
+       "ses": "Apo e dördün beta amiloid birikimine nasıl yol açtığı bilinmemektedir; beta amiloidin depolanmasını ve birikimini artırıyor ya da ortadan kaldırılmasını azaltıyor olabilir.",
+       "ekran": "Mekanizma bilinmiyor: Aβ **birikimini artırma** ya da **temizlenmesini azaltma**",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [
+         "ApoE4’ün nasıl Aβ birikimine yol açtığı bilinmemektedir.",
+         "Aβ depolanmasını ve birikimini arttırıyor ya da AP’nin ortadan kaldırılmasını azaltıyor olabilir."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-30-p009",
+     "sayfa": 10,
+     "cumleler": [
+      {
+       "id": "k2-30-c0027",
+       "ses": "Büyük oranlarda beta amiloid birikimi hastalığın son dönem bulgusu olsa da, küçük miktarlardaki birikim bile nöron iletimini değiştirebilir ve nöronlarla sinaps uçlarına toksik etkilidir.",
+       "ekran": "Küçük Aβ birikimi bile **sinaps uçlarına toksik**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "sinaps uçlarına toksik",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 10,
+        "satir": [
+         "Büyük oranlarda Aβ birikimi AH’nın son dönem bulgusu olsa da, küçük miktarlarda Aβ birikimi de nöron iletimini değiştirebilir ve birikimler nöronlara ve sinaps uçlarına toksik etkilidir."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-30-c0028",
+       "ses": "Plak biçimindeki daha büyük birikimler ise nöron ölümüne yol açar, daha fazla hücre hasarı yaratan yerel bir inflamatuvar yanıt başlatır ve aksonlarla dendritler üzerindeki mekanik etkileriyle bölgeden bölgeye iletişimi değiştirebilir.",
+       "ekran": "Plaklar: **nöron ölümü**, yerel inflamasyon, akson ve dendritlere mekanik etki",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 10,
+        "satir": [
+         "Plak biçimindeki daha büyük birikimler ayrıca nöron ölümüne yol açar, daha fazla hücre hasarıyla sonuçlanabilecek yerel inflamatuar bir yanıta neden olur ve aksonlarla dendritler üzerindeki mekanik etkileri ile bölgeden bölgeye iletişimde değişikliğe yol açabilir."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-30-p010",
+     "sayfa": 11,
+     "cumleler": [
+      {
+       "id": "k2-30-c0029",
+       "ses": "Beta amiloid aynı zamanda nöronal mikrotübüle bağlanan tau proteininin hiperfosforilasyonuna neden olur.",
+       "ekran": "Aβ → **tau hiperfosforilasyonu**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "tau hiperfosforilasyonu",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 11,
+        "satir": [
+         "Aβ varlığı aynı zamanda tau proteinine bağlanan nöronal mikrotubulün hiperfosforilasyonuna neden olur."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-30-c0030",
+       "ses": "Fosforilasyon düzeyindeki bu artış, tau'nun aksonlardan dendritlere ve hücre gövdesine yayılmasına yol açar.",
+       "ekran": "Fosforile tau aksondan **dendrit ve hücre gövdesine** yayılır",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 11,
+        "satir": [
+         "Fosforilasyon seviyesindeki bu artış, tau’nun aksonlardan dendritlere ve hücre gövdesine yayılmasına neden olur."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-30-c0031",
+       "ses": "Tau burada yumaklar oluşturarak nöronal disfonksiyona ve nöronal hücre ölümüne katkıda bulunur; böylece amiloid ile tau patolojisi tek bir zincirin iki halkası olur.",
+       "ekran": "Tau **yumak** oluşturur → nöronal disfonksiyon ve ölüm",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 11,
+        "satir": [
+         "Tau burada yumaklar oluşturarak nöronal disfonksiyon ve nöronal hücre ölümüne katkıda bulunur."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-30-b04",
+   "baslik": "Alzheimer hastalığının morfolojisi",
+   "paragraflar": [
+    {
+     "id": "k2-30-p011",
+     "sayfa": 12,
+     "cumleler": [
+      {
+       "id": "k2-30-c0032",
+       "ses": "Beynin makroskopik incelemesinde değişken derecede kortikal atrofiyle birlikte serebral sulkuslarda genişleme görülür ve bu durum frontal, temporal ve parietal loblarda en belirgindir.",
+       "ekran": "Makroskopi: kortikal atrofi, **sulkus genişlemesi**; frontal, temporal, parietal en belirgin",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 12,
+        "satir": [
+         "Beynin makroskopik incelemesinde değişken derecelerde kortikal atrofiyle birlikte serebral sulkuslarda genişleme görülür, bu durum frontal, temporal ve parietal loblarda en belirgindir."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-30-c0033",
+       "ses": "Belirgin atrofiye ventriküllerde kompansasyon amaçlı genişleme eşlik eder; buna hidrosefalus eks vakuo denir, yani kaybolan dokunun yerini boşluk doldurur.",
+       "ekran": "Ventrikül genişlemesi: **hidrosefalus ex vakuo**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "hidrosefalus ex vakuo",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 12,
+        "satir": [
+         "Belirgin atrofiyle, ventriküllerde kompansasyon amaçlı genişleme eşlik eder (hidrosefalus ex vakuo)."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-30-p012",
+     "sayfa": 13,
+     "cumleler": [
+      {
+       "id": "k2-30-c0034",
+       "ses": "Mikroskopik düzeyde Alzheimer hastalığı tanısı, hücre dışı bir lezyon olan plakların ve hücre içi bir lezyon olan nörofibriler yumakların saptanmasıyla konur.",
+       "ekran": "Tanı: **plak** (hücre dışı) + **nörofibriler yumak** (hücre içi)",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "plak",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 13,
+        "satir": [
+         "Mikroskopik düzeyde, Alzheimer hastalığı tanısı;",
+         "plakların (bir hücre dışı lezyon) ve",
+         "nörofibriler yumakların (bir hücre içi lezyon) saptanması ile konur"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-30-c0035",
+       "ses": "Demansı olmayan kişilerin beyinlerinde de daha az oranda plak ve yumak saptanabildiği için, güncel tanı kriterleri klinik ve patolojik özelliklerin bir arada bulunmasına dayanır.",
+       "ekran": "Demansı olmayanlarda da az plak ve yumak olur → tanı **klinik + patoloji birlikte**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "klinik + patoloji birlikte",
+         "tur": "tuzak"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 13,
+        "satir": [
+         "Demansı olmayan kişilerin beyinlerinde de daha az oranda plak ve nörofibriler yumakların saptanabilmesi nedeniyle, AH tanısının güncel kriterleri, klinik ve patolojik özelliklerin bir arada bulunmasına dayanır."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-30-p013",
+     "sayfa": 14,
+     "cumleler": [
+      {
+       "id": "k2-30-c0036",
+       "ses": "Nöritik plaklar, fokal genişlemiş ve bükülmüş distrofik nörit uzantılarının genellikle bir amiloid kor etrafında toplanmasıyla oluşan küresel yapılardır.",
+       "ekran": "Nöritik plak: **amiloid kor** etrafında distrofik nöritler, küresel yapı",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "amiloid kor",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 14,
+        "satir": [
+         "Nöritik plaklar; fokal genişlemiş, bükülmüş distrofik nörit uzantılarının genellikle bir amiloid kor etrafında toplanması ile oluşan küresel yapılardır."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-30-c0037",
+       "ses": "Nöritik plakların çapı yirmi ile iki yüz mikrometre arasındadır; mikroglia hücreleri ve reaktif astrositler bu yapıların periferinde yer alır.",
+       "ekran": "Çap **20–200 µm**; periferde mikroglia ve reaktif astrosit",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "20–200 µm",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 14,
+        "satir": [
+         "Nöritik plakların çapı 20 ile 200 µm arasındadır, mikroglia hücreleri ve reaktif astrositler bu yapıların periferlerinde yer alır."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-30-c0038",
+       "ses": "Plaklar hipokampus ve amigdalanın yanı sıra neokortekste de yer alır, ancak primer motor ve duysal korteksler genellikle hastalığın geç dönemlerine kadar nispeten korunur; bu yüzden hasta erken dönemde yürür ve hisseder ama unutur.",
+       "ekran": "Yerleşim: hipokampus, amigdala, neokorteks; **primer motor ve duysal korteks geç döneme dek korunur**",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 14,
+        "satir": [
+         "Plaklar hipokampus ve amigdalanın yanı sıra neokortekste de yer alır, ancak primer motor ve duysal korteksler genelde hastalığın geç dönemlerine kadar nispeten korunur."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-30-p014",
+     "sayfa": 15,
+     "cumleler": [
+      {
+       "id": "k2-30-c0039",
+       "ses": "Amiloid çekirdek beta amiloid içerir.",
+       "ekran": "Amiloid çekirdek: **Aβ**",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "Amiloid çekirdek Aβ içerir."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-30-c0040",
+       "ses": "Çevresinde nöritik reaksiyon olmayan beta amiloid birikimleri de görülebilir ve bunlara diffüz plaklar adı verilir.",
+       "ekran": "Nöritik reaksiyonsuz Aβ birikimi: **diffüz plak**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "diffüz plak",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "Çevresinde nöritik reaksiyon olmayan Aβ birikimleri de görülebilir, bunlara diffüz plaklar adı verilir."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-30-c0041",
+       "ses": "Diffüz plaklar tipik olarak serebral korteksin yüzeyel kısımlarında, bazal ganglionlarda ve serebellar kortekste görülür ve plak gelişiminin evrelerinden birini yansıtabilir.",
+       "ekran": "Diffüz plak: yüzeyel korteks, **bazal ganglionlar, serebellar korteks**",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "Bunlar tipik olarak serebral korteksin yüzeyel kısımlarında, bazal ganglionlar ile serebellar kortekste görülebilir ve plak gelişiminin son evrelerini yansıtabilir."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-30-p015",
+     "sayfa": 16,
+     "cumleler": [
+      {
+       "id": "k2-30-c0042",
+       "ses": "Nörofibriler yumaklar, nöronların sitoplazmasında çekirdeği iten ya da çevreleyen, bazofilik fibriler yapılar olarak görülen çift sarmallı filamanlardır; bu tanım çıkmışta soruldu.",
+       "ekran": "Nörofibriler yumak: sitoplazmada çekirdeği iten/çevreleyen, bazofilik, **çift sarmallı filaman**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "çift sarmallı filaman",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [
+        "past-1790877045017-35615"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 16,
+        "satir": [
+         "Nörofibriler yumaklar nöronların sitoplazmasında çekirdeği iten ya da çevreleyen, bazofilik fibriler yapılar olarak görülen, çift sarmallı filamanlardır."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-30-c0043",
+       "ses": "Yumaklar nöron öldükten sonra da varlığını sürdürebilir ve böylece hücre dışı bir patolojik bulgu hâline gelir.",
+       "ekran": "Nöron ölünce yumak kalır → **hücre dışı** bulgu",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "hücre dışı",
+         "tur": "tuzak"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 16,
+        "satir": [
+         "Yumaklar nöronlar öldükten sonra da varlıklarını sürdürebilir, böylece hücre dışı patolojik bulguyu oluştururlar."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-30-c0044",
+       "ses": "Yumaklar özellikle entorinal korteks olmak üzere kortikal nöronlarda ve ayrıca hipokampus, amigdala, bazal ön beyin ve rafe çekirdeklerindeki piramidal hücrelerde sıktır.",
+       "ekran": "Sık yer: **entorinal korteks**, hipokampus, amigdala, bazal ön beyin, rafe çekirdekleri",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 16,
+        "satir": [
+         "Özellikle entorinal korteks olmak üzere kortikal nöronlarda ve ayrıca hipokampus, amigdala, bazal ön-beyin ve raphe çekirdeklerindeki piramidal hücrelerde sıktır."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-30-c0045",
+       "ses": "Hiperfosforile tau, çift sarmallı filamanların önemli bir komponentidir; yumaklar Alzheimer hastalığına özgü değildir ve diğer dejeneratif hastalıklarda da görülür.",
+       "ekran": "Ana bileşen **hiperfosforile tau**; yumak **AH'ye özgü değil**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "AH'ye özgü değil",
+         "tur": "tuzak"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 16,
+        "satir": [
+         "Hiperfosforile tau çift sarmallı filamanların önemli bir komponentidir.",
+         "Yumaklar AH’na özgü değildir, diğer dejeneratif hastalıklarda da görülür."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-30-p016",
+     "sayfa": 17,
+     "cumleler": [
+      {
+       "id": "k2-30-c0046",
+       "ses": "Bu şemada solda normal nöronlar, sağda Alzheimer beyni karşılaştırılıyor; Alzheimer tarafında nöronların içinde nörofibriler yumaklar, hücrelerin arasında ise amiloid plaklar görülüyor.",
+       "ekran": "Şema: normal ve Alzheimer beyni; **nöron içinde yumak**, hücreler arasında plak",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 17,
+        "satir": [
+         "Normal Alzheimer's"
+        ],
+        "sekil": "normal nöronlar ile Alzheimer beyni karşılaştırma şeması"
+       }
+      },
+      {
+       "id": "k2-30-c0047",
+       "ses": "Şemadaki yumak etiketi, lezyonun hücre içi yerleşimini hatırlatıyor; plak ise hücre dışı lezyondur ve tanıda ikisi birlikte aranır.",
+       "ekran": "**Neurofibrillar tangles** etiketi: hücre içi lezyon; plak hücre dışı",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 17,
+        "satir": [
+         "Neurofibrillar tangles"
+        ],
+        "sekil": "şemada nörofibriler yumak etiketi"
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-30-p017",
+     "sayfa": 18,
+     "cumleler": [
+      {
+       "id": "k2-30-c0048",
+       "ses": "Bu mikroskopik görüntü hematoksilen eozinle boyanmış kortikal kesittir ve piramidal bir nöronun sitoplazmasını dolduran nörofibriler yumağı gösteriyor.",
+       "ekran": "H&E kesit: **piramidal nöron** sitoplazmasında nörofibriler yumak",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 18,
+        "satir": [],
+        "sekil": "hematoksilen eozin boyalı kortikal kesitte nörofibriler yumak"
+       }
+      },
+      {
+       "id": "k2-30-c0049",
+       "ses": "Görüntüde yumağın alev biçimli, bazofilik ve fibriler yapısına, çekirdeği kenara itmesine bakıyoruz.",
+       "ekran": "Bakılacak: **alev biçimli**, bazofilik, çekirdeği iten fibriler yapı",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 18,
+        "satir": [],
+        "sekil": "piramidal nöronda çekirdeği iten alev biçimli yumak"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-30-b05",
+   "baslik": "Frontotemporal lober dejenerasyon",
+   "paragraflar": [
+    {
+     "id": "k2-30-p018",
+     "sayfa": 19,
+     "cumleler": [
+      {
+       "id": "k2-30-c0050",
+       "ses": "Demansla sonuçlanan diğer majör hastalık kategorisi frontotemporal lober dejenerasyondur.",
+       "ekran": "Demansın diğer majör nedeni: **frontotemporal lober dejenerasyon (FTLD)**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "frontotemporal lober dejenerasyon (FTLD)",
+         "tur": "terim"
+        },
+        {
+         "metin": "frontotemporal lober dejenerasyon (FTLD)",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [
+        "q-KURUL_2_C_IKMIS__3-84",
+        "past-1790877045043-164805",
+        "4bde7b004e4d"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 19,
+        "satir": [
+         "Demansla sonuçlanan diğer bir majör hastalık kategorisi frontotemporal lober dejenerasyondur (FTLD)."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-30-c0051",
+       "ses": "Bu hastalıklar temporal ve frontal loblardaki dejenerasyon ve atrofiden kaynaklanan klinik özellikleri paylaşır: progresif konuşma bozukluğu ve kişilik değişiklikleri.",
+       "ekran": "Ortak klinik: **progresif konuşma bozukluğu** ve **kişilik değişiklikleri**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "progresif konuşma bozukluğu",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [
+        "447c07f50aed"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 19,
+        "satir": [
+         "Bu hastalıklar temporal ve frontal loblardaki dejenerasyon ve atrofiden kaynaklanan klinik özellikleri paylaşırlar:",
+         "progresif konuşma bozukluğu ve",
+         "kişilik değişiklikleri"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-30-p019",
+     "sayfa": 20,
+     "cumleler": [
+      {
+       "id": "k2-30-c0052",
+       "ses": "Klinik semptomlar genel olarak frontotemporal demans olarak adlandırılır; frontal lob tutulumu ön plandaysa davranışsal değişiklikler, temporal lobdan başladığında konuşma sorunları baskındır.",
+       "ekran": "Frontal → **davranış** değişikliği; temporal → **konuşma** sorunu",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 20,
+        "satir": [
+         "Klinik semptomlar genel olarak frontotemporal demans olarak isimlendirilir.",
+         "Frontal lob tutulumu ön planda olduğunda davranışsal değişiklikler genellikle baskındır.",
+         "Temporal lobdan başladığında konuşma ile ilgili problemler ortaya çıkar."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-30-c0053",
+       "ses": "Genellikle davranış ve dil sorunları hafıza bozukluğundan önce gelişir; bu sıralama frontotemporal lober dejenerasyonu Alzheimer hastalığından ayırmada yardımcıdır, çünkü Alzheimer'da önce bellek bozulur.",
+       "ekran": "Davranış ve dil sorunu **hafıza bozukluğundan önce** → AH'den ayırım",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "hafıza bozukluğundan önce",
+         "tur": "tuzak"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 20,
+        "satir": [
+         "Genellikle davranış ve dil sorunları, hafıza bozukluğundan önce gelişir; bu durum FTLD ve AH‘nin klinik ayırımında yardımcıdr."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-30-c0054",
+       "ses": "Frontotemporal lober dejenerasyonda belirtiler Alzheimer hastalığına göre daha genç yaşlarda başlar.",
+       "ekran": "FTLD'de başlangıç AH'ye göre **daha genç** yaşta",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 20,
+        "satir": [
+         "FTLD’de belirtiler AH’ye göre daha genç yaşlarda başlar."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-30-p020",
+     "sayfa": 21,
+     "cumleler": [
+      {
+       "id": "k2-30-c0055",
+       "ses": "Makroskopik incelemede özellikle frontal ve temporal lobları etkileyen atrofi vardır ve farklı alt gruplarda tutulan bölgelerde nöronal inklüzyonlar bulunur.",
+       "ekran": "Makroskopi: **frontal ve temporal lob atrofisi**; alt gruplarda nöronal inklüzyon",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 21,
+        "satir": [
+         "Makroskopik incelemede özellikle frontal ve temporal lobları etkileyen atrofi vardır.",
+         "Farklı subgruplarda, tutulan bölgelerde nöronal inklüzyonlar vardır."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-30-c0056",
+       "ses": "Bazı olgularda hastalığı tanımlayan inklüzyonlar tau içerir ve bu forma tau tipi frontotemporal lober dejenerasyon denir; fakat bu inklüzyonların şekli Alzheimer'daki tau içeren yumaklardan farklıdır.",
+       "ekran": "**FTLD-tau**: tau inklüzyonları, ama şekli AH yumaklarından **farklı**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "FTLD-tau",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 21,
+        "satir": [
+         "Bazı olgularda hastalığı tanımlayan inklüzyonlar tau içerir (FTLD-tau).",
+         "Fakat tau inklüzyonlarının şekli AH'da görülen tau-içeren yumaklardan farklıdır."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-30-c0057",
+       "ses": "Tau tipi form, tau'yu kodlayan genin mutasyonu sonucu oluşabilir.",
+       "ekran": "FTLD-tau: **tau geni mutasyonu** ile oluşabilir",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 21,
+        "satir": [
+         "FTLD-tau, tau'yu kodlayan genin mutasyonu sonucu oluşabilir."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-30-c0058",
+       "ses": "Bu formun iyi bilinen tipi, Pick cisimciği denen düz, yuvarlak inklüzyonların bulunduğu Pick hastalığıdır; erken yaşta başlayan, ilerleyici demans ve lobar atrofiyle seyreden bu hastalık çıkmışta soruldu.",
+       "ekran": "**Pick hastalığı**: düz, yuvarlak **Pick cisimciği** (FTLD-tau)",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Pick hastalığı",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [
+        "past-1790877045026-798094"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 21,
+        "satir": [
+         "FTLD- tau'nun iyi bilinen bir tipi Pick cisimciği olarak bilinen, düz, yuvarlak inklüzyonların bulunduğu Pick hastalığıdır."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-30-p021",
+     "sayfa": 22,
+     "cumleler": [
+      {
+       "id": "k2-30-c0059",
+       "ses": "Diğer majör form, de ne a ve re ne a bağlayan protein te de pe kırk üçü içeren agregatlarla karakterizedir ve frontal lobun bilişsel bozukluğuyla seyreder.",
+       "ekran": "Diğer majör form: **FTLD-TDP43** (DNA/RNA bağlayan protein agregatı); frontal bilişsel bozukluk",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "FTLD-TDP43",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 22,
+        "satir": [
+         "Diğer majör form FTLD, DNA/RNA bağlayan protein TDP-43 (FTLD- TDP43) içeren agregatlar ile karakterizedir.",
+         "Bu form frontal lobun bilişsel bozukluğu ile karakterizedir."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-30-c0060",
+       "ses": "Bu form bazen te de pe kırk üçü kodlayan gendeki mutasyonlarla oluşur; aynı protein amiyotrofik lateral sklerozun büyük bir bölümünde de mutasyona uğramıştır, yani bu iki hastalık moleküler olarak akrabadır.",
+       "ekran": "TDP-43 gen mutasyonu; **ALS**'nin büyük bölümünde de mutasyonlu",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 22,
+        "satir": [
+         "Bazen TDP-43'ü kodlayan gendeki mutasyonlar nedeniyle oluşur.",
+         "TDP-43, amyotropik lateral skleroz vakalarının büyük bir bölümünde de mutansyona uğramıştır."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-30-b06",
+   "baslik": "Parkinsonizm ve Parkinson hastalığı",
+   "paragraflar": [
+    {
+     "id": "k2-30-p022",
+     "sayfa": 23,
+     "cumleler": [
+      {
+       "id": "k2-30-c0061",
+       "ses": "Parkinsonizm; titreme yani tremor, kaslarda sertlik yani rijidite, bradikinezi ve postural instabilite ile karakterize klinik bir sendromdur.",
+       "ekran": "Parkinsonizm: **tremor, rijidite, bradikinezi, postural instabilite**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "tremor, rijidite, bradikinezi, postural instabilite",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 23,
+        "satir": [
+         "Parkinsonizm:",
+         "titreme (tremor),",
+         "kaslarda sertlik (rijidite)",
+         "bradikinezi ve",
+         "instabilite (postural kararsızlık, dengesizlik) ile karakterize klinik bir sendromdur."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-30-p023",
+     "sayfa": 24,
+     "cumleler": [
+      {
+       "id": "k2-30-c0062",
+       "ses": "Bu tip motor bozukluklar, substantia nigradan striatuma uzanan dopaminerjik nöronlara hasar veren bir dizi hastalıkta görülebilir.",
+       "ekran": "Ortak yol: **substantia nigra → striatum** dopaminerjik nöron hasarı",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 24,
+        "satir": [
+         "Bu tip motor bozukluklar, substantia nigradan striatuma uzanan dopaminerjik nöronlara hasar veren bir dizi hastalıkta görülebilir."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-30-c0063",
+       "ses": "Parkinsonizm, dopaminerjik nöronları seçici olarak zedeleyen dopamin antagonistleri gibi ilaçlar veya toksinlerle de tetiklenebilir.",
+       "ekran": "İlaç (**dopamin antagonistleri**) ve toksinler de parkinsonizm yapar",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 24,
+        "satir": [
+         "Parkinsonizm, dopaminerjik nöronları selektif olarak zedeleyen dopamin antagonistleri gibi ilaçlar veya toksinler ile tetiklenebilir."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-30-c0064",
+       "ses": "Nörodejeneratif hastalıklar arasında parkinsonizm olgularının çoğu, alfa sinüklein içeren karakteristik nöronal inklüzyonlarla ilişkili Parkinson hastalığıdır.",
+       "ekran": "Dejeneratif parkinsonizmin çoğu: **α-sinüklein** inklüzyonlu Parkinson hastalığı",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 24,
+        "satir": [
+         "Nörodejeneratif hastalıklar arasında parkinsonizm olgularının çoğu, α- sinüklein içeren karakteristik nöronal inklüzyonlarla ilişkili Parkinson hastalığı (PH)'dır."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-30-p024",
+     "sayfa": 25,
+     "cumleler": [
+      {
+       "id": "k2-30-c0065",
+       "ses": "Parkinsonizm görülen diğer hastalıklardan multipl sistem atrofisinde alfa sinüklein agregatları nöronlarda değil oligodendrositlerde saptanır.",
+       "ekran": "**Multipl sistem atrofisi**: α-sinüklein agregatı **oligodendrositlerde**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "oligodendrositlerde",
+         "tur": "tuzak"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 25,
+        "satir": [
+         "oligodendrositlerde α-sinüklein agregatları saptanan multipl sistem atrofisi (MSA),"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-30-c0066",
+       "ses": "Progresif supranükleer palsi ve kortikobazal dejenerasyon, her ikisi de nöronlarda ve glial hücrelerde tau içeren inklüzyonlarla ilişkilidir.",
+       "ekran": "**PSP** ve **kortikobazal dejenerasyon**: nöron ve gliada **tau** inklüzyonu",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 25,
+        "satir": [
+         "her ikisi de nöronlar ve glial hücrelerde tau-içeren inklüzyonlarla ilişkili progresif supranükleer palsi (PSP) ve kortikobazal dejenerasyon (CBD) ile"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-30-c0067",
+       "ses": "Listenin son üyesi, bin dokuz yüz on sekiz influenza pandemisiyle ilişkili postensefalitik parkinsonizmdir.",
+       "ekran": "**Postensefalitik parkinsonizm**: 1918 influenza pandemisi",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 25,
+        "satir": [
+         "1918 influenza pandemisiyle ilişkili postensefalitik parkinsonizmdir."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-30-p025",
+     "sayfa": 26,
+     "cumleler": [
+      {
+       "id": "k2-30-c0068",
+       "ses": "Parkinson hastalığı protein birikimi ve kümelenmesi, mitokondriyal anomaliler ve beynin farklı yerlerinde nöron kaybıyla ilişkilidir.",
+       "ekran": "Patogenez: **protein birikimi**, mitokondriyal anomali, yaygın nöron kaybı",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 26,
+        "satir": [
+         "protein birikimi ve kümelenmesi",
+         "mitokondriyal anomaliler yanısıra",
+         "beynin farklı yerlerinde nöron kaybı ile ilişkilidir."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-30-c0069",
+       "ses": "Genetik verilere bakıldığında, otofaji ve lizozomal yıkım defektlerine bağlı protein ve organel yıkım bozukluklarının hastalığın gelişiminde patojenik rol oynadığı düşünülür.",
+       "ekran": "Genetik: **otofaji ve lizozomal yıkım defektleri** patojenik",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "otofaji ve lizozomal yıkım defektleri",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 26,
+        "satir": [
+         "PH genetiğine bakıldığında otofaji ve lizozomal yıkım defektleri nedenli protein ve organel yıkım bozukluklarının hastalığın gelişiminde patojenik rolü olduğu düşünülür."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-30-p026",
+     "sayfa": 27,
+     "cumleler": [
+      {
+       "id": "k2-30-c0070",
+       "ses": "Birçok olguda Parkinson hastalığı sporadik olmasına karşın, hastalığın hem otozomal dominant hem de resesif formları vardır.",
+       "ekran": "Çoğu sporadik; **otozomal dominant ve resesif** formlar var",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 27,
+        "satir": [
+         "Birçok olguda PH sporadik olmasına karşın, hastalığın hem otozomal dominant, hem de resesif formları vardır."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-30-c0071",
+       "ses": "Sinaptik akımlarda görev yapan alfa sinükleini kodlayan gende duplikasyon ve nokta mutasyonları otozomal dominant Parkinson hastalığına neden olur.",
+       "ekran": "**α-sinüklein** geninde duplikasyon/nokta mutasyonu → otozomal dominant PH",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 27,
+        "satir": [
+         "Sinaptik akımlarda görev yapan bir protein olan α-sinükleini kodlayan genlerde duplikasyon ve nokta mutasyonları otozomal dominant PH’ye neden olur."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-30-c0072",
+       "ses": "Hatta sporadik Parkinson hastalığında tanı koydurucu özellik olan Lewy cisimciği, alfa sinüklein içeren bir inklüzyondur; Lewy cisimciğinin proteininin alfa sinüklein olduğu çıkmışta soruldu.",
+       "ekran": "Tanı koydurucu **Lewy cisimciği** = **α-sinüklein** inklüzyonu",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "α-sinüklein",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [
+        "d3-k2-pat-002"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 27,
+        "satir": [
+         "Hatta sporadik PH’de hastalığın tanı koydurucu özelliği olan Lewy cisimciği, α-sinüklein içeren bir inklüzyondur."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-30-p027",
+     "sayfa": 28,
+     "cumleler": [
+      {
+       "id": "k2-30-c0073",
+       "ses": "Sinüklein birikimleri otofajiyle temizlenir; bu yüzden otofajiyi bozan her kusur birikimi artırır.",
+       "ekran": "Sinüklein birikimi **otofajiyle** temizlenir",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 28,
+        "satir": [
+         "Sinüklein birikimleri otofajiyle temizlenir."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-30-c0074",
+       "ses": "Parkinson ilişkili çeşitli mutasyonlar, otofajide rol aldığı düşünülen endozomal trafik yolaklarındaki proteinlerin genlerinde bulunur; el er er ka iki ve parkin bunlara örnektir.",
+       "ekran": "Endozomal trafik genleri: **LRRK2**, **Parkin**",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 28,
+        "satir": [
+         "PH ilişkili çeşitli mutasyonlar otofajide rol aldığı düşünülen endozomal trafik yolaklarında görev alan proteinlere ait genlerde bulunur;",
+         "Parkin vb."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-30-c0075",
+       "ses": "Gaucher hastalığına yol açan lizozomal enzim glukoserebrozidaz mutasyonu için heterozigot olmanın da Parkinson hastalığı için risk faktörü olduğu gösterilmiştir.",
+       "ekran": "**Glukoserebrozidaz** (Gaucher) heterozigotluğu → PH riski",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Glukoserebrozidaz",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 28,
+        "satir": [
+         "Gaucher hastalığına yola açan glukoserobridaz (lizozomal bir enzim) mutasyonu için heterozigot olmanın da PH için risk faktörü olduğu gösterilmiş."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-30-b07",
+   "baslik": "Parkinson hastalığının morfolojisi",
+   "paragraflar": [
+    {
+     "id": "k2-30-p028",
+     "sayfa": 29,
+     "cumleler": [
+      {
+       "id": "k2-30-c0076",
+       "ses": "Otopside tipik makroskopik bulgu, substantia nigra ve lokus seruleusta solukluktur.",
+       "ekran": "Makroskopi: **substantia nigra ve lokus seruleusta solukluk**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "substantia nigra ve lokus seruleusta solukluk",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 29,
+        "satir": [
+         "Otopside tipik makroskopik bulgu, substantia nigra ve lokus seruleusta solukluktur."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-30-c0077",
+       "ses": "Mikroskopide bu bölgelerde pigmentli, katekolaminerjik nöronların kaybına gliozis eşlik eder; solukluğun nedeni pigmentli nöronların ortadan kalkmasıdır.",
+       "ekran": "Mikroskopi: **pigmentli katekolaminerjik nöron kaybı** + gliozis",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 29,
+        "satir": [
+         "Mikroskopik incelemede bu bölgelerde pigmentli, katekolaminerjik nöronların kaybına gliozis eşlik eder."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-30-c0078",
+       "ses": "Lewy cisimcikleri geride kalan bazı nöronlarda görülür; tek ya da çok sayıda, sitoplazmik, eozinofilik, yuvarlak ya da oval inklüzyonlardır.",
+       "ekran": "Lewy cisimciği: sitoplazmik, **eozinofilik**, yuvarlak–oval",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "eozinofilik",
+         "tur": "tuzak"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 29,
+        "satir": [
+         "Lewy cisimcikleri geride kalan bazı nöronlarda görülebilir.",
+         "Bunlar, tek ya da multiple, sitoplazmik, eozinofilik, yuvarlak–oval inklüzyonlardır."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-30-p029",
+     "sayfa": 30,
+     "cumleler": [
+      {
+       "id": "k2-30-c0079",
+       "ses": "Elektron mikroskobunda Lewy cisimcikleri, merkezde yoğun sarmallaşmış, kenarlarda gevşek ince filamanlardan oluşur.",
+       "ekran": "Elektron mikroskobu: merkezde yoğun, kenarda **gevşek ince filamanlar**",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 30,
+        "satir": [
+         "Elektron mikroskopunda Lewy cisimcikleri ince filamanlardan oluşmuştur.",
+         "Bu filamanlar merkezde yoğun şekilde sarmallaşmış, kenarlarda ise gevşek olup"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-30-c0080",
+       "ses": "Bu filamanlar alfa sinüklein ile nörofilaman ve ubikuitini de kapsayan diğer proteinlerden oluşur.",
+       "ekran": "İçerik: **α-sinüklein**, nörofilaman, ubikuitin",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 30,
+        "satir": [
+         "nörofilaman ile ubiquitini de kapsayan diğer proteinlerden oluşmaktadır."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-30-c0081",
+       "ses": "Diğer majör histolojik bulgu, anormal alfa sinüklein agregatları içeren distrofik nöritler olan Lewy nöritleridir.",
+       "ekran": "**Lewy nöritleri**: α-sinüklein içeren distrofik nöritler",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Lewy nöritleri",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 30,
+        "satir": [
+         "Diğer bir majör histolojik bulgu anormal a-sinüklein agregatları içeren distrofik nöritler olan Lewy nöritleridir."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-30-p030",
+     "sayfa": 31,
+     "cumleler": [
+      {
+       "id": "k2-30-c0082",
+       "ses": "Bu resimde A panelinde normal, koyu pigmentli substantia nigrayı, B panelinde ise idiyopatik Parkinson hastalığında depigmente substantia nigrayı karşılaştırıyoruz.",
+       "ekran": "Resim: A **normal** substantia nigra, B Parkinson'da **depigmente** substantia nigra",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 31,
+        "satir": [
+         "Resim 22-26 Parkinson hastalığı. A, Normal substantia nigra. B, İdiopatik Parkinson hastalığında depigmente substantia nigra."
+        ],
+        "sekil": "normal ve Parkinson hastalığında depigmente substantia nigra"
+       }
+      },
+      {
+       "id": "k2-30-c0083",
+       "ses": "C panelinde substantia nigradan bir nöronun içinde pembe boyanan Lewy cisimciği görülüyor; eozinofilik inklüzyonun mikroskopik karşılığı budur.",
+       "ekran": "C: nigral nöronda **pembe boyanan Lewy cisimciği**",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 31,
+        "satir": [
+         "C, sub- stantia nigradan bir nöronda pembe boyanan Lewy cisimciği."
+        ],
+        "sekil": "substantia nigra nöronunda pembe Lewy cisimciği"
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-30-p031",
+     "sayfa": 32,
+     "cumleler": [
+      {
+       "id": "k2-30-c0084",
+       "ses": "İmmünohistokimyasal alfa sinüklein boyamaları, substantia nigra dışında medulla, pons, amigdala ve serebral korteks dahil birçok bölgedeki dopaminerjik olmayan nöronlarda da Lewy cisimleri ve Lewy nöritleri bulunduğunu gösterir.",
+       "ekran": "α-sinüklein boyası: medulla, pons, amigdala, korteks gibi **dopaminerjik olmayan** nöronlarda da Lewy patolojisi",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 32,
+        "satir": [
+         "İmmünohistokimyasal α-sinüklein boyamaları substansia nigra dışında medulla, pons amigdala ve serebral korteks dahil olmak üzere bir çok beyin bölgesindeki dopaminerjik olmayan nöronlarda Lewy cisimleri ve Lewy nöritleri bulunduğunu gösterir."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-30-c0085",
+       "ses": "Zamanla bunlar subkortikal alanlarda ve serebral kortekste de belirir ve serebral korteks tutulumuyla hareket bozukluğuna tipik olarak demans da eklenir.",
+       "ekran": "Korteks tutulunca hareket bozukluğuna **demans eklenir**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "demans eklenir",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [
+        "d3-k2-pat-006"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 32,
+        "satir": [
+         "Zamanla bunlar subkortikal alanlarda ve serebral kortekste de belirir.",
+         "Serebral korteks tutulumuyla hareket bozukluğuna, tipik olarak demans ta eklenir."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-30-b08",
+   "baslik": "Parkinson hastalığının klinik özellikleri",
+   "paragraflar": [
+    {
+     "id": "k2-30-p032",
+     "sayfa": 33,
+     "cumleler": [
+      {
+       "id": "k2-30-c0086",
+       "ses": "Parkinson hastalığı sıklıkla altta yatan bilinen bir etiyoloji ve toksik hasar olmaksızın ortaya çıkan hareket bozukluğu olarak kendini gösterir; nigrostriatal dopaminerjik sistemin bozulması, Lewy cisimciği birikimi, motor bozukluk ve ilerleyen demans birlikteliğinin Parkinson hastalığını düşündürdüğü çıkmışta soruldu.",
+       "ekran": "Bilinen etiyoloji ve toksik hasar olmadan **hareket bozukluğu**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "hareket bozukluğu",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [
+        "6169f77f722f",
+        "d3-k2-psi-016",
+        "past-1790877037634-453228",
+        "5e72fc758888"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 33,
+        "satir": [
+         "PH sıklıkla altta yatan bilinen bir etiyoloji ve toksik hasar olmaksızın ortaya çıkan hareket bozukluğu olarak kendini gösterir."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-30-c0087",
+       "ses": "Hastalık genellikle on ile on beş yılda ilerler ve sonunda neredeyse hareketsizlik noktasına varan ağır motor yavaşlamaya neden olur.",
+       "ekran": "**10–15 yılda** ilerler → neredeyse hareketsizlik",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "10–15 yılda",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 33,
+        "satir": [
+         "Hastalık genellikle 10 ile 15 yılda ilerler;",
+         "Sonuç olarak neredeyse hareketsizlik noktasına kadar gelen ağır motor yavaşlamaya neden olur."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-30-c0088",
+       "ses": "Ölüm genellikle eklenen enfeksiyon ya da duruştaki dengenin bozulmasına bağlı sık düşmelerden kaynaklanır.",
+       "ekran": "Ölüm: **enfeksiyon** ya da denge bozukluğuna bağlı **düşmeler**",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 33,
+        "satir": [
+         "Ölüm genellikle eklenen enfeksiyon ya da duruştaki dengenin bozulması nedeniyle sık düşme olmasından kaynaklanır."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-30-p033",
+     "sayfa": 34,
+     "cumleler": [
+      {
+       "id": "k2-30-c0089",
+       "ses": "Hareket semptomları başlangıçta el dihidroksifenilalanine, yani el dopaya yanıt verir.",
+       "ekran": "Motor belirtiler önce **L-DOPA**'ya yanıt verir",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 34,
+        "satir": [
+         "PH’nın hareket semptomları önceleri L-dihidroksifenilalanin (L-DOPA)'e yanıt verir."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-30-c0090",
+       "ses": "Ancak bu tedavi hastalığın ilerlemesini yavaşlatmaz; yalnızca eksik dopamini yerine koyar, nöron kaybını durdurmaz.",
+       "ekran": "L-DOPA **ilerlemeyi yavaşlatmaz**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "ilerlemeyi yavaşlatmaz",
+         "tur": "tuzak"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 34,
+        "satir": [
+         "Ancak bu tedavi hastalığın ilerlemesini yavaşlatmaz."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-30-c0091",
+       "ses": "Zamanla el dopa daha az etkili olur ve motor fonksiyonlarda sorun çıkarabilecek dalgalanmalara neden olur.",
+       "ekran": "Zamanla etkisi azalır, **motor dalgalanmalar**",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 34,
+        "satir": [
+         "Zamanla L-DOPA daha az etkili olur ve motor fonksiyonlarda potansiyel olarak sorun çıkarabilecek dalgalanmalara neden olur."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-30-p034",
+     "sayfa": 35,
+     "cumleler": [
+      {
+       "id": "k2-30-c0092",
+       "ses": "Nigrostriatal dopaminerjik yolağın kaybına bağlı hareket bozukluğu hastalığın önemli bir özelliği olsa da, Parkinson hastalığının daha geniş bir klinik ve patolojik çerçevesi vardır.",
+       "ekran": "Nigrostriatal kayıp önemli, ama hastalığın **daha geniş** klinik ve patolojik çerçevesi var",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 35,
+        "satir": [
+         "Nigrostriatal dopaminerjik yolağın kaybı ile ilişkili hareket bozukluğunun PH’nın önemli bir özelliği olmasına karşın, hastalığın daha geniş bir klinik ve patolojik çerçevesi vardır."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-30-c0093",
+       "ses": "Vagusun dorsal motor nükleusu ve retiküler formasyon gibi beyin sapı lezyonları, nigral tutulumdan ve sıklıkla motor sorunlardan önce davranışsal uyku bozukluğu oluşturur.",
+       "ekran": "Beyin sapı lezyonları (**vagus dorsal motor nükleusu**, retiküler formasyon) → motor bulgudan önce **uyku bozukluğu**",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 35,
+        "satir": [
+         "Beyin sapındaki lezyonlar (vagusun dorsal motor nükleusu ve retiküler formasyon) nigral tutulumdan ve sıklıkla motor sorunlardan önce davranışsal uyku bozukluğu oluşturur."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-30-p035",
+     "sayfa": 36,
+     "cumleler": [
+      {
+       "id": "k2-30-c0094",
+       "ses": "Tipik olarak hafifçe dalgalanan demans ve halüsinasyonlar Parkinson hastalığı olan birçok bireyde görülür ve serebral korteksin tutulumuna bağlanır.",
+       "ekran": "Dalgalanan demans ve **halüsinasyon**: korteks tutulumu",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 36,
+        "satir": [
+         "Tipik olarak hafifçe dalgalanan demans ile halüsinasyonlar PH olan birçok bireyde görülür ve serebral korteksin tutulumuna bağlanır."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-30-c0095",
+       "ses": "Demans motor semptomların başlangıcından itibaren bir yıl içinde ortaya çıkarsa bu tabloya Lewy cisimciği demansı denir.",
+       "ekran": "Motor bulgudan **1 yıl içinde** demans → **Lewy cisimciği demansı**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "1 yıl içinde",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 36,
+        "satir": [
+         "Demans, motor semptomların başlangıcından itibaren 1 yıl içinde ortaya çıkarsa Lewy cisimciği demansı (LBD) olarak adlandırılır."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-30-b09",
+   "baslik": "Huntington hastalığı",
+   "paragraflar": [
+    {
+     "id": "k2-30-p036",
+     "sayfa": 37,
+     "cumleler": [
+      {
+       "id": "k2-30-c0096",
+       "ses": "Huntington hastalığı, striatumun yani kaudat ve putamenin dejenerasyonuyla ilişkili otozomal dominant bir hareket bozukluğudur.",
+       "ekran": "Huntington: **striatum (kaudat + putamen)** dejenerasyonu, **otozomal dominant**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "otozomal dominant",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 37,
+        "satir": [
+         "Huntington hastalığı (HH), striatumun (kaudat ve putamen) dejenerasyonu ile ilişkili otozomal dominant hareket bozukluğudur."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-30-c0097",
+       "ses": "Hastalık vücudun tüm bölgelerinde istemsiz, sıçrayıcı hareketlerle karakterizedir ve ekstremitelerde kıvranır tarzda hareketler tipiktir.",
+       "ekran": "İstemsiz **sıçrayıcı** hareketler; ekstremitelerde **kıvranma**",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 37,
+        "satir": [
+         "Hastalık , vücudun tüm bölgelerinde istemsiz, sıçrayıcı (‘jerky’) tarzda hareketler ile karakterizedir ve ekstremitelerde kıvranır tarzda hareketler tipiktir."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-30-p037",
+     "sayfa": 38,
+     "cumleler": [
+      {
+       "id": "k2-30-c0098",
+       "ses": "Hastalık amansız biçimde ilerler ve ortalama on beş yıllık seyrin ardından ölüme yol açar.",
+       "ekran": "Ortalama **15 yıl** seyir sonrası ölüm",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "15 yıl",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 38,
+        "satir": [
+         "Hastalık amansız bir biçimde ilerler ve ortalama 15 yıllık seyir sonrası ölüme neden olur."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-30-c0099",
+       "ses": "Erken bilişsel semptomlar unutkanlık, düşünme ve duygulanım bozukluklarını kapsar ve ağır demansa ilerleyebilir.",
+       "ekran": "Erken bilişsel: unutkanlık, düşünme ve duygulanım bozukluğu → **ağır demans**",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 38,
+        "satir": [
+         "Erken bilişsel semptomlar; unutkanlık, düşünme ve duygulanım bozukluklarını kapsar ve ağır demansa ilerleyebilir."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-30-c0100",
+       "ses": "Bu erken davranış bozukluklarının bir parçası olarak Huntington hastalarında intihar riski yüksektir.",
+       "ekran": "**İntihar riski** yüksek",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "İntihar riski",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 38,
+        "satir": [
+         "Huntington hastaları arasında intihar riski yüksektir."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-30-p038",
+     "sayfa": 39,
+     "cumleler": [
+      {
+       "id": "k2-30-c0101",
+       "ses": "Huntington hastalığı, dördüncü kromozomun pe on altı nokta üç bölgesinde yer alan ve huntingtin proteinini kodlayan gendeki ce a ge trinükleotid tekrarlarının artması sonucu ortaya çıkar; babadan geçişte antisipasyonla birlikte bu genetik temel çıkmışta soruldu.",
+       "ekran": "Huntingtin geni (**4p16.3**) **CAG** trinükleotid tekrar artışı",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "CAG",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [
+        "d3-k2-tbg-006"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 39,
+        "satir": [
+         "HH, huntingtin proteinini kodlayan ve 4p16.3 lokalizasyonunda yer alan gendeki CAG trinükleotid tekrarlarının artması sonucu ortaya çıkar."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-30-c0102",
+       "ses": "Normal alellerde on bir ile otuz dört tekrar vardır, hastalık yapan alellerde ise tekrar sayısı bazen yüzlerce olabilir.",
+       "ekran": "Normal **11–34** tekrar; hastalıkta bazen **yüzlerce**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "11–34",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 39,
+        "satir": [
+         "Normal alellerde 11-34 adet tekrar vardır, hastalık yapan alellerde ise tekrar sayısı bazen yüzlerce olabilir."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-30-c0103",
+       "ses": "Oldukça güçlü bir genotip fenotip korelasyonu vardır: daha çok tekrar, daha erken başlangıçlı hastalık demektir.",
+       "ekran": "Güçlü genotip–fenotip: **daha çok tekrar = daha erken başlangıç**",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 39,
+        "satir": [
+         "Oldukça güçlü bir genotip-fenotip korelasyonu vardır.",
+         "Daha çok tekrar sayısı daha erken başlangıçlı hastalık anlamına gelir."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-30-p039",
+     "sayfa": 40,
+     "cumleler": [
+      {
+       "id": "k2-30-c0104",
+       "ses": "Bununla birlikte belirtiler ortaya çıktıktan sonra hastalığın seyri tekrarların uzunluğundan etkilenmez; tekrar sayısı başlangıç yaşını belirler, ilerleme hızını değil.",
+       "ekran": "Belirtiler başladıktan sonra seyir tekrar uzunluğundan **etkilenmez**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "etkilenmez",
+         "tur": "tuzak"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 40,
+        "satir": [
+         "Bununla birlikte, belirtiler ortaya çıktıktan sonra hastalığın seyri tekrarların uzunluğundan etkilenmez."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-30-c0105",
+       "ses": "Patolojik tekrar artışı spermatogenez sırasında olabilir; böylece babadan geçişte bir sonraki nesilde bulgular daha erken yaşta ortaya çıkar ve bu duruma antisipasyon denir.",
+       "ekran": "Spermatogenezde tekrar artışı → **paternal geçişte antisipasyon**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "paternal geçişte antisipasyon",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 40,
+        "satir": [
+         "Patolojik CAG’lardaki tekrarların artışı spermatogenez sırasında olabilir, böylece paternal geçiş ile bir sonraki nesilde bulgular daha erken yaşta ortaya çıkabilir;",
+         "bu duruma antisipasyon adı verilir."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-30-p040",
+     "sayfa": 41,
+     "cumleler": [
+      {
+       "id": "k2-30-c0106",
+       "ses": "Huntington hastalığı, huntingtin genindeki genişlemiş poliglutamin bölgesiyle ilişkili toksik bir işlev kazanma mutasyonu sonucu ortaya çıkıyor gibi görünmektedir.",
+       "ekran": "**Poliglutamin** genişlemesi → toksik **işlev kazanma** mutasyonu",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "işlev kazanma",
+         "tur": "tuzak"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 41,
+        "satir": [
+         "HH, huntingtin geninde genişlemiş poliglutamin bölgesi ile ilişkili toksik bir işlev-kazanma (gain-of-function) mutasyonu sonucu ortaya çıkıyor gibi görünmektedir."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-30-c0107",
+       "ses": "Mutant protein ubikuitinasyon ve proteolize tabi tutulur ve sonuçta büyük intranükleer agregatlar oluşturabilen parçacıklar ortaya çıkar.",
+       "ekran": "Ubikuitinasyon + proteoliz → **intranükleer agregat** yapan parçacıklar",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 41,
+        "satir": [
+         "Mutant protein ubikuitinasyon ve proteolizise tabii tutulur ve sonuçta büyük intranükleer agregatlar oluşturabilen parçacıklar ortaya çıkar."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-30-c0108",
+       "ses": "Diğer dejeneratif hastalıklarda olduğu gibi, anormal protein parçacıklarından oluşan daha küçük agregatların kritik toksik ajanlar olduğu düşünülmektedir.",
+       "ekran": "Asıl toksik: **küçük agregatlar**",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 41,
+        "satir": [
+         "Diğer dejeneratif hastalıklarda olduğu gibi, anormal protein parçacıklarından oluşan daha küçük agregatların, kritik öneme sahip toksik ajanlar olduğu düşünülmektedir."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-30-p041",
+     "sayfa": 42,
+     "cumleler": [
+      {
+       "id": "k2-30-c0109",
+       "ses": "Bu agregatlar transkripsiyon faktörlerini hapsedebilir, protein yıkım yolaklarını bozabilir, mitokondriyal işlevleri aksatabilir veya beyin kaynaklı nörotrofik faktör sinyalizasyonunu değiştirebilir.",
+       "ekran": "Agregat etkileri: **transkripsiyon faktörü hapsi**, protein yıkımı bozulması, mitokondri, **BDNF** sinyali",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 42,
+        "satir": [
+         "transkripsiyon faktörlerini hapsedebilir,",
+         "protein yıkım yolaklarını bozabilir,",
+         "mitokondrial işlevleri aksatabilir veya",
+         "beyin-kaynaklı nörotrofik faktör (BDNF) sinyalizasyonunu değiştirebilir."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-30-c0110",
+       "ses": "Bu sapmaların bazı kombinasyonlarının Huntington patogenezine katkıda bulunduğu düşünülmektedir.",
+       "ekran": "Bu bozuklukların **kombinasyonu** patogeneze katkı",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 42,
+        "satir": [
+         "Bu normalden sapmaların bazı kombinasyonlarının HH patogenezine katkıda bulunduğu düşünülmektedir."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-30-p042",
+     "sayfa": 43,
+     "cumleler": [
+      {
+       "id": "k2-30-c0111",
+       "ses": "Makroskopik incelemede beyin küçüktür; kaudat nükleusta çarpıcı, putamende bazen daha az belirgin atrofi vardır ve globus pallidusta sekonder atrofi olabilir.",
+       "ekran": "Beyin küçük; **kaudat atrofisi çarpıcı**, putamen daha az; globus pallidusta sekonder atrofi",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "kaudat atrofisi çarpıcı",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 43,
+        "satir": [
+         "Makroskopik incelemede beyin küçüktür.",
+         "Kaudat nükleusta çarpıcı, putamende bazen daha az belirgin olan atrofi vardır.",
+         "Globus pallidusta sekonder atrofi olabilir."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-30-c0112",
+       "ses": "Lateral ventrikül ile üçüncü ventrikülde genişleme vardır; kaudatın küçülmesi lateral ventrikülün duvarını geri çektiği için ventrikül büyür.",
+       "ekran": "**Lateral ve üçüncü ventrikül** genişlemesi",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 43,
+        "satir": [
+         "Lateral ventrikül ile üçüncü ventriküllerde genişleme vardır."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-30-c0113",
+       "ses": "Frontal lobda da atrofi sıktır, daha az sıklıkta parietal lobda, bazen de korteksin tamamında görülebilir.",
+       "ekran": "Frontal atrofi sık; daha az parietal, bazen tüm korteks",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 43,
+        "satir": [
+         "Frontal lobda da atrofi sık olup, daha az sıklıkta parietal lobda, bazen de korteksin tamamında görülebilir."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-30-p043",
+     "sayfa": 44,
+     "cumleler": [
+      {
+       "id": "k2-30-c0114",
+       "ses": "Mikroskopik incelemede striatumun tutulmuş bölgelerinde ağır nöron kaybı ve gliozis göze çarpar.",
+       "ekran": "Striatumda **ağır nöron kaybı + gliozis**",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 44,
+        "satir": [
+         "Mikroskopik incelemede striatumun tutulmuş bölgelerinde ağır nöron kaybı ve gliozis göze çarpar."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-30-c0115",
+       "ses": "Gama aminobütirik asit, enkefalin, dinorfin ve P maddesi salgılayan orta büyüklükte dikenli nöronlar özellikle duyarlıdır ve hastalığın erken döneminde ortadan kalkar.",
+       "ekran": "En duyarlı: GABA, enkefalin, dinorfin, P maddesi salgılayan **orta büyüklükte dikenli nöronlar**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "orta büyüklükte dikenli nöronlar",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 44,
+        "satir": [
+         "γ-aminobutirik asit (GABA), enkefalin, dinorfin ve P maddesi (sustance P) nörotransmitterlerini salgılayan, orta büyüklükte, dikenli nöronlar özellikle duyarlıdır ve hastalığın erken döneminde ortadan kalkarlar."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-30-c0116",
+       "ses": "Nöron kaybına karşı, her zamanki yanıttan daha kapsamlı bir fibriler gliozis de gözlenir.",
+       "ekran": "Olağandan **daha kapsamlı fibriler gliozis**",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 44,
+        "satir": [
+         "Nöron kaybına karşı, her zamanki yanıtta görülenden daha kapsamlı bir fibriler gliozis de ayrıca gözlenir."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-30-p044",
+     "sayfa": 45,
+     "cumleler": [
+      {
+       "id": "k2-30-c0117",
+       "ses": "Striatumdaki dejenerasyonun derecesi ile motor belirtilerin şiddeti arasında güçlü bir korelasyon vardır; kortikal nöron kaybı ile demans arasında da ilişki bulunur.",
+       "ekran": "Striatal dejenerasyon ↔ **motor şiddet**; kortikal kayıp ↔ **demans**",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 45,
+        "satir": [
+         "Striatumdaki dejenerasyonun derecesi ile motor belirtilerin şiddeti arasında güçlü bir korelasyon vardır.",
+         "Kortikal nöron kaybı ile demans arasında da ilişki bulunmaktadır."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-30-c0118",
+       "ses": "Geride kalan striatal nöronlarda ve kortekste ubikuitinlenmiş huntingtin proteininin birikimlerini içeren çekirdek içi inklüzyonlar vardır.",
+       "ekran": "Kalan nöronlarda **ubikuitinli huntingtin** içeren **çekirdek içi** inklüzyon",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "çekirdek içi",
+         "tur": "tuzak"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 45,
+        "satir": [
+         "Geriye kalan striatal nöronlarda ve kortekste ubikuitinlenmiş huntingtin proteininin birikimlerini içeren çekirdek içi inklüzyonlar vardır."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-30-b10",
+   "baslik": "Spinoserebellar ataksiler",
+   "paragraflar": [
+    {
+     "id": "k2-30-p045",
+     "sayfa": 46,
+     "cumleler": [
+      {
+       "id": "k2-30-c0119",
+       "ses": "Spinoserebellar ataksiler; serebellar ve duyusal ataksi, spastisite ve sensorimotor periferik nöropati kombinasyonlarını sergileyen, klinik olarak heterojen bir hastalık grubudur.",
+       "ekran": "Spinoserebellar ataksi: **serebellar/duyusal ataksi, spastisite, sensorimotor nöropati** kombinasyonu",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 46,
+        "satir": [
+         "Serebellar ve duyusal ataksi,",
+         "spastisite ve",
+         "sensorimotor periferik nöropati kombinasyonlarını sergileyen klinik olarak heterojen hastalıklar grubudur."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-30-p046",
+     "sayfa": 47,
+     "cumleler": [
+      {
+       "id": "k2-30-c0120",
+       "ses": "Spinoserebellar ataksiler sıklıkla trinükleotid tekrarlarının genişlemesine yol açan mutasyonlardan kaynaklanır.",
+       "ekran": "Sıklıkla **trinükleotid tekrar genişlemesi**",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 47,
+        "satir": [
+         "Spinoserebellar ataksiler (SSA), sıklıkla trinükleotid tekrarlarının genişlemesine yol açan mutasyonlardan kaynaklanan klinik olarak heterojen bir hastalıklar grubudur."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-30-c0121",
+       "ses": "Birbirlerinden neden olan mutasyonlar, kalıtım paternleri, başlangıç yaşı ve bulgu ile belirtilerdeki farklılıklarla ayrılırlar.",
+       "ekran": "Alt tipler **mutasyon, kalıtım, başlangıç yaşı ve bulgularla** ayrılır",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 47,
+        "satir": [
+         "Birbirlerinden; neden olan mutasyonlar, kalıtımsal paternler, hastalığın başlangıç yaşı, bulgu ve belirtilerdeki farklılıklar ile ayrılırlar."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-30-c0122",
+       "ses": "Değişken derecelerde serebellar korteksi, spinal kordu, diğer beyin bölgelerini ve periferik sinirleri tuttukları için klinikte bu bulguların herhangi bir birleşimi görülebilir.",
+       "ekran": "Serebellar korteks, spinal kord, diğer beyin bölgeleri, **periferik sinirler** değişken tutulur",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "periferik sinirler",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [
+        "4c4eb178b88b"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 47,
+        "satir": [
+         "Bu hastalıklar grubu, değişken derecelerde; serebellar korteksi, spinal kordu, diğer beyin bölgelerini ve periferik sinirleri tutar."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-30-p047",
+     "sayfa": 48,
+     "cumleler": [
+      {
+       "id": "k2-30-c0123",
+       "ses": "Nöron dejenerasyonu sıklıkla ilgili bölgelerde ayırt edici histopatolojik değişiklik olmaksızın görülür ve hafif gliozisle birliktedir.",
+       "ekran": "Ayırt edici histopatoloji yok, **hafif gliozis**",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 48,
+        "satir": [
+         "Nöron dejenerasyonu sıklıkla ilgili bölgelerde ayırdedici histopatolojik değişiklikler gerçekleşmeksizin görülür ve hafif gliozis ile birliktedir."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-30-c0124",
+       "ses": "Ataksiye eşlik eden ek klinik semptomlar, iyi karakterize edilmiş alt tiplerin ayrımına yardımcı olabilir.",
+       "ekran": "Ek klinik belirtiler alt tip ayrımına yardımcı",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 48,
+        "satir": [
+         "Ataksiye eşlik eden ek klinik semptomlar iyi karakterize edilmiş alt tiplerin ayırımına yardımcı olabilir."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-30-c0125",
+       "ses": "İki düzineden fazla ayrı genetik tip tanımlanmış olsa da, bu formların hiçbirine uymayan birçok olgu vardır.",
+       "ekran": "**İki düzineden fazla** genetik tip; uymayan çok olgu var",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 48,
+        "satir": [
+         "SSA’nın iki düzineden fazla ayrı genetik tipi tanımlanmış olmasına karşın, karakterize edilmiş formlardan herhangi birine uymayan birçok olgu vardır."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-30-p048",
+     "sayfa": 49,
+     "cumleler": [
+      {
+       "id": "k2-30-c0126",
+       "ses": "Huntington hastalığı gibi, spinoserebellar ataksinin birçok formu, yani tip bir, iki, üç, altı, yedi, on yedi ve dentatorubropallidolusiyan atrofi, poliglutamin kodlayan ce a ge tekrar ekspansiyonlarından kaynaklanır.",
+       "ekran": "Tip **1, 2, 3, 6, 7, 17** ve dentatorubropallidolusiyan atrofi: **CAG / poliglutamin** ekspansiyonu",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "CAG / poliglutamin",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 49,
+        "satir": [
+         "Huntington hastalığı gibi, SSA'nın birçok formu (SSA tip 1, 2, 3, 6, 7, 17 ve dentatorubropallidoluysian atrofi) birçok gende poliglutamin yolağını kodlayan CAG tekrarların oluşturduğu ekspansiyonlardan kaynaklanır."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-30-c0127",
+       "ses": "Bu formlarda da Huntington'daki gibi anormal protein içeren nöronal çekirdek içi inklüzyonlar vardır ve ekspansiyon derecesi ile başlangıç yaşı arasında ters korelasyon bulunur.",
+       "ekran": "Çekirdek içi inklüzyon; ekspansiyon ile başlangıç yaşı arasında **ters korelasyon**",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 49,
+        "satir": [
+         "SSA'nın bu formlarında yine HH’de olduğu gibi anormal protein içeren nöronal çekirdek içi inklüzyonlar mevcuttur ve tekrarların oluşturduğu ekspansiyonunun derecesi ile başlangıç yaşı arasında ters korelasyon vardır."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-30-c0128",
+       "ses": "Diğer spinoserebellar ataksiler, translasyona uğramayan bölgelerde trinükleotid tekrar genişlemesi veya diğer mutasyonlar sonucu oluşur.",
+       "ekran": "Diğerleri: **translasyona uğramayan bölgede** tekrar genişlemesi ya da başka mutasyon",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 49,
+        "satir": [
+         "Diğer SSA'lar, translasyon olmamış bölgelerde trinükleotid tekrarlarının genişlemesi veya diğer mutasyonlar sebebi ile meydana gelir."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-30-b11",
+   "baslik": "Friedreich ataksisi",
+   "paragraflar": [
+    {
+     "id": "k2-30-p049",
+     "sayfa": 50,
+     "cumleler": [
+      {
+       "id": "k2-30-c0129",
+       "ses": "Friedreich ataksisi otozomal resesif bir hastalıktır; sıklıkla yaşamın ilk on yılında yürüme ataksisiyle başlar, ardından ellerde beceriksizlik ve dizartri gelişir.",
+       "ekran": "Friedreich: **otozomal resesif**; ilk on yılda yürüme ataksisi, sonra el beceriksizliği, dizartri",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "otozomal resesif",
+         "tur": "tuzak"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 50,
+        "satir": [
+         "Friedreich ataksisi otozomal resesif bir hastalıktır, sıklıkla yaşamın ilk on yılında yürüme ataksisiyle kendini gösterir, ardından ellerde beceriksizlik ve dizartri gelişir."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-30-c0130",
+       "ses": "Çoğu hastada pes kavus ve kifoskolyoz gelişir; kalp hastalığı ile diyabet insidansı da yüksektir.",
+       "ekran": "**Pes kavus, kifoskolyoz**; kalp hastalığı ve diyabet sık",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 50,
+        "satir": [
+         "Çoğu hastada pes kavus ve kifoskolyoz gelişir.",
+         "Kalp hastalığı ile diyabet insidansı yüksektir."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-30-c0131",
+       "ses": "Hastalık sıklıkla, mitokondride hücresel demir düzeyini düzenleyen frataksini kodlayan gende ge a a trinükleotid tekrarının genişlemesinden kaynaklanır; bu genetik temel çıkmışta soruldu.",
+       "ekran": "**Frataksin** geninde **GAA** tekrar genişlemesi (mitokondriyal demir düzenleyici)",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "GAA",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [
+        "past-1790877497218-639789",
+        "past-1790877488856-908119"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 50,
+        "satir": [
+         "Hastalık sıklıkla, özellikle mitokondride hücresel demir düzeyini regüle eden bir protein olan frataxini kodlayan bir gende GAA trinükleotid tekrarının oluşturduğu genişlemeden kaynaklanır."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-30-p050",
+     "sayfa": 51,
+     "cumleler": [
+      {
+       "id": "k2-30-c0132",
+       "ses": "Tekrar artışı transkripsiyonu durdurur ve protein düzeyini düşürür; yani Huntington'daki işlev kazanmanın tersine burada protein eksikliği vardır.",
+       "ekran": "Tekrar artışı → **transkripsiyon durur** → frataksin azalır",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "transkripsiyon durur",
+         "tur": "tuzak"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 51,
+        "satir": [
+         "Tekrar artışı, transkripsiyonu durdurup protein düzeyinin düşmesine neden olur."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-30-c0133",
+       "ses": "İşlevsel olmayan frataksin üreten nokta mutasyonlu nadir olgular da tanımlanmıştır.",
+       "ekran": "Nadir: işlevsiz frataksin üreten **nokta mutasyonu**",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 51,
+        "satir": [
+         "İşlevsel olmayan bir frataxin proteini üreten nokta mutasyonunun bulunduğu nadir olgular da tanımlanmıştır."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-30-c0134",
+       "ses": "Azalmış frataksin, artmış oksidatif hasara ve mitokondriyal disfonksiyona neden olur.",
+       "ekran": "Az frataksin → **oksidatif hasar + mitokondriyal disfonksiyon**",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 51,
+        "satir": [
+         "Azalmış frataxin, artmış oksidatif hasara ve mitokondriyal disfonksiyona neden olur."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-30-b12",
+   "baslik": "Amiyotrofik lateral skleroz: tanım ve klinik",
+   "paragraflar": [
+    {
+     "id": "k2-30-p051",
+     "sayfa": 52,
+     "cumleler": [
+      {
+       "id": "k2-30-c0135",
+       "ses": "Amiyotrofik lateral skleroz; spinal kord ve beyin sapındaki alt motor nöronlar ile motor korteksteki üst motor nöronların, yani Betz hücrelerinin ölümüyle ortaya çıkar; alt ve üst motor nöronu birlikte tutan bu hastalık çıkmışta soruldu.",
+       "ekran": "ALS: **alt motor nöron** (spinal kord, beyin sapı) + **üst motor nöron** (Betz hücreleri) ölümü",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "alt motor nöron",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [
+        "q-No_ropsikiyatri_gis_kardiyo_-2023-2024-C__km_s_lar__240625_053302__2_-14"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 52,
+        "satir": [
+         "spinal kord ve beyin sapındaki alt motor nöronlar ve",
+         "motor korteksteki üst motor nöronların (Betz hücreleri) ölümü nedeniyle ortaya çıkar."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-30-p052",
+     "sayfa": 53,
+     "cumleler": [
+      {
+       "id": "k2-30-c0136",
+       "ses": "Alt motor nöronların kaybı kasların denervasyonuna, amiyotrofi denen kas atrofisine, güçsüzlüğe ve fasikülasyonlara neden olur.",
+       "ekran": "Alt motor nöron kaybı: denervasyon, **amiyotrofi**, güçsüzlük, **fasikülasyon**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "fasikülasyon",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 53,
+        "satir": [
+         "Alt motor nöronların kaybı;",
+         "kasların denervasyonu,",
+         "kas atrofisi (\"amyotrofi\"),",
+         "güçsüzlük ile",
+         "fasikülasyonlara neden olur."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-30-c0137",
+       "ses": "Üst motor nöronların kaybı ise parezi, hiperrefleksi, spastisite ve Babinski bulgusuna yol açar; fasikülasyon, hiperrefleksi, parezi ve Babinski birlikteliğinin amiyotrofik lateral sklerozu düşündürdüğü çıkmışta soruldu.",
+       "ekran": "Üst motor nöron kaybı: parezi, **hiperrefleksi**, spastisite, **Babinski**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Babinski",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [
+        "q-No_ropsikiyatri_gis_kardiyo_-2023-2024-C__km_s_lar__240625_053302__2_-36"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 53,
+        "satir": [
+         "Üst motor nöronların kaybı ise;",
+         "parezi,",
+         "hiperrefleksi ve",
+         "spastisite yanısıra",
+         "Babinski bulgusuna yol açar."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-30-p053",
+     "sayfa": 54,
+     "cumleler": [
+      {
+       "id": "k2-30-c0138",
+       "ses": "Üst motor nöron kaybının ek bir sonucu, spinal kordun lateral bölümündeki kortikospinal traktusların dejenerasyonudur ve hastalığın adındaki lateral skleroz buradan gelir.",
+       "ekran": "Lateral kortikospinal traktus dejenerasyonu = **lateral skleroz**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "lateral skleroz",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 54,
+        "satir": [
+         "Üst motor nöron kaybının ek bir sonucu da, spinal kordun lateral bölümünde kortikospinal traktusların dejenerasyonudur (\"lateral sklerozis\")."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-30-c0139",
+       "ses": "Duyu genellikle etkilenmez, kognitif bozukluklar ise nadir değildir.",
+       "ekran": "**Duyu korunur**; kognitif bozukluk nadir değil",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Duyu korunur",
+         "tur": "tuzak"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 54,
+        "satir": [
+         "Duyu genellikle etkilenmemiştir, kognitif bozukluklar ise nadir değildir."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-30-p054",
+     "sayfa": 55,
+     "cumleler": [
+      {
+       "id": "k2-30-c0140",
+       "ses": "Hastalık erkekleri kadınlara göre biraz daha sık etkiler ve kırklı yaşlarda ya da daha sonra, genellikle hafif, asimetrik distal ekstremite güçsüzlüğüyle başlar.",
+       "ekran": "Erkekte biraz sık; **40'lı yaş** ve sonrası; **asimetrik distal** güçsüzlük",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 55,
+        "satir": [
+         "Hastalık erkekleri kadınlara göre biraz daha sık etkilemekte ve klinik açıdan 40’lı yaşlarda ya da daha sonra, genellikle hafif dereceli, asimetrik distal ekstremite güçsüzlüğü ile klinik olarak kendini gösterir."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-30-c0141",
+       "ses": "Hastalık motor sistemin daha büyük kısmını tuttukça kas gücü ve kitlesi azalır ve tek tek motor ünitelerin istem dışı kasılmaları, yani fasikülasyonlar ortaya çıkar.",
+       "ekran": "İlerledikçe kas gücü ve kitlesi azalır, **fasikülasyonlar**",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 55,
+        "satir": [
+         "Hastalık motor sistemin daha büyük kısmını tutacak biçimde ilerledikçe kas gücü ve miktarı azalır ve tek tek motor ünitelerin istek dışı kasılmaları, yani fasikülasyonlar ortaya çıkar."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-30-c0142",
+       "ses": "Hastalık sonunda solunum kaslarını tutar ve buna bağlı tekrarlayan pulmoner enfeksiyonlar sıklıkla ölüm nedenidir.",
+       "ekran": "Solunum kası tutulumu → **tekrarlayan pulmoner enfeksiyon** → ölüm",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 55,
+        "satir": [
+         "Hastalık sonunda solunum kaslarını tutar.",
+         "Buna bağlı gelişen, tekrarlayan pulmoner enfeksiyon atakları sıklıkla ölümün nedenidir."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-30-p055",
+     "sayfa": 56,
+     "cumleler": [
+      {
+       "id": "k2-30-c0143",
+       "ses": "Üst ve alt motor nöron tutulumunun dengesi değişebilir, ama birçok hastada her ikisinde de tutulum vardır.",
+       "ekran": "Üst/alt tutulum dengesi değişken; çoğunda **ikisi birlikte**",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 56,
+        "satir": [
+         "Üst ve alt motor nöron tutulum dengesi değişebilirken birçok hastada her ikisinde de tutulum görülür."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-30-c0144",
+       "ses": "Bazı hastalarda alt beyin sapındaki kraniyal motor nükleus dejenerasyonu erken başlayıp hızla ilerler; bu paterne bulber amiyotrofik lateral skleroz denir ve yutma ile konuşma anomalileri baskındır.",
+       "ekran": "**Bulber ALS**: kraniyal motor nükleus erken tutulur; **yutma ve konuşma** bozukluğu baskın",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Bulber ALS",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 56,
+        "satir": [
+         "Bazı hastalarda alt beyin sapındaki kraniyal motor nükleus dejenerasyonu erken ortaya çıkar ve hızlıca ilerler.",
+         "Bu paternde yutma ve konuşma anomalileri baskındır."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-30-b13",
+   "baslik": "Amiyotrofik lateral skleroz: patogenez ve morfoloji",
+   "paragraflar": [
+    {
+     "id": "k2-30-p056",
+     "sayfa": 57,
+     "cumleler": [
+      {
+       "id": "k2-30-c0145",
+       "ses": "Çoğu olgu sporadik olsa da yüzde beş ile on kadarı, çoğunlukla otozomal dominant geçişli olmak üzere aileseldir.",
+       "ekran": "Çoğu sporadik; **%5–10 ailesel**, çoğunlukla otozomal dominant",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "%5–10 ailesel",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 57,
+        "satir": [
+         "Çoğu olgu sporadik olsa da %5-10 olgu, çoğunlukla otozomal dominant geçişli olmak üzere, aileseldir."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-30-c0146",
+       "ses": "Ailesel hastalık sporadik forma göre daha erken başlar, ama semptomlar açığa çıktıktan sonra klinik seyir iki formda benzerdir.",
+       "ekran": "Ailesel form **daha erken başlar**, seyir benzer",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 57,
+        "satir": [
+         "Ailesel hastalık sporadik hastalığa göre yaşamın daha erken döneminde başlar, ama semptomlar açığa çıktıktan sonra klinik seyir her iki formda benzerdir."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-30-c0147",
+       "ses": "Ailesel formların yüzde yirmisinde saptanan, yirmi birinci kromozomdaki süperoksit dismutaz bir genindeki mutasyonlar, bu hastalıkta ilk saptanan genetik değişikliktir.",
+       "ekran": "İlk bulunan gen: 21. kromozomda **SOD-1**; ailesel olguların **%20**'si",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "SOD-1",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 57,
+        "satir": [
+         "Ailesel formların %20’sinde saptanan 21. kromozomdaki superoksid dismutaz (SOD-1) genindeki mutasyonlar ALS’de ilk saptanan genetik değişikliktir."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-30-p057",
+     "sayfa": 58,
+     "cumleler": [
+      {
+       "id": "k2-30-c0148",
+       "ses": "Bu mutasyonların hatalı katlanmış anormal süperoksit dismutaz proteinine yol açtığı, bunun da katlanmamış protein yanıtını tetikleyerek nöronlarda apoptoza neden olduğu düşünülmektedir.",
+       "ekran": "Hatalı katlanmış SOD1 → **katlanmamış protein yanıtı** → nöron apoptozu",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "katlanmamış protein yanıtı",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 58,
+        "satir": [
+         "Bu mutasyonların, hatalı katlanmış anormal SOD1 proteinlerine yol açtığı, bunun katlanmamış protein yanıtını tetikleyip nöronlarda apoptoza neden olduğu düşünülmektedir."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-30-p058",
+     "sayfa": 59,
+     "cumleler": [
+      {
+       "id": "k2-30-c0149",
+       "ses": "Diğer nedenler, ce dokuz o er ef yetmiş iki geninde hekzanükleotid artışı, te de pe kırk üç geni mutasyonları ve fus geni mutasyonlarıdır.",
+       "ekran": "Diğer nedenler: **C9orf72** hekzanükleotid artışı, **TDP43**, **FUS** mutasyonları",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "C9orf72",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 59,
+        "satir": [
+         "C9orf72 geninde hekzonükleotid artışı",
+         "TDP43 geni mutasyonları",
+         "FUS geni mutasyonları"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-30-c0150",
+       "ses": "Bunlar re ne a bağlayan proteinlerle ilişkilidir; bu yüzden frontotemporal lober dejenerasyondaki te de pe kırk üç ile ortak bir zemin paylaşırlar.",
+       "ekran": "Hepsi **RNA bağlayan proteinlerle** ilişkili",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 59,
+        "satir": [
+         "Bunlar RNA bağlayan proteinlerle ilişkilidirler."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-30-p059",
+     "sayfa": 60,
+     "cumleler": [
+      {
+       "id": "k2-30-c0151",
+       "ses": "Makroskopik olarak en çarpıcı değişiklik omuriliğin ön köklerindedir; ön kökler ince ve gri renktedir.",
+       "ekran": "Makroskopi: **ön kökler ince ve gri**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "ön kökler ince ve gri",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 60,
+        "satir": [
+         "Makroskopik olarak, en çarpıcı değişiklikler omuriliğin ön köklerinde saptanır, bunlar ince ve gri renkte lezyonlardır."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-30-c0152",
+       "ses": "Özellikle ağır olgularda presantral girus yani motor korteks hafif atrofik olabilir.",
+       "ekran": "Ağır olguda **presantral girus** hafif atrofik",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 60,
+        "satir": [
+         "Özellikle ağır olgularda presantral girus (motor korteks) hafif atrofik olabilir."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-30-c0153",
+       "ses": "Mikroskopide omurilik boyunca ön boynuz hücresi nöronlarının sayıca azaldığı, reaktif gliozis geliştiği ve ön kök miyelinli liflerinin kaybolduğu görülür.",
+       "ekran": "Mikroskopi: **ön boynuz nöron kaybı**, reaktif gliozis, ön kök miyelinli lif kaybı",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 60,
+        "satir": [
+         "Mikroskopik incelemede omurilik uzunluğu boyunca ön boynuz hücresi nöronlarının sayıca azaldığı ve beraberinde reaktif gliozis gelişimi ile ön kök myelinli liflerinin kaybı görülür."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-30-p060",
+     "sayfa": 61,
+     "cumleler": [
+      {
+       "id": "k2-30-c0154",
+       "ses": "Benzer bulgular göz dışı kasları kontrol edenler hariç kraniyal sinirlerin motor çekirdeklerinde de görülür; yani göz hareketleri korunur.",
+       "ekran": "Kraniyal motor sinirler de tutulur, **ekstraoküler kaslarınki hariç**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "ekstraoküler kaslarınki hariç",
+         "tur": "tuzak"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 61,
+        "satir": [
+         "Benzer bulgular ekstra oküler kasları kontrol edenler hariç kraniyal sinirlerin motor kaslarında da görülür."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-30-c0155",
+       "ses": "Olguların bir alt grubunda te de pe kırk üç içeren sitoplazmik inklüzyonlar görülür.",
+       "ekran": "Alt grupta **TDP-43** içeren sitoplazmik inklüzyon",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 61,
+        "satir": [
+         "Olguların bir alt grubunda TDP-43 içeren sitoplazmik inklüzyonlar görülür."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-30-c0156",
+       "ses": "Ön boynuz hücrelerinin ölümüne bağlı innervasyon kaybı sonucunda iskelet kaslarında nörojenik atrofi görülür.",
+       "ekran": "Ön boynuz ölümü → innervasyon kaybı → **nörojenik kas atrofisi**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "nörojenik kas atrofisi",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 61,
+        "satir": [
+         "Ön boynuz hücrelerinin ölümünden kaynaklanan innervasyon kaybı sonucunda iskelet kaslarında nörojenik atrofi görülür"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "anahtar": "y25-k2-30-norodejeneratif-hastaliklar",
+ "donem": "2025-2026"
+}

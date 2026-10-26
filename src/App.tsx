@@ -196,7 +196,6 @@ import {
   AppUser,
 } from './services/auth';
 import { isAdminAppMode, getStoredPanelSecret, setStoredPanelSecret } from './config/deployment';
-import { AdminFloatingSwitcher } from './components/manage/AdminFloatingSwitcher';
 import { getDefaultActiveCommitteeId, filterCurrent2026_2027Committees } from './services/firestoreDb';
 import { 
   uploadBookletPdfToDrive, 
@@ -1532,11 +1531,6 @@ export default function App() {
       <CdVideoRozet />
       <ConfirmHost />
       <TooltipHost />
-      <AdminFloatingSwitcher
-        activeTab={activeTab}
-        onGoManage={() => setActiveTabState('manage')}
-        visible={isAdmin || isModerator || isAdminAppMode()}
-      />
       {activeTab !== 'music' && activeTab !== 'practice' && activeTab !== 'manage' && (
         <MiniMusicPlayer onOpen={() => setActiveTab('music')} />
       )}

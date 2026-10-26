@@ -1,0 +1,6142 @@
+{
+ "surum": 2,
+ "ders_id": "k2-27",
+ "baslik": "Aile Hekimliğinde Periyodik Sağlık Muayeneleri",
+ "bolumler": [
+  {
+   "id": "k2-27-b01",
+   "baslik": "Koruyucu tıp ve sağlık kavramı",
+   "paragraflar": [
+    {
+     "id": "k2-27-p001",
+     "sayfa": 2,
+     "cumleler": [
+      {
+       "id": "k2-27-c0001",
+       "ses": "Dünya Sağlık Örgütü bin dokuz yüz kırk sekizde sağlığı sadece hastalık veya sakatlığın olmaması değil, fiziksel, ruhsal ve sosyal açıdan tam iyilik hali olarak tanımlamıştır.",
+       "ekran": "DSÖ 1948: sağlık, **fiziksel, ruhsal ve sosyal** açıdan tam iyilik hâli",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "fiziksel, ruhsal ve sosyal",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "Sadece hastalık veya sakatlığın olmaması değil, fiziksel, ruhsal ve sosyal açıdan tam iyilik halidir"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0002",
+       "ses": "Yani hastalığı olmayan biri ruhsal ya da sosyal yönden iyi değilse, bu tanıma göre tam anlamıyla sağlıklı sayılmaz; koruyucu tıbbın hedefi de bu üç boyutlu iyilik halidir.",
+       "ekran": "Üç boyuttan biri eksikse tam sağlık yok; koruyucu tıbbın hedefi **üç boyutlu iyilik**",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "üç boyutlu iyilik",
+         "tur": "terim"
+        },
+        {
+         "metin": "üç boyutlu iyilik",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [
+        "past-1790877045128-896616"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "fiziksel, ruhsal ve sosyal açıdan tam"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0003",
+       "ses": "Bu bilgi çıkmış sınavda sorulmuştur: koruyucu tıp, hastalıklardan korunma, sağlık ve iyilik halinin devamlılığına odaklı tıbbi bakım yöntemidir.",
+       "ekran": "**Koruyucu tıp**: korunma ve iyilik hâlinin devamlılığına odaklı bakım",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Koruyucu tıp",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [
+        "917b4c92f940"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "Hastalıklardan korunma, sağlık ve iyilik halinin devamlılığına odaklı tıbbi bakım yöntemidir"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0004",
+       "ses": "Burada odak hastalığı tedavi etmek değil, sağlıklı insanın sağlıklı kalmasını sağlamaktır; periyodik muayene de bu yaklaşımın en somut uygulamasıdır.",
+       "ekran": "Odak tedavi değil, sağlığın sürmesi; **periyodik muayene** bunun uygulaması",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "periyodik muayene",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "sağlık ve iyilik halinin devamlılığına"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0005",
+       "ses": "Koruyucu tıp bir insan hakkıdır, sağlıklı yaşam için özendiricidir ve sağlığın devamını sağlar.",
+       "ekran": "Koruyucu tıp **insan hakkıdır**, özendiricidir, sağlığın devamını sağlar",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "insan hakkıdır",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 4,
+        "satir": [
+         "İnsan hakkıdır",
+         "Sağlıklı yaşam için özendiricidir",
+         "Sağlığın devamını sağlar"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0006",
+       "ses": "Ayrıca maliyet etkindir; hastalığı oluşmadan önlemek, gelişmiş hastalığı ve komplikasyonlarını tedavi etmekten hem kişi hem sağlık sistemi için daha ucuzdur.",
+       "ekran": "Koruyucu tıp **maliyet etkindir**",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "maliyet etkindir",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 4,
+        "satir": [
+         "Maliyet etkindir"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-27-b02",
+   "baslik": "Koruma düzeyleri",
+   "paragraflar": [
+    {
+     "id": "k2-27-p002",
+     "sayfa": 5,
+     "cumleler": [
+      {
+       "id": "k2-27-c0007",
+       "ses": "Primordiyal koruma, sağlıklı kişilerdeki risk faktörlerinin ortaya çıkmasının önlenmesidir.",
+       "ekran": "**Primordiyal koruma**: risk faktörünün hiç ortaya çıkmaması",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Primordiyal koruma",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "Sağlıklı kişilerdeki risk faktörlerinin ortaya çıkmasının önlenmesidir"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0008",
+       "ses": "Bunun için risk faktörlerinin geliştiği sosyal ve çevresel koşulların değiştirilmesi, yüksek riskli çocuk, ergen ve genç erişkinlerde danışmanlık ve sağlıklı yaşam biçimi geliştirme yapılır.",
+       "ekran": "Sosyal-çevresel koşulları değiştirme; **yüksek riskli çocuk, ergen, genç erişkine danışmanlık**",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "yüksek riskli çocuk, ergen, genç erişkine danışmanlık",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "Risk faktörlerinin geliştiği sosyal ve çevresel koşulların değiştirilmesi",
+         "yüksek riskli çocuk, ergen ve genç erişkinlerde danışmanlık ve sağlıklı yaşam biçimi geliştirme"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0009",
+       "ses": "Birincil koruma ise hastalığın ortaya çıkmasını önleyen koruyuculuktur; davranış değişiklikleri ve aşılama tipik örnekleridir.",
+       "ekran": "**Birincil koruma**: hastalığın ortaya çıkmasını önler; davranış değişikliği, aşılama",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Birincil koruma",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "Hastalığın ortaya çıkmasını önleyen koruyuculuktur",
+         "davranış değişiklikleri, aşılama"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0010",
+       "ses": "Birincil korumanın hedef kitlesi sağlıklı kişilerdir; primordiyal koruma risk faktörünü, birincil koruma ise hastalığın kendisini engellemeye çalışır.",
+       "ekran": "Hedef kitle: **sağlıklı kişiler**",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "sağlıklı kişiler",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "Hedef Kitle: Sağlıklı Kişiler"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0011",
+       "ses": "İkincil koruma, genellikle belirti, bulgu ve işlev bozukluğuna yol açmamış, ancak vücutta oluşmuş hastalıklara yöneliktir ve bu klinik öncesi durumlar genelde taramalarla saptanır.",
+       "ekran": "**İkincil koruma**: oluşmuş ama belirti vermemiş hastalık; taramayla saptanır",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "İkincil koruma",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "Genellikle belirti, bulgu ve işlev bozukluğuna yol açmamış, ancak vücutta oluşmuş hastalıklara yöneliktir",
+         "Bu klinik öncesi durumlar, genelde taramalarla saptanır"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0012",
+       "ses": "Amaç erken tanı ile hastalığı tedavi etmek ve ciddi sonuçları önlemektir; mamografi ve smear bunun örnekleridir ve hedef kitle asemptomatik hastalardır.",
+       "ekran": "Erken tanı; örnek **mamografi, smear**; hedef **asemptomatik hastalar**",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "mamografi, smear",
+         "tur": "terim"
+        },
+        {
+         "metin": "asemptomatik hastalar",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "Erken tanı ile hastalığı tedavi etmeyi, ciddi sonuçları önlemeyi hedefler",
+         "Mamografi, smear vb",
+         "Hedef Kitle: Asemptomatik Hastalar"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0013",
+       "ses": "Üçüncül koruma, hastalık gelişmiş bireylerde komplikasyonları önlemek ve yaşam kalitesini artırmaktır; hedef kitlesi semptomatik hastalardır.",
+       "ekran": "**Üçüncül koruma**: komplikasyonu önleme, yaşam kalitesi; hedef **semptomatik hastalar**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Üçüncül koruma",
+         "tur": "tanim"
+        },
+        {
+         "metin": "semptomatik hastalar",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "Hastalık gelişmiş bireylerde komplikasyonları önlemek ve yaşam kalitesini artırmaktır",
+         "Hedef Kitle: Semptomatik Hastalar"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-27-p003",
+     "sayfa": 9,
+     "cumleler": [
+      {
+       "id": "k2-27-c0014",
+       "ses": "Dördüncül korumanın ilkesi önce zarar vermemektir ve bu ilke hekimlerin iyatrojenik zararlardan kaçınmasını gerektirir.",
+       "ekran": "**Dördüncül koruma**: önce zarar verme, iyatrojenik zarardan kaçınma",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Dördüncül koruma",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [
+         "Önce zarar verme",
+         "hekimlerin iyatrojenik zararlardan kaçınmasını gerektirmektedir"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0015",
+       "ses": "Dünya Aile Hekimleri Örgütü olan Vonka tanımına göre dördüncül koruma, aşırı medikalizasyon riskindeki hastayı ve toplumu medikal istilalardan korumak ve onlara bilimsel ve etik olarak kabul edilebilir bakım prosedürlerini sağlamak için yapılan eylemdir.",
+       "ekran": "WONCA: **aşırı medikalizasyon** riskindekini medikal istiladan korumak",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "aşırı medikalizasyon",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [
+         "Aşırı medikalizasyon riskindeki hastayı ve toplumu medikal istilalardan korumak ve onlara bilimsel ve etik olarak kabul edilebilir bakım prosedürlerini sağlamak için yapılan eylemdir"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0016",
+       "ses": "Çalışmalar koruma girişimlerinin, hastalıkların araştırılmasının, tanı ve tedavi aşamalarının hastalara zarar da verebileceğini göstermiştir; aile hekimlerinin hastalarını tıbbi girişimlerin zararından koruma sorumluluğu dördüncül koruma kavramını doğurmuştur.",
+       "ekran": "Girişimler de zarar verebilir; aile hekiminin bunu **engelleme sorumluluğu**",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "engelleme sorumluluğu",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [
+         "Aile hekimlerinin hastalarının tıbbi girişimlerden zarar görmesini engellemek sorumluluğu, dördüncül koruma kavramının ortaya çıkmasına neden olmuştur"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0017",
+       "ses": "Vonka şeması koruma düzeylerini iki eksende dört kutuya yerleştirir: hastalık yok ya da var, ve hastanın ya da hekimin bakışı.",
+       "ekran": "WONCA şeması: **hastalık var/yok** ekseninde dört kutu",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "hastalık var/yok",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 10,
+        "satir": [
+         "Hastalık yok",
+         "Hastalık var"
+        ],
+        "sekil": "WONCA koruma düzeyleri şeması: dört kutu"
+       }
+      },
+      {
+       "id": "k2-27-c0018",
+       "ses": "Şemada birincil koruma, sorunun nedenini ortaya çıkmadan kaldırmak için yapılan eylemdir ve sağlığı artırma ile aşılama gibi spesifik korumayı içerir; ikincil koruma tarama, olgu bulma ve erken tanı ile sorunu erken evrede saptar.",
+       "ekran": "Birincil: **sağlığı artırma ve spesifik koruma**; ikincil: tarama, erken tanı",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "sağlığı artırma ve spesifik koruma",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 10,
+        "satir": [
+         "Sağlığı artırma ve spesifik korumayı içerir"
+        ],
+        "sekil": "WONCA şemasında birincil ve ikincil koruma kutuları"
+       }
+      },
+      {
+       "id": "k2-27-c0019",
+       "ses": "Dördüncül koruma kutusu aşırı medikalizasyon riskindekini invaziv girişimlerden korur, üçüncül koruma kutusu ise akut ya da kronik sorunun yol açtığı işlevsel yetersizliği en aza indirir ve rehabilitasyonu da kapsar.",
+       "ekran": "Üçüncül: işlevsel yetersizliği azaltma, **rehabilitasyon**; dördüncül: invaziv girişimden koruma",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "rehabilitasyon",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 10,
+        "satir": [
+         "Akut ya da kronik sağlık sorununun sonucu olan"
+        ],
+        "sekil": "WONCA şemasında üçüncül ve dördüncül koruma kutuları"
+       }
+      },
+      {
+       "id": "k2-27-c0020",
+       "ses": "Hastalığın doğal seyri şemasında hastalık öncesi dönemde primordiyal koruma, sağlam dönemde birincil koruma uygulanır.",
+       "ekran": "Doğal seyir: **hastalık öncesi → primordiyal ve birincil**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "hastalık öncesi → primordiyal ve birincil",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 11,
+        "satir": [
+         "Hastalık Öncesi"
+        ],
+        "sekil": "Hastalığın doğal seyri ve koruma düzeyleri şeması"
+       }
+      },
+      {
+       "id": "k2-27-c0021",
+       "ses": "Asemptomatik hastalık döneminde ikincil koruma, semptomatik hastalık ve komplikasyon döneminde ise üçüncül koruma devreye girer.",
+       "ekran": "Asemptomatik → **ikincil**; semptomatik ve komplikasyon → **üçüncül**",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "ikincil",
+         "tur": "terim"
+        },
+        {
+         "metin": "üçüncül",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 11,
+        "satir": [
+         "Asemptomatik Semptomatik"
+        ],
+        "sekil": "Doğal seyir şemasında asemptomatik ve semptomatik dönemler"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-27-b03",
+   "baslik": "Aile hekiminin rolü ve periyodik muayene",
+   "paragraflar": [
+    {
+     "id": "k2-27-p004",
+     "sayfa": 12,
+     "cumleler": [
+      {
+       "id": "k2-27-c0022",
+       "ses": "Koruyucu bakım birçok nedenden dolayı aile hekimliğinin merkezi konumundadır.",
+       "ekran": "Koruyucu bakım **aile hekimliğinin merkezinde**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "aile hekimliğinin merkezinde",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 12,
+        "satir": [
+         "Koruyucu bakım birçok nedenden dolayı Aile Hekimliğinin merkezi konumundadır"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0023",
+       "ses": "Aile hekimliğinin anahtar rolü, sürekli ve koordineli bir sağlık bakımı yönetimi ile prekonsepsiyondan ölüm anına kadar sağlığın geliştirilmesi ve korunması, hastalıkların önlenmesi ve bireylerin fonksiyonlarının en iyi noktada tutulmasıdır.",
+       "ekran": "Anahtar rol: **prekonsepsiyondan ölüme** sürekli, koordineli bakım",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "prekonsepsiyondan ölüme",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 12,
+        "satir": [
+         "Sürekli ve koordineli bir sağlık bakımı yönetimi ile prekonsepsiyondan ölüm anına kadar sağlığın geliştirilmesi ve korunması"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0024",
+       "ses": "Aile hekiminin görevleri kayıtlı kişilere sağlığı geliştirici ve koruyucu hizmet, birinci basamak teşhis, tedavi, rehabilitasyon ve danışmanlık, ana çocuk sağlığı ve üreme sağlığı hizmetleri vermektir.",
+       "ekran": "Görevler: koruyucu hizmet, birinci basamak tanı-tedavi, **ana çocuk ve üreme sağlığı**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "ana çocuk ve üreme sağlığı",
+         "tur": "terim"
+        },
+        {
+         "metin": "ana çocuk ve üreme sağlığı",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [
+        "a6ac548ce691"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 13,
+        "satir": [
+         "Kayıtlı kişilere yönelik sağlığı geliştirici ve koruyucu hizmet vermek",
+         "Ana çocuk sağlığı ve üreme sağlığı hizmetleri vermek"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0025",
+       "ses": "Ayrıca periyodik sağlık muayenesi yapmak, yaş, cinsiyet ve hastalık gruplarına yönelik izlem ve taramaları yapmak ve kayıtlı kişileri yılda en az bir defa değerlendirerek sağlık kayıtlarını güncellemek de aile hekiminin görevidir.",
+       "ekran": "**Periyodik sağlık muayenesi**; kayıtlıları **yılda en az bir kez** değerlendirme",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Periyodik sağlık muayenesi",
+         "tur": "sayi"
+        },
+        {
+         "metin": "yılda en az bir kez",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 13,
+        "satir": [
+         "Periyodik sağlık muayenesi yapmak",
+         "Kayıtlı kişileri yılda en az bir defa değerlendirerek sağlık kayıtlarını güncellemek"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-27-p005",
+     "sayfa": 14,
+     "cumleler": [
+      {
+       "id": "k2-27-c0026",
+       "ses": "Periyodik muayene, kişide var olan risklerin hastalık oluşmadan önce aranması esasına dayanır.",
+       "ekran": "Periyodik muayene: **riskleri hastalık oluşmadan önce arama**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "riskleri hastalık oluşmadan önce arama",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 14,
+        "satir": [
+         "Kişide var olan risklerin hastalık oluşmadan önce aranması esasına dayanır"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0027",
+       "ses": "Yani riskin olması her zaman hastalık olacağı anlamına gelmez, ancak olma olasılığının toplumdaki diğer bireylere göre biraz daha yüksek olabileceği anlamına gelir; önemli olan erken tanıya imkan vermek ve riski azaltacak önlemleri zamanında almaktır.",
+       "ekran": "Risk ≠ hastalık; yalnız **olasılık daha yüksek**; amaç erken tanı ve zamanında önlem",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "olasılık daha yüksek",
+         "tur": "tuzak"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 14,
+        "satir": [
+         "Yani riskin olması her zaman hastalık olacağı anlamına gelmez",
+         "Önemli olan erken tanı yapılabilmesine imkan verilmesi"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0028",
+       "ses": "Periyodik sağlık muayenesi yıllık çekaplardan farklıdır; çekap herkes için standart bir forma göre yapılır.",
+       "ekran": "PSM ≠ check-up; check-up **herkese standart form**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "herkese standart form",
+         "tur": "tuzak"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "Periyodik sağlık muayenesi (PSM) yıllık Check- up’lardan farklıdır",
+         "Check-up herkes için standart bir forma göre yapılırken"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0029",
+       "ses": "Periyodik sağlık muayenesi ise yaş ve cinsiyete özgü önlenebilir hastalıklar için biçimlendirilen koruyucu klinik hizmetler ve laboratuvar testleri ile sağlık riski değerlendirmesinin bir parçasıdır.",
+       "ekran": "PSM: **yaş ve cinsiyete özgü** önlenebilir hastalıklara göre biçimlenir",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "yaş ve cinsiyete özgü",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "yaş ve cinsiyete özgü önlenebilir hastalıklar için biçimlendirilen"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0030",
+       "ses": "Periyodik muayene, sağlıklı ya da sağlıklı görünen bireylerin tarama, muayene, danışmanlık, aşılama ve tetkikler ile yaşa, cinsiyete ve risk faktörlerine göre biçimlendirilmiş bir programla değerlendirilmesidir.",
+       "ekran": "PSM: sağlıklı ya da **sağlıklı görünen** bireyin yaş, cinsiyet ve riske göre değerlendirilmesi",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "sağlıklı görünen",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 16,
+        "satir": [
+         "Sağlıklı yada sağlıklı görünen bireylerin tarama muayene danışmanlık aşılama ve tetkikler ile yaşa, cinsiyete ve risk faktörlerine göre biçimlendirilmiş"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0031",
+       "ses": "Bu izlem programı kanıta dayalı yapılandırılmış, spesifik, etkin, uygulanabilir ve kabul edilebilir olmalıdır ve kişiye özgüdür.",
+       "ekran": "Program: kanıta dayalı, spesifik, etkin, uygulanabilir, kabul edilebilir; **kişiye özgü**",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "kişiye özgü",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 16,
+        "satir": [
+         "kanıta dayalı yapılandırılmış",
+         "Kişiye özgüdür"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0032",
+       "ses": "Periyodik muayenenin bileşenleri anamnez, fizik muayene ve tarama testleridir.",
+       "ekran": "Bileşenler: **anamnez, fizik muayene, tarama testleri**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "anamnez, fizik muayene, tarama testleri",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 17,
+        "satir": [
+         "Anamnez",
+         "Fizik muayene",
+         "Tarama testleri"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0033",
+       "ses": "Bunlara danışmanlık, sağlık eğitimi ve kemoprofilaksi eklenir; örneğin gebede folik asit ya da bebekte demir ve de vitamini kemoprofilaksiye örnektir.",
+       "ekran": "Ayrıca **danışmanlık, sağlık eğitimi, kemoprofilaksi**",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "danışmanlık, sağlık eğitimi, kemoprofilaksi",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 17,
+        "satir": [
+         "Danışmanlık",
+         "Sağlık Eğitimi",
+         "Kemoprofilaksi"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-27-b04",
+   "baslik": "Evlilik öncesi taramalar ve spinal müsküler atrofi",
+   "paragraflar": [
+    {
+     "id": "k2-27-p006",
+     "sayfa": 19,
+     "cumleler": [
+      {
+       "ses": "Evlilik öncesi dönem bölümünde, çiftlerin sağlık durumlarının değerlendirilmesi ve evlilik öncesi tarama programları ele alınır.",
+       "ekran": "**Evlilik Öncesi Dönem:** Evlilik öncesi taramalar ve danışmanlık hizmetleri",
+       "slayt": {
+        "sayfa": 18,
+        "satir": [],
+        "sekil": "Evlilik Öncesi bölüm başlık sayfası"
+       },
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "duzey": 1,
+       "id": "k2-27-c0034"
+      },
+      {
+       "id": "k2-27-c0035",
+       "ses": "Birinci basamakta aile hekimleri ile toplum sağlığı ve sağlıklı hayat merkezlerinde evlilik öncesi tarama, eğitim ve danışmanlık verilir.",
+       "ekran": "Birinci basamak: **evlilik öncesi tarama, eğitim, danışmanlık**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "evlilik öncesi tarama, eğitim, danışmanlık",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 19,
+        "satir": [
+         "Aile Hekimleri ve TSM/SHM’ lerde",
+         "Evlilik öncesi tarama"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0036",
+       "ses": "Şüpheli durumlarda veya taşıyıcılık durumunda ise sevk hizmetleri verilmektedir.",
+       "ekran": "Şüpheli ya da **taşıyıcıda sevk**",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "taşıyıcıda sevk",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 19,
+        "satir": [
+         "Şüpheli durumlarda veya taşıyıcılık durumunda sevk hizmetleri verilmektedir"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0037",
+       "ses": "Evlilik öncesi tarama testleri ha ı ve için anti ha ı ve testi, hepatit B için hepatit B yüzey antijeni, hepatit C için anti ha ce ve testi ve sifiliz için ve de er le testidir.",
+       "ekran": "Anti-HIV, **HBsAg**, anti-HCV, sifiliz için **VDRL**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "HBsAg",
+         "tur": "terim"
+        },
+        {
+         "metin": "VDRL",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 20,
+        "satir": [
+         "HIV (AIDS): Anti HIV Testi",
+         "Hepatit C taraması için: Anti HCV Testi",
+         "VDRL Testi"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0038",
+       "ses": "Bu bilgi çıkmış sınavda sorulmuştur: evlilik öncesi taramaya kan grubu analizi ve tam kan sayımı, Akdeniz anemisi yani talasemi için hemoglobin elektroforezi testi ve es em a taraması eklenir.",
+       "ekran": "Kan grubu, hemogram, talasemi için **hemoglobin elektroforezi**, **SMA**",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "hemoglobin elektroforezi",
+         "tur": "terim"
+        },
+        {
+         "metin": "SMA",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [
+        "d3-k2-ah-006",
+        "q-No_ropsikiyatri_gis_kardiyo_-2023-2024-C__km_s_lar__240625_053302__2_-34"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 20,
+        "satir": [
+         "Kan Grubu Analizi ve Hemogram",
+         "Akdeniz Anemisi (Talasemi) için: Hemoglobin Elektroforezi Testi",
+         "SMA"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-27-p007",
+     "sayfa": 21,
+     "cumleler": [
+      {
+       "id": "k2-27-c0039",
+       "ses": "Evlilik öncesi hemoglobinopati tarama programında aile hekimi, evlenecek çiftlerden kendine kayıtlı erkek eş adayına taahhütname ve bilgilendirilmiş onam formu imzalatır ve kan örneği alır.",
+       "ekran": "Hemoglobinopati: önce **erkek eş adayından** onam ve kan",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "erkek eş adayından",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 21,
+        "satir": [
+         "Evlilik Öncesi Hemoglobinopati Tarama Programı"
+        ],
+        "sekil": "Hemoglobinopati tarama akış şeması: erkek eş adayından örnek"
+       }
+      },
+      {
+       "id": "k2-27-c0040",
+       "ses": "Sonuç normal ise taşıyıcılık tespit edilmemiştir ve kişi takipten çıkarılır; taşıyıcı ya da şüpheli ise eşlerden kadın olandan da kan örneği alınır.",
+       "ekran": "Normal → takipten çık; **taşıyıcı/şüpheli → kadından da örnek**",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "taşıyıcı/şüpheli → kadından da örnek",
+         "tur": "tuzak"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 21,
+        "satir": [
+         "Takipten çıkarılır"
+        ],
+        "sekil": "Akış şemasında normal ve taşıyıcı dalları"
+       }
+      },
+      {
+       "id": "k2-27-c0041",
+       "ses": "Her iki eşte taşıyıcı ya da şüpheli sonuç varsa çift hematoloji, ilde yoksa dahiliye uzmanına sevk edilir; iki taşıyıcı çift her gebelik planladığında Genetik Hastalıklar Tanı ve Tedavi Merkezlerine yönlendirilir.",
+       "ekran": "İki taşıyıcı: **hematoloji** sevki; her gebelik planında **genetik merkez**",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "hematoloji",
+         "tur": "terim"
+        },
+        {
+         "metin": "genetik merkez",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 21,
+        "satir": [],
+        "sekil": "Akış şemasında iki taşıyıcı çiftin sevk yolu"
+       }
+      },
+      {
+       "id": "k2-27-c0042",
+       "ses": "Spinal müsküler atrofi, kraniyal sinir motor çekirdekleri ve medulla spinaliste yer alan ön boynuz motor nöron hücrelerinin geri dönüşümsüz kaybı ve sonucunda ortaya çıkan kas atrofisi ve güçsüzlüğü ile karakterize bir grup genetik hastalıktır.",
+       "ekran": "**SMA**: ön boynuz motor nöron kaybı → kas atrofisi ve güçsüzlük",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "SMA",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 22,
+        "satir": [
+         "ön boynuz motor nöron hücrelerinin geri dönüşümsüz kaybı"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0043",
+       "ses": "En sık görülen formu otozomal resesif kalıtılır ve kromozom beş ku on üç bölgesindeki es em en bir geninde homozigot delesyon veya patojenik varyasyonlardan kaynaklanır.",
+       "ekran": "Otozomal resesif; **5q13, SMN1 homozigot delesyonu**",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "5q13, SMN1 homozigot delesyonu",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 22,
+        "satir": [
+         "En sık görülen formu otozomal resesif olarak kalıtılır"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0044",
+       "ses": "Taşıyıcılık insidansı on bir binde bir olarak verilir ve ülkemizde yıllık yeni vaka sayısının yüz otuz ile yüz seksen arasında, ortalama yüz elli olduğu tahmin edilmektedir.",
+       "ekran": "Yıllık yeni vaka **130–180 (ort. 150)**",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "130–180 (ort. 150)",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 22,
+        "satir": [
+         "SMA taşıyıcılık insidansı 1/11.000",
+         "Ülkemizde yıllık yeni vaka sayısının 130-180"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-27-p008",
+     "sayfa": 23,
+     "cumleler": [
+      {
+       "id": "k2-27-c0045",
+       "ses": "Es em a hastalığı olan bir çocuğa sahip çiftin her gebeliğinde hasta bebek dünyaya getirme olasılığı yaklaşık yüzde yirmi beştir ve bu çiftten doğan çocukların yüzde ellisi belirti göstermeyen taşıyıcı olarak doğar.",
+       "ekran": "Taşıyıcı çift: her gebelikte **%25 hasta**, **%50 taşıyıcı**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "%25 hasta",
+         "tur": "sayi"
+        },
+        {
+         "metin": "%50 taşıyıcı",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 23,
+        "satir": [
+         "her gebeliğinde SMA hastalığı olan bir bebek dünyaya getirme olasılığı yaklaşık olarak %25’tir"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0046",
+       "ses": "Her iki ebeveynin taşıyıcı olma olasılığı akraba evliliklerinde daha yüksektir.",
+       "ekran": "**Akraba evliliğinde** iki taşıyıcı olasılığı artar",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Akraba evliliğinde",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 23,
+        "satir": [
+         "Her iki ebeveynin taşıyıcı olma olasılıkları akraba evliliklerinde daha yüksektir"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0047",
+       "ses": "Taramanın amacı evlilik öncesi dönemde her ikisi de taşıyıcı çiftleri belirleyerek ailelere genetik danışma vermek ve hastalığın uzun dönem morbidite ve mortalitesini azaltmaktır.",
+       "ekran": "Amaç: iki taşıyıcı çifti bulup **genetik danışma**",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "genetik danışma",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 23,
+        "satir": [
+         "Taramanın amacı evlilik öncesi dönemde SMA açısından her ikisi de taşıyıcı çiftleri belirleyerek, ailelere genetik danışma vermek"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0048",
+       "ses": "Bu bilgi çıkmış sınavda sorulmuştur: es em a taraması için de öncelikle erkek eş ya da eş adayından örnek alınır; sonuçta şüpheli pozitiflik yoksa takipten çıkarılır.",
+       "ekran": "Önce **erkek eşten** örnek; şüpheli yoksa takipten çıkar",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "erkek eşten",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [
+        "past-1790877038499-4696",
+        "past-1790877041988-964226"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 24,
+        "satir": [
+         "Tarama için öncelikle erkek eş/eş adayından örnek alınır"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0049",
+       "ses": "Eğer erkek eş adayında şüpheli sonuç çıkarsa mutlaka kadın eş ya da eş adayına da tarama testi uygulanmalıdır.",
+       "ekran": "Erkekte şüpheli → **kadına da mutlaka test**",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "kadına da mutlaka test",
+         "tur": "tuzak"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 24,
+        "satir": [
+         "Eğer erkek eş adayında şüpheli sonuç çıkarsa mutlaka kadın eş/eş adayına da tarama testi uygulanmalıdır"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0050",
+       "ses": "Akış şemasında çift evlilik raporu için başvurur, evlilik öncesi danışmanlık alır, erkekten aydınlatılmış onam ve kan örneği alınır, örnek barkodlanıp il sağlık müdürlüğü aracılığıyla laboratuvara gönderilir.",
+       "ekran": "Akış: başvuru → danışmanlık → **erkekten onam ve kan** → laboratuvar",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "erkekten onam ve kan",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 25,
+        "satir": [
+         "Evlilik öncesi danışmanlık"
+        ],
+        "sekil": "SMA taşıyıcı taraması akış şeması: başvuru ve erkekten örnek"
+       }
+      },
+      {
+       "id": "k2-27-c0051",
+       "ses": "Gerekirse kadın eş adayından da onam ve kan alınır; ardından çift bilgilendirilir, taşıyıcılar kayıt altına alınır, gebelik ve hasta çocuk doğumu takip edilir.",
+       "ekran": "Kadından örnek → bilgilendirme → **taşıyıcı kaydı**, gebelik takibi",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "taşıyıcı kaydı",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 25,
+        "satir": [
+         "Taşıyıcıların kayıt altına alınması",
+         "Gebelik takibi"
+        ],
+        "sekil": "SMA akış şemasında taşıyıcı kaydı ve gebelik takibi"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-27-b05",
+   "baslik": "Doğum öncesi bakım",
+   "paragraflar": [
+    {
+     "id": "k2-27-p009",
+     "sayfa": 27,
+     "cumleler": [
+      {
+       "ses": "Doğum öncesi bakım bölümünde, gebelik sürecinin sağlıklı ilerlemesi ve maternal ile fetal risklerin önlenmesi hedeflenir.",
+       "ekran": "**Doğum Öncesi Bakım:** Gebelik izlemi ve risklerin önlenmesi",
+       "slayt": {
+        "sayfa": 26,
+        "satir": [],
+        "sekil": "Doğum Öncesi Bakım bölüm başlık sayfası"
+       },
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "duzey": 1,
+       "id": "k2-27-c0052"
+      },
+      {
+       "id": "k2-27-c0053",
+       "ses": "Nöral tüp defekti profilaksisi için gebelik planlanmış ise gebelik öncesi üç ay ve gebeliğin ilk trimesterinde kadının günlük dört yüz ile sekiz yüz mikrogram folik asit kullanması önerilir.",
+       "ekran": "Nöral tüp profilaksisi: gebelik öncesi 3 ay + ilk trimester **400–800 μg folik asit**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "400–800 μg folik asit",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 27,
+        "satir": [
+         "kadının günlük 400-800μg folik asit kullanması önerilir"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0054",
+       "ses": "Profilaksinin gebelikten önce başlaması önemlidir, çünkü nöral tüp gebeliğin çok erken döneminde kapanır.",
+       "ekran": "Gebelikten **önce** başlamak gerekir",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "önce",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 27,
+        "satir": [
+         "Gebelik planlanmış ise gebelik öncesi üç ay"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0055",
+       "ses": "Tüm gebelerde anne ve bebeğin sağlığını korumak için Doğum Öncesi Bakım İzlem Protokolü kullanılarak izlem yapılması gereklidir.",
+       "ekran": "Tüm gebeler **Doğum Öncesi Bakım İzlem Protokolü** ile izlenir",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Doğum Öncesi Bakım İzlem Protokolü",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 28,
+        "satir": [
+         "Doğum Öncesi Bakım İzlem Protokolü"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0056",
+       "ses": "Her gebenin en az dört kez nitelikli izlenmesi gereklidir.",
+       "ekran": "Her gebe **en az 4 kez** nitelikli izlenir",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "en az 4 kez",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 28,
+        "satir": [
+         "Her gebenin en az 4 kez nitelikli izlenmesi gereklidir"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0057",
+       "ses": "Birinci doğum öncesi izlem gebeliğin ilk on dört haftası içinde yapılır ve bu izlem için otuz dakika ayrılır.",
+       "ekran": "1. izlem: **ilk 14 hafta**, 30 dakika",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "ilk 14 hafta",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 29,
+        "satir": [],
+        "sekil": "Birinci doğum öncesi izlem slaytı: ilk 14 hafta ve 30 dakika"
+       }
+      },
+      {
+       "id": "k2-27-c0058",
+       "ses": "On dördüncü haftadan sonra saptanan gebe de haftasına bakılmaksızın ilk izlem olarak değerlendirilir.",
+       "ekran": "14. haftadan sonra saptanan gebe de **ilk izlem** sayılır",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "ilk izlem",
+         "tur": "tuzak"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 29,
+        "satir": [],
+        "sekil": "Birinci izlem slaytındaki on dört hafta sonrası notu"
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-27-p010",
+     "sayfa": 30,
+     "cumleler": [
+      {
+       "id": "k2-27-c0059",
+       "ses": "İlk izlemde kan basıncı takibi, ar ha uyuşmazlığı için kan grubu tayini, demir eksikliğinin taranması ve hepatit B testi yapılır.",
+       "ekran": "İlk izlem: tansiyon, **Rh için kan grubu**, demir eksikliği, hepatit B",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Rh için kan grubu",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 30,
+        "satir": [
+         "Kan basıncı takibi",
+         "uyuşmazlığı için kan grubu tayini",
+         "Demir eksikliğinin taranması",
+         "Hepatit B testi"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0060",
+       "ses": "Ayrıca bakteriüri ve proteinüri açısından idrar tahlili, te se ha ve torç enfeksiyon taraması yani toksoplazmozis, rubella, sitomegalovirüs ve herpes simpleks virüs taraması yapılır.",
+       "ekran": "İdrar tahlili, TSH, **TORCH** taraması",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "TORCH",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 30,
+        "satir": [
+         "Bakteriüri ve proteinüri açısından idrar tahlili",
+         "Enfeksiyon taraması (TORCH)"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0061",
+       "ses": "On bir ile on dört haftalar arasında ultrasonografi ile ense kalınlığı ve anne kanında gebeliğe bağlı plazma protein a ve beta insan koryonik gonadotropini bakılarak ikili test ile kromozomal anomali taraması yapılır.",
+       "ekran": "11–14. hafta **ikili test**: ense kalınlığı + PAPP-A + beta-hCG",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "ikili test",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 31,
+        "satir": [
+         "bakılarak (ikili test) kromozomal anomali taraması"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0062",
+       "ses": "On ikinci haftadan itibaren günde bin iki yüz ünite, yani dokuz damla de vitamini verilir.",
+       "ekran": "12. haftadan itibaren **1200 IU (9 damla)** D vitamini",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "1200 IU (9 damla)",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 31,
+        "satir": [
+         "Haftadan itibaren 1200 IU (9 damla) gün D Vitamini"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0063",
+       "ses": "Gebelere tütün ürünü kullanımı ve pasif etkilenimin bebek ve anne sağlığı üzerindeki olumsuz etkileri konusunda bilgi verilmelidir.",
+       "ekran": "Tütün ve **pasif etkilenim** hakkında bilgilendirme",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "pasif etkilenim",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 31,
+        "satir": [
+         "Gebelere tütün ürünü kullanımı ve pasif etkilenimin bebek ve anne sağlığı üzerindeki olumsuz etkileri konusunda bilgi verilmelidir"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-27-p011",
+     "sayfa": 32,
+     "cumleler": [
+      {
+       "id": "k2-27-c0064",
+       "ses": "İkinci doğum öncesi izlem gebeliğin on sekiz ile yirmi dördüncü haftaları arasında yapılır ve izlem için yirmi dakika ayrılır.",
+       "ekran": "2. izlem: **18–24. hafta**, 20 dakika",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "18–24. hafta",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 32,
+        "satir": [
+         "Gebeliğin 18-24. haftaları arasında yapınız"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0065",
+       "ses": "İlk izleme otuz dakika ayrılırken sonraki izlemlerin her birine yirmi dakika ayrılır.",
+       "ekran": "İlk izlem 30, **sonrakiler 20 dakika**",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "sonrakiler 20 dakika",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 32,
+        "satir": [
+         "için 20 dakika zaman ayırınız"
+        ],
+        "sekil": "İkinci doğum öncesi izlem slaytı"
+       }
+      },
+      {
+       "id": "k2-27-c0066",
+       "ses": "On altı ile yirmi haftalar arasında alfa fetoprotein, estriol ve insan koryonik gonadotropini bakılarak üçlü test ile Down sendromu, nöral tüp defekti ve trizomi on sekiz taraması yapılır.",
+       "ekran": "16–20. hafta **üçlü test** (AFP, estriol, hCG): Down, nöral tüp defekti, trizomi 18",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "üçlü test",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 33,
+        "satir": [
+         "16-20 haftalar arasında üçlü test"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0067",
+       "ses": "On sekiz ile yirmi iki haftalar arasında ayrıntılı ultrasonografi ile fetal anomali taraması yapılır.",
+       "ekran": "18–22. hafta **ayrıntılı USG**: fetal anomali",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "ayrıntılı USG",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 33,
+        "satir": [
+         "18-22 haftalar arasında ayrıntılı USG ile fetal anomali taraması"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0068",
+       "ses": "Yirmi dört ile yirmi sekizinci haftalar arasında yetmiş beş gram glukoz tarama testi ile gestasyonel diyabet taraması yapılır ve bir ay ara ile iki doz tetanoz difteri aşısı uygulanır.",
+       "ekran": "24–28. hafta **75 g glukoz** ile gestasyonel diyabet; 1 ay arayla 2 doz Td",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "75 g glukoz",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 33,
+        "satir": [
+         "tarama testi ile gestasyonel diyabet taraması",
+         "1 ay ara ile 2 doz Tetanoz difteri aşısı"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0069",
+       "ses": "Üçüncü doğum öncesi izlem gebeliğin yirmi sekiz ile otuz ikinci haftaları arasında yapılır ve yirmi dakika ayrılır.",
+       "ekran": "3. izlem: **28–32. hafta**, 20 dakika",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "28–32. hafta",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 34,
+        "satir": [],
+        "sekil": "Üçüncü doğum öncesi izlem slaytı: yirmi sekiz ile otuz iki hafta"
+       }
+      },
+      {
+       "id": "k2-27-c0070",
+       "ses": "Böylece dört izlemin zamanlaması şöyle sıralanır: on dört haftaya kadar, on sekiz ile yirmi dört, yirmi sekiz ile otuz iki ve otuz altı ile otuz sekizinci haftalar.",
+       "ekran": "Sıra: ≤14, 18–24, **28–32**, 36–38. hafta",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "28–32",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 34,
+        "satir": [],
+        "sekil": "Üçüncü izlem slaytındaki izlem haftaları"
+       }
+      },
+      {
+       "id": "k2-27-c0071",
+       "ses": "Ar ha uygunsuzluğu varsa indirekt Coombs testi yapılmalıdır.",
+       "ekran": "Rh uygunsuzluğunda **indirekt Coombs**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "indirekt Coombs",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 35,
+        "satir": [
+         "Rh uygunsuzluğu varsa indirek coombs testi yapılmalı"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0072",
+       "ses": "İndirekt Coombs negatif ise anti de immünglobulin yapılmalıdır; çünkü negatif sonuç annenin henüz duyarlanmadığını gösterir ve bu aşamada duyarlanma önlenebilir.",
+       "ekran": "**İndirekt Coombs negatif → anti-D**",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "İndirekt Coombs negatif → anti-D",
+         "tur": "tuzak"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 35,
+        "satir": [
+         "İndirek coombs negatif ise anti-D immunglobulin yapılmalı"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-27-p012",
+     "sayfa": 36,
+     "cumleler": [
+      {
+       "id": "k2-27-c0073",
+       "ses": "Dördüncü doğum öncesi izlem otuz altı ile otuz sekizinci haftalar arasında yapılır ve yirmi dakika ayrılır.",
+       "ekran": "4. izlem: **36–38. hafta**, 20 dakika",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "36–38. hafta",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 36,
+        "satir": [
+         "Gebeligin 36-38. haftalari arasında yapınız"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0074",
+       "ses": "Bu, doğuma en yakın izlemdir ve doğuma hazırlık değerlendirmesi burada yapılır.",
+       "ekran": "Doğuma **en yakın** izlem",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "en yakın",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 36,
+        "satir": [
+         "DÖRDÜNCÜ İZLEM"
+        ],
+        "sekil": "Dördüncü doğum öncesi izlem slaytı"
+       }
+      },
+      {
+       "id": "k2-27-c0075",
+       "ses": "Dördüncü izlemde gebelik haftası ile uterus büyüklüğünün uygunluğu kontrol edilir ve özellikle prezente olan kısmın belirlenmesine yönelik obstetrik değerlendirme yapılır.",
+       "ekran": "Uterus büyüklüğü uyumu, **prezente olan kısım**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "prezente olan kısım",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 37,
+        "satir": [
+         "Gebelik haftası ile uterus büyüklüğünün uygunluğu kontrol edilir",
+         "Özellikle prezente olan kısmın belirlenmesine yönelik obstetrik değerlendirme"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0076",
+       "ses": "Ayrıca emzirmeye yönelik meme muayenesi yapılır ve anne bilgilendirilir.",
+       "ekran": "**Emzirmeye yönelik meme muayenesi**",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Emzirmeye yönelik meme muayenesi",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 37,
+        "satir": [
+         "Emzirmeye yönelik meme muayenesi ve annenin bilgilendirilmesi"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0077",
+       "ses": "On beş ile kırk dokuz yaş arası gebe ve anne adaylarında diş eti hastalıkları, diş çürüğü ve oral lezyonların önlenmesi amacıyla ağız ve diş muayenesi ve ağız diş sağlığı eğitimi önerilir.",
+       "ekran": "15–49 yaş gebe ve anne adayına **ağız-diş muayenesi ve eğitimi**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "ağız-diş muayenesi ve eğitimi",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 38,
+        "satir": [
+         "ağız ve diş muayenesinin yapılması ve ağız diş sağlığıyla ilgili gebe eğitimi önerilir"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0078",
+       "ses": "Ağız ve diş sorunu olan gebede düşük, erken doğum ve düşük doğum ağırlıklı bebek riski dikkate alınarak tedaviye uygun trimesterde, yani ikinci trimesterde yönlendirme yapılır.",
+       "ekran": "Düşük, erken doğum riski; tedavi **2. trimesterde**",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "2. trimesterde",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 38,
+        "satir": [
+         "Ağız ve diş sağlığı problemi olan gebelerin düşük, erken doğum ve düşük doğum ağırlıklı bebek dünyaya getirme riski"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-27-b06",
+   "baslik": "Doğum sonu bakım",
+   "paragraflar": [
+    {
+     "id": "k2-27-p013",
+     "sayfa": 40,
+     "cumleler": [
+      {
+       "ses": "Doğum sonu bakım bölümünde, lohusalık sürecinin izlenmesi ve anne ile yenidoğan sağlığının korunması amaçlanır.",
+       "ekran": "**Doğum Sonu Bakım:** Lohusa izlemi ve doğum sonrası takip programı",
+       "slayt": {
+        "sayfa": 39,
+        "satir": [],
+        "sekil": "Doğum Sonu Bakım bölüm başlık sayfası"
+       },
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "duzey": 1,
+       "id": "k2-27-c0079"
+      },
+      {
+       "id": "k2-27-c0080",
+       "ses": "Her doğumun hastanede gerçekleştirilmesi sağlanmalı; normal doğum sonrası yirmi dört saat, sezaryen sonrası kırk sekiz saat hastanede takip edilmelidir.",
+       "ekran": "Normal doğum **24 saat**, sezaryen **48 saat** hastanede",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "24 saat",
+         "tur": "sayi"
+        },
+        {
+         "metin": "48 saat",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 40,
+        "satir": [
+         "Her doğumun hastanede gerçekleştirilmesinin sağlanması",
+         "Normal doğum sonrası 24 saat, sezaryen sonrası 48 saat hastanede takip edilmesi"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0081",
+       "ses": "Doğum sonrası hastanede üç ve evde üç olmak üzere toplam altı kez lohusa izlemi yapılması gereklidir.",
+       "ekran": "**6 lohusa izlemi**: 3 hastanede, 3 evde",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "6 lohusa izlemi",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 40,
+        "satir": [
+         "Doğum sonrası hastanede 3 ve evde 3 olmak üzere 6 kez lohusa izleminin yapılması gereklidir"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0082",
+       "ses": "Dördüncü lohusa izlemi doğumu takip eden iki ile beşinci günler arasında yapılır ve bu izlem evde veya sağlık kuruluşunda gerçekleştirilir.",
+       "ekran": "4. lohusa izlemi: **2–5. gün**, evde ya da sağlık kuruluşunda",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "2–5. gün",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 41,
+        "satir": [
+         "Lohusanın doğumu takibeden 2 - 5. günler arasında izlemini yapınız"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0083",
+       "ses": "Hastanede yapılan ilk üç izlemden sonra bu, evde yapılan izlemlerin ilkidir.",
+       "ekran": "Evdeki izlemlerin **ilki**",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "ilki",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 41,
+        "satir": [
+         "Bu izlem evde veya sağlık kuruluşunda gerçekleştirilir"
+        ],
+        "sekil": "Dördüncü lohusa izlemi slaytı"
+       }
+      },
+      {
+       "id": "k2-27-c0084",
+       "ses": "Lohusa izleminde önce annenin genel durumu değerlendirilir; kanama ve loşi takibi, idrar problemleri, meme ve emzirme problemleri, ağrı ve bağırsak problemleri sorgulanır.",
+       "ekran": "Sorgu: **kanama-loşi**, idrar, meme-emzirme, ağrı, bağırsak",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "kanama-loşi",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 42,
+        "satir": [
+         "Kanama-loşi takibi",
+         "meme ve emzirme problemleri"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0085",
+       "ses": "Bunun yanında annenin psikolojik durumu da değerlendirilir.",
+       "ekran": "**Psikolojik durum** değerlendirmesi",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Psikolojik durum",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 42,
+        "satir": [
+         "Psikolojik durumunun değerlendirilmesi"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-27-p014",
+     "sayfa": 43,
+     "cumleler": [
+      {
+       "id": "k2-27-c0086",
+       "ses": "Lohusanın fizik muayenesinde vital bulgulardan kan basıncı, solunum sayısı ve ateş ölçülür; karın muayenesinde fundus yüksekliğine bakılır, sezaryen olanlarda insizyon yeri kontrol edilir.",
+       "ekran": "Vital bulgular, **fundus yüksekliği**, sezaryende insizyon yeri",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "fundus yüksekliği",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 43,
+        "satir": [
+         "Karın muayenesi: fundus yüksekliği",
+         "Sezaryen olanlarda insizyon yeri kontrolü"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0087",
+       "ses": "Perine muayenesinde vajinal kanama miktarı ve epizyotomi kontrol edilir, ardından emzirme değerlendirilir.",
+       "ekran": "Perine: **vajinal kanama, epizyotomi**; emzirme",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "vajinal kanama, epizyotomi",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 43,
+        "satir": [
+         "Perine muayenesi (Vajinal kanama miktarı,epizyotomi kontrolü)",
+         "Emzirmenin değerlendirilmesi"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0088",
+       "ses": "Laboratuvar olarak lohusada gerekirse hemoglobin ölçümü ve tam idrar tahlili yapılır.",
+       "ekran": "Laboratuvar: **gerekirse** hemoglobin ve tam idrar tahlili",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "gerekirse",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 44,
+        "satir": [
+         "Hemoglobin ölçümü (gerekirse)",
+         "Tam idrar tahlili (gerekirse)"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0089",
+       "ses": "Bakım ve danışmanlıkta annenin kişisel temizliği, dinlenmeye zaman ayırması ve bebeğin bakımı için yardım alması konuşulur.",
+       "ekran": "Kişisel temizlik, **dinlenme**, yardım alma",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "dinlenme",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 45,
+        "satir": [
+         "Annenin kişisel temizlik ve bakımı",
+         "Dinlenmeye zaman ayırma, bebeğin bakımı için yardım alma"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0090",
+       "ses": "Duygusal durumu, aile ve çevre desteği tartışılır, bebek bakımı ve anne sütü konusunda bilgi verilir ve demir ile de vitamini desteğine devam edilir.",
+       "ekran": "Duygusal durum, anne sütü; **demir ve D vitamini devam**",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "demir ve D vitamini devam",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 45,
+        "satir": [
+         "Bebek bakımı, anne sütü konusunda bilgilendirme",
+         "Demir ve D vitamini desteğine devam edilmesi"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-27-p015",
+     "sayfa": 46,
+     "cumleler": [
+      {
+       "id": "k2-27-c0091",
+       "ses": "Beşinci lohusa izlemi doğumu takip eden on üç ile on yedinci günler arasında evde veya sağlık kuruluşunda yapılır.",
+       "ekran": "5. lohusa izlemi: **13–17. gün**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "13–17. gün",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 46,
+        "satir": [
+         "Lohusanın doğumu takibeden 13 - 17. günler arasında izlemini yapınız"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0092",
+       "ses": "Bu izlem de evde ya da sağlık kuruluşunda yapılabilir.",
+       "ekran": "Evde ya da sağlık kuruluşunda",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 46,
+        "satir": [
+         "Bu izlem evde veya sağlık kuruluşunda gerçekleştirilir"
+        ],
+        "sekil": "Beşinci lohusa izlemi slaytı"
+       }
+      },
+      {
+       "id": "k2-27-c0093",
+       "ses": "Altıncı ve son lohusa izlemi doğumu takip eden otuz ile kırk ikinci günler arasında yapılır.",
+       "ekran": "6. lohusa izlemi: **30–42. gün**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "30–42. gün",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 47,
+        "satir": [
+         "Lohusanın doğumu takibeden 30- 42. günler arasında izlemini yapınız"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0094",
+       "ses": "Böylece evdeki üç izlem iki ile beş, on üç ile on yedi ve otuz ile kırk ikinci günlere denk gelir.",
+       "ekran": "Evdeki izlemler: 2–5, 13–17, **30–42. gün**",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "30–42. gün",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 47,
+        "satir": [
+         "Bu izlem evde veya sağlık kuruluşunda gerçekleştirilir"
+        ],
+        "sekil": "Altıncı lohusa izlemi slaytı"
+       }
+      },
+      {
+       "id": "k2-27-c0095",
+       "ses": "Gestasyonel diyabet öyküsü varsa doğum sonrası altı ile on ikinci haftalarda oral glukoz tolerans testi yaptırmanın önemi konusunda anne bilgilendirilir.",
+       "ekran": "Gestasyonel diyabet öyküsü → postpartum **6–12. hafta OGTT**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "6–12. hafta OGTT",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 48,
+        "satir": [
+         "Gestasyonel diyabet öyküsü varsa oral glikoz tolerans testi (postpartum 6-12. haftalarda)"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0096",
+       "ses": "İki doğum arasının en az iki yıl olmasının anne ve bebek sağlığı açısından önemi vurgulanarak gebelikten korunma yöntemleri hakkında bilgilendirme yapılır.",
+       "ekran": "İki doğum arası **en az iki yıl**; korunma yöntemleri",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "en az iki yıl",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 49,
+        "satir": [
+         "İki doğum arasının en az iki yıl olmasının anne ve bebek sağlığı açısından önemini vurgulayarak"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0097",
+       "ses": "Hikayesinde ruhsal hastalık öyküsü, şizofreni ya da bipolar bozukluk gibi psikotik bozukluklar, psikotik depresyon ve intihar riski olan lohusa Edinburg Postpartum Depresyon Ölçeği ile değerlendirilir ve gereken vakalar sevk edilir.",
+       "ekran": "Ruhsal öykü, psikoz, intihar riski → **Edinburgh Postpartum Depresyon Ölçeği**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Edinburgh Postpartum Depresyon Ölçeği",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 50,
+        "satir": [
+         "Postpartum Depresyon Ölçeği” ile değerlendirme yapılır ve gereken vakalar sevk edilir"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-27-b07",
+   "baslik": "Bebek izlemleri ve yenidoğan tarama programı",
+   "paragraflar": [
+    {
+     "id": "k2-27-p016",
+     "sayfa": 53,
+     "cumleler": [
+      {
+       "ses": "Bebeklik ve çocukluk dönemi izlemlerinde temel amaç, büyüme ve gelişmenin düzenli takibi ile olası sağlık sorunlarının erkenden saptanmasıdır.",
+       "ekran": "**Bebeklik ve Çocukluk Dönemi:** Büyüme, gelişme ve periyodik çocuk izlemleri",
+       "slayt": {
+        "sayfa": 51,
+        "satir": [],
+        "sekil": "Bebeklik ve çocukluk dönemi bölüm başlık sayfası"
+       },
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "duzey": 1,
+       "id": "k2-27-c0098"
+      },
+      {
+       "ses": "Birinci basamakta bebek, çocuk ve ergen izlemleri; ulusal izlem protokolleri çerçevesinde belirli takvim aralıklarıyla yürütülür.",
+       "ekran": "**Birinci Basamak Çocuk İzlem Protokolü:** Yaş gruplarına göre belirlenmiş periyodik takip planı",
+       "slayt": {
+        "sayfa": 52,
+        "satir": [],
+        "sekil": "Birinci basamakta bebek, çocuk ve ergen izlemleri başlık sayfası"
+       },
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "duzey": 1,
+       "id": "k2-27-c0099"
+      },
+      {
+       "id": "k2-27-c0100",
+       "ses": "Bebek izlemleri doğumun hemen sonrasında ilk izlem, doğumdan sonraki ilk hafta içinde yani birinci ile onuncu günler arasında, on beşinci gün ve kırk birinci gün izlemi şeklinde başlar.",
+       "ekran": "İzlem: doğum sonrası, **ilk hafta (1–10. gün)**, 15. gün, 41. gün",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "ilk hafta (1–10. gün)",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 53,
+        "satir": [
+         "Doğumdan sonraki ilk hafta içinde"
+        ],
+        "sekil": "Bebek izlem zamanları listesi"
+       }
+      },
+      {
+       "id": "k2-27-c0101",
+       "ses": "Ardından ikinci, üçüncü, dördüncü, altıncı ve dokuzuncu aylarda belirlenmiş gün aralıklarında izlem yapılır; örneğin dokuzuncu ay izlemi iki yüz elli ile iki yüz doksanıncı günler arasındadır.",
+       "ekran": "Sonra **2, 3, 4, 6 ve 9. ay** izlemleri",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "2, 3, 4, 6 ve 9. ay",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 53,
+        "satir": [
+         "ilk izlem (doğumun hemen sonrasında)"
+        ],
+        "sekil": "Bebek izlem zamanları listesinde aylık izlemler"
+       }
+      },
+      {
+       "id": "k2-27-c0102",
+       "ses": "Yenidoğan Tarama Programı konjenital hipotiroidi, fenilketonüri, biyotinidaz eksikliği, kistik fibroz, konjenital adrenal hiperplazi ve es em a taramalarını kapsar.",
+       "ekran": "Program: **konjenital hipotiroidi, fenilketonüri, biyotinidaz, kistik fibroz, KAH, SMA**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "konjenital hipotiroidi, fenilketonüri, biyotinidaz, kistik fibroz, KAH, SMA",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 54,
+        "satir": [
+         "Yenidoğan Tarama Programı",
+         "Fenilketonüri",
+         "Biyotinidaz eksikliği",
+         "Kistik fibroz"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0103",
+       "ses": "Bunlara Yenidoğan İşitme Taraması Programı ve gelişimsel kalça displazisi taraması eklenir.",
+       "ekran": "Ayrıca **işitme** ve **gelişimsel kalça displazisi** taraması",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "işitme",
+         "tur": "terim"
+        },
+        {
+         "metin": "gelişimsel kalça displazisi",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 54,
+        "satir": [
+         "Yenidoğan İşitme Taraması Programı",
+         "Gelişimsel Kalça Displazisi"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0104",
+       "ses": "Taranan hastalıkların çoğu yaşamın ilk iki haftası içinde ortaya çıkar ve metabolik asidoz, koma, nörolojik sorunlar, hatta ölümle sonuçlanabilir.",
+       "ekran": "Çoğu **ilk iki haftada** çıkar; asidoz, koma, ölüm",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "ilk iki haftada",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 55,
+        "satir": [
+         "Taranan hastalıkların çoğu yaşamın ilk iki haftası içinde ortaya çıkar"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0105",
+       "ses": "Bu nedenle yenidoğan taraması tanının erken konulup diyet, hormon replasmanı ve diğer tedavilerin başlanması açısından gereklidir.",
+       "ekran": "Erken tanı → **diyet, hormon replasmanı**",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "diyet, hormon replasmanı",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 55,
+        "satir": [
+         "diyet, hormon replasmanı ve diğer tedavilerin başlanması açısından gereklidir"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-27-p017",
+     "sayfa": 56,
+     "cumleler": [
+      {
+       "id": "k2-27-c0106",
+       "ses": "Bu bilgi çıkmış sınavda sorulmuştur: topuk kanı üç ila beş günlük yenidoğandan alınır.",
+       "ekran": "Topuk kanı: **3–5 günlük** yenidoğan",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "3–5 günlük",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [
+        "c6fb44727763",
+        "q-No_ropsikiyatri_gis_kardiyo_-2023-2024-C__km_s_lar__240625_053302__2_-35",
+        "d3-k2-ah-001",
+        "b99495ece04f"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 56,
+        "satir": [
+         "3 ila 5 günlük yeni doğanda topuk kanı alınarak"
+        ],
+        "sekil": "Topuk kanı alınışını gösteren görsel"
+       }
+      },
+      {
+       "id": "k2-27-c0107",
+       "ses": "Bu örnekle fenilketonüri, konjenital hipotiroidi, biyotinidaz eksikliği, konjenital adrenal hiperplazi, kistik fibrozis ve es em a taranır.",
+       "ekran": "Topuk kanıyla **altı hastalık** taranır",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "altı hastalık",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 56,
+        "satir": [
+         "Fenilketonüri",
+         "Konjenital Hipotiroidi",
+         "Kistik Fibrozis",
+         "SMA"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0108",
+       "ses": "Fenilketonüri, fenilalanin hidroksilaz ya da kofaktörü tetrahidrobiyopterinin eksikliği nedeniyle oluşan bir hastalıktır.",
+       "ekran": "**Fenilketonüri**: fenilalanin hidroksilaz ya da tetrahidrobiyopterin eksikliği",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Fenilketonüri",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 57,
+        "satir": [
+         "Fenilketonüri, fenilalanin hidroksilaz ya da kofaktörü tetrahidrobiyopterinin eksikliği nedeniyle oluşan bir hastalıktır"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0109",
+       "ses": "Proteinli gıdalardaki fenilalaninin sindirimi bozuk olduğundan bu madde çeşitli organlarda birikir ve geri dönüşümsüz beyin hasarı yapar; tedavi edilmezse birinci yıl sonuna kadar zekadaki gerileme belirgin hale gelir.",
+       "ekran": "Fenilalanin birikir → **geri dönüşümsüz beyin hasarı**",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "geri dönüşümsüz beyin hasarı",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 57,
+        "satir": [
+         "çeşitli organlarda birikir ve geriye dönüşümsüz beyin hasarı yapar"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0110",
+       "ses": "Erken teşhis ve uygun diyet tedavisi ile zeka geriliği önlenebilir.",
+       "ekran": "**Erken teşhis + diyet** zekâ geriliğini önler",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Erken teşhis + diyet",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 57,
+        "satir": [
+         "Erken teşhis ve uygun diyet tedavisi ile zeka geriliği önlenebilir"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0111",
+       "ses": "Fenilketonüri sonuç değerlendirme şemasında uygunsuz kan örneği tekrarlanır, uygun kan örneği tarama laboratuvarına gider.",
+       "ekran": "Uygunsuz örnek → **tekrar**; uygun örnek → tarama laboratuvarı",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "tekrar",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 58,
+        "satir": [
+         "Fenilketonüri Sonuç Değerlendirme"
+        ],
+        "sekil": "Fenilketonüri sonuç değerlendirme akış şeması"
+       }
+      },
+      {
+       "id": "k2-27-c0112",
+       "ses": "Tarama sonucu şüpheli ise aile standart sevk formuyla pediatrik beslenme ve metabolizma kliniğine yönlendirilir; aile hekimi bebeğin kliniğe gidip gitmediğini ve tedavisini izlemek ve kayıt tutmakla yükümlüdür.",
+       "ekran": "Şüpheli → **pediatrik beslenme-metabolizma**; aile hekimi izler ve kaydeder",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "pediatrik beslenme-metabolizma",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 58,
+        "satir": [
+         "Aile hekimi, aile ile temasa geçerek bebeğin pediatrik beslenme-metabolizma kliniğine gidip gitmediğini"
+        ],
+        "sekil": "Fenilketonüri akış şemasında sevk ve aile hekiminin izlemi"
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-27-p018",
+     "sayfa": 59,
+     "cumleler": [
+      {
+       "id": "k2-27-c0113",
+       "ses": "Konjenital hipotiroidi tiroid bezinin az çalıştığı klinik bir durumdur ve önlenebilir zeka geriliğinin en önemli nedenidir.",
+       "ekran": "**Konjenital hipotiroidi**: önlenebilir zekâ geriliğinin **en önemli nedeni**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Konjenital hipotiroidi",
+         "tur": "tanim"
+        },
+        {
+         "metin": "en önemli nedeni",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 59,
+        "satir": [
+         "önlenebilir zeka geriliğinin en önemli nedenidir"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0114",
+       "ses": "Erken tanı ve tedavi zeka geriliğini önler.",
+       "ekran": "Erken tanı ve tedavi zekâ geriliğini önler",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 59,
+        "satir": [
+         "Erken tanı ve tedavi zeka geriliğini önler"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0115",
+       "ses": "Konjenital hipotiroidi şemasında te se ha bakılır; şüpheli sonuçta bebek pediatrik endokrinoloji kliniğine sevk edilir.",
+       "ekran": "TSH taraması; şüpheli → **pediatrik endokrinoloji**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "pediatrik endokrinoloji",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 60,
+        "satir": [
+         "Konjenital Hipotiroidi (TSH) Sonuç Değerlendirme"
+        ],
+        "sekil": "Konjenital hipotiroidi sonuç değerlendirme akış şeması"
+       }
+      },
+      {
+       "id": "k2-27-c0116",
+       "ses": "Bebek bir aydan büyükse örnek ildeki uygun laboratuvarda, ilin koşullarına göre devlet hastanesi veya merkez laboratuvarında bakılır.",
+       "ekran": "Bebek **1 aydan büyükse** ildeki uygun laboratuvar",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "1 aydan büyükse",
+         "tur": "tuzak"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 60,
+        "satir": [
+         "Bebek 1 aydan büyükse"
+        ],
+        "sekil": "Akış şemasında bir aydan büyük bebek dalı"
+       }
+      },
+      {
+       "id": "k2-27-c0117",
+       "ses": "Bu bilgi çıkmış sınavda sorulmuştur: bebeklerde biyotinidaz eksikliğinin erken belirtileri nöbetler, enfeksiyonlar ve saç kaybıdır; geç dönemde görme ve işitme kaybına, güçsüzlüğe, zihinsel geriliğe, koma ve ölüme yol açabilir.",
+       "ekran": "Erken: **nöbet, enfeksiyon, saç kaybı**; geç: görme-işitme kaybı, zihinsel gerilik",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "nöbet, enfeksiyon, saç kaybı",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [
+        "past-1790877041992-729175"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 61,
+        "satir": [
+         "Biyotinidaz eksikliğinin erken belirtileri nöbetler, enfeksiyonlar ve saç kaybıdır"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0118",
+       "ses": "Türkiye'de hastalığın sıklığı dünya ortalamasının çok üzerinde olup yenidoğanlarda on bir bin doğumda birdir.",
+       "ekran": "Türkiye'de **11.000 doğumda 1**",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "11.000 doğumda 1",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 61,
+        "satir": [
+         "Türkiye’de hastalığın sıklığı Dünya ortalamasının çok üzerinde"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0119",
+       "ses": "Tedavisi bebeğe günlük olarak biotin yani be yedi vitamini verilerek yapılır.",
+       "ekran": "Tedavi: günlük **biotin (B7)**",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "biotin (B7)",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 61,
+        "satir": [
+         "Tedavisi, bebeğe günlük olarak biotin (B7 vitamini) verilerek yapılır"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-27-p019",
+     "sayfa": 62,
+     "cumleler": [
+      {
+       "id": "k2-27-c0120",
+       "ses": "Biyotinidaz eksikliği akış şemasında enzim aktivitesi altmış beş ünitenin üzerindeyse sonuç normal kabul edilir.",
+       "ekran": "Enzim aktivitesi **65 U üzeri → normal**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "65 U üzeri → normal",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 62,
+        "satir": [
+         "Enzim aktivitesi var (65 U üzeri)"
+        ],
+        "sekil": "Biyotinidaz eksikliği akış şeması"
+       }
+      },
+      {
+       "id": "k2-27-c0121",
+       "ses": "Şüpheli sonuçta bebek pediatrik beslenme ve metabolizma kliniğine sevk edilir ve aile hekimi tedavisini izler.",
+       "ekran": "Şüpheli → **pediatrik beslenme-metabolizma** sevki",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "pediatrik beslenme-metabolizma",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 62,
+        "satir": [
+         "Biyotinidaz Eksikliği Akış Şeması"
+        ],
+        "sekil": "Biyotinidaz akış şemasında sevk dalı"
+       }
+      },
+      {
+       "id": "k2-27-c0122",
+       "ses": "Konjenital adrenal hiperplazi cinsel gelişim bozukluklarına yol açan ciddi bir genetik hastalıktır ve hastaların yüzde doksanından fazlasında yirmi bir hidroksilaz enzim eksikliği sonucu kortizol üretim bozukluğu vardır.",
+       "ekran": "**KAH**: %90'dan fazlasında **21-hidroksilaz eksikliği**, kortizol üretimi bozuk",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "KAH",
+         "tur": "tanim"
+        },
+        {
+         "metin": "21-hidroksilaz eksikliği",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 63,
+        "satir": [
+         "Cinsel gelişim bozukluklarına yol açan ciddi bir genetik hastalıktır"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0123",
+       "ses": "Tanı konduktan sonra tıbbi ve cerrahi tedavi mümkündür ve erken tanı ile hem erkek hem kız bebeklerin ölümleri engellenir.",
+       "ekran": "Erken tanı ile **kız ve erkek** bebeklerde ölüm engellenir",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "kız ve erkek",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 63,
+        "satir": [
+         "erken tanı ile hem erkek ve kız bebeklerin ölümleri engellenmektedir"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0124",
+       "ses": "Prevalansı beş binde bir ile on beş binde bir arasında değişir ve eş akrabalığının sık olduğu ülkelerde daha yüksektir.",
+       "ekran": "Prevalans **1/5.000–15.000**; akraba evliliğinde yüksek",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "1/5.000–15.000",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 63,
+        "satir": [
+         "Eş akrabalığının sık olduğu ülkelerde daha yüksek prevalansa sahip olduğu bilinmektedir"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0125",
+       "ses": "Konjenital adrenal hiperplazi taramasında tüm term bebekler ile otuz iki haftanın ve bin beş yüz gramın üzerindeki prematürelerde birinci basamak analiz on yedi hidroksiprogesterondur.",
+       "ekran": "Birinci basamak analiz: **17-hidroksiprogesteron**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "17-hidroksiprogesteron",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 64,
+        "satir": [
+         "BİRİNCİ BASAMAK ANALİZ"
+        ],
+        "sekil": "KAH sonuç değerlendirme akış şeması"
+       }
+      },
+      {
+       "id": "k2-27-c0126",
+       "ses": "Otuz altı haftanın ve iki bin beş yüz gramın üzerindeki bebekte on nanogram bölü mililitrenin, otuz iki ile otuz beş hafta ve bin beş yüz ile iki bin dört yüz doksan dokuz gram prematürede on beş nanogram bölü mililitrenin altı normaldir.",
+       "ekran": ">36 hafta ve >2500 g: **<10 ng/ml**; 32–35 hafta: **<15 ng/ml**",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "<10 ng/ml",
+         "tur": "sayi"
+        },
+        {
+         "metin": "<15 ng/ml",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 64,
+        "satir": [
+         "32-35 hafta ve 1500-2499 gr prematüre bebekler"
+        ],
+        "sekil": "KAH akış şemasında gebelik haftası ve kiloya göre eşikler"
+       }
+      },
+      {
+       "id": "k2-27-c0127",
+       "ses": "Değer yüksekse aynı örnekten ikinci basamak analiz yapılır ve sonuç anormalse bebek pediatrik endokrinoloji kliniğine sevk edilir.",
+       "ekran": "Yüksekse **aynı örnekten ikinci basamak**, sonra endokrinoloji",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "aynı örnekten ikinci basamak",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 64,
+        "satir": [
+         "AYNI ÖRNEKTEN İKİNCİ BASAMAK ANALİZ",
+         "PEDİATRİK ENDOKRİNOLOJİ KLİNİĞİNE SEVK"
+        ],
+        "sekil": "KAH akış şemasında ikinci basamak analiz ve sevk"
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-27-p020",
+     "sayfa": 65,
+     "cumleler": [
+      {
+       "id": "k2-27-c0128",
+       "ses": "Kistik fibrozis, salgı bezlerini etkileyerek başta akciğerler olmak üzere birçok organın fonksiyonunu bozan kalıtımsal bir hastalıktır.",
+       "ekran": "**Kistik fibrozis**: salgı bezleri, başta akciğer",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Kistik fibrozis",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 65,
+        "satir": [
+         "salgı bezlerini etkileyerek, başta akciğerler olmak üzere birçok organın fonksiyonunu bozan kalıtımsal bir hastalıktır"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0129",
+       "ses": "Ülkemizdeki sıklığı üç bin doğumda bir olarak bulunmuştur ve tanısı ter testi ile konur.",
+       "ekran": "**3000 doğumda 1**; tanı **ter testi**",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "3000 doğumda 1",
+         "tur": "sayi"
+        },
+        {
+         "metin": "ter testi",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 65,
+        "satir": [
+         "Kistik fibrozisin ülkemizdeki sıklığı 3000 doğumda 1 olarak bulunmuştur",
+         "Kistik Fibrozis hastalığı tanısı Ter Testi ile koyulmaktadır"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0130",
+       "ses": "Kistik fibrozis şemasında uygun örnek tarama laboratuvarında değerlendirilir; tarama şüpheliyse yedi ile on dördüncü günde tekrar kan örneği alınır.",
+       "ekran": "Şüpheli → **7–14. günde tekrar örnek**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "7–14. günde tekrar örnek",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 66,
+        "satir": [
+         "Kistik Fibrozis Sonuç Değerlendirme"
+        ],
+        "sekil": "Kistik fibrozis sonuç değerlendirme akış şeması"
+       }
+      },
+      {
+       "id": "k2-27-c0131",
+       "ses": "Tekrar örnekte de şüphe sürerse bebek ter testi için belirlenmiş merkeze sevk edilir ve aile hekimi bebeğin akıbetini izler.",
+       "ekran": "Sonra **ter testi için sevk**",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "ter testi için sevk",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 66,
+        "satir": [
+         "TER TESTİ İÇİN SEVK"
+        ],
+        "sekil": "Kistik fibrozis akış şemasında ter testi sevki"
+       }
+      },
+      {
+       "id": "k2-27-c0132",
+       "ses": "Yenidoğan işitme taraması bebek doğduktan sonraki ilk yetmiş iki saat içerisinde, taburcu olmadan önce hastanede yapılmalıdır.",
+       "ekran": "İşitme taraması: **ilk 72 saat**, taburculuktan önce",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "ilk 72 saat",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 67,
+        "satir": [
+         "sonraki ilk 72 saat içerisinde, taburcu olmadan önce hastanede yapılması gerekmektedir"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0133",
+       "ses": "Erken tanı yirmi dört saatini doldurmuş yenidoğana işitme testi yapılarak konur ve işitme kaybı tespit edilir edilmez kaybın derecesine uygun işitme cihazı kullanımına başlanmalıdır.",
+       "ekran": "**24 saatini doldurmuş** bebeğe test; kayıpta hemen cihaz",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "24 saatini doldurmuş",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 67,
+        "satir": [
+         "Erken tanı, 24 saatini doldurmuş yenidoğanlara işitme testi yapılarak konulur"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-27-b08",
+   "baslik": "Bebek izlemlerinde muayene, profilaksi ve aşılar",
+   "paragraflar": [
+    {
+     "id": "k2-27-p021",
+     "sayfa": 68,
+     "cumleler": [
+      {
+       "id": "k2-27-c0134",
+       "ses": "Yenidoğan izleminde hikayede emmesi, hepatit B aşısının yapılıp yapılmadığı ve yenidoğan işitme taramasının yapılıp yapılmadığı sorgulanır.",
+       "ekran": "Hikâye: **emme, hepatit B aşısı, işitme taraması**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "emme, hepatit B aşısı, işitme taraması",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 68,
+        "satir": [
+         "Hepatit B aşısının yapılıp yapılmadığı",
+         "Yenidoğan işitme taraması yapılıp yapılmadığı sorgulanır"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0135",
+       "ses": "Fizik muayenede genel görünüm ve doğuştan anomali değerlendirilir, baş çevresi ve vücut ağırlığı ölçülüp büyüme eğrilerine işaretlenir, fontanel büyüklükleri kaydedilir ve sistemik muayene yapılır.",
+       "ekran": "Muayene: anomali, **baş çevresi, ağırlık büyüme eğrisine**, fontanel",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "baş çevresi, ağırlık büyüme eğrisine",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 68,
+        "satir": [
+         "Baş çevresi, vücut ağırlığı ölçülür, büyüme eğrilerine işaretlenir",
+         "Fontanel büyüklükleri kaydedilir"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0136",
+       "ses": "Yenidoğan danışmanlığında emzirme, göbek bakımı, bebek bakımı, bebekle sağlıklı iletişim, uyku, el yıkama ve kazalardan korunma anlatılır.",
+       "ekran": "Danışmanlık: emzirme, **göbek bakımı**, iletişim, uyku, el yıkama, kazalar",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "göbek bakımı",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 69,
+        "satir": [
+         "Emzirme",
+         "Göbek bakımı",
+         "Kazalardan korunma"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0137",
+       "ses": "Ayrıca ateş, iyi emmeme, kusma, ishal, sarılık ve uykuya meyil gibi doktora hemen başvurmayı gerektiren durumlar aileye öğretilir.",
+       "ekran": "Hemen başvuru: **ateş, iyi emmeme, kusma, ishal, sarılık**",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "ateş, iyi emmeme, kusma, ishal, sarılık",
+         "tur": "tuzak"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 69,
+        "satir": [
+         "Doktora hemen başvurmayı gerektiren durumlar",
+         "ateş, iyi emmeme, kusma, ishal, sarılık"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-27-p022",
+     "sayfa": 70,
+     "cumleler": [
+      {
+       "id": "k2-27-c0138",
+       "ses": "On beşinci gün, kırk birinci gün ve ikinci ay izlemlerinde yenidoğan taramaları ve de vitamini kullanma durumu sorgulanır, baş çevresi ve ağırlık büyüme eğrilerine işaretlenir, uzamış sarılık değerlendirilir.",
+       "ekran": "Sorgu: taramalar, **D vitamini**; uzamış sarılık",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "D vitamini",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 70,
+        "satir": [
+         "Yenidoğan taramaları",
+         "D vitamini kullanma durumu sorgulanır",
+         "Uzamış sarılık açısından değerlendirme"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0139",
+       "ses": "İşitme ve görme prematüre retinopatisi ve kırmızı refle açısından değerlendirilir ve kırk birinci gün izleminde gelişimsel kalça displazisi taraması yapılır.",
+       "ekran": "Görme: **prematüre retinopatisi, kırmızı refle**; 41. günde GKD",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "prematüre retinopatisi, kırmızı refle",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 70,
+        "satir": [
+         "41.gün izleminde Gelişimsel kalça displazisi (GKD) taraması"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0140",
+       "ses": "Bebek prematüre veya düşük doğum ağırlıklı ise ve daha önce başlanmamışsa profilaktik demir tedavisi başlanır.",
+       "ekran": "Prematüre/düşük doğum ağırlığı → **profilaktik demir**",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "profilaktik demir",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 70,
+        "satir": [
+         "Prematüre veya düşük doğum ağırlıklı ise ve daha önce başlanmamışsa profilaktik demir tedavisi"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0141",
+       "ses": "Dikkat edilmesi gereken bir eşik var: hemoglobini yedi gram bölü desilitrenin veya hematokriti yüzde yirmi birin altında olan her bebek acilen hastaneye sevk edilmelidir.",
+       "ekran": "Hb **<7 g/dl** veya Htc **<%21** → **acil sevk**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "<7 g/dl",
+         "tur": "sayi"
+        },
+        {
+         "metin": "<%21",
+         "tur": "sayi"
+        },
+        {
+         "metin": "acil sevk",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 71,
+        "satir": [
+         "HER BEBEK ACİLEN HASTANEYE SEVK EDİLMELİDİR"
+        ],
+        "sekil": "Hemoglobin ve hematokrit eşiği uyarı slaytı"
+       }
+      },
+      {
+       "id": "k2-27-c0142",
+       "ses": "Bu bebekte ağır anemi vardır ve birinci basamakta demir tedavisiyle izlenmez, hastanede değerlendirilir.",
+       "ekran": "Ağır anemi: birinci basamakta izlenmez, **hastaneye**",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "hastaneye",
+         "tur": "tuzak"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 71,
+        "satir": [
+         "Hb<7gr/dl veya Htc<%21 olan"
+        ],
+        "sekil": "Uyarı slaytındaki acil sevk notu"
+       }
+      },
+      {
+       "id": "k2-27-c0143",
+       "ses": "Görme keskinliğini taramak için on beşinci gün izlemi ve sonrasında her izlemde bebeğin görmesi değerlendirilmelidir.",
+       "ekran": "Görme: **15. gün ve sonrası her izlemde**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "15. gün ve sonrası her izlemde",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 72,
+        "satir": [
+         "15. gün izlemi ve sonrasında her izlemde bebeğin görmesi değerlendirilmelidir"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0144",
+       "ses": "Taramada şüpheli bulunan bebekler ile strabismus yani şaşılık saptanan bebek veya çocuklar her yaşta sevk edilmelidir.",
+       "ekran": "Şüpheli ve **şaşılık** → **her yaşta sevk**",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "şaşılık",
+         "tur": "tuzak"
+        },
+        {
+         "metin": "her yaşta sevk",
+         "tur": "tuzak"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 72,
+        "satir": [
+         "Taramada şüpheli bulunan bebekler, strabismus saptanan bebek veya çocuklar her yaşta sevk edilmelidir"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-27-p023",
+     "sayfa": 73,
+     "cumleler": [
+      {
+       "id": "k2-27-c0145",
+       "ses": "Otuz ikinci hafta ve ya da bin beş yüz gramın altında doğan bütün bebekler prematüre retinopatisi muayenesi için aile hekimi tarafından rutin olarak göz hastalıkları hekimine yönlendirilir.",
+       "ekran": "**32. hafta ve/veya 1500 g altı** → rutin göz hekimi",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "32. hafta ve/veya 1500 g altı",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 73,
+        "satir": [
+         "doğan bütün bebekler AH tarafından bir göz hastalıkları hekimine rutin olarak yönlendirilir"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0146",
+       "ses": "Şikayet ya da bulgu beklenmez; bu eşiğin altındaki her bebek rutin olarak yönlendirilir.",
+       "ekran": "Bulgu beklenmez, **rutin** yönlendirme",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "rutin",
+         "tur": "tuzak"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 73,
+        "satir": [
+         "PREMATURE RETİNOPATİSİ"
+        ],
+        "sekil": "Prematüre retinopatisi slaytındaki görsel"
+       }
+      },
+      {
+       "id": "k2-27-c0147",
+       "ses": "Normal bir gözde kırmızı refle parlak kırmızı sarı renkte ve simetriktir.",
+       "ekran": "Normal refle: **parlak kırmızı-sarı, simetrik**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "parlak kırmızı-sarı, simetrik",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 74,
+        "satir": [
+         "Parlak kırmızı-sarı renkte",
+         "Simetrik"
+        ],
+        "sekil": "Normal kırmızı refle görüntüsü"
+       }
+      },
+      {
+       "id": "k2-27-c0148",
+       "ses": "Kırmızı refle içinde karanlık noktalar, bozuk veya kaybolmuş refle, beyaz refle yani lökokori ve reflelerde asimetri varsa hasta göz hekimine yönlendirilmelidir.",
+       "ekran": "Karanlık nokta, kayıp refle, **lökokori**, asimetri → göz hekimi",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "lökokori",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 74,
+        "satir": [
+         "Bozuk veya kaybolmuş kırmızı refle",
+         "Reflelerde asimetri durumlarında hasta göz hekimine yönlendirilmelidir"
+        ],
+        "sekil": "Anormal kırmızı refle örnekleri: lökokori ve asimetri"
+       }
+      },
+      {
+       "id": "k2-27-c0149",
+       "ses": "Optik yolu bozan her etken refleyi bozar; kornea opasiteleri, iris bozuklukları, katarakt, vitreus içi opasiteler, tümör, retinal hastalıklar, yüksek numaralı gözlük, anizometropi ve şaşılık bunlardandır.",
+       "ekran": "Nedenler: **katarakt**, kornea opasitesi, tümör, retina, anizometropi, şaşılık",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "katarakt",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 74,
+        "satir": [
+         "Kornea opasiteleri",
+         "Katarakt",
+         "Tümör",
+         "Retinal hastalıklar",
+         "Anizometropi",
+         "Şaşılık"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0150",
+       "ses": "Gelişimsel kalça displazisi için doğumdan sonra ilk kırk sekiz saatte aile bilgilendirilir.",
+       "ekran": "GKD: ilk **48 saatte** aileyi bilgilendirme",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "48 saatte",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 75,
+        "satir": [
+         "Doğumdan sonra ilk 48 saatte aileyi bilgilendirme"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0151",
+       "ses": "Kırk birinci gün izleminde, yani otuz ile elli beşinci günler arasında risk faktörleri sorgulanır, fizik muayene yapılır ve kalça ultrasonografisi için yönlendirilir.",
+       "ekran": "41. gün (**30–55. gün**): risk sorgusu, muayene, **kalça USG**",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "30–55. gün",
+         "tur": "sayi"
+        },
+        {
+         "metin": "kalça USG",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 75,
+        "satir": [
+         "Tarama, risk faktörleri açısından sorgulama ve fizik muayene ve kalça USG için yönlendirme"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-27-p024",
+     "sayfa": 76,
+     "cumleler": [
+      {
+       "id": "k2-27-c0152",
+       "ses": "Doğumdan itibaren bir yaşına kadar tüm bebeklere günde dört yüz ünite de vitamini verilmelidir.",
+       "ekran": "Doğumdan 1 yaşa kadar **400 IU/gün D vitamini**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "400 IU/gün D vitamini",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 76,
+        "satir": [
+         "Doğumdan itibaren 1 yaşına kadar tüm bebeklere günde 400 IU D vitamini verilmelidir"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0153",
+       "ses": "Gebedeki bin iki yüz ünitelik dozla karıştırılmamalıdır; bebekte günlük doz dört yüz ünitedir.",
+       "ekran": "Gebede 1200 IU, **bebekte 400 IU**",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "bebekte 400 IU",
+         "tur": "tuzak"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 76,
+        "satir": [
+         "D VİTAMİNİ PROFİLAKSİSİ"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0154",
+       "ses": "Üç ve dördüncü ay izlemlerinde emzirme ve de vitamini kullanma durumu sorgulanır, baş çevresi ve ağırlık işaretlenir, fontanel kaydedilir.",
+       "ekran": "3–4. ay: emzirme, D vitamini, büyüme eğrisi, fontanel",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 77,
+        "satir": [
+         "Emzirme durumu",
+         "D vitamini kullanma durumu"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0155",
+       "ses": "Anemi varsa tedavi dozunda, yoksa dördüncü aydan itibaren profilaktik dozda, kilogram başına bir damla ücretsiz demir damlası verilir.",
+       "ekran": "Anemi → tedavi dozu; yoksa **4. aydan 1 damla/kg** profilaktik demir",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "4. aydan 1 damla/kg",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 77,
+        "satir": [
+         "Anemi varsa tedavi dozunda, yoksa 4. aydan itibaren proflaktik dozda (1damla/kg) ücretsiz demir damlası verilir"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0156",
+       "ses": "Dördüncü ayda difteri, asellüler boğmaca, tetanoz, inaktif polio ve hemofilus influenza tip be aşısının ikinci dozu ile konjuge pnömokok aşısının ikinci dozu yapılır.",
+       "ekran": "4. ay: **DaBT-İPA-Hib 2. doz, KPA 2. doz**",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "DaBT-İPA-Hib 2. doz, KPA 2. doz",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 77,
+        "satir": [
+         "Aşılar:4. ay DaBT-İPA-Hib 2.doz, KPA 2. doz"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-27-p025",
+     "sayfa": 78,
+     "cumleler": [
+      {
+       "id": "k2-27-c0157",
+       "ses": "Ulusal Çocukluk Dönemi Aşılama Takvimi iki bin yirmi beşe göre hepatit B aşısı doğumda, verem aşısı ikinci ay sonunda yapılır.",
+       "ekran": "Takvim 2025: **Hep-B doğumda**, **BCG 2. ay sonu**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Hep-B doğumda",
+         "tur": "sayi"
+        },
+        {
+         "metin": "BCG 2. ay sonu",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 78,
+        "satir": [
+         "Ulusal Çocukluk Dönemi Aşılama Takvimi (2025)"
+        ],
+        "sekil": "Ulusal Çocukluk Dönemi Aşılama Takvimi tablosu",
+        "tablo": true
+       }
+      },
+      {
+       "id": "k2-27-c0158",
+       "ses": "Konjuge pnömokok aşısı ikinci ve dördüncü ayda yapılır, on ikinci ayda rapel yani pekiştirme dozu uygulanır; difteri, asellüler boğmaca, tetanoz, inaktif polio, hemofilus ve hepatit B içeren beşli karma aşı ikinci, dördüncü ve altıncı aylarda yapılır, on sekizinci ayda rapeli vardır.",
+       "ekran": "KPA 2, 4. ay + 12. ay rapel; DaBT-İPA-Hib-HepB 2, 4, 6. ay + **18. ay rapel**",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "18. ay rapel",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 78,
+        "satir": [
+         "KPA Konjuge Pnömokok Aşısı"
+        ],
+        "sekil": "Aşılama takviminde pnömokok ve karma aşı satırları",
+        "tablo": true
+       }
+      },
+      {
+       "id": "k2-27-c0159",
+       "ses": "Oral polio aşısı altıncı ve on sekizinci ayda, suçiçeği on ikinci ayda, kızamık kızamıkçık kabakulak aşısı dokuzuncu ayda ek doz, on ikinci ve kırk sekizinci aylarda yapılır.",
+       "ekran": "OPA 6 ve 18. ay; suçiçeği 12. ay; **KKK 9. ay ek doz, 12 ve 48. ay**",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "KKK 9. ay ek doz, 12 ve 48. ay",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 78,
+        "satir": [
+         "KKK Kızamık, Kızamıkçık, Kabakulak Aşısı"
+        ],
+        "sekil": "Aşılama takviminde polio, suçiçeği ve kızamık satırları",
+        "tablo": true
+       }
+      },
+      {
+       "id": "k2-27-c0160",
+       "ses": "Hepatit A aşısı on sekizinci ve yirmi dördüncü aylarda, difteri, asellüler boğmaca, tetanoz ve inaktif polio rapeli kırk sekizinci ayda, erişkin tipi tetanoz difteri rapeli ise on üç yaşında yapılır.",
+       "ekran": "Hep-A 18 ve 24. ay; DaBT-İPA 48. ay; **Td 13 yaş**",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Td 13 yaş",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 78,
+        "satir": [
+         "Hep-A Hepatit A Aşısı"
+        ],
+        "sekil": "Aşılama takviminde hepatit A ve tetanoz difteri satırları",
+        "tablo": true
+       }
+      },
+      {
+       "id": "k2-27-c0161",
+       "ses": "Dört ile on iki ay arası çocuklarda demir profilaksisi yapılır ve dokuz aylık olduklarında hemoglobin değerlerine bakılır.",
+       "ekran": "**4–12 ay** demir profilaksisi; **9. ayda Hb**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "4–12 ay",
+         "tur": "sayi"
+        },
+        {
+         "metin": "9. ayda Hb",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 79,
+        "satir": [
+         "ay arası çocuklarda demir profilaksisinin yapılması",
+         "9 aylık olduklarında hemoglobin (Hb) değerlerine bakılması"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0162",
+       "ses": "Üç ve dördüncü ay danışmanlığında emzirme, bebek bakımı, bebekle sağlıklı iletişim, uyku, el yıkama ve kazalardan korunma konuşulur.",
+       "ekran": "3–4. ay danışmanlık: emzirme, bakım, iletişim, uyku, kazalar",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 80,
+        "satir": [
+         "Bebekle sağlıklı iletişim",
+         "Kazalardan korunma"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0163",
+       "ses": "Yenidoğan danışmanlığından farklı olarak bu dönemde diş sağlığı ve aile planlaması da eklenir.",
+       "ekran": "Yeni başlıklar: **diş sağlığı, aile planlaması**",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "diş sağlığı, aile planlaması",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 80,
+        "satir": [
+         "Diş sağlığı",
+         "Aile Planlaması"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-27-p026",
+     "sayfa": 81,
+     "cumleler": [
+      {
+       "id": "k2-27-c0164",
+       "ses": "Altıncı, dokuzuncu ve on ikinci ay izlemlerinde emzirme, de vitamini ve demir kullanımı sorgulanır; ön fontanel muayene edilir ve ön fontanel altı ile on sekiz ayda kapanır.",
+       "ekran": "Ön fontanel **6–18 ayda kapanır**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "6–18 ayda kapanır",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 81,
+        "satir": [
+         "D vitamini, demir kullanma durumu",
+         "Ön fontanel muayenesi (6-18 ayda kapanır)"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0165",
+       "ses": "Dokuzuncu ayda hemoglobin düzeyi bakılır.",
+       "ekran": "**9. ayda hemoglobin**",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "9. ayda hemoglobin",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 81,
+        "satir": [
+         "9. ayda hemoglobin düzeyi"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0166",
+       "ses": "Altıncı ayda hepatit B üçüncü doz, beşli karma aşı üçüncü doz ve oral polio birinci doz; on ikinci ayda konjuge pnömokok rapeli, kızamık kızamıkçık kabakulak birinci doz ve suçiçeği birinci doz yapılır.",
+       "ekran": "6. ay: Hep B 3, DaBT-İPA-Hib 3, OPA 1; **12. ay: KPA rapel, KKK 1, suçiçeği 1**",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "12. ay: KPA rapel, KKK 1, suçiçeği 1",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 81,
+        "satir": [
+         "OPA 1.doz, 12. ay KPA rapel, KKK 1.doz"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0167",
+       "ses": "Altı ay ile bir yaş arası bebek takiplerinde en az bir kez inmemiş testis muayenesi yapılmalıdır.",
+       "ekran": "**6 ay–1 yaş**: en az bir kez **inmemiş testis** muayenesi",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "6 ay–1 yaş",
+         "tur": "sayi"
+        },
+        {
+         "metin": "inmemiş testis",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 82,
+        "satir": [
+         "ay-1yaş arası bebek takiplerinde en az bir kez inmemiş testis muayenesi yapılmalıdır"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0168",
+       "ses": "Bu muayene bir yaşına kadar en az bir kez mutlaka yapılmış olmalıdır.",
+       "ekran": "Bir yaşa kadar **en az bir kez**",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "en az bir kez",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 82,
+        "satir": [
+         "İNMEMİŞ TESTİS MUAYENESİ"
+        ],
+        "sekil": "İnmemiş testis muayenesi slaytındaki görsel"
+       }
+      },
+      {
+       "id": "k2-27-c0169",
+       "ses": "Altı ile on iki ay danışmanlığında emzirme ile birlikte tamamlayıcı beslenme ve beslenme alışkanlığı kazandırma eklenir; bebek bakımı, iletişim, uyku, kazalar, diş sağlığı ve aile planlaması sürer.",
+       "ekran": "6–12. ay: **tamamlayıcı beslenme** ve beslenme alışkanlığı",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "tamamlayıcı beslenme",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 83,
+        "satir": [
+         "Emzirme, tamamlayıcı beslenme ve beslenme alışkanlığı kazandırma"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-27-b09",
+   "baslik": "Okul öncesi çocuk izlemleri ve gelişim taramaları",
+   "paragraflar": [
+    {
+     "id": "k2-27-p027",
+     "sayfa": 84,
+     "cumleler": [
+      {
+       "id": "k2-27-c0170",
+       "ses": "Çocuk izlemleri on ikinci, on sekizinci, yirmi dördüncü ve otuzuncu aylarda belirlenmiş gün aralıklarında yapılır.",
+       "ekran": "Çocuk izlemi: **12, 18, 24, 30. ay**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "12, 18, 24, 30. ay",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 84,
+        "satir": [
+         "12. ay izlemi",
+         "18. ay izlemi",
+         "24. ay izlemi"
+        ],
+        "sekil": "Çocuk izlem zamanları listesi"
+       }
+      },
+      {
+       "id": "k2-27-c0171",
+       "ses": "Ardından otuz altıncı, kırk sekizinci ve altmışıncı ay izlemleri gelir; örneğin altmışıncı ay izlemi bin altı yüz seksen birinci ile bin sekiz yüz doksanıncı günler arasındadır.",
+       "ekran": "Sonra **36, 48, 60. ay**",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "36, 48, 60. ay",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 84,
+        "satir": [
+         "36. ay izlemi",
+         "60. ay izlemi"
+        ],
+        "sekil": "Çocuk izlem zamanları listesinde son izlemler"
+       }
+      },
+      {
+       "id": "k2-27-c0172",
+       "ses": "On iki ile yirmi dört ay grubundaki çocuklarda palmar solukluk muayenesi yapılarak gerekli durumlarda demir eksikliği tedavisi başlanır.",
+       "ekran": "12–24 ay: **palmar solukluk** muayenesi, gerekirse demir",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "palmar solukluk",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 86,
+        "satir": [
+         "ay grubundaki çocuklarda palmar solukluk muayenesinin yapılarak gerekli durumlarda demir eksikliği tedavisinin başlanması"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0173",
+       "ses": "Beş yaşında ve erken, orta ve geç adolesan dönemde birer kez hemoglobin bakılmalıdır.",
+       "ekran": "**5 yaş** ve erken, orta, geç adolesanda birer kez Hb",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "5 yaş",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 86,
+        "satir": [
+         "5 yaş ve erken orta ve geç adolesan dönemde birer kez Hb (hemoglobin) bakılmalıdır"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0174",
+       "ses": "Üç yaştan sonra Lea eşeli ile görme keskinliği muayenesi ve kırmızı refle testi yapılmalı, gerektiğinde göz hastalıkları hekimine sevk edilmelidir.",
+       "ekran": "**3 yaştan sonra Lea eşeli** + kırmızı refle",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "3 yaştan sonra Lea eşeli",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 87,
+        "satir": [
+         "3 yaştan sonra “Lea Eşeli” ile görme keskinliği muayenesi ve kırmızı refle testi yapılmalı"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0175",
+       "ses": "Bebekte ilk süt dişinin çıkmasıyla birlikte başlayan diş hekimi kontrolleri altı aylık periyodlarla tekrarlanmalıdır.",
+       "ekran": "İlk süt dişiyle başlar, **6 ayda bir** diş hekimi",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "6 ayda bir",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 88,
+        "satir": [
+         "Bebekte ilk süt dişinin çıkmasıyla birlikte başlayan diş hekimi kontrolleri, altı aylık periyodlarla tekrarlanmalıdır"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-27-p028",
+     "sayfa": 89,
+     "cumleler": [
+      {
+       "id": "k2-27-c0176",
+       "ses": "Bilişsel gelişim, dil gelişimi, sosyal ve duygusal gelişim ile kaba motor ve ince motor gelişim taranır.",
+       "ekran": "Gelişim taraması: **bilişsel, dil, sosyal-duygusal, kaba ve ince motor**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "bilişsel, dil, sosyal-duygusal, kaba ve ince motor",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 89,
+        "satir": [
+         "BİLİŞSEL GELİŞİM, DİL GELİŞİMİ, SOSYAL VE DUYGUSAL GELİŞİM"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0177",
+       "ses": "Bu tarama sıfır ile altı yaş döneminde Bebek Çocuk İzlem Protokolüne ve Çocuğun Psikososyal Gelişiminin Desteklenmesi Programına uygun olarak, bu konuda eğitim almış sağlık personeli tarafından yapılmalıdır.",
+       "ekran": "0–6 yaş; **ÇPGD programı**, eğitimli personel",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "ÇPGD programı",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 89,
+        "satir": [
+         "Desteklenmesi Programına (ÇPGD) uygun olarak, bu konuda eğitim almış sağlık personeli tarafından yapılmalıdır"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0178",
+       "ses": "On sekiz ile otuz altı aylar arasında bir kez otizm açısından değerlendirme yapılır.",
+       "ekran": "**18–36 ay**: bir kez **otizm**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "18–36 ay",
+         "tur": "sayi"
+        },
+        {
+         "metin": "otizm",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 90,
+        "satir": [
+         "aylar arasında bir kez otizm"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0179",
+       "ses": "Kırk sekiz ile altmış ay arasında da bir kez dikkat eksikliği, hiperaktivite ve özgül öğrenme güçlüğü açısından değerlendirilmelidir.",
+       "ekran": "**48–60 ay**: dikkat eksikliği, hiperaktivite, özgül öğrenme güçlüğü",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "48–60 ay",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 90,
+        "satir": [
+         "ay arasında da bir kez dikkat eksikliği, hiperaktivite ve özgül öğrenme güçlüğü açısından değerlendirilmelidir"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0180",
+       "ses": "Otizm spektrum bozukluklarının erken tespiti için bu programın görüşme formundaki gelişim bilgileri bölümünde, on sekiz ile otuz altı aylar arasında üç gözlem maddesi önerilir.",
+       "ekran": "Otizm: ÇPGD formunda **3 gözlem maddesi**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "3 gözlem maddesi",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 91,
+        "satir": [
+         "Otizm spektrum bozukluklarının erken tespitinde"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0181",
+       "ses": "Bu maddeler çocuğun ismi söylendiği zaman bakması, göz kontağı kurması ve parmakla gösterilen nesneye bakmasıdır.",
+       "ekran": "**İsmine bakma, göz kontağı, parmakla gösterilene bakma**",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "İsmine bakma, göz kontağı, parmakla gösterilene bakma",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 91,
+        "satir": [
+         "İsmi söylendiği zaman bakıyor",
+         "Göz kontağı kuruyor",
+         "Parmakla gösterilen nesneye bakıyor"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-27-p029",
+     "sayfa": 92,
+     "cumleler": [
+      {
+       "id": "k2-27-c0182",
+       "ses": "Dikkat eksikliği ve hiperaktivite için ellerin ve ayakların sürekli kıpır kıpır olması veya oturduğu yerde kıpırdanma, çabuk sıkılma ve faaliyetleri yarım bırakma değerlendirilir.",
+       "ekran": "DEHB: **sürekli kıpırdanma**, çabuk sıkılma, işi yarım bırakma",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "sürekli kıpırdanma",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 92,
+        "satir": [
+         "Ellerin ve ayakların sürekli kıpır kıpır olması veya oturduğu yerde kıpırdanma",
+         "Çabuk sıkılma, faaliyetleri yarım bırakma"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0183",
+       "ses": "Koşturduğu veya ani hareketlerde bulunduğu için sık yaralanma ve kaza geçirme ile dalgın görünmesi nedeniyle soruların ve komutların üst üste tekrarının gerekmesi de sorgulanır.",
+       "ekran": "Sık **yaralanma-kaza**; dalgınlık, komut tekrarı gerekmesi",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "yaralanma-kaza",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 92,
+        "satir": [
+         "için sık yaralanma, kaza geçirme"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0184",
+       "ses": "Özgül öğrenme güçlüğü kırk sekiz ile altmış aylar arasında iki kez değerlendirilir; konuşmanın gecikmesi, zamanında konuşsa bile cümle kurmaya geçememe ve cümle kurarken kelimeleri garip yerleştirme aranır.",
+       "ekran": "Özgül öğrenme güçlüğü: 48–60 ay **2 kez**; konuşma gecikmesi, cümle kuramama",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "2 kez",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 93,
+        "satir": [
+         "48-60 aylar arasında 2 kez",
+         "konuşmanın gecikmesi",
+         "cümle kurarken kelimeleri garip yerleştirme"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0185",
+       "ses": "Bazı kelime ve kavramları ısrarla öğrenememe, sağ, sol, yukarı, aşağı, yer ve yön gibi kavramlarda zorlanma ve altmışıncı ayda yazı yazmakta, harfleri ve sayıları öğrenmekte zorlanma da değerlendirilir.",
+       "ekran": "Yön kavramında zorlanma; **60. ayda yazı, harf, sayı** güçlüğü",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "60. ayda yazı, harf, sayı",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 93,
+        "satir": [
+         "bazı kelime ve kavramları ısrarla öğrenememe",
+         "60. ayda yazı yazmakta, harfleri, sayıları öğrenmekte zorlanma durumları değerlendirilir"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0186",
+       "ses": "Sıfır ile altı yaş çocuklarda her muayenede çocuk ihmali ve istismarı ile çocuğa kötü muamele olup olmadığı yönünden sorgulama, gözlem ve muayene yapılması önemlidir.",
+       "ekran": "0–6 yaş **her muayenede** ihmal, istismar, kötü muamele",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "her muayenede",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 94,
+        "satir": [
+         "çocuk ihmali ve istismarı ile çocuğa kötü muamele olup olmadığı yönünden sorgulama, gözlem ve muayene yapılması önemlidir"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0187",
+       "ses": "Herhangi bir sebeple muayeneye gelen üç ile on sekiz yaş arasındaki bütün çocuklarda yılda en az bir kez arteriyel tansiyon ölçümü yapılmalıdır.",
+       "ekran": "**3–18 yaş**: yılda en az bir kez tansiyon",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "3–18 yaş",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 95,
+        "satir": [
+         "yaş arasındaki bütün çocuklarda yılda en az bir kez arteriyel tansiyon ölçümü yapılmalıdır"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0188",
+       "ses": "Sıfır ile bir yaş arası bebek ve bir ile beş yaş arası okul öncesi dönemlerin her birinde en az bir kez sağlıklı diyet konusunda bilgilendirme yapılmalıdır.",
+       "ekran": "0–1 ve 1–5 yaş: her dönemde **en az bir kez diyet bilgilendirmesi**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "en az bir kez diyet bilgilendirmesi",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 96,
+        "satir": [
+         "her dönemde en az bir kez sağlıklı diyet konusunda bilgilendirme yapılmalıdır"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-27-b10",
+   "baslik": "Okul çağı ve ergen izlemleri",
+   "paragraflar": [
+    {
+     "id": "k2-27-p030",
+     "sayfa": 97,
+     "cumleler": [
+      {
+       "id": "k2-27-c0189",
+       "ses": "Okul çağı çocuk ve genç izlemleri altı yaşından yirmi bir yaşına kadar her yıl, belirlenmiş ay aralıklarında yapılır.",
+       "ekran": "Okul çağı/genç: **6–21 yaş her yıl** izlem",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "6–21 yaş her yıl",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 97,
+        "satir": [
+         "Okul çağı çocuk/Genç izlem zamanları ve aralıkları"
+        ],
+        "sekil": "Okul çağı ve genç izlem zamanları listesi"
+       }
+      },
+      {
+       "id": "k2-27-c0190",
+       "ses": "Örneğin altı yaş izlemi altmış yedi ile yetmiş sekizinci aylar, yirmi bir yaş izlemi ise iki yüz kırk yedi ile iki yüz elli sekizinci aylar arasında yapılır.",
+       "ekran": "6 yaş izlemi 67–78. ay; 21 yaş izlemi 247–258. ay",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 97,
+        "satir": [
+         "yaş izlemi"
+        ],
+        "sekil": "Okul çağı izlem listesinde ay aralıkları"
+       }
+      },
+      {
+       "id": "k2-27-c0191",
+       "ses": "Altı ile yedi, on iki ile on üç ve on beş ile on altı yaş arasındaki çocukların en az birer kez diş hekimine yönlendirilmesi önerilir.",
+       "ekran": "**6–7, 12–13, 15–16 yaş**: en az birer kez diş hekimi",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "6–7, 12–13, 15–16 yaş",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 99,
+        "satir": [
+         "yaş arasındaki çocukların en az birer kez diş hekimine yönlendirilmesi önerilir"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0192",
+       "ses": "Altı ile on sekiz yaş arası okul döneminde de en az bir kez sağlıklı diyet konusunda bilgilendirme yapılmalıdır.",
+       "ekran": "6–18 yaş: **en az bir kez** diyet bilgilendirmesi",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "en az bir kez",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 101,
+        "satir": [
+         "yaş arası okul dönemi olmak üzere her dönemde en az bir kez sağlıklı diyet konusunda bilgilendirme yapılmalıdır"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-27-p031",
+     "sayfa": 102,
+     "cumleler": [
+      {
+       "id": "k2-27-c0193",
+       "ses": "Obezite taraması için altı ile on sekiz yaş arası okul döneminde yılda bir kez ağırlık, boy ve beden kitle indeksi ölçülür; obez ya da fazla kilolu olduğu belirlenen çocuklar üç ile altı ayda bir izlenir.",
+       "ekran": "6–18 yaş **yılda bir** boy, kilo, BKİ; obez/fazla kilolu **3–6 ayda bir**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "yılda bir",
+         "tur": "sayi"
+        },
+        {
+         "metin": "3–6 ayda bir",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 102,
+        "satir": [
+         "ağırlık, boy, beden kitle indeksi (BKI) ölçümlerinin yapılması",
+         "Obez ya da fazla kilolu olduğu belirlenen çocukların 3 ile 6 ayda bir izlenmesi gerekmektedir"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0194",
+       "ses": "Fazla tartılı ve obez tanısı alan her çocuğa tanı anında açlık kan şekeri, kan lipid profili, a le te ve a es te bakılmalı, değerleri yüksek olan çocuklar bir üst merkeze sevk edilmelidir.",
+       "ekran": "Tanı anında **açlık şekeri, lipid, ALT, AST**; yüksekse üst merkez",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "açlık şekeri, lipid, ALT, AST",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 102,
+        "satir": [
+         "Fazla tartılı ve obez tanısı alan her çocuğa tanı anında açlık kan şekeri, kan lipid profili",
+         "çocuklar bir üst merkeze sevk edilmelidir"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0195",
+       "ses": "Yedi ile on sekiz yaş çocuklarda yılda bir kez çocuk ihmali ve istismarı ile kötü muamele yönünden sorgulama, gözlem ve muayene yapılır.",
+       "ekran": "7–18 yaş: **yılda bir** ihmal-istismar sorgusu",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "yılda bir",
+         "tur": "tuzak"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 103,
+        "satir": [
+         "yaş çocuklarda yılda bir kez"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0196",
+       "ses": "Sıfır ile altı yaşta her muayenede yapılan bu değerlendirme, okul çağında yılda bire iner.",
+       "ekran": "0–6 yaş her muayene, **7–18 yaş yılda bir**",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "7–18 yaş yılda bir",
+         "tur": "tuzak"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 103,
+        "satir": [
+         "çocuk ihmali ve istismarı ile çocuğa kötü muamele olup olmadığı yönünden sorgulama"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-27-p032",
+     "sayfa": 104,
+     "cumleler": [
+      {
+       "id": "k2-27-c0197",
+       "ses": "On üç ile on sekiz yaş grubu çocuklara her klinik karşılaşmada tütün ve diğer bağımlılık yapıcı madde kullanım durumu sorgulanmalıdır.",
+       "ekran": "13–18 yaş: **her klinik karşılaşmada** tütün ve madde sorgusu",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "her klinik karşılaşmada",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 104,
+        "satir": [
+         "yaş grubu çocuklara her klinik karşılaşmada, tütün ve diğer bağımlılık yapıcı madde kullanım durumu sorgulanmalı"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0198",
+       "ses": "Tütün dumanından pasif etkilenim ise sıfır ile beş yaş grubunda izlem periyotları sırasında, altı ile on sekiz yaş grubunda yılda en az bir kez sorgulanmalıdır.",
+       "ekran": "Pasif etkilenim: 0–5 yaş izlemlerde, **6–18 yaş yılda en az bir**",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "6–18 yaş yılda en az bir",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 104,
+        "satir": [
+         "yaş grubunda ise yılda en az bir kez tütün dumanından pasif etkilenim durumu sorgulanmalı"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0199",
+       "ses": "On sekiz yaşın altındaki adolesanlarda çocuğa ve aileye kan yoluyla bulaşan hastalıklara yönelik bilgilendirme yapılmalıdır.",
+       "ekran": "18 yaş altı: **kan yoluyla bulaşan hastalık** bilgilendirmesi",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "kan yoluyla bulaşan hastalık",
+         "tur": "terim"
+        },
+        {
+         "metin": "kan yoluyla bulaşan hastalık",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [
+        "7abe636dbc5b"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 105,
+        "satir": [
+         "yaşın altındaki adölesanlarda çocuğa ve aileye kan yoluyla bulaşan hastalıklara yönelik bilgilendirme yapılmalı"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0200",
+       "ses": "Riskli durumlarda ailenin onayı alınarak hepatit C ve ha ı ve'nin erken tespitine yönelik testler yapılmalıdır.",
+       "ekran": "Riskte **aile onayıyla** hepatit C ve HIV testi",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "aile onayıyla",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 105,
+        "satir": [
+         "Riskli durumlarda ailenin onayı alınarak hepatit C ve HIV’in erken tespitine yönelik testler yapılmalıdır"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0201",
+       "ses": "Birinci basamakta bebek, çocuk ve ergen izlemleri özet tablosunda baş çevresinin üç yaşa kadar, beden kitle indeksinin yirmi dördüncü aydan itibaren ölçüldüğü görülür.",
+       "ekran": "Özet tablo: **baş çevresi 3 yaşa kadar**, BKİ 24. aydan itibaren",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "baş çevresi 3 yaşa kadar",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 106,
+        "satir": [
+         "BİRİNCİ BASAMAKTA BEBEK ÇOCUK ERGEN İZLEMLERİ - ÖZET TABLO"
+        ],
+        "sekil": "Bebek, çocuk ve ergen izlemleri özet tablosu",
+        "tablo": true
+       }
+      },
+      {
+       "id": "k2-27-c0202",
+       "ses": "Topuk kanı yenidoğan ve ilk haftada, gelişimsel kalça displazisi taraması kırk birinci güne kadar, hemoglobin ve hematokrit dokuzuncu ay, beş yaş ve adolesanda bakılır.",
+       "ekran": "Topuk kanı ilk hafta; GKD 41. güne kadar; **Hb/Htc 9. ay, 5 yaş, adolesan**",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Hb/Htc 9. ay, 5 yaş, adolesan",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 106,
+        "satir": [],
+        "sekil": "Özet tabloda tarama ve laboratuvar satırları",
+        "tablo": true
+       }
+      },
+      {
+       "id": "k2-27-c0203",
+       "ses": "De vitamini on ikinci aya kadar, demir dördüncü ile on ikinci aylar arasında verilir; ergen psikososyal görüşmesi on yaştan sonra, otizm değerlendirmesi on sekizinci ve yirmi dördüncü ay ile üç yaşta tabloda yer alır.",
+       "ekran": "D vitamini 12. aya kadar, demir **4–12. ay**; HEADSSS 10 yaş sonrası; otizm 18, 24. ay, 3 yaş",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "4–12. ay",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 106,
+        "satir": [],
+        "sekil": "Özet tabloda profilaksi ve gelişim değerlendirme satırları",
+        "tablo": true
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-27-b11",
+   "baslik": "Erişkin dönem: kardiyovasküler ve metabolik taramalar",
+   "paragraflar": [
+    {
+     "id": "k2-27-p033",
+     "sayfa": 108,
+     "cumleler": [
+      {
+       "ses": "Erişkinlik dönemi periyodik muayenelerinde, yaşa ve cinsiyete özgü kronik hastalık risk faktörleri ve kanser taramaları sistematik olarak değerlendirilir.",
+       "ekran": "**Erişkinlik Dönemi Periyodik Muayeneleri:** Risk değerlendirmesi ve sistematik tarama programları",
+       "slayt": {
+        "sayfa": 107,
+        "satir": [],
+        "sekil": "Erişkinlik dönemi bölüm başlık sayfası"
+       },
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "duzey": 1,
+       "id": "k2-27-c0204"
+      },
+      {
+       "id": "k2-27-c0205",
+       "ses": "Erişkin dönem periyodik muayene listesi kardiyovasküler risk değerlendirmesi, tütün kullanımı ve pasif etkilenim, aspirin kullanımı, tansiyon takibi, lipid profili ve diyabet taramasını içerir.",
+       "ekran": "Erişkin listesi: **KV risk, tütün, aspirin, tansiyon, lipid, diyabet**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "KV risk, tütün, aspirin, tansiyon, lipid, diyabet",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 108,
+        "satir": [
+         "Arteriyel Tansiyon Takibi",
+         "Diabetes Mellitus Taraması"
+        ],
+        "sekil": "Erişkin dönem periyodik muayene başlıkları listesi"
+       }
+      },
+      {
+       "id": "k2-27-c0206",
+       "ses": "Listede ayrıca tiroid, obezite, tüberküloz, prostat ve diğer kanser taramaları, kan ve cinsel yolla bulaşan hastalıklar, kemik sağlığı, sekonder osteoporoz, gebelik taramaları, orak hücreli anemi ve talasemi ile alkol kullanımı yer alır.",
+       "ekran": "Ayrıca tiroid, obezite, tüberküloz, **kanser**, kemik sağlığı, gebelik taramaları",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "kanser",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 108,
+        "satir": [
+         "Tiroid Fonksiyon Anomalileri",
+         "Obezite Taraması",
+         "Kan ve Cinsel Yolla Bulaşan Hastalıklar"
+        ],
+        "sekil": "Erişkin dönem listesinin devamı"
+       }
+      },
+      {
+       "id": "k2-27-c0207",
+       "ses": "Kırk yaş altı bireylerde ailede erken yaşta kardiyovasküler hastalık öyküsü varsa kardiyovasküler risk değerlendirmesi yapılır.",
+       "ekran": "<40 yaş: **ailede erken KV öykü** varsa risk değerlendirmesi",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "ailede erken KV öykü",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 109,
+        "satir": [
+         "yaş altı bireylerde ailede erken yaşta KV hastalık öyküsü varsa"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0208",
+       "ses": "Kırk yaş üstü bireylerde ise başvuru sebebinden bağımsız olarak bir kez kardiyovasküler risk değerlendirmesi yapılır.",
+       "ekran": ">40 yaş: başvuru nedeninden **bağımsız bir kez**",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "bağımsız bir kez",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 109,
+        "satir": [
+         "yaş üstü bireylerde ise başvuru sebebinden bağımsız olarak bir kez kardiyovasküler risk değerlendirmesi yapılır"
+        ],
+        "sekil": "Kardiyovasküler risk değerlendirmesi slaytındaki görsel"
+       }
+      },
+      {
+       "id": "k2-27-c0209",
+       "ses": "On sekiz yaş ve üzeri grupta tütün ürünü kullanımı ve tütün dumanından pasif etkilenim durumu sorgulanmalıdır.",
+       "ekran": "≥18 yaş: **tütün ve pasif etkilenim** sorgusu",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "tütün ve pasif etkilenim",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 110,
+        "satir": [
+         "yaş ve üzeri grupta tütün ürünü kullanım ve tütün dumanından pasif etkilenim durumu sorgulanmalı"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0210",
+       "ses": "Bu bilgi çıkmış sınavda sorulmuştur: on sekiz yaşından büyük yetişkinlerde başvuru sebebinden bağımsız olarak yılda en az bir kez arteriyel tansiyon ölçülmelidir.",
+       "ekran": ">18 yaş: **yılda en az bir kez** tansiyon",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "yılda en az bir kez",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [
+        "d3-k2-ah-008"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 111,
+        "satir": [
+         "yaşından büyük yetişkinlerde başvuru sebebinden bağımsız olarak yılda en az bir kez arteriyel tansiyon ölçülmelidir"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0211",
+       "ses": "Çocuklukta üç ile on sekiz yaşta başlayan yıllık tansiyon ölçümü böylece erişkinlikte de sürer.",
+       "ekran": "Çocuklukta başlayan **yıllık ölçüm** sürer",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "yıllık ölçüm",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 111,
+        "satir": [
+         "ARTERİYEL TANSİYON TAKİBİ"
+        ],
+        "sekil": "Tansiyon ölçümü görseli"
+       }
+      },
+      {
+       "id": "k2-27-c0212",
+       "ses": "Kırk beş ile altmış beş yaş grubu erkeklerde ve elli beş ile altmış beş yaş grubu kadınlarda kardiyovasküler olaylardan korunmada günlük seksen bir miligram aspirin önerilir.",
+       "ekran": "Aspirin **81 mg/gün**: erkek **45–65**, kadın **55–65** yaş",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "81 mg/gün",
+         "tur": "sayi"
+        },
+        {
+         "metin": "45–65",
+         "tur": "sayi"
+        },
+        {
+         "metin": "55–65",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 112,
+        "satir": [
+         "günlük 81 mg aspirinin kullanımı önerilmelidir"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0213",
+       "ses": "Bu öneri yapılırken çoğul risk faktörleri, kanama bozukluğu gibi durumlar ve gastrointestinal yan etkiler dikkate alınır.",
+       "ekran": "Kanama bozukluğu ve **GİS yan etkileri** gözetilir",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "GİS yan etkileri",
+         "tur": "tuzak"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 112,
+        "satir": [
+         "gastrointestinal yan etkiler dikkate alınarak"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-27-p034",
+     "sayfa": 113,
+     "cumleler": [
+      {
+       "id": "k2-27-c0214",
+       "ses": "On sekiz yaşından büyük olup risk faktörlerinden en az birini taşıyanlarda serum lipid profili taraması yapılır.",
+       "ekran": ">18 yaş + **en az bir risk faktörü** → lipid taraması",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "en az bir risk faktörü",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 113,
+        "satir": [
+         "yasından büyük olup risk faktörlerinden en az birini taşıyanlarda"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0215",
+       "ses": "Otuz beş yaşından büyük bütün kişilerde ise beş yılda bir serum lipid profili taraması yapılmalıdır.",
+       "ekran": ">35 yaş herkes: **beş yılda bir** lipid",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "beş yılda bir",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 113,
+        "satir": [
+         "yaşından büyük bütün kişilerde beş yılda bir serum lipid profili taraması yapılmalıdır"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0216",
+       "ses": "Kırk beş yaşın üzerinde herkeste ve risk faktörü olan kişilerde diabetes mellitus taraması önerilir.",
+       "ekran": ">45 yaş herkes ve risklilerde **diyabet taraması**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "diyabet taraması",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 114,
+        "satir": [
+         "yaşın üzerinde herkeste ve risk faktörü olan kişilerde diabetes mellitus taraması önerilir"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0217",
+       "ses": "Tarama için açlık plazma glukozu, hemoglobin a bir ce veya oral glukoz tolerans testi kullanılabilir ve test normalse üç yılda bir tekrar edilmelidir.",
+       "ekran": "Açlık glukozu, **HbA1c** veya OGTT; normalse **üç yılda bir**",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "HbA1c",
+         "tur": "sayi"
+        },
+        {
+         "metin": "üç yılda bir",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 114,
+        "satir": [
+         "Test normalse üç yılda bir tekrar edilmelidir"
+        ],
+        "sekil": "Diyabet taraması slaytındaki görsel"
+       }
+      },
+      {
+       "id": "k2-27-c0218",
+       "ses": "Ailesinde tiroid hastalığı öyküsü olanlarda ilk muayenede te se ha bakılır.",
+       "ekran": "Ailede tiroid öyküsü → **ilk muayenede TSH**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "ilk muayenede TSH",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 115,
+        "satir": [
+         "Ailesinde tiroid hastalığı öyküsü olanlarda ilk muayenede"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0219",
+       "ses": "Bu bilgi çıkmış sınavda sorulmuştur: otuz beş yaşın üzerindeki tüm erişkinlere ise beş yılda bir te se ha bakılması önerilir.",
+       "ekran": ">35 yaş: **beş yılda bir TSH**",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "beş yılda bir TSH",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [
+        "bfeee1989e28"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 115,
+        "satir": [
+         "yaşın üzerindeki tüm erişkinlere beş yılda bir TSH bakılması önerilir"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-27-p035",
+     "sayfa": 116,
+     "cumleler": [
+      {
+       "id": "k2-27-c0220",
+       "ses": "On sekiz ile altmış beş yaş grubu yetişkinlerde yılda bir kez ağırlık, boy, beden kitle indeksi ve bel çevresi ölçülmelidir.",
+       "ekran": "18–65 yaş yılda bir: ağırlık, boy, BKİ, **bel çevresi**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "bel çevresi",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 116,
+        "satir": [
+         "ağırlık, boy, beden kitle indeksi (BKİ) ve bel çevresi ölçümleri yapılmalıdır"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0221",
+       "ses": "Çocuklukta bakılan boy, kilo ve beden kitle indeksine erişkinde bel çevresi eklenir.",
+       "ekran": "Erişkinde **bel çevresi** eklenir",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "bel çevresi",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 116,
+        "satir": [
+         "OBEZİTE TARAMASI"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0222",
+       "ses": "Tüberküloz açısından riskli gruptaki kişiler, yani tüberküloz hastası temaslıları, tutuklu ve hükümlüler, ha ı ve enfeksiyonu olanlar ve bağışıklığı baskılayan tedavi alanlar Mantu testi yapılmak üzere verem savaş dispanserlerine yönlendirilmelidir.",
+       "ekran": "Temaslı, tutuklu, HIV, immünsüpresif tedavi → **Mantoux için verem savaş dispanseri**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Mantoux için verem savaş dispanseri",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 117,
+        "satir": [
+         "Mantoux testi (Tüberkülin deri testi) yapılmak üzere verem savaş dispanserlerine yönlendirilmelidir"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0223",
+       "ses": "Mantu testi tüberkülin deri testi olarak da bilinir.",
+       "ekran": "Mantoux = **tüberkülin deri testi**",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "tüberkülin deri testi",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 117,
+        "satir": [
+         "Tüberkülin deri testi"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-27-b12",
+   "baslik": "Kanser taramaları, erişkin bağışıklama, kemik sağlığı ve geriatri",
+   "paragraflar": [
+    {
+     "id": "k2-27-p036",
+     "sayfa": 118,
+     "cumleler": [
+      {
+       "id": "k2-27-c0224",
+       "ses": "Bu bilgi çıkmış sınavda sorulmuştur: ulusal toplum tabanlı tarama standartlarında rahim ağzı kanseri için otuz ile altmış beş yaş arası kadınlarda beş yılda bir smear testi veya ha pe ve testi yer alır.",
+       "ekran": "Rahim ağzı: **30–65 yaş, 5 yılda bir** smear ya da HPV",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "30–65 yaş, 5 yılda bir",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [
+        "d3-k2-ah-002",
+        "q-2__kurul_-2"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 118,
+        "satir": [
+         "Ulusal Toplum Tabanlı Tarama Standartları"
+        ],
+        "sekil": "Ulusal toplum tabanlı tarama standartları tablosu",
+        "tablo": true
+       }
+      },
+      {
+       "id": "k2-27-c0225",
+       "ses": "Kalın bağırsak için elli ile yetmiş yaş arası kadın ve erkekte iki yılda bir dışkıda gizli kan testi ve elli bir ile altmış bir yaşta on yılda bir kolonoskopi yer alır.",
+       "ekran": "Kalın bağırsak: 50–70 yaş **2 yılda bir** gizli kan; **51 ve 61 yaşta kolonoskopi**",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "2 yılda bir",
+         "tur": "sayi"
+        },
+        {
+         "metin": "51 ve 61 yaşta kolonoskopi",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 118,
+        "satir": [
+         "Dışkıda Gizli Kan Testi"
+        ],
+        "sekil": "Tarama standartları tablosunda kalın bağırsak sütunu",
+        "tablo": true
+       }
+      },
+      {
+       "id": "k2-27-c0226",
+       "ses": "Yirmi ile kırk yaş arası kadınlarda kendi kendine meme muayenesi önerilir.",
+       "ekran": "20–40 yaş: **kendi kendine meme muayenesi**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "kendi kendine meme muayenesi",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 119,
+        "satir": [
+         "yaş arası kadınlarda kendi kendine meme muayenesi"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0227",
+       "ses": "Birinci derece akrabalarında meme kanseri öyküsü bulunan kadınlarda yılda bir, bulunmayanlarda ise iki yılda bir hekim tarafından rutin klinik muayene yapılır.",
+       "ekran": "Birinci derece akrabada öykü → **yılda bir**; yoksa iki yılda bir klinik muayene",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "yılda bir",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 119,
+        "satir": [
+         "Birinci derece akrabalarında meme kanseri öyküsü bulunan kadınlarda yılda bir"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0228",
+       "ses": "Bu bilgi çıkmış sınavda sorulmuştur: kırk ile altmış dokuz yaş arası bütün kadınlarda yılda bir hekim tarafından rutin klinik muayene ve iki yılda bir mamografi yapılması gereklidir.",
+       "ekran": "40–69 yaş: yılda bir klinik muayene, **iki yılda bir mamografi**",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "iki yılda bir mamografi",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [
+        "06033e67aa45"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 119,
+        "satir": [
+         "yılda bir mamografi yapılması gereklidir"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-27-p037",
+     "sayfa": 120,
+     "cumleler": [
+      {
+       "id": "k2-27-c0229",
+       "ses": "Kolorektal kanser taramasında elli ile yetmiş yaş grubundaki yetişkinlere yılda bir gaitada gizli kan testi yapılır.",
+       "ekran": "Kolorektal: 50–70 yaş **yılda bir** gaitada gizli kan",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "yılda bir",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 120,
+        "satir": [
+         "yaş grubundaki yetişkinlere yılda bir gaitada gizli kan testi yapılması"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0230",
+       "ses": "Ulusal tarama tablosunda bu aralık iki yılda bir olarak geçer; birinci derece akrabalarında kolorektal kanser veya adenomatöz polip öyküsü olanlarda ise taramaya kırk yaşında başlanması önerilir.",
+       "ekran": "Ailede kolorektal kanser ya da **adenomatöz polip** → **40 yaşta** başla",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "adenomatöz polip",
+         "tur": "tuzak"
+        },
+        {
+         "metin": "40 yaşta",
+         "tur": "tuzak"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 120,
+        "satir": [
+         "Birinci derece akrabalarında kolorektal kanser veya adenomatöz polip öyküsü olanlarda taramaya 40 yaşında başlaması önerilir"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0231",
+       "ses": "Serviks kanseri için otuz ile altmış beş yaş arası kadınlarda her beş yılda bir Papanikolau testi yani pap smear veya ha pe ve testi yapılmalıdır.",
+       "ekran": "Serviks: **30–65 yaş, beş yılda bir** PAP smear ya da HPV",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "30–65 yaş, beş yılda bir",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 121,
+        "satir": [
+         "yaş arası kadınlarda her beş yılda bir Papanicolau testi (PAP Smear testi) veya Human Papilloma Virüs testi (HPV testi) yapılmalıdır"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0232",
+       "ses": "Prostat kanserinde ailesinde prostat kanseri hikayesi olan kırk yaşından büyük erkekler ile elli yaşından büyük tüm erkekler bilgilendirilir ve bir üroloji uzmanına yönlendirilir.",
+       "ekran": "Ailede öykü **>40 yaş**, herkes **>50 yaş** → bilgilendirme, **üroloji**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": ">40 yaş",
+         "tur": "sayi"
+        },
+        {
+         "metin": ">50 yaş",
+         "tur": "sayi"
+        },
+        {
+         "metin": "üroloji",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 122,
+        "satir": [
+         "yaşından büyük erkeklerde hastanın bilgilendirilmesi ve bir üroloji uzmanına yönlendirilmesi önerilir"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-27-p038",
+     "sayfa": 123,
+     "cumleler": [
+      {
+       "id": "k2-27-c0233",
+       "ses": "Erişkin bağışıklamada yıllık influenza aşısı ve bir kez pnömokok aşısı önerilir; altmış dört yaşın üzerinde ilk pnömokok aşısının üzerinden beş yıl geçtiyse bir doz daha yapılır.",
+       "ekran": "Yıllık **influenza**, bir kez pnömokok; >64 yaş 5 yıl geçtiyse bir doz daha",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "influenza",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 123,
+        "satir": [
+         "Yıllık influenza aşısı ve bir kez pnömokok aşısı"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0234",
+       "ses": "On dokuz ile elli dokuz yaş grubuna hepatit B aşısı yapılır.",
+       "ekran": "19–59 yaş: **hepatit B aşısı**",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "hepatit B aşısı",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 123,
+        "satir": [
+         "yaş grubuna hepatit B aşısı yapılması"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0235",
+       "ses": "Risk gruplarına sıfır, bir ve altıncı ayda primer dozlu tetanoz difteri, meningokoksik menenjit, altı ay ara ile iki doz hepatit A, bir ay ara ile iki doz suçiçeği ve kızamık kızamıkçık kabakulak aşıları yapılmalıdır.",
+       "ekran": "Risk grupları: Td, meningokok, **Hep A 6 ay arayla 2 doz**, **suçiçeği 1 ay arayla 2 doz**, KKK",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Hep A 6 ay arayla 2 doz",
+         "tur": "sayi"
+        },
+        {
+         "metin": "suçiçeği 1 ay arayla 2 doz",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 123,
+        "satir": [
+         "Hepatit A (6 ay ara ile 2 doz)",
+         "Suçiçeği (1 ay ara ile 2 doz) ve KKK aşıları yapılmalıdır"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0236",
+       "ses": "Erişkinlerde yaş gruplarına göre iki bin on dokuz aşı önerileri tablosunda tetanoz difteri ya da boğmacalı tetanoz difteri her on yılda bir rapel doz, influenza her yıl bir doz olarak önerilir.",
+       "ekran": "Td/Tdap **her 10 yılda bir rapel**; influenza her yıl",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "her 10 yılda bir rapel",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 124,
+        "satir": [
+         "Erişkinlerde yaş gruplarına göre 2019 aşı önerileri ve dozları"
+        ],
+        "sekil": "Tablo on dokuz: yaş gruplarına göre erişkin aşı önerileri",
+        "tablo": true
+       }
+      },
+      {
+       "id": "k2-27-c0237",
+       "ses": "Hepatit B üç doz olarak sıfır, bir ve altıncı ayda, hepatit A iki doz olarak sıfır ve altıncı ayda, hemofilus influenza tip be dört hafta arayla üç doz uygulanır.",
+       "ekran": "Hep B **0, 1, 6. ay**; Hep A **0, 6. ay**; Hib 4 hafta arayla 3 doz",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "0, 1, 6. ay",
+         "tur": "sayi"
+        },
+        {
+         "metin": "0, 6. ay",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 124,
+        "satir": [
+         "Hepatit As 2 doz (0,6.ay)"
+        ],
+        "sekil": "Erişkin aşı tablosunda hepatit ve hemofilus satırları",
+        "tablo": true
+       }
+      },
+      {
+       "id": "k2-27-c0238",
+       "ses": "Zoster aşısı ileri yaşta tek doz önerilir; konjuge pnömokok aşısı bir doz, polisakkarit pnömokok aşısı ise beş yıl arayla verilir.",
+       "ekran": "**Zoster ileri yaşta 1 doz**; pnömokok konjuge ve polisakkarit",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Zoster ileri yaşta 1 doz",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 124,
+        "satir": [
+         "Zoster"
+        ],
+        "sekil": "Erişkin aşı tablosunda zoster ve pnömokok satırları",
+        "tablo": true
+       }
+      },
+      {
+       "id": "k2-27-c0239",
+       "ses": "Risk gruplarına göre iki bin on dokuz aşı önerileri tablosunda zoster, suçiçeği ve kızamık kızamıkçık kabakulak gibi canlı aşılar ağır immün yetmezlikte, ce de dört sayısı iki yüzün altındaki ha ı ve enfeksiyonunda ve gebede kontrendikedir.",
+       "ekran": "**Canlı aşılar** (zoster, suçiçeği, KKK) immün yetmezlik, **CD4 <200 HIV**, gebede kontrendike",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Canlı aşılar",
+         "tur": "tuzak"
+        },
+        {
+         "metin": "CD4 <200 HIV",
+         "tur": "tuzak"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 125,
+        "satir": [
+         "Erişkinlerde risk gruplarına göre 2019 aşı önerileri"
+        ],
+        "sekil": "Tablo yirmi: risk gruplarına göre aşı önerileri, kontrendikasyonlar kırmızı",
+        "tablo": true
+       }
+      },
+      {
+       "id": "k2-27-c0240",
+       "ses": "Tetanoz difteri ve influenza aşıları ise tüm risk gruplarında önerilir.",
+       "ekran": "Td/Tdap ve **influenza tüm risk gruplarında**",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "influenza tüm risk gruplarında",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 125,
+        "satir": [
+         "Uygulanması önerilir"
+        ],
+        "sekil": "Risk grupları tablosunda önerilen aşılar",
+        "tablo": true
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-27-p039",
+     "sayfa": 126,
+     "cumleler": [
+      {
+       "id": "k2-27-c0241",
+       "ses": "On sekiz yaşın üzerinde ve cinsel aktif kişilerde kişiden talep gelmesi durumunda veya risk faktörlerinin varlığında kişinin onayı alınarak hepatit B, hepatit C ve ha ı ve için tarama yapılır.",
+       "ekran": ">18 yaş cinsel aktif: talep ya da riskte **onayla** hepatit B, C, HIV",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "onayla",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 126,
+        "satir": [
+         "Hepatit B, hepatit C, HIV için tarama yapılması"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0242",
+       "ses": "Gonore ve klamidyaya yönelik testlerin yapılması amacıyla ise ilgili uzmanlık alanına yönlendirilir.",
+       "ekran": "**Gonore, klamidya** → ilgili uzmanlığa",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Gonore, klamidya",
+         "tur": "tuzak"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 126,
+        "satir": [
+         "Gonore ve klamidyaya yönelik testlerin yapılması amacıyla ilgili uzmanlık alanına yönlendirilmesi"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0243",
+       "ses": "Bütün yaş gruplarında kemik sağlığının korunması amacıyla sigara kullanımı ve alkol alımı önlenir.",
+       "ekran": "Kemik sağlığı: **sigara ve alkolü önleme**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "sigara ve alkolü önleme",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 127,
+        "satir": [
+         "Bütün yaş gruplarında kemik sağlığının korunması amacıyla sigara kullanımının ve alkol alımının önlenmesi"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0244",
+       "ses": "Diyetle yaşa göre yeterli miktarda kalsiyum ve de vitamini alınması sağlanır.",
+       "ekran": "Yaşa göre yeterli **kalsiyum ve D vitamini**",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "kalsiyum ve D vitamini",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 127,
+        "satir": [
+         "diyetle yaşa göre yeterli miktarda kalsiyum ve D vitamini alınmasının sağlanması"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0245",
+       "ses": "Özellikle orak hücreli anemi ve talaseminin sık görüldüğü bölgelerde yaşayanlar başta olmak üzere çocuk sahibi olmak isteyen tüm çiftlere orak hücreli anemi ve talasemi sorgulaması yapılmalıdır.",
+       "ekran": "Çocuk isteyen **tüm çiftlere** orak hücre ve talasemi sorgusu",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "tüm çiftlere",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 128,
+        "satir": [
+         "çocuk sahibi olmak isteyen tüm çiftlere orak hücreli anemi ve talasemi sorgulaması yapılmalı"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0246",
+       "ses": "Her ikisi de taşıyıcı olan çiftler yakın takip edilerek gebelik oluşumundan itibaren prenatal tanı için ileri merkezlere sevk edilmelidir.",
+       "ekran": "İki taşıyıcı → gebelikten itibaren **prenatal tanı** için ileri merkez",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "prenatal tanı",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 128,
+        "satir": [
+         "Her ikisi de taşıyıcı olan çiftler yakın takip edilerek gebelik oluşumundan itibaren prenatal tanı için ileri merkezlere sevk edilmelidir"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-27-p040",
+     "sayfa": 129,
+     "cumleler": [
+      {
+       "id": "k2-27-c0247",
+       "ses": "Sekonder osteoporoz ve kırık riski için altmış beş yaş altında risk faktörlerini barındıran erişkinlerde en az bir kez iyonize kalsiyum, tam kan sayımı, kreatinin, alkalen fosfataz, te se ha ve yirmi beş hidroksivitamin de üç ölçülür.",
+       "ekran": "<65 yaş riskli: en az bir kez **Ca, tam kan, kreatinin, ALP, TSH, 25-OH D3**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Ca, tam kan, kreatinin, ALP, TSH, 25-OH D3",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 129,
+        "satir": [
+         "yaş altında risk faktörlerini barındıran erişkinlerde en az bir kez biyokimyasal testlerin yapılması"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0248",
+       "ses": "Risk faktörlerine ve kemik kırığı varlığına göre fizik tedavi ve rehabilitasyon, endokrinoloji ve ya da ortopedi uzmanlarına yönlendirilir.",
+       "ekran": "Risk ve kırığa göre **FTR, endokrinoloji, ortopedi**",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "FTR, endokrinoloji, ortopedi",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 129,
+        "satir": [
+         "ve kemik kırığı varlığına göre fizik tedavi ve rehabilitasyon, endokrinoloji ve/veya ortopedi uzmanlarına yönlendirilmelidir"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "ses": "Geriatrik dönem sağlık izleminde, altmış beş yaş ve üzeri bireylerde fonksiyonel kapasitenin korunması ve yaşlılığa özgü risklerin taranması esastır.",
+       "ekran": "**Geriatrik Dönem Sağlık İzlemi:** 65 yaş üzeri bireylerde fonksiyonel kapasite ve periyodik takip",
+       "slayt": {
+        "sayfa": 130,
+        "satir": [],
+        "sekil": "Geriatrik dönem bölüm başlık sayfası"
+       },
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "duzey": 1,
+       "id": "k2-27-c0249"
+      },
+      {
+       "id": "k2-27-c0250",
+       "ses": "Altmış beş yaş üstü tüm kişilerde yılda bir kez aynı biyokimyasal testler yapılır.",
+       "ekran": ">65 yaş: **yılda bir** biyokimyasal testler",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "yılda bir",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 131,
+        "satir": [
+         "yaş üstü tüm kişilerde yılda bir kez biyokimyasal testler"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0251",
+       "ses": "Altmış beş yaş üstü kadınlar ile yetmiş yaş üstü erkeklerin hayatlarında en az bir kez deksa ile kemik mineral dansitesi ölçümü yaptırmaları önerilir.",
+       "ekran": "DEXA: kadın **>65**, erkek **>70** yaş, hayatta en az bir kez",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": ">65",
+         "tur": "tuzak"
+        },
+        {
+         "metin": ">70",
+         "tur": "tuzak"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 131,
+        "satir": [
+         "hayatlarında en az bir kez DEXA ile kemik mineral dansitesi ölçümü yaptırmalarının sağlanması önerilir"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-27-p041",
+     "sayfa": 132,
+     "cumleler": [
+      {
+       "id": "k2-27-c0252",
+       "ses": "Altmış beş yaş ve üzerindeki yetişkinlerde en az bir kez ve her beş yılda bir çok yönlü geriatrik değerlendirme yapılmalıdır.",
+       "ekran": "≥65 yaş: en az bir kez ve **beş yılda bir** çok yönlü geriatrik değerlendirme",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "beş yılda bir",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 132,
+        "satir": [
+         "kez ve her beş yılda bir “Çok yönlü Geriatrik Değerlendirme” yapılmalıdır"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0253",
+       "ses": "Bu değerlendirme mini mental durum testi, Yesavage geriatrik depresyon skalası, mini nütrisyonel test, kalk ve yürü testi ve günlük yaşam aktiviteleri testinden oluşur.",
+       "ekran": "**Mini mental, Yesavage, mini nütrisyonel, kalk ve yürü**, günlük yaşam aktiviteleri",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Mini mental, Yesavage, mini nütrisyonel, kalk ve yürü",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 132,
+        "satir": [
+         "Mini mental durum değerlendirme testi",
+         "Yesavage Geriatrik Depresyon Skalası",
+         "Mini nütrisyonel test"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0254",
+       "ses": "Geriatrik taramalar hipertansiyon, kalp hastalığı, diyabet, kronik akciğer hastalığı ve kanseri kapsar.",
+       "ekran": "Geriatrik taramalar: **hipertansiyon, kalp, diyabet, kronik akciğer, kanser**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "hipertansiyon, kalp, diyabet, kronik akciğer, kanser",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 133,
+        "satir": [
+         "Kalp hastalığı",
+         "Kanser"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-27-c0255",
+       "ses": "Bunlara görme ve işitme bozuklukları, hareket bozuklukları, yeme bozuklukları ve ruhsal sorunlar eklenir.",
+       "ekran": "Ayrıca **görme-işitme, hareket, yeme bozuklukları, ruhsal sorunlar**",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "görme-işitme, hareket, yeme bozuklukları, ruhsal sorunlar",
+         "tur": "terim"
+        },
+        {
+         "metin": "görme-işitme, hareket, yeme bozuklukları, ruhsal sorunlar",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [
+        "past-q-I_SKENDERUN_TI_Mu_du_rlu_g_u_ne0__1__230709_230251-76"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 133,
+        "satir": [
+         "Görme-işitme bozuklukları",
+         "Hareket bozuklukları",
+         "Yeme bozuklukları",
+         "Ruhsal sorunlar"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "ses": "Sonuç olarak koruyucu sağlık hizmetleri, hastalıkları erken evrede yakalayarak bireylerin sağlıklı ve kaliteli bir yaşam sürmelerini güvenceye alır.",
+       "ekran": "**Koruyucu Sağlık İlkeleri:** Erken tanı ve yaşam boyu periyodik sağlık izlemi",
+       "slayt": {
+        "sayfa": 135,
+        "satir": [],
+        "sekil": "Kapanış sayfası"
+       },
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "duzey": 1,
+       "id": "k2-27-c0256"
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "anahtar": "y25-k2-27-periyodik-muayeneler",
+ "donem": "2025-2026"
+}

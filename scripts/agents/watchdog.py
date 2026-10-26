@@ -92,21 +92,10 @@ _last_phase_launch: dict = {}
 PHASE_RELAUNCH_COOLDOWN_SEC = 600
 
 def check_pipeline_runner_alive():
-    """Eğer pipeline_runner tamamen kapandıysa otonom olarak tekrar ayağa kaldırır"""
-    # meds-pipeline systemd servisi varsa yeniden başlatma onun işi (Restart=always). İkinci bir
-    # kopya kilidi tutup servisin kendi örneğini her 30 sn'de çıkışa zorluyordu.
-    if systemd_user_active("meds-pipeline.service"):
-        return
-    res = subprocess.run(["pgrep", "-f", "pipeline_runner.py"], capture_output=True, text=True)
-    if not res.stdout.strip():
-        log("UYARI: pipeline_runner.py çalışmıyor! Otomatik olarak başlatılıyor...")
-        cmd = [
-            "/usr/bin/systemd-inhibit", "--what=idle:sleep", "--why=medsoru",
-            str(ROOT / ".venv-ocr" / "bin" / "python"),
-            str(SCRIPTS_DIR / "pipeline_runner.py")
-        ]
-        subprocess.Popen(cmd, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, start_new_session=True)
-        log("pipeline_runner.py arka planda güvenle başlatıldı ✓")
+    """Pipeline runner artık otomatik olarak BAŞLATILMAZ (Kullanıcı talimatı: Manuel Mod).
+    Sadece istenirse elle veya yönetim panelinden çalıştırılır."""
+    return
+
 
 def check_supabase_health():
     """Veritabanı (meds-pg) ve eski betikler için REST uyumluluk kapısının (127.0.0.1:8000) canlılığı.

@@ -1,0 +1,2504 @@
+{
+ "surum": 2,
+ "ders_id": "k2-22",
+ "baslik": "Psikosomatik Bozukluklar",
+ "bolumler": [
+  {
+   "id": "k2-22-b01",
+   "baslik": "Psikosomatik tıp: kavram ve tarihçe",
+   "paragraflar": [
+    {
+     "id": "k2-22-p001",
+     "sayfa": 2,
+     "cumleler": [
+      {
+       "id": "k2-22-c0001",
+       "ses": "Psikosomatik terimi Yunancadaki psike, yani ruh, ve soma, yani beden kelimelerinden köken almıştır; bu terim zihnin bedenle etkileşimini ifade eder.",
+       "ekran": "**Psikosomatik**: Yunanca psyche (ruh) + soma (beden); zihnin bedenle etkileşimi",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Psikosomatik",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "Bu terim zihnin bedenle etkileşimini ifade eder."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-22-p002",
+     "sayfa": 3,
+     "cumleler": [
+      {
+       "id": "k2-22-c0002",
+       "ses": "Psikosomatik tıp, sağlık ve hastalık durumunda psikolojik, biyolojik ve sosyal etmenlerin birbiri ile ilişkisini inceleyen bir bilim dalıdır ve bu tanım daha önce çıkmış sınav sorularında da sorulmuştur.",
+       "ekran": "Psikosomatik tıp: **psikolojik, biyolojik ve sosyal** etmenlerin ilişkisini inceleyen bilim dalı",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "psikolojik, biyolojik ve sosyal",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [
+        "past-1790877045128-896616"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "Sağlık ve hastalık durumunda psikolojik, biyolojik ve sosyal etmenlerin birbiri ile ilişkisini inceleyen bir bilim dalı"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-22-c0003",
+       "ses": "Aynı zamanda tıp uygulamalarına kapsamlı ve bütünsel yaklaşım getiren bir disiplindir; bu yüzden hekim yalnız organı değil, kişiyi bütün olarak ele alır ve ruhsal ile sosyal boyutu atlamaz.",
+       "ekran": "Tıp uygulamalarına **kapsamlı ve bütünsel yaklaşım** getiren disiplin",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "kapsamlı ve bütünsel yaklaşım",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "tıp uygulamalarına kapsamlı ve bütünsel yaklaşım getiren bir disiplin"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-22-p003",
+     "sayfa": 4,
+     "cumleler": [
+      {
+       "id": "k2-22-c0004",
+       "ses": "Tarihçede psikanalitik bakışı Freud bin dokuz yüz yılında kurar: ona göre bedensel tutuluş temelde psikojeniktir; felç ya da duyu kaybı gibi fiziksel görünen bir bozukluğun gerçek nedeni, hastanın bilinçdışı zihnindeki bir çatışma, bastırılmış bir duygu ya da travmatik bir anıdır.",
+       "ekran": "Freud (1900): **bedensel tutuluş temelde psikojeniktir**; neden bilinçdışı çatışma, bastırılmış duygu, travmatik anı",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "bedensel tutuluş temelde psikojeniktir",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 4,
+        "satir": [
+         "Bedensel tutuluş temelde psikojeniktir."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-22-c0005",
+       "ses": "Freud'a göre konversiyon histerisinin her zaman birincil psişik bir nedeni ve anlamı vardır; belirti bilinçdışı çatışmanın çözüm yoludur ve birincil kazancı, kişinin o kaygı verici psişik çatışmanın bilincine varmasını engellemektir.",
+       "ekran": "Konversiyon histerisi: belirti **bilinçdışı çatışmanın çözüm yolu**; birincil kazanç = çatışmanın bilincine varmayı engellemek",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "bilinçdışı çatışmanın çözüm yolu",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 4,
+        "satir": [
+         "Konversiyon histerisinin her zaman birincil psişik bir nedeni ve anlamı vardır."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-22-c0006",
+       "ses": "Üçüncü ilke, biriken psişik enerjinin fizyolojik çıkışlar aracılığıyla boşalmasıdır; enerjinin korunumu ilkesine göre psişik alanda biriken enerji kaybolmaz, şekil değiştirir ve çatışma kaygı yerine bedensel bir belirtiye dönüştürülerek zararsız hâle getirilir.",
+       "ekran": "Biriken psişik enerji **fizyolojik çıkışlarla boşalır**; enerji kaybolmaz, bedensel belirtiye dönüşür",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "fizyolojik çıkışlarla boşalır",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 4,
+        "satir": [
+         "Biriken psişik enerji fizyolojik çıkışlar aracılığıyla boşalır."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-22-p004",
+     "sayfa": 5,
+     "cumleler": [
+      {
+       "id": "k2-22-c0007",
+       "ses": "Psikosomatik bozukluklarda duyguların ifade yetersizliği ve iletişimde organ dilinin kullanımı önemlidir; sözelleştirilemeyen duygu ve düşünceler beden dili ile ifade edilir, bu yüzden hastanın yakınmasını bir iletişim aracı olarak da okumak gerekir.",
+       "ekran": "Duyguların **ifade yetersizliği**; sözelleştirilemeyen duygular **organ dili / beden dili** ile ifade edilir",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "organ dili",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "Duyguların ifade yetersizliğinin ve iletişimde organ dilinin kullanımının önemi",
+         "Sözelleştirilemeyen duygu ve düşünceler beden dili ile ifade edilmesi"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-22-c0008",
+       "ses": "Gerilime uğramış olan sistem en yatkın organı seçerek, o organın çalışmasını bozarak boşalım bulur; böylece hasta dengesini yeniden, ama bu kez başka bir biçimde kurmuş olur.",
+       "ekran": "Gerilim **en yatkın organı** seçip işlevini bozarak boşalır; hasta dengesini başka biçimde yeniden kurar",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "en yatkın organı",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "Gerilime uğramış olan sistem, en yatkın organı seçerek, o organın çalışmasını bozarak boşalım bulur",
+         "Hasta dengesini yeniden (bu kez başka bir biçimde) kurmuştur."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-22-p005",
+     "sayfa": 6,
+     "cumleler": [
+      {
+       "id": "k2-22-c0009",
+       "ses": "Bu sayfadaki karikatürde Sigmund Freud'un annesi her yakınma için her şey sinirsel, her şey diye yanıt verir.",
+       "ekran": "Karikatür: Freud'un annesi — **\"Her şey sinirsel, her şey!\"**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Her şey sinirsel, her şey!",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [],
+        "sekil": "Freud'un annesi ile tıp karikatürü"
+       }
+      },
+      {
+       "id": "k2-22-c0010",
+       "ses": "Karikatürün mesajı şudur: her bedensel yakınmayı ruhsala bağlamak bir aşırılıktır; organik nedenler dışlanmadan bir yakınma psikosomatik sayılmamalıdır.",
+       "ekran": "Her yakınmayı ruhsala bağlamak aşırılık; **organik neden dışlanmadan** psikosomatik denmez",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "organik neden dışlanmadan",
+         "tur": "tuzak"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [],
+        "sekil": "Freud'un annesi ile tıp karikatürü"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-22-b02",
+   "baslik": "DSM-5 sınıflandırması",
+   "paragraflar": [
+    {
+     "id": "k2-22-p006",
+     "sayfa": 7,
+     "cumleler": [
+      {
+       "id": "k2-22-c0011",
+       "ses": "De se me beşte bu grup somatik belirti ve ilişkili bozukluklar adını taşır; içinde somatik belirti bozukluğu, hastalık kaygısı bozukluğu, konversiyon bozukluğu, diğer tıbbi durumları etkileyen psikolojik etkenler, yapay bozukluk ve belirlenmiş ya da belirlenmemiş diğer somatik belirti bozuklukları yer alır.",
+       "ekran": "**Somatik Belirti ve İlişkili Bozukluklar** (DSM-5): somatik belirti, hastalık kaygısı, konversiyon, psikolojik etkenler, yapay bozukluk",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Somatik Belirti ve İlişkili Bozukluklar",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "Somatik Belirti ve İlişkili Bozukluklar",
+         "Somatik Belirti Bozukluğu",
+         "Hastalık Kaygısı Bozukluğu",
+         "Konversiyon Bozukluğu",
+         "Diğer Tıbbi Durumları Etkileyen Psikolojik Etkenler",
+         "Yapay Bozukluk (Factitious Disorder)"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-22-c0012",
+       "ses": "Konversiyon bozukluğu belirtinin türüne göre alt tiplere ayrılır: güçsüzlük ya da paralizi ile giden, olağan dışı devinim ile giden, yutma belirtileri ile giden, konuşma belirtisi ile giden, ataklarla ya da katılmalarla giden, anestezi ya da duyu kaybıyla giden, özel duyusal belirti ile giden ve karma belirtilerle giden tip.",
+       "ekran": "Konversiyon alt tipleri: **güçsüzlük/paralizi, olağan dışı devinim, yutma, konuşma, atak/katılma, anestezi, özel duyusal, karma**",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "güçsüzlük/paralizi",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "Güçsüzlük ya da Paralazi ile Giden",
+         "Olağan Dışı Devinim ile Giden",
+         "Yutma Belirtileri ile Giden",
+         "Konuşma Belirtisi ile Giden",
+         "Ataklarla ya da Katılmalarla Giden",
+         "Anestezi ya da Duyu Kaybıyla Giden",
+         "Özel Duyusal Belirti ile Giden",
+         "Karma Belirtilerle Giden"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-22-b03",
+   "baslik": "Bedensel belirti bozukluğu: tanım ve tanı ölçütleri",
+   "paragraflar": [
+    {
+     "id": "k2-22-p007",
+     "sayfa": 8,
+     "cumleler": [
+      {
+       "id": "k2-22-c0013",
+       "ses": "Bedensel belirti bozukluğu, kişinin bedensel belirtilerini yanlış yorumlaması sonucu ciddi bir hastalığa sahip olduğuna dair genel, sanrısal olmayan zihinsel uğraş taşımasıdır; uğraşın sanrısal olmaması onu psikotik bozukluktan ayırır.",
+       "ekran": "**Bedensel belirti bozukluğu**: belirtilerin yanlış yorumlanması → ciddi hastalık olduğuna dair **sanrısal olmayan** uğraş",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "sanrısal olmayan",
+         "tur": "tuzak"
+        },
+        {
+         "metin": "Bedensel belirti bozukluğu",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "Kişinin bedensel belirtilerini yanlış yorumlaması sonucu, ciddi bir hastalığa sahip olduğuna dair genel, sanrısal olmayan zihinsel uğraş"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-22-c0014",
+       "ses": "Bu zihinsel uğraş, korku ya da düşünceler altı ay ya da daha uzun süre mevcut olmalıdır; tablo işlevselliği bozar ve başka bir psikiyatrik ya da fiziksel hastalık ile açıklanamaz.",
+       "ekran": "Süre **≥ 6 ay**; işlevselliği bozar, başka hastalıkla açıklanamaz",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "≥ 6 ay",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "korku ya da düşüncelerin 6 ay ya da daha uzun süreyle mevcut olması durumu",
+         "İşlevselliği bozar, başka psikiyatrik/fiziksel hastalık ile açıklanamaz"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-22-p008",
+     "sayfa": 9,
+     "cumleler": [
+      {
+       "id": "k2-22-c0015",
+       "ses": "Belirti sayısı kişiden kişiye değişir: kiminde tek somatik sorun, kiminde daha fazlası vardır, kiminde ise yakınma sadece ağrı şeklindedir; yani tek bir belirti de tanı için yeterlidir.",
+       "ekran": "Kiminde **tek** somatik sorun, kiminde çok; kiminde **yalnız ağrı**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "yalnız ağrı",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [
+         "Kiminde tek somatik sorun; kiminde daha fazla",
+         "Kiminde sadece “ağrı” şeklinde"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-22-c0016",
+       "ses": "Belirli bir stres yaşantısı ya da çatışmadan sonra sorunlar artar; bu nedenle öyküde psikososyal tetikleyiciyi mutlaka sorgularız.",
+       "ekran": "Belirli bir **stres yaşantısı ya da çatışmadan** sonra sorunlar artar",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "stres yaşantısı ya da çatışmadan",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [
+         "Belirli bir stres yaşantısı ya da çatışmadan sonra sorunlar artıyor"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-22-c0017",
+       "ses": "Dıştan bakanlara kaçınma, ilgi ve sempati gibi ikincil kazançlar varmış gibi görünebilir; ama kişinin kendisi için böyle bir durum geçerli değildir, semptomlarını tümüyle fiziksel olarak algılar ve psikolojik kökeni kolay kabul etmez; bu nokta çıkmış soruda yanlış seçenek olarak sorulmuştur.",
+       "ekran": "İkincil kazanç (kaçınma, ilgi, sempati) **varmış gibi görünür**; hasta belirtileri **tümüyle fiziksel** algılar",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "tümüyle fiziksel",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [
+        "past-1790877044849-897865"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [
+         "Dıştan bakanlar için “ikincil kazançlar” varmış gibi görünebilir",
+         "semptomlarını tümüyle fiziksel olarak algılıyorlar"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-22-c0018",
+       "ses": "Temel semptomu ağrı olanlarda aşırı ağrı kesici kullanımı riski vardır; yani tedavinin kendisi zarar verebileceği için analjezik kullanımını izlemek gerekir.",
+       "ekran": "Temel belirtisi ağrı olanlarda **aşırı ağrı kesici kullanımı** riski",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "aşırı ağrı kesici kullanımı",
+         "tur": "tuzak"
+        },
+        {
+         "metin": "aşırı ağrı kesici kullanımı",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [
+        "past-1790877044403-707646"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [
+         "Temel semptomu ağrı olanlar için aşırı ağrı kesici kullanımı riski"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-22-p009",
+     "sayfa": 10,
+     "cumleler": [
+      {
+       "id": "k2-22-c0019",
+       "ses": "Tanı ölçütlerinin ilki, sıkıntı veren ya da günlük yaşamı önemli ölçüde kesintiye uğratan bir ya da birden çok bedensel belirtinin bulunmasıdır; belirti yoksa bu tanı konmaz.",
+       "ekran": "Ölçüt A: sıkıntı veren ya da günlük yaşamı kesintiye uğratan **bir ya da birden çok bedensel belirti**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "bir ya da birden çok bedensel belirti",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 10,
+        "satir": [
+         "Sıkıntı veren ya da günlük yaşamı önemli ölçüde kesintiye uğratan bir ya da birden çok bedensel belirti."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-22-c0020",
+       "ses": "İkinci ölçüt, belirtilere ilişkin aşırı düşünce, duygu ya da davranıştır ve şu üçünden en az biriyle gösterilir: belirtilerin önemiyle orantısız, süreklilik gösteren düşünceler; sağlıkla ya da belirtilerle ilgili sürekli yüksek düzeyde kaygı; bu belirtilere ya da sağlık kaygılarına aşırı zaman ve içsel güç harcanması.",
+       "ekran": "Ölçüt B (en az biri): **orantısız süreğen düşünce**, sürekli yüksek sağlık kaygısı, aşırı zaman ve güç harcama",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "orantısız süreğen düşünce",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 10,
+        "satir": [
+         "Kişinin belirtilerinin önemiyle orantısız, süreklilik gösteren düşünce",
+         "Sağlıkla ya da belirtilerle ilgili, sürekli yüksek düzeyde bir kaygı."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-22-c0021",
+       "ses": "Herhangi bir bedensel belirti sürekli olarak bulunmasa da belirti gösteriyor olma durumu altı aydan daha uzun süre süreklilik gösterir; yani süreklilik tek bir belirtinin değil, hastalık hâlinin özelliğidir.",
+       "ekran": "Belirti gösteriyor olma durumu **altı aydan uzun** süreklilik gösterir",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "altı aydan uzun",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 10,
+        "satir": [
+         "(altı aydan daha uzun süreli olarak)"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-22-b04",
+   "baslik": "Bedensel belirti bozukluğu: epidemiyoloji ve etiyoloji",
+   "paragraflar": [
+    {
+     "id": "k2-22-p010",
+     "sayfa": 11,
+     "cumleler": [
+      {
+       "id": "k2-22-c0022",
+       "ses": "Genel tıbbi popülasyonda altı aylık prevalansı yüzde dört ile altı arasındadır ve yüzde on beşe kadar çıkabilir; yani tıbbi kliniklerde sık karşılaşılan bir tablodur.",
+       "ekran": "6 aylık prevalans **%4-6** (%15'e kadar çıkabilir)",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "%4-6",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 11,
+        "satir": [
+         "Genel tıbbi popülasyonda 6 aylık prevalansın"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-22-c0023",
+       "ses": "En sık yirmi ile otuz yaş arasında görülür, cinsiyet farkı belirsizdir; sosyal statü, eğitim düzeyi ve medeni durum etkisizdir ve tıp öğrencilerinde dikkat çekici sıklıkta görülür.",
+       "ekran": "En sık **20-30 yaş**; K=E belirsiz; sosyal statü, eğitim, medeni durum etkisiz; **tıp öğrencileri**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "20-30 yaş",
+         "tur": "sayi"
+        },
+        {
+         "metin": "tıp öğrencileri",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 11,
+        "satir": [
+         "EN sık 20-30 yaş arası",
+         "Sosyal statü, eğitim düzeyi, medeni durum etkisiz",
+         "Tıp öğrencileri!"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-22-p011",
+     "sayfa": 12,
+     "cumleler": [
+      {
+       "id": "k2-22-c0024",
+       "ses": "Psikodinamik düşünce okuluna göre diğer insanlara yönelik saldırgan ve düşmanca arzular fiziksel yakınmalara aktarılır; bastırılmış öfke bedene yöneltilmiş olur.",
+       "ekran": "Psikodinamik: **saldırgan ve düşmanca arzular** fiziksel yakınmalara aktarılır",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "saldırgan ve düşmanca arzular",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 12,
+        "satir": [
+         "Psikodinamik düşünce okuluna göre; diğer insanlara yönelik saldırgan ve düşmanca arzular fiziksel yakınmalara aktarılır."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-22-c0025",
+       "ses": "Bu hastalar öfkelerini diğer insanların yardım ve ilgilerini reddederek geri çevirirler; yardımı reddetmek öfkenin dolaylı ifadesidir ve hekim hasta ilişkisini güçleştirir.",
+       "ekran": "Öfke, diğerlerinin **yardım ve ilgisini reddetme** ile geri çevrilir",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "yardım ve ilgisini reddetme",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 12,
+        "satir": [
+         "Öfkelerini diğer insanların yardım ve ilgilerini redderek geri çevirirler."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-22-c0026",
+       "ses": "Aynı zamanda suçluluk, doğuştan beri kötü olduğu duygusu ve düşük benlik saygısına karşı bir savunma olarak ağrı ve bedensel acı, günahkârlığa ve suçluluğa bir kefaret ve cezaya dönüşür.",
+       "ekran": "Suçluluk ve düşük benlik saygısına karşı savunma: ağrı **kefaret ve cezaya** dönüşür",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "kefaret ve cezaya",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 12,
+        "satir": [
+         "savunma olarak ağrı ve bedensel acı günahkarlığına ve suçluluğuna bir kefaret ve cezaya dönüşür."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-22-b05",
+   "baslik": "Bedensel belirti bozukluğu: klinik, ayırıcı tanı, gidiş ve tedavi",
+   "paragraflar": [
+    {
+     "id": "k2-22-p012",
+     "sayfa": 13,
+     "cumleler": [
+      {
+       "id": "k2-22-c0027",
+       "ses": "Klinikte henüz saptanmamış ciddi bir hastalığın var olduğu inancı öndedir ve bu hastaları ikna etmek zordur; tıbbi güvence inancı değiştirmez.",
+       "ekran": "**Saptanmamış ciddi hastalık** inancı; ikna edilmeleri zor",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Saptanmamış ciddi hastalık",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 13,
+        "satir": [
+         "Henüz saptanmamış ciddi bir hastalığın var olduğu inancı,",
+         "İkna edilmeleri zor"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-22-c0028",
+       "ses": "Genelde tek bir özgün hastalığa sahip olduklarını söyleseler de zaman ilerledikçe bu inancı başka bir hastalığa sahip oldukları yönünde değiştirebilirler.",
+       "ekran": "Odak hastalık zamanla **başka bir hastalığa** kayabilir",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "başka bir hastalığa",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 13,
+        "satir": [
+         "inancını başka bir hastalığa sahip olduğu yönünde değiştirebilir"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-22-c0029",
+       "ses": "Negatif laboratuvar sonuçları, hekim güvencesi ve zaman içindeki iyi klinik seyir hastayı rahatlatmaz; bu yüzden tekrar tekrar tetkik istemi beklenen bir durumdur.",
+       "ekran": "**Rahatlamaz**: negatif laboratuvar, hekim güvencesi, iyi klinik seyir",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Rahatlamaz",
+         "tur": "tuzak"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 13,
+        "satir": [
+         "Rahatlamaz (Negatif lab. Sonuçları, hekim güvencesi, zaman içindeki iyi klinik seyir)"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-22-p013",
+     "sayfa": 14,
+     "cumleler": [
+      {
+       "id": "k2-22-c0030",
+       "ses": "Ayırıcı tanıda çok sistemli ve belirsiz belirtiler veren organik hastalıklar dışlanmalıdır: edinilmiş bağışıklık yetmezliği sendromu, multipl skleroz, sistemik lupus eritematozus, endokrinopatiler, miyastenia gravis, sinir sisteminin dejeneratif hastalıkları, neoplastik bozukluklar ve paraneoplastik sendrom.",
+       "ekran": "Ayırıcı tanı: **AIDS, MS, SLE**, endokrinopatiler, myastenia gravis, dejeneratif hastalıklar, neoplazi, paraneoplastik sendrom",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "AIDS, MS, SLE",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 14,
+        "satir": [
+         "AIDS",
+         "MS",
+         "SLE",
+         "Endokrinopatiler",
+         "Myastenia Gravis",
+         "Sinir sisteminin dejeneratif hastalıkları",
+         "Neoplastik bozukluklar",
+         "Paraneoplastik Sendrom"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-22-p014",
+     "sayfa": 15,
+     "cumleler": [
+      {
+       "id": "k2-22-c0031",
+       "ses": "Gidiş dönemseldir; dönemler aylar ya da yıllar sürebilir ve hastaların üçte biri ile yarısı düzelme gösterir.",
+       "ekran": "Gidiş **dönemsel**; dönemler aylar/yıllar; **1/3-1/2 düzelir**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "1/3-1/2 düzelir",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "Dönemseldir.",
+         "Dönemler aylar / yıllar olabilir.",
+         "1/3-1/2 düzelme gösterir."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-22-c0032",
+       "ses": "İyi prognoz etmenleri yüksek sosyoekonomik düzey, tedaviye yanıt veren depresyon ya da anksiyete bozukluğunun eşlik etmesi ve kişilik bozukluğunun eşlik etmemesidir; çocuklardaki sorunlar ise genelde erişkinlikte düzelir.",
+       "ekran": "İyi prognoz: yüksek sosyoekonomik düzey, tedaviye yanıtlı depresyon/anksiyete eşliği, **kişilik bozukluğu olmaması**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "kişilik bozukluğu olmaması",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "Yüksek sosyoekonomik düzey,",
+         "Kişilik bozukluğu eşlik etmemesi",
+         "Çocuklardaki sorunlar genelde erişkinlikte düzelir"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-22-p015",
+     "sayfa": 16,
+     "cumleler": [
+      {
+       "id": "k2-22-c0033",
+       "ses": "Tedavide ilk bilinmesi gereken, bu hastaların psikiyatrik tedaviye dirençli olmasıdır; çünkü sorunlarını fiziksel görürler, bu nedenle grup tedavisi ve bilişsel davranışçı terapi tercih edilir.",
+       "ekran": "Hastalar **psikiyatrik tedaviye dirençli**; grup tedavisi ve BDT",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "psikiyatrik tedaviye dirençli",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 16,
+        "satir": [
+         "Hastalar psikiyatrik tedavi için dirençlidir.",
+         "Grup tedavisi- BDT"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-22-c0034",
+       "ses": "Sık ve düzenli fizik muayeneler planlanır; bu muayeneler hastaya yakınmalarının ciddiye alındığı ve terk edilmediği mesajını verir.",
+       "ekran": "**Sık ve düzenli fizik muayene**: yakınmalar ciddiye alınıyor, terk edilmiyor mesajı",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Sık ve düzenli fizik muayene",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 16,
+        "satir": [
+         "Sık ve düzenli fizik muayeneler planlanması (yakınmalarının ciddiye alındığının ve terkedilmediklerinin mesajı olarak)"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-22-c0035",
+       "ses": "İnvaziv tanı girişimlerinden kaçınılır, çünkü gereksiz girişim komplikasyon riski taşır; farmakoterapi ise eşlik eden depresyon ya da anksiyeteyi yatıştırmak için kullanılır.",
+       "ekran": "**İnvaziv tanı girişiminden kaçın**; ilaç eşlik eden depresyon/anksiyete için",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "İnvaziv tanı girişiminden kaçın",
+         "tur": "tuzak"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 16,
+        "satir": [
+         "İnvaziv tanı girişimlerinden kaçınma",
+         "Farmakoterapi eşlik eden dep ya da anx yatıştırır."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-22-b06",
+   "baslik": "Hastalık kaygısı bozukluğu",
+   "paragraflar": [
+    {
+     "id": "k2-22-p016",
+     "sayfa": 17,
+     "cumleler": [
+      {
+       "id": "k2-22-c0036",
+       "ses": "Hastalık kaygısı bozukluğu de se me beşte yeni bir tanıdır; bir hastalığı olduğuna ya da olacağına dair zihinsel uğraşları olan hastaları tanımlar, hipokondriazisin bir varyantıdır ve hasta, hasta olacağına dair endişeli düşüncelere sahiptir.",
+       "ekran": "**Hastalık kaygısı bozukluğu**: DSM-5 yeni tanı; hastalığı olduğuna/olacağına dair uğraş; hipokondriazis varyantı",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Hastalık kaygısı bozukluğu",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 17,
+        "satir": [
+         "DSM 5 yeni tanı",
+         "Hipokondriasis bir varyantıdır."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-22-c0037",
+       "ses": "Bu bozuklukta hiç bedensel belirti yoktur; bedensel belirtiler varsa bedensel belirti bozukluğu tanısı düşünülür, iki tanıyı ayıran temel ölçüt budur.",
+       "ekran": "**Hiç belirti yoktur**; belirti varsa → bedensel belirti bozukluğu",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Hiç belirti yoktur",
+         "tur": "tuzak"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 17,
+        "satir": [
+         "Bu bozuklukta hiç belirti yoktur!",
+         "Bedensel belirtilerin olması durumunda bedensel belirti bozukluğu tanısı düşünülür."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-22-p017",
+     "sayfa": 18,
+     "cumleler": [
+      {
+       "id": "k2-22-c0038",
+       "ses": "Klinikte ciddi bir hastalığa yakalanma korkusu vardır ve bu hastaları ikna etmek zordur; bu nedenle tıbbi bir şikâyeti olmadığı hâlde kanser olmaktan aşırı korkan hastada öntanı hastalık kaygısı bozukluğudur, bu bilgi çıkmışta soruldu.",
+       "ekran": "**Ciddi hastalığa yakalanma korkusu**; ikna edilmeleri zor; belirtisiz kanser korkusu → hastalık kaygısı bozukluğu",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Ciddi hastalığa yakalanma korkusu",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [
+        "dd00370e9106",
+        "6630634703c0",
+        "41dfe004f570"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 18,
+        "satir": [
+         "Ciddi bir hastalığa yakalanma korkusu",
+         "İkna edilmeleri zor"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-22-c0039",
+       "ses": "Bu hastalar korkulan hastalıkla ilgili internetten araştırma yapmaya düşkündürler; buna siberkondri denir ve internet okumaları kaygıyı daha da besler.",
+       "ekran": "İnternetten korkulan hastalığı araştırma: **siberkondri**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "siberkondri",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [
+        "dd00370e9106",
+        "6630634703c0",
+        "41dfe004f570"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 18,
+        "satir": [
+         "Hastalar genelde internetten korkulan hastalıkla ilgili araştırmalar yapmaya düşkündürler.",
+         "(siberkondri)"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-22-p018",
+     "sayfa": 19,
+     "cumleler": [
+      {
+       "id": "k2-22-c0040",
+       "ses": "Gidiş ve sonlanış bedensel belirti bozukluğuyla aynıdır: dönemseldir, dönemler aylar ya da yıllar sürer, üçte biri ile yarısı düzelir; iyi prognoz yüksek sosyoekonomik düzey, tedaviye yanıt veren depresyon ya da anksiyete eşliği ve kişilik bozukluğu olmamasıdır, çocuklar ise erişkinlikte düzelir.",
+       "ekran": "Gidiş dönemsel; **1/3-1/2 düzelir**; iyi prognoz etmenleri bedensel belirti bozukluğu ile ortak",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "1/3-1/2 düzelir",
+         "tur": "sayi"
+        },
+        {
+         "metin": "1/3-1/2 düzelir",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [
+        "d3-k2-psi-002"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 19,
+        "satir": [
+         "Dönemseldir.",
+         "1/3-1/2 düzelme gösterir.",
+         "Çocuklar erişkinlikte düzelir."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-22-b07",
+   "baslik": "İşlevsel nörolojik belirti bozukluğu: tanım",
+   "paragraflar": [
+    {
+     "id": "k2-22-p019",
+     "sayfa": 20,
+     "cumleler": [
+      {
+       "id": "k2-22-c0041",
+       "ses": "Konversiyon, dönüştürme anlamına gelen bir savunma düzeneğidir; ego'nun şalteri indirdiği anlar olarak tanımlanır ve altta fiziksel bir patoloji bulunmaz.",
+       "ekran": "**Konversiyon**: \"dönüştürme\" savunma düzeneği; ego'nun şalteri indirdiği an; **altta fiziksel patoloji yok**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Konversiyon",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 20,
+        "satir": [
+         "Konversiyon: “Dönüştürme” savunma düzeneği.",
+         "Ego’nun şalteri indirdiği anlar",
+         "Altta fiziksel bir patoloji bulunmaz."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-22-c0042",
+       "ses": "Hastalık, istemli motor ve duyusal işlevleri etkileyerek başka bir tıbbi duruma işaret eder; ancak çatışmalar ve bazı stresörlerden sonra geldiği için psikolojik etkenlerden kaynaklandığı düşünülür; organik patolojiyle açıklanamayan, stresör sonrası ani motor ya da duyusal kayıp konversiyonu tanımlar ve bu tanım çıkmışta soruldu.",
+       "ekran": "**İstemli motor ve duyusal işlevler** etkilenir; stresör sonrası başladığı için psikolojik kökenli",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "İstemli motor ve duyusal işlevler",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [
+        "d3-k2-psi-016"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 20,
+        "satir": [
+         "İstemli motor ve duyusal işlevleri etkileyen bir başka tıbbi duruma işaret eden ancak çatışmalar ve bazı stresörlerden önce geldiğinden psikolojik etkenlerden kaynaklandığı tahmin edilen bir hastalıktır."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-22-p020",
+     "sayfa": 21,
+     "cumleler": [
+      {
+       "id": "k2-22-c0043",
+       "ses": "Konversiyon belirtileri istemli değildir ve madde kullanımına bağlı ortaya çıkmaz; birincil kazanç ise sosyal, mali ya da hukuki değil psikolojiktir, bu yüzden bilinçli taklit varsa artık konversiyondan söz edilmez.",
+       "ekran": "**İstemli değil**; madde kullanımına bağlı değil; birincil kazanç **psikolojik** (sosyal, mali, hukuki değil)",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "İstemli değil",
+         "tur": "tuzak"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 21,
+        "satir": [
+         "İstemli değildir.",
+         "Madde kullanımına bağlı ortaya çıkmaz.",
+         "Birincil kazanç psikolojik olup; sosyal, mali ya da hukuki değildir."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-22-b08",
+   "baslik": "Konversiyon: epidemiyoloji ve etiyoloji",
+   "paragraflar": [
+    {
+     "id": "k2-22-p021",
+     "sayfa": 22,
+     "cumleler": [
+      {
+       "id": "k2-22-c0044",
+       "ses": "Batılı çalışmalarda toplumdaki yaygınlık yüz binde on ile üç yüz arasında bildirilir; ülkemizde ise yatan hastalar arasında yüzde altı, yıllık yaygınlık yüzde on iki buçuk ve yaşam boyu yaygınlık yüzde on altıdır.",
+       "ekran": "Batı: **10-300/100 bin**; Türkiye: yatan hastada %6, yıllık %12.5, yaşam boyu **%16**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "10-300/100 bin",
+         "tur": "sayi"
+        },
+        {
+         "metin": "%16",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 22,
+        "satir": [
+         "10 – 300 / 100 bin",
+         "Yatan hastalar arasında %6",
+         "Yıllık yaygınlık %12.5",
+         "Yaşam boyu yaygınlık %16"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-22-p022",
+     "sayfa": 23,
+     "cumleler": [
+      {
+       "id": "k2-22-c0045",
+       "ses": "Genel toplumun üçte birinde yaşamın bir döneminde belirti düzeyinde konversiyon görülür; kadınlarda erkeklerden daha sıktır ve oran ikiye bir ile ona bir arasındadır.",
+       "ekran": "Toplumun **1/3**'ünde belirti düzeyinde; **K>E, 2:1 - 10:1**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "K>E, 2:1 - 10:1",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 23,
+        "satir": [
+         "Genel toplumun 1/3’de belirti düzeyinde yaşamlarının bir döneminde mevcut",
+         "K>E 2:1 - 10:1"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-22-p023",
+     "sayfa": 24,
+     "cumleler": [
+      {
+       "id": "k2-22-c0046",
+       "ses": "Başlangıç geç çocukluk çağı ve erken erişkinlik dönemindedir; on yaşından önce ve otuz beş yaşından sonra nadiren başlar, bu yüzden geç başlangıçta nörolojik hastalık özellikle araştırılmalıdır.",
+       "ekran": "Başlangıç **geç çocukluk–erken erişkinlik**; 10 yaş öncesi ve **35 yaş sonrası nadir**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "35 yaş sonrası nadir",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 24,
+        "satir": [
+         "Başlangıcı geç çocukluk çağı ve erken erişkinlik dönemindedir.",
+         "10 yaşından önce 35 yaşından sonra nadiren başlar."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-22-c0047",
+       "ses": "Kırsalda yaşayanlarda, düşük eğitim seviyesi, düşük sosyoekonomik durum ve düşük zekâ düzeyinde ve çatışmalara maruz kalan askeri personelde daha sıktır; bedensel belirti bozukluğunun aksine burada sosyal etmenler etkilidir.",
+       "ekran": "Daha sık: **kırsal**, düşük eğitim, düşük sosyoekonomik durum, düşük zekâ, çatışmaya maruz askeri personel",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "kırsal",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 24,
+        "satir": [
+         "Kırsalda",
+         "Düşük eğitim seviyesi",
+         "Düşük sosyoekonomik durum",
+         "Düşük zeka düzeyi",
+         "Çatışmalara maruz kalan askeri personelde daha fazla."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-22-p024",
+     "sayfa": 25,
+     "cumleler": [
+      {
+       "id": "k2-22-c0048",
+       "ses": "Etiyolojide yatkınlaştırıcı etmenler somatizasyon eğilimi, o sırada ya da geçmişte cinsel kötüye kullanım, iletişim yeteneğinin kötü olması ve altta yatan psikonörolojik hastalıklardır.",
+       "ekran": "Yatkınlaştırıcı: somatizasyon eğilimi, **cinsel kötüye kullanım**, kötü iletişim, psikonörolojik hastalık",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "cinsel kötüye kullanım",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 25,
+        "satir": [
+         "Yatkınlaştırıcı etmenler",
+         "Somatizasyon eğilimi olanlar",
+         "O sırada veya eski cinsel kötüye kullanım",
+         "İletişim yeteneğinin kötü olması",
+         "Altta yatan psikonörolojik hastalıklar"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-22-c0049",
+       "ses": "Ortaya çıkarıcı etmenler yaşam olayları ve travmatik deneyimlerdir; sürdürücü etmenler ise konversiyonun çözüme katkısının olması ve hasta rolünün benimsenmesidir, tedavide hedeflenen de bu sürdürücü etmenlerdir.",
+       "ekran": "Ortaya çıkarıcı: yaşam olayları, travma; sürdürücü: **çözüme katkı**, **hasta rolünün benimsenmesi**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "hasta rolünün benimsenmesi",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 25,
+        "satir": [
+         "Ortaya çıkarıcı etmenler",
+         "Yaşam olayları",
+         "Travmatik deneyimler",
+         "Sürdürücü etmenler",
+         "Konversiyonun çözüme katkısının olması",
+         "Hasta rolünün benimsenmesi"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-22-b09",
+   "baslik": "Konversiyon: klinik özellikler",
+   "paragraflar": [
+    {
+     "id": "k2-22-p025",
+     "sayfa": 26,
+     "cumleler": [
+      {
+       "id": "k2-22-c0050",
+       "ses": "Duyusal belirtiler anestezi, parestezi ve körlüktür.",
+       "ekran": "Duyusal: **anestezi, parestezi, körlük**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "anestezi, parestezi, körlük",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 26,
+        "satir": [
+         "Duyusal belirtiler:",
+         "Anestezi, parestezi, körlük"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-22-c0051",
+       "ses": "Motor belirtiler anormal hareketler, yürüyüş bozuklukları, güçsüzlük ve paralizidir, nadiren koreiform hareketler ve jerkler olabilir; dikkat kişinin üstündeyken belirtiler kötüleşebilir, yani gözlem altında artış konversiyonu düşündürür.",
+       "ekran": "Motor: anormal hareket, yürüyüş bozukluğu, güçsüzlük, paralizi; **dikkat üstündeyken kötüleşir**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "dikkat üstündeyken kötüleşir",
+         "tur": "tuzak"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 26,
+        "satir": [
+         "Anormal hareketler, yürüyüş bozuklukları, güçsüzlük, paralizi.",
+         "Dikkat kişinin üstündeyken belirtiler kötüleşebilir."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-22-c0052",
+       "ses": "Nöbet belirtileri olan hastaların üçte birinde epilepsi tanısı da vardır; bu yüzden epilepsi dışlanmadan konversiyon nöbeti tanısı konmaz.",
+       "ekran": "Nöbet belirtisi olanların **1/3'ünde epilepsi** tanısı",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "1/3'ünde epilepsi",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 26,
+        "satir": [
+         "Nöbet Belirtileri",
+         "1/3 Epilepsi tanısı vardır."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-22-p026",
+     "sayfa": 27,
+     "cumleler": [
+      {
+       "id": "k2-22-c0053",
+       "ses": "Birincil kazanç içsel çatışmanın son bulmasıdır ve belirtiler sembolik değer kazanır; ikincil kazanç ise hasta olmanın bir sonucu olarak destek ve yardım almaktır, yani birincil kazanç psişik, ikincil kazanç dış ortamdandır.",
+       "ekran": "**Birincil kazanç**: içsel çatışmanın son bulması; **ikincil kazanç**: hasta olarak destek ve yardım alma",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Birincil kazanç",
+         "tur": "tanim"
+        },
+        {
+         "metin": "ikincil kazanç",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 27,
+        "satir": [
+         "Birincil Kazanç: İçsel çatışmanın son bulması, belirtiler sembolik değer kazanır.",
+         "İkincil Kazanç: Hasta olmanın bir sonucu olarak, destek ve yardım alma."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-22-c0054",
+       "ses": "Güzel aldırmazlık, yani la bel endiferans, hastanın ciddi belirtilerine rağmen bu duruma uygunsuz biçimde aldırmamasıdır; felçli ama kaygısız hasta konversiyonu düşündürür ve bu bulgunun konversiyon bozukluğuna ait olduğu çıkmışta soruldu.",
+       "ekran": "**Güzel aldırmazlık** (la belle indifférence): ciddi belirtiye rağmen uygunsuz aldırmazlık → konversiyon",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Güzel aldırmazlık",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [
+        "past-1790877044852-954374"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 27,
+        "satir": [
+         "Güzel Aldırmazlık: Hastanın ciddi belirtilerine rağmen bu duruma uygunsuz aldırmayan halidir."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-22-c0055",
+       "ses": "Özdeşim, kişi için önemli olan kişilerin belirtilerinin bilinçdışı olarak örnek alınmasıdır ve özellikle yasta görülebilir; bu yüzden öyküde yakın bir kaybı sorgularız.",
+       "ekran": "**Özdeşim**: önemli kişilerin belirtilerinin bilinçdışı örnek alınması; **yasta** görülebilir",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Özdeşim",
+         "tur": "tanim"
+        },
+        {
+         "metin": "yasta",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 27,
+        "satir": [
+         "Özdeşim: Kendileri için önemli olan kişilerin belirtilerinin bilinçdışı olarak örnek alınması.",
+         "YASTA"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-22-b10",
+   "baslik": "Konversiyon: ayırıcı tanı ve muayene bulguları",
+   "paragraflar": [
+    {
+     "id": "k2-22-p027",
+     "sayfa": 28,
+     "cumleler": [
+      {
+       "id": "k2-22-c0056",
+       "ses": "Konversiyon bozukluğu olan hastalarda nörolojik bozukluklar topluma oranla daha sık görülür; bu yüzden esas organik lezyondan köken alan belirtinin ayrıntılandırılması ve nörolojik incelemenin eksiksiz yapılması gerekir.",
+       "ekran": "Konversiyonda **nörolojik bozukluk topluma oranla daha sık**; organik lezyondan kaynaklanan belirti ayrıntılandırılmalı",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "nörolojik bozukluk topluma oranla daha sık",
+         "tur": "tuzak"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 28,
+        "satir": [
+         "KONVERSİYON BZK OLAN HASTALARDA NÖROLOJİK BOZUKLUKLAR TOPLUMA ORANLA DAHA SIK GÖRÜLÜR!",
+         "Esas organik lezyondan köken alan belirtinin ayrıntılandırılması gerekir!"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-22-p028",
+     "sayfa": 29,
+     "cumleler": [
+      {
+       "id": "k2-22-c0057",
+       "ses": "Tıbbi hastalığın dışlanması her zaman mümkün olmaz; konversiyon tanısıyla hastaneye yatırılanlarda psikiyatrik olmayan tıbbi bozuklukların eşlik etmesi yaygındır ve yüzde on sekiz ile altmış dört arasında nörolojik ya da beyni etkileyen bir hastalık bulunur.",
+       "ekran": "Tıbbi hastalığı dışlamak her zaman mümkün değil; yatanlarda **%18-64 nörolojik hastalık**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "%18-64 nörolojik hastalık",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 29,
+        "satir": [
+         "Tıbbi hastalığın dışlanması her zaman mümkün olmaz.",
+         "%18-%64 nörolojik hastalık ya da beyni etkileyen hastalık varlığı!"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-22-c0058",
+       "ses": "Belirtiler telkin, hipnoz, amobarbital ya da benzodiazepin altında ortadan kalkıyorsa tablo muhtemelen konversiyondur; organik bir defisit bu yöntemlerle düzelmez.",
+       "ekran": "**Telkin, hipnoz, amobarbital ya da BDZ** altında belirti kalkıyorsa → muhtemelen konversiyon",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Telkin, hipnoz, amobarbital ya da BDZ",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 29,
+        "satir": [
+         "Belirtiler telkin, hipnoz, amobarbital ya da BDZ altında ortadan kalkıyorsa muhtemelen konversiyondur."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-22-p029",
+     "sayfa": 30,
+     "cumleler": [
+      {
+       "id": "k2-22-c0059",
+       "ses": "Bu sayfadaki kitap tablosu, konversiyon bozukluğunda organik nedenden ayırmaya yarayan fizik muayene bulgularını durum, test ve konversiyon bulgusu sütunlarıyla karşılaştırır.",
+       "ekran": "Tablo: konversiyonda **ayırıcı fizik muayene bulguları** (durum – test – bulgu)",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "ayırıcı fizik muayene bulguları",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 30,
+        "satir": [],
+        "sekil": "Konversiyon bozukluğunda ayırıcı fizik muayene bulguları tablosu",
+        "tablo": true
+       }
+      },
+      {
+       "id": "k2-22-c0060",
+       "ses": "Anestezide dermatom haritalamada duyu kaybı bilinen dağılım kalıplarına uymaz, hemianestezide orta hat kontrolünde vücut net ve keskin bir sınırla ayrılır; astazi abazide yürüyemeyen kişiler telkinle dans edebilir ve telkinle duyu ve motor bulgular değişir.",
+       "ekran": "Anestezi: **dermatoma uymaz**; hemianestezi: orta hatta keskin sınır; astazi-abazi: telkinle dans edebilir",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "dermatoma uymaz",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 30,
+        "satir": [
+         "telkinle duyu ve motor"
+        ],
+        "sekil": "Konversiyon bozukluğunda ayırıcı fizik muayene bulguları tablosu",
+        "tablo": true
+       }
+      },
+      {
+       "id": "k2-22-c0061",
+       "ses": "Paralizide hastanın paralize eli yüzüne düşürüldüğünde el yüzün üstüne değil yanına düşer; Hoover testinde sağlam bacak yukarı kaldırılmaya çalışılırken paralize bacağın altına konan elde basınç hissedilir.",
+       "ekran": "Paralizi: el **yüzün yanına** düşer; **Hoover testi**: sağlam bacak kalkarken paralize bacak altında basınç",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Hoover testi",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 30,
+        "satir": [],
+        "sekil": "Konversiyon bozukluğunda ayırıcı fizik muayene bulguları tablosu",
+        "tablo": true
+       }
+      },
+      {
+       "id": "k2-22-c0062",
+       "ses": "Komada hasta gözlerini açmaya direnç gösterir ve hekimden uzağa bakar; afonide normal öksürme sesi vokal kordların kapandığını gösterir; körlükte ani parlak ışıkta göz kırpar ve görme kaybına rağmen propriosepsiyon sayesinde işaret parmaklarını birleştirebilir.",
+       "ekran": "Koma: göz açmaya **direnç**; afoni: **normal öksürük**; körlük: ışıkta göz kırpma, parmakları birleştirebilme",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "normal öksürük",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 30,
+        "satir": [],
+        "sekil": "Konversiyon bozukluğunda ayırıcı fizik muayene bulguları tablosu",
+        "tablo": true
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-22-p030",
+     "sayfa": 31,
+     "cumleler": [
+      {
+       "id": "k2-22-c0063",
+       "ses": "Konversiyonun ayırıcı tanısında demans, multipl skleroz, beyin tümörleri, bazal ganglion hastalıkları, Gilen Bare sendromu, Kroyçfelt Yakob hastalığı ve edinilmiş bağışıklık yetmezliği sendromu yer alır.",
+       "ekran": "Ayırıcı tanı: **demans, MS, beyin tümörü, bazal ganglion hastalıkları**, Guillain-Barré, Creutzfeldt-Jakob, AIDS",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "bazal ganglion hastalıkları",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 31,
+        "satir": [
+         "Demans",
+         "MS",
+         "Beyin Tümörleri",
+         "Bazal Ganglion Hastalıkları",
+         "Gullian Barre",
+         "Creutzfeld-Jakob",
+         "AIDS"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-22-b11",
+   "baslik": "Konversiyon: gidiş ve prognoz",
+   "paragraflar": [
+    {
+     "id": "k2-22-p031",
+     "sayfa": 32,
+     "cumleler": [
+      {
+       "id": "k2-22-c0064",
+       "ses": "Konversiyon ani başlangıçlıdır; akut olguların yüzde doksan beşi kendiliğinden geriler ve hastanede yatan hastalar genellikle iki haftada iyileşir.",
+       "ekran": "Ani başlangıç; akut olguların **%95'i kendiliğinden geriler**; yatanlar ~2 haftada iyileşir",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "%95'i kendiliğinden geriler",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 32,
+        "satir": [
+         "Ani başlangıçlıdır.",
+         "Hastanede yatan hastalar genellikle 2 haftada iyileşir."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-22-c0065",
+       "ses": "Hastaların dörtte biri bir yıl içinde yineler; ilk dönem prognoz için öngörücüdür, bu yüzden ilk ataktaki seyri dikkatle izleriz.",
+       "ekran": "**1/4'ü 1 yıl içinde yineler**; ilk dönem prognoz için öngörücü",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "1/4'ü 1 yıl içinde yineler",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 32,
+        "satir": [
+         "İlk dönem prognoz için öngörücüdür."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-22-p032",
+     "sayfa": 33,
+     "cumleler": [
+      {
+       "id": "k2-22-c0066",
+       "ses": "Konversiyon düşünülen hastaların yüzde otuzunda belirtilere neden olan nörolojik ya da başka tıbbi bir hastalık saptanır; on yıllık bir izlem çalışmasında bu oran yüzde elliye çıkar, bu yüzden hastalar uzun süre izlenmelidir.",
+       "ekran": "**%30**'unda belirtiyi açıklayan tıbbi hastalık; 10 yıllık izlemde **%50**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "%30",
+         "tur": "sayi"
+        },
+        {
+         "metin": "%50",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 33,
+        "satir": [
+         "Konversiyon bozukluğu düşünülen hastaların %30 unda belirtilere neden olan nörolojik veya başka medikal hastalık saptanır.",
+         "10 yıllık bir izlem çalışmasında nörolojik hastalık saptanma oranı %50"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-22-c0067",
+       "ses": "Psödonöbet olarak değerlendirilen hastaların üçte birinde yalnız psödonöbet, üçte birinde psödonöbet ile birlikte epilepsi, üçte birinde ise yalnız epilepsi bulunur.",
+       "ekran": "Psödonöbet tanılılar: **1/3 psödonöbet, 1/3 psödonöbet + epilepsi, 1/3 epilepsi**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "1/3 psödonöbet + epilepsi",
+         "tur": "tuzak"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 33,
+        "satir": [
+         "Pseudonöbet olarak değerlendirilen hastaların"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-22-p033",
+     "sayfa": 34,
+     "cumleler": [
+      {
+       "id": "k2-22-c0068",
+       "ses": "İyi prognoz etmenleri ani başlangıç, motor belirti hâkimiyeti, belirti ile tedavi arasındaki sürenin kısa olması, içgörü varlığı, komorbid psikonörolojik hastalık ve çocukluk çağı travması bulunmaması, ergen ya da genç olmak ve sosyal desteğin iyi olmasıdır.",
+       "ekran": "İyi prognoz: **ani başlangıç, motor belirti**, kısa süre, içgörü, komorbidite ve travma yok, genç yaş, iyi sosyal destek",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "ani başlangıç, motor belirti",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 34,
+        "satir": [
+         "Ani başlangıç",
+         "Motor belirti hakimiyeti",
+         "Belirti tedavi arası sürenin kısa olması",
+         "İçgörü varlığı",
+         "Komorbid psikonörolojik hastalık olmaması",
+         "Çocukluk çağı travması bulunmuyor olması",
+         "Ergen ya da genç olmak",
+         "Sosyal desteğin iyi olması"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-22-b12",
+   "baslik": "Nöbet ve psödonöbet ayırımı",
+   "paragraflar": [
+    {
+     "id": "k2-22-p034",
+     "sayfa": 35,
+     "cumleler": [
+      {
+       "id": "k2-22-c0069",
+       "ses": "Epileptik nöbeti alkol ya da ilaç kesilmesi gibi nöbet eşiğini düşüren uyaranlar başlatır ve nöbet bir iki dakika sürer; psödonöbeti ise bir stresör başlatır ve on yirmi dakika, hatta saatler sürer.",
+       "ekran": "Nöbet: eşiği düşüren uyaran, **1-2 dk**; psödonöbet: **stresör**, 10-20 dk–saatler",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "stresör",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 35,
+        "satir": [
+         "Nöbet eşiğini düşüren uyaranlar; alkol, ilaç kesilmesi gibi",
+         "10-20 dk, saatler"
+        ],
+        "sekil": "Nöbet ve psödonöbet karşılaştırma tablosu",
+        "tablo": true
+       }
+      },
+      {
+       "id": "k2-22-c0070",
+       "ses": "Nöbette düşme ani, tehlikeli ve çığlık eşliğindedir, herhangi bir yerde ve korunmasızdır; altına kaçırma, yaralanma ve dil ısırması olabilir; psödonöbette ise yer ve zaman seçilir, genelde insanların olduğu yerlerde korunarak düşülür, hiperventilasyon eşlik eder, dil ısırılmaz ama dudak, el ya da çevredekiler ısırılabilir.",
+       "ekran": "Nöbet: ani tehlikeli düşme, **dil ısırması**, altına kaçırma; psödonöbet: korunmalı düşme, **dil ısırması yok**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "dil ısırması yok",
+         "tur": "tuzak"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 35,
+        "satir": [
+         "Ani, tehlikeli, çığlık eşliğinde",
+         "Dil ısırması olmaz, dudaklarını, ellerini, çevredekileri ısırabilir"
+        ],
+        "sekil": "Nöbet ve psödonöbet karşılaştırma tablosu",
+        "tablo": true
+       }
+      },
+      {
+       "id": "k2-22-c0071",
+       "ses": "Nöbet günün herhangi bir saatinde ve uykuda olabilir, ani bilinç kaybı olur, ağrılı uyarana yanıt yoktur, kornea refleksi alınmaz ve patolojik refleksler olabilir; psödonöbet stresörden sonra gelir, uykuda olmaz, genelde bilinç kaybı yoktur, hasta konuşulanları duyar, ağrılı uyarana yanıt verir ve kornea refleksi alınır.",
+       "ekran": "Psödonöbet: **uykuda olmaz**, bilinç genelde korunur, ağrıya yanıt var, **kornea refleksi alınır**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "kornea refleksi alınır",
+         "tur": "tuzak"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 35,
+        "satir": [
+         "Genelde bilinç kaybı yoktur. Konuşulanları duyar.",
+         "Kornea refleksi alınmaz."
+        ],
+        "sekil": "Nöbet ve psödonöbet karşılaştırma tablosu",
+        "tablo": true
+       }
+      },
+      {
+       "id": "k2-22-c0072",
+       "ses": "Nöbetten sonra uyku ve uyanırken konfüzyon görülür ve elektroensefalografi genelde bozuktur; psödonöbet ise ağıtlar ve sıkıntılı bir görünümle sonlanır ve elektroensefalografi genelde normaldir.",
+       "ekran": "Nöbet sonrası uyku, konfüzyon, **EEG bozuk**; psödonöbet ağıtla biter, **EEG normal**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "EEG normal",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 35,
+        "satir": [
+         "Nöbet sonrasında uyku ve uyanırken konfüzyon.",
+         "EEG genelde bozuktur.",
+         "EEG genelde normaldir."
+        ],
+        "sekil": "Nöbet ve psödonöbet karşılaştırma tablosu",
+        "tablo": true
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-22-b13",
+   "baslik": "Motor nöron lezyonu ve konversiyon ayırımı",
+   "paragraflar": [
+    {
+     "id": "k2-22-p035",
+     "sayfa": 36,
+     "cumleler": [
+      {
+       "id": "k2-22-c0073",
+       "ses": "Bu tablo, serebrovasküler olayı konversiyondan ayırmak için birinci motor nöron, ikinci motor nöron lezyonu ve konversiyonu yan yana karşılaştırır: birincisinde lezyon beyin ya da omurilikte, ikincisinde omurilikten çıkan sinir liflerindedir, konversiyon ise psikojeniktir.",
+       "ekran": "Tablo: **I. motor nöron** (beyin/omurilik) – **II. motor nöron** (sinir lifleri) – konversiyon (psikojenik)",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "I. motor nöron",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 36,
+        "satir": [
+         "SVO & Konversiyon Ayırımı",
+         "Beyin veya omurilik lezyonu",
+         "Omurilikten çıkan sinir lifleri"
+        ],
+        "sekil": "Serebrovasküler olay ve konversiyon ayırım tablosu",
+        "tablo": true
+       }
+      },
+      {
+       "id": "k2-22-c0074",
+       "ses": "Birinci motor nöron lezyonunda derin tendon refleksleri artmış, patolojik refleks var, sfinkter bozukluğu var ve kaslarda spastik paralizi görülür; atrofi ve fasikülasyon yoktur.",
+       "ekran": "I. motor nöron: **DTR artmış**, patolojik refleks var, sfinkter bozukluğu, **spastik** paralizi; atrofi/fasikülasyon yok",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "spastik",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 36,
+        "satir": [
+         "DTR artmış, patolojik refleks var",
+         "Sfinkter bozukluğu var",
+         "Kaslarda spastik paralizi"
+        ],
+        "sekil": "Serebrovasküler olay ve konversiyon ayırım tablosu",
+        "tablo": true
+       }
+      },
+      {
+       "id": "k2-22-c0075",
+       "ses": "İkinci motor nöron lezyonunda derin tendon refleksleri azalmış ya da kaybolmuştur, patolojik refleks yoktur, sfinkter bozukluğu olabilir, flask paralizi vardır ve kaslarda atrofi ile fasikülasyon görülür.",
+       "ekran": "II. motor nöron: DTR azalmış/kayıp, **flask** paralizi, **atrofi ve fasikülasyon var**",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "flask",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 36,
+        "satir": [
+         "DTR azalmış veya kaybolmuş, patolojik refleks yok",
+         "Flask paralizi",
+         "Kaslarda atrofi var",
+         "Kaslarda fasikülasyon var"
+        ],
+        "sekil": "Serebrovasküler olay ve konversiyon ayırım tablosu",
+        "tablo": true
+       }
+      },
+      {
+       "id": "k2-22-c0076",
+       "ses": "Konversiyonda patoloji yoktur, sfinkter bozukluğu yoktur, kas tonusu normaldir, atrofi genelde yoktur ama kronik olgularda olabilir, fasikülasyon yoktur; güzel aldırmazlık ise iki motor nöron lezyonunda yokken konversiyonda genelde vardır.",
+       "ekran": "Konversiyon: refleks ve sfinkter normal, **tonus normal**, atrofi kronikte olabilir, **güzel aldırmazlık genelde var**",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "güzel aldırmazlık genelde var",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 36,
+        "satir": [
+         "Kas tonusu normal",
+         "Genelde yok, kronik vakalarda olabilir",
+         "Genelde var"
+        ],
+        "sekil": "Serebrovasküler olay ve konversiyon ayırım tablosu",
+        "tablo": true
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-22-b14",
+   "baslik": "Konversiyon: tedavi ilkeleri",
+   "paragraflar": [
+    {
+     "id": "k2-22-p036",
+     "sayfa": 37,
+     "cumleler": [
+      {
+       "id": "k2-22-c0077",
+       "ses": "Tedavide önce organik etyoloji araştırılır; ruhsal durum hastanın aile içi konumu ve aile içi sorunlarıyla beraber değerlendirilir ve ailesel ve çevresel şartların düzelmesi için çaba harcanır.",
+       "ekran": "**Organik etyoloji araştırılır**; ruhsal durum aile içi konum ve sorunlarla birlikte değerlendirilir",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Organik etyoloji araştırılır",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 37,
+        "satir": [
+         "Organik etyoloji araştırılmalıdır.",
+         "Ruhsal durum, hastanın aile içi konumu ve aile içi sorunlarıyla beraber değerlendirilmelidir"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-22-c0078",
+       "ses": "Beraberinde depresyon ya da bunaltı bozukluğu varsa antidepresan tedavi verilir; kronik dirençli olgularda ise elektrokonvülsif tedavi uygulanır.",
+       "ekran": "Eşlik eden depresyon/bunaltı → **antidepresan**; kronik dirençli olguda **EKT**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "EKT",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 37,
+        "satir": [
+         "Beraberinden depresyon yada bunaltı bozukluğu var ise antidepresan tedavi",
+         "Kronik dirençli vakalarda EKT!"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-22-b15",
+   "baslik": "Yapay bozukluk: tanım ve klinik özellikler",
+   "paragraflar": [
+    {
+     "id": "k2-22-p037",
+     "sayfa": 38,
+     "cumleler": [
+      {
+       "id": "k2-22-c0079",
+       "ses": "Yapay bozuklukta kişi tıbbi ilgi görmek adına hastalığı taklit eder, başlatır ya da alevlendirir; birincil amacı görevlerinden kaçınmak ya da yarar elde etmek değil, doğrudan tıbbi ilgi görmek ve tıbbi bakım almaktır.",
+       "ekran": "**Yapay bozukluk**: tıbbi ilgi için hastalığı taklit eder, başlatır, alevlendirir; amaç **tıbbi bakım almak**, yarar değil",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Yapay bozukluk",
+         "tur": "tanim"
+        },
+        {
+         "metin": "tıbbi bakım almak",
+         "tur": "tuzak"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 38,
+        "satir": [
+         "Tıbbi ilgi görmek adına, hastalığı taklit eder, başlatır ya da alevlendirir.",
+         "Doğrudan tıbbi ilgi görme, tıbbi bakım almadır."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-22-c0080",
+       "ses": "Mortalite ve morbidite yaygındır: bir doktor kızı olan ameliyat teknikeri kendine psödomonas enjekte ederek defalarca sepsise yol açmış, iki taraflı böbrek yetmezliğinin ardından ölmüştür.",
+       "ekran": "**Mortalite ve morbidite yaygın**: kendine pseudomonas enjekte eden teknikerde tekrarlayan sepsis, bilateral böbrek yetmezliği, ölüm",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Mortalite ve morbidite yaygın",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 38,
+        "satir": [
+         "Mortalite ve morbidite yaygındır:",
+         "Bilateral böbrek yetmezliği sonrasında ölmüş."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-22-p038",
+     "sayfa": 39,
+     "cumleler": [
+      {
+       "id": "k2-22-c0081",
+       "ses": "Burası önemli: geleneksel tıbbi ya da psikiyatrik anlayışı aşan, olağan dışı ve dramatik belirtiler; alışılmış tedavi ve ilaçlara yanıt vermeyen belirtiler ve diğerleri çözülürken yeni olağan dışı belirtilerin ortaya çıkması yapay bozukluğu düşündürür, bu tablo çıkmışta soruldu.",
+       "ekran": "Olağan dışı, dramatik sunum; tedaviye yanıtsızlık; **eski belirti çözülürken yeni belirti** → yapay bozukluk",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "eski belirti çözülürken yeni belirti",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [
+        "past-q-I_SKENDERUN_TI_Mu_du_rlu_g_u_ne0__1__230709_230251-76",
+        "d3-k2-psi-015"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 39,
+        "satir": [
+         "Geleneksel tıbbi veya psikiyatrik anlayışı aşan, belirtilerin olağan dışı ve dramatik sunumu",
+         "Alışılmış tedavi ve ilaçlara uygun cevap vermeyen belirtiler",
+         "Diğer belirtiler çözülürken yeni olağan dışı belirtilerin ortaya çıkması"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-22-c0082",
+       "ses": "Bu hastalar işlemlere, testlere girmeye ve belirtilerini tekrar anlatmaya istek duyar; buna karşılık bilgi içeren belgeleri imzalamama ya da aile üyelerinden yardımı reddetme gibi alternatif bilgi kaynaklarını reddederler.",
+       "ekran": "İşlem, test ve belirtiyi anlatmaya **istekli**; alternatif bilgi kaynaklarını **reddeder** (belge imzalamama, aileyi reddetme)",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "istekli",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [
+        "past-q-I_SKENDERUN_TI_Mu_du_rlu_g_u_ne0__1__230709_230251-76"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 39,
+        "satir": [
+         "İşlemlere, testlere girmeye ve belirtileri tekrar anlatmaya istek duyma",
+         "Alternatif bilgi kaynaklarını reddetme( Bilgi içeren belgeleri imzalamama, aile üyelerinden yardımı reddetme)"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-22-c0083",
+       "ses": "Diğer ipuçları geniş bir tıbbi öykü ve çoklu cerrahi girişim kanıtları, çoklu ilaç alerjileri, tıbbi meslek, az ziyaretçi ve olağan dışı belirtilerin gelişimini ya da tedaviye olağan dışı yanıtı önceden tahmin etme yeteneğidir.",
+       "ekran": "Geniş tıbbi öykü, **çoklu cerrahi**, çoklu ilaç alerjisi, **tıbbi meslek**, az ziyaretçi, belirtiyi **tahmin etme**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "tıbbi meslek",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 39,
+        "satir": [
+         "Geniş bir tıbbi öykü ve çoklu cerrahi girişim kanıtları",
+         "Çoklu ilaç allerjileri",
+         "Tıbbi meslek",
+         "Az ziyaretçi"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-22-b16",
+   "baslik": "Yapay bozukluk: testler, eştanı ve gidiş",
+   "paragraflar": [
+    {
+     "id": "k2-22-p039",
+     "sayfa": 40,
+     "cumleler": [
+      {
+       "id": "k2-22-c0084",
+       "ses": "Tanıya yardımcı olacak bir laboratuvar testi yoktur; psikolojik testlerde normal ya da normal üstü zekâ, zayıf kimlik algısı, bozulmamış düşünce yapısı, düşük engellenme eşiği, zayıf cinsel uyum ve güçlü bağımlılık ihtiyacı görülür.",
+       "ekran": "**Tanı koyduran test yok**; normal/üstü zekâ, zayıf kimlik algısı, düşük engellenme eşiği, güçlü bağımlılık ihtiyacı",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Tanı koyduran test yok",
+         "tur": "terim"
+        },
+        {
+         "metin": "Tanı koyduran test yok",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [
+        "k1-2020-2021-b-q003"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 40,
+        "satir": [
+         "Tanıya yardımcı olacak test yok",
+         "Normal & normal üstü zeka",
+         "Zayıf kimlik algısı",
+         "Düşünce yapısının bozulmamış olması",
+         "Düşük engellenme eşiği",
+         "Zayıf cinsel uyum",
+         "Güçlü bağımlılık ihtiyacı"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-22-c0085",
+       "ses": "Minnesota çok yönlü kişilik envanterinde ise sahte kötü profili görülür.",
+       "ekran": "MMPI'da **\"sahte kötü\"** profil",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "sahte kötü",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 40,
+        "satir": [
+         "MMPI’da –sahte kötü-"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-22-p040",
+     "sayfa": 41,
+     "cumleler": [
+      {
+       "id": "k2-22-c0086",
+       "ses": "Eştanı çoğu zaman vardır; en sık kişilik bozukluğu, madde kullanım bozukluğu ve duygudurum bozukluğu eşlik eder.",
+       "ekran": "**Eştanı sık**: kişilik bozukluğu, madde kullanım bozukluğu, duygudurum bozukluğu",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Eştanı sık",
+         "tur": "terim"
+        },
+        {
+         "metin": "Eştanı sık",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [
+        "past-1790877044869-84754",
+        "bea2e4416c65"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 41,
+        "satir": [
+         "Eştanı: Çoğu zaman mevcuttur (kişilik bzk,"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-22-c0087",
+       "ses": "Yapay bozukluk, bilinçdışı ve istemdışı olan somatoform bozukluk ile bilinçli ve istemli olan temaruz arasında bir yere denk düşer; burada amaç hasta rolüne bürünmektir, temaruzdaki gibi dış bir yarar değildir.",
+       "ekran": "Somatoform (bilinçdışı, istemdışı) ile **temaruz** (bilinçli, istemli) arasında; amaç **hasta rolüne bürünmek**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "hasta rolüne bürünmek",
+         "tur": "tuzak"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 41,
+        "satir": [
+         "Yapay bozukluk somatoform bozukluk ile temaruz arasında bir yere denk düşmektedir.",
+         "Amaç hasta rolüne bürünmektir."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-22-p041",
+     "sayfa": 42,
+     "cumleler": [
+      {
+       "id": "k2-22-c0088",
+       "ses": "Yapay bozukluk erken erişkinlik döneminde ve sinsice başlar; kişi genelde çocukluğunda gerçek bir fiziksel hastalığın tedavisini görmüştür, hastanede yatışlar uzar ve birey zamanla tıbbi konuları öğrenir.",
+       "ekran": "**Erken erişkinlikte sinsi** başlangıç; çocuklukta gerçek fiziksel hastalık öyküsü; uzun yatışlar, tıbbi bilgi edinme",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Erken erişkinlikte sinsi",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 42,
+        "satir": [
+         "Erken erişkinlik döneminde başlar.",
+         "Bozukluk sinsice başlar.",
+         "Hastanede yatışlar uzar.",
+         "Birey tıbbi konuları öğrenir."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-22-c0089",
+       "ses": "Prognoz kötüdür ve hastaların bir kısmı gereksiz tıbbi girişimler sonucunda ölür; bu nedenle tanıyı erken koymak gereksiz girişimleri azaltır.",
+       "ekran": "**Prognoz kötü**; bir kısmı gereksiz tıbbi girişimler sonucu ölür",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Prognoz kötü",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 42,
+        "satir": [
+         "Prognoz kötüdür.",
+         "Bir kısmı gereksiz tıbbi girişimler sonucu ölür"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "anahtar": "y25-k2-22-psikosomatik-bozukluklar",
+ "donem": "2025-2026"
+}

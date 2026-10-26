@@ -1,0 +1,43 @@
+# Kolinoseptör Bloke Edici İlaçlar
+
+@@ Muskarinik Reseptör Alt Tipleri ve Antimuskariniklerin Kimyasal Yapısı
+Kolinoseptör antagonistleri reseptör afinitelerine göre muskarinik ve nikotinik olmak üzere iki ana gruba ayrılır. Gangliyon bloke ediciler ve nöromusküler kavşak bloke edici ilaçlar antinikotinik etki gösterirken, parasempatolitik ilaçlar muskarinik reseptörleri yarışmalı olarak kapatır.
+
+M bir reseptörleri merkezi sinir sistemi nöronlarında ve otonom gangliyonlarda, M iki miyokardda, M üç ise salgı bezleri ile düz kas hücrelerinde yerleşiktir. Antimuskarinik ilaçların temel prototipi Atropa belladonna bitkisinden elde edilen atropin alkaloididir.
+
+Doğada bulunan atropin ve skopolamin alkaloidlerinin levo izomerleri dekstro izomerlerinden en az yüz kat daha güçlü antimuskarinik etkinlik gösterir. Sentetik ve yarı sentetik moleküllerden propantelin ve glikopirolat kuvaterner yapıda iken, pirenzepin ve tropikamid tersiyer amin yapısındadır. Parkinson hastalığında santral etkili benztropin gibi tersiyer aminler seçilirken, astımda inhaler yolla kullanılan tiotropium gibi kuvaterner aminler tercih edilir.
+
+Tersiyer amin yapılı antimuskarinik bileşikler lipofilik karakterleri sayesinde korneayı ve kan beyin bariyerini kolayca aşarlar. Kuvaterner amin yapılı ajanlar kalıcı pozitif iyonize yük taşımaları nedeniyle merkezi sinir sistemine geçemez ve santral deliryum riski oluşturmazlar. Skopolamin molekülü kan beyin bariyerini atropine kıyasla çok daha hızlı ve yoğun şekilde aşarak belirgin merkezi sedasyon ve amnezi meydana getirir.
+
+@@ Antimuskarinik İlaçların Farmakodinamisi ve Reseptör Etkileşimi
+Atropin muskarinik reseptörlerin ortosterik bağlanma cebinde asetilkolin ile yarışarak kompetitif geri dönüşümlü bir blokaj oluşturur. Kompetitif blokaj varlığında agonist konsantrasyon yanıt eğrisi maksimum doku yanıtı düşmeksizin paralel olarak sağa kayar.
+
+Bazal yapısal aktivite gösteren muskarinik reseptör sistemlerinde atropin inaktif reseptör konformasyonunu stabilize ederek ters agonist gibi davranır. Reseptör alt tip seçiciliği incelendiğinde pirenzepin M bir reseptörlerine, darifenasin ve solifenasin ise M üç reseptörlerine orta yüksek seçicilik sergiler. M üç reseptör seçiciliği kardiyak M iki reseptörlerini koruyarak aşırı taşikardi ve çarpıntı yan etkisini belirgin ölçüde azaltır.
+
+@@ Organ Sistemleri Üzerindeki Etkiler ve Fizyopatolojik Yanıtlar
+Merkezi sinir sisteminde atropin olağan dozlarda hafif sedasyon yaparken, toksik dozlarda huzursuzluk, ajitasyon, deliryum ve komaya yol açar. Pupilla kasıcı sfinkter kasındaki M üç blokajı sempatik tonusu öne çıkararak pasif midriyazis ve fotofobi oluşturur. Siliyer kasın felç olması lensin yakın uyumunu ortadan kaldırarak akomodasyon kaybına yani sikloplejiye neden olur. Aynı zamanda siliyer kasın gevşemesi sonucu lens düzleşir ve göz yakına odaklanma yeteneğini kaybederek siklopleji gelişir.
+
+Sinoatriyal düğüm vagal tonusa çok duyarlıdır; düşük doz atropin santral vagal çekirdek uyarımı ve presinaptik otoreseptör blokajıyla geçici bradikardi yapar. Terapötik ve yüksek dozlarda ise sinoatriyal düğüm M iki reseptörleri tamamen bloke edilerek belirgin taşikardi ve atriyoventriküler iletim hızlanması gelişir. Damar endotelindeki muskarinik reseptörlerin uyarılmasıyla salınan nitrik oksit ilişkili kolinerjik vazodilatasyon atropin ile tamamen engellenir.
+
+Bronş düz kasındaki M üç reseptör blokajı bronkodilatasyon sağlar ve üst solunum yolları ile trakeobronşiyal mukozal sekresyonları belirgin şekilde kurutur. Gastrointestinal kanalda muskarinik blokaj tonus ve peristaltik dalga amplitüdünü azaltarak mide boşalmasını geciktirir ve barsak geçişini uzatır. Artan atropin dozlarında ilk önce tükürük ve ter salgısı dururken, mide asit salgısını baskılamak için çok daha yüksek dozlar gerekmektedir. Bazal gastrik sekresyonlar, besin veya nikotinle uyarılan asit salgısına oranla antimuskarinik blokaja karşı çok daha duyarlıdır.
+
+M bir seçici antagonist pirenzepin mide paryetal hücrelerinde asit üretimini daha seçici biçimde baskılayan bir moleküldür. Enterik sinir sistemindeki lokal refleksler sayesinde antimuskariniklerle oluşan intestinal paraliz geçicidir ve safra yollarında hafif gevşeme görülür. Ekrin ter bezlerindeki M üç reseptör blokajı terlemeyi tamamen durdurarak anhidroz tablosuna ve çocuklarda tehlikeli atropin ateşine yol açar.
+
+@@ Klinik Endikasyonlar ve Terapötik Kullanım Alanları
+Vestibüler uyarılara bağlı taşıt tutması profilaksisinde kulak arkasına uygulanan transdermal skopolamin bandı altın standarttır. Oftalmolojik muayenede fundus incelemesi için yaklaşık altı saatlik en kısa etki süresine sahip olan tropikamid göz damlası tercih edilir. Erişkinlerde görme kaybı süresini sınırlamak için kısa etkili ajanlar seçilirken, uzun etkili atropin sadece siliyer istirahat gereken üveitlerde kullanılır. Çocuklarda sistemik dolaşıma geçişi ve antimuskarinik toksisite riskini azaltmak için damla yerine pomat formları tercih edilir.
+
+Anestezi öncesi preanestezik medikasyon olarak atropin verilmesi solunum sekresyonlarını kurutur ve laringoskopiye bağlı refleks bradikardiyi önler. Tiotropium ve umeklidinyum yirmi dört saat boyunca bronkodilatasyon sağlayan uzun etkili inhaler antimuskarinikler olarak koah idamesinde yer alır. Akut miyokard enfarktüsünde aşırı vagal deşarja bağlı semptomatik bradikardi ve iletim bloklarında intravenöz atropin hayat kurtarıcı bir ilaçtır. İdiyopatik dilate kardiyomiyopati olgularında M iki reseptörlerine karşı gelişen otoantikorların kardiyak fonksiyon bozukluğuna katkıda bulunduğu gösterilmiştir.
+
+Gastrointestinal hipermotilite turist diyaresi ve kramplı barsak durumlarında disiklomin ve propantelin semptomatik antispazmodik rahatlama sağlar. Glikopirolat ve trospium gibi kuvaterner aminler periferik organlarda spazmı çözerken kan beyin bariyerini aşamayarak güvenli profil sunarlar. Prostatektomi gibi ürolojik cerrahi girişimler sonrasında gelişen ağrılı mesane spazmlarını dindirmek amacıyla oksibutinin yaygın olarak reçete edilir. Aşırı aktif mesane ve urge inkontinans tedavisinde M üç seçici darifenasin ve solifenasin gibi ajanlar kardiyak yan etkileri azaltarak tercih edilir. Aşırı aktif mesane tedavisinde ise darifenasin ve solifenasin gibi mesane seçiciliği yüksek tersiyer aminler günde tek doz halinde verilebilir.
+
+@@ Kolinerjik Zehirlenmeler, Atropinizasyon ve Enzim Reaktivatörleri
+Organofosfat ve karbamatlı tarım ilaçları asetilkolinesterazı engelleyerek yaygın miyozis bronkospazm bradikardi ve aşırı sekresyona yol açar. Kolinerjik krizde solunum sekresyonları tamamen kuruyana ve pupiller genişleyene kadar intravenöz atropin tekrarlayan dozlarla titre edilir.
+
+Kolinesteraz reaktivatörü pralidoksim fosforillenmiş enzimin fosforil bağını kopararak aktif asetilkolinesterazı yeniden serbest hale getirir. Pralidoksim enzim yaşlanması gerçekleşmeden önce erken saatlerde verilmelidir ve çizgili kas nöromüsküler kavşak felcini geri çevirir. Hızlı başlayan inosibe türü şapkalı mantar zehirlenmesinde doğrudan muskarin bulunduğu için atropin tam kür sağlar. Amanita phalloides zehirlenmesi ise geç başlar ve amatoksin karaciğer hücre nekrozu yaptığı için bu tabloda atropin etkisiz kalır.
+
+@@ Toksisite, Kontrendikasyonlar ve Gangliyon Bloke Edici İlaçlar
+Antimuskarinik ilaçlar dar bir güvenlik aralığına sahiptir ve organ sistemlerine yönelik tedavide yaygın yan etki riski barındırırlar. Antimuskarinik toksidrom tablosunda ağız kuruluğu midriyazis taşikardi sıcak kuru kırmızı cilt ve deliryum klasik belirtilerdir. Hayatı tehdit eden şiddetli antimuskarinik deliryum ve koma varlığında kan beyin bariyerini aşabilen tersiyer amin yapılı fizostigmin antidot olarak kullanılır.
+
+Antimuskarinik ilaçlar dar açılı glokomda trabeküler açıyı kapatarak krizi tetiklediği için ve prostat hipertrofisinde idrar retansiyonu yaptığı için kesinlikle kontrendikedir. Gangliyon bloke edici ilaçlar otonomik gangliyonlardaki nikotinik reseptörleri yarışmalı olarak kapatarak sempatik ve parasempatik iletiyi keserler. Mekamilamin ve trimetafan gibi tüm gangliyon blokörleri sentetik amin türevleridir ve farklı emilim özellikleri gösterirler.
+
+Gangliyonik nikotinik reseptörler asetilkolinle doğrudan yarışma veya reseptör ilişkili iyon kanalının tıkanması mekanizmasıyla bloke edilir. Gangliyon blokajı gözde siliyer kas inervasyonunu keserek orta derecede midriyazis ile birlikte akomodasyon kaybı oluşturur. Damar yatağında hakim sempatik tonusun kesilmesi arteriyol ve venülleri genişleterek ayağa kalkınca şiddetli ortostatik hipotansiyon ve bayılmaya yol açar. Gangliyon blokörü alan hastalar otonomik refleksleri kaybettikleri için otonomik ilaçlara karşı aşırı duyarlılık ve abartılı yanıtlar sergilerler.

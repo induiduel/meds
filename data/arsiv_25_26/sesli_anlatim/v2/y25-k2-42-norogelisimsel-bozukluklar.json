@@ -1,0 +1,1730 @@
+{
+ "surum": 2,
+ "ders_id": "k2-42",
+ "baslik": "Nörogelişimsel Bozukluklar",
+ "bolumler": [
+  {
+   "id": "k2-42-b01",
+   "baslik": "Nörogelişimsel Bozukluklara Genel Bakış ve Tanım",
+   "paragraflar": [
+    {
+     "id": "k2-42-p001",
+     "sayfa": 1,
+     "cumleler": [
+      {
+       "id": "k2-42-c0001",
+       "ses": "Nörogelişimsel bozukluklar dersimize hoş geldiniz; bu oturumda çocukluktan erişkinliğe uzanan temel nörogelişimsel tabloları inceleyeceğiz.",
+       "ekran": "Nörogelişimsel bozukluklar genel bakış ve klinik giriş.",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": "k2-42-d-s01",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 1,
+        "satir": [
+         "Nörogelişimsel"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-42-c0002",
+       "ses": "Merkezi sinir sisteminin erken gelişim basamaklarında ortaya çıkan bozukluklar bireyin bilişsel ve sosyal kimliğini doğrudan şekillendirir.",
+       "ekran": "Merkezi sinir sistemi gelişiminde ortaya çıkan bilişsel ve sosyal süreçler.",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Merkezi sinir sistemi gelişiminde",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": "k2-42-d-s01",
+       "cikmis": [
+        "4c4eb178b88b"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 1,
+        "satir": [
+         "Nörogelişimsel"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-42-p002",
+     "sayfa": 2,
+     "cumleler": [
+      {
+       "id": "k2-42-c0003",
+       "ses": "Nörogelişimsel bozukluklar, zihinsel işlevlerin ve kimliğin gelişim süreci boyunca ortaya çıkan ve biçimlenen belirtilerle seyreden klinik tanılardır.",
+       "ekran": "Nörogelişimsel bozukluk zihinsel işlevlerin gelişiminde ortaya çıkan tanılardır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Nörogelişimsel bozukluk zihinsel işlevlerin",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": "k2-42-d-s01",
+       "cikmis": [
+        "d3-k2-psi-016"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "Nörogelişimsel bozukluk nedir?"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-42-c0004",
+       "ses": "Tanı süreci özgül tek bir biyolojik etiyolojiye veya patognomonik bir belirtece değil, klinik belirti profillerinin ayrıntılı betimlenmesine dayanır.",
+       "ekran": "Tanı patognomonik biyolojik belirteçten ziyade klinik betimlemeye dayanır.",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": "k2-42-d-s01",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "Nörogelişimsel bozukluk nedir?"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-42-p003",
+     "sayfa": 3,
+     "cumleler": [
+      {
+       "id": "k2-42-c0005",
+       "ses": "Gelişimsel yetersizlikler tipik olarak erken dönemde, sıklıkla çocuk okula başlamadan önce belirti vererek görünür hale gelir.",
+       "ekran": "Gelişimsel yetersizlikler sıklıkla okul öncesi erken dönemde başlar.",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": "k2-42-d-s02",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "Bireyin fiziksel ve psikososyal gelişimsel sürecinin tipik olarak erken döneminde başlayan,"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-42-c0006",
+       "ses": "Bu yetersizlikler sadece öğrenme ve yürütücü işlevlerle sınırlı kalabileceği gibi, genel bilişsel ve sosyal alanlarda da yaygın bozulma yapabilir.",
+       "ekran": "Bilişsel, akademik, sosyal ve mesleki alanlarda belirgin bozulma görülür.",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": "k2-42-d-s02",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "Bireyin fiziksel ve psikososyal gelişimsel sürecinin tipik olarak erken döneminde başlayan,"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-42-p004",
+     "sayfa": 4,
+     "cumleler": [
+      {
+       "id": "k2-42-c0007",
+       "ses": "Nörogelişimsel bozukluklar uygun şekilde tedavi edilmediğinde bireyin tipik gelişimini sekteye uğratır; bu nedenle erken tanı ve müdahale hayati önemdedir.",
+       "ekran": "Erken tanı ve tedavi bireyin tipik gelişimini korumak için şarttır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Erken tanı ve tedavi",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": "k2-42-d-s03",
+       "cikmis": [
+        "past-1790877035999-122905"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 4,
+        "satir": [
+         "Nörogelişimsel bozukluklar, yaşamın erken dönemlerinde ortaya çıkması bakımından, uygun"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-42-c0008",
+       "ses": "Yaşam evreleri ilerledikçe klinik tabloya yeni belirtiler eklenebilir veya bazı belirtiler sönebilir; klinisyenin bu dinamik süreci fark etmesi koruyucu ruh sağlığı açısından esastır.",
+       "ekran": "Yaşam evrelerinde belirti profili değişebilir; koruyucu ruh sağlığı hedeflenir.",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Yaşam evrelerinde belirti profili",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": "k2-42-d-s03",
+       "cikmis": [
+        "past-q-I_SKENDERUN_TI_Mu_du_rlu_g_u_ne0__1__230709_230251-76",
+        "d3-k2-psi-002"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 4,
+        "satir": [
+         "Nörogelişimsel bozukluklar, yaşamın erken dönemlerinde ortaya çıkması bakımından, uygun"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-42-p005",
+     "sayfa": 5,
+     "cumleler": [
+      {
+       "id": "k2-42-c0009",
+       "ses": "Amerikan Psikiyatri Birliği güncel sınıflamasında zihinsel yetersizlikler, otizm spektrum bozukluğu, dikkat eksikliği hiperaktivite bozukluğu ve özgül öğrenme bozukluğu yer alır.",
+       "ekran": "Sınıflamada zihinsel yetersizlik, otizm, DEHB ve öğrenme bozukluğu bulunur.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Sınıflamada zihinsel yetersizlik, otizm",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": "k2-42-d-s04",
+       "cikmis": [
+        "q-No_ropsikiyatri_gis_kardiyo_-2023-2024-C__km_s_lar__240625_053302__2_-19"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "Amerikan Psikiyatri Birliği tarafından en son güncellemesinde ;"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-42-c0010",
+       "ses": "Buna ek olarak iletişim bozuklukları ile tik bozukluklarını içeren motor bozukluklar da nörogelişimsel şemsiyenin temel kategorilerini oluşturur.",
+       "ekran": "İletişim ve tik bozuklukları da nörogelişimsel kategoriler arasındadır.",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "İletişim ve tik bozuklukları",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": "k2-42-d-s04",
+       "cikmis": [
+        "6169f77f722f"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "Amerikan Psikiyatri Birliği tarafından en son güncellemesinde ;"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-42-p006",
+     "sayfa": 6,
+     "cumleler": [
+      {
+       "id": "k2-42-c0011",
+       "ses": "En son yapılan düzenlemede de se me beş ve i ce de on bir sınıflamalarında köklü bir kavramsal değişiklik gerçekleştirilmiştir.",
+       "ekran": "DSM-5 ve ICD-11'de çocukluk başlangıçlı ayrı başlık kaldırılmıştır.",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": "k2-42-d-s05",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "En son yapılan düzenlemede DSM -5  ve ICD -11 tanımlarında değişiklik yapılarak ; çocukluk"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-42-c0012",
+       "ses": "Bu tanılar çocukluk başlangıçlı ayrı bir başlık olarak tutulmayıp, yaşam boyu süren nitelikleri vurgulanarak genel sınıflama içerisine yerleştirilmiştir.",
+       "ekran": "Nörogelişimsel bozuklukların yaşam boyu devam eden seyri vurgulanmıştır.",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": "k2-42-d-s05",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "En son yapılan düzenlemede DSM -5  ve ICD -11 tanımlarında değişiklik yapılarak ; çocukluk"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-42-p007",
+     "sayfa": 7,
+     "cumleler": [
+      {
+       "id": "k2-42-c0013",
+       "ses": "Nörogelişimsel bozukluklar doğuştan ya da yaşamın ilk evrelerinden itibaren mevcut olan atipik gelişim kusurlarından köken alır.",
+       "ekran": "Bozukluklar doğuştan veya erken evrelerden itibaren atipik gelişimle biçimlenir.",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": "k2-42-d-s05",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "NGB doğuştan ya da yaşamın ilk evrelerinden itibaren mevcut olan veya biçimlenen"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-42-c0014",
+       "ses": "Otizm spektrumunda sosyal iletişim, özgül öğrenme güçlüğünde ise akademik beceriler gibi farklı alanlarda gelişimsel kusurlar ortaya çıkar.",
+       "ekran": "Farklı nörogelişimsel tanılarda özgül bilişsel ve sosyal kusurlar belirir.",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "Farklı nörogelişimsel tanılarda özgül",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": "k2-42-d-s05",
+       "cikmis": [
+        "past-1790877044860-729418",
+        "c77bafb04f86",
+        "daafa2b8d14f",
+        "past-q-I_SKENDERUN_TI_Mu_du_rlu_g_u_ne0__1__230709_230251-75",
+        "1b0796213c00"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "NGB doğuştan ya da yaşamın ilk evrelerinden itibaren mevcut olan veya biçimlenen"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-42-b02",
+   "baslik": "Zihinsel Yetersizlikler (İntellektüel Gelişim Bozukluğu)",
+   "paragraflar": [
+    {
+     "id": "k2-42-p008",
+     "sayfa": 8,
+     "cumleler": [
+      {
+       "id": "k2-42-c0015",
+       "ses": "Zihinsel yetersizlikler akıl yürütme, plan yapma, problem çözme, soyut düşünme ve deneyimden öğrenme süreçlerini içeren genel bilişsel kapasite kısıtlılığıdır.",
+       "ekran": "Zihinsel kapasite akıl yürütme, problem çözme ve soyut düşünmeyi içerir.",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": "k2-42-d-s07",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "Zihinsel kapasite akıl yürütme, plan yapma, problem çözme, karmaşık düşünme, çabuk"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-42-c0016",
+       "ses": "Bilişsel yetersizlik kavramsal, sosyal ve pratik uyum alanlarında bağımsız işlevselliği kısıtlar.",
+       "ekran": "Bilişsel kısıtlılık adaptif uyum alanlarında belirgin gerilik oluşturur.",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": "k2-42-d-s07",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "Zihinsel kapasite akıl yürütme, plan yapma, problem çözme, karmaşık düşünme, çabuk"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-42-p009",
+     "sayfa": 9,
+     "cumleler": [
+      {
+       "id": "k2-42-c0017",
+       "ses": "Küçük yaş grubunda zihinsel yetersizlik şüphesiyle hekime en sık başvuru nedeni konuşmada gecikme yakınması olmaktadır.",
+       "ekran": "Küçük yaş grubunda en sık başvuru nedeni konuşmada gecikmedir.",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": "k2-42-d-s07",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [
+         "Bu yas grubunda en sik başvuru nedeni konuşmada gecikme yakınması olmaktadır."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-42-c0018",
+       "ses": "Komutlara uymama, tuvalet kontrolünü kazanamama ve akranlarla iletişim kuramama bu tabloya sıklıkla eşlik eder.",
+       "ekran": "Komutlara uymama ve tuvalet kontrolü gecikmesi konuşma gecikmesine eşlik eder.",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": "k2-42-d-s07",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [
+         "Bu yas grubunda en sik başvuru nedeni konuşmada gecikme yakınması olmaktadır."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-42-p010",
+     "sayfa": 10,
+     "cumleler": [
+      {
+       "id": "k2-42-c0019",
+       "ses": "Zihinsel yetersizlik etiyolojisi son derece heterojendir; genetik, gelişimsel ve edinsel nedenler tek başına ya da birlikte rol alabilir.",
+       "ekran": "Etiyoloji heterojendir; genetik, gelişimsel ve edinsel faktörler etkilidir.",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": "k2-42-d-s08",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 10,
+        "satir": [
+         "Genetik, gelişimsel veya edinsel nedenler tek başına ya da birlikte olabilir. Zihinsel yetersizlik"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-42-c0020",
+       "ses": "Klinik açıdan zihinsel yetersizlik ne kadar belirgin ve ağırsa, altta yatan organik etiyoloji de o kadar saptanabilirdir.",
+       "ekran": "Zihinsel yetersizlik ne kadar ağırsa altta yatan organik neden o kadar belirgindir.",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": "k2-42-d-s08",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 10,
+        "satir": [
+         "Genetik, gelişimsel veya edinsel nedenler tek başına ya da birlikte olabilir. Zihinsel yetersizlik"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-42-p011",
+     "sayfa": 11,
+     "cumleler": [
+      {
+       "id": "k2-42-c0021",
+       "ses": "Prenatal komplikasyonlar arasında otozomal kromozomal bozukluklar önemli yer tutar; Daun sendromu, Pırader Villi ve Ancelmın sendromu bunların başlıcalarıdır.",
+       "ekran": "Prenatal nedenlerde Down, Prader-Willi ve Angelman sendromları yer alır.",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": "k2-42-d-s08",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 11,
+        "satir": [
+         "Prenatal komplikasyonlar"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-42-c0022",
+       "ses": "Ayrıca gonozomal bozukluklar kapsamında yer alan Frajil İks sendromu, kalıtsal zihinsel yetersizliğin en sık görülen nedenidir.",
+       "ekran": "Frajil X sendromu en sık kalıtsal zihinsel yetersizlik nedenidir.",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": "k2-42-d-s08",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 11,
+        "satir": [
+         "Prenatal komplikasyonlar"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-42-p012",
+     "sayfa": 12,
+     "cumleler": [
+      {
+       "id": "k2-42-c0023",
+       "ses": "Maternal faktörler incelendiğinde annenin on altı yaşından küçük veya kırk yaşından büyük olması zihinsel gelişim riskini belirgin artırır.",
+       "ekran": "On altı yaş altı veya kırk yaş üstü maternal yaş zihinsel risk faktörüdür.",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": "k2-42-d-s09",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 12,
+        "satir": [
+         "vaşından küçük 40 yaşından büyük olmak (ilk doğum için 35 yastan büyük"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-42-c0024",
+       "ses": "Akraba evlilikleri, sosyoekonomik yetersizlik, toorç enfeksiyonları ve gebelikte alkol maruziyeti merkezi sinir sistemi hasarına yol açar.",
+       "ekran": "Akrabalık, enfeksiyonlar ve teratojenler fetal nöronal gelişimi bozar.",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": "k2-42-d-s09",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 12,
+        "satir": [
+         "vaşından küçük 40 yaşından büyük olmak (ilk doğum için 35 yastan büyük"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-42-p013",
+     "sayfa": 13,
+     "cumleler": [
+      {
+       "id": "k2-42-c0025",
+       "ses": "Gebelikte ortaya çıkan hemorajik şok ve polihidroamnios gibi komplikasyonlar fetal oksijenlenmeyi sekteye uğratabilir.",
+       "ekran": "Gebelikte hemorajik şok ve polihidramnios fetal oksijenlenmeyi bozar.",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": "k2-42-d-s09",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 13,
+        "satir": [
+         "Gebelik komplikasyonları ( hemorajik şok, polihidroamnios)"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-42-c0026",
+       "ses": "Perinatal evrede ise doğum asfiksisine bağlı hipoksi, prematürite ve düşük doğum ağırlığı zihinsel yetersizliğe zemin hazırlar.",
+       "ekran": "Doğum asfiksisine bağlı hipoksi ve prematürite santral hasar oluşturur.",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": "k2-42-d-s09",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 13,
+        "satir": [
+         "Gebelik komplikasyonları ( hemorajik şok, polihidroamnios)"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-42-p014",
+     "sayfa": 14,
+     "cumleler": [
+      {
+       "id": "k2-42-c0027",
+       "ses": "Hafif zihinsel gelişim bozukluğu zeka katsayısı puanının elli ile altmış dokuz arasında olduğu olgulardır ve toplumdaki vakaların yüzde seksen beşini oluşturur.",
+       "ekran": "Hafif zihinsel yetersizlik IQ 50-69 puan olup olguların yüzde 85'idir.",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": "k2-42-d-s10",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 14,
+        "satir": [
+         "Hafif zihinsel gelişim bozukluğu (IQ: 50-69 puan ): Konuşmada bir miktar gerilik vardır, fakat"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-42-c0028",
+       "ses": "Konuşmada hafif gecikme görülür; ilkokul döneminde akademik taleplerle fark edilirler ve erişkinlikte mesleki bağımsızlık kazanabilirler.",
+       "ekran": "İlkokulda fark edilirler, somut düşünürler ve mesleki bağımsızlık kazanabilirler.",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": "k2-42-d-s10",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 14,
+        "satir": [
+         "Hafif zihinsel gelişim bozukluğu (IQ: 50-69 puan ): Konuşmada bir miktar gerilik vardır, fakat"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-42-p015",
+     "sayfa": 15,
+     "cumleler": [
+      {
+       "id": "k2-42-c0029",
+       "ses": "Ağır zihinsel gelişim bozukluğunda zeka katsayısı puanı yirmi ile otuz dört arasındadır ve belirgin motor gerilik mevcuttur.",
+       "ekran": "Ağır zihinsel gelişim bozukluğunda IQ 20-34 puan arasındadır.",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": "k2-42-d-s10",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "Ağır zihinsel gelişim bozukluğu: (IQ 20-34) Belirgin motor gerilik vardır ; dil yetileri geç ve"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-42-c0030",
+       "ses": "Dil yetileri çok az gelişir veya hiç gelişmez; bu bireyler yaşam boyu sürekli gözetim ve bakım desteğine ihtiyaç duyarlar.",
+       "ekran": "Dil yetileri çok kısıtlıdır ve sürekli bakım gereksinimi bulunur.",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": "k2-42-d-s10",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "Ağır zihinsel gelişim bozukluğu: (IQ 20-34) Belirgin motor gerilik vardır ; dil yetileri geç ve"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-42-p016",
+     "sayfa": 16,
+     "cumleler": [
+      {
+       "id": "k2-42-c0031",
+       "ses": "Zihinsel yetersizliğin sağaltımında temel yaklaşım bireysel özel eğitim, koruyucu önlemler ve aile ile iş birliğidir.",
+       "ekran": "Temel sağaltım özel eğitim, koruyucu önlemler ve aile danışmanlığıdır.",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": "k2-42-d-s11",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 16,
+        "satir": [
+         "Sağlatım"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-42-c0032",
+       "ses": "Zekayı doğrudan artıran bir ilaç bulunmamaktadır; ilaçlar yalnızca eşlik eden agresyon ve davranış problemlerinde semptomatik olarak kullanılır.",
+       "ekran": "İlaçlar zekayı artırmaz, sadece eşlik eden davranış sorunlarında kullanılır.",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": "k2-42-d-s11",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 16,
+        "satir": [
+         "Sağlatım"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-42-b03",
+   "baslik": "Otizm Spektrum Bozukluğu (OSB)",
+   "paragraflar": [
+    {
+     "id": "k2-42-p017",
+     "sayfa": 17,
+     "cumleler": [
+      {
+       "id": "k2-42-c0033",
+       "ses": "Otizm yelpazesi bozukluğu erken çocuklukta başlayan ve yaşam boyu devam eden nörogelişimsel bir tablodur.",
+       "ekran": "Otizm erken çocuklukta başlayan yaşam boyu süren bir bozukluktur.",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": "k2-42-d-s13",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 17,
+        "satir": [
+         "Otizm yelpazesi bozukluğu (OYB) erken çocuklukta başlayan ve yaşam boyu devam eden"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-42-c0034",
+       "ses": "Sosyal etkileşim ve iletişimdeki süreğen kısıtlılık ile sınırlı, tekrarlayıcı ve stereotipik davranış örüntüleri iki temel tanı kriteridir.",
+       "ekran": "Sosyal iletişim kısıtlılığı ve tekrarlayıcı davranışlar iki çekirdek alandır.",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": "k2-42-d-s13",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 17,
+        "satir": [
+         "Otizm yelpazesi bozukluğu (OYB) erken çocuklukta başlayan ve yaşam boyu devam eden"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-42-p018",
+     "sayfa": 18,
+     "cumleler": [
+      {
+       "id": "k2-42-c0035",
+       "ses": "Otizm belirtileri tipik olarak on iki ile yirmi dördüncü aylar arasında aileler tarafından fark edilir hale gelir.",
+       "ekran": "Belirtiler sıklıkla 12-24. aylar arasında belirginleşir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Belirtiler sıklıkla 12-24. aylar",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": "k2-42-d-s13",
+       "cikmis": [
+        "d3-k2-psi-010",
+        "q-25-26_d_nem_3_kurul_2-91-cs2"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 18,
+        "satir": [
+         "Belirtiler genellikle 12-24 aylar arasında başlar,"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-42-c0036",
+       "ses": "Kimi olgularda ilk bir yılda normal gelişim izlenirken, kazanılmış kelimelerin ve sosyal ilginin kaybedildiği gelişimsel regresyon tablosu izlenir.",
+       "ekran": "Kazanılan kelime ve becerilerin kaybedildiği regresyon tablosu görülebilir.",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": "k2-42-d-s13",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 18,
+        "satir": [
+         "Belirtiler genellikle 12-24 aylar arasında başlar,"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-42-p019",
+     "sayfa": 19,
+     "cumleler": [
+      {
+       "id": "k2-42-c0037",
+       "ses": "Erken bebeklik döneminde göz teması kurmama, kucağa alındığında rahatlamama ve sakinleşmekten hoşlanmama önemli ipuçlarıdır.",
+       "ekran": "Göz teması kurmama ve kucakta sakinleşmeme erken bebeklik ipuçlarıdır.",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": "k2-42-d-s14",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 19,
+        "satir": [
+         "Erken bebeklik döneminden başlayarak göz teması kurmadığı,  kucağa alınmak, rahatlatılmak,"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-42-c0038",
+       "ses": "Sosyal gülümsemeye karşılık vermeme ve adına seslenildiğinde sağırmış gibi tepkisiz kalma aileleri sıklıkla işitme testine yönlendirir.",
+       "ekran": "Adına bakmama ve gülümsemeye yanıt vermeme işitme şüphesi doğurur.",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": "k2-42-d-s14",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 19,
+        "satir": [
+         "Erken bebeklik döneminden başlayarak göz teması kurmadığı,  kucağa alınmak, rahatlatılmak,"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-42-p020",
+     "sayfa": 20,
+     "cumleler": [
+      {
+       "id": "k2-42-c0039",
+       "ses": "Küçük yaş grubunda özellikle otuz altı ay öncesinde ortak dikkat eksikliği ve parmakla işaret etmeme en kritik tanısal bulgudur.",
+       "ekran": "36 ay öncesinde ortak dikkat eksikliği en kritik tanısal bulgudur.",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": "k2-42-d-s14",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 20,
+        "satir": [
+         "Küçük yaş grubunda (özellikle 36 ay öncesi) tan koyabilmek için dikkat edilmesi gereken"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-42-c0040",
+       "ses": "Karşılıklı konuşma sesleriyle ritmik etkileşimin olmaması, taklit oyunlarının yokluğu ve ekolali erken dönemin alarm belirtileridir.",
+       "ekran": "Taklit oyunlarının olmaması ve ekolali erken dönem alarm belirtileridir.",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": "k2-42-d-s14",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 20,
+        "satir": [
+         "Küçük yaş grubunda (özellikle 36 ay öncesi) tan koyabilmek için dikkat edilmesi gereken"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-42-p021",
+     "sayfa": 21,
+     "cumleler": [
+      {
+       "id": "k2-42-c0041",
+       "ses": "Otizm spektrum bozukluğunun patogenezinde nörobiyolojik gelişimsel kusurlar ve yüksek kalıtım oranları ön plandadır.",
+       "ekran": "Otizm patogenezinde nörobiyolojik etkenler ve yüksek kalıtım etkilidir.",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": "k2-42-d-s15",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 21,
+        "satir": [
+         "YB’ nin patogenezinde nörobiyolojik ve kalıtım etkenlerinin etkili olduğunu göstermektedir."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-42-c0042",
+       "ses": "İkiz çalışmalarında yüzde seksenin üzerinde kalıtılabilirlik saptanmıştır; aşıların veya ebeveyn tutumlarının otizme yol açmadığı kanıtlanmıştır.",
+       "ekran": "Kalıtılabilirlik yüzde 80 üzerindedir; aşı efsaneleri bilimsel olarak çürütülmüştür.",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": "k2-42-d-s15",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 21,
+        "satir": [
+         "YB’ nin patogenezinde nörobiyolojik ve kalıtım etkenlerinin etkili olduğunu göstermektedir."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-42-p022",
+     "sayfa": 22,
+     "cumleler": [
+      {
+       "id": "k2-42-c0043",
+       "ses": "Otizm sağaltımı çok boyutlu olmak zorundadır; bireye yönelik özel eğitim ve çevresel bağlamın düzenlenmesi iki temel ilkedir.",
+       "ekran": "Otizm sağaltımı çok boyutlu bireysel eğitim ve çevresel desteğe dayanır.",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": "k2-42-d-s15",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 22,
+        "satir": [
+         "Çok boyutlu olmak zorundadır.  İki temel  ilkesi bireye yönelik planlanması ve çevresel"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-42-c0044",
+       "ses": "Çekirdek belirtilere yönelik özgül ilaç yoktur; atipik antipsikotikler eşlik eden irritabilite, kendine zarar verme ve öfke nöbetlerinde kullanılır.",
+       "ekran": "Özgül ilaç yoktur; antipsikotikler irritabilite ve agresyon yönetimindedir.",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": "k2-42-d-s15",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 22,
+        "satir": [
+         "Çok boyutlu olmak zorundadır.  İki temel  ilkesi bireye yönelik planlanması ve çevresel"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-42-b04",
+   "baslik": "Dikkat Eksikliği ve Hiperaktivite Bozukluğu (DEHB)",
+   "paragraflar": [
+    {
+     "id": "k2-42-p023",
+     "sayfa": 23,
+     "cumleler": [
+      {
+       "id": "k2-42-c0045",
+       "ses": "Dikkat eksikliği hiperaktivite bozukluğunun temel belirti triadı dikkatsizlik, aşırı hareketlilik ve dürtüselliktir.",
+       "ekran": "DEHB temel belirtileri dikkatsizlik, aşırı hareketlilik ve dürtüselliktir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "DEHB temel belirtileri dikkatsizlik",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": "k2-42-d-s16",
+       "cikmis": [
+        "q-25-26_d_nem_3_kurul_2-91"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 23,
+        "satir": [
+         "DEAHB temel belirtileri dikkatsizlik, aşırı hareketlilik ve dürtüselliktir."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-42-c0046",
+       "ses": "Bu belirtiler gelişimsel düzeye uygun olmayan şiddette ortaya çıkmalı ve en az altı aydır devam etmelidir.",
+       "ekran": "Belirtiler gelişimsel düzeye uygunsuz olmalı ve en az 6 ay sürmelidir.",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": "k2-42-d-s16",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 23,
+        "satir": [
+         "DEAHB temel belirtileri dikkatsizlik, aşırı hareketlilik ve dürtüselliktir."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-42-p024",
+     "sayfa": 24,
+     "cumleler": [
+      {
+       "id": "k2-42-c0047",
+       "ses": "Dikkatsizlik ve hiperaktivite boyutları üzerinde üç klinik alttür tanımlanmıştır: bileşik tip, dikkatsiz tip ve hiperaktif dürtüsel tip.",
+       "ekran": "Üç klinik alttür tanımlanmıştır: bileşik, dikkatsiz ve hiperaktif tip.",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": "k2-42-d-s16",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 24,
+        "satir": [
+         "Dikkat eksikliği ve dürtüsellik/aşırı hareketlilik olmak üzere iki boyut üzerinde 3 alttür"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-42-c0048",
+       "ses": "Klinikte en sık karşılaşılan alttür hem dikkatsizliğin hem de motor hiperaktivitenin birlikte görüldüğü bileşik tiptir.",
+       "ekran": "En sık görülen alttür bileşik (kombine) tiptir.",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": "k2-42-d-s16",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 24,
+        "satir": [
+         "Dikkat eksikliği ve dürtüsellik/aşırı hareketlilik olmak üzere iki boyut üzerinde 3 alttür"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-42-p025",
+     "sayfa": 25,
+     "cumleler": [
+      {
+       "id": "k2-42-c0049",
+       "ses": "Dünya genelinde yapılan epidemiyolojik çalışmalarda de ha be yaygınlık oranı yaklaşık yüzde altı buçuk olarak belirtilmiştir.",
+       "ekran": "Dünya genelinde DEHB yaygınlık oranı yaklaşık yüzde 6.5 düzeyindedir.",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": "k2-42-d-s16",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 25,
+        "satir": [
+         "Dünya genelinde yapılan çalışmalarda yaygınlık oranı yüzde 6.48 olarak belirtilmiştir."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-42-c0050",
+       "ses": "Ülkemizde bu oran yüzde sekiz civarında saptanmıştır ve erkek çocuklarda kızlara göre belirgin sıklık fazlalığı gösterir.",
+       "ekran": "Türkiye'de oran yüzde 8 civarındadır ve erkeklerde daha sıktır.",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": "k2-42-d-s16",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 25,
+        "satir": [
+         "Dünya genelinde yapılan çalışmalarda yaygınlık oranı yüzde 6.48 olarak belirtilmiştir."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-42-p026",
+     "sayfa": 26,
+     "cumleler": [
+      {
+       "id": "k2-42-c0051",
+       "ses": "Dikkatsizlik boyutu verilen ödevlerden çabuk sıkılma, bir görevi tamamlayamama ve ayrıntılara dikkat edememe ile kendini gösterir.",
+       "ekran": "Dikkatsizlik ödevden çabuk sıkılma ve ayrıntıları kaçırma ile seyreder.",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": "k2-42-d-s17",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 26,
+        "satir": [
+         "Dikkat eksikliği belirtisi, verilen ödevlerden çabuk sıkılma, bir görevi gelişimsel"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-42-c0052",
+       "ses": "Eşyalarını sık sık kaybetme, dalgınlık ve dış uyaranlarla dikkatin kolayca dağılması akademik başarıyı doğrudan zedeler.",
+       "ekran": "Eşya kaybetme, unutkanlık ve çabuk dağılma akademik başarıyı bozar.",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": "k2-42-d-s17",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 26,
+        "satir": [
+         "Dikkat eksikliği belirtisi, verilen ödevlerden çabuk sıkılma, bir görevi gelişimsel"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-42-p027",
+     "sayfa": 27,
+     "cumleler": [
+      {
+       "id": "k2-42-c0053",
+       "ses": "Hiperaktivite ve dürtüsellik boyutunda yerinde duramama, kıpırdanma, sırasını bekleyememe ve söz kesme belirtileri ön plandadır.",
+       "ekran": "Hiperaktivite yerinde duramama, sırasını bekleyememe ve söz kesmeyle belirir.",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": "k2-42-d-s17",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 27,
+        "satir": [
+         "Akademik eksiklikler, okulla ilgili sorunlar ve yaşıtları tarafından umursanmamak dikkatsizlik"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-42-c0054",
+       "ses": "Çocuklar tehlikeli eylemlere sonuçlarını düşünmeden atılabilirler; yaşla birlikte motor hareketlilik azalırken içsel huzursuzluk devam eder.",
+       "ekran": "Dürtüsel davranışlar ve yaşla birlikte içsel huzursuzluğa evrilme görülür.",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": "k2-42-d-s17",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 27,
+        "satir": [
+         "Akademik eksiklikler, okulla ilgili sorunlar ve yaşıtları tarafından umursanmamak dikkatsizlik"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-42-p028",
+     "sayfa": 28,
+     "cumleler": [
+      {
+       "id": "k2-42-c0055",
+       "ses": "De ha be etiyolojisinde çok genli poligenik kalıtım modeli ve yüksek ailevi yatkınlık sorumludur.",
+       "ekran": "Etiyolojide çok genli poligenik model ve yüksek kalıtılabilirlik rol oynar.",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": "k2-42-d-s17",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 28,
+        "satir": [
+         "Katılım : çok genli model"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-42-c0056",
+       "ses": "Prefrontal korteks ile bazal gangliyonlar arasındaki frontostriatal dopamin ve noradrenalin iletim yetersizliği yürütücü işlevleri bozar.",
+       "ekran": "Frontostriatal dopamin ve noradrenalin iletim yetersizliği yürütücü kusur yapar.",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": "k2-42-d-s17",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 28,
+        "satir": [
+         "Katılım : çok genli model"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-42-p029",
+     "sayfa": 29,
+     "cumleler": [
+      {
+       "id": "k2-42-c0057",
+       "ses": "De ha be sağaltımı ilaç tedavisinin yanı sıra psikososyal girişimler ve destekleyici tutumları içerir.",
+       "ekran": "Sağaltım ilaç tedavisi, psikososyal girişimler ve okul desteğini kapsar.",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": "k2-42-d-s17",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 29,
+        "satir": [
+         "İlaç sağlatımın yanı sıra psikososyal girişimler ve destekleyici tutumları içerir."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-42-c0058",
+       "ses": "Farmakoterapide ilk seçenek metilfenidat gibi psikostimülan ilaçlardır; bu ajanlar sinaptik katekolamin düzeyini artırarak dikkati toplar.",
+       "ekran": "İlk tercih psikostimülan metilfenidattır; sinaptik iletimi güçlendirir.",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": "k2-42-d-s17",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 29,
+        "satir": [
+         "İlaç sağlatımın yanı sıra psikososyal girişimler ve destekleyici tutumları içerir."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-42-b05",
+   "baslik": "Özgül Öğrenme Güçlüğü (Disleksi, Disgrafi, Diskalkuli)",
+   "paragraflar": [
+    {
+     "id": "k2-42-p030",
+     "sayfa": 30,
+     "cumleler": [
+      {
+       "id": "k2-42-c0059",
+       "ses": "Özgül öğrenme güçlüğü, bireyin genel zekasında hiçbir sorun olmadığı halde belirli akademik alanlarda kısıtlılık yaşamasıdır.",
+       "ekran": "ÖÖG genel zeka normal olduğu halde özgül bilişsel kısıtlılıkla seyreder.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "ÖÖG genel zeka normal",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": "k2-42-d-s19",
+       "cikmis": [
+        "4b92269c6553"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 30,
+        "satir": [
+         "ÖÖB bireyin özgül bilişsel alanlarda gösterdiği eksikliklerle belirli bir bozukIuktur."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-42-c0060",
+       "ses": "Çocuğun zekası normal veya üstün zeka düzeyinde olmasına karşın okuma, yazılı anlatım veya matematik becerilerinde belirgin açık bulunur.",
+       "ekran": "Normal zekaya rağmen okuma, yazma veya matematikte gelişimsel gerilik vardır.",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": "k2-42-d-s19",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 30,
+        "satir": [
+         "ÖÖB bireyin özgül bilişsel alanlarda gösterdiği eksikliklerle belirli bir bozukIuktur."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-42-p031",
+     "sayfa": 31,
+     "cumleler": [
+      {
+       "id": "k2-42-c0061",
+       "ses": "Okul öncesi dönemde kesin tanı konulmasa da dil gelişiminde gecikme ve tekerlemeleri ezberleyememe erken işaretlerdir.",
+       "ekran": "Okul öncesinde konuşma gecikmesi ve tekerleme öğrenememe erken işarettir.",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": "k2-42-d-s19",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 31,
+        "satir": [
+         "Okul öncesi dönemde her ne kadar ÖÖB tanısı koymak uygun olmasa da bu dönemde de çocuklar"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-42-c0062",
+       "ses": "Renk, şekil, yer ve yön kavramlarını öğrenmede güçlük ile düğme ilikleme gibi motor koordinasyon zayıflığı riski düşündürür.",
+       "ekran": "Kavram öğrenme güçlüğü ve ince motor sakarlık erken risk sinyalidir.",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": "k2-42-d-s19",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 31,
+        "satir": [
+         "Okul öncesi dönemde her ne kadar ÖÖB tanısı koymak uygun olmasa da bu dönemde de çocuklar"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-42-p032",
+     "sayfa": 32,
+     "cumleler": [
+      {
+       "id": "k2-42-c0063",
+       "ses": "Okul çağına gelindiğinde akademik sorunlar belirgin hale gelir ve en sık başvuru da ilkokul döneminde gerçekleşir.",
+       "ekran": "Okul çağına gelindiğinde akademik sorunlar belirginleşir ve başvuru artar.",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": "k2-42-d-s19",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 32,
+        "satir": [
+         "Okul çağına gelindiğinde akademik sorunlar belirgin hale gelir ve en çok başvuru da bu"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-42-c0064",
+       "ses": "Harf ve sesleri karıştırma, be ile de veya pe ile kü gibi simetrik harfleri ters okuma disleksi tablosunu kurar.",
+       "ekran": "Harfleri karıştırma, simetrik harfleri ters okuma disleksiyi kurar.",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": "k2-42-d-s19",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 32,
+        "satir": [
+         "Okul çağına gelindiğinde akademik sorunlar belirgin hale gelir ve en çok başvuru da bu"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-42-p033",
+     "sayfa": 33,
+     "cumleler": [
+      {
+       "id": "k2-42-c0065",
+       "ses": "Disgrafi kelimelerin okunaksız yazılması, harf atlama, heceleme ve gramer kurallarını uygulayamama ile karakterizedir.",
+       "ekran": "Disgrafi okunaksız yazı, harf atlama ve yazılı ifade kusurudur.",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": "k2-42-d-s20",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 33,
+        "satir": [
+         "Kavramlarla ilgili güçlükler sürebilir, yer, yön ve zaman saptamada sorun yaşayabilirler."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-42-c0066",
+       "ses": "Diskalkuli ise sayı kavramını anlayamama, dört işlem sembollerini karıştırma ve saat-zaman saptamada yaşanan güçlükleri tanımlar.",
+       "ekran": "Diskalkuli sayı algısı, dört işlem ve saat kavramı yetersizliğidir.",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": "k2-42-d-s20",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 33,
+        "satir": [
+         "Kavramlarla ilgili güçlükler sürebilir, yer, yön ve zaman saptamada sorun yaşayabilirler."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-42-p034",
+     "sayfa": 34,
+     "cumleler": [
+      {
+       "id": "k2-42-c0067",
+       "ses": "Tanı sürecinde klinik görüşme esastır; zihinsel yetersizliği dışlamak için visk re zeka testi mutlaka uygulanır.",
+       "ekran": "Klinik görüşme esastır; zihinsel yetersizliği dışlamak için WISC-R yapılır.",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": "k2-42-d-s20",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 34,
+        "satir": [
+         "Zekâ testleri (WISC-R) ve bazı özel yetenek testleri (Bender-Gestalt, Benton, Harris vb.) tanıda"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-42-c0068",
+       "ses": "Ayrıca görsel-motor algıyı ve belleği değerlendirmek amacıyla Bender Geştalt ve Benton testleri yardımcı araç olarak kullanılır.",
+       "ekran": "Bender-Gestalt ve Benton testleri nöropsikolojik olgunlaşmayı değerlendirir.",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": "k2-42-d-s20",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 34,
+        "satir": [
+         "Zekâ testleri (WISC-R) ve bazı özel yetenek testleri (Bender-Gestalt, Benton, Harris vb.) tanıda"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-42-p035",
+     "sayfa": 35,
+     "cumleler": [
+      {
+       "id": "k2-42-c0069",
+       "ses": "Günümüzde özgül öğrenme güçlüğünün sağaltımında etkinliği kanıtlanmış bir ilaç tedavisi bulunmamaktadır.",
+       "ekran": "Özgül öğrenme güçlüğünde kanıtlanmış bir ilaç tedavisi yoktur.",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": "k2-42-d-s20",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 35,
+        "satir": [
+         "Günümüzde ÖÖB’ nin sağlatımında etkililiği kanıtlanmış bir ilaç tedavisi yoktur."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-42-c0070",
+       "ses": "Temel yaklaşımı bireysel özel eğitim programları, fonolojik farkındalık çalışmaları ve nöropsikolojik destek oluşturur.",
+       "ekran": "Temel yaklaşım bireysel özel eğitim ve fonolojik farkındalık çalışmalarıdır.",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": "k2-42-d-s20",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 35,
+        "satir": [
+         "Günümüzde ÖÖB’ nin sağlatımında etkililiği kanıtlanmış bir ilaç tedavisi yoktur."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-42-b06",
+   "baslik": "Tik Bozuklukları ve Tourette Bozukluğu",
+   "paragraflar": [
+    {
+     "id": "k2-42-p036",
+     "sayfa": 36,
+     "cumleler": [
+      {
+       "id": "k2-42-c0071",
+       "ses": "Tikler kas kasılması sonucu oluşan ani, hızlı, yineleyici ve ritmik olmayan motor hareketler ya da ses çıkarmalardır.",
+       "ekran": "Tikler ani, hızlı, yineleyici ve ritmik olmayan kas kasılmalarıdır.",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": "k2-42-d-s21",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 36,
+        "satir": [
+         "Tikler kas kasılması sonucu oluşan anı, hızlı, yineleyici ve ritmik olmayan motor hareketler ya"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-42-c0072",
+       "ses": "Göz kırpma ve boyun silkme gibi motor tikler olabileceği gibi boğaz temizleme ve burun çekme gibi vokal tikler de görülebilir.",
+       "ekran": "Motor tikler (göz kırpma) ve vokal tikler (boğaz temizleme) şeklinde ayrılır.",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": "k2-42-d-s21",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 36,
+        "satir": [
+         "Tikler kas kasılması sonucu oluşan anı, hızlı, yineleyici ve ritmik olmayan motor hareketler ya"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-42-p037",
+     "sayfa": 37,
+     "cumleler": [
+      {
+       "id": "k2-42-c0073",
+       "ses": "Tikleri diğer hareket bozukluklarından ayıran en önemli özellik istemli olarak kısa bir süre için baskılanabilmeleridir.",
+       "ekran": "Tikler diğer istemsiz hareketlerden farklı olarak kısa süre istemli tutulabilir.",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": "k2-42-d-s21",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 37,
+        "satir": [
+         "Tikleri çocukluk çağındaki  diğer hareket bozukluklarından ayıran bazı özellikler vardır."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-42-c0074",
+       "ses": "Tik öncesinde hissedilen içsel gerginlik premonitör dürtü olarak adlandırılır; stresle alevlenirken dikkati odaklama ve uykuda belirgin azalır.",
+       "ekran": "Premonitör dürtü içerir; stresle alevlenir ve uykuda belirgin azalır.",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": "k2-42-d-s21",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 37,
+        "satir": [
+         "Tikleri çocukluk çağındaki  diğer hareket bozukluklarından ayıran bazı özellikler vardır."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-42-p038",
+     "sayfa": 38,
+     "cumleler": [
+      {
+       "id": "k2-42-c0075",
+       "ses": "Turet bozukluğu hem çoklu motor tiklerin hem de en az bir vokal tikin bir arada bulunduğu ve bir yıldan uzun süren tablodur.",
+       "ekran": "Tourette bozukluğu motor ve ses tiklerinin 1 yıldan uzun sürmesidir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Tourette bozukluğu motor ve",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": "k2-42-d-s22",
+       "cikmis": [
+        "past-1790877039267-989167-cs2",
+        "d3-k2-tbg-004",
+        "q-No_ropsikiyatri_gis_kardiyo_-2023-2024-C__km_s_lar__240625_053302__2_-16"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 38,
+        "satir": [
+         "Tourette bozukluğu: Hem motor tikler hem de ses tikleri bir arada bulunur ve bir yIldan uzun süren"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-42-c0076",
+       "ses": "Başlangıç yaşı on sekiz yaşından küçüktür; küfürlü konuşma anlamına gelen koprolali tanı için şart değildir ve nadiren görülür.",
+       "ekran": "18 yaş öncesi başlar; koprolali olguların yalnızca yüzde 10-20'sindedir.",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": "k2-42-d-s22",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 38,
+        "satir": [
+         "Tourette bozukluğu: Hem motor tikler hem de ses tikleri bir arada bulunur ve bir yIldan uzun süren"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-42-p039",
+     "sayfa": 39,
+     "cumleler": [
+      {
+       "id": "k2-42-c0077",
+       "ses": "Tik bozukluklarının sağaltımında öncelikle eğitim, aile bilgilendirmesi ve destekleyici yaklaşımlar önem taşır.",
+       "ekran": "Sağaltımda öncelikle psikoedukasyon ve destekleyici yaklaşımlar uygulanır.",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": "k2-42-d-s22",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 39,
+        "satir": [
+         "Öncelikle eğitim ve destekleyici yaklaşımlar  önem taşır."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-42-c0078",
+       "ses": "İşlevsellik ileri derecede bozulduğunda alışkanlığı tersine çevirme terapisi ve alfa iki agonistler ile antipsikotik ilaçlar başlanır.",
+       "ekran": "Ağır olgularda davranış terapisi, alfa-2 agonistler ve antipsikotikler verilir.",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": "k2-42-d-s22",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 39,
+        "satir": [
+         "Öncelikle eğitim ve destekleyici yaklaşımlar  önem taşır."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-42-p040",
+     "sayfa": 40,
+     "cumleler": [
+      {
+       "id": "k2-42-c0079",
+       "ses": "Nörogelişimsel bozukluklar oturumumuzun sonuna geldik; klinik seyrin ve erken müdahalenin önemini vurgulayarak dersimizi tamamlıyoruz.",
+       "ekran": "Nörogelişimsel bozukluklar dersi tamamlanmıştır; teşekkür ederiz.",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": "k2-42-d-s22",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 40,
+        "satir": [
+         "Teşekkürler"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-42-c0080",
+       "ses": "Öğrendiğiniz tüm mekanizmaları ve tanı ölçütlerini pekiştirmek için ders sonu oyunlarını ve özet kartları inceleyiniz.",
+       "ekran": "Klinik bilgileri pekiştirmek için oyun modülünü tamamlayınız.",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": "k2-42-d-s22",
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 40,
+        "satir": [
+         "Teşekkürler"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "anahtar": "y25-k2-42-norogelisimsel-bozukluklar",
+ "donem": "2025-2026"
+}

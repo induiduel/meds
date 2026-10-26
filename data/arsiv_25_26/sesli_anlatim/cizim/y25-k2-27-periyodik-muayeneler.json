@@ -1,0 +1,8156 @@
+{
+ "surum": 1,
+ "metinHash": "5bac58fcfceebffba816b20fca449e8b6cd72d9f",
+ "p": {
+  "0": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Fiziksel iyilik",
+      "Ruhsal iyilik",
+      "Sosyal iyilik"
+     ],
+     "baslik": "Sağlık: tam iyilik hali (DSÖ 1948)",
+     "s": 2,
+     "k": [
+      96,
+      152
+     ],
+     "tip": "liste",
+     "konum": [
+      0.25,
+      0.59
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.308,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ],
+   "5": [
+    {
+     "tur": "sema",
+     "sablon": "neden_sonuc",
+     "sablon_ad": "Neden → sonuç",
+     "duzen": "zincir",
+     "bag": "yol açar",
+     "ogeler": [
+      "Hastalığı oluşmadan önlemek",
+      "Kişi ve sağlık sistemi için daha ucuz"
+     ],
+     "s": 4,
+     "k": [
+      25,
+      157
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.4,
+      0.47
+     ],
+     "genislik": 0.34,
+     "doluluk": 0.0,
+     "kutu_h": 0.323,
+     "yon": "dikey",
+     "olcek": 1.0
+    }
+   ]
+  },
+  "1": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Sosyal ve çevresel koşulları değiştirme",
+      "Yüksek riskli çocuk, ergen ve gençlere danışmanlık",
+      "Sağlıklı yaşam biçimi geliştirme"
+     ],
+     "baslik": "Primordiyal korumada yapılanlar",
+     "s": 5,
+     "k": [
+      0,
+      181
+     ],
+     "tip": "liste",
+     "konum": [
+      0.05,
+      0.7
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.308,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.028,
+     "ek_renk": "#ffffff"
+    }
+   ],
+   "5": [
+    {
+     "tur": "sema",
+     "sablon": "mekanizma_adimlari",
+     "sablon_ad": "Mekanizma basamakları",
+     "duzen": "zincir",
+     "ogeler": [
+      "Klinik öncesi hastalık taramayla saptanır",
+      "Erken tanı ve tedavi",
+      "Ciddi sonuçlar önlenir"
+     ],
+     "s": 7,
+     "k": [
+      0,
+      73
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.05,
+      0.86
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.35,
+     "yon": "dikey",
+     "olcek": 1.0,
+     "ek_alt": 0.2296,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "2": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "neden_sonuc",
+     "sablon_ad": "Neden → sonuç",
+     "duzen": "zincir",
+     "bag": "yol açar",
+     "ogeler": [
+      "Önce zarar vermeme ilkesi",
+      "İyatrojenik zarardan kaçınma"
+     ],
+     "s": 9,
+     "k": [
+      27,
+      119
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.54,
+      0.03
+     ],
+     "genislik": 0.34,
+     "doluluk": 0.0,
+     "kutu_h": 0.283,
+     "yon": "dikey",
+     "olcek": 1.0
+    }
+   ],
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "mekanizma_adimlari",
+     "sablon_ad": "Mekanizma basamakları",
+     "duzen": "zincir",
+     "ogeler": [
+      "Tanı ve tedavi aşamaları hastaya zarar verebilir",
+      "Aile hekiminin hastayı koruma sorumluluğu",
+      "Dördüncül koruma kavramı"
+     ],
+     "s": 9,
+     "k": [
+      0,
+      260
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.05,
+      0.9
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.35,
+     "yon": "dikey",
+     "olcek": 1.0,
+     "ek_alt": 0.2696,
+     "ek_renk": "#ffffff"
+    }
+   ],
+   "3": [
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.132,
+       0.122
+      ],
+      [
+       0.35,
+       0.122
+      ],
+      [
+       0.56,
+       0.122
+      ],
+      [
+       0.78,
+       0.122
+      ],
+      [
+       0.955,
+       0.122
+      ],
+      [
+       0.955,
+       0.197
+      ],
+      [
+       0.78,
+       0.197
+      ],
+      [
+       0.56,
+       0.197
+      ],
+      [
+       0.35,
+       0.197
+      ],
+      [
+       0.132,
+       0.197
+      ]
+     ],
+     "etiket": "hastalık yok / var",
+     "s": 10,
+     "k": [
+      69,
+      92
+     ],
+     "etiket_konum": [
+      0.22,
+      0.48
+     ],
+     "etiket_genislik": 0.264,
+     "etiket_hedef": [
+      0.3522,
+      0.197
+     ],
+     "etiket_boy": 0.0443
+    },
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.076,
+       0.2
+      ],
+      [
+       0.131,
+       0.2
+      ],
+      [
+       0.131,
+       0.4
+      ],
+      [
+       0.131,
+       0.578
+      ],
+      [
+       0.131,
+       0.78
+      ],
+      [
+       0.131,
+       0.953
+      ],
+      [
+       0.076,
+       0.953
+      ],
+      [
+       0.076,
+       0.78
+      ],
+      [
+       0.076,
+       0.578
+      ],
+      [
+       0.076,
+       0.4
+      ]
+     ],
+     "etiket": "hastanın bakışı",
+     "s": 10,
+     "k": [
+      96,
+      126
+     ],
+     "etiket_konum": [
+      0.143,
+      0.5543
+     ],
+     "etiket_genislik": 0.226,
+     "yakin": [
+      0.016,
+      0.14,
+      0.429,
+      1
+     ]
+    }
+   ],
+   "4": [
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.132,
+       0.2
+      ],
+      [
+       0.35,
+       0.2
+      ],
+      [
+       0.56,
+       0.2
+      ],
+      [
+       0.56,
+       0.39
+      ],
+      [
+       0.56,
+       0.578
+      ],
+      [
+       0.35,
+       0.578
+      ],
+      [
+       0.132,
+       0.578
+      ],
+      [
+       0.132,
+       0.39
+      ]
+     ],
+     "etiket": "birincil koruma",
+     "s": 10,
+     "k": [
+      7,
+      150
+     ],
+     "etiket_konum": [
+      0.37,
+      0.23
+     ],
+     "etiket_genislik": 0.226,
+     "yakin": [
+      0.072,
+      0.14,
+      0.656,
+      0.638
+     ]
+    },
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.56,
+       0.2
+      ],
+      [
+       0.76,
+       0.2
+      ],
+      [
+       0.955,
+       0.2
+      ],
+      [
+       0.955,
+       0.39
+      ],
+      [
+       0.955,
+       0.578
+      ],
+      [
+       0.76,
+       0.578
+      ],
+      [
+       0.56,
+       0.578
+      ],
+      [
+       0.56,
+       0.39
+      ]
+     ],
+     "etiket": "ikincil koruma",
+     "s": 10,
+     "k": [
+      151,
+      230
+     ],
+     "etiket_konum": [
+      0.765,
+      0.23
+     ],
+     "etiket_genislik": 0.214,
+     "yakin": [
+      0.5,
+      0.14,
+      1,
+      0.638
+     ]
+    }
+   ],
+   "5": [
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.132,
+       0.578
+      ],
+      [
+       0.35,
+       0.578
+      ],
+      [
+       0.56,
+       0.578
+      ],
+      [
+       0.56,
+       0.77
+      ],
+      [
+       0.56,
+       0.953
+      ],
+      [
+       0.35,
+       0.953
+      ],
+      [
+       0.132,
+       0.953
+      ],
+      [
+       0.132,
+       0.77
+      ]
+     ],
+     "etiket": "dördüncül koruma",
+     "s": 10,
+     "k": [
+      0,
+      86
+     ],
+     "etiket_konum": [
+      0.61,
+      0.518
+     ],
+     "etiket_genislik": 0.239,
+     "etiket_hedef": [
+      0.56,
+      0.578
+     ],
+     "etiket_boy": 0.0443
+    },
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.56,
+       0.578
+      ],
+      [
+       0.76,
+       0.578
+      ],
+      [
+       0.955,
+       0.578
+      ],
+      [
+       0.955,
+       0.77
+      ],
+      [
+       0.955,
+       0.953
+      ],
+      [
+       0.76,
+       0.953
+      ],
+      [
+       0.56,
+       0.953
+      ],
+      [
+       0.56,
+       0.77
+      ]
+     ],
+     "etiket": "üçüncül koruma",
+     "s": 10,
+     "k": [
+      87,
+      216
+     ],
+     "etiket_konum": [
+      0.765,
+      0.578
+     ],
+     "etiket_genislik": 0.214,
+     "yakin": [
+      0.5,
+      0.518,
+      1,
+      1
+     ]
+    }
+   ],
+   "6": [
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.165,
+       0.358
+      ],
+      [
+       0.22,
+       0.358
+      ],
+      [
+       0.276,
+       0.358
+      ],
+      [
+       0.281,
+       0.385
+      ],
+      [
+       0.281,
+       0.44
+      ],
+      [
+       0.276,
+       0.467
+      ],
+      [
+       0.22,
+       0.467
+      ],
+      [
+       0.165,
+       0.467
+      ],
+      [
+       0.159,
+       0.44
+      ],
+      [
+       0.159,
+       0.385
+      ]
+     ],
+     "etiket": "primordiyal koruma dönemi",
+     "s": 11,
+     "k": [
+      33,
+      76
+     ],
+     "etiket_konum": [
+      0.271,
+      0.298
+     ],
+     "etiket_genislik": 0.353
+    },
+    {
+     "tur": "akis",
+     "a": [
+      0.322,
+      0.584
+     ],
+     "b": [
+      0.322,
+      0.436
+     ],
+     "iliski": "aktive",
+     "etiket": "birincil koruma: sağlam dönem",
+     "s": 11,
+     "k": [
+      77,
+      107
+     ],
+     "yol": [
+      [
+       0.322,
+       0.584
+      ],
+      [
+       0.3272,
+       0.5748
+      ],
+      [
+       0.3317,
+       0.5655
+      ],
+      [
+       0.3355,
+       0.5563
+      ],
+      [
+       0.3387,
+       0.547
+      ],
+      [
+       0.3411,
+       0.5378
+      ],
+      [
+       0.3428,
+       0.5285
+      ],
+      [
+       0.3439,
+       0.5192
+      ],
+      [
+       0.3442,
+       0.51
+      ],
+      [
+       0.3439,
+       0.5008
+      ],
+      [
+       0.3428,
+       0.4915
+      ],
+      [
+       0.3411,
+       0.4823
+      ],
+      [
+       0.3387,
+       0.473
+      ],
+      [
+       0.3355,
+       0.4637
+      ],
+      [
+       0.3317,
+       0.4545
+      ],
+      [
+       0.3272,
+       0.4452
+      ],
+      [
+       0.322,
+       0.436
+      ]
+     ],
+     "rota": "kavis",
+     "etiket_konum": [
+      0.322,
+      0.674
+     ],
+     "etiket_genislik": 0.404,
+     "etiket_hedef": [
+      0.332,
+      0.446
+     ],
+     "etiket_boy": 0.0443
+    }
+   ],
+   "7": [
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.368,
+       0.358
+      ],
+      [
+       0.424,
+       0.358
+      ],
+      [
+       0.48,
+       0.358
+      ],
+      [
+       0.485,
+       0.385
+      ],
+      [
+       0.485,
+       0.44
+      ],
+      [
+       0.48,
+       0.467
+      ],
+      [
+       0.424,
+       0.467
+      ],
+      [
+       0.368,
+       0.467
+      ],
+      [
+       0.3625,
+       0.44
+      ],
+      [
+       0.3625,
+       0.385
+      ]
+     ],
+     "etiket": "ikincil koruma dönemi",
+     "s": 11,
+     "k": [
+      0,
+      47
+     ],
+     "etiket_konum": [
+      0.475,
+      0.238
+     ],
+     "etiket_genislik": 0.302,
+     "etiket_hedef": [
+      0.485,
+      0.358
+     ],
+     "etiket_boy": 0.0443
+    },
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.572,
+       0.358
+      ],
+      [
+       0.63,
+       0.358
+      ],
+      [
+       0.683,
+       0.358
+      ],
+      [
+       0.776,
+       0.358
+      ],
+      [
+       0.83,
+       0.358
+      ],
+      [
+       0.887,
+       0.358
+      ],
+      [
+       0.8925,
+       0.385
+      ],
+      [
+       0.8925,
+       0.44
+      ],
+      [
+       0.887,
+       0.467
+      ],
+      [
+       0.83,
+       0.467
+      ],
+      [
+       0.776,
+       0.467
+      ],
+      [
+       0.683,
+       0.467
+      ],
+      [
+       0.63,
+       0.467
+      ],
+      [
+       0.572,
+       0.467
+      ],
+      [
+       0.566,
+       0.44
+      ],
+      [
+       0.566,
+       0.385
+      ]
+     ],
+     "etiket": "üçüncül koruma dönemi",
+     "s": 11,
+     "k": [
+      48,
+      113
+     ],
+     "etiket_konum": [
+      0.6025,
+      0.448
+     ],
+     "etiket_genislik": 0.302,
+     "yakin": [
+      0.506,
+      0.298,
+      0.9645,
+      0.548
+     ]
+    }
+   ]
+  },
+  "4": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Erken tanıya imkan vermek",
+      "Riski azaltacak önlemleri zamanında almak"
+     ],
+     "baslik": "Periyodik muayenede önemli olan",
+     "s": 14,
+     "k": [
+      165,
+      251
+     ],
+     "tip": "liste",
+     "konum": [
+      0.05,
+      0.76
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.253,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.0326,
+     "ek_renk": "#ffffff"
+    }
+   ],
+   "4": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Tarama",
+      "Muayene",
+      "Danışmanlık",
+      "Aşılama",
+      "Tetkikler"
+     ],
+     "baslik": "Periyodik muayenenin araçları",
+     "s": 16,
+     "k": [
+      62,
+      158
+     ],
+     "tip": "liste",
+     "konum": [
+      0.03,
+      0.94
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.419,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.3789,
+     "ek_renk": "#ffffff"
+    }
+   ],
+   "7": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Gebede folik asit",
+      "Bebekte demir ve D vitamini"
+     ],
+     "baslik": "Kemoprofilaksi örnekleri",
+     "s": 17,
+     "k": [
+      39,
+      140
+     ],
+     "tip": "liste",
+     "konum": [
+      0.36,
+      0.25
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.253,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ]
+  },
+  "6": {
+   "0": [
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.3625,
+       0.1667
+      ],
+      [
+       0.4656,
+       0.1667
+      ],
+      [
+       0.5687,
+       0.1667
+      ],
+      [
+       0.5687,
+       0.1992
+      ],
+      [
+       0.5687,
+       0.2317
+      ],
+      [
+       0.4656,
+       0.2317
+      ],
+      [
+       0.3625,
+       0.2317
+      ],
+      [
+       0.3625,
+       0.1992
+      ]
+     ],
+     "etiket": "erkek adaydan onam ve kan",
+     "s": 21,
+     "k": [
+      50,
+      189
+     ],
+     "etiket_konum": [
+      0.5787,
+      0.1267
+     ],
+     "etiket_genislik": 0.353,
+     "yakin": [
+      0.3025,
+      0.0667,
+      0.9917,
+      0.2917
+     ]
+    }
+   ],
+   "1": [
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.235,
+       0.365
+      ],
+      [
+       0.3187,
+       0.365
+      ],
+      [
+       0.4025,
+       0.365
+      ],
+      [
+       0.4025,
+       0.3875
+      ],
+      [
+       0.4025,
+       0.41
+      ],
+      [
+       0.3187,
+       0.41
+      ],
+      [
+       0.235,
+       0.41
+      ],
+      [
+       0.235,
+       0.3875
+      ]
+     ],
+     "etiket": "normal: takipten çıkar",
+     "s": 21,
+     "k": [
+      0,
+      76
+     ],
+     "etiket_konum": [
+      0.1125,
+      0.395
+     ],
+     "etiket_genislik": 0.315,
+     "yakin": [
+      0.0525,
+      0.305,
+      0.4875,
+      0.495
+     ]
+    },
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.485,
+       0.3617
+      ],
+      [
+       0.6038,
+       0.3617
+      ],
+      [
+       0.7225,
+       0.3617
+      ],
+      [
+       0.7225,
+       0.3917
+      ],
+      [
+       0.7225,
+       0.4217
+      ],
+      [
+       0.6038,
+       0.4217
+      ],
+      [
+       0.485,
+       0.4217
+      ],
+      [
+       0.485,
+       0.3917
+      ]
+     ],
+     "etiket": "kadın eşten de kan",
+     "s": 21,
+     "k": [
+      77,
+      148
+     ],
+     "etiket_konum": [
+      0.6325,
+      0.3017
+     ],
+     "etiket_genislik": 0.264,
+     "yakin": [
+      0.425,
+      0.2417,
+      0.9565,
+      0.4817
+     ]
+    }
+   ],
+   "2": [
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.5025,
+       0.5433
+      ],
+      [
+       0.6031,
+       0.5433
+      ],
+      [
+       0.7037,
+       0.5433
+      ],
+      [
+       0.7037,
+       0.5933
+      ],
+      [
+       0.7037,
+       0.6433
+      ],
+      [
+       0.6031,
+       0.6433
+      ],
+      [
+       0.5025,
+       0.6433
+      ],
+      [
+       0.5025,
+       0.5933
+      ]
+     ],
+     "etiket": "hematoloji/dahiliyeye sevk",
+     "s": 21,
+     "k": [
+      0,
+      106
+     ],
+     "etiket_konum": [
+      0.1248,
+      0.599
+     ],
+     "etiket_genislik": 0.366,
+     "yakin": [
+      0.0648,
+      0.4833,
+      0.7637,
+      0.7033
+     ]
+    },
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.5025,
+       0.6717
+      ],
+      [
+       0.605,
+       0.6717
+      ],
+      [
+       0.7075,
+       0.6717
+      ],
+      [
+       0.7075,
+       0.7375
+      ],
+      [
+       0.7075,
+       0.8033
+      ],
+      [
+       0.605,
+       0.8033
+      ],
+      [
+       0.5025,
+       0.8033
+      ],
+      [
+       0.5025,
+       0.7375
+      ]
+     ],
+     "etiket": "genetik merkeze yönlendirme",
+     "s": 21,
+     "k": [
+      107,
+      198
+     ],
+     "etiket_konum": [
+      0.1121,
+      0.6717
+     ],
+     "etiket_genislik": 0.378,
+     "yakin": [
+      0.0521,
+      0.6117,
+      0.7675,
+      0.8633
+     ]
+    }
+   ],
+   "3": [
+    {
+     "tur": "sema",
+     "sablon": "neden_sonuc",
+     "sablon_ad": "Neden → sonuç",
+     "duzen": "zincir",
+     "bag": "yol açar",
+     "ogeler": [
+      "Ön boynuz motor nöron kaybı",
+      "Kas atrofisi ve güçsüzlüğü"
+     ],
+     "s": 22,
+     "k": [
+      89,
+      198
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.05,
+      0.83
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.186,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.0363,
+     "ek_renk": "#ffffff"
+    }
+   ],
+   "5": [
+    {
+     "tur": "sema",
+     "sablon": "olcut_deger",
+     "sablon_ad": "Ölçüt ve değeri",
+     "duzen": "tablo",
+     "basliklar": [
+      "Ölçüt",
+      "Değer"
+     ],
+     "satirlar": [
+      [
+       "Taşıyıcılık insidansı",
+       "1/11.000"
+      ],
+      [
+       "Yıllık yeni vaka (Türkiye)",
+       "130–180 (ortalama 150)"
+      ]
+     ],
+     "s": 22,
+     "k": [
+      0,
+      173
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.05,
+      0.83
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.253,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.1026,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "7": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "olcut_deger",
+     "sablon_ad": "Ölçüt ve değeri",
+     "duzen": "tablo",
+     "basliklar": [
+      "Ölçüt",
+      "Değer"
+     ],
+     "satirlar": [
+      [
+       "Her gebelikte hasta bebek olasılığı",
+       "%25"
+      ],
+      [
+       "Belirtisiz taşıyıcı çocuk oranı",
+       "%50"
+      ]
+     ],
+     "s": 23,
+     "k": [
+      47,
+      215
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.03,
+      0.91
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.253,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.1826,
+     "ek_renk": "#ffffff"
+    }
+   ],
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "mekanizma_adimlari",
+     "sablon_ad": "Mekanizma basamakları",
+     "duzen": "zincir",
+     "ogeler": [
+      "İki taşıyıcı çifti evlilik öncesi belirleme",
+      "Ailelere genetik danışma",
+      "Uzun dönem morbidite ve mortalitede azalma"
+     ],
+     "s": 23,
+     "k": [
+      39,
+      179
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.03,
+      0.91
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.35,
+     "yon": "dikey",
+     "olcek": 1.0,
+     "ek_alt": 0.2796,
+     "ek_renk": "#ffffff"
+    }
+   ],
+   "4": [
+    {
+     "tur": "sema",
+     "sablon": "karar",
+     "sablon_ad": "Karar dalı",
+     "duzen": "dal",
+     "soru": "Erkek eş adayında şüpheli sonuç?",
+     "dallar": [
+      [
+       "Yok",
+       "Takipten çıkarılır"
+      ],
+      [
+       "Var",
+       "Kadın eş adayına da tarama testi"
+      ]
+     ],
+     "s": 24,
+     "k": [
+      0,
+      110
+     ],
+     "tip": "dal",
+     "konum": [
+      0.33,
+      0.6
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.314,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ],
+   "5": [
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.2087,
+       0.1683
+      ],
+      [
+       0.3225,
+       0.1683
+      ],
+      [
+       0.4363,
+       0.1683
+      ],
+      [
+       0.4363,
+       0.1908
+      ],
+      [
+       0.4363,
+       0.2133
+      ],
+      [
+       0.3225,
+       0.2133
+      ],
+      [
+       0.2087,
+       0.2133
+      ],
+      [
+       0.2087,
+       0.1908
+      ]
+     ],
+     "etiket": "erkekten onam ve kan",
+     "s": 25,
+     "k": [
+      83,
+      132
+     ],
+     "etiket_konum": [
+      0.1463,
+      0.1283
+     ],
+     "etiket_genislik": 0.29,
+     "yakin": [
+      0.0863,
+      0.0683,
+      0.4963,
+      0.2733
+     ]
+    },
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.5088,
+       0.1683
+      ],
+      [
+       0.6212,
+       0.1683
+      ],
+      [
+       0.7338,
+       0.1683
+      ],
+      [
+       0.7338,
+       0.1908
+      ],
+      [
+       0.7338,
+       0.2133
+      ],
+      [
+       0.6212,
+       0.2133
+      ],
+      [
+       0.5088,
+       0.2133
+      ],
+      [
+       0.5088,
+       0.1908
+      ]
+     ],
+     "etiket": "barkodlama ve sisteme giriş",
+     "s": 25,
+     "k": [
+      133,
+      208
+     ],
+     "etiket_konum": [
+      0.5438,
+      0.0483
+     ],
+     "etiket_genislik": 0.378,
+     "etiket_hedef": [
+      0.733,
+      0.1683
+     ],
+     "etiket_boy": 0.0443,
+     "yakin": [
+      0.4488,
+      0,
+      0.9818,
+      0.2733
+     ]
+    }
+   ],
+   "6": [
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.545,
+       0.5317
+      ],
+      [
+       0.6406,
+       0.5317
+      ],
+      [
+       0.7362,
+       0.5317
+      ],
+      [
+       0.7362,
+       0.5567
+      ],
+      [
+       0.7362,
+       0.5817
+      ],
+      [
+       0.6406,
+       0.5817
+      ],
+      [
+       0.545,
+       0.5817
+      ],
+      [
+       0.545,
+       0.5567
+      ]
+     ],
+     "etiket": "kadın eş adayından kan",
+     "s": 25,
+     "k": [
+      0,
+      51
+     ],
+     "etiket_konum": [
+      0.545,
+      0.4754
+     ],
+     "etiket_genislik": 0.315,
+     "yakin": [
+      0.485,
+      0.4154,
+      0.92,
+      0.6417
+     ]
+    },
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.4788,
+       0.8033
+      ],
+      [
+       0.5813,
+       0.8033
+      ],
+      [
+       0.6837,
+       0.8033
+      ],
+      [
+       0.6837,
+       0.8742
+      ],
+      [
+       0.6837,
+       0.945
+      ],
+      [
+       0.5813,
+       0.945
+      ],
+      [
+       0.4788,
+       0.945
+      ],
+      [
+       0.4788,
+       0.8742
+      ]
+     ],
+     "etiket": "bilgilendirme, kayıt, takip",
+     "s": 25,
+     "k": [
+      52,
+      159
+     ],
+     "etiket_konum": [
+      0.5937,
+      0.8933
+     ],
+     "etiket_genislik": 0.378,
+     "yakin": [
+      0.4188,
+      0.7433,
+      1,
+      1
+     ]
+    }
+   ]
+  },
+  "8": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "neden_sonuc",
+     "sablon_ad": "Neden → sonuç",
+     "duzen": "zincir",
+     "bag": "yol açar",
+     "ogeler": [
+      "Nöral tüp gebeliğin çok erken döneminde kapanır",
+      "Folik asit gebelikten önce başlanmalı"
+     ],
+     "s": 27,
+     "k": [
+      0,
+      82
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.31,
+      0.47
+     ],
+     "genislik": 0.34,
+     "doluluk": 0.0,
+     "kutu_h": 0.363,
+     "yon": "dikey",
+     "olcek": 1.0
+    }
+   ]
+  },
+  "10": {
+   "0": [
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.444,
+       0.175
+      ],
+      [
+       0.605,
+       0.175
+      ],
+      [
+       0.765,
+       0.175
+      ],
+      [
+       0.765,
+       0.25
+      ],
+      [
+       0.765,
+       0.325
+      ],
+      [
+       0.605,
+       0.325
+      ],
+      [
+       0.444,
+       0.325
+      ],
+      [
+       0.444,
+       0.25
+      ]
+     ],
+     "etiket": "ikinci izlem: 18-24. hafta",
+     "s": 32,
+     "k": [
+      26,
+      126
+     ],
+     "etiket_konum": [
+      0.575,
+      0.055
+     ],
+     "etiket_genislik": 0.366,
+     "etiket_hedef": [
+      0.7579,
+      0.175
+     ],
+     "etiket_boy": 0.0443,
+     "yakin": [
+      0.384,
+      0,
+      1,
+      0.385
+     ]
+    }
+   ],
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "tani_tetkik",
+     "sablon_ad": "Durum → bakılacak tetkik",
+     "duzen": "tablo",
+     "basliklar": [
+      "Durum / şüphe",
+      "Bakılacak tetkik"
+     ],
+     "satirlar": [
+      [
+       "Down sendromu, nöral tüp defekti, trizomi 18",
+       "üçlü test: AFP, estriol, hCG (16-20. hafta)"
+      ]
+     ],
+     "s": 33,
+     "k": [
+      36,
+      179
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.05,
+      0.89
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.236,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.1456,
+     "ek_renk": "#ffffff"
+    }
+   ],
+   "4": [
+    {
+     "tur": "sema",
+     "sablon": "gebelik_haftasi_tarama",
+     "sablon_ad": "Gebelik haftası → yapılan tarama",
+     "duzen": "tablo",
+     "basliklar": [
+      "Gebelik haftası",
+      "Tarama / uygulama"
+     ],
+     "satirlar": [
+      [
+       "16-20. hafta",
+       "üçlü test"
+      ],
+      [
+       "18-22. hafta",
+       "ayrıntılı USG ile fetal anomali taraması"
+      ],
+      [
+       "24-28. hafta",
+       "75 g glukoz ile gestasyonel diyabet taraması"
+      ]
+     ],
+     "s": 33,
+     "k": [
+      0,
+      125
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.03,
+      0.91
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.35,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.2796,
+     "ek_renk": "#ffffff"
+    }
+   ],
+   "8": [
+    {
+     "tur": "sema",
+     "sablon": "algoritma",
+     "sablon_ad": "Yaklaşım basamakları",
+     "duzen": "adimlar",
+     "ogeler": [
+      "Rh uygunsuzluğu varsa indirekt Coombs testi",
+      "İndirekt Coombs negatif: anne henüz duyarlanmamış",
+      "Anti-D immünglobulin yapılır"
+     ],
+     "s": 35,
+     "k": [
+      0,
+      114
+     ],
+     "tip": "adimlar",
+     "konum": [
+      0.26,
+      0.43
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.299,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ]
+  },
+  "9": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "kan basıncı takibi",
+      "Rh uyuşmazlığı için kan grubu tayini",
+      "demir eksikliği taraması",
+      "hepatit B testi"
+     ],
+     "baslik": "İlk izlemde yapılanlar",
+     "s": 30,
+     "k": [
+      0,
+      129
+     ],
+     "tip": "liste",
+     "konum": [
+      0.05,
+      0.73
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.363,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.1134,
+     "ek_renk": "#ffffff"
+    }
+   ],
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "tani_tetkik",
+     "sablon_ad": "Durum → bakılacak tetkik",
+     "duzen": "tablo",
+     "basliklar": [
+      "Durum / şüphe",
+      "Bakılacak tetkik"
+     ],
+     "satirlar": [
+      [
+       "bakteriüri, proteinüri",
+       "idrar tahlili"
+      ]
+     ],
+     "s": 30,
+     "k": [
+      7,
+      56
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.17,
+      0.73
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.236,
+     "yon": "yatay",
+     "olcek": 1.0
+    },
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "toksoplazmozis",
+      "rubella",
+      "sitomegalovirüs",
+      "herpes simpleks virüs"
+     ],
+     "baslik": "TORCH enfeksiyon taraması",
+     "s": 30,
+     "k": [
+      69,
+      173
+     ],
+     "tip": "liste",
+     "konum": [
+      0.05,
+      0.73
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.363,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.1134,
+     "ek_renk": "#ffffff"
+    }
+   ],
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "tani_tetkik",
+     "sablon_ad": "Durum → bakılacak tetkik",
+     "duzen": "tablo",
+     "basliklar": [
+      "Durum / şüphe",
+      "Bakılacak tetkik"
+     ],
+     "satirlar": [
+      [
+       "kromozomal anomali (11-14. hafta)",
+       "ikili test: USG ense kalınlığı, PAPP-A, beta hCG"
+      ]
+     ],
+     "s": 31,
+     "k": [
+      37,
+      208
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.05,
+      0.81
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.236,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.0656,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "11": {
+   "3": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Gebelik haftası ile uterus büyüklüğü uygunluğu",
+      "Prezente olan kısmın obstetrik değerlendirmesi",
+      "Emzirmeye yönelik meme muayenesi",
+      "Annenin bilgilendirilmesi"
+     ],
+     "baslik": "Dördüncü izlemde yapılanlar",
+     "s": 37,
+     "k": [
+      0,
+      72
+     ],
+     "tip": "liste",
+     "konum": [
+      0.05,
+      0.64
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.363,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.0234,
+     "ek_renk": "#ffffff"
+    }
+   ],
+   "4": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Diş eti hastalıkları",
+      "Diş çürüğü",
+      "Oral lezyonlar"
+     ],
+     "baslik": "Ağız-diş muayenesiyle önlenmesi amaçlananlar",
+     "s": 38,
+     "k": [
+      57,
+      128
+     ],
+     "tip": "liste",
+     "konum": [
+      0.05,
+      0.8
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.308,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.128,
+     "ek_renk": "#ffffff"
+    }
+   ],
+   "5": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Risk: düşük",
+      "Risk: erken doğum",
+      "Risk: düşük doğum ağırlıklı bebek",
+      "Tedaviye yönlendirme: ikinci trimester"
+     ],
+     "baslik": "Ağız ve diş sorunu olan gebe",
+     "s": 38,
+     "k": [
+      31,
+      155
+     ],
+     "tip": "liste",
+     "konum": [
+      0.05,
+      0.8
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.363,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.1834,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "12": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "olcut_deger",
+     "sablon_ad": "Ölçüt ve değeri",
+     "duzen": "tablo",
+     "basliklar": [
+      "Ölçüt",
+      "Değer"
+     ],
+     "satirlar": [
+      [
+       "Hastanede lohusa izlemi",
+       "3 kez"
+      ],
+      [
+       "Evde lohusa izlemi",
+       "3 kez"
+      ],
+      [
+       "Toplam lohusa izlemi",
+       "6 kez"
+      ]
+     ],
+     "s": 40,
+     "k": [
+      0,
+      112
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.23,
+      0.61
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.35,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ]
+  },
+  "13": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "muayene_bakilan",
+     "sablon_ad": "Muayene bölümü → bakılanlar",
+     "duzen": "tablo",
+     "basliklar": [
+      "Muayene bölümü",
+      "Bakılanlar"
+     ],
+     "satirlar": [
+      [
+       "Vital bulgular",
+       "Kan basıncı, solunum sayısı, ateş"
+      ],
+      [
+       "Karın muayenesi",
+       "Fundus yüksekliği"
+      ],
+      [
+       "Sezaryen olanlarda",
+       "İnsizyon yeri kontrolü"
+      ]
+     ],
+     "s": 43,
+     "k": [
+      29,
+      188
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.59,
+      0.01
+     ],
+     "genislik": 0.34,
+     "doluluk": 0.0,
+     "kutu_h": 0.47,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ],
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "muayene_bakilan",
+     "sablon_ad": "Muayene bölümü → bakılanlar",
+     "duzen": "tablo",
+     "basliklar": [
+      "Muayene bölümü",
+      "Bakılanlar"
+     ],
+     "satirlar": [
+      [
+       "Perine muayenesi",
+       "Vajinal kanama miktarı, epizyotomi"
+      ],
+      [
+       "Emzirme",
+       "Değerlendirilir"
+      ]
+     ],
+     "s": 43,
+     "k": [
+      0,
+      89
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.05,
+      0.82
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.293,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.1326,
+     "ek_renk": "#ffffff"
+    }
+   ],
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Hemoglobin ölçümü",
+      "Tam idrar tahlili"
+     ],
+     "baslik": "Laboratuvar (gerekirse)",
+     "s": 44,
+     "k": [
+      28,
+      76
+     ],
+     "tip": "liste",
+     "konum": [
+      0.23,
+      0.44
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.253,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ],
+   "3": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Annenin kişisel temizliği",
+      "Dinlenmeye zaman ayırma",
+      "Bebek bakımı için yardım alma"
+     ],
+     "baslik": "Bakım ve danışmanlık",
+     "s": 45,
+     "k": [
+      23,
+      112
+     ],
+     "tip": "liste",
+     "konum": [
+      0.05,
+      0.83
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.308,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.158,
+     "ek_renk": "#ffffff"
+    }
+   ],
+   "4": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Duygusal durum",
+      "Aile ve çevre desteği",
+      "Bebek bakımı ve anne sütü bilgisi",
+      "Demir ve D vitamini desteği"
+     ],
+     "baslik": "Bakım ve danışmanlık",
+     "s": 45,
+     "k": [
+      0,
+      135
+     ],
+     "tip": "liste",
+     "konum": [
+      0.05,
+      0.83
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.363,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.2134,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "14": {
+   "2": [
+    {
+     "tur": "akis",
+     "a": [
+      0.62,
+      0.614
+     ],
+     "b": [
+      0.506,
+      0.39
+     ],
+     "iliski": "aktive",
+     "etiket": "30–42. gün izlemi",
+     "s": 47,
+     "k": [
+      47,
+      74
+     ],
+     "yol": [
+      [
+       0.62,
+       0.614
+      ],
+      [
+       0.62,
+       0.39
+      ],
+      [
+       0.506,
+       0.39
+      ]
+     ],
+     "rota": "dirsek",
+     "etiket_konum": [
+      0.26,
+      0.2
+     ],
+     "etiket_genislik": 0.252,
+     "etiket_hedef": [
+      0.496,
+      0.38
+     ],
+     "etiket_boy": 0.0443,
+     "yakin": [
+      0.2,
+      0.14,
+      0.68,
+      0.674
+     ]
+    }
+   ],
+   "4": [
+    {
+     "tur": "sema",
+     "sablon": "tani_tetkik",
+     "sablon_ad": "Durum → bakılacak tetkik",
+     "duzen": "tablo",
+     "basliklar": [
+      "Durum / şüphe",
+      "Bakılacak tetkik"
+     ],
+     "satirlar": [
+      [
+       "Gestasyonel diyabet öyküsü",
+       "Oral glukoz tolerans testi (6–12. hafta)"
+      ]
+     ],
+     "s": 48,
+     "k": [
+      0,
+      103
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.31,
+      0.48
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.236,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ],
+   "5": [
+    {
+     "tur": "sema",
+     "sablon": "neden_sonuc",
+     "sablon_ad": "Neden → sonuç",
+     "duzen": "zincir",
+     "bag": "yol açar",
+     "ogeler": [
+      "İki doğum arası en az iki yıl",
+      "Anne ve bebek sağlığı korunur"
+     ],
+     "s": 49,
+     "k": [
+      0,
+      80
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.43,
+      0.42
+     ],
+     "genislik": 0.34,
+     "doluluk": 0.0,
+     "kutu_h": 0.283,
+     "yon": "dikey",
+     "olcek": 1.0
+    }
+   ],
+   "6": [
+    {
+     "tur": "sema",
+     "sablon": "tani_tetkik",
+     "sablon_ad": "Durum → bakılacak tetkik",
+     "duzen": "tablo",
+     "basliklar": [
+      "Durum / şüphe",
+      "Bakılacak tetkik"
+     ],
+     "satirlar": [
+      [
+       "Ruhsal hastalık öyküsü",
+       "Edinburg Postpartum Depresyon Ölçeği"
+      ],
+      [
+       "Psikotik bozukluk (şizofreni, bipolar)",
+       "Edinburg Postpartum Depresyon Ölçeği"
+      ],
+      [
+       "Psikotik depresyon, intihar riski",
+       "Edinburg Postpartum Depresyon Ölçeği"
+      ]
+     ],
+     "s": 50,
+     "k": [
+      0,
+      200
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.24,
+      0.52
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.001,
+     "kutu_h": 0.43,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ]
+  },
+  "16": {
+   "0": [
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.1956,
+       0.9117
+      ],
+      [
+       0.2216,
+       0.9083
+      ],
+      [
+       0.2309,
+       0.9333
+      ],
+      [
+       0.2403,
+       0.9575
+      ],
+      [
+       0.2231,
+       0.95
+      ],
+      [
+       0.2106,
+       0.9375
+      ],
+      [
+       0.1997,
+       0.9229
+      ]
+     ],
+     "etiket": "topuk kenarı delme bölgesi",
+     "s": 56,
+     "k": [
+      0,
+      8
+     ],
+     "etiket_konum": [
+      0.3503,
+      0.8683
+     ],
+     "etiket_genislik": 0.366,
+     "etiket_hedef": [
+      0.2403,
+      0.9083
+     ],
+     "etiket_boy": 0.0443
+    },
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.2631,
+       0.9063
+      ],
+      [
+       0.2872,
+       0.9075
+      ],
+      [
+       0.2841,
+       0.9292
+      ],
+      [
+       0.2747,
+       0.9438
+      ],
+      [
+       0.2606,
+       0.9533
+      ],
+      [
+       0.2622,
+       0.9292
+      ]
+     ],
+     "etiket": "karşı topuk kenarı",
+     "s": 56,
+     "k": [
+      37,
+      50
+     ],
+     "etiket_konum": [
+      0.32,
+      0.62
+     ],
+     "etiket_genislik": 0.264,
+     "etiket_hedef": [
+      0.2872,
+      0.9063
+     ],
+     "etiket_boy": 0.0443
+    }
+   ],
+   "1": [
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.6934,
+       0.8646
+      ],
+      [
+       0.7013,
+       0.8521
+      ],
+      [
+       0.7231,
+       0.8367
+      ],
+      [
+       0.7481,
+       0.8229
+      ],
+      [
+       0.7716,
+       0.8092
+      ],
+      [
+       0.7825,
+       0.8188
+      ],
+      [
+       0.7747,
+       0.8313
+      ],
+      [
+       0.7544,
+       0.8438
+      ],
+      [
+       0.7309,
+       0.8575
+      ],
+      [
+       0.7091,
+       0.8729
+      ],
+      [
+       0.6966,
+       0.8729
+      ]
+     ],
+     "etiket": "karttaki topuk kanı lekeleri",
+     "s": 56,
+     "k": [
+      0,
+      10
+     ],
+     "etiket_konum": [
+      0.32,
+      0.56
+     ],
+     "etiket_genislik": 0.391,
+     "etiket_hedef": [
+      0.6934,
+      0.8092
+     ],
+     "etiket_boy": 0.0443
+    }
+   ],
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "cok_neden_tek_sonuc",
+     "sablon_ad": "Birçok neden → tek sonuç",
+     "duzen": "grup",
+     "bag": "neden olur",
+     "kaynaklar": [
+      "Fenilalanin hidroksilaz eksikliği",
+      "Tetrahidrobiyopterin eksikliği"
+     ],
+     "sonuc": "Fenilketonüri",
+     "s": 57,
+     "k": [
+      0,
+      121
+     ],
+     "tip": "grup",
+     "konum": [
+      0.03,
+      0.91
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.206,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.1364,
+     "ek_renk": "#ffffff"
+    }
+   ],
+   "3": [
+    {
+     "tur": "sema",
+     "sablon": "mekanizma_adimlari",
+     "sablon_ad": "Mekanizma basamakları",
+     "duzen": "zincir",
+     "ogeler": [
+      "Fenilalanin sindirimi bozuk",
+      "Organlarda birikim",
+      "Geri dönüşümsüz beyin hasarı",
+      "1. yıl sonunda zeka gerilemesi"
+     ],
+     "s": 57,
+     "k": [
+      0,
+      218
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.05,
+      0.88
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.45,
+     "yon": "dikey",
+     "olcek": 1.0,
+     "ek_alt": 0.3497,
+     "ek_renk": "#ffffff"
+    }
+   ],
+   "5": [
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.2087,
+       0.1833
+      ],
+      [
+       0.3125,
+       0.1833
+      ],
+      [
+       0.4163,
+       0.1833
+      ],
+      [
+       0.4163,
+       0.2067
+      ],
+      [
+       0.4163,
+       0.23
+      ],
+      [
+       0.3125,
+       0.23
+      ],
+      [
+       0.2087,
+       0.23
+      ],
+      [
+       0.2087,
+       0.2067
+      ]
+     ],
+     "etiket": "uygunsuz örnek: tekrar",
+     "s": 58,
+     "k": [
+      44,
+      76
+     ],
+     "etiket_konum": [
+      0.5263,
+      0.1233
+     ],
+     "etiket_genislik": 0.315,
+     "etiket_hedef": [
+      0.4163,
+      0.1833
+     ],
+     "etiket_boy": 0.0443,
+     "yakin": [
+      0.1487,
+      0.0633,
+      0.9013,
+      0.29
+     ]
+    },
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.4275,
+       0.1833
+      ],
+      [
+       0.5325,
+       0.1833
+      ],
+      [
+       0.6375,
+       0.1833
+      ],
+      [
+       0.6375,
+       0.2067
+      ],
+      [
+       0.6375,
+       0.23
+      ],
+      [
+       0.5325,
+       0.23
+      ],
+      [
+       0.4275,
+       0.23
+      ],
+      [
+       0.4275,
+       0.2067
+      ]
+     ],
+     "etiket": "uygun örnek: tarama laboratuvarı",
+     "s": 58,
+     "k": [
+      77,
+      115
+     ],
+     "etiket_konum": [
+      0.5475,
+      0.1833
+     ],
+     "etiket_genislik": 0.42,
+     "yakin": [
+      0.3675,
+      0.1233,
+      1,
+      0.29
+     ]
+    }
+   ],
+   "6": [
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.5925,
+       0.3683
+      ],
+      [
+       0.6412,
+       0.3683
+      ],
+      [
+       0.69,
+       0.3683
+      ],
+      [
+       0.69,
+       0.3917
+      ],
+      [
+       0.69,
+       0.415
+      ],
+      [
+       0.6412,
+       0.415
+      ],
+      [
+       0.5925,
+       0.415
+      ],
+      [
+       0.5925,
+       0.3917
+      ]
+     ],
+     "etiket": "şüpheli sonuç",
+     "s": 58,
+     "k": [
+      0,
+      25
+     ],
+     "etiket_konum": [
+      0.7,
+      0.3283
+     ],
+     "etiket_genislik": 0.201,
+     "yakin": [
+      0.5325,
+      0.2683,
+      0.961,
+      0.475
+     ]
+    },
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.5513,
+       0.6167
+      ],
+      [
+       0.6394,
+       0.6167
+      ],
+      [
+       0.7275,
+       0.6167
+      ],
+      [
+       0.7275,
+       0.675
+      ],
+      [
+       0.7275,
+       0.7333
+      ],
+      [
+       0.6394,
+       0.7333
+      ],
+      [
+       0.5513,
+       0.7333
+      ],
+      [
+       0.5513,
+       0.675
+      ]
+     ],
+     "etiket": "beslenme-metabolizma kliniğine sevk",
+     "s": 58,
+     "k": [
+      54,
+      112
+     ],
+     "etiket_konum": [
+      0.1193,
+      0.6167
+     ],
+     "etiket_genislik": 0.42,
+     "yakin": [
+      0.0593,
+      0.5567,
+      0.7875,
+      0.7933
+     ]
+    }
+   ]
+  },
+  "17": {
+   "2": [
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.5763,
+       0.375
+      ],
+      [
+       0.6275,
+       0.375
+      ],
+      [
+       0.6787,
+       0.375
+      ],
+      [
+       0.6787,
+       0.3975
+      ],
+      [
+       0.6787,
+       0.42
+      ],
+      [
+       0.6275,
+       0.42
+      ],
+      [
+       0.5763,
+       0.42
+      ],
+      [
+       0.5763,
+       0.3975
+      ]
+     ],
+     "etiket": "şüpheli TSH",
+     "s": 60,
+     "k": [
+      51,
+      66
+     ],
+     "etiket_konum": [
+      0.7287,
+      0.335
+     ],
+     "etiket_genislik": 0.176,
+     "etiket_hedef": [
+      0.6787,
+      0.375
+     ],
+     "etiket_boy": 0.0443,
+     "yakin": [
+      0.5163,
+      0.275,
+      0.9647,
+      0.48
+     ]
+    },
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.2087,
+       0.6183
+      ],
+      [
+       0.2956,
+       0.6183
+      ],
+      [
+       0.3825,
+       0.6183
+      ],
+      [
+       0.3825,
+       0.6775
+      ],
+      [
+       0.3825,
+       0.7367
+      ],
+      [
+       0.2956,
+       0.7367
+      ],
+      [
+       0.2087,
+       0.7367
+      ],
+      [
+       0.2087,
+       0.6775
+      ]
+     ],
+     "etiket": "pediatrik endokrinolojiye sevk",
+     "s": 60,
+     "k": [
+      73,
+      119
+     ],
+     "etiket_konum": [
+      0.0925,
+      0.5783
+     ],
+     "etiket_genislik": 0.416,
+     "yakin": [
+      0.0325,
+      0.5183,
+      0.5685,
+      0.7967
+     ]
+    }
+   ],
+   "3": [
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.5062,
+       0.105
+      ],
+      [
+       0.6062,
+       0.105
+      ],
+      [
+       0.7063,
+       0.105
+      ],
+      [
+       0.7063,
+       0.1275
+      ],
+      [
+       0.7063,
+       0.15
+      ],
+      [
+       0.6062,
+       0.15
+      ],
+      [
+       0.5062,
+       0.15
+      ],
+      [
+       0.5062,
+       0.1275
+      ]
+     ],
+     "etiket": "bir aydan büyük bebek",
+     "s": 60,
+     "k": [
+      0,
+      23
+     ],
+     "etiket_konum": [
+      0.6963,
+      0.065
+     ],
+     "etiket_genislik": 0.302,
+     "yakin": [
+      0.4462,
+      0.005,
+      1,
+      0.21
+     ]
+    },
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.535,
+       0.6183
+      ],
+      [
+       0.6225,
+       0.6183
+      ],
+      [
+       0.71,
+       0.6183
+      ],
+      [
+       0.71,
+       0.6767
+      ],
+      [
+       0.71,
+       0.735
+      ],
+      [
+       0.6225,
+       0.735
+      ],
+      [
+       0.535,
+       0.735
+      ],
+      [
+       0.535,
+       0.6767
+      ]
+     ],
+     "etiket": "ildeki uygun laboratuvar",
+     "s": 60,
+     "k": [
+      24,
+      57
+     ],
+     "etiket_konum": [
+      0.62,
+      0.5783
+     ],
+     "etiket_genislik": 0.34,
+     "yakin": [
+      0.475,
+      0.5183,
+      1,
+      0.795
+     ]
+    }
+   ],
+   "4": [
+    {
+     "tur": "sema",
+     "sablon": "zaman_gorunum",
+     "sablon_ad": "Süre → görünüm / bulgu",
+     "duzen": "tablo",
+     "basliklar": [
+      "Süre",
+      "Görünüm / bulgu"
+     ],
+     "satirlar": [
+      [
+       "Erken dönem",
+       "nöbetler, enfeksiyonlar, saç kaybı"
+      ],
+      [
+       "Geç dönem",
+       "görme-işitme kaybı, güçsüzlük, zihinsel gerilik, koma, ölüm"
+      ]
+     ],
+     "s": 61,
+     "k": [
+      16,
+      180
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.03,
+      0.91
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.293,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.2226,
+     "ek_renk": "#ffffff"
+    }
+   ],
+   "5": [
+    {
+     "tur": "sema",
+     "sablon": "olcut_deger",
+     "sablon_ad": "Ölçüt ve değeri",
+     "duzen": "tablo",
+     "basliklar": [
+      "Ölçüt",
+      "Değer"
+     ],
+     "satirlar": [
+      [
+       "Türkiye'de sıklık",
+       "11.000 doğumda 1 (dünya ortalamasının çok üzerinde)"
+      ]
+     ],
+     "s": 61,
+     "k": [
+      0,
+      109
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.05,
+      0.88
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.236,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.1356,
+     "ek_renk": "#ffffff"
+    }
+   ],
+   "6": [
+    {
+     "tur": "sema",
+     "sablon": "zehir_antidot",
+     "sablon_ad": "Zehirlenme → antidot / tedavi",
+     "duzen": "tablo",
+     "basliklar": [
+      "Durum",
+      "Antidot / tedavi"
+     ],
+     "satirlar": [
+      [
+       "Biyotinidaz eksikliği",
+       "günlük biotin (B7 vitamini)"
+      ]
+     ],
+     "s": 61,
+     "k": [
+      0,
+      77
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.05,
+      0.88
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.196,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.0956,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "18": {
+   "0": [
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.338,
+       0.385
+      ],
+      [
+       0.41,
+       0.383
+      ],
+      [
+       0.483,
+       0.385
+      ],
+      [
+       0.486,
+       0.418
+      ],
+      [
+       0.483,
+       0.45
+      ],
+      [
+       0.41,
+       0.452
+      ],
+      [
+       0.338,
+       0.45
+      ],
+      [
+       0.335,
+       0.418
+      ]
+     ],
+     "etiket": "65 U üzeri aktivite",
+     "s": 62,
+     "k": [
+      37,
+      85
+     ],
+     "etiket_konum": [
+      0.046,
+      0.383
+     ],
+     "etiket_genislik": 0.277,
+     "yakin": [
+      0,
+      0.323,
+      0.546,
+      0.512
+     ]
+    }
+   ],
+   "1": [
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.567,
+       0.567
+      ],
+      [
+       0.63,
+       0.565
+      ],
+      [
+       0.698,
+       0.567
+      ],
+      [
+       0.7,
+       0.6
+      ],
+      [
+       0.698,
+       0.64
+      ],
+      [
+       0.63,
+       0.642
+      ],
+      [
+       0.567,
+       0.64
+      ],
+      [
+       0.565,
+       0.6
+      ]
+     ],
+     "etiket": "tekrar örnekte düşük",
+     "s": 62,
+     "k": [
+      0,
+      15
+     ],
+     "etiket_konum": [
+      0.69,
+      0.525
+     ],
+     "etiket_genislik": 0.29,
+     "yakin": [
+      0.505,
+      0.465,
+      1,
+      0.702
+     ]
+    },
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.53,
+       0.668
+      ],
+      [
+       0.61,
+       0.665
+      ],
+      [
+       0.69,
+       0.668
+      ],
+      [
+       0.7,
+       0.7
+      ],
+      [
+       0.7,
+       0.755
+      ],
+      [
+       0.69,
+       0.785
+      ],
+      [
+       0.61,
+       0.788
+      ],
+      [
+       0.53,
+       0.785
+      ],
+      [
+       0.522,
+       0.755
+      ],
+      [
+       0.522,
+       0.7
+      ]
+     ],
+     "etiket": "metabolizma kliniğine sevk",
+     "s": 62,
+     "k": [
+      16,
+      77
+     ],
+     "etiket_konum": [
+      0.61,
+      0.625
+     ],
+     "etiket_genislik": 0.366,
+     "yakin": [
+      0.462,
+      0.565,
+      1,
+      0.848
+     ]
+    }
+   ],
+   "5": [
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.548,
+       0.265
+      ],
+      [
+       0.7,
+       0.263
+      ],
+      [
+       0.855,
+       0.265
+      ],
+      [
+       0.857,
+       0.29
+      ],
+      [
+       0.855,
+       0.313
+      ],
+      [
+       0.7,
+       0.315
+      ],
+      [
+       0.548,
+       0.313
+      ],
+      [
+       0.546,
+       0.29
+      ]
+     ],
+     "etiket": "17OHP birinci basamak",
+     "s": 64,
+     "k": [
+      130,
+      184
+     ],
+     "etiket_konum": [
+      0.667,
+      0.143
+     ],
+     "etiket_genislik": 0.302,
+     "etiket_hedef": [
+      0.8182,
+      0.263
+     ],
+     "etiket_boy": 0.0443,
+     "yakin": [
+      0.486,
+      0.083,
+      1,
+      0.375
+     ]
+    }
+   ],
+   "6": [
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.06,
+       0.375
+      ],
+      [
+       0.24,
+       0.373
+      ],
+      [
+       0.405,
+       0.375
+      ],
+      [
+       0.413,
+       0.415
+      ],
+      [
+       0.405,
+       0.458
+      ],
+      [
+       0.24,
+       0.46
+      ],
+      [
+       0.06,
+       0.458
+      ],
+      [
+       0.052,
+       0.415
+      ]
+     ],
+     "etiket": "normal eşikler",
+     "s": 64,
+     "k": [
+      64,
+      238
+     ],
+     "etiket_konum": [
+      0.403,
+      0.463
+     ],
+     "etiket_genislik": 0.214,
+     "yakin": [
+      0,
+      0.313,
+      0.677,
+      0.563
+     ]
+    }
+   ],
+   "7": [
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.545,
+       0.485
+      ],
+      [
+       0.7,
+       0.483
+      ],
+      [
+       0.858,
+       0.485
+      ],
+      [
+       0.862,
+       0.507
+      ],
+      [
+       0.858,
+       0.528
+      ],
+      [
+       0.7,
+       0.53
+      ],
+      [
+       0.545,
+       0.528
+      ],
+      [
+       0.541,
+       0.507
+      ]
+     ],
+     "etiket": "ikinci basamak analiz",
+     "s": 64,
+     "k": [
+      15,
+      58
+     ],
+     "etiket_konum": [
+      0.541,
+      0.542
+     ],
+     "etiket_genislik": 0.302,
+     "yakin": [
+      0.481,
+      0.423,
+      0.922,
+      0.642
+     ]
+    },
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.365,
+       0.902
+      ],
+      [
+       0.5,
+       0.9
+      ],
+      [
+       0.668,
+       0.902
+      ],
+      [
+       0.674,
+       0.925
+      ],
+      [
+       0.668,
+       0.947
+      ],
+      [
+       0.5,
+       0.948
+      ],
+      [
+       0.365,
+       0.947
+      ],
+      [
+       0.358,
+       0.925
+      ]
+     ],
+     "etiket": "endokrinoloji kliniğine sevk",
+     "s": 64,
+     "k": [
+      78,
+      122
+     ],
+     "etiket_konum": [
+      0.584,
+      0.9
+     ],
+     "etiket_genislik": 0.391,
+     "yakin": [
+      0.298,
+      0.84,
+      1,
+      1
+     ]
+    }
+   ],
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "neden_sonuc",
+     "sablon_ad": "Neden → sonuç",
+     "duzen": "zincir",
+     "bag": "yol açar",
+     "ogeler": [
+      "21-hidroksilaz enzim eksikliği",
+      "kortizol üretim bozukluğu"
+     ],
+     "s": 63,
+     "k": [
+      142,
+      212
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.05,
+      0.88
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.186,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.0863,
+     "ek_renk": "#ffffff"
+    }
+   ],
+   "4": [
+    {
+     "tur": "sema",
+     "sablon": "olcut_deger",
+     "sablon_ad": "Ölçüt ve değeri",
+     "duzen": "tablo",
+     "basliklar": [
+      "Ölçüt",
+      "Değer"
+     ],
+     "satirlar": [
+      [
+       "Prevalans",
+       "5.000'de 1 – 15.000'de 1"
+      ],
+      [
+       "Eş akrabalığı sık ülkeler",
+       "daha yüksek prevalans"
+      ]
+     ],
+     "s": 63,
+     "k": [
+      0,
+      119
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.05,
+      0.88
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.253,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.1526,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "19": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "tani_tetkik",
+     "sablon_ad": "Durum → bakılacak tetkik",
+     "duzen": "tablo",
+     "basliklar": [
+      "Durum / şüphe",
+      "Bakılacak tetkik"
+     ],
+     "satirlar": [
+      [
+       "Kistik fibrozis",
+       "ter testi"
+      ]
+     ],
+     "s": 65,
+     "k": [
+      58,
+      88
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.31,
+      0.68
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.196,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ],
+   "2": [
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.438,
+       0.292
+      ],
+      [
+       0.53,
+       0.29
+      ],
+      [
+       0.622,
+       0.292
+      ],
+      [
+       0.627,
+       0.312
+      ],
+      [
+       0.622,
+       0.333
+      ],
+      [
+       0.53,
+       0.335
+      ],
+      [
+       0.438,
+       0.333
+      ],
+      [
+       0.433,
+       0.312
+      ]
+     ],
+     "etiket": "tarama laboratuvarı",
+     "s": 66,
+     "k": [
+      38,
+      77
+     ],
+     "etiket_konum": [
+      0.637,
+      0.25
+     ],
+     "etiket_genislik": 0.277,
+     "yakin": [
+      0.373,
+      0.19,
+      0.974,
+      0.395
+     ]
+    },
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.502,
+       0.44
+      ],
+      [
+       0.59,
+       0.438
+      ],
+      [
+       0.673,
+       0.44
+      ],
+      [
+       0.678,
+       0.468
+      ],
+      [
+       0.673,
+       0.497
+      ],
+      [
+       0.59,
+       0.499
+      ],
+      [
+       0.502,
+       0.497
+      ],
+      [
+       0.497,
+       0.468
+      ]
+     ],
+     "etiket": "7-14. gün tekrar örnek",
+     "s": 66,
+     "k": [
+      78,
+      148
+     ],
+     "etiket_konum": [
+      0.668,
+      0.398
+     ],
+     "etiket_genislik": 0.315,
+     "yakin": [
+      0.437,
+      0.338,
+      1,
+      0.559
+     ]
+    }
+   ],
+   "3": [
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.607,
+       0.532
+      ],
+      [
+       0.65,
+       0.53
+      ],
+      [
+       0.69,
+       0.532
+      ],
+      [
+       0.693,
+       0.553
+      ],
+      [
+       0.69,
+       0.575
+      ],
+      [
+       0.65,
+       0.577
+      ],
+      [
+       0.607,
+       0.575
+      ],
+      [
+       0.604,
+       0.553
+      ]
+     ],
+     "etiket": "tekrar örnekte ≥70 µg/l",
+     "s": 66,
+     "k": [
+      0,
+      31
+     ],
+     "etiket_konum": [
+      0.603,
+      0.49
+     ],
+     "etiket_genislik": 0.328,
+     "yakin": [
+      0.543,
+      0.43,
+      0.991,
+      0.637
+     ]
+    }
+   ],
+   "4": [
+    {
+     "tur": "sema",
+     "sablon": "izlem_tarama",
+     "sablon_ad": "İzlem zamanı → yapılacak tarama",
+     "duzen": "tablo",
+     "basliklar": [
+      "İzlem / zaman",
+      "Yapılacak tarama / değerlendirme"
+     ],
+     "satirlar": [
+      [
+       "İlk 72 saat, taburcu olmadan önce",
+       "Yenidoğan işitme taraması (hastanede)"
+      ]
+     ],
+     "s": 67,
+     "k": [
+      0,
+      126
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.33,
+      0.72
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.236,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ],
+   "5": [
+    {
+     "tur": "sema",
+     "sablon": "algoritma",
+     "sablon_ad": "Yaklaşım basamakları",
+     "duzen": "adimlar",
+     "ogeler": [
+      "24 saatini doldurmuş yenidoğana işitme testi",
+      "İşitme kaybı tespit edilir",
+      "Derecesine uygun işitme cihazı başlanır"
+     ],
+     "s": 67,
+     "k": [
+      0,
+      182
+     ],
+     "tip": "adimlar",
+     "konum": [
+      0.05,
+      0.77
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.259,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.0487,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "20": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Emmesi",
+      "Hepatit B aşısı yapıldı mı",
+      "Yenidoğan işitme taraması yapıldı mı"
+     ],
+     "baslik": "Yenidoğan hikayesinde sorgulanır",
+     "s": 68,
+     "k": [
+      0,
+      139
+     ],
+     "tip": "liste",
+     "konum": [
+      0.05,
+      0.98
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.308,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.308,
+     "ek_renk": "#ffffff"
+    }
+   ],
+   "1": [
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.55,
+       0.878
+      ],
+      [
+       0.636,
+       0.878
+      ],
+      [
+       0.7225,
+       0.878
+      ],
+      [
+       0.7225,
+       0.92
+      ],
+      [
+       0.7225,
+       0.962
+      ],
+      [
+       0.636,
+       0.962
+      ],
+      [
+       0.55,
+       0.962
+      ],
+      [
+       0.55,
+       0.92
+      ]
+     ],
+     "etiket": "vücut ağırlığı persentil eğrisi",
+     "s": 68,
+     "k": [
+      79,
+      135
+     ],
+     "etiket_konum": [
+      0.118,
+      0.878
+     ],
+     "etiket_genislik": 0.42
+    }
+   ],
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Emzirme",
+      "Göbek bakımı",
+      "Bebek bakımı",
+      "Bebekle sağlıklı iletişim",
+      "Uyku",
+      "El yıkama",
+      "Kazalardan korunma"
+     ],
+     "baslik": "Yenidoğan danışmanlığı",
+     "s": 69,
+     "k": [
+      0,
+      138
+     ],
+     "tip": "liste",
+     "konum": [
+      0.47,
+      0.04
+     ],
+     "genislik": 0.42,
+     "doluluk": 0.0,
+     "kutu_h": 0.53,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ],
+   "3": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Ateş",
+      "İyi emmeme",
+      "Kusma",
+      "İshal",
+      "Sarılık",
+      "Uykuya meyil"
+     ],
+     "baslik": "Doktora hemen başvurmayı gerektiren durumlar",
+     "s": 69,
+     "k": [
+      0,
+      119
+     ],
+     "tip": "liste",
+     "konum": [
+      0.04,
+      0.76
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.474,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.2543,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "21": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "izlem_tarama",
+     "sablon_ad": "İzlem zamanı → yapılacak tarama",
+     "duzen": "tablo",
+     "basliklar": [
+      "İzlem / zaman",
+      "Yapılacak tarama / değerlendirme"
+     ],
+     "satirlar": [
+      [
+       "15. gün, 41. gün, 2. ay izlemleri",
+       "İşitme ve görme: prematüre retinopatisi, kırmızı refle"
+      ],
+      [
+       "41. gün izlemi",
+       "Gelişimsel kalça displazisi taraması"
+      ]
+     ],
+     "s": 70,
+     "k": [
+      0,
+      148
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.03,
+      0.91
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.293,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.2226,
+     "ek_renk": "#ffffff"
+    }
+   ],
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "durum_yaklasim",
+     "sablon_ad": "Durum → yaklaşım",
+     "duzen": "tablo",
+     "basliklar": [
+      "Durum",
+      "Yaklaşım"
+     ],
+     "satirlar": [
+      [
+       "Prematüre / düşük doğum ağırlıklı, demir başlanmamış",
+       "Profilaktik demir tedavisi başlanır"
+      ]
+     ],
+     "s": 70,
+     "k": [
+      0,
+      110
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.05,
+      0.9
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.236,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.1556,
+     "ek_renk": "#ffffff"
+    }
+   ],
+   "3": [
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.278,
+       0.81
+      ],
+      [
+       0.43,
+       0.81
+      ],
+      [
+       0.584,
+       0.81
+      ],
+      [
+       0.584,
+       0.86
+      ],
+      [
+       0.584,
+       0.908
+      ],
+      [
+       0.43,
+       0.908
+      ],
+      [
+       0.278,
+       0.908
+      ],
+      [
+       0.278,
+       0.86
+      ]
+     ],
+     "etiket": "Hb<7 / Htc<%21: acil sevk",
+     "s": 71,
+     "k": [
+      38,
+      170
+     ],
+     "etiket_konum": [
+      0.574,
+      0.77
+     ],
+     "etiket_genislik": 0.353,
+     "yakin": [
+      0.218,
+      0.71,
+      0.987,
+      0.968
+     ]
+    }
+   ],
+   "5": [
+    {
+     "tur": "sema",
+     "sablon": "izlem_tarama",
+     "sablon_ad": "İzlem zamanı → yapılacak tarama",
+     "duzen": "tablo",
+     "basliklar": [
+      "İzlem / zaman",
+      "Yapılacak tarama / değerlendirme"
+     ],
+     "satirlar": [
+      [
+       "15. gün izlemi ve sonrasında her izlem",
+       "Görme keskinliği değerlendirmesi"
+      ]
+     ],
+     "s": 72,
+     "k": [
+      0,
+      117
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.28,
+      0.54
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.236,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ],
+   "6": [
+    {
+     "tur": "sema",
+     "sablon": "durum_yaklasim",
+     "sablon_ad": "Durum → yaklaşım",
+     "duzen": "tablo",
+     "basliklar": [
+      "Durum",
+      "Yaklaşım"
+     ],
+     "satirlar": [
+      [
+       "Taramada şüpheli bulunan bebek",
+       "Sevk"
+      ],
+      [
+       "Strabismus (şaşılık) saptanan bebek/çocuk",
+       "Her yaşta sevk"
+      ]
+     ],
+     "s": 72,
+     "k": [
+      0,
+      118
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.03,
+      0.59
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.253,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ]
+  },
+  "22": {
+   "0": [
+    {
+     "tur": "akis",
+     "a": [
+      0.694,
+      0.707
+     ],
+     "b": [
+      0.551,
+      0.707
+     ],
+     "iliski": "aktive",
+     "etiket": "tarama eşiği",
+     "s": 73,
+     "k": [
+      0,
+      53
+     ],
+     "yol": [
+      [
+       0.694,
+       0.707
+      ],
+      [
+       0.6851,
+       0.712
+      ],
+      [
+       0.6761,
+       0.7164
+      ],
+      [
+       0.6672,
+       0.7201
+      ],
+      [
+       0.6583,
+       0.7231
+      ],
+      [
+       0.6493,
+       0.7254
+      ],
+      [
+       0.6404,
+       0.7271
+      ],
+      [
+       0.6314,
+       0.7281
+      ],
+      [
+       0.6225,
+       0.7284
+      ],
+      [
+       0.6136,
+       0.7281
+      ],
+      [
+       0.6046,
+       0.7271
+      ],
+      [
+       0.5957,
+       0.7254
+      ],
+      [
+       0.5868,
+       0.7231
+      ],
+      [
+       0.5778,
+       0.7201
+      ],
+      [
+       0.5689,
+       0.7164
+      ],
+      [
+       0.5599,
+       0.712
+      ],
+      [
+       0.551,
+       0.707
+      ]
+     ],
+     "rota": "kavis",
+     "etiket_konum": [
+      0.694,
+      0.737
+     ],
+     "etiket_genislik": 0.188,
+     "etiket_hedef": [
+      0.561,
+      0.717
+     ],
+     "etiket_boy": 0.0443
+    }
+   ],
+   "4": [
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.8439,
+       0.196
+      ],
+      [
+       0.8411,
+       0.2101
+      ],
+      [
+       0.8345,
+       0.216
+      ],
+      [
+       0.8279,
+       0.2101
+      ],
+      [
+       0.8251,
+       0.196
+      ],
+      [
+       0.8279,
+       0.1819
+      ],
+      [
+       0.8345,
+       0.176
+      ],
+      [
+       0.8411,
+       0.1819
+      ]
+     ],
+     "etiket": "lens: katarakt",
+     "s": 74,
+     "k": [
+      81,
+      90
+     ],
+     "etiket_konum": [
+      0.6539,
+      0.056
+     ],
+     "etiket_genislik": 0.214,
+     "etiket_hedef": [
+      0.8251,
+      0.176
+     ],
+     "etiket_boy": 0.0443,
+     "yakin": [
+      0.5939,
+      0,
+      0.9279,
+      0.276
+     ]
+    },
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.8275,
+       0.1933
+      ],
+      [
+       0.8205,
+       0.2167
+      ],
+      [
+       0.8013,
+       0.2337
+      ],
+      [
+       0.775,
+       0.24
+      ],
+      [
+       0.7488,
+       0.2337
+      ],
+      [
+       0.7295,
+       0.2167
+      ],
+      [
+       0.7225,
+       0.1933
+      ],
+      [
+       0.7295,
+       0.17
+      ],
+      [
+       0.7488,
+       0.1529
+      ],
+      [
+       0.775,
+       0.1467
+      ],
+      [
+       0.8013,
+       0.1529
+      ],
+      [
+       0.8205,
+       0.17
+      ]
+     ],
+     "etiket": "vitreus opasitesi",
+     "s": 74,
+     "k": [
+      91,
+      114
+     ],
+     "etiket_konum": [
+      0.48,
+      0.52
+     ],
+     "etiket_genislik": 0.252,
+     "etiket_hedef": [
+      0.7225,
+      0.24
+     ],
+     "etiket_boy": 0.0443,
+     "yakin": [
+      0.42,
+      0.0867,
+      0.8875,
+      0.6243
+     ]
+    }
+   ]
+  },
+  "23": {
+   "3": [
+    {
+     "tur": "sema",
+     "sablon": "karar",
+     "sablon_ad": "Karar dalı",
+     "duzen": "dal",
+     "soru": "Anemi var mı?",
+     "dallar": [
+      [
+       "Var",
+       "tedavi dozunda demir"
+      ],
+      [
+       "Yok",
+       "4. aydan profilaktik demir, 1 damla/kg"
+      ]
+     ],
+     "s": 77,
+     "k": [
+      0,
+      125
+     ],
+     "tip": "dal",
+     "konum": [
+      0.05,
+      0.88
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.274,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.1741,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "24": {
+   "0": [
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.0688,
+       0.37
+      ],
+      [
+       0.4612,
+       0.37
+      ],
+      [
+       0.8538,
+       0.37
+      ],
+      [
+       0.8538,
+       0.3858
+      ],
+      [
+       0.8538,
+       0.4017
+      ],
+      [
+       0.4612,
+       0.4017
+      ],
+      [
+       0.0688,
+       0.4017
+      ],
+      [
+       0.0688,
+       0.3858
+      ]
+     ],
+     "etiket": "Hep-B: doğumda",
+     "s": 78,
+     "k": [
+      63,
+      87
+     ],
+     "etiket_konum": [
+      0.7638,
+      0.46
+     ],
+     "etiket_genislik": 0.214,
+     "etiket_hedef": [
+      0.8538,
+      0.4017
+     ],
+     "etiket_boy": 0.0443,
+     "yakin": [
+      0.0088,
+      0.31,
+      1,
+      0.5643
+     ]
+    },
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.0688,
+       0.4017
+      ],
+      [
+       0.4612,
+       0.4017
+      ],
+      [
+       0.8538,
+       0.4017
+      ],
+      [
+       0.8538,
+       0.4167
+      ],
+      [
+       0.8538,
+       0.4317
+      ],
+      [
+       0.4612,
+       0.4317
+      ],
+      [
+       0.0688,
+       0.4317
+      ],
+      [
+       0.0688,
+       0.4167
+      ]
+     ],
+     "etiket": "BCG: 2. ay sonu",
+     "s": 78,
+     "k": [
+      88,
+      117
+     ],
+     "etiket_konum": [
+      0.04,
+      0.18
+     ],
+     "etiket_genislik": 0.226,
+     "etiket_hedef": [
+      0.1532,
+      0.4017
+     ],
+     "etiket_boy": 0.0443,
+     "yakin": [
+      0,
+      0.12,
+      0.9138,
+      0.4917
+     ]
+    }
+   ],
+   "1": [
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.0688,
+       0.4317
+      ],
+      [
+       0.4612,
+       0.4317
+      ],
+      [
+       0.8538,
+       0.4317
+      ],
+      [
+       0.8538,
+       0.4467
+      ],
+      [
+       0.8538,
+       0.4617
+      ],
+      [
+       0.4612,
+       0.4617
+      ],
+      [
+       0.0688,
+       0.4617
+      ],
+      [
+       0.0688,
+       0.4467
+      ]
+     ],
+     "etiket": "KPA: 2, 4, 12. ay",
+     "s": 78,
+     "k": [
+      0,
+      108
+     ],
+     "etiket_konum": [
+      0.28,
+      0.18
+     ],
+     "etiket_genislik": 0.252,
+     "etiket_hedef": [
+      0.4058,
+      0.4317
+     ],
+     "etiket_boy": 0.0443,
+     "yakin": [
+      0.0088,
+      0.12,
+      0.9138,
+      0.5217
+     ]
+    },
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.0688,
+       0.4617
+      ],
+      [
+       0.4612,
+       0.4617
+      ],
+      [
+       0.8538,
+       0.4617
+      ],
+      [
+       0.8538,
+       0.49
+      ],
+      [
+       0.8538,
+       0.5183
+      ],
+      [
+       0.4612,
+       0.5183
+      ],
+      [
+       0.0688,
+       0.5183
+      ],
+      [
+       0.0688,
+       0.49
+      ]
+     ],
+     "etiket": "beşli karma: 2-4-6, 18. ay",
+     "s": 78,
+     "k": [
+      109,
+      284
+     ],
+     "etiket_konum": [
+      0.54,
+      0.18
+     ],
+     "etiket_genislik": 0.366,
+     "etiket_hedef": [
+      0.7229,
+      0.4617
+     ],
+     "etiket_boy": 0.0443
+    }
+   ],
+   "2": [
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.0688,
+       0.5183
+      ],
+      [
+       0.4612,
+       0.5183
+      ],
+      [
+       0.8538,
+       0.5183
+      ],
+      [
+       0.8538,
+       0.5333
+      ],
+      [
+       0.8538,
+       0.5483
+      ],
+      [
+       0.4612,
+       0.5483
+      ],
+      [
+       0.0688,
+       0.5483
+      ],
+      [
+       0.0688,
+       0.5333
+      ]
+     ],
+     "etiket": "OPA: 6 ve 18. ay",
+     "s": 78,
+     "k": [
+      0,
+      46
+     ],
+     "etiket_konum": [
+      0.22,
+      0.72
+     ],
+     "etiket_genislik": 0.239,
+     "etiket_hedef": [
+      0.3395,
+      0.5483
+     ],
+     "etiket_boy": 0.0443,
+     "yakin": [
+      0.0088,
+      0.4583,
+      0.9138,
+      0.8243
+     ]
+    },
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.0688,
+       0.58
+      ],
+      [
+       0.4612,
+       0.58
+      ],
+      [
+       0.8538,
+       0.58
+      ],
+      [
+       0.8538,
+       0.595
+      ],
+      [
+       0.8538,
+       0.61
+      ],
+      [
+       0.4612,
+       0.61
+      ],
+      [
+       0.0688,
+       0.61
+      ],
+      [
+       0.0688,
+       0.595
+      ]
+     ],
+     "s": 78,
+     "k": [
+      72,
+      174
+     ],
+     "yakin": [
+      0.0088,
+      0.52,
+      0.9138,
+      0.67
+     ]
+    }
+   ],
+   "3": [
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.0688,
+       0.61
+      ],
+      [
+       0.4612,
+       0.61
+      ],
+      [
+       0.8538,
+       0.61
+      ],
+      [
+       0.8538,
+       0.6258
+      ],
+      [
+       0.8538,
+       0.6417
+      ],
+      [
+       0.4612,
+       0.6417
+      ],
+      [
+       0.0688,
+       0.6417
+      ],
+      [
+       0.0688,
+       0.6258
+      ]
+     ],
+     "s": 78,
+     "k": [
+      0,
+      55
+     ],
+     "yakin": [
+      0.0088,
+      0.55,
+      0.9138,
+      0.7017
+     ]
+    },
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.0688,
+       0.67
+      ],
+      [
+       0.4612,
+       0.67
+      ],
+      [
+       0.8538,
+       0.67
+      ],
+      [
+       0.8538,
+       0.685
+      ],
+      [
+       0.8538,
+       0.7
+      ],
+      [
+       0.4612,
+       0.7
+      ],
+      [
+       0.0688,
+       0.7
+      ],
+      [
+       0.0688,
+       0.685
+      ]
+     ],
+     "etiket": "Td: 13 yaş",
+     "s": 78,
+     "k": [
+      137,
+      199
+     ],
+     "etiket_konum": [
+      0.5638,
+      0.7
+     ],
+     "etiket_genislik": 0.163,
+     "yakin": [
+      0.0088,
+      0.61,
+      0.9138,
+      0.8
+     ]
+    }
+   ],
+   "4": [
+    {
+     "tur": "sema",
+     "sablon": "olcut_deger",
+     "sablon_ad": "Ölçüt ve değeri",
+     "duzen": "tablo",
+     "basliklar": [
+      "Ölçüt",
+      "Değer"
+     ],
+     "satirlar": [
+      [
+       "Demir profilaksisi",
+       "4–12 ay arası"
+      ],
+      [
+       "Hemoglobin değerine bakılması",
+       "9. ay"
+      ]
+     ],
+     "s": 79,
+     "k": [
+      36,
+      113
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.19,
+      0.52
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.293,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ],
+   "5": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Emzirme",
+      "Bebek bakımı",
+      "Bebekle sağlıklı iletişim",
+      "Uyku",
+      "El yıkama",
+      "Kazalardan korunma"
+     ],
+     "baslik": "3–4. ay danışmanlığı",
+     "s": 80,
+     "k": [
+      18,
+      121
+     ],
+     "tip": "liste",
+     "konum": [
+      0.48,
+      0.23
+     ],
+     "genislik": 0.42,
+     "doluluk": 0.0,
+     "kutu_h": 0.474,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ],
+   "6": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Diş sağlığı",
+      "Aile planlaması"
+     ],
+     "baslik": "Yenidoğandan farklı olarak eklenir",
+     "s": 80,
+     "k": [
+      52,
+      94
+     ],
+     "tip": "liste",
+     "konum": [
+      0.33,
+      0.72
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.253,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ]
+  },
+  "25": {
+   "0": [
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.806,
+       0.259
+      ],
+      [
+       0.817,
+       0.262
+      ],
+      [
+       0.828,
+       0.265
+      ],
+      [
+       0.831,
+       0.269
+      ],
+      [
+       0.812,
+       0.282
+      ],
+      [
+       0.805,
+       0.293
+      ],
+      [
+       0.801,
+       0.305
+      ],
+      [
+       0.797,
+       0.293
+      ],
+      [
+       0.795,
+       0.282
+      ],
+      [
+       0.784,
+       0.267
+      ],
+      [
+       0.796,
+       0.262
+      ]
+     ],
+     "etiket": "ön fontanel",
+     "s": 81,
+     "k": [
+      100,
+      173
+     ],
+     "etiket_konum": [
+      0.741,
+      0.349
+     ],
+     "etiket_genislik": 0.176,
+     "etiket_hedef": [
+      0.8288,
+      0.305
+     ],
+     "etiket_boy": 0.0443
+    }
+   ],
+   "3": [
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.398,
+       0.797
+      ],
+      [
+       0.47,
+       0.797
+      ],
+      [
+       0.541,
+       0.797
+      ],
+      [
+       0.541,
+       0.875
+      ],
+      [
+       0.541,
+       0.955
+      ],
+      [
+       0.47,
+       0.955
+      ],
+      [
+       0.398,
+       0.955
+      ],
+      [
+       0.398,
+       0.875
+      ]
+     ],
+     "etiket": "inmemiş testis görünümü",
+     "s": 82,
+     "k": [
+      59,
+      83
+     ],
+     "etiket_konum": [
+      0.531,
+      0.797
+     ],
+     "etiket_genislik": 0.328
+    }
+   ],
+   "5": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Tamamlayıcı beslenme",
+      "Beslenme alışkanlığı kazandırma"
+     ],
+     "baslik": "6–12. ayda emzirmeye eklenen",
+     "s": 83,
+     "k": [
+      35,
+      120
+     ],
+     "tip": "liste",
+     "konum": [
+      0.42,
+      0.52
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.253,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ]
+  },
+  "26": {
+   "3": [
+    {
+     "tur": "sema",
+     "sablon": "yas_tarama",
+     "sablon_ad": "Yaş / dönem → yapılacak tarama",
+     "duzen": "tablo",
+     "basliklar": [
+      "Yaş / dönem",
+      "Tarama"
+     ],
+     "satirlar": [
+      [
+       "12–24 ay",
+       "Palmar solukluk muayenesi"
+      ],
+      [
+       "5 yaş; erken, orta, geç adolesan",
+       "Birer kez hemoglobin"
+      ]
+     ],
+     "s": 86,
+     "k": [
+      0,
+      71
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.22,
+      0.53
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.001,
+     "kutu_h": 0.333,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ],
+   "5": [
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.53,
+       0.7
+      ],
+      [
+       0.545,
+       0.693
+      ],
+      [
+       0.562,
+       0.692
+      ],
+      [
+       0.578,
+       0.695
+      ],
+      [
+       0.586,
+       0.703
+      ],
+      [
+       0.584,
+       0.718
+      ],
+      [
+       0.57,
+       0.726
+      ],
+      [
+       0.552,
+       0.727
+      ],
+      [
+       0.536,
+       0.722
+      ],
+      [
+       0.529,
+       0.712
+      ]
+     ],
+     "etiket": "ilk süt dişleri",
+     "s": 88,
+     "k": [
+      8,
+      23
+     ],
+     "etiket_konum": [
+      0.696,
+      0.652
+     ],
+     "etiket_genislik": 0.226,
+     "etiket_hedef": [
+      0.586,
+      0.692
+     ],
+     "etiket_boy": 0.0443
+    }
+   ]
+  },
+  "27": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Bilişsel gelişim",
+      "Dil gelişimi",
+      "Sosyal ve duygusal gelişim",
+      "Kaba motor gelişim",
+      "İnce motor gelişim"
+     ],
+     "baslik": "Taranan gelişim alanları",
+     "s": 89,
+     "k": [
+      0,
+      95
+     ],
+     "tip": "liste",
+     "konum": [
+      0.05,
+      0.72
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.419,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.1589,
+     "ek_renk": "#ffffff"
+    }
+   ],
+   "3": [
+    {
+     "tur": "sema",
+     "sablon": "yas_tarama",
+     "sablon_ad": "Yaş / dönem → yapılacak tarama",
+     "duzen": "tablo",
+     "basliklar": [
+      "Yaş / dönem",
+      "Tarama"
+     ],
+     "satirlar": [
+      [
+       "18–36 ay",
+       "Bir kez otizm değerlendirmesi"
+      ],
+      [
+       "48–60 ay",
+       "Dikkat eksikliği, hiperaktivite, özgül öğrenme güçlüğü"
+      ]
+     ],
+     "s": 90,
+     "k": [
+      0,
+      101
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.19,
+      0.55
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.373,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ]
+  },
+  "28": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Ellerin ve ayakların sürekli kıpır kıpır olması",
+      "Oturduğu yerde kıpırdanma",
+      "Çabuk sıkılma",
+      "Faaliyetleri yarım bırakma"
+     ],
+     "baslik": "Dikkat eksikliği ve hiperaktivite: değerlendirilenler",
+     "s": 92,
+     "k": [
+      0,
+      179
+     ],
+     "tip": "liste",
+     "konum": [
+      0.05,
+      0.84
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.363,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.2234,
+     "ek_renk": "#ffffff"
+    }
+   ],
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Koşturma/ani hareketle sık yaralanma, kaza",
+      "Dalgın görünme",
+      "Soruların ve komutların üst üste tekrarı gerekmesi"
+     ],
+     "baslik": "Ayrıca sorgulananlar",
+     "s": 92,
+     "k": [
+      0,
+      177
+     ],
+     "tip": "liste",
+     "konum": [
+      0.05,
+      0.84
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.308,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.168,
+     "ek_renk": "#ffffff"
+    }
+   ],
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Konuşmanın gecikmesi",
+      "Zamanında konuşsa bile cümle kuramama",
+      "Cümlede kelimeleri garip yerleştirme"
+     ],
+     "baslik": "Özgül öğrenme güçlüğü (48-60 ay, 2 kez)",
+     "s": 93,
+     "k": [
+      0,
+      206
+     ],
+     "tip": "liste",
+     "konum": [
+      0.05,
+      0.87
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.308,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.198,
+     "ek_renk": "#ffffff"
+    }
+   ],
+   "4": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Sorgulama",
+      "Gözlem",
+      "Muayene"
+     ],
+     "baslik": "0-6 yaş, her muayenede ihmal/istismar için",
+     "s": 94,
+     "k": [
+      0,
+      166
+     ],
+     "tip": "liste",
+     "konum": [
+      0.23,
+      0.55
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.308,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ],
+   "5": [
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.49,
+       0.708
+      ],
+      [
+       0.525,
+       0.683
+      ],
+      [
+       0.57,
+       0.692
+      ],
+      [
+       0.588,
+       0.735
+      ],
+      [
+       0.585,
+       0.79
+      ],
+      [
+       0.56,
+       0.83
+      ],
+      [
+       0.51,
+       0.835
+      ],
+      [
+       0.488,
+       0.79
+      ]
+     ],
+     "etiket": "tansiyon manşonu",
+     "s": 95,
+     "k": [
+      105,
+      130
+     ],
+     "etiket_konum": [
+      0.237,
+      0.7907
+     ],
+     "etiket_genislik": 0.239
+    }
+   ],
+   "6": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "0-1 yaş: bebek",
+      "1-5 yaş: okul öncesi"
+     ],
+     "baslik": "Sağlıklı diyet bilgilendirmesi (her dönemde en az 1 kez)",
+     "s": 96,
+     "k": [
+      0,
+      156
+     ],
+     "tip": "liste",
+     "konum": [
+      0.24,
+      0.43
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.253,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ]
+  },
+  "29": {
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "6–7 yaş",
+      "12–13 yaş",
+      "15–16 yaş"
+     ],
+     "baslik": "Diş hekimine yönlendirme yaşları",
+     "numarali": true,
+     "s": 99,
+     "k": [
+      0,
+      124
+     ],
+     "tip": "liste",
+     "konum": [
+      0.22,
+      0.44
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.308,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ]
+  },
+  "30": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "algoritma",
+     "sablon_ad": "Yaklaşım basamakları",
+     "duzen": "adimlar",
+     "ogeler": [
+      "Yılda bir kez ağırlık, boy, BKİ ölçümü",
+      "Obez ya da fazla kilolu: 3–6 ayda bir izlem"
+     ],
+     "s": 102,
+     "k": [
+      50,
+      204
+     ],
+     "tip": "adimlar",
+     "konum": [
+      0.05,
+      0.81
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.203,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.0333,
+     "ek_renk": "#ffffff"
+    }
+   ],
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "tani_tetkik",
+     "sablon_ad": "Durum → bakılacak tetkik",
+     "duzen": "tablo",
+     "basliklar": [
+      "Durum / şüphe",
+      "Bakılacak tetkik"
+     ],
+     "satirlar": [
+      [
+       "Fazla tartılı / obez tanısı anında",
+       "Açlık kan şekeri, lipid profili, ALT, AST"
+      ]
+     ],
+     "s": 102,
+     "k": [
+      0,
+      188
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.05,
+      0.81
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.236,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.0656,
+     "ek_renk": "#ffffff"
+    }
+   ],
+   "3": [
+    {
+     "tur": "sema",
+     "sablon": "yas_siklik",
+     "sablon_ad": "Yaş grubu → tarama sıklığı",
+     "duzen": "tablo",
+     "basliklar": [
+      "Yaş grubu",
+      "Sorgulama / tarama sıklığı"
+     ],
+     "satirlar": [
+      [
+       "0–6 yaş",
+       "Her muayenede"
+      ],
+      [
+       "7–18 yaş (okul çağı)",
+       "Yılda bir kez"
+      ]
+     ],
+     "s": 103,
+     "k": [
+      0,
+      90
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.23,
+      0.55
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.253,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ]
+  },
+  "31": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "yas_siklik",
+     "sablon_ad": "Yaş grubu → tarama sıklığı",
+     "duzen": "tablo",
+     "basliklar": [
+      "Yaş grubu",
+      "Sorgulama / tarama sıklığı"
+     ],
+     "satirlar": [
+      [
+       "0–5 yaş",
+       "İzlem periyotları sırasında"
+      ],
+      [
+       "6–18 yaş",
+       "Yılda en az bir kez"
+      ]
+     ],
+     "s": 104,
+     "k": [
+      0,
+      160
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.33,
+      0.69
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.293,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ],
+   "3": [
+    {
+     "tur": "sema",
+     "sablon": "tani_tetkik",
+     "sablon_ad": "Durum → bakılacak tetkik",
+     "duzen": "tablo",
+     "basliklar": [
+      "Durum / şüphe",
+      "Bakılacak tetkik"
+     ],
+     "satirlar": [
+      [
+       "Riskli durum (ailenin onayıyla)",
+       "Hepatit C ve HIV erken tespit testleri"
+      ]
+     ],
+     "s": 105,
+     "k": [
+      0,
+      111
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.29,
+      0.53
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.001,
+     "kutu_h": 0.236,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ],
+   "4": [
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.098,
+       0.227
+      ],
+      [
+       0.4,
+       0.227
+      ],
+      [
+       0.705,
+       0.227
+      ],
+      [
+       0.705,
+       0.255
+      ],
+      [
+       0.4,
+       0.255
+      ],
+      [
+       0.098,
+       0.255
+      ]
+     ],
+     "s": 106,
+     "k": [
+      66,
+      95
+     ],
+     "yakin": [
+      0.038,
+      0.167,
+      0.765,
+      0.315
+     ]
+    },
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.098,
+       0.328
+      ],
+      [
+       0.52,
+       0.328
+      ],
+      [
+       0.94,
+       0.328
+      ],
+      [
+       0.94,
+       0.358
+      ],
+      [
+       0.52,
+       0.358
+      ],
+      [
+       0.098,
+       0.358
+      ]
+     ],
+     "s": 106,
+     "k": [
+      96,
+      158
+     ],
+     "yakin": [
+      0.038,
+      0.268,
+      1,
+      0.418
+     ]
+    }
+   ],
+   "5": [
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.098,
+       0.697
+      ],
+      [
+       0.2,
+       0.697
+      ],
+      [
+       0.312,
+       0.697
+      ],
+      [
+       0.312,
+       0.738
+      ],
+      [
+       0.2,
+       0.738
+      ],
+      [
+       0.098,
+       0.738
+      ]
+     ],
+     "s": 106,
+     "k": [
+      0,
+      36
+     ],
+     "yakin": [
+      0.038,
+      0.637,
+      0.372,
+      0.798
+     ]
+    },
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.098,
+       0.775
+      ],
+      [
+       0.24,
+       0.775
+      ],
+      [
+       0.375,
+       0.775
+      ],
+      [
+       0.375,
+       0.807
+      ],
+      [
+       0.24,
+       0.807
+      ],
+      [
+       0.098,
+       0.807
+      ]
+     ],
+     "s": 106,
+     "k": [
+      37,
+      98
+     ],
+     "yakin": [
+      0.038,
+      0.715,
+      0.435,
+      0.867
+     ]
+    }
+   ],
+   "6": [
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.098,
+       0.867
+      ],
+      [
+       0.34,
+       0.867
+      ],
+      [
+       0.575,
+       0.867
+      ],
+      [
+       0.575,
+       0.897
+      ],
+      [
+       0.34,
+       0.897
+      ],
+      [
+       0.098,
+       0.897
+      ]
+     ],
+     "s": 106,
+     "k": [
+      0,
+      32
+     ],
+     "yakin": [
+      0.038,
+      0.807,
+      0.635,
+      0.957
+     ]
+    },
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.098,
+       0.608
+      ],
+      [
+       0.4,
+       0.608
+      ],
+      [
+       0.705,
+       0.608
+      ],
+      [
+       0.705,
+       0.667
+      ],
+      [
+       0.4,
+       0.667
+      ],
+      [
+       0.098,
+       0.667
+      ]
+     ],
+     "s": 106,
+     "k": [
+      131,
+      199
+     ],
+     "yakin": [
+      0.038,
+      0.548,
+      0.765,
+      0.727
+     ]
+    }
+   ]
+  },
+  "32": {
+   "1": [
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.0285,
+       0.553
+      ],
+      [
+       0.23,
+       0.553
+      ],
+      [
+       0.44,
+       0.553
+      ],
+      [
+       0.44,
+       0.668
+      ],
+      [
+       0.23,
+       0.668
+      ],
+      [
+       0.0285,
+       0.668
+      ]
+     ],
+     "etiket": "tiroid, obezite, tüberküloz",
+     "s": 108,
+     "k": [
+      14,
+      39
+     ],
+     "etiket_konum": [
+      0.02,
+      0.84
+     ],
+     "etiket_genislik": 0.378,
+     "etiket_hedef": [
+      0.2092,
+      0.668
+     ],
+     "etiket_boy": 0.0443,
+     "yakin": [
+      0,
+      0.493,
+      0.5,
+      0.9443
+     ]
+    },
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.466,
+       0.125
+      ],
+      [
+       0.685,
+       0.125
+      ],
+      [
+       0.905,
+       0.125
+      ],
+      [
+       0.905,
+       0.29
+      ],
+      [
+       0.685,
+       0.29
+      ],
+      [
+       0.466,
+       0.29
+      ]
+     ],
+     "etiket": "prostat, CYBH, kemik sağlığı",
+     "s": 108,
+     "k": [
+      40,
+      166
+     ],
+     "etiket_konum": [
+      0.466,
+      0.0687
+     ],
+     "etiket_genislik": 0.391,
+     "yakin": [
+      0.406,
+      0.0087,
+      0.965,
+      0.35
+     ]
+    }
+   ]
+  },
+  "33": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "tani_tetkik",
+     "sablon_ad": "Durum → bakılacak tetkik",
+     "duzen": "tablo",
+     "basliklar": [
+      "Durum / şüphe",
+      "Bakılacak tetkik"
+     ],
+     "satirlar": [
+      [
+       "≥18 yaş + en az bir risk faktörü",
+       "Serum lipid profili taraması"
+      ]
+     ],
+     "s": 113,
+     "k": [
+      0,
+      103
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.24,
+      0.48
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.001,
+     "kutu_h": 0.236,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ],
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "tani_tetkik",
+     "sablon_ad": "Durum → bakılacak tetkik",
+     "duzen": "tablo",
+     "basliklar": [
+      "Durum / şüphe",
+      "Bakılacak tetkik"
+     ],
+     "satirlar": [
+      [
+       "≥18 yaş + en az bir risk faktörü",
+       "Serum lipid profili taraması"
+      ],
+      [
+       "35 yaş üstü herkes",
+       "Beş yılda bir lipid profili"
+      ]
+     ],
+     "s": 113,
+     "k": [
+      0,
+      100
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.04,
+      0.48
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.253,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ],
+   "3": [
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.14,
+       0.643
+      ],
+      [
+       0.49,
+       0.643
+      ],
+      [
+       0.835,
+       0.643
+      ],
+      [
+       0.835,
+       0.697
+      ],
+      [
+       0.835,
+       0.747
+      ],
+      [
+       0.49,
+       0.747
+      ],
+      [
+       0.14,
+       0.747
+      ],
+      [
+       0.14,
+       0.697
+      ]
+     ],
+     "etiket": "APG ve OGTT eşikleri",
+     "s": 114,
+     "k": [
+      12,
+      33
+     ],
+     "etiket_konum": [
+      0.645,
+      0.673
+     ],
+     "etiket_genislik": 0.29
+    },
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.14,
+       0.797
+      ],
+      [
+       0.49,
+       0.797
+      ],
+      [
+       0.835,
+       0.797
+      ],
+      [
+       0.835,
+       0.825
+      ],
+      [
+       0.835,
+       0.853
+      ],
+      [
+       0.49,
+       0.853
+      ],
+      [
+       0.14,
+       0.853
+      ],
+      [
+       0.14,
+       0.825
+      ]
+     ],
+     "etiket": "HbA1c eşikleri",
+     "s": 114,
+     "k": [
+      34,
+      53
+     ],
+     "etiket_konum": [
+      0.745,
+      0.757
+     ],
+     "etiket_genislik": 0.214
+    }
+   ],
+   "5": [
+    {
+     "tur": "sema",
+     "sablon": "tani_tetkik",
+     "sablon_ad": "Durum → bakılacak tetkik",
+     "duzen": "tablo",
+     "basliklar": [
+      "Durum / şüphe",
+      "Bakılacak tetkik"
+     ],
+     "satirlar": [
+      [
+       "Ailede tiroid hastalığı öyküsü",
+       "İlk muayenede TSH"
+      ],
+      [
+       "35 yaş üstü tüm erişkinler",
+       "Beş yılda bir TSH"
+      ]
+     ],
+     "s": 115,
+     "k": [
+      0,
+      96
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.23,
+      0.48
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.333,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ]
+  },
+  "34": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Ağırlık",
+      "Boy",
+      "Beden kitle indeksi",
+      "Bel çevresi (erişkinde eklenir)"
+     ],
+     "baslik": "Erişkinde yılda bir ölçülenler",
+     "s": 116,
+     "k": [
+      0,
+      84
+     ],
+     "tip": "liste",
+     "konum": [
+      0.23,
+      0.42
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.363,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ]
+  },
+  "35": {
+   "0": [
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.376,
+       0.395
+      ],
+      [
+       0.5,
+       0.392
+      ],
+      [
+       0.626,
+       0.395
+      ],
+      [
+       0.627,
+       0.63
+      ],
+      [
+       0.624,
+       0.865
+      ],
+      [
+       0.5,
+       0.873
+      ],
+      [
+       0.378,
+       0.865
+      ],
+      [
+       0.375,
+       0.63
+      ]
+     ],
+     "etiket": "rahim ağzı taraması",
+     "s": 118,
+     "k": [
+      37,
+      172
+     ],
+     "etiket_konum": [
+      0.617,
+      0.352
+     ],
+     "etiket_genislik": 0.277
+    }
+   ],
+   "1": [
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.664,
+       0.395
+      ],
+      [
+       0.79,
+       0.392
+      ],
+      [
+       0.921,
+       0.395
+      ],
+      [
+       0.922,
+       0.63
+      ],
+      [
+       0.919,
+       0.865
+      ],
+      [
+       0.79,
+       0.873
+      ],
+      [
+       0.666,
+       0.865
+      ],
+      [
+       0.663,
+       0.63
+      ]
+     ],
+     "etiket": "kalın bağırsak taraması",
+     "s": 118,
+     "k": [
+      0,
+      158
+     ],
+     "etiket_konum": [
+      0.663,
+      0.885
+     ],
+     "etiket_genislik": 0.328,
+     "yakin": [
+      0.603,
+      0.332,
+      1,
+      0.985
+     ]
+    }
+   ],
+   "3": [
+    {
+     "tur": "sema",
+     "sablon": "karar",
+     "sablon_ad": "Karar dalı",
+     "duzen": "dal",
+     "soru": "Birinci derece akrabada meme kanseri öyküsü var mı?",
+     "dallar": [
+      [
+       "Var",
+       "Yılda bir hekim klinik muayenesi"
+      ],
+      [
+       "Yok",
+       "İki yılda bir hekim klinik muayenesi"
+      ]
+     ],
+     "s": 119,
+     "k": [
+      0,
+      159
+     ],
+     "tip": "dal",
+     "konum": [
+      0.05,
+      0.78
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.274,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.0741,
+     "ek_renk": "#ffffff"
+    }
+   ],
+   "4": [
+    {
+     "tur": "sema",
+     "sablon": "tarama_takvimi",
+     "sablon_ad": "Hedef grup → tarama önerisi",
+     "duzen": "tablo",
+     "basliklar": [
+      "Hedef grup",
+      "Tarama / öneri"
+     ],
+     "satirlar": [
+      [
+       "20-40 yaş kadın",
+       "Kendi kendine meme muayenesi"
+      ],
+      [
+       "40-69 yaş kadın",
+       "Yılda bir hekim klinik muayenesi"
+      ],
+      [
+       "40-69 yaş kadın",
+       "İki yılda bir mamografi"
+      ]
+     ],
+     "s": 119,
+     "k": [
+      0,
+      140
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.05,
+      0.78
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.35,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.1496,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "36": {
+   "3": [
+    {
+     "tur": "sema",
+     "sablon": "tarama_takvimi",
+     "sablon_ad": "Hedef grup → tarama önerisi",
+     "duzen": "tablo",
+     "basliklar": [
+      "Hedef grup",
+      "Tarama / öneri"
+     ],
+     "satirlar": [
+      [
+       "Ailede prostat kanseri, 40 yaş üstü erkek",
+       "Bilgilendirme + üroloji uzmanına yönlendirme"
+      ],
+      [
+       "50 yaş üstü tüm erkekler",
+       "Bilgilendirme + üroloji uzmanına yönlendirme"
+      ]
+     ],
+     "s": 122,
+     "k": [
+      0,
+      179
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.19,
+      0.55
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.333,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ]
+  },
+  "37": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "tarama_takvimi",
+     "sablon_ad": "Hedef grup → tarama önerisi",
+     "duzen": "tablo",
+     "basliklar": [
+      "Hedef grup",
+      "Tarama / öneri"
+     ],
+     "satirlar": [
+      [
+       "Erişkin",
+       "Yıllık influenza aşısı"
+      ],
+      [
+       "Erişkin",
+       "Bir kez pnömokok aşısı"
+      ],
+      [
+       "64 yaş üstü, ilk dozdan 5 yıl geçmiş",
+       "Bir doz daha pnömokok aşısı"
+      ]
+     ],
+     "s": 123,
+     "k": [
+      0,
+      178
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.05,
+      0.82
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.35,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.1896,
+     "ek_renk": "#ffffff"
+    }
+   ],
+   "3": [
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.035,
+       0.218
+      ],
+      [
+       0.19,
+       0.218
+      ],
+      [
+       0.48,
+       0.218
+      ],
+      [
+       0.925,
+       0.218
+      ],
+      [
+       0.925,
+       0.25
+      ],
+      [
+       0.48,
+       0.25
+      ],
+      [
+       0.19,
+       0.25
+      ],
+      [
+       0.035,
+       0.25
+      ]
+     ],
+     "etiket": "Td/Tdap: 10 yılda bir rapel",
+     "s": 124,
+     "k": [
+      75,
+      150
+     ],
+     "etiket_konum": [
+      0.54,
+      0.1
+     ],
+     "etiket_genislik": 0.378,
+     "etiket_hedef": [
+      0.7292,
+      0.218
+     ],
+     "etiket_boy": 0.0443,
+     "yakin": [
+      0,
+      0.04,
+      0.985,
+      0.31
+     ]
+    },
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.035,
+       0.252
+      ],
+      [
+       0.19,
+       0.252
+      ],
+      [
+       0.48,
+       0.252
+      ],
+      [
+       0.925,
+       0.252
+      ],
+      [
+       0.925,
+       0.285
+      ],
+      [
+       0.48,
+       0.285
+      ],
+      [
+       0.19,
+       0.285
+      ],
+      [
+       0.035,
+       0.285
+      ]
+     ],
+     "etiket": "İnfluenza: her yıl 1 doz",
+     "s": 124,
+     "k": [
+      151,
+      176
+     ],
+     "etiket_konum": [
+      0.02,
+      0.08
+     ],
+     "etiket_genislik": 0.34,
+     "etiket_hedef": [
+      0.1902,
+      0.252
+     ],
+     "etiket_boy": 0.0443,
+     "yakin": [
+      0,
+      0.02,
+      0.985,
+      0.345
+     ]
+    }
+   ],
+   "4": [
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.035,
+       0.578
+      ],
+      [
+       0.19,
+       0.578
+      ],
+      [
+       0.48,
+       0.578
+      ],
+      [
+       0.925,
+       0.578
+      ],
+      [
+       0.925,
+       0.612
+      ],
+      [
+       0.48,
+       0.612
+      ],
+      [
+       0.19,
+       0.612
+      ],
+      [
+       0.035,
+       0.612
+      ]
+     ],
+     "etiket": "Hib: 4 hafta arayla 3 doz",
+     "s": 124,
+     "k": [
+      100,
+      151
+     ],
+     "etiket_konum": [
+      0.3035,
+      0.624
+     ],
+     "etiket_genislik": 0.353,
+     "yakin": [
+      0,
+      0.518,
+      0.985,
+      0.724
+     ]
+    }
+   ],
+   "5": [
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.638,
+       0.427
+      ],
+      [
+       0.78,
+       0.427
+      ],
+      [
+       0.925,
+       0.427
+      ],
+      [
+       0.925,
+       0.462
+      ],
+      [
+       0.78,
+       0.462
+      ],
+      [
+       0.638,
+       0.462
+      ]
+     ],
+     "etiket": "Zoster: ileri yaşta tek doz",
+     "s": 124,
+     "k": [
+      0,
+      42
+     ],
+     "etiket_konum": [
+      0.32,
+      0.76
+     ],
+     "etiket_genislik": 0.378,
+     "etiket_hedef": [
+      0.638,
+      0.462
+     ],
+     "etiket_boy": 0.0443,
+     "yakin": [
+      0.26,
+      0.367,
+      0.985,
+      0.8643
+     ]
+    },
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.035,
+       0.287
+      ],
+      [
+       0.19,
+       0.287
+      ],
+      [
+       0.48,
+       0.287
+      ],
+      [
+       0.925,
+       0.287
+      ],
+      [
+       0.925,
+       0.321
+      ],
+      [
+       0.925,
+       0.355
+      ],
+      [
+       0.48,
+       0.355
+      ],
+      [
+       0.19,
+       0.355
+      ],
+      [
+       0.035,
+       0.355
+      ],
+      [
+       0.035,
+       0.321
+      ]
+     ],
+     "etiket": "PCV13 ve PPSV23 dozları",
+     "s": 124,
+     "k": [
+      43,
+      130
+     ],
+     "etiket_konum": [
+      0.38,
+      0.04
+     ],
+     "etiket_genislik": 0.328,
+     "etiket_hedef": [
+      0.5438,
+      0.287
+     ],
+     "etiket_boy": 0.0443
+    }
+   ],
+   "6": [
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.2575,
+       0.4533
+      ],
+      [
+       0.3,
+       0.4533
+      ],
+      [
+       0.34,
+       0.4533
+      ],
+      [
+       0.34,
+       0.5033
+      ],
+      [
+       0.34,
+       0.555
+      ],
+      [
+       0.3,
+       0.555
+      ],
+      [
+       0.2575,
+       0.555
+      ],
+      [
+       0.2575,
+       0.5033
+      ]
+     ],
+     "etiket": "immün yetmezlikte canlı aşı yok",
+     "s": 125,
+     "k": [
+      130,
+      153
+     ],
+     "etiket_konum": [
+      0.3,
+      0.72
+     ],
+     "etiket_genislik": 0.42,
+     "etiket_hedef": [
+      0.34,
+      0.555
+     ],
+     "etiket_boy": 0.0443,
+     "yakin": [
+      0.1975,
+      0.3933,
+      0.78,
+      0.8243
+     ]
+    },
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.5863,
+       0.4533
+      ],
+      [
+       0.627,
+       0.4533
+      ],
+      [
+       0.6675,
+       0.4533
+      ],
+      [
+       0.6675,
+       0.5033
+      ],
+      [
+       0.6675,
+       0.555
+      ],
+      [
+       0.627,
+       0.555
+      ],
+      [
+       0.5863,
+       0.555
+      ],
+      [
+       0.5863,
+       0.5033
+      ]
+     ],
+     "etiket": "CD4<200 HIV: kontrendike",
+     "s": 125,
+     "k": [
+      160,
+      214
+     ],
+     "etiket_konum": [
+      0.54,
+      0.78
+     ],
+     "etiket_genislik": 0.34,
+     "etiket_hedef": [
+      0.6675,
+      0.555
+     ],
+     "etiket_boy": 0.0443,
+     "yakin": [
+      0.48,
+      0.3933,
+      0.94,
+      0.8843
+     ]
+    }
+   ],
+   "7": [
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.175,
+       0.25
+      ],
+      [
+       0.4,
+       0.25
+      ],
+      [
+       0.65,
+       0.25
+      ],
+      [
+       0.914,
+       0.25
+      ],
+      [
+       0.914,
+       0.2833
+      ],
+      [
+       0.914,
+       0.3167
+      ],
+      [
+       0.65,
+       0.3167
+      ],
+      [
+       0.4,
+       0.3167
+      ],
+      [
+       0.175,
+       0.3167
+      ],
+      [
+       0.175,
+       0.2833
+      ]
+     ],
+     "etiket": "tüm gruplarda önerilir",
+     "s": 125,
+     "k": [
+      0,
+      61
+     ],
+     "etiket_konum": [
+      0.175,
+      0.1937
+     ],
+     "etiket_genislik": 0.315,
+     "yakin": [
+      0.115,
+      0.1337,
+      0.974,
+      0.3767
+     ]
+    }
+   ]
+  },
+  "38": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "tani_tetkik",
+     "sablon_ad": "Durum → bakılacak tetkik",
+     "duzen": "tablo",
+     "basliklar": [
+      "Durum / şüphe",
+      "Bakılacak tetkik"
+     ],
+     "satirlar": [
+      [
+       "18 yaş üstü, cinsel aktif; talep ya da risk faktörü",
+       "Hepatit B, hepatit C, HIV taraması"
+      ]
+     ],
+     "s": 126,
+     "k": [
+      140,
+      192
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.34,
+      0.65
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.001,
+     "kutu_h": 0.276,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ],
+   "3": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Sigara kullanımının önlenmesi",
+      "Alkol alımının önlenmesi",
+      "Yaşa göre yeterli kalsiyum",
+      "Yaşa göre yeterli D vitamini"
+     ],
+     "baslik": "Kemik sağlığının korunması",
+     "s": 127,
+     "k": [
+      0,
+      77
+     ],
+     "tip": "liste",
+     "konum": [
+      0.27,
+      0.47
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.363,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ],
+   "5": [
+    {
+     "tur": "sema",
+     "sablon": "algoritma",
+     "sablon_ad": "Yaklaşım basamakları",
+     "duzen": "adimlar",
+     "ogeler": [
+      "Çiftlere orak hücreli anemi ve talasemi sorgulaması",
+      "Her ikisi de taşıyıcı: yakın takip",
+      "Gebelik oluşunca prenatal tanı için ileri merkeze sevk"
+     ],
+     "s": 128,
+     "k": [
+      0,
+      138
+     ],
+     "tip": "adimlar",
+     "konum": [
+      0.15,
+      0.69
+     ],
+     "genislik": 0.6,
+     "doluluk": 0.0,
+     "kutu_h": 0.299,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ]
+  },
+  "39": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "tani_tetkik",
+     "sablon_ad": "Durum → bakılacak tetkik",
+     "duzen": "tablo",
+     "basliklar": [
+      "Durum / şüphe",
+      "Bakılacak tetkik"
+     ],
+     "satirlar": [
+      [
+       "65 yaş altı, risk faktörlü erişkin (en az bir kez)",
+       "İyonize Ca, tam kan, kreatinin, ALP, TSH, 25-OH D3"
+      ]
+     ],
+     "s": 129,
+     "k": [
+      119,
+      234
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.19,
+      0.68
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.276,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ],
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Fizik tedavi ve rehabilitasyon",
+      "Endokrinoloji",
+      "Ortopedi"
+     ],
+     "baslik": "Risk ve kırık varlığına göre yönlendirme",
+     "s": 129,
+     "k": [
+      49,
+      124
+     ],
+     "tip": "liste",
+     "konum": [
+      0.05,
+      0.68
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.308,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.008,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "40": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Mini mental durum testi",
+      "Yesavage geriatrik depresyon skalası",
+      "Mini nütrisyonel test",
+      "Kalk ve yürü testi",
+      "Günlük yaşam aktiviteleri testi"
+     ],
+     "baslik": "Çok yönlü geriatrik değerlendirme",
+     "s": 132,
+     "k": [
+      17,
+      160
+     ],
+     "tip": "liste",
+     "konum": [
+      0.05,
+      0.74
+     ],
+     "genislik": 0.7,
+     "doluluk": 0.0,
+     "kutu_h": 0.419,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.1789,
+     "ek_renk": "#ffffff"
+    }
+   ],
+   "3": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Hipertansiyon, kalp hastalığı, diyabet",
+      "Kronik akciğer hastalığı, kanser",
+      "Görme ve işitme bozuklukları",
+      "Hareket ve yeme bozuklukları",
+      "Ruhsal sorunlar"
+     ],
+     "baslik": "Geriatrik taramalar",
+     "s": 133,
+     "k": [
+      0,
+      96
+     ],
+     "tip": "liste",
+     "konum": [
+      0.51,
+      0.26
+     ],
+     "genislik": 0.42,
+     "doluluk": 0.0,
+     "kutu_h": 0.459,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ]
+  }
+ },
+ "rapor": {
+  "aday": 208,
+  "gecti": 164,
+  "ret": {
+   "ok uçlarından biri boş alanda (yazı/çizim yok)": 6,
+   "panel metni 'Kime göre' henüz anlatılmamış terim içeriyor (i": 1,
+   "panel metni 'Şüpheli durum veya taşıyıcılık' henüz anlatılma": 1,
+   "lazer sayfası dışında çizim (H59)": 15,
+   "panel metni 'Akdeniz anemisi (talasemi)' henüz anlatılmamış ": 1,
+   "panel metni '5q13 SMN1 homozigot delesyon/v' henüz anlatılma": 1,
+   "noktaların %67'i çizgi üstünde (en az %70)": 5,
+   "noktaların %47'i çizgi üstünde (en az %70)": 1,
+   "panel metni '1200 ünite' henüz anlatılmamış terim içeriyor (": 1,
+   "panel metni 'Göz kontağı kuruyor' henüz anlatılmamış terim i": 1,
+   "panel metni '60. ayda yazı, harf ve sayı öğ' henüz anlatılma": 1,
+   "noktaların %27'i çizgi üstünde (en az %70)": 1,
+   "noktaların %18'i çizgi üstünde (en az %70)": 1,
+   "noktaların %9'i çizgi üstünde (en az %70)": 1,
+   "resim sayfasında panel (H51)": 1,
+   "panel metni 'gastrointestinal yan etkiler' henüz anlatılmamı": 1,
+   "noktaların %33'i çizgi üstünde (en az %70)": 1,
+   "hücre 60 karakterden uzun": 1,
+   "panel metni 'Hepatit A (6 ay arayla 2 doz)' henüz anlatılmam": 1,
+   "noktaların %63'i çizgi üstünde (en az %70)": 1,
+   "kelime aralığı geçersiz (0–22, cümle 13 kelime)": 1
+  },
+  "ret_ayrinti": [
+   {
+    "cumle": "P1.C2",
+    "sayfa": 6,
+    "tur": "akis",
+    "neden": "ok uçlarından biri boş alanda (yazı/çizim yok)",
+    "komut": {
+     "a": [
+      0.47,
+      0.6
+     ],
+     "b": [
+      0.565,
+      0.725
+     ],
+     "etiket": "aşılama: birincil koruma"
+    }
+   },
+   {
+    "cumle": "P4.C3",
+    "sayfa": 15,
+    "tur": "sema",
+    "neden": "panel metni 'Kime göre' henüz anlatılmamış terim içeriyor (ileri sızıntı)",
+    "komut": {}
+   },
+   {
+    "cumle": "P5.C1",
+    "sayfa": 19,
+    "tur": "sema",
+    "neden": "panel metni 'Şüpheli durum veya taşıyıcılık' henüz anlatılmamış terim içeriyor (ileri sızıntı)",
+    "komut": {}
+   },
+   {
+    "cumle": "P5.C2",
+    "sayfa": 20,
+    "tur": "sema",
+    "neden": "lazer sayfası dışında çizim (H59)",
+    "komut": {}
+   },
+   {
+    "cumle": "P5.C3",
+    "sayfa": 20,
+    "tur": "sema",
+    "neden": "panel metni 'Akdeniz anemisi (talasemi)' henüz anlatılmamış terim içeriyor (ileri sızıntı)",
+    "komut": {}
+   },
+   {
+    "cumle": "P6.C4",
+    "sayfa": 22,
+    "tur": "sema",
+    "neden": "panel metni '5q13 SMN1 homozigot delesyon/v' henüz anlatılmamış terim içeriyor (ileri sızıntı)",
+    "komut": {}
+   },
+   {
+    "cumle": "P8.C0",
+    "sayfa": 27,
+    "tur": "sema",
+    "neden": "lazer sayfası dışında çizim (H59)",
+    "komut": {}
+   },
+   {
+    "cumle": "P8.C4",
+    "sayfa": 29,
+    "tur": "kontur",
+    "neden": "lazer sayfası dışında çizim (H59)",
+    "komut": {}
+   },
+   {
+    "cumle": "P12.C0",
+    "sayfa": 40,
+    "tur": "sema",
+    "neden": "lazer sayfası dışında çizim (H59)",
+    "komut": {}
+   },
+   {
+    "cumle": "P12.C4",
+    "sayfa": 42,
+    "tur": "sema",
+    "neden": "lazer sayfası dışında çizim (H59)",
+    "komut": {}
+   },
+   {
+    "cumle": "P15.C0",
+    "sayfa": 53,
+    "tur": "akis",
+    "neden": "lazer sayfası dışında çizim (H59)",
+    "komut": {}
+   },
+   {
+    "cumle": "P15.C1",
+    "sayfa": 53,
+    "tur": "akis",
+    "neden": "lazer sayfası dışında çizim (H59)",
+    "komut": {}
+   },
+   {
+    "cumle": "P15.C2",
+    "sayfa": 54,
+    "tur": "sema",
+    "neden": "lazer sayfası dışında çizim (H59)",
+    "komut": {}
+   },
+   {
+    "cumle": "P15.C3",
+    "sayfa": 54,
+    "tur": "sema",
+    "neden": "lazer sayfası dışında çizim (H59)",
+    "komut": {}
+   },
+   {
+    "cumle": "P15.C4",
+    "sayfa": 55,
+    "tur": "sema",
+    "neden": "lazer sayfası dışında çizim (H59)",
+    "komut": {}
+   },
+   {
+    "cumle": "P15.C5",
+    "sayfa": 55,
+    "tur": "sema",
+    "neden": "lazer sayfası dışında çizim (H59)",
+    "komut": {}
+   },
+   {
+    "cumle": "P18.C0",
+    "sayfa": 62,
+    "tur": "kontur",
+    "neden": "noktaların %67'i çizgi üstünde (en az %70)",
+    "komut": {
+     "nokta": [
+      [
+       0.365,
+       0.683
+      ],
+      [
+       0.42,
+       0.682
+      ],
+      [
+       0.484,
+       0.683
+      ],
+      [
+       0.486,
+       0.708
+      ],
+      [
+       0.484,
+       0.73
+      ],
+      [
+       0.42,
+       0.731
+      ],
+      [
+       0.365,
+       0.73
+      ],
+      [
+       0.363,
+       0.708
+      ]
+     ],
+     "etiket": "normal sonuç"
+    }
+   },
+   {
+    "cumle": "P18.C5",
+    "sayfa": 64,
+    "tur": "kontur",
+    "neden": "noktaların %67'i çizgi üstünde (en az %70)",
+    "komut": {
+     "nokta": [
+      [
+       0.145,
+       0.065
+      ],
+      [
+       0.45,
+       0.063
+      ],
+      [
+       0.928,
+       0.065
+      ],
+      [
+       0.938,
+       0.105
+      ],
+      [
+       0.928,
+       0.145
+      ],
+      [
+       0.45,
+       0.147
+      ],
+      [
+       0.145,
+       0.145
+      ],
+      [
+       0.138,
+       0.105
+      ]
+     ],
+     "etiket": "taranan bebekler"
+    }
+   },
+   {
+    "cumle": "P19.C3",
+    "sayfa": 66,
+    "tur": "kontur",
+    "neden": "noktaların %67'i çizgi üstünde (en az %70)",
+    "komut": {
+     "nokta": [
+      [
+       0.507,
+       0.612
+      ],
+      [
+       0.62,
+       0.61
+      ],
+      [
+       0.727,
+       0.612
+      ],
+      [
+       0.73,
+       0.63
+      ],
+      [
+       0.727,
+       0.648
+      ],
+      [
+       0.62,
+       0.65
+      ],
+      [
+       0.507,
+       0.648
+      ],
+      [
+       0.504,
+       0.63
+      ]
+     ],
+     "etiket": "ter testi için sevk"
+    }
+   },
+   {
+    "cumle": "P22.C2",
+    "sayfa": 74,
+    "tur": "kontur",
+    "neden": "noktaların %47'i çizgi üstünde (en az %70)",
+    "komut": {
+     "nokta": [
+      [
+       0.5625,
+       0.5733
+      ],
+      [
+       0.7375,
+       0.5733
+      ],
+      [
+       0.9125,
+       0.5733
+      ],
+      [
+       0.9125,
+       0.6092
+      ],
+      [
+       0.9125,
+       0.645
+      ],
+      [
+       0.7375,
+       0.645
+      ],
+      [
+       0.5625,
+       0.645
+      ],
+      [
+       0.5625,
+       0.6092
+      ]
+     ],
+     "etiket": "normal simetrik refle"
+    }
+   },
+   {
+    "cumle": "P22.C3",
+    "sayfa": 74,
+    "tur": "kontur",
+    "neden": "noktaların %67'i çizgi üstünde (en az %70)",
+    "komut": {
+     "nokta": [
+      [
+       0.5625,
+       0.6533
+      ],
+      [
+       0.7375,
+       0.6533
+      ],
+      [
+       0.9125,
+       0.6533
+      ],
+      [
+       0.9125,
+       0.6883
+      ],
+      [
+       0.9125,
+       0.7233
+      ],
+      [
+       0.7375,
+       0.7233
+      ],
+      [
+       0.5625,
+       0.7233
+      ],
+      [
+       0.5625,
+       0.6883
+      ]
+     ],
+     "etiket": "karanlık nokta"
+    }
+   },
+   {
+    "cumle": "P22.C3",
+    "sayfa": 74,
+    "tur": "kontur",
+    "neden": "noktaların %67'i çizgi üstünde (en az %70)",
+    "komut": {
+     "nokta": [
+      [
+       0.5625,
+       0.7317
+      ],
+      [
+       0.7375,
+       0.7317
+      ],
+      [
+       0.9125,
+       0.7317
+      ],
+      [
+       0.9125,
+       0.7658
+      ],
+      [
+       0.9125,
+       0.8
+      ],
+      [
+       0.7375,
+       0.8
+      ],
+      [
+       0.5625,
+       0.8
+      ],
+      [
+       0.5625,
+       0.7658
+      ]
+     ],
+     "etiket": "lökokori"
+    }
+   },
+   {
+    "cumle": "P22.C6",
+    "sayfa": 75,
+    "tur": "akis",
+    "neden": "ok uçlarından biri boş alanda (yazı/çizim yok)",
+    "komut": {
+     "a": [
+      0.42,
+      0.7
+     ],
+     "b": [
+      0.655,
+      0.7
+     ],
+     "etiket": "kalça fizik muayenesi"
+    }
+   },
+   {
+    "cumle": "P23.C1",
+    "sayfa": 76,
+    "tur": "sema",
+    "neden": "panel metni '1200 ünite' henüz anlatılmamış terim içeriyor (ileri sızıntı)",
+    "komut": {}
+   },
+   {
+    "cumle": "P23.C2",
+    "sayfa": 77,
+    "tur": "akis",
+    "neden": "ok uçlarından biri boş alanda (yazı/çizim yok)",
+    "komut": {
+     "a": [
+      0.6,
+      0.1
+     ],
+     "b": [
+      0.775,
+      0.135
+     ],
+     "etiket": "fontanel muayenesi"
+    }
+   },
+   {
+    "cumle": "P26.C0",
+    "sayfa": 84,
+    "tur": "akis",
+    "neden": "ok uçlarından biri boş alanda (yazı/çizim yok)",
+    "komut": {
+     "a": [
+      0.78,
+      0.4
+     ],
+     "b": [
+      0.64,
+      0.4
+     ],
+     "etiket": "12–30. ay izlem aralıkları"
+    }
+   },
+   {
+    "cumle": "P26.C1",
+    "sayfa": 84,
+    "tur": "akis",
+    "neden": "ok uçlarından biri boş alanda (yazı/çizim yok)",
+    "komut": {
+     "a": [
+      0.78,
+      0.765
+     ],
+     "b": [
+      0.57,
+      0.765
+     ],
+     "etiket": "60. ay: 1681–1890. gün"
+    }
+   },
+   {
+    "cumle": "P26.C4",
+    "sayfa": 87,
+    "tur": "akis",
+    "neden": "ok uçlarından biri boş alanda (yazı/çizim yok)",
+    "komut": {
+     "a": [
+      0.4,
+      0.62
+     ],
+     "b": [
+      0.7,
+      0.55
+     ],
+     "etiket": "Lea eşeli optotipleri"
+    }
+   },
+   {
+    "cumle": "P27.C5",
+    "sayfa": 91,
+    "tur": "sema",
+    "neden": "panel metni 'Göz kontağı kuruyor' henüz anlatılmamış terim içeriyor (ileri sızıntı)",
+    "komut": {}
+   },
+   {
+    "cumle": "P28.C3",
+    "sayfa": 93,
+    "tur": "sema",
+    "neden": "panel metni '60. ayda yazı, harf ve sayı öğ' henüz anlatılmamış terim içeriyor (ileri sızıntı)",
+    "komut": {}
+   },
+   {
+    "cumle": "P29.C0",
+    "sayfa": 97,
+    "tur": "kontur",
+    "neden": "noktaların %27'i çizgi üstünde (en az %70)",
+    "komut": {
+     "nokta": [
+      [
+       0.122,
+       0.262
+      ],
+      [
+       0.38,
+       0.258
+      ],
+      [
+       0.635,
+       0.262
+      ],
+      [
+       0.635,
+       0.305
+      ],
+      [
+       0.38,
+       0.308
+      ],
+      [
+       0.122,
+       0.305
+      ]
+     ],
+     "etiket": "okul çağı izlem aralıkları"
+    }
+   },
+   {
+    "cumle": "P29.C1",
+    "sayfa": 97,
+    "tur": "kontur",
+    "neden": "noktaların %18'i çizgi üstünde (en az %70)",
+    "komut": {
+     "nokta": [
+      [
+       0.122,
+       0.318
+      ],
+      [
+       0.24,
+       0.316
+      ],
+      [
+       0.362,
+       0.318
+      ],
+      [
+       0.362,
+       0.362
+      ],
+      [
+       0.24,
+       0.364
+      ],
+      [
+       0.122,
+       0.362
+      ]
+     ],
+     "etiket": "6 yaş: 67-78. ay"
+    }
+   },
+   {
+    "cumle": "P29.C1",
+    "sayfa": 97,
+    "tur": "kontur",
+    "neden": "noktaların %9'i çizgi üstünde (en az %70)",
+    "komut": {
+     "nokta": [
+      [
+       0.405,
+       0.705
+      ],
+      [
+       0.54,
+       0.703
+      ],
+      [
+       0.677,
+       0.705
+      ],
+      [
+       0.677,
+       0.75
+      ],
+      [
+       0.54,
+       0.752
+      ],
+      [
+       0.405,
+       0.75
+      ]
+     ],
+     "etiket": "21 yaş: 247-258. ay"
+    }
+   },
+   {
+    "cumle": "P32.C0",
+    "sayfa": 108,
+    "tur": "kontur",
+    "neden": "lazer sayfası dışında çizim (H59)",
+    "komut": {}
+   },
+   {
+    "cumle": "P32.C0",
+    "sayfa": 108,
+    "tur": "kontur",
+    "neden": "lazer sayfası dışında çizim (H59)",
+    "komut": {}
+   },
+   {
+    "cumle": "P32.C5",
+    "sayfa": 111,
+    "tur": "kontur",
+    "neden": "lazer sayfası dışında çizim (H59)",
+    "komut": {}
+   },
+   {
+    "cumle": "P32.C7",
+    "sayfa": 112,
+    "tur": "sema",
+    "neden": "lazer sayfası dışında çizim (H59)",
+    "komut": {}
+   },
+   {
+    "cumle": "P32.C8",
+    "sayfa": 112,
+    "tur": "sema",
+    "neden": "panel metni 'gastrointestinal yan etkiler' henüz anlatılmamış terim içeriyor (ileri sızıntı)",
+    "komut": {}
+   },
+   {
+    "cumle": "P34.C3",
+    "sayfa": 117,
+    "tur": "kontur",
+    "neden": "noktaların %33'i çizgi üstünde (en az %70)",
+    "komut": {
+     "nokta": [
+      [
+       0.548,
+       0.822
+      ],
+      [
+       0.556,
+       0.814
+      ],
+      [
+       0.566,
+       0.812
+      ],
+      [
+       0.576,
+       0.818
+      ],
+      [
+       0.578,
+       0.828
+      ],
+      [
+       0.57,
+       0.838
+      ],
+      [
+       0.558,
+       0.839
+      ],
+      [
+       0.549,
+       0.832
+      ]
+     ],
+     "etiket": "intradermal tüberkülin kabarcığı"
+    }
+   },
+   {
+    "cumle": "P37.C2",
+    "sayfa": 123,
+    "tur": "sema",
+    "neden": "panel metni 'Hepatit A (6 ay arayla 2 doz)' henüz anlatılmamış terim içeriyor (ileri sızıntı)",
+    "komut": {}
+   },
+   {
+    "cumle": "P37.C4",
+    "sayfa": 124,
+    "tur": "kontur",
+    "neden": "noktaların %63'i çizgi üstünde (en az %70)",
+    "komut": {
+     "nokta": [
+      [
+       0.035,
+       0.358
+      ],
+      [
+       0.19,
+       0.358
+      ],
+      [
+       0.48,
+       0.358
+      ],
+      [
+       0.925,
+       0.358
+      ],
+      [
+       0.925,
+       0.391
+      ],
+      [
+       0.925,
+       0.424
+      ],
+      [
+       0.48,
+       0.424
+      ],
+      [
+       0.19,
+       0.424
+      ],
+      [
+       0.035,
+       0.424
+      ],
+      [
+       0.035,
+       0.391
+      ]
+     ],
+     "etiket": "Hepatit B ve A dozları"
+    }
+   },
+   {
+    "cumle": "P39.C3",
+    "sayfa": 131,
+    "tur": "sema",
+    "neden": "kelime aralığı geçersiz (0–22, cümle 13 kelime)",
+    "komut": {}
+   }
+  ]
+ }
+}

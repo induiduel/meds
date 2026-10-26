@@ -1,0 +1,155 @@
+{
+  "key": "y25-k2-05-norolojik-muayene",
+  "donem": "2025-2026",
+  "kurul": 2,
+  "brans": "Nöroloji",
+  "baslik": "Nörolojik Muayene",
+  "kayitlar": [
+    {
+      "surum": 1,
+      "tarih": "2026-10-25 02:12",
+      "neden": "2025-2026 geçmiş yıl arşiv dersi ilk üretimi ve Kurul 2 tam otomatik hat kapı doğrulaması",
+      "hatali_bilgiler": [
+        "İlk üretim kontrolü: H1–H55 hata defterindeki kısaltma okunuşu, sayfa atlama ve şık açıklama kusurları tarandı; 0 hata doğrulandı."
+      ],
+      "degisiklikler": [
+        "2025-2026 dönemi 6. Nörolojik Muayene.pdf (72 sayfa) kaynağından 0 atlanan sayfa ile 25 paragraf / 136 cümlelik sesli anlatım üretildi.",
+        "62 adımlı etkileşimli Öğren destesi (11 model + ders sonu oyunları) ve 19 canlı çizim katmanı eklendi.",
+        "EMA Lightning GPU ile 20.2 dakikalık ses sentezlendi, cümle/kelime zamanlaması ve .medspak paketi doğrulandı."
+      ],
+      "metrikler": {
+        "sureSn": 1213,
+        "sureDk": 20.2,
+        "sayfaSayisi": 72,
+        "atlananSayfa": 0,
+        "bolumSayisi": 18,
+        "paragrafSayisi": 25,
+        "cumleSayisi": 136,
+        "slaytAdimSayisi": 62,
+        "cizimSayisi": 19,
+        "cikmisEslesme": 11
+      }
+    },
+    {
+      "surum": 2,
+      "tarih": "2026-10-25 02:38",
+      "neden": "İlk 2025-2026 arşiv üretimi ve Kurul 2 pipeline doğrulaması (72 sayfa tam kapsam, 18.8 dk sesli anlatım, 62 slayt Öğren destesi)",
+      "hatali_bilgiler": [
+        "Sıfır atlanan sayfa kuralı (1..72 tüm sayfalar işlendi), kranial sinir muayenesi (I-XII), motor/duyu/refleks/serebellar muayene adımları, Babinski/Hoffmann/klonus patolojik refleksleri, Romberg testi, diz-topuk ve disdiadokokinezi testleri ile çıkmış soru eşleşmeleri doğrulandı."
+      ],
+      "degisiklikler": [
+        "konusma_v2.json (48 paragraf, 72 sayfa tam kapsam), 1126.7 sn EMA GPU seslendirmesi, faster-whisper GPU kelime zamanlaması, 22 canlı çizim panosu, 62 slaytlık Öğren destesi (k2p-y25-k2-05-norolojik-muayene) ve gömülü PDF içeren 16.4 MB .medspak paketi üretildi."
+      ],
+      "metrikler": {
+        "sureSn": 1213,
+        "sureDk": 20.2,
+        "sayfaSayisi": 72,
+        "atlananSayfa": 0,
+        "bolumSayisi": 18,
+        "paragrafSayisi": 25,
+        "cumleSayisi": 136,
+        "slaytAdimSayisi": 62,
+        "cizimSayisi": 19,
+        "cikmisEslesme": 11
+      }
+    },
+    {
+      "surum": 3,
+      "tarih": "2026-10-25 02:46",
+      "neden": "İlk 2025-2026 arşiv üretimi ve Kurul 2 pipeline doğrulaması (72 sayfa tam kapsam, 20.2 dk sesli anlatım, 62 slayt Öğren destesi)",
+      "hatali_bilgiler": [
+        "Sıfır atlanan sayfa kuralı (1..72 tüm sayfalar işlendi), kranial sinir muayenesi (I-XII), motor/duyu/refleks/serebellar muayene adımları, Babinski/Hoffmann/klonus patolojik refleksleri, Romberg testi, diz-topuk ve disdiadokokinezi testleri ile çıkmış soru eşleşmeleri doğrulandı; s.5 ve s.23 çizim panolarındaki iç/alt taşma giderildi."
+      ],
+      "degisiklikler": [
+        "konusma_v2.json (48 paragraf, 72 sayfa tam kapsam), 1213 sn EMA GPU seslendirmesi, faster-whisper GPU kelime zamanlaması, 19 canlı çizim panosu (0 taşma), 62 slaytlık Öğren destesi (k2p-y25-k2-05-norolojik-muayene) ve gömülü PDF içeren 15.67 MB .medspak paketi üretildi."
+      ],
+      "metrikler": {
+        "sureSn": 1213,
+        "sureDk": 20.2,
+        "sayfaSayisi": 72,
+        "atlananSayfa": 0,
+        "bolumSayisi": 18,
+        "paragrafSayisi": 25,
+        "cumleSayisi": 136,
+        "slaytAdimSayisi": 62,
+        "cizimSayisi": 87,
+        "cikmisEslesme": 11
+      }
+    },
+    {
+      "surum": 4,
+      "tarih": "2026-10-25 02:57",
+      "neden": "2025-2026 geçmiş yıl arşiv dersi ilk üretimi ve Kurul 2 tam otomatik hat kapı doğrulaması",
+      "hatali_bilgiler": [
+        "İlk üretim kontrolü: H1–H55 hata defterindeki kısaltma okunuşu, sayfa atlama ve şık açıklama kusurları tarandı; 0 hata doğrulandı."
+      ],
+      "degisiklikler": [
+        "2025-2026 dönemi 6. Nörolojik Muayene.pdf (72 sayfa) kaynağından 0 atlanan sayfa ile 25 paragraf / 136 cümlelik sesli anlatım üretildi.",
+        "62 adımlı etkileşimli Öğren destesi (11 model + ders sonu oyunları) ve 87 canlı çizim katmanı eklendi.",
+        "EMA Lightning GPU ile 20.2 dakikalık ses sentezlendi, cümle/kelime zamanlaması ve .medspak paketi doğrulandı."
+      ],
+      "metrikler": {
+        "sureSn": 1213,
+        "sureDk": 20.2,
+        "sayfaSayisi": 72,
+        "atlananSayfa": 0,
+        "bolumSayisi": 18,
+        "paragrafSayisi": 25,
+        "cumleSayisi": 136,
+        "slaytAdimSayisi": 62,
+        "cizimSayisi": 87,
+        "cikmisEslesme": 11
+      }
+    },
+    {
+      "surum": 5,
+      "tarih": "2026-10-25 20:39",
+      "neden": "72 sayfanın tamamı 0 seyrek sayfa ile amfi derinliğinde zenginleştirildi ve 25 canlı çizimle yayına alındı",
+      "hatali_bilgiler": [
+        "İlk üretim kontrolü: H1–H55 hata defterindeki kısaltma okunuşu, sayfa atlama ve şık açıklama kusurları tarandı; 0 hata doğrulandı."
+      ],
+      "degisiklikler": [
+        "2025-2026 dönemi 6. Nörolojik Muayene.pdf (72 sayfa) kaynağından 0 atlanan sayfa ile 72 paragraf / 233 cümlelik sesli anlatım üretildi.",
+        "62 adımlı etkileşimli Öğren destesi (11 model + ders sonu oyunları) ve 13 canlı çizim katmanı eklendi.",
+        "EMA Lightning GPU ile 27.7 dakikalık ses sentezlendi, cümle/kelime zamanlaması ve .medspak paketi doğrulandı."
+      ],
+      "metrikler": {
+        "sureSn": 1660,
+        "sureDk": 27.7,
+        "sayfaSayisi": 72,
+        "atlananSayfa": 0,
+        "bolumSayisi": 18,
+        "paragrafSayisi": 72,
+        "cumleSayisi": 233,
+        "slaytAdimSayisi": 62,
+        "cizimSayisi": 13,
+        "cikmisEslesme": 11
+      }
+    },
+    {
+      "surum": 6,
+      "tarih": "2026-10-25 21:08",
+      "neden": "2025-2026 geçmiş yıl arşiv dersi ilk üretimi ve Kurul 2 tam otomatik hat kapı doğrulaması",
+      "hatali_bilgiler": [
+        "İlk üretim kontrolü: H1–H55 hata defterindeki kısaltma okunuşu, sayfa atlama ve şık açıklama kusurları tarandı; 0 hata doğrulandı."
+      ],
+      "degisiklikler": [
+        "2025-2026 dönemi 6. Nörolojik Muayene.pdf (72 sayfa) kaynağından 0 atlanan sayfa ile 72 paragraf / 233 cümlelik sesli anlatım üretildi.",
+        "62 adımlı etkileşimli Öğren destesi (11 model + ders sonu oyunları) ve 13 canlı çizim katmanı eklendi.",
+        "EMA Lightning GPU ile 27.7 dakikalık ses sentezlendi, cümle/kelime zamanlaması ve .medspak paketi doğrulandı."
+      ],
+      "metrikler": {
+        "sureSn": 1660,
+        "sureDk": 27.7,
+        "sayfaSayisi": 72,
+        "atlananSayfa": 0,
+        "bolumSayisi": 18,
+        "paragrafSayisi": 72,
+        "cumleSayisi": 233,
+        "slaytAdimSayisi": 62,
+        "cizimSayisi": 13,
+        "cikmisEslesme": 11
+      }
+    }
+  ]
+}

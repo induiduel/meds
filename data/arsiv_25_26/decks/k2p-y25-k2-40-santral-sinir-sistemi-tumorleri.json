@@ -1,0 +1,2537 @@
+{
+ "id": "k2p-y25-k2-40-santral-sinir-sistemi-tumorleri",
+ "title": "Santral Sinir Sistemi Tümörleri",
+ "courseId": "y25-k2-40-santral-sinir-sistemi-tumorleri",
+ "committee": "donem3-kurul2",
+ "discipline": "patoloji",
+ "slides": [
+  {
+   "id": "k2-40-d-s01",
+   "slideNumber": 1,
+   "title": "SSS Tümörlerine Giriş ve Epidemiyolojik Dağılım",
+   "content": "Santral sinir sistemi neoplazmleri nöroepitelyal dokulardan, beyni saran meninkslerden, embriyonal primitif hücrelerden ve sistemik metastazlardan kaynaklanan heterojen bir gruptur.\n\n- **Epidemiyolojik Dağılım:** İntrakraniyal tümörlerin yıllık insidansı yüz binde on ila yirmi arasındayken, intraspinal tümörler yüz binde bir ila iki sıklıkta görülür.\n- **Pediatrik Onkoloji:** SSS tümörleri çocukluk çağı solid kanserlerinde lösemilerden sonra ikinci en sık (%20) grubu oluşturur.\n- **Anatomik Yerleşim Farkı:** Erişkinlerde primer beyin neoplazmleri sıklıkla supratentoryal yerleşirken, çocukluk çağındaki tümörler çoğunlukla infratentoryal arka fossadadır.\n\n> [!IMPORTANT]\n> Çocukluk çağı beyin tümörleri ağırlıklı olarak serebellum ve beyin sapını içeren arka fossada lokalize olur.",
+   "synthesisNarrative": "Santral sinir sistemi neoplazmleri nöroepitelyal dokulardan, beyni saran meninkslerden, embriyonal primitif hücrelerden ve sistemik metastazlardan kaynaklanan heterojen bir gruptur.\n\n- **Epidemiyolojik Dağılım:** İntrakraniyal tümörlerin yıllık insidansı yüz binde on ila yirmi arasındayken, intraspinal tümörler yüz binde bir ila iki sıklıkta görülür.\n- **Pediatrik Onkoloji:** SSS tümörleri çocukluk çağı solid kanserlerinde lösemilerden sonra ikinci en sık (%20) grubu oluşturur.\n- **Anatomik Yerleşim Farkı:** Erişkinlerde primer beyin neoplazmleri sıklıkla supratentoryal yerleşirken, çocukluk çağındaki tümörler çoğunlukla infratentoryal arka fossadadır.\n\n> [!IMPORTANT]\n> Çocukluk çağı beyin tümörleri ağırlıklı olarak serebellum ve beyin sapını içeren arka fossada lokalize olur.",
+   "interactiveElements": [
+    {
+     "id": "k40-s01-q1",
+     "type": "micro_quiz",
+     "question": "Santral sinir sistemi tümörlerinin genel epidemiyolojisi ve yaşa göre yerleşimi ile ilgili hangisi doğrudur?",
+     "options": [
+      {
+       "text": "Erişkinlerde primer beyin tümörleri sıklıkla supratentoryal alanda yerleşim gösterir.",
+       "isCorrect": true,
+       "explanation": "Erişkin dönemde gelişen primer beyin neoplazmleri belirgin bir baskınlıkla supratentoryal serebral hemisferlerde yerleşim gösterirken çocukluk çağında arka fossa tutulumu ön plandadır."
+      },
+      {
+       "text": "Çocukluk çağında SSS tümörleri en sık görülen kanser türü olup tüm malignitelerin yarısını oluşturur.",
+       "isCorrect": false,
+       "explanation": "Çocukluk çağında en sık görülen malignite lösemilerdir; santral sinir sistemi neoplazmleri ise tüm çocukluk çağı kanserlerinin yaklaşık yüzde yirmisini oluşturan ikinci gruptur."
+      },
+      {
+       "text": "İntraspinal tümörlerin insidansı intrakraniyal tümörlerden yaklaşık on kat daha fazladır.",
+       "isCorrect": false,
+       "explanation": "İntrakraniyal neoplazmler yüz binde on ila yirmi insidansa sahipken, intraspinal yerleşimli tümörler yüz binde bir ila iki gibi çok daha düşük bir sıklıkla ortaya çıkarlar."
+      },
+      {
+       "text": "Erişkinlerde tümörlerin neredeyse tamamı serebellar vermis ve dördüncü ventrikülde yerleşir.",
+       "isCorrect": false,
+       "explanation": "Serebellar vermis ve dördüncü ventrikül yerleşimi çocukluk çağı tümörlerine özgü olup erişkinlerde neoplazmler ağırlıklı olarak supratentoryal serebral loblarda gelişir."
+      }
+     ]
+    },
+    {
+     "id": "k40-s01-c1",
+     "type": "cloze_masking",
+     "sentence": "Erişkinlerde primer tümörler daha çok supratentorial bölgede, çocukluk çağındakiler ise daha çok arka fossadadır.",
+     "maskedTerm": "arka fossadadır",
+     "hint": "Santral sinir sistemi patolojisinde ilgili anatomik veya morfolojik terimdir."
+    },
+    {
+     "id": "k40-s01-l1",
+     "type": "spot_the_lie",
+     "topic": "Santral Sinir Sistemi Patolojisi Önermeleri",
+     "items": [
+      {
+       "text": "Santral sinir sistemi tümörleri çocukluk çağı kanserlerinin yaklaşık yüzde yirmisini oluşturur.",
+       "isLie": false,
+       "explanation": "Pediatrik solid tümörler arasında beyin neoplazmleri lösemilerden sonra en sık görülen ikinci malignite grubunu teşkil eder."
+      },
+      {
+       "text": "Erişkinlerde primer beyin tümörleri baskın olarak supratentoryal serebral hemisferlerde yerleşir.",
+       "isLie": false,
+       "explanation": "Erişkin hastaların beyin kitleleri anatomik olarak tentoriumun yukarısında yani frontal, temporal veya pariyetal loblarda lokalizedir."
+      },
+      {
+       "text": "Çocukluk çağı primer beyin tümörleri daima frontal lob korteksinde sınırlı kalır.",
+       "isLie": true,
+       "explanation": "Çocukluk çağı tümörleri frontal lobdan ziyade belirgin bir sıklıkla infratentoryal arka fossa yani serebellum ve beyin sapında yerleşir."
+      }
+     ]
+    },
+    {
+     "id": "k40-s01-m1",
+     "type": "swipe_matching",
+     "title": "Yaş Grubu ve Anatomik Lokalizasyon Eşleştirmesi",
+     "leftCategory": "Genel Popülasyon",
+     "rightCategory": "Erişkin Grubu",
+     "cards": [
+      {
+       "text": "Supratentoryal serebral hemisfer yerleşimi",
+       "category": "right"
+      },
+      {
+       "text": "Arka fossa (infratentoryal serebellar) yerleşimi",
+       "category": "right"
+      },
+      {
+       "text": "Solid organ kanserlerinin %20'sini oluşturma",
+       "category": "right"
+      },
+      {
+       "text": "Yüz binde 10-20 yıllık intrakraniyal insidans",
+       "category": "left"
+      }
+     ]
+    }
+   ],
+   "bolum": 1,
+   "pdfSayfalari": [
+    2,
+    4
+   ],
+   "sourcePdf": {
+    "file": "y25-k2-40-santral-sinir-sistemi-tumorleri.pdf",
+    "startPage": 2,
+    "endPage": 4
+   }
+  },
+  {
+   "id": "k2-40-d-s02",
+   "slideNumber": 2,
+   "title": "Anatomik Lokalizasyon ve Biyolojik Davranış",
+   "content": "Santral sinir sistemi kafatası ve vertebral kolon gibi rijit, genişleyemeyen kemik boşluklar içine hapsolmuştur. Bu durum intrakraniyal neoplazmlerin biyolojik davranışını temelden değiştirir.\n\n- **Kritik Lokalizasyon:** Histolojik olarak tamamen benign kabul edilen lezyonlar dahi solunum veya dolaşım merkezlerine bası yaparak ölümcül sonuçlar doğurabilir.\n- **Dural Kompartmanlar:** Falx serebri ve tentorium serebelli supratentoryal ve infratentoryal kompartmanları ayırır.\n- **Herniasyon Riski:** Yer kaplayan kitleler kafa içi basınç artışına ve subfalsin, transtentoryal veya tonsiller herniasyona yol açar.\n\n> [!NOTE]\n> SSS tümörlerinde histopatolojik dereceden ziyade lezyonun anatomik yerleşimi yaşamı doğrudan belirleyebilir.",
+   "synthesisNarrative": "Santral sinir sistemi kafatası ve vertebral kolon gibi rijit, genişleyemeyen kemik boşluklar içine hapsolmuştur. Bu durum intrakraniyal neoplazmlerin biyolojik davranışını temelden değiştirir.\n\n- **Kritik Lokalizasyon:** Histolojik olarak tamamen benign kabul edilen lezyonlar dahi solunum veya dolaşım merkezlerine bası yaparak ölümcül sonuçlar doğurabilir.\n- **Dural Kompartmanlar:** Falx serebri ve tentorium serebelli supratentoryal ve infratentoryal kompartmanları ayırır.\n- **Herniasyon Riski:** Yer kaplayan kitleler kafa içi basınç artışına ve subfalsin, transtentoryal veya tonsiller herniasyona yol açar.\n\n> [!NOTE]\n> SSS tümörlerinde histopatolojik dereceden ziyade lezyonun anatomik yerleşimi yaşamı doğrudan belirleyebilir.",
+   "interactiveElements": [
+    {
+     "id": "k40-s02-q1",
+     "type": "micro_quiz",
+     "question": "Santral sinir sistemi tümörlerinde benign-malign kavramını diğer organlardan ayıran temel ilke nedir?",
+     "options": [
+      {
+       "text": "Anatomik lokalizasyonun histopatolojik dereceden bağımsız olarak ölümcül kitle etkisi yapabilmesi",
+       "isCorrect": true,
+       "explanation": "Kafatası kapalı bir kemik kutu olduğundan foramen Monro veya beyin sapı gibi kritik bölgelerdeki benign tümörler dahi yaşamı sonlandırabilir."
+      },
+      {
+       "text": "Benign SSS tümörlerinin çevre organlara erken dönemde uzak metastaz oluşturması",
+       "isCorrect": false,
+       "explanation": "Primer beyin neoplazmleri sistemik organlara metastaz yapmazlar; ölümcül etkilerini lokal kitle etkisi ve herniasyon aracılığıyla gösterirler."
+      },
+      {
+       "text": "Kafatasının elastik yapısı sayesinde kitle büyümesini tamamen kompanse edebilmesi",
+       "isCorrect": false,
+       "explanation": "Erişkin kafatası rijit ve genişleyemez yapıdadır; bu nedenle küçük hacim artışları bile kafa içi basıncında şiddetli yükselmeye neden olur."
+      },
+      {
+       "text": "Histolojik olarak iyi huylu olan tümörlerin hiçbir zaman cerrahi tedavi gerektirmemesi",
+       "isCorrect": false,
+       "explanation": "Benign kitleler dahi artmış kafa içi basıncı ve herniasyon tehdidi oluşturdukları için acil cerrahi rezeksiyon veya dekompresyon gerektirir."
+      }
+     ]
+    },
+    {
+     "id": "k40-s02-c1",
+     "type": "causal_chain",
+     "title": "İntrakraniyal Kitle Etkisi ve Herniasyon Mekanizması",
+     "steps": [
+      "1. Rijit Kafatası: Beyin hacmini artıran yer kaplayıcı lezyonun gelişmesi.",
+      "2. Basınç Artışı: Kompanzasyon mekanizmalarının tükenmesiyle kafa içi basıncının yükselmesi.",
+      "3. Dural Sıkışma: Beyin parankiminin tentoryal çentik veya foramen magnuma doğru yer değiştirmesi.",
+      "4. Beyin Sapı Basısı: Solunum ve dolaşım merkezlerinin baskılanarak koma ve ölümün gelişmesi."
+     ]
+    },
+    {
+     "id": "k40-s02-cl1",
+     "type": "cloze_masking",
+     "sentence": "Santral sinir sisteminde benign ve malign neoplazilerin anatomik bölgesi en az histolojik tipi kadar kritik öneme sahiptir.",
+     "maskedTerm": "anatomik bölgesi",
+     "hint": "Kafatası içindeki yerleşim lokalizasyonunu ve komşuluk durumunu ifade eder."
+    },
+    {
+     "id": "k40-s02-t1",
+     "type": "interactive_table",
+     "title": "SSS Kompartmanları ve Tümör Dağılımı Tablosu",
+     "tableHeaders": [
+      "Kompartman",
+      "Sınırlayıcı Dural Yapı",
+      "Baskın Yaş Grubu",
+      "Tipik Lezyon Örneği"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Supratentoryal",
+         "isMasked": false
+        },
+        {
+         "text": "Tentorium serebelli üstü",
+         "isMasked": false
+        },
+        {
+         "text": "Erişkin Yaş",
+         "isMasked": false
+        },
+        {
+         "text": "Diffüz Astrositom",
+         "isMasked": true,
+         "hint": "Bu dokunun patolojik ayırıcı tanısında kullanılan temel histolojik bulgudur."
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "İnfratentoryal",
+         "isMasked": false
+        },
+        {
+         "text": "Arka fossa / Tentorium altı",
+         "isMasked": false
+        },
+        {
+         "text": "Çocukluk Çağı",
+         "isMasked": false
+        },
+        {
+         "text": "Medulloblastom",
+         "isMasked": true,
+         "hint": "Bu dokunun patolojik ayırıcı tanısında kullanılan temel histolojik bulgudur."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "bolum": 1,
+   "pdfSayfalari": [
+    5,
+    8
+   ],
+   "sourcePdf": {
+    "file": "y25-k2-40-santral-sinir-sistemi-tumorleri.pdf",
+    "startPage": 5,
+    "endPage": 8
+   }
+  },
+  {
+   "id": "k2-40-d-s03",
+   "slideNumber": 3,
+   "title": "Tümör Yayılım Yolları ve Yaş İnsidansı",
+   "content": "Primer SSS tümörleri diğer organ karsinomlarından farklı olarak sistemik dolaşıma ve lenf nodlarına nadiren yayılırlar. Kan-beyin bariyeri ve lenfatik drenaj yokluğu bu izolasyonu sağlar.\n\n- **BOS Aracılı Yayılım:** Ventriküle veya subaraknoid aralığa komşu tümörler beyin omurilik sıvısı yoluyla kauda ekinaya kadar dökülebilir (damla metastazı).\n- **Yaşa Bağlı İnsidans:** Medulloblastom ve pilositik astrositom çocuklarda; glioblastom, menenjiom ve primer lenfoma ileri yaş erişkinlerde sıktır.\n- **Lokal İnfiltrasyon:** Gliomlar nöronal ve glial fibriller boyunca yaygın mikroskobik sızma gösterir.\n\n> [!IMPORTANT]\n> Medulloblastom ve ependimom gibi tümörler BOS akımı yoluyla subaraknoid mesafeye ekilme eğilimindedir.",
+   "synthesisNarrative": "Primer SSS tümörleri diğer organ karsinomlarından farklı olarak sistemik dolaşıma ve lenf nodlarına nadiren yayılırlar. Kan-beyin bariyeri ve lenfatik drenaj yokluğu bu izolasyonu sağlar.\n\n- **BOS Aracılı Yayılım:** Ventriküle veya subaraknoid aralığa komşu tümörler beyin omurilik sıvısı yoluyla kauda ekinaya kadar dökülebilir (damla metastazı).\n- **Yaşa Bağlı İnsidans:** Medulloblastom ve pilositik astrositom çocuklarda; glioblastom, menenjiom ve primer lenfoma ileri yaş erişkinlerde sıktır.\n- **Lokal İnfiltrasyon:** Gliomlar nöronal ve glial fibriller boyunca yaygın mikroskobik sızma gösterir.\n\n> [!IMPORTANT]\n> Medulloblastom ve ependimom gibi tümörler BOS akımı yoluyla subaraknoid mesafeye ekilme eğilimindedir.",
+   "interactiveElements": [
+    {
+     "id": "k40-s03-q1",
+     "type": "micro_quiz",
+     "question": "Primer santral sinir sistemi tümörlerinin yayılım mekanizmaları ile ilgili hangisi doğrudur?",
+     "options": [
+      {
+       "text": "Vücut dışına nadiren metastaz yaparlar, ancak BOS yoluyla subaraknoid mesafeye yayılabilirler.",
+       "isCorrect": true,
+       "explanation": "Primer beyin neoplazmleri lenfatik drenaj yokluğu nedeniyle sistemik organlara nadiren yayılırken BOS akımı ile damla metastazı yapabilirler."
+      },
+      {
+       "text": "Hastalığın erken evresinde servikal lenf düğümlerine ve akciğerlere yoğun metastaz yaparlar.",
+       "isCorrect": false,
+       "explanation": "Primer SSS tümörleri lenfatik damar ağı bulunmaması sebebiyle boyun lenf nodlarına veya akciğere erken dönemde metastaz yapmazlar."
+      },
+      {
+       "text": "Medulloblastom hücreleri BOS içinde yaşayamadığı için daima serebellumda lokalize kalır.",
+       "isCorrect": false,
+       "explanation": "Medulloblastom BOS yoluyla subaraknoid aralıkta kolayca taşınabilen ve spinal kord kauda ekinaya kadar ekilebilen agresif bir neoplazmdır."
+      },
+      {
+       "text": "Diffüz gliomlar çevre parankime sızmadan net fibröz kapsülle sınırlı kalırlar.",
+       "isCorrect": false,
+       "explanation": "Diffüz gliomlar nöral parankim içine yaygın mikroskobik uzantılar şeklinde sızan infiltratif neoplazmlerdir. Bu belirgin infiltratif büyüme karakteri nedeniyle çevre beyin dokusundan cerrahi bir psödokapsülle ayrılamazlar."
+      }
+     ]
+    },
+    {
+     "id": "k40-s03-cl1",
+     "type": "cloze_masking",
+     "sentence": "Primer SSS tümörlerinin yayılımları diğer sistemlerin neoplazilerinden farklılık gösterir ve BOS yoluyla subaraknoid aralığa dökülebilir.",
+     "maskedTerm": "subaraknoid aralığa",
+     "hint": "Santral sinir sistemi patolojisinde ilgili anatomik veya morfolojik terimdir."
+    },
+    {
+     "id": "k40-s03-v1",
+     "type": "venn_grid",
+     "title": "Çocukluk Çağı ve Erişkin SSS Tümörleri Karşılaştırması",
+     "labelA": "Çocukluk Çağı SSS Tümörleri",
+     "labelB": "Erişkin Çağı SSS Tümörleri",
+     "items": [
+      {
+       "criterion": "Arka fossada infratentoryal baskın yerleşim gösterme",
+       "correct": "A"
+      },
+      {
+       "criterion": "Supratentoryal serebral hemisferlerde sık görülme",
+       "correct": "B"
+      },
+      {
+       "criterion": "Kritik anatomik lokalizasyonda kafa içi basınç artışı yapabilme",
+       "correct": "both"
+      },
+      {
+       "criterion": "Karaciğer ve kemiklere erken lenfohematojen metastaz yapma",
+       "correct": "neither"
+      }
+     ]
+    },
+    {
+     "id": "k40-s03-ar1",
+     "type": "active_recall",
+     "question": "Primer SSS tümörlerinin sistemik organlara metastaz yapmamasının temel fizyolojik gerekçesi nedir?",
+     "answer": "Santral sinir sistemi parankiminde klasik lenfatik damar ağının bulunmaması ve kan-beyin bariyerinin varlığıdır.",
+     "clue": "Lenfatik dolaşım ve vasküler bariyer anatomisidir."
+    }
+   ],
+   "bolum": 1,
+   "pdfSayfalari": [
+    9,
+    12
+   ],
+   "sourcePdf": {
+    "file": "y25-k2-40-santral-sinir-sistemi-tumorleri.pdf",
+    "startPage": 9,
+    "endPage": 12
+   }
+  },
+  {
+   "id": "k2-40-d-s04",
+   "slideNumber": 4,
+   "title": "Astrositom Spektrumu ve Klinik İnsidansı",
+   "content": "Gliomlar beyin parankiminden kaynaklanan en geniş tümör grubudur. Astrositlerden köken alan astrositomlar erişkin primer beyin neoplazmlerinin yaklaşık yüzde seksenini oluşturur.\n\n- **Klinik Başvuru:** Nöbetler, baş ağrısı, fokal nörolojik defisitler ve kafa içi basınç artışı bulguları sıktır.\n- **Fibriler İnfiltrasyon:** Diffüz astrositomlar gri ve beyaz cevher sınırlarını silerek geniş alanlara yayılır.\n- **Derecelendirme Basamakları:** DSÖ sınıflamasında Grade II (diffüz), Grade III (anaplastik) ve Grade IV (glioblastom) olarak ayrılır.\n\n> [!NOTE]\n> Diffüz astrositik tümörler çevre beyin parankimine yaygın infiltratif büyüme gösterir.",
+   "synthesisNarrative": "Gliomlar beyin parankiminden kaynaklanan en geniş tümör grubudur. Astrositlerden köken alan astrositomlar erişkin primer beyin neoplazmlerinin yaklaşık yüzde seksenini oluşturur.\n\n- **Klinik Başvuru:** Nöbetler, baş ağrısı, fokal nörolojik defisitler ve kafa içi basınç artışı bulguları sıktır.\n- **Fibriler İnfiltrasyon:** Diffüz astrositomlar gri ve beyaz cevher sınırlarını silerek geniş alanlara yayılır.\n- **Derecelendirme Basamakları:** DSÖ sınıflamasında Grade II (diffüz), Grade III (anaplastik) ve Grade IV (glioblastom) olarak ayrılır.\n\n> [!NOTE]\n> Diffüz astrositik tümörler çevre beyin parankimine yaygın infiltratif büyüme gösterir.",
+   "interactiveElements": [
+    {
+     "id": "k40-s04-q1",
+     "type": "micro_quiz",
+     "question": "Erişkin primer beyin tümörlerinin yaklaşık yüzde seksenini oluşturan glial neoplazm grubu hangisidir?",
+     "options": [
+      {
+       "text": "Diffüz astrositik tümörler",
+       "isCorrect": true,
+       "explanation": "Bu kavram santral sinir sistemi patolojisinde tanımlanmış önemli bir antitedir. Erişkinlerde en sık karşılaşılan primer nöroepitelyal tümör grubu astrositik diferansiasyon gösteren diffüz infiltratif astrositomlardır."
+      },
+      {
+       "text": "Medulloblastom",
+       "isCorrect": false,
+       "explanation": "Bu kavram santral sinir sistemi patolojisinde tanımlanmış önemli bir antitedir. Medulloblastom erişkinlerde nadir görülen, çocukluk çağında serebellumdan kaynaklanan embriyonal malign bir tümördür."
+      },
+      {
+       "text": "Primer santral sinir sistemi lenfoması",
+       "isCorrect": false,
+       "explanation": "Primer SSS lenfoması immünsüprese bireylerde görülen ve tüm beyin tümörlerinin küçük bir fraksiyonunu oluşturan lenfoid malignitedir."
+      },
+      {
+       "text": "Koroid pleksus papillomu",
+       "isCorrect": false,
+       "explanation": "Koroid pleksus papillomu ventrikül içi BOS üreten epitelyal dokudan gelişen ve erişkinde oldukça nadir saptanan bir lezyondur."
+      }
+     ]
+    },
+    {
+     "id": "k40-s04-cl1",
+     "type": "cloze_masking",
+     "sentence": "Diffüz astrositom erişkin primer beyin tümörlerinin yaklaşık yüzde seksenini oluşturmaktadır.",
+     "maskedTerm": "yüzde seksenini",
+     "hint": "Santral sinir sistemi patolojisinde ilgili anatomik veya morfolojik terimdir."
+    },
+    {
+     "id": "k40-s04-l1",
+     "type": "spot_the_lie",
+     "topic": "Santral Sinir Sistemi Patolojisi Önermeleri",
+     "items": [
+      {
+       "text": "Diffüz astrositomlar erişkin primer beyin tümörlerinin yaklaşık yüzde seksenini oluşturur.",
+       "isLie": false,
+       "explanation": "Astrositomlar erişkin çağda nöroglial parankimden kaynaklanan en sık primer beyin neoplazmidir."
+      },
+      {
+       "text": "Diffüz astrositomlar çevre nöral dokudan kalın fibröz kapsülle kolayca disseke edilir.",
+       "isLie": true,
+       "explanation": "Diffüz astrositomlar infiltratif büyüme gösterir; sınırları belirsizdir ve hiçbir zaman fibröz bir kapsül oluşturmazlar."
+      },
+      {
+       "text": "Hastalar sıklıkla nöbet, baş ağrısı ve kafa içi basınç artışı semptomları ile hekime başvurur.",
+       "isLie": false,
+       "explanation": "Yer kaplayıcı lezyonun kortikal irritasyonu ve kafa içi basınç yükselmesi klasik nörolojik semptomları doğurur."
+      }
+     ]
+    },
+    {
+     "id": "k40-s04-m1",
+     "type": "swipe_matching",
+     "title": "Astrositom Evreleri ve Histopatolojik Özellikler",
+     "leftCategory": "Grade IV Glioblastom",
+     "rightCategory": "Grade II Astrositom",
+     "cards": [
+      {
+       "text": "Hafif selülarite artışı ve nükleer pleomorfizm",
+       "category": "right"
+      },
+      {
+       "text": "Belirgin anaplazi ve artmış mitotik aktivite",
+       "category": "right"
+      },
+      {
+       "text": "Mikrovasküler endotel proliferasyonu ve nekroz",
+       "category": "left"
+      },
+      {
+       "text": "Erişkin primer beyin tümörlerinin %80'ini oluşturma",
+       "category": "right"
+      }
+     ]
+    }
+   ],
+   "bolum": 2,
+   "pdfSayfalari": [
+    13,
+    18
+   ],
+   "sourcePdf": {
+    "file": "y25-k2-40-santral-sinir-sistemi-tumorleri.pdf",
+    "startPage": 13,
+    "endPage": 18
+   }
+  },
+  {
+   "id": "k2-40-d-s05",
+   "slideNumber": 5,
+   "title": "Astrositik Neoplazmların Moleküler Genetiği",
+   "content": "Astrositik tümörlerin patogenezinde moleküler genetik mutasyonlar hastalığın biyolojik seyrini ve prognozunu belirleyen temel itici güçlerdir.\n\n- **IDH Mutasyonları:** İzositrat dehidrogenaz (IDH1 ve IDH2) gen mutasyonları düşük dereceli astrositomlarda ve sekonder glioblastomlarda saptanır.\n- **TP53 Mutasyonu:** Diffüz astrositomların büyük kısmında saptanır ve anaplastik transformasyonu tetikler.\n- **Primer vs Sekonder:** Primer (de novo) glioblastomlar ileri yaşta aniden başlar, IDH-wildtype olup sıklıkla EGFR amplifikasyonu taşır.\n\n> [!IMPORTANT]\n> Sekonder glioblastomlar düşük dereceli astrositomlardan köken alır; IDH1 ve TP53 mutasyonları ile karakterizedir.",
+   "synthesisNarrative": "Astrositik tümörlerin patogenezinde moleküler genetik mutasyonlar hastalığın biyolojik seyrini ve prognozunu belirleyen temel itici güçlerdir.\n\n- **IDH Mutasyonları:** İzositrat dehidrogenaz (IDH1 ve IDH2) gen mutasyonları düşük dereceli astrositomlarda ve sekonder glioblastomlarda saptanır.\n- **TP53 Mutasyonu:** Diffüz astrositomların büyük kısmında saptanır ve anaplastik transformasyonu tetikler.\n- **Primer vs Sekonder:** Primer (de novo) glioblastomlar ileri yaşta aniden başlar, IDH-wildtype olup sıklıkla EGFR amplifikasyonu taşır.\n\n> [!IMPORTANT]\n> Sekonder glioblastomlar düşük dereceli astrositomlardan köken alır; IDH1 ve TP53 mutasyonları ile karakterizedir.",
+   "interactiveElements": [
+    {
+     "id": "k40-s05-q1",
+     "type": "micro_quiz",
+     "question": "Sekonder glioblastomları primer de novo glioblastomlardan ayıran temel moleküler genetik özellik hangisidir?",
+     "options": [
+      {
+       "text": "IDH1/IDH2 ve TP53 gen mutasyonlarının sıklıkla pozitif olması",
+       "isCorrect": true,
+       "explanation": "Bu kavram santral sinir sistemi patolojisinde tanımlanmış önemli bir antitedir. Sekonder glioblastomlar düşük dereceli astrositomlardan köken aldıkları için yüksek oranda IDH ve TP53 mutasyonu taşırlar."
+      },
+      {
+       "text": "EGFR gen amplifikasyonunun neredeyse tüm olgularda primer sürücü olması",
+       "isCorrect": false,
+       "explanation": "Bu kavram santral sinir sistemi patolojisinde tanımlanmış önemli bir antitedir. EGFR gen amplifikasyonu sekonder formlarda değil, ileri yaşta de novo ortaya çıkan primer glioblastomlarda yaygındır."
+      },
+      {
+       "text": "Kromozom 1p ve 19q kollarında tam ko-delesyon bulunması",
+       "isCorrect": false,
+       "explanation": "Bu kavram santral sinir sistemi patolojisinde tanımlanmış önemli bir antitedir. Kromozom 1p/19q ko-delesyonu astrositomlarda değil, oligodendrogliom neoplazmlerinde patognomonik olarak görülür."
+      },
+      {
+       "text": "Tümör süpresör gen mutasyonlarının tamamen yokluğu",
+       "isCorrect": false,
+       "explanation": "Bu kavram santral sinir sistemi patolojisinde tanımlanmış önemli bir antitedir. Sekonder glioblastom patogenezinde TP53 başta olmak üzere birçok tümör süpresör gen inaktivasyonu kritik rol oynar."
+      }
+     ]
+    },
+    {
+     "id": "k40-s05-c1",
+     "type": "causal_chain",
+     "title": "Sekonder Glioblastom Gelişim Basamakları",
+     "steps": [
+      "1. Başlatıcı Mutasyon: Nöral kök hücrede IDH1/IDH2 ve TP53 mutasyonlarının ortaya çıkması.",
+      "2. Düşük Dereceli Tümör: Hafif atipi ve infiltrasyonla seyreden Grade II astrositom oluşumu.",
+      "3. Anaplastik Geçiş: Ek kromozomal kayıplarla mitotik aktivitenin artarak Grade III anaplastik astrositoma dönüşmesi.",
+      "4. Malign Glioblastom: VEGF salınımıyla mikrovasküler proliferasyon ve nekrozun eklenerek Grade IV evresine ulaşılması."
+     ]
+    },
+    {
+     "id": "k40-s05-cl1",
+     "type": "cloze_masking",
+     "sentence": "Glioblastomlarda p53 tümör süpresörlerinde ve izositrat dehidrogenaz enzimini kodlayan genlerde mutasyonlar saptanabilir.",
+     "maskedTerm": "izositrat dehidrogenaz",
+     "hint": "Santral sinir sistemi patolojisinde ilgili anatomik veya morfolojik terimdir."
+    },
+    {
+     "id": "k40-s05-ar1",
+     "type": "active_recall",
+     "question": "Primer de novo glioblastomlarda en karakteristik onkojenik büyüme faktörü reseptör bozukluğu nedir?",
+     "answer": "EGFR (Epidermal Büyüme Faktörü Reseptörü) gen amplifikasyonu ve delesyonel aktivasyonudur.",
+     "clue": "Epidermal büyüme faktörü reseptör genidir."
+    }
+   ],
+   "bolum": 2,
+   "pdfSayfalari": [
+    19,
+    24
+   ],
+   "sourcePdf": {
+    "file": "y25-k2-40-santral-sinir-sistemi-tumorleri.pdf",
+    "startPage": 19,
+    "endPage": 24
+   }
+  },
+  {
+   "id": "k2-40-d-s06",
+   "slideNumber": 6,
+   "title": "Diffüz ve Anaplastik Astrositom Patolojisi",
+   "content": "Diffüz astrositomların derecelendirilmesinde hücresellik, nükleer atipi ve mitotik figürler kritik histopatolojik basamakları oluşturur.\n\n- **Derece II (Diffüz Astrositom):** Hafif-orta derecede selülarite artışı, hafif nükleer pleomorfizm ve fibriler glial arka plan izlenir; mitotik aktivite ve nekroz kesinlikle bulunmaz.\n- **Derece III (Anaplastik Astrositom):** Belirgin hücresellik artışı, yoğun nükleer anaplazi ve saptanan atipik mitotik figürlerle karakterizedir.\n- **Klinik Geçiş:** Derece II lezyonlar zamanla anaplastik transformasyon göstererek Grade III ve Glioblastoma ilerleyebilir.\n\n> [!NOTE]\n> Anaplastik astrositomda mitotik aktivite belirgindir ancak mikrovasküler proliferasyon ve nekroz henüz gelişmemiştir.",
+   "synthesisNarrative": "Diffüz astrositomların derecelendirilmesinde hücresellik, nükleer atipi ve mitotik figürler kritik histopatolojik basamakları oluşturur.\n\n- **Derece II (Diffüz Astrositom):** Hafif-orta derecede selülarite artışı, hafif nükleer pleomorfizm ve fibriler glial arka plan izlenir; mitotik aktivite ve nekroz kesinlikle bulunmaz.\n- **Derece III (Anaplastik Astrositom):** Belirgin hücresellik artışı, yoğun nükleer anaplazi ve saptanan atipik mitotik figürlerle karakterizedir.\n- **Klinik Geçiş:** Derece II lezyonlar zamanla anaplastik transformasyon göstererek Grade III ve Glioblastoma ilerleyebilir.\n\n> [!NOTE]\n> Anaplastik astrositomda mitotik aktivite belirgindir ancak mikrovasküler proliferasyon ve nekroz henüz gelişmemiştir.",
+   "interactiveElements": [
+    {
+     "id": "k40-s06-q1",
+     "type": "micro_quiz",
+     "question": "Derece II diffüz astrositom ile Derece III anaplastik astrositom arasındaki en temel histopatolojik ayrım kriteri nedir?",
+     "options": [
+      {
+       "text": "Anaplastik astrositomda belirgin mitotik aktivite ve yüksek hücreselliğin saptanması",
+       "isCorrect": true,
+       "explanation": "Dünya Sağlık Örgütü sınıflamasına göre Derece iki tümörlerde mitoz görülmezken mitotik figürlerin varlığı lezyonu anaplastik astrositoma yükseltir."
+      },
+      {
+       "text": "Derece II astrositomda geniş koagülasyon nekrozu alanlarının bulunması",
+       "isCorrect": false,
+       "explanation": "Koagülasyon nekrozu Derece iki veya Derece üç astrositomlarda izlenmez; nekroz en malign evre olan Glioblastomun tanı kriteridir."
+      },
+      {
+       "text": "Anaplastik astrositomda glomerüloid damar proliferasyonunun zorunlu olması",
+       "isCorrect": false,
+       "explanation": "Glomerüloid endotel proliferasyonu aşırı VEGF uyarımı sonucu gelişen ve doğrudan Glioblastom tanısı koyduran patognomonik bir vasküler yapıdır. Bu tipik mikrovasküler hiperplazi odakları henüz anaplastik astrositom evresinde izlenmez."
+      },
+      {
+       "text": "Derece II lezyonların çevre nöral dokudan fibröz kapsülle ayrılması",
+       "isCorrect": false,
+       "explanation": "Bu kavram santral sinir sistemi patolojisinde tanımlanmış önemli bir antitedir. Her iki astrositik lezyon da diffüz infiltratif karaktere sahiptir ve çevre beyin dokusundan kapsülle ayrılamazlar."
+      }
+     ]
+    },
+    {
+     "id": "k40-s06-cl1",
+     "type": "cloze_masking",
+     "sentence": "Anaplastik astrositom belirgin nükleer pleomorfizm, artmış hücresellik ve saptanan mitotik aktivite ile Grade III olarak sınıflanır.",
+     "maskedTerm": "mitotik aktivite",
+     "hint": "Santral sinir sistemi patolojisinde ilgili anatomik veya morfolojik terimdir."
+    },
+    {
+     "id": "k40-s06-t1",
+     "type": "interactive_table",
+     "title": "Astrositom Derecelendirme Kriterleri Karşılaştırma Tablosu",
+     "tableHeaders": [
+      "Evre",
+      "Hücresellik / Pleomorfizm",
+      "Mitotik Aktivite",
+      "Nekroz / Vasküler Proliferasyon"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Derece II",
+         "isMasked": false
+        },
+        {
+         "text": "Hafif-orta artış",
+         "isMasked": false
+        },
+        {
+         "text": "Yok veya çok nadir",
+         "isMasked": false
+        },
+        {
+         "text": "Kesinlikle Yoktur",
+         "isMasked": true,
+         "hint": "Bu dokunun patolojik ayırıcı tanısında kullanılan temel histolojik bulgudur."
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Derece III",
+         "isMasked": false
+        },
+        {
+         "text": "Belirgin pleomorfizm",
+         "isMasked": false
+        },
+        {
+         "text": "Artmış / Mevcut",
+         "isMasked": false
+        },
+        {
+         "text": "Kesinlikle Yoktur",
+         "isMasked": true,
+         "hint": "Bu dokunun patolojik ayırıcı tanısında kullanılan temel histolojik bulgudur."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k40-s06-l1",
+     "type": "spot_the_lie",
+     "topic": "Santral Sinir Sistemi Patolojisi Önermeleri",
+     "items": [
+      {
+       "text": "Derece II diffüz astrositomda hafif pleomorfizm izlenir ancak mitoz saptanmaz.",
+       "isLie": false,
+       "explanation": "Derece iki lezyonlar düşük proliferasyon indeksine sahiptir ve mitotik figür içermezler."
+      },
+      {
+       "text": "Anaplastik astrositom tanısı konulabilmesi için psödopalizatlaşan nekroz bulunması şarttır.",
+       "isLie": true,
+       "explanation": "Psödopalizatlaşan nekroz anaplastik astrositomda bulunmaz; nekroz varlığı lezyonu Glioblastom derecesine taşır."
+      },
+      {
+       "text": "Tedavi edilmeyen Derece II astrositomlar zaman içinde daha yüksek dereceli lezyonlara ilerleyebilir.",
+       "isLie": false,
+       "explanation": "Diffüz astrositomlar klonal evrim göstererek anaplastik astrositom ve sekonder glioblastoma dönüşebilirler."
+      }
+     ]
+    }
+   ],
+   "bolum": 2,
+   "pdfSayfalari": [
+    25,
+    32
+   ],
+   "sourcePdf": {
+    "file": "y25-k2-40-santral-sinir-sistemi-tumorleri.pdf",
+    "startPage": 25,
+    "endPage": 32
+   }
+  },
+  {
+   "id": "k2-40-d-s07",
+   "slideNumber": 7,
+   "title": "Glioblastom: Mikrovasküler Proliferasyon ve Nekroz",
+   "content": "Glioblastom (DSÖ Derece IV) primer beyin tümörlerinin en agresif ve ölümcül olanıdır. Tanısı için anaplazik hücrelere ek olarak iki patognomonik vasküler ve dokusal kriter aranır.\n\n- **Mikrovasküler Endotelyal Proliferasyon:** VEGF salınımına bağlı olarak endotel ve perisitlerin lümeni daraltacak şekilde çoğalmasıyla glomerüloid cisimcikler gelişir.\n- **Psödopalizatlaşan Nekroz:** Hızlı büyüyen tümörün santralinde hipoksiye bağlı koagülasyon nekrozu oluşur; canlı tümör hücreleri nekroz çevresinde sıra halinde palizatlanır.\n- **Kelebek Gliom:** Korpus kallozumu aşarak her iki serebral hemisferi tutan yaygın kitle görüntüsü tipiktir.\n\n> [!IMPORTANT]\n> Glioblastom tanısı için mikrovasküler endotelyal proliferasyon veya psödopalizatlaşan nekroz varlığı zorunludur.",
+   "synthesisNarrative": "Glioblastom (DSÖ Derece IV) primer beyin tümörlerinin en agresif ve ölümcül olanıdır. Tanısı için anaplazik hücrelere ek olarak iki patognomonik vasküler ve dokusal kriter aranır.\n\n- **Mikrovasküler Endotelyal Proliferasyon:** VEGF salınımına bağlı olarak endotel ve perisitlerin lümeni daraltacak şekilde çoğalmasıyla glomerüloid cisimcikler gelişir.\n- **Psödopalizatlaşan Nekroz:** Hızlı büyüyen tümörün santralinde hipoksiye bağlı koagülasyon nekrozu oluşur; canlı tümör hücreleri nekroz çevresinde sıra halinde palizatlanır.\n- **Kelebek Gliom:** Korpus kallozumu aşarak her iki serebral hemisferi tutan yaygın kitle görüntüsü tipiktir.\n\n> [!IMPORTANT]\n> Glioblastom tanısı için mikrovasküler endotelyal proliferasyon veya psödopalizatlaşan nekroz varlığı zorunludur.",
+   "interactiveElements": [
+    {
+     "id": "k40-s07-q1",
+     "type": "micro_quiz",
+     "question": "Glioblastomun histopatolojik incelemesinde izlenen glomerüloid cisimciklerin oluşum mekanizması nedir?",
+     "options": [
+      {
+       "text": "Tümör kaynaklı VEGF etkisiyle endotel hücreleri ve perisitlerin kontrolsüzce prolifere olması",
+       "isCorrect": true,
+       "explanation": "Tümör dokusundaki hipoksiye yanıt olarak salınan yüksek düzeydeki VEGF damar endoteli ve perisit hiperplazisini tetikleyerek glomerüloid yapıları oluşturur."
+      },
+      {
+       "text": "Böbrek glomerüllerinin santral sinir sistemine embolize olarak damarları tıkaması",
+       "isCorrect": false,
+       "explanation": "Bu kavram santral sinir sistemi patolojisinde tanımlanmış önemli bir antitedir. Glomerüloid cisimcikler böbrek dokusu kaynaklı değildir; beyin tümör damarlarının renal glomerülleri andıran mikrovasküler proliferasyonudur."
+      },
+      {
+       "text": "Araknoid kap hücrelerinin kalsifiye olarak damar lümenini doldurması",
+       "isCorrect": false,
+       "explanation": "Bu kavram santral sinir sistemi patolojisinde tanımlanmış önemli bir antitedir. Kalsifiye yapılar araknoid hücre kaynaklı psammom cisimcikleri olup meningiomlara özgüdür ve glomerüloid damar yapısıyla ilişkisizdir."
+      },
+      {
+       "text": "Glial fibrillerin dejenere olarak parlak eozinofilik bantlara dönüşmesi",
+       "isCorrect": false,
+       "explanation": "Bu kavram santral sinir sistemi patolojisinde tanımlanmış önemli bir antitedir. Glial liflerin eozinofilik birikimi Rosenthal liflerini tanımlar ve glioblastomda değil pilositik astrositomda izlenir."
+      }
+     ]
+    },
+    {
+     "id": "k40-s07-c1",
+     "type": "causal_chain",
+     "title": "Psödopalizatlaşan Nekroz Oluşum Mekanizması",
+     "steps": [
+      "1. Hızlı Proliferasyon: Tümör hücrelerinin mevcut damar ağının taşıma kapasitesini aşması.",
+      "2. Doku Hipoksisi: Tümör merkezinde oksijen ve besin yetersizliğine bağlı koagülasyon nekrozu.",
+      "3. Hücresel Göç: Canlı tümör hücrelerinin nekrotik hipoksik odaktan çevreye doğru kaçması.",
+      "4. Palizatlaşma: Hücrelerin nekroz sınırında kordonlar şeklinde sıkışarak psödopalizat dizilimi oluşturması."
+     ]
+    },
+    {
+     "id": "k40-s07-cl1",
+     "type": "cloze_masking",
+     "sentence": "Glioblastomda mikrovasküler endotelyal proliferasyon glomerüloid damar yumakları oluştururken nekroz çevresinde palizatlaşan hücreler izlenir.",
+     "maskedTerm": "glomerüloid",
+     "hint": "Santral sinir sistemi patolojisinde ilgili anatomik veya morfolojik terimdir."
+    },
+    {
+     "id": "k40-s07-ar1",
+     "type": "active_recall",
+     "question": "Korpus kallozumu geçerek her iki serebral hemisferi tutan glioblastom makroskopik morfolojisine ne ad verilir?",
+     "answer": "Kelebek gliom (butterfly glioma) adı verilir.",
+     "clue": "Kanatları andıran anatomik görünümdür."
+    }
+   ],
+   "bolum": 2,
+   "pdfSayfalari": [
+    33,
+    39
+   ],
+   "sourcePdf": {
+    "file": "y25-k2-40-santral-sinir-sistemi-tumorleri.pdf",
+    "startPage": 33,
+    "endPage": 39
+   }
+  },
+  {
+   "id": "k2-40-d-s08",
+   "slideNumber": 8,
+   "title": "[TEKRAR SAYFASI - CHECKPOINT 1] Astrositik Neoplazmlar ve Glioblastom",
+   "content": "Bu tekrarda santral sinir sistemi genel prensipleri, anatomik kompartmanlar ve astrositik tümörlerin Grade II'den Grade IV Glioblastoma kadar olan patolojik derecelendirmesi pekiştirilmektedir.\n\n- **Lokalizasyon:** Erişkinde supratentoryal serebral, çocukta infratentoryal arka fossa yerleşimi baskındır.\n- **Derecelendirme:** Derece II'de hafif atipi; Derece III'te mitoz; Derece IV'te mikrovasküler proliferasyon ve psödopalizatlaşan nekroz esastır.\n- **Moleküler:** IDH1 ve TP53 sekonder glioblastomda, EGFR amplifikasyonu primer glioblastomda ön plandadır.\n\n> [!IMPORTANT]\n> Astrositik seride histopatolojik malignitenin nihai basamağı mikrovasküler endotel proliferasyonu ve nekrozdur.",
+   "synthesisNarrative": "Bu tekrarda santral sinir sistemi genel prensipleri, anatomik kompartmanlar ve astrositik tümörlerin Grade II'den Grade IV Glioblastoma kadar olan patolojik derecelendirmesi pekiştirilmektedir.\n\n- **Lokalizasyon:** Erişkinde supratentoryal serebral, çocukta infratentoryal arka fossa yerleşimi baskındır.\n- **Derecelendirme:** Derece II'de hafif atipi; Derece III'te mitoz; Derece IV'te mikrovasküler proliferasyon ve psödopalizatlaşan nekroz esastır.\n- **Moleküler:** IDH1 ve TP53 sekonder glioblastomda, EGFR amplifikasyonu primer glioblastomda ön plandadır.\n\n> [!IMPORTANT]\n> Astrositik seride histopatolojik malignitenin nihai basamağı mikrovasküler endotel proliferasyonu ve nekrozdur.",
+   "interactiveElements": [
+    {
+     "id": "k40-s08-q1",
+     "type": "micro_quiz",
+     "question": "Aşağıdaki mikroskobik bulgulardan hangisinin varlığı bir astrositomu doğrudan DSÖ Derece IV (Glioblastom) tanısına taşır?",
+     "options": [
+      {
+       "text": "Mikrovasküler endotelyal proliferasyon veya psödopalizatlaşan nekroz varlığı",
+       "isCorrect": true,
+       "explanation": "Bu kavram santral sinir sistemi patolojisinde tanımlanmış önemli bir antitedir. Dünya Sağlık Örgütü sınıflamasına göre mikrovasküler tomurcuklanma veya psödopalizatlaşan nekrozun saptanması lezyonu Glioblastom yapar."
+      },
+      {
+       "text": "Yalnızca hafif hücresellik artışı ve nükleer pleomorfizm izlenmesi",
+       "isCorrect": false,
+       "explanation": "Bu kavram santral sinir sistemi patolojisinde tanımlanmış önemli bir antitedir. Hafif hücresellik ve pleomorfizm Derece iki astrositoma ait olup Glioblastom tanısı koyduramaz."
+      },
+      {
+       "text": "İntrasellüler lipid birikimi ve zengin retikülin lifi ağı",
+       "isCorrect": false,
+       "explanation": "Bu kavram santral sinir sistemi patolojisinde tanımlanmış önemli bir antitedir. Lipid birikimi ve retikülin ağı pleomorfik ksantoastrositoma özgü olabilen bulgulardır, Glioblastom tanı kriteri değildir."
+      },
+      {
+       "text": "Tümör çevresinde kalın fibröz kapsül ve kemik hiperostozu",
+       "isCorrect": false,
+       "explanation": "Bu kavram santral sinir sistemi patolojisinde tanımlanmış önemli bir antitedir. Kemik hiperostozu meninks kaynaklı meningiomlarda izlenir, infiltratif glioblastomda kemik reaksiyonu veya kapsül görülmez."
+      }
+     ]
+    },
+    {
+     "id": "k40-s08-v1",
+     "type": "venn_grid",
+     "title": "Primer ve Sekonder Glioblastom Karşılaştırması",
+     "labelA": "Primer (De Novo) Glioblastom",
+     "labelB": "Sekonder Glioblastom",
+     "items": [
+      {
+       "criterion": "İleri yaşta önceden lezyon olmaksızın aniden ortaya çıkma",
+       "correct": "A"
+      },
+      {
+       "criterion": "Daha düşük dereceli astrositomdan transforme olma",
+       "correct": "B"
+      },
+      {
+       "criterion": "Mikrovasküler proliferasyon ve psödopalizatlaşan nekroz içerme",
+       "correct": "both"
+      },
+      {
+       "criterion": "Kromozom 1p ve 19q tam ko-delesyonu taşıma",
+       "correct": "neither"
+      }
+     ]
+    },
+    {
+     "id": "k40-s08-t1",
+     "type": "interactive_table",
+     "title": "Astrositom Evreleme Özeti Tablosu",
+     "tableHeaders": [
+      "Tümör Tipi",
+      "DSÖ Derecesi",
+      "Mitoz Varlığı",
+      "Tanısal Histolojik Özellik"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Diffüz Astrositom",
+         "isMasked": false
+        },
+        {
+         "text": "Derece II",
+         "isMasked": false
+        },
+        {
+         "text": "Yok / Çok seyrek",
+         "isMasked": false
+        },
+        {
+         "text": "Hafif Pleomorfizm",
+         "isMasked": true,
+         "hint": "Bu dokunun patolojik ayırıcı tanısında kullanılan temel histolojik bulgudur."
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Anaplastik Astrositom",
+         "isMasked": false
+        },
+        {
+         "text": "Derece III",
+         "isMasked": false
+        },
+        {
+         "text": "Artmış / Belirgin",
+         "isMasked": false
+        },
+        {
+         "text": "Yoğun Anaplazi",
+         "isMasked": true,
+         "hint": "Bu dokunun patolojik ayırıcı tanısında kullanılan temel histolojik bulgudur."
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Glioblastom",
+         "isMasked": false
+        },
+        {
+         "text": "Derece IV",
+         "isMasked": false
+        },
+        {
+         "text": "Çok Yüksek",
+         "isMasked": false
+        },
+        {
+         "text": "Glomerüloid Damar",
+         "isMasked": true,
+         "hint": "Bu dokunun patolojik ayırıcı tanısında kullanılan temel histolojik bulgudur."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k40-s08-ar1",
+     "type": "active_recall",
+     "question": "Erişkinlerde en sık görülen primer malign intrakraniyal tümör hangisidir?",
+     "answer": "Glioblastom (DSÖ Derece IV astrositom)dur.",
+     "clue": "En agresif Grade IV astrositomdur."
+    }
+   ],
+   "isCheckpoint": true
+  },
+  {
+   "id": "k2-40-d-s09",
+   "slideNumber": 9,
+   "title": "Pilositik Astrositom Morfolojisi ve Rosenthal Lifleri",
+   "content": "Pilositik astrositom (DSÖ Derece I) çocuklarda ve genç erişkinlerde en sık görülen astrositik neoplazmdır. Tipik olarak serebellar hemisferlerde yerleşim gösterir.\n\n- **Makroskopik Morfoloji:** Geniş bir kistik kitle ve kistin duvarına oturmuş solid kontrast tutan mural nodül şeklinde gelişir.\n- **Bipolar Astrositler:** Uzun saç benzeri (pilositik) sitoplazmik uzantılara sahip bipolar hücreler içerir.\n- **Rosenthal Lifleri:** Glial uzantılarda biriken parlak pembe, dalgalı, eozinofilik protein agregatları tanısal ipucudur.\n\n> [!IMPORTANT]\n> Çocukta serebellar kistik kitle, mural nodül ve Rosenthal lifleri varlığı pilositik astrositom için patognomoniktir.",
+   "synthesisNarrative": "Pilositik astrositom (DSÖ Derece I) çocuklarda ve genç erişkinlerde en sık görülen astrositik neoplazmdır. Tipik olarak serebellar hemisferlerde yerleşim gösterir.\n\n- **Makroskopik Morfoloji:** Geniş bir kistik kitle ve kistin duvarına oturmuş solid kontrast tutan mural nodül şeklinde gelişir.\n- **Bipolar Astrositler:** Uzun saç benzeri (pilositik) sitoplazmik uzantılara sahip bipolar hücreler içerir.\n- **Rosenthal Lifleri:** Glial uzantılarda biriken parlak pembe, dalgalı, eozinofilik protein agregatları tanısal ipucudur.\n\n> [!IMPORTANT]\n> Çocukta serebellar kistik kitle, mural nodül ve Rosenthal lifleri varlığı pilositik astrositom için patognomoniktir.",
+   "interactiveElements": [
+    {
+     "id": "k40-s09-q1",
+     "type": "micro_quiz",
+     "question": "Çocukluk çağında serebellumda kistik lezyon ve duvarında mural nodül oluşturan, Rosenthal lifleri içeren tümör hangisidir?",
+     "options": [
+      {
+       "text": "Pilositik astrositom (Derece I)",
+       "isCorrect": true,
+       "explanation": "Pilositik astrositom çocuklarda serebellar kistik kavite içinde mural nodül oluşturan ve Rosenthal lifleri barındıran benign lezyondur."
+      },
+      {
+       "text": "Glioblastom (Derece IV)",
+       "isCorrect": false,
+       "explanation": "Bu kavram santral sinir sistemi patolojisinde tanımlanmış önemli bir antitedir. Glioblastom erişkinlerde supratentoryal alanda gelişen, nekroz ve mikrovasküler proliferasyonla seyreden son derece agresif bir tümördür."
+      },
+      {
+       "text": "Medulloblastom",
+       "isCorrect": false,
+       "explanation": "Medulloblastom kistik lezyon oluşturmaz; solid küçük mavi yuvarlak hücreler ve Homer Wright rozetleri içeren malign bir tümördür."
+      },
+      {
+       "text": "Oligodendrogliom",
+       "isCorrect": false,
+       "explanation": "Bu kavram santral sinir sistemi patolojisinde tanımlanmış önemli bir antitedir. Oligodendrogliom serebral beyaz cevherde gelişen, tavada yumurta görünümü ve 1p/19q ko-delesyonu içeren glial tümördür."
+      }
+     ]
+    },
+    {
+     "id": "k40-s09-cl1",
+     "type": "cloze_masking",
+     "sentence": "Pilositik astrositomlar sıklıkla kistik bir kavite ve duvarında solid mural nodül ile karakterizedir.",
+     "maskedTerm": "mural nodül",
+     "hint": "Santral sinir sistemi patolojisinde ilgili anatomik veya morfolojik terimdir."
+    },
+    {
+     "id": "k40-s09-l1",
+     "type": "spot_the_lie",
+     "topic": "Santral Sinir Sistemi Patolojisi Önermeleri",
+     "items": [
+      {
+       "text": "Pilositik astrositom çocukluk çağında en sık serebellum hemisferlerinde lokalize olur.",
+       "isLie": false,
+       "explanation": "Pilositik astrositomların en tipik yerleşim yeri serebellar hemisferler olup optik kiazmada da görülebilir."
+      },
+      {
+       "text": "Rosenthal lifleri pilositik astrositom mikroskopisinde izlenen patognomonik eozinofilik cisimciklerdir.",
+       "isLie": false,
+       "explanation": "Rosenthal lifleri bipolar astrosit uzantılarında biriken parlak pembe kıvrımlı protein agregatlarıdır."
+      },
+      {
+       "text": "Pilositik astrositom hızla anaplastik glioblastoma dönüşerek birkaç ayda ölüme yol açar.",
+       "isLie": true,
+       "explanation": "Pilositik astrositom DSÖ Derece bir benign tümördür; malign progresyon göstermez ve cerrahiyle kür sağlanır."
+      }
+     ]
+    },
+    {
+     "id": "k40-s09-m1",
+     "type": "swipe_matching",
+     "title": "Pilositik Astrositom vs Glioblastom Ayırıcı Tanısı",
+     "leftCategory": "Glioblastom",
+     "rightCategory": "Pilositik Astrositom",
+     "cards": [
+      {
+       "text": "Çocukluk çağı, serebellar kist ve mural nodül",
+       "category": "right"
+      },
+      {
+       "text": "Parlak pembe eozinofilik Rosenthal lifleri",
+       "category": "right"
+      },
+      {
+       "text": "Erişkin supratentoryal yerleşim ve glomerüloid damarlar",
+       "category": "left"
+      },
+      {
+       "text": "Psödopalizatlaşan nekroz ve hızlı ölümcül seyir",
+       "category": "left"
+      }
+     ]
+    }
+   ],
+   "bolum": 3,
+   "pdfSayfalari": [
+    40,
+    46
+   ],
+   "sourcePdf": {
+    "file": "y25-k2-40-santral-sinir-sistemi-tumorleri.pdf",
+    "startPage": 40,
+    "endPage": 46
+   }
+  },
+  {
+   "id": "k2-40-d-s10",
+   "slideNumber": 10,
+   "title": "Pilositik Astrositom Histopatolojisi ve Genetiği",
+   "content": "Pilositik astrositomun histopatolojik yapısı bifazik bir mimari sergiler. Bipolar hücrelerin oluşturduğu kompakt alanlar ile gevşek mikrokistik sahalar iç içedir.\n\n- **Eozinofilik Granüler Cisimcikler:** Dejeneratif granüller dokuda yaygın olarak izlenir ve iyi diferansiasyonu yansıtır.\n- **Moleküler İtici Güç:** Olguların ezici çoğunluğunda KIAA1549-BRAF gen füzyonu veya BRAF V600E mutasyonu saptanır.\n- **Cerrahi Tedavi:** Mural nodülün cerrahi eksizyonu hastaların büyük çoğunluğunda tam kür sağlar; nüks son derece nadirdir.\n\n> [!NOTE]\n> Pilositik astrositomda MAPK yolağını aktive eden KIAA1549-BRAF füzyon geni tanısal ve hedefe yönelik moleküler hedeftir.",
+   "synthesisNarrative": "Pilositik astrositomun histopatolojik yapısı bifazik bir mimari sergiler. Bipolar hücrelerin oluşturduğu kompakt alanlar ile gevşek mikrokistik sahalar iç içedir.\n\n- **Eozinofilik Granüler Cisimcikler:** Dejeneratif granüller dokuda yaygın olarak izlenir ve iyi diferansiasyonu yansıtır.\n- **Moleküler İtici Güç:** Olguların ezici çoğunluğunda KIAA1549-BRAF gen füzyonu veya BRAF V600E mutasyonu saptanır.\n- **Cerrahi Tedavi:** Mural nodülün cerrahi eksizyonu hastaların büyük çoğunluğunda tam kür sağlar; nüks son derece nadirdir.\n\n> [!NOTE]\n> Pilositik astrositomda MAPK yolağını aktive eden KIAA1549-BRAF füzyon geni tanısal ve hedefe yönelik moleküler hedeftir.",
+   "interactiveElements": [
+    {
+     "id": "k40-s10-q1",
+     "type": "micro_quiz",
+     "question": "Pilositik astrositomların moleküler genetik patogenezinde en sık saptanan karakteristik genetik anomali nedir?",
+     "options": [
+      {
+       "text": "MAPK yolağını aktive eden KIAA1549-BRAF gen füzyonu veya BRAF mutasyonu",
+       "isCorrect": true,
+       "explanation": "Bu kavram santral sinir sistemi patolojisinde tanımlanmış önemli bir antitedir. Pilositik astrositom olgularının büyük kısmında kromozom 7q34 duplikasyonu sonucu KIAA1549-BRAF füzyon geni meydana gelir."
+      },
+      {
+       "text": "EGFR gen amplifikasyonu ve PTEN gen delesyonu birlikteliği",
+       "isCorrect": false,
+       "explanation": "Bu kavram santral sinir sistemi patolojisinde tanımlanmış önemli bir antitedir. EGFR amplifikasyonu ve PTEN delesyonu benign pilositik astrositomda değil, agresif Glioblastomlarda saptanan moleküler değişikliklerdir."
+      },
+      {
+       "text": "Kromozom 1p ve 19q tam ko-delesyonu",
+       "isCorrect": false,
+       "explanation": "Bu kavram santral sinir sistemi patolojisinde tanımlanmış önemli bir antitedir. Kromozom 1p/19q ko-delesyonu oligodendrogliom grubunun patognomonik tanısal belirteci olup astrositomlarda bulunmaz."
+      },
+      {
+       "text": "MYC gen amplifikasyonu ve WNT yolağı mutasyonu",
+       "isCorrect": false,
+       "explanation": "Bu kavram santral sinir sistemi patolojisinde tanımlanmış önemli bir antitedir. MYC amplifikasyonu ve WNT sinyal anomalileri serebellar embriyonal malignite olan medulloblastomda izlenir."
+      }
+     ]
+    },
+    {
+     "id": "k40-s10-cl1",
+     "type": "cloze_masking",
+     "sentence": "Pilositik astrositom kompakt fibriler alanlar ve gevşek mikrokistik zemin içeren bifazik bir mimari sergiler.",
+     "maskedTerm": "bifazik",
+     "hint": "Santral sinir sistemi patolojisinde ilgili anatomik veya morfolojik terimdir."
+    },
+    {
+     "id": "k40-s10-t1",
+     "type": "interactive_table",
+     "title": "Pilositik Astrositom Patoloji Özeti",
+     "tableHeaders": [
+      "Parametre",
+      "Bulgu",
+      "Klinik / Biyolojik Anlamı"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "DSÖ Derecesi",
+         "isMasked": false
+        },
+        {
+         "text": "Derece I",
+         "isMasked": false
+        },
+        {
+         "text": "Tamamen Benign Seyir",
+         "isMasked": true,
+         "hint": "Bu dokunun patolojik ayırıcı tanısında kullanılan temel histolojik bulgudur."
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Histolojik Yapı",
+         "isMasked": false
+        },
+        {
+         "text": "Rosenthal Lifleri + EGC",
+         "isMasked": false
+        },
+        {
+         "text": "Patognomonik İpucu",
+         "isMasked": true,
+         "hint": "Bu dokunun patolojik ayırıcı tanısında kullanılan temel histolojik bulgudur."
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Moleküler Genetik",
+         "isMasked": false
+        },
+        {
+         "text": "BRAF Gen Füzyonu",
+         "isMasked": false
+        },
+        {
+         "text": "MAPK Yolak Aktivasyonu",
+         "isMasked": true,
+         "hint": "Bu dokunun patolojik ayırıcı tanısında kullanılan temel histolojik bulgudur."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k40-s10-ar1",
+     "type": "active_recall",
+     "question": "Pilositik astrositomda tam cerrahi eksizyon uygulanan hastalarda beklenen klinik sağkalım nasıldır?",
+     "answer": "Yüzde doksanı aşan uzun süreli sağkalım ve kür sağlanır; lezyon benign seyreder.",
+     "clue": "Kür şansı son derece yüksek benign seyreder."
+    }
+   ],
+   "bolum": 3,
+   "pdfSayfalari": [
+    47,
+    52
+   ],
+   "sourcePdf": {
+    "file": "y25-k2-40-santral-sinir-sistemi-tumorleri.pdf",
+    "startPage": 47,
+    "endPage": 52
+   }
+  },
+  {
+   "id": "k2-40-d-s11",
+   "slideNumber": 11,
+   "title": "Oligodendrogliom Histolojisi ve Tavada Yumurta",
+   "content": "Oligodendrogliomlar gliomların yaklaşık yüzde beş ila on beşini oluşturur. Çoğunlukla serebral hemisferlerin beyaz cevherinde yerleşir ve frontal lob tutulumu belirgindir.\n\n- **Tavada Yumurta Morfolojisi:** Rutin formalin fiksasyonunda sitoplazma büzüşerek yuvarlak düzenli nükleus etrafında berrak bir perinükleer halo (tavada sahanda yumurta görünümü) oluşturur.\n- **Tavuk Ayağı Kapillerler:** Tümör dokusunu narin, ince duvarlı, anastomozlaşan kapiller damar ağı çevreler.\n- **Kalsifikasyonlar:** Olguların yüzde doksanında mikroskobik veya radyolojik kalsiyum birikimleri saptanır.\n\n> [!IMPORTANT]\n> Perinükleer berrak halo (tavada yumurta) ve tavuk ayağı kapiller damar ağı oligodendrogliom için patognomoniktir.",
+   "synthesisNarrative": "Oligodendrogliomlar gliomların yaklaşık yüzde beş ila on beşini oluşturur. Çoğunlukla serebral hemisferlerin beyaz cevherinde yerleşir ve frontal lob tutulumu belirgindir.\n\n- **Tavada Yumurta Morfolojisi:** Rutin formalin fiksasyonunda sitoplazma büzüşerek yuvarlak düzenli nükleus etrafında berrak bir perinükleer halo (tavada sahanda yumurta görünümü) oluşturur.\n- **Tavuk Ayağı Kapillerler:** Tümör dokusunu narin, ince duvarlı, anastomozlaşan kapiller damar ağı çevreler.\n- **Kalsifikasyonlar:** Olguların yüzde doksanında mikroskobik veya radyolojik kalsiyum birikimleri saptanır.\n\n> [!IMPORTANT]\n> Perinükleer berrak halo (tavada yumurta) ve tavuk ayağı kapiller damar ağı oligodendrogliom için patognomoniktir.",
+   "interactiveElements": [
+    {
+     "id": "k40-s11-q1",
+     "type": "micro_quiz",
+     "question": "Histolojik incelemesinde berrak perinükleer halo (tavada yumurta görünümü) ve narin tavuk ayağı kapillerler izlenen tümör hangisidir?",
+     "options": [
+      {
+       "text": "Oligodendrogliom",
+       "isCorrect": true,
+       "explanation": "Bu kavram santral sinir sistemi patolojisinde tanımlanmış önemli bir antitedir. Oligodendrogliom formalin fiksasyonu sonrası oluşan perinükleer sitoplazmik berraklaşma ve dallanan kapiller damar ağıyla tanınır."
+      },
+      {
+       "text": "Pilositik astrositom",
+       "isCorrect": false,
+       "explanation": "Bu kavram santral sinir sistemi patolojisinde tanımlanmış önemli bir antitedir. Pilositik astrositomda tavada yumurta görünümü bulunmaz; bipolar saç benzeri uzantılar ve Rosenthal lifleri izlenir."
+      },
+      {
+       "text": "Glioblastom",
+       "isCorrect": false,
+       "explanation": "Bu kavram santral sinir sistemi patolojisinde tanımlanmış önemli bir antitedir. Glioblastomda berrak sitoplazma değil, yoğun pleomorfizm, mikrovasküler glomerüloid damarlar ve nekroz ön plandadır."
+      },
+      {
+       "text": "Meningiom",
+       "isCorrect": false,
+       "explanation": "Bu kavram santral sinir sistemi patolojisinde tanımlanmış önemli bir antitedir. Meningiomda neoplastik araknoid kap hücreleri hücresel girdaplar (whorl) ve psammom kalsifikasyonları oluştururlar."
+      }
+     ]
+    },
+    {
+     "id": "k40-s11-cl1",
+     "type": "cloze_masking",
+     "sentence": "Oligodendrogliom mikroskopisinde yuvarlak düzenli nükleus çevresinde berrak perinükleer halo yani tavada yumurta görünümü izlenir.",
+     "maskedTerm": "tavada yumurta",
+     "hint": "Santral sinir sistemi patolojisinde ilgili anatomik veya morfolojik terimdir."
+    },
+    {
+     "id": "k40-s11-l1",
+     "type": "spot_the_lie",
+     "topic": "Santral Sinir Sistemi Patolojisi Önermeleri",
+     "items": [
+      {
+       "text": "Oligodendrogliomlar çoğunlukla serebral hemisferlerin korteks altı beyaz cevherinde yerleşir.",
+       "isLie": false,
+       "explanation": "Frontal ve temporal lob beyaz cevheri oligodendrogliomların en tipik gelişim alanıdır."
+      },
+      {
+       "text": "Tümör dokusunda mikroskobik kalsifikasyonlar ve tavuk ayağı kapiller damarlar sıktır.",
+       "isLie": false,
+       "explanation": "Kalsiyum agregatları ve narin anastomozlaşan kapillerler oligodendrogliomun klasik histolojik parçalarıdır."
+      },
+      {
+       "text": "Oligodendrogliom hücreleri yoğun keratin ekspresyonu ile yassı epitel diferansiasyonu sergiler.",
+       "isLie": true,
+       "explanation": "Oligodendrogliom glial bir neoplazmdır; epitel diferansiasyonu veya keratin ekspresyonu kesinlikle göstermez."
+      }
+     ]
+    },
+    {
+     "id": "k40-s11-m1",
+     "type": "swipe_matching",
+     "title": "Glial Tümör Morfolojik Özellik Eşleştirmesi",
+     "leftCategory": "Oligodendrogliom",
+     "rightCategory": "Glioblastom",
+     "cards": [
+      {
+       "text": "Tavada yumurta hücreleri ve tavuk ayağı kapillerler",
+       "category": "left"
+      },
+      {
+       "text": "Bipolar astrositler ve Rosenthal lifleri",
+       "category": "right"
+      },
+      {
+       "text": "Glomerüloid mikrovasküler yapılar ve nekroz",
+       "category": "right"
+      },
+      {
+       "text": "Perivasküler psödorozetler",
+       "category": "right"
+      }
+     ]
+    }
+   ],
+   "bolum": 3,
+   "pdfSayfalari": [
+    53,
+    55
+   ],
+   "sourcePdf": {
+    "file": "y25-k2-40-santral-sinir-sistemi-tumorleri.pdf",
+    "startPage": 53,
+    "endPage": 55
+   }
+  },
+  {
+   "id": "k2-40-d-s12",
+   "slideNumber": 12,
+   "title": "Oligodendrogliomda 1p/19q Ko-delesyonu",
+   "content": "DSÖ güncel sınıflamasına göre oligodendrogliom tanısı koymak için histomorfolojinin yanında moleküler kriterlerin varlığı zorunludur.\n\n- **1p/19q Ko-delesyonu:** Kromozom 1'in kısa kolu (1p) ile kromozom 19'un uzun kolunun (19q) tam dengeli kaybı tanı koydurucudur.\n- **IDH Mutasyonu:** Oligodendrogliomlar hemen daima IDH1 veya IDH2 mutasyonu taşır.\n- **Kemosensitivite:** 1p/19q ko-delesyonu taşıyan hastalar alkilleyici kemoterapiye (PCV) ve radyoterapiye son derece duyarlıdır; sağkalımları belirgin uzundur.\n\n> [!IMPORTANT]\n> Oligodendrogliomda 1p/19q ko-delesyonu kemoradyoterapiye mükemmel yanıtı ve uzun sağkalımı gösteren en güçlü belirteçtir.",
+   "synthesisNarrative": "DSÖ güncel sınıflamasına göre oligodendrogliom tanısı koymak için histomorfolojinin yanında moleküler kriterlerin varlığı zorunludur.\n\n- **1p/19q Ko-delesyonu:** Kromozom 1'in kısa kolu (1p) ile kromozom 19'un uzun kolunun (19q) tam dengeli kaybı tanı koydurucudur.\n- **IDH Mutasyonu:** Oligodendrogliomlar hemen daima IDH1 veya IDH2 mutasyonu taşır.\n- **Kemosensitivite:** 1p/19q ko-delesyonu taşıyan hastalar alkilleyici kemoterapiye (PCV) ve radyoterapiye son derece duyarlıdır; sağkalımları belirgin uzundur.\n\n> [!IMPORTANT]\n> Oligodendrogliomda 1p/19q ko-delesyonu kemoradyoterapiye mükemmel yanıtı ve uzun sağkalımı gösteren en güçlü belirteçtir.",
+   "interactiveElements": [
+    {
+     "id": "k40-s12-q1",
+     "type": "micro_quiz",
+     "question": "Oligodendrogliom tanısında zorunlu olan ve kemoradyoterapiye mükemmel yanıt sağlayan moleküler genetik belirteç hangisidir?",
+     "options": [
+      {
+       "text": "Kromozom 1p ve 19q kollarının tam ko-delesyonu ile IDH mutasyonu",
+       "isCorrect": true,
+       "explanation": "Bu kavram santral sinir sistemi patolojisinde tanımlanmış önemli bir antitedir. Kromozom 1p ve 19q dengeli ko-delesyonu oligodendrogliomun moleküler imzasını oluşturur ve kemoterapiye belirgin duyarlılık sağlar."
+      },
+      {
+       "text": "EGFR gen amplifikasyonu ve PTEN delesyonu",
+       "isCorrect": false,
+       "explanation": "Bu kavram santral sinir sistemi patolojisinde tanımlanmış önemli bir antitedir. EGFR amplifikasyonu ve PTEN delesyonu Glioblastom patogenezinde rol oynar ve kemoterapi direnciyle ilişkilidir."
+      },
+      {
+       "text": "KIAA1549-BRAF füzyon geni varlığı",
+       "isCorrect": false,
+       "explanation": "Bu kavram santral sinir sistemi patolojisinde tanımlanmış önemli bir antitedir. KIAA1549-BRAF füzyonu oligodendrogliomda değil, benign pilositik astrositomda karakteristik olarak saptanır."
+      },
+      {
+       "text": "NF2 tümör süpresör gen inaktivasyonu",
+       "isCorrect": false,
+       "explanation": "Bu kavram santral sinir sistemi patolojisinde tanımlanmış önemli bir antitedir. NF2 inaktivasyonu meningiomlarda ve schwannomlarda görülür, oligodendrogliom patogenezinde yer almaz."
+      }
+     ]
+    },
+    {
+     "id": "k40-s12-cl1",
+     "type": "cloze_masking",
+     "sentence": "Oligodendrogliomlarda kromozom bir p ve on dokuz q ko-delesyonu kemoterapiye belirgin duyarlılık sağlar.",
+     "maskedTerm": "ko-delesyonu",
+     "hint": "Santral sinir sistemi patolojisinde ilgili anatomik veya morfolojik terimdir."
+    },
+    {
+     "id": "k40-s12-t1",
+     "type": "interactive_table",
+     "title": "Oligodendrogliom Moleküler ve Klinik Tablosu",
+     "tableHeaders": [
+      "Genetik Belirteç",
+      "Görülme Sıklığı",
+      "Terapötik / Prognostik Önemi"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "1p/19q Ko-delesyonu",
+         "isMasked": false
+        },
+        {
+         "text": "%100 (Tanı Şartı)",
+         "isMasked": false
+        },
+        {
+         "text": "Kemoradyoterapiye Duyarlılık",
+         "isMasked": true,
+         "hint": "Bu dokunun patolojik ayırıcı tanısında kullanılan temel histolojik bulgudur."
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "IDH1/IDH2 Mutasyonu",
+         "isMasked": false
+        },
+        {
+         "text": "> %95",
+         "isMasked": false
+        },
+        {
+         "text": "Düşük Agresyon ve Uzun Sağkalım",
+         "isMasked": true,
+         "hint": "Bu dokunun patolojik ayırıcı tanısında kullanılan temel histolojik bulgudur."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k40-s12-ar1",
+     "type": "active_recall",
+     "question": "1p/19q ko-delesyonu taşımayan ancak histolojik olarak tavada yumurta görünümü gösteren tümörler güncel sınıflamada nasıl kabul edilir?",
+     "answer": "Oligodendrogliom kabul edilmez; IDH mutasyonlu veya mutasyonsuz astrositom olarak yeniden sınıflandırılır.",
+     "clue": "Moleküler kriter karşılanmadığında astrositom grubuna girer."
+    }
+   ],
+   "bolum": 3,
+   "pdfSayfalari": [
+    56,
+    57
+   ],
+   "sourcePdf": {
+    "file": "y25-k2-40-santral-sinir-sistemi-tumorleri.pdf",
+    "startPage": 56,
+    "endPage": 57
+   }
+  },
+  {
+   "id": "k2-40-d-s13",
+   "slideNumber": 13,
+   "title": "[TEKRAR SAYFASI - CHECKPOINT 2] Pilositik Astrositom ve Oligodendrogliom",
+   "content": "Bu tekrarda çocukluk çağı benign pilositik astrositomu ile erişkinlerde kemoradyoterapiye duyarlı oligodendrogliomun ayırıcı tanı ve moleküler özellikleri pekiştirilmektedir.\n\n- **Pilositik Astrositom:** Çocukta serebellar kist + mural nodül, Rosenthal lifleri ve BRAF füzyonu.\n- **Oligodendrogliom:** Erişkinde beyaz cevher tutulumu, tavada yumurta, tavuk ayağı kapillerler ve 1p/19q ko-delesyonu.\n- **Prognoz:** Her iki tümör de glioblastom ile kıyaslandığında belirgin şekilde daha uzun sağkalım sunar.\n\n> [!IMPORTANT]\n> Rosenthal lifleri pilositik astrositomun, 1p/19q ko-delesyonu ise oligodendrogliomun temel ayırt edici özellikleridir.",
+   "synthesisNarrative": "Bu tekrarda çocukluk çağı benign pilositik astrositomu ile erişkinlerde kemoradyoterapiye duyarlı oligodendrogliomun ayırıcı tanı ve moleküler özellikleri pekiştirilmektedir.\n\n- **Pilositik Astrositom:** Çocukta serebellar kist + mural nodül, Rosenthal lifleri ve BRAF füzyonu.\n- **Oligodendrogliom:** Erişkinde beyaz cevher tutulumu, tavada yumurta, tavuk ayağı kapillerler ve 1p/19q ko-delesyonu.\n- **Prognoz:** Her iki tümör de glioblastom ile kıyaslandığında belirgin şekilde daha uzun sağkalım sunar.\n\n> [!IMPORTANT]\n> Rosenthal lifleri pilositik astrositomun, 1p/19q ko-delesyonu ise oligodendrogliomun temel ayırt edici özellikleridir.",
+   "interactiveElements": [
+    {
+     "id": "k40-s13-q1",
+     "type": "micro_quiz",
+     "question": "Aşağıdaki eşleştirmelerden hangisi glial neoplazm ve tanısal patognomonik morfolojik bulgusu açısından doğrudur?",
+     "options": [
+      {
+       "text": "Pilositik astrositom — Rosenthal lifleri ve eozinofilik granüler cisimcikler",
+       "isCorrect": true,
+       "explanation": "Bu kavram santral sinir sistemi patolojisinde tanımlanmış önemli bir antitedir. Pilositik astrositom mikroskopisinde saç benzeri uzantılara eşlik eden parlak eozinofilik Rosenthal lifleri patognomoniktir."
+      },
+      {
+       "text": "Oligodendrogliom — Glomerüloid mikrovasküler endotel proliferasyonu",
+       "isCorrect": false,
+       "explanation": "Bu kavram santral sinir sistemi patolojisinde tanımlanmış önemli bir antitedir. Glomerüloid damar proliferasyonu oligodendrogliomda değil, Derece dört Glioblastom neoplazminde patognomoniktir."
+      },
+      {
+       "text": "Glioblastom — Kist içinde mural nodül ve benign biyolojik seyir",
+       "isCorrect": false,
+       "explanation": "Kist içinde mural nodül ve benign biyolojik seyir pilositik astrositomun özelliği olup Glioblastom son derece fatal seyreder."
+      },
+      {
+       "text": "Diffüz astrositom — Perinükleer berrak halo ve tavuk ayağı kapillerler",
+       "isCorrect": false,
+       "explanation": "Bu kavram santral sinir sistemi patolojisinde tanımlanmış önemli bir antitedir. Tavada yumurta görünümü ve tavuk ayağı kapillerler diffüz astrositomda değil, oligodendrogliomda izlenir."
+      }
+     ]
+    },
+    {
+     "id": "k40-s13-v1",
+     "type": "venn_grid",
+     "title": "Pilositik Astrositom ve Oligodendrogliom Karşılaştırması",
+     "labelA": "Pilositik Astrositom",
+     "labelB": "Oligodendrogliom",
+     "items": [
+      {
+       "criterion": "Çocukluk çağında serebellar kist ve mural nodül yapma",
+       "correct": "A"
+      },
+      {
+       "criterion": "Tavada yumurta hücreleri ve 1p/19q ko-delesyonu içerme",
+       "correct": "B"
+      },
+      {
+       "criterion": "Nöroglial hücre serisinden köken alan neoplazm olma",
+       "correct": "both"
+      },
+      {
+       "criterion": "Psödopalizatlaşan nekroz ile hızlı fatal seyir gösterme",
+       "correct": "neither"
+      }
+     ]
+    },
+    {
+     "id": "k40-s13-t1",
+     "type": "interactive_table",
+     "title": "Glial Tümörler Karşılaştırma Özeti Tablosu",
+     "tableHeaders": [
+      "Tümör",
+      "Tipik Yaş / Yerleşim",
+      "Mikroskobik Belirteç",
+      "Moleküler İpucu"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Pilositik Astrositom",
+         "isMasked": false
+        },
+        {
+         "text": "Çocuk / Serebellum",
+         "isMasked": false
+        },
+        {
+         "text": "Rosenthal Lifleri",
+         "isMasked": false
+        },
+        {
+         "text": "KIAA1549-BRAF",
+         "isMasked": true,
+         "hint": "Bu dokunun patolojik ayırıcı tanısında kullanılan temel histolojik bulgudur."
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Oligodendrogliom",
+         "isMasked": false
+        },
+        {
+         "text": "Erişkin / Beyaz Cevher",
+         "isMasked": false
+        },
+        {
+         "text": "Tavada Yumurta",
+         "isMasked": false
+        },
+        {
+         "text": "1p/19q Ko-delesyonu",
+         "isMasked": true,
+         "hint": "Bu dokunun patolojik ayırıcı tanısında kullanılan temel histolojik bulgudur."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k40-s13-ar1",
+     "type": "active_recall",
+     "question": "Oligodendrogliomda alkilleyici kemoterapiye duyarlılığı ve uzun sağkalımı sağlayan temel genetik bozukluk nedir?",
+     "answer": "Kromozom 1p ve 19q kollarının tam ko-delesyonudur.",
+     "clue": "1p ve 19q kromozom kayıplarıdır."
+    }
+   ],
+   "isCheckpoint": true
+  },
+  {
+   "id": "k2-40-d-s14",
+   "slideNumber": 14,
+   "title": "Ependimomlar ve Ventriküler Lokalizasyon",
+   "content": "Ependimomlar santral sinir sistemi ventrikül sistemini ve medulla spinalisin santral kanalını döşeyen ependim hücrelerinden kaynaklanan glial neoplazmlerdir.\n\n- **Pediatrik Lokalizasyon:** Çocukluk çağında tipik olarak dördüncü ventrikülde yerleşir; ventrikül lümenini doldurarak Foramen Luschka ve Magendie'yi tıkar ve hidrosefaliye yol açar.\n- **Erişkin Lokalizasyon:** Erişkinlerde en sık medulla spinalis santral kanalında ve filum terminalede görülür.\n- **Plastik Uyum:** Dördüncü ventrikül ependimomları foramenlerden subaraknoid boşluğa doğru hamur gibi plastik büyüme gösterebilir.\n\n> [!NOTE]\n> Çocuklarda 4. ventrikül ependimomları hidrosefali tablosu ve kafa içi basınç artışı ile belirti verir.",
+   "synthesisNarrative": "Ependimomlar santral sinir sistemi ventrikül sistemini ve medulla spinalisin santral kanalını döşeyen ependim hücrelerinden kaynaklanan glial neoplazmlerdir.\n\n- **Pediatrik Lokalizasyon:** Çocukluk çağında tipik olarak dördüncü ventrikülde yerleşir; ventrikül lümenini doldurarak Foramen Luschka ve Magendie'yi tıkar ve hidrosefaliye yol açar.\n- **Erişkin Lokalizasyon:** Erişkinlerde en sık medulla spinalis santral kanalında ve filum terminalede görülür.\n- **Plastik Uyum:** Dördüncü ventrikül ependimomları foramenlerden subaraknoid boşluğa doğru hamur gibi plastik büyüme gösterebilir.\n\n> [!NOTE]\n> Çocuklarda 4. ventrikül ependimomları hidrosefali tablosu ve kafa içi basınç artışı ile belirti verir.",
+   "interactiveElements": [
+    {
+     "id": "k40-s14-q1",
+     "type": "micro_quiz",
+     "question": "Çocukluk çağında dördüncü ventrikül tabanından gelişerek obstrüktif hidrosefaliye yol açan glial tümör hangisidir?",
+     "options": [
+      {
+       "text": "Ependimom",
+       "isCorrect": true,
+       "explanation": "Bu kavram santral sinir sistemi patolojisinde tanımlanmış önemli bir antitedir. Ependimomlar çocuklarda dördüncü ventrikülü döşeyen ependimden köken alarak BOS çıkış foramenlerini tıkar ve hidrosefali oluştururlar."
+      },
+      {
+       "text": "Diffüz fibriller astrositom",
+       "isCorrect": false,
+       "explanation": "Bu kavram santral sinir sistemi patolojisinde tanımlanmış önemli bir antitedir. Diffüz fibriller astrositom ventrikül epitelinden değil parankimden gelişir ve çocukta 4. ventrikül lümenini primer doldurmaz."
+      },
+      {
+       "text": "Oligodendrogliom",
+       "isCorrect": false,
+       "explanation": "Bu kavram santral sinir sistemi patolojisinde tanımlanmış önemli bir antitedir. Oligodendrogliom dördüncü ventrikülde değil, erişkinlerde serebral hemisferlerin korteks altı beyaz cevherinde yerleşir."
+      },
+      {
+       "text": "Meningiom",
+       "isCorrect": false,
+       "explanation": "Bu kavram santral sinir sistemi patolojisinde tanımlanmış önemli bir antitedir. Meningiom ventrikül ependimi kaynaklı olmayıp beynin dural zarlarından ve araknoid kap hücrelerinden köken alır."
+      }
+     ]
+    },
+    {
+     "id": "k40-s14-cl1",
+     "type": "cloze_masking",
+     "sentence": "Çocuklarda ependimomlar tipik olarak dördüncü ventrikülde yerleşerek non-komünikan obstrüktif hidrosefaliye yol açarlar.",
+     "maskedTerm": "dördüncü ventrikülde",
+     "hint": "Santral sinir sistemi patolojisinde ilgili anatomik veya morfolojik terimdir."
+    },
+    {
+     "id": "k40-s14-l1",
+     "type": "spot_the_lie",
+     "topic": "Santral Sinir Sistemi Patolojisi Önermeleri",
+     "items": [
+      {
+       "text": "Ependimomlar ventriküler kaviteyi ve spinal santral kanalı döşeyen hücrelerden kaynaklanır.",
+       "isLie": false,
+       "explanation": "Ependimomların hücre kökeni BOS boşluklarını çevreleyen nöroepitelyal ependim dokusudur."
+      },
+      {
+       "text": "Erişkinlerde ependimomlar en sık medulla spinalis santral kanalında yerleşim gösterir.",
+       "isLie": false,
+       "explanation": "Erişkin çağdaki ependimomların büyük çoğunluğu spinal kord seviyesinde intramedüller olarak gelişir."
+      },
+      {
+       "text": "Dördüncü ventrikül ependimomları BOS akışını hiçbir şekilde engellemez ve asemptomatiktir.",
+       "isLie": true,
+       "explanation": "Dördüncü ventrikül ependimomları foramenleri mekanik olarak tıkayarak belirgin obstrüktif hidrosefali ve intrakraniyal hipertansiyona neden olur."
+      }
+     ]
+    },
+    {
+     "id": "k40-s14-m1",
+     "type": "swipe_matching",
+     "title": "Ependimom Yaşa Göre Lokalizasyon Eşleştirmesi",
+     "leftCategory": "Erişkin Popülasyon",
+     "rightCategory": "Pediatrik Popülasyon",
+     "cards": [
+      {
+       "text": "Dördüncü ventrikül içi ve çıkış foramenleri",
+       "category": "right"
+      },
+      {
+       "text": "Medulla spinalis santral kanalı ve filum terminale",
+       "category": "left"
+      },
+      {
+       "text": "BOS çıkışını tıkayarak hidrosefali oluşturma",
+       "category": "right"
+      },
+      {
+       "text": "Spinal kord basısı ve radiküler ağrılar",
+       "category": "left"
+      }
+     ]
+    }
+   ],
+   "bolum": 4,
+   "pdfSayfalari": [
+    58,
+    64
+   ],
+   "sourcePdf": {
+    "file": "y25-k2-40-santral-sinir-sistemi-tumorleri.pdf",
+    "startPage": 58,
+    "endPage": 64
+   }
+  },
+  {
+   "id": "k2-40-d-s15",
+   "slideNumber": 15,
+   "title": "Perivasküler Psödorozetler ve Rozet Tipleri",
+   "content": "Ependimomların mikroskobik tanısında iki karakteristik rozet yapısı yol göstericidir. Bu yapılar ependim hücrelerinin embriyolojik ve damarsal ilişkilerini yansıtır.\n\n- **Perivasküler Psödorozet:** Tümör hücrelerinin sitoplazmik fibriler uzantılarını santralde yer alan bir kan damarına doğru uzatmasıyla oluşan anükleer eozinofilik zonlardır (en sık saptanan bulgu).\n- **Gerçek Ependim Rozeti:** Hücrelerin santral bir mikroskobik lümen çevresinde silindirik dizilerek ependim kanalını taklit etmesidir.\n- **Anaplastik Ependimom:** Artmış mitoz, mikrovasküler proliferasyon ve nekroz içeren agresif formdur.\n\n> [!IMPORTANT]\n> Perivasküler psödorozetler ependimomların neredeyse tamamında saptanan en tanısal histopatolojik bulgudur.",
+   "synthesisNarrative": "Ependimomların mikroskobik tanısında iki karakteristik rozet yapısı yol göstericidir. Bu yapılar ependim hücrelerinin embriyolojik ve damarsal ilişkilerini yansıtır.\n\n- **Perivasküler Psödorozet:** Tümör hücrelerinin sitoplazmik fibriler uzantılarını santralde yer alan bir kan damarına doğru uzatmasıyla oluşan anükleer eozinofilik zonlardır (en sık saptanan bulgu).\n- **Gerçek Ependim Rozeti:** Hücrelerin santral bir mikroskobik lümen çevresinde silindirik dizilerek ependim kanalını taklit etmesidir.\n- **Anaplastik Ependimom:** Artmış mitoz, mikrovasküler proliferasyon ve nekroz içeren agresif formdur.\n\n> [!IMPORTANT]\n> Perivasküler psödorozetler ependimomların neredeyse tamamında saptanan en tanısal histopatolojik bulgudur.",
+   "interactiveElements": [
+    {
+     "id": "k40-s15-q1",
+     "type": "micro_quiz",
+     "question": "Ependimom mikroskopisinde kan damarları çevresinde tümör uzantıları ile oluşan nükleustan yoksun zonlara ne ad verilir?",
+     "options": [
+      {
+       "text": "Perivasküler psödorozet",
+       "isCorrect": true,
+       "explanation": "Ependimom hücrelerinin uzantılarını damar duvarına yönlendirerek damar çevresinde anükleer bir fibriler saha oluşturması perivasküler psödorozet adını alır."
+      },
+      {
+       "text": "Homer Wright rozeti",
+       "isCorrect": false,
+       "explanation": "Homer Wright rozetleri damar içermez; santral nöropil çevresinde dizilen küçük mavi hücrelerden oluşur ve medulloblastomda izlenir."
+      },
+      {
+       "text": "Glomerüloid cisimcik",
+       "isCorrect": false,
+       "explanation": "Bu kavram santral sinir sistemi patolojisinde tanımlanmış önemli bir antitedir. Glomerüloid cisimcik damar etrafında tümör dizilimi değil, glioblastomdaki mikrovasküler endotel ve perisit proliferasyonudur."
+      },
+      {
+       "text": "Psammom cisimciği",
+       "isCorrect": false,
+       "explanation": "Bu kavram santral sinir sistemi patolojisinde tanımlanmış önemli bir antitedir. Psammom cisimcikleri araknoid hücrelerin oluşturduğu konsantrik laminer kalsifikasyonlar olup meningiomlara özgüdür."
+      }
+     ]
+    },
+    {
+     "id": "k40-s15-cl1",
+     "type": "cloze_masking",
+     "sentence": "Ependimomlarda damarların etrafında damar duvarına doğru uzanan fibriler uzantılar perivasküler psödorozet yapısını meydana getirir.",
+     "maskedTerm": "psödorozet",
+     "hint": "Santral sinir sistemi patolojisinde ilgili anatomik veya morfolojik terimdir."
+    },
+    {
+     "id": "k40-s15-t1",
+     "type": "interactive_table",
+     "title": "Rozet Yapıları ve İlgili Beyin Tümörleri Tablosu",
+     "tableHeaders": [
+      "Rozet Tipi",
+      "Santral İçerik",
+      "Tipik Tümör",
+      "Diferansiasyon Türü"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Perivasküler Psödorozet",
+         "isMasked": false
+        },
+        {
+         "text": "Kan damarı ve anükleer zon",
+         "isMasked": false
+        },
+        {
+         "text": "Ependimom",
+         "isMasked": false
+        },
+        {
+         "text": "Ependimal / Glial",
+         "isMasked": true,
+         "hint": "Bu dokunun patolojik ayırıcı tanısında kullanılan temel histolojik bulgudur."
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Homer Wright Rozeti",
+         "isMasked": false
+        },
+        {
+         "text": "Aselüler nöropil lifleri",
+         "isMasked": false
+        },
+        {
+         "text": "Medulloblastom",
+         "isMasked": false
+        },
+        {
+         "text": "Nöronal / Primitif",
+         "isMasked": true,
+         "hint": "Bu dokunun patolojik ayırıcı tanısında kullanılan temel histolojik bulgudur."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k40-s15-ar1",
+     "type": "active_recall",
+     "question": "Ependimom mikroskopisinde gerçek ependim rozetinin perivasküler psödorozetten temel yapısal farkı nedir?",
+     "answer": "Gerçek ependim rozetinin merkezinde kan damarı değil, ependim kanalını taklit eden açık bir lümen bulunmasıdır.",
+     "clue": "Santralde damar yerine açık kanal/lümen bulunur."
+    }
+   ],
+   "bolum": 4,
+   "pdfSayfalari": [
+    65,
+    68
+   ],
+   "sourcePdf": {
+    "file": "y25-k2-40-santral-sinir-sistemi-tumorleri.pdf",
+    "startPage": 65,
+    "endPage": 68
+   }
+  },
+  {
+   "id": "k2-40-d-s16",
+   "slideNumber": 16,
+   "title": "Nöronal ve Glionöronal Neoplazmlar",
+   "content": "Santral sinir sisteminde nöronal diferansiasyon gösteren tümörler gliomlara kıyasla daha nadir olup genellikle düşük dereceli ve iyi prognozludur.\n\n- **Santral Nörositom:** Lateral ventrikül lümeni içinde, septum pellusiduma veya foramen Monro'ya komşu gelişen, yuvarlak üniform hücreli ve sinaptofizin pozitif benign neoplazmdır.\n- **Gangliogliom:** Neoplastik ganglion hücreleri ile düşük dereceli glial hücrelerin bir arada bulunduğu epileptojenik lezyondur.\n- **DNET:** Çocuk ve gençlerde ilaca dirençli parsiyel epilepsi nöbetleri ile seyreden, intrakortikal mikrokistik glionöronal tümördür.\n\n> [!NOTE]\n> DNET genç hastalarda uzun süreli epilepsi öyküsü ve kortikal mikrokistik patoloji ile karakterizedir.",
+   "synthesisNarrative": "Santral sinir sisteminde nöronal diferansiasyon gösteren tümörler gliomlara kıyasla daha nadir olup genellikle düşük dereceli ve iyi prognozludur.\n\n- **Santral Nörositom:** Lateral ventrikül lümeni içinde, septum pellusiduma veya foramen Monro'ya komşu gelişen, yuvarlak üniform hücreli ve sinaptofizin pozitif benign neoplazmdır.\n- **Gangliogliom:** Neoplastik ganglion hücreleri ile düşük dereceli glial hücrelerin bir arada bulunduğu epileptojenik lezyondur.\n- **DNET:** Çocuk ve gençlerde ilaca dirençli parsiyel epilepsi nöbetleri ile seyreden, intrakortikal mikrokistik glionöronal tümördür.\n\n> [!NOTE]\n> DNET genç hastalarda uzun süreli epilepsi öyküsü ve kortikal mikrokistik patoloji ile karakterizedir.",
+   "interactiveElements": [
+    {
+     "id": "k40-s16-q1",
+     "type": "micro_quiz",
+     "question": "Genç bir hastada ilaca dirençli epilepsi nöbetlerine yol açan, temporal kortekste intrakortikal yerleşimli benign glionöronal lezyon hangisidir?",
+     "options": [
+      {
+       "text": "Disembriyoplastik nöroepitelyal tümör (DNET)",
+       "isCorrect": true,
+       "explanation": "Bu kavram santral sinir sistemi patolojisinde tanımlanmış önemli bir antitedir. DNET gençlerde refrakter epilepsi ile başvuran, kortikal mikrokistler ve nöronal-glial elemanlar içeren benign bir neoplazmdır."
+      },
+      {
+       "text": "Glioblastom (Derece IV)",
+       "isCorrect": false,
+       "explanation": "Bu kavram santral sinir sistemi patolojisinde tanımlanmış önemli bir antitedir. Glioblastom kortikal benign bir glionöronal lezyon olmayıp hızla ölümle sonuçlanan yüksek dereceli malign astrositomdur."
+      },
+      {
+       "text": "Medulloblastom",
+       "isCorrect": false,
+       "explanation": "Bu kavram santral sinir sistemi patolojisinde tanımlanmış önemli bir antitedir. Medulloblastom serebral kortekste değil serebellar vermiste gelişen küçük mavi hücreli son derece malign embriyonal tümördür."
+      },
+      {
+       "text": "Santral nörositom",
+       "isCorrect": false,
+       "explanation": "Bu kavram santral sinir sistemi patolojisinde tanımlanmış önemli bir antitedir. Santral nörositom serebral kortekste değil, lateral ventrikül içinde septum pellusidum komşuluğunda kitle oluşturur."
+      }
+     ]
+    },
+    {
+     "id": "k40-s16-cl1",
+     "type": "cloze_masking",
+     "sentence": "Santral nörositom ventrikül sistemine bitişik yerleşen ve nöronal diferansiasyon gösteren düşük dereceli bir neoplazmdır.",
+     "maskedTerm": "nöronal",
+     "hint": "Santral sinir sistemi patolojisinde ilgili anatomik veya morfolojik terimdir."
+    },
+    {
+     "id": "k40-s16-l1",
+     "type": "spot_the_lie",
+     "topic": "Santral Sinir Sistemi Patolojisi Önermeleri",
+     "items": [
+      {
+       "text": "Santral nörositom lateral ventrikül lümeni içinde Monro foramenine yakın yerleşir.",
+       "isLie": false,
+       "explanation": "Santral nörositomun klasik yerleşim yeri Monro foramenine komşu lateral ventrikül içidir."
+      },
+      {
+       "text": "Gangliogliomlar olgun neoplastik ganglion nöronları ile glial hücreleri bir arada içerir.",
+       "isLie": false,
+       "explanation": "Gangliogliom adından da anlaşılacağı gibi nöronal ve glial iki ayrı hücre komponentine sahiptir."
+      },
+      {
+       "text": "DNET hastalarında tam cerrahi rezeksiyondan sonra epilepsi nöbetleri şiddetlenerek anaplastik glioblastoma dönüşür.",
+       "isLie": true,
+       "explanation": "DNET benign bir lezyondur; cerrahi rezeksiyon epilepsi kontrolünü mükemmel sağlar ve malign transformasyon beklenmez."
+      }
+     ]
+    },
+    {
+     "id": "k40-s16-m1",
+     "type": "swipe_matching",
+     "title": "Nöronal ve Glionöronal Tümör Eşleştirmesi",
+     "leftCategory": "Santral Nörositom",
+     "rightCategory": "Gangliogliom",
+     "cards": [
+      {
+       "text": "Lateral ventrikül içi ve foramen Monro komşuluğu",
+       "category": "left"
+      },
+      {
+       "text": "İntrakortikal yerleşim ve refrakter epilepsi nöbetleri",
+       "category": "right"
+      },
+      {
+       "text": "Neoplastik ganglion hücreleri ve glial stroma",
+       "category": "right"
+      },
+      {
+       "text": "Sinaptofizin immünohistokimyasal pozitifliği",
+       "category": "left"
+      }
+     ]
+    }
+   ],
+   "bolum": 4,
+   "pdfSayfalari": [
+    69,
+    71
+   ],
+   "sourcePdf": {
+    "file": "y25-k2-40-santral-sinir-sistemi-tumorleri.pdf",
+    "startPage": 69,
+    "endPage": 71
+   }
+  },
+  {
+   "id": "k2-40-d-s17",
+   "slideNumber": 17,
+   "title": "Medulloblastom: Epidemiyoloji ve Vermis Tutulumu",
+   "content": "Medulloblastom (DSÖ Derece IV) çocukluk çağının en sık görülen malign santral sinir sistemi tümörüdür. Tüm pediatrik beyin neoplazmlerinin yaklaşık yüzde yirmisini oluşturur.\n\n- **Münhasır Lokalizasyon:** Çocuklarda hemen her zaman serebellum orta hattında, yani vermiste yerleşir.\n- **Dördüncü Ventrikül Basısı:** Büyüdükçe dördüncü ventrikülü öne doğru iterek tıkar ve hızla kafa içi basınç artışı ile ataksi tablosu doğurur.\n- **Embriyonal Karakter:** Primitif nöroektodermal kök hücrelerden kaynaklanan, yüksek proliferasyonlu son derece hücresel bir neoplazmdır.\n\n> [!IMPORTANT]\n> Medulloblastom çocukluk çağında serebellar vermisten kaynaklanan en sık malign primer beyin tümörüdür.",
+   "synthesisNarrative": "Medulloblastom (DSÖ Derece IV) çocukluk çağının en sık görülen malign santral sinir sistemi tümörüdür. Tüm pediatrik beyin neoplazmlerinin yaklaşık yüzde yirmisini oluşturur.\n\n- **Münhasır Lokalizasyon:** Çocuklarda hemen her zaman serebellum orta hattında, yani vermiste yerleşir.\n- **Dördüncü Ventrikül Basısı:** Büyüdükçe dördüncü ventrikülü öne doğru iterek tıkar ve hızla kafa içi basınç artışı ile ataksi tablosu doğurur.\n- **Embriyonal Karakter:** Primitif nöroektodermal kök hücrelerden kaynaklanan, yüksek proliferasyonlu son derece hücresel bir neoplazmdır.\n\n> [!IMPORTANT]\n> Medulloblastom çocukluk çağında serebellar vermisten kaynaklanan en sık malign primer beyin tümörüdür.",
+   "interactiveElements": [
+    {
+     "id": "k40-s17-q1",
+     "type": "micro_quiz",
+     "question": "Çocukluk çağında en sık görülen malign primer santral sinir sistemi neoplazmı hangisidir?",
+     "options": [
+      {
+       "text": "Medulloblastom",
+       "isCorrect": true,
+       "explanation": "Bu kavram santral sinir sistemi patolojisinde tanımlanmış önemli bir antitedir. Medulloblastom çocukluk çağı pediatrik beyin tümörleri içinde en sık karşılaşılan yüksek dereceli malign neoplazmdır."
+      },
+      {
+       "text": "Glioblastom",
+       "isCorrect": false,
+       "explanation": "Bu kavram santral sinir sistemi patolojisinde tanımlanmış önemli bir antitedir. Glioblastom çocuklarda değil, ileri yaş erişkinlerde en sık görülen primer malign beyin tümörüdür."
+      },
+      {
+       "text": "Pilositik astrositom",
+       "isCorrect": false,
+       "explanation": "Bu kavram santral sinir sistemi patolojisinde tanımlanmış önemli bir antitedir. Pilositik astrositom çocuklarda sık görülür ancak malign değil, DSÖ Derece bir benign bir neoplazmdır."
+      },
+      {
+       "text": "Oligodendrogliom",
+       "isCorrect": false,
+       "explanation": "Bu kavram santral sinir sistemi patolojisinde tanımlanmış önemli bir antitedir. Oligodendrogliom çocukluk çağı malignitesi olmayıp erişkinlerin beyaz cevherinde izlenen glial tümördür."
+      }
+     ]
+    },
+    {
+     "id": "k40-s17-cl1",
+     "type": "cloze_masking",
+     "sentence": "Çocuklarda medulloblastomlar genellikle serebellum orta hattında yani vermiste yerleşim gösterir.",
+     "maskedTerm": "vermiste",
+     "hint": "Santral sinir sistemi patolojisinde ilgili anatomik veya morfolojik terimdir."
+    },
+    {
+     "id": "k40-s17-l1",
+     "type": "spot_the_lie",
+     "topic": "Santral Sinir Sistemi Patolojisi Önermeleri",
+     "items": [
+      {
+       "text": "Medulloblastom çocuklarda münhasıran serebellum vermisinde gelişir.",
+       "isLie": false,
+       "explanation": "Pediatrik medulloblastomların anatomik kökeni serebellum orta hattındaki vermis dokusudur."
+      },
+      {
+       "text": "Medulloblastom dördüncü ventriküle bası yaparak obstrüktif hidrosefaliye neden olur.",
+       "isLie": false,
+       "explanation": "Vermis kitleleri ventrikül tavanına bası yaparak BOS dolaşımını mekanik olarak engeller."
+      },
+      {
+       "text": "Medulloblastom çok yavaş büyüyen ve cerrahiye dahi gerek duyulmayan benign bir kisttir.",
+       "isLie": true,
+       "explanation": "Medulloblastom DSÖ Derece dört son derece agresif solid bir malignitedir ve acil cerrahi ile radyoterapi gerektirir."
+      }
+     ]
+    },
+    {
+     "id": "k40-s17-m1",
+     "type": "swipe_matching",
+     "title": "Çocukluk Çağı Serebellar Tümörleri Ayırıcı Tanısı",
+     "leftCategory": "Medulloblastom",
+     "rightCategory": "Ependimom",
+     "cards": [
+      {
+       "text": "Serebellar vermis orta hat yerleşimi ve yüksek malignite",
+       "category": "left"
+      },
+      {
+       "text": "Serebellar hemisfer kisti ve mural nodül morfolojisi",
+       "category": "right"
+      },
+      {
+       "text": "Dördüncü ventrikül tabanı ve perivasküler psödorozet",
+       "category": "right"
+      },
+      {
+       "text": "Küçük yuvarlak mavi hücreler ve yüksek mitoz",
+       "category": "left"
+      }
+     ]
+    }
+   ],
+   "bolum": 5,
+   "pdfSayfalari": [
+    72,
+    75
+   ],
+   "sourcePdf": {
+    "file": "y25-k2-40-santral-sinir-sistemi-tumorleri.pdf",
+    "startPage": 72,
+    "endPage": 75
+   }
+  },
+  {
+   "id": "k2-40-d-s18",
+   "slideNumber": 18,
+   "title": "Homer Wright Rozetleri ve Damla Metastazı",
+   "content": "Medulloblastom mikroskopisinde aşırı sellüler, dar sitoplazmalı, koyu kromatini olan küçük mavi yuvarlak hücreler izlenir.\n\n- **Homer Wright Rozetleri:** Tümör hücrelerinin santral aselüler fibriler nöropil uzantıları çevresinde radyal dizilimidir (nöroblastik diferansiasyon).\n- **Damla (Drop) Metastazı:** Hücreler BOS akımına dökülerek subaraknoid mesafede spinal kord kauda ekinaya kadar ekilme metastazları yapar.\n- **Radyosensitivite ve Prognoz:** Medulloblastom radyasyona son derece duyarlıdır; MYC amplifikasyonu kötü prognoz belirtecidir.\n\n> [!IMPORTANT]\n> Medulloblastomda santral nöropil çevresinde dizilen Homer Wright rozetleri nöroblastik diferansiasyonu yansıtır.",
+   "synthesisNarrative": "Medulloblastom mikroskopisinde aşırı sellüler, dar sitoplazmalı, koyu kromatini olan küçük mavi yuvarlak hücreler izlenir.\n\n- **Homer Wright Rozetleri:** Tümör hücrelerinin santral aselüler fibriler nöropil uzantıları çevresinde radyal dizilimidir (nöroblastik diferansiasyon).\n- **Damla (Drop) Metastazı:** Hücreler BOS akımına dökülerek subaraknoid mesafede spinal kord kauda ekinaya kadar ekilme metastazları yapar.\n- **Radyosensitivite ve Prognoz:** Medulloblastom radyasyona son derece duyarlıdır; MYC amplifikasyonu kötü prognoz belirtecidir.\n\n> [!IMPORTANT]\n> Medulloblastomda santral nöropil çevresinde dizilen Homer Wright rozetleri nöroblastik diferansiasyonu yansıtır.",
+   "interactiveElements": [
+    {
+     "id": "k40-s18-q1",
+     "type": "micro_quiz",
+     "question": "Medulloblastomun mikroskobik incelemesinde izlenen Homer Wright rozetlerinin perivasküler psödorozetlerden temel farkı nedir?",
+     "options": [
+      {
+       "text": "Merkezinde kan damarı bulunmayıp fibriler aselüler nöropil içermesi",
+       "isCorrect": true,
+       "explanation": "Bu kavram santral sinir sistemi patolojisinde tanımlanmış önemli bir antitedir. Homer Wright rozetlerinin santralinde damar yoktur; hücrelerin nöroblastik uzantılarından oluşan nöropil yumağı yer alır."
+      },
+      {
+       "text": "Merkezinde konsantrik laminer kalsifikasyonlar (psammom) barındırması",
+       "isCorrect": false,
+       "explanation": "Bu kavram santral sinir sistemi patolojisinde tanımlanmış önemli bir antitedir. Konsantrik kalsifiye yapılar meningiomların psammom cisimcikleri olup rozet yapılarının merkezinde yer almazlar."
+      },
+      {
+       "text": "Tümör hücrelerinin berrak perinükleer halo (tavada yumurta) sergilemesi",
+       "isCorrect": false,
+       "explanation": "Bu kavram santral sinir sistemi patolojisinde tanımlanmış önemli bir antitedir. Tavada yumurta görünümü oligodendroglioma aittir; medulloblastom hücreleri dar sitoplazmalı küçük mavi hücrelerdir."
+      },
+      {
+       "text": "Yalnızca glial diferansiasyon belirteci olan GFAP ile boyanması",
+       "isCorrect": false,
+       "explanation": "Bu kavram santral sinir sistemi patolojisinde tanımlanmış önemli bir antitedir. Homer Wright rozetleri nöronal diferansiasyonu yansıtır ve sinaptofizin gibi nöronal belirteçler pozitif bulunur."
+      }
+     ]
+    },
+    {
+     "id": "k40-s18-c1",
+     "type": "causal_chain",
+     "title": "Medulloblastomda Damla (Drop) Metastazı Mekanizması",
+     "steps": [
+      "1. Ventrikül İnvazyonu: Vermis tümörünün dördüncü ventrikül epandimini aşması.",
+      "2. Hücresel Dökülme: Kohezyonu zayıf küçük mavi hücrelerin BOS içine serbest dökülmesi.",
+      "3. Likvor Akımı: BOS dolaşımı ile hücrelerin spinal subaraknoid mesafeye taşınması.",
+      "4. Drop Metastazı: Kauda ekina ve sinir köklerinde nodüler tümör ekimlerinin gelişmesi."
+     ]
+    },
+    {
+     "id": "k40-s18-cl1",
+     "type": "cloze_masking",
+     "sentence": "Medulloblastomda sıklıkla santral nöropil çevresinde dizilen Homer Wright veya nöroblastik rozet yapıları saptanır.",
+     "maskedTerm": "Homer Wright",
+     "hint": "Santral sinir sistemi patolojisinde ilgili anatomik veya morfolojik terimdir."
+    },
+    {
+     "id": "k40-s18-ar1",
+     "type": "active_recall",
+     "question": "Medulloblastomda moleküler olarak en kötü prognozu ve erken metastazı gösteren genetik anomali nedir?",
+     "answer": "MYC onkogen amplifikasyonudur.",
+     "clue": "Kötü prognozlu protoonkogen amplifikasyonudur."
+    }
+   ],
+   "bolum": 5,
+   "pdfSayfalari": [
+    76,
+    78
+   ],
+   "sourcePdf": {
+    "file": "y25-k2-40-santral-sinir-sistemi-tumorleri.pdf",
+    "startPage": 76,
+    "endPage": 78
+   }
+  },
+  {
+   "id": "k2-40-d-s19",
+   "slideNumber": 19,
+   "title": "Primer SSS Lenfoması ve Germ Hücreli Neoplazmlar",
+   "content": "Santral sinir sisteminin diğer non-glial parankimal neoplazmleri arasında lenfoid ve germ hücreli tümörler kendilerine has klinik ve immünolojik özellikler taşır.\n\n- **Primer SSS Lenfoması:** İmmünsüprese bireylerde (AIDS veya transplant alıcıları) sıklığı belirgin artar; neredeyse tüm olgularda Epstein-Barr Virüsü (EBV) genomu pozitiftir.\n- **Histopatoloji:** Çoğunlukla diffüz büyük B hücreli lenfoma tipindedir; kan damarları çevresinde anjiosentrik konsantrik manşonlaşma (perivasküler cuffing) oluşturur.\n- **Germ Hücreli Tümörler:** Genç erkeklerde sıklıkla pineal bölgede ve suprasellar lojda ortaya çıkar; en sık tipi germinomdur.\n\n> [!NOTE]\n> İmmünsüpresif hastalarda perivasküler dairesel yayılım gösteren beyin kitlesinde primer SSS lenfoması akla gelmelidir.",
+   "synthesisNarrative": "Santral sinir sisteminin diğer non-glial parankimal neoplazmleri arasında lenfoid ve germ hücreli tümörler kendilerine has klinik ve immünolojik özellikler taşır.\n\n- **Primer SSS Lenfoması:** İmmünsüprese bireylerde (AIDS veya transplant alıcıları) sıklığı belirgin artar; neredeyse tüm olgularda Epstein-Barr Virüsü (EBV) genomu pozitiftir.\n- **Histopatoloji:** Çoğunlukla diffüz büyük B hücreli lenfoma tipindedir; kan damarları çevresinde anjiosentrik konsantrik manşonlaşma (perivasküler cuffing) oluşturur.\n- **Germ Hücreli Tümörler:** Genç erkeklerde sıklıkla pineal bölgede ve suprasellar lojda ortaya çıkar; en sık tipi germinomdur.\n\n> [!NOTE]\n> İmmünsüpresif hastalarda perivasküler dairesel yayılım gösteren beyin kitlesinde primer SSS lenfoması akla gelmelidir.",
+   "interactiveElements": [
+    {
+     "id": "k40-s19-q1",
+     "type": "micro_quiz",
+     "question": "İmmünsüprese bir hastada beyin parankiminde damarlar çevresinde perivasküler konsantrik dağılım gösteren ve EBV ilişkili olan neoplazm hangisidir?",
+     "options": [
+      {
+       "text": "Primer santral sinir sistemi lenfoması (B hücreli)",
+       "isCorrect": true,
+       "explanation": "Primer SSS lenfoması immünsüprese bireylerde EBV enfeksiyonu ile tetiklenen, damarlar çevresinde manşon oluşturan B hücreli malignitedir."
+      },
+      {
+       "text": "Glioblastom (Derece IV)",
+       "isCorrect": false,
+       "explanation": "Bu kavram santral sinir sistemi patolojisinde tanımlanmış önemli bir antitedir. Glioblastom bir B hücreli lenfoma olmayıp astrositik kökenlidir ve EBV virüsü ile patojenik ilişkisi bulunmaz."
+      },
+      {
+       "text": "Pilositik astrositom",
+       "isCorrect": false,
+       "explanation": "Bu kavram santral sinir sistemi patolojisinde tanımlanmış önemli bir antitedir. Pilositik astrositom çocuklarda görülen benign kistik astrositik bir lezyondur ve immünsüpresyon ile ilişkili değildir."
+      },
+      {
+       "text": "Meningiom",
+       "isCorrect": false,
+       "explanation": "Bu kavram santral sinir sistemi patolojisinde tanımlanmış önemli bir antitedir. Meningiom beynin araknoid kap hücrelerinden kaynaklanır; lenfoid hücrelerden veya EBV enfeksiyonundan köken almaz."
+      }
+     ]
+    },
+    {
+     "id": "k40-s19-cl1",
+     "type": "cloze_masking",
+     "sentence": "Primer santral sinir sistemi lenfoması immün yetmezlikli bireylerde sıklıkla EBV enfeksiyonu ile ilişkilidir.",
+     "maskedTerm": "EBV enfeksiyonu",
+     "hint": "Santral sinir sistemi patolojisinde ilgili anatomik veya morfolojik terimdir."
+    },
+    {
+     "id": "k40-s19-l1",
+     "type": "spot_the_lie",
+     "topic": "Santral Sinir Sistemi Patolojisi Önermeleri",
+     "items": [
+      {
+       "text": "Primer SSS lenfoması tümör hücreleri kan damarları çevresinde perivasküler manşonlaşma gösterir.",
+       "isLie": false,
+       "explanation": "Anjiosentrik yayılım ve damar duvarını çevreleme primer SSS lenfomasının klasik mikroskobik paternidir."
+      },
+      {
+       "text": "Beynin primer germ hücreli tümörleri çoğunlukla pineal bölgede yerleşir.",
+       "isLie": false,
+       "explanation": "Genç erkeklerde pineal gland loju primer intrakraniyal germinomların en sık lokalizasyonudur."
+      },
+      {
+       "text": "Primer SSS lenfomalarının tamamı benign T hücre proliferasyonu olup hiçbir zaman malignleşmez.",
+       "isLie": true,
+       "explanation": "Primer SSS lenfoması son derece agresif, diffüz büyük B hücreli malign bir neoplazmdır."
+      }
+     ]
+    },
+    {
+     "id": "k40-s19-m1",
+     "type": "swipe_matching",
+     "title": "Non-Glial Parankimal Tümörler Eşleştirmesi",
+     "leftCategory": "Germ Hücreli Tümör",
+     "rightCategory": "Primer SSS Lenfoması",
+     "cards": [
+      {
+       "text": "İmmünsüpresyon, EBV pozitifliği ve B hücre kökeni",
+       "category": "right"
+      },
+      {
+       "text": "Pineal bölge yerleşimi ve genç erkek dominansı",
+       "category": "left"
+      },
+      {
+       "text": "Damarlar etrafında perivasküler manşonlaşma",
+       "category": "right"
+      },
+      {
+       "text": "Testiküler seminom benzeri germinom morfolojisi",
+       "category": "left"
+      }
+     ]
+    }
+   ],
+   "bolum": 5,
+   "pdfSayfalari": [
+    79,
+    81
+   ],
+   "sourcePdf": {
+    "file": "y25-k2-40-santral-sinir-sistemi-tumorleri.pdf",
+    "startPage": 79,
+    "endPage": 81
+   }
+  },
+  {
+   "id": "k2-40-d-s20",
+   "slideNumber": 20,
+   "title": "[TEKRAR SAYFASI - CHECKPOINT 3] Ependimomlar ve Medulloblastom",
+   "content": "Bu tekrarda ventriküler ependimomlar, glionöronal tümörler ve pediatrik embriyonal medulloblastomun histopatolojik ayırıcı kriterleri pekiştirilmektedir.\n\n- **Ependimom:** Dördüncü ventrikül yerleşimi, hidrosefali ve damar çevresinde perivasküler psödorozetler.\n- **Medulloblastom:** Serebellar vermis yerleşimi, küçük yuvarlak mavi hücreler, Homer Wright rozetleri ve BOS drop metastazı.\n- **Glionöronal Tümörler:** DNET'te kortikal epilepsi, santral nörositomda intraventriküler benign nöronal yapı.\n\n> [!IMPORTANT]\n> Perivasküler psödorozette merkezde kan damarı varken, Homer Wright rozetinde merkezde nöropil lifleri bulunur.",
+   "synthesisNarrative": "Bu tekrarda ventriküler ependimomlar, glionöronal tümörler ve pediatrik embriyonal medulloblastomun histopatolojik ayırıcı kriterleri pekiştirilmektedir.\n\n- **Ependimom:** Dördüncü ventrikül yerleşimi, hidrosefali ve damar çevresinde perivasküler psödorozetler.\n- **Medulloblastom:** Serebellar vermis yerleşimi, küçük yuvarlak mavi hücreler, Homer Wright rozetleri ve BOS drop metastazı.\n- **Glionöronal Tümörler:** DNET'te kortikal epilepsi, santral nörositomda intraventriküler benign nöronal yapı.\n\n> [!IMPORTANT]\n> Perivasküler psödorozette merkezde kan damarı varken, Homer Wright rozetinde merkezde nöropil lifleri bulunur.",
+   "interactiveElements": [
+    {
+     "id": "k40-s20-q1",
+     "type": "micro_quiz",
+     "question": "Aşağıdakilerden hangisi çocukluk çağında arka fossada yerleşen ependimom ile medulloblastom arasındaki kesin histopatolojik farktır?",
+     "options": [
+      {
+       "text": "Ependimomda perivasküler psödorozetler görülürken, medulloblastomda nöropil merkezli Homer Wright rozetleri izlenir.",
+       "isCorrect": true,
+       "explanation": "Bu kavram santral sinir sistemi patolojisinde tanımlanmış önemli bir antitedir. Ependimom damar çevresinde psödorozetler oluşturan glial bir lezyonken medulloblastom santral nöropilli rozetler içeren embriyonal neoplazmdır."
+      },
+      {
+       "text": "Medulloblastomda parlak Rosenthal lifleri bulunurken, ependimomda tavada yumurta hücreleri izlenir.",
+       "isCorrect": false,
+       "explanation": "Bu kavram santral sinir sistemi patolojisinde tanımlanmış önemli bir antitedir. Rosenthal lifleri pilositik astrositoma, tavada yumurta görünümü ise oligodendroglioma ait olup bu iki tümörde izlenmez."
+      },
+      {
+       "text": "Ependimom BOS yoluyla ekilirken medulloblastom yalnızca çevre kemik dokuya invazyon yapar.",
+       "isCorrect": false,
+       "explanation": "Bu kavram santral sinir sistemi patolojisinde tanımlanmış önemli bir antitedir. Medulloblastom BOS yoluyla subaraknoid mesafeye ve kauda ekinaya damla metastazı yapmasıyla ünlü malign bir tümördür."
+      },
+      {
+       "text": "Ependimomda mikrovasküler glomerüloid yapılar tanısal iken medulloblastomda kalsifiye psammom cisimcikleri saptanır.",
+       "isCorrect": false,
+       "explanation": "Bu kavram santral sinir sistemi patolojisinde tanımlanmış önemli bir antitedir. Glomerüloid yapılar glioblastomda, psammom cisimcikleri ise menenjiomda izlenen morfolojik kriterlerdir."
+      }
+     ]
+    },
+    {
+     "id": "k40-s20-v1",
+     "type": "venn_grid",
+     "title": "Ependimom ve Medulloblastom Karşılaştırması",
+     "labelA": "Dördüncü Ventrikül Ependimomu",
+     "labelB": "Serebellar Vermis Medulloblastomu",
+     "items": [
+      {
+       "criterion": "Perivasküler psödorozetler ile karakterize glial lezyon olma",
+       "correct": "A"
+      },
+      {
+       "criterion": "Küçük yuvarlak mavi hücreler ve Homer Wright rozetleri içerme",
+       "correct": "B"
+      },
+      {
+       "criterion": "Çocukluk çağında arka fossada yerleşip hidrosefaliye yol açma",
+       "correct": "both"
+      },
+      {
+       "criterion": "Kromozom 1p ve 19q tam ko-delesyonu taşıma",
+       "correct": "neither"
+      }
+     ]
+    },
+    {
+     "id": "k40-s20-t1",
+     "type": "interactive_table",
+     "title": "Pediatrik Arka Fossa Tümörleri Ayırıcı Tanı Tablosu",
+     "tableHeaders": [
+      "Tümör",
+      "Arka Fossa Yerleşimi",
+      "DSÖ Derecesi",
+      "Patognomonik Mikroskopi"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Pilositik Astrositom",
+         "isMasked": false
+        },
+        {
+         "text": "Serebellar Hemisfer",
+         "isMasked": false
+        },
+        {
+         "text": "Derece I",
+         "isMasked": false
+        },
+        {
+         "text": "Rosenthal Lifleri",
+         "isMasked": true,
+         "hint": "Bu dokunun patolojik ayırıcı tanısında kullanılan temel histolojik bulgudur."
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Medulloblastom",
+         "isMasked": false
+        },
+        {
+         "text": "Serebellar Vermis",
+         "isMasked": false
+        },
+        {
+         "text": "Derece IV",
+         "isMasked": false
+        },
+        {
+         "text": "Homer Wright Rozeti",
+         "isMasked": true,
+         "hint": "Bu dokunun patolojik ayırıcı tanısında kullanılan temel histolojik bulgudur."
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Ependimom",
+         "isMasked": false
+        },
+        {
+         "text": "Dördüncü Ventrikül",
+         "isMasked": false
+        },
+        {
+         "text": "Derece II-III",
+         "isMasked": false
+        },
+        {
+         "text": "Perivasküler Psödorozet",
+         "isMasked": true,
+         "hint": "Bu dokunun patolojik ayırıcı tanısında kullanılan temel histolojik bulgudur."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k40-s20-ar1",
+     "type": "active_recall",
+     "question": "Medulloblastomun spinal korda ve subaraknoid mesafeye yaptığı ekilme metastazlarına klinik pratikte ne ad verilir?",
+     "answer": "Damla (drop) metastazı adı verilir.",
+     "clue": "BOS ile aşağı dökülen metastaz türüdür."
+    }
+   ],
+   "isCheckpoint": true
+  },
+  {
+   "id": "k2-40-d-s21",
+   "slideNumber": 21,
+   "title": "Meningiomlar: Araknoid Hücreler ve Girdap Paterni",
+   "content": "Meningiomlar araknoid membranın meningotelyal kap hücrelerinden köken alan, genellikle iyi sınırlı ve benign ekstraserebral neoplazmlerdir. Erişkinlerde beyin parankimini dışarıdan iterek büyürler.\n\n- **Dura İlişkisi:** Dura matere geniş tabanla yapışır ve radyolojide karakteristik dura kuyruğu (dural tail) işareti oluştururlar.\n- **Hücresel Girdap (Whorl):** Neoplastik hücrelerin soğan zarı gibi konsantrik tabakalar halinde birbirini sarması tipik büyüme paternidir.\n- **Genetik ve Hormonal Faktörler:** Kromozom 22q kaybı ve NF2 mutasyonu çok sıktır; progesteron reseptör pozitifliği nedeniyle gebelikte büyüyebilirler.\n\n> [!IMPORTANT]\n> Meningiomlar dura matere yapışık iyi sınırlı lezyonlardır; hücresel girdaplar (whorl) ve dura kuyruğu patognomoniktir.",
+   "synthesisNarrative": "Meningiomlar araknoid membranın meningotelyal kap hücrelerinden köken alan, genellikle iyi sınırlı ve benign ekstraserebral neoplazmlerdir. Erişkinlerde beyin parankimini dışarıdan iterek büyürler.\n\n- **Dura İlişkisi:** Dura matere geniş tabanla yapışır ve radyolojide karakteristik dura kuyruğu (dural tail) işareti oluştururlar.\n- **Hücresel Girdap (Whorl):** Neoplastik hücrelerin soğan zarı gibi konsantrik tabakalar halinde birbirini sarması tipik büyüme paternidir.\n- **Genetik ve Hormonal Faktörler:** Kromozom 22q kaybı ve NF2 mutasyonu çok sıktır; progesteron reseptör pozitifliği nedeniyle gebelikte büyüyebilirler.\n\n> [!IMPORTANT]\n> Meningiomlar dura matere yapışık iyi sınırlı lezyonlardır; hücresel girdaplar (whorl) ve dura kuyruğu patognomoniktir.",
+   "interactiveElements": [
+    {
+     "id": "k40-s21-q1",
+     "type": "micro_quiz",
+     "question": "Araknoid membranın meningotelyal hücrelerinden kaynaklanan, dura matere yapışık ve hücresel girdaplar (whorl) oluşturan neoplazm hangisidir?",
+     "options": [
+      {
+       "text": "Meningiom",
+       "isCorrect": true,
+       "explanation": "Bu kavram santral sinir sistemi patolojisinde tanımlanmış önemli bir antitedir. Meningiomlar araknoid kap hücrelerinden köken alan, dura matere yapışık, mikroskopisinde whorl yapıları içeren ekstraserebral tümörlerdir."
+      },
+      {
+       "text": "Glioblastom",
+       "isCorrect": false,
+       "explanation": "Bu kavram santral sinir sistemi patolojisinde tanımlanmış önemli bir antitedir. Glioblastom dura kaynaklı olmayıp serebral beyaz cevher astrositlerinden köken alan malign infiltratif bir parankim neoplazmıdır."
+      },
+      {
+       "text": "Ependimom",
+       "isCorrect": false,
+       "explanation": "Bu kavram santral sinir sistemi patolojisinde tanımlanmış önemli bir antitedir. Ependimom araknoid zarlardan değil ventrikül döşemesindeki ependim hücrelerinden kaynaklanan bir glial tümördür."
+      },
+      {
+       "text": "Oligodendrogliom",
+       "isCorrect": false,
+       "explanation": "Bu kavram santral sinir sistemi patolojisinde tanımlanmış önemli bir antitedir. Oligodendrogliom dural lezyon oluşturmaz; serebral beyaz cevherde gelişen glial kökenli bir tümördür."
+      }
+     ]
+    },
+    {
+     "id": "k40-s21-cl1",
+     "type": "cloze_masking",
+     "sentence": "Meningiomlar araknoid membranın meningotelyal hücrelerinden köken alan ve dura matere yapışan ekstraserebral tümörlerdir.",
+     "maskedTerm": "meningotelyal",
+     "hint": "Santral sinir sistemi patolojisinde ilgili anatomik veya morfolojik terimdir."
+    },
+    {
+     "id": "k40-s21-l1",
+     "type": "spot_the_lie",
+     "topic": "Santral Sinir Sistemi Patolojisi Önermeleri",
+     "items": [
+      {
+       "text": "Meningiomlar sıklıkla kromozom 22q delesyonu ve NF2 gen mutasyonu ile ilişkilidir.",
+       "isLie": false,
+       "explanation": "Kromozom 22q kaybı meningiom patogenezinde en sık saptanan karakteristik genetik bozukluktur."
+      },
+      {
+       "text": "Meningiom hücrelerinde progesteron reseptör pozitifliği saptanabilir ve gebelikte büyüme hızlanabilir.",
+       "isLie": false,
+       "explanation": "Progesteron reseptör ekspresyonu nedeniyle menenjiomlar gebelik döneminde hormonal uyarım ile hacim artışı gösterebilir."
+      },
+      {
+       "text": "Meningiomlar beyin parankimini derinlemesine invaze ederek primer metastatik karsinoma dönüşür.",
+       "isLie": true,
+       "explanation": "Meningiomlar ekstraserebral lezyonlardır; parankimi invaze etmeyip iterler ve karsinoma dönüşüm göstermezler."
+      }
+     ]
+    },
+    {
+     "id": "k40-s21-m1",
+     "type": "swipe_matching",
+     "title": "Meningiom Klinik ve Histopatolojik Özellikleri",
+     "leftCategory": "Meningiom Kliniği",
+     "rightCategory": "Meningiom Patolojisi",
+     "cards": [
+      {
+       "text": "Araknoid kap hücreleri ve dura kuyruğu bulgusu",
+       "category": "right"
+      },
+      {
+       "text": "Hücresel girdaplar (whorl) ve psammom cisimcikleri",
+       "category": "right"
+      },
+      {
+       "text": "Kromozom 22q kaybı ve NF2 mutasyonu",
+       "category": "right"
+      },
+      {
+       "text": "Progesteron reseptör pozitifliği ve gebelikte büyüme",
+       "category": "left"
+      }
+     ]
+    }
+   ],
+   "bolum": 6,
+   "pdfSayfalari": [
+    82,
+    89
+   ],
+   "sourcePdf": {
+    "file": "y25-k2-40-santral-sinir-sistemi-tumorleri.pdf",
+    "startPage": 82,
+    "endPage": 89
+   }
+  },
+  {
+   "id": "k2-40-d-s22",
+   "slideNumber": 22,
+   "title": "Meningiom Derecelendirmesi ve Psammom Cisimcikleri",
+   "content": "Meningiomlar histopatolojik ve sitolojik kriterlere göre üç dereceye ayrılır. Olguların büyük kısmı benign (DSÖ Derece I) seyreder.\n\n- **Psammom Cisimcikleri:** Hücresel girdapların merkezindeki dejenere hücrelerin kalsifiye olmasıyla konsantrik laminer kalsifikasyonlar (psammomatöz meningiom) gelişir.\n- **Atipik Meningiom (Derece II):** Artmış mitoz (4 veya daha fazla mitoz / 10 BBA), hücresellik artışı ve belirgin makronükleoller ile karakterizedir.\n- **Anaplastik / Malign Meningiom (Derece III):** Yüksek mitotik indeks (20 veya daha fazla mitoz / 10 BBA) ve açık sarkom benzeri anaplastik doku mimarisi sergiler.\n\n> [!NOTE]\n> Psammomatöz meningiomda konsantrik tabakalı kalsifiye psammom cisimcikleri mikroskopide yoğun olarak izlenir.",
+   "synthesisNarrative": "Meningiomlar histopatolojik ve sitolojik kriterlere göre üç dereceye ayrılır. Olguların büyük kısmı benign (DSÖ Derece I) seyreder.\n\n- **Psammom Cisimcikleri:** Hücresel girdapların merkezindeki dejenere hücrelerin kalsifiye olmasıyla konsantrik laminer kalsifikasyonlar (psammomatöz meningiom) gelişir.\n- **Atipik Meningiom (Derece II):** Artmış mitoz (4 veya daha fazla mitoz / 10 BBA), hücresellik artışı ve belirgin makronükleoller ile karakterizedir.\n- **Anaplastik / Malign Meningiom (Derece III):** Yüksek mitotik indeks (20 veya daha fazla mitoz / 10 BBA) ve açık sarkom benzeri anaplastik doku mimarisi sergiler.\n\n> [!NOTE]\n> Psammomatöz meningiomda konsantrik tabakalı kalsifiye psammom cisimcikleri mikroskopide yoğun olarak izlenir.",
+   "interactiveElements": [
+    {
+     "id": "k40-s22-q1",
+     "type": "micro_quiz",
+     "question": "Meningiom dokusunda dejenere hücrelerin konsantrik kalsifikasyonu sonucu oluşan mikroskobik yapılara ne ad verilir?",
+     "options": [
+      {
+       "text": "Psammom cisimcikleri",
+       "isCorrect": true,
+       "explanation": "Bu kavram santral sinir sistemi patolojisinde tanımlanmış önemli bir antitedir. Meningiomlarda hücresel girdap merkezlerinde konsantrik laminer kalsiyum tuzlarının birikmesiyle oluşan kürecikler psammom cisimcikleridir."
+      },
+      {
+       "text": "Rosenthal lifleri",
+       "isCorrect": false,
+       "explanation": "Bu kavram santral sinir sistemi patolojisinde tanımlanmış önemli bir antitedir. Rosenthal lifleri kalsifikasyon değildir; pilositik astrositom uzantılarında biriken eozinofilik protein agregatlarıdır."
+      },
+      {
+       "text": "Homer Wright rozetleri",
+       "isCorrect": false,
+       "explanation": "Bu kavram santral sinir sistemi patolojisinde tanımlanmış önemli bir antitedir. Homer Wright rozetleri kalsifiye cisimler olmayıp medulloblastomda santral nöropil çevresinde dizilen hücre yapılarıdır."
+      },
+      {
+       "text": "Glomerüloid cisimcikler",
+       "isCorrect": false,
+       "explanation": "Bu kavram santral sinir sistemi patolojisinde tanımlanmış önemli bir antitedir. Glomerüloid cisimcikler glioblastomun mikrovasküler endotel proliferasyon odaklarıdır ve kalsifikasyon içermezler."
+      }
+     ]
+    },
+    {
+     "id": "k40-s22-cl1",
+     "type": "cloze_masking",
+     "sentence": "Meningiomlarda konsantrik kalsifikasyonlar psammom cisimciği adını alır ve psammomatöz alt tipte bolca bulunur.",
+     "maskedTerm": "psammom cisimciği",
+     "hint": "Santral sinir sistemi patolojisinde ilgili anatomik veya morfolojik terimdir."
+    },
+    {
+     "id": "k40-s22-t1",
+     "type": "interactive_table",
+     "title": "Meningiom DSÖ Derecelendirme Kriterleri Tablosu",
+     "tableHeaders": [
+      "Derece",
+      "Tipik Varyantlar",
+      "Mitotik Eşik",
+      "Biyolojik Davranış"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Derece I",
+         "isMasked": false
+        },
+        {
+         "text": "Meningotelyal, Fibröz, Psammomatöz",
+         "isMasked": false
+        },
+        {
+         "text": "< 4 mitoz / 10 BBA",
+         "isMasked": false
+        },
+        {
+         "text": "Benign ve İyi Sınırlı",
+         "isMasked": true,
+         "hint": "Bu dokunun patolojik ayırıcı tanısında kullanılan temel histolojik bulgudur."
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Derece II",
+         "isMasked": false
+        },
+        {
+         "text": "Atipik, Berrak Hücreli, Kordoid",
+         "isMasked": false
+        },
+        {
+         "text": "≥ 4 mitoz / 10 BBA",
+         "isMasked": false
+        },
+        {
+         "text": "Lokal Nüks Riski Yüksek",
+         "isMasked": true,
+         "hint": "Bu dokunun patolojik ayırıcı tanısında kullanılan temel histolojik bulgudur."
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Derece III",
+         "isMasked": false
+        },
+        {
+         "text": "Anaplastik (Malign), Rabdoid",
+         "isMasked": false
+        },
+        {
+         "text": "≥ 20 mitoz / 10 BBA",
+         "isMasked": false
+        },
+        {
+         "text": "Agresif İnvaziv Seyir",
+         "isMasked": true,
+         "hint": "Bu dokunun patolojik ayırıcı tanısında kullanılan temel histolojik bulgudur."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k40-s22-ar1",
+     "type": "active_recall",
+     "question": "Atipik meningiom (DSÖ Derece II) tanısı koymak için on büyük büyütme alanında aranan mitotik eşik nedir?",
+     "answer": "En az 4 veya daha fazla mitoz saptanmasıdır.",
+     "clue": "Mitotik figür sayısı 4 eşiğidir."
+    }
+   ],
+   "bolum": 6,
+   "pdfSayfalari": [
+    88,
+    96
+   ],
+   "sourcePdf": {
+    "file": "y25-k2-40-santral-sinir-sistemi-tumorleri.pdf",
+    "startPage": 88,
+    "endPage": 96
+   }
+  },
+  {
+   "id": "k2-40-d-s23",
+   "slideNumber": 23,
+   "title": "Metastatik Tümörler ve Familyal Sendromlar",
+   "content": "Erişkinlerde santral sinir sisteminde en sık görülen intrakraniyal neoplazmler primer beyin tümörleri değil, sistemik kanserlerin metastazlarıdır.\n\n- **Metastaz Paternleri:** En sık akciğer, meme ve melanomdan kaynaklanır; embolik tümör hücreleri kan akımının yavaşladığı gri-beyaz cevher bileşkesinde multipl nodüller oluşturur.\n- **Von Hippel-Lindau:** Serebellum ve retinada hemanjiyoblastomlar ile berrak hücreli renal karsinom birlikteliğidir.\n- **Tuberoz Sklerozis:** Subependimal dev hücreli astrositom (SEGA), subependimal nodüller ve kortikal tüberler gelişir.\n- **Nörofibromatozis:** NF1'de optik gliom, NF2'de bilateral vestibüler schwannom ve multipl menenjiomlar tipiktir.\n\n> [!IMPORTANT]\n> Erişkinde en sık beyin tümörü metastazdır; gri-beyaz cevher sınırında multipl nodüller ve yoğun çevre ödemi tipiktir.",
+   "synthesisNarrative": "Erişkinlerde santral sinir sisteminde en sık görülen intrakraniyal neoplazmler primer beyin tümörleri değil, sistemik kanserlerin metastazlarıdır.\n\n- **Metastaz Paternleri:** En sık akciğer, meme ve melanomdan kaynaklanır; embolik tümör hücreleri kan akımının yavaşladığı gri-beyaz cevher bileşkesinde multipl nodüller oluşturur.\n- **Von Hippel-Lindau:** Serebellum ve retinada hemanjiyoblastomlar ile berrak hücreli renal karsinom birlikteliğidir.\n- **Tuberoz Sklerozis:** Subependimal dev hücreli astrositom (SEGA), subependimal nodüller ve kortikal tüberler gelişir.\n- **Nörofibromatozis:** NF1'de optik gliom, NF2'de bilateral vestibüler schwannom ve multipl menenjiomlar tipiktir.\n\n> [!IMPORTANT]\n> Erişkinde en sık beyin tümörü metastazdır; gri-beyaz cevher sınırında multipl nodüller ve yoğun çevre ödemi tipiktir.",
+   "interactiveElements": [
+    {
+     "id": "k40-s23-q1",
+     "type": "micro_quiz",
+     "question": "Erişkinlerde en sık görülen intrakraniyal tümör grubu ve bunların beyin parankimindeki en tipik yerleşim yeri hangisidir?",
+     "options": [
+      {
+       "text": "Metastatik karsinomlar — Gri-beyaz cevher bileşkesi",
+       "isCorrect": true,
+       "explanation": "Erişkinlerde intrakraniyal kitlelerin en sık nedeni sistemik metastazlardır ve kapiller yavaşlama sebebiyle gri-beyaz cevher sınırına otururlar."
+      },
+      {
+       "text": "Primer glioblastom — Serebellar vermis",
+       "isCorrect": false,
+       "explanation": "Bu kavram santral sinir sistemi patolojisinde tanımlanmış önemli bir antitedir. Glioblastom serebellar vermiste değil serebral hemisferlerde gelişir ve genel olarak metastazlardan daha seyrek görülür."
+      },
+      {
+       "text": "Pilositik astrositom — Korpus kallozum",
+       "isCorrect": false,
+       "explanation": "Bu kavram santral sinir sistemi patolojisinde tanımlanmış önemli bir antitedir. Pilositik astrositom çocukluk çağı benign lezyonudur ve erişkinde en sık görülen kitle türü olamaz."
+      },
+      {
+       "text": "Ependimom — Dördüncü ventrikül tabanı",
+       "isCorrect": false,
+       "explanation": "Ependimom çocuklarda arka fossada sık olup erişkin yaş grubundaki tüm intrakraniyal kitlelerin küçük bir bölümünü oluşturur."
+      }
+     ]
+    },
+    {
+     "id": "k40-s23-cl1",
+     "type": "cloze_masking",
+     "sentence": "Metastazlar beynin içinde genellikle kan akımının yavaşladığı gri-beyaz cevher sınırında multipl nodüller oluşturur.",
+     "maskedTerm": "gri-beyaz cevher",
+     "hint": "Santral sinir sistemi patolojisinde ilgili anatomik veya morfolojik terimdir."
+    },
+    {
+     "id": "k40-s23-l1",
+     "type": "spot_the_lie",
+     "topic": "Santral Sinir Sistemi Patolojisi Önermeleri",
+     "items": [
+      {
+       "text": "Tuberoz sklerozis hastalarında lateral ventrikülde subependimal dev hücreli astrositom gelişebilir.",
+       "isLie": false,
+       "explanation": "SEGA lezyonları Tuberoz sklerozlu bireylerde Foramen Monro komşuluğunda karakteristik olarak izlenir."
+      },
+      {
+       "text": "Von Hippel-Lindau hastalığında serebellumda hemanjiyoblastomlar izlenir.",
+       "isLie": false,
+       "explanation": "VHL gen inaktivasyonunda serebellar ve retinal kapiller hemanjiyoblastom gelişimi patognomoniktir."
+      },
+      {
+       "text": "Metastatik beyin tümörleri neredeyse daima tek bir nodül halinde olup çevre dokuda hiç ödem yapmaz.",
+       "isLie": true,
+       "explanation": "Metastazlar tipik olarak multipl nodüller halinde gelişir ve çevre parankimde belirgin vazojenik ödem oluştururlar."
+      }
+     ]
+    },
+    {
+     "id": "k40-s23-m1",
+     "type": "swipe_matching",
+     "title": "Familyal Tümör Sendromları ve İlişkili SSS Lezyonları",
+     "leftCategory": "Nörofibromatozis Tip 1",
+     "rightCategory": "Von Hippel-Lindau",
+     "cards": [
+      {
+       "text": "Subependimal dev hücreli astrositom (SEGA) ve kortikal tüberler",
+       "category": "right"
+      },
+      {
+       "text": "Serebellar hemanjiyoblastom ve retinal anjiyom",
+       "category": "right"
+      },
+      {
+       "text": "Bilateral vestibüler schwannom ve multipl meningiomlar",
+       "category": "right"
+      },
+      {
+       "text": "Optik sinir pilositik astrositomu ve nörofibromlar",
+       "category": "left"
+      }
+     ]
+    }
+   ],
+   "bolum": 6,
+   "pdfSayfalari": [
+    95,
+    102
+   ],
+   "sourcePdf": {
+    "file": "y25-k2-40-santral-sinir-sistemi-tumorleri.pdf",
+    "startPage": 95,
+    "endPage": 102
+   }
+  },
+  {
+   "id": "k2-40-d-s24",
+   "slideNumber": 24,
+   "title": "[OYUN SAYFASI] Ders Sonu Oyunları: Santral Sinir Sistemi Tümörleri",
+   "content": "Bu oyun sayfasında Santral Sinir Sistemi Tümörleri dersinde öğrenilen derecelendirme basamakları, histopatolojik belirteçler ve moleküler mekanizmalar dört farklı oyun modeliyle pekiştirilmektedir.\n\n- **Sıralama:** Astrositik tümörlerin malignite basamaklarını ve derecelerini diziniz.\n- **Kaydırıcı Tahmin:** Erişkin primer beyin tümörleri içinde diffüz astrositomların yüzdesini belirleyiniz.\n- **Pertürbasyon:** Bir histolojik parametrenin değişimi durumunda tümörün DSÖ derecesindeki evrimini analiz ediniz.\n- **Metin Onarımı:** Patoloji raporundaki kavramsal hatayı düzelterek doğru tanıyı kurunuz.\n\n> [!IMPORTANT]\n> Tebrikler! Santral Sinir Sistemi Tümörleri ders paketinin tüm histopatolojik kazanımlarını başarıyla tamamladınız.",
+   "synthesisNarrative": "Bu oyun sayfasında Santral Sinir Sistemi Tümörleri dersinde öğrenilen derecelendirme basamakları, histopatolojik belirteçler ve moleküler mekanizmalar dört farklı oyun modeliyle pekiştirilmektedir.\n\n- **Sıralama:** Astrositik tümörlerin malignite basamaklarını ve derecelerini diziniz.\n- **Kaydırıcı Tahmin:** Erişkin primer beyin tümörleri içinde diffüz astrositomların yüzdesini belirleyiniz.\n- **Pertürbasyon:** Bir histolojik parametrenin değişimi durumunda tümörün DSÖ derecesindeki evrimini analiz ediniz.\n- **Metin Onarımı:** Patoloji raporundaki kavramsal hatayı düzelterek doğru tanıyı kurunuz.\n\n> [!IMPORTANT]\n> Tebrikler! Santral Sinir Sistemi Tümörleri ders paketinin tüm histopatolojik kazanımlarını başarıyla tamamladınız.",
+   "interactiveElements": [
+    {
+     "id": "k40-s24-g1",
+     "type": "sequence_order",
+     "title": "Astrositik Tümörlerin Malignite Derecelerine Göre Sıralanması",
+     "prompt": "Astrositik tümörleri Dünya Sağlık Örgütü sınıflamasına göre en düşük dereceden en yüksek dereceye doğru sıralayınız.",
+     "steps": [
+      "Pilositik Astrositom (DSÖ Derece I)",
+      "Diffüz Fibriller Astrositom (DSÖ Derece II)",
+      "Anaplastik Astrositom (DSÖ Derece III)",
+      "Glioblastom (DSÖ Derece IV)"
+     ],
+     "explanation": "Dünya Sağlık Örgütü histopatolojik kriterlerine göre malignite derecesi Grade birden Grade dörde doğru artar."
+    },
+    {
+     "id": "k40-s24-g2",
+     "type": "estimate_slider",
+     "title": "Diffüz Astrositomların Erişkin Primer Beyin Tümörleri İçindeki Oranı Tahmini",
+     "prompt": "Erişkinlerde görülen primer beyin tümörleri içinde diffüz astrositomların yaklaşık görülme yüzdesini tahmin ediniz.",
+     "min": 0,
+     "max": 100,
+     "answer": 80,
+     "tolerance": 5,
+     "step": 5,
+     "unit": "%",
+     "explanation": "Diffüz astrositomlar erişkin çağda görülen primer nöroepitelyal beyin neoplazmlerinin yaklaşık yüzde seksenini oluştururlar."
+    },
+    {
+     "id": "k40-s24-g3",
+     "type": "perturbation",
+     "title": "Anaplastik Astrositoma Glomerüloid Damar Eklenmesi Durumu",
+     "scenario": "Histopatolojik olarak anaplastik astrositom tanısı konmuş bir lezyonun yeni kesitlerinde mikrovasküler endotelyal proliferasyon saptanmıştır.",
+     "parameters": [
+      {
+       "name": "Tümörün DSÖ Malignite Derecesi",
+       "correct": "up",
+       "explanation": "Mikrovasküler endotelyal proliferasyonun saptanması tümör derecesini doğrudan Grade dörde yani Glioblastoma yükseltir."
+      },
+      {
+       "name": "Hastanın Beklenen Sağkalım Süresi",
+       "correct": "down",
+       "explanation": "Glioblastom en agresif evre olduğundan beklenen klinik sağkalım süresi belirgin şekilde kısalır ve prognoz kötüleşir."
+      },
+      {
+       "name": "Lezyonun Astrositik Hücre Kökeni",
+       "correct": "same",
+       "explanation": "Malignite derecesi değişse de tümörün astrositik nöroglial hücre kökeni aynı kalır ve menenjioma dönüşmez."
+      }
+     ]
+    },
+    {
+     "id": "k40-s24-g4",
+     "type": "fix_the_text",
+     "title": "Patoloji Raporundaki Tanısal Hatayı Onarma",
+     "text": "Çocukluk çağında serebellar vermiste gelişen küçük mavi yuvarlak hücreli malign tümörün mikroskopisinde patognomonik olarak psammom cisimcikleri ve hücresel girdaplar izlenmiştir.",
+     "errors": [
+      {
+       "wrong": "psammom cisimcikleri ve hücresel girdaplar",
+       "correct": "Homer Wright rozetleri",
+       "options": [
+        "Rosenthal lifleri",
+        "tavada yumurta hücreleri"
+       ],
+       "explanation": "Medulloblastomda psammom cisimcikleri değil, santral nöropil çevresinde dizilen Homer Wright rozetleri patognomonik olarak izlenir."
+      }
+     ]
+    }
+   ],
+   "isGameFinale": true
+  }
+ ],
+ "sayfaHaritasi": "teyitli",
+ "deckId": "k2p-y25-k2-40-santral-sinir-sistemi-tumorleri",
+ "donem": "2025-2026",
+ "arsiv": true,
+ "confidence": "high",
+ "totalSlides": 24,
+ "matchedPastQuestionsCount": 0,
+ "sinama": {
+  "etiket": "2025-2026 Arşiv",
+  "aciklama": "Bu ders 2025-2026 dönemi (geçen yıl) slaytlarından hazırlanmıştır; 2026-2027 güncel müfredat dersleriyle karışmaz."
+ }
+}

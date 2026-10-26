@@ -1,0 +1,2697 @@
+{
+ "id": "k2p-y25-k2-45-intihar-ve-kendine-zarar-verme",
+ "title": "İntihar ve Kendine Zarar Verme",
+ "courseId": "y25-k2-45-intihar-ve-kendine-zarar-verme",
+ "committee": "donem3-kurul2",
+ "discipline": "psikiyatri",
+ "sayfaHaritasi": "teyitli",
+ "slides": [
+  {
+   "id": "k2-45-d-s01",
+   "slideNumber": 1,
+   "title": "İntihar: Tanım ve Klinik Süreç",
+   "bolum": "1",
+   "content": "İntihar, psikiyatrinin en önemli acil konularından biridir ve dünya çapında önlenebilir ölüm nedenleri arasında üst sıralarda yer alır.\n\n- **Süreç Olarak İntihar:** Tekil ve anlık bir davranış değil, biyolojik, psikiyatrik, sosyal ve çevresel bileşenleri olan çok faktörlü bir süreçtir.\n- **Klinik Yaygınlık:** Psikiyatrik hastalık tanısı alan bireylerin yaklaşık yüzde doksanında yaşam boyu en az bir kez intihar düşüncesi veya girişimi görülür.\n- **Önlenebilirlik:** Erken tanı, etkin risk taraması ve multidisipliner yaklaşımla intihar davranışı büyük oranda önlenebilir niteliktedir.\n\n> [!NOTE]\n> Bütün psikiyatri hastaları ilk muayenede ve sonraki tüm izlemlerde intihar düşüncesi açısından mutlaka sorgulanmalıdır.",
+   "synthesisNarrative": "İntihar, psikiyatrinin en önemli acil konularından biridir ve dünya çapında önlenebilir ölüm nedenleri arasında üst sıralarda yer alır.\n\n- **Süreç Olarak İntihar:** Tekil ve anlık bir davranış değil, biyolojik, psikiyatrik, sosyal ve çevresel bileşenleri olan çok faktörlü bir süreçtir.\n- **Klinik Yaygınlık:** Psikiyatrik hastalık tanısı alan bireylerin yaklaşık yüzde doksanında yaşam boyu en az bir kez intihar düşüncesi veya girişimi görülür.\n- **Önlenebilirlik:** Erken tanı, etkin risk taraması ve multidisipliner yaklaşımla intihar davranışı büyük oranda önlenebilir niteliktedir.\n\n> [!NOTE]\n> Bütün psikiyatri hastaları ilk muayenede ve sonraki tüm izlemlerde intihar düşüncesi açısından mutlaka sorgulanmalıdır.",
+   "interactiveElements": [
+    {
+     "id": "k45-s01-e1",
+     "type": "micro_quiz",
+     "question": "İntihar kavramının temel klinik ve psikiyatrik niteliği aşağıdakilerden hangisinde doğru tanımlanmıştır?",
+     "options": [
+      {
+       "text": "Biyopsikososyal ve çevresel bileşenleri olan çok faktörlü ve önlenebilir bir süreçtir",
+       "isCorrect": true,
+       "explanation": "Biyopsikososyal ve çevresel bileşenleri olan çok faktörlü ve önlenebilir bir süreçtir seçeneği intihar ve kendine zarar verme davranışlarını açıklayan temel klinik ve bilimsel yaklaşımı temsil eder. Bu ilke doğrultusunda soruda hedeflenen klinik mekanizma ve risk yönetimi eksiksiz olarak doğrulanmaktadır."
+      },
+      {
+       "text": "Yalnızca adli ceza davalarında görülen ve tıbbi boyutu bulunmayan geçici durumdur",
+       "isCorrect": false,
+       "explanation": "Yalnızca adli ceza davalarında görülen ve tıbbi boyutu bulunmayan geçici durumdur kavramı psikiyatri pratiğinde farklı klinik tabloları veya tanısal süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen klinik durumla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Hiçbir psikiyatrik hastalıkla ilişkisi olmayan spontan refleksif harekettir",
+       "isCorrect": false,
+       "explanation": "Hiçbir psikiyatrik hastalıkla ilişkisi olmayan spontan refleksif harekettir kavramı psikiyatri pratiğinde farklı klinik tabloları veya tanısal süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen klinik durumla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Tıbbi olarak hiçbir şekilde önlenemeyen kaçınılmaz biyolojik bir akıbettir",
+       "isCorrect": false,
+       "explanation": "Tıbbi olarak hiçbir şekilde önlenemeyen kaçınılmaz biyolojik bir akıbettir kavramı psikiyatri pratiğinde farklı klinik tabloları veya tanısal süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen klinik durumla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      }
+     ]
+    },
+    {
+     "id": "k45-s01-e2",
+     "type": "cloze_masking",
+     "sentence": "İntihar tekil bir eylem değil psikiyatrik biyolojik ve sosyal boyutları olan çok faktörlü bir süreçtir.",
+     "maskedTerm": "çok faktörlü bir süreçtir",
+     "hint": "Tıp eğitimi ve psikiyatri alanındaki temel kavramdır."
+    },
+    {
+     "id": "k45-s01-e3",
+     "type": "spot_the_lie",
+     "topic": "İntiharın Temel Özellikleri",
+     "items": [
+      {
+       "text": "İntihar psikiyatrinin en önemli acil konularından biri ve önlenebilir bir ölüm nedenidir.",
+       "isLie": false,
+       "explanation": "İntihar psikiyatrinin en önemli acil konularından biri ve önlenebilir bir ölüm nedenidir. ifadesi psikiyatride intihar risk dinamiklerini doğru yansıtır. Klinik araştırmalar bu yaklaşımı desteklemektedir."
+      },
+      {
+       "text": "Psikiyatrik hastalıkların yaklaşık yüzde doksanında yaşam boyu intihar düşüncesi veya girişimi görülebilir.",
+       "isLie": false,
+       "explanation": "Psikiyatrik hastalıkların yaklaşık yüzde doksanında yaşam boyu intihar düşüncesi veya girişimi görülebilir. ifadesi psikiyatride intihar risk dinamiklerini doğru yansıtır. Klinik araştırmalar bu yaklaşımı desteklemektedir."
+      },
+      {
+       "text": "İntihar davranışı yalnızca tekil bir genetik mutasyonun doğrudan sonucudur ve sosyal faktörlerden etkilenmez.",
+       "isLie": true,
+       "explanation": "İntihar davranışı yalnızca tekil bir genetik mutasyonun doğrudan sonucudur ve sosyal faktörlerden etkilenmez. ifadesi bilimsel ve klinik gerçeklerle çelişmektedir. İntihar risk değerlendirmesinde bu yaklaşım gerçeğe aykırı bir algıdır."
+      }
+     ]
+    },
+    {
+     "id": "k45-s01-e4",
+     "type": "active_recall",
+     "question": "İntiharın klinik niteliği ve psikiyatrik hastalıklarda görülme oranı nedir?",
+     "answer": "Çok faktörlü ve önlenebilir bir süreçtir; psikiyatrik hastalıkların yaklaşık %90'ında düşünce veya girişim görülür."
+    }
+   ],
+   "pdfSayfalari": [
+    1,
+    2
+   ],
+   "sourcePdf": {
+    "startPage": 1,
+    "endPage": 2
+   }
+  },
+  {
+   "id": "k2-45-d-s02",
+   "slideNumber": 2,
+   "title": "Epidemiyoloji: DSÖ Verileri ve Cinsiyet Dağılımı",
+   "bolum": "1",
+   "content": "İntihar davranışı düşünceden eyleme uzanan bir spektrumdur ve küresel boyutta majör bir halk sağlığı sorunudur.\n\n- **Davranış Spektrumu:** Kendini öldürme düşünceleri, intihar planı, intihar girişimi ve tamamlanmış intihar basamaklarından oluşur.\n- **DSÖ Küresel Verileri:** Dünyada her yıl yaklaşık sekiz yüz bin kişi intihar sonucu ölmektedir; bu da ortalama her kırk saniyede bir kişinin intiharı demektir.\n- **Gençlerde Sıralama:** 15-29 yaş grubundaki genç erişkinlerde intihar, ölüm nedenleri arasında ikinci veya üçüncü sırada yer almaktadır.\n- **Cinsiyet Dağılımı:** Kadınlarda intihar girişimleri erkeklere göre üç kat fazla iken, erkeklerde ölümle sonuçlanan tamamlanmış intihar üç kat daha sıktır.\n\n> [!IMPORTANT]\n> Kadınların daha sık girişimde bulunmasına karşın erkeklerin daha ölümcül yöntemler seçmesi 'cinsiyet paradoksu' olarak adlandırılır.",
+   "synthesisNarrative": "İntihar davranışı düşünceden eyleme uzanan bir spektrumdur ve küresel boyutta majör bir halk sağlığı sorunudur.\n\n- **Davranış Spektrumu:** Kendini öldürme düşünceleri, intihar planı, intihar girişimi ve tamamlanmış intihar basamaklarından oluşur.\n- **DSÖ Küresel Verileri:** Dünyada her yıl yaklaşık sekiz yüz bin kişi intihar sonucu ölmektedir; bu da ortalama her kırk saniyede bir kişinin intiharı demektir.\n- **Gençlerde Sıralama:** 15-29 yaş grubundaki genç erişkinlerde intihar, ölüm nedenleri arasında ikinci veya üçüncü sırada yer almaktadır.\n- **Cinsiyet Dağılımı:** Kadınlarda intihar girişimleri erkeklere göre üç kat fazla iken, erkeklerde ölümle sonuçlanan tamamlanmış intihar üç kat daha sıktır.\n\n> [!IMPORTANT]\n> Kadınların daha sık girişimde bulunmasına karşın erkeklerin daha ölümcül yöntemler seçmesi 'cinsiyet paradoksu' olarak adlandırılır.",
+   "interactiveElements": [
+    {
+     "id": "k45-s02-e1",
+     "type": "swipe_matching",
+     "leftCategory": "Kadın Cinsiyet İstatistiği",
+     "rightCategory": "Erkek Cinsiyet İstatistiği",
+     "cards": [
+      {
+       "text": "İntihar girişiminde bulunma oranının 3 kat yüksek olması",
+       "category": "left",
+       "explanation": "İntihar girişiminde bulunma oranının 3 kat yüksek olması kavramı ilgili klinik kategori altında değerlendirilen temel unsurdur. Psikiyatri pratiğinde bu eşleme risk yönetimi açısından kritik önem taşır."
+      },
+      {
+       "text": "Ölümle sonuçlanmayan kriz başvurularının çoğunluğunu oluşturma",
+       "category": "left",
+       "explanation": "Ölümle sonuçlanmayan kriz başvurularının çoğunluğunu oluşturma kavramı ilgili klinik kategori altında değerlendirilen temel unsurdur. Psikiyatri pratiğinde bu eşleme risk yönetimi açısından kritik önem taşır."
+      },
+      {
+       "text": "Tamamlanmış ölümcül intihar oranının 3 kat yüksek olması",
+       "category": "right",
+       "explanation": "Tamamlanmış ölümcül intihar oranının 3 kat yüksek olması kavramı ilgili klinik kategori altında değerlendirilen temel unsurdur. Psikiyatri pratiğinde bu eşleme risk yönetimi açısından kritik önem taşır."
+      },
+      {
+       "text": "Ateşli silah gibi yüksek ölümcüllükteki yöntemleri daha sık seçme",
+       "category": "right",
+       "explanation": "Ateşli silah gibi yüksek ölümcüllükteki yöntemleri daha sık seçme kavramı ilgili klinik kategori altında değerlendirilen temel unsurdur. Psikiyatri pratiğinde bu eşleme risk yönetimi açısından kritik önem taşır."
+      }
+     ]
+    },
+    {
+     "id": "k45-s02-e2",
+     "type": "micro_quiz",
+     "question": "Dünya Sağlık Örgütü verilerine göre genç erişkinlerde (15-29 yaş) intiharın ölüm nedenleri arasındaki sırası nedir?",
+     "options": [
+      {
+       "text": "İkinci veya üçüncü sıradaki temel ölüm nedenidir",
+       "isCorrect": true,
+       "explanation": "İkinci veya üçüncü sıradaki temel ölüm nedenidir seçeneği intihar ve kendine zarar verme davranışlarını açıklayan temel klinik ve bilimsel yaklaşımı temsil eder. Bu ilke doğrultusunda soruda hedeflenen klinik mekanizma ve risk yönetimi eksiksiz olarak doğrulanmaktadır."
+      },
+      {
+       "text": "En son sırada yer alan ve nadir rastlanan bir durumdur",
+       "isCorrect": false,
+       "explanation": "En son sırada yer alan ve nadir rastlanan bir durumdur kavramı psikiyatri pratiğinde farklı klinik tabloları veya tanısal süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen klinik durumla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Yalnızca yetmiş yaş üzerindeki geriatrik popülasyona özgüdür",
+       "isCorrect": false,
+       "explanation": "Yalnızca yetmiş yaş üzerindeki geriatrik popülasyona özgüdür kavramı psikiyatri pratiğinde farklı klinik tabloları veya tanısal süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen klinik durumla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Bulaşıcı hastalıklardan sonra gelen yirminci ölüm nedenidir",
+       "isCorrect": false,
+       "explanation": "Bulaşıcı hastalıklardan sonra gelen yirminci ölüm nedenidir kavramı psikiyatri pratiğinde farklı klinik tabloları veya tanısal süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen klinik durumla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      }
+     ]
+    },
+    {
+     "id": "k45-s02-e3",
+     "type": "cloze_masking",
+     "sentence": "Dünyada her kırk saniyede bir kişi intihar sonucu yaşamını yitirmektedir.",
+     "maskedTerm": "kırk saniyede bir",
+     "hint": "Tıp eğitimi ve psikiyatri alanındaki temel kavramdır."
+    },
+    {
+     "id": "k45-s02-e4",
+     "type": "active_recall",
+     "question": "İntiharda cinsiyet dağılımı (kadın vs erkek) nasıldır?",
+     "answer": "Kadınlarda intihar girişimleri 3 kat fazla; erkeklerde ise tamamlanmış intihar 3 kat daha fazladır."
+    }
+   ],
+   "pdfSayfalari": [
+    3,
+    4
+   ],
+   "sourcePdf": {
+    "startPage": 3,
+    "endPage": 4
+   }
+  },
+  {
+   "id": "k2-45-d-s03",
+   "slideNumber": 3,
+   "title": "Klinik Tarama ve Hekim Başvuruları",
+   "bolum": "1",
+   "content": "İntihar riski değerlendirmesi psikiyatrik muayenenin ayrılmaz bir parçasıdır ve hekim başvuruları hayati bir fırsat penceresi sunar.\n\n- **Rutin Sorgulama Gerekliliği:** Bütün psikiyatri hastaları ilk değerlendirmede ve sonraki tüm takiplerde intihar düşünceleri yönünden taranmalıdır.\n- **Psikiyatrik Tanı Oranı:** Tamamlanmış intiharların yaklaşık yüzde doksanında klinik bir psikiyatrik tanı mevcuttur.\n- **Hekimle Temas Sıklığı:** İntihar ederek yaşamını yitiren bireylerin üçte ikisinin (yüzde altmış altı) eylemden önceki bir ay içinde bir hekimle görüştüğü bilinmektedir.\n- **Fırsat Penceresi:** Genel tıbbi muayenelerde üstü kapalı yardım arayışlarının ve dolaylı ipuçlarının yakalanması intiharları önlemede anahtardır.\n\n> [!NOTE]\n> İntihar edenlerin büyük kısmının son bir ayda hekime başvurmuş olması, birinci basamak ve klinik branşların koruyucu gücünü gösterir.",
+   "synthesisNarrative": "İntihar riski değerlendirmesi psikiyatrik muayenenin ayrılmaz bir parçasıdır ve hekim başvuruları hayati bir fırsat penceresi sunar.\n\n- **Rutin Sorgulama Gerekliliği:** Bütün psikiyatri hastaları ilk değerlendirmede ve sonraki tüm takiplerde intihar düşünceleri yönünden taranmalıdır.\n- **Psikiyatrik Tanı Oranı:** Tamamlanmış intiharların yaklaşık yüzde doksanında klinik bir psikiyatrik tanı mevcuttur.\n- **Hekimle Temas Sıklığı:** İntihar ederek yaşamını yitiren bireylerin üçte ikisinin (yüzde altmış altı) eylemden önceki bir ay içinde bir hekimle görüştüğü bilinmektedir.\n- **Fırsat Penceresi:** Genel tıbbi muayenelerde üstü kapalı yardım arayışlarının ve dolaylı ipuçlarının yakalanması intiharları önlemede anahtardır.\n\n> [!NOTE]\n> İntihar edenlerin büyük kısmının son bir ayda hekime başvurmuş olması, birinci basamak ve klinik branşların koruyucu gücünü gösterir.",
+   "interactiveElements": [
+    {
+     "id": "k45-s03-e1",
+     "type": "micro_quiz",
+     "question": "Tamamlanmış intiharlarla ilgili hekim başvurusu sıklığı incelendiğinde aşağıdaki istatistiki gerçeklerden hangisi geçerlidir?",
+     "options": [
+      {
+       "text": "İntihar eden kişilerin üçte ikisi eylemden önceki bir ay içinde herhangi bir hekimle görüşmüştür",
+       "isCorrect": true,
+       "explanation": "İntihar eden kişilerin üçte ikisi eylemden önceki bir ay içinde herhangi bir hekimle görüşmüştür seçeneği intihar ve kendine zarar verme davranışlarını açıklayan temel klinik ve bilimsel yaklaşımı temsil eder. Bu ilke doğrultusunda soruda hedeflenen klinik mekanizma ve risk yönetimi eksiksiz olarak doğrulanmaktadır."
+      },
+      {
+       "text": "İntihar eden kişilerin hiçbirisi hayatı boyunca hiçbir sağlık kuruluşuna başvurmamıştır",
+       "isCorrect": false,
+       "explanation": "İntihar eden kişilerin hiçbirisi hayatı boyunca hiçbir sağlık kuruluşuna başvurmamıştır kavramı psikiyatri pratiğinde farklı klinik tabloları veya tanısal süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen klinik durumla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Yalnızca diş hekimine başvuran bireylerde intihar riski sıfıra inmektedir",
+       "isCorrect": false,
+       "explanation": "Yalnızca diş hekimine başvuran bireylerde intihar riski sıfıra inmektedir kavramı psikiyatri pratiğinde farklı klinik tabloları veya tanısal süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen klinik durumla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Hekimle görüşen bireylerde tamamlanmış intihar riski zorunlu olarak ikiye katlanmaktadır",
+       "isCorrect": false,
+       "explanation": "Hekimle görüşen bireylerde tamamlanmış intihar riski zorunlu olarak ikiye katlanmaktadır kavramı psikiyatri pratiğinde farklı klinik tabloları veya tanısal süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen klinik durumla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      }
+     ]
+    },
+    {
+     "id": "k45-s03-e2",
+     "type": "spot_the_lie",
+     "topic": "Klinik Değerlendirme ve Tanı Oranları",
+     "items": [
+      {
+       "text": "Tamamlanmış intiharların yaklaşık yüzde doksanında altta yatan psikiyatrik bir tanı saptanır.",
+       "isLie": false,
+       "explanation": "Tamamlanmış intiharların yaklaşık yüzde doksanında altta yatan psikiyatrik bir tanı saptanır. ifadesi psikiyatride intihar risk dinamiklerini doğru yansıtır. Klinik araştırmalar bu yaklaşımı desteklemektedir."
+      },
+      {
+       "text": "İntihar edenlerin üçte ikisi eylemden önceki bir ay içinde bir hekime başvurmuştur.",
+       "isLie": false,
+       "explanation": "İntihar edenlerin üçte ikisi eylemden önceki bir ay içinde bir hekime başvurmuştur. ifadesi psikiyatride intihar risk dinamiklerini doğru yansıtır. Klinik araştırmalar bu yaklaşımı desteklemektedir."
+      },
+      {
+       "text": "Psikiyatri hastalarında intihar düşüncesini sorgulamak hekimler için etik olarak yasaklanmıştır.",
+       "isLie": true,
+       "explanation": "Psikiyatri hastalarında intihar düşüncesini sorgulamak hekimler için etik olarak yasaklanmıştır. ifadesi bilimsel ve klinik gerçeklerle çelişmektedir. İntihar risk değerlendirmesinde bu yaklaşım gerçeğe aykırı bir algıdır."
+      }
+     ]
+    },
+    {
+     "id": "k45-s03-e3",
+     "type": "cloze_masking",
+     "sentence": "Tamamlanmış intiharların yaklaşık yüzde doksanında psikiyatrik bir tanı mevcuttur.",
+     "maskedTerm": "yüzde doksanında",
+     "hint": "Tıp eğitimi ve psikiyatri alanındaki temel kavramdır."
+    },
+    {
+     "id": "k45-s03-e4",
+     "type": "active_recall",
+     "question": "İntihar edenlerin ne kadarı eylemden önceki son 1 ay içinde hekimle görüşmüştür?",
+     "answer": "Yaklaşık 2/3'si (üçte ikisi) son bir ay içinde herhangi bir hekime başvurmuştur."
+    }
+   ],
+   "pdfSayfalari": [
+    5,
+    5
+   ],
+   "sourcePdf": {
+    "startPage": 5,
+    "endPage": 5
+   }
+  },
+  {
+   "id": "k2-45-d-s04",
+   "slideNumber": 4,
+   "title": "[TEKRAR SAYFASI - CHECKPOINT 1] İntihar Kavramı ve Epidemiyolojik Temeller",
+   "bolum": "1",
+   "content": "Bu tekrar sayfasında intiharın tanımı, süreç niteliği, küresel epidemiyolojisi ve klinik tarama ilkeleri pekiştirilmektedir.\n\n- **Çok Faktörlü Süreç:** İntihar biyopsikososyal bileşenleri olan ve önlenebilir bir acil psikiyatri tablosudur.\n- **Küresel Yük:** Yılda 800 bin ölüm; her 40 saniyede bir kişi; 15-29 yaş grubunda önde gelen ilk üç ölüm nedeninden biridir.\n- **Cinsiyet Dağılımı:** Kadınlarda girişim 3 kat yüksek; erkeklerde tamamlanmış intihar 3 kat daha sıktır.\n- **Klinik İpucu:** Tamamlanmış intiharların %90'ında psikiyatrik tanı vardır ve 2/3'si son bir ayda hekime başvurmuştur.\n\n> [!NOTE]\n> Bütün psikiyatri hastalarında intihar düşüncesinin rutin olarak taranması acil koruyucu hekimliğin temel kuralıdır.",
+   "synthesisNarrative": "Bu tekrar sayfasında intiharın tanımı, süreç niteliği, küresel epidemiyolojisi ve klinik tarama ilkeleri pekiştirilmektedir.\n\n- **Çok Faktörlü Süreç:** İntihar biyopsikososyal bileşenleri olan ve önlenebilir bir acil psikiyatri tablosudur.\n- **Küresel Yük:** Yılda 800 bin ölüm; her 40 saniyede bir kişi; 15-29 yaş grubunda önde gelen ilk üç ölüm nedeninden biridir.\n- **Cinsiyet Dağılımı:** Kadınlarda girişim 3 kat yüksek; erkeklerde tamamlanmış intihar 3 kat daha sıktır.\n- **Klinik İpucu:** Tamamlanmış intiharların %90'ında psikiyatrik tanı vardır ve 2/3'si son bir ayda hekime başvurmuştur.\n\n> [!NOTE]\n> Bütün psikiyatri hastalarında intihar düşüncesinin rutin olarak taranması acil koruyucu hekimliğin temel kuralıdır.",
+   "interactiveElements": [
+    {
+     "id": "k45-s04-e1",
+     "type": "micro_quiz",
+     "question": "Aşağıdakilerden hangisi intihar epidemiyolojisi ve klinik özellikleri ile ilgili yanlış bir bilgidir?",
+     "options": [
+      {
+       "text": "Erkeklerde intihar girişimleri kadınlara göre üç kat daha sık görülür",
+       "isCorrect": true,
+       "explanation": "Erkeklerde intihar girişimleri kadınlara göre üç kat daha sık görülür seçeneği intihar ve kendine zarar verme davranışlarını açıklayan temel klinik ve bilimsel yaklaşımı temsil eder. Bu ilke doğrultusunda soruda hedeflenen klinik mekanizma ve risk yönetimi eksiksiz olarak doğrulanmaktadır."
+      },
+      {
+       "text": "Tamamlanmış intiharların yaklaşık yüzde doksanında psikiyatrik bir tanı saptanır",
+       "isCorrect": false,
+       "explanation": "Tamamlanmış intiharların yaklaşık yüzde doksanında psikiyatrik bir tanı saptanır kavramı psikiyatri pratiğinde farklı klinik tabloları veya tanısal süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen klinik durumla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Genç erişkinlerde intihar en sık görülen ikinci veya üçüncü ölüm nedenidir",
+       "isCorrect": false,
+       "explanation": "Genç erişkinlerde intihar en sık görülen ikinci veya üçüncü ölüm nedenidir kavramı psikiyatri pratiğinde farklı klinik tabloları veya tanısal süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen klinik durumla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "İntihar edenlerin yaklaşık üçte ikisi son bir ay içinde bir hekimle görüşmüştür",
+       "isCorrect": false,
+       "explanation": "İntihar edenlerin yaklaşık üçte ikisi son bir ay içinde bir hekimle görüşmüştür kavramı psikiyatri pratiğinde farklı klinik tabloları veya tanısal süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen klinik durumla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      }
+     ]
+    },
+    {
+     "id": "k45-s04-e2",
+     "type": "swipe_matching",
+     "leftCategory": "Epidemiyolojik Oran",
+     "rightCategory": "Klinik Özellik / Parametre",
+     "cards": [
+      {
+       "text": "Yüzde doksan psikiyatrik tanı birlikteliği",
+       "category": "left",
+       "explanation": "Yüzde doksan psikiyatrik tanı birlikteliği kavramı ilgili klinik kategori altında değerlendirilen temel unsurdur. Psikiyatri pratiğinde bu eşleme risk yönetimi açısından kritik önem taşır."
+      },
+      {
+       "text": "Üçte iki hekimle görüşme sıklığı",
+       "category": "left",
+       "explanation": "Üçte iki hekimle görüşme sıklığı kavramı ilgili klinik kategori altında değerlendirilen temel unsurdur. Psikiyatri pratiğinde bu eşleme risk yönetimi açısından kritik önem taşır."
+      },
+      {
+       "text": "Çok faktörlü biyopsikososyal süreç niteliği",
+       "category": "right",
+       "explanation": "Çok faktörlü biyopsikososyal süreç niteliği kavramı ilgili klinik kategori altında değerlendirilen temel unsurdur. Psikiyatri pratiğinde bu eşleme risk yönetimi açısından kritik önem taşır."
+      },
+      {
+       "text": "Önlenebilir acil halk sağlığı sorunu olması",
+       "category": "right",
+       "explanation": "Önlenebilir acil halk sağlığı sorunu olması kavramı ilgili klinik kategori altında değerlendirilen temel unsurdur. Psikiyatri pratiğinde bu eşleme risk yönetimi açısından kritik önem taşır."
+      }
+     ]
+    },
+    {
+     "id": "k45-s04-e3",
+     "type": "spot_the_lie",
+     "topic": "Bölüm 1 Tekrar Özeti",
+     "items": [
+      {
+       "text": "İntihar düşüncesi psikiyatrik hastalıkların yaklaşık yüzde doksanında yaşam boyu görülebilir.",
+       "isLie": false,
+       "explanation": "İntihar düşüncesi psikiyatrik hastalıkların yaklaşık yüzde doksanında yaşam boyu görülebilir. ifadesi psikiyatride intihar risk dinamiklerini doğru yansıtır. Klinik araştırmalar bu yaklaşımı desteklemektedir."
+      },
+      {
+       "text": "DSÖ verilerine göre dünyada yılda yaklaşık sekiz yüz bin kişi intihar sonucu ölmektedir.",
+       "isLie": false,
+       "explanation": "DSÖ verilerine göre dünyada yılda yaklaşık sekiz yüz bin kişi intihar sonucu ölmektedir. ifadesi psikiyatride intihar risk dinamiklerini doğru yansıtır. Klinik araştırmalar bu yaklaşımı desteklemektedir."
+      },
+      {
+       "text": "İntihar davranışı yalnızca tekil bir biyolojik eylemdir ve sosyal çevreden bağımsızdır.",
+       "isLie": true,
+       "explanation": "İntihar davranışı yalnızca tekil bir biyolojik eylemdir ve sosyal çevreden bağımsızdır. ifadesi bilimsel ve klinik gerçeklerle çelişmektedir. İntihar risk değerlendirmesinde bu yaklaşım gerçeğe aykırı bir algıdır."
+      }
+     ]
+    },
+    {
+     "id": "k45-s04-e4",
+     "type": "active_recall",
+     "question": "Bölüm 1'de öğrenilen 3 temel epidemiyolojik istatistiği sıralayınız.",
+     "answer": "1. Yılda 800 bin ölüm (40 saniyede bir), 2. Gençlerde 2.-3. ölüm nedeni, 3. Tamamlanmış intiharda %90 psikiyatrik tanı ve 2/3 hekim başvurusu."
+    }
+   ],
+   "isCheckpoint": true
+  },
+  {
+   "id": "k2-45-d-s05",
+   "slideNumber": 5,
+   "title": "Yüksek Riskli Klinik Durumlar",
+   "bolum": "2",
+   "content": "İntihar riskinin değerlendirilmesinde yüksek riskli klinik durumlar ve çok boyutlu etmenler titizlikle incelenmelidir.\n\n- **Yüksek Riskli Klinik Durumlar:** Yakın dönemde intihar girişimi öyküsü bulunması riskin en acil ve en yüksek göstergesidir.\n- **Psikotik Belirtiler:** Emredici halüsinasyonlar (hastaya kendini öldürmesini emreden sesler) ve paranoid hezeyanlar intihar riskini hızla tırmandırır.\n- **Duygudurum Krizleri:** Ağır depresyon, disforik mani (taşkın duyguduruma öfke ve ajitasyonun eşlik etmesi) ve manide psikotik ögeler mevcudiyetidir.\n- **Eşlik Eden Bağımlılık:** Psikiyatrik bozukluklara alkol ve madde kötüye kullanımının eklenmesi dürtüselliği artırarak riski katlar.\n\n> [!IMPORTANT]\n> Emredici halüsinasyon yaşayan veya disforik mani tablosundaki bir hastanın intihar riski anlık olarak en üst seviyededir.",
+   "synthesisNarrative": "İntihar riskinin değerlendirilmesinde yüksek riskli klinik durumlar ve çok boyutlu etmenler titizlikle incelenmelidir.\n\n- **Yüksek Riskli Klinik Durumlar:** Yakın dönemde intihar girişimi öyküsü bulunması riskin en acil ve en yüksek göstergesidir.\n- **Psikotik Belirtiler:** Emredici halüsinasyonlar (hastaya kendini öldürmesini emreden sesler) ve paranoid hezeyanlar intihar riskini hızla tırmandırır.\n- **Duygudurum Krizleri:** Ağır depresyon, disforik mani (taşkın duyguduruma öfke ve ajitasyonun eşlik etmesi) ve manide psikotik ögeler mevcudiyetidir.\n- **Eşlik Eden Bağımlılık:** Psikiyatrik bozukluklara alkol ve madde kötüye kullanımının eklenmesi dürtüselliği artırarak riski katlar.\n\n> [!IMPORTANT]\n> Emredici halüsinasyon yaşayan veya disforik mani tablosundaki bir hastanın intihar riski anlık olarak en üst seviyededir.",
+   "interactiveElements": [
+    {
+     "id": "k45-s05-e1",
+     "type": "micro_quiz",
+     "question": "Aşağıdaki klinik tablolardan hangisi acil psikiyatride intihar açısından 'en yüksek riskli durumlar' arasında yer alır?",
+     "options": [
+      {
+       "text": "Yakın dönemde intihar girişimi ve emredici halüsinasyonların varlığı",
+       "isCorrect": true,
+       "explanation": "Yakın dönemde intihar girişimi ve emredici halüsinasyonların varlığı seçeneği intihar ve kendine zarar verme davranışlarını açıklayan temel klinik ve bilimsel yaklaşımı temsil eder. Bu ilke doğrultusunda soruda hedeflenen klinik mekanizma ve risk yönetimi eksiksiz olarak doğrulanmaktadır."
+      },
+      {
+       "text": "Hafif düzeyde sosyal fobi ve yabancılarla konuşurken çekinme",
+       "isCorrect": false,
+       "explanation": "Hafif düzeyde sosyal fobi ve yabancılarla konuşurken çekinme kavramı psikiyatri pratiğinde farklı klinik tabloları veya tanısal süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen klinik durumla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Sınav öncesi geçici dikkat dağınıklığı ve hafif huzursuzluk",
+       "isCorrect": false,
+       "explanation": "Sınav öncesi geçici dikkat dağınıklığı ve hafif huzursuzluk kavramı psikiyatri pratiğinde farklı klinik tabloları veya tanısal süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen klinik durumla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Yıllardır remisyonda olan ve ilaçsız izlenen tekil anksiyete atağı",
+       "isCorrect": false,
+       "explanation": "Yıllardır remisyonda olan ve ilaçsız izlenen tekil anksiyete atağı kavramı psikiyatri pratiğinde farklı klinik tabloları veya tanısal süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen klinik durumla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      }
+     ]
+    },
+    {
+     "id": "k45-s05-e2",
+     "type": "spot_the_lie",
+     "topic": "Yüksek Riskli Klinik Durumlar",
+     "items": [
+      {
+       "text": "Disforik mani ve manide psikotik ögeler intihar riskini ciddi biçimde artırır.",
+       "isLie": false,
+       "explanation": "Disforik mani ve manide psikotik ögeler intihar riskini ciddi biçimde artırır. ifadesi psikiyatride intihar risk dinamiklerini doğru yansıtır. Klinik araştırmalar bu yaklaşımı desteklemektedir."
+      },
+      {
+       "text": "Alkol ve madde kullanımı dürtüselliği artırarak intihar eylemini kolaylaştırır.",
+       "isLie": false,
+       "explanation": "Alkol ve madde kullanımı dürtüselliği artırarak intihar eylemini kolaylaştırır. ifadesi psikiyatride intihar risk dinamiklerini doğru yansıtır. Klinik araştırmalar bu yaklaşımı desteklemektedir."
+      },
+      {
+       "text": "Yakın dönemde intihar girişiminde bulunmuş olmak gelecekteki riski tamamen sıfırlar.",
+       "isLie": true,
+       "explanation": "Yakın dönemde intihar girişiminde bulunmuş olmak gelecekteki riski tamamen sıfırlar. ifadesi bilimsel ve klinik gerçeklerle çelişmektedir. İntihar risk değerlendirmesinde bu yaklaşım gerçeğe aykırı bir algıdır."
+      }
+     ]
+    },
+    {
+     "id": "k45-s05-e3",
+     "type": "cloze_masking",
+     "sentence": "Psikiyatride yakın dönemde intihar girişimi ve emredici halüsinasyonlar en yüksek riskli klinik durumlardır.",
+     "maskedTerm": "emredici halüsinasyonlar",
+     "hint": "Tıp eğitimi ve psikiyatri alanındaki temel kavramdır."
+    },
+    {
+     "id": "k45-s05-e4",
+     "type": "active_recall",
+     "question": "İntiharda en yüksek riskli klinik durumlar nelerdir?",
+     "answer": "Yakın dönemde girişim, emredici halüsinasyonlar, paranoid hezeyanlar, ağır depresyon, disforik mani ve alkol/madde kullanımı."
+    }
+   ],
+   "pdfSayfalari": [
+    6,
+    7
+   ],
+   "sourcePdf": {
+    "startPage": 6,
+    "endPage": 7
+   }
+  },
+  {
+   "id": "k2-45-d-s06",
+   "slideNumber": 6,
+   "title": "Sosyodemografik Risk Faktörleri",
+   "bolum": "2",
+   "content": "İntihar riskini belirleyen sosyodemografik değişkenler epidemiyolojik çalışmalarda net biçimde ortaya konmuştur.\n\n- **Erkek Cinsiyet:** Kadınlar 3 kat fazla girişimde bulunurken, erkeklerin tamamlanmış intihar oranı 3 kat daha yüksektir.\n- **Uç Yaş Grupları:** Ergenler ve ileri yaştaki bireyler intihar davranışı açısından en kırılgan popülasyonlardır.\n- **Medeni Durum ve Yalnızlık:** Dul ya da boşanmış olmak, evli bireylere göre belirgin yüksek risk taşır; yalnız yaşama riski pekiştirir.\n- **Ekonomik Güvencesizlik:** İşsizlik, ani gelir kaybı ve ağır ekonomik sıkıntılar intihar eğilimini tetikleyen majör sosyal belirleyicilerdir.\n\n> [!NOTE]\n> Sosyodemografik faktörler tek başına neden olmasa da, bireysel kırılganlık zemininde intihar eşiğini ciddi oranda düşürür.",
+   "synthesisNarrative": "İntihar riskini belirleyen sosyodemografik değişkenler epidemiyolojik çalışmalarda net biçimde ortaya konmuştur.\n\n- **Erkek Cinsiyet:** Kadınlar 3 kat fazla girişimde bulunurken, erkeklerin tamamlanmış intihar oranı 3 kat daha yüksektir.\n- **Uç Yaş Grupları:** Ergenler ve ileri yaştaki bireyler intihar davranışı açısından en kırılgan popülasyonlardır.\n- **Medeni Durum ve Yalnızlık:** Dul ya da boşanmış olmak, evli bireylere göre belirgin yüksek risk taşır; yalnız yaşama riski pekiştirir.\n- **Ekonomik Güvencesizlik:** İşsizlik, ani gelir kaybı ve ağır ekonomik sıkıntılar intihar eğilimini tetikleyen majör sosyal belirleyicilerdir.\n\n> [!NOTE]\n> Sosyodemografik faktörler tek başına neden olmasa da, bireysel kırılganlık zemininde intihar eşiğini ciddi oranda düşürür.",
+   "interactiveElements": [
+    {
+     "id": "k45-s06-e1",
+     "type": "interactive_table",
+     "tableHeaders": [
+      "Sosyodemografik Değişken",
+      "Yüksek Risk Profili",
+      "Düşük Risk Profili"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Cinsiyet",
+         "isMasked": false,
+         "hint": ""
+        },
+        {
+         "text": "Erkek (tamamlanmış intiharda 3 kat risk)",
+         "isMasked": false,
+         "hint": ""
+        },
+        {
+         "text": "Kadın (tamamlanmış intihar oranı daha düşüktür)",
+         "isMasked": true,
+         "hint": "Tıp eğitimi ve psikiyatri alanındaki temel kavramdır."
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Medeni Durum",
+         "isMasked": false,
+         "hint": ""
+        },
+        {
+         "text": "Boşanmış, dul veya bekar olma",
+         "isMasked": false,
+         "hint": ""
+        },
+        {
+         "text": "Evli ve sosyal desteğe sahip olma",
+         "isMasked": true,
+         "hint": "Tıp eğitimi ve psikiyatri alanındaki temel kavramdır."
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "İstihdam",
+         "isMasked": false,
+         "hint": ""
+        },
+        {
+         "text": "İşsizlik ve ağır ekonomik sıkıntı",
+         "isMasked": false,
+         "hint": ""
+        },
+        {
+         "text": "Düzenli gelir ve mesleki güvence",
+         "isMasked": true,
+         "hint": "Tıp eğitimi ve psikiyatri alanındaki temel kavramdır."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k45-s06-e2",
+     "type": "micro_quiz",
+     "question": "Aşağıdaki sosyodemografik profillerden hangisi intihar riski açısından istatistiki olarak en yüksek kırılganlığa sahiptir?",
+     "options": [
+      {
+       "text": "Yalnız yaşayan, boşanmış, işsiz ve ileri yaştaki erkek birey",
+       "isCorrect": true,
+       "explanation": "Yalnız yaşayan, boşanmış, işsiz ve ileri yaştaki erkek birey seçeneği intihar ve kendine zarar verme davranışlarını açıklayan temel klinik ve bilimsel yaklaşımı temsil eder. Bu ilke doğrultusunda soruda hedeflenen klinik mekanizma ve risk yönetimi eksiksiz olarak doğrulanmaktadır."
+      },
+      {
+       "text": "Ailesiyle yaşayan, düzenli işi olan ve evli genç kadın",
+       "isCorrect": false,
+       "explanation": "Ailesiyle yaşayan, düzenli işi olan ve evli genç kadın kavramı psikiyatri pratiğinde farklı klinik tabloları veya tanısal süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen klinik durumla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Üniversitede okuyan ve geniş arkadaş grubuna sahip öğrenci",
+       "isCorrect": false,
+       "explanation": "Üniversitede okuyan ve geniş arkadaş grubuna sahip öğrenci kavramı psikiyatri pratiğinde farklı klinik tabloları veya tanısal süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen klinik durumla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Emekli maaşı olan, eşiyle yaşayan ve torun bakan dede",
+       "isCorrect": false,
+       "explanation": "Emekli maaşı olan, eşiyle yaşayan ve torun bakan dede kavramı psikiyatri pratiğinde farklı klinik tabloları veya tanısal süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen klinik durumla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      }
+     ]
+    },
+    {
+     "id": "k45-s06-e3",
+     "type": "cloze_masking",
+     "sentence": "İntiharda kadınlar 3 kat fazla girişimde bulunurken erkeklerin 3 kat tamamlanmış intihar davranışı mevcuttur.",
+     "maskedTerm": "tamamlanmış intihar",
+     "hint": "Tıp eğitimi ve psikiyatri alanındaki temel kavramdır."
+    },
+    {
+     "id": "k45-s06-e4",
+     "type": "active_recall",
+     "question": "İntiharda temel sosyodemografik risk etmenleri nelerdir?",
+     "answer": "Erkek cinsiyet, ergenlik ve ileri yaş, dul/boşanmış olma, yalnız yaşama, işsizlik ve ekonomik zorluklar."
+    }
+   ],
+   "pdfSayfalari": [
+    8,
+    8
+   ],
+   "sourcePdf": {
+    "startPage": 8,
+    "endPage": 8
+   }
+  },
+  {
+   "id": "k2-45-d-s07",
+   "slideNumber": 7,
+   "title": "Yaş Gruplarına Göre İntihar ve Pasif İntihar",
+   "bolum": "2",
+   "content": "İntihar nedenleri ve eylemin biçimi yaş dönemlerine göre çarpıcı farklılıklar sergilemektedir.\n\n- **Gençlerde İntihar Dinamikleri:** Yoğun psikolojik ve biyolojik değişimler, çevresel stres artışı, bireyselleşme arzusuyla sosyal destek kaybı öne çıkar.\n- **Ergenlik Krizleri:** Gelecekle ilgili belirsizlik, sorun çözme becerilerinin yetersizliği ve erken yaşta alkol/maddeyle tanışma riski katlar.\n- **Yaşlılarda İntihar Dinamikleri:** Yaşamak için neden bulamama, kendini topluma ve ailesine gereksiz hissetme, kronik bedensel düşkünlük ve ağrılardır.\n- **Pasif İntihar Tablosu:** Yaşlılarda yeme-içmeyi ısrarla reddetme ve yaşamsal ilaçları (insülin, antihipertansif vb.) kasıtlı almama şeklinde ölümcül bir seyre bürünür.\n\n> [!IMPORTANT]\n> Yaşlı bireylerde intihar girişimleri dürtüsel olmayıp çok daha kararlı ve ölümcüldür; pasif intihar belirtileri derhal fark edilmelidir.",
+   "synthesisNarrative": "İntihar nedenleri ve eylemin biçimi yaş dönemlerine göre çarpıcı farklılıklar sergilemektedir.\n\n- **Gençlerde İntihar Dinamikleri:** Yoğun psikolojik ve biyolojik değişimler, çevresel stres artışı, bireyselleşme arzusuyla sosyal destek kaybı öne çıkar.\n- **Ergenlik Krizleri:** Gelecekle ilgili belirsizlik, sorun çözme becerilerinin yetersizliği ve erken yaşta alkol/maddeyle tanışma riski katlar.\n- **Yaşlılarda İntihar Dinamikleri:** Yaşamak için neden bulamama, kendini topluma ve ailesine gereksiz hissetme, kronik bedensel düşkünlük ve ağrılardır.\n- **Pasif İntihar Tablosu:** Yaşlılarda yeme-içmeyi ısrarla reddetme ve yaşamsal ilaçları (insülin, antihipertansif vb.) kasıtlı almama şeklinde ölümcül bir seyre bürünür.\n\n> [!IMPORTANT]\n> Yaşlı bireylerde intihar girişimleri dürtüsel olmayıp çok daha kararlı ve ölümcüldür; pasif intihar belirtileri derhal fark edilmelidir.",
+   "interactiveElements": [
+    {
+     "id": "k45-s07-e1",
+     "type": "micro_quiz",
+     "question": "Geriatrik popülasyonda (yaşlılarda) karşılaşılan ve 'pasif intihar' olarak tanımlanan klinik durum aşağıdakilerden hangisidir?",
+     "options": [
+      {
+       "text": "Kişinin yeme-içmeyi reddetmesi ve yaşamsal ilaçlarını kasıtlı olarak kullanmaması",
+       "isCorrect": true,
+       "explanation": "Kişinin yeme-içmeyi reddetmesi ve yaşamsal ilaçlarını kasıtlı olarak kullanmaması seçeneği intihar ve kendine zarar verme davranışlarını açıklayan temel klinik ve bilimsel yaklaşımı temsil eder. Bu ilke doğrultusunda soruda hedeflenen klinik mekanizma ve risk yönetimi eksiksiz olarak doğrulanmaktadır."
+      },
+      {
+       "text": "Sosyal medya üzerinden intihar planlarını canlı yayınlaması",
+       "isCorrect": false,
+       "explanation": "Sosyal medya üzerinden intihar planlarını canlı yayınlaması kavramı psikiyatri pratiğinde farklı klinik tabloları veya tanısal süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen klinik durumla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Hafif unutkanlık nedeniyle vitamin haplarını düzensiz alması",
+       "isCorrect": false,
+       "explanation": "Hafif unutkanlık nedeniyle vitamin haplarını düzensiz alması kavramı psikiyatri pratiğinde farklı klinik tabloları veya tanısal süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen klinik durumla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Günde bir saat hafif tempolu yürüyüş yapmayı alışkanlık edinmesi",
+       "isCorrect": false,
+       "explanation": "Günde bir saat hafif tempolu yürüyüş yapmayı alışkanlık edinmesi kavramı psikiyatri pratiğinde farklı klinik tabloları veya tanısal süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen klinik durumla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      }
+     ]
+    },
+    {
+     "id": "k45-s07-e2",
+     "type": "spot_the_lie",
+     "topic": "Gençlerde ve Yaşlılarda İntihar Nedenleri",
+     "items": [
+      {
+       "text": "Gençlerde gelecek belirsizliği ve sorun çözme becerilerinin yetersizliği intiharda rol oynar.",
+       "isLie": false,
+       "explanation": "Gençlerde gelecek belirsizliği ve sorun çözme becerilerinin yetersizliği intiharda rol oynar. ifadesi psikiyatride intihar risk dinamiklerini doğru yansıtır. Klinik araştırmalar bu yaklaşımı desteklemektedir."
+      },
+      {
+       "text": "Yaşlılardaki intihar girişimleri gençlere oranla biyolojik olarak çok daha ölümcüldür.",
+       "isLie": false,
+       "explanation": "Yaşlılardaki intihar girişimleri gençlere oranla biyolojik olarak çok daha ölümcüldür. ifadesi psikiyatride intihar risk dinamiklerini doğru yansıtır. Klinik araştırmalar bu yaklaşımı desteklemektedir."
+      },
+      {
+       "text": "Yaşlıların yeme-içmeyi reddetmesi yalnızca sıradan bir iştahsızlık olup intiharla hiçbir bağı yoktur.",
+       "isLie": true,
+       "explanation": "Yaşlıların yeme-içmeyi reddetmesi yalnızca sıradan bir iştahsızlık olup intiharla hiçbir bağı yoktur. ifadesi bilimsel ve klinik gerçeklerle çelişmektedir. İntihar risk değerlendirmesinde bu yaklaşım gerçeğe aykırı bir algıdır."
+      }
+     ]
+    },
+    {
+     "id": "k45-s07-e3",
+     "type": "cloze_masking",
+     "sentence": "Yaşlılarda bedensel düşkünlük ve kendini gereksiz hissetme pasif intiharlar ile yeme içme reddine yol açabilir.",
+     "maskedTerm": "pasif intiharlar",
+     "hint": "Tıp eğitimi ve psikiyatri alanındaki temel kavramdır."
+    },
+    {
+     "id": "k45-s07-e4",
+     "type": "active_recall",
+     "question": "Pasif intihar nedir ve en sık hangi yaş grubunda görülür?",
+     "answer": "Yeme-içmeyi ve hayati ilaçları reddederek ölümü beklemedir; en sık bedensel düşkünlüğü olan yaşlılarda görülür."
+    }
+   ],
+   "pdfSayfalari": [
+    9,
+    10
+   ],
+   "sourcePdf": {
+    "startPage": 9,
+    "endPage": 10
+   }
+  },
+  {
+   "id": "k2-45-d-s08",
+   "slideNumber": 8,
+   "title": "Riskli Meslek Grupları ve Araçlara Erişim",
+   "bolum": "2",
+   "content": "Mesleki özellikler, iş stresi ve ölümcül araçlara erişim kolaylığı intihar riskini belirgin düzeyde etkilemektedir.\n\n- **Riskli Meslek Grupları:** Çiftçiler (özellikle erkek), sağlık çalışanları (hekimler, diş hekimleri, hemşireler), veterinerler, asker ve polislerdir.\n- **İntihar Araçlarına Kolay Erişim:** Çiftçilerin tarım ilaçlarına (pestisitler); hekimlerin letal ilaçlara; kolluk kuvvetlerinin ateşli silahlara kolay erişimi vardır.\n- **Yüksek İş Stresi ve Tükenmişlik:** Mesleki sorumluluk ağırlığı, vardiyalı çalışma, uykusuzluk ve duygusal tükenme eşiği düşürür.\n- **Profesyonel Yalıtılmışlık:** Yardım arama konusunda çekingenlik yaşanması ve damgalanma korkusuyla hekime başvuramamak riski artırır.\n\n> [!NOTE]\n> Sağlık çalışanlarında intihar araçlarına kolay erişim ve tıbbi bilgi, girişimlerin ölümcüllüğünü artıran en kritik faktördür.",
+   "synthesisNarrative": "Mesleki özellikler, iş stresi ve ölümcül araçlara erişim kolaylığı intihar riskini belirgin düzeyde etkilemektedir.\n\n- **Riskli Meslek Grupları:** Çiftçiler (özellikle erkek), sağlık çalışanları (hekimler, diş hekimleri, hemşireler), veterinerler, asker ve polislerdir.\n- **İntihar Araçlarına Kolay Erişim:** Çiftçilerin tarım ilaçlarına (pestisitler); hekimlerin letal ilaçlara; kolluk kuvvetlerinin ateşli silahlara kolay erişimi vardır.\n- **Yüksek İş Stresi ve Tükenmişlik:** Mesleki sorumluluk ağırlığı, vardiyalı çalışma, uykusuzluk ve duygusal tükenme eşiği düşürür.\n- **Profesyonel Yalıtılmışlık:** Yardım arama konusunda çekingenlik yaşanması ve damgalanma korkusuyla hekime başvuramamak riski artırır.\n\n> [!NOTE]\n> Sağlık çalışanlarında intihar araçlarına kolay erişim ve tıbbi bilgi, girişimlerin ölümcüllüğünü artıran en kritik faktördür.",
+   "interactiveElements": [
+    {
+     "id": "k45-s08-e1",
+     "type": "micro_quiz",
+     "question": "Hekimler, veterinerler ve kolluk kuvvetlerinin intihar açısından yüksek riskli meslekler arasında yer almasının temel gerekçesi nedir?",
+     "options": [
+      {
+       "text": "Ölümcül intihar araçlarına kolay erişim, mesleki stres ve profesyonel yalıtılmışlık",
+       "isCorrect": true,
+       "explanation": "Ölümcül intihar araçlarına kolay erişim, mesleki stres ve profesyonel yalıtılmışlık seçeneği intihar ve kendine zarar verme davranışlarını açıklayan temel klinik ve bilimsel yaklaşımı temsil eder. Bu ilke doğrultusunda soruda hedeflenen klinik mekanizma ve risk yönetimi eksiksiz olarak doğrulanmaktadır."
+      },
+      {
+       "text": "Meslek icabı her gün zorunlu olarak psikiyatri polikliniğinde nöbet tutmaları",
+       "isCorrect": false,
+       "explanation": "Meslek icabı her gün zorunlu olarak psikiyatri polikliniğinde nöbet tutmaları kavramı psikiyatri pratiğinde farklı klinik tabloları veya tanısal süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen klinik durumla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Tüm bu meslek çalışanlarının genetik olarak aynı soy ağacından gelmesi",
+       "isCorrect": false,
+       "explanation": "Tüm bu meslek çalışanlarının genetik olarak aynı soy ağacından gelmesi kavramı psikiyatri pratiğinde farklı klinik tabloları veya tanısal süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen klinik durumla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Haftalık çalışma saatlerinin yasal olarak sıfır saate indirilmiş olması",
+       "isCorrect": false,
+       "explanation": "Haftalık çalışma saatlerinin yasal olarak sıfır saate indirilmiş olması kavramı psikiyatri pratiğinde farklı klinik tabloları veya tanısal süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen klinik durumla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      }
+     ]
+    },
+    {
+     "id": "k45-s08-e2",
+     "type": "swipe_matching",
+     "leftCategory": "Meslek Grubu",
+     "rightCategory": "Erişimi Kolay İntihar Aracı",
+     "cards": [
+      {
+       "text": "Tarım işçileri ve çiftçiler",
+       "category": "left",
+       "explanation": "Tarım işçileri ve çiftçiler kavramı ilgili klinik kategori altında değerlendirilen temel unsurdur. Psikiyatri pratiğinde bu eşleme risk yönetimi açısından kritik önem taşır."
+      },
+      {
+       "text": "Hekimler ve sağlık personeli",
+       "category": "left",
+       "explanation": "Hekimler ve sağlık personeli kavramı ilgili klinik kategori altında değerlendirilen temel unsurdur. Psikiyatri pratiğinde bu eşleme risk yönetimi açısından kritik önem taşır."
+      },
+      {
+       "text": "Pestisitler ve tarım zehirleri",
+       "category": "right",
+       "explanation": "Pestisitler ve tarım zehirleri kavramı ilgili klinik kategori altında değerlendirilen temel unsurdur. Psikiyatri pratiğinde bu eşleme risk yönetimi açısından kritik önem taşır."
+      },
+      {
+       "text": "Yüksek doz letal farmakolojik ajanlar",
+       "category": "right",
+       "explanation": "Yüksek doz letal farmakolojik ajanlar kavramı ilgili klinik kategori altında değerlendirilen temel unsurdur. Psikiyatri pratiğinde bu eşleme risk yönetimi açısından kritik önem taşır."
+      }
+     ]
+    },
+    {
+     "id": "k45-s08-e3",
+     "type": "cloze_masking",
+     "sentence": "Sağlık çalışanları veteriner hekimler asker ve polisler intihar araçlarına ulaşımı kolay olduğu için riskli mesleklerdir.",
+     "maskedTerm": "intihar araçlarına ulaşımı kolay",
+     "hint": "Tıp eğitimi ve psikiyatri alanındaki temel kavramdır."
+    },
+    {
+     "id": "k45-s08-e4",
+     "type": "active_recall",
+     "question": "İntihar açısından riskli meslekler ve yüksek riskin başlıca nedenleri nelerdir?",
+     "answer": "Çiftçiler, sağlık çalışanları, veterinerler, asker/polis; araçlara kolay erişim, iş stresi ve yardım arama isteksizliği."
+    }
+   ],
+   "pdfSayfalari": [
+    11,
+    11
+   ],
+   "sourcePdf": {
+    "startPage": 11,
+    "endPage": 11
+   }
+  },
+  {
+   "id": "k2-45-d-s09",
+   "slideNumber": 9,
+   "title": "İntihar Düşüncesi, Plan ve Hazırlık Kriterleri",
+   "bolum": "2",
+   "content": "İntihar düşüncesinin varlığı, düşüncenin ciddiyeti ve planın ayrıntılandırılması eyleme geçiş riskini belirler.\n\n- **Kessler Verileri:** İntihar düşüncesi olanların yüzde otuz dördü (%34) somut bir intihar planı yapar; plan yapanların ise yüzde yetmiş ikisi (%72) fiilen girişimde bulunur.\n- **Düşünceden Plana Geçiş:** Pasif ölüm isteklerinden ('keşke uyusam da uyanmasam') ayrıntılı öldürücü planlara kadar değişen bir yelpaze mevcuttur.\n- **Yüksek Risk Kriterleri:** İntiharın tarihi, yöntemi ve yerinin kesinleştirilmiş olması riskin maksimum olduğunu gösterir.\n- **Hazırlık Eylemleri:** Vasiyet hazırlama, eşyalarını dağıtma, veda mektubu yazma veya mezar yeri satın alma gibi hazırlıklar acil kırmızı alarmdır.\n\n> [!IMPORTANT]\n> Plan ne kadar somut, ölümcül ve uygulanabilir ise, kişinin intihar etme olasılığı o kadar yüksektir.",
+   "synthesisNarrative": "İntihar düşüncesinin varlığı, düşüncenin ciddiyeti ve planın ayrıntılandırılması eyleme geçiş riskini belirler.\n\n- **Kessler Verileri:** İntihar düşüncesi olanların yüzde otuz dördü (%34) somut bir intihar planı yapar; plan yapanların ise yüzde yetmiş ikisi (%72) fiilen girişimde bulunur.\n- **Düşünceden Plana Geçiş:** Pasif ölüm isteklerinden ('keşke uyusam da uyanmasam') ayrıntılı öldürücü planlara kadar değişen bir yelpaze mevcuttur.\n- **Yüksek Risk Kriterleri:** İntiharın tarihi, yöntemi ve yerinin kesinleştirilmiş olması riskin maksimum olduğunu gösterir.\n- **Hazırlık Eylemleri:** Vasiyet hazırlama, eşyalarını dağıtma, veda mektubu yazma veya mezar yeri satın alma gibi hazırlıklar acil kırmızı alarmdır.\n\n> [!IMPORTANT]\n> Plan ne kadar somut, ölümcül ve uygulanabilir ise, kişinin intihar etme olasılığı o kadar yüksektir.",
+   "interactiveElements": [
+    {
+     "id": "k45-s09-e1",
+     "type": "causal_chain",
+     "title": "İntihar Düşüncesinden Eyleme Geçiş Basamakları",
+     "steps": [
+      "1. Pasif Ölüm İsteği: Bireyin ölsem daha iyi olurdu şeklinde genel düşüncelere kapılması.",
+      "2. Aktif İntihar Planı: Tarih, yer ve yöntemin belirlenerek ölümcül planın kurulması (%34).",
+      "3. Veda ve Hazırlık Eylemleri: Vasiyet yazma, eşyalarını dağıtma ve mezar yeri ayarlama.",
+      "4. Fiili İntihar Girişimi: Plan yapan hastaların %72'sinde gözlenen ölümcül eyleme geçiş."
+     ]
+    },
+    {
+     "id": "k45-s09-e2",
+     "type": "micro_quiz",
+     "question": "Kessler ve arkadaşlarının epidemiyolojik araştırmasına göre intihar planı yapan bireylerin yüzde kaçı fiilen intihar girişiminde bulunmaktadır?",
+     "options": [
+      {
+       "text": "Yüzde yetmiş iki (%72)",
+       "isCorrect": true,
+       "explanation": "Yüzde yetmiş iki (%72) seçeneği intihar ve kendine zarar verme davranışlarını açıklayan temel klinik ve bilimsel yaklaşımı temsil eder. Bu ilke doğrultusunda soruda hedeflenen klinik mekanizma ve risk yönetimi eksiksiz olarak doğrulanmaktadır."
+      },
+      {
+       "text": "Yüzde sıfır virgül bir (%0.1)",
+       "isCorrect": false,
+       "explanation": "Yüzde sıfır virgül bir (%0.1) kavramı psikiyatri pratiğinde farklı klinik tabloları veya tanısal süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen klinik durumla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Yüzde yüz (%100)",
+       "isCorrect": false,
+       "explanation": "Yüzde yüz (%100) kavramı psikiyatri pratiğinde farklı klinik tabloları veya tanısal süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen klinik durumla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Yüzde beş (%5)",
+       "isCorrect": false,
+       "explanation": "Yüzde beş (%5) kavramı psikiyatri pratiğinde farklı klinik tabloları veya tanısal süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen klinik durumla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      }
+     ]
+    },
+    {
+     "id": "k45-s09-e3",
+     "type": "cloze_masking",
+     "sentence": "İntihar düşünceleri olanların yüzde otuz dördü plan yapmakta ve plan yapanların yüzde yetmiş ikisi intihar girişimi yapmaktadır.",
+     "maskedTerm": "yüzde yetmiş ikisi",
+     "hint": "Tıp eğitimi ve psikiyatri alanındaki temel kavramdır."
+    },
+    {
+     "id": "k45-s09-e4",
+     "type": "active_recall",
+     "question": "İntihar planında riski en üst düzeye çıkaran göstergeler nelerdir?",
+     "answer": "Tarih, yer ve yöntemin netleşmesi, planın ölümcül olması ve vasiyet/veda gibi hazırlıkların yapılmış olmasıdır."
+    }
+   ],
+   "pdfSayfalari": [
+    12,
+    13
+   ],
+   "sourcePdf": {
+    "startPage": 12,
+    "endPage": 13
+   }
+  },
+  {
+   "id": "k2-45-d-s10",
+   "slideNumber": 10,
+   "title": "[TEKRAR SAYFASI - CHECKPOINT 2] Risk Faktörleri ve Klinik Değerlendirme",
+   "bolum": "2",
+   "content": "Bu tekrar sayfasında intihar risk etmenleri, yüksek riskli klinik durumlar, yaş dönemleri ve planın ciddiyeti pekiştirilmektedir.\n\n- **Yüksek Risk:** Yakın dönemde girişim, emredici halüsinasyon, disforik mani ve eşlik eden alkol/madde kötüye kullanımıdır.\n- **Sosyodemografi:** Erkek cinsiyet, uç yaşlar (ergen ve yaşlı), boşanmış olma, yalnız yaşama ve işsizlik riski katlar.\n- **Özel Klinik Tablo:** Yaşlılarda yeme-içme ve ilaç reddi şeklinde görülen pasif intiharlar son derece ölümcüldür.\n- **Kessler Oranları:** Düşüncesi olanların %34'ü plan yapar; plan yapanların %72'si eyleme geçer; vasiyet ve hazırlık alarmdır.\n\n> [!NOTE]\n> Risk değerlendirmesinde planın ölümcüllüğü ve hastanın hazırlık davranışları mutlak acil yatış kriteridir.",
+   "synthesisNarrative": "Bu tekrar sayfasında intihar risk etmenleri, yüksek riskli klinik durumlar, yaş dönemleri ve planın ciddiyeti pekiştirilmektedir.\n\n- **Yüksek Risk:** Yakın dönemde girişim, emredici halüsinasyon, disforik mani ve eşlik eden alkol/madde kötüye kullanımıdır.\n- **Sosyodemografi:** Erkek cinsiyet, uç yaşlar (ergen ve yaşlı), boşanmış olma, yalnız yaşama ve işsizlik riski katlar.\n- **Özel Klinik Tablo:** Yaşlılarda yeme-içme ve ilaç reddi şeklinde görülen pasif intiharlar son derece ölümcüldür.\n- **Kessler Oranları:** Düşüncesi olanların %34'ü plan yapar; plan yapanların %72'si eyleme geçer; vasiyet ve hazırlık alarmdır.\n\n> [!NOTE]\n> Risk değerlendirmesinde planın ölümcüllüğü ve hastanın hazırlık davranışları mutlak acil yatış kriteridir.",
+   "interactiveElements": [
+    {
+     "id": "k45-s10-e1",
+     "type": "micro_quiz",
+     "question": "Aşağıdaki klinik bulgulardan hangisi intihar riski taşıyan bir hastada acil servise yatış gerektiren en kritik hazırlık göstergesidir?",
+     "options": [
+      {
+       "text": "Kesin tarih ve ölümcül yöntem belirleyip vasiyet yazması ve mezar yeri satın alması",
+       "isCorrect": true,
+       "explanation": "Kesin tarih ve ölümcül yöntem belirleyip vasiyet yazması ve mezar yeri satın alması seçeneği intihar ve kendine zarar verme davranışlarını açıklayan temel klinik ve bilimsel yaklaşımı temsil eder. Bu ilke doğrultusunda soruda hedeflenen klinik mekanizma ve risk yönetimi eksiksiz olarak doğrulanmaktadır."
+      },
+      {
+       "text": "Yalnızca ara sıra havaların soğumasından şikayet etmesi",
+       "isCorrect": false,
+       "explanation": "Yalnızca ara sıra havaların soğumasından şikayet etmesi kavramı psikiyatri pratiğinde farklı klinik tabloları veya tanısal süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen klinik durumla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Rutin olarak her sabah gazete okumayı sürdürmesi",
+       "isCorrect": false,
+       "explanation": "Rutin olarak her sabah gazete okumayı sürdürmesi kavramı psikiyatri pratiğinde farklı klinik tabloları veya tanısal süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen klinik durumla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Gelecek yaz tatili için otel rezervasyonu yaptırması",
+       "isCorrect": false,
+       "explanation": "Gelecek yaz tatili için otel rezervasyonu yaptırması kavramı psikiyatri pratiğinde farklı klinik tabloları veya tanısal süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen klinik durumla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      }
+     ]
+    },
+    {
+     "id": "k45-s10-e2",
+     "type": "swipe_matching",
+     "leftCategory": "Klinik Risk Grubu",
+     "rightCategory": "Karakteristik Risk Mekanizması",
+     "cards": [
+      {
+       "text": "Emredici halüsinasyon yaşayan psikoz hastası",
+       "category": "left",
+       "explanation": "Emredici halüsinasyon yaşayan psikoz hastası kavramı ilgili klinik kategori altında değerlendirilen temel unsurdur. Psikiyatri pratiğinde bu eşleme risk yönetimi açısından kritik önem taşır."
+      },
+      {
+       "text": "Disforik mani tablosundaki bipolar hasta",
+       "category": "left",
+       "explanation": "Disforik mani tablosundaki bipolar hasta kavramı ilgili klinik kategori altında değerlendirilen temel unsurdur. Psikiyatri pratiğinde bu eşleme risk yönetimi açısından kritik önem taşır."
+      },
+      {
+       "text": "Ölümcül yöntem belirleyip vasiyet yazan olgu",
+       "category": "right",
+       "explanation": "Ölümcül yöntem belirleyip vasiyet yazan olgu kavramı ilgili klinik kategori altında değerlendirilen temel unsurdur. Psikiyatri pratiğinde bu eşleme risk yönetimi açısından kritik önem taşır."
+      },
+      {
+       "text": "Yeme ve içmeyi ısrarla reddeden geriatrik hasta",
+       "category": "right",
+       "explanation": "Yeme ve içmeyi ısrarla reddeden geriatrik hasta kavramı ilgili klinik kategori altında değerlendirilen temel unsurdur. Psikiyatri pratiğinde bu eşleme risk yönetimi açısından kritik önem taşır."
+      }
+     ]
+    },
+    {
+     "id": "k45-s10-e3",
+     "type": "spot_the_lie",
+     "topic": "Bölüm 2 Tekrar Özeti",
+     "items": [
+      {
+       "text": "İntihar planı yapan bireylerin yaklaşık yüzde yetmiş ikisi fiilen girişimde bulunur.",
+       "isLie": false,
+       "explanation": "İntihar planı yapan bireylerin yaklaşık yüzde yetmiş ikisi fiilen girişimde bulunur. ifadesi psikiyatride intihar risk dinamiklerini doğru yansıtır. Klinik araştırmalar bu yaklaşımı desteklemektedir."
+      },
+      {
+       "text": "Çiftçiler, hekimler ve polisler intihar araçlarına kolay erişim nedeniyle riskli mesleklerdir.",
+       "isLie": false,
+       "explanation": "Çiftçiler, hekimler ve polisler intihar araçlarına kolay erişim nedeniyle riskli mesleklerdir. ifadesi psikiyatride intihar risk dinamiklerini doğru yansıtır. Klinik araştırmalar bu yaklaşımı desteklemektedir."
+      },
+      {
+       "text": "Yaşlılarda görülen pasif intiharlar tamamen tehlikesiz olup hastaneye yatış gerektirmez.",
+       "isLie": true,
+       "explanation": "Yaşlılarda görülen pasif intiharlar tamamen tehlikesiz olup hastaneye yatış gerektirmez. ifadesi bilimsel ve klinik gerçeklerle çelişmektedir. İntihar risk değerlendirmesinde bu yaklaşım gerçeğe aykırı bir algıdır."
+      }
+     ]
+    },
+    {
+     "id": "k45-s10-e4",
+     "type": "active_recall",
+     "question": "Bölüm 2'de öğrenilen yüksek riskli klinik durumları özetleyiniz.",
+     "answer": "Yakın dönemde girişim, emredici halüsinasyon, disforik mani, ileri yaşta pasif intihar, riskli meslekler ve ölümcül plan hazırlığı."
+    }
+   ],
+   "isCheckpoint": true
+  },
+  {
+   "id": "k2-45-d-s11",
+   "slideNumber": 11,
+   "title": "Geçmiş Girişim Öyküsü ve Ailesel Risk",
+   "bolum": "3",
+   "content": "Geçmiş intihar girişimi öyküsü ve ailede intihar varlığı suisidal davranışın en güçlü klinik habercileridir.\n\n- **En Önemli Risk Etmeni:** Tamamlanmış intiharların yüzde ellisinde (%50) geçmişte en az bir kez intihar girişimi öyküsü bulunmaktadır.\n- **Önceki Yıl Girişimi:** İntihar sonucu ölenlerin yüzde yirmi beşi (%25) doğrudan bir önceki yıl içinde girişimde bulunmuştur.\n- **Ailede İntihar Öyküsü:** Aile bireylerinde intihar bulunması riski belirgin derecede artırır.\n- **Aktarım Mekanizmaları:** Bu artış genetik yatkınlık, psikiyatrik hastalıkların ailesel geçişi ve model alma (psikodinamik özdeşim) mekanizmalarıyla gerçekleşir.\n\n> [!IMPORTANT]\n> Geçmişinde intihar girişimi olan bir hastada yeni bir kriz geliştiğinde risk asla küçümsenemez; girişim öyküsü en güçlü prediktördür.",
+   "synthesisNarrative": "Geçmiş intihar girişimi öyküsü ve ailede intihar varlığı suisidal davranışın en güçlü klinik habercileridir.\n\n- **En Önemli Risk Etmeni:** Tamamlanmış intiharların yüzde ellisinde (%50) geçmişte en az bir kez intihar girişimi öyküsü bulunmaktadır.\n- **Önceki Yıl Girişimi:** İntihar sonucu ölenlerin yüzde yirmi beşi (%25) doğrudan bir önceki yıl içinde girişimde bulunmuştur.\n- **Ailede İntihar Öyküsü:** Aile bireylerinde intihar bulunması riski belirgin derecede artırır.\n- **Aktarım Mekanizmaları:** Bu artış genetik yatkınlık, psikiyatrik hastalıkların ailesel geçişi ve model alma (psikodinamik özdeşim) mekanizmalarıyla gerçekleşir.\n\n> [!IMPORTANT]\n> Geçmişinde intihar girişimi olan bir hastada yeni bir kriz geliştiğinde risk asla küçümsenemez; girişim öyküsü en güçlü prediktördür.",
+   "interactiveElements": [
+    {
+     "id": "k45-s11-e1",
+     "type": "micro_quiz",
+     "question": "Tamamlanmış intihar olgularında en güçlü ve en önemli bağımsız risk etmeni aşağıdakilerden hangisidir?",
+     "options": [
+      {
+       "text": "Kişinin geçmişinde intihar girişimi öyküsünün bulunması",
+       "isCorrect": true,
+       "explanation": "Kişinin geçmişinde intihar girişimi öyküsünün bulunması seçeneği intihar ve kendine zarar verme davranışlarını açıklayan temel klinik ve bilimsel yaklaşımı temsil eder. Bu ilke doğrultusunda soruda hedeflenen klinik mekanizma ve risk yönetimi eksiksiz olarak doğrulanmaktadır."
+      },
+      {
+       "text": "Çocuklukta kızamık enfeksiyonu geçirmiş olması",
+       "isCorrect": false,
+       "explanation": "Çocuklukta kızamık enfeksiyonu geçirmiş olması kavramı psikiyatri pratiğinde farklı klinik tabloları veya tanısal süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen klinik durumla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Düzenli olarak haftada bir kez balık tüketilmesi",
+       "isCorrect": false,
+       "explanation": "Düzenli olarak haftada bir kez balık tüketilmesi kavramı psikiyatri pratiğinde farklı klinik tabloları veya tanısal süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen klinik durumla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Saç renginin kahverengi veya siyah olması",
+       "isCorrect": false,
+       "explanation": "Saç renginin kahverengi veya siyah olması kavramı psikiyatri pratiğinde farklı klinik tabloları veya tanısal süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen klinik durumla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      }
+     ]
+    },
+    {
+     "id": "k45-s11-e2",
+     "type": "spot_the_lie",
+     "topic": "Geçmiş Girişim ve Aile Öyküsü",
+     "items": [
+      {
+       "text": "Tamamlanmış intiharların yüzde ellisinde geçmişte en az bir intihar girişimi vardır.",
+       "isLie": false,
+       "explanation": "Tamamlanmış intiharların yüzde ellisinde geçmişte en az bir intihar girişimi vardır. ifadesi psikiyatride intihar risk dinamiklerini doğru yansıtır. Klinik araştırmalar bu yaklaşımı desteklemektedir."
+      },
+      {
+       "text": "Ailede intihar öyküsü genetik yatkınlık ve model alma yoluyla riski artırır.",
+       "isLie": false,
+       "explanation": "Ailede intihar öyküsü genetik yatkınlık ve model alma yoluyla riski artırır. ifadesi psikiyatride intihar risk dinamiklerini doğru yansıtır. Klinik araştırmalar bu yaklaşımı desteklemektedir."
+      },
+      {
+       "text": "Önceki yıl intihar girişiminde bulunan bireylerde bir daha intihar etme riski tamamen kaybolur.",
+       "isLie": true,
+       "explanation": "Önceki yıl intihar girişiminde bulunan bireylerde bir daha intihar etme riski tamamen kaybolur. ifadesi bilimsel ve klinik gerçeklerle çelişmektedir. İntihar risk değerlendirmesinde bu yaklaşım gerçeğe aykırı bir algıdır."
+      }
+     ]
+    },
+    {
+     "id": "k45-s11-e3",
+     "type": "cloze_masking",
+     "sentence": "Tamamlanmış intiharlarda en önemli risk etmeni geçmiş intihar girişimi öyküsünün bulunmasıdır.",
+     "maskedTerm": "intihar girişimi öyküsünün",
+     "hint": "Tıp eğitimi ve psikiyatri alanındaki temel kavramdır."
+    },
+    {
+     "id": "k45-s11-e4",
+     "type": "active_recall",
+     "question": "Tamamlanmış intiharlarda geçmiş girişim öyküsü oranı nedir?",
+     "answer": "%50'sinde geçmişte en az bir girişim vardır; %25'i ise bir önceki yıl içinde girişimde bulunmuştur."
+    }
+   ],
+   "pdfSayfalari": [
+    14,
+    15
+   ],
+   "sourcePdf": {
+    "startPage": 14,
+    "endPage": 15
+   }
+  },
+  {
+   "id": "k2-45-d-s12",
+   "slideNumber": 12,
+   "title": "Psikososyal Kayıplar ve Utanç İntiharları",
+   "bolum": "3",
+   "content": "Bireyin yaşamına son vermeyi istemesinin ardında ağır psikososyal kayıplar ve narsisistik yaralanmalar yatmaktadır.\n\n- **İlişki Kayıpları:** Boşanma, ayrılık veya sevilen birinin ani ölümü bireyin en temel duygusal dayanağını yıkar.\n- **Yeti Kayıpları:** Ağır trafik kazası veya kronik hastalık nedeniyle bedensel yeti, bağımsızlık veya işlev kaybı yaşanmasıdır.\n- **Güvenlik Kaybı:** Sosyal, hukuki veya fiziksel güvencenin yitirilmesi çaresizlik duygusunu tetikler.\n- **Utanç İntiharları:** Narsisistik yaralanmalara aşırı duyarlı bir kişinin toplum önünde aşağılandığını, küçük düştüğünü düşündüğü durumlarda ortaya çıkan yıkıcı eylemlerdir.\n\n> [!NOTE]\n> Ağır narsisistik kırılma yaşayan bireylerde utanç duygusu tahammül edilemez bir psikolojik acıya dönüşerek intiharı tetikleyebilir.",
+   "synthesisNarrative": "Bireyin yaşamına son vermeyi istemesinin ardında ağır psikososyal kayıplar ve narsisistik yaralanmalar yatmaktadır.\n\n- **İlişki Kayıpları:** Boşanma, ayrılık veya sevilen birinin ani ölümü bireyin en temel duygusal dayanağını yıkar.\n- **Yeti Kayıpları:** Ağır trafik kazası veya kronik hastalık nedeniyle bedensel yeti, bağımsızlık veya işlev kaybı yaşanmasıdır.\n- **Güvenlik Kaybı:** Sosyal, hukuki veya fiziksel güvencenin yitirilmesi çaresizlik duygusunu tetikler.\n- **Utanç İntiharları:** Narsisistik yaralanmalara aşırı duyarlı bir kişinin toplum önünde aşağılandığını, küçük düştüğünü düşündüğü durumlarda ortaya çıkan yıkıcı eylemlerdir.\n\n> [!NOTE]\n> Ağır narsisistik kırılma yaşayan bireylerde utanç duygusu tahammül edilemez bir psikolojik acıya dönüşerek intiharı tetikleyebilir.",
+   "interactiveElements": [
+    {
+     "id": "k45-s12-e1",
+     "type": "micro_quiz",
+     "question": "Narsisistik yaralanmalara duyarlı bir bireyin toplum önünde aşağılandığını veya rezil olduğunu düşünmesi sonucu gelişen intihar tablosuna ne ad verilir?",
+     "options": [
+      {
+       "text": "Utanç intiharları",
+       "isCorrect": true,
+       "explanation": "Utanç intiharları seçeneği intihar ve kendine zarar verme davranışlarını açıklayan temel klinik ve bilimsel yaklaşımı temsil eder. Bu ilke doğrultusunda soruda hedeflenen klinik mekanizma ve risk yönetimi eksiksiz olarak doğrulanmaktadır."
+      },
+      {
+       "text": "Kompulsif alışveriş atağı",
+       "isCorrect": false,
+       "explanation": "Kompulsif alışveriş atağı kavramı psikiyatri pratiğinde farklı klinik tabloları veya tanısal süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen klinik durumla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Fizyolojik uyku terörü",
+       "isCorrect": false,
+       "explanation": "Fizyolojik uyku terörü kavramı psikiyatri pratiğinde farklı klinik tabloları veya tanısal süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen klinik durumla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Katatonik balmumu esnekliği",
+       "isCorrect": false,
+       "explanation": "Katatonik balmumu esnekliği kavramı psikiyatri pratiğinde farklı klinik tabloları veya tanısal süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen klinik durumla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      }
+     ]
+    },
+    {
+     "id": "k45-s12-e2",
+     "type": "spot_the_lie",
+     "topic": "Kayıplar ve Utanç İntiharları",
+     "items": [
+      {
+       "text": "Boşanma, ilişki kaybı ve bedensel yeti kaybı intihar isteğini tetikleyen majör kayıplardır.",
+       "isLie": false,
+       "explanation": "Boşanma, ilişki kaybı ve bedensel yeti kaybı intihar isteğini tetikleyen majör kayıplardır. ifadesi psikiyatride intihar risk dinamiklerini doğru yansıtır. Klinik araştırmalar bu yaklaşımı desteklemektedir."
+      },
+      {
+       "text": "Narsisistik zedelenme yaşayan kişilerde aşağılanma hissi utanç intiharlarına yol açabilir.",
+       "isLie": false,
+       "explanation": "Narsisistik zedelenme yaşayan kişilerde aşağılanma hissi utanç intiharlarına yol açabilir. ifadesi psikiyatride intihar risk dinamiklerini doğru yansıtır. Klinik araştırmalar bu yaklaşımı desteklemektedir."
+      },
+      {
+       "text": "Ağır bedensel yeti kaybı yaşayan bireyler intihar düşüncesine karşı tamamen bağışıktır.",
+       "isLie": true,
+       "explanation": "Ağır bedensel yeti kaybı yaşayan bireyler intihar düşüncesine karşı tamamen bağışıktır. ifadesi bilimsel ve klinik gerçeklerle çelişmektedir. İntihar risk değerlendirmesinde bu yaklaşım gerçeğe aykırı bir algıdır."
+      }
+     ]
+    },
+    {
+     "id": "k45-s12-e3",
+     "type": "cloze_masking",
+     "sentence": "Narsisistik yaralanmalara duyarlı bir kişinin aşağılandığını düşündüğü durumlarda utanç intiharları gelişebilir.",
+     "maskedTerm": "utanç intiharları",
+     "hint": "Tıp eğitimi ve psikiyatri alanındaki temel kavramdır."
+    },
+    {
+     "id": "k45-s12-e4",
+     "type": "active_recall",
+     "question": "İntihar isteğini tetikleyen 3 temel kayıp türü ve 'utanç intiharı' kavramı nedir?",
+     "answer": "İlişki kaybı, bedensel yeti kaybı, güvenlik kaybı. Utanç intiharı ise narsisistik yaralanma ve aşağılanma sonucu gelişen intihardır."
+    }
+   ],
+   "pdfSayfalari": [
+    16,
+    17
+   ],
+   "sourcePdf": {
+    "startPage": 16,
+    "endPage": 17
+   }
+  },
+  {
+   "id": "k2-45-d-s13",
+   "slideNumber": 13,
+   "title": "Çocukluk Çağı Travmaları ve Olumsuz Yaşam Olayları",
+   "bolum": "3",
+   "content": "Erken yaşam deneyimleri ve çocukluk çağı travmaları, erişkin dönemde intihar riskini katbekat artıran kalıcı izler bırakır.\n\n- **Olumsuz Yaşam Olayları:** Küçük yaşlarda maruz kalınan olumsuz yaşam olaylarının uzun vadeli etkileri intihar riskini belirler.\n- **Taciz ve İstismar:** İntihara eğilimli bireylerin yüzde on ila kırkında (%10-40) çocukluk döneminde fiziksel veya cinsel taciz öyküsü saptanmaktadır.\n- **On Kat Risk Artışı:** Çocukluk çağı fiziksel ve cinsel istismar öyküsü, erişkinlikte intihar için bağımsız bir risk etmenidir ve riski tam on kat artırır.\n- **Kalıcı Travmatik Zemin:** Bu travmalar duygu düzenleme mekanizmalarını bozarak bireyi krizler karşısında aşırı kırılgan hale getirir.\n\n> [!IMPORTANT]\n> Çocukluk çağında fiziksel veya cinsel istismara uğramış olmak intihar riskini bağımsız olarak tam 10 kat artıran majör bir travmatik faktördür.",
+   "synthesisNarrative": "Erken yaşam deneyimleri ve çocukluk çağı travmaları, erişkin dönemde intihar riskini katbekat artıran kalıcı izler bırakır.\n\n- **Olumsuz Yaşam Olayları:** Küçük yaşlarda maruz kalınan olumsuz yaşam olaylarının uzun vadeli etkileri intihar riskini belirler.\n- **Taciz ve İstismar:** İntihara eğilimli bireylerin yüzde on ila kırkında (%10-40) çocukluk döneminde fiziksel veya cinsel taciz öyküsü saptanmaktadır.\n- **On Kat Risk Artışı:** Çocukluk çağı fiziksel ve cinsel istismar öyküsü, erişkinlikte intihar için bağımsız bir risk etmenidir ve riski tam on kat artırır.\n- **Kalıcı Travmatik Zemin:** Bu travmalar duygu düzenleme mekanizmalarını bozarak bireyi krizler karşısında aşırı kırılgan hale getirir.\n\n> [!IMPORTANT]\n> Çocukluk çağında fiziksel veya cinsel istismara uğramış olmak intihar riskini bağımsız olarak tam 10 kat artıran majör bir travmatik faktördür.",
+   "interactiveElements": [
+    {
+     "id": "k45-s13-e1",
+     "type": "micro_quiz",
+     "question": "Ders notlarına göre çocukluk döneminde fiziksel ve cinsel taciz öyküsü bulunması erişkinlikte intihar riskini yaklaşık ne kadar artırmaktadır?",
+     "options": [
+      {
+       "text": "Yaklaşık 10 kat artırmaktadır",
+       "isCorrect": true,
+       "explanation": "Yaklaşık 10 kat artırmaktadır seçeneği intihar ve kendine zarar verme davranışlarını açıklayan temel klinik ve bilimsel yaklaşımı temsil eder. Bu ilke doğrultusunda soruda hedeflenen klinik mekanizma ve risk yönetimi eksiksiz olarak doğrulanmaktadır."
+      },
+      {
+       "text": "Riski tamamen sıfırlayıp kişiyi korumaktadır",
+       "isCorrect": false,
+       "explanation": "Riski tamamen sıfırlayıp kişiyi korumaktadır kavramı psikiyatri pratiğinde farklı klinik tabloları veya tanısal süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen klinik durumla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Sadece yüzde bir oranında önemsiz bir artış yaratmaktadır",
+       "isCorrect": false,
+       "explanation": "Sadece yüzde bir oranında önemsiz bir artış yaratmaktadır kavramı psikiyatri pratiğinde farklı klinik tabloları veya tanısal süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen klinik durumla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Yalnızca altmış beş yaşından sonra riski artırmaktadır",
+       "isCorrect": false,
+       "explanation": "Yalnızca altmış beş yaşından sonra riski artırmaktadır kavramı psikiyatri pratiğinde farklı klinik tabloları veya tanısal süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen klinik durumla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      }
+     ]
+    },
+    {
+     "id": "k45-s13-e2",
+     "type": "spot_the_lie",
+     "topic": "Çocukluk Çağı Travmaları ve Risk",
+     "items": [
+      {
+       "text": "İntihara eğilimli bireylerin yüzde 10-40'ında çocukken fiziksel veya cinsel taciz öyküsü vardır.",
+       "isLie": false,
+       "explanation": "İntihara eğilimli bireylerin yüzde 10-40'ında çocukken fiziksel veya cinsel taciz öyküsü vardır. ifadesi psikiyatride intihar risk dinamiklerini doğru yansıtır. Klinik araştırmalar bu yaklaşımı desteklemektedir."
+      },
+      {
+       "text": "Çocukluk çağı travmaları intihar riskini 10 kat artıran bağımsız bir etkendir.",
+       "isLie": false,
+       "explanation": "Çocukluk çağı travmaları intihar riskini 10 kat artıran bağımsız bir etkendir. ifadesi psikiyatride intihar risk dinamiklerini doğru yansıtır. Klinik araştırmalar bu yaklaşımı desteklemektedir."
+      },
+      {
+       "text": "Erken yaştaki olumsuz olaylar yetişkinlik psikolojisini hiçbir şekilde etkilemez.",
+       "isLie": true,
+       "explanation": "Erken yaştaki olumsuz olaylar yetişkinlik psikolojisini hiçbir şekilde etkilemez. ifadesi bilimsel ve klinik gerçeklerle çelişmektedir. İntihar risk değerlendirmesinde bu yaklaşım gerçeğe aykırı bir algıdır."
+      }
+     ]
+    },
+    {
+     "id": "k45-s13-e3",
+     "type": "cloze_masking",
+     "sentence": "Çocukken cinsel ve fiziksel taciz öyküsü olması intihar için bağımsız risk etmeni olup 10 kat artış yaratır.",
+     "maskedTerm": "10 kat artış",
+     "hint": "Tıp eğitimi ve psikiyatri alanındaki temel kavramdır."
+    },
+    {
+     "id": "k45-s13-e4",
+     "type": "active_recall",
+     "question": "Çocukluk çağı fiziksel ve cinsel taciz öyküsü intihar riskini ne kadar artırır?",
+     "answer": "İntihara eğilimli bireylerin %10-40'ında görülür ve intihar riskini bağımsız olarak tam 10 kat artırır."
+    }
+   ],
+   "pdfSayfalari": [
+    18,
+    18
+   ],
+   "sourcePdf": {
+    "startPage": 18,
+    "endPage": 18
+   }
+  },
+  {
+   "id": "k2-45-d-s14",
+   "slideNumber": 14,
+   "title": "Psikiyatrik ve Tıbbi Hastalıkların Payı",
+   "bolum": "3",
+   "content": "İntihar mortalitesinde psikiyatrik hastalıkların ve kronik genel tıbbi durumların payı son derece büyüktür.\n\n- **Duygudurum Bozuklukları (%60):** Tamamlanmış intiharların yüzde altmışından majör depresyon ve bipolar bozukluk sorumludur.\n- **Alkol ve Madde Bağımlılığı (%25-50):** Olguların dörtte biri ile yarısında alkol veya madde kötüye kullanımı eşlik eder.\n- **Şizofreni ve Anksiyete (%10):** Şizofreni ve anksiyete bozukluklarının her biri intiharların yaklaşık yüzde onunda primer tanıdır.\n- **Genel Tıbbi Hastalıklar (%40):** İntihar girişiminde bulunanların yaklaşık yüzde kırkında (60 yaş üstünde %70) kanser, kronik böbrek yetmezliği, inme veya epilepsi gibi ağır tıbbi hastalıklar vardır.\n\n> [!NOTE]\n> İleri yaşta tıbbi hastalık birlikteliğinin yüzde yetmişe ulaşması, geriatrik suisidde fiziksel ıstırabın belirleyici rolünü gösterir.",
+   "synthesisNarrative": "İntihar mortalitesinde psikiyatrik hastalıkların ve kronik genel tıbbi durumların payı son derece büyüktür.\n\n- **Duygudurum Bozuklukları (%60):** Tamamlanmış intiharların yüzde altmışından majör depresyon ve bipolar bozukluk sorumludur.\n- **Alkol ve Madde Bağımlılığı (%25-50):** Olguların dörtte biri ile yarısında alkol veya madde kötüye kullanımı eşlik eder.\n- **Şizofreni ve Anksiyete (%10):** Şizofreni ve anksiyete bozukluklarının her biri intiharların yaklaşık yüzde onunda primer tanıdır.\n- **Genel Tıbbi Hastalıklar (%40):** İntihar girişiminde bulunanların yaklaşık yüzde kırkında (60 yaş üstünde %70) kanser, kronik böbrek yetmezliği, inme veya epilepsi gibi ağır tıbbi hastalıklar vardır.\n\n> [!NOTE]\n> İleri yaşta tıbbi hastalık birlikteliğinin yüzde yetmişe ulaşması, geriatrik suisidde fiziksel ıstırabın belirleyici rolünü gösterir.",
+   "interactiveElements": [
+    {
+     "id": "k45-s14-e1",
+     "type": "interactive_table",
+     "tableHeaders": [
+      "Hastalık Grubu",
+      "İntihardaki Payı / Oranı",
+      "Klinik Özellik"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Duygudurum Bozuklukları",
+         "isMasked": false,
+         "hint": ""
+        },
+        {
+         "text": "Tamamlanmış intiharların %60'ı",
+         "isMasked": false,
+         "hint": ""
+        },
+        {
+         "text": "Derin çökkünlük ve umutsuzluk temel mekanizmadır",
+         "isMasked": true,
+         "hint": "Klinik yaklaşımdaki kuramsal çerçevedir."
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Alkol ve Madde Bağımlılığı",
+         "isMasked": false,
+         "hint": ""
+        },
+        {
+         "text": "Olguların %25 - %50'si",
+         "isMasked": false,
+         "hint": ""
+        },
+        {
+         "text": "Dürtüselliği ve intihar araçlarına yönelimi artırır",
+         "isMasked": true,
+         "hint": "Tıp eğitimi ve psikiyatri alanındaki temel kavramdır."
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Tıbbi Hastalıklar (Kanser, KBY)",
+         "isMasked": false,
+         "hint": ""
+        },
+        {
+         "text": "Girişimlerin %40'ı (60 yaş üstü %70)",
+         "isMasked": false,
+         "hint": ""
+        },
+        {
+         "text": "Kronik ağrı ve yeti kaybı intihar isteğini tetikler",
+         "isMasked": true,
+         "hint": "Tıp eğitimi ve psikiyatri alanındaki temel kavramdır."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k45-s14-e2",
+     "type": "micro_quiz",
+     "question": "Tamamlanmış intiharların yaklaşık yüzde altmışından (%60) sorumlu olan psikiyatrik tanı kümesi hangisidir?",
+     "options": [
+      {
+       "text": "Duygudurum bozuklukları (majör depresyon ve bipolar bozukluk)",
+       "isCorrect": true,
+       "explanation": "Duygudurum bozuklukları (majör depresyon ve bipolar bozukluk) seçeneği intihar ve kendine zarar verme davranışlarını açıklayan temel klinik ve bilimsel yaklaşımı temsil eder. Bu ilke doğrultusunda soruda hedeflenen klinik mekanizma ve risk yönetimi eksiksiz olarak doğrulanmaktadır."
+      },
+      {
+       "text": "Geçici tırnak yeme ve parmak emme alışkanlığı",
+       "isCorrect": false,
+       "explanation": "Geçici tırnak yeme ve parmak emme alışkanlığı kavramı psikiyatri pratiğinde farklı klinik tabloları veya tanısal süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen klinik durumla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Basit yükseklik korkusu (akrofobi)",
+       "isCorrect": false,
+       "explanation": "Basit yükseklik korkusu (akrofobi) kavramı psikiyatri pratiğinde farklı klinik tabloları veya tanısal süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen klinik durumla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Hafif uyku apnesi sendromu",
+       "isCorrect": false,
+       "explanation": "Hafif uyku apnesi sendromu kavramı psikiyatri pratiğinde farklı klinik tabloları veya tanısal süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen klinik durumla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      }
+     ]
+    },
+    {
+     "id": "k45-s14-e3",
+     "type": "cloze_masking",
+     "sentence": "Tamamlanmış intiharlarda duygudurum bozukluğu yüzde altmış alkol madde kötüye kullanımı ise yüzde yirmi beş elli oranındadır.",
+     "maskedTerm": "yüzde altmış",
+     "hint": "Tıp eğitimi ve psikiyatri alanındaki temel kavramdır."
+    },
+    {
+     "id": "k45-s14-e4",
+     "type": "active_recall",
+     "question": "Tamamlanmış intiharlarda duygudurum bozukluklarının ve eşlik eden tıbbi hastalıkların oranları nedir?",
+     "answer": "Duygudurum bozuklukları %60 oranındadır; tıbbi hastalıklar ise girişimlerin %40'ında (60 yaş üstünde %70) mevcuttur."
+    }
+   ],
+   "pdfSayfalari": [
+    19,
+    20
+   ],
+   "sourcePdf": {
+    "startPage": 19,
+    "endPage": 20
+   }
+  },
+  {
+   "id": "k2-45-d-s15",
+   "slideNumber": 15,
+   "title": "Çevresel Etkenler, Sosyal Destek ve Ruhsal Muayene",
+   "bolum": "3",
+   "content": "Çevresel etkenler, sosyal desteğin düzeyi ve ruhsal durum muayenesindeki bulgular intihar riskini doğrudan modüle eder.\n\n- **Çevresel Etkenler:** Savaşlar, doğal afetler, akültürasyon (kültürsüzleşme), hapiste olma ve mahrumiyet bölgelerinde yaşamak riski katlar.\n- **Sosyal Destek:** Sosyal izolasyon ve yalnız yaşama intihar riskini belirgin artıran en kritik faktörlerdendir.\n- **Bilinç ve Uyanıklık Bozukluğu:** Dikkat ve farkındalığın bozulması, deliryum veya intoksikasyonlar yargılama yetisini yıkarak riski yükseltir.\n- **Motor ve Duygulanım Bulguları:** Psikomotor ajitasyon, akatizi, anhedoni, aşırı dürtüsellik, ani sükunet ve derin ümitsizlik acil risk işaretleridir.\n\n> [!IMPORTANT]\n> Depresif bir hastada haftalardır süren çökkünlüğün ardından aniden ortaya çıkan 'yapay sükunet', intihar kararının verildiği anlamına gelebilir.",
+   "synthesisNarrative": "Çevresel etkenler, sosyal desteğin düzeyi ve ruhsal durum muayenesindeki bulgular intihar riskini doğrudan modüle eder.\n\n- **Çevresel Etkenler:** Savaşlar, doğal afetler, akültürasyon (kültürsüzleşme), hapiste olma ve mahrumiyet bölgelerinde yaşamak riski katlar.\n- **Sosyal Destek:** Sosyal izolasyon ve yalnız yaşama intihar riskini belirgin artıran en kritik faktörlerdendir.\n- **Bilinç ve Uyanıklık Bozukluğu:** Dikkat ve farkındalığın bozulması, deliryum veya intoksikasyonlar yargılama yetisini yıkarak riski yükseltir.\n- **Motor ve Duygulanım Bulguları:** Psikomotor ajitasyon, akatizi, anhedoni, aşırı dürtüsellik, ani sükunet ve derin ümitsizlik acil risk işaretleridir.\n\n> [!IMPORTANT]\n> Depresif bir hastada haftalardır süren çökkünlüğün ardından aniden ortaya çıkan 'yapay sükunet', intihar kararının verildiği anlamına gelebilir.",
+   "interactiveElements": [
+    {
+     "id": "k45-s15-e1",
+     "type": "micro_quiz",
+     "question": "Ruhsal durum muayenesinde saptanan aşağıdaki bulgulardan hangisi intihar riskinin tırmandığını gösteren acil alarm bulgularından biridir?",
+     "options": [
+      {
+       "text": "Psikomotor aktivite artışı, motor huzursuzluk (akatizi/ajitasyon) ve ani sükunet",
+       "isCorrect": true,
+       "explanation": "Psikomotor aktivite artışı, motor huzursuzluk (akatizi/ajitasyon) ve ani sükunet seçeneği intihar ve kendine zarar verme davranışlarını açıklayan temel klinik ve bilimsel yaklaşımı temsil eder. Bu ilke doğrultusunda soruda hedeflenen klinik mekanizma ve risk yönetimi eksiksiz olarak doğrulanmaktadır."
+      },
+      {
+       "text": "Hastanın düzenli olarak akşamları ailesiyle akşam yemeği yemesi",
+       "isCorrect": false,
+       "explanation": "Hastanın düzenli olarak akşamları ailesiyle akşam yemeği yemesi kavramı psikiyatri pratiğinde farklı klinik tabloları veya tanısal süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen klinik durumla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Göz temasının canlı ve duygulanımın çevreyle tam uyumlu olması",
+       "isCorrect": false,
+       "explanation": "Göz temasının canlı ve duygulanımın çevreyle tam uyumlu olması kavramı psikiyatri pratiğinde farklı klinik tabloları veya tanısal süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen klinik durumla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Bireyin gelecekteki emeklilik planlarını heyecanla anlatması",
+       "isCorrect": false,
+       "explanation": "Bireyin gelecekteki emeklilik planlarını heyecanla anlatması kavramı psikiyatri pratiğinde farklı klinik tabloları veya tanısal süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen klinik durumla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      }
+     ]
+    },
+    {
+     "id": "k45-s15-e2",
+     "type": "spot_the_lie",
+     "topic": "Çevresel Etkenler ve Muayene Bulguları",
+     "items": [
+      {
+       "text": "Savaşlar, ayrımcılık ve hapiste olmak intihar riskini artıran çevresel etkenlerdir.",
+       "isLie": false,
+       "explanation": "Savaşlar, ayrımcılık ve hapiste olmak intihar riskini artıran çevresel etkenlerdir. ifadesi psikiyatride intihar risk dinamiklerini doğru yansıtır. Klinik araştırmalar bu yaklaşımı desteklemektedir."
+      },
+      {
+       "text": "Sosyal desteğin yetersizliği veya yalnız yaşamak riski belirgin biçimde yükseltir.",
+       "isLie": false,
+       "explanation": "Sosyal desteğin yetersizliği veya yalnız yaşamak riski belirgin biçimde yükseltir. ifadesi psikiyatride intihar risk dinamiklerini doğru yansıtır. Klinik araştırmalar bu yaklaşımı desteklemektedir."
+      },
+      {
+       "text": "Deliryum ve uyanıklık bozuklukları yargılama yetisini artırarak hastayı intihardan korur.",
+       "isLie": true,
+       "explanation": "Deliryum ve uyanıklık bozuklukları yargılama yetisini artırarak hastayı intihardan korur. ifadesi bilimsel ve klinik gerçeklerle çelişmektedir. İntihar risk değerlendirmesinde bu yaklaşım gerçeğe aykırı bir algıdır."
+      }
+     ]
+    },
+    {
+     "id": "k45-s15-e3",
+     "type": "cloze_masking",
+     "sentence": "Psikiyatrik muayenede saptanan dikkat ve farkındalığın bozulması ile psikomotor aktivite artışı intihar riskini artırabilir.",
+     "maskedTerm": "psikomotor aktivite artışı",
+     "hint": "Tıp eğitimi ve psikiyatri alanındaki temel kavramdır."
+    },
+    {
+     "id": "k45-s15-e4",
+     "type": "active_recall",
+     "question": "Ruhsal muayenede intihar riskini artıran başlıca bulgular nelerdir?",
+     "answer": "Uyanıklık/yargılama bozukluğu, psikomotor aktivite artışı (ajitasyon, akatizi), anhedoni, dürtüsellik, ani sükunet ve ümitsizlik."
+    }
+   ],
+   "pdfSayfalari": [
+    21,
+    23
+   ],
+   "sourcePdf": {
+    "startPage": 21,
+    "endPage": 23
+   }
+  },
+  {
+   "id": "k2-45-d-s16",
+   "slideNumber": 16,
+   "title": "İntiharda Koruyucu Faktörler ve Yaşama Nedenleri",
+   "bolum": "3",
+   "content": "Koruyucu etmenler, bireyin stres karşısındaki dayanıklılığını artırarak intihar davranışını ve riskini güçlü biçimde azaltır.\n\n- **Yaşamak İçin Bir Neden Olması:** Koruyucu etmenlerin en önemlisi ve en güçlüsü, kişinin yaşamını sürdürmesi için anlamlı bir nedeninin bulunmasıdır.\n- **Çocuk Sahibi Olmak:** Çocukların varlığı ve onlara karşı hissedilen ebeveynlik sorumluluğu güçlü bir yaşam bağı oluşturur.\n- **Sorun Çözme Becerileri:** Bireyin krizleri yönetme, stresle baş etme ve alternatif çözüm yolları arama kapasitesidir.\n- **Sosyal ve Manevi Destek:** Aile, arkadaş desteği ve inanç/kültürel değerler intihara karşı koruyucu bir kalkan vazifesi görür.\n\n> [!NOTE]\n> Klinik görüşmelerde sadece riskleri değil, hastanın yaşama nedenlerini ve koruyucu faktörlerini açığa çıkarmak hayat kurtarır.",
+   "synthesisNarrative": "Koruyucu etmenler, bireyin stres karşısındaki dayanıklılığını artırarak intihar davranışını ve riskini güçlü biçimde azaltır.\n\n- **Yaşamak İçin Bir Neden Olması:** Koruyucu etmenlerin en önemlisi ve en güçlüsü, kişinin yaşamını sürdürmesi için anlamlı bir nedeninin bulunmasıdır.\n- **Çocuk Sahibi Olmak:** Çocukların varlığı ve onlara karşı hissedilen ebeveynlik sorumluluğu güçlü bir yaşam bağı oluşturur.\n- **Sorun Çözme Becerileri:** Bireyin krizleri yönetme, stresle baş etme ve alternatif çözüm yolları arama kapasitesidir.\n- **Sosyal ve Manevi Destek:** Aile, arkadaş desteği ve inanç/kültürel değerler intihara karşı koruyucu bir kalkan vazifesi görür.\n\n> [!NOTE]\n> Klinik görüşmelerde sadece riskleri değil, hastanın yaşama nedenlerini ve koruyucu faktörlerini açığa çıkarmak hayat kurtarır.",
+   "interactiveElements": [
+    {
+     "id": "k45-s16-e1",
+     "type": "micro_quiz",
+     "question": "Ders notlarına göre intihar riskine karşı tanımlanan koruyucu etmenler arasında 'en önemlisi' olarak vurgulanan unsur hangisidir?",
+     "options": [
+      {
+       "text": "Kişinin yaşamak için anlamlı bir nedeninin bulunması",
+       "isCorrect": true,
+       "explanation": "Kişinin yaşamak için anlamlı bir nedeninin bulunması seçeneği intihar ve kendine zarar verme davranışlarını açıklayan temel klinik ve bilimsel yaklaşımı temsil eder. Bu ilke doğrultusunda soruda hedeflenen klinik mekanizma ve risk yönetimi eksiksiz olarak doğrulanmaktadır."
+      },
+      {
+       "text": "Banka hesabında yüklü miktarda yabancı para bulunması",
+       "isCorrect": false,
+       "explanation": "Banka hesabında yüklü miktarda yabancı para bulunması kavramı psikiyatri pratiğinde farklı klinik tabloları veya tanısal süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen klinik durumla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Hiçbir hekime veya psikiyatri uzmanına güvenmemesi",
+       "isCorrect": false,
+       "explanation": "Hiçbir hekime veya psikiyatri uzmanına güvenmemesi kavramı psikiyatri pratiğinde farklı klinik tabloları veya tanısal süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen klinik durumla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Tüm sosyal ilişkilerini sonlandırıp tamamen izole yaşaması",
+       "isCorrect": false,
+       "explanation": "Tüm sosyal ilişkilerini sonlandırıp tamamen izole yaşaması kavramı psikiyatri pratiğinde farklı klinik tabloları veya tanısal süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen klinik durumla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      }
+     ]
+    },
+    {
+     "id": "k45-s16-e2",
+     "type": "spot_the_lie",
+     "topic": "İntiharda Koruyucu Faktörler",
+     "items": [
+      {
+       "text": "Çocuk sahibi olmak ve ailevi sorumluluklar intihar riskini anlamlı derecede azaltır.",
+       "isLie": false,
+       "explanation": "Çocuk sahibi olmak ve ailevi sorumluluklar intihar riskini anlamlı derecede azaltır. ifadesi psikiyatride intihar risk dinamiklerini doğru yansıtır. Klinik araştırmalar bu yaklaşımı desteklemektedir."
+      },
+      {
+       "text": "Etkin sorun çözme ve stres yönetimi becerileri intihar davranışını önler.",
+       "isLie": false,
+       "explanation": "Etkin sorun çözme ve stres yönetimi becerileri intihar davranışını önler. ifadesi psikiyatride intihar risk dinamiklerini doğru yansıtır. Klinik araştırmalar bu yaklaşımı desteklemektedir."
+      },
+      {
+       "text": "Yaşamak için bir nedeni olmak intihar riskini daima artıran tehlikeli bir durumdur.",
+       "isLie": true,
+       "explanation": "Yaşamak için bir nedeni olmak intihar riskini daima artıran tehlikeli bir durumdur. ifadesi bilimsel ve klinik gerçeklerle çelişmektedir. İntihar risk değerlendirmesinde bu yaklaşım gerçeğe aykırı bir algıdır."
+      }
+     ]
+    },
+    {
+     "id": "k45-s16-e3",
+     "type": "cloze_masking",
+     "sentence": "İntiharda en önemli koruyucu etmen kişinin yaşamak için bir nedeninin olması ve çocuk sahibi olmaktır.",
+     "maskedTerm": "yaşamak için bir nedeninin olması",
+     "hint": "Tıp eğitimi ve psikiyatri alanındaki temel kavramdır."
+    },
+    {
+     "id": "k45-s16-e4",
+     "type": "active_recall",
+     "question": "İntihardan koruyucu başlıca faktörler nelerdir?",
+     "answer": "Yaşamak için bir nedeninin olması (en önemlisi!), çocuk sahibi olmak, sorun çözme becerileri, sosyal destek ve manevi/kültürel değerler."
+    }
+   ],
+   "pdfSayfalari": [
+    24,
+    24
+   ],
+   "sourcePdf": {
+    "startPage": 24,
+    "endPage": 24
+   }
+  },
+  {
+   "id": "k2-45-d-s17",
+   "slideNumber": 17,
+   "title": "[TEKRAR SAYFASI - CHECKPOINT 3] Biyolojik Temeller ve Koruyucu Faktörler",
+   "bolum": "3",
+   "content": "Bu tekrar sayfasında geçmiş girişim öyküsü, çocukluk çağı travmaları, psikiyatrik/tıbbi komorbidite ve koruyucu etmenler pekiştirilmektedir.\n\n- **Geçmiş Girişim:** En güçlü bağımsız öngörücüdür; tamamlanmış intiharların %50'sinde geçmiş girişim vardır (%25'i önceki yıl).\n- **Ağır Travmalar:** Çocukluk çağı fiziksel ve cinsel taciz öyküsü intihar riskini bağımsız olarak tam 10 kat artırır.\n- **Komorbidite:** Duygudurum bozuklukları %60, madde bağımlılığı %25-50; tıbbi hastalıklar ise olguların %40'ında (yaşlıda %70) bulunur.\n- **Koruyucu Kalkan:** Yaşamak için bir nedenin olması (en kritik faktör), çocuk sahibi olmak ve sorun çözme becerileridir.\n\n> [!NOTE]\n> Risk faktörleri ile koruyucu faktörler arasındaki terazi, hekimin yatış ve tedavi kararındaki en önemli pusuladır.",
+   "synthesisNarrative": "Bu tekrar sayfasında geçmiş girişim öyküsü, çocukluk çağı travmaları, psikiyatrik/tıbbi komorbidite ve koruyucu etmenler pekiştirilmektedir.\n\n- **Geçmiş Girişim:** En güçlü bağımsız öngörücüdür; tamamlanmış intiharların %50'sinde geçmiş girişim vardır (%25'i önceki yıl).\n- **Ağır Travmalar:** Çocukluk çağı fiziksel ve cinsel taciz öyküsü intihar riskini bağımsız olarak tam 10 kat artırır.\n- **Komorbidite:** Duygudurum bozuklukları %60, madde bağımlılığı %25-50; tıbbi hastalıklar ise olguların %40'ında (yaşlıda %70) bulunur.\n- **Koruyucu Kalkan:** Yaşamak için bir nedenin olması (en kritik faktör), çocuk sahibi olmak ve sorun çözme becerileridir.\n\n> [!NOTE]\n> Risk faktörleri ile koruyucu faktörler arasındaki terazi, hekimin yatış ve tedavi kararındaki en önemli pusuladır.",
+   "interactiveElements": [
+    {
+     "id": "k45-s17-e1",
+     "type": "micro_quiz",
+     "question": "Aşağıdakilerden hangisi intihar riski açısından 'koruyucu bir faktör' olarak değerlendirilir?",
+     "options": [
+      {
+       "text": "Bireyin çocuk sahibi olması ve yaşamak için güçlü bir nedeninin bulunması",
+       "isCorrect": true,
+       "explanation": "Bireyin çocuk sahibi olması ve yaşamak için güçlü bir nedeninin bulunması seçeneği intihar ve kendine zarar verme davranışlarını açıklayan temel klinik ve bilimsel yaklaşımı temsil eder. Bu ilke doğrultusunda soruda hedeflenen klinik mekanizma ve risk yönetimi eksiksiz olarak doğrulanmaktadır."
+      },
+      {
+       "text": "Geçmişte birden fazla ölümcül intihar girişiminde bulunmuş olmak",
+       "isCorrect": false,
+       "explanation": "Geçmişte birden fazla ölümcül intihar girişiminde bulunmuş olmak kavramı psikiyatri pratiğinde farklı klinik tabloları veya tanısal süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen klinik durumla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Çocukluk döneminde ağır fiziksel ve cinsel istismara uğramış olmak",
+       "isCorrect": false,
+       "explanation": "Çocukluk döneminde ağır fiziksel ve cinsel istismara uğramış olmak kavramı psikiyatri pratiğinde farklı klinik tabloları veya tanısal süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen klinik durumla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Bireyin ailesinden ve tüm sosyal çevresinden tamamen koparak tecrit olması",
+       "isCorrect": false,
+       "explanation": "Bireyin ailesinden ve tüm sosyal çevresinden tamamen koparak tecrit olması kavramı psikiyatri pratiğinde farklı klinik tabloları veya tanısal süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen klinik durumla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      }
+     ]
+    },
+    {
+     "id": "k45-s17-e2",
+     "type": "swipe_matching",
+     "leftCategory": "Majör Risk Faktörü",
+     "rightCategory": "Majör Koruyucu Faktör",
+     "cards": [
+      {
+       "text": "Geçmişte intihar girişiminde bulunmuş olma öyküsü",
+       "category": "left",
+       "explanation": "Geçmişte intihar girişiminde bulunmuş olma öyküsü kavramı ilgili klinik kategori altında değerlendirilen temel unsurdur. Psikiyatri pratiğinde bu eşleme risk yönetimi açısından kritik önem taşır."
+      },
+      {
+       "text": "Çocukluk çağı cinsel ve fiziksel taciz öyküsü (10 kat risk)",
+       "category": "left",
+       "explanation": "Çocukluk çağı cinsel ve fiziksel taciz öyküsü (10 kat risk) kavramı ilgili klinik kategori altında değerlendirilen temel unsurdur. Psikiyatri pratiğinde bu eşleme risk yönetimi açısından kritik önem taşır."
+      },
+      {
+       "text": "Kişinin yaşamak için anlamlı bir nedeninin olması",
+       "category": "right",
+       "explanation": "Kişinin yaşamak için anlamlı bir nedeninin olması kavramı ilgili klinik kategori altında değerlendirilen temel unsurdur. Psikiyatri pratiğinde bu eşleme risk yönetimi açısından kritik önem taşır."
+      },
+      {
+       "text": "Çocuk sahibi olmak ve güçlü aile bağlarına sahip olma",
+       "category": "right",
+       "explanation": "Çocuk sahibi olmak ve güçlü aile bağlarına sahip olma kavramı ilgili klinik kategori altında değerlendirilen temel unsurdur. Psikiyatri pratiğinde bu eşleme risk yönetimi açısından kritik önem taşır."
+      }
+     ]
+    },
+    {
+     "id": "k45-s17-e3",
+     "type": "spot_the_lie",
+     "topic": "Bölüm 3 Tekrar Özeti",
+     "items": [
+      {
+       "text": "Duygudurum bozuklukları tamamlanmış intiharların yaklaşık yüzde altmışından sorumludur.",
+       "isLie": false,
+       "explanation": "Duygudurum bozuklukları tamamlanmış intiharların yaklaşık yüzde altmışından sorumludur. ifadesi psikiyatride intihar risk dinamiklerini doğru yansıtır. Klinik araştırmalar bu yaklaşımı desteklemektedir."
+      },
+      {
+       "text": "Narsisistik zedelenme ve aşağılanma hissi utanç intiharlarını tetikleyebilir.",
+       "isLie": false,
+       "explanation": "Narsisistik zedelenme ve aşağılanma hissi utanç intiharlarını tetikleyebilir. ifadesi psikiyatride intihar risk dinamiklerini doğru yansıtır. Klinik araştırmalar bu yaklaşımı desteklemektedir."
+      },
+      {
+       "text": "Tamamlanmış intiharlarda geçmiş girişim öyküsü bulunma oranı yüzde sıfırdır.",
+       "isLie": true,
+       "explanation": "Tamamlanmış intiharlarda geçmiş girişim öyküsü bulunma oranı yüzde sıfırdır. ifadesi bilimsel ve klinik gerçeklerle çelişmektedir. İntihar risk değerlendirmesinde bu yaklaşım gerçeğe aykırı bir algıdır."
+      }
+     ]
+    },
+    {
+     "id": "k45-s17-e4",
+     "type": "active_recall",
+     "question": "Bölüm 3'te öğrenilen en kritik risk ve koruyucu faktör hangileridir?",
+     "answer": "En kritik risk: Geçmiş intihar girişimi (%50) ve çocukluk istismarı (10 kat). En kritik koruyucu: Yaşamak için bir nedenin olması ve çocuk sahibi olmak."
+    }
+   ],
+   "isCheckpoint": true
+  },
+  {
+   "id": "k2-45-d-s18",
+   "slideNumber": 18,
+   "title": "Acil Görüşme ve Açık Sorgulama İlkesi",
+   "bolum": "4",
+   "content": "İntihar riski taşıyan hastayla iletişim kurarken yargılayıcı olmayan, sakin ve doğrudan bir tutum sergilenmelidir.\n\n- **İletişim İlkeleri:** Sakin, yargılamayan ve empatik bir yaklaşım kurulmalı; intihar hakkında genelden özele doğru aşamalı konuşulmalıdır.\n- **Aşamalı Sorgulama:** Ölmüş olmayı istedi mi? İntihar düşüncesi var mı? Planı var mı? Ayrıntıları ve geçmiş girişimi neler?\n- **Yaygın Mitin Çürütülmesi:** İntihar hakkında konuşmak veya sorular sormak riski kesinlikle artırmaz!\n- **Duygusal Rahatlama:** İntiharı hiç düşünmeyen birinin aklına bu fikri sokmaz; intihara eğilimli kişiye ise duygularını güvenle paylaşma olanağı sunarak rahatlatır.\n\n> [!IMPORTANT]\n> Hekimin intiharı açıkça ve çekinmeden sorması, hastaya anlaşıldığı hissini veren ve hayat kurtaran en önemli klinik müdahaledir.",
+   "synthesisNarrative": "İntihar riski taşıyan hastayla iletişim kurarken yargılayıcı olmayan, sakin ve doğrudan bir tutum sergilenmelidir.\n\n- **İletişim İlkeleri:** Sakin, yargılamayan ve empatik bir yaklaşım kurulmalı; intihar hakkında genelden özele doğru aşamalı konuşulmalıdır.\n- **Aşamalı Sorgulama:** Ölmüş olmayı istedi mi? İntihar düşüncesi var mı? Planı var mı? Ayrıntıları ve geçmiş girişimi neler?\n- **Yaygın Mitin Çürütülmesi:** İntihar hakkında konuşmak veya sorular sormak riski kesinlikle artırmaz!\n- **Duygusal Rahatlama:** İntiharı hiç düşünmeyen birinin aklına bu fikri sokmaz; intihara eğilimli kişiye ise duygularını güvenle paylaşma olanağı sunarak rahatlatır.\n\n> [!IMPORTANT]\n> Hekimin intiharı açıkça ve çekinmeden sorması, hastaya anlaşıldığı hissini veren ve hayat kurtaran en önemli klinik müdahaledir.",
+   "interactiveElements": [
+    {
+     "id": "k45-s18-e1",
+     "type": "micro_quiz",
+     "question": "Klinik pratikte hekimin hastaya intihar düşünceleri hakkında doğrudan sorular sormasıyla ilgili tıbbi gerçek hangisidir?",
+     "options": [
+      {
+       "text": "İntiharı sormak riski artırmaz; aksine hastanın duygularını paylaşarak rahatlamasını ve yardım almasını sağlar",
+       "isCorrect": true,
+       "explanation": "İntiharı sormak riski artırmaz; aksine hastanın duygularını paylaşarak rahatlamasını ve yardım almasını sağlar seçeneği intihar ve kendine zarar verme davranışlarını açıklayan temel klinik ve bilimsel yaklaşımı temsil eder. Bu ilke doğrultusunda soruda hedeflenen klinik mekanizma ve risk yönetimi eksiksiz olarak doğrulanmaktadır."
+      },
+      {
+       "text": "İntiharı hiç düşünmeyen hastaların aklına bu fikri sokarak intihar girişimini tetikler",
+       "isCorrect": false,
+       "explanation": "İntiharı hiç düşünmeyen hastaların aklına bu fikri sokarak intihar girişimini tetikler kavramı psikiyatri pratiğinde farklı klinik tabloları veya tanısal süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen klinik durumla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Yalnızca adli tıp uzmanları tarafından ve mahkeme huzurunda sorulmalıdır",
+       "isCorrect": false,
+       "explanation": "Yalnızca adli tıp uzmanları tarafından ve mahkeme huzurunda sorulmalıdır kavramı psikiyatri pratiğinde farklı klinik tabloları veya tanısal süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen klinik durumla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Hastanın hekime dava açmasına yol açan yasal bir kusur oluşturur",
+       "isCorrect": false,
+       "explanation": "Hastanın hekime dava açmasına yol açan yasal bir kusur oluşturur kavramı psikiyatri pratiğinde farklı klinik tabloları veya tanısal süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen klinik durumla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      }
+     ]
+    },
+    {
+     "id": "k45-s18-e2",
+     "type": "spot_the_lie",
+     "topic": "Değerlendirmede Genel İlkeler",
+     "items": [
+      {
+       "text": "Hastayla ilişki kurulurken sakin, yargılamayan ve empatik bir yaklaşım esastır.",
+       "isLie": false,
+       "explanation": "Hastayla ilişki kurulurken sakin, yargılamayan ve empatik bir yaklaşım esastır. ifadesi psikiyatride intihar risk dinamiklerini doğru yansıtır. Klinik araştırmalar bu yaklaşımı desteklemektedir."
+      },
+      {
+       "text": "İntihar hakkında konuşmak ya da soru sormaktan asla kaçınılmamalıdır.",
+       "isLie": false,
+       "explanation": "İntihar hakkında konuşmak ya da soru sormaktan asla kaçınılmamalıdır. ifadesi psikiyatride intihar risk dinamiklerini doğru yansıtır. Klinik araştırmalar bu yaklaşımı desteklemektedir."
+      },
+      {
+       "text": "İntihar düşüncesi olan hastaya derhal kızılmalı ve ahlaki nutuk çekilmelidir.",
+       "isLie": true,
+       "explanation": "İntihar düşüncesi olan hastaya derhal kızılmalı ve ahlaki nutuk çekilmelidir. ifadesi bilimsel ve klinik gerçeklerle çelişmektedir. İntihar risk değerlendirmesinde bu yaklaşım gerçeğe aykırı bir algıdır."
+      }
+     ]
+    },
+    {
+     "id": "k45-s18-e3",
+     "type": "cloze_masking",
+     "sentence": "Klinik değerlendirmede intihar hakkında konuşmak ya da sorular sormaktan kaçınmamalı çünkü bu tutum riski arttırmaz.",
+     "maskedTerm": "sorular sormaktan kaçınmamalı",
+     "hint": "Tıp eğitimi ve psikiyatri alanındaki temel kavramdır."
+    },
+    {
+     "id": "k45-s18-e4",
+     "type": "active_recall",
+     "question": "İntiharı açıkça konuşmak hastayı nasıl etkiler?",
+     "answer": "Riski artırmaz; aklına intihar sokmaz; duygularını rahatça paylaşmasını sağlayarak rahatlatır ve hayat kurtarır."
+    }
+   ],
+   "pdfSayfalari": [
+    25,
+    26
+   ],
+   "sourcePdf": {
+    "startPage": 25,
+    "endPage": 26
+   }
+  },
+  {
+   "id": "k2-45-d-s19",
+   "slideNumber": 19,
+   "title": "Güvenlik Önlemleri ve Yatış Endikasyonları",
+   "bolum": "4",
+   "content": "İntihar riski yüksek olan veya girişimde bulunan olgularda güvenlik adımları ve hastaneye yatış kararı gecikmeksizin uygulanmalıdır.\n\n- **Öncelikli Tıbbi Müdahale:** İntihar girişiminde bulunmuş olguda önce yaşamsal fonksiyonlar stabilize edilir ve cerrahi/dahili müdahale yapılır.\n- **Çevresel Güvenliğin Sağlanması:** Kişinin ölümcül araçlara ulaşılabilirliği derhal sınırlandırılmalıdır (ilaçlar, silahlar, kesici nesneler ortamdan kaldırılır).\n- **Yatış Endikasyonları:** İntihar riski yüksekse, ölümcül plan varsa, psikotik belirtiler eşlik ediyorsa veya hasta yalnız yaşayıp sosyal desteği yetersizse derhal yatırılır.\n- **Taburculukta Yeniden Değerlendirme:** Tedavi sonrasında hasta taburcu edilirken intihar riski mutlaka yeniden kapsamlı olarak değerlendirilmelidir.\n\n> [!IMPORTANT]\n> İntihar riski taşıyan hasta acil serviste veya klinikte bir saniye bile refakatsiz ve yalnız bırakılmamalıdır.",
+   "synthesisNarrative": "İntihar riski yüksek olan veya girişimde bulunan olgularda güvenlik adımları ve hastaneye yatış kararı gecikmeksizin uygulanmalıdır.\n\n- **Öncelikli Tıbbi Müdahale:** İntihar girişiminde bulunmuş olguda önce yaşamsal fonksiyonlar stabilize edilir ve cerrahi/dahili müdahale yapılır.\n- **Çevresel Güvenliğin Sağlanması:** Kişinin ölümcül araçlara ulaşılabilirliği derhal sınırlandırılmalıdır (ilaçlar, silahlar, kesici nesneler ortamdan kaldırılır).\n- **Yatış Endikasyonları:** İntihar riski yüksekse, ölümcül plan varsa, psikotik belirtiler eşlik ediyorsa veya hasta yalnız yaşayıp sosyal desteği yetersizse derhal yatırılır.\n- **Taburculukta Yeniden Değerlendirme:** Tedavi sonrasında hasta taburcu edilirken intihar riski mutlaka yeniden kapsamlı olarak değerlendirilmelidir.\n\n> [!IMPORTANT]\n> İntihar riski taşıyan hasta acil serviste veya klinikte bir saniye bile refakatsiz ve yalnız bırakılmamalıdır.",
+   "interactiveElements": [
+    {
+     "id": "k45-s19-e1",
+     "type": "micro_quiz",
+     "question": "Aşağıdaki klinik durumlardan hangisinde psikiyatri servisine acil yatış mutlak bir endikasyondur?",
+     "options": [
+      {
+       "text": "Yüksek ölümcüllükte intihar planı, psikotik belirtiler ve yetersiz sosyal destek varlığı",
+       "isCorrect": true,
+       "explanation": "Yüksek ölümcüllükte intihar planı, psikotik belirtiler ve yetersiz sosyal destek varlığı seçeneği intihar ve kendine zarar verme davranışlarını açıklayan temel klinik ve bilimsel yaklaşımı temsil eder. Bu ilke doğrultusunda soruda hedeflenen klinik mekanizma ve risk yönetimi eksiksiz olarak doğrulanmaktadır."
+      },
+      {
+       "text": "Hafif sınav kaygısı yaşayan ve ailesiyle birlikte yaşayan üniversite öğrencisi",
+       "isCorrect": false,
+       "explanation": "Hafif sınav kaygısı yaşayan ve ailesiyle birlikte yaşayan üniversite öğrencisi kavramı psikiyatri pratiğinde farklı klinik tabloları veya tanısal süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen klinik durumla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Yalnızca hafif düzeyde tırnak yeme alışkanlığı olan yetişkin birey",
+       "isCorrect": false,
+       "explanation": "Yalnızca hafif düzeyde tırnak yeme alışkanlığı olan yetişkin birey kavramı psikiyatri pratiğinde farklı klinik tabloları veya tanısal süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen klinik durumla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Monoton işinden sıkılıp yeni bir hobi arayışına giren memur",
+       "isCorrect": false,
+       "explanation": "Monoton işinden sıkılıp yeni bir hobi arayışına giren memur kavramı psikiyatri pratiğinde farklı klinik tabloları veya tanısal süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen klinik durumla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      }
+     ]
+    },
+    {
+     "id": "k45-s19-e2",
+     "type": "spot_the_lie",
+     "topic": "Acil Güvenlik ve Yatış Endikasyonları",
+     "items": [
+      {
+       "text": "İntihar riski olan hastanın kesici alet, silah ve ilaçlara erişimi derhal kesilmelidir.",
+       "isLie": false,
+       "explanation": "İntihar riski olan hastanın kesici alet, silah ve ilaçlara erişimi derhal kesilmelidir. ifadesi psikiyatride intihar risk dinamiklerini doğru yansıtır. Klinik araştırmalar bu yaklaşımı desteklemektedir."
+      },
+      {
+       "text": "Tedavi sonrasında hasta taburcu edilirken intihar riski mutlaka yeniden değerlendirilmelidir.",
+       "isLie": false,
+       "explanation": "Tedavi sonrasında hasta taburcu edilirken intihar riski mutlaka yeniden değerlendirilmelidir. ifadesi psikiyatride intihar risk dinamiklerini doğru yansıtır. Klinik araştırmalar bu yaklaşımı desteklemektedir."
+      },
+      {
+       "text": "İntihar girişimi sonrası hastayı odada tek başına bırakıp kapıyı kilitlemek yeterlidir.",
+       "isLie": true,
+       "explanation": "İntihar girişimi sonrası hastayı odada tek başına bırakıp kapıyı kilitlemek yeterlidir. ifadesi bilimsel ve klinik gerçeklerle çelişmektedir. İntihar risk değerlendirmesinde bu yaklaşım gerçeğe aykırı bir algıdır."
+      }
+     ]
+    },
+    {
+     "id": "k45-s19-e3",
+     "type": "cloze_masking",
+     "sentence": "İntihar riski yüksekse güvenlik sağlanmalı ölümcül araçlar sınırlandırılmalı ve gerektiğinde hastaneye yatırılır.",
+     "maskedTerm": "hastaneye yatırılır",
+     "hint": "Tıp eğitimi ve psikiyatri alanındaki temel kavramdır."
+    },
+    {
+     "id": "k45-s19-e4",
+     "type": "active_recall",
+     "question": "İntiharda psikiyatri servisine yatışın 3 temel endikasyonu nedir?",
+     "answer": "1. Yüksek ölümcüllükte intihar planı, 2. Psikotik belirtilerin varlığı, 3. Yalnız yaşama ve sosyal destek yetersizliği."
+    }
+   ],
+   "pdfSayfalari": [
+    27,
+    27
+   ],
+   "sourcePdf": {
+    "startPage": 27,
+    "endPage": 27
+   }
+  },
+  {
+   "id": "k2-45-d-s20",
+   "slideNumber": 20,
+   "title": "Farmakoterapi (Lityum), BDT ve EKT",
+   "bolum": "4",
+   "content": "İntihar riskinin yönetiminde farmakoterapi, kanıta dayalı psikoterapiler ve elektrokonvülsif terapi (EKT) birlikte düşünülür.\n\n- **Lityumun Kanıtlanmış Gücü:** Duygudurum bozukluklarında intihar riskini ve suisidal mortaliteyi istatistiki olarak anlamlı düzeyde azalttığı kanıtlanmış temel ajandır.\n- **Etiyolojiye Yönelik Tedavi:** Altta yatan majör depresyon, psikoz veya anksiyetenin uygun farmakolojik ajanlarla hızla kontrol altına alınmasıdır.\n- **Psikoterapötik Müdahaleler:** Bilişsel Davranışçı Terapi (BDT) ve sorun çözme terapileri, olumsuz otomatik düşünceleri yapılandırarak kriz nükslerini önler.\n- **Elektrokonvülsif Terapi (EKT):** Yüksek intihar riski taşıyan, psikotik veya tedaviye dirençli ağır depresyon olgularında hayat kurtarıcı acil biyolojik müdahaledir.\n\n> [!IMPORTANT]\n> Lityum, psikiyatride intihar riskini doğrudan azaltma endikasyonuna sahip en güçlü ve en köklü farmakolojik ajandır.",
+   "synthesisNarrative": "İntihar riskinin yönetiminde farmakoterapi, kanıta dayalı psikoterapiler ve elektrokonvülsif terapi (EKT) birlikte düşünülür.\n\n- **Lityumun Kanıtlanmış Gücü:** Duygudurum bozukluklarında intihar riskini ve suisidal mortaliteyi istatistiki olarak anlamlı düzeyde azalttığı kanıtlanmış temel ajandır.\n- **Etiyolojiye Yönelik Tedavi:** Altta yatan majör depresyon, psikoz veya anksiyetenin uygun farmakolojik ajanlarla hızla kontrol altına alınmasıdır.\n- **Psikoterapötik Müdahaleler:** Bilişsel Davranışçı Terapi (BDT) ve sorun çözme terapileri, olumsuz otomatik düşünceleri yapılandırarak kriz nükslerini önler.\n- **Elektrokonvülsif Terapi (EKT):** Yüksek intihar riski taşıyan, psikotik veya tedaviye dirençli ağır depresyon olgularında hayat kurtarıcı acil biyolojik müdahaledir.\n\n> [!IMPORTANT]\n> Lityum, psikiyatride intihar riskini doğrudan azaltma endikasyonuna sahip en güçlü ve en köklü farmakolojik ajandır.",
+   "interactiveElements": [
+    {
+     "id": "k45-s20-e1",
+     "type": "swipe_matching",
+     "leftCategory": "Farmakoterapi / Biyolojik Tedavi",
+     "rightCategory": "Psikoterapi Müdahalesi",
+     "cards": [
+      {
+       "text": "İntihar riskini kanıtlanmış olarak azaltan Lityum",
+       "category": "left",
+       "explanation": "İntihar riskini kanıtlanmış olarak azaltan Lityum kavramı ilgili klinik kategori altında değerlendirilen temel unsurdur. Psikiyatri pratiğinde bu eşleme risk yönetimi açısından kritik önem taşır."
+      },
+      {
+       "text": "Acil ve hayat kurtarıcı Elektrokonvülsif Terapi (EKT)",
+       "category": "left",
+       "explanation": "Acil ve hayat kurtarıcı Elektrokonvülsif Terapi (EKT) kavramı ilgili klinik kategori altında değerlendirilen temel unsurdur. Psikiyatri pratiğinde bu eşleme risk yönetimi açısından kritik önem taşır."
+      },
+      {
+       "text": "Bilişsel Davranışçı Terapi (BDT) seansları",
+       "category": "right",
+       "explanation": "Bilişsel Davranışçı Terapi (BDT) seansları kavramı ilgili klinik kategori altında değerlendirilen temel unsurdur. Psikiyatri pratiğinde bu eşleme risk yönetimi açısından kritik önem taşır."
+      },
+      {
+       "text": "Sorun çözme becerilerini geliştiren terapötik destek",
+       "category": "right",
+       "explanation": "Sorun çözme becerilerini geliştiren terapötik destek kavramı ilgili klinik kategori altında değerlendirilen temel unsurdur. Psikiyatri pratiğinde bu eşleme risk yönetimi açısından kritik önem taşır."
+      }
+     ]
+    },
+    {
+     "id": "k45-s20-e2",
+     "type": "micro_quiz",
+     "question": "Duygudurum bozukluğu olan hastalarda intihar riskini ve mortaliteyi anlamlı derecede azalttığı kanıtlanmış temel farmakolojik ajan hangisidir?",
+     "options": [
+      {
+       "text": "Lityum",
+       "isCorrect": true,
+       "explanation": "Lityum seçeneği intihar ve kendine zarar verme davranışlarını açıklayan temel klinik ve bilimsel yaklaşımı temsil eder. Bu ilke doğrultusunda soruda hedeflenen klinik mekanizma ve risk yönetimi eksiksiz olarak doğrulanmaktadır."
+      },
+      {
+       "text": "Vitamin C takviyesi",
+       "isCorrect": false,
+       "explanation": "Vitamin C takviyesi kavramı psikiyatri pratiğinde farklı klinik tabloları veya tanısal süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen klinik durumla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Parasetamol",
+       "isCorrect": false,
+       "explanation": "Parasetamol kavramı psikiyatri pratiğinde farklı klinik tabloları veya tanısal süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen klinik durumla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Düşük doz penisilin",
+       "isCorrect": false,
+       "explanation": "Düşük doz penisilin kavramı psikiyatri pratiğinde farklı klinik tabloları veya tanısal süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen klinik durumla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      }
+     ]
+    },
+    {
+     "id": "k45-s20-e3",
+     "type": "cloze_masking",
+     "sentence": "İntihar tedavisinde etyolojiye yönelik farmakoterapi kapsamında lityum ve acil durumlarda EKT uygulanır.",
+     "maskedTerm": "lityum",
+     "hint": "Tıp eğitimi ve psikiyatri alanındaki temel kavramdır."
+    },
+    {
+     "id": "k45-s20-e4",
+     "type": "active_recall",
+     "question": "İntihar tedavisinde kullanılan temel biyolojik ve psikoterapötik yaklaşımlar nelerdir?",
+     "answer": "Biyolojik: Lityum, etyolojik farmakoterapi, EKT. Psikoterapötik: Bilişsel Davranışçı Terapi (BDT) ve Sorun çözme terapileri."
+    }
+   ],
+   "pdfSayfalari": [
+    28,
+    28
+   ],
+   "sourcePdf": {
+    "startPage": 28,
+    "endPage": 28
+   }
+  },
+  {
+   "id": "k2-45-d-s21",
+   "slideNumber": 21,
+   "title": "Biyopsikososyal Yaklaşım ve Ayırıcı Tanıya Giriş",
+   "bolum": "4",
+   "content": "İntihar tek boyutlu bir sorun olmayıp çok boyutlu biyopsikososyal bir klinik durum olarak ele alınmalıdır.\n\n- **Biyopsikososyal Bütünlük:** İntihar biyolojik yatkınlık, psikolojik çatışmalar, sosyal krizler ve çevresel faktörlerin kesişiminde doğar.\n- **Erken Tanı ve Uygun Tedavi:** En iyi klinik yaklaşım erken tanı koymak, uygun tedaviyi vakit kaybetmeden başlatmak ve yakın izlem sağlamaktır.\n- **Kendine Zarar Verme Ayrımına Giriş:** Klinisyen intihar ile ölüm niyeti taşımayan kendine zarar verme davranışlarını (self-injury) birbirinden net biçimde ayırmalıdır.\n- **Terminoloji:** Literatürde 'self-injury', 'self-mutilation' ve 'self-harm' kavramları kişinin kendi bedenine doğrudan zarar verici girişimlerini ifade eder.\n\n> [!NOTE]\n> Başarılı bir klinik yönetim, intihar riski ile ölüm amacı gütmeyen kendine zarar verme davranışlarının ayırıcı tanısıyla başlar.",
+   "synthesisNarrative": "İntihar tek boyutlu bir sorun olmayıp çok boyutlu biyopsikososyal bir klinik durum olarak ele alınmalıdır.\n\n- **Biyopsikososyal Bütünlük:** İntihar biyolojik yatkınlık, psikolojik çatışmalar, sosyal krizler ve çevresel faktörlerin kesişiminde doğar.\n- **Erken Tanı ve Uygun Tedavi:** En iyi klinik yaklaşım erken tanı koymak, uygun tedaviyi vakit kaybetmeden başlatmak ve yakın izlem sağlamaktır.\n- **Kendine Zarar Verme Ayrımına Giriş:** Klinisyen intihar ile ölüm niyeti taşımayan kendine zarar verme davranışlarını (self-injury) birbirinden net biçimde ayırmalıdır.\n- **Terminoloji:** Literatürde 'self-injury', 'self-mutilation' ve 'self-harm' kavramları kişinin kendi bedenine doğrudan zarar verici girişimlerini ifade eder.\n\n> [!NOTE]\n> Başarılı bir klinik yönetim, intihar riski ile ölüm amacı gütmeyen kendine zarar verme davranışlarının ayırıcı tanısıyla başlar.",
+   "interactiveElements": [
+    {
+     "id": "k45-s21-e1",
+     "type": "micro_quiz",
+     "question": "İntihar olgularında en başarılı klinik yönetimi sağlayan temel ilke aşağıdakilerden hangisidir?",
+     "options": [
+      {
+       "text": "Biyopsikososyal değerlendirme, erken tanı, uygun tedavi ve yakın multidisipliner takip",
+       "isCorrect": true,
+       "explanation": "Biyopsikososyal değerlendirme, erken tanı, uygun tedavi ve yakın multidisipliner takip seçeneği intihar ve kendine zarar verme davranışlarını açıklayan temel klinik ve bilimsel yaklaşımı temsil eder. Bu ilke doğrultusunda soruda hedeflenen klinik mekanizma ve risk yönetimi eksiksiz olarak doğrulanmaktadır."
+      },
+      {
+       "text": "Hastayı tek bir muayeneyle taburcu edip bir daha asla kontrole çağırmamak",
+       "isCorrect": false,
+       "explanation": "Hastayı tek bir muayeneyle taburcu edip bir daha asla kontrole çağırmamak kavramı psikiyatri pratiğinde farklı klinik tabloları veya tanısal süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen klinik durumla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Hastanın sosyal çevresi ve ailesiyle hiçbir şekilde iletişim kurmamak",
+       "isCorrect": false,
+       "explanation": "Hastanın sosyal çevresi ve ailesiyle hiçbir şekilde iletişim kurmamak kavramı psikiyatri pratiğinde farklı klinik tabloları veya tanısal süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen klinik durumla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Tüm psikiyatrik ilaçları hemen keserek hastayı kendi haline bırakmak",
+       "isCorrect": false,
+       "explanation": "Tüm psikiyatrik ilaçları hemen keserek hastayı kendi haline bırakmak kavramı psikiyatri pratiğinde farklı klinik tabloları veya tanısal süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen klinik durumla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      }
+     ]
+    },
+    {
+     "id": "k45-s21-e2",
+     "type": "spot_the_lie",
+     "topic": "Biyopsikososyal Yaklaşım ve Terminoloji",
+     "items": [
+      {
+       "text": "İntihar çok boyutlu nedenleri olan karmaşık bir klinik tablodur.",
+       "isLie": false,
+       "explanation": "İntihar çok boyutlu nedenleri olan karmaşık bir klinik tablodur. ifadesi psikiyatride intihar risk dinamiklerini doğru yansıtır. Klinik araştırmalar bu yaklaşımı desteklemektedir."
+      },
+      {
+       "text": "Literatürde kendine zarar verme self-injury, self-mutilation ve self-harm olarak adlandırılır.",
+       "isLie": false,
+       "explanation": "Literatürde kendine zarar verme self-injury, self-mutilation ve self-harm olarak adlandırılır. ifadesi psikiyatride intihar risk dinamiklerini doğru yansıtır. Klinik araştırmalar bu yaklaşımı desteklemektedir."
+      },
+      {
+       "text": "İntihar ile kendine zarar verme davranışı arasında hiçbir ayırıcı tanı farkı yoktur.",
+       "isLie": true,
+       "explanation": "İntihar ile kendine zarar verme davranışı arasında hiçbir ayırıcı tanı farkı yoktur. ifadesi bilimsel ve klinik gerçeklerle çelişmektedir. İntihar risk değerlendirmesinde bu yaklaşım gerçeğe aykırı bir algıdır."
+      }
+     ]
+    },
+    {
+     "id": "k45-s21-e3",
+     "type": "cloze_masking",
+     "sentence": "İntihar çok boyutlu nedenleri olan karmaşık bir klinik durumdur ve en iyi yaklaşım biyopsikososyal bir değerlendirmedir.",
+     "maskedTerm": "biyopsikososyal bir",
+     "hint": "Tıp eğitimi ve psikiyatri alanındaki temel kavramdır."
+    },
+    {
+     "id": "k45-s21-e4",
+     "type": "active_recall",
+     "question": "İntiharda en iyi klinik yaklaşım protokolü nasıl özetlenir?",
+     "answer": "Biyopsikososyal değerlendirme, erken tanı, uygun tedavi (farmakoterapi/EKT/BDT) ve yakın takip."
+    }
+   ],
+   "pdfSayfalari": [
+    29,
+    30
+   ],
+   "sourcePdf": {
+    "startPage": 29,
+    "endPage": 30
+   }
+  },
+  {
+   "id": "k2-45-d-s22",
+   "slideNumber": 22,
+   "title": "[TEKRAR SAYFASI - CHECKPOINT 4] Tedavi İlkeleri ve Acil Yönetim",
+   "bolum": "4",
+   "content": "Bu tekrar sayfasında intihar krizinde acil görüşme, güvenlik adımları, yatış kriterleri ve Lityum/EKT tedavisi pekiştirilmektedir.\n\n- **Açık Sorgulama İlkesi:** İntiharı doğrudan ve sakin konuşmak riski artırmaz; aksine hastanın rahatlamasını ve yardım almasını sağlar.\n- **Acil Güvenlik:** Kesici alet, silah ve ilaçların derhal uzaklaştırılması; hastanın bir an bile yalnız bırakılmamasıdır.\n- **Yatış Endikasyonu:** Ölümcül plan, psikotik belirti ve sosyal destek yokluğu mutlak hastaneye yatış gerektirir.\n- **Kanıtlanmış Tedavi:** Lityum suisidal mortaliteyi düşürür; EKT ağır ve dirençli olgularda hayat kurtarır; BDT nüksü önler.\n\n> [!NOTE]\n> İntiharı doğrudan sormaktan çekinmemek ve Lityum/EKT endikasyonunu zamanında koymak acil psikiyatrinin hayat kurtarıcı basamaklarıdır.",
+   "synthesisNarrative": "Bu tekrar sayfasında intihar krizinde acil görüşme, güvenlik adımları, yatış kriterleri ve Lityum/EKT tedavisi pekiştirilmektedir.\n\n- **Açık Sorgulama İlkesi:** İntiharı doğrudan ve sakin konuşmak riski artırmaz; aksine hastanın rahatlamasını ve yardım almasını sağlar.\n- **Acil Güvenlik:** Kesici alet, silah ve ilaçların derhal uzaklaştırılması; hastanın bir an bile yalnız bırakılmamasıdır.\n- **Yatış Endikasyonu:** Ölümcül plan, psikotik belirti ve sosyal destek yokluğu mutlak hastaneye yatış gerektirir.\n- **Kanıtlanmış Tedavi:** Lityum suisidal mortaliteyi düşürür; EKT ağır ve dirençli olgularda hayat kurtarır; BDT nüksü önler.\n\n> [!NOTE]\n> İntiharı doğrudan sormaktan çekinmemek ve Lityum/EKT endikasyonunu zamanında koymak acil psikiyatrinin hayat kurtarıcı basamaklarıdır.",
+   "interactiveElements": [
+    {
+     "id": "k45-s22-e1",
+     "type": "micro_quiz",
+     "question": "İntihar riski taşıyan bir hastada hekimin sergilemesi gereken en temel klinik iletişim ilkesi hangisidir?",
+     "options": [
+      {
+       "text": "Sakin, empatik, yargılamayan bir dille intiharı doğrudan ve açıkça sorgulamak",
+       "isCorrect": true,
+       "explanation": "Sakin, empatik, yargılamayan bir dille intiharı doğrudan ve açıkça sorgulamak seçeneği intihar ve kendine zarar verme davranışlarını açıklayan temel klinik ve bilimsel yaklaşımı temsil eder. Bu ilke doğrultusunda soruda hedeflenen klinik mekanizma ve risk yönetimi eksiksiz olarak doğrulanmaktadır."
+      },
+      {
+       "text": "İntihar kelimesini asla ağza almayıp konuyu sürekli neşeli şeylere getirmek",
+       "isCorrect": false,
+       "explanation": "İntihar kelimesini asla ağza almayıp konuyu sürekli neşeli şeylere getirmek kavramı psikiyatri pratiğinde farklı klinik tabloları veya tanısal süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen klinik durumla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Hastaya ölümün ne kadar günah olduğunu anlatıp onu azarlamak",
+       "isCorrect": false,
+       "explanation": "Hastaya ölümün ne kadar günah olduğunu anlatıp onu azarlamak kavramı psikiyatri pratiğinde farklı klinik tabloları veya tanısal süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen klinik durumla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Hastanın düşüncelerini duyar duymaz polise ihbar edip odadan kaçmak",
+       "isCorrect": false,
+       "explanation": "Hastanın düşüncelerini duyar duymaz polise ihbar edip odadan kaçmak kavramı psikiyatri pratiğinde farklı klinik tabloları veya tanısal süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen klinik durumla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      }
+     ]
+    },
+    {
+     "id": "k45-s22-e2",
+     "type": "swipe_matching",
+     "leftCategory": "Klinik Kriz Durumu",
+     "rightCategory": "Uygulanacak Acil Tedavi / Müdahale",
+     "cards": [
+      {
+       "text": "Duygudurum bozukluğunda kronik intihar riski",
+       "category": "left",
+       "explanation": "Duygudurum bozukluğunda kronik intihar riski kavramı ilgili klinik kategori altında değerlendirilen temel unsurdur. Psikiyatri pratiğinde bu eşleme risk yönetimi açısından kritik önem taşır."
+      },
+      {
+       "text": "Ağır psikotik depresyonda akut ölümcül kriz",
+       "category": "left",
+       "explanation": "Ağır psikotik depresyonda akut ölümcül kriz kavramı ilgili klinik kategori altında değerlendirilen temel unsurdur. Psikiyatri pratiğinde bu eşleme risk yönetimi açısından kritik önem taşır."
+      },
+      {
+       "text": "Lityum ile idame ve koruyucu tedavi",
+       "category": "right",
+       "explanation": "Lityum ile idame ve koruyucu tedavi kavramı ilgili klinik kategori altında değerlendirilen temel unsurdur. Psikiyatri pratiğinde bu eşleme risk yönetimi açısından kritik önem taşır."
+      },
+      {
+       "text": "Acil Elektrokonvülsif Terapi (EKT) uygulaması",
+       "category": "right",
+       "explanation": "Acil Elektrokonvülsif Terapi (EKT) uygulaması kavramı ilgili klinik kategori altında değerlendirilen temel unsurdur. Psikiyatri pratiğinde bu eşleme risk yönetimi açısından kritik önem taşır."
+      }
+     ]
+    },
+    {
+     "id": "k45-s22-e3",
+     "type": "spot_the_lie",
+     "topic": "Bölüm 4 Tekrar Özeti",
+     "items": [
+      {
+       "text": "İntihar hakkında konuşmak riski artırmaz, hastayı rahatlatır.",
+       "isLie": false,
+       "explanation": "İntihar hakkında konuşmak riski artırmaz, hastayı rahatlatır. ifadesi psikiyatride intihar risk dinamiklerini doğru yansıtır. Klinik araştırmalar bu yaklaşımı desteklemektedir."
+      },
+      {
+       "text": "Ölümcül plan ve psikotik belirti varlığında hasta hastaneye yatırılmalıdır.",
+       "isLie": false,
+       "explanation": "Ölümcül plan ve psikotik belirti varlığında hasta hastaneye yatırılmalıdır. ifadesi psikiyatride intihar risk dinamiklerini doğru yansıtır. Klinik araştırmalar bu yaklaşımı desteklemektedir."
+      },
+      {
+       "text": "Lityum kullanımı intihar riskini artırdığı için psikiyatride yasaklanmıştır.",
+       "isLie": true,
+       "explanation": "Lityum kullanımı intihar riskini artırdığı için psikiyatride yasaklanmıştır. ifadesi bilimsel ve klinik gerçeklerle çelişmektedir. İntihar risk değerlendirmesinde bu yaklaşım gerçeğe aykırı bir algıdır."
+      }
+     ]
+    },
+    {
+     "id": "k45-s22-e4",
+     "type": "active_recall",
+     "question": "Bölüm 4'ün en kritik 3 klinik kuralını özetleyiniz.",
+     "answer": "1. İntiharı açıkça sor (riski artırmaz), 2. Yüksek riskte hastayı yatır ve ortamı silahsızlandır/ilaçsızlaştır, 3. Lityum ve acilde EKT kullan."
+    }
+   ],
+   "isCheckpoint": true
+  },
+  {
+   "id": "k2-45-d-s23",
+   "slideNumber": 23,
+   "title": "Kendine Zarar Verme: Tanım ve İntihardan Ayrımı",
+   "bolum": "5",
+   "content": "Kendine zarar verme davranışı (non-suicidal self-injury), intihar girişiminden temel dinamikleriyle ayrılan özgün bir klinik tablodur.\n\n- **Kavramsal Tanım:** Kişinin bilinçli bir ölüm isteği olmadan, isteyerek ve amaçlı olarak doku hasarıyla sonuçlanan kendi bedenine yönelik girişimidir.\n- **İntihardan Temel Farkı:** İntiharda amaç yaşamı sonlandırmak iken; kendine zarar vermede amaç ölmek değil, tahammül edilemeyen içsel baskıyı dindirmektir.\n- **Psikolojik İşlev:** Kişinin çevreye uyum sağlayamamasının ve tahammülsüzlüğünün yarattığı yoğun baskıya karşılık kendini keserek rahatlama arayışıdır.\n- **Beden Odaklılık:** Vücudun belirli bölgelerine yönelik, tekrarlayıcı ve yaşamı doğrudan tehdit etmeyen doku hasarı ile karakterizedir.\n\n> [!IMPORTANT]\n> Kendine zarar verme davranışı bir ölüm arzusu değil; katlanılamayan ruhsal acıyı ve içsel gerilimi fiziksel acıyla boşaltma çabasıdır.",
+   "synthesisNarrative": "Kendine zarar verme davranışı (non-suicidal self-injury), intihar girişiminden temel dinamikleriyle ayrılan özgün bir klinik tablodur.\n\n- **Kavramsal Tanım:** Kişinin bilinçli bir ölüm isteği olmadan, isteyerek ve amaçlı olarak doku hasarıyla sonuçlanan kendi bedenine yönelik girişimidir.\n- **İntihardan Temel Farkı:** İntiharda amaç yaşamı sonlandırmak iken; kendine zarar vermede amaç ölmek değil, tahammül edilemeyen içsel baskıyı dindirmektir.\n- **Psikolojik İşlev:** Kişinin çevreye uyum sağlayamamasının ve tahammülsüzlüğünün yarattığı yoğun baskıya karşılık kendini keserek rahatlama arayışıdır.\n- **Beden Odaklılık:** Vücudun belirli bölgelerine yönelik, tekrarlayıcı ve yaşamı doğrudan tehdit etmeyen doku hasarı ile karakterizedir.\n\n> [!IMPORTANT]\n> Kendine zarar verme davranışı bir ölüm arzusu değil; katlanılamayan ruhsal acıyı ve içsel gerilimi fiziksel acıyla boşaltma çabasıdır.",
+   "interactiveElements": [
+    {
+     "id": "k45-s23-e1",
+     "type": "micro_quiz",
+     "question": "Kendine zarar verme davranışını (NSSI) intihar girişiminden ayıran en temel klinik ölçüt aşağıdakilerden hangisidir?",
+     "options": [
+      {
+       "text": "Kişinin bilinçli bir ölüm isteği olmadan, içsel gerilimi dindirmek amacıyla eylemi gerçekleştirmesi",
+       "isCorrect": true,
+       "explanation": "Kişinin bilinçli bir ölüm isteği olmadan, içsel gerilimi dindirmek amacıyla eylemi gerçekleştirmesi seçeneği intihar ve kendine zarar verme davranışlarını açıklayan temel klinik ve bilimsel yaklaşımı temsil eder. Bu ilke doğrultusunda soruda hedeflenen klinik mekanizma ve risk yönetimi eksiksiz olarak doğrulanmaktadır."
+      },
+      {
+       "text": "Eylemin mutlaka genel anestezi altında ve hastane ameliyathanesinde yapılması",
+       "isCorrect": false,
+       "explanation": "Eylemin mutlaka genel anestezi altında ve hastane ameliyathanesinde yapılması kavramı psikiyatri pratiğinde farklı klinik tabloları veya tanısal süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen klinik durumla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Kişinin hiçbir fiziksel doku hasarı yaşamadan yalnızca kitap okuması",
+       "isCorrect": false,
+       "explanation": "Kişinin hiçbir fiziksel doku hasarı yaşamadan yalnızca kitap okuması kavramı psikiyatri pratiğinde farklı klinik tabloları veya tanısal süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen klinik durumla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Sadece yetmiş beş yaşından sonraki kadınlarda tek bir kez ortaya çıkması",
+       "isCorrect": false,
+       "explanation": "Sadece yetmiş beş yaşından sonraki kadınlarda tek bir kez ortaya çıkması kavramı psikiyatri pratiğinde farklı klinik tabloları veya tanısal süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen klinik durumla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      }
+     ]
+    },
+    {
+     "id": "k45-s23-e2",
+     "type": "spot_the_lie",
+     "topic": "Kendine Zarar Verme Davranışının Tanımı",
+     "items": [
+      {
+       "text": "Kendine zarar verme bilinçli bir ölüm isteği olmadan bedene yönelik amaçlı doku hasarıdır.",
+       "isLie": false,
+       "explanation": "Kendine zarar verme bilinçli bir ölüm isteği olmadan bedene yönelik amaçlı doku hasarıdır. ifadesi psikiyatride intihar risk dinamiklerini doğru yansıtır. Klinik araştırmalar bu yaklaşımı desteklemektedir."
+      },
+      {
+       "text": "Kişi tahammülsüzlük ve içsel baskıya karşılık kendini keserek rahatlama yaşamaktadır.",
+       "isLie": false,
+       "explanation": "Kişi tahammülsüzlük ve içsel baskıya karşılık kendini keserek rahatlama yaşamaktadır. ifadesi psikiyatride intihar risk dinamiklerini doğru yansıtır. Klinik araştırmalar bu yaklaşımı desteklemektedir."
+      },
+      {
+       "text": "Kendine zarar veren her birey mutlaka o an kesin olarak hayatına son vermeyi hedeflemektedir.",
+       "isLie": true,
+       "explanation": "Kendine zarar veren her birey mutlaka o an kesin olarak hayatına son vermeyi hedeflemektedir. ifadesi bilimsel ve klinik gerçeklerle çelişmektedir. İntihar risk değerlendirmesinde bu yaklaşım gerçeğe aykırı bir algıdır."
+      }
+     ]
+    },
+    {
+     "id": "k45-s23-e3",
+     "type": "cloze_masking",
+     "sentence": "Kendine zarar verme davranışı tekrarlayıcı ve kişinin bilinçli ölüm isteği olmadan doku hasarı ile sonuçlanan girişimidir.",
+     "maskedTerm": "bilinçli ölüm isteği olmadan",
+     "hint": "Tıp eğitimi ve psikiyatri alanındaki temel kavramdır."
+    },
+    {
+     "id": "k45-s23-e4",
+     "type": "active_recall",
+     "question": "Kendine zarar verme davranışının tanımı ve intihardan temel farkı nedir?",
+     "answer": "Bilinçli ölüm isteği olmadan bedende amaçlı doku hasarı oluşturmaktır; intihardan farkı ölmek değil, içsel baskıyı rahatlatmak amacı gütmesidir."
+    }
+   ],
+   "pdfSayfalari": [
+    31,
+    32
+   ],
+   "sourcePdf": {
+    "startPage": 31,
+    "endPage": 32
+   }
+  },
+  {
+   "id": "k2-45-d-s24",
+   "slideNumber": 24,
+   "title": "Kendine Zarar Vermenin Dört Tanı Ölçütü",
+   "bolum": "5",
+   "content": "Kendine zarar verme davranışının klinik olarak tanımlanmasında kullanılan dört temel tanı ölçütü mevcuttur.\n\n- **Ölçüt 1 (Tekrarlayıcılık):** Kendini kesme ya da yakma davranışlarından birisini sürekli ve düzenli olarak tekrarlaması.\n- **Ölçüt 2 (Öncesinde Gerilim):** Kendine zarar verme eyleminden hemen önce dayanılmaz bir içsel gerilim ve tahammülsüzlük duygusuna sahip olması.\n- **Ölçüt 3 (Acıyla Rahatlama):** Fiziksel acıyla beraber psikolojik rahatlama, gerilimde boşalma, zevk alma ve hoşuna gitme duygusunu yaşaması.\n- **Ölçüt 4 (İzleri Gizleme):** Utanma duygusu ve sosyal olarak damgalanma korkusu karşısında kendine zarar vermenin izlerini ya da kanı gizlemeye çalışmasıdır.\n\n> [!IMPORTANT]\n> Kanı ve yara izlerini uzun kollu giysilerle gizleme çabası (Ölçüt 4), davranışın manipülasyon değil, utanç odaklı yaşandığının kanıtıdır.",
+   "synthesisNarrative": "Kendine zarar verme davranışının klinik olarak tanımlanmasında kullanılan dört temel tanı ölçütü mevcuttur.\n\n- **Ölçüt 1 (Tekrarlayıcılık):** Kendini kesme ya da yakma davranışlarından birisini sürekli ve düzenli olarak tekrarlaması.\n- **Ölçüt 2 (Öncesinde Gerilim):** Kendine zarar verme eyleminden hemen önce dayanılmaz bir içsel gerilim ve tahammülsüzlük duygusuna sahip olması.\n- **Ölçüt 3 (Acıyla Rahatlama):** Fiziksel acıyla beraber psikolojik rahatlama, gerilimde boşalma, zevk alma ve hoşuna gitme duygusunu yaşaması.\n- **Ölçüt 4 (İzleri Gizleme):** Utanma duygusu ve sosyal olarak damgalanma korkusu karşısında kendine zarar vermenin izlerini ya da kanı gizlemeye çalışmasıdır.\n\n> [!IMPORTANT]\n> Kanı ve yara izlerini uzun kollu giysilerle gizleme çabası (Ölçüt 4), davranışın manipülasyon değil, utanç odaklı yaşandığının kanıtıdır.",
+   "interactiveElements": [
+    {
+     "id": "k45-s24-e1",
+     "type": "causal_chain",
+     "title": "Kendine Zarar Vermenin Döngüsel Mekanizması",
+     "steps": [
+      "1. Dayanılmaz Gerilim: Bireyde tahammülsüzlük ve yoğun içsel baskı birikir (Ölçüt 2).",
+      "2. Fiziksel Eylem: Kendini kesme veya yakma eylemi gerçekleştirilir (Ölçüt 1).",
+      "3. Acıyla Rahatlama: Fiziksel acıyla birlikte gerilim boşalır ve rahatlama yaşanır (Ölçüt 3).",
+      "4. Utanç ve Gizleme: Damgalanma korkusuyla kan ve yara izleri saklanmaya çalışılır (Ölçüt 4)."
+     ]
+    },
+    {
+     "id": "k45-s24-e2",
+     "type": "micro_quiz",
+     "question": "Aşağıdakilerden hangisi kendine zarar verme davranışını tanımlamakta kullanılan 'dört temel ölçüt'ten biri değildir?",
+     "options": [
+      {
+       "text": "Eylemin mutlaka ölümle sonuçlanması ve vasiyet bırakılması",
+       "isCorrect": true,
+       "explanation": "Eylemin mutlaka ölümle sonuçlanması ve vasiyet bırakılması seçeneği intihar ve kendine zarar verme davranışlarını açıklayan temel klinik ve bilimsel yaklaşımı temsil eder. Bu ilke doğrultusunda soruda hedeflenen klinik mekanizma ve risk yönetimi eksiksiz olarak doğrulanmaktadır."
+      },
+      {
+       "text": "Kendini kesme ya da yakma davranışlarından birisini sürekli tekrarlaması",
+       "isCorrect": false,
+       "explanation": "Kendini kesme ya da yakma davranışlarından birisini sürekli tekrarlaması kavramı psikiyatri pratiğinde farklı klinik tabloları veya tanısal süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen klinik durumla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Kendine zarar vermeden hemen önce dayanılmaz bir gerilim duygusuna sahip olması",
+       "isCorrect": false,
+       "explanation": "Kendine zarar vermeden hemen önce dayanılmaz bir gerilim duygusuna sahip olması kavramı psikiyatri pratiğinde farklı klinik tabloları veya tanısal süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen klinik durumla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Utanma ve damgalanma korkusuyla yara izlerini ve kanı gizlemeye çalışması",
+       "isCorrect": false,
+       "explanation": "Utanma ve damgalanma korkusuyla yara izlerini ve kanı gizlemeye çalışması kavramı psikiyatri pratiğinde farklı klinik tabloları veya tanısal süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen klinik durumla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      }
+     ]
+    },
+    {
+     "id": "k45-s24-e3",
+     "type": "cloze_masking",
+     "sentence": "Kendine zarar verme ölçütlerinden biri fiziksel acıyla beraber rahatlama zevk alma ve hoşuna gitme duygusunu yaşamasıdır.",
+     "maskedTerm": "fiziksel acıyla beraber rahatlama",
+     "hint": "Tıp eğitimi ve psikiyatri alanındaki temel kavramdır."
+    },
+    {
+     "id": "k45-s24-e4",
+     "type": "active_recall",
+     "question": "Kendine zarar verme davranışının 4 tanı ölçütü nelerdir?",
+     "answer": "1. Sürekli tekrarlama (kesme/yakma), 2. Öncesinde gerilim hissi, 3. Fiziksel acıyla rahatlama/hoşnutluk, 4. Utanç ve damgalanma korkusuyla izleri gizleme."
+    }
+   ],
+   "pdfSayfalari": [
+    33,
+    33
+   ],
+   "sourcePdf": {
+    "startPage": 33,
+    "endPage": 33
+   }
+  },
+  {
+   "id": "k2-45-d-s25",
+   "slideNumber": 25,
+   "title": "Dört Ana Grup ve Davranış Biçimleri",
+   "bolum": "5",
+   "content": "Kendine zarar verme davranışları klinik ve fenomenolojik özelliklerine göre dört ana gruba ayrılır.\n\n- **1. Tipik Kendine Zarar Verme:** Kafa vurmak, kendine vurmak, dudak ısırmak, tırnak yemek, derisini çimdiklemek veya tırmalamak ve saçını yolmaktır.\n- **2. Psikotik Kendine Zarar Verme:** Hezeyanlar veya ağır psikoz zemininde göz çıkarma ve organ kesme gibi ağır mutilatif eylemlerdir.\n- **3. Kompulsif Kendine Zarar Verme:** Saç yolmak (trikotillomani), deriyi çimdiklemek ve tırnak yemek gibi obsesif-kompulsif döngüdeki davranışlardır.\n- **4. Dürtüsel Kendine Zarar Verme:** Aniden ortaya çıkan kendini kesmek, kendini yakmak ve kendine vurmak gibi taşkın eylemlerdir.\n\n> [!NOTE]\n> Günümüzde her 600 kişiden en az birinin kendini tıbbi tedaviye gereksinim duyacak ağırlıkta yaraladığı bildirilmektedir.",
+   "synthesisNarrative": "Kendine zarar verme davranışları klinik ve fenomenolojik özelliklerine göre dört ana gruba ayrılır.\n\n- **1. Tipik Kendine Zarar Verme:** Kafa vurmak, kendine vurmak, dudak ısırmak, tırnak yemek, derisini çimdiklemek veya tırmalamak ve saçını yolmaktır.\n- **2. Psikotik Kendine Zarar Verme:** Hezeyanlar veya ağır psikoz zemininde göz çıkarma ve organ kesme gibi ağır mutilatif eylemlerdir.\n- **3. Kompulsif Kendine Zarar Verme:** Saç yolmak (trikotillomani), deriyi çimdiklemek ve tırnak yemek gibi obsesif-kompulsif döngüdeki davranışlardır.\n- **4. Dürtüsel Kendine Zarar Verme:** Aniden ortaya çıkan kendini kesmek, kendini yakmak ve kendine vurmak gibi taşkın eylemlerdir.\n\n> [!NOTE]\n> Günümüzde her 600 kişiden en az birinin kendini tıbbi tedaviye gereksinim duyacak ağırlıkta yaraladığı bildirilmektedir.",
+   "interactiveElements": [
+    {
+     "id": "k45-s25-e1",
+     "type": "interactive_table",
+     "tableHeaders": [
+      "Kendine Zarar Verme Grubu",
+      "Temel Davranış Biçimleri",
+      "Klinik Özellik"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Tipik Kendine Zarar Verme",
+         "isMasked": false,
+         "hint": ""
+        },
+        {
+         "text": "Kafa vurma, tırnak yeme, dudak ısırma, tırmalama",
+         "isMasked": false,
+         "hint": ""
+        },
+        {
+         "text": "Gelişimsel veya hafif gerilim durumlarında sık görülür",
+         "isMasked": true,
+         "hint": "Klinik yaklaşımdaki kuramsal çerçevedir."
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Psikotik Kendine Zarar Verme",
+         "isMasked": false,
+         "hint": ""
+        },
+        {
+         "text": "Göz çıkarma ve organ kesme eylemleri",
+         "isMasked": false,
+         "hint": ""
+        },
+        {
+         "text": "Hezeyan ve halüsinasyonların yönlendirdiği acil tablodur",
+         "isMasked": true,
+         "hint": "Tıp eğitimi ve psikiyatri alanındaki temel kavramdır."
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Dürtüsel Kendine Zarar Verme",
+         "isMasked": false,
+         "hint": ""
+        },
+        {
+         "text": "Kendini kesmek, yakmak ve kendine vurmak",
+         "isMasked": false,
+         "hint": ""
+        },
+        {
+         "text": "En sık borderline kişilik bozukluğunda karşılaşılan tiptir",
+         "isMasked": true,
+         "hint": "Klinik yaklaşımdaki kuramsal çerçevedir."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k45-s25-e2",
+     "type": "micro_quiz",
+     "question": "Kendine zarar verme sınıflamasında 'göz çıkarma' ve 'organ kesme' gibi ağır doku kayıpları hangi grupta yer alır?",
+     "options": [
+      {
+       "text": "Psikotik kendine zarar verme davranışları",
+       "isCorrect": true,
+       "explanation": "Psikotik kendine zarar verme davranışları seçeneği intihar ve kendine zarar verme davranışlarını açıklayan temel klinik ve bilimsel yaklaşımı temsil eder. Bu ilke doğrultusunda soruda hedeflenen klinik mekanizma ve risk yönetimi eksiksiz olarak doğrulanmaktadır."
+      },
+      {
+       "text": "Kompulsif tırnak yeme davranışı",
+       "isCorrect": false,
+       "explanation": "Kompulsif tırnak yeme davranışı kavramı psikiyatri pratiğinde farklı klinik tabloları veya tanısal süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen klinik durumla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Fizyolojik çocukluk çağı alışkanlığı",
+       "isCorrect": false,
+       "explanation": "Fizyolojik çocukluk çağı alışkanlığı kavramı psikiyatri pratiğinde farklı klinik tabloları veya tanısal süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen klinik durumla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Hafif düzeyde sosyal anksiyete belirtisi",
+       "isCorrect": false,
+       "explanation": "Hafif düzeyde sosyal anksiyete belirtisi kavramı psikiyatri pratiğinde farklı klinik tabloları veya tanısal süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen klinik durumla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      }
+     ]
+    },
+    {
+     "id": "k45-s25-e3",
+     "type": "cloze_masking",
+     "sentence": "Genel olarak kendine zarar verme davranışı tipik psikotik kompulsif ve dürtüsel olmak üzere dört ana gruba ayrılır.",
+     "maskedTerm": "dört ana gruba",
+     "hint": "Tıp eğitimi ve psikiyatri alanındaki temel kavramdır."
+    },
+    {
+     "id": "k45-s25-e4",
+     "type": "active_recall",
+     "question": "Kendine zarar verme davranışının 4 ana grubu ve birer örneği nedir?",
+     "answer": "1. Tipik (tırnak yeme, kafa vurma), 2. Psikotik (göz çıkarma, organ kesme), 3. Kompulsif (saç yolma), 4. Dürtüsel (kendini kesme, yakma)."
+    }
+   ],
+   "pdfSayfalari": [
+    34,
+    34
+   ],
+   "sourcePdf": {
+    "startPage": 34,
+    "endPage": 34
+   }
+  },
+  {
+   "id": "k2-45-d-s26",
+   "slideNumber": 26,
+   "title": "Yöntem Sıklıkları ve Anatomik Dağılım",
+   "bolum": "5",
+   "content": "Tekrarlanan kendine zarar verme davranışlarında yöntem dağılımı ve anatomik bölgeler belirgin özellikler taşır.\n\n- **En Sık Yöntem (Kendini Kesme - %72):** Tekrarlanan eylemlerde kendini kesme yüzde yetmiş iki oranıyla açık ara en baskın yöntemdir.\n- **Diğer Yöntemler:** Kendini yakma yüzde otuz beş (%35), kendine vurma yüzde otuz (%30), yaraların iyileşmesine izin vermeme ve sürekli kol kaşıma yüzde yirmi ikidir (%22).\n- **Çoğul Yöntem Kullanımı (%75):** Olguların yüzde yetmiş beşinde (%75) birden fazla yöntem (kesme, yakma, vurma vb.) bir arada uygulanır.\n- **Anatomik Lokalizasyon:** Kolay ulaşılabilirliği ve kıyafetle gizlenebilirliği nedeniyle kollar ve bilekler en sık hedef alınan anatomik bölgelerdir.\n\n> [!IMPORTANT]\n> Hastaların %75'inde çoğul yöntem kullanılması, eylemin tek bir teknikle sınırlı kalmayıp yaygınlaşma eğiliminde olduğunu gösterir.",
+   "synthesisNarrative": "Tekrarlanan kendine zarar verme davranışlarında yöntem dağılımı ve anatomik bölgeler belirgin özellikler taşır.\n\n- **En Sık Yöntem (Kendini Kesme - %72):** Tekrarlanan eylemlerde kendini kesme yüzde yetmiş iki oranıyla açık ara en baskın yöntemdir.\n- **Diğer Yöntemler:** Kendini yakma yüzde otuz beş (%35), kendine vurma yüzde otuz (%30), yaraların iyileşmesine izin vermeme ve sürekli kol kaşıma yüzde yirmi ikidir (%22).\n- **Çoğul Yöntem Kullanımı (%75):** Olguların yüzde yetmiş beşinde (%75) birden fazla yöntem (kesme, yakma, vurma vb.) bir arada uygulanır.\n- **Anatomik Lokalizasyon:** Kolay ulaşılabilirliği ve kıyafetle gizlenebilirliği nedeniyle kollar ve bilekler en sık hedef alınan anatomik bölgelerdir.\n\n> [!IMPORTANT]\n> Hastaların %75'inde çoğul yöntem kullanılması, eylemin tek bir teknikle sınırlı kalmayıp yaygınlaşma eğiliminde olduğunu gösterir.",
+   "interactiveElements": [
+    {
+     "id": "k45-s26-e1",
+     "type": "micro_quiz",
+     "question": "Tekrarlanan kendine zarar verme davranışları içinde yüzde yetmiş iki (%72) oranıyla en sık görülen yöntem hangisidir?",
+     "options": [
+      {
+       "text": "Kendini kesmek (jilet, cam, bıçak vb. ile)",
+       "isCorrect": true,
+       "explanation": "Kendini kesmek (jilet, cam, bıçak vb. ile) seçeneği intihar ve kendine zarar verme davranışlarını açıklayan temel klinik ve bilimsel yaklaşımı temsil eder. Bu ilke doğrultusunda soruda hedeflenen klinik mekanizma ve risk yönetimi eksiksiz olarak doğrulanmaktadır."
+      },
+      {
+       "text": "Kemik kırmak",
+       "isCorrect": false,
+       "explanation": "Kemik kırmak kavramı psikiyatri pratiğinde farklı klinik tabloları veya tanısal süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen klinik durumla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Göz çıkarmak",
+       "isCorrect": false,
+       "explanation": "Göz çıkarmak kavramı psikiyatri pratiğinde farklı klinik tabloları veya tanısal süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen klinik durumla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Yalnızca saç taramak",
+       "isCorrect": false,
+       "explanation": "Yalnızca saç taramak kavramı psikiyatri pratiğinde farklı klinik tabloları veya tanısal süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen klinik durumla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      }
+     ]
+    },
+    {
+     "id": "k45-s26-e2",
+     "type": "spot_the_lie",
+     "topic": "Yöntemler ve Anatomik Bölgeler",
+     "items": [
+      {
+       "text": "Kendine zarar verme davranışında olguların yüzde 75'inde çoğul yöntem kullanılır.",
+       "isLie": false,
+       "explanation": "Kendine zarar verme davranışında olguların yüzde 75'inde çoğul yöntem kullanılır. ifadesi psikiyatride intihar risk dinamiklerini doğru yansıtır. Klinik araştırmalar bu yaklaşımı desteklemektedir."
+      },
+      {
+       "text": "Kolay erişilebilirlik yüzünden kollar ve bilekler kesme için en sık seçilen bölgelerdir.",
+       "isLie": false,
+       "explanation": "Kolay erişilebilirlik yüzünden kollar ve bilekler kesme için en sık seçilen bölgelerdir. ifadesi psikiyatride intihar risk dinamiklerini doğru yansıtır. Klinik araştırmalar bu yaklaşımı desteklemektedir."
+      },
+      {
+       "text": "Kendine zarar veren olguların tamamında yalnızca tek bir yöntem ömür boyu değişmeden kalır.",
+       "isLie": true,
+       "explanation": "Kendine zarar veren olguların tamamında yalnızca tek bir yöntem ömür boyu değişmeden kalır. ifadesi bilimsel ve klinik gerçeklerle çelişmektedir. İntihar risk değerlendirmesinde bu yaklaşım gerçeğe aykırı bir algıdır."
+      }
+     ]
+    },
+    {
+     "id": "k45-s26-e3",
+     "type": "cloze_masking",
+     "sentence": "Tekrarlanan kendine zarar verme davranışları içinde kendini kesme yüzde yetmiş iki oranıyla en baskın yöntemdir.",
+     "maskedTerm": "kendini kesme",
+     "hint": "Tıp eğitimi ve psikiyatri alanındaki temel kavramdır."
+    },
+    {
+     "id": "k45-s26-e4",
+     "type": "active_recall",
+     "question": "Kendine zarar vermede en sık kullanılan yöntemler ve çoğul yöntem kullanım oranı nedir?",
+     "answer": "Kendini kesme (%72), kendini yakma (%35), kendine vurma (%30). Olguların %75'inde çoğul yöntem kullanılır."
+    }
+   ],
+   "pdfSayfalari": [
+    35,
+    36
+   ],
+   "sourcePdf": {
+    "startPage": 35,
+    "endPage": 36
+   }
+  },
+  {
+   "id": "k2-45-d-s27",
+   "slideNumber": 27,
+   "title": "[TEKRAR SAYFASI - CHECKPOINT 5] Kendine Zarar Verme Ölçütleri ve Sınıflaması",
+   "bolum": "5",
+   "content": "Bu tekrar sayfasında kendine zarar verme davranışının tanımı, intihardan farkı, dört ölçütü ve yöntem sıklıkları pekiştirilmektedir.\n\n- **Temel Nitelik:** Bilinçli ölüm isteği olmadan, gerilimi ve tahammülsüzlüğü dindirmek için bedene doku hasarı vermektir.\n- **Dört Tanı Ölçütü:** Sürekli tekrarlama, öncesinde gerilim, acıyla rahatlama ve utanarak izleri/kanı gizleme çabasıdır.\n- **Dört Ana Grup:** Tipik (tırnak yeme, kafa vurma), psikotik (organ kesme), kompulsif (saç yolma) ve dürtüseldir (kesme, yakma).\n- **Yöntemler:** Kendini kesme %72 ile liderdir; yakma %35; olguların %75'i çoğul yöntem kullanır; kollar ve bilekler primer alandır.\n\n> [!NOTE]\n> Kendine zarar vermede ölüm niyeti olmasa bile, uzun vadede intihar riskini artırabileceği akıldan çıkarılmamalıdır.",
+   "synthesisNarrative": "Bu tekrar sayfasında kendine zarar verme davranışının tanımı, intihardan farkı, dört ölçütü ve yöntem sıklıkları pekiştirilmektedir.\n\n- **Temel Nitelik:** Bilinçli ölüm isteği olmadan, gerilimi ve tahammülsüzlüğü dindirmek için bedene doku hasarı vermektir.\n- **Dört Tanı Ölçütü:** Sürekli tekrarlama, öncesinde gerilim, acıyla rahatlama ve utanarak izleri/kanı gizleme çabasıdır.\n- **Dört Ana Grup:** Tipik (tırnak yeme, kafa vurma), psikotik (organ kesme), kompulsif (saç yolma) ve dürtüseldir (kesme, yakma).\n- **Yöntemler:** Kendini kesme %72 ile liderdir; yakma %35; olguların %75'i çoğul yöntem kullanır; kollar ve bilekler primer alandır.\n\n> [!NOTE]\n> Kendine zarar vermede ölüm niyeti olmasa bile, uzun vadede intihar riskini artırabileceği akıldan çıkarılmamalıdır.",
+   "interactiveElements": [
+    {
+     "id": "k45-s27-e1",
+     "type": "micro_quiz",
+     "question": "Aşağıdakilerden hangisi kendine zarar verme davranışında (NSSI) en sık karşılaşılan klinik kombinasyondur?",
+     "options": [
+      {
+       "text": "Kolları ve bilekleri kesme (%72) ve olguların çoğunda (%75) birden fazla yöntemin kullanılması",
+       "isCorrect": true,
+       "explanation": "Kolları ve bilekleri kesme (%72) ve olguların çoğunda (%75) birden fazla yöntemin kullanılması seçeneği intihar ve kendine zarar verme davranışlarını açıklayan temel klinik ve bilimsel yaklaşımı temsil eder. Bu ilke doğrultusunda soruda hedeflenen klinik mekanizma ve risk yönetimi eksiksiz olarak doğrulanmaktadır."
+      },
+      {
+       "text": "Yalnızca ayak parmağını kaşıma ve hiçbir zaman başka eylem yapmama",
+       "isCorrect": false,
+       "explanation": "Yalnızca ayak parmağını kaşıma ve hiçbir zaman başka eylem yapmama kavramı psikiyatri pratiğinde farklı klinik tabloları veya tanısal süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen klinik durumla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Yalnızca yetmiş yaşından sonra kulak memesini ısırma",
+       "isCorrect": false,
+       "explanation": "Yalnızca yetmiş yaşından sonra kulak memesini ısırma kavramı psikiyatri pratiğinde farklı klinik tabloları veya tanısal süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen klinik durumla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Hastalarda hiçbir fiziksel acı ve doku hasarı oluşmaması",
+       "isCorrect": false,
+       "explanation": "Hastalarda hiçbir fiziksel acı ve doku hasarı oluşmaması kavramı psikiyatri pratiğinde farklı klinik tabloları veya tanısal süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen klinik durumla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      }
+     ]
+    },
+    {
+     "id": "k45-s27-e2",
+     "type": "swipe_matching",
+     "leftCategory": "Tanı Ölçütü",
+     "rightCategory": "Fenomenolojik Karşılığı",
+     "cards": [
+      {
+       "text": "Ölçüt 2: Eylem öncesi içsel baskı",
+       "category": "left",
+       "explanation": "Ölçüt 2: Eylem öncesi içsel baskı kavramı ilgili klinik kategori altında değerlendirilen temel unsurdur. Psikiyatri pratiğinde bu eşleme risk yönetimi açısından kritik önem taşır."
+      },
+      {
+       "text": "Ölçüt 4: Yaraları ve kanı saklama",
+       "category": "left",
+       "explanation": "Ölçüt 4: Yaraları ve kanı saklama kavramı ilgili klinik kategori altında değerlendirilen temel unsurdur. Psikiyatri pratiğinde bu eşleme risk yönetimi açısından kritik önem taşır."
+      },
+      {
+       "text": "Fiziksel acıyla beraber rahatlama",
+       "category": "right",
+       "explanation": "Fiziksel acıyla beraber rahatlama kavramı ilgili klinik kategori altında değerlendirilen temel unsurdur. Psikiyatri pratiğinde bu eşleme risk yönetimi açısından kritik önem taşır."
+      },
+      {
+       "text": "Sürekli tekrarlayan kesme ve yakma",
+       "category": "right",
+       "explanation": "Sürekli tekrarlayan kesme ve yakma kavramı ilgili klinik kategori altında değerlendirilen temel unsurdur. Psikiyatri pratiğinde bu eşleme risk yönetimi açısından kritik önem taşır."
+      }
+     ]
+    },
+    {
+     "id": "k45-s27-e3",
+     "type": "spot_the_lie",
+     "topic": "Bölüm 5 Tekrar Özeti",
+     "items": [
+      {
+       "text": "Kendine zarar vermede bilinçli bir ölüm isteği bulunmaz.",
+       "isLie": false,
+       "explanation": "Kendine zarar vermede bilinçli bir ölüm isteği bulunmaz. ifadesi psikiyatride intihar risk dinamiklerini doğru yansıtır. Klinik araştırmalar bu yaklaşımı desteklemektedir."
+      },
+      {
+       "text": "Tekrarlanan kendine zarar verme eylemlerinde kendini kesme yüzde 72 oranındadır.",
+       "isLie": false,
+       "explanation": "Tekrarlanan kendine zarar verme eylemlerinde kendini kesme yüzde 72 oranındadır. ifadesi psikiyatride intihar risk dinamiklerini doğru yansıtır. Klinik araştırmalar bu yaklaşımı desteklemektedir."
+      },
+      {
+       "text": "Kendine zarar veren kişiler yara izlerini ve kanı toplumda gururla sergilerler.",
+       "isLie": true,
+       "explanation": "Kendine zarar veren kişiler yara izlerini ve kanı toplumda gururla sergilerler. ifadesi bilimsel ve klinik gerçeklerle çelişmektedir. İntihar risk değerlendirmesinde bu yaklaşım gerçeğe aykırı bir algıdır."
+      }
+     ]
+    },
+    {
+     "id": "k45-s27-e4",
+     "type": "active_recall",
+     "question": "Bölüm 5'te öğrenilen en kritik epidemiyolojik oranları özetleyiniz.",
+     "answer": "Kendini kesme %72, yakma %35, kendine vurma %30. %75 çoğul yöntem; 600 kişiden birinde tedavi gerektiren yara vardır."
+    }
+   ],
+   "isCheckpoint": true
+  },
+  {
+   "id": "k2-45-d-s28",
+   "slideNumber": 28,
+   "title": "Epidemiyoloji ve Ergenlik Döneminde Başlangıç",
+   "bolum": "6",
+   "content": "Kendine zarar verme davranışının başlangıç yaşı, sosyodemografik profili ve kültürel ritüelleri özgün nitelikler taşır.\n\n- **Ergenlik Döneminde Başlangıç:** Kendine zarar verme davranışının çoğunlukla erken adolesan ve ergenlik çağında başladığına dair tam bir görüş birliği vardır.\n- **Kültürel Çeşitlilik:** Eylemin uygulanma ritüelleri ve biçimleri kültürden kültüre farklılıklar gösterebilmektedir.\n- **Sosyodemografik Eğilim:** Kendine zarar verme davranışı sıklıkla eğitim ve gelir düzeyi düşük olan bireylerde daha yaygın saptanır.\n- **Medeni Durum:** Evli bireylere kıyasla bekarlarda kendine zarar verme davranışı belirgin derecede daha yüksek sıklıkta gözlenmektedir.\n\n> [!NOTE]\n> Ergenlik çağındaki kimlik arayışı, dürtüsellik ve akran etkileşimi kendine zarar verme davranışının tetiklenmesinde kritik rol oynar.",
+   "synthesisNarrative": "Kendine zarar verme davranışının başlangıç yaşı, sosyodemografik profili ve kültürel ritüelleri özgün nitelikler taşır.\n\n- **Ergenlik Döneminde Başlangıç:** Kendine zarar verme davranışının çoğunlukla erken adolesan ve ergenlik çağında başladığına dair tam bir görüş birliği vardır.\n- **Kültürel Çeşitlilik:** Eylemin uygulanma ritüelleri ve biçimleri kültürden kültüre farklılıklar gösterebilmektedir.\n- **Sosyodemografik Eğilim:** Kendine zarar verme davranışı sıklıkla eğitim ve gelir düzeyi düşük olan bireylerde daha yaygın saptanır.\n- **Medeni Durum:** Evli bireylere kıyasla bekarlarda kendine zarar verme davranışı belirgin derecede daha yüksek sıklıkta gözlenmektedir.\n\n> [!NOTE]\n> Ergenlik çağındaki kimlik arayışı, dürtüsellik ve akran etkileşimi kendine zarar verme davranışının tetiklenmesinde kritik rol oynar.",
+   "interactiveElements": [
+    {
+     "id": "k45-s28-e1",
+     "type": "micro_quiz",
+     "question": "Kendine zarar verme davranışının en sık başladığı gelişimsel yaşam dönemi aşağıdakilerden hangisidir?",
+     "options": [
+      {
+       "text": "Erken adolesan ve ergenlik dönemi",
+       "isCorrect": true,
+       "explanation": "Erken adolesan ve ergenlik dönemi seçeneği intihar ve kendine zarar verme davranışlarını açıklayan temel klinik ve bilimsel yaklaşımı temsil eder. Bu ilke doğrultusunda soruda hedeflenen klinik mekanizma ve risk yönetimi eksiksiz olarak doğrulanmaktadır."
+      },
+      {
+       "text": "Yetmiş yaş ve üzeri ileri geriatrik dönem",
+       "isCorrect": false,
+       "explanation": "Yetmiş yaş ve üzeri ileri geriatrik dönem kavramı psikiyatri pratiğinde farklı klinik tabloları veya tanısal süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen klinik durumla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Yenidoğan ilk bir haftalık süt çocukluğu dönemi",
+       "isCorrect": false,
+       "explanation": "Yenidoğan ilk bir haftalık süt çocukluğu dönemi kavramı psikiyatri pratiğinde farklı klinik tabloları veya tanısal süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen klinik durumla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Kırk beş ile elli beş yaş arası orta yaş dönemi",
+       "isCorrect": false,
+       "explanation": "Kırk beş ile elli beş yaş arası orta yaş dönemi kavramı psikiyatri pratiğinde farklı klinik tabloları veya tanısal süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen klinik durumla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      }
+     ]
+    },
+    {
+     "id": "k45-s28-e2",
+     "type": "spot_the_lie",
+     "topic": "Başlangıç Yaşı ve Sosyodemografi",
+     "items": [
+      {
+       "text": "Kendine zarar verme davranışı çoğunlukla ergenlik döneminde başlar.",
+       "isLie": false,
+       "explanation": "Kendine zarar verme davranışı çoğunlukla ergenlik döneminde başlar. ifadesi psikiyatride intihar risk dinamiklerini doğru yansıtır. Klinik araştırmalar bu yaklaşımı desteklemektedir."
+      },
+      {
+       "text": "Düşük eğitim, düşük gelir düzeyi ve bekarlıkta bu davranış daha sık görülür.",
+       "isLie": false,
+       "explanation": "Düşük eğitim, düşük gelir düzeyi ve bekarlıkta bu davranış daha sık görülür. ifadesi psikiyatride intihar risk dinamiklerini doğru yansıtır. Klinik araştırmalar bu yaklaşımı desteklemektedir."
+      },
+      {
+       "text": "Kendine zarar verme davranışı tüm dünyada sadece 60 yaş üstü evli erkeklerde başlar.",
+       "isLie": true,
+       "explanation": "Kendine zarar verme davranışı tüm dünyada sadece 60 yaş üstü evli erkeklerde başlar. ifadesi bilimsel ve klinik gerçeklerle çelişmektedir. İntihar risk değerlendirmesinde bu yaklaşım gerçeğe aykırı bir algıdır."
+      }
+     ]
+    },
+    {
+     "id": "k45-s28-e3",
+     "type": "cloze_masking",
+     "sentence": "Kendine zarar verme davranışı erken adolesan döneminde başlamakta ve bekarlarda sıklıkla görülmektedir.",
+     "maskedTerm": "erken adolesan döneminde",
+     "hint": "Tıp eğitimi ve psikiyatri alanındaki temel kavramdır."
+    },
+    {
+     "id": "k45-s28-e4",
+     "type": "active_recall",
+     "question": "Kendine zarar verme davranışı en sık hangi yaş döneminde başlar ve sosyodemografik özellikleri nelerdir?",
+     "answer": "Ergenlik (erken adolesan) döneminde başlar; düşük gelir, düşük eğitim düzeyi ve bekarlarda daha sıktır."
+    }
+   ],
+   "pdfSayfalari": [
+    37,
+    37
+   ],
+   "sourcePdf": {
+    "startPage": 37,
+    "endPage": 37
+   }
+  },
+  {
+   "id": "k2-45-d-s29",
+   "slideNumber": 29,
+   "title": "Komorbidite ve Borderline Kişilik Bozukluğu",
+   "bolum": "6",
+   "content": "Kendine zarar verme davranışı psikiyatrik nozolojide belirli kişilik patolojileri ve klinik tanılarla güçlü komorbidite sergiler.\n\n- **Kişilik Bozuklukları Zirvede:** Kendine zarar verme davranışı olan psikiyatrik olgular incelendiğinde, en sık kişilik bozukluklarında görüldüğü bildirilmiştir.\n- **Borderline Kişilik Bozukluğu (BKB):** Bu davranış özellikle Borderline (Sınırda) Kişilik Bozukluğu ile özdeşleşmiş olup tanı kriterleri arasında yer alır.\n- **Duygu Düzenleme Güçlüğü:** BKB hastalarında terk edilme kaygısı, boşluk hissi ve yoğun duygulanım dalgalanmaları kesi eylemleriyle geçici olarak hafifletilir.\n- **Eşlik Eden Diğer Tablolar:** Akut ve kronik psikotik bozukluklar, majör affektif bozukluklar ve cinsel kimlik bozukluklarında da sıklıkla rastlanmaktadır.\n\n> [!IMPORTANT]\n> Borderline kişilik bozukluğu tanılı hastalarda tekrarlayıcı kendine zarar verme davranışı, hastalığın en temel klinik görünümüdür.",
+   "synthesisNarrative": "Kendine zarar verme davranışı psikiyatrik nozolojide belirli kişilik patolojileri ve klinik tanılarla güçlü komorbidite sergiler.\n\n- **Kişilik Bozuklukları Zirvede:** Kendine zarar verme davranışı olan psikiyatrik olgular incelendiğinde, en sık kişilik bozukluklarında görüldüğü bildirilmiştir.\n- **Borderline Kişilik Bozukluğu (BKB):** Bu davranış özellikle Borderline (Sınırda) Kişilik Bozukluğu ile özdeşleşmiş olup tanı kriterleri arasında yer alır.\n- **Duygu Düzenleme Güçlüğü:** BKB hastalarında terk edilme kaygısı, boşluk hissi ve yoğun duygulanım dalgalanmaları kesi eylemleriyle geçici olarak hafifletilir.\n- **Eşlik Eden Diğer Tablolar:** Akut ve kronik psikotik bozukluklar, majör affektif bozukluklar ve cinsel kimlik bozukluklarında da sıklıkla rastlanmaktadır.\n\n> [!IMPORTANT]\n> Borderline kişilik bozukluğu tanılı hastalarda tekrarlayıcı kendine zarar verme davranışı, hastalığın en temel klinik görünümüdür.",
+   "interactiveElements": [
+    {
+     "id": "k45-s29-e1",
+     "type": "micro_quiz",
+     "question": "Kendine zarar verme davranışının klinik uygulamada en sık eşlik ettiği psikiyatrik tablo aşağıdakilerden hangisidir?",
+     "options": [
+      {
+       "text": "Borderline (Sınırda) Kişilik Bozukluğu",
+       "isCorrect": true,
+       "explanation": "Borderline (Sınırda) Kişilik Bozukluğu seçeneği intihar ve kendine zarar verme davranışlarını açıklayan temel klinik ve bilimsel yaklaşımı temsil eder. Bu ilke doğrultusunda soruda hedeflenen klinik mekanizma ve risk yönetimi eksiksiz olarak doğrulanmaktadır."
+      },
+      {
+       "text": "Yalnızca mevsimsel alerjik rinit tablosu",
+       "isCorrect": false,
+       "explanation": "Yalnızca mevsimsel alerjik rinit tablosu kavramı psikiyatri pratiğinde farklı klinik tabloları veya tanısal süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen klinik durumla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Birinci derece ayak bileği burkulması",
+       "isCorrect": false,
+       "explanation": "Birinci derece ayak bileği burkulması kavramı psikiyatri pratiğinde farklı klinik tabloları veya tanısal süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen klinik durumla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Hafif diş çürüğü ve diş eti iltihabı",
+       "isCorrect": false,
+       "explanation": "Hafif diş çürüğü ve diş eti iltihabı kavramı psikiyatri pratiğinde farklı klinik tabloları veya tanısal süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen klinik durumla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      }
+     ]
+    },
+    {
+     "id": "k45-s29-e2",
+     "type": "spot_the_lie",
+     "topic": "Borderline ve Komorbid Psikiyatrik Tablolar",
+     "items": [
+      {
+       "text": "Kendine zarar verme davranışı özellikle borderline kişilik bozukluğunda en sık görülür.",
+       "isLie": false,
+       "explanation": "Kendine zarar verme davranışı özellikle borderline kişilik bozukluğunda en sık görülür. ifadesi psikiyatride intihar risk dinamiklerini doğru yansıtır. Klinik araştırmalar bu yaklaşımı desteklemektedir."
+      },
+      {
+       "text": "Majör affektif bozukluklar ve psikotik bozukluklarda da kendine zarar verme görülebilir.",
+       "isLie": false,
+       "explanation": "Majör affektif bozukluklar ve psikotik bozukluklarda da kendine zarar verme görülebilir. ifadesi psikiyatride intihar risk dinamiklerini doğru yansıtır. Klinik araştırmalar bu yaklaşımı desteklemektedir."
+      },
+      {
+       "text": "Borderline kişilik bozukluğunda kendine zarar verme davranışı kesinlikle hiç görülmez.",
+       "isLie": true,
+       "explanation": "Borderline kişilik bozukluğunda kendine zarar verme davranışı kesinlikle hiç görülmez. ifadesi bilimsel ve klinik gerçeklerle çelişmektedir. İntihar risk değerlendirmesinde bu yaklaşım gerçeğe aykırı bir algıdır."
+      }
+     ]
+    },
+    {
+     "id": "k45-s29-e3",
+     "type": "cloze_masking",
+     "sentence": "Kendine zarar verme davranışı olan psikiyatrik olgularda bu davranış özellikle borderline kişilik bozukluğunda en sık görülmektedir.",
+     "maskedTerm": "borderline kişilik bozukluğunda",
+     "hint": "Tıp eğitimi ve psikiyatri alanındaki temel kavramdır."
+    },
+    {
+     "id": "k45-s29-e4",
+     "type": "active_recall",
+     "question": "Kendine zarar verme davranışının en sık eşlik ettiği psikiyatrik hastalık hangisidir?",
+     "answer": "En sık kişilik bozukluklarında ve özellikle Borderline Kişilik Bozukluğunda (BKB) görülür; ayrıca affektif ve psikotik tablolarda rastlanır."
+    }
+   ],
+   "pdfSayfalari": [
+    38,
+    38
+   ],
+   "sourcePdf": {
+    "startPage": 38,
+    "endPage": 38
+   }
+  },
+  {
+   "id": "k2-45-d-s30",
+   "slideNumber": 30,
+   "title": "Klinik Yönetim ve Spesifik Müdahale Gereksinimi",
+   "bolum": "6",
+   "content": "Kendine zarar verme davranışının klinik yönetimi, altta yatan hastalığın tedavisinin ötesinde spesifik müdahaleler gerektirir.\n\n- **Tedavi Yanılsaması:** Kendine zarar verme davranışının, altta yatan primer durumun (depresyon, BKB vb.) tedavisiyle kendiliğinden yok olmasını beklemek klinik pratikte yetersiz kalmaktadır.\n- **Bağımsız Belirti Olarak Ele Alma:** Bu nedenle kendine zarar verme davranışını başlı başına bağımsız bir klinik hedef belirti kabul etmek zorunludur.\n- **Doğrudan Müdahale Gereksinimi:** Davranışa doğrudan uygun psikoterapötik ve davranışsal müdahalelerde bulunmak hastanın gördüğü bedensel zararı anlamlı biçimde azaltır.\n- **Spesifik Protokol İhtiyacı:** Günümüzde kendine zarar vermeye özgü spesifik müdahale yöntemlerinin (Diyalektik Davranış Terapisi duygu regülasyonu vb.) geliştirilmesi ve yaygınlaştırılması esastır.\n\n> [!NOTE]\n> Kendine zarar vermeyi tek başına başka bir hastalığın gölgesinde bırakmayıp, doğrudan hedef alan kriz ve duygu regülasyon protokolleri uygulanmalıdır.",
+   "synthesisNarrative": "Kendine zarar verme davranışının klinik yönetimi, altta yatan hastalığın tedavisinin ötesinde spesifik müdahaleler gerektirir.\n\n- **Tedavi Yanılsaması:** Kendine zarar verme davranışının, altta yatan primer durumun (depresyon, BKB vb.) tedavisiyle kendiliğinden yok olmasını beklemek klinik pratikte yetersiz kalmaktadır.\n- **Bağımsız Belirti Olarak Ele Alma:** Bu nedenle kendine zarar verme davranışını başlı başına bağımsız bir klinik hedef belirti kabul etmek zorunludur.\n- **Doğrudan Müdahale Gereksinimi:** Davranışa doğrudan uygun psikoterapötik ve davranışsal müdahalelerde bulunmak hastanın gördüğü bedensel zararı anlamlı biçimde azaltır.\n- **Spesifik Protokol İhtiyacı:** Günümüzde kendine zarar vermeye özgü spesifik müdahale yöntemlerinin (Diyalektik Davranış Terapisi duygu regülasyonu vb.) geliştirilmesi ve yaygınlaştırılması esastır.\n\n> [!NOTE]\n> Kendine zarar vermeyi tek başına başka bir hastalığın gölgesinde bırakmayıp, doğrudan hedef alan kriz ve duygu regülasyon protokolleri uygulanmalıdır.",
+   "interactiveElements": [
+    {
+     "id": "k45-s30-e1",
+     "type": "micro_quiz",
+     "question": "Kendine zarar verme davranışı gösteren bir hastada modern klinik yaklaşımın temel ilkesi aşağıdakilerden hangisidir?",
+     "options": [
+      {
+       "text": "Davranışı bağımsız bir hedef belirti kabul ederek doğrudan uygun spesifik müdahalelerde bulunmak",
+       "isCorrect": true,
+       "explanation": "Davranışı bağımsız bir hedef belirti kabul ederek doğrudan uygun spesifik müdahalelerde bulunmak seçeneği intihar ve kendine zarar verme davranışlarını açıklayan temel klinik ve bilimsel yaklaşımı temsil eder. Bu ilke doğrultusunda soruda hedeflenen klinik mekanizma ve risk yönetimi eksiksiz olarak doğrulanmaktadır."
+      },
+      {
+       "text": "Davranışı tamamen görmezden gelerek hiçbir tedavi girişiminde bulunmamak",
+       "isCorrect": false,
+       "explanation": "Davranışı tamamen görmezden gelerek hiçbir tedavi girişiminde bulunmamak kavramı psikiyatri pratiğinde farklı klinik tabloları veya tanısal süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen klinik durumla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Hastaya fiziksel ceza uygulayarak bu davranışı zorla bıraktırmaya çalışmak",
+       "isCorrect": false,
+       "explanation": "Hastaya fiziksel ceza uygulayarak bu davranışı zorla bıraktırmaya çalışmak kavramı psikiyatri pratiğinde farklı klinik tabloları veya tanısal süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen klinik durumla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      },
+      {
+       "text": "Yalnızca altta yatan hastalığın ilacını verip kendine zarar vermeyi hiç konuşmamak",
+       "isCorrect": false,
+       "explanation": "Yalnızca altta yatan hastalığın ilacını verip kendine zarar vermeyi hiç konuşmamak kavramı psikiyatri pratiğinde farklı klinik tabloları veya tanısal süreçleri ifade eden bir tanımlamadır. Sorudaki hedeflenen klinik durumla doğrudan örtüşmediği için bu aşamada doğru seçenek olarak değerlendirilmez."
+      }
+     ]
+    },
+    {
+     "id": "k45-s30-e2",
+     "type": "spot_the_lie",
+     "topic": "Spesifik Klinik Müdahale İlkeleri",
+     "items": [
+      {
+       "text": "Kendine zarar verme davranışının altta yatan durumun tedavisiyle kendiliğinden geçmesini beklemek yetersizdir.",
+       "isLie": false,
+       "explanation": "Kendine zarar verme davranışının altta yatan durumun tedavisiyle kendiliğinden geçmesini beklemek yetersizdir. ifadesi psikiyatride intihar risk dinamiklerini doğru yansıtır. Klinik araştırmalar bu yaklaşımı desteklemektedir."
+      },
+      {
+       "text": "Kendine zarar verme davranışını bağımsız bir belirti kabul edip müdahale etmek zararı azaltır.",
+       "isLie": false,
+       "explanation": "Kendine zarar verme davranışını bağımsız bir belirti kabul edip müdahale etmek zararı azaltır. ifadesi psikiyatride intihar risk dinamiklerini doğru yansıtır. Klinik araştırmalar bu yaklaşımı desteklemektedir."
+      },
+      {
+       "text": "Kendine zarar verme davranışına yönelik spesifik müdahalelere klinik pratikte hiçbir zaman ihtiyaç duyulmaz.",
+       "isLie": true,
+       "explanation": "Kendine zarar verme davranışına yönelik spesifik müdahalelere klinik pratikte hiçbir zaman ihtiyaç duyulmaz. ifadesi bilimsel ve klinik gerçeklerle çelişmektedir. İntihar risk değerlendirmesinde bu yaklaşım gerçeğe aykırı bir algıdır."
+      }
+     ]
+    },
+    {
+     "id": "k45-s30-e3",
+     "type": "cloze_masking",
+     "sentence": "Kendine zarar verme davranışını bir belirti olarak kabul ederek doğrudan uygun müdahalelerde bulunmak gereklidir.",
+     "maskedTerm": "doğrudan uygun müdahalelerde",
+     "hint": "Tıp eğitimi ve psikiyatri alanındaki temel kavramdır."
+    },
+    {
+     "id": "k45-s30-e4",
+     "type": "active_recall",
+     "question": "Kendine zarar verme tedavisinde altta yatan hastalığın tedavisi neden tek başına yeterli olmamaktadır?",
+     "answer": "Davranış pekişip otonomi kazandığı için; bu davranışı bağımsız bir hedef belirti kabul edip doğrudan spesifik müdahalelerde bulunmak gerekir."
+    }
+   ],
+   "pdfSayfalari": [
+    39,
+    40
+   ],
+   "sourcePdf": {
+    "startPage": 39,
+    "endPage": 40
+   }
+  },
+  {
+   "id": "k2-45-d-s31",
+   "slideNumber": 31,
+   "title": "[OYUN SAYFASI] Ders Sonu Oyunları: İntihar ve Kendine Zarar Verme",
+   "bolum": "6",
+   "content": "Bu final oyun sayfasında intihar ve kendine zarar verme dersinin tüm kritik aşamaları, parametrik değişimleri ve tanı ilkeleri interaktif olarak test edilmektedir.\n\n- **Sıralama Oyunu:** İntihar düşüncesinden eyleme geçiş sürecini Kessler basamaklarına göre doğru kronolojik sıraya diziniz.\n- **Tahmin Kaydırıcısı:** Tekrarlanan kendine zarar verme olgularında kendini kesme yönteminin görülme yüzdesini tahmin ediniz.\n- **Bozunum (Pertürbasyon) Analizi:** Bir klinikte Lityum tedavisi, EKT ve intiharı açık sorgulama uygulandığında parametrelerin yönünü belirleyiniz.\n- **Metin Düzeltme:** Paragraftaki tıbbi hatayı tespit ederek kanıta dayalı doğru klinik seçenekle düzeltiniz.\n\n> [!NOTE]\n> Final oyunları, intihar acillerinde hayat kurtaran refleksleri ve NSSI ayırıcı tanısını zihinde kalıcı hale getirir.",
+   "synthesisNarrative": "Bu final oyun sayfasında intihar ve kendine zarar verme dersinin tüm kritik aşamaları, parametrik değişimleri ve tanı ilkeleri interaktif olarak test edilmektedir.\n\n- **Sıralama Oyunu:** İntihar düşüncesinden eyleme geçiş sürecini Kessler basamaklarına göre doğru kronolojik sıraya diziniz.\n- **Tahmin Kaydırıcısı:** Tekrarlanan kendine zarar verme olgularında kendini kesme yönteminin görülme yüzdesini tahmin ediniz.\n- **Bozunum (Pertürbasyon) Analizi:** Bir klinikte Lityum tedavisi, EKT ve intiharı açık sorgulama uygulandığında parametrelerin yönünü belirleyiniz.\n- **Metin Düzeltme:** Paragraftaki tıbbi hatayı tespit ederek kanıta dayalı doğru klinik seçenekle düzeltiniz.\n\n> [!NOTE]\n> Final oyunları, intihar acillerinde hayat kurtaran refleksleri ve NSSI ayırıcı tanısını zihinde kalıcı hale getirir.",
+   "interactiveElements": [
+    {
+     "id": "k45-s31-e1",
+     "type": "sequence_order",
+     "prompt": "İntihar düşüncesinden eyleme geçiş aşamalarını Kessler basamaklarına göre doğru kronolojik sıraya diziniz.",
+     "steps": [
+      "1. Pasif ölüm düşüncelerinin başlaması (Ölsem daha iyi olurdu)",
+      "2. Aktif intihar planının oluşturulması (Tarih, yöntem ve yer belirleme)",
+      "3. Veda ve hazırlık eylemleri (Vasiyet yazma, eşyalarını dağıtma)",
+      "4. Fiili intihar girişiminin gerçekleştirilmesi (%72 eyleme geçiş)"
+     ],
+     "explanation": "Süreç pasif ölüm düşüncesiyle başlar; plan yapılması, hazırlık eylemleri ve nihayetinde fiili intihar girişimiyle seyreder."
+    },
+    {
+     "id": "k45-s31-e2",
+     "type": "estimate_slider",
+     "prompt": "Tekrarlanan kendine zarar verme davranışları içinde kendini kesme yönteminin görülme sıklığını (yüzdesini) tahmin ediniz.",
+     "min": 0,
+     "max": 100,
+     "unit": "%",
+     "answer": 72,
+     "tolerance": 5,
+     "explanation": "Tekrarlanan kendine zarar verme eylemlerinde kendini kesme %72 oranıyla açık ara en sık kullanılan yöntemdir."
+    },
+    {
+     "id": "k45-s31-e3",
+     "type": "perturbation",
+     "scenario": "Bir psikiyatri kliniğinde yüksek intihar riski taşıyan hastalar için 'Açık Sorgulama, Lityum Tedavisi ve Acil EKT Protokolü' devreye alınıyor.",
+     "parameters": [
+      {
+       "name": "Hastanın güvenlik ve gözetim düzeyi",
+       "correct": "up",
+       "explanation": "Klinik yatış ve yakın gözlem hastanın ani impulsif eylemlerini engelleyerek güvenliğini artırır."
+      },
+      {
+       "name": "Ölümcül araçlara erişim riski",
+       "correct": "down",
+       "explanation": "Güvenli servis ortamı ve çevre düzenlemesiyle ölümcül araçlara erişim tamamen azaltılır."
+      },
+      {
+       "name": "Psikiyatrik destek ve yardım arama eğilimi",
+       "correct": "up",
+       "explanation": "Terapötik ilişki ve açık iletişim hastanın yalnızlık hissini azaltarak destek alma isteğini güçlendirir."
+      }
+     ]
+    },
+    {
+     "id": "k45-s31-e4",
+     "type": "fix_the_text",
+     "text": "Klinik değerlendirmede hastaya intihar düşüncelerini doğrudan sormak intihar düşüncesini tetikler ve hastanın eyleme geçme olasılığını artırır.",
+     "errors": [
+      {
+       "wrong": "tetikler",
+       "correct": "azaltır",
+       "options": [
+        "tetikler",
+        "azaltır",
+        "hızlandırır"
+       ],
+       "explanation": "İntihar hakkında doğrudan ve yargılamadan konuşmak hastanın yalnızlık hissini azaltır ve yardım arayışını kolaylaştırır."
+      }
+     ]
+    }
+   ],
+   "isGameFinale": true
+  }
+ ],
+ "deckId": "k2p-y25-k2-45-intihar-ve-kendine-zarar-verme",
+ "donem": "2025-2026",
+ "arsiv": true,
+ "confidence": "high",
+ "totalSlides": 31,
+ "matchedPastQuestionsCount": 0,
+ "sinama": {
+  "etiket": "2025-2026 Arşiv",
+  "aciklama": "Bu ders 2025-2026 dönemi (geçen yıl) slaytlarından hazırlanmıştır; 2026-2027 güncel müfredat dersleriyle karışmaz."
+ }
+}

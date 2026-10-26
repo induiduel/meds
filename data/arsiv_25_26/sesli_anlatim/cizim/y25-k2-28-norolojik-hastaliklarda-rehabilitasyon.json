@@ -1,0 +1,3375 @@
+{
+ "surum": 1,
+ "metinHash": "cd57dc8a2231b5e14448825b4f2c9d54256b07a8",
+ "p": {
+  "0": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "İnme",
+      "Omurilik yaralanması",
+      "Kafa travması",
+      "Multipl skleroz",
+      "Miyopati, polinöropati",
+      "Periferik sinir yaralanmaları"
+     ],
+     "baslik": "Erişkinde nörorehabilitasyon nedenleri",
+     "numarali": true,
+     "s": 2,
+     "k": [
+      0,
+      133
+     ],
+     "tip": "liste",
+     "konum": [
+      0.03,
+      0.66
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.633,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.3126,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "1": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "neden_sonuc",
+     "sablon_ad": "Neden → sonuç",
+     "duzen": "zincir",
+     "bag": "yol açar",
+     "ogeler": [
+      "Beynin kanlanmasının bozulması",
+      "Akut nörolojik kayıp (inme)"
+     ],
+     "s": 3,
+     "k": [
+      0,
+      117
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.03,
+      0.88
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.249,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.1485,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "2": {
+   "0": [
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.2741,
+       0.7881
+      ],
+      [
+       0.2835,
+       0.786
+      ],
+      [
+       0.2874,
+       0.7964
+      ],
+      [
+       0.2881,
+       0.811
+      ],
+      [
+       0.287,
+       0.8298
+      ],
+      [
+       0.2799,
+       0.836
+      ],
+      [
+       0.2717,
+       0.8318
+      ],
+      [
+       0.2659,
+       0.8193
+      ],
+      [
+       0.2647,
+       0.8048
+      ],
+      [
+       0.2682,
+       0.7943
+      ]
+     ],
+     "etiket": "intraserebral hemoraji",
+     "s": 4,
+     "k": [
+      103,
+      147
+     ],
+     "etiket_konum": [
+      0.1981,
+      0.666
+     ],
+     "etiket_genislik": 0.315,
+     "etiket_hedef": [
+      0.2881,
+      0.786
+     ],
+     "etiket_boy": 0.0591
+    }
+   ],
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Değiştirilemeyen: yaş, cinsiyet, genetik",
+      "Değiştirilebilen: önlemenin hedefi"
+     ],
+     "baslik": "İnme risk faktörleri",
+     "s": 4,
+     "k": [
+      0,
+      173
+     ],
+     "tip": "liste",
+     "konum": [
+      0.03,
+      0.94
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.337,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.2968,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "3": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "mekanizma_adimlari",
+     "sablon_ad": "Mekanizma basamakları",
+     "duzen": "zincir",
+     "ogeler": [
+      "Hemipleji (başta gevşek)",
+      "Zamanla tonus bozukluğu",
+      "Spastisite"
+     ],
+     "s": 5,
+     "k": [
+      0,
+      137
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.03,
+      0.87
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.199,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.0892,
+     "ek_renk": "#ffffff"
+    }
+   ],
+   "4": [
+    {
+     "tur": "sema",
+     "sablon": "terim_tanim",
+     "sablon_ad": "Terim → tanım",
+     "duzen": "tablo",
+     "basliklar": [
+      "Terim",
+      "Tanım"
+     ],
+     "satirlar": [
+      [
+       "Apraksi",
+       "Motor/duyu yeterliyken istemli aktiviteyi başlatamama"
+      ]
+     ],
+     "s": 5,
+     "k": [
+      107,
+      197
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.03,
+      0.87
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.314,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.2042,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "4": {
+   "3": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Eşlik eden hastalıkları önlemek, tedavi etmek",
+      "Hasta ve aile eğitimi, uyuma yardım",
+      "Fonksiyonel bağımsızlığı artırmak",
+      "Özürlülüğü azaltmak",
+      "Ev, aile ve topluma entegrasyon",
+      "Anlamlı, tatmin edici hayat"
+     ],
+     "baslik": "İnme rehabilitasyonunun amaçları",
+     "s": 6,
+     "k": [
+      0,
+      129
+     ],
+     "tip": "liste",
+     "konum": [
+      0.03,
+      0.72
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.633,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.3726,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "5": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "olcut_deger",
+     "sablon_ad": "Ölçüt ve değeri",
+     "duzen": "tablo",
+     "basliklar": [
+      "Ölçüt",
+      "Değer"
+     ],
+     "satirlar": [
+      [
+       "Ölüm nedeni sırası",
+       "3."
+      ],
+      [
+       "Ciddi özürlülük nedeni sırası",
+       "1."
+      ]
+     ],
+     "s": 7,
+     "k": [
+      0,
+      127
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.48,
+      0.01
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.39,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ],
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "zaman_gorunum",
+     "sablon_ad": "Süre → görünüm / bulgu",
+     "duzen": "tablo",
+     "basliklar": [
+      "Süre",
+      "Görünüm / bulgu"
+     ],
+     "satirlar": [
+      [
+       "İlk 3 ay",
+       "En hızlı iyileşme"
+      ],
+      [
+       "2 yıla kadar",
+       "İyileşme devam eder"
+      ]
+     ],
+     "s": 7,
+     "k": [
+      0,
+      77
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.1,
+      0.64
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.337,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ]
+  },
+  "6": {
+   "0": [
+    {
+     "tur": "akis",
+     "a": [
+      0.506,
+      0.341
+     ],
+     "b": [
+      0.506,
+      0.407
+     ],
+     "iliski": "aktive",
+     "etiket": "akut dönemde ölüm olabilir",
+     "s": 8,
+     "k": [
+      157,
+      210
+     ],
+     "yol": [
+      [
+       0.506,
+       0.341
+      ],
+      [
+       0.5037,
+       0.3451
+      ],
+      [
+       0.5017,
+       0.3493
+      ],
+      [
+       0.5,
+       0.3534
+      ],
+      [
+       0.4986,
+       0.3575
+      ],
+      [
+       0.4975,
+       0.3616
+      ],
+      [
+       0.4967,
+       0.3658
+      ],
+      [
+       0.4963,
+       0.3699
+      ],
+      [
+       0.4961,
+       0.374
+      ],
+      [
+       0.4963,
+       0.3781
+      ],
+      [
+       0.4967,
+       0.3822
+      ],
+      [
+       0.4975,
+       0.3864
+      ],
+      [
+       0.4986,
+       0.3905
+      ],
+      [
+       0.5,
+       0.3946
+      ],
+      [
+       0.5017,
+       0.3987
+      ],
+      [
+       0.5037,
+       0.4029
+      ],
+      [
+       0.506,
+       0.407
+      ]
+     ],
+     "rota": "kavis",
+     "etiket_konum": [
+      0.506,
+      0.341
+     ],
+     "etiket_genislik": 0.366,
+     "yakin": [
+      0.4361,
+      0.281,
+      0.932,
+      0.467
+     ]
+    }
+   ],
+   "1": [
+    {
+     "tur": "akis",
+     "a": [
+      0.466,
+      0.283
+     ],
+     "b": [
+      0.5619999999999999,
+      0.283
+     ],
+     "iliski": "donusur",
+     "etiket": "akut bakımdan subakut bakıma",
+     "s": 8,
+     "k": [
+      0,
+      29
+     ],
+     "yol": [
+      [
+       0.466,
+       0.283
+      ],
+      [
+       0.562,
+       0.283
+      ]
+     ],
+     "rota": "kavis",
+     "etiket_konum": [
+      0.506,
+      0.163
+     ],
+     "etiket_genislik": 0.391,
+     "etiket_hedef": [
+      0.572,
+      0.273
+     ],
+     "etiket_boy": 0.0591,
+     "yakin": [
+      0.406,
+      0.103,
+      0.957,
+      0.343
+     ]
+    },
+    {
+     "tur": "akis",
+     "a": [
+      0.68,
+      0.426
+     ],
+     "b": [
+      0.68,
+      0.564
+     ],
+     "iliski": "donusur",
+     "etiket": "subakut bakımdan eve dönüş",
+     "s": 8,
+     "k": [
+      110,
+      133
+     ],
+     "yol": [
+      [
+       0.68,
+       0.426
+      ],
+      [
+       0.68,
+       0.564
+      ]
+     ],
+     "rota": "kavis",
+     "etiket_konum": [
+      0.58,
+      0.516
+     ],
+     "etiket_genislik": 0.366,
+     "yakin": [
+      0.52,
+      0.366,
+      1,
+      0.624
+     ]
+    }
+   ],
+   "2": [
+    {
+     "tur": "akis",
+     "a": [
+      0.594,
+      0.617
+     ],
+     "b": [
+      0.488,
+      0.617
+     ],
+     "iliski": "donusur",
+     "etiket": "eve dönüşten topluma dönüş",
+     "s": 8,
+     "k": [
+      12,
+      38
+     ],
+     "yol": [
+      [
+       0.594,
+       0.617
+      ],
+      [
+       0.5874,
+       0.6133
+      ],
+      [
+       0.5807,
+       0.61
+      ],
+      [
+       0.5741,
+       0.6073
+      ],
+      [
+       0.5675,
+       0.6051
+      ],
+      [
+       0.5609,
+       0.6033
+      ],
+      [
+       0.5542,
+       0.6021
+      ],
+      [
+       0.5476,
+       0.6013
+      ],
+      [
+       0.541,
+       0.6011
+      ],
+      [
+       0.5344,
+       0.6013
+      ],
+      [
+       0.5277,
+       0.6021
+      ],
+      [
+       0.5211,
+       0.6033
+      ],
+      [
+       0.5145,
+       0.6051
+      ],
+      [
+       0.5079,
+       0.6073
+      ],
+      [
+       0.5012,
+       0.61
+      ],
+      [
+       0.4946,
+       0.6133
+      ],
+      [
+       0.488,
+       0.617
+      ]
+     ],
+     "rota": "kavis",
+     "etiket_konum": [
+      0.494,
+      0.647
+     ],
+     "etiket_genislik": 0.366,
+     "etiket_hedef": [
+      0.498,
+      0.627
+     ],
+     "etiket_boy": 0.0591,
+     "yakin": [
+      0.428,
+      0.5411,
+      0.92,
+      0.7661
+     ]
+    },
+    {
+     "tur": "akis",
+     "a": [
+      0.714,
+      0.845
+     ],
+     "b": [
+      0.296,
+      0.845
+     ],
+     "iliski": "donusur",
+     "etiket": "rehabilitasyon subakuttan topluma sürer",
+     "s": 8,
+     "k": [
+      109,
+      192
+     ],
+     "yol": [
+      [
+       0.714,
+       0.845
+      ],
+      [
+       0.6879,
+       0.8597
+      ],
+      [
+       0.6617,
+       0.8724
+      ],
+      [
+       0.6356,
+       0.8832
+      ],
+      [
+       0.6095,
+       0.892
+      ],
+      [
+       0.5834,
+       0.8989
+      ],
+      [
+       0.5573,
+       0.9038
+      ],
+      [
+       0.5311,
+       0.9067
+      ],
+      [
+       0.505,
+       0.9077
+      ],
+      [
+       0.4789,
+       0.9067
+      ],
+      [
+       0.4527,
+       0.9038
+      ],
+      [
+       0.4266,
+       0.8989
+      ],
+      [
+       0.4005,
+       0.892
+      ],
+      [
+       0.3744,
+       0.8832
+      ],
+      [
+       0.3483,
+       0.8724
+      ],
+      [
+       0.3221,
+       0.8597
+      ],
+      [
+       0.296,
+       0.845
+      ]
+     ],
+     "rota": "kavis",
+     "etiket_konum": [
+      0.414,
+      0.845
+     ],
+     "etiket_genislik": 0.42,
+     "etiket_hedef": [
+      0.306,
+      0.855
+     ],
+     "etiket_boy": 0.103,
+     "yakin": [
+      0.236,
+      0.785,
+      0.894,
+      1
+     ]
+    }
+   ]
+  },
+  "7": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "durum_yaklasim",
+     "sablon_ad": "Durum → yaklaşım",
+     "duzen": "tablo",
+     "basliklar": [
+      "Durum",
+      "Yaklaşım"
+     ],
+     "satirlar": [
+      [
+       "Bası yarası riski",
+       "Sık pozisyon değişikliği"
+      ]
+     ],
+     "s": 9,
+     "k": [
+      151,
+      206
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.62,
+      0.33
+     ],
+     "genislik": 0.34,
+     "doluluk": 0.0,
+     "kutu_h": 0.314,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ],
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "neden_sonuc",
+     "sablon_ad": "Neden → sonuç",
+     "duzen": "zincir",
+     "bag": "yol açar",
+     "ogeler": [
+      "Yutma değerlendirilmeden besleme",
+      "Aspirasyon riski artar"
+     ],
+     "s": 9,
+     "k": [
+      178,
+      239
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.03,
+      0.88
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.249,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.1485,
+     "ek_renk": "#ffffff"
+    }
+   ],
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "durum_yaklasim",
+     "sablon_ad": "Durum → yaklaşım",
+     "duzen": "tablo",
+     "basliklar": [
+      "Durum",
+      "Yaklaşım"
+     ],
+     "satirlar": [
+      [
+       "Akut dönemde depresyon",
+       "Aktif olarak aranır; tanı ve tedavi"
+      ]
+     ],
+     "s": 9,
+     "k": [
+      112,
+      201
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.03,
+      0.88
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.261,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.1608,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "8": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Yatak içi egzersizler",
+      "Oturma ve ayakta durma egzersizleri",
+      "Transfer, yürüme ve merdiven egzersizleri",
+      "Denge ve koordinasyon egzersizleri"
+     ],
+     "baslik": "Fiziksel fonksiyon girişimleri (yataktan ayağa)",
+     "numarali": true,
+     "s": 10,
+     "k": [
+      26,
+      261
+     ],
+     "tip": "liste",
+     "konum": [
+      0.03,
+      0.88
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.485,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.3847,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "9": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "olcut_deger",
+     "sablon_ad": "Ölçüt ve değeri",
+     "duzen": "tablo",
+     "basliklar": [
+      "Ölçüt",
+      "Değer"
+     ],
+     "satirlar": [
+      [
+       "Hemiplejik üst ekstremitenin en sık sorunu",
+       "Omuz ağrısı"
+      ]
+     ],
+     "s": 11,
+     "k": [
+      205,
+      284
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.04,
+      0.76
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.314,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.0942,
+     "ek_renk": "#ffffff"
+    }
+   ],
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "neden_sonuc",
+     "sablon_ad": "Neden → sonuç",
+     "duzen": "zincir",
+     "bag": "yol açar",
+     "ogeler": [
+      "İnmenin kendisi (omurilik yaralanması olmadan)",
+      "Mesane ve barsak disfonksiyonu"
+     ],
+     "s": 11,
+     "k": [
+      189,
+      307
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.04,
+      0.76
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.378,
+     "yon": "dikey",
+     "olcek": 1.0,
+     "ek_alt": 0.1579,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "10": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "durum_yaklasim",
+     "sablon_ad": "Durum → yaklaşım",
+     "duzen": "tablo",
+     "basliklar": [
+      "Durum",
+      "Yaklaşım"
+     ],
+     "satirlar": [
+      [
+       "Ciddi spastisite",
+       "Oral kas gevşeticiler, kas içi botulinum toksini"
+      ]
+     ],
+     "s": 12,
+     "k": [
+      0,
+      79
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.09,
+      0.63
+     ],
+     "genislik": 0.6,
+     "doluluk": 0.0,
+     "kutu_h": 0.314,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ]
+  },
+  "11": {
+   "1": [
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.7146,
+       0.3625
+      ],
+      [
+       0.717,
+       0.4083
+      ],
+      [
+       0.7263,
+       0.45
+      ],
+      [
+       0.731,
+       0.5167
+      ],
+      [
+       0.7301,
+       0.5833
+      ],
+      [
+       0.7287,
+       0.6333
+      ],
+      [
+       0.7216,
+       0.6667
+      ],
+      [
+       0.724,
+       0.6833
+      ],
+      [
+       0.7334,
+       0.6833
+      ],
+      [
+       0.7381,
+       0.6542
+      ],
+      [
+       0.7474,
+       0.6167
+      ],
+      [
+       0.7521,
+       0.5667
+      ],
+      [
+       0.7521,
+       0.5
+      ],
+      [
+       0.7427,
+       0.4542
+      ],
+      [
+       0.731,
+       0.4167
+      ],
+      [
+       0.7263,
+       0.3625
+      ]
+     ],
+     "etiket": "spinal kord: servikalden sakrokoksigeale",
+     "s": 13,
+     "k": [
+      159,
+      210
+     ],
+     "etiket_konum": [
+      0.5621,
+      0.3225
+     ],
+     "etiket_genislik": 0.42
+    },
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.7216,
+       0.6833
+      ],
+      [
+       0.7207,
+       0.7333
+      ],
+      [
+       0.7226,
+       0.7917
+      ],
+      [
+       0.7287,
+       0.8417
+      ],
+      [
+       0.7357,
+       0.8708
+      ],
+      [
+       0.7474,
+       0.8583
+      ],
+      [
+       0.7413,
+       0.8167
+      ],
+      [
+       0.7334,
+       0.7667
+      ],
+      [
+       0.731,
+       0.7167
+      ],
+      [
+       0.7334,
+       0.6833
+      ]
+     ],
+     "etiket": "kauda ekina",
+     "s": 13,
+     "k": [
+      214,
+      254
+     ],
+     "etiket_konum": [
+      0.4574,
+      0.7133
+     ],
+     "etiket_genislik": 0.176,
+     "etiket_hedef": [
+      0.7207,
+      0.7429
+     ],
+     "etiket_boy": 0.0591
+    }
+   ]
+  },
+  "12": {
+   "3": [
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.258,
+       0.5
+      ],
+      [
+       0.153,
+       0.463
+      ],
+      [
+       0.161,
+       0.383
+      ],
+      [
+       0.187,
+       0.313
+      ],
+      [
+       0.225,
+       0.27
+      ],
+      [
+       0.267,
+       0.258
+      ],
+      [
+       0.309,
+       0.272
+      ],
+      [
+       0.339,
+       0.313
+      ],
+      [
+       0.358,
+       0.38
+      ],
+      [
+       0.366,
+       0.483
+      ]
+     ],
+     "etiket": "trafik kazası %46",
+     "s": 14,
+     "k": [
+      55,
+      105
+     ],
+     "etiket_konum": [
+      0.416,
+      0.258
+     ],
+     "etiket_genislik": 0.252,
+     "etiket_hedef": [
+      0.366,
+      0.2876
+     ],
+     "etiket_boy": 0.0591
+    },
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.258,
+       0.5
+      ],
+      [
+       0.366,
+       0.487
+      ],
+      [
+       0.363,
+       0.567
+      ],
+      [
+       0.349,
+       0.642
+      ],
+      [
+       0.328,
+       0.692
+      ],
+      [
+       0.319,
+       0.703
+      ]
+     ],
+     "etiket": "düşme %17",
+     "s": 14,
+     "k": [
+      110,
+      130
+     ],
+     "etiket_konum": [
+      0.258,
+      0.715
+     ],
+     "etiket_genislik": 0.15,
+     "yakin": [
+      0.198,
+      0.427,
+      0.468,
+      0.815
+     ]
+    }
+   ]
+  },
+  "13": {
+   "3": [
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.838,
+       0.4
+      ],
+      [
+       0.858,
+       0.4
+      ],
+      [
+       0.859,
+       0.47
+      ],
+      [
+       0.857,
+       0.537
+      ],
+      [
+       0.853,
+       0.61
+      ],
+      [
+       0.844,
+       0.61
+      ],
+      [
+       0.843,
+       0.537
+      ],
+      [
+       0.836,
+       0.537
+      ],
+      [
+       0.834,
+       0.47
+      ]
+     ],
+     "etiket": "C6: tetraplejide felçli bölge",
+     "s": 15,
+     "k": [
+      19,
+      76
+     ],
+     "etiket_konum": [
+      0.46,
+      0.8
+     ],
+     "etiket_genislik": 0.404,
+     "etiket_hedef": [
+      0.834,
+      0.61
+     ],
+     "etiket_boy": 0.0591
+    },
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.894,
+       0.662
+      ],
+      [
+       0.916,
+       0.662
+      ],
+      [
+       0.915,
+       0.723
+      ],
+      [
+       0.911,
+       0.793
+      ],
+      [
+       0.904,
+       0.793
+      ],
+      [
+       0.903,
+       0.74
+      ],
+      [
+       0.9,
+       0.793
+      ],
+      [
+       0.896,
+       0.793
+      ],
+      [
+       0.895,
+       0.723
+      ]
+     ],
+     "etiket": "L1: paraplejide felçli bölge",
+     "s": 15,
+     "k": [
+      77,
+      128
+     ],
+     "etiket_konum": [
+      0.52,
+      0.88
+     ],
+     "etiket_genislik": 0.391,
+     "etiket_hedef": [
+      0.894,
+      0.793
+     ],
+     "etiket_boy": 0.0591
+    }
+   ]
+  },
+  "14": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Kardiyovasküler disfonksiyon",
+      "Pulmoner disfonksiyon",
+      "Mesane disfonksiyonu",
+      "Barsak disfonksiyonu",
+      "Seksüel disfonksiyon",
+      "Termoregülasyon sorunları",
+      "Otonomik disrefleksi"
+     ],
+     "baslik": "Otonom bozukluklar",
+     "s": 16,
+     "k": [
+      0,
+      139
+     ],
+     "tip": "liste",
+     "konum": [
+      0.03,
+      0.61
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.707,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.3365,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "15": {
+   "2": [
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.69,
+       0.357
+      ],
+      [
+       0.705,
+       0.357
+      ],
+      [
+       0.705,
+       0.392
+      ],
+      [
+       0.705,
+       0.425
+      ],
+      [
+       0.69,
+       0.425
+      ],
+      [
+       0.69,
+       0.392
+      ]
+     ],
+     "etiket": "anahtar kaslar",
+     "s": 17,
+     "k": [
+      27,
+      42
+     ],
+     "etiket_konum": [
+      0.48,
+      0.16
+     ],
+     "etiket_genislik": 0.214,
+     "etiket_hedef": [
+      0.69,
+      0.357
+     ],
+     "etiket_boy": 0.0591
+    },
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.666,
+       0.673
+      ],
+      [
+       0.673,
+       0.673
+      ],
+      [
+       0.68,
+       0.673
+      ],
+      [
+       0.68,
+       0.689
+      ],
+      [
+       0.666,
+       0.689
+      ]
+     ],
+     "etiket": "istemli anal kontraksiyon",
+     "s": 17,
+     "k": [
+      67,
+      92
+     ],
+     "etiket_konum": [
+      0.26,
+      0.8
+     ],
+     "etiket_genislik": 0.353,
+     "etiket_hedef": [
+      0.666,
+      0.689
+     ],
+     "etiket_boy": 0.0591
+    }
+   ]
+  },
+  "16": {
+   "0": [
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.196,
+       0.168
+      ],
+      [
+       0.286,
+       0.168
+      ],
+      [
+       0.376,
+       0.168
+      ],
+      [
+       0.376,
+       0.31
+      ],
+      [
+       0.286,
+       0.31
+      ],
+      [
+       0.196,
+       0.31
+      ]
+     ],
+     "etiket": "inkomplet yaralanma",
+     "s": 18,
+     "k": [
+      9,
+      41
+     ],
+     "etiket_konum": [
+      0.366,
+      0.048
+     ],
+     "etiket_genislik": 0.277,
+     "etiket_hedef": [
+      0.376,
+      0.168
+     ],
+     "etiket_boy": 0.0591,
+     "yakin": [
+      0.136,
+      0,
+      0.703,
+      0.37
+     ]
+    }
+   ],
+   "1": [
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.556,
+       0.168
+      ],
+      [
+       0.642,
+       0.168
+      ],
+      [
+       0.728,
+       0.168
+      ],
+      [
+       0.728,
+       0.31
+      ],
+      [
+       0.642,
+       0.31
+      ],
+      [
+       0.556,
+       0.31
+      ]
+     ],
+     "etiket": "komplet yaralanma",
+     "s": 18,
+     "k": [
+      0,
+      19
+     ],
+     "etiket_konum": [
+      0.718,
+      0.108
+     ],
+     "etiket_genislik": 0.252,
+     "yakin": [
+      0.496,
+      0.048,
+      1,
+      0.37
+     ]
+    }
+   ]
+  },
+  "17": {
+   "2": [
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.794,
+       0.357
+      ],
+      [
+       0.811,
+       0.36
+      ],
+      [
+       0.83,
+       0.38
+      ],
+      [
+       0.842,
+       0.42
+      ],
+      [
+       0.844,
+       0.473
+      ],
+      [
+       0.837,
+       0.513
+      ],
+      [
+       0.818,
+       0.533
+      ],
+      [
+       0.798,
+       0.539
+      ],
+      [
+       0.795,
+       0.487
+      ],
+      [
+       0.794,
+       0.42
+      ]
+     ],
+     "etiket": "lezyon tarafı (hemikord)",
+     "s": 19,
+     "k": [
+      0,
+      40
+     ],
+     "etiket_konum": [
+      0.52,
+      0.8
+     ],
+     "etiket_genislik": 0.34,
+     "etiket_hedef": [
+      0.794,
+      0.539
+     ],
+     "etiket_boy": 0.0591
+    },
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.917,
+       0.45
+      ],
+      [
+       0.927,
+       0.45
+      ],
+      [
+       0.927,
+       0.553
+      ],
+      [
+       0.927,
+       0.697
+      ],
+      [
+       0.915,
+       0.697
+      ],
+      [
+       0.914,
+       0.62
+      ],
+      [
+       0.915,
+       0.52
+      ]
+     ],
+     "etiket": "karşı tarafta ağrı-ısı kaybı",
+     "s": 19,
+     "k": [
+      84,
+      115
+     ],
+     "etiket_konum": [
+      0.54,
+      0.88
+     ],
+     "etiket_genislik": 0.391,
+     "etiket_hedef": [
+      0.914,
+      0.697
+     ],
+     "etiket_boy": 0.0591
+    }
+   ],
+   "3": [
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.927,
+       0.432
+      ],
+      [
+       0.939,
+       0.432
+      ],
+      [
+       0.939,
+       0.52
+      ],
+      [
+       0.938,
+       0.62
+      ],
+      [
+       0.935,
+       0.68
+      ],
+      [
+       0.937,
+       0.699
+      ],
+      [
+       0.927,
+       0.699
+      ],
+      [
+       0.926,
+       0.62
+      ],
+      [
+       0.927,
+       0.52
+      ]
+     ],
+     "s": 19,
+     "k": [
+      64,
+      112
+     ],
+     "yakin": [
+      0.866,
+      0.372,
+      0.999,
+      0.759
+     ]
+    },
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.917,
+       0.45
+      ],
+      [
+       0.927,
+       0.45
+      ],
+      [
+       0.927,
+       0.553
+      ],
+      [
+       0.927,
+       0.697
+      ],
+      [
+       0.915,
+       0.697
+      ],
+      [
+       0.914,
+       0.62
+      ],
+      [
+       0.915,
+       0.52
+      ]
+     ],
+     "s": 19,
+     "k": [
+      113,
+      151
+     ],
+     "yakin": [
+      0.854,
+      0.39,
+      0.987,
+      0.757
+     ]
+    }
+   ]
+  },
+  "18": {
+   "0": [
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.2877,
+       0.4683
+      ],
+      [
+       0.277,
+       0.4933
+      ],
+      [
+       0.2479,
+       0.5116
+      ],
+      [
+       0.2081,
+       0.5183
+      ],
+      [
+       0.1682,
+       0.5116
+      ],
+      [
+       0.1391,
+       0.4933
+      ],
+      [
+       0.1284,
+       0.4683
+      ],
+      [
+       0.1391,
+       0.4433
+      ],
+      [
+       0.1682,
+       0.425
+      ],
+      [
+       0.2081,
+       0.4183
+      ],
+      [
+       0.2479,
+       0.425
+      ],
+      [
+       0.277,
+       0.4433
+      ]
+     ],
+     "etiket": "ön kolon hasarı",
+     "s": 20,
+     "k": [
+      0,
+      55
+     ],
+     "etiket_konum": [
+      0.2777,
+      0.5083
+     ],
+     "etiket_genislik": 0.226
+    }
+   ],
+   "1": [
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.6739,
+       0.765
+      ],
+      [
+       0.6598,
+       0.7867
+      ],
+      [
+       0.6214,
+       0.8025
+      ],
+      [
+       0.5689,
+       0.8083
+      ],
+      [
+       0.5164,
+       0.8025
+      ],
+      [
+       0.478,
+       0.7867
+      ],
+      [
+       0.4639,
+       0.765
+      ],
+      [
+       0.478,
+       0.7433
+      ],
+      [
+       0.5164,
+       0.7275
+      ],
+      [
+       0.5689,
+       0.7217
+      ],
+      [
+       0.6214,
+       0.7275
+      ],
+      [
+       0.6598,
+       0.7433
+      ]
+     ],
+     "etiket": "arka kolon hasarı",
+     "s": 20,
+     "k": [
+      0,
+      55
+     ],
+     "etiket_konum": [
+      0.6839,
+      0.7217
+     ],
+     "etiket_genislik": 0.252
+    }
+   ]
+  },
+  "19": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "lezyon_bulgu",
+     "sablon_ad": "Lezyon yeri → bulgu",
+     "duzen": "tablo",
+     "basliklar": [
+      "Lezyon düzeyi",
+      "Bulgu"
+     ],
+     "satirlar": [
+      [
+       "Kauda ekina (lumbosakral kökler)",
+       "Konus medullarise benzer tablo"
+      ],
+      [
+       "Konus medullaris (sakral kord + lomber kök)",
+       "Alt ekstremitede flask pleji"
+      ],
+      [
+       "Konus medullaris",
+       "Nörojenik mesane ve bağırsak disfonksiyonu"
+      ],
+      [
+       "Konus medullaris",
+       "1. ve 2. motor nöron bulguları birlikte"
+      ]
+     ],
+     "s": 21,
+     "k": [
+      0,
+      289
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.03,
+      0.76
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.596,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.3756,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "20": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "algoritma",
+     "sablon_ad": "Yaklaşım basamakları",
+     "duzen": "adimlar",
+     "ogeler": [
+      "Erken dönem, yoğun bakım: komplikasyonları önlemek",
+      "Sonra: seviyeye göre fonksiyonel amaçlar eklenir"
+     ],
+     "s": 22,
+     "k": [
+      0,
+      209
+     ],
+     "tip": "adimlar",
+     "konum": [
+      0.03,
+      0.76
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.271,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.0511,
+     "ek_renk": "#ffffff"
+    }
+   ],
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "GYA'da bağımsızlığı en üst düzeye çıkarmak",
+      "Sekonder komplikasyonları önlemek",
+      "Yaşam kalitesini artırmak",
+      "Sosyal hayata yeniden uyum"
+     ],
+     "baslik": "Rehabilitasyonun ana hedefleri",
+     "s": 22,
+     "k": [
+      0,
+      197
+     ],
+     "tip": "liste",
+     "konum": [
+      0.03,
+      0.76
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.485,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.2647,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "21": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "durum_yaklasim",
+     "sablon_ad": "Durum → yaklaşım",
+     "duzen": "tablo",
+     "basliklar": [
+      "Durum",
+      "Yaklaşım"
+     ],
+     "satirlar": [
+      [
+       "Komplikasyonları önleme",
+       "Pozisyonlama ile başlanır"
+      ],
+      [
+       "Kontraktür ve kas atrofisi",
+       "Akut dönemde eklem hareket açıklığı egzersizi"
+      ]
+     ],
+     "s": 23,
+     "k": [
+      0,
+      203
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.03,
+      0.86
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.39,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.2702,
+     "ek_renk": "#ffffff"
+    }
+   ],
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Tekerlekli sandalye kullanımı",
+      "Ağırlık aktarımı",
+      "Transferler",
+      "El desteği kullanımı"
+     ],
+     "baslik": "Paraplejide güçlü üst ekstremite gerekir",
+     "s": 23,
+     "k": [
+      83,
+      285
+     ],
+     "tip": "liste",
+     "konum": [
+      0.03,
+      0.86
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.485,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.3647,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "22": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "algoritma",
+     "sablon_ad": "Yaklaşım basamakları",
+     "duzen": "adimlar",
+     "ogeler": [
+      "Yatak içi egzersizler: dönme, sırtüstünden oturmaya",
+      "Oturma kazanılır",
+      "Tekerlekli sandalye, transfer, ayakta durma"
+     ],
+     "s": 24,
+     "k": [
+      0,
+      229
+     ],
+     "tip": "adimlar",
+     "konum": [
+      0.03,
+      0.72
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.345,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.085,
+     "ek_renk": "#ffffff"
+    }
+   ],
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Sürme teknikleri",
+      "Transferler",
+      "Rampa inip çıkma",
+      "Dönüşler"
+     ],
+     "baslik": "Tekerlekli sandalyede çalıştırılanlar",
+     "s": 24,
+     "k": [
+      71,
+      190
+     ],
+     "tip": "liste",
+     "konum": [
+      0.03,
+      0.72
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.485,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.2247,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "23": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "duzey_fonksiyon",
+     "sablon_ad": "Yaralanma seviyesi ve fonksiyon",
+     "duzen": "tablo",
+     "basliklar": [
+      "Yaralanma seviyesi",
+      "Beklenen fonksiyon"
+     ],
+     "satirlar": [
+      [
+       "T10 ve üzeri",
+       "Yalnızca terapötik ambulasyon"
+      ],
+      [
+       "T11–L2",
+       "Ev içi ambulasyon"
+      ],
+      [
+       "L2 altı",
+       "Toplumsal ambulasyon"
+      ]
+     ],
+     "s": 25,
+     "k": [
+      0,
+      193
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.03,
+      0.76
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.413,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.1928,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "24": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Solunum sistemi sorunları",
+      "Kardiyovasküler problemler",
+      "Üriner sistem problemleri"
+     ],
+     "baslik": "Omurilik yaralanmasının ilk komplikasyonları",
+     "s": 26,
+     "k": [
+      0,
+      134
+     ],
+     "tip": "liste",
+     "konum": [
+      0.43,
+      0.19
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.411,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ],
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Heterotopik ossifikasyon",
+      "Bası yarası",
+      "Kontraktür",
+      "Osteoporoz"
+     ],
+     "baslik": "Çoğu immobilizasyonla ilişkili",
+     "s": 26,
+     "k": [
+      8,
+      124
+     ],
+     "tip": "liste",
+     "konum": [
+      0.03,
+      0.89
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.485,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.3947,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "25": {
+   "0": [
+    {
+     "tur": "akis",
+     "a": [
+      0.736,
+      0.408
+     ],
+     "b": [
+      0.692,
+      0.437
+     ],
+     "iliski": "aktive",
+     "etiket": "darbe beyin dokusunu hasarlar",
+     "s": 27,
+     "k": [
+      0,
+      79
+     ],
+     "odak": [
+      0.672,
+      0.388,
+      0.756,
+      0.457
+     ],
+     "etiket_konum": [
+      0.556,
+      0.268
+     ],
+     "etiket_genislik": 0.404,
+     "etiket_hedef": [
+      0.756,
+      0.388
+     ],
+     "etiket_boy": 0.0591
+    }
+   ]
+  },
+  "26": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Travma öncesi alkol alımı",
+      "Önceki beyin hasarı öyküsü",
+      "Genç yaş",
+      "Erkek olma",
+      "Düşük sosyoekonomik düzey",
+      "Düşük eğitim seviyesi",
+      "Davranış ve kişilik bozukluğu",
+      "Ailesel problemler"
+     ],
+     "baslik": "TBH risk faktörleri (önem sırasıyla)",
+     "numarali": true,
+     "s": 28,
+     "k": [
+      0,
+      189
+     ],
+     "tip": "liste",
+     "konum": [
+      0.03,
+      0.71
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.78,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.5104,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "27": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Serebral kontüzyon (peteşiyal kanama)",
+      "Parankimal ezilme",
+      "Kraniyal sinir yaralanmaları",
+      "Diffüz aksonal hasar"
+     ],
+     "baslik": "Primer hasarın en önemli nedenleri",
+     "s": 29,
+     "k": [
+      0,
+      173
+     ],
+     "tip": "liste",
+     "konum": [
+      0.03,
+      0.83
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.485,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.3347,
+     "ek_renk": "#ffffff"
+    }
+   ],
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "tani_tetkik",
+     "sablon_ad": "Durum → bakılacak tetkik",
+     "duzen": "tablo",
+     "basliklar": [
+      "Durum / şüphe",
+      "Bakılacak tetkik"
+     ],
+     "satirlar": [
+      [
+       "Hasarın yaygınlığı ve şiddeti",
+       "Glaskow koma skalası"
+      ]
+     ],
+     "s": 29,
+     "k": [
+      0,
+      93
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.03,
+      0.83
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.261,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.1108,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "28": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "neden_sonuc",
+     "sablon_ad": "Neden → sonuç",
+     "duzen": "zincir",
+     "bag": "yol açar",
+     "ogeler": [
+      "Etkilenen alanın yeri ve büyüklüğü",
+      "Motor, duyusal ve mental yetersizlik"
+     ],
+     "s": 30,
+     "k": [
+      0,
+      104
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.03,
+      0.78
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.249,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.0485,
+     "ek_renk": "#ffffff"
+    }
+   ],
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Posttravmatik epilepsi",
+      "Posttravmatik hidrosefali",
+      "Disfaji, aspirasyon pnömonisi",
+      "Subglottik stenoz",
+      "Gastrointestinal kanama",
+      "Hipertansiyon",
+      "Derin ven trombozu, pulmoner emboli"
+     ],
+     "baslik": "Akut rehabilitasyon döneminin ciddi sorunları",
+     "s": 30,
+     "k": [
+      0,
+      255
+     ],
+     "tip": "liste",
+     "konum": [
+      0.03,
+      0.78
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.707,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.5065,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "29": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "neden_sonuc",
+     "sablon_ad": "Neden → sonuç",
+     "duzen": "zincir",
+     "bag": "yol açar",
+     "ogeler": [
+      "Uzun posttravmatik amnezi ve koma süresi",
+      "Beklenen iyileşme azalır"
+     ],
+     "s": 31,
+     "k": [
+      0,
+      113
+     ],
+     "tip": "zincir",
+     "konum": [
+      0.6,
+      0.55
+     ],
+     "genislik": 0.34,
+     "doluluk": 0.0,
+     "kutu_h": 0.431,
+     "yon": "dikey",
+     "olcek": 1.0
+    }
+   ],
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Atrofi",
+      "Basınç yarası",
+      "Osteoporoz",
+      "Eklem kontraktürü",
+      "Heterotopik ossifikasyon"
+     ],
+     "baslik": "Erken mobilizasyonla önlenen komplikasyonlar",
+     "s": 31,
+     "k": [
+      0,
+      179
+     ],
+     "tip": "liste",
+     "konum": [
+      0.03,
+      0.61
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.559,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.1886,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "30": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Spina bifida",
+      "Miyopatiler",
+      "Brakiyal pleksus lezyonları",
+      "Omurilik yaralanmaları",
+      "Kafa travmaları",
+      "Spinal müsküler distrofiler",
+      "Polinöropatiler"
+     ],
+     "baslik": "Engelliliğe yol açan diğer çocukluk çağı hastalıkları",
+     "s": 32,
+     "k": [
+      64,
+      227
+     ],
+     "tip": "liste",
+     "konum": [
+      0.05,
+      0.76
+     ],
+     "genislik": 0.5,
+     "doluluk": 0.0,
+     "kutu_h": 0.707,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.4865,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "31": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "cok_neden_tek_sonuc",
+     "sablon_ad": "Birçok neden → tek sonuç",
+     "duzen": "grup",
+     "bag": "neden olur",
+     "kaynaklar": [
+      "Prematürite",
+      "Düşük doğum ağırlığı"
+     ],
+     "sonuc": "Serebral palsi",
+     "s": 33,
+     "k": [
+      0,
+      71
+     ],
+     "tip": "grup",
+     "konum": [
+      0.51,
+      0.66
+     ],
+     "genislik": 0.42,
+     "doluluk": 0.0,
+     "kutu_h": 0.329,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ],
+   "2": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Prenatal (olguların %80'i)",
+      "Natal",
+      "Postnatal"
+     ],
+     "baslik": "Serebral palsi risk faktörleri",
+     "numarali": true,
+     "s": 33,
+     "k": [
+      0,
+      119
+     ],
+     "tip": "liste",
+     "konum": [
+      0.03,
+      0.72
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.411,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.1508,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "32": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Spastik (en sık)",
+      "Diskinetik",
+      "Ataksik",
+      "Mikst"
+     ],
+     "baslik": "Serebral palsi tipleri",
+     "s": 34,
+     "k": [
+      18,
+      101
+     ],
+     "tip": "liste",
+     "konum": [
+      0.03,
+      0.9
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.485,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.4047,
+     "ek_renk": "#ffffff"
+    }
+   ],
+   "1": [
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.709,
+       0.406
+      ],
+      [
+       0.718,
+       0.433
+      ],
+      [
+       0.717,
+       0.483
+      ],
+      [
+       0.718,
+       0.583
+      ],
+      [
+       0.717,
+       0.65
+      ],
+      [
+       0.712,
+       0.722
+      ],
+      [
+       0.713,
+       0.798
+      ],
+      [
+       0.703,
+       0.8
+      ],
+      [
+       0.69,
+       0.798
+      ],
+      [
+       0.692,
+       0.722
+      ],
+      [
+       0.695,
+       0.611
+      ],
+      [
+       0.693,
+       0.55
+      ],
+      [
+       0.696,
+       0.483
+      ],
+      [
+       0.701,
+       0.439
+      ]
+     ],
+     "etiket": "hemiplejik: tek taraf tutulum",
+     "s": 34,
+     "k": [
+      41,
+      52
+     ],
+     "etiket_konum": [
+      0.58,
+      0.82
+     ],
+     "etiket_genislik": 0.404
+    },
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.865,
+       0.392
+      ],
+      [
+       0.874,
+       0.417
+      ],
+      [
+       0.873,
+       0.472
+      ],
+      [
+       0.881,
+       0.528
+      ],
+      [
+       0.884,
+       0.611
+      ],
+      [
+       0.878,
+       0.639
+      ],
+      [
+       0.868,
+       0.711
+      ],
+      [
+       0.868,
+       0.8
+      ],
+      [
+       0.846,
+       0.8
+      ],
+      [
+       0.853,
+       0.694
+      ],
+      [
+       0.853,
+       0.583
+      ],
+      [
+       0.843,
+       0.511
+      ],
+      [
+       0.853,
+       0.461
+      ],
+      [
+       0.859,
+       0.411
+      ]
+     ],
+     "etiket": "tetraplejik: dört ekstremite tutulumu",
+     "s": 34,
+     "k": [
+      65,
+      77
+     ],
+     "etiket_konum": [
+      0.56,
+      0.16
+     ],
+     "etiket_genislik": 0.42,
+     "etiket_hedef": [
+      0.843,
+      0.392
+     ],
+     "etiket_boy": 0.103
+    }
+   ],
+   "3": [
+    {
+     "tur": "sema",
+     "sablon": "tani_tetkik",
+     "sablon_ad": "Durum → bakılacak tetkik",
+     "duzen": "tablo",
+     "basliklar": [
+      "Durum / şüphe",
+      "Bakılacak tetkik"
+     ],
+     "satirlar": [
+      [
+       "Serebral palsi şüphesi",
+       "Tanı klinik; beyin MR yol gösterici"
+      ]
+     ],
+     "s": 34,
+     "k": [
+      0,
+      104
+     ],
+     "tip": "tablo",
+     "konum": [
+      0.03,
+      0.9
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.261,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.1808,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "33": {
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "cok_neden_tek_sonuc",
+     "sablon_ad": "Birçok neden → tek sonuç",
+     "duzen": "grup",
+     "bag": "neden olur",
+     "kaynaklar": [
+      "Ailede spina bifida varlığı",
+      "Teratojen faktörler",
+      "Annede folik asit eksikliği"
+     ],
+     "sonuc": "Spina bifida",
+     "s": 35,
+     "k": [
+      0,
+      134
+     ],
+     "tip": "grup",
+     "konum": [
+      0.03,
+      0.77
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.351,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.1412,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "34": {
+   "0": [
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.588,
+       0.475
+      ],
+      [
+       0.619,
+       0.421
+      ],
+      [
+       0.656,
+       0.404
+      ],
+      [
+       0.684,
+       0.433
+      ],
+      [
+       0.701,
+       0.517
+      ],
+      [
+       0.698,
+       0.6
+      ],
+      [
+       0.677,
+       0.671
+      ],
+      [
+       0.651,
+       0.696
+      ],
+      [
+       0.623,
+       0.671
+      ],
+      [
+       0.609,
+       0.617
+      ],
+      [
+       0.583,
+       0.571
+      ],
+      [
+       0.576,
+       0.517
+      ]
+     ],
+     "etiket": "meningosel: zar + BOS kesesi",
+     "s": 36,
+     "k": [
+      140,
+      207
+     ],
+     "etiket_konum": [
+      0.2,
+      0.1
+     ],
+     "etiket_genislik": 0.391,
+     "etiket_hedef": [
+      0.576,
+      0.404
+     ],
+     "etiket_boy": 0.0591
+    }
+   ],
+   "1": [
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.874,
+       0.358
+      ],
+      [
+       0.909,
+       0.367
+      ],
+      [
+       0.937,
+       0.4
+      ],
+      [
+       0.954,
+       0.467
+      ],
+      [
+       0.955,
+       0.533
+      ],
+      [
+       0.942,
+       0.6
+      ],
+      [
+       0.93,
+       0.638
+      ],
+      [
+       0.909,
+       0.663
+      ],
+      [
+       0.879,
+       0.65
+      ],
+      [
+       0.855,
+       0.658
+      ],
+      [
+       0.834,
+       0.617
+      ],
+      [
+       0.829,
+       0.55
+      ],
+      [
+       0.834,
+       0.458
+      ],
+      [
+       0.843,
+       0.375
+      ]
+     ],
+     "etiket": "kesede omurilik ve sinirler",
+     "s": 36,
+     "k": [
+      18,
+      93
+     ],
+     "etiket_konum": [
+      0.6,
+      0.1
+     ],
+     "etiket_genislik": 0.378,
+     "etiket_hedef": [
+      0.829,
+      0.358
+     ],
+     "etiket_boy": 0.0591,
+     "yakin": [
+      0.54,
+      0.04,
+      1,
+      0.723
+     ]
+    }
+   ]
+  },
+  "35": {
+   "0": [
+    {
+     "tur": "kontur",
+     "nokta": [
+      [
+       0.818,
+       0.585
+      ],
+      [
+       0.83,
+       0.572
+      ],
+      [
+       0.843,
+       0.578
+      ],
+      [
+       0.849,
+       0.605
+      ],
+      [
+       0.843,
+       0.635
+      ],
+      [
+       0.828,
+       0.645
+      ],
+      [
+       0.816,
+       0.63
+      ],
+      [
+       0.812,
+       0.605
+      ]
+     ],
+     "etiket": "lumbosakral gamze / ben",
+     "s": 37,
+     "k": [
+      91,
+      156
+     ],
+     "etiket_konum": [
+      0.66,
+      0.74
+     ],
+     "etiket_genislik": 0.328,
+     "etiket_hedef": [
+      0.8238,
+      0.645
+     ],
+     "etiket_boy": 0.0591
+    }
+   ]
+  },
+  "36": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Flask paralizi",
+      "Kas zayıflığı",
+      "Tendon reflekslerinde azalma/kayıp",
+      "Proprioseptif duyuda azalma/kayıp"
+     ],
+     "baslik": "Alt motor nöron tipi tablo",
+     "s": 38,
+     "k": [
+      34,
+      198
+     ],
+     "tip": "liste",
+     "konum": [
+      0.03,
+      0.86
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.485,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.3647,
+     "ek_renk": "#ffffff"
+    }
+   ],
+   "1": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Barsak ve mesane inkontinansı",
+      "Hidrosefali",
+      "Ayak ve kalça deformiteleri",
+      "Skolyoz ve kifoz"
+     ],
+     "baslik": "Eşlik eden sorunlar",
+     "s": 38,
+     "k": [
+      0,
+      172
+     ],
+     "tip": "liste",
+     "konum": [
+      0.03,
+      0.86
+     ],
+     "genislik": 0.9,
+     "doluluk": 0.0,
+     "kutu_h": 0.485,
+     "yon": "yatay",
+     "olcek": 1.0,
+     "ek_alt": 0.3647,
+     "ek_renk": "#ffffff"
+    }
+   ]
+  },
+  "37": {
+   "0": [
+    {
+     "tur": "sema",
+     "sablon": "siniflama",
+     "sablon_ad": "Sınıflama",
+     "duzen": "liste",
+     "ogeler": [
+      "Kontraktürleri engellemek",
+      "Spinal deformiteyi engellemek",
+      "Üst ekstremiteyi güçlendirmek",
+      "Mesane ve barsak rehabilitasyonu"
+     ],
+     "baslik": "Spina bifida rehabilitasyon amaçları",
+     "s": 39,
+     "k": [
+      25,
+      187
+     ],
+     "tip": "liste",
+     "konum": [
+      0.52,
+      0.21
+     ],
+     "genislik": 0.42,
+     "doluluk": 0.0,
+     "kutu_h": 0.485,
+     "yon": "yatay",
+     "olcek": 1.0
+    }
+   ]
+  }
+ },
+ "rapor": {
+  "aday": 77,
+  "gecti": 70,
+  "ret": {
+   "panel metni 'Sonra gelenler' henüz anlatılmamış terim içeriy": 1,
+   "panel metni 'İnmede görülebilen kayıplar' henüz anlatılmamış": 1,
+   "panel metni 'Bozukluk türü' henüz anlatılmamış terim içeriyo": 1,
+   "ok uçlarından biri boş alanda (yazı/çizim yok)": 3,
+   "noktaların %21'i çizgi üstünde (en az %70)": 1
+  },
+  "ret_ayrinti": [
+   {
+    "cumle": "P0.C2",
+    "sayfa": 2,
+    "tur": "sema",
+    "neden": "panel metni 'Sonra gelenler' henüz anlatılmamış terim içeriyor (ileri sızıntı)",
+    "komut": {}
+   },
+   {
+    "cumle": "P1.C1",
+    "sayfa": 3,
+    "tur": "sema",
+    "neden": "panel metni 'İnmede görülebilen kayıplar' henüz anlatılmamış terim içeriyor (ileri sızıntı)",
+    "komut": {}
+   },
+   {
+    "cumle": "P3.C3",
+    "sayfa": 5,
+    "tur": "sema",
+    "neden": "panel metni 'Bozukluk türü' henüz anlatılmamış terim içeriyor (ileri sızıntı)",
+    "komut": {}
+   },
+   {
+    "cumle": "P16.C0",
+    "sayfa": 18,
+    "tur": "akis",
+    "neden": "ok uçlarından biri boş alanda (yazı/çizim yok)",
+    "komut": {
+     "a": [
+      0.16,
+      0.71
+     ],
+     "b": [
+      0.19,
+      0.64
+     ],
+     "etiket": "sakral korunma var"
+    }
+   },
+   {
+    "cumle": "P16.C1",
+    "sayfa": 18,
+    "tur": "akis",
+    "neden": "ok uçlarından biri boş alanda (yazı/çizim yok)",
+    "komut": {
+     "a": [
+      0.52,
+      0.7
+     ],
+     "b": [
+      0.55,
+      0.625
+     ],
+     "etiket": "sakral korunma yok"
+    }
+   },
+   {
+    "cumle": "P16.C2",
+    "sayfa": 18,
+    "tur": "akis",
+    "neden": "ok uçlarından biri boş alanda (yazı/çizim yok)",
+    "komut": {
+     "a": [
+      0.28,
+      0.86
+     ],
+     "b": [
+      0.33,
+      0.835
+     ],
+     "etiket": "istemli anal kontraksiyon"
+    }
+   },
+   {
+    "cumle": "P36.C0",
+    "sayfa": 38,
+    "tur": "kontur",
+    "neden": "noktaların %21'i çizgi üstünde (en az %70)",
+    "komut": {
+     "nokta": [
+      [
+       0.752,
+       0.493
+      ],
+      [
+       0.764,
+       0.469
+      ],
+      [
+       0.787,
+       0.461
+      ],
+      [
+       0.81,
+       0.474
+      ],
+      [
+       0.824,
+       0.51
+      ],
+      [
+       0.822,
+       0.551
+      ],
+      [
+       0.806,
+       0.572
+      ],
+      [
+       0.782,
+       0.576
+      ],
+      [
+       0.761,
+       0.562
+      ],
+      [
+       0.752,
+       0.53
+      ]
+     ],
+     "etiket": "meningomiyelosel kesesi"
+    }
+   }
+  ]
+ }
+}

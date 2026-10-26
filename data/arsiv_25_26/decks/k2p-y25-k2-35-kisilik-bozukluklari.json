@@ -1,0 +1,2488 @@
+{
+ "deckId": "k2p-y25-k2-35-kisilik-bozukluklari",
+ "courseId": "y25-k2-35-kisilik-bozukluklari",
+ "title": "Kişilik Bozuklukları",
+ "author": "Doç. Dr. Zuhal Koç Apaydın",
+ "semester": "2025-2026",
+ "term": 2,
+ "sayfaHaritasi": "teyitli",
+ "slides": [
+  {
+   "slideNumber": 1,
+   "title": "Kişilik Kavramı: Mizaç ve Karakter Sentezi",
+   "content": "Kişilik, bireyin iç ve dış dünyayla kurduğu ilişki biçimini, çevreye uyumunu ve tutarlı duygu, düşünce ile davranış örüntülerini ifade eden kapsamlı bir yapıdır.\n\n- **Mizaç (Huy):** Doğuştan gelen, genetik ve biyolojik temelli duygusal tepki örüntüsüdür; otonom sinir sistemi uyarılabilirliği ile doğrudan ilişkilidir.\n- **Karakter Boyutu:** Çevreyle etkileşim, aile terbiyesi ve toplumsal öğrenme süreçleriyle sonradan kazanılan ahlaki ve tutumsal değerler bütünüdür.\n- **Dinamik Bütünlük:** Bireyin günlük yaşamdaki kararları, çatışma çözme biçimleri ve kişilerarası ilişkileri mizaç ile karakterin uyumlu senteziyle yönlenir.\n\n> [!NOTE]\n> Kişilik formülü özetle **Kişilik = Mizaç + Karakter** olarak tanımlanır ve bireyin benzersiz varoluşunu simgeler.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Kişiliğin doğuştan gelen genetik ve biyolojik altyapısını simgeleyen temel bileşen hangisidir?",
+     "options": [
+      {
+       "text": "Mizaç (huy)",
+       "isCorrect": true,
+       "explanation": "Mizaç genetik altyapılı olup otonom sinir sistemi özellikleri ve nörobiyolojik eğilimlerle doğuştan gelen biyolojik tabandır. Bu mekanizma ders notlarında vurgulanan temel patofizyolojik ilkeyi doğrular. Klinik yaklaşımda birincil referans kabul edilir."
+      },
+      {
+       "text": "Karakter",
+       "isCorrect": false,
+       "explanation": "Karakter biyolojik değil, aile eğitimi ve toplumsal çevre aracılığıyla sonradan öğrenilen ahlaki örüntüdür. Bu durum soruda hedeflenen klinik tabloyla uyuşmaz. Tanısal süreçte diğer patolojilerden ayrılması gerekir."
+      },
+      {
+       "text": "Sosyal rol",
+       "isCorrect": false,
+       "explanation": "Sosyal rol bireyin toplum içindeki fonksiyonel görevlerini tanımlar, doğuştan gelen kişilik tabanını oluşturmaz. Bu durum soruda hedeflenen klinik tabloyla uyuşmaz. Tanısal süreçte diğer patolojilerden ayrılması gerekir."
+      },
+      {
+       "text": "Ego savunması",
+       "isCorrect": false,
+       "explanation": "Ego savunmaları çatışmaları yönetmek için kullanılan psikolojik mekanizmalardır, doğuştan gelen temel mizaç değildir. Bu durum soruda hedeflenen klinik tabloyla uyuşmaz. Tanısal süreçte diğer patolojilerden ayrılması gerekir."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Kişiliğin doğuştan gelen biyolojik temeline mizaç adı verilirken sonradan kazanılan boyutuna karakter denir.",
+     "maskedTerm": "karakter",
+     "hint": "Toplumsal çevre ve aile eğitimiyle sonradan şekillenen ahlaki ve tutumsal kişilik boyutu."
+    },
+    {
+     "type": "causal_chain",
+     "title": "Kişilik Gelişimi ve Sentezi Mekanizması",
+     "steps": [
+      "1. Genetik temel: Doğuştan gelen otonom sinir sistemi uyarılabilirliği ve mizaç özellikleri belirlenir.",
+      "2. Çevresel öğrenme: Erken çocuklukta aile eğitimi ve toplumsal normlar aracılığıyla karakter şekillenir.",
+      "3. Bütünleşik sentez: Biyolojik mizaç ile öğrenilmiş karakter birleşerek tutarlı kişilik örüntüsünü kurar."
+     ]
+    },
+    {
+     "id": "k35-s1-l1",
+     "type": "spot_the_lie",
+     "topic": "Kişilik Yapısı İlkeleri Tuzak Avı",
+     "items": [
+      {
+       "text": "Mizaç doğuştan gelen genetik ve biyolojik temelli duygusal tepki örüntüsüdür.",
+       "isLie": false,
+       "explanation": "Mizaç genetik ve otonomik altyapıyı temsil eden doğuştan gelen kişilik bileşenidir."
+      },
+      {
+       "text": "Karakter bireyin aile ve toplumla etkileşimi sonucu sonradan kazanılan ahlaki boyutudur.",
+       "isLie": false,
+       "explanation": "Karakter çevresel öğrenme ve toplumsal değerlerin içselleştirilmesiyle gelişir."
+      },
+      {
+       "text": "Kişilik yapısında mizaç sonradan öğrenilirken karakter doğuştan genetik olarak kodlanır.",
+       "isLie": true,
+       "explanation": "Tam tersine, mizaç doğuştan genetik olarak gelir; karakter ise çevre ve aile etkisiyle sonradan kazanılır."
+      }
+     ]
+    }
+   ],
+   "pdfSayfalari": [
+    2,
+    4
+   ],
+   "sourcePdf": {
+    "startPage": 2,
+    "endPage": 4,
+    "name": "y25-k2-35-kisilik-bozukluklari.pdf"
+   },
+   "bolum": "1"
+  },
+  {
+   "slideNumber": 2,
+   "title": "Kişilik Faktörleri: Bedensel ve Kültürel Etkenler",
+   "content": "Kişiliğin oluşumunda içsel biyolojik zemin ile dışsal kültürel beklentiler karşılıklı etkileşim halindedir.\n\n- **Bedensel ve Genetik Etkenler:** Otonom sinir sistemi duyarlılığı, santral nörotransmiter yolakları (serotonin, dopamin) ve hormonal denge duygulanım regülasyonunu yönetir.\n- **Fizyolojik Yatkınlık:** Uyaran eşiğinin düşüklüğü veya yüksekliği bireyin strese karşı verdiği fizyolojik yanıtta belirleyicidir.\n- **Kültürel Yapı ve Normlar:** Toplumun kabul ettiği idealler, ahlaki kurallar, cinsiyet rolleri ve inançlar karakterin sınırlarını çizer.\n- **Toplumsal Beklentiler:** Kültür, hangi davranışların ödüllendirileceğini veya kınanacağını belirleyerek kişiliğin dışa vurumunu biçimlendirir.\n\n> [!IMPORTANT]\n> Biyolojik yatkınlık tek başına kişiliği belirlemez; kültürel değerler bu biyolojik potansiyelin nasıl dışa vurulacağını yönlendirir.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Kişiliğin fizyolojik ve bedensel faktörleri incelendiğinde strese verilen biyolojik yanıtı doğrudan yöneten yapı hangisidir?",
+     "options": [
+      {
+       "text": "Otonom sinir sistemi ve nörotransmiter dengesi",
+       "isCorrect": true,
+       "explanation": "Otonom sinir sistemi uyarılabilirliği ve nörotransmiter yolakları biyolojik stres eşiğini doğrudan belirler. Bu mekanizma ders notlarında vurgulanan temel patofizyolojik ilkeyi doğrular. Klinik yaklaşımda birincil referans kabul edilir."
+      },
+      {
+       "text": "Yalnızca toplumsal ahlak kuralları",
+       "isCorrect": false,
+       "explanation": "Toplumsal kurallar kültürel faktörlerdir, bedensel ve nörofizyolojik altyapıyı temsil etmez. Bu durum soruda hedeflenen klinik tabloyla uyuşmaz. Tanısal süreçte diğer patolojilerden ayrılması gerekir."
+      },
+      {
+       "text": "Sadece okul arkadaşlık ilişkileri",
+       "isCorrect": false,
+       "explanation": "Arkadaşlık ilişkileri sosyalleşme faktörleridir, içsel biyolojik regülasyon mekanizması değildir. Bu durum soruda hedeflenen klinik tabloyla uyuşmaz. Tanısal süreçte diğer patolojilerden ayrılması gerekir."
+      },
+      {
+       "text": "Bireyin mesleki kariyer tercihleri",
+       "isCorrect": false,
+       "explanation": "Mesleki tercihler yetişkinlik dönemi sosyal kararlarıdır, biyolojik kişilik altyapısını oluşturmaz. Bu durum soruda hedeflenen klinik tabloyla uyuşmaz. Tanısal süreçte diğer patolojilerden ayrılması gerekir."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Toplumun idealleri ve beklentileri kişiliğin kültürel faktörler tarafından biçimlenmesini sağlar.",
+     "maskedTerm": "kültürel",
+     "hint": "Toplumun değer yargılarını, ahlaki normlarını ve geleneksel rollerini kapsayan dışsal etken."
+    },
+    {
+     "id": "k35-s2-t1",
+     "type": "interactive_table",
+     "title": "Bedensel ve Kültürel Faktörlerin Karşılaştırması",
+     "tableHeaders": [
+      "Faktör Alanı",
+      "Temel Mekanizma",
+      "Kişilikteki Yansıması"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Bedensel Faktörler",
+         "isMasked": false
+        },
+        {
+         "text": "Otonomik duyarlılık ve genetik altyapı",
+         "isMasked": true,
+         "hint": "Doğuştan gelen nörobiyolojik uyarılabilirlik ve hormonal denge."
+        },
+        {
+         "text": "Duygusal reaktivite ve stres eşiği",
+         "isMasked": false
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Kültürel Faktörler",
+         "isMasked": false
+        },
+        {
+         "text": "Toplumsal normlar ve ahlaki beklentiler",
+         "isMasked": true,
+         "hint": "Kültürel etkenler ve çevresel etkileşimlerle şekillenen yapı."
+        },
+        {
+         "text": "Karakter idealleri ve davranış sınırları",
+         "isMasked": false
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k35-s2-l1",
+     "type": "spot_the_lie",
+     "topic": "Kişiliği Oluşturan Etkenler Tuzak Avı",
+     "items": [
+      {
+       "text": "Otonom sinir sistemi uyarılabilirliği kişiliğin biyolojik ve fizyolojik boyutunda yer alır.",
+       "isLie": false,
+       "explanation": "Sinir sistemi duyarlılığı ve nöroendokrin yapı bedensel-biyolojik faktörlerin çekirdeğidir."
+      },
+      {
+       "text": "Kültürel faktörler bireyin ideallerini, amaçlarını ve toplumsal rollerini şekillendirir.",
+       "isLie": false,
+       "explanation": "Kültür hangi davranışların kabul göreceğini belirleyerek karakter gelişimini yönlendirir."
+      },
+      {
+       "text": "Biyolojik faktörler çevresel ve kültürel etkileşimlerden bağımsız olarak tek başına karakteri kurar.",
+       "isLie": true,
+       "explanation": "Karakter tek başına biyolojiyle kurulamaz; aile, kültür ve sosyalleşme süreçlerinin senteziyle oluşur."
+      }
+     ]
+    }
+   ],
+   "pdfSayfalari": [
+    5,
+    7
+   ],
+   "sourcePdf": {
+    "startPage": 5,
+    "endPage": 7,
+    "name": "y25-k2-35-kisilik-bozukluklari.pdf"
+   },
+   "bolum": "1"
+  },
+  {
+   "slideNumber": 3,
+   "title": "Kişilik Faktörleri: Aile, Sosyalleşme ve Durumsallık",
+   "content": "Bireyin mikro çevresi olan aile ortamından makro düzeydeki durumsal krizlere uzanan etkileşimler kişiliği olgunlaştırır.\n\n- **Aile Faktörü:** Erken çocukluktaki ebeveyn tutumları, tutarlı sevgi, güvenli bağlanma ve disiplin anlayışı temel güven duygusunun kaynağıdır.\n- **Sosyalleşme Süreci:** Akran grupları, okul yaşamı ve iş çevresi bireye iş birliği, rekabet ve empati gibi sosyal becerileri kazandırır.\n- **Durumsallık Faktörü:** Doğal afetler, savaşlar, ani kayıplar veya göç gibi beklenmedik krizler kişilik dinamiklerinde derin izler bırakır.\n- **Dinamik Denge:** Birey bu etkenlerin karşılıklı etkileşimi sayesinde benlik bütünlüğünü sağlar ve olgun savunma mekanizmaları geliştirir.\n\n> [!NOTE]\n> Erken çocuklukta güvensiz veya reddedici aile ortamında büyüyen bireylerde ileriki yaşamda kişilik patolojisi gelişme riski belirgin şekilde yüksektir.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Erken çocuklukta anne baba tutumları ve güvenli bağlanma deneyimleri kişiliğin hangi temel faktör grubu içinde incelenir?",
+     "options": [
+      {
+       "text": "Aile faktörü",
+       "isCorrect": true,
+       "explanation": "Erken dönem ebeveyn tutumları ve aile içi etkileşim temel güven ve kişilik altyapısını kuran aile faktörüdür. Bu mekanizma ders notlarında vurgulanan temel patofizyolojik ilkeyi doğrular. Klinik yaklaşımda birincil referans kabul edilir."
+      },
+      {
+       "text": "Yalnızca durumsallık faktörü",
+       "isCorrect": false,
+       "explanation": "Durumsallık faktörü ani kriz ve travmaları kapsar, erken çocukluktaki sürekli aile yapısını değil. Bu durum soruda hedeflenen klinik tabloyla uyuşmaz. Tanısal süreçte diğer patolojilerden ayrılması gerekir."
+      },
+      {
+       "text": "Sadece genetik faktör",
+       "isCorrect": false,
+       "explanation": "Aile ortamındaki bağlanma ve sevgi ilişkisi çevresel psikodinamik süreçlerdir, salt genetik değildir. Bu durum soruda hedeflenen klinik tabloyla uyuşmaz. Tanısal süreçte diğer patolojilerden ayrılması gerekir."
+      },
+      {
+       "text": "Mesleki sosyalleşme süreci",
+       "isCorrect": false,
+       "explanation": "Mesleki sosyalleşme yetişkinlikte gerçekleşir, erken çocukluktaki ebeveyn bağlanmasını kapsamaz. Bu durum soruda hedeflenen klinik tabloyla uyuşmaz. Tanısal süreçte diğer patolojilerden ayrılması gerekir."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Ani travmatik krizler ve beklenmedik yaşam olayları kişiliği durumsallık faktörü üzerinden etkiler.",
+     "maskedTerm": "durumsallık",
+     "hint": "Bu kavram klinik tanı sürecinde temel ayırıcı özellik olarak kullanılır."
+    },
+    {
+     "type": "causal_chain",
+     "title": "Sosyal ve Ailesel Kişilik Gelişimi Akışı",
+     "steps": [
+      "1. Aile içi bağlanma: Erken çocuklukta ebeveynle kurulan güvenli ilişki temel benlik saygısını inşa eder.",
+      "2. Sosyalleşme adımı: Okul ve akran ortamında kurallara uyum ve empati yeteneği pekiştirilir.",
+      "3. Durumsal uyum: Yetişkinlik krizlerinde kazanılan olgun savunmalar sayesinde kişilik dengesi korunur."
+     ]
+    },
+    {
+     "id": "k35-s3-l1",
+     "type": "spot_the_lie",
+     "topic": "Aile ve Sosyalleşme Dinamikleri Tuzak Avı",
+     "items": [
+      {
+       "text": "Aile içi tutarlı sevgi ve güvenli bağlanma kişilik gelişiminde temel güven duygusunu oluşturur.",
+       "isLie": false,
+       "explanation": "Erken çocukluktaki güvenli ebeveyn ilişkisi sağlıklı kişilik gelişiminin en kritik unsurudur."
+      },
+      {
+       "text": "Akran ilişkileri ve okul çevresi bireyin empati ve sosyal uyum becerilerini olgunlaştırır.",
+       "isLie": false,
+       "explanation": "Sosyalleşme süreci bireyin toplumla işlevsel bağlar kurmasını sağlayan temel adımdır."
+      },
+      {
+       "text": "Durumsallık faktörü bireyin kişiliğini etkilemez, kişilik hiçbir dış krizden etkilenmeyen taş gibi yapıdır.",
+       "isLie": true,
+       "explanation": "Kişilik katılaşabilir ancak ağır travmalar ve durumsal krizler kişilik dinamiklerinde önemli değişimler yaratabilir."
+      }
+     ]
+    }
+   ],
+   "pdfSayfalari": [
+    8,
+    11
+   ],
+   "sourcePdf": {
+    "startPage": 8,
+    "endPage": 11,
+    "name": "y25-k2-35-kisilik-bozukluklari.pdf"
+   },
+   "bolum": "1"
+  },
+  {
+   "slideNumber": 4,
+   "isCheckpoint": true,
+   "title": "[TEKRAR SAYFASI - CHECKPOINT 1] Kişilik ve Dinamikleri",
+   "content": "Bu checkpoint sayfasında kişiliğin tanımı, mizaç ve karakter ayrımı ile kişiliği oluşturan beş temel faktör pekiştirilmektedir.\n\n- **Kişilik Denklemi:** Doğuştan gelen biyolojik mizaç ile sonradan kazanılan kültürel ve ailesel karakterin sentezidir.\n- **Beş Faktör:** Bedensel-fizyolojik, kültürel, ailesel, sosyalleşme ve durumsallık etkenleri kişiliği dinamik bir bütünlük içinde kurar.\n- **Klinik Çıkarım:** Sağlıklı kişilik esnek uyum yeteneğine dayanırken, katılaşma ve uyumsuzluk kişilik bozukluklarına zemin hazırlar.\n\n> [!IMPORTANT]\n> Mizaç değişime dirençli nörobiyolojik zemini temsil ederken, karakter psikoterapi ve öğrenme süreçleriyle dönüştürülebilir.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Kişilik formülünde yer alan 'Mizaç' ve 'Karakter' bileşenlerinin köken farkı hangi seçenekte eksiksiz özetlenmiştir?",
+     "options": [
+      {
+       "text": "Mizaç doğuştan gelen biyolojik zemindir, karakter ise aile ve toplumla sonradan kazanılır",
+       "isCorrect": true,
+       "explanation": "Mizaç genetik altyapılı nörobiyolojik çekirdeği, karakter ise çevresel etkileşimle oluşan ahlaki boyutu simgeler. Bu mekanizma ders notlarında vurgulanan temel patofizyolojik ilkeyi doğrular. Klinik yaklaşımda birincil referans kabul edilir."
+      },
+      {
+       "text": "Mizaç yetişkinlikte öğrenilir, karakter ise sadece genetik kromozomlarla aktarılır",
+       "isCorrect": false,
+       "explanation": "Kavramlar ters verilmiştir; genetik olan mizaçtır, öğrenilen ise karakter yapısıdır. Bu durum soruda hedeflenen klinik tabloyla uyuşmaz. Tanısal süreçte diğer patolojilerden ayrılması gerekir."
+      },
+      {
+       "text": "Her iki kavram da yalnızca ani durumsal travmalar sonucunda ortaya çıkan geçici durumlardır",
+       "isCorrect": false,
+       "explanation": "Mizaç ve karakter süreklilik gösteren temel kişilik yapılarıdır, geçici akut durumlar değildir. Bu durum soruda hedeflenen klinik tabloyla uyuşmaz. Tanısal süreçte diğer patolojilerden ayrılması gerekir."
+      },
+      {
+       "text": "Mizaç ve karakter arasında psikolojik veya biyolojik hiçbir kavramsal fark bulunmaz",
+       "isCorrect": false,
+       "explanation": "Mizaç biyolojik altyapıyı, karakter ise sosyokültürel boyutu simgeleyen iki farklı eksendir. Bu durum soruda hedeflenen klinik tabloyla uyuşmaz. Tanısal süreçte diğer patolojilerden ayrılması gerekir."
+      }
+     ]
+    },
+    {
+     "id": "k35-s4-t1",
+     "type": "interactive_table",
+     "title": "Kişilik Faktörleri Pekiştirme Tablosu",
+     "tableHeaders": [
+      "Faktör Grubu",
+      "Temel İçerik",
+      "Gelişim Dönemi"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Bedensel / Mizaç",
+         "isMasked": false
+        },
+        {
+         "text": "Genetik ve otonomik uyarılabilirlik",
+         "isMasked": true,
+         "hint": "Doğuştan gelen nörobiyolojik altyapı ve sinir sistemi özellikleri."
+        },
+        {
+         "text": "Doğumdan itibaren",
+         "isMasked": false
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Aile / Karakter",
+         "isMasked": false
+        },
+        {
+         "text": "Bağlanma biçimi ve ebeveyn tutumu",
+         "isMasked": true,
+         "hint": "Erken çocuklukta anne babayla kurulan güvenli veya güvensiz bağ."
+        },
+        {
+         "text": "Erken çocukluk",
+         "isMasked": false
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k35-s4-w1",
+     "type": "swipe_matching",
+     "title": "Kişilik Bileşenleri Kavram Eşleme",
+     "leftCategory": "Mizaç Boyutu",
+     "rightCategory": "Karakter Boyutu",
+     "cards": [
+      {
+       "text": "Otonom sinir sistemi duyarlılığı ve genetik altyapı",
+       "category": "left"
+      },
+      {
+       "text": "Toplumsal ahlak normları ve aile eğitimiyle kazanılan değerler",
+       "category": "right"
+      },
+      {
+       "text": "Doğuştan gelen duygusal tepki hızı ve uyarılma eşiği",
+       "category": "left"
+      },
+      {
+       "text": "Kültürel beklentilerle şekillenen vicdani ve tutumsal yapı",
+       "category": "right"
+      }
+     ]
+    },
+    {
+     "id": "k35-s4-l1",
+     "type": "spot_the_lie",
+     "topic": "Kişilik Temelleri Kontrol Sorusu",
+     "items": [
+      {
+       "text": "Mizaç doğuştan gelen genetik ve nörobiyolojik altyapıyı temsil eder.",
+       "isLie": false,
+       "explanation": "Mizaç biyolojik çekirdeği oluşturan doğuştan gelen kişilik zeminidir."
+      },
+      {
+       "text": "Karakter gelişiminde erken çocukluktaki ebeveyn tutumları belirleyici rol oynar.",
+       "isLie": false,
+       "explanation": "Aile ortamı ve bağlanma biçimi karakterin temel yapı taşlarını inşa eder."
+      },
+      {
+       "text": "Kişilik gelişiminde kültürel normlar ve aile faktörü hiçbir rol oynamaz, sadece mizaç yeterlidir.",
+       "isLie": true,
+       "explanation": "Kişilik yalnız mizaçtan ibaret değildir; aile, kültür ve sosyalleşme süreçlerinin senteziyle kurulur."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slideNumber": 5,
+   "title": "Kişilik Bozuklukları: Genel Tanı ve Epidemiyoloji",
+   "content": "Kişilik bozuklukları, bireyin kültürel beklentilerinden belirgin sapma gösteren, esneklikten yoksun ve kalıcı içsel yaşantı ve davranış örüntüleridir.\n\n- **Başlangıç Dönemi:** Tipik olarak ergenlik veya genç erişkinlik evresinde yerleşir; zaman içinde değişime dirençli ve kararlı bir seyir izler.\n- **Yaygın Etki:** Biliş, duygulanım, kişilerarası işlevsellik ve dürtü kontrolü alanlarından en az ikisinde belirgin bozulma mevcuttur.\n- **Toplum Prevalansı:** Genel popülasyonda görülme sıklığı yaklaşık yüzde yedi ila yirmi üç arasında geniş bir dağılım gösterir.\n- **Klinik Yük:** Psikiyatri polikliniklerine ve yataklı servislere başvuran hastaların yüzde otuz ila ellisinde bir kişilik patolojisi saptanmaktadır.\n\n> [!IMPORTANT]\n> Kişilik bozukluğu tanısı için tablonun başka bir psikiyatrik bozukluğun (depresyon, şizofreni) veya organik bir durumun sonucu olmaması şarttır.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Kişilik bozukluklarının klinik başlangıç dönemi ve zaman içindeki gidişatı hakkında hangisi doğru bir saptamadır?",
+     "options": [
+      {
+       "text": "Tipik olarak ergenlik veya genç erişkinlikte başlar ve kalıcı seyir izler",
+       "isCorrect": true,
+       "explanation": "Kişilik bozuklukları ergenlik veya genç erişkinlik döneminde yerleşir ve yaşam boyu kararlı, esneklikten yoksun seyir gösterir. Bu mekanizma ders notlarında vurgulanan temel patofizyolojik ilkeyi doğrular. Klinik yaklaşımda birincil referans kabul edilir."
+      },
+      {
+       "text": "Yalnızca yetmiş yaşından sonra aniden başlayan geçici durumlardır",
+       "isCorrect": false,
+       "explanation": "İleri yaşta aniden başlayan kişilik değişimleri primer kişilik bozukluğu değil, demans veya frontal organik lezyondur. Bu durum soruda hedeflenen klinik tabloyla uyuşmaz. Tanısal süreçte diğer patolojilerden ayrılması gerekir."
+      },
+      {
+       "text": "Birkaç günlük stres sonrasında kendiliğinden tamamen remisyona girer",
+       "isCorrect": false,
+       "explanation": "Kişilik bozuklukları akut ve geçici tablolar değildir, yaşam boyu süren katı davranış örüntüleridir. Bu durum soruda hedeflenen klinik tabloyla uyuşmaz. Tanısal süreçte diğer patolojilerden ayrılması gerekir."
+      },
+      {
+       "text": "Toplumda sıklığı milyonda bir gibi son derece ender düzeylerdedir",
+       "isCorrect": false,
+       "explanation": "Genel toplumda yüzde yedi ila yirmi üç gibi oldukça yaygın bir prevalansa sahiptir. Bu durum soruda hedeflenen klinik tabloyla uyuşmaz. Tanısal süreçte diğer patolojilerden ayrılması gerekir."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Kişilik bozuklukları genel popülasyonda yaklaşık yüzde yedi ila yirmi üç prevalansı arasında saptanmaktadır.",
+     "maskedTerm": "popülasyonda",
+     "hint": "Bir toplumda veya genel nüfus grubunda yer alan bireylerin tümünü ifade eden demografik terim."
+    },
+    {
+     "id": "k35-s5-t1",
+     "type": "interactive_table",
+     "title": "Kişilik Bozukluğu Genel Tanı Alanları",
+     "tableHeaders": [
+      "Tanı Alanı",
+      "Bozulma Biçimi",
+      "Klinik Görünüm"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Biliş ve Algılama",
+         "isMasked": false
+        },
+        {
+         "text": "Kendini ve dünyayı katı yorumlama",
+         "isMasked": true,
+         "hint": "Olayları ve insanları esneklikten yoksun biçimde algılama tarzı."
+        },
+        {
+         "text": "Uyumsuz inanç ve şemalar",
+         "isMasked": false
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Dürtü Kontrolü",
+         "isMasked": false
+        },
+        {
+         "text": "Tepkileri düzenleyememe ve taşkınlık",
+         "isMasked": true,
+         "hint": "İçsel istek ve öfkeyi kontrol etmede yetersiz kalma durumu."
+        },
+        {
+         "text": "Dürtüsel ve riskli eylemler",
+         "isMasked": false
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k35-s5-l1",
+     "type": "spot_the_lie",
+     "topic": "Kişilik Bozukluğu Genel Tanımı Tuzak Avı",
+     "items": [
+      {
+       "text": "Kişilik bozuklukları tipik olarak ergenlik veya genç erişkinlik döneminde yerleşir.",
+       "isLie": false,
+       "explanation": "Erken dönemde başlayan ve kararlılık gösteren örüntüler kişilik bozukluğunun temel tanı şartıdır."
+      },
+      {
+       "text": "Psikiyatri kliniklerine başvuran hastaların yüzde otuz ila ellisinde kişilik patolojisi saptanabilir.",
+       "isLie": false,
+       "explanation": "Kişilik bozuklukları psikiyatri pratiğinde çok yüksek komorbiditeye ve klinik yüke sahiptir."
+      },
+      {
+       "text": "Kişilik bozuklukları yalnızca iki üç gün süren ve tamamen düzelen akut ataklardır.",
+       "isLie": true,
+       "explanation": "Kişilik bozukluğu akut bir kriz değildir; yaşam boyu süren, katı ve esneklikten yoksun bir psikopatolojidir."
+      }
+     ]
+    }
+   ],
+   "pdfSayfalari": [
+    12,
+    13
+   ],
+   "sourcePdf": {
+    "startPage": 12,
+    "endPage": 13,
+    "name": "y25-k2-35-kisilik-bozukluklari.pdf"
+   },
+   "bolum": "2"
+  },
+  {
+   "slideNumber": 6,
+   "title": "Kişilik Bozuklukları: Ego-Sintonik Yapı ve Kümeler",
+   "content": "Kişilik bozukluklarını nevrotik durumlardan ayıran en temel özellik, belirtilerin benlikle kurduğu uyum ilişkisidir.\n\n- **Ego-sintonik Yapı:** Birey sergilediği uyumsuz tutumları kendi doğasının normal bir parçası olarak görür; belirtiler içsel bir suçluluk veya yabancılık yaratmaz.\n- **Alloplastik Uyum:** Hasta içsel çatışmalarla yüzleşmek yerine dış çevresini değiştirmeye çalışır ve sorunların kaynağı olarak sürekli diğer insanları suçlar.\n- **A Kümesi (Garip / Tuhaf):** Paranoid, şizoid ve şizotipal tabloları içerir; kişilerarası mesafelilik ve eksantriklik hakimdir.\n- **B Kümesi (Dramatik / Dürtüsel):** Antisosyal, borderline, histriyonik ve narsistik bozuklukları kapsar; yoğun duygusal dalgalanmalar ön plandadır.\n- **C Kümesi (Kaygılı / Korkak):** Çekingen, bağımlı ve obsesif-kompulsif bozukluklardan oluşur; yüksek anksiyete ve korku belirleyicidir.\n\n> [!NOTE]\n> Ego-sintonik yapı nedeniyle kişilik bozukluğu olan bireyler kendi istekleriyle tedaviye nadiren başvurur; genellikle çevre baskısıyla veya kriz anlarında gelirler.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Kişilik bozukluğu olan bir bireyin çatışma anında kendisini sorgulamak yerine dış dünyayı ve çevresini suçlaması hangi kavramdır?",
+     "options": [
+      {
+       "text": "Alloplastik uyum",
+       "isCorrect": true,
+       "explanation": "Alloplastik uyum içsel değişim yerine dış çevreyi suçlama ve çevreyi değiştirme eğilimidir. Bu mekanizma ders notlarında vurgulanan temel patofizyolojik ilkeyi doğrular. Klinik yaklaşımda birincil referans kabul edilir."
+      },
+      {
+       "text": "Otoplastik uyum",
+       "isCorrect": false,
+       "explanation": "Otoplastik uyum nevrozlarda görülen, bireyin sorunu kendi içine alarak kendini suçlaması durumudur. Bu durum soruda hedeflenen klinik tabloyla uyuşmaz. Tanısal süreçte diğer patolojilerden ayrılması gerekir."
+      },
+      {
+       "text": "Ego-distonik yapı",
+       "isCorrect": false,
+       "explanation": "Ego-distonik yapıda kişi belirtilerinden derin rahatsızlık ve yabancılık duyar. Bu durum soruda hedeflenen klinik tabloyla uyuşmaz. Tanısal süreçte diğer patolojilerden ayrılması gerekir."
+      },
+      {
+       "text": "Somatik konversiyon",
+       "isCorrect": false,
+       "explanation": "Konversiyon psikolojik gerginliğin motor veya duyu kaybı şeklinde bedenselleştirilmesidir. Bu durum soruda hedeflenen klinik tabloyla uyuşmaz. Tanısal süreçte diğer patolojilerden ayrılması gerekir."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Kişilik bozukluklarında belirtiler benlikle uyumludur ve hasta tarafından ego-sintonik olarak algılanır.",
+     "maskedTerm": "ego-sintonik",
+     "hint": "Belirtilerin benliğe yabancı gelmemesi ve kişi tarafından tamamen benimsenmesi durumu."
+    },
+    {
+     "id": "k35-s6-t1",
+     "type": "interactive_table",
+     "title": "DSM Kişilik Bozukluğu Kümeleri Sınıflaması",
+     "tableHeaders": [
+      "Küme",
+      "Temel Nitelik",
+      "Kapsadığı Bozukluklar"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "A Kümesi",
+         "isMasked": false
+        },
+        {
+         "text": "Garip, tuhaf ve eksantrik davranışlar",
+         "isMasked": true,
+         "hint": "Kuşkuculuk, sosyal izolasyon ve büyüsel düşünceyle seyreden küme."
+        },
+        {
+         "text": "Paranoid, Şizoid, Şizotipal",
+         "isMasked": false
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "B Kümesi",
+         "isMasked": false
+        },
+        {
+         "text": "Dramatik, duygusal ve dürtüsel nitelik",
+         "isMasked": true,
+         "hint": "Fırtınalı ilişkiler ve taşkın davranış kalıpları sergileyen grup."
+        },
+        {
+         "text": "Antisosyal, Borderline, Histriyonik, Narsistik",
+         "isMasked": false
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "C Kümesi",
+         "isMasked": false
+        },
+        {
+         "text": "Kaygılı, korkulu ve çekingen tutum",
+         "isMasked": true,
+         "hint": "Yetersizlik hissi, bağımlılık ve kontrol takıntısı içeren küme."
+        },
+        {
+         "text": "Çekingen, Bağımlı, Obsesif-Kompulsif",
+         "isMasked": false
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k35-s6-l1",
+     "type": "spot_the_lie",
+     "topic": "Ego-Sintonik Yapı ve Kümeler Tuzak Avı",
+     "items": [
+      {
+       "text": "Ego-sintonik yapıda birey kendi davranışlarını benliğiyle uyumlu algılar ve içsel rahatsızlık duymaz.",
+       "isLie": false,
+       "explanation": "Kişilik bozukluklarının en önemli özelliği belirtilerin benlikle tam bir uyum içinde olmasıdır."
+      },
+      {
+       "text": "Alloplastik uyum gösteren birey sorunların kaynağı olarak kendi dışındaki çevreyi suçlama eğilimindedir.",
+       "isLie": false,
+       "explanation": "Hasta kendisinde kusur görmez, çevrenin hatalı olduğunu savunur."
+      },
+      {
+       "text": "Kişilik bozukluklarında belirtiler hastada derin bir yabancılık hissi uyandırarak her zaman ego-distonik seyreder.",
+       "isLie": true,
+       "explanation": "Tam tersine, kişilik bozuklukları ego-sintoniktir; kişi belirtilerini doğal parçası olarak görür."
+      }
+     ]
+    }
+   ],
+   "pdfSayfalari": [
+    14,
+    15
+   ],
+   "sourcePdf": {
+    "startPage": 14,
+    "endPage": 15,
+    "name": "y25-k2-35-kisilik-bozukluklari.pdf"
+   },
+   "bolum": "2"
+  },
+  {
+   "slideNumber": 7,
+   "isCheckpoint": true,
+   "title": "[TEKRAR SAYFASI - CHECKPOINT 2] Genel Tanı ve Sınıflandırma",
+   "content": "Bu tekrar sayfasında kişilik bozukluklarının genel tanı kriterleri, ego-sintonik mekanizması ve A, B, C kümeleri pekiştirilmektedir.\n\n- **Ego-sintonik & Alloplastik:** Belirtiler benlikle uyumludur, suçlama dış dünyaya yöneliktir.\n- **Üç Küme Standardı:** A kümesi garip-tuhaf, B kümesi dramatik-dürtüsel, C kümesi kaygılı-korkak profili temsil eder.\n- **Klinik Klinik karşılaştırma: ** Nevrozlar ego-distonik olup içsel suçluluk yaratırken, kişilik patolojileri ego-sintonik yapısıyla kalıcıdır.\n\n> [!IMPORTANT]\n> A, B ve C kümeleri hastanın sergilediği temel savunma düzeneklerini ve kişilerarası ilişki tarzını kavramak için temel kılavuzdur.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "A, B ve C kümelerinin klinik nitelikleri eşleştirildiğinde doğru sınıflama hangisidir?",
+     "options": [
+      {
+       "text": "A Kümesi garip-tuhaf, B Kümesi dramatik-dürtüsel, C Kümesi kaygılı-korkaktır",
+       "isCorrect": true,
+       "explanation": "DSM sınıflamasında A kümesi eksantrik, B kümesi dürtüsel-dramatik, C kümesi korkulu-kaygılı gruptur. Bu mekanizma ders notlarında vurgulanan temel patofizyolojik ilkeyi doğrular. Klinik yaklaşımda birincil referans kabul edilir."
+      },
+      {
+       "text": "A Kümesi kaygılı, B Kümesi eksantrik, C Kümesi dramatik gruptur",
+       "isCorrect": false,
+       "explanation": "Kümelerin temel özellikleri karıştırılmıştır, A kümesi kaygılı değil eksantrik gruptur. Bu durum soruda hedeflenen klinik tabloyla uyuşmaz. Tanısal süreçte diğer patolojilerden ayrılması gerekir."
+      },
+      {
+       "text": "B Kümesi sadece yaşlılarda görülen organik demans grubudur",
+       "isCorrect": false,
+       "explanation": "B kümesi antisosyal ve borderline gibi genç erişkinlikte belirgin dramatik bozuklukları içerir. Bu durum soruda hedeflenen klinik tabloyla uyuşmaz. Tanısal süreçte diğer patolojilerden ayrılması gerekir."
+      },
+      {
+       "text": "Tüm kümeler aynı klinik tabloyu ifade eder ve aralarında hiçbir fark yoktur",
+       "isCorrect": false,
+       "explanation": "Her küme kendine özgü bilişsel, duygusal ve davranışsal özelliklere sahiptir. Bu durum soruda hedeflenen klinik tabloyla uyuşmaz. Tanısal süreçte diğer patolojilerden ayrılması gerekir."
+      }
+     ]
+    },
+    {
+     "id": "k35-s7-w1",
+     "type": "swipe_matching",
+     "title": "Kişilik Kümeleri Özellik Eşleme",
+     "leftCategory": "A Kümesi",
+     "rightCategory": "B veya C Kümesi",
+     "cards": [
+      {
+       "text": "Garip, tuhaf, mesafeli ve eksantrik davranış örüntüsü",
+       "category": "left"
+      },
+      {
+       "text": "Dramatik, duygusal, dürtüsel ve fırtınalı ilişkiler",
+       "category": "right"
+      },
+      {
+       "text": "Kaygılı, korkulu, yetersizlik ve bağımlılık hisleri",
+       "category": "right"
+      },
+      {
+       "text": "Paranoid, şizoid ve şizotipal klinik tablolar",
+       "category": "left"
+      }
+     ]
+    },
+    {
+     "id": "k35-s7-t1",
+     "type": "interactive_table",
+     "title": "Ego-Sintonik ve Alloplastik Uyum Özeti",
+     "tableHeaders": [
+      "Kavram",
+      "Mekanizma",
+      "Klinik Sonuç"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Ego-sintonik",
+         "isMasked": false
+        },
+        {
+         "text": "Belirtilerin benlikle uyumlu olması",
+         "isMasked": true,
+         "hint": "Kişinin davranışlarından rahatsızlık duymaması hali."
+        },
+        {
+         "text": "Tedavi arayışında isteksizlik",
+         "isMasked": false
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Alloplastik uyum",
+         "isMasked": false
+        },
+        {
+         "text": "Suçun ve nedenin dış çevreye yüklenmesi",
+         "isMasked": true,
+         "hint": "Sorumluluğu öteki insanlara ve etraftaki koşullara atfetme tutumu."
+        },
+        {
+         "text": "Kişilerarası kronik çatışma",
+         "isMasked": false
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k35-s7-l1",
+     "type": "spot_the_lie",
+     "topic": "Kümeler ve Uyum Dinamikleri Kontrol Sorusu",
+     "items": [
+      {
+       "text": "Ego-sintonik yapı nedeniyle kişilik bozukluğu olan bireyler kendi istekleriyle nadiren başvurur.",
+       "isLie": false,
+       "explanation": "Belirtiler hastada içsel rahatsızlık yaratmadığı için tedavi ihtiyacı hissetmezler."
+      },
+      {
+       "text": "C Kümesi kişilik bozuklukları kaygılı ve korkulu mizaç özellikleriyle karakterizedir.",
+       "isLie": false,
+       "explanation": "Çekingen, bağımlı ve obsesif kompulsif tablolar yüksek anksiyete taşır."
+      },
+      {
+       "text": "B Kümesi kişilik bozuklukları tamamen duygusuz, künt ve toplumsal ilişkilerden kopuk tablolardır.",
+       "isLie": true,
+       "explanation": "Duygusal küntlük ve ilişkilerden kopma A kümesi (şizoid) özelliğidir; B kümesi dramatik ve dürtüseldir."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slideNumber": 8,
+   "title": "A Kümesi: Paranoid Kişilik Bozukluğu",
+   "content": "Paranoid kişilik bozukluğunun temel niteliği, başkalarının davranışlarını sürekli kötü niyetli ve sinsi olarak yorumlama eğilimidir.\n\n- **Yaygın Kuşkuculuk:** Yeterli bir kanıt olmaksızın başkalarının kendisini aldattığından, sömürdüğünden veya zarar vereceğinden kuşkulanır.\n- **Sır Saklama ve Mesafelilik:** Bilgilerin kendisine karşı kullanılacağı korkusuyla kimseye sır vermez, yakınlaşmaktan kaçınır.\n- **Kin Tutma:** Sıradan sözlerden veya olaylardan aşağılayıcı anlamlar çıkarır; algılanan hakaret ve haksızlıkları asla bağışlamaz.\n- **Sadakatsizlik Şüphesi:** Ortada hiçbir kanıt yokken eşinin veya cinsel partnerinin sadakatinden sürekli ve yersiz biçimde kuşkulanır.\n- **Epidemiyoloji:** Genel toplumda yaygınlığı yaklaşık yüzde iki ila dört arasındadır; erkeklerde daha sık bildirilmektedir.\n\n> [!IMPORTANT]\n> Paranoid kişilikteki şüpheler hezeyan (sanrı) boyutunda kesin ve sabit değildir; hasta kuşkucudur ancak psikotik dağılma yaşamaz.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Paranoid kişilik bozukluğunun çekirdek psikopatolojisini en iyi tanımlayan klinik özellik hangisidir?",
+     "options": [
+      {
+       "text": "Başkalarının niyetlerini sürekli kötü niyetli algılama ve kin tutma",
+       "isCorrect": true,
+       "explanation": "Paranoid kişilikte yaygın kuşkuculuk, sır vermeme, aldatılma şüphesi ve haksızlıkları affetmeme hakimdir. Bu mekanizma ders notlarında vurgulanan temel patofizyolojik ilkeyi doğrular. Klinik yaklaşımda birincil referans kabul edilir."
+      },
+      {
+       "text": "İnsan ilişkilerini çok arzu edip eleştirilmekten korkarak kaçınma",
+       "isCorrect": false,
+       "explanation": "İlişkiyi arzulayıp eleştiriden korkma C kümesindeki çekingen kişiliğin özelliğidir. Bu durum soruda hedeflenen klinik tabloyla uyuşmaz. Tanısal süreçte diğer patolojilerden ayrılması gerekir."
+      },
+      {
+       "text": "Sürekli ilgi odağı olmak için cinsel baştan çıkarıcılık sergileme",
+       "isCorrect": false,
+       "explanation": "İlgi odağı olma ve baştan çıkarıcılık B kümesindeki histriyonik kişiliğin niteliğidir. Bu durum soruda hedeflenen klinik tabloyla uyuşmaz. Tanısal süreçte diğer patolojilerden ayrılması gerekir."
+      },
+      {
+       "text": "Büyüsel düşünceler ve altıncı his benzeri algısal çarpıklıklar yaşama",
+       "isCorrect": false,
+       "explanation": "Büyüsel düşünce ve altıncı his şizotipal kişilik bozukluğunda belirgindir. Bu durum soruda hedeflenen klinik tabloyla uyuşmaz. Tanısal süreçte diğer patolojilerden ayrılması gerekir."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Paranoid kişilik bozukluğunda başkalarının davranışlarını kötü niyetli olarak yorumlama örüntüsü vardır.",
+     "maskedTerm": "niyetli",
+     "hint": "Kişinin karşısındakilerin amaçlarını daima düşmanca ve zararlı algılamasını niteleyen ifade."
+    },
+    {
+     "id": "k35-s8-t1",
+     "type": "interactive_table",
+     "title": "Paranoid Kişilik Bozukluğu Belirti Dağılımı",
+     "tableHeaders": [
+      "Klinik Alan",
+      "Temel Belirti",
+      "Kişilerarası Sonuç"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Güven Algısı",
+         "isMasked": false
+        },
+        {
+         "text": "Sır vermekten aşırı korkma",
+         "isMasked": true,
+         "hint": "Bilgilerin aleyhine kullanılacağı düşüncesiyle ketumluk gösterme."
+        },
+        {
+         "text": "Mesafeli ve soğuk iletişim",
+         "isMasked": false
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Affetme Kapasitesi",
+         "isMasked": false
+        },
+        {
+         "text": "Kalıcı ve inatçı kin tutma",
+         "isMasked": true,
+         "hint": "En küçük algılanan hatayı veya eleştiriyi asla bağışlamama."
+        },
+        {
+         "text": "Düşmanca ve saldırgan misilleme",
+         "isMasked": false
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k35-s8-l1",
+     "type": "spot_the_lie",
+     "topic": "Paranoid Kişilik Bozukluğu Tuzak Avı",
+     "items": [
+      {
+       "text": "Paranoid kişilik bozukluğu olan bireyler algılanan haksızlıkları bağışlamaz ve sürekli kin tutarlar.",
+       "isLie": false,
+       "explanation": "Kalıcı kin tutma ve düşmanca tutum paranoid tablonun tanı kriterleri arasındadır."
+      },
+      {
+       "text": "Ortada hiçbir kanıt yokken partnerinin sadakatinden yersiz şüphe duyma paranoid bir belirtidir.",
+       "isLie": false,
+       "explanation": "Eşin veya partnerin sadakatsizliğine dair yersiz şüpheler sık görülen bir paranoid bulgudur."
+      },
+      {
+       "text": "Paranoid kişilik bozukluğunda hastalar insanlara çok çabuk güvenir ve tüm sırlarını hemen paylaşırlar.",
+       "isLie": true,
+       "explanation": "Tam tersine, paranoid hastalar bilgilerin aleyhine kullanılacağı korkusuyla kimseye asla sır vermezler."
+      }
+     ]
+    }
+   ],
+   "pdfSayfalari": [
+    16,
+    17
+   ],
+   "sourcePdf": {
+    "startPage": 16,
+    "endPage": 17,
+    "name": "y25-k2-35-kisilik-bozukluklari.pdf"
+   },
+   "bolum": "3"
+  },
+  {
+   "slideNumber": 9,
+   "title": "A Kümesi: Şizoid Kişilik Bozukluğu",
+   "content": "Şizoid kişilik bozukluğunun temel özelliği, sürekli toplumsal ilişkilerden kopma ve duygusal yaşantılarda belirgin bir kısıtlılıktır.\n\n- **İlişki İstememe:** Ailenin bir parçası olmak da dahil olmak üzere yakın ilişkiye girme arzusu duymaz ve yakın ilişkilerden zevk almaz.\n- **Yalnız Etkinlikler:** Hemen her zaman tek başına yapılan meslekleri ve hobileri tercih eder (bilgisayar programcılığı, gece bekçiliği gibi).\n- **Duygusal Soğukluk:** Başkalarının övgülerine veya eleştirilerine karşı tamamen kayıtsız görünür; duygusal küntlük ve donukluk sergiler.\n- **Sınırlı Cinsel İlgi:** Başka biriyle cinsel deneyim yaşamaya karşı çok az ilgi duyar veya hiç ilgi göstermez.\n- **Epidemiyoloji:** Genel toplumun yaklaşık yüzde beşini etkiler; erkeklerde kadınlara kıyasla iki kat daha sık saptanır.\n\n> [!NOTE]\n> Şizoid birey yalnız kalmaktan ötürü acı çekmez; insan ilişkilerine karşı gerçek bir isteksizlik ve doyumsuzluk yaşar.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Toplumsal ilişkilerden tamamen kopuk yaşayan, yalnızlıktan rahatsızlık duymayan ve duygusal olarak soğuk olan tablo hangisidir?",
+     "options": [
+      {
+       "text": "Şizoid kişilik bozukluğu",
+       "isCorrect": true,
+       "explanation": "Şizoid kişilikte yakın ilişki kurma isteği yoktur, duygusal küntlük ve yalnız etkinlik tercihi hakimdir. Bu mekanizma ders notlarında vurgulanan temel patofizyolojik ilkeyi doğrular. Klinik yaklaşımda birincil referans kabul edilir."
+      },
+      {
+       "text": "Paranoid kişilik bozukluğu",
+       "isCorrect": false,
+       "explanation": "Paranoid kişilik ilişkilerden kopuk değil, kuşkucu ve sürekli tetiktedir. Bu durum soruda hedeflenen klinik tabloyla uyuşmaz. Tanısal süreçte diğer patolojilerden ayrılması gerekir."
+      },
+      {
+       "text": "Histriyonik kişilik bozukluğu",
+       "isCorrect": false,
+       "explanation": "Histriyonik kişilik yalnızlıktan nefret eder, sürekli ilgi odağı olmak ister. Bu durum soruda hedeflenen klinik tabloyla uyuşmaz. Tanısal süreçte diğer patolojilerden ayrılması gerekir."
+      },
+      {
+       "text": "Borderline kişilik bozukluğu",
+       "isCorrect": false,
+       "explanation": "Borderline kişilik terk edilmekten dehşetle korkar ve yoğun ilişkiler arar. Bu durum soruda hedeflenen klinik tabloyla uyuşmaz. Tanısal süreçte diğer patolojilerden ayrılması gerekir."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Şizoid kişilik bozukluğunda sürekli toplumsal ilişkilerden kopma ve duygusal donukluk görülür.",
+     "maskedTerm": "toplumsal",
+     "hint": "İnsanların bir arada yaşadığı sosyal çevre ve kişilerarası etkileşim alanını niteleyen kavram."
+    },
+    {
+     "id": "k35-s9-t1",
+     "type": "interactive_table",
+     "title": "Paranoid ve Şizoid Kişilik Karşılaştırması",
+     "tableHeaders": [
+      "Özellik",
+      "Paranoid Kişilik",
+      "Şizoid Kişilik"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Temel Tutum",
+         "isMasked": false
+        },
+        {
+         "text": "Aşırı kuşkuculuk ve düşmanlık beklentisi",
+         "isMasked": true,
+         "hint": "Başkalarının niyetlerini kötü algılama."
+        },
+        {
+         "text": "İlişkisizlik ve duygusal kayıtsızlık",
+         "isMasked": false
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "İlişki Arzusu",
+         "isMasked": false
+        },
+        {
+         "text": "İlişki kurar ama sürekli tetiktedir",
+         "isMasked": true,
+         "hint": "Güvenemez ancak insanlarla temas halindedir."
+        },
+        {
+         "text": "Yakın ilişki kurma isteği hiç yoktur",
+         "isMasked": false
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k35-s9-l1",
+     "type": "spot_the_lie",
+     "topic": "Şizoid Kişilik Bozukluğu Tuzak Avı",
+     "items": [
+      {
+       "text": "Şizoid kişilik bozukluğunda birey tek başına yapılan etkinlikleri neredeyse her zaman tercih eder.",
+       "isLie": false,
+       "explanation": "Yalnız yapılan iş ve hobileri seçmek şizoid tablonun belirleyici tanı kriteridir."
+      },
+      {
+       "text": "Şizoid hastalar başkalarının övgü veya yergilerine karşı duygusal olarak oldukça kayıtsızdır.",
+       "isLie": false,
+       "explanation": "Duygusal küntlük nedeniyle dışsal takdir ya da eleştiriler şizoid bireyde tepki yaratmaz."
+      },
+      {
+       "text": "Şizoid bireyler çok yoğun arkadaşlıklar kurmak için çırpınır ve yalnızlıktan dehşetle korkarlar.",
+       "isLie": true,
+       "explanation": "Tam tersine, şizoid bireyler yakın ilişki kurmayı hiç istemez ve yalnızlıktan herhangi bir rahatsızlık duymazlar."
+      }
+     ]
+    }
+   ],
+   "pdfSayfalari": [
+    18,
+    19
+   ],
+   "sourcePdf": {
+    "startPage": 18,
+    "endPage": 19,
+    "name": "y25-k2-35-kisilik-bozukluklari.pdf"
+   },
+   "bolum": "3"
+  },
+  {
+   "slideNumber": 10,
+   "title": "A Kümesi: Şizotipal Kişilik Bozukluğu",
+   "content": "Şizotipal kişilik bozukluğu, bilişsel ve algısal çarpıklıklar, büyüsel düşünüş ve kişilerarası ilişkilerde ani rahatsızlık hissiyle seyreder.\n\n- **Referans Fikirleri:** Günlük olaylardan ve rastlantısal durumlardan kendine özel anlamlar çıkarma eğilimi vardır (tam sanrı düzeyinde değildir).\n- **Büyüsel Düşünce:** Telepati, altıncı his, gaipten haber alma, batıl inançlar veya psişik güçlere sahip olduğuna dair tuhaf inanışlar taşır.\n- **Sıra Dışı Algılar:** Beden imgesinde yanılsamalar ve bir gücün varlığını hissetme gibi olağandışı algısal deneyimler yaşar.\n- **Tuhaf Konuşma ve Görünüm:** Ayrıntıcı, dolambaçlı, mecazi konuşma tarzı ve garip, sıra dışı giyim kuşam özellikleri gösterir.\n- **Paranoid Anksiyete:** Yakınlaşmayla azalmayan, daha çok kuşkucu korkularla ilişkili aşırı toplumsal anksiyete mevcuttur.\n- **Epidemiyoloji:** Nüfusun yaklaşık yüzde üçünde görülür; şizofreni hastalarının birinci derece akrabalarında sıklığı anlamlı derecede yüksektir.\n\n> [!IMPORTANT]\n> Şizotipal kişilik bozukluğu, şizofreni spektrumuyla en güçlü genetik ve biyolojik bağı bulunan kişilik yapısıdır.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Büyüsel düşünüş, telepati inancı, garip konuşma tarzı ve şizofreni akrabalarında sık görülen A kümesi bozukluğu hangisidir?",
+     "options": [
+      {
+       "text": "Şizotipal kişilik bozukluğu",
+       "isCorrect": true,
+       "explanation": "Şizotipal kişilik bilişsel çarpıklıklar, büyüsel inançlar ve eksantrik davranışlarla şizofreni genetik spektrumundadır. Bu mekanizma ders notlarında vurgulanan temel patofizyolojik ilkeyi doğrular. Klinik yaklaşımda birincil referans kabul edilir."
+      },
+      {
+       "text": "Şizoid kişilik bozukluğu",
+       "isCorrect": false,
+       "explanation": "Şizoid kişilikte büyüsel düşünceler veya algısal tuhaflıklar değil, sadece sosyal ilişki istememe vardır. Bu durum soruda hedeflenen klinik tabloyla uyuşmaz. Tanısal süreçte diğer patolojilerden ayrılması gerekir."
+      },
+      {
+       "text": "Paranoid kişilik bozukluğu",
+       "isCorrect": false,
+       "explanation": "Paranoid kişilikte temel dinamik kuşkuculuktur; büyüsel düşünüş veya telepati inancı aranmaz. Bu durum soruda hedeflenen klinik tabloyla uyuşmaz. Tanısal süreçte diğer patolojilerden ayrılması gerekir."
+      },
+      {
+       "text": "Antisosyal kişilik bozukluğu",
+       "isCorrect": false,
+       "explanation": "Antisosyal kişilik kural tanımazlık ve suç davranışları içeren B kümesi tablosudur. Bu durum soruda hedeflenen klinik tabloyla uyuşmaz. Tanısal süreçte diğer patolojilerden ayrılması gerekir."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Şizotipal kişilik bozukluğunda bilişsel veya algısal çarpıklıklar ve tuhaf davranışlar izlenir.",
+     "maskedTerm": "bilişsel",
+     "hint": "Düşünme, anlama, algılama ve yorumlama süreçlerini kapsayan zihinsel işlev alanı."
+    },
+    {
+     "type": "causal_chain",
+     "title": "Şizotipal Kişilik Psikopatolojisi Akışı",
+     "steps": [
+      "1. Genetik yatkınlık: Şizofreni spektrumuna ait biyolojik ve nörobilişsel kırılganlık mevcuttur.",
+      "2. Algısal çarpıklık: Günlük olaylara referans fikirleri ve büyüsel anlamlar yüklenir.",
+      "3. Eksantrik yansıma: Garip giyim, dolambaçlı konuşma ve kuşkucu sosyal anksiyete tablosu yerleşir."
+     ]
+    },
+    {
+     "id": "k35-s10-l1",
+     "type": "spot_the_lie",
+     "topic": "A Kümesi Bozuklukları Ayırıcı Tanı Tuzak Avı",
+     "items": [
+      {
+       "text": "Şizotipal kişilik bozukluğunda altıncı his ve telepati gibi büyüsel düşünceler sık görülür.",
+       "isLie": false,
+       "explanation": "Büyüsel düşünüş ve eksantrik inanışlar şizotipal tablonun çekirdek tanı kriteridir."
+      },
+      {
+       "text": "Şizotipal kişilik bozukluğu şizofreni hastalarının birinci derece akrabalarında daha sık saptanır.",
+       "isLie": false,
+       "explanation": "Şizofreni spektrumu ile şizotipal bozukluk arasında kanıtlanmış genetik geçiş bağı vardır."
+      },
+      {
+       "text": "Şizoid kişilikte hastalar çok yoğun büyüsel düşüncelere ve eksantrik telepati inançlarına sahiptir.",
+       "isLie": true,
+       "explanation": "Büyüsel düşünüş şizoidde değil, şizotipalde görülür; şizoid hastaların düşünce içeriği tuhaf değil, ilişkileri soğuktur."
+      }
+     ]
+    }
+   ],
+   "pdfSayfalari": [
+    20,
+    21
+   ],
+   "sourcePdf": {
+    "startPage": 20,
+    "endPage": 21,
+    "name": "y25-k2-35-kisilik-bozukluklari.pdf"
+   },
+   "bolum": "3"
+  },
+  {
+   "slideNumber": 11,
+   "title": "B Kümesi: Antisosyal Kişilik Bozukluğu",
+   "content": "Antisosyal kişilik bozukluğu, başkalarının haklarını sürekli hiçe sayma, çiğneme, empati ve vicdan yoksunluğu ile karakterizedir.\n\n- **Yasal ve Sosyal Kural Tanımazlık:** Tutuklanmaya zemin hazırlayan yasa dışı eylemleri yineleyen biçimde gerçekleştirir.\n- **Yalan ve Dolandırıcılık:** Kişisel çıkar veya zevk amacıyla sürekli yalan söyler, takma isimler kullanır ve başkalarını aldatır.\n- **Dürtüsellik ve Saldırganlık:** Geleceği planlamada yetersizdir; sık sık fiziksel kavgalara karışır ve saldırganlık sergiler.\n- **Pişmanlık ve Empati Yoksunluğu:** Başkasına zarar verdiğinde, hırsızlık yaptığında veya kötü davrandığında hiçbir vicdani suçluluk duymaz.\n- **Kritik Tanı Şartı:** Bu tanının konabilmesi için kişinin en az on sekiz yaşında olması ve **on beş yaşından önce başlayan davranım bozukluğu** kanıtının bulunması zorunludur.\n\n> [!IMPORTANT]\n> Antisosyal bireyler klinik ortamda son derece ikna edici, yüzeysel olarak cana yakın davranabilirler; ancak bu tutum manipülasyon amaçlıdır.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Antisosyal kişilik bozukluğu tanısı koyabilmek için DSM tanı sistemine göre zorunlu olan çocukluk çağı ön koşulu hangisidir?",
+     "options": [
+      {
+       "text": "On beş yaşından önce davranım bozukluğu öyküsünün bulunması",
+       "isCorrect": true,
+       "explanation": "Tanı için kişinin en az 18 yaşında olması ve 15 yaşından önce başlayan davranım bozukluğu kanıtı şarttır. Bu mekanizma ders notlarında vurgulanan temel patofizyolojik ilkeyi doğrular. Klinik yaklaşımda birincil referans kabul edilir."
+      },
+      {
+       "text": "Yalnızca erken çocuklukta ayrılık anksiyetesi yaşamış olmak",
+       "isCorrect": false,
+       "explanation": "Ayrılık anksiyetesi bağımlı veya anksiyöz tablolara zemin hazırlar, antisosyal tanı şartı değildir. Bu durum soruda hedeflenen klinik tabloyla uyuşmaz. Tanısal süreçte diğer patolojilerden ayrılması gerekir."
+      },
+      {
+       "text": "Çocuklukta sadece aşırı utangaç ve çekingen olmak",
+       "isCorrect": false,
+       "explanation": "Çekingenlik C kümesine aittir; antisosyal tabloda kural ihlalleri ve saldırganlık aranır. Bu durum soruda hedeflenen klinik tabloyla uyuşmaz. Tanısal süreçte diğer patolojilerden ayrılması gerekir."
+      },
+      {
+       "text": "Bebeklik döneminde büyüsel düşüncelere sahip olmak",
+       "isCorrect": false,
+       "explanation": "Büyüsel düşünce şizotipal özelliğidir; antisosyal için kural çiğneme ve davranım bozukluğu aranır. Bu durum soruda hedeflenen klinik tabloyla uyuşmaz. Tanısal süreçte diğer patolojilerden ayrılması gerekir."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Antisosyal kişilik bozukluğu tanısı için on beş yaşından beri süregelen davranım sorunları aranır.",
+     "maskedTerm": "davranım",
+     "hint": "Çocukluk ve ergenlikte kuralları çiğneme, saldırganlık ve hırsızlıkla seyreden psikiyatrik bozukluk terimi."
+    },
+    {
+     "id": "k35-s11-t1",
+     "type": "interactive_table",
+     "title": "Antisosyal Kişilik Bozukluğu Temel Alanları",
+     "tableHeaders": [
+      "Alan",
+      "Temel Davranış",
+      "Psikopatolojik Dinamik"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Vicdan / Süperego",
+         "isMasked": false
+        },
+        {
+         "text": "Pişmanlık ve suçluluk duymama",
+         "isMasked": true,
+         "hint": "Başkalarına zarar verdiğinde zerre vicdani rahatsızlık hissetmeme."
+        },
+        {
+         "text": "Ahlaki ve empati gelişiminde yoksunluk",
+         "isMasked": false
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Dürtü Denetimi",
+         "isMasked": false
+        },
+        {
+         "text": "Saldırganlık ve kavga çıkarma",
+         "isMasked": true,
+         "hint": "Öfke ve istekleri erteleyememe, fiziksel şiddete başvurma."
+        },
+        {
+         "text": "Düşük engellenme eşiği ve dürtüsellik",
+         "isMasked": false
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k35-s11-l1",
+     "type": "spot_the_lie",
+     "topic": "Antisosyal Kişilik Bozukluğu Tuzak Avı",
+     "items": [
+      {
+       "text": "Antisosyal kişilik bozukluğunda başkalarına zarar verme sonrası pişmanlık duyulmaz.",
+       "isLie": false,
+       "explanation": "Vicdan ve empati yoksunluğu antisosyal patolojinin en belirgin çekirdeğidir."
+      },
+      {
+       "text": "Tanı konulabilmesi için kişinin 18 yaşından büyük olması ve çocuklukta davranım bozukluğu bulunması gerekir.",
+       "isLie": false,
+       "explanation": "DSM-5 tanı kriterlerinde 15 yaş öncesi davranım bozukluğu varlığı zorunlu tutulmuştur."
+      },
+      {
+       "text": "Antisosyal bireyler kurallara aşırı saygılıdır ve yasalara uymak için kendi çıkarlarını feda ederler.",
+       "isLie": true,
+       "explanation": "Tam tersine, yasal ve toplumsal kuralları hiçe saymak ve çiğnemek tablonun ana özelliğidir."
+      }
+     ]
+    }
+   ],
+   "pdfSayfalari": [
+    22,
+    23
+   ],
+   "sourcePdf": {
+    "startPage": 22,
+    "endPage": 23,
+    "name": "y25-k2-35-kisilik-bozukluklari.pdf"
+   },
+   "bolum": "4"
+  },
+  {
+   "slideNumber": 12,
+   "title": "B Kümesi: Borderline (Sınırda) Kişilik Bozukluğu",
+   "content": "Borderline kişilik bozukluğu, kişilerarası ilişkilerde, benlik algısında ve duygulanımda belirgin bir kararsızlık (instabilite) ve aşırı dürtüsellikle tanımlanır.\n\n- **Terk Edilme Korkusu:** Gerçek veya hayali bir terk edilmeden kaçınmak için çılgınca çabalar harcar; ayrılığa tahammül edemez.\n- **Fırtınalı İlişkiler:** Karşısındakini bir an göklere çıkarıp kusursuz görürken, hayal kırıklığında derhal yerin dibine sokar (**Bölme / Splitting savunması**).\n- **Kimlik Karmaşası:** Değerlerinde, hedeflerinde ve benlik algısında süreğen bir belirsizlik ve tutarsızlık yaşar.\n- **Kendine Zarar Verme:** Yineleyen intihar davranışları, özkıyım tehditleri ve jiletle kesme gibi kendine zarar verici eylemler çok sıktır.\n- **Kronik Boşluk Hissi:** İçsel bir anlamsızlık ve boşluk duygusundan yakınır; uygunsuz ve yoğun öfke patlamaları kontrol edilemez.\n\n> [!IMPORTANT]\n> Borderline hastalarda özkıyım riski son derece ciddidir; kriz anlarında mikropsikotik çözülmeler veya disosiyatif belirtiler görülebilir.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Borderline hastaların insanları ve olayları bütünüyle mükemmel ya da bütünüyle korkunç olarak iki uç kutupta algılama mekanizması hangisidir?",
+     "options": [
+      {
+       "text": "Bölme (splitting)",
+       "isCorrect": true,
+       "explanation": "Bölme savunması iyi ve kötü nesne tasarımlarını bütünleştiremeyip insanları siyah-beyaz iki uca ayırma mekanizmasıdır. Bu mekanizma ders notlarında vurgulanan temel patofizyolojik ilkeyi doğrular. Klinik yaklaşımda birincil referans kabul edilir."
+      },
+      {
+       "text": "Mantığa bürüme",
+       "isCorrect": false,
+       "explanation": "Mantığa bürüme kabul edilemez eylemlere akılcı gerekçeler bulma savunmasıdır. Bu durum soruda hedeflenen klinik tabloyla uyuşmaz. Tanısal süreçte diğer patolojilerden ayrılması gerekir."
+      },
+      {
+       "text": "Yüceltme",
+       "isCorrect": false,
+       "explanation": "Yüceltme ilkel dürtülerin sanatsal veya toplumsal yararlı eylemlere dönüştürülmesidir. Bu durum soruda hedeflenen klinik tabloyla uyuşmaz. Tanısal süreçte diğer patolojilerden ayrılması gerekir."
+      },
+      {
+       "text": "İnkar",
+       "isCorrect": false,
+       "explanation": "İnkar gerçekliğin reddedilmesidir, nesneleri iki zıt kutba bölme düzeneği değildir. Bu durum soruda hedeflenen klinik tabloyla uyuşmaz. Tanısal süreçte diğer patolojilerden ayrılması gerekir."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Borderline kişilik bozukluğunda erken erişkinlikte başlayan duygusal kararsızlık ve boşluk hissi hakimdir.",
+     "maskedTerm": "erişkinlikte",
+     "hint": "Ergenlik sonrasında başlayan ve bireyin yetişkin rollerini üstlendiği gelişimsel yaşam evresi."
+    },
+    {
+     "type": "causal_chain",
+     "title": "Borderline İlişkisel Kriz Akışı",
+     "steps": [
+      "1. Terk edilme tehdidi: Partnerin gecikmesi veya ilgisizliği derin bir terk edilme paniği tetikler.",
+      "2. Bölme savunması devreye girer: Mükemmel görülen partner bir anda en kötü ve zalim düşman ilan edilir.",
+      "3. Kriz ve kendine zarar: Yoğun içsel boşluk ve öfke patlaması özkıyım tehdidi veya kendine zarar vermeyle sonuçlanır."
+     ]
+    },
+    {
+     "id": "k35-s12-l1",
+     "type": "spot_the_lie",
+     "topic": "Borderline Kişilik Bozukluğu Tuzak Avı",
+     "items": [
+      {
+       "text": "Borderline kişilik bozukluğunda yineleyen intihar girişimleri ve kendine zarar verme riski yüksektir.",
+       "isLie": false,
+       "explanation": "Kendine zarar verici eylemler ve özkıyım girişimleri borderline kliniğinin temel acil yönüdür."
+      },
+      {
+       "text": "Bölme savunması borderline bireylerin insanları ya aşırı idealize etmesine ya da tamamen yermesine yol açar.",
+       "isLie": false,
+       "explanation": "Splitting mekanizması gri tonları barındırmayan siyah-beyaz algılamayı doğurur."
+      },
+      {
+       "text": "Borderline bireyler ilişkilerinde her zaman son derece kararlı, duygusal olarak sakin ve dengelidir.",
+       "isLie": true,
+       "explanation": "Tam tersine, borderline tablonun ana özelliği duygulanımda ve ilişkilerde aşırı instabilite ve dalgalanmadır."
+      }
+     ]
+    }
+   ],
+   "pdfSayfalari": [
+    24,
+    25
+   ],
+   "sourcePdf": {
+    "startPage": 24,
+    "endPage": 25,
+    "name": "y25-k2-35-kisilik-bozukluklari.pdf"
+   },
+   "bolum": "4"
+  },
+  {
+   "slideNumber": 13,
+   "title": "B Kümesi: Histriyonik Kişilik Bozukluğu",
+   "content": "Histriyonik kişilik bozukluğu, aşırı duygusallık, dikkat çekme çabası ve sahneye oynar gibi dramatize davranışlarla kendini gösterir.\n\n- **İlgi Odağı Olma:** Kendisinin ilgi odağı olmadığı durumlarda belirgin rahatsızlık duyar ve dikkatleri üzerine çekmek için her yolu dener.\n- **Baştan Çıkarıcı Davranışlar:** Başkalarıyla etkileşiminde uygunsuz biçimde cinsel yönden kışkırtıcı, flörtöz ve ayartıcı tutumlar sergiler.\n- **Yüzeysel ve Değişken Duygular:** Duyguları çok hızlı değişir ancak derinlikten yoksundur; tiyatral bir dille ağlarken hemen kahkaha atabilir.\n- **Fiziksel Görünümü Kullanma:** Dikkatleri üzerine çekmek için giyimini, makyajını ve fiziksel çekiciliğini sürekli ön planda tutar.\n- **Telkine Yatkınlık:** Başkalarından veya güncel eğilimlerden kolayca etkilenir; ilişkileri olduğundan çok daha samimi ve derin zanneder.\n- **Epidemiyoloji:** Prevalansı yüzde bir ila üç arasındadır; kliniklerde kadınlarda daha sık bildirilmektedir.\n\n> [!NOTE]\n> Histriyonik hastalar konuşmalarında ayrıntıdan yoksun, aşırı izlenimci ve süslü bir dil kullanırlar.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Sürekli ilgi odağı olma arzusu, tiyatral dramatizasyon ve cinsel yönden kışkırtıcı davranışlarla tanımlanan B kümesi bozukluğu hangisidir?",
+     "options": [
+      {
+       "text": "Histriyonik kişilik bozukluğu",
+       "isCorrect": true,
+       "explanation": "Histriyonik kişilikte dikkat çekme arzusu, baştan çıkarıcılık, duygusal dramatizasyon ve telkine yatkınlık esastır. Bu mekanizma ders notlarında vurgulanan temel patofizyolojik ilkeyi doğrular. Klinik yaklaşımda birincil referans kabul edilir."
+      },
+      {
+       "text": "Şizoid kişilik bozukluğu",
+       "isCorrect": false,
+       "explanation": "Şizoid kişilik ilgi odağı olmak istemez, insanlardan bütünüyle izole yaşar. Bu durum soruda hedeflenen klinik tabloyla uyuşmaz. Tanısal süreçte diğer patolojilerden ayrılması gerekir."
+      },
+      {
+       "text": "Paranoid kişilik bozukluğu",
+       "isCorrect": false,
+       "explanation": "Paranoid kişilikte ilgi arayışı değil, düşmanlık ve aldatılma kuşkusu belirleyicidir. Bu durum soruda hedeflenen klinik tabloyla uyuşmaz. Tanısal süreçte diğer patolojilerden ayrılması gerekir."
+      },
+      {
+       "text": "Obsesif kompulsif kişilik bozukluğu",
+       "isCorrect": false,
+       "explanation": "Obsesif kompulsif kişilik aşırı kuralcı ve duygularını bastıran katı bir tablodur. Bu durum soruda hedeflenen klinik tabloyla uyuşmaz. Tanısal süreçte diğer patolojilerden ayrılması gerekir."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Histriyonik kişilik bozukluğunda erken erişkinlikte ortaya çıkan aşırı duygusallık ve ilgi arayışı görülür.",
+     "maskedTerm": "erişkinlikte",
+     "hint": "Bireyin genç yetişkinlik evresine adım attığı ve kişilik kalıplarının kemikleştiği dönem."
+    },
+    {
+     "id": "k35-s13-t1",
+     "type": "interactive_table",
+     "title": "Borderline ve Histriyonik Kişilik Ayrımı",
+     "tableHeaders": [
+      "Ölçüt",
+      "Borderline Kişilik",
+      "Histriyonik Kişilik"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Temel Dürtü",
+         "isMasked": false
+        },
+        {
+         "text": "Terk edilmeyi önleme ve boşluktan kaçış",
+         "isMasked": true,
+         "hint": "Yalnız kalma dehşeti ve parçalanma korkusu."
+        },
+        {
+         "text": "Sürekli ilgi ve hayranlık odağı olma",
+         "isMasked": false
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Özkıyım Davranışı",
+         "isMasked": false
+        },
+        {
+         "text": "Sık ve ciddi kendine zarar verme eylemleri",
+         "isMasked": true,
+         "hint": "Ölümcül potansiyeli yüksek dürtüsel girişimler."
+        },
+        {
+         "text": "Daha çok dikkat çekmeye yönelik tehditler",
+         "isMasked": false
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k35-s13-l1",
+     "type": "spot_the_lie",
+     "topic": "Histriyonik Kişilik Bozukluğu Tuzak Avı",
+     "items": [
+      {
+       "text": "Histriyonik bireyler dikkatleri üzerine çekmek için fiziksel görünümlerini ve çekiciliklerini sıkça kullanırlar.",
+       "isLie": false,
+       "explanation": "Giyim ve çekicilik ilgi odağı olma amacında en sık kullanılan araçtır."
+      },
+      {
+       "text": "Histriyonik kişilikte duygusal ifadeler tiyatral ve abartılıdır ancak derinlikten yoksundur.",
+       "isLie": false,
+       "explanation": "Duyguların çabuk değişmesi ve yüzeyselliği histriyonik patolojinin parçasıdır."
+      },
+      {
+       "text": "Histriyonik bireyler ilgi odağı olmaktan nefret eder ve kalabalıklardan gizlenerek yaşarlar.",
+       "isLie": true,
+       "explanation": "Tam tersine, ilgi odağı olmadıkları ortamlarda derin bir huzursuzluk duyarlar ve sahneye oynarlar."
+      }
+     ]
+    }
+   ],
+   "pdfSayfalari": [
+    26,
+    27
+   ],
+   "sourcePdf": {
+    "startPage": 26,
+    "endPage": 27,
+    "name": "y25-k2-35-kisilik-bozukluklari.pdf"
+   },
+   "bolum": "4"
+  },
+  {
+   "slideNumber": 14,
+   "title": "B Kümesi: Narsistik Kişilik Bozukluğu",
+   "content": "Narsistik kişilik bozukluğu, büyüklenmecilik (fantezide veya davranışta), sürekli beğenilme ve hayranlık gereksinimi ile empati yoksunluğu örüntüsüdür.\n\n- **Büyüklenmecilik (Grandiyözite):** Kendi önemini abartır; özel başarıları olmasa da üstün biri olarak görülmeyi bekler.\n- **Sınırsız Başarı Fantezileri:** Sınırsız başarı, güç, zeka, güzellik veya kusursuz aşk hayalleriyle zihinsel olarak aşırı meşguldür.\n- **Özel ve Eşsiz Olma İnancı:** Yalnızca kendisi gibi özel, üstün veya yüksek statülü kişilerin kendisini anlayabileceğine inanır.\n- **Hak Görme Duygusu (Entitlement):** Kendisine ayrıcalıklı bir muamele yapılması gerektiğine ve isteklerinin sorgusuzca karşılanacağına inanır.\n- **Sömürücü İlişkiler ve Empati Yoksunluğu:** Kendi amaçlarına ulaşmak için başkalarını acımasızca kullanır; başkalarının duygularını anlayamaz ve önemsemez.\n- **Epidemiyoloji:** Prevalansı yüzde bir ila altı arasında değişmektedir; klinik olguların büyük çoğunluğu erkektir.\n\n> [!IMPORTANT]\n> Narsistik birey dışarıdan mağrur ve kibirli görünse de, eleştirildiğinde altta yatan derin kırılganlık nedeniyle şiddetli öfke (narsistik hiddet) sergiler.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Büyüklenmeci üstünlük duygusu, empati yoksunluğu ve başkalarını kendi çıkarları için sömürme hangi kişilik bozukluğunun çekirdeğidir?",
+     "options": [
+      {
+       "text": "Narsistik kişilik bozukluğu",
+       "isCorrect": true,
+       "explanation": "Narsistik kişilikte grandiyözite, empati yoksunluğu, hak görme duygusu ve kibir ön plandadır. Bu mekanizma ders notlarında vurgulanan temel patofizyolojik ilkeyi doğrular. Klinik yaklaşımda birincil referans kabul edilir."
+      },
+      {
+       "text": "Şizoid kişilik bozukluğu",
+       "isCorrect": false,
+       "explanation": "Şizoid kişilik büyüklenmeci değildir, insanlardan tamamen izole ve iddiasız yaşar. Bu durum soruda hedeflenen klinik tabloyla uyuşmaz. Tanısal süreçte diğer patolojilerden ayrılması gerekir."
+      },
+      {
+       "text": "Çekingen kişilik bozukluğu",
+       "isCorrect": false,
+       "explanation": "Çekingen kişilik üstünlük değil, yoğun yetersizlik ve aşağılık hisleri taşır. Bu durum soruda hedeflenen klinik tabloyla uyuşmaz. Tanısal süreçte diğer patolojilerden ayrılması gerekir."
+      },
+      {
+       "text": "Bağımlı kişilik bozukluğu",
+       "isCorrect": false,
+       "explanation": "Bağımlı kişilik başkalarını sömürmez, tam tersine başkalarının bakımına teslim olur. Bu durum soruda hedeflenen klinik tabloyla uyuşmaz. Tanısal süreçte diğer patolojilerden ayrılması gerekir."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Narsistik kişilik bozukluğunda erken erişkinlikte ortaya çıkan büyüklenmecilik ve empati yoksunluğu görülür.",
+     "maskedTerm": "erişkinlikte",
+     "hint": "Gençlikten yetişkinliğe geçiş dönemini ve kişilik kalıplarının kesinleştiği evreyi niteleyen kelime."
+    },
+    {
+     "id": "k35-s14-t1",
+     "type": "interactive_table",
+     "title": "B Kümesi Bozukluklarının Çekirdek Dinamikleri",
+     "tableHeaders": [
+      "Bozukluk",
+      "Temel Çekirdek Özellik",
+      "Kişilerarası Tutum"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Antisosyal",
+         "isMasked": false
+        },
+        {
+         "text": "Hak ihlali ve empati yoksunluğu",
+         "isMasked": true,
+         "hint": "Başkalarına zarar vermekten zerre pişmanlık duymama."
+        },
+        {
+         "text": "Saldırgan ve kural tanımaz",
+         "isMasked": false
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Borderline",
+         "isMasked": false
+        },
+        {
+         "text": "Duygusal ve ilişkisel instabilite",
+         "isMasked": true,
+         "hint": "Aşırı kararsızlık, boşluk hissi ve bölme savunması."
+        },
+        {
+         "text": "Fırtınalı ve terk edilme korkulu",
+         "isMasked": false
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Histriyonik",
+         "isMasked": false
+        },
+        {
+         "text": "İlgi odağı olma ve dramatizasyon",
+         "isMasked": true,
+         "hint": "Dikkat çekmek için tiyatral ve flörtöz davranma."
+        },
+        {
+         "text": "Baştan çıkarıcı ve yüzeysel",
+         "isMasked": false
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Narsistik",
+         "isMasked": false
+        },
+        {
+         "text": "Büyüklenmecilik ve hayranlık beklentisi",
+         "isMasked": true,
+         "hint": "Kendini üstün görme ve başkalarını sömürme."
+        },
+        {
+         "text": "Kibirli ve empati yoksunu",
+         "isMasked": false
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k35-s14-l1",
+     "type": "spot_the_lie",
+     "topic": "Narsistik Kişilik Bozukluğu Tuzak Avı",
+     "items": [
+      {
+       "text": "Narsistik kişilik bozukluğunda kişi kendi amaçları uğruna başkalarını çıkarcı biçimde sömürür.",
+       "isLie": false,
+       "explanation": "İlişkilerde başkalarının duygularını önemsememek ve onları kullanmak narsistik bir kriterdir."
+      },
+      {
+       "text": "Narsistik bireyler kendilerine ayrıcalıklı bir muamele yapılması gerektiğine kesin olarak inanırlar.",
+       "isLie": false,
+       "explanation": "Hak görme duygusu (entitlement) narsistik hastaların temel beklentisidir."
+      },
+      {
+       "text": "Narsistik hastalar başkalarının duygularını derinden hisseden ve aşırı empati kuran fedakar insanlardır.",
+       "isLie": true,
+       "explanation": "Tam tersine, empati yoksunluğu narsistik bozukluğun en temel ve yıkıcı özelliklerinden biridir."
+      }
+     ]
+    }
+   ],
+   "pdfSayfalari": [
+    28,
+    30
+   ],
+   "sourcePdf": {
+    "startPage": 28,
+    "endPage": 30,
+    "name": "y25-k2-35-kisilik-bozukluklari.pdf"
+   },
+   "bolum": "4"
+  },
+  {
+   "slideNumber": 15,
+   "isCheckpoint": true,
+   "title": "[TEKRAR SAYFASI - CHECKPOINT 3] A ve B Kümeleri Pekiştirme",
+   "content": "Bu checkpoint sayfasında A Kümesi (Paranoid, Şizoid, Şizotipal) ve B Kümesi (Antisosyal, Borderline, Histriyonik, Narsistik) bozuklukları karşılaştırmalı olarak pekiştirilmektedir.\n\n- **A Kümesi:** Düşünce ve algı çarpıklıkları, toplumsal mesafelilik ve eksantriklik hakimdir.\n- **B Kümesi:** Dürtüsellik, dramatizasyon, instabilite ve empati yoksunluğu ön plandadır.\n- **Ayırıcı Nüans:** Şizoid ilişki istemez; Antisosyal kuralları çiğner; Borderline terk edilmekten korkar; Narsist hayranlık arar.\n\n> [!IMPORTANT]\n> B kümesi bozuklukları adli psikiyatri, acil servisler ve kriz merkezlerinde en sık karşılaşılan yüksek riskli hasta gruplarıdır.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "A ve B kümeleri karşılaştırıldığında 'Bölme (Splitting)' savunma mekanizmasını en sık kullanan tablo hangisidir?",
+     "options": [
+      {
+       "text": "Borderline kişilik bozukluğu",
+       "isCorrect": true,
+       "explanation": "Bölme savunması iyi ve kötü nesneleri bütünleştiremeyen borderline hastaların en tipik savunma düzeneğidir. Bu mekanizma ders notlarında vurgulanan temel patofizyolojik ilkeyi doğrular. Klinik yaklaşımda birincil referans kabul edilir."
+      },
+      {
+       "text": "Şizoid kişilik bozukluğu",
+       "isCorrect": false,
+       "explanation": "Şizoid hastalar bölme savunması değil, doğrudan sosyal geri çekilme ve fanteziye sığınma kullanırlar. Bu durum soruda hedeflenen klinik tabloyla uyuşmaz. Tanısal süreçte diğer patolojilerden ayrılması gerekir."
+      },
+      {
+       "text": "Paranoid kişilik bozukluğu",
+       "isCorrect": false,
+       "explanation": "Paranoid hastaların temel savunması yansıtmadır (projeksiyon); kötülüğü dış dünyaya atfederler. Bu durum soruda hedeflenen klinik tabloyla uyuşmaz. Tanısal süreçte diğer patolojilerden ayrılması gerekir."
+      },
+      {
+       "text": "Histriyonik kişilik bozukluğu",
+       "isCorrect": false,
+       "explanation": "Histriyonik hastalar bölmeden ziyade bastırma (represyon) ve dramatizasyon savunmalarını kullanırlar. Bu durum soruda hedeflenen klinik tabloyla uyuşmaz. Tanısal süreçte diğer patolojilerden ayrılması gerekir."
+      }
+     ]
+    },
+    {
+     "id": "k35-s15-w1",
+     "type": "swipe_matching",
+     "title": "A ve B Kümeleri Bozukluk Eşleme",
+     "leftCategory": "A Kümesi",
+     "rightCategory": "B Kümesi",
+     "cards": [
+      {
+       "text": "Kuşkuculuk, güvensizlik ve haksızlıkları asla affetmeme",
+       "category": "left"
+      },
+      {
+       "text": "Yasa dışı eylemler, vicdan azabı duymama ve saldırganlık",
+       "category": "right"
+      },
+      {
+       "text": "Büyüsel düşünceler, altıncı his ve tuhaf konuşma tarzı",
+       "category": "left"
+      },
+      {
+       "text": "Duygusal instabilite, kronik boşluk hissi ve kendine zarar verme",
+       "category": "right"
+      }
+     ]
+    },
+    {
+     "id": "k35-s15-t1",
+     "type": "interactive_table",
+     "title": "A ve B Kümeleri Ayırıcı Tanı Kriterleri",
+     "tableHeaders": [
+      "Bozukluk",
+      "Küme",
+      "Ayırt Edici Çekirdek Belirti"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Şizoid Kişilik",
+         "isMasked": false
+        },
+        {
+         "text": "A Kümesi",
+         "isMasked": true,
+         "hint": "Garip ve tuhaf küme."
+        },
+        {
+         "text": "Yakın ilişki kurma isteğinin olmaması",
+         "isMasked": false
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Narsistik Kişilik",
+         "isMasked": false
+        },
+        {
+         "text": "B Kümesi",
+         "isMasked": true,
+         "hint": "Dramatik ve dürtüsel küme."
+        },
+        {
+         "text": "Büyüklenmecilik ve empati yoksunluğu",
+         "isMasked": false
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k35-s15-l1",
+     "type": "spot_the_lie",
+     "topic": "A ve B Kümeleri Pekiştirme Tuzak Avı",
+     "items": [
+      {
+       "text": "Antisosyal kişilik tanısı için 15 yaşından önce başlayan davranım bozukluğu öyküsü şarttır.",
+       "isLie": false,
+       "explanation": "Çocukluk çağı davranım bozukluğu kanıtı yetişkin antisosyal tanısının zorunlu bileşenidir."
+      },
+      {
+       "text": "Şizoid kişilik bozukluğu olan bireyler toplumsal ilişkilerden zevk almaz ve yalnız yaşarlar.",
+       "isLie": false,
+       "explanation": "İlişkisizlik ve duygusal donukluk şizoid yapının temel taşını oluşturur."
+      },
+      {
+       "text": "Narsistik bireyler aşırı fedakar olup kendi çıkarlarını her zaman başkaları için feda ederler.",
+       "isLie": true,
+       "explanation": "Tam tersine, narsistik hastalar başkalarını kendi çıkarları için sömürür ve empati duymazlar."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slideNumber": 16,
+   "title": "C Kümesi: Çekingen (Kaçıngan) Kişilik Bozukluğu",
+   "content": "Çekingen kişilik bozukluğunun temel özelliği, toplumsal yetersizlik hisleri, aşırı alınganlık ve olumsuz değerlendirilmeye karşı yoğun korkudur.\n\n- **Eleştirilme Korkusu:** Eleştirileceği, kınanacağı veya dışlanacağı endişesiyle insan ilişkisi gerektiren mesleki etkinliklerden kaçınır.\n- **Sevileceğinden Emin Olma Şartı:** Kendisini seveceklerinden ve kabul edeceklerinden kesinlikle emin olmadıkça insanlarla ilişkiye girmez.\n- **Yetersizlik İnancı:** Kendisini toplumsal yönden beceriksiz, çekici olmayan veya diğer insanlardan aşağıda görür.\n- **Yeni Durumlardan Kaçınma:** Mahcup düşebileceği veya utanacağı korkusuyla yeni kişisel girişimlerde bulunmaktan çekinir.\n- **Şizoidden Kritik Farkı:** Şizoid birey ilişki istemez ve yalnızlığından memnundur; Çekingen birey ise **ilişki kurmayı çok arzu eder** ancak reddedilme korkusundan ötürü kaçınır.\n\n> [!IMPORTANT]\n> Çekingen kişilik bozukluğu yaygın sosyal anksiyete bozukluğu ile yüksek oranda örtüşür ve erken çocukluktaki utangaç mizaç zemininde gelişir.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Çekingen (kaçıngan) kişilik bozukluğunu şizoid kişilik bozukluğundan ayıran en kritik klinik fark hangisidir?",
+     "options": [
+      {
+       "text": "Çekingen ilişki kurmayı çok ister ama reddedilmekten korkar; şizoid ise ilişki istemez",
+       "isCorrect": true,
+       "explanation": "Çekingen hastalar insan ilişkisi kurma arzusu taşır fakat yetersizlik korkusuyla kaçınır; şizoidde ilişki isteği hiç yoktur. Bu mekanizma ders notlarında vurgulanan temel patofizyolojik ilkeyi doğrular. Klinik yaklaşımda birincil referans kabul edilir."
+      },
+      {
+       "text": "Çekingen hastalar büyüsel düşünüşe sahiptir, şizoidler ise tamamen mantıklıdır",
+       "isCorrect": false,
+       "explanation": "Büyüsel düşünüş şizotipal kişiliğe aittir, çekingen kişiliğin özelliği değildir. Bu durum soruda hedeflenen klinik tabloyla uyuşmaz. Tanısal süreçte diğer patolojilerden ayrılması gerekir."
+      },
+      {
+       "text": "Çekingen hastalar insanları sömürür, şizoidler ise başkalarına hizmet eder",
+       "isCorrect": false,
+       "explanation": "Başkalarını sömürme narsistik ve antisosyal özelliklerdir; çekingen hasta korkulu ve içe dönüktür. Bu durum soruda hedeflenen klinik tabloyla uyuşmaz. Tanısal süreçte diğer patolojilerden ayrılması gerekir."
+      },
+      {
+       "text": "Çekingen bozukluk sadece yaşlılıkta, şizoid bozukluk ise bebeklikte görülür",
+       "isCorrect": false,
+       "explanation": "Her iki kişilik bozukluğu da ergenlik ve genç erişkinlik döneminde yerleşir. Bu durum soruda hedeflenen klinik tabloyla uyuşmaz. Tanısal süreçte diğer patolojilerden ayrılması gerekir."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Çekingen kişilik bozukluğunda erken erişkinlikte ortaya çıkan yetersizlik duyguları ve aşırı alınganlık izlenir.",
+     "maskedTerm": "erişkinlikte",
+     "hint": "Ergenlik sonrasındaki genç yetişkinlik evresini simgeleyen gelişimsel kavram."
+    },
+    {
+     "id": "k35-s16-t1",
+     "type": "interactive_table",
+     "title": "Şizoid ve Çekingen Kişilik Karşılaştırması",
+     "tableHeaders": [
+      "Ölçüt",
+      "Şizoid Kişilik",
+      "Çekingen Kişilik"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "İlişki İsteği",
+         "isMasked": false
+        },
+        {
+         "text": "Yakın ilişki kurma arzusu yoktur",
+         "isMasked": true,
+         "hint": "Yalnız kalmaktan memnun olma hali."
+        },
+        {
+         "text": "İlişki kurmayı çok ister fakat korkar",
+         "isMasked": false
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Temel Korku",
+         "isMasked": false
+        },
+        {
+         "text": "Eleştirilme veya dışlanma korkusu yoktur",
+         "isMasked": true,
+         "hint": "Başkalarının övgü ve yergisine kayıtsızlık."
+        },
+        {
+         "text": "Aşağılanma, dışlanma ve mahcup olma korkusu",
+         "isMasked": false
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k35-s16-l1",
+     "type": "spot_the_lie",
+     "topic": "Çekingen Kişilik Bozukluğu Tuzak Avı",
+     "items": [
+      {
+       "text": "Çekingen kişilik bozukluğunda birey kendisini toplumsal yönden beceriksiz ve yetersiz algılar.",
+       "isLie": false,
+       "explanation": "Yetersizlik inancı ve olumsuz değerlendirilme korkusu çekingen tablonun çekirdeğidir."
+      },
+      {
+       "text": "Çekingen bireyler sevilip kabul edileceklerinden kesin emin olmadıkça insanlarla ilişkiye girmezler.",
+       "isLie": false,
+       "explanation": "Kabul edilme garantisi aramak çekingen kişilik için tipik bir koruyucu kaçınmadır."
+      },
+      {
+       "text": "Çekingen hastalar insan ilişkilerine hiç ihtiyaç duymaz ve yalnız yaşamaktan büyük haz alırlar.",
+       "isLie": true,
+       "explanation": "Tam tersine, çekingen hastalar ilişki kurmayı çok ister ve yalnızlıklarından derin acı duyarlar."
+      }
+     ]
+    }
+   ],
+   "pdfSayfalari": [
+    31,
+    32
+   ],
+   "sourcePdf": {
+    "startPage": 31,
+    "endPage": 32,
+    "name": "y25-k2-35-kisilik-bozukluklari.pdf"
+   },
+   "bolum": "5"
+  },
+  {
+   "slideNumber": 17,
+   "title": "C Kümesi: Bağımlı Kişilik Bozukluğu",
+   "content": "Bağımlı kişilik bozukluğu, başkalarının bakımına duyulan aşırı gereksinimin yol açtığı boyun eğici, yapışkan tutumlar ve ayrılma korkusudur.\n\n- **Karar Alamama:** Başkalarının bol miktarda öğüdü ve güvencesi olmadan gündelik kararlarını (ne giyeceği, ne yiyeceği gibi) vermekte zorlanır.\n- **Sorumluluğu Devretme:** Yaşamının çoğu önemli alanında (maddi işler, ev idaresi, kariyer) sorumluluğun başkaları tarafından alınmasını bekler.\n- **Karşı Çıkamama:** Desteğini veya onayını kaybedeceği korkusuyla başkalarıyla aynı görüşte olmadığını belirtmekte büyük güçlük çeker.\n- **Tek Başına Başlatamama:** Kendine güven eksikliği nedeniyle kendi başına tasarı ve iş başlatmakta belirgin zorluk yaşar.\n- **Yalnızlığa Tahammülsüzlük:** Kendisine bakamayacağına dair abartılı korkuları nedeniyle yalnız kaldığında derin bir çaresizlik yaşar; bir ilişki bittiğinde derhal yenisini arar.\n- **Epidemiyoloji:** Prevalansı binde altı civarındadır; kadınlarda erkeklere kıyasla daha sık saptanmaktadır.\n\n> [!NOTE]\n> Bağımlı hastalar terk edilmemek uğruna kötü muameleye, aşağılanmaya ve istismara sessizce katlanabilirler.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Başkalarının bakımına aşırı gereksinim duyma, tek başına karar verememe ve boyun eğici yapışkanlık sergileyen C kümesi tablosu hangisidir?",
+     "options": [
+      {
+       "text": "Bağımlı kişilik bozukluğu",
+       "isCorrect": true,
+       "explanation": "Bağımlı kişilikte karar alamama, sorumluluğu devretme, ayrılık korkusu ve boyun eğicilik tipiktir. Bu mekanizma ders notlarında vurgulanan temel patofizyolojik ilkeyi doğrular. Klinik yaklaşımda birincil referans kabul edilir."
+      },
+      {
+       "text": "Antisosyal kişilik bozukluğu",
+       "isCorrect": false,
+       "explanation": "Antisosyal kişilik başkalarına boyun eğmez, kuralları hiçe sayarak bağımsız hareket eder. Bu durum soruda hedeflenen klinik tabloyla uyuşmaz. Tanısal süreçte diğer patolojilerden ayrılması gerekir."
+      },
+      {
+       "text": "Paranoid kişilik bozukluğu",
+       "isCorrect": false,
+       "explanation": "Paranoid kişilik insanlara asla güvenmez ve sorumluluğunu başkasına teslim etmez. Bu durum soruda hedeflenen klinik tabloyla uyuşmaz. Tanısal süreçte diğer patolojilerden ayrılması gerekir."
+      },
+      {
+       "text": "Narsistik kişilik bozukluğu",
+       "isCorrect": false,
+       "explanation": "Narsistik kişilik kendisini üstün görür ve başkalarının yönetimine boyun eğmez. Bu durum soruda hedeflenen klinik tabloyla uyuşmaz. Tanısal süreçte diğer patolojilerden ayrılması gerekir."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Bağımlı kişilik bozukluğunda erken erişkinlikte ortaya çıkan boyun eğici davranışlar ve ayrılık korkusu izlenir.",
+     "maskedTerm": "erişkinlikte",
+     "hint": "Ergenlik sonrasındaki genç yetişkinlik evresini simgeleyen gelişimsel aşama."
+    },
+    {
+     "id": "k35-s17-t1",
+     "type": "interactive_table",
+     "title": "Çekingen ve Bağımlı Kişilik Karşılaştırması",
+     "tableHeaders": [
+      "Ölçüt",
+      "Çekingen Kişilik",
+      "Bağımlı Kişilik"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Temel Davranış",
+         "isMasked": false
+        },
+        {
+         "text": "Eleştirilme korkusuyla ilişkiden kaçınma",
+         "isMasked": true,
+         "hint": "Yetersizlik hissiyle sosyal geri çekilme."
+        },
+        {
+         "text": "Terk edilmemek için ilişkiye yapışma",
+         "isMasked": false
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "İlişkideki Konum",
+         "isMasked": false
+        },
+        {
+         "text": "Dışarıda ve uzakta kalmayı seçer",
+         "isMasked": true,
+         "hint": "Sosyal ortamlardan uzak durma tercihi."
+        },
+        {
+         "text": "Başkalarının koruyucu kanatları altına girer",
+         "isMasked": false
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k35-s17-l1",
+     "type": "spot_the_lie",
+     "topic": "Bağımlı Kişilik Bozukluğu Tuzak Avı",
+     "items": [
+      {
+       "text": "Bağımlı bireyler başkalarının öğüt ve güvencesi olmadan gündelik kararları vermekte çok zorlanırlar.",
+       "isLie": false,
+       "explanation": "Karar yetersizliği ve onay arayışı bağımlı patolojinin çekirdek kriteridir."
+      },
+      {
+       "text": "Bağımlı kişilikte bir yakın ilişki sonlandığında bakım arayışıyla hemen yeni bir ilişki aranır.",
+       "isLie": false,
+       "explanation": "Yalnız kalma dehşeti nedeniyle derhal yeni bir koruyucu figür bulmaya çalışırlar."
+      },
+      {
+       "text": "Bağımlı hastalar liderlik yapmayı çok sever ve tüm kararları tek başlarına dikte ederler.",
+       "isLie": true,
+       "explanation": "Tam tersine, bağımlı hastalar sorumluluk almaktan kaçınır ve kararları başkalarına devrederler."
+      }
+     ]
+    }
+   ],
+   "pdfSayfalari": [
+    33,
+    34
+   ],
+   "sourcePdf": {
+    "startPage": 33,
+    "endPage": 34,
+    "name": "y25-k2-35-kisilik-bozukluklari.pdf"
+   },
+   "bolum": "5"
+  },
+  {
+   "slideNumber": 18,
+   "title": "C Kümesi: Obsesif Kompulsif Kişilik Bozukluğu (OKKB)",
+   "content": "Obsesif Kompulsif Kişilik Bozukluğu (OKKB), esneklik ve açıklığı engelleyecek düzeyde düzenlilik, mükemmeliyetçilik ve kontrol takıntısıyla tanımlanır.\n\n- **Ayrıntılara Boğulma:** Kurallar, listeler, sıralama ve programlar üzerinde aşırı kafa yorar; etkinliğin asıl amacı ayrıntılar arasında kaybolur.\n- **İşi Engelleyen Mükemmeliyetçilik:** Kendi katı standartları karşılanamadığı için görevleri ve projeleri zamanında tamamlayamaz.\n- **Aşırı İşkoliklik:** Ekonomik bir zorunluluk olmaksızın boş zaman etkinliklerini ve arkadaşlık ilişkilerini dışlayacak düzeyde kendisini işe adar.\n- **Ahlaki Katılık:** Ahlak, doğruluk ve dürüstlük konularında aşırı vicdanlı, esneklikten yoksun ve bağnaz tutumlar sergiler.\n- **Cimrilik ve Eşya Biriktirme:** Gelecekteki felaketlere hazırlık gerekçesiyle para harcamakta cimridir; değersiz ve eskimiş eşyaları atamaz.\n- **Epidemiyoloji:** Prevalansı yüzde iki ila sekiz arasındadır; erkeklerde ve ilk doğan çocuklarda daha sık bildirilmektedir.\n\n> [!IMPORTANT]\n> OKKB ego-sintoniktir (hasta kurallarını doğru ve kusursuz bulur, ritüeli yoktur); OKB ise ego-distoniktir (hasta obsesyonlarından ıstırap duyar ve ritüel kompulsiyonlar yapar).",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Obsesif Kompulsif Kişilik Bozukluğu (OKKB) ile klinik OKB tablosunun ayırıcı tanısında hangisi OKKB lehine en belirleyicidir?",
+     "options": [
+      {
+       "text": "Ego-sintonik yapı ve ritüel kompulsiyonların bulunmaması",
+       "isCorrect": true,
+       "explanation": "OKKB ego-sintonik mükemmeliyetçilik ve katı kontrol örüntüsüdür; OKB ise ego-distonik ritüeller içerir. Bu mekanizma ders notlarında vurgulanan temel patofizyolojik ilkeyi doğrular. Klinik yaklaşımda birincil referans kabul edilir."
+      },
+      {
+       "text": "Sürekli büyüsel düşünceler ve gaipten haber alma inançları",
+       "isCorrect": false,
+       "explanation": "Büyüsel düşünceler şizotipal kişilik bozukluğunun özelliğidir, OKKB'de mantıksal katılık vardır. Bu durum soruda hedeflenen klinik tabloyla uyuşmaz. Tanısal süreçte diğer patolojilerden ayrılması gerekir."
+      },
+      {
+       "text": "Yasa dışı suç eylemleri işleme ve pişmanlık duymama",
+       "isCorrect": false,
+       "explanation": "Kural ihlali ve pişmanlık yoksunluğu antisosyal kişilik bozukluğunun özelliğidir. Bu durum soruda hedeflenen klinik tabloyla uyuşmaz. Tanısal süreçte diğer patolojilerden ayrılması gerekir."
+      },
+      {
+       "text": "Terk edilme korkusuyla başkalarına aşırı boyun eğme",
+       "isCorrect": false,
+       "explanation": "Boyun eğicilik ve terk edilme korkusu bağımlı kişilik bozukluğuna aittir. Bu durum soruda hedeflenen klinik tabloyla uyuşmaz. Tanısal süreçte diğer patolojilerden ayrılması gerekir."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Obsesif kompulsif kişilik bozukluğunda genç erişkinlik döneminde başlayan esneklik ve kontrol takıntısı izlenir.",
+     "maskedTerm": "erişkinlik",
+     "hint": "Ergenlik sonrasında başlayan ve bireyin yetişkin sorumluluklarını aldığı yaşam dönemi."
+    },
+    {
+     "id": "k35-s18-t1",
+     "type": "interactive_table",
+     "title": "C Kümesi Kişilik Bozuklukları Karşılaştırması",
+     "tableHeaders": [
+      "Bozukluk",
+      "Temel Çekirdek Patoloji",
+      "Kişilerarası Davranış"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Çekingen",
+         "isMasked": false
+        },
+        {
+         "text": "Yetersizlik hissi ve alınganlık",
+         "isMasked": true,
+         "hint": "Eleştirilme ve reddedilme korkusuyla kaçınma."
+        },
+        {
+         "text": "Sosyal ortamlardan uzak durma",
+         "isMasked": false
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Bağımlı",
+         "isMasked": false
+        },
+        {
+         "text": "Aşırı bakım ve onay gereksinimi",
+         "isMasked": true,
+         "hint": "Tek başına karar alamama ve yapışkanlık."
+        },
+        {
+         "text": "Sorumluluğu başkasına devretme",
+         "isMasked": false
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Obsesif Kompulsif",
+         "isMasked": false
+        },
+        {
+         "text": "Katı mükemmeliyetçilik ve kontrol",
+         "isMasked": true,
+         "hint": "Kurallar ve ayrıntılar uğruna esnekliği yitirme."
+        },
+        {
+         "text": "İnatçı, kuralcı ve denetleyici",
+         "isMasked": false
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k35-s18-l1",
+     "type": "spot_the_lie",
+     "topic": "OKKB ve C Kümesi Tuzak Avı",
+     "items": [
+      {
+       "text": "OKKB tablosunda birey kendi katı mükemmeliyetçi standartları nedeniyle işleri zamanında bitiremez.",
+       "isLie": false,
+       "explanation": "Kusursuzluk takıntısı görevin tamamlanmasını doğrudan engelleyen temel bir kriterdir."
+      },
+      {
+       "text": "OKKB hastaları gelecekteki felaket beklentileriyle para harcamada aşırı cimri davranabilirler.",
+       "isLie": false,
+       "explanation": "Parayı biriktirme ve harcamada aşırı katılık sergileme OKKB kriterleri arasındadır."
+      },
+      {
+       "text": "OKKB hastaları kendi kurallarından nefret eder ve bu kuralları saçma bulup derin ıstırap duyarlar.",
+       "isLie": true,
+       "explanation": "Tam tersine, OKKB ego-sintoniktir; kişi kurallarının tek doğru yol olduğuna inanır ve rahatsızlık duymaz."
+      }
+     ]
+    }
+   ],
+   "pdfSayfalari": [
+    35,
+    36
+   ],
+   "sourcePdf": {
+    "startPage": 35,
+    "endPage": 36,
+    "name": "y25-k2-35-kisilik-bozukluklari.pdf"
+   },
+   "bolum": "5"
+  },
+  {
+   "slideNumber": 19,
+   "title": "Diğer Tablolar: Pasif-Agresif ve Sadomazoşistik Kişilik",
+   "content": "Belirli bir kümenin ölçütlerini tam karşılamayan veya özgül dinamikler barındıran kişilik örüntüleri başka türlü adlandırılamayan grupta incelenir.\n\n- **Pasif-Agresif Kişilik:** Yeterli sosyal ve mesleki performans beklentilerine açıkça itiraz etmek yerine dolaylı yoldan örtük direnç gösterir.\n- **Örtük Direnç Belirtileri:** İşleri savsaklama, oyalanma, unutkanlık süsü verme, erteleme, somurtma ve otoriteyi eleştirerek iş verimini düşürme.\n- **Sadistik Kişilik Örüntüsü:** Kişilerarası ilişkilerde egemenlik kurmak amacıyla başkalarına fiziksel veya psikolojik zulmetme, aşağılama ve acı çektirme.\n- **Mazoşistik (Kendini Cezalandırıcı) Kişilik:** Kendi başarısını baltalama, istismarcı ilişkileri seçme ve acı çekme üzerinden doyum sağlama dinamikleri.\n- **Başka Türlü Adlandırılamayan Grup:** Birden fazla kümeden karma özellikler taşıyan ancak tek bir tanıya tam uymayan olguları tanımlar.\n\n> [!NOTE]\n> Pasif-agresif birey otoriteye doğrudan başkaldıramaz; öfkesini eylemsizlik ve savsaklama yoluyla dışa vurur.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "İş yerinde verilen görevlere açıkça karşı çıkmak yerine işi savsaklayan, somurtan ve unutkanlık süsü veren tablo hangisidir?",
+     "options": [
+      {
+       "text": "Pasif-agresif kişilik bozukluğu",
+       "isCorrect": true,
+       "explanation": "Pasif-agresif bozuklukta beklentilere ve otoriteye karşı erteleme, somurtma ve savsaklama ile dolaylı direnç gösterilir. Bu mekanizma ders notlarında vurgulanan temel patofizyolojik ilkeyi doğrular. Klinik yaklaşımda birincil referans kabul edilir."
+      },
+      {
+       "text": "Antisosyal kişilik bozukluğu",
+       "isCorrect": false,
+       "explanation": "Antisosyal kişilik örtük direnç göstermez; açık saldırganlık, suç ve kural ihlali sergiler. Bu durum soruda hedeflenen klinik tabloyla uyuşmaz. Tanısal süreçte diğer patolojilerden ayrılması gerekir."
+      },
+      {
+       "text": "Obsesif kompulsif kişilik bozukluğu",
+       "isCorrect": false,
+       "explanation": "Obsesif kompulsif kişilik işi savsaklamaz; aşırı kuralcılık ve mükemmeliyetçilikle aşırı çalışır. Bu durum soruda hedeflenen klinik tabloyla uyuşmaz. Tanısal süreçte diğer patolojilerden ayrılması gerekir."
+      },
+      {
+       "text": "Şizoid kişilik bozukluğu",
+       "isCorrect": false,
+       "explanation": "Şizoid kişilik otoriteyle çatışmaya girmez, tamamen kendi dünyasına çekilmiş olarak yaşar. Bu durum soruda hedeflenen klinik tabloyla uyuşmaz. Tanısal süreçte diğer patolojilerden ayrılması gerekir."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Pasif-agresif kişilik bozukluğunda otoriteye karşı gösterilen eleştirileri mantıksız bulma ve savsaklama izlenir.",
+     "maskedTerm": "eleştirileri",
+     "hint": "Başkalarının yönelttiği olumsuz geri bildirim ve performans değerlendirmelerini ifade eden kelime."
+    },
+    {
+     "id": "k35-s19-t1",
+     "type": "interactive_table",
+     "title": "Pasif-Agresif ve Sadistik Dinamikler",
+     "tableHeaders": [
+      "Tablo",
+      "Öfke Dışavurum Biçimi",
+      "İlişkisel Yansıma"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Pasif-Agresif",
+         "isMasked": false
+        },
+        {
+         "text": "Örtük direnç, erteleme ve somurtma",
+         "isMasked": true,
+         "hint": "Açık kavga yerine işi savsaklayarak dolaylı öfke çıkarma."
+        },
+        {
+         "text": "Çevrede engellenmişlik ve öfke yaratma",
+         "isMasked": false
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Sadistik",
+         "isMasked": false
+        },
+        {
+         "text": "Doğrudan aşağılama ve acı çektirme",
+         "isMasked": true,
+         "hint": "Zulmetme ve başkalarını ezerek doyum alma."
+        },
+        {
+         "text": "Korku ve tahakküm kurma",
+         "isMasked": false
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k35-s19-l1",
+     "type": "spot_the_lie",
+     "topic": "Diğer Kişilik Bozuklukları Tuzak Avı",
+     "items": [
+      {
+       "text": "Pasif-agresif kişilikte taleplere karşı açıkça itiraz edilmez, savsaklama ve oyalanma ile direnç gösterilir.",
+       "isLie": false,
+       "explanation": "Örtük ve dolaylı direnç pasif-agresif tablonun temel tanımlayıcı özelliğidir."
+      },
+      {
+       "text": "Mazoşistik kişilik örüntüsünde birey kendi başarısını sabote eden ve acı çekmeyi sürdüren ilişkileri seçebilir.",
+       "isLie": false,
+       "explanation": "Kendini cezalandırıcı dinamikler mazoşistik tablonun merkezinde yer alır."
+      },
+      {
+       "text": "Pasif-agresif bireyler otoriteye her zaman tam bir samimiyetle itaat eder ve tüm işleri erkenden bitirirler.",
+       "isLie": true,
+       "explanation": "Tam tersine, pasif-agresif bireyler işleri erteleyerek ve savsaklayarak otoriteye örtük direnç gösterirler."
+      }
+     ]
+    }
+   ],
+   "pdfSayfalari": [
+    37,
+    39
+   ],
+   "sourcePdf": {
+    "startPage": 37,
+    "endPage": 39,
+    "name": "y25-k2-35-kisilik-bozukluklari.pdf"
+   },
+   "bolum": "6"
+  },
+  {
+   "slideNumber": 20,
+   "title": "Klinik Yaklaşım: Organisite Taraması ve Tedavi",
+   "content": "Kişilik bozukluklarının tanı ve yönetiminde organik patolojilerin dışlanması ve kanıta dayalı psikoterapi yöntemleri esastır.\n\n- **Organisite Taraması:** Ani başlayan kişilik değişikliklerinde frontal lob tümörleri, kafa travmaları, temporal epilepsi ve endokrinopatiler mutlaka ekarte edilmelidir.\n- **Nörolojik Tetkikler:** Nöropsikolojik test bataryaları, elektroensefalografi (EEG) ve beyin manyetik rezonans (MR) görüntüleme taramada temel araçlardır.\n- **Psikoterapi (Birincil Tedavi):** Kişilik bozukluklarının kalıcı tedavisi psikoterapidir; özellikle borderline olgularında **Diyalektik Davranış Terapisi (DBT)** altın standarttır.\n- **Şema ve Psikodinamik Terapi:** Erken çocukluk şemalarını ve bilinçdışı nesne ilişkilerini dönüştürmede uzun soluklu psikoterapiler uygulanır.\n- **Farmakoterapi İlkeleri:** Kişilik yapısını doğrudan değiştiren bir ilaç yoktur; ilaçlar eşlik eden anksiyete, depresyon, dürtüsellik ve psikotik benzeri semptomları yatıştırmak için kullanılır.\n\n> [!IMPORTANT]\n> İleri yaşta aniden ortaya çıkan kişilik değişikliklerinde psikiyatri tanısı koymadan önce mutlaka beyin görüntülemesi yapılmalıdır.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Borderline kişilik bozukluğunda duygulanım düzenleme ve kriz toleransı sağlamada altın standart kanıta dayalı psikoterapi hangisidir?",
+     "options": [
+      {
+       "text": "Diyalektik Davranış Terapisi (DBT)",
+       "isCorrect": true,
+       "explanation": "Diyalektik Davranış Terapisi (DBT) borderline olgularında duygusal regülasyon ve intiharı önlemede en etkili yöntemdir. Bu mekanizma ders notlarında vurgulanan temel patofizyolojik ilkeyi doğrular. Klinik yaklaşımda birincil referans kabul edilir."
+      },
+      {
+       "text": "Aversiyon (itici uyaran) terapisi",
+       "isCorrect": false,
+       "explanation": "Aversiyon terapisi bağımlılıklarda denenen itici uyaran yöntemidir, kişilik terapisinde kullanılmaz. Bu durum soruda hedeflenen klinik tabloyla uyuşmaz. Tanısal süreçte diğer patolojilerden ayrılması gerekir."
+      },
+      {
+       "text": "Yalnızca yüksek doz antibiyotik kürü",
+       "isCorrect": false,
+       "explanation": "Kişilik bozukluğu bakteriyel enfeksiyon değildir, antibiyotiklerin psikiyatride yeri yoktur. Bu durum soruda hedeflenen klinik tabloyla uyuşmaz. Tanısal süreçte diğer patolojilerden ayrılması gerekir."
+      },
+      {
+       "text": "Sadece elektrokonvülsif monoterapi",
+       "isCorrect": false,
+       "explanation": "EKT birincil kişilik bozukluğu tedavisi değildir, ağır refrakter durumlarda biyolojik destektir. Bu durum soruda hedeflenen klinik tabloyla uyuşmaz. Tanısal süreçte diğer patolojilerden ayrılması gerekir."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Kişilik bozukluklarında organik patolojileri ekarte etmek için organisite taraması ve EEG incelemesi yapılır.",
+     "maskedTerm": "organisite",
+     "hint": "Beyin tümörü, travma veya sistemik bedensel hastalıkların varlığını araştıran tıbbi inceleme süreci."
+    },
+    {
+     "type": "causal_chain",
+     "title": "Kişilik Bozukluğu Tedavi ve Tanı Protokolü",
+     "steps": [
+      "1. Organik ekarte: Nöropsikolojik testler, EEG ve MR ile frontal tümör veya epilepsi dışlanır.",
+      "2. Birincil psikoterapi: Borderline için DBT, genel bozukluklar için şema terapi planlanır.",
+      "3. Semptomatik farmakoterapi: Eşlik eden dürtüsellik ve anksiyete için duygu durum dengeleyiciler eklenir."
+     ]
+    },
+    {
+     "id": "k35-s20-l1",
+     "type": "spot_the_lie",
+     "topic": "Kişilik Bozuklukları Tedavi İlkeleri Tuzak Avı",
+     "items": [
+      {
+       "text": "Kişilik bozukluklarının birincil ve en etkili kalıcı tedavi yöntemi psikoterapidir.",
+       "isLie": false,
+       "explanation": "Karakter ve baş etme mekanizmalarını dönüştüren temel araç kanıta dayalı psikoterapilerdir."
+      },
+      {
+       "text": "Borderline kişilik bozukluğunda Diyalektik Davranış Terapisi (DBT) etkinliği kanıtlanmış yöntemdir.",
+       "isLie": false,
+       "explanation": "Marsha Linehan tarafından geliştirilen DBT borderline için altın standart kabul edilir."
+      },
+      {
+       "text": "Kişilik bozukluklarını tek bir antidepresan hapıyla birkaç günde bütünüyle yok eden kesin ilaç vardır.",
+       "isLie": true,
+       "explanation": "Kişilik yapısını doğrudan yok eden bir ilaç yoktur; farmakoterapi semptom kontrolü amaçlıdır."
+      }
+     ]
+    }
+   ],
+   "pdfSayfalari": [
+    40,
+    40
+   ],
+   "sourcePdf": {
+    "startPage": 40,
+    "endPage": 40,
+    "name": "y25-k2-35-kisilik-bozukluklari.pdf"
+   },
+   "bolum": "6"
+  },
+  {
+   "slideNumber": 21,
+   "isCheckpoint": true,
+   "title": "[TEKRAR SAYFASI - CHECKPOINT 4] C Kümesi ve Tedavi Yaklaşımları",
+   "content": "Bu tekrar sayfasında C Kümesi (Çekingen, Bağımlı, Obsesif-Kompulsif), pasif-agresif dinamikler ve klinik tedavi ilkeleri pekiştirilmektedir.\n\n- **C Kümesi Profili:** Çekingen eleştiriden korkar; Bağımlı yalnızlıktan korkar; Obsesif-Kompulsif kontrolü kaybetmekten korkar.\n- **Pasif-Agresif Dinamik:** Otoriteye açık karşı çıkış yerine savsaklama ve somurtma ile örtük direnç gösterilir.\n- **Tedavi İlkeleri:** Organisite ekarte edilmeli, Diyalektik Davranış Terapisi (DBT) gibi kanıta dayalı psikoterapiler uygulanmalı ve farmakoterapi semptomları hedeflemelidir.\n\n> [!IMPORTANT]\n> C kümesi hastaları anksiyete ve yetersizlik hisleri nedeniyle A ve B kümelerine kıyasla tedaviye daha uyumlu ve motivasyonu yüksektir.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "C Kümesi bozukluklarının korku odakları eşleştirildiğinde hangisi doğru bir özet sunar?",
+     "options": [
+      {
+       "text": "Çekingen eleştirilmekten, Bağımlı yalnız kalmaktan, OKKB kontrolü kaybetmekten korkar",
+       "isCorrect": true,
+       "explanation": "Çekingen eleştiri ve dışlanmadan, Bağımlı ayrılıktan, OKKB ise hata yapıp kontrolü yitirmekten korkar. Bu mekanizma ders notlarında vurgulanan temel patofizyolojik ilkeyi doğrular. Klinik yaklaşımda birincil referans kabul edilir."
+      },
+      {
+       "text": "Çekingen insanları sömürmekten, Bağımlı kuralları çiğnemekten korkar",
+       "isCorrect": false,
+       "explanation": "Sömürme ve kural çiğneme B kümesine ait kavramlardır, C kümesi kaygılıdır. Bu durum soruda hedeflenen klinik tabloyla uyuşmaz. Tanısal süreçte diğer patolojilerden ayrılması gerekir."
+      },
+      {
+       "text": "Tüm C kümesi hastaları sürekli büyüsel düşüncelerden ve telepatiden korkar",
+       "isCorrect": false,
+       "explanation": "Büyüsel düşünce A kümesindeki şizotipal kişilik bozukluğunun özelliğidir. Bu durum soruda hedeflenen klinik tabloyla uyuşmaz. Tanısal süreçte diğer patolojilerden ayrılması gerekir."
+      },
+      {
+       "text": "OKKB hastaları para harcamaktan hiç korkmaz ve tüm servetlerini dağıtırlar",
+       "isCorrect": false,
+       "explanation": "OKKB hastaları cimrilik düzeyinde tutumlu davranır, para harcamaktan kaçınırlar. Bu durum soruda hedeflenen klinik tabloyla uyuşmaz. Tanısal süreçte diğer patolojilerden ayrılması gerekir."
+      }
+     ]
+    },
+    {
+     "id": "k35-s21-w1",
+     "type": "swipe_matching",
+     "title": "C Kümesi Bozukluk Eşleme",
+     "leftCategory": "Çekingen veya Bağımlı",
+     "rightCategory": "OKKB veya Pasif-Agresif",
+     "cards": [
+      {
+       "text": "Yetersizlik hissi, eleştirilme korkusu ve sosyal geri çekilme",
+       "category": "left"
+      },
+      {
+       "text": "Tek başına karar alamama, ayrılma korkusu ve yapışkan boyun eğicilik",
+       "category": "left"
+      },
+      {
+       "text": "Aşırı kuralcılık, mükemmeliyetçilik ve katı kontrol takıntısı",
+       "category": "right"
+      },
+      {
+       "text": "İşi savsaklama, somurtma ve otoriteye karşı örtük direnç gösterme",
+       "category": "right"
+      }
+     ]
+    },
+    {
+     "id": "k35-s21-t1",
+     "type": "interactive_table",
+     "title": "Kişilik Bozukluğu Tedavi İlkeleri Özeti",
+     "tableHeaders": [
+      "Tedavi Alanı",
+      "Uygulama Biçimi",
+      "Temel Amaç"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Diyalektik Terapi (DBT)",
+         "isMasked": false
+        },
+        {
+         "text": "Duygulanım regülasyonu ve kriz toleransı",
+         "isMasked": true,
+         "hint": "Özellikle borderline olgularda özkıyımı önleyen terapi."
+        },
+        {
+         "text": "Dürtü kontrolü ve stabilite",
+         "isMasked": false
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Farmakoterapi",
+         "isMasked": false
+        },
+        {
+         "text": "Semptomatik ilaç kullanımı (SSRI, dengeleyici)",
+         "isMasked": true,
+         "hint": "Kişilik yapısını değil eşlik eden belirtileri hedefleme."
+        },
+        {
+         "text": "Anksiyete ve dürtüsellik kontrolü",
+         "isMasked": false
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k35-s21-l1",
+     "type": "spot_the_lie",
+     "topic": "Tedavi ve C Kümesi Kontrol Sorusu",
+     "items": [
+      {
+       "text": "Kişilik bozukluklarında primer tedavi psikoterapidir, ilaçlar eşlik eden semptomları yatıştırır.",
+       "isLie": false,
+       "explanation": "Kişilik yapısını dönüştüren temel yöntem psikoterapidir, ilaçlar semptomatiktir."
+      },
+      {
+       "text": "Ani başlayan kişilik değişikliklerinde organik lezyonları dışlamak için nörolojik tetkikler yapılır.",
+       "isLie": false,
+       "explanation": "Frontal tümör veya travma gibi organik nedenleri ekarte etmek hayati önem taşır."
+      },
+      {
+       "text": "C Kümesi kişilik bozuklukları hiçbir zaman psikoterapiden fayda görmez ve tedavi edilemez.",
+       "isLie": true,
+       "explanation": "Tam tersine, C kümesi hastaları anksiyete duydukları için psikoterapiden en çok fayda gören gruptur."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slideNumber": 22,
+   "isGameFinale": true,
+   "title": "[OYUN SAYFASI] Ders Sonu Oyunları: Kişilik Bozuklukları",
+   "content": "Tebrikler! Kişilik Bozuklukları dersini başarıyla tamamladınız. Şimdi öğrendiğiniz tüm kazanımları ders sonu oyunlarıyla pekiştirme zamanı!\n\n- **Sıralama Oyunu:** Kişilik bozukluklarının tanı, organik ekarte ve tedavi basamaklarını doğru kronolojik sıraya diziniz.\n- **Tahmin Sürgüsü:** Kişilik bozukluklarının genel toplumdaki prevalans aralıklarını tahmin ediniz.\n- **Pertürbasyon Senaryosu:** Frontal lezyon kuşkusu olan bir olguda klinik karar simülasyonunu çözünüz.\n- **Metin Düzeltme:** Kişilik kavramları ve ego-sintonik mekanizmadaki hatalı bilgiyi düzeltiniz.\n\n> [!IMPORTANT]\n> Ders sonu oyunları tüm kümeleri, tanı kriterlerini ve ayırıcı tanı dinamiklerini kalıcı hafızaya kodlamanızı sağlar.",
+   "interactiveElements": [
+    {
+     "id": "k35-s22-g1",
+     "type": "sequence_order",
+     "prompt": "Kişilik değişikliği ile başvuran bir hastada izlenmesi gereken doğru klinik basamakları sıralayınız:",
+     "steps": [
+      "1. Ayrıntılı psikiyatrik öykü ve ergenlikten süregelen örüntülerin tespiti",
+      "2. Frontal lob lezyonlarını dışlamak için nöropsikolojik testler ve beyin MR görüntülemesi",
+      "3. DSM kümelerine göre A, B, C özgül kişilik bozukluğu tanısının netleştirilmesi",
+      "4. Kanıta dayalı psikoterapi ve semptomatik farmakoterapi planlanması"
+     ],
+     "explanation": "Kişilik bozukluğu değerlendirmesinde önce ergenlikten başlayan örüntü araştırılır, ardından sekonder organik patolojiler dışlanır, sendromik tanı konur ve uygun tedaviye geçilir."
+    },
+    {
+     "id": "k35-s22-g2",
+     "type": "estimate_slider",
+     "items": [
+      {
+       "prompt": "Genel popülasyonda kişilik bozukluklarının kümülatif görülme sıklığının üst sınırı yüzde kaçtır?",
+       "unit": "%",
+       "min": 0,
+       "max": 50,
+       "answer": 23,
+       "tolerance": 3,
+       "explanation": "Ders notlarına göre genel popülasyonda kişilik bozukluğu prevalansı yüzde 7 ile yüzde 23 arasındadır."
+      }
+     ]
+    },
+    {
+     "id": "k35-s22-g3",
+     "type": "perturbation",
+     "scenario": "Borderline kişilik bozukluğu olan bir hastanın kriz ve intihar girişimi sonrasında acil servisteki klinik yönetimi planlanmaktadır.",
+     "question": "Acil serviste sınır koyucu ve yapılandırılmış yaklaşım uygulandığında klinik parametreler nasıl değişir?",
+     "parameters": [
+      {
+       "name": "Acil servis ekibinde bölünme ve manipülasyon riski",
+       "correct": "down",
+       "explanation": "Net sınırlar ve tek bir hekim üzerinden iletişim personelin ikiye bölünmesini engeller."
+      },
+      {
+       "name": "Hastanın anksiyete regülasyonu ve duygusal stabilitesi",
+       "correct": "up",
+       "explanation": "Öngörülebilir ve sakin bir tutum sınır hastasındaki yoğun panik ve kaosu yatıştırır."
+      },
+      {
+       "name": "Tekrarlayan acil yatış ve yapay kriz ihtiyacı",
+       "correct": "down",
+       "explanation": "Hastane ortamının ikincil kazanç sağlaması önlendiğinde yineleyen acil başvuruları belirgin azalır."
+      }
+     ]
+    },
+    {
+     "id": "k35-s22-g4",
+     "type": "fix_the_text",
+     "text": "Kişilik bozukluklarında belirtiler hastada derin bir yabancılık hissi uyandırarak her zaman ego-distonik seyreder ve birey yakınarak hekime koşar.",
+     "errors": [
+      {
+       "wrong": "ego-distonik",
+       "correct": "ego-sintonik",
+       "options": [
+        "ego-sintonik",
+        "otoplastik",
+        "psikotik"
+       ],
+       "explanation": "Kişilik bozukluklarında belirtiler benlikle uyumludur yani ego-sintoniktir, kişi yakınmaz."
+      },
+      {
+       "wrong": "yakınarak hekime koşar",
+       "correct": "çevreyi değiştirmeye çalışır",
+       "options": [
+        "çevreyi değiştirmeye çalışır",
+        "içgörüyle tedavi ister",
+        "hastaneye gönüllü yatar"
+       ],
+       "explanation": "Kişilik patolojisinde uyum biçimi alloplastiktir; kişi kendi davranışını değil çevreyi suçlar ve değiştirmek ister."
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "id": "k2p-y25-k2-35-kisilik-bozukluklari",
+ "discipline": "Ruh Sağlığı ve Hastalıkları",
+ "donem": "2025-2026",
+ "arsiv": true,
+ "committee": "donem3-kurul2",
+ "confidence": "high",
+ "totalSlides": 22,
+ "matchedPastQuestionsCount": 4,
+ "sinama": {
+  "etiket": "2025-2026 Arşiv",
+  "aciklama": "Bu ders 2025-2026 dönemi (geçen yıl) slaytlarından hazırlanmıştır; 2026-2027 güncel müfredat dersleriyle karışmaz."
+ }
+}

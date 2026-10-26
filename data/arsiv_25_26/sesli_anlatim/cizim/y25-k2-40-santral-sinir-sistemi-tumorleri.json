@@ -1,0 +1,871 @@
+{
+ "surum": 1,
+ "metinHash": "dda635ad1bd035ead85920842cf3af2dfd053c8c",
+ "p": {
+  "1": {
+   "2": [
+    {
+     "tur": "akis",
+     "etiket": "Şekil Santral sinir sistemi intrakraniyal supratentoryal ser",
+     "odak": [
+      0.1,
+      0.1,
+      0.9,
+      0.9
+     ],
+     "s": 5,
+     "k": [
+      9,
+      60
+     ],
+     "etiket_konum": [
+      0.48,
+      0.0107
+     ],
+     "etiket_genislik": 0.42
+    }
+   ]
+  },
+  "2": {
+   "0": [
+    {
+     "tur": "akis",
+     "etiket": "Şekil Kafa tabanı ön, orta ve arka fossa anatomik komşulukla",
+     "odak": [
+      0.1,
+      0.1,
+      0.9,
+      0.9
+     ],
+     "s": 6,
+     "k": [
+      5,
+      31
+     ],
+     "etiket_konum": [
+      0.1,
+      0.0107
+     ],
+     "etiket_genislik": 0.42
+    }
+   ]
+  },
+  "13": {
+   "0": [
+    {
+     "tur": "akis",
+     "etiket": "Şekil Derece iki fibriller diffüz astrositomda hafif pleomor",
+     "odak": [
+      0.1,
+      0.1,
+      0.9,
+      0.9
+     ],
+     "s": 27,
+     "k": [
+      10,
+      64
+     ],
+     "etiket_konum": [
+      0.1,
+      0.0107
+     ],
+     "etiket_genislik": 0.42
+    }
+   ]
+  },
+  "14": {
+   "1": [
+    {
+     "tur": "akis",
+     "etiket": "Şekil Derece üç anaplastik astrositomda hücresellik artışı p",
+     "odak": [
+      0.1,
+      0.1,
+      0.9,
+      0.9
+     ],
+     "s": 30,
+     "k": [
+      11,
+      56
+     ],
+     "etiket_konum": [
+      0.1,
+      0.0167
+     ],
+     "etiket_genislik": 0.42
+    }
+   ]
+  },
+  "16": {
+   "0": [
+    {
+     "tur": "akis",
+     "etiket": "Şekil Glioblastomda mikrovasküler endotelyal proliferasyon g",
+     "odak": [
+      0.1,
+      0.1,
+      0.9,
+      0.9
+     ],
+     "s": 33,
+     "k": [
+      14,
+      70
+     ],
+     "etiket_konum": [
+      0.1,
+      0.0167
+     ],
+     "etiket_genislik": 0.42
+    }
+   ],
+   "2": [
+    {
+     "tur": "akis",
+     "etiket": "Şekil Glioblastomda belirgin vasküler endotel proliferasyonu",
+     "odak": [
+      0.1,
+      0.1,
+      0.9,
+      0.9
+     ],
+     "s": 34,
+     "k": [
+      14,
+      64
+     ],
+     "etiket_konum": [
+      0.1,
+      0.0167
+     ],
+     "etiket_genislik": 0.42
+    }
+   ]
+  },
+  "17": {
+   "0": [
+    {
+     "tur": "akis",
+     "etiket": "Şekil Glioblastomda mikrovasküler proliferasyon ve anaplazik",
+     "odak": [
+      0.1,
+      0.1,
+      0.9,
+      0.9
+     ],
+     "s": 35,
+     "k": [
+      12,
+      45
+     ],
+     "etiket_konum": [
+      0.1,
+      0.0167
+     ],
+     "etiket_genislik": 0.42
+    }
+   ],
+   "2": [
+    {
+     "tur": "akis",
+     "etiket": "Şekil Glioblastom mikroskopisinde glomerüloid vasküler tomur",
+     "odak": [
+      0.1,
+      0.1,
+      0.9,
+      0.9
+     ],
+     "s": 36,
+     "k": [
+      14,
+      69
+     ],
+     "etiket_konum": [
+      0.1,
+      0.0167
+     ],
+     "etiket_genislik": 0.42
+    }
+   ]
+  },
+  "18": {
+   "0": [
+    {
+     "tur": "akis",
+     "etiket": "Şekil Glioblastomda santral geniş nekrotik alan etrafında tü",
+     "odak": [
+      0.1,
+      0.1,
+      0.9,
+      0.9
+     ],
+     "s": 37,
+     "k": [
+      14,
+      55
+     ],
+     "etiket_konum": [
+      0.1,
+      0.0167
+     ],
+     "etiket_genislik": 0.42
+    }
+   ],
+   "2": [
+    {
+     "tur": "akis",
+     "etiket": "Şekil Glioblastomda koagülasyon nekrozu çevresinde palizatla",
+     "odak": [
+      0.1,
+      0.1,
+      0.9,
+      0.9
+     ],
+     "s": 38,
+     "k": [
+      13,
+      58
+     ],
+     "etiket_konum": [
+      0.1,
+      0.0167
+     ],
+     "etiket_genislik": 0.42
+    }
+   ]
+  },
+  "22": {
+   "0": [
+    {
+     "tur": "akis",
+     "etiket": "Şekil Pilositik astrositom histolojisinde parlak pembe eozin",
+     "odak": [
+      0.1,
+      0.1,
+      0.9,
+      0.9
+     ],
+     "s": 44,
+     "k": [
+      10,
+      52
+     ],
+     "etiket_konum": [
+      0.1,
+      0.0107
+     ],
+     "etiket_genislik": 0.42
+    }
+   ],
+   "2": [
+    {
+     "tur": "akis",
+     "etiket": "Şekil Pilositik astrositomda eozinofilik granüler cisimcikle",
+     "odak": [
+      0.1,
+      0.1,
+      0.9,
+      0.9
+     ],
+     "s": 45,
+     "k": [
+      10,
+      64
+     ],
+     "etiket_konum": [
+      0.1,
+      0.0167
+     ],
+     "etiket_genislik": 0.42
+    }
+   ]
+  },
+  "23": {
+   "0": [
+    {
+     "tur": "akis",
+     "etiket": "Şekil Pilositik astrositomda bifazik kompakt selüler alanlar",
+     "odak": [
+      0.1,
+      0.1,
+      0.9,
+      0.9
+     ],
+     "s": 46,
+     "k": [
+      10,
+      53
+     ],
+     "etiket_konum": [
+      0.1,
+      0.0167
+     ],
+     "etiket_genislik": 0.42
+    }
+   ],
+   "2": [
+    {
+     "tur": "akis",
+     "etiket": "Şekil Pilositik astrositom mikroskopisinde parlak eozinofili",
+     "odak": [
+      0.1,
+      0.1,
+      0.9,
+      0.9
+     ],
+     "s": 47,
+     "k": [
+      10,
+      59
+     ],
+     "etiket_konum": [
+      0.1,
+      0.0167
+     ],
+     "etiket_genislik": 0.42
+    }
+   ]
+  },
+  "28": {
+   "0": [
+    {
+     "tur": "akis",
+     "etiket": "Şekil Oligodendrogliomda tipik perinükleer berrak halo tavad",
+     "odak": [
+      0.1,
+      0.1,
+      0.9,
+      0.9
+     ],
+     "s": 56,
+     "k": [
+      17,
+      57
+     ],
+     "etiket_konum": [
+      0.1,
+      0.0107
+     ],
+     "etiket_genislik": 0.42
+    }
+   ],
+   "2": [
+    {
+     "tur": "akis",
+     "etiket": "Şekil Anaplastik oligodendrogliomda artmış hücresellik, nükl",
+     "odak": [
+      0.1,
+      0.1,
+      0.9,
+      0.9
+     ],
+     "s": 57,
+     "k": [
+      17,
+      44
+     ],
+     "etiket_konum": [
+      0.1,
+      0.0107
+     ],
+     "etiket_genislik": 0.42
+    }
+   ]
+  },
+  "30": {
+   "1": [
+    {
+     "tur": "akis",
+     "etiket": "Şekil Ependimomda kan damarları etrafında anükleer fibriler ",
+     "odak": [
+      0.1,
+      0.1,
+      0.9,
+      0.9
+     ],
+     "s": 61,
+     "k": [
+      11,
+      48
+     ],
+     "etiket_konum": [
+      0.1,
+      0.0107
+     ],
+     "etiket_genislik": 0.42
+    }
+   ]
+  },
+  "31": {
+   "0": [
+    {
+     "tur": "akis",
+     "etiket": "Şekil Ependimom histopatolojisinde damar çevresinde anükleer",
+     "odak": [
+      0.1,
+      0.1,
+      0.9,
+      0.9
+     ],
+     "s": 62,
+     "k": [
+      10,
+      62
+     ],
+     "etiket_konum": [
+      0.1,
+      0.0167
+     ],
+     "etiket_genislik": 0.42
+    }
+   ],
+   "1": [
+    {
+     "tur": "akis",
+     "etiket": "Şekil Ependimom histopatolojisinde damar çevresinde anükleer",
+     "odak": [
+      0.1,
+      0.1,
+      0.9,
+      0.9
+     ],
+     "s": 62,
+     "k": [
+      3,
+      50
+     ],
+     "etiket_konum": [
+      0.1,
+      0.0167
+     ],
+     "etiket_genislik": 0.42
+    }
+   ],
+   "2": [
+    {
+     "tur": "akis",
+     "etiket": "Şekil Ependimom mikroskopisinde belirgin perivasküler psödor",
+     "odak": [
+      0.1,
+      0.1,
+      0.9,
+      0.9
+     ],
+     "s": 63,
+     "k": [
+      10,
+      60
+     ],
+     "etiket_konum": [
+      0.1,
+      0.0167
+     ],
+     "etiket_genislik": 0.42
+    }
+   ]
+  },
+  "32": {
+   "0": [
+    {
+     "tur": "akis",
+     "etiket": "Şekil Ependimom mikroskopisinde ventrikül lümenini taklit ed",
+     "odak": [
+      0.1,
+      0.1,
+      0.9,
+      0.9
+     ],
+     "s": 64,
+     "k": [
+      7,
+      52
+     ],
+     "etiket_konum": [
+      0.1,
+      0.0167
+     ],
+     "etiket_genislik": 0.42
+    }
+   ],
+   "1": [
+    {
+     "tur": "akis",
+     "etiket": "Şekil Ependimom mikroskopisinde ventrikül lümenini taklit ed",
+     "odak": [
+      0.1,
+      0.1,
+      0.9,
+      0.9
+     ],
+     "s": 64,
+     "k": [
+      3,
+      53
+     ],
+     "etiket_konum": [
+      0.1,
+      0.0167
+     ],
+     "etiket_genislik": 0.42
+    }
+   ],
+   "2": [
+    {
+     "tur": "akis",
+     "etiket": "Şekil Ependimomda glial zemin ve perivasküler tümör hücre di",
+     "odak": [
+      0.1,
+      0.1,
+      0.9,
+      0.9
+     ],
+     "s": 65,
+     "k": [
+      10,
+      45
+     ],
+     "etiket_konum": [
+      0.1,
+      0.0107
+     ],
+     "etiket_genislik": 0.42
+    }
+   ]
+  },
+  "33": {
+   "1": [
+    {
+     "tur": "akis",
+     "etiket": "Şekil Anaplastik ependimomda artmış selülarite, mitotik figü",
+     "odak": [
+      0.1,
+      0.1,
+      0.9,
+      0.9
+     ],
+     "s": 67,
+     "k": [
+      11,
+      69
+     ],
+     "etiket_konum": [
+      0.1,
+      0.0107
+     ],
+     "etiket_genislik": 0.42
+    }
+   ],
+   "2": [
+    {
+     "tur": "akis",
+     "etiket": "Şekil Anaplastik ependimomda artmış selülarite, mitotik figü",
+     "odak": [
+      0.1,
+      0.1,
+      0.9,
+      0.9
+     ],
+     "s": 67,
+     "k": [
+      7,
+      50
+     ],
+     "etiket_konum": [
+      0.0,
+      0.82
+     ],
+     "etiket_genislik": 0.42
+    }
+   ]
+  },
+  "38": {
+   "0": [
+    {
+     "tur": "akis",
+     "etiket": "Şekil Medulloblastomda küçük yuvarlak hiperkromatik hücreler",
+     "odak": [
+      0.1,
+      0.1,
+      0.9,
+      0.9
+     ],
+     "s": 76,
+     "k": [
+      9,
+      50
+     ],
+     "etiket_konum": [
+      0.1,
+      0.0107
+     ],
+     "etiket_genislik": 0.42
+    }
+   ]
+  },
+  "43": {
+   "0": [
+    {
+     "tur": "akis",
+     "etiket": "Şekil Meningiomda neoplastik araknoid hücrelerin soğan zarı ",
+     "odak": [
+      0.1,
+      0.1,
+      0.9,
+      0.9
+     ],
+     "s": 86,
+     "k": [
+      9,
+      45
+     ],
+     "etiket_konum": [
+      0.1,
+      0.0107
+     ],
+     "etiket_genislik": 0.42
+    }
+   ],
+   "2": [
+    {
+     "tur": "akis",
+     "etiket": "Şekil Meningiomda araknoid kap hücrelerinin oluşturduğu hücr",
+     "odak": [
+      0.1,
+      0.1,
+      0.9,
+      0.9
+     ],
+     "s": 87,
+     "k": [
+      10,
+      58
+     ],
+     "etiket_konum": [
+      0.1,
+      0.0107
+     ],
+     "etiket_genislik": 0.42
+    }
+   ]
+  },
+  "44": {
+   "1": [
+    {
+     "tur": "akis",
+     "etiket": "Şekil Meningiom histopatolojisinde konsantrik tabakalı kalsi",
+     "odak": [
+      0.1,
+      0.1,
+      0.9,
+      0.9
+     ],
+     "s": 89,
+     "k": [
+      12,
+      55
+     ],
+     "etiket_konum": [
+      0.1,
+      0.0167
+     ],
+     "etiket_genislik": 0.42
+    }
+   ],
+   "2": [
+    {
+     "tur": "akis",
+     "etiket": "Şekil Meningiom histopatolojisinde konsantrik tabakalı kalsi",
+     "odak": [
+      0.1,
+      0.1,
+      0.9,
+      0.9
+     ],
+     "s": 89,
+     "k": [
+      3,
+      52
+     ],
+     "etiket_konum": [
+      0.1,
+      0.0167
+     ],
+     "etiket_genislik": 0.42
+    }
+   ]
+  },
+  "45": {
+   "1": [
+    {
+     "tur": "akis",
+     "etiket": "Şekil Meningiom histopatolojisinde lobüler büyüme paterni, n",
+     "odak": [
+      0.1,
+      0.1,
+      0.9,
+      0.9
+     ],
+     "s": 91,
+     "k": [
+      10,
+      45
+     ],
+     "etiket_konum": [
+      0.1,
+      0.0107
+     ],
+     "etiket_genislik": 0.42
+    }
+   ]
+  },
+  "46": {
+   "1": [
+    {
+     "tur": "akis",
+     "etiket": "Şekil Atipik meningiomda belirgin makronükleol içeren neopla",
+     "odak": [
+      0.1,
+      0.1,
+      0.9,
+      0.9
+     ],
+     "s": 93,
+     "k": [
+      7,
+      58
+     ],
+     "etiket_konum": [
+      0.1,
+      0.0167
+     ],
+     "etiket_genislik": 0.42
+    }
+   ]
+  },
+  "47": {
+   "0": [
+    {
+     "tur": "akis",
+     "etiket": "Şekil Atipik meningiom histolojisinde artmış mitotik aktivit",
+     "odak": [
+      0.1,
+      0.1,
+      0.9,
+      0.9
+     ],
+     "s": 94,
+     "k": [
+      8,
+      59
+     ],
+     "etiket_konum": [
+      0.1,
+      0.0167
+     ],
+     "etiket_genislik": 0.42
+    }
+   ]
+  },
+  "48": {
+   "0": [
+    {
+     "tur": "akis",
+     "etiket": "Şekil Anaplastik malign meningiomda yüksek nükleer atipi ve ",
+     "odak": [
+      0.1,
+      0.1,
+      0.9,
+      0.9
+     ],
+     "s": 96,
+     "k": [
+      11,
+      59
+     ],
+     "etiket_konum": [
+      0.1,
+      0.0167
+     ],
+     "etiket_genislik": 0.42
+    }
+   ],
+   "1": [
+    {
+     "tur": "akis",
+     "etiket": "Şekil Anaplastik malign meningiomda yüksek nükleer atipi ve ",
+     "odak": [
+      0.1,
+      0.1,
+      0.9,
+      0.9
+     ],
+     "s": 96,
+     "k": [
+      3,
+      57
+     ],
+     "etiket_konum": [
+      0.1,
+      0.0167
+     ],
+     "etiket_genislik": 0.42
+    }
+   ]
+  },
+  "50": {
+   "1": [
+    {
+     "tur": "akis",
+     "etiket": "Şekil Von Hippel-Lindau hastalığında serebellar hemanjiyobla",
+     "odak": [
+      0.1,
+      0.1,
+      0.9,
+      0.9
+     ],
+     "s": 101,
+     "k": [
+      4,
+      53
+     ],
+     "etiket_konum": [
+      0.1,
+      0.0107
+     ],
+     "etiket_genislik": 0.42
+    }
+   ]
+  },
+  "51": {
+   "0": [
+    {
+     "tur": "akis",
+     "etiket": "Şekil Tuberoz sklerozis hastasında lateral ventrikül duvarın",
+     "odak": [
+      0.1,
+      0.1,
+      0.9,
+      0.9
+     ],
+     "s": 102,
+     "k": [
+      8,
+      63
+     ],
+     "etiket_konum": [
+      0.1,
+      0.0107
+     ],
+     "etiket_genislik": 0.42
+    }
+   ]
+  }
+ },
+ "rapor": {
+  "aday": 37,
+  "gecti": 37,
+  "ret": {}
+ }
+}

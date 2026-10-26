@@ -1,0 +1,57 @@
+{
+  "key": "y25-k2-08-beyin-ve-iskelet-sistemi-gelisimi-genetigi",
+  "donem": "2025-2026",
+  "kurul": 2,
+  "brans": "Tıbbi Genetik",
+  "baslik": "Beyin ve İskelet Sistemi Gelişimi Genetiği",
+  "kayitlar": [
+    {
+      "surum": 1,
+      "tarih": "2026-10-25 04:16",
+      "neden": "İlk 2025-2026 arşiv üretimi ve Kurul 2 pipeline doğrulaması (93 sayfa tam kapsam, 20 slayt Öğren destesi)",
+      "hatali_bilgiler": [
+        "Sıfır atlanan sayfa kuralı (1..93 tüm sayfalar işlendi), gelişimsel genetik, HOX genleri, nöral tüp ve krista defektleri, kraniyosinostozlar, FGFR3 grubu displaziler (akondroplazi, hipokondroplazi, tanatoforik), osteogenezis imperfekta, Marfan, distrofinopatiler (DMD/BMD) ile 12 çıkmış soru eşleşmesi doğrulandı; yeni yüksek başarımlı PDF metin takip motoru uygulandı."
+      ],
+      "degisiklikler": [
+        "konusma_v2.json (130 cümle, 93 sayfa tam kapsam), EMA GPU seslendirmesi, faster-whisper GPU kelime zamanlaması, 30 canlı çizim panosu, 20 slaytlık Öğren destesi (k2p-y25-k2-08-beyin-ve-iskelet-sistemi-gelisimi-genetigi) ve gömülü PDF içeren .medspak paketi üretildi."
+      ],
+      "metrikler": {
+        "sureSn": 1869,
+        "sureDk": 31.1,
+        "sayfaSayisi": 93,
+        "atlananSayfa": 0,
+        "bolumSayisi": 12,
+        "paragrafSayisi": 24,
+        "cumleSayisi": 130,
+        "slaytAdimSayisi": 20,
+        "cizimSayisi": 28,
+        "cikmisEslesme": 12
+      }
+    },
+    {
+      "surum": 2,
+      "tarih": "2026-10-25 21:24",
+      "neden": "2025-2026 geçmiş yıl arşiv dersi ilk üretimi ve Kurul 2 tam otomatik hat kapı doğrulaması",
+      "hatali_bilgiler": [
+        "İlk üretim kontrolü: H1–H55 hata defterindeki kısaltma okunuşu, sayfa atlama ve şık açıklama kusurları tarandı; 0 hata doğrulandı."
+      ],
+      "degisiklikler": [
+        "2025-2026 dönemi BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ.pdf (93 sayfa) kaynağından 0 atlanan sayfa ile 24 paragraf / 130 cümlelik sesli anlatım üretildi.",
+        "20 adımlı etkileşimli Öğren destesi (11 model + ders sonu oyunları) ve 0 canlı çizim katmanı eklendi.",
+        "EMA Lightning GPU ile 31.1 dakikalık ses sentezlendi, cümle/kelime zamanlaması ve .medspak paketi doğrulandı."
+      ],
+      "metrikler": {
+        "sureSn": 1869,
+        "sureDk": 31.1,
+        "sayfaSayisi": 93,
+        "atlananSayfa": 0,
+        "bolumSayisi": 12,
+        "paragrafSayisi": 24,
+        "cumleSayisi": 130,
+        "slaytAdimSayisi": 20,
+        "cizimSayisi": 0,
+        "cikmisEslesme": 12
+      }
+    }
+  ]
+}

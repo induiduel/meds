@@ -1,0 +1,1655 @@
+{
+ "surum": 2,
+ "ders_id": "k2-32",
+ "baslik": "Felçler ve Hareket Sistemi Bozuklukları",
+ "bolumler": [
+  {
+   "id": "k2-32-b01",
+   "baslik": "Giriş ve Temel Motor Terminoloji",
+   "paragraflar": [
+    {
+     "id": "k2-32-p01",
+     "sayfa": 1,
+     "cumleler": [
+      {
+       "id": "k2-32-c0001",
+       "ses": "Felçler ve kas gücü kayıpları sinir sistemi hastalıklarında klinik hekimin en sık karşılaştığı temel nörolojik semptom grubunu oluşturur.",
+       "ekran": "Felçler: **sinir sisteminde** en sık görülen temel klinik tablodur",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "sinir sisteminde",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 1,
+        "satir": [
+         "FELÇLER"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-32-p02",
+     "sayfa": 2,
+     "cumleler": [
+      {
+       "id": "k2-32-c0002",
+       "ses": "Kas kuvvetinin kısmi veya tam olmayan kaybına parezi, kas gücünün tamamen sıfırlanmasına ise paralizi ya da pleji adı verilir.",
+       "ekran": "Parezi: **kısmi kuvvet kaybı**; Paralizi veya pleji: **tam güç kaybı**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "kısmi kuvvet kaybı",
+         "tur": "tanim"
+        },
+        {
+         "metin": "tam güç kaybı",
+         "tur": "tanim"
+        },
+        {
+         "metin": "kısmi kuvvet kaybı",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": 1,
+       "cikmis": [
+        "d3-k2-nor-009"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "Kas kuvveti azalması sinir sistemi hastalıklarında en sık görülen"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-32-c0003",
+       "ses": "Kas zaafının anatomik dağılımına göre vücudun tek tarafını, iki bacağı veya dört ekstremiteyi tutan farklı klinik tablolar adlandırılır.",
+       "ekran": "Klinik tutulum: **vücut yarısı**, iki bacak veya **dört uzuvda** yerleşebilir",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "vücut yarısı",
+         "tur": "terim"
+        },
+        {
+         "metin": "dört uzuvda",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 1,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "Hemipleji hemiparezi paraparezi"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-32-p03",
+     "sayfa": 3,
+     "cumleler": [
+      {
+       "id": "k2-32-c0004",
+       "ses": "Vücudun bir yarısının motor zaafına hemipleji denir ve bu klinik terminoloji kurul sınavında çıkmış soru olarak sorulmuştur.",
+       "ekran": "Hemipleji: **vücudun bir yarısının** motor felcidir",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "vücudun bir yarısının",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": 2,
+       "cikmis": [
+        "d3-k2-nor-014"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "Hemipleji vücudun bir yarısının tutmadığını"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-32-c0005",
+       "ses": "Tek bir uzuvdaki güç kaybı monoparezi, her iki bacakta yerleşen güçsüzlük paraparezi, dört ekstremitenin tamamını tutan kayıp ise tetraparezi veya kuadriparezi olarak adlandırılır.",
+       "ekran": "Dağılım: **monoparezi** tek uzuv, **paraparezi** bacaklar, **tetraparezi** dört uzuv",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "monoparezi",
+         "tur": "terim"
+        },
+        {
+         "metin": "paraparezi",
+         "tur": "terim"
+        },
+        {
+         "metin": "tetraparezi",
+         "tur": "terim"
+        },
+        {
+         "metin": "monoparezi",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": 2,
+       "cikmis": [
+        "d3-k2-ftr-004"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "Monoparezi tek bir uzuvda güç kaybı",
+         "kuadriparezi tetraparezi her iki kol ve bacakta güç kaybı"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-32-b02",
+   "baslik": "Motor Sistemin Anatomik Düzeyleri ve İnen Yollar",
+   "paragraflar": [
+    {
+     "id": "k2-32-p04",
+     "sayfa": 4,
+     "cumleler": [
+      {
+       "id": "k2-32-c0006",
+       "ses": "Bir hastada kas zaafı saptandığında hasarın birinci motor nöron, ikinci motor nöron, sinir kas bağlantısı ya da doğrudan çizgili kas düzeyinde olup olmadığı incelenmelidir.",
+       "ekran": "Motor eksen: **birinci motor nöron**, ikinci nöron, **sinir kas bağlantısı** ve kas",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "birinci motor nöron",
+         "tur": "terim"
+        },
+        {
+         "metin": "sinir kas bağlantısı",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 3,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 4,
+        "satir": [
+         "kas zaafı tespit edildiyse 1 birinci motor nöron",
+         "3 sinir kas bağlantısı"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-32-p05",
+     "sayfa": 5,
+     "cumleler": [
+      {
+       "id": "k2-32-c0007",
+       "ses": "Birinci motor nöron istemli hareketi sağlayan inen piramidal yolun kortekste başlayan ilk hücresidir ve lifleri karşı vücut yarısını yönetir.",
+       "ekran": "Birinci motor nöron: **istemli hareketin** kortikal başlangıç nöronudur",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "istemli hareketin",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": 4,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "istemli hareketi sağlayan yolun ilk nöronu üst motor nöron",
+         "Piramidal yol kortikospinal yol"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-32-c0008",
+       "ses": "Piramidal yol bulbus düzeyinde çaprazlaştığı için beyindeki hasarlar karşı vücut yarısında zaaf oluştururken omurilik hasarları aynı tarafta felç tablosu doğurur.",
+       "ekran": "Çaprazlaşma: **beyin lezyonu karşı tarafta**, omurilik lezyonu **aynı tarafta** felç yapar",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "beyin lezyonu karşı tarafta",
+         "tur": "terim"
+        },
+        {
+         "metin": "aynı tarafta",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 4,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "Piramidal yollar çaprazlaştığından beyindeki lezyonlar karşı tarafta"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-32-p06",
+     "sayfa": 6,
+     "cumleler": [
+      {
+       "id": "k2-32-c0009",
+       "ses": "Anatomik inen yollar şemasında korteksten çıkan liflerin kapsüla interna arka bacağından geçerek beyin sapına ve spinal ön boynuza ulaştığı izlenmektedir.",
+       "ekran": "İnen yol şeması: **kapsüla interna arka bacağından** beyin sapına uzanır",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "kapsüla interna arka bacağından",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 5,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [],
+        "sekil": "Kortikospinal traktus inen yol şeması ve anatomik seyir"
+       }
+      },
+      {
+       "id": "k2-32-c0010",
+       "ses": "Bulbus piramisinde liflerin büyük kısmı karşı tarafa geçerek lateral kortikospinal yolu oluştururken küçük bir kısmı ön kordonda çaprazlaşmadan iner.",
+       "ekran": "Piramidal çapraz: **bulbus piramisinde** liflerin çoğunluğu karşı tarafa geçer",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "bulbus piramisinde",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 5,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [],
+        "sekil": "Piramidal yol anatomisi ve kranyal sinir nükleusları şeması"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-32-b03",
+   "baslik": "İkinci Motor Nöron, Nöromüsküler Kavşak ve Çizgili Kas",
+   "paragraflar": [
+    {
+     "id": "k2-32-p07",
+     "sayfa": 7,
+     "cumleler": [
+      {
+       "id": "k2-32-c0011",
+       "ses": "İkinci motor nöron beyin sapındaki motor kranyal çekirdekler ile omuriliğin ön boynuz hücrelerinden meydana gelen periferik motor birimdir.",
+       "ekran": "İkinci motor nöron: **ön boynuz hücreleri** ve kranyal çekirdeklerden oluşur",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "ön boynuz hücreleri",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": 6,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "ikinci motor nöron alt motor nöron periferik motor nöron",
+         "ön boynuz hücreleri ipsilateral kol bacak"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-32-c0012",
+       "ses": "Alt motor nöron hasarında ortaya çıkan flask kas zaafı ve periferik motor bulgular daha önceki yıllarda sınavda sorulmuştur.",
+       "ekran": "Alt motor nöron lezyonu: **flask kas zaafı** ve refleks kaybı üretir",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "flask kas zaafı",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 6,
+       "cikmis": [
+        "past-q-KURUL_2_C_IKMIS__3-92"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "ikinci motor nöron alt motor nöron periferik motor nöron"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-32-p08",
+     "sayfa": 8,
+     "cumleler": [
+      {
+       "id": "k2-32-c0013",
+       "ses": "Motor sinir uçları ile kas lifleri arasındaki bağlantı bölgesine miyonöral plak denir ve bu alanın tipik hastalığı miyastenia gravistir.",
+       "ekran": "Sinir kas bağlantısı: **asetilkolin aracılı** kavşaktır; tipik örneği miyasteniadır",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "asetilkolin aracılı",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 7,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "sinir kas baglantısı motor sinirlerin uç dalları çizgili kas telleriyle sinaps yapar"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-32-c0014",
+       "ses": "Çizgili kasın primer patolojileri ise kas lifi harabiyetiyle seyreden miyopatiler ve kas distrofileridir.",
+       "ekran": "Kas hastalıkları: **primer miyopatiler** ve distrofilerden meydana gelir",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "primer miyopatiler",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 7,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "kas distrofileri polimiyozit gibi hastalıklar"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-32-b04",
+   "baslik": "Motor Zaaf Dağılımı ve Kas Tonusu Değerlendirmesi",
+   "paragraflar": [
+    {
+     "id": "k2-32-p09",
+     "sayfa": 9,
+     "cumleler": [
+      {
+       "id": "k2-32-c0015",
+       "ses": "Kas gücü azalması olan bir olguda ayırıcı tanıya ulaşmak için muayenede yedi temel klinik parametre sırasıyla değerlendirilir.",
+       "ekran": "Ayırıcı tanı: **yedi temel parametrenin** muayenede incelenmesiyle kurulur",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "yedi temel parametrenin",
+         "tur": "tanim"
+        },
+        {
+         "metin": "yedi temel parametrenin",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": 9,
+       "cikmis": [
+        "e07675f936c7"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [
+         "kas gücü azalmasında ayırıcı tanı"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-32-p10",
+     "sayfa": 10,
+     "cumleler": [
+      {
+       "id": "k2-32-c0016",
+       "ses": "Birinci motor nöron lezyonunda zaaf kollarda ekstansör, bacaklarda ise fleksör kaslarda daha belirgin olarak saptanır.",
+       "ekran": "Piramidal zaaf: **kolda ekstansör**, bacakta **fleksör kaslarda** belirgindir",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "kolda ekstansör",
+         "tur": "terim"
+        },
+        {
+         "metin": "fleksör kaslarda",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 9,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 10,
+        "satir": [
+         "üst ekstremitede ekstansör kaslarda bacakta ise fleksör kaslarda belirgindir"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-32-c0017",
+       "ses": "Primer kas hastalıklarında ekstremite köklerinde iki taraflı zaaf görülür ve hastanın ayağa kalkarken bacaklarına tutunması olan Gowers arazı kurul sınavında çıkmış soru olarak sorulmuştur.",
+       "ekran": "Kas hastalıkları: **proksimal zaaf** ve ayağa kalkarken **Gowers arazı** üretir",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "proksimal zaaf",
+         "tur": "terim"
+        },
+        {
+         "metin": "Gowers arazı",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 9,
+       "cikmis": [
+        "6ce68f4f5593"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 10,
+        "satir": [
+         "ekstremie köklerinde belirgin ve iki yanlı zaaf görülür gowers arazı"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-32-p11",
+     "sayfa": 11,
+     "cumleler": [
+      {
+       "id": "k2-32-c0018",
+       "ses": "Birinci motor nöron hastalıklarında istirahat tonusu artarak spastisite tablosu gelişir ve kolda fleksör, bacakta ekstansör kaslarda çakı arazı belirir.",
+       "ekran": "Spastisite: **tonus artışı** ve dirençle karakterize **çakı arazıdır**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "tonus artışı",
+         "tur": "terim"
+        },
+        {
+         "metin": "çakı arazıdır",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 10,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 11,
+        "satir": [
+         "birinci motor nöron hastalıklarında tonus artar",
+         "bu tip hipertoniye spastisite denir"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-32-c0019",
+       "ses": "İkinci motor nöron hastalıklarında ise kas tonusu belirgin şekilde azalır ve flask gevşek felç ortaya çıkar.",
+       "ekran": "Alt motor nöron lezyonu: **kas tonusunda azalma** ve **flask felç** tablosudur",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "kas tonusunda azalma",
+         "tur": "terim"
+        },
+        {
+         "metin": "flask felç",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 10,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 11,
+        "satir": [
+         "ikinci motor nöron hastalıklarında ise tonus azalır hipotoni"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-32-b05",
+   "baslik": "Refleksler, Kas Atrofisi ve Fasikülasyon Analizi",
+   "paragraflar": [
+    {
+     "id": "k2-32-p12",
+     "sayfa": 12,
+     "cumleler": [
+      {
+       "id": "k2-32-c0020",
+       "ses": "Derin tendon refleksleri kortikospinal yol hastalıklarında baskılayıcı kontrol kalktığı için artarken periferik sinir hasarlarında erken dönemde kaybolur.",
+       "ekran": "Refleksler: **piramidal hasarda hiperaktif**, periferik nöropatide **arefleksiktir**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "piramidal hasarda hiperaktif",
+         "tur": "terim"
+        },
+        {
+         "metin": "arefleksiktir",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 11,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 12,
+        "satir": [
+         "tendon refleksleri piramidal yol hastalıklarında artar",
+         "tendon refleksleri azalmış veya kaybolmuştur"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-32-p13",
+     "sayfa": 13,
+     "cumleler": [
+      {
+       "id": "k2-32-c0021",
+       "ses": "Kortikospinal piramidal hasarın varlığını gösteren Babinski, Hoffmann delilleri ve klonus gibi patolojik bulgular sınavda sorulan temel başlıklardandır.",
+       "ekran": "Patolojik refleks: **Babinski delili**, klonus ve **Hoffmann belirtisidir**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Babinski delili",
+         "tur": "terim"
+        },
+        {
+         "metin": "Hoffmann belirtisidir",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 12,
+       "cikmis": [
+        "d3-k2-nor-008"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 13,
+        "satir": [
+         "kortikospinal yol hastalıklarında babinski hoffmann delilleri ve klonus"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-32-c0022",
+       "ses": "İkinci motor nöron hastalıklarında, kavşak bozukluklarında ve primer kas patolojilerinde patolojik reflekslerin hiçbirisi bulunmaz.",
+       "ekran": "Periferik ve kas hasarında: **patolojik refleks saptanmaz**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "patolojik refleks saptanmaz",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 12,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 13,
+        "satir": [
+         "alt motor nöron m gravis ve primer kas hastalıklarında ise patolojik refleks yoktur"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-32-p14",
+     "sayfa": 14,
+     "cumleler": [
+      {
+       "id": "k2-32-c0023",
+       "ses": "Birinci motor nöron lezyonunda erken evrede kas atrofisi gelişmezken ikinci motor nöron hastalıklarında denervasyona bağlı belirgin nörojenik kas erimesi görülür.",
+       "ekran": "Kas atrofisi: **alt motor nöron lezyonunda erken ve belirgin** nörojenik erimedir",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "alt motor nöron lezyonunda erken ve belirgin",
+         "tur": "terim"
+        },
+        {
+         "metin": "alt motor nöron lezyonunda erken ve belirgin",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": 13,
+       "cikmis": [
+        "ed41695f77aa"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 14,
+        "satir": [
+         "birinci motor nöron hastalıklarında felçli kol ve bacakta atrofi yoktur",
+         "alt motor nöron hastalıklarında ise kaslar atrofiktir"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-32-p15",
+     "sayfa": 15,
+     "cumleler": [
+      {
+       "id": "k2-32-c0024",
+       "ses": "Medulla spinalis ön boynuz hücrelerinin harabiyetinde kaslarda deri altı seyirmeler şeklinde beliren fasikülasyonlar tanı için çok değerli bir göstergedir.",
+       "ekran": "Fasikülasyon: **ön boynuz hücre hasarının** tipik deri altı seyirmesidir",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "ön boynuz hücre hasarının",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 14,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "lezyon ön boynuz hücrelerinde ise kaslarda fasikülasyonlar dikkati çeker"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-32-b06",
+   "baslik": "Duyu Kusuru Varlığı ve Ayırıcı Tanı Özeti",
+   "paragraflar": [
+    {
+     "id": "k2-32-p16",
+     "sayfa": 16,
+     "cumleler": [
+      {
+       "id": "k2-32-c0025",
+       "ses": "Tek başına kortikospinal yol ve ön boynuz tutulumu saf motor karakterdedir ve duyu kusuru yapmadığı kurul sınavında çıkmış soru olarak sorulmuştur.",
+       "ekran": "Saf motor tablo: **kortikospinal yol ve ön boynuzda** duyu kusuru olmaz",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "kortikospinal yol ve ön boynuzda",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 15,
+       "cikmis": [
+        "6fc14196f6c3"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 16,
+        "satir": [
+         "tek başına kortikospinal yol ve ön boynuz hastalıklarında duyu kusuru yoktur"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-32-c0026",
+       "ses": "Periferik sinir hasarlarında ise motor güçsüzlüğe eldiven çorap tarzında hipoestezi ve duyu kaybı eşlik eder.",
+       "ekran": "Periferik sinir lezyonu: **motor zaafa duyu kusuru** eşlik eder",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "motor zaafa duyu kusuru",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 15,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 16,
+        "satir": [
+         "lezyon periferik sinirde ise kas zaafı ile birlikte duyu kusuru bulunabilir"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-32-p17",
+     "sayfa": 17,
+     "cumleler": [
+      {
+       "id": "k2-32-c0027",
+       "ses": "Ayırıcı tanı tablosunda birinci motor nöron spastisite ve patolojik refleksle, ikinci motor nöron ise atrofi ve fasikülasyonla diğer seviyelerden ayrılır.",
+       "ekran": "Ayırıcı tanı matrisi: **dört motor düzeyin** klinik parametrelerini kıyaslar",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "dört motor düzeyin",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 17,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 17,
+        "satir": [
+         "ı motor nöron ıı motor nöron m gravis kas hastalığı"
+        ],
+        "sekil": "Dört seviyeli motor zaaf ayırıcı tanı tablosu"
+       }
+      },
+      {
+       "id": "k2-32-c0028",
+       "ses": "Nöromüsküler kavşak ve primer kas patolojilerinde refleksler ve duyu korunurken zaaf dağılımı kasta proksimal kavşakta ise okülobulber ağırlıklıdır.",
+       "ekran": "Kavşak ve kas bulgusu: **kavşakta okülobulber**, primer kasta **proksimal zaaf** baskındır",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "proksimal zaaf",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 17,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 17,
+        "satir": [
+         "ı motor nöron ıı motor nöron m gravis kas hastalığı"
+        ],
+        "sekil": "Dört seviyeli motor zaaf ayırıcı tanı tablosu"
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-32-p18",
+     "sayfa": 18,
+     "cumleler": [
+      {
+       "id": "k2-32-c0029",
+       "ses": "Piramidal yol hastalıklarının en objektif ve güvenilir klinik kanıtı ekstansör taban derisi refleksi olan Babinski delilidir.",
+       "ekran": "Piramidal lezyon kanıtı: **Babinski delili** kesin objektif bulgudur",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Babinski delili",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 18,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 18,
+        "satir": [
+         "tendon reflekslerin artması ve babinski delili"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-32-b07",
+   "baslik": "Hemipleji, Kortikal ve Kapsüler Lokalizasyon",
+   "paragraflar": [
+    {
+     "id": "k2-32-p19",
+     "sayfa": 19,
+     "cumleler": [
+      {
+       "id": "k2-32-c0030",
+       "ses": "Akut inme başlangıcında felçli tarafta tonusun ve reflekslerin kaybolduğu akut flask dönem sınavda sorulmuş önemli bir bilgidir.",
+       "ekran": "Akut inme evresi: **geçici flask felç** ve arefleksiyle başlar",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "geçici flask felç",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 19,
+       "cikmis": [
+        "3807e9b207c5"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 19,
+        "satir": [
+         "akut dönemde svh da felçli tarafta tonus ve dtr azalır"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-32-c0031",
+       "ses": "Bu akut flask dönemi izleyen haftalarda tonus artışı ve spastisite gelişerek klasik piramidal hemipleji tablosu oturur.",
+       "ekran": "Kronik dönem: **spastisite ve hiperrefleksinin** oturmasıyla seyreder",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "spastisite ve hiperrefleksinin",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 19,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 19,
+        "satir": [
+         "flask dönem yoktur başlangıçtan itibaren tonus artmıştır"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-32-p20",
+     "sayfa": 20,
+     "cumleler": [
+      {
+       "id": "k2-32-c0032",
+       "ses": "Korteks lezyonlarında homunkulus üzerindeki geniş dağılım nedeniyle kol, bacak ve yüz lifleri birbirinden ayrı tutulabilir ve sıklıkla izole monoparezi görülür.",
+       "ekran": "Korteks hasarı: **homunkulus dağılımıyla** izole monoparezi ve nöbet yapabilir",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "homunkulus dağılımıyla",
+         "tur": "terim"
+        },
+        {
+         "metin": "izole monoparezi",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 20,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 20,
+        "satir": [
+         "lezyon çok geniş olmadıkça yüz kol bacak beraber tutulmaz monoparezi"
+        ],
+        "sekil": "Motor korteks ve homunkulus lokalizasyon şeması"
+       }
+      },
+      {
+       "id": "k2-32-c0033",
+       "ses": "Ayrıca kortikal lezyonlara epileptik nöbetler, afazi veya ihmal gibi yüksek bilişsel kortikal bulgular eşlik edebilir.",
+       "ekran": "Eşlik eden bulgular: **kortikal epileptik nöbetler** ve kognitif kayıplardır",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "kortikal epileptik nöbetler",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 20,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 20,
+        "satir": [
+         "epileptik nöbetler görülebilir"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-32-p21",
+     "sayfa": 21,
+     "cumleler": [
+      {
+       "id": "k2-32-c0034",
+       "ses": "Kapsüla internada piramidal lifler çok kompakt bir arada seyrettiğinden küçük bir enfarkt bile yüz, kol ve bacağı eşit derecede tutan tam hemipleji yapar.",
+       "ekran": "Kapsüla interna: **kompakt lif yapısı** nedeniyle eşit dağılımlı hemipleji yapar",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "kompakt lif yapısı",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 21,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 21,
+        "satir": [
+         "kapsüla internada piramidal yol kompakttır vücut yarısını eşit şekilde etkileyen bir hemipleji"
+        ],
+        "sekil": "Kapsüla interna ve beyin sapı lokalizasyon şeması"
+       }
+      },
+      {
+       "id": "k2-32-c0035",
+       "ses": "Beyin sapı lezyonlarında lezyon tarafında periferik kranyal sinir felci, karşı vücut yarısında ise hemipleji birlikteliğiyle çapraz felç tablosu ortaya çıkar.",
+       "ekran": "Beyin sapı lezyonu: **ipsilateral kranyal felç** ve **karşı taraf hemiplejisidir**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "ipsilateral kranyal felç",
+         "tur": "terim"
+        },
+        {
+         "metin": "karşı taraf hemiplejisidir",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 21,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 21,
+        "satir": [
+         "beyin sapı lezyonu kontralateral kranyal sinir felçleri çapraz felç"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-32-b08",
+   "baslik": "Parapleji ve Spinal Kord Lezyonları",
+   "paragraflar": [
+    {
+     "id": "k2-32-p22",
+     "sayfa": 22,
+     "cumleler": [
+      {
+       "id": "k2-32-c0036",
+       "ses": "Her iki bacakta kuvvetsizlikle birlikte gövdede belirli bir seviyeye kadar duyu kusuru ve sfinkter kaybı görülmesi sınavda sorulan spinal kord basısı bulgusudur.",
+       "ekran": "Spinal parapleji: **iki bacakta güçsüzlük**, duyu seviyesi ve **sfinkter kusurudur**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "iki bacakta güçsüzlük",
+         "tur": "terim"
+        },
+        {
+         "metin": "sfinkter kusurudur",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 22,
+       "cikmis": [
+        "past-q-I_SKENDERUN_TI_Mu_du_rlu_g_u_ne0__1__230709_230251-57"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 22,
+        "satir": [
+         "bacaklardaki kuvvetsizlikle birlikte gövdede belirli bir yüksekliğe kadar çıkan"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-32-c0037",
+       "ses": "Serebral düzeyde ise kortekste her iki bacağın parasagittal motor alanını basan falks menenjiomu veya sinüs trombozu iki taraflı bacak zaafı oluşturabilir.",
+       "ekran": "Parasagittal lezyon: **kortikal bacak alanlarını** tutarak parapleji yapabilir",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "kortikal bacak alanlarını",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 22,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 22,
+        "satir": [
+         "parapleji kortekste bacakların motor merkezinde iki yanlı"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-32-p23",
+     "sayfa": 23,
+     "cumleler": [
+      {
+       "id": "k2-32-c0038",
+       "ses": "Medulla spinalis yarım kesisi olan Brown Séquard sendromunun lezyon tarafında motor felç yapması sınavda sorulmuş temel bir kuraldır.",
+       "ekran": "Brown Séquard: **lezyon tarafında motor felç** ve derin duyu kaybıdır",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "lezyon tarafında motor felç",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 23,
+       "cikmis": [
+        "past-1790877482971-276482"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 23,
+        "satir": [
+         "parapleji m spinalisin yarısının hastalanması brown sequard sendromu",
+         "lezyon tarafında piramidal tipte felç"
+        ],
+        "sekil": "Brown-Sequard kord hemiseksiyon kesit şeması"
+       }
+      },
+      {
+       "id": "k2-32-c0039",
+       "ses": "Aynı zamanda arka kordon hasarıyla lezyon tarafında derin duyu kaybolurken, spinotalamik çaprazlaşma nedeniyle karşı tarafta ağrı ve ısı duyusu silinir.",
+       "ekran": "Disosiye duyu: **karşı tarafta ağrı ve ısı**, lezyon tarafında **derin duyu** kaybıdır",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "karşı tarafta ağrı ve ısı",
+         "tur": "terim"
+        },
+        {
+         "metin": "derin duyu",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 23,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 23,
+        "satir": [
+         "lezyonun karşı tarafında ağrı ve ısı duyusunda kayıp"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-32-p24",
+     "sayfa": 24,
+     "cumleler": [
+      {
+       "id": "k2-32-c0040",
+       "ses": "Spinal lezyonlarda duyu kusurunun en üst seviyesi lezyonun yerini tam olarak gösterir ve radiküler kök ağrısı lokalizasyonu doğrular.",
+       "ekran": "Duyu seviyesi: **spinal hasarın üst sınırını** net olarak belirler",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "spinal hasarın üst sınırını",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 25,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 24,
+        "satir": [
+         "spinal parapleji duyu kusurunun üst düzeyi lezyonun üst düzeyini gösterir"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-32-c0041",
+       "ses": "Lezyonun oturduğu omurilik segmentine ait derin tendon refleksi kaybolurken lezyon seviyesinin altındaki refleksler patolojik olarak canlıdır.",
+       "ekran": "Refleks paterni: **lezyon düzeyinde kayıp**, lezyon altında **hiperaktivitedir**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "lezyon düzeyinde kayıp",
+         "tur": "terim"
+        },
+        {
+         "metin": "hiperaktivitedir",
+         "tur": "terim"
+        },
+        {
+         "metin": "lezyon düzeyinde kayıp",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": 25,
+       "cikmis": [
+        "d3-k2-ftr-005"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 24,
+        "satir": [
+         "kaybolan dtr lezyon düzeyi"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-32-b09",
+   "baslik": "Psödobulber Paralizi, Motor Nöron Hastalığı ve Histerik Felçler",
+   "paragraflar": [
+    {
+     "id": "k2-32-p25",
+     "sayfa": 25,
+     "cumleler": [
+      {
+       "id": "k2-32-c0042",
+       "ses": "Histerik felçlerde organik nörolojik bulgular, patolojik refleksler ve objektif tonus değişiklikleri saptanmaz ve muayenede uyumsuzluk dikkat çeker.",
+       "ekran": "Histerik felçler: **organik motor ve refleks patolojisi** bulunmayan tablolardır",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "organik motor ve refleks patolojisi",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": 25,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 25,
+        "satir": [
+         "histerik felçler"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-32-p26",
+     "sayfa": 26,
+     "cumleler": [
+      {
+       "id": "k2-32-c0043",
+       "ses": "Psödobulber paralizi kortikobulber yolların her iki yarıkürede iki yanlı lezyonu sonucu gelişir ve çiğneme yutma güçlüğü ile patolojik gülme ağlama nöbetleri yapar.",
+       "ekran": "Psödobulber paralizi: **iki yanlı kortikobulber hasar**, disfaji ve **emosyonel labilitedir**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "iki yanlı kortikobulber hasar",
+         "tur": "terim"
+        },
+        {
+         "metin": "emosyonel labilitedir",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 26,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 26,
+        "satir": [
+         "psödobulber paralizi kortikospinal ve kortikobulber yollar üzerinde beynin iki yanında"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-32-c0044",
+       "ses": "Bu tabloda çene refleksi hiperaktif bulunurken alt motor nöron sağlam kaldığı için dilde atrofi ve fasikülasyon kesinlikle izlenmez.",
+       "ekran": "Bulber tutulumda: **çene refleksi hiperaktif**, dilde **atrofi ve fasikülasyon yoktur**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "çene refleksi hiperaktif",
+         "tur": "terim"
+        },
+        {
+         "metin": "atrofi ve fasikülasyon yoktur",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 26,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 26,
+        "satir": [
+         "dilde atrofi ve fasikülasyon görülmez"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-32-p27",
+     "sayfa": 27,
+     "cumleler": [
+      {
+       "id": "k2-32-c0045",
+       "ses": "Birinci ve ikinci motor nöronun birlikte seçici tutulduğu amyotrofik lateral skleroz hastalığı kurul sınavında çıkmış soru olarak sorulmuştur.",
+       "ekran": "Amyotrofik lateral skleroz: **birinci ve ikinci motor nöronun** birlikte tutulumudur",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "birinci ve ikinci motor nöronun",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": 27,
+       "cikmis": [
+        "q-No_ropsikiyatri_gis_kardiyo_-2023-2024-C__km_s_lar__240625_053302__2_-14"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 27,
+        "satir": [
+         "motor nöron hastalıgı birinci ve veya ikinci motor nöronun",
+         "her iki nöron birlikte tutulduğunda amyotrofik lateral skleroz"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-32-c0046",
+       "ses": "Hastalıkta spastisite ve Babinski bulgularına kas atrofisi ve fasikülasyonlar eşlik ederken duyu kusuru ve sfinkter bozukluğu kesinlikle görülmez.",
+       "ekran": "A L S kliniği: **spastisite ve atrofi birliktedir**; duyu ve sfinkter kusuru yoktur",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "spastisite ve atrofi birliktedir",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 27,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 27,
+        "satir": [
+         "dil ve el kaslarında atrofi ve yaygın fasikülasyonlar duyu kusuru yoktur"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-32-b10",
+   "baslik": "Yüz Felci ve Sistemik Nörolojik Hastalıklar",
+   "paragraflar": [
+    {
+     "id": "k2-32-p28",
+     "sayfa": 28,
+     "cumleler": [
+      {
+       "id": "k2-32-c0047",
+       "ses": "Santral yüz felcinde alın kasları iki taraflı kortikal inervasyon aldığı için korunurken periferik fasiyal felçte yüzün aynı yarısı tamamen felçlidir.",
+       "ekran": "Fasiyal felç durumu: **santral tipte üst yüz korunur**; periferik tipte **tüm yüz yarısı felçlidir**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "santral tipte üst yüz korunur",
+         "tur": "terim"
+        },
+        {
+         "metin": "tüm yüz yarısı felçlidir",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 28,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 28,
+        "satir": [
+         "yüz alt yarısında 2 periferik tip",
+         "hem üst hem alt yüz yarımında"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-32-c0048",
+       "ses": "Periferik tipte hasta gözünü kapatamaz ve kapatmaya çalıştığında göz küresinin yukarı kayması Bell fenomeni olarak adlandırılır.",
+       "ekran": "Periferik bulgular: **lagoftalmi** ve göz küresinin yukarı kayması olan **Bell fenomenidir**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "lagoftalmi",
+         "tur": "terim"
+        },
+        {
+         "metin": "Bell fenomenidir",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 28,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 28,
+        "satir": [
+         "gözünü kapatamaz lagoftalmi bell fenomeni gözünü kapatmaya çalıştığında göz küresi yukarı kayar"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-32-p29",
+     "sayfa": 29,
+     "cumleler": [
+      {
+       "id": "k2-32-c0049",
+       "ses": "Multipl skleroz genç yaşlarda santral sinir sistemi ak maddesinde demiyelinizan plaklarla başlayan, piramidal bulgular ve spastik paraparezi oluşturan hastalıktır.",
+       "ekran": "Multipl skleroz: **santral ak maddede demiyelinizasyon** ve piramidal paraparezi yapar",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "santral ak maddede demiyelinizasyon",
+         "tur": "tanim"
+        },
+        {
+         "metin": "santral ak maddede demiyelinizasyon",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": 29,
+       "cikmis": [
+        "4c4eb178b88b",
+        "4ba07c308e35"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 29,
+        "satir": [
+         "multipl skleroz genç yaşlarda başlayan piramidal bulgular serebellar"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-32-p30",
+     "sayfa": 30,
+     "cumleler": [
+      {
+       "id": "k2-32-c0050",
+       "ses": "Poliomiyelit medulla spinalis ön boynuz motor hücrelerinin akut enfeksiyöz iltihabı sonucu duyu kusuru olmaksızın asimetrik flask felç üretir.",
+       "ekran": "Poliomiyelit: **ön boynuz harabiyeti**, asimetrik flask felç ve **saf motor** tablodur",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "ön boynuz harabiyeti",
+         "tur": "terim"
+        },
+        {
+         "metin": "saf motor",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 29,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 30,
+        "satir": [
+         "poliomyelit ön boynu hücresinin akut iltihabi bir hastalığıdır",
+         "tutulan kaslarda atrofi duyu kusuru olmaz"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-32-p31",
+     "sayfa": 31,
+     "cumleler": [
+      {
+       "id": "k2-32-c0051",
+       "ses": "Polinöropatilerde çok sayıda periferik sinir lifi simetrik etkilenir ve distal yerleşimli flask zaaf ile erken aşil refleks kaybı gözlenir.",
+       "ekran": "Polinöropati: **simetrik distal zaaf**, eldiven çorap duyu kusuru ve **arefleksidir**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "simetrik distal zaaf",
+         "tur": "terim"
+        },
+        {
+         "metin": "arefleksidir",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 29,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 31,
+        "satir": [
+         "polinöropati birden fazla periferik sinirin herhangibir nedenle",
+         "duyu kusuru eldiven çorap tarzındadır"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-32-b11",
+   "baslik": "Nöromüsküler Kavşak ve Primer Kas Hastalıkları",
+   "paragraflar": [
+    {
+     "id": "k2-32-p32",
+     "sayfa": 32,
+     "cumleler": [
+      {
+       "id": "k2-32-c0052",
+       "ses": "Kaslarda kolay yorulma ve eforla artan güçsüzlükle karakterize miyastenia gravis hastalığı sınavda sorulan temel nöromüsküler kavşak tablosudur.",
+       "ekran": "Myasthenia gravis: **postsinaptik reseptör hasarı**, dalgalı zaaf ve **kolay yorulmadır**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "postsinaptik reseptör hasarı",
+         "tur": "terim"
+        },
+        {
+         "metin": "kolay yorulmadır",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 30,
+       "cikmis": [
+        "d3-k2-nor-005"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 32,
+        "satir": [
+         "myasthenia gravis miyo nöral ileti bozukluğu kaslarda kolay yorulma ve kuvvetsizlikle karakterizedir"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-32-c0053",
+       "ses": "Bu hastalıkta ptozis ve çift görme sık görülürken refleksler normaldir ve duyu kusuru kesinlikle bulunmaz.",
+       "ekran": "Kavşak bulguları: **ptozis ve diplopi** sıktır; refleksler normal, duyu kusuru yoktur",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "ptozis ve diplopi",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 30,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 32,
+        "satir": [
+         "diplopi ptoz çiğneme ve yutma güçlüğü"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-32-p33",
+     "sayfa": 33,
+     "cumleler": [
+      {
+       "id": "k2-32-c0054",
+       "ses": "Primer kas hastalıkları ve kas distrofileri genellikle ailesel ilerleyici karakterde olup ekstremite köklerinde simetrik proksimal güçsüzlük oluşturur.",
+       "ekran": "Kas distrofileri: **ailesel ilerleyici** primer dejenerasyon ve **proksimal zaaf** yapar",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "ailesel ilerleyici",
+         "tur": "tanim"
+        },
+        {
+         "metin": "proksimal zaaf",
+         "tur": "terim"
+        },
+        {
+         "metin": "ailesel ilerleyici",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": 30,
+       "cikmis": [
+        "447c07f50aed",
+        "6ae0aab3c534"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 33,
+        "satir": [
+         "kas hastalıkları kas distrofileri genellikle ailesel ve ilerleyicidir"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-32-c0055",
+       "ses": "Pelvik kuşak zaafına bağlı Gowers belirtisi görülürken duyu kusuru ve patolojik reflekslerin bulunmayışı tanıyı kesinleştirir.",
+       "ekran": "Klinik muayenede: **Gowers belirtisi pozitiftir**; patolojik refleks ve duyu kusuru yoktur",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Gowers belirtisi pozitiftir",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": 30,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 33,
+        "satir": [
+         "ördek yürüyüşü gowers arazı"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "anahtar": "y25-k2-32-felcler",
+ "donem": "2025-2026"
+}

@@ -1,0 +1,3043 @@
+{
+ "id": "k2p-y25-k2-32-felcler",
+ "deckId": "k2p-y25-k2-32-felcler",
+ "title": "Felçler",
+ "description": "Felç ve parezi tanımları, 1. ve 2. motor nöron anatomisi, nöromüsküler kavşak ve kas kompartmanı ayırıcı tanısı, piramidal bulgular, hemipleji lokalizasyonu, spinal sendromlar, ALS ve fasiyal paralizi.",
+ "courseId": "y25-k2-32-felcler",
+ "committee": "donem3-kurul2",
+ "term": "2025-2026",
+ "arsiv": true,
+ "confidence": "high",
+ "totalSlides": 31,
+ "slides": [
+  {
+   "id": "k2-32-s01",
+   "slideNumber": 1,
+   "title": "Tanımlar: Parezi ve Paralizi",
+   "bolum": "1",
+   "content": "Kas kuvveti azalması sinir sistemi hastalıklarında en sık karşılaşılan klinik belirtidir.\n\n- **Parezi Kavramı:** Kas gücünün kısmi veya tam olmayan kaybını tanımlar; hasta ekstremiteyi yerçekimine karşı veya dirence karşı kısıtlı da olsa hareket ettirebilir.\n- **Paralizi (Pleji) Kavramı:** İlgili kas grubunda istemli hareketin tamamen kaybolması ve sıfırlanması durumudur.\n- **Klinik Muayene Derecelendirmesi:** Kas gücü sıfır (tam pleji) ile beş (tam normal kuvvet) arasında altı basamaklı Medical Research Council skalası ile objektif olarak derecelendirilir.\n\n> [!NOTE]\n> Kas güçsüzlüğü yakınması olan her hastada ilk adım, kaybın kısmi (parezi) mi yoksa tam (paralizi) mi olduğunu ayırt etmektir.",
+   "synthesisNarrative": "Kas kuvveti azalması sinir sistemi hastalıklarında en sık karşılaşılan klinik belirtidir.\n\n- **Parezi Kavramı:** Kas gücünün kısmi veya tam olmayan kaybını tanımlar; hasta ekstremiteyi yerçekimine karşı veya dirence karşı kısıtlı da olsa hareket ettirebilir.\n- **Paralizi (Pleji) Kavramı:** İlgili kas grubunda istemli hareketin tamamen kaybolması ve sıfırlanması durumudur.\n- **Klinik Muayene Derecelendirmesi:** Kas gücü sıfır (tam pleji) ile beş (tam normal kuvvet) arasında altı basamaklı Medical Research Council skalası ile objektif olarak derecelendirilir.\n\n> [!NOTE]\n> Kas güçsüzlüğü yakınması olan her hastada ilk adım, kaybın kısmi (parezi) mi yoksa tam (paralizi) mi olduğunu ayırt etmektir.",
+   "sourcePdf": {
+    "sourcePdfKey": "y25-k2-32-felcler",
+    "startPage": 2,
+    "endPage": 2
+   },
+   "pdfSayfalari": [
+    2,
+    2
+   ],
+   "sayfaHaritasi": "teyitli",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Kas kuvvetinin kısmi veya tam olmayan azalmasını ifade eden klinik terim hangisidir?",
+     "options": [
+      {
+       "text": "Parezi",
+       "isCorrect": true,
+       "explanation": "Parezi klinik tanımda doğru kabul edilen temel nörolojik kavramdır. Fizyopatolojik mekanizması soruda sorulan motor bulguyu eksiksiz biçimde açıklayarak doğrular."
+      },
+      {
+       "text": "Paralizi",
+       "isCorrect": false,
+       "explanation": "Paralizi sinir sisteminde kendine özgü işlevi bulunan farklı bir anatomik basamaktır. Bu soruda sorulan spesifik nörolojik lezyonun klinik ve fizyopatolojik özellikleriyle örtüşmez."
+      },
+      {
+       "text": "Pleji",
+       "isCorrect": false,
+       "explanation": "Pleji sinir sisteminde kendine özgü işlevi bulunan farklı bir anatomik basamaktır. Bu soruda sorulan spesifik nörolojik lezyonun klinik ve fizyopatolojik özellikleriyle örtüşmez."
+      },
+      {
+       "text": "Miyotoni",
+       "isCorrect": false,
+       "explanation": "Miyotoni sinir sisteminde kendine özgü işlevi bulunan farklı bir anatomik basamaktır. Bu soruda sorulan spesifik nörolojik lezyonun klinik ve fizyopatolojik özellikleriyle örtüşmez."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "maskedTerm": "parezi",
+     "hint": "Kısmi kuvvet kaybı anlamına gelen Yunanca kökenli klinik terim",
+     "options": [
+      "parezi",
+      "paralizi",
+      "pleji",
+      "ataksi"
+     ],
+     "sentence": "Kas kuvveti azalması sinir sistemi hastalıklarında en sık görülen belirtidir; kısmi kayba parezi, tam kuvvetsizliğe ise paralizi denir."
+    },
+    {
+     "type": "active_recall",
+     "keyTakeaway": "Kısmi güç kaybı parezi, tam güç kaybı paralizi veya plejidir.",
+     "question": "Parezi ile paralizi (pleji) arasındaki temel fark nedir?",
+     "answer": "Parezi kas kuvvetinde kısmi azalmayı gösterirken; paralizi veya pleji istemli hareketin tamamen kaybolmasını ifade eder."
+    },
+    {
+     "type": "spot_the_lie",
+     "items": [
+      {
+       "text": "Kas kuvveti azalması sinir sistemi patolojilerinde en sık rastlanan semptomdur.",
+       "isLie": false,
+       "explanation": "Motor güçsüzlük nörolojide en yaygın başvuru nedenidir."
+      },
+      {
+       "text": "Paralizi ve pleji terimleri birbiriyle eş anlamlı olup tam kuvvet kaybını ifade eder.",
+       "isLie": false,
+       "explanation": "Her iki terim de kas fonksiyonunun sıfırlanmasını belirtir."
+      },
+      {
+       "text": "Parezi durumunda istemli hareket tamamen sıfırlanmıştır ve hiçbir kas kasılması izlenmez.",
+       "isLie": true,
+       "explanation": "Tuzak: Parezide hareket tamamen sıfırlanmamıştır; kısmi kuvvet kaybı mevcuttur. Tam sıfırlanma paralizidir."
+      },
+      {
+       "text": "Kuvvet muayenesinde derecelendirme objektif skalalar ile yapılır.",
+       "isLie": false,
+       "explanation": "Medical Research Council 0-5 skalası standarttır."
+      }
+     ],
+     "topic": "Motor Sistem Ayırıcı Tanı İlkeleri"
+    }
+   ]
+  },
+  {
+   "id": "k2-32-s02",
+   "slideNumber": 2,
+   "title": "Ekstremite Dağılımına Göre Tanımlar",
+   "bolum": "1",
+   "content": "Kas zaafının vücuttaki anatomik dağılımı lezyon lokalizasyonuna doğrudan ışık tutar.\n\n- **Hemipleji / Hemiparezi:** Vücudun sağ veya sol yarısında kol ve bacağın (sıklıkla yüzün de) birlikte tutulmasıdır; hemen daima piramidal yol hasarını gösterir.\n- **Monoparezi / Monopleji:** Tek bir kol veya tek bir bacakta izole güç kaybı tablosudur.\n- **Paraparezi / Parapleji:** Her iki alt ekstremitenin (bacakların) birlikte tutulmasıdır; en sık torakolomber spinal kord patolojilerinde izlenir.\n- **Tetraparezi (Kuadriparezi):** Dört ekstremitenin (her iki kol ve her iki bacak) birlikte motor zaafıdır; servikal omurilik veya yaygın periferik lezyonlara işaret eder.\n\n> [!IMPORTANT]\n> Hemipleji tablosu periferik sinir lezyonlarında beklenmez; hemen daima merkezi piramidal sistem hastalığının göstergesidir.",
+   "synthesisNarrative": "Kas zaafının vücuttaki anatomik dağılımı lezyon lokalizasyonuna doğrudan ışık tutar.\n\n- **Hemipleji / Hemiparezi:** Vücudun sağ veya sol yarısında kol ve bacağın (sıklıkla yüzün de) birlikte tutulmasıdır; hemen daima piramidal yol hasarını gösterir.\n- **Monoparezi / Monopleji:** Tek bir kol veya tek bir bacakta izole güç kaybı tablosudur.\n- **Paraparezi / Parapleji:** Her iki alt ekstremitenin (bacakların) birlikte tutulmasıdır; en sık torakolomber spinal kord patolojilerinde izlenir.\n- **Tetraparezi (Kuadriparezi):** Dört ekstremitenin (her iki kol ve her iki bacak) birlikte motor zaafıdır; servikal omurilik veya yaygın periferik lezyonlara işaret eder.\n\n> [!IMPORTANT]\n> Hemipleji tablosu periferik sinir lezyonlarında beklenmez; hemen daima merkezi piramidal sistem hastalığının göstergesidir.",
+   "sourcePdf": {
+    "sourcePdfKey": "y25-k2-32-felcler",
+    "startPage": 3,
+    "endPage": 3
+   },
+   "pdfSayfalari": [
+    3,
+    3
+   ],
+   "sayfaHaritasi": "teyitli",
+   "interactiveElements": [
+    {
+     "type": "swipe_matching",
+     "cards": [
+      {
+       "text": "Parapleji (her iki bacak)",
+       "explanation": "Parapleji her iki bacağın simetrik motor zaafıdır.",
+       "category": "left"
+      },
+      {
+       "text": "Tetraparezi (dört uzuv)",
+       "explanation": "Dört ekstremitenin birlikte tutulumudur.",
+       "category": "left"
+      },
+      {
+       "text": "Hemipleji (vücut yarısı)",
+       "explanation": "Vücudun tek bir yarısının (sağ veya sol) felcidir.",
+       "category": "right"
+      },
+      {
+       "text": "Monoparezi (tek bir uzuv)",
+       "explanation": "Yalnızca bir kol veya bacağın izole tutulumudur.",
+       "category": "right"
+      }
+     ],
+     "leftCategory": "İki Taraflı Tutulum",
+     "rightCategory": "Tek Taraflı / Tek Uzuv"
+    },
+    {
+     "type": "micro_quiz",
+     "question": "Vücudun sağ veya sol yarısında kol ve bacağın birlikte felç olması tablosu nasıl adlandırılır?",
+     "options": [
+      {
+       "text": "Hemipleji",
+       "isCorrect": true,
+       "explanation": "Hemipleji klinik tanımda doğru kabul edilen temel nörolojik kavramdır. Fizyopatolojik mekanizması soruda sorulan motor bulguyu eksiksiz biçimde açıklayarak doğrular."
+      },
+      {
+       "text": "Parapleji",
+       "isCorrect": false,
+       "explanation": "Parapleji sinir sisteminde kendine özgü işlevi bulunan farklı bir anatomik basamaktır. Bu soruda sorulan spesifik nörolojik lezyonun klinik ve fizyopatolojik özellikleriyle örtüşmez."
+      },
+      {
+       "text": "Monopleji",
+       "isCorrect": false,
+       "explanation": "Monopleji sinir sisteminde kendine özgü işlevi bulunan farklı bir anatomik basamaktır. Bu soruda sorulan spesifik nörolojik lezyonun klinik ve fizyopatolojik özellikleriyle örtüşmez."
+      },
+      {
+       "text": "Tetrapleji",
+       "isCorrect": false,
+       "explanation": "Tetrapleji sinir sisteminde kendine özgü işlevi bulunan farklı bir anatomik basamaktır. Bu soruda sorulan spesifik nörolojik lezyonun klinik ve fizyopatolojik özellikleriyle örtüşmez."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "maskedTerm": "paraparezi",
+     "hint": "Alt ekstremitelerin iki taraflı motor güçsüzlüğü",
+     "options": [
+      "paraparezi",
+      "hemipleji",
+      "monoparezi",
+      "tetraparezi"
+     ],
+     "sentence": "Hemipleji vücudun bir yarısının tutulduğunu, paraparezi ise her iki bacakta güç kaybı olduğunu gösterir."
+    },
+    {
+     "type": "active_recall",
+     "keyTakeaway": "Hemipleji = hemen daima merkezi piramidal sistem hastalığı.",
+     "question": "Hangi ekstremite felç dağılımı hemen daima piramidal yol hasarını işaret eder?",
+     "answer": "Hemipleji. İkinci motor nöron veya periferik sinir lezyonlarının hemipleji oluşturma olasılığı pratik olarak yoktur."
+    }
+   ]
+  },
+  {
+   "id": "k2-32-s03",
+   "slideNumber": 3,
+   "title": "Motor Zaaf Düzeyleri ve Anatomik Seviyeler",
+   "bolum": "1",
+   "content": "Klinik muayenede kas zaafı saptandığında, hasarın motor ünitenin hangi seviyesinde olduğu araştırılır.\n\n- **1. Birinci Motor Nöron:** Serebral korteks motor alanından başlayan ve omurilik ön boynuzuna inen kortikospinal/piramidal yoldur.\n- **2. İkinci Motor Nöron:** Beyin sapı motor kranyal çekirdekleri veya medulla spinalis ön boynuz hücrelerinden başlayıp kasa giden periferik motor aksonlardır.\n- **3. Sinir-Kas Bağlantısı:** Motor akson terminalleri ile kas membranı arasındaki miyonöral plaktır.\n- **4. Doğrudan Çizgili Kas:** İstemli hareketin ortaya çıkmasını sağlayan nihai kas lifi kompartmanıdır.\n\n> [!NOTE]\n> Bu dört basamak dışında organik olmayan, muayenede değişkenlik gösteren histerik (fonksiyonel) felçler de ayırıcı tanıda akılda tutulmalıdır.",
+   "synthesisNarrative": "Klinik muayenede kas zaafı saptandığında, hasarın motor ünitenin hangi seviyesinde olduğu araştırılır.\n\n- **1. Birinci Motor Nöron:** Serebral korteks motor alanından başlayan ve omurilik ön boynuzuna inen kortikospinal/piramidal yoldur.\n- **2. İkinci Motor Nöron:** Beyin sapı motor kranyal çekirdekleri veya medulla spinalis ön boynuz hücrelerinden başlayıp kasa giden periferik motor aksonlardır.\n- **3. Sinir-Kas Bağlantısı:** Motor akson terminalleri ile kas membranı arasındaki miyonöral plaktır.\n- **4. Doğrudan Çizgili Kas:** İstemli hareketin ortaya çıkmasını sağlayan nihai kas lifi kompartmanıdır.\n\n> [!NOTE]\n> Bu dört basamak dışında organik olmayan, muayenede değişkenlik gösteren histerik (fonksiyonel) felçler de ayırıcı tanıda akılda tutulmalıdır.",
+   "sourcePdf": {
+    "sourcePdfKey": "y25-k2-32-felcler",
+    "startPage": 4,
+    "endPage": 4
+   },
+   "pdfSayfalari": [
+    4,
+    4
+   ],
+   "sayfaHaritasi": "teyitli",
+   "interactiveElements": [
+    {
+     "type": "causal_chain",
+     "steps": [
+      "1. Motor Korteks: İstemli hareket emrini oluşturan birinci motor nöron aksonları",
+      "2. İnen Piramidal Yol: Kapsüla interna ve beyin sapı boyunca ilerleyen kortikospinal traktus",
+      "3. Ön Boynuz ve Periferik Sinir: İkinci motor nöron aracılığıyla elektriksel iletimin kasa taşınması",
+      "4. Miyonöral Plak ve Çizgili Kas: Asetilkolin aracılı kavşak iletimi ve kas kontraksiyonunun gerçekleşmesi"
+     ]
+    },
+    {
+     "type": "micro_quiz",
+     "question": "Motor hareketin organizasyonunda akson terminalleri ile kas membranı arasındaki sinaps bölgesi hangisidir?",
+     "options": [
+      {
+       "text": "Sinir-kas bağlantısı (miyonöral plak)",
+       "isCorrect": true,
+       "explanation": "Sinir-kas bağlantısı klinik tanımda doğru kabul edilen temel nörolojik kavramdır. Fizyopatolojik mekanizması soruda sorulan motor bulguyu eksiksiz biçimde açıklayarak doğrular."
+      },
+      {
+       "text": "Ön boynuz alfa motor nöron gövdesi",
+       "isCorrect": false,
+       "explanation": "Ön boynuz alfa motor nöron gövdesi sinir sisteminde kendine özgü işlevi bulunan farklı bir anatomik basamaktır. Bu soruda sorulan spesifik nörolojik lezyonun klinik ve fizyopatolojik özellikleriyle örtüşmez."
+      },
+      {
+       "text": "Kortikospinal piramidal traktus",
+       "isCorrect": false,
+       "explanation": "Kortikospinal piramidal traktus sinir sisteminde kendine özgü işlevi bulunan farklı bir anatomik basamaktır. Bu soruda sorulan spesifik nörolojik lezyonun klinik ve fizyopatolojik özellikleriyle örtüşmez."
+      },
+      {
+       "text": "Spinal dorsal kök ganglionu",
+       "isCorrect": false,
+       "explanation": "Spinal dorsal kök ganglionu sinir sisteminde kendine özgü işlevi bulunan farklı bir anatomik basamaktır. Bu soruda sorulan spesifik nörolojik lezyonun klinik ve fizyopatolojik özellikleriyle örtüşmez."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "maskedTerm": "çizgili kas",
+     "hint": "İstemli hareketin ortaya çıkmasını sağlayan nihai efektör organ",
+     "options": [
+      "çizgili kas",
+      "düz kas",
+      "arka kordon",
+      "beyin sapı"
+     ],
+     "sentence": "Kas zaafı tespit edilen bir hastada lezyon birinci motor nöron, ikinci motor nöron, sinir-kas bağlantısı veya doğrudan çizgili kas düzeyinde aranır."
+    },
+    {
+     "type": "active_recall",
+     "keyTakeaway": "Motor ünite 4 basamaktan oluşur: 1. MN, 2. MN, kavşak ve kas.",
+     "question": "Organik kas zaafını oluşturan dört ana anatomik basamak nelerdir?",
+     "answer": "1) Birinci motor nöron (piramidal yol), 2) İkinci motor nöron (ön boynuz ve periferik sinir), 3) Sinir-kas bağlantısı (miyonöral plak), 4) Doğrudan çizgili kas."
+    }
+   ]
+  },
+  {
+   "id": "k2-32-s04",
+   "slideNumber": 4,
+   "title": "Birinci Motor Nöron: Kortikospinal ve Kortikobulber Yollar",
+   "bolum": "1",
+   "content": "İstemli hareketin başlatılmasından ve kontrolünden sorumlu olan ilk nöron grubuna üst motor nöron denir.\n\n- **Kortikospinal Yol:** Motor korteksten kaynaklanan lifler kapsüla interna arka bacağından geçerek beyin sapına iner; karşı taraftaki gövde ve ekstremite kaslarının istemli hareketini sağlar.\n- **Kortikobulber Yol:** Motor korteksten beyin sapına inen lifler, motor kranyal sinir nükleuslarıyla sinaps yaparak baş-boyun kaslarını kontrol eder.\n- **Çaprazlaşma Kuralı:** Piramidal yollar bulbus düzeyinde çaprazlaştığından, beyin lezyonları karşı vücut yarısında felç oluştururken, medulla spinalis lezyonları lezyonla aynı tarafta felç yapar.\n\n> [!IMPORTANT]\n> Çaprazlaşma öncesi serebral lezyonlar kontralateral, çaprazlaşma sonrası omurilik lezyonları ipsilateral motor zaaf doğurur.",
+   "synthesisNarrative": "İstemli hareketin başlatılmasından ve kontrolünden sorumlu olan ilk nöron grubuna üst motor nöron denir.\n\n- **Kortikospinal Yol:** Motor korteksten kaynaklanan lifler kapsüla interna arka bacağından geçerek beyin sapına iner; karşı taraftaki gövde ve ekstremite kaslarının istemli hareketini sağlar.\n- **Kortikobulber Yol:** Motor korteksten beyin sapına inen lifler, motor kranyal sinir nükleuslarıyla sinaps yaparak baş-boyun kaslarını kontrol eder.\n- **Çaprazlaşma Kuralı:** Piramidal yollar bulbus düzeyinde çaprazlaştığından, beyin lezyonları karşı vücut yarısında felç oluştururken, medulla spinalis lezyonları lezyonla aynı tarafta felç yapar.\n\n> [!IMPORTANT]\n> Çaprazlaşma öncesi serebral lezyonlar kontralateral, çaprazlaşma sonrası omurilik lezyonları ipsilateral motor zaaf doğurur.",
+   "sourcePdf": {
+    "sourcePdfKey": "y25-k2-32-felcler",
+    "startPage": 5,
+    "endPage": 5
+   },
+   "pdfSayfalari": [
+    5,
+    5
+   ],
+   "sayfaHaritasi": "teyitli",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Piramidal liflerin bulbusta çaprazlaşması nedeniyle medulla spinalis servikal yarım kesisinde felç nerede görülür?",
+     "options": [
+      {
+       "text": "Lezyonla aynı taraftaki ekstremitelerde",
+       "isCorrect": true,
+       "explanation": "Lezyonla aynı taraftaki ekstremitelerde klinik tanımda doğru kabul edilen temel nörolojik kavramdır. Fizyopatolojik mekanizması soruda sorulan motor bulguyu eksiksiz biçimde açıklayarak doğrular."
+      },
+      {
+       "text": "Lezyonun karşı tarafındaki ekstremitelerde",
+       "isCorrect": false,
+       "explanation": "Lezyonun karşı tarafındaki ekstremitelerde sinir sisteminde kendine özgü işlevi bulunan farklı bir anatomik basamaktır. Bu soruda sorulan spesifik nörolojik lezyonun klinik ve fizyopatolojik özellikleriyle örtüşmez."
+      },
+      {
+       "text": "Yalnızca karşı taraf yüz kaslarında",
+       "isCorrect": false,
+       "explanation": "Yalnızca karşı taraf yüz kaslarında sinir sisteminde kendine özgü işlevi bulunan farklı bir anatomik basamaktır. Bu soruda sorulan spesifik nörolojik lezyonun klinik ve fizyopatolojik özellikleriyle örtüşmez."
+      },
+      {
+       "text": "Dört ekstremitede eşit oranda",
+       "isCorrect": false,
+       "explanation": "Dört ekstremitede eşit oranda sinir sisteminde kendine özgü işlevi bulunan farklı bir anatomik basamaktır. Bu soruda sorulan spesifik nörolojik lezyonun klinik ve fizyopatolojik özellikleriyle örtüşmez."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "maskedTerm": "karşı tarafta",
+     "hint": "Serebral korteks lezyonlarının vücutta motor etki gösterdiği yön",
+     "options": [
+      "karşı tarafta",
+      "aynı tarafta",
+      "iki tarafta",
+      "yalnız yüzde"
+     ],
+     "sentence": "Piramidal yollar çaprazlaştığından beyindeki lezyonlar karşı tarafta zaaf yaparken, omurilik lezyonları aynı tarafta felç oluşturur."
+    },
+    {
+     "type": "active_recall",
+     "keyTakeaway": "Kortikospinal = omurilik / ekstremiteler; Kortikobulber = beyin sapı / kranyal sinirler.",
+     "question": "Kortikobulber yol ile kortikospinal yolun hedef yapıları arasındaki temel fark nedir?",
+     "answer": "Kortikospinal yol omurilik ön boynuzuna inerek gövde ve ekstremiteleri kontrol ederken; kortikobulber yol beyin sapı motor kranyal çekirdekleriyle sinaps yapar."
+    },
+    {
+     "type": "spot_the_lie",
+     "items": [
+      {
+       "text": "Birinci motor nöron istemli hareketi başlatan piramidal yolun ilk hücresidir.",
+       "isLie": false,
+       "explanation": "Motor kortekste yer alan üst motor nörondur."
+      },
+      {
+       "text": "Kortikobulber yol lifleri doğrudan medulla spinalis ön boynuzuna kadar uzanır.",
+       "isLie": true,
+       "explanation": "Tuzak: Kortikobulber lifler omuriliğe inmez; beyin sapındaki motor kranyal nükleuslarda sonlanır."
+      },
+      {
+       "text": "Piramidal yollar çaprazlaştığından beyin hemisfer lezyonları kontralateral felç yapar.",
+       "isLie": false,
+       "explanation": "Decussatio pyramidum nedeniyle beyin lezyonları karşı tarafa yansır."
+      },
+      {
+       "text": "Omurilik kesilerinde motor zaaf lezyonla aynı tarafta ortaya çıkar.",
+       "isLie": false,
+       "explanation": "Çaprazlaşma bulbus düzeyinde tamamlanmıştır."
+      }
+     ],
+     "topic": "Motor Sistem Ayırıcı Tanı İlkeleri"
+    }
+   ]
+  },
+  {
+   "id": "k2-32-s05",
+   "slideNumber": 5,
+   "title": "Piramidal Yol Anatomisi ve Seyri",
+   "bolum": "1",
+   "content": "Kortikospinal traktus serebral korteksten başlayarak omurilik ön boynuzuna kadar anatomik bir rota izler.\n\n- **Korona Radiata ve Kapsüla İnterna:** Korteksten çıkan aksonlar korona radiatada toplanır ve kapsüla internanın arka bacağında (crus posterius) son derece kompakt bir demet oluşturur.\n- **Beyin Sapı Seyri:** Mezensefalonda krus serebrinin orta üçte birinden geçer; pons tabanında demetlere ayrılır ve bulbusta piramisleri meydana getirir.\n- **Piramis Çaprazı:** Bulbus-omurilik sınırında liflerin yaklaşık %85'i karşıya geçerek lateral kortikospinal traktusu, %15'i çaprazlaşmadan inerek ön kortikospinal traktusu kurar.\n\n> [!NOTE]\n> Kapsüla internadaki kompakt yerleşim nedeniyle burada meydana gelen küçük bir laküner infarkt dahi karşı vücut yarısında tam ve orantılı hemipleji oluşturabilir.",
+   "synthesisNarrative": "Kortikospinal traktus serebral korteksten başlayarak omurilik ön boynuzuna kadar anatomik bir rota izler.\n\n- **Korona Radiata ve Kapsüla İnterna:** Korteksten çıkan aksonlar korona radiatada toplanır ve kapsüla internanın arka bacağında (crus posterius) son derece kompakt bir demet oluşturur.\n- **Beyin Sapı Seyri:** Mezensefalonda krus serebrinin orta üçte birinden geçer; pons tabanında demetlere ayrılır ve bulbusta piramisleri meydana getirir.\n- **Piramis Çaprazı:** Bulbus-omurilik sınırında liflerin yaklaşık %85'i karşıya geçerek lateral kortikospinal traktusu, %15'i çaprazlaşmadan inerek ön kortikospinal traktusu kurar.\n\n> [!NOTE]\n> Kapsüla internadaki kompakt yerleşim nedeniyle burada meydana gelen küçük bir laküner infarkt dahi karşı vücut yarısında tam ve orantılı hemipleji oluşturabilir.",
+   "sourcePdf": {
+    "sourcePdfKey": "y25-k2-32-felcler",
+    "startPage": 6,
+    "endPage": 6
+   },
+   "pdfSayfalari": [
+    6,
+    6
+   ],
+   "sayfaHaritasi": "teyitli",
+   "interactiveElements": [
+    {
+     "type": "causal_chain",
+     "steps": [
+      "1. Motor Korteks: Prerolandik girus piramidal nöronlarından motor aksonların çıkışı",
+      "2. Kapsüla İnterna: Crus posterius içinde kompakt demet haline gelme",
+      "3. Bulbus Piramisi: Decussatio pyramidum düzeyinde liflerin yüzde 85'inin çaprazlaşması",
+      "4. Lateral Kortikospinal Traktus: Omurilik lateral funikülusunda inerek ön boynuz motor nöronlarıyla sinaps"
+     ]
+    },
+    {
+     "type": "micro_quiz",
+     "question": "Kortikospinal traktus liflerinin kompakt biçimde toplandığı ve küçük lezyonların dahi orantılı tam hemipleji yaptığı subkortikal yapı hangisidir?",
+     "options": [
+      {
+       "text": "Kapsüla interna (crus posterius)",
+       "isCorrect": true,
+       "explanation": "Kapsüla interna klinik tanımda doğru kabul edilen temel nörolojik kavramdır. Fizyopatolojik mekanizması soruda sorulan motor bulguyu eksiksiz biçimde açıklayarak doğrular."
+      },
+      {
+       "text": "Serebral korteks yüz alanı",
+       "isCorrect": false,
+       "explanation": "Serebral korteks yüz alanı sinir sisteminde kendine özgü işlevi bulunan farklı bir anatomik basamaktır. Bu soruda sorulan spesifik nörolojik lezyonun klinik ve fizyopatolojik özellikleriyle örtüşmez."
+      },
+      {
+       "text": "Lomber omurilik ön boynuzu",
+       "isCorrect": false,
+       "explanation": "Lomber omurilik ön boynuzu sinir sisteminde kendine özgü işlevi bulunan farklı bir anatomik basamaktır. Bu soruda sorulan spesifik nörolojik lezyonun klinik ve fizyopatolojik özellikleriyle örtüşmez."
+      },
+      {
+       "text": "Korpus kallozum spleniumu",
+       "isCorrect": false,
+       "explanation": "Korpus kallozum spleniumu sinir sisteminde kendine özgü işlevi bulunan farklı bir anatomik basamaktır. Bu soruda sorulan spesifik nörolojik lezyonun klinik ve fizyopatolojik özellikleriyle örtüşmez."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "maskedTerm": "lateral",
+     "hint": "Çaprazlaşan ana motor yolun omurilik beyaz cevherindeki funiküler yerleşimi",
+     "options": [
+      "lateral",
+      "anterior",
+      "posterior",
+      "santral"
+     ],
+     "sentence": "Piramidal yol liflerinin yaklaşık yüzde seksen beşi bulbus düzeyinde çaprazlaşarak omuriliğin lateral kortikospinal traktusunu oluşturur."
+    },
+    {
+     "type": "active_recall",
+     "keyTakeaway": "%85 çaprazlaşan lateral traktus, %15 çaprazlaşmayan ön traktus.",
+     "question": "Decussatio pyramidum düzeyinde çaprazlaşan ve çaprazlaşmayan kortikospinal liflerin oranları nedir?",
+     "answer": "Liflerin yaklaşık %85'i çaprazlaşarak tractus corticospinalis lateralisi oluşturur; %15'i çaprazlaşmadan inerek tractus corticospinalis anterioru meydana getirir."
+    }
+   ]
+  },
+  {
+   "id": "k2-32-s06",
+   "slideNumber": 6,
+   "title": "İkinci Motor Nöron: Ön Boynuz ve Kranyal Çekirdekler",
+   "bolum": "1",
+   "content": "İkinci motor nöron (alt motor nöron / periferik motor nöron), merkezi sinir sisteminden kas lifine giden son ortak iletim yoludur.\n\n- **Beyin Sapı Yerleşimi:** Motor kranyal sinir nükleuslarında (3, 4, 5, 6, 7, 9, 10, 11, 12) yer alır; ipsilateral göz, yüz, dil, çiğneme ve yutma kaslarını innerve eder.\n- **Medulla Spinalis Yerleşimi:** Omurilik boyunca uzanan gri cevher ön boynuz alfa motor nöronlarıdır; ön kök ve periferik sinirler aracılığıyla ipsilateral kol, bacak ve gövde kaslarını uyarır.\n- **Trofik Etki:** İkinci motor nöron kas liflerinin yaşamsal trofik desteğini sağlar; hasarında hızla kas erimesi (denervasyon atrofisi) gelişir.\n\n> [!NOTE]\n> Alt motor nöron hasarında kas liflerine giden elektriksel ve trofik uyarı kesildiğinden flask paralizi, hipotoni ve erken kas atrofisi ortaya çıkar.",
+   "synthesisNarrative": "İkinci motor nöron (alt motor nöron / periferik motor nöron), merkezi sinir sisteminden kas lifine giden son ortak iletim yoludur.\n\n- **Beyin Sapı Yerleşimi:** Motor kranyal sinir nükleuslarında (3, 4, 5, 6, 7, 9, 10, 11, 12) yer alır; ipsilateral göz, yüz, dil, çiğneme ve yutma kaslarını innerve eder.\n- **Medulla Spinalis Yerleşimi:** Omurilik boyunca uzanan gri cevher ön boynuz alfa motor nöronlarıdır; ön kök ve periferik sinirler aracılığıyla ipsilateral kol, bacak ve gövde kaslarını uyarır.\n- **Trofik Etki:** İkinci motor nöron kas liflerinin yaşamsal trofik desteğini sağlar; hasarında hızla kas erimesi (denervasyon atrofisi) gelişir.\n\n> [!NOTE]\n> Alt motor nöron hasarında kas liflerine giden elektriksel ve trofik uyarı kesildiğinden flask paralizi, hipotoni ve erken kas atrofisi ortaya çıkar.",
+   "sourcePdf": {
+    "sourcePdfKey": "y25-k2-32-felcler",
+    "startPage": 7,
+    "endPage": 7
+   },
+   "pdfSayfalari": [
+    7,
+    7
+   ],
+   "sayfaHaritasi": "teyitli",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "İkinci motor nöron hücre gövdelerinin medulla spinalis içerisindeki anatomik yerleşimi neresidir?",
+     "options": [
+      {
+       "text": "Gri cevher ön boynuzu",
+       "isCorrect": true,
+       "explanation": "Gri cevher ön boynuzu klinik tanımda doğru kabul edilen temel nörolojik kavramdır. Fizyopatolojik mekanizması soruda sorulan motor bulguyu eksiksiz biçimde açıklayarak doğrular."
+      },
+      {
+       "text": "Gri cevher arka boynuzu",
+       "isCorrect": false,
+       "explanation": "Gri cevher arka boynuzu sinir sisteminde kendine özgü işlevi bulunan farklı bir anatomik basamaktır. Bu soruda sorulan spesifik nörolojik lezyonun klinik ve fizyopatolojik özellikleriyle örtüşmez."
+      },
+      {
+       "text": "Lateral funikülus beyaz cevheri",
+       "isCorrect": false,
+       "explanation": "Lateral funikülus beyaz cevheri sinir sisteminde kendine özgü işlevi bulunan farklı bir anatomik basamaktır. Bu soruda sorulan spesifik nörolojik lezyonun klinik ve fizyopatolojik özellikleriyle örtüşmez."
+      },
+      {
+       "text": "Spinal dorsal kök ganglionu",
+       "isCorrect": false,
+       "explanation": "Spinal dorsal kök ganglionu sinir sisteminde kendine özgü işlevi bulunan farklı bir anatomik basamaktır. Bu soruda sorulan spesifik nörolojik lezyonun klinik ve fizyopatolojik özellikleriyle örtüşmez."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "maskedTerm": "ön boynuz",
+     "hint": "Omurilik gri cevherinin motor nöronları içeren ventral parçası",
+     "options": [
+      "ön boynuz",
+      "arka boynuz",
+      "yan boynuz",
+      "santral kanal"
+     ],
+     "sentence": "İkinci motor nöron medulla spinalis boyunca uzanan ön boynuz hücreleri ve beyin sapındaki motor kranyal sinir nükleuslarında yer alır."
+    },
+    {
+     "type": "active_recall",
+     "keyTakeaway": "2. motor nöron hasarı = erken ve belirgin denervasyon atrofisi.",
+     "question": "İkinci motor nöronun kasa olan trofik etkisinin klinik önemi nedir?",
+     "answer": "İkinci motor nöron kas lifinin canlılığını ve trofizmini korur. Hasarında kasa giden trofik uyarı kesildiği için hızla belirgin denervasyon atrofisi gelişir."
+    },
+    {
+     "type": "spot_the_lie",
+     "items": [
+      {
+       "text": "İkinci motor nöron kas lifine doğrudan bağlanan son ortak motor yoldur.",
+       "isLie": false,
+       "explanation": "Motor emrin kasa ulaştığı nihai nörondur."
+      },
+      {
+       "text": "Beyin sapındaki motor kranyal sinir nükleusları da alt motor nöron kapsamındadır.",
+       "isLie": false,
+       "explanation": "3, 4, 5, 6, 7, 9, 10, 11, 12. sinir motor çekirdekleri alt motor nörondur."
+      },
+      {
+       "text": "Alt motor nöron lezyonlarında felçli kaslarda spastisite ve hipertoni gelişir.",
+       "isLie": true,
+       "explanation": "Tuzak: Spastisite 1. motor nöron lezyonuna özgüdür; alt motor nöronda tonus azalır (hipotoni)."
+      },
+      {
+       "text": "Ön boynuz alfa motor nöronları kol, bacak ve gövde kaslarını innerve eder.",
+       "isLie": false,
+       "explanation": "Omurilik ön boynuzu ekstremite ve gövde motor iletimini sağlar."
+      }
+     ],
+     "topic": "Motor Sistem Ayırıcı Tanı İlkeleri"
+    }
+   ]
+  },
+  {
+   "id": "k2-32-s07",
+   "slideNumber": 7,
+   "title": "Sinir-Kas Bağlantısı ve Çizgili Kas",
+   "bolum": "1",
+   "content": "Motor ünitenin son iki basamağını miyonöral kavşak ve efektör çizgili kas dokusu oluşturur.\n\n- **Sinir-Kas Bağlantısı (Miyonöral Plak):** Motor aksonların uç dalları çizgili kas telleriyle sinaps yapar. Aksiyon potansiyeli presinaptik uçtan asetilkolin salınımını uyarır; asetilkolin postsinaptik nikotinik reseptörlere bağlanarak kas membranını depolarize eder.\n- **Kavşak Hastalıkları Paternleri:** İletim kusurlarında (en sık Myasthenia gravis) kaslarda eforla artan ve dinlenmekle düzelen kolay yorulma, ptozis, diplopi ve dalgalı seyir tipiktir.\n- **Çizgili Kas Kompartmanı:** İstemli hareketin ortaya çıkmasını sağlayan son organdır; kas distrofileri ve polimiyozit gibi miyopatilerde iki yanlı proksimal kas zaafı gelişir.\n\n> [!NOTE]\n> Kavşak ve kas patolojilerinde piramidal belirtiler veya duyu kusuru kesinlikle bulunmaz.",
+   "synthesisNarrative": "Motor ünitenin son iki basamağını miyonöral kavşak ve efektör çizgili kas dokusu oluşturur.\n\n- **Sinir-Kas Bağlantısı (Miyonöral Plak):** Motor aksonların uç dalları çizgili kas telleriyle sinaps yapar. Aksiyon potansiyeli presinaptik uçtan asetilkolin salınımını uyarır; asetilkolin postsinaptik nikotinik reseptörlere bağlanarak kas membranını depolarize eder.\n- **Kavşak Hastalıkları Paternleri:** İletim kusurlarında (en sık Myasthenia gravis) kaslarda eforla artan ve dinlenmekle düzelen kolay yorulma, ptozis, diplopi ve dalgalı seyir tipiktir.\n- **Çizgili Kas Kompartmanı:** İstemli hareketin ortaya çıkmasını sağlayan son organdır; kas distrofileri ve polimiyozit gibi miyopatilerde iki yanlı proksimal kas zaafı gelişir.\n\n> [!NOTE]\n> Kavşak ve kas patolojilerinde piramidal belirtiler veya duyu kusuru kesinlikle bulunmaz.",
+   "sourcePdf": {
+    "sourcePdfKey": "y25-k2-32-felcler",
+    "startPage": 8,
+    "endPage": 8
+   },
+   "pdfSayfalari": [
+    8,
+    8
+   ],
+   "sayfaHaritasi": "teyitli",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Motor sinir uç dallarının kas lifleriyle sinaps yaptığı ve asetilkolin aracılığıyla iletim sağlanan yapı hangisidir?",
+     "options": [
+      {
+       "text": "Miyonöral plak (sinir-kas bağlantısı)",
+       "isCorrect": true,
+       "explanation": "Miyonöral plak klinik tanımda doğru kabul edilen temel nörolojik kavramdır. Fizyopatolojik mekanizması soruda sorulan motor bulguyu eksiksiz biçimde açıklayarak doğrular."
+      },
+      {
+       "text": "Ranvier boğumu",
+       "isCorrect": false,
+       "explanation": "Ranvier boğumu sinir sisteminde kendine özgü işlevi bulunan farklı bir anatomik basamaktır. Bu soruda sorulan spesifik nörolojik lezyonun klinik ve fizyopatolojik özellikleriyle örtüşmez."
+      },
+      {
+       "text": "Spinal ganglion",
+       "isCorrect": false,
+       "explanation": "Spinal ganglion sinir sisteminde kendine özgü işlevi bulunan farklı bir anatomik basamaktır. Bu soruda sorulan spesifik nörolojik lezyonun klinik ve fizyopatolojik özellikleriyle örtüşmez."
+      },
+      {
+       "text": "Piramis çaprazı",
+       "isCorrect": false,
+       "explanation": "Piramis çaprazı sinir sisteminde kendine özgü işlevi bulunan farklı bir anatomik basamaktır. Bu soruda sorulan spesifik nörolojik lezyonun klinik ve fizyopatolojik özellikleriyle örtüşmez."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "maskedTerm": "miyonöral plak",
+     "hint": "Sinir-kas kavşağının diğer adı",
+     "options": [
+      "miyonöral plak",
+      "arka boynuz",
+      "dorsal kök",
+      "piramidal yol"
+     ],
+     "sentence": "Motor sinirlerin uç dalları çizgili kas telleriyle sinaps yaparak miyonöral plak yapısını meydana getirir."
+    },
+    {
+     "type": "active_recall",
+     "keyTakeaway": "Kavşak hastalığı = eforla artan dalgalı yorulma ve okülobulber zaaf.",
+     "question": "Nöromüsküler kavşak hastalıklarında (Myasthenia gravis) güçsüzlüğün en tipik klinik özelliği nedir?",
+     "answer": "Eforla artan, dinlenmekle düzelen ve gün içinde dalgalanma (fluktuasyon) gösteren kas zaafıdır; sıklıkla ptozis ve diplopi eşlik eder."
+    },
+    {
+     "type": "swipe_matching",
+     "cards": [
+      {
+       "text": "Miyonöral plak asetilkolin iletim kusuru",
+       "explanation": "Kavşak patolojisidir.",
+       "category": "left"
+      },
+      {
+       "text": "Eforla artan dalgalı kas yorulması",
+       "explanation": "Myasthenia gravis gibi kavşak hastalıklarının bulgusudur.",
+       "category": "left"
+      },
+      {
+       "text": "İstemli hareketin ortaya çıkmasını sağlayan son organ",
+       "explanation": "Efektör çizgili kas dokusudur.",
+       "category": "right"
+      },
+      {
+       "text": "Kas distrofileri ve polimiyozit",
+       "explanation": "Doğrudan primer kas lifi hastalıklarıdır.",
+       "category": "right"
+      }
+     ],
+     "leftCategory": "Sinir-Kas Kavşağı",
+     "rightCategory": "Doğrudan Çizgili Kas"
+    }
+   ]
+  },
+  {
+   "id": "k2-32-s08",
+   "slideNumber": 8,
+   "title": "[TEKRAR SAYFASI - CHECKPOINT 1] Motor Ünite ve Anatomik Sınıflama",
+   "bolum": "Motor Ünite ve Anatomi",
+   "content": "Bu aşamaya kadar motor sistemin temel tanımlarını ve motor üniteyi oluşturan dört basamağı inceledik.\n\n- **Parezi ve Paralizi:** Kısmi kayıp parezi, tam istemli hareket kaybı paralizidir.\n- **Ekstremite Paternleri:** Vücut yarısı hemipleji, tek uzuv monoparezi, iki bacak paraparezi, dört uzuv tetraparezidir.\n- **Birinci Motor Nöron:** Korteksten bulbustaki piramis çaprazına ve oradan omuriliğe inen kortikospinal yoldur; çapraz üstü lezyon kontralateral felç yapar.\n- **İkinci Motor Nöron:** Kranyal çekirdekler ve spinal ön boynuz hücreleridir; ipsilateral kasa trofik destek sağlar.\n- **Kavşak ve Kas:** Miyonöral plak asetilkolin iletimini, çizgili kas nihai kontraksiyonu üstlenir.\n\n> [!NOTE]\n> Bu dört basamağın klinik ayırıcı tanısında zaaf dağılımı, kas tonusu, refleksler ve kas atrofisi incelenecektir.",
+   "synthesisNarrative": "Bu aşamaya kadar motor sistemin temel tanımlarını ve motor üniteyi oluşturan dört basamağı inceledik.\n\n- **Parezi ve Paralizi:** Kısmi kayıp parezi, tam istemli hareket kaybı paralizidir.\n- **Ekstremite Paternleri:** Vücut yarısı hemipleji, tek uzuv monoparezi, iki bacak paraparezi, dört uzuv tetraparezidir.\n- **Birinci Motor Nöron:** Korteksten bulbustaki piramis çaprazına ve oradan omuriliğe inen kortikospinal yoldur; çapraz üstü lezyon kontralateral felç yapar.\n- **İkinci Motor Nöron:** Kranyal çekirdekler ve spinal ön boynuz hücreleridir; ipsilateral kasa trofik destek sağlar.\n- **Kavşak ve Kas:** Miyonöral plak asetilkolin iletimini, çizgili kas nihai kontraksiyonu üstlenir.\n\n> [!NOTE]\n> Bu dört basamağın klinik ayırıcı tanısında zaaf dağılımı, kas tonusu, refleksler ve kas atrofisi incelenecektir.",
+   "sourcePdf": {
+    "pages": [
+     2,
+     3,
+     4,
+     5,
+     7,
+     8
+    ],
+    "sayfa": 4,
+    "doc": 0
+   },
+   "pdfSayfalari": [
+    2,
+    3,
+    4,
+    5,
+    7,
+    8
+   ],
+   "sayfaHaritasi": "teyitli",
+   "interactiveElements": [
+    {
+     "type": "interactive_table",
+     "tableHeaders": [
+      "Anatomik Basamak",
+      "Hücre Gövdesi Yerleşimi",
+      "Temel Görev / İleti"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "1. Motor Nöron"
+        },
+        {
+         "text": "Motor korteks (Betz)",
+         "isRevealed": false,
+         "hint": "Serebral girus precentralis",
+         "isMasked": true
+        },
+        {
+         "text": "Piramidal inen yol ile karşı tarafa motor emir iletimi"
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "2. Motor Nöron"
+        },
+        {
+         "text": "Ön boynuz ve kranyal çekirdek",
+         "isRevealed": false,
+         "hint": "Medulla spinalis ve beyin sapı",
+         "isMasked": true
+        },
+        {
+         "text": "Kas liflerine elektriksel uyarı ve trofik destek"
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Sinir-Kas Kavşağı"
+        },
+        {
+         "text": "Miyonöral plak",
+         "isRevealed": false,
+         "hint": "Akson ucu ve kas zarı arası",
+         "isMasked": true
+        },
+        {
+         "text": "Asetilkolin aracılı kimyasal sinaptik iletim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "micro_quiz",
+     "question": "Motor ünitenin anatomik basamakları düşünüldüğünde, kas lifine doğrudan trofik destek sağlayan yapı hangisidir?",
+     "options": [
+      {
+       "text": "İkinci motor nöron (ön boynuz ve periferik motor akson)",
+       "isCorrect": true,
+       "explanation": "İkinci motor nöron klinik tanımda doğru kabul edilen temel nörolojik kavramdır. Fizyopatolojik mekanizması soruda sorulan motor bulguyu eksiksiz biçimde açıklayarak doğrular."
+      },
+      {
+       "text": "Birinci motor nöron (kortikospinal yol)",
+       "isCorrect": false,
+       "explanation": "Birinci motor nöron sinir sisteminde kendine özgü işlevi bulunan farklı bir anatomik basamaktır. Bu soruda sorulan spesifik nörolojik lezyonun klinik ve fizyopatolojik özellikleriyle örtüşmez."
+      },
+      {
+       "text": "Arka kordon fasikülüs grasilis",
+       "isCorrect": false,
+       "explanation": "Arka kordon fasikülüs grasilis sinir sisteminde kendine özgü işlevi bulunan farklı bir anatomik basamaktır. Bu soruda sorulan spesifik nörolojik lezyonun klinik ve fizyopatolojik özellikleriyle örtüşmez."
+      },
+      {
+       "text": "Kapsüla interna crus posteriusu",
+       "isCorrect": false,
+       "explanation": "Kapsüla interna crus posteriusu sinir sisteminde kendine özgü işlevi bulunan farklı bir anatomik basamaktır. Bu soruda sorulan spesifik nörolojik lezyonun klinik ve fizyopatolojik özellikleriyle örtüşmez."
+      }
+     ]
+    },
+    {
+     "type": "branching_logic",
+     "scenario": "Acil servise getirilen bir hastada sağ vücut yarısında kol ve bacakta belirgin motor güç kaybı (hemiparezi) saptanıyor.",
+     "question": "Bu klinik tablonun en olası anatomik basamağı hangisidir?",
+     "options": [
+      {
+       "text": "Sol serebral hemisfer piramidal yol hasarı",
+       "outcome": "Doğru. Hemipleji hemen daima merkezi piramidal sistem hastalığını gösterir.",
+       "isCorrect": true,
+       "feedback": "Sol serebral hemisfer piramidal yol hasarı klinik tanımda doğru kabul edilen temel nörolojik kavramdır. Fizyopatolojik mekanizması soruda sorulan motor bulguyu eksiksiz biçimde açıklayarak doğrular.",
+       "explanation": "Sol serebral hemisfer piramidal yol hasarı klinik tanımda doğru kabul edilen temel nörolojik kavramdır. Fizyopatolojik mekanizması soruda sorulan motor bulguyu eksiksiz biçimde açıklayarak doğrular."
+      },
+      {
+       "text": "Periferik tek bir sinirin tuzak nöropatisi",
+       "outcome": "Yanlış. Periferik sinir hasarı vücut yarısında hemipleji yapmaz.",
+       "isCorrect": false,
+       "feedback": "Periferik tek bir sinirin tuzak nöropatisi sinir sisteminde kendine özgü işlevi bulunan farklı bir anatomik basamaktır. Bu soruda sorulan spesifik nörolojik lezyonun klinik ve fizyopatolojik özellikleriyle örtüşmez.",
+       "explanation": "Periferik tek bir sinirin tuzak nöropatisi sinir sisteminde kendine özgü işlevi bulunan farklı bir anatomik basamaktır. Bu soruda sorulan spesifik nörolojik lezyonun klinik ve fizyopatolojik özellikleriyle örtüşmez."
+      },
+      {
+       "text": "Doğrudan primer çizgili kas distrofik erimesi",
+       "outcome": "Yanlış. Kas distrofileri iki yanlı proksimal tutulum yapar.",
+       "isCorrect": false,
+       "feedback": "Doğrudan primer çizgili kas distrofik erimesi sinir sisteminde kendine özgü işlevi bulunan farklı bir anatomik basamaktır. Bu soruda sorulan spesifik nörolojik lezyonun klinik ve fizyopatolojik özellikleriyle örtüşmez.",
+       "explanation": "Doğrudan primer çizgili kas distrofik erimesi sinir sisteminde kendine özgü işlevi bulunan farklı bir anatomik basamaktır. Bu soruda sorulan spesifik nörolojik lezyonun klinik ve fizyopatolojik özellikleriyle örtüşmez."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "keyTakeaway": "Beyin lezyonu = kontralateral felç; Omurilik lezyonu = ipsilateral felç.",
+     "question": "Birinci motor nöron lezyonunun beyinde veya omurilikte olmasına göre felç tarafı nasıl belirlenir?",
+     "answer": "Kortikospinal lifler bulbusta piramis çaprazı yaptığından; beyin lezyonları karşı vücut yarısında, çaprazlaşma altındaki omurilik lezyonları lezyonla aynı tarafta felç yapar."
+    }
+   ]
+  },
+  {
+   "id": "k2-32-s09",
+   "slideNumber": 9,
+   "title": "1. Kas Zaafı Dağılımı: Piramidal ve Periferik Paternler",
+   "bolum": "2",
+   "content": "Kas zaafının anatomik dağılımı lezyon düzeyini ayırt etmede en temel muayene parametresidir.\n\n- **Birinci Motor Nöron Paterni:** Üst ekstremitede ekstansör kaslarda, alt ekstremitede ise fleksör kaslarda belirgindir; hasta kolunu uzatmakta ve bacağını bükmekte zorlanır.\n- **İkinci Motor Nöron Paterni:** Lezyon ön boynuz veya ön kökte ise aynı omurilik segmentinden innerve edilen kaslarda (**miyotom** dağılımı); periferik sinirde ise o sinirin motor alanında zaaf görülür.\n- **Polinöropati:** Birden çok periferik sinirin simetrik tutulumu sonucu zaaf ekstremite uçlarında (distal kaslarda) belirgindir.\n- **Kavşak ve Kas Paternleri:** Miyonöral plakta beyin sapı okülobulber kasları ve proksimal kaslar; primer çizgili kas patolojilerinde ise iki yanlı simetrik ekstremite kökleri tutulur.\n\n> [!IMPORTANT]\n> Çizgili kas hastalıklarında proksimal zaaf nedeniyle hasta yerden kalkarken ellerini dizlerine dayayarak doğrulur (**Gowers arazı**).",
+   "synthesisNarrative": "Kas zaafının anatomik dağılımı lezyon düzeyini ayırt etmede en temel muayene parametresidir.\n\n- **Birinci Motor Nöron Paterni:** Üst ekstremitede ekstansör kaslarda, alt ekstremitede ise fleksör kaslarda belirgindir; hasta kolunu uzatmakta ve bacağını bükmekte zorlanır.\n- **İkinci Motor Nöron Paterni:** Lezyon ön boynuz veya ön kökte ise aynı omurilik segmentinden innerve edilen kaslarda (**miyotom** dağılımı); periferik sinirde ise o sinirin motor alanında zaaf görülür.\n- **Polinöropati:** Birden çok periferik sinirin simetrik tutulumu sonucu zaaf ekstremite uçlarında (distal kaslarda) belirgindir.\n- **Kavşak ve Kas Paternleri:** Miyonöral plakta beyin sapı okülobulber kasları ve proksimal kaslar; primer çizgili kas patolojilerinde ise iki yanlı simetrik ekstremite kökleri tutulur.\n\n> [!IMPORTANT]\n> Çizgili kas hastalıklarında proksimal zaaf nedeniyle hasta yerden kalkarken ellerini dizlerine dayayarak doğrulur (**Gowers arazı**).",
+   "sourcePdf": {
+    "sourcePdfKey": "y25-k2-32-felcler",
+    "startPage": 9,
+    "endPage": 10
+   },
+   "pdfSayfalari": [
+    9,
+    10
+   ],
+   "sayfaHaritasi": "teyitli",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Birinci motor nöron hastalıklarında üst ve alt ekstremitelerde kas zaafının belirgin olduğu kas grupları hangileridir?",
+     "options": [
+      {
+       "text": "Üst ekstremitede ekstansör, alt ekstremitede fleksör kaslar",
+       "isCorrect": true,
+       "explanation": "Üst ekstremitede ekstansör, alt ekstremitede fleksör kaslar klinik tanımda doğru kabul edilen temel nörolojik kavramdır. Fizyopatolojik mekanizması soruda sorulan motor bulguyu eksiksiz biçimde açıklayarak doğrular."
+      },
+      {
+       "text": "Üst ekstremitede fleksör, alt ekstremitede ekstansör kaslar",
+       "isCorrect": false,
+       "explanation": "Üst ekstremitede fleksör, alt ekstremitede ekstansör kaslar sinir sisteminde kendine özgü işlevi bulunan farklı bir anatomik basamaktır. Bu soruda sorulan spesifik nörolojik lezyonun klinik ve fizyopatolojik özellikleriyle örtüşmez."
+      },
+      {
+       "text": "Yalnızca el ve ayak parmak uçlarındaki intrensek kaslar",
+       "isCorrect": false,
+       "explanation": "Yalnızca el ve ayak parmak uçlarındaki intrensek kaslar sinir sisteminde kendine özgü işlevi bulunan farklı bir anatomik basamaktır. Bu soruda sorulan spesifik nörolojik lezyonun klinik ve fizyopatolojik özellikleriyle örtüşmez."
+      },
+      {
+       "text": "Yalnızca omuz ve kalça kuşağı proksimal kasları",
+       "isCorrect": false,
+       "explanation": "Yalnızca omuz ve kalça kuşağı proksimal kasları sinir sisteminde kendine özgü işlevi bulunan farklı bir anatomik basamaktır. Bu soruda sorulan spesifik nörolojik lezyonun klinik ve fizyopatolojik özellikleriyle örtüşmez."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "maskedTerm": "ekstansör",
+     "hint": "Kolda piramidal zaafın daha belirgin olduğu kas grubu",
+     "options": [
+      "ekstansör",
+      "fleksör",
+      "pronator",
+      "supinator"
+     ],
+     "sentence": "Birinci motor nöron hastalıklarında zaaf üst ekstremitede ekstansör kaslarda bacakta ise fleksör kaslarda belirgindir."
+    },
+    {
+     "type": "active_recall",
+     "keyTakeaway": "Gowers arazı = primer çizgili kas / proksimal kas zaafı.",
+     "question": "Gowers arazı nedir ve hangi kompartman patolojisini düşündürür?",
+     "answer": "Proksimal pelvik kas zaafı nedeniyle hastanın yerden kalkarken elleriyle bacak ve dizlerine tırmanarak doğrulmasıdır; primer çizgili kas hastalıklarını (miyopati / kas distrofisi) işaret eder."
+    },
+    {
+     "type": "swipe_matching",
+     "cards": [
+      {
+       "text": "Kolda ekstansör, bacakta fleksör kaslarda baskın",
+       "explanation": "Piramidal zaaf dağılımıdır.",
+       "category": "left"
+      },
+      {
+       "text": "Hemipleji formunda vücut yarısını tutma",
+       "explanation": "Piramidal yol hasarına işaret eder.",
+       "category": "left"
+      },
+      {
+       "text": "Ekstremite köklerinde iki yanlı simetrik zaaf",
+       "explanation": "Primer kas hastalıklarına özgüdür.",
+       "category": "right"
+      },
+      {
+       "text": "Yerden kalkarken Gowers arazı görülmesi",
+       "explanation": "Pelvik proksimal kas zaafı bulgusudur.",
+       "category": "right"
+      }
+     ],
+     "leftCategory": "Piramidal Zaaf (1. MN)",
+     "rightCategory": "Miyopatik Zaaf (Kas)"
+    }
+   ]
+  },
+  {
+   "id": "k2-32-s10",
+   "slideNumber": 10,
+   "title": "2. Kas Tonusu: Spastisite ve Hipotoni",
+   "bolum": "2",
+   "content": "Kas tonusu, istirahat halindeki kasın pasif harekete karşı gösterdiği doğal dirençtir.\n\n- **Spastisite (Piramidal Hipertoni):** Birinci motor nöron lezyonlarında tonus artar. Bu artış üst ekstremitede fleksör kaslarda, alt ekstremitede ise ekstansör kaslarda baskındır; hıza bağımlıdır ve çakı arazı (clasp-knife) paterni sergiler.\n- **Hipotoni (Alt Motor Nöron Gevşekliği):** İkinci motor nöron lezyonlarında refleks kavsinin eferent motor kolu koptuğundan tonus azalır; pasif hareketlerde ekstremite aşırı gevşektir.\n- **Nöromüsküler Kavşak ve Kas:** Myasthenia graviste kas tonusu kural olarak değişmez; primer kas hastalıklarında ise bazen hafif hipotoni izlenebilir.\n\n> [!NOTE]\n> Kolda fleksör, bacakta ekstansör kas grubunda belirgin olan hipertoniye spastisite denir ve birinci motor nöron hasarının en tipik bulgusudur.",
+   "synthesisNarrative": "Kas tonusu, istirahat halindeki kasın pasif harekete karşı gösterdiği doğal dirençtir.\n\n- **Spastisite (Piramidal Hipertoni):** Birinci motor nöron lezyonlarında tonus artar. Bu artış üst ekstremitede fleksör kaslarda, alt ekstremitede ise ekstansör kaslarda baskındır; hıza bağımlıdır ve çakı arazı (clasp-knife) paterni sergiler.\n- **Hipotoni (Alt Motor Nöron Gevşekliği):** İkinci motor nöron lezyonlarında refleks kavsinin eferent motor kolu koptuğundan tonus azalır; pasif hareketlerde ekstremite aşırı gevşektir.\n- **Nöromüsküler Kavşak ve Kas:** Myasthenia graviste kas tonusu kural olarak değişmez; primer kas hastalıklarında ise bazen hafif hipotoni izlenebilir.\n\n> [!NOTE]\n> Kolda fleksör, bacakta ekstansör kas grubunda belirgin olan hipertoniye spastisite denir ve birinci motor nöron hasarının en tipik bulgusudur.",
+   "sourcePdf": {
+    "sourcePdfKey": "y25-k2-32-felcler",
+    "startPage": 11,
+    "endPage": 11
+   },
+   "pdfSayfalari": [
+    11,
+    11
+   ],
+   "sayfaHaritasi": "teyitli",
+   "interactiveElements": [
+    {
+     "type": "before_after_slider",
+     "leftTitle": "Birinci Motor Nöron (Spastisite)",
+     "rightTitle": "İkinci Motor Nöron (Hipotoni)",
+     "leftPoints": [
+      "Kas tonusu patolojik olarak artmıştır (hipertoni)",
+      "Kolda fleksör, bacakta ekstansör kaslarda baskındır",
+      "Spinal refleks kavsi üzerindeki inhibisyon kalkmıştır"
+     ],
+     "rightPoints": [
+      "Kas tonusu patolojik olarak azalmıştır (hipotoni)",
+      "Ekstremite pasif hareketlerde tamamen gevşektir",
+      "Refleks kavsinin eferent motor kolu kesintiye uğramıştır"
+     ]
+    },
+    {
+     "type": "micro_quiz",
+     "question": "Birinci motor nöron hastalıklarında görülen spastisite tablosunda tonus artışının baskın olduğu kas grupları hangileridir?",
+     "options": [
+      {
+       "text": "Kolda fleksör, bacakta ekstansör kas grubunda",
+       "isCorrect": true,
+       "explanation": "Kolda fleksör, bacakta ekstansör kas grubunda klinik tanımda doğru kabul edilen temel nörolojik kavramdır. Fizyopatolojik mekanizması soruda sorulan motor bulguyu eksiksiz biçimde açıklayarak doğrular."
+      },
+      {
+       "text": "Kolda ekstansör, bacakta fleksör kas grubunda",
+       "isCorrect": false,
+       "explanation": "Kolda ekstansör, bacakta fleksör kas grubunda sinir sisteminde kendine özgü işlevi bulunan farklı bir anatomik basamaktır. Bu soruda sorulan spesifik nörolojik lezyonun klinik ve fizyopatolojik özellikleriyle örtüşmez."
+      },
+      {
+       "text": "Tüm kas gruplarında kurşun boru şeklinde eşit direnç",
+       "isCorrect": false,
+       "explanation": "Tüm kas gruplarında kurşun boru şeklinde eşit direnç sinir sisteminde kendine özgü işlevi bulunan farklı bir anatomik basamaktır. Bu soruda sorulan spesifik nörolojik lezyonun klinik ve fizyopatolojik özellikleriyle örtüşmez."
+      },
+      {
+       "text": "Yalnızca boyun ve yüz mimik kaslarında",
+       "isCorrect": false,
+       "explanation": "Yalnızca boyun ve yüz mimik kaslarında sinir sisteminde kendine özgü işlevi bulunan farklı bir anatomik basamaktır. Bu soruda sorulan spesifik nörolojik lezyonun klinik ve fizyopatolojik özellikleriyle örtüşmez."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "maskedTerm": "spastisite",
+     "hint": "Birinci motor nöron hasarındaki hıza bağımlı hipertoninin adı",
+     "options": [
+      "spastisite",
+      "rijidite",
+      "hipotoni",
+      "fasikülasyon"
+     ],
+     "sentence": "Bir kas grubunda daha belirgin olan piramidal tip hipertoniye spastisite denir; alt motor nöron lezyonlarında ise tonus azalır."
+    },
+    {
+     "type": "active_recall",
+     "keyTakeaway": "1. MN = spastisite (hipertoni); 2. MN = hipotoni.",
+     "question": "Spastisite ile hipotoni arasındaki lezyon düzeyi farkı nedir?",
+     "answer": "Spastisite (hipertoni) birinci motor nöron (piramidal yol) lezyonlarında; hipotoni (kas gevşekliği) ise ikinci motor nöron (alt motor nöron) lezyonlarında görülür."
+    }
+   ]
+  },
+  {
+   "id": "k2-32-s11",
+   "slideNumber": 11,
+   "title": "3. Tendon Refleksleri: DTR ve Refleks Kavsi",
+   "bolum": "2",
+   "content": "Derin tendon refleksleri (DTR), segmental spinal refleks kavsinin bütünlüğünü ve üst merkezlerin kontrolünü yansıtır.\n\n- **Piramidal Yol Lezyonunda DTR Artışı:** Birinci motor nöron hasarında kortikospinal sistemin spinal refleks kavsi üzerindeki desendan inhibitör etkisi ortadan kalkar; bunun sonucunda DTR'ler patolojik olarak artar (**hiperrefleksi**) ve refleks yayılma alanı genişler.\n- **Alt Motor Nöron Lezyonunda DTR Kaybı:** İkinci motor nöron lezyonunda segmental refleks kavsinin eferent motor kolu hasar gördüğü için tendon refleksleri azalır veya tamamen kaybolur (**arefleksi**).\n- **Kavşak ve Kas Hastalıkları:** Myasthenia graviste tendon refleksleri normaldir; primer kas hastalıklarında belirgin kas erimesi olmadıkça DTR'ler korunur.\n\n> [!IMPORTANT]\n> Tendon reflekslerinin artması, piramidal sistemin hasarlandığını gösteren en objektif fizik muayene bulgularından biridir.",
+   "synthesisNarrative": "Derin tendon refleksleri (DTR), segmental spinal refleks kavsinin bütünlüğünü ve üst merkezlerin kontrolünü yansıtır.\n\n- **Piramidal Yol Lezyonunda DTR Artışı:** Birinci motor nöron hasarında kortikospinal sistemin spinal refleks kavsi üzerindeki desendan inhibitör etkisi ortadan kalkar; bunun sonucunda DTR'ler patolojik olarak artar (**hiperrefleksi**) ve refleks yayılma alanı genişler.\n- **Alt Motor Nöron Lezyonunda DTR Kaybı:** İkinci motor nöron lezyonunda segmental refleks kavsinin eferent motor kolu hasar gördüğü için tendon refleksleri azalır veya tamamen kaybolur (**arefleksi**).\n- **Kavşak ve Kas Hastalıkları:** Myasthenia graviste tendon refleksleri normaldir; primer kas hastalıklarında belirgin kas erimesi olmadıkça DTR'ler korunur.\n\n> [!IMPORTANT]\n> Tendon reflekslerinin artması, piramidal sistemin hasarlandığını gösteren en objektif fizik muayene bulgularından biridir.",
+   "sourcePdf": {
+    "sourcePdfKey": "y25-k2-32-felcler",
+    "startPage": 12,
+    "endPage": 12
+   },
+   "pdfSayfalari": [
+    12,
+    12
+   ],
+   "sayfaHaritasi": "teyitli",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Piramidal yol hastalıklarında derin tendon reflekslerinin patolojik olarak artmasının (hiperrefleksi) temel mekanizması nedir?",
+     "options": [
+      {
+       "text": "Piramidal sistemin spinal refleks kavsi üzerindeki inhibitör etkisinin kalkması",
+       "isCorrect": true,
+       "explanation": "Piramidal sistemin spinal refleks kavsi üzerindeki inhibitör etkisinin kalkması klinik tanımda doğru kabul edilen temel nörolojik kavramdır. Fizyopatolojik mekanizması soruda sorulan motor bulguyu eksiksiz biçimde açıklayarak doğrular."
+      },
+      {
+       "text": "Refleks kavsinin eferent motor kolunun tamamen kesilmesi",
+       "isCorrect": false,
+       "explanation": "Refleks kavsinin eferent motor kolunun tamamen kesilmesi sinir sisteminde kendine özgü işlevi bulunan farklı bir anatomik basamaktır. Bu soruda sorulan spesifik nörolojik lezyonun klinik ve fizyopatolojik özellikleriyle örtüşmez."
+      },
+      {
+       "text": "Çizgili kas liflerinin doğrudan hipertrofiye uğraması",
+       "isCorrect": false,
+       "explanation": "Çizgili kas liflerinin doğrudan hipertrofiye uğraması sinir sisteminde kendine özgü işlevi bulunan farklı bir anatomik basamaktır. Bu soruda sorulan spesifik nörolojik lezyonun klinik ve fizyopatolojik özellikleriyle örtüşmez."
+      },
+      {
+       "text": "Miyonöral kavşakta asetilkolin salınımının durması",
+       "isCorrect": false,
+       "explanation": "Miyonöral kavşakta asetilkolin salınımının durması sinir sisteminde kendine özgü işlevi bulunan farklı bir anatomik basamaktır. Bu soruda sorulan spesifik nörolojik lezyonun klinik ve fizyopatolojik özellikleriyle örtüşmez."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "maskedTerm": "artar",
+     "hint": "Birinci motor nöron hasarında DTR yanıtının yönü",
+     "options": [
+      "artar",
+      "azalır",
+      "değişmez",
+      "dalgalanır"
+     ],
+     "sentence": "Piramidal yol hastalıklarında tendon refleksleri artar, ikinci motor nöron lezyonunda ise refleks kavsinin eferent kolu bozulduğu için refleksler kaybolur."
+    },
+    {
+     "type": "active_recall",
+     "keyTakeaway": "2. MN hasarı = refleks kavsi eferent kol hasarı = DTR kaybı (arefleksi).",
+     "question": "Alt motor nöron lezyonlarında derin tendon reflekslerinin azalmasının veya kaybolmasının nedeni nedir?",
+     "answer": "Segmental spinal refleks kavsinin eferent (motor) kolunu oluşturan alt motor nöron aksonlarının hasarlanmasıdır; kavsin bütünlüğü bozulur."
+    },
+    {
+     "type": "spot_the_lie",
+     "items": [
+      {
+       "text": "Piramidal yol hastalıklarında derin tendon refleksleri belirgin şekilde artış gösterir.",
+       "isLie": false,
+       "explanation": "Desendan disinhibisyon sonucu hiperrefleksi gelişir."
+      },
+      {
+       "text": "Myasthenia graviste tendon refleksleri kural olarak normaldir.",
+       "isLie": false,
+       "explanation": "Miyastenide refleks kavsi sağlamdır, DTR normal kalır."
+      },
+      {
+       "text": "İkinci motor nöron lezyonlarında tendon refleksleri klonus eşliğinde hiperaktiftir.",
+       "isLie": true,
+       "explanation": "Tuzak: 2. motor nöron lezyonlarında DTR azalır veya kaybolur; klonus 1. MN hasarına aittir."
+      },
+      {
+       "text": "Primer kas hastalıklarında ileri atrofi olmadıkça refleksler normal kalabilir.",
+       "isLie": false,
+       "explanation": "Kas dokusu tamamen erimedikçe DTR yanıtı korunur."
+      }
+     ],
+     "topic": "Motor Sistem Ayırıcı Tanı İlkeleri"
+    }
+   ]
+  },
+  {
+   "id": "k2-32-s12",
+   "slideNumber": 12,
+   "title": "4. Patolojik Refleksler: Babinski, Hoffmann ve Klonus",
+   "bolum": "2",
+   "content": "Patolojik refleksler, normalde desendan piramidal inhibisyon altında baskılanan, ancak kortikospinal yol hasar gördüğünde serbestleşen primitif yanıtlardır.\n\n- **Babinski Delili:** Ayak tabanı dış kenarının künt bir cisimle uyarılmasıyla ayak başparmağında ekstansiyon (yukarı bükülme) ve diğer parmaklarda yelpaze şeklinde açılma ortaya çıkar.\n- **Hoffmann Delili:** El orta parmak distal falanksının ani fleksiyonla bırakılması sonucu başparmak ve işaret parmağında fleksiyon-adduksiyon yanıtıdır.\n- **Klonus:** Kas tendonunun ani ve sürekli gerilmesiyle ortaya çıkan ritmik, istemsiz kasılma serisidir; en sık aşil klonusu izlenir.\n- **Ayırıcı Tanı Gücü:** Alt motor nöron, Myasthenia gravis ve primer kas hastalıklarında patolojik refleks **kesinlikle yoktur**.\n\n> [!IMPORTANT]\n> Babinski delilinin saptanması, tek başına kortikospinal piramidal yol hasarını kesin olarak kanıtlayan en güvenilir bulgudur.",
+   "synthesisNarrative": "Patolojik refleksler, normalde desendan piramidal inhibisyon altında baskılanan, ancak kortikospinal yol hasar gördüğünde serbestleşen primitif yanıtlardır.\n\n- **Babinski Delili:** Ayak tabanı dış kenarının künt bir cisimle uyarılmasıyla ayak başparmağında ekstansiyon (yukarı bükülme) ve diğer parmaklarda yelpaze şeklinde açılma ortaya çıkar.\n- **Hoffmann Delili:** El orta parmak distal falanksının ani fleksiyonla bırakılması sonucu başparmak ve işaret parmağında fleksiyon-adduksiyon yanıtıdır.\n- **Klonus:** Kas tendonunun ani ve sürekli gerilmesiyle ortaya çıkan ritmik, istemsiz kasılma serisidir; en sık aşil klonusu izlenir.\n- **Ayırıcı Tanı Gücü:** Alt motor nöron, Myasthenia gravis ve primer kas hastalıklarında patolojik refleks **kesinlikle yoktur**.\n\n> [!IMPORTANT]\n> Babinski delilinin saptanması, tek başına kortikospinal piramidal yol hasarını kesin olarak kanıtlayan en güvenilir bulgudur.",
+   "sourcePdf": {
+    "sourcePdfKey": "y25-k2-32-felcler",
+    "startPage": 13,
+    "endPage": 13
+   },
+   "pdfSayfalari": [
+    13,
+    13
+   ],
+   "sayfaHaritasi": "teyitli",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Aşağıdaki klinik tablolardan hangisinde Babinski veya klonus gibi patolojik reflekslerin pozitifleşmesi beklenir?",
+     "options": [
+      {
+       "text": "Kortikospinal piramidal yol hastalıkları",
+       "isCorrect": true,
+       "explanation": "Kortikospinal piramidal yol hastalıkları klinik tanımda doğru kabul edilen temel nörolojik kavramdır. Fizyopatolojik mekanizması soruda sorulan motor bulguyu eksiksiz biçimde açıklayarak doğrular."
+      },
+      {
+       "text": "Alt motor nöron ön boynuz hücre hastalıkları",
+       "isCorrect": false,
+       "explanation": "Alt motor nöron ön boynuz hücre hastalıkları sinir sisteminde kendine özgü işlevi bulunan farklı bir anatomik basamaktır. Bu soruda sorulan spesifik nörolojik lezyonun klinik ve fizyopatolojik özellikleriyle örtüşmez."
+      },
+      {
+       "text": "Myasthenia gravis",
+       "isCorrect": false,
+       "explanation": "Myasthenia gravis sinir sisteminde kendine özgü işlevi bulunan farklı bir anatomik basamaktır. Bu soruda sorulan spesifik nörolojik lezyonun klinik ve fizyopatolojik özellikleriyle örtüşmez."
+      },
+      {
+       "text": "Duchenne kas distrofisi",
+       "isCorrect": false,
+       "explanation": "Duchenne kas distrofisi sinir sisteminde kendine özgü işlevi bulunan farklı bir anatomik basamaktır. Bu soruda sorulan spesifik nörolojik lezyonun klinik ve fizyopatolojik özellikleriyle örtüşmez."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "maskedTerm": "Babinski",
+     "hint": "Ayak tabanı uyarısıyla başparmak ekstansiyonu yanıtı",
+     "options": [
+      "Babinski",
+      "Aşil",
+      "Patella",
+      "Moro"
+     ],
+     "sentence": "Kortikospinal yol hastalıklarında Babinski, Hoffmann delilleri ve klonus gibi patolojik refleksler ortaya çıkar."
+    },
+    {
+     "type": "active_recall",
+     "keyTakeaway": "Patolojik refleks varsa = lezyon kesinlikle 1. motor nörondadır.",
+     "question": "Patolojik reflekslerin (Babinski, Hoffmann, klonus) motor kompartman ayırıcı tanısındaki değeri nedir?",
+     "answer": "Yalnızca birinci motor nöron (kortikospinal yol) hasarında görülürler. İkinci motor nöron, kavşak ve kas hastalıklarında patolojik refleks kesinlikle yoktur."
+    },
+    {
+     "type": "swipe_matching",
+     "cards": [
+      {
+       "text": "Kortikospinal piramidal yol lezyonu",
+       "explanation": "Babinski, klonus ve Hoffmann pozitiftir.",
+       "category": "left"
+      },
+      {
+       "text": "Üst motor nöron hemiplejisi",
+       "explanation": "Piramidal desendan hasarda ortaya çıkar.",
+       "category": "left"
+      },
+      {
+       "text": "Ön boynuz alfa motor nöron hasarı",
+       "explanation": "Alt motor nöronda patolojik refleks görülmez.",
+       "category": "right"
+      },
+      {
+       "text": "Myasthenia gravis kavşak iletim kusuru",
+       "explanation": "Nöromüsküler kavşakta patolojik refleks yoktur.",
+       "category": "right"
+      }
+     ],
+     "leftCategory": "Patolojik Refleks Var",
+     "rightCategory": "Patolojik Refleks Yok"
+    }
+   ]
+  },
+  {
+   "id": "k2-32-s13",
+   "slideNumber": 13,
+   "title": "5. Kas Atrofisi: Nörojenik ve İnaktivite Erimesi",
+   "bolum": "2",
+   "content": "Kas atrofisi, kas kütlesinin ve lif çapının patolojik olarak azalmasıdır; mekanizması lezyon düzeyine göre temel farklılıklar gösterir.\n\n- **Birinci Motor Nöron Hastalıkları:** Felçli kol ve bacakta erken ve gerçek bir denervasyon atrofisi **yoktur**. Yalnızca uzun süreli hareketsizliğe bağlı global bir **inaktivite incelmesi** görülebilir.\n- **İkinci Motor Nöron Hastalıkları:** İkinci motor nöron kas lifinin canlılığı için gerekli trofik faktörleri sağladığından, hasarında hızla ilerleyen ağır **nörojenik denervasyon atrofisi** gelişir.\n- **Nöromüsküler Kavşak:** Myasthenia graviste kas atrofisi görülmez; kas lifleri trofik desteğini almaya devam eder.\n- **Çizgili Kas Hastalıkları:** Kas distrofileri ve polimiyozit gibi miyopatiler genellikle belirgin kas erimesiyle seyreder.\n\n> [!NOTE]\n> Erken dönemde saptanan asimetrik veya segmanter kas erimesi, lezyonun alt motor nöronda olduğunun çok güçlü bir göstergesidir.",
+   "synthesisNarrative": "Kas atrofisi, kas kütlesinin ve lif çapının patolojik olarak azalmasıdır; mekanizması lezyon düzeyine göre temel farklılıklar gösterir.\n\n- **Birinci Motor Nöron Hastalıkları:** Felçli kol ve bacakta erken ve gerçek bir denervasyon atrofisi **yoktur**. Yalnızca uzun süreli hareketsizliğe bağlı global bir **inaktivite incelmesi** görülebilir.\n- **İkinci Motor Nöron Hastalıkları:** İkinci motor nöron kas lifinin canlılığı için gerekli trofik faktörleri sağladığından, hasarında hızla ilerleyen ağır **nörojenik denervasyon atrofisi** gelişir.\n- **Nöromüsküler Kavşak:** Myasthenia graviste kas atrofisi görülmez; kas lifleri trofik desteğini almaya devam eder.\n- **Çizgili Kas Hastalıkları:** Kas distrofileri ve polimiyozit gibi miyopatiler genellikle belirgin kas erimesiyle seyreder.\n\n> [!NOTE]\n> Erken dönemde saptanan asimetrik veya segmanter kas erimesi, lezyonun alt motor nöronda olduğunun çok güçlü bir göstergesidir.",
+   "sourcePdf": {
+    "sourcePdfKey": "y25-k2-32-felcler",
+    "startPage": 14,
+    "endPage": 14
+   },
+   "pdfSayfalari": [
+    14,
+    14
+   ],
+   "sayfaHaritasi": "teyitli",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Aşağıdaki klinik tablolardan hangisinde erken ve belirgin nörojenik kas atrofisi gelişmesi beklenir?",
+     "options": [
+      {
+       "text": "İkinci motor nöron (alt motor nöron) lezyonları",
+       "isCorrect": true,
+       "explanation": "İkinci motor nöron klinik tanımda doğru kabul edilen temel nörolojik kavramdır. Fizyopatolojik mekanizması soruda sorulan motor bulguyu eksiksiz biçimde açıklayarak doğrular."
+      },
+      {
+       "text": "Birinci motor nöron akut kapsüler hemiplejisi",
+       "isCorrect": false,
+       "explanation": "Birinci motor nöron akut kapsüler hemiplejisi sinir sisteminde kendine özgü işlevi bulunan farklı bir anatomik basamaktır. Bu soruda sorulan spesifik nörolojik lezyonun klinik ve fizyopatolojik özellikleriyle örtüşmez."
+      },
+      {
+       "text": "Myasthenia gravis",
+       "isCorrect": false,
+       "explanation": "Myasthenia gravis sinir sisteminde kendine özgü işlevi bulunan farklı bir anatomik basamaktır. Bu soruda sorulan spesifik nörolojik lezyonun klinik ve fizyopatolojik özellikleriyle örtüşmez."
+      },
+      {
+       "text": "İzole serebral korteks parietal lezyonu",
+       "isCorrect": false,
+       "explanation": "İzole serebral korteks parietal lezyonu sinir sisteminde kendine özgü işlevi bulunan farklı bir anatomik basamaktır. Bu soruda sorulan spesifik nörolojik lezyonun klinik ve fizyopatolojik özellikleriyle örtüşmez."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "maskedTerm": "atrofi",
+     "hint": "Kas kütlesinin ve lif hacminin erimesi",
+     "options": [
+      "atrofi",
+      "spastisite",
+      "klonus",
+      "fasikülasyon"
+     ],
+     "sentence": "Birinci motor nöron hastalıklarında felçli kol ve bacakta atrofi yoktur; sadece inaktiviteye bağlı global bir incelme görülebilir."
+    },
+    {
+     "type": "active_recall",
+     "keyTakeaway": "1. MN = inaktivite incelmesi; 2. MN = ağır nörojenik denervasyon atrofisi.",
+     "question": "Birinci motor nörondaki inaktivite incelmesi ile ikinci motor nörondaki kas atrofisi arasındaki fark nedir?",
+     "answer": "1. motor nöronda trofik girdi korunduğu için hafif ve global bir incelme olur; 2. motor nöronda ise trofik girdi kesildiği için hızla ağır, fokal ve ilerleyici nörojenik denervasyon atrofisi gelişir."
+    },
+    {
+     "type": "before_after_slider",
+     "leftTitle": "Birinci Motor Nöron",
+     "rightTitle": "İkinci Motor Nöron",
+     "leftPoints": [
+      "Erken dönemde belirgin kas atrofisi yoktur",
+      "Kas liflerinin trofik desteği korunur",
+      "Yalnızca geç dönemde inaktivite incelmesi olabilir"
+     ],
+     "rightPoints": [
+      "Hızla ilerleyen ağır nörojenik atrofi gelişir",
+      "Kas liflerinin trofik desteği tamamen kesilir",
+      "Tutulan miyotom veya sinir alanında belirgin kas erimesi izlenir"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-32-s14",
+   "slideNumber": 14,
+   "title": "6. Fasikülasyon Bulgusu ve Ön Boynuz Hastalıkları",
+   "bolum": "2",
+   "content": "Fasikülasyon, dejenere olan tek bir motor ünitenin kas liflerinin spontan ve istemsiz olarak kasılması sonucu ortaya çıkan deri altı seyirmelerdir.\n\n- **Ön Boynuz Tutulumunun Kanıtı:** İkinci motor nöron hastalıklarında lezyon medulla spinalis **ön boynuz hücrelerinde** ise kaslarda fasikülasyonlar son derece belirgindir.\n- **Klinik Muayene:** Fasikülasyonlar dinlenme halinde spontan olarak gözlenebilir; bazen de ortaya çıkarmak için kaslara elle vurmak veya refleks çekiciyle hafifçe dokunmak gerekebilir.\n- **Piramidal ve Diğer Seviyelerde Yokluk:** Piramidal yol hastalıklarında kaslarda fasikülasyon **görülmez**. Myasthenia gravis ve primer kas hastalıklarında da fasikülasyon beklenmez.\n\n> [!IMPORTANT]\n> Kas güçsüzlüğü olan bir hastada deri altında fasikülasyon (seyirme) görülmesi, lezyonun alt motor nöron ön boynuzunda olduğunu gösteren en değerli işarettir.",
+   "synthesisNarrative": "Fasikülasyon, dejenere olan tek bir motor ünitenin kas liflerinin spontan ve istemsiz olarak kasılması sonucu ortaya çıkan deri altı seyirmelerdir.\n\n- **Ön Boynuz Tutulumunun Kanıtı:** İkinci motor nöron hastalıklarında lezyon medulla spinalis **ön boynuz hücrelerinde** ise kaslarda fasikülasyonlar son derece belirgindir.\n- **Klinik Muayene:** Fasikülasyonlar dinlenme halinde spontan olarak gözlenebilir; bazen de ortaya çıkarmak için kaslara elle vurmak veya refleks çekiciyle hafifçe dokunmak gerekebilir.\n- **Piramidal ve Diğer Seviyelerde Yokluk:** Piramidal yol hastalıklarında kaslarda fasikülasyon **görülmez**. Myasthenia gravis ve primer kas hastalıklarında da fasikülasyon beklenmez.\n\n> [!IMPORTANT]\n> Kas güçsüzlüğü olan bir hastada deri altında fasikülasyon (seyirme) görülmesi, lezyonun alt motor nöron ön boynuzunda olduğunu gösteren en değerli işarettir.",
+   "sourcePdf": {
+    "sourcePdfKey": "y25-k2-32-felcler",
+    "startPage": 15,
+    "endPage": 15
+   },
+   "pdfSayfalari": [
+    15,
+    15
+   ],
+   "sayfaHaritasi": "teyitli",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Fizik muayenede kaslarda spontan veya mekanik uyarımla deri altında seyirmeler (fasikülasyon) saptanan bir hastada lezyon nerede aranmalıdır?",
+     "options": [
+      {
+       "text": "Medulla spinalis ön boynuz hücreleri",
+       "isCorrect": true,
+       "explanation": "Medulla spinalis ön boynuz hücreleri klinik tanımda doğru kabul edilen temel nörolojik kavramdır. Fizyopatolojik mekanizması soruda sorulan motor bulguyu eksiksiz biçimde açıklayarak doğrular."
+      },
+      {
+       "text": "Kapsüla interna piramidal lifleri",
+       "isCorrect": false,
+       "explanation": "Kapsüla interna piramidal lifleri sinir sisteminde kendine özgü işlevi bulunan farklı bir anatomik basamaktır. Bu soruda sorulan spesifik nörolojik lezyonun klinik ve fizyopatolojik özellikleriyle örtüşmez."
+      },
+      {
+       "text": "Nöromüsküler kavşak asetilkolin reseptörleri",
+       "isCorrect": false,
+       "explanation": "Nöromüsküler kavşak asetilkolin reseptörleri sinir sisteminde kendine özgü işlevi bulunan farklı bir anatomik basamaktır. Bu soruda sorulan spesifik nörolojik lezyonun klinik ve fizyopatolojik özellikleriyle örtüşmez."
+      },
+      {
+       "text": "Serebral korteks duyu alanı",
+       "isCorrect": false,
+       "explanation": "Serebral korteks duyu alanı sinir sisteminde kendine özgü işlevi bulunan farklı bir anatomik basamaktır. Bu soruda sorulan spesifik nörolojik lezyonun klinik ve fizyopatolojik özellikleriyle örtüşmez."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "maskedTerm": "fasikülasyon",
+     "hint": "Ön boynuz hücresi dejenerasyonuna bağlı deri altı seyirmeler",
+     "options": [
+      "fasikülasyon",
+      "spastisite",
+      "atrofi",
+      "Babinski"
+     ],
+     "sentence": "Piramidal yol hastalıklarında kaslarda fasikülasyon görülmez; ön boynuz lezyonlarında ise deri altında seyirmeler dikkati çeker."
+    },
+    {
+     "type": "active_recall",
+     "keyTakeaway": "Piramidal yolda fasikülasyon yoktur; ön boynuzda vardır.",
+     "question": "Fasikülasyon ile birinci motor nöron lezyonları arasındaki ilişki nasıldır?",
+     "answer": "Birinci motor nöron (piramidal yol) lezyonlarında fasikülasyon kesinlikle görülmez. Fasikülasyon alt motor nöron ön boynuz tutulumuna özgüdür."
+    },
+    {
+     "type": "spot_the_lie",
+     "items": [
+      {
+       "text": "Fasikülasyonlar deri altında istemsiz seyirmeler şeklinde çıplak gözle izlenebilir.",
+       "isLie": false,
+       "explanation": "Tek bir motor ünitenin kasılması deri altında dalgalanma yapar."
+      },
+      {
+       "text": "Bazen fasikülasyonları tetiklemek için kaslara elle veya çekiçle vurmak gerekebilir.",
+       "isLie": false,
+       "explanation": "Mekanik uyarı irritabl motor nöron deşarjını tetikler."
+      },
+      {
+       "text": "Kortikospinal traktus hemiplejilerinde felçli uzuvda yaygın fasikülasyonlar beklenir.",
+       "isLie": true,
+       "explanation": "Tuzak: Piramidal yol hastalıklarında kaslarda fasikülasyon görülmez."
+      },
+      {
+       "text": "Ön boynuz hücresi lezyonlarında fasikülasyon klinik tanıda çok değerlidir.",
+       "isLie": false,
+       "explanation": "Alt motor nöron tutulumunun doğrudan kanıtıdır."
+      }
+     ],
+     "topic": "Motor Sistem Ayırıcı Tanı İlkeleri"
+    }
+   ]
+  },
+  {
+   "id": "k2-32-s15",
+   "slideNumber": 15,
+   "title": "7. Duyu Kusuru Varlığı ve Ayırıcı Tanı",
+   "bolum": "2",
+   "content": "Motor güçsüzlüğe duyu kusurunun eşlik edip etmemesi, lezyonun saf motor bir yapıda mı yoksa mikst bir yapıda mı olduğunu kesinleştirir.\n\n- **Saf Motor Kompartmanlar:** Tek başına kortikospinal yol, medulla spinalis ön boynuz hücreleri, miyonöral plak (sinir-kas kavşağı) ve çizgili kasın primer hastalıklarında **duyu kusuru yoktur**.\n- **Duyu Kusuru Eşlik Eden Durumlar:** Lezyon periferik sinirde, pleksusta veya omuriliğin transvers kesitinde ise motor zaafın yanı sıra uyuşma, karıncalanma, hipoestezi ve his kaybı izlenir.\n- **Polinöropati:** Hem motor hem duyusal periferik lifler tutulduğundan, distal zaafa eldiven-çorap tarzı duyu kusuru eşlik eder.\n\n> [!NOTE]\n> Kas zaafı olan bir hastada duyu muayenesinin tamamen normal olması lezyonu saf motor yapılara (ön boynuz, izole piramidal yol, kavşak veya kas) sınırlar.",
+   "synthesisNarrative": "Motor güçsüzlüğe duyu kusurunun eşlik edip etmemesi, lezyonun saf motor bir yapıda mı yoksa mikst bir yapıda mı olduğunu kesinleştirir.\n\n- **Saf Motor Kompartmanlar:** Tek başına kortikospinal yol, medulla spinalis ön boynuz hücreleri, miyonöral plak (sinir-kas kavşağı) ve çizgili kasın primer hastalıklarında **duyu kusuru yoktur**.\n- **Duyu Kusuru Eşlik Eden Durumlar:** Lezyon periferik sinirde, pleksusta veya omuriliğin transvers kesitinde ise motor zaafın yanı sıra uyuşma, karıncalanma, hipoestezi ve his kaybı izlenir.\n- **Polinöropati:** Hem motor hem duyusal periferik lifler tutulduğundan, distal zaafa eldiven-çorap tarzı duyu kusuru eşlik eder.\n\n> [!NOTE]\n> Kas zaafı olan bir hastada duyu muayenesinin tamamen normal olması lezyonu saf motor yapılara (ön boynuz, izole piramidal yol, kavşak veya kas) sınırlar.",
+   "sourcePdf": {
+    "sourcePdfKey": "y25-k2-32-felcler",
+    "startPage": 16,
+    "endPage": 16
+   },
+   "pdfSayfalari": [
+    16,
+    16
+   ],
+   "sayfaHaritasi": "teyitli",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Aşağıdaki nörolojik lezyon düzeylerinin hangisinde motor zaafa kural olarak duyu kusurunun da eşlik etmesi beklenir?",
+     "options": [
+      {
+       "text": "Periferik sinir veya lumbosakral pleksus lezyonları",
+       "isCorrect": true,
+       "explanation": "Periferik sinir veya lumbosakral pleksus lezyonları klinik tanımda doğru kabul edilen temel nörolojik kavramdır. Fizyopatolojik mekanizması soruda sorulan motor bulguyu eksiksiz biçimde açıklayarak doğrular."
+      },
+      {
+       "text": "İzole medulla spinalis ön boynuz hücre lezyonu",
+       "isCorrect": false,
+       "explanation": "İzole medulla spinalis ön boynuz hücre lezyonu sinir sisteminde kendine özgü işlevi bulunan farklı bir anatomik basamaktır. Bu soruda sorulan spesifik nörolojik lezyonun klinik ve fizyopatolojik özellikleriyle örtüşmez."
+      },
+      {
+       "text": "Myasthenia gravis nöromüsküler kavşak hasarı",
+       "isCorrect": false,
+       "explanation": "Myasthenia gravis nöromüsküler kavşak hasarı sinir sisteminde kendine özgü işlevi bulunan farklı bir anatomik basamaktır. Bu soruda sorulan spesifik nörolojik lezyonun klinik ve fizyopatolojik özellikleriyle örtüşmez."
+      },
+      {
+       "text": "Primer çizgili kas distrofisi",
+       "isCorrect": false,
+       "explanation": "Primer çizgili kas distrofisi sinir sisteminde kendine özgü işlevi bulunan farklı bir anatomik basamaktır. Bu soruda sorulan spesifik nörolojik lezyonun klinik ve fizyopatolojik özellikleriyle örtüşmez."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "maskedTerm": "duyu kusuru",
+     "hint": "Saf motor nöron hasarında kesinlikle bulunmayan klinik bulgu",
+     "options": [
+      "duyu kusuru",
+      "kas zaafı",
+      "atrofi",
+      "refleks kaybı"
+     ],
+     "sentence": "Tek başına kortikospinal yol ve ön boynuz hastalıklarında duyu kusuru yoktur; lezyon periferik sinirde ise zaafla birlikte duyu kusuru bulunur."
+    },
+    {
+     "type": "active_recall",
+     "keyTakeaway": "Ön boynuz, piramidal yol, kavşak ve kas saf motordur; duyu kusuru yoktur.",
+     "question": "Saf motor lezyon kabul edilen ve duyu kusurunun beklenmediği motor sistem yapıları hangileridir?",
+     "answer": "1) İzole kortikospinal piramidal yol, 2) Ön boynuz hücreleri, 3) Nöromüsküler kavşak (miyonöral plak), 4) Doğrudan çizgili kas lifleri."
+    },
+    {
+     "type": "swipe_matching",
+     "cards": [
+      {
+       "text": "Medulla spinalis ön boynuz hücresi lezyonu",
+       "explanation": "Saf motor nörondur, duyu korunur.",
+       "category": "left"
+      },
+      {
+       "text": "Myasthenia gravis miyonöral plak iletim kusuru",
+       "explanation": "Kavşak patolojisinde duyu tamamen normaldir.",
+       "category": "left"
+      },
+      {
+       "text": "Periferik mikst sinir kesisi veya tuzak nöropatisi",
+       "explanation": "Duyusal lifler de hasar görür.",
+       "category": "right"
+      },
+      {
+       "text": "Polinöropatide eldiven-çorap tarzı his kusuru",
+       "explanation": "Mikst periferik sinir dejenerasyonudur.",
+       "category": "right"
+      }
+     ],
+     "leftCategory": "Duyu Kusuru Yok (Saf Motor)",
+     "rightCategory": "Duyu Kusuru Var (Mikst Yapı)"
+    }
+   ]
+  },
+  {
+   "id": "k2-32-s16",
+   "slideNumber": 16,
+   "title": "[TEKRAR SAYFASI - CHECKPOINT 2] Motor Muayene ve Ayırıcı Tanı Kriterleri",
+   "bolum": "Ayırıcı Tanı Kriterleri",
+   "content": "Bu aşamaya kadar kas zaafı olan hastada değerlendirilen yedi temel ayırıcı tanı kriterini tamamladık.\n\n- **Zaaf Dağılımı:** 1. MN'de kolda ekstansör, bacakta fleksör; 2. MN'de miyotom/sinir; kavşakta okülobulber; kasta iki yanlı proksimal (Gowers).\n- **Kas Tonusu:** 1. MN'de spastisite (kolda fleksör, bacakta ekstansör); 2. MN'de hipotoni; kavşak ve kasta normal/hafif gevşek.\n- **Tendon Refleksleri (DTR):** 1. MN'de desendan disinhibisyonla hiperrefleksi; 2. MN'de eferent kol hasarıyla arefleksi; kavşakta normal.\n- **Patolojik Refleksler:** Yalnız 1. MN'de (Babinski, klonus, Hoffmann) pozitif; diğer basamaklarda kesinlikle yoktur.\n- **Atrofi ve Fasikülasyon:** 1. MN'de erken atrofi ve fasikülasyon yoktur; 2. MN'de erken nörojenik atrofi ve ön boynuzda fasikülasyonlar karakteristiktir.\n- **Duyu Kusuru:** Ön boynuz, piramidal yol, kavşak ve kas saf motordur; periferik sinirde duyu kusuru eşlik eder.",
+   "synthesisNarrative": "Bu aşamaya kadar kas zaafı olan hastada değerlendirilen yedi temel ayırıcı tanı kriterini tamamladık.\n\n- **Zaaf Dağılımı:** 1. MN'de kolda ekstansör, bacakta fleksör; 2. MN'de miyotom/sinir; kavşakta okülobulber; kasta iki yanlı proksimal (Gowers).\n- **Kas Tonusu:** 1. MN'de spastisite (kolda fleksör, bacakta ekstansör); 2. MN'de hipotoni; kavşak ve kasta normal/hafif gevşek.\n- **Tendon Refleksleri (DTR):** 1. MN'de desendan disinhibisyonla hiperrefleksi; 2. MN'de eferent kol hasarıyla arefleksi; kavşakta normal.\n- **Patolojik Refleksler:** Yalnız 1. MN'de (Babinski, klonus, Hoffmann) pozitif; diğer basamaklarda kesinlikle yoktur.\n- **Atrofi ve Fasikülasyon:** 1. MN'de erken atrofi ve fasikülasyon yoktur; 2. MN'de erken nörojenik atrofi ve ön boynuzda fasikülasyonlar karakteristiktir.\n- **Duyu Kusuru:** Ön boynuz, piramidal yol, kavşak ve kas saf motordur; periferik sinirde duyu kusuru eşlik eder.",
+   "sourcePdf": {
+    "pages": [
+     10,
+     11,
+     12,
+     13,
+     14,
+     15,
+     16
+    ],
+    "sayfa": 12,
+    "doc": 0
+   },
+   "pdfSayfalari": [
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16
+   ],
+   "sayfaHaritasi": "teyitli",
+   "interactiveElements": [
+    {
+     "type": "interactive_table",
+     "tableHeaders": [
+      "Muayene Kriteri",
+      "1. Motor Nöron (Piramidal)",
+      "2. Motor Nöron (Alt Motor)"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Kas Tonusu"
+        },
+        {
+         "text": "Artar (spastisite)",
+         "isRevealed": false,
+         "hint": "Kolda fleksör bacakta ekstansör",
+         "isMasked": true
+        },
+        {
+         "text": "Azalır (hipotoni)"
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Tendon Refleksleri"
+        },
+        {
+         "text": "Artar (hiperrefleksi)",
+         "isRevealed": false,
+         "hint": "Desendan disinhibisyon",
+         "isMasked": true
+        },
+        {
+         "text": "Azalır veya kaybolur (arefleksi)"
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Patolojik Refleks"
+        },
+        {
+         "text": "Var (Babinski, klonus)",
+         "isRevealed": false,
+         "hint": "Kortikospinal hasar işareti",
+         "isMasked": true
+        },
+        {
+         "text": "Yok"
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Fasikülasyon"
+        },
+        {
+         "text": "Yok",
+         "isRevealed": false,
+         "hint": "Piramidalde görülmez",
+         "isMasked": true
+        },
+        {
+         "text": "Var (ön boynuz lezyonunda)"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "micro_quiz",
+     "question": "Fizik muayenesinde spastisite, hiperrefleksi ve pozitif Babinski saptanan fakat kas atrofisi ve fasikülasyon izlenmeyen hastada lezyon seviyesi hangisidir?",
+     "options": [
+      {
+       "text": "Birinci motor nöron (kortikospinal yol)",
+       "isCorrect": true,
+       "explanation": "Birinci motor nöron klinik tanımda doğru kabul edilen temel nörolojik kavramdır. Fizyopatolojik mekanizması soruda sorulan motor bulguyu eksiksiz biçimde açıklayarak doğrular."
+      },
+      {
+       "text": "İkinci motor nöron ön boynuz hücresi",
+       "isCorrect": false,
+       "explanation": "İkinci motor nöron ön boynuz hücresi sinir sisteminde kendine özgü işlevi bulunan farklı bir anatomik basamaktır. Bu soruda sorulan spesifik nörolojik lezyonun klinik ve fizyopatolojik özellikleriyle örtüşmez."
+      },
+      {
+       "text": "Sinir-kas kavşağı miyonöral plağı",
+       "isCorrect": false,
+       "explanation": "Sinir-kas kavşağı miyonöral plağı sinir sisteminde kendine özgü işlevi bulunan farklı bir anatomik basamaktır. Bu soruda sorulan spesifik nörolojik lezyonun klinik ve fizyopatolojik özellikleriyle örtüşmez."
+      },
+      {
+       "text": "Primer çizgili kas lifi kompartmanı",
+       "isCorrect": false,
+       "explanation": "Primer çizgili kas lifi kompartmanı sinir sisteminde kendine özgü işlevi bulunan farklı bir anatomik basamaktır. Bu soruda sorulan spesifik nörolojik lezyonun klinik ve fizyopatolojik özellikleriyle örtüşmez."
+      }
+     ]
+    },
+    {
+     "type": "branching_logic",
+     "scenario": "Hasta sol kol ve bacağında ilerleyici güç kaybı ile başvuruyor. Muayenede kolda ekstansör, bacakta fleksör kas zaafı, DTR artışı ve Babinski pozitifliği saptanıyor.",
+     "question": "Bu klinik bulgular ışığında bir sonraki en doğru yaklaşım nedir?",
+     "options": [
+      {
+       "text": "Sağ serebral hemisfer piramidal yolunu değerlendirmek üzere kranial görüntüleme istemek",
+       "outcome": "Doğru. Piramidal hemiparezide beyin görüntülemesi temel tanı basamağıdır.",
+       "isCorrect": true,
+       "feedback": "Sağ serebral hemisfer piramidal yolunu değerlendirmek üzere kranial görüntüleme istemek klinik tanımda doğru kabul edilen temel nörolojik kavramdır. Fizyopatolojik mekanizması soruda sorulan motor bulguyu eksiksiz biçimde açıklayarak doğrular.",
+       "explanation": "Sağ serebral hemisfer piramidal yolunu değerlendirmek üzere kranial görüntüleme istemek klinik tanımda doğru kabul edilen temel nörolojik kavramdır. Fizyopatolojik mekanizması soruda sorulan motor bulguyu eksiksiz biçimde açıklayarak doğrular."
+      },
+      {
+       "text": "Primer kas hastalığı düşünerek kas biyopsisi planlamak",
+       "outcome": "Yanlış. Babinski ve spastisite primer kas hastalığında kesinlikle görülmez.",
+       "isCorrect": false,
+       "feedback": "Primer kas hastalığı düşünerek kas biyopsisi planlamak sinir sisteminde kendine özgü işlevi bulunan farklı bir anatomik basamaktır. Bu soruda sorulan spesifik nörolojik lezyonun klinik ve fizyopatolojik özellikleriyle örtüşmez.",
+       "explanation": "Primer kas hastalığı düşünerek kas biyopsisi planlamak sinir sisteminde kendine özgü işlevi bulunan farklı bir anatomik basamaktır. Bu soruda sorulan spesifik nörolojik lezyonun klinik ve fizyopatolojik özellikleriyle örtüşmez."
+      },
+      {
+       "text": "Miyasteni düşünerek buz testi uygulamak",
+       "outcome": "Yanlış. Hiperrefleksi ve Babinski kavşak patolojisi ile bağdaşmaz.",
+       "isCorrect": false,
+       "feedback": "Miyasteni düşünerek buz testi uygulamak sinir sisteminde kendine özgü işlevi bulunan farklı bir anatomik basamaktır. Bu soruda sorulan spesifik nörolojik lezyonun klinik ve fizyopatolojik özellikleriyle örtüşmez.",
+       "explanation": "Miyasteni düşünerek buz testi uygulamak sinir sisteminde kendine özgü işlevi bulunan farklı bir anatomik basamaktır. Bu soruda sorulan spesifik nörolojik lezyonun klinik ve fizyopatolojik özellikleriyle örtüşmez."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "keyTakeaway": "1. MN = hiperrefleksi + Babinski (+); 2. MN = arefleksi + Babinski (-).",
+     "question": "Patolojik refleksler ile derin tendon reflekslerinin 1. ve 2. motor nöron lezyonlarındaki zıt davranışı nasıldır?",
+     "answer": "1. motor nöron lezyonunda DTR artar ve Babinski pozitiftir; 2. motor nöron lezyonunda ise DTR azalır/kaybolur ve Babinski kesinlikle yoktur."
+    }
+   ]
+  },
+  {
+   "id": "k2-32-s17",
+   "slideNumber": 17,
+   "title": "Felç Ayırıcı Tanı Matrisi: Dört Düzeyin Karşılaştırması",
+   "bolum": "3",
+   "content": "Motor güçsüzlükte dört ana anatomik basamağın karşılaştırmalı matrisi tanıya doğrudan ulaştırır.\n\n- **1. Motor Nöron:** Zaaf kolda ekstansör bacakta fleksör; tonus artmış (spastisite); DTR artmış; patolojik refleks **var**; atrofi ve fasikülasyon **yok**; duyu kusuru izole yolda **yok**; MRG'de patoloji saptanabilir.\n- **2. Motor Nöron:** Zaaf segmanter veya periferik sinir tipinde; tonus **azalmış (hipotoni)**; DTR **azalmış/kaybolmuş**; patolojik refleks **yok**; atrofi **var**; ön boynuzda fasikülasyon **var**; EMG'de denervasyon bulguları tipiktir.\n- **Myasthenia Gravis:** Okülobulber ve proksimal zaaf; tonus ve DTR **değişmez**; patolojik refleks, atrofi ve fasikülasyon **yok**; zaaf antikolinesterazla düzelir.\n- **Kas Hastalığı:** Simetrik proksimal zaaf; tonus normal/azalmış; DTR normal/azalmış; atrofi **var**; patolojik refleks ve fasikülasyon **yok**; kas enzimleri (CK) artabilir.\n\n> [!IMPORTANT]\n> Bu matriste tek bir 'var' hücresi dahi (örneğin Babinski veya fasikülasyon) seviyeyi kesin olarak belirler.",
+   "synthesisNarrative": "Motor güçsüzlükte dört ana anatomik basamağın karşılaştırmalı matrisi tanıya doğrudan ulaştırır.\n\n- **1. Motor Nöron:** Zaaf kolda ekstansör bacakta fleksör; tonus artmış (spastisite); DTR artmış; patolojik refleks **var**; atrofi ve fasikülasyon **yok**; duyu kusuru izole yolda **yok**; MRG'de patoloji saptanabilir.\n- **2. Motor Nöron:** Zaaf segmanter veya periferik sinir tipinde; tonus **azalmış (hipotoni)**; DTR **azalmış/kaybolmuş**; patolojik refleks **yok**; atrofi **var**; ön boynuzda fasikülasyon **var**; EMG'de denervasyon bulguları tipiktir.\n- **Myasthenia Gravis:** Okülobulber ve proksimal zaaf; tonus ve DTR **değişmez**; patolojik refleks, atrofi ve fasikülasyon **yok**; zaaf antikolinesterazla düzelir.\n- **Kas Hastalığı:** Simetrik proksimal zaaf; tonus normal/azalmış; DTR normal/azalmış; atrofi **var**; patolojik refleks ve fasikülasyon **yok**; kas enzimleri (CK) artabilir.\n\n> [!IMPORTANT]\n> Bu matriste tek bir 'var' hücresi dahi (örneğin Babinski veya fasikülasyon) seviyeyi kesin olarak belirler.",
+   "sourcePdf": {
+    "sourcePdfKey": "y25-k2-32-felcler",
+    "startPage": 17,
+    "endPage": 17
+   },
+   "pdfSayfalari": [
+    17,
+    17
+   ],
+   "sayfaHaritasi": "teyitli",
+   "interactiveElements": [
+    {
+     "type": "interactive_table",
+     "tableHeaders": [
+      "Seviye",
+      "Kas Tonusu",
+      "DTR Yanıtı",
+      "Patolojik Refleks",
+      "Kas Atrofisi"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "1. Motor Nöron"
+        },
+        {
+         "text": "Artar (spastisite)",
+         "isRevealed": false,
+         "hint": "Kolda fleksör bacakta ekstansör",
+         "isMasked": true
+        },
+        {
+         "text": "Artar"
+        },
+        {
+         "text": "Var"
+        },
+        {
+         "text": "Yok"
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "2. Motor Nöron"
+        },
+        {
+         "text": "Azalır (hipotoni)",
+         "isRevealed": false,
+         "hint": "Gevşek kas yapısı",
+         "isMasked": true
+        },
+        {
+         "text": "Azalır/Yok"
+        },
+        {
+         "text": "Yok"
+        },
+        {
+         "text": "Var"
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Myasthenia Gravis"
+        },
+        {
+         "text": "Değişmez",
+         "isRevealed": false,
+         "hint": "Kavşakta tonus etkilenmez",
+         "isMasked": true
+        },
+        {
+         "text": "Değişmez"
+        },
+        {
+         "text": "Yok"
+        },
+        {
+         "text": "Yok"
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Kas Hastalığı"
+        },
+        {
+         "text": "Değişmez/Azalır",
+         "isRevealed": false,
+         "hint": "Miyopatik doku",
+         "isMasked": true
+        },
+        {
+         "text": "Değişmez/Azalır"
+        },
+        {
+         "text": "Yok"
+        },
+        {
+         "text": "Var"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "micro_quiz",
+     "question": "Dört düzeyli motor ayırıcı tanı tablosuna göre, kas atrofisinin görüldüğü fakat patolojik refleks ve fasikülasyonun OLMADIĞI, simetrik proksimal zaafla giden tablo hangisidir?",
+     "options": [
+      {
+       "text": "Primer kas hastalıkları (miyopatiler)",
+       "isCorrect": true,
+       "explanation": "Primer kas hastalıkları klinik tanımda doğru kabul edilen temel nörolojik kavramdır. Fizyopatolojik mekanizması soruda sorulan motor bulguyu eksiksiz biçimde açıklayarak doğrular."
+      },
+      {
+       "text": "Birinci motor nöron piramidal lezyonu",
+       "isCorrect": false,
+       "explanation": "Birinci motor nöron piramidal lezyonu sinir sisteminde kendine özgü işlevi bulunan farklı bir anatomik basamaktır. Bu soruda sorulan spesifik nörolojik lezyonun klinik ve fizyopatolojik özellikleriyle örtüşmez."
+      },
+      {
+       "text": "Ön boynuz alfa motor nöron hasarı",
+       "isCorrect": false,
+       "explanation": "Ön boynuz alfa motor nöron hasarı sinir sisteminde kendine özgü işlevi bulunan farklı bir anatomik basamaktır. Bu soruda sorulan spesifik nörolojik lezyonun klinik ve fizyopatolojik özellikleriyle örtüşmez."
+      },
+      {
+       "text": "Myasthenia gravis",
+       "isCorrect": false,
+       "explanation": "Myasthenia gravis sinir sisteminde kendine özgü işlevi bulunan farklı bir anatomik basamaktır. Bu soruda sorulan spesifik nörolojik lezyonun klinik ve fizyopatolojik özellikleriyle örtüşmez."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "maskedTerm": "görüntüleme",
+     "hint": "Beyin ve omurilik radyolojik incelemesi (MRG/BT)",
+     "options": [
+      "görüntüleme",
+      "biyopsi",
+      "buz testi",
+      "genetik"
+     ],
+     "sentence": "Merkez sinir sistemi görüntüleme incelemelerinde patolojik bulgular saptanması birinci motor nöron lezyonunu doğrular."
+    },
+    {
+     "type": "active_recall",
+     "keyTakeaway": "Miyasteni = atrofi yok, DTR normal; Kas hastalığı = atrofi var.",
+     "question": "Myasthenia gravis ile primer kas hastalığı refleks ve kas atrofisi açısından nasıl ayrılır?",
+     "answer": "Myasthenia graviste refleksler tamamen normaldir ve kas atrofisi yoktur; primer kas hastalıklarında ise belirgin kas atrofisi mevcuttur ve ileri evrede DTR azalabilir."
+    }
+   ]
+  },
+  {
+   "id": "k2-32-s18",
+   "slideNumber": 18,
+   "title": "Piramidal Hastalıklarda Önemli Noktalar ve Babinski",
+   "bolum": "3",
+   "content": "Piramidal sistem muayenesinde bazı bulgular tek başına tanı koydurucu değer taşırken, bazıları ise yanıltıcı olabilir.\n\n- **En Duyarlı Bulgular:** Piramidal yol hastalıklarında en sık ve en erken rastlanılan bulgular **tendon reflekslerinin artması** ve **Babinski delilidir**.\n- **Kuvvet Normal Olsa Bile:** Kas gücü tamamen normal saptanan bir bireyde dahi Babinski delilinin pozitif bulunması, piramidal yolun hasarlandığını gösteren çok önemli ve **tek başına yeterli** bir kanıttır.\n- **İzole Hoffmann Sınırlılığı:** Diğer piramidal belirtilerle birlikte olmayan tek başına Hoffmann delilinin klinik değeri son derece kısıtlıdır; anksiyeteli veya hiperrefleksik normal kişilerde de alınabilir.\n- **Akut Hasarda Flask Dönem:** Piramidal yolun akut hasarlanmasında (inme başlangıcı) ilk dönemde hipertoni yerine geçici hipotoni ve refleks kaybı görülebilir; ancak Babinski delili mevcuttur.\n\n> [!IMPORTANT]\n> İkinci motor nöron hastalıklarının hemipleji yapma olasılığı pratik olarak yoktur; hemipleji hemen daima piramidal yolun hastalanmasına bağlıdır.",
+   "synthesisNarrative": "Piramidal sistem muayenesinde bazı bulgular tek başına tanı koydurucu değer taşırken, bazıları ise yanıltıcı olabilir.\n\n- **En Duyarlı Bulgular:** Piramidal yol hastalıklarında en sık ve en erken rastlanılan bulgular **tendon reflekslerinin artması** ve **Babinski delilidir**.\n- **Kuvvet Normal Olsa Bile:** Kas gücü tamamen normal saptanan bir bireyde dahi Babinski delilinin pozitif bulunması, piramidal yolun hasarlandığını gösteren çok önemli ve **tek başına yeterli** bir kanıttır.\n- **İzole Hoffmann Sınırlılığı:** Diğer piramidal belirtilerle birlikte olmayan tek başına Hoffmann delilinin klinik değeri son derece kısıtlıdır; anksiyeteli veya hiperrefleksik normal kişilerde de alınabilir.\n- **Akut Hasarda Flask Dönem:** Piramidal yolun akut hasarlanmasında (inme başlangıcı) ilk dönemde hipertoni yerine geçici hipotoni ve refleks kaybı görülebilir; ancak Babinski delili mevcuttur.\n\n> [!IMPORTANT]\n> İkinci motor nöron hastalıklarının hemipleji yapma olasılığı pratik olarak yoktur; hemipleji hemen daima piramidal yolun hastalanmasına bağlıdır.",
+   "sourcePdf": {
+    "sourcePdfKey": "y25-k2-32-felcler",
+    "startPage": 18,
+    "endPage": 18
+   },
+   "pdfSayfalari": [
+    18,
+    18
+   ],
+   "sayfaHaritasi": "teyitli",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Kas kuvveti tamamen normal saptanan bir hastada piramidal yolun hasta olduğunu tek başına kanıtlayan en güvenilir nörolojik muayene bulgusu hangisidir?",
+     "options": [
+      {
+       "text": "Babinski delili pozitifliği",
+       "isCorrect": true,
+       "explanation": "Babinski delili pozitifliği klinik tanımda doğru kabul edilen temel nörolojik kavramdır. Fizyopatolojik mekanizması soruda sorulan motor bulguyu eksiksiz biçimde açıklayarak doğrular."
+      },
+      {
+       "text": "İzole Hoffmann refleksi",
+       "isCorrect": false,
+       "explanation": "İzole Hoffmann refleksi sinir sisteminde kendine özgü işlevi bulunan farklı bir anatomik basamaktır. Bu soruda sorulan spesifik nörolojik lezyonun klinik ve fizyopatolojik özellikleriyle örtüşmez."
+      },
+      {
+       "text": "Kas fasikülasyonu",
+       "isCorrect": false,
+       "explanation": "Kas fasikülasyonu sinir sisteminde kendine özgü işlevi bulunan farklı bir anatomik basamaktır. Bu soruda sorulan spesifik nörolojik lezyonun klinik ve fizyopatolojik özellikleriyle örtüşmez."
+      },
+      {
+       "text": "Hafif kas incelmesi",
+       "isCorrect": false,
+       "explanation": "Hafif kas incelmesi sinir sisteminde kendine özgü işlevi bulunan farklı bir anatomik basamaktır. Bu soruda sorulan spesifik nörolojik lezyonun klinik ve fizyopatolojik özellikleriyle örtüşmez."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "maskedTerm": "Babinski",
+     "hint": "Piramidal hasarın en duyarlı patolojik refleksi",
+     "options": [
+      "Babinski",
+      "Gowers",
+      "Bell",
+      "Hoffmann"
+     ],
+     "sentence": "Piramidal yol hastalıklarında en sık rastlanılan bulgular tendon reflekslerin artması ve Babinski delilidir."
+    },
+    {
+     "type": "active_recall",
+     "keyTakeaway": "Akut flask dönemde dahi Babinski (+) ise = 1. motor nöron hasarı.",
+     "question": "Akut bir serebrovasküler olayda başlangıçta hipotoni ve refleks kaybı olmasına rağmen olayın 1. motor nörona ait olduğu nasıl anlaşılır?",
+     "answer": "Babinski delilinin pozitif bulunmasıyla anlaşılır. Akut dönemdeki flask (şok) evresinde dahi Babinski delili mevcuttur ve olayın 1. motor nörona ait olduğunu kanıtlar."
+    },
+    {
+     "type": "spot_the_lie",
+     "items": [
+      {
+       "text": "Tendon reflekslerinin artması ve Babinski delili piramidal hasarda en sık görülen bulgulardır.",
+       "isLie": false,
+       "explanation": "Kortikospinal traktus lezyonunun temel fizik muayene işaretleridir."
+      },
+      {
+       "text": "Tek başına Babinski delili kas kuvveti normal olsa bile piramidal hasarın yeterli kanıtıdır.",
+       "isLie": false,
+       "explanation": "Erişkinde Babinski her zaman patolojiktir."
+      },
+      {
+       "text": "Diğer piramidal belirtiler eşlik etmese bile izole Hoffmann delili tek başına kesin patolojiktir.",
+       "isLie": true,
+       "explanation": "Tuzak: Diğer piramidal belirtilerle birlikte olmayan izole Hoffmann delilinin değeri çok sınırlıdır."
+      },
+      {
+       "text": "İkinci motor nöron hastalıklarının hemipleji yapma olasılığı pratik olarak yoktur.",
+       "isLie": false,
+       "explanation": "Hemipleji hemen daima merkezi piramidal sistem hastalığına bağlıdır."
+      }
+     ],
+     "topic": "Motor Sistem Ayırıcı Tanı İlkeleri"
+    }
+   ]
+  },
+  {
+   "id": "k2-32-s19",
+   "slideNumber": 19,
+   "title": "Hemipleji ve Hemiparezi: Akut Flask Dönem ve Spastisite",
+   "bolum": "3",
+   "content": "Hemipleji vücudun sağ veya sol yarısında kol, bacak ve sıklıkla yüzü tutan tam felç durumudur; gelişim hızı klinik tabloyu belirler.\n\n- **Akut Dönem (Serebrovasküler Olay):** İnme başlangıcında piramidal yolun ani kesintisi serebral şok yaratır; felçli tarafta tonus ve DTR azalmıştır (**flask / gevşek dönem**); ancak Babinski delili mevcuttur.\n- **Spastisite Evresi:** Günler ve haftalar içinde spinal kavisler disinhibe olur; kas tonusu artar, spastisite yerleşir (kolda fleksör, bacakta ekstansör tonus artışı), DTR'ler hiperaktifleşir ve klonus ortaya çıkar.\n- **Yavaş Gelişen Felçler (Beyin Tümörleri):** Kuvvetsizlik bir bölgeden başlayıp zamanla vücut yarısını alacak şekilde ilerler; başlangıçta flask dönem görülmez, tonus en baştan itibaren artmıştır.\n\n> [!NOTE]\n> Akut inmede başlangıçtaki flask dönem ikinci motor nöron lezyonu ile karıştırılmamalıdır; Babinski varlığı piramidal hasarı doğrular.",
+   "synthesisNarrative": "Hemipleji vücudun sağ veya sol yarısında kol, bacak ve sıklıkla yüzü tutan tam felç durumudur; gelişim hızı klinik tabloyu belirler.\n\n- **Akut Dönem (Serebrovasküler Olay):** İnme başlangıcında piramidal yolun ani kesintisi serebral şok yaratır; felçli tarafta tonus ve DTR azalmıştır (**flask / gevşek dönem**); ancak Babinski delili mevcuttur.\n- **Spastisite Evresi:** Günler ve haftalar içinde spinal kavisler disinhibe olur; kas tonusu artar, spastisite yerleşir (kolda fleksör, bacakta ekstansör tonus artışı), DTR'ler hiperaktifleşir ve klonus ortaya çıkar.\n- **Yavaş Gelişen Felçler (Beyin Tümörleri):** Kuvvetsizlik bir bölgeden başlayıp zamanla vücut yarısını alacak şekilde ilerler; başlangıçta flask dönem görülmez, tonus en baştan itibaren artmıştır.\n\n> [!NOTE]\n> Akut inmede başlangıçtaki flask dönem ikinci motor nöron lezyonu ile karıştırılmamalıdır; Babinski varlığı piramidal hasarı doğrular.",
+   "sourcePdf": {
+    "sourcePdfKey": "y25-k2-32-felcler",
+    "startPage": 19,
+    "endPage": 19
+   },
+   "pdfSayfalari": [
+    19,
+    19
+   ],
+   "sayfaHaritasi": "teyitli",
+   "interactiveElements": [
+    {
+     "type": "before_after_slider",
+     "leftTitle": "Akut İnme (İlk Günler)",
+     "rightTitle": "Kronik Dönem (Haftalar Sonra)",
+     "leftPoints": [
+      "Serebral şok nedeniyle kaslar flask (gevşek) ve tonus düşüktür",
+      "Derin tendon refleksleri geçici olarak azalmış veya kayıptır",
+      "Babinski delili erken dönemde dahi pozitiftir"
+     ],
+     "rightPoints": [
+      "Kas tonusu patolojik olarak artmış ve spastisite yerleşmiştir",
+      "Derin tendon refleksleri hiperaktif hale gelmiş ve klonus belirmiştir",
+      "Kolda fleksör, bacakta ekstansör tipik hemiplejik postür oturmuştur"
+     ]
+    },
+    {
+     "type": "micro_quiz",
+     "question": "Beyin tümörü gibi yavaş gelişen kitle lezyonlarına bağlı hemiparezilerin akut inmeden en belirgin klinik farkı nedir?",
+     "options": [
+      {
+       "text": "Başlangıçta flask (gevşek) dönemin olmaması, baştan itibaren tonusun artması",
+       "isCorrect": true,
+       "explanation": "Başlangıçta flask klinik tanımda doğru kabul edilen temel nörolojik kavramdır. Fizyopatolojik mekanizması soruda sorulan motor bulguyu eksiksiz biçimde açıklayarak doğrular."
+      },
+      {
+       "text": "Babinski delilinin hiçbir zaman pozitifleşmemesi",
+       "isCorrect": false,
+       "explanation": "Babinski delilinin hiçbir zaman pozitifleşmemesi sinir sisteminde kendine özgü işlevi bulunan farklı bir anatomik basamaktır. Bu soruda sorulan spesifik nörolojik lezyonun klinik ve fizyopatolojik özellikleriyle örtüşmez."
+      },
+      {
+       "text": "Tümörlerin periferik 2. motor nöron felci yapması",
+       "isCorrect": false,
+       "explanation": "Tümörlerin periferik 2. motor nöron felci yapması sinir sisteminde kendine özgü işlevi bulunan farklı bir anatomik basamaktır. Bu soruda sorulan spesifik nörolojik lezyonun klinik ve fizyopatolojik özellikleriyle örtüşmez."
+      },
+      {
+       "text": "Ekstremitelerde hızla yaygın fasikülasyon görülmesi",
+       "isCorrect": false,
+       "explanation": "Ekstremitelerde hızla yaygın fasikülasyon görülmesi sinir sisteminde kendine özgü işlevi bulunan farklı bir anatomik basamaktır. Bu soruda sorulan spesifik nörolojik lezyonun klinik ve fizyopatolojik özellikleriyle örtüşmez."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "maskedTerm": "spastisite",
+     "hint": "Flask dönem sonrasında yerleşen piramidal hipertoni tablosu",
+     "options": [
+      "spastisite",
+      "hipotoni",
+      "fasikülasyon",
+      "Gowers"
+     ],
+     "sentence": "Akut dönemde serebrovasküler hastalıkta felçli tarafta tonus ve derin tendon refleksleri azalır; zamanla spastisite gelişir."
+    },
+    {
+     "type": "active_recall",
+     "keyTakeaway": "Akut inme = geçici serebral şok / flask dönem, ardından spastisite.",
+     "question": "Akut inmede felçli tarafta başlangıçta görülen flask evrenin fizyopatolojik mekanizması nedir?",
+     "answer": "Kortikospinal piramidal yolun ani ve akut kesintisi sonucu spinal refleks kavislerinin geçici fonksiyonel depresyona uğramasıdır (serebral şok evresi)."
+    }
+   ]
+  },
+  {
+   "id": "k2-32-s20",
+   "slideNumber": 20,
+   "title": "Piramidal Hemiplejide Kortikal Lokalizasyon",
+   "bolum": "3",
+   "content": "Serebral kortekste primer motor alan (girus presentralis) geniş bir anatomik yüzeye yayılmıştır.\n\n- **Orantısız Tutulum ve Monoparezi:** Kortekste yüz, kol ve bacak alanları somatotopik (homunkulus) olarak geniş dağıldığından, lezyon çok geniş olmadıkça yüz, kol ve bacak beraber tutulmaz; çoğunlukla tek uzvu tutan **monoparezi** veya orantısız güçsüzlük görülür.\n- **Kortikal Bulgular:** Korteks lezyonlarında motor zaafa afazi (konuşma bozukluğu), apraksi veya agnozi gibi kortikal kognitif disfonksiyonlar eşlik eder.\n- **Epileptik Nöbetler:** Kortikal gri cevherin hasarı nöronal hipereksitabilite yarattığından fokal motor epileptik nöbetler (Jacksonian nöbetler) izlenebilir.\n\n> [!IMPORTANT]\n> Yüz, kol ve bacağın eşit şiddette tutulmadığı orantısız motor zaaf veya epileptik nöbet birlikteliği lezyonun serebral kortekste olduğunu düşündürür.",
+   "synthesisNarrative": "Serebral kortekste primer motor alan (girus presentralis) geniş bir anatomik yüzeye yayılmıştır.\n\n- **Orantısız Tutulum ve Monoparezi:** Kortekste yüz, kol ve bacak alanları somatotopik (homunkulus) olarak geniş dağıldığından, lezyon çok geniş olmadıkça yüz, kol ve bacak beraber tutulmaz; çoğunlukla tek uzvu tutan **monoparezi** veya orantısız güçsüzlük görülür.\n- **Kortikal Bulgular:** Korteks lezyonlarında motor zaafa afazi (konuşma bozukluğu), apraksi veya agnozi gibi kortikal kognitif disfonksiyonlar eşlik eder.\n- **Epileptik Nöbetler:** Kortikal gri cevherin hasarı nöronal hipereksitabilite yarattığından fokal motor epileptik nöbetler (Jacksonian nöbetler) izlenebilir.\n\n> [!IMPORTANT]\n> Yüz, kol ve bacağın eşit şiddette tutulmadığı orantısız motor zaaf veya epileptik nöbet birlikteliği lezyonun serebral kortekste olduğunu düşündürür.",
+   "sourcePdf": {
+    "sourcePdfKey": "y25-k2-32-felcler",
+    "startPage": 20,
+    "endPage": 20
+   },
+   "pdfSayfalari": [
+    20,
+    20
+   ],
+   "sayfaHaritasi": "teyitli",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Motor zaafı olan bir hastada fokal epileptik nöbetlerin ve afazi gibi kortikal bulguların eşlik etmesi lezyonun nerede olduğunu gösterir?",
+     "options": [
+      {
+       "text": "Serebral korteks motor alanı",
+       "isCorrect": true,
+       "explanation": "Serebral korteks motor alanı klinik tanımda doğru kabul edilen temel nörolojik kavramdır. Fizyopatolojik mekanizması soruda sorulan motor bulguyu eksiksiz biçimde açıklayarak doğrular."
+      },
+      {
+       "text": "Kapsüla interna arka bacağı",
+       "isCorrect": false,
+       "explanation": "Kapsüla interna arka bacağı sinir sisteminde kendine özgü işlevi bulunan farklı bir anatomik basamaktır. Bu soruda sorulan spesifik nörolojik lezyonun klinik ve fizyopatolojik özellikleriyle örtüşmez."
+      },
+      {
+       "text": "Servikal medulla spinalis",
+       "isCorrect": false,
+       "explanation": "Servikal medulla spinalis sinir sisteminde kendine özgü işlevi bulunan farklı bir anatomik basamaktır. Bu soruda sorulan spesifik nörolojik lezyonun klinik ve fizyopatolojik özellikleriyle örtüşmez."
+      },
+      {
+       "text": "Periferik pleksus brakiyalis",
+       "isCorrect": false,
+       "explanation": "Periferik pleksus brakiyalis sinir sisteminde kendine özgü işlevi bulunan farklı bir anatomik basamaktır. Bu soruda sorulan spesifik nörolojik lezyonun klinik ve fizyopatolojik özellikleriyle örtüşmez."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "maskedTerm": "monoparezi",
+     "hint": "Tek bir uzuvda izole güçsüzlük",
+     "options": [
+      "monoparezi",
+      "paraparezi",
+      "tetrapleji",
+      "hemipleji"
+     ],
+     "sentence": "Kortekste lezyon çok geniş olmadıkça yüz kol bacak beraber tutulmaz; sıklıkla izole monoparezi şeklinde görülür."
+    },
+    {
+     "type": "active_recall",
+     "keyTakeaway": "Kortekste lifler dağınıktır = izole monoparezi / orantısız zaaf.",
+     "question": "Serebral korteks motor alan lezyonlarında neden orantılı tam hemipleji yerine sıklıkla monoparezi veya orantısız zaaf görülür?",
+     "answer": "Kortekste motor homunkulus boyunca yüz, kol ve bacak nöronları geniş bir alana yayıldığı için sınırlı lezyonlar yalnızca tek bir uzvun motor alanını etkiler."
+    },
+    {
+     "type": "spot_the_lie",
+     "items": [
+      {
+       "text": "Kortikal motor lezyonlara fokal motor epileptik nöbetler eşlik edebilir.",
+       "isLie": false,
+       "explanation": "Kortikal nöron hasarı epileptojeniktir."
+      },
+      {
+       "text": "Kortekste motor alan geniş olduğundan sınırlı lezyonlarda sıklıkla izole monoparezi izlenir.",
+       "isLie": false,
+       "explanation": "Homunkulus dağılımı nedeniyle izole kol veya bacak tutulabilir."
+      },
+      {
+       "text": "Korteks lezyonlarında yüz, kol ve bacak her zaman kesinlikle eşit şiddette tutulur.",
+       "isLie": true,
+       "explanation": "Tuzak: Eşit orantılı tutulum kapsüla internada görülür; kortekste orantısız tutulum kuraldır."
+      },
+      {
+       "text": "Dominant hemisfer korteks lezyonlarında zaafa afazi eşlik edebilir.",
+       "isLie": false,
+       "explanation": "Broca motor konuşma alanı motor kortekse komşudur."
+      }
+     ],
+     "topic": "Motor Sistem Ayırıcı Tanı İlkeleri"
+    }
+   ]
+  },
+  {
+   "id": "k2-32-s21",
+   "slideNumber": 21,
+   "title": "Subkortikal, Beyin Sapı ve Kord Lokalizasyonları",
+   "bolum": "3",
+   "content": "Piramidal yolun subkortikal seyri boyunca lezyon yerleşimi tipik sendromik klinik tablolar üretir.\n\n- **Kapsüla İnterna:** Piramidal lifler arka bacakta (crus posterius) son derece kompakttır. Küçük bir laküner infarkt dahi karşı vücut yarısında yüz, kol ve bacağı eşit şiddette tutan **orantılı hemipleji** oluşturur; talamokortikal lif komşuluğu nedeniyle duyu kusuru eşlik edebilir.\n- **Beyin Sapı:** Lezyon seviyesindeki motor kranyal sinir nükleusu ile inen piramidal yol birlikte zedelenir; lezyon tarafında periferik kranyal sinir felci, karşı tarafta hemipleji izlenir (**çapraz felç / alternan hemipleji**).\n- **Medulla Spinalis (Servikal Kord):** Piramis çaprazının altında yer aldığından lezyonla **aynı tarafta** kol ve bacakta felç gelişir; yüz lifleri bulbusta kaldığı için yüz kesinlikle korunur.\n\n> [!IMPORTANT]\n> Çapraz felç beyin sapının, yüzün korunduğu aynı taraf hemiparezi ise servikal omuriliğin patognomonik işaretidir.",
+   "synthesisNarrative": "Piramidal yolun subkortikal seyri boyunca lezyon yerleşimi tipik sendromik klinik tablolar üretir.\n\n- **Kapsüla İnterna:** Piramidal lifler arka bacakta (crus posterius) son derece kompakttır. Küçük bir laküner infarkt dahi karşı vücut yarısında yüz, kol ve bacağı eşit şiddette tutan **orantılı hemipleji** oluşturur; talamokortikal lif komşuluğu nedeniyle duyu kusuru eşlik edebilir.\n- **Beyin Sapı:** Lezyon seviyesindeki motor kranyal sinir nükleusu ile inen piramidal yol birlikte zedelenir; lezyon tarafında periferik kranyal sinir felci, karşı tarafta hemipleji izlenir (**çapraz felç / alternan hemipleji**).\n- **Medulla Spinalis (Servikal Kord):** Piramis çaprazının altında yer aldığından lezyonla **aynı tarafta** kol ve bacakta felç gelişir; yüz lifleri bulbusta kaldığı için yüz kesinlikle korunur.\n\n> [!IMPORTANT]\n> Çapraz felç beyin sapının, yüzün korunduğu aynı taraf hemiparezi ise servikal omuriliğin patognomonik işaretidir.",
+   "sourcePdf": {
+    "sourcePdfKey": "y25-k2-32-felcler",
+    "startPage": 21,
+    "endPage": 21
+   },
+   "pdfSayfalari": [
+    21,
+    21
+   ],
+   "sayfaHaritasi": "teyitli",
+   "interactiveElements": [
+    {
+     "type": "interactive_table",
+     "tableHeaders": [
+      "Lokalizasyon Düzeyi",
+      "Felç Karakteri",
+      "Eşlik Eden Ayırıcı Bulgu"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Kapsüla İnterna"
+        },
+        {
+         "text": "Orantılı tam hemipleji (yüz=kol=bacak)",
+         "isRevealed": false,
+         "hint": "Kompakt lif yerleşimi",
+         "isMasked": true
+        },
+        {
+         "text": "Duyusal lif komşuluğuna bağlı hemihipoestezi"
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Beyin Sapı"
+        },
+        {
+         "text": "Çapraz felç (alternan hemipleji)",
+         "isRevealed": false,
+         "hint": "Kranyal sinir karşı ekstremite",
+         "isMasked": true
+        },
+        {
+         "text": "Aynı taraf kranyal sinir nükleer felci"
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Servikal Medulla Spinalis"
+        },
+        {
+         "text": "İpsilateral kol ve bacak felci",
+         "isRevealed": false,
+         "hint": "Çaprazlaşma sonrası kord",
+         "isMasked": true
+        },
+        {
+         "text": "Yüzün kesinlikle korunmuş olması"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "micro_quiz",
+     "question": "Beyin sapı lezyonlarında aynı taraf kranyal sinir felci ile karşı taraf hemiplejinin bir arada görülmesi tablosu nasıl adlandırılır?",
+     "options": [
+      {
+       "text": "Çapraz felç (alternan hemipleji)",
+       "isCorrect": true,
+       "explanation": "Çapraz felç klinik tanımda doğru kabul edilen temel nörolojik kavramdır. Fizyopatolojik mekanizması soruda sorulan motor bulguyu eksiksiz biçimde açıklayarak doğrular."
+      },
+      {
+       "text": "Orantılı kapsüler hemipleji",
+       "isCorrect": false,
+       "explanation": "Orantılı kapsüler hemipleji sinir sisteminde kendine özgü işlevi bulunan farklı bir anatomik basamaktır. Bu soruda sorulan spesifik nörolojik lezyonun klinik ve fizyopatolojik özellikleriyle örtüşmez."
+      },
+      {
+       "text": "Kortikal monoparezi",
+       "isCorrect": false,
+       "explanation": "Kortikal monoparezi sinir sisteminde kendine özgü işlevi bulunan farklı bir anatomik basamaktır. Bu soruda sorulan spesifik nörolojik lezyonun klinik ve fizyopatolojik özellikleriyle örtüşmez."
+      },
+      {
+       "text": "Spinal paraparezi",
+       "isCorrect": false,
+       "explanation": "Spinal paraparezi sinir sisteminde kendine özgü işlevi bulunan farklı bir anatomik basamaktır. Bu soruda sorulan spesifik nörolojik lezyonun klinik ve fizyopatolojik özellikleriyle örtüşmez."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "maskedTerm": "kompakttır",
+     "hint": "Liflerin dar bir alanda sıkıca toplanmış olma durumu",
+     "options": [
+      "kompakttır",
+      "dağınıktır",
+      "çaprazlaşmamıştır",
+      "kesintilidir"
+     ],
+     "sentence": "Kapsüla internada piramidal yol kompakttır; bu nedenle vücut yarısını eşit şekilde etkileyen bir hemipleji tablosu doğar."
+    },
+    {
+     "type": "active_recall",
+     "keyTakeaway": "Servikal kord hemiparezisi = aynı taraf kol-bacak, yüz sağlam.",
+     "question": "Servikal omurilik lezyonundaki hemipareziyi beyin lezyonundaki hemipareziden ayıran iki temel özellik nedir?",
+     "answer": "1) Felç omurilik lezyonunda lezyonla aynı taraftadır (ipsilateral), 2) Yüz kasları omurilik lezyonlarında kesinlikle korunur."
+    }
+   ]
+  },
+  {
+   "id": "k2-32-s22",
+   "slideNumber": 22,
+   "title": "Parapleji Nedenleri ve Spinal Kord Lezyonları",
+   "bolum": "3",
+   "content": "Parapleji, her iki alt ekstremitenin (bacakların) motor felcidir ve lokalizasyonda omurilik ön plandadır.\n\n- **Etiyolojik Düzeyler:** Bilateral kortikal bacak merkezlerinin tutulumu (ör. falks meninjiomu), yaygın periferik nöropatiler veya primer kas hastalıkları parapleji yapabilse de, **en sık neden kortikospinal yolların medulla spinalisteki bilateral lezyonudur**.\n- **Seviye Veren Hipoestezi:** Bacaklardaki kuvvetsizlikle birlikte gövdede belirli bir anatomik yüksekliğe kadar çıkan duyu kusuru (seviye veren hipoestezi) lezyonun medulla spinaliste olduğunu kesinleştirir.\n- **Sfinkter Bozukluğu:** Spinal transvers hasarda otonomik inen yollar kesildiğinden üriner retansiyon veya inkontinans (sfinkter kusuru) neredeyse kural olarak eşlik eder.\n\n> [!IMPORTANT]\n> Bacaklarda motor zaaf, gövdede seviye veren duyu kusuru ve sfinkter kaybı triyadı daima medulla spinalis patolojisini işaret eder.",
+   "synthesisNarrative": "Parapleji, her iki alt ekstremitenin (bacakların) motor felcidir ve lokalizasyonda omurilik ön plandadır.\n\n- **Etiyolojik Düzeyler:** Bilateral kortikal bacak merkezlerinin tutulumu (ör. falks meninjiomu), yaygın periferik nöropatiler veya primer kas hastalıkları parapleji yapabilse de, **en sık neden kortikospinal yolların medulla spinalisteki bilateral lezyonudur**.\n- **Seviye Veren Hipoestezi:** Bacaklardaki kuvvetsizlikle birlikte gövdede belirli bir anatomik yüksekliğe kadar çıkan duyu kusuru (seviye veren hipoestezi) lezyonun medulla spinaliste olduğunu kesinleştirir.\n- **Sfinkter Bozukluğu:** Spinal transvers hasarda otonomik inen yollar kesildiğinden üriner retansiyon veya inkontinans (sfinkter kusuru) neredeyse kural olarak eşlik eder.\n\n> [!IMPORTANT]\n> Bacaklarda motor zaaf, gövdede seviye veren duyu kusuru ve sfinkter kaybı triyadı daima medulla spinalis patolojisini işaret eder.",
+   "sourcePdf": {
+    "sourcePdfKey": "y25-k2-32-felcler",
+    "startPage": 22,
+    "endPage": 22
+   },
+   "pdfSayfalari": [
+    22,
+    22
+   ],
+   "sayfaHaritasi": "teyitli",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Paraplejisi olan bir hastada lezyonun medulla spinaliste olduğunu kesin olarak kanıtlayan en belirleyici klinik muayene bulgusu hangisidir?",
+     "options": [
+      {
+       "text": "Gövdede belirli bir yüksekliğe kadar çıkan seviye veren hipoestezi ve sfinkter kusuru",
+       "isCorrect": true,
+       "explanation": "Gövdede belirli bir yüksekliğe kadar çıkan seviye veren hipoestezi ve sfinkter kusuru klinik tanımda doğru kabul edilen temel nörolojik kavramdır. Fizyopatolojik mekanizması soruda sorulan motor bulguyu eksiksiz biçimde açıklayarak doğrular."
+      },
+      {
+       "text": "Yalnızca bacaklarda eforla yorulma olması",
+       "isCorrect": false,
+       "explanation": "Yalnızca bacaklarda eforla yorulma olması sinir sisteminde kendine özgü işlevi bulunan farklı bir anatomik basamaktır. Bu soruda sorulan spesifik nörolojik lezyonun klinik ve fizyopatolojik özellikleriyle örtüşmez."
+      },
+      {
+       "text": "Her iki kolda izole kas seyirmesi",
+       "isCorrect": false,
+       "explanation": "Her iki kolda izole kas seyirmesi sinir sisteminde kendine özgü işlevi bulunan farklı bir anatomik basamaktır. Bu soruda sorulan spesifik nörolojik lezyonun klinik ve fizyopatolojik özellikleriyle örtüşmez."
+      },
+      {
+       "text": "Bacaklarda normal refleksler",
+       "isCorrect": false,
+       "explanation": "Bacaklarda normal refleksler sinir sisteminde kendine özgü işlevi bulunan farklı bir anatomik basamaktır. Bu soruda sorulan spesifik nörolojik lezyonun klinik ve fizyopatolojik özellikleriyle örtüşmez."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "maskedTerm": "hipoestezi",
+     "hint": "Duyu algısının patolojik olarak azalması",
+     "options": [
+      "hipoestezi",
+      "spastisite",
+      "atrofi",
+      "parezi"
+     ],
+     "sentence": "Bacaklardaki kuvvetsizlikle birlikte gövdede belirli bir yüksekliğe kadar çıkan hipoestezi de medulla spinalisi işaret eder."
+    },
+    {
+     "type": "active_recall",
+     "keyTakeaway": "Spinal parapleji triyadı: paraparezi + duyu seviyesi + sfinkter kusuru.",
+     "question": "Spinal paraplejinin en klasik klinik triyadı nedir?",
+     "answer": "1) Bacaklarda bilateral piramidal zaaf (paraparezi), 2) Gövdede belirli bir dermatom düzeyine kadar çıkan seviye veren duyu kusuru, 3) Sfinkter (mesane/barsak) disfonksiyonu."
+    },
+    {
+     "type": "spot_the_lie",
+     "items": [
+      {
+       "text": "Paraplejinin en sık nedeni kortikospinal yolların omurilikteki bilateral hasarıdır.",
+       "isLie": false,
+       "explanation": "Spinal transvers lezyonlar paraplejinin bir numaralı nedenidir."
+      },
+      {
+       "text": "Gövdede seviye veren duyu kusuru lezyonun medulla spinaliste olduğunu gösterir.",
+       "isLie": false,
+       "explanation": "Duyusal dermatom sınırı omurilik hasarına özgüdür."
+      },
+      {
+       "text": "Medulla spinalis tam kesisinde sfinkter fonksiyonları tamamen korunur.",
+       "isLie": true,
+       "explanation": "Tuzak: Spinal tam keside otonom yollar koptuğu için sfinkter kusuru kural olarak eşlik eder."
+      },
+      {
+       "text": "Falks meninjiomu kortikal bacak merkezlerini iki yanlı tutarak da parapleji yapabilir.",
+       "isLie": false,
+       "explanation": "Parasagittal kitleler bilateral kortikal basıyla parapleji oluşturabilir."
+      }
+     ],
+     "topic": "Motor Sistem Ayırıcı Tanı İlkeleri"
+    }
+   ]
+  },
+  {
+   "id": "k2-32-s23",
+   "slideNumber": 23,
+   "title": "Medulla Spinalis Hemiseksiyonu: Brown-Séquard",
+   "bolum": "3",
+   "content": "Medulla spinalisin sağ veya sol yarısının kesilmesiyle ortaya çıkan klasik tablo Brown-Séquard sendromudur.\n\n- **Lezyon Tarafında Motor Felç:** Lateral kortikospinal traktus bulbus çaprazını geçmiş olduğundan, lezyon seviyesinin altında **aynı tarafta piramidal tipte spastik felç** (Babinski, hiperrefleksi) görülür.\n- **Lezyon Tarafında Derin Duyu Kaybı:** Arka kordon lifleri (fasikülüs grasilis ve kuneatus) omurilikte çaprazlaşmadan yükseldiğinden, lezyonla **aynı tarafta vibrasyon, pozisyon ve propriyosepsiyon duyusu kaybolur**.\n- **Karşı Tarafta Ağrı ve Isı Kaybı:** Spinotalamik traktus lifleri omuriliğe girdikten 1-2 segment sonra ön beyaz komissürden karşıya geçtiğinden, lezyon düzeyinin **bir iki segment altından itibaren karşı tarafta ağrı ve ısı duyusu kaybolur**.\n\n> [!IMPORTANT]\n> Aynı taraf motor ve derin duyu kaybı, karşı taraf ağrı-ısı kaybı disosiasyonu Brown-Séquard sendromunun klinik tanımıdır.",
+   "synthesisNarrative": "Medulla spinalisin sağ veya sol yarısının kesilmesiyle ortaya çıkan klasik tablo Brown-Séquard sendromudur.\n\n- **Lezyon Tarafında Motor Felç:** Lateral kortikospinal traktus bulbus çaprazını geçmiş olduğundan, lezyon seviyesinin altında **aynı tarafta piramidal tipte spastik felç** (Babinski, hiperrefleksi) görülür.\n- **Lezyon Tarafında Derin Duyu Kaybı:** Arka kordon lifleri (fasikülüs grasilis ve kuneatus) omurilikte çaprazlaşmadan yükseldiğinden, lezyonla **aynı tarafta vibrasyon, pozisyon ve propriyosepsiyon duyusu kaybolur**.\n- **Karşı Tarafta Ağrı ve Isı Kaybı:** Spinotalamik traktus lifleri omuriliğe girdikten 1-2 segment sonra ön beyaz komissürden karşıya geçtiğinden, lezyon düzeyinin **bir iki segment altından itibaren karşı tarafta ağrı ve ısı duyusu kaybolur**.\n\n> [!IMPORTANT]\n> Aynı taraf motor ve derin duyu kaybı, karşı taraf ağrı-ısı kaybı disosiasyonu Brown-Séquard sendromunun klinik tanımıdır.",
+   "sourcePdf": {
+    "sourcePdfKey": "y25-k2-32-felcler",
+    "startPage": 23,
+    "endPage": 23
+   },
+   "pdfSayfalari": [
+    23,
+    23
+   ],
+   "sayfaHaritasi": "teyitli",
+   "interactiveElements": [
+    {
+     "type": "before_after_slider",
+     "leftTitle": "Lezyon Tarafı (İpsilateral)",
+     "rightTitle": "Karşı Taraf (Kontralateral)",
+     "leftPoints": [
+      "Piramidal tipte motor felç (spastisite, Babinski, DTR artışı)",
+      "Arka kordon hasarına bağlı vibrasyon ve pozisyon (derin duyu) kaybı",
+      "Lezyon seviyesinde kök basısına bağlı radiküler duyu kusuru"
+     ],
+     "rightPoints": [
+      "Motor güç tamamen normal ve korunmuştur",
+      "Derin duyu (propriyosepsiyon ve vibrasyon) tamamen korunmuştur",
+      "1-2 segment alttan başlayan spinotalamik ağrı ve ısı duyusu kaybı"
+     ]
+    },
+    {
+     "type": "micro_quiz",
+     "question": "Torakal 8. segmentte omurilik sağ yarısının kesildiği Brown-Séquard tablosunda ağrı ve ısı duyusu kaybı nerede görülür?",
+     "options": [
+      {
+       "text": "Sol tarafta T9-T10 düzeyinden itibaren",
+       "isCorrect": true,
+       "explanation": "Sol tarafta T9-T10 düzeyinden itibaren klinik tanımda doğru kabul edilen temel nörolojik kavramdır. Fizyopatolojik mekanizması soruda sorulan motor bulguyu eksiksiz biçimde açıklayarak doğrular."
+      },
+      {
+       "text": "Sağ tarafta T8 düzeyinden itibaren",
+       "isCorrect": false,
+       "explanation": "Sağ tarafta T8 düzeyinden itibaren sinir sisteminde kendine özgü işlevi bulunan farklı bir anatomik basamaktır. Bu soruda sorulan spesifik nörolojik lezyonun klinik ve fizyopatolojik özellikleriyle örtüşmez."
+      },
+      {
+       "text": "Her iki bacakta simetrik olarak",
+       "isCorrect": false,
+       "explanation": "Her iki bacakta simetrik olarak sinir sisteminde kendine özgü işlevi bulunan farklı bir anatomik basamaktır. Bu soruda sorulan spesifik nörolojik lezyonun klinik ve fizyopatolojik özellikleriyle örtüşmez."
+      },
+      {
+       "text": "Yalnızca kollarda ve omuz kuşağında",
+       "isCorrect": false,
+       "explanation": "Yalnızca kollarda ve omuz kuşağında sinir sisteminde kendine özgü işlevi bulunan farklı bir anatomik basamaktır. Bu soruda sorulan spesifik nörolojik lezyonun klinik ve fizyopatolojik özellikleriyle örtüşmez."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "maskedTerm": "Brown-Séquard",
+     "hint": "Omurilik hemiseksiyon sendromunun adı",
+     "options": [
+      "Brown-Séquard",
+      "Horner",
+      "Weber",
+      "Gowers"
+     ],
+     "sentence": "Medulla spinalisin yarısının hastalanması olan Brown-Séquard sendromunda lezyon tarafında piramidal felç, karşı tarafında ağrı ve ısı duyusunda kayıp olur."
+    },
+    {
+     "type": "active_recall",
+     "keyTakeaway": "Spinotalamik çapraz = karşı taraf ağrı-ısı kaybı.",
+     "question": "Brown-Séquard sendromunda ağrı-ısı kaybının lezyonun KARŞI tarafında olmasının anatomik gerekçesi nedir?",
+     "answer": "Ağrı ve ısı duyusunu taşıyan spinotalamik traktus lifleri medulla spinalise girdikten sonra ön beyaz komissürde çaprazlaşarak karşı taraftan beyne yükselir."
+    }
+   ]
+  },
+  {
+   "id": "k2-32-s24",
+   "slideNumber": 24,
+   "title": "[TEKRAR SAYFASI - CHECKPOINT 3] Hemipleji ve Spinal Sendromlar",
+   "bolum": "Spinal Sendromlar",
+   "content": "Bu aşamaya kadar hemiplejinin klinik evrelerini, santral lokalizasyon basamaklarını ve spinal kord sendromlarını özetledik.\n\n- **Akut İnmede Flask Dönem:** İnme başlangıcında hipotoni ve DTR kaybı görülür; ancak Babinski mevcuttur. Yavaş tümörlerde flask dönem olmadan doğrudan spastisite başlar.\n- **Kortikal vs Kapsüler Hemipleji:** Kortekste orantısız zaaf, monoparezi ve epileptik nöbetler; kapsüla internada eşit orantılı tam hemipleji (yüz=kol=bacak).\n- **Beyin Sapı:** Aynı taraf kranyal nükleer felç ile karşı taraf hemiplejinin birlikte olduğu çapraz felç tablosudur.\n- **Servikal Kord:** Yüzün tamamen sağlam kaldığı aynı taraf kol ve bacak felcidir.\n- **Spinal Parapleji:** Gövdede seviye veren hipoestezi ve sfinkter kusuru kord hasarını kanıtlar.\n- **Brown-Séquard:** Lezyon tarafında spastik felç ve derin duyu kaybı; karşı tarafta 1-2 segment altta ağrı-ısı kaybı.\n\n> [!NOTE]\n> Bu sendromik kurallar nörolojik lezyon lokalizasyonunun temel yapı taşlarıdır.",
+   "synthesisNarrative": "Bu aşamaya kadar hemiplejinin klinik evrelerini, santral lokalizasyon basamaklarını ve spinal kord sendromlarını özetledik.\n\n- **Akut İnmede Flask Dönem:** İnme başlangıcında hipotoni ve DTR kaybı görülür; ancak Babinski mevcuttur. Yavaş tümörlerde flask dönem olmadan doğrudan spastisite başlar.\n- **Kortikal vs Kapsüler Hemipleji:** Kortekste orantısız zaaf, monoparezi ve epileptik nöbetler; kapsüla internada eşit orantılı tam hemipleji (yüz=kol=bacak).\n- **Beyin Sapı:** Aynı taraf kranyal nükleer felç ile karşı taraf hemiplejinin birlikte olduğu çapraz felç tablosudur.\n- **Servikal Kord:** Yüzün tamamen sağlam kaldığı aynı taraf kol ve bacak felcidir.\n- **Spinal Parapleji:** Gövdede seviye veren hipoestezi ve sfinkter kusuru kord hasarını kanıtlar.\n- **Brown-Séquard:** Lezyon tarafında spastik felç ve derin duyu kaybı; karşı tarafta 1-2 segment altta ağrı-ısı kaybı.\n\n> [!NOTE]\n> Bu sendromik kurallar nörolojik lezyon lokalizasyonunun temel yapı taşlarıdır.",
+   "sourcePdf": {
+    "pages": [
+     18,
+     19,
+     20,
+     21,
+     22,
+     23
+    ],
+    "sayfa": 21,
+    "doc": 0
+   },
+   "pdfSayfalari": [
+    18,
+    19,
+    20,
+    21,
+    22,
+    23
+   ],
+   "sayfaHaritasi": "teyitli",
+   "interactiveElements": [
+    {
+     "type": "interactive_table",
+     "tableHeaders": [
+      "Sendrom / Durum",
+      "Motor Felç Tarafı",
+      "Duyusal Belirleyici"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Kapsüla İnterna Lezyonu"
+        },
+        {
+         "text": "Karşı vücut yarısında orantılı tam felç",
+         "isRevealed": false,
+         "hint": "Yüz, kol, bacak eşit",
+         "isMasked": true
+        },
+        {
+         "text": "Karşı vücut yarısında hemihipoestezi eşlik edebilir"
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Beyin Sapı Lezyonu"
+        },
+        {
+         "text": "Karşı ekstremiteler + aynı taraf kranyal",
+         "isRevealed": false,
+         "hint": "Çapraz felç",
+         "isMasked": true
+        },
+        {
+         "text": "Lezyon düzeyine göre fasiyal/trigeminal duyu kusuru"
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Brown-Séquard Hemiseksiyonu"
+        },
+        {
+         "text": "Lezyonla aynı tarafta piramidal felç",
+         "isRevealed": false,
+         "hint": "İpsilateral motor zaaf",
+         "isMasked": true
+        },
+        {
+         "text": "Aynı taraf derin duyu, karşı taraf ağrı-ısı kaybı"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "micro_quiz",
+     "question": "Bir hastada sol kol ve bacakta spastik felç, sol tarafta vibrasyon kaybı, sağ gövde ve bacakta ise T6 altından itibaren ağrı ve ısı duyusu kaybı saptanıyor. En olası tanı nedir?",
+     "options": [
+      {
+       "text": "Sol T5-T6 medulla spinalis hemiseksiyonu (Brown-Séquard sendromu)",
+       "isCorrect": true,
+       "explanation": "Sol T5-T6 medulla spinalis hemiseksiyonu klinik tanımda doğru kabul edilen temel nörolojik kavramdır. Fizyopatolojik mekanizması soruda sorulan motor bulguyu eksiksiz biçimde açıklayarak doğrular."
+      },
+      {
+       "text": "Sağ kapsüla interna tam infarktı",
+       "isCorrect": false,
+       "explanation": "Sağ kapsüla interna tam infarktı sinir sisteminde kendine özgü işlevi bulunan farklı bir anatomik basamaktır. Bu soruda sorulan spesifik nörolojik lezyonun klinik ve fizyopatolojik özellikleriyle örtüşmez."
+      },
+      {
+       "text": "Sol serebral motor korteks lezyonu",
+       "isCorrect": false,
+       "explanation": "Sol serebral motor korteks lezyonu sinir sisteminde kendine özgü işlevi bulunan farklı bir anatomik basamaktır. Bu soruda sorulan spesifik nörolojik lezyonun klinik ve fizyopatolojik özellikleriyle örtüşmez."
+      },
+      {
+       "text": "Yaygın simetrik periferik polinöropati",
+       "isCorrect": false,
+       "explanation": "Yaygın simetrik periferik polinöropati sinir sisteminde kendine özgü işlevi bulunan farklı bir anatomik basamaktır. Bu soruda sorulan spesifik nörolojik lezyonun klinik ve fizyopatolojik özellikleriyle örtüşmez."
+      }
+     ]
+    },
+    {
+     "type": "branching_logic",
+     "scenario": "Hasta ani başlayan bilateral bacak güçsüzlüğü ve idrar yapamama yakınmasıyla acil servise geliyor. Muayenede göbek hizasından (T10) itibaren aşağıda hipoestezi saptanıyor.",
+     "question": "Bu aşamada en acil tanısal ve klinik yaklaşım ne olmalıdır?",
+     "options": [
+      {
+       "text": "Torakolomber spinal kord basısı veya transvers lezyonu düşünerek acil spinal MRG istemek",
+       "outcome": "Doğru. Seviye veren hipoestezi ve sfinkter kusuru acil cerrahi veya medikal müdahale gerektiren omurilik patolojisidir.",
+       "isCorrect": true,
+       "feedback": "Torakolomber spinal kord basısı veya transvers lezyonu düşünerek acil spinal MRG istemek klinik tanımda doğru kabul edilen temel nörolojik kavramdır. Fizyopatolojik mekanizması soruda sorulan motor bulguyu eksiksiz biçimde açıklayarak doğrular.",
+       "explanation": "Torakolomber spinal kord basısı veya transvers lezyonu düşünerek acil spinal MRG istemek klinik tanımda doğru kabul edilen temel nörolojik kavramdır. Fizyopatolojik mekanizması soruda sorulan motor bulguyu eksiksiz biçimde açıklayarak doğrular."
+      },
+      {
+       "text": "Kas distrofisi düşünerek EMG randevusu vermek",
+       "outcome": "Yanlış. Akut sfinkter kaybı ve duyu seviyesi primer kas hastalığında görülmez.",
+       "isCorrect": false,
+       "feedback": "Kas distrofisi düşünerek EMG randevusu vermek sinir sisteminde kendine özgü işlevi bulunan farklı bir anatomik basamaktır. Bu soruda sorulan spesifik nörolojik lezyonun klinik ve fizyopatolojik özellikleriyle örtüşmez.",
+       "explanation": "Kas distrofisi düşünerek EMG randevusu vermek sinir sisteminde kendine özgü işlevi bulunan farklı bir anatomik basamaktır. Bu soruda sorulan spesifik nörolojik lezyonun klinik ve fizyopatolojik özellikleriyle örtüşmez."
+      },
+      {
+       "text": "Myasthenia gravis düşünerek antikolinesteraz başlamak",
+       "outcome": "Yanlış. Miyastenide sfinkter tutulumu ve duyu seviyesi kesinlikle yoktur.",
+       "isCorrect": false,
+       "feedback": "Myasthenia gravis düşünerek antikolinesteraz başlamak sinir sisteminde kendine özgü işlevi bulunan farklı bir anatomik basamaktır. Bu soruda sorulan spesifik nörolojik lezyonun klinik ve fizyopatolojik özellikleriyle örtüşmez.",
+       "explanation": "Myasthenia gravis düşünerek antikolinesteraz başlamak sinir sisteminde kendine özgü işlevi bulunan farklı bir anatomik basamaktır. Bu soruda sorulan spesifik nörolojik lezyonun klinik ve fizyopatolojik özellikleriyle örtüşmez."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "keyTakeaway": "Çapraz felç = ipsilateral kranyal sinir felci + kontralateral hemipleji.",
+     "question": "Beyin sapı lezyonlarında görülen çapraz felç (alternan hemipleji) nedir?",
+     "answer": "Lezyon tarafında periferik tipte kranyal sinir felci (ör. 3. sinir veya 7. sinir) ile lezyonun karşı tarafındaki kol ve bacakta piramidal hemiplejinin bir arada bulunmasıdır."
+    }
+   ]
+  },
+  {
+   "id": "k2-32-s25",
+   "slideNumber": 25,
+   "title": "Spinal Paraplejide Seviye, Kök Ağrısı ve Refleksler",
+   "bolum": "4",
+   "content": "Spinal kord patolojilerinde nörolojik muayene lezyonun aksiyel yüksekliğini kesinleştiren üç kilit veri sunar.\n\n- **Duyu Kusurunun Üst Düzeyi:** Hipoestezinin üst sınırı lezyonun spinal seviyesini gösterir; örneğin göbek hizasındaki duyu seviyesi D10, meme başı hizası D4 segmentine karşılık gelir.\n- **Radiküler Kök Ağrıları:** Lezyon duyusal arka kökleri bastırıyorsa, o köklerin dermatomuna uyan bölgede tek veya çift taraflı kök ağrıları izlenir; örneğin meme hizasında çember şeklinde kuşak tarzı ağrı D3-D4 kök basısını kanıtlar.\n- **Kaybolan DTR Seviyesi:** Bir DTR'nin kaybolması o refleks kavsinin geçtiği segmental seviyeyi gösterir; örneğin piramidal paraparezili bir hastada bacaklarda artmış DTR'ye karşın kollarda refleksler alınamıyorsa lezyon servikal bölgededir.\n\n> [!IMPORTANT]\n> Kaybolan derin tendon refleksi lezyonun tam segmental düzeyini, altındaki artmış refleksler ise inen piramidal yol hasarını gösterir.",
+   "synthesisNarrative": "Spinal kord patolojilerinde nörolojik muayene lezyonun aksiyel yüksekliğini kesinleştiren üç kilit veri sunar.\n\n- **Duyu Kusurunun Üst Düzeyi:** Hipoestezinin üst sınırı lezyonun spinal seviyesini gösterir; örneğin göbek hizasındaki duyu seviyesi D10, meme başı hizası D4 segmentine karşılık gelir.\n- **Radiküler Kök Ağrıları:** Lezyon duyusal arka kökleri bastırıyorsa, o köklerin dermatomuna uyan bölgede tek veya çift taraflı kök ağrıları izlenir; örneğin meme hizasında çember şeklinde kuşak tarzı ağrı D3-D4 kök basısını kanıtlar.\n- **Kaybolan DTR Seviyesi:** Bir DTR'nin kaybolması o refleks kavsinin geçtiği segmental seviyeyi gösterir; örneğin piramidal paraparezili bir hastada bacaklarda artmış DTR'ye karşın kollarda refleksler alınamıyorsa lezyon servikal bölgededir.\n\n> [!IMPORTANT]\n> Kaybolan derin tendon refleksi lezyonun tam segmental düzeyini, altındaki artmış refleksler ise inen piramidal yol hasarını gösterir.",
+   "sourcePdf": {
+    "sourcePdfKey": "y25-k2-32-felcler",
+    "startPage": 24,
+    "endPage": 25
+   },
+   "pdfSayfalari": [
+    24,
+    25
+   ],
+   "sayfaHaritasi": "teyitli",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Spinal kord lezyonlu bir hastada meme başı hizasında çember şeklinde kuşak tarzı radiküler ağrı ve duyu seviyesi saptanması lezyonun hangi segmentte olduğunu gösterir?",
+     "options": [
+      {
+       "text": "Dorsal (torakal) 4 segmenti",
+       "isCorrect": true,
+       "explanation": "Dorsal klinik tanımda doğru kabul edilen temel nörolojik kavramdır. Fizyopatolojik mekanizması soruda sorulan motor bulguyu eksiksiz biçimde açıklayarak doğrular."
+      },
+      {
+       "text": "Dorsal (torakal) 10 segmenti",
+       "isCorrect": false,
+       "explanation": "Dorsal sinir sisteminde kendine özgü işlevi bulunan farklı bir anatomik basamaktır. Bu soruda sorulan spesifik nörolojik lezyonun klinik ve fizyopatolojik özellikleriyle örtüşmez."
+      },
+      {
+       "text": "Servikal 2 segmenti",
+       "isCorrect": false,
+       "explanation": "Servikal 2 segmenti sinir sisteminde kendine özgü işlevi bulunan farklı bir anatomik basamaktır. Bu soruda sorulan spesifik nörolojik lezyonun klinik ve fizyopatolojik özellikleriyle örtüşmez."
+      },
+      {
+       "text": "Lomber 1 segmenti",
+       "isCorrect": false,
+       "explanation": "Lomber 1 segmenti sinir sisteminde kendine özgü işlevi bulunan farklı bir anatomik basamaktır. Bu soruda sorulan spesifik nörolojik lezyonun klinik ve fizyopatolojik özellikleriyle örtüşmez."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "maskedTerm": "üst düzeyi",
+     "hint": "Gövdede duyu kusurunun ulaştığı en yüksek anatomik sınır",
+     "options": [
+      "üst düzeyi",
+      "alt düzeyi",
+      "şiddeti",
+      "süresi"
+     ],
+     "sentence": "Duyu kusurunun üst düzeyi lezyonun üst düzeyini gösterir; kaybolan derin tendon refleksi segmental lezyon seviyesini belirler."
+    },
+    {
+     "type": "active_recall",
+     "keyTakeaway": "Kaybolan DTR = lezyon segmenti; altındaki artmış DTR = inen piramidal hasar.",
+     "question": "Piramidal paraparezili bir hastada bacaklarda artmış DTR'ye karşın kollarda DTR alınamamasının anlamı nedir?",
+     "answer": "Kollardaki DTR kaybı lezyonun o servikal segmentte refleks kavislerini kestiğini; bacaklardaki artmış DTR ise lezyonun altından geçen inen piramidal yolun hasarlandığını gösterir (lezyon servikal korddadır)."
+    },
+    {
+     "type": "spot_the_lie",
+     "items": [
+      {
+       "text": "Duyu kusurunun üst sınırı spinal kord hasarının segmental düzeyini gösterir.",
+       "isLie": false,
+       "explanation": "Dermatomik duyu sınırı seviye belirler."
+      },
+      {
+       "text": "Göbek hizasındaki duyu seviyesi D10 segmentine karşılık gelir.",
+       "isLie": false,
+       "explanation": "Göbek T10 dermatomudur."
+      },
+      {
+       "text": "Lezyon seviyesindeki refleks kavsi sağlam kalır ve daima hiperaktifleşir.",
+       "isLie": true,
+       "explanation": "Tuzak: Lezyon seviyesindeki refleks kavsi eferent hasarla kaybolur; hiperrefleksi lezyonun altındaki segmentlerde görülür."
+      },
+      {
+       "text": "Duyusal kök basısında kuşak şeklinde radiküler ağrılar izlenebilir.",
+       "isLie": false,
+       "explanation": "Radiküler ağrı kök irritasyonu bulgusudur."
+      }
+     ],
+     "topic": "Motor Sistem Ayırıcı Tanı İlkeleri"
+    }
+   ]
+  },
+  {
+   "id": "k2-32-s26",
+   "slideNumber": 26,
+   "title": "Psödobulber Paralizi: Bilateral Kortikobulber Hasar",
+   "bolum": "4",
+   "content": "Psödobulber paralizi, kortikospinal ve kortikobulber yollar üzerinde beynin iki yanında ortaya çıkan ufak, laküner infarktların doğurduğu tablodur.\n\n- **Klinik Belirtiler:** Yutma güçlüğü (disfaji), konuşma bozukluğu (dizartri), ufak adımlarla yürüme, yaygın DTR artışı ve Babinski pozitifliği izlenir.\n- **Emosyonel Labilite:** Hastada nedensiz, durumsal olarak uyumsuz, ani ve durdurulamayan ağlama ve gülme nöbetleri (patolojik gülme-ağlama) ile demansiyel belirtiler ve idrar kaçırma eşlik eder.\n- **Bulber felç ile psödobulber felç şöyle ayrılır:** Bu tablo kranyal sinir çekirdeklerinin doğrudan hastalığından (bulber felç) değil, bilateral kortikobulber üst motor liflerin hasarına bağlıdır; bu nedenle **dilde atrofi ve fasikülasyon görülmez**.\n\n> [!IMPORTANT]\n> Dilde atrofi ve fasikülasyon olmaksızın disfaji, dizartri, DTR artışı ve patolojik gülme-ağlama birlikteliği psödobulber paralizinin ayırt edici özelliğidir.",
+   "synthesisNarrative": "Psödobulber paralizi, kortikospinal ve kortikobulber yollar üzerinde beynin iki yanında ortaya çıkan ufak, laküner infarktların doğurduğu tablodur.\n\n- **Klinik Belirtiler:** Yutma güçlüğü (disfaji), konuşma bozukluğu (dizartri), ufak adımlarla yürüme, yaygın DTR artışı ve Babinski pozitifliği izlenir.\n- **Emosyonel Labilite:** Hastada nedensiz, durumsal olarak uyumsuz, ani ve durdurulamayan ağlama ve gülme nöbetleri (patolojik gülme-ağlama) ile demansiyel belirtiler ve idrar kaçırma eşlik eder.\n- **Bulber felç ile psödobulber felç şöyle ayrılır:** Bu tablo kranyal sinir çekirdeklerinin doğrudan hastalığından (bulber felç) değil, bilateral kortikobulber üst motor liflerin hasarına bağlıdır; bu nedenle **dilde atrofi ve fasikülasyon görülmez**.\n\n> [!IMPORTANT]\n> Dilde atrofi ve fasikülasyon olmaksızın disfaji, dizartri, DTR artışı ve patolojik gülme-ağlama birlikteliği psödobulber paralizinin ayırt edici özelliğidir.",
+   "sourcePdf": {
+    "sourcePdfKey": "y25-k2-32-felcler",
+    "startPage": 26,
+    "endPage": 26
+   },
+   "pdfSayfalari": [
+    26,
+    26
+   ],
+   "sayfaHaritasi": "teyitli",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Psödobulber paraliziyi gerçek bulber paraliziden (alt motor nöron nükleer hasarı) ayıran en temel fizik muayene özelliği nedir?",
+     "options": [
+      {
+       "text": "Dilde kas atrofisi ve fasikülasyonların görülmemesi",
+       "isCorrect": true,
+       "explanation": "Dilde kas atrofisi ve fasikülasyonların görülmemesi klinik tanımda doğru kabul edilen temel nörolojik kavramdır. Fizyopatolojik mekanizması soruda sorulan motor bulguyu eksiksiz biçimde açıklayarak doğrular."
+      },
+      {
+       "text": "Hastada yutma güçlüğünün bulunmaması",
+       "isCorrect": false,
+       "explanation": "Hastada yutma güçlüğünün bulunmaması sinir sisteminde kendine özgü işlevi bulunan farklı bir anatomik basamaktır. Bu soruda sorulan spesifik nörolojik lezyonun klinik ve fizyopatolojik özellikleriyle örtüşmez."
+      },
+      {
+       "text": "Dizartrinin eşlik etmemesi",
+       "isCorrect": false,
+       "explanation": "Dizartrinin eşlik etmemesi sinir sisteminde kendine özgü işlevi bulunan farklı bir anatomik basamaktır. Bu soruda sorulan spesifik nörolojik lezyonun klinik ve fizyopatolojik özellikleriyle örtüşmez."
+      },
+      {
+       "text": "Reflekslerin tamamen kaybolması",
+       "isCorrect": false,
+       "explanation": "Reflekslerin tamamen kaybolması sinir sisteminde kendine özgü işlevi bulunan farklı bir anatomik basamaktır. Bu soruda sorulan spesifik nörolojik lezyonun klinik ve fizyopatolojik özellikleriyle örtüşmez."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "maskedTerm": "atrofi",
+     "hint": "Dil kas kütlesinin erimesi bulgusu",
+     "options": [
+      "atrofi",
+      "spastisite",
+      "Babinski",
+      "klonus"
+     ],
+     "sentence": "Psödobulber paralizide kranyal sinir çekirdekleri sağlam olduğundan dilde atrofi ve fasikülasyon görülmez."
+    },
+    {
+     "type": "active_recall",
+     "keyTakeaway": "Psödobulber felç = bilateral kortikobulber hasar + patolojik gülme-ağlama, dilde atrofi yok.",
+     "question": "Psödobulber paralizide patolojik gülme ve ağlama nöbetlerinin fizyopatolojik mekanizması nedir?",
+     "answer": "Kortikobulber üst motor yolların bilateral vasküler/laküner hasarı sonucu limbik ve emosyonel motor merkezler üzerindeki kortikal baskının (inhibitör kontrolün) kalkmasıdır."
+    },
+    {
+     "type": "swipe_matching",
+     "cards": [
+      {
+       "text": "Bilateral supranükleer kortikobulber hasar",
+       "explanation": "Psödobulber paralizidir.",
+       "category": "left"
+      },
+      {
+       "text": "Dilde atrofi ve fasikülasyon YOKTUR",
+       "explanation": "Üst motor nöron hasarında çekirdek sağlamdır.",
+       "category": "left"
+      },
+      {
+       "text": "Motor kranyal sinir nükleus hasarı",
+       "explanation": "Gerçek bulber alt motor nöron felcidir.",
+       "category": "right"
+      },
+      {
+       "text": "Dilde belirgin atrofi ve yaygın fasikülasyon",
+       "explanation": "N. hypoglossus nükleus denervasyonudur.",
+       "category": "right"
+      }
+     ],
+     "leftCategory": "Psödobulber Paralizi (1. MN)",
+     "rightCategory": "Gerçek Bulber Felç (2. MN)"
+    }
+   ]
+  },
+  {
+   "id": "k2-32-s27",
+   "slideNumber": 27,
+   "title": "Motor Nöron Hastalığı: Amyotrofik Lateral Skleroz",
+   "bolum": "4",
+   "content": "Motor nöron hastalığı, birinci ve/veya ikinci motor nöronların sebebi bilinmeyen, yaygın ve ilerleyici dejeneratif hastalığıdır.\n\n- **Amyotrofik Lateral Skleroz (ALS):** Hem birinci (üst) hem de ikinci (alt) motor nöronların birlikte tutulduğu klasik formdur.\n- **Kombine Bulgular:** Üst motor nöron tutulumuna bağlı DTR artışı, Hoffmann ve Babinski pozitifliği izlenirken; aynı hastada alt motor nöron tutulumuna bağlı dil ve el intrensek kaslarında belirgin atrofi ve yaygın fasikülasyonlar bir arada bulunur.\n- **Bulber Tutulum:** Yutma kusuru, dil hareketlerinde güçlük ve spastik/flask mikst dizartri gelişir.\n- **Kesin Kural:** ALS'de **duyu kusuru kesinlikle yoktur**; sfinkter kontrolü ve göz hareketleri de kural olarak korunur.\n\n> [!IMPORTANT]\n> Duyu kusuru olmaksızın aynı ekstremitede hem DTR artışı/Babinski (1. MN) hem de kas atrofisi/fasikülasyon (2. MN) saptanması ALS için patognomoniktir.",
+   "synthesisNarrative": "Motor nöron hastalığı, birinci ve/veya ikinci motor nöronların sebebi bilinmeyen, yaygın ve ilerleyici dejeneratif hastalığıdır.\n\n- **Amyotrofik Lateral Skleroz (ALS):** Hem birinci (üst) hem de ikinci (alt) motor nöronların birlikte tutulduğu klasik formdur.\n- **Kombine Bulgular:** Üst motor nöron tutulumuna bağlı DTR artışı, Hoffmann ve Babinski pozitifliği izlenirken; aynı hastada alt motor nöron tutulumuna bağlı dil ve el intrensek kaslarında belirgin atrofi ve yaygın fasikülasyonlar bir arada bulunur.\n- **Bulber Tutulum:** Yutma kusuru, dil hareketlerinde güçlük ve spastik/flask mikst dizartri gelişir.\n- **Kesin Kural:** ALS'de **duyu kusuru kesinlikle yoktur**; sfinkter kontrolü ve göz hareketleri de kural olarak korunur.\n\n> [!IMPORTANT]\n> Duyu kusuru olmaksızın aynı ekstremitede hem DTR artışı/Babinski (1. MN) hem de kas atrofisi/fasikülasyon (2. MN) saptanması ALS için patognomoniktir.",
+   "sourcePdf": {
+    "sourcePdfKey": "y25-k2-32-felcler",
+    "startPage": 27,
+    "endPage": 27
+   },
+   "pdfSayfalari": [
+    27,
+    27
+   ],
+   "sayfaHaritasi": "teyitli",
+   "interactiveElements": [
+    {
+     "type": "venn_grid",
+     "items": [
+      {
+       "explanation": "Kortikospinal piramidal tutulum bulgusudur.",
+       "criterion": "Derin tendon reflekslerinin artması ve Babinski pozitifliği",
+       "correct": "A"
+      },
+      {
+       "explanation": "Ön boynuz ve kranyal nükleus denervasyon bulgusudur.",
+       "criterion": "Dil ve el kaslarında belirgin atrofi ve fasikülasyon",
+       "correct": "B"
+      },
+      {
+       "explanation": "ALS 1. ve 2. motor nöronların mikst hastalığıdır.",
+       "criterion": "ALS hastasında aynı klinik tabloda birlikte görülme",
+       "correct": "both"
+      },
+      {
+       "explanation": "ALS saf motor hastalıktır; duyu kusuru kesinlikle bulunmaz.",
+       "criterion": "Eldiven-çorap tarzı belirgin duyu kaybı",
+       "correct": "neither"
+      }
+     ],
+     "labelA": "1. Motor Nöron Bulguları",
+     "labelB": "2. Motor Nöron Bulguları"
+    },
+    {
+     "type": "micro_quiz",
+     "question": "Amyotrofik Lateral Skleroz (ALS) tanısında aşağıdaki klinik özelliklerden hangisinin varlığı tanıyı KESİNLİKLE DIŞLAR?",
+     "options": [
+      {
+       "text": "Gövdede veya ekstremitelerde belirgin duyu kusuru saptanması",
+       "isCorrect": true,
+       "explanation": "Gövdede veya ekstremitelerde belirgin duyu kusuru saptanması klinik tanımda doğru kabul edilen temel nörolojik kavramdır. Fizyopatolojik mekanizması soruda sorulan motor bulguyu eksiksiz biçimde açıklayarak doğrular."
+      },
+      {
+       "text": "Dilde yaygın fasikülasyon ve atrofi görülmesi",
+       "isCorrect": false,
+       "explanation": "Dilde yaygın fasikülasyon ve atrofi görülmesi sinir sisteminde kendine özgü işlevi bulunan farklı bir anatomik basamaktır. Bu soruda sorulan spesifik nörolojik lezyonun klinik ve fizyopatolojik özellikleriyle örtüşmez."
+      },
+      {
+       "text": "Bacaklarda Babinski delilinin pozitif olması",
+       "isCorrect": false,
+       "explanation": "Bacaklarda Babinski delilinin pozitif olması sinir sisteminde kendine özgü işlevi bulunan farklı bir anatomik basamaktır. Bu soruda sorulan spesifik nörolojik lezyonun klinik ve fizyopatolojik özellikleriyle örtüşmez."
+      },
+      {
+       "text": "Yutma ve konuşma güçlüğünün ilerlemesi",
+       "isCorrect": false,
+       "explanation": "Yutma ve konuşma güçlüğünün ilerlemesi sinir sisteminde kendine özgü işlevi bulunan farklı bir anatomik basamaktır. Bu soruda sorulan spesifik nörolojik lezyonun klinik ve fizyopatolojik özellikleriyle örtüşmez."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "maskedTerm": "lateral skleroz",
+     "hint": "1. ve 2. motor nöronların kombine dejeneratif hastalığı (kısaltması ALS)",
+     "options": [
+      "lateral skleroz",
+      "transvers miyelit",
+      "multipl skleroz",
+      "psödobulber paralizi"
+     ],
+     "sentence": "Her iki motor nöron birlikte tutulduğunda amyotrofik lateral skleroz tablosu ortaya çıkar ve duyu kusuru yoktur."
+    },
+    {
+     "type": "active_recall",
+     "keyTakeaway": "ALS = 1. MN + 2. MN birlikte tutulumu, duyu KORUNMUŞTUR.",
+     "question": "ALS hastalığını diğer motor sistem patolojilerinden ayıran en çarpıcı muayene kombinasyonu nedir?",
+     "answer": "Aynı hastada ve sıklıkla aynı ekstremitede hem 1. motor nöron (DTR artışı, Babinski) hem de 2. motor nöron (kas atrofisi, fasikülasyon) bulgularının duyu kusuru olmaksızın bir arada bulunmasıdır."
+    }
+   ]
+  },
+  {
+   "id": "k2-32-s28",
+   "slideNumber": 28,
+   "title": "Yüz Felci: Santral ve Periferik Fasiyal Paralizi",
+   "bolum": "4",
+   "content": "Nervus facialis inervasyon anatomisi, yüz felcinin santral mi yoksa periferik mi olduğunu yatak başında kesinleştirir.\n\n- **Santral Fasiyal Paralizi:** Piramidal yolun n. facialis çekirdeğine kadar olan supranükleer lezyonlarında görülür. Fasiyal nükleusun alın kaslarını innerve eden üst parçası her iki hemisferden bilateral kortikobulber girdi alır; bu nedenle santral felçte **alın kasları korunur**, felç yalnız **karşı yüz alt yarısında** (ağız köşesinde sarkma) ortaya çıkar.\n- **Periferik Fasiyal Paralizi (Bell Felci):** N. facialis çekirdeği veya sinirin kendisindeki lezyonlardır; ipsilateral **hem üst hem alt yüz yarımı tamamen felçtir**; hasta kaşını kaldıramaz, alnını kırıştıramaz ve gözünü kapatamaz (**lagoftalmi**).\n- **Bell Fenomeni:** Periferik felçli hasta gözünü kapatmaya çalıştığında göz küresi istemsiz olarak yukarı ve dışa doğru kayar.\n\n> [!IMPORTANT]\n> Alnını kırıştırabilen hasta santral (inme/tümör), alnını kırıştıramayan ve gözünü kapatamayan hasta periferik fasiyal paralizidir.",
+   "synthesisNarrative": "Nervus facialis inervasyon anatomisi, yüz felcinin santral mi yoksa periferik mi olduğunu yatak başında kesinleştirir.\n\n- **Santral Fasiyal Paralizi:** Piramidal yolun n. facialis çekirdeğine kadar olan supranükleer lezyonlarında görülür. Fasiyal nükleusun alın kaslarını innerve eden üst parçası her iki hemisferden bilateral kortikobulber girdi alır; bu nedenle santral felçte **alın kasları korunur**, felç yalnız **karşı yüz alt yarısında** (ağız köşesinde sarkma) ortaya çıkar.\n- **Periferik Fasiyal Paralizi (Bell Felci):** N. facialis çekirdeği veya sinirin kendisindeki lezyonlardır; ipsilateral **hem üst hem alt yüz yarımı tamamen felçtir**; hasta kaşını kaldıramaz, alnını kırıştıramaz ve gözünü kapatamaz (**lagoftalmi**).\n- **Bell Fenomeni:** Periferik felçli hasta gözünü kapatmaya çalıştığında göz küresi istemsiz olarak yukarı ve dışa doğru kayar.\n\n> [!IMPORTANT]\n> Alnını kırıştırabilen hasta santral (inme/tümör), alnını kırıştıramayan ve gözünü kapatamayan hasta periferik fasiyal paralizidir.",
+   "sourcePdf": {
+    "sourcePdfKey": "y25-k2-32-felcler",
+    "startPage": 28,
+    "endPage": 28
+   },
+   "pdfSayfalari": [
+    28,
+    28
+   ],
+   "sayfaHaritasi": "teyitli",
+   "interactiveElements": [
+    {
+     "type": "before_after_slider",
+     "leftTitle": "Santral Yüz Felci (Supranükleer)",
+     "rightTitle": "Periferik Yüz Felci (Bell)",
+     "leftPoints": [
+      "Bilateral inervasyon nedeniyle alın kasları KORUNUR",
+      "Felç yalnız karşı taraf yüz alt yarısındadır",
+      "Hasta gözünü normal şekilde kapatabilir"
+     ],
+     "rightPoints": [
+      "Aynı taraftaki alın kasları felçtir, çizgiler silinir",
+      "Hem üst hem alt yüz yarımı tamamen tutulur",
+      "Göz kapatılamaz (lagoftalmi) ve Bell fenomeni görülür"
+     ]
+    },
+    {
+     "type": "micro_quiz",
+     "question": "Sol ağız köşesinde sarkma olan bir hasta sol alnını kırıştırabiliyor ve sol gözünü tam olarak kapatabiliyorsa en olası tanı nedir?",
+     "options": [
+      {
+       "text": "Sağ hemisfer piramidal yol lezyonuna bağlı santral fasiyal paralizi",
+       "isCorrect": true,
+       "explanation": "Sağ hemisfer piramidal yol lezyonuna bağlı santral fasiyal paralizi klinik tanımda doğru kabul edilen temel nörolojik kavramdır. Fizyopatolojik mekanizması soruda sorulan motor bulguyu eksiksiz biçimde açıklayarak doğrular."
+      },
+      {
+       "text": "Sol periferik Bell felci",
+       "isCorrect": false,
+       "explanation": "Sol periferik Bell felci sinir sisteminde kendine özgü işlevi bulunan farklı bir anatomik basamaktır. Bu soruda sorulan spesifik nörolojik lezyonun klinik ve fizyopatolojik özellikleriyle örtüşmez."
+      },
+      {
+       "text": "Myasthenia gravis",
+       "isCorrect": false,
+       "explanation": "Myasthenia gravis sinir sisteminde kendine özgü işlevi bulunan farklı bir anatomik basamaktır. Bu soruda sorulan spesifik nörolojik lezyonun klinik ve fizyopatolojik özellikleriyle örtüşmez."
+      },
+      {
+       "text": "Pons n. facialis çekirdek hasarı",
+       "isCorrect": false,
+       "explanation": "Pons n. facialis çekirdek hasarı sinir sisteminde kendine özgü işlevi bulunan farklı bir anatomik basamaktır. Bu soruda sorulan spesifik nörolojik lezyonun klinik ve fizyopatolojik özellikleriyle örtüşmez."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "maskedTerm": "Bell fenomeni",
+     "hint": "Periferik yüz felcinde göz küresinin yukarı kayması bulgusu",
+     "options": [
+      "Bell fenomeni",
+      "Babinski delili",
+      "Gowers arazı",
+      "Hoffmann delili"
+     ],
+     "sentence": "Periferik yüz felcinde göz kapatılamaz ve hasta gözünü kapatmaya çalıştığında göz küresi yukarı kayar; bu bulguya Bell fenomeni denir."
+    },
+    {
+     "type": "active_recall",
+     "keyTakeaway": "Alın kasları bilateral inervelidir = santral felçte korunur.",
+     "question": "Santral yüz felcinde alın kaslarının sağlam kalmasının anatomik gerekçesi nedir?",
+     "answer": "N. facialis nükleusunun üst yüzü (alın kaslarını) innerve eden nöron grubunun her iki serebral korteksten (bilateral kortikobulber) lif almasıdır."
+    }
+   ]
+  },
+  {
+   "id": "k2-32-s29",
+   "slideNumber": 29,
+   "title": "Demiyelinizan, Enfeksiyöz ve Periferik Miyelopatiler",
+   "bolum": "4",
+   "content": "Motor güçsüzlük yapan immün, enfeksiyöz ve periferik patolojiler kendilerine özgü klinik profillerle seyreder.\n\n- **Multipl Skleroz (MS):** Genç yaşlarda başlayan, piramidal bulgular, serebellar ataksi, kranyal nöropatiler, duyu ve sfinkter bozukluklarıyla giden otoimmün demiyelinizan hastalıktır; atak ve remisyonlarla seyreder, zamanla sekeller birikir.\n- **Poliomiyelit:** Ön boynuz hücrelerinin akut viral iltihabıdır; ateşli bir prodromu izleyen asimetrik kol ve bacak felçleri gelişir; felçler **2. motor nöron tipindedir** (arefleksi, hipotoni, erken atrofi), duyu kusuru kesinlikle **olmaz**.\n- **Polinöropati:** Birden fazla periferik sinirin simetrik tutulumudur; zaaf ekstremite uçlarında (distal) belirgindir, felç 2. motor nöron tipindedir ve **eldiven-çorap tarzı duyu kusuru** eşlik eder.\n\n> [!NOTE]\n> Poliomiyelit saf motor ön boynuz lezyonuyken, polinöropati belirgin distal duyu kusuru içeren mikst periferik sinir hastalığıdır.",
+   "synthesisNarrative": "Motor güçsüzlük yapan immün, enfeksiyöz ve periferik patolojiler kendilerine özgü klinik profillerle seyreder.\n\n- **Multipl Skleroz (MS):** Genç yaşlarda başlayan, piramidal bulgular, serebellar ataksi, kranyal nöropatiler, duyu ve sfinkter bozukluklarıyla giden otoimmün demiyelinizan hastalıktır; atak ve remisyonlarla seyreder, zamanla sekeller birikir.\n- **Poliomiyelit:** Ön boynuz hücrelerinin akut viral iltihabıdır; ateşli bir prodromu izleyen asimetrik kol ve bacak felçleri gelişir; felçler **2. motor nöron tipindedir** (arefleksi, hipotoni, erken atrofi), duyu kusuru kesinlikle **olmaz**.\n- **Polinöropati:** Birden fazla periferik sinirin simetrik tutulumudur; zaaf ekstremite uçlarında (distal) belirgindir, felç 2. motor nöron tipindedir ve **eldiven-çorap tarzı duyu kusuru** eşlik eder.\n\n> [!NOTE]\n> Poliomiyelit saf motor ön boynuz lezyonuyken, polinöropati belirgin distal duyu kusuru içeren mikst periferik sinir hastalığıdır.",
+   "sourcePdf": {
+    "sourcePdfKey": "y25-k2-32-felcler",
+    "startPage": 29,
+    "endPage": 31
+   },
+   "pdfSayfalari": [
+    29,
+    31
+   ],
+   "sayfaHaritasi": "teyitli",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Ateşli bir prodromu takiben bacakta ani asimetrik gevşek felç ve arefleksi gelişen, duyu muayenesi tamamen normal saptanan hastada en olası tanı nedir?",
+     "options": [
+      {
+       "text": "Poliomiyelit (ön boynuz viral enfeksiyonu)",
+       "isCorrect": true,
+       "explanation": "Poliomiyelit klinik tanımda doğru kabul edilen temel nörolojik kavramdır. Fizyopatolojik mekanizması soruda sorulan motor bulguyu eksiksiz biçimde açıklayarak doğrular."
+      },
+      {
+       "text": "Simetrik diyabetik polinöropati",
+       "isCorrect": false,
+       "explanation": "Simetrik diyabetik polinöropati sinir sisteminde kendine özgü işlevi bulunan farklı bir anatomik basamaktır. Bu soruda sorulan spesifik nörolojik lezyonun klinik ve fizyopatolojik özellikleriyle örtüşmez."
+      },
+      {
+       "text": "Kapsüla interna laküner infarktı",
+       "isCorrect": false,
+       "explanation": "Kapsüla interna laküner infarktı sinir sisteminde kendine özgü işlevi bulunan farklı bir anatomik basamaktır. Bu soruda sorulan spesifik nörolojik lezyonun klinik ve fizyopatolojik özellikleriyle örtüşmez."
+      },
+      {
+       "text": "Duchenne kas distrofisi",
+       "isCorrect": false,
+       "explanation": "Duchenne kas distrofisi sinir sisteminde kendine özgü işlevi bulunan farklı bir anatomik basamaktır. Bu soruda sorulan spesifik nörolojik lezyonun klinik ve fizyopatolojik özellikleriyle örtüşmez."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "maskedTerm": "eldiven çorap",
+     "hint": "Distal simetrik periferik sinir duyu kusuru paterni",
+     "options": [
+      "eldiven çorap",
+      "eyer tarzı",
+      "pelerin tarzı",
+      "hemisensoryal"
+     ],
+     "sentence": "Polinöropatide felç ikinci motor nöron tipindedir ve duyu kusuru eldiven çorap tarzındadır."
+    },
+    {
+     "type": "active_recall",
+     "keyTakeaway": "Poliomiyelit = asimetrik zaaf + sıfır duyu kusuru; Polinöropati = simetrik distal zaaf + eldiven-çorap duyu kusuru.",
+     "question": "Poliomiyelit ile polinöropati arasındaki en belirgin iki klinik fark nedir?",
+     "answer": "1) Poliomiyelitte zaaf asimetriktir ve duyu kusuru kesinlikle yoktur; 2) Polinöropatide zaaf simetrik distaldedir ve eldiven-çorap tarzı belirgin duyu kusuru eşlik eder."
+    },
+    {
+     "type": "swipe_matching",
+     "cards": [
+      {
+       "text": "Asimetrik flask felç ve duyu korunumu",
+       "explanation": "Ön boynuz alfa motor nöron hasarıdır.",
+       "category": "left"
+      },
+      {
+       "text": "Ateşli enfeksiyon prodromunu izleme",
+       "explanation": "Poliovirüs enfeksiyonu kliniğidir.",
+       "category": "left"
+      },
+      {
+       "text": "Simetrik distal ekstremite zaafı",
+       "explanation": "Periferik yaygın sinir hasarıdır.",
+       "category": "right"
+      },
+      {
+       "text": "Eldiven-çorap tarzı hipoestezi",
+       "explanation": "Mikst duyusal akson tutulumu bulgusudur.",
+       "category": "right"
+      }
+     ],
+     "leftCategory": "Poliomiyelit (Ön Boynuz)",
+     "rightCategory": "Polinöropati (Periferik Sinir)"
+    }
+   ]
+  },
+  {
+   "id": "k2-32-s30",
+   "slideNumber": 30,
+   "title": "Kavşak ve Kas Hastalıkları: Myasthenia Gravis ve Distrofiler",
+   "bolum": "4",
+   "content": "Motor ünitenin son efektör basamaklarını oluşturan kavşak ve kas patolojileri ayırıcı tanıda özel testlere dayanır.\n\n- **Myasthenia Gravis:** Miyonöral kavşakta postsinaptik asetilkolin reseptörlerine karşı antikor oluşur; kaslarda **kolay yorulma ve dalgalanma (fluktuasyon)** karakteristiktir; diplopi, ptoz, çiğneme, yutma ve proksimal zaaf izlenir; tanı antikolinesteraz testi (edrofonyum/neostigmin) ve buz testi ile doğrulanır.\n- **Kas Distrofileri:** İlerleyici, sıklıkla ailesel primer miyopatilerdir; atrofi ve kuvvetsizlik simetriktir ve omuz/kalça kuşağı proksimal kaslarını tutar; pelvik zaafa bağlı **ördek yürüyüşü** ve yerden kalkarken ellerle dizlere tutunma (**Gowers arazı**) tipiktir.\n- **Enflamatuvar Miyopatiler:** Polimiyozit ve dermatomiyozitte subakut simetrik proksimal zaaf, kas ağrıları ve yüksek serum kreatin kinaz (CK) düzeyleri izlenir.\n\n> [!IMPORTANT]\n> Kavşak ve primer kas patolojilerinde refleksler korunur veya hafif azalır; Babinski ve patolojik refleksler kesinlikle bulunmaz.",
+   "synthesisNarrative": "Motor ünitenin son efektör basamaklarını oluşturan kavşak ve kas patolojileri ayırıcı tanıda özel testlere dayanır.\n\n- **Myasthenia Gravis:** Miyonöral kavşakta postsinaptik asetilkolin reseptörlerine karşı antikor oluşur; kaslarda **kolay yorulma ve dalgalanma (fluktuasyon)** karakteristiktir; diplopi, ptoz, çiğneme, yutma ve proksimal zaaf izlenir; tanı antikolinesteraz testi (edrofonyum/neostigmin) ve buz testi ile doğrulanır.\n- **Kas Distrofileri:** İlerleyici, sıklıkla ailesel primer miyopatilerdir; atrofi ve kuvvetsizlik simetriktir ve omuz/kalça kuşağı proksimal kaslarını tutar; pelvik zaafa bağlı **ördek yürüyüşü** ve yerden kalkarken ellerle dizlere tutunma (**Gowers arazı**) tipiktir.\n- **Enflamatuvar Miyopatiler:** Polimiyozit ve dermatomiyozitte subakut simetrik proksimal zaaf, kas ağrıları ve yüksek serum kreatin kinaz (CK) düzeyleri izlenir.\n\n> [!IMPORTANT]\n> Kavşak ve primer kas patolojilerinde refleksler korunur veya hafif azalır; Babinski ve patolojik refleksler kesinlikle bulunmaz.",
+   "sourcePdf": {
+    "sourcePdfKey": "y25-k2-32-felcler",
+    "startPage": 32,
+    "endPage": 33
+   },
+   "pdfSayfalari": [
+    32,
+    33
+   ],
+   "sayfaHaritasi": "teyitli",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Gün içinde eforla artıp dinlenmekle düzelen ptozis, diplopi ve çiğneme güçlüğü olan hastada zaafın buz uygulaması veya antikolinesteraz ile düzelmesi neyi düşündürür?",
+     "options": [
+      {
+       "text": "Myasthenia gravis (nöromüsküler kavşak hastalığı)",
+       "isCorrect": true,
+       "explanation": "Myasthenia gravis klinik tanımda doğru kabul edilen temel nörolojik kavramdır. Fizyopatolojik mekanizması soruda sorulan motor bulguyu eksiksiz biçimde açıklayarak doğrular."
+      },
+      {
+       "text": "Amyotrofik lateral skleroz (ALS)",
+       "isCorrect": false,
+       "explanation": "Amyotrofik lateral skleroz sinir sisteminde kendine özgü işlevi bulunan farklı bir anatomik basamaktır. Bu soruda sorulan spesifik nörolojik lezyonun klinik ve fizyopatolojik özellikleriyle örtüşmez."
+      },
+      {
+       "text": "Kapsüla interna laküner infarktı",
+       "isCorrect": false,
+       "explanation": "Kapsüla interna laküner infarktı sinir sisteminde kendine özgü işlevi bulunan farklı bir anatomik basamaktır. Bu soruda sorulan spesifik nörolojik lezyonun klinik ve fizyopatolojik özellikleriyle örtüşmez."
+      },
+      {
+       "text": "Duchenne kas distrofisi",
+       "isCorrect": false,
+       "explanation": "Duchenne kas distrofisi sinir sisteminde kendine özgü işlevi bulunan farklı bir anatomik basamaktır. Bu soruda sorulan spesifik nörolojik lezyonun klinik ve fizyopatolojik özellikleriyle örtüşmez."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "maskedTerm": "Gowers",
+     "hint": "Pelvik zaafta ellerle dizlere tutunarak kalkma arazı",
+     "options": [
+      "Gowers",
+      "Babinski",
+      "Hoffmann",
+      "Bell"
+     ],
+     "sentence": "Kas distrofilerinde simetrik proksimal zaaf nedeniyle ördek yürüyüşü ve yerden kalkarken Gowers arazı ortaya çıkar."
+    },
+    {
+     "type": "active_recall",
+     "keyTakeaway": "Miyasteni = eforla dalgalanan zaaf; Distrofi = proksimal sabit zaaf + Gowers.",
+     "question": "Myasthenia gravis ile kas distrofileri zaafın gün içindeki seyri açısından nasıl farklılaşır?",
+     "answer": "Myasthenia graviste zaaf eforla belirginleşir, dinlenmekle düzelir ve gün içinde dalgalanır (fluktuasyon); kas distrofilerinde ise zaaf sabittir ve eforla dalgalanma göstermeksizin ilerleyicidir."
+    },
+    {
+     "type": "swipe_matching",
+     "cards": [
+      {
+       "text": "Eforla artan, dinlenmekle düzelen dalgalı zaaf",
+       "explanation": "Miyasteni fluktuasyonudur.",
+       "category": "left"
+      },
+      {
+       "text": "Buz testi ve kolinesteraz inhibitörüne yanıt",
+       "explanation": "Kavşak asetilkolin artışı semptomları düzeltir.",
+       "category": "left"
+      },
+      {
+       "text": "Yerden kalkarken görülen Gowers arazı",
+       "explanation": "Primer proksimal kas zaafı bulgusudur.",
+       "category": "right"
+      },
+      {
+       "text": "Pelvik kuşak zaafına bağlı ördek yürüyüşü",
+       "explanation": "Kalça abdüktör miyopatik zaaf yürüyüşüdür.",
+       "category": "right"
+      }
+     ],
+     "leftCategory": "Myasthenia Gravis (Kavşak)",
+     "rightCategory": "Kas Distrofisi (Miyopati)"
+    }
+   ]
+  },
+  {
+   "id": "k2-32-s31",
+   "slideNumber": 31,
+   "title": "[OYUN SAYFASI] Ders Sonu Oyunları: Felçler",
+   "bolum": "Ders Sonu Değerlendirme",
+   "isGameFinale": true,
+   "content": "Tebrikler! Felçler ve motor sistem hastalıkları dersini başarıyla tamamladınız.\n\nBu final bölümünde öğrendiğiniz tüm temel kazanımları sınamak üzere dört aşamalı interaktif oyun parkuru hazırlanmıştır:\n1. **Sıralama Oyunu:** İstemli hareket emrinin korteksten kas lifine iletim basamaklarını doğru sıraya dizin.\n2. **Değer Tahmin Sürgüsü:** Decussatio pyramidum düzeyinde karşıya çaprazlaşan kortikospinal lif oranını tahmin edin.\n3. **Klinik Pertürbasyon Senaryosu:** Akut inmede gelişen beklenmedik klinik değişimleri patofizyolojik olarak yönetin.\n4. **Metin Onarma:** Hatalı tıp bilgisini içeren klinik cümleyi tespit edip tek kelimeyle düzeltin.",
+   "synthesisNarrative": "Tebrikler! Felçler ve motor sistem hastalıkları dersini başarıyla tamamladınız.\n\nBu final bölümünde öğrendiğiniz tüm temel kazanımları sınamak üzere dört aşamalı interaktif oyun parkuru hazırlanmıştır:\n1. **Sıralama Oyunu:** İstemli hareket emrinin korteksten kas lifine iletim basamaklarını doğru sıraya dizin.\n2. **Değer Tahmin Sürgüsü:** Decussatio pyramidum düzeyinde karşıya çaprazlaşan kortikospinal lif oranını tahmin edin.\n3. **Klinik Pertürbasyon Senaryosu:** Akut inmede gelişen beklenmedik klinik değişimleri patofizyolojik olarak yönetin.\n4. **Metin Onarma:** Hatalı tıp bilgisini içeren klinik cümleyi tespit edip tek kelimeyle düzeltin.",
+   "sourcePdf": null,
+   "pdfSayfalari": [],
+   "sayfaHaritasi": "teyitli",
+   "interactiveElements": [
+    {
+     "type": "sequence_order",
+     "prompt": "İstemli motor hareket emrinin piramidal yol üzerinden kasa ulaşma basamaklarını anatomik sıraya diziniz:",
+     "steps": [
+      "1. Motor korteks girus presentralis piramidal nöronlarından aksiyon potansiyelinin çıkışı",
+      "2. Korona radiata ve kapsüla interna crus posterius boyunca kompakt inen traktus seyri",
+      "3. Bulbus alt ucundaki decussatio pyramidum düzeyinde liflerin yüzde 85'inin çaprazlaşması",
+      "4. Medulla spinalis ön boynuz alfa motor nöronları ve periferik motor sinir ile miyonöral plağa ulaşma"
+     ],
+     "explanation": "İstemli motor impuls kortekste başlar, kapsüla interna boyunca iner, bulbusta çaprazlaşır ve ön boynuz üzerinden kasa ulaşır."
+    },
+    {
+     "type": "estimate_slider",
+     "unit": "%",
+     "min": 50,
+     "max": 100,
+     "explanation": "Kortikospinal traktus liflerinin yaklaşık yüzde 85'i bulbusta çaprazlaşarak lateral traktusu, kalan yüzde 15'i ise ön traktusu oluşturur.",
+     "prompt": "Decussatio pyramidum düzeyinde karşı tarafa çaprazlaşarak tractus corticospinalis lateralisi oluşturan piramidal liflerin yüzdesi kaçtır?",
+     "answer": 85,
+     "tolerance": 5
+    },
+    {
+     "type": "perturbation",
+     "baseScenario": "Sağ hemisfer infarktına bağlı sol hemiplejisi olan akut inme hastasında ilk 24 saatte sol kol ve bacakta belirgin hipotoni ve DTR kaybı izlenmektedir.",
+     "perturbation": "Hastanın taburculuk sonrası 4. haftadaki kontrol muayenesinde sol kolda fleksör, sol bacakta ekstansör kas tonusunun belirgin arttığı ve klonus geliştiği saptanıyor.",
+     "question": "Bu klinik değişimin altında yatan nörofizyolojik süreç nedir?",
+     "options": [
+      {
+       "text": "Akut serebral şok evresinin geçmesi ve spinal refleks kavislerinin desendan disinhibisyonla spastisite geliştirmesi",
+       "isCorrect": true,
+       "explanation": "İnmenin akut flask evresi yerini zamanla desendan inhibitör kontrolün kaybına bağlı klasik spastisiteye bırakır."
+      },
+      {
+       "text": "Hastada yeni bir akut periferik nöropati tablosunun eklenmesi",
+       "isCorrect": false,
+       "explanation": "Periferik nöropati spastisite ve klonus yapmaz, hipotoni yapar."
+      },
+      {
+       "text": "Piramidal sistemin tamamen iyileşerek normal kuvvete dönmesi",
+       "isCorrect": false,
+       "explanation": "Spastisite ve klonus iyileşme değil, üst motor nöron hasarının kalıcı evresidir."
+      },
+      {
+       "text": "Nöromüsküler kavşakta asetilkolin reseptörlerinin bloke olması",
+       "isCorrect": false,
+       "explanation": "Kavşak blokajı miyasteni yapar, spastisite yapmaz."
+      }
+     ],
+     "parameters": [
+      {
+       "name": "Kas Tonusu",
+       "correct": "up",
+       "explanation": "İnmenin akut gevşek dönemi yerini zamanla desendan inhibitör kontrolün kalkmasına bağlı spastisiteye bırakarak tonus artar."
+      },
+      {
+       "name": "Derin Tendon Refleksleri",
+       "correct": "up",
+       "explanation": "Spinal refleks kavislerinin üst motor disinhibisyona uğraması sonucu DTR'ler hiperaktifleşir ve klonus ortaya çıkar."
+      },
+      {
+       "name": "Erken Nörojenik Kas Atrofisi",
+       "correct": "same",
+       "explanation": "Birinci motor nöron lezyonlarında kas liflerinin trofik desteği korunduğu için erken dönemde kas atrofisi gelişmez ve değişmez."
+      }
+     ],
+     "scenario": "Akut iskemik inme geçiren bir hastada ilk 24 saatlik serebral şok evresinden 4 hafta sonraki spastik evreye geçişte motor bulguların seyri."
+    },
+    {
+     "type": "fix_the_text",
+     "corruptedText": "Birinci motor nöron hastalıklarında kaslarda yaygın fasikülasyon görülür ve derin tendon refleksleri kaybolur.",
+     "errorWord": "görülür",
+     "correctWord": "görülmez",
+     "explanation": "Piramidal (1. motor nöron) yol hastalıklarında kaslarda fasikülasyon görülmez; fasikülasyon alt motor nöron ön boynuz lezyonlarına aittir.",
+     "text": "Birinci motor nöron hastalıklarında kaslarda yaygın fasikülasyon görülür ve derin tendon refleksleri desendan inhibitör kontrolün kalkmasıyla patolojik olarak artış gösterir.",
+     "errors": [
+      {
+       "wrong": "görülür",
+       "correct": "görülmez",
+       "options": [
+        "görülmez",
+        "şiddetlenir"
+       ],
+       "explanation": "Piramidal üst motor nöron lezyonlarında kaslarda fasikülasyon görülmez; fasikülasyon alt motor nöron ön boynuz tutulumuna aittir."
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "discipline": "Nöroloji",
+ "sayfaHaritasi": "teyitli",
+ "donem": "2025-2026",
+ "matchedPastQuestionsCount": 10,
+ "sinama": {
+  "etiket": "2025-2026 Arşiv",
+  "aciklama": "Bu ders 2025-2026 dönemi (geçen yıl) slaytlarından hazırlanmıştır; 2026-2027 güncel müfredat dersleriyle karışmaz."
+ }
+}

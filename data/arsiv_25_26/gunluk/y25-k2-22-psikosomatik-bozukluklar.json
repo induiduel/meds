@@ -1,0 +1,34 @@
+{
+  "key": "y25-k2-22-psikosomatik-bozukluklar",
+  "donem": "2025-2026",
+  "kurul": 2,
+  "brans": "Psikiyatri",
+  "baslik": "Psikosomatik Bozukluklar",
+  "kayitlar": [
+    {
+      "surum": 1,
+      "tarih": "2026-10-26 00:59",
+      "neden": "2025-2026 geçmiş yıl arşiv dersi ilk üretimi ve Kurul 2 tam otomatik hat kapı doğrulaması",
+      "hatali_bilgiler": [
+        "İlk üretim kontrolü: H1–H55 hata defterindeki kısaltma okunuşu, sayfa atlama ve şık açıklama kusurları tarandı; 0 hata doğrulandı."
+      ],
+      "degisiklikler": [
+        "2025-2026 dönemi Psikosomatik Hastalıklar-3.SINIF.pdf (43 sayfa) kaynağından 0 atlanan sayfa ile 41 paragraf / 89 cümlelik sesli anlatım üretildi.",
+        "43 adımlı etkileşimli Öğren destesi (11 model + ders sonu oyunları) ve 62 canlı çizim katmanı eklendi.",
+        "EMA Lightning GPU ile 16.9 dakikalık ses sentezlendi, cümle/kelime zamanlaması ve .medspak paketi doğrulandı."
+      ],
+      "metrikler": {
+        "sureSn": 1013,
+        "sureDk": 16.9,
+        "sayfaSayisi": 43,
+        "atlananSayfa": 0,
+        "bolumSayisi": 16,
+        "paragrafSayisi": 41,
+        "cumleSayisi": 89,
+        "slaytAdimSayisi": 43,
+        "cizimSayisi": 62,
+        "cikmisEslesme": 14
+      }
+    }
+  ]
+}

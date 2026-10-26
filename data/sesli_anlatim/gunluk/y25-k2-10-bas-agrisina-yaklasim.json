@@ -1,0 +1,109 @@
+{
+  "key": "y25-k2-10-bas-agrisina-yaklasim",
+  "donem": "2025-2026",
+  "kurul": 2,
+  "brans": "Nöroloji",
+  "baslik": "Baş Ağrısına Yaklaşım",
+  "kayitlar": [
+    {
+      "surum": 1,
+      "tarih": "2026-10-25 05:04",
+      "neden": "2025-2026 Kurul 2 Nöroloji 4 (Baş Ağrısına Yaklaşım) tam otomatik hat üretimi, EMA GPU seslendirme ve medspak yayını",
+      "hatali_bilgiler": [
+        "İlk üretim kontrolü: H1–H55 hata defterindeki kısaltma okunuşu, sayfa atlama ve şık açıklama kusurları tarandı; 0 hata doğrulandı."
+      ],
+      "degisiklikler": [
+        "2025-2026 dönemi 3.sınıf başağrısı yaklaşım.pdf (10 sayfa) kaynağından 0 atlanan sayfa ile 19 paragraf / 78 cümlelik sesli anlatım üretildi.",
+        "11 adımlı etkileşimli Öğren destesi (11 model + ders sonu oyunları) ve 17 canlı çizim katmanı eklendi.",
+        "EMA Lightning GPU ile 12.9 dakikalık ses sentezlendi, cümle/kelime zamanlaması ve .medspak paketi doğrulandı."
+      ],
+      "metrikler": {
+        "sureSn": 775,
+        "sureDk": 12.9,
+        "sayfaSayisi": 10,
+        "atlananSayfa": 0,
+        "bolumSayisi": 10,
+        "paragrafSayisi": 19,
+        "cumleSayisi": 78,
+        "slaytAdimSayisi": 11,
+        "cizimSayisi": 17,
+        "cikmisEslesme": 27
+      }
+    },
+    {
+      "surum": 2,
+      "tarih": "2026-10-25 18:38",
+      "neden": "Slayt çapası olmayan 19 cümlenin kaynak.md satırlarına çapalanması",
+      "hatali_bilgiler": [
+        "İlk üretim kontrolü: H1–H55 hata defterindeki kısaltma okunuşu, sayfa atlama ve şık açıklama kusurları tarandı; 0 hata doğrulandı."
+      ],
+      "degisiklikler": [
+        "2025-2026 dönemi 3.sınıf başağrısı yaklaşım.pdf (10 sayfa) kaynağından 0 atlanan sayfa ile 19 paragraf / 78 cümlelik sesli anlatım üretildi.",
+        "11 adımlı etkileşimli Öğren destesi (11 model + ders sonu oyunları) ve 17 canlı çizim katmanı eklendi.",
+        "EMA Lightning GPU ile 12.9 dakikalık ses sentezlendi, cümle/kelime zamanlaması ve .medspak paketi doğrulandı."
+      ],
+      "metrikler": {
+        "sureSn": 775,
+        "sureDk": 12.9,
+        "sayfaSayisi": 10,
+        "atlananSayfa": 0,
+        "bolumSayisi": 10,
+        "paragrafSayisi": 19,
+        "cumleSayisi": 78,
+        "slaytAdimSayisi": 11,
+        "cizimSayisi": 17,
+        "cikmisEslesme": 27
+      }
+    },
+    {
+      "surum": 3,
+      "tarih": "2026-10-25 19:21",
+      "neden": "10 slaytın tamamını kapsayan 103 cümlelik amfi derinliğinde metin, 18 çıkmış soru bağlantısı ve 19 semantik çizim ile yayın",
+      "hatali_bilgiler": [
+        "İlk üretim kontrolü: H1–H55 hata defterindeki kısaltma okunuşu, sayfa atlama ve şık açıklama kusurları tarandı; 0 hata doğrulandı."
+      ],
+      "degisiklikler": [
+        "2025-2026 dönemi 3.sınıf başağrısı yaklaşım.pdf (10 sayfa) kaynağından 0 atlanan sayfa ile 19 paragraf / 103 cümlelik sesli anlatım üretildi.",
+        "11 adımlı etkileşimli Öğren destesi (11 model + ders sonu oyunları) ve 19 canlı çizim katmanı eklendi.",
+        "EMA Lightning GPU ile 17.1 dakikalık ses sentezlendi, cümle/kelime zamanlaması ve .medspak paketi doğrulandı."
+      ],
+      "metrikler": {
+        "sureSn": 1023,
+        "sureDk": 17.1,
+        "sayfaSayisi": 10,
+        "atlananSayfa": 0,
+        "bolumSayisi": 10,
+        "paragrafSayisi": 19,
+        "cumleSayisi": 103,
+        "slaytAdimSayisi": 11,
+        "cizimSayisi": 19,
+        "cikmisEslesme": 28
+      }
+    },
+    {
+      "surum": 4,
+      "tarih": "2026-10-25 21:11",
+      "neden": "2025-2026 geçmiş yıl arşiv dersi ilk üretimi ve Kurul 2 tam otomatik hat kapı doğrulaması",
+      "hatali_bilgiler": [
+        "İlk üretim kontrolü: H1–H55 hata defterindeki kısaltma okunuşu, sayfa atlama ve şık açıklama kusurları tarandı; 0 hata doğrulandı."
+      ],
+      "degisiklikler": [
+        "2025-2026 dönemi 3.sınıf başağrısı yaklaşım.pdf (10 sayfa) kaynağından 0 atlanan sayfa ile 19 paragraf / 103 cümlelik sesli anlatım üretildi.",
+        "11 adımlı etkileşimli Öğren destesi (11 model + ders sonu oyunları) ve 19 canlı çizim katmanı eklendi.",
+        "EMA Lightning GPU ile 17.1 dakikalık ses sentezlendi, cümle/kelime zamanlaması ve .medspak paketi doğrulandı."
+      ],
+      "metrikler": {
+        "sureSn": 1023,
+        "sureDk": 17.1,
+        "sayfaSayisi": 10,
+        "atlananSayfa": 0,
+        "bolumSayisi": 10,
+        "paragrafSayisi": 19,
+        "cumleSayisi": 103,
+        "slaytAdimSayisi": 11,
+        "cizimSayisi": 19,
+        "cikmisEslesme": 28
+      }
+    }
+  ]
+}

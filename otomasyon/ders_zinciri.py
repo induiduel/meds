@@ -26,7 +26,7 @@ sys.path.insert(0, str(SC))
 import aday_hazirla as AH  # noqa: E402  gizli_silinen, aday, grupla, ornek_hedefi, norm
 
 BRANS_SLUG = {b["ad"]: b["slug"] for b in json.loads((MEDS / "src/data/dersler/branslar.json").read_text())["branslar"]}  # tek kaynak
-ADIMLAR = ["hazirla", "onem", "cozucu", "denetim", "birlestir", "asistan", "ses", "oracle", "capa", "cizim"]
+ADIMLAR = ["hazirla", "onem", "cozucu", "denetim", "birlestir", "asistan", "ses", "oracle", "capa", "cizim", "terim"]
 IZIN = "Read,Write,Edit,Glob,Grep,Bash(python3 *),Bash(curl -s http://127.0.0.1:3000/*)"
 
 
@@ -526,8 +526,34 @@ def a_cizim(d, pk, W, kuru):
     return calistir(f"rsync -az --rsync-path='flock /tmp/meds-deploy.lock sudo rsync' --chown=ubuntu:ubuntu {S}/cizim/{key}.json {uz}/cizim/", kuru=kuru)
 
 
+def a_terim(d, pk, W, kuru):
+    """PDF terim yardımcısı (2026-10-26): slayt başına tıbbi/Latince/karışan terim + kısaltma için 1–2 cümle açıklama.
+    terim_sozlugu.py dok (sayfa metinleri + doğrulanmış sözlük adayları) → Claude TALIMAT_TERIM.md → kapı
+    terim_sozlugu.py dogrula 0 HATA → data/sesli_anlatim/terim/<key>.json cihaz + Oracle. Claude düşerse sözlükten
+    otomatik yol (yalnız doğrulanmış tanımlar) yazılır; ders ekranı terimsiz kalmaz."""
+    key, S = pk["ders_id"], MEDS / "data/sesli_anlatim"
+    uz = "medsor-oracle:/home/ubuntu/medsor/meds/data/sesli_anlatim"
+    T = W / "terim" / d["kod"]; T.mkdir(parents=True, exist_ok=True)
+    py, api = MEDS / ".venv-ocr/bin/python", "MEDS_API=https://api.nofrostlife.com.tr"
+    betik = f"{api} {py} {MEDS}/scripts/sesli_anlatim/terim_sozlugu.py"
+    r = calistir(f"{betik} dok {key} {T}", cwd=MEDS, kuru=kuru)
+    if r:
+        return r
+    kapi = f"{betik} dogrula {key} {T}/terimler.json"
+    istem = (f"{MEDS}/scripts/sesli_anlatim/TALIMAT_TERIM.md talimatını uygula. Ders anahtarı {key}; çalışma klasörü {T} "
+             f"(sayfalar.md ve terimler.json orada). Bitince şu kapıyı 0 HATA olana dek çalıştır: {kapi}")
+    if kapili_claude(istem, kapi, T, kuru):
+        print(f"   {key}: terim kapısı düştü — sözlükten otomatik yol yazılıyor")
+        r = calistir(f"{betik} otomatik {key} --yaz", cwd=MEDS, kuru=kuru)
+    else:
+        r = calistir(f"{kapi} --yaz", cwd=MEDS, kuru=kuru)
+    if r or kuru or not (S / "terim" / f"{key}.json").exists():
+        return r
+    return calistir(f"rsync -az --rsync-path='flock /tmp/meds-deploy.lock sudo rsync' --chown=ubuntu:ubuntu {S}/terim/{key}.json {uz}/terim/", kuru=kuru)
+
+
 IS = {"hazirla": a_hazirla, "onem": a_onem, "cozucu": a_cozucu, "denetim": a_denetim, "birlestir": a_birlestir,
-      "asistan": a_asistan, "ses": a_ses, "oracle": a_oracle, "capa": a_capa, "cizim": a_cizim}
+      "asistan": a_asistan, "ses": a_ses, "oracle": a_oracle, "capa": a_capa, "cizim": a_cizim, "terim": a_terim}
 
 
 def main():

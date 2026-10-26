@@ -1,0 +1,2951 @@
+{
+ "id": "k2p-y25-k2-29-sss-travmasi",
+ "title": "Santral Sinir Sistemi Travmaları: Kontüzyon, Diffüz Aksonal Hasar ve Travmatik Hematomlar",
+ "shortTitle": "SSS Travması",
+ "discipline": "Tıbbi Patoloji",
+ "committee": "donem3-kurul2",
+ "instructor": "Prof.Dr. Hikmet Keleş",
+ "matchedNoteId": "y25-k2-29-sss-travmasi",
+ "overview": "Beyin ve beyin sapı travması ölüm ve iş görmezliğin önde gelen nedenlerindendir; sonucu travmanın şiddeti ve etkilenen bölge belirler. Ders, parenkim hasarını (coup ve contrecoup kontüzyon, laserasyon, akut ve eski kontüzyonun morfolojisi, diffüz aksonal hasar, konküzyon, kronik travmatik ensefalopati) ve vasküler hasarı (orta meningeal arter kaynaklı epidural hematom, köprüleşen ven kaynaklı subdural hematom ve organizasyon evreleri) mekanizma, yerleşim ve klinik açısından karşılaştırarak işler.",
+ "highYieldPearls": [
+  "Coup darbe yerinde, contrecoup karşı tarafta oluşur; ikisinin makroskopik ve mikroskopik görünümü benzerdir, ayrım yerleşime göre yapılır.",
+  "Kontüzyonlar en sık girus tepelerinde ve kafatasının kaba iç yüzüne denk gelen orbito-frontal ve temporal bölgelerde görülür; kesitte kama şeklindedir.",
+  "Nöronlarda piknoz ve sitoplazmik eozinofili gibi morfolojik değişiklikler yaklaşık 24 saatte belirir; travmada iskemiden farklı olarak yüzeyel korteks en çok etkilenir.",
+  "Eski kontüzyon: girus çıkıntılarında çökük, sarı-kahve leke; mikroskopide gliozis ve hemosiderin yüklü makrofajlar.",
+  "Açılı ivmelenme çarpma olmadan diffüz aksonal hasar yapar; erken komaya girenlerin yaklaşık %50'sinden sorumludur, aksonal şişkinlikler gümüş boyama ile gösterilir.",
+  "Konküzyon kontüzyon olmaksızın geri dönüşlü bilinç bozulmasıdır; olay anının hafızası kaybolur.",
+  "Kronik travmatik ensefalopatinin tanımlayıcı bulgusu intranöronal tau inklüzyonlarının özgün paternidir.",
+  "Epidural hematom: çoğunlukla kafatası kırığıyla orta meningeal arter yırtığı, kan kafatası ile dura arasında, lusid interval, acil cerrahi.",
+  "Subdural hematom: köprüleşen ven yırtığı, kan dura ile araknoid arasında; yaşlılar ve bebekler risklidir, belirtiler lokalize değildir ve sinsi ilerler.",
+  "Subdural organizasyon: pıhtı lizisi ~1 hafta, granülasyon dokusu ~2 hafta, fibrozis 1–3 ay; ince duvarlı damarlardan yeniden kanama kronik subdural hematom oluşturur."
+ ],
+ "slides": [
+  {
+   "slideNumber": 1,
+   "title": "SSS Travmasının Önemi ve Sonucu Belirleyen Faktörler",
+   "subtitle": "Beyin ve beyin sapı travmasında sonucu şiddet ile etkilenen bölge belirler.",
+   "badge": "Temel Kavram",
+   "bolum": "1",
+   "altBaslik": "Önem ve belirleyiciler",
+   "pdfSayfalari": [
+    2,
+    2
+   ],
+   "synthesisNarrative": "Beyin ve beyin sapına yönelik travma, **ölümün ve iş görmezliğin önde gelen nedenlerindendir**. Bu yüzden travmanın hangi koşullarda ağır sonuç doğurduğunu bilmek klinik açıdan temeldir.\n\n- **Belirleyici iki faktör:** Travmanın sonucunu etkileyen faktörler travmanın şiddeti ve etkilenen bölgedir.\n- **Frontal lob örneği:** Beyin parenkiminde birkaç santimetreküplük hasar frontal lobda ise sessiz kalabilir; hasta belirgin bir yakınma göstermeyebilir.\n- **Spinal kord örneği:** Aynı büyüklükte bir hasar spinal kordda ise ciddi iş görmezliğe yol açabilir, çünkü dar bir alanda yoğun iletim yolları bulunur.\n- **Beyin sapı örneği:** Hasara beyin sapı da katılıyorsa tablo ölümle sonuçlanabilir.\n\n> [!IMPORTANT]\n> Hasarın hacmi tek başına sonucu belirlemez; aynı hacimdeki lezyon frontal lobda sessiz, spinal kordda iş görmezlik yapıcı, beyin sapında ölümcül olabilir.",
+   "content": "Beyin ve beyin sapına yönelik travma, **ölümün ve iş görmezliğin önde gelen nedenlerindendir**. Bu yüzden travmanın hangi koşullarda ağır sonuç doğurduğunu bilmek klinik açıdan temeldir.\n\n- **Belirleyici iki faktör:** Travmanın sonucunu etkileyen faktörler travmanın şiddeti ve etkilenen bölgedir.\n- **Frontal lob örneği:** Beyin parenkiminde birkaç santimetreküplük hasar frontal lobda ise sessiz kalabilir; hasta belirgin bir yakınma göstermeyebilir.\n- **Spinal kord örneği:** Aynı büyüklükte bir hasar spinal kordda ise ciddi iş görmezliğe yol açabilir, çünkü dar bir alanda yoğun iletim yolları bulunur.\n- **Beyin sapı örneği:** Hasara beyin sapı da katılıyorsa tablo ölümle sonuçlanabilir.\n\n> [!IMPORTANT]\n> Hasarın hacmi tek başına sonucu belirlemez; aynı hacimdeki lezyon frontal lobda sessiz, spinal kordda iş görmezlik yapıcı, beyin sapında ölümcül olabilir.",
+   "coreContent": {
+    "keyBullets": [
+     {
+      "title": "Önde gelen neden",
+      "desc": "Beyin ve beyin sapı travması ölüm ve iş görmezliğin önde gelen nedenlerindendir.",
+      "isKey": true
+     },
+     {
+      "title": "Şiddet ve bölge",
+      "desc": "Sonucu travmanın şiddeti ve etkilenen bölge belirler.",
+      "isKey": false
+     },
+     {
+      "title": "Bölgeye göre sonuç",
+      "desc": "Frontal lobda sessiz kalan hasar spinal kordda iş görmezlik, beyin sapında ölüm yapabilir.",
+      "isKey": false
+     }
+    ]
+   },
+   "spotPearls": [
+    "📌 [SINAV SPOTU] Travmanın sonucunu etkileyen iki faktör şiddet ve etkilenen bölgedir.",
+    "📌 [SINAV SPOTU] Birkaç santimetreküplük frontal lob hasarı sessiz kalabilir; beyin sapı katılımı ölüme yol açabilir."
+   ],
+   "medicalTerms": [
+    {
+     "term": "Parenkim",
+     "explanation": "Bir organın işlevini gören asıl doku; beyinde nöron ve glia hücrelerinden oluşan doku."
+    },
+    {
+     "term": "İş görmezlik",
+     "explanation": "Kişinin günlük ve mesleki işlevlerini kalıcı ya da uzun süreli yerine getirememesi."
+    }
+   ],
+   "flashcards": [
+    {
+     "id": "fc-1-1",
+     "front": "SSS travmasında sonucu belirleyen iki faktör nedir?",
+     "back": "Travmanın şiddeti ve etkilenen bölge.",
+     "category": "SSS Travması"
+    },
+    {
+     "id": "fc-1-2",
+     "front": "Birkaç santimetreküplük hasar hangi bölgede sessiz kalabilir?",
+     "back": "Frontal lobda.",
+     "category": "SSS Travması"
+    }
+   ],
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Beyin parenkiminde birkaç santimetreküplük aynı büyüklükte bir travmatik hasar düşünüldüğünde, aşağıdakilerden hangisi en ağır sonuçla, yani ölümle ilişkilendirilir?",
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": "Hasarın frontal lobda sınırlı kalması",
+       "isCorrect": false,
+       "explanation": "Yanlış. Frontal lob, beyin parenkiminde küçük hasarların klinik olarak sessiz kalabildiği bölge olarak örneklenir. Bu yüzden frontal lobda sınırlı birkaç santimetreküplük hasar ölümle değil, çoğu kez sessiz seyirle ilişkilidir."
+      },
+      {
+       "key": "B",
+       "text": "Hasarın spinal kordda olması",
+       "isCorrect": false,
+       "explanation": "Yanlış. Spinal kord, dar bir alanda yoğun iletim yolları taşıyan yapıdır ve buradaki hasar ciddi iş görmezlik yapar. Ancak derste ölümle ilişkilendirilen durum spinal kord değil, beyin sapının olaya katılmasıdır."
+      },
+      {
+       "key": "C",
+       "text": "Hasara beyin sapının da katılması",
+       "isCorrect": true,
+       "explanation": "Doğru. Beyin sapı, beyin ile spinal kord arasında yaşamsal merkezleri barındıran bölgedir. Ders notunda hasara beyin sapı da katılıyorsa travmanın ölüme neden olabileceği vurgulanır."
+      },
+      {
+       "key": "D",
+       "text": "Hasarın hacminin birkaç santimetreküpü geçmemesi",
+       "isCorrect": false,
+       "explanation": "Yanlış. Hasar hacmi travmanın bir boyutudur, fakat tek başına sonucu belirlemez. Aynı küçük hacim bölgeye göre sessiz ya da ölümcül olabildiği için bu seçenek ölümcül sonucu açıklamaz."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Travmanın şiddeti ve etkilenen bölge sonucu etkileyen faktörlerdir.",
+     "maskedTerm": "bölge",
+     "hint": "Lezyonun beyindeki yeri"
+    },
+    {
+     "type": "venn_grid",
+     "title": "Aynı küçük hasarın bölgeye göre sonucu",
+     "labelA": "Frontal lob",
+     "labelB": "Spinal kord",
+     "items": [
+      {
+       "criterion": "Birkaç santimetreküplük hasar sessiz kalabilir",
+       "correct": "A",
+       "explanation": "Frontal lob örneğinde küçük parenkim hasarı klinik belirti vermeyebilir."
+      },
+      {
+       "criterion": "Birkaç santimetreküplük hasar ciddi iş görmezliğe yol açabilir",
+       "correct": "B",
+       "explanation": "Spinal kordda aynı büyüklükte hasar ağır işlev kaybı yapar."
+      },
+      {
+       "criterion": "Sonucu travmanın şiddeti ve bölgesi belirler",
+       "correct": "both",
+       "explanation": "Her iki bölgede de sonucu belirleyen faktörler şiddet ve bölgedir."
+      },
+      {
+       "criterion": "Travmatik hasara hiç uğramaz",
+       "correct": "neither",
+       "explanation": "Her iki yapı da travmayla hasar görebilir."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Aynı hacimdeki travmatik hasarın farklı hastalarda farklı sonuç vermesi nasıl açıklanır?",
+     "answer": "Sonucu yalnız hacim değil, travmanın şiddeti ve etkilenen bölge belirler; frontal lobdaki küçük hasar sessiz kalabilirken spinal kordda iş görmezlik, beyin sapı katıldığında ölüm görülebilir."
+    },
+    {
+     "type": "branching_logic",
+     "scenario": "Bir trafik kazası sonrası iki hastanın görüntülemesinde benzer büyüklükte parenkim hasarı saptanıyor: birinde hasar frontal lobda, diğerinde beyin sapına uzanıyor. Asistan iki hastanın prognozunun aynı olacağını söylüyor. En doğru değerlendirme hangisidir?",
+     "options": [
+      {
+       "text": "Hasar hacmi eşit olduğu için prognoz da aynıdır",
+       "isCorrect": false,
+       "feedback": "Yanlış. Sonucu yalnız hacim belirlemez; etkilenen bölge ikinci temel faktördür ve bu yaklaşım bölgeyi göz ardı eder."
+      },
+      {
+       "text": "Beyin sapına uzanan hasar ölümcül olabileceği için prognozu daha ağırdır",
+       "isCorrect": true,
+       "feedback": "Doğru. Ders notuna göre aynı büyüklükteki hasar frontal lobda sessiz kalabilir, beyin sapı katıldığında ise ölüme yol açabilir."
+      },
+      {
+       "text": "Frontal lob hasarı her zaman daha ağır iş görmezlik yapar",
+       "isCorrect": false,
+       "feedback": "Yanlış. Frontal lobdaki birkaç santimetreküplük hasarın sessiz kalabileceği özellikle örneklenmiştir; bu ifade ders notuyla çelişir."
+      }
+     ]
+    }
+   ],
+   "sourcePdf": {
+    "fileName": "2. SSS Travması.pdf",
+    "primaryPage": 2,
+    "startPage": 2,
+    "endPage": 2,
+    "citation": "Sayfa 2 · Kurul 2 Tıbbi Patoloji · SSS Travması"
+   },
+   "isCheckpoint": false,
+   "checkpointNumber": 0
+  },
+  {
+   "slideNumber": 2,
+   "title": "Travma Tipleri ve Lezyon Dağılımını Belirleyen Etkenler",
+   "subtitle": "Delici-künt ve açık-kapalı ayrımı, dış bulgu ile iç hasarın uyumsuzluğu.",
+   "badge": "Sınıflama",
+   "bolum": "1",
+   "altBaslik": "Travma tipleri",
+   "pdfSayfalari": [
+    3,
+    3
+   ],
+   "synthesisNarrative": "Kafaya gelen darbe iki eksende sınıflanır: darbe **delici ya da künt** olabilir ve **açık ya da kapalı** yaralanmaya yol açabilir.\n\n- **Lezyonun boyutu ve dağılımı:** Travmaya neden olan cismin şekline, etki gücüne ve travma sırasında kafanın hareket edip etmemesine bağlıdır.\n- **Dış bulgu yanıltabilir:** Kafa travmasının dıştan belirtileri olmaksızın da ciddi beyin hasarı gelişebilir.\n- **Ters durum da mümkündür:** Ciddi laserasyonlarda ve hatta kafatası kırıklarında beyin hasarı oluşmayabilir.\n- **Hasarın hedefi:** Beyin hasara uğradığında parenkim, damarlar veya her ikisi de etkilenebilir; bu ayrım travmatik lezyonları parenkimal ve vasküler diye iki gruba böler.\n\n> [!IMPORTANT]\n> Dış görünüm normal diye beyin hasarı dışlanamaz; tersine kafatası kırığı beyin hasarının varlığını kanıtlamaz.",
+   "content": "Kafaya gelen darbe iki eksende sınıflanır: darbe **delici ya da künt** olabilir ve **açık ya da kapalı** yaralanmaya yol açabilir.\n\n- **Lezyonun boyutu ve dağılımı:** Travmaya neden olan cismin şekline, etki gücüne ve travma sırasında kafanın hareket edip etmemesine bağlıdır.\n- **Dış bulgu yanıltabilir:** Kafa travmasının dıştan belirtileri olmaksızın da ciddi beyin hasarı gelişebilir.\n- **Ters durum da mümkündür:** Ciddi laserasyonlarda ve hatta kafatası kırıklarında beyin hasarı oluşmayabilir.\n- **Hasarın hedefi:** Beyin hasara uğradığında parenkim, damarlar veya her ikisi de etkilenebilir; bu ayrım travmatik lezyonları parenkimal ve vasküler diye iki gruba böler.\n\n> [!IMPORTANT]\n> Dış görünüm normal diye beyin hasarı dışlanamaz; tersine kafatası kırığı beyin hasarının varlığını kanıtlamaz.",
+   "coreContent": {
+    "keyBullets": [
+     {
+      "title": "İki sınıflama ekseni",
+      "desc": "Darbe delici ya da künt; yaralanma açık ya da kapalı olabilir.",
+      "isKey": true
+     },
+     {
+      "title": "Dağılımı belirleyenler",
+      "desc": "Cismin şekli, etki gücü ve kafanın hareketli olup olmaması.",
+      "isKey": false
+     },
+     {
+      "title": "Dış-iç uyumsuzluğu",
+      "desc": "Dış belirti olmadan ciddi hasar, kafatası kırığına rağmen hasarsızlık görülebilir.",
+      "isKey": false
+     }
+    ]
+   },
+   "spotPearls": [
+    "📌 [SINAV SPOTU] Dış belirti olmadan ciddi beyin hasarı gelişebilir; kafatası kırığında beyin hasarı olmayabilir.",
+    "📌 [SINAV SPOTU] Travmada parenkim, damarlar veya her ikisi etkilenebilir."
+   ],
+   "medicalTerms": [
+    {
+     "term": "Künt travma",
+     "explanation": "Kafaya delmeden, çarpma etkisiyle gelen darbe."
+    },
+    {
+     "term": "Kapalı yaralanma",
+     "explanation": "Kafatası ile dış ortam arasında açık bir bağlantının oluşmadığı yaralanma."
+    }
+   ],
+   "flashcards": [
+    {
+     "id": "fc-2-1",
+     "front": "Travmatik lezyonun boyut ve dağılımını hangi üç etken belirler?",
+     "back": "Cismin şekli, etki gücü ve travma sırasında kafanın hareket edip etmemesi.",
+     "category": "SSS Travması"
+    },
+    {
+     "id": "fc-2-2",
+     "front": "Kafatası kırığı olan hastada beyin hasarı kesin midir?",
+     "back": "Hayır; ciddi laserasyon ve kafatası kırığında bile beyin hasarı oluşmayabilir.",
+     "category": "SSS Travması"
+    }
+   ],
+   "interactiveElements": [
+    {
+     "type": "spot_the_lie",
+     "topic": "Kafa travmasının genel özellikleri",
+     "items": [
+      {
+       "text": "Kafaya darbe delici ya da künt olabilir.",
+       "isLie": false,
+       "explanation": "Doğru. Darbeler delici ve künt olarak ikiye ayrılır ve farklı lezyonlar doğurur."
+      },
+      {
+       "text": "Kafatası kırığı saptanan her hastada beyin hasarı da mutlaka bulunur.",
+       "isLie": true,
+       "explanation": "Tuzak! Ders notu ciddi laserasyonlarda ve hatta kafatası kırıklarında beyin hasarı oluşmayabileceğini açıkça belirtir."
+      },
+      {
+       "text": "Dış belirti olmaksızın ciddi beyin hasarı gelişebilir.",
+       "isLie": false,
+       "explanation": "Doğru. Dış görünümün normal olması iç hasarı dışlamaz."
+      },
+      {
+       "text": "Beyin hasarında parenkim, damarlar ya da her ikisi etkilenebilir.",
+       "isLie": false,
+       "explanation": "Doğru. Travmatik lezyonlar bu yüzden parenkimal ve vasküler diye ayrılır."
+      }
+     ]
+    },
+    {
+     "type": "micro_quiz",
+     "question": "Travmatik beyin lezyonlarının boyutunu ve dağılımını belirleyen etkenler arasında aşağıdakilerden hangisi ders notunda sayılmaz?",
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": "Travmaya neden olan cismin şekli",
+       "isCorrect": false,
+       "explanation": "Yanlış. Cismin şekli, darbenin beyne nasıl iletileceğini belirleyen fiziksel bir özelliktir. Ders notunda lezyonun boyut ve dağılımını belirleyen etkenler arasında açıkça sayıldığı için doğru yanıt olamaz."
+      },
+      {
+       "key": "B",
+       "text": "Etki gücü",
+       "isCorrect": false,
+       "explanation": "Yanlış. Etki gücü, darbenin taşıdığı enerjinin büyüklüğüdür ve hasarın genişliğini doğrudan etkiler. Ders notunda belirleyici etken olarak geçtiği için bu soru kökündeki 'sayılmaz' koşulunu karşılamaz."
+      },
+      {
+       "key": "C",
+       "text": "Travma sırasında kafanın hareket edip etmemesi",
+       "isCorrect": false,
+       "explanation": "Yanlış. Kafanın hareketli ya da sabit olması, beynin kafatası içinde nasıl yer değiştireceğini belirler. Bu da notta sayılan üç etkenden biri olduğundan yanlış seçenektir."
+      },
+      {
+       "key": "D",
+       "text": "Dıştan görülen yaranın büyüklüğü",
+       "isCorrect": true,
+       "explanation": "Doğru. Dış yaranın büyüklüğü, kafa derisinde ve kemikte gözlenen hasardır. Ders notu dış belirtiler ile beyin hasarının uyumsuz olabileceğini vurgular; bu nedenle dış yaranın büyüklüğü lezyonun boyutunu ve dağılımını belirlemez, doğru yanıt budur."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Kafa travmasının dıştan belirtileri olmaksızın da ciddi beyin hasarı gelişebilir.",
+     "maskedTerm": "belirtileri",
+     "hint": "Gözle görülen dış işaretler"
+    },
+    {
+     "type": "swipe_matching",
+     "title": "Travmanın sınıflama eksenleri",
+     "leftCategory": "Darbenin türü",
+     "rightCategory": "Yaralanmanın türü",
+     "cards": [
+      {
+       "text": "Delici",
+       "category": "left",
+       "explanation": "Delici, darbenin cismin türüne göre sınıflamasıdır."
+      },
+      {
+       "text": "Künt",
+       "category": "left",
+       "explanation": "Künt de darbe türü ekseninde yer alır."
+      },
+      {
+       "text": "Açık",
+       "category": "right",
+       "explanation": "Açık, yaralanmanın dış ortamla ilişkisine göre sınıflamasıdır."
+      },
+      {
+       "text": "Kapalı",
+       "category": "right",
+       "explanation": "Kapalı yaralanmada dış ortamla açık bağlantı yoktur."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Kafa travmasında dış muayene bulgusu ile beyin hasarı arasındaki ilişki neden güvenilir değildir?",
+     "answer": "Dış belirti olmadan ciddi beyin hasarı gelişebilir; tersine ciddi laserasyon ve kafatası kırığında beyin hasarı hiç oluşmayabilir. Hasarın dağılımını dış yara değil cismin şekli, etki gücü ve kafanın hareketi belirler."
+    }
+   ],
+   "sourcePdf": {
+    "fileName": "2. SSS Travması.pdf",
+    "primaryPage": 3,
+    "startPage": 3,
+    "endPage": 3,
+    "citation": "Sayfa 3 · Kurul 2 Tıbbi Patoloji · SSS Travması"
+   },
+   "isCheckpoint": false,
+   "checkpointNumber": 0
+  },
+  {
+   "slideNumber": 3,
+   "title": "Tekrarlayan Travma ve Kronik Travmatik Ensefalopati",
+   "subtitle": "Temas sporcularında tekrarlayan travmalar nörodejenerasyona ve tau birikimine yol açabilir.",
+   "badge": "Klinik Bağlantı",
+   "bolum": "1",
+   "altBaslik": "Kronik travmatik ensefalopati",
+   "pdfSayfalari": [
+    4,
+    4
+   ],
+   "synthesisNarrative": "Tek bir ağır darbenin yanı sıra **tekrarlayan aralıklarla olan travmalar** da beyinde geç dönem sonuçlar doğurabilir.\n\n- **Risk grubu:** Son kanıtlar, özellikle yakın temaslı sporlara katılan sporcularda tekrarlayan travmaların ileride nörodejeneratif süreçlere neden olabileceğini göstermektedir.\n- **Alzheimer ilişkisi:** Travma ile Alzheimer hastalığı riski arasında uzun süredir bilinen bir ilişki vardır.\n- **Özel bir dejenerasyon tipi:** Bu ilişkiye ek olarak travmaya bağlı özel bir dejenerasyon tanımlanmıştır: kronik travmatik ensefalopati.\n- **Tanımlayıcı bulgu:** Kronik travmatik ensefalopati, intranöronal tau protein inklüzyonlarının oluşturduğu özgün bir patern ile karakterizedir; yani birikim nöronların içindedir.\n\n> [!IMPORTANT]\n> Kronik travmatik ensefalopatinin tanımlayıcı bulgusu intranöronal tau protein inklüzyonlarıdır; zemin, temas sporlarındaki tekrarlayan travmalardır.",
+   "content": "Tek bir ağır darbenin yanı sıra **tekrarlayan aralıklarla olan travmalar** da beyinde geç dönem sonuçlar doğurabilir.\n\n- **Risk grubu:** Son kanıtlar, özellikle yakın temaslı sporlara katılan sporcularda tekrarlayan travmaların ileride nörodejeneratif süreçlere neden olabileceğini göstermektedir.\n- **Alzheimer ilişkisi:** Travma ile Alzheimer hastalığı riski arasında uzun süredir bilinen bir ilişki vardır.\n- **Özel bir dejenerasyon tipi:** Bu ilişkiye ek olarak travmaya bağlı özel bir dejenerasyon tanımlanmıştır: kronik travmatik ensefalopati.\n- **Tanımlayıcı bulgu:** Kronik travmatik ensefalopati, intranöronal tau protein inklüzyonlarının oluşturduğu özgün bir patern ile karakterizedir; yani birikim nöronların içindedir.\n\n> [!IMPORTANT]\n> Kronik travmatik ensefalopatinin tanımlayıcı bulgusu intranöronal tau protein inklüzyonlarıdır; zemin, temas sporlarındaki tekrarlayan travmalardır.",
+   "coreContent": {
+    "keyBullets": [
+     {
+      "title": "Tekrarlayan travma",
+      "desc": "Temas sporcularında ileride nörodejenerasyona yol açabilir.",
+      "isKey": true
+     },
+     {
+      "title": "Alzheimer",
+      "desc": "Travma ile Alzheimer riski arasında bilinen bir ilişki vardır.",
+      "isKey": false
+     },
+     {
+      "title": "KTE",
+      "desc": "İntranöronal tau inklüzyonlarının özgün paterniyle tanımlanır.",
+      "isKey": false
+     }
+    ]
+   },
+   "spotPearls": [
+    "📌 [SINAV SPOTU] Kronik travmatik ensefalopati intranöronal tau protein inklüzyonlarıyla karakterizedir.",
+    "📌 [SINAV SPOTU] Yakın temaslı sporcularda tekrarlayan travmalar nörodejeneratif süreçlere yol açabilir."
+   ],
+   "medicalTerms": [
+    {
+     "term": "Nörodejenerasyon",
+     "explanation": "Nöronların zamanla ilerleyici biçimde işlev ve yapı kaybına uğraması."
+    },
+    {
+     "term": "Tau proteini",
+     "explanation": "Nöronlarda mikrotübülleri destekleyen, patolojik durumda hücre içinde biriken protein."
+    }
+   ],
+   "flashcards": [
+    {
+     "id": "fc-3-1",
+     "front": "Kronik travmatik ensefalopatinin karakteristik bulgusu nedir?",
+     "back": "İntranöronal tau protein inklüzyonlarının özgün paterni.",
+     "category": "SSS Travması"
+    },
+    {
+     "id": "fc-3-2",
+     "front": "Tekrarlayan travmaya bağlı nörodejenerasyon için kimler risk altındadır?",
+     "back": "Özellikle yakın temaslı sporlara katılan sporcular.",
+     "category": "SSS Travması"
+    }
+   ],
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Yıllarca boks yapmış bir sporcunun otopsisinde travmaya özgü dejenerasyon düşünülüyor. Kronik travmatik ensefalopati tanısını destekleyen tanımlayıcı mikroskobik bulgu aşağıdakilerden hangisidir?",
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": "İntranöronal tau protein inklüzyonlarının özgün paterni",
+       "isCorrect": true,
+       "explanation": "Doğru. Tau, nöronların mikrotübül yapısını destekleyen bir proteindir ve patolojik durumda hücre içinde birikir. Ders notunda kronik travmatik ensefalopatinin tam olarak bu intranöronal tau inklüzyonlarının özgün paterniyle karakterize olduğu belirtilir."
+      },
+      {
+       "key": "B",
+       "text": "Hemosiderin yüklü makrofajlar",
+       "isCorrect": false,
+       "explanation": "Yanlış. Hemosiderin yüklü makrofajlar, geçirilmiş bir kanamanın demir pigmentini fagosite eden hücrelerdir. Bu bulgu kanama sonrası iyileşmeyi gösterir; kronik travmatik ensefalopatinin tanımlayıcı bulgusu olarak tanımlanan tau birikimi değildir."
+      },
+      {
+       "key": "C",
+       "text": "Kafatası kırığı",
+       "isCorrect": false,
+       "explanation": "Yanlış. Kafatası kırığı kemikteki yapısal bir hasardır ve tek bir darbede bile oluşabilir. Üstelik kırık beyin hasarının kanıtı bile değildir; tekrarlayan travmaya bağlı dejenerasyonun mikroskobik ölçütü olamaz."
+      },
+      {
+       "key": "D",
+       "text": "Taze kanama ve ödem",
+       "isCorrect": false,
+       "explanation": "Yanlış. Kanama ve ödem, akut bir doku hasarının ani yanıtlarıdır. Kronik travmatik ensefalopati yıllar içinde gelişen dejeneratif bir süreç olduğu için onu tanımlayan bulgu akut kanama değil, nöron içi tau birikimidir."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Kronik travmatik ensefalopati, intranöronal tau protein inklüzyonlarının oluşturduğu özgün bir patern ile karakterizedir.",
+     "maskedTerm": "tau",
+     "hint": "Mikrotübül ilişkili bir protein"
+    },
+    {
+     "type": "causal_chain",
+     "chainTitle": "Tekrarlayan travmadan dejenerasyona",
+     "steps": [
+      "1. Tetikleyici: Yakın temaslı sporlarda kafa aralıklarla tekrar tekrar travmaya uğrar.",
+      "2. Birikim: Tekrarlayan travmalar sonucunda nöronların içinde tau protein inklüzyonları oluşur.",
+      "3. Patern: Bu inklüzyonlar travmaya özgü bir dağılım paterni kazanır.",
+      "4. Sonuç: Kronik travmatik ensefalopati olarak adlandırılan geç dönem nörodejeneratif süreç gelişir."
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Travma ve nörodejenerasyon",
+     "items": [
+      {
+       "text": "Travma ile Alzheimer hastalığı riski arasında uzun süredir bilinen bir ilişki vardır.",
+       "isLie": false,
+       "explanation": "Doğru. Ders notu bu ilişkiyi açıkça belirtir."
+      },
+      {
+       "text": "Kronik travmatik ensefalopatide tau inklüzyonları nöronların dışında, hücreler arası alanda birikir.",
+       "isLie": true,
+       "explanation": "Tuzak! İnklüzyonlar intranöronaldir, yani nöronların içinde yer alır."
+      },
+      {
+       "text": "Tekrarlayan aralıklı travmalar ileride nörodejeneratif süreçlere yol açabilir.",
+       "isLie": false,
+       "explanation": "Doğru. Özellikle yakın temaslı sporcularda bu durum gösterilmiştir."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Temas sporlarıyla uğraşan bir sporcuda tekrarlayan kafa travmalarının geç dönem riski nedir ve bu süreci hangi bulgu tanımlar?",
+     "answer": "Tekrarlayan travmalar ileride nörodejeneratif süreçlere, özellikle kronik travmatik ensefalopatiye yol açabilir; bu tablo intranöronal tau protein inklüzyonlarının özgün paterniyle tanımlanır. Ayrıca travma Alzheimer riskiyle de ilişkilidir."
+    }
+   ],
+   "sourcePdf": {
+    "fileName": "2. SSS Travması.pdf",
+    "primaryPage": 4,
+    "startPage": 4,
+    "endPage": 4,
+    "citation": "Sayfa 4 · Kurul 2 Tıbbi Patoloji · SSS Travması"
+   },
+   "isCheckpoint": false,
+   "checkpointNumber": 0
+  },
+  {
+   "slideNumber": 4,
+   "title": "Coup ve Contrecoup Kontüzyon: Tanım ve Mekanizma",
+   "subtitle": "Darbe yerinde ve karşı tarafta oluşan kontüzyonlar morfolojik olarak benzerdir.",
+   "badge": "Mekanizma",
+   "bolum": "1",
+   "altBaslik": "Parenkim hasarı",
+   "pdfSayfalari": [
+    5,
+    5
+   ],
+   "synthesisNarrative": "Travmatik parenkim hasarının ilk örneği, kafaya bir cisim çarptığında gelişen **kontüzyondur**.\n\n- **Coup hasar:** Hasar darbe bölgesinde ortaya çıkarsa \"coup\" yani darbe hasarı adını alır.\n- **Contrecoup hasar:** Hasar travmanın karşı tarafındaki beyin dokusunda ortaya çıkarsa \"contrecoup\" yani darbe tersi hasar adını alır.\n- **Ortak ad ve görünüm:** Bu lezyonların ikisi de kontüzyon olarak adlandırılır ve bunların makroskopik ve mikroskopik görüntüleri benzerlik gösterir; ayrım görünüme göre değil, darbeye göre yerleşime göre yapılır.\n- **Oluşum mekanizması:** Kontüzyon dokunun hızla yer değiştirmesi ve vasküler yapıların yırtılmasıyla oluşur.\n- **Sonuç:** Bu süreç kanama, doku hasarı ve ödem ile kendini gösterir.\n\n> [!IMPORTANT]\n> Coup ve contrecoup kontüzyonlar mikroskopta ayırt edilemez; aralarındaki tek fark darbe yerine göre konumlarıdır.",
+   "content": "Travmatik parenkim hasarının ilk örneği, kafaya bir cisim çarptığında gelişen **kontüzyondur**.\n\n- **Coup hasar:** Hasar darbe bölgesinde ortaya çıkarsa \"coup\" yani darbe hasarı adını alır.\n- **Contrecoup hasar:** Hasar travmanın karşı tarafındaki beyin dokusunda ortaya çıkarsa \"contrecoup\" yani darbe tersi hasar adını alır.\n- **Ortak ad ve görünüm:** Bu lezyonların ikisi de kontüzyon olarak adlandırılır ve bunların makroskopik ve mikroskopik görüntüleri benzerlik gösterir; ayrım görünüme göre değil, darbeye göre yerleşime göre yapılır.\n- **Oluşum mekanizması:** Kontüzyon dokunun hızla yer değiştirmesi ve vasküler yapıların yırtılmasıyla oluşur.\n- **Sonuç:** Bu süreç kanama, doku hasarı ve ödem ile kendini gösterir.\n\n> [!IMPORTANT]\n> Coup ve contrecoup kontüzyonlar mikroskopta ayırt edilemez; aralarındaki tek fark darbe yerine göre konumlarıdır.",
+   "coreContent": {
+    "keyBullets": [
+     {
+      "title": "Coup",
+      "desc": "Darbe bölgesindeki kontüzyon.",
+      "isKey": true
+     },
+     {
+      "title": "Contrecoup",
+      "desc": "Darbenin karşı tarafındaki kontüzyon.",
+      "isKey": false
+     },
+     {
+      "title": "Mekanizma",
+      "desc": "Dokunun hızlı yer değiştirmesi ve damar yırtılması: kanama, doku hasarı, ödem.",
+      "isKey": false
+     }
+    ]
+   },
+   "spotPearls": [
+    "📌 [SINAV SPOTU] Coup ve contrecoup kontüzyonların makroskopik ve mikroskopik görüntüleri benzerdir.",
+    "📌 [SINAV SPOTU] Kontüzyon kanama, doku hasarı ve ödemle kendini gösterir."
+   ],
+   "medicalTerms": [
+    {
+     "term": "Kontüzyon",
+     "explanation": "Beyin dokusunun çarpma sonucu ezilmesi; kanama, doku hasarı ve ödemle seyreder."
+    },
+    {
+     "term": "Contrecoup",
+     "explanation": "Darbe tersi hasar; darbenin karşı tarafındaki beyin dokusunda gelişen kontüzyon."
+    }
+   ],
+   "flashcards": [
+    {
+     "id": "fc-4-1",
+     "front": "Contrecoup hasar nerede oluşur?",
+     "back": "Travmanın karşı tarafındaki beyin dokusunda.",
+     "category": "SSS Travması"
+    },
+    {
+     "id": "fc-4-2",
+     "front": "Kontüzyon hangi iki olayla oluşur?",
+     "back": "Dokunun hızla yer değiştirmesi ve vasküler yapıların yırtılmasıyla.",
+     "category": "SSS Travması"
+    }
+   ],
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Sağ parietal bölgesine sopayla vurulan bir hastada sol tarafta da kontüzyon saptanıyor. Bu iki lezyonla ilgili aşağıdaki ifadelerden hangisi doğrudur?",
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": "Sol taraftaki lezyon contrecoup kontüzyondur ve mikroskopik görünümü coup lezyona benzer",
+       "isCorrect": true,
+       "explanation": "Doğru. Contrecoup, darbenin karşı tarafındaki beyinde oluşan kontüzyondur. Ders notuna göre coup ve contrecoup lezyonların makroskopik ve mikroskopik görüntüleri benzerdir; bu yüzden ifade doğrudur."
+      },
+      {
+       "key": "B",
+       "text": "Sol taraftaki lezyon coup kontüzyondur, çünkü darbe tarafında oluşmuştur",
+       "isCorrect": false,
+       "explanation": "Yanlış. Coup, darbenin geldiği bölgedeki kontüzyondur. Darbe sağdan geldiği için sol taraftaki lezyon coup değil contrecoup olarak adlandırılır."
+      },
+      {
+       "key": "C",
+       "text": "İki lezyon mikroskopik olarak kolayca ayırt edilir",
+       "isCorrect": false,
+       "explanation": "Yanlış. Kontüzyonların mikroskopik görünümü kanama, doku hasarı ve ödemden oluşur. Coup ve contrecoup lezyonlar bu açıdan benzer olduğundan mikroskopla değil yerleşimle ayırt edilir."
+      },
+      {
+       "key": "D",
+       "text": "Contrecoup lezyon damar yırtılması olmadan yalnız ödemle oluşur",
+       "isCorrect": false,
+       "explanation": "Yanlış. Kontüzyon, dokunun hızla yer değiştirmesi ve vasküler yapıların yırtılmasıyla oluşan lezyondur. Contrecoup da bir kontüzyon olduğu için damar yırtılmasını ve kanamayı içerir; yalnız ödemle açıklanamaz."
+      }
+     ]
+    },
+    {
+     "type": "before_after_slider",
+     "leftTitle": "Coup kontüzyon",
+     "rightTitle": "Contrecoup kontüzyon",
+     "leftPoints": [
+      "Darbe bölgesinde oluşur",
+      "Darbe hasarı olarak adlandırılır",
+      "Kanama, doku hasarı ve ödem içerir"
+     ],
+     "rightPoints": [
+      "Travmanın karşı tarafında oluşur",
+      "Darbe tersi hasar olarak adlandırılır",
+      "Görünümü coup lezyonla benzerdir"
+     ]
+    },
+    {
+     "type": "causal_chain",
+     "chainTitle": "Kontüzyonun oluşumu",
+     "steps": [
+      "1. Darbe: Kafaya bir cisim çarpar.",
+      "2. Yer değiştirme: Beyin dokusu hızla yer değiştirir.",
+      "3. Damar hasarı: Vasküler yapılar yırtılır.",
+      "4. Sonuç: Kanama, doku hasarı ve ödemle kontüzyon gelişir."
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Kontüzyon dokunun hızla yer değiştirmesi ve vasküler yapıların yırtılmasıyla oluşur.",
+     "maskedTerm": "yırtılmasıyla",
+     "hint": "Damar duvarının bütünlüğünü kaybetmesi"
+    },
+    {
+     "type": "active_recall",
+     "question": "Coup ve contrecoup kontüzyonları patolog nasıl ayırt eder?",
+     "answer": "Makroskopik ve mikroskopik görüntüleri benzer olduğu için görünümle değil, darbe bölgesine göre yerleşimle ayırt eder: darbe yerindeki coup, karşı taraftaki contrecoup kontüzyondur."
+    }
+   ],
+   "sourcePdf": {
+    "fileName": "2. SSS Travması.pdf",
+    "primaryPage": 5,
+    "startPage": 5,
+    "endPage": 5,
+    "citation": "Sayfa 5 · Kurul 2 Tıbbi Patoloji · SSS Travması"
+   },
+   "isCheckpoint": false,
+   "checkpointNumber": 0
+  },
+  {
+   "slideNumber": 5,
+   "title": "Kontüzyonun Sık Yerleri ve Laserasyon",
+   "subtitle": "Girus tepeleri, orbito-frontal ve temporal bölgeler; delici cisimle oluşan laserasyon.",
+   "badge": "Yerleşim",
+   "bolum": "1",
+   "altBaslik": "Yerleşim ve laserasyon",
+   "pdfSayfalari": [
+    6,
+    6
+   ],
+   "synthesisNarrative": "Kontüzyonların beynin her yerinde eşit sıklıkta görülmediği bilinir; bazı bölgeler darbeye özellikle duyarlıdır.\n\n- **En duyarlı yer:** Travmatik hasara en duyarlı bölgeler girusların tepeleridir, çünkü kafatasına en yakın yüzeyi oluştururlar.\n- **Darbe yeri:** Kontüzyonlar en sık doğrudan darbenin geldiği yerde ortaya çıkar.\n- **Orbito-frontal ve temporal bölgeler:** Kafatasının içteki kaba ve düzensiz yüzeyine denk gelen bu bölgeler kontüzyonun klasik yerleridir; beyin bu yüzeylere sürtünerek hasarlanır.\n- **Laserasyon:** Mermi ya da kırık kemik parçası gibi delici bir cisimle oluşan doku yırtılmasıdır; vasküler parçalanma ve kanama ile birliktedir.\n\n> [!IMPORTANT]\n> Kontüzyon künt çarpmayla, laserasyon delici cisimle oluşur. Orbito-frontal ve temporal yerleşim kafatası tabanının kaba iç yüzeyiyle açıklanır.",
+   "content": "Kontüzyonların beynin her yerinde eşit sıklıkta görülmediği bilinir; bazı bölgeler darbeye özellikle duyarlıdır.\n\n- **En duyarlı yer:** Travmatik hasara en duyarlı bölgeler girusların tepeleridir, çünkü kafatasına en yakın yüzeyi oluştururlar.\n- **Darbe yeri:** Kontüzyonlar en sık doğrudan darbenin geldiği yerde ortaya çıkar.\n- **Orbito-frontal ve temporal bölgeler:** Kafatasının içteki kaba ve düzensiz yüzeyine denk gelen bu bölgeler kontüzyonun klasik yerleridir; beyin bu yüzeylere sürtünerek hasarlanır.\n- **Laserasyon:** Mermi ya da kırık kemik parçası gibi delici bir cisimle oluşan doku yırtılmasıdır; vasküler parçalanma ve kanama ile birliktedir.\n\n> [!IMPORTANT]\n> Kontüzyon künt çarpmayla, laserasyon delici cisimle oluşur. Orbito-frontal ve temporal yerleşim kafatası tabanının kaba iç yüzeyiyle açıklanır.",
+   "coreContent": {
+    "keyBullets": [
+     {
+      "title": "Girus tepeleri",
+      "desc": "Travmatik hasara en duyarlı bölgelerdir.",
+      "isKey": true
+     },
+     {
+      "title": "Orbito-frontal ve temporal",
+      "desc": "Kafatasının kaba iç yüzeyine denk gelir.",
+      "isKey": false
+     },
+     {
+      "title": "Laserasyon",
+      "desc": "Delici cisimle doku yırtılması, vasküler parçalanma ve kanama.",
+      "isKey": false
+     }
+    ]
+   },
+   "spotPearls": [
+    "📌 [SINAV SPOTU] Travmatik hasara en duyarlı bölgeler girusların tepeleridir.",
+    "📌 [SINAV SPOTU] Laserasyon mermi ya da kırık kemik parçası gibi delici cisimle oluşur."
+   ],
+   "medicalTerms": [
+    {
+     "term": "Girus",
+     "explanation": "Beyin korteksinin dışa doğru kabarık kıvrımı."
+    },
+    {
+     "term": "Laserasyon",
+     "explanation": "Delici cisimle oluşan doku yırtılması."
+    }
+   ],
+   "flashcards": [
+    {
+     "id": "fc-5-1",
+     "front": "Kontüzyonların klasik yerleri nerelerdir?",
+     "back": "Darbe yeri ile kafatasının kaba iç yüzeyine denk gelen orbito-frontal ve temporal bölgeler.",
+     "category": "SSS Travması"
+    },
+    {
+     "id": "fc-5-2",
+     "front": "Laserasyona yol açan cisimlere örnek veriniz.",
+     "back": "Mermi ya da kırık kemik parçası.",
+     "category": "SSS Travması"
+    }
+   ],
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Düşme sonrası kaybedilen bir hastanın otopsisinde darbe yerinden uzakta yerleşen kontüzyonlar aranacaktır. Kafatası iç yüzeyinin yapısı göz önüne alındığında en olası yerleşim aşağıdakilerden hangisidir?",
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": "Orbito-frontal ve temporal bölgeler",
+       "isCorrect": true,
+       "explanation": "Doğru. Bu bölgeler kafatasının içteki kaba ve düzensiz yüzeyine denk gelir. Ders notunda kontüzyonların darbe yerinin yanı sıra en sık burada görüldüğü belirtildiği için doğru yanıttır."
+      },
+      {
+       "key": "B",
+       "text": "Lateral ventrikül çevresindeki derin beyaz madde",
+       "isCorrect": false,
+       "explanation": "Yanlış. Derin beyaz madde, kafatası yüzeyinden uzak, iç kesimde kalan bölgedir. Kontüzyon yüzeyel bir lezyondur ve kafatasının kaba iç yüzeyine sürtünen bölgeleri tutar; bu yüzden derin yerleşim beklenmez."
+      },
+      {
+       "key": "C",
+       "text": "Girusların derinliklerindeki oluklar",
+       "isCorrect": false,
+       "explanation": "Yanlış. Oluklar, girusların arasında içe çöken alanlardır ve kafatasından korunaklıdır. Travmatik hasara en duyarlı bölgeler olukların değil girusların tepeleridir."
+      },
+      {
+       "key": "D",
+       "text": "Spinal kord",
+       "isCorrect": false,
+       "explanation": "Yanlış. Spinal kord, omurga kanalında yer alan yapıdır ve aynı büyüklükte hasarın ciddi iş görmezlik yapabileceği bir bölge olarak işlenmiştir. Ancak kafatası iç yüzeyine sürtünmeyle oluşan kontüzyonların klasik yeri değildir."
+      }
+     ]
+    },
+    {
+     "type": "venn_grid",
+     "title": "Kontüzyon ve laserasyon",
+     "labelA": "Kontüzyon",
+     "labelB": "Laserasyon",
+     "items": [
+      {
+       "criterion": "Mermi ya da kırık kemik parçası gibi delici cisimle oluşur",
+       "correct": "B",
+       "explanation": "Laserasyonun tanımlayıcı özelliği delici cisimdir."
+      },
+      {
+       "criterion": "Coup ve contrecoup biçimleri vardır",
+       "correct": "A",
+       "explanation": "Darbe yerindeki ve karşı taraftaki lezyonlar kontüzyon olarak adlandırılır."
+      },
+      {
+       "criterion": "Kanama ile birliktedir",
+       "correct": "both",
+       "explanation": "Kontüzyonda damar yırtılmasıyla, laserasyonda vasküler parçalanmayla kanama gelişir."
+      },
+      {
+       "criterion": "Kafatası iç yüzeyine denk gelen orbito-frontal bölgede sık görülür",
+       "correct": "A",
+       "explanation": "Bu yerleşim kontüzyon için tanımlanmıştır."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Travmatik hasara en duyarlı bölgeler girusların tepeleridir.",
+     "maskedTerm": "tepeleridir",
+     "hint": "Kıvrımların en dış noktası"
+    },
+    {
+     "type": "interactive_table",
+     "tableTitle": "Parenkim lezyonlarının özellikleri",
+     "tableHeaders": [
+      "Lezyon",
+      "Oluşum",
+      "Tipik yer"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Coup kontüzyon",
+         "isMasked": false
+        },
+        {
+         "text": "Künt darbe",
+         "isMasked": false
+        },
+        {
+         "text": "Doğrudan darbenin geldiği yer",
+         "isMasked": true,
+         "hint": "Çarpmanın olduğu nokta"
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Contrecoup kontüzyon",
+         "isMasked": false
+        },
+        {
+         "text": "Künt darbe",
+         "isMasked": true,
+         "hint": "Delici değil"
+        },
+        {
+         "text": "Travmanın karşı tarafı",
+         "isMasked": false
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Laserasyon",
+         "isMasked": false
+        },
+        {
+         "text": "Delici cisim",
+         "isMasked": true,
+         "hint": "Mermi veya kemik parçası"
+        },
+        {
+         "text": "Cismin geçtiği doku",
+         "isMasked": false
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Kontüzyonun yerleşimi",
+     "items": [
+      {
+       "text": "Kontüzyonlar en sık doğrudan darbenin geldiği yerde ortaya çıkar.",
+       "isLie": false,
+       "explanation": "Doğru. Darbe yeri kontüzyonun en sık yerlerindendir."
+      },
+      {
+       "text": "Temporal bölge kafatasının kaba iç yüzeyine denk geldiği için kontüzyona yatkındır.",
+       "isLie": false,
+       "explanation": "Doğru. Orbito-frontal bölge ile birlikte klasik yerleşimdir."
+      },
+      {
+       "text": "Travmatik hasara en duyarlı bölgeler girusların arasındaki derin oluklardır.",
+       "isLie": true,
+       "explanation": "Tuzak! En duyarlı bölgeler girusların tepeleridir; oluklar daha korunaklıdır."
+      },
+      {
+       "text": "Laserasyonda vasküler parçalanma ve kanama görülür.",
+       "isLie": false,
+       "explanation": "Doğru. Delici cisim damarları parçalar ve kanamaya yol açar."
+      }
+     ]
+    }
+   ],
+   "sourcePdf": {
+    "fileName": "2. SSS Travması.pdf",
+    "primaryPage": 6,
+    "startPage": 6,
+    "endPage": 6,
+    "citation": "Sayfa 6 · Kurul 2 Tıbbi Patoloji · SSS Travması"
+   },
+   "isCheckpoint": false,
+   "checkpointNumber": 0
+  },
+  {
+   "slideNumber": 6,
+   "title": "Akut Kontüzyonun Morfolojisi ve Zaman Seyri",
+   "subtitle": "Kama şekli, saatler içinde yayılan kanama, 24 saatte beliren nöron değişiklikleri ve yüzeyel korteks tutulumu.",
+   "badge": "Morfoloji",
+   "bolum": "1",
+   "altBaslik": "Akut kontüzyon",
+   "pdfSayfalari": [
+    7,
+    8
+   ],
+   "synthesisNarrative": "Kontüzyon oluştuktan sonra kesit yüzeyinde ve mikroskopta belirli bir zaman sırasıyla değişiklikler görülür.\n\n- **Kama şekli:** Kontüzyonlar kesit yüzeyinde, tabanı darbe alanında geniş olan kama şeklinde görülür.\n- **Kanamanın yayılımı:** Travmadan birkaç saat sonra kan damar dışına çıkar ve korteks, beyaz madde ve subaraknoid yüzeyler boyunca yayılır.\n- **Nöronal değişiklikler:** Nükleusta piknoz, sitoplazmik eozinofili ve hücre bütünlüğünün bozulması gibi morfolojik etkilerin görülmesi yaklaşık 24 saat sürer.\n- **İnflamasyon:** Doku hasarının ardından ortaya çıkan inflamatuar yanıt olağan seyrinde gider.\n- **Yüzeyel korteks:** İskemide yüzeyel korteks korunurken, travmada en şiddetli etkilenen yerler yüzeyel tabakalardır.\n\n> [!IMPORTANT]\n> Yüzeyel korteks tabakalarının en ağır tutulması travmatik kontüzyonu iskemik hasardan ayırır.",
+   "content": "Kontüzyon oluştuktan sonra kesit yüzeyinde ve mikroskopta belirli bir zaman sırasıyla değişiklikler görülür.\n\n- **Kama şekli:** Kontüzyonlar kesit yüzeyinde, tabanı darbe alanında geniş olan kama şeklinde görülür.\n- **Kanamanın yayılımı:** Travmadan birkaç saat sonra kan damar dışına çıkar ve korteks, beyaz madde ve subaraknoid yüzeyler boyunca yayılır.\n- **Nöronal değişiklikler:** Nükleusta piknoz, sitoplazmik eozinofili ve hücre bütünlüğünün bozulması gibi morfolojik etkilerin görülmesi yaklaşık 24 saat sürer.\n- **İnflamasyon:** Doku hasarının ardından ortaya çıkan inflamatuar yanıt olağan seyrinde gider.\n- **Yüzeyel korteks:** İskemide yüzeyel korteks korunurken, travmada en şiddetli etkilenen yerler yüzeyel tabakalardır.\n\n> [!IMPORTANT]\n> Yüzeyel korteks tabakalarının en ağır tutulması travmatik kontüzyonu iskemik hasardan ayırır.",
+   "coreContent": {
+    "keyBullets": [
+     {
+      "title": "Kama şekli",
+      "desc": "Tabanı darbe alanında geniş olan kama biçimli lezyon.",
+      "isKey": true
+     },
+     {
+      "title": "24 saat",
+      "desc": "Nöronlarda piknoz ve eozinofili yaklaşık 24 saatte belirir.",
+      "isKey": false
+     },
+     {
+      "title": "Yüzeyel tabaka",
+      "desc": "Travmada en ağır, iskemide korunur.",
+      "isKey": false
+     }
+    ]
+   },
+   "spotPearls": [
+    "📌 [SINAV SPOTU] Nöronlardaki morfolojik değişikliklerin görülmesi yaklaşık 24 saat sürer.",
+    "📌 [SINAV SPOTU] İskemide yüzeyel korteks korunur, travmada en şiddetli etkilenen yüzeyel tabakalardır."
+   ],
+   "medicalTerms": [
+    {
+     "term": "Piknoz",
+     "explanation": "Hücre çekirdeğinin büzülüp koyulaşması; hücre ölümünün bulgusu."
+    },
+    {
+     "term": "Eozinofili",
+     "explanation": "Sitoplazmanın eozinle pembe-kırmızı boyanması; hasarlı nöronun bulgusu."
+    }
+   ],
+   "flashcards": [
+    {
+     "id": "fc-6-1",
+     "front": "Kontüzyonun kesit yüzeyindeki şekli nedir?",
+     "back": "Tabanı darbe alanında geniş olan kama şekli.",
+     "category": "SSS Travması"
+    },
+    {
+     "id": "fc-6-2",
+     "front": "Travma ile iskemiyi yüzeyel korteks açısından ne ayırır?",
+     "back": "Travmada yüzeyel tabakalar en ağır etkilenir, iskemide yüzeyel korteks korunur.",
+     "category": "SSS Travması"
+    }
+   ],
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Travmadan 6 saat sonra ölen bir hastanın kontüzyon alanındaki nöronlarda belirgin piknoz ve sitoplazmik eozinofili görülmemesi en iyi nasıl açıklanır?",
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": "Nöronlardaki morfolojik değişikliklerin belirmesi yaklaşık 24 saat sürer",
+       "isCorrect": true,
+       "explanation": "Doğru. Piknoz ve sitoplazmik eozinofili, ölen nöronun mikroskopta görülen yapısal bulgularıdır. Ders notuna göre bu morfolojik etkilerin ortaya çıkması yaklaşık 24 saat sürdüğü için altıncı saatte henüz belirgin olmaması beklenir."
+      },
+      {
+       "key": "B",
+       "text": "Lezyon kontüzyon değil laserasyondur",
+       "isCorrect": false,
+       "explanation": "Yanlış. Laserasyon delici cisimle oluşan doku yırtılmasıdır; lezyon türünü değiştirmek nöron değişikliklerinin zamanlamasını açıklamaz. Soru kontüzyon alanı üzerinden kurulmuştur ve sorun zamanlamadır."
+      },
+      {
+       "key": "C",
+       "text": "Travmada yüzeyel korteks korunur",
+       "isCorrect": false,
+       "explanation": "Yanlış. Yüzeyel korteksin korunması iskeminin özelliğidir. Travmada tam tersine en şiddetli etkilenen yer yüzeyel tabakalardır; bu nedenle seçenek hem yanlış hem de soruyu açıklamaz."
+      },
+      {
+       "key": "D",
+       "text": "Kan damar dışına çıkmadan nöron hasarı başlamaz",
+       "isCorrect": false,
+       "explanation": "Yanlış. Kanın damar dışına çıkıp yayılması travmadan birkaç saat sonra gerçekleşen bir olaydır. Nöronlarda morfolojik değişikliğin geç görülmesinin nedeni kanama değil, bu değişikliklerin yaklaşık 24 saatte belirmesidir."
+      }
+     ]
+    },
+    {
+     "type": "before_after_slider",
+     "leftTitle": "İskemik hasar",
+     "rightTitle": "Travmatik kontüzyon",
+     "leftPoints": [
+      "Yüzeyel korteks korunur",
+      "Hasar yüzeyel tabakalarda en ağır değildir"
+     ],
+     "rightPoints": [
+      "Yüzeyel tabakalar en şiddetli etkilenir",
+      "Kesit yüzeyinde tabanı darbe alanında geniş kama şekli görülür"
+     ]
+    },
+    {
+     "type": "causal_chain",
+     "chainTitle": "Akut kontüzyonun zaman seyri",
+     "steps": [
+      "1. Darbe: Kontüzyon tabanı darbe alanında geniş bir kama biçiminde oluşur.",
+      "2. Saatler içinde: Kan damar dışına çıkar ve korteks, beyaz madde ve subaraknoid yüzeyler boyunca yayılır.",
+      "3. Yaklaşık 24 saatte: Nöronlarda piknoz, sitoplazmik eozinofili ve hücre bütünlüğünün bozulması görülür.",
+      "4. Ardından: İnflamatuar yanıt olağan doku hasarı seyrinde gelişir."
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Kontüzyonlar kesit yüzeyinde, tabanı darbe alanında geniş olan kama şeklinde görülür.",
+     "maskedTerm": "kama",
+     "hint": "Bir ucu dar, öbür ucu geniş üçgen biçim"
+    },
+    {
+     "type": "feature_bidding",
+     "title": "Kontüzyonda erken ve geç bulgu",
+     "optionA": "Birkaç saat içinde",
+     "optionB": "Yaklaşık 24 saatte",
+     "rounds": [
+      {
+       "feature": "Kanın damar dışına çıkıp subaraknoid yüzeylere yayılması",
+       "correct": "A",
+       "explanation": "Kan travmadan birkaç saat sonra damar dışına çıkar."
+      },
+      {
+       "feature": "Nükleusta piknoz",
+       "correct": "B",
+       "explanation": "Nöronların morfolojik değişiklikleri yaklaşık 24 saat sürer."
+      },
+      {
+       "feature": "Sitoplazmik eozinofili ve hücre bütünlüğünün bozulması",
+       "correct": "B",
+       "explanation": "Bu da 24 saatte görülen nöronal morfolojik etkilerdendir."
+      }
+     ]
+    }
+   ],
+   "sourcePdf": {
+    "fileName": "2. SSS Travması.pdf",
+    "primaryPage": 7,
+    "startPage": 7,
+    "endPage": 8,
+    "citation": "Sayfa 7 · Kurul 2 Tıbbi Patoloji · SSS Travması"
+   },
+   "isCheckpoint": false,
+   "checkpointNumber": 0
+  },
+  {
+   "slideNumber": 7,
+   "title": "Eski Kontüzyon: Sarı-Kahve Çökük Lekeler",
+   "subtitle": "Eski kontüzyonda çökük sarı-kahve lekeler, kavitasyon, gliozis ve hemosiderin yüklü makrofajlar.",
+   "badge": "Morfoloji",
+   "bolum": "1",
+   "altBaslik": "Eski kontüzyon",
+   "pdfSayfalari": [
+    9,
+    10
+   ],
+   "synthesisNarrative": "Kontüzyon iyileştikçe akut kanamalı görünüm yerini kalıcı izlere bırakır.\n\n- **Makroskopik görünüm:** Eski travmatik lezyonlar girus çıkıntılarını tutan, çökük, çekintili, sarı-kahve renkli lekelerdir.\n- **Kavitasyon:** Yaygın hemorajik alanlar, infarktüse benzeyebilen büyük kavitasyonlu lezyonlara yol açar; bu yüzden ayırıcı tanıda infarktüs akla gelir.\n- **Mikroskopi:** Eski kontüzyon bölgelerinde gliozis ve hemosiderin yüklü makrofajlar ön plandadır; hemosiderin geçirilmiş kanamanın demir izidir.\n- **Resimli örnek:** Bir olguda iki temporal lobda doku parçalanması ve kanamalı akut kontüzyonlar, başka bir olguda inferior frontal yüzeyde sarı renkli uzak (eski) kontüzyonlar görülür.\n\n> [!IMPORTANT]\n> Sarı-kahve çökük lekeler ve hemosiderin yüklü makrofajlar eski kontüzyonu, kanamalı doku parçalanması akut kontüzyonu gösterir.",
+   "content": "Kontüzyon iyileştikçe akut kanamalı görünüm yerini kalıcı izlere bırakır.\n\n- **Makroskopik görünüm:** Eski travmatik lezyonlar girus çıkıntılarını tutan, çökük, çekintili, sarı-kahve renkli lekelerdir.\n- **Kavitasyon:** Yaygın hemorajik alanlar, infarktüse benzeyebilen büyük kavitasyonlu lezyonlara yol açar; bu yüzden ayırıcı tanıda infarktüs akla gelir.\n- **Mikroskopi:** Eski kontüzyon bölgelerinde gliozis ve hemosiderin yüklü makrofajlar ön plandadır; hemosiderin geçirilmiş kanamanın demir izidir.\n- **Resimli örnek:** Bir olguda iki temporal lobda doku parçalanması ve kanamalı akut kontüzyonlar, başka bir olguda inferior frontal yüzeyde sarı renkli uzak (eski) kontüzyonlar görülür.\n\n> [!IMPORTANT]\n> Sarı-kahve çökük lekeler ve hemosiderin yüklü makrofajlar eski kontüzyonu, kanamalı doku parçalanması akut kontüzyonu gösterir.",
+   "coreContent": {
+    "keyBullets": [
+     {
+      "title": "Sarı-kahve leke",
+      "desc": "Girus çıkıntılarını tutan çökük, çekintili eski lezyon.",
+      "isKey": true
+     },
+     {
+      "title": "Kavitasyon",
+      "desc": "Yaygın kanama alanları infarktüse benzer kaviteler bırakır.",
+      "isKey": false
+     },
+     {
+      "title": "Gliozis ve hemosiderin",
+      "desc": "Eski kontüzyonun mikroskobik bulguları.",
+      "isKey": false
+     }
+    ]
+   },
+   "spotPearls": [
+    "📌 [SINAV SPOTU] Eski kontüzyonlar girus çıkıntılarını tutan çökük, sarı-kahve lekelerdir.",
+    "📌 [SINAV SPOTU] Eski kontüzyonda gliozis ve hemosiderin yüklü makrofajlar ön plandadır."
+   ],
+   "medicalTerms": [
+    {
+     "term": "Gliozis",
+     "explanation": "Hasarlı sinir dokusunda glia hücrelerinin çoğalarak skar oluşturması."
+    },
+    {
+     "term": "Hemosiderin",
+     "explanation": "Hemoglobin yıkımından kalan demir içeren altın-kahve pigment."
+    }
+   ],
+   "flashcards": [
+    {
+     "id": "fc-7-1",
+     "front": "Eski kontüzyonun makroskopik görünümü nedir?",
+     "back": "Girus çıkıntılarını tutan, çökük, çekintili, sarı-kahve renkli lekeler.",
+     "category": "SSS Travması"
+    },
+    {
+     "id": "fc-7-2",
+     "front": "Eski kontüzyonun mikroskobik bulguları nelerdir?",
+     "back": "Gliozis ve hemosiderin yüklü makrofajlar.",
+     "category": "SSS Travması"
+    }
+   ],
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Yıllar önce trafik kazası geçirmiş bir hastanın otopsisinde inferior frontal yüzeyde girus çıkıntılarını tutan çökük, sarı-kahve lekeler görülüyor. Bu alanda mikroskopta en olası bulgu aşağıdakilerden hangisidir?",
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": "Gliozis ve hemosiderin yüklü makrofajlar",
+       "isCorrect": true,
+       "explanation": "Doğru. Gliozis, hasarlı sinir dokusunda glia hücrelerinin çoğalarak oluşturduğu skardır; hemosiderin ise eski kanamanın demir pigmentidir. Ders notuna göre eski kontüzyon bölgelerinde bu iki bulgu ön plandadır."
+      },
+      {
+       "key": "B",
+       "text": "Taze kanama ve ödem",
+       "isCorrect": false,
+       "explanation": "Yanlış. Kanama ve ödem, kontüzyonun oluşum anındaki akut bulgularıdır. Yıllar sonra görülen sarı-kahve çökük leke iyileşmiş bir lezyonu gösterdiği için taze kanama beklenmez."
+      },
+      {
+       "key": "C",
+       "text": "İntranöronal tau protein inklüzyonları",
+       "isCorrect": false,
+       "explanation": "Yanlış. Tau inklüzyonları, tekrarlayan travmalara bağlı kronik travmatik ensefalopatinin tanımlayıcı bulgusudur. Tek bir kazaya bağlı eski kontüzyon odağını tanımlayan bulgu değildir."
+      },
+      {
+       "key": "D",
+       "text": "Nöronlarda yeni gelişmiş piknoz ve sitoplazmik eozinofili",
+       "isCorrect": false,
+       "explanation": "Yanlış. Piknoz ve eozinofili, kontüzyondan yaklaşık 24 saat sonra beliren akut nöron hasarı bulgularıdır. Yıllar önce oluşmuş bir lezyonda yerini gliozis ve hemosiderine bırakmıştır."
+      }
+     ]
+    },
+    {
+     "type": "before_after_slider",
+     "leftTitle": "Akut kontüzyon",
+     "rightTitle": "Eski kontüzyon",
+     "leftPoints": [
+      "Doku parçalanması ve kanama",
+      "Kesit yüzeyinde kama şekli",
+      "Örnek: iki temporal lobda kanamalı lezyon"
+     ],
+     "rightPoints": [
+      "Çökük, çekintili, sarı-kahve leke",
+      "Gliozis ve hemosiderin yüklü makrofajlar",
+      "Örnek: inferior frontal yüzeyde sarı renkli lezyon"
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Eski kontüzyon bölgelerinde gliozis ve hemosiderin yüklü makrofajlar ön plandadır.",
+     "maskedTerm": "hemosiderin",
+     "hint": "Eski kanamadan kalan demirli pigment"
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Eski kontüzyon",
+     "items": [
+      {
+       "text": "Eski travmatik lezyonlar girus çıkıntılarını tutar.",
+       "isLie": false,
+       "explanation": "Doğru. Girus tepeleri travmaya en duyarlı yer olduğundan izler de burada kalır."
+      },
+      {
+       "text": "Yaygın hemorajik alanlar infarktüse benzeyen kavitasyonlu lezyonlar bırakabilir.",
+       "isLie": false,
+       "explanation": "Doğru. Ders notu bu benzerliği vurgular."
+      },
+      {
+       "text": "Eski kontüzyonlar kabarık, parlak kırmızı renkli lezyonlardır.",
+       "isLie": true,
+       "explanation": "Tuzak! Eski kontüzyonlar çökük, çekintili ve sarı-kahve renklidir; kırmızı kanamalı görünüm akut lezyona aittir."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Otopside büyük kavitasyonlu bir beyin lezyonu görüldüğünde eski kontüzyon ile infarktüs neden karışabilir ve hangi özellikler kontüzyonu destekler?",
+     "answer": "Yaygın hemorajik alanlar infarktüse benzeyen büyük kaviteler bırakır. Girus çıkıntılarını tutan çökük sarı-kahve lekeler, orbito-frontal ve temporal yerleşim ve yüzeyel tabakaların ağır tutulumu travmatik kontüzyonu destekler."
+    }
+   ],
+   "sourcePdf": {
+    "fileName": "2. SSS Travması.pdf",
+    "primaryPage": 9,
+    "startPage": 9,
+    "endPage": 10,
+    "citation": "Sayfa 9 · Kurul 2 Tıbbi Patoloji · SSS Travması"
+   },
+   "isCheckpoint": false,
+   "checkpointNumber": 0
+  },
+  {
+   "slideNumber": 8,
+   "title": "Diffüz Aksonal Hasar",
+   "subtitle": "Açılı ivmelenme çarpma olmadan da yaygın aksonal hasar yapar; erken komanın yarısından sorumludur.",
+   "badge": "Mekanizma",
+   "bolum": "1",
+   "altBaslik": "Diffüz aksonal hasar",
+   "pdfSayfalari": [
+    11,
+    12
+   ],
+   "synthesisNarrative": "Travma her zaman göze çarpan bir kontüzyon bırakmaz; bazen **göze çarpmayan, geniş alanda aksonal hasar** oluşturur.\n\n- **Mekanizma:** Açılı ivmelenme, kafaya bir cisim çarpmasa bile aksonal hasar ve hemoraji ile sonuçlanabilir.\n- **Klinik önemi:** Travmadan kısa süre sonra komaya giren hastaların %50 kadarında diffüz aksonal hasar olduğu düşünülür.\n- **Yerleşim:** Lezyonlar sıklıkla asimetriktir; lateral ventrikül köşelerinde ve beyin sapında görülür.\n- **Gösterilmesi:** Aksonal şişkinlikler en iyi gümüş boyama ya da aksonal proteinlere karşı immünohistokimya ile gösterilir; rutin incelemede gözden kaçabilir.\n\n> [!IMPORTANT]\n> Erken komaya giren, belirgin kontüzyonu olmayan travma hastasında diffüz aksonal hasar düşünülür; tanı gümüş boyamayla aksonal şişkinliklerin gösterilmesine dayanır.",
+   "content": "Travma her zaman göze çarpan bir kontüzyon bırakmaz; bazen **göze çarpmayan, geniş alanda aksonal hasar** oluşturur.\n\n- **Mekanizma:** Açılı ivmelenme, kafaya bir cisim çarpmasa bile aksonal hasar ve hemoraji ile sonuçlanabilir.\n- **Klinik önemi:** Travmadan kısa süre sonra komaya giren hastaların %50 kadarında diffüz aksonal hasar olduğu düşünülür.\n- **Yerleşim:** Lezyonlar sıklıkla asimetriktir; lateral ventrikül köşelerinde ve beyin sapında görülür.\n- **Gösterilmesi:** Aksonal şişkinlikler en iyi gümüş boyama ya da aksonal proteinlere karşı immünohistokimya ile gösterilir; rutin incelemede gözden kaçabilir.\n\n> [!IMPORTANT]\n> Erken komaya giren, belirgin kontüzyonu olmayan travma hastasında diffüz aksonal hasar düşünülür; tanı gümüş boyamayla aksonal şişkinliklerin gösterilmesine dayanır.",
+   "coreContent": {
+    "keyBullets": [
+     {
+      "title": "Açılı ivmelenme",
+      "desc": "Çarpma olmadan da aksonal hasar ve hemoraji yapar.",
+      "isKey": true
+     },
+     {
+      "title": "%50",
+      "desc": "Erken komaya giren hastaların yaklaşık yarısında vardır.",
+      "isKey": false
+     },
+     {
+      "title": "Gümüş boyama",
+      "desc": "Aksonal şişkinlikleri en iyi gösteren yöntemdir.",
+      "isKey": false
+     }
+    ]
+   },
+   "spotPearls": [
+    "📌 [SINAV SPOTU] Travmadan kısa süre sonra komaya girenlerin %50 kadarında diffüz aksonal hasar vardır.",
+    "📌 [SINAV SPOTU] Diffüz aksonal hasar lateral ventrikül köşelerinde ve beyin sapında, asimetrik yerleşir."
+   ],
+   "medicalTerms": [
+    {
+     "term": "Açılı ivmelenme",
+     "explanation": "Kafanın dönerek hızlanması ya da yavaşlaması; rotasyonel kuvvet."
+    },
+    {
+     "term": "Akson",
+     "explanation": "Nöronun uyarıyı ileten uzun uzantısı."
+    }
+   ],
+   "flashcards": [
+    {
+     "id": "fc-8-1",
+     "front": "Diffüz aksonal hasarın mekanizması nedir?",
+     "back": "Açılı ivmelenme; çarpma olmadan da gelişebilir.",
+     "category": "SSS Travması"
+    },
+    {
+     "id": "fc-8-2",
+     "front": "Aksonal şişkinlikler hangi yöntemle en iyi gösterilir?",
+     "back": "Gümüş boyama ya da aksonal proteinlere karşı immünohistokimya.",
+     "category": "SSS Travması"
+    }
+   ],
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Yüksek hızlı bir araç kazasında kafası çarpmadan şiddetle dönen bir sürücü olay yerinde komaya giriyor; görüntülemede belirgin kontüzyon yok. Otopsi incelemesinde bu tabloyu açıklayacak lezyonu göstermek için en uygun yaklaşım hangisidir?",
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": "Lateral ventrikül köşeleri ve beyin sapından alınan örneklerde gümüş boyama ile aksonal şişkinlikleri aramak",
+       "isCorrect": true,
+       "explanation": "Doğru. Gümüş boyama, aksonları görünür kılan bir histokimyasal yöntemdir ve aksonal şişkinlikleri en iyi gösterir. Açılı ivmelenmeyle erken koma tablosu diffüz aksonal hasarı düşündürür ve bu lezyonlar sıklıkla ventrikül köşeleri ile beyin sapında yerleşir."
+      },
+      {
+       "key": "B",
+       "text": "Orbito-frontal ve temporal yüzeyde kama şeklinde kontüzyon aramak",
+       "isCorrect": false,
+       "explanation": "Yanlış. Kama şeklindeki lezyon, darbe ile oluşan kontüzyonun kesit görünümüdür. Bu olguda çarpma olmamış ve kontüzyon saptanmamıştır; tabloyu açıklayan açılı ivmelenmeye bağlı aksonal hasardır."
+      },
+      {
+       "key": "C",
+       "text": "Nöronlarda intranöronal tau inklüzyonlarını aramak",
+       "isCorrect": false,
+       "explanation": "Yanlış. Tau inklüzyonları, tekrarlayan travmalarla yıllar içinde gelişen kronik travmatik ensefalopatinin bulgusudur. Tek bir kazadan hemen sonra gelişen komayı açıklamaz."
+      },
+      {
+       "key": "D",
+       "text": "Hemosiderin yüklü makrofajları aramak",
+       "isCorrect": false,
+       "explanation": "Yanlış. Hemosiderin yüklü makrofajlar eski kontüzyonda, geçirilmiş kanamanın izini temizleyen hücrelerdir. Olay yerinde gelişen akut komada bu iyileşme bulgusu beklenmez."
+      }
+     ]
+    },
+    {
+     "type": "causal_chain",
+     "chainTitle": "Diffüz aksonal hasarın gelişimi",
+     "steps": [
+      "1. Kuvvet: Travmada kafa açılı ivmelenmeye maruz kalır; çarpma olması gerekmez.",
+      "2. Hasar: Geniş alanda aksonlar zedelenir ve hemoraji gelişir.",
+      "3. Yerleşim: Lezyonlar asimetrik olarak lateral ventrikül köşelerinde ve beyin sapında toplanır.",
+      "4. Sonuç: Hasta travmadan kısa süre sonra komaya girebilir."
+     ]
+    },
+    {
+     "type": "venn_grid",
+     "title": "Kontüzyon ve diffüz aksonal hasar",
+     "labelA": "Kontüzyon",
+     "labelB": "Diffüz aksonal hasar",
+     "items": [
+      {
+       "criterion": "Çarpma olmadan, yalnız açılı ivmelenmeyle gelişebilir",
+       "correct": "B",
+       "explanation": "Diffüz aksonal hasar açılı ivmelenmenin sonucudur."
+      },
+      {
+       "criterion": "Kafatasının kaba iç yüzeyine denk gelen orbito-frontal bölgede sık görülür",
+       "correct": "A",
+       "explanation": "Bu yerleşim kontüzyona aittir."
+      },
+      {
+       "criterion": "Lateral ventrikül köşeleri ve beyin sapında asimetrik yerleşir",
+       "correct": "B",
+       "explanation": "Diffüz aksonal hasarın tipik yerleşimidir."
+      },
+      {
+       "criterion": "Hemoraji eşlik edebilir",
+       "correct": "both",
+       "explanation": "Kontüzyonda damar yırtılmasıyla, diffüz aksonal hasarda aksonal hasarla birlikte hemoraji gelişir."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Travmadan kısa süre sonra komaya giren hastaların %50 kadarında diffüz aksonal hasar olduğu düşünülür.",
+     "maskedTerm": "%50",
+     "hint": "Hastaların yaklaşık yarısı"
+    },
+    {
+     "type": "swipe_matching",
+     "title": "Lezyonu tanımla",
+     "leftCategory": "Kontüzyon",
+     "rightCategory": "Diffüz aksonal hasar",
+     "cards": [
+      {
+       "text": "Coup ve contrecoup biçimleri vardır",
+       "category": "left",
+       "explanation": "Darbe yeri ve karşı taraf lezyonları kontüzyondur."
+      },
+      {
+       "text": "Gümüş boyama ile aksonal şişkinlikler gösterilir",
+       "category": "right",
+       "explanation": "Diffüz aksonal hasarın tanı yöntemidir."
+      },
+      {
+       "text": "Erken komaya girenlerin yaklaşık yarısında sorumludur",
+       "category": "right",
+       "explanation": "Diffüz aksonal hasar erken komanın önemli nedenidir."
+      },
+      {
+       "text": "Kesit yüzeyinde kama şeklinde görülür",
+       "category": "left",
+       "explanation": "Kama şekli kontüzyona aittir."
+      }
+     ]
+    }
+   ],
+   "sourcePdf": {
+    "fileName": "2. SSS Travması.pdf",
+    "primaryPage": 11,
+    "startPage": 11,
+    "endPage": 12,
+    "citation": "Sayfa 11 · Kurul 2 Tıbbi Patoloji · SSS Travması"
+   },
+   "isCheckpoint": false,
+   "checkpointNumber": 0
+  },
+  {
+   "slideNumber": 9,
+   "title": "Konküzyon: Kontüzyonsuz Geri Dönüşlü Bilinç Bozulması",
+   "subtitle": "Konküzyonda yapısal lezyon yoktur; nörolojik iyileşme tamdır, olay anının hafızası kaybolur.",
+   "badge": "Klinik Tablo",
+   "bolum": "1",
+   "altBaslik": "Konküzyon",
+   "pdfSayfalari": [
+    13,
+    13
+   ],
+   "synthesisNarrative": "Konküzyon, kafa travmasından sonra **kontüzyon olmaksızın gelişen geri dönüşlü bilinç bozulmasıdır**; yani görünür bir parenkim lezyonu bırakmaz.\n\n- **Akut bulgular:** Bilinç kaybı, geçici solunum durması ve refleks kaybı görülür.\n- **İyileşme:** Nörolojik iyileşme tamdır; hasta kalıcı bir nörolojik açık olmadan düzelir.\n- **Hafıza:** Tam iyileşmeye karşın olay anının hafızası kaybolur; bu amnezi geri gelmez.\n- **Patogenez:** Sinirsel aktivitedeki ani kaybın patogenezi tam olarak bilinmemektedir.\n\n> [!IMPORTANT]\n> Konküzyonu kontüzyondan ayıran, yapısal lezyonun olmaması ve bilinç bozukluğunun geri dönüşlü olmasıdır; olay anına ait amnezi ise kalıcıdır.",
+   "content": "Konküzyon, kafa travmasından sonra **kontüzyon olmaksızın gelişen geri dönüşlü bilinç bozulmasıdır**; yani görünür bir parenkim lezyonu bırakmaz.\n\n- **Akut bulgular:** Bilinç kaybı, geçici solunum durması ve refleks kaybı görülür.\n- **İyileşme:** Nörolojik iyileşme tamdır; hasta kalıcı bir nörolojik açık olmadan düzelir.\n- **Hafıza:** Tam iyileşmeye karşın olay anının hafızası kaybolur; bu amnezi geri gelmez.\n- **Patogenez:** Sinirsel aktivitedeki ani kaybın patogenezi tam olarak bilinmemektedir.\n\n> [!IMPORTANT]\n> Konküzyonu kontüzyondan ayıran, yapısal lezyonun olmaması ve bilinç bozukluğunun geri dönüşlü olmasıdır; olay anına ait amnezi ise kalıcıdır.",
+   "coreContent": {
+    "keyBullets": [
+     {
+      "title": "Tanım",
+      "desc": "Kontüzyon olmaksızın geri dönüşlü bilinç bozulması.",
+      "isKey": true
+     },
+     {
+      "title": "Akut bulgular",
+      "desc": "Bilinç kaybı, geçici solunum durması, refleks kaybı.",
+      "isKey": false
+     },
+     {
+      "title": "Amnezi",
+      "desc": "Tam iyileşmeye karşın olay anının hafızası kaybolur.",
+      "isKey": false
+     }
+    ]
+   },
+   "spotPearls": [
+    "📌 [SINAV SPOTU] Konküzyon kontüzyon olmaksızın geri dönüşlü bilinç bozulmasıdır.",
+    "📌 [SINAV SPOTU] Konküzyonda nörolojik iyileşme tamdır, olay anının hafızası kaybolur; patogenez tam bilinmez."
+   ],
+   "medicalTerms": [
+    {
+     "term": "Konküzyon",
+     "explanation": "Beyin sarsıntısı; yapısal lezyon olmadan geri dönüşlü bilinç bozulması."
+    },
+    {
+     "term": "Amnezi",
+     "explanation": "Belirli bir döneme ait anıların kaybı."
+    }
+   ],
+   "flashcards": [
+    {
+     "id": "fc-9-1",
+     "front": "Konküzyonu kontüzyondan ayıran nedir?",
+     "back": "Konküzyonda kontüzyon, yani yapısal parenkim lezyonu yoktur ve bilinç bozulması geri dönüşlüdür.",
+     "category": "SSS Travması"
+    },
+    {
+     "id": "fc-9-2",
+     "front": "Konküzyonda hangi kayıp kalıcıdır?",
+     "back": "Olay anının hafızası.",
+     "category": "SSS Travması"
+    }
+   ],
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Futbol maçında kafa kafaya çarpışan bir oyuncu birkaç saniye bilincini kaybediyor, kısa süre refleksleri alınamıyor; birkaç dakika içinde tamamen düzeliyor ancak çarpışma anını hatırlamıyor. Görüntülemede lezyon yok. Bu tabloyla ilgili hangisi doğrudur?",
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": "Tablo konküzyondur; nörolojik iyileşme tam olsa da olay anının hafızası kaybolur",
+       "isCorrect": true,
+       "explanation": "Doğru. Konküzyon, kontüzyon olmaksızın gelişen geri dönüşlü bilinç bozulmasıdır. Ders notuna göre tam nörolojik iyileşmeye karşın olay anının hafızası kaybolur; olgu bu tanımla birebir örtüşür."
+      },
+      {
+       "key": "B",
+       "text": "Tablo contrecoup kontüzyondur",
+       "isCorrect": false,
+       "explanation": "Yanlış. Contrecoup kontüzyon, darbenin karşı tarafında kanama, doku hasarı ve ödemle seyreden yapısal bir lezyondur. Bu olguda görüntülemede lezyon olmadığı ve bilinç tamamen düzeldiği için kontüzyon düşünülmez."
+      },
+      {
+       "key": "C",
+       "text": "Tablo diffüz aksonal hasardır ve hasta kalıcı komaya girer",
+       "isCorrect": false,
+       "explanation": "Yanlış. Diffüz aksonal hasar, açılı ivmelenmeyle geniş alanda aksonların zedelendiği ve erken komaya yol açabilen bir lezyondur. Bu olguda bilinç kaybı saniyeler sürmüş ve tam iyileşme olmuştur; bu nedenle tabloya uymaz."
+      },
+      {
+       "key": "D",
+       "text": "Sinirsel aktivitedeki ani kaybın mekanizması kesin olarak aydınlatılmıştır",
+       "isCorrect": false,
+       "explanation": "Yanlış. Patogenez, bir hastalığın oluşum mekanizmasıdır. Ders notunda konküzyondaki ani sinirsel aktivite kaybının patogenezinin tam olarak bilinmediği belirtildiği için bu ifade yanlıştır."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Konküzyon, kafa travmasından sonra kontüzyon olmaksızın gelişen geri dönüşlü bilinç bozulmasıdır.",
+     "maskedTerm": "geri dönüşlü",
+     "hint": "Kalıcı olmayan, düzelebilen"
+    },
+    {
+     "type": "before_after_slider",
+     "leftTitle": "Konküzyon",
+     "rightTitle": "Kontüzyon",
+     "leftPoints": [
+      "Yapısal parenkim lezyonu yoktur",
+      "Bilinç bozulması geri dönüşlüdür",
+      "Olay anının hafızası kaybolur"
+     ],
+     "rightPoints": [
+      "Kanama, doku hasarı ve ödem vardır",
+      "Kesit yüzeyinde kama şeklinde lezyon görülür",
+      "İyileşince sarı-kahve çökük leke bırakır"
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Konküzyon",
+     "items": [
+      {
+       "text": "Konküzyonda geçici solunum durması görülebilir.",
+       "isLie": false,
+       "explanation": "Doğru. Bilinç kaybı ve refleks kaybıyla birlikte geçici solunum durması konküzyonun akut bulgularındandır."
+      },
+      {
+       "text": "Konküzyondan sonra olay anına ait hafıza da tamamen geri gelir.",
+       "isLie": true,
+       "explanation": "Tuzak! Nörolojik iyileşme tam olsa da olay anının hafızası kaybolur."
+      },
+      {
+       "text": "Konküzyonda sinirsel aktivitedeki ani kaybın patogenezi tam bilinmemektedir.",
+       "isLie": false,
+       "explanation": "Doğru. Ders notu bu mekanizmanın henüz aydınlatılmadığını belirtir."
+      },
+      {
+       "text": "Konküzyonda kontüzyon bulunmaz.",
+       "isLie": false,
+       "explanation": "Doğru. Tanım gereği konküzyon kontüzyon olmaksızın gelişir."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Konküzyon geçiren bir hastada hangi bulgular geçici, hangisi kalıcıdır?",
+     "answer": "Bilinç kaybı, geçici solunum durması ve refleks kaybı geçicidir ve nörolojik iyileşme tamdır; olay anının hafızasının kaybı ise kalıcıdır."
+    }
+   ],
+   "sourcePdf": {
+    "fileName": "2. SSS Travması.pdf",
+    "primaryPage": 13,
+    "startPage": 13,
+    "endPage": 13,
+    "citation": "Sayfa 13 · Kurul 2 Tıbbi Patoloji · SSS Travması"
+   },
+   "isCheckpoint": false,
+   "checkpointNumber": 0
+  },
+  {
+   "slideNumber": 10,
+   "title": "[TEKRAR SAYFASI - CHECKPOINT 1] Travmanın Genel Özellikleri ve Parenkim Hasarı",
+   "subtitle": "Genel özellikler, KTE, kontüzyon, laserasyon, diffüz aksonal hasar ve konküzyon bir arada pekiştirilir.",
+   "badge": "Tekrar",
+   "bolum": "1",
+   "altBaslik": "Bölüm tekrarı",
+   "pdfSayfalari": [
+    2,
+    13
+   ],
+   "synthesisNarrative": "Bu bölümde SSS travmasının genel ilkeleri ve parenkimi tutan lezyonlar işlendi; aşağıdaki özet bunları birbirine bağlar.\n\n- **Genel ilkeler:** Sonucu şiddet ve etkilenen bölge belirler; dış bulgu iç hasarı yansıtmayabilir; hasar parenkimi, damarları ya da ikisini tutar.\n- **Kronik travmatik ensefalopati:** Temas sporlarındaki tekrarlayan travmalarla gelişir, intranöronal tau inklüzyonlarıyla tanımlanır.\n- **Kontüzyon:** Darbe yerinde coup, karşı tarafta contrecoup gelişir; en sık girus tepeleri, orbito-frontal ve temporal bölgeler tutulur. Kama şeklindedir, nöron değişiklikleri yaklaşık 24 saatte belirir, yüzeyel tabakalar en ağır etkilenir. Eski lezyon sarı-kahve çöküktür; gliozis ve hemosiderin içerir.\n- **Laserasyon:** Delici cisimle doku yırtılması ve kanamadır.\n- **Diffüz aksonal hasar:** Açılı ivmelenmeyle gelişir, erken komanın yaklaşık yarısından sorumludur, gümüş boyamayla gösterilir.\n- **Konküzyon:** Kontüzyonsuz, geri dönüşlü bilinç bozulmasıdır; olay anının hafızası kaybolur.\n\n> [!IMPORTANT]\n> Yapısal lezyon + kama şekli kontüzyonu, görünür lezyonsuz erken koma diffüz aksonal hasarı, tam düzelen kısa bilinç kaybı konküzyonu düşündürür.",
+   "content": "Bu bölümde SSS travmasının genel ilkeleri ve parenkimi tutan lezyonlar işlendi; aşağıdaki özet bunları birbirine bağlar.\n\n- **Genel ilkeler:** Sonucu şiddet ve etkilenen bölge belirler; dış bulgu iç hasarı yansıtmayabilir; hasar parenkimi, damarları ya da ikisini tutar.\n- **Kronik travmatik ensefalopati:** Temas sporlarındaki tekrarlayan travmalarla gelişir, intranöronal tau inklüzyonlarıyla tanımlanır.\n- **Kontüzyon:** Darbe yerinde coup, karşı tarafta contrecoup gelişir; en sık girus tepeleri, orbito-frontal ve temporal bölgeler tutulur. Kama şeklindedir, nöron değişiklikleri yaklaşık 24 saatte belirir, yüzeyel tabakalar en ağır etkilenir. Eski lezyon sarı-kahve çöküktür; gliozis ve hemosiderin içerir.\n- **Laserasyon:** Delici cisimle doku yırtılması ve kanamadır.\n- **Diffüz aksonal hasar:** Açılı ivmelenmeyle gelişir, erken komanın yaklaşık yarısından sorumludur, gümüş boyamayla gösterilir.\n- **Konküzyon:** Kontüzyonsuz, geri dönüşlü bilinç bozulmasıdır; olay anının hafızası kaybolur.\n\n> [!IMPORTANT]\n> Yapısal lezyon + kama şekli kontüzyonu, görünür lezyonsuz erken koma diffüz aksonal hasarı, tam düzelen kısa bilinç kaybı konküzyonu düşündürür.",
+   "coreContent": {
+    "keyBullets": [
+     {
+      "title": "Kontüzyon",
+      "desc": "Coup/contrecoup, kama şekli, yüzeyel tabaka, 24 saat.",
+      "isKey": true
+     },
+     {
+      "title": "Diffüz aksonal hasar",
+      "desc": "Açılı ivmelenme, erken koma, gümüş boyama.",
+      "isKey": false
+     },
+     {
+      "title": "Konküzyon",
+      "desc": "Geri dönüşlü bilinç bozulması, kalıcı olay amnezisi.",
+      "isKey": false
+     }
+    ]
+   },
+   "spotPearls": [
+    "📌 [SINAV SPOTU] Travmada yüzeyel korteks en ağır etkilenir; iskemide korunur.",
+    "📌 [SINAV SPOTU] Erken komaya girenlerin yaklaşık yarısında diffüz aksonal hasar vardır."
+   ],
+   "medicalTerms": [
+    {
+     "term": "Contrecoup",
+     "explanation": "Darbenin karşı tarafındaki kontüzyon."
+    },
+    {
+     "term": "Gliozis",
+     "explanation": "Glia hücrelerinin çoğalmasıyla oluşan skar."
+    }
+   ],
+   "flashcards": [
+    {
+     "id": "fc-10-1",
+     "front": "Kontüzyonda nöron değişiklikleri ne zaman belirir?",
+     "back": "Yaklaşık 24 saatte.",
+     "category": "SSS Travması"
+    },
+    {
+     "id": "fc-10-2",
+     "front": "Kronik travmatik ensefalopatinin bulgusu nedir?",
+     "back": "İntranöronal tau protein inklüzyonları.",
+     "category": "SSS Travması"
+    }
+   ],
+   "interactiveElements": [
+    {
+     "type": "interactive_table",
+     "tableTitle": "Parenkim lezyonlarının karşılaştırması",
+     "tableHeaders": [
+      "Lezyon",
+      "Mekanizma",
+      "Ayırt ettiren bulgu"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Kontüzyon",
+         "isMasked": false
+        },
+        {
+         "text": "Dokunun hızlı yer değiştirmesi ve damar yırtılması",
+         "isMasked": true,
+         "hint": "Darbe anında dokuda olan iki fiziksel olay"
+        },
+        {
+         "text": "Kama şekli, yüzeyel tabaka tutulumu",
+         "isMasked": false
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Laserasyon",
+         "isMasked": false
+        },
+        {
+         "text": "Delici cisim",
+         "isMasked": false
+        },
+        {
+         "text": "Doku yırtılması, vasküler parçalanma ve kanama",
+         "isMasked": true,
+         "hint": "Cismin geçtiği yolda oluşan üç sonuç"
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Diffüz aksonal hasar",
+         "isMasked": false
+        },
+        {
+         "text": "Açılı ivmelenme",
+         "isMasked": true,
+         "hint": "Dönerek hızlanma"
+        },
+        {
+         "text": "Gümüş boyamada aksonal şişkinlik",
+         "isMasked": false
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Kronik travmatik ensefalopati",
+         "isMasked": false
+        },
+        {
+         "text": "Tekrarlayan travma",
+         "isMasked": false
+        },
+        {
+         "text": "İntranöronal tau inklüzyonları",
+         "isMasked": true,
+         "hint": "Nöron içi protein birikimi"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "micro_quiz",
+     "question": "Travmatik parenkim lezyonlarıyla ilgili aşağıdaki eşleştirmelerden hangisi yanlıştır?",
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": "Eski kontüzyon – hemosiderin yüklü makrofajlar",
+       "isCorrect": false,
+       "explanation": "Yanlış. Hemosiderin yüklü makrofajlar, geçirilmiş kanamanın demir pigmentini taşıyan hücrelerdir. Eski kontüzyonda gliozisle birlikte ön planda olduklarından bu eşleştirme doğrudur; soru yanlış eşleştirmeyi istediği için bu seçenek elenir."
+      },
+      {
+       "key": "B",
+       "text": "Diffüz aksonal hasar – gümüş boyama",
+       "isCorrect": false,
+       "explanation": "Yanlış. Gümüş boyama aksonları görünür kılan yöntemdir. Diffüz aksonal hasardaki aksonal şişkinlikleri en iyi gösterdiği için eşleştirme doğrudur."
+      },
+      {
+       "key": "C",
+       "text": "Konküzyon – kalıcı nörolojik defisit",
+       "isCorrect": true,
+       "explanation": "Doğru. Konküzyon, kontüzyon olmaksızın gelişen geri dönüşlü bilinç bozulmasıdır. Nörolojik iyileşme tam olduğundan kalıcı nörolojik defisitle eşleştirilmesi yanlıştır; kalıcı olan yalnız olay anının hafıza kaybıdır."
+      },
+      {
+       "key": "D",
+       "text": "Kronik travmatik ensefalopati – intranöronal tau",
+       "isCorrect": false,
+       "explanation": "Yanlış. İntranöronal tau inklüzyonları, tekrarlayan travmaya bağlı bu dejenerasyonun özgün paternidir. Bu eşleştirme ders notuyla uyumlu olduğu için yanlış eşleştirmeyi arayan soruda seçilmez."
+      }
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Bölüm 1 genel tekrar",
+     "items": [
+      {
+       "text": "Travmada iskemiden farklı olarak yüzeyel korteks tabakaları en şiddetli etkilenir.",
+       "isLie": false,
+       "explanation": "Doğru. İskemide yüzeyel korteks korunurken travmada yüzeyel tabakalar en ağır tutulur."
+      },
+      {
+       "text": "Coup ve contrecoup kontüzyonlar mikroskopik olarak farklı görünümdedir.",
+       "isLie": true,
+       "explanation": "Tuzak! Makroskopik ve mikroskopik görüntüleri benzerdir; ayrım yerleşime göre yapılır."
+      },
+      {
+       "text": "Açılı ivmelenme çarpma olmasa da aksonal hasar yapabilir.",
+       "isLie": false,
+       "explanation": "Doğru. Diffüz aksonal hasarın temel mekanizması budur."
+      },
+      {
+       "text": "Kafatası kırığına rağmen beyin hasarı oluşmayabilir.",
+       "isLie": false,
+       "explanation": "Doğru. Dış bulgular ile beyin hasarı uyumsuz olabilir."
+      }
+     ]
+    },
+    {
+     "type": "branching_logic",
+     "scenario": "Kafa travması sonrası olay yerinde komaya giren bir hastanın BT'sinde belirgin kontüzyon ya da yer kaplayan lezyon görülmüyor. Hekim 'görüntüleme temiz olduğuna göre ciddi parenkim hasarı yoktur' diyor. En doğru yaklaşım hangisidir?",
+     "options": [
+      {
+       "text": "Görüntüleme temiz olduğu için ciddi parenkim hasarı dışlanır",
+       "isCorrect": false,
+       "feedback": "Yanlış. Travma göze çarpmayan, geniş alanda aksonal hasar oluşturabilir; görünür lezyonun yokluğu ağır hasarı dışlamaz."
+      },
+      {
+       "text": "Erken koma ve görünür lezyon yokluğu diffüz aksonal hasarı düşündürür",
+       "isCorrect": true,
+       "feedback": "Doğru. Travmadan kısa süre sonra komaya girenlerin yaklaşık yarısında diffüz aksonal hasar vardır ve bu hasar göze çarpmayabilir."
+      },
+      {
+       "text": "Tablo konküzyondur ve hasta mutlaka tam düzelir",
+       "isCorrect": false,
+       "feedback": "Yanlış. Konküzyonda bilinç bozulması geri dönüşlü ve kısadır; uzayan erken koma bu tanıyla açıklanamaz ve diffüz aksonal hasarı akla getirmelidir."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Konküzyon kontüzyonsuz, geri dönüşlü bilinç bozulmasıdır; olay anının hafızası kaybolur.",
+     "maskedTerm": "hafızası",
+     "hint": "Anıları saklama yeteneği"
+    }
+   ],
+   "sourcePdf": {
+    "fileName": "2. SSS Travması.pdf",
+    "primaryPage": 2,
+    "startPage": 2,
+    "endPage": 13,
+    "citation": "Sayfa 2 · Kurul 2 Tıbbi Patoloji · SSS Travması"
+   },
+   "isCheckpoint": true,
+   "checkpointNumber": 1
+  },
+  {
+   "slideNumber": 11,
+   "bolum": "2",
+   "pdfSayfalari": [
+    14,
+    14
+   ],
+   "sourcePdf": {
+    "fileName": "2. SSS Travması.pdf",
+    "primaryPage": 14,
+    "startPage": 14,
+    "endPage": 14
+   },
+   "title": "Travmatik Vasküler Hasar: Kanama Tipleri ve Yerleşimi",
+   "subtitle": "SSS travması damar duvarını doğrudan yıkarak dört farklı bölmede kanama yapabilir.",
+   "badge": "Temel Kavram",
+   "synthesisNarrative": "Parenkim hasarının yanında travma, damar duvarını doğrudan yıkarak da beyne zarar verir. Bu vasküler hasar kanamanın biriktiği bölmeye göre adlandırılır.\n\n- **Epidural kanama:** Kafatası ile dura arasındaki aralıkta biriken kandır.\n- **Subdural kanama:** Dura ile araknoid arasındaki aralıkta biriken kandır.\n- **Subaraknoid kanama:** Araknoidin altında, beyin yüzeyini saran aralıkta oluşur.\n- **İntraparenkimal kanama:** Beyin dokusunun kendi içine olan kanamadır.\n- **Birliktelik:** Bu tipler tek başına ya da kombine görülebilir; bir hastada birden fazla bölmede kan bulunabilir.\n\nSubaraknoid ve intraparenkimal kanamaların yerleşimi rastgele değildir. Bu kanamalar en sık kontüzyon ve laserasyon bölgelerinde görülür, çünkü parenkim yırtıldığı yerde damarlar da yırtılır.\n\n> [!IMPORTANT]\n> Girus tepeleri, orbito-frontal ve temporal bölgedeki bir kontüzyon alanında subaraknoid ya da intraparenkimal kanama beklenir. Kanamanın yerini parenkim hasarının yeriyle birlikte düşün.",
+   "content": "Parenkim hasarının yanında travma, damar duvarını doğrudan yıkarak da beyne zarar verir. Bu vasküler hasar kanamanın biriktiği bölmeye göre adlandırılır.\n\n- **Epidural kanama:** Kafatası ile dura arasındaki aralıkta biriken kandır.\n- **Subdural kanama:** Dura ile araknoid arasındaki aralıkta biriken kandır.\n- **Subaraknoid kanama:** Araknoidin altında, beyin yüzeyini saran aralıkta oluşur.\n- **İntraparenkimal kanama:** Beyin dokusunun kendi içine olan kanamadır.\n- **Birliktelik:** Bu tipler tek başına ya da kombine görülebilir; bir hastada birden fazla bölmede kan bulunabilir.\n\nSubaraknoid ve intraparenkimal kanamaların yerleşimi rastgele değildir. Bu kanamalar en sık kontüzyon ve laserasyon bölgelerinde görülür, çünkü parenkim yırtıldığı yerde damarlar da yırtılır.\n\n> [!IMPORTANT]\n> Girus tepeleri, orbito-frontal ve temporal bölgedeki bir kontüzyon alanında subaraknoid ya da intraparenkimal kanama beklenir. Kanamanın yerini parenkim hasarının yeriyle birlikte düşün.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Kafa travması geçiren bir hastada orbito-frontal bölgede kontüzyon saptanıyor. Bu alanda en çok beklenen kanama tipleri hangisidir?",
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": "Subaraknoid ve intraparenkimal kanama",
+       "isCorrect": true,
+       "explanation": "Doğru. Subaraknoid kanama beyin yüzeyindeki aralığa, intraparenkimal kanama ise beyin dokusunun içine olan kanamadır. Ders notuna göre bu iki tip en sık kontüzyon ve laserasyon bölgelerinde görülür; orbito-frontal bölge de kontüzyonun sık yeridir."
+      },
+      {
+       "key": "B",
+       "text": "Yalnız epidural kanama",
+       "isCorrect": false,
+       "explanation": "Yanlış. Epidural kanama kafatası ile dura arasındaki aralıkta biriken kandır ve parenkim yüzeyinin dışındadır. Kontüzyon alanıyla yerleşim ilişkisi ders notunda subaraknoid ve intraparenkimal kanama için kurulur."
+      },
+      {
+       "key": "C",
+       "text": "Yalnız subdural kanama",
+       "isCorrect": false,
+       "explanation": "Yanlış. Subdural kanama dura ile araknoid arasında biriken kandır. Kontüzyon ve laserasyon yerlerinde en sık görüldüğü belirtilen tipler bu değil, subaraknoid ve intraparenkimal kanamadır."
+      },
+      {
+       "key": "D",
+       "text": "Hiçbir kanama beklenmez; kontüzyon kanamasız bir lezyondur",
+       "isCorrect": false,
+       "explanation": "Yanlış. Kontüzyon, parenkimin ezilmesiyle küçük damarların da yırtıldığı bir lezyondur. Bu nedenle kontüzyon alanı tam da subaraknoid ve intraparenkimal kanamanın en sık görüldüğü yerdir."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Subaraknoid ve intraparenkimal kanamalar en sık kontüzyon ve laserasyon bölgelerinde görülür.",
+     "maskedTerm": "intraparenkimal",
+     "hint": "Beyin dokusunun kendi içine olan kanama"
+    },
+    {
+     "type": "swipe_matching",
+     "title": "Kanama hangi aralıkta birikir?",
+     "leftCategory": "Duranın dışında ya da altında (meningeal)",
+     "rightCategory": "Beyin yüzeyinde ya da içinde",
+     "cards": [
+      {
+       "text": "Epidural kanama",
+       "category": "left",
+       "explanation": "Kan kafatası ile dura arasında birikir; beyin dokusunun dışındadır."
+      },
+      {
+       "text": "Subdural kanama",
+       "category": "left",
+       "explanation": "Kan dura ile araknoid arasında birikir; yine beyin dokusunun dışındadır."
+      },
+      {
+       "text": "Subaraknoid kanama",
+       "category": "right",
+       "explanation": "Araknoidin altında, beyin yüzeyini saran aralıkta oluşur ve kontüzyon yerleriyle ilişkilidir."
+      },
+      {
+       "text": "İntraparenkimal kanama",
+       "category": "right",
+       "explanation": "Beyin dokusunun içine olan kanamadır; laserasyon ve kontüzyon bölgelerinde sıktır."
+      }
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Travmatik kanama tipleri",
+     "items": [
+      {
+       "text": "Travmatik kanama dört tipte olabilir: epidural, subdural, subaraknoid ve intraparenkimal.",
+       "isLie": false,
+       "explanation": "Doğru. Ders notu travmada damar duvarının yıkılmasıyla oluşan kanamaları bu dört bölmeye göre sayar."
+      },
+      {
+       "text": "Bir hastada aynı travmada yalnız tek tip kanama gelişebilir.",
+       "isLie": true,
+       "explanation": "Tuzak. Ders notu bu tiplerin tek başına ya da kombine olabileceğini açıkça belirtir; birden fazla bölmede kan aynı anda bulunabilir."
+      },
+      {
+       "text": "Subaraknoid kanama sıklıkla kontüzyon bölgesine eşlik eder.",
+       "isLie": false,
+       "explanation": "Doğru. Parenkimin yırtıldığı yerde yüzeyel damarlar da yırtıldığı için subaraknoid kanama kontüzyon yerinde sıktır."
+      },
+      {
+       "text": "Laserasyon bölgesinde intraparenkimal kanama beklenir.",
+       "isLie": false,
+       "explanation": "Doğru. Delici cismin dokuyu yırttığı laserasyonda doku içi damarlar da yırtılır ve intraparenkimal kanama gelişir."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Travmada subaraknoid ve intraparenkimal kanamanın yerini tahmin etmek için hangi parenkim lezyonlarına bakarsın?",
+     "answer": "Kontüzyon ve laserasyon bölgelerine; bu iki kanama en sık bu lezyonların bulunduğu yerde görülür."
+    }
+   ]
+  },
+  {
+   "slideNumber": 12,
+   "bolum": "2.1",
+   "pdfSayfalari": [
+    15,
+    15
+   ],
+   "sourcePdf": {
+    "fileName": "2. SSS Travması.pdf",
+    "primaryPage": 15,
+    "startPage": 15,
+    "endPage": 15
+   },
+   "title": "Epidural Hematom: Orta Meningeal Arter ve Kafatası Kırığı",
+   "subtitle": "Dural arterden, basınçla gelen kan durayı kafatasından ayırarak hematom oluşturur.",
+   "badge": "Mekanizma",
+   "synthesisNarrative": "Epidural hematomun kaynağı dural damarlardır. Bu damarlar, özellikle **orta meningeal arter**, travmaya çok hassastır.\n\n- **Bebeklerde:** Kafatası deforme olabilir, bu yüzden kırık olmadan da damar yırtılabilir.\n- **Çocuk ve erişkinde:** Dural damar yırtığı çoğunlukla kafatası kırığıyla birliktedir.\n- **Kanın davranışı:** Yırtılan damar arter olduğu için kan arteriyel basınçla birikir.\n- **Hematomun oluşumu:** Biriken kan, kafatasının iç yüzüne yapışık olan durayı kemikten ayırır.\n- **Sonuç:** Kafatası ile dura arasında, beyin yüzeyine bası yapan bir hematom gelişir.\n\n> [!IMPORTANT]\n> Erişkinde epidural hematom düşünülen hastada kafatası kırığı aranır. Bebekte kırığın olmaması epidural hematomu dışlamaz, çünkü esnek kafatası kırılmadan damarı yırtabilir.",
+   "content": "Epidural hematomun kaynağı dural damarlardır. Bu damarlar, özellikle **orta meningeal arter**, travmaya çok hassastır.\n\n- **Bebeklerde:** Kafatası deforme olabilir, bu yüzden kırık olmadan da damar yırtılabilir.\n- **Çocuk ve erişkinde:** Dural damar yırtığı çoğunlukla kafatası kırığıyla birliktedir.\n- **Kanın davranışı:** Yırtılan damar arter olduğu için kan arteriyel basınçla birikir.\n- **Hematomun oluşumu:** Biriken kan, kafatasının iç yüzüne yapışık olan durayı kemikten ayırır.\n- **Sonuç:** Kafatası ile dura arasında, beyin yüzeyine bası yapan bir hematom gelişir.\n\n> [!IMPORTANT]\n> Erişkinde epidural hematom düşünülen hastada kafatası kırığı aranır. Bebekte kırığın olmaması epidural hematomu dışlamaz, çünkü esnek kafatası kırılmadan damarı yırtabilir.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Epidural hematomda kanın kaynağı olarak en sık hangi damar yırtılır?",
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": "Orta meningeal arter",
+       "isCorrect": true,
+       "explanation": "Doğru. Orta meningeal arter dura boyunca seyreden ve travmaya çok hassas bir dural arterdir. Ders notu epidural hematomun kaynağı olarak özellikle bu arteri vurgular."
+      },
+      {
+       "key": "B",
+       "text": "Kontüzyon alanındaki parenkim içi damarlar",
+       "isCorrect": false,
+       "explanation": "Yanlış. Parenkim içi damarların yırtılması intraparenkimal kanama yapar ve kontüzyon bölgesinde görülür. Epidural hematom ise kafatası ile dura arasında, dural arterden kaynaklanır."
+      },
+      {
+       "key": "C",
+       "text": "Beyin yüzeyindeki subaraknoid aralığın damarları",
+       "isCorrect": false,
+       "explanation": "Yanlış. Bu damarların yırtılması subaraknoid kanama oluşturur. Epidural aralık kafatası ile dura arasındadır ve kanı dural arter sağlar."
+      },
+      {
+       "key": "D",
+       "text": "Dural sinüsler",
+       "isCorrect": false,
+       "explanation": "Yanlış. Dural sinüsler venöz yapılardır ve kanı düşük basınçla taşır. Epidural hematomda kan arteriyel basınçla gelir ve durayı kemikten ayırabilecek güçtedir; bu nedenle kaynak dural arterdir."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Dural damarlar, özellikle orta meningeal arter, travmaya çok hassastır.",
+     "maskedTerm": "orta meningeal arter",
+     "hint": "Dura boyunca seyreden ve kırıkla kolay yırtılan atardamar"
+    },
+    {
+     "type": "causal_chain",
+     "chainTitle": "Epidural hematomun oluşumu",
+     "steps": [
+      "1. Erişkinde kafatası kırığı: Kırık hattı dural damarı yırtar.",
+      "2. Orta meningeal arter yırtılır: Kan arteriyel basınçla dışarı çıkar.",
+      "3. Dura kafatasından ayrılır: Basınçlı kan, kemiğe yapışık durayı iç yüzeyden sıyırır.",
+      "4. Hematom birikir: Kafatası ile dura arasında kan toplanır.",
+      "5. Beyne bası: Genişleyen hematom beyin yüzeyini iter."
+     ]
+    },
+    {
+     "type": "feature_bidding",
+     "title": "Bebek mi, erişkin mi?",
+     "optionA": "Bebek",
+     "optionB": "Çocuk ve erişkin",
+     "rounds": [
+      {
+       "feature": "Kafatası deforme olabildiği için kırık olmadan damar yırtılabilir",
+       "correct": "A",
+       "explanation": "Bebek kafatası esnektir; darbe kemiği kırmadan şekil değiştirip dural damarı yırtabilir."
+      },
+      {
+       "feature": "Dural damar yırtığı çoğunlukla kafatası kırığıyla birliktedir",
+       "correct": "B",
+       "explanation": "Bu yaşlarda kafatası serttir; damarı yırtan genellikle kırık hattıdır."
+      },
+      {
+       "feature": "Epidural hematom düşünüldüğünde kırık hattı özellikle aranır",
+       "correct": "B",
+       "explanation": "Kırık ve damar yırtığı birlikte geldiği için erişkinde kırık önemli bir ipucudur."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Epidural hematomda biriken kan durayı neden kafatasından ayırabilir?",
+     "answer": "Kan yırtılan arterden (orta meningeal arter) arteriyel basınçla gelir; bu basınç kafatasının iç yüzüne yapışık durayı kemikten sıyırır."
+    }
+   ]
+  },
+  {
+   "slideNumber": 13,
+   "bolum": "2.1",
+   "pdfSayfalari": [
+    16,
+    16
+   ],
+   "sourcePdf": {
+    "fileName": "2. SSS Travması.pdf",
+    "primaryPage": 16,
+    "startPage": 16,
+    "endPage": 16
+   },
+   "title": "Epidural Hematom: Lusid İnterval ve Acil Cerrahi",
+   "subtitle": "Bilincin birkaç saat açık kaldığı dönemin ardından hızlı kötüleşme gelişebilir.",
+   "badge": "Klinik",
+   "synthesisNarrative": "Epidural hematomun kliniğini kanamanın arteriyel olması belirler. Kan basınçla biriktiği için tablo saatler içinde değişir.\n\n- **Lusid interval:** Travma ile nörolojik belirtilerin başlaması arasında hastanın bilincinin açık olduğu birkaç saatlik bir dönem olabilir.\n- **Bu dönemin anlamı:** Hasta konuşur, iyi görünür; ancak hematom bu sırada sessizce büyümektedir.\n- **Hızlı genişleme:** Arteriyel kanama durmadıkça epidural hematom hızla genişleyebilir.\n- **Kötüleşme:** Hematom beyne bası yaptıkça nörolojik belirtiler ortaya çıkar ve hasta hızla kötüleşir.\n- **Tedavi:** Drenaj ve ölümün önlenmesi için acil beyin cerrahisi gerekir.\n\n> [!IMPORTANT]\n> Kafa travması sonrası bir süre iyi görünüp sonra bilinci bozulan hasta epidural hematomu düşündürür. Epidural hematom cerrahi bir acildir; beklemek ölüme yol açabilir.",
+   "content": "Epidural hematomun kliniğini kanamanın arteriyel olması belirler. Kan basınçla biriktiği için tablo saatler içinde değişir.\n\n- **Lusid interval:** Travma ile nörolojik belirtilerin başlaması arasında hastanın bilincinin açık olduğu birkaç saatlik bir dönem olabilir.\n- **Bu dönemin anlamı:** Hasta konuşur, iyi görünür; ancak hematom bu sırada sessizce büyümektedir.\n- **Hızlı genişleme:** Arteriyel kanama durmadıkça epidural hematom hızla genişleyebilir.\n- **Kötüleşme:** Hematom beyne bası yaptıkça nörolojik belirtiler ortaya çıkar ve hasta hızla kötüleşir.\n- **Tedavi:** Drenaj ve ölümün önlenmesi için acil beyin cerrahisi gerekir.\n\n> [!IMPORTANT]\n> Kafa travması sonrası bir süre iyi görünüp sonra bilinci bozulan hasta epidural hematomu düşündürür. Epidural hematom cerrahi bir acildir; beklemek ölüme yol açabilir.",
+   "interactiveElements": [
+    {
+     "type": "branching_logic",
+     "scenario": "Futbol topu başına çarpan 24 yaşındaki bir erkek kısa süre sersemliyor, sonra kalkıp konuşuyor. Üç saat sonra baş ağrısı ve bilinç bulanıklığıyla hızla kötüleşiyor; grafide temporal kemikte kırık var. En uygun yaklaşım hangisidir?",
+     "options": [
+      {
+       "text": "Epidural hematom düşünülür ve acil beyin cerrahisi ile drenaj planlanır.",
+       "isCorrect": true,
+       "feedback": "Doğru. Kırık, saatler süren bilincin açık olduğu dönem ve ardından hızlı kötüleşme, orta meningeal arterden kaynaklanan epidural hematomun lusid interval tablosudur. Arteriyel hematom hızla genişlediği için drenaj ve ölümün önlenmesi için acil cerrahi gerekir."
+      },
+      {
+       "text": "Hasta başta iyi göründüğü için gözlem yeterlidir; tablo kendiliğinden düzelir.",
+       "isCorrect": false,
+       "feedback": "Yanlış. Bilincin açık olduğu dönem iyileşme değil, lusid intervaldir; hematom bu sırada büyümektedir. Arteriyel kanama kendini sınırlamaz, gözlemle beklemek ölüme yol açabilir."
+      },
+      {
+       "text": "Konküzyon düşünülür; nörolojik iyileşme tam olacağından tedavi gerekmez.",
+       "isCorrect": false,
+       "feedback": "Yanlış. Konküzyon kontüzyon olmadan gelişen geri dönüşlü bilinç kaybıdır ve sonrasında saatler içinde ilerleyen kötüleşme beklenmez. Bu hastada kırık ve gecikmiş hızlı kötüleşme bir kitle lezyonunu, epidural hematomu gösterir."
+      },
+      {
+       "text": "Diffüz aksonal hasar düşünülür; hasta travma anından itibaren komada kalmalıdır.",
+       "isCorrect": false,
+       "feedback": "Yanlış. Diffüz aksonal hasar açılı ivmelenmeyle oluşan yaygın akson hasarıdır ve erken komaya yol açar. Bu hastada travma ile kötüleşme arasında bilincin açık olduğu bir dönem vardır; bu, epidural hematomun lusid intervalidir."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Epidural hematomda travma ile nörolojik belirtiler arasında birkaç saatlik bilincin açık olduğu lusid interval olabilir.",
+     "maskedTerm": "lusid interval",
+     "hint": "Hastanın konuşup iyi göründüğü aldatıcı dönem"
+    },
+    {
+     "type": "micro_quiz",
+     "question": "Epidural hematomda hızlı kötüleşmeyi açıklayan temel özellik hangisidir?",
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": "Kanamanın arteriyel olması ve hematomun hızla genişleyebilmesi",
+       "isCorrect": true,
+       "explanation": "Doğru. Epidural hematomun kaynağı orta meningeal arterdir ve kan basınçla birikir. Bu yüzden hematom hızla büyüyüp beyne bası yapar ve acil cerrahi gerekir."
+      },
+      {
+       "key": "B",
+       "text": "Kanamanın kendini sınırlaması",
+       "isCorrect": false,
+       "explanation": "Yanlış. Kendini sınırlama düşük basınçlı kanamaların özelliğidir. Epidural hematomda arteriyel basınç kanamayı sürdürür; tablo durmaz, ilerler."
+      },
+      {
+       "key": "C",
+       "text": "Kanın beyin dokusunun içine dağılması",
+       "isCorrect": false,
+       "explanation": "Yanlış. Beyin dokusu içine kanama intraparenkimal kanamadır. Epidural hematom kafatası ile dura arasında birikir ve beyne dışarıdan bası yapar."
+      },
+      {
+       "key": "D",
+       "text": "Kontüzyon alanlarının zamanla sarı-kahve lekelere dönüşmesi",
+       "isCorrect": false,
+       "explanation": "Yanlış. Sarı-kahve çökük lekeler eski kontüzyonun bulgusudur ve aylar içinde oluşur. Epidural hematomdaki kötüleşme saatler içindedir ve genişleyen kitleye bağlıdır."
+      }
+     ]
+    },
+    {
+     "type": "causal_chain",
+     "chainTitle": "Lusid intervalden ölüme giden yol",
+     "steps": [
+      "1. Travma ve arter yırtığı: Orta meningeal arterden kanama başlar.",
+      "2. Lusid interval: Hematom henüz küçükken hastanın bilinci birkaç saat açıktır.",
+      "3. Hızlı genişleme: Arteriyel basınçla kan birikmeye devam eder.",
+      "4. Beyne bası ve kötüleşme: Nörolojik belirtiler belirir, bilinç bozulur.",
+      "5. Acil cerrahi yapılmazsa ölüm: Drenaj bu zinciri kırmanın yoludur."
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Epidural hematomun kliniği",
+     "items": [
+      {
+       "text": "Lusid interval birkaç saat sürebilir.",
+       "isLie": false,
+       "explanation": "Doğru. Ders notu travma ile nörolojik belirtiler arasında birkaç saatlik bilinç açıklığı olabileceğini belirtir."
+      },
+      {
+       "text": "Lusid interval döneminde hematom büyümeyi bırakmıştır.",
+       "isLie": true,
+       "explanation": "Tuzak. Bu dönemde hasta iyi görünse de arteriyel kanama sürer ve hematom genişlemeye devam eder; kötüleşme bu büyümenin sonucudur."
+      },
+      {
+       "text": "Tedavi drenaj için acil beyin cerrahisidir.",
+       "isLie": false,
+       "explanation": "Doğru. Hızla genişleyebilen hematomda ölümü önlemek için acil cerrahi drenaj gerekir."
+      },
+      {
+       "text": "Kötüleşme hematomun beyne bası yapmasıyla açıklanır.",
+       "isLie": false,
+       "explanation": "Doğru. Kafatası ile dura arasında büyüyen kan beyin yüzeyini iterek nörolojik belirtilere yol açar."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slideNumber": 14,
+   "bolum": "2.2",
+   "pdfSayfalari": [
+    17,
+    17
+   ],
+   "sourcePdf": {
+    "fileName": "2. SSS Travması.pdf",
+    "primaryPage": 17,
+    "startPage": 17,
+    "endPage": 17
+   },
+   "title": "Subdural Hematom: Köprüleşen Venler ve Risk Grupları",
+   "subtitle": "Hızlı beyin hareketi dural sinüslere boşalan venleri yırtar; yaşlılar ve bebekler risk altındadır.",
+   "badge": "Mekanizma",
+   "synthesisNarrative": "Subdural hematomun kaynağı arter değil, **köprüleşen venlerdir**. Bu venler beyin yüzeyinden çıkıp subdural aralığı geçer ve dural sinüslere boşalır.\n\n- **Yırtılma mekanizması:** Travmada beyin kafatası içinde hızla hareket eder; sabit sinüse bağlı ven gerilip yırtılır.\n- **Kanın yeri:** Kan dura ile araknoid arasındaki subdural aralıkta birikir.\n- **Yaşlılar:** Beyin atrofisi nedeniyle beyin ile kafatası arasındaki boşluk genişler, köprüleşen venler gerilir. Bu yüzden düşük dereceli bir kafa travmasında bile subdural hematom sıktır.\n- **Bebekler:** Köprüleşen venlerin duvarı ince olduğundan subdural hematoma duyarlılık artar.\n\n> [!IMPORTANT]\n> Beyin atrofisi olan yaşlı bir hastada hafif bir düşmeden sonra bile subdural hematom düşünülmelidir. Epidural hematomdan farklı olarak kaynak venöz yapıdır.",
+   "content": "Subdural hematomun kaynağı arter değil, **köprüleşen venlerdir**. Bu venler beyin yüzeyinden çıkıp subdural aralığı geçer ve dural sinüslere boşalır.\n\n- **Yırtılma mekanizması:** Travmada beyin kafatası içinde hızla hareket eder; sabit sinüse bağlı ven gerilip yırtılır.\n- **Kanın yeri:** Kan dura ile araknoid arasındaki subdural aralıkta birikir.\n- **Yaşlılar:** Beyin atrofisi nedeniyle beyin ile kafatası arasındaki boşluk genişler, köprüleşen venler gerilir. Bu yüzden düşük dereceli bir kafa travmasında bile subdural hematom sıktır.\n- **Bebekler:** Köprüleşen venlerin duvarı ince olduğundan subdural hematoma duyarlılık artar.\n\n> [!IMPORTANT]\n> Beyin atrofisi olan yaşlı bir hastada hafif bir düşmeden sonra bile subdural hematom düşünülmelidir. Epidural hematomdan farklı olarak kaynak venöz yapıdır.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Beyin atrofisi olan yaşlılarda hafif kafa travmasından sonra subdural hematomun sık görülmesinin nedeni hangisidir?",
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": "Atrofiyle genişleyen boşlukta köprüleşen venlerin gerilmiş olması",
+       "isCorrect": true,
+       "explanation": "Doğru. Atrofide beyin küçülür ve kafatası ile arasındaki boşluk büyür; sinüse bağlı köprüleşen venler gerilmiş hale gelir. Bu gergin venler düşük dereceli travmada bile yırtılır ve subdural hematom oluşur."
+      },
+      {
+       "key": "B",
+       "text": "Kafatası kırığının yaşlılarda daha kolay olması",
+       "isCorrect": false,
+       "explanation": "Yanlış. Kafatası kırığı ders notunda erişkindeki epidural hematomla, yani dural arter yırtığıyla ilişkilendirilir. Subdural hematom köprüleşen venlerin hızlı beyin hareketiyle yırtılmasından oluşur."
+      },
+      {
+       "key": "C",
+       "text": "Orta meningeal arterin yaşla incelmesi",
+       "isCorrect": false,
+       "explanation": "Yanlış. Orta meningeal arter epidural hematomun kaynağıdır ve kanı kafatası ile dura arasına verir. Subdural hematomun kaynağı venözdür ve kan dura ile araknoid arasında birikir."
+      },
+      {
+       "key": "D",
+       "text": "Köprüleşen ven duvarlarının doğuştan ince olması",
+       "isCorrect": false,
+       "explanation": "Yanlış. İnce ven duvarı bebeklerde artmış duyarlılığın nedenidir. Yaşlılardaki risk ise atrofiye bağlı genişlemiş boşluk ve gerilmiş venlerle açıklanır."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Subdural hematom, dural sinüslere boşalan köprüleşen venlerin hızlı beyin hareketi sırasında yırtılmasıyla oluşur.",
+     "maskedTerm": "köprüleşen venlerin",
+     "hint": "Beyin yüzeyinden sinüse uzanan toplardamarlar"
+    },
+    {
+     "type": "feature_bidding",
+     "title": "Yaşlıda mı, bebekte mi?",
+     "optionA": "Beyin atrofisi olan yaşlı",
+     "optionB": "Bebek",
+     "rounds": [
+      {
+       "feature": "Köprüleşen ven duvarları incedir",
+       "correct": "B",
+       "explanation": "Bebekte duyarlılığı artıran neden venlerin ince duvarlı olmasıdır."
+      },
+      {
+       "feature": "Beyin ile kafatası arasındaki boşluk genişlemiştir",
+       "correct": "A",
+       "explanation": "Atrofide beyin küçüldüğü için boşluk artar ve venler gerilir."
+      },
+      {
+       "feature": "Düşük dereceli bir travma bile subdural hematoma yol açabilir",
+       "correct": "A",
+       "explanation": "Ders notu bu ifadeyi özellikle atrofisi olan yaşlılar için kullanır; gergin venler hafif darbede yırtılır."
+      }
+     ]
+    },
+    {
+     "type": "venn_grid",
+     "title": "Epidural hematom mu, subdural hematom mu?",
+     "labelA": "Epidural hematom",
+     "labelB": "Subdural hematom",
+     "items": [
+      {
+       "criterion": "Kaynak damar orta meningeal arterdir",
+       "correct": "A",
+       "explanation": "Epidural hematom dural arterden, özellikle orta meningeal arterden kaynaklanır."
+      },
+      {
+       "criterion": "Kaynak dural sinüslere boşalan köprüleşen venlerdir",
+       "correct": "B",
+       "explanation": "Subdural hematom bu venlerin hızlı beyin hareketiyle yırtılmasıyla oluşur."
+      },
+      {
+       "criterion": "Kan dura ile araknoid arasında birikir",
+       "correct": "B",
+       "explanation": "Subdural aralık dura ile araknoid arasındadır."
+      },
+      {
+       "criterion": "Erişkinde çoğunlukla kafatası kırığıyla birliktedir",
+       "correct": "A",
+       "explanation": "Erişkinde dural arter yırtığı kırık hattıyla birlikte gelir."
+      },
+      {
+       "criterion": "En sık kontüzyon ve laserasyon bölgelerinde görülür",
+       "correct": "neither",
+       "explanation": "Bu yerleşim subaraknoid ve intraparenkimal kanamalar için tanımlanmıştır."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Subdural hematomda köprüleşen venleri yırtan travma mekanizması nedir?",
+     "answer": "Travma sırasında beynin kafatası içinde hızla hareket etmesi; dural sinüse sabitlenmiş köprüleşen venler bu harekette gerilip yırtılır."
+    }
+   ]
+  },
+  {
+   "slideNumber": 15,
+   "bolum": "2.2",
+   "pdfSayfalari": [
+    18,
+    18
+   ],
+   "sourcePdf": {
+    "fileName": "2. SSS Travması.pdf",
+    "primaryPage": 18,
+    "startPage": 18,
+    "endPage": 18
+   },
+   "title": "Subdural Hematom: Zamanlama, Yerleşim ve Sinsi Klinik",
+   "subtitle": "Subdural hematom ilk 48 saatte belirginleşir, iki taraflı olabilir ve lokalize olmayan belirtiler verir.",
+   "badge": "Klinik",
+   "synthesisNarrative": "Subdural hematomun kliniği, venöz kanamanın ağır ve yaygın birikmesini yansıtır.\n\n- **Zamanlama:** Subdural hematomlar tipik olarak travmadan sonraki ilk 48 saat içinde belirginleşir.\n- **Yerleşim:** En sık serebral hemisferlerin lateral yüzeyinde görülür.\n- **İki taraflılık:** Hematom her iki hemisferde birden olabilir; bu ayırt edici bir özelliktir.\n- **Belirtiler:** Genellikle lokalize değildir. Hastada baş ağrısı ya da konfüzyon görülür.\n- **Seyir:** Zaman içinde yavaş ilerleyen bir nörolojik bozulma gelişir.\n\nBu tablo, epidural hematomun saatler içinde hızla kötüleşen seyrinden farklıdır. Subdural hematomda yakınma belirsiz olduğu için tanı kolayca atlanabilir.\n\n> [!IMPORTANT]\n> Yaşlı bir hastada travmadan sonra günler içinde artan baş ağrısı, konfüzyon ve yavaş nörolojik bozulma subdural hematomu düşündürmelidir. Belirtilerin belirli bir bölgeyi göstermemesi tanıyı dışlamaz.",
+   "content": "Subdural hematomun kliniği, venöz kanamanın ağır ve yaygın birikmesini yansıtır.\n\n- **Zamanlama:** Subdural hematomlar tipik olarak travmadan sonraki ilk 48 saat içinde belirginleşir.\n- **Yerleşim:** En sık serebral hemisferlerin lateral yüzeyinde görülür.\n- **İki taraflılık:** Hematom her iki hemisferde birden olabilir; bu ayırt edici bir özelliktir.\n- **Belirtiler:** Genellikle lokalize değildir. Hastada baş ağrısı ya da konfüzyon görülür.\n- **Seyir:** Zaman içinde yavaş ilerleyen bir nörolojik bozulma gelişir.\n\nBu tablo, epidural hematomun saatler içinde hızla kötüleşen seyrinden farklıdır. Subdural hematomda yakınma belirsiz olduğu için tanı kolayca atlanabilir.\n\n> [!IMPORTANT]\n> Yaşlı bir hastada travmadan sonra günler içinde artan baş ağrısı, konfüzyon ve yavaş nörolojik bozulma subdural hematomu düşündürmelidir. Belirtilerin belirli bir bölgeyi göstermemesi tanıyı dışlamaz.",
+   "interactiveElements": [
+    {
+     "type": "branching_logic",
+     "scenario": "78 yaşında, beyin atrofisi bilinen bir kadın evde hafifçe başını çarpıyor. Bir-iki gün içinde baş ağrısı ve konfüzyon başlıyor; belirgin lokal nörolojik bulgu yok, tablo yavaşça kötüleşiyor. En olası tanı hangisidir?",
+     "options": [
+      {
+       "text": "Subdural hematom",
+       "isCorrect": true,
+       "feedback": "Doğru. Atrofisi olan yaşlıda düşük dereceli travma köprüleşen venleri yırtabilir. İlk 48 saatte belirginleşen, lokalize olmayan baş ağrısı, konfüzyon ve yavaş ilerleyen bozulma subdural hematomun tipik tablosudur."
+      },
+      {
+       "text": "Epidural hematom",
+       "isCorrect": false,
+       "feedback": "Yanlış. Epidural hematom orta meningeal arter kaynaklıdır ve lusid intervalden sonra hızla kötüleşme yapar. Bu hastadaki yavaş ve sinsi seyir venöz kaynaklı subdural hematoma uyar."
+      },
+      {
+       "text": "Konküzyon",
+       "isCorrect": false,
+       "feedback": "Yanlış. Konküzyon travma anında gelişen ve tam iyileşen geri dönüşlü bilinç kaybıdır. Günler içinde yavaşça kötüleşen konfüzyon geri dönüşlü bir tabloya değil, büyüyen bir kitleye işaret eder."
+      },
+      {
+       "text": "Kronik travmatik ensefalopati",
+       "isCorrect": false,
+       "feedback": "Yanlış. Kronik travmatik ensefalopati tekrarlayan travmalarla yıllar içinde gelişen, tau inklüzyonlarıyla tanımlanan bir tablodur. Tek ve hafif bir darbeden sonraki günlerde başlayan kötüleşmeyi açıklamaz."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Subdural hematomlar tipik olarak travmadan sonraki ilk 48 saat içinde belirginleşir.",
+     "maskedTerm": "48 saat",
+     "hint": "İki günlük süre"
+    },
+    {
+     "type": "before_after_slider",
+     "leftTitle": "Epidural hematom",
+     "rightTitle": "Subdural hematom",
+     "leftPoints": [
+      "Kaynak orta meningeal arterdir",
+      "Lusid interval sonrası hızlı kötüleşme olabilir",
+      "Hızla genişler, acil cerrahi gerekir"
+     ],
+     "rightPoints": [
+      "Kaynak köprüleşen venlerdir",
+      "Baş ağrısı, konfüzyon ve yavaş ilerleyen bozulma",
+      "Belirtiler genellikle lokalize değildir; iki taraflı olabilir"
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Subdural hematomun yerleşimi ve kliniği",
+     "items": [
+      {
+       "text": "Subdural hematom en sık hemisferlerin lateral yüzeyinde görülür.",
+       "isLie": false,
+       "explanation": "Doğru. Ders notu tipik yerleşim olarak serebral hemisferlerin lateral yüzeyini verir."
+      },
+      {
+       "text": "Subdural hematom her zaman tek taraflıdır.",
+       "isLie": true,
+       "explanation": "Tuzak. Ders notu subdural hematomun iki taraflı olabileceğini belirtir; bu, ayırt edici özelliklerinden biridir."
+      },
+      {
+       "text": "Belirtiler genellikle lokalize değildir.",
+       "isLie": false,
+       "explanation": "Doğru. Baş ağrısı ve konfüzyon gibi yaygın belirtiler belirli bir beyin bölgesini göstermez."
+      },
+      {
+       "text": "Nörolojik bozulma zaman içinde yavaş ilerler.",
+       "isLie": false,
+       "explanation": "Doğru. Venöz kanamanın yavaş birikmesi bu sinsi seyri açıklar."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Subdural hematomun klinik tablosunu oluşturan üç bulguyu say.",
+     "answer": "Baş ağrısı, konfüzyon ve zaman içinde yavaş ilerleyen nörolojik bozulma; belirtiler genellikle lokalize değildir."
+    }
+   ]
+  },
+  {
+   "slideNumber": 16,
+   "bolum": "2.2",
+   "pdfSayfalari": [
+    19,
+    20
+   ],
+   "sourcePdf": {
+    "fileName": "2. SSS Travması.pdf",
+    "primaryPage": 19,
+    "startPage": 19,
+    "endPage": 20
+   },
+   "title": "Subdural Hematom: Akut Morfoloji ve Organizasyon Evreleri",
+   "subtitle": "Taze pıhtı sulkuslara girmez; hematom bir haftada lizise, iki haftada granülasyona, 1–3 ayda fibrozise gider.",
+   "badge": "Morfoloji",
+   "synthesisNarrative": "Akut subdural hematom, beyin yüzeyi boyunca yayılan taze pıhtılaşmış kandır.\n\n- **Sulkuslara girmez:** Kan araknoidin üstünde kaldığı için sulkusların derinlerine ilerlemez.\n- **Alttaki beyin:** Beyin yüzeyi düzleşmiştir; subaraknoid aralık sıklıkla temizdir.\n- **Kendini sınırlama:** Venöz kanamalar düşük basınçlı olduğundan kendi kendini sınırlayabilir. Bu nedenle hematomun dağılması ve organizasyonu zaman alır.\n\nHematom belirli bir takvimle organize olur; bu evreler hematomun yaşını tahmin etmeyi sağlar:\n\n- **Yaklaşık 1 hafta:** Pıhtının lizisi.\n- **Yaklaşık 2 hafta:** Duradan hematomun içine granülasyon dokusu büyür.\n- **1–3 ay:** Fibrozis oluşur.\n\n> [!IMPORTANT]\n> Sınavda süreler sorulur: lizis 1 hafta, granülasyon 2 hafta, fibrozis 1–3 ay. Akut subdural kanın sulkuslara girmemesi onu subaraknoid kanamadan ayırır.",
+   "content": "Akut subdural hematom, beyin yüzeyi boyunca yayılan taze pıhtılaşmış kandır.\n\n- **Sulkuslara girmez:** Kan araknoidin üstünde kaldığı için sulkusların derinlerine ilerlemez.\n- **Alttaki beyin:** Beyin yüzeyi düzleşmiştir; subaraknoid aralık sıklıkla temizdir.\n- **Kendini sınırlama:** Venöz kanamalar düşük basınçlı olduğundan kendi kendini sınırlayabilir. Bu nedenle hematomun dağılması ve organizasyonu zaman alır.\n\nHematom belirli bir takvimle organize olur; bu evreler hematomun yaşını tahmin etmeyi sağlar:\n\n- **Yaklaşık 1 hafta:** Pıhtının lizisi.\n- **Yaklaşık 2 hafta:** Duradan hematomun içine granülasyon dokusu büyür.\n- **1–3 ay:** Fibrozis oluşur.\n\n> [!IMPORTANT]\n> Sınavda süreler sorulur: lizis 1 hafta, granülasyon 2 hafta, fibrozis 1–3 ay. Akut subdural kanın sulkuslara girmemesi onu subaraknoid kanamadan ayırır.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Otopside bir subdural hematomun içine duradan granülasyon dokusunun büyüdüğü, ancak henüz fibrozisin gelişmediği görülüyor. Hematomun yaşı en olası olarak ne kadardır?",
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": "Yaklaşık 2 hafta",
+       "isCorrect": true,
+       "explanation": "Doğru. Organizasyonda duradan granülasyon dokusunun büyümesi yaklaşık ikinci haftanın bulgusudur. Fibrozis henüz yoksa 1–3 aylık evreye ulaşılmamıştır."
+      },
+      {
+       "key": "B",
+       "text": "Yaklaşık 1 hafta",
+       "isCorrect": false,
+       "explanation": "Yanlış. Birinci hafta pıhtının lizise uğradığı evredir. Granülasyon dokusunun belirgin büyümesi bundan sonra, yaklaşık ikinci haftada görülür."
+      },
+      {
+       "key": "C",
+       "text": "1–3 ay",
+       "isCorrect": false,
+       "explanation": "Yanlış. 1–3 ay fibrozisin oluştuğu evredir. Soruda fibrozisin henüz gelişmediği belirtildiği için hematom bu evreden daha gençtir."
+      },
+      {
+       "key": "D",
+       "text": "Birkaç saat",
+       "isCorrect": false,
+       "explanation": "Yanlış. Birkaç saatlik subdural hematom beyin yüzeyine yayılmış taze pıhtıdır ve organizasyon başlamamıştır. Venöz hematomun organizasyonu zaman alır; granülasyon haftalar içinde gelişir."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Akut subdural hematom beyin yüzeyi boyunca yayılan ve sulkusların derinlerine ilerlemeyen taze pıhtılaşmış kandır.",
+     "maskedTerm": "sulkusların",
+     "hint": "Girusların arasındaki oluklar"
+    },
+    {
+     "type": "interactive_table",
+     "tableTitle": "Subdural hematomun organizasyon takvimi",
+     "tableHeaders": [
+      "Süre",
+      "Evre"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Yaklaşık 1 hafta",
+         "isMasked": false
+        },
+        {
+         "text": "Pıhtının lizisi",
+         "isMasked": true,
+         "hint": "Kanın çözülmesi"
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Yaklaşık 2 hafta",
+         "isMasked": false
+        },
+        {
+         "text": "Duradan granülasyon dokusu büyümesi",
+         "isMasked": true,
+         "hint": "Onarımın ikinci evresi"
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "1–3 ay",
+         "isMasked": false
+        },
+        {
+         "text": "Fibrozis",
+         "isMasked": true,
+         "hint": "Bağ dokusuyla sertleşme"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "causal_chain",
+     "chainTitle": "Taze pıhtıdan fibrozise",
+     "steps": [
+      "1. Köprüleşen ven yırtığı: Kan dura ile araknoid arasına birikir.",
+      "2. Akut hematom: Taze pıhtı beyin yüzeyine yayılır, sulkuslara girmez.",
+      "3. Kendini sınırlama: Düşük basınçlı venöz kanama durabilir; organizasyon yavaş başlar.",
+      "4. Lizis (~1 hafta): Pıhtı çözülür.",
+      "5. Granülasyon (~2 hafta): Duradan onarım dokusu büyür.",
+      "6. Fibrozis (1–3 ay): Hematom bağ dokusuna dönüşür."
+     ]
+    },
+    {
+     "type": "venn_grid",
+     "title": "Akut subdural hematom mu, subaraknoid kanama mı?",
+     "labelA": "Akut subdural hematom",
+     "labelB": "Subaraknoid kanama",
+     "items": [
+      {
+       "criterion": "Kan sulkusların derinlerine ilerlemez",
+       "correct": "A",
+       "explanation": "Subdural kan araknoidin üstünde kaldığı için sulkuslara giremez."
+      },
+      {
+       "criterion": "En sık kontüzyon ve laserasyon bölgelerinde görülür",
+       "correct": "B",
+       "explanation": "Ders notu bu yerleşimi subaraknoid ve intraparenkimal kanamalar için verir."
+      },
+      {
+       "criterion": "Altındaki subaraknoid aralık sıklıkla temizdir",
+       "correct": "A",
+       "explanation": "Akut subdural hematomda kan dura ile araknoid arasındadır; subaraknoid aralığa geçmez."
+      },
+      {
+       "criterion": "Travmatik vasküler hasar tiplerinden biridir",
+       "correct": "both",
+       "explanation": "İki kanama da travmada damar duvarının yıkılmasıyla oluşan tiplerdendir."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "slideNumber": 17,
+   "bolum": "2.2",
+   "pdfSayfalari": [
+    21,
+    21
+   ],
+   "sourcePdf": {
+    "fileName": "2. SSS Travması.pdf",
+    "primaryPage": 21,
+    "startPage": 21,
+    "endPage": 21
+   },
+   "title": "Subdural Hematom: Subdural Membran, Yeniden Kanama ve Tedavi",
+   "subtitle": "Organize hematom duraya yapışır, araknoide yapışmaz; ince duvarlı damarlar yeniden kanayarak kronikleşmeye yol açar.",
+   "badge": "Kronikleşme",
+   "synthesisNarrative": "Organizasyon ilerledikçe hematom çevresiyle belirli bir ilişki kurar.\n\n- **Yapışma:** Organize hematom duranın iç yüzeyine yapışır, alttaki araknoide yapışmaz. Bunun nedeni granülasyon dokusunun duradan büyümesidir.\n- **Subdural membran:** Fibrozis tamamlandığında geride subdural membran kalır; bu, eski hematomun izidir.\n- **Yeniden kanama:** Subdural hematomlar sıklıkla yeniden kanar. Neden, granülasyon dokusundaki damarların duvarlarının ince olmasıdır.\n- **Kronik subdural hematom:** Tekrarlayan kanamalarla gelişir; aynı hematomda farklı dönemlere ait bulgular (taze kan, granülasyon, fibrozis) birlikte görülür.\n- **Tedavi:** Semptomatik subdural hematomda organize kan ve eşlik eden organize doku cerrahi olarak temizlenir.\n\n> [!IMPORTANT]\n> Bir subdural hematomda taze kanla birlikte granülasyon ve fibrozis bulguları varsa kronik subdural hematom düşünülür; bunu yapan ince duvarlı granülasyon damarlarından yeniden kanamadır.",
+   "content": "Organizasyon ilerledikçe hematom çevresiyle belirli bir ilişki kurar.\n\n- **Yapışma:** Organize hematom duranın iç yüzeyine yapışır, alttaki araknoide yapışmaz. Bunun nedeni granülasyon dokusunun duradan büyümesidir.\n- **Subdural membran:** Fibrozis tamamlandığında geride subdural membran kalır; bu, eski hematomun izidir.\n- **Yeniden kanama:** Subdural hematomlar sıklıkla yeniden kanar. Neden, granülasyon dokusundaki damarların duvarlarının ince olmasıdır.\n- **Kronik subdural hematom:** Tekrarlayan kanamalarla gelişir; aynı hematomda farklı dönemlere ait bulgular (taze kan, granülasyon, fibrozis) birlikte görülür.\n- **Tedavi:** Semptomatik subdural hematomda organize kan ve eşlik eden organize doku cerrahi olarak temizlenir.\n\n> [!IMPORTANT]\n> Bir subdural hematomda taze kanla birlikte granülasyon ve fibrozis bulguları varsa kronik subdural hematom düşünülür; bunu yapan ince duvarlı granülasyon damarlarından yeniden kanamadır.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Kronik subdural hematomun gelişmesinde temel mekanizma hangisidir?",
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": "Granülasyon dokusundaki ince duvarlı damarlardan yeniden kanama",
+       "isCorrect": true,
+       "explanation": "Doğru. Organizasyon sırasında duradan büyüyen granülasyon dokusu ince duvarlı yeni damarlar içerir. Bu damarlar kolay yırtılır ve tekrarlayan kanamalar kronik subdural hematomu oluşturur."
+      },
+      {
+       "key": "B",
+       "text": "Orta meningeal arterden süregelen kanama",
+       "isCorrect": false,
+       "explanation": "Yanlış. Orta meningeal arter epidural hematomun kaynağıdır ve kanı kafatası ile dura arasına verir. Kronikleşme subdural aralıktaki granülasyon damarlarının yeniden kanamasıyla açıklanır."
+      },
+      {
+       "key": "C",
+       "text": "Hematomun araknoide yapışıp beyin dokusuna ilerlemesi",
+       "isCorrect": false,
+       "explanation": "Yanlış. Organize subdural hematom araknoide yapışmaz, duranın iç yüzeyine yapışır. Kronikleşme yapışma yönüyle değil, ince duvarlı damarlardan yeniden kanamayla ilgilidir."
+      },
+      {
+       "key": "D",
+       "text": "Pıhtının bir haftalık lizis evresinin hiç bitmemesi",
+       "isCorrect": false,
+       "explanation": "Yanlış. Lizis organizasyonun ilk evresidir ve ardından granülasyon ile fibrozis gelir. Kronik tablo, organizasyon sürerken yeni oluşan damarlardan tekrar tekrar kanama olmasıyla gelişir."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Organize hematom duranın iç yüzeyine yapışır, alttaki araknoide yapışmaz.",
+     "maskedTerm": "araknoide",
+     "hint": "Duranın altındaki ince örümceksi zar"
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Organize ve kronik subdural hematom",
+     "items": [
+      {
+       "text": "Fibrozisten sonra geride subdural membran kalır.",
+       "isLie": false,
+       "explanation": "Doğru. Subdural membran organize ve fibrozise uğramış hematomun izidir."
+      },
+      {
+       "text": "Organize hematom hem duraya hem araknoide sıkıca yapışır.",
+       "isLie": true,
+       "explanation": "Tuzak. Ders notuna göre hematom yalnız duranın iç yüzeyine yapışır; araknoide yapışmaz, çünkü granülasyon dokusu duradan büyür."
+      },
+      {
+       "text": "Kronik subdural hematomda farklı dönemlere ait bulgular birlikte görülür.",
+       "isLie": false,
+       "explanation": "Doğru. Tekrarlayan kanamalar taze kanı, granülasyonu ve fibrozisi aynı hematomda bir arada bırakır."
+      },
+      {
+       "text": "Semptomatik subdural hematom cerrahi olarak temizlenir.",
+       "isLie": false,
+       "explanation": "Doğru. Tedavi organize kan ve eşlik eden organize dokunun cerrahi olarak temizlenmesidir."
+      }
+     ]
+    },
+    {
+     "type": "branching_logic",
+     "scenario": "Bir hastadan çıkarılan subdural hematomun incelemesinde taze kan alanlarının yanında granülasyon dokusu ve fibrozis odakları birlikte görülüyor. Bu bulgu en iyi nasıl yorumlanır?",
+     "options": [
+      {
+       "text": "Yeniden kanamalarla gelişmiş kronik subdural hematom",
+       "isCorrect": true,
+       "feedback": "Doğru. Farklı dönemlere ait bulguların bir arada olması tekrarlayan kanamanın göstergesidir. Granülasyon dokusundaki ince duvarlı damarlar yeniden kanayarak kronik subdural hematomu oluşturur."
+      },
+      {
+       "text": "Birkaç saatlik akut subdural hematom",
+       "isCorrect": false,
+       "feedback": "Yanlış. Akut subdural hematom yalnız taze pıhtıdan oluşur ve organizasyon başlamamıştır. Fibrozis 1–3 ayda geliştiği için bu bulgu akut bir hematomla açıklanamaz."
+      },
+      {
+       "text": "Tek seferlik, yaklaşık bir haftalık hematom",
+       "isCorrect": false,
+       "feedback": "Yanlış. Bir haftalık hematom lizis evresindedir; fibrozis henüz yoktur. Fibrozisle birlikte taze kanın görülmesi tek seferlik değil, tekrarlayan kanamayı gösterir."
+      },
+      {
+       "text": "Epidural hematomun organizasyonu",
+       "isCorrect": false,
+       "feedback": "Yanlış. Epidural hematom orta meningeal arterden kaynaklanan ve acil cerrahi gerektiren bir tablodur. Duradan büyüyen granülasyon ve yeniden kanamayla kronikleşme ders notunda subdural hematom için anlatılır."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Subdural hematomun organize olurken neden araknoide değil de duraya yapıştığını açıkla.",
+     "answer": "Çünkü organizasyondaki granülasyon dokusu duradan hematomun içine büyür; bu yüzden hematom duranın iç yüzeyine bağlanır, araknoide yapışmaz."
+    }
+   ]
+  },
+  {
+   "slideNumber": 18,
+   "bolum": "2.2",
+   "pdfSayfalari": [
+    22,
+    23
+   ],
+   "sourcePdf": {
+    "fileName": "2. SSS Travması.pdf",
+    "primaryPage": 22,
+    "startPage": 22,
+    "endPage": 23
+   },
+   "title": "Epidural ve Subdural Hematom: Görsellerle Karşılaştırma",
+   "subtitle": "Resim 22-13 ve Figür 28-12 iki hematomun yerleşim farkını ve organize subdural hematomun bası etkisini gösterir.",
+   "badge": "Görsel",
+   "synthesisNarrative": "Bu sayfalardaki görseller iki hematomun farkını tek bakışta gösterir.\n\n- **Resim 22-13 A (koronal şema, sol taraf):** Kafatası kırığıyla birlikte meningeal arter yırtılmıştır. Arteriyel kan kafatası ile dura arasında birikir; dura kafatasından ayrılmıştır.\n- **Resim 22-13 A (sağ taraf):** Köprüleşen venler yırtılmıştır. Venöz kan dura ile araknoid arasında birikir; dura kafatasına yapışık kalır.\n- **Resim 22-13 B:** Beyin yüzeyinde, duranın bir kısmıyla kaplanmış koyu renkli epidural hematom görülür.\n- **Resim 22-13 C:** Duranın iç yüzüne yapışmış büyük, kahverengi organize subdural hematom görülür.\n- **Figür 28-12 A ve B:** Duraya yapışmış büyük organize subdural hematom ve koronal kesitte hematomun altındaki hemisferin basıya uğradığı görülür.\n\n> [!IMPORTANT]\n> Şemada iki ayrımı ara: dura kafatasından ayrılmışsa ve kan arteriyelse epidural; dura kafatasına yapışık, kan dura ile araknoid arasındaysa subdural hematomdur. Büyük subdural hematom alttaki hemisferi sıkıştırır.",
+   "content": "Bu sayfalardaki görseller iki hematomun farkını tek bakışta gösterir.\n\n- **Resim 22-13 A (koronal şema, sol taraf):** Kafatası kırığıyla birlikte meningeal arter yırtılmıştır. Arteriyel kan kafatası ile dura arasında birikir; dura kafatasından ayrılmıştır.\n- **Resim 22-13 A (sağ taraf):** Köprüleşen venler yırtılmıştır. Venöz kan dura ile araknoid arasında birikir; dura kafatasına yapışık kalır.\n- **Resim 22-13 B:** Beyin yüzeyinde, duranın bir kısmıyla kaplanmış koyu renkli epidural hematom görülür.\n- **Resim 22-13 C:** Duranın iç yüzüne yapışmış büyük, kahverengi organize subdural hematom görülür.\n- **Figür 28-12 A ve B:** Duraya yapışmış büyük organize subdural hematom ve koronal kesitte hematomun altındaki hemisferin basıya uğradığı görülür.\n\n> [!IMPORTANT]\n> Şemada iki ayrımı ara: dura kafatasından ayrılmışsa ve kan arteriyelse epidural; dura kafatasına yapışık, kan dura ile araknoid arasındaysa subdural hematomdur. Büyük subdural hematom alttaki hemisferi sıkıştırır.",
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Resim 22-13 A'daki koronal şemada kanın dura ile araknoid arasında biriktiği ve duranın kafatasına yapışık kaldığı taraf hangi lezyonu gösterir?",
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": "Köprüleşen ven yırtığına bağlı subdural hematom",
+       "isCorrect": true,
+       "explanation": "Doğru. Subdural hematomda köprüleşen venler yırtılır ve kan dura ile araknoid arasında birikir. Dura kafatasına yapışık kaldığı için şemada kemikten ayrılmaz."
+      },
+      {
+       "key": "B",
+       "text": "Orta meningeal arter yırtığına bağlı epidural hematom",
+       "isCorrect": false,
+       "explanation": "Yanlış. Epidural hematomda arteriyel kan kafatası ile dura arasında birikir ve durayı kafatasından ayırır. Şemanın bu tarafında dura kafatasına yapışıktır, bu nedenle lezyon epidural değildir."
+      },
+      {
+       "key": "C",
+       "text": "Kontüzyon alanında intraparenkimal kanama",
+       "isCorrect": false,
+       "explanation": "Yanlış. İntraparenkimal kanama beyin dokusunun içindedir ve kontüzyon ya da laserasyon bölgesinde görülür. Şemadaki kan ise beyin dokusunun dışında, dura ile araknoid arasındadır."
+      },
+      {
+       "key": "D",
+       "text": "Sulkuslara dolan subaraknoid kanama",
+       "isCorrect": false,
+       "explanation": "Yanlış. Subaraknoid kanama araknoidin altındadır ve beyin yüzeyindeki aralıkta yayılır. Şemadaki kan araknoidin üstünde, dura ile araknoid arasında kalmıştır."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Figür 28-12'de duraya yapışmış büyük organize subdural hematomun altındaki hemisferin basıya uğradığı görülür.",
+     "maskedTerm": "hemisferin",
+     "hint": "Beynin sağ ya da sol yarısı"
+    },
+    {
+     "type": "interactive_table",
+     "tableTitle": "Görseller neyi gösteriyor?",
+     "tableHeaders": [
+      "Görsel",
+      "Gösterdiği bulgu"
+     ],
+     "tableRows": [
+      {
+       "cells": [
+        {
+         "text": "Resim 22-13 A, sol",
+         "isMasked": false
+        },
+        {
+         "text": "Kırıkla arter yırtığı; kan kafatası ile dura arasında",
+         "isMasked": true,
+         "hint": "Şemanın sol yarısı"
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Resim 22-13 A, sağ",
+         "isMasked": false
+        },
+        {
+         "text": "Köprüleşen ven yırtığı; kan dura ile araknoid arasında",
+         "isMasked": true,
+         "hint": "Şemanın sağ yarısı"
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Resim 22-13 C",
+         "isMasked": false
+        },
+        {
+         "text": "Duranın iç yüzüne yapışmış kahverengi organize subdural hematom",
+         "isMasked": true,
+         "hint": "Haftalar içinde değişmiş kan"
+        }
+       ]
+      },
+      {
+       "cells": [
+        {
+         "text": "Figür 28-12 B",
+         "isMasked": false
+        },
+        {
+         "text": "Hematomun altındaki hemisferin basıya uğraması",
+         "isMasked": true,
+         "hint": "Kitle etkisi"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "swipe_matching",
+     "title": "Hangi hematomun bulgusu?",
+     "leftCategory": "Epidural hematom",
+     "rightCategory": "Subdural hematom",
+     "cards": [
+      {
+       "text": "Dura kafatasından ayrılmıştır",
+       "category": "left",
+       "explanation": "Basınçlı arteriyel kan durayı kemikten sıyırır."
+      },
+      {
+       "text": "Dura kafatasına yapışık kalır",
+       "category": "right",
+       "explanation": "Kan duranın altında biriktiği için dura kemikten ayrılmaz."
+      },
+      {
+       "text": "Kafatası kırığıyla birlikte meningeal arter yırtığı",
+       "category": "left",
+       "explanation": "Şemada kırık ve arter yırtığı epidural tarafta gösterilir."
+      },
+      {
+       "text": "Duranın iç yüzüne yapışmış kahverengi organize kitle",
+       "category": "right",
+       "explanation": "Organize subdural hematom duranın iç yüzüne yapışır."
+      },
+      {
+       "text": "Alttaki hemisferi sıkıştıran büyük organize hematom",
+       "category": "right",
+       "explanation": "Figür 28-12 bu bası etkisini organize subdural hematomda gösterir."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Resim 22-13 A'da epidural ve subdural tarafı ayırmak için hangi iki ölçüte bakarsın?",
+     "answer": "Kanın yeri ve duranın kafatasıyla ilişkisi: epidural tarafta arteriyel kan kafatası ile dura arasındadır ve dura kemikten ayrılmıştır; subdural tarafta venöz kan dura ile araknoid arasındadır ve dura kafatasına yapışıktır."
+    }
+   ]
+  },
+  {
+   "slideNumber": 19,
+   "bolum": "2",
+   "pdfSayfalari": [
+    14,
+    23
+   ],
+   "sourcePdf": {
+    "fileName": "2. SSS Travması.pdf",
+    "primaryPage": 14,
+    "startPage": 14,
+    "endPage": 23
+   },
+   "isCheckpoint": true,
+   "checkpointNumber": 2,
+   "title": "[TEKRAR SAYFASI - CHECKPOINT 2] Travmatik Vasküler Hasar: Epidural ve Subdural Hematom",
+   "subtitle": "Kanama tipleri, iki hematomun kaynağı, kliniği ve subdural hematomun organizasyonu birlikte pekiştirilir.",
+   "badge": "Tekrar",
+   "synthesisNarrative": "Bu bölümde travmanın damarlar üzerinden yaptığı hasarı işledin. Ana çizgileri birlikte toparla:\n\n- **Kanama tipleri:** Epidural, subdural, subaraknoid ve intraparenkimal; tek başına ya da kombine olabilir. Subaraknoid ve intraparenkimal kanama kontüzyon ve laserasyon yerlerinde sıktır.\n- **Epidural hematom:** Orta meningeal arter yırtığı, erişkinde kırıkla birlikte. Kan kafatası ile dura arasında, dura kemikten ayrılır. Lusid interval, hızlı genişleme ve acil cerrahi.\n- **Subdural hematom:** Köprüleşen venlerin yırtılması; kan dura ile araknoid arasında. Atrofisi olan yaşlılar ve bebekler risklidir. İlk 48 saatte belirginleşir, iki taraflı olabilir, belirtiler lokalize değildir.\n- **Organizasyon:** Lizis ~1 hafta, granülasyon ~2 hafta, fibrozis 1–3 ay. Hematom duraya yapışır, araknoide yapışmaz; geride subdural membran kalır.\n- **Kronikleşme ve tedavi:** İnce duvarlı granülasyon damarları yeniden kanar; semptomatik hematom cerrahi olarak temizlenir.\n\n> [!IMPORTANT]\n> Arter, kırık, lusid interval ve hızlı kötüleşme epidural hematomu; ven, atrofi, sinsi seyir ve yeniden kanama subdural hematomu gösterir.",
+   "content": "Bu bölümde travmanın damarlar üzerinden yaptığı hasarı işledin. Ana çizgileri birlikte toparla:\n\n- **Kanama tipleri:** Epidural, subdural, subaraknoid ve intraparenkimal; tek başına ya da kombine olabilir. Subaraknoid ve intraparenkimal kanama kontüzyon ve laserasyon yerlerinde sıktır.\n- **Epidural hematom:** Orta meningeal arter yırtığı, erişkinde kırıkla birlikte. Kan kafatası ile dura arasında, dura kemikten ayrılır. Lusid interval, hızlı genişleme ve acil cerrahi.\n- **Subdural hematom:** Köprüleşen venlerin yırtılması; kan dura ile araknoid arasında. Atrofisi olan yaşlılar ve bebekler risklidir. İlk 48 saatte belirginleşir, iki taraflı olabilir, belirtiler lokalize değildir.\n- **Organizasyon:** Lizis ~1 hafta, granülasyon ~2 hafta, fibrozis 1–3 ay. Hematom duraya yapışır, araknoide yapışmaz; geride subdural membran kalır.\n- **Kronikleşme ve tedavi:** İnce duvarlı granülasyon damarları yeniden kanar; semptomatik hematom cerrahi olarak temizlenir.\n\n> [!IMPORTANT]\n> Arter, kırık, lusid interval ve hızlı kötüleşme epidural hematomu; ven, atrofi, sinsi seyir ve yeniden kanama subdural hematomu gösterir.",
+   "interactiveElements": [
+    {
+     "type": "feature_bidding",
+     "title": "Epidural hematom mu, subdural hematom mu?",
+     "optionA": "Epidural hematom",
+     "optionB": "Subdural hematom",
+     "rounds": [
+      {
+       "feature": "Lusid interval sonrası hızlı kötüleşme",
+       "correct": "A",
+       "explanation": "Arteriyel kanama birkaç saatlik bilinç açıklığından sonra hızla genişler."
+      },
+      {
+       "feature": "Atrofisi olan yaşlıda düşük dereceli travmadan sonra gelişir",
+       "correct": "B",
+       "explanation": "Gerilmiş köprüleşen venler hafif darbede bile yırtılır."
+      },
+      {
+       "feature": "İnce duvarlı granülasyon damarlarından yeniden kanayarak kronikleşir",
+       "correct": "B",
+       "explanation": "Kronikleşme subdural hematomun organizasyonuna özgüdür."
+      },
+      {
+       "feature": "Erişkinde çoğunlukla kafatası kırığıyla birliktedir",
+       "correct": "A",
+       "explanation": "Kırık hattı orta meningeal arteri yırtar."
+      }
+     ]
+    },
+    {
+     "type": "branching_logic",
+     "scenario": "Kafa travmasından sonra iki hasta değerlendiriliyor. Birinci hasta 30 yaşında, kırığı var; iki saat iyi kaldıktan sonra hızla kötüleşiyor. İkinci hasta 80 yaşında, atrofisi var; hafif düşmeden sonra günler içinde konfüzyon gelişiyor. Hangi eşleştirme doğrudur?",
+     "options": [
+      {
+       "text": "Birinci: epidural hematom, acil cerrahi; ikinci: subdural hematom",
+       "isCorrect": true,
+       "feedback": "Doğru. Kırık, lusid interval ve hızlı kötüleşme orta meningeal arter kaynaklı epidural hematomu gösterir ve acil drenaj gerektirir. Atrofi, hafif travma ve sinsi konfüzyon ise köprüleşen ven kaynaklı subdural hematoma uyar."
+      },
+      {
+       "text": "Birinci: subdural hematom; ikinci: epidural hematom",
+       "isCorrect": false,
+       "feedback": "Yanlış. Subdural hematom venözdür ve yavaş, lokalize olmayan belirtilerle seyreder; saatler içinde hızla kötüleşen genç hastaya uymaz. Epidural hematom ise kırıkla ilişkili hızlı bir tablodur ve günler içinde sinsi gelişen konfüzyonu açıklamaz."
+      },
+      {
+       "text": "İkisi de epidural hematomdur, çünkü ikisinde de travma vardır",
+       "isCorrect": false,
+       "feedback": "Yanlış. Travma her iki hematomun ortak nedenidir; ayrımı kaynak damar ve klinik seyir yapar. İkinci hastanın atrofisi ve yavaş bozulması venöz subdural hematomu gösterir."
+      },
+      {
+       "text": "İkisi de konküzyondur; tam iyileşme beklenir",
+       "isCorrect": false,
+       "feedback": "Yanlış. Konküzyon kontüzyonsuz, geri dönüşlü bir bilinç kaybıdır ve ilerleyen kötüleşme yapmaz. Her iki hastada da gecikmeli ve artan bozulma büyüyen bir hematomu düşündürür."
+      }
+     ]
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Subdural hematomun organizasyonu",
+     "items": [
+      {
+       "text": "Pıhtının lizisi yaklaşık bir haftada olur.",
+       "isLie": false,
+       "explanation": "Doğru. Organizasyonun ilk evresi yaklaşık bir haftada gerçekleşen lizistir."
+      },
+      {
+       "text": "Granülasyon dokusu araknoidden büyür.",
+       "isLie": true,
+       "explanation": "Tuzak. Granülasyon dokusu duradan büyür; bu yüzden organize hematom duraya yapışır, araknoide yapışmaz."
+      },
+      {
+       "text": "Fibrozis 1–3 ay içinde oluşur.",
+       "isLie": false,
+       "explanation": "Doğru. Ders notu fibrozis için 1–3 aylık süreyi verir."
+      },
+      {
+       "text": "Fibrozisten sonra subdural membran kalır.",
+       "isLie": false,
+       "explanation": "Doğru. Subdural membran organize olmuş eski hematomun izidir."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Subdural hematomlar granülasyon dokusundaki damar duvarlarının ince olması nedeniyle sıklıkla yeniden kanar.",
+     "maskedTerm": "yeniden kanar",
+     "hint": "Kronik tabloyu doğuran tekrarlayan olay"
+    },
+    {
+     "type": "active_recall",
+     "question": "Epidural ve subdural hematomu kaynak damar ve kanın biriktiği aralık açısından karşılaştır.",
+     "answer": "Epidural hematom: orta meningeal arter; kan kafatası ile dura arasında. Subdural hematom: dural sinüslere boşalan köprüleşen venler; kan dura ile araknoid arasında."
+    }
+   ]
+  },
+  {
+   "title": "[OYUN SAYFASI] Ders Sonu Oyunları: SSS Travması",
+   "isGameFinale": true,
+   "badge": "Ders Sonu Oyunları",
+   "sourcePdf": {
+    "fileName": "2. SSS Travması.pdf",
+    "primaryPage": 22
+   },
+   "synthesisNarrative": "Bu sayfa dersin tamamını dört oyunla geri çağırır; yeni bilgi içermez.\n\n- **Sırala:** Subdural hematomun organizasyon basamaklarını zaman sırasına diz.\n- **Değeri tahmin et:** Nöronal morfolojik değişikliklerin belirme süresi, erken komada diffüz aksonal hasar oranı ve organizasyon süreleri gibi derste geçen sayıları kaydırıcıyla bul.\n- **Ne değişir?:** Yaşlıda beyin atrofisinin köprüleşen venler ve subdural hematom riski üzerindeki etkisini yön olarak değerlendir.\n- **Hatayı düzelt:** Epidural ve subdural hematomu karşılaştıran paragraftaki kaynak damar ve yerleşim hatalarını bul.\n\n> [!NOTE]\n> Her oyunda yanlış yaptığın yer, tekrar etmen gereken bölümü gösterir.",
+   "interactiveElements": [
+    {
+     "type": "sequence_order",
+     "prompt": "Subdural hematomun oluşumundan kronikleşmesine kadar olan basamakları doğru sıraya diz.",
+     "steps": [
+      "Hızlı beyin hareketi sırasında köprüleşen venler yırtılır",
+      "Dura ile araknoid arasında taze pıhtı birikir",
+      "Yaklaşık 1 haftada pıhtı lizise uğrar",
+      "Yaklaşık 2 haftada duradan granülasyon dokusu gelişir",
+      "1–3 ayda fibrozisle subdural membran oluşur",
+      "Granülasyon dokusundaki ince duvarlı damarlardan yeniden kanama kronik subdural hematom oluşturur"
+     ],
+     "explanation": "Venöz kanama kendini sınırlar ve yavaş organize olur: önce pıhtı erir, ardından duranın iç yüzünden granülasyon dokusu büyür, sonunda fibrozis membran bırakır. Granülasyon dokusundaki ince duvarlı damarlar kolay kanadığı için farklı dönem kanamaları bir arada görülen kronik tablo gelişir."
+    },
+    {
+     "type": "estimate_slider",
+     "items": [
+      {
+       "prompt": "Travma sonrası nöronlarda piknoz ve sitoplazmik eozinofili gibi morfolojik değişikliklerin görülmesi yaklaşık kaç saat sürer?",
+       "unit": "saat",
+       "min": 0,
+       "max": 72,
+       "step": 1,
+       "answer": 24,
+       "tolerance": 3,
+       "explanation": "Fonksiyonel etkiler daha erken başlasa da nükleusta piknoz, sitoplazmik eozinofili ve hücre bütünlüğünün bozulması yaklaşık 24 saatte morfolojik olarak belirir."
+      },
+      {
+       "prompt": "Travmadan kısa süre sonra komaya giren hastaların yaklaşık yüzde kaçında diffüz aksonal hasar olduğu düşünülür?",
+       "unit": "%",
+       "min": 0,
+       "max": 100,
+       "step": 5,
+       "answer": 50,
+       "tolerance": 5,
+       "explanation": "Açılı ivmelenme çarpma olmasa bile yaygın aksonal hasar yapar; erken komaya girenlerin yaklaşık yarısında bu tablo sorumludur."
+      },
+      {
+       "prompt": "Subdural hematomda duradan granülasyon dokusu gelişmesi yaklaşık kaç hafta sürer?",
+       "unit": "hafta",
+       "min": 0,
+       "max": 12,
+       "step": 1,
+       "answer": 2,
+       "tolerance": 0,
+       "explanation": "Pıhtı yaklaşık 1 haftada lizise uğrar, granülasyon dokusu yaklaşık 2 haftada gelişir, fibrozis ise 1–3 ayda tamamlanır."
+      },
+      {
+       "prompt": "Subdural hematom tipik olarak travmadan sonraki ilk kaç saat içinde belirginleşir?",
+       "unit": "saat",
+       "min": 0,
+       "max": 120,
+       "step": 6,
+       "answer": 48,
+       "tolerance": 6,
+       "explanation": "Venöz kanama yavaş biriktiği için subdural hematom tipik olarak ilk 48 saatte belirginleşir; arteriyel epidural hematom ise daha hızlı genişler."
+      }
+     ]
+    },
+    {
+     "type": "perturbation",
+     "scenario": "Beyin atrofisi olan yaşlı bir hasta düşük dereceli bir kafa travması geçiriyor.",
+     "question": "Genç erişkine göre aşağıdakiler nasıl değişir?",
+     "parameters": [
+      {
+       "name": "Köprüleşen venlerin gerginliği",
+       "correct": "up",
+       "explanation": "Atrofik beyin kafatasından uzaklaştığı için dural sinüslere uzanan köprüleşen venler gerilir ve küçük hareketlerde bile yırtılmaya yatkınlaşır."
+      },
+      {
+       "name": "Beyin ile dura arasındaki boşluk",
+       "correct": "up",
+       "explanation": "Atrofi beyin hacmini azaltır; kafatası içinde beynin hareket edebileceği boşluk artar ve hızlı hareket venleri daha kolay koparır."
+      },
+      {
+       "name": "Subdural hematom oluşması için gereken travma şiddeti",
+       "correct": "down",
+       "explanation": "Gerilmiş venler ve artmış boşluk nedeniyle düşük dereceli travma bile subdural hematoma yeter; bu yüzden yaşlıda hafif travma sonrası subdural hematom sıktır."
+      },
+      {
+       "name": "Kanamanın kaynak damar tipi",
+       "correct": "same",
+       "explanation": "Yaşlıda da subdural hematom köprüleşen venlerin yırtılmasıyla oluşur; atrofi kanamanın venöz kaynağını değiştirmez, yalnız ortaya çıkma eşiğini düşürür."
+      }
+     ]
+    },
+    {
+     "type": "fix_the_text",
+     "text": "Epidural hematom çoğunlukla kafatası kırığına eşlik eden köprüleşen ven yırtığıyla oluşur ve kan dura ile araknoid arasında birikir. Travma ile nörolojik belirtiler arasında lusid interval görülebilir ve acil beyin cerrahisi gerekir. Subdural hematom ise köprüleşen venlerin yırtılmasıyla oluşur ve belirtiler genellikle lokalize değildir.",
+     "errors": [
+      {
+       "wrong": "köprüleşen ven yırtığıyla",
+       "correct": "orta meningeal arter yırtığıyla",
+       "options": [
+        "dural sinüs trombozuyla",
+        "kortikal ven yırtığıyla"
+       ],
+       "explanation": "Epidural hematom arteriyel kaynaklıdır; travmaya çok hassas olan orta meningeal arterin kırıkla birlikte yırtılması arteriyel basınçla hızlı birikim yapar. Köprüleşen ven yırtığı subdural hematomun mekanizmasıdır."
+      },
+      {
+       "wrong": "dura ile araknoid arasında",
+       "correct": "kafatası ile dura arasında",
+       "options": [
+        "araknoid ile pia arasında",
+        "beyin parenkimi içinde"
+       ],
+       "explanation": "Arteriyel basınçla biriken kan durayı kafatasından ayırır; dura ile araknoid arası subdural hematomun yeridir."
+      }
+     ]
+    },
+    {
+     "type": "sequence_order",
+     "prompt": "Kontüzyonun travmadan sonraki morfolojik seyrini erkenden geçe doğru sırala.",
+     "steps": [
+      "Dokunun hızla yer değiştirmesiyle damarlar yırtılır",
+      "Birkaç saat içinde kan korteks, beyaz madde ve subaraknoid yüzeyler boyunca yayılır",
+      "Yaklaşık 24 saatte nöronlarda piknoz ve sitoplazmik eozinofili belirir",
+      "Doku hasarını izleyen inflamatuar yanıt olağan seyrinde gelişir",
+      "Geriye gliozis ve hemosiderin yüklü makrofajlı, çökük, sarı-kahve leke kalır"
+     ],
+     "explanation": "Kontüzyon damar yırtığı, kanama ve ödemle başlar; kanama saatler içinde yayılır, nöronal morfolojik değişiklikler yaklaşık bir günde görünür, ardından olağan inflamatuar yanıt gelişir ve eski lezyonda hemosiderin geçirilmiş kanamanın izi olarak kalır."
+    }
+   ],
+   "slideNumber": 20
+  }
+ ],
+ "totalSlides": 20,
+ "sayfaHaritasi": "teyitli",
+ "totalInteractiveElements": 100,
+ "interactiveRatio": 5.0,
+ "deckId": "k2p-y25-k2-29-sss-travmasi",
+ "donem": "2025-2026",
+ "arsiv": true,
+ "confidence": "high",
+ "matchedPastQuestionsCount": 3,
+ "sinama": {
+  "etiket": "2025-2026 Arşiv",
+  "aciklama": "Bu ders 2025-2026 dönemi (geçen yıl) slaytlarından hazırlanmıştır; 2026-2027 güncel müfredat dersleriyle karışmaz."
+ }
+}

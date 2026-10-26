@@ -1,0 +1,2408 @@
+{
+ "surum": 2,
+ "ders_id": "k2-31",
+ "baslik": "Medulla Spinalis Hastalıkları",
+ "bolumler": [
+  {
+   "id": "k2-31-b01",
+   "baslik": "Medulla Spinalis Genel Anatomisi ve Sonlanma Düzeyi",
+   "paragraflar": [
+    {
+     "id": "k2-31-p001",
+     "sayfa": 2,
+     "cumleler": [
+      {
+       "id": "k2-31-c0001",
+       "ses": "Medulla spinalis foramen magnum düzeyinden başlayarak vertebral kanal içinde aşağıya doğru uzanan merkezi sinir sistemi yapısıdır.",
+       "ekran": "Medulla spinalis: **foramen magnumdan** vertebral kanal içine uzanır",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "foramen magnumdan",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "EE cervical nerves"
+        ],
+        "sekil": "Medulla spinalis genel anatomisi ve sinir pleksusları"
+       }
+      },
+      {
+       "id": "k2-31-c0002",
+       "ses": "Erişkin bireylerde medulla spinalis dokusu birinci veya ikinci lomber vertebra korpusları seviyesinde konus medüllaris olarak sonlanır.",
+       "ekran": "Erişkinde sonlanma düzeyi: **birinci lomber ve ikinci lomber** vertebralar arası",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "birinci lomber ve ikinci lomber",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "cauda equina"
+        ],
+        "sekil": "Konus medüllaris sonlanma düzeyi şeması"
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-31-p002",
+     "sayfa": 3,
+     "cumleler": [
+      {
+       "id": "k2-31-c0003",
+       "ses": "Vertebral kanalın alt kısımlarında omurilik sonlandıktan sonra dural kese içinde serbest uzanan lumbosakral kökler kauda ekuina demetini meydana getirir.",
+       "ekran": "Konus medüllaris altında: **kauda ekuina** sinir lifleri demeti",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "kauda ekuina",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [],
+        "sekil": "Vertebral kolon ve omurilik kanalı boyunca medulla spinalisin sonlanma seviyesi"
+       }
+      },
+      {
+       "id": "k2-31-c0004",
+       "ses": "Fetal gelişim sırasında omurga kemik kanalının omuriliğe kıyasla daha hızlı uzaması nedeniyle medulla spinalisin alt ucu erişkinde yukarı seviyede kalır.",
+       "ekran": "Gelişimsel büyüme farkı: **vertebral kanal omurilikten daha hızlı uzar**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "vertebral kanal omurilikten daha hızlı uzar",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [],
+        "sekil": "Embriyolojik gelişimsel kord yükselmesi şeması"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-31-b02",
+   "baslik": "Gri ve Beyaz Cevher Mimarisi",
+   "paragraflar": [
+    {
+     "id": "k2-31-p003",
+     "sayfa": 4,
+     "cumleler": [
+      {
+       "id": "k2-31-c0005",
+       "ses": "Medulla spinalisin enine kesitinde merkezde kelebek şeklinde gri cevher ve onu çevreleyen miyelinli beyaz cevher kompartmanları izlenir.",
+       "ekran": "Enine kesit mimarisi: **santral gri cevher** ve çevresel beyaz cevher",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "santral gri cevher",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 4,
+        "satir": [
+         "Gray matter"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-31-c0006",
+       "ses": "Gri cevherin ön boynuzunda iskelet kaslarını innerve eden alt motor nöronlar yer alırken arka boynuzda periferik duyusal lifleri karşılayan nöronlar bulunur.",
+       "ekran": "Ön boynuz: **alt motor nöronlar**; arka boynuz: duyusal nöronlar",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "alt motor nöronlar",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 4,
+        "satir": [
+         "1. Anterior horn"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-31-p004",
+     "sayfa": 5,
+     "cumleler": [
+      {
+       "id": "k2-31-c0007",
+       "ses": "Torakal vertebra kesitinde ön kök motor aksonları dışarı taşırken arka kök duyusal aksonları korda giriş yapar ve spinal sinirde birleşir.",
+       "ekran": "Kök anatomisi: **ön kök motor**, arka kök duyusal lifleri taşır",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "ön kök motor",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "Vertebral bod"
+        ],
+        "sekil": "Torakal vertebra kesitinde spinal kord ve sinir kökleri anatomisi"
+       }
+      },
+      {
+       "id": "k2-31-c0008",
+       "ses": "Dorsal kök üzerinde yer alan spinal ganglion periferik duyuların birinci sıra psödounipolar nöron gövdelerini barındırır.",
+       "ekran": "Dorsal kök ganglionu: **birinci sıra duyusal nöron gövdeleri**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "birinci sıra duyusal nöron gövdeleri",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "Spinal ganglion"
+        ],
+        "sekil": "Spinal ganglion ve sempatik zincir ilişkisi"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-31-b03",
+   "baslik": "Çıkan ve İnen Traktuslar ile İntümesanslar",
+   "paragraflar": [
+    {
+     "id": "k2-31-p005",
+     "sayfa": 6,
+     "cumleler": [
+      {
+       "id": "k2-31-c0009",
+       "ses": "Arka kordon bölgesinde fasikülüs grasilis alt ekstremiteden fasikülüs kuneatus ise üst gövde ve kollardan gelen şuurlu derin duyuyu taşır.",
+       "ekran": "Arka kordon: **fasikülüs grasilis ve kuneatus** şuurlu derin duyu yolları",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "fasikülüs grasilis ve kuneatus",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "Gracile tasciculus"
+        ],
+        "sekil": "Medulla spinalis çıkan ve inen traktusların enine kesit şeması"
+       }
+      },
+      {
+       "id": "k2-31-c0010",
+       "ses": "Lateral funikülusta yer alan lateral kortikospinal traktus istemli motor hareketlerin yürütülmesinden sorumlu en temel inen motor yoldur.",
+       "ekran": "Lateral kordon: **lateral kortikospinal traktus** istemli motor yol",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "lateral kortikospinal traktus",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "Posterior nerve root"
+        ],
+        "sekil": "Kortikospinal traktus ve santral kanal kesiti"
+       }
+      },
+      {
+       "id": "k2-31-c0011",
+       "ses": "Arka kordon traktusları propriyosepsiyon ve vibrasyon duyusunu beyin sapına iletirken derin duyu muayenesinin anatomik temelini oluşturur.",
+       "ekran": "Duyusal işlev: **propriyosepsiyon ve vibrasyon** duyusunun iletimi",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "propriyosepsiyon ve vibrasyon",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "Gracile tasciculus"
+        ],
+        "sekil": "Arka kordon derin duyu iletim yolları şeması"
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-31-p006",
+     "sayfa": 7,
+     "cumleler": [
+      {
+       "id": "k2-31-c0012",
+       "ses": "Üst ekstremitelerin innervasyonunu sağlayan servikal intümesans üçüncü servikal ile ikinci torakal vertebralar arasında yer alır ve ortalama çapı otuz sekiz milimetredir; bu seviye sınavda çıkmış sorudur.",
+       "ekran": "Servikal intümesans: **üçüncü servikal ile ikinci torakal** vertebra hizasında",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "üçüncü servikal ile ikinci torakal",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [
+        "fccec81b0770"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "İntumescentia cervicalis"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-31-c0013",
+       "ses": "Alt ekstremiteleri innerve eden lumbosakral intümesans dokuzuncu ile on ikinci torakal vertebralar arasında konumlanır ve ikinci lomber üçüncü sakral segmentleri içerir.",
+       "ekran": "Lumbosakral intümesans: **dokuzuncu ile on ikinci torakal** vertebralar arasında",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "dokuzuncu ile on ikinci torakal",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "İntumescentia  lumbosacralis"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-31-b04",
+   "baslik": "Traktusların Somatotopik Organizasyonu",
+   "paragraflar": [
+    {
+     "id": "k2-31-p007",
+     "sayfa": 8,
+     "cumleler": [
+      {
+       "id": "k2-31-c0014",
+       "ses": "Farklı omurilik seviyelerinden alınan kesitlerde gri cevher hacmi intümesans bölgelerinde belirgin şekilde artış gösterir.",
+       "ekran": "Seviye kesitleri: **intümesanslarda gri cevher hacmi artar**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "intümesanslarda gri cevher hacmi artar",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "Principal Fiber Tracts of Spinal Cord (composite)"
+        ],
+        "sekil": "Farklı spinal seviyelerden geçen enine kesit anatomisi"
+       }
+      },
+      {
+       "id": "k2-31-c0015",
+       "ses": "Torakal kordda ekstremite kasları bulunmadığından gri cevher incedir ve otonom sempatik preganglionik nöronları içeren yan boynuz belirginleşir.",
+       "ekran": "Torakal segmentler: **sempatik preganglionik yan boynuz** mevcuttur",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "sempatik preganglionik yan boynuz",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "Sections Through Spinal Cord at Various"
+        ],
+        "sekil": "Torakal kord ve sempatik yan boynuz şeması"
+       }
+      },
+      {
+       "id": "k2-31-c0016",
+       "ses": "Omuriliğin farklı düzeylerindeki kesit anatomisi traktusların seyirlerini ve segmenter seviye ilişkilerini gösterir.",
+       "ekran": "Kesit morfolojisi: **segmenter seviyeye göre traktus dağılımı**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "segmenter seviyeye göre traktus dağılımı",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "Sections Through Spinal Cord at Various"
+        ],
+        "sekil": "Segmenter kesit haritası ve traktus konfigürasyonu"
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-31-p008",
+     "sayfa": 9,
+     "cumleler": [
+      {
+       "id": "k2-31-c0017",
+       "ses": "Lateral kortikospinal ve spinotalamik traktuslarda alt ekstremite ve sakral lifler dış katmanda servikal lifler ise iç katmanda somatotopik tabakalanma gösterir.",
+       "ekran": "Somatotopik organizasyon: **sakral lifler lateralde**, servikal lifler medialde",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "sakral lifler lateralde",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [
+         "POSTERIOR COLUMNS, CORTICOSPINAL TRACTS,"
+        ],
+        "sekil": "Kortikospinal ve spinotalamik traktuslarda kol ve bacak somatotopisi"
+       }
+      },
+      {
+       "id": "k2-31-c0018",
+       "ses": "Bu laminasyon kuralı nedeniyle dıştan bası yapan ekstramedüller lezyonlar ilk olarak sakral lifleri etkilerken intramedüller kitleler öncelikle servikal lifleri basıya uğratır.",
+       "ekran": "Klinik bası farkı: **ekstramedüller bası sakral lifleri** erken etkiler",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "ekstramedüller bası sakral lifleri",
+         "tur": "tuzak"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [
+         "LOCATION of ARM and LEG FIBERS in the"
+        ],
+        "sekil": "İntramedüller ve ekstramedüller bası lif dinamiği"
+       }
+      },
+      {
+       "id": "k2-31-c0019",
+       "ses": "Kol ve bacak liflerinin bu düzenli laminasyonu cerrahi girişimlerde ve bası lezyonlarında klinik lokalizasyon sağlar.",
+       "ekran": "Klinik lokalizasyon: **laminasyon paternine göre lezyon ayrımı**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "laminasyon paternine göre lezyon ayrımı",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [
+         "LOCATION of ARM and LEG FIBERS in the"
+        ],
+        "sekil": "Somatotopik lif yerleşiminin klinik bası korelasyonu"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-31-b05",
+   "baslik": "Kord Kesi Sendromları ve Brown-Séquard",
+   "paragraflar": [
+    {
+     "id": "k2-31-p009",
+     "sayfa": 10,
+     "cumleler": [
+      {
+       "id": "k2-31-c0020",
+       "ses": "Omuriliğin bir yarısının hasarlanmasıyla ortaya çıkan Brown-Séquard hemiseksiyon sendromu sınavda sorulmuş klasik bir tablodur; burada motor ve duyusal liflerin çaprazlaşma farkı belirleyicidir.",
+       "ekran": "Brown-Séquard tablosu: **omuriliğin anatomik yarı kesisi** sendromu",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "omuriliğin anatomik yarı kesisi",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [
+        "past-1790877482971-276482"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 10,
+        "satir": [
+         "Brown-Séquard"
+        ],
+        "sekil": "Spinal kord karakteristik duyusal kesi sendromları lezyon haritası"
+       }
+      },
+      {
+       "id": "k2-31-c0021",
+       "ses": "Sınavda sorulan bu kord hemiseksiyonunda lezyon tarafında spastik parezi ile vibrasyon ve propriyosepsiyon kaybı görülürken karşı tarafta bir iki segment alttan itibaren ağrı ve ısı duyusu kaybolur.",
+       "ekran": "Klinik patern: **ipsilateral motor ve vibrasyon kaybı**, kontralateral ağrı-ısı kaybı",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "ipsilateral motor ve vibrasyon kaybı",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [
+        "2fc5f3d8d269"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 10,
+        "satir": [
+         "Hemisection"
+        ],
+        "sekil": "Hemiseksiyon duyusal kayıp dermatom dağılımı"
+       }
+      },
+      {
+       "id": "k2-31-c0022",
+       "ses": "Santral kord sendromunda kavitasyon veya bası öncelikle çaprazlaşan spinotalamik lifleri etkileyerek kollar ve göğüste disosiye duyusal kayıp tablosu oluşturur; bu mekanizma çıkmış sorularda sıkça vurgulanmıştır.",
+       "ekran": "Santral kord hasarı: **ön komissür liflerinin basısıyla** disosiye duyu kaybı",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "ön komissür liflerinin basısıyla",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [
+        "a6fee511ce1f"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 10,
+        "satir": [
+         "Brown-Séquard"
+        ],
+        "sekil": "Santral kord sendromu enine kesit lezyon şeması"
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-31-p010",
+     "sayfa": 11,
+     "cumleler": [
+      {
+       "id": "k2-31-c0023",
+       "ses": "Arka kordon lifleri bulbus seviyesindeki nükleus grasilis ve kuneatusta ikinci nöronla sinaps yaptıktan sonra lemniskus mediyalis olarak karşıya çaprazlaşır.",
+       "ekran": "Arka kordon çaprazı: **bulbusta lemniskus mediyalis** olarak gerçekleşir",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "bulbusta lemniskus mediyalis",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 11,
+        "satir": [
+         "Lemniscus medialais"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-31-c0024",
+       "ses": "İkinci sıra duyusal nöronlar talamusun ventral posterolateral çekirdeğinde sinaps yaparak duyuyu primer duyusal kortekse ulaştırır.",
+       "ekran": "Talamokortikal projeksiyon: **ventral posterolateral çekirdek sinapsı**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "ventral posterolateral çekirdek sinapsı",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 11,
+        "satir": [
+         "Lemniscus medialais"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-31-p011",
+     "sayfa": 12,
+     "cumleler": [
+      {
+       "id": "k2-31-c0025",
+       "ses": "Piramidal kortikospinal yol liflerinin yüzde seksen beşi bulbus alt ucundaki piramis çaprazında karşıya geçerken spinotalamik lifler kord düzeyinde ön komissürden çaprazlaşır.",
+       "ekran": "Çapraz seviyeleri: **kortikospinal bulbusta**, spinotalamik kordda çaprazlaşır",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "kortikospinal bulbusta",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 12,
+        "satir": [
+         "Decuesation of pyramids"
+        ],
+        "sekil": "Piramidal deküssasyon ve kortikospinal çaprazlaşma mimarisi"
+       }
+      },
+      {
+       "id": "k2-31-c0026",
+       "ses": "Piramis çaprazı yapan lateral kortikospinal lifler omuriliğin en güçlü motor iletim demetini oluşturur.",
+       "ekran": "Lateral kortikospinal yol: **çaprazlaşan ana motor demet**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "çaprazlaşan ana motor demet",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 12,
+        "satir": [
+         "Decuesation of pyramids"
+        ],
+        "sekil": "Piramidal çapraz ve inen yol demetleri"
+       }
+      },
+      {
+       "id": "k2-31-c0027",
+       "ses": "Çaprazlaşmayan liflerin oluşturduğu ön kortikospinal traktus ise gövde ve eksiyel kasların motor kontrolünde rol oynar.",
+       "ekran": "Ön kortikospinal yol: **aksiyel kasların kontrolü**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "aksiyel kasların kontrolü",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 12,
+        "satir": [
+         "Decuesation of pyramids"
+        ],
+        "sekil": "Ön kortikospinal traktus anatomisi"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-31-b06",
+   "baslik": "Miyelit Terminolojisi ve Akut Transvers Miyelopati",
+   "paragraflar": [
+    {
+     "id": "k2-31-p012",
+     "sayfa": 13,
+     "cumleler": [
+      {
+       "id": "k2-31-c0028",
+       "ses": "Medulla spinalis dokusunun enflamatuvar patolojilerine miyelit adı verilirken enflamatuvar olmayan süreçler miyelopati şemsiyesi altında toplanır.",
+       "ekran": "Terminoloji: **enflamatuvar hasarlar miyelit**, non-enflamatuvar miyelopati",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "enflamatuvar hasarlar miyelit",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 13,
+        "satir": [
+         "• Gri cevher: poliomyelit"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-31-c0029",
+       "ses": "Yalnızca gri cevherin tutulduğu durumlara poliomiyelit beyaz cevherin tutulduğu tablolara ise lökomiyelit adı verilir.",
+       "ekran": "Doku tutulumu: **gri cevher poliomiyelit**, beyaz cevher lökomiyelit",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "gri cevher poliomiyelit",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 13,
+        "satir": [
+         "• Beyaz cevher: lökomyelit"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-31-p013",
+     "sayfa": 14,
+     "cumleler": [
+      {
+       "id": "k2-31-c0030",
+       "ses": "Miyelitler birkaç spinal segmenti tutarak akut veya subakut başlangıç gösteren motor duyusal ve otonomik kayıplarla klinik verir.",
+       "ekran": "Akut miyelit: **birkaç spinal segmenti tutan** hızlı başlangıçlı tablo",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "birkaç spinal segmenti tutan",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 14,
+        "satir": [
+         "Medulla spinalis enflamatuvar hastalıklarına miyelit denir."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-31-c0031",
+       "ses": "Toksik nutrisyonel veya nekrotizan nedenlerle gelişen omurilik hasarları enflamasyon içermediği için doğrudan miyelopati olarak kabul edilir.",
+       "ekran": "Non-enflamatuvar hasar: **toksik ve nutrisyonel miyelopatiler**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "toksik ve nutrisyonel miyelopatiler",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 14,
+        "satir": [
+         "Miyelopati enflamatuvar ve enfeksiyöz olmayan, toksik, nutrisyonel"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-31-p014",
+     "sayfa": 15,
+     "cumleler": [
+      {
+       "id": "k2-31-c0032",
+       "ses": "Daha önce sınavda sorulan akut transvers miyelopatide lezyon seviyesi altında bilateral tüm duyularda tam kayıp ve akut flask arefleksik spinal şok tablosu gelişir.",
+       "ekran": "Transvers miyelopati: **seviye altında tam duyu kaybı** ve spinal şok",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "seviye altında tam duyu kaybı",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [
+        "past-q-I_SKENDERUN_TI_Mu_du_rlu_g_u_ne0__1__230709_230251-57",
+        "ee8b186778a2"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "Tam Kesi (Transvers myelopati)"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-31-c0033",
+       "ses": "Spinal şok evresi geçtikten sonra haftalar içinde kaslarda spastisite derin tendon hiperrefleksisi ekstansör plantar yanıt ve otomatik sfinkter kusurları yerleşir; bu klinik kronik evre sınavda çıkmış bir diğer temel bilgidir.",
+       "ekran": "Kronik evre: **spastik paraparezi ve hiperrefleksi** yerleşimi",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "spastik paraparezi ve hiperrefleksi",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [
+        "q-KURUL_2_C_IKMIS__3-89",
+        "6f885e32472d"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "• Duyu Bozuklukları"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-31-b07",
+   "baslik": "Viral ve Enfeksiyöz Miyelitler: Poliomiyelit",
+   "paragraflar": [
+    {
+     "id": "k2-31-p015",
+     "sayfa": 16,
+     "cumleler": [
+      {
+       "id": "k2-31-c0034",
+       "ses": "Enfeksiyöz miyelitlerin en sık viral nedenleri enterovirüsler grup a ve b koksaki virüsleri ile poliomiyelittir.",
+       "ekran": "Viral etyoloji: **enterovirüsler ve koksaki** virüs aileleri",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "enterovirüsler ve koksaki",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 16,
+        "satir": [
+         "A. Enterovirüsler(Grup A ve B Coxsackie virüsleri,poliomiyelit vb)"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-31-c0035",
+       "ses": "Herpes zoster epstein barr ve sitomegalovirüs gibi herpes grubu ajanlar da özellikle bağışıklığı baskılanmış bireylerde miyelite yol açabilir.",
+       "ekran": "Diğer ajanlar: **herpes grubu virüsler** ve sitomegalovirüs",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "herpes grubu virüsler",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 16,
+        "satir": [
+         "B. Herpes zoster virüsü"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-31-p016",
+     "sayfa": 17,
+     "cumleler": [
+      {
+       "id": "k2-31-c0036",
+       "ses": "Bakteriyel miyelitler mikoplazma pnömoni ve lyme hastalığı gibi etkenlerle veya epidural piyojenik abseler şeklinde gelişebilir.",
+       "ekran": "Bakteriyel etkenler: **mikoplazma ve lyme** hastalığı tablosu",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "mikoplazma ve lyme",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 17,
+        "satir": [
+         "A. Mycoplasma pneumoniae"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-31-p017",
+     "sayfa": 18,
+     "cumleler": [
+      {
+       "id": "k2-31-c0037",
+       "ses": "Enfeksiyon veya aşılamadan bir iki hafta sonra otoimmün demiyelinizasyonla giden postinfeksiyöz ve postvaksinal miyelit tabloları izlenebilir.",
+       "ekran": "İmmün köken: **postinfeksiyöz ve postvaksinal** demiyelinizan miyelit",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "postinfeksiyöz ve postvaksinal",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 18,
+        "satir": [
+         "Postinfeksiyöz ve postvaksinal miyelit"
+        ],
+        "sekil": "Enfeksiyöz miyelit laboratuvar tanı protokolü şeması"
+       }
+      },
+      {
+       "id": "k2-31-c0038",
+       "ses": "Akut dissemine ensefalomiyelit ve multipl skleroz gibi durumlarda manyetik rezonans görüntüleme demiyelinizan plakları ortaya koyar.",
+       "ekran": "Demiyelinizan süreç: **akut dissemine ensefalomiyelit ve plaklar**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "akut dissemine ensefalomiyelit ve plaklar",
+         "tur": "tanim"
+        },
+        {
+         "metin": "akut dissemine ensefalomiyelit ve plaklar",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [
+        "4ba07c308e35"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 18,
+        "satir": [
+         "Akut ve kronik yineleyici multipl skleroz"
+        ],
+        "sekil": "Demiyelinizan plakların omurilikte MRG dağılımı"
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-31-p018",
+     "sayfa": 19,
+     "cumleler": [
+      {
+       "id": "k2-31-c0039",
+       "ses": "Poliomiyelit poliovirüsün ağız yoluyla alınıp kana karışması ve merkezi sinir sistemine ulaşmasıyla meydana gelen akut enfeksiyon tablosudur.",
+       "ekran": "Poliomiyelit: **oral yolla bulaşıp kanda yayılan** viral enfeksiyon",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "oral yolla bulaşıp kanda yayılan",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 19,
+        "satir": [
+         "Aseptik menenjit ve ön boynuz hücrelerinin harabiyeti ile oluşur."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-31-c0040",
+       "ses": "Virüs seçici olarak medulla spinalis ön boynuzundaki motor nöron gövdelerine afinite göstererek ağır nöronal nekroz yapar.",
+       "ekran": "Seçici hedef: **ön boynuz alfa motor nöronları** harabiyeti",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "ön boynuz alfa motor nöronları",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 19,
+        "satir": [
+         "Poliovirusler çoğunlukla nedendir. Bulaşma fekal oral yolla olur."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-31-p019",
+     "sayfa": 20,
+     "cumleler": [
+      {
+       "id": "k2-31-c0041",
+       "ses": "Hastalığın prodromal döneminde halsizlik ateş baş ağrısı kas ve boğaz ağrıları bulantı ve kusma gibi sistemik belirtiler izlenir.",
+       "ekran": "Prodrom evresi: **ateş, halsizlik ve yaygın kas ağrıları**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "ateş, halsizlik ve yaygın kas ağrıları",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 20,
+        "satir": [
+         "Prodromal semptomlar halsizlik, ateş, başağrısı, kas ağrıları, boğaz ağrısı,iştahsızlık,"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-31-c0042",
+       "ses": "Prodromu takiben ense sertliği ve sırt ağrısı gibi meningeal irritasyon bulguları ortaya çıkarak kord tutulumunun başladığını gösterir.",
+       "ekran": "Meningeal faz: **ense ve uyluk ardı ağrıları**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "ense ve uyluk ardı ağrıları",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 20,
+        "satir": [
+         "bulantı ve kusmadır."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-31-p020",
+     "sayfa": 21,
+     "cumleler": [
+      {
+       "id": "k2-31-c0043",
+       "ses": "Kas güçsüzlüğü iki ila beş günlük prodromun ardından aniden akut asimetrik flask paralizi şeklinde gelişir.",
+       "ekran": "Felç paterni: **akut asimetrik flask parezi** ve kas atrofisi",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "akut asimetrik flask parezi",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 21,
+        "satir": [
+         "Kas güçsüzlüğü 2-5 günlük bir hastalık tablosunu izleyerek akut ya da"
+        ],
+        "sekil": "Ön boynuz motor nöron kaybı ve kas denervasyonu şeması"
+       }
+      },
+      {
+       "id": "k2-31-c0044",
+       "ses": "Poliomiyelitte duyu yolları tamamen korunduğundan hastada hiçbir duyu kusuru saptanmaz ve derin tendon refleksleri hızla kaybolur.",
+       "ekran": "Duyusal korunma: **duyu muayenesi tamamen normaldir**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "duyu muayenesi tamamen normaldir",
+         "tur": "tuzak"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 21,
+        "satir": [
+         "daha yavaş şekilde yerleşir."
+        ],
+        "sekil": "Motor ve duyu yollarının seçici tutulum grafiği"
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-31-p021",
+     "sayfa": 22,
+     "cumleler": [
+      {
+       "id": "k2-31-c0045",
+       "ses": "Poliomiyelitin akut döneminde beyin omurilik sıvısında mononükleer pleositoz hafif protein artışı ve normal glukoz düzeyleri saptanır.",
+       "ekran": "BOS tablosu: **mononükleer pleositoz ve hafif protein artışı**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "mononükleer pleositoz ve hafif protein artışı",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 22,
+        "satir": [
+         "Mononükleer pleositoz, protein hafif artmış, glukoz normaldir."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-31-c0046",
+       "ses": "Beyin omurilik sıvısında ve serumda poliovirüs immünoglobulin m pozitifliği akut enfeksiyonun kesin mikrobiyolojik kanıtıdır.",
+       "ekran": "Seroloji: **poliovirüs immünoglobulin m** antikor pozitifliği",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "poliovirüs immünoglobulin m",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 22,
+        "satir": [
+         "Poliomiyelitin akut döneminde BOS’ta:"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-31-p022",
+     "sayfa": 23,
+     "cumleler": [
+      {
+       "id": "k2-31-c0047",
+       "ses": "Akut poliomiyelitten on ila yirmi yıl sonra sağlam kalan motor nöronların aşırı yüklenmesiyle post-polio sendromu gelişebilir.",
+       "ekran": "Post-polio sendromu: **on yirmi yıl sonra yeni kas güçsüzlüğü**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "on yirmi yıl sonra yeni kas güçsüzlüğü",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 23,
+        "satir": [
+         "Poliomiyelit geçirdikten 1 veya 2 dekat sonra kas güçsüzlüğünde yeniden"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-31-c0048",
+       "ses": "Bu tabloda virüs reaktivasyonu yoktur; sebep reinnerve edilmiş dev motor ünitelerin metabolik tükenmesi ve yorgunluğudur.",
+       "ekran": "Patogenez: **yeniden enfeksiyon değil nöronal tükenmedir**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "yeniden enfeksiyon değil nöronal tükenmedir",
+         "tur": "tuzak"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 23,
+        "satir": [
+         "artış, ya da asemptomatik bir bölgede kas güçsüzlüğü ile karekterize"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-31-b08",
+   "baslik": "Spinal Sifiliz, Tabes Dorsalis ve Tüberküloz Spondiliti",
+   "paragraflar": [
+    {
+     "id": "k2-31-p023",
+     "sayfa": 24,
+     "cumleler": [
+      {
+       "id": "k2-31-c0049",
+       "ses": "Spinal sifiliz spiral şekilli spiroket olan Treponema pallidum bakterisinin merkezi sinir sistemine yerleşmesiyle oluşan geç enfeksiyondur.",
+       "ekran": "Spinal sifiliz: **Treponema pallidum** spiroket enfeksiyonu",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Treponema pallidum",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 24,
+        "satir": [
+         "Sifiliz ince spiral şeklinde hareketli bir mikroorganizma olan Treponemapallidum"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-31-c0050",
+       "ses": "Bakteri meningovasküler yapılarda endarterite ve arka spinal köklerde kronik intertisyel enflamasyona yol açar.",
+       "ekran": "Patoloji: **obliteratif endarterit ve arka kök hasarı**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "obliteratif endarterit ve arka kök hasarı",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 24,
+        "satir": [
+         "tarafından oluşturulan bir infeksiyondur."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-31-p024",
+     "sayfa": 25,
+     "cumleler": [
+      {
+       "id": "k2-31-c0051",
+       "ses": "Primer sifiliz enfeksiyonundan on beş ila yirmi yıl sonra ortaya çıkan tabes dorsalis seçici arka kordon dejenerasyonudur.",
+       "ekran": "Tabes dorsalis: **on beş yirmi yıl sonra arka kordon** dejenerasyonu",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "on beş yirmi yıl sonra arka kordon",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 25,
+        "satir": [
+         "Enfeksiyondan 15-20 yıl sonra ortaya çıkar. Arka kordonu belirgin etkiler."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-31-c0052",
+       "ses": "Hastalar şimşek çakar tarzda paroksismal radiküler ağrılar derin duyu kaybına bağlı sensöriyel ataksi ve Romberg pozitifliği gösterir.",
+       "ekran": "Klinik triyad: **şimşek ağrıları, duysal ataksi, arefleksi**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "şimşek ağrıları, duysal ataksi, arefleksi",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 25,
+        "satir": [
+         "Tabes Dorsalis"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-31-p025",
+     "sayfa": 26,
+     "cumleler": [
+      {
+       "id": "k2-31-c0053",
+       "ses": "Arka kök ve kordonların harabiyeti nedeniyle miyotatik refleks arkı kesilir ve alt ekstremitelerde derin tendon arefleksisi oturur.",
+       "ekran": "Nörolojik bulgu: **derin tendon reflekslerinde tam kayıp**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "derin tendon reflekslerinde tam kayıp",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 26,
+        "satir": [
+         "Arka kordonun selektif olarak etkilendiği hastalık"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-31-c0054",
+       "ses": "Göz muayenesinde ışığa yanıtsız fakat akomodasyon refleksi korunmuş olan klasik Argyll Robertson pupili izlenebilir.",
+       "ekran": "Karakteristik pupil: **ışığa yanıtsız akomodasyonu korunan** Argyll Robertson",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "ışığa yanıtsız akomodasyonu korunan",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 26,
+        "satir": [
+         "POSTERİOR KOLON HASTALIKLARI"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-31-p026",
+     "sayfa": 27,
+     "cumleler": [
+      {
+       "id": "k2-31-c0055",
+       "ses": "Erb tipi sifilitik spastik spinal paralizide kortikospinal traktus dejenerasyonu ön planda olup ilerleyici spastik paraparezi gelişir.",
+       "ekran": "Spastik sifiliz: **Erb spinal paralizisi** ve kortikospinal tutulum",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Erb spinal paralizisi",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 27,
+        "satir": [
+         "Kortikospinal traktus belirtilerinin ön planda olduğu bir spinal sifiliz formudur. Hasta"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-31-c0056",
+       "ses": "Nörosifiliz tanısında beyin omurilik sıvısında lökositoz yüksek protein ve pozitif serolojik testler tedavi yanıtını izlemede kullanılır.",
+       "ekran": "Laboratuvar tanı: **BOS serolojisi ve pleositoz takibi**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "BOS serolojisi ve pleositoz takibi",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 27,
+        "satir": [
+         "genellikle ilk olarak bacaklarında güçsüzlük ve ağırlık hissinden yakınır. Buna"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-31-p027",
+     "sayfa": 28,
+     "cumleler": [
+      {
+       "id": "k2-31-c0057",
+       "ses": "Tüberküloza bağlı miyelopati genellikle vertebra kemik tüberkülozu olan Pott hastalığına ikincil olarak gelişir.",
+       "ekran": "Pott hastalığı: **tüberküloz spondilitine ikincil** kompresif miyelopati",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "tüberküloz spondilitine ikincil",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 28,
+        "satir": [
+         "Tüberküloza bağlı miyelopati genellikle tüberküloz spondilitine"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-31-c0058",
+       "ses": "Mikobakteriler en sık dorsal ve dorsolomber vertebralarda korpus çökmesine ve soğuk abse basısına yol açarak kordu sıkıştırır.",
+       "ekran": "Sık yerleşim: **dorsal ve dorsolomber** vertebra epidural basısı",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "dorsal ve dorsolomber",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 28,
+        "satir": [
+         "(Pott hastalığı) sekonder olarak gelişir. Mikobakteriler vertebralara"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-31-p028",
+     "sayfa": 29,
+     "cumleler": [
+      {
+       "id": "k2-31-c0059",
+       "ses": "İnfeksiyöz olmayan otoimmün transvers miyelitler multipl skleroz ve nöromiyelit optika gibi demiyelinizan hastalıkların parçası olabilir.",
+       "ekran": "Otoimmün miyelit: **multipl skleroz ve nöromiyelit optika** spektrumu",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "multipl skleroz ve nöromiyelit optika",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 29,
+        "satir": [
+         "İNFEKSİYÖZ OLMAYAN İNFLAMATUVAR MİYELOPATİLER"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-31-c0060",
+       "ses": "Nöromiyelit optika spektrum bozukluğunda üç veya daha fazla vertebra segmenti boyunca uzanan uzunlamasına transvers kord lezyonları tipiktir.",
+       "ekran": "Nöromiyelit optika: **üç segmentten uzun** transvers kord lezyonu",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "üç segmentten uzun",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 29,
+        "satir": [
+         "(Otoimmün Transvers Miyelit)"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-31-b09",
+   "baslik": "Spinal İskemi ve Spinal Hematomlar",
+   "paragraflar": [
+    {
+     "id": "k2-31-p029",
+     "sayfa": 30,
+     "cumleler": [
+      {
+       "id": "k2-31-c0061",
+       "ses": "Spinal kord iskemisi beyin iskemisine oranla çok daha nadirdir ve çoğunlukla aortun aterosklerotik veya cerrahi patolojilerinden kaynaklanır.",
+       "ekran": "Spinal iskemi: **ekstravertebral damar ve aort** perfüzyon bozukluğu",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "ekstravertebral damar ve aort",
+         "tur": "tanim"
+        },
+        {
+         "metin": "ekstravertebral damar ve aort",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [
+        "q-No_ropsikiyatri_gis_kardiyo_-2023-2024-C__km_s_lar__240625_053302__2_-30"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 30,
+        "satir": [
+         "Beyne göre daha nadir."
+        ],
+        "sekil": "Medulla spinalis damarsal sulama alanları ve vasküler şema"
+       }
+      },
+      {
+       "id": "k2-31-c0062",
+       "ses": "Tek olan anterior spinal arter kordun ön üçte iki bölümünü çift olan posterior spinal arterler ise arka kordonları besler.",
+       "ekran": "Vasküler sulama: **anterior arter ön üçte ikiyi**, posterior arter arka kordonu besler",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "anterior arter ön üçte ikiyi",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 30,
+        "satir": [
+         "Spinal iskemik bir lezyon daha sık olarak, ekstravertebral"
+        ],
+        "sekil": "Anterior ve posterior spinal arter dağılım kesiti"
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-31-p030",
+     "sayfa": 31,
+     "cumleler": [
+      {
+       "id": "k2-31-c0063",
+       "ses": "Anterior spinal arter sendromunda ani başlayan parapleji sfinkter kaybı ve spinotalamik duyu kusuru gelişirken arka kordon duyu modaliteleri korunur.",
+       "ekran": "Anterior spinal sendrom: **motor ve ağrı-ısı kaybı**, vibrasyon korunur",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "motor ve ağrı-ısı kaybı",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 31,
+        "satir": [
+         "Genellikle anterior spinal arter alanında gelişir."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-31-c0064",
+       "ses": "Arka kordonlar posterior spinal arterlerden beslendiği için vibrasyon ve propriyosepsiyon duyusunun sağlam kalması bu sendromun patognomonik ayrımıdır.",
+       "ekran": "Duyusal disosiasyon: **arka kordon vibrasyon duyusu normal** kalır",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "arka kordon vibrasyon duyusu normal",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 31,
+        "satir": [
+         "Lezyon düzeyi altında akut pleji, ağrı ve ısı duyusu kaybı ve"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-31-p031",
+     "sayfa": 32,
+     "cumleler": [
+      {
+       "id": "k2-31-c0065",
+       "ses": "Spinal epidural ve subdural hematomlar antikoagülan kullanımı vasküler malformasyon veya travma sonrası aniden bası yaparak acil cerrahi boşaltma gerektirir.",
+       "ekran": "Spinal hematomlar: **ani kord kompresyonu** ve acil cerrahi endikasyon",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "ani kord kompresyonu",
+         "tur": "tanim"
+        },
+        {
+         "metin": "ani kord kompresyonu",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [
+        "e1454640ed84"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 32,
+        "satir": [
+         "Subdural ve epidural hematomlar benzer nedenlerle ortaya çıkar"
+        ],
+        "sekil": "Spinal hematom lokalizasyonları ve kord basısı"
+       }
+      },
+      {
+       "id": "k2-31-c0066",
+       "ses": "Doğrudan medulla spinalis parankimi içine kanama gelişmesine hematomiyeli adı verilir ve santral kord kesi bulgularına yol açar.",
+       "ekran": "Hematomiyeli: **omurilik dokusu içine parankimal kanama**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "omurilik dokusu içine parankimal kanama",
+         "tur": "terim"
+        },
+        {
+         "metin": "omurilik dokusu içine parankimal kanama",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [
+        "d3-k2-bey-005",
+        "past-q-_SKENDERUN_T_M_d_rl___ne0__1__230709_230251-9",
+        "d3-k2-bey-001"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 32,
+        "satir": [
+         "ve hemen hemen aynı klinik belirtileri verir. Hızla cerrahi olarak"
+        ],
+        "sekil": "Hematomiyeli parankim içi kavite kesiti"
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-31-p032",
+     "sayfa": 33,
+     "cumleler": [
+      {
+       "id": "k2-31-c0067",
+       "ses": "Spinal vasküler malformasyonlar ve duranın arteriyovenöz fistülleri kord venöz dönüşünü engelleyerek konjestif miyelopatiye yol açabilir.",
+       "ekran": "Arteriyovenöz fistüller: **venöz hipertansiyon ve konjestif miyelopati**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "venöz hipertansiyon ve konjestif miyelopati",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 33,
+        "satir": [
+         "En sık karşılaşılan miyelopati nedenidir."
+        ],
+        "sekil": "Spinal arteriyovenöz malformasyon anjiyografik şeması"
+       }
+      },
+      {
+       "id": "k2-31-c0068",
+       "ses": "Omurilik dural arteriyovenöz fistülleri ilerleyici paraparezi ve sfinkter kusuru yaparak transvers miyeliti taklit edebilir.",
+       "ekran": "Klinik taklit: **dural fistüller transvers miyeliti taklit edebilir**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "dural fistüller transvers miyeliti taklit edebilir",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 33,
+        "satir": [
+         "B12 vitamin eksikliği sonucu ortaya çıkar."
+        ],
+        "sekil": "Dural arteriyovenöz fistül venöz konjesyonu şeması"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-31-b10",
+   "baslik": "Vitamin B12 Eksikliği ve Subakut Kombine Dejenerasyon",
+   "paragraflar": [
+    {
+     "id": "k2-31-p033",
+     "sayfa": 34,
+     "cumleler": [
+      {
+       "id": "k2-31-c0069",
+       "ses": "Posterolateral kolon hastalığı vitamin be on iki eksikliğinde arka kordonlar ve lateral kortikospinal traktusların birlikte dejenerasyonudur.",
+       "ekran": "Subakut kombine dejenerasyon: **arka kordon ve lateral kortikospinal** tutulumu",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "arka kordon ve lateral kortikospinal",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 34,
+        "satir": [
+         "POSTEROLATERAL KOLON HASTALIĞI"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-31-c0070",
+       "ses": "Bu tabloda duysal ataksi ile spastisite birliktedir ancak spinotalamik traktus korunduğu için ağrı ve ısı duyusu kural olarak normaldir.",
+       "ekran": "Duyusal özellik: **ağrı ve ısı duyusu tamamen normaldir**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "ağrı ve ısı duyusu tamamen normaldir",
+         "tur": "tuzak"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 34,
+        "satir": [
+         "Vitamin B12 eksikliğinde arka kolon ve lateral kolon birlikteetkilenir."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-31-p034",
+     "sayfa": 35,
+     "cumleler": [
+      {
+       "id": "k2-31-c0071",
+       "ses": "Kobalamin eksikliği miyelin sentezi ve yağ asidi metabolizmasını bozarak beyaz cevherde vakuoler miyelopati ve akson kaybına yol açar.",
+       "ekran": "Biyokimya: **miyelin sentez bozukluğu ve vakuoler miyelopati**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "miyelin sentez bozukluğu ve vakuoler miyelopati",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 35,
+        "satir": [
+         "B12 yetersizliğinden beyin, omurilik, optik sinirler ve periferik sinir"
+        ],
+        "sekil": "B12 eksikliği miyelin yıkım mekanizması"
+       }
+      },
+      {
+       "id": "k2-31-c0072",
+       "ses": "Omurilik dışında periferik sinirler optik sinir ve serebral korteks de etkilenerek periferik nöropati ve demans birlikteliği görülebilir.",
+       "ekran": "Sistemik tutulum: **optik atrofi, periferik nöropati, demans**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "optik atrofi, periferik nöropati, demans",
+         "tur": "tanim"
+        },
+        {
+         "metin": "optik atrofi, periferik nöropati, demans",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [
+        "4c4eb178b88b"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 35,
+        "satir": [
+         "sistemi etkilenir. En ağır hasar omurilikte, özellikle servikal ve üst dorsal"
+        ],
+        "sekil": "Multisistemik nörodejenerasyon bulguları"
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-31-p035",
+     "sayfa": 36,
+     "cumleler": [
+      {
+       "id": "k2-31-c0073",
+       "ses": "Manyetik rezonans görüntülemede t iki sekansında arka kordonlarda simetrik hiperintensite izlenir ve bu bulgu ters v işareti olarak tanımlanır.",
+       "ekran": "MRG bulgusu: **arka kordonda ters v hiperintensitesi**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "arka kordonda ters v hiperintensitesi",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 36,
+        "satir": [
+         "generation showing signal changes in the posterior columns. The patient"
+        ],
+        "sekil": "Subakut kombine dejenerasyonda sagital ve aksiyel MRG kesitleri"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-31-b11",
+   "baslik": "Spinal Kord Tümörleri ve Radyasyon Miyelopatisi",
+   "paragraflar": [
+    {
+     "id": "k2-31-p036",
+     "sayfa": 37,
+     "cumleler": [
+      {
+       "id": "k2-31-c0074",
+       "ses": "Spinal tümörler yerleşim bölgesine göre intramedüller ve ekstramedüller olarak iki ana kompartmana ayrılır.",
+       "ekran": "Tümör sınıflaması: **intramedüller ve ekstramedüller** yerleşim",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "intramedüller ve ekstramedüller",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 37,
+        "satir": [
+         "Yerleşim bölgesine göre 2 ana gruba ayrılır"
+        ],
+        "sekil": "Spinal kord tümör kompartmanları anatomik şeması"
+       }
+      },
+      {
+       "id": "k2-31-c0075",
+       "ses": "Ekstramedüller tümörler de dural kese içine veya dışına göre intradural ve ekstradural gruplara bölünür.",
+       "ekran": "Dural ilişki: **intradural ve ekstradural** ekstramedüller kitleler",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "intradural ve ekstradural",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 37,
+        "satir": [
+         "•İntramedüller"
+        ],
+        "sekil": "İntradural ve ekstradural tümör yerleşimleri"
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-31-p037",
+     "sayfa": 38,
+     "cumleler": [
+      {
+       "id": "k2-31-c0076",
+       "ses": "İntramedüller tümörler omurilik parankiminden kaynaklanan glial kitleler olup en sık ependimom ve astrositom formunda karşımıza çıkar.",
+       "ekran": "İntramedüller kitleler: **ependimom ve astrositom** glial tümörleri",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "ependimom ve astrositom",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 38,
+        "satir": [
+         "İntramedüller tümörler: medülla spinalis yapılarından kaynaklanan"
+        ],
+        "sekil": "İntramedüller tümör parankim invazyonu"
+       }
+      },
+      {
+       "id": "k2-31-c0077",
+       "ses": "Ekstramedüller intradural grupta ise sinir kılıfından kaynaklanan schwannomlar ve araknoid kökenli meninjiomlar en sık neoplazmlardır.",
+       "ekran": "Ekstramedüller kitleler: **meninjiom ve schwannom** tümörleri",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "meninjiom ve schwannom",
+         "tur": "terim"
+        },
+        {
+         "metin": "meninjiom ve schwannom",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [
+        "past-1790877037605-566383"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 38,
+        "satir": [
+         "tümörlerdir. Ependimom ve astrositomlar bunlara örnektir."
+        ],
+        "sekil": "Ekstramedüller kitle kord bası kesiti"
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-31-p038",
+     "sayfa": 39,
+     "cumleler": [
+      {
+       "id": "k2-31-c0078",
+       "ses": "Radyasyon miyelopatisi toraks ve boyun kanserlerinde radyoterapi uygulandıktan aylar sonra ortaya çıkan gecikmiş mikrovasküler kord nekrozudur.",
+       "ekran": "Radyasyon miyelopatisi: **gecikmiş mikrovasküler nekroz** ve paraparezi",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "gecikmiş mikrovasküler nekroz",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 39,
+        "satir": [
+         "Radyasyon myelopatisi:"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-31-c0079",
+       "ses": "Malignitelerde doğrudan kord basısı olmaksızın gelişen paraneoplastik nekrotizan miyelopatilerde ise anti-nöronal antikorlar aracılık eder.",
+       "ekran": "Paraneoplastik hasar: **anti-nöronal antikorlar aracılı** nekrotizan tablo",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "anti-nöronal antikorlar aracılı",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 39,
+        "satir": [
+         "DİĞER HASTALIKLARA EŞLİK EDEN MYELOPATİLER"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-31-b12",
+   "baslik": "Siringomiyeli Sendromu ve Konus-Kauda Ayırıcı Tanısı",
+   "paragraflar": [
+    {
+     "id": "k2-31-p039",
+     "sayfa": 40,
+     "cumleler": [
+      {
+       "id": "k2-31-c0080",
+       "ses": "Siringomiyelik sendrom santral kanal çevresinde servikal omurilik içine uzanan kavitasyon ve kistik sıvı birikimi ile karakterizedir ve komite sınavlarında sıkça çıkmış bir patolojidir.",
+       "ekran": "Siringomiyeli: **servikal kordda santral kavitasyon** ve kist oluşumu",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "servikal kordda santral kavitasyon",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [
+        "d3-k2-nor-006"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 40,
+        "satir": [
+         "Siringomyelik sendrom"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-31-c0081",
+       "ses": "Genişleyen kavite ön beyaz komissürden çaprazlaşan lifleri ezerek her iki kolda ve omuzlarda pelerin tarzı disosiye ağrı ve ısı duyusu kaybı yapar; sınavda sorulan bu pelerin tarzı duyu kaybı hastalığın en tipik bulgusudur.",
+       "ekran": "Karakteristik klinik: **kollarda pelerin tarzı disosiye duyu kaybı**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "kollarda pelerin tarzı disosiye duyu kaybı",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [
+        "e7ec964c7a20",
+        "d3-k2-nor-005"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 40,
+        "satir": [
+         "Sıklıkla servikal bölgede, bazen medulla oblangataya, nadiren torakal veya"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-31-p040",
+     "sayfa": 41,
+     "cumleler": [
+      {
+       "id": "k2-31-c0082",
+       "ses": "Konus medüllaris lezyonlarında pelvik taban kaslarında güçsüzlük erken ve tam sfinkter inkontinansı ile simetrik eyer tarzı duyu kusuru gelişir.",
+       "ekran": "Konus medüllaris: **erken ve tam sfinkter felci**, simetrik duyu kaybı",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "erken ve tam sfinkter felci",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [
+        "9d2e0b3d81c4"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 41,
+        "satir": [
+         "Konus medüllaris lezyonu"
+        ],
+        "sekil": "Konus medüllaris ve pelvik pleksus otonom sfinkter anatomisi"
+       }
+      },
+      {
+       "id": "k2-31-c0083",
+       "ses": "İmpotans ve nörojenik mesane tablosu konus sendromunda ilk ortaya çıkan baskın otonomik semptomlar arasındadır.",
+       "ekran": "Otonomik bulgular: **ani impotans ve nörojenik mesane** tablosu",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "ani impotans ve nörojenik mesane",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 41,
+        "satir": [
+         "Pelvik taban kaslarında güçsüzlüğe neden olur ve akut"
+        ],
+        "sekil": "Sakral otonom merkezlerin lezyon şeması"
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-31-p041",
+     "sayfa": 42,
+     "cumleler": [
+      {
+       "id": "k2-31-c0084",
+       "ses": "Kauda ekuina sendromunda ise konus sendromunun aksine bacaklarda şiddetli asimetrik radiküler ağrılar ve asimetrik flask parezi ön plandadır.",
+       "ekran": "Kauda ekuina: **şiddetli asimetrik radiküler ağrı** ve asimetrik felç",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "şiddetli asimetrik radiküler ağrı",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 42,
+        "satir": [
+         "Kauda equina lezyonu"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-31-c0085",
+       "ses": "Kauda lezyonlarında sfinkter tutulumu konus sendromuna göre daha geç evrede ve daha hafif şiddette ortaya çıkar.",
+       "ekran": "Sfinkter bulgusu: **kauda ekuinada sfinkter kusuru daha geçtir**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "kauda ekuinada sfinkter kusuru daha geçtir",
+         "tur": "tuzak"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 42,
+        "satir": [
+         "Konus medüllaris lezyonu ile ayırımı"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-31-p042",
+     "sayfa": 43,
+     "cumleler": [
+      {
+       "id": "k2-31-c0086",
+       "ses": "Tabloda özetlendiği üzere konus sendromu ani ve iki taraflı başlarken kauda ekuina sendromu tek taraflı başlayıp asimetrik ilerler.",
+       "ekran": "Ayırıcı tanı tablosu: **konus simetrik ve ani**, kauda asimetriktir",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "konus simetrik ve ani",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 43,
+        "satir": [
+         "Konus medüllaris sendromu"
+        ],
+        "sekil": "Konus medüllaris ve kauda ekuina sendromu ayırıcı tanı tablosu"
+       }
+      },
+      {
+       "id": "k2-31-c0087",
+       "ses": "Aşil refleksi her iki tabloda da kaybolurken patella refleksi konus lezyonlarında sıklıkla korunur.",
+       "ekran": "Refleks farkı: **konus lezyonunda patella refleksi korunabilir**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "konus lezyonunda patella refleksi korunabilir",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 43,
+        "satir": [
+         "Kauda Ekuina sendromu"
+        ],
+        "sekil": "Derin tendon refleksleri lezyon seviyesi karşılaştırması"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-31-b13",
+   "baslik": "Herediter Miyelopatiler ve Spinoserebellar Dejenerasyonlar",
+   "paragraflar": [
+    {
+     "id": "k2-31-p043",
+     "sayfa": 44,
+     "cumleler": [
+      {
+       "id": "k2-31-c0088",
+       "ses": "Herediter miyelopatilerin en sık rastlanan formları Friedreich ataksisi ve herediter spastik paraparezidir.",
+       "ekran": "Herediter miyelopatiler: **Friedreich ataksisi ve spastik paraparezi**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Friedreich ataksisi ve spastik paraparezi",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 44,
+        "satir": [
+         "En bilinen tipler spinoserebellar ataksiler ve herediter spastik"
+        ],
+        "sekil": "Friedreich ataksisi spinal traktus dejenerasyonu kesiti"
+       }
+      },
+      {
+       "id": "k2-31-c0089",
+       "ses": "Friedreich ataksisinde arka kordon spinoserebellar ve kortikospinal traktuslar birlikte tutularak ataksi ve arefleksi oluşturur.",
+       "ekran": "Tutulan yollar: **arka kordon, spinoserebellar ve kortikospinal** yollar",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "arka kordon, spinoserebellar ve kortikospinal",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 44,
+        "satir": [
+         "paraparezidir."
+        ],
+        "sekil": "Spinoserebellar yol dejenerasyon haritası"
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-31-p044",
+     "sayfa": 45,
+     "cumleler": [
+      {
+       "id": "k2-31-c0090",
+       "ses": "Herediter spastik paraparezide ise alt ekstremitelerde yavaş ilerleyen spastisite ve piramidal güçsüzlük tablosu baskındır.",
+       "ekran": "Herediter spastik paraparezi: **yavaş ilerleyen spastik paraparezi**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "yavaş ilerleyen spastik paraparezi",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 45,
+        "satir": [
+         "Prevalans: 2-10/100.000"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-31-c0091",
+       "ses": "Hastalarda belirgin duyusal kayıp beklenmez ve uzun süreli klinik seyirde kognitif fonksiyonlar korunur.",
+       "ekran": "Klinik özellik: **duyu kusuru olmaksızın izole spastisite**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "duyu kusuru olmaksızın izole spastisite",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 45,
+        "satir": [
+         "Alt ekstremitelerde yavaş progresif spastisite, parezi, DTR artışı, babinski yanıtı"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "anahtar": "y25-k2-31-medulla-spinalis-hastaliklari",
+ "donem": "2025-2026"
+}
