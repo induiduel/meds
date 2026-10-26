@@ -1,12 +1,12 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 373,
-  "baslik": "Terim Yardımcısı Denetimi: Bebek Beslenmesi, Halk Sağlığı Tarihçesi, İzolasyon",
+  "onem": 374,
+  "baslik": "Terim Yardımcısı Denetimi: Salgın Kontrolü ve Sağlık Hizmetleri",
   "maddeler": [
-    "Bebek Beslenmesi dersinde gündelik sözcük işaretleri ayıklandı; whey, laktoz ve vejeteryan diyeti terimleri eklendi.",
-    "Halk Sağlığı Tarihçesi dersine epidemiyoloji, prevalans ve insidans terimleri eklendi.",
-    "İzolasyon Yöntemleri dersine direk ve indirek temas, Ultraviyole, zarflı virüs, antiseptik, N95 ve aerosol oluşturan işlemler eklendi (28 → 35).",
-    "Terimler sayfasındaki ortak sözlüğe 12 yeni terim eklendi."
+    "Salgın Hastalıklarda Kontrol dersine ortaya çıkan patojen, epidemi, pandemi, morbidite, mortalite ve sağlık işgücü terimleri eklendi.",
+    "Türkiye'de Sağlık Hizmetleri dersine birinci basamak, kanun hükmünde kararname, pratisyen hekim ve JCI akreditasyonu eklendi.",
+    "Bebek Beslenmesi, Halk Sağlığı Tarihçesi ve İzolasyon dersleri de bu turda denetlendi.",
+    "Terimler sayfasındaki ortak sözlüğe 8 yeni terim eklendi."
   ],
   "eklenen": [
     "data/sesli_anlatim/terim/k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim.json",
