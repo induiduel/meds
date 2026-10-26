@@ -1,25 +1,24 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 363,
-  "baslik": "Eski Arşiv Sesli Derslerinde PDF Yükleme ve Hızlı Açılış Optimizasyonu",
+  "onem": 364,
+  "baslik": "Kurul 2 Arşiv Tamamlama: Adrenoseptör Antagonist İlaçlar Yayında",
   "maddeler": [
-    "Eski arşiv (2025-2026) sesli derslerinde slayt PDF'lerinin çok geç yüklenmesi veya zaman aşımına uğraması sorunu kökten çözüldü.",
-    "PDF.js motorunda 10-50 MB'lık dosyaların ilk sayfa açılışını geciktiren tam arka plan indirmesi (autoFetch) kaldırılarak 256 KB'lık optimize byte-range akışına geçildi.",
-    "Service Worker'ın PDF Range (206) akışlarını yutup önbellek iş parçacığını kilitlemesi engellendi; PDF range istekleri doğrudan tarayıcının yerel yüksek hızlı ağına bağlandı.",
-    "Tüm arşiv PDF dosyaları web için linearize edilerek (Fast Web View) ilk sayfanın ilk 256 KB'lık veriyle anında ekrana gelmesi sağlandı."
+    "Kurul 2 Tıbbi Farmakoloji arşiv dersi 'Adrenoseptör Antagonist İlaçlar' (Ders 47) tam içerikle sisteme eklendi ve Oracle canlı ortamına alındı.",
+    "70 sayfalık amfi ders notunun tamamı sıfır bilgi kaybıyla 34 adımlık interaktif Öğren destesi, ders sonu oyunları ve EMA Lightning GPU seslendirmesiyle işlendi.",
+    "Moleküler adrenerjik farmakoloji, alfa ve beta blokör sınıflandırmaları, katekolamin sentezi ve hücresel sinyal yolaklarına yönelik canlı kontur çizimleri hazırlandı.",
+    "Oracle canlı ortamındaki aktif arşiv paketi sayısı 59'a ulaştı."
   ],
-  "eklenen": [],
+  "eklenen": [
+    "meds_database_25_26/medspak/kurul2/y25-k2-47-adrenoseptor-antagonist-ilaclar.medspak",
+    "meds_database_25_26/paketler/kurul2/y25-k2-47-adrenoseptor-antagonist-ilaclar.json",
+    "meds/data/arsiv_25_26/decks/k2p-y25-k2-47-adrenoseptor-antagonist-ilaclar.json"
+  ],
   "degisen": [
-    "meds/src/components/learn/pdf/PdfDocView.tsx",
-    "meds/public/sw.js",
-    "meds/src/services/pwaService.ts",
-    "meds/server.ts"
+    "meds/data/arsiv_25_26/sesli_anlatim/dersler.json",
+    "meds/data/arsiv_25_26/sesli_anlatim/kayit.json"
   ],
   "duzeltilen": [
-    "Arşiv sesli derslerinde PDF'in dakikalarca yüklenmemesi veya context canceled zaman aşımına düşmesi sorunu giderildi",
-    "Service Worker üzerinden geçen PDF Range/206 isteklerinin tarayıcı tamponuna takılması ve donması önlendi"
+    "Adrenoseptör antagonist ilaçlar dersinde şekil ve tablo sayfaları için canlı çizim (kontur) optimizasyonu tamamlandı"
   ],
-  "silinen": [
-    "CanliDersDers.tsx içerisindeki zamansız sayfaCizimleri toplayıcısı"
-  ]
+  "silinen": []
 }

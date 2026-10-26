@@ -579,3 +579,36 @@ Her maddede: belirti · kök neden · Kurul 2 kuralı · kapı durumu. Kanıtlar
 
 
 
+
+## H64 — Sayfa haritası adım numaraları tekrar sayfalarını saymıyordu; kısa/eksik kanıt (2026-10-26, k2-22 psikosomatik)
+- **Belirti:** `denetle.py` 76 HATA: adım 8–31 için "pdfSayfalari [n] ama harita [n+1] diyor", başlık aralıkları içerik adımı değil, bilgi/harita alıntıları 3 kelime ya da yok.
+- **Kök neden:** `sayfa_haritasi.json` `adimlar` alanı desteden ayrı, CHECKPOINT slaytları sayılmadan numaralandırılmıştı; her checkpoint'ten sonra kayma büyüdü. Yalnız görsel olan sayfalarda (s.6, s.30: kaynak.md metni yok) `alinti` yazılamadığı için kanıt boş bırakılmıştı; tablo/liste sayfalarında tek satırlık (3 kelime) alıntı seçilmişti.
+- **Çözüm / kural:** Harita `adimlar`ı daima son destenin içerik slaytlarının `pdfSayfalari`ndan türetilir (checkpoint/oyun hariç); başlık `adimlar` = kapsadığı sayfaların ilk/son içerik adımı. Metinsiz görsel sayfada `kanit: {sayfa, gorsel: "≥4 kelime görülen"}` kullanılır; alıntı kaynak.md'de birebir geçen ≥4 kelime olur.
+
+## H65 — Tablo sayfasında tabloyu anlatmayan cümleye şekil/tablo çapası (2026-10-26, k2-23 cinsel kimlik)
+- **Belirti:** `arsiv_yayinla.py` 4/6'da `cizim_kapisi.py` 1 HATA: `K1 P19.C3: şekil çapası var ama lazer sayfa (s.21)`.
+- **Kök neden:** s.21 (organik/psikojenik karşılaştırma tablosu) paragrafındaki son cümle ("Çıkmışta da sorulduğu gibi… tıbbi durum ve kullandığı ilaçlar değerlendirilir") tablonun hiçbir satırını anlatmıyor (`satir: []`), ama yazar paragrafın tüm cümlelerine aynı `sekil`/`tablo: true` çapasını kopyalamıştı. Eşleşecek tablo satırı olmadığından lazer tabloya değil sayfaya düştü.
+- **Çözüm / kural:** Şekil/tablo çapası yalnız görseli/satırı gerçekten anlatan cümleye yazılır; paragrafın sonraki cümlelerine kopyalanmaz. Tablo çapalı cümlede `satir` boşsa çapa yazılmaz. Düzeltme: o cümlenin `sekil`'i `null` yapıldı, `tablo` kaldırıldı (capa + v2 + taslak kopyaları, `sekil_cizim.py sus` ile aynı yöntem); kapı gevşetilmedi, yayın 0 HATA ile tamamlandı.
+
+## H66 — İlgili çıkmış sorular sesli derste hiçbir cümleye bağlanmamış (2026-10-26, k2-24 epilepsi)
+- **Belirti:** `arsiv_yayinla.py` 1/6'da 8 adet `sesli_kapsam: çıkmış …: bilgisi anlatılmamış (cümlenin cikmis listesine bağla)`.
+- **Kök neden:** Bilgiler anlatılmıştı (s.5, 15, 33, 45, 50), ama `cikmis_baglantilari.json`'da `ilgili: true` olan sorular `konusma_v2.json` cümlelerinin `cikmis` listesine yazılmamıştı (tüm cümlelerde `cikmis: []`); sesli çıkmış uyarısı da yoktu.
+- **Çözüm / kural:** Yazar, `ilgili: true` her çıkmışı `kanit.sayfa`/`slideNumber` sayfasında bilgiyi taşıyan cümlenin `cikmis` listesine bağlar ve o cümlede sesli uyarı ("Bu bilgi çıkmış sorularda soruldu.") verir. Kapı (`isle.py::cikmis_ses_kapsam`) gevşetilmedi.
+
+## H67 — H64 tekrarı: harita adımları checkpoint'siz sayıldı + deste `bolum` alt başlık numarası (2026-10-26, k2-26 nörolojik hastalıklar genetiği)
+- **Belirti:** `denetle.py` 112 HATA: "pdfSayfalari [n] ama harita [m] diyor", başlık aralıkları içerik adımı değil, "bolum '1.1' basliklar'da yok", ana başlıklar 54/60 adımı kapsıyor.
+- **Kök neden:** (1) `sayfa_haritasi.json` `adimlar` (sayfa ve başlık) içerik sırası (1..60) ile yazıldı, `slideNumber` (checkpoint dahil 1..68) ile değil — H64'ün aynısı. (2) 1. parçanın slaytlarına `basliklar`da olmayan alt numara (`1.1`–`1.8`) yazıldı. (3) Fakomatoz (s.61–71) ve işitme (s.90–102) sayfalarında harita bir adım kaymış; adım 1'e s.3 (içindekiler) dahil edilmiş.
+- **Çözüm / kural:** Harita `adimlar` daima deste `slideNumber`'ıdır; `bolum` yalnız `basliklar[].no` değerlerinden biri olur (alt başlık yoksa ana no). Kayma görülürse hangi tarafın doğru olduğu sayfa `ne_anlatiliyor` ile slayt başlığı karşılaştırılarak seçilir; içindekiler/kapak sayfası hiçbir adımın `pdfSayfalari` aralığına girmez.
+
+## H68 — H66 tekrarı + süs bölüm sayfaları `sekil` türünde (2026-10-26, k2-27 periyodik muayeneler)
+- **Belirti:** `arsiv_yayinla.py`'de 15 `sesli_kapsam: çıkmış …: bilgisi anlatılmamış` + 8 "s. n (sekil) anlatılmamış" (bölüm başlık/kapanış süs sayfaları).
+- **Kök neden:** (1) H66'nın aynısı: 248 cümlenin hiçbirinde `cikmis` dolu değil, ilgili 15 soru bağlanmamış. (2) `sayfa_haritasi.json`'da yalnız süs görselli bölüm başlık sayfaları (s.18, 26, 39, 51, 52, 107, 130, 135) `tur: sekil` yazılmış; kapı bunları anlatılacak şekil sayar.
+- **Çözüm / kural:** Çıkmışlar `kanit.sayfa` cümlelerine bağlandı (c0003, c0037, c0047, c0101, c0112, c0204, c0213, c0218, c0222) ve sesli uyarı eklendi; süs bölüm sayfaları `tur: kapak` yapıldı. Haritacı, bilgi taşımayan bölüm başlık/kapanış sayfalarını `kapak` yazar; sesli yazar H66 adımını atlamaz. Kapı gevşetilmedi.
+
+- **2026-10-26 (k2-29):** `cikmis_baglantilari.json`'da `ilgili: true` olan çıkmışın bilgisi cümlede anlatılsa da cümlenin `cikmis` listesine kimliği yazılmadı ve sesli uyarı yoktu → `sesli_kapsam` yayını durdurdu. Önleme: sesli metin yazarı her ilgili çıkmışı `kanit.sayfa` sayfasındaki cümleye bağlar ve o cümlede "bu bilgi çıkmışta soruldu" der (kapı: `isle.cikmis_ses_kapsam`).
+
+## H69 — `cikmis_baglantilari.json` liste yerine nesne sarmalayıcısıyla yazıldı (2026-10-26, k2-46 sempatomimetikler)
+- **Belirti:** `arsiv_yayinla.py` 5/6'da `AttributeError: 'str' object has no attribute 'get'` hatası vererek durdu (`bag_sayisi = len([x for x in json.loads(...) if x.get("ilgili")])`).
+- **Kök neden:** `cikmis_baglantilari.json` dosyası doğrudan liste (`list[dict]`) olmak yerine `{"baglantilar": [...]}` şeklinde sözlük olarak yazılmıştı. Sözlük üzerinde iterasyon yapıldığında string anahtarlar dönmüş ve `.get()` patlamıştı.
+- **Çözüm / kural:** `cikmis_baglantilari.json` daima kökte bir liste (`[{"soru_id": ..., "soru": ..., "ilgili": bool, "aciklama": ...}]`) olarak yazılır. `denetle.py` ve `arsiv_yayinla.py` doğrudan liste formatı bekler. Dosya düzeltildi, 0 HATA ile Oracle'a dağıtıldı.
+
