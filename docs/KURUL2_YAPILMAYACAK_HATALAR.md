@@ -617,3 +617,18 @@ Her maddede: belirti · kök neden · Kurul 2 kuralı · kapı durumu. Kanıtlar
 - **Kök neden:** Taslak ve sesli metin üretiminde sayfa başına mekanik olarak tam 2 kısa cümle yazan bir şablon kullanılmış; bu şablon kapıların asgari kelime/sayfa şartlarını yüzeysel olarak karşılasa da gerçek amfi anlatımının %60–75'ini dışarıda bırakmıştı.
 - **Çözüm / kural:** Sayfa başına yüzeysel 2 cümlelik kopyala-yapıştır şablonlar KESİNLİKLE YASAKTIR. Her slayt için amfi ders notundaki tüm maddeleri, tabloları, spesifik ilaç isimlerini, maksimum dozları ve patofizyolojik mekanizmaları kapsayan 3 ila 6 zengin cümle yazılmalıdır (35–70 slaytlık dersler için 140–250+ cümle, ~2000–3500 kelime, 15–25 dakika anlatım derinliği). K48 bu standartla baştan üretildi (144 cümle, 2438 kelime, 68 atomik bilgi, 10/10 çizim, 6.23 MB .medspak) ve 0 HATA ile Oracle canlı ortamına alındı.
 
+
+## H71 — PDF metnindeki ayrışık (decomposed) harfler terim eşleşmesini bozuyordu (2026-10-26, k2-07 genel anestezik ilaçlar)
+- **Belirti:** `terim_sozlugu.py dogrula` doğru yazılmış terimler için "bu sayfanın metninde bulunamadı" HATAsı verdi: "retiküler aktive edici sistemde", "Antikonvülzandır", "venöz irritasyon". Slayt metnini `dok` çıktısında da "retiküler" gibi bozuk görünüyordu.
+- **Kök neden:** PDF'ten gelen kelimede "ü" tek kod noktası değil, "u" + birleşik inceltme (U+0308) olarak ayrışık yazılmıştı. `TOK` düzeni birleşik işareti kelime karakteri saymadığı için kelime iki parçaya bölünüyor, `katla()` sonrası "antikonvu" + "lzandir" gibi anlamsız parçalar oluşuyordu; terim hiçbir zaman eşleşmiyordu.
+- **Çözüm / kural:** `Sayfa` sınıfı PDF kelimelerini okurken `unicodedata.normalize("NFC", w)` uygular; `bul()` de terimi NFC'ye çevirip token'lara ayırır. Kapı gevşetilmedi. Yeni PDF okuyan her betik kelimeleri NFC'ye çevirmeden eşleştirme yapmamalıdır.
+
+## H72 — Çok sözcüklü terimin kısa son sözcüğü ek aldığında eşleşmiyordu (2026-10-26, k2-07 genel anestezik ilaçlar)
+- **Belirti:** "Serebral metabolik hız" terimi slaytta "Serebral metabolik hızın azaltılması" olarak geçtiği hâlde "bulunamadı" HATAsı verdi.
+- **Kök neden:** `ek_mi()` yanlış eşleşmeyi önlemek için 4 harf ve altındaki sözcüklerde yalnız birebir eşleşmeye izin veriyordu; "hız" 3 harf olduğu için "hızın" reddediliyordu. Oysa terimin önceki sözcükleri ("serebral metabolik") bağlamı zaten daraltıyor.
+- **Çözüm / kural:** `ek_mi(..., kisa_izin=True)` yalnız **çok sözcüklü** terimin **son** sözcüğünde ve terim en az 8 karakterken kullanılır; tek sözcüklü kısa terimlerde (kısaltmalar) davranış değişmedi. Eşleşme gevşetilmedi, yalnız Türkçe ek kuralı bağlamla birlikte uygulandı.
+
+## H73 — `terim/` klasörü dağıtım betiğinin veri listesinde yoktu; terim dosyaları canlıya ulaşamıyordu (2026-10-26)
+- **Belirti:** Terim yardımcısı yerelde çalışıyor, canlıda `/api/canli-ders/...` yanıtında `terim` alanı hiç gelmiyordu (k2-02, k2-07 dahil tüm dersler).
+- **Kök neden:** `deploy-code.sh` ana rsync'i `/data` klasörünü dışlıyor; `data/sesli_anlatim` altındaki klasörler [1b] adımındaki sabit listeden aktarılıyor. Liste `metin hizalama vurgu capa cizim ogrenci_not cikmis_konum` idi ve `terim` eklenmemişti; yeni bir veri türü eklenirken dağıtım listesi güncellenmemişti.
+- **Çözüm / kural:** Listeye `terim` eklendi. `data/sesli_anlatim` altına yeni bir veri türü ekleyen her oturum, `deploy-code.sh` [1b] listesini de günceller; dağıtımdan sonra canlı API yanıtında alanın varlığı `curl` ile doğrulanır.
