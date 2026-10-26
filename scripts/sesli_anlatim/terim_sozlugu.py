@@ -110,6 +110,9 @@ class Sayfa:
         alt = 0.0
         for x0, y0, x1, y1, w, b, ln, _ in pg.get_text("words"):
             w = unicodedata.normalize("NFC", w)  # "u"+U+0308 → "ü": ayrışık yazılmış harfler eşleşmeyi bozuyordu
+            # Madde imi (Wingdings "o") metne kelimeye yapışık geliyor ("oCVS", "oFetoskopi"); imi ayır ki terim eşleşsin.
+            if len(w) > 1 and w[0] == "o" and w[1].isupper():
+                w = w[1:]
             kutu = [max(0, x0 / W), max(0, y0 / H), min(1, x1 / W), min(1, y1 / H)]
             alt = max(alt, kutu[3])
             if (b, ln) != son and satir:

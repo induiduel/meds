@@ -271,6 +271,38 @@
   "uretici": "deepseek",
   "ders": "k1-32-tumor-immunolojisi-ve-metastaz-mekanizmalari"
  },
+ "de novo": {
+  "term": "De novo",
+  "category": "terim",
+  "definition": "Ebeveynlerin kromozomları normal olduğu hâlde çocukta yeni ortaya çıkan kromozom anomalisi. Tekrarlama riski düşüktür.",
+  "kaynak": "deepseek",
+  "uretici": "deepseek",
+  "ders": "k1-35-prenatal-tani-yontemleri"
+ },
+ "afp": {
+  "term": "AFP",
+  "category": "terim",
+  "definition": "Alfa fetoprotein; fetüs karaciğerinden salgılanan protein. Anne kanındaki yüksekliği nöral tüp defektini düşündürür.",
+  "kaynak": "deepseek",
+  "uretici": "deepseek",
+  "ders": "k1-35-prenatal-tani-yontemleri"
+ },
+ "cvs": {
+  "term": "CVS",
+  "category": "terim",
+  "definition": "Koryon villus biyopsisinin kısaltması. Plasentadan doku örneği alınarak yapılan invaziv prenatal tanı yöntemidir.",
+  "kaynak": "deepseek",
+  "uretici": "deepseek",
+  "ders": "k1-35-prenatal-tani-yontemleri"
+ },
+ "ntd": {
+  "term": "NTD",
+  "category": "terim",
+  "definition": "Nöral tüp defekti; beyin ve omuriliğin embriyonik dönemde kapanma kusuru. Anne serumunda AFP yüksekliği ve ultrasonografi ile taranır.",
+  "kaynak": "deepseek",
+  "uretici": "deepseek",
+  "ders": "k1-35-prenatal-tani-yontemleri"
+ },
  "45,x": {
   "term": "45,X",
   "category": "terim",
@@ -283,6 +315,22 @@
   "term": "47,XXY",
   "category": "terim",
   "definition": "Erkek fenotipinde en sık görülen seks kromozomu anöploidisidir (yaklaşık 1/500 erkek doğum). Bir veya daha fazla fazladan X kromozomu bulunması ile karakterizedir; testisler küçük, testosteron düzeyi düşüktür.",
+  "kaynak": "deepseek",
+  "uretici": "deepseek",
+  "ders": "k1-35-prenatal-tani-yontemleri"
+ },
+ "invaziv yontemler": {
+  "term": "İnvaziv yöntemler",
+  "category": "terim",
+  "definition": "Vücut içine girişim gerektiren prenatal tanı yöntemleri. Amniyosentez, koryon villus biyopsisi ve kordosentez bu gruba girer.",
+  "kaynak": "deepseek",
+  "uretici": "deepseek",
+  "ders": "k1-35-prenatal-tani-yontemleri"
+ },
+ "non-invaziv yontemler": {
+  "term": "Non-invaziv yöntemler",
+  "category": "terim",
+  "definition": "Vücuda girişim yapılmadan uygulanan prenatal tanı yöntemleri. Ultrasonografi ve anne kanı testleri bu gruba girer.",
   "kaynak": "deepseek",
   "uretici": "deepseek",
   "ders": "k1-35-prenatal-tani-yontemleri"
@@ -422,6 +470,94 @@
   "kaynak": "deepseek",
   "uretici": "deepseek",
   "ders": "k1-54-uterus-duz-kas-ve-trofoblastik-tumorleri"
+ },
+ "germ hucreli tumor": {
+  "term": "Germ hücreli tümör",
+  "category": "terim",
+  "definition": "Yumurta hücresi öncüllerinden gelişen tümör. Genç kadınlarda görülür ve teratom bu grubun en tipik üyesidir.",
+  "kaynak": "deepseek",
+  "uretici": "deepseek",
+  "ders": "k1-55-over-tumorleri"
+ },
+ "stic": {
+  "term": "STIC",
+  "category": "terim",
+  "definition": "Seröz tubal intraepitelyal karsinom. Fallop tüpü epiteliyle sınırlı, yüksek dereceli seröz karsinomun öncüsü sayılan lezyondur.",
+  "kaynak": "deepseek",
+  "uretici": "deepseek",
+  "ders": "k1-55-over-tumorleri"
+ },
+ "seroz": {
+  "term": "Seröz",
+  "category": "terim",
+  "definition": "Fallop tüpü epiteline benzeyen hücrelerden oluşan tümör grubu. Overin en sık görülen malign tümörüdür.",
+  "kaynak": "deepseek",
+  "uretici": "deepseek",
+  "ders": "k1-55-over-tumorleri"
+ },
+ "musinoz": {
+  "term": "Müsinoz",
+  "category": "terim",
+  "definition": "Sitoplazmasında bol müsin bulunan hücrelerden oluşan tümör. Genellikle tek taraflı, büyük ve çok bölmeli kist yapar.",
+  "kaynak": "deepseek",
+  "uretici": "deepseek",
+  "ders": "k1-55-over-tumorleri"
+ },
+ "endometrioid": {
+  "term": "Endometrioid",
+  "category": "terim",
+  "definition": "Endometriuma benzeyen bez yapıları gösteren tümör. Sıklıkla endometriozis zemininde gelişir.",
+  "kaynak": "deepseek",
+  "uretici": "deepseek",
+  "ders": "k1-55-over-tumorleri"
+ },
+ "borderline": {
+  "term": "Borderline",
+  "category": "terim",
+  "definition": "Sınırda tümör. Stromaya invazyon göstermeyen, davranışı benign ile malign arasında kalan over tümörüdür.",
+  "kaynak": "deepseek",
+  "uretici": "deepseek",
+  "ders": "k1-55-over-tumorleri"
+ },
+ "tip i karsinom": {
+  "term": "Tip I karsinom",
+  "category": "terim",
+  "definition": "Borderline tümör veya endometriozisten gelişen, düşük dereceli seröz, endometrioid ve müsinöz tümörleri içeren grup.",
+  "kaynak": "deepseek",
+  "uretici": "deepseek",
+  "ders": "k1-55-over-tumorleri"
+ },
+ "tip ii karsinom": {
+  "term": "Tip II karsinom",
+  "category": "terim",
+  "definition": "Seröz intraepitelyal karsinomdan gelişen, hızlı seyirli yüksek dereceli seröz karsinomu içeren grup.",
+  "kaynak": "deepseek",
+  "uretici": "deepseek",
+  "ders": "k1-55-over-tumorleri"
+ },
+ "kolumnar epitel": {
+  "term": "Kolumnar epitel",
+  "category": "terim",
+  "definition": "Uzun ve silindirik hücrelerden oluşan tek katlı epitel. Benign seröz kistlerin iç yüzünü döşer.",
+  "kaynak": "deepseek",
+  "uretici": "deepseek",
+  "ders": "k1-55-over-tumorleri"
+ },
+ "psammoma cisimcikleri": {
+  "term": "Psammoma cisimcikleri",
+  "category": "terim",
+  "definition": "İç içe halkalar biçiminde konsantrik kalsifikasyonlar. Seröz tümörlerde sık görülür ama neoplaziye özgü değildir.",
+  "kaynak": "deepseek",
+  "uretici": "deepseek",
+  "ders": "k1-55-over-tumorleri"
+ },
+ "bilateralite": {
+  "term": "Bilateralite",
+  "category": "terim",
+  "definition": "Tümörün iki overde birden bulunması. Metastatik Krukenberg tümörünü primer over tümöründen ayırmada önemli ipucudur.",
+  "kaynak": "deepseek",
+  "uretici": "deepseek",
+  "ders": "k1-55-over-tumorleri"
  },
  "sertoli–leydig hucreli tumor": {
   "term": "Sertoli–Leydig hücreli tümör",

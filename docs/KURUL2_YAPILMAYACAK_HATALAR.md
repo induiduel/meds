@@ -632,3 +632,8 @@ Her maddede: belirti · kök neden · Kurul 2 kuralı · kapı durumu. Kanıtlar
 - **Belirti:** Terim yardımcısı yerelde çalışıyor, canlıda `/api/canli-ders/...` yanıtında `terim` alanı hiç gelmiyordu (k2-02, k2-07 dahil tüm dersler).
 - **Kök neden:** `deploy-code.sh` ana rsync'i `/data` klasörünü dışlıyor; `data/sesli_anlatim` altındaki klasörler [1b] adımındaki sabit listeden aktarılıyor. Liste `metin hizalama vurgu capa cizim ogrenci_not cikmis_konum` idi ve `terim` eklenmemişti; yeni bir veri türü eklenirken dağıtım listesi güncellenmemişti.
 - **Çözüm / kural:** Listeye `terim` eklendi. `data/sesli_anlatim` altına yeni bir veri türü ekleyen her oturum, `deploy-code.sh` [1b] listesini de günceller; dağıtımdan sonra canlı API yanıtında alanın varlığı `curl` ile doğrulanır.
+
+## H74 — Madde imi kelimeye yapışık gelince terim işaretlenemiyordu (2026-10-26, k1-35 prenatal tanı)
+- **Belirti:** "CVS", "Fetoskopi", "Koryon villus biyopsisi", "PAPP-A", "İnvaziv yöntemler" terimleri slaytta açıkça yazdığı hâlde kapı "bu sayfanın metninde bulunamadı" HATAsı verdi.
+- **Kök neden:** Slaytlarda madde imi Wingdings "o" karakteridir ve PDF metnine kelimeye bitişik geliyor ("oCVS", "oFetoskopi", "oİnvaziv"). `TOK` bu birleşik diziyi tek kelime saydığı için "ocvs" üretiliyor, gerçek terim hiç eşleşmiyordu.
+- **Çözüm / kural:** `Sayfa` kelimeyi okurken baştaki "o" yalnız **ardından büyük harf geliyorsa** (madde imi kalıbı) ayrılır; kutu aynı kalır. Madde başındaki terimler de artık işaretlenir. Kapı gevşetilmedi.

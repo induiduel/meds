@@ -1,11 +1,12 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 371,
-  "baslik": "Terim Yardımcısı Denetimi: Böbrek Tümörleri ve Antibiyotik Direnci",
+  "onem": 372,
+  "baslik": "Terim Yardımcısı Denetimi: Over Tümörleri ve Prenatal Tanı",
   "maddeler": [
-    "Böbrek Tümörleri dersinde 108 terim denetlendi; gündelik sözcükler (büyüme, kanama gibi) ayıklandı, yerine onkositoma, nefroblastom, kromofob karsinom, VHL geni, hemanjiyoblastom, eritropoietin gibi 11 zor terim eklendi.",
-    "Mikroorganizmalarda Direnç dersinde plazmid, beta laktamaz, genişlemiş spektrumlu beta laktamaz, karbapenemaz, aminoglikozid, DNA-giraz, MRSA, VISA gibi 17 temel terim eklendi (26 → 43).",
-    "Terimler sayfasındaki ortak sözlüğe 24 yeni terim eklendi."
+    "Over Tümörleri dersinde seröz, müsinoz, endometrioid, borderline, Tip I ve Tip II karsinom, STIC, psammoma cisimcikleri, bilateralite gibi 12 zor terim eklendi; gündelik sözcükler ayıklandı.",
+    "Prenatal Tanı Yöntemleri dersine invaziv ve non-invaziv yöntemler, CVS, NTD, AFP, PAPP-A, fetoskopi, koryon villus biyopsisi, de novo gibi 9 terim eklendi.",
+    "PDF'te madde imi kelimeye yapışık geldiğinde (oCVS, oFetoskopi) madde başındaki terimler artık işaretlenebiliyor.",
+    "Terimler sayfasındaki ortak sözlüğe 17 yeni terim eklendi."
   ],
   "eklenen": [
     "data/sesli_anlatim/terim/k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim.json",
