@@ -9,7 +9,7 @@ Her slayt için öğrencinin takılabileceği sözcükleri seç (sayfa başına 
 - `latince`: Latince/yabancı sözcük ve kalıp (ör. *in situ*, *corpus luteum*, *-itis* ekli adlar),
 - `karisan`: sık karıştırılan terim — `f` alanına karıştırıldığı terimi yaz (ör. hiperplazi ↔ hipertrofi),
 - `kisaltma`: kısaltma (açılımı + ne olduğu).
-Gündelik Türkçe sözcükleri, başlık kelimelerini ve aynı terimin tekrarlarını seçme. Aynı terim başka sayfada da
+**Türkçe kökenli sözcükleri seçme** (gelişme, bilinç, ağrı, kanama, bozukluk, yetmezlik …; kapı HATA verir). Gündelik Türkçe sözcükleri, başlık kelimelerini ve aynı terimin tekrarlarını seçme. Aynı terim başka sayfada da
 geçiyorsa her sayfada yeniden yazılabilir (öğrenci o sayfadadır).
 
 ## Açıklama (`a`)

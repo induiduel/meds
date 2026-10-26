@@ -1,4 +1,5 @@
 import rawGlossary from './medical_glossary.json';
+import terimYardimci from './terim_yardimcisi_sozluk.json';
 import { safeJsonFetch } from '../services/api';
 import { contentReady, isContentChanged, onContentChanged } from '../services/contentLive';
 
@@ -120,6 +121,15 @@ function ingest(rawGlossary: unknown) {
         }
       }
     }
+  }
+  // Sesli ders terim yardımcısının terimleri (terim_sozlugu.py sozluk_disa): yalnız sözlükte olmayanlar eklenir
+  for (const v of Object.values(terimYardimci as Record<string, any>)) {
+    const term = String(v?.term || '').trim();
+    if (!term || !v.definition || termMap.has(term.toLowerCase())) continue;
+    termMap.set(term.toLowerCase(), {
+      term, category: CATEGORY_LABELS[String(v.category)] || 'Tıbbi terim', definition: String(v.definition),
+      clinicalPearls: v.clinicalPearl || undefined, badgeColor: 'teal',
+    });
   }
 }
 ingest(rawGlossary);

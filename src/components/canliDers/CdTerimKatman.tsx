@@ -123,28 +123,36 @@ export const CdTerimKatman = React.memo(function CdTerimKatman({ sayfa, gizle }:
   );
 });
 
-const kucuk = (s: string) => s.toLocaleLowerCase('tr');
+// Python terim_sozlugu.py ile aynı katlama ve ek kuralı: kısa terim (≤4) birebir; uzun terimde kalan yalnız Türkçe ek dizisi
+const KATLA: Record<string, string> = { ç: 'c', ğ: 'g', ı: 'i', ö: 'o', ş: 's', ü: 'u', â: 'a', î: 'i', û: 'u' };
+const katla = (w: string) => w.toLocaleLowerCase('tr').replace(/[çğıöşüâîû]/g, (c) => KATLA[c]).split(/['’]/)[0];
+const EK = /^(?:y?(?:i|u|a|e)?(?:n|m|miz|niz|ler|lar|si|su|leri|lari)?(?:in|un|nin|nun|i|u|a|e|ye|ya|de|da|te|ta|den|dan|ten|tan|le|la|yle|yla|dir|dur|tir|tur|ki|ken|li|lu|siz|suz|lik|luk|sel|sal|ce|ca)?){0,3}$/;
+const TOK = /[\p{L}\p{N}]+(?:[-'’][\p{L}\p{N}]+)*/gu;
+const uyar = (p: string, w: string) => w === p || (p.length > 4 && w.startsWith(p) && w.length - p.length <= 7 && EK.test(w.slice(p.length)));
 
-/** Konuşmacı metninde paragrafın altı: o paragrafın slayt(lar)ındaki ve paragrafta geçen terimler (seslendirilmez) */
-export function CdParagrafTerimleri({ detay, i, metin }: { detay: CdDetay; i: number; metin: string }) {
+/** Konuşmacı metninde paragrafın altı: dersin terimlerinden bu paragrafta (ekli hâli dahil) geçenler (seslendirilmez) */
+export function CdParagrafTerimleri({ detay, metin }: { detay: CdDetay; i?: number; metin: string }) {
   const acik = useTerimYardimci();
+  const tum = useMemo(() => {
+    const m = new Map<string, { x: CdTerim; p: string[] }>();
+    for (const d of Object.values(detay.terim || {})) for (const sy of Object.values(d)) for (const x of sy.t) {
+      const p = (x.t.match(TOK) || []).map(katla).filter(Boolean);
+      const k = p.join(' ');
+      if (p.length && !m.has(k)) m.set(k, { x, p });
+    }
+    return [...m.values()];
+  }, [detay.terim]);
   const liste = useMemo(() => {
-    const es = detay.pdf?.paragraflar[i];
-    if (!detay.terim || !es) return [];
-    const yerler = new Set<string>([`${es.dosya || 0}:${es.sayfa}`]);
-    (es.sayfalar || []).forEach((s, c) => yerler.add(`${es.dosyalar?.[c] ?? es.dosya ?? 0}:${s}`));
-    const m = kucuk(metin);
-    const out = new Map<string, CdTerim>();
-    for (const y of yerler) {
-      const [d, s] = y.split(':');
-      for (const x of detay.terim[d]?.[s]?.t || []) {
-        const ilk = kucuk(x.t).split(/\s+/)[0];
-        const kok = ilk.length > 5 ? ilk.slice(0, Math.max(5, ilk.length - 2)) : ilk;
-        if (m.includes(kok) && !out.has(kucuk(x.t))) out.set(kucuk(x.t), x);
+    if (!acik || !tum.length) return [];
+    const w = (metin.match(TOK) || []).map(katla);
+    const out: CdTerim[] = [];
+    for (const { x, p } of tum) {
+      for (let i = 0; i + p.length <= w.length; i++) {
+        if (p.every((q, j) => uyar(q, w[i + j]))) { out.push(x); break; }
       }
     }
-    return [...out.values()];
-  }, [detay.terim, detay.pdf, i, metin]);
+    return out;
+  }, [acik, tum, metin]);
   if (!acik || !liste.length) return null;
   return (
     <dl className="cd-p-trm" aria-label="Bu paragraftaki terimler (seslendirilmez)">

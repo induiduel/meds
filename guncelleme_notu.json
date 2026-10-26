@@ -1,24 +1,29 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 368,
-  "baslik": "Sesli Derste Terim Yardımcısı ve PDF Görünüm Anahtarları",
+  "onem": 369,
+  "baslik": "Kurul 2 Derslerinde Terim Yardımcısı İçeriği (Bilinç Bozukluğu, Genel Anestezik İlaçlar)",
   "maddeler": [
-    "Sesli ders PDF çubuğuna 'Terimler' düğmesi eklendi: açıkken slayttaki tıbbi, Latince ve karıştırılabilir terimler hafif sarı ve kesikli altı çizili işaretlenir; dokununca anlamı kelimenin üstünde/altında açılır.",
-    "Terim açıklamaları konuşmacı metninde paragrafın altında da yazılır (seslendirilmez).",
-    "Yeni 'Görünüm' menüsü: canlı resim işaretçisi, tablo işaretçisi, kelime ilişki okları, metin vurgusu ve öğrenci/hoca vurgusu tek tek kapatılarak PDF sadeleştirilebilir."
+    "Bilinç Bozukluğu Olan Hastaya Yaklaşım dersine 133, Genel Anestezik İlaçlar dersine 212 terim eklendi; Terimler düğmesi açıkken bu terimler slaytta işaretlenir ve dokununca 1-2 cümlelik açıklaması açılır.",
+    "Açıklamalar hem PDF slaytında hem konuşmacı metninde paragraf altında görünür; seslendirilmez.",
+    "Terimler sayfasındaki ortak sözlüğe Kurul 2 terimleri de eklendi.",
+    "PDF metnindeki ayrışık yazılmış Türkçe harfler düzeltildi; terim eşleştirmesi artık bu slaytlarda da çalışıyor."
   ],
   "eklenen": [
-    "src/components/canliDers/CdTerimKatman.tsx",
-    "scripts/sesli_anlatim/terim_sozlugu.py",
-    "scripts/sesli_anlatim/TALIMAT_TERIM.md"
+    "data/sesli_anlatim/terim/k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim.json",
+    "data/sesli_anlatim/terim/k2-07-genel-anestezik-ilaclar.json",
+    "src/data/terim_yardimcisi_sozluk.json",
+    "scripts/sesli_anlatim/terim_analiz.py"
   ],
   "degisen": [
-    "src/components/canliDers/CanliDersDers.tsx",
-    "src/styles/canli-ders.css",
-    "src/services/canliDers.ts",
-    "otomasyon/ders_zinciri.py",
-    "otomasyon/hat.json"
+    "scripts/sesli_anlatim/terim_sozlugu.py",
+    "scripts/sesli_anlatim/pdf_isaret.py",
+    "scripts/sesli_anlatim/TALIMAT_TERIM.md",
+    "src/data/glossary.ts",
+    "src/components/canliDers/CdTerimKatman.tsx"
   ],
-  "duzeltilen": [],
+  "duzeltilen": [
+    "PDF'ten okunan kelimelerde 'u'+birleşik inceltme (ayrışık yazım) terim eşleşmesini bozuyordu; metin NFC biçimine çevriliyor.",
+    "Çok sözcüklü terimlerin son sözcüğü kısayken (serebral metabolik hız → hızın) ekli geçişler eşleşmiyordu."
+  ],
   "silinen": []
 }

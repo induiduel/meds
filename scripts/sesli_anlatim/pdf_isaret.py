@@ -52,6 +52,12 @@ MEDS = Path(__file__).resolve().parents[2]
 KOK = MEDS / "data" / "sesli_anlatim"
 CIKTI = KOK / "isaret"
 API = os.environ.get("MEDS_API", "http://127.0.0.1:3000")
+# Üretim sunucusunun bot koruması urllib'in varsayılan kimliğini 403 ile reddediyor: açık kimlik gönderilir.
+UA = {"User-Agent": "medsor-sesli-anlatim/1"}
+
+
+def api_iste(url: str, timeout: int = 30) -> "urllib.request.Request":
+    return urllib.request.Request(url, headers=UA)
 KELIME = re.compile(r"[\wçğıöşüâîû]+", re.I)
 MADDE_IMI = re.compile(r"^(?:[•●▪■◦○➢➤►▶✓✔\-–—*]|\d{1,2}[.)]|[a-zA-Z][.)])$")
 GORSEL = re.compile(r"\b(görsel|görüntü|şekil|resim|fotoğraf|grafik|şema|tablo|çizim|mikrograf|kesit|plak|görürsünüz|görüyoruz|görülüyor|görülen|bakın|bakalım)", re.I)
@@ -413,7 +419,7 @@ def pdf_indir(deck_id: str, f: dict, fi: int) -> Path | None:
     ON = Path(os.environ.get("PDF_ONBELLEK", str(KOK / ".pdf_onbellek")))
     ON.mkdir(parents=True, exist_ok=True)
     try:
-        with urllib.request.urlopen(f"{API}/api/lecture-pdf/deck/{urllib.parse.quote(deck_id)}", timeout=30) as r:
+        with urllib.request.urlopen(api_iste(f"{API}/api/lecture-pdf/deck/{urllib.parse.quote(deck_id)}"), timeout=30) as r:
             dosyalar = json.load(r).get("files") or []
     except Exception:
         return None
@@ -423,7 +429,7 @@ def pdf_indir(deck_id: str, f: dict, fi: int) -> Path | None:
     hedef = ON / f"{deck_id}_{i}_{dosyalar[i].get('size') or 0}.pdf"
     if not hedef.exists():
         try:
-            with urllib.request.urlopen(f"{API}/api/lecture-pdf/deck/{urllib.parse.quote(deck_id)}/{i}", timeout=180) as r:
+            with urllib.request.urlopen(api_iste(f"{API}/api/lecture-pdf/deck/{urllib.parse.quote(deck_id)}/{i}"), timeout=180) as r:
                 tmp = hedef.with_suffix(".tmp")
                 tmp.write_bytes(r.read())
                 os.replace(tmp, hedef)
@@ -547,7 +553,7 @@ def ders_isle(key: str, kuru: bool, zorla: bool = False) -> dict | None:
     if not hz_yol.exists():
         return None
     hz = json.loads(hz_yol.read_text(encoding="utf-8"))
-    with urllib.request.urlopen(f"{API}/api/canli-ders/{key}", timeout=30) as r:
+    with urllib.request.urlopen(api_iste(f"{API}/api/canli-ders/{key}"), timeout=30) as r:
         d = json.load(r)
     paras = [p for b in d["bolumler"] for p in b["paragraflar"]]
     if len(paras) != len(hz["paragraflar"]):

@@ -27,6 +27,7 @@ import json
 import os
 import re
 import sys
+import unicodedata
 import urllib.parse
 import urllib.request
 from pathlib import Path
@@ -43,11 +44,33 @@ MEDS = Path(__file__).resolve().parents[2]
 KOK = MEDS / "data" / "sesli_anlatim"
 ARSIV_KOK = MEDS / "data" / "arsiv_25_26" / "sesli_anlatim"
 API = os.environ.get("MEDS_API", "http://127.0.0.1:3000")
+# Üretim sunucusunun bot koruması urllib'in varsayılan kimliğini 403 ile reddediyor.
+UA = {"User-Agent": "medsor-terim/1"}
 SURUM = 1
 TURLER = {"terim", "latince", "karisan", "kisaltma"}
 EN_COK = 8          # sayfa başına terim
 A_ENAZ, A_ENCOK = 25, 280
 TOK = re.compile(r"[\wçğıöşüâîû]+(?:[-'’][\wçğıöşüâîû]+)*", re.I)
+# Türkçe kökenli gündelik/tıbbi sözcükler işaretlenmez (kullanıcı kararı 2026-10-26: "gelişme, bilinç gibi").
+# Terimin bütün parçaları bu köklerle başlıyorsa (ekli hâli dahil) kapı HATA verir; otomatik yolda düşer.
+TURKCE_KOK = """gelisme gelisim bilinc bilincsiz agri ates oksuruk kusma bulanti ishal kanama sislik yara damar sinir kemik kas
+deri bobrek karaciger akciger kalp beyin omurilik bagisiklik hucre doku kan idrar gebelik dogum uyku bellek dusunce duygu
+algi dikkat yaslanma yasli buyume iyilesme olum hasar yanik kirik cikik felc nobet bayilma bas donme kasinti dokuntu tukuruk
+safra mide bagirsak yutak girtlak soluk solunum dolasim sindirim bosaltim ureme salgi bez yag seker tuz su goz kulak burun
+agiz dis dil boyun gogus karin sirt bel kol bacak el ayak parmak eklem bag zar kabuk cekirdek zehir zehirlenme iltihap
+yangi kizariklik solukluk sarilik kansizlik bozukluk bozuklugu yetmezlik yetmezligi hastalik hastaligi belirti bulgu tani
+tedavi ilac etki yan etki doz agrisi basagrisi bunama sayiklama kaygi korku uzuntu ofke ozkiyim intihar bagimlilik
+yoksunluk kotuye kullanim davranis kisilik zeka ogrenme konusma yutma cigneme yurume denge titreme kasilma gevseme
+uyusma karincalanma gorme isitme koku tat dokunma isi sicaklik soguk basinc akim tikanma daralma genisleme sertlesme
+yumusama kalinlasma incelme buyumesi kuculme yayilma""".split()
+_TK = tuple(sorted(set(TURKCE_KOK), key=len, reverse=True))
+
+
+def turkce_kokenli(t: str) -> bool:
+    par = [fold(m.group()) for m in TOK.finditer(t)]
+    return bool(par) and all(any(p == k or (p.startswith(k) and ek_mi(k, p)) for k in _TK) for p in par)
+
+
 ARSIV = re.compile(r"^y25-k\d+-\d+-[a-z0-9-]+$")
 
 
@@ -60,7 +83,7 @@ def fold(w: str) -> str:
 
 
 def ders(key: str) -> dict:
-    with urllib.request.urlopen(f"{API}/api/canli-ders/{urllib.parse.quote(key)}", timeout=30) as r:
+    with urllib.request.urlopen(urllib.request.Request(f"{API}/api/canli-ders/{urllib.parse.quote(key)}", headers=UA), timeout=30) as r:
         return json.load(r)
 
 
@@ -86,6 +109,7 @@ class Sayfa:
         satir: list[str] = []
         alt = 0.0
         for x0, y0, x1, y1, w, b, ln, _ in pg.get_text("words"):
+            w = unicodedata.normalize("NFC", w)  # "u"+U+0308 → "ü": ayrışık yazılmış harfler eşleşmeyi bozuyordu
             kutu = [max(0, x0 / W), max(0, y0 / H), min(1, x1 / W), min(1, y1 / H)]
             alt = max(alt, kutu[3])
             if (b, ln) != son and satir:
@@ -105,30 +129,53 @@ class Sayfa:
         self.bos = round(max(0.0, 1 - alt - 0.01), 4)
 
     def bul(self, terim: str, en_cok: int = 3) -> list[list[float]]:
-        """Terimin sayfadaki geçişleri (Türkçe ek payı: her parça önek eşleşmesi); satır başına birleşik kutu."""
-        par = [fold(m.group()) for m in TOK.finditer(terim)]
+        """Terimin sayfadaki geçişleri (Türkçe ek payı: her parça önek eşleşmesi); satır başına birleşik kutu.
+        Madde numarası bitişik yazılmışsa ("4-Fleksör") numara atlanır, kutu kelimenin üstüne daraltılır."""
+        par = [fold(m.group()) for m in TOK.finditer(unicodedata.normalize("NFC", terim))]
         par = [p for p in par if p]
         if not par:
             return []
         kutular: list[list[float]] = []
         k = self.kel
+        # Çok sözcüklü terimin son sözcüğü kısa olsa da ek alabilir ("serebral metabolik hız" → "… hızın");
+        # bağlamı önceki sözcükler verdiği için yanlış eşleşme riski yok.
+        kisa_izin = len(par) > 1 and len(terim) >= 8
         for i in range(len(k) - len(par) + 1):
-            ok = True
+            ok, kaydir = True, []
             for j, p in enumerate(par):
                 w = k[i + j][0]
-                if not (w == p or (len(p) >= 3 and w.startswith(p) and len(w) - len(p) <= 6)):
-                    ok = False; break
+                if w == p or ek_mi(p, w, kisa_izin and j == len(par) - 1):
+                    kaydir.append(0.0); continue
+                m = re.match(r"^(\d{1,2}-)(.+)$", w)
+                if m and (m.group(2) == p or ek_mi(p, m.group(2))):
+                    kaydir.append(len(m.group(1)) / max(1, len(w))); continue
+                ok = False; break
             if not ok:
                 continue
             satirlar: dict = {}
             for j in range(len(par)):
                 _, bx, sl = k[i + j]
+                bx = [bx[0] + (bx[2] - bx[0]) * kaydir[j], bx[1], bx[2], bx[3]]
                 s = satirlar.setdefault(sl, list(bx))
                 s[0], s[1], s[2], s[3] = min(s[0], bx[0]), min(s[1], bx[1]), max(s[2], bx[2]), max(s[3], bx[3])
             kutular.extend([round(v, 4) for v in s] for s in satirlar.values())
             if len(kutular) >= en_cok:
                 break
         return kutular[:en_cok * 2]
+
+
+# Türkçe çekim/yapım ekleri (katlanmış: ı→i, ş→s …). Kısa terim (≤4 harf, kısaltma) yalnız birebir ya da kesme
+# işaretli ekle eşleşir; uzun terimde kalan kısım yalnız bilinen ek dizisi olabilir — "Ure" → "üremi" gibi yanlış eşleşme yok.
+EK = re.compile(r"^(?:y?(?:i|u|a|e)?(?:n|m|miz|niz|ler|lar|si|su|sı|leri|lari)?(?:in|un|nin|nun|i|u|a|e|ye|ya|de|da|te|ta|den|dan|ten|tan|le|la|yle|yla|dir|dur|tir|tur|ki|ken|li|lu|siz|suz|lik|luk|sel|sal|ce|ca)?){0,3}$")
+
+
+def ek_mi(p: str, w: str, kisa_izin: bool = False) -> bool:
+    if not w.startswith(p):
+        return False
+    if len(p) <= 4 and not kisa_izin:
+        return False
+    kalan = w[len(p):]
+    return len(kalan) <= 7 and bool(EK.match(kalan))
 
 
 def sayfalar(d: dict) -> dict[str, Sayfa]:
@@ -210,6 +257,8 @@ def denetle(key: str, yazar: dict, sy: dict[str, Sayfa]) -> tuple[list[str], dic
             if t.lower() in gor:
                 hata.append(f"{y}: '{t}' sayfada iki kez"); continue
             gor.add(t.lower())
+            if turkce_kokenli(t):
+                hata.append(f"{y}: '{t}' Türkçe kökenli gündelik sözcük — işaretlenmez")
             if k not in TURLER:
                 hata.append(f"{y}: tür '{k}' geçersiz ({', '.join(sorted(TURLER))})")
             if not (A_ENAZ <= len(a) <= A_ENCOK):
@@ -230,7 +279,7 @@ def denetle(key: str, yazar: dict, sy: dict[str, Sayfa]) -> tuple[list[str], dic
             if x.get("f"):
                 o["f"] = str(x["f"]).strip()
             sayfa["t"].append(o)
-    return hata, {"surum": SURUM, "key": key, "d": cikti}
+    return hata, {"surum": SURUM, "key": key, "uretici": "deepseek", "d": cikti}
 
 
 def yaz(key: str, cikti: dict) -> Path:
@@ -257,6 +306,9 @@ def k_dok(key: str, dizin: Path) -> int:
         if ad:
             taslak["s"][yer] = ad
     (dizin / "sayfalar.md").write_text("\n".join(md), encoding="utf-8")
+    metin = kok_sec(key) / "metin" / f"{key}.md"
+    if metin.exists():
+        (dizin / "konusma.md").write_text(metin.read_text(encoding="utf-8"), encoding="utf-8")
     hedef = dizin / "terimler.json"
     if not hedef.exists():
         hedef.write_text(json.dumps(taslak, ensure_ascii=False, indent=1), encoding="utf-8")
@@ -292,6 +344,32 @@ def k_otomatik(key: str, yazilsin: bool, sz: dict) -> int:
     return 0
 
 
+def k_sozluk_disa() -> int:
+    """Tüm derslerin terimleri → src/data/terim_yardimcisi_sozluk.json (Terimler sayfası, glossary.ts birleştirir;
+    doğrulanmış sözlükte zaten olan terim eklenmez)."""
+    mevcut = {fold(" ".join(k)) for k in sozluk()}
+    TUR = {"terim": "terim", "latince": "terim", "karisan": "terim", "kisaltma": "terim"}
+    out: dict[str, dict] = {}
+    for kok in (KOK, ARSIV_KOK):
+        for f in sorted((kok / "terim").glob("*.json")):
+            d = json.loads(f.read_text(encoding="utf-8"))
+            for dosya in d.get("d", {}).values():
+                for sy in dosya.values():
+                    for x in sy.get("t", []):
+                        n = fold(x["t"])
+                        if n in mevcut or n in out:
+                            continue
+                        e = {"term": x["t"], "category": TUR.get(x["k"], "terim"), "definition": x["a"],
+                             "kaynak": "deepseek", "uretici": "deepseek", "ders": d.get("key")}
+                        if x.get("f"):
+                            e["clinicalPearl"] = f"Sık karıştırılır: {x['f']}."
+                        out[n] = e
+    hedef = MEDS / "src/data/terim_yardimcisi_sozluk.json"
+    hedef.write_text(json.dumps(out, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+    print(f"{len(out)} yeni terim → {hedef}")
+    return 0
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     alt = ap.add_subparsers(dest="komut", required=True)
@@ -299,7 +377,10 @@ def main() -> int:
     a2 = alt.add_parser("dogrula"); a2.add_argument("key"); a2.add_argument("dosya", type=Path); a2.add_argument("--yaz", action="store_true")
     a3 = alt.add_parser("otomatik"); a3.add_argument("key", nargs="?"); a3.add_argument("--hepsi", action="store_true")
     a3.add_argument("--yaz", action="store_true")
+    alt.add_parser("sozluk_disa")
     a = ap.parse_args()
+    if a.komut == "sozluk_disa":
+        return k_sozluk_disa()
     if a.komut == "dok":
         return k_dok(a.key, a.dizin)
     if a.komut == "dogrula":
