@@ -1,12 +1,12 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 369,
-  "baslik": "Kurul 2 Derslerinde Terim Yardımcısı İçeriği (Bilinç Bozukluğu, Genel Anestezik İlaçlar)",
+  "onem": 370,
+  "baslik": "Kurul 1 Blok Özet Derslerine Terim Yardımcısı (Patoloji 1-2-3)",
   "maddeler": [
-    "Bilinç Bozukluğu Olan Hastaya Yaklaşım dersine 133, Genel Anestezik İlaçlar dersine 212 terim eklendi; Terimler düğmesi açıkken bu terimler slaytta işaretlenir ve dokununca 1-2 cümlelik açıklaması açılır.",
-    "Açıklamalar hem PDF slaytında hem konuşmacı metninde paragraf altında görünür; seslendirilmez.",
-    "Terimler sayfasındaki ortak sözlüğe Kurul 2 terimleri de eklendi.",
-    "PDF metnindeki ayrışık yazılmış Türkçe harfler düzeltildi; terim eşleştirmesi artık bu slaytlarda da çalışıyor."
+    "Blok Özet Patoloji 1, 2 ve 3 derslerine toplam 4118 terim eklendi (1176 + 1271 + 1671); Terimler düğmesi açıkken slaytta işaretlenir, dokununca 1-2 cümlelik açıklaması açılır.",
+    "Açıklamalar doğrulanmış tıbbi sözlükten alındı; tanımı doğrulanmamış terim işaretlenmedi.",
+    "Bilinç Bozukluğu ve Genel Anestezik İlaçlar derslerinin terimleri (133 + 212) canlıya ulaştı.",
+    "Terimler sayfasındaki ortak sözlüğe yeni terimler eklendi."
   ],
   "eklenen": [
     "data/sesli_anlatim/terim/k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim.json",
