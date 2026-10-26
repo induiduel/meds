@@ -344,6 +344,38 @@ def k_yazara(key: str, dosya: Path) -> int:
     return 0
 
 
+def k_ayikla(yazilsin: bool) -> int:
+    """Bütün terim dosyalarından kural dışı (gündelik Türkçe kökenli) terimleri çıkarır.
+
+    Kapı bu ögeleri zaten HATA sayıyor; canlıya hiç gitmemeleri gerekir. Kutular kalan ögeler için
+    değişmediğinden yeniden hesaplama gerekmez."""
+    toplam = 0
+    for kok in (KOK, ARSIV_KOK):
+        for p in sorted((kok / "terim").glob("*.json")):
+            veri = json.loads(p.read_text(encoding="utf-8"))
+            atilan = []
+            for dosya, sayfalar_ in (veri.get("d") or {}).items():
+                for sayfa, v in list(sayfalar_.items()):
+                    kalan = []
+                    for x in v.get("t") or []:
+                        if turkce_kokenli(x.get("t", "")):
+                            atilan.append(f"{dosya}:{sayfa} {x['t']}")
+                        else:
+                            kalan.append(x)
+                    v["t"] = kalan
+                    if not kalan:  # terimi kalmayan sayfa kaydı dosyada tutulmaz (boş t dizisi hiçbir dosyada yok)
+                        del sayfalar_[sayfa]
+                if not sayfalar_:
+                    del veri["d"][dosya]
+            if atilan:
+                toplam += len(atilan)
+                print(f"{veri.get('key', p.stem)}: {len(atilan)} ayıklandı → {', '.join(atilan[:6])}{' …' if len(atilan) > 6 else ''}")
+                if yazilsin:
+                    p.write_text(json.dumps(veri, ensure_ascii=False, indent=1), encoding="utf-8")
+    print(f"toplam {toplam} gündelik sözcük terimi{' ayıklandı ve yazıldı' if yazilsin else ' bulundu (yazmak için --yaz)'}")
+    return 0
+
+
 def k_dogrula(key: str, dosya: Path, yazilsin: bool) -> int:
     yazar = json.loads(dosya.read_text(encoding="utf-8"))
     hata, cikti = denetle(key, yazar, sayfalar(ders(key)))
@@ -406,10 +438,13 @@ def main() -> int:
     a3 = alt.add_parser("otomatik"); a3.add_argument("key", nargs="?"); a3.add_argument("--hepsi", action="store_true")
     a3.add_argument("--yaz", action="store_true")
     a4 = alt.add_parser("yazara"); a4.add_argument("key"); a4.add_argument("dosya", type=Path)
+    a5 = alt.add_parser("ayikla"); a5.add_argument("--yaz", action="store_true")
     alt.add_parser("sozluk_disa")
     a = ap.parse_args()
     if a.komut == "sozluk_disa":
         return k_sozluk_disa()
+    if a.komut == "ayikla":
+        return k_ayikla(a.yaz)
     if a.komut == "yazara":
         return k_yazara(a.key, a.dosya)
     if a.komut == "dok":

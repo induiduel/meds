@@ -1,1 +1,2794 @@
-{"surum":1,"key":"k1-51-uriner-sistem-enfeksiyonlari-laboratuvar-bulgulari","uretici":"deepseek","d":{"0":{"2":{"bos":0.0,"t":[{"t":"Üriner sistem enfeksiyonu","a":"Enfeksiyonun yerine göre mesane (sistit), böbrek (piyelonefrit) veya idrar (bakteriüri) olarak sınıflandırılan, semptomatik veya asemptomatik olabilen enfeksiyon; idrar yaparken hafif yanmadan bakteriyemi, sepsis ve ölüme kadar değişen bulgular verir.","k":"terim","b":[[0.2321,0.3229,0.4779,0.3578]]}]},"4":{"bos":0.0,"t":[{"t":"Yenidoğan dönemi","a":"Yenidoğanın yaşamının ilk 4 haftalık dönemi.","k":"terim","b":[[0.6165,0.6315,0.7529,0.6611]]}]},"5":{"bos":0.0,"t":[{"t":"Reinfeksiyon","a":"Geçirilmiş ÜSE'yi izleyen ilk 6 ay içinde farklı bir bakteri ya da aynı bakterinin başka bir suşuyla yeni enfeksiyon gelişmesi.","k":"terim","b":[[0.5302,0.7251,0.6303,0.756]]},{"t":"Gelişme","a":"Fonksiyonel olgunlaşma; motor, dil ve sosyal becerilerin kazanılması.","k":"terim","b":[[0.2876,0.8932,0.3474,0.9241]]},{"t":"Relaps","a":"ÜSE tedavisinin bitiminden sonraki iki hafta içinde aynı bakteriyle yeniden enfeksiyon gelişmesi.","k":"terim","b":[[0.6705,0.7584,0.7169,0.7893]]}]},"7":{"bos":0.0,"t":[{"t":"Bakteriüri","a":"İdrarda bakteri bulunması.","k":"terim","b":[[0.3598,0.6171,0.4666,0.6504]]},{"t":"Sepsis","a":"Enfeksiyona karşı gelişen, hayatı tehdit eden organ disfonksiyonu ile karakterize disfonksiyonel sistemik inflamatuar yanıt; septik şok ve çoklu organ yetmezliğine ilerleyebilir.","k":"terim","b":[[0.52,0.6171,0.5811,0.6504]]}]},"8":{"bos":0.0,"t":[{"t":"Tümör","a":"Yeni büyüme anlamına gelen, normal büyüme kontrolüne dirençli otonom hücre çoğalması.","k":"terim","b":[[0.5579,0.3829,0.6037,0.4163]]}]},"9":{"bos":0.0,"t":[{"t":"Tümör","a":"Yeni büyüme anlamına gelen, normal büyüme kontrolüne dirençli otonom hücre çoğalması.","k":"terim","b":[[0.3565,0.4984,0.4026,0.528]]}]},"10":{"bos":0.0587,"t":[{"t":"Mesane divertikülü","a":"Mesane duvarında mukozanın kese benzeri invajinasyonudur; kas tabakasındaki doğuştan zayıflık ya da distal obstrüksiyona bağlı artmış intravezikal basınç sonucu gelişir.","k":"terim","b":[[0.4754,0.597,0.6179,0.6311]]},{"t":"Diabetes mellitus","a":"İnsülin salınımı, insülin etkisi veya her ikisinin bozuk olduğu, kronik progresif hiperglisemi ile karakterize, böbrek, göz, sinir ve damarları etkileyen akut ve kronik komplikasyonlara yol açan metabolik hastalık.","k":"terim","b":[[0.161,0.8972,0.2927,0.9313]]},{"t":"Laktobasil","a":"Normal vajen florasının %96'sını oluşturan bakteri grubu.","k":"terim","b":[[0.6732,0.2978,0.7461,0.3311]]},{"t":"Spermisid","a":"Spermleri etkisizleştiren kimyasal kontraseptif madde.","k":"terim","b":[[0.1603,0.6572,0.2337,0.6913]]},{"t":"Östrojen","a":"Overde folikül tarafından salgılanan, endometriumun proliferasyonunu sağlayan ve menstrual siklusu düzenleyen steroid hormondur; karşılanmamış etkisi endometrial hiperplazi ve karsinoma zemin hazırlar.","k":"terim","b":[[0.474,0.297,0.5369,0.3311]]},{"t":"Sistosel","a":"Mesane tabanının ön vajen duvarına doğru sarkması; ileri yaştaki kadında infravezikal obstrüksiyon nedeni.","k":"terim","b":[[0.4733,0.477,0.5307,0.5111]]},{"t":"Düşük","a":"Gebeliğin fetüsün yaşayabilirlik sınırına (20–24. hafta ya da 500 g) ulaşmadan spontan olarak sonlanması; düşük.","k":"terim","b":[[0.1622,0.8372,0.2083,0.8713]]}]},"11":{"bos":0.0,"t":[{"t":"Prezervatif sonda","a":"Erkekte penise geçirilen dış idrar toplama sondası.","k":"terim","b":[[0.4794,0.587,0.6237,0.6241]]},{"t":"Kolonizasyon","a":"Mikroorganizmanın vücut yüzeyine yerleşip hastalık oluşturmadan çoğalması.","k":"terim","b":[[0.2807,0.5161,0.4027,0.5531],[0.477,0.6537,0.5863,0.6908]]}]},"12":{"bos":0.0,"t":[{"t":"Kolonizasyon","a":"Mikroorganizmanın vücut yüzeyine yerleşip hastalık oluşturmadan çoğalması.","k":"terim","b":[[0.3893,0.3199,0.4815,0.3482]]},{"t":"Enfeksiyon","a":"Bir mikroorganizmanın konağa girmesi, yerleşmesi ve/veya çoğalmasıdır; klinik belirti ve bulgu zorunlu değildir.","k":"terim","b":[[0.4225,0.2249,0.5024,0.2533],[0.3596,0.7475,0.468,0.7759]]},{"t":"Patogenez","a":"Hastalığın oluşum mekanizması; etkenin oluşturduğu biyokimyasal ve yapısal değişiklikler.","k":"terim","b":[[0.17,0.06,0.4003,0.1267]]},{"t":"Spermisid","a":"Spermleri etkisizleştiren kimyasal kontraseptif madde.","k":"terim","b":[[0.2978,0.6525,0.3718,0.6808]]},{"t":"Kondom","a":"Salgıların karşı tarafa geçişini engelleyen bariyer korunma yöntemi; salgılarla geçen CYBİ'ye %30-90, cilt temasıyla geçenlere %0-30 koruma sağlar.","k":"terim","b":[[0.2238,0.6049,0.2804,0.6333]]}]},"13":{"bos":0.0,"t":[{"t":"İnflamasyon","a":"Celsus'un tanımladığı dört belirti kızarıklık (rubor), sıcaklık (calor), ağrı (dolor) ve şişlik (tumor) ile Galen'in eklediği fonksiyon kaybı (functio laesa); bu beş bulgu günümüzde de inflamasyonun klasik tanımıdır.","k":"terim","b":[[0.335,0.7885,0.6709,0.87]]},{"t":"Enfeksiyon","a":"Bir mikroorganizmanın konağa girmesi, yerleşmesi ve/veya çoğalmasıdır; klinik belirti ve bulgu zorunlu değildir.","k":"terim","b":[[0.3541,0.6907,0.6519,0.7722]]}]},"14":{"bos":0.0,"t":[{"t":"Hematojen yol","a":"Vücudun başka bir yerindeki primer enfeksiyondan kan yoluyla üriner sisteme ulaşma.","k":"terim","b":[[0.2411,0.1452,0.3867,0.18]]},{"t":"Lenfojen yol","a":"Bakterilerin lenfatik damarlar aracılığıyla üriner ve genital organlara ulaştığı, üriner sistem enfeksiyonlarında önemi belirsiz ve nadir kabul edilen giriş yoludur.","k":"terim","b":[[0.2405,0.3302,0.3642,0.365]]},{"t":"Enfeksiyon","a":"Bir mikroorganizmanın konağa girmesi, yerleşmesi ve/veya çoğalmasıdır; klinik belirti ve bulgu zorunlu değildir.","k":"terim","b":[[0.2569,0.5846,0.3506,0.618]]},{"t":"Patogenez","a":"Hastalığın oluşum mekanizması; etkenin oluşturduğu biyokimyasal ve yapısal değişiklikler.","k":"terim","b":[[0.3139,0.02,0.4906,0.0867]]},{"t":"Primer","a":"Monoklonal plazma hücre diskrazilerinde immünoglobulin hafif zincirlerinin (özellikle lambda) dokuda birikmesi.","k":"terim","b":[[0.6919,0.1467,0.75,0.18]]}]},"15":{"bos":0.0,"t":[{"t":"Düşük","a":"Gebeliğin fetüsün yaşayabilirlik sınırına (20–24. hafta ya da 500 g) ulaşmadan spontan olarak sonlanması; düşük.","k":"terim","b":[[0.2333,0.4987,0.3002,0.5333]]}]},"16":{"bos":0.0,"t":[{"t":"Aerobaktin","a":"Üropatojen bakterilerin ürettiği, hemolizinle birlikte doku invazyonunu kolaylaştıran virülans faktörü.","k":"terim","b":[[0.3582,0.5987,0.4388,0.6274]]},{"t":"Virülans","a":"Mikroorganizmanın hastalık oluşturma gücünün derecesi.","k":"terim","b":[[0.3956,0.0489,0.5291,0.1155]]},{"t":"Fimbria","a":"Bakteri yüzeyindeki ince uzantılardır; fimbria olarak da adlandırılır.","k":"terim","b":[[0.2723,0.2968,0.3276,0.3255],[0.3918,0.2968,0.4472,0.3255]]}]},"17":{"bos":0.0,"t":[{"t":"Corynebacterium urealyticum","a":"Grup D2 olarak da bilinen, hastanede yatan immünsüpresif hastalarda ÜSE etkeni olan bakteri.","k":"terim","b":[[0.161,0.5367,0.4003,0.5679]]},{"t":"Adenovirus tip 11","a":"Çocuklarda hemorajik sistite yol açan viral etken.","k":"terim","b":[[0.2555,0.3894,0.3955,0.4207]]},{"t":"S. saprophyticus","a":"Genç, cinsel aktif kadınlarda ÜSE etkeni olabilen stafilokok türü.","k":"terim","b":[[0.161,0.2711,0.2961,0.3024]]},{"t":"Hemorajik sistit","a":"Kanlı idrarla seyreden mesane iltihabı.","k":"terim","b":[[0.4007,0.3894,0.4824,0.4207],[0.1437,0.4268,0.1874,0.4581]]}]},"20":{"bos":0.0,"t":[{"t":"Akut komplike olmayan sistit","a":"Sağlıklı kadında sık, ağrılı, bulanık ve/veya kanlı idrar ve suprapubik hassasiyetle seyreden, ateşsiz mesane enfeksiyonu.","k":"terim","b":[[0.3451,0.3245,0.5905,0.3578]]},{"t":"Asemptomatik Bakteriüri","a":"Semptomu olmayan kişide saptanan anlamlı (>10⁵ CFU/mL) bakteriüri.","k":"terim","b":[[0.2317,0.6743,0.4666,0.7089]]},{"t":"Komplike ÜSE","a":"Yapısal ya da fonksiyonel komplike edici bir faktörün eşlik ettiği üriner sistem enfeksiyonu.","k":"terim","b":[[0.2315,0.5572,0.3688,0.5919]]},{"t":"Reenfeksiyon","a":"Geçirilmiş ÜSE'yi izleyen ilk 6 ay içinde farklı bir bakteri ya da aynı bakterinin başka bir suşuyla yeni enfeksiyon gelişmesi.","k":"terim","b":[[0.4929,0.7928,0.6036,0.8261]]},{"t":"Relaps","a":"ÜSE tedavisinin bitiminden sonraki iki hafta içinde aynı bakteriyle yeniden enfeksiyon gelişmesi.","k":"terim","b":[[0.411,0.7928,0.4623,0.8261]]}]},"21":{"bos":0.0,"t":[{"t":"Akut komplike olmayan sistit","a":"Sağlıklı kadında sık, ağrılı, bulanık ve/veya kanlı idrar ve suprapubik hassasiyetle seyreden, ateşsiz mesane enfeksiyonu.","k":"terim","b":[[0.4142,0.1111,0.9042,0.1778]]},{"t":"Üriner sistem enfeksiyonu","a":"Enfeksiyonun yerine göre mesane (sistit), böbrek (piyelonefrit) veya idrar (bakteriüri) olarak sınıflandırılan, semptomatik veya asemptomatik olabilen enfeksiyon; idrar yaparken hafif yanmadan bakteriyemi, sepsis ve ölüme kadar değişen bulgular verir.","k":"terim","b":[[0.3389,0.6571,0.5639,0.6904]]}]},"22":{"bos":0.0,"t":[{"t":"Kostavertebral açı hassasiyeti","a":"12. kaburga ile omurga arasındaki bölgede vurmakla ağrı; böbrek tutulumunu düşündürür.","k":"terim","b":[[0.3144,0.5926,0.5714,0.6252]]},{"t":"Lökositoz","a":"Lökosit üretimi ve salınımının artmasıyla kanda lökosit sayısının yükselmesidir; TNF ve IL-1'in sistemik etkilerindendir.","k":"terim","b":[[0.2298,0.763,0.3189,0.7971]]},{"t":"Hematüri","a":"İdrarda anormal miktarlarda eritrosit bulunması.","k":"terim","b":[[0.3967,0.4208,0.4706,0.4534]]},{"t":"Sistit","a":"Mesane mukozasının inflamasyonudur; klinikte dizüri, sık ve ani idrara çıkma, suprapubik ağrı ve bazen hematüri ile karakterize sendrom olarak tanınır.","k":"terim","b":[[0.7365,0.3817,0.7819,0.4143]]},{"t":"Dizüri","a":"Ağrılı ya da yanmalı idrar yapma.","k":"terim","b":[[0.3369,0.4208,0.3834,0.4534]]}]},"24":{"bos":0.0,"t":[{"t":"Amfizematöz pyelonefrit","a":"Böbrek parankiminde gaz oluşumuyla seyreden, diyabetiklerde görülen ve mortalitesi yüksek ağır böbrek enfeksiyonu.","k":"terim","b":[[0.2312,0.8666,0.4515,0.8988]]},{"t":"Vezikoüreteral Reflü","a":"Mesane ile üreter arasındaki valv mekanizmasının yetersizliği nedeniyle miksiyon esnasında idrarın mesaneden böbreğe geri kaçması.","k":"terim","b":[[0.2298,0.5945,0.4109,0.6269]]},{"t":"Nörojenik mesane","a":"Omurilik hasarı gibi sinir sistemi bozukluklarına bağlı mesane işlev bozukluğu.","k":"terim","b":[[0.2307,0.7034,0.3926,0.7356]]}]},"25":{"bos":0.0,"t":[{"t":"Reenfeksiyon","a":"Geçirilmiş ÜSE'yi izleyen ilk 6 ay içinde farklı bir bakteri ya da aynı bakterinin başka bir suşuyla yeni enfeksiyon gelişmesi.","k":"terim","b":[[0.2309,0.5418,0.3625,0.5767]]},{"t":"Relaps","a":"ÜSE tedavisinin bitiminden sonraki iki hafta içinde aynı bakteriyle yeniden enfeksiyon gelişmesi.","k":"terim","b":[[0.2312,0.2492,0.2993,0.2841]]}]},"26":{"bos":0.0,"t":[{"t":"Asemptomatik Bakteriüri","a":"Semptomu olmayan kişide saptanan anlamlı (>10⁵ CFU/mL) bakteriüri.","k":"terim","b":[[0.2202,0.1111,0.6582,0.1778]]}]},"27":{"bos":0.0,"t":[{"t":"Hematüri","a":"İdrarda anormal miktarlarda eritrosit bulunması.","k":"terim","b":[[0.3912,0.3245,0.4652,0.3578]]},{"t":"Dizüri","a":"Ağrılı ya da yanmalı idrar yapma.","k":"terim","b":[[0.2306,0.3229,0.2952,0.3578]]},{"t":"Kanser","a":"Lokal invazyon yapan ve uzak metastaz kapasitesi olan tümör; tedavi edilmezse genellikle ölümcüldür.","k":"terim","b":[[0.3991,0.5,0.457,0.5333]]}]},"32":{"bos":0.0,"t":[{"t":"Kostavertebral açı hassasiyeti","a":"12. kaburga ile omurga arasındaki bölgede vurmakla ağrı; böbrek tutulumunu düşündürür.","k":"terim","b":[[0.2305,0.3817,0.5117,0.4163]]},{"t":"Vajinit","a":"Vajina inflamasyonu; vulvar irritasyon, dizüri (+/-), akıntı ve vajina duvarında eksuda ile seyreder.","k":"terim","b":[[0.3082,0.6171,0.3636,0.6504]]},{"t":"Meatus","a":"Vücuttaki bir kanalın dışarı açılan deliği.","k":"terim","b":[[0.5537,0.5,0.6158,0.5333]]}]},"33":{"bos":0.0,"t":[{"t":"İdrar mikroskopisi","a":"İdrar yolu enfeksiyonu tanısında santrifüjlü sediment ve santrifüjsüz idrarda hücre sayımı ile Gram boyalı inceleme yapılarak piyüri, bakteriüri ve hematürinin araştırılmasıdır.","k":"terim","b":[[0.2328,0.3817,0.4151,0.4163]]},{"t":"İdrar kültürü","a":"İdrar örneğinin besiyerine ekilerek üreyen bakterinin tür ve koloni sayısının belirlenmesidir.","k":"terim","b":[[0.2328,0.4402,0.3693,0.4748]]},{"t":"Strip test","a":"İdrara batırılan, ayraç pedleri renk değiştirerek kimyasal parametreleri gösteren hızlı test şeridi.","k":"terim","b":[[0.5851,0.3245,0.6707,0.3578]]}]},"35":{"bos":0.0,"t":[{"t":"Temiz orta akım idrarı","a":"İlk akım atıldıktan sonra işemenin ortasında toplanan, kültür için kullanılan idrar örneği.","k":"terim","b":[[0.2594,0.4311,0.4534,0.4645]]},{"t":"İdrar kültürü","a":"İdrar örneğinin besiyerine ekilerek üreyen bakterinin tür ve koloni sayısının belirlenmesidir.","k":"terim","b":[[0.4671,0.4311,0.576,0.4645]]},{"t":"ilk idrar","a":"İşemenin ilk kısmında alınan, üretra içeriğini taşıyan idrar örneği.","k":"terim","b":[[0.319,0.3245,0.3876,0.3578]]}]},"36":{"bos":0.0,"t":[{"t":"Prezervatif","a":"Salgıların karşı tarafa geçişini engelleyen bariyer korunma yöntemi; salgılarla geçen CYBİ'ye %30-90, cilt temasıyla geçenlere %0-30 koruma sağlar.","k":"terim","b":[[0.4027,0.5985,0.5037,0.6319]]}]},"37":{"bos":0.0,"t":[{"t":"Kontaminasyon","a":"Temiz bir ortama herhangi bir yolla kir ve/veya mikroorganizmaların bulaşması ya da bulaştırılması.","k":"terim","b":[[0.2293,0.5428,0.341,0.5724]]},{"t":"Torba örneği","a":"Küçük çocukta perineye yapıştırılan torbayla idrar toplanması.","k":"terim","b":[[0.2301,0.3087,0.3357,0.3396]]}]},"38":{"bos":0.0,"t":[{"t":"Orta akım idrarı","a":"İlk akım atıldıktan sonra işemenin ortasında toplanan, kültür için kullanılan idrar örneği.","k":"terim","b":[[0.2199,0.1415,0.4729,0.2007]]},{"t":"ilk idrar","a":"İşemenin ilk kısmında alınan, üretra içeriğini taşıyan idrar örneği.","k":"terim","b":[[0.3501,0.4189,0.4103,0.4476]]}]},"39":{"bos":0.0,"t":[{"t":"Suprapubik aspirasyon","a":"Pubis üstünden iğneyle mesaneden doğrudan idrar alınması; kontaminasyonsuz altın standart yöntem.","k":"terim","b":[[0.1373,0.1032,0.5258,0.1698]]}]},"40":{"bos":0.0,"t":[{"t":"Nitrit","a":"Gram negatif enterik bakterilerin nitratı nitrite çevirmesini saptayan dipstik testi; bakteriüriyi gösterir.","k":"terim","b":[[0.7856,0.6097,0.8347,0.6448]]}]},"42":{"bos":0.0,"t":[{"t":"Lökosit esteraz","a":"Lökositlere ait esteraz enzimini saptayan ve piyüriyi gösteren dipstik testi.","k":"terim","b":[[0.6115,0.5742,0.7456,0.6022]]},{"t":"Nitrit","a":"Gram negatif enterik bakterilerin nitratı nitrite çevirmesini saptayan dipstik testi; bakteriüriyi gösterir.","k":"terim","b":[[0.6112,0.6145,0.669,0.6425]]}]},"43":{"bos":0.0,"t":[{"t":"Nitrit","a":"Gram negatif enterik bakterilerin nitratı nitrite çevirmesini saptayan dipstik testi; bakteriüriyi gösterir.","k":"terim","b":[[0.3703,0.1111,0.4743,0.1778],[0.4658,0.3591,0.515,0.3887],[0.3026,0.7613,0.3442,0.7909]]}]},"44":{"bos":0.0,"t":[{"t":"Nitrit testi","a":"Gram negatif enterik bakterilerin nitratı nitrite çevirmesini saptayan dipstik testi; bakteriüriyi gösterir.","k":"terim","b":[[0.2202,0.1111,0.4199,0.1778]]},{"t":"Tespit","a":"Dokuyu otoliz ve putrefaksiyondan koruyan, mimariyi stabilize eden ilk işleme basamağı.","k":"terim","b":[[0.3348,0.6204,0.3849,0.6519]]}]},"45":{"bos":0.0,"t":[{"t":"Üriner sistem enfeksiyonu","a":"Enfeksiyonun yerine göre mesane (sistit), böbrek (piyelonefrit) veya idrar (bakteriüri) olarak sınıflandırılan, semptomatik veya asemptomatik olabilen enfeksiyon; idrar yaparken hafif yanmadan bakteriyemi, sepsis ve ölüme kadar değişen bulgular verir.","k":"terim","b":[[0.1839,0.623,0.3852,0.6541]]},{"t":"Asemptomatik Bakteriüri","a":"Semptomu olmayan kişide saptanan anlamlı (>10⁵ CFU/mL) bakteriüri.","k":"terim","b":[[0.1861,0.4462,0.3874,0.4768],[0.2184,0.4915,0.422,0.5211]]},{"t":"Lökosit esteraz testi","a":"Lökositlere ait esteraz enzimini saptayan ve piyüriyi gösteren dipstik testi.","k":"terim","b":[[0.2202,0.1111,0.5838,0.1778]]},{"t":"Piyüri","a":"İdrarda anlamlı sayıda lökosit bulunması.","k":"terim","b":[[0.1851,0.3577,0.2393,0.3881]]}]},"46":{"bos":0.0,"t":[{"t":"Lökosit esteraz testi","a":"Lökositlere ait esteraz enzimini saptayan ve piyüriyi gösteren dipstik testi.","k":"terim","b":[[0.3279,0.6345,0.4866,0.6641]]},{"t":"İdrar mikroskopisi","a":"İdrar yolu enfeksiyonu tanısında santrifüjlü sediment ve santrifüjsüz idrarda hücre sayımı ile Gram boyalı inceleme yapılarak piyüri, bakteriüri ve hematürinin araştırılmasıdır.","k":"terim","b":[[0.6232,0.32,0.8389,0.3644]]},{"t":"Bakteriüri","a":"İdrarda bakteri bulunması.","k":"terim","b":[[0.2546,0.5299,0.3333,0.5595]]},{"t":"Nitrit","a":"Gram negatif enterik bakterilerin nitratı nitrite çevirmesini saptayan dipstik testi; bakteriüriyi gösterir.","k":"terim","b":[[0.4385,0.3205,0.5121,0.365],[0.2546,0.498,0.3007,0.5276],[0.2546,0.6345,0.3007,0.6641]]},{"t":"Piyüri","a":"İdrarda anlamlı sayıda lökosit bulunması.","k":"terim","b":[[0.3432,0.4119,0.3863,0.4415]]}]},"47":{"bos":0.0,"t":[{"t":"İdrar mikroskopisi","a":"İdrar yolu enfeksiyonu tanısında santrifüjlü sediment ve santrifüjsüz idrarda hücre sayımı ile Gram boyalı inceleme yapılarak piyüri, bakteriüri ve hematürinin araştırılmasıdır.","k":"terim","b":[[0.2202,0.1111,0.544,0.1778]]},{"t":"Bakteriüri","a":"İdrarda bakteri bulunması.","k":"terim","b":[[0.6069,0.3211,0.7026,0.3522],[0.8178,0.5722,0.918,0.6018]]},{"t":"Piyüri","a":"İdrarda anlamlı sayıda lökosit bulunması.","k":"terim","b":[[0.2274,0.3222,0.2728,0.3533],[0.6841,0.5722,0.7271,0.6018]]}]},"48":{"bos":0.0,"t":[{"t":"Steril Piyüri","a":"İdrarda ≥10 lökosit/mm³ bulunmasına rağmen standart bakteriyolojik besiyerlerinde üreme olmaması durumu.","k":"terim","b":[[0.2202,0.1111,0.3971,0.1778]]}]},"49":{"bos":0.0,"t":[{"t":"Sistit","a":"Mesane mukozasının inflamasyonudur; klinikte dizüri, sık ve ani idrara çıkma, suprapubik ağrı ve bazen hematüri ile karakterize sendrom olarak tanınır.","k":"terim","b":[[0.6535,0.5195,0.693,0.5479]]}]},"52":{"bos":0.0,"t":[{"t":"Suprapubik aspirasyon","a":"Pubis üstünden iğneyle mesaneden doğrudan idrar alınması; kontaminasyonsuz altın standart yöntem.","k":"terim","b":[[0.3841,0.6862,0.4709,0.718],[0.2417,0.7245,0.3259,0.7564]]},{"t":"Orta akım idrarı","a":"İlk akım atıldıktan sonra işemenin ortasında toplanan, kültür için kullanılan idrar örneği.","k":"terim","b":[[0.2417,0.6862,0.3716,0.718]]},{"t":"İdrar kültürü","a":"İdrar örneğinin besiyerine ekilerek üreyen bakterinin tür ve koloni sayısının belirlenmesidir.","k":"terim","b":[[0.2202,0.1111,0.4535,0.1778]]}]},"53":{"bos":0.0,"t":[{"t":"Asemptomatik Bakteriüri","a":"Semptomu olmayan kişide saptanan anlamlı (>10⁵ CFU/mL) bakteriüri.","k":"terim","b":[[0.2015,0.7515,0.3948,0.7811]]},{"t":"Suprapubik aspirasyon","a":"Pubis üstünden iğneyle mesaneden doğrudan idrar alınması; kontaminasyonsuz altın standart yöntem.","k":"terim","b":[[0.2606,0.2304,0.4368,0.26]]},{"t":"İdrar kültürü","a":"İdrar örneğinin besiyerine ekilerek üreyen bakterinin tür ve koloni sayısının belirlenmesidir.","k":"terim","b":[[0.2202,0.1111,0.4535,0.1778]]}]},"54":{"bos":0.0,"t":[{"t":"İdrar kültürü","a":"İdrar örneğinin besiyerine ekilerek üreyen bakterinin tür ve koloni sayısının belirlenmesidir.","k":"terim","b":[[0.1774,0.1092,0.4181,0.1759]]},{"t":"Kontaminasyon","a":"Temiz bir ortama herhangi bir yolla kir ve/veya mikroorganizmaların bulaşması ya da bulaştırılması.","k":"terim","b":[[0.4369,0.1092,0.6818,0.1759]]},{"t":"Laktobasil","a":"Normal vajen florasının %96'sını oluşturan bakteri grubu.","k":"terim","b":[[0.2287,0.4304,0.3168,0.46]]}]},"55":{"bos":0.0,"t":[{"t":"İdrar kültürü","a":"İdrar örneğinin besiyerine ekilerek üreyen bakterinin tür ve koloni sayısının belirlenmesidir.","k":"terim","b":[[0.1547,0.0591,0.3907,0.1257]]},{"t":"Diyabet","a":"İnsülin salınımı, insülin etkisi veya her ikisinin bozuk olduğu, kronik progresif hiperglisemi ile karakterize, böbrek, göz, sinir ve damarları etkileyen akut ve kronik komplikasyonlara yol açan metabolik hastalık.","k":"terim","b":[[0.1658,0.3208,0.2433,0.3516]]},{"t":"Sistit","a":"Mesane mukozasının inflamasyonudur; klinikte dizüri, sık ve ani idrara çıkma, suprapubik ağrı ve bazen hematüri ile karakterize sendrom olarak tanınır.","k":"terim","b":[[0.2812,0.6458,0.3246,0.6754]]}]},"56":{"bos":0.0,"t":[{"t":"Prostatit","a":"Prostat bezinin enfeksiyonu ve enflamasyonu.","k":"terim","b":[[0.2961,0.4415,0.3755,0.4748]]},{"t":"Hepatit","a":"Karaciğer parankiminin enflamasyonu ve hepatosit hasarı ile karakterize durum. Karaciğer fonksiyon testlerinin normalleşmesi altı aydan kısa sürerse akut, altı aydan uzun sürerse kronik hepatit denir.","k":"terim","b":[[0.5904,0.5,0.6576,0.5333]]}]},"57":{"bos":0.0,"t":[{"t":"Septik Şok","a":"Sistemik enfeksiyona karşı konağın kontrolsüz sitokin yanıtı ve aşırı nitrik oksit (NO) üretimi sonucu periferik vazodilatasyon ve DİK ile seyreden şok.","k":"terim","b":[[0.6808,0.3838,0.7666,0.4133]]},{"t":"Sepsis","a":"Enfeksiyona karşı gelişen, hayatı tehdit eden organ disfonksiyonu ile karakterize disfonksiyonel sistemik inflamatuar yanıt; septik şok ve çoklu organ yetmezliğine ilerleyebilir.","k":"terim","b":[[0.6033,0.3825,0.6533,0.4133]]}]},"58":{"bos":0.0,"t":[{"t":"Hidronefroz","a":"İdrar akımındaki obstrüksiyon nedeniyle renal pelvis ve kalikslerin aşırı genişlemesi ve böbrek parankiminin bası atrofisine uğraması.","k":"terim","b":[[0.6623,0.6429,0.7565,0.68],[0.4627,0.7452,0.557,0.7822]]}]},"66":{"bos":0.0,"t":[{"t":"Akut komplike olmayan sistit","a":"Sağlıklı kadında sık, ağrılı, bulanık ve/veya kanlı idrar ve suprapubik hassasiyetle seyreden, ateşsiz mesane enfeksiyonu.","k":"terim","b":[[0.4142,0.1111,0.9042,0.1778]]}]},"67":{"bos":0.0,"t":[{"t":"Nitrofurantoin","a":"İdrardan hızla atılan ancak birçok dokuda terapötik düzeye ulaşmayan, bu nedenle alt üriner sistem enfeksiyonlarının tedavisi ve profilaksisinde kullanılan antibakteriyel ajandır.","k":"terim","b":[[0.232,0.4902,0.3101,0.5124]]},{"t":"Pivmesillinam","a":"Akut komplike olmayan sistitte 800 mg/gün 5 gün kullanılan beta laktam antibiyotik.","k":"terim","b":[[0.232,0.8628,0.307,0.885]]},{"t":"Komplike ÜSE","a":"Yapısal ya da fonksiyonel komplike edici bir faktörün eşlik ettiği üriner sistem enfeksiyonu.","k":"terim","b":[[0.5797,0.1485,0.6513,0.1707]]},{"t":"Amoksisilin","a":"Ampisilin ve amoksisilini içeren penisilin alt grubu.","k":"terim","b":[[0.6321,0.6298,0.6892,0.6521]]},{"t":"Fosfomisin","a":"Bakteriyel hücre duvarı sentezini çok erken bir aşamada engelleyen, yapısal olarak diğer antimikrobiyallerle ilgisi olmayan fosfoenolpiruvat analoğu; klinikte stabil tuzu fosfomisin trometamol kullanılır.","k":"terim","b":[[0.232,0.7296,0.2897,0.7518]]},{"t":"Kinolonlar","a":"Enterobacteriaceae, P. aeruginosa, S. aureus ve S. saprophyticus'a etkili geniş spektrumlu antibiyotik grubudur; siprofloksasin ve levofloksasin üriner ve genital enfeksiyonlarda kullanılan örnekleridir.","k":"terim","b":[[0.5996,0.513,0.6576,0.5352]]},{"t":"TMP-SMZ","a":"Sinerjistik etkili, enterokok ve Pseudomonas dışındaki üropatojenlere etkili kombine antibiyotik.","k":"terim","b":[[0.232,0.6232,0.2905,0.6454]]},{"t":"Düşük","a":"Gebeliğin fetüsün yaşayabilirlik sınırına (20–24. hafta ya da 500 g) ulaşmadan spontan olarak sonlanması; düşük.","k":"terim","b":[[0.3745,0.5433,0.4042,0.5655],[0.3522,0.7563,0.382,0.7785],[0.3475,0.8893,0.3773,0.9115]]}]},"68":{"bos":0.0,"t":[{"t":"Sistit","a":"Mesane mukozasının inflamasyonudur; klinikte dizüri, sık ve ani idrara çıkma, suprapubik ağrı ve bazen hematüri ile karakterize sendrom olarak tanınır.","k":"terim","b":[[0.3845,0.1111,0.4772,0.1778]]}]},"69":{"bos":0.0,"t":[{"t":"Antibiyogram","a":"Kültürde üretilen bakterinin antibiyotik duyarlılığının test edilmesi; gonokok kültürünün avantajı.","k":"terim","b":[[0.3277,0.3241,0.4334,0.3553]]},{"t":"Kinolonlar","a":"Enterobacteriaceae, P. aeruginosa, S. aureus ve S. saprophyticus'a etkili geniş spektrumlu antibiyotik grubudur; siprofloksasin ve levofloksasin üriner ve genital enfeksiyonlarda kullanılan örnekleridir.","k":"terim","b":[[0.3628,0.4889,0.4414,0.5202]]}]},"70":{"bos":0.0,"t":[{"t":"Florokinolonlar","a":"Enterobacteriaceae, P. aeruginosa, S. aureus ve S. saprophyticus'a etkili geniş spektrumlu antibiyotik grubudur; siprofloksasin ve levofloksasin üriner ve genital enfeksiyonlarda kullanılan örnekleridir.","k":"terim","b":[[0.5607,0.1215,0.628,0.1419]]},{"t":"Sefalosporinler","a":"Kuşaklara ayrılan beta-laktam antibiyotik grubudur; Enterobacteria türlerine oldukça etkili, enterokoklara zayıf etkilidir ve üriner, genital ve gebelikle ilişkili enfeksiyonlarda yaygın kullanılır.","k":"terim","b":[[0.7168,0.1215,0.7851,0.1419]]},{"t":"Siprofloksasin","a":"Florokinolon grubu antibiyotik.","k":"terim","b":[[0.3823,0.4989,0.4471,0.5192],[0.1814,0.4991,0.2463,0.5195]]},{"t":"Levofloksasin","a":"Florokinolon; klamidyada 1x500 mg 7 gün, enterik etkenli epididimitte seftriaksonla 10 gün.","k":"terim","b":[[0.3599,0.5841,0.4231,0.6044],[0.1591,0.5841,0.2222,0.6044]]},{"t":"Antibiyogram","a":"Kültürde üretilen bakterinin antibiyotik duyarlılığının test edilmesi; gonokok kültürünün avantajı.","k":"terim","b":[[0.3896,0.9087,0.4537,0.9291]]},{"t":"Seftriakson","a":"Geniş spektrumlu 3. kuşak sefalosporindir. Neisseria gonorrhoeae enfeksiyonlarında, bakteriyel menenjitlerde ve komplike piyelonefritlerde birinci basamak antibiyotiktir.","k":"terim","b":[[0.4151,0.6694,0.467,0.6898],[0.61,0.4907,0.6619,0.5111]]}]},"71":{"bos":0.0,"t":[{"t":"Konfüzyon","a":"Dikkat ve düşünce akışının bozulduğu, yönelimin (oryantasyon) kaybolduğu hafif bilinç bozukluğu tablosudur.","k":"terim","b":[[0.5417,0.3904,0.6356,0.4274]]},{"t":"Sepsis","a":"Enfeksiyona karşı gelişen, hayatı tehdit eden organ disfonksiyonu ile karakterize disfonksiyonel sistemik inflamatuar yanıt; septik şok ve çoklu organ yetmezliğine ilerleyebilir.","k":"terim","b":[[0.6274,0.4348,0.6861,0.4719]]}]},"72":{"bos":0.0,"t":[{"t":"Amfizematöz pyelonefrit","a":"Böbrek parankiminde gaz oluşumuyla seyreden, diyabetiklerde görülen ve mortalitesi yüksek ağır böbrek enfeksiyonu.","k":"terim","b":[[0.2304,0.9257,0.3461,0.9558],[0.375,0.9271,0.4591,0.9558]]},{"t":"Komplike İYE","a":"Yapısal ya da fonksiyonel komplike edici bir faktörün eşlik ettiği üriner sistem enfeksiyonu.","k":"terim","b":[[0.2202,0.1111,0.4523,0.1778]]},{"t":"Fosfomisin","a":"Bakteriyel hücre duvarı sentezini çok erken bir aşamada engelleyen, yapısal olarak diğer antimikrobiyallerle ilgisi olmayan fosfoenolpiruvat analoğu; klinikte stabil tuzu fosfomisin trometamol kullanılır.","k":"terim","b":[[0.3368,0.5246,0.4159,0.5534]]},{"t":"Kolistin","a":"Gram negatif bakterilerin dış membranındaki LPS yapısını bozarak deterjan benzeri etkiyle hücreyi patlatan polipeptid antibiyotik.","k":"terim","b":[[0.633,0.4745,0.6855,0.5032]]}]},"73":{"bos":0.0,"t":[{"t":"Asemptomatik Bakteriüri","a":"Semptomu olmayan kişide saptanan anlamlı (>10⁵ CFU/mL) bakteriüri.","k":"terim","b":[[0.2313,0.5387,0.4625,0.5733]]}]},"74":{"bos":0.0,"t":[{"t":"Asemptomatik Bakteriüri","a":"Semptomu olmayan kişide saptanan anlamlı (>10⁵ CFU/mL) bakteriüri.","k":"terim","b":[[0.461,0.0878,0.7262,0.1323]]},{"t":"İdrar kültürü","a":"İdrar örneğinin besiyerine ekilerek üreyen bakterinin tür ve koloni sayısının belirlenmesidir.","k":"terim","b":[[0.5269,0.3852,0.6371,0.4222],[0.2955,0.7018,0.4057,0.7389]]},{"t":"Reinfeksiyon","a":"Geçirilmiş ÜSE'yi izleyen ilk 6 ay içinde farklı bir bakteri ya da aynı bakterinin başka bir suşuyla yeni enfeksiyon gelişmesi.","k":"terim","b":[[0.6973,0.6185,0.8088,0.6555]]},{"t":"Relaps","a":"ÜSE tedavisinin bitiminden sonraki iki hafta içinde aynı bakteriyle yeniden enfeksiyon gelişmesi.","k":"terim","b":[[0.4267,0.6048,0.4811,0.6344]]}]},"75":{"bos":0.0,"t":[{"t":"Nitrofurantoin","a":"İdrardan hızla atılan ancak birçok dokuda terapötik düzeye ulaşmayan, bu nedenle alt üriner sistem enfeksiyonlarının tedavisi ve profilaksisinde kullanılan antibakteriyel ajandır.","k":"terim","b":[[0.5065,0.7343,0.6274,0.7676]]},{"t":"Fosfomisin","a":"Bakteriyel hücre duvarı sentezini çok erken bir aşamada engelleyen, yapısal olarak diğer antimikrobiyallerle ilgisi olmayan fosfoenolpiruvat analoğu; klinikte stabil tuzu fosfomisin trometamol kullanılır.","k":"terim","b":[[0.7957,0.7343,0.8876,0.7676]]},{"t":"Prostatit","a":"Prostat bezinin enfeksiyonu ve enflamasyonu.","k":"terim","b":[[0.4813,0.4415,0.5606,0.4748]]},{"t":"Relaps","a":"ÜSE tedavisinin bitiminden sonraki iki hafta içinde aynı bakteriyle yeniden enfeksiyon gelişmesi.","k":"terim","b":[[0.2319,0.3229,0.3038,0.3578]]}]},"76":{"bos":0.0,"t":[{"t":"Reenfeksiyon","a":"Geçirilmiş ÜSE'yi izleyen ilk 6 ay içinde farklı bir bakteri ya da aynı bakterinin başka bir suşuyla yeni enfeksiyon gelişmesi.","k":"terim","b":[[0.231,0.3229,0.3637,0.3578],[0.2308,0.3817,0.3833,0.4163]]}]},"77":{"bos":0.0,"t":[{"t":"Nitrofurantoin","a":"İdrardan hızla atılan ancak birçok dokuda terapötik düzeye ulaşmayan, bu nedenle alt üriner sistem enfeksiyonlarının tedavisi ve profilaksisinde kullanılan antibakteriyel ajandır.","k":"terim","b":[[0.1992,0.6404,0.3187,0.6787],[0.4578,0.7572,0.572,0.7943],[0.6978,0.7542,0.8139,0.7913]]},{"t":"Reenfeksiyon","a":"Geçirilmiş ÜSE'yi izleyen ilk 6 ay içinde farklı bir bakteri ya da aynı bakterinin başka bir suşuyla yeni enfeksiyon gelişmesi.","k":"terim","b":[[0.2905,0.1315,0.4411,0.1759],[0.2181,0.0152,0.4166,0.0671]]},{"t":"Fosfomisin","a":"Bakteriyel hücre duvarı sentezini çok erken bir aşamada engelleyen, yapısal olarak diğer antimikrobiyallerle ilgisi olmayan fosfoenolpiruvat analoğu; klinikte stabil tuzu fosfomisin trometamol kullanılır.","k":"terim","b":[[0.7603,0.8409,0.8491,0.878]]},{"t":"Düşük","a":"Gebeliğin fetüsün yaşayabilirlik sınırına (20–24. hafta ya da 500 g) ulaşmadan spontan olarak sonlanması; düşük.","k":"terim","b":[[0.7428,0.5764,0.7971,0.6135]]}]},"78":{"bos":0.0,"t":[{"t":"TMP-SMX","a":"Sülfametoksazol ile trimetoprimin 5:1 oranındaki kombinasyonu (400 mg + 80 mg). Trimetoprim dihidrofolik asit redüktaz enzimini inhibe eder ve bakteriostatik aktivite gösterir.","k":"terim","b":[[0.665,0.0728,0.8262,0.1394]]},{"t":"Gelişme","a":"Fonksiyonel olgunlaşma; motor, dil ve sosyal becerilerin kazanılması.","k":"terim","b":[[0.2064,0.338,0.2924,0.3824]]}]},"79":{"bos":0.0,"t":[{"t":"Hipersensitivite","a":"Normalde koruyucu olan immün yanıtların aşırı veya uygunsuz hale gelerek immünolojik aracılı doku hasarı oluşturması. Hedef antijenler öz antijenler, kalıcı mikrobiyal antijenler veya zararsız çevresel antijenler (alerjenler) olabilir.","k":"terim","b":[[0.1696,0.7204,0.2876,0.7491]]},{"t":"Nitrofurantoin","a":"İdrardan hızla atılan ancak birçok dokuda terapötik düzeye ulaşmayan, bu nedenle alt üriner sistem enfeksiyonlarının tedavisi ve profilaksisinde kullanılan antibakteriyel ajandır.","k":"terim","b":[[0.2202,0.1111,0.4808,0.1778]]},{"t":"Hemoliz","a":"Eritrositlerin normal/beklenen zamandan önce yıkılması veya dolaşımdan uzaklaştırılması; bu şekilde oluşan anemiye hemolitik anemi denir. Sağlıklı kemik iliği eritrosit yapımını 6-7 kat artırabildiğinden yaşam süresindeki kısalma her zaman anemiye yol açmaz.","k":"terim","b":[[0.3377,0.6679,0.3946,0.6967]]},{"t":"Anemi","a":"Gebe olmayan kadınlarda Hgb <12 g/dl, gebe kadınlarda Hgb <11 g/dl olması anemi olarak tanımlanır. En sık görülen anemi türü demir eksikliği anemisidir; en sık doğurganlık çağındaki kadınlarda ve çocuklarda görülür.","k":"terim","b":[[0.5267,0.6156,0.5688,0.6443]]},{"t":"Düşük","a":"Gebeliğin fetüsün yaşayabilirlik sınırına (20–24. hafta ya da 500 g) ulaşmadan spontan olarak sonlanması; düşük.","k":"terim","b":[[0.3827,0.7735,0.4307,0.8057]]}]},"80":{"bos":0.0,"t":[{"t":"Klebsiella pneumoniae","a":"Gram negatif, hareketsiz, belirgin polisakkarit kapsüllü basil. Alkoliklerde ve diyabetiklerde kaviteli pnömoni ve nozokomiyal idrar yolu/kan enfeksiyonu yapar.","k":"terim","b":[[0.7172,0.4245,0.9031,0.4578]]},{"t":"Sefalosporinler","a":"Kuşaklara ayrılan beta-laktam antibiyotik grubudur; Enterobacteria türlerine oldukça etkili, enterokoklara zayıf etkilidir ve üriner, genital ve gebelikle ilişkili enfeksiyonlarda yaygın kullanılır.","k":"terim","b":[[0.0975,0.18,0.3695,0.2467],[0.113,0.3257,0.2439,0.3591],[0.1863,0.4245,0.3172,0.4578]]}]},"81":{"bos":0.0,"t":[{"t":"Aminopenisilin","a":"Ampisilin ve amoksisilini içeren penisilin alt grubu.","k":"terim","b":[[0.0975,0.155,0.2489,0.196]]}]},"82":{"bos":0.0,"t":[{"t":"Aminoglikozidler","a":"Gentamisinin örnek olduğu, ateşli ve komplike üriner sistem enfeksiyonlarında ve bazı pelvik enfeksiyonlarda çoğunlukla kombinasyon içinde kullanılan, nefrotoksik ve ototoksik antibiyotik grubudur.","k":"terim","b":[[0.0975,0.0618,0.3861,0.1285],[0.1256,0.3224,0.2809,0.3557],[0.1312,0.4209,0.2905,0.4543]]},{"t":"Gentamisin","a":"Aminoglikozid; PİH'te 2 mg/kg yükleme, 3x1,5 mg/kg idame; gonorede beta-laktam kullanılamazsa 240 mg tek doz + azitromisin 2 g.","k":"terim","b":[[0.1256,0.7382,0.221,0.7715]]},{"t":"Ampisilin","a":"Ampisilin ve amoksisilini içeren penisilin alt grubu.","k":"terim","b":[[0.2865,0.3224,0.3606,0.3557]]},{"t":"TMP-SMX","a":"Sülfametoksazol ile trimetoprimin 5:1 oranındaki kombinasyonu (400 mg + 80 mg). Trimetoprim dihidrofolik asit redüktaz enzimini inhibe eder ve bakteriostatik aktivite gösterir.","k":"terim","b":[[0.4104,0.3224,0.5002,0.3557]]}]},"83":{"bos":0.0,"t":[{"t":"Florokinolonlar","a":"Enterobacteriaceae, P. aeruginosa, S. aureus ve S. saprophyticus'a etkili geniş spektrumlu antibiyotik grubudur; siprofloksasin ve levofloksasin üriner ve genital enfeksiyonlarda kullanılan örnekleridir.","k":"terim","b":[[0.0975,0.0618,0.3566,0.1285],[0.0544,0.2233,0.2416,0.2698]]},{"t":"Epilepsi","a":"İkinci aşamada değerlendirilen epilepsi tipi dört gruba ayrılır: fokal epilepsiler, jeneralize epilepsiler, kombine fokal ve jeneralize epilepsiler ve bilinmeyen.","k":"terim","b":[[0.0549,0.8494,0.159,0.8958]]},{"t":"Demir","a":"Eksikliği gebelikte en sık görülen beslenme yetersizliği olan, gebelere Sağlık Bakanlığı programıyla destek olarak verilen ve bebeklikte emilimi beslenme biçimine göre değişen mikrobesindir.","k":"terim","b":[[0.1781,0.7794,0.2448,0.8239]]}]},"84":{"bos":0.0,"t":[{"t":"Streptococcus pneumoniae","a":"Ders notlarında akut postenfeksiyöz glomerülonefriti tetikleyebilen ve fosfomisinin etkili olduğu bakteriler arasında anılan gram pozitif bakteridir.","k":"terim","b":[[0.4458,0.4209,0.6737,0.4543]]},{"t":"Staphylococcus aureus","a":"Gram pozitif, katalaz ve koagülaz pozitif küme oluşturan kok. Deri ve yumuşak doku enfeksiyonları, apseler, osteomiyelit ve nozokomiyal bakteriyeminin baş etkenidir.","k":"terim","b":[[0.2373,0.4209,0.4312,0.4543]]},{"t":"Fosfomisin","a":"Bakteriyel hücre duvarı sentezini çok erken bir aşamada engelleyen, yapısal olarak diğer antimikrobiyallerle ilgisi olmayan fosfoenolpiruvat analoğu; klinikte stabil tuzu fosfomisin trometamol kullanılır.","k":"terim","b":[[0.0975,0.0618,0.2848,0.1285],[0.1086,0.2811,0.2193,0.3157]]},{"t":"Prostatit","a":"Prostat bezinin enfeksiyonu ve enflamasyonu.","k":"terim","b":[[0.6196,0.5594,0.699,0.5928]]}]},"85":{"bos":0.0,"t":[{"t":"Turna yemişi","a":"Tekrarlayan ÜSE'den korunmada derste sayılan bitkisel yöntem.","k":"terim","b":[[0.3534,0.4415,0.4565,0.4748]]},{"t":"Bağışıklama","a":"Hassas yaş gruplarının enfeksiyona yakalanma riskinin en yüksek olduğu dönemden önce bağışıklanmalarını sağlayarak aşı ile korunulabilir hastalıkları önlemeyi amaçlayan program.","k":"terim","b":[[0.2312,0.4987,0.3552,0.5333]]},{"t":"Östrojen","a":"Overde folikül tarafından salgılanan, endometriumun proliferasyonunu sağlayan ve menstrual siklusu düzenleyen steroid hormondur; karşılanmamış etkisi endometrial hiperplazi ve karsinoma zemin hazırlar.","k":"terim","b":[[0.5598,0.3829,0.6307,0.4163]]}]},"86":{"bos":0.0,"t":[{"t":"Bağışıklama","a":"Hassas yaş gruplarının enfeksiyona yakalanma riskinin en yüksek olduğu dönemden önce bağışıklanmalarını sağlayarak aşı ile korunulabilir hastalıkları önlemeyi amaçlayan program.","k":"terim","b":[[0.2202,0.1111,0.4201,0.1778]]},{"t":"Uro-Vaxom","a":"18 E. coli suşu içeren, tekrarlayan ÜSE'den korunmada aç karnına günde 1 kapsül 3 ay kullanılan oral bakteriyel lizat aşısı.","k":"terim","b":[[0.2483,0.4241,0.3355,0.4528]]}]},"87":{"bos":0.0,"t":[{"t":"Bağışıklama","a":"Hassas yaş gruplarının enfeksiyona yakalanma riskinin en yüksek olduğu dönemden önce bağışıklanmalarını sağlayarak aşı ile korunulabilir hastalıkları önlemeyi amaçlayan program.","k":"terim","b":[[0.1633,0.118,0.3917,0.192]]},{"t":"Uro-Vaxom","a":"18 E. coli suşu içeren, tekrarlayan ÜSE'den korunmada aç karnına günde 1 kapsül 3 ay kullanılan oral bakteriyel lizat aşısı.","k":"terim","b":[[0.1857,0.3903,0.3189,0.4361]]}]}}}}
+{
+ "surum": 1,
+ "key": "k1-51-uriner-sistem-enfeksiyonlari-laboratuvar-bulgulari",
+ "uretici": "deepseek",
+ "d": {
+  "0": {
+   "2": {
+    "bos": 0.0,
+    "t": [
+     {
+      "t": "Üriner sistem enfeksiyonu",
+      "a": "Enfeksiyonun yerine göre mesane (sistit), böbrek (piyelonefrit) veya idrar (bakteriüri) olarak sınıflandırılan, semptomatik veya asemptomatik olabilen enfeksiyon; idrar yaparken hafif yanmadan bakteriyemi, sepsis ve ölüme kadar değişen bulgular verir.",
+      "k": "terim",
+      "b": [
+       [
+        0.2321,
+        0.3229,
+        0.4779,
+        0.3578
+       ]
+      ]
+     }
+    ]
+   },
+   "4": {
+    "bos": 0.0,
+    "t": [
+     {
+      "t": "Yenidoğan dönemi",
+      "a": "Yenidoğanın yaşamının ilk 4 haftalık dönemi.",
+      "k": "terim",
+      "b": [
+       [
+        0.6165,
+        0.6315,
+        0.7529,
+        0.6611
+       ]
+      ]
+     }
+    ]
+   },
+   "5": {
+    "bos": 0.0,
+    "t": [
+     {
+      "t": "Reinfeksiyon",
+      "a": "Geçirilmiş ÜSE'yi izleyen ilk 6 ay içinde farklı bir bakteri ya da aynı bakterinin başka bir suşuyla yeni enfeksiyon gelişmesi.",
+      "k": "terim",
+      "b": [
+       [
+        0.5302,
+        0.7251,
+        0.6303,
+        0.756
+       ]
+      ]
+     },
+     {
+      "t": "Relaps",
+      "a": "ÜSE tedavisinin bitiminden sonraki iki hafta içinde aynı bakteriyle yeniden enfeksiyon gelişmesi.",
+      "k": "terim",
+      "b": [
+       [
+        0.6705,
+        0.7584,
+        0.7169,
+        0.7893
+       ]
+      ]
+     }
+    ]
+   },
+   "7": {
+    "bos": 0.0,
+    "t": [
+     {
+      "t": "Bakteriüri",
+      "a": "İdrarda bakteri bulunması.",
+      "k": "terim",
+      "b": [
+       [
+        0.3598,
+        0.6171,
+        0.4666,
+        0.6504
+       ]
+      ]
+     },
+     {
+      "t": "Sepsis",
+      "a": "Enfeksiyona karşı gelişen, hayatı tehdit eden organ disfonksiyonu ile karakterize disfonksiyonel sistemik inflamatuar yanıt; septik şok ve çoklu organ yetmezliğine ilerleyebilir.",
+      "k": "terim",
+      "b": [
+       [
+        0.52,
+        0.6171,
+        0.5811,
+        0.6504
+       ]
+      ]
+     }
+    ]
+   },
+   "8": {
+    "bos": 0.0,
+    "t": [
+     {
+      "t": "Tümör",
+      "a": "Yeni büyüme anlamına gelen, normal büyüme kontrolüne dirençli otonom hücre çoğalması.",
+      "k": "terim",
+      "b": [
+       [
+        0.5579,
+        0.3829,
+        0.6037,
+        0.4163
+       ]
+      ]
+     }
+    ]
+   },
+   "9": {
+    "bos": 0.0,
+    "t": [
+     {
+      "t": "Tümör",
+      "a": "Yeni büyüme anlamına gelen, normal büyüme kontrolüne dirençli otonom hücre çoğalması.",
+      "k": "terim",
+      "b": [
+       [
+        0.3565,
+        0.4984,
+        0.4026,
+        0.528
+       ]
+      ]
+     }
+    ]
+   },
+   "10": {
+    "bos": 0.0587,
+    "t": [
+     {
+      "t": "Mesane divertikülü",
+      "a": "Mesane duvarında mukozanın kese benzeri invajinasyonudur; kas tabakasındaki doğuştan zayıflık ya da distal obstrüksiyona bağlı artmış intravezikal basınç sonucu gelişir.",
+      "k": "terim",
+      "b": [
+       [
+        0.4754,
+        0.597,
+        0.6179,
+        0.6311
+       ]
+      ]
+     },
+     {
+      "t": "Diabetes mellitus",
+      "a": "İnsülin salınımı, insülin etkisi veya her ikisinin bozuk olduğu, kronik progresif hiperglisemi ile karakterize, böbrek, göz, sinir ve damarları etkileyen akut ve kronik komplikasyonlara yol açan metabolik hastalık.",
+      "k": "terim",
+      "b": [
+       [
+        0.161,
+        0.8972,
+        0.2927,
+        0.9313
+       ]
+      ]
+     },
+     {
+      "t": "Laktobasil",
+      "a": "Normal vajen florasının %96'sını oluşturan bakteri grubu.",
+      "k": "terim",
+      "b": [
+       [
+        0.6732,
+        0.2978,
+        0.7461,
+        0.3311
+       ]
+      ]
+     },
+     {
+      "t": "Spermisid",
+      "a": "Spermleri etkisizleştiren kimyasal kontraseptif madde.",
+      "k": "terim",
+      "b": [
+       [
+        0.1603,
+        0.6572,
+        0.2337,
+        0.6913
+       ]
+      ]
+     },
+     {
+      "t": "Östrojen",
+      "a": "Overde folikül tarafından salgılanan, endometriumun proliferasyonunu sağlayan ve menstrual siklusu düzenleyen steroid hormondur; karşılanmamış etkisi endometrial hiperplazi ve karsinoma zemin hazırlar.",
+      "k": "terim",
+      "b": [
+       [
+        0.474,
+        0.297,
+        0.5369,
+        0.3311
+       ]
+      ]
+     },
+     {
+      "t": "Sistosel",
+      "a": "Mesane tabanının ön vajen duvarına doğru sarkması; ileri yaştaki kadında infravezikal obstrüksiyon nedeni.",
+      "k": "terim",
+      "b": [
+       [
+        0.4733,
+        0.477,
+        0.5307,
+        0.5111
+       ]
+      ]
+     },
+     {
+      "t": "Düşük",
+      "a": "Gebeliğin fetüsün yaşayabilirlik sınırına (20–24. hafta ya da 500 g) ulaşmadan spontan olarak sonlanması; düşük.",
+      "k": "terim",
+      "b": [
+       [
+        0.1622,
+        0.8372,
+        0.2083,
+        0.8713
+       ]
+      ]
+     }
+    ]
+   },
+   "11": {
+    "bos": 0.0,
+    "t": [
+     {
+      "t": "Prezervatif sonda",
+      "a": "Erkekte penise geçirilen dış idrar toplama sondası.",
+      "k": "terim",
+      "b": [
+       [
+        0.4794,
+        0.587,
+        0.6237,
+        0.6241
+       ]
+      ]
+     },
+     {
+      "t": "Kolonizasyon",
+      "a": "Mikroorganizmanın vücut yüzeyine yerleşip hastalık oluşturmadan çoğalması.",
+      "k": "terim",
+      "b": [
+       [
+        0.2807,
+        0.5161,
+        0.4027,
+        0.5531
+       ],
+       [
+        0.477,
+        0.6537,
+        0.5863,
+        0.6908
+       ]
+      ]
+     }
+    ]
+   },
+   "12": {
+    "bos": 0.0,
+    "t": [
+     {
+      "t": "Kolonizasyon",
+      "a": "Mikroorganizmanın vücut yüzeyine yerleşip hastalık oluşturmadan çoğalması.",
+      "k": "terim",
+      "b": [
+       [
+        0.3893,
+        0.3199,
+        0.4815,
+        0.3482
+       ]
+      ]
+     },
+     {
+      "t": "Enfeksiyon",
+      "a": "Bir mikroorganizmanın konağa girmesi, yerleşmesi ve/veya çoğalmasıdır; klinik belirti ve bulgu zorunlu değildir.",
+      "k": "terim",
+      "b": [
+       [
+        0.4225,
+        0.2249,
+        0.5024,
+        0.2533
+       ],
+       [
+        0.3596,
+        0.7475,
+        0.468,
+        0.7759
+       ]
+      ]
+     },
+     {
+      "t": "Patogenez",
+      "a": "Hastalığın oluşum mekanizması; etkenin oluşturduğu biyokimyasal ve yapısal değişiklikler.",
+      "k": "terim",
+      "b": [
+       [
+        0.17,
+        0.06,
+        0.4003,
+        0.1267
+       ]
+      ]
+     },
+     {
+      "t": "Spermisid",
+      "a": "Spermleri etkisizleştiren kimyasal kontraseptif madde.",
+      "k": "terim",
+      "b": [
+       [
+        0.2978,
+        0.6525,
+        0.3718,
+        0.6808
+       ]
+      ]
+     },
+     {
+      "t": "Kondom",
+      "a": "Salgıların karşı tarafa geçişini engelleyen bariyer korunma yöntemi; salgılarla geçen CYBİ'ye %30-90, cilt temasıyla geçenlere %0-30 koruma sağlar.",
+      "k": "terim",
+      "b": [
+       [
+        0.2238,
+        0.6049,
+        0.2804,
+        0.6333
+       ]
+      ]
+     }
+    ]
+   },
+   "13": {
+    "bos": 0.0,
+    "t": [
+     {
+      "t": "İnflamasyon",
+      "a": "Celsus'un tanımladığı dört belirti kızarıklık (rubor), sıcaklık (calor), ağrı (dolor) ve şişlik (tumor) ile Galen'in eklediği fonksiyon kaybı (functio laesa); bu beş bulgu günümüzde de inflamasyonun klasik tanımıdır.",
+      "k": "terim",
+      "b": [
+       [
+        0.335,
+        0.7885,
+        0.6709,
+        0.87
+       ]
+      ]
+     },
+     {
+      "t": "Enfeksiyon",
+      "a": "Bir mikroorganizmanın konağa girmesi, yerleşmesi ve/veya çoğalmasıdır; klinik belirti ve bulgu zorunlu değildir.",
+      "k": "terim",
+      "b": [
+       [
+        0.3541,
+        0.6907,
+        0.6519,
+        0.7722
+       ]
+      ]
+     }
+    ]
+   },
+   "14": {
+    "bos": 0.0,
+    "t": [
+     {
+      "t": "Hematojen yol",
+      "a": "Vücudun başka bir yerindeki primer enfeksiyondan kan yoluyla üriner sisteme ulaşma.",
+      "k": "terim",
+      "b": [
+       [
+        0.2411,
+        0.1452,
+        0.3867,
+        0.18
+       ]
+      ]
+     },
+     {
+      "t": "Lenfojen yol",
+      "a": "Bakterilerin lenfatik damarlar aracılığıyla üriner ve genital organlara ulaştığı, üriner sistem enfeksiyonlarında önemi belirsiz ve nadir kabul edilen giriş yoludur.",
+      "k": "terim",
+      "b": [
+       [
+        0.2405,
+        0.3302,
+        0.3642,
+        0.365
+       ]
+      ]
+     },
+     {
+      "t": "Enfeksiyon",
+      "a": "Bir mikroorganizmanın konağa girmesi, yerleşmesi ve/veya çoğalmasıdır; klinik belirti ve bulgu zorunlu değildir.",
+      "k": "terim",
+      "b": [
+       [
+        0.2569,
+        0.5846,
+        0.3506,
+        0.618
+       ]
+      ]
+     },
+     {
+      "t": "Patogenez",
+      "a": "Hastalığın oluşum mekanizması; etkenin oluşturduğu biyokimyasal ve yapısal değişiklikler.",
+      "k": "terim",
+      "b": [
+       [
+        0.3139,
+        0.02,
+        0.4906,
+        0.0867
+       ]
+      ]
+     },
+     {
+      "t": "Primer",
+      "a": "Monoklonal plazma hücre diskrazilerinde immünoglobulin hafif zincirlerinin (özellikle lambda) dokuda birikmesi.",
+      "k": "terim",
+      "b": [
+       [
+        0.6919,
+        0.1467,
+        0.75,
+        0.18
+       ]
+      ]
+     }
+    ]
+   },
+   "15": {
+    "bos": 0.0,
+    "t": [
+     {
+      "t": "Düşük",
+      "a": "Gebeliğin fetüsün yaşayabilirlik sınırına (20–24. hafta ya da 500 g) ulaşmadan spontan olarak sonlanması; düşük.",
+      "k": "terim",
+      "b": [
+       [
+        0.2333,
+        0.4987,
+        0.3002,
+        0.5333
+       ]
+      ]
+     }
+    ]
+   },
+   "16": {
+    "bos": 0.0,
+    "t": [
+     {
+      "t": "Aerobaktin",
+      "a": "Üropatojen bakterilerin ürettiği, hemolizinle birlikte doku invazyonunu kolaylaştıran virülans faktörü.",
+      "k": "terim",
+      "b": [
+       [
+        0.3582,
+        0.5987,
+        0.4388,
+        0.6274
+       ]
+      ]
+     },
+     {
+      "t": "Virülans",
+      "a": "Mikroorganizmanın hastalık oluşturma gücünün derecesi.",
+      "k": "terim",
+      "b": [
+       [
+        0.3956,
+        0.0489,
+        0.5291,
+        0.1155
+       ]
+      ]
+     },
+     {
+      "t": "Fimbria",
+      "a": "Bakteri yüzeyindeki ince uzantılardır; fimbria olarak da adlandırılır.",
+      "k": "terim",
+      "b": [
+       [
+        0.2723,
+        0.2968,
+        0.3276,
+        0.3255
+       ],
+       [
+        0.3918,
+        0.2968,
+        0.4472,
+        0.3255
+       ]
+      ]
+     }
+    ]
+   },
+   "17": {
+    "bos": 0.0,
+    "t": [
+     {
+      "t": "Corynebacterium urealyticum",
+      "a": "Grup D2 olarak da bilinen, hastanede yatan immünsüpresif hastalarda ÜSE etkeni olan bakteri.",
+      "k": "terim",
+      "b": [
+       [
+        0.161,
+        0.5367,
+        0.4003,
+        0.5679
+       ]
+      ]
+     },
+     {
+      "t": "Adenovirus tip 11",
+      "a": "Çocuklarda hemorajik sistite yol açan viral etken.",
+      "k": "terim",
+      "b": [
+       [
+        0.2555,
+        0.3894,
+        0.3955,
+        0.4207
+       ]
+      ]
+     },
+     {
+      "t": "S. saprophyticus",
+      "a": "Genç, cinsel aktif kadınlarda ÜSE etkeni olabilen stafilokok türü.",
+      "k": "terim",
+      "b": [
+       [
+        0.161,
+        0.2711,
+        0.2961,
+        0.3024
+       ]
+      ]
+     },
+     {
+      "t": "Hemorajik sistit",
+      "a": "Kanlı idrarla seyreden mesane iltihabı.",
+      "k": "terim",
+      "b": [
+       [
+        0.4007,
+        0.3894,
+        0.4824,
+        0.4207
+       ],
+       [
+        0.1437,
+        0.4268,
+        0.1874,
+        0.4581
+       ]
+      ]
+     }
+    ]
+   },
+   "20": {
+    "bos": 0.0,
+    "t": [
+     {
+      "t": "Akut komplike olmayan sistit",
+      "a": "Sağlıklı kadında sık, ağrılı, bulanık ve/veya kanlı idrar ve suprapubik hassasiyetle seyreden, ateşsiz mesane enfeksiyonu.",
+      "k": "terim",
+      "b": [
+       [
+        0.3451,
+        0.3245,
+        0.5905,
+        0.3578
+       ]
+      ]
+     },
+     {
+      "t": "Asemptomatik Bakteriüri",
+      "a": "Semptomu olmayan kişide saptanan anlamlı (>10⁵ CFU/mL) bakteriüri.",
+      "k": "terim",
+      "b": [
+       [
+        0.2317,
+        0.6743,
+        0.4666,
+        0.7089
+       ]
+      ]
+     },
+     {
+      "t": "Komplike ÜSE",
+      "a": "Yapısal ya da fonksiyonel komplike edici bir faktörün eşlik ettiği üriner sistem enfeksiyonu.",
+      "k": "terim",
+      "b": [
+       [
+        0.2315,
+        0.5572,
+        0.3688,
+        0.5919
+       ]
+      ]
+     },
+     {
+      "t": "Reenfeksiyon",
+      "a": "Geçirilmiş ÜSE'yi izleyen ilk 6 ay içinde farklı bir bakteri ya da aynı bakterinin başka bir suşuyla yeni enfeksiyon gelişmesi.",
+      "k": "terim",
+      "b": [
+       [
+        0.4929,
+        0.7928,
+        0.6036,
+        0.8261
+       ]
+      ]
+     },
+     {
+      "t": "Relaps",
+      "a": "ÜSE tedavisinin bitiminden sonraki iki hafta içinde aynı bakteriyle yeniden enfeksiyon gelişmesi.",
+      "k": "terim",
+      "b": [
+       [
+        0.411,
+        0.7928,
+        0.4623,
+        0.8261
+       ]
+      ]
+     }
+    ]
+   },
+   "21": {
+    "bos": 0.0,
+    "t": [
+     {
+      "t": "Akut komplike olmayan sistit",
+      "a": "Sağlıklı kadında sık, ağrılı, bulanık ve/veya kanlı idrar ve suprapubik hassasiyetle seyreden, ateşsiz mesane enfeksiyonu.",
+      "k": "terim",
+      "b": [
+       [
+        0.4142,
+        0.1111,
+        0.9042,
+        0.1778
+       ]
+      ]
+     },
+     {
+      "t": "Üriner sistem enfeksiyonu",
+      "a": "Enfeksiyonun yerine göre mesane (sistit), böbrek (piyelonefrit) veya idrar (bakteriüri) olarak sınıflandırılan, semptomatik veya asemptomatik olabilen enfeksiyon; idrar yaparken hafif yanmadan bakteriyemi, sepsis ve ölüme kadar değişen bulgular verir.",
+      "k": "terim",
+      "b": [
+       [
+        0.3389,
+        0.6571,
+        0.5639,
+        0.6904
+       ]
+      ]
+     }
+    ]
+   },
+   "22": {
+    "bos": 0.0,
+    "t": [
+     {
+      "t": "Kostavertebral açı hassasiyeti",
+      "a": "12. kaburga ile omurga arasındaki bölgede vurmakla ağrı; böbrek tutulumunu düşündürür.",
+      "k": "terim",
+      "b": [
+       [
+        0.3144,
+        0.5926,
+        0.5714,
+        0.6252
+       ]
+      ]
+     },
+     {
+      "t": "Lökositoz",
+      "a": "Lökosit üretimi ve salınımının artmasıyla kanda lökosit sayısının yükselmesidir; TNF ve IL-1'in sistemik etkilerindendir.",
+      "k": "terim",
+      "b": [
+       [
+        0.2298,
+        0.763,
+        0.3189,
+        0.7971
+       ]
+      ]
+     },
+     {
+      "t": "Hematüri",
+      "a": "İdrarda anormal miktarlarda eritrosit bulunması.",
+      "k": "terim",
+      "b": [
+       [
+        0.3967,
+        0.4208,
+        0.4706,
+        0.4534
+       ]
+      ]
+     },
+     {
+      "t": "Sistit",
+      "a": "Mesane mukozasının inflamasyonudur; klinikte dizüri, sık ve ani idrara çıkma, suprapubik ağrı ve bazen hematüri ile karakterize sendrom olarak tanınır.",
+      "k": "terim",
+      "b": [
+       [
+        0.7365,
+        0.3817,
+        0.7819,
+        0.4143
+       ]
+      ]
+     },
+     {
+      "t": "Dizüri",
+      "a": "Ağrılı ya da yanmalı idrar yapma.",
+      "k": "terim",
+      "b": [
+       [
+        0.3369,
+        0.4208,
+        0.3834,
+        0.4534
+       ]
+      ]
+     }
+    ]
+   },
+   "24": {
+    "bos": 0.0,
+    "t": [
+     {
+      "t": "Amfizematöz pyelonefrit",
+      "a": "Böbrek parankiminde gaz oluşumuyla seyreden, diyabetiklerde görülen ve mortalitesi yüksek ağır böbrek enfeksiyonu.",
+      "k": "terim",
+      "b": [
+       [
+        0.2312,
+        0.8666,
+        0.4515,
+        0.8988
+       ]
+      ]
+     },
+     {
+      "t": "Vezikoüreteral Reflü",
+      "a": "Mesane ile üreter arasındaki valv mekanizmasının yetersizliği nedeniyle miksiyon esnasında idrarın mesaneden böbreğe geri kaçması.",
+      "k": "terim",
+      "b": [
+       [
+        0.2298,
+        0.5945,
+        0.4109,
+        0.6269
+       ]
+      ]
+     },
+     {
+      "t": "Nörojenik mesane",
+      "a": "Omurilik hasarı gibi sinir sistemi bozukluklarına bağlı mesane işlev bozukluğu.",
+      "k": "terim",
+      "b": [
+       [
+        0.2307,
+        0.7034,
+        0.3926,
+        0.7356
+       ]
+      ]
+     }
+    ]
+   },
+   "25": {
+    "bos": 0.0,
+    "t": [
+     {
+      "t": "Reenfeksiyon",
+      "a": "Geçirilmiş ÜSE'yi izleyen ilk 6 ay içinde farklı bir bakteri ya da aynı bakterinin başka bir suşuyla yeni enfeksiyon gelişmesi.",
+      "k": "terim",
+      "b": [
+       [
+        0.2309,
+        0.5418,
+        0.3625,
+        0.5767
+       ]
+      ]
+     },
+     {
+      "t": "Relaps",
+      "a": "ÜSE tedavisinin bitiminden sonraki iki hafta içinde aynı bakteriyle yeniden enfeksiyon gelişmesi.",
+      "k": "terim",
+      "b": [
+       [
+        0.2312,
+        0.2492,
+        0.2993,
+        0.2841
+       ]
+      ]
+     }
+    ]
+   },
+   "26": {
+    "bos": 0.0,
+    "t": [
+     {
+      "t": "Asemptomatik Bakteriüri",
+      "a": "Semptomu olmayan kişide saptanan anlamlı (>10⁵ CFU/mL) bakteriüri.",
+      "k": "terim",
+      "b": [
+       [
+        0.2202,
+        0.1111,
+        0.6582,
+        0.1778
+       ]
+      ]
+     }
+    ]
+   },
+   "27": {
+    "bos": 0.0,
+    "t": [
+     {
+      "t": "Hematüri",
+      "a": "İdrarda anormal miktarlarda eritrosit bulunması.",
+      "k": "terim",
+      "b": [
+       [
+        0.3912,
+        0.3245,
+        0.4652,
+        0.3578
+       ]
+      ]
+     },
+     {
+      "t": "Dizüri",
+      "a": "Ağrılı ya da yanmalı idrar yapma.",
+      "k": "terim",
+      "b": [
+       [
+        0.2306,
+        0.3229,
+        0.2952,
+        0.3578
+       ]
+      ]
+     },
+     {
+      "t": "Kanser",
+      "a": "Lokal invazyon yapan ve uzak metastaz kapasitesi olan tümör; tedavi edilmezse genellikle ölümcüldür.",
+      "k": "terim",
+      "b": [
+       [
+        0.3991,
+        0.5,
+        0.457,
+        0.5333
+       ]
+      ]
+     }
+    ]
+   },
+   "32": {
+    "bos": 0.0,
+    "t": [
+     {
+      "t": "Kostavertebral açı hassasiyeti",
+      "a": "12. kaburga ile omurga arasındaki bölgede vurmakla ağrı; böbrek tutulumunu düşündürür.",
+      "k": "terim",
+      "b": [
+       [
+        0.2305,
+        0.3817,
+        0.5117,
+        0.4163
+       ]
+      ]
+     },
+     {
+      "t": "Vajinit",
+      "a": "Vajina inflamasyonu; vulvar irritasyon, dizüri (+/-), akıntı ve vajina duvarında eksuda ile seyreder.",
+      "k": "terim",
+      "b": [
+       [
+        0.3082,
+        0.6171,
+        0.3636,
+        0.6504
+       ]
+      ]
+     },
+     {
+      "t": "Meatus",
+      "a": "Vücuttaki bir kanalın dışarı açılan deliği.",
+      "k": "terim",
+      "b": [
+       [
+        0.5537,
+        0.5,
+        0.6158,
+        0.5333
+       ]
+      ]
+     }
+    ]
+   },
+   "33": {
+    "bos": 0.0,
+    "t": [
+     {
+      "t": "İdrar mikroskopisi",
+      "a": "İdrar yolu enfeksiyonu tanısında santrifüjlü sediment ve santrifüjsüz idrarda hücre sayımı ile Gram boyalı inceleme yapılarak piyüri, bakteriüri ve hematürinin araştırılmasıdır.",
+      "k": "terim",
+      "b": [
+       [
+        0.2328,
+        0.3817,
+        0.4151,
+        0.4163
+       ]
+      ]
+     },
+     {
+      "t": "İdrar kültürü",
+      "a": "İdrar örneğinin besiyerine ekilerek üreyen bakterinin tür ve koloni sayısının belirlenmesidir.",
+      "k": "terim",
+      "b": [
+       [
+        0.2328,
+        0.4402,
+        0.3693,
+        0.4748
+       ]
+      ]
+     },
+     {
+      "t": "Strip test",
+      "a": "İdrara batırılan, ayraç pedleri renk değiştirerek kimyasal parametreleri gösteren hızlı test şeridi.",
+      "k": "terim",
+      "b": [
+       [
+        0.5851,
+        0.3245,
+        0.6707,
+        0.3578
+       ]
+      ]
+     }
+    ]
+   },
+   "35": {
+    "bos": 0.0,
+    "t": [
+     {
+      "t": "Temiz orta akım idrarı",
+      "a": "İlk akım atıldıktan sonra işemenin ortasında toplanan, kültür için kullanılan idrar örneği.",
+      "k": "terim",
+      "b": [
+       [
+        0.2594,
+        0.4311,
+        0.4534,
+        0.4645
+       ]
+      ]
+     },
+     {
+      "t": "İdrar kültürü",
+      "a": "İdrar örneğinin besiyerine ekilerek üreyen bakterinin tür ve koloni sayısının belirlenmesidir.",
+      "k": "terim",
+      "b": [
+       [
+        0.4671,
+        0.4311,
+        0.576,
+        0.4645
+       ]
+      ]
+     },
+     {
+      "t": "ilk idrar",
+      "a": "İşemenin ilk kısmında alınan, üretra içeriğini taşıyan idrar örneği.",
+      "k": "terim",
+      "b": [
+       [
+        0.319,
+        0.3245,
+        0.3876,
+        0.3578
+       ]
+      ]
+     }
+    ]
+   },
+   "36": {
+    "bos": 0.0,
+    "t": [
+     {
+      "t": "Prezervatif",
+      "a": "Salgıların karşı tarafa geçişini engelleyen bariyer korunma yöntemi; salgılarla geçen CYBİ'ye %30-90, cilt temasıyla geçenlere %0-30 koruma sağlar.",
+      "k": "terim",
+      "b": [
+       [
+        0.4027,
+        0.5985,
+        0.5037,
+        0.6319
+       ]
+      ]
+     }
+    ]
+   },
+   "37": {
+    "bos": 0.0,
+    "t": [
+     {
+      "t": "Kontaminasyon",
+      "a": "Temiz bir ortama herhangi bir yolla kir ve/veya mikroorganizmaların bulaşması ya da bulaştırılması.",
+      "k": "terim",
+      "b": [
+       [
+        0.2293,
+        0.5428,
+        0.341,
+        0.5724
+       ]
+      ]
+     },
+     {
+      "t": "Torba örneği",
+      "a": "Küçük çocukta perineye yapıştırılan torbayla idrar toplanması.",
+      "k": "terim",
+      "b": [
+       [
+        0.2301,
+        0.3087,
+        0.3357,
+        0.3396
+       ]
+      ]
+     }
+    ]
+   },
+   "38": {
+    "bos": 0.0,
+    "t": [
+     {
+      "t": "Orta akım idrarı",
+      "a": "İlk akım atıldıktan sonra işemenin ortasında toplanan, kültür için kullanılan idrar örneği.",
+      "k": "terim",
+      "b": [
+       [
+        0.2199,
+        0.1415,
+        0.4729,
+        0.2007
+       ]
+      ]
+     },
+     {
+      "t": "ilk idrar",
+      "a": "İşemenin ilk kısmında alınan, üretra içeriğini taşıyan idrar örneği.",
+      "k": "terim",
+      "b": [
+       [
+        0.3501,
+        0.4189,
+        0.4103,
+        0.4476
+       ]
+      ]
+     }
+    ]
+   },
+   "39": {
+    "bos": 0.0,
+    "t": [
+     {
+      "t": "Suprapubik aspirasyon",
+      "a": "Pubis üstünden iğneyle mesaneden doğrudan idrar alınması; kontaminasyonsuz altın standart yöntem.",
+      "k": "terim",
+      "b": [
+       [
+        0.1373,
+        0.1032,
+        0.5258,
+        0.1698
+       ]
+      ]
+     }
+    ]
+   },
+   "40": {
+    "bos": 0.0,
+    "t": [
+     {
+      "t": "Nitrit",
+      "a": "Gram negatif enterik bakterilerin nitratı nitrite çevirmesini saptayan dipstik testi; bakteriüriyi gösterir.",
+      "k": "terim",
+      "b": [
+       [
+        0.7856,
+        0.6097,
+        0.8347,
+        0.6448
+       ]
+      ]
+     }
+    ]
+   },
+   "42": {
+    "bos": 0.0,
+    "t": [
+     {
+      "t": "Lökosit esteraz",
+      "a": "Lökositlere ait esteraz enzimini saptayan ve piyüriyi gösteren dipstik testi.",
+      "k": "terim",
+      "b": [
+       [
+        0.6115,
+        0.5742,
+        0.7456,
+        0.6022
+       ]
+      ]
+     },
+     {
+      "t": "Nitrit",
+      "a": "Gram negatif enterik bakterilerin nitratı nitrite çevirmesini saptayan dipstik testi; bakteriüriyi gösterir.",
+      "k": "terim",
+      "b": [
+       [
+        0.6112,
+        0.6145,
+        0.669,
+        0.6425
+       ]
+      ]
+     }
+    ]
+   },
+   "43": {
+    "bos": 0.0,
+    "t": [
+     {
+      "t": "Nitrit",
+      "a": "Gram negatif enterik bakterilerin nitratı nitrite çevirmesini saptayan dipstik testi; bakteriüriyi gösterir.",
+      "k": "terim",
+      "b": [
+       [
+        0.3703,
+        0.1111,
+        0.4743,
+        0.1778
+       ],
+       [
+        0.4658,
+        0.3591,
+        0.515,
+        0.3887
+       ],
+       [
+        0.3026,
+        0.7613,
+        0.3442,
+        0.7909
+       ]
+      ]
+     }
+    ]
+   },
+   "44": {
+    "bos": 0.0,
+    "t": [
+     {
+      "t": "Nitrit testi",
+      "a": "Gram negatif enterik bakterilerin nitratı nitrite çevirmesini saptayan dipstik testi; bakteriüriyi gösterir.",
+      "k": "terim",
+      "b": [
+       [
+        0.2202,
+        0.1111,
+        0.4199,
+        0.1778
+       ]
+      ]
+     },
+     {
+      "t": "Tespit",
+      "a": "Dokuyu otoliz ve putrefaksiyondan koruyan, mimariyi stabilize eden ilk işleme basamağı.",
+      "k": "terim",
+      "b": [
+       [
+        0.3348,
+        0.6204,
+        0.3849,
+        0.6519
+       ]
+      ]
+     }
+    ]
+   },
+   "45": {
+    "bos": 0.0,
+    "t": [
+     {
+      "t": "Üriner sistem enfeksiyonu",
+      "a": "Enfeksiyonun yerine göre mesane (sistit), böbrek (piyelonefrit) veya idrar (bakteriüri) olarak sınıflandırılan, semptomatik veya asemptomatik olabilen enfeksiyon; idrar yaparken hafif yanmadan bakteriyemi, sepsis ve ölüme kadar değişen bulgular verir.",
+      "k": "terim",
+      "b": [
+       [
+        0.1839,
+        0.623,
+        0.3852,
+        0.6541
+       ]
+      ]
+     },
+     {
+      "t": "Asemptomatik Bakteriüri",
+      "a": "Semptomu olmayan kişide saptanan anlamlı (>10⁵ CFU/mL) bakteriüri.",
+      "k": "terim",
+      "b": [
+       [
+        0.1861,
+        0.4462,
+        0.3874,
+        0.4768
+       ],
+       [
+        0.2184,
+        0.4915,
+        0.422,
+        0.5211
+       ]
+      ]
+     },
+     {
+      "t": "Lökosit esteraz testi",
+      "a": "Lökositlere ait esteraz enzimini saptayan ve piyüriyi gösteren dipstik testi.",
+      "k": "terim",
+      "b": [
+       [
+        0.2202,
+        0.1111,
+        0.5838,
+        0.1778
+       ]
+      ]
+     },
+     {
+      "t": "Piyüri",
+      "a": "İdrarda anlamlı sayıda lökosit bulunması.",
+      "k": "terim",
+      "b": [
+       [
+        0.1851,
+        0.3577,
+        0.2393,
+        0.3881
+       ]
+      ]
+     }
+    ]
+   },
+   "46": {
+    "bos": 0.0,
+    "t": [
+     {
+      "t": "Lökosit esteraz testi",
+      "a": "Lökositlere ait esteraz enzimini saptayan ve piyüriyi gösteren dipstik testi.",
+      "k": "terim",
+      "b": [
+       [
+        0.3279,
+        0.6345,
+        0.4866,
+        0.6641
+       ]
+      ]
+     },
+     {
+      "t": "İdrar mikroskopisi",
+      "a": "İdrar yolu enfeksiyonu tanısında santrifüjlü sediment ve santrifüjsüz idrarda hücre sayımı ile Gram boyalı inceleme yapılarak piyüri, bakteriüri ve hematürinin araştırılmasıdır.",
+      "k": "terim",
+      "b": [
+       [
+        0.6232,
+        0.32,
+        0.8389,
+        0.3644
+       ]
+      ]
+     },
+     {
+      "t": "Bakteriüri",
+      "a": "İdrarda bakteri bulunması.",
+      "k": "terim",
+      "b": [
+       [
+        0.2546,
+        0.5299,
+        0.3333,
+        0.5595
+       ]
+      ]
+     },
+     {
+      "t": "Nitrit",
+      "a": "Gram negatif enterik bakterilerin nitratı nitrite çevirmesini saptayan dipstik testi; bakteriüriyi gösterir.",
+      "k": "terim",
+      "b": [
+       [
+        0.4385,
+        0.3205,
+        0.5121,
+        0.365
+       ],
+       [
+        0.2546,
+        0.498,
+        0.3007,
+        0.5276
+       ],
+       [
+        0.2546,
+        0.6345,
+        0.3007,
+        0.6641
+       ]
+      ]
+     },
+     {
+      "t": "Piyüri",
+      "a": "İdrarda anlamlı sayıda lökosit bulunması.",
+      "k": "terim",
+      "b": [
+       [
+        0.3432,
+        0.4119,
+        0.3863,
+        0.4415
+       ]
+      ]
+     }
+    ]
+   },
+   "47": {
+    "bos": 0.0,
+    "t": [
+     {
+      "t": "İdrar mikroskopisi",
+      "a": "İdrar yolu enfeksiyonu tanısında santrifüjlü sediment ve santrifüjsüz idrarda hücre sayımı ile Gram boyalı inceleme yapılarak piyüri, bakteriüri ve hematürinin araştırılmasıdır.",
+      "k": "terim",
+      "b": [
+       [
+        0.2202,
+        0.1111,
+        0.544,
+        0.1778
+       ]
+      ]
+     },
+     {
+      "t": "Bakteriüri",
+      "a": "İdrarda bakteri bulunması.",
+      "k": "terim",
+      "b": [
+       [
+        0.6069,
+        0.3211,
+        0.7026,
+        0.3522
+       ],
+       [
+        0.8178,
+        0.5722,
+        0.918,
+        0.6018
+       ]
+      ]
+     },
+     {
+      "t": "Piyüri",
+      "a": "İdrarda anlamlı sayıda lökosit bulunması.",
+      "k": "terim",
+      "b": [
+       [
+        0.2274,
+        0.3222,
+        0.2728,
+        0.3533
+       ],
+       [
+        0.6841,
+        0.5722,
+        0.7271,
+        0.6018
+       ]
+      ]
+     }
+    ]
+   },
+   "48": {
+    "bos": 0.0,
+    "t": [
+     {
+      "t": "Steril Piyüri",
+      "a": "İdrarda ≥10 lökosit/mm³ bulunmasına rağmen standart bakteriyolojik besiyerlerinde üreme olmaması durumu.",
+      "k": "terim",
+      "b": [
+       [
+        0.2202,
+        0.1111,
+        0.3971,
+        0.1778
+       ]
+      ]
+     }
+    ]
+   },
+   "49": {
+    "bos": 0.0,
+    "t": [
+     {
+      "t": "Sistit",
+      "a": "Mesane mukozasının inflamasyonudur; klinikte dizüri, sık ve ani idrara çıkma, suprapubik ağrı ve bazen hematüri ile karakterize sendrom olarak tanınır.",
+      "k": "terim",
+      "b": [
+       [
+        0.6535,
+        0.5195,
+        0.693,
+        0.5479
+       ]
+      ]
+     }
+    ]
+   },
+   "52": {
+    "bos": 0.0,
+    "t": [
+     {
+      "t": "Suprapubik aspirasyon",
+      "a": "Pubis üstünden iğneyle mesaneden doğrudan idrar alınması; kontaminasyonsuz altın standart yöntem.",
+      "k": "terim",
+      "b": [
+       [
+        0.3841,
+        0.6862,
+        0.4709,
+        0.718
+       ],
+       [
+        0.2417,
+        0.7245,
+        0.3259,
+        0.7564
+       ]
+      ]
+     },
+     {
+      "t": "Orta akım idrarı",
+      "a": "İlk akım atıldıktan sonra işemenin ortasında toplanan, kültür için kullanılan idrar örneği.",
+      "k": "terim",
+      "b": [
+       [
+        0.2417,
+        0.6862,
+        0.3716,
+        0.718
+       ]
+      ]
+     },
+     {
+      "t": "İdrar kültürü",
+      "a": "İdrar örneğinin besiyerine ekilerek üreyen bakterinin tür ve koloni sayısının belirlenmesidir.",
+      "k": "terim",
+      "b": [
+       [
+        0.2202,
+        0.1111,
+        0.4535,
+        0.1778
+       ]
+      ]
+     }
+    ]
+   },
+   "53": {
+    "bos": 0.0,
+    "t": [
+     {
+      "t": "Asemptomatik Bakteriüri",
+      "a": "Semptomu olmayan kişide saptanan anlamlı (>10⁵ CFU/mL) bakteriüri.",
+      "k": "terim",
+      "b": [
+       [
+        0.2015,
+        0.7515,
+        0.3948,
+        0.7811
+       ]
+      ]
+     },
+     {
+      "t": "Suprapubik aspirasyon",
+      "a": "Pubis üstünden iğneyle mesaneden doğrudan idrar alınması; kontaminasyonsuz altın standart yöntem.",
+      "k": "terim",
+      "b": [
+       [
+        0.2606,
+        0.2304,
+        0.4368,
+        0.26
+       ]
+      ]
+     },
+     {
+      "t": "İdrar kültürü",
+      "a": "İdrar örneğinin besiyerine ekilerek üreyen bakterinin tür ve koloni sayısının belirlenmesidir.",
+      "k": "terim",
+      "b": [
+       [
+        0.2202,
+        0.1111,
+        0.4535,
+        0.1778
+       ]
+      ]
+     }
+    ]
+   },
+   "54": {
+    "bos": 0.0,
+    "t": [
+     {
+      "t": "İdrar kültürü",
+      "a": "İdrar örneğinin besiyerine ekilerek üreyen bakterinin tür ve koloni sayısının belirlenmesidir.",
+      "k": "terim",
+      "b": [
+       [
+        0.1774,
+        0.1092,
+        0.4181,
+        0.1759
+       ]
+      ]
+     },
+     {
+      "t": "Kontaminasyon",
+      "a": "Temiz bir ortama herhangi bir yolla kir ve/veya mikroorganizmaların bulaşması ya da bulaştırılması.",
+      "k": "terim",
+      "b": [
+       [
+        0.4369,
+        0.1092,
+        0.6818,
+        0.1759
+       ]
+      ]
+     },
+     {
+      "t": "Laktobasil",
+      "a": "Normal vajen florasının %96'sını oluşturan bakteri grubu.",
+      "k": "terim",
+      "b": [
+       [
+        0.2287,
+        0.4304,
+        0.3168,
+        0.46
+       ]
+      ]
+     }
+    ]
+   },
+   "55": {
+    "bos": 0.0,
+    "t": [
+     {
+      "t": "İdrar kültürü",
+      "a": "İdrar örneğinin besiyerine ekilerek üreyen bakterinin tür ve koloni sayısının belirlenmesidir.",
+      "k": "terim",
+      "b": [
+       [
+        0.1547,
+        0.0591,
+        0.3907,
+        0.1257
+       ]
+      ]
+     },
+     {
+      "t": "Diyabet",
+      "a": "İnsülin salınımı, insülin etkisi veya her ikisinin bozuk olduğu, kronik progresif hiperglisemi ile karakterize, böbrek, göz, sinir ve damarları etkileyen akut ve kronik komplikasyonlara yol açan metabolik hastalık.",
+      "k": "terim",
+      "b": [
+       [
+        0.1658,
+        0.3208,
+        0.2433,
+        0.3516
+       ]
+      ]
+     },
+     {
+      "t": "Sistit",
+      "a": "Mesane mukozasının inflamasyonudur; klinikte dizüri, sık ve ani idrara çıkma, suprapubik ağrı ve bazen hematüri ile karakterize sendrom olarak tanınır.",
+      "k": "terim",
+      "b": [
+       [
+        0.2812,
+        0.6458,
+        0.3246,
+        0.6754
+       ]
+      ]
+     }
+    ]
+   },
+   "56": {
+    "bos": 0.0,
+    "t": [
+     {
+      "t": "Prostatit",
+      "a": "Prostat bezinin enfeksiyonu ve enflamasyonu.",
+      "k": "terim",
+      "b": [
+       [
+        0.2961,
+        0.4415,
+        0.3755,
+        0.4748
+       ]
+      ]
+     },
+     {
+      "t": "Hepatit",
+      "a": "Karaciğer parankiminin enflamasyonu ve hepatosit hasarı ile karakterize durum. Karaciğer fonksiyon testlerinin normalleşmesi altı aydan kısa sürerse akut, altı aydan uzun sürerse kronik hepatit denir.",
+      "k": "terim",
+      "b": [
+       [
+        0.5904,
+        0.5,
+        0.6576,
+        0.5333
+       ]
+      ]
+     }
+    ]
+   },
+   "57": {
+    "bos": 0.0,
+    "t": [
+     {
+      "t": "Septik Şok",
+      "a": "Sistemik enfeksiyona karşı konağın kontrolsüz sitokin yanıtı ve aşırı nitrik oksit (NO) üretimi sonucu periferik vazodilatasyon ve DİK ile seyreden şok.",
+      "k": "terim",
+      "b": [
+       [
+        0.6808,
+        0.3838,
+        0.7666,
+        0.4133
+       ]
+      ]
+     },
+     {
+      "t": "Sepsis",
+      "a": "Enfeksiyona karşı gelişen, hayatı tehdit eden organ disfonksiyonu ile karakterize disfonksiyonel sistemik inflamatuar yanıt; septik şok ve çoklu organ yetmezliğine ilerleyebilir.",
+      "k": "terim",
+      "b": [
+       [
+        0.6033,
+        0.3825,
+        0.6533,
+        0.4133
+       ]
+      ]
+     }
+    ]
+   },
+   "58": {
+    "bos": 0.0,
+    "t": [
+     {
+      "t": "Hidronefroz",
+      "a": "İdrar akımındaki obstrüksiyon nedeniyle renal pelvis ve kalikslerin aşırı genişlemesi ve böbrek parankiminin bası atrofisine uğraması.",
+      "k": "terim",
+      "b": [
+       [
+        0.6623,
+        0.6429,
+        0.7565,
+        0.68
+       ],
+       [
+        0.4627,
+        0.7452,
+        0.557,
+        0.7822
+       ]
+      ]
+     }
+    ]
+   },
+   "66": {
+    "bos": 0.0,
+    "t": [
+     {
+      "t": "Akut komplike olmayan sistit",
+      "a": "Sağlıklı kadında sık, ağrılı, bulanık ve/veya kanlı idrar ve suprapubik hassasiyetle seyreden, ateşsiz mesane enfeksiyonu.",
+      "k": "terim",
+      "b": [
+       [
+        0.4142,
+        0.1111,
+        0.9042,
+        0.1778
+       ]
+      ]
+     }
+    ]
+   },
+   "67": {
+    "bos": 0.0,
+    "t": [
+     {
+      "t": "Nitrofurantoin",
+      "a": "İdrardan hızla atılan ancak birçok dokuda terapötik düzeye ulaşmayan, bu nedenle alt üriner sistem enfeksiyonlarının tedavisi ve profilaksisinde kullanılan antibakteriyel ajandır.",
+      "k": "terim",
+      "b": [
+       [
+        0.232,
+        0.4902,
+        0.3101,
+        0.5124
+       ]
+      ]
+     },
+     {
+      "t": "Pivmesillinam",
+      "a": "Akut komplike olmayan sistitte 800 mg/gün 5 gün kullanılan beta laktam antibiyotik.",
+      "k": "terim",
+      "b": [
+       [
+        0.232,
+        0.8628,
+        0.307,
+        0.885
+       ]
+      ]
+     },
+     {
+      "t": "Komplike ÜSE",
+      "a": "Yapısal ya da fonksiyonel komplike edici bir faktörün eşlik ettiği üriner sistem enfeksiyonu.",
+      "k": "terim",
+      "b": [
+       [
+        0.5797,
+        0.1485,
+        0.6513,
+        0.1707
+       ]
+      ]
+     },
+     {
+      "t": "Amoksisilin",
+      "a": "Ampisilin ve amoksisilini içeren penisilin alt grubu.",
+      "k": "terim",
+      "b": [
+       [
+        0.6321,
+        0.6298,
+        0.6892,
+        0.6521
+       ]
+      ]
+     },
+     {
+      "t": "Fosfomisin",
+      "a": "Bakteriyel hücre duvarı sentezini çok erken bir aşamada engelleyen, yapısal olarak diğer antimikrobiyallerle ilgisi olmayan fosfoenolpiruvat analoğu; klinikte stabil tuzu fosfomisin trometamol kullanılır.",
+      "k": "terim",
+      "b": [
+       [
+        0.232,
+        0.7296,
+        0.2897,
+        0.7518
+       ]
+      ]
+     },
+     {
+      "t": "Kinolonlar",
+      "a": "Enterobacteriaceae, P. aeruginosa, S. aureus ve S. saprophyticus'a etkili geniş spektrumlu antibiyotik grubudur; siprofloksasin ve levofloksasin üriner ve genital enfeksiyonlarda kullanılan örnekleridir.",
+      "k": "terim",
+      "b": [
+       [
+        0.5996,
+        0.513,
+        0.6576,
+        0.5352
+       ]
+      ]
+     },
+     {
+      "t": "TMP-SMZ",
+      "a": "Sinerjistik etkili, enterokok ve Pseudomonas dışındaki üropatojenlere etkili kombine antibiyotik.",
+      "k": "terim",
+      "b": [
+       [
+        0.232,
+        0.6232,
+        0.2905,
+        0.6454
+       ]
+      ]
+     },
+     {
+      "t": "Düşük",
+      "a": "Gebeliğin fetüsün yaşayabilirlik sınırına (20–24. hafta ya da 500 g) ulaşmadan spontan olarak sonlanması; düşük.",
+      "k": "terim",
+      "b": [
+       [
+        0.3745,
+        0.5433,
+        0.4042,
+        0.5655
+       ],
+       [
+        0.3522,
+        0.7563,
+        0.382,
+        0.7785
+       ],
+       [
+        0.3475,
+        0.8893,
+        0.3773,
+        0.9115
+       ]
+      ]
+     }
+    ]
+   },
+   "68": {
+    "bos": 0.0,
+    "t": [
+     {
+      "t": "Sistit",
+      "a": "Mesane mukozasının inflamasyonudur; klinikte dizüri, sık ve ani idrara çıkma, suprapubik ağrı ve bazen hematüri ile karakterize sendrom olarak tanınır.",
+      "k": "terim",
+      "b": [
+       [
+        0.3845,
+        0.1111,
+        0.4772,
+        0.1778
+       ]
+      ]
+     }
+    ]
+   },
+   "69": {
+    "bos": 0.0,
+    "t": [
+     {
+      "t": "Antibiyogram",
+      "a": "Kültürde üretilen bakterinin antibiyotik duyarlılığının test edilmesi; gonokok kültürünün avantajı.",
+      "k": "terim",
+      "b": [
+       [
+        0.3277,
+        0.3241,
+        0.4334,
+        0.3553
+       ]
+      ]
+     },
+     {
+      "t": "Kinolonlar",
+      "a": "Enterobacteriaceae, P. aeruginosa, S. aureus ve S. saprophyticus'a etkili geniş spektrumlu antibiyotik grubudur; siprofloksasin ve levofloksasin üriner ve genital enfeksiyonlarda kullanılan örnekleridir.",
+      "k": "terim",
+      "b": [
+       [
+        0.3628,
+        0.4889,
+        0.4414,
+        0.5202
+       ]
+      ]
+     }
+    ]
+   },
+   "70": {
+    "bos": 0.0,
+    "t": [
+     {
+      "t": "Florokinolonlar",
+      "a": "Enterobacteriaceae, P. aeruginosa, S. aureus ve S. saprophyticus'a etkili geniş spektrumlu antibiyotik grubudur; siprofloksasin ve levofloksasin üriner ve genital enfeksiyonlarda kullanılan örnekleridir.",
+      "k": "terim",
+      "b": [
+       [
+        0.5607,
+        0.1215,
+        0.628,
+        0.1419
+       ]
+      ]
+     },
+     {
+      "t": "Sefalosporinler",
+      "a": "Kuşaklara ayrılan beta-laktam antibiyotik grubudur; Enterobacteria türlerine oldukça etkili, enterokoklara zayıf etkilidir ve üriner, genital ve gebelikle ilişkili enfeksiyonlarda yaygın kullanılır.",
+      "k": "terim",
+      "b": [
+       [
+        0.7168,
+        0.1215,
+        0.7851,
+        0.1419
+       ]
+      ]
+     },
+     {
+      "t": "Siprofloksasin",
+      "a": "Florokinolon grubu antibiyotik.",
+      "k": "terim",
+      "b": [
+       [
+        0.3823,
+        0.4989,
+        0.4471,
+        0.5192
+       ],
+       [
+        0.1814,
+        0.4991,
+        0.2463,
+        0.5195
+       ]
+      ]
+     },
+     {
+      "t": "Levofloksasin",
+      "a": "Florokinolon; klamidyada 1x500 mg 7 gün, enterik etkenli epididimitte seftriaksonla 10 gün.",
+      "k": "terim",
+      "b": [
+       [
+        0.3599,
+        0.5841,
+        0.4231,
+        0.6044
+       ],
+       [
+        0.1591,
+        0.5841,
+        0.2222,
+        0.6044
+       ]
+      ]
+     },
+     {
+      "t": "Antibiyogram",
+      "a": "Kültürde üretilen bakterinin antibiyotik duyarlılığının test edilmesi; gonokok kültürünün avantajı.",
+      "k": "terim",
+      "b": [
+       [
+        0.3896,
+        0.9087,
+        0.4537,
+        0.9291
+       ]
+      ]
+     },
+     {
+      "t": "Seftriakson",
+      "a": "Geniş spektrumlu 3. kuşak sefalosporindir. Neisseria gonorrhoeae enfeksiyonlarında, bakteriyel menenjitlerde ve komplike piyelonefritlerde birinci basamak antibiyotiktir.",
+      "k": "terim",
+      "b": [
+       [
+        0.4151,
+        0.6694,
+        0.467,
+        0.6898
+       ],
+       [
+        0.61,
+        0.4907,
+        0.6619,
+        0.5111
+       ]
+      ]
+     }
+    ]
+   },
+   "71": {
+    "bos": 0.0,
+    "t": [
+     {
+      "t": "Konfüzyon",
+      "a": "Dikkat ve düşünce akışının bozulduğu, yönelimin (oryantasyon) kaybolduğu hafif bilinç bozukluğu tablosudur.",
+      "k": "terim",
+      "b": [
+       [
+        0.5417,
+        0.3904,
+        0.6356,
+        0.4274
+       ]
+      ]
+     },
+     {
+      "t": "Sepsis",
+      "a": "Enfeksiyona karşı gelişen, hayatı tehdit eden organ disfonksiyonu ile karakterize disfonksiyonel sistemik inflamatuar yanıt; septik şok ve çoklu organ yetmezliğine ilerleyebilir.",
+      "k": "terim",
+      "b": [
+       [
+        0.6274,
+        0.4348,
+        0.6861,
+        0.4719
+       ]
+      ]
+     }
+    ]
+   },
+   "72": {
+    "bos": 0.0,
+    "t": [
+     {
+      "t": "Amfizematöz pyelonefrit",
+      "a": "Böbrek parankiminde gaz oluşumuyla seyreden, diyabetiklerde görülen ve mortalitesi yüksek ağır böbrek enfeksiyonu.",
+      "k": "terim",
+      "b": [
+       [
+        0.2304,
+        0.9257,
+        0.3461,
+        0.9558
+       ],
+       [
+        0.375,
+        0.9271,
+        0.4591,
+        0.9558
+       ]
+      ]
+     },
+     {
+      "t": "Komplike İYE",
+      "a": "Yapısal ya da fonksiyonel komplike edici bir faktörün eşlik ettiği üriner sistem enfeksiyonu.",
+      "k": "terim",
+      "b": [
+       [
+        0.2202,
+        0.1111,
+        0.4523,
+        0.1778
+       ]
+      ]
+     },
+     {
+      "t": "Fosfomisin",
+      "a": "Bakteriyel hücre duvarı sentezini çok erken bir aşamada engelleyen, yapısal olarak diğer antimikrobiyallerle ilgisi olmayan fosfoenolpiruvat analoğu; klinikte stabil tuzu fosfomisin trometamol kullanılır.",
+      "k": "terim",
+      "b": [
+       [
+        0.3368,
+        0.5246,
+        0.4159,
+        0.5534
+       ]
+      ]
+     },
+     {
+      "t": "Kolistin",
+      "a": "Gram negatif bakterilerin dış membranındaki LPS yapısını bozarak deterjan benzeri etkiyle hücreyi patlatan polipeptid antibiyotik.",
+      "k": "terim",
+      "b": [
+       [
+        0.633,
+        0.4745,
+        0.6855,
+        0.5032
+       ]
+      ]
+     }
+    ]
+   },
+   "73": {
+    "bos": 0.0,
+    "t": [
+     {
+      "t": "Asemptomatik Bakteriüri",
+      "a": "Semptomu olmayan kişide saptanan anlamlı (>10⁵ CFU/mL) bakteriüri.",
+      "k": "terim",
+      "b": [
+       [
+        0.2313,
+        0.5387,
+        0.4625,
+        0.5733
+       ]
+      ]
+     }
+    ]
+   },
+   "74": {
+    "bos": 0.0,
+    "t": [
+     {
+      "t": "Asemptomatik Bakteriüri",
+      "a": "Semptomu olmayan kişide saptanan anlamlı (>10⁵ CFU/mL) bakteriüri.",
+      "k": "terim",
+      "b": [
+       [
+        0.461,
+        0.0878,
+        0.7262,
+        0.1323
+       ]
+      ]
+     },
+     {
+      "t": "İdrar kültürü",
+      "a": "İdrar örneğinin besiyerine ekilerek üreyen bakterinin tür ve koloni sayısının belirlenmesidir.",
+      "k": "terim",
+      "b": [
+       [
+        0.5269,
+        0.3852,
+        0.6371,
+        0.4222
+       ],
+       [
+        0.2955,
+        0.7018,
+        0.4057,
+        0.7389
+       ]
+      ]
+     },
+     {
+      "t": "Reinfeksiyon",
+      "a": "Geçirilmiş ÜSE'yi izleyen ilk 6 ay içinde farklı bir bakteri ya da aynı bakterinin başka bir suşuyla yeni enfeksiyon gelişmesi.",
+      "k": "terim",
+      "b": [
+       [
+        0.6973,
+        0.6185,
+        0.8088,
+        0.6555
+       ]
+      ]
+     },
+     {
+      "t": "Relaps",
+      "a": "ÜSE tedavisinin bitiminden sonraki iki hafta içinde aynı bakteriyle yeniden enfeksiyon gelişmesi.",
+      "k": "terim",
+      "b": [
+       [
+        0.4267,
+        0.6048,
+        0.4811,
+        0.6344
+       ]
+      ]
+     }
+    ]
+   },
+   "75": {
+    "bos": 0.0,
+    "t": [
+     {
+      "t": "Nitrofurantoin",
+      "a": "İdrardan hızla atılan ancak birçok dokuda terapötik düzeye ulaşmayan, bu nedenle alt üriner sistem enfeksiyonlarının tedavisi ve profilaksisinde kullanılan antibakteriyel ajandır.",
+      "k": "terim",
+      "b": [
+       [
+        0.5065,
+        0.7343,
+        0.6274,
+        0.7676
+       ]
+      ]
+     },
+     {
+      "t": "Fosfomisin",
+      "a": "Bakteriyel hücre duvarı sentezini çok erken bir aşamada engelleyen, yapısal olarak diğer antimikrobiyallerle ilgisi olmayan fosfoenolpiruvat analoğu; klinikte stabil tuzu fosfomisin trometamol kullanılır.",
+      "k": "terim",
+      "b": [
+       [
+        0.7957,
+        0.7343,
+        0.8876,
+        0.7676
+       ]
+      ]
+     },
+     {
+      "t": "Prostatit",
+      "a": "Prostat bezinin enfeksiyonu ve enflamasyonu.",
+      "k": "terim",
+      "b": [
+       [
+        0.4813,
+        0.4415,
+        0.5606,
+        0.4748
+       ]
+      ]
+     },
+     {
+      "t": "Relaps",
+      "a": "ÜSE tedavisinin bitiminden sonraki iki hafta içinde aynı bakteriyle yeniden enfeksiyon gelişmesi.",
+      "k": "terim",
+      "b": [
+       [
+        0.2319,
+        0.3229,
+        0.3038,
+        0.3578
+       ]
+      ]
+     }
+    ]
+   },
+   "76": {
+    "bos": 0.0,
+    "t": [
+     {
+      "t": "Reenfeksiyon",
+      "a": "Geçirilmiş ÜSE'yi izleyen ilk 6 ay içinde farklı bir bakteri ya da aynı bakterinin başka bir suşuyla yeni enfeksiyon gelişmesi.",
+      "k": "terim",
+      "b": [
+       [
+        0.231,
+        0.3229,
+        0.3637,
+        0.3578
+       ],
+       [
+        0.2308,
+        0.3817,
+        0.3833,
+        0.4163
+       ]
+      ]
+     }
+    ]
+   },
+   "77": {
+    "bos": 0.0,
+    "t": [
+     {
+      "t": "Nitrofurantoin",
+      "a": "İdrardan hızla atılan ancak birçok dokuda terapötik düzeye ulaşmayan, bu nedenle alt üriner sistem enfeksiyonlarının tedavisi ve profilaksisinde kullanılan antibakteriyel ajandır.",
+      "k": "terim",
+      "b": [
+       [
+        0.1992,
+        0.6404,
+        0.3187,
+        0.6787
+       ],
+       [
+        0.4578,
+        0.7572,
+        0.572,
+        0.7943
+       ],
+       [
+        0.6978,
+        0.7542,
+        0.8139,
+        0.7913
+       ]
+      ]
+     },
+     {
+      "t": "Reenfeksiyon",
+      "a": "Geçirilmiş ÜSE'yi izleyen ilk 6 ay içinde farklı bir bakteri ya da aynı bakterinin başka bir suşuyla yeni enfeksiyon gelişmesi.",
+      "k": "terim",
+      "b": [
+       [
+        0.2905,
+        0.1315,
+        0.4411,
+        0.1759
+       ],
+       [
+        0.2181,
+        0.0152,
+        0.4166,
+        0.0671
+       ]
+      ]
+     },
+     {
+      "t": "Fosfomisin",
+      "a": "Bakteriyel hücre duvarı sentezini çok erken bir aşamada engelleyen, yapısal olarak diğer antimikrobiyallerle ilgisi olmayan fosfoenolpiruvat analoğu; klinikte stabil tuzu fosfomisin trometamol kullanılır.",
+      "k": "terim",
+      "b": [
+       [
+        0.7603,
+        0.8409,
+        0.8491,
+        0.878
+       ]
+      ]
+     },
+     {
+      "t": "Düşük",
+      "a": "Gebeliğin fetüsün yaşayabilirlik sınırına (20–24. hafta ya da 500 g) ulaşmadan spontan olarak sonlanması; düşük.",
+      "k": "terim",
+      "b": [
+       [
+        0.7428,
+        0.5764,
+        0.7971,
+        0.6135
+       ]
+      ]
+     }
+    ]
+   },
+   "78": {
+    "bos": 0.0,
+    "t": [
+     {
+      "t": "TMP-SMX",
+      "a": "Sülfametoksazol ile trimetoprimin 5:1 oranındaki kombinasyonu (400 mg + 80 mg). Trimetoprim dihidrofolik asit redüktaz enzimini inhibe eder ve bakteriostatik aktivite gösterir.",
+      "k": "terim",
+      "b": [
+       [
+        0.665,
+        0.0728,
+        0.8262,
+        0.1394
+       ]
+      ]
+     }
+    ]
+   },
+   "79": {
+    "bos": 0.0,
+    "t": [
+     {
+      "t": "Hipersensitivite",
+      "a": "Normalde koruyucu olan immün yanıtların aşırı veya uygunsuz hale gelerek immünolojik aracılı doku hasarı oluşturması. Hedef antijenler öz antijenler, kalıcı mikrobiyal antijenler veya zararsız çevresel antijenler (alerjenler) olabilir.",
+      "k": "terim",
+      "b": [
+       [
+        0.1696,
+        0.7204,
+        0.2876,
+        0.7491
+       ]
+      ]
+     },
+     {
+      "t": "Nitrofurantoin",
+      "a": "İdrardan hızla atılan ancak birçok dokuda terapötik düzeye ulaşmayan, bu nedenle alt üriner sistem enfeksiyonlarının tedavisi ve profilaksisinde kullanılan antibakteriyel ajandır.",
+      "k": "terim",
+      "b": [
+       [
+        0.2202,
+        0.1111,
+        0.4808,
+        0.1778
+       ]
+      ]
+     },
+     {
+      "t": "Hemoliz",
+      "a": "Eritrositlerin normal/beklenen zamandan önce yıkılması veya dolaşımdan uzaklaştırılması; bu şekilde oluşan anemiye hemolitik anemi denir. Sağlıklı kemik iliği eritrosit yapımını 6-7 kat artırabildiğinden yaşam süresindeki kısalma her zaman anemiye yol açmaz.",
+      "k": "terim",
+      "b": [
+       [
+        0.3377,
+        0.6679,
+        0.3946,
+        0.6967
+       ]
+      ]
+     },
+     {
+      "t": "Anemi",
+      "a": "Gebe olmayan kadınlarda Hgb <12 g/dl, gebe kadınlarda Hgb <11 g/dl olması anemi olarak tanımlanır. En sık görülen anemi türü demir eksikliği anemisidir; en sık doğurganlık çağındaki kadınlarda ve çocuklarda görülür.",
+      "k": "terim",
+      "b": [
+       [
+        0.5267,
+        0.6156,
+        0.5688,
+        0.6443
+       ]
+      ]
+     },
+     {
+      "t": "Düşük",
+      "a": "Gebeliğin fetüsün yaşayabilirlik sınırına (20–24. hafta ya da 500 g) ulaşmadan spontan olarak sonlanması; düşük.",
+      "k": "terim",
+      "b": [
+       [
+        0.3827,
+        0.7735,
+        0.4307,
+        0.8057
+       ]
+      ]
+     }
+    ]
+   },
+   "80": {
+    "bos": 0.0,
+    "t": [
+     {
+      "t": "Klebsiella pneumoniae",
+      "a": "Gram negatif, hareketsiz, belirgin polisakkarit kapsüllü basil. Alkoliklerde ve diyabetiklerde kaviteli pnömoni ve nozokomiyal idrar yolu/kan enfeksiyonu yapar.",
+      "k": "terim",
+      "b": [
+       [
+        0.7172,
+        0.4245,
+        0.9031,
+        0.4578
+       ]
+      ]
+     },
+     {
+      "t": "Sefalosporinler",
+      "a": "Kuşaklara ayrılan beta-laktam antibiyotik grubudur; Enterobacteria türlerine oldukça etkili, enterokoklara zayıf etkilidir ve üriner, genital ve gebelikle ilişkili enfeksiyonlarda yaygın kullanılır.",
+      "k": "terim",
+      "b": [
+       [
+        0.0975,
+        0.18,
+        0.3695,
+        0.2467
+       ],
+       [
+        0.113,
+        0.3257,
+        0.2439,
+        0.3591
+       ],
+       [
+        0.1863,
+        0.4245,
+        0.3172,
+        0.4578
+       ]
+      ]
+     }
+    ]
+   },
+   "81": {
+    "bos": 0.0,
+    "t": [
+     {
+      "t": "Aminopenisilin",
+      "a": "Ampisilin ve amoksisilini içeren penisilin alt grubu.",
+      "k": "terim",
+      "b": [
+       [
+        0.0975,
+        0.155,
+        0.2489,
+        0.196
+       ]
+      ]
+     }
+    ]
+   },
+   "82": {
+    "bos": 0.0,
+    "t": [
+     {
+      "t": "Aminoglikozidler",
+      "a": "Gentamisinin örnek olduğu, ateşli ve komplike üriner sistem enfeksiyonlarında ve bazı pelvik enfeksiyonlarda çoğunlukla kombinasyon içinde kullanılan, nefrotoksik ve ototoksik antibiyotik grubudur.",
+      "k": "terim",
+      "b": [
+       [
+        0.0975,
+        0.0618,
+        0.3861,
+        0.1285
+       ],
+       [
+        0.1256,
+        0.3224,
+        0.2809,
+        0.3557
+       ],
+       [
+        0.1312,
+        0.4209,
+        0.2905,
+        0.4543
+       ]
+      ]
+     },
+     {
+      "t": "Gentamisin",
+      "a": "Aminoglikozid; PİH'te 2 mg/kg yükleme, 3x1,5 mg/kg idame; gonorede beta-laktam kullanılamazsa 240 mg tek doz + azitromisin 2 g.",
+      "k": "terim",
+      "b": [
+       [
+        0.1256,
+        0.7382,
+        0.221,
+        0.7715
+       ]
+      ]
+     },
+     {
+      "t": "Ampisilin",
+      "a": "Ampisilin ve amoksisilini içeren penisilin alt grubu.",
+      "k": "terim",
+      "b": [
+       [
+        0.2865,
+        0.3224,
+        0.3606,
+        0.3557
+       ]
+      ]
+     },
+     {
+      "t": "TMP-SMX",
+      "a": "Sülfametoksazol ile trimetoprimin 5:1 oranındaki kombinasyonu (400 mg + 80 mg). Trimetoprim dihidrofolik asit redüktaz enzimini inhibe eder ve bakteriostatik aktivite gösterir.",
+      "k": "terim",
+      "b": [
+       [
+        0.4104,
+        0.3224,
+        0.5002,
+        0.3557
+       ]
+      ]
+     }
+    ]
+   },
+   "83": {
+    "bos": 0.0,
+    "t": [
+     {
+      "t": "Florokinolonlar",
+      "a": "Enterobacteriaceae, P. aeruginosa, S. aureus ve S. saprophyticus'a etkili geniş spektrumlu antibiyotik grubudur; siprofloksasin ve levofloksasin üriner ve genital enfeksiyonlarda kullanılan örnekleridir.",
+      "k": "terim",
+      "b": [
+       [
+        0.0975,
+        0.0618,
+        0.3566,
+        0.1285
+       ],
+       [
+        0.0544,
+        0.2233,
+        0.2416,
+        0.2698
+       ]
+      ]
+     },
+     {
+      "t": "Epilepsi",
+      "a": "İkinci aşamada değerlendirilen epilepsi tipi dört gruba ayrılır: fokal epilepsiler, jeneralize epilepsiler, kombine fokal ve jeneralize epilepsiler ve bilinmeyen.",
+      "k": "terim",
+      "b": [
+       [
+        0.0549,
+        0.8494,
+        0.159,
+        0.8958
+       ]
+      ]
+     },
+     {
+      "t": "Demir",
+      "a": "Eksikliği gebelikte en sık görülen beslenme yetersizliği olan, gebelere Sağlık Bakanlığı programıyla destek olarak verilen ve bebeklikte emilimi beslenme biçimine göre değişen mikrobesindir.",
+      "k": "terim",
+      "b": [
+       [
+        0.1781,
+        0.7794,
+        0.2448,
+        0.8239
+       ]
+      ]
+     }
+    ]
+   },
+   "84": {
+    "bos": 0.0,
+    "t": [
+     {
+      "t": "Streptococcus pneumoniae",
+      "a": "Ders notlarında akut postenfeksiyöz glomerülonefriti tetikleyebilen ve fosfomisinin etkili olduğu bakteriler arasında anılan gram pozitif bakteridir.",
+      "k": "terim",
+      "b": [
+       [
+        0.4458,
+        0.4209,
+        0.6737,
+        0.4543
+       ]
+      ]
+     },
+     {
+      "t": "Staphylococcus aureus",
+      "a": "Gram pozitif, katalaz ve koagülaz pozitif küme oluşturan kok. Deri ve yumuşak doku enfeksiyonları, apseler, osteomiyelit ve nozokomiyal bakteriyeminin baş etkenidir.",
+      "k": "terim",
+      "b": [
+       [
+        0.2373,
+        0.4209,
+        0.4312,
+        0.4543
+       ]
+      ]
+     },
+     {
+      "t": "Fosfomisin",
+      "a": "Bakteriyel hücre duvarı sentezini çok erken bir aşamada engelleyen, yapısal olarak diğer antimikrobiyallerle ilgisi olmayan fosfoenolpiruvat analoğu; klinikte stabil tuzu fosfomisin trometamol kullanılır.",
+      "k": "terim",
+      "b": [
+       [
+        0.0975,
+        0.0618,
+        0.2848,
+        0.1285
+       ],
+       [
+        0.1086,
+        0.2811,
+        0.2193,
+        0.3157
+       ]
+      ]
+     },
+     {
+      "t": "Prostatit",
+      "a": "Prostat bezinin enfeksiyonu ve enflamasyonu.",
+      "k": "terim",
+      "b": [
+       [
+        0.6196,
+        0.5594,
+        0.699,
+        0.5928
+       ]
+      ]
+     }
+    ]
+   },
+   "85": {
+    "bos": 0.0,
+    "t": [
+     {
+      "t": "Turna yemişi",
+      "a": "Tekrarlayan ÜSE'den korunmada derste sayılan bitkisel yöntem.",
+      "k": "terim",
+      "b": [
+       [
+        0.3534,
+        0.4415,
+        0.4565,
+        0.4748
+       ]
+      ]
+     },
+     {
+      "t": "Bağışıklama",
+      "a": "Hassas yaş gruplarının enfeksiyona yakalanma riskinin en yüksek olduğu dönemden önce bağışıklanmalarını sağlayarak aşı ile korunulabilir hastalıkları önlemeyi amaçlayan program.",
+      "k": "terim",
+      "b": [
+       [
+        0.2312,
+        0.4987,
+        0.3552,
+        0.5333
+       ]
+      ]
+     },
+     {
+      "t": "Östrojen",
+      "a": "Overde folikül tarafından salgılanan, endometriumun proliferasyonunu sağlayan ve menstrual siklusu düzenleyen steroid hormondur; karşılanmamış etkisi endometrial hiperplazi ve karsinoma zemin hazırlar.",
+      "k": "terim",
+      "b": [
+       [
+        0.5598,
+        0.3829,
+        0.6307,
+        0.4163
+       ]
+      ]
+     }
+    ]
+   },
+   "86": {
+    "bos": 0.0,
+    "t": [
+     {
+      "t": "Bağışıklama",
+      "a": "Hassas yaş gruplarının enfeksiyona yakalanma riskinin en yüksek olduğu dönemden önce bağışıklanmalarını sağlayarak aşı ile korunulabilir hastalıkları önlemeyi amaçlayan program.",
+      "k": "terim",
+      "b": [
+       [
+        0.2202,
+        0.1111,
+        0.4201,
+        0.1778
+       ]
+      ]
+     },
+     {
+      "t": "Uro-Vaxom",
+      "a": "18 E. coli suşu içeren, tekrarlayan ÜSE'den korunmada aç karnına günde 1 kapsül 3 ay kullanılan oral bakteriyel lizat aşısı.",
+      "k": "terim",
+      "b": [
+       [
+        0.2483,
+        0.4241,
+        0.3355,
+        0.4528
+       ]
+      ]
+     }
+    ]
+   },
+   "87": {
+    "bos": 0.0,
+    "t": [
+     {
+      "t": "Bağışıklama",
+      "a": "Hassas yaş gruplarının enfeksiyona yakalanma riskinin en yüksek olduğu dönemden önce bağışıklanmalarını sağlayarak aşı ile korunulabilir hastalıkları önlemeyi amaçlayan program.",
+      "k": "terim",
+      "b": [
+       [
+        0.1633,
+        0.118,
+        0.3917,
+        0.192
+       ]
+      ]
+     },
+     {
+      "t": "Uro-Vaxom",
+      "a": "18 E. coli suşu içeren, tekrarlayan ÜSE'den korunmada aç karnına günde 1 kapsül 3 ay kullanılan oral bakteriyel lizat aşısı.",
+      "k": "terim",
+      "b": [
+       [
+        0.1857,
+        0.3903,
+        0.3189,
+        0.4361
+       ]
+      ]
+     }
+    ]
+   }
+  }
+ }
+}

@@ -1,1 +1,2632 @@
-{"surum":1,"key":"k1-15-doku-onarimi-ve-yara-iyilesmesi","uretici":"deepseek","d":{"0":{"1":{"bos":0.0533,"t":[{"t":"Doku onarımı","a":"Yaralanma sonrası doku mimarisi ve fonksiyonunun yeniden kazanılması süreci; iyileşme olarak da adlandırılır.","k":"terim","b":[[0.1603,0.195,0.6154,0.3164]]}]},"3":{"bos":0.4417,"t":[{"t":"Granülasyon dokusu","a":"Onarımda oluşan, ince duvarlı damar, fibroblast, lökosit ve gevşek ECM içeren geçici doku; pembe, nemli, granüler ve kolay kanar.","k":"terim","b":[[0.2319,0.399,0.3555,0.4322]]},{"t":"Skarla onarım","a":"Hasar alanının fibröz bağ dokusu birikimiyle doldurulması; yapısal stabilite sağlar, fonksiyon tam olmayabilir.","k":"terim","b":[[0.2409,0.3202,0.325,0.3534]]},{"t":"Doku onarımı","a":"Yaralanma sonrası doku mimarisi ve fonksiyonunun yeniden kazanılması süreci; iyileşme olarak da adlandırılır.","k":"terim","b":[[0.2745,0.0735,0.5317,0.173]]},{"t":"Rejenerasyon","a":"Hasarlı doku bileşenlerinin aynı hücre tipinin çoğalmasıyla yerine konması; doku normale dönebilir.","k":"terim","b":[[0.135,0.3202,0.2194,0.3534]]},{"t":"Anjiyogenez","a":"Mevcut damarlardan yeni damar oluşumu. Yara iyileşmesi, iskemik dokularda kollateral gelişimi, tümör büyümesi ve ıslak maküler dejenerasyon gibi patolojik durumlarda önemlidir.","k":"terim","b":[[0.135,0.399,0.2103,0.4322]]},{"t":"Fibrozis","a":"Parankimal organlarda aşırı kollajen ve ECM birikimi; kronik inflamasyon ve persistan toksik/iskemik hasar sonucu gelişir.","k":"terim","b":[[0.2638,0.5152,0.3088,0.5483]]}]},"4":{"bos":0.2916,"t":[{"t":"Doku onarımı","a":"Yaralanma sonrası doku mimarisi ve fonksiyonunun yeniden kazanılması süreci; iyileşme olarak da adlandırılır.","k":"terim","b":[[0.3162,0.0735,0.5734,0.173],[0.0975,0.2399,0.2797,0.3122]]},{"t":"Enflamasyon","a":"Damarlı dokuların enfeksiyon ve doku hasarına karşı geliştirdiği, savunma hücre ve moleküllerini hasar bölgesine taşıyıp aktive eden konak savunma yanıtıdır.","k":"terim","b":[[0.0975,0.4769,0.2636,0.5493]]}]},"5":{"bos":0.1435,"t":[{"t":"Rejenerasyon","a":"Hasarlı doku bileşenlerinin aynı hücre tipinin çoğalmasıyla yerine konması; doku normale dönebilir.","k":"terim","b":[[0.0975,0.2399,0.2784,0.3122]]},{"t":"Yara izi","a":"Hasar alanının fibröz bağ dokusu birikimiyle doldurulması; yapısal stabilite sağlar, fonksiyon tam olmayabilir.","k":"terim","b":[[0.0975,0.551,0.1937,0.6233]]}]},"6":{"bos":0.2175,"t":[{"t":"Parsiyel hepatektomi","a":"Karaciğerin bir bölümünün cerrahi olarak çıkarılması; karaciğer rejenerasyonunun klasik modeli.","k":"terim","b":[[0.135,0.7092,0.3828,0.7725]]},{"t":"Rejenerasyon","a":"Hasarlı doku bileşenlerinin aynı hücre tipinin çoğalmasıyla yerine konması; doku normale dönebilir.","k":"terim","b":[[0.1814,0.0735,0.431,0.173]]},{"t":"Stroma","a":"Neoplazmın konak kökenli destek dokusu: bağ dokusu, damarlar ve inflamatuvar hücreler; beslenme sağlar ve tümörle iki yönlü sinyalleşir.","k":"terim","b":[[0.4977,0.4004,0.5766,0.4637]]}]},"7":{"bos":0.0559,"t":[{"t":"Rejenerasyon","a":"Hasarlı doku bileşenlerinin aynı hücre tipinin çoğalmasıyla yerine konması; doku normale dönebilir.","k":"terim","b":[[0.2139,0.4075,0.3531,0.4648]]}]},"8":{"bos":0.1286,"t":[{"t":"Asimetrik bölünme","a":"Kök hücre bölünmesinde bir yavrunun kök hücre kalıp diğerinin farklılaştığı bölünme; nişi korur ve olgun hücre üretir.","k":"terim","b":[[0.135,0.7412,0.3601,0.8045]]},{"t":"Rejenerasyon","a":"Hasarlı doku bileşenlerinin aynı hücre tipinin çoğalmasıyla yerine konması; doku normale dönebilir.","k":"terim","b":[[0.5486,0.0735,0.7982,0.173]]}]},"9":{"bos":0.1192,"t":[{"t":"Kök hücre","a":"Kendini yenileyebilen ve farklılaşmış hücre tiplerini oluşturabilen hücre.","k":"terim","b":[[0.3304,0.0735,0.6375,0.173],[0.4449,0.3115,0.5912,0.3748],[0.3436,0.4597,0.4899,0.523]]}]},"10":{"bos":0.1435,"t":[{"t":"Parsiyel hepatektomi","a":"Karaciğerin bir bölümünün cerrahi olarak çıkarılması; karaciğer rejenerasyonunun klasik modeli.","k":"terim","b":[[0.7002,0.7186,0.7891,0.7819],[0.135,0.7832,0.2762,0.8465]]}]},"11":{"bos":0.1751,"t":[{"t":"Hepatosit büyüme faktörü","a":"Hepatosit çoğalmasını uyaran ve karaciğer rejenerasyonunda rol oynayan büyüme faktörü.","k":"terim","b":[[0.1725,0.6961,0.4428,0.7503]]},{"t":"Karaciğer rejenerasyonu","a":"Parsiyel hepatektomi veya hasar sonrası kalan hepatositlerin hücre döngüsüne yeniden girip çoğalmasıyla karaciğer kütlesinin yerine konmasıdır.","k":"terim","b":[[0.1411,0.0735,0.5969,0.173]]},{"t":"Parsiyel hepatektomi","a":"Karaciğerin bir bölümünün cerrahi olarak çıkarılması; karaciğer rejenerasyonunun klasik modeli.","k":"terim","b":[[0.0975,0.2399,0.3804,0.3122]]},{"t":"Sitokinler","a":"Lenforetiküler hücrelerde sentezlenen, immün yanıtı ve hematopoezi düzenleyen heterojen protein grubudur; enflamasyonda hem lokal hem sistemik etkilerin başlıca aracılarındandır.","k":"terim","b":[[0.2576,0.558,0.3515,0.6123]]},{"t":"Priming","a":"Karaciğer rejenerasyonunun ilk basamağı; IL-6 gibi sitokinler hepatositleri büyüme faktörlerine duyarlı hale getirir.","k":"terim","b":[[0.135,0.484,0.2283,0.5473]]},{"t":"TGF-α","a":"Hepatositlerin ve birçok epitel hücresinin proliferasyonunu uyaran büyüme faktörü.","k":"terim","b":[[0.4947,0.7607,0.5489,0.8149]]}]},"12":{"bos":0.2081,"t":[{"t":"Rejenerasyon","a":"Hasarlı doku bileşenlerinin aynı hücre tipinin çoğalmasıyla yerine konması; doku normale dönebilir.","k":"terim","b":[[0.6517,0.0735,0.9013,0.173]]},{"t":"Hepatit","a":"Karaciğer parankiminin enflamasyonu ve hepatosit hasarı ile karakterize durum. Karaciğer fonksiyon testlerinin normalleşmesi altı aydan kısa sürerse akut, altı aydan uzun sürerse kronik hepatit denir.","k":"terim","b":[[0.1907,0.2399,0.288,0.3122]]}]},"13":{"bos":0.1435,"t":[{"t":"Skarla onarım","a":"Hasar alanının fibröz bağ dokusu birikimiyle doldurulması; yapısal stabilite sağlar, fonksiyon tam olmayabilir.","k":"terim","b":[[0.3506,0.0735,0.6,0.173]]},{"t":"Rejenerasyon","a":"Hasarlı doku bileşenlerinin aynı hücre tipinin çoğalmasıyla yerine konması; doku normale dönebilir.","k":"terim","b":[[0.0975,0.2399,0.2796,0.3122]]},{"t":"Stroma","a":"Neoplazmın konak kökenli destek dokusu: bağ dokusu, damarlar ve inflamatuvar hücreler; beslenme sağlar ve tümörle iki yönlü sinyalleşir.","k":"terim","b":[[0.3999,0.4004,0.4756,0.4637]]}]},"14":{"bos":0.4194,"t":[{"t":"Granülasyon dokusu","a":"Onarımda oluşan, ince duvarlı damar, fibroblast, lökosit ve gevşek ECM içeren geçici doku; pembe, nemli, granüler ve kolay kanar.","k":"terim","b":[[0.3648,0.3282,0.6335,0.4005]]},{"t":"Enflamasyon","a":"Damarlı dokuların enfeksiyon ve doku hasarına karşı geliştirdiği, savunma hücre ve moleküllerini hasar bölgesine taşıyıp aktive eden konak savunma yanıtıdır.","k":"terim","b":[[0.278,0.2417,0.4505,0.314]]},{"t":"Hemostaz","a":"Damar zedelenmesi sonrasında kanamayı durdurmak amacıyla damar lümeninde fizyolojik, lokalize ve kontrollü pıhtı oluşumu ve ardından gelen doku onarımı süreci.","k":"terim","b":[[0.0975,0.2417,0.2316,0.314]]}]},"15":{"bos":0.029,"t":[{"t":"Rejenerasyon","a":"Hasarlı doku bileşenlerinin aynı hücre tipinin çoğalmasıyla yerine konması; doku normale dönebilir.","k":"terim","b":[[0.4962,0.1646,0.6502,0.2279],[0.58,0.414,0.734,0.4774]]},{"t":"Yara izi","a":"Hasar alanının fibröz bağ dokusu birikimiyle doldurulması; yapısal stabilite sağlar, fonksiyon tam olmayabilir.","k":"terim","b":[[0.6908,0.1646,0.7725,0.2279],[0.4962,0.7252,0.5779,0.7885]]}]},"16":{"bos":0.2081,"t":[{"t":"Akut enflamasyon","a":"Dakikalar–saatler içinde başlayan, saatler–günler süren; ödem ve nötrofil ağırlıklı infiltrasyonla karakterize konak savunma yanıtı.","k":"terim","b":[[0.4915,0.0735,0.8248,0.173]]},{"t":"Trombosit","a":"Megakaryositlerden köken alan, alfa ve yoğun granüller içeren çekirdeksiz hücre fragmanı; primer hemostazın ana aktörü.","k":"terim","b":[[0.135,0.3263,0.2862,0.3897],[0.5267,0.3263,0.6437,0.3897]]},{"t":"Hemostaz","a":"Damar zedelenmesi sonrasında kanamayı durdurmak amacıyla damar lümeninde fizyolojik, lokalize ve kontrollü pıhtı oluşumu ve ardından gelen doku onarımı süreci.","k":"terim","b":[[0.2437,0.0735,0.4277,0.173]]},{"t":"Makrofaj","a":"Mikropları ve nekrotik hücreleri yutarak (fagositoz) ortadan kaldıran başlıca fagositlerden biri. İki kaynağı vardır: kandan gelen monositler ve doku histiyositleri.","k":"terim","b":[[0.4845,0.561,0.6258,0.6243],[0.0975,0.6351,0.2136,0.7075]]},{"t":"Monosit","a":"Dolaşımdaki makrofaj öncülü olan mononükleer lökosit.","k":"terim","b":[[0.3816,0.561,0.4716,0.6243]]},{"t":"Fibrin","a":"Trombinin fibrinojeni parçalamasıyla oluşan, polimerize olarak pıhtının iskeletini kuran çözünmeyen protein.","k":"terim","b":[[0.3962,0.3263,0.458,0.3897]]}]},"17":{"bos":0.1976,"t":[{"t":"Granülasyon dokusu","a":"Onarımda oluşan, ince duvarlı damar, fibroblast, lökosit ve gevşek ECM içeren geçici doku; pembe, nemli, granüler ve kolay kanar.","k":"terim","b":[[0.5303,0.0735,0.9114,0.173],[0.6322,0.4081,0.8773,0.4745]]},{"t":"Re-epitelizasyon","a":"Yara yüzeyinin epitel hücrelerinin çoğalıp göç etmesiyle yeniden örtülmesi.","k":"terim","b":[[0.319,0.3974,0.4748,0.4517]]},{"t":"Anjiyogenez","a":"Mevcut damarlardan yeni damar oluşumu. Yara iyileşmesi, iskemik dokularda kollateral gelişimi, tümör büyümesi ve ıslak maküler dejenerasyon gibi patolojik durumlarda önemlidir.","k":"terim","b":[[0.3362,0.5355,0.4589,0.5897]]}]},"18":{"bos":0.0078,"t":[{"t":"Vasküler endotelyal büyüme faktörü","a":"Mezenkimal hücrelerden salınan, endotel hücrelerinin proliferasyonunu uyaran, vasküler geçirgenliği artıran ve anjiyogenezde temel rol oynayan büyüme faktörü.","k":"terim","b":[[0.0511,0.6652,0.3267,0.7074]]},{"t":"Transforme edici büyüme faktörü-α","a":"Hepatositlerin ve birçok epitel hücresinin proliferasyonunu uyaran büyüme faktörü.","k":"terim","b":[[0.0511,0.3896,0.3205,0.4318]]},{"t":"Epidermal büyüme faktörü","a":"Makrofaj, tükürük bezi ve keratinositlerden salınan; keratinosit ve fibroblastlar için mitojenik büyüme faktörü.","k":"terim","b":[[0.0511,0.2118,0.2551,0.254]]},{"t":"Hepatosit büyüme faktörü","a":"Hepatosit çoğalmasını uyaran ve karaciğer rejenerasyonunda rol oynayan büyüme faktörü.","k":"terim","b":[[0.0511,0.4874,0.2511,0.5296]]},{"t":"Ekstrasellüler matriks","a":"Hücreler arasını dolduran, kollajen, elastin, proteoglikan ve yapışkan glikoproteinlerden oluşan yapısal ağdır; doku onarımında fibroblastlarca sentezlenir ve hücre davranışını yönlendirir.","k":"terim","b":[[0.1617,0.8743,0.3059,0.9105]]},{"t":"Scatter factor","a":"Fibroblast, karaciğer stromal hücreleri ve endotelden salınan; hepatosit ve epitel proliferasyonunu ve hücre motilitesini artıran büyüme faktörü.","k":"terim","b":[[0.0588,0.5271,0.1627,0.5693]]},{"t":"TGF-β","a":"Tümörün bağışıklıktan kaçışında rol alan immün baskılayıcı sitokin.","k":"terim","b":[[0.7119,0.8743,0.7488,0.9105]]},{"t":"FGF-7","a":"Fibroblastlardan salınan, keratinosit göçü, çoğalması ve farklılaşmasını uyaran FGF-7.","k":"kisaltma","b":[[0.4291,0.946,0.4643,0.9822]]}]},"19":{"bos":0.0,"t":[{"t":"Trombosit kaynaklı büyüme faktörü","a":"Platelet-Derived Growth Factor; makrofajın onarım ve fibroziste salgıladığı büyüme faktörü.","k":"terim","b":[[0.0358,0.1621,0.2453,0.2043],[0.0358,0.2018,0.0914,0.244]]},{"t":"Transforme edici büyüme faktörü-β","a":"En önemli fibrogenik sitokin; kollajen ve fibronektin sentezini artırır, MMP'leri azaltıp TIMP'leri artırır, akut inflamasyonu baskılar.","k":"terim","b":[[0.0358,0.5579,0.2294,0.6001],[0.0358,0.5976,0.1072,0.6398]]},{"t":"Keratinosit büyüme faktörü","a":"Fibroblastlardan salınan, keratinosit göçü, çoğalması ve farklılaşmasını uyaran FGF-7.","k":"terim","b":[[0.0358,0.7754,0.2443,0.8176]]},{"t":"Ekstrasellüler matriks","a":"Hücreler arasını dolduran, kollajen, elastin, proteoglikan ve yapışkan glikoproteinlerden oluşan yapısal ağdır; doku onarımında fibroblastlarca sentezlenir ve hücre davranışını yönlendirir.","k":"terim","b":[[0.5922,0.3203,0.7551,0.3625],[0.1553,0.8879,0.2996,0.9241]]},{"t":"Fibronektin","a":"İnterstisyel matrikste bulunan yapışkan glikoprotein; hücre adezyonu, göçü ve çoğalmasında iskele görevi görür.","k":"terim","b":[[0.6617,0.6367,0.7463,0.6789]]},{"t":"TGF-β","a":"Tümörün bağışıklıktan kaçışında rol alan immün baskılayıcı sitokin.","k":"terim","b":[[0.119,0.5976,0.1592,0.6398],[0.7056,0.8879,0.7425,0.9241]]},{"t":"TGF-α","a":"Hepatositlerin ve birçok epitel hücresinin proliferasyonunu uyaran büyüme faktörü.","k":"terim","b":[[0.6512,0.8879,0.6916,0.9241]]}]},"21":{"bos":0.2175,"t":[{"t":"Anjiyogenez","a":"Mevcut damarlardan yeni damar oluşumu. Yara iyileşmesi, iskemik dokularda kollateral gelişimi, tümör büyümesi ve ıslak maküler dejenerasyon gibi patolojik durumlarda önemlidir.","k":"terim","b":[[0.2499,0.0735,0.4749,0.173],[0.0975,0.2399,0.2558,0.3122]]},{"t":"Kollateral","a":"Yavaş gelişen tıkanmada tıkalı damarın çevresinden açılan alternatif kan yolu.","k":"terim","b":[[0.3555,0.561,0.4646,0.6243]]},{"t":"Tümör","a":"Yeni büyüme anlamına gelen, normal büyüme kontrolüne dirençli otonom hücre çoğalması.","k":"terim","b":[[0.135,0.6351,0.2116,0.6984]]}]},"22":{"bos":0.1431,"t":[{"t":"Vazodilatasyon","a":"Damar çapının genişlemesi; akut enflamasyonda önce arterioller, sonra kapiller yatak genişler.","k":"terim","b":[[0.135,0.4021,0.2812,0.4564]]},{"t":"Sitokinler","a":"Lenforetiküler hücrelerde sentezlenen, immün yanıtı ve hematopoezi düzenleyen heterojen protein grubudur; enflamasyonda hem lokal hem sistemik etkilerin başlıca aracılarındandır.","k":"terim","b":[[0.2188,0.2297,0.3209,0.29]]},{"t":"Hipoksi","a":"Dokuya ulaşan oksijenin eksikliği.","k":"terim","b":[[0.0975,0.2297,0.1802,0.29]]}]},"23":{"bos":0.2916,"t":[{"t":"Hipoksiye duyarlı faktör","a":"Hipoksik ortamda stabil hale gelen ve VEGF ile diğer anjiyojenik genlerin ekspresyonunu artıran faktör.","k":"terim","b":[[0.3413,0.0735,0.7897,0.173],[0.0975,0.2399,0.4236,0.3122]]}]},"24":{"bos":0.1316,"t":[{"t":"Trombosit","a":"Megakaryositlerden köken alan, alfa ve yoğun granüller içeren çekirdeksiz hücre fragmanı; primer hemostazın ana aktörü.","k":"terim","b":[[0.135,0.484,0.2547,0.5473]]},{"t":"Kollajen","a":"Skar dokusunun ana yapısal proteini; fibriler kollajenler tip I, II, III ve V'tir. Üçlü heliks yapısındadır ve çapraz bağlanması için C vitamini gerekir; eksikliğinde iskorbüt ve zayıf yara iyileşmesi görülür.","k":"terim","b":[[0.135,0.7951,0.2293,0.8584]]},{"t":"TGF-β","a":"Tümörün bağışıklıktan kaçışında rol alan immün baskılayıcı sitokin.","k":"terim","b":[[0.5094,0.6351,0.5717,0.6984]]}]},"25":{"bos":0.1353,"t":[{"t":"İntegrinler","a":"Kemokin uyarısıyla düşük afiniteli formdan yüksek afiniteli forma geçerek lökositin endotele sıkı yapışmasını sağlayan reseptörler.","k":"terim","b":[[0.135,0.7358,0.2472,0.7931]]},{"t":"Hyaluronan","a":"Yüksek su bağlama kapasitesine sahip, gelişmekte olan dokularda ve granülasyon dokusunda bol ECM bileşeni.","k":"terim","b":[[0.3345,0.4294,0.4552,0.4867]]},{"t":"Elastin","a":"Dokulara esneklik sağlayan ECM proteini; büyük arterler, akciğer, deri ve uterusta bulunur.","k":"terim","b":[[0.135,0.3678,0.2054,0.4251]]},{"t":"Laminin","a":"Bazal membranda bulunan yapışkan glikoprotein; hücre adezyonu ve göçünde iskele görevi görür.","k":"terim","b":[[0.1725,0.6072,0.2481,0.6584]]}]},"26":{"bos":0.1252,"t":[{"t":"C vitamini","a":"Kollajen çapraz bağlanması için gerekli olan, demir kullanımını artıran suda çözünen vitamindir; eksikliği skorbüt, damar kırılganlığı ve zayıf yara iyileşmesine yol açar.","k":"terim","b":[[0.3676,0.6196,0.4738,0.6769]]},{"t":"Kollajen","a":"Skar dokusunun ana yapısal proteini; fibriler kollajenler tip I, II, III ve V'tir. Üçlü heliks yapısındadır ve çapraz bağlanması için C vitamini gerekir; eksikliğinde iskorbüt ve zayıf yara iyileşmesi görülür.","k":"terim","b":[[0.3673,0.0735,0.5152,0.173],[0.0975,0.2351,0.1923,0.3014],[0.2168,0.3678,0.3256,0.4251]]},{"t":"İskorbüt","a":"Skorbüt hastalığı: 1747 yılında James Lind bir gemi seferi sırasında toplam 12 skorbütlü hastayı alarak nedeni ve tedavisi konusundaki hipotezlerini test etmiştir; uzun deniz seferlerinde tayfaların önemli kısmı skorbütten ölmüştür.","k":"terim","b":[[0.2889,0.6812,0.3667,0.7325]]},{"t":"Elastin","a":"Dokulara esneklik sağlayan ECM proteini; büyük arterler, akciğer, deri ve uterusta bulunur.","k":"terim","b":[[0.579,0.0735,0.7013,0.173],[0.0975,0.7364,0.1758,0.8028]]}]},"27":{"bos":0.1316,"t":[{"t":"Hyaluronan","a":"Yüksek su bağlama kapasitesine sahip, gelişmekte olan dokularda ve granülasyon dokusunda bol ECM bileşeni.","k":"terim","b":[[0.4144,0.0776,0.6098,0.1681],[0.0975,0.4769,0.2477,0.5493]]},{"t":"Rezervuar","a":"Patojen mikroorganizmanın insan dışında yaşadığı ekolojik ortamdır.","k":"terim","b":[[0.5093,0.4004,0.6219,0.4637]]},{"t":"Laminin","a":"Bazal membranda bulunan yapışkan glikoprotein; hücre adezyonu ve göçünde iskele görevi görür.","k":"terim","b":[[0.2975,0.7116,0.3933,0.7839]]},{"t":"Büyüme","a":"Organ ve dokuların kitlesindeki artış; tartı, boy ve baş çevresi gibi ölçümlerle izlenir.","k":"terim","b":[[0.135,0.4004,0.2323,0.4637]]}]},"28":{"bos":0.0339,"t":[{"t":"Tissue inhibitor of metalloproteinases","a":"MMP'leri baskılayarak ECM yıkımını dengeleyen doku inhibitörü.","k":"terim","b":[[0.5656,0.8826,0.8293,0.9188]]},{"t":"Fibronektin","a":"İnterstisyel matrikste bulunan yapışkan glikoprotein; hücre adezyonu, göçü ve çoğalmasında iskele görevi görür.","k":"terim","b":[[0.2328,0.5011,0.3511,0.5584]]},{"t":"Sitokinler","a":"Lenforetiküler hücrelerde sentezlenen, immün yanıtı ve hematopoezi düzenleyen heterojen protein grubudur; enflamasyonda hem lokal hem sistemik etkilerin başlıca aracılarındandır.","k":"terim","b":[[0.6902,0.0735,0.8656,0.173]]},{"t":"Kollajen","a":"Skar dokusunun ana yapısal proteini; fibriler kollajenler tip I, II, III ve V'tir. Üçlü heliks yapısındadır ve çapraz bağlanması için C vitamini gerekir; eksikliğinde iskorbüt ve zayıf yara iyileşmesi görülür.","k":"terim","b":[[0.135,0.5011,0.2167,0.5584]]},{"t":"TGF-β","a":"Tümörün bağışıklıktan kaçışında rol alan immün baskılayıcı sitokin.","k":"terim","b":[[0.203,0.0735,0.3125,0.173],[0.489,0.2351,0.5513,0.3014]]}]},"29":{"bos":0.1306,"t":[{"t":"ECM yeniden şekillenmesi","a":"Yara iyileşmesinin geç evresinde hücre dışı matriksin metalloproteinazlarla yıkılıp yeniden düzenlenmesidir; skarın küçülüp dayanıklılaşmasını sağlar.","k":"terim","b":[[0.129,0.0776,0.5689,0.1681]]}]},"30":{"bos":0.1316,"t":[{"t":"Yara gücü","a":"İyileşen dokunun gerilmeye karşı dayanma kapasitesi; ilk haftada hızla artar, 3 ayda normalin ~%70–80'ine ulaşır.","k":"terim","b":[[0.3468,0.0735,0.5321,0.173],[0.0975,0.2399,0.221,0.3122]]}]},"31":{"bos":0.1231,"t":[{"t":"Per sekondam intentionem","a":"Geniş doku kayıplı veya enfekte yaraların daha fazla granülasyon dokusu, belirgin skar ve belirgin kontraksiyonla iyileşmesi.","k":"terim","b":[[0.0975,0.4169,0.3618,0.4682]]},{"t":"Per tertiam intentionem","a":"Enfeksiyon riski nedeniyle önce açık bırakılan ve tedaviden sonra kapatılan yaranın iyileşmesi; primer iyileşmenin geciktirilmesidir.","k":"terim","b":[[0.135,0.6883,0.3439,0.7335]]},{"t":"Per primam intentionem","a":"Temiz, kenarları yakınlaştırılmış kesilerin minimal doku kaybı ve az skarla iyileşmesi.","k":"terim","b":[[0.0975,0.232,0.338,0.2833]]},{"t":"Granülasyon dokusu","a":"Onarımda oluşan, ince duvarlı damar, fibroblast, lökosit ve gevşek ECM içeren geçici doku; pembe, nemli, granüler ve kolay kanar.","k":"terim","b":[[0.2268,0.5105,0.3903,0.5557]]},{"t":"Enfeksiyon","a":"Bir mikroorganizmanın konağa girmesi, yerleşmesi ve/veya çoğalmasıdır; klinik belirti ve bulgu zorunlu değildir.","k":"terim","b":[[0.135,0.7772,0.2259,0.8224]]},{"t":"İyileşme","a":"Yaralanma sonrası doku mimarisi ve fonksiyonunun yeniden kazanılması süreci; iyileşme olarak da adlandırılır.","k":"terim","b":[[0.239,0.0776,0.3994,0.1681],[0.7645,0.0776,0.904,0.1681],[0.4222,0.232,0.4977,0.2833]]},{"t":"Primer","a":"Monoklonal plazma hücre diskrazilerinde immünoglobulin hafif zincirlerinin (özellikle lambda) dokuda birikmesi.","k":"terim","b":[[0.4248,0.0776,0.539,0.1681],[0.3539,0.232,0.4169,0.2833],[0.135,0.7327,0.1923,0.778]]}]},"32":{"bos":0.1215,"t":[{"t":"İnflamasyon","a":"Celsus'un tanımladığı dört belirti kızarıklık (rubor), sıcaklık (calor), ağrı (dolor) ve şişlik (tumor) ile Galen'in eklediği fonksiyon kaybı (functio laesa); bu beş bulgu günümüzde de inflamasyonun klasik tanımıdır.","k":"terim","b":[[0.0187,0.6203,0.1565,0.6836]]},{"t":"Platelet","a":"Megakaryositlerden köken alan, alfa ve yoğun granüller içeren çekirdeksiz hücre fragmanı; primer hemostazın ana aktörü.","k":"terim","b":[[0.1435,0.1089,0.1821,0.1327]]},{"t":"İyileşme","a":"Yaralanma sonrası doku mimarisi ve fonksiyonunun yeniden kazanılması süreci; iyileşme olarak da adlandırılır.","k":"terim","b":[[0.3847,0.5586,0.482,0.6219],[0.5741,0.8052,0.7089,0.8685]]},{"t":"Eskar","a":"Hasarlı derinin üzerinde oluşan kabuk.","k":"terim","b":[[0.7019,0.6819,0.758,0.7452]]}]},"33":{"bos":0.0,"t":[{"t":"Granülasyon dokusu","a":"Onarımda oluşan, ince duvarlı damar, fibroblast, lökosit ve gevşek ECM içeren geçici doku; pembe, nemli, granüler ve kolay kanar.","k":"terim","b":[[0.4771,0.6984,0.6739,0.7527]]},{"t":"Trikrom boyası","a":"Kollajeni maviye boyayan histokimyasal boya; granülasyon dokusu ile olgun skarı ayırmada kullanılır.","k":"terim","b":[[0.7837,0.6984,0.9585,0.7527],[0.2881,0.8069,0.4311,0.8611]]},{"t":"Yara izi","a":"Hasar alanının fibröz bağ dokusu birikimiyle doldurulması; yapısal stabilite sağlar, fonksiyon tam olmayabilir.","k":"terim","b":[[0.8882,0.8069,0.9312,0.8611],[0.0336,0.859,0.0543,0.9133]]},{"t":"Kollajen","a":"Skar dokusunun ana yapısal proteini; fibriler kollajenler tip I, II, III ve V'tir. Üçlü heliks yapısındadır ve çapraz bağlanması için C vitamini gerekir; eksikliğinde iskorbüt ve zayıf yara iyileşmesi görülür.","k":"terim","b":[[0.6909,0.6984,0.7683,0.7527],[0.5155,0.7529,0.5941,0.8072],[0.1355,0.8069,0.2141,0.8611]]}]},"34":{"bos":0.1303,"t":[{"t":"Glukokortikoidler","a":"Lenfolitik özelliği olan ilk hormonal ajanlar olarak tanımlanan kortikosteroidler; uygulanmaları lenf düğümü ve dalakta lenfoid içeriği azaltır. Homodimer olarak genlerin promoterlerindeki glukokortikoid yanıt elemanlarına (GRE) bağlanarak etki gösterir.","k":"terim","b":[[0.135,0.7607,0.3059,0.8149]]},{"t":"C vitamini","a":"Kollajen çapraz bağlanması için gerekli olan, demir kullanımını artıran suda çözünen vitamindir; eksikliği skorbüt, damar kırılganlığı ve zayıf yara iyileşmesine yol açar.","k":"terim","b":[[0.2438,0.2889,0.3445,0.3432]]},{"t":"Enfeksiyon","a":"Bir mikroorganizmanın konağa girmesi, yerleşmesi ve/veya çoğalmasıdır; klinik belirti ve bulgu zorunlu değildir.","k":"terim","b":[[0.1725,0.5455,0.2633,0.5907]]},{"t":"Kollajen","a":"Skar dokusunun ana yapısal proteini; fibriler kollajenler tip I, II, III ve V'tir. Üçlü heliks yapısındadır ve çapraz bağlanması için C vitamini gerekir; eksikliğinde iskorbüt ve zayıf yara iyileşmesi görülür.","k":"terim","b":[[0.4636,0.2889,0.5421,0.3432],[0.3333,0.8145,0.3991,0.8597]]},{"t":"Diyabet","a":"İnsülin salınımı, insülin etkisi veya her ikisinin bozuk olduğu, kronik progresif hiperglisemi ile karakterize, böbrek, göz, sinir ve damarları etkileyen akut ve kronik komplikasyonlara yol açan metabolik hastalık.","k":"terim","b":[[0.135,0.4021,0.2091,0.4564]]},{"t":"İskemi","a":"Bir dokuya giden kan akımının azalması veya kesilmesi; oksijen ve besin azalır, atıklar uzaklaştırılamaz.","k":"terim","b":[[0.4689,0.6492,0.533,0.7035]]},{"t":"TGF-β","a":"Tümörün bağışıklıktan kaçışında rol alan immün baskılayıcı sitokin.","k":"terim","b":[[0.1725,0.8145,0.2222,0.8597]]}]},"35":{"bos":0.1545,"t":[{"t":"Yara ayrılması","a":"Kapanmış yaranın kenarlarının ayrılması; torsiyon, hareket ve basınç riski artırır.","k":"terim","b":[[0.135,0.6368,0.2581,0.685]]},{"t":"Enfeksiyon","a":"Bir mikroorganizmanın konağa girmesi, yerleşmesi ve/veya çoğalmasıdır; klinik belirti ve bulgu zorunlu değildir.","k":"terim","b":[[0.0975,0.2321,0.2081,0.2894]]}]},"36":{"bos":0.1302,"t":[{"t":"Kalp yetmezliği","a":"Kalbin yeterli debiyi sağlayamaması sonucu venöz sistemde kan birikimi, ödem ve organlarda pasif konjesyonla seyreden tablodur; ders notlarında hipertrofinin son aşaması ve ödem nedeni olarak işlenir.","k":"terim","b":[[0.2401,0.4062,0.3734,0.4545]]},{"t":"Kronik yaralar","a":"Doku onarımının yetersiz kalması sonucu iyileşmeyen, çoğunlukla dolaşım bozukluğu, nöropati, bası veya enfeksiyon zemininde gelişen ülser biçimindeki anormal iyileşme tablosudur.","k":"terim","b":[[0.574,0.0735,0.829,0.173]]},{"t":"Hipertansiyon","a":"Sistemik arter kan basıncının sürekli yüksek seyretmesidir; uzun vadede kalpte hipertrofi, böbrekte nefroskleroz ve damar duvarında hasara yol açar.","k":"terim","b":[[0.3604,0.3126,0.484,0.3608]]},{"t":"Enfeksiyon","a":"Bir mikroorganizmanın konağa girmesi, yerleşmesi ve/veya çoğalmasıdır; klinik belirti ve bulgu zorunlu değildir.","k":"terim","b":[[0.5017,0.6611,0.5985,0.7093]]},{"t":"İyileşme","a":"Yaralanma sonrası doku mimarisi ve fonksiyonunun yeniden kazanılması süreci; iyileşme olarak da adlandırılır.","k":"terim","b":[[0.4499,0.5574,0.5236,0.6056]]},{"t":"Diyabet","a":"İnsülin salınımı, insülin etkisi veya her ikisinin bozuk olduğu, kronik progresif hiperglisemi ile karakterize, böbrek, göz, sinir ve damarları etkileyen akut ve kronik komplikasyonlara yol açan metabolik hastalık.","k":"terim","b":[[0.4545,0.5099,0.5215,0.5582]]},{"t":"Nekroz","a":"Şiddetli enerji yetersizliği veya toksik hasarla gelişen, zar yıkımı, içerik sızıntısı ve inflamasyonla seyreden kazara hücre ölümü.","k":"terim","b":[[0.3126,0.5574,0.3732,0.6056]]}]},"37":{"bos":0.0472,"t":[{"t":"Venöz bacak ülseri","a":"Kronik venöz hipertansiyona (varis, kalp yetmezliği) bağlı kronik bacak yarası.","k":"terim","b":[[0.0498,0.545,0.26,0.6083]]},{"t":"Kronik inflamasyon","a":"Haftalar-aylar süren, eş zamanlı enflamasyon, doku hasarı ve onarımın (anjiyogenez, fibrozis) birlikte görüldüğü inflamasyon; akut inflamasyonu izleyebilir veya sinsi başlangıçlı primer kronik olabilir.","k":"terim","b":[[0.7624,0.7945,0.8361,0.8578],[0.01,0.8561,0.1531,0.9194]]},{"t":"Granülasyon dokusu","a":"Onarımda oluşan, ince duvarlı damar, fibroblast, lökosit ve gevşek ECM içeren geçici doku; pembe, nemli, granüler ve kolay kanar.","k":"terim","b":[[0.1937,0.8561,0.423,0.9194]]},{"t":"Arteriyel ülser","a":"Periferik arter hastalığı ve diyabete bağlı, iskemik nekroz ve zayıf iyileşme gösteren kronik yara.","k":"terim","b":[[0.4208,0.6066,0.5819,0.6699]]},{"t":"Kronik yaralar","a":"Doku onarımının yetersiz kalması sonucu iyileşmeyen, çoğunlukla dolaşım bozukluğu, nöropati, bası veya enfeksiyon zemininde gelişen ülser biçimindeki anormal iyileşme tablosudur.","k":"terim","b":[[0.6005,0.4217,0.7556,0.4851]]},{"t":"Basınç yarası","a":"Yatak bağımlı hastalarda kemik çıkıntıları üzerindeki uzun süreli basıya bağlı kronik yara.","k":"terim","b":[[0.0588,0.7329,0.2053,0.7962]]}]},"38":{"bos":0.1128,"t":[{"t":"Hipertrofik skar","a":"Orijinal yara sınırları içinde kalan, zamanla gerileyebilen fazlalık skar dokusu.","k":"terim","b":[[0.0975,0.2298,0.286,0.2961]]},{"t":"Kontraktür","a":"Aşırı yara kontraksiyonu; el, ayak tabanı ve göğüs ön duvarında eklem hareketini kısıtlayabilir.","k":"terim","b":[[0.0975,0.6422,0.2253,0.7085]]},{"t":"Yara izi","a":"Hasar alanının fibröz bağ dokusu birikimiyle doldurulması; yapısal stabilite sağlar, fonksiyon tam olmayabilir.","k":"terim","b":[[0.4267,0.0735,0.5555,0.173]]},{"t":"Keloid","a":"Skarın yara sınırlarının dışına taşması; gerileme eğilimi az, bireysel yatkınlık özellikle koyu tenlilerde.","k":"terim","b":[[0.0975,0.4075,0.1701,0.4739]]}]},"39":{"bos":0.0239,"t":[{"t":"Keloid","a":"Skarın yara sınırlarının dışına taşması; gerileme eğilimi az, bireysel yatkınlık özellikle koyu tenlilerde.","k":"terim","b":[[0.6871,0.0277,0.7563,0.091],[0.7744,0.0277,0.8793,0.091],[0.56,0.2742,0.6532,0.3375]]}]},"40":{"bos":0.1053,"t":[{"t":"Son dönem böbrek hastalığı","a":"Glomerüllerde global skleroz, tübül atrofisi ve kaybı, interstisyel fibrozis ve damar daralmasıyla her yapısında skar bulunan böbrek.","k":"terim","b":[[0.135,0.6836,0.3854,0.7318]]},{"t":"İdyopatik pulmoner fibroz","a":"Nedeni bilinmeyen ilerleyici akciğer fibrozisi.","k":"terim","b":[[0.135,0.5899,0.3655,0.6382]]},{"t":"Kronik inflamasyon","a":"Haftalar-aylar süren, eş zamanlı enflamasyon, doku hasarı ve onarımın (anjiyogenez, fibrozis) birlikte görüldüğü inflamasyon; akut inflamasyonu izleyebilir veya sinsi başlangıçlı primer kronik olabilir.","k":"terim","b":[[0.135,0.392,0.3061,0.4403]]},{"t":"Sistemik Skleroz","a":"Mikrovasküler endotel hasarı ve aşırı kollajen depolanmasıyla deride ve iç organlarda yaygın fibrozis oluşturan otoimmün hastalık.","k":"terim","b":[[0.135,0.7328,0.2775,0.781]]},{"t":"Pnömokonyoz","a":"Solunan mineral tozlara bağlı akciğer fibrozisi.","k":"terim","b":[[0.135,0.6368,0.262,0.685]]},{"t":"Fibrozis","a":"Parankimal organlarda aşırı kollajen ve ECM birikimi; kronik inflamasyon ve persistan toksik/iskemik hasar sonucu gelişir.","k":"terim","b":[[0.6803,0.0735,0.8214,0.173],[0.0975,0.2321,0.1759,0.2894]]},{"t":"Kollajen","a":"Skar dokusunun ana yapısal proteini; fibriler kollajenler tip I, II, III ve V'tir. Üçlü heliks yapısındadır ve çapraz bağlanması için C vitamini gerekir; eksikliğinde iskorbüt ve zayıf yara iyileşmesi görülür.","k":"terim","b":[[0.1794,0.2883,0.2494,0.3366]]}]},"41":{"bos":0.1596,"t":[{"t":"İdyopatik pulmoner fibroz","a":"Nedeni bilinmeyen ilerleyici akciğer fibrozisi.","k":"terim","b":[[0.135,0.5953,0.4118,0.6526]]},{"t":"Antifibrotik tedavi","a":"TGF-β ve diğer fibrogenik sitokinleri hedefleyerek aşırı kollajen birikimini sınırlamayı amaçlayan tedavi yaklaşımı.","k":"terim","b":[[0.3083,0.7162,0.4989,0.7735]]},{"t":"Sitokinler","a":"Lenforetiküler hücrelerde sentezlenen, immün yanıtı ve hematopoezi düzenleyen heterojen protein grubudur; enflamasyonda hem lokal hem sistemik etkilerin başlıca aracılarındandır.","k":"terim","b":[[0.4148,0.2298,0.5264,0.2961]]},{"t":"Fibrozis","a":"Parankimal organlarda aşırı kollajen ve ECM birikimi; kronik inflamasyon ve persistan toksik/iskemik hasar sonucu gelişir.","k":"terim","b":[[0.2171,0.0735,0.3582,0.173]]},{"t":"Kollajen","a":"Skar dokusunun ana yapısal proteini; fibriler kollajenler tip I, II, III ve V'tir. Üçlü heliks yapısındadır ve çapraz bağlanması için C vitamini gerekir; eksikliğinde iskorbüt ve zayıf yara iyileşmesi görülür.","k":"terim","b":[[0.1878,0.4176,0.2709,0.4748]]},{"t":"TGF-β","a":"Tümörün bağışıklıktan kaçışında rol alan immün baskılayıcı sitokin.","k":"terim","b":[[0.0975,0.2298,0.1705,0.2961]]}]},"42":{"bos":0.1111,"t":[{"t":"Granülasyon dokusu","a":"Onarımda oluşan, ince duvarlı damar, fibroblast, lökosit ve gevşek ECM içeren geçici doku; pembe, nemli, granüler ve kolay kanar.","k":"terim","b":[[0.2698,0.5159,0.4666,0.5702]]},{"t":"Kronik yaralar","a":"Doku onarımının yetersiz kalması sonucu iyileşmeyen, çoğunlukla dolaşım bozukluğu, nöropati, bası veya enfeksiyon zemininde gelişen ülser biçimindeki anormal iyileşme tablosudur.","k":"terim","b":[[0.3166,0.6718,0.4502,0.726]]},{"t":"Skarla onarım","a":"Hasar alanının fibröz bağ dokusu birikimiyle doldurulması; yapısal stabilite sağlar, fonksiyon tam olmayabilir.","k":"terim","b":[[0.3065,0.2889,0.4439,0.3432],[0.0975,0.4567,0.2474,0.517]]},{"t":"Doku onarımı","a":"Yaralanma sonrası doku mimarisi ve fonksiyonunun yeniden kazanılması süreci; iyileşme olarak da adlandırılır.","k":"terim","b":[[0.0975,0.2297,0.2452,0.29]]},{"t":"Rejenerasyon","a":"Hasarlı doku bileşenlerinin aynı hücre tipinin çoğalmasıyla yerine konması; doku normale dönebilir.","k":"terim","b":[[0.135,0.2889,0.2715,0.3432],[0.0975,0.3435,0.2445,0.4038]]},{"t":"Anjiyogenez","a":"Mevcut damarlardan yeni damar oluşumu. Yara iyileşmesi, iskemik dokularda kollateral gelişimi, tümör büyümesi ve ıslak maküler dejenerasyon gibi patolojik durumlarda önemlidir.","k":"terim","b":[[0.135,0.5159,0.2534,0.5702]]},{"t":"Kontraktür","a":"Aşırı yara kontraksiyonu; el, ayak tabanı ve göğüs ön duvarında eklem hareketini kısıtlayabilir.","k":"terim","b":[[0.6699,0.6718,0.7735,0.726]]},{"t":"Fibrozis","a":"Parankimal organlarda aşırı kollajen ve ECM birikimi; kronik inflamasyon ve persistan toksik/iskemik hasar sonucu gelişir.","k":"terim","b":[[0.0975,0.7654,0.1802,0.8257]]}]},"43":{"bos":0.2175,"t":[{"t":"Kompleman","a":"Çözünebilir plazma proteinleri ve membran reseptörlerinden oluşan; opsonizasyon, kemotaksi ve hücre lizisiyle özellikle bakterilere karşı savunma sağlayan sistemdir.","k":"terim","b":[[0.766,0.5693,0.906,0.6326]]},{"t":"Trombosit","a":"Megakaryositlerden köken alan, alfa ve yoğun granüller içeren çekirdeksiz hücre fragmanı; primer hemostazın ana aktörü.","k":"terim","b":[[0.0232,0.6926,0.1402,0.7559]]},{"t":"Patoloji","a":"Hastalıkların nedenlerini, gelişim mekanizmalarını, yapısal değişikliklerini ve işlevsel-klinik sonuçlarını inceleyen bilim dalı; “hastalık bilimi”.","k":"terim","b":[[0.0655,0.7574,0.088,0.7725]]}]},"44":{"bos":0.0373,"t":[{"t":"Patoloji","a":"Hastalıkların nedenlerini, gelişim mekanizmalarını, yapısal değişikliklerini ve işlevsel-klinik sonuçlarını inceleyen bilim dalı; “hastalık bilimi”.","k":"terim","b":[[0.7678,0.9376,0.7902,0.9527]]},{"t":"Tubulit","a":"Böbrek tubul epitel hücreleri arasında inflamatuvar hücre bulunması; akut hücresel reddin bulgusu.","k":"terim","b":[[0.8976,0.5443,0.9565,0.5956]]}]},"45":{"bos":0.0344,"t":[{"t":"Kapillarit","a":"Kılcal damar iltihabı; böbrek greftinde peritubuler kapillarit akut antikor aracılı reddi gösterir.","k":"terim","b":[[0.1917,0.769,0.2922,0.8323]]},{"t":"Kompleman","a":"Çözünebilir plazma proteinleri ve membran reseptörlerinden oluşan; opsonizasyon, kemotaksi ve hücre lizisiyle özellikle bakterilere karşı savunma sağlayan sistemdir.","k":"terim","b":[[0.7015,0.8306,0.8416,0.8939]]},{"t":"Patoloji","a":"Hastalıkların nedenlerini, gelişim mekanizmalarını, yapısal değişikliklerini ve işlevsel-klinik sonuçlarını inceleyen bilim dalı; “hastalık bilimi”.","k":"terim","b":[[0.3889,0.9252,0.4177,0.9463]]}]},"46":{"bos":0.0171,"t":[{"t":"Transplant glomerülopatisi","a":"Kronik antikor aracılı reddin böbrekteki karakteristik bulgusu; glomerülit, mezangiyal matriks birikimi ve kılcal bazal membran duplikasyonu.","k":"terim","b":[[0.409,0.6563,0.6503,0.7076]]},{"t":"Greft arteriyosklerozu","a":"Kronik nakil reddinde aylar–yıllar içinde gelişen greft damar duvarı kalınlaşması.","k":"terim","b":[[0.8492,0.558,0.8937,0.6092],[0.0294,0.6072,0.1759,0.6584],[0.351,0.6072,0.547,0.6584]]},{"t":"Fibrozis","a":"Parankimal organlarda aşırı kollajen ve ECM birikimi; kronik inflamasyon ve persistan toksik/iskemik hasar sonucu gelişir.","k":"terim","b":[[0.5829,0.8021,0.65,0.8534],[0.7701,0.8519,0.8424,0.9031]]},{"t":"Patoloji","a":"Hastalıkların nedenlerini, gelişim mekanizmalarını, yapısal değişikliklerini ve işlevsel-klinik sonuçlarını inceleyen bilim dalı; “hastalık bilimi”.","k":"terim","b":[[0.87,0.9246,0.8988,0.9457],[0.3792,0.9518,0.408,0.9729]]},{"t":"Atrofi","a":"Hücre boyutu ve/veya sayısında azalma ile bir organ veya dokunun küçülmesi. Nedenleri azalmış iş yükü, sinir kaybı, azalmış kan akımı, yetersiz beslenme, endokrin uyarı kaybı ve yaşlanmadır.","k":"terim","b":[[0.7553,0.8021,0.8035,0.8534]]}]},"47":{"bos":0.005,"t":[{"t":"İnfiltrasyon","a":"Erimiş parafinin dokuya penetre olması.","k":"terim","b":[[0.3039,0.3097,0.4168,0.364],[0.402,0.6279,0.5149,0.6822]]},{"t":"Diskeratoz","a":"Keratinositlerde anormal keratin boyaması (anormal keratinleşme); akut deri GVHD'sinde görülür.","k":"terim","b":[[0.7672,0.4158,0.8625,0.47]]},{"t":"Kollajen","a":"Skar dokusunun ana yapısal proteini; fibriler kollajenler tip I, II, III ve V'tir. Üçlü heliks yapısındadır ve çapraz bağlanması için C vitamini gerekir; eksikliğinde iskorbüt ve zayıf yara iyileşmesi görülür.","k":"terim","b":[[0.8531,0.7369,0.9317,0.7912]]},{"t":"Patoloji","a":"Hastalıkların nedenlerini, gelişim mekanizmalarını, yapısal değişikliklerini ve işlevsel-klinik sonuçlarını inceleyen bilim dalı; “hastalık bilimi”.","k":"terim","b":[[0.6934,0.812,0.7287,0.8361],[0.6563,0.844,0.6917,0.8681]]},{"t":"Konakçı","a":"Enfeksiyon etkeninin yerleştiği makroorganizma.","k":"terim","b":[[0.3039,0.0946,0.3797,0.1488]]},{"t":"Atrofi","a":"Hücre boyutu ve/veya sayısında azalma ile bir organ veya dokunun küçülmesi. Nedenleri azalmış iş yükü, sinir kaybı, azalmış kan akımı, yetersiz beslenme, endokrin uyarı kaybı ve yaşlanmadır.","k":"terim","b":[[0.7339,0.6824,0.7889,0.7367]]},{"t":"Düşük","a":"Gebeliğin fetüsün yaşayabilirlik sınırına (20–24. hafta ya da 500 g) ulaşmadan spontan olarak sonlanması; düşük.","k":"terim","b":[[0.8828,0.1491,0.9435,0.2034]]}]}}}}
+{
+ "surum": 1,
+ "key": "k1-15-doku-onarimi-ve-yara-iyilesmesi",
+ "uretici": "deepseek",
+ "d": {
+  "0": {
+   "1": {
+    "bos": 0.0533,
+    "t": [
+     {
+      "t": "Doku onarımı",
+      "a": "Yaralanma sonrası doku mimarisi ve fonksiyonunun yeniden kazanılması süreci; iyileşme olarak da adlandırılır.",
+      "k": "terim",
+      "b": [
+       [
+        0.1603,
+        0.195,
+        0.6154,
+        0.3164
+       ]
+      ]
+     }
+    ]
+   },
+   "3": {
+    "bos": 0.4417,
+    "t": [
+     {
+      "t": "Granülasyon dokusu",
+      "a": "Onarımda oluşan, ince duvarlı damar, fibroblast, lökosit ve gevşek ECM içeren geçici doku; pembe, nemli, granüler ve kolay kanar.",
+      "k": "terim",
+      "b": [
+       [
+        0.2319,
+        0.399,
+        0.3555,
+        0.4322
+       ]
+      ]
+     },
+     {
+      "t": "Skarla onarım",
+      "a": "Hasar alanının fibröz bağ dokusu birikimiyle doldurulması; yapısal stabilite sağlar, fonksiyon tam olmayabilir.",
+      "k": "terim",
+      "b": [
+       [
+        0.2409,
+        0.3202,
+        0.325,
+        0.3534
+       ]
+      ]
+     },
+     {
+      "t": "Doku onarımı",
+      "a": "Yaralanma sonrası doku mimarisi ve fonksiyonunun yeniden kazanılması süreci; iyileşme olarak da adlandırılır.",
+      "k": "terim",
+      "b": [
+       [
+        0.2745,
+        0.0735,
+        0.5317,
+        0.173
+       ]
+      ]
+     },
+     {
+      "t": "Rejenerasyon",
+      "a": "Hasarlı doku bileşenlerinin aynı hücre tipinin çoğalmasıyla yerine konması; doku normale dönebilir.",
+      "k": "terim",
+      "b": [
+       [
+        0.135,
+        0.3202,
+        0.2194,
+        0.3534
+       ]
+      ]
+     },
+     {
+      "t": "Anjiyogenez",
+      "a": "Mevcut damarlardan yeni damar oluşumu. Yara iyileşmesi, iskemik dokularda kollateral gelişimi, tümör büyümesi ve ıslak maküler dejenerasyon gibi patolojik durumlarda önemlidir.",
+      "k": "terim",
+      "b": [
+       [
+        0.135,
+        0.399,
+        0.2103,
+        0.4322
+       ]
+      ]
+     },
+     {
+      "t": "Fibrozis",
+      "a": "Parankimal organlarda aşırı kollajen ve ECM birikimi; kronik inflamasyon ve persistan toksik/iskemik hasar sonucu gelişir.",
+      "k": "terim",
+      "b": [
+       [
+        0.2638,
+        0.5152,
+        0.3088,
+        0.5483
+       ]
+      ]
+     }
+    ]
+   },
+   "4": {
+    "bos": 0.2916,
+    "t": [
+     {
+      "t": "Doku onarımı",
+      "a": "Yaralanma sonrası doku mimarisi ve fonksiyonunun yeniden kazanılması süreci; iyileşme olarak da adlandırılır.",
+      "k": "terim",
+      "b": [
+       [
+        0.3162,
+        0.0735,
+        0.5734,
+        0.173
+       ],
+       [
+        0.0975,
+        0.2399,
+        0.2797,
+        0.3122
+       ]
+      ]
+     },
+     {
+      "t": "Enflamasyon",
+      "a": "Damarlı dokuların enfeksiyon ve doku hasarına karşı geliştirdiği, savunma hücre ve moleküllerini hasar bölgesine taşıyıp aktive eden konak savunma yanıtıdır.",
+      "k": "terim",
+      "b": [
+       [
+        0.0975,
+        0.4769,
+        0.2636,
+        0.5493
+       ]
+      ]
+     }
+    ]
+   },
+   "5": {
+    "bos": 0.1435,
+    "t": [
+     {
+      "t": "Rejenerasyon",
+      "a": "Hasarlı doku bileşenlerinin aynı hücre tipinin çoğalmasıyla yerine konması; doku normale dönebilir.",
+      "k": "terim",
+      "b": [
+       [
+        0.0975,
+        0.2399,
+        0.2784,
+        0.3122
+       ]
+      ]
+     },
+     {
+      "t": "Yara izi",
+      "a": "Hasar alanının fibröz bağ dokusu birikimiyle doldurulması; yapısal stabilite sağlar, fonksiyon tam olmayabilir.",
+      "k": "terim",
+      "b": [
+       [
+        0.0975,
+        0.551,
+        0.1937,
+        0.6233
+       ]
+      ]
+     }
+    ]
+   },
+   "6": {
+    "bos": 0.2175,
+    "t": [
+     {
+      "t": "Parsiyel hepatektomi",
+      "a": "Karaciğerin bir bölümünün cerrahi olarak çıkarılması; karaciğer rejenerasyonunun klasik modeli.",
+      "k": "terim",
+      "b": [
+       [
+        0.135,
+        0.7092,
+        0.3828,
+        0.7725
+       ]
+      ]
+     },
+     {
+      "t": "Rejenerasyon",
+      "a": "Hasarlı doku bileşenlerinin aynı hücre tipinin çoğalmasıyla yerine konması; doku normale dönebilir.",
+      "k": "terim",
+      "b": [
+       [
+        0.1814,
+        0.0735,
+        0.431,
+        0.173
+       ]
+      ]
+     },
+     {
+      "t": "Stroma",
+      "a": "Neoplazmın konak kökenli destek dokusu: bağ dokusu, damarlar ve inflamatuvar hücreler; beslenme sağlar ve tümörle iki yönlü sinyalleşir.",
+      "k": "terim",
+      "b": [
+       [
+        0.4977,
+        0.4004,
+        0.5766,
+        0.4637
+       ]
+      ]
+     }
+    ]
+   },
+   "7": {
+    "bos": 0.0559,
+    "t": [
+     {
+      "t": "Rejenerasyon",
+      "a": "Hasarlı doku bileşenlerinin aynı hücre tipinin çoğalmasıyla yerine konması; doku normale dönebilir.",
+      "k": "terim",
+      "b": [
+       [
+        0.2139,
+        0.4075,
+        0.3531,
+        0.4648
+       ]
+      ]
+     }
+    ]
+   },
+   "8": {
+    "bos": 0.1286,
+    "t": [
+     {
+      "t": "Asimetrik bölünme",
+      "a": "Kök hücre bölünmesinde bir yavrunun kök hücre kalıp diğerinin farklılaştığı bölünme; nişi korur ve olgun hücre üretir.",
+      "k": "terim",
+      "b": [
+       [
+        0.135,
+        0.7412,
+        0.3601,
+        0.8045
+       ]
+      ]
+     },
+     {
+      "t": "Rejenerasyon",
+      "a": "Hasarlı doku bileşenlerinin aynı hücre tipinin çoğalmasıyla yerine konması; doku normale dönebilir.",
+      "k": "terim",
+      "b": [
+       [
+        0.5486,
+        0.0735,
+        0.7982,
+        0.173
+       ]
+      ]
+     }
+    ]
+   },
+   "9": {
+    "bos": 0.1192,
+    "t": [
+     {
+      "t": "Kök hücre",
+      "a": "Kendini yenileyebilen ve farklılaşmış hücre tiplerini oluşturabilen hücre.",
+      "k": "terim",
+      "b": [
+       [
+        0.3304,
+        0.0735,
+        0.6375,
+        0.173
+       ],
+       [
+        0.4449,
+        0.3115,
+        0.5912,
+        0.3748
+       ],
+       [
+        0.3436,
+        0.4597,
+        0.4899,
+        0.523
+       ]
+      ]
+     }
+    ]
+   },
+   "10": {
+    "bos": 0.1435,
+    "t": [
+     {
+      "t": "Parsiyel hepatektomi",
+      "a": "Karaciğerin bir bölümünün cerrahi olarak çıkarılması; karaciğer rejenerasyonunun klasik modeli.",
+      "k": "terim",
+      "b": [
+       [
+        0.7002,
+        0.7186,
+        0.7891,
+        0.7819
+       ],
+       [
+        0.135,
+        0.7832,
+        0.2762,
+        0.8465
+       ]
+      ]
+     }
+    ]
+   },
+   "11": {
+    "bos": 0.1751,
+    "t": [
+     {
+      "t": "Hepatosit büyüme faktörü",
+      "a": "Hepatosit çoğalmasını uyaran ve karaciğer rejenerasyonunda rol oynayan büyüme faktörü.",
+      "k": "terim",
+      "b": [
+       [
+        0.1725,
+        0.6961,
+        0.4428,
+        0.7503
+       ]
+      ]
+     },
+     {
+      "t": "Karaciğer rejenerasyonu",
+      "a": "Parsiyel hepatektomi veya hasar sonrası kalan hepatositlerin hücre döngüsüne yeniden girip çoğalmasıyla karaciğer kütlesinin yerine konmasıdır.",
+      "k": "terim",
+      "b": [
+       [
+        0.1411,
+        0.0735,
+        0.5969,
+        0.173
+       ]
+      ]
+     },
+     {
+      "t": "Parsiyel hepatektomi",
+      "a": "Karaciğerin bir bölümünün cerrahi olarak çıkarılması; karaciğer rejenerasyonunun klasik modeli.",
+      "k": "terim",
+      "b": [
+       [
+        0.0975,
+        0.2399,
+        0.3804,
+        0.3122
+       ]
+      ]
+     },
+     {
+      "t": "Sitokinler",
+      "a": "Lenforetiküler hücrelerde sentezlenen, immün yanıtı ve hematopoezi düzenleyen heterojen protein grubudur; enflamasyonda hem lokal hem sistemik etkilerin başlıca aracılarındandır.",
+      "k": "terim",
+      "b": [
+       [
+        0.2576,
+        0.558,
+        0.3515,
+        0.6123
+       ]
+      ]
+     },
+     {
+      "t": "Priming",
+      "a": "Karaciğer rejenerasyonunun ilk basamağı; IL-6 gibi sitokinler hepatositleri büyüme faktörlerine duyarlı hale getirir.",
+      "k": "terim",
+      "b": [
+       [
+        0.135,
+        0.484,
+        0.2283,
+        0.5473
+       ]
+      ]
+     },
+     {
+      "t": "TGF-α",
+      "a": "Hepatositlerin ve birçok epitel hücresinin proliferasyonunu uyaran büyüme faktörü.",
+      "k": "terim",
+      "b": [
+       [
+        0.4947,
+        0.7607,
+        0.5489,
+        0.8149
+       ]
+      ]
+     }
+    ]
+   },
+   "12": {
+    "bos": 0.2081,
+    "t": [
+     {
+      "t": "Rejenerasyon",
+      "a": "Hasarlı doku bileşenlerinin aynı hücre tipinin çoğalmasıyla yerine konması; doku normale dönebilir.",
+      "k": "terim",
+      "b": [
+       [
+        0.6517,
+        0.0735,
+        0.9013,
+        0.173
+       ]
+      ]
+     },
+     {
+      "t": "Hepatit",
+      "a": "Karaciğer parankiminin enflamasyonu ve hepatosit hasarı ile karakterize durum. Karaciğer fonksiyon testlerinin normalleşmesi altı aydan kısa sürerse akut, altı aydan uzun sürerse kronik hepatit denir.",
+      "k": "terim",
+      "b": [
+       [
+        0.1907,
+        0.2399,
+        0.288,
+        0.3122
+       ]
+      ]
+     }
+    ]
+   },
+   "13": {
+    "bos": 0.1435,
+    "t": [
+     {
+      "t": "Skarla onarım",
+      "a": "Hasar alanının fibröz bağ dokusu birikimiyle doldurulması; yapısal stabilite sağlar, fonksiyon tam olmayabilir.",
+      "k": "terim",
+      "b": [
+       [
+        0.3506,
+        0.0735,
+        0.6,
+        0.173
+       ]
+      ]
+     },
+     {
+      "t": "Rejenerasyon",
+      "a": "Hasarlı doku bileşenlerinin aynı hücre tipinin çoğalmasıyla yerine konması; doku normale dönebilir.",
+      "k": "terim",
+      "b": [
+       [
+        0.0975,
+        0.2399,
+        0.2796,
+        0.3122
+       ]
+      ]
+     },
+     {
+      "t": "Stroma",
+      "a": "Neoplazmın konak kökenli destek dokusu: bağ dokusu, damarlar ve inflamatuvar hücreler; beslenme sağlar ve tümörle iki yönlü sinyalleşir.",
+      "k": "terim",
+      "b": [
+       [
+        0.3999,
+        0.4004,
+        0.4756,
+        0.4637
+       ]
+      ]
+     }
+    ]
+   },
+   "14": {
+    "bos": 0.4194,
+    "t": [
+     {
+      "t": "Granülasyon dokusu",
+      "a": "Onarımda oluşan, ince duvarlı damar, fibroblast, lökosit ve gevşek ECM içeren geçici doku; pembe, nemli, granüler ve kolay kanar.",
+      "k": "terim",
+      "b": [
+       [
+        0.3648,
+        0.3282,
+        0.6335,
+        0.4005
+       ]
+      ]
+     },
+     {
+      "t": "Enflamasyon",
+      "a": "Damarlı dokuların enfeksiyon ve doku hasarına karşı geliştirdiği, savunma hücre ve moleküllerini hasar bölgesine taşıyıp aktive eden konak savunma yanıtıdır.",
+      "k": "terim",
+      "b": [
+       [
+        0.278,
+        0.2417,
+        0.4505,
+        0.314
+       ]
+      ]
+     },
+     {
+      "t": "Hemostaz",
+      "a": "Damar zedelenmesi sonrasında kanamayı durdurmak amacıyla damar lümeninde fizyolojik, lokalize ve kontrollü pıhtı oluşumu ve ardından gelen doku onarımı süreci.",
+      "k": "terim",
+      "b": [
+       [
+        0.0975,
+        0.2417,
+        0.2316,
+        0.314
+       ]
+      ]
+     }
+    ]
+   },
+   "15": {
+    "bos": 0.029,
+    "t": [
+     {
+      "t": "Rejenerasyon",
+      "a": "Hasarlı doku bileşenlerinin aynı hücre tipinin çoğalmasıyla yerine konması; doku normale dönebilir.",
+      "k": "terim",
+      "b": [
+       [
+        0.4962,
+        0.1646,
+        0.6502,
+        0.2279
+       ],
+       [
+        0.58,
+        0.414,
+        0.734,
+        0.4774
+       ]
+      ]
+     },
+     {
+      "t": "Yara izi",
+      "a": "Hasar alanının fibröz bağ dokusu birikimiyle doldurulması; yapısal stabilite sağlar, fonksiyon tam olmayabilir.",
+      "k": "terim",
+      "b": [
+       [
+        0.6908,
+        0.1646,
+        0.7725,
+        0.2279
+       ],
+       [
+        0.4962,
+        0.7252,
+        0.5779,
+        0.7885
+       ]
+      ]
+     }
+    ]
+   },
+   "16": {
+    "bos": 0.2081,
+    "t": [
+     {
+      "t": "Akut enflamasyon",
+      "a": "Dakikalar–saatler içinde başlayan, saatler–günler süren; ödem ve nötrofil ağırlıklı infiltrasyonla karakterize konak savunma yanıtı.",
+      "k": "terim",
+      "b": [
+       [
+        0.4915,
+        0.0735,
+        0.8248,
+        0.173
+       ]
+      ]
+     },
+     {
+      "t": "Trombosit",
+      "a": "Megakaryositlerden köken alan, alfa ve yoğun granüller içeren çekirdeksiz hücre fragmanı; primer hemostazın ana aktörü.",
+      "k": "terim",
+      "b": [
+       [
+        0.135,
+        0.3263,
+        0.2862,
+        0.3897
+       ],
+       [
+        0.5267,
+        0.3263,
+        0.6437,
+        0.3897
+       ]
+      ]
+     },
+     {
+      "t": "Hemostaz",
+      "a": "Damar zedelenmesi sonrasında kanamayı durdurmak amacıyla damar lümeninde fizyolojik, lokalize ve kontrollü pıhtı oluşumu ve ardından gelen doku onarımı süreci.",
+      "k": "terim",
+      "b": [
+       [
+        0.2437,
+        0.0735,
+        0.4277,
+        0.173
+       ]
+      ]
+     },
+     {
+      "t": "Makrofaj",
+      "a": "Mikropları ve nekrotik hücreleri yutarak (fagositoz) ortadan kaldıran başlıca fagositlerden biri. İki kaynağı vardır: kandan gelen monositler ve doku histiyositleri.",
+      "k": "terim",
+      "b": [
+       [
+        0.4845,
+        0.561,
+        0.6258,
+        0.6243
+       ],
+       [
+        0.0975,
+        0.6351,
+        0.2136,
+        0.7075
+       ]
+      ]
+     },
+     {
+      "t": "Monosit",
+      "a": "Dolaşımdaki makrofaj öncülü olan mononükleer lökosit.",
+      "k": "terim",
+      "b": [
+       [
+        0.3816,
+        0.561,
+        0.4716,
+        0.6243
+       ]
+      ]
+     },
+     {
+      "t": "Fibrin",
+      "a": "Trombinin fibrinojeni parçalamasıyla oluşan, polimerize olarak pıhtının iskeletini kuran çözünmeyen protein.",
+      "k": "terim",
+      "b": [
+       [
+        0.3962,
+        0.3263,
+        0.458,
+        0.3897
+       ]
+      ]
+     }
+    ]
+   },
+   "17": {
+    "bos": 0.1976,
+    "t": [
+     {
+      "t": "Granülasyon dokusu",
+      "a": "Onarımda oluşan, ince duvarlı damar, fibroblast, lökosit ve gevşek ECM içeren geçici doku; pembe, nemli, granüler ve kolay kanar.",
+      "k": "terim",
+      "b": [
+       [
+        0.5303,
+        0.0735,
+        0.9114,
+        0.173
+       ],
+       [
+        0.6322,
+        0.4081,
+        0.8773,
+        0.4745
+       ]
+      ]
+     },
+     {
+      "t": "Re-epitelizasyon",
+      "a": "Yara yüzeyinin epitel hücrelerinin çoğalıp göç etmesiyle yeniden örtülmesi.",
+      "k": "terim",
+      "b": [
+       [
+        0.319,
+        0.3974,
+        0.4748,
+        0.4517
+       ]
+      ]
+     },
+     {
+      "t": "Anjiyogenez",
+      "a": "Mevcut damarlardan yeni damar oluşumu. Yara iyileşmesi, iskemik dokularda kollateral gelişimi, tümör büyümesi ve ıslak maküler dejenerasyon gibi patolojik durumlarda önemlidir.",
+      "k": "terim",
+      "b": [
+       [
+        0.3362,
+        0.5355,
+        0.4589,
+        0.5897
+       ]
+      ]
+     }
+    ]
+   },
+   "18": {
+    "bos": 0.0078,
+    "t": [
+     {
+      "t": "Vasküler endotelyal büyüme faktörü",
+      "a": "Mezenkimal hücrelerden salınan, endotel hücrelerinin proliferasyonunu uyaran, vasküler geçirgenliği artıran ve anjiyogenezde temel rol oynayan büyüme faktörü.",
+      "k": "terim",
+      "b": [
+       [
+        0.0511,
+        0.6652,
+        0.3267,
+        0.7074
+       ]
+      ]
+     },
+     {
+      "t": "Transforme edici büyüme faktörü-α",
+      "a": "Hepatositlerin ve birçok epitel hücresinin proliferasyonunu uyaran büyüme faktörü.",
+      "k": "terim",
+      "b": [
+       [
+        0.0511,
+        0.3896,
+        0.3205,
+        0.4318
+       ]
+      ]
+     },
+     {
+      "t": "Epidermal büyüme faktörü",
+      "a": "Makrofaj, tükürük bezi ve keratinositlerden salınan; keratinosit ve fibroblastlar için mitojenik büyüme faktörü.",
+      "k": "terim",
+      "b": [
+       [
+        0.0511,
+        0.2118,
+        0.2551,
+        0.254
+       ]
+      ]
+     },
+     {
+      "t": "Hepatosit büyüme faktörü",
+      "a": "Hepatosit çoğalmasını uyaran ve karaciğer rejenerasyonunda rol oynayan büyüme faktörü.",
+      "k": "terim",
+      "b": [
+       [
+        0.0511,
+        0.4874,
+        0.2511,
+        0.5296
+       ]
+      ]
+     },
+     {
+      "t": "Ekstrasellüler matriks",
+      "a": "Hücreler arasını dolduran, kollajen, elastin, proteoglikan ve yapışkan glikoproteinlerden oluşan yapısal ağdır; doku onarımında fibroblastlarca sentezlenir ve hücre davranışını yönlendirir.",
+      "k": "terim",
+      "b": [
+       [
+        0.1617,
+        0.8743,
+        0.3059,
+        0.9105
+       ]
+      ]
+     },
+     {
+      "t": "Scatter factor",
+      "a": "Fibroblast, karaciğer stromal hücreleri ve endotelden salınan; hepatosit ve epitel proliferasyonunu ve hücre motilitesini artıran büyüme faktörü.",
+      "k": "terim",
+      "b": [
+       [
+        0.0588,
+        0.5271,
+        0.1627,
+        0.5693
+       ]
+      ]
+     },
+     {
+      "t": "TGF-β",
+      "a": "Tümörün bağışıklıktan kaçışında rol alan immün baskılayıcı sitokin.",
+      "k": "terim",
+      "b": [
+       [
+        0.7119,
+        0.8743,
+        0.7488,
+        0.9105
+       ]
+      ]
+     },
+     {
+      "t": "FGF-7",
+      "a": "Fibroblastlardan salınan, keratinosit göçü, çoğalması ve farklılaşmasını uyaran FGF-7.",
+      "k": "kisaltma",
+      "b": [
+       [
+        0.4291,
+        0.946,
+        0.4643,
+        0.9822
+       ]
+      ]
+     }
+    ]
+   },
+   "19": {
+    "bos": 0.0,
+    "t": [
+     {
+      "t": "Trombosit kaynaklı büyüme faktörü",
+      "a": "Platelet-Derived Growth Factor; makrofajın onarım ve fibroziste salgıladığı büyüme faktörü.",
+      "k": "terim",
+      "b": [
+       [
+        0.0358,
+        0.1621,
+        0.2453,
+        0.2043
+       ],
+       [
+        0.0358,
+        0.2018,
+        0.0914,
+        0.244
+       ]
+      ]
+     },
+     {
+      "t": "Transforme edici büyüme faktörü-β",
+      "a": "En önemli fibrogenik sitokin; kollajen ve fibronektin sentezini artırır, MMP'leri azaltıp TIMP'leri artırır, akut inflamasyonu baskılar.",
+      "k": "terim",
+      "b": [
+       [
+        0.0358,
+        0.5579,
+        0.2294,
+        0.6001
+       ],
+       [
+        0.0358,
+        0.5976,
+        0.1072,
+        0.6398
+       ]
+      ]
+     },
+     {
+      "t": "Keratinosit büyüme faktörü",
+      "a": "Fibroblastlardan salınan, keratinosit göçü, çoğalması ve farklılaşmasını uyaran FGF-7.",
+      "k": "terim",
+      "b": [
+       [
+        0.0358,
+        0.7754,
+        0.2443,
+        0.8176
+       ]
+      ]
+     },
+     {
+      "t": "Ekstrasellüler matriks",
+      "a": "Hücreler arasını dolduran, kollajen, elastin, proteoglikan ve yapışkan glikoproteinlerden oluşan yapısal ağdır; doku onarımında fibroblastlarca sentezlenir ve hücre davranışını yönlendirir.",
+      "k": "terim",
+      "b": [
+       [
+        0.5922,
+        0.3203,
+        0.7551,
+        0.3625
+       ],
+       [
+        0.1553,
+        0.8879,
+        0.2996,
+        0.9241
+       ]
+      ]
+     },
+     {
+      "t": "Fibronektin",
+      "a": "İnterstisyel matrikste bulunan yapışkan glikoprotein; hücre adezyonu, göçü ve çoğalmasında iskele görevi görür.",
+      "k": "terim",
+      "b": [
+       [
+        0.6617,
+        0.6367,
+        0.7463,
+        0.6789
+       ]
+      ]
+     },
+     {
+      "t": "TGF-β",
+      "a": "Tümörün bağışıklıktan kaçışında rol alan immün baskılayıcı sitokin.",
+      "k": "terim",
+      "b": [
+       [
+        0.119,
+        0.5976,
+        0.1592,
+        0.6398
+       ],
+       [
+        0.7056,
+        0.8879,
+        0.7425,
+        0.9241
+       ]
+      ]
+     },
+     {
+      "t": "TGF-α",
+      "a": "Hepatositlerin ve birçok epitel hücresinin proliferasyonunu uyaran büyüme faktörü.",
+      "k": "terim",
+      "b": [
+       [
+        0.6512,
+        0.8879,
+        0.6916,
+        0.9241
+       ]
+      ]
+     }
+    ]
+   },
+   "21": {
+    "bos": 0.2175,
+    "t": [
+     {
+      "t": "Anjiyogenez",
+      "a": "Mevcut damarlardan yeni damar oluşumu. Yara iyileşmesi, iskemik dokularda kollateral gelişimi, tümör büyümesi ve ıslak maküler dejenerasyon gibi patolojik durumlarda önemlidir.",
+      "k": "terim",
+      "b": [
+       [
+        0.2499,
+        0.0735,
+        0.4749,
+        0.173
+       ],
+       [
+        0.0975,
+        0.2399,
+        0.2558,
+        0.3122
+       ]
+      ]
+     },
+     {
+      "t": "Kollateral",
+      "a": "Yavaş gelişen tıkanmada tıkalı damarın çevresinden açılan alternatif kan yolu.",
+      "k": "terim",
+      "b": [
+       [
+        0.3555,
+        0.561,
+        0.4646,
+        0.6243
+       ]
+      ]
+     },
+     {
+      "t": "Tümör",
+      "a": "Yeni büyüme anlamına gelen, normal büyüme kontrolüne dirençli otonom hücre çoğalması.",
+      "k": "terim",
+      "b": [
+       [
+        0.135,
+        0.6351,
+        0.2116,
+        0.6984
+       ]
+      ]
+     }
+    ]
+   },
+   "22": {
+    "bos": 0.1431,
+    "t": [
+     {
+      "t": "Vazodilatasyon",
+      "a": "Damar çapının genişlemesi; akut enflamasyonda önce arterioller, sonra kapiller yatak genişler.",
+      "k": "terim",
+      "b": [
+       [
+        0.135,
+        0.4021,
+        0.2812,
+        0.4564
+       ]
+      ]
+     },
+     {
+      "t": "Sitokinler",
+      "a": "Lenforetiküler hücrelerde sentezlenen, immün yanıtı ve hematopoezi düzenleyen heterojen protein grubudur; enflamasyonda hem lokal hem sistemik etkilerin başlıca aracılarındandır.",
+      "k": "terim",
+      "b": [
+       [
+        0.2188,
+        0.2297,
+        0.3209,
+        0.29
+       ]
+      ]
+     },
+     {
+      "t": "Hipoksi",
+      "a": "Dokuya ulaşan oksijenin eksikliği.",
+      "k": "terim",
+      "b": [
+       [
+        0.0975,
+        0.2297,
+        0.1802,
+        0.29
+       ]
+      ]
+     }
+    ]
+   },
+   "23": {
+    "bos": 0.2916,
+    "t": [
+     {
+      "t": "Hipoksiye duyarlı faktör",
+      "a": "Hipoksik ortamda stabil hale gelen ve VEGF ile diğer anjiyojenik genlerin ekspresyonunu artıran faktör.",
+      "k": "terim",
+      "b": [
+       [
+        0.3413,
+        0.0735,
+        0.7897,
+        0.173
+       ],
+       [
+        0.0975,
+        0.2399,
+        0.4236,
+        0.3122
+       ]
+      ]
+     }
+    ]
+   },
+   "24": {
+    "bos": 0.1316,
+    "t": [
+     {
+      "t": "Trombosit",
+      "a": "Megakaryositlerden köken alan, alfa ve yoğun granüller içeren çekirdeksiz hücre fragmanı; primer hemostazın ana aktörü.",
+      "k": "terim",
+      "b": [
+       [
+        0.135,
+        0.484,
+        0.2547,
+        0.5473
+       ]
+      ]
+     },
+     {
+      "t": "Kollajen",
+      "a": "Skar dokusunun ana yapısal proteini; fibriler kollajenler tip I, II, III ve V'tir. Üçlü heliks yapısındadır ve çapraz bağlanması için C vitamini gerekir; eksikliğinde iskorbüt ve zayıf yara iyileşmesi görülür.",
+      "k": "terim",
+      "b": [
+       [
+        0.135,
+        0.7951,
+        0.2293,
+        0.8584
+       ]
+      ]
+     },
+     {
+      "t": "TGF-β",
+      "a": "Tümörün bağışıklıktan kaçışında rol alan immün baskılayıcı sitokin.",
+      "k": "terim",
+      "b": [
+       [
+        0.5094,
+        0.6351,
+        0.5717,
+        0.6984
+       ]
+      ]
+     }
+    ]
+   },
+   "25": {
+    "bos": 0.1353,
+    "t": [
+     {
+      "t": "İntegrinler",
+      "a": "Kemokin uyarısıyla düşük afiniteli formdan yüksek afiniteli forma geçerek lökositin endotele sıkı yapışmasını sağlayan reseptörler.",
+      "k": "terim",
+      "b": [
+       [
+        0.135,
+        0.7358,
+        0.2472,
+        0.7931
+       ]
+      ]
+     },
+     {
+      "t": "Hyaluronan",
+      "a": "Yüksek su bağlama kapasitesine sahip, gelişmekte olan dokularda ve granülasyon dokusunda bol ECM bileşeni.",
+      "k": "terim",
+      "b": [
+       [
+        0.3345,
+        0.4294,
+        0.4552,
+        0.4867
+       ]
+      ]
+     },
+     {
+      "t": "Elastin",
+      "a": "Dokulara esneklik sağlayan ECM proteini; büyük arterler, akciğer, deri ve uterusta bulunur.",
+      "k": "terim",
+      "b": [
+       [
+        0.135,
+        0.3678,
+        0.2054,
+        0.4251
+       ]
+      ]
+     },
+     {
+      "t": "Laminin",
+      "a": "Bazal membranda bulunan yapışkan glikoprotein; hücre adezyonu ve göçünde iskele görevi görür.",
+      "k": "terim",
+      "b": [
+       [
+        0.1725,
+        0.6072,
+        0.2481,
+        0.6584
+       ]
+      ]
+     }
+    ]
+   },
+   "26": {
+    "bos": 0.1252,
+    "t": [
+     {
+      "t": "C vitamini",
+      "a": "Kollajen çapraz bağlanması için gerekli olan, demir kullanımını artıran suda çözünen vitamindir; eksikliği skorbüt, damar kırılganlığı ve zayıf yara iyileşmesine yol açar.",
+      "k": "terim",
+      "b": [
+       [
+        0.3676,
+        0.6196,
+        0.4738,
+        0.6769
+       ]
+      ]
+     },
+     {
+      "t": "Kollajen",
+      "a": "Skar dokusunun ana yapısal proteini; fibriler kollajenler tip I, II, III ve V'tir. Üçlü heliks yapısındadır ve çapraz bağlanması için C vitamini gerekir; eksikliğinde iskorbüt ve zayıf yara iyileşmesi görülür.",
+      "k": "terim",
+      "b": [
+       [
+        0.3673,
+        0.0735,
+        0.5152,
+        0.173
+       ],
+       [
+        0.0975,
+        0.2351,
+        0.1923,
+        0.3014
+       ],
+       [
+        0.2168,
+        0.3678,
+        0.3256,
+        0.4251
+       ]
+      ]
+     },
+     {
+      "t": "İskorbüt",
+      "a": "Skorbüt hastalığı: 1747 yılında James Lind bir gemi seferi sırasında toplam 12 skorbütlü hastayı alarak nedeni ve tedavisi konusundaki hipotezlerini test etmiştir; uzun deniz seferlerinde tayfaların önemli kısmı skorbütten ölmüştür.",
+      "k": "terim",
+      "b": [
+       [
+        0.2889,
+        0.6812,
+        0.3667,
+        0.7325
+       ]
+      ]
+     },
+     {
+      "t": "Elastin",
+      "a": "Dokulara esneklik sağlayan ECM proteini; büyük arterler, akciğer, deri ve uterusta bulunur.",
+      "k": "terim",
+      "b": [
+       [
+        0.579,
+        0.0735,
+        0.7013,
+        0.173
+       ],
+       [
+        0.0975,
+        0.7364,
+        0.1758,
+        0.8028
+       ]
+      ]
+     }
+    ]
+   },
+   "27": {
+    "bos": 0.1316,
+    "t": [
+     {
+      "t": "Hyaluronan",
+      "a": "Yüksek su bağlama kapasitesine sahip, gelişmekte olan dokularda ve granülasyon dokusunda bol ECM bileşeni.",
+      "k": "terim",
+      "b": [
+       [
+        0.4144,
+        0.0776,
+        0.6098,
+        0.1681
+       ],
+       [
+        0.0975,
+        0.4769,
+        0.2477,
+        0.5493
+       ]
+      ]
+     },
+     {
+      "t": "Rezervuar",
+      "a": "Patojen mikroorganizmanın insan dışında yaşadığı ekolojik ortamdır.",
+      "k": "terim",
+      "b": [
+       [
+        0.5093,
+        0.4004,
+        0.6219,
+        0.4637
+       ]
+      ]
+     },
+     {
+      "t": "Laminin",
+      "a": "Bazal membranda bulunan yapışkan glikoprotein; hücre adezyonu ve göçünde iskele görevi görür.",
+      "k": "terim",
+      "b": [
+       [
+        0.2975,
+        0.7116,
+        0.3933,
+        0.7839
+       ]
+      ]
+     }
+    ]
+   },
+   "28": {
+    "bos": 0.0339,
+    "t": [
+     {
+      "t": "Tissue inhibitor of metalloproteinases",
+      "a": "MMP'leri baskılayarak ECM yıkımını dengeleyen doku inhibitörü.",
+      "k": "terim",
+      "b": [
+       [
+        0.5656,
+        0.8826,
+        0.8293,
+        0.9188
+       ]
+      ]
+     },
+     {
+      "t": "Fibronektin",
+      "a": "İnterstisyel matrikste bulunan yapışkan glikoprotein; hücre adezyonu, göçü ve çoğalmasında iskele görevi görür.",
+      "k": "terim",
+      "b": [
+       [
+        0.2328,
+        0.5011,
+        0.3511,
+        0.5584
+       ]
+      ]
+     },
+     {
+      "t": "Sitokinler",
+      "a": "Lenforetiküler hücrelerde sentezlenen, immün yanıtı ve hematopoezi düzenleyen heterojen protein grubudur; enflamasyonda hem lokal hem sistemik etkilerin başlıca aracılarındandır.",
+      "k": "terim",
+      "b": [
+       [
+        0.6902,
+        0.0735,
+        0.8656,
+        0.173
+       ]
+      ]
+     },
+     {
+      "t": "Kollajen",
+      "a": "Skar dokusunun ana yapısal proteini; fibriler kollajenler tip I, II, III ve V'tir. Üçlü heliks yapısındadır ve çapraz bağlanması için C vitamini gerekir; eksikliğinde iskorbüt ve zayıf yara iyileşmesi görülür.",
+      "k": "terim",
+      "b": [
+       [
+        0.135,
+        0.5011,
+        0.2167,
+        0.5584
+       ]
+      ]
+     },
+     {
+      "t": "TGF-β",
+      "a": "Tümörün bağışıklıktan kaçışında rol alan immün baskılayıcı sitokin.",
+      "k": "terim",
+      "b": [
+       [
+        0.203,
+        0.0735,
+        0.3125,
+        0.173
+       ],
+       [
+        0.489,
+        0.2351,
+        0.5513,
+        0.3014
+       ]
+      ]
+     }
+    ]
+   },
+   "29": {
+    "bos": 0.1306,
+    "t": [
+     {
+      "t": "ECM yeniden şekillenmesi",
+      "a": "Yara iyileşmesinin geç evresinde hücre dışı matriksin metalloproteinazlarla yıkılıp yeniden düzenlenmesidir; skarın küçülüp dayanıklılaşmasını sağlar.",
+      "k": "terim",
+      "b": [
+       [
+        0.129,
+        0.0776,
+        0.5689,
+        0.1681
+       ]
+      ]
+     }
+    ]
+   },
+   "30": {
+    "bos": 0.1316,
+    "t": [
+     {
+      "t": "Yara gücü",
+      "a": "İyileşen dokunun gerilmeye karşı dayanma kapasitesi; ilk haftada hızla artar, 3 ayda normalin ~%70–80'ine ulaşır.",
+      "k": "terim",
+      "b": [
+       [
+        0.3468,
+        0.0735,
+        0.5321,
+        0.173
+       ],
+       [
+        0.0975,
+        0.2399,
+        0.221,
+        0.3122
+       ]
+      ]
+     }
+    ]
+   },
+   "31": {
+    "bos": 0.1231,
+    "t": [
+     {
+      "t": "Per sekondam intentionem",
+      "a": "Geniş doku kayıplı veya enfekte yaraların daha fazla granülasyon dokusu, belirgin skar ve belirgin kontraksiyonla iyileşmesi.",
+      "k": "terim",
+      "b": [
+       [
+        0.0975,
+        0.4169,
+        0.3618,
+        0.4682
+       ]
+      ]
+     },
+     {
+      "t": "Per tertiam intentionem",
+      "a": "Enfeksiyon riski nedeniyle önce açık bırakılan ve tedaviden sonra kapatılan yaranın iyileşmesi; primer iyileşmenin geciktirilmesidir.",
+      "k": "terim",
+      "b": [
+       [
+        0.135,
+        0.6883,
+        0.3439,
+        0.7335
+       ]
+      ]
+     },
+     {
+      "t": "Per primam intentionem",
+      "a": "Temiz, kenarları yakınlaştırılmış kesilerin minimal doku kaybı ve az skarla iyileşmesi.",
+      "k": "terim",
+      "b": [
+       [
+        0.0975,
+        0.232,
+        0.338,
+        0.2833
+       ]
+      ]
+     },
+     {
+      "t": "Granülasyon dokusu",
+      "a": "Onarımda oluşan, ince duvarlı damar, fibroblast, lökosit ve gevşek ECM içeren geçici doku; pembe, nemli, granüler ve kolay kanar.",
+      "k": "terim",
+      "b": [
+       [
+        0.2268,
+        0.5105,
+        0.3903,
+        0.5557
+       ]
+      ]
+     },
+     {
+      "t": "Enfeksiyon",
+      "a": "Bir mikroorganizmanın konağa girmesi, yerleşmesi ve/veya çoğalmasıdır; klinik belirti ve bulgu zorunlu değildir.",
+      "k": "terim",
+      "b": [
+       [
+        0.135,
+        0.7772,
+        0.2259,
+        0.8224
+       ]
+      ]
+     },
+     {
+      "t": "Primer",
+      "a": "Monoklonal plazma hücre diskrazilerinde immünoglobulin hafif zincirlerinin (özellikle lambda) dokuda birikmesi.",
+      "k": "terim",
+      "b": [
+       [
+        0.4248,
+        0.0776,
+        0.539,
+        0.1681
+       ],
+       [
+        0.3539,
+        0.232,
+        0.4169,
+        0.2833
+       ],
+       [
+        0.135,
+        0.7327,
+        0.1923,
+        0.778
+       ]
+      ]
+     }
+    ]
+   },
+   "32": {
+    "bos": 0.1215,
+    "t": [
+     {
+      "t": "İnflamasyon",
+      "a": "Celsus'un tanımladığı dört belirti kızarıklık (rubor), sıcaklık (calor), ağrı (dolor) ve şişlik (tumor) ile Galen'in eklediği fonksiyon kaybı (functio laesa); bu beş bulgu günümüzde de inflamasyonun klasik tanımıdır.",
+      "k": "terim",
+      "b": [
+       [
+        0.0187,
+        0.6203,
+        0.1565,
+        0.6836
+       ]
+      ]
+     },
+     {
+      "t": "Platelet",
+      "a": "Megakaryositlerden köken alan, alfa ve yoğun granüller içeren çekirdeksiz hücre fragmanı; primer hemostazın ana aktörü.",
+      "k": "terim",
+      "b": [
+       [
+        0.1435,
+        0.1089,
+        0.1821,
+        0.1327
+       ]
+      ]
+     },
+     {
+      "t": "Eskar",
+      "a": "Hasarlı derinin üzerinde oluşan kabuk.",
+      "k": "terim",
+      "b": [
+       [
+        0.7019,
+        0.6819,
+        0.758,
+        0.7452
+       ]
+      ]
+     }
+    ]
+   },
+   "33": {
+    "bos": 0.0,
+    "t": [
+     {
+      "t": "Granülasyon dokusu",
+      "a": "Onarımda oluşan, ince duvarlı damar, fibroblast, lökosit ve gevşek ECM içeren geçici doku; pembe, nemli, granüler ve kolay kanar.",
+      "k": "terim",
+      "b": [
+       [
+        0.4771,
+        0.6984,
+        0.6739,
+        0.7527
+       ]
+      ]
+     },
+     {
+      "t": "Trikrom boyası",
+      "a": "Kollajeni maviye boyayan histokimyasal boya; granülasyon dokusu ile olgun skarı ayırmada kullanılır.",
+      "k": "terim",
+      "b": [
+       [
+        0.7837,
+        0.6984,
+        0.9585,
+        0.7527
+       ],
+       [
+        0.2881,
+        0.8069,
+        0.4311,
+        0.8611
+       ]
+      ]
+     },
+     {
+      "t": "Yara izi",
+      "a": "Hasar alanının fibröz bağ dokusu birikimiyle doldurulması; yapısal stabilite sağlar, fonksiyon tam olmayabilir.",
+      "k": "terim",
+      "b": [
+       [
+        0.8882,
+        0.8069,
+        0.9312,
+        0.8611
+       ],
+       [
+        0.0336,
+        0.859,
+        0.0543,
+        0.9133
+       ]
+      ]
+     },
+     {
+      "t": "Kollajen",
+      "a": "Skar dokusunun ana yapısal proteini; fibriler kollajenler tip I, II, III ve V'tir. Üçlü heliks yapısındadır ve çapraz bağlanması için C vitamini gerekir; eksikliğinde iskorbüt ve zayıf yara iyileşmesi görülür.",
+      "k": "terim",
+      "b": [
+       [
+        0.6909,
+        0.6984,
+        0.7683,
+        0.7527
+       ],
+       [
+        0.5155,
+        0.7529,
+        0.5941,
+        0.8072
+       ],
+       [
+        0.1355,
+        0.8069,
+        0.2141,
+        0.8611
+       ]
+      ]
+     }
+    ]
+   },
+   "34": {
+    "bos": 0.1303,
+    "t": [
+     {
+      "t": "Glukokortikoidler",
+      "a": "Lenfolitik özelliği olan ilk hormonal ajanlar olarak tanımlanan kortikosteroidler; uygulanmaları lenf düğümü ve dalakta lenfoid içeriği azaltır. Homodimer olarak genlerin promoterlerindeki glukokortikoid yanıt elemanlarına (GRE) bağlanarak etki gösterir.",
+      "k": "terim",
+      "b": [
+       [
+        0.135,
+        0.7607,
+        0.3059,
+        0.8149
+       ]
+      ]
+     },
+     {
+      "t": "C vitamini",
+      "a": "Kollajen çapraz bağlanması için gerekli olan, demir kullanımını artıran suda çözünen vitamindir; eksikliği skorbüt, damar kırılganlığı ve zayıf yara iyileşmesine yol açar.",
+      "k": "terim",
+      "b": [
+       [
+        0.2438,
+        0.2889,
+        0.3445,
+        0.3432
+       ]
+      ]
+     },
+     {
+      "t": "Enfeksiyon",
+      "a": "Bir mikroorganizmanın konağa girmesi, yerleşmesi ve/veya çoğalmasıdır; klinik belirti ve bulgu zorunlu değildir.",
+      "k": "terim",
+      "b": [
+       [
+        0.1725,
+        0.5455,
+        0.2633,
+        0.5907
+       ]
+      ]
+     },
+     {
+      "t": "Kollajen",
+      "a": "Skar dokusunun ana yapısal proteini; fibriler kollajenler tip I, II, III ve V'tir. Üçlü heliks yapısındadır ve çapraz bağlanması için C vitamini gerekir; eksikliğinde iskorbüt ve zayıf yara iyileşmesi görülür.",
+      "k": "terim",
+      "b": [
+       [
+        0.4636,
+        0.2889,
+        0.5421,
+        0.3432
+       ],
+       [
+        0.3333,
+        0.8145,
+        0.3991,
+        0.8597
+       ]
+      ]
+     },
+     {
+      "t": "Diyabet",
+      "a": "İnsülin salınımı, insülin etkisi veya her ikisinin bozuk olduğu, kronik progresif hiperglisemi ile karakterize, böbrek, göz, sinir ve damarları etkileyen akut ve kronik komplikasyonlara yol açan metabolik hastalık.",
+      "k": "terim",
+      "b": [
+       [
+        0.135,
+        0.4021,
+        0.2091,
+        0.4564
+       ]
+      ]
+     },
+     {
+      "t": "İskemi",
+      "a": "Bir dokuya giden kan akımının azalması veya kesilmesi; oksijen ve besin azalır, atıklar uzaklaştırılamaz.",
+      "k": "terim",
+      "b": [
+       [
+        0.4689,
+        0.6492,
+        0.533,
+        0.7035
+       ]
+      ]
+     },
+     {
+      "t": "TGF-β",
+      "a": "Tümörün bağışıklıktan kaçışında rol alan immün baskılayıcı sitokin.",
+      "k": "terim",
+      "b": [
+       [
+        0.1725,
+        0.8145,
+        0.2222,
+        0.8597
+       ]
+      ]
+     }
+    ]
+   },
+   "35": {
+    "bos": 0.1545,
+    "t": [
+     {
+      "t": "Yara ayrılması",
+      "a": "Kapanmış yaranın kenarlarının ayrılması; torsiyon, hareket ve basınç riski artırır.",
+      "k": "terim",
+      "b": [
+       [
+        0.135,
+        0.6368,
+        0.2581,
+        0.685
+       ]
+      ]
+     },
+     {
+      "t": "Enfeksiyon",
+      "a": "Bir mikroorganizmanın konağa girmesi, yerleşmesi ve/veya çoğalmasıdır; klinik belirti ve bulgu zorunlu değildir.",
+      "k": "terim",
+      "b": [
+       [
+        0.0975,
+        0.2321,
+        0.2081,
+        0.2894
+       ]
+      ]
+     }
+    ]
+   },
+   "36": {
+    "bos": 0.1302,
+    "t": [
+     {
+      "t": "Kronik yaralar",
+      "a": "Doku onarımının yetersiz kalması sonucu iyileşmeyen, çoğunlukla dolaşım bozukluğu, nöropati, bası veya enfeksiyon zemininde gelişen ülser biçimindeki anormal iyileşme tablosudur.",
+      "k": "terim",
+      "b": [
+       [
+        0.574,
+        0.0735,
+        0.829,
+        0.173
+       ]
+      ]
+     },
+     {
+      "t": "Hipertansiyon",
+      "a": "Sistemik arter kan basıncının sürekli yüksek seyretmesidir; uzun vadede kalpte hipertrofi, böbrekte nefroskleroz ve damar duvarında hasara yol açar.",
+      "k": "terim",
+      "b": [
+       [
+        0.3604,
+        0.3126,
+        0.484,
+        0.3608
+       ]
+      ]
+     },
+     {
+      "t": "Enfeksiyon",
+      "a": "Bir mikroorganizmanın konağa girmesi, yerleşmesi ve/veya çoğalmasıdır; klinik belirti ve bulgu zorunlu değildir.",
+      "k": "terim",
+      "b": [
+       [
+        0.5017,
+        0.6611,
+        0.5985,
+        0.7093
+       ]
+      ]
+     },
+     {
+      "t": "Diyabet",
+      "a": "İnsülin salınımı, insülin etkisi veya her ikisinin bozuk olduğu, kronik progresif hiperglisemi ile karakterize, böbrek, göz, sinir ve damarları etkileyen akut ve kronik komplikasyonlara yol açan metabolik hastalık.",
+      "k": "terim",
+      "b": [
+       [
+        0.4545,
+        0.5099,
+        0.5215,
+        0.5582
+       ]
+      ]
+     },
+     {
+      "t": "Nekroz",
+      "a": "Şiddetli enerji yetersizliği veya toksik hasarla gelişen, zar yıkımı, içerik sızıntısı ve inflamasyonla seyreden kazara hücre ölümü.",
+      "k": "terim",
+      "b": [
+       [
+        0.3126,
+        0.5574,
+        0.3732,
+        0.6056
+       ]
+      ]
+     }
+    ]
+   },
+   "37": {
+    "bos": 0.0472,
+    "t": [
+     {
+      "t": "Venöz bacak ülseri",
+      "a": "Kronik venöz hipertansiyona (varis, kalp yetmezliği) bağlı kronik bacak yarası.",
+      "k": "terim",
+      "b": [
+       [
+        0.0498,
+        0.545,
+        0.26,
+        0.6083
+       ]
+      ]
+     },
+     {
+      "t": "Kronik inflamasyon",
+      "a": "Haftalar-aylar süren, eş zamanlı enflamasyon, doku hasarı ve onarımın (anjiyogenez, fibrozis) birlikte görüldüğü inflamasyon; akut inflamasyonu izleyebilir veya sinsi başlangıçlı primer kronik olabilir.",
+      "k": "terim",
+      "b": [
+       [
+        0.7624,
+        0.7945,
+        0.8361,
+        0.8578
+       ],
+       [
+        0.01,
+        0.8561,
+        0.1531,
+        0.9194
+       ]
+      ]
+     },
+     {
+      "t": "Granülasyon dokusu",
+      "a": "Onarımda oluşan, ince duvarlı damar, fibroblast, lökosit ve gevşek ECM içeren geçici doku; pembe, nemli, granüler ve kolay kanar.",
+      "k": "terim",
+      "b": [
+       [
+        0.1937,
+        0.8561,
+        0.423,
+        0.9194
+       ]
+      ]
+     },
+     {
+      "t": "Arteriyel ülser",
+      "a": "Periferik arter hastalığı ve diyabete bağlı, iskemik nekroz ve zayıf iyileşme gösteren kronik yara.",
+      "k": "terim",
+      "b": [
+       [
+        0.4208,
+        0.6066,
+        0.5819,
+        0.6699
+       ]
+      ]
+     },
+     {
+      "t": "Kronik yaralar",
+      "a": "Doku onarımının yetersiz kalması sonucu iyileşmeyen, çoğunlukla dolaşım bozukluğu, nöropati, bası veya enfeksiyon zemininde gelişen ülser biçimindeki anormal iyileşme tablosudur.",
+      "k": "terim",
+      "b": [
+       [
+        0.6005,
+        0.4217,
+        0.7556,
+        0.4851
+       ]
+      ]
+     },
+     {
+      "t": "Basınç yarası",
+      "a": "Yatak bağımlı hastalarda kemik çıkıntıları üzerindeki uzun süreli basıya bağlı kronik yara.",
+      "k": "terim",
+      "b": [
+       [
+        0.0588,
+        0.7329,
+        0.2053,
+        0.7962
+       ]
+      ]
+     }
+    ]
+   },
+   "38": {
+    "bos": 0.1128,
+    "t": [
+     {
+      "t": "Hipertrofik skar",
+      "a": "Orijinal yara sınırları içinde kalan, zamanla gerileyebilen fazlalık skar dokusu.",
+      "k": "terim",
+      "b": [
+       [
+        0.0975,
+        0.2298,
+        0.286,
+        0.2961
+       ]
+      ]
+     },
+     {
+      "t": "Kontraktür",
+      "a": "Aşırı yara kontraksiyonu; el, ayak tabanı ve göğüs ön duvarında eklem hareketini kısıtlayabilir.",
+      "k": "terim",
+      "b": [
+       [
+        0.0975,
+        0.6422,
+        0.2253,
+        0.7085
+       ]
+      ]
+     },
+     {
+      "t": "Yara izi",
+      "a": "Hasar alanının fibröz bağ dokusu birikimiyle doldurulması; yapısal stabilite sağlar, fonksiyon tam olmayabilir.",
+      "k": "terim",
+      "b": [
+       [
+        0.4267,
+        0.0735,
+        0.5555,
+        0.173
+       ]
+      ]
+     },
+     {
+      "t": "Keloid",
+      "a": "Skarın yara sınırlarının dışına taşması; gerileme eğilimi az, bireysel yatkınlık özellikle koyu tenlilerde.",
+      "k": "terim",
+      "b": [
+       [
+        0.0975,
+        0.4075,
+        0.1701,
+        0.4739
+       ]
+      ]
+     }
+    ]
+   },
+   "39": {
+    "bos": 0.0239,
+    "t": [
+     {
+      "t": "Keloid",
+      "a": "Skarın yara sınırlarının dışına taşması; gerileme eğilimi az, bireysel yatkınlık özellikle koyu tenlilerde.",
+      "k": "terim",
+      "b": [
+       [
+        0.6871,
+        0.0277,
+        0.7563,
+        0.091
+       ],
+       [
+        0.7744,
+        0.0277,
+        0.8793,
+        0.091
+       ],
+       [
+        0.56,
+        0.2742,
+        0.6532,
+        0.3375
+       ]
+      ]
+     }
+    ]
+   },
+   "40": {
+    "bos": 0.1053,
+    "t": [
+     {
+      "t": "Son dönem böbrek hastalığı",
+      "a": "Glomerüllerde global skleroz, tübül atrofisi ve kaybı, interstisyel fibrozis ve damar daralmasıyla her yapısında skar bulunan böbrek.",
+      "k": "terim",
+      "b": [
+       [
+        0.135,
+        0.6836,
+        0.3854,
+        0.7318
+       ]
+      ]
+     },
+     {
+      "t": "İdyopatik pulmoner fibroz",
+      "a": "Nedeni bilinmeyen ilerleyici akciğer fibrozisi.",
+      "k": "terim",
+      "b": [
+       [
+        0.135,
+        0.5899,
+        0.3655,
+        0.6382
+       ]
+      ]
+     },
+     {
+      "t": "Kronik inflamasyon",
+      "a": "Haftalar-aylar süren, eş zamanlı enflamasyon, doku hasarı ve onarımın (anjiyogenez, fibrozis) birlikte görüldüğü inflamasyon; akut inflamasyonu izleyebilir veya sinsi başlangıçlı primer kronik olabilir.",
+      "k": "terim",
+      "b": [
+       [
+        0.135,
+        0.392,
+        0.3061,
+        0.4403
+       ]
+      ]
+     },
+     {
+      "t": "Sistemik Skleroz",
+      "a": "Mikrovasküler endotel hasarı ve aşırı kollajen depolanmasıyla deride ve iç organlarda yaygın fibrozis oluşturan otoimmün hastalık.",
+      "k": "terim",
+      "b": [
+       [
+        0.135,
+        0.7328,
+        0.2775,
+        0.781
+       ]
+      ]
+     },
+     {
+      "t": "Pnömokonyoz",
+      "a": "Solunan mineral tozlara bağlı akciğer fibrozisi.",
+      "k": "terim",
+      "b": [
+       [
+        0.135,
+        0.6368,
+        0.262,
+        0.685
+       ]
+      ]
+     },
+     {
+      "t": "Fibrozis",
+      "a": "Parankimal organlarda aşırı kollajen ve ECM birikimi; kronik inflamasyon ve persistan toksik/iskemik hasar sonucu gelişir.",
+      "k": "terim",
+      "b": [
+       [
+        0.6803,
+        0.0735,
+        0.8214,
+        0.173
+       ],
+       [
+        0.0975,
+        0.2321,
+        0.1759,
+        0.2894
+       ]
+      ]
+     },
+     {
+      "t": "Kollajen",
+      "a": "Skar dokusunun ana yapısal proteini; fibriler kollajenler tip I, II, III ve V'tir. Üçlü heliks yapısındadır ve çapraz bağlanması için C vitamini gerekir; eksikliğinde iskorbüt ve zayıf yara iyileşmesi görülür.",
+      "k": "terim",
+      "b": [
+       [
+        0.1794,
+        0.2883,
+        0.2494,
+        0.3366
+       ]
+      ]
+     }
+    ]
+   },
+   "41": {
+    "bos": 0.1596,
+    "t": [
+     {
+      "t": "İdyopatik pulmoner fibroz",
+      "a": "Nedeni bilinmeyen ilerleyici akciğer fibrozisi.",
+      "k": "terim",
+      "b": [
+       [
+        0.135,
+        0.5953,
+        0.4118,
+        0.6526
+       ]
+      ]
+     },
+     {
+      "t": "Antifibrotik tedavi",
+      "a": "TGF-β ve diğer fibrogenik sitokinleri hedefleyerek aşırı kollajen birikimini sınırlamayı amaçlayan tedavi yaklaşımı.",
+      "k": "terim",
+      "b": [
+       [
+        0.3083,
+        0.7162,
+        0.4989,
+        0.7735
+       ]
+      ]
+     },
+     {
+      "t": "Sitokinler",
+      "a": "Lenforetiküler hücrelerde sentezlenen, immün yanıtı ve hematopoezi düzenleyen heterojen protein grubudur; enflamasyonda hem lokal hem sistemik etkilerin başlıca aracılarındandır.",
+      "k": "terim",
+      "b": [
+       [
+        0.4148,
+        0.2298,
+        0.5264,
+        0.2961
+       ]
+      ]
+     },
+     {
+      "t": "Fibrozis",
+      "a": "Parankimal organlarda aşırı kollajen ve ECM birikimi; kronik inflamasyon ve persistan toksik/iskemik hasar sonucu gelişir.",
+      "k": "terim",
+      "b": [
+       [
+        0.2171,
+        0.0735,
+        0.3582,
+        0.173
+       ]
+      ]
+     },
+     {
+      "t": "Kollajen",
+      "a": "Skar dokusunun ana yapısal proteini; fibriler kollajenler tip I, II, III ve V'tir. Üçlü heliks yapısındadır ve çapraz bağlanması için C vitamini gerekir; eksikliğinde iskorbüt ve zayıf yara iyileşmesi görülür.",
+      "k": "terim",
+      "b": [
+       [
+        0.1878,
+        0.4176,
+        0.2709,
+        0.4748
+       ]
+      ]
+     },
+     {
+      "t": "TGF-β",
+      "a": "Tümörün bağışıklıktan kaçışında rol alan immün baskılayıcı sitokin.",
+      "k": "terim",
+      "b": [
+       [
+        0.0975,
+        0.2298,
+        0.1705,
+        0.2961
+       ]
+      ]
+     }
+    ]
+   },
+   "42": {
+    "bos": 0.1111,
+    "t": [
+     {
+      "t": "Granülasyon dokusu",
+      "a": "Onarımda oluşan, ince duvarlı damar, fibroblast, lökosit ve gevşek ECM içeren geçici doku; pembe, nemli, granüler ve kolay kanar.",
+      "k": "terim",
+      "b": [
+       [
+        0.2698,
+        0.5159,
+        0.4666,
+        0.5702
+       ]
+      ]
+     },
+     {
+      "t": "Kronik yaralar",
+      "a": "Doku onarımının yetersiz kalması sonucu iyileşmeyen, çoğunlukla dolaşım bozukluğu, nöropati, bası veya enfeksiyon zemininde gelişen ülser biçimindeki anormal iyileşme tablosudur.",
+      "k": "terim",
+      "b": [
+       [
+        0.3166,
+        0.6718,
+        0.4502,
+        0.726
+       ]
+      ]
+     },
+     {
+      "t": "Skarla onarım",
+      "a": "Hasar alanının fibröz bağ dokusu birikimiyle doldurulması; yapısal stabilite sağlar, fonksiyon tam olmayabilir.",
+      "k": "terim",
+      "b": [
+       [
+        0.3065,
+        0.2889,
+        0.4439,
+        0.3432
+       ],
+       [
+        0.0975,
+        0.4567,
+        0.2474,
+        0.517
+       ]
+      ]
+     },
+     {
+      "t": "Doku onarımı",
+      "a": "Yaralanma sonrası doku mimarisi ve fonksiyonunun yeniden kazanılması süreci; iyileşme olarak da adlandırılır.",
+      "k": "terim",
+      "b": [
+       [
+        0.0975,
+        0.2297,
+        0.2452,
+        0.29
+       ]
+      ]
+     },
+     {
+      "t": "Rejenerasyon",
+      "a": "Hasarlı doku bileşenlerinin aynı hücre tipinin çoğalmasıyla yerine konması; doku normale dönebilir.",
+      "k": "terim",
+      "b": [
+       [
+        0.135,
+        0.2889,
+        0.2715,
+        0.3432
+       ],
+       [
+        0.0975,
+        0.3435,
+        0.2445,
+        0.4038
+       ]
+      ]
+     },
+     {
+      "t": "Anjiyogenez",
+      "a": "Mevcut damarlardan yeni damar oluşumu. Yara iyileşmesi, iskemik dokularda kollateral gelişimi, tümör büyümesi ve ıslak maküler dejenerasyon gibi patolojik durumlarda önemlidir.",
+      "k": "terim",
+      "b": [
+       [
+        0.135,
+        0.5159,
+        0.2534,
+        0.5702
+       ]
+      ]
+     },
+     {
+      "t": "Kontraktür",
+      "a": "Aşırı yara kontraksiyonu; el, ayak tabanı ve göğüs ön duvarında eklem hareketini kısıtlayabilir.",
+      "k": "terim",
+      "b": [
+       [
+        0.6699,
+        0.6718,
+        0.7735,
+        0.726
+       ]
+      ]
+     },
+     {
+      "t": "Fibrozis",
+      "a": "Parankimal organlarda aşırı kollajen ve ECM birikimi; kronik inflamasyon ve persistan toksik/iskemik hasar sonucu gelişir.",
+      "k": "terim",
+      "b": [
+       [
+        0.0975,
+        0.7654,
+        0.1802,
+        0.8257
+       ]
+      ]
+     }
+    ]
+   },
+   "43": {
+    "bos": 0.2175,
+    "t": [
+     {
+      "t": "Kompleman",
+      "a": "Çözünebilir plazma proteinleri ve membran reseptörlerinden oluşan; opsonizasyon, kemotaksi ve hücre lizisiyle özellikle bakterilere karşı savunma sağlayan sistemdir.",
+      "k": "terim",
+      "b": [
+       [
+        0.766,
+        0.5693,
+        0.906,
+        0.6326
+       ]
+      ]
+     },
+     {
+      "t": "Trombosit",
+      "a": "Megakaryositlerden köken alan, alfa ve yoğun granüller içeren çekirdeksiz hücre fragmanı; primer hemostazın ana aktörü.",
+      "k": "terim",
+      "b": [
+       [
+        0.0232,
+        0.6926,
+        0.1402,
+        0.7559
+       ]
+      ]
+     },
+     {
+      "t": "Patoloji",
+      "a": "Hastalıkların nedenlerini, gelişim mekanizmalarını, yapısal değişikliklerini ve işlevsel-klinik sonuçlarını inceleyen bilim dalı; “hastalık bilimi”.",
+      "k": "terim",
+      "b": [
+       [
+        0.0655,
+        0.7574,
+        0.088,
+        0.7725
+       ]
+      ]
+     }
+    ]
+   },
+   "44": {
+    "bos": 0.0373,
+    "t": [
+     {
+      "t": "Patoloji",
+      "a": "Hastalıkların nedenlerini, gelişim mekanizmalarını, yapısal değişikliklerini ve işlevsel-klinik sonuçlarını inceleyen bilim dalı; “hastalık bilimi”.",
+      "k": "terim",
+      "b": [
+       [
+        0.7678,
+        0.9376,
+        0.7902,
+        0.9527
+       ]
+      ]
+     },
+     {
+      "t": "Tubulit",
+      "a": "Böbrek tubul epitel hücreleri arasında inflamatuvar hücre bulunması; akut hücresel reddin bulgusu.",
+      "k": "terim",
+      "b": [
+       [
+        0.8976,
+        0.5443,
+        0.9565,
+        0.5956
+       ]
+      ]
+     }
+    ]
+   },
+   "45": {
+    "bos": 0.0344,
+    "t": [
+     {
+      "t": "Kapillarit",
+      "a": "Kılcal damar iltihabı; böbrek greftinde peritubuler kapillarit akut antikor aracılı reddi gösterir.",
+      "k": "terim",
+      "b": [
+       [
+        0.1917,
+        0.769,
+        0.2922,
+        0.8323
+       ]
+      ]
+     },
+     {
+      "t": "Kompleman",
+      "a": "Çözünebilir plazma proteinleri ve membran reseptörlerinden oluşan; opsonizasyon, kemotaksi ve hücre lizisiyle özellikle bakterilere karşı savunma sağlayan sistemdir.",
+      "k": "terim",
+      "b": [
+       [
+        0.7015,
+        0.8306,
+        0.8416,
+        0.8939
+       ]
+      ]
+     },
+     {
+      "t": "Patoloji",
+      "a": "Hastalıkların nedenlerini, gelişim mekanizmalarını, yapısal değişikliklerini ve işlevsel-klinik sonuçlarını inceleyen bilim dalı; “hastalık bilimi”.",
+      "k": "terim",
+      "b": [
+       [
+        0.3889,
+        0.9252,
+        0.4177,
+        0.9463
+       ]
+      ]
+     }
+    ]
+   },
+   "46": {
+    "bos": 0.0171,
+    "t": [
+     {
+      "t": "Transplant glomerülopatisi",
+      "a": "Kronik antikor aracılı reddin böbrekteki karakteristik bulgusu; glomerülit, mezangiyal matriks birikimi ve kılcal bazal membran duplikasyonu.",
+      "k": "terim",
+      "b": [
+       [
+        0.409,
+        0.6563,
+        0.6503,
+        0.7076
+       ]
+      ]
+     },
+     {
+      "t": "Greft arteriyosklerozu",
+      "a": "Kronik nakil reddinde aylar–yıllar içinde gelişen greft damar duvarı kalınlaşması.",
+      "k": "terim",
+      "b": [
+       [
+        0.8492,
+        0.558,
+        0.8937,
+        0.6092
+       ],
+       [
+        0.0294,
+        0.6072,
+        0.1759,
+        0.6584
+       ],
+       [
+        0.351,
+        0.6072,
+        0.547,
+        0.6584
+       ]
+      ]
+     },
+     {
+      "t": "Fibrozis",
+      "a": "Parankimal organlarda aşırı kollajen ve ECM birikimi; kronik inflamasyon ve persistan toksik/iskemik hasar sonucu gelişir.",
+      "k": "terim",
+      "b": [
+       [
+        0.5829,
+        0.8021,
+        0.65,
+        0.8534
+       ],
+       [
+        0.7701,
+        0.8519,
+        0.8424,
+        0.9031
+       ]
+      ]
+     },
+     {
+      "t": "Patoloji",
+      "a": "Hastalıkların nedenlerini, gelişim mekanizmalarını, yapısal değişikliklerini ve işlevsel-klinik sonuçlarını inceleyen bilim dalı; “hastalık bilimi”.",
+      "k": "terim",
+      "b": [
+       [
+        0.87,
+        0.9246,
+        0.8988,
+        0.9457
+       ],
+       [
+        0.3792,
+        0.9518,
+        0.408,
+        0.9729
+       ]
+      ]
+     },
+     {
+      "t": "Atrofi",
+      "a": "Hücre boyutu ve/veya sayısında azalma ile bir organ veya dokunun küçülmesi. Nedenleri azalmış iş yükü, sinir kaybı, azalmış kan akımı, yetersiz beslenme, endokrin uyarı kaybı ve yaşlanmadır.",
+      "k": "terim",
+      "b": [
+       [
+        0.7553,
+        0.8021,
+        0.8035,
+        0.8534
+       ]
+      ]
+     }
+    ]
+   },
+   "47": {
+    "bos": 0.005,
+    "t": [
+     {
+      "t": "İnfiltrasyon",
+      "a": "Erimiş parafinin dokuya penetre olması.",
+      "k": "terim",
+      "b": [
+       [
+        0.3039,
+        0.3097,
+        0.4168,
+        0.364
+       ],
+       [
+        0.402,
+        0.6279,
+        0.5149,
+        0.6822
+       ]
+      ]
+     },
+     {
+      "t": "Diskeratoz",
+      "a": "Keratinositlerde anormal keratin boyaması (anormal keratinleşme); akut deri GVHD'sinde görülür.",
+      "k": "terim",
+      "b": [
+       [
+        0.7672,
+        0.4158,
+        0.8625,
+        0.47
+       ]
+      ]
+     },
+     {
+      "t": "Kollajen",
+      "a": "Skar dokusunun ana yapısal proteini; fibriler kollajenler tip I, II, III ve V'tir. Üçlü heliks yapısındadır ve çapraz bağlanması için C vitamini gerekir; eksikliğinde iskorbüt ve zayıf yara iyileşmesi görülür.",
+      "k": "terim",
+      "b": [
+       [
+        0.8531,
+        0.7369,
+        0.9317,
+        0.7912
+       ]
+      ]
+     },
+     {
+      "t": "Patoloji",
+      "a": "Hastalıkların nedenlerini, gelişim mekanizmalarını, yapısal değişikliklerini ve işlevsel-klinik sonuçlarını inceleyen bilim dalı; “hastalık bilimi”.",
+      "k": "terim",
+      "b": [
+       [
+        0.6934,
+        0.812,
+        0.7287,
+        0.8361
+       ],
+       [
+        0.6563,
+        0.844,
+        0.6917,
+        0.8681
+       ]
+      ]
+     },
+     {
+      "t": "Konakçı",
+      "a": "Enfeksiyon etkeninin yerleştiği makroorganizma.",
+      "k": "terim",
+      "b": [
+       [
+        0.3039,
+        0.0946,
+        0.3797,
+        0.1488
+       ]
+      ]
+     },
+     {
+      "t": "Atrofi",
+      "a": "Hücre boyutu ve/veya sayısında azalma ile bir organ veya dokunun küçülmesi. Nedenleri azalmış iş yükü, sinir kaybı, azalmış kan akımı, yetersiz beslenme, endokrin uyarı kaybı ve yaşlanmadır.",
+      "k": "terim",
+      "b": [
+       [
+        0.7339,
+        0.6824,
+        0.7889,
+        0.7367
+       ]
+      ]
+     },
+     {
+      "t": "Düşük",
+      "a": "Gebeliğin fetüsün yaşayabilirlik sınırına (20–24. hafta ya da 500 g) ulaşmadan spontan olarak sonlanması; düşük.",
+      "k": "terim",
+      "b": [
+       [
+        0.8828,
+        0.1491,
+        0.9435,
+        0.2034
+       ]
+      ]
+     }
+    ]
+   }
+  }
+ }
+}

@@ -1,12 +1,13 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 374,
-  "baslik": "Terim Yardımcısı Denetimi: Salgın Kontrolü ve Sağlık Hizmetleri",
+  "onem": 375,
+  "baslik": "Terim Yardımcısı: Gündelik Sözcükler Ayıklandı, 514 Yer Kaldırıldı",
   "maddeler": [
-    "Salgın Hastalıklarda Kontrol dersine ortaya çıkan patojen, epidemi, pandemi, morbidite, mortalite ve sağlık işgücü terimleri eklendi.",
-    "Türkiye'de Sağlık Hizmetleri dersine birinci basamak, kanun hükmünde kararname, pratisyen hekim ve JCI akreditasyonu eklendi.",
-    "Bebek Beslenmesi, Halk Sağlığı Tarihçesi ve İzolasyon dersleri de bu turda denetlendi.",
-    "Terimler sayfasındaki ortak sözlüğe 8 yeni terim eklendi."
+    "Bütün derslerde (Kurul 1, Kurul 2 ve arşiv) terim diye işaretlenmiş gündelik sözcükler kaldırıldı: büyüme, kanama, gelişim, sarılık, iyileşme gibi 514 işaret artık okuma ekranında çıkmıyor.",
+    "Bu sözcükler tıbbi terim olmadığı için dokunulduğunda açıklama yerine yanıltıcı bilgi veriyordu; kaldırılmaları okumayı sadeleştirir.",
+    "Enfeksiyon Epidemiyolojisi dersine konvelasan dönem portörlüğü, intrensek, ekzotoksin ve patojenlik eklendi (141 → 145).",
+    "Ana Çocuk Sağlığı dersine lohusa, ana ölüm hızı, bebek ölüm hızı, çoğul gebelik ve doğum öncesi bakım eklendi (87 → 85, gündelik sözcükler çıkarıldı).",
+    "Terimler sayfasındaki ortak sözlüğe 9 yeni terim eklendi."
   ],
   "eklenen": [
     "data/sesli_anlatim/terim/k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim.json",

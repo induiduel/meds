@@ -1,1 +1,1824 @@
-{"surum":1,"key":"k1-01-dismorfolojide-genetik-terminoloji","uretici":"deepseek","d":{"0":{"6":{"bos":0.0234,"t":[{"t":"Translokasyon","a":"Kromozomlar arası segment değişimi; aşırı ekspresyon ya da füzyon gen oluşumuna yol açabilir.","k":"terim","b":[[0.3207,0.3332,0.5006,0.4047]]},{"t":"Duplikasyon","a":"Bir kromozom segmentinin fazladan kopyasının bulunmasıdır; parsiyel trizomidir.","k":"terim","b":[[0.2041,0.4823,0.3532,0.5538]]},{"t":"İnversiyon","a":"Bir kromozomda iki kırık sonrası aradaki segmentin 180° dönerek yeniden birleşmesidir.","k":"terim","b":[[0.276,0.5569,0.407,0.6283]]},{"t":"Delesyon","a":"Bir kromozom segmentinin kaybıdır; kaybolan bölge için parsiyel monozomi oluşturur.","k":"terim","b":[[0.2206,0.4077,0.3314,0.4792]]}]},"7":{"bos":0.0234,"t":[{"t":"Dismorfoloji","a":"Fiziksel gelişimdeki farklılıkları inceleyen, normal morfogenezden sapmaları değerlendiren ve doğumsal defektler üzerine uzmanlaşan klinik genetik dalı.","k":"terim","b":[[0.0762,0.0397,0.4535,0.1518]]},{"t":"Sendrom","a":"Anomaliler grubunun belli bir kalıp halinde gözlenmesi ve iyi tanımlanmış olması; ortak etiyoloji ve iki ya da daha çok sistem tutulumu içerir.","k":"terim","b":[[0.095,0.6689,0.2096,0.7403]]}]},"8":{"bos":0.0234,"t":[{"t":"Dismorfoloji","a":"Fiziksel gelişimdeki farklılıkları inceleyen, normal morfogenezden sapmaları değerlendiren ve doğumsal defektler üzerine uzmanlaşan klinik genetik dalı.","k":"terim","b":[[0.0762,0.0397,0.4535,0.1518]]},{"t":"Malformasyon","a":"Embriyonik organogenez evresinde dokunun primer oluşum hatası sonucu ortaya çıkan yapısal organ defekti (intrinsik gelişim kusuru).","k":"terim","b":[[0.2401,0.4637,0.458,0.5352],[0.5799,0.6129,0.7674,0.6843]]}]},"10":{"bos":0.0234,"t":[{"t":"Dismorfoloji","a":"Fiziksel gelişimdeki farklılıkları inceleyen, normal morfogenezden sapmaları değerlendiren ve doğumsal defektler üzerine uzmanlaşan klinik genetik dalı.","k":"terim","b":[[0.6215,0.0232,0.7955,0.0946]]},{"t":"Gelişim","a":"Fonksiyonel olgunlaşma; motor, dil ve sosyal becerilerin kazanılması.","k":"terim","b":[[0.3325,0.2432,0.4284,0.3146]]}]},"13":{"bos":0.0234,"t":[{"t":"Minör anomali","a":"Bilinen medikal, cerrahi ya da kozmetik önemi olmayan ya da çok az olan, populasyonun %4'ünden azında görülen morfolojik farklılık.","k":"terim","b":[[0.0762,0.0837,0.3794,0.1959]]}]},"14":{"bos":0.001,"t":[{"t":"İris heterokromisi","a":"İki irisin ya da bir irisin bölümlerinin farklı renkte olması.","k":"terim","b":[[0.5086,0.4394,0.7958,0.521]]},{"t":"Tek ön kesici diş","a":"Orta hatta tek bir üst ön kesici dişin bulunması.","k":"terim","b":[[0.5086,0.6101,0.766,0.6917]]},{"t":"Blefarofimozis","a":"Göz kapağı aralığının (palpebral fisür) dar olması.","k":"terim","b":[[0.0356,0.3822,0.2363,0.4536],[0.0433,0.9404,0.1512,0.9738]]},{"t":"Hipertelorizm","a":"İki göz çukuru (orbita) arasındaki kemiksel mesafenin ve interpupiller mesafenin +2 standart sapmanın üzerinde genişlemiş olması.","k":"terim","b":[[0.0356,0.4569,0.2255,0.5283]]},{"t":"Beyaz perçem","a":"Saçın ön kısmında pigmentsiz beyaz tutam.","k":"terim","b":[[0.5086,0.3541,0.7235,0.4357]]},{"t":"Hipotelorizm","a":"Gözler arası mesafenin azalmış olması.","k":"terim","b":[[0.0356,0.5315,0.2109,0.603]]},{"t":"Telekantus","a":"Göz bebekleri arasındaki mesafe (interpupiller mesafe) normal iken iç göz kapak köşeleri (iç kantuslar) arasındaki mesafenin artmış olması.","k":"terim","b":[[0.0356,0.6062,0.1846,0.6776]]},{"t":"Sendrom","a":"Anomaliler grubunun belli bir kalıp halinde gözlenmesi ve iyi tanımlanmış olması; ortak etiyoloji ve iki ya da daha çok sistem tutulumu içerir.","k":"terim","b":[[0.0356,0.3075,0.1566,0.3789],[0.5086,0.2688,0.6467,0.3503]]}]},"15":{"bos":0.0234,"t":[{"t":"Majör anomali","a":"Ciddi sağlık ve kozmetik problemlere yol açan, normal spektrumdan sapan anomali.","k":"terim","b":[[0.0762,0.0837,0.3845,0.1959]]}]},"16":{"bos":0.0234,"t":[{"t":"Organizasyon","a":"Lezyonun granülasyon dokusu ile doldurulması; daha çok hematom, trombüs, embolus ve enfarktüslerde görülür.","k":"terim","b":[[0.2997,0.4891,0.4122,0.5261],[0.7746,0.4847,0.8871,0.5217]]},{"t":"Malformasyon","a":"Embriyonik organogenez evresinde dokunun primer oluşum hatası sonucu ortaya çıkan yapısal organ defekti (intrinsik gelişim kusuru).","k":"terim","b":[[0.0686,0.6461,0.1909,0.6831]]},{"t":"Farklılaşma","a":"Tümör hücrelerinin köken aldığı normal hücreye morfolojik ve fonksiyonel benzerlik derecesi.","k":"terim","b":[[0.1635,0.4911,0.2583,0.5281]]},{"t":"Deformasyon","a":"Normal gelişmekte olan bir dokunun fötal hayatta dış mekanik bası güçleri (örneğin oligohidramniyoz) etkisiyle şekil ve biçim değiştirmesi.","k":"terim","b":[[0.7667,0.6965,0.8794,0.7335]]},{"t":"Displazi","a":"Genetik mutasyon nedeniyle bir dokudaki hücrelerin yapısal organizasyon ve diferansiyasyonunun bozulması.","k":"terim","b":[[0.2807,0.6635,0.345,0.7005]]},{"t":"Gelişim","a":"Fonksiyonel olgunlaşma; motor, dil ve sosyal becerilerin kazanılması.","k":"terim","b":[[0.3731,0.0777,0.4658,0.1491]]}]},"18":{"bos":0.0234,"t":[{"t":"Gelişim","a":"Fonksiyonel olgunlaşma; motor, dil ve sosyal becerilerin kazanılması.","k":"terim","b":[[0.6273,0.7881,0.7068,0.8493]]},{"t":"Primer","a":"Monoklonal plazma hücre diskrazilerinde immünoglobulin hafif zincirlerinin (özellikle lambda) dokuda birikmesi.","k":"terim","b":[[0.2262,0.2559,0.3037,0.3171]]}]},"19":{"bos":0.0,"t":[{"t":"Deformasyon","a":"Normal gelişmekte olan bir dokunun fötal hayatta dış mekanik bası güçleri (örneğin oligohidramniyoz) etkisiyle şekil ve biçim değiştirmesi.","k":"terim","b":[[0.0762,0.0837,0.357,0.1959]]}]},"21":{"bos":0.0234,"t":[{"t":"Skafosefali","a":"Kafatasının öne-arkaya uzayıp daralması.","k":"terim","b":[[0.319,0.7877,0.451,0.8489]]},{"t":"Deformasyon","a":"Normal gelişmekte olan bir dokunun fötal hayatta dış mekanik bası güçleri (örneğin oligohidramniyoz) etkisiyle şekil ve biçim değiştirmesi.","k":"terim","b":[[0.1637,0.841,0.3114,0.9022]]}]},"22":{"bos":0.0234,"t":[{"t":"Gastroşizis","a":"Karın ön duvarı defektinden barsakların dışarı çıktığı doğumsal defekt.","k":"terim","b":[[0.6013,0.7632,0.7387,0.8294]]},{"t":"Nekroz","a":"Şiddetli enerji yetersizliği veya toksik hasarla gelişen, zar yıkımı, içerik sızıntısı ve inflamasyonla seyreden kazara hücre ölümü.","k":"terim","b":[[0.6867,0.6522,0.7637,0.7185]]}]},"23":{"bos":0.0159,"t":[{"t":"Porensefalik kist","a":"Beyin dokusunda yıkım sonrası oluşan kistik boşluk.","k":"terim","b":[[0.5174,0.6884,0.7295,0.7546]]},{"t":"Amniyotik bant","a":"Amniyon kaynaklı bantların fetal yapılara sarılarak boğma ve amputasyonlara yol açtığı ekstrinsik disrupsiyon tablosu.","k":"terim","b":[[0.7817,0.1539,0.9524,0.2151]]},{"t":"Disrupsiyon","a":"Normal gelişim sürecindeki bir organ veya vücut parçasının dışsal mekanik bantlar (amniyotik bant) veya vasküler iskemiyle parçalanıp yıkıma uğraması.","k":"terim","b":[[0.0762,0.0837,0.3218,0.1959],[0.7375,0.6884,0.8789,0.7546]]},{"t":"Gastroşizis","a":"Karın ön duvarı defektinden barsakların dışarı çıktığı doğumsal defekt.","k":"terim","b":[[0.336,0.6884,0.4736,0.7546]]},{"t":"Talidomid","a":"Gebelikteki yıkıcı teratojenik etkileri nedeniyle 1960'larda piyasadan çekilen sedatif talidomid ile ondan türeyen lenalidomid ve pomalidomidi kapsayan, başta multipl miyelomda kullanılan immünomodülatör ilaçlardır.","k":"terim","b":[[0.2437,0.6479,0.3599,0.7142]]},{"t":"Gelişim","a":"Fonksiyonel olgunlaşma; motor, dil ve sosyal becerilerin kazanılması.","k":"terim","b":[[0.2359,0.2502,0.3218,0.3165],[0.6904,0.508,0.8213,0.5743]]},{"t":"Kanama","a":"Kanın damarlardan dokuya, vücut boşluklarına veya dış ortama sızması; nedenleri travma, ateroskleroz, vaskülit, damarda tümör erozyonu ve hemostaz bozukluklarıdır.","k":"terim","b":[[0.4901,0.1521,0.5745,0.2133]]},{"t":"İskemi","a":"Bir dokuya giden kan akımının azalması veya kesilmesi; oksijen ve besin azalır, atıklar uzaklaştırılamaz.","k":"terim","b":[[0.4959,0.2055,0.5687,0.2667]]}]},"25":{"bos":0.0234,"t":[{"t":"Organizasyon","a":"Lezyonun granülasyon dokusu ile doldurulması; daha çok hematom, trombüs, embolus ve enfarktüslerde görülür.","k":"terim","b":[[0.5744,0.2026,0.7568,0.2665],[0.4325,0.3898,0.5877,0.4536]]},{"t":"Displazi","a":"Genetik mutasyon nedeniyle bir dokudaki hücrelerin yapısal organizasyon ve diferansiyasyonunun bozulması.","k":"terim","b":[[0.0762,0.0837,0.2424,0.1959],[0.358,0.5768,0.4867,0.6406],[0.652,0.5768,0.7768,0.6406]]}]},"27":{"bos":0.0234,"t":[{"t":"Spina bifida","a":"Vertebra ve nöral tüpte kapanma defekti. Risk faktörleri ailede spina bifida varlığı, teratojenler ve annede folik asit eksikliğidir; ilk çocuk spina bifidalıysa ikinci çocukta risk 1/25, üçüncüde 1/8'dir.","k":"terim","b":[[0.1248,0.6089,0.2654,0.6727]]},{"t":"Malformasyon","a":"Embriyonik organogenez evresinde dokunun primer oluşum hatası sonucu ortaya çıkan yapısal organ defekti (intrinsik gelişim kusuru).","k":"terim","b":[[0.0762,0.0837,0.3754,0.1959]]},{"t":"Sendrom","a":"Anomaliler grubunun belli bir kalıp halinde gözlenmesi ve iyi tanımlanmış olması; ortak etiyoloji ve iki ya da daha çok sistem tutulumu içerir.","k":"terim","b":[[0.0385,0.7273,0.1344,0.7912]]},{"t":"Primer","a":"Monoklonal plazma hücre diskrazilerinde immünoglobulin hafif zincirlerinin (özellikle lambda) dokuda birikmesi.","k":"terim","b":[[0.0385,0.3218,0.1193,0.3856]]},{"t":"Sekans","a":"Erken morfogenezde tek primer defekte sekonder olarak gelişen anomalilerin birlikteliği.","k":"terim","b":[[0.1557,0.7273,0.2364,0.7912]]}]},"31":{"bos":0.0234,"t":[{"t":"Spina bifida","a":"Vertebra ve nöral tüpte kapanma defekti. Risk faktörleri ailede spina bifida varlığı, teratojenler ve annede folik asit eksikliğidir; ilk çocuk spina bifidalıysa ikinci çocukta risk 1/25, üçüncüde 1/8'dir.","k":"terim","b":[[0.3219,0.7434,0.5142,0.8097]]},{"t":"Malformasyon","a":"Embriyonik organogenez evresinde dokunun primer oluşum hatası sonucu ortaya çıkan yapısal organ defekti (intrinsik gelişim kusuru).","k":"terim","b":[[0.1442,0.3086,0.3465,0.3749],[0.4352,0.3676,0.6037,0.4339]]},{"t":"Deformasyon","a":"Normal gelişmekte olan bir dokunun fötal hayatta dış mekanik bası güçleri (örneğin oligohidramniyoz) etkisiyle şekil ve biçim değiştirmesi.","k":"terim","b":[[0.6178,0.3676,0.7723,0.4339]]},{"t":"Disrupsiyon","a":"Normal gelişim sürecindeki bir organ veya vücut parçasının dışsal mekanik bantlar (amniyotik bant) veya vasküler iskemiyle parçalanıp yıkıma uğraması.","k":"terim","b":[[0.0525,0.4081,0.194,0.4743]]},{"t":"Hidrosefali","a":"Bebeklikte kraniyal sütürler kapanmadan gelişirse kafa büyür; sütürler kapandıktan sonra gelişen hidrosefali ventrikülleri genişletir ve kafa çevresinde artış olmadan intrakraniyal basıncı artırır.","k":"terim","b":[[0.7301,0.7434,0.8669,0.8097]]},{"t":"Displazi","a":"Genetik mutasyon nedeniyle bir dokudaki hücrelerin yapısal organizasyon ve diferansiyasyonunun bozulması.","k":"terim","b":[[0.2658,0.4081,0.3603,0.4743]]},{"t":"Primer","a":"Monoklonal plazma hücre diskrazilerinde immünoglobulin hafif zincirlerinin (özellikle lambda) dokuda birikmesi.","k":"terim","b":[[0.6276,0.2092,0.7115,0.2755],[0.2684,0.4671,0.3523,0.5333]]},{"t":"Sekans","a":"Erken morfogenezde tek primer defekte sekonder olarak gelişen anomalilerin birlikteliği.","k":"terim","b":[[0.0762,0.0837,0.2857,0.1959],[0.1423,0.5261,0.2338,0.5923],[0.4968,0.5261,0.5806,0.5923]]}]},"33":{"bos":0.0234,"t":[{"t":"Pulmoner hipoplazi","a":"Akciğerlerin yetersiz gelişmesi.","k":"terim","b":[[0.3637,0.7712,0.5602,0.8157]]},{"t":"Potter Sekansı","a":"Bilateral renal agenezis veya obstrüktif üropati nedeniyle fetal idrar üretiminin durması ve şiddetli oligohidramnios gelişmesiyle karakterize kaskad.","k":"terim","b":[[0.0762,0.0837,0.383,0.1959]]}]},"34":{"bos":0.0234,"t":[{"t":"Müller kanalı","a":"Paramezonefrik kanal; dişi iç genital yapılarını oluşturur, AMH ile geriler.","k":"terim","b":[[0.3022,0.6789,0.4502,0.7401]]},{"t":"Assosiasyon","a":"Anomalilerin rastgele görülme olasılığından daha sık bir araya geldiği, ortak etiyolojisi ve kalıtım modeli olmayan anomaliler topluluğu.","k":"terim","b":[[0.0762,0.0837,0.3892,0.1959],[0.177,0.5299,0.3063,0.5911],[0.1539,0.6789,0.2831,0.7401]]}]},"35":{"bos":0.0234,"t":[{"t":"Sendrom","a":"Anomaliler grubunun belli bir kalıp halinde gözlenmesi ve iyi tanımlanmış olması; ortak etiyoloji ve iki ya da daha çok sistem tutulumu içerir.","k":"terim","b":[[0.5715,0.4453,0.6922,0.5168],[0.358,0.6503,0.52,0.7218]]},{"t":"Düşük","a":"Gebeliğin fetüsün yaşayabilirlik sınırına (20–24. hafta ya da 500 g) ulaşmadan spontan olarak sonlanması; düşük.","k":"terim","b":[[0.4161,0.5757,0.4874,0.6472]]}]},"36":{"bos":0.0234,"t":[{"t":"Angelman sendromu","a":"15q11–q13 bölgesinde maternal katkının yokluğuyla oluşan imprinting sendromudur.","k":"terim","b":[[0.5395,0.6343,0.6686,0.7058],[0.5395,0.6966,0.6694,0.768]]},{"t":"Patogenez","a":"Hastalığın oluşum mekanizması; etkenin oluşturduğu biyokimyasal ve yapısal değişiklikler.","k":"terim","b":[[0.2936,0.6949,0.4317,0.7663]]}]},"37":{"bos":0.0234,"t":[{"t":"Simian Çizgisi","a":"Avuç içindeki normal iki transvers fleksür çizgisinin birleşerek el ayasını baştan başa geçen tek bir yatay çizgi oluşturması.","k":"terim","b":[[0.1808,0.1546,0.3505,0.2209]]}]},"38":{"bos":0.0234,"t":[{"t":"Sendrom","a":"Anomaliler grubunun belli bir kalıp halinde gözlenmesi ve iyi tanımlanmış olması; ortak etiyoloji ve iki ya da daha çok sistem tutulumu içerir.","k":"terim","b":[[0.0762,0.0837,0.2657,0.1959],[0.2639,0.6259,0.4178,0.6974]]}]},"39":{"bos":0.0234,"t":[{"t":"Potter Sekansı","a":"Bilateral renal agenezis veya obstrüktif üropati nedeniyle fetal idrar üretiminin durması ve şiddetli oligohidramnios gelişmesiyle karakterize kaskad.","k":"terim","b":[[0.4407,0.6918,0.5841,0.7382]]},{"t":"Majör anomali","a":"Ciddi sağlık ve kozmetik problemlere yol açan, normal spektrumdan sapan anomali.","k":"terim","b":[[0.2741,0.4317,0.4276,0.478]]},{"t":"VACTERL","a":"Vertebral anomali, anal atrezi, kardiyak anomali, trakeoözofageal fistül, renal anomali ve ekstremite anomalisinin birlikteliği.","k":"terim","b":[[0.5298,0.8219,0.6181,0.8683]]}]},"40":{"bos":0.0234,"t":[{"t":"Malformasyon","a":"Embriyonik organogenez evresinde dokunun primer oluşum hatası sonucu ortaya çıkan yapısal organ defekti (intrinsik gelişim kusuru).","k":"terim","b":[[0.0631,0.7783,0.2806,0.8598]]},{"t":"Deformasyon","a":"Normal gelişmekte olan bir dokunun fötal hayatta dış mekanik bası güçleri (örneğin oligohidramniyoz) etkisiyle şekil ve biçim değiştirmesi.","k":"terim","b":[[0.0631,0.5307,0.2674,0.6122]]},{"t":"Asosiasyon","a":"Anomalilerin rastgele görülme olasılığından daha sık bir araya geldiği, ortak etiyolojisi ve kalıtım modeli olmayan anomaliler topluluğu.","k":"terim","b":[[0.5442,0.6637,0.7134,0.7453]]},{"t":"Displazi","a":"Genetik mutasyon nedeniyle bir dokudaki hücrelerin yapısal organizasyon ve diferansiyasyonunun bozulması.","k":"terim","b":[[0.0631,0.6957,0.184,0.7773]]},{"t":"Sendrom","a":"Anomaliler grubunun belli bir kalıp halinde gözlenmesi ve iyi tanımlanmış olması; ortak etiyoloji ve iki ya da daha çok sistem tutulumu içerir.","k":"terim","b":[[0.5442,0.5812,0.6819,0.6627]]},{"t":"Primer","a":"Monoklonal plazma hücre diskrazilerinde immünoglobulin hafif zincirlerinin (özellikle lambda) dokuda birikmesi.","k":"terim","b":[[0.1576,0.3075,0.2604,0.389]]},{"t":"Sekans","a":"Erken morfogenezde tek primer defekte sekonder olarak gelişen anomalilerin birlikteliği.","k":"terim","b":[[0.5442,0.7462,0.6542,0.8278]]}]},"42":{"bos":0.0234,"t":[{"t":"Majör anomali","a":"Ciddi sağlık ve kozmetik problemlere yol açan, normal spektrumdan sapan anomali.","k":"terim","b":[[0.4016,0.5197,0.5809,0.5912]]},{"t":"Büyüme","a":"Organ ve dokuların kitlesindeki artış; tartı, boy ve baş çevresi gibi ölçümlerle izlenir.","k":"terim","b":[[0.2154,0.3332,0.3089,0.4047],[0.4491,0.3332,0.5737,0.4047],[0.095,0.3893,0.1852,0.4608]]}]},"43":{"bos":0.0234,"t":[{"t":"Pedigri","a":"Aile ağacı; kalıtım örüntüsünü gösteren soy şeması.","k":"terim","b":[[0.0973,0.4209,0.1503,0.4542]]}]},"44":{"bos":0.02,"t":[{"t":"Dismorfik çocuk","a":"Birinci derece akrabalarında bulunmayan 3 ya da daha fazla minör anomalisi olan çocuk.","k":"terim","b":[[0.0673,0.0774,0.355,0.1489]]}]},"46":{"bos":0.0234,"t":[{"t":"Prenatal tanı","a":"Fetusta genetik ya da genetik dışı nedenlerle oluşan hastalık ve malformasyonların gebeliğin mümkün olan en erken döneminde tanınmasıdır.","k":"terim","b":[[0.08,0.5061,0.2353,0.5673]]},{"t":"Apgar skoru","a":"Yenidoğanı renk, kalp hızı, refleksler, kas tonusu ve solunum üzerinden her biri 0–2 puanla değerlendiren skor.","k":"terim","b":[[0.08,0.775,0.2239,0.8362],[0.6564,0.6631,0.7802,0.7075]]},{"t":"Parite","a":"20. gebelik haftası sonrasındaki doğumları nitelendiren doğum sayısıdır.","k":"terim","b":[[0.2178,0.2557,0.2888,0.3169]]},{"t":"Tarama","a":"Belirti vermeyen kişilerde hastalığı erken yakalamak için yapılan sistematik inceleme; en çok risk gruplarında gereklidir.","k":"terim","b":[[0.372,0.5061,0.4569,0.5673]]},{"t":"TORCH","a":"Sifiliz, tüberküloz, listeriozis, toksoplazmozis, kandidiyazis ve kızamıkçık, sitomegalovirüs, herpes simpleks gibi virüslerin plasental villitise ve fetüsü etkileyen transplasental enfeksiyonlara neden olduğu grup.","k":"kisaltma","b":[[0.3114,0.2557,0.3829,0.3169]]}]},"47":{"bos":0.0234,"t":[{"t":"Tekrarlayan gebelik kaybı","a":"Viabilite sınırına ulaşmadan önce birden fazla klinik gebeliğin kaybedilmesidir; kaç kayıp gerektiği derneğe göre değişir ve ektopik gebelik, GTH ile implantasyon başarısızlığı tanıma girmez.","k":"terim","b":[[0.232,0.7176,0.5389,0.7788]]},{"t":"Pedigri","a":"Aile ağacı; kalıtım örüntüsünü gösteren soy şeması.","k":"terim","b":[[0.2555,0.2587,0.3501,0.3302]]}]},"50":{"bos":0.0042,"t":[{"t":"Cornelia de Lange sendromu","a":"Büyüme geriliği, mental retardasyon, sinofris, ince aşağı dönük üst dudak ve mikromeli ile karakterize nadir sendrom.","k":"terim","b":[[0.016,0.899,0.2366,0.9323]]},{"t":"Büyüme","a":"Organ ve dokuların kitlesindeki artış; tartı, boy ve baş çevresi gibi ölçümlerle izlenir.","k":"terim","b":[[0.3219,0.5379,0.405,0.5823]]}]},"51":{"bos":0.0234,"t":[{"t":"Mikrosefali","a":"Normalden küçük kafatası; baş çevresinin −3 SD altında olması.","k":"terim","b":[[0.3098,0.7708,0.3942,0.8041]]},{"t":"Makrosefali","a":"Normalden büyük kafatası; baş çevresinin +3 SD üzerinde olması.","k":"terim","b":[[0.3098,0.8108,0.3989,0.8441]]},{"t":"Gelişme","a":"Fonksiyonel olgunlaşma; motor, dil ve sosyal becerilerin kazanılması.","k":"terim","b":[[0.3098,0.6908,0.3712,0.7241]]},{"t":"Obezite","a":"DSÖ tanımına göre beden kitle indeksi (BKİ = ağırlık [kg] / boy² [m²]) ≥30 kg/m² olması; 25-29,9 kg/m² fazla kiloluluktur. Klinik açıdan özellikle viseral yağ dokusu, metabolik sendrom ve kardiyovasküler riskle ilişkilidir.","k":"terim","b":[[0.3098,0.7308,0.3684,0.7641]]}]},"63":{"bos":0.0103,"t":[{"t":"ACMG kılavuzu","a":"American College of Medical Genetics and Genomics ile Association for Molecular Pathology'nin dizi varyantlarını yorumlama standartları.","k":"terim","b":[[0.0292,0.0869,0.3266,0.1889]]}]},"65":{"bos":0.0,"t":[{"t":"Frajil X sendromu","a":"FMR1 genindeki CGG tekrar artışına (dinamik mutasyon) bağlı, X'e bağlı kalıtılan ve özellikle erkeklerde zihinsel gerilik, otistik bulgular ve makroorşidizmle seyreden genetik sendromdur.","k":"terim","b":[[0.0419,0.3342,0.1797,0.3801]]},{"t":"Delesyon","a":"Bir kromozom segmentinin kaybıdır; kaybolan bölge için parsiyel monozomi oluşturur.","k":"terim","b":[[0.1004,0.8603,0.1756,0.9062]]}]},"68":{"bos":0.0234,"t":[{"t":"Multipl konjenital anomali","a":"Multipl konjenital anomali.","k":"terim","b":[[0.6264,0.0661,0.8272,0.0995]]},{"t":"Tüm ekzom dizi analizi","a":"Yaklaşık 20.000 genin kodlayan bölgelerinin yeni nesil dizilemeyle incelenmesi.","k":"terim","b":[[0.6565,0.8352,0.8003,0.863]]},{"t":"Mikroarray analizi","a":"Genom boyunca kopya sayısı değişikliklerini tarayan moleküler sitogenetik yöntem.","k":"terim","b":[[0.709,0.6446,0.8224,0.6724]]},{"t":"Sendrom","a":"Anomaliler grubunun belli bir kalıp halinde gözlenmesi ve iyi tanımlanmış olması; ortak etiyoloji ve iki ya da daha çok sistem tutulumu içerir.","k":"terim","b":[[0.4498,0.3473,0.5568,0.3992],[0.1873,0.5285,0.2551,0.5641]]}]},"69":{"bos":0.0234,"t":[{"t":"Tüm ekzom dizi analizi","a":"Yaklaşık 20.000 genin kodlayan bölgelerinin yeni nesil dizilemeyle incelenmesi.","k":"terim","b":[[0.6911,0.7193,0.956,0.8085],[0.0839,0.7738,0.1934,0.863]]}]},"71":{"bos":0.0234,"t":[{"t":"Dysmorphology","a":"Fiziksel gelişimdeki farklılıkları inceleyen, normal morfogenezden sapmaları değerlendiren ve doğumsal defektler üzerine uzmanlaşan klinik genetik dalı.","k":"terim","b":[[0.1982,0.6313,0.4025,0.7028]]}]},"73":{"bos":0.0234,"t":[{"t":"Dysmorphology","a":"Fiziksel gelişimdeki farklılıkları inceleyen, normal morfogenezden sapmaları değerlendiren ve doğumsal defektler üzerine uzmanlaşan klinik genetik dalı.","k":"terim","b":[[0.1981,0.2587,0.4026,0.3302]]}]},"74":{"bos":0.0234,"t":[{"t":"Genetik danışma","a":"Kalıtsal hastalık taşıyan ya da taşıma riski olan kişilere ve akrabalarına hastalığın seyri, tedavisi, tekrarlama riski, çözüm yolları ve testler hakkında bilgi verilmesi.","k":"terim","b":[[0.0762,0.0837,0.4293,0.1959],[0.1664,0.5518,0.3399,0.608]]},{"t":"İndeks vaka","a":"İndeks vaka; ailedeki etkilenmiş birey.","k":"terim","b":[[0.1442,0.6768,0.2657,0.733]]},{"t":"Konsültant","a":"Genetik danışma veren kişi.","k":"terim","b":[[0.0397,0.5518,0.1486,0.608]]},{"t":"Pedigri","a":"Aile ağacı; kalıtım örüntüsünü gösteren soy şeması.","k":"terim","b":[[0.0397,0.8019,0.1138,0.8581]]}]},"75":{"bos":0.0234,"t":[{"t":"Genetik danışma","a":"Kalıtsal hastalık taşıyan ya da taşıma riski olan kişilere ve akrabalarına hastalığın seyri, tedavisi, tekrarlama riski, çözüm yolları ve testler hakkında bilgi verilmesi.","k":"terim","b":[[0.5724,0.6446,0.7889,0.716]]}]},"79":{"bos":0.0234,"t":[{"t":"Supravalvüler aortik stenoz","a":"Aort kapağının hemen üstünde aortun daralması.","k":"terim","b":[[0.0385,0.6789,0.4007,0.7503]]},{"t":"Williams sendromu","a":"ELN (elastin) genini içeren 7q11.23 delesyonuna bağlı; mental retardasyon, kısa boy, elfin yüz, supravalvüler aortik stenoz ve infantil hiperkalsemi ile seyreden sendrom.","k":"terim","b":[[0.0762,0.0837,0.483,0.1959]]},{"t":"Hiperkalsemi","a":"Serum kalsiyum düzeyinin normalin üzerinde olması.","k":"terim","b":[[0.0385,0.7286,0.2025,0.8001]]},{"t":"Elastin","a":"Dokulara esneklik sağlayan ECM proteini; büyük arterler, akciğer, deri ve uterusta bulunur.","k":"terim","b":[[0.4443,0.3929,0.5311,0.4643]]}]},"80":{"bos":0.0234,"t":[{"t":"Prader-Willi sendromu","a":"Hiperfaji, obsesyon ve kompülsiyonlar, ağlama/gülme nöbetleri ve davranış uyumu bozukluğuyla tanınan sendrom.","k":"terim","b":[[0.0762,0.0837,0.5642,0.1959]]}]},"81":{"bos":0.0234,"t":[{"t":"Frajil X sendromu","a":"FMR1 genindeki CGG tekrar artışına (dinamik mutasyon) bağlı, X'e bağlı kalıtılan ve özellikle erkeklerde zihinsel gerilik, otistik bulgular ve makroorşidizmle seyreden genetik sendromdur.","k":"terim","b":[[0.0762,0.0837,0.5772,0.1959]]}]},"83":{"bos":0.0011,"t":[{"t":"Dinamik mutasyon","a":"Üçlü tekrar sayısının kuşaktan kuşağa artabildiği mutasyon tipi.","k":"terim","b":[[0.0762,0.0837,0.5844,0.1959]]},{"t":"Tam mutasyon","a":"Frajil X'te CGG tekrarının 200'ün üzerine çıkması; promoter metilasyonu ile FMR1 susturulur.","k":"terim","b":[[0.2066,0.4631,0.3933,0.5345]]},{"t":"Premutasyon","a":"Frajil X'te FMR1 CGG tekrar sayısının 50'nin üstünde, 200'ün altında olması.","k":"terim","b":[[0.4018,0.351,0.5671,0.4225]]},{"t":"Promoter","a":"Gen transkripsiyonunu başlatan, ilişkili genin yukarısında ve aynı iplikte yer alan kodlamayan DNA bölgesi.","k":"terim","b":[[0.058,0.5936,0.1848,0.6651]]}]},"86":{"bos":0.0234,"t":[{"t":"Hipospadias","a":"Dış üretral ağzın normal yerinde değil, penisin ventral (alt) yüzünde şaft boyunca herhangi bir noktada açıldığı doğumsal penis malformasyonudur.","k":"terim","b":[[0.58,0.6416,0.7233,0.7079]]},{"t":"Pleiotropi","a":"Bir genin birden fazla fenotipi etkilemesi (pleiotropi: bir gen → birden fazla fenotip); değişken ekspressivite, azalmış penetrans, etiyolojik heterojenite ve belirli bir cinsiyetin etkilendiği durumlarla birlikte kalıtımı karmaşıklaştırır.","k":"terim","b":[[0.2725,0.8515,0.4454,0.923]]},{"t":"Penetrans","a":"Bir mutasyon taşıyanlarda hastalığın ortaya çıkma olasılığı.","k":"terim","b":[[0.1732,0.5237,0.2985,0.5899]]}]}}}}
+{
+ "surum": 1,
+ "key": "k1-01-dismorfolojide-genetik-terminoloji",
+ "uretici": "deepseek",
+ "d": {
+  "0": {
+   "6": {
+    "bos": 0.0234,
+    "t": [
+     {
+      "t": "Translokasyon",
+      "a": "Kromozomlar arası segment değişimi; aşırı ekspresyon ya da füzyon gen oluşumuna yol açabilir.",
+      "k": "terim",
+      "b": [
+       [
+        0.3207,
+        0.3332,
+        0.5006,
+        0.4047
+       ]
+      ]
+     },
+     {
+      "t": "Duplikasyon",
+      "a": "Bir kromozom segmentinin fazladan kopyasının bulunmasıdır; parsiyel trizomidir.",
+      "k": "terim",
+      "b": [
+       [
+        0.2041,
+        0.4823,
+        0.3532,
+        0.5538
+       ]
+      ]
+     },
+     {
+      "t": "İnversiyon",
+      "a": "Bir kromozomda iki kırık sonrası aradaki segmentin 180° dönerek yeniden birleşmesidir.",
+      "k": "terim",
+      "b": [
+       [
+        0.276,
+        0.5569,
+        0.407,
+        0.6283
+       ]
+      ]
+     },
+     {
+      "t": "Delesyon",
+      "a": "Bir kromozom segmentinin kaybıdır; kaybolan bölge için parsiyel monozomi oluşturur.",
+      "k": "terim",
+      "b": [
+       [
+        0.2206,
+        0.4077,
+        0.3314,
+        0.4792
+       ]
+      ]
+     }
+    ]
+   },
+   "7": {
+    "bos": 0.0234,
+    "t": [
+     {
+      "t": "Dismorfoloji",
+      "a": "Fiziksel gelişimdeki farklılıkları inceleyen, normal morfogenezden sapmaları değerlendiren ve doğumsal defektler üzerine uzmanlaşan klinik genetik dalı.",
+      "k": "terim",
+      "b": [
+       [
+        0.0762,
+        0.0397,
+        0.4535,
+        0.1518
+       ]
+      ]
+     },
+     {
+      "t": "Sendrom",
+      "a": "Anomaliler grubunun belli bir kalıp halinde gözlenmesi ve iyi tanımlanmış olması; ortak etiyoloji ve iki ya da daha çok sistem tutulumu içerir.",
+      "k": "terim",
+      "b": [
+       [
+        0.095,
+        0.6689,
+        0.2096,
+        0.7403
+       ]
+      ]
+     }
+    ]
+   },
+   "8": {
+    "bos": 0.0234,
+    "t": [
+     {
+      "t": "Dismorfoloji",
+      "a": "Fiziksel gelişimdeki farklılıkları inceleyen, normal morfogenezden sapmaları değerlendiren ve doğumsal defektler üzerine uzmanlaşan klinik genetik dalı.",
+      "k": "terim",
+      "b": [
+       [
+        0.0762,
+        0.0397,
+        0.4535,
+        0.1518
+       ]
+      ]
+     },
+     {
+      "t": "Malformasyon",
+      "a": "Embriyonik organogenez evresinde dokunun primer oluşum hatası sonucu ortaya çıkan yapısal organ defekti (intrinsik gelişim kusuru).",
+      "k": "terim",
+      "b": [
+       [
+        0.2401,
+        0.4637,
+        0.458,
+        0.5352
+       ],
+       [
+        0.5799,
+        0.6129,
+        0.7674,
+        0.6843
+       ]
+      ]
+     }
+    ]
+   },
+   "10": {
+    "bos": 0.0234,
+    "t": [
+     {
+      "t": "Dismorfoloji",
+      "a": "Fiziksel gelişimdeki farklılıkları inceleyen, normal morfogenezden sapmaları değerlendiren ve doğumsal defektler üzerine uzmanlaşan klinik genetik dalı.",
+      "k": "terim",
+      "b": [
+       [
+        0.6215,
+        0.0232,
+        0.7955,
+        0.0946
+       ]
+      ]
+     }
+    ]
+   },
+   "13": {
+    "bos": 0.0234,
+    "t": [
+     {
+      "t": "Minör anomali",
+      "a": "Bilinen medikal, cerrahi ya da kozmetik önemi olmayan ya da çok az olan, populasyonun %4'ünden azında görülen morfolojik farklılık.",
+      "k": "terim",
+      "b": [
+       [
+        0.0762,
+        0.0837,
+        0.3794,
+        0.1959
+       ]
+      ]
+     }
+    ]
+   },
+   "14": {
+    "bos": 0.001,
+    "t": [
+     {
+      "t": "İris heterokromisi",
+      "a": "İki irisin ya da bir irisin bölümlerinin farklı renkte olması.",
+      "k": "terim",
+      "b": [
+       [
+        0.5086,
+        0.4394,
+        0.7958,
+        0.521
+       ]
+      ]
+     },
+     {
+      "t": "Tek ön kesici diş",
+      "a": "Orta hatta tek bir üst ön kesici dişin bulunması.",
+      "k": "terim",
+      "b": [
+       [
+        0.5086,
+        0.6101,
+        0.766,
+        0.6917
+       ]
+      ]
+     },
+     {
+      "t": "Blefarofimozis",
+      "a": "Göz kapağı aralığının (palpebral fisür) dar olması.",
+      "k": "terim",
+      "b": [
+       [
+        0.0356,
+        0.3822,
+        0.2363,
+        0.4536
+       ],
+       [
+        0.0433,
+        0.9404,
+        0.1512,
+        0.9738
+       ]
+      ]
+     },
+     {
+      "t": "Hipertelorizm",
+      "a": "İki göz çukuru (orbita) arasındaki kemiksel mesafenin ve interpupiller mesafenin +2 standart sapmanın üzerinde genişlemiş olması.",
+      "k": "terim",
+      "b": [
+       [
+        0.0356,
+        0.4569,
+        0.2255,
+        0.5283
+       ]
+      ]
+     },
+     {
+      "t": "Beyaz perçem",
+      "a": "Saçın ön kısmında pigmentsiz beyaz tutam.",
+      "k": "terim",
+      "b": [
+       [
+        0.5086,
+        0.3541,
+        0.7235,
+        0.4357
+       ]
+      ]
+     },
+     {
+      "t": "Hipotelorizm",
+      "a": "Gözler arası mesafenin azalmış olması.",
+      "k": "terim",
+      "b": [
+       [
+        0.0356,
+        0.5315,
+        0.2109,
+        0.603
+       ]
+      ]
+     },
+     {
+      "t": "Telekantus",
+      "a": "Göz bebekleri arasındaki mesafe (interpupiller mesafe) normal iken iç göz kapak köşeleri (iç kantuslar) arasındaki mesafenin artmış olması.",
+      "k": "terim",
+      "b": [
+       [
+        0.0356,
+        0.6062,
+        0.1846,
+        0.6776
+       ]
+      ]
+     },
+     {
+      "t": "Sendrom",
+      "a": "Anomaliler grubunun belli bir kalıp halinde gözlenmesi ve iyi tanımlanmış olması; ortak etiyoloji ve iki ya da daha çok sistem tutulumu içerir.",
+      "k": "terim",
+      "b": [
+       [
+        0.0356,
+        0.3075,
+        0.1566,
+        0.3789
+       ],
+       [
+        0.5086,
+        0.2688,
+        0.6467,
+        0.3503
+       ]
+      ]
+     }
+    ]
+   },
+   "15": {
+    "bos": 0.0234,
+    "t": [
+     {
+      "t": "Majör anomali",
+      "a": "Ciddi sağlık ve kozmetik problemlere yol açan, normal spektrumdan sapan anomali.",
+      "k": "terim",
+      "b": [
+       [
+        0.0762,
+        0.0837,
+        0.3845,
+        0.1959
+       ]
+      ]
+     }
+    ]
+   },
+   "16": {
+    "bos": 0.0234,
+    "t": [
+     {
+      "t": "Organizasyon",
+      "a": "Lezyonun granülasyon dokusu ile doldurulması; daha çok hematom, trombüs, embolus ve enfarktüslerde görülür.",
+      "k": "terim",
+      "b": [
+       [
+        0.2997,
+        0.4891,
+        0.4122,
+        0.5261
+       ],
+       [
+        0.7746,
+        0.4847,
+        0.8871,
+        0.5217
+       ]
+      ]
+     },
+     {
+      "t": "Malformasyon",
+      "a": "Embriyonik organogenez evresinde dokunun primer oluşum hatası sonucu ortaya çıkan yapısal organ defekti (intrinsik gelişim kusuru).",
+      "k": "terim",
+      "b": [
+       [
+        0.0686,
+        0.6461,
+        0.1909,
+        0.6831
+       ]
+      ]
+     },
+     {
+      "t": "Farklılaşma",
+      "a": "Tümör hücrelerinin köken aldığı normal hücreye morfolojik ve fonksiyonel benzerlik derecesi.",
+      "k": "terim",
+      "b": [
+       [
+        0.1635,
+        0.4911,
+        0.2583,
+        0.5281
+       ]
+      ]
+     },
+     {
+      "t": "Deformasyon",
+      "a": "Normal gelişmekte olan bir dokunun fötal hayatta dış mekanik bası güçleri (örneğin oligohidramniyoz) etkisiyle şekil ve biçim değiştirmesi.",
+      "k": "terim",
+      "b": [
+       [
+        0.7667,
+        0.6965,
+        0.8794,
+        0.7335
+       ]
+      ]
+     },
+     {
+      "t": "Displazi",
+      "a": "Genetik mutasyon nedeniyle bir dokudaki hücrelerin yapısal organizasyon ve diferansiyasyonunun bozulması.",
+      "k": "terim",
+      "b": [
+       [
+        0.2807,
+        0.6635,
+        0.345,
+        0.7005
+       ]
+      ]
+     }
+    ]
+   },
+   "18": {
+    "bos": 0.0234,
+    "t": [
+     {
+      "t": "Primer",
+      "a": "Monoklonal plazma hücre diskrazilerinde immünoglobulin hafif zincirlerinin (özellikle lambda) dokuda birikmesi.",
+      "k": "terim",
+      "b": [
+       [
+        0.2262,
+        0.2559,
+        0.3037,
+        0.3171
+       ]
+      ]
+     }
+    ]
+   },
+   "19": {
+    "bos": 0.0,
+    "t": [
+     {
+      "t": "Deformasyon",
+      "a": "Normal gelişmekte olan bir dokunun fötal hayatta dış mekanik bası güçleri (örneğin oligohidramniyoz) etkisiyle şekil ve biçim değiştirmesi.",
+      "k": "terim",
+      "b": [
+       [
+        0.0762,
+        0.0837,
+        0.357,
+        0.1959
+       ]
+      ]
+     }
+    ]
+   },
+   "21": {
+    "bos": 0.0234,
+    "t": [
+     {
+      "t": "Skafosefali",
+      "a": "Kafatasının öne-arkaya uzayıp daralması.",
+      "k": "terim",
+      "b": [
+       [
+        0.319,
+        0.7877,
+        0.451,
+        0.8489
+       ]
+      ]
+     },
+     {
+      "t": "Deformasyon",
+      "a": "Normal gelişmekte olan bir dokunun fötal hayatta dış mekanik bası güçleri (örneğin oligohidramniyoz) etkisiyle şekil ve biçim değiştirmesi.",
+      "k": "terim",
+      "b": [
+       [
+        0.1637,
+        0.841,
+        0.3114,
+        0.9022
+       ]
+      ]
+     }
+    ]
+   },
+   "22": {
+    "bos": 0.0234,
+    "t": [
+     {
+      "t": "Gastroşizis",
+      "a": "Karın ön duvarı defektinden barsakların dışarı çıktığı doğumsal defekt.",
+      "k": "terim",
+      "b": [
+       [
+        0.6013,
+        0.7632,
+        0.7387,
+        0.8294
+       ]
+      ]
+     },
+     {
+      "t": "Nekroz",
+      "a": "Şiddetli enerji yetersizliği veya toksik hasarla gelişen, zar yıkımı, içerik sızıntısı ve inflamasyonla seyreden kazara hücre ölümü.",
+      "k": "terim",
+      "b": [
+       [
+        0.6867,
+        0.6522,
+        0.7637,
+        0.7185
+       ]
+      ]
+     }
+    ]
+   },
+   "23": {
+    "bos": 0.0159,
+    "t": [
+     {
+      "t": "Porensefalik kist",
+      "a": "Beyin dokusunda yıkım sonrası oluşan kistik boşluk.",
+      "k": "terim",
+      "b": [
+       [
+        0.5174,
+        0.6884,
+        0.7295,
+        0.7546
+       ]
+      ]
+     },
+     {
+      "t": "Amniyotik bant",
+      "a": "Amniyon kaynaklı bantların fetal yapılara sarılarak boğma ve amputasyonlara yol açtığı ekstrinsik disrupsiyon tablosu.",
+      "k": "terim",
+      "b": [
+       [
+        0.7817,
+        0.1539,
+        0.9524,
+        0.2151
+       ]
+      ]
+     },
+     {
+      "t": "Disrupsiyon",
+      "a": "Normal gelişim sürecindeki bir organ veya vücut parçasının dışsal mekanik bantlar (amniyotik bant) veya vasküler iskemiyle parçalanıp yıkıma uğraması.",
+      "k": "terim",
+      "b": [
+       [
+        0.0762,
+        0.0837,
+        0.3218,
+        0.1959
+       ],
+       [
+        0.7375,
+        0.6884,
+        0.8789,
+        0.7546
+       ]
+      ]
+     },
+     {
+      "t": "Gastroşizis",
+      "a": "Karın ön duvarı defektinden barsakların dışarı çıktığı doğumsal defekt.",
+      "k": "terim",
+      "b": [
+       [
+        0.336,
+        0.6884,
+        0.4736,
+        0.7546
+       ]
+      ]
+     },
+     {
+      "t": "Talidomid",
+      "a": "Gebelikteki yıkıcı teratojenik etkileri nedeniyle 1960'larda piyasadan çekilen sedatif talidomid ile ondan türeyen lenalidomid ve pomalidomidi kapsayan, başta multipl miyelomda kullanılan immünomodülatör ilaçlardır.",
+      "k": "terim",
+      "b": [
+       [
+        0.2437,
+        0.6479,
+        0.3599,
+        0.7142
+       ]
+      ]
+     },
+     {
+      "t": "İskemi",
+      "a": "Bir dokuya giden kan akımının azalması veya kesilmesi; oksijen ve besin azalır, atıklar uzaklaştırılamaz.",
+      "k": "terim",
+      "b": [
+       [
+        0.4959,
+        0.2055,
+        0.5687,
+        0.2667
+       ]
+      ]
+     }
+    ]
+   },
+   "25": {
+    "bos": 0.0234,
+    "t": [
+     {
+      "t": "Organizasyon",
+      "a": "Lezyonun granülasyon dokusu ile doldurulması; daha çok hematom, trombüs, embolus ve enfarktüslerde görülür.",
+      "k": "terim",
+      "b": [
+       [
+        0.5744,
+        0.2026,
+        0.7568,
+        0.2665
+       ],
+       [
+        0.4325,
+        0.3898,
+        0.5877,
+        0.4536
+       ]
+      ]
+     },
+     {
+      "t": "Displazi",
+      "a": "Genetik mutasyon nedeniyle bir dokudaki hücrelerin yapısal organizasyon ve diferansiyasyonunun bozulması.",
+      "k": "terim",
+      "b": [
+       [
+        0.0762,
+        0.0837,
+        0.2424,
+        0.1959
+       ],
+       [
+        0.358,
+        0.5768,
+        0.4867,
+        0.6406
+       ],
+       [
+        0.652,
+        0.5768,
+        0.7768,
+        0.6406
+       ]
+      ]
+     }
+    ]
+   },
+   "27": {
+    "bos": 0.0234,
+    "t": [
+     {
+      "t": "Spina bifida",
+      "a": "Vertebra ve nöral tüpte kapanma defekti. Risk faktörleri ailede spina bifida varlığı, teratojenler ve annede folik asit eksikliğidir; ilk çocuk spina bifidalıysa ikinci çocukta risk 1/25, üçüncüde 1/8'dir.",
+      "k": "terim",
+      "b": [
+       [
+        0.1248,
+        0.6089,
+        0.2654,
+        0.6727
+       ]
+      ]
+     },
+     {
+      "t": "Malformasyon",
+      "a": "Embriyonik organogenez evresinde dokunun primer oluşum hatası sonucu ortaya çıkan yapısal organ defekti (intrinsik gelişim kusuru).",
+      "k": "terim",
+      "b": [
+       [
+        0.0762,
+        0.0837,
+        0.3754,
+        0.1959
+       ]
+      ]
+     },
+     {
+      "t": "Sendrom",
+      "a": "Anomaliler grubunun belli bir kalıp halinde gözlenmesi ve iyi tanımlanmış olması; ortak etiyoloji ve iki ya da daha çok sistem tutulumu içerir.",
+      "k": "terim",
+      "b": [
+       [
+        0.0385,
+        0.7273,
+        0.1344,
+        0.7912
+       ]
+      ]
+     },
+     {
+      "t": "Primer",
+      "a": "Monoklonal plazma hücre diskrazilerinde immünoglobulin hafif zincirlerinin (özellikle lambda) dokuda birikmesi.",
+      "k": "terim",
+      "b": [
+       [
+        0.0385,
+        0.3218,
+        0.1193,
+        0.3856
+       ]
+      ]
+     },
+     {
+      "t": "Sekans",
+      "a": "Erken morfogenezde tek primer defekte sekonder olarak gelişen anomalilerin birlikteliği.",
+      "k": "terim",
+      "b": [
+       [
+        0.1557,
+        0.7273,
+        0.2364,
+        0.7912
+       ]
+      ]
+     }
+    ]
+   },
+   "31": {
+    "bos": 0.0234,
+    "t": [
+     {
+      "t": "Spina bifida",
+      "a": "Vertebra ve nöral tüpte kapanma defekti. Risk faktörleri ailede spina bifida varlığı, teratojenler ve annede folik asit eksikliğidir; ilk çocuk spina bifidalıysa ikinci çocukta risk 1/25, üçüncüde 1/8'dir.",
+      "k": "terim",
+      "b": [
+       [
+        0.3219,
+        0.7434,
+        0.5142,
+        0.8097
+       ]
+      ]
+     },
+     {
+      "t": "Malformasyon",
+      "a": "Embriyonik organogenez evresinde dokunun primer oluşum hatası sonucu ortaya çıkan yapısal organ defekti (intrinsik gelişim kusuru).",
+      "k": "terim",
+      "b": [
+       [
+        0.1442,
+        0.3086,
+        0.3465,
+        0.3749
+       ],
+       [
+        0.4352,
+        0.3676,
+        0.6037,
+        0.4339
+       ]
+      ]
+     },
+     {
+      "t": "Deformasyon",
+      "a": "Normal gelişmekte olan bir dokunun fötal hayatta dış mekanik bası güçleri (örneğin oligohidramniyoz) etkisiyle şekil ve biçim değiştirmesi.",
+      "k": "terim",
+      "b": [
+       [
+        0.6178,
+        0.3676,
+        0.7723,
+        0.4339
+       ]
+      ]
+     },
+     {
+      "t": "Disrupsiyon",
+      "a": "Normal gelişim sürecindeki bir organ veya vücut parçasının dışsal mekanik bantlar (amniyotik bant) veya vasküler iskemiyle parçalanıp yıkıma uğraması.",
+      "k": "terim",
+      "b": [
+       [
+        0.0525,
+        0.4081,
+        0.194,
+        0.4743
+       ]
+      ]
+     },
+     {
+      "t": "Hidrosefali",
+      "a": "Bebeklikte kraniyal sütürler kapanmadan gelişirse kafa büyür; sütürler kapandıktan sonra gelişen hidrosefali ventrikülleri genişletir ve kafa çevresinde artış olmadan intrakraniyal basıncı artırır.",
+      "k": "terim",
+      "b": [
+       [
+        0.7301,
+        0.7434,
+        0.8669,
+        0.8097
+       ]
+      ]
+     },
+     {
+      "t": "Displazi",
+      "a": "Genetik mutasyon nedeniyle bir dokudaki hücrelerin yapısal organizasyon ve diferansiyasyonunun bozulması.",
+      "k": "terim",
+      "b": [
+       [
+        0.2658,
+        0.4081,
+        0.3603,
+        0.4743
+       ]
+      ]
+     },
+     {
+      "t": "Primer",
+      "a": "Monoklonal plazma hücre diskrazilerinde immünoglobulin hafif zincirlerinin (özellikle lambda) dokuda birikmesi.",
+      "k": "terim",
+      "b": [
+       [
+        0.6276,
+        0.2092,
+        0.7115,
+        0.2755
+       ],
+       [
+        0.2684,
+        0.4671,
+        0.3523,
+        0.5333
+       ]
+      ]
+     },
+     {
+      "t": "Sekans",
+      "a": "Erken morfogenezde tek primer defekte sekonder olarak gelişen anomalilerin birlikteliği.",
+      "k": "terim",
+      "b": [
+       [
+        0.0762,
+        0.0837,
+        0.2857,
+        0.1959
+       ],
+       [
+        0.1423,
+        0.5261,
+        0.2338,
+        0.5923
+       ],
+       [
+        0.4968,
+        0.5261,
+        0.5806,
+        0.5923
+       ]
+      ]
+     }
+    ]
+   },
+   "33": {
+    "bos": 0.0234,
+    "t": [
+     {
+      "t": "Pulmoner hipoplazi",
+      "a": "Akciğerlerin yetersiz gelişmesi.",
+      "k": "terim",
+      "b": [
+       [
+        0.3637,
+        0.7712,
+        0.5602,
+        0.8157
+       ]
+      ]
+     },
+     {
+      "t": "Potter Sekansı",
+      "a": "Bilateral renal agenezis veya obstrüktif üropati nedeniyle fetal idrar üretiminin durması ve şiddetli oligohidramnios gelişmesiyle karakterize kaskad.",
+      "k": "terim",
+      "b": [
+       [
+        0.0762,
+        0.0837,
+        0.383,
+        0.1959
+       ]
+      ]
+     }
+    ]
+   },
+   "34": {
+    "bos": 0.0234,
+    "t": [
+     {
+      "t": "Müller kanalı",
+      "a": "Paramezonefrik kanal; dişi iç genital yapılarını oluşturur, AMH ile geriler.",
+      "k": "terim",
+      "b": [
+       [
+        0.3022,
+        0.6789,
+        0.4502,
+        0.7401
+       ]
+      ]
+     },
+     {
+      "t": "Assosiasyon",
+      "a": "Anomalilerin rastgele görülme olasılığından daha sık bir araya geldiği, ortak etiyolojisi ve kalıtım modeli olmayan anomaliler topluluğu.",
+      "k": "terim",
+      "b": [
+       [
+        0.0762,
+        0.0837,
+        0.3892,
+        0.1959
+       ],
+       [
+        0.177,
+        0.5299,
+        0.3063,
+        0.5911
+       ],
+       [
+        0.1539,
+        0.6789,
+        0.2831,
+        0.7401
+       ]
+      ]
+     }
+    ]
+   },
+   "35": {
+    "bos": 0.0234,
+    "t": [
+     {
+      "t": "Sendrom",
+      "a": "Anomaliler grubunun belli bir kalıp halinde gözlenmesi ve iyi tanımlanmış olması; ortak etiyoloji ve iki ya da daha çok sistem tutulumu içerir.",
+      "k": "terim",
+      "b": [
+       [
+        0.5715,
+        0.4453,
+        0.6922,
+        0.5168
+       ],
+       [
+        0.358,
+        0.6503,
+        0.52,
+        0.7218
+       ]
+      ]
+     },
+     {
+      "t": "Düşük",
+      "a": "Gebeliğin fetüsün yaşayabilirlik sınırına (20–24. hafta ya da 500 g) ulaşmadan spontan olarak sonlanması; düşük.",
+      "k": "terim",
+      "b": [
+       [
+        0.4161,
+        0.5757,
+        0.4874,
+        0.6472
+       ]
+      ]
+     }
+    ]
+   },
+   "36": {
+    "bos": 0.0234,
+    "t": [
+     {
+      "t": "Angelman sendromu",
+      "a": "15q11–q13 bölgesinde maternal katkının yokluğuyla oluşan imprinting sendromudur.",
+      "k": "terim",
+      "b": [
+       [
+        0.5395,
+        0.6343,
+        0.6686,
+        0.7058
+       ],
+       [
+        0.5395,
+        0.6966,
+        0.6694,
+        0.768
+       ]
+      ]
+     },
+     {
+      "t": "Patogenez",
+      "a": "Hastalığın oluşum mekanizması; etkenin oluşturduğu biyokimyasal ve yapısal değişiklikler.",
+      "k": "terim",
+      "b": [
+       [
+        0.2936,
+        0.6949,
+        0.4317,
+        0.7663
+       ]
+      ]
+     }
+    ]
+   },
+   "37": {
+    "bos": 0.0234,
+    "t": [
+     {
+      "t": "Simian Çizgisi",
+      "a": "Avuç içindeki normal iki transvers fleksür çizgisinin birleşerek el ayasını baştan başa geçen tek bir yatay çizgi oluşturması.",
+      "k": "terim",
+      "b": [
+       [
+        0.1808,
+        0.1546,
+        0.3505,
+        0.2209
+       ]
+      ]
+     }
+    ]
+   },
+   "38": {
+    "bos": 0.0234,
+    "t": [
+     {
+      "t": "Sendrom",
+      "a": "Anomaliler grubunun belli bir kalıp halinde gözlenmesi ve iyi tanımlanmış olması; ortak etiyoloji ve iki ya da daha çok sistem tutulumu içerir.",
+      "k": "terim",
+      "b": [
+       [
+        0.0762,
+        0.0837,
+        0.2657,
+        0.1959
+       ],
+       [
+        0.2639,
+        0.6259,
+        0.4178,
+        0.6974
+       ]
+      ]
+     }
+    ]
+   },
+   "39": {
+    "bos": 0.0234,
+    "t": [
+     {
+      "t": "Potter Sekansı",
+      "a": "Bilateral renal agenezis veya obstrüktif üropati nedeniyle fetal idrar üretiminin durması ve şiddetli oligohidramnios gelişmesiyle karakterize kaskad.",
+      "k": "terim",
+      "b": [
+       [
+        0.4407,
+        0.6918,
+        0.5841,
+        0.7382
+       ]
+      ]
+     },
+     {
+      "t": "Majör anomali",
+      "a": "Ciddi sağlık ve kozmetik problemlere yol açan, normal spektrumdan sapan anomali.",
+      "k": "terim",
+      "b": [
+       [
+        0.2741,
+        0.4317,
+        0.4276,
+        0.478
+       ]
+      ]
+     },
+     {
+      "t": "VACTERL",
+      "a": "Vertebral anomali, anal atrezi, kardiyak anomali, trakeoözofageal fistül, renal anomali ve ekstremite anomalisinin birlikteliği.",
+      "k": "terim",
+      "b": [
+       [
+        0.5298,
+        0.8219,
+        0.6181,
+        0.8683
+       ]
+      ]
+     }
+    ]
+   },
+   "40": {
+    "bos": 0.0234,
+    "t": [
+     {
+      "t": "Malformasyon",
+      "a": "Embriyonik organogenez evresinde dokunun primer oluşum hatası sonucu ortaya çıkan yapısal organ defekti (intrinsik gelişim kusuru).",
+      "k": "terim",
+      "b": [
+       [
+        0.0631,
+        0.7783,
+        0.2806,
+        0.8598
+       ]
+      ]
+     },
+     {
+      "t": "Deformasyon",
+      "a": "Normal gelişmekte olan bir dokunun fötal hayatta dış mekanik bası güçleri (örneğin oligohidramniyoz) etkisiyle şekil ve biçim değiştirmesi.",
+      "k": "terim",
+      "b": [
+       [
+        0.0631,
+        0.5307,
+        0.2674,
+        0.6122
+       ]
+      ]
+     },
+     {
+      "t": "Asosiasyon",
+      "a": "Anomalilerin rastgele görülme olasılığından daha sık bir araya geldiği, ortak etiyolojisi ve kalıtım modeli olmayan anomaliler topluluğu.",
+      "k": "terim",
+      "b": [
+       [
+        0.5442,
+        0.6637,
+        0.7134,
+        0.7453
+       ]
+      ]
+     },
+     {
+      "t": "Displazi",
+      "a": "Genetik mutasyon nedeniyle bir dokudaki hücrelerin yapısal organizasyon ve diferansiyasyonunun bozulması.",
+      "k": "terim",
+      "b": [
+       [
+        0.0631,
+        0.6957,
+        0.184,
+        0.7773
+       ]
+      ]
+     },
+     {
+      "t": "Sendrom",
+      "a": "Anomaliler grubunun belli bir kalıp halinde gözlenmesi ve iyi tanımlanmış olması; ortak etiyoloji ve iki ya da daha çok sistem tutulumu içerir.",
+      "k": "terim",
+      "b": [
+       [
+        0.5442,
+        0.5812,
+        0.6819,
+        0.6627
+       ]
+      ]
+     },
+     {
+      "t": "Primer",
+      "a": "Monoklonal plazma hücre diskrazilerinde immünoglobulin hafif zincirlerinin (özellikle lambda) dokuda birikmesi.",
+      "k": "terim",
+      "b": [
+       [
+        0.1576,
+        0.3075,
+        0.2604,
+        0.389
+       ]
+      ]
+     },
+     {
+      "t": "Sekans",
+      "a": "Erken morfogenezde tek primer defekte sekonder olarak gelişen anomalilerin birlikteliği.",
+      "k": "terim",
+      "b": [
+       [
+        0.5442,
+        0.7462,
+        0.6542,
+        0.8278
+       ]
+      ]
+     }
+    ]
+   },
+   "42": {
+    "bos": 0.0234,
+    "t": [
+     {
+      "t": "Majör anomali",
+      "a": "Ciddi sağlık ve kozmetik problemlere yol açan, normal spektrumdan sapan anomali.",
+      "k": "terim",
+      "b": [
+       [
+        0.4016,
+        0.5197,
+        0.5809,
+        0.5912
+       ]
+      ]
+     }
+    ]
+   },
+   "43": {
+    "bos": 0.0234,
+    "t": [
+     {
+      "t": "Pedigri",
+      "a": "Aile ağacı; kalıtım örüntüsünü gösteren soy şeması.",
+      "k": "terim",
+      "b": [
+       [
+        0.0973,
+        0.4209,
+        0.1503,
+        0.4542
+       ]
+      ]
+     }
+    ]
+   },
+   "44": {
+    "bos": 0.02,
+    "t": [
+     {
+      "t": "Dismorfik çocuk",
+      "a": "Birinci derece akrabalarında bulunmayan 3 ya da daha fazla minör anomalisi olan çocuk.",
+      "k": "terim",
+      "b": [
+       [
+        0.0673,
+        0.0774,
+        0.355,
+        0.1489
+       ]
+      ]
+     }
+    ]
+   },
+   "46": {
+    "bos": 0.0234,
+    "t": [
+     {
+      "t": "Prenatal tanı",
+      "a": "Fetusta genetik ya da genetik dışı nedenlerle oluşan hastalık ve malformasyonların gebeliğin mümkün olan en erken döneminde tanınmasıdır.",
+      "k": "terim",
+      "b": [
+       [
+        0.08,
+        0.5061,
+        0.2353,
+        0.5673
+       ]
+      ]
+     },
+     {
+      "t": "Apgar skoru",
+      "a": "Yenidoğanı renk, kalp hızı, refleksler, kas tonusu ve solunum üzerinden her biri 0–2 puanla değerlendiren skor.",
+      "k": "terim",
+      "b": [
+       [
+        0.08,
+        0.775,
+        0.2239,
+        0.8362
+       ],
+       [
+        0.6564,
+        0.6631,
+        0.7802,
+        0.7075
+       ]
+      ]
+     },
+     {
+      "t": "Parite",
+      "a": "20. gebelik haftası sonrasındaki doğumları nitelendiren doğum sayısıdır.",
+      "k": "terim",
+      "b": [
+       [
+        0.2178,
+        0.2557,
+        0.2888,
+        0.3169
+       ]
+      ]
+     },
+     {
+      "t": "Tarama",
+      "a": "Belirti vermeyen kişilerde hastalığı erken yakalamak için yapılan sistematik inceleme; en çok risk gruplarında gereklidir.",
+      "k": "terim",
+      "b": [
+       [
+        0.372,
+        0.5061,
+        0.4569,
+        0.5673
+       ]
+      ]
+     },
+     {
+      "t": "TORCH",
+      "a": "Sifiliz, tüberküloz, listeriozis, toksoplazmozis, kandidiyazis ve kızamıkçık, sitomegalovirüs, herpes simpleks gibi virüslerin plasental villitise ve fetüsü etkileyen transplasental enfeksiyonlara neden olduğu grup.",
+      "k": "kisaltma",
+      "b": [
+       [
+        0.3114,
+        0.2557,
+        0.3829,
+        0.3169
+       ]
+      ]
+     }
+    ]
+   },
+   "47": {
+    "bos": 0.0234,
+    "t": [
+     {
+      "t": "Tekrarlayan gebelik kaybı",
+      "a": "Viabilite sınırına ulaşmadan önce birden fazla klinik gebeliğin kaybedilmesidir; kaç kayıp gerektiği derneğe göre değişir ve ektopik gebelik, GTH ile implantasyon başarısızlığı tanıma girmez.",
+      "k": "terim",
+      "b": [
+       [
+        0.232,
+        0.7176,
+        0.5389,
+        0.7788
+       ]
+      ]
+     },
+     {
+      "t": "Pedigri",
+      "a": "Aile ağacı; kalıtım örüntüsünü gösteren soy şeması.",
+      "k": "terim",
+      "b": [
+       [
+        0.2555,
+        0.2587,
+        0.3501,
+        0.3302
+       ]
+      ]
+     }
+    ]
+   },
+   "50": {
+    "bos": 0.0042,
+    "t": [
+     {
+      "t": "Cornelia de Lange sendromu",
+      "a": "Büyüme geriliği, mental retardasyon, sinofris, ince aşağı dönük üst dudak ve mikromeli ile karakterize nadir sendrom.",
+      "k": "terim",
+      "b": [
+       [
+        0.016,
+        0.899,
+        0.2366,
+        0.9323
+       ]
+      ]
+     }
+    ]
+   },
+   "51": {
+    "bos": 0.0234,
+    "t": [
+     {
+      "t": "Mikrosefali",
+      "a": "Normalden küçük kafatası; baş çevresinin −3 SD altında olması.",
+      "k": "terim",
+      "b": [
+       [
+        0.3098,
+        0.7708,
+        0.3942,
+        0.8041
+       ]
+      ]
+     },
+     {
+      "t": "Makrosefali",
+      "a": "Normalden büyük kafatası; baş çevresinin +3 SD üzerinde olması.",
+      "k": "terim",
+      "b": [
+       [
+        0.3098,
+        0.8108,
+        0.3989,
+        0.8441
+       ]
+      ]
+     },
+     {
+      "t": "Obezite",
+      "a": "DSÖ tanımına göre beden kitle indeksi (BKİ = ağırlık [kg] / boy² [m²]) ≥30 kg/m² olması; 25-29,9 kg/m² fazla kiloluluktur. Klinik açıdan özellikle viseral yağ dokusu, metabolik sendrom ve kardiyovasküler riskle ilişkilidir.",
+      "k": "terim",
+      "b": [
+       [
+        0.3098,
+        0.7308,
+        0.3684,
+        0.7641
+       ]
+      ]
+     }
+    ]
+   },
+   "63": {
+    "bos": 0.0103,
+    "t": [
+     {
+      "t": "ACMG kılavuzu",
+      "a": "American College of Medical Genetics and Genomics ile Association for Molecular Pathology'nin dizi varyantlarını yorumlama standartları.",
+      "k": "terim",
+      "b": [
+       [
+        0.0292,
+        0.0869,
+        0.3266,
+        0.1889
+       ]
+      ]
+     }
+    ]
+   },
+   "65": {
+    "bos": 0.0,
+    "t": [
+     {
+      "t": "Frajil X sendromu",
+      "a": "FMR1 genindeki CGG tekrar artışına (dinamik mutasyon) bağlı, X'e bağlı kalıtılan ve özellikle erkeklerde zihinsel gerilik, otistik bulgular ve makroorşidizmle seyreden genetik sendromdur.",
+      "k": "terim",
+      "b": [
+       [
+        0.0419,
+        0.3342,
+        0.1797,
+        0.3801
+       ]
+      ]
+     },
+     {
+      "t": "Delesyon",
+      "a": "Bir kromozom segmentinin kaybıdır; kaybolan bölge için parsiyel monozomi oluşturur.",
+      "k": "terim",
+      "b": [
+       [
+        0.1004,
+        0.8603,
+        0.1756,
+        0.9062
+       ]
+      ]
+     }
+    ]
+   },
+   "68": {
+    "bos": 0.0234,
+    "t": [
+     {
+      "t": "Multipl konjenital anomali",
+      "a": "Multipl konjenital anomali.",
+      "k": "terim",
+      "b": [
+       [
+        0.6264,
+        0.0661,
+        0.8272,
+        0.0995
+       ]
+      ]
+     },
+     {
+      "t": "Tüm ekzom dizi analizi",
+      "a": "Yaklaşık 20.000 genin kodlayan bölgelerinin yeni nesil dizilemeyle incelenmesi.",
+      "k": "terim",
+      "b": [
+       [
+        0.6565,
+        0.8352,
+        0.8003,
+        0.863
+       ]
+      ]
+     },
+     {
+      "t": "Mikroarray analizi",
+      "a": "Genom boyunca kopya sayısı değişikliklerini tarayan moleküler sitogenetik yöntem.",
+      "k": "terim",
+      "b": [
+       [
+        0.709,
+        0.6446,
+        0.8224,
+        0.6724
+       ]
+      ]
+     },
+     {
+      "t": "Sendrom",
+      "a": "Anomaliler grubunun belli bir kalıp halinde gözlenmesi ve iyi tanımlanmış olması; ortak etiyoloji ve iki ya da daha çok sistem tutulumu içerir.",
+      "k": "terim",
+      "b": [
+       [
+        0.4498,
+        0.3473,
+        0.5568,
+        0.3992
+       ],
+       [
+        0.1873,
+        0.5285,
+        0.2551,
+        0.5641
+       ]
+      ]
+     }
+    ]
+   },
+   "69": {
+    "bos": 0.0234,
+    "t": [
+     {
+      "t": "Tüm ekzom dizi analizi",
+      "a": "Yaklaşık 20.000 genin kodlayan bölgelerinin yeni nesil dizilemeyle incelenmesi.",
+      "k": "terim",
+      "b": [
+       [
+        0.6911,
+        0.7193,
+        0.956,
+        0.8085
+       ],
+       [
+        0.0839,
+        0.7738,
+        0.1934,
+        0.863
+       ]
+      ]
+     }
+    ]
+   },
+   "71": {
+    "bos": 0.0234,
+    "t": [
+     {
+      "t": "Dysmorphology",
+      "a": "Fiziksel gelişimdeki farklılıkları inceleyen, normal morfogenezden sapmaları değerlendiren ve doğumsal defektler üzerine uzmanlaşan klinik genetik dalı.",
+      "k": "terim",
+      "b": [
+       [
+        0.1982,
+        0.6313,
+        0.4025,
+        0.7028
+       ]
+      ]
+     }
+    ]
+   },
+   "73": {
+    "bos": 0.0234,
+    "t": [
+     {
+      "t": "Dysmorphology",
+      "a": "Fiziksel gelişimdeki farklılıkları inceleyen, normal morfogenezden sapmaları değerlendiren ve doğumsal defektler üzerine uzmanlaşan klinik genetik dalı.",
+      "k": "terim",
+      "b": [
+       [
+        0.1981,
+        0.2587,
+        0.4026,
+        0.3302
+       ]
+      ]
+     }
+    ]
+   },
+   "74": {
+    "bos": 0.0234,
+    "t": [
+     {
+      "t": "Genetik danışma",
+      "a": "Kalıtsal hastalık taşıyan ya da taşıma riski olan kişilere ve akrabalarına hastalığın seyri, tedavisi, tekrarlama riski, çözüm yolları ve testler hakkında bilgi verilmesi.",
+      "k": "terim",
+      "b": [
+       [
+        0.0762,
+        0.0837,
+        0.4293,
+        0.1959
+       ],
+       [
+        0.1664,
+        0.5518,
+        0.3399,
+        0.608
+       ]
+      ]
+     },
+     {
+      "t": "İndeks vaka",
+      "a": "İndeks vaka; ailedeki etkilenmiş birey.",
+      "k": "terim",
+      "b": [
+       [
+        0.1442,
+        0.6768,
+        0.2657,
+        0.733
+       ]
+      ]
+     },
+     {
+      "t": "Konsültant",
+      "a": "Genetik danışma veren kişi.",
+      "k": "terim",
+      "b": [
+       [
+        0.0397,
+        0.5518,
+        0.1486,
+        0.608
+       ]
+      ]
+     },
+     {
+      "t": "Pedigri",
+      "a": "Aile ağacı; kalıtım örüntüsünü gösteren soy şeması.",
+      "k": "terim",
+      "b": [
+       [
+        0.0397,
+        0.8019,
+        0.1138,
+        0.8581
+       ]
+      ]
+     }
+    ]
+   },
+   "75": {
+    "bos": 0.0234,
+    "t": [
+     {
+      "t": "Genetik danışma",
+      "a": "Kalıtsal hastalık taşıyan ya da taşıma riski olan kişilere ve akrabalarına hastalığın seyri, tedavisi, tekrarlama riski, çözüm yolları ve testler hakkında bilgi verilmesi.",
+      "k": "terim",
+      "b": [
+       [
+        0.5724,
+        0.6446,
+        0.7889,
+        0.716
+       ]
+      ]
+     }
+    ]
+   },
+   "79": {
+    "bos": 0.0234,
+    "t": [
+     {
+      "t": "Supravalvüler aortik stenoz",
+      "a": "Aort kapağının hemen üstünde aortun daralması.",
+      "k": "terim",
+      "b": [
+       [
+        0.0385,
+        0.6789,
+        0.4007,
+        0.7503
+       ]
+      ]
+     },
+     {
+      "t": "Williams sendromu",
+      "a": "ELN (elastin) genini içeren 7q11.23 delesyonuna bağlı; mental retardasyon, kısa boy, elfin yüz, supravalvüler aortik stenoz ve infantil hiperkalsemi ile seyreden sendrom.",
+      "k": "terim",
+      "b": [
+       [
+        0.0762,
+        0.0837,
+        0.483,
+        0.1959
+       ]
+      ]
+     },
+     {
+      "t": "Hiperkalsemi",
+      "a": "Serum kalsiyum düzeyinin normalin üzerinde olması.",
+      "k": "terim",
+      "b": [
+       [
+        0.0385,
+        0.7286,
+        0.2025,
+        0.8001
+       ]
+      ]
+     },
+     {
+      "t": "Elastin",
+      "a": "Dokulara esneklik sağlayan ECM proteini; büyük arterler, akciğer, deri ve uterusta bulunur.",
+      "k": "terim",
+      "b": [
+       [
+        0.4443,
+        0.3929,
+        0.5311,
+        0.4643
+       ]
+      ]
+     }
+    ]
+   },
+   "80": {
+    "bos": 0.0234,
+    "t": [
+     {
+      "t": "Prader-Willi sendromu",
+      "a": "Hiperfaji, obsesyon ve kompülsiyonlar, ağlama/gülme nöbetleri ve davranış uyumu bozukluğuyla tanınan sendrom.",
+      "k": "terim",
+      "b": [
+       [
+        0.0762,
+        0.0837,
+        0.5642,
+        0.1959
+       ]
+      ]
+     }
+    ]
+   },
+   "81": {
+    "bos": 0.0234,
+    "t": [
+     {
+      "t": "Frajil X sendromu",
+      "a": "FMR1 genindeki CGG tekrar artışına (dinamik mutasyon) bağlı, X'e bağlı kalıtılan ve özellikle erkeklerde zihinsel gerilik, otistik bulgular ve makroorşidizmle seyreden genetik sendromdur.",
+      "k": "terim",
+      "b": [
+       [
+        0.0762,
+        0.0837,
+        0.5772,
+        0.1959
+       ]
+      ]
+     }
+    ]
+   },
+   "83": {
+    "bos": 0.0011,
+    "t": [
+     {
+      "t": "Dinamik mutasyon",
+      "a": "Üçlü tekrar sayısının kuşaktan kuşağa artabildiği mutasyon tipi.",
+      "k": "terim",
+      "b": [
+       [
+        0.0762,
+        0.0837,
+        0.5844,
+        0.1959
+       ]
+      ]
+     },
+     {
+      "t": "Tam mutasyon",
+      "a": "Frajil X'te CGG tekrarının 200'ün üzerine çıkması; promoter metilasyonu ile FMR1 susturulur.",
+      "k": "terim",
+      "b": [
+       [
+        0.2066,
+        0.4631,
+        0.3933,
+        0.5345
+       ]
+      ]
+     },
+     {
+      "t": "Premutasyon",
+      "a": "Frajil X'te FMR1 CGG tekrar sayısının 50'nin üstünde, 200'ün altında olması.",
+      "k": "terim",
+      "b": [
+       [
+        0.4018,
+        0.351,
+        0.5671,
+        0.4225
+       ]
+      ]
+     },
+     {
+      "t": "Promoter",
+      "a": "Gen transkripsiyonunu başlatan, ilişkili genin yukarısında ve aynı iplikte yer alan kodlamayan DNA bölgesi.",
+      "k": "terim",
+      "b": [
+       [
+        0.058,
+        0.5936,
+        0.1848,
+        0.6651
+       ]
+      ]
+     }
+    ]
+   },
+   "86": {
+    "bos": 0.0234,
+    "t": [
+     {
+      "t": "Hipospadias",
+      "a": "Dış üretral ağzın normal yerinde değil, penisin ventral (alt) yüzünde şaft boyunca herhangi bir noktada açıldığı doğumsal penis malformasyonudur.",
+      "k": "terim",
+      "b": [
+       [
+        0.58,
+        0.6416,
+        0.7233,
+        0.7079
+       ]
+      ]
+     },
+     {
+      "t": "Pleiotropi",
+      "a": "Bir genin birden fazla fenotipi etkilemesi (pleiotropi: bir gen → birden fazla fenotip); değişken ekspressivite, azalmış penetrans, etiyolojik heterojenite ve belirli bir cinsiyetin etkilendiği durumlarla birlikte kalıtımı karmaşıklaştırır.",
+      "k": "terim",
+      "b": [
+       [
+        0.2725,
+        0.8515,
+        0.4454,
+        0.923
+       ]
+      ]
+     },
+     {
+      "t": "Penetrans",
+      "a": "Bir mutasyon taşıyanlarda hastalığın ortaya çıkma olasılığı.",
+      "k": "terim",
+      "b": [
+       [
+        0.1732,
+        0.5237,
+        0.2985,
+        0.5899
+       ]
+      ]
+     }
+    ]
+   }
+  }
+ }
+}

@@ -1,1 +1,923 @@
-{"surum":1,"key":"y25-k2-04-serebrovaskuler-hastaliklar","uretici":"deepseek","d":{"0":{"3":{"bos":0.1711,"t":[{"t":"Hipovolemik Şok","a":"Masif kanama, yanık veya ağır kusma-ishal sonucu intravasküler kan ve plazma hacminin akut kaybıyla gelişen soğuk şok tablosu.","k":"terim","b":[[0.3629,0.5749,0.5402,0.6378]]},{"t":"Tromboz","a":"Sağlam veya hasarlı bir damarın ya da kalp boşluklarının lümeninde uygunsuz ve kontrolsüz pıhtı (trombüs) oluşmasıyla damar lümeninin tıkanması patolojisi.","k":"terim","b":[[0.095,0.2738,0.1981,0.3227]]},{"t":"Kanama","a":"Kanın damarlardan dokuya, vücut boşluklarına veya dış ortama sızması; nedenleri travma, ateroskleroz, vaskülit, damarda tümör erozyonu ve hemostaz bozukluklarıdır.","k":"terim","b":[[0.4437,0.7081,0.5281,0.7709]]}]},"4":{"bos":0.2267,"t":[{"t":"Hipoksi","a":"Dokuya ulaşan oksijenin eksikliği.","k":"terim","b":[[0.095,0.2608,0.1759,0.3237]]},{"t":"İskemi","a":"Bir dokuya giden kan akımının azalması veya kesilmesi; oksijen ve besin azalır, atıklar uzaklaştırılamaz.","k":"terim","b":[[0.195,0.2608,0.2745,0.3237]]}]},"5":{"bos":0.1333,"t":[{"t":"Hipoksi","a":"Dokuya ulaşan oksijenin eksikliği.","k":"terim","b":[[0.2734,0.33,0.35,0.379]]},{"t":"İskemi","a":"Bir dokuya giden kan akımının azalması veya kesilmesi; oksijen ve besin azalır, atıklar uzaklaştırılamaz.","k":"terim","b":[[0.4826,0.703,0.5513,0.752]]},{"t":"Düşük","a":"Gebeliğin fetüsün yaşayabilirlik sınırına (20–24. hafta ya da 500 g) ulaşmadan spontan olarak sonlanması; düşük.","k":"terim","b":[[0.3922,0.3784,0.4585,0.4413]]},{"t":"Anemi","a":"Gebe olmayan kadınlarda Hgb <12 g/dl, gebe kadınlarda Hgb <11 g/dl olması anemi olarak tanımlanır. En sık görülen anemi türü demir eksikliği anemisidir; en sık doğurganlık çağındaki kadınlarda ve çocuklarda görülür.","k":"terim","b":[[0.7623,0.4822,0.8232,0.5451]]}]},"6":{"bos":0.3236,"t":[{"t":"Konfüzyon","a":"Dikkat ve düşünce akışının bozulduğu, yönelimin (oryantasyon) kaybolduğu hafif bilinç bozukluğu tablosudur.","k":"terim","b":[[0.2804,0.6175,0.3988,0.6664]]},{"t":"İskemi","a":"Bir dokuya giden kan akımının azalması veya kesilmesi; oksijen ve besin azalır, atıklar uzaklaştırılamaz.","k":"terim","b":[[0.4037,0.2608,0.4832,0.3237]]}]},"7":{"bos":0.3716,"t":[{"t":"İskemi","a":"Bir dokuya giden kan akımının azalması veya kesilmesi; oksijen ve besin azalır, atıklar uzaklaştırılamaz.","k":"terim","b":[[0.5352,0.5214,0.6081,0.5704]]}]},"8":{"bos":0.1306,"t":[{"t":"Beyin ölümü","a":"Beyin sapı dahil tüm beyin işlevlerinin geri dönüşsüz kaybıdır.","k":"terim","b":[[0.095,0.4898,0.2306,0.5526]]},{"t":"Otoliz","a":"Hücrenin kendi enzimleriyle kendini sindirmesi; yetersiz fiksasyonun artefaktıdır.","k":"terim","b":[[0.6686,0.7615,0.734,0.8105]]}]},"9":{"bos":0.1705,"t":[{"t":"İskemi","a":"Bir dokuya giden kan akımının azalması veya kesilmesi; oksijen ve besin azalır, atıklar uzaklaştırılamaz.","k":"terim","b":[[0.174,0.3403,0.2469,0.3893],[0.4863,0.5214,0.5727,0.5704]]}]},"10":{"bos":0.3408,"t":[{"t":"Eozinofili","a":"Kanda eozinofil sayısının artması.","k":"terim","b":[[0.7139,0.3218,0.8212,0.3708]]},{"t":"Piknoz","a":"Hücre ölümü ve nekroz sürecinde nükleer kromatini yoğunlaşıp nükleusun büzülerek küçük, koyu bazofilik homojen bir kitleye dönüşmesi.","k":"terim","b":[[0.2589,0.3698,0.3326,0.4188]]}]},"12":{"bos":0.3052,"t":[{"t":"Gliozis","a":"Striatumun tutulan bölgelerinde ağır nöron kaybı ve gliozis; GABA, enkefalin, dinorfin ve P maddesi salgılayan orta büyüklükte dikenli nöronlar özellikle duyarlıdır ve erken dönemde kaybolur.","k":"terim","b":[[0.477,0.5269,0.5473,0.5898]]},{"t":"Nekroz","a":"Şiddetli enerji yetersizliği veya toksik hasarla gelişen, zar yıkımı, içerik sızıntısı ve inflamasyonla seyreden kazara hücre ölümü.","k":"terim","b":[[0.095,0.6359,0.174,0.6848]]}]},"13":{"bos":0.2267,"t":[{"t":"Nekroz","a":"Şiddetli enerji yetersizliği veya toksik hasarla gelişen, zar yıkımı, içerik sızıntısı ve inflamasyonla seyreden kazara hücre ölümü.","k":"terim","b":[[0.1974,0.7005,0.2764,0.7633]]}]},"14":{"bos":0.2562,"t":[{"t":"Kollateral","a":"Yavaş gelişen tıkanmada tıkalı damarın çevresinden açılan alternatif kan yolu.","k":"terim","b":[[0.2931,0.5028,0.4035,0.5517],[0.3346,0.5694,0.445,0.6184]]},{"t":"İskemi","a":"Bir dokuya giden kan akımının azalması veya kesilmesi; oksijen ve besin azalır, atıklar uzaklaştırılamaz.","k":"terim","b":[[0.2927,0.2608,0.3722,0.3237],[0.5224,0.3403,0.6221,0.3893]]}]},"15":{"bos":0.4191,"t":[{"t":"Kollateral Dolaşım","a":"Yavaş gelişen tıkanmada tıkalı damarın çevresinden açılan alternatif kan yolu.","k":"terim","b":[[0.2253,0.508,0.429,0.5709]]}]},"16":{"bos":0.2557,"t":[{"t":"Atriyal Fibrilasyon","a":"Kulakçıkların hızlı ve düzensiz kasılmasıyla oluşan ritim bozukluğu; özellikle sol atriyumda staz ve trombüs oluşumuna yol açar.","k":"terim","b":[[0.3612,0.4363,0.5696,0.4852]]},{"t":"Tromboemboli","a":"Bir venöz veya arteriyel trombüsten koparak dolaşıma katılan ve tüm embolilerin %95'inden fazlasını oluşturan pıhtı embolisi.","k":"terim","b":[[0.095,0.5508,0.2597,0.5997]]}]},"17":{"bos":0.4182,"t":[{"t":"Yağ Embolisi","a":"Uzun kemik kırığı veya yumuşak doku ezilmesinde kemik iliği sinüzoidlerinin yırtılmasıyla mikroskobik yağ küreciklerinin dolaşıma karışması.","k":"terim","b":[[0.5856,0.5084,0.7256,0.5713]]},{"t":"Tromboemboli","a":"Bir venöz veya arteriyel trombüsten koparak dolaşıma katılan ve tüm embolilerin %95'inden fazlasını oluşturan pıhtı embolisi.","k":"terim","b":[[0.4032,0.4548,0.5626,0.5037]]}]},"23":{"bos":0.1091,"t":[{"t":"Fagositoz","a":"Hücreler tarafından partiküler materyalin yutulması. Başlıca fagositler nötrofiller ve makrofajlardır; görevleri mikropları ve nekrotik hücreleri ortadan kaldırmak ve doku temizliğini sağlamaktır.","k":"terim","b":[[0.095,0.7327,0.207,0.7956]]},{"t":"Gelişim","a":"Fonksiyonel olgunlaşma; motor, dil ve sosyal becerilerin kazanılması.","k":"terim","b":[[0.6358,0.2559,0.7153,0.3188]]}]},"24":{"bos":0.2261,"t":[{"t":"İyileşme","a":"Yaralanma sonrası doku mimarisi ve fonksiyonunun yeniden kazanılması süreci; iyileşme olarak da adlandırılır.","k":"terim","b":[[0.455,0.7005,0.548,0.7633]]},{"t":"Büyüme","a":"Organ ve dokuların kitlesindeki artış; tartı, boy ve baş çevresi gibi ölçümlerle izlenir.","k":"terim","b":[[0.8217,0.2738,0.9087,0.3227]]}]},"26":{"bos":0.1705,"t":[{"t":"Hipertansiyon","a":"Sistemik arter kan basıncının sürekli yüksek seyretmesidir; uzun vadede kalpte hipertrofi, böbrekte nefroskleroz ve damar duvarında hasara yol açar.","k":"terim","b":[[0.132,0.3938,0.2888,0.4566]]},{"t":"Kanama","a":"Kanın damarlardan dokuya, vücut boşluklarına veya dış ortama sızması; nedenleri travma, ateroskleroz, vaskülit, damarda tümör erozyonu ve hemostaz bozukluklarıdır.","k":"terim","b":[[0.2648,0.2608,0.3543,0.3233],[0.2751,0.3403,0.3863,0.3893],[0.247,0.5934,0.3627,0.6562]]}]},"27":{"bos":0.3227,"t":[{"t":"Primer","a":"Monoklonal plazma hücre diskrazilerinde immünoglobulin hafif zincirlerinin (özellikle lambda) dokuda birikmesi.","k":"terim","b":[[0.095,0.2743,0.1729,0.3227]]}]},"28":{"bos":0.1148,"t":[{"t":"İyileşme","a":"Yaralanma sonrası doku mimarisi ve fonksiyonunun yeniden kazanılması süreci; iyileşme olarak da adlandırılır.","k":"terim","b":[[0.4795,0.8123,0.5725,0.8752]]},{"t":"Hematom","a":"Doku içinde lokalize kan birikimidir.","k":"terim","b":[[0.5149,0.7826,0.6198,0.8316]]},{"t":"Kanama","a":"Kanın damarlardan dokuya, vücut boşluklarına veya dış ortama sızması; nedenleri travma, ateroskleroz, vaskülit, damarda tümör erozyonu ve hemostaz bozukluklarıdır.","k":"terim","b":[[0.2639,0.2559,0.3484,0.3188],[0.384,0.4154,0.5,0.4644],[0.095,0.7085,0.2144,0.7713]]}]},"29":{"bos":0.1091,"t":[{"t":"Hemoraji","a":"Kanın damarlardan dokuya, vücut boşluklarına veya dış ortama sızması; nedenleri travma, ateroskleroz, vaskülit, damarda tümör erozyonu ve hemostaz bozukluklarıdır.","k":"terim","b":[[0.1975,0.3914,0.3002,0.4404]]}]},"31":{"bos":0.1611,"t":[{"t":"Amiloid Birikimi","a":"Yanlış katlanmış fibriler proteinlerin (çapraz beta-kırmalı yapıda) hücre dışı aralıkta çözünmez halde çökmesi tablosu.","k":"terim","b":[[0.095,0.6175,0.2767,0.6664]]},{"t":"Hipertansiyon","a":"Sistemik arter kan basıncının sürekli yüksek seyretmesidir; uzun vadede kalpte hipertrofi, böbrekte nefroskleroz ve damar duvarında hasara yol açar.","k":"terim","b":[[0.3902,0.6709,0.547,0.7338]]},{"t":"Kanama","a":"Kanın damarlardan dokuya, vücut boşluklarına veya dış ortama sızması; nedenleri travma, ateroskleroz, vaskülit, damarda tümör erozyonu ve hemostaz bozukluklarıdır.","k":"terim","b":[[0.6448,0.6045,0.7292,0.6673],[0.2666,0.6709,0.3826,0.7338],[0.1721,0.78,0.2797,0.8289]]}]},"32":{"bos":0.1521,"t":[{"t":"Subaraknoid kanama","a":"Araknoid membran ile pia mater arasındaki mesafeye kanama. Non-travmatik subaraknoid kanamanın en sık nedeni sakküler (berry) anevrizma rüptürüdür; diğer nedenler damar malformasyonu, travma ve kanama diatezleridir.","k":"terim","b":[[0.095,0.2743,0.3421,0.3227],[0.5487,0.3273,0.8129,0.3902]]}]},"33":{"bos":0.1596,"t":[{"t":"Ikınma","a":"İşemeyi başlatmak, sürdürmek veya idrar hızını artırmak için yapılan kas eforu.","k":"terim","b":[[0.5539,0.3088,0.6268,0.3717]]},{"t":"Bilinç","a":"Uyanıklık (arousal) ve çevresinin ve kendinin farkında olma (farkındalık) bileşenlerinden oluşan durumdur; uyanıklık beyin sapı ARAS'ına, farkındalık serebral korteks ve bağlantılarına bağlıdır.","k":"terim","b":[[0.6816,0.5193,0.7434,0.5822]]},{"t":"Kanama","a":"Kanın damarlardan dokuya, vücut boşluklarına veya dış ortama sızması; nedenleri travma, ateroskleroz, vaskülit, damarda tümör erozyonu ve hemostaz bozukluklarıdır.","k":"terim","b":[[0.5544,0.5858,0.6389,0.6487],[0.4372,0.7005,0.5474,0.7633],[0.1474,0.7669,0.2318,0.8298]]}]},"34":{"bos":0.2558,"t":[{"t":"Otozomal Dominant Polikistik Böbrek Hastalığı","a":"Otozomal dominant kalıtılan, her iki böbrekte çok sayıda büyük kistle böbrek parankimini ilerleyici biçimde tahrip eden kalıtsal hastalık. Olguların %85-90'ında PKD1 (16p13.3, polikistin-1), %10-15'inde PKD2 (4q21, polikistin-2) geni etkilenir.","k":"terim","b":[[0.1129,0.5676,0.6438,0.6304]]},{"t":"Ekstrasellüler matriks","a":"Hücreler arasını dolduran, kollajen, elastin, proteoglikan ve yapışkan glikoproteinlerden oluşan yapısal ağdır; doku onarımında fibroblastlarca sentezlenir ve hücre davranışını yönlendirir.","k":"terim","b":[[0.1129,0.6417,0.3719,0.6906]]}]},"36":{"bos":0.2463,"t":[{"t":"İyileşme","a":"Yaralanma sonrası doku mimarisi ve fonksiyonunun yeniden kazanılması süreci; iyileşme olarak da adlandırılır.","k":"terim","b":[[0.095,0.5858,0.1947,0.6487]]},{"t":"Fibrozis","a":"Parankimal organlarda aşırı kollajen ve ECM birikimi; kronik inflamasyon ve persistan toksik/iskemik hasar sonucu gelişir.","k":"terim","b":[[0.4789,0.5988,0.5714,0.6477]]},{"t":"Kanama","a":"Kanın damarlardan dokuya, vücut boşluklarına veya dış ortama sızması; nedenleri travma, ateroskleroz, vaskülit, damarda tümör erozyonu ve hemostaz bozukluklarıdır.","k":"terim","b":[[0.6213,0.2608,0.7058,0.3237],[0.7325,0.3568,0.8169,0.4198],[0.2837,0.4713,0.4086,0.5342]]}]},"38":{"bos":0.1231,"t":[{"t":"Subaraknoid kanama","a":"Araknoid membran ile pia mater arasındaki mesafeye kanama. Non-travmatik subaraknoid kanamanın en sık nedeni sakküler (berry) anevrizma rüptürüdür; diğer nedenler damar malformasyonu, travma ve kanama diatezleridir.","k":"terim","b":[[0.4592,0.769,0.6901,0.818]]}]},"40":{"bos":0.3332,"t":[{"t":"Subaraknoid kanama","a":"Araknoid membran ile pia mater arasındaki mesafeye kanama. Non-travmatik subaraknoid kanamanın en sık nedeni sakküler (berry) anevrizma rüptürüdür; diğer nedenler damar malformasyonu, travma ve kanama diatezleridir.","k":"terim","b":[[0.118,0.6064,0.349,0.6553]]},{"t":"Epilepsi","a":"İkinci aşamada değerlendirilen epilepsi tipi dört gruba ayrılır: fokal epilepsiler, jeneralize epilepsiler, kombine fokal ve jeneralize epilepsiler ve bilinmeyen.","k":"terim","b":[[0.1181,0.4734,0.2054,0.5224]]}]},"41":{"bos":0.2933,"t":[{"t":"TGF-beta","a":"En önemli fibrogenik sitokin; kollajen ve fibronektin sentezini artırır, MMP'leri azaltıp TIMP'leri artırır, akut inflamasyonu baskılar.","k":"terim","b":[[0.2917,0.5378,0.4044,0.6007]]},{"t":"Kanama","a":"Kanın damarlardan dokuya, vücut boşluklarına veya dış ortama sızması; nedenleri travma, ateroskleroz, vaskülit, damarda tümör erozyonu ve hemostaz bozukluklarıdır.","k":"terim","b":[[0.095,0.4363,0.1812,0.4852]]}]},"42":{"bos":0.1122,"t":[{"t":"Kanama","a":"Kanın damarlardan dokuya, vücut boşluklarına veya dış ortama sızması; nedenleri travma, ateroskleroz, vaskülit, damarda tümör erozyonu ve hemostaz bozukluklarıdır.","k":"terim","b":[[0.5507,0.6045,0.6344,0.6673]]}]},"43":{"bos":0.3236,"t":[{"t":"Kanama","a":"Kanın damarlardan dokuya, vücut boşluklarına veya dış ortama sızması; nedenleri travma, ateroskleroz, vaskülit, damarda tümör erozyonu ve hemostaz bozukluklarıdır.","k":"terim","b":[[0.3701,0.5564,0.4484,0.6193]]},{"t":"Düşük","a":"Gebeliğin fetüsün yaşayabilirlik sınırına (20–24. hafta ya da 500 g) ulaşmadan spontan olarak sonlanması; düşük.","k":"terim","b":[[0.1129,0.4898,0.1792,0.5526]]}]},"44":{"bos":0.3227,"t":[{"t":"Malformasyon","a":"Embriyonik organogenez evresinde dokunun primer oluşum hatası sonucu ortaya çıkan yapısal organ defekti (intrinsik gelişim kusuru).","k":"terim","b":[[0.3157,0.5694,0.4763,0.6184]]}]},"45":{"bos":0.1122,"t":[{"t":"Hipertansiyon","a":"Sistemik arter kan basıncının sürekli yüksek seyretmesidir; uzun vadede kalpte hipertrofi, böbrekte nefroskleroz ve damar duvarında hasara yol açar.","k":"terim","b":[[0.095,0.3273,0.252,0.3902],[0.2512,0.6045,0.408,0.6673],[0.5745,0.7669,0.7314,0.8298]]}]},"46":{"bos":0.1131,"t":[{"t":"Hemoraji","a":"Kanın damarlardan dokuya, vücut boşluklarına veya dış ortama sızması; nedenleri travma, ateroskleroz, vaskülit, damarda tümör erozyonu ve hemostaz bozukluklarıdır.","k":"terim","b":[[0.095,0.828,0.1948,0.8769],[0.2644,0.828,0.3588,0.8769]]}]},"47":{"bos":0.2276,"t":[{"t":"Hipertansif ensefalopati","a":"Ağır kan basıncı yükselmesine bağlı serebral otoregülasyonun bozulmasıyla gelişen yaygın beyin işlev bozukluğudur.","k":"terim","b":[[0.1768,0.2738,0.4576,0.3227]]},{"t":"Fibrinoid Nekroz","a":"Genellikle immünolojik reaksiyonlarda antijen-antikor komplekslerinin damar duvarına oturması ve damar duvarından sızan fibrin ile birleşmesi sonucu gelişen parlak eozinofilik amorf nekroz tipidir.","k":"terim","b":[[0.095,0.7135,0.2831,0.7624]]},{"t":"Konfüzyon","a":"Dikkat ve düşünce akışının bozulduğu, yönelimin (oryantasyon) kaybolduğu hafif bilinç bozukluğu tablosudur.","k":"terim","b":[[0.2133,0.3698,0.326,0.4188]]},{"t":"Peteşi","a":"Deri, mukoza ve seröz yüzeylerde 1–2 mm çaplı küçük kanama odaklarıdır.","k":"terim","b":[[0.772,0.6525,0.8438,0.7153]]}]},"48":{"bos":0.1795,"t":[{"t":"İmmünsupresyon","a":"Bağışıklık sisteminin bir veya birden fazla bileşeninin işlevinin ilaç, hastalık veya diğer nedenlerle baskılanması.","k":"terim","b":[[0.095,0.5508,0.2828,0.5997]]},{"t":"Sifiliz","a":"Treponema pallidum spiroketinin neden olduğu, cinsel yolla veya transplasental bulaşan sistemik kronik enfeksiyon hastalığı.","k":"terim","b":[[0.7994,0.4548,0.8657,0.5037]]}]},"49":{"bos":0.2185,"t":[{"t":"Granülom","a":"Eritilemeyen partiküllere karşı epiteloid histiyositlerin, multinükleer dev hücrelerin (Langhans) ve çevreleyen lenfosit yakasının oluşturduğu kronik nodüler odak.","k":"terim","b":[[0.5765,0.4604,0.6763,0.5233]]},{"t":"Primer","a":"Monoklonal plazma hücre diskrazilerinde immünoglobulin hafif zincirlerinin (özellikle lambda) dokuda birikmesi.","k":"terim","b":[[0.095,0.2738,0.1723,0.3227]]},{"t":"Bilinç","a":"Uyanıklık (arousal) ve çevresinin ve kendinin farkında olma (farkındalık) bileşenlerinden oluşan durumdur; uyanıklık beyin sapı ARAS'ına, farkındalık serebral korteks ve bağlantılarına bağlıdır.","k":"terim","b":[[0.6698,0.6414,0.7316,0.7042]]}]}}}}
+{
+ "surum": 1,
+ "key": "y25-k2-04-serebrovaskuler-hastaliklar",
+ "uretici": "deepseek",
+ "d": {
+  "0": {
+   "3": {
+    "bos": 0.1711,
+    "t": [
+     {
+      "t": "Hipovolemik Şok",
+      "a": "Masif kanama, yanık veya ağır kusma-ishal sonucu intravasküler kan ve plazma hacminin akut kaybıyla gelişen soğuk şok tablosu.",
+      "k": "terim",
+      "b": [
+       [
+        0.3629,
+        0.5749,
+        0.5402,
+        0.6378
+       ]
+      ]
+     },
+     {
+      "t": "Tromboz",
+      "a": "Sağlam veya hasarlı bir damarın ya da kalp boşluklarının lümeninde uygunsuz ve kontrolsüz pıhtı (trombüs) oluşmasıyla damar lümeninin tıkanması patolojisi.",
+      "k": "terim",
+      "b": [
+       [
+        0.095,
+        0.2738,
+        0.1981,
+        0.3227
+       ]
+      ]
+     }
+    ]
+   },
+   "4": {
+    "bos": 0.2267,
+    "t": [
+     {
+      "t": "Hipoksi",
+      "a": "Dokuya ulaşan oksijenin eksikliği.",
+      "k": "terim",
+      "b": [
+       [
+        0.095,
+        0.2608,
+        0.1759,
+        0.3237
+       ]
+      ]
+     },
+     {
+      "t": "İskemi",
+      "a": "Bir dokuya giden kan akımının azalması veya kesilmesi; oksijen ve besin azalır, atıklar uzaklaştırılamaz.",
+      "k": "terim",
+      "b": [
+       [
+        0.195,
+        0.2608,
+        0.2745,
+        0.3237
+       ]
+      ]
+     }
+    ]
+   },
+   "5": {
+    "bos": 0.1333,
+    "t": [
+     {
+      "t": "Hipoksi",
+      "a": "Dokuya ulaşan oksijenin eksikliği.",
+      "k": "terim",
+      "b": [
+       [
+        0.2734,
+        0.33,
+        0.35,
+        0.379
+       ]
+      ]
+     },
+     {
+      "t": "İskemi",
+      "a": "Bir dokuya giden kan akımının azalması veya kesilmesi; oksijen ve besin azalır, atıklar uzaklaştırılamaz.",
+      "k": "terim",
+      "b": [
+       [
+        0.4826,
+        0.703,
+        0.5513,
+        0.752
+       ]
+      ]
+     },
+     {
+      "t": "Düşük",
+      "a": "Gebeliğin fetüsün yaşayabilirlik sınırına (20–24. hafta ya da 500 g) ulaşmadan spontan olarak sonlanması; düşük.",
+      "k": "terim",
+      "b": [
+       [
+        0.3922,
+        0.3784,
+        0.4585,
+        0.4413
+       ]
+      ]
+     },
+     {
+      "t": "Anemi",
+      "a": "Gebe olmayan kadınlarda Hgb <12 g/dl, gebe kadınlarda Hgb <11 g/dl olması anemi olarak tanımlanır. En sık görülen anemi türü demir eksikliği anemisidir; en sık doğurganlık çağındaki kadınlarda ve çocuklarda görülür.",
+      "k": "terim",
+      "b": [
+       [
+        0.7623,
+        0.4822,
+        0.8232,
+        0.5451
+       ]
+      ]
+     }
+    ]
+   },
+   "6": {
+    "bos": 0.3236,
+    "t": [
+     {
+      "t": "Konfüzyon",
+      "a": "Dikkat ve düşünce akışının bozulduğu, yönelimin (oryantasyon) kaybolduğu hafif bilinç bozukluğu tablosudur.",
+      "k": "terim",
+      "b": [
+       [
+        0.2804,
+        0.6175,
+        0.3988,
+        0.6664
+       ]
+      ]
+     },
+     {
+      "t": "İskemi",
+      "a": "Bir dokuya giden kan akımının azalması veya kesilmesi; oksijen ve besin azalır, atıklar uzaklaştırılamaz.",
+      "k": "terim",
+      "b": [
+       [
+        0.4037,
+        0.2608,
+        0.4832,
+        0.3237
+       ]
+      ]
+     }
+    ]
+   },
+   "7": {
+    "bos": 0.3716,
+    "t": [
+     {
+      "t": "İskemi",
+      "a": "Bir dokuya giden kan akımının azalması veya kesilmesi; oksijen ve besin azalır, atıklar uzaklaştırılamaz.",
+      "k": "terim",
+      "b": [
+       [
+        0.5352,
+        0.5214,
+        0.6081,
+        0.5704
+       ]
+      ]
+     }
+    ]
+   },
+   "8": {
+    "bos": 0.1306,
+    "t": [
+     {
+      "t": "Beyin ölümü",
+      "a": "Beyin sapı dahil tüm beyin işlevlerinin geri dönüşsüz kaybıdır.",
+      "k": "terim",
+      "b": [
+       [
+        0.095,
+        0.4898,
+        0.2306,
+        0.5526
+       ]
+      ]
+     },
+     {
+      "t": "Otoliz",
+      "a": "Hücrenin kendi enzimleriyle kendini sindirmesi; yetersiz fiksasyonun artefaktıdır.",
+      "k": "terim",
+      "b": [
+       [
+        0.6686,
+        0.7615,
+        0.734,
+        0.8105
+       ]
+      ]
+     }
+    ]
+   },
+   "9": {
+    "bos": 0.1705,
+    "t": [
+     {
+      "t": "İskemi",
+      "a": "Bir dokuya giden kan akımının azalması veya kesilmesi; oksijen ve besin azalır, atıklar uzaklaştırılamaz.",
+      "k": "terim",
+      "b": [
+       [
+        0.174,
+        0.3403,
+        0.2469,
+        0.3893
+       ],
+       [
+        0.4863,
+        0.5214,
+        0.5727,
+        0.5704
+       ]
+      ]
+     }
+    ]
+   },
+   "10": {
+    "bos": 0.3408,
+    "t": [
+     {
+      "t": "Eozinofili",
+      "a": "Kanda eozinofil sayısının artması.",
+      "k": "terim",
+      "b": [
+       [
+        0.7139,
+        0.3218,
+        0.8212,
+        0.3708
+       ]
+      ]
+     },
+     {
+      "t": "Piknoz",
+      "a": "Hücre ölümü ve nekroz sürecinde nükleer kromatini yoğunlaşıp nükleusun büzülerek küçük, koyu bazofilik homojen bir kitleye dönüşmesi.",
+      "k": "terim",
+      "b": [
+       [
+        0.2589,
+        0.3698,
+        0.3326,
+        0.4188
+       ]
+      ]
+     }
+    ]
+   },
+   "12": {
+    "bos": 0.3052,
+    "t": [
+     {
+      "t": "Gliozis",
+      "a": "Striatumun tutulan bölgelerinde ağır nöron kaybı ve gliozis; GABA, enkefalin, dinorfin ve P maddesi salgılayan orta büyüklükte dikenli nöronlar özellikle duyarlıdır ve erken dönemde kaybolur.",
+      "k": "terim",
+      "b": [
+       [
+        0.477,
+        0.5269,
+        0.5473,
+        0.5898
+       ]
+      ]
+     },
+     {
+      "t": "Nekroz",
+      "a": "Şiddetli enerji yetersizliği veya toksik hasarla gelişen, zar yıkımı, içerik sızıntısı ve inflamasyonla seyreden kazara hücre ölümü.",
+      "k": "terim",
+      "b": [
+       [
+        0.095,
+        0.6359,
+        0.174,
+        0.6848
+       ]
+      ]
+     }
+    ]
+   },
+   "13": {
+    "bos": 0.2267,
+    "t": [
+     {
+      "t": "Nekroz",
+      "a": "Şiddetli enerji yetersizliği veya toksik hasarla gelişen, zar yıkımı, içerik sızıntısı ve inflamasyonla seyreden kazara hücre ölümü.",
+      "k": "terim",
+      "b": [
+       [
+        0.1974,
+        0.7005,
+        0.2764,
+        0.7633
+       ]
+      ]
+     }
+    ]
+   },
+   "14": {
+    "bos": 0.2562,
+    "t": [
+     {
+      "t": "Kollateral",
+      "a": "Yavaş gelişen tıkanmada tıkalı damarın çevresinden açılan alternatif kan yolu.",
+      "k": "terim",
+      "b": [
+       [
+        0.2931,
+        0.5028,
+        0.4035,
+        0.5517
+       ],
+       [
+        0.3346,
+        0.5694,
+        0.445,
+        0.6184
+       ]
+      ]
+     },
+     {
+      "t": "İskemi",
+      "a": "Bir dokuya giden kan akımının azalması veya kesilmesi; oksijen ve besin azalır, atıklar uzaklaştırılamaz.",
+      "k": "terim",
+      "b": [
+       [
+        0.2927,
+        0.2608,
+        0.3722,
+        0.3237
+       ],
+       [
+        0.5224,
+        0.3403,
+        0.6221,
+        0.3893
+       ]
+      ]
+     }
+    ]
+   },
+   "15": {
+    "bos": 0.4191,
+    "t": [
+     {
+      "t": "Kollateral Dolaşım",
+      "a": "Yavaş gelişen tıkanmada tıkalı damarın çevresinden açılan alternatif kan yolu.",
+      "k": "terim",
+      "b": [
+       [
+        0.2253,
+        0.508,
+        0.429,
+        0.5709
+       ]
+      ]
+     }
+    ]
+   },
+   "16": {
+    "bos": 0.2557,
+    "t": [
+     {
+      "t": "Atriyal Fibrilasyon",
+      "a": "Kulakçıkların hızlı ve düzensiz kasılmasıyla oluşan ritim bozukluğu; özellikle sol atriyumda staz ve trombüs oluşumuna yol açar.",
+      "k": "terim",
+      "b": [
+       [
+        0.3612,
+        0.4363,
+        0.5696,
+        0.4852
+       ]
+      ]
+     },
+     {
+      "t": "Tromboemboli",
+      "a": "Bir venöz veya arteriyel trombüsten koparak dolaşıma katılan ve tüm embolilerin %95'inden fazlasını oluşturan pıhtı embolisi.",
+      "k": "terim",
+      "b": [
+       [
+        0.095,
+        0.5508,
+        0.2597,
+        0.5997
+       ]
+      ]
+     }
+    ]
+   },
+   "17": {
+    "bos": 0.4182,
+    "t": [
+     {
+      "t": "Yağ Embolisi",
+      "a": "Uzun kemik kırığı veya yumuşak doku ezilmesinde kemik iliği sinüzoidlerinin yırtılmasıyla mikroskobik yağ küreciklerinin dolaşıma karışması.",
+      "k": "terim",
+      "b": [
+       [
+        0.5856,
+        0.5084,
+        0.7256,
+        0.5713
+       ]
+      ]
+     },
+     {
+      "t": "Tromboemboli",
+      "a": "Bir venöz veya arteriyel trombüsten koparak dolaşıma katılan ve tüm embolilerin %95'inden fazlasını oluşturan pıhtı embolisi.",
+      "k": "terim",
+      "b": [
+       [
+        0.4032,
+        0.4548,
+        0.5626,
+        0.5037
+       ]
+      ]
+     }
+    ]
+   },
+   "23": {
+    "bos": 0.1091,
+    "t": [
+     {
+      "t": "Fagositoz",
+      "a": "Hücreler tarafından partiküler materyalin yutulması. Başlıca fagositler nötrofiller ve makrofajlardır; görevleri mikropları ve nekrotik hücreleri ortadan kaldırmak ve doku temizliğini sağlamaktır.",
+      "k": "terim",
+      "b": [
+       [
+        0.095,
+        0.7327,
+        0.207,
+        0.7956
+       ]
+      ]
+     }
+    ]
+   },
+   "26": {
+    "bos": 0.1705,
+    "t": [
+     {
+      "t": "Hipertansiyon",
+      "a": "Sistemik arter kan basıncının sürekli yüksek seyretmesidir; uzun vadede kalpte hipertrofi, böbrekte nefroskleroz ve damar duvarında hasara yol açar.",
+      "k": "terim",
+      "b": [
+       [
+        0.132,
+        0.3938,
+        0.2888,
+        0.4566
+       ]
+      ]
+     }
+    ]
+   },
+   "27": {
+    "bos": 0.3227,
+    "t": [
+     {
+      "t": "Primer",
+      "a": "Monoklonal plazma hücre diskrazilerinde immünoglobulin hafif zincirlerinin (özellikle lambda) dokuda birikmesi.",
+      "k": "terim",
+      "b": [
+       [
+        0.095,
+        0.2743,
+        0.1729,
+        0.3227
+       ]
+      ]
+     }
+    ]
+   },
+   "28": {
+    "bos": 0.1148,
+    "t": [
+     {
+      "t": "Hematom",
+      "a": "Doku içinde lokalize kan birikimidir.",
+      "k": "terim",
+      "b": [
+       [
+        0.5149,
+        0.7826,
+        0.6198,
+        0.8316
+       ]
+      ]
+     }
+    ]
+   },
+   "29": {
+    "bos": 0.1091,
+    "t": [
+     {
+      "t": "Hemoraji",
+      "a": "Kanın damarlardan dokuya, vücut boşluklarına veya dış ortama sızması; nedenleri travma, ateroskleroz, vaskülit, damarda tümör erozyonu ve hemostaz bozukluklarıdır.",
+      "k": "terim",
+      "b": [
+       [
+        0.1975,
+        0.3914,
+        0.3002,
+        0.4404
+       ]
+      ]
+     }
+    ]
+   },
+   "31": {
+    "bos": 0.1611,
+    "t": [
+     {
+      "t": "Amiloid Birikimi",
+      "a": "Yanlış katlanmış fibriler proteinlerin (çapraz beta-kırmalı yapıda) hücre dışı aralıkta çözünmez halde çökmesi tablosu.",
+      "k": "terim",
+      "b": [
+       [
+        0.095,
+        0.6175,
+        0.2767,
+        0.6664
+       ]
+      ]
+     },
+     {
+      "t": "Hipertansiyon",
+      "a": "Sistemik arter kan basıncının sürekli yüksek seyretmesidir; uzun vadede kalpte hipertrofi, böbrekte nefroskleroz ve damar duvarında hasara yol açar.",
+      "k": "terim",
+      "b": [
+       [
+        0.3902,
+        0.6709,
+        0.547,
+        0.7338
+       ]
+      ]
+     }
+    ]
+   },
+   "32": {
+    "bos": 0.1521,
+    "t": [
+     {
+      "t": "Subaraknoid kanama",
+      "a": "Araknoid membran ile pia mater arasındaki mesafeye kanama. Non-travmatik subaraknoid kanamanın en sık nedeni sakküler (berry) anevrizma rüptürüdür; diğer nedenler damar malformasyonu, travma ve kanama diatezleridir.",
+      "k": "terim",
+      "b": [
+       [
+        0.095,
+        0.2743,
+        0.3421,
+        0.3227
+       ],
+       [
+        0.5487,
+        0.3273,
+        0.8129,
+        0.3902
+       ]
+      ]
+     }
+    ]
+   },
+   "33": {
+    "bos": 0.1596,
+    "t": [
+     {
+      "t": "Ikınma",
+      "a": "İşemeyi başlatmak, sürdürmek veya idrar hızını artırmak için yapılan kas eforu.",
+      "k": "terim",
+      "b": [
+       [
+        0.5539,
+        0.3088,
+        0.6268,
+        0.3717
+       ]
+      ]
+     }
+    ]
+   },
+   "34": {
+    "bos": 0.2558,
+    "t": [
+     {
+      "t": "Otozomal Dominant Polikistik Böbrek Hastalığı",
+      "a": "Otozomal dominant kalıtılan, her iki böbrekte çok sayıda büyük kistle böbrek parankimini ilerleyici biçimde tahrip eden kalıtsal hastalık. Olguların %85-90'ında PKD1 (16p13.3, polikistin-1), %10-15'inde PKD2 (4q21, polikistin-2) geni etkilenir.",
+      "k": "terim",
+      "b": [
+       [
+        0.1129,
+        0.5676,
+        0.6438,
+        0.6304
+       ]
+      ]
+     },
+     {
+      "t": "Ekstrasellüler matriks",
+      "a": "Hücreler arasını dolduran, kollajen, elastin, proteoglikan ve yapışkan glikoproteinlerden oluşan yapısal ağdır; doku onarımında fibroblastlarca sentezlenir ve hücre davranışını yönlendirir.",
+      "k": "terim",
+      "b": [
+       [
+        0.1129,
+        0.6417,
+        0.3719,
+        0.6906
+       ]
+      ]
+     }
+    ]
+   },
+   "36": {
+    "bos": 0.2463,
+    "t": [
+     {
+      "t": "Fibrozis",
+      "a": "Parankimal organlarda aşırı kollajen ve ECM birikimi; kronik inflamasyon ve persistan toksik/iskemik hasar sonucu gelişir.",
+      "k": "terim",
+      "b": [
+       [
+        0.4789,
+        0.5988,
+        0.5714,
+        0.6477
+       ]
+      ]
+     }
+    ]
+   },
+   "38": {
+    "bos": 0.1231,
+    "t": [
+     {
+      "t": "Subaraknoid kanama",
+      "a": "Araknoid membran ile pia mater arasındaki mesafeye kanama. Non-travmatik subaraknoid kanamanın en sık nedeni sakküler (berry) anevrizma rüptürüdür; diğer nedenler damar malformasyonu, travma ve kanama diatezleridir.",
+      "k": "terim",
+      "b": [
+       [
+        0.4592,
+        0.769,
+        0.6901,
+        0.818
+       ]
+      ]
+     }
+    ]
+   },
+   "40": {
+    "bos": 0.3332,
+    "t": [
+     {
+      "t": "Subaraknoid kanama",
+      "a": "Araknoid membran ile pia mater arasındaki mesafeye kanama. Non-travmatik subaraknoid kanamanın en sık nedeni sakküler (berry) anevrizma rüptürüdür; diğer nedenler damar malformasyonu, travma ve kanama diatezleridir.",
+      "k": "terim",
+      "b": [
+       [
+        0.118,
+        0.6064,
+        0.349,
+        0.6553
+       ]
+      ]
+     },
+     {
+      "t": "Epilepsi",
+      "a": "İkinci aşamada değerlendirilen epilepsi tipi dört gruba ayrılır: fokal epilepsiler, jeneralize epilepsiler, kombine fokal ve jeneralize epilepsiler ve bilinmeyen.",
+      "k": "terim",
+      "b": [
+       [
+        0.1181,
+        0.4734,
+        0.2054,
+        0.5224
+       ]
+      ]
+     }
+    ]
+   },
+   "41": {
+    "bos": 0.2933,
+    "t": [
+     {
+      "t": "TGF-beta",
+      "a": "En önemli fibrogenik sitokin; kollajen ve fibronektin sentezini artırır, MMP'leri azaltıp TIMP'leri artırır, akut inflamasyonu baskılar.",
+      "k": "terim",
+      "b": [
+       [
+        0.2917,
+        0.5378,
+        0.4044,
+        0.6007
+       ]
+      ]
+     }
+    ]
+   },
+   "43": {
+    "bos": 0.3236,
+    "t": [
+     {
+      "t": "Düşük",
+      "a": "Gebeliğin fetüsün yaşayabilirlik sınırına (20–24. hafta ya da 500 g) ulaşmadan spontan olarak sonlanması; düşük.",
+      "k": "terim",
+      "b": [
+       [
+        0.1129,
+        0.4898,
+        0.1792,
+        0.5526
+       ]
+      ]
+     }
+    ]
+   },
+   "44": {
+    "bos": 0.3227,
+    "t": [
+     {
+      "t": "Malformasyon",
+      "a": "Embriyonik organogenez evresinde dokunun primer oluşum hatası sonucu ortaya çıkan yapısal organ defekti (intrinsik gelişim kusuru).",
+      "k": "terim",
+      "b": [
+       [
+        0.3157,
+        0.5694,
+        0.4763,
+        0.6184
+       ]
+      ]
+     }
+    ]
+   },
+   "45": {
+    "bos": 0.1122,
+    "t": [
+     {
+      "t": "Hipertansiyon",
+      "a": "Sistemik arter kan basıncının sürekli yüksek seyretmesidir; uzun vadede kalpte hipertrofi, böbrekte nefroskleroz ve damar duvarında hasara yol açar.",
+      "k": "terim",
+      "b": [
+       [
+        0.095,
+        0.3273,
+        0.252,
+        0.3902
+       ],
+       [
+        0.2512,
+        0.6045,
+        0.408,
+        0.6673
+       ],
+       [
+        0.5745,
+        0.7669,
+        0.7314,
+        0.8298
+       ]
+      ]
+     }
+    ]
+   },
+   "46": {
+    "bos": 0.1131,
+    "t": [
+     {
+      "t": "Hemoraji",
+      "a": "Kanın damarlardan dokuya, vücut boşluklarına veya dış ortama sızması; nedenleri travma, ateroskleroz, vaskülit, damarda tümör erozyonu ve hemostaz bozukluklarıdır.",
+      "k": "terim",
+      "b": [
+       [
+        0.095,
+        0.828,
+        0.1948,
+        0.8769
+       ],
+       [
+        0.2644,
+        0.828,
+        0.3588,
+        0.8769
+       ]
+      ]
+     }
+    ]
+   },
+   "47": {
+    "bos": 0.2276,
+    "t": [
+     {
+      "t": "Hipertansif ensefalopati",
+      "a": "Ağır kan basıncı yükselmesine bağlı serebral otoregülasyonun bozulmasıyla gelişen yaygın beyin işlev bozukluğudur.",
+      "k": "terim",
+      "b": [
+       [
+        0.1768,
+        0.2738,
+        0.4576,
+        0.3227
+       ]
+      ]
+     },
+     {
+      "t": "Fibrinoid Nekroz",
+      "a": "Genellikle immünolojik reaksiyonlarda antijen-antikor komplekslerinin damar duvarına oturması ve damar duvarından sızan fibrin ile birleşmesi sonucu gelişen parlak eozinofilik amorf nekroz tipidir.",
+      "k": "terim",
+      "b": [
+       [
+        0.095,
+        0.7135,
+        0.2831,
+        0.7624
+       ]
+      ]
+     },
+     {
+      "t": "Konfüzyon",
+      "a": "Dikkat ve düşünce akışının bozulduğu, yönelimin (oryantasyon) kaybolduğu hafif bilinç bozukluğu tablosudur.",
+      "k": "terim",
+      "b": [
+       [
+        0.2133,
+        0.3698,
+        0.326,
+        0.4188
+       ]
+      ]
+     },
+     {
+      "t": "Peteşi",
+      "a": "Deri, mukoza ve seröz yüzeylerde 1–2 mm çaplı küçük kanama odaklarıdır.",
+      "k": "terim",
+      "b": [
+       [
+        0.772,
+        0.6525,
+        0.8438,
+        0.7153
+       ]
+      ]
+     }
+    ]
+   },
+   "48": {
+    "bos": 0.1795,
+    "t": [
+     {
+      "t": "İmmünsupresyon",
+      "a": "Bağışıklık sisteminin bir veya birden fazla bileşeninin işlevinin ilaç, hastalık veya diğer nedenlerle baskılanması.",
+      "k": "terim",
+      "b": [
+       [
+        0.095,
+        0.5508,
+        0.2828,
+        0.5997
+       ]
+      ]
+     },
+     {
+      "t": "Sifiliz",
+      "a": "Treponema pallidum spiroketinin neden olduğu, cinsel yolla veya transplasental bulaşan sistemik kronik enfeksiyon hastalığı.",
+      "k": "terim",
+      "b": [
+       [
+        0.7994,
+        0.4548,
+        0.8657,
+        0.5037
+       ]
+      ]
+     }
+    ]
+   },
+   "49": {
+    "bos": 0.2185,
+    "t": [
+     {
+      "t": "Granülom",
+      "a": "Eritilemeyen partiküllere karşı epiteloid histiyositlerin, multinükleer dev hücrelerin (Langhans) ve çevreleyen lenfosit yakasının oluşturduğu kronik nodüler odak.",
+      "k": "terim",
+      "b": [
+       [
+        0.5765,
+        0.4604,
+        0.6763,
+        0.5233
+       ]
+      ]
+     },
+     {
+      "t": "Primer",
+      "a": "Monoklonal plazma hücre diskrazilerinde immünoglobulin hafif zincirlerinin (özellikle lambda) dokuda birikmesi.",
+      "k": "terim",
+      "b": [
+       [
+        0.095,
+        0.2738,
+        0.1723,
+        0.3227
+       ]
+      ]
+     }
+    ]
+   }
+  }
+ }
+}

@@ -255,6 +255,46 @@
   "uretici": "deepseek",
   "ders": "k1-22-bebek-beslenmesi"
  },
+ "lohusa": {
+  "term": "Lohusa",
+  "category": "terim",
+  "definition": "Doğumdan sonraki kırk gün içindeki kadın. Bu dönemde kanama ve enfeksiyon gibi komplikasyonlar açısından izlenir.",
+  "kaynak": "deepseek",
+  "uretici": "deepseek",
+  "ders": "k1-23-ana-cocuk-sagligi-duzeyinin-izlenmesi"
+ },
+ "aoh": {
+  "term": "AÖH",
+  "category": "terim",
+  "definition": "Belirli bir yılda canlı doğum başına düşen anne ölümü sayısı. Yüz binde ifade edilir.",
+  "kaynak": "deepseek",
+  "uretici": "deepseek",
+  "ders": "k1-23-ana-cocuk-sagligi-duzeyinin-izlenmesi"
+ },
+ "boh": {
+  "term": "BÖH",
+  "category": "terim",
+  "definition": "Bir yaşından önce ölen bebeklerin canlı doğumlara oranı. Ülkenin sağlık düzeyini gösteren temel ölçüttür.",
+  "kaynak": "deepseek",
+  "uretici": "deepseek",
+  "ders": "k1-23-ana-cocuk-sagligi-duzeyinin-izlenmesi"
+ },
+ "cogul gebelik": {
+  "term": "Çoğul gebelik",
+  "category": "terim",
+  "definition": "İkiz ve üçüz gibi birden fazla fetüsün aynı gebelikte bulunması. Anne ve bebek açısından riskleri artırdığı için daha sık izlem gerektirir.",
+  "kaynak": "deepseek",
+  "uretici": "deepseek",
+  "ders": "k1-23-ana-cocuk-sagligi-duzeyinin-izlenmesi"
+ },
+ "dob": {
+  "term": "DÖB",
+  "category": "terim",
+  "definition": "Gebelik boyunca yapılan izlem, tetkik ve eğitim hizmetlerinin tümü. Dört ve üzeri izlem alan gebe oranı sağlık düzeyi göstergesidir.",
+  "kaynak": "deepseek",
+  "uretici": "deepseek",
+  "ders": "k1-23-ana-cocuk-sagligi-duzeyinin-izlenmesi"
+ },
  "chediak–higashi sendromu": {
   "term": "Chédiak–Higashi sendromu",
   "category": "terim",
@@ -771,6 +811,38 @@
   "term": "Fekal–oral yol",
   "category": "terim",
   "definition": "Anal yolla çıkan etkenin su ve besinler ya da el ve eşyalarla taşınıp ağızdan alınması.",
+  "kaynak": "deepseek",
+  "uretici": "deepseek",
+  "ders": "k1-68-enfeksiyon-hastaliklarinin-epidemiyolojisi"
+ },
+ "intrensek": {
+  "term": "İntrensek",
+  "category": "terim",
+  "definition": "Etkenin doğasında bulunan büyüklük, şekil, enzim ve toksin gibi mikrobiyolojik özellikler. Hastalık yapma gücünü etkiler.",
+  "kaynak": "deepseek",
+  "uretici": "deepseek",
+  "ders": "k1-68-enfeksiyon-hastaliklarinin-epidemiyolojisi"
+ },
+ "ekzotoksin": {
+  "term": "Ekzotoksin",
+  "category": "terim",
+  "definition": "Bakterinin dışarı salgıladığı güçlü zehir. Tetanoz ve difteri basilleri bu toksinlerle ağır hastalık tablosu oluşturur.",
+  "kaynak": "deepseek",
+  "uretici": "deepseek",
+  "ders": "k1-68-enfeksiyon-hastaliklarinin-epidemiyolojisi"
+ },
+ "patojenlik": {
+  "term": "Patojenlik",
+  "category": "terim",
+  "definition": "Etkenin hastalık oluşturabilme yeteneği. Enfekte olanlar içinde klinik belirti verenlerin oranıyla ölçülür.",
+  "kaynak": "deepseek",
+  "uretici": "deepseek",
+  "ders": "k1-68-enfeksiyon-hastaliklarinin-epidemiyolojisi"
+ },
+ "konvelasan donem portorlugu": {
+  "term": "konvelasan dönem portörlüğü",
+  "category": "terim",
+  "definition": "Hastalık belirtileri geçtikten sonra etkenin bir süre daha çıkarılmaya devam etmesi. Bu kişiler yakınma olmadan bulaştırdığı için salgınlarda önemlidir.",
   "kaynak": "deepseek",
   "uretici": "deepseek",
   "ders": "k1-68-enfeksiyon-hastaliklarinin-epidemiyolojisi"

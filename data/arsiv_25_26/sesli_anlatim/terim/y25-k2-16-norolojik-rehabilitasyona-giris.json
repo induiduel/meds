@@ -1,1 +1,211 @@
-{"surum":1,"key":"y25-k2-16-norolojik-rehabilitasyona-giris","uretici":"deepseek","d":{"0":{"2":{"bos":0.0074,"t":[{"t":"İyileşme","a":"Yaralanma sonrası doku mimarisi ve fonksiyonunun yeniden kazanılması süreci; iyileşme olarak da adlandırılır.","k":"terim","b":[[0.1408,0.5185,0.21,0.5561]]}]},"4":{"bos":0.1427,"t":[{"t":"Fonksiyon kaybı","a":"Fonksiyon kaybı; Galen'in eklediği inflamasyonun beşinci klasik belirtisi.","k":"terim","b":[[0.1462,0.3188,0.2763,0.3563]]}]},"6":{"bos":0.024,"t":[{"t":"Kontraktür","a":"Aşırı yara kontraksiyonu; el, ayak tabanı ve göğüs ön duvarında eklem hareketini kısıtlayabilir.","k":"terim","b":[[0.1008,0.608,0.1798,0.64]]}]},"7":{"bos":0.024,"t":[{"t":"Sigara kullanımı","a":"Dumanındaki nikotin ve kanserojen kimyasallar aracılığıyla bağımlılık, solunum ve kardiyovasküler hastalıklar ile pek çok kansere yol açan çevresel maruziyettir.","k":"terim","b":[[0.2096,0.6811,0.3778,0.7256]]}]},"9":{"bos":0.0872,"t":[{"t":"hipertoni","a":"Kas tonusunun artmasıdır.","k":"terim","b":[[0.7774,0.4234,0.8719,0.468]]}]},"10":{"bos":0.0986,"t":[{"t":"Parkinson hastalığı","a":"Titreme (tremor), kaslarda sertlik (rijidite), bradikinezi ve postural instabilite ile karakterize klinik sendrom; olguların çoğu α-sinüklein içeren nöronal inklüzyonlarla ilişkili Parkinson hastalığıdır.","k":"terim","b":[[0.4729,0.7829,0.6542,0.8232]]},{"t":"Tabes dorsalis","a":"Spinal kord dorsal kök gangliyonlarının tutulduğu nörosifiliz formu; parezi, parestezi, düşük ayak, ataksi ve Romberg belirtisi görülür.","k":"terim","b":[[0.2933,0.3058,0.4194,0.3462]]},{"t":"hipertoni","a":"Kas tonusunun artmasıdır.","k":"terim","b":[[0.0763,0.5785,0.163,0.6188]]}]},"14":{"bos":0.0074,"t":[{"t":"Kontraktür","a":"Aşırı yara kontraksiyonu; el, ayak tabanı ve göğüs ön duvarında eklem hareketini kısıtlayabilir.","k":"terim","b":[[0.6511,0.1565,0.8476,0.2386],[0.0914,0.7481,0.1834,0.7857]]}]},"16":{"bos":0.024,"t":[{"t":"Multipl skleroz","a":"Genelde genç erişkinlerde santral sinir sistemini etkileyen kronik, otoimmün ve demiyelinizan hastalık; kronik dönemde akson kaybı ortaya çıkar. Tutulan bölgeye göre motor, duyu, otonom ve kognitif bulgularla heterojen seyreder.","k":"terim","b":[[0.2025,0.6096,0.3525,0.6541]]},{"t":"Spina bifida","a":"Vertebra ve nöral tüpte kapanma defekti. Risk faktörleri ailede spina bifida varlığı, teratojenler ve annede folik asit eksikliğidir; ilk çocuk spina bifidalıysa ikinci çocukta risk 1/25, üçüncüde 1/8'dir.","k":"terim","b":[[0.2394,0.7431,0.3539,0.7876]]}]},"17":{"bos":0.0476,"t":[{"t":"Tromboz","a":"Sağlam veya hasarlı bir damarın ya da kalp boşluklarının lümeninde uygunsuz ve kontrolsüz pıhtı (trombüs) oluşmasıyla damar lümeninin tıkanması patolojisi.","k":"terim","b":[[0.1667,0.6694,0.2311,0.7028]]},{"t":"Emboli","a":"Kan akımı ile taşınarak oluştuğu odaktan uzaktaki bir damar lümenini kısmen veya tamamen tıkayan katı, sıvı veya gaz kitle.","k":"terim","b":[[0.3886,0.6694,0.4396,0.7028]]}]},"18":{"bos":0.024,"t":[{"t":"Bilinç","a":"Uyanıklık (arousal) ve çevresinin ve kendinin farkında olma (farkındalık) bileşenlerinden oluşan durumdur; uyanıklık beyin sapı ARAS'ına, farkındalık serebral korteks ve bağlantılarına bağlıdır.","k":"terim","b":[[0.0727,0.3495,0.1184,0.387]]}]},"20":{"bos":0.242,"t":[{"t":"İyileşme","a":"Yaralanma sonrası doku mimarisi ve fonksiyonunun yeniden kazanılması süreci; iyileşme olarak da adlandırılır.","k":"terim","b":[[0.177,0.2473,0.3108,0.2987],[0.4106,0.3224,0.507,0.3738],[0.3745,0.5839,0.4708,0.6353]]}]},"30":{"bos":0.024,"t":[{"t":"İyileşme","a":"Yaralanma sonrası doku mimarisi ve fonksiyonunun yeniden kazanılması süreci; iyileşme olarak da adlandırılır.","k":"terim","b":[[0.1876,0.4415,0.2823,0.4998]]}]}}}}
+{
+ "surum": 1,
+ "key": "y25-k2-16-norolojik-rehabilitasyona-giris",
+ "uretici": "deepseek",
+ "d": {
+  "0": {
+   "4": {
+    "bos": 0.1427,
+    "t": [
+     {
+      "t": "Fonksiyon kaybı",
+      "a": "Fonksiyon kaybı; Galen'in eklediği inflamasyonun beşinci klasik belirtisi.",
+      "k": "terim",
+      "b": [
+       [
+        0.1462,
+        0.3188,
+        0.2763,
+        0.3563
+       ]
+      ]
+     }
+    ]
+   },
+   "6": {
+    "bos": 0.024,
+    "t": [
+     {
+      "t": "Kontraktür",
+      "a": "Aşırı yara kontraksiyonu; el, ayak tabanı ve göğüs ön duvarında eklem hareketini kısıtlayabilir.",
+      "k": "terim",
+      "b": [
+       [
+        0.1008,
+        0.608,
+        0.1798,
+        0.64
+       ]
+      ]
+     }
+    ]
+   },
+   "7": {
+    "bos": 0.024,
+    "t": [
+     {
+      "t": "Sigara kullanımı",
+      "a": "Dumanındaki nikotin ve kanserojen kimyasallar aracılığıyla bağımlılık, solunum ve kardiyovasküler hastalıklar ile pek çok kansere yol açan çevresel maruziyettir.",
+      "k": "terim",
+      "b": [
+       [
+        0.2096,
+        0.6811,
+        0.3778,
+        0.7256
+       ]
+      ]
+     }
+    ]
+   },
+   "9": {
+    "bos": 0.0872,
+    "t": [
+     {
+      "t": "hipertoni",
+      "a": "Kas tonusunun artmasıdır.",
+      "k": "terim",
+      "b": [
+       [
+        0.7774,
+        0.4234,
+        0.8719,
+        0.468
+       ]
+      ]
+     }
+    ]
+   },
+   "10": {
+    "bos": 0.0986,
+    "t": [
+     {
+      "t": "Parkinson hastalığı",
+      "a": "Titreme (tremor), kaslarda sertlik (rijidite), bradikinezi ve postural instabilite ile karakterize klinik sendrom; olguların çoğu α-sinüklein içeren nöronal inklüzyonlarla ilişkili Parkinson hastalığıdır.",
+      "k": "terim",
+      "b": [
+       [
+        0.4729,
+        0.7829,
+        0.6542,
+        0.8232
+       ]
+      ]
+     },
+     {
+      "t": "Tabes dorsalis",
+      "a": "Spinal kord dorsal kök gangliyonlarının tutulduğu nörosifiliz formu; parezi, parestezi, düşük ayak, ataksi ve Romberg belirtisi görülür.",
+      "k": "terim",
+      "b": [
+       [
+        0.2933,
+        0.3058,
+        0.4194,
+        0.3462
+       ]
+      ]
+     },
+     {
+      "t": "hipertoni",
+      "a": "Kas tonusunun artmasıdır.",
+      "k": "terim",
+      "b": [
+       [
+        0.0763,
+        0.5785,
+        0.163,
+        0.6188
+       ]
+      ]
+     }
+    ]
+   },
+   "14": {
+    "bos": 0.0074,
+    "t": [
+     {
+      "t": "Kontraktür",
+      "a": "Aşırı yara kontraksiyonu; el, ayak tabanı ve göğüs ön duvarında eklem hareketini kısıtlayabilir.",
+      "k": "terim",
+      "b": [
+       [
+        0.6511,
+        0.1565,
+        0.8476,
+        0.2386
+       ],
+       [
+        0.0914,
+        0.7481,
+        0.1834,
+        0.7857
+       ]
+      ]
+     }
+    ]
+   },
+   "16": {
+    "bos": 0.024,
+    "t": [
+     {
+      "t": "Multipl skleroz",
+      "a": "Genelde genç erişkinlerde santral sinir sistemini etkileyen kronik, otoimmün ve demiyelinizan hastalık; kronik dönemde akson kaybı ortaya çıkar. Tutulan bölgeye göre motor, duyu, otonom ve kognitif bulgularla heterojen seyreder.",
+      "k": "terim",
+      "b": [
+       [
+        0.2025,
+        0.6096,
+        0.3525,
+        0.6541
+       ]
+      ]
+     },
+     {
+      "t": "Spina bifida",
+      "a": "Vertebra ve nöral tüpte kapanma defekti. Risk faktörleri ailede spina bifida varlığı, teratojenler ve annede folik asit eksikliğidir; ilk çocuk spina bifidalıysa ikinci çocukta risk 1/25, üçüncüde 1/8'dir.",
+      "k": "terim",
+      "b": [
+       [
+        0.2394,
+        0.7431,
+        0.3539,
+        0.7876
+       ]
+      ]
+     }
+    ]
+   },
+   "17": {
+    "bos": 0.0476,
+    "t": [
+     {
+      "t": "Tromboz",
+      "a": "Sağlam veya hasarlı bir damarın ya da kalp boşluklarının lümeninde uygunsuz ve kontrolsüz pıhtı (trombüs) oluşmasıyla damar lümeninin tıkanması patolojisi.",
+      "k": "terim",
+      "b": [
+       [
+        0.1667,
+        0.6694,
+        0.2311,
+        0.7028
+       ]
+      ]
+     },
+     {
+      "t": "Emboli",
+      "a": "Kan akımı ile taşınarak oluştuğu odaktan uzaktaki bir damar lümenini kısmen veya tamamen tıkayan katı, sıvı veya gaz kitle.",
+      "k": "terim",
+      "b": [
+       [
+        0.3886,
+        0.6694,
+        0.4396,
+        0.7028
+       ]
+      ]
+     }
+    ]
+   }
+  }
+ }
+}

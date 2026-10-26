@@ -1,1 +1,2290 @@
-{"surum":1,"key":"k1-32-tumor-immunolojisi-ve-metastaz-mekanizmalari","uretici":"deepseek","d":{"0":{"1":{"bos":0.0533,"t":[{"t":"Metastaz","a":"Primer tümörden fiziksel olarak ayrı bölgelerde neoplastik implantların oluşması. Maligniteyi ayırt ettiren özelliktir ve kanser ilişkili mortalitenin başlıca nedenidir; bazal hücreli karsinomlar ve birçok primer SSS tümörü nadiren metastaz yapar.","k":"terim","b":[[0.4835,0.2685,0.6169,0.3182]]},{"t":"Tümör","a":"Yeni büyüme anlamına gelen, normal büyüme kontrolüne dirençli otonom hücre çoğalması.","k":"terim","b":[[0.1571,0.2685,0.2488,0.3182]]}]},"3":{"bos":0.4814,"t":[{"t":"Metastaz","a":"Primer tümörden fiziksel olarak ayrı bölgelerde neoplastik implantların oluşması. Maligniteyi ayırt ettiren özelliktir ve kanser ilişkili mortalitenin başlıca nedenidir; bazal hücreli karsinomlar ve birçok primer SSS tümörü nadiren metastaz yapar.","k":"terim","b":[[0.7252,0.0332,0.8803,0.1236],[0.135,0.3593,0.1922,0.3925],[0.135,0.4755,0.1922,0.5086]]},{"t":"Kanser","a":"Lokal invazyon yapan ve uzak metastaz kapasitesi olan tümör; tedavi edilmezse genellikle ölümcüldür.","k":"terim","b":[[0.135,0.4387,0.1818,0.4719]]},{"t":"Tümör","a":"Yeni büyüme anlamına gelen, normal büyüme kontrolüne dirençli otonom hücre çoğalması.","k":"terim","b":[[0.3287,0.0332,0.4383,0.1236],[0.135,0.2805,0.1759,0.3137],[0.135,0.3202,0.174,0.3534]]},{"t":"Konak","a":"Enfeksiyon etkeninin yerleştiği makroorganizma.","k":"terim","b":[[0.1818,0.3202,0.2208,0.3534]]}]},"4":{"bos":0.1168,"t":[{"t":"Bağışıklık gözetimi","a":"Sürekli ortaya çıkan kötü huylu hücrelerin bağışıklık sistemi tarafından tespit edilip yok edilmesi.","k":"terim","b":[[0.0975,0.3809,0.3427,0.4533]]},{"t":"Surveillance","a":"Hastalık verilerinin sürekli ve sistematik toplanması; salgında kişi, zaman ve yere göre vaka ve ölüm sayıları hakkında bilgi sağlar.","k":"terim","b":[[0.4803,0.3809,0.6347,0.4533]]},{"t":"Tespit","a":"Dokuyu otoliz ve putrefaksiyondan koruyan, mimariyi stabilize eden ilk işleme basamağı.","k":"terim","b":[[0.4685,0.526,0.5357,0.5894]]},{"t":"Tümör","a":"Yeni büyüme anlamına gelen, normal büyüme kontrolüne dirençli otonom hücre çoğalması.","k":"terim","b":[[0.2724,0.0735,0.3929,0.173],[0.3465,0.3115,0.4219,0.3748],[0.135,0.6742,0.2116,0.7375]]}]},"5":{"bos":0.1128,"t":[{"t":"Tümör antijenleri","a":"Tümör hücrelerinde bulunup bağışıklık sistemince tanınabilen, tanıda ve immünoterapide hedef olarak kullanılan peptit ve proteinlerdir.","k":"terim","b":[[0.2983,0.0765,0.623,0.176],[0.0975,0.2351,0.3075,0.3014]]}]},"6":{"bos":0.1313,"t":[{"t":"Neoantijen","a":"Sürücü veya yolcu mutasyonlar sonucu protein dizisinde oluşan, bağışıklık sistemiyle önceden tanışmamış yeni peptit.","k":"terim","b":[[0.4452,0.1002,0.7001,0.1997],[0.0975,0.2298,0.2297,0.2961]]},{"t":"Tümör","a":"Yeni büyüme anlamına gelen, normal büyüme kontrolüne dirençli otonom hücre çoğalması.","k":"terim","b":[[0.0975,0.5853,0.1712,0.6516],[0.4722,0.6493,0.5942,0.7065]]}]},"7":{"bos":0.1205,"t":[{"t":"Majör histokompatibilite kompleksi","a":"Edinsel immünitenin peptid sergileme sistemi; MHC molekülleri antijenlerin T hücrelerince tanınmasını sağlar. İnsanda 6. kromozomdaki gen topluluğundan oluşan ve çok polimorfik olan HLA (human leukocyte antigen) kompleksi olarak bilinir.","k":"terim","b":[[0.135,0.6344,0.3807,0.6917]]},{"t":"Düşük","a":"Gebeliğin fetüsün yaşayabilirlik sınırına (20–24. hafta ya da 500 g) ulaşmadan spontan olarak sonlanması; düşük.","k":"terim","b":[[0.638,0.6344,0.7019,0.6917]]}]},"8":{"bos":0.1152,"t":[{"t":"Diferansiyasyon","a":"Tümör hücrelerinin köken aldığı normal hücreye morfolojik ve fonksiyonel benzerlik derecesi.","k":"terim","b":[[0.0975,0.5018,0.2917,0.5681]]},{"t":"Tümör antijeni","a":"Tümör hücrelerinde ekspresyonu artmış ya da yalnız tümörde ifade edilen, bağışıklık sistemince yabancı algılanabilen antijen.","k":"terim","b":[[0.339,0.0735,0.6143,0.173]]},{"t":"Tirozinaz","a":"Normal melanositlerde ve melanomda ifade edilen melanosit diferansiyasyon antijeni.","k":"terim","b":[[0.3865,0.5728,0.4745,0.6301]]},{"t":"HER2/NEU","a":"Aynı isimli gen tarafından kodlanan protein; meme kanserinde düzeyinin yüksek olması kötü prognozun habercisidir, ancak anti-HER2 antikorlarıyla tedavi açısından önemlidir.","k":"terim","b":[[0.1881,0.3062,0.2964,0.3634]]}]},"9":{"bos":0.1178,"t":[{"t":"Kaposi Sarkomu Herpes Virüsü","a":"İnsan Herpes Virüsü 8 olarak da bilinen onkojenik virüs.","k":"terim","b":[[0.135,0.4495,0.4444,0.5038]]},{"t":"HPV E6/E7 proteinleri","a":"Servikal karsinomlarda ifade edilen ve MHC sınıf I ile sunulan HPV proteinleri.","k":"terim","b":[[0.135,0.6741,0.3525,0.7284]]},{"t":"Tümör antijenleri","a":"Tümör hücrelerinde bulunup bağışıklık sistemince tanınabilen, tanıda ve immünoterapide hedef olarak kullanılan peptit ve proteinlerdir.","k":"terim","b":[[0.4076,0.0735,0.7323,0.173]]},{"t":"Hepatit B virüsü","a":"Kan ve cinsel yolla bulaşan, kronikleşerek siroz ve hepatoselüler karsinoma yol açabilen onkojenik DNA virüsüdür; cinsel yolla bulaşan enfeksiyonlar içinde aşıyla korunulabilen iki etkenden biridir.","k":"terim","b":[[0.135,0.3974,0.3001,0.4517]]},{"t":"Burkitt lenfoma","a":"t(8;14) translokasyonuyla MYC'nin immunoglobulin ağır zincir lokusuna taşınıp aşırı eksprese edildiği B hücreli lenfoma.","k":"terim","b":[[0.1725,0.827,0.3001,0.8722]]},{"t":"Hepatit C","a":"Hepatit C virüsünün (HCV) esas olarak kanla bulaşan, temas öncesi ve sonrası profilaksisi bulunmayan, onkojenik ve böbrek tutulumu yapabilen viral enfeksiyonudur.","k":"terim","b":[[0.3763,0.3974,0.4708,0.4517]]},{"t":"Karsinom","a":"Epitel hücre kökenli malign neoplazm; köken embriyonik tabakasından bağımsızdır.","k":"terim","b":[[0.2428,0.728,0.3631,0.7732],[0.4321,0.827,0.5096,0.8722]]}]},"10":{"bos":0.2175,"t":[{"t":"T yardımcı hücre tip 1","a":"IFN-γ üreterek makrofajları aktive eden CD4+ T hücre alt grubu.","k":"terim","b":[[0.135,0.4216,0.2843,0.4577]]}]},"11":{"bos":0.1435,"t":[{"t":"Antijen sunumu","a":"Antijen sunan hücrelerin işlenmiş peptitleri MHC molekülleri üzerinde T lenfositlere göstermesi ve ko-uyarıcı sinyalle birlikte adaptif yanıtı başlatmasıdır.","k":"terim","b":[[0.1925,0.2399,0.3958,0.3122]]},{"t":"Çapraz sunum","a":"Dendritik hücrenin dışarıdan aldığı tümör antijenini MHC sınıf I bağlamında CD8+ T hücrelerine sunması.","k":"terim","b":[[0.4128,0.3974,0.5534,0.4517]]},{"t":"Fas Ligandı","a":"Aktive sitotoksik T lenfositler (CTL) ve NK hücreleri yüzeyinde eksprese edilen, Fas (CD95) reseptörüne bağlanarak hedef hücrede apoptozu tetikleyen transmembran proteindir.","k":"terim","b":[[0.4313,0.7832,0.5601,0.8465]]},{"t":"Apoptoz","a":"Hücrenin genetik programı dahilinde kendi kendini yok ettiği, kaspaz enzimlerinin aktive olduğu, hücre membran bütünlüğünün korunduğu ve ENFLAMASYON OLUŞTURMAYAN programlı hücre ölümüdür.","k":"terim","b":[[0.7321,0.7832,0.8279,0.8465]]},{"t":"Tümör","a":"Yeni büyüme anlamına gelen, normal büyüme kontrolüne dirençli otonom hücre çoğalması.","k":"terim","b":[[0.0975,0.2399,0.185,0.3122],[0.135,0.5486,0.2116,0.6119],[0.135,0.7092,0.2116,0.7725]]}]},"12":{"bos":0.1316,"t":[{"t":"T yardımcı hücre tip 1","a":"IFN-γ üreterek makrofajları aktive eden CD4+ T hücre alt grubu.","k":"terim","b":[[0.1342,0.0735,0.5468,0.173],[0.0975,0.2399,0.3891,0.3122]]},{"t":"İnterferon gama","a":"Th1 hücrelerinin ürettiği, makrofajları aktive eden sitokin.","k":"terim","b":[[0.135,0.3263,0.3257,0.3897]]},{"t":"Makrofaj","a":"Mikropları ve nekrotik hücreleri yutarak (fagositoz) ortadan kaldıran başlıca fagositlerden biri. İki kaynağı vardır: kandan gelen monositler ve doku histiyositleri.","k":"terim","b":[[0.7186,0.0735,0.9344,0.173],[0.135,0.4004,0.279,0.4637],[0.1894,0.4769,0.3038,0.5493]]},{"t":"Tümör","a":"Yeni büyüme anlamına gelen, normal büyüme kontrolüne dirençli otonom hücre çoğalması.","k":"terim","b":[[0.135,0.561,0.2116,0.6243],[0.5387,0.7951,0.6737,0.8584]]}]},"13":{"bos":0.1263,"t":[{"t":"NK hücreleri","a":"Virüsle enfekte hücreleri ve tümör hücrelerini önceden aktive edilmeden tanıyıp öldürebilen, doğal immün sisteme ait lenfositlerdir.","k":"terim","b":[[0.1725,0.526,0.2944,0.5803]]},{"t":"Kompleman","a":"Çözünebilir plazma proteinleri ve membran reseptörlerinden oluşan; opsonizasyon, kemotaksi ve hücre lizisiyle özellikle bakterilere karşı savunma sağlayan sistemdir.","k":"terim","b":[[0.135,0.5853,0.2774,0.6486]]},{"t":"Tümör","a":"Yeni büyüme anlamına gelen, normal büyüme kontrolüne dirençli otonom hücre çoğalması.","k":"terim","b":[[0.2598,0.0735,0.4518,0.173],[0.135,0.3115,0.2116,0.3748],[0.1992,0.7311,0.3342,0.7944]]}]},"14":{"bos":0.1455,"t":[{"t":"Kanser immün düzenlemesi","a":"Bağışıklık sisteminin tümörde kaçış yeteneği en yüksek alt klonları seçmesi.","k":"terim","b":[[0.0975,0.3809,0.472,0.4533]]}]},"15":{"bos":0.1316,"t":[{"t":"β2-mikroglobulin","a":"MHC sınıf I molekülünün yapısal bileşeni; mutasyonu MHC sınıf I ekspresyonunu azaltır.","k":"terim","b":[[0.135,0.3263,0.3379,0.3897]]},{"t":"Tümör","a":"Yeni büyüme anlamına gelen, normal büyüme kontrolüne dirençli otonom hücre çoğalması.","k":"terim","b":[[0.3587,0.561,0.4326,0.6243],[0.135,0.7951,0.2432,0.8584]]}]},"16":{"bos":0.0424,"t":[{"t":"Programlanmış Hücre Ölümü Ligandı 1","a":"Programlanmış hücre ölümü ligandı 1; T hücre yanıtını baskılayan bağışıklık kontrol noktası molekülü.","k":"terim","b":[[0.1365,0.2647,0.6206,0.3311]]},{"t":"Programlanmış Hücre Ölümü 1","a":"Programlanmış hücre ölümü 1; T hücre üzerindeki inhibitör kontrol noktası reseptörü.","k":"terim","b":[[0.1365,0.4301,0.5242,0.4964]]},{"t":"Sitotoksik T lenfosit","a":"Yabancı etken taşıyan hücrelere doğrudan tutunarak veya lenfokin salgılayarak onları öldüren T lenfosit grubu. Aktive CD8+ T hücreleri, sitoplazmalarında mikrop (çoğunlukla virüs) taşıyan hücreleri öldüren CTL'lere farklılaşır.","k":"terim","b":[[0.174,0.8395,0.3864,0.8968]]},{"t":"CTLA-4","a":"T lenfosit yüzeyinde CD28 ile yarışarak APC'deki B7 moleküllerine çok daha yüksek afiniteyle bağlanan inhibitör kontrol noktası molekülü.","k":"terim","b":[[0.5116,0.8395,0.5768,0.8968]]},{"t":"PD-L1","a":"Tümör hücreleri ve tümör çevresindeki miyeloid hücrelerde ifade edilen, PD-1'e bağlanarak T hücre aktivitesini baskılayan ligand.","k":"terim","b":[[0.64,0.2647,0.7029,0.3311],[0.174,0.6173,0.2367,0.6745]]},{"t":"Tümör","a":"Yeni büyüme anlamına gelen, normal büyüme kontrolüne dirençli otonom hücre çoğalması.","k":"terim","b":[[0.174,0.3287,0.2432,0.386],[0.3813,0.3287,0.4482,0.386]]}]},"17":{"bos":0.1596,"t":[{"t":"Transforme edici büyüme faktörü beta","a":"Normal epitel, endotel ve hematopoetik hücrelerde proliferasyonun güçlü inhibitörü olan, bağlam bağımlı olarak tümör destekleyici de olabilen sitokin.","k":"terim","b":[[0.135,0.3102,0.3958,0.3463]]},{"t":"İnterlökin 10","a":"Tümörün bağışıklıktan kaçışında rol alan immün baskılayıcı sitokin.","k":"terim","b":[[0.135,0.3671,0.2207,0.4032]]},{"t":"Sitokinler","a":"Lenforetiküler hücrelerde sentezlenen, immün yanıtı ve hematopoezi düzenleyen heterojen protein grubudur; enflamasyonda hem lokal hem sistemik etkilerin başlıca aracılarındandır.","k":"terim","b":[[0.3249,0.2298,0.4365,0.2961]]},{"t":"Proteazom","a":"Uygunsuz ya da hasarlı proteinleri parçalayan protein yıkım kompleksi; etkinliği yaşla azalabilir.","k":"terim","b":[[0.135,0.7731,0.2449,0.8304]]},{"t":"Tümör","a":"Yeni büyüme anlamına gelen, normal büyüme kontrolüne dirençli otonom hücre çoğalması.","k":"terim","b":[[0.2766,0.6493,0.3435,0.7065]]}]},"18":{"bos":0.0579,"t":[{"t":"Programlanmış Hücre Ölümü Ligandı 1","a":"Programlanmış hücre ölümü ligandı 1; T hücre yanıtını baskılayan bağışıklık kontrol noktası molekülü.","k":"terim","b":[[0.135,0.4394,0.4795,0.4877]]},{"t":"İmmün kontrol noktası inhibitörleri","a":"PD-1, PD-L1 ya da CTLA-4'ü bloke ederek T hücreler üzerindeki baskılayıcı \"frenleri\" kaldıran ve antitümör yanıtı yeniden etkinleştiren monoklonal antikorlardır.","k":"terim","b":[[0.1488,0.0776,0.7481,0.1681]]},{"t":"Programlanmış Hücre Ölümü 1","a":"Programlanmış hücre ölümü 1; T hücre üzerindeki inhibitör kontrol noktası reseptörü.","k":"terim","b":[[0.135,0.392,0.4111,0.4403]]},{"t":"Sitotoksik T lenfosit","a":"Yabancı etken taşıyan hücrelere doğrudan tutunarak veya lenfokin salgılayarak onları öldüren T lenfosit grubu. Aktive CD8+ T hücreleri, sitoplazmalarında mikrop (çoğunlukla virüs) taşıyan hücreleri öldüren CTL'lere farklılaşır.","k":"terim","b":[[0.135,0.4862,0.3141,0.5345]]},{"t":"Monoklonal antikorlar","a":"Tek bir antijene yüksek afinite ve özgüllükle bağlanan, moleküler biyoloji ile üretilen antikorlar ve fragmanlarıdır; antitümör, antianjiyojenik ve immünomodülatör amaçlarla kullanılır.","k":"terim","b":[[0.3285,0.5899,0.5274,0.6382],[0.2644,0.6368,0.4634,0.685]]},{"t":"CTLA-4","a":"T lenfosit yüzeyinde CD28 ile yarışarak APC'deki B7 moleküllerine çok daha yüksek afiniteyle bağlanan inhibitör kontrol noktası molekülü.","k":"terim","b":[[0.42,0.4862,0.4772,0.5345],[0.135,0.6368,0.2128,0.685]]},{"t":"PD-L1","a":"Tümör hücreleri ve tümör çevresindeki miyeloid hücrelerde ifade edilen, PD-1'e bağlanarak T hücre aktivitesini baskılayan ligand.","k":"terim","b":[[0.494,0.4394,0.5412,0.4877],[0.2093,0.5899,0.2769,0.6382]]}]},"19":{"bos":0.0394,"t":[{"t":"Otoimmünite","a":"Vücudun kendisine karşı toleransını kaybetmesi veya öz dokularını yabancıdan ayıramaması sonucu öze reaktif T ve B lenfositlerinin doku hasarı oluşturmasıdır.","k":"terim","b":[[0.135,0.6664,0.2711,0.7207]]},{"t":"Neoantijen","a":"Sürücü veya yolcu mutasyonlar sonucu protein dizisinde oluşan, bağışıklık sistemiyle önceden tanışmamış yeni peptit.","k":"terim","b":[[0.3921,0.5627,0.4833,0.6079]]},{"t":"Remisyon","a":"Tümör dokusu ile kanser belirti ve bulgularının kısmen veya tamamen azalması ya da kaybolması.","k":"terim","b":[[0.2538,0.2889,0.347,0.3432]]}]},"20":{"bos":0.1596,"t":[{"t":"Adaptif T hücre transferi","a":"Tümöre spesifik T hücrelerinin in vitro çoğaltılıp hastaya geri verilmesi.","k":"terim","b":[[0.0975,0.3512,0.3951,0.4176]]},{"t":"Sitokin salınım sendromu","a":"Aktive bağışıklık hücrelerinin aşırı sitokin salgılamasıyla oluşan ağır sistemik tablo; CAR-T tedavisinin sınırlamasıdır.","k":"terim","b":[[0.1949,0.7162,0.4622,0.7735]]},{"t":"Tümör","a":"Yeni büyüme anlamına gelen, normal büyüme kontrolüne dirençli otonom hücre çoğalması.","k":"terim","b":[[0.0975,0.2298,0.1778,0.2961],[0.135,0.2937,0.2042,0.351],[0.135,0.4176,0.217,0.4748]]},{"t":"CAR-T","a":"Yapay reseptör eklenmiş T hücresiyle yapılan tedavi; B hücreli ALL ve bazı lenfomalarda başarılıdır.","k":"kisaltma","b":[[0.5641,0.4721,0.6276,0.5385]]}]},"21":{"bos":0.1316,"t":[{"t":"Eradikasyon","a":"Bir patojenin dünya çapında görülme sıklığının kalıcı olarak sıfırlanması; tüm dünyadan rezervuarlarıyla silinmesi.","k":"terim","b":[[0.659,0.7186,0.8003,0.7819]]},{"t":"Metastaz","a":"Primer tümörden fiziksel olarak ayrı bölgelerde neoplastik implantların oluşması. Maligniteyi ayırt ettiren özelliktir ve kanser ilişkili mortalitenin başlıca nedenidir; bazal hücreli karsinomlar ve birçok primer SSS tümörü nadiren metastaz yapar.","k":"terim","b":[[0.2331,0.0735,0.4035,0.173],[0.0975,0.2399,0.2158,0.3122]]},{"t":"Kanser","a":"Lokal invazyon yapan ve uzak metastaz kapasitesi olan tümör; tedavi edilmezse genellikle ölümcüldür.","k":"terim","b":[[0.135,0.3263,0.215,0.3897]]},{"t":"Tümör","a":"Yeni büyüme anlamına gelen, normal büyüme kontrolüne dirençli otonom hücre çoğalması.","k":"terim","b":[[0.135,0.484,0.2116,0.5473]]}]},"22":{"bos":0.1535,"t":[{"t":"Hücre dışı matriks","a":"Hücreler arasını dolduran, kollajen, elastin, proteoglikan ve yapışkan glikoproteinlerden oluşan yapısal ağdır; doku onarımında fibroblastlarca sentezlenir ve hücre davranışını yönlendirir.","k":"terim","b":[[0.135,0.4004,0.3467,0.4637]]},{"t":"Ekstravazasyon","a":"Tümör hücrelerinin kılcal yataktan çıkışı; endotel adezyon molekülleri ve kemokin reseptörleri rol oynar.","k":"terim","b":[[0.3661,0.6226,0.5369,0.6859]]},{"t":"İntravazasyon","a":"Tümör hücrelerinin damar içine girişi; tümör hücresi, makrofaj ve endotel etkileşimiyle olur.","k":"terim","b":[[0.3505,0.4745,0.505,0.5378]]},{"t":"Primer","a":"Monoklonal plazma hücre diskrazilerinde immünoglobulin hafif zincirlerinin (özellikle lambda) dokuda birikmesi.","k":"terim","b":[[0.135,0.3263,0.2151,0.3897]]},{"t":"Büyüme","a":"Organ ve dokuların kitlesindeki artış; tartı, boy ve baş çevresi gibi ölçümlerle izlenir.","k":"terim","b":[[0.6282,0.7732,0.725,0.8365]]},{"t":"Tümör","a":"Yeni büyüme anlamına gelen, normal büyüme kontrolüne dirençli otonom hücre çoğalması.","k":"terim","b":[[0.2218,0.3263,0.3406,0.3897],[0.3891,0.5486,0.4581,0.6119]]}]},"23":{"bos":0.0175,"t":[{"t":"Tümör","a":"Yeni büyüme anlamına gelen, normal büyüme kontrolüne dirençli otonom hücre çoğalması.","k":"terim","b":[[0.0243,0.0507,0.0548,0.0683],[0.1216,0.8177,0.1522,0.8348],[0.199,0.4928,0.2231,0.5099]]}]},"24":{"bos":0.1329,"t":[{"t":"Fonksiyon kaybı","a":"Fonksiyon kaybı; Galen'in eklediği inflamasyonun beşinci klasik belirtisi.","k":"terim","b":[[0.2559,0.4395,0.4168,0.4968]]},{"t":"E-kadherin","a":"Epitel hücreleri arasında güçlü hücre–hücre bağlantısı kuran adezyon molekülü.","k":"terim","b":[[0.135,0.3109,0.2375,0.3621],[0.135,0.4395,0.25,0.4968],[0.1725,0.5011,0.275,0.5523]]},{"t":"β-katenin","a":"Hem E-kadherin ile hücre–hücre adezyonunda hem WNT yolunda transkripsiyon kofaktörü olarak görev yapan protein.","k":"terim","b":[[0.1725,0.5556,0.2634,0.6068]]},{"t":"Metastaz","a":"Primer tümörden fiziksel olarak ayrı bölgelerde neoplastik implantların oluşması. Maligniteyi ayırt ettiren özelliktir ve kanser ilişkili mortalitenin başlıca nedenidir; bazal hücreli karsinomlar ve birçok primer SSS tümörü nadiren metastaz yapar.","k":"terim","b":[[0.0975,0.3684,0.2113,0.4348]]},{"t":"SNAIL","a":"E-kadherin gen ekspresyonunu baskılayan EMT transkripsiyon faktörleri.","k":"kisaltma","b":[[0.1725,0.6119,0.2239,0.6631]]},{"t":"Tümör","a":"Yeni büyüme anlamına gelen, normal büyüme kontrolüne dirençli otonom hücre çoğalması.","k":"terim","b":[[0.135,0.7998,0.2042,0.8571]]}]},"25":{"bos":0.1252,"t":[{"t":"Hücre dışı matriks","a":"Hücreler arasını dolduran, kollajen, elastin, proteoglikan ve yapışkan glikoproteinlerden oluşan yapısal ağdır; doku onarımında fibroblastlarca sentezlenir ve hücre davranışını yönlendirir.","k":"terim","b":[[0.0975,0.2351,0.3187,0.3014]]},{"t":"Plazminojen","a":"Plazminin inaktif öncülü; fibrine bağlanınca t-PA ve ürokinazla aktive edilir.","k":"terim","b":[[0.3139,0.6172,0.4314,0.6685]]},{"t":"Ürokinaz","a":"Plazminojeni plazmine çeviren plazminojen aktivatörü.","k":"terim","b":[[0.1725,0.6125,0.2673,0.6698]]},{"t":"Kollajen","a":"Skar dokusunun ana yapısal proteini; fibriler kollajenler tip I, II, III ve V'tir. Üçlü heliks yapısındadır ve çapraz bağlanması için C vitamini gerekir; eksikliğinde iskorbüt ve zayıf yara iyileşmesi görülür.","k":"terim","b":[[0.5552,0.7459,0.6334,0.8031]]},{"t":"Laminin","a":"Bazal membranda bulunan yapışkan glikoprotein; hücre adezyonu ve göçünde iskele görevi görür.","k":"terim","b":[[0.649,0.7459,0.7258,0.8031]]},{"t":"Tümör","a":"Yeni büyüme anlamına gelen, normal büyüme kontrolüne dirençli otonom hücre çoğalması.","k":"terim","b":[[0.0975,0.4301,0.1778,0.4964]]}]},"26":{"bos":0.2081,"t":[{"t":"İntegrinler","a":"Kemokin uyarısıyla düşük afiniteli formdan yüksek afiniteli forma geçerek lökositin endotele sıkı yapışmasını sağlayan reseptörler.","k":"terim","b":[[0.301,0.3263,0.4243,0.3897]]},{"t":"Büyüme","a":"Organ ve dokuların kitlesindeki artış; tartı, boy ve baş çevresi gibi ölçümlerle izlenir.","k":"terim","b":[[0.5558,0.7186,0.6526,0.7819]]},{"t":"Tümör","a":"Yeni büyüme anlamına gelen, normal büyüme kontrolüne dirençli otonom hücre çoğalması.","k":"terim","b":[[0.167,0.0332,0.2765,0.1236],[0.0975,0.4005,0.185,0.4728],[0.135,0.7186,0.2116,0.7819]]}]},"27":{"bos":0.1286,"t":[{"t":"Hepatosit büyüme faktörü","a":"Hepatosit çoğalmasını uyaran ve karaciğer rejenerasyonunda rol oynayan büyüme faktörü.","k":"terim","b":[[0.135,0.6742,0.4501,0.7375]]},{"t":"Sitokinler","a":"Lenforetiküler hücrelerde sentezlenen, immün yanıtı ve hematopoezi düzenleyen heterojen protein grubudur; enflamasyonda hem lokal hem sistemik etkilerin başlıca aracılarındandır.","k":"terim","b":[[0.1691,0.798,0.279,0.8614]]},{"t":"Kemokin","a":"Lökositleri aktive eden ve kemotaksiyle çeken sitokin grubu; örneğin IL-8.","k":"terim","b":[[0.8065,0.7412,0.9074,0.8045]]},{"t":"Tümör","a":"Yeni büyüme anlamına gelen, normal büyüme kontrolüne dirençli otonom hücre çoğalması.","k":"terim","b":[[0.3602,0.0735,0.4807,0.173],[0.0975,0.5954,0.185,0.6678],[0.135,0.7412,0.233,0.8045]]}]},"28":{"bos":0.1596,"t":[{"t":"Epitel-mezenkimal geçiş","a":"Epitel hücrelerinin hücreler arası bağlarını ve epitel belirteçlerini yitirip mezenkimal fenotip kazanması; tümör hücrelerinin hareketliliğini ve invazyon kapasitesini artırır.","k":"terim","b":[[0.2455,0.0735,0.7009,0.173]]},{"t":"E-kadherin","a":"Epitel hücreleri arasında güçlü hücre–hücre bağlantısı kuran adezyon molekülü.","k":"terim","b":[[0.135,0.4176,0.25,0.4748],[0.135,0.6493,0.25,0.7065]]},{"t":"Vimentin","a":"EMT sırasında artan mezenkimal belirteç.","k":"terim","b":[[0.135,0.4715,0.2277,0.5288]]},{"t":"İnvazyon","a":"Mikroorganizmanın konak hücrelere veya dokulara girişi ve vücutta yayılmasıdır.","k":"terim","b":[[0.3657,0.7731,0.4591,0.8304]]},{"t":"SNAIL","a":"E-kadherin gen ekspresyonunu baskılayan EMT transkripsiyon faktörleri.","k":"kisaltma","b":[[0.135,0.5953,0.1925,0.6526]]}]},"29":{"bos":0.1263,"t":[{"t":"İntravazasyon","a":"Tümör hücrelerinin damar içine girişi; tümör hücresi, makrofaj ve endotel etkileşimiyle olur.","k":"terim","b":[[0.1906,0.0735,0.4436,0.173],[0.0975,0.2351,0.2771,0.3075]]},{"t":"Tümör","a":"Yeni büyüme anlamına gelen, normal büyüme kontrolüne dirençli otonom hücre çoğalması.","k":"terim","b":[[0.135,0.3115,0.2116,0.3748],[0.135,0.3803,0.2116,0.4436],[0.135,0.526,0.2116,0.5894]]}]},"30":{"bos":0.1242,"t":[{"t":"Tohum ve toprak hipotezi","a":"Metastazın tümör hücresi (tohum) ile hedef organ stroması (toprak) arasındaki uyuma bağlı olduğunu öne süren hipotez.","k":"terim","b":[[0.4048,0.6196,0.6761,0.6769]]},{"t":"Adezyon molekülleri","a":"Lökositlerin endotele tutunması ve damar dışına göçünü sağlayan, selektin ve integrin aileleri ile bunların endotel ligandlarından oluşan yüzey molekülleridir.","k":"terim","b":[[0.2233,0.3678,0.4389,0.4251]]},{"t":"Organ tropizmi","a":"Tümör hücresindeki kemokin reseptörlerinin hedef organ stromasının kemokinlerine yanıt vermesiyle metastazın belirli organları tercih etmesi.","k":"terim","b":[[0.0975,0.4301,0.2781,0.4964]]},{"t":"Ekstravazasyon","a":"Tümör hücrelerinin kılcal yataktan çıkışı; endotel adezyon molekülleri ve kemokin reseptörleri rol oynar.","k":"terim","b":[[0.2428,0.0735,0.5208,0.173],[0.0975,0.2351,0.2784,0.3014]]},{"t":"Kolonizasyon","a":"Mikroorganizmanın vücut yüzeyine yerleşip hastalık oluşturmadan çoğalması.","k":"terim","b":[[0.5846,0.0735,0.8257,0.173],[0.0975,0.6819,0.2534,0.7482]]},{"t":"Anjiyogenez","a":"Mevcut damarlardan yeni damar oluşumu. Yara iyileşmesi, iskemik dokularda kollateral gelişimi, tümör büyümesi ve ıslak maküler dejenerasyon gibi patolojik durumlarda önemlidir.","k":"terim","b":[[0.4137,0.8146,0.5273,0.8658]]},{"t":"Kemokin","a":"Lökositleri aktive eden ve kemotaksiyle çeken sitokin grubu; örneğin IL-8.","k":"terim","b":[[0.4757,0.3678,0.5668,0.4251],[0.3705,0.5011,0.4617,0.5584],[0.5317,0.5627,0.6502,0.614]]},{"t":"Stroma","a":"Neoplazmın konak kökenli destek dokusu: bağ dokusu, damarlar ve inflamatuvar hücreler; beslenme sağlar ve tümörle iki yönlü sinyalleşir.","k":"terim","b":[[0.2957,0.5627,0.426,0.614],[0.2138,0.6196,0.2925,0.6769]]}]},"31":{"bos":0.0873,"t":[{"t":"Tümör dormansisi","a":"Tümör hücrelerinin uzun süre bölünmeden canlı kaldığı uyku benzeri durum.","k":"terim","b":[[0.5538,0.0735,0.8925,0.173],[0.682,0.5756,0.7941,0.6088]]},{"t":"Anjiyogenez","a":"Mevcut damarlardan yeni damar oluşumu. Yara iyileşmesi, iskemik dokularda kollateral gelişimi, tümör büyümesi ve ıslak maküler dejenerasyon gibi patolojik durumlarda önemlidir.","k":"terim","b":[[0.2176,0.5681,0.3381,0.6223]]},{"t":"Metastaz","a":"Primer tümörden fiziksel olarak ayrı bölgelerde neoplastik implantların oluşması. Maligniteyi ayırt ettiren özelliktir ve kanser ilişkili mortalitenin başlıca nedenidir; bazal hücreli karsinomlar ve birçok primer SSS tümörü nadiren metastaz yapar.","k":"terim","b":[[0.292,0.7873,0.3836,0.8416]]},{"t":"Kanser","a":"Lokal invazyon yapan ve uzak metastaz kapasitesi olan tümör; tedavi edilmezse genellikle ölümcüldür.","k":"terim","b":[[0.8043,0.5756,0.8454,0.6088]]},{"t":"Konak","a":"Enfeksiyon etkeninin yerleştiği makroorganizma.","k":"terim","b":[[0.135,0.6741,0.1973,0.7284]]}]},"32":{"bos":0.1235,"t":[{"t":"Bazal hücreli karsinom","a":"Epidermisin bazal hücrelerinden köken alan, benign karşılığı olmayan, lokal invaziv büyüyen ancak çok nadir metastaz yapan malign epitelyal tümördür.","k":"terim","b":[[0.1725,0.4566,0.3611,0.5018]]},{"t":"Metastaz","a":"Primer tümörden fiziksel olarak ayrı bölgelerde neoplastik implantların oluşması. Maligniteyi ayırt ettiren özelliktir ve kanser ilişkili mortalitenin başlıca nedenidir; bazal hücreli karsinomlar ve birçok primer SSS tümörü nadiren metastaz yapar.","k":"terim","b":[[0.1924,0.0735,0.3628,0.173],[0.2595,0.2889,0.3511,0.3432],[0.2625,0.4021,0.3541,0.4564]]},{"t":"Primer","a":"Monoklonal plazma hücre diskrazilerinde immünoglobulin hafif zincirlerinin (özellikle lambda) dokuda birikmesi.","k":"terim","b":[[0.2295,0.501,0.2869,0.5463]]},{"t":"Büyüme","a":"Organ ve dokuların kitlesindeki artış; tartı, boy ve baş çevresi gibi ölçümlerle izlenir.","k":"terim","b":[[0.135,0.6048,0.2186,0.6591]]},{"t":"Tümör","a":"Yeni büyüme anlamına gelen, normal büyüme kontrolüne dirençli otonom hücre çoğalması.","k":"terim","b":[[0.1496,0.2297,0.2456,0.29],[0.4588,0.501,0.5225,0.5463],[0.0975,0.5456,0.1704,0.6059]]}]},"33":{"bos":0.1414,"t":[{"t":"Adezyon molekülleri","a":"Lökositlerin endotele tutunması ve damar dışına göçünü sağlayan, selektin ve integrin aileleri ile bunların endotel ligandlarından oluşan yüzey molekülleridir.","k":"terim","b":[[0.135,0.4839,0.3533,0.5412]]},{"t":"Metastaz","a":"Primer tümörden fiziksel olarak ayrı bölgelerde neoplastik implantların oluşması. Maligniteyi ayırt ettiren özelliktir ve kanser ilişkili mortalitenin başlıca nedenidir; bazal hücreli karsinomlar ve birçok primer SSS tümörü nadiren metastaz yapar.","k":"terim","b":[[0.1689,0.0735,0.3604,0.173],[0.1972,0.6196,0.294,0.6769],[0.2529,0.7974,0.3451,0.8486]]},{"t":"Kemokin","a":"Lökositleri aktive eden ve kemotaksiyle çeken sitokin grubu; örneğin IL-8.","k":"terim","b":[[0.39,0.4839,0.4812,0.5412]]},{"t":"Primer","a":"Monoklonal plazma hücre diskrazilerinde immünoglobulin hafif zincirlerinin (özellikle lambda) dokuda birikmesi.","k":"terim","b":[[0.2234,0.7429,0.2882,0.7941]]},{"t":"SNAIL","a":"E-kadherin gen ekspresyonunu baskılayan EMT transkripsiyon faktörleri.","k":"kisaltma","b":[[0.1725,0.3677,0.2239,0.419]]},{"t":"Tümör","a":"Yeni büyüme anlamına gelen, normal büyüme kontrolüne dirençli otonom hücre çoğalması.","k":"terim","b":[[0.2935,0.7429,0.3535,0.7941]]}]},"34":{"bos":0.1252,"t":[{"t":"Metastaz","a":"Primer tümörden fiziksel olarak ayrı bölgelerde neoplastik implantların oluşması. Maligniteyi ayırt ettiren özelliktir ve kanser ilişkili mortalitenin başlıca nedenidir; bazal hücreli karsinomlar ve birçok primer SSS tümörü nadiren metastaz yapar.","k":"terim","b":[[0.5722,0.0735,0.7297,0.173],[0.2893,0.3677,0.3761,0.419]]},{"t":"İnvazyon","a":"Mikroorganizmanın konak hücrelere veya dokulara girişi ve vücutta yayılmasıdır.","k":"terim","b":[[0.1725,0.3677,0.2564,0.419]]},{"t":"Kanser","a":"Lokal invazyon yapan ve uzak metastaz kapasitesi olan tümör; tedavi edilmezse genellikle ölümcüldür.","k":"terim","b":[[0.2179,0.0735,0.336,0.173]]},{"t":"Tümör","a":"Yeni büyüme anlamına gelen, normal büyüme kontrolüne dirençli otonom hücre çoğalması.","k":"terim","b":[[0.1518,0.2351,0.2571,0.3014],[0.0975,0.4792,0.1778,0.5456],[0.135,0.5509,0.2234,0.6082]]}]},"35":{"bos":0.1178,"t":[{"t":"İmmün kontrol noktası inhibitörleri","a":"PD-1, PD-L1 ya da CTLA-4'ü bloke ederek T hücreler üzerindeki baskılayıcı \"frenleri\" kaldıran ve antitümör yanıtı yeniden etkinleştiren monoklonal antikorlardır.","k":"terim","b":[[0.135,0.3974,0.4893,0.4517]]},{"t":"Tümör antijenleri","a":"Tümör hücrelerinde bulunup bağışıklık sistemince tanınabilen, tanıda ve immünoterapide hedef olarak kullanılan peptit ve proteinlerdir.","k":"terim","b":[[0.135,0.2889,0.3067,0.3432]]},{"t":"Organ tropizmi","a":"Tümör hücresindeki kemokin reseptörlerinin hedef organ stromasının kemokinlerine yanıt vermesiyle metastazın belirli organları tercih etmesi.","k":"terim","b":[[0.135,0.6149,0.2864,0.6691]]},{"t":"Ekstravazasyon","a":"Tümör hücrelerinin kılcal yataktan çıkışı; endotel adezyon molekülleri ve kemokin reseptörleri rol oynar.","k":"terim","b":[[0.6744,0.5627,0.8264,0.617]]},{"t":"İntravazasyon","a":"Tümör hücrelerinin damar içine girişi; tümör hücresi, makrofaj ve endotel etkileşimiyle olur.","k":"terim","b":[[0.5247,0.5627,0.6584,0.617]]},{"t":"Metastaz","a":"Primer tümörden fiziksel olarak ayrı bölgelerde neoplastik implantların oluşması. Maligniteyi ayırt ettiren özelliktir ve kanser ilişkili mortalitenin başlıca nedenidir; bazal hücreli karsinomlar ve birçok primer SSS tümörü nadiren metastaz yapar.","k":"terim","b":[[0.0975,0.4496,0.1965,0.5099]]},{"t":"İnvazyon","a":"Mikroorganizmanın konak hücrelere veya dokulara girişi ve vücutta yayılmasıdır.","k":"terim","b":[[0.4242,0.5627,0.5084,0.617]]},{"t":"Dormansi","a":"Tümör hücrelerinin uzun süre bölünmeden canlı kaldığı uyku benzeri durum.","k":"terim","b":[[0.3214,0.6149,0.417,0.6691]]}]}}}}
+{
+ "surum": 1,
+ "key": "k1-32-tumor-immunolojisi-ve-metastaz-mekanizmalari",
+ "uretici": "deepseek",
+ "d": {
+  "0": {
+   "1": {
+    "bos": 0.0533,
+    "t": [
+     {
+      "t": "Metastaz",
+      "a": "Primer tümörden fiziksel olarak ayrı bölgelerde neoplastik implantların oluşması. Maligniteyi ayırt ettiren özelliktir ve kanser ilişkili mortalitenin başlıca nedenidir; bazal hücreli karsinomlar ve birçok primer SSS tümörü nadiren metastaz yapar.",
+      "k": "terim",
+      "b": [
+       [
+        0.4835,
+        0.2685,
+        0.6169,
+        0.3182
+       ]
+      ]
+     },
+     {
+      "t": "Tümör",
+      "a": "Yeni büyüme anlamına gelen, normal büyüme kontrolüne dirençli otonom hücre çoğalması.",
+      "k": "terim",
+      "b": [
+       [
+        0.1571,
+        0.2685,
+        0.2488,
+        0.3182
+       ]
+      ]
+     }
+    ]
+   },
+   "3": {
+    "bos": 0.4814,
+    "t": [
+     {
+      "t": "Metastaz",
+      "a": "Primer tümörden fiziksel olarak ayrı bölgelerde neoplastik implantların oluşması. Maligniteyi ayırt ettiren özelliktir ve kanser ilişkili mortalitenin başlıca nedenidir; bazal hücreli karsinomlar ve birçok primer SSS tümörü nadiren metastaz yapar.",
+      "k": "terim",
+      "b": [
+       [
+        0.7252,
+        0.0332,
+        0.8803,
+        0.1236
+       ],
+       [
+        0.135,
+        0.3593,
+        0.1922,
+        0.3925
+       ],
+       [
+        0.135,
+        0.4755,
+        0.1922,
+        0.5086
+       ]
+      ]
+     },
+     {
+      "t": "Kanser",
+      "a": "Lokal invazyon yapan ve uzak metastaz kapasitesi olan tümör; tedavi edilmezse genellikle ölümcüldür.",
+      "k": "terim",
+      "b": [
+       [
+        0.135,
+        0.4387,
+        0.1818,
+        0.4719
+       ]
+      ]
+     },
+     {
+      "t": "Tümör",
+      "a": "Yeni büyüme anlamına gelen, normal büyüme kontrolüne dirençli otonom hücre çoğalması.",
+      "k": "terim",
+      "b": [
+       [
+        0.3287,
+        0.0332,
+        0.4383,
+        0.1236
+       ],
+       [
+        0.135,
+        0.2805,
+        0.1759,
+        0.3137
+       ],
+       [
+        0.135,
+        0.3202,
+        0.174,
+        0.3534
+       ]
+      ]
+     },
+     {
+      "t": "Konak",
+      "a": "Enfeksiyon etkeninin yerleştiği makroorganizma.",
+      "k": "terim",
+      "b": [
+       [
+        0.1818,
+        0.3202,
+        0.2208,
+        0.3534
+       ]
+      ]
+     }
+    ]
+   },
+   "4": {
+    "bos": 0.1168,
+    "t": [
+     {
+      "t": "Bağışıklık gözetimi",
+      "a": "Sürekli ortaya çıkan kötü huylu hücrelerin bağışıklık sistemi tarafından tespit edilip yok edilmesi.",
+      "k": "terim",
+      "b": [
+       [
+        0.0975,
+        0.3809,
+        0.3427,
+        0.4533
+       ]
+      ]
+     },
+     {
+      "t": "Surveillance",
+      "a": "Hastalık verilerinin sürekli ve sistematik toplanması; salgında kişi, zaman ve yere göre vaka ve ölüm sayıları hakkında bilgi sağlar.",
+      "k": "terim",
+      "b": [
+       [
+        0.4803,
+        0.3809,
+        0.6347,
+        0.4533
+       ]
+      ]
+     },
+     {
+      "t": "Tespit",
+      "a": "Dokuyu otoliz ve putrefaksiyondan koruyan, mimariyi stabilize eden ilk işleme basamağı.",
+      "k": "terim",
+      "b": [
+       [
+        0.4685,
+        0.526,
+        0.5357,
+        0.5894
+       ]
+      ]
+     },
+     {
+      "t": "Tümör",
+      "a": "Yeni büyüme anlamına gelen, normal büyüme kontrolüne dirençli otonom hücre çoğalması.",
+      "k": "terim",
+      "b": [
+       [
+        0.2724,
+        0.0735,
+        0.3929,
+        0.173
+       ],
+       [
+        0.3465,
+        0.3115,
+        0.4219,
+        0.3748
+       ],
+       [
+        0.135,
+        0.6742,
+        0.2116,
+        0.7375
+       ]
+      ]
+     }
+    ]
+   },
+   "5": {
+    "bos": 0.1128,
+    "t": [
+     {
+      "t": "Tümör antijenleri",
+      "a": "Tümör hücrelerinde bulunup bağışıklık sistemince tanınabilen, tanıda ve immünoterapide hedef olarak kullanılan peptit ve proteinlerdir.",
+      "k": "terim",
+      "b": [
+       [
+        0.2983,
+        0.0765,
+        0.623,
+        0.176
+       ],
+       [
+        0.0975,
+        0.2351,
+        0.3075,
+        0.3014
+       ]
+      ]
+     }
+    ]
+   },
+   "6": {
+    "bos": 0.1313,
+    "t": [
+     {
+      "t": "Neoantijen",
+      "a": "Sürücü veya yolcu mutasyonlar sonucu protein dizisinde oluşan, bağışıklık sistemiyle önceden tanışmamış yeni peptit.",
+      "k": "terim",
+      "b": [
+       [
+        0.4452,
+        0.1002,
+        0.7001,
+        0.1997
+       ],
+       [
+        0.0975,
+        0.2298,
+        0.2297,
+        0.2961
+       ]
+      ]
+     },
+     {
+      "t": "Tümör",
+      "a": "Yeni büyüme anlamına gelen, normal büyüme kontrolüne dirençli otonom hücre çoğalması.",
+      "k": "terim",
+      "b": [
+       [
+        0.0975,
+        0.5853,
+        0.1712,
+        0.6516
+       ],
+       [
+        0.4722,
+        0.6493,
+        0.5942,
+        0.7065
+       ]
+      ]
+     }
+    ]
+   },
+   "7": {
+    "bos": 0.1205,
+    "t": [
+     {
+      "t": "Majör histokompatibilite kompleksi",
+      "a": "Edinsel immünitenin peptid sergileme sistemi; MHC molekülleri antijenlerin T hücrelerince tanınmasını sağlar. İnsanda 6. kromozomdaki gen topluluğundan oluşan ve çok polimorfik olan HLA (human leukocyte antigen) kompleksi olarak bilinir.",
+      "k": "terim",
+      "b": [
+       [
+        0.135,
+        0.6344,
+        0.3807,
+        0.6917
+       ]
+      ]
+     },
+     {
+      "t": "Düşük",
+      "a": "Gebeliğin fetüsün yaşayabilirlik sınırına (20–24. hafta ya da 500 g) ulaşmadan spontan olarak sonlanması; düşük.",
+      "k": "terim",
+      "b": [
+       [
+        0.638,
+        0.6344,
+        0.7019,
+        0.6917
+       ]
+      ]
+     }
+    ]
+   },
+   "8": {
+    "bos": 0.1152,
+    "t": [
+     {
+      "t": "Diferansiyasyon",
+      "a": "Tümör hücrelerinin köken aldığı normal hücreye morfolojik ve fonksiyonel benzerlik derecesi.",
+      "k": "terim",
+      "b": [
+       [
+        0.0975,
+        0.5018,
+        0.2917,
+        0.5681
+       ]
+      ]
+     },
+     {
+      "t": "Tümör antijeni",
+      "a": "Tümör hücrelerinde ekspresyonu artmış ya da yalnız tümörde ifade edilen, bağışıklık sistemince yabancı algılanabilen antijen.",
+      "k": "terim",
+      "b": [
+       [
+        0.339,
+        0.0735,
+        0.6143,
+        0.173
+       ]
+      ]
+     },
+     {
+      "t": "Tirozinaz",
+      "a": "Normal melanositlerde ve melanomda ifade edilen melanosit diferansiyasyon antijeni.",
+      "k": "terim",
+      "b": [
+       [
+        0.3865,
+        0.5728,
+        0.4745,
+        0.6301
+       ]
+      ]
+     },
+     {
+      "t": "HER2/NEU",
+      "a": "Aynı isimli gen tarafından kodlanan protein; meme kanserinde düzeyinin yüksek olması kötü prognozun habercisidir, ancak anti-HER2 antikorlarıyla tedavi açısından önemlidir.",
+      "k": "terim",
+      "b": [
+       [
+        0.1881,
+        0.3062,
+        0.2964,
+        0.3634
+       ]
+      ]
+     }
+    ]
+   },
+   "9": {
+    "bos": 0.1178,
+    "t": [
+     {
+      "t": "Kaposi Sarkomu Herpes Virüsü",
+      "a": "İnsan Herpes Virüsü 8 olarak da bilinen onkojenik virüs.",
+      "k": "terim",
+      "b": [
+       [
+        0.135,
+        0.4495,
+        0.4444,
+        0.5038
+       ]
+      ]
+     },
+     {
+      "t": "HPV E6/E7 proteinleri",
+      "a": "Servikal karsinomlarda ifade edilen ve MHC sınıf I ile sunulan HPV proteinleri.",
+      "k": "terim",
+      "b": [
+       [
+        0.135,
+        0.6741,
+        0.3525,
+        0.7284
+       ]
+      ]
+     },
+     {
+      "t": "Tümör antijenleri",
+      "a": "Tümör hücrelerinde bulunup bağışıklık sistemince tanınabilen, tanıda ve immünoterapide hedef olarak kullanılan peptit ve proteinlerdir.",
+      "k": "terim",
+      "b": [
+       [
+        0.4076,
+        0.0735,
+        0.7323,
+        0.173
+       ]
+      ]
+     },
+     {
+      "t": "Hepatit B virüsü",
+      "a": "Kan ve cinsel yolla bulaşan, kronikleşerek siroz ve hepatoselüler karsinoma yol açabilen onkojenik DNA virüsüdür; cinsel yolla bulaşan enfeksiyonlar içinde aşıyla korunulabilen iki etkenden biridir.",
+      "k": "terim",
+      "b": [
+       [
+        0.135,
+        0.3974,
+        0.3001,
+        0.4517
+       ]
+      ]
+     },
+     {
+      "t": "Burkitt lenfoma",
+      "a": "t(8;14) translokasyonuyla MYC'nin immunoglobulin ağır zincir lokusuna taşınıp aşırı eksprese edildiği B hücreli lenfoma.",
+      "k": "terim",
+      "b": [
+       [
+        0.1725,
+        0.827,
+        0.3001,
+        0.8722
+       ]
+      ]
+     },
+     {
+      "t": "Hepatit C",
+      "a": "Hepatit C virüsünün (HCV) esas olarak kanla bulaşan, temas öncesi ve sonrası profilaksisi bulunmayan, onkojenik ve böbrek tutulumu yapabilen viral enfeksiyonudur.",
+      "k": "terim",
+      "b": [
+       [
+        0.3763,
+        0.3974,
+        0.4708,
+        0.4517
+       ]
+      ]
+     },
+     {
+      "t": "Karsinom",
+      "a": "Epitel hücre kökenli malign neoplazm; köken embriyonik tabakasından bağımsızdır.",
+      "k": "terim",
+      "b": [
+       [
+        0.2428,
+        0.728,
+        0.3631,
+        0.7732
+       ],
+       [
+        0.4321,
+        0.827,
+        0.5096,
+        0.8722
+       ]
+      ]
+     }
+    ]
+   },
+   "10": {
+    "bos": 0.2175,
+    "t": [
+     {
+      "t": "T yardımcı hücre tip 1",
+      "a": "IFN-γ üreterek makrofajları aktive eden CD4+ T hücre alt grubu.",
+      "k": "terim",
+      "b": [
+       [
+        0.135,
+        0.4216,
+        0.2843,
+        0.4577
+       ]
+      ]
+     }
+    ]
+   },
+   "11": {
+    "bos": 0.1435,
+    "t": [
+     {
+      "t": "Antijen sunumu",
+      "a": "Antijen sunan hücrelerin işlenmiş peptitleri MHC molekülleri üzerinde T lenfositlere göstermesi ve ko-uyarıcı sinyalle birlikte adaptif yanıtı başlatmasıdır.",
+      "k": "terim",
+      "b": [
+       [
+        0.1925,
+        0.2399,
+        0.3958,
+        0.3122
+       ]
+      ]
+     },
+     {
+      "t": "Çapraz sunum",
+      "a": "Dendritik hücrenin dışarıdan aldığı tümör antijenini MHC sınıf I bağlamında CD8+ T hücrelerine sunması.",
+      "k": "terim",
+      "b": [
+       [
+        0.4128,
+        0.3974,
+        0.5534,
+        0.4517
+       ]
+      ]
+     },
+     {
+      "t": "Fas Ligandı",
+      "a": "Aktive sitotoksik T lenfositler (CTL) ve NK hücreleri yüzeyinde eksprese edilen, Fas (CD95) reseptörüne bağlanarak hedef hücrede apoptozu tetikleyen transmembran proteindir.",
+      "k": "terim",
+      "b": [
+       [
+        0.4313,
+        0.7832,
+        0.5601,
+        0.8465
+       ]
+      ]
+     },
+     {
+      "t": "Apoptoz",
+      "a": "Hücrenin genetik programı dahilinde kendi kendini yok ettiği, kaspaz enzimlerinin aktive olduğu, hücre membran bütünlüğünün korunduğu ve ENFLAMASYON OLUŞTURMAYAN programlı hücre ölümüdür.",
+      "k": "terim",
+      "b": [
+       [
+        0.7321,
+        0.7832,
+        0.8279,
+        0.8465
+       ]
+      ]
+     },
+     {
+      "t": "Tümör",
+      "a": "Yeni büyüme anlamına gelen, normal büyüme kontrolüne dirençli otonom hücre çoğalması.",
+      "k": "terim",
+      "b": [
+       [
+        0.0975,
+        0.2399,
+        0.185,
+        0.3122
+       ],
+       [
+        0.135,
+        0.5486,
+        0.2116,
+        0.6119
+       ],
+       [
+        0.135,
+        0.7092,
+        0.2116,
+        0.7725
+       ]
+      ]
+     }
+    ]
+   },
+   "12": {
+    "bos": 0.1316,
+    "t": [
+     {
+      "t": "T yardımcı hücre tip 1",
+      "a": "IFN-γ üreterek makrofajları aktive eden CD4+ T hücre alt grubu.",
+      "k": "terim",
+      "b": [
+       [
+        0.1342,
+        0.0735,
+        0.5468,
+        0.173
+       ],
+       [
+        0.0975,
+        0.2399,
+        0.3891,
+        0.3122
+       ]
+      ]
+     },
+     {
+      "t": "İnterferon gama",
+      "a": "Th1 hücrelerinin ürettiği, makrofajları aktive eden sitokin.",
+      "k": "terim",
+      "b": [
+       [
+        0.135,
+        0.3263,
+        0.3257,
+        0.3897
+       ]
+      ]
+     },
+     {
+      "t": "Makrofaj",
+      "a": "Mikropları ve nekrotik hücreleri yutarak (fagositoz) ortadan kaldıran başlıca fagositlerden biri. İki kaynağı vardır: kandan gelen monositler ve doku histiyositleri.",
+      "k": "terim",
+      "b": [
+       [
+        0.7186,
+        0.0735,
+        0.9344,
+        0.173
+       ],
+       [
+        0.135,
+        0.4004,
+        0.279,
+        0.4637
+       ],
+       [
+        0.1894,
+        0.4769,
+        0.3038,
+        0.5493
+       ]
+      ]
+     },
+     {
+      "t": "Tümör",
+      "a": "Yeni büyüme anlamına gelen, normal büyüme kontrolüne dirençli otonom hücre çoğalması.",
+      "k": "terim",
+      "b": [
+       [
+        0.135,
+        0.561,
+        0.2116,
+        0.6243
+       ],
+       [
+        0.5387,
+        0.7951,
+        0.6737,
+        0.8584
+       ]
+      ]
+     }
+    ]
+   },
+   "13": {
+    "bos": 0.1263,
+    "t": [
+     {
+      "t": "NK hücreleri",
+      "a": "Virüsle enfekte hücreleri ve tümör hücrelerini önceden aktive edilmeden tanıyıp öldürebilen, doğal immün sisteme ait lenfositlerdir.",
+      "k": "terim",
+      "b": [
+       [
+        0.1725,
+        0.526,
+        0.2944,
+        0.5803
+       ]
+      ]
+     },
+     {
+      "t": "Kompleman",
+      "a": "Çözünebilir plazma proteinleri ve membran reseptörlerinden oluşan; opsonizasyon, kemotaksi ve hücre lizisiyle özellikle bakterilere karşı savunma sağlayan sistemdir.",
+      "k": "terim",
+      "b": [
+       [
+        0.135,
+        0.5853,
+        0.2774,
+        0.6486
+       ]
+      ]
+     },
+     {
+      "t": "Tümör",
+      "a": "Yeni büyüme anlamına gelen, normal büyüme kontrolüne dirençli otonom hücre çoğalması.",
+      "k": "terim",
+      "b": [
+       [
+        0.2598,
+        0.0735,
+        0.4518,
+        0.173
+       ],
+       [
+        0.135,
+        0.3115,
+        0.2116,
+        0.3748
+       ],
+       [
+        0.1992,
+        0.7311,
+        0.3342,
+        0.7944
+       ]
+      ]
+     }
+    ]
+   },
+   "14": {
+    "bos": 0.1455,
+    "t": [
+     {
+      "t": "Kanser immün düzenlemesi",
+      "a": "Bağışıklık sisteminin tümörde kaçış yeteneği en yüksek alt klonları seçmesi.",
+      "k": "terim",
+      "b": [
+       [
+        0.0975,
+        0.3809,
+        0.472,
+        0.4533
+       ]
+      ]
+     }
+    ]
+   },
+   "15": {
+    "bos": 0.1316,
+    "t": [
+     {
+      "t": "β2-mikroglobulin",
+      "a": "MHC sınıf I molekülünün yapısal bileşeni; mutasyonu MHC sınıf I ekspresyonunu azaltır.",
+      "k": "terim",
+      "b": [
+       [
+        0.135,
+        0.3263,
+        0.3379,
+        0.3897
+       ]
+      ]
+     },
+     {
+      "t": "Tümör",
+      "a": "Yeni büyüme anlamına gelen, normal büyüme kontrolüne dirençli otonom hücre çoğalması.",
+      "k": "terim",
+      "b": [
+       [
+        0.3587,
+        0.561,
+        0.4326,
+        0.6243
+       ],
+       [
+        0.135,
+        0.7951,
+        0.2432,
+        0.8584
+       ]
+      ]
+     }
+    ]
+   },
+   "16": {
+    "bos": 0.0424,
+    "t": [
+     {
+      "t": "Programlanmış Hücre Ölümü Ligandı 1",
+      "a": "Programlanmış hücre ölümü ligandı 1; T hücre yanıtını baskılayan bağışıklık kontrol noktası molekülü.",
+      "k": "terim",
+      "b": [
+       [
+        0.1365,
+        0.2647,
+        0.6206,
+        0.3311
+       ]
+      ]
+     },
+     {
+      "t": "Programlanmış Hücre Ölümü 1",
+      "a": "Programlanmış hücre ölümü 1; T hücre üzerindeki inhibitör kontrol noktası reseptörü.",
+      "k": "terim",
+      "b": [
+       [
+        0.1365,
+        0.4301,
+        0.5242,
+        0.4964
+       ]
+      ]
+     },
+     {
+      "t": "Sitotoksik T lenfosit",
+      "a": "Yabancı etken taşıyan hücrelere doğrudan tutunarak veya lenfokin salgılayarak onları öldüren T lenfosit grubu. Aktive CD8+ T hücreleri, sitoplazmalarında mikrop (çoğunlukla virüs) taşıyan hücreleri öldüren CTL'lere farklılaşır.",
+      "k": "terim",
+      "b": [
+       [
+        0.174,
+        0.8395,
+        0.3864,
+        0.8968
+       ]
+      ]
+     },
+     {
+      "t": "CTLA-4",
+      "a": "T lenfosit yüzeyinde CD28 ile yarışarak APC'deki B7 moleküllerine çok daha yüksek afiniteyle bağlanan inhibitör kontrol noktası molekülü.",
+      "k": "terim",
+      "b": [
+       [
+        0.5116,
+        0.8395,
+        0.5768,
+        0.8968
+       ]
+      ]
+     },
+     {
+      "t": "PD-L1",
+      "a": "Tümör hücreleri ve tümör çevresindeki miyeloid hücrelerde ifade edilen, PD-1'e bağlanarak T hücre aktivitesini baskılayan ligand.",
+      "k": "terim",
+      "b": [
+       [
+        0.64,
+        0.2647,
+        0.7029,
+        0.3311
+       ],
+       [
+        0.174,
+        0.6173,
+        0.2367,
+        0.6745
+       ]
+      ]
+     },
+     {
+      "t": "Tümör",
+      "a": "Yeni büyüme anlamına gelen, normal büyüme kontrolüne dirençli otonom hücre çoğalması.",
+      "k": "terim",
+      "b": [
+       [
+        0.174,
+        0.3287,
+        0.2432,
+        0.386
+       ],
+       [
+        0.3813,
+        0.3287,
+        0.4482,
+        0.386
+       ]
+      ]
+     }
+    ]
+   },
+   "17": {
+    "bos": 0.1596,
+    "t": [
+     {
+      "t": "Transforme edici büyüme faktörü beta",
+      "a": "Normal epitel, endotel ve hematopoetik hücrelerde proliferasyonun güçlü inhibitörü olan, bağlam bağımlı olarak tümör destekleyici de olabilen sitokin.",
+      "k": "terim",
+      "b": [
+       [
+        0.135,
+        0.3102,
+        0.3958,
+        0.3463
+       ]
+      ]
+     },
+     {
+      "t": "İnterlökin 10",
+      "a": "Tümörün bağışıklıktan kaçışında rol alan immün baskılayıcı sitokin.",
+      "k": "terim",
+      "b": [
+       [
+        0.135,
+        0.3671,
+        0.2207,
+        0.4032
+       ]
+      ]
+     },
+     {
+      "t": "Sitokinler",
+      "a": "Lenforetiküler hücrelerde sentezlenen, immün yanıtı ve hematopoezi düzenleyen heterojen protein grubudur; enflamasyonda hem lokal hem sistemik etkilerin başlıca aracılarındandır.",
+      "k": "terim",
+      "b": [
+       [
+        0.3249,
+        0.2298,
+        0.4365,
+        0.2961
+       ]
+      ]
+     },
+     {
+      "t": "Proteazom",
+      "a": "Uygunsuz ya da hasarlı proteinleri parçalayan protein yıkım kompleksi; etkinliği yaşla azalabilir.",
+      "k": "terim",
+      "b": [
+       [
+        0.135,
+        0.7731,
+        0.2449,
+        0.8304
+       ]
+      ]
+     },
+     {
+      "t": "Tümör",
+      "a": "Yeni büyüme anlamına gelen, normal büyüme kontrolüne dirençli otonom hücre çoğalması.",
+      "k": "terim",
+      "b": [
+       [
+        0.2766,
+        0.6493,
+        0.3435,
+        0.7065
+       ]
+      ]
+     }
+    ]
+   },
+   "18": {
+    "bos": 0.0579,
+    "t": [
+     {
+      "t": "Programlanmış Hücre Ölümü Ligandı 1",
+      "a": "Programlanmış hücre ölümü ligandı 1; T hücre yanıtını baskılayan bağışıklık kontrol noktası molekülü.",
+      "k": "terim",
+      "b": [
+       [
+        0.135,
+        0.4394,
+        0.4795,
+        0.4877
+       ]
+      ]
+     },
+     {
+      "t": "İmmün kontrol noktası inhibitörleri",
+      "a": "PD-1, PD-L1 ya da CTLA-4'ü bloke ederek T hücreler üzerindeki baskılayıcı \"frenleri\" kaldıran ve antitümör yanıtı yeniden etkinleştiren monoklonal antikorlardır.",
+      "k": "terim",
+      "b": [
+       [
+        0.1488,
+        0.0776,
+        0.7481,
+        0.1681
+       ]
+      ]
+     },
+     {
+      "t": "Programlanmış Hücre Ölümü 1",
+      "a": "Programlanmış hücre ölümü 1; T hücre üzerindeki inhibitör kontrol noktası reseptörü.",
+      "k": "terim",
+      "b": [
+       [
+        0.135,
+        0.392,
+        0.4111,
+        0.4403
+       ]
+      ]
+     },
+     {
+      "t": "Sitotoksik T lenfosit",
+      "a": "Yabancı etken taşıyan hücrelere doğrudan tutunarak veya lenfokin salgılayarak onları öldüren T lenfosit grubu. Aktive CD8+ T hücreleri, sitoplazmalarında mikrop (çoğunlukla virüs) taşıyan hücreleri öldüren CTL'lere farklılaşır.",
+      "k": "terim",
+      "b": [
+       [
+        0.135,
+        0.4862,
+        0.3141,
+        0.5345
+       ]
+      ]
+     },
+     {
+      "t": "Monoklonal antikorlar",
+      "a": "Tek bir antijene yüksek afinite ve özgüllükle bağlanan, moleküler biyoloji ile üretilen antikorlar ve fragmanlarıdır; antitümör, antianjiyojenik ve immünomodülatör amaçlarla kullanılır.",
+      "k": "terim",
+      "b": [
+       [
+        0.3285,
+        0.5899,
+        0.5274,
+        0.6382
+       ],
+       [
+        0.2644,
+        0.6368,
+        0.4634,
+        0.685
+       ]
+      ]
+     },
+     {
+      "t": "CTLA-4",
+      "a": "T lenfosit yüzeyinde CD28 ile yarışarak APC'deki B7 moleküllerine çok daha yüksek afiniteyle bağlanan inhibitör kontrol noktası molekülü.",
+      "k": "terim",
+      "b": [
+       [
+        0.42,
+        0.4862,
+        0.4772,
+        0.5345
+       ],
+       [
+        0.135,
+        0.6368,
+        0.2128,
+        0.685
+       ]
+      ]
+     },
+     {
+      "t": "PD-L1",
+      "a": "Tümör hücreleri ve tümör çevresindeki miyeloid hücrelerde ifade edilen, PD-1'e bağlanarak T hücre aktivitesini baskılayan ligand.",
+      "k": "terim",
+      "b": [
+       [
+        0.494,
+        0.4394,
+        0.5412,
+        0.4877
+       ],
+       [
+        0.2093,
+        0.5899,
+        0.2769,
+        0.6382
+       ]
+      ]
+     }
+    ]
+   },
+   "19": {
+    "bos": 0.0394,
+    "t": [
+     {
+      "t": "Otoimmünite",
+      "a": "Vücudun kendisine karşı toleransını kaybetmesi veya öz dokularını yabancıdan ayıramaması sonucu öze reaktif T ve B lenfositlerinin doku hasarı oluşturmasıdır.",
+      "k": "terim",
+      "b": [
+       [
+        0.135,
+        0.6664,
+        0.2711,
+        0.7207
+       ]
+      ]
+     },
+     {
+      "t": "Neoantijen",
+      "a": "Sürücü veya yolcu mutasyonlar sonucu protein dizisinde oluşan, bağışıklık sistemiyle önceden tanışmamış yeni peptit.",
+      "k": "terim",
+      "b": [
+       [
+        0.3921,
+        0.5627,
+        0.4833,
+        0.6079
+       ]
+      ]
+     },
+     {
+      "t": "Remisyon",
+      "a": "Tümör dokusu ile kanser belirti ve bulgularının kısmen veya tamamen azalması ya da kaybolması.",
+      "k": "terim",
+      "b": [
+       [
+        0.2538,
+        0.2889,
+        0.347,
+        0.3432
+       ]
+      ]
+     }
+    ]
+   },
+   "20": {
+    "bos": 0.1596,
+    "t": [
+     {
+      "t": "Adaptif T hücre transferi",
+      "a": "Tümöre spesifik T hücrelerinin in vitro çoğaltılıp hastaya geri verilmesi.",
+      "k": "terim",
+      "b": [
+       [
+        0.0975,
+        0.3512,
+        0.3951,
+        0.4176
+       ]
+      ]
+     },
+     {
+      "t": "Sitokin salınım sendromu",
+      "a": "Aktive bağışıklık hücrelerinin aşırı sitokin salgılamasıyla oluşan ağır sistemik tablo; CAR-T tedavisinin sınırlamasıdır.",
+      "k": "terim",
+      "b": [
+       [
+        0.1949,
+        0.7162,
+        0.4622,
+        0.7735
+       ]
+      ]
+     },
+     {
+      "t": "Tümör",
+      "a": "Yeni büyüme anlamına gelen, normal büyüme kontrolüne dirençli otonom hücre çoğalması.",
+      "k": "terim",
+      "b": [
+       [
+        0.0975,
+        0.2298,
+        0.1778,
+        0.2961
+       ],
+       [
+        0.135,
+        0.2937,
+        0.2042,
+        0.351
+       ],
+       [
+        0.135,
+        0.4176,
+        0.217,
+        0.4748
+       ]
+      ]
+     },
+     {
+      "t": "CAR-T",
+      "a": "Yapay reseptör eklenmiş T hücresiyle yapılan tedavi; B hücreli ALL ve bazı lenfomalarda başarılıdır.",
+      "k": "kisaltma",
+      "b": [
+       [
+        0.5641,
+        0.4721,
+        0.6276,
+        0.5385
+       ]
+      ]
+     }
+    ]
+   },
+   "21": {
+    "bos": 0.1316,
+    "t": [
+     {
+      "t": "Eradikasyon",
+      "a": "Bir patojenin dünya çapında görülme sıklığının kalıcı olarak sıfırlanması; tüm dünyadan rezervuarlarıyla silinmesi.",
+      "k": "terim",
+      "b": [
+       [
+        0.659,
+        0.7186,
+        0.8003,
+        0.7819
+       ]
+      ]
+     },
+     {
+      "t": "Metastaz",
+      "a": "Primer tümörden fiziksel olarak ayrı bölgelerde neoplastik implantların oluşması. Maligniteyi ayırt ettiren özelliktir ve kanser ilişkili mortalitenin başlıca nedenidir; bazal hücreli karsinomlar ve birçok primer SSS tümörü nadiren metastaz yapar.",
+      "k": "terim",
+      "b": [
+       [
+        0.2331,
+        0.0735,
+        0.4035,
+        0.173
+       ],
+       [
+        0.0975,
+        0.2399,
+        0.2158,
+        0.3122
+       ]
+      ]
+     },
+     {
+      "t": "Kanser",
+      "a": "Lokal invazyon yapan ve uzak metastaz kapasitesi olan tümör; tedavi edilmezse genellikle ölümcüldür.",
+      "k": "terim",
+      "b": [
+       [
+        0.135,
+        0.3263,
+        0.215,
+        0.3897
+       ]
+      ]
+     },
+     {
+      "t": "Tümör",
+      "a": "Yeni büyüme anlamına gelen, normal büyüme kontrolüne dirençli otonom hücre çoğalması.",
+      "k": "terim",
+      "b": [
+       [
+        0.135,
+        0.484,
+        0.2116,
+        0.5473
+       ]
+      ]
+     }
+    ]
+   },
+   "22": {
+    "bos": 0.1535,
+    "t": [
+     {
+      "t": "Hücre dışı matriks",
+      "a": "Hücreler arasını dolduran, kollajen, elastin, proteoglikan ve yapışkan glikoproteinlerden oluşan yapısal ağdır; doku onarımında fibroblastlarca sentezlenir ve hücre davranışını yönlendirir.",
+      "k": "terim",
+      "b": [
+       [
+        0.135,
+        0.4004,
+        0.3467,
+        0.4637
+       ]
+      ]
+     },
+     {
+      "t": "Ekstravazasyon",
+      "a": "Tümör hücrelerinin kılcal yataktan çıkışı; endotel adezyon molekülleri ve kemokin reseptörleri rol oynar.",
+      "k": "terim",
+      "b": [
+       [
+        0.3661,
+        0.6226,
+        0.5369,
+        0.6859
+       ]
+      ]
+     },
+     {
+      "t": "İntravazasyon",
+      "a": "Tümör hücrelerinin damar içine girişi; tümör hücresi, makrofaj ve endotel etkileşimiyle olur.",
+      "k": "terim",
+      "b": [
+       [
+        0.3505,
+        0.4745,
+        0.505,
+        0.5378
+       ]
+      ]
+     },
+     {
+      "t": "Primer",
+      "a": "Monoklonal plazma hücre diskrazilerinde immünoglobulin hafif zincirlerinin (özellikle lambda) dokuda birikmesi.",
+      "k": "terim",
+      "b": [
+       [
+        0.135,
+        0.3263,
+        0.2151,
+        0.3897
+       ]
+      ]
+     },
+     {
+      "t": "Tümör",
+      "a": "Yeni büyüme anlamına gelen, normal büyüme kontrolüne dirençli otonom hücre çoğalması.",
+      "k": "terim",
+      "b": [
+       [
+        0.2218,
+        0.3263,
+        0.3406,
+        0.3897
+       ],
+       [
+        0.3891,
+        0.5486,
+        0.4581,
+        0.6119
+       ]
+      ]
+     }
+    ]
+   },
+   "23": {
+    "bos": 0.0175,
+    "t": [
+     {
+      "t": "Tümör",
+      "a": "Yeni büyüme anlamına gelen, normal büyüme kontrolüne dirençli otonom hücre çoğalması.",
+      "k": "terim",
+      "b": [
+       [
+        0.0243,
+        0.0507,
+        0.0548,
+        0.0683
+       ],
+       [
+        0.1216,
+        0.8177,
+        0.1522,
+        0.8348
+       ],
+       [
+        0.199,
+        0.4928,
+        0.2231,
+        0.5099
+       ]
+      ]
+     }
+    ]
+   },
+   "24": {
+    "bos": 0.1329,
+    "t": [
+     {
+      "t": "Fonksiyon kaybı",
+      "a": "Fonksiyon kaybı; Galen'in eklediği inflamasyonun beşinci klasik belirtisi.",
+      "k": "terim",
+      "b": [
+       [
+        0.2559,
+        0.4395,
+        0.4168,
+        0.4968
+       ]
+      ]
+     },
+     {
+      "t": "E-kadherin",
+      "a": "Epitel hücreleri arasında güçlü hücre–hücre bağlantısı kuran adezyon molekülü.",
+      "k": "terim",
+      "b": [
+       [
+        0.135,
+        0.3109,
+        0.2375,
+        0.3621
+       ],
+       [
+        0.135,
+        0.4395,
+        0.25,
+        0.4968
+       ],
+       [
+        0.1725,
+        0.5011,
+        0.275,
+        0.5523
+       ]
+      ]
+     },
+     {
+      "t": "β-katenin",
+      "a": "Hem E-kadherin ile hücre–hücre adezyonunda hem WNT yolunda transkripsiyon kofaktörü olarak görev yapan protein.",
+      "k": "terim",
+      "b": [
+       [
+        0.1725,
+        0.5556,
+        0.2634,
+        0.6068
+       ]
+      ]
+     },
+     {
+      "t": "Metastaz",
+      "a": "Primer tümörden fiziksel olarak ayrı bölgelerde neoplastik implantların oluşması. Maligniteyi ayırt ettiren özelliktir ve kanser ilişkili mortalitenin başlıca nedenidir; bazal hücreli karsinomlar ve birçok primer SSS tümörü nadiren metastaz yapar.",
+      "k": "terim",
+      "b": [
+       [
+        0.0975,
+        0.3684,
+        0.2113,
+        0.4348
+       ]
+      ]
+     },
+     {
+      "t": "SNAIL",
+      "a": "E-kadherin gen ekspresyonunu baskılayan EMT transkripsiyon faktörleri.",
+      "k": "kisaltma",
+      "b": [
+       [
+        0.1725,
+        0.6119,
+        0.2239,
+        0.6631
+       ]
+      ]
+     },
+     {
+      "t": "Tümör",
+      "a": "Yeni büyüme anlamına gelen, normal büyüme kontrolüne dirençli otonom hücre çoğalması.",
+      "k": "terim",
+      "b": [
+       [
+        0.135,
+        0.7998,
+        0.2042,
+        0.8571
+       ]
+      ]
+     }
+    ]
+   },
+   "25": {
+    "bos": 0.1252,
+    "t": [
+     {
+      "t": "Hücre dışı matriks",
+      "a": "Hücreler arasını dolduran, kollajen, elastin, proteoglikan ve yapışkan glikoproteinlerden oluşan yapısal ağdır; doku onarımında fibroblastlarca sentezlenir ve hücre davranışını yönlendirir.",
+      "k": "terim",
+      "b": [
+       [
+        0.0975,
+        0.2351,
+        0.3187,
+        0.3014
+       ]
+      ]
+     },
+     {
+      "t": "Plazminojen",
+      "a": "Plazminin inaktif öncülü; fibrine bağlanınca t-PA ve ürokinazla aktive edilir.",
+      "k": "terim",
+      "b": [
+       [
+        0.3139,
+        0.6172,
+        0.4314,
+        0.6685
+       ]
+      ]
+     },
+     {
+      "t": "Ürokinaz",
+      "a": "Plazminojeni plazmine çeviren plazminojen aktivatörü.",
+      "k": "terim",
+      "b": [
+       [
+        0.1725,
+        0.6125,
+        0.2673,
+        0.6698
+       ]
+      ]
+     },
+     {
+      "t": "Kollajen",
+      "a": "Skar dokusunun ana yapısal proteini; fibriler kollajenler tip I, II, III ve V'tir. Üçlü heliks yapısındadır ve çapraz bağlanması için C vitamini gerekir; eksikliğinde iskorbüt ve zayıf yara iyileşmesi görülür.",
+      "k": "terim",
+      "b": [
+       [
+        0.5552,
+        0.7459,
+        0.6334,
+        0.8031
+       ]
+      ]
+     },
+     {
+      "t": "Laminin",
+      "a": "Bazal membranda bulunan yapışkan glikoprotein; hücre adezyonu ve göçünde iskele görevi görür.",
+      "k": "terim",
+      "b": [
+       [
+        0.649,
+        0.7459,
+        0.7258,
+        0.8031
+       ]
+      ]
+     },
+     {
+      "t": "Tümör",
+      "a": "Yeni büyüme anlamına gelen, normal büyüme kontrolüne dirençli otonom hücre çoğalması.",
+      "k": "terim",
+      "b": [
+       [
+        0.0975,
+        0.4301,
+        0.1778,
+        0.4964
+       ]
+      ]
+     }
+    ]
+   },
+   "26": {
+    "bos": 0.2081,
+    "t": [
+     {
+      "t": "İntegrinler",
+      "a": "Kemokin uyarısıyla düşük afiniteli formdan yüksek afiniteli forma geçerek lökositin endotele sıkı yapışmasını sağlayan reseptörler.",
+      "k": "terim",
+      "b": [
+       [
+        0.301,
+        0.3263,
+        0.4243,
+        0.3897
+       ]
+      ]
+     },
+     {
+      "t": "Tümör",
+      "a": "Yeni büyüme anlamına gelen, normal büyüme kontrolüne dirençli otonom hücre çoğalması.",
+      "k": "terim",
+      "b": [
+       [
+        0.167,
+        0.0332,
+        0.2765,
+        0.1236
+       ],
+       [
+        0.0975,
+        0.4005,
+        0.185,
+        0.4728
+       ],
+       [
+        0.135,
+        0.7186,
+        0.2116,
+        0.7819
+       ]
+      ]
+     }
+    ]
+   },
+   "27": {
+    "bos": 0.1286,
+    "t": [
+     {
+      "t": "Hepatosit büyüme faktörü",
+      "a": "Hepatosit çoğalmasını uyaran ve karaciğer rejenerasyonunda rol oynayan büyüme faktörü.",
+      "k": "terim",
+      "b": [
+       [
+        0.135,
+        0.6742,
+        0.4501,
+        0.7375
+       ]
+      ]
+     },
+     {
+      "t": "Sitokinler",
+      "a": "Lenforetiküler hücrelerde sentezlenen, immün yanıtı ve hematopoezi düzenleyen heterojen protein grubudur; enflamasyonda hem lokal hem sistemik etkilerin başlıca aracılarındandır.",
+      "k": "terim",
+      "b": [
+       [
+        0.1691,
+        0.798,
+        0.279,
+        0.8614
+       ]
+      ]
+     },
+     {
+      "t": "Kemokin",
+      "a": "Lökositleri aktive eden ve kemotaksiyle çeken sitokin grubu; örneğin IL-8.",
+      "k": "terim",
+      "b": [
+       [
+        0.8065,
+        0.7412,
+        0.9074,
+        0.8045
+       ]
+      ]
+     },
+     {
+      "t": "Tümör",
+      "a": "Yeni büyüme anlamına gelen, normal büyüme kontrolüne dirençli otonom hücre çoğalması.",
+      "k": "terim",
+      "b": [
+       [
+        0.3602,
+        0.0735,
+        0.4807,
+        0.173
+       ],
+       [
+        0.0975,
+        0.5954,
+        0.185,
+        0.6678
+       ],
+       [
+        0.135,
+        0.7412,
+        0.233,
+        0.8045
+       ]
+      ]
+     }
+    ]
+   },
+   "28": {
+    "bos": 0.1596,
+    "t": [
+     {
+      "t": "Epitel-mezenkimal geçiş",
+      "a": "Epitel hücrelerinin hücreler arası bağlarını ve epitel belirteçlerini yitirip mezenkimal fenotip kazanması; tümör hücrelerinin hareketliliğini ve invazyon kapasitesini artırır.",
+      "k": "terim",
+      "b": [
+       [
+        0.2455,
+        0.0735,
+        0.7009,
+        0.173
+       ]
+      ]
+     },
+     {
+      "t": "E-kadherin",
+      "a": "Epitel hücreleri arasında güçlü hücre–hücre bağlantısı kuran adezyon molekülü.",
+      "k": "terim",
+      "b": [
+       [
+        0.135,
+        0.4176,
+        0.25,
+        0.4748
+       ],
+       [
+        0.135,
+        0.6493,
+        0.25,
+        0.7065
+       ]
+      ]
+     },
+     {
+      "t": "Vimentin",
+      "a": "EMT sırasında artan mezenkimal belirteç.",
+      "k": "terim",
+      "b": [
+       [
+        0.135,
+        0.4715,
+        0.2277,
+        0.5288
+       ]
+      ]
+     },
+     {
+      "t": "İnvazyon",
+      "a": "Mikroorganizmanın konak hücrelere veya dokulara girişi ve vücutta yayılmasıdır.",
+      "k": "terim",
+      "b": [
+       [
+        0.3657,
+        0.7731,
+        0.4591,
+        0.8304
+       ]
+      ]
+     },
+     {
+      "t": "SNAIL",
+      "a": "E-kadherin gen ekspresyonunu baskılayan EMT transkripsiyon faktörleri.",
+      "k": "kisaltma",
+      "b": [
+       [
+        0.135,
+        0.5953,
+        0.1925,
+        0.6526
+       ]
+      ]
+     }
+    ]
+   },
+   "29": {
+    "bos": 0.1263,
+    "t": [
+     {
+      "t": "İntravazasyon",
+      "a": "Tümör hücrelerinin damar içine girişi; tümör hücresi, makrofaj ve endotel etkileşimiyle olur.",
+      "k": "terim",
+      "b": [
+       [
+        0.1906,
+        0.0735,
+        0.4436,
+        0.173
+       ],
+       [
+        0.0975,
+        0.2351,
+        0.2771,
+        0.3075
+       ]
+      ]
+     },
+     {
+      "t": "Tümör",
+      "a": "Yeni büyüme anlamına gelen, normal büyüme kontrolüne dirençli otonom hücre çoğalması.",
+      "k": "terim",
+      "b": [
+       [
+        0.135,
+        0.3115,
+        0.2116,
+        0.3748
+       ],
+       [
+        0.135,
+        0.3803,
+        0.2116,
+        0.4436
+       ],
+       [
+        0.135,
+        0.526,
+        0.2116,
+        0.5894
+       ]
+      ]
+     }
+    ]
+   },
+   "30": {
+    "bos": 0.1242,
+    "t": [
+     {
+      "t": "Tohum ve toprak hipotezi",
+      "a": "Metastazın tümör hücresi (tohum) ile hedef organ stroması (toprak) arasındaki uyuma bağlı olduğunu öne süren hipotez.",
+      "k": "terim",
+      "b": [
+       [
+        0.4048,
+        0.6196,
+        0.6761,
+        0.6769
+       ]
+      ]
+     },
+     {
+      "t": "Adezyon molekülleri",
+      "a": "Lökositlerin endotele tutunması ve damar dışına göçünü sağlayan, selektin ve integrin aileleri ile bunların endotel ligandlarından oluşan yüzey molekülleridir.",
+      "k": "terim",
+      "b": [
+       [
+        0.2233,
+        0.3678,
+        0.4389,
+        0.4251
+       ]
+      ]
+     },
+     {
+      "t": "Organ tropizmi",
+      "a": "Tümör hücresindeki kemokin reseptörlerinin hedef organ stromasının kemokinlerine yanıt vermesiyle metastazın belirli organları tercih etmesi.",
+      "k": "terim",
+      "b": [
+       [
+        0.0975,
+        0.4301,
+        0.2781,
+        0.4964
+       ]
+      ]
+     },
+     {
+      "t": "Ekstravazasyon",
+      "a": "Tümör hücrelerinin kılcal yataktan çıkışı; endotel adezyon molekülleri ve kemokin reseptörleri rol oynar.",
+      "k": "terim",
+      "b": [
+       [
+        0.2428,
+        0.0735,
+        0.5208,
+        0.173
+       ],
+       [
+        0.0975,
+        0.2351,
+        0.2784,
+        0.3014
+       ]
+      ]
+     },
+     {
+      "t": "Kolonizasyon",
+      "a": "Mikroorganizmanın vücut yüzeyine yerleşip hastalık oluşturmadan çoğalması.",
+      "k": "terim",
+      "b": [
+       [
+        0.5846,
+        0.0735,
+        0.8257,
+        0.173
+       ],
+       [
+        0.0975,
+        0.6819,
+        0.2534,
+        0.7482
+       ]
+      ]
+     },
+     {
+      "t": "Anjiyogenez",
+      "a": "Mevcut damarlardan yeni damar oluşumu. Yara iyileşmesi, iskemik dokularda kollateral gelişimi, tümör büyümesi ve ıslak maküler dejenerasyon gibi patolojik durumlarda önemlidir.",
+      "k": "terim",
+      "b": [
+       [
+        0.4137,
+        0.8146,
+        0.5273,
+        0.8658
+       ]
+      ]
+     },
+     {
+      "t": "Kemokin",
+      "a": "Lökositleri aktive eden ve kemotaksiyle çeken sitokin grubu; örneğin IL-8.",
+      "k": "terim",
+      "b": [
+       [
+        0.4757,
+        0.3678,
+        0.5668,
+        0.4251
+       ],
+       [
+        0.3705,
+        0.5011,
+        0.4617,
+        0.5584
+       ],
+       [
+        0.5317,
+        0.5627,
+        0.6502,
+        0.614
+       ]
+      ]
+     },
+     {
+      "t": "Stroma",
+      "a": "Neoplazmın konak kökenli destek dokusu: bağ dokusu, damarlar ve inflamatuvar hücreler; beslenme sağlar ve tümörle iki yönlü sinyalleşir.",
+      "k": "terim",
+      "b": [
+       [
+        0.2957,
+        0.5627,
+        0.426,
+        0.614
+       ],
+       [
+        0.2138,
+        0.6196,
+        0.2925,
+        0.6769
+       ]
+      ]
+     }
+    ]
+   },
+   "31": {
+    "bos": 0.0873,
+    "t": [
+     {
+      "t": "Tümör dormansisi",
+      "a": "Tümör hücrelerinin uzun süre bölünmeden canlı kaldığı uyku benzeri durum.",
+      "k": "terim",
+      "b": [
+       [
+        0.5538,
+        0.0735,
+        0.8925,
+        0.173
+       ],
+       [
+        0.682,
+        0.5756,
+        0.7941,
+        0.6088
+       ]
+      ]
+     },
+     {
+      "t": "Anjiyogenez",
+      "a": "Mevcut damarlardan yeni damar oluşumu. Yara iyileşmesi, iskemik dokularda kollateral gelişimi, tümör büyümesi ve ıslak maküler dejenerasyon gibi patolojik durumlarda önemlidir.",
+      "k": "terim",
+      "b": [
+       [
+        0.2176,
+        0.5681,
+        0.3381,
+        0.6223
+       ]
+      ]
+     },
+     {
+      "t": "Metastaz",
+      "a": "Primer tümörden fiziksel olarak ayrı bölgelerde neoplastik implantların oluşması. Maligniteyi ayırt ettiren özelliktir ve kanser ilişkili mortalitenin başlıca nedenidir; bazal hücreli karsinomlar ve birçok primer SSS tümörü nadiren metastaz yapar.",
+      "k": "terim",
+      "b": [
+       [
+        0.292,
+        0.7873,
+        0.3836,
+        0.8416
+       ]
+      ]
+     },
+     {
+      "t": "Kanser",
+      "a": "Lokal invazyon yapan ve uzak metastaz kapasitesi olan tümör; tedavi edilmezse genellikle ölümcüldür.",
+      "k": "terim",
+      "b": [
+       [
+        0.8043,
+        0.5756,
+        0.8454,
+        0.6088
+       ]
+      ]
+     },
+     {
+      "t": "Konak",
+      "a": "Enfeksiyon etkeninin yerleştiği makroorganizma.",
+      "k": "terim",
+      "b": [
+       [
+        0.135,
+        0.6741,
+        0.1973,
+        0.7284
+       ]
+      ]
+     }
+    ]
+   },
+   "32": {
+    "bos": 0.1235,
+    "t": [
+     {
+      "t": "Bazal hücreli karsinom",
+      "a": "Epidermisin bazal hücrelerinden köken alan, benign karşılığı olmayan, lokal invaziv büyüyen ancak çok nadir metastaz yapan malign epitelyal tümördür.",
+      "k": "terim",
+      "b": [
+       [
+        0.1725,
+        0.4566,
+        0.3611,
+        0.5018
+       ]
+      ]
+     },
+     {
+      "t": "Metastaz",
+      "a": "Primer tümörden fiziksel olarak ayrı bölgelerde neoplastik implantların oluşması. Maligniteyi ayırt ettiren özelliktir ve kanser ilişkili mortalitenin başlıca nedenidir; bazal hücreli karsinomlar ve birçok primer SSS tümörü nadiren metastaz yapar.",
+      "k": "terim",
+      "b": [
+       [
+        0.1924,
+        0.0735,
+        0.3628,
+        0.173
+       ],
+       [
+        0.2595,
+        0.2889,
+        0.3511,
+        0.3432
+       ],
+       [
+        0.2625,
+        0.4021,
+        0.3541,
+        0.4564
+       ]
+      ]
+     },
+     {
+      "t": "Primer",
+      "a": "Monoklonal plazma hücre diskrazilerinde immünoglobulin hafif zincirlerinin (özellikle lambda) dokuda birikmesi.",
+      "k": "terim",
+      "b": [
+       [
+        0.2295,
+        0.501,
+        0.2869,
+        0.5463
+       ]
+      ]
+     },
+     {
+      "t": "Tümör",
+      "a": "Yeni büyüme anlamına gelen, normal büyüme kontrolüne dirençli otonom hücre çoğalması.",
+      "k": "terim",
+      "b": [
+       [
+        0.1496,
+        0.2297,
+        0.2456,
+        0.29
+       ],
+       [
+        0.4588,
+        0.501,
+        0.5225,
+        0.5463
+       ],
+       [
+        0.0975,
+        0.5456,
+        0.1704,
+        0.6059
+       ]
+      ]
+     }
+    ]
+   },
+   "33": {
+    "bos": 0.1414,
+    "t": [
+     {
+      "t": "Adezyon molekülleri",
+      "a": "Lökositlerin endotele tutunması ve damar dışına göçünü sağlayan, selektin ve integrin aileleri ile bunların endotel ligandlarından oluşan yüzey molekülleridir.",
+      "k": "terim",
+      "b": [
+       [
+        0.135,
+        0.4839,
+        0.3533,
+        0.5412
+       ]
+      ]
+     },
+     {
+      "t": "Metastaz",
+      "a": "Primer tümörden fiziksel olarak ayrı bölgelerde neoplastik implantların oluşması. Maligniteyi ayırt ettiren özelliktir ve kanser ilişkili mortalitenin başlıca nedenidir; bazal hücreli karsinomlar ve birçok primer SSS tümörü nadiren metastaz yapar.",
+      "k": "terim",
+      "b": [
+       [
+        0.1689,
+        0.0735,
+        0.3604,
+        0.173
+       ],
+       [
+        0.1972,
+        0.6196,
+        0.294,
+        0.6769
+       ],
+       [
+        0.2529,
+        0.7974,
+        0.3451,
+        0.8486
+       ]
+      ]
+     },
+     {
+      "t": "Kemokin",
+      "a": "Lökositleri aktive eden ve kemotaksiyle çeken sitokin grubu; örneğin IL-8.",
+      "k": "terim",
+      "b": [
+       [
+        0.39,
+        0.4839,
+        0.4812,
+        0.5412
+       ]
+      ]
+     },
+     {
+      "t": "Primer",
+      "a": "Monoklonal plazma hücre diskrazilerinde immünoglobulin hafif zincirlerinin (özellikle lambda) dokuda birikmesi.",
+      "k": "terim",
+      "b": [
+       [
+        0.2234,
+        0.7429,
+        0.2882,
+        0.7941
+       ]
+      ]
+     },
+     {
+      "t": "SNAIL",
+      "a": "E-kadherin gen ekspresyonunu baskılayan EMT transkripsiyon faktörleri.",
+      "k": "kisaltma",
+      "b": [
+       [
+        0.1725,
+        0.3677,
+        0.2239,
+        0.419
+       ]
+      ]
+     },
+     {
+      "t": "Tümör",
+      "a": "Yeni büyüme anlamına gelen, normal büyüme kontrolüne dirençli otonom hücre çoğalması.",
+      "k": "terim",
+      "b": [
+       [
+        0.2935,
+        0.7429,
+        0.3535,
+        0.7941
+       ]
+      ]
+     }
+    ]
+   },
+   "34": {
+    "bos": 0.1252,
+    "t": [
+     {
+      "t": "Metastaz",
+      "a": "Primer tümörden fiziksel olarak ayrı bölgelerde neoplastik implantların oluşması. Maligniteyi ayırt ettiren özelliktir ve kanser ilişkili mortalitenin başlıca nedenidir; bazal hücreli karsinomlar ve birçok primer SSS tümörü nadiren metastaz yapar.",
+      "k": "terim",
+      "b": [
+       [
+        0.5722,
+        0.0735,
+        0.7297,
+        0.173
+       ],
+       [
+        0.2893,
+        0.3677,
+        0.3761,
+        0.419
+       ]
+      ]
+     },
+     {
+      "t": "İnvazyon",
+      "a": "Mikroorganizmanın konak hücrelere veya dokulara girişi ve vücutta yayılmasıdır.",
+      "k": "terim",
+      "b": [
+       [
+        0.1725,
+        0.3677,
+        0.2564,
+        0.419
+       ]
+      ]
+     },
+     {
+      "t": "Kanser",
+      "a": "Lokal invazyon yapan ve uzak metastaz kapasitesi olan tümör; tedavi edilmezse genellikle ölümcüldür.",
+      "k": "terim",
+      "b": [
+       [
+        0.2179,
+        0.0735,
+        0.336,
+        0.173
+       ]
+      ]
+     },
+     {
+      "t": "Tümör",
+      "a": "Yeni büyüme anlamına gelen, normal büyüme kontrolüne dirençli otonom hücre çoğalması.",
+      "k": "terim",
+      "b": [
+       [
+        0.1518,
+        0.2351,
+        0.2571,
+        0.3014
+       ],
+       [
+        0.0975,
+        0.4792,
+        0.1778,
+        0.5456
+       ],
+       [
+        0.135,
+        0.5509,
+        0.2234,
+        0.6082
+       ]
+      ]
+     }
+    ]
+   },
+   "35": {
+    "bos": 0.1178,
+    "t": [
+     {
+      "t": "İmmün kontrol noktası inhibitörleri",
+      "a": "PD-1, PD-L1 ya da CTLA-4'ü bloke ederek T hücreler üzerindeki baskılayıcı \"frenleri\" kaldıran ve antitümör yanıtı yeniden etkinleştiren monoklonal antikorlardır.",
+      "k": "terim",
+      "b": [
+       [
+        0.135,
+        0.3974,
+        0.4893,
+        0.4517
+       ]
+      ]
+     },
+     {
+      "t": "Tümör antijenleri",
+      "a": "Tümör hücrelerinde bulunup bağışıklık sistemince tanınabilen, tanıda ve immünoterapide hedef olarak kullanılan peptit ve proteinlerdir.",
+      "k": "terim",
+      "b": [
+       [
+        0.135,
+        0.2889,
+        0.3067,
+        0.3432
+       ]
+      ]
+     },
+     {
+      "t": "Organ tropizmi",
+      "a": "Tümör hücresindeki kemokin reseptörlerinin hedef organ stromasının kemokinlerine yanıt vermesiyle metastazın belirli organları tercih etmesi.",
+      "k": "terim",
+      "b": [
+       [
+        0.135,
+        0.6149,
+        0.2864,
+        0.6691
+       ]
+      ]
+     },
+     {
+      "t": "Ekstravazasyon",
+      "a": "Tümör hücrelerinin kılcal yataktan çıkışı; endotel adezyon molekülleri ve kemokin reseptörleri rol oynar.",
+      "k": "terim",
+      "b": [
+       [
+        0.6744,
+        0.5627,
+        0.8264,
+        0.617
+       ]
+      ]
+     },
+     {
+      "t": "İntravazasyon",
+      "a": "Tümör hücrelerinin damar içine girişi; tümör hücresi, makrofaj ve endotel etkileşimiyle olur.",
+      "k": "terim",
+      "b": [
+       [
+        0.5247,
+        0.5627,
+        0.6584,
+        0.617
+       ]
+      ]
+     },
+     {
+      "t": "Metastaz",
+      "a": "Primer tümörden fiziksel olarak ayrı bölgelerde neoplastik implantların oluşması. Maligniteyi ayırt ettiren özelliktir ve kanser ilişkili mortalitenin başlıca nedenidir; bazal hücreli karsinomlar ve birçok primer SSS tümörü nadiren metastaz yapar.",
+      "k": "terim",
+      "b": [
+       [
+        0.0975,
+        0.4496,
+        0.1965,
+        0.5099
+       ]
+      ]
+     },
+     {
+      "t": "İnvazyon",
+      "a": "Mikroorganizmanın konak hücrelere veya dokulara girişi ve vücutta yayılmasıdır.",
+      "k": "terim",
+      "b": [
+       [
+        0.4242,
+        0.5627,
+        0.5084,
+        0.617
+       ]
+      ]
+     },
+     {
+      "t": "Dormansi",
+      "a": "Tümör hücrelerinin uzun süre bölünmeden canlı kaldığı uyku benzeri durum.",
+      "k": "terim",
+      "b": [
+       [
+        0.3214,
+        0.6149,
+        0.417,
+        0.6691
+       ]
+      ]
+     }
+    ]
+   }
+  }
+ }
+}
