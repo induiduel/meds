@@ -157,3 +157,38 @@ export function CdParagrafTerimleri({ detay, i, metin }: { detay: CdDetay; i: nu
     </dl>
   );
 }
+
+/** Ders başlığı: her görünümde (metin, PDF, tam ekran) erişilen ⓘ terim düğmesi */
+export function TerimBaslikDugme() {
+  const acik = useTerimYardimci();
+  return (
+    <button type="button" className={`cd-btn is-ikon cd-trm-bas${acik ? ' is-on' : ''}`} aria-pressed={acik}
+      onClick={() => terimYardimciAyarla(!acik)} aria-label="Terim yardımcısı"
+      title={acik ? 'Terim yardımcısı açık (kapat)' : 'Terim yardımcısı: slayttaki terimlerin anlamını göster'}>
+      <Info aria-hidden />
+    </button>
+  );
+}
+
+/** ⋯ Ders seçenekleri menüsü: terim yardımcısı + PDF görünüm anahtarları (açılır pencere değil, satır içi) */
+export function PdfAyarlarMenu({ terimVar }: { terimVar: boolean }) {
+  const g = usePdfGorunum();
+  const t = useTerimYardimci();
+  return (
+    <div className="cd-gor-menu" role="group" aria-label="PDF görünümü">
+      <div className="cd-gor-bas">PDF görünümü</div>
+      {terimVar && (
+        <label className="cd-gor-oge">
+          <span className="cd-gor-m"><b>Terim yardımcısı</b><small>Terimler işaretlenir, dokununca anlamı açılır</small></span>
+          <input type="checkbox" role="switch" className="cd-gor-sw" checked={t} onChange={(e) => terimYardimciAyarla(e.target.checked)} />
+        </label>
+      )}
+      {PDF_GORUNUM.map((x) => (
+        <label key={x.id} className="cd-gor-oge">
+          <span className="cd-gor-m"><b>{x.ad}</b><small>{x.acik}</small></span>
+          <input type="checkbox" role="switch" className="cd-gor-sw" checked={g[x.id]} onChange={(e) => gorunumT[x.id].ayarla(e.target.checked)} />
+        </label>
+      ))}
+    </div>
+  );
+}

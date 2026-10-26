@@ -68,7 +68,7 @@ function elementZoom(el: Element | null | undefined): number {
 
 const PdfDocView = lazy(() => import('../learn/pdf/PdfDocView'));
 import type { PdfMarks } from '../learn/pdf/PdfDocView';
-import { CdParagrafTerimleri, CdTerimKatman, PdfGorunumDugme, TerimDugme, usePdfGorunum } from './CdTerimKatman';
+import { CdParagrafTerimleri, CdTerimKatman, PdfAyarlarMenu, PdfGorunumDugme, TerimBaslikDugme, TerimDugme, usePdfGorunum } from './CdTerimKatman';
 
 const TAKIP_ARA = 8000;
 
@@ -589,6 +589,7 @@ export default function CanliDersDers({ dersKey, kamp }: { dersKey: string; kamp
                 </button>
               )}
               {tanitim.dugme}
+              {pdfVar && <PdfAyarlarMenu terimVar={!!detay.terim} />}
               {mod === 'ikisi' && (
             <div className="cd-duzen-arac" role="group" aria-label="Metin ve PDF bölme düzeni ve boyutu">
               <button
@@ -639,6 +640,7 @@ export default function CanliDersDers({ dersKey, kamp }: { dersKey: string; kamp
           {kamp && !tamEkran && metinGoster && (
             <YaziAyar yazi={yazi} setYazi={setYazi} />
           )}
+          {detay.terim && <TerimBaslikDugme />}
           {tamEkran ? (
             <>
               <button
