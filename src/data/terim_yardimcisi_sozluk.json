@@ -327,10 +327,74 @@
   "uretici": "deepseek",
   "ders": "k1-44-vaskuler-ve-kistik-bobrek-hastaliklari"
  },
+ "kromofob bobrek hucreli karsinom": {
+  "term": "Kromofob böbrek hücreli karsinom",
+  "category": "terim",
+  "definition": "Renal hücreli karsinomun üç ana alt tipinden biri; hücre zarı belirgin, sitoplazması soluk ve az boyanır.",
+  "kaynak": "deepseek",
+  "uretici": "deepseek",
+  "ders": "k1-45-bobrek-tumorleri"
+ },
+ "sporadik": {
+  "term": "Sporadik",
+  "category": "terim",
+  "definition": "Ailede benzer hastalık öyküsü olmadan tek kişide ortaya çıkan tümör; kalıtsal sendromlardan farkı budur.",
+  "kaynak": "deepseek",
+  "uretici": "deepseek",
+  "ders": "k1-45-bobrek-tumorleri"
+ },
  "von hippel–lindau hastaligi": {
   "term": "Von Hippel–Lindau hastalığı",
   "category": "terim",
   "definition": "Otozomal dominant kalıtılan, çoklu neoplazm yatkınlığı yapan sendrom; özellikle serebellar ve retinal hemanjiyoblastomlar görülür, etkilenenlerin %40–60'ında bilateral ve sıklıkla multipl berrak hücreli RHK gelişir.",
+  "kaynak": "deepseek",
+  "uretici": "deepseek",
+  "ders": "k1-45-bobrek-tumorleri"
+ },
+ "multifokal": {
+  "term": "Multifokal",
+  "category": "terim",
+  "definition": "Aynı organda birden fazla bağımsız tümör odağının bulunması; papiller karsinomda sık görülür.",
+  "kaynak": "deepseek",
+  "uretici": "deepseek",
+  "ders": "k1-45-bobrek-tumorleri"
+ },
+ "sagkalim": {
+  "term": "Sağkalım",
+  "category": "terim",
+  "definition": "Tanıdan sonra belirli bir süre boyunca hastanın yaşamını sürdürmesi; prognozun temel ölçütüdür.",
+  "kaynak": "deepseek",
+  "uretici": "deepseek",
+  "ders": "k1-45-bobrek-tumorleri"
+ },
+ "klasik triad": {
+  "term": "Klasik triad",
+  "category": "terim",
+  "definition": "Ağrısız hematüri, ele gelen abdominal kitle ve künt yan ağrısından oluşan üçlü; renal hücreli karsinomda olguların yaklaşık %10 unda birlikte bulunur.",
+  "kaynak": "deepseek",
+  "uretici": "deepseek",
+  "ders": "k1-45-bobrek-tumorleri"
+ },
+ "eritropoietin": {
+  "term": "Eritropoietin",
+  "category": "terim",
+  "definition": "Böbrekte üretilen ve kemik iliğinde alyuvar yapımını uyaran hormon; tümör bu hormonu fazla salgılayınca polisitemi olur.",
+  "kaynak": "deepseek",
+  "uretici": "deepseek",
+  "ders": "k1-45-bobrek-tumorleri"
+ },
+ "skar": {
+  "term": "Skar",
+  "category": "terim",
+  "definition": "Tümörün ortasında yıldız biçiminde izlenen fibröz nedbe dokusu; onkositomanın tipik makroskopik bulgusudur.",
+  "kaynak": "deepseek",
+  "uretici": "deepseek",
+  "ders": "k1-45-bobrek-tumorleri"
+ },
+ "onkositoma": {
+  "term": "Onkositoma",
+  "category": "terim",
+  "definition": "Böbreğin benign tümörü; toplayıcı kanal ara hücrelerinden gelişir ve bol mitokondrili onkositlerden oluşur.",
   "kaynak": "deepseek",
   "uretici": "deepseek",
   "ders": "k1-45-bobrek-tumorleri"
@@ -414,6 +478,134 @@
   "kaynak": "deepseek",
   "uretici": "deepseek",
   "ders": "k1-68-enfeksiyon-hastaliklarinin-epidemiyolojisi"
+ },
+ "plazmid": {
+  "term": "Plazmid",
+  "category": "terim",
+  "definition": "Bakteride kromozomdan ayrı, halkasal ve küçük DNA parçası. Direnç genlerini taşıyan R plazmidleri bu genleri bakteriler arasında aktarır.",
+  "kaynak": "deepseek",
+  "uretici": "deepseek",
+  "ders": "k1-69-mikroorganizmalarda-direnc-sorunu-ve-antimikrobiya"
+ },
+ "kromozomal direnc": {
+  "term": "Kromozomal direnç",
+  "category": "terim",
+  "definition": "Bakterinin kendi kromozomundaki bir mutasyonla ilaca direnç kazanması. Bu yol plazmid aktarımından daha yavaş yayılır.",
+  "kaynak": "deepseek",
+  "uretici": "deepseek",
+  "ders": "k1-69-mikroorganizmalarda-direnc-sorunu-ve-antimikrobiya"
+ },
+ "beta laktamaz inhibitorleri": {
+  "term": "Beta laktamaz inhibitörleri",
+  "category": "terim",
+  "definition": "Beta laktamaz enzimini bağlayıp etkisizleştiren molekül. Klavulanik asit ve sulbaktam penisilinlerle birlikte verilir.",
+  "kaynak": "deepseek",
+  "uretici": "deepseek",
+  "ders": "k1-69-mikroorganizmalarda-direnc-sorunu-ve-antimikrobiya"
+ },
+ "karbapenem": {
+  "term": "Karbapenem",
+  "category": "terim",
+  "definition": "Beta laktam grubunun en geniş etkili üyeleri. İmipenem, meropenem ve ertapenem genişlemiş spektrumlu beta laktamaz üreten bakterilerde kullanılır.",
+  "kaynak": "deepseek",
+  "uretici": "deepseek",
+  "ders": "k1-69-mikroorganizmalarda-direnc-sorunu-ve-antimikrobiya"
+ },
+ "metalo beta laktamaz": {
+  "term": "metalo beta laktamaz",
+  "category": "terim",
+  "definition": "Etkinliği için çinko iyonuna gereksinim duyan karbapenemaz grubu. VIM ve NDM bu grupta yer alır.",
+  "kaynak": "deepseek",
+  "uretici": "deepseek",
+  "ders": "k1-69-mikroorganizmalarda-direnc-sorunu-ve-antimikrobiya"
+ },
+ "metisilin": {
+  "term": "Metisilin",
+  "category": "terim",
+  "definition": "Beta laktamazlara dayanıklı yarı sentetik penisilin. Direnç gelişince yerini vankomisin ve glikopeptidlere bırakmıştır.",
+  "kaynak": "deepseek",
+  "uretici": "deepseek",
+  "ders": "k1-69-mikroorganizmalarda-direnc-sorunu-ve-antimikrobiya"
+ },
+ "mrsa": {
+  "term": "MRSA",
+  "category": "terim",
+  "definition": "Metisiline dirençli Staphylococcus aureus. Tüm penisilin, sefalosporin ve karbapenemlere dirençlidir.",
+  "kaynak": "deepseek",
+  "uretici": "deepseek",
+  "ders": "k1-69-mikroorganizmalarda-direnc-sorunu-ve-antimikrobiya"
+ },
+ "visa": {
+  "term": "VISA",
+  "category": "terim",
+  "definition": "Vankomisine duyarlılığı azalmış Staphylococcus aureus. Direnç düzeyi VREye göre daha düşüktür.",
+  "kaynak": "deepseek",
+  "uretici": "deepseek",
+  "ders": "k1-69-mikroorganizmalarda-direnc-sorunu-ve-antimikrobiya"
+ },
+ "beta laktamaz": {
+  "term": "Beta laktamaz",
+  "category": "terim",
+  "definition": "Penisilin ve sefalosporinlerin beta laktam halkasını hidrolize eden enzim. Enzimatik direncin en sık nedenidir.",
+  "kaynak": "deepseek",
+  "uretici": "deepseek",
+  "ders": "k1-69-mikroorganizmalarda-direnc-sorunu-ve-antimikrobiya"
+ },
+ "genislemis spektrumlu beta laktamaz": {
+  "term": "Genişlemiş spektrumlu beta laktamaz",
+  "category": "terim",
+  "definition": "İkinci ve üçüncü kuşak sefalosporinleri de parçalayabilen beta laktamaz. Ürettiği infeksiyonlarda karbapenem grubu ilaçlar kullanılır.",
+  "kaynak": "deepseek",
+  "uretici": "deepseek",
+  "ders": "k1-69-mikroorganizmalarda-direnc-sorunu-ve-antimikrobiya"
+ },
+ "karbapenemazlar": {
+  "term": "Karbapenemazlar",
+  "category": "terim",
+  "definition": "Karbapenem grubu antibiyotikleri hidrolize eden beta laktamazlar. Karbapenemi son seçenek olmaktan çıkarırlar.",
+  "kaynak": "deepseek",
+  "uretici": "deepseek",
+  "ders": "k1-69-mikroorganizmalarda-direnc-sorunu-ve-antimikrobiya"
+ },
+ "aminoglikozid": {
+  "term": "Aminoglikozid",
+  "category": "terim",
+  "definition": "Ribozomun 30S alt birimine bağlanarak protein sentezini bozan antibiyotik grubu. Direnç en sık plazmid aracılı enzimlerle gelişir.",
+  "kaynak": "deepseek",
+  "uretici": "deepseek",
+  "ders": "k1-69-mikroorganizmalarda-direnc-sorunu-ve-antimikrobiya"
+ },
+ "enzimatik": {
+  "term": "Enzimatik",
+  "category": "terim",
+  "definition": "Bakterinin antibiyotiği parçalayan enzim üretmesi; aminoglikozid direncinin en sık yoludur ve plazmid aracılı yayılır.",
+  "kaynak": "deepseek",
+  "uretici": "deepseek",
+  "ders": "k1-69-mikroorganizmalarda-direnc-sorunu-ve-antimikrobiya"
+ },
+ "dna-giraz": {
+  "term": "DNA-giraz",
+  "category": "terim",
+  "definition": "DNA çift sarmalını çözüp yeniden saran enzim. Kinolonlar bu enzimi hedefler, buradaki mutasyon direnç yapar.",
+  "kaynak": "deepseek",
+  "uretici": "deepseek",
+  "ders": "k1-69-mikroorganizmalarda-direnc-sorunu-ve-antimikrobiya"
+ },
+ "aktif pompa": {
+  "term": "Aktif pompa",
+  "category": "terim",
+  "definition": "Bakterinin hücre içine giren antibiyotiği dışarı attığı taşıyıcı sistem. Kinolon ve aminoglikozid direncinde rol alır.",
+  "kaynak": "deepseek",
+  "uretici": "deepseek",
+  "ders": "k1-69-mikroorganizmalarda-direnc-sorunu-ve-antimikrobiya"
+ },
+ "dar spektrum": {
+  "term": "Dar spektrum",
+  "category": "terim",
+  "definition": "Yalnız hedef mikroorganizmayı etkileyen antibiyotik seçimi. Gereksiz ve geniş etkili kullanımdan kaçınmanın temelidir.",
+  "kaynak": "deepseek",
+  "uretici": "deepseek",
+  "ders": "k1-69-mikroorganizmalarda-direnc-sorunu-ve-antimikrobiya"
  },
  "konsultasyon": {
   "term": "Konsültasyon",

@@ -316,6 +316,31 @@ def k_dok(key: str, dizin: Path) -> int:
     return 0
 
 
+def k_yazara(key: str, dosya: Path) -> int:
+    """Yazılmış terim dosyasını (kutulu çıktı) yeniden düzenlenebilir yazar biçimine çevirir; kutular dogrula'da yeniden
+    hesaplanır. Var olan içeriği kaybetmeden eksik terim eklemek için (denetim/iyileştirme turları)."""
+    kaynak = kok_sec(key) / "terim" / f"{key}.json"
+    dosya = Path(dosya)
+    if not kaynak.is_file():
+        print(f"{key}: terim dosyası yok ({kaynak})"); return 2
+    d = json.loads(kaynak.read_text(encoding="utf-8"))
+    s: dict[str, list] = {}
+    for dos, sayfalar_ in (d.get("d") or {}).items():
+        for sayfa, v in sayfalar_.items():
+            liste = []
+            for x in v.get("t") or []:
+                e = {"t": x["t"], "a": x["a"], "k": x["k"]}
+                if x.get("f"):
+                    e["f"] = x["f"]
+                liste.append(e)
+            if liste:
+                s[f"{dos}:{sayfa}"] = liste
+    dosya.parent.mkdir(parents=True, exist_ok=True)
+    dosya.write_text(json.dumps({"key": key, "s": s}, ensure_ascii=False, indent=1), encoding="utf-8")
+    print(f"{key}: {sum(len(v) for v in s.values())} terim · {len(s)} sayfa → {dosya}")
+    return 0
+
+
 def k_dogrula(key: str, dosya: Path, yazilsin: bool) -> int:
     yazar = json.loads(dosya.read_text(encoding="utf-8"))
     hata, cikti = denetle(key, yazar, sayfalar(ders(key)))
@@ -377,10 +402,13 @@ def main() -> int:
     a2 = alt.add_parser("dogrula"); a2.add_argument("key"); a2.add_argument("dosya", type=Path); a2.add_argument("--yaz", action="store_true")
     a3 = alt.add_parser("otomatik"); a3.add_argument("key", nargs="?"); a3.add_argument("--hepsi", action="store_true")
     a3.add_argument("--yaz", action="store_true")
+    a4 = alt.add_parser("yazara"); a4.add_argument("key"); a4.add_argument("dosya", type=Path)
     alt.add_parser("sozluk_disa")
     a = ap.parse_args()
     if a.komut == "sozluk_disa":
         return k_sozluk_disa()
+    if a.komut == "yazara":
+        return k_yazara(a.key, a.dosya)
     if a.komut == "dok":
         return k_dok(a.key, a.dizin)
     if a.komut == "dogrula":

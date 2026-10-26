@@ -1,12 +1,11 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 370,
-  "baslik": "Kurul 1 Blok Özet Derslerine Terim Yardımcısı (Patoloji 1-2-3)",
+  "onem": 371,
+  "baslik": "Terim Yardımcısı Denetimi: Böbrek Tümörleri ve Antibiyotik Direnci",
   "maddeler": [
-    "Blok Özet Patoloji 1, 2 ve 3 derslerine toplam 4118 terim eklendi (1176 + 1271 + 1671); Terimler düğmesi açıkken slaytta işaretlenir, dokununca 1-2 cümlelik açıklaması açılır.",
-    "Açıklamalar doğrulanmış tıbbi sözlükten alındı; tanımı doğrulanmamış terim işaretlenmedi.",
-    "Bilinç Bozukluğu ve Genel Anestezik İlaçlar derslerinin terimleri (133 + 212) canlıya ulaştı.",
-    "Terimler sayfasındaki ortak sözlüğe yeni terimler eklendi."
+    "Böbrek Tümörleri dersinde 108 terim denetlendi; gündelik sözcükler (büyüme, kanama gibi) ayıklandı, yerine onkositoma, nefroblastom, kromofob karsinom, VHL geni, hemanjiyoblastom, eritropoietin gibi 11 zor terim eklendi.",
+    "Mikroorganizmalarda Direnç dersinde plazmid, beta laktamaz, genişlemiş spektrumlu beta laktamaz, karbapenemaz, aminoglikozid, DNA-giraz, MRSA, VISA gibi 17 temel terim eklendi (26 → 43).",
+    "Terimler sayfasındaki ortak sözlüğe 24 yeni terim eklendi."
   ],
   "eklenen": [
     "data/sesli_anlatim/terim/k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim.json",
