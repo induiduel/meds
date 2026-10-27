@@ -122,6 +122,29 @@ export function CdV15Bas(p: {
  * Görünüm çekmecesi
  * ============================================================================= */
 type Sekme = 'duzen' | 'pdf' | 'okuma';
+
+/* Okuma tercihleri (tasarım S08): satır aralığı, yazı tipi, zemin, etkin cümleyi ortala. Cihazda saklanır, kök öğeye
+   data-cd-* olarak yazılır (styles/v15/sesli.css); ortalama CanliDersDers kaydırmasında okunur (data-cd-ortala). */
+export interface CdOkuma { satir: 'siki' | 'normal' | 'genis'; font: 'okuma' | 'sade' | 'kolay'; zemin: 'varsayilan' | 'krem' | 'gri' | 'gece'; ortala: boolean }
+const OKUMA_KEY = 'medsoru_cd_okuma_v1';
+const OKUMA_VARS: CdOkuma = { satir: 'normal', font: 'okuma', zemin: 'varsayilan', ortala: false };
+const okumaOku = (): CdOkuma => { try { return { ...OKUMA_VARS, ...JSON.parse(localStorage.getItem(OKUMA_KEY) || '{}') }; } catch { return OKUMA_VARS; } };
+function okumaUygula(o: CdOkuma) {
+  const d = document.documentElement.dataset;
+  d.cdSatir = o.satir; d.cdFont = o.font; d.cdZemin = o.zemin;
+  if (o.ortala) d.cdOrtala = 'on'; else delete d.cdOrtala;
+  if (o.font === 'kolay' && !document.getElementById('cd15-font-kolay')) {
+    const l = document.createElement('link');
+    l.id = 'cd15-font-kolay'; l.rel = 'stylesheet';
+    l.href = 'https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap';
+    document.head.appendChild(l);
+  }
+}
+if (typeof document !== 'undefined') okumaUygula(okumaOku());
+function useOkuma(): [CdOkuma, (y: Partial<CdOkuma>) => void] {
+  const [o, setO] = useState(okumaOku);
+  return [o, (y) => setO((x) => { const n = { ...x, ...y }; try { localStorage.setItem(OKUMA_KEY, JSON.stringify(n)); } catch { /* yok */ } okumaUygula(n); return n; })];
+}
 function Anahtar({ ad, acik, deger, set }: { ad: string; acik?: string; deger: boolean; set: (v: boolean) => void }) {
   return (
     <label className="cd15-sat">
@@ -166,6 +189,7 @@ export function CdV15Gorunum(p: {
   yaziEncok: number;
 }) {
   const [sekme, setSekme] = useState<Sekme>(p.pdfVar ? 'pdf' : 'okuma');
+  const [okuma, setOkuma] = useOkuma();
   const g = usePdfGorunum();
   const terim = useTerimYardimci();
   const [appFs, toggleAppFs] = useAppFullscreen();
@@ -232,6 +256,10 @@ export function CdV15Gorunum(p: {
                 <button type="button" onClick={() => p.setYazi(p.yazi + 2)} disabled={p.yazi >= p.yaziEncok} aria-label="Yazıyı büyüt">A+</button>
               </span>
             </div>
+            <Secici ad="Satır aralığı" deger={okuma.satir} set={(v) => setOkuma({ satir: v })} secenek={[['siki', 'Sıkı'], ['normal', 'Normal'], ['genis', 'Geniş']]} />
+            <Secici ad="Yazı tipi" deger={okuma.font} set={(v) => setOkuma({ font: v })} secenek={[['okuma', 'Okuma'], ['sade', 'Sade'], ['kolay', 'Kolay okunur']]} />
+            <Secici ad="Zemin" deger={okuma.zemin} set={(v) => setOkuma({ zemin: v })} secenek={[['varsayilan', 'Tema'], ['krem', 'Krem'], ['gri', 'Gri'], ['gece', 'Gece']]} />
+            <Anahtar ad="Okunan cümleyi ortada tut" acik="Metin her cümlede ekranın ortasına kayar" deger={okuma.ortala} set={(v) => setOkuma({ ortala: v })} />
             {p.vurguVar && (
               <Anahtar ad="Önemli yerleri vurgula" acik="Çıkmışta, örnek sorularda ve spotlarda geçen cümleler işaretlenir" deger={p.vurgu} set={p.setVurgu} />
             )}

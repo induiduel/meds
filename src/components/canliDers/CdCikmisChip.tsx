@@ -30,6 +30,14 @@ const abone = (f: () => void) => { dinleyiciler.add(f); return () => { dinleyici
 // Yalnız geliştirme derlemesinde: kartı tarayıcı sınamasında açmak için (üretim paketine girmez)
 if (import.meta.env.DEV && typeof window !== 'undefined') (window as unknown as { __cdCikmisAc?: (s: CdCikmisKonum[]) => void }).__cdCikmisAc = (s) => ayarla({ sorular: s, i: 0, caliyordu: false });
 
+/** Çıkmış penceresini dışarıdan aç (oynatıcı şeridi, tasarım S21): çalıyorsa durur, kapanınca sürer */
+export function cdCikmisAc(sorular: CdCikmisKonum[]) {
+  if (!sorular.length) return;
+  const caliyor = cdDurum().playing;
+  if (caliyor) cdDuraklat();
+  ayarla({ sorular, i: 0, caliyordu: caliyor });
+}
+
 export function CdCikmisChip({ sorular }: { sorular: CdCikmisKonum[] }) {
   if (!sorular.length) return null;
   const ac = (e: React.MouseEvent) => {

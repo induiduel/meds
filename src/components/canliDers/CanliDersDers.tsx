@@ -35,6 +35,7 @@ import { useKonuSayaci } from '../../services/calismaTakip';
 import { KonuDugmeleri } from '../takip/KonuTakip';
 import { toast } from '../ui/Toast';
 import { useYildizliMi, useYildizliSayisi, yildizToggle } from '../../services/yildizliParagrafStore';
+import { registerSelectionActions } from '../../utils/selectionShare';
 import { YildizliParagraflarModal } from '../study/YildizliParagraflarModal';
 import '../learn/pdf/pdfDoc.css';
 import { SlideDrawingCanvas, getDrawingGlobalState, penPalette, setDrawingGlobalState, undoLastDrawing, useCanUndoDrawing, useDrawingGlobalState } from '../learn/SlideDrawingCanvas';
@@ -1355,8 +1356,49 @@ function CdKelimeIsaret({ pane, aktif, acik }: { pane: React.RefObject<HTMLDivEl
   return null;
 }
 
+/** Seçim araç çubuğu (tasarım S10): metinde seçim yapılınca Notlarım'a ekle · Yıldızla · Kopyala (utils/selectionShare).
+ *  "Açıkla / Soru üret" yapay zekâ ister; otomatik LLM çağrısı yasağı (AGENTS 20) nedeniyle eklenmedi. */
+function useCdSecimCubugu(paneRef: React.RefObject<HTMLDivElement | null>, detay: CdDetay) {
+  useEffect(() => registerSelectionActions(({ host }) => {
+    const pane = paneRef.current;
+    if (!pane || !pane.contains(host)) return null;
+    const pi = Number(host.closest<HTMLElement>('[data-i]')?.dataset.i ?? NaN);
+    const bolum = detay.bolumler.find((b) => b.paragraflar.some((x) => x.i === pi));
+    const par = bolum?.paragraflar.find((x) => x.i === pi);
+    const link = `${pathFor('canli_ders', detay.key)}${Number.isFinite(pi) ? `?p=${pi}` : ''}`;
+    return [
+      {
+        id: 'cd-not', label: 'Nota ekle', icon: 'M4 20l4-1 10-10-3-3L5 16zM14 7l3 3', tone: 'accent',
+        run: ({ text }) => {
+          try {
+            const k = 'medsoru_notlarim_v1';
+            const l = JSON.parse(localStorage.getItem(k) || '[]');
+            l.unshift({ id: `n${Date.now().toString(36)}`, baslik: `${detay.baslik}${bolum?.baslik ? ` · ${bolum.baslik}` : ''}`, metin: `“${text.trim()}”\n\nKaynak: ${location.origin}${link}`, renk: 'blue', at: Date.now() });
+            localStorage.setItem(k, JSON.stringify(l));
+            window.dispatchEvent(new Event('medsoru:notlarim'));
+            toast.success('Notlarım\'a eklendi', 'Menü › Notlarım');
+          } catch { toast.error('Eklenemedi', 'Cihaz depolaması dolu olabilir.'); }
+          window.getSelection()?.removeAllRanges();
+        },
+      },
+      ...(par ? [{
+        id: 'cd-yildiz', label: 'Yıldızla', icon: 'M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.5 2.9 1-6.1L3.2 9.5l6.1-.9z',
+        run: () => {
+          yildizToggle({ id: `cd_${detay.key}_p${pi}`, kaynak: 'canli_ders', kaynakAd: 'Sesli ders', baslik: detay.baslik, altBaslik: bolum?.baslik, metin: par.metin, deeplink: link, meta: { dersKey: detay.key, paragrafIndex: pi } });
+          window.getSelection()?.removeAllRanges();
+        },
+      }] : []),
+      {
+        id: 'cd-kopya', label: 'Kopyala', icon: 'M8 8h11v11H8zM5 16V5h11',
+        run: ({ text }) => { void navigator.clipboard?.writeText(text.trim()).then(() => toast.success('Kopyalandı', '')); window.getSelection()?.removeAllRanges(); },
+      },
+    ];
+  }), [paneRef, detay]);
+}
+
 function CdMetinBolme({ detay, canli, kamp = false }: { detay: CdDetay; canli: boolean; kamp?: boolean }) {
   const paneRef = useRef<HTMLDivElement>(null);
+  useCdSecimCubugu(paneRef, detay);
   const aktif = useCd((s) => (canli ? s.aktif : -1));
   const cumle = useCd((s) => (canli ? s.cumle : -1));
   const { durdu, durdur, surdur } = useTakip();
@@ -1472,7 +1514,9 @@ function CdMetinBolme({ detay, canli, kamp = false }: { detay: CdDetay; canli: b
     const hedefOrta = pane.clientHeight * 0.42;
     const sapma = merkez - hedefOrta;
     // Orta bant içindeyse dokunma (sürekli kıpırdamasın)
-    if (!ani && Math.abs(sapma) < pane.clientHeight * 0.18) return;
+    // "Okunan cümleyi ortada tut" (Görünüm › Okuma): bant dar, her cümlede ortalanır
+    const bant = document.documentElement.dataset.cdOrtala === 'on' ? 0.04 : 0.18;
+    if (!ani && Math.abs(sapma) < pane.clientHeight * bant) return;
     // Uzak atlama (bölüm geçişi, paragrafa dokunma): uzun yumuşak kaydırma iOS'ta yarıda kesilip yanlış yerde kalıyordu
     // → anında git, iki kare sonra ince ayar
     const uzak = Math.abs(sapma) > pane.clientHeight * 1.5;

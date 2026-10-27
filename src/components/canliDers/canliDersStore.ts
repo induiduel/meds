@@ -918,8 +918,9 @@ function msKur() {
   h('play', () => { audio?.play().catch(() => {}); });
   h('pause', () => cdDuraklat());
   h('stop', () => cdDuraklat());
-  h('seekbackward', (d) => cdSar(-(d.seekOffset || 10)));
-  h('seekforward', (d) => cdSar(d.seekOffset || 10));
+  // tasarım S16: kilit ekranında ±15 sn
+  h('seekbackward', (d) => cdSar(-(d.seekOffset || 15)));
+  h('seekforward', (d) => cdSar(d.seekOffset || 15));
   h('seekto', (d) => { if (d.seekTime != null) cdAtla(d.seekTime); });
   h('previoustrack', () => cdBolumAtla(-1));
   h('nexttrack', () => cdBolumAtla(1));
@@ -928,10 +929,15 @@ function msMeta() {
   if (!('mediaSession' in navigator) || typeof MediaMetadata === 'undefined') return;
   const v = st.varyantlar.find((x) => x.id === st.vid);
   try {
+    // tasarım S16: kilit ekranında o an okunan cümle altyazı satırı (artist), bölüm adı (album)
+    const p = st.detay?.bolumler.flatMap((b) => b.paragraflar).find((x) => x.i === st.aktif);
+    const ar = p && st.cumle >= 0 ? cdCumleAraligi(st.aktif, st.cumle) : null;
+    const cumle = p && ar ? p.metin.slice(ar[0], ar[1]).trim() : '';
+    const bolumAd = st.bolum >= 0 ? st.detay?.bolumler[st.bolum]?.baslik : '';
     navigator.mediaSession.metadata = new MediaMetadata({
       title: `${st.no ? `${st.no} · ` : ''}${st.baslik}`,
-      artist: 'MeDSor',
-      album: `Sesli ders${v?.ses ? ` · ${v.ses}` : ''}`,
+      artist: cumle ? (cumle.length > 110 ? `${cumle.slice(0, 107)}…` : cumle) : 'MeDSor',
+      album: bolumAd || `Sesli ders${v?.ses ? ` · ${v.ses}` : ''}`,
       artwork: [
         { src: '/icons/icon-192x192.png?v=9', sizes: '192x192', type: 'image/png' },
         { src: '/icons/icon-512x512.png?v=9', sizes: '512x512', type: 'image/png' },
@@ -955,3 +961,12 @@ function msKonum() {
 
 // Hız tercihi açılışta okunur (ses öğesi ilk çalmada kurulur)
 st = { ...st, rate: okuHiz() };
+
+// Kilit ekranı altyazısı: okunan cümle değişince medya bilgisi yenilenir (cümle başına bir kez)
+let msSonCumle = '';
+subscribe(() => {
+  const k = `${st.key}|${st.aktif}|${st.cumle}`;
+  if (k === msSonCumle || !st.key) return;
+  msSonCumle = k;
+  msMeta();
+});

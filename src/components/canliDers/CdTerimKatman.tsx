@@ -2,6 +2,8 @@
  *  Yardımcı açıkken slayttaki terimlerin altı ince kesikli çizilir ve çok hafif sarı işaretlenir; dokununca terimin
  *  açıklaması kelimenin hemen üstünde ya da altında (sayfadaki yerine göre sola/sağa yaslı) açılır. Aynı terimler
  *  konuşmacı metninde paragrafın altında yazılı durur (seslendirilmez). Kapalıyken PDF'te hiçbir işaret yoktur. */
+import { navigateTo } from '../../router';
+import { isFavoriteCard, toggleFavoriteCard } from '../../services/studyStore';
 import React, { useMemo, useSyncExternalStore } from 'react';
 import { Eye, Info } from 'lucide-react';
 import { Popover, PopoverContent, PopoverTrigger } from '../ui/radix';
@@ -96,7 +98,23 @@ function Kart({ x }: { x: CdTerim }) {
       {x.acilim && <p className="cd-trm-acilim"><b>{x.acilim}</b></p>}
       {x.a && x.a !== x.acilim && <p>{x.a}</p>}
       {x.f && <p className="cd-trm-f">Karıştırılan: <b>{x.f}</b></p>}
+      <KartEylem x={x} />
     </>
+  );
+}
+
+/** Terim kartı eylemleri (tasarım S20): Sözlükte aç · Karta ekle (favori ezber kartları, studyStore) */
+function KartEylem({ x }: { x: CdTerim }) {
+  const id = `cd-terim:${x.t}`;
+  const [kartta, setKartta] = React.useState(() => isFavoriteCard(id));
+  return (
+    <div className="cd-trm-eylem">
+      <button type="button" onClick={() => navigateTo(`/sozluk?terim=${encodeURIComponent(x.t)}`)}>Sözlükte aç</button>
+      <button type="button" className={kartta ? 'is-on' : ''} aria-pressed={kartta}
+        onClick={() => { toggleFavoriteCard({ id, front: x.t, back: [x.acilim, x.a].filter(Boolean).join(' — ') || x.t, group: 'Sesli ders terimleri' }); setKartta(isFavoriteCard(id)); }}>
+        {kartta ? 'Kartlarımda' : 'Karta ekle'}
+      </button>
+    </div>
   );
 }
 

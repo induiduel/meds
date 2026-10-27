@@ -7,7 +7,7 @@ import React, { useEffect, useLayoutEffect, useMemo, useRef, useState } from 're
 import { ArrowUpRight, ChevronDown, ChevronUp, Download, ListOrdered, Pause, Play, RotateCcw, RotateCw, SkipBack, SkipForward, X } from 'lucide-react';
 import { navigateTo, pathFor } from '../../router';
 import {
-  CD_HIZLAR, cdAtla, cdBolumAtla, cdBolumBaslari, cdDosyaAdi, cdHiz, cdHizDongu, cdKapat, cdSar, cdSesKisa, cdSesUrl, cdToggle, cdVaryant, cdDurum,
+  CD_HIZLAR, cdDuraklat, cdAtla, cdBolumAtla, cdBolumBaslari, cdDosyaAdi, cdHiz, cdHizDongu, cdKapat, cdSar, cdSesKisa, cdSesUrl, cdToggle, cdVaryant, cdDurum,
   fmtSure, useCd,
 } from './canliDersStore';
 import { ListeDockDenetim, TekrarSecici } from './CanliDersListem';
@@ -16,6 +16,11 @@ import { cdMotivasyonKur } from './canliDersMotivasyon';
 import { cdTvMi, cdTvTus, type TvEylem } from './CanliDersTv';
 import '../../styles/canli-ders.css';
 import { useAppearance } from '../../utils/appearance';
+import { Star } from 'lucide-react';
+import { cdCikmisAc, cikmisSayfada } from './CdCikmisChip';
+import { Sheet } from '../ui/Sheet';
+import { useYildizliParagraflar } from '../../services/yildizliParagrafStore';
+import { MoreHorizontal } from 'lucide-react';
 
 const hizYaz = (r: number) => `${String(r).replace('.', ',')}×`;
 
@@ -444,15 +449,145 @@ function BaslaIpucu() {
   return <p className="cd-basla-satir">{t >= 5 ? `Oynat'a bas: ${fmtSure(t)} konumundan sürer.` : "Başlatmak için oynat'a bas ya da metinde bir paragrafa dokun."}</p>;
 }
 
+/* ---------------- çıkmış şeridi (tasarım S21) ---------------- */
+/** Okunan paragrafın eşlendiği slaytta doğrulanmış çıkmış soru varsa: "Bu slayttaki bilgi n kez çıkmışta soruldu · Çöz" */
+function CikmisSerit() {
+  const aktif = useCd((s) => s.aktif);
+  const detay = useCd((s) => s.detay);
+  const e = aktif >= 0 ? detay?.pdf?.paragraflar?.[aktif] : null;
+  const sorular = e ? cikmisSayfada(detay?.cikmisKonum, e.dosya ?? 0, e.sayfa) : [];
+  if (!sorular.length) return null;
+  return (
+    <div className="cd15-serit" role="status">
+      <Star aria-hidden />
+      <span>Bu slayttaki bilgi {sorular.length} kez çıkmışta soruldu</span>
+      <button type="button" onClick={() => cdCikmisAc(sorular)}>Çöz</button>
+    </div>
+  );
+}
+
+/* ---------------- bölüm sonu (tasarım S18) ---------------- */
+const BOLUM_DUR_KEY = 'medsoru_cd_bolum_dur_v1';
+const bolumDurOku = () => { try { return localStorage.getItem(BOLUM_DUR_KEY) === '1'; } catch { return false; } };
+function BolumDurAnahtar() {
+  const [on, setOn] = useState(bolumDurOku);
+  return (
+    <input type="checkbox" role="switch" className="cd15-sw" checked={on} aria-label="Bölüm sonunda dur"
+      onChange={(e) => { setOn(e.target.checked); try { localStorage.setItem(BOLUM_DUR_KEY, e.target.checked ? '1' : '0'); } catch { /* yok */ } }} />
+  );
+}
+/** Ses bir bölümü doğal akışla bitirip sonrakine geçtiğinde (sarma/atlama değil) "Bölüm sonunda dur" açıksa durur ve sorar */
+function BolumSonu() {
+  const bolum = useCd((s) => s.bolum);
+  const playing = useCd((s) => s.playing);
+  const detay = useCd((s) => s.detay);
+  const t = useCd((s) => s.t);
+  const onceki = useRef<{ bolum: number; t: number }>({ bolum, t });
+  const [biten, setBiten] = useState<number | null>(null);
+  useEffect(() => {
+    const o = onceki.current;
+    onceki.current = { bolum, t };
+    if (!playing || !detay || bolum !== o.bolum + 1 || t - o.t > 3 || t < o.t) return;
+    if (!bolumDurOku()) return;
+    cdDuraklat();
+    setBiten(o.bolum);
+  }, [bolum, playing, detay, t]);
+  if (biten == null || !detay) return null;
+  const ad = detay.bolumler[biten]?.baslik || `Bölüm ${biten + 1}`;
+  const sonraki = detay.bolumler[biten + 1]?.baslik;
+  const baslar = cdBolumBaslari();
+  const deste = (detay as { desteId?: string }).desteId;
+  const kapat = () => setBiten(null);
+  return (
+    <div className="cf-root" onMouseDown={(e) => e.target === e.currentTarget && kapat()}>
+      <div role="alertdialog" aria-modal="true" aria-labelledby="cd15-bs-t" className="cf cd15-bs">
+        <span className="cf-ic"><ListOrdered aria-hidden /></span>
+        <h2 id="cd15-bs-t" className="cf-t">Bölüm {biten + 1} bitti</h2>
+        <p className="cf-m"><b>{ad}</b>{sonraki ? <><br />Sıradaki: {sonraki}</> : null}</p>
+        <div className="cf-acts cd15-bs-acts">
+          <button type="button" className="ui-btn" onClick={() => { if (baslar[biten] != null) cdAtla(baslar[biten]); cdToggle(); kapat(); }}>Tekrar dinle</button>
+          {deste && <button type="button" className="ui-btn" onClick={() => { kapat(); navigateTo(`/dersler/interaktif/${encodeURIComponent(deste)}`); }}>Pekiştir</button>}
+          <button type="button" className="ui-btn is-primary" onClick={() => { cdToggle(); kapat(); }}>Devam et</button>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+/* ---------------- oynatıcı seçenekleri çekmecesi (tasarım S28 + S09) ---------------- */
+function OynaticiSecenek({ acik, onKapat }: { acik: boolean; onKapat: () => void }) {
+  const rate = useCd((s) => s.rate);
+  const detay = useCd((s) => s.detay);
+  const bolum = useCd((s) => s.bolum);
+  const zs = useCd((s) => s.zs);
+  const baslar = useMemo(() => cdBolumBaslari(), [zs, detay]); // eslint-disable-line react-hooks/exhaustive-deps
+  const yildiz = useYildizliParagraflar().filter((y) => (y.meta as { dersKey?: string } | undefined)?.dersKey === detay?.key);
+  const [sekme, setSekme] = useState<'bolum' | 'yildiz'>('bolum');
+  return (
+    <Sheet open={acik} onClose={onKapat} title="Oynatıcı" width={420} className="cd15-sheet">
+      <div className="cd15-cek">
+        <div className="cd15-grup">
+          <div className="cd15-sat cd15-sat-blok"><span className="cd15-sat-t"><b>Hız</b><small>Diğer hızlar: alttaki hız hapına dokundukça değişir</small></span>
+            <div className="v15-seg cd15-hizlar" role="radiogroup" aria-label="Oynatma hızı">
+              {[1, 1.25, 1.5, 1.75, 2].filter((r) => (CD_HIZLAR as readonly number[]).includes(r) || r === 1).map((r) => (
+                <button key={r} type="button" role="radio" aria-checked={rate === r} aria-current={rate === r ? 'page' : undefined} onClick={() => cdHiz(r)}>{hizYaz(r)}</button>
+              ))}
+            </div>
+          </div>
+          <div className="cd15-sat"><span className="cd15-sat-t"><b>Ses</b></span><SesSecici /></div>
+          <div className="cd15-sat"><span className="cd15-sat-t"><b>Tekrar</b><small>Ders bitince ne olsun</small></span><TekrarSecici /></div>
+          <label className="cd15-sat"><span className="cd15-sat-t"><b>Bölüm sonunda dur</b><small>Her bölüm bitince ses durur, sorar</small></span><BolumDurAnahtar /></label>
+          <div className="cd15-sat"><span className="cd15-sat-t"><b>MP3 indir</b></span><IndirBag /></div>
+        </div>
+        {detay && (
+          <>
+            <div className="v15-seg" role="tablist" aria-label="Liste">
+              <button type="button" role="tab" aria-selected={sekme === 'bolum'} aria-current={sekme === 'bolum' ? 'page' : undefined} onClick={() => setSekme('bolum')}>Bölümler ({detay.bolumler.length})</button>
+              <button type="button" role="tab" aria-selected={sekme === 'yildiz'} aria-current={sekme === 'yildiz' ? 'page' : undefined} onClick={() => setSekme('yildiz')}>Yıldızlılarım ({yildiz.length})</button>
+            </div>
+            {sekme === 'bolum' ? (
+              <ol className="cd15-bl">
+                {detay.bolumler.map((b, k) => (
+                  <li key={k}>
+                    <button type="button" className={k === bolum ? 'is-on' : ''} aria-current={k === bolum ? 'true' : undefined}
+                      onClick={() => { if (baslar[k] != null) cdAtla(baslar[k]); onKapat(); }}>
+                      <span className="cd15-bl-no">{k + 1}</span>
+                      <span className="cd15-bl-ad">{b.baslik || `Bölüm ${k + 1}`}</span>
+                      {baslar[k] != null && <span className="cd15-bl-t">{fmtSure(baslar[k])}</span>}
+                    </button>
+                  </li>
+                ))}
+              </ol>
+            ) : yildiz.length ? (
+              <ol className="cd15-bl">
+                {yildiz.map((y) => (
+                  <li key={y.id}>
+                    <button type="button" onClick={() => { onKapat(); navigateTo(y.deeplink); }}>
+                      <span className="cd15-bl-no">★</span>
+                      <span className="cd15-bl-ad">{y.metin.slice(0, 120)}{y.metin.length > 120 ? '…' : ''}</span>
+                    </button>
+                  </li>
+                ))}
+              </ol>
+            ) : <p className="v15-cap">Bu derste yıldızladığın paragraf yok. Paragrafın yanındaki yıldıza ya da metni seçip "Yıldızla"ya dokun.</p>}
+          </>
+        )}
+      </div>
+    </Sheet>
+  );
+}
+
 /** v15 (tasarım S19 · bölüm dilimli oynatıcı): üstte bölüm parçalı çubuk, altında süre · "k · bölüm" · toplam,
  *  en altta hız hapı | önceki · −10 · büyük oynat · +10 · sonraki | ⋯ (bölümler, liste, ses, tekrar, MP3) */
 function TamOynaticiV15({ onKucult }: { onKucult: () => void }) {
   const bolum = useCd((s) => s.bolum);
   const ad = useCd((s) => (s.bolum >= 0 ? s.detay?.bolumler[s.bolum]?.baslik || '' : ''));
   const rate = useCd((s) => s.rate);
+  const [secenek, setSecenek] = useState(false);
   return (
     <div className="cd-tam cd15-oyn">
       <button type="button" className="cd-ib cd-kucult" onClick={onKucult} aria-label="Oynatıcıyı küçült" title="Oynatıcıyı küçült"><ChevronDown aria-hidden /></button>
+      <CikmisSerit />
       <ZamanCubugu orta={bolum >= 0 && ad ? `${bolum + 1} · ${ad}` : ''} />
       <ListeDockDenetim dar />
       <div className="cd15-den">
@@ -464,16 +599,11 @@ function TamOynaticiV15({ onKucult }: { onKucult: () => void }) {
           <button type="button" className="cd-ib cd-sar" onClick={() => cdSar(10)} aria-label="10 saniye ileri" title="10 sn ileri (→)"><RotateCw aria-hidden /></button>
           <BolumAtla yon={1} />
         </div>
-        <CdDaha etiket="Oynatıcı seçenekleri (hız, ses, tekrar, bölümler, MP3)" yukari className="cd-dock-daha cd15-daha">
-          <div className="cd-daha-satir"><span>Bölümler</span><BolumMenu /></div>
-          <div className="cd-daha-satir"><span>Hız</span><HizSecici /></div>
-          <div className="cd-daha-satir"><span>Ses</span><SesSecici /></div>
-          <div className="cd-daha-satir"><span>Tekrar</span><TekrarSecici /></div>
-          <div className="cd-daha-satir"><span>Listem</span><ListeDockDenetim /></div>
-          <div className="cd-daha-satir"><span>MP3 indir</span><IndirBag /></div>
-        </CdDaha>
+        <button type="button" className="cd-ib cd15-daha-b" onClick={() => setSecenek(true)} aria-haspopup="dialog" aria-label="Oynatıcı seçenekleri: hız, ses, tekrar, bölümler" title="Oynatıcı seçenekleri"><MoreHorizontal aria-hidden /></button>
       </div>
       <Hata />
+      <BolumSonu />
+      <OynaticiSecenek acik={secenek} onKapat={() => setSecenek(false)} />
     </div>
   );
 }

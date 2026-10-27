@@ -1,13 +1,14 @@
 {
  "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
- "onem": 441,
- "baslik": "Temiz PDF teması: slayt uzatıcı düzeltildi",
+ "onem": 442,
+ "baslik": "Sesli derse yeni özellikler",
  "maddeler": [
-  "Temiz temada slaytın altındaki uzatıcı alan da beyaza çekilir"
+  "Okuma ayarları: satır aralığı, yazı tipi, zemin rengi, okunan cümleyi ortada tut",
+  "İstersen her bölüm sonunda ses durur: tekrar dinle, pekiştir ya da devam et",
+  "Metinden seçtiğin yeri nota ekle ya da yıldızla; terim kartından sözlüğe git ya da karta ekle",
+  "Oynatıcı seçenekleri ve bölüm listesi yeni çekmecede; kilit ekranında okunan cümle görünür"
  ],
- "eklenen": [
-  "Çevrimdışı kurul ve dönem süzgeci"
- ],
+ "eklenen": [],
  "degisen": [],
  "duzeltilen": [
   "Temiz temada uzatıcı alan mavi kalıyordu"

@@ -437,3 +437,13 @@ Not: YOK sayısının 6'sı tasarım belgesi ekranıdır (A09, K08, P01, W03, X0
 | AB16 | hata404 | — | DOĞRULANMADI |  |
 | AB17 | hataSunucu | — | DOĞRULANMADI |  |
 | AB18 | bakim | — | DOĞRULANMADI |  |
+
+- S08: KURULDU (2026-10-27): satır aralığı, yazı tipi (Okuma/Sade/Kolay okunur), zemin, okunan cümleyi ortala
+- S09: KURULDU: oynatıcı çekmecesinde Bölümler / Yıldızlılarım sekmeleri
+- S10: KURULDU: seçim çubuğu Nota ekle · Yıldızla · Kopyala (Açıkla/Soru üret LLM gerektirir, yok)
+- S16: KURULDU: medyaSession zaten vardı; kilit ekranında okunan cümle + ±15 sn eklendi
+- S18: KURULDU: Bölüm sonunda dur + Tekrar dinle / Pekiştir / Devam et kutusu
+- S20: KURULDU: Sözlükte aç · Karta ekle
+- S21: KURULDU: oynatıcıda "n kez çıkmışta soruldu · Çöz" şeridi (yalnız doğrulanmış eşleme)
+- S26: VAR (denetim kaçırmıştı): dört gruplu ders seçenekleri
+- S28: KURULDU: oynatıcı seçenekleri alt çekmecesi
