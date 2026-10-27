@@ -1584,7 +1584,7 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
         <KurulHapi kurul={kurulP} sayi={filteredQuestions.length} onTumu={() => { pickCommittee('all'); kurulSuzgeciniKaldir(); }} />
       )}
       {/* Ortak kompakt araç çubuğu: başlık · sayı · arama · durum segmenti · Süzgeç (sayfa) · görünüm seçici */}
-      {!v12 && (
+      {!v12 && !sharedId && (
       <div
         style={{ display: 'contents' }}
         onFocus={(e) => { if ((e.target as HTMLElement).matches?.('[data-page-search]')) setSuggestOpen(true); }}
@@ -1883,14 +1883,14 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
       })()}
 
       {/* v15 giriş (tasarım C07): süzgeç seçilmemişken yıl / konu kartları */}
-      {v15 && selectedYear === 'all' && selectedDiscipline === 'all' && !searchQuery && girisGruplari && (
+      {v15 && !sharedId && selectedYear === 'all' && selectedDiscipline === 'all' && !searchQuery && girisGruplari && (
         <React.Suspense fallback={null}>
           <CikmisGirisV15 yillar={girisGruplari.yillar} dersler={girisGruplari.dersler} onYil={setSelectedYear} onDers={setSelectedDiscipline} />
         </React.Suspense>
       )}
 
       {/* Questions Listing (v12: CikmisV12 çerçevesinin sonuç sütununda) */}
-      <V12Frame on={v12} props={v12 ? buildV12Props : undefined}>
+      <V12Frame on={v12 && !sharedId} props={v12 ? buildV12Props : undefined}>
       {isLoading && gorunum === 'kart' ? (
         <div className="cx-list ck-list" aria-busy="true" aria-label="Çıkmış sorular yükleniyor">
           {[0, 1, 2].map((i) => <RichCardSkeleton key={i} />)}

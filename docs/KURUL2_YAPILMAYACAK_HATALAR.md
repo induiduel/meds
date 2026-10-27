@@ -1094,3 +1094,9 @@ Her maddede: belirti · kök neden · Kurul 2 kuralı · kapı durumu. Kanıtlar
 - **Kök neden:** `ders_icerik_adim.py` terime `adim` yazıyor ama PDF sayfası `s`'yi yazmıyordu; doğrulayıcı yalnız `adim` eksikliğine bakıyordu, ekranın gösterdiği `s` denetlenmiyordu.
 - **Çözüm:** `scripts/ders_icerik_kaynak.py` (adim→slayt→pdfSayfalari[0]) tüm paketlere uygulandı; kaynaksız iki terim silindi; `ders_icerik_dogrula.py` `s` eksikse ve iskelet terimde HATA verir.
 - **Kural:** Ekranda gösterilen her kaynak alanı doğrulayıcıda zorunlu olur; sayfa uydurulmaz, bulunamayan kayıt silinir (el kitabı §19 11a).
+
+## H122 · Paylaşılan çıkmış soruda süzgeç/kategori alanları öne çıkıyordu (2026-10-28)
+- **Belirti:** Özel sohbette paylaşılan çıkmış soru `/cikmis/<id>` ile açılınca liste tek soruya iniyor ama araç çubuğu, yıl/konu giriş kartları ve v12 süzgeç sütunu da görünüyordu.
+- **Kök neden:** `sharedId` yalnız soru listesini süzüyordu (`paginatedQuestions`); süzgeç alanları `sharedId`'ye bakmadan çiziliyordu.
+- **Çözüm:** `PastExamsView.tsx`'te `sharedId` varken PageToolbar, v15 giriş kartları ve V12Frame gizlenir; "Tüm sorular" düğmesi paylaşım bandında kalır.
+- **Kural:** Tek öğeye indirgenen (paylaşım/derin bağlantı) görünümde yeni süzgeç/giriş bileşeni eklenirse `sharedId` ile koşullanır.

@@ -1,12 +1,9 @@
 {
  "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
- "onem": 509,
- "baslik": "Özel sohbete paylaşım, durum bilgisi ve temalar geldi",
+ "onem": 510,
+ "baslik": "Paylaşılan çıkmış soru artık tek başına görünüyor",
  "maddeler": [
-  "Sohbette sayfa, soru, çıkmış soru, favori ve terim paylaşabilirsin",
-  "Yeni mesajlarda bildirim gelir; istersen sohbeti sessize alabilirsin",
-  "Son görülme, çevrimiçi durumu ve okunma saati görünür (istersen gizleyebilirsin)",
-  "ATP ile açılan 3 sohbet arka planı: Kalpli, Tıbbi, Papatyalı"
+  "Sohbette paylaşılan çıkmış soru açıldığında yalnız o soru gösterilir, süzgeçler ve kategori kartları gizlenir"
  ],
  "eklenen": [],
  "degisen": [],
