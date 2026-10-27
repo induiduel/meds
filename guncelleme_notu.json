@@ -1,15 +1,14 @@
 {
  "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
- "onem": 421,
- "baslik": "Zihin haritası kaldırıldı",
+ "onem": 422,
+ "baslik": "Sesli derste tam ekran düğmesi",
  "maddeler": [
-  "Zihin haritası menüden ve ders sayfalarından kaldırıldı"
+  "Sesli ders üst çubuğuna doğrudan tam ekran düğmesi eklendi"
  ],
- "eklenen": [],
+ "eklenen": [
+  "Sesli ders ekranında tek tıkla tam ekrana girip çıkma"
+ ],
  "degisen": [],
- "duzeltilen": [
-  "Tetkik ve bilinç dersleri: EMG, BT/MR amacı, asit-baz nedenleri, pupil ve ilaç önerileri tıbben düzeltildi.",
-  "Çıkmış soru çipleri yalnız ham sınav belgesinde bulunan sorulara bağlandı."
- ],
+ "duzeltilen": [],
  "silinen": []
 }

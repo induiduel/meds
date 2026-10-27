@@ -8,10 +8,11 @@
  * Davranışlar değişmez; yalnız yerleşim ve gruplama v15'e göredir. Stiller styles/v15/sesli.css.
  */
 import React, { useState } from 'react';
-import { ArrowLeftRight, Eraser, Highlighter, Info, Maximize2, MoreHorizontal, PenTool, SlidersHorizontal, Undo2, X } from 'lucide-react';
+import { ArrowLeftRight, Eraser, Highlighter, Info, Maximize2, Minimize2, MoreHorizontal, PenTool, SlidersHorizontal, Undo2, X } from 'lucide-react';
 import { Sheet } from '../ui/Sheet';
 import { penPalette, setDrawingGlobalState, undoLastDrawing, useCanUndoDrawing, useDrawingGlobalState } from '../learn/SlideDrawingCanvas';
 import { useAppearance } from '../../utils/appearance';
+import { useAppFullscreen } from '../../utils/fullscreen';
 import '../../styles/v15/sesli.css';
 import { PDF_GORUNUM, pdfGorunumAyarla, terimYardimciAyarla, usePdfGorunum, useTerimYardimci, type PdfGorunumId } from './CdTerimKatman';
 
@@ -47,6 +48,7 @@ export function CdV15Bas(p: {
   ek?: React.ReactNode;
 }) {
   const terim = useTerimYardimci();
+  const [appFs, toggleAppFs] = useAppFullscreen();
   const sirali: CdGorunum[] = ['metin', 'ikisi', 'pdf'];
   const sonraki = sirali[(sirali.indexOf(p.mod) + 1) % 3];
   return (
@@ -78,6 +80,10 @@ export function CdV15Bas(p: {
           <Info aria-hidden />
         </button>
       )}
+      <button type="button" className={`v15-ib${appFs ? ' is-on' : ''}`} aria-pressed={appFs} onClick={() => toggleAppFs()}
+        aria-label={appFs ? 'Tam ekrandan çık' : 'Tam ekran'} title={appFs ? 'Tam ekrandan çık' : 'Tam ekran'}>
+        {appFs ? <Minimize2 aria-hidden /> : <Maximize2 aria-hidden />}
+      </button>
       <button type="button" className="v15-ib" onClick={p.onGorunum} aria-haspopup="dialog" aria-label="Görünüm ayarları" title="Görünüm: düzen, PDF katmanları, okuma">
         <SlidersHorizontal aria-hidden />
       </button>
@@ -138,6 +144,7 @@ export function CdV15Gorunum(p: {
   const [sekme, setSekme] = useState<Sekme>(p.pdfVar ? 'pdf' : 'okuma');
   const g = usePdfGorunum();
   const terim = useTerimYardimci();
+  const [appFs, toggleAppFs] = useAppFullscreen();
   const katmanlar = KATMAN_SIRA.filter((id) => PDF_GORUNUM.some((x) => x.id === id));
   const acikN = katmanlar.filter((id) => g[id]).length + (p.terimVar && terim ? 1 : 0);
   const topN = katmanlar.length + (p.terimVar ? 1 : 0);
