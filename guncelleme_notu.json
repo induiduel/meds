@@ -1,9 +1,11 @@
 {
  "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
- "onem": 492,
- "baslik": "İçerik kapısı eklendi",
+ "onem": 493,
+ "baslik": "Ders içeriklerinde sıralama ve süzme",
  "maddeler": [
-  "Sıralı tablolarda adım atlanmasını yakalayan otomatik denetim eklendi"
+  "Terim, hastalık, bilgi, liste ve tablo sayfalarına alfabetik / slayt sırasına göre sıralama eklendi",
+  "Tablolar ve listeler türe göre süzülebiliyor",
+  "Üstteki sekme çipleri fare tekerleği, sürükleme ve okla kaydırılabiliyor"
  ],
  "eklenen": [],
  "degisen": [],

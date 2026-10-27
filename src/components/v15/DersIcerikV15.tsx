@@ -1,6 +1,6 @@
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useRef, useState } from 'react';
 import {
-  Activity, ArrowDown, ArrowRight, ArrowUp, Check, ChevronDown, CircleHelp, FlaskConical, Layers, ListChecks, Microscope,
+  Activity, ArrowDown, ArrowRight, ArrowUpDown, ChevronLeft, ChevronRight, ArrowUp, Check, ChevronDown, CircleHelp, FlaskConical, Layers, ListChecks, Microscope,
   ListOrdered, Pill, Pin, RotateCw, Scale, Search, Sparkles, Stethoscope, Table2, X,
 } from 'lucide-react';
 import { linkClick, navigateTo, pathFor } from '../../router';
@@ -47,18 +47,77 @@ const BOLUM_TON: [RegExp, string, React.ElementType][] = [
   [/tedavi|yönetim/i, 'ok', Pill], [/patoge|mekaniz|fizyo/i, 'ai', Activity],
 ];
 const bolumTon = (b: string) => BOLUM_TON.find(([r]) => r.test(b)) || [null, 'c', ListChecks] as const;
+type Sira = 'varsayilan' | 'az' | 'za' | 'slayt' | 'slayt-azalan' | 'puan';
+const SIRA_AD: Record<Sira, string> = { varsayilan: 'Varsayılan sıra', az: 'Alfabetik (A → Z)', za: 'Alfabetik (Z → A)', slayt: 'Slayt: önce → sonra', 'slayt-azalan': 'Slayt: sonra → önce', puan: 'Sınav önemi (yüksek → düşük)' };
+/** "5", "5-6", [7, 9] → ilk slayt numarası (yoksa sona) */
+const slaytNo = (s: unknown): number => {
+  const m = String(Array.isArray(s) ? s[0] ?? '' : s ?? '').match(/\d+/);
+  return m ? parseInt(m[0], 10) : Number.MAX_SAFE_INTEGER;
+};
+function sirala<T>(l: T[], d: Sira, ad: (x: T) => string, sl?: (x: T) => unknown, pu?: (x: T) => number): T[] {
+  if (d === 'varsayilan') return l;
+  const k = [...l];
+  if (d === 'az') k.sort((a, b) => ad(a).localeCompare(ad(b), 'tr'));
+  else if (d === 'za') k.sort((a, b) => ad(b).localeCompare(ad(a), 'tr'));
+  else if (d === 'slayt' && sl) k.sort((a, b) => slaytNo(sl(a)) - slaytNo(sl(b)) || ad(a).localeCompare(ad(b), 'tr'));
+  else if (d === 'slayt-azalan' && sl) k.sort((a, b) => { const x = slaytNo(sl(a)), y = slaytNo(sl(b)); return (x === y ? 0 : x === Number.MAX_SAFE_INTEGER ? 1 : y === Number.MAX_SAFE_INTEGER ? -1 : y - x) || ad(a).localeCompare(ad(b), 'tr'); });
+  else if (d === 'puan' && pu) k.sort((a, b) => pu(b) - pu(a));
+  return k;
+}
 const puanTon = (p: number) => (p >= 90 ? 'is-cok' : p >= 70 ? 'is-orta' : 'is-az');
+
+/** Yatay çip şeridi: fare tekerleği, sürükleme, ok düğmeleri; aktif çip görünür kalır */
+function useSerit(bagimlilik: unknown) {
+  const ref = useRef<HTMLElement | null>(null);
+  const [kenar, setKenar] = useState({ sol: false, sag: false });
+  const guncelle = () => {
+    const e = ref.current; if (!e) return;
+    setKenar({ sol: e.scrollLeft > 4, sag: e.scrollLeft + e.clientWidth < e.scrollWidth - 4 });
+  };
+  useEffect(() => {
+    const e = ref.current; if (!e) return;
+    e.querySelector<HTMLElement>('.is-on')?.scrollIntoView({ block: 'nearest', inline: 'center' });
+    guncelle();
+    const tekerlek = (ev: WheelEvent) => {
+      if (e.scrollWidth <= e.clientWidth || Math.abs(ev.deltaX) > Math.abs(ev.deltaY)) return;
+      ev.preventDefault(); e.scrollLeft += ev.deltaY;
+    };
+    let x0 = 0, l0 = 0, basili = false, surukle = false;
+    const bas = (ev: PointerEvent) => { if (ev.pointerType !== 'mouse') return; basili = true; surukle = false; x0 = ev.clientX; l0 = e.scrollLeft; };
+    const hareket = (ev: PointerEvent) => { if (!basili) return; if (Math.abs(ev.clientX - x0) > 5) surukle = true; if (surukle) e.scrollLeft = l0 - (ev.clientX - x0); };
+    const birak = () => { basili = false; };
+    const tikla = (ev: MouseEvent) => { if (surukle) { ev.preventDefault(); ev.stopPropagation(); surukle = false; } };
+    e.addEventListener('wheel', tekerlek, { passive: false });
+    e.addEventListener('pointerdown', bas); window.addEventListener('pointermove', hareket); window.addEventListener('pointerup', birak);
+    e.addEventListener('click', tikla, true); e.addEventListener('scroll', guncelle, { passive: true });
+    window.addEventListener('resize', guncelle);
+    return () => {
+      e.removeEventListener('wheel', tekerlek); e.removeEventListener('pointerdown', bas);
+      window.removeEventListener('pointermove', hareket); window.removeEventListener('pointerup', birak);
+      e.removeEventListener('click', tikla, true); e.removeEventListener('scroll', guncelle); window.removeEventListener('resize', guncelle);
+    };
+  }, [bagimlilik]);
+  const kaydir = (y: number) => ref.current?.scrollBy({ left: y * Math.max(160, (ref.current?.clientWidth || 0) * 0.6), behavior: 'smooth' });
+  return { ref, kenar, kaydir };
+}
+
+const TABLO_TUR_AD: Record<string, string> = { karsilastirma: 'Karşılaştırma', sira: 'Sıralama', eslesme: 'Eşleştirme', matris: 'Tablo' };
+const tabloKategori = (t: DiTablo) => (t.k ? 'karsilastirma' : tabloTuru(t));
 
 export default function DersIcerikV15({ dersKey, bolum }: { dersKey: string; bolum: DiBolum }) {
   const [p, setP] = useState<DiPaket | null>(null);
   const [kaz, setKaz] = useState<{ no: number; metin: string; sorular: DiSoru[] }[]>([]);
   const [ara, setAra] = useState('');
   const [alt, setAlt] = useState<string>('');
+  const [sira, setSira] = useState<Sira>('varsayilan');
+  const [tur, setTur] = useState('');
+  const serit = useSerit(`${bolum}-${p ? 1 : 0}`);
   useEffect(() => {
     dersIcerikGetir(dersKey).then(setP);
     dersSorulariGetir(dersKey).then(setKaz);
   }, [dersKey]);
-  useEffect(() => { setAra(''); setAlt(''); }, [bolum]);
+  useEffect(() => { setAra(''); setAlt(''); setSira('varsayilan'); setTur(''); }, [bolum]);
+  useEffect(() => { setSira('varsayilan'); }, [alt]);
   const q = norm(ara.trim());
   const ok = (...s: (string | undefined)[]) => !q || s.some((x) => x && norm(x).includes(q));
   const sorular = useMemo(() => kaz.flatMap((k) => k.sorular), [kaz]);
@@ -78,14 +137,46 @@ export default function DersIcerikV15({ dersKey, bolum }: { dersKey: string; bol
 
   return (
     <div className="di15">
-      <nav className="di15-tabs" aria-label="Ders içerikleri">
+      <div className="di15-seritkap">
+      {serit.kenar.sol && <button type="button" className="di15-ser-ok is-sol" onClick={() => serit.kaydir(-1)} aria-label="Sola kaydır"><ChevronLeft aria-hidden /></button>}
+      <nav className="di15-tabs" aria-label="Ders içerikleri" ref={serit.ref as React.RefObject<HTMLElement>}>
         {DI_BOLUMLER.filter((b) => sayi[b.id]).map((b) => (
           <a key={b.id} href={url(b.id)} className={b.id === bolum ? 'is-on' : ''} aria-current={b.id === bolum ? 'page' : undefined} onClick={linkClick(() => navigateTo(url(b.id)))}>
             {b.ad} <span>{sayi[b.id]}</span>
           </a>
         ))}
       </nav>
+      {serit.kenar.sag && <button type="button" className="di15-ser-ok is-sag" onClick={() => serit.kaydir(1)} aria-label="Sağa kaydır"><ChevronRight aria-hidden /></button>}
+      </div>
       <label className="di15-ara"><Search aria-hidden /><input value={ara} onChange={(e) => setAra(e.target.value)} placeholder="Bu sayfada ara" aria-label="Bu sayfada ara" /></label>
+
+      {(() => {
+        const sec = alt;
+        const slaytli = bolum === 'hastaliklar' || bolum === 'tablolar' || bolum === 'listeler' || (bolum === 'terimler' && sec !== 'kisa') || (bolum === 'bilgiler' && sec !== 'spot');
+        const puanli = bolum === 'bilgiler' && (sec === 'onemli' || (!sec && p.onemli.length > 0));
+        const secenek: Sira[] = bolum === 'kartlar' || bolum === 'quiz' || bolum === 'sorular' ? [] : ['varsayilan', 'az', 'za', ...(slaytli ? (['slayt', 'slayt-azalan'] as Sira[]) : []), ...(puanli ? (['puan'] as Sira[]) : [])];
+        if (secenek.length < 2) return null;
+        return (
+          <label className="di15-sirala"><ArrowUpDown aria-hidden /><span>Sırala</span>
+            <select value={secenek.includes(sira) ? sira : 'varsayilan'} onChange={(e) => setSira(e.target.value as Sira)} aria-label="Sıralama">
+              {secenek.map((o) => <option key={o} value={o}>{SIRA_AD[o]}</option>)}
+            </select>
+          </label>
+        );
+      })()}
+
+      {(bolum === 'tablolar' || bolum === 'listeler') && (() => {
+        const kayit: string[] = bolum === 'tablolar' ? p.tablolar.map(tabloKategori) : p.listeler.map((l) => l.sira);
+        const adlar: Record<string, string> = bolum === 'tablolar' ? TABLO_TUR_AD : { numara: 'Sayılı', alfa: 'Harfli', azalan: 'Büyükten küçüğe', madde: 'Sırasız' };
+        const turler = Object.keys(adlar).filter((k) => kayit.includes(k));
+        if (turler.length < 2) return null;
+        return (
+          <div className="v15-seg di15-alts di15-filtre" role="tablist" aria-label="Türe göre süz">
+            <button type="button" role="tab" aria-selected={!tur} onClick={() => setTur('')}>Tümü<small>{kayit.length}</small></button>
+            {turler.map((k) => <button key={k} type="button" role="tab" aria-selected={tur === k} onClick={() => setTur(tur === k ? '' : k)}>{adlar[k]}<small>{kayit.filter((x) => x === k).length}</small></button>)}
+          </div>
+        );
+      })()}
 
       {bolum === 'terimler' && (() => {
         const sec = altSec(p.terimler.length ? 'terim' : 'kisa');
@@ -94,7 +185,7 @@ export default function DersIcerikV15({ dersKey, bolum }: { dersKey: string; bol
             <AltSekme l={[['terim', 'Terimler', p.terimler.length], ['kisa', 'Kısaltmalar', p.kisaltmalar.length]]} />
             {sec === 'terim' ? (
               <ul className="di15-izgara di15-anim" role="list">
-                {p.terimler.filter((x) => ok(x.t, x.a, ...x.e)).map((x, i) => (
+                {sirala(p.terimler.filter((x) => ok(x.t, x.a, ...x.e)), sira, (x) => x.t, (x) => x.s).map((x, i) => (
                   <li key={x.t} className="v15-card di15-terim" style={{ '--i': i } as React.CSSProperties}>
                     <div className="di15-terim-u"><span className="di15-harf" aria-hidden>{x.t.charAt(0)}</span><b>{x.t}</b></div>
                     {x.e.length > 0 && <div className="di15-cipler">{x.e.map((e) => <span key={e}>{e}</span>)}</div>}
@@ -105,7 +196,7 @@ export default function DersIcerikV15({ dersKey, bolum }: { dersKey: string; bol
               </ul>
             ) : (
               <ul className="di15-kisa di15-anim" role="list">
-                {p.kisaltmalar.filter((x) => ok(x.k, x.acilim)).map((x, i) => (
+                {sirala(p.kisaltmalar.filter((x) => ok(x.k, x.acilim)), sira, (x) => x.k).map((x, i) => (
                   <li key={x.k} className="v15-card" style={{ '--i': i } as React.CSSProperties}><span className="di15-kisa-k">{x.k}</span><span>{x.acilim}</span></li>
                 ))}
               </ul>
@@ -116,7 +207,7 @@ export default function DersIcerikV15({ dersKey, bolum }: { dersKey: string; bol
 
       {bolum === 'hastaliklar' && (
         <div className="di15-yigin di15-anim">
-          {p.hastaliklar.filter((h) => ok(h.ad, h.latin, ...h.bolumler.flatMap((b) => b.m.map((x) => x.m)))).map((h, i) => <HastalikKart key={h.id} h={h} i={i} acik={i === 0} />)}
+          {sirala(p.hastaliklar.filter((h) => ok(h.ad, h.latin, ...h.bolumler.flatMap((b) => b.m.map((x) => x.m)))), sira, (h) => h.ad, (h) => h.s).map((h, i) => <HastalikKart key={h.id} h={h} i={i} acik={i === 0} />)}
         </div>
       )}
 
@@ -127,7 +218,7 @@ export default function DersIcerikV15({ dersKey, bolum }: { dersKey: string; bol
             <AltSekme l={[['onemli', 'Önemli noktalar', p.onemli.length], ['spot', 'Sınav spotları', p.spotlar.length], ['slayt', 'Slayttan', p.bilgiler.length]]} />
             {sec === 'onemli' && (
               <div className="di15-yigin di15-anim">
-                {p.onemli.filter((x) => ok(x.b, x.m, ...x.alt)).map((x, i) => (
+                {sirala(p.onemli.filter((x) => ok(x.b, x.m, ...x.alt)), sira, (x) => x.b, (x) => x.s, (x) => x.p).map((x, i) => (
                   <article key={i} className="v15-card di15-onem" style={{ '--i': i } as React.CSSProperties}>
                     <header>
                       <span className={`di15-puan ${puanTon(x.p)}`} title="Sınav önemi (100 üzerinden)"><b>{x.p}</b><small>puan</small></span>
@@ -153,7 +244,7 @@ export default function DersIcerikV15({ dersKey, bolum }: { dersKey: string; bol
             )}
             {sec === 'slayt' && (
               <ul className="di15-izgara di15-anim" role="list">
-                {p.bilgiler.filter((x) => ok(x.b, x.m)).map((x, i) => (
+                {sirala(p.bilgiler.filter((x) => ok(x.b, x.m)), sira, (x) => x.b, (x) => x.s).map((x, i) => (
                   <li key={i} className="v15-card di15-bilgi" style={{ '--i': i } as React.CSSProperties}><b>{x.b}</b><p><Zengin t={x.m} /></p>{x.s && <small className="di15-slayt">Slayt s.{x.s}</small>}</li>
                 ))}
               </ul>
@@ -164,7 +255,7 @@ export default function DersIcerikV15({ dersKey, bolum }: { dersKey: string; bol
 
       {bolum === 'listeler' && (
         <div className="di15-yigin">
-          {p.listeler.filter((l) => ok(l.t, ...l.m.map((x) => x.m))).map((l, i) => (
+          {sirala(p.listeler.filter((l) => (!tur || l.sira === tur) && ok(l.t, ...l.m.map((x) => x.m))), sira, (l) => l.t, (l) => l.n).map((l, i) => (
             <section key={i} className="v15-card di15-tb is-sira">
               <header className="di15-tb-u">
                 <span className="di15-tb-ik" aria-hidden><ListOrdered /></span>
@@ -188,7 +279,7 @@ export default function DersIcerikV15({ dersKey, bolum }: { dersKey: string; bol
 
       {bolum === 'tablolar' && (
         <div className="di15-yigin">
-          {p.tablolar.filter((t) => ok(t.t, ...t.r.flat())).map((t, i) => <TabloKart key={i} t={t} />)}
+          {sirala(p.tablolar.filter((t) => (!tur || tabloKategori(t) === tur) && ok(t.t, ...t.r.flat())), sira, (t) => t.t, (t) => t.n).map((t, i) => <TabloKart key={i} t={t} />)}
         </div>
       )}
 

@@ -212,3 +212,19 @@
 .di15-num.is-alfa > li::before { content: counter(dn, lower-alpha); }
 .di15-num.is-azalan > li::before { content: counter(dn) "↓"; width: 30px; border-radius: 99px; }
 .di15-num.is-azalan > li { padding-left: 40px; }
+
+.di15-sirala { display: inline-flex; align-items: center; gap: 8px; height: 40px; padding: 0 12px; border-radius: 12px; background: var(--color-white); border: 1px solid var(--color-line-soft, var(--color-line)); color: var(--color-ink-3); font-size: 14px; width: fit-content; }
+.di15-sirala svg { width: 16px; height: 16px; flex: none; }
+.di15-sirala select { background: none; border: 0; outline: 0; color: var(--color-ink); font: inherit; cursor: pointer; }
+.di15-sirala:focus-within { border-color: var(--color-accent); }
+
+/* sekme şeridi: kaydırılabilir (tekerlek, sürükleme, ok) */
+.di15-seritkap { position: relative; min-width: 0; max-width: 100%; }
+.di15-tabs { min-width: 0; max-width: 100%; cursor: grab; -webkit-overflow-scrolling: touch; overscroll-behavior-x: contain; user-select: none; }
+.di15-tabs:active { cursor: grabbing; }
+.di15-ser-ok { position: absolute; top: 0; bottom: 4px; z-index: 2; width: 40px; display: grid; place-items: center; border: 0; cursor: pointer; color: var(--color-ink); }
+.di15-ser-ok svg { width: 18px; height: 18px; padding: 4px; box-sizing: content-box; border-radius: 999px; background: var(--color-white); border: 1px solid var(--color-line-soft, var(--color-line)); }
+.di15-ser-ok.is-sol { left: 0; background: linear-gradient(90deg, var(--color-bg, var(--color-white)) 40%, transparent); justify-items: start; }
+.di15-ser-ok.is-sag { right: 0; background: linear-gradient(270deg, var(--color-bg, var(--color-white)) 40%, transparent); justify-items: end; }
+.di15-filtre { max-width: 100%; overflow-x: auto; scrollbar-width: none; flex-wrap: nowrap; }
+.di15-filtre button { flex: none; white-space: nowrap; }
