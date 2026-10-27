@@ -83,3 +83,17 @@ Her derste yayından önce `scripts/sesli_anlatim/takip_kapisi.py <key>` **0 HAT
 AGENTS 1–9b (madde yapısı, sıfır tekrar, 60–250 kelime, müfredat sadakati, kronoloji/sıfır ileri sızıntı, 4–6 öge,
 ders sonu oyunları), kural 14 (dolgu yasağı, şık açıklama standardı `SIK_ACIKLAMA_STANDARDI.md`, Türkçe üslup
 `TURKCE_USLUP_STANDARDI.md`), Öğren rehberi `OGREN_ETKILESIM_REHBERI.md`, çizim `CIZIM_KURALLARI.md`.
+
+## 8. Anlatım kalitesi: öğreten ders (kullanıcı kararı 2026-10-27, H97)
+Metinler slaytı özetlemekle kalmaz, **öğretir**. Kapılar biçimi ölçer; anlaşılırlık bu bölümdeki kurallarla ve öğrenci rolündeki denetçiyle sağlanır.
+1. **Orta uzunluk, öz anlatım:** uzunluk konunun zorluğuna göre değişir; dolgu yok ama açıklama da kısılmaz. Mevcut sürüme göre
+   ayrıntı artışı en çok **%50**; artış sınav için ayırt edici/karakteristik noktalara ve örneklere gider, tekrara değil.
+2. **Asıl ve zor kavramlarda kavram anlatımı** (her kavramda değil): ne olduğu → neden/nasıl oluştuğu → nasıl görünür/bulgusu →
+   sınavla veya kliniğe bağı → neyle karıştırılır. Yalnız slaytın ve hocanın gerçekten verdiği kadarı; uydurma eklenmez.
+3. **Hocanın örnekleri ve benzetmeleri** (hoca dökümünün anlaşılır kısımları) ilgili yerde anlatıma girer; anlaşılmayan döküm kullanılmaz (H81).
+4. **Ayırt edici nokta öne çıkar:** benzer iki kavram yan yana anlatılır (hangi bulgu hangisini ayırır), sınavda çeldirici olan komşu kavram açıkça söylenir.
+5. **Terim ilk geçtiği yerde açıklanır** — yalnız zor/yabancı/yeni terimler; basit, genel bilinen sözcükler açıklanmaz.
+6. **Slayt kapsama:** slayttaki her madde anlatımda karşılık bulur ya da atlama gerekçesi yazılır; slaytı yeniden okumak açıklama sayılmaz.
+7. **Öğrenci rolünde bağımsız denetçi (GEÇER şart):** metni slayta bakmadan okur, "anlamadığım yerler" listesi çıkarır, metinden üretilen
+   sorularla kendini sınar; cevaplayamadığı yer yeniden yazılır. Bu geçmeden seslendirmeye geçilmez.
+8. **Altın örnek:** Patoloji 2 (k2-04) örnek bölümü yeni derslerin karşılaştırma ölçüsüdür.
