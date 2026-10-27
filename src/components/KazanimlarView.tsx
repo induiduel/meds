@@ -19,6 +19,7 @@ import { foldText } from '../services/searchText';
 import { navigateTo, pathFor } from '../router';
 import './kazanimlar.css';
 import '../styles/v12/secondary.css';
+import '../styles/v15/liste2.css';
 
 /**
  * Kazanımlar (v11) — Kurul → Ders → Konu → kazanım hiyerarşisi.
@@ -395,6 +396,25 @@ export const KazanimlarView: React.FC<Props> = ({ onNavigateToLearn, onNavigateT
         search={{ value: searchQuery, onChange: setSearchQuery, placeholder: 'Kazanım, konu, terim ara' }}
         quick={quick}
       />
+
+      {/* tasarım B17 (v15): kapsam halkası + Tam kapsam · Çıkmışta · Kapsamsız */}
+      {!loading && kurulItems.length > 0 && (() => {
+        const toplam = kurulItems.length;
+        const tam = kurulKapsam[2];
+        const yok = kurulKapsam[0];
+        const cikmis = kurulItems.filter((k) => (k.totalCikmisCount || k.cikmisSorular?.length || 0) > 0).length;
+        const pct = Math.round((tam / toplam) * 100);
+        return (
+          <div className="kz15-ozet" aria-label="Kapsam özeti">
+            <div className="v15-card kz15-halka" style={{ '--p': pct } as React.CSSProperties}>
+              <span><b>%{pct}</b><small>kapsandı</small></span>
+            </div>
+            <div className="v15-card is-ok"><span className="v15-label">Tam kapsam</span><b>{tam.toLocaleString('tr-TR')}</b><small>slayt + soru</small></div>
+            <div className="v15-card is-w"><span className="v15-label">Çıkmışta</span><b>{cikmis.toLocaleString('tr-TR')}</b><small>kazanım</small></div>
+            <div className="v15-card"><span className="v15-label">Kapsamsız</span><b>{yok.toLocaleString('tr-TR')}</b><small>/ {toplam.toLocaleString('tr-TR')}</small></div>
+          </div>
+        );
+      })()}
 
       {loading ? (
         <div className="kz-body" aria-busy="true" aria-label={`Kurul ${selectedKurul} kazanımları yükleniyor`}>

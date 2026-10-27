@@ -54,15 +54,15 @@ Not: YOK sayısının 6'sı tasarım belgesi ekranıdır (A09, K08, P01, W03, X0
 | B06 | ogrenSlayt | learn › LessonPlayer + styles/v15/ogren.css | VAR | Onaylı; yapı eski oynatıcı, v15 yalnız CSS katmanı |
 | B07 | ogrenEtk | LessonPlayer etkileşimleri + ogren.css | VAR | Onaylı (CSS katmanı) |
 | B08 | spotlar | spots → v15/SpotsV15.tsx | KURULDU | Yıldızlı + Derste dinle (çıkmış sayısı verisi yok) |
-| B09 | onem | en_onemliler → OnemListesi + onem.css | KISMİ | Yalnız CSS katmanı; tablo yapısı (Madde/Kaynak/Önem) ve "Sesli" düğmesi DOĞRULANMADI |
-| B10 | sozluk | glossary → GlossaryV12 + sozluk.css | KISMİ | Liste + bilgi kartı var; kartta "Derste dinle" ve "n soru" bağlantıları DOĞRULANMADI |
+| B09 | onem | en_onemliler → OnemListesi + onem.css | VAR | Arama, Sesli asistan, her maddede puan + PDF alıntı (tasarımdakinden zengin; tablo yerine kart satır) |
+| B10 | sozluk | glossary → GlossaryV12 + sozluk.css | KURULDU | bilgi kartında Derste dinle (ders adı eşleşmesi + ?ara=) + n soru çipi |
 | B11 | notlar | notlarim → v15/NotlarimV15.tsx | KURULDU | Yıldızlı/Ses damgalı + damga |
-| B12 | bitirdiklerim | bitirdiklerim → BitirdiklerimView + bitir.css | KISMİ | Tasarımdaki 4'lü stat (Ders/Soru/Doğru/Süre) DOĞRULANMADI; tanıtım kaldırıldı, yapı eski |
+| B12 | bitirdiklerim | bitirdiklerim → BitirdiklerimView + bitir.css | SIRADA | BitirdiklerimView başka oturumda düzenleniyor; çakışmamak için ertelendi |
 | B13 | b2ozet | summaries → v15/OzetlerV15.tsx | VAR |  |
-| B14 | b2ozetOku | summaries okuyucu (LectureSummariesView) | KISMİ | Okuyucu v15'e geçirilmedi (plan: "okuyucu aynı") |
-| B15 | b2hastalik | diseases → DiseasesV12 + sozluk.css | KISMİ | "Anatomiden gez" yapısı yok, yalnız CSS katmanı |
-| B16 | b2hastalikDetay | DiseasesV12 ayrıntı | KISMİ | CSS katmanı; tasarım yapısı DOĞRULANMADI |
-| B17 | b2kazanim | kazanimlar (PageToolbar) | KISMİ | Yalnız başlık üst bara taşındı |
+| B14 | b2ozetOku | summaries okuyucu (LectureSummariesView) | VAR | SummaryReader: içindekiler, ilerleme çizgisi, Aa, ara |
+| B15 | b2hastalik | diseases → DiseasesV12 + sozluk.css | SIRADA | "Anatomiden gez" için hastalık kayıtlarında organ sistemi alanı yok (veri gerekir) |
+| B16 | b2hastalikDetay | DiseasesV12 ayrıntı | VAR | tanım listesi (Klinik/Tanı/Tedavi…), çıkmış sayısı, dersler; sekme yerine bölüm |
+| B17 | b2kazanim | kazanimlar (PageToolbar) | KURULDU | kapsam halkası + Tam kapsam/Çıkmışta/Kapsamsız |
 | B18 | b2ornek | ornek_sorular | DOĞRULANMADI | v15 dalı/stili bulunamadı |
 | B19 | b2oncelik | oncelikli_dersler | DOĞRULANMADI | v15 dalı/stili bulunamadı |
 | B20 | b2harita | soru_haritasi → v15/SoruHaritasiV15.tsx | VAR |  |

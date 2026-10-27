@@ -16,7 +16,7 @@
 import React, { startTransition, useEffect, useMemo, useRef, useState } from 'react';
 import {
   AlertCircle, AlertTriangle, BookOpenText, Bookmark, Check, ChevronLeft, ChevronRight, FileText, Filter, GraduationCap, Lightbulb,
-  RefreshCw, Search, Share2, SlidersHorizontal, Stethoscope, X,
+  RefreshCw, Search, Headphones, CircleHelp, Share2, SlidersHorizontal, Stethoscope, X,
 } from 'lucide-react';
 import type { EncyclopediaEntry, IndexedEncyclopediaEntry, InfoCardItem } from '../encyclopedia/MedicalEncyclopediaView';
 import type { ToolbarChip } from '../ui/PageToolbar';
@@ -24,6 +24,8 @@ import { Sheet } from '../ui/Sheet';
 import { fetchSearch } from '../search/searchShared';
 import { deepLinkIdFor, linkClick, navigateTo, parseLocation, pathFor } from '../../router';
 import '../../styles/v12/glossary.css';
+import { cdListeGetir, type CdListeDers } from '../canliDers/canliDersStore';
+import { useAppearance } from '../../utils/appearance';
 
 export interface GlossaryV12Props {
   entries: IndexedEncyclopediaEntry[] | null;
@@ -171,6 +173,25 @@ function lessonRows(src?: string): Array<{ title: string; at: string[] }> {
     out.set(k, cur);
   }
   return [...out.values()].slice(0, 6);
+}
+
+/** "Derste dinle" (tasarım B10): terimin geçtiği ders notunun adını sesli ders listesindeki başlıkla eşleştirir;
+ *  bulunursa ders, terimin geçtiği paragrafa (?ara=) açılır. Eşleşme yoksa çip çıkmaz. */
+const katlaG = (s: string) => s.toLocaleLowerCase('tr-TR').normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/ı/g, 'i').replace(/[^a-z0-9 ]/g, ' ').replace(/\s+/g, ' ').trim();
+let cdListe: CdListeDers[] | null = null;
+function useDersteDinle(basliklar: string[], terim: string) {
+  const [liste, setListe] = useState<CdListeDers[] | null>(cdListe);
+  useEffect(() => { if (!cdListe) cdListeGetir(false).then((l) => { cdListe = l; setListe(l); }, () => {}); }, []);
+  return useMemo(() => {
+    if (!liste || !basliklar.length) return null;
+    for (const b of basliklar) {
+      const k = katlaG(b);
+      if (k.length < 6) continue;
+      const d = liste.find((x) => !x.sinama && (katlaG(x.baslik).includes(k) || k.includes(katlaG(x.baslik))));
+      if (d) return { ad: d.baslik, yol: `${pathFor('canli_ders', d.key)}?ara=${encodeURIComponent(terim)}` };
+    }
+    return null;
+  }, [liste, basliklar.join('|'), terim]);
 }
 
 /** Çıkmış soru sayısı: arama sayfasının çıkmış soru sonucu (aynı sorgu, aynı sayı); seçim durulunca bir kez sorulur */
@@ -473,6 +494,8 @@ const EntryDetailV12: React.FC<GlossaryV12Props & {
   const isNoteSource = /^ders notu\s*:/i.test(String(entry.instructorAndSource || '').trim());
   const bare = String(entry.term || '').replace(/\s*\([^)]*\)/g, ' ').replace(/\s+/g, ' ').trim();
   const past = usePastCount(bare || null);
+  const v15 = useAppearance().v15;
+  const derste = useDersteDinle(v15 ? lessons.map((l) => l.title) : [], bare);
   const searchHref = pathFor('search', bare);
   const verified = entry.aiAudit?.verified
     ? `${entry.uretici === 's13_study' || entry.uretici === 'sozluk_v2' ? 'Ders notuyla doğrulandı' : 'Doğrulandı'}${typeof entry.aiAudit.accuracyScore === 'number' ? ` (%${entry.aiAudit.accuracyScore})` : ''}`
@@ -529,6 +552,12 @@ const EntryDetailV12: React.FC<GlossaryV12Props & {
         )}
       </header>
 
+      {v15 && (derste || (past && past.n > 0)) && (
+        <div className="g15-cip">
+          {derste && <a href={derste.yol} onClick={linkClick(() => navigateTo(derste.yol))} title={derste.ad}><Headphones aria-hidden /> Derste dinle</a>}
+          {past && past.n > 0 && <a href={searchHref} onClick={linkClick(() => navigateTo(searchHref))}><CircleHelp aria-hidden /> {past.n.toLocaleString('tr-TR')}{past.capped ? '+' : ''} soru</a>}
+        </div>
+      )}
       {auditMessage && <p className="g12-status" role="status"><RefreshCw className={auditing ? 'animate-spin' : ''} aria-hidden />{auditMessage}</p>}
 
       <section id={`term-${entry.id}-def`} className="g12-sec">

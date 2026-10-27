@@ -79,3 +79,17 @@
 .l2-sat .b15-row { text-align: left; }
 .l2-sat .b15-row-t { flex: 1; min-width: 0; align-items: stretch; }
 .l2-sat .b15-row-t > * { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+/* Kazanımlar özet (B17; yalnız v15) */
+.kz15-ozet { display: none; }
+:root[data-v15='on'] .kz15-ozet { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; margin-bottom: 12px; }
+@media (max-width: 560px) { :root[data-v15='on'] .kz15-ozet { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.kz15-ozet > div { padding: 12px; display: flex; flex-direction: column; gap: 2px; }
+.kz15-ozet b { font-size: 1.3rem; font-variant-numeric: tabular-nums; color: var(--color-ink); }
+.kz15-ozet small { font-size: .76rem; color: var(--color-ink-3); }
+.kz15-ozet .is-ok b { color: var(--color-ok); }
+.kz15-ozet .is-w b { color: var(--color-warn); }
+.kz15-halka { align-items: center; justify-content: center; }
+.kz15-halka span { width: 84px; height: 84px; border-radius: 50%; display: grid; place-items: center; align-content: center; text-align: center;
+  background: radial-gradient(closest-side, var(--color-white) 78%, transparent 80% 100%), conic-gradient(var(--color-accent) calc(var(--p) * 1%), var(--color-field) 0); }
+.kz15-halka span b { font-size: 1.15rem; line-height: 1; }

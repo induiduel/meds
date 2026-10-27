@@ -9,3 +9,9 @@
 :root[data-v15='on'] .g12-read { font-family: var(--v15-serif, 'Newsreader', Georgia, serif); font-size: 1.05rem; line-height: 1.6; }
 :root[data-v15='on'] .g12-box { border-radius: var(--v15-r-md, 12px); }
 :root[data-v15='on'] .g12-head > .g12-m { display: none; }
+
+/* B10: bilgi kartında Derste dinle + n soru çipleri */
+.g15-cip { display: flex; flex-wrap: wrap; gap: 6px; margin: 2px 0 6px; }
+.g15-cip a { display: inline-flex; align-items: center; gap: 6px; min-height: 32px; padding: 0 12px; border-radius: 999px; border: 1px solid var(--color-line); background: var(--color-white); color: var(--color-ink); font-size: .85rem; font-weight: 600; text-decoration: none; }
+.g15-cip a:first-child { background: var(--color-accent-soft); border-color: transparent; color: var(--color-accent); }
+.g15-cip svg { width: 15px; height: 15px; }

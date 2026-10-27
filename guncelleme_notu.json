@@ -1,11 +1,10 @@
 {
  "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
- "onem": 468,
- "baslik": "Sesli derste canlı konum takibi daha sağlam",
+ "onem": 469,
+ "baslik": "Sözlükte Derste dinle, kazanım özeti",
  "maddeler": [
-  "Sesli derste metin, okunan cümleyi daha güvenilir izliyor",
-  "Ders yeni açıldığında ya da aşama değiştiğinde takip kaçmıyor",
-  "Sayfa yerleşimi oynayınca \"Canlı konuma dön\" kendiliğinden çıkmıyor"
+  "Sözlük: bilgi kartında Derste dinle ve çıkmış soru sayısı",
+  "Kazanımlar: kapsam halkası, tam kapsam, çıkmışta ve kapsamsız sayıları"
  ],
  "eklenen": [],
  "degisen": [],
