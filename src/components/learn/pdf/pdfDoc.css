@@ -189,7 +189,7 @@
 .pdv-cz { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; overflow: visible; }
 .pdv-cz path { fill: none; stroke-linecap: round; stroke-linejoin: round; }
 /* H40: her çizginin altında beyaz hale — resim/renkli zemin üstünde de okunur; çizgi ince ama tam opak */
-.pdv-cz-kontur path { stroke: #f43f5e; stroke-width: 3.2; filter: drop-shadow(0 0 3px rgba(244, 63, 94, 0.7)); }
+.pdv-cz-kontur path { stroke: rgb(244 63 94 / .9); stroke-width: 1.6; filter: drop-shadow(0 0 1.5px rgba(244, 63, 94, 0.55)); } /* H85: yumuşak, ince; kalınlık satır içinde bölgeye göre */
 .pdv-cz-akis path { stroke: #2563eb; stroke-width: 3; filter: drop-shadow(0 0 3px rgba(37, 99, 235, 0.6)); }
 .pdv-cz g path.pdv-cz-hale { stroke: #fff; stroke-width: 6.8; opacity: .95; }
 .pdv-cz-akis.is-inhibe path { stroke: #dc2626; }
@@ -200,7 +200,7 @@
 .pdv-cz g rect.pdv-cz-hale { fill: none; stroke: #fff; stroke-width: 6.5; opacity: .95; }
 .pdv-cz-odak { fill: rgb(37 99 235 / .15); stroke: #2563eb; stroke-width: 2.8; filter: drop-shadow(0 0 4px rgba(37, 99, 235, 0.5)); }
 /* kural: resimde vurgulanan bölge fosforlu boyanır; siyah/koyu radyoloji zemininde kaybolmaması için mix-blend multiply kullanılmaz */
-.pdv-cz g path.pdv-cz-boya { fill: rgb(250 204 21 / .45); stroke: none; filter: drop-shadow(0 0 6px rgba(250, 204, 21, 0.6)); transition: opacity .3s; }
+.pdv-cz g path.pdv-cz-boya { fill: rgb(250 204 21 / .13); stroke: none; filter: blur(2px); transition: opacity .3s; } /* H85: yapının üstü örtülmez */
 /* kural: okun başlangıcı her zaman belli — kaynak kutusu kesik turuncu çerçeve, kutu yoksa halkalı nokta */
 .pdv-cz-baslangic { fill: #d97706; stroke: #fff; stroke-width: 2.5; }
 .pdv-cz-kaynak { fill: rgb(245 158 11 / .1); stroke: #d97706; stroke-width: 2; stroke-dasharray: 5 3; animation: pdv-cz-hedef-gel .3s ease-out both; }
@@ -312,7 +312,7 @@ ol.pdv-sb-liste { list-style-type: decimal; } ul.pdv-sb-liste { list-style-type:
 .pdv-sb-ok-kisa { color: #1d4ed8; font-weight: 800; }
 /* ---- pekiştiren animasyonlar (2026-10-24) ---- */
 /* odak merceği: kontur dışı hafif kararır (resim okunur kalır) */
-.pdv-cz g path.pdv-cz-mercek { fill: rgb(15 23 42 / .22); stroke: none; transition: opacity .4s; pointer-events: none; }
+.pdv-cz g path.pdv-cz-mercek { fill: rgb(15 23 42 / .1); stroke: none; transition: opacity .4s; pointer-events: none; }
 /* şu an anlatılan satır/öğe öne çıkar, öncekiler sakin */
 .pdv-sb-tablo tr.is-simdi td { background: rgb(250 204 21 / .28); }
 .pdv-sb-liste li.is-simdi { background: rgb(250 204 21 / .28); border-radius: .3em; }

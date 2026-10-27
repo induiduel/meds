@@ -69,6 +69,18 @@ const V = 1000;
 const P = (n: number[]) => `${(n[0] * V).toFixed(1)} ${(n[1] * V).toFixed(1)}`;
 
 /** Catmull-Rom → kübik Bezier (noktalardan geçen yumuşak eğri) */
+/** Konturu ağırlık merkezinden dışa açar (yapıyı kesmesin, tam kapsasın — H85). */
+function konturGenis(nk: number[][], k = 1.08): number[][] {
+  const cx = nk.reduce((a, p) => a + p[0], 0) / nk.length, cy = nk.reduce((a, p) => a + p[1], 0) / nk.length;
+  return nk.map((p) => [Math.min(1, Math.max(0, cx + (p[0] - cx) * k)), Math.min(1, Math.max(0, cy + (p[1] - cy) * k))]);
+}
+/** Çizgi kalınlığı bölge boyutuna göre: küçük yapı ~1 px, büyük bölge en çok ~2,4 px (H85). */
+function konturKalinlik(nk: number[][]): number {
+  const w = Math.max(...nk.map((p) => p[0])) - Math.min(...nk.map((p) => p[0]));
+  const h = Math.max(...nk.map((p) => p[1])) - Math.min(...nk.map((p) => p[1]));
+  return +(1 + 1.4 * Math.min(1, Math.max(w, h) / 0.45)).toFixed(2);
+}
+
 function egri(nk: number[][], kapali = false): string {
   const p = nk.map((n) => [n[0] * V, n[1] * V]);
   if (p.length < 2) return '';
@@ -141,16 +153,21 @@ function EtiketBag({ z }: { z: CizimKomut }) {
 function Komut({ z, t }: { z: CizimKomut; t: number }) {
   const ciz = { pathLength: 1, strokeDasharray: 1, strokeDashoffset: 1 - t } as const;
   if (z.tur === 'kontur' && z.nokta) {
+    // H85: yapıyı tam kapsasın diye ağırlık merkezinden %8 dışa; hat yumuşak, kalınlık bölgeye göre (küçük yapıda ince);
+    // dolgu/karartma çok hafif — anlatılan yapının üstü örtülmez.
+    const nk = konturGenis(z.nokta);
+    const d = egri(nk, true);
+    const sw = konturKalinlik(nk);
     return (
       <g className="pdv-cz-kontur">
-        {/* odak merceği: anlatılan bölge dışı hafifçe kararır, göz yapıya gider (bölge boyunca açık kalır) */}
-        {t > 0 && <path d={`M0 0H${V}V${V}H0Z ${egri(z.nokta, true)}`} fillRule="evenodd" className="pdv-cz-mercek" style={{ opacity: Math.min(1, t * 2) }} />}
-        {t > 0 && <path d={egri(z.nokta, true)} className="pdv-cz-boya" style={{ opacity: Math.min(1, t * 1.5) }} />}
-        <path d={egri(z.nokta, true)} {...ciz} className="pdv-cz-hale" vectorEffect="non-scaling-stroke" />
-        <path d={egri(z.nokta, true)} {...ciz} vectorEffect="non-scaling-stroke" />
+        {t > 0 && <path d={`M0 0H${V}V${V}H0Z ${d}`} fillRule="evenodd" className="pdv-cz-mercek" style={{ opacity: Math.min(1, t * 2) }} />}
+        {t > 0 && <path d={d} className="pdv-cz-boya" style={{ opacity: Math.min(1, t * 1.5) }} />}
+        <path d={d} {...ciz} style={{ strokeWidth: sw }} vectorEffect="non-scaling-stroke" />
       </g>
     );
   }
+  // H85: ok yalnız resim içinde (betik resim çizimine `yakin` yazar); yazı ↔ yazı oku/çizgisi çizilmez
+  if (z.tur === 'akis' && !z.yakin) return null;
   if (z.tur === 'akis' && (z.odak || (z.a && z.b))) {
     const o = z.odak;
     const a = z.a, b = z.b;
@@ -489,8 +506,10 @@ function yakinUygula(pg: HTMLElement, b: number[] | null) {
     return;
   }
   const w = b[2] - b[0], h = b[3] - b[1];
-  const s = Math.min(2.4, 0.8 / Math.max(w, h, 0.01));
-  if (s < 1.15) { yakinUygula(pg, null); return; }
+  // H85: zoom ölçülü — en çok 1,6×; 1,25×'ten az gerekiyorsa hiç yapılmaz; geniş bölgede yapılmaz
+  if (w * h > 0.2) { yakinUygula(pg, null); return; }
+  const s = Math.min(1.6, 0.8 / Math.max(w, h, 0.01));
+  if (s < 1.25) { yakinUygula(pg, null); return; }
   const sinir = 0.5 - 0.5 / s;                                    // sayfa kenarı açığa çıkmasın
   const tx = Math.max(-sinir, Math.min(sinir, 0.5 - (b[0] + b[2]) / 2));
   const ty = Math.max(-sinir, Math.min(sinir, 0.5 - (b[1] + b[3]) / 2));

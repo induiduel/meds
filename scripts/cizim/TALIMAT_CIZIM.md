@@ -133,3 +133,13 @@ Yalnız `cizim.json`'u yaz; başka dosyaya dokunma. Bitince tek satır: `BİTTİ
     satırlar çizimde öncelik alır; panel ya da kontur bu satırları gösterir.
 30. Uygun şablon gerçekten yoksa `yeni_sablon` önerilir (CIZIM_KURALLARI §2b); kapı ve `panel_sinama.mjs` 0 hata zorunlu.
 
+## Okumayı bozmama (H85 — kullanıcı kararı 2026-10-27; ihlal eden ders yayına GİRMEZ)
+31. **Doğru yer, tam kapsama:** resim üstündeki kontur anlatılan yapının sınırının hafif dışından geçer, yapıyı tam içine alır
+    (görüntüyü yakından aç; noktaları yapının çevresine koy, içinden değil). Emin değilsen çizme.
+32. **Kelime ↔ kelime oku yok:** `akis` yalnız resim/şema içindeki iki görsel yapı arasında. Yazı maddeleri arası ilişki →
+    şablonlu panel (boş alanda) ya da hiçbir şey.
+33. **Okunabilir metinli tablo:** `kontur`, `akis`, `sema` yazılmaz; tablo yalnız işaret katmanıyla (marker) vurgulanır.
+34. **Zoom'u betik belirler** (yalnız küçük resim bölgesi); geniş ya da çok parçalı bölgeyi tek cümlede çizme — anlatılan
+    tek yapıyı çiz.
+35. Okumayı bozacak hiçbir şey (yazının üstüne panel, büyük dolgu, gereksiz hareket) yapılmaz.
+

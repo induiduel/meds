@@ -732,3 +732,17 @@ Her maddede: belirti · kök neden · Kurul 2 kuralı · kapı durumu. Kanıtlar
 - **Önleme kuralı:** Banka/çıkmış eklemeleri ham sınav belgesindeki yerle (belge + sayfa) gelir; kaynak gösterilemeyen soru
   "çıkmış" olarak yayınlanmaz. Bir onay katmanı (Check-Solve, Faz 14) kaynağın yokluğunu gidermez. Geri alma: soruyu
   `karantina.json`'dan çıkarmak.
+
+## H85 — Çizim önemli bölgeyi örtüyor, zoom yanlış/fazla, kelime ↔ kelime oku okumayı bozuyor (2026-10-27, kullanıcı bildirdi)
+- **Belirti:** "İşaretlenen bölgeler tam anlaşılmıyor; çizimin boyutu ve yerleşimi önemli bölgelerin üstünü kapatıyor, zoom
+  farklı yerlere yanlış ve fazla yapılıyor." Kelime ↔ kelime çizgisi istenmiyor; tabloda çizim/zoom istenmiyor.
+- **Kök neden:** `CizimLayer` konturu 3,2 px sabit kalın + 6,8 px beyaz hale + %45 sarı dolgu + %22 dış karartma ile çiziyordu
+  (yapı örtülüyordu); kontur noktaları yapının üstünden geçtiğinde kenar kesiliyordu. Zoom 2,4×'e kadar ve sayfanın %40'ına
+  kadar bölgelerde, yazı kutusu içindeki çizimlerde de yapılıyordu; bir cümledeki birden çok çizimin birleşik kutusuna
+  gidiyordu. Akış oku yazı satırları arasında da çiziliyordu. Tablo cümlesinde panel "kapsama" sayılıyordu (K3).
+- **Çözüm:** kontur %8 dışa açılır, hale yok, dolgu %13 bulanık, karartma %10, kalınlık bölgeye göre 1–2,4 px; akış yalnız
+  resim çiziminde (`yakin`); zoom ≤1,6×, ≥1,25× gerekmezse yok, bölge ≤%20; tabloda çizim yok (yalnız marker). Üretici
+  (`cizim_uret.yakinlasma`) yalnız resimde ve ≤%20; kapı K10–K12; standart `KURUL2_DERS_STANDARDI.md` §4; metin takipçisi
+  kapısı `takip_kapisi.py` (T1–T6).
+- **Önleme kuralı:** okumayı bozan hiçbir çizim/zoom yayına girmez; yeni ders kapıları K10–K12 + `takip_kapisi.py` 0 HATA.
+  Yayındaki eski derslerin verisi kapıda 36 ihlal gösteriyor; görüntüleyici aynı kuralları uygular, yeniden üretimde düzelir.

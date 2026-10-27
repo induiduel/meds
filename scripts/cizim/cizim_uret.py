@@ -83,10 +83,10 @@ def yakinlasma(k: dict, kutu_listesi: list, resim: bool) -> list | None:
         x0, y0 = min(x0, ex), min(y0, ey)
         x1, y1 = max(x1, ex + (k.get("etiket_genislik") or 0.2)), max(y1, ey + (k.get("etiket_boy") or 0.04))
     icinde = any(b[0] - 0.02 <= x0 and x1 <= b[2] + 0.02 and b[1] - 0.02 <= y0 and y1 <= b[3] + 0.02 for b in kutu_listesi or [])
-    if not (resim or icinde):
+    if not resim:  # H85: zoom yalnız resim üstünde (yazı kutusu içinde değil)
         return None
     x0, y0, x1, y1 = max(0, x0 - 0.06), max(0, y0 - 0.06), min(1, x1 + 0.06), min(1, y1 + 0.06)
-    if (x1 - x0) * (y1 - y0) > 0.4:
+    if (x1 - x0) * (y1 - y0) > 0.2:  # H85: geniş bölgeye zoom yok (kapı K12)
         return None
     return [round(x0, 4), round(y0, 4), round(x1, 4), round(y1, 4)]
 

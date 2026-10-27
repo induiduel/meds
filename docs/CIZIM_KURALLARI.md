@@ -10,12 +10,13 @@ Kural ders ya da PDF'e özgü yazılmaz; yeni geri bildirim buraya ve TALIMAT'a 
 
 | Anlatılan | Çizim | Not |
 |---|---|---|
-| Resimde bir bölge (herni alanı, lezyon, kanama, yapı) | **kontur** → fosforlu boyama | yarı saydam sarı dolgu + kırmızı hat; şekil görünür kalır |
-| Resimdeki bir yapıdan başka bir yapıya etki / yön | **akış oku** | yalnız resim/şema üstünde |
+| Resimde bir bölge (herni alanı, lezyon, kanama, yapı) | **kontur** | yapıyı tam kapsayan, biraz geniş (~%6), yumuşak hat; dolgu ≤%15 (üstü örtülmez); kalınlık bölgeye göre (H85) |
+| Resimdeki bir yapıdan başka bir yapıya etki / yön | **akış oku** | yalnız resim/şema içinde iki görsel yapı arası; **kelime ↔ kelime oku YOK** (H85) |
 | Resimde zaten çizili bir ok | **odak** | kopya ok çizilmez; mevcut ok çerçevelenip etiketlenir |
 | Bir kaynaktan birden çok yere | **dallı ok** | kaynak bir kez çerçevelenir, dallar ortak gövdeden sırayla |
 | Grafik/eğri (EKG, kan gazı) | **eğri fazı** | eğrinin üstünde, faz renkleri |
-| Yazı ↔ yazı ilişkisi (slayt maddeleri arasında) | **panel** (şema) | iki satır arasına ok çizilmez |
+| Yazı ↔ yazı ilişkisi (slayt maddeleri arasında) | **panel** (şema) | iki satır arasına ok/çizgi çizilmez |
+| Okunabilir metinli tablo | **yalnız marker** (işaret katmanı) | tabloda çizim, panel, zoom YOK (H85) |
 
 ## 2. Panel türleri (ilişki yapısından kendiliğinden)
 
@@ -163,4 +164,19 @@ yalnız metinsiz/taranmış slaytta zemin), `cizim_uret.lazer_uyumu` (K4/K7 komu
 Şekil cümlesi üretimi/onarımı: `scripts/arsiv_25_26/sekil_cizim.py hazirla → calistir → onar [--tur N] → birlestir`
 (★ = lazeri resim/tablo olan cümle; onar turunda kapının ret nedeni modele geri verilir).
 **Kapı gevşetilmez; eşik değiştirmek kullanıcı kararıdır.** Kapı düşerse içerik yeniden üretilir.
+
+## 11. Okumayı bozmama — çizim ve zoom düzeltmesi (H85, kullanıcı kararı 2026-10-27; öncelik bu bölümdedir)
+Kullanıcı: "İşaretlenen bölgeler tam anlaşılmıyor; çizimin boyutu ve yerleşimi önemli bölgelerin üstünü kapatıyor, zoom
+farklı yerlere yanlış ve fazla yapılıyor."
+- **Kontur:** anlatılan yapıyı **tam** kapsar ve biraz geniştir (ağırlık merkezinden ~%8 dışa); yapı kesilmez. Hat yumuşak
+  (yuvarlatılmış eğri, hafif yayılma), keskin/kalın beyaz hale yok. Dolgu çok hafif (≤%15) ve dış karartma (mercek) çok hafif
+  (≤%12); yapının kendisi her zaman net görünür.
+- **Dinamik kalınlık:** çizgi kalınlığı bölgenin boyutuna göre ~1 px (küçük yapı) ile ~2,4 px (büyük bölge) arası; küçük
+  yapıda incelir.
+- **Ok:** yalnız resim/şema içinde, iki görsel yapı arasında (`yakin` taşıyan resim çizimi). Kelime ↔ kelime, yazı satırları
+  arası çizgi ya da ok çizilmez (görüntüleyici çizmez, kapı reddeder).
+- **Tablo:** metni okunabilen tabloda çizim, panel ve zoom yok; en çok marker.
+- **Zoom (7c'nin yerine):** yalnız resim üstündeki bölgede; birleşik hedef sayfanın ≤%20'si; en çok **1,6×**, en az 1,25×
+  (daha az gerekiyorsa hiç yapılmaz); hedef çizimin kendi bölgesi. Yazı slaytında, tabloda, panel anlatımında zoom yok.
+- **Kapı:** `cizim_kapisi.py` K10 (tabloda çizim), K11 (resim dışı ok), K12 (zoom alanı/oranı) HATA verir.
 

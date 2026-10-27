@@ -226,6 +226,8 @@ function CikmisPencere({ sorular, i, setI, onKapat }: { sorular: CdCikmisKonum[]
           {sorular.length > 1 && <button type="button" className="cd-cikp-btn" disabled={i <= 0} onClick={() => setI(i - 1)}>Önceki</button>}
           {sorular.length > 1 && <button type="button" className="cd-cikp-btn" disabled={i >= sorular.length - 1} onClick={() => setI(i + 1)}>Sonraki</button>}
           <span className="cd-grow" />
+          {/* Kullanıcı isteği 2026-10-27: soruyu çıkmış sorular bölümünde ayrıca görüntüle (yeni sekme; ders burada bekler) */}
+          <a className="cd-cikp-btn" href={`/sorular/cikmis/${encodeURIComponent(q.id)}`} target="_blank" rel="noopener">Çıkmış soruyu görüntüle</a>
           <button type="button" className="cd-cikp-btn is-ana" onClick={onKapat}>Derse dön</button>
         </div>
       </div>

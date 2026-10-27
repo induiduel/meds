@@ -1,15 +1,18 @@
 {
  "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
- "onem": 383,
- "baslik": "Kurul 2 Çıkmışları: Kaynağı Doğrulanamayan Sorular Gizlendi",
+ "onem": 384,
+ "baslik": "Sesli Ders: Daha Sade ve Okunur Slayt Çizimleri",
  "maddeler": [
-  "Kurul 2 çıkmış soruları özgün sınav belgeleriyle tek tek karşılaştırıldı; 574 sorudan 435'i belgede bulundu.",
-  "Özgün sınav belgesinde bulunamayan 86 soru çıkmış havuzundan ve sesli ders çıkmış listelerinden gizlendi (silinmedi).",
-  "Böylece 'çıkmış' etiketi taşıyan her soru gerçek bir sınav belgesine dayanıyor."
+  "Resim üstündeki işaretler artık anlatılan yapıyı örtmüyor: ince, yumuşak hat, çok hafif ton; yapı tam kapsanıyor.",
+  "Çizgi kalınlığı işaretlenen bölgeye göre ayarlanıyor; küçük yapılarda daha ince.",
+  "Yakınlaştırma yalnız resimdeki küçük bölgede ve ölçülü yapılıyor; yazı slaytında ve tablolarda yakınlaştırma yok.",
+  "Yazı satırları arasında çizilen oklar kaldırıldı; tablolarda yalnız satır işaretleniyor.",
+  "Çıkmış soru penceresine 'Çıkmış soruyu görüntüle' düğmesi eklendi."
  ],
  "eklenen": [
-  "questionQuarantine.ts kaynakBulunamadi (H84)",
-  "canliDers.ts çıkmış süzgeci"
+  "CizimLayer H85",
+  "takip_kapisi.py",
+  "KURUL2_DERS_STANDARDI.md"
  ],
  "degisen": [
   "src/services/canliDers.ts",

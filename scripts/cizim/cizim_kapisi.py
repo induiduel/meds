@@ -18,6 +18,9 @@ yayına gitmez (ders zinciri `cizim` adımı, arsiv_yayinla.py, sekil_cizim.py b
   K7  Çizim, cümlenin lazerinin gösterdiği sayfada olmalı (başka sayfaya çizim HATA).
   K8  Etiketsiz ok HATA (H40); kontur 5–20 nokta, koordinatlar 0–1.
   K9  metinHash: işaret ve çizim aynı metin sürümünden olmalı.
+  K10 Okunabilir metinli tabloda çizim yok: lazeri tablo olan cümlede kontur/akış/eğri/panel HATA — yalnız marker (H85).
+  K11 Kelime ↔ kelime oku yok: akış oku yalnız lazeri resim olan cümlede (resim içinde iki görsel yapı arası) (H85).
+  K12 Zoom ölçülü: `yakin` yalnız resim cümlesinde ve sayfanın ≤%20'si (H85).
 
 Kullanım:
   .venv-ocr/bin/python scripts/cizim/cizim_kapisi.py <key> [--kok data/sesli_anlatim | data/arsiv_25_26/sesli_anlatim]
@@ -38,6 +41,9 @@ sys.path.insert(0, str(MEDS / "scripts" / "arsiv_25_26"))
 KAPSAM_ALT = 0.40
 UYDURMA_UST = 0.15
 TUM_RESIM = 0.85
+
+
+ZOOM_UST = 0.20  # H85: zoom yalnız küçük resim bölgesine
 
 
 def _alan(b):
@@ -99,10 +105,10 @@ def denetle(key: str, kok: Path) -> tuple[list[str], dict]:
         for ci, i in enumerate(il):
             zs = (P.get(pn) or {}).get(str(ci)) or []
             gorsel = bool(i) and i["t"] in ("resim", "tablo")
-            if gorsel and (beyanli is None or (pn, ci) in beyanli):
+            if gorsel and i["t"] == "resim" and (beyanli is None or (pn, ci) in beyanli):
                 sekil += 1
-                # resimde yalnız görsel üstü çizim sayılır; yazı olarak duran tabloda tablo/şablon paneli de anlatımdır
-                cizimli += any(z.get("tur") != "sema" or i["t"] == "tablo" for z in zs)
+                # yalnız resim cümleleri sayılır; okunabilir tablo yalnız marker ile vurgulanır (H85, K10)
+                cizimli += any(z.get("tur") != "sema" for z in zs)
             yer = f"P{pn}.C{ci}"
             if len(zs) > 2:
                 H.append(f"K6 {yer}: cümlede {len(zs)} çizim (en çok 2)")
@@ -113,6 +119,13 @@ def denetle(key: str, kok: Path) -> tuple[list[str], dict]:
                     H.append(f"K7 {yer}: çizim s.{s}, lazer s.{i['s']}")
                 if z.get("tur") == "sema" and i and i["t"] == "resim":
                     H.append(f"K4 {yer}: resim anlatılırken panel (sema) — görselin üstünde çiz")
+                if i and i["t"] == "tablo":
+                    H.append(f"K10 {yer}: okunabilir tabloda {z.get('tur')} — tabloda yalnız marker (H85)")
+                if z.get("tur") == "akis" and not (i and i["t"] == "resim"):
+                    H.append(f"K11 {yer}: resim dışında ok (kelime ↔ kelime ilişkisi çizilmez, H85)")
+                yk = z.get("yakin")
+                if yk and (not (i and i["t"] == "resim") or _alan(yk) > ZOOM_UST):
+                    H.append(f"K12 {yer}: zoom resim dışında ya da sayfanın %{round(100 * _alan(yk))}'i (üst %{int(ZOOM_UST * 100)})")
                 if z.get("tur") == "akis" and not str(z.get("etiket") or "").strip():
                     H.append(f"K8 {yer}: etiketsiz ok")
                 nk = z.get("nokta") or []

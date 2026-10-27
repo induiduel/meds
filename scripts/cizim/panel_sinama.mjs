@@ -41,6 +41,15 @@ for (const w of [366, 567, 1100]) {
   await send('Page.navigate', { url: `${WEB}/?w=${w}&t=1` });
   for (let i = 0; i < 50 && !(await ev('!!window.__hazir')); i++) await sleep(200);
   await sleep(1200);
+  // İsteğe bağlı görsel denetim (H85): SINAMA_GORUNTU=<dizin> → her genişlikte tam sayfa ekran görüntüsü
+  if (process.env.SINAMA_GORUNTU) {
+    const h = await ev('document.documentElement.scrollHeight');
+    await send('Emulation.setDeviceMetricsOverride', { width: w + 40, height: Math.min(h, 16000), deviceScaleFactor: 1, mobile: false });
+    await sleep(500);
+    const g = await send('Page.captureScreenshot', { format: 'png', captureBeyondViewport: true });
+    fs.mkdirSync(process.env.SINAMA_GORUNTU, { recursive: true });
+    fs.writeFileSync(path.join(process.env.SINAMA_GORUNTU, `${key}_${w}.png`), Buffer.from(g.data, 'base64'));
+  }
   const hatalar = (await ev(DENETIM)) || [];
   toplam += hatalar.length;
   console.log(`${w} px: ${hatalar.length} hata`);
