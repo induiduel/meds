@@ -1,7 +1,8 @@
 import React, { useMemo, useState } from 'react';
 import { CheckCircle2, Clock, RotateCcw, Trash2 } from 'lucide-react';
 import { PracticeMode } from '../PracticeMode';
-import { OGRENILDI_KUTU, useYanlislar, yanlisGruplari, yanlisSil, type YanlisKayit } from '../../services/yanlislarim';
+import { OGRENILDI_KUTU, useYanlislar, yanlisGeriKoy, yanlisGruplari, yanlisSil, type YanlisKayit } from '../../services/yanlislarim';
+import { geriAlinabilir } from '../ui/Toast';
 import { useV15Baslik } from './baslik';
 import '../../styles/v15/ogren.css';
 import '../../styles/v15/dersler.css';
@@ -56,7 +57,7 @@ export default function YanlislarimV15() {
                 </span>
                 {sekme === 'hazir' && <span className="v15-tag is-b">Hazır</span>}
               </button>
-              <button type="button" className="v15-ib yl15-sil" onClick={() => yanlisSil(e.q.id)} aria-label="Listeden çıkar" title="Listeden çıkar"><Trash2 aria-hidden /></button>
+              <button type="button" className="v15-ib yl15-sil" onClick={() => { const yedek = e; yanlisSil(e.q.id); geriAlinabilir('Listeden çıkarıldı', () => yanlisGeriKoy(yedek)); }} aria-label="Listeden çıkar" title="Listeden çıkar"><Trash2 aria-hidden /></button>
             </li>
           ))}
         </ul>

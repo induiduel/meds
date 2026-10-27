@@ -15,6 +15,8 @@ export interface ToastItem {
   title: string;
   message?: string;
   action?: { label: string; onClick: () => void };
+  /** geri al bildirimi: sağda 6 sn'lik geri sayım halkası */
+  undo?: boolean;
 }
 
 type Listener = (items: ToastItem[]) => void;
@@ -55,6 +57,15 @@ const push = (kind: ToastKind, title: string, message?: string, action?: ToastIt
 export const dismiss = (id: number) => {
   items = items.filter((t) => t.id !== id);
   emit();
+};
+
+/** Geri alınabilir işlem (tasarım AB12): "… silindi · Geri al", 6 sn; bildirim geçmişine yazılmaz */
+export const geriAlinabilir = (title: string, geriAl: () => void) => {
+  const id = nextId++;
+  items = [...items, { id, kind: 'info' as ToastKind, title, action: { label: 'Geri al', onClick: geriAl }, undo: true }].slice(-4);
+  emit();
+  window.setTimeout(() => dismiss(id), 6000);
+  return id;
 };
 
 export const toast = {
@@ -104,7 +115,7 @@ export const ToastHost: React.FC = () => {
               </button>
             )}
             <button type="button" className="tst-x" onClick={() => dismiss(t.id)} aria-label="Bildirimi kapat"><X /></button>
-            <span className="tst-timer" style={{ animationDuration: t.kind === 'error' ? '7s' : '4.2s' }} />
+            <span className="tst-timer" style={{ animationDuration: t.undo ? '6s' : t.kind === 'error' ? '7s' : '4.2s' }} />
           </div>
         );
       })}

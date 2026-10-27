@@ -44,6 +44,7 @@ export function yanlisKaydet(q: QuestionItem, dogru: boolean, simdi = Date.now()
   yaz(d);
 }
 export const yanlisNeden = (id: string, neden: string | null) => { const d = { ...yanlisOku() }; if (!d[id]) return; d[id] = { ...d[id], neden: neden || undefined }; yaz(d); };
+export const yanlisGeriKoy = (e: YanlisKayit) => { const d = { ...yanlisOku() }; d[e.q.id] = e; yaz(d); };
 export const yanlisSil = (id: string) => { const d = { ...yanlisOku() }; delete d[id]; yaz(d); };
 
 export function yanlisGruplari(simdi = Date.now()) {

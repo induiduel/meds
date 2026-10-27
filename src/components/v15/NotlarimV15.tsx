@@ -1,6 +1,7 @@
 import React, { useEffect, useMemo, useRef, useState, useSyncExternalStore } from 'react';
 import { Eraser, Headphones, List, Highlighter, Pen, Plus, Search, Share2, Star, Trash2, Type, Undo2, X } from 'lucide-react';
 import { linkClick, navigateTo } from '../../router';
+import { geriAlinabilir } from '../ui/Toast';
 import { useV15Baslik } from './baslik';
 import '../../styles/v15/ogren.css';
 import '../../styles/v15/notlarim.css';
@@ -75,9 +76,11 @@ export default function NotlarimV15() {
     yaz([n, ...notlar]); setAcikId(n.id);
   };
   const guncelle = (id: string, d: Partial<Not>) => yaz(anlik().map((n) => (n.id === id ? { ...n, ...d, at: Date.now() } : n)));
+  // Silme onay sormaz; 6 sn "Geri al" (tasarım AB12) — not ve çizimi geri yüklenir
   const sil = (id: string) => {
-    if (!confirm('Bu not silinsin mi?')) return;
-    cizimYaz(id, []); yaz(anlik().filter((n) => n.id !== id)); setAcikId(null);
+    const onceki = anlik(); const cizim = cizimOku(id);
+    cizimYaz(id, []); yaz(onceki.filter((n) => n.id !== id)); setAcikId(null);
+    geriAlinabilir('Not silindi', () => { yaz(onceki); cizimYaz(id, cizim); });
   };
 
   if (acik) return <Duzenleyici not={acik} guncelle={(d) => guncelle(acik.id, d)} sil={() => sil(acik.id)} kapat={() => setAcikId(null)} />;

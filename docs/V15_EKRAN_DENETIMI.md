@@ -411,7 +411,7 @@ Not: YOK sayısının 6'sı tasarım belgesi ekranıdır (A09, K08, P01, W03, X0
 | AA02 | dpHafta | DersProgramiV15 | VAR |  |
 | AA03 | dpGun | DersProgramiV15 | VAR |  |
 | AA04 | dpAy | DersProgramiV15 (Ay ızgarası) | VAR | Plan "ay yok" diyor; kodda ay görünümü var (plan güncel değil) |
-| AA05 | dpDetay | DersProgramiV15 → ders ayrıntısı | SIRADA | ders programı ayrıntı kartı yok |
+| AA05 | dpDetay | DersProgramiV15 → ders ayrıntısı | VAR | ders programındaki ders → ders ayrıntısı (sesli ders, Öğren, çıkmış sorular) |
 | AA06 | dpEkle | — | YOK | Ekle/içe aktar yok |
 | AA07 | dpWidget | — | YOK |  |
 
@@ -430,10 +430,10 @@ Not: YOK sayısının 6'sı tasarım belgesi ekranıdır (A09, K08, P01, W03, X0
 | AB09 | komutPaleti | ⌘K arama | KURULDU | ⌘K: karma test, yanlışlar, kronometre, odak, yeni not, tam ekran, tema komutları |
 | AB10 | kisayollar | — | DOĞRULANMADI |  |
 | AB11 | baslangicGorev | — | YOK |  |
-| AB12 | geriAl | NotlarimV15 "Geri al" | SIRADA | genel "geri al" tostu yok |
+| AB12 | geriAl | NotlarimV15 "Geri al" | KURULDU | geriAlinabilir(): not, yanlış, kişisel sınav silmede 6 sn "Geri al" bildirimi (onay penceresi yerine) |
 | AB13 | cevrimdisiBanner | — | DOĞRULANMADI |  |
 | AB14 | yardimMerkezi | — | YOK |  |
-| AB15 | yenilikler | guncellemeler | SIRADA | yenilikler sayfası yalnız başlık |
+| AB15 | yenilikler | guncellemeler | VAR | GuncellemeGunluguView: sürüm kartları (sürüm, gün/saat, başlık, eklenen/değişen/düzeltilen maddeler) |
 | AB16 | hata404 | — | DOĞRULANMADI |  |
 | AB17 | hataSunucu | — | DOĞRULANMADI |  |
 | AB18 | bakim | — | DOĞRULANMADI |  |

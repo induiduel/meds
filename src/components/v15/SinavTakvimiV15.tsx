@@ -4,6 +4,7 @@ import { kisiselOku, kisiselYaz, hatirlatOku, hatirlatYaz, type KisiselSinav } f
 import { linkClick, navigateTo, pathFor, type AppRoute } from '../../router';
 import { BUTUNLEME_TARIHI, FINAL_TARIHI, KURULLAR, aktifKurul, bugun } from '../../services/kurulTakvimi';
 import { useV15Baslik } from './baslik';
+import { geriAlinabilir } from '../ui/Toast';
 import { Halka } from './Halka';
 import '../../styles/v15/takvim.css';
 import '../../styles/v15/kronometre.css';
@@ -99,7 +100,7 @@ export default function SinavTakvimiV15() {
                 <div className="tk15-ks-u"><b>{x.ad}</b><span className="v15-tag is-a">{x.tur}</span></div>
                 <span className="v15-cap">{yaz(x.gun)} · {kalanYaz(fark(x.gun, g))}</span>
                 <div className="tk15-ks-t">{[5, 3, 1].map((t) => { const d = ekle(x.gun, -t); return <span key={t} className={`v15-tag ${d < g ? 'is-ok' : d === g ? 'is-w' : ''}`}>T‑{t} · {tarih(d).toLocaleDateString('tr-TR', { day: 'numeric', month: 'short' })}</span>; })}</div>
-                <button type="button" className="v15-ib tk15-ks-sil" onClick={() => setKisisel(kisisel.filter((y) => y.id !== x.id))} aria-label={`${x.ad} sınavını sil`}><Trash2 aria-hidden /></button>
+                <button type="button" className="v15-ib tk15-ks-sil" onClick={() => { const once = kisisel; setKisisel(kisisel.filter((y) => y.id !== x.id)); geriAlinabilir('Sınav silindi', () => setKisisel(once)); }} aria-label={`${x.ad} sınavını sil`}><Trash2 aria-hidden /></button>
               </li>
             ))}
           </ul>
