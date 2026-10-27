@@ -77,3 +77,43 @@
   :root[data-v15='on'] .c15-yapiskan ~ .c12-body .c12-head { flex-wrap: nowrap; gap: 8px; }
   :root[data-v15='on'] .c15-yapiskan ~ .c12-body .c12-head .c12-sort { width: auto; flex: 0 1 auto; min-width: 0; }
 }
+
+/* Tek satır üst çubuk (2026-10-28): arama · Süzgeç · Test oluştur; geri kalan her şey diyalogda */
+.c15-tek { gap: 0 !important; }
+.c15-tek .c15-yapiskan { padding-top: 4px; padding-bottom: 4px; }
+.c15-satir { display: flex; align-items: center; gap: 8px; height: 40px; min-width: 0; }
+.c15-satir .c12-searchwrap { flex: 1 1 auto; min-width: 0; position: relative; }
+.c15-satir .c12-search { height: 40px; width: 100%; }
+.c15-ikon { flex: none; position: relative; display: inline-flex; align-items: center; justify-content: center; gap: 6px; height: 40px; min-width: 40px; padding: 0 10px;
+  border-radius: 999px; border: 1px solid var(--color-line); background: var(--color-white); color: var(--color-ink-2); font: 600 13px var(--font-sans, inherit); cursor: pointer; text-decoration: none; }
+.c15-ikon svg { width: 18px; height: 18px; flex: none; }
+.c15-ikon.is-on { border-color: var(--color-accent); color: var(--color-ink); background: var(--color-accent-soft); }
+.c15-ikon b { min-width: 18px; height: 18px; padding: 0 5px; border-radius: 999px; background: var(--color-accent); color: var(--color-on-accent, #fff); font-size: 11px; display: inline-grid; place-items: center; }
+.c15-testbtn { background: var(--color-accent); border-color: var(--color-accent); color: var(--color-on-accent, #fff); }
+.c15-ikon-l { white-space: nowrap; }
+@media (max-width: 767px) {
+  .c15-testbtn .c15-ikon-l, .c15-suzbtn .c15-ikon-l { display: none; }
+  .c15-suzbtn b { position: absolute; top: -4px; right: -4px; }
+  .c15-ikon { padding: 0; width: 40px; }
+}
+.c15-etkin { display: flex; align-items: center; gap: 6px; height: 26px; margin-top: 4px; overflow-x: auto; scrollbar-width: none; overscroll-behavior-x: contain; }
+.c15-etkin::-webkit-scrollbar { display: none; }
+.c15-cip { flex: none; display: inline-flex; align-items: center; gap: 4px; height: 24px; padding: 0 8px 0 10px; border-radius: 999px; border: 1px solid var(--color-accent);
+  background: var(--color-accent-soft); color: var(--color-ink); font: 500 12px var(--font-sans, inherit); cursor: pointer; white-space: nowrap; }
+.c15-cip svg { width: 13px; height: 13px; }
+.c15-say { flex: none; margin-left: auto; padding-left: 6px; font-size: 12px; color: var(--color-ink-3); white-space: nowrap; }
+.c15-sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+.c15-tek .c12-body { margin-top: 4px; }
+/* Diyalog */
+@media (max-width: 639px) { .sh-sheet.c15-dlg { max-height: 85dvh !important; } }
+.c15-dlg-ic { display: flex; flex-direction: column; gap: 16px; }
+.c15-bol { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+.c15-bol > .c12-label { margin: 0; }
+.c15-seg { display: flex; flex-wrap: wrap; width: 100%; }
+.c15-seg > button { flex: 1 1 auto; }
+.c15-seg small { color: var(--color-ink-3); font-size: 11px; }
+.c15-dlg .cg15-serit { flex-wrap: wrap; padding: 0; }
+.c15-dlg .cg15-cipler { flex-wrap: wrap; overflow: visible; flex-basis: 100%; }
+.c15-gor { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+.c15-dlg-alt { display: flex; gap: 8px; width: 100%; }
+.c15-dlg-alt > .pri { flex: 1 1 auto; }

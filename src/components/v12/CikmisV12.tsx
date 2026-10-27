@@ -14,7 +14,7 @@
  * Stil: styles/v12/cikmis.css (.c12-*; v12'de ck-* kartını da panoya göre yeniden çizer).
  */
 import React, { startTransition, useEffect, useLayoutEffect, useRef, useState } from 'react';
-import { ArrowUpDown, BookOpen, Bookmark, RefreshCw, Search, SlidersHorizontal, Sparkles, Tag, X } from 'lucide-react';
+import { ArrowUpDown, BookOpen, ClipboardList, Bookmark, RefreshCw, Search, SlidersHorizontal, Sparkles, Tag, X } from 'lucide-react';
 import { useAppearance } from '../../utils/appearance';
 import { QuickOptions, QuickPill, type ToolbarQuick } from '../ui/PageToolbar';
 import { Sheet } from '../ui/Sheet';
@@ -64,6 +64,8 @@ export interface CikmisV12Props {
   serit?: React.ReactNode;
   /** B: kalıcı yan panel içeriği (dar kapta "Yıl ▾" düğmesiyle alt sayfada) */
   yan?: { icerik: (kapat: () => void) => React.ReactNode; etiket: string };
+  /** Kurul süzgecini kaldırırken ek iş (ör. ?kurul= parametresini URL'den silmek) */
+  kurulTumu?: () => void;
   children: React.ReactNode;
 }
 
@@ -141,6 +143,7 @@ export const CikmisV12: React.FC<CikmisV12Props> = (p) => {
   const [small, setSmall] = useState(false);
   const [sheet, setSheet] = useState(false);
   const [yanSheet, setYanSheet] = useState(false);
+  const [dlg, setDlg] = useState(false);
   const yanGenis = useYanGenis();
 
   // Kap genişliği: sütun yalnız geniş kapta yanda durur; dar kapta alt sayfa
@@ -231,7 +234,7 @@ export const CikmisV12: React.FC<CikmisV12Props> = (p) => {
   const selIdx = discOpts.findIndex((o) => o.id === p.discipline.value);
   const discShown = allDisc || discOpts.length <= DISC_SHOWN + 1 ? discOpts : discOpts.filter((o, i) => i <= DISC_SHOWN || i === selIdx);
 
-  const panel = (inSheet: boolean) => (
+  const panel = (inSheet: boolean, dlg = false) => (
     <>
       {!inSheet && (
         <div className="c12-panel-h">
@@ -240,9 +243,9 @@ export const CikmisV12: React.FC<CikmisV12Props> = (p) => {
         </div>
       )}
 
-      <PillGroup f={{ id: 'yil', label: 'Yıl', value: p.year.value, options: p.year.options.map((o) => (o.id === 'all' ? { ...o, label: 'Tümü' } : o)), onPick: p.year.onPick }} />
+      {!dlg && <PillGroup f={{ id: 'yil', label: 'Yıl', value: p.year.value, options: p.year.options.map((o) => (o.id === 'all' ? { ...o, label: 'Tümü' } : o)), onPick: p.year.onPick }} />}
 
-      {p.committee && p.committee.options.length > 2 && <SelectField id="c12-kurul" label="Kurul" p={p.committee} all="Tüm kurullar" />}
+      {!dlg && p.committee && p.committee.options.length > 2 && <SelectField id="c12-kurul" label="Kurul" p={p.committee} all="Tüm kurullar" />}
 
       <fieldset className="c12-fs">
         <legend className="c12-label">Ders</legend>
@@ -281,7 +284,7 @@ export const CikmisV12: React.FC<CikmisV12Props> = (p) => {
         </details>
       )}
 
-      <SelectField id={inSheet ? 'c12-sort-s' : 'c12-sort-adv'} label="Sıralama" p={p.sort} all="" />
+      {!dlg && <SelectField id={inSheet ? 'c12-sort-s' : 'c12-sort-adv'} label="Sıralama" p={p.sort} all="" />}
 
       {naming === null ? (
         <button type="button" className="c12-btn c12-wide" onClick={() => setNaming(p.views.suggestName())} disabled={!canSave} title={canSave ? undefined : 'Önce bir süzgeç seç'}>
@@ -309,7 +312,7 @@ export const CikmisV12: React.FC<CikmisV12Props> = (p) => {
               const on = sameState(v.state, current);
               return (
                 <div key={v.id} className={`c12-saved ${on ? 'is-on' : ''}`}>
-                  <button type="button" className="c12-saved-b" aria-pressed={on} onClick={() => { p.views.apply(v.state); if (inSheet) setSheet(false); }}>
+                  <button type="button" className="c12-saved-b" aria-pressed={on} onClick={() => { p.views.apply(v.state); if (inSheet) { setSheet(false); setDlg(false); } }}>
                     <span className="c12-clamp1">{v.name}</span>
                   </button>
                   <button type="button" className="c12-saved-x" onClick={() => removeView(v.id)} aria-label={`${v.name} görünümünü sil`} title="Görünümü sil">
@@ -329,71 +332,7 @@ export const CikmisV12: React.FC<CikmisV12Props> = (p) => {
     </>
   );
 
-  const showAside = adv && wide;
-  const v13 = !!look.v13;
-  const topActions = (
-    <>
-      {p.adminHref && (
-        <a href={p.adminHref} className="c12-btn sm ghost icon" title="Faz 14 düzeltme önerilerini incele" aria-label="Faz 14 incelemesi">
-          <Sparkles aria-hidden />
-        </a>
-      )}
-      {p.mod && <CikmisModSwitch value={p.mod.value} onChange={p.mod.onChange} />}
-      {(!p.mod || p.mod.value === 'liste' || p.mod.value === 'panel') && <CikmisViewSwitch value={p.view.value} onChange={p.view.onChange} />}
-      <a href={p.practiceHref} className="c12-btn sm pri">Test oluştur</a>
-    </>
-  );
-  // v15 + mod: başlık satırı yok; arama · durum · süzgeçler · görünüm · Test oluştur tek yapışkan çubukta
-  const tekCubuk = !!look.v15 && !!p.mod;
-  const yanVar = !!p.yan && p.mod?.value === 'panel';
-  // Yapışkan çubuk üst barın altına oturur; yükseklikleri CSS değişkeni olarak (--c15-ust, --c15-cubuk) yazılır
-  const cubukRef = useRef<HTMLDivElement>(null);
-  useLayoutEffect(() => {
-    const root = rootRef.current, cubuk = cubukRef.current;
-    if (!tekCubuk || !root || !cubuk) return;
-    // Üst barın alt kenarı (ekran pikseli) çubuğun zoom'una bölünür; bar kaydırınca boy değiştirebilir → her olayda yeniden ölç
-    let son = '';
-    const olc = () => {
-      const ust = document.querySelector('.v15-top') as HTMLElement | null;
-      const z = (cubuk as HTMLElement & { currentCSSZoom?: number }).currentCSSZoom || 1;
-      const u = ust && getComputedStyle(ust).position === 'sticky' ? Math.round(Math.max(0, ust.getBoundingClientRect().bottom) / z) : 0;
-      const k = `${u}/${cubuk.offsetHeight}`;
-      if (k === son) return; // aynı değerde stil geçersizleştirme yok
-      son = k;
-      root.style.setProperty('--c15-ust', `${u}px`);
-      root.style.setProperty('--c15-cubuk', `${cubuk.offsetHeight}px`);
-    };
-    olc();
-    const gec = window.setTimeout(olc, 800); // yazı tipi/kabuk yerleşimi sonrası
-    const ro = typeof ResizeObserver !== 'undefined' ? new ResizeObserver(olc) : null;
-    ro?.observe(cubuk);
-    const ust = document.querySelector('.v15-top');
-    if (ust) ro?.observe(ust);
-    window.addEventListener('resize', olc);
-    window.addEventListener('scroll', olc, { passive: true });
-    return () => { window.clearTimeout(gec); ro?.disconnect(); window.removeEventListener('resize', olc); window.removeEventListener('scroll', olc); };
-  }, [tekCubuk]);
-
-  return (
-    <div ref={rootRef} className={`c12 ${showAside ? 'is-adv' : ''} ${small ? 'is-sm' : ''}`}>
-      {v13 && <h1 className="c12-title">Çıkmış sorular</h1>}
-      {!v13 && !tekCubuk && <header className="c12-top">
-        <h1 className="c12-title">Çıkmış sorular</h1>
-        <span className="c12-meta" aria-live="polite">
-          <span className="c12-num">{tr(p.total)}</span> soru{p.scope ? ` · ${p.scope}` : ''}
-        </span>
-        <span className="c12-grow" />
-        {p.adminHref && (
-          <a href={p.adminHref} className="c12-btn sm ghost icon" title="Faz 14 düzeltme önerilerini incele" aria-label="Faz 14 incelemesi">
-            <Sparkles aria-hidden />
-          </a>
-        )}
-        <CikmisViewSwitch value={p.view.value} onChange={p.view.onChange} />
-        <a href={p.practiceHref} className="c12-btn sm">Test oluştur</a>
-      </header>}
-
-      <div ref={cubukRef} className={tekCubuk ? 'c15-yapiskan' : 'c12-yapisma'}>
-      <div className="c12-bar" role="search">
+  const aramaKutusu = (
         <div className="c12-searchwrap">
           <label className="c12-field c12-search">
             <Search aria-hidden />
@@ -442,6 +381,189 @@ export const CikmisV12: React.FC<CikmisV12Props> = (p) => {
             </div>
           )}
         </div>
+  );
+
+  const showAside = adv && wide;
+  const v13 = !!look.v13;
+  const topActions = (
+    <>
+      {p.adminHref && (
+        <a href={p.adminHref} className="c12-btn sm ghost icon" title="Faz 14 düzeltme önerilerini incele" aria-label="Faz 14 incelemesi">
+          <Sparkles aria-hidden />
+        </a>
+      )}
+      {p.mod && <CikmisModSwitch value={p.mod.value} onChange={p.mod.onChange} />}
+      {(!p.mod || p.mod.value === 'liste' || p.mod.value === 'panel') && <CikmisViewSwitch value={p.view.value} onChange={p.view.onChange} />}
+      <a href={p.practiceHref} className="c12-btn sm pri">Test oluştur</a>
+    </>
+  );
+  // v15 + mod: başlık satırı yok; arama · durum · süzgeçler · görünüm · Test oluştur tek yapışkan çubukta
+  const tekCubuk = !!look.v15 && !!p.mod;
+  const yanVar = !!p.yan && p.mod?.value === 'panel';
+  // Yapışkan çubuk üst barın altına oturur; yükseklikleri CSS değişkeni olarak (--c15-ust, --c15-cubuk) yazılır
+  const cubukRef = useRef<HTMLDivElement>(null);
+  useLayoutEffect(() => {
+    const root = rootRef.current, cubuk = cubukRef.current;
+    if (!tekCubuk || !root || !cubuk) return;
+    // Üst barın alt kenarı (ekran pikseli) çubuğun zoom'una bölünür; bar kaydırınca boy değiştirebilir → her olayda yeniden ölç
+    let son = '';
+    const olc = () => {
+      const ust = document.querySelector('.v15-top') as HTMLElement | null;
+      const z = (cubuk as HTMLElement & { currentCSSZoom?: number }).currentCSSZoom || 1;
+      const u = ust && getComputedStyle(ust).position === 'sticky' ? Math.round(Math.max(0, ust.getBoundingClientRect().bottom) / z) : 0;
+      const k = `${u}/${cubuk.offsetHeight}`;
+      if (k === son) return; // aynı değerde stil geçersizleştirme yok
+      son = k;
+      root.style.setProperty('--c15-ust', `${u}px`);
+      root.style.setProperty('--c15-cubuk', `${cubuk.offsetHeight}px`);
+    };
+    olc();
+    const gec = window.setTimeout(olc, 800); // yazı tipi/kabuk yerleşimi sonrası
+    const ro = typeof ResizeObserver !== 'undefined' ? new ResizeObserver(olc) : null;
+    ro?.observe(cubuk);
+    const ust = document.querySelector('.v15-top');
+    if (ust) ro?.observe(ust);
+    window.addEventListener('resize', olc);
+    window.addEventListener('scroll', olc, { passive: true });
+    return () => { window.clearTimeout(gec); ro?.disconnect(); window.removeEventListener('resize', olc); window.removeEventListener('scroll', olc); };
+  }, [tekCubuk]);
+
+  const kurulKaldir = () => { p.committee?.onPick('all'); p.kurulTumu?.(); };
+  const statusAd = STATUS.find(([id]) => id === p.status.value)?.[1] || '';
+  // Etkin süzgeç çipleri (tek satır, kapatılabilir)
+  const etkin: { label: string; onRemove: () => void }[] = [
+    ...(p.committee && p.committee.value !== 'all' ? [{ label: p.committee.label || p.committee.value, onRemove: kurulKaldir }] : []),
+    ...(p.status.value !== 'all' ? [{ label: statusAd, onRemove: () => p.status.onPick('all') }] : []),
+    ...(p.year.value !== 'all' ? [{ label: p.year.value, onRemove: () => p.year.onPick('all') }] : []),
+    ...(p.discipline.value !== 'all' ? [{ label: p.discipline.label || p.discipline.value, onRemove: () => p.discipline.onPick('all') }] : []),
+    ...(p.topic && p.topic.value !== 'all' ? [{ label: p.topic.value, onRemove: () => p.topic!.onPick('all') }] : []),
+    ...p.chips,
+  ];
+  const tekCubukRender = () => (
+    <div ref={rootRef} className="c12 c15-tek">
+      <h1 className="c12-title">Çıkmış sorular</h1>
+      <div ref={cubukRef} className="c15-yapiskan">
+        <div className="c15-satir" role="search">
+          {aramaKutusu}
+          <button type="button" className={`c15-ikon c15-suzbtn ${etkin.length ? 'is-on' : ''}`} onClick={() => setDlg(true)} aria-haspopup="dialog"
+            aria-label={`Süzgeç ve görünüm${etkin.length ? `, ${etkin.length} etkin süzgeç` : ''}`} title="Süzgeç ve görünüm">
+            <SlidersHorizontal aria-hidden /><span className="c15-ikon-l">Süzgeç</span>{etkin.length > 0 && <b>{etkin.length}</b>}
+          </button>
+          <a href={p.practiceHref} className="c15-ikon c15-testbtn" aria-label="Test oluştur" title="Test oluştur">
+            <ClipboardList aria-hidden /><span className="c15-ikon-l">Test oluştur</span>
+          </a>
+        </div>
+        {etkin.length > 0 && (
+          <div className="c15-etkin" aria-label="Etkin süzgeçler">
+            {etkin.map((c) => (
+              <button key={c.label} type="button" className="c15-cip" onClick={c.onRemove} aria-label={`${c.label} süzgecini kaldır`}>
+                <span>{c.label}</span><X aria-hidden />
+              </button>
+            ))}
+            <span className="c15-say" aria-live="polite">{tr(p.total)} soru</span>
+          </div>
+        )}
+      </div>
+
+      <div className={`c12-body ${yanVar && yanGenis ? 'is-yan' : ''}`}>
+        {yanVar && yanGenis && <aside className="c15-yan" aria-label="Yıl ve konu paneli">{p.yan!.icerik(() => {})}</aside>}
+        <section className="c12-results" aria-label="Sorular">
+          {p.shown < p.total && etkin.length === 0 && <span className="c15-sr">{tr(p.total)} soru, {tr(p.shown)} gösteriliyor</span>}
+          {p.children}
+        </section>
+      </div>
+
+      <Sheet open={dlg} onClose={() => setDlg(false)} title="Süzgeç ve görünüm" width={480} className="c15-dlg" label="Süzgeç ve görünüm"
+        footer={(
+          <div className="c15-dlg-alt">
+            <button type="button" className="c12-btn ghost" onClick={() => { p.onClearAll(); if (p.committee?.value !== 'all') kurulKaldir(); }} disabled={!p.anyFilter && etkin.length === 0}>Temizle</button>
+            <button type="button" className="c12-btn pri" onClick={() => setDlg(false)}>{tr(p.total)} soruyu göster</button>
+          </div>
+        )}>
+        <div className="c12-sheet c15-dlg-ic">
+          <section className="c15-bol">
+            <h3 className="c12-label">Durum</h3>
+            <div className="c12-seg c15-seg" role="tablist" aria-label="Çözüm durumu">
+              {STATUS.map(([id, label]) => (
+                <button key={id} type="button" role="tab" aria-selected={p.status.value === id} className={p.status.value === id ? 'is-on' : ''}
+                  onClick={() => p.status.onPick(id)}>{label} <small>{tr(p.status.counts[id] || 0)}</small></button>
+              ))}
+            </div>
+          </section>
+          {p.committee && (
+            <section className="c15-bol">
+              <h3 className="c12-label">Kurul</h3>
+              <div className="c12-pills">
+                {p.committee.options.map((o) => {
+                  const on = o.id === p.committee!.value;
+                  return (
+                    <button key={o.id} type="button" aria-pressed={on} className={`c12-pill ${on ? 'is-on' : ''}`} onClick={() => (o.id === 'all' ? kurulKaldir() : p.committee!.onPick(o.id))}>
+                      <span>{o.id === 'all' ? 'Tümünü göster' : o.label}</span>{o.count != null && <b>{tr(o.count)}</b>}
+                    </button>
+                  );
+                })}
+              </div>
+            </section>
+          )}
+          {(p.serit || p.yan) && (
+            <section className="c15-bol">
+              <h3 className="c12-label">Yıl / Konu</h3>
+              {p.serit ?? p.yan!.icerik(() => {})}
+            </section>
+          )}
+          <section className="c15-bol">
+            <h3 className="c12-label">Ders ve diğer süzgeçler</h3>
+            {panel(true, true)}
+          </section>
+          <section className="c15-bol">
+            <SelectField id="c15-sort" label="Sıralama" p={p.sort} all="" />
+          </section>
+          <section className="c15-bol">
+            <h3 className="c12-label">Görünüm</h3>
+            <div className="c15-gor">
+              {p.mod && <CikmisModSwitch value={p.mod.value} onChange={p.mod.onChange} />}
+              {(!p.mod || p.mod.value === 'liste' || p.mod.value === 'panel') && <CikmisViewSwitch value={p.view.value} onChange={p.view.onChange} />}
+              <span className="c12-tagsw">
+                <button type="button" role="switch" aria-checked={look.qtags} aria-labelledby="c15-tags-l" className={`c12-switch ${look.qtags ? 'is-on' : ''}`}
+                  onClick={() => look.set({ qtags: !look.qtags })} />
+                <span id="c15-tags-l" className="c12-meta">Etiketler</span>
+              </span>
+            </div>
+          </section>
+          {p.adminHref && (
+            <section className="c15-bol">
+              <h3 className="c12-label">Yönetim</h3>
+              <a href={p.adminHref} className="c12-btn sm ghost"><Sparkles aria-hidden />Faz 14 düzeltme önerilerini incele</a>
+            </section>
+          )}
+        </div>
+      </Sheet>
+    </div>
+  );
+
+  if (tekCubuk) return tekCubukRender();
+
+  return (
+    <div ref={rootRef} className={`c12 ${showAside ? 'is-adv' : ''} ${small ? 'is-sm' : ''}`}>
+      {v13 && <h1 className="c12-title">Çıkmış sorular</h1>}
+      {!v13 && !tekCubuk && <header className="c12-top">
+        <h1 className="c12-title">Çıkmış sorular</h1>
+        <span className="c12-meta" aria-live="polite">
+          <span className="c12-num">{tr(p.total)}</span> soru{p.scope ? ` · ${p.scope}` : ''}
+        </span>
+        <span className="c12-grow" />
+        {p.adminHref && (
+          <a href={p.adminHref} className="c12-btn sm ghost icon" title="Faz 14 düzeltme önerilerini incele" aria-label="Faz 14 incelemesi">
+            <Sparkles aria-hidden />
+          </a>
+        )}
+        <CikmisViewSwitch value={p.view.value} onChange={p.view.onChange} />
+        <a href={p.practiceHref} className="c12-btn sm">Test oluştur</a>
+      </header>}
+
+      <div ref={cubukRef} className={tekCubuk ? 'c15-yapiskan' : 'c12-yapisma'}>
+      <div className="c12-bar" role="search">
+        {aramaKutusu}
 
         <div className="c13-row">
         <div className="c12-seg" role="tablist" aria-label="Çözüm durumu">

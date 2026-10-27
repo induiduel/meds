@@ -2057,6 +2057,7 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
             onYil={(y) => { setSelectedYear(y); resetPage(); }} onDers={(d) => { setSelectedDiscipline(d); setSelectedTopic('all'); resetPage(); }} />
         ),
       } : undefined,
+      kurulTumu: () => { if (kurulParam()) kurulSuzgeciniKaldir(); },
       adminHref: isAdminUser ? pathFor('test_cikmis') : undefined,
       practiceHref: pathFor('practice'),
       sync: { busy: cacheStatus.isSyncing, onSync: handleManualSync, deviceCount: questions.length },
@@ -2083,7 +2084,7 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
 
   return (
     <div className="cx">
-      {kurulP && selectedCommittee === `donem3-kurul${kurulP}` && (
+      {kurulP && selectedCommittee === `donem3-kurul${kurulP}` && !(v12 && v15) && (
         <KurulHapi kurul={kurulP} sayi={filteredQuestions.length} onTumu={() => { pickCommittee('all'); kurulSuzgeciniKaldir(); }} />
       )}
       {/* Ortak kompakt araç çubuğu: başlık · sayı · arama · durum segmenti · Süzgeç (sayfa) · görünüm seçici */}
