@@ -15,7 +15,34 @@ import '../../styles/v15/notlarim.css';
  */
 /** kaynak: sesli dersten "Nota ekle" ile gelen ses damgası (ders, bölüm, zaman, adres) */
 interface NotKaynak { ad: string; bolum?: string; link: string; t?: number }
-interface Not { id: string; baslik: string; metin: string; renk: string; at: number; yildiz?: boolean; kaynak?: NotKaynak }
+/** boya: metindeki renkli aralıklar (tasarım K01 "metni renklendir") — metin düz kalır, renk ayrı tutulur */
+interface Boya { b: number; e: number; r: string }
+interface Not { id: string; baslik: string; metin: string; renk: string; at: number; yildiz?: boolean; kaynak?: NotKaynak; boya?: Boya[] }
+const BOYALAR: [string, string][] = [['amber', 'Sarı'], ['green', 'Yeşil'], ['blue', 'Mavi'], ['red', 'Kırmızı'], ['violet', 'Mor']];
+/** Metin değişince aralıkları kaydır: ortak baş/son bulunur, değişen bölgeye denk gelen aralık kırpılır/uzar */
+function boyaKaydir(eski: string, yeni: string, l: Boya[] = []): Boya[] {
+  if (!l.length || eski === yeni) return l;
+  let p = 0; while (p < eski.length && p < yeni.length && eski[p] === yeni[p]) p++;
+  let sn = 0; while (sn < eski.length - p && sn < yeni.length - p && eski[eski.length - 1 - sn] === yeni[yeni.length - 1 - sn]) sn++;
+  const eSon = eski.length - sn, d = yeni.length - eski.length;
+  return l.map((x) => {
+    if (x.e <= p) return x;
+    if (x.b >= eSon) return { ...x, b: x.b + d, e: x.e + d };
+    const b = Math.min(x.b, p), e = x.e >= eSon ? x.e + d : Math.max(p, Math.min(x.e, eSon + d));
+    return { ...x, b, e };
+  }).filter((x) => x.e > x.b);
+}
+/** Seçime renk uygula (r=null: temizle); çakışan aralıklar seçim dışında kalan parçalarına bölünür */
+function boyaUygula(l: Boya[] = [], b: number, e: number, r: string | null): Boya[] {
+  const out: Boya[] = [];
+  for (const x of l) {
+    if (x.e <= b || x.b >= e) { out.push(x); continue; }
+    if (x.b < b) out.push({ ...x, e: b });
+    if (x.e > e) out.push({ ...x, b: e });
+  }
+  if (r) out.push({ b, e, r });
+  return out.sort((a, c) => a.b - c.b);
+}
 type Suzgec = 'tum' | 'yildiz' | 'ses';
 const dkSn = (t: number) => `${String(Math.floor(t / 60)).padStart(2, '0')}:${String(t % 60).padStart(2, '0')}`;
 /** Eski notlarda damga metnin sonundaki "Kaynak: <adres>" satırıdır */
@@ -215,6 +242,13 @@ function Duzenleyici({ not, guncelle, sil, kapat }: { not: Not; guncelle: (d: Pa
     guncelle({ metin: v.slice(0, a) + yeni + v.slice(b) });
     requestAnimationFrame(() => { t.focus(); t.setSelectionRange(a, a + yeni.length); });
   };
+  const boya = (r: string | null) => {
+    const t = metinRef.current; if (!t) return;
+    const b = t.selectionStart, e = t.selectionEnd;
+    if (b === e) { t.focus(); return; }
+    guncelle({ boya: boyaUygula(not.boya, b, e, r) });
+    requestAnimationFrame(() => { t.focus(); t.setSelectionRange(e, e); });
+  };
   const AR: [Arac, string, React.ElementType][] = [['yaz', 'Yaz', Type], ['kalem', 'Kalem', Pen], ['fosfor', 'Fosforlu', Highlighter], ['silgi', 'Silgi', Eraser]];
   return (
     <div className="nt15 nt15-d">
@@ -232,6 +266,12 @@ function Duzenleyici({ not, guncelle, sil, kapat }: { not: Not; guncelle: (d: Pa
           </>
         )}
         {arac === 'yaz' && <button type="button" className="nt15-ab" onClick={listele} title="Madde listesi"><List aria-hidden /><span>Liste</span></button>}
+        {arac === 'yaz' && (
+          <span className="nt15-boyalar" role="group" aria-label="Seçili metni renklendir">
+            {BOYALAR.map(([r, ad]) => <button key={r} type="button" className={`nt15-by is-${r}`} onMouseDown={(e) => e.preventDefault()} onClick={() => boya(r)} aria-label={`Seçili metni ${ad.toLocaleLowerCase('tr-TR')} renklendir`} title={`${ad} renklendir`} />)}
+            <button type="button" className="nt15-by is-yok" onMouseDown={(e) => e.preventDefault()} onClick={() => boya(null)} aria-label="Seçili metnin rengini kaldır" title="Rengi kaldır">×</button>
+          </span>
+        )}
         <button type="button" className="nt15-ab" onClick={() => setCizgiler((c) => c.slice(0, -1))} disabled={!cizgiler.length} title="Geri al"><Undo2 aria-hidden /><span>Geri al</span></button>
       </div>
 
@@ -246,7 +286,13 @@ function Duzenleyici({ not, guncelle, sil, kapat }: { not: Not; guncelle: (d: Pa
         <div ref={kap} className={`nt15-yuzey${arac !== 'yaz' ? ' is-ciz' : ''}`}
           onPointerDown={bas} onPointerMove={surukle} onPointerUp={birak} onPointerCancel={birak}>
           <input className="nt15-baslik" value={not.baslik} onChange={(e) => guncelle({ baslik: e.target.value.slice(0, 120) })} placeholder="Başlık" aria-label="Başlık" readOnly={arac !== 'yaz'} />
-          <textarea ref={(t) => { metinRef.current = t; if (t) { t.style.height = 'auto'; t.style.height = `${t.scrollHeight}px`; } }} className="nt15-metin" value={not.metin} onChange={(e) => guncelle({ metin: e.target.value })} placeholder="Yazmaya başla…" aria-label="Not metni" readOnly={arac !== 'yaz'}
+          <div className="nt15-metin-kap">
+            {!!not.boya?.length && (
+              <div className="nt15-boya" aria-hidden>
+                {(() => { const parca: React.ReactNode[] = []; let k = 0; for (const x of not.boya!) { if (x.b > k) parca.push(not.metin.slice(k, x.b)); parca.push(<mark key={x.b} className={`is-${x.r}`}>{not.metin.slice(x.b, x.e)}</mark>); k = x.e; } parca.push(not.metin.slice(k) + '\n'); return parca; })()}
+              </div>
+            )}
+            <textarea ref={(t) => { metinRef.current = t; if (t) { t.style.height = 'auto'; t.style.height = `${t.scrollHeight}px`; } }} className="nt15-metin" value={not.metin} onChange={(e) => guncelle({ metin: e.target.value, boya: boyaKaydir(not.metin, e.target.value, not.boya) })} placeholder="Yazmaya başla…" aria-label="Not metni" readOnly={arac !== 'yaz'}
             onKeyDown={(e) => {
               // madde satırında Enter yeni madde açar; boş maddede Enter maddeyi bitirir
               if (e.key !== 'Enter' || e.shiftKey) return;
@@ -257,6 +303,7 @@ function Duzenleyici({ not, guncelle, sil, kapat }: { not: Not; guncelle: (d: Pa
               const v = `${t.value.slice(0, t.selectionStart)}\n- ${t.value.slice(t.selectionEnd)}`; const k = t.selectionStart + 3;
               guncelle({ metin: v }); requestAnimationFrame(() => t.setSelectionRange(k, k));
             }} />
+          </div>
           <canvas ref={tuval} className="nt15-tuval" aria-hidden />
         </div>
         <p className="v15-cap nt15-not">{tarihYaz(not.at)} · {arac === 'yaz' ? 'Kalemle çizmek için üstten Kalem\'i seç.' : arac === 'silgi' ? 'Silmek istediğin çizginin üstünden geç.' : 'Parmağınla ya da kalemle çiz.'}</p>

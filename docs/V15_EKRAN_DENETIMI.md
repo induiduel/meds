@@ -217,7 +217,7 @@ Not: YOK sayısının 6'sı tasarım belgesi ekranıdır (A09, K08, P01, W03, X0
 
 | Kod | Ad | Site karşılığı | Durum | Not |
 |---|---|---|---|---|
-| K01 | renklendir | NotlarimV15 fosforlu | SIRADA | seçili kelimeye renk için zengin metin düzenleyici gerekir (not metni düz metin) |
+| K01 | renklendir | NotlarimV15 fosforlu | KURULDU | seçili metne 5 renk + temizle; renk aralıkları (Not.boya) metin kutusunun arkasındaki katmanda, yazdıkça kayar |
 | K02 | kalemPdf | CdV15KalemKutusu (sesli ders) | VAR |  |
 | K03 | kalemNot | NotlarimV15 kalem | BİLİNÇLİ YOK | el yazısını metne çevirme tanıma modeli gerektirir (yerel GPU/LLM yasağı) |
 | K04 | notEditor | NotlarimV15 | KURULDU | madde listesi düğmesi + Enter ile yeni madde; ses damgası (B11) var |

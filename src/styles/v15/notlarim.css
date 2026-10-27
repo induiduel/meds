@@ -53,3 +53,17 @@
 .nt15-damga svg { width: 14px; height: 14px; flex: none; }
 .nt15-damga span { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .nt15-damga b { font-variant-numeric: tabular-nums; }
+
+/* K01 metni renklendir: metin kutusunun arkasında aynı ölçüde çizilen renk katmanı */
+.nt15-metin-kap { position: relative; }
+.nt15-boya { position: absolute; inset: 0; pointer-events: none; font-family: var(--font-read); font-size: 1rem; line-height: 1.7em; padding: 0; white-space: pre-wrap; overflow-wrap: break-word; word-break: normal; color: transparent; }
+.nt15-metin-kap .nt15-metin { position: relative; white-space: pre-wrap; overflow-wrap: break-word; }
+.nt15-boya mark { color: transparent; border-radius: 3px; padding: 0; }
+.nt15-boya mark.is-amber, .nt15-by.is-amber { background: color-mix(in oklab, var(--color-warn) 40%, transparent); }
+.nt15-boya mark.is-green, .nt15-by.is-green { background: color-mix(in oklab, var(--color-ok) 35%, transparent); }
+.nt15-boya mark.is-blue, .nt15-by.is-blue { background: color-mix(in oklab, var(--color-accent) 30%, transparent); }
+.nt15-boya mark.is-red, .nt15-by.is-red { background: color-mix(in oklab, var(--color-bad) 30%, transparent); }
+.nt15-boya mark.is-violet, .nt15-by.is-violet { background: color-mix(in oklab, #af52de 32%, transparent); }
+.nt15-boyalar { display: inline-flex; align-items: center; gap: 4px; }
+.nt15-by { width: 24px; height: 24px; border-radius: 50%; border: 1px solid var(--color-line); cursor: pointer; padding: 0; }
+.nt15-by.is-yok { background: var(--color-white); color: var(--color-ink-3); font-size: 15px; line-height: 1; }
