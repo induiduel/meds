@@ -24,7 +24,9 @@ export type Seviye = [number, number, number]; // [eşik, puan, atp]
 export interface HedefTanim { id: string; donem: 'gun' | 'hafta' | 'kurul'; ad: string; olcu: string; ikon?: string; seviyeler: Seviye[] }
 export interface BasarimTanim { id: string; ad: string; aciklama?: string; olcu: string; ikon?: string; renk?: string; topluluk?: boolean; seviyeler: Seviye[] }
 export interface KilitTanim {
-  id: string; tur: 'unvan' | 'cerceve' | 'efekt' | 'icerik' | 'renk' | 'esya'; ad: string; fiyat: number; etkin: boolean; renk?: string; aciklama?: string;
+  id: string; tur: 'unvan' | 'cerceve' | 'efekt' | 'icerik' | 'renk' | 'esya' | 'hucre'; ad: string; fiyat: number; etkin: boolean; renk?: string; aciklama?: string;
+  /** Hücrem: bu basamaktan önce açılması gereken basamak; `cag` evrim çağı adı */
+  onceki?: string; cag?: string;
   /** unvanın kıdemi; `kidemAcar` unvan alınınca kişinin kıdemi buna yükselir (bir önceki kıdem gerekir), diğerleri o kıdemde açılır */
   kidem?: number; kidemAcar?: boolean; eski?: boolean;
 }
@@ -72,6 +74,7 @@ export function tanimDogrula(t: any): string[] {
   for (const k of t.kilitler || []) {
     if (!k.id || ids.has(k.id)) h.push(`kilit kimliği boş/yinelenmiş: ${k.id}`); ids.add(k.id);
     if (!(k.fiyat >= 50 && k.fiyat <= 10000)) h.push(`${k.id}: fiyat 50–10.000 mol olmalı`);
+    if (k.tur === 'hucre' && k.onceki && !(t.kilitler || []).some((x: any) => x.id === k.onceki)) h.push(`${k.id}: önceki basamak ${k.onceki} yok`);
     if (k.tur === 'unvan' && k.kidem != null && !(t.kidemler || []).some((x: any) => x.no === k.kidem)) h.push(`${k.id}: kıdem ${k.kidem} tanımlı değil`);
   }
   if (!(t.atp?.gunlukTavan > 0 && t.atp.gunlukTavan <= 100)) h.push('atp.gunlukTavan 1–100 olmalı');
@@ -604,6 +607,9 @@ export function createBasarimMotor(deps: MotorDeps) {
         const simdiki = kidemNo(k);
         const gerek = item.kidemAcar ? item.kidem - 1 : item.kidem;
         if (simdiki < gerek) return { hata: `Önce ${kidemler().find((x) => x.no === gerek)?.ad || gerek + '.'} kıdemine yüksel.` };
+      }
+      if (item.tur === 'hucre' && item.onceki && !k.kilit[item.onceki]) {
+        return { hata: `Önce "${tanim.kilitler.find((x) => x.id === item.onceki)?.ad || item.onceki}" basamağını aç.` };
       }
       if (k.atp.bakiye < item.fiyat) return { hata: `Yetersiz ATP: ${item.fiyat} mol gerekli, ${k.atp.bakiye} mol var.` };
       k.atp.bakiye -= item.fiyat;

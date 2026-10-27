@@ -11,7 +11,7 @@ import { safeJsonFetch } from './api';
 export type Seviye = [number, number, number];
 export interface HedefT { id: string; donem: 'gun' | 'hafta' | 'kurul'; ad: string; olcu: string; ikon?: string; seviyeler: Seviye[] }
 export interface BasarimT { id: string; ad: string; aciklama?: string; olcu: string; ikon?: string; renk?: string; topluluk?: boolean; seviyeler: Seviye[] }
-export interface KilitT { id: string; tur: 'unvan' | 'cerceve' | 'efekt' | 'icerik' | 'renk' | 'esya'; ad: string; fiyat: number; etkin: boolean; renk?: string; aciklama?: string; kidem?: number; kidemAcar?: boolean; eski?: boolean }
+export interface KilitT { id: string; tur: 'unvan' | 'cerceve' | 'efekt' | 'icerik' | 'renk' | 'esya' | 'hucre'; onceki?: string; cag?: string; ad: string; fiyat: number; etkin: boolean; renk?: string; aciklama?: string; kidem?: number; kidemAcar?: boolean; eski?: boolean }
 export interface KidemT { no: number; ad: string; tavan: number; aciklama?: string }
 export interface Tanim {
   atp: { baslangic: number; gunlukTavan: number; haftalikSiralama: number[]; kurulSiralama: number[]; siralamaEsikPuan: { hafta: number; kurul: number } };
@@ -161,5 +161,5 @@ export function olcuYaz(olcu: string, n: number): string {
   };
   return `${sayi(n)} ${birim[olcu] || ''}`.trim();
 }
-export const KILIT_TUR_AD: Record<KilitT['tur'], string> = { unvan: 'Kıdem ve unvanlar', cerceve: 'Çerçeveler', efekt: 'Kutlama efektleri', icerik: 'İçerikler', renk: 'İsim renkleri', esya: 'Eşyalar' };
+export const KILIT_TUR_AD: Record<KilitT['tur'], string> = { unvan: 'Kıdem ve unvanlar', cerceve: 'Çerçeveler', efekt: 'Kutlama efektleri', icerik: 'İçerikler', renk: 'İsim renkleri', esya: 'Eşyalar', hucre: 'Hücrem' };
 export const sureYaz = (sn: number) => { const sa = Math.floor(sn / 3600), dk = Math.floor((sn % 3600) / 60); return sa ? `${sa} sa ${dk} dk` : `${dk} dk`; };

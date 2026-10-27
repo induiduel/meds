@@ -1,0 +1,53 @@
+/* v15 · Hücrem (HucremV15) — evrim basamakları; renkler palet tokenından */
+.hc15 { container-type: inline-size; display: flex; flex-direction: column; gap: 12px; max-width: 760px; width: 100%; margin-inline: auto; }
+.hc15-sahne { display: grid; gap: 12px; padding: 16px; grid-template-columns: minmax(0, 1fr); align-items: center; }
+@container (min-width: 600px) { .hc15-sahne { grid-template-columns: 260px minmax(0, 1fr); } }
+.hc15-svg { width: 100%; max-width: 280px; margin: 0 auto; display: block; overflow: visible; }
+.hc15-su { fill: color-mix(in oklab, var(--color-accent) 7%, var(--color-white)); stroke: color-mix(in oklab, var(--color-accent) 18%, transparent); stroke-dasharray: 4 6; }
+.hc15-mol { fill: color-mix(in oklab, var(--color-accent) 35%, var(--color-white)); }
+.hc15-zar { stroke: var(--color-accent); stroke-width: 3; fill: color-mix(in oklab, var(--color-accent) 10%, var(--color-white)); }
+.hc15-zar.is-proto { stroke-width: 2; }
+.hc15-zar.is-yan { opacity: .55; stroke-width: 2; }
+.hc15-duvar { fill: none; stroke: color-mix(in oklab, var(--color-ok) 60%, var(--color-ink)); stroke-width: 2; stroke-dasharray: 2 3; }
+.hc15-kamci { fill: none; stroke: var(--color-ink-3); stroke-width: 2; stroke-linecap: round; }
+.hc15-rna, .hc15-dna { fill: none; stroke: var(--color-bad); stroke-width: 2.4; stroke-linecap: round; }
+.hc15-cekirdek { fill: color-mix(in oklab, oklch(0.58 0.17 300) 22%, var(--color-white)); stroke: oklch(0.52 0.17 300); stroke-width: 2; }
+.hc15-cekirdekcik { fill: oklch(0.52 0.17 300); }
+.hc15-ribozom { fill: var(--color-ink-2); }
+.hc15-kloro { fill: color-mix(in oklab, var(--color-ok) 55%, var(--color-white)); stroke: var(--color-ok); }
+.hc15-mito { fill: color-mix(in oklab, var(--color-warn) 45%, var(--color-white)); stroke: color-mix(in oklab, var(--color-warn) 80%, var(--color-ink)); stroke-width: 1.5; }
+.hc15-lizo { fill: color-mix(in oklab, var(--color-bad) 30%, var(--color-white)); stroke: var(--color-bad); }
+.hc15-er, .hc15-golgi path { fill: none; stroke: color-mix(in oklab, var(--color-accent) 70%, var(--color-ink)); stroke-width: 2; stroke-linecap: round; }
+.hc15-iskelet line { stroke: color-mix(in oklab, var(--color-ink-3) 50%, transparent); stroke-width: 1; }
+.hc15-sinir { fill: none; stroke: var(--color-warn); stroke-width: 2; stroke-linejoin: round; }
+.hc15-insan { font: 600 11px var(--font-sans); fill: var(--color-ink-2); }
+.hc15-durum { display: flex; flex-direction: column; gap: 6px; }
+.hc15-cag { font-size: .75rem; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; color: var(--color-accent); }
+.hc15-durum > b { font-size: 1.3rem; color: var(--color-ink); }
+.hc15-bar { margin: 4px 0; }
+.hc15-atp { display: inline-flex; align-items: center; gap: 6px; color: var(--color-ink-2); font-size: .9rem; font-variant-numeric: tabular-nums; }
+.hc15-atp svg { width: 16px; height: 16px; color: var(--color-warn); }
+.hc15-sonraki { padding: 16px; display: flex; flex-direction: column; gap: 10px; }
+.hc15-sonraki b { display: block; font-size: 1.1rem; color: var(--color-ink); margin-top: 2px; }
+.hc15-sonraki p { margin: 4px 0 0; color: var(--color-ink-2); font-size: .9rem; line-height: 1.45; }
+.hc15-ac { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 46px; border: 0; border-radius: 12px; background: var(--color-accent); color: var(--color-on-accent); font: inherit; font-weight: 600; cursor: pointer; }
+.hc15-ac:disabled { opacity: .5; cursor: default; }
+.hc15-ac svg { width: 17px; height: 17px; }
+.hc15-eksik { margin: 0 !important; }
+.hc15-eksik a { color: var(--color-accent); }
+.hc15-mesaj { margin: 0 !important; padding: 8px 12px; border-radius: 10px; background: var(--color-field); color: var(--color-ink) !important; }
+.hc15-cagbolum h2 { margin: 6px 2px 6px; }
+.hc15-liste { list-style: none; margin: 0; padding: 4px 0; }
+.hc15-b { display: flex; gap: 12px; padding: 10px 14px; align-items: flex-start; }
+.hc15-b + .hc15-b { border-top: 1px solid var(--color-line-soft, var(--color-line)); }
+.hc15-no { flex: none; width: 28px; height: 28px; border-radius: 50%; display: grid; place-items: center; font-size: .8rem; font-weight: 700; background: var(--color-field); color: var(--color-ink-3); }
+.hc15-no svg { width: 15px; height: 15px; }
+.is-acik .hc15-no { background: var(--color-ok-soft); color: var(--color-ok); }
+.is-sirada .hc15-no { background: var(--color-accent); color: var(--color-on-accent); }
+.hc15-bt { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
+.hc15-bt b { color: var(--color-ink); font-weight: 600; }
+.is-kilitli .hc15-bt b { color: var(--color-ink-3); }
+.hc15-bt span { font-size: .85rem; color: var(--color-ink-2); line-height: 1.45; }
+.hc15-bos { padding: 24px 18px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 8px; }
+.hc15-bos b { color: var(--color-ink); }
+.hc15-bos p { margin: 0; color: var(--color-ink-2); max-width: 44ch; line-height: 1.45; }

@@ -57,7 +57,7 @@ Yeni bileşen önce buraya eklenir; sayfa CSS'i yalnız yerleşim yazar.
 | Sayfa | v15 ekranları | Not |
 |---|---|---|
 | Oyunlar merkezi (boşluk, eşleştir, kartlar, sırala, blitz, ızgara, düello, sınıf yarışması) | F01–F11, N01–N08 | ✅ Canlı yarışma kuruldu (Soru çöz › Oyunlar); diğer oyun türleri (boşluk, eşleştir, sırala, blitz) yok |
-| Hücrem (DNA, glukoz, mitokondri, 28 evrim basamağı) | M01–M17 | Puan kuralları README'de; 3B hücre canvas |
+| Hücrem (DNA, glukoz, mitokondri, 28 evrim basamağı) | M01–M17 | ✅ /hucrem: 28 basamak = tanim.json kilitleri `tur: hucre` (onceki şartı sunucuda), ATP ile açılır, SVG hücre katman katman büyür; 3B yok |
 | Yüzen kronometre + çalışma kapsülü | T01–T15, U01–U12 | Sistem süresinden ayrı tutulur |
 | Ders programı (liste/hafta/gün/ay, içe aktar) | AA01–AA07 | ✅ gün/hafta/liste kuruldu (ay ve içe aktarma yok) |
 | İstatistik ve grafikler (14 grafik) | J01–J02, X01–X10 | |
@@ -151,3 +151,4 @@ kullanıcı onayı. Dağıtım yalnız `deploy/oracle/dagit.sh` (onem +1), kulla
 - **Notlarım** `NotlarimV15.tsx` + `styles/v15/notlarim.css`, rota `notlarim` (`/notlarim?not=<id>`), Menü › Ben. Anahtarlar `medsoru_notlarim_v1` + `medsoru_notlarim_cizim:<id>` userKvSync'te. Tuval yüksekliği `clientHeight` (scrollHeight tuvali sonsuz büyütür).
 - **PDF oluştur** `PdfSihirbaziV15.tsx` + `styles/v15/pdfsihirbaz.css`, rota `pdf_olustur` (`/pdf-olustur`), Menü › Araçlar (eski "PDF" düğmesi "Soru kitapçığı" oldu). TopluPdf'e `dugmeYazi`/`onBitti`, pencere body'ye portal.
 - **Topluluk** `ToplulukV15.tsx` + `styles/v15/topluluk.css`, rota `topluluk` (`/topluluk?kanal=genel|kurul-N|ders:<key>`). Sunucu `services/topluluk.ts` + `deploy/pg/sql/topluluk.sql` (açılışta uygulanır); yazma doğrulanmış Firebase uid ile, STUDENT_WRITE_ROUTES'ta; GET'ler jeton taşır (adminFetchAuth ogrenciJetonu). Dışarı uid/e-posta çıkmaz.
+- **Hücrem** `HucremV15.tsx` + `styles/v15/hucrem.css`, rota `hucrem`. Basamaklar `src/data/basarim/tanim.json` (fiyat 50+15·i, toplam 7.070 mol); motor `satinAl` önceki basamağı ister. Mağaza ekranı hucre türünü listelemez.

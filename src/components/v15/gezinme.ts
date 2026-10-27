@@ -20,7 +20,7 @@ let son: Record<string, string> = oku<Record<string, string>>(SON_KEY, {});
 const suan = () => location.pathname + location.search;
 
 /** Kişisel sayfalar ve Başvuru: alt çubukta "Menü" sekmesine aittir */
-export const MENU_SAYFALARI: AppRoute[] = ['topluluk', 'settings', 'stats', 'basarimlar', 'bitirdiklerim', 'study', 'notlarim', 'pdf_olustur', 'manage'];
+export const MENU_SAYFALARI: AppRoute[] = ['topluluk', 'hucrem', 'settings', 'stats', 'basarimlar', 'bitirdiklerim', 'study', 'notlarim', 'pdf_olustur', 'manage'];
 export type SekmeId = Exclude<V15Section['id'], 'kaynaklar'> | 'menu';
 export const sekmeOf = (r: AppRoute): SekmeId | undefined => {
   if (MENU_SAYFALARI.includes(r)) return 'menu';

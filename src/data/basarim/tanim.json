@@ -1342,6 +1342,285 @@
       "fiyat": 1000,
       "etkin": false,
       "eski": true
+    },
+    {
+      "id": "h01",
+      "tur": "hucre",
+      "ad": "Su ve mineraller",
+      "fiyat": 50,
+      "etkin": true,
+      "cag": "İlkel çorba",
+      "aciklama": "Hayatın çözücüsü su; vücut ağırlığının yaklaşık %60'ı sudur ve tepkimelerin çoğu suda gerçekleşir."
+    },
+    {
+      "id": "h02",
+      "tur": "hucre",
+      "ad": "Amino asitler",
+      "fiyat": 65,
+      "etkin": true,
+      "cag": "İlkel çorba",
+      "aciklama": "Proteinlerin yapı taşları; insanda 20 standart amino asidin 9'u esansiyeldir, besinle alınmalıdır.",
+      "onceki": "h01"
+    },
+    {
+      "id": "h03",
+      "tur": "hucre",
+      "ad": "Nükleotitler",
+      "fiyat": 80,
+      "etkin": true,
+      "cag": "İlkel çorba",
+      "aciklama": "Şeker, fosfat ve bazdan oluşur; DNA ve RNA'nın yanında ATP de bir nükleotittir.",
+      "onceki": "h02"
+    },
+    {
+      "id": "h04",
+      "tur": "hucre",
+      "ad": "RNA dünyası",
+      "fiyat": 95,
+      "etkin": true,
+      "cag": "İlkel çorba",
+      "aciklama": "Hem bilgi taşıyan hem tepkime hızlandıran ribozimler; ribozomdaki peptid bağını bugün de RNA kurar.",
+      "onceki": "h03"
+    },
+    {
+      "id": "h05",
+      "tur": "hucre",
+      "ad": "Lipit zar",
+      "fiyat": 110,
+      "etkin": true,
+      "cag": "İlkel çorba",
+      "aciklama": "Fosfolipit çift katman içi dışından ayırır; zar seçici geçirgendir, kolesterol akışkanlığı ayarlar.",
+      "onceki": "h04"
+    },
+    {
+      "id": "h06",
+      "tur": "hucre",
+      "ad": "Glikoliz",
+      "fiyat": 125,
+      "etkin": true,
+      "cag": "İlkel çorba",
+      "aciklama": "Glukoz sitoplazmada iki pirüvata yıkılır; oksijen gerekmez, net 2 ATP ve 2 NADH kazanılır.",
+      "onceki": "h05"
+    },
+    {
+      "id": "h07",
+      "tur": "hucre",
+      "ad": "DNA",
+      "fiyat": 140,
+      "etkin": true,
+      "cag": "İlkel çorba",
+      "aciklama": "Çift sarmallı kalıcı genetik bellek; adenin timinle, guanin sitozinle eşleşir.",
+      "onceki": "h06"
+    },
+    {
+      "id": "h08",
+      "tur": "hucre",
+      "ad": "Ribozom",
+      "fiyat": 155,
+      "etkin": true,
+      "cag": "Prokaryot",
+      "aciklama": "mRNA'yı proteine çevirir; prokaryotta 70S, ökaryotta 80S'tir, bu fark antibiyotiklerin hedefidir.",
+      "onceki": "h07"
+    },
+    {
+      "id": "h09",
+      "tur": "hucre",
+      "ad": "Hücre duvarı",
+      "fiyat": 170,
+      "etkin": true,
+      "cag": "Prokaryot",
+      "aciklama": "Peptidoglikan duvar bakteriyi korur; beta-laktamlar bu duvarın çapraz bağlanmasını engeller.",
+      "onceki": "h08"
+    },
+    {
+      "id": "h10",
+      "tur": "hucre",
+      "ad": "Kamçı",
+      "fiyat": 185,
+      "etkin": true,
+      "cag": "Prokaryot",
+      "aciklama": "Bakteri hareketini sağlar; flagellin proteini bağışıklık sisteminde TLR5 ile tanınır.",
+      "onceki": "h09"
+    },
+    {
+      "id": "h11",
+      "tur": "hucre",
+      "ad": "Fotosentez",
+      "fiyat": 200,
+      "etkin": true,
+      "cag": "Prokaryot",
+      "aciklama": "Siyanobakteriler ışık enerjisiyle su ve karbondioksitten glukoz ve oksijen üretir.",
+      "onceki": "h10"
+    },
+    {
+      "id": "h12",
+      "tur": "hucre",
+      "ad": "Oksijen devrimi",
+      "fiyat": 215,
+      "etkin": true,
+      "cag": "Prokaryot",
+      "aciklama": "Atmosferde biriken oksijen, glukozdan çok daha fazla ATP çıkaran oksidatif solunumun yolunu açtı.",
+      "onceki": "h11"
+    },
+    {
+      "id": "h13",
+      "tur": "hucre",
+      "ad": "Plazmit",
+      "fiyat": 230,
+      "etkin": true,
+      "cag": "Prokaryot",
+      "aciklama": "Kromozom dışı küçük halkasal DNA; antibiyotik direnç genleri bakteriler arasında plazmitle yayılır.",
+      "onceki": "h12"
+    },
+    {
+      "id": "h14",
+      "tur": "hucre",
+      "ad": "Biyofilm",
+      "fiyat": 245,
+      "etkin": true,
+      "cag": "Prokaryot",
+      "aciklama": "Bakterilerin şekerli bir matrikse gömülü topluluğu; kateter enfeksiyonlarında tedaviyi zorlaştırır.",
+      "onceki": "h13"
+    },
+    {
+      "id": "h15",
+      "tur": "hucre",
+      "ad": "Çekirdek",
+      "fiyat": 260,
+      "etkin": true,
+      "cag": "Ökaryot",
+      "aciklama": "Çift zarlı çekirdek DNA'yı korur; transkripsiyon çekirdekte, translasyon sitoplazmada olur.",
+      "onceki": "h14"
+    },
+    {
+      "id": "h16",
+      "tur": "hucre",
+      "ad": "Endoplazmik retikulum",
+      "fiyat": 275,
+      "etkin": true,
+      "cag": "Ökaryot",
+      "aciklama": "Granüllü ER salgı proteinlerini, düz ER lipitleri ve ilaç metabolizmasını (sitokrom P450) üstlenir.",
+      "onceki": "h15"
+    },
+    {
+      "id": "h17",
+      "tur": "hucre",
+      "ad": "Golgi",
+      "fiyat": 290,
+      "etkin": true,
+      "cag": "Ökaryot",
+      "aciklama": "Proteinleri işler, glikozillenir ve paketler; mannoz-6-fosfat etiketi enzimleri lizozoma yollar.",
+      "onceki": "h16"
+    },
+    {
+      "id": "h18",
+      "tur": "hucre",
+      "ad": "Mitokondri",
+      "fiyat": 305,
+      "etkin": true,
+      "cag": "Ökaryot",
+      "aciklama": "Endosimbiyozla gelen enerji santrali; kendi DNA'sı vardır ve yalnız anneden kalıtılır.",
+      "onceki": "h17"
+    },
+    {
+      "id": "h19",
+      "tur": "hucre",
+      "ad": "Lizozom",
+      "fiyat": 320,
+      "etkin": true,
+      "cag": "Ökaryot",
+      "aciklama": "Asidik enzimlerle hücre içi sindirim; enzim eksikliği lizozomal depo hastalıklarına yol açar.",
+      "onceki": "h18"
+    },
+    {
+      "id": "h20",
+      "tur": "hucre",
+      "ad": "Hücre iskeleti",
+      "fiyat": 335,
+      "etkin": true,
+      "cag": "Ökaryot",
+      "aciklama": "Aktin, ara filamanlar ve mikrotübüller; kolşisin ve vinka alkaloidleri mikrotübülleri hedefler.",
+      "onceki": "h19"
+    },
+    {
+      "id": "h21",
+      "tur": "hucre",
+      "ad": "Mitoz",
+      "fiyat": 350,
+      "etkin": true,
+      "cag": "Ökaryot",
+      "aciklama": "Bir hücre iki özdeş hücreye bölünür; G1, S, G2 ve M evreleri p53 gibi denetim noktalarıyla korunur.",
+      "onceki": "h20"
+    },
+    {
+      "id": "h22",
+      "tur": "hucre",
+      "ad": "Mayoz",
+      "fiyat": 365,
+      "etkin": true,
+      "cag": "Çok hücreli canlı",
+      "aciklama": "Kromozom sayısını yarıya indirir ve çaprazlamayla çeşitlilik yaratır; ayrılmama anöploidiye yol açar.",
+      "onceki": "h21"
+    },
+    {
+      "id": "h23",
+      "tur": "hucre",
+      "ad": "Hücreler arası bağlantı",
+      "fiyat": 380,
+      "etkin": true,
+      "cag": "Çok hücreli canlı",
+      "aciklama": "Sıkı bağlantı, desmozom ve gap junction; pemfigusta desmozomlara karşı antikor gelişir.",
+      "onceki": "h22"
+    },
+    {
+      "id": "h24",
+      "tur": "hucre",
+      "ad": "Doku farklılaşması",
+      "fiyat": 395,
+      "etkin": true,
+      "cag": "Çok hücreli canlı",
+      "aciklama": "Kök hücreler aynı genomla farklı dokulara dönüşür; farklılaşma gen ifadesinin seçilmesiyle olur.",
+      "onceki": "h23"
+    },
+    {
+      "id": "h25",
+      "tur": "hucre",
+      "ad": "Sinir hücresi",
+      "fiyat": 410,
+      "etkin": true,
+      "cag": "Çok hücreli canlı",
+      "aciklama": "Aksiyon potansiyeli sodyum girişiyle başlar; miyelin iletiyi atlayarak hızlandırır.",
+      "onceki": "h24"
+    },
+    {
+      "id": "h26",
+      "tur": "hucre",
+      "ad": "Kas hücresi",
+      "fiyat": 425,
+      "etkin": true,
+      "cag": "Çok hücreli canlı",
+      "aciklama": "Aktin-miyozin kayması kasılmayı sağlar; kalsiyum troponine bağlanınca kasılma başlar.",
+      "onceki": "h25"
+    },
+    {
+      "id": "h27",
+      "tur": "hucre",
+      "ad": "Bağışıklık hücresi",
+      "fiyat": 440,
+      "etkin": true,
+      "cag": "Çok hücreli canlı",
+      "aciklama": "Doğal ve kazanılmış bağışıklık; T hücreleri antijeni MHC molekülü üzerinde tanır.",
+      "onceki": "h26"
+    },
+    {
+      "id": "h28",
+      "tur": "hucre",
+      "ad": "İnsan",
+      "fiyat": 455,
+      "etkin": true,
+      "cag": "Çok hücreli canlı",
+      "aciklama": "Yaklaşık 37 trilyon hücrenin uyumu: sen. Bütün basamakları bilgiyle kazandın.",
+      "onceki": "h27"
     }
   ],
   "kidemler": [
