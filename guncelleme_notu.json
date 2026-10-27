@@ -1,10 +1,11 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 451,
-  "baslik": "Bitirdiklerim ve Sınav planı artık kurula göre",
+  "onem": 452,
+  "baslik": "Kronometre ayarları ve geçmişi",
   "maddeler": [
-    "Bitirdiklerim sayfasında Kurul 1–6 seçilir; ilerleme, süre ve hız yalnız seçilen kurulun içeriğinden hesaplanır.",
-    "Sınav planı da seçilen kurulun soru dağılımı ve sınav tarihine göre kurulur."
+    "Kronometre panelinden Ayarlar: göster, oynatıcıyla birleş, sayfa değişince devam, boyut, konum, mola hatırlatması, günlük hedef",
+    "Kronometre geçmişi: hafta/ay grafiği, sistem süresiyle karşılaştırma, odak oranı, oturum listesi",
+    "Bitirdiklerim ve Sınav planı kurula göre (önceki güncelleme)"
   ],
   "eklenen": [],
   "degisen": [],
