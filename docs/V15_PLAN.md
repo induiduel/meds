@@ -115,6 +115,13 @@ Yeni bileşen önce buraya eklenir; sayfa CSS'i yalnız yerleşim yazar.
 - Öğren etkileşimleri (B07): `styles/v15/ogren.css` etkileşim katmanı (ls-ix kart, hap düğme, Newsreader soru kökü); katman artık LessonPlayer'da da yüklenir (derin bağlantıyla açılan destede eksikti). Açık deste odak ekranı (ShellV15 `odakEkrani`: üst bar + sekmeler gizli, dersin kendi çubukları).
 - Olası sorular, KMB, Güncelleme günlüğü: başlık/simge üst barda (`styles/v15/shell.css`). Takvim sayfası sitede yok (`/takvim` → soru ekle); tasarımdaki D06 yeni sayfa olarak bekliyor.
 
+## Gezinme (2026-10-27, kullanıcı isteği: geri dönüş kolay, alt çubuk standart uygulama gibi)
+- `components/v15/gezinme.ts`: oturum içi geçmiş yığını + sekme başına son adres (sessionStorage).
+- Üst bar: kök olmayan (Bugün/merkez dışı) her sayfada Geri; önce uygulama içi geçmiş, yoksa bölüm merkezi.
+- Alt çubuk: Bugün · Ders · Soru · Sınav · Menü. Sekme kaldığın sayfayı açar, etkin sekmeye dokunmak merkeze döner;
+  gizli "yeniden dokun / uzun bas" kalktı. Menü: Başvuru · Ben (masam, Bitirdiklerim, istatistik, başarımlar, ayarlar) · Araçlar.
+- Kenar menüsü alt kısmı: Çalışma masam, Bitirdiklerim, İstatistiklerim, Başarımlar + ayarlar.
+
 ## Kalan iç sayfalar (kullanıcı kararı 2026-10-27: eski görünümün hepsi v15'e geçecek)
 Tasarımı olan: sesli ders listesi (B04), Öğren etkileşimleri (B07), spotlar (B08), önem (B09), sözlük (B10), notlar (B11),
 Bitirdiklerim (B12), çıkmışlar (C07), soru çözücü (C06), soru ekle (C10), kamp aşamaları (D02), Check Up (D03), Son Prova (D04),

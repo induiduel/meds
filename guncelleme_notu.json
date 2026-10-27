@@ -1,19 +1,14 @@
 {
  "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
- "onem": 387,
- "baslik": "Yalın (v15): Öğren ve kalan sayfalar",
+ "onem": 388,
+ "baslik": "Yalın (v15): kolay geri dönüş ve yeni alt menü",
  "maddeler": [
-  "Öğren destesi v15'te odak ekranı: üst çubuk ve alt sekmeler dersin çubuklarını artık örtmüyor.",
-  "Öğren etkileşimleri (mini soru, boşluk, zincir, tablo, kartlar) yeni sade görünümde.",
-  "Başarımlar, İstatistiklerim, Olası sorular, KMB ve Güncelleme günlüğünde başlık üst çubukta; tekrar eden başlıklar kaldırıldı."
+  "Her alt sayfada üst çubukta Geri düğmesi: bir önceki sayfaya, yoksa bölümün başına döner.",
+  "Alt çubuk: Bugün, Ders, Soru, Sınav, Menü. Her sekme kaldığın sayfayı hatırlar; açık sekmeye dokununca başına döner.",
+  "Menü: Başvuru kaynakları, kişisel sayfalar ve araçlar tek yerde, gruplu."
  ],
  "eklenen": [],
- "degisen": [
-  "src/components/v15/ShellV15.tsx",
-  "src/styles/v15/ogren.css",
-  "src/styles/v15/shell.css",
-  "src/components/learn/lesson/LessonPlayer.tsx"
- ],
+ "degisen": [],
  "duzeltilen": [
   "Tireyle bitişik yazılan kısaltmalar (DSM-5, MAO-A, HIV-1, 5-HTTLPR) artık slaytta doğru yerde işaretleniyor.",
   "Büyük harfli Türkçe sözcükler (BİLİNÇ, KOMA) kısaltma sayılmıyor."

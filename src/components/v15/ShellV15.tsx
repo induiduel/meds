@@ -7,6 +7,7 @@ import {
   CloudUpload,
   Database,
   FileDown,
+  LayoutGrid,
   Maximize2,
   Minimize2,
   PanelLeftClose,
@@ -43,6 +44,7 @@ import { usePhone, useSearchShortcut, useSideCollapse } from '../shell/shellHook
 import { TOP_SLOT_ID } from '../v12/ShellV12';
 import { V15_SECTIONS, sectionOf, type V15Section } from './navV15';
 import { useV15BaslikOku } from './baslik';
+import { MENU_SAYFALARI, geriGit, kokMu, sekmeOf, sekmeyeGit, useGezinmeKaydi } from './gezinme';
 import '../../styles/v15/tokens.css';
 import '../../styles/v15/shell.css';
 
@@ -263,7 +265,10 @@ export const SideNavV15: React.FC<SideNavProps> = ({ active, onGo, isAdmin, user
 
       <div className="v15-side-foot">
         {isAdmin && link('manage', <><ShieldCheck aria-hidden="true" /><span className="v15-nav-t">Yönetim</span></>, 'v15-nav-a')}
-        {link('basarimlar', <><Trophy aria-hidden="true" /><span className="v15-nav-t">Başarımlar</span></>, 'v15-nav-a')}
+        {(['study', 'bitirdiklerim', 'stats', 'basarimlar'] as AppRoute[]).map((r) => {
+          const it = NAV_ITEMS[r];
+          return it ? link(r, <><it.icon aria-hidden="true" /><span className="v15-nav-t">{it.label}</span></>, 'v15-nav-a') : null;
+        })}
         <div className="v15-me">
           <Avatar user={user} size={34} />
           <span className="v15-me-t">
@@ -295,8 +300,10 @@ export const TopBarV15: React.FC<TopBarProps> = ({ active, onGo, user, isAdmin, 
   useEffect(() => setMenu(false), [active]);
   useSearchShortcut(() => setSearch(true));
 
+  useGezinmeKaydi(active);
   const sec = sectionOf(active);
   const sayfa = useV15BaslikOku();
+  const geriVar = !!sayfa?.geri || !kokMu(active);
   // Odak ekranı: sesli ders açıkken kendi üst barını kullanır (tasarım sistemi v15 › Kabuk)
   const odak = odakEkrani(active);
   const title = sayfa?.baslik || (active === 'today' ? greeting(user) : ROUTE_TITLES[active]);
@@ -315,12 +322,12 @@ export const TopBarV15: React.FC<TopBarProps> = ({ active, onGo, user, isAdmin, 
 
   return (
     <header className="v15-top print:hidden">
-      {sayfa?.geri && (
-        <a className="v15-ib v15-back" href={sayfa.geri} onClick={linkClick(() => navigateTo(sayfa.geri!))} aria-label="Geri" title="Geri">
+      {geriVar && (
+        <button type="button" className="v15-ib v15-back" onClick={() => (sayfa?.geri ? navigateTo(sayfa.geri) : geriGit(active))} aria-label="Geri" title="Geri">
           <ChevronLeft aria-hidden="true" />
-        </a>
+        </button>
       )}
-      <button type="button" className={`v15-top-av${sayfa?.geri ? ' is-hidden' : ''}`} onClick={() => setMenu((v) => !v)} aria-haspopup="dialog" aria-expanded={menu} aria-label="Hesap ve araçlar">
+      <button type="button" className={`v15-top-av${geriVar ? ' is-hidden' : ''}`} onClick={() => setMenu((v) => !v)} aria-haspopup="dialog" aria-expanded={menu} aria-label="Hesap ve araçlar">
         <Avatar user={user} size={32} />
         {unread > 0 && <i className="v15-dot" aria-hidden="true" />}
       </button>
@@ -415,33 +422,45 @@ const greeting = (user: AppUser | null) => {
  * Alt sekme çubuğu (<600)
  * ============================================================================= */
 export const TabBarV15: React.FC<TabBarProps> = ({ active, onGo, isAdmin, onPdf, onOffline }) => {
-  const here = sectionOf(active);
+  const sekme = sekmeOf(active);
   const badges = useBadges();
-  const [sheet, setSheet] = useState<V15Section | null>(null);
+  const [menu, setMenu] = useState(false);
   const [appFs, toggleAppFs] = useAppFullscreen();
   const [queued, setQueued] = useState(() => offlineDatabaseService.getState().queuedActionsCount);
   useEffect(() => offlineDatabaseService.subscribe((st) => setQueued(st.queuedActionsCount)), []);
-  useEffect(() => setSheet(null), [active]);
-  // Tanıtım turu "Daha" sayfasını açıp kapatır (WelcomeTour → medsoru:more): v15'te bölüm listesi
+  useEffect(() => setMenu(false), [active]);
+  // Tanıtım turu "Daha" sayfasını açıp kapatır (WelcomeTour → medsoru:more): v15'te Menü
   useEffect(() => {
-    const on = (e: Event) => setSheet((e as CustomEvent<{ open?: boolean }>).detail?.open ? V15_SECTIONS[1] : null);
+    const on = (e: Event) => setMenu(!!(e as CustomEvent<{ open?: boolean }>).detail?.open);
     window.addEventListener('medsoru:more', on);
     return () => window.removeEventListener('medsoru:more', on);
   }, []);
 
   const go = (r: AppRoute) => {
-    setSheet(null);
+    setMenu(false);
     onGo(r);
   };
-  // Odak ekranı (sesli ders): alt sekme yerine oynatıcı durur
+  // Odak ekranı (sesli ders, açık deste): alt sekme yerine dersin kendi çubuğu durur
   if (odakEkrani(active)) return null;
+
+  const basvuru = V15_SECTIONS.find((s) => s.id === 'kaynaklar')!;
+  const kisisel = MENU_SAYFALARI.filter((r) => r !== 'manage' || isAdmin).map((r) => NAV_ITEMS[r]).filter(Boolean);
+  const satir = (id: AppRoute, Icon: React.ElementType, ad: string, ipucu?: string) => (
+    <li key={id}>
+      <a href={pathFor(id)} onClick={linkClick(() => go(id))} aria-current={active === id ? 'page' : undefined} className="v15-sheet-a">
+        <Icon aria-hidden="true" />
+        <span>{ad}{ipucu && <small>{ipucu}</small>}</span>
+        <ChevronRight className="v15-chev" aria-hidden="true" />
+      </a>
+    </li>
+  );
 
   return (
     <>
       <nav aria-label="Alt gezinme" className="v15-tabs ms-hide-on-kb print:hidden">
-        {V15_SECTIONS.map((s) => {
+        {V15_SECTIONS.filter((s) => s.id !== 'kaynaklar').map((s) => {
           const Icon = s.icon;
-          const on = here?.id === s.id;
+          const on = sekme === s.id;
           return (
             <a
               key={s.id}
@@ -450,14 +469,8 @@ export const TabBarV15: React.FC<TabBarProps> = ({ active, onGo, isAdmin, onPdf,
                 if (e.metaKey || e.ctrlKey || e.shiftKey || e.button !== 0) return;
                 e.preventDefault();
                 buzz();
-                // Bölümün içindeyken yeniden dokunmak sayfa listesini açar
-                if (on && s.items.length && active !== s.hub) setSheet(s);
-                else go(s.hub);
-              }}
-              onContextMenu={(e) => {
-                if (!s.items.length) return;
-                e.preventDefault();
-                setSheet(s);
+                setMenu(false);
+                sekmeyeGit(s, active, onGo);
               }}
               aria-current={on ? 'page' : undefined}
               className="v15-tab"
@@ -470,44 +483,35 @@ export const TabBarV15: React.FC<TabBarProps> = ({ active, onGo, isAdmin, onPdf,
             </a>
           );
         })}
+        <button type="button" className="v15-tab" aria-current={sekme === 'menu' || menu ? 'page' : undefined} aria-haspopup="dialog" aria-expanded={menu}
+          onClick={() => { buzz(); setMenu((v) => !v); }}>
+          <span className="v15-tab-pill"><LayoutGrid strokeWidth={sekme === 'menu' ? 2.1 : 1.8} aria-hidden="true" /></span>
+          <span className="v15-tab-l">Menü</span>
+        </button>
       </nav>
 
-      <Sheet open={!!sheet} onClose={() => setSheet(null)} title={sheet?.label || ''}>
-        {sheet && (
-          <div className="v15-sheet">
-            <ul className="v15-sheet-list" role="list">
-              <li>
-                <a href={pathFor(sheet.hub)} onClick={linkClick(() => go(sheet.hub))} aria-current={active === sheet.hub ? 'page' : undefined} className="v15-sheet-a">
-                  <sheet.icon aria-hidden="true" />
-                  <span>{sheet.label} merkezi</span>
-                  <ChevronRight className="v15-chev" aria-hidden="true" />
-                </a>
-              </li>
-              {sheet.items.map((it) => (
-                <li key={it.id}>
-                  <a href={pathFor(it.id)} onClick={linkClick(() => go(it.id))} aria-current={active === it.id ? 'page' : undefined} className="v15-sheet-a">
-                    <it.icon aria-hidden="true" />
-                    <span>
-                      {it.label}
-                      <small>{it.hint}</small>
-                    </span>
-                    <ChevronRight className="v15-chev" aria-hidden="true" />
-                  </a>
-                </li>
-              ))}
-            </ul>
-            <div className="v15-sheet-tools" role="group" aria-label="Araçlar">
-              <button type="button" onClick={() => { setSheet(null); onPdf(); }}><FileDown aria-hidden="true" />PDF</button>
-              {onOffline && <button type="button" onClick={() => { setSheet(null); onOffline(); }}><Database aria-hidden="true" />Çevrimdışı</button>}
-              <button type="button" onClick={() => { setSheet(null); window.dispatchEvent(new Event('medsoru:pending')); }}>
-                <CloudUpload aria-hidden="true" />Kuyruk{queued > 0 ? ` · ${queued}` : ''}
-              </button>
-              <button type="button" onClick={() => { setSheet(null); toggleAppFs(); }}>{appFs ? <Minimize2 aria-hidden="true" /> : <Maximize2 aria-hidden="true" />}Tam ekran</button>
-              {isAdmin && <a href={pathFor('manage')} onClick={linkClick(() => go('manage'))}><ShieldCheck aria-hidden="true" />Yönetim</a>}
-              <a href={pathFor('settings')} onClick={linkClick(() => go('settings'))}><NAV_ITEMS.settings.icon aria-hidden="true" />Ayarlar</a>
-            </div>
+      <Sheet open={menu} onClose={() => setMenu(false)} title="Menü">
+        <div className="v15-sheet">
+          <h3 className="v15-label v15-sheet-h">Başvuru</h3>
+          <ul className="v15-sheet-list" role="list">
+            {satir(basvuru.hub, basvuru.icon, 'Başvuru merkezi', 'Sözlük, hastalıklar, kazanımlar, Sağlık Bakanlığı')}
+            {basvuru.items.map((it) => satir(it.id, it.icon, it.label, it.hint))}
+          </ul>
+          <h3 className="v15-label v15-sheet-h">Ben</h3>
+          <ul className="v15-sheet-list" role="list">
+            {kisisel.map((it) => satir(it.id, it.icon, it.label, it.hint))}
+          </ul>
+          <h3 className="v15-label v15-sheet-h">Araçlar</h3>
+          <div className="v15-sheet-tools" role="group" aria-label="Araçlar">
+            <button type="button" onClick={() => { setMenu(false); openSearch(); }}><Search aria-hidden="true" />Ara</button>
+            <button type="button" onClick={() => { setMenu(false); onPdf(); }}><FileDown aria-hidden="true" />PDF</button>
+            {onOffline && <button type="button" onClick={() => { setMenu(false); onOffline(); }}><Database aria-hidden="true" />Çevrimdışı</button>}
+            <button type="button" onClick={() => { setMenu(false); window.dispatchEvent(new Event('medsoru:pending')); }}>
+              <CloudUpload aria-hidden="true" />Kuyruk{queued > 0 ? ` · ${queued}` : ''}
+            </button>
+            <button type="button" onClick={() => { setMenu(false); toggleAppFs(); }}>{appFs ? <Minimize2 aria-hidden="true" /> : <Maximize2 aria-hidden="true" />}Tam ekran</button>
           </div>
-        )}
+        </div>
       </Sheet>
     </>
   );
