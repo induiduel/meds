@@ -1124,3 +1124,18 @@ Her maddede: belirti · kök neden · Kurul 2 kuralı · kapı durumu. Kanıtlar
 - **Kök neden:** `KurulSecici` adreste kurul yokken vurguyu `varsayilanKurul()`'dan alıyor, `BransBaslangic` ise süzgeci `useKurulParam()`'dan (adres → null = süzgeçsiz) alıyordu; vurgu ve liste iki ayrı kaynaktan besleniyordu. Kutu: `olasi-sorular.css` içindeki kapsamsız `.ks` kuralı aynı sınıf adını taşıyan kurul seçicisine kenarlık/zemin/860 px veriyordu.
 - **Çözüm:** çözücü ve En önemliler başlangıcı `useSeciliKurul()` kullanır (vurgulanan kurul = listelenen kurul), "Tümü" kaldırıldı, ad önekindeki "Kurul N" atılır, başlanmış dersler önde sıralanır. Olası sorular şeridi `.ks.kseridi` olarak kapsamlandı.
 - **Kural:** seçili durum gösteren bir bileşen ile içeriği süzen kod AYNI kaynaktan (aynı kanca) okur; görsel vurgu için ayrı varsayılan hesaplanmaz. Ortak bileşenlerin sınıf önekleri (`.ks`, `.kh`) başka sayfa CSS'inde kapsamsız kullanılmaz.
+
+## H125 · Ders içerik terimlerinde genel sözlükten bağlam dışı tanım, kopya terim, ipuçlu soru şıkkı (2026-10-28, k2-08)
+- **Belirti:** Genetik dersinde "Taşıyıcı" patojen taşıyıcısı, "Frajilite" serviks muayene bulgusu, "Kollajen" skar dokusu/C vitamini,
+  "Biyopsi" cerrahi biyopsi türleri, "Nematod" parazit listesi, "Polihidramniyoz" konjenital kızamık bağlamıyla tanımlanmıştı;
+  mikrosefali/makrosefalide kaynaksız "±3 SD" eşiği vardı. 306 terimin 33'ü kopyaydı (Drosophila ×2, Zebra balığı/Zebra fish,
+  Nörülasyon/Nörulasyon, "G380R" ile "G380R mutasyonu", Preaurikuler çukur ×3). 15 örnek soruda doğru şık ötekilerden belirgin uzundu.
+- **Kök neden:** (1) Terim tanımları dersin sayfasından değil sitenin genel sözlüğünden alındı; sözlükteki ilk anlam (başka branş)
+  dersin bağlamına bakılmadan kopyalandı. (2) İki ayrı terim geçişinin çıktısı birleştirilirken ad normalleştirmesi yapılmadı.
+  (3) Soru yazarı doğru şıkkı eksiksiz tanımla yazıp çeldiricileri kısa bıraktı; uzunluk denetimi yoktu. (4) pdftotext slayt madde
+  imini "o" harfi olarak kelimeye yapıştırıyor ("oOsteogenezis"); kelime eşlemeli her denetim bu yüzden yanlış sonuç veriyordu.
+- **Kural:** Terim tanımı dersin sayfasındaki bağlamla yazılır (genel sözlük yalnız yardımcıdır, ilk anlamı kopyalanmaz); kaynakta
+  olmayan sayı/eşik yazılmaz. Terim eklemeden önce ad + `e` eşanlamları normalleştirilip kopya aranır; slayttaki yazım farkı
+  (Gl13, FLBN, speksifikasyon) `e`'ye girer. Şekilden okunan kayıt `gorsel: true`. Doğru şık çeldiricilerle benzer uzunlukta yazılır.
+- **Kapı — EKLENDİ:** `scripts/tam_hat/kaynak_kapisi.py` (terim adı sayfada mı → HATA; tanım az örtüşüyorsa UYARI, denetçi bağlamı okur),
+  `soru_uslup.py` (≥6 kelimelik doğru şık en uzun ve 1,8× → HATA), `hazirlik.py` madde imi temizliği.

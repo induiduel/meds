@@ -156,3 +156,5 @@ kaynağa sadık, çıkmışa ve hocanın vurguladığı yere ağırlık veren de
    çeldirici/şık standartları değişmez (kural 4, SIK_ACIKLAMA_STANDARDI).
 
 9. **Örnek soru üslubu ve tıbbi kapsam (kullanıcı uyarısı 2026-10-27):** soru kökünde "dersin bölümüne göre", "slaytta belirtildiği gibi" gibi dersi çağrıştıran/öznel ifade yok; çıkmış sorulara benzer, genel kabul görmüş soru kalıpları; her soru müfredat–kazanım–konu ışığında tıbbi ve sınavda sorulabilir bilgiyi ölçer (rastgele slayt ayrıntısı yasak). Ayrıntı: `scripts/ders_isci/TALIMAT.md` §4, `scripts/spot_cozucu/TALIMAT_ONEM.md`.
+10. **Hızlı ve hatasız akış (2026-10-28):** evreler, paralellik, aşama okuma haritası, kısmi düzeltme ve ±%10 tolerans, soru
+    üslubu ve tek denetçi `docs/TAM_HAT_HIZLI_AKIS.md`'dedir; soru yazımı `docs/SORU_USLUBU.md`.

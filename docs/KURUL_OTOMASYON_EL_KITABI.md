@@ -445,6 +445,9 @@ Tasarım: `ICERIK_MOTORU_V3.md` §2, §12, §15, §16. Model yok; ortam `meds/.v
 
 ## 19. Elle ders üretimi — işçisiz (kullanıcı kararı 2026-10-27; ilk uygulama k2-01 Nörolojik Hastaya Yaklaşım)
 
+> **Sıra/paralellik/okuma/düzeltme biçimi (2026-10-28):** `docs/TAM_HAT_HIZLI_AKIS.md` — adım 1–4 E0 hazırlık betiğiyle
+> (`scripts/tam_hat/hazirlik.py`) paralel yürür; yeni kapılar `soru_uslup.py`, `kaynak_kapisi.py`, `pdf_tarama.py`.
+
 LLM otomasyonu kapalıdır (AGENTS kural 20). Yeni ders, kullanıcı hangi dosyanın hangi ders olduğunu söyleyince bu oturumda
 üretilir. Arşiv (`y25-*`) içeriği kopyalanmaz. Anahtar ve kod ders kayıt defterinden (`src/data/dersler/kN.json`).
 

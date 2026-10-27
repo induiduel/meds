@@ -620,11 +620,11 @@
      "zorluk": "orta",
      "soru": "Nöral krista hücrelerinin migrasyon veya diferansiasyon defektleri neden çok sayıda sendroma yol açar?",
      "secenekler": {
-      "A": "Yalnızca beyin ve medulla spinalisi oluşturdukları için",
-      "B": "Notokordu oluşturarak nöral plağı indükledikleri için",
-      "C": "Somit sayısını 42-44'te sabitledikleri için",
-      "D": "Yalnızca pigment hücrelerine farklılaştıkları için",
-      "E": "Kafa kemikleri, dişler, bağırsağın nöral hücreleri ve kalp gibi birçok dokuya göç ettikleri için"
+      "A": "Yalnızca beyin ve medulla spinalisin yapımına katıldıkları için",
+      "B": "Notokordu oluşturup nöral plağı indükledikleri için",
+      "C": "Somit sayısını 42-44 çifte sabitledikleri için",
+      "D": "Yalnızca deri pigment hücrelerine farklılaştıkları için",
+      "E": "Kafa kemiği, diş, bağırsak siniri ve kalp gibi pek çok dokuya göç ettikleri için"
      },
      "dogru": "E",
      "aciklama": "Nöral krista hücreleri kafa kemikleri, dişler, bağırsağın nöral hücreleri ve kalp dahil pek çok dokuya göç ettiği için defektleri birçok sendroma neden olur (sayfa 20).",
@@ -1102,7 +1102,7 @@
       "B": "Familyal diş agenezisi",
       "C": "Düz beyin yüzeyi ve kortikal laminasyon kaybı",
       "D": "Aniridi ve göz yapılarının tamamen yokluğu",
-      "E": "Holoprozensefali başta olmak üzere yüz ve beynin çeşitli derecelerde orta hat defektleri"
+      "E": "Holoprozensefali başta olmak üzere orta hat defektleri"
      },
      "dogru": "E",
      "aciklama": "SHH heterozigot mutasyonları holoprozensefali başta olmak üzere orta hat defektlerine neden olur (sayfa 25).",
@@ -1441,7 +1441,7 @@
      "secenekler": {
       "A": "Aksiyel iskeletin lateral plak mezodermden gelişmesi",
       "B": "Kosta ve vertebraların nöral kristadan oluşması",
-      "C": "Kranium, vertebra kolonu, kostalar ve sternumdan oluşan aksiyel iskeletin somitlerden köken alması",
+      "C": "Aksiyel iskeletin (kranium, vertebra, kosta, sternum) somitlerden köken alması",
       "D": "Kosta ve vertebraların yüz kabartılarından gelişmesi",
       "E": "Kosta ve vertebraların notokorddan değil nöral plaktan gelişmesi"
      },
@@ -1472,7 +1472,7 @@
      "soru": "EYA1 geninin ifadesiyle ilgili aşağıdaki ifadelerden hangisi doğrudur?",
      "secenekler": {
       "A": "Yalnızca dermatom hücrelerinde ifade edilir",
-      "B": "Birinci faringeal arkta ve ikinci, üçüncü, dördüncü faringeal kese ve yarıklardaki nöral krista hücrelerinden ifade edilir",
+      "B": "1. faringeal arkta ve 2–4. faringeal kese/yarıklardaki nöral krista hücrelerinde",
       "C": "Yalnızca somitlerdeki sklerotom hücrelerinde ifade edilir",
       "D": "Yalnızca beyin dokusunda OTX ile birlikte ifade edilir",
       "E": "Yalnızca büyüme plağında FGFR3 ile birlikte ifade edilir"
@@ -1662,7 +1662,7 @@
      "zorluk": "orta",
      "soru": "Aşağıdakilerden hangisi sekonder kraniyosinostozun nedenleri arasında YER ALMAZ?",
      "secenekler": {
-      "A": "Kraniyal sütürların genetik etkenlerle erken kapanması",
+      "A": "Sütürların genetik etkenle erken kapanması",
       "B": "Metabolik hastalıklar",
       "C": "Hematolojik hastalıklar",
       "D": "Merkezi sinir sistemi kusurları",
@@ -2199,11 +2199,11 @@
      "zorluk": "orta",
      "soru": "Pelvis, omuz kavşağı ve ekstremite kemiklerinden oluşan appendiküler iskelet hangi kökenden gelişir?",
      "secenekler": {
-      "A": "Somitlerden",
+      "A": "Somitlerin sklerotom bölümünden",
       "B": "Faringeal kese epitelinden",
       "C": "Nöral plak ektodermından",
       "D": "Notokord hücrelerinden",
-      "E": "Lateral plak mezoderme yerleşik mezenkimal hücrelerden"
+      "E": "Lateral plak mezodermdeki mezenkimal hücrelerden"
      },
      "dogru": "E",
      "aciklama": "Appendiküler iskelet lateral plak mezodermden, aksiyel iskelet somitlerden gelişir (sayfa 45).",
@@ -2230,7 +2230,7 @@
      "soru": "İskelet displazileriyle ilgili aşağıdaki ifadelerden hangisi doğrudur?",
      "secenekler": {
       "A": "Aile öyküsü tanıda belirleyicidir",
-      "B": "Önde gelen bulgu orantısız boy kısalığıdır ve genelde yeni (de novo) mutasyonlar söz konusu olduğundan aile öyküsü yol gösterici değildir",
+      "B": "Orantısız boy kısalığı öndedir; çoğu de novo olduğundan aile öyküsü yol göstermez",
       "C": "Belirtiler yalnızca erişkinlikte ortaya çıkar",
       "D": "Önde gelen bulgu orantılı boy kısalığıdır",
       "E": "Yalnızca kemikleri etkiler; yarık damak, kosta anomalisi ya da kardiyovasküler sorun eşlik etmez"
@@ -2418,7 +2418,7 @@
      "zorluk": "zor",
      "soru": "Akondroplazili bir hastada spinal kanal darlığı, hidrosefali ve obstrüktif apne saptanıyor. Aynı hastanın prognozu için aşağıdakilerden hangisi doğrudur?",
      "secenekler": {
-      "A": "Komplikasyonu olmayan olgularda yaşam süresi normaldir; komplikasyonlar her hastada gelişmez",
+      "A": "Komplikasyonsuz olguda yaşam süresi normaldir",
       "B": "Komplikasyonlar yalnızca Becker musküler distrofiyle birlikte görülür",
       "C": "Zeka geriliği kaçınılmazdır",
       "D": "Yaşam süresi her olguda belirgin kısalır",
@@ -2602,7 +2602,7 @@
      "secenekler": {
       "A": "Distrofin geninde okuma çerçevesi analizi",
       "B": "Yalnızca aile öyküsünün sorgulanması",
-      "C": "Deri biyopsi kültürlerindeki fibroblastlarda kollajenin biyokimyasal analizi (Tip I ve Tip III oranı) ve moleküler inceleme",
+      "C": "Fibroblast kültüründe tip I/III kollajen oranı ve moleküler inceleme",
       "D": "Yalnızca mavi sklera bulgusunun varlığı",
       "E": "Fibrillin 1 geninde alelik heterojenite analizi"
      },
@@ -2664,7 +2664,7 @@
      "soru": "Duchenne musküler distrofiyle ilgili gen ve mutasyon bilgisi aşağıdakilerden hangisinde doğru verilmiştir?",
      "secenekler": {
       "A": "COL1A1 geni; kollajen sentez bozukluğu DMD'ye yol açar",
-      "B": "Xp21 bölgesindeki yaklaşık 79 ekzonlu distrofin geni; gendeki delesyonlar DMD'ye yol açar",
+      "B": "Xp21'deki 79 ekzonlu distrofin geni; delesyonlar DMD'ye yol açar",
       "C": "FGFR3 geni; aktivasyon mutasyonları DMD'ye yol açar",
       "D": "FBN1 geni; allelik heterojenite DMD'ye yol açar",
       "E": "LIS1 geni; delesyonlar DMD'ye yol açar"
@@ -2701,7 +2701,7 @@
       "A": "Fibrillin 1 genindeki mutasyonla gelişir ve X'e bağlı resesif kalıtılır",
       "B": "FGFR3 genindeki aktivasyon mutasyonuyla gelişir",
       "C": "Distrofin genindeki delesyonla gelişir",
-      "D": "Kollajen tip 1'i kodlayan COL1A1 ya da COL1A2 genlerinden birindeki mutasyonla gelişir ve çoğunlukla otozomal dominant kalıtılır",
+      "D": "COL1A1 ya da COL1A2 mutasyonuyla gelişir, çoğunlukla otozomal dominanttır",
       "E": "COL2A1 genindeki mutasyonla gelişir ve her zaman letaldir"
      },
      "dogru": "D",
@@ -2734,7 +2734,7 @@
       "B": "Yalnızca kadınlarda görülür",
       "C": "Kalıtım otozomal dominanttır",
       "D": "Nedeni fibrillin 1 defektidir",
-      "E": "Başlangıç daha geç, ilerleme daha yavaş ve belirtiler daha hafiftir"
+      "E": "Daha geç başlar, daha yavaş ilerler ve daha hafif seyreder"
      },
      "dogru": "E",
      "aciklama": "Becker, kusurlu ama var olan distrofin nedeniyle Duchenne'den daha geç başlar ve daha hafif seyreder (sayfa 77).",
@@ -2829,7 +2829,7 @@
      "zorluk": "orta",
      "soru": "Duchenne musküler distrofiyle ilgili aşağıdaki ifadelerden hangisi doğrudur?",
      "secenekler": {
-      "A": "En erken patolojik değişiklikler intrauterin yirminci haftada gösterilebilir ancak hastalık erken çocukluğa dek dikkati çekmez",
+      "A": "Patolojik değişiklik intrauterin 20. haftada başlar, tablo çocuklukta belirginleşir",
       "B": "Kas gücü hızla ve homojen biçimde kaybolur, yürüme gecikmez",
       "C": "Hastaların %90'ında bulgular 15 yaşından sonra başlar",
       "D": "Aşil tendonunda gerginlik nedeniyle topuk üzerinde yürüme görülür",
@@ -2927,7 +2927,7 @@
      "soru": "Duchenne ve Becker müsküler distrofileri arasındaki klinik ayrılığın temel nedeni aşağıdakilerden hangisidir?",
      "secenekler": {
       "A": "BMD'de de novo mutasyon yoktur, DMD'nin ise tamamı de novo gelişir.",
-      "B": "Farklı mutasyonların distrofin protein sentezine etkileri: tam veya tama yakın eksiklik DMD'ye, anormal molekül ağırlıklı distrofin BMD'ye yol açar.",
+      "B": "Distrofinin DMD'de tama yakın yok, BMD'de anormal molekül ağırlıklı olması",
       "C": "DMD otozomal dominant, BMD X'e bağlı resesif aktarılır.",
       "D": "DMD'de Xp21 geni, BMD'de farklı bir kromozomdaki gen etkilenir.",
       "E": "DMD yalnızca kadınlarda, BMD yalnızca erkeklerde görülür."
@@ -3058,8 +3058,8 @@
      "soru": "Duchenne musküler distrofi tanısı alan bir kız çocukta kromozom analizi 46,XX saptanıyor ve ebeveynlerden yalnızca anne taşıyıcıdır. Kızdaki hastalığı en iyi açıklayan mekanizma aşağıdakilerden hangisidir?",
      "secenekler": {
       "A": "Turner sendromuna bağlı tek X varlığı",
-      "B": "Normal X'in rastgele inaktive olması sonucu mutant X'in etkisinin ortaya çıkması (manifesting heterozigosite)",
-      "C": "Distrofin fazlalığı",
+      "B": "Sağlam X'in rastgele inaktive olması (manifesting heterozigosite)",
+      "C": "Distrofin geninin fazla kopyayla ifade edilmesi",
       "D": "Hastalığın kızlarda otozomal dominant kalıtılması",
       "E": "Fibrillin 1 genindeki yeni mutasyon"
      },
