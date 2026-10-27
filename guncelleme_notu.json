@@ -1,9 +1,11 @@
 {
  "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
- "onem": 487,
- "baslik": "Notlarda metni renklendir",
+ "onem": 488,
+ "baslik": "Ders içerik sayfaları yeniden tasarlandı",
  "maddeler": [
-  "Notlarım: metni seç, beş renkten biriyle boya; yazdıkça renk yerinde kalır"
+  "Terimler, hastalıklar, bilgiler, tablolar, sorular ve kartlar yeni, okunaklı kart düzeninde",
+  "Tablolar artık adım şeridi, eşleşme kartı ve renkli karşılaştırma matrisi olarak görünür",
+  "Uzun maddeler başlıklı ve iç içe maddelere bölünür"
  ],
  "eklenen": [],
  "degisen": [],

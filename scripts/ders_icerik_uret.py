@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# İçerik biçimi: docs/DERS_ICERIK_BICIMI.md (yeni v15 ekranının okunaklı gösterebileceği yapıda üret).
 """Ders içerik paketi: taslak (meds_temp/ogrenci_ders/<kod>/taslak) + önem listesi → src/data/ders_icerik/<key>.json.
 Kullanım: ders_icerik_uret.py k2-05 k2-05-norolojik-muayene 2n03 k2noroloji_onem"""
 import json, sys, os
