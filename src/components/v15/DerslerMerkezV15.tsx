@@ -6,6 +6,7 @@ import { KURUL_NOLAR, kurulKaydet, useSeciliKurul } from '../kurul/KurulSecici';
 import { MERKEZ_ARACLARI } from '../merkez/merkezModel';
 import { Sheet } from '../ui/Sheet';
 import { useV15Baslik } from './baslik';
+import KurulSecV15 from './KurulSecV15';
 import { bransYolu, dersAdi, dersKurulu, dersSirala, dersYolu, kurulBranslari, merkezYolu, sureDk, useDersListesi, useIlerleme } from './dersVeri';
 import { cdBransKisa } from '../canliDers/canliDersKategori';
 import '../../styles/v15/dersler.css';
@@ -67,22 +68,7 @@ export default function DerslerMerkezV15() {
     <div className="d15">
       <h1 className="sr-only">Ders çalış</h1>
       <div className="d15-chips v15-hscroll" role="navigation" aria-label="Kurul ve branş">
-        <label className="d15-kurul">
-          <span className="sr-only">Kurul seç</span>
-          <select
-            value={kurul}
-            onChange={(e) => {
-              const k = Number(e.target.value);
-              kurulKaydet(k);
-              navigateTo(merkezYolu(k));
-            }}
-          >
-            {KURUL_NOLAR.map((k) => (
-              <option key={k} value={k}>Kurul {k}</option>
-            ))}
-          </select>
-          <ChevronDown aria-hidden />
-        </label>
+        <KurulSecV15 kurul={kurul} onSec={(k) => navigateTo(merkezYolu(k))} />
         {branslar.map((b) => (
           <a key={b.ad} className="d15-chip" href={bransYolu(kurul, b.ad)} onClick={git(bransYolu(kurul, b.ad))}>
             {b.kisa}

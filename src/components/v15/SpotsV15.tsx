@@ -165,7 +165,7 @@ export default function SpotsV15() {
 
       <div className="sp15-alan" ref={alan}>
         {!veri ? (
-          hata ? <p className="b15-bos v15-card">Spotlar yüklenemedi.</p> : <span className="v15-skel b15-skel" aria-hidden />
+          hata ? <p className="b15-bos v15-card is-hata"><b>Spotlar yüklenemedi</b><span>Bağlantını denetleyip yeniden dene.</span><button type="button" className="v15-btn is-soft" onClick={() => location.reload()}>Yeniden dene</button></p> : <span className="v15-skel b15-skel" aria-hidden />
         ) : liste.length ? (
           <ul className="sp15-izgara" role="list">
             {liste.slice(0, limit).map((s) => {

@@ -9,6 +9,7 @@ import { getProgress } from '../../services/studyStore';
 import { useReviewCounts } from '../../hooks/useReviewCounts';
 import { OPEN_REVIEW_FLAG } from '../../services/learnReview';
 import { useV15Baslik } from './baslik';
+import KurulSecV15 from './KurulSecV15';
 import '../../styles/v15/dersler.css';
 
 /**
@@ -122,13 +123,7 @@ export default function SorularMerkezV15() {
       <section aria-labelledby="s15-arac-h">
         <div className="d15-sec-h">
           <h2 id="s15-arac-h" className="v15-h2">Araçlar</h2>
-          <label className="d15-kurul s15-kurul">
-            <span className="sr-only">Kurul seç</span>
-            <select value={kurul} onChange={(e) => { const k = Number(e.target.value); kurulKaydet(k); navigateTo(`/sorular/kurul${k}`); }}>
-              {KURUL_NOLAR.map((k) => <option key={k} value={k}>Kurul {k}</option>)}
-            </select>
-            <ChevronDown aria-hidden />
-          </label>
+          <KurulSecV15 className="s15-kurul" kurul={kurul} onSec={(k) => navigateTo(`/sorular/kurul${k}`)} />
         </div>
         <ul className="s15-liste v15-card" role="list">
           {araclar.map((a) => {

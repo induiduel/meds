@@ -1,0 +1,20 @@
+/* v15 · Kurul seçici (KurulSecV15, tasarım A04/L05); renkler palet tokenından */
+.ks15 { position: relative; flex: none; }
+.ks15-dug { display: inline-flex; align-items: center; gap: 6px; height: 36px; padding: 0 12px 0 14px; border: 0; border-radius: var(--v15-r-pill, 999px); background: var(--color-ink); color: var(--color-white); font: inherit; font-size: .9rem; font-weight: 600; cursor: pointer; }
+.ks15-dug svg { width: 15px; height: 15px; }
+.ks15-menu { position: fixed; z-index: 90; margin-top: 6px; width: min(300px, calc(100vw - 32px)); padding: 6px; border-radius: 16px; background: var(--color-white); border: 1px solid var(--color-line-soft, var(--color-line)); box-shadow: 0 16px 40px -14px rgba(0, 0, 0, .35); display: flex; flex-direction: column; }
+.ks15-menu button { display: flex; align-items: center; gap: 10px; width: 100%; padding: 9px 10px; border: 0; border-radius: 10px; background: none; color: var(--color-ink); font: inherit; text-align: left; cursor: pointer; }
+.ks15-menu button:hover, .ks15-menu button.is-on { background: var(--color-field); }
+.ks15-nokta { flex: none; width: 9px; height: 9px; border-radius: 50%; background: var(--color-line); }
+.ks15-nokta.is-ok { background: var(--color-ok); }
+.ks15-nokta.is-a { background: var(--color-accent); }
+.ks15-t { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 1px; }
+.ks15-t b { font-size: .92rem; }
+.ks15-t small { font-size: .76rem; color: var(--color-ink-3); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.ks15-d { flex: none; font-size: .76rem; color: var(--color-ink-3); }
+.ks15-d.is-ok { color: var(--color-ok); font-weight: 600; }
+.ks15-d.is-a { color: var(--color-accent); font-weight: 600; }
+.ks15-ok { flex: none; width: 15px; height: 15px; color: var(--color-accent); }
+.ks15-menu hr { margin: 4px 6px; border: 0; border-top: 1px solid var(--color-line-soft, var(--color-line)); }
+.ks15-takvim { color: var(--color-accent) !important; font-weight: 600; }
+.ks15-takvim svg { width: 16px; height: 16px; }

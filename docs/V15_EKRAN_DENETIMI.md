@@ -32,14 +32,14 @@ Not: YOK sayısının 6'sı tasarım belgesi ekranıdır (A09, K08, P01, W03, X0
 
 | Kod | Ad | Site karşılığı | Durum | Not |
 |---|---|---|---|---|
-| A01 | giris | AuthV12 (v15 dalı), styles/v15/giris.css | KISMİ | Tasarım tek form (e-posta+şifre, Google, "Sınıf koduyla kayıt ol"); sitede Giriş/Kayıt sekmesi, sınıf kodu girişi yok |
-| A02 | ana (Bugün) | today → today/TodayView.tsx (v15 dalı), today.css | KISMİ | Plan+akış+hızlı satır var; alt şeritte Hücre ve Kronometre yok (Seri/Bugün/Bu hafta), hızlı satırda "Oyna" yerine "Tekrar", kurul hâkimiyeti halkası yok |
-| A03 | menu | ShellV15 › TabBarV15 Menü | KISMİ | Tasarımda dört iş + Oyunlar bölüm satırları (alt açıklamalı); sitede Başvuru · Ben · Araçlar gruplaması, Oyunlar ayrı bölüm değil |
-| A04 | kurul | Merkezlerdeki "Kurul seç" (DerslerMerkezV15 vb.) | KISMİ | Tasarım: Kurul 1–6 listesi Bitti/Aktif/Kapalı + "Takvimi aç"; sitede açılır seçici, durum etiketleri DOĞRULANMADI |
+| A01 | giris | AuthV12 (v15 dalı), styles/v15/giris.css | KURULDU | Hesabına gir tek ekran (I05) |
+| A02 | ana (Bugün) | today → today/TodayView.tsx (v15 dalı), today.css | KURULDU | Seri·Hücre·Kronometre şeridi, Oyna |
+| A03 | menu | ShellV15 › TabBarV15 Menü | KURULDU | Oyunlar bölümü + bölüm açıklamaları |
+| A04 | kurul | Merkezlerdeki "Kurul seç" (DerslerMerkezV15 vb.) | KURULDU | KurulSecV15: Bitti/Aktif/tarih + Takvimi aç (4 merkez) |
 | A05 | arama | search → SearchView (⌘K) | DOĞRULANMADI | Tasarımdaki tür çipleri ve "Sesli derste geçen yerler" (zaman damgalı) bölümü bulunamadı |
 | A06 | bildirim | — | YOK | Sekmeli bildirim merkezi (Tümü/Ders/Soru/Sistem, düello daveti) sitede yok; ShellV15'te yalnız "Bildirimler" girişi |
 | A07 | guncelle | UpdatePrompt + shell.css hap bildirim | VAR |  |
-| A08 | durumlar | v15-skel, sayfa içi boş/hata metinleri | KISMİ | Ortak boş/çevrimdışı/hata durum kartı (simge+başlık+eylem) yok; her sayfa kendi düz metnini yazıyor |
+| A08 | durumlar | v15-skel, sayfa içi boş/hata metinleri | KURULDU | .b15-bos ortak durum kartı (simge + metin, hata + Yeniden dene) |
 | A09 | bilesenler | — (tasarım belgesi) | YOK | Kod karşılığı gerekmez; ortak sınıflar V15_PLAN tablosunda |
 
 ## B · Ders çalış
@@ -49,14 +49,14 @@ Not: YOK sayısının 6'sı tasarım belgesi ekranıdır (A09, K08, P01, W03, X0
 | B01 | dersler | hub_dersler → v15/DerslerMerkezV15.tsx | VAR | Onaylı; 4 araç kartı + Devam et + Diğer araçlar çekmecesi |
 | B02 | brans | canli_ders (kurul/branş) → v15/BransV15.tsx | VAR | Seçici Dersler/Önem/Çıkmışlar; satırdaki "hoca · dk" DOĞRULANMADI |
 | B03 | ders | ders_detay → v15/DersDetayV15.tsx | VAR |  |
-| B04 | sesliListe | canli_ders (kurul) → v15/SesliListeV15.tsx | KISMİ | Çipler Tümü/Yarım kalan/Bitti; tasarımdaki "Yeni" ve "İndirilen" süzgeçleri ve sıralama düğmesi yok |
+| B04 | sesliListe | canli_ders (kurul) → v15/SesliListeV15.tsx | KURULDU | Yeni/İndirilen + sıralama |
 | B05 | ogrenListe | learn → v15/OgrenKutuphaneV15.tsx | VAR |  |
 | B06 | ogrenSlayt | learn › LessonPlayer + styles/v15/ogren.css | VAR | Onaylı; yapı eski oynatıcı, v15 yalnız CSS katmanı |
 | B07 | ogrenEtk | LessonPlayer etkileşimleri + ogren.css | VAR | Onaylı (CSS katmanı) |
-| B08 | spotlar | spots → v15/SpotsV15.tsx | KISMİ | "n kez çıktı" sayısı, "Yıldızlı" süzgeci ve kartta sesli ders zaman bağlantısı (04:18) yok |
+| B08 | spotlar | spots → v15/SpotsV15.tsx | KURULDU | Yıldızlı + Derste dinle (çıkmış sayısı verisi yok) |
 | B09 | onem | en_onemliler → OnemListesi + onem.css | KISMİ | Yalnız CSS katmanı; tablo yapısı (Madde/Kaynak/Önem) ve "Sesli" düğmesi DOĞRULANMADI |
 | B10 | sozluk | glossary → GlossaryV12 + sozluk.css | KISMİ | Liste + bilgi kartı var; kartta "Derste dinle" ve "n soru" bağlantıları DOĞRULANMADI |
-| B11 | notlar | notlarim → v15/NotlarimV15.tsx | KISMİ | Tümü/Yıldızlı/Ses damgalı süzgeci, ders·zaman·sayfa damgası yok |
+| B11 | notlar | notlarim → v15/NotlarimV15.tsx | KURULDU | Yıldızlı/Ses damgalı + damga |
 | B12 | bitirdiklerim | bitirdiklerim → BitirdiklerimView + bitir.css | KISMİ | Tasarımdaki 4'lü stat (Ders/Soru/Doğru/Süre) DOĞRULANMADI; tanıtım kaldırıldı, yapı eski |
 | B13 | b2ozet | summaries → v15/OzetlerV15.tsx | VAR |  |
 | B14 | b2ozetOku | summaries okuyucu (LectureSummariesView) | KISMİ | Okuyucu v15'e geçirilmedi (plan: "okuyucu aynı") |
@@ -80,8 +80,8 @@ Not: YOK sayısının 6'sı tasarım belgesi ekranıdır (A09, K08, P01, W03, X0
 | S05 | sdE (odak modu) | ShellV15 odakEkrani + Tam ekran | KISMİ | Kabuk gizleniyor; "yalnız metin + üç düğme, dokununca denetimler" kipi yok |
 | S06 | sdF (sesli kitap kipi) | — | YOK | Kapak + dalga + uyku zamanlayıcı kipi yok |
 | S07 | sdG (üç bölmeli masa) | — | YOK | PC'de bölümler + PDF + metin üç bölme yok; "Vurgularım" yok |
-| S08 | sdH (okuma ayarları) | CdV15Gorunum › Yazı boyutu | KISMİ | Yalnız yazı boyutu; satır aralığı, yazı tipi (serif/sans/disleksi), zemin rengi, "etkin cümleyi ortala" yok |
-| S09 | sdI (bölümler ve işaretler) | CanliDersDers bölüm/aşama listesi | KISMİ | Bölümler var; Vurgular ve Notlar sekmeleri yok |
+| S08 | sdH (okuma ayarları) | CdV15Gorunum › Yazı boyutu | KURULDU | okuma ayarları (satır, yazı tipi, zemin, ortala) |
+| S09 | sdI (bölümler ve işaretler) | CanliDersDers bölüm/aşama listesi | KURULDU | Bölümler + Yıldızlılarım |
 | S10 | sdJ (seçim araç çubuğu) | — | YOK | Cümle seçince Spot yap/Not/Kart/Açıkla/Soru üret çubuğu yok |
 | S11 | sdK (mini oynatıcı + çevrimdışı) | CanliDersDock + CanliDersCevrimdisi | KISMİ | Mini oynatıcı ve çevrimdışı var; v15 biçimi DOĞRULANMADI |
 | S12 | sdL (ders içi ara soru) | CdCikmisChip (çıkmış soru) | KISMİ | Çıkmış chip'iyle soru var; "bölüm sonunda ses durur, tek soru" akışı yok |
@@ -92,15 +92,15 @@ Not: YOK sayısının 6'sı tasarım belgesi ekranıdır (A09, K08, P01, W03, X0
 | S17 | sdQ (bağlantı koptu) | — | DOĞRULANMADI | Arabellek uyarısı/"Tekrar dene"/indir kartı bulunamadı |
 | S18 | sdR (bölüm sonu) | — | YOK | "Bölüm bitti · 3 soruyla pekiştir · Devam (5 sn)" kutusu ve "bölüm sonlarında dur" ayarı yok |
 | S19 | sdS (ana ekran v2) | CdV15Bas + PDF şeridi | VAR |  |
-| S20 | sdT (terim bilgi kartı) | CdTerimKatman | KISMİ | Terim/kısaltma kartı ve "Karıştırılan" var; "Sözlükte aç" ve "Karta ekle" düğmeleri yok |
-| S21 | sdU0 (çıkmış belirdi) | CdCikmisChip | KISMİ | Çip var; oynatıcı şeridi ("Bu slayttaki bilgi n kez soruldu · Çöz") yok (plan: yapılmadı) |
+| S20 | sdT (terim bilgi kartı) | CdTerimKatman | KURULDU | Sözlükte aç + Karta ekle |
+| S21 | sdU0 (çıkmış belirdi) | CdCikmisChip | KURULDU | oynatıcı çıkmış şeridi |
 | S22 | sdU (kompakt çıkmış kartı) | CikmisKart (v15) | VAR |  |
 | S23 | sdV (çıkmış cevaplandı) | CikmisKart | VAR | "PDF'te göster" ve "2. soru hazır" DOĞRULANMADI |
 | S24 | sdW (Görünüm › PDF katmanları) | CdV15Gorunum | VAR |  |
 | S25 | sdW2 (Görünüm › Düzen) | CdV15Gorunum (Bölme yönü, Oran, Bölmelerin yeri, Tam ekran) | VAR |  |
-| S26 | sdX (ders seçenekleri) | CdV15Menu (gruplar CanliDersDers'ten) | KISMİ | "Bu dersi bitirdim", "Yıldızlı paragraflar", "Listeme ekle", "Metni aktar" kodda bulunamadı; Video/Motivasyon var |
+| S26 | sdX (ders seçenekleri) | CdV15Menu (gruplar CanliDersDers'ten) | KURULDU | menü gruplu kutucuklar |
 | S27 | sdY (kalem araç kutusu) | CdV15KalemDugme/KalemKutusu | VAR |  |
-| S28 | sdOy (oynatıcı seçenekleri) | eski açılır menü (Hız, Kaç kez) | KISMİ | Plan: "⋯ sheet'inin v15 biçimi yapılmadı"; eski menü duruyor |
+| S28 | sdOy (oynatıcı seçenekleri) | eski açılır menü (Hız, Kaç kez) | KURULDU | oynatıcı ⋯ sheet v15 |
 | S29 | sdZ (çizim panelleri) | canlı çizim katmanı | KISMİ | 8 panelden "değer kartı" türü yalnız tasarımda (plan) |
 | S30 | sdZ2 (PDF üstü işaretler) | canlı çizim (kontur, ok, lazer) | VAR | DOĞRULANMADI: tüm işaret türleri tek tek sınanmadı |
 
@@ -108,13 +108,13 @@ Not: YOK sayısının 6'sı tasarım belgesi ekranıdır (A09, K08, P01, W03, X0
 
 | Kod | Ad | Site karşılığı | Durum | Not |
 |---|---|---|---|---|
-| C01 | soruMerkez | hub_sorular → v15/SorularMerkezV15.tsx | KISMİ | Test oluştur, Tekrar zamanı, Yıla göre var; "Karma test başlat" kartı ve kip seçici (Öğrenme/Sınav/Sesli çözücü) yok, soru sayısı seçenekleri farklı |
+| C01 | soruMerkez | hub_sorular → v15/SorularMerkezV15.tsx | KURULDU | Karma test + kip seçici |
 | C02 | soru | practice → v15/PracticeV15.tsx | VAR |  |
 | C03 | soruDogru | PracticeV15 | KISMİ | "Derste 04:18" bağlantısı, "Takip sorusu", "+puan · seri" satırı yok |
-| C04 | soruYanlis | PracticeV15 (yanlış çekmecesi) | KISMİ | "Birlikte toparlayalım" + her şık açıklaması var; "48 saat sonra yeniden soracağım" ve önerilen sesli ders bölümü yok |
+| C04 | soruYanlis | PracticeV15 (yanlış çekmecesi) | KURULDU | 48 saat + Yanlışlarım |
 | C05 | yardim | PracticeV15 Yardım al | KISMİ | Şık açıklamaları var; "Neden yanlış yaptın?" ve takip sorusu alanı yok |
 | C06 | cozucu | soru_cozucu → SoruCozucuSayfa + cozucu.css | KISMİ | Başlangıç v15; çözücü ekranı yalnız CSS katmanı |
-| C07 | cikmis | past_exams → CikmisV12 + cikmis.css | KISMİ | Yıla/Konuya/Hocaya göre seçici ve yıl kartı (soru sayısı + ilerleme) DOĞRULANMADI; yalnız CSS katmanı |
+| C07 | cikmis | past_exams → CikmisV12 + cikmis.css | KURULDU | Yıla/Konuya göre kartlar |
 | C08 | sonuc | PracticeV15 Test sonucu | VAR | Halka + stat var; konu dağılımı çubukları DOĞRULANMADI |
 | C09 | hatalar (Yanlışlarım) | Hata defteri (Öğren kitaplığı bağlantısı) | DOĞRULANMADI | Tekrar zamanı/Bekleyen/Öğrenildi sekmeli v15 ekranı bulunamadı |
 | C10 | soruEkle | quick_add → PoolV12 + havuz.css | KISMİ | Yalnız CSS katmanı; 4 adımlı çekmece eski |
@@ -191,16 +191,16 @@ Not: YOK sayısının 6'sı tasarım belgesi ekranıdır (A09, K08, P01, W03, X0
 | Kod | Ad | Site karşılığı | Durum | Not |
 |---|---|---|---|---|
 | I01 | splash | — | DOĞRULANMADI |  |
-| I02 | intro1 | OnboardingV12 (v15 ilerleme çubuğu) | KISMİ | "Hoş geldin / İleri / Bitir" adımları; tasarımdaki üç tanıtım ekranının içeriği DOĞRULANMADI |
-| I03 | intro2 | OnboardingV12 | KISMİ | aynı |
-| I04 | intro3 | OnboardingV12 | KISMİ | aynı |
-| I05 | girisSecenek | AuthV12 Giriş/Kayıt sekmesi | KISMİ | Seçenek ekranı ayrı değil, sekme |
+| I02 | intro1 | OnboardingV12 (v15 ilerleme çubuğu) | KURULDU | tam sayfa tanıtım |
+| I03 | intro2 | OnboardingV12 | KURULDU | tam sayfa tanıtım |
+| I04 | intro3 | OnboardingV12 | KURULDU | tam sayfa tanıtım |
+| I05 | girisSecenek | AuthV12 Giriş/Kayıt sekmesi | KURULDU | Hesabına gir |
 | I06 | otp | — | YOK | E-posta/şifre; tek kullanımlık kod ekranı yok |
 | I07 | kayitUni | OnboardingV12? | DOĞRULANMADI |  |
 | I08 | kayitSinif | OnboardingV12? | DOĞRULANMADI |  |
 | I09 | kayitKurul | OnboardingV12? | DOĞRULANMADI |  |
 | I10 | kayitHedef | OnboardingV12? | DOĞRULANMADI |  |
-| I11 | kayitBitti | OnboardingV12 Bitir | KISMİ |  |
+| I11 | kayitBitti | OnboardingV12 Bitir | KURULDU | Hücren doğdu (ProfilKurulumV15) |
 
 ## J · Grafik ve şemalar
 
@@ -234,7 +234,7 @@ Not: YOK sayısının 6'sı tasarım belgesi ekranıdır (A09, K08, P01, W03, X0
 | L02 | sohbet | ToplulukV15 kanal | VAR |  |
 | L03 | yorumlar | ToplulukV15 ders yorumları | KISMİ | Soru yorumları, beğeni, "En faydalı/En yeni" sıralaması yok |
 | L04 | soruListe | quick_add/PoolView | DOĞRULANMADI | Süzgeç çipli soru listesi v15'te bulunamadı |
-| L05 | kurulListe | "Kurul seç" | KISMİ | Tema adları + durum etiketli kurul listesi yok |
+| L05 | kurulListe | "Kurul seç" | KURULDU | KurulSecV15 tema adları + durum |
 | L06 | seneSec | SesliListeV15 "2025-26 arşivi" | KISMİ | Yıl/dönem seçici yok; yalnız arşiv düğmesi |
 
 ## M · Hücrem
@@ -248,7 +248,7 @@ Not: YOK sayısının 6'sı tasarım belgesi ekranıdır (A09, K08, P01, W03, X0
 | M05 | hucreStres | HucremV15 "Hücren aç kalıyor" | KISMİ | Stres durumu metni var; ayrı ekran DOĞRULANMADI |
 | M06 | seviyeAtla | — | DOĞRULANMADI |  |
 | M07 | siralama | leaderboard + Hucrem "Hücre sırası" | KISMİ | v15 dalı yok (leaderboard) |
-| M08 | profil2 | ProfileV12 v15 | KISMİ | Hücre/hesap kartı DOĞRULANMADI |
+| M08 | profil2 | ProfileV12 v15 | KURULDU | profil kartında okul/sınıf/kurul |
 | M09 | profilDuzenle | — | DOĞRULANMADI |  |
 | M10 | basarim2 | basarimlar | KISMİ | Yalnız başlık |
 | M11 | rozetDetay | — | DOĞRULANMADI |  |
@@ -283,8 +283,8 @@ Not: YOK sayısının 6'sı tasarım belgesi ekranıdır (A09, K08, P01, W03, X0
 | O05 | pdfIzgara | — | DOĞRULANMADI |  |
 | O06 | pdfArama | — | DOĞRULANMADI |  |
 | O07 | pdfIkili | — | DOĞRULANMADI |  |
-| O08 | tamEkranOgren | ShellV15 Tam ekran | KISMİ |  |
-| O09 | tamEkranSoru | ShellV15 Tam ekran | KISMİ |  |
+| O08 | tamEkranOgren | ShellV15 Tam ekran | KURULDU | tam ekran + tam-katman |
+| O09 | tamEkranSoru | ShellV15 Tam ekran | KURULDU | tam ekran + tam-katman |
 | O10 | tamEkranAyar | — | DOĞRULANMADI |  |
 
 ## P · İkonlar
@@ -302,10 +302,10 @@ Not: YOK sayısının 6'sı tasarım belgesi ekranıdır (A09, K08, P01, W03, X0
 | T03 | kronoSesli | — | YOK | Sesli derste gizli (bilinçli tasarım dışı seçim) |
 | T04 | kronoVideo | — | YOK |  |
 | T05 | kronoBirlesme | — | YOK | Ses oynatıcıyla birleşme yapılmadı (plan) |
-| T06 | kronoDurum | KronometreV15 | KISMİ |  |
+| T06 | kronoDurum | KronometreV15 | KURULDU | zar baloncuğu durumları |
 | T07 | kronoAyar | — | YOK |  |
-| T08 | kronoGecmis | KronometreV15 (localStorage 50 oturum) | KISMİ | Profil › Kronometre geçmişi ekranı yok |
-| T09 | kronoPc | KronometreV15 | KISMİ | DOĞRULANMADI: PC biçimi |
+| T08 | kronoGecmis | KronometreV15 (localStorage 50 oturum) | KURULDU | Kronometre geçmişi ekranı |
+| T09 | kronoPc | KronometreV15 | KURULDU | PC: aynı baloncuk, sürüklenebilir |
 | T10 | kronoFormlar | — | YOK | Tek biçim |
 | T11 | kronoF1 | — | YOK |  |
 | T12 | kronoF2 | — | YOK |  |
@@ -317,17 +317,17 @@ Not: YOK sayısının 6'sı tasarım belgesi ekranıdır (A09, K08, P01, W03, X0
 
 | Kod | Ad | Site karşılığı | Durum | Not |
 |---|---|---|---|---|
-| U01 | kapDers | v15/KapsulV15.tsx | KISMİ | Tek genel panel; sayfaya göre (ders) bağlam yok |
-| U02 | kapOgren | KapsulV15 | KISMİ | aynı |
-| U03 | kapSpot | KapsulV15 | KISMİ | aynı |
-| U04 | kapSozluk | KapsulV15 | KISMİ | aynı |
-| U05 | kapNotlar | KapsulV15 | KISMİ | aynı |
-| U06 | kapOnem | KapsulV15 | KISMİ | aynı |
-| U07 | kapPdf | KapsulV15 | KISMİ | aynı |
+| U01 | kapDers | v15/KapsulV15.tsx | KURULDU | kronometre + oynatıcı kaynaşması |
+| U02 | kapOgren | KapsulV15 | KURULDU | aynı |
+| U03 | kapSpot | KapsulV15 | KURULDU | aynı |
+| U04 | kapSozluk | KapsulV15 | KURULDU | aynı |
+| U05 | kapNotlar | KapsulV15 | KURULDU | aynı |
+| U06 | kapOnem | KapsulV15 | KURULDU | aynı |
+| U07 | kapPdf | KapsulV15 | KURULDU | aynı |
 | U08 | kapZihin | — | BİLİNÇLİ YOK | Zihin haritası reddedildi |
-| U09 | kapSoru | KapsulV15 | KISMİ | aynı |
+| U09 | kapSoru | KapsulV15 | KURULDU | aynı |
 | U10 | kapAcik | KapsulV15 | VAR |  |
-| U11 | kapYanMenu | SideNavV15 Odak girişi | KISMİ |  |
+| U11 | kapYanMenu | SideNavV15 Odak girişi | KURULDU | Menü › Odak/Kronometre |
 | U12 | kapYanMenuSesli | — | YOK | Sesli derste yan menü kapsülü yok |
 
 ## V · Tema, motif, şema

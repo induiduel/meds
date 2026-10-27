@@ -1,10 +1,10 @@
 {
  "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
- "onem": 465,
- "baslik": "KMB: etiket yerleştirme ve değerlendirme",
+ "onem": 466,
+ "baslik": "Yeni kurul seçici ve boş durum kartları",
  "maddeler": [
-  "KMB Sınav: Etiketleri yerleştir, yapıyı seç ve sahnede yerine dokun",
-  "Değerlendirme: her adımı Yaptım/Atladım diye işaretle, sonucu gör"
+  "Kurul seçici: her kurulun teması ve durumu (Bitti, Aktif, başlangıç tarihi), Takvimi aç",
+  "Boş ve hata durumları simgeli kartla; hatada Yeniden dene"
  ],
  "eklenen": [],
  "degisen": [],

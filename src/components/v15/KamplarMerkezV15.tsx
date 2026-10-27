@@ -6,6 +6,7 @@ import { KURUL_NOLAR, kurulIcerikVar, kurulKaydet, varsayilanKurul } from '../ku
 import { CHECKUPLAR, MERKEZ_ARACLARI, PDF_NOTLAR } from '../merkez/merkezModel';
 import { KAMP_SEKMELER, SEKME_ROUTE, aracYolu, kampOku, type KampSekme } from '../merkez/MerkezView';
 import { useV15Baslik } from './baslik';
+import KurulSecV15 from './KurulSecV15';
 import '../../styles/v15/dersler.css';
 
 /**
@@ -40,13 +41,7 @@ export default function KamplarMerkezV15() {
             id === sekme ? <span key={id} aria-current="page">{ad}</span> : <a key={id} href={yol(kurul, id)} onClick={git(yol(kurul, id))}>{ad}</a>,
           )}
         </nav>
-        <label className="d15-kurul s15-kurul">
-          <span className="sr-only">Kurul seç</span>
-          <select value={kurul} onChange={(e) => { const k = Number(e.target.value); kurulKaydet(k); navigateTo(yol(k, sekme)); }}>
-            {KURUL_NOLAR.map((k) => <option key={k} value={k}>Kurul {k}</option>)}
-          </select>
-          <ChevronDown aria-hidden />
-        </label>
+        <KurulSecV15 className="s15-kurul" kurul={kurul} onSec={(k) => navigateTo(yol(k, sekme))} />
       </div>
 
       <div className="k15-alan">

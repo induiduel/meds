@@ -252,3 +252,9 @@ a.k15-kart:hover { border-color: var(--color-accent); }
 :root[data-v15='on'] .sl15-sira { position: relative; flex: none; }
 :root[data-v15='on'] .sl15-sira select { position: absolute; inset: 0; opacity: 0; cursor: pointer; font-size: 16px; }
 :root[data-v15='on'] .sl15-indi { width: 13px; height: 13px; margin-left: 6px; vertical-align: -1px; color: var(--color-ok); }
+
+/* A08 ortak durum kartı (tasarım H durumlar): ortalı simge karosu + metin; .is-hata kırmızı, .is-cevrimdisi sarı */
+:root[data-v15='on'] .b15-bos { display: flex; flex-direction: column; align-items: center; gap: 10px; text-align: center; padding: 26px 20px; line-height: 1.5; }
+:root[data-v15='on'] .b15-bos::before { content: ""; flex: none; width: 44px; height: 44px; border-radius: var(--v15-r-md, 12px); background: var(--color-accent-soft) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23888' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M22 12h-6l-2 3h-4l-2-3H2'/%3E%3Cpath d='M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z'/%3E%3C/svg%3E") no-repeat center / 22px; }
+:root[data-v15='on'] .b15-bos.is-hata::before { background: var(--color-bad-soft) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23d33' stroke-width='2' stroke-linecap='round'%3E%3Cpath d='M18 6 6 18M6 6l12 12'/%3E%3C/svg%3E") no-repeat center / 20px; }
+:root[data-v15='on'] .b15-bos .v15-btn { margin-top: 2px; }

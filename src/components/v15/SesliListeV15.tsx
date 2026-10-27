@@ -5,6 +5,7 @@ import { linkClick, navigateTo, pathFor } from '../../router';
 import { icKonum } from '../../siteHaritasi';
 import { KURUL_NOLAR, kurulKaydet, useSeciliKurul } from '../kurul/KurulSecici';
 import { useV15Baslik } from './baslik';
+import KurulSecV15 from './KurulSecV15';
 import { bransYolu, dersAdi, dersSirala, dersYolu, hocaYaz, kurulBranslari, sureDk, useDersListesi, useIlerleme } from './dersVeri';
 import { Halka } from './Halka';
 import '../../styles/v15/dersler.css';
@@ -82,13 +83,7 @@ export default function SesliListeV15() {
           </label>
         ) : (
           <div className="o15-cipler v15-hscroll" role="toolbar" aria-label="Süzgeç">
-            <label className="d15-kurul">
-              <span className="sr-only">Kurul seç</span>
-              <select value={kurul} onChange={(e) => { const k = Number(e.target.value); kurulKaydet(k); navigateTo(`/dersler/canliders/kurul${k}${arsiv ? '?donem=2025-2026' : ''}`); }}>
-                {KURUL_NOLAR.map((k) => <option key={k} value={k}>Kurul {k}</option>)}
-              </select>
-              <ChevronDown aria-hidden />
-            </label>
+            <KurulSecV15 kurul={kurul} onSec={(k) => navigateTo(`/dersler/canliders/kurul${k}${arsiv ? '?donem=2025-2026' : ''}`)} />
             <button type="button" className={`o15-cip sl15-arsiv${arsiv ? ' is-on' : ''}`} aria-pressed={arsiv} onClick={() => setArsiv(!arsiv)}
               title="Geçen yılın (2025-2026) sesli dersleri"><Archive aria-hidden />2025-26 arşivi</button>
             {DURUM.map(([id, t]) => (
@@ -143,7 +138,7 @@ export default function SesliListeV15() {
             </section>
           ))
         ) : (
-          <p className="b15-bos v15-card">{hata ? `Ders listesi alınamadı: ${hata}` : q || durum !== 'tum' ? 'Bu süzgeçte ders yok.' : arsiv ? `2025-2026 arşivinde Kurul ${kurul} dersi yok.` : `Kurul ${kurul} için sesli ders henüz yok.`}</p>
+          <p className={`b15-bos v15-card${hata ? ' is-hata' : ''}`}>{hata ? <><b>Ders listesi alınamadı</b><span>{hata}</span><button type="button" className="v15-btn is-soft" onClick={() => location.reload()}>Yeniden dene</button></> : q || durum !== 'tum' ? 'Bu süzgeçte ders yok.' : arsiv ? `2025-2026 arşivinde Kurul ${kurul} dersi yok.` : `Kurul ${kurul} için sesli ders henüz yok.`}</p>
         )}
       </div>
     </div>
