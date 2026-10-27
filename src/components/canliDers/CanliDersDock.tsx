@@ -150,7 +150,6 @@ export default function CanliDersDock({ activeTab, dersKey }: { activeTab: strin
   return (
     <div ref={ref} className={`cd-root cd-dock ${tam ? (kucuk ? 'is-tam is-kucuk' : 'is-tam') : 'is-mini'}`} style={{ bottom: alt }} role="region" aria-label="Sesli ders oynatıcısı">
       <BaglantiKoptu />
-      <DersSonuCozucu />
       {!tam ? <MiniOynatici /> : kucuk ? <KucukOynatici onAc={() => setKucuk(false)} /> : <TamOynatici onKucult={() => setKucuk(true)} />}
       {tvIz && <div key={tvIz.n} className="cd-tv-iz" role="status">{tvIz.m}</div>}
     </div>
@@ -520,35 +519,6 @@ function BolumSonu() {
           <button type="button" className="ui-btn" onClick={() => { if (baslar[biten] != null) cdAtla(baslar[biten]); cdToggle(); kapat(); }}>Tekrar dinle</button>
           {deste && <button type="button" className="ui-btn" onClick={() => { kapat(); navigateTo(`/dersler/interaktif/${encodeURIComponent(deste)}`); }}>Pekiştir</button>}
           <button type="button" className="ui-btn is-primary" onClick={() => { cdToggle(); kapat(); }}>Devam et</button>
-        </div>
-      </div>
-    </div>
-  );
-}
-
-/** Ders sonuna kadar dinlenince: sesli soru çözücüyü öner (ders bittikten sonra erişim) */
-function DersSonuCozucu() {
-  const baslik = useCd((s) => s.detay?.baslik);
-  const deste = useCd((s) => (s.detay as { desteId?: string } | null)?.desteId);
-  const [ac, setAc] = useState(false);
-  useEffect(() => {
-    const f = () => setAc(true);
-    window.addEventListener('cd:bitti', f);
-    return () => window.removeEventListener('cd:bitti', f);
-  }, []);
-  const coz = dersCozucu(baslik);
-  if (!ac || !coz) return null;
-  const kapat = () => setAc(false);
-  return (
-    <div className="cf-root" onMouseDown={(e) => e.target === e.currentTarget && kapat()}>
-      <div role="alertdialog" aria-modal="true" aria-labelledby="cd15-ds-t" className="cf cd15-bs">
-        <span className="cf-ic"><ListOrdered aria-hidden /></span>
-        <h2 id="cd15-ds-t" className="cf-t">Ders bitti</h2>
-        <p className="cf-m"><b>{baslik}</b><br />Öğrendiklerini sesli soru çözücüyle pekiştir: her şık kaynağıyla açıklanır{coz.soru ? ` (${coz.soru} soru)` : ''}.</p>
-        <div className="cf-acts cd15-bs-acts">
-          <button type="button" className="ui-btn" onClick={kapat}>Şimdi değil</button>
-          {deste && <button type="button" className="ui-btn" onClick={() => { kapat(); navigateTo(`/dersler/interaktif/${encodeURIComponent(deste)}`); }}>Öğren destesi</button>}
-          <button type="button" className="ui-btn is-primary" onClick={() => { kapat(); navigateTo(coz.url); }}>Soru çözücüyü aç</button>
         </div>
       </div>
     </div>
