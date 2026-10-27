@@ -253,3 +253,32 @@
 .cd15-sat-blok .cd15-hizlar { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); }
 .cd15-sat-blok > .cd15-sat-t { padding: 0; margin: 0; }
 
+
+/* S04 Slayt + altyazı: PDF tüm alanı alır, okunan cümle altta şeritte */
+.cd-govde.is-altyazi { display: flex; flex-direction: column; }
+.cd-govde.is-altyazi > :first-child { flex: 1; min-height: 0; }
+.cd-altyazi { flex: none; padding: 12px 20px calc(14px + var(--cd-dock-h, 0px)); background: var(--color-white); border-top: 1px solid var(--color-line-soft, var(--color-line)); text-align: center; font-family: var(--cd-okuma-font, var(--font-serif, Georgia, serif)); font-size: 17px; line-height: 1.5; color: var(--color-ink); max-height: 30vh; overflow-y: auto; }
+.cd-altyazi.is-bos { color: var(--color-ink-3); font-size: 14px; font-family: var(--font-sans); }
+.cd-altyazi-once { color: var(--color-ink-3); }
+.cd-altyazi-simdi { background: var(--color-hl, var(--color-accent-soft)); color: var(--color-hl-ink, var(--color-ink)); border-radius: 4px; padding: 0 3px; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+@media (min-width: 900px) { .cd-altyazi { font-size: 19px; padding-inline: 40px; } }
+
+/* S17 Bağlantı koptu kartı (oynatıcının üstünde) */
+.cd-baglanti { display: flex; align-items: center; gap: 10px; margin: 0 12px 8px; padding: 10px 12px; border-radius: 14px; background: var(--color-bad-soft); color: var(--color-ink); box-shadow: 0 6px 18px -10px rgba(0, 0, 0, .3); }
+.cd-baglanti.is-geldi { background: var(--color-ok-soft); }
+.cd-baglanti > svg { width: 20px; height: 20px; flex: none; color: var(--color-bad); }
+.cd-baglanti.is-geldi > svg { color: var(--color-ok); }
+.cd-baglanti > div { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
+.cd-baglanti b { font-size: .9rem; }
+.cd-baglanti small { font-size: .78rem; color: var(--color-ink-2); line-height: 1.35; }
+.cd-baglanti button { flex: none; min-height: 34px; padding: 0 12px; border-radius: 999px; border: 1px solid var(--color-line); background: var(--color-white); color: var(--color-ink); font: inherit; font-size: .82rem; font-weight: 600; cursor: pointer; }
+.cd-baglanti button:disabled { opacity: .5; cursor: default; }
+.cd-baglanti .cd-baglanti-x { padding: 0; width: 30px; min-height: 30px; display: grid; place-items: center; border: 0; background: transparent; }
+.cd-baglanti .cd-baglanti-x svg { width: 16px; height: 16px; }
+
+/* S15 Yatay telefon: alçak yatay ekranda üst bar sıkışır, oynatıcı tek satır kalır (bölmeler GENIS_SORGU ile yan yana) */
+@media (orientation: landscape) and (max-height: 520px) {
+  .cd15-bas { min-height: 44px; padding-block: 4px; }
+  .cd15-ust { display: none; }
+  .cd-altyazi { font-size: 15px; padding: 8px 16px; max-height: 26vh; }
+}

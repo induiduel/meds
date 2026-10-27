@@ -593,6 +593,21 @@ export const cdBolumBaslari = (): number[] => bolumBas.map((k) => (k < starts.le
 let bitinceFn: (() => void) | null = null;
 export const cdBitinceKaydet = (f: (() => void) | null) => { bitinceFn = f; };
 let audio: HTMLAudioElement | null = null;
+/** Çalma noktasının önünde arabellekte kalan saniye (bağlantı koptu kartı, tasarım S17) */
+export function cdTampon(): number {
+  const a = audio; if (!a) return 0;
+  const t = a.currentTime;
+  for (let i = 0; i < a.buffered.length; i += 1) if (a.buffered.start(i) <= t + 0.5 && a.buffered.end(i) >= t) return Math.max(0, a.buffered.end(i) - t);
+  return 0;
+}
+/** Bağlantı gelince sesi kaldığı yerden yeniden yükleyip çalar */
+export function cdYenidenDene() {
+  const a = audio; const src = a?.getAttribute('src'); if (!a || !src) return;
+  const t = st.t || a.currentTime || 0;
+  a.src = src;
+  a.addEventListener('loadedmetadata', () => { try { a.currentTime = t; } catch { /* yok */ } a.play().catch(() => {}); }, { once: true });
+  a.load();
+}
 let raf = 0;
 let sonKayit = 0;
 

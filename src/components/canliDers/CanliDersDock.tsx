@@ -20,7 +20,9 @@ import { Star } from 'lucide-react';
 import { cdCikmisAc, cikmisSayfada } from './CdCikmisChip';
 import { Sheet } from '../ui/Sheet';
 import { useYildizliParagraflar } from '../../services/yildizliParagrafStore';
-import { MoreHorizontal } from 'lucide-react';
+import { MoreHorizontal, WifiOff } from 'lucide-react';
+import { cdTampon, cdYenidenDene } from './canliDersStore';
+import { useCdCevrimdisi } from './canliDersCevrimdisi';
 
 const hizYaz = (r: number) => `${String(r).replace('.', ',')}×`;
 
@@ -146,6 +148,7 @@ export default function CanliDersDock({ activeTab, dersKey }: { activeTab: strin
   if (!key) return null;
   return (
     <div ref={ref} className={`cd-root cd-dock ${tam ? (kucuk ? 'is-tam is-kucuk' : 'is-tam') : 'is-mini'}`} style={{ bottom: alt }} role="region" aria-label="Sesli ders oynatıcısı">
+      <BaglantiKoptu />
       {!tam ? <MiniOynatici /> : kucuk ? <KucukOynatici onAc={() => setKucuk(false)} /> : <TamOynatici onKucult={() => setKucuk(true)} />}
       {tvIz && <div key={tvIz.n} className="cd-tv-iz" role="status">{tvIz.m}</div>}
     </div>
@@ -667,6 +670,40 @@ function MiniOynatici() {
       </button>
       <button type="button" className="cd-ib cd-mini-don" onClick={don} aria-label="Derse dön" title="Derse dön"><ArrowUpRight aria-hidden /></button>
       <button type="button" className="cd-ib" onClick={cdKapat} aria-label="Oynatıcıyı kapat" title="Kapat"><X aria-hidden /></button>
+    </div>
+  );
+}
+
+/**
+ * Bağlantı koptu (tasarım S17): çevrimdışıyken ve ders indirilmemişken oynatıcının üstünde uyarı kartı.
+ * "Ses mm:ss'de durdu" (arabellek bitip bekliyorsa) ya da arabellekte kalan süre; bağlantı gelince "Tekrar dene"
+ * sesi kaldığı yerden yeniden yükler. İndirilmiş derste kart çıkmaz (çevrimdışı kesintisiz çalar).
+ */
+function BaglantiKoptu() {
+  const key = useCd((s) => s.key);
+  const t = useCd((s) => Math.floor(s.t));
+  const bekliyor = useCd((s) => s.bekliyor);
+  const { kayit } = useCdCevrimdisi(key || '');
+  const [cevrimici, setCevrimici] = useState(() => typeof navigator === 'undefined' || navigator.onLine);
+  const [koptu, setKoptu] = useState(false);
+  useEffect(() => {
+    const on = () => setCevrimici(true);
+    const off = () => { setCevrimici(false); setKoptu(true); };
+    window.addEventListener('online', on); window.addEventListener('offline', off);
+    return () => { window.removeEventListener('online', on); window.removeEventListener('offline', off); };
+  }, []);
+  useEffect(() => { if (!cevrimici) setKoptu(true); }, [cevrimici]);
+  if (!key || kayit || !koptu) return null;
+  const tampon = Math.round(cdTampon());
+  return (
+    <div className={`cd-baglanti${cevrimici ? ' is-geldi' : ''}`} role="status">
+      <WifiOff aria-hidden />
+      <div>
+        <b>{cevrimici ? 'Bağlantı geri geldi' : bekliyor || tampon < 1 ? `Ses ${fmtSure(t)}'de durdu` : 'Bağlantı koptu'}</b>
+        <small>{cevrimici ? 'Kaldığın yerden sürdürebilirsin.' : tampon >= 1 ? `Arabellekte ${tampon} sn kaldı. Dersi indirirsen kesintisiz dinlersin.` : 'Bağlantı gelince kaldığın yerden sürer. Dersi indirirsen kesintisiz dinlersin.'}</small>
+      </div>
+      <button type="button" onClick={() => { cdYenidenDene(); if (navigator.onLine) setKoptu(false); }} disabled={!cevrimici}>Tekrar dene</button>
+      {cevrimici && <button type="button" className="cd-baglanti-x" onClick={() => setKoptu(false)} aria-label="Kapat"><X aria-hidden /></button>}
     </div>
   );
 }

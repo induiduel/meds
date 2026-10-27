@@ -7,7 +7,7 @@
 import CanliDersKimlikHedef from './CanliDersKimlikHedef';
 import { CanliDersBaslangic } from './CanliDersBaslangic';
 import React, { Suspense, lazy, memo, useCallback, useMemo, useEffect, useLayoutEffect, useRef, useState } from 'react';
-import { AlertTriangle, ArrowLeftRight, ArrowUpDown, BookOpen, Download, ChevronDown, ChevronLeft, ChevronRight, ChevronUp, Check, Columns2, Copy, Crosshair, FileText, Maximize2, Minimize2, Minus, Package, Pause, Play, Palette, Plus, RotateCcw, Rows2, ScrollText } from 'lucide-react';
+import { AlertTriangle, ArrowLeftRight, ArrowUpDown, BookOpen, Captions, Download, ChevronDown, ChevronLeft, ChevronRight, ChevronUp, Check, Columns2, Copy, Crosshair, FileText, Maximize2, Minimize2, Minus, Package, Pause, Play, Palette, Plus, RotateCcw, Rows2, ScrollText } from 'lucide-react';
 import { navigateTo, pathFor } from '../../router';
 import { driveViewUrl, useDeckPdf } from '../../services/deckPdfService';
 import { releasePageFullscreen, wasRecentlyScrollingOrTouching } from '../../utils/fullscreen';
@@ -92,15 +92,17 @@ function useTakip() {
   return { durdu, durdur, surdur };
 }
 
-const genisMi = () => typeof window !== 'undefined' && window.matchMedia('(min-width: 900px)').matches;
+// yatay telefon (tasarım S15): alçak ve yatay ekranda da bölmeler yan yana
+const GENIS_SORGU = '(min-width: 900px), (orientation: landscape) and (max-height: 520px)';
+const genisMi = () => typeof window !== 'undefined' && window.matchMedia(GENIS_SORGU).matches;
 
-type Gorunum = 'metin' | 'ikisi' | 'pdf';
+type Gorunum = 'metin' | 'ikisi' | 'pdf' | 'altyazi';
 const GORUNUM_KEY = 'medsoru_canli_ders_gorunum';
 /** Kayıtlı görünüm; yoksa geniş ekranda bölünmüş, telefonda metin */
 const ilkGorunum = (): Gorunum => {
   try {
     const v = localStorage.getItem(GORUNUM_KEY);
-    if (v === 'metin' || v === 'ikisi' || v === 'pdf') return v;
+    if (v === 'metin' || v === 'ikisi' || v === 'pdf' || v === 'altyazi') return v;
   } catch { /* yok */ }
   // v15 (tasarım S19): telefonda da PDF üstte, metin altta
   return genisMi() || document.documentElement.dataset.v15 === 'on' ? 'ikisi' : 'metin';
@@ -109,6 +111,8 @@ const GORUNUMLER: { id: Gorunum; ad: string; ikon: React.ReactNode }[] = [
   { id: 'metin', ad: 'Metin', ikon: <ScrollText aria-hidden /> },
   { id: 'ikisi', ad: 'Metin + Slayt', ikon: <Columns2 aria-hidden /> },
   { id: 'pdf', ad: 'Slayt', ikon: <FileText aria-hidden /> },
+  // tasarım S04: slayt tüm alanı alır, okunan cümle altta altyazı şeridinde
+  { id: 'altyazi', ad: 'Slayt + altyazı', ikon: <Captions aria-hidden /> },
 ];
 
 /** Tam ekran metin yazı boyutu (px), cihazda saklanır */
@@ -296,7 +300,7 @@ export default function CanliDersDers({ dersKey, kamp }: { dersKey: string; kamp
   const buDers = !!detay && caliyorKey === detay.key;
 
   useEffect(() => {
-    const mq = window.matchMedia('(min-width: 900px)');
+    const mq = window.matchMedia(GENIS_SORGU);
     const on = () => setGenis(mq.matches);
     mq.addEventListener('change', on);
     return () => mq.removeEventListener('change', on);
@@ -485,7 +489,7 @@ export default function CanliDersDers({ dersKey, kamp }: { dersKey: string; kamp
 
   const pdfVar = !!detay.pdf && detay.pdf.dosyalar.length > 0;
   const mod: Gorunum = pdfVar ? gorunum : 'metin';
-  const metinGoster = mod !== 'pdf';
+  const metinGoster = mod === 'metin' || mod === 'ikisi';
   const pdfGoster = mod !== 'metin';
   const aktifYon: 'yan-yana' | 'ust-alt' = bolmeYon === 'oto' ? (genis ? 'yan-yana' : 'ust-alt') : bolmeYon;
   const pdfOran = bolmeTers ? 100 - bolmeOran : bolmeOran;
@@ -861,7 +865,7 @@ export default function CanliDersDers({ dersKey, kamp }: { dersKey: string; kamp
       <div
         ref={govdeRef}
         hidden={acilis}
-        className={`cd-govde${mod === 'ikisi' ? (aktifYon === 'yan-yana' ? ' is-iki' : ' is-ust-alt') : ''}`}
+        className={`cd-govde${mod === 'altyazi' ? ' is-altyazi' : ''}${mod === 'ikisi' ? (aktifYon === 'yan-yana' ? ' is-iki' : ' is-ust-alt') : ''}`}
         style={govdeStil}
       >
         {mod === 'ikisi' ? (
@@ -884,6 +888,7 @@ export default function CanliDersDers({ dersKey, kamp }: { dersKey: string; kamp
           <>
             {pdfGoster && <CdPdfBolme detay={detay} canli={buDers} />}
             {metinGoster && <CdMetinBolme detay={detay} canli={buDers} kamp={!!kamp} />}
+            {mod === 'altyazi' && <CdAltyazi detay={detay} canli={buDers} />}
           </>
         )}
       </div>
@@ -1104,6 +1109,24 @@ function GeriBag({ arsiv = false }: { arsiv?: boolean }) {
 /* ---------------- metin ---------------- */
 
 const hlDestek = () => typeof CSS !== 'undefined' && 'highlights' in CSS && typeof (window as any).Highlight === 'function';
+/** Altyazı şeridi (tasarım S04): önceki cümle soluk, okunan cümle vurgulu; slayt kipinde PDF'in altında */
+function CdAltyazi({ detay, canli }: { detay: CdDetay; canli: boolean }) {
+  const aktif = useCd((s) => (canli ? s.aktif : -1));
+  const cumle = useCd((s) => (canli ? s.cumle : -1));
+  const par = React.useMemo(() => { for (const b of detay.bolumler) for (const p of b.paragraflar) if (p.i === aktif) return p; return null; }, [detay, aktif]);
+  if (!par) return <div className="cd-altyazi is-bos" aria-hidden>Oynatınca okunan cümle burada görünür.</div>;
+  const r = cumle >= 0 ? cdCumleAraligi(aktif, cumle) : null;
+  const onceki = cumle > 0 ? cdCumleAraligi(aktif, cumle - 1) : null;
+  const simdi = r ? par.metin.slice(r[0], r[1]).trim() : par.metin.split(/(?<=[.!?])\s+/)[0];
+  const once = onceki ? par.metin.slice(onceki[0], onceki[1]).trim() : '';
+  return (
+    <div className="cd-altyazi" aria-live="polite">
+      {once && <span className="cd-altyazi-once">{once.length > 90 ? `…${once.slice(-90).replace(/^\S*\s/, '')}` : once}</span>}{' '}
+      <span className="cd-altyazi-simdi">{simdi}</span>
+    </div>
+  );
+}
+
 const HL_AD = 'cd-cumle';
 const HL_KELIME = 'cd-kelime';
 

@@ -16,9 +16,9 @@ import { useAppFullscreen } from '../../utils/fullscreen';
 import '../../styles/v15/sesli.css';
 import { PDF_GORUNUM, pdfGorunumAyarla, terimYardimciAyarla, usePdfGorunum, useTerimYardimci, type PdfGorunumId } from './CdTerimKatman';
 
-export type CdGorunum = 'metin' | 'ikisi' | 'pdf';
+export type CdGorunum = 'metin' | 'ikisi' | 'pdf' | 'altyazi';
 export type CdBolmeYon = 'oto' | 'yan-yana' | 'ust-alt';
-const GOR_AD: Record<CdGorunum, string> = { metin: 'Metin', ikisi: 'İkisi', pdf: 'Slayt' };
+const GOR_AD: Record<CdGorunum, string> = { metin: 'Metin', ikisi: 'İkisi', pdf: 'Slayt', altyazi: 'Altyazı' };
 
 /** v15'te katman adları: ne yaptığını söyleyen kısa ad (anahtar ve kayıt aynı) */
 const KATMAN_AD: Record<PdfGorunumId, [string, string]> = {
@@ -55,8 +55,8 @@ export function CdV15Bas(p: {
   };
 }) {
   const terim = useTerimYardimci();
-  const sirali: CdGorunum[] = ['metin', 'ikisi', 'pdf'];
-  const sonraki = sirali[(sirali.indexOf(p.mod) + 1) % 3];
+  const sirali: CdGorunum[] = ['metin', 'ikisi', 'pdf', 'altyazi'];
+  const sonraki = sirali[(sirali.indexOf(p.mod) + 1) % sirali.length];
   return (
     <header className="cd-ders-bas cd15-bas">
       <span className="cd15-geri">{p.geri}</span>

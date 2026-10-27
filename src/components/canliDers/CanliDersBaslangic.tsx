@@ -13,7 +13,7 @@ import { cdDersEtiketi } from './canliDersKategori';
 import { bittiMi, useKonuKaydi } from '../../services/calismaTakip';
 import '../../styles/canli-ders-liste.css';
 
-export type CdGorunum = 'metin' | 'ikisi' | 'pdf';
+export type CdGorunum = 'metin' | 'ikisi' | 'pdf' | 'altyazi';
 const GORUNUM_SECENEK: { id: CdGorunum; ad: string; acik: string; ikon: React.ReactNode }[] = [
   { id: 'metin', ad: 'Metin', acik: 'Konuşma metni sesle akar', ikon: <ScrollText aria-hidden /> },
   { id: 'ikisi', ad: 'Metin + Slayt', acik: 'Slayt ve metin yan yana', ikon: <Columns2 aria-hidden /> },
