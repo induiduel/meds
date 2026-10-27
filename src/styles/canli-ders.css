@@ -1224,3 +1224,4 @@
 .cd-cikp-btn.is-ana { background: var(--color-accent); border-color: var(--color-accent); color: var(--color-white); }
 .cd-cikp-btn:disabled { opacity: .5; cursor: default; }
 a.cd-cikp-btn { display: inline-flex; align-items: center; text-decoration: none; }
+.cd15-cozucu-on{margin:6px auto 0;display:block}

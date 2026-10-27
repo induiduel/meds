@@ -1,10 +1,10 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 490,
-  "baslik": "Ders içerik sayfaları: sıralamalar, mini sorular, 6 ders",
+  "onem": 491,
+  "baslik": "Soru çözücüye derse girmeden ve ders bitince erişim",
   "maddeler": [
-    "Kurul 2 derslerine terim, hastalık, spot, tablo, sıralama, mini soru ve kart sayfaları eklendi",
-    "Karşılaştırma tablolarında terazi simgesi, sıralı listelerde numara/harf/büyükten küçüğe"
+    "Ders ayrıntısında sesli soru çözücü satırı",
+    "Oynatıcıda başlamadan önce çözücü kısayolu, ders bitince \"Ders bitti\" kartı"
   ],
   "eklenen": [],
   "degisen": [],

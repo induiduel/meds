@@ -660,7 +660,7 @@ function ses(): HTMLAudioElement {
   });
   a.addEventListener('pause', () => { ekranUyanik(false); set({ playing: false }); tick(); konumKaydet(); msDurum(); });
   // Bitirdiklerim: dersin sonuna kadar dinlenince konu "bitti" olur
-  a.addEventListener('ended', () => { ekranUyanik(false); if (st.key) konuBitir('sesli', st.key); set({ playing: false }); konumKaydet(true); msDurum(); bitinceFn?.(); });
+  a.addEventListener('ended', () => { ekranUyanik(false); if (st.key) konuBitir('sesli', st.key); set({ playing: false }); konumKaydet(true); msDurum(); bitinceFn?.(); try { window.dispatchEvent(new CustomEvent('cd:bitti', { detail: { key: st.key } })); } catch { /* yok */ } });
   // Bitirdiklerim: ses çalarken (sekme arka planda da) konunun dinleme süresi
   window.setInterval(() => { if (st.playing && st.key && !st.bekliyor) sureEkle('sesli', st.key, 5); }, 5000);
   a.addEventListener('timeupdate', () => { if (!raf) tick(); });

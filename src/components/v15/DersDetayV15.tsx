@@ -8,6 +8,7 @@ import { bittiMi, sesliKonuId, useTakip } from '../../services/calismaTakip';
 import { useV15Baslik } from './baslik';
 import { bransYolu, dersBransi, dersKurulu, hocaYaz, merkezYolu, saatYaz, sureDk, useDersListesi } from './dersVeri';
 import { Halka } from './Halka';
+import { dersCozucu } from '../canliDers/dersCozucu';
 import DersIcerikV15 from './DersIcerikV15';
 import { DI_BOLUMLER, dersIcerikGetir, type DiBolum, type DiPaket } from './dersIcerik';
 import '../../styles/v15/dersler.css';
@@ -151,6 +152,9 @@ export default function DersDetayV15() {
       url: `${dinle}?p=${cikmis[0].p}`,
     });
 
+  const coz = dersCozucu(paket?.baslik) || dersCozucu(baslik);
+  if (coz)
+    icerik.push({ id: 'cozucu', tone: 'is-ok', icon: HelpCircle, t: 'Sesli soru çözücü', s: `${coz.soru ? coz.soru + ' soru · ' : ''}kaynak gösteren sesli çözüm · derse girmeden önce de, sonra da`, url: coz.url });
   if (paket) {
     const say: Record<DiBolum, [number, string, React.ElementType, string]> = {
       terimler: [paket.terimler.length + paket.kisaltmalar.length, 'terim ve kısaltma · tanımlarıyla', BookA, 'is-ok'],
