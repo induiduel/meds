@@ -525,6 +525,7 @@ export default function CanliDersDers({ dersKey, kamp }: { dersKey: string; kamp
             {(detay.arsiv || detay.donem === '2025-2026' || detay.key.startsWith('y25-')) && (
               <span className="cd-chip is-arsiv">2025-2026 Arşiv</span>
             )}
+            {detay.sinama && <span className="cd-chip is-arsiv is-sinama">SINAMA</span>}
             {cdDersEtiketi(detay)}
             <DersBolumEtiketi detay={detay} />
           </small>
@@ -798,6 +799,14 @@ export default function CanliDersDers({ dersKey, kamp }: { dersKey: string; kamp
             ]}
           />
         </>
+      )}
+      {detay.sinama && !tamEkran && (
+        <div className="cd-arsiv-uyari is-kompakt is-sinama" role="note">
+          <AlertTriangle aria-hidden />
+          <span>
+            <b>{detay.sinamaEtiket || 'SINAMA — test verisi'}:</b> Bu ders sınama amacıyla eklenmiş test verisidir; <b>güncel dönem derslerinin listesinde görünmez.</b>
+          </span>
+        </div>
       )}
       {(detay.arsiv || detay.donem === '2025-2026' || detay.key.startsWith('y25-')) && !tamEkran && (
         <div className="cd-arsiv-uyari is-kompakt" role="note">

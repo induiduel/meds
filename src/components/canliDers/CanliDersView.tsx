@@ -76,12 +76,17 @@ const kapaliOku = (): Set<string> => { try { return new Set(JSON.parse(localStor
  *  - sol ray (telefonda üstte yatay şeritler): kurul, görünüm (Tüm / Yarım kalan / Listem / Yıldızlı / Blok), branşlar (ilerleme çubuğuyla)
  *  - içerik: "Devam et" + "Sıradaki ders" kartları, branş bölümleri (bitti/toplam, sıradakini dinle), ders satırları
  */
+type CdDonemSecim = '2026-2027' | '2025-2026' | 'sinama';
+const donemOku = (): CdDonemSecim => {
+  const d = new URLSearchParams(icKonum().search).get('donem');
+  return d === '2025-2026' ? '2025-2026' : d === 'sinama' ? 'sinama' : '2026-2027';
+};
 function CanliDersListe() {
   useCdTvGezinme('liste');
-  const [donem, setDonem0] = useState<'2026-2027' | '2025-2026'>(() => {
-    const d = new URLSearchParams(icKonum().search).get('donem');
-    return d === '2025-2026' ? '2025-2026' : '2026-2027';
-  });
+  const [donem, setDonem0] = useState<CdDonemSecim>(() => donemOku());
+  // Sınama (test) dersleri yalnız varsa seçenek görünür (data/sinama.json)
+  const [sinamaVar, setSinamaVar] = useState(false);
+  useEffect(() => { cdListeGetir(false, 'sinama').then((l) => setSinamaVar(l.length > 0), () => { /* yok */ }); }, []);
   const [hamDersler, setDersler] = useState<CdListeDers[] | null>(null);
   // Blok özetler (k1-95-blok-ozet-patoloji-1 …): birkaç dersi tek sesli derste anlatır; ayrı görünümde listelenir
   const [hamBlok, setBlok] = useState<CdListeDers[]>([]);
@@ -110,8 +115,7 @@ function CanliDersListe() {
     const f = () => {
       const g = HASH_GORUNUM[location.hash];
       if (g) setGorunum0(g);
-      const d = new URLSearchParams(icKonum().search).get('donem');
-      setDonem0(d === '2025-2026' ? '2025-2026' : '2026-2027');
+      setDonem0(donemOku());
     };
     window.addEventListener('popstate', f);
     return () => window.removeEventListener('popstate', f);
@@ -124,12 +128,12 @@ function CanliDersListe() {
   const [konum] = useState(konumHaritasi);
   const tanitim = useCdTur('liste', !!dersler?.length, () => !!document.querySelector('.cd-satir'));
 
-  const setDonem = (yeni: '2026-2027' | '2025-2026') => {
+  const setDonem = (yeni: CdDonemSecim) => {
     if (yeni === donem) return;
     setDonem0(yeni);
     setSuzgec0('tum');
     const sp = new URLSearchParams(icKonum().search);
-    if (yeni === '2025-2026') sp.set('donem', '2025-2026');
+    if (yeni !== '2026-2027') sp.set('donem', yeni);
     else sp.delete('donem');
     const qs = sp.toString();
     try { history.replaceState(history.state, '', `/canliders${qs ? `?${qs}` : ''}`); } catch { /* yok */ }
@@ -141,7 +145,7 @@ function CanliDersListe() {
     cdListeGetir(yenile, aktifDonem).then((ds) => { cdListeOzetleri(ds); setDersler(ds.filter((d) => !/-son-prova-|-blok-ozet-/.test(d.key))); setBlok(ds.filter((d) => /-blok-ozet-/.test(d.key))); /* Son Prova partları kendi sayfasında (/son-prova) */ }, (e) => setHata(e?.message || 'Liste alınamadı.'));
   };
   useEffect(() => {
-    document.title = donem === '2025-2026' ? '2025-2026 Arşiv Sesli Dersler · MeDSor' : 'Sesli ders · MeDSor';
+    document.title = donem === '2025-2026' ? '2025-2026 Arşiv Sesli Dersler · MeDSor' : donem === 'sinama' ? 'Sınama (test verisi) Sesli Dersler · MeDSor' : 'Sesli ders · MeDSor';
     yukle(false, donem);
   }, [donem]);
 
@@ -252,12 +256,23 @@ function CanliDersListe() {
               <b>2025-2026</b>
               <small>Geçen Yıl Arşivi</small>
             </button>
+            {(sinamaVar || donem === 'sinama') && (
+              <button
+                type="button"
+                className={`cdl-donem-btn is-sinama${donem === 'sinama' ? ' is-on' : ''}`}
+                aria-pressed={donem === 'sinama'}
+                onClick={() => setDonem('sinama')}
+              >
+                <b>Sınama</b>
+                <small>Test verisi</small>
+              </button>
+            )}
           </div>
           <KurulSecici
             className="cdl-kurul"
             secili={kurul}
-            yol={(k) => `/dersler/canliders/kurul${k}${donem === '2025-2026' ? '?donem=2025-2026' : ''}`}
-            tumuYol={`/dersler/canliders${donem === '2025-2026' ? '?donem=2025-2026' : ''}`}
+            yol={(k) => `/dersler/canliders/kurul${k}${donem !== '2026-2027' ? `?donem=${donem}` : ''}`}
+            tumuYol={`/dersler/canliders${donem !== '2026-2027' ? `?donem=${donem}` : ''}`}
           />
           <nav className="cdl-gorunum" aria-label="Görünüm">
             <RayDugme on={gorunum === 'tum'} ikon={<LayoutList />} ad="Tüm dersler" n={dersler ? cdKonuSayisi(dersler) : undefined} onClick={() => setGorunum('tum')} />
@@ -289,6 +304,18 @@ function CanliDersListe() {
         </aside>
 
         <main className="cdl-icerik">
+          {donem === 'sinama' && (
+            <div className="cd-arsiv-uyari is-sinama" role="note">
+              <AlertTriangle aria-hidden />
+              <div>
+                <b>SINAMA — test verisi</b>
+                <p>
+                  Bu bölümdeki dersler sınama amacıyla eklenmiş test verisidir; içerikleri henüz doğrulanmış güncel ders sayılmaz.
+                  <b> Güncel dönem derslerinin listesinde görünmezler</b>, ikisi aynı anda gösterilmez.
+                </p>
+              </div>
+            </div>
+          )}
           {donem === '2025-2026' && (
             <div className="cd-arsiv-uyari" role="note">
               <AlertTriangle aria-hidden />
@@ -633,6 +660,7 @@ const DersSatiri = React.memo(function DersSatiri({ d, k, onGunlukAc }: { d: CdL
         >
           <b>
             {isArsiv && <span className="cd-chip is-arsiv">2025-2026 Arşiv</span>}
+            {d.sinama && <span className="cd-chip is-arsiv is-sinama">SINAMA</span>}
             {d.parca ? <><em className="cd-parca">{cdParca(d)}</em> </> : null}
             {d.baslik}
           </b>

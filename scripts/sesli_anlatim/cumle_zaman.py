@@ -213,7 +213,7 @@ def main():
     if a.key:
         keys = [a.key]
     elif a.hepsi:
-        with urllib.request.urlopen(f"{API}/api/canli-ders", timeout=30) as r:
+        with urllib.request.urlopen(f"{API}/api/canli-ders?sinama=1", timeout=30) as r:
             keys = [x["key"] for x in json.load(r)["dersler"]]
     else:
         ap.error("--key ya da --hepsi")

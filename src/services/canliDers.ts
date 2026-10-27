@@ -76,10 +76,28 @@ const oku = <T,>(p: string, bos: T): T => {
 const anahtarGecerli = (k: unknown): k is string => typeof k === 'string' && /^(?:y25-)?k\d+-\d+-[a-z0-9-]+$/.test(k);
 const vidGecerli = (v: unknown): v is string => typeof v === 'string' && /^[a-z0-9-]+$/.test(v);
 
-const dersler = (donem?: string): Ders[] => {
+/*
+ * Sınama (test) verisi (kullanıcı kararı 2026-10-27): data/sinama.json'daki kurala uyan dersler gerçek (güncel) derslerle aynı
+ * listede gösterilmez; ayrı bölümde ('donem=sinama') ve 'SINAMA — test verisi' etiketiyle sunulur. Betikler listeyi
+ * `?sinama=1` ile (güncel + sınama) okur. Kural: { etiket, brans: [...], kurulMin, anahtarlar: [...] }.
+ */
+type SinamaKonfig = { etiket?: string; brans?: string[]; kurulMin?: number; anahtarlar?: string[] };
+const sinamaKonfig = (): SinamaKonfig => oku<SinamaKonfig>(path.join(process.cwd(), 'data', 'sinama.json'), {});
+const sinamaEtiketi = (): string => sinamaKonfig().etiket || 'SINAMA — test verisi';
+const sinamaMi = (d: Ders): boolean => {
+  if (arsivMi(d.key) || d.donem === '2025-2026') return false;
+  const c = sinamaKonfig();
+  if (c.anahtarlar?.includes(d.key)) return true;
+  if (!c.brans?.length) return false;
+  const b = bransBilgisi(d);
+  return c.brans.includes(b.brans) && b.kurul >= (c.kurulMin ?? 1);
+};
+const dersler = (donem?: string, sinamaDahil = false): Ders[] => {
   if (donem === '2025-2026') return oku<Ders[]>(P.arsivDersler, []);
   if (donem === 'hepsi') return [...oku<Ders[]>(P.dersler, []), ...oku<Ders[]>(P.arsivDersler, [])];
-  return oku<Ders[]>(P.dersler, []);
+  const guncel = oku<Ders[]>(P.dersler, []);
+  if (donem === 'sinama') return guncel.filter(sinamaMi);
+  return sinamaDahil ? guncel : guncel.filter((d) => !sinamaMi(d));
 };
 const dersBul = (key: string): Ders | undefined =>
   (arsivMi(key) ? oku<Ders[]>(P.arsivDersler, []) : oku<Ders[]>(P.dersler, [])).find((x) => x.key === key);
@@ -191,7 +209,7 @@ function medspakYoluBul(key: string): string | null {
 export function registerCanliDersRoutes(app: Express) {
   app.get('/api/canli-ders', (req: Request, res: Response) => {
     const donem = String(req.query.donem || '2026-2027');
-    const out = dersler(donem)
+    const out = dersler(donem, req.query.sinama === '1')
       // Son Prova partları listede kalır (zamanlama betikleri ve çevrimdışı paketler bu listeyi okur); sesli ders ekranı onları süzer
       .filter((d) => !LISTEDE_GIZLI.has(d.key))
       .sort((a, b) => (a.kurul || 1) - (b.kurul || 1) || a.sira - b.sira)
@@ -200,10 +218,12 @@ export function registerCanliDersRoutes(app: Express) {
         if (!vs.length) return null;
         const b = bransBilgisi(d);
         const isArsiv = arsivMi(d.key) || d.donem === '2025-2026';
+        const sinama = sinamaMi(d);
         return {
           key: d.key,
           donem: isArsiv ? '2025-2026' : '2026-2027',
           arsiv: isArsiv,
+          ...(sinama ? { sinama: true, sinamaEtiket: sinamaEtiketi() } : {}),
           // no: branş içi numara (Tıbbi Patoloji 16); kurulNo: kurul genelindeki sıra
           no: b.bransNo,
           kurulNo: d.kurulNo ?? d.no,
@@ -323,6 +343,7 @@ export function registerCanliDersRoutes(app: Express) {
       key,
       donem: isArsiv ? '2025-2026' : '2026-2027',
       arsiv: isArsiv,
+      ...(sinamaMi(d) ? { sinama: true, sinamaEtiket: sinamaEtiketi() } : {}),
       desteId,
       gunlukVar: fs.existsSync(P.gunluk(key)),
       medspakVar: Boolean(medspakYoluBul(key)),

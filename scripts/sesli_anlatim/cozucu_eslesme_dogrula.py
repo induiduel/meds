@@ -52,7 +52,7 @@ def main() -> int:
     if a.json:
         liste = json.loads(Path(a.json).read_text())['dersler']
     else:
-        with urllib.request.urlopen(f'{a.url}/api/canli-ders', timeout=30) as r:
+        with urllib.request.urlopen(f'{a.url}/api/canli-ders?sinama=1', timeout=30) as r:
             liste = json.load(r)['dersler']
 
     dizin = {}

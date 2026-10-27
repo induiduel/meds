@@ -327,7 +327,7 @@ def main():
     if a.key:
         isler = [(a.key, None)]
     elif a.hepsi:
-        keys = [x["key"] for x in api_json("/api/canli-ders")["dersler"]]
+        keys = [x["key"] for x in api_json("/api/canli-ders?sinama=1")["dersler"]]
         # --saglayici verilirse YALNIZ o sağlayıcı (Kurul 2+: yalnız EMA, kullanıcı kararı 2026-10-20)
         isler = [(k, a.saglayici) for k in keys] if a.saglayici else [(k, None) for k in keys]
     else:

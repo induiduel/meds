@@ -37,7 +37,7 @@ def turev_eksikleri(api="https://api.nofrostlife.com.tr"):
     dosyayı göndermez → özellik sessizce kaybolur; burada görünür olur. Döner {k2: [...], k1: [...]} (eksik ders anahtarları)."""
     out = {"k2": [], "k1": []}
     try:
-        req = urllib.request.Request(f"{api}/api/canli-ders", headers={"User-Agent": "MeDSor-saglik/1 (+hat)"})
+        req = urllib.request.Request(f"{api}/api/canli-ders?sinama=1", headers={"User-Agent": "MeDSor-saglik/1 (+hat)"})
         dersler = json.load(urllib.request.urlopen(req, timeout=30)).get("dersler") or []
     except Exception as e:  # noqa: BLE001
         return {"hata": str(e)[:120]}

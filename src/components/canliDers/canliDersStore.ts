@@ -36,6 +36,9 @@ export interface CdListeDers {
   key: string;
   donem?: '2025-2026' | '2026-2027';
   arsiv?: boolean;
+  /** Sınama (test) verisi: güncel derslerle aynı listede gösterilmez (data/sinama.json) */
+  sinama?: boolean;
+  sinamaEtiket?: string;
   desteId?: string;
   gunlukVar?: boolean;
   medspakVar?: boolean;
@@ -96,6 +99,8 @@ export interface CdDetay {
   key: string;
   donem?: '2025-2026' | '2026-2027';
   arsiv?: boolean;
+  sinama?: boolean;
+  sinamaEtiket?: string;
   desteId?: string;
   gunlukVar?: boolean;
   medspakVar?: boolean;
@@ -185,9 +190,9 @@ export const fmtMb = (b: number) => (b > 0 ? `${(b / 1048576).toFixed(b < 104857
 
 /* ---------------- veri ---------------- */
 const listeCache = new Map<string, Promise<CdListeDers[]>>();
-export function cdListeGetir(yenile = false, donem: '2026-2027' | '2025-2026' = '2026-2027'): Promise<CdListeDers[]> {
+export function cdListeGetir(yenile = false, donem: '2026-2027' | '2025-2026' | 'sinama' = '2026-2027'): Promise<CdListeDers[]> {
   if (!listeCache.has(donem) || yenile) {
-    const url = donem === '2025-2026' ? '/api/canli-ders?donem=2025-2026' : '/api/canli-ders';
+    const url = donem === '2025-2026' ? '/api/canli-ders?donem=2025-2026' : donem === 'sinama' ? '/api/canli-ders?donem=sinama' : '/api/canli-ders';
     const getir = (taze: boolean) => safeJsonFetch<{ dersler: CdListeDers[] }>(url, taze ? ({ cache: 'no-store' } as RequestInit) : undefined);
     const p = getir(yenile).then((r) => (r.ok && Array.isArray(r.data?.dersler) && !r.data!.dersler.length ? getir(true) : r)).then((r) => {
       if (r.ok && Array.isArray(r.data?.dersler) && !r.data!.dersler.length) listeCache.delete(donem);
