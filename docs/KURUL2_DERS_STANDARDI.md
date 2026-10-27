@@ -3,7 +3,8 @@
 > Kullanıcı kararı 2026-10-27: "Bundan sonra ekstra bir şey yazmama gerek kalmadan yapılacaklar belli olsun. Hata istemiyorum."
 > Kullanıcı yalnız **hangi dosyanın hangi ders olduğunu** söyler; aşağıdaki her şey sormadan, eksiksiz ve kapılardan
 > 0 HATA ile geçerek yapılır ve canlıya alınır. Ayrıntılı kurallar bağlantılı belgelerdedir; çelişkide bu belge + AGENTS.md esastır.
-> İşletim adımları (komutlar): `KURUL_OTOMASYON_EL_KITABI.md` §19. Hata defteri: `KURUL2_YAPILMAYACAK_HATALAR.md` (H1–H95).
+> İşletim adımları (komutlar): `KURUL_OTOMASYON_EL_KITABI.md` §19. Hata defteri: `KURUL2_YAPILMAYACAK_HATALAR.md` (H1–H100).
+> **Yeni PDF geldiğinde başlangıç noktası §9'daki kontrol listesidir.**
 
 ## 0. Değişmez ilkeler
 1. **LLM/API otomasyonu yok** (AGENTS kural 20): işçi, zamanlayıcı, `claude -p` yok. Ders, kullanıcı komutuyla bu oturumda
@@ -106,3 +107,28 @@ Metinler slaytı özetlemekle kalmaz, **öğretir**. Kapılar biçimi ölçer; a
 11. **Öğrenci notu katmanı (`ogrenci_not/<fileId>.json`, canlı derste `ogrenciNot`) yalnız kullanıcı isterse eklenir** (kullanıcı kararı 2026-10-27).
     Öğrenci notları değerlendirme paketine, metne ve vurgulara girer; ayrı ekran katmanı kendiliğinden üretilmez.
 
+
+## 9. Yeni PDF eklendiğinde standart akış (kullanıcı kararı 2026-10-27 — sormadan uygulanır)
+Kullanıcı yalnız "şu dosya şu ders" der. Aşağıdakiler her seferinde aynı sırayla yapılır; ek talimat beklenmez.
+
+**A. Karşılama ve sınıflandırma (üretimden önce)**
+1. `DEGISIKLIK_KAYDI.md`, bu belge ve `KURUL2_YAPILMAYACAK_HATALAR.md` okunur; ders başka oturumda üretiliyor mu bakılır (çift iş yok).
+2. PDF içerikle (sayfa başlıkları) ders kayıt defterine (`src/data/dersler/kN.json`) eşlenir; uyuşmazsa sorulur. Kimlik kalıcıdır.
+3. **Sınama mı, güncel mi?** `data/sinama.json` kuralına (şu an: Tıbbi Farmakoloji, Kurul ≥2) ya da `anahtarlar` listesine uyan ders
+   **SINAMA — test verisi**dir: "Sınama" bölümünde etiketle gösterilir, güncel listeye karışmaz. Kullanıcı bir dersi sınama
+   olarak gönderdiğini söylerse anahtarı `anahtarlar`'a eklenir. Betikler listeyi `?sinama=1` ile okur (yeni betik de öyle yazılır).
+4. Arşiv (`y25-*`) kopyalanmaz; ders bu yılın PDF'inden sıfırdan üretilir (§0).
+
+**B. Üretim** — §2'deki 16 aşama, her biri kapısıyla 0 HATA; anlatım §8 (öğreten ders, öğrenci rolünde denetçi GEÇER);
+alt ajanlar `model: sonnet, effort: medium`. Öğrenci notu ayrı ekran katmanı **eklenmez** (§8.11, yalnız kullanıcı isterse).
+
+**C. Yayın sırası (H97/H99)**
+1. Metin ve veri **önce git'e işlenir** (dağıtım eski metni geri almasın, H97), sonra ses/zaman/çapa/çizim.
+2. `guncelleme_notu.json` → `onem` +1, Türkçe `baslik` + `maddeler` (her commit/dağıtımda, küçük düzeltmede de; `--sessiz` yok).
+3. Yalnız kendi dosyaların commit'lenir (başka oturumun değişikliği sahnelenmez) → `git push origin main` → `bash deploy/oracle/dagit.sh`.
+4. Sunucu kodu değiştiyse canlıda `curl` ile yeni davranış doğrulanır; değişmemişse `docker restart meds-app` + sağlık kontrolü.
+   Yeni `data/*.json` dosyası Oracle'a elle kopyalanır ve canlıda okunduğu doğrulanır (H99).
+5. §6 canlı doğrulaması + sınama dersi ise: güncel listede yok, `?donem=sinama`'da var, ayrıntıda `sinama: true`.
+
+**D. Kayıt** — `DEGISIKLIK_KAYDI.md`'ye ders + aşama durumu; atlanan aşamanın gerekçesi; yeni hata → hata defteri (belirti/kök neden/kural).
+Eksik katmanla ders "tamamlandı" denmez.
