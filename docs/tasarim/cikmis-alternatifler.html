@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Çıkmış Sorular Alternatifleri</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--color-canvas:#F4F6FA;--color-white:#FFFFFF;--color-field:#EEF1F6;--color-line:#DDE2EA;--color-ink:#111827;--color-ink-2:#4B5563;--color-ink-3:#8A93A3;--color-accent:#2563EB;--color-accent-soft:#E3ECFE;--color-ok:#15803D;--color-ok-soft:#DCF5E5;--color-warn:#B45309;--color-warn-soft:#FDF0D9;--color-bad:#C2312F;--color-bad-soft:#FBE3E2;--color-ai:#7C3AED;--color-ai-soft:#EFE7FE;--color-clinic:#0E7C86;--color-clinic-soft:#DDF3F4;--on-accent:#fff}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--color-canvas:#000;--color-white:#121212;--color-field:#1C1C1E;--color-line:#2A2A2D;--color-ink:#F2F2F2;--color-ink-2:#B5B5BA;--color-ink-3:#7C7C83;--color-accent:#F5C842;--color-accent-soft:#3A3115;--color-ok:#4ADE80;--color-ok-soft:#12301D;--color-warn:#FBBF24;--color-warn-soft:#33270B;--color-bad:#F87171;--color-bad-soft:#3A1515;--color-ai:#C4A5FF;--color-ai-soft:#271B3D;--color-clinic:#5ED3DC;--color-clinic-soft:#0F2E30;--on-accent:#111}}
+:root[data-theme="dark"]{--color-canvas:#000;--color-white:#121212;--color-field:#1C1C1E;--color-line:#2A2A2D;--color-ink:#F2F2F2;--color-ink-2:#B5B5BA;--color-ink-3:#7C7C83;--color-accent:#F5C842;--color-accent-soft:#3A3115;--color-ok:#4ADE80;--color-ok-soft:#12301D;--color-warn:#FBBF24;--color-warn-soft:#33270B;--color-bad:#F87171;--color-bad-soft:#3A1515;--color-ai:#C4A5FF;--color-ai-soft:#271B3D;--color-clinic:#5ED3DC;--color-clinic-soft:#0F2E30;--on-accent:#111}
+*{box-sizing:border-box;margin:0}
+body{background:var(--color-canvas);color:var(--color-ink);font:14px/1.45 Inter,system-ui,sans-serif;overflow-x:hidden}
+.wrap{max-width:1360px;margin:0 auto;padding:20px 16px 60px}
+header.top{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;margin-bottom:14px}
+h1{font-size:20px}.sub{color:var(--color-ink-2);font-size:13px}
+.btn{border:1px solid var(--color-line);background:var(--color-white);color:var(--color-ink);border-radius:10px;padding:7px 12px;font:inherit;cursor:pointer}
+.tabs{display:flex;gap:6px;overflow-x:auto;padding-bottom:4px;margin-bottom:14px}
+.tabs button{flex:none;border:1px solid var(--color-line);background:var(--color-white);color:var(--color-ink-2);border-radius:999px;padding:8px 14px;font:500 13px Inter,sans-serif;cursor:pointer}
+.tabs button[aria-selected=true]{background:var(--color-accent);color:var(--on-accent);border-color:var(--color-accent)}
+.alt{display:none}.alt.on{display:block}
+.alt h2{font-size:17px;margin-bottom:4px}
+.frames{display:grid;gap:18px;margin:14px 0}
+.fr{min-width:0}.fr .lab{font:600 12px Inter;color:var(--color-ink-3);margin-bottom:6px;text-transform:uppercase;letter-spacing:.04em}
+.vp{overflow:hidden;border:1px solid var(--color-line);border-radius:14px;background:var(--color-canvas);position:relative}
+.vp>.dev{transform-origin:0 0;position:absolute;top:0;left:0;height:var(--h)}
+.notes{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+.note{background:var(--color-white);border:1px solid var(--color-line);border-radius:12px;padding:12px 14px}
+.note h3{font-size:13px;margin-bottom:6px}.note ul{padding-left:18px;color:var(--color-ink-2);font-size:13px}
+.note a{color:var(--color-accent);word-break:break-all}
+/* ---- device ui ---- */
+.dev{background:var(--color-canvas);color:var(--color-ink);font-size:14px;overflow:hidden}
+.nav{height:48px;display:flex;align-items:center;gap:10px;padding:0 16px;border-bottom:1px solid var(--color-line);background:var(--color-white);font-weight:700}
+.nav .bc{font-weight:500;color:var(--color-ink-3);font-size:13px}
+.bar{position:sticky;top:0;display:flex;align-items:center;gap:8px;padding:8px 16px;background:var(--color-white);border-bottom:1px solid var(--color-line);white-space:nowrap;overflow:hidden}
+.chip{display:inline-flex;align-items:center;gap:5px;height:30px;padding:0 11px;border-radius:999px;border:1px solid var(--color-line);background:var(--color-white);color:var(--color-ink-2);font-size:12.5px;font-weight:500;flex:none}
+.chip.on{background:var(--color-accent-soft);border-color:var(--color-accent);color:var(--color-ink)}
+.chip b{font-weight:600;color:var(--color-ink-3);font-size:11.5px}
+.chip.dd::after{content:"▾";font-size:10px;color:var(--color-ink-3)}
+.srch{flex:1;min-width:120px;height:32px;border-radius:9px;background:var(--color-field);display:flex;align-items:center;padding:0 10px;color:var(--color-ink-3);font-size:12.5px}
+.seg{display:inline-flex;background:var(--color-field);border-radius:9px;padding:2px;flex:none}.seg span{padding:5px 10px;border-radius:7px;font-size:12px;color:var(--color-ink-2)}.seg span.on{background:var(--color-white);color:var(--color-ink);font-weight:600;box-shadow:0 1px 2px rgba(0,0,0,.12)}
+.pri{height:32px;padding:0 12px;border-radius:9px;background:var(--color-accent);color:var(--on-accent);font-weight:600;font-size:12.5px;display:inline-flex;align-items:center;flex:none}
+.yr{display:flex;gap:6px;padding:8px 16px;overflow:hidden;white-space:nowrap;border-bottom:1px solid var(--color-line);background:var(--color-canvas)}
+.meta{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--color-ink-3);white-space:nowrap;overflow:hidden}
+.dot{width:8px;height:8px;border-radius:50%;flex:none}
+.tag{font-size:11px;font-weight:600;padding:2px 7px;border-radius:6px;flex:none}
+.t-new{background:var(--color-field);color:var(--color-ink-2)}.t-ok{background:var(--color-ok-soft);color:var(--color-ok)}.t-bad{background:var(--color-bad-soft);color:var(--color-bad)}
+.q{background:var(--color-white);border:1px solid var(--color-line);border-radius:12px;padding:12px 14px}
+.q .stem{font-weight:600;font-size:14.5px;line-height:1.45;margin:6px 0 8px;color:var(--color-ink)}
+.opts{display:grid;gap:4px}
+.opt{display:flex;gap:8px;align-items:flex-start;font-size:13px;color:var(--color-ink-2);padding:5px 8px;border-radius:8px;background:var(--color-field)}
+.opt i{font-style:normal;font-weight:700;color:var(--color-ink-3);width:14px;flex:none}
+.opt.ok{background:var(--color-ok-soft);color:var(--color-ink)}.opt.bad{background:var(--color-bad-soft);color:var(--color-ink)}
+.opts.two{grid-template-columns:1fr 1fr}
+.sv{margin-left:auto;color:var(--color-ink-3);font-size:15px}
+.list{display:grid;gap:10px;padding:12px 16px}
+.cnt{font-size:12px;color:var(--color-ink-3);padding:8px 16px 0}
+/* table */
+.tbl{width:100%;border-collapse:collapse;background:var(--color-white);font-size:13px}
+.tbl th{text-align:left;font-size:11.5px;color:var(--color-ink-3);font-weight:600;padding:8px 10px;border-bottom:1px solid var(--color-line)}
+.tbl td{padding:9px 10px;border-bottom:1px solid var(--color-line);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:0}
+.tbl tr:nth-child(even) td{background:var(--color-canvas)}
+.st{font-weight:700}.st.ok{color:var(--color-ok)}.st.bad{color:var(--color-bad)}.st.n{color:var(--color-ink-3)}
+/* side */
+.side{background:var(--color-white);border-right:1px solid var(--color-line);padding:12px 10px;overflow:hidden}
+.side h4{font-size:11px;text-transform:uppercase;letter-spacing:.05em;color:var(--color-ink-3);margin:10px 6px 6px}
+.si{display:flex;justify-content:space-between;align-items:center;padding:6px 8px;border-radius:8px;font-size:13px;color:var(--color-ink-2)}
+.si.on{background:var(--color-accent-soft);color:var(--color-ink);font-weight:600}
+.si small{color:var(--color-ink-3);font-size:11.5px}
+.mini{height:3px;border-radius:2px;background:var(--color-field);margin:0 8px 4px;overflow:hidden}.mini span{display:block;height:100%;background:var(--color-accent)}
+.sheet{position:absolute;left:0;right:0;bottom:0;background:var(--color-white);border-radius:16px 16px 0 0;box-shadow:0 -8px 30px rgba(0,0,0,.25);padding:10px 16px 16px}
+.grab{width:36px;height:4px;border-radius:2px;background:var(--color-line);margin:0 auto 10px}
+.ring{width:56px;height:56px;border-radius:50%;background:conic-gradient(var(--color-accent) 0 38%,var(--color-field) 0);display:grid;place-items:center;flex:none}
+.ring span{width:44px;height:44px;border-radius:50%;background:var(--color-white);display:grid;place-items:center;font-weight:700;font-size:12px}
+.fab{position:absolute;right:16px;bottom:16px;height:44px;padding:0 16px;border-radius:22px;background:var(--color-accent);color:var(--on-accent);font-weight:600;display:flex;align-items:center;box-shadow:0 6px 18px rgba(0,0,0,.25)}
+.bnav{position:absolute;left:0;right:0;bottom:0;height:56px;border-top:1px solid var(--color-line);background:var(--color-white);display:flex;justify-content:space-around;align-items:center;font-size:11px;color:var(--color-ink-3)}
+.bnav .on{color:var(--color-accent);font-weight:600}
+</style></head><body>
+<div class="wrap">
+<header class="top"><div><h1>Çıkmış sorular · 4 yerleşim alternatifi</h1><div class="sub">/sorular/cikmis?kurul=2 · ortak ilke: sorular ilk ekranda, gruplama ≤ 1 satır, süzgeçler tek yapışkan çubukta</div></div>
+<button class="btn" id="tema">Tema: otomatik</button></header>
+<div class="tabs" role="tablist" id="tabs"></div>
+<div id="alts"></div>
+</div>
+<script>
+const Q=[
+ {d:'Farmakoloji',c:'#7C3AED',y:'2023–2024',n:165,s:'n',k:'Aşağıdakilerden hangisi aspirinin antiagregan etkisinin geri dönüşümsüz olmasının nedenidir?',o:['COX-1 enziminin asetillenmesi','ADP reseptör blokajı','Trombin inhibisyonu','GP IIb/IIIa antagonizması','Fosfodiesteraz inhibisyonu']},
+ {d:'Patoloji',c:'#C2312F',y:'2024–2025',n:42,s:'ok',k:'Kazeifiye granülom en tipik olarak hangi hastalıkta görülür?',o:['Sarkoidoz','Tüberküloz','Crohn hastalığı','Kedi tırmığı hastalığı','Yabancı cisim reaksiyonu'],a:1},
+ {d:'Mikrobiyoloji',c:'#0E7C86',y:'2025–2026',n:12,s:'bad',k:'Gram pozitif bakterilerin hücre duvarında bulunup gram negatiflerde bulunmayan yapı hangisidir?',o:['Lipopolisakkarit','Porin','Teikoik asit','Dış membran','Periplazmik boşluk'],a:2,w:0},
+ {d:'Fizyoloji',c:'#B45309',y:'2022–2023',n:88,s:'n',k:'Aldosteronun distal tübül ve toplayıcı kanaldaki temel etkisi hangisidir?',o:['Na⁺ geri emilimi, K⁺ atılımı','Su geri emiliminin azalması','Ca²⁺ atılımı','H⁺ geri emilimi','Glukoz geri emilimi']},
+ {d:'Farmakoloji',c:'#7C3AED',y:'2024–2025',n:7,s:'ok',k:'Varfarin etkisinin izlenmesinde kullanılan laboratuvar testi hangisidir?',o:['aPTT','INR','Kanama zamanı','Trombosit sayısı','Fibrinojen'],a:1},
+ {d:'Biyokimya',c:'#2563EB',y:'2023–2024',n:121,s:'n',k:'Glikolizin hız kısıtlayıcı enzimi hangisidir?',o:['Heksokinaz','Fosfofruktokinaz-1','Piruvat kinaz','Aldolaz','Enolaz']}
+];
+const YRS=[['Tümü',501],['2025–26',21],['2024–25',48],['2023–24',52],['2022–23',47],['2021–22',44],['2020–21',39],['2019–20',41],['2018–19',38],['2017–18',36],['2016–17',33],['2015–16',30],['2014–15',72]];
+const L='ABCDE';
+const stTag=s=>s==='ok'?'<span class="tag t-ok">✓ Doğru</span>':s==='bad'?'<span class="tag t-bad">✗ Yanlış</span>':'<span class="tag t-new">Çözülmedi</span>';
+const meta=q=>`<div class="meta"><span class="dot" style="background:${q.c}"></span><b style="color:var(--color-ink-2);font-weight:600">${q.d}</b><span>· ${q.y} · S${q.n}</span>${stTag(q.s)}<span class="sv">☆</span></div>`;
+const opts=(q,two)=>`<div class="opts ${two?'two':''}">${q.o.map((t,i)=>`<div class="opt ${q.s!=='n'&&i===q.a?'ok':''} ${q.s==='bad'&&i===q.w?'bad':''}"><i>${L[i]}</i>${t}</div>`).join('')}</div>`;
+const card=(q,two)=>`<div class="q">${meta(q)}<div class="stem">${q.k}</div>${opts(q,two)}</div>`;
+const yrChips=(n)=>YRS.slice(0,n).map((y,i)=>`<span class="chip ${i==0?'on':''}">${y[0]} <b>${y[1]}</b></span>`).join('');
+const nav=(m)=>`<div class="nav">MeDSor <span class="bc">${m?'Çıkmış · Kurul 2':'Soru çöz › Çıkmış › Kurul 2'}</span></div>`;
+
+const ALTS=[
+{id:'A',ad:'A · Yapışkan çubuk + yıl çipleri',ozet:'12 yıl kartı tek satır yatay kaydırmalı çip şeridine iner; arama, durum ve süzgeçler tek yapışkan çubukta; kartlar kompakt.',
+ pc:()=>nav()+`<div class="bar"><div class="srch">🔍 Kurul 2 çıkmışlarında ara…</div><div class="seg"><span class="on">Tümü</span><span>Çözülmedi</span><span>Yanlışlar</span><span>Kaydedilen</span></div><span class="chip dd">Ders</span><span class="chip dd">Sırala: Yeni</span><span class="pri">Test oluştur</span></div><div class="yr"><div class="seg"><span class="on">Yıl</span><span>Konu</span></div>${yrChips(13)}</div><div class="cnt">501 soru · 63 çözüldü</div><div class="list" style="grid-template-columns:1fr 1fr">${Q.map(q=>card(q)).join('')}</div>`,
+ tb:()=>nav()+`<div class="bar"><div class="srch">🔍 Ara…</div><span class="chip dd">Durum</span><span class="chip dd">Ders</span><span class="pri">Test</span></div><div class="yr">${yrChips(8)}</div><div class="cnt">501 soru</div><div class="list">${Q.slice(0,4).map(q=>card(q,true)).join('')}</div>`,
+ mb:()=>nav(1)+`<div class="bar"><div class="srch">🔍 Ara</div><span class="chip dd">Süzgeç <b>2</b></span></div><div class="yr">${yrChips(5)}</div><div class="cnt">501 soru</div><div class="list">${Q.slice(0,3).map(q=>card(q)).join('')}</div><div class="fab">▶ Test</div>`,
+ arti:['En az değişiklik: mevcut bileşenlere doğrudan oturur','Gruplama 44 px, sorular ilk ekranda','Tek yapışkan çubuk kaydırınca da görünür'],eksi:['Yıl başına ilerleme yüzdesi kaybolur (çip sayısı kalır)','Çok yıl olunca kaydırma keşfi zayıf'],
+ say:'PC ~6 (2 sütun) · tablet ~3 · mobil ~2',kay:[['Material Design – Chips (filter chips)','https://m2.material.io/components/chips'],['LeetCode Problemset (üst süzgeç çubuğu)','https://leetcode.com/problemset/']]},
+{id:'B',ad:'B · Yan panel (master–detail)',ozet:'PC/tablette solda Yıl/Konu ağacı + ilerleme çubukları kalıcı yan panelde; sağda soru akışı. Mobilde panel alt sayfaya (bottom sheet) dönüşür.',
+ pc:()=>nav()+`<div style="display:grid;grid-template-columns:240px 1fr;height:calc(100% - 48px)"><div class="side"><div class="seg" style="margin:0 6px"><span class="on">Yıla göre</span><span>Konuya göre</span></div><h4>Kurul 2 · 501</h4>${YRS.slice(0,11).map((y,i)=>`<div class="si ${i==0?'on':''}">${y[0]}<small>${y[1]}</small></div>${i?`<div class="mini"><span style="width:${(i*17)%80}%"></span></div>`:''}`).join('')}</div><div><div class="bar"><div class="srch">🔍 Ara…</div><div class="seg"><span class="on">Tümü</span><span>Çözülmedi</span><span>Yanlış</span><span>☆</span></div><span class="chip dd">Ders</span><span class="pri">Test oluştur</span></div><div class="list">${Q.slice(0,4).map(q=>card(q,true)).join('')}</div></div></div>`,
+ tb:()=>nav()+`<div style="display:grid;grid-template-columns:180px 1fr;height:calc(100% - 48px)"><div class="side"><h4>Yıl</h4>${YRS.slice(0,10).map((y,i)=>`<div class="si ${i==0?'on':''}">${y[0]}<small>${y[1]}</small></div>`).join('')}</div><div><div class="bar"><div class="srch">🔍 Ara</div><span class="chip dd">Süzgeç</span></div><div class="list">${Q.slice(0,4).map(q=>card(q)).join('')}</div></div></div>`,
+ mb:()=>nav(1)+`<div class="bar"><span class="chip on dd">2024–25</span><span class="chip dd">Durum</span><span class="chip dd">Ders</span></div><div class="list">${Q.slice(0,2).map(q=>card(q)).join('')}</div><div class="sheet"><div class="grab"></div><b>Yıl seç</b><div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:8px">${YRS.slice(0,8).map((y,i)=>`<span class="chip ${i==2?'on':''}" style="justify-content:space-between">${y[0]}<b>${y[1]}</b></span>`).join('')}</div></div>`,
+ arti:['Yıl ilerlemesi korunur ama alan yemez (yan sütun)','Geniş ekranda gezinme + liste aynı anda','Mobil alt sayfa başparmak erişiminde'],eksi:['PC\'de 240 px yatay alan harcar','İki farklı kalıp (panel/sheet) bakım yükü'],
+ say:'PC ~4 (geniş kart) · tablet ~3 · mobil ~2 (sheet kapalıyken)',kay:[['Apple HIG – Split views / Sidebars','https://developer.apple.com/design/human-interface-guidelines/split-views'],['Material 3 – Bottom sheets','https://m3.material.io/components/bottom-sheets/overview']]},
+{id:'C',ad:'C · Yoğun tablo listesi',ozet:'LeetCode problem listesi gibi: her soru bir satır (durum · yıl · ders · kök özeti · ☆). Tıklayınca soru sağ panelde/tam ekranda açılır. Mobilde iki satırlı liste öğesi.',
+ pc:()=>nav()+`<div class="bar"><div class="srch">🔍 Ara…</div><span class="chip on dd">Yıl: Tümü</span><span class="chip dd">Ders</span><span class="chip dd">Durum</span><span class="chip">☆ Kaydedilen</span><span class="pri">Rastgele çöz</span></div><table class="tbl"><thead><tr><th style="width:56px">Durum</th><th style="width:110px">Yıl · No</th><th style="width:130px">Ders</th><th>Soru</th><th style="width:40px"></th></tr></thead><tbody>${[...Q,...Q].map(q=>`<tr><td class="st ${q.s==='ok'?'ok':q.s==='bad'?'bad':'n'}">${q.s==='ok'?'✓':q.s==='bad'?'✗':'○'}</td><td>${q.y} · S${q.n}</td><td><span class="dot" style="display:inline-block;background:${q.c};margin-right:6px"></span>${q.d}</td><td style="color:var(--color-ink)">${q.k}</td><td>☆</td></tr>`).join('')}</tbody></table>`,
+ tb:()=>nav()+`<div class="bar"><div class="srch">🔍 Ara</div><span class="chip dd">Yıl</span><span class="chip dd">Ders</span><span class="chip dd">Durum</span></div><table class="tbl"><thead><tr><th style="width:40px"></th><th style="width:150px">Yıl · Ders</th><th>Soru</th></tr></thead><tbody>${[...Q,...Q].map(q=>`<tr><td class="st ${q.s==='ok'?'ok':q.s==='bad'?'bad':'n'}">${q.s==='ok'?'✓':q.s==='bad'?'✗':'○'}</td><td>${q.y}<br><small style="color:var(--color-ink-3)">${q.d}</small></td><td style="white-space:normal">${q.k}</td></tr>`).join('')}</tbody></table>`,
+ mb:()=>nav(1)+`<div class="bar"><div class="srch">🔍 Ara</div><span class="chip dd">Süzgeç</span></div><div class="yr">${yrChips(5)}</div>${[...Q,...Q].slice(0,7).map(q=>`<div style="display:flex;gap:10px;padding:10px 16px;border-bottom:1px solid var(--color-line);background:var(--color-white)"><span class="st ${q.s==='ok'?'ok':q.s==='bad'?'bad':'n'}">${q.s==='ok'?'✓':q.s==='bad'?'✗':'○'}</span><div style="min-width:0"><div style="font-size:13px;font-weight:500;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">${q.k}</div><div class="meta" style="margin-top:3px"><span class="dot" style="background:${q.c}"></span>${q.d} · ${q.y}</div></div></div>`).join('')}`,
+ arti:['En yüksek yoğunluk: ilk ekranda 12+ soru','Durum sütunu bir bakışta ilerleme gösterir','Sıralama/süzme başlıklardan doğal'],eksi:['Şıklar listede görünmez, bir tık gerekir','Tıp sorusu kökleri uzun; kesilme bağlamı kaybettirir'],
+ say:'PC ~12 · tablet ~10 · mobil ~7',kay:[['LeetCode Problemset','https://leetcode.com/problemset/'],['Anki Browser (kart tablosu)','https://docs.ankiweb.net/browsing.html']]},
+{id:'D',ad:'D · Tek soru odak akışı',ozet:'UWorld/Duolingo gibi: üstte ilerleme halkası + yıl açılır menüsü, ortada tek soru büyük ve okunaklı, altta önceki/sonraki ve hızlı süzgeç. PC\'de sağda numara ızgarası.',
+ pc:()=>nav()+`<div class="bar"><span class="chip dd on">Yıl: 2023–24</span><span class="chip dd">Ders</span><span class="chip dd">Çözülmedi</span><span style="margin-left:auto;color:var(--color-ink-3);font-size:12px">12 / 52</span></div><div style="display:grid;grid-template-columns:1fr 260px;gap:16px;padding:16px"><div class="q" style="padding:22px 26px">${meta(Q[0])}<div class="stem" style="font-size:18px;margin:12px 0 16px">${Q[0].k}</div>${opts(Q[0])}<div style="display:flex;gap:8px;margin-top:16px"><span class="chip">← Önceki</span><span class="chip">Açıklama</span><span class="pri" style="margin-left:auto">Sonraki →</span></div></div><div class="q"><div style="display:flex;gap:10px;align-items:center"><div class="ring"><span>38%</span></div><div><b>20/52</b><div class="meta">14 doğru · 6 yanlış</div></div></div><div style="display:grid;grid-template-columns:repeat(8,1fr);gap:4px;margin-top:12px">${Array.from({length:48},(_,i)=>`<span style="height:22px;border-radius:5px;font-size:10px;display:grid;place-items:center;background:${i<14?'var(--color-ok-soft)':i<20?'var(--color-bad-soft)':i==20?'var(--color-accent)':'var(--color-field)'};color:${i==20?'var(--on-accent)':'var(--color-ink-2)'}">${i+1}</span>`).join('')}</div></div></div>`,
+ tb:()=>nav()+`<div class="bar"><span class="chip dd on">2023–24</span><span class="chip dd">Ders</span><div class="ring" style="width:34px;height:34px;margin-left:auto"><span style="width:26px;height:26px;font-size:9px">38</span></div></div><div style="padding:16px"><div class="q" style="padding:20px">${meta(Q[1])}<div class="stem" style="font-size:17px;margin:10px 0 14px">${Q[1].k}</div>${opts(Q[1])}</div><div style="display:flex;gap:8px;margin-top:12px"><span class="chip">← Önceki</span><span class="pri" style="margin-left:auto">Sonraki →</span></div><div class="cnt" style="padding:12px 0">Sıradaki: ${Q[2].k.slice(0,60)}…</div></div>`,
+ mb:()=>nav(1)+`<div class="bar"><span class="chip dd on">2023–24</span><span class="chip dd">Süzgeç</span><span style="margin-left:auto;font-size:12px;color:var(--color-ink-3)">12/52</span></div><div style="height:3px;background:var(--color-field)"><div style="width:23%;height:100%;background:var(--color-accent)"></div></div><div style="padding:14px 16px"><div class="q">${meta(Q[2])}<div class="stem" style="font-size:16px">${Q[2].k}</div>${opts(Q[2])}</div></div><div class="bnav"><span>← Önceki</span><span>☆ Kaydet</span><span class="on">Sonraki →</span></div>`,
+ arti:['En okunaklı soru kartı, sınav deneyimine yakın','Mobilde kaydırma yerine başparmakla ileri/geri','İlerleme halkası motivasyon verir'],eksi:['Göz atma/tarama zor (aynı anda 1 soru)','Liste görünümü ayrıca gerekir (ör. A ile birlikte)'],
+ say:'PC 1 (+48 numara) · tablet 1 · mobil 1',kay:[['UWorld QBank kullanım rehberi (WSU)','https://tech.medicine.wsu.edu/technology/medical-education/uworld/question-bank-students/'],['Duolingo tasarım ilkeleri','https://blog.duolingo.com/']]}
+];
+const SIZES=[['PC · 1280',1280,780],['Tablet · 768',768,1000],['Mobil · 375',375,760]];
+const tabs=document.getElementById('tabs'),alts=document.getElementById('alts');
+ALTS.forEach((a,i)=>{
+ tabs.insertAdjacentHTML('beforeend',`<button role="tab" aria-selected="${i==0}" data-i="${i}">${a.ad}</button>`);
+ const fr=[a.pc,a.tb,a.mb].map((f,j)=>`<div class="fr"><div class="lab">${SIZES[j][0]}</div><div class="vp" data-w="${SIZES[j][1]}" data-h="${SIZES[j][2]}"><div class="dev" style="width:${SIZES[j][1]}px;--h:${SIZES[j][2]}px">${f()}</div></div></div>`).join('');
+ alts.insertAdjacentHTML('beforeend',`<section class="alt ${i==0?'on':''}"><h2>${a.ad}</h2><p class="sub">${a.ozet}</p><div class="frames">${fr}</div><div class="notes"><div class="note"><h3>Artılar</h3><ul>${a.arti.map(x=>`<li>${x}</li>`).join('')}</ul></div><div class="note"><h3>Eksiler</h3><ul>${a.eksi.map(x=>`<li>${x}</li>`).join('')}</ul></div><div class="note"><h3>İlk ekranda soru</h3><ul><li>${a.say}</li></ul></div><div class="note"><h3>Esin kaynakları</h3><ul>${a.kay.map(k=>`<li>${k[0]}<br><a href="${k[1]}" target="_blank" rel="noopener">${k[1]}</a></li>`).join('')}</ul></div></div></section>`);
+});
+function fit(){document.querySelectorAll('.alt.on .vp').forEach(v=>{const w=+v.dataset.w,h=+v.dataset.h,s=Math.min(1,v.clientWidth/w);v.style.height=h*s+'px';v.firstChild.style.transform=`scale(${s})`;});}
+function lay(){const W=document.querySelector('.wrap').clientWidth;document.querySelectorAll('.frames').forEach(f=>f.style.gridTemplateColumns=W>1000?'2.2fr 1.3fr .75fr':W>640?'1fr 1fr':'1fr');fit();}
+tabs.onclick=e=>{const b=e.target.closest('button');if(!b)return;tabs.querySelectorAll('button').forEach(x=>x.setAttribute('aria-selected',x===b));document.querySelectorAll('.alt').forEach((s,i)=>s.classList.toggle('on',i==b.dataset.i));lay();};
+addEventListener('resize',lay);lay();
+const modes=['otomatik','açık','koyu'];let m=0;
+document.getElementById('tema').onclick=e=>{m=(m+1)%3;const r=document.documentElement;m==0?r.removeAttribute('data-theme'):r.dataset.theme=m==1?'light':'dark';e.target.textContent='Tema: '+modes[m];};
+</script></body></html>

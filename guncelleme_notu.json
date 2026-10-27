@@ -1,10 +1,11 @@
 {
  "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
- "onem": 516,
- "baslik": "Ders paketini telefondan paylaşarak aç",
+ "onem": 517,
+ "baslik": "Çıkmış sorularda 4 görünüm",
  "maddeler": [
-  "Android: .medspak dosyasında Paylaş → MeDSor seçince ders paketi sitede açılır (MeDSor ana ekrana eklenmiş olmalı)",
-  "Bilgisayar: yüklü MeDSor ile .medspak dosyasını \"Birlikte aç\" ile açabilirsin"
+  "Çıkmış sorular artık ilk ekranda: yıllar tek satır çip, süzgeçler tek yapışkan çubukta",
+  "Görünüm seç: Liste, Panel, Tablo ya da Odak (tek soru)",
+  "Seçimin bu cihazda hatırlanır"
  ],
  "eklenen": [],
  "degisen": [],
