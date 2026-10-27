@@ -1,16 +1,17 @@
 {
- "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
- "onem": 394,
- "baslik": "Ders programı",
- "maddeler": [
-  "Yeni sayfa: Ders programı (Ders çalış › Ders programı) — kurulun derslerini gün, hafta ya da liste olarak gör",
-  "Sesli anlatımı hazır derslere programdan tek dokunuşla geç"
- ],
- "eklenen": [],
- "degisen": [],
- "duzeltilen": [
-  "Tireyle bitişik yazılan kısaltmalar (DSM-5, MAO-A, HIV-1, 5-HTTLPR) artık slaytta doğru yerde işaretleniyor.",
-  "Büyük harfli Türkçe sözcükler (BİLİNÇ, KOMA) kısaltma sayılmıyor."
- ],
- "silinen": []
+  "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
+  "onem": 395,
+  "baslik": "Kurul 2 Patoloji dersleri ve yeni tasarım",
+  "maddeler": [
+    "Patoloji 1 (SSS hücresel reaksiyonları, ödem, herniasyon) ve Patoloji 2 (serebrovasküler hastalıklar ve inme) sesli ve etkileşimli dersleri yayında.",
+    "Slaytlarda doğrulanmış çıkmış soru çipleri, terim ve kısaltma açıklamaları, resim üstü çizimler.",
+    "Yalın (v15) tasarım artık varsayılan; eski tasarımlar Ayarlar > Görünüm’den seçilebilir."
+  ],
+  "eklenen": [],
+  "degisen": [],
+  "duzeltilen": [
+    "Tireyle bitişik yazılan kısaltmalar (DSM-5, MAO-A, HIV-1, 5-HTTLPR) artık slaytta doğru yerde işaretleniyor.",
+    "Büyük harfli Türkçe sözcükler (BİLİNÇ, KOMA) kısaltma sayılmıyor."
+  ],
+  "silinen": []
 }

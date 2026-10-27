@@ -114,7 +114,7 @@ export const LAYOUT_LABELS: Record<LayoutMode, string> = { akis: 'Akış', pano:
 export const READING_LABELS: Record<ReadingFont, string> = { serif: 'Serif', sans: 'Sans' };
 export const TEXT_SIZE_LABELS: Record<TextSize, string> = { xs: 'En küçük', s: 'Küçük', m: 'Orta', l: 'Büyük', xl: 'En büyük' };
 export const FILTER_MODE_LABELS: Record<FilterMode, string> = { basit: 'Basit', gelismis: 'Gelişmiş' };
-const V11_DEFAULTS = { reading: 'serif' as ReadingFont, textSize: 'm' as TextSize, textPx: 16, filters: 'basit' as FilterMode, qtags: false, qcard: QCARD_DEFAULTS, motion: 'full' as MotionPref, design: 'v12' as DesignVersion };
+const V11_DEFAULTS = { v15: true, reading: 'serif' as ReadingFont, textSize: 'm' as TextSize, textPx: 16, filters: 'basit' as FilterMode, qtags: false, qcard: QCARD_DEFAULTS, motion: 'full' as MotionPref, design: 'v12' as DesignVersion };
 export const DESIGN_LABELS: Record<DesignVersion, string> = { v12: 'Net (v12)', v11: 'Sade (v11)', v10: 'Klasik (v10)' };
 export const DENSITY_LABELS: Record<Density, string> = { compact: 'Kompakt', normal: 'Normal', wide: 'Geniş' };
 /** Geriye dönük uyumluluk: tema → palet kimliği → bilgi (kayıttan üretilir). */
@@ -175,7 +175,8 @@ function read(): Appearance {
         designMigratedAt: typeof p.designMigratedAt === 'number' ? p.designMigratedAt : undefined,
         accents: p.accents && typeof p.accents === 'object' ? { ...p.accents } : {},
         v13: p.v13 === true && p.v15 !== true,
-        v15: p.v15 === true,
+        // v15 kullanıcılar için varsayılan (2026-10-27): tasarımı bilerek seçmeyen herkes v15'e geçer
+        v15: p.v15 === true || (!p.designPicked && p.v15 !== false && p.v13 !== true && migrateDesign(p) === 'v12'),
         v13Asked: p.v13Asked === true,
       };
       // Taşınan tasarım seçimi kalıcı olsun (aksi halde sonraki açılışta v11'e döner)

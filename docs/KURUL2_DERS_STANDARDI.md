@@ -3,7 +3,7 @@
 > Kullanıcı kararı 2026-10-27: "Bundan sonra ekstra bir şey yazmama gerek kalmadan yapılacaklar belli olsun. Hata istemiyorum."
 > Kullanıcı yalnız **hangi dosyanın hangi ders olduğunu** söyler; aşağıdaki her şey sormadan, eksiksiz ve kapılardan
 > 0 HATA ile geçerek yapılır ve canlıya alınır. Ayrıntılı kurallar bağlantılı belgelerdedir; çelişkide bu belge + AGENTS.md esastır.
-> İşletim adımları (komutlar): `KURUL_OTOMASYON_EL_KITABI.md` §19. Hata defteri: `KURUL2_YAPILMAYACAK_HATALAR.md` (H1–H85).
+> İşletim adımları (komutlar): `KURUL_OTOMASYON_EL_KITABI.md` §19. Hata defteri: `KURUL2_YAPILMAYACAK_HATALAR.md` (H1–H95).
 
 ## 0. Değişmez ilkeler
 1. **LLM/API otomasyonu yok** (AGENTS kural 20): işçi, zamanlayıcı, `claude -p` yok. Ders, kullanıcı komutuyla bu oturumda
@@ -37,8 +37,8 @@ Kullanıcı eşlemeyi söylediyse o esastır; yine de sayfa başlıkları içeri
 | 7 | Sesli ders metni (+ `konusma_v2`) | `metin/<key>.md` | `metin_denetle.py`, `konusma_v2.py --dogrula`, `turkce_uslup`, **bağımsız denetçi GEÇER** |
 | 8 | Yayın: ders-ekle + Öğren destesi + PDF bağı | canlı ders | canlı API |
 | 9 | EMA ses → cümle/kelime zamanı → PDF işareti | `ses/`, `cumle_zaman/`, `kelime_zaman/`, `isaret/` | **metin takipçisi kapısı §5** |
-| 10 | Terim + kısaltma katmanı | `terim/`, `kisaltma/` | `terim_sozlugu.py dogrula`, `kisaltma_sozlugu.py` |
-| 11 | Anlamsal çapa | `capa/` | `capa_dogrula.py` (≥%70, hedef %100) |
+| 10 | Terim + kısaltma katmanı (kısaltma listesi slaytla okunur; branşa göre anlamı değişen için `kisaltma_elle/<key>.json`, H92) | `terim/`, `kisaltma/` | `terim_sozlugu.py dogrula`, `kisaltma_sozlugu.py` |
+| 11 | Anlamsal çapa → Oracle'a yükle → `pdf_isaret.py --key <key> --zorla` (H93) | `capa/`, `isaret/` | `capa_dogrula.py` (≥%70, hedef %100) |
 | 12 | Çizim (tasarım kataloğunun tamamı, §4) + bağımsız anlam denetimi | `cizim/` | `cizim_kapisi.py`, `panel_sinama.mjs` (3 genişlik) |
 | 13 | Spot / önem, sınav asistanı, soru çözücü (branşta varsa) | `src/data/k2<brans>_*` | `onem/asistan/cozucu_dogrula.py`, `sik_aciklama.py` |
 | 14 | Quiz envanteri (her ders); quiz soruları yalnız Farmakoloji (kural 19) | `atomik_bilgi_envanteri.json` (+ `quiz_havuzu.json`) | `quiz_dogrula.py` |
@@ -77,7 +77,7 @@ Her derste yayından önce `scripts/sesli_anlatim/takip_kapisi.py <key>` **0 HAT
 
 ## 6. Canlı doğrulama (dağıtımdan sonra)
 `/api/canli-ders/<key>`: bölüm/paragraf, ses varyantı + süre, `isaret`, çizimli cümle sayısı, `cikmisKonum` (hepsi
-`/api/past-exams/tek/<id>` 200), `terim`, `kisaltma`; `/api/lecture-pdf/deck/<deck>/0` 200; Öğren destesi açılıyor.
+`/api/past-exams/tek/<id>` 200 — gizli/birleştirilmiş kopya listeye girmez, H94), `terim`, `kisaltma`; `/api/lecture-pdf/deck/<deck>/0` 200; Öğren destesi açılıyor.
 
 ## 7. İçerik kuralları (özet; ayrıntı bağlı belgelerde)
 AGENTS 1–9b (madde yapısı, sıfır tekrar, 60–250 kelime, müfredat sadakati, kronoloji/sıfır ileri sızıntı, 4–6 öge,

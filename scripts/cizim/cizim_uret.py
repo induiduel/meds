@@ -903,6 +903,14 @@ def main() -> int:
     isr = json.loads(Path(a.isaret).read_text())
     hz = json.loads((KOK / "hizalama" / f"{a.key}.json").read_text())
     pdfler = sorted((KOK / ".pdf_onbellek").glob(f"{hz['deckId']}_0_*.pdf"))
+    if not pdfler and hz.get("dosyalar"):  # H91: capa_dok PDF'i indirme klasöründen okur; önbellek boşsa aynı yol
+        sys.path.insert(0, str(MEDS / "scripts" / "sesli_anlatim"))
+        from pdf_isaret import INDIR, pdf_indir
+        yol = INDIR / hz["dosyalar"][0]["path"]
+        yol = yol if yol.exists() else pdf_indir(hz["deckId"], hz["dosyalar"][0], 0)
+        pdfler = [Path(yol)] if yol and Path(yol).exists() else []
+    if not pdfler:
+        raise SystemExit("ders PDF'i bulunamadı: resim kutuları ve kontur doğrulaması yapılamaz")
     import pymupdf
     belge = pymupdf.open(pdfler[-1]) if pdfler else None
 

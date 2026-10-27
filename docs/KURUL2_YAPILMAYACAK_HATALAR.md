@@ -804,3 +804,40 @@ Her maddede: belirti · kök neden · Kurul 2 kuralı · kapı durumu. Kanıtlar
 - **Çözüm:** `styles/v15/tokens.css`'e takma adlar (gerçek jetonlara bağlı).
 - **Önleme kuralı:** yeni CSS'te renk/yazı değişkeni yazmadan önce `getComputedStyle(document.documentElement)` ile ya da
   palettes.ts/tokens.css'te var olduğu doğrulanır; yeni ad uydurulmaz.
+
+## H91 — Çizim PDF'i önbellekte olmayınca bütün konturlar sessizce reddedildi (2026-10-27, k2-03/k2-04)
+- **Belirti:** `cizim_uret.py` 14 konturun tamamını "sayfa görüntüsü yok" diye attı; panel_sinama `hazirla.py` IndexError ile çöktü.
+- **Kök neden:** `capa_dok.py` ders PDF'ini indirme klasöründen (`meds_downloads/drive_root/<path>`) okur, `cizim_uret.py` ve
+  `sinama/hazirla.py` ise yalnız `data/sesli_anlatim/.pdf_onbellek/<deck>_0_*.pdf` arıyordu. İşçisiz (elle) yayında önbellek
+  dolmaz → belge `None` → raster yok → kontur doğrulanamaz ve sessizce elenir.
+- **Çözüm:** ikisine de aynı yedek yol (indirme klasörü → `pdf_isaret.pdf_indir`); `cizim_uret` PDF hiç bulunamazsa durur.
+- **Önleme kuralı:** bir hattaki bütün betikler kaynak dosyayı aynı yardımcıyla bulur; ret sayacında tek bir nedenin tüm komutları
+  ataması (ör. "görüntü yok" = kontur sayısı) kapı hatası sayılır, yayına geçilmez.
+
+## H92 — Bilinen kısaltma sözlüğü bağlamsız: MSS "Muskuloskeletal sistem" diye açıldı (2026-10-27, k2-03/k2-04)
+- **Belirti:** Nöropatoloji derslerinde MSS kısaltma kartında "Muskuloskeletal sistem"; slayt "MSS-SSS: Merkezi-Santral Sinir Sistemi" diyor.
+- **Kök neden:** `kisaltma_bilinen.json` her kısaltmaya dersten bağımsız tek açılım verir ve `otomatik` slaytın kendi tanımına bakmaz.
+- **Çözüm:** derse özel `data/sesli_anlatim/kisaltma_elle/<key>.json` (`MSS: Merkezi sinir sistemi`), elle eşleme bilinenden önce gelir.
+- **Önleme kuralı:** her derste kısaltma listesi (kısaltma = açılım) yazdırılıp slayt metniyle okunur; branşa göre anlamı değişen
+  kısaltma (MSS, KB, BOS …) için derse özel eşleme yazılır, genel sözlüğe yeni anlam eklenmez.
+
+## H93 — Çapa değişince PDF işareti yenilenmedi (2026-10-27, k2-04)
+- **Belirti:** takip kapısı `T5 P72.C2: işaret s.74 ≠ çapa s.73`.
+- **Kök neden:** `meds-cumle-zaman` servisi işareti yalnız ses/metin değişince yeniden üretir; çapa sonradan yüklenince eski
+  (v2 sayfa ipucuyla üretilmiş) işaret kalır.
+- **Çözüm/kural:** çapa Oracle'a yüklendikten sonra `pdf_isaret.py --key <key> --zorla` çalıştırılır, ardından `takip_kapisi.py --api` 0 HATA.
+
+## H94 — Çıkmış listesinde birleştirilmiş gizli kopya: çip 404 verdi (2026-10-27, k2-03)
+- **Belirti:** `/api/past-exams/tek/ea1ab6a5b61d` 404 (çip açılınca "Soru yüklenemedi").
+- **Kök neden:** aynı kökün iki kopyası eşlendi; biri birleştirme katmanında gizli (`applyMergeOverlay`), sunulan listede yok.
+- **Kural:** `cikmis_konum` yalnız sunulan soru kimliklerini içerir; canlı doğrulamada her kimlik `/tek` 200 vermeden ders tamam sayılmaz.
+
+## H95 — Yayın düzeltmesinde olmayan alan; PDF eşleyici durdurulan işçi kapsayıcısında (2026-10-27, k2-03/k2-04)
+- **Belirti:** `meds-ders-yayin` her 10 dakikada `AttributeError: 'Yayin' object has no attribute 'ders_id'`; yayından sonra
+  "PDF eşleşmesi: container … is not running" ve deste PDF'i 404.
+- **Kök neden:** H88 düzeltmesindeki lambda `y.ders_id`'yi `denetle()` öncesi okuyordu (alan orada atanır); PDF eşleyici
+  `docker exec meds-ders-isci` ile çalışıyor, LLM yasağıyla durdurulan kapsayıcıda koşamıyor.
+- **Çözüm:** `y.b.get("ders_id")`; PDF eşleme tek seferlik `docker run --rm -u 1001:1001 --entrypoint python3 medsoru-isci:latest`
+  (aynı bağlar, LLM anahtarı yok) ile; deste PDF'i 200 doğrulandı.
+- **Önleme kuralı:** yayın betiği değişikliği Oracle'a gitmeden önce yerel taslakla `kaynak_kimligi_esnek` ve `--deneme` akışı
+  çalıştırılır; yayından sonra `/api/lecture-pdf/deck/<deck>/0` 200 kontrolü zorunlu.

@@ -12,7 +12,7 @@ import '../../styles/v13/invite.css';
 const V13Invite: React.FC = () => {
   const look = useAppearance();
   const [open, setOpen] = useState(false);
-  const asked = look.v13Asked;
+  const asked = look.v13Asked || look.v15; // v15 varsayılan: v13 daveti gösterilmez
 
   useEffect(() => {
     // Yönetim konsolunda öğrenci tasarım daveti gösterilmez

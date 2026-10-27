@@ -1,0 +1,4279 @@
+{
+ "surum": 2,
+ "ders_id": "k2-04",
+ "baslik": "Serebrovasküler Hastalıklar ve İnme",
+ "bolumler": [
+  {
+   "id": "k2-04-b01",
+   "baslik": "Kapsam, tanım ve temel mekanizmalar",
+   "paragraflar": [
+    {
+     "id": "k2-04-p001",
+     "sayfa": 3,
+     "cumleler": [
+      {
+       "id": "k2-04-c0001",
+       "ses": "Bu derste serebrovasküler hastalıkları merkezi sinir sistemi travmasıyla birlikte ele alıyoruz; kapsam hipoksi, iskemi ve enfarktüsten başlayıp kafa içi kanamalar, vasküler malformasyonlar, vaskülit, vasküler demans, travmatik hematomlar ve perinatal beyin hasarına uzanıyor.",
+       "ekran": "Kapsam: **serebrovasküler hastalıklar** ve merkezi sinir sistemi travması; iskemiden perinatal hasara",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "serebrovasküler hastalıklar",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "Konu: Serebrovasküler hastalıklar ve merkezi sinir sistemi (MSS) travması"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-04-p002",
+     "sayfa": 4,
+     "cumleler": [
+      {
+       "id": "k2-04-c0002",
+       "ses": "Serebrovasküler hastalıklar, kan damarlarını tutan patolojik süreçlerden kaynaklanan beyin bozukluklarıdır; yani sorunun kaynağı nöronun kendisi değil, onu besleyen damardır.",
+       "ekran": "**Tanım:** kan damarlarını tutan patolojik süreçlerden kaynaklanan beyin bozuklukları",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Tanım:",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 4,
+        "satir": [
+         "Kan damarlarını tutan patolojik süreçlerden kaynaklanan beyin bozukluklarıdır."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-04-c0003",
+       "ses": "Yüksek gelirli ülkelerde bu hastalıklar önemli bir ölüm ve morbidite nedenidir.",
+       "ekran": "Yüksek gelirli ülkelerde **önemli ölüm ve morbidite** nedeni",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 4,
+        "satir": [
+         "Önemli ölüm ve morbidite nedenidir."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-04-p003",
+     "sayfa": 5,
+     "cumleler": [
+      {
+       "id": "k2-04-c0004",
+       "ses": "Üç ana patojenik mekanizma vardır: trombotik tıkanma, embolik tıkanma ve vasküler yırtılma; bu mekanizmaların akut klinik tablosuna genellikle inme denir.",
+       "ekran": "Üç mekanizma: trombotik tıkanma, embolik tıkanma, vasküler yırtılma → akut tablo **inme**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "inme",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "Trombotik tıkanma",
+         "Embolik tıkanma",
+         "Vasküler yırtılma",
+         "Bu mekanizmaların akut klinik tablosu genellikle inme olarak adlandırılır."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-04-c0005",
+       "ses": "Yani inme tek bir hastalık değildir; tıkanmaya bağlı iskemik ve yırtılmaya bağlı hemorajik inme diye mekanizmaya göre ayrılır.",
+       "ekran": "İnme mekanizmaya göre **iskemik** ya da **hemorajik** olarak ayrılır",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "Bu mekanizmaların akut klinik tablosu genellikle inme olarak adlandırılır."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-04-p004",
+     "sayfa": 6,
+     "cumleler": [
+      {
+       "id": "k2-04-c0006",
+       "ses": "Tromboz ve emboli sonucunda oksijen ve metabolik substrat kaybı olur ve etkilenen bölgede iskemik hasar ya da enfarktüs gelişir.",
+       "ekran": "Tromboz ve emboli → **oksijen ve metabolik substrat kaybı** → bölgesel iskemik hasar, enfarktüs",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "oksijen ve metabolik substrat kaybı",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "Oksijen ve metabolik substrat kaybı",
+         "Etkilenen bölgedeki iskemik hasar / enfarktüs."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-04-c0007",
+       "ses": "Perfüzyonun global bozulması ise şiddetli hipoksemi, hipovolemik şok ya da şiddetli hipoglisemi ile oluşabilir ve tüm beyni etkiler.",
+       "ekran": "Global perfüzyon bozukluğu: şiddetli hipoksemi, **hipovolemik şok**, şiddetli hipoglisemi",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "Şiddetli hipoksemi",
+         "Hipovolemik şok",
+         "Şiddetli hipoglisemi ile oluşabilir."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-04-c0008",
+       "ses": "Kanamada hasar iki katmanlıdır: doğrudan doku hasarına sekonder iskemik hasar eklenir.",
+       "ekran": "Kanama: **doğrudan doku hasarı + sekonder iskemik hasar**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "doğrudan doku hasarı + sekonder iskemik hasar",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "Doğrudan doku hasarı + sekonder iskemik hasar."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-04-b02",
+   "baslik": "Beynin metabolizması, hipoksi ve iskemi",
+   "paragraflar": [
+    {
+     "id": "k2-04-p005",
+     "sayfa": 7,
+     "cumleler": [
+      {
+       "id": "k2-04-c0009",
+       "ses": "Beyin vücut ağırlığının yüzde ikisinden azdır, ama dinlenme kalp debisinin yüzde on beşini alır ve toplam vücut oksijen tüketiminin yüzde yirmisini kullanır.",
+       "ekran": "Beyin: ağırlığın **yüzde ikisinden az**, kalp debisinin yüzde on beşi, oksijen tüketiminin yüzde yirmisi",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "yüzde ikisinden az",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "Vücut ağırlığının <%2’si",
+         "Dinlenme kalp debisinin %15’ini alır.",
+         "Toplam vücut oksijen tüketiminin %20’sini kullanır."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-04-c0010",
+       "ses": "Sürekli glikoz ve oksijen gereksinimi olduğu için kısa süreli bir perfüzyon kaybı bile beyinde hasar bırakabilir.",
+       "ekran": "**Sürekli glikoz ve oksijen** gereksinimi → iskemiye aşırı duyarlılık",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "Sürekli glikoz ve oksijen gereksinimi vardır."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-04-p006",
+     "sayfa": 8,
+     "cumleler": [
+      {
+       "id": "k2-04-c0011",
+       "ses": "Serebral kan akışı, vasküler direncin otoregülasyonu sayesinde geniş bir kan basıncı aralığında sabit tutulur; otoregülasyon bozulduğunda iskemi riski artar.",
+       "ekran": "**Otoregülasyon** kan akışını geniş basınç aralığında sabit tutar; bozulursa iskemi riski artar",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Otoregülasyon",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "Vasküler direncin otoregülasyonu ile geniş kan basıncı aralığında sabit tutulur.",
+         "Otoregülasyon bozulduğunda iskemi riski artar."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-04-p007",
+     "sayfa": 9,
+     "cumleler": [
+      {
+       "id": "k2-04-c0012",
+       "ses": "Fonksiyonel hipokside kan akımı normal olsa bile doku oksijensiz kalır: yüksek rakımda düşük oksijen parsiyel basıncı, şiddetli anemi ya da karbonmonoksit zehirlenmesinde azalmış oksijen taşıma kapasitesi, siyanür gibi oksijen kullanımını engelleyen toksinler buna yol açar.",
+       "ekran": "**Fonksiyonel hipoksi:** yüksek rakım, anemi ve karbonmonoksit, siyanür",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Fonksiyonel hipoksi:",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [
+         "Düşük oksijen parsiyel basıncı (yüksek rakım)",
+         "Oksijen kullanımını engelleyen toksinler (siyanür)."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-04-c0013",
+       "ses": "İskemi ise kan akımının azalmasıdır; geçici veya kalıcı olabilir ve hipotansiyon, damar tıkanıklığı ya da ikisinin birleşimiyle gelişir.",
+       "ekran": "İskemi ise kan akımının azalmasıdır; geçici veya kalıcı olabilir ve hipotansiyon, damar tıkanıklığı ya da ikisinin birleşimiyle gelişir.",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [
+         "Geçici veya kalıcı olabilir.",
+         "Hipotansiyon, damar tıkanıklığı veya ikisinin birleşimi ile gelişir."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-04-b03",
+   "baslik": "Global serebral iskemi",
+   "paragraflar": [
+    {
+     "id": "k2-04-p008",
+     "sayfa": 10,
+     "cumleler": [
+      {
+       "id": "k2-04-c0014",
+       "ses": "Global hipoksi ve iskeminin nedenleri kalp durması, şok, şiddetli hipotansiyon ve karbonmonoksit zehirlenmesindeki gibi kanın oksijen taşıma kapasitesinin azalmasıdır; bu durumda tüm beyin dokusuna yeterli oksijen ve kan gidemez ve tablo acil tıbbi durumdur.",
+       "ekran": "Global iskemi nedenleri: **kalp durması**, şok, şiddetli hipotansiyon, oksijen taşıma kapasitesinde azalma",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "kalp durması",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 10,
+        "satir": [
+         "Kalp durması",
+         "Şok",
+         "Şiddetli hipotansiyon"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-04-p009",
+     "sayfa": 11,
+     "cumleler": [
+      {
+       "id": "k2-04-c0015",
+       "ses": "Klinik şiddet bir spektrumdur: hafif hasarda geçici konfüzyon ve tam iyileşme, orta ağır hasarda bölgesel duyarlı alanlarda hasar, şiddetli global iskemide ise yaygın nöronal ölümle kalıcı ağır nörolojik defisit ya da kalıcı vejetatif durum, yani bitkisel hayat gelişir.",
+       "ekran": "Hafif: geçici konfüzyon; orta ağır: duyarlı alanlarda hasar; şiddetli: **kalıcı vejetatif durum**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "kalıcı vejetatif durum",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 11,
+        "satir": [
+         "Geçici konfüzyon",
+         "Bölgesel duyarlı alanlarda hasar.",
+         "Yaygın nöronal ölüm"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-04-p010",
+     "sayfa": 12,
+     "cumleler": [
+      {
+       "id": "k2-04-c0016",
+       "ses": "En ağır tabloda tüm istemli ve refleks beyin fonksiyonları kaybolur, beyin sapı refleksleri yoktur ve klinik olarak beyin ölümü kriterleri karşılanır.",
+       "ekran": "En ağır tablo: beyin sapı refleksleri yok → **beyin ölümü**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "beyin ölümü",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 12,
+        "satir": [
+         "Tüm istemli ve refleks beyin fonksiyonları kaybolur.",
+         "Beyin sapı refleksleri yoktur.",
+         "Klinik olarak beyin ölümü kriterleri karşılanır."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-04-c0017",
+       "ses": "Böyle bir hasta uzun süre mekanik ventilasyonla desteklenirse beyin dokusu otolize uğrayabilir.",
+       "ekran": "Uzun süre mekanik ventilasyonda beyin **otolize** uğrayabilir",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 12,
+        "satir": [
+         "Beyin dokusu otolize uğrayabilir."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-04-p011",
+     "sayfa": 13,
+     "cumleler": [
+      {
+       "id": "k2-04-c0018",
+       "ses": "Nöronlar glialara göre hipoksiye daha duyarlıdır; bu yüzden iskemik hasar önce nöronlarda görülür.",
+       "ekran": "**Nöronlar** glialardan daha duyarlı",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Nöronlar",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 13,
+        "satir": [
+         "Nöronlar, glialara göre hipoksiye daha duyarlıdır."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-04-c0019",
+       "ses": "En hassas bölgeler hipokampus piramidal hücreleri, neokorteks piramidal hücreleri ve serebellumun Purkinje hücreleridir; hafif ya da geçici iskemi bile bu alanlarda hasar bırakabilir.",
+       "ekran": "En duyarlı: **hipokampus piramidal**, neokorteks piramidal, serebellum Purkinje hücreleri",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "hipokampus piramidal",
+         "tur": "tuzak"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 13,
+        "satir": [
+         "Hipokampus piramidal hücreleri",
+         "Neokorteks piramidal hücreleri",
+         "Serebellum Purkinje hücreleri."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-04-p012",
+     "sayfa": 14,
+     "cumleler": [
+      {
+       "id": "k2-04-c0020",
+       "ses": "Makroskopide beyin şişmiş görünür, giruslar genişlemiş, sulkuslar daralmıştır ve kesitte gri madde ile beyaz madde sınırı silikleşmiştir; bu üçlü yaygın ödemi yansıtır.",
+       "ekran": "Makroskopi: şişkin beyin, geniş giruslar, dar sulkuslar, **silik gri beyaz madde sınırı**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "silik gri beyaz madde sınırı",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 14,
+        "satir": [
+         "Beyin şişmiş görünür.",
+         "Giruslar genişlemiş, sulkuslar daralmıştır.",
+         "Gri madde–beyaz madde sınırı silikleşmiştir."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-04-p013",
+     "sayfa": 15,
+     "cumleler": [
+      {
+       "id": "k2-04-c0021",
+       "ses": "On iki ile yirmi dört saat arasında akut nöronal değişiklik olarak kırmızı nöronlar görülür; mikrovakuolizasyon, sitoplazmik eozinofili, nükleer piknoz ve karyoreksis bu değişikliğin bileşenleridir.",
+       "ekran": "On iki ile yirmi dört saat: **kırmızı nöronlar**; mikrovakuolizasyon, eozinofili, piknoz, karyoreksis",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "kırmızı nöronlar",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "Akut nöronal değişiklikler → “kırmızı nöronlar”",
+         "Mikrovakuolizasyon",
+         "sitoplazmik eozinofili",
+         "nükleer piknoz"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-04-c0022",
+       "ses": "Benzer değişiklikler daha sonra astrosit ve oligodendrositlerde ortaya çıkar ve nötrofil infiltrasyonu başlar.",
+       "ekran": "Sonra astrosit ve oligodendrositlerde benzer değişiklik; **nötrofil infiltrasyonu** başlar",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 15,
+        "satir": [
+         "Benzer değişiklikler daha sonra astrosit ve oligodendrositlerde.",
+         "Nötrofil infiltrasyonu başlar."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-04-p014",
+     "sayfa": 16,
+     "cumleler": [
+      {
+       "id": "k2-04-c0023",
+       "ses": "Yirmi dört saat ile iki hafta arasında doku nekrozu, makrofaj infiltrasyonu, vasküler proliferasyon ve reaktif gliyoz görülür; bu temizlik ve onarım evresidir.",
+       "ekran": "Yirmi dört saat ile iki hafta: nekroz, **makrofaj infiltrasyonu**, vasküler proliferasyon, reaktif gliyoz",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "makrofaj infiltrasyonu",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 16,
+        "satir": [
+         "Doku nekrozu",
+         "Makrofaj infiltrasyonu",
+         "Vasküler proliferasyon",
+         "Reaktif gliyoz."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-04-c0024",
+       "ses": "İki haftadan sonra nekrotik doku temizlenir ve yerini belirgin gliyoz alır; beyinde onarım fibrozisle değil gliyozla olur.",
+       "ekran": "İki hafta sonrası: nekrotik doku temizlenir, yerine **belirgin gliyoz**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "belirgin gliyoz",
+         "tur": "tuzak"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 16,
+        "satir": [
+         "Nekrotik dokunun temizlenmesi",
+         "Yerine belirgin gliyoz."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-04-p015",
+     "sayfa": 17,
+     "cumleler": [
+      {
+       "id": "k2-04-c0025",
+       "ses": "Şekil yirmi bir bir A'da serebral kortekste akut hipoksik iskemik hasarı görüyoruz: hücre gövdeleri büzülmüş ve eozinofiliktir, çekirdekler piknotiktir, oklar bu kırmızı nöronları gösterir.",
+       "ekran": "Şekil: büzülmüş, eozinofilik gövdeli, piknotik çekirdekli **kırmızı nöronlar**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "kırmızı nöronlar",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 17,
+        "satir": [],
+        "sekil": "akut hipoksik iskemik hasarda kırmızı nöronlar"
+       }
+      },
+      {
+       "id": "k2-04-c0026",
+       "ses": "B panelinde eozinofilik sitoplazmalı ve çok sayıda ışınsal uzantıya sahip reaktif astrositler, C panelinde ise viral enfeksiyonlarda sık görülen, belirsiz bir nodül oluşturan mikrogliyal hücre kümesi var.",
+       "ekran": "Işınsal uzantılı **reaktif astrositler**; viral enfeksiyonda mikrogliyal nodül",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 17,
+        "satir": [],
+        "sekil": "reaktif astrositler ve mikrogliyal nodül"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-04-b04",
+   "baslik": "Fokal serebral iskemi ve kollateral dolaşım",
+   "paragraflar": [
+    {
+     "id": "k2-04-p016",
+     "sayfa": 18,
+     "cumleler": [
+      {
+       "id": "k2-04-c0027",
+       "ses": "Serebral arter tıkanıklığı, tıkanan arterin dağılım alanında iskemi ve enfarkt yapar; enfarktın boyutu, şekli ve klinik etkisi kollateral dolaşım ile modifiye olur.",
+       "ekran": "Arter tıkanıklığı → dağılım alanında enfarkt; boyut, şekil, klinik etki **kollateral dolaşım** ile değişir",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "kollateral dolaşım",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 18,
+        "satir": [
+         "Tıkanan arterin dağılım alanında iskemi ve enfarkt."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-04-p017",
+     "sayfa": 19,
+     "cumleler": [
+      {
+       "id": "k2-04-c0028",
+       "ses": "Willis poligonu ve kortikal leptomeningeal anastomozlar bazı bölgelerde hasarı sınırlandırabilir; buna karşın talamus, bazal gangliyonlar ve derin beyaz madde gibi derin penetran damarların beslediği yapılar çok az kollateral akıma sahiptir ve iskemiye duyarlıdır.",
+       "ekran": "Derin penetran damar alanları: talamus, bazal gangliyonlar, derin beyaz madde → **çok az kollateral**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "çok az kollateral",
+         "tur": "tuzak"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 19,
+        "satir": [
+         "Bazı bölgelerde hasarı sınırlandırabilir.",
+         "Talamus",
+         "Bazal gangliyonlar",
+         "Derin beyaz madde",
+         "Çok az kollateral akıma sahiptir; iskemiye duyarlıdır."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-04-p018",
+     "sayfa": 20,
+     "cumleler": [
+      {
+       "id": "k2-04-c0029",
+       "ses": "Embolik enfarktlar trombotik enfarktlardan daha sıktır.",
+       "ekran": "**Embolik enfarktlar** trombotik olanlardan daha sık",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Embolik enfarktlar",
+         "tur": "tuzak"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 20,
+        "satir": [
+         "Embolik enfarktlar, trombotik enfarktlardan daha sık."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-04-c0030",
+       "ses": "Sık emboli kaynakları miyokard disfonksiyonu, kapak hastalığı ya da atriyal fibrilasyona bağlı kalp duvar trombüsü, karotis ve aort kavisindeki aterom plaklarından kopan arteriyel tromboemboliler ve venöz trombozun açık foramen ovale ile sistemik dolaşıma geçtiği paradoksal emboli tablosudur.",
+       "ekran": "Kaynaklar: kalp duvar trombüsü, arteriyel tromboemboli, **paradoksal emboli**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "paradoksal emboli",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 20,
+        "satir": [
+         "Kalp duvar trombüsü (miyokard disfonksiyonu, kapak hastalığı, atriyal fibrilasyon).",
+         "Arteriyel tromboemboliler (karotis, aort kavisindeki aterom plaklarından)."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-04-p019",
+     "sayfa": 21,
+     "cumleler": [
+      {
+       "id": "k2-04-c0031",
+       "ses": "Emboliler damar bifürkasyonlarına ve darlık bölgelerine yerleşmeye eğilimlidir; en sık tutulan alan iç karotis arterin devamı olan orta serebral arter bölgesidir.",
+       "ekran": "En sık emboli alanı: **orta serebral arter** bölgesi",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "orta serebral arter",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 21,
+        "satir": [
+         "Damar bifürkasyonlarına",
+         "Darlık bölgelerine yerleşmeye eğilimlidir.",
+         "İç karotis arterin devamı olan orta serebral arter bölgesi."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-04-p020",
+     "sayfa": 22,
+     "cumleler": [
+      {
+       "id": "k2-04-c0032",
+       "ses": "Trombotik tıkanmalar genellikle aterosklerotik plaklar üzerine gelişir; sık tıkanma bölgeleri karotis bifurkasyonu, orta serebral arter başlangıcı ve baziler arter uçlarıdır.",
+       "ekran": "Tromboz plak üzerinde: **karotis bifurkasyonu**, orta serebral arter başlangıcı, baziler arter uçları",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "karotis bifurkasyonu",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 22,
+        "satir": [
+         "Genellikle aterosklerotik plaklar üzerine gelişir.",
+         "Karotis bifurkasyonu",
+         "Orta serebral arter başlangıcı",
+         "Baziler arter uçları."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-04-c0033",
+       "ses": "Uzun süreli hipertansiyonda küçük penetran arter tıkanmaları birkaç milimetrelik laküner enfarktlara yol açar.",
+       "ekran": "Uzun süreli hipertansiyon → küçük penetran arter tıkanması → **laküner enfarkt**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "laküner enfarkt",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 22,
+        "satir": [
+         "Küçük penetran arter tıkanmaları → birkaç mm’lik laküner enfarktlar."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-04-b05",
+   "baslik": "Enfarkt tipleri ve makroskopik evreler",
+   "paragraflar": [
+    {
+     "id": "k2-04-p021",
+     "sayfa": 23,
+     "cumleler": [
+      {
+       "id": "k2-04-c0034",
+       "ses": "Hemorajik olmayan, yani beyaz enfarktlar akut damar tıkanmalarında görülür; kollateral akım ya da emboli çözünmesiyle reperfüzyon olursa hemorajik enfarkta dönüşebilir.",
+       "ekran": "**Beyaz enfarkt** akut tıkanmada; reperfüzyonla hemorajik enfarkta dönebilir",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Beyaz enfarkt",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 23,
+        "satir": [
+         "Akut damar tıkanmalarında görülür.",
+         "Hemorajik enfarkta dönüşebilir."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-04-p022",
+     "sayfa": 24,
+     "cumleler": [
+      {
+       "id": "k2-04-c0035",
+       "ses": "Hemorajik enfarkt genellikle çoklu, bazen birleşen peteşiyal kanamalar şeklindedir; mikroskopik gelişimi hemorajik olmayan enfarkt gibidir, ek olarak kan ekstravazasyonu ve rezorpsiyonu bulguları vardır, koagülopatisi olanlarda ise büyük intraserebral hematomlarla ilişkili olabilir.",
+       "ekran": "Hemorajik enfarkt: çoklu **peteşiyal kanamalar**; koagülopatide büyük hematom",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "peteşiyal kanamalar",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 24,
+        "satir": [
+         "Hemorajik olmayan enfarkt gibidir.",
+         "Ek olarak kan ekstravazasyonu ve rezorpsiyonu bulguları.",
+         "Büyük intraserebral hematomlarla ilişkili olabilir."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-04-p023",
+     "sayfa": 25,
+     "cumleler": [
+      {
+       "id": "k2-04-c0036",
+       "ses": "Şekil yirmi bir yedi A'da sol orta serebral arter dağılımında büyük, renk değiştirmiş, fokal hemorajik enfarkt gösteren bir beyin kesiti var.",
+       "ekran": "Sol orta serebral arter alanında büyük **hemorajik enfarkt**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "hemorajik enfarkt",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 25,
+        "satir": [
+         "Sol orta serebral arter dağılımında"
+        ],
+        "sekil": "sol orta serebral arter alanında hemorajik enfarkt"
+       }
+      },
+      {
+       "id": "k2-04-c0037",
+       "ses": "B panelinde temporal lobda iskemi reperfüzyon hasarıyla uyumlu noktasal kanamalar içeren bir enfarkt görülüyor; bu, reperfüzyonun kanamaya dönüşümünün makroskopik karşılığıdır.",
+       "ekran": "Temporal lobda **noktasal kanamalar**: iskemi reperfüzyon hasarı",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 25,
+        "satir": [],
+        "sekil": "temporal lobda reperfüzyona bağlı noktasal kanamalar"
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-04-p024",
+     "sayfa": 26,
+     "cumleler": [
+      {
+       "id": "k2-04-c0038",
+       "ses": "Hemorajik olmayan enfarktta ilk altı saatte makroskopik değişiklik yoktur; kırk sekiz saatte doku soluk, yumuşak ve şişmiştir, bu yüzden erken ölümde enfarkt gözle görülmeyebilir.",
+       "ekran": "İlk altı saat: **makroskopik değişiklik yok**; kırk sekiz saat: soluk, yumuşak, şiş doku",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "makroskopik değişiklik yok",
+         "tur": "tuzak"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 26,
+        "satir": [
+         "Makroskopik değişiklik yok.",
+         "Doku soluk, yumuşak, şişmiş."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-04-c0039",
+       "ses": "İkinci ile onuncu gün arasında doku jelatinimsi ve kırılgandır ve ödem azalınca normal ile anormal sınırı belirginleşir; onuncu günden üçüncü haftaya dokunun sıvılaşması olur ve sonunda sıvı dolu bir boşluk kalır.",
+       "ekran": "İkinci ile onuncu gün jelatinimsi; sonra **sıvılaşma** ve sıvı dolu boşluk",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "sıvılaşma",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 26,
+        "satir": [
+         "Jelatinimsi ve kırılgan doku",
+         "Ödem azalınca normal–anormal sınırı belirginleşir.",
+         "Dokunun sıvılaşması"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-04-p025",
+     "sayfa": 27,
+     "cumleler": [
+      {
+       "id": "k2-04-c0040",
+       "ses": "Aynı şeklin C panelinde eski kistik enfarkt, korteks yıkımı ve çevresindeki gliyozis görülür; bu likefaksiyonun son evresidir ve kist duvarı gliyozla çevrilidir.",
+       "ekran": "Eski **kistik enfarkt**: korteks yıkımı ve çevresel gliyozis",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "kistik enfarkt",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 27,
+        "satir": [],
+        "sekil": "eski kistik enfarkt ve çevresel gliyozis"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-04-b06",
+   "baslik": "Enfarktın mikroskobik gelişimi ve sınır bölgesi enfarktları",
+   "paragraflar": [
+    {
+     "id": "k2-04-p026",
+     "sayfa": 28,
+     "cumleler": [
+      {
+       "id": "k2-04-c0042",
+       "ses": "İlk on iki saatten sonra mikroskopide iskemik nöronal değişiklik olarak kırmızı nöronlar, sitotoksik ve vazojenik ödem, özellikle astrositlerde olmak üzere endotel ve glial hücre şişmesi ve miyelinli liflerde parçalanma görülür.",
+       "ekran": "On iki saat sonrası: kırmızı nöronlar, **sitotoksik ve vazojenik ödem**, glial şişme, miyelin parçalanması",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "sitotoksik ve vazojenik ödem",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 28,
+        "satir": [
+         "Sitotoksik + vazojenik ödem.",
+         "Endotel ve glial hücre şişmesi(özellikle astrosit)",
+         "Miyelinli liflerde parçalanma."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-04-p027",
+     "sayfa": 29,
+     "cumleler": [
+      {
+       "id": "k2-04-c0043",
+       "ses": "Fokal enfarktın erken evresindeki kırmızı nöronlar, şekil yirmi bir bir A'da gördüğümüz global iskemideki görünümle aynıdır.",
+       "ekran": "Fokal enfarktın erken evresindeki kırmızı nöronlar, şekil yirmi bir bir A'da gördüğümüz global iskemideki görünümle aynıdır.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "kırmızı nöron",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 29,
+        "satir": [],
+        "sekil": "kırmızı nöronlar, reaktif astrositler ve mikrogliyal nodül"
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-04-p028",
+     "sayfa": 30,
+     "cumleler": [
+      {
+       "id": "k2-04-c0045",
+       "ses": "İlk günlerde nötrofil infiltrasyonu olur; iki ile üç hafta içinde nötrofiller yerini makrofajlara bırakır ve miyelin ile eritrosit yıkım ürünlerini fagosite eden bu makrofajlar aylarca, yıllarca kalabilir.",
+       "ekran": "Önce nötrofil, iki ile üç haftada **makrofajlar**; aylarca, yıllarca kalabilir",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "makrofajlar",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 30,
+        "satir": [
+         "Nötrofiller yerini makrofajlara bırakır.",
+         "Miyelin ve eritrosit yıkım ürünlerini fagosite eden makrofajlar aylarca, yıllarca kalabilir."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-04-c0046",
+       "ses": "Lezyon kenarında astrositler büyür, bölünür ve gemistositik görünüm alır; sonrasında astrosit hipertrofisi geriler ve boşluk duvarında yoğun glial lif ağı ile yeni kapillerler kalır.",
+       "ekran": "Kenarda **gemistositik** astrositler; sonra boşluk duvarında glial lif ağı",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "gemistositik",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 30,
+        "satir": [
+         "Lezyon kenarında astrositler büyür, bölünür, gemistositik görünüm alır",
+         "Astrosit hipertrofisi geriler",
+         "Boşluk duvarında yoğun glial lif ağı ve yeni kapillerler"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-04-p029",
+     "sayfa": 31,
+     "cumleler": [
+      {
+       "id": "k2-04-c0047",
+       "ses": "Şekil yirmi bir sekiz A, serebral enfarktın nötrofil infiltrasyonunun vasküler beslenmenin sağlam olduğu lezyon kenarlarından başladığını gösterir; çünkü iltihap hücreleri ancak kan akımı olan yerden dokuya girebilir.",
+       "ekran": "Nötrofiller **sağlam beslenen kenardan** girer",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "sağlam beslenen kenardan",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 31,
+        "satir": [
+         "vasküler beslenmenin sağlam olduğu lezyonun kenarlarından başlar"
+        ],
+        "sekil": "enfarkt kenarından başlayan nötrofil infiltrasyonu"
+       }
+      },
+      {
+       "id": "k2-04-c0048",
+       "ses": "B panelinde onuncu günde enfarkt alanında makrofajlar ve çevresindeki reaktif gliyozis, C panelinde ise doku kaybı ve kalıntı gliyozis alanları olarak görülen eski intrakortikal enfarktlar var.",
+       "ekran": "Onuncu gün: makrofajlar ve reaktif gliyozis; eski enfarkt: **doku kaybı ve kalıntı gliyozis**",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 31,
+        "satir": [],
+        "sekil": "onuncu gün makrofajlar ve eski intrakortikal enfarkt"
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-04-p030",
+     "sayfa": 32,
+     "cumleler": [
+      {
+       "id": "k2-04-c0049",
+       "ses": "Sınır bölgesi ya da su havzası enfarktları arterlerin en distal sahalarında, genellikle sistemik hipotansiyon ataklarını takiben görülür; mekanizma tıkanma değil, en uçta en çok düşen perfüzyon basıncıdır.",
+       "ekran": "**Su havzası enfarktı:** arterlerin en distal sahası, sistemik hipotansiyon sonrası",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Su havzası enfarktı:",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 32,
+        "satir": [
+         "Arterlerin en distal sahalarında görülür.",
+         "Genellikle sistemik hipotansiyon ataklarını takiben."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-04-c0050",
+       "ses": "Beyin yarımkürelerinde en riskli alan ön ve orta serebral arter sınır bölgesidir ve burada konveksite üzerinde kama şeklinde bir nekroz bandı oluşur.",
+       "ekran": "En riskli: **ön ve orta serebral arter sınır bölgesi**; kama şeklinde nekroz bandı",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "ön ve orta serebral arter sınır bölgesi",
+         "tur": "tuzak"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 32,
+        "satir": [
+         "Ön ve orta serebral arter sınır bölgesi.",
+         "Konveksite üzerinde kama şeklinde nekroz bandı oluşur."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-04-p031",
+     "sayfa": 33,
+     "cumleler": [
+      {
+       "id": "k2-04-c0051",
+       "ses": "Fokal enfarktlarda klinik başlangıç genelde anidir ve embolide daha hızlıdır, çünkü emboli damarı bir anda tıkar.",
+       "ekran": "Başlangıç **ani**; embolide daha hızlı",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "ani",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 33,
+        "satir": [
+         "Klinik başlangıç genelde ani; embolide daha hızlı."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-04-c0052",
+       "ses": "Ön serebral arter tıkanması özellikle bacaklarda motor ve duyu kusuru, dominant hemisferde orta serebral arter tıkanması afazi, hemipleji ve duyu kusuru, arka serebral arter tıkanması ise görme kusurları yapar.",
+       "ekran": "Ön serebral arter: **bacak**; orta serebral arter: afazi, hemipleji; arka serebral arter: görme",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "bacak",
+         "tur": "tuzak"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 33,
+        "satir": [
+         "Özellikle bacaklarda motor ve/veya duyu kusuru.",
+         "Afazi",
+         "Hemipleji",
+         "Görme kusurları."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-04-b07",
+   "baslik": "Kafa içi kanamalar ve kanama paternleri",
+   "paragraflar": [
+    {
+     "id": "k2-04-p032",
+     "sayfa": 34,
+     "cumleler": [
+      {
+       "id": "k2-04-c0053",
+       "ses": "Kafa içi kanamaların temel neden grupları hipertansiyon ve damar duvar hasarı yapan hastalıklar, arteriyovenöz ve kavernöz malformasyonlar gibi yapısal lezyonlar, travma ve tümörlerdir; kanamalar epidural, subdural, subaraknoid ya da intraparenkimal olabilir.",
+       "ekran": "Nedenler: **hipertansiyon**, yapısal lezyonlar, travma, tümörler; dört yerleşim",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "hipertansiyon",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 34,
+        "satir": [
+         "Hipertansiyon ve damar duvar hasarı yapan hastalıklar",
+         "Yapısal lezyonlar (arteriyovenöz, kavernöz malformasyonlar)",
+         "Travma",
+         "Tümörler."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-04-p033",
+     "sayfa": 35,
+     "cumleler": [
+      {
+       "id": "k2-04-c0054",
+       "ses": "Tablo yirmi bir bir, merkezi sinir sistemindeki kanama tiplerini yerleşim, etiyoloji ve ek özelliklere göre karşılaştırır; kanamanın yeri bize nedenini söyler.",
+       "ekran": "Tablo: kanama paternleri **yerleşim, etiyoloji, ek özellik**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "yerleşim, etiyoloji, ek özellik",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 35,
+        "satir": [],
+        "sekil": "merkezi sinir sisteminde kanama paternleri tablosu",
+        "tablo": true
+       }
+      },
+      {
+       "id": "k2-04-c0055",
+       "ses": "İntraparenkimal kanamada travmatik kontüzyon girus tepelerini seçici tutar ve frontal ile temporal uçlar ve orbitofrontal yüzeyde görülür; iskemik enfarktın hemorajik dönüşümü ise kortikal şeridi izleyen peteşiyal kanamalardır.",
+       "ekran": "Kontüzyon: **girus tepeleri**; hemorajik dönüşüm: kortikal şerit boyunca peteşiler",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "girus tepeleri",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 35,
+        "satir": [
+         "Özellikle girus tepelerinin seçici tutulumu",
+         "genellikle kortikal şeridi (cortical ribbon) takip eden dağılım gösterir."
+        ],
+        "sekil": "kanama paternleri tablosu, intraparenkimal satırlar",
+        "tablo": true
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-04-p087",
+     "sayfa": 35,
+     "cumleler": [
+      {
+       "id": "k2-04-c0157",
+       "ses": "Serebral amiloid anjiyopati sıklıkla subkortikal beyaz cevheri tutan ve subaraknoid aralığa uzanan lober hemoraji yapar.",
+       "ekran": "Serebral amiloid anjiyopati **lober hemoraji** yapar.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "lober hemoraji",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [
+        "past-1790877045058-97770"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 35,
+        "sekil": "Tablo 21.1 kanama paternleri",
+        "tablo": true,
+        "satir": [
+         "“Lobar” hemoraji; sıklıkla subkortikal beyaz cevheri tutar ve çoğunlukla subaraknoid aralığa doğru"
+        ]
+       }
+      },
+      {
+       "id": "k2-04-c0158",
+       "ses": "Bu bilgi çıkmış sınavda sorulmuştur.",
+       "ekran": "**Lober hemoraji** nedeni çıkmış sınavda soruldu.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Lober hemoraji",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [
+        "past-1790877045058-97770"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 35,
+        "sekil": "Tablo 21.1 kanama paternleri",
+        "tablo": true,
+        "satir": [
+         "“Lobar” hemoraji; sıklıkla subkortikal beyaz cevheri tutar ve çoğunlukla subaraknoid aralığa doğru"
+        ]
+       }
+      },
+      {
+       "id": "k2-04-c0056",
+       "ses": "Hipertansif kanama ise derin beyaz cevher, talamus, bazal ganglionlar ya da beyin sapında merkezlenir ve ventriküle yayılabilir.",
+       "ekran": "Hipertansif kanama ise derin beyaz cevher, talamus, bazal ganglionlar ya da beyin sapında merkezlenir ve ventriküle yayılabilir.",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 35,
+        "satir": [
+         "sıklıkla subkortikal beyaz cevheri tutar ve çoğunlukla subaraknoid aralığa doğru uzanır.",
+         "Derin beyaz cevherde, talamusta, bazal ganglionlarda veya beyin sapında merkezlenen kanama"
+        ],
+        "sekil": "kanama paternleri tablosu, amiloid anjiyopati ve hipertansiyon satırları",
+        "tablo": true
+       }
+      },
+      {
+       "id": "k2-04-c0159",
+       "ses": "Tümör kanamaları yüksek dereceli gliomlar ya da melanom, koryokarsinom ve renal hücreli karsinom metastazlarıyla ilişkilidir.",
+       "ekran": "**Tümör kanamaları**: yüksek dereceli gliom, melanom, koryokarsinom, renal hücreli karsinom.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Tümör kanamaları",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 35,
+        "sekil": "Tablo 21.1 kanama paternleri",
+        "tablo": true,
+        "satir": [
+         "Yüksek dereceli gliomlar veya belirli metastatik tümör tipleri (melanom, koryokarsinom, renal"
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-04-p088",
+     "sayfa": 35,
+     "cumleler": [
+      {
+       "id": "k2-04-c0160",
+       "ses": "Subaraknoid boşlukta travmatik kanama genellikle altta yatan parenkimal yaralanma ile birliktedir; arteriyovenöz malformasyon ya da anevrizma gibi vasküler anomaliler ise ani şiddetli baş ağrısı ve vazospazmla sekonder hasar yapar.",
+       "ekran": "Travmatik **subaraknoid kanama** parenkimal yaralanmayla, vasküler anomali vazospazmla seyreder.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "subaraknoid kanama",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 35,
+        "sekil": "Tablo 21.1 kanama paternleri",
+        "tablo": true,
+        "satir": [
+         "Genellikle altta yatan parenkimal yaralanma ile birliktedir.",
+         "ve bu hasar genellikle vazospazmla ilişkilidir."
+        ]
+       }
+      },
+      {
+       "id": "k2-04-c0057",
+       "ses": "Epidural kanama kısa açık dönemden sonra hızla ilerler, subdural kanama küçük travmalardan sonra gecikmeli ve yavaş belirti verir.",
+       "ekran": "Epidural kanama kısa açık dönemden sonra hızla ilerler, subdural kanama küçük travmalardan sonra gecikmeli ve yavaş belirti verir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "açık dönem",
+         "tur": "tuzak"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 35,
+        "satir": [
+         "melanom, koryokarsinom, renal hücreli karsinom gibi",
+         "sekonder hasar gelişebilir ve bu hasar genellikle vazospazmla ilişkilidir."
+        ],
+        "sekil": "kanama paternleri tablosu, subaraknoid, epidural ve subdural satırları",
+        "tablo": true
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-04-p034",
+     "sayfa": 36,
+     "cumleler": [
+      {
+       "id": "k2-04-c0058",
+       "ses": "Epidural ve subdural kanama tipik olarak travmaya bağlıdır ve ayrı ele alınır; beyin parankimi ve subaraknoid boşluktaki kanamalar ise çoğunlukla serebrovasküler hastalık bulgusudur.",
+       "ekran": "Epidural ve subdural: **travma**; parankim ve subaraknoid: serebrovasküler hastalık",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "travma",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 36,
+        "satir": [
+         "Tipik olarak travmaya bağlı; ayrı ele alınır.",
+         "Çoğunlukla serebrovasküler hastalık bulgusudur."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-04-b08",
+   "baslik": "Primer beyin parankim kanaması",
+   "paragraflar": [
+    {
+     "id": "k2-04-p035",
+     "sayfa": 37,
+     "cumleler": [
+      {
+       "id": "k2-04-c0059",
+       "ses": "Primer beyin parankim kanamasının en sık risk faktörü hipertansiyondur; klinik olarak önemli parankimal kanamaların yarısından fazlasından sorumludur ve kronik hipertansiyonlu bireylerin ölümlerinin yaklaşık yüzde on beşine yol açar.",
+       "ekran": "En sık risk faktörü **hipertansiyon**: kanamaların yarısından fazlası, ölümlerin yüzde on beşi",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "hipertansiyon",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 37,
+        "satir": [
+         "En sık risk faktörü: hipertansiyon.",
+         "Klinik olarak önemli parankimal kanamaların >%50’si.",
+         "Kronik hipertansiyonlu birey ölümlerinin ~%15’i."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-04-c0060",
+       "ses": "Orta ve ileri erişkinlikte, en çok altmış yaş civarında görülür ve tipik yerleşim yerleri bazal gangliyonlar, talamus, pons ve serebellumdur.",
+       "ekran": "Pik **altmış yaş**; bazal gangliyonlar, talamus, pons, serebellum",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "altmış yaş",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 37,
+        "satir": [
+         "Pik ~60 yaş.",
+         "Bazal gangliyonlar",
+         "Talamus",
+         "Pons",
+         "Serebellum."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-04-p036",
+     "sayfa": 38,
+     "cumleler": [
+      {
+       "id": "k2-04-c0061",
+       "ses": "Akut intraserebral kanamada ekstravaze kan komşu parankimi komprese eder; zamanla kanama alanı, hemosiderin nedeniyle kahverengi kenarlı bir boşluğa dönüşür.",
+       "ekran": "Kan parankimi komprese eder; zamanla **kahverengi kenarlı boşluk**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "kahverengi kenarlı boşluk",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 38,
+        "satir": [
+         "Ekstravaze kan, komşu parankimi komprese eder",
+         "Kanama alanı, kahverengi kenarlı bir boşluğa dönüşür."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-04-c0062",
+       "ses": "Mikroskopide ödemli beyin dokusu ile çevrili pıhtı ve nöron ile glialarda anoksik hasar, daha geç dönemde ödemin çözülmesi, pigment ve lipid yüklü makrofajlar ve reaktif astrosit proliferasyonu görülür; arter duvarlarında da sıklıkla arterioskleroz vardır.",
+       "ekran": "Pıhtı, anoksik hasar; sonra **pigment ve lipid yüklü makrofajlar**; duvarda arterioskleroz",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "pigment ve lipid yüklü makrofajlar",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 38,
+        "satir": [
+         "Ödemli beyin dokusu ile çevrili pıhtı",
+         "Pigment ve lipid yüklü makrofajlar",
+         "Reaktif astrosit proliferasyonu.",
+         "Sıklıkla arter duvarlarında arterioskleroz"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-04-p037",
+     "sayfa": 39,
+     "cumleler": [
+      {
+       "id": "k2-04-c0063",
+       "ses": "Şekil yirmi bir dokuz A'da bazal gangliyonların lateral ventriküle yırtılmasına neden olan büyük hipertansif kanama görülüyor.",
+       "ekran": "Lateral ventriküle açılan **hipertansif kanama**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "hipertansif kanama",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 39,
+        "satir": [
+         "Bazal gangliyonların lateral ventriküle yırtılmasına neden olan büyük hipertansif kanama."
+        ],
+        "sekil": "bazal gangliyonlarda ventriküle açılan hipertansif kanama"
+       }
+      },
+      {
+       "id": "k2-04-c0064",
+       "ses": "B panelinde uzun süreli hipertansiyonda bazal gangliyonlarda ve subkortikal beyaz maddede gelişen hiyalin arteriyoskleroz, yani arter duvarının fibrozisi ve kalınlaşması var; bu hem hipertansif kanama hem laküner enfarkt için risk faktörüdür.",
+       "ekran": "**Hiyalin arteriyoskleroz**: hipertansif kanama ve laküner enfarkt için risk",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Hiyalin arteriyoskleroz",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 39,
+        "satir": [
+         "hiyalin arteriyoskleroz"
+        ],
+        "sekil": "hipertansiyonda hiyalin arteriyoskleroz"
+       }
+      },
+      {
+       "id": "k2-04-c0065",
+       "ses": "C ve D panelleri ise karşılaştırma için serebral amiloid anjiyopatiye bağlı büyük lober kanamayı ve kortikal arteriyollerde amiloid birikimini gösterir.",
+       "ekran": "Karşılaştırma: amiloid anjiyopatide **lober kanama**",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 39,
+        "satir": [
+         "Serebral amiloid anjiyopatiye bağlı büyük lobar kanama."
+        ],
+        "sekil": "amiloid anjiyopatiye bağlı lober kanama"
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-04-p038",
+     "sayfa": 40,
+     "cumleler": [
+      {
+       "id": "k2-04-c0066",
+       "ses": "Parenkim kanamasında bulgular çoğunlukla konuma bağlıdır; semptomlar dakikalar içinde hızla ortaya çıkar ve saatler içinde ilerleyebilir, sık belirtiler hemipleji, akut konfüzyon, hafıza kaybı ve görme bozukluklarıdır.",
+       "ekran": "Bulgular konuma bağlı; dakikalar içinde başlar: **hemipleji**, konfüzyon, hafıza kaybı, görme bozukluğu",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "hemipleji",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 40,
+        "satir": [
+         "Bulgular çoğunlukla konuma bağlıdır.",
+         "Dakikalar içinde hızla ortaya çıkar.",
+         "Saatler içinde ilerleyebilir.",
+         "Hemipleji"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-04-c0067",
+       "ses": "Akut olayı atlatanlarda hematom kademeli olarak çözülür ve klinik iyileşme görülebilir.",
+       "ekran": "Atlatanlarda hematom **kademeli çözülür**",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 40,
+        "satir": [
+         "Hematom kademeli çözülür",
+         "Klinik iyileşme görülebilir."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-04-b09",
+   "baslik": "Serebral amiloid anjiyopati",
+   "paragraflar": [
+    {
+     "id": "k2-04-p039",
+     "sayfa": 41,
+     "cumleler": [
+      {
+       "id": "k2-04-c0068",
+       "ses": "Serebral amiloid anjiyopatide orta ve küçük meningeal ve kortikal damar duvarlarında amiloid birikir; amiloid tipi Alzheimer hastalığındaki peptitlere benzerdir.",
+       "ekran": "Orta ve küçük meningeal ve kortikal damar duvarında **amiloid**, Alzheimer peptitlerine benzer",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "amiloid",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 41,
+        "satir": [
+         "Orta ve küçük meningeal ve kortikal damar duvarlarında amiloid birikimi.",
+         "Amiloid tipi, Alzheimer hastalığındaki peptitlere benzerdir."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-04-c0069",
+       "ses": "Sonuçta damar duvarları sert ve kırılgan olur ve kanamalar hipertansif kanamalardan farklı bir dağılım gösterir.",
+       "ekran": "Duvar **sert ve kırılgan**; dağılım hipertansif kanamadan farklı",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 41,
+        "satir": [
+         "Damar duvarları sert ve kırılgan olur.",
+         "Hipertansif kanamalardan farklı bir dağılım gösterir."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-04-p040",
+     "sayfa": 42,
+     "cumleler": [
+      {
+       "id": "k2-04-c0070",
+       "ses": "Bu hastalıkta en sık görülen tablo serebral korteks loblarındaki lober kanamalardır; ayrıca genellikle sessiz, bir milimetreden küçük kortikal mikrokanamalar görülür ve tanıda görüntüleme ile patoloji bulguları önemlidir.",
+       "ekran": "En sık **lober kanama**; ayrıca sessiz kortikal mikrokanamalar",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "lober kanama",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 42,
+        "satir": [
+         "Serebral korteks loblarında",
+         "Genellikle sessiz, <1 mm’lik kortikal mikrokanamalar.",
+         "Tanıda görüntüleme ve patoloji bulguları önemlidir."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-04-p041",
+     "sayfa": 43,
+     "cumleler": [
+      {
+       "id": "k2-04-c0071",
+       "ses": "Şekil yirmi bir dokuz C'de korteks loblarına yerleşen büyük lober kanama görülüyor; bu yerleşim, derin yerleşimli hipertansif kanamadan ayırmamızı sağlar.",
+       "ekran": "Korteks lobunda **büyük lober kanama**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "büyük lober kanama",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 43,
+        "satir": [
+         "Serebral amiloid anjiyopatiye bağlı büyük lobar kanama."
+        ],
+        "sekil": "amiloid anjiyopatiye bağlı büyük lober kanama"
+       }
+      },
+      {
+       "id": "k2-04-c0072",
+       "ses": "D panelinde kortikal arteriyollerde amiloid birikimi var; ekteki immünohistokimyasal boyama damar duvarında biriken amiloid beta proteinini vurgulamaktadır.",
+       "ekran": "İmmünohistokimya: damar duvarında **amiloid beta**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "amiloid beta",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 43,
+        "satir": [],
+        "sekil": "kortikal arteriyollerde amiloid beta birikimi"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-04-b10",
+   "baslik": "Sakküler anevrizma ve subaraknoid kanama",
+   "paragraflar": [
+    {
+     "id": "k2-04-p042",
+     "sayfa": 44,
+     "cumleler": [
+      {
+       "id": "k2-04-c0073",
+       "ses": "Klinik olarak anlamlı, travmatik olmayan subaraknoid kanamanın en sık nedeni sakküler, yani berry ya da çilek anevrizmanın rüptürüdür.",
+       "ekran": "Travmatik olmayan subaraknoid kanamanın en sık nedeni: **sakküler anevrizma rüptürü**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "sakküler anevrizma rüptürü",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [
+        "6564d8e6355f"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 44,
+        "satir": [
+         "Klinik olarak anlamlı, travmatik olmayan subaraknoid kanamanın en sık nedeni:",
+         "Sakküler (berry) anevrizma rüptürü."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-04-c0161",
+       "ses": "Bu bilgi çıkmış sınavda sorulmuştur.",
+       "ekran": "Nontravmatik SAK’ın en sık nedeni **anevrizma rüptürü** soruldu.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "anevrizma rüptürü",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [
+        "6564d8e6355f"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 44,
+        "satir": [
+         "Klinik olarak anlamlı, travmatik olmayan subaraknoid kanamanın en sık nedeni:",
+         "Sakküler (berry) anevrizma rüptürü."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-04-c0074",
+       "ses": "Diğer nedenler vasküler malformasyon, travma, intraserebral kanamanın ventriküle yırtılması, koagülopati ve tümörlerdir.",
+       "ekran": "Diğer nedenler vasküler malformasyon, travma, intraserebral kanamanın ventriküle yırtılması, koagülopati ve tümörlerdir.",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "ventriküle yırtılma",
+         "tur": "tuzak"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 44,
+        "satir": [
+         "Vasküler malformasyon",
+         "Travma",
+         "İntraserebral kanamanın ventriküle yırtılması",
+         "Koagülopati"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-04-p043",
+     "sayfa": 45,
+     "cumleler": [
+      {
+       "id": "k2-04-c0075",
+       "ses": "Olguların yaklaşık üçte birinde rüptür, Valsalva manevrası ya da cinsel orgazm gibi kafa içi basıncı artıran durumlarla ilişkilidir; Valsalva, ağız ve burun kapalıyken nefes vermeye çalışarak göğüs içi basıncı geçici olarak artırmaktır.",
+       "ekran": "Olguların üçte birinde rüptür **Valsalva** ya da orgazmla basınç artışında",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Valsalva",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 45,
+        "satir": [
+         "Valsalva manevrası veya cinsel orgazm gibi intrakraniyal basınç artışı ile ilişkili."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-04-c0076",
+       "ses": "Arter basıncı altındaki kan subaraknoid boşluğa fışkırır; tipik yakınma hayatımın en kötü baş ağrısı ya da şimşek çakması gibi baş ağrısıdır ve sıklıkla hızla bilinç kaybı gelişir.",
+       "ekran": "Tipik yakınma: **hayatımın en kötü baş ağrısı**; hızla bilinç kaybı",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "hayatımın en kötü baş ağrısı",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 45,
+        "satir": [
+         "Subaraknoid boşluğa fışkırır.",
+         "Sıklıkla hızla gelişen bilinç kaybı."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-04-c0077",
+       "ses": "İlk kanamada mortalite yüzde yirmi beş ile elli arasındadır; sağ kalanlarda tekrar kanama sıktır ve her epizotta prognoz kötüleşir.",
+       "ekran": "İlk kanamada mortalite **yüzde yirmi beş ile elli**; tekrar kanama sık",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "yüzde yirmi beş ile elli",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 45,
+        "satir": [
+         "Sağ kalanlarda tekrar kanama sık; her epizotta prognoz kötüleşir."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-04-p044",
+     "sayfa": 46,
+     "cumleler": [
+      {
+       "id": "k2-04-c0078",
+       "ses": "Anevrizmaların yaklaşık yüzde doksanı ön dolaşımda ve büyük arter bifürkasyonlarına yakın yerleşir; olguların yüzde yirmi ile otuzunda birden fazla anevrizma vardır.",
+       "ekran": "Yüzde doksanı **ön dolaşımda**, bifürkasyonlara yakın; yüzde yirmi ile otuzu çoklu",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "ön dolaşımda",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 46,
+        "satir": [
+         "Ön dolaşımda",
+         "Büyük arter bifürkasyonlarına yakın",
+         "Olguların %20–30’unda birden fazla anevrizma vardır."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-04-c0079",
+       "ses": "Sakküler anevrizma doğuştan değildir; damar medyasındaki yapısal kusur zemininde zamanla gelişir.",
+       "ekran": "**Doğuştan değildir**; media kusuru zemininde zamanla gelişir",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Doğuştan değildir",
+         "tur": "tuzak"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 46,
+        "satir": [
+         "Doğuştan değildir; damar medyasında yapısal kusur zemininde zamanla gelişir."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-04-p045",
+     "sayfa": 47,
+     "cumleler": [
+      {
+       "id": "k2-04-c0080",
+       "ses": "Şekil yirmi bir on, Willis poligonu üzerinde sakküler anevrizmaların yaygın yerlerini ve sıklığını gösterir.",
+       "ekran": "Şekil: Willis poligonunda **anevrizma yerleri ve sıklığı**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "anevrizma yerleri ve sıklığı",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 47,
+        "satir": [],
+        "sekil": "Willis poligonunda sakküler anevrizma yerleri ve yüzdeleri"
+       }
+      },
+      {
+       "id": "k2-04-c0081",
+       "ses": "En sık yer yüzde kırkla ön kominikan arter bölgesidir; onu yüzde otuz dörtle orta serebral arter dallanması, yüzde yirmiyle iç karotis ile arka kominikan arter bileşkesi ve yüzde dörtle baziler arter ucu izler.",
+       "ekran": "Ön kominikan **yüzde kırk**, orta serebral yüzde otuz dört, iç karotis yüzde yirmi, baziler yüzde dört",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "yüzde kırk",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 47,
+        "satir": [],
+        "sekil": "anevrizma sıklıkları: ön kominikan, orta serebral, iç karotis, baziler"
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-04-p046",
+     "sayfa": 48,
+     "cumleler": [
+      {
+       "id": "k2-04-c0082",
+       "ses": "Otozomal dominant polikistik böbrek hastalığı ve Ehlers Danlos sendromu gibi ekstraselüler matriks protein bozuklukları anevrizma riskini artırır, çünkü damar duvarı matriksi zayıftır.",
+       "ekran": "Risk: **otozomal dominant polikistik böbrek hastalığı**, Ehlers Danlos",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "otozomal dominant polikistik böbrek hastalığı",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 48,
+        "satir": [
+         "Otozomal dominant polikistik böbrek hastalığı"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-04-c0083",
+       "ses": "Yıllık ortalama rüptür riski yaklaşık yüzde bir virgül üçtür; çap bir santimetreyi aşarsa yıllık rüptür riski yaklaşık yüzde elliye çıkar.",
+       "ekran": "Yıllık rüptür riski **yüzde bir virgül üç**; çap bir santimetre üstünde yüzde elli",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "yüzde bir virgül üç",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 48,
+        "satir": [
+         "Yıllık ortalama ≈ %1,3",
+         "Çap >1 cm ise yıllık rüptür riski ≈ %50."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-04-c0162",
+       "ses": "Burası önemli: bir santimetre üzerindeki anevrizma kanama açısından en tehlikeli gruptur.",
+       "ekran": "**Bir santimetreden büyük** anevrizmada kanama riski en yüksektir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Bir santimetreden büyük",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 48,
+        "satir": [
+         "Yıllık ortalama ≈ %1,3",
+         "Çap >1 cm ise yıllık rüptür riski ≈ %50."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-04-c0084",
+       "ses": "Kanama sonrası erken dönemde vazospazma bağlı iskemik hasar riski vardır; ayrıca meninks fibrozisi beyin omurilik sıvısının akımını ve emilimini bozarak hidrosefaliye yol açar.",
+       "ekran": "Komplikasyonlar: **vazospazm** ile iskemi; meninks fibrozisi ile hidrosefali",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "vazospazm",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 48,
+        "satir": [
+         "Vazospazma bağlı iskemik hasar riski.",
+         "Meninks fibrozisi → BOS akım/absorbsiyon bozukluğu → hidrosefali."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-04-p047",
+     "sayfa": 49,
+     "cumleler": [
+      {
+       "id": "k2-04-c0085",
+       "ses": "Sakküler anevrizma arterin ince duvarlı bir kesesidir; boynun ötesinde, yani kesenin kendi gövdesinde kas tabakası ve intimal elastik lamina yoktur ve kese kalınlaşmış hiyalinize intima ile kaplıdır, adventisya ise ana arter adventisyası ile devamlıdır.",
+       "ekran": "Kese duvarında **kas tabakası ve intimal elastik lamina yok**; hiyalinize intima",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "kas tabakası ve intimal elastik lamina yok",
+         "tur": "tuzak"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 49,
+        "satir": [
+         "Arterin ince duvarlı kesesi",
+         "Kas tabakası ve intimal elastik lamina yoktur.",
+         "Kese, kalınlaşmış hiyalinize intima ile kaplıdır.",
+         "Ana arter adventisyası ile devamlıdır."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-04-c0086",
+       "ses": "Rüptür çoğunlukla kesenin en ince yeri olan tepesinde olur ve kan subaraknoid boşluğa, beyin parankimine ya da her ikisine yayılır.",
+       "ekran": "Rüptür çoğunlukla **kesenin tepesinde**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "kesenin tepesinde",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 49,
+        "satir": [
+         "Rüptür çoğunlukla kesenin tepesinde olur:",
+         "Kan subaraknoid boşluğa, beyin parankimine veya her ikisine yayılır."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-04-p048",
+     "sayfa": 50,
+     "cumleler": [
+      {
+       "id": "k2-04-c0087",
+       "ses": "Şekil yirmi bir on bir A ve B'de beyin tabanı diseke edilmiş; Willis çemberinde ön serebral arter anevrizması ve büyük bir anevrizma görülüyor.",
+       "ekran": "Willis çemberinde **ön serebral arter anevrizması**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "ön serebral arter anevrizması",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 50,
+        "satir": [],
+        "sekil": "Willis çemberinde ön serebral arter anevrizması"
+       }
+      },
+      {
+       "id": "k2-04-c0088",
+       "ses": "C panelindeki kesit ise kese duvarının hiyalinize fibröz intimadan oluştuğunu, kas tabakasının olmadığını gösterir.",
+       "ekran": "Kesit: duvar **hiyalinize fibröz intima**",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "hiyalinize fibröz intima",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 50,
+        "satir": [],
+        "sekil": "sakküler anevrizma kesitinde hiyalinize fibröz intima"
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-04-p049",
+     "sayfa": 51,
+     "cumleler": [
+      {
+       "id": "k2-04-c0089",
+       "ses": "Keseciksiz kafa içi anevrizma tipleri aterosklerotik, mikotik, travmatik ve diseksiyoneldir ve genellikle ön dolaşımda yer alır; aterosklerotik anevrizmalar çoğunlukla fusiform, yani ortası geniş, uçlara doğru incelen biçimdedir ve baziler arterde yerleşir.",
+       "ekran": "Keseciksiz: aterosklerotik, mikotik, travmatik, diseksiyonel; **aterosklerotik** olan fusiform ve baziler arterde",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "aterosklerotik",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [
+        "past-1790877036011-607293"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 51,
+        "satir": [
+         "Aterosklerotik",
+         "Mikotik",
+         "Travmatik",
+         "Diseksiyonel.",
+         "Aterosklerotikler çoğunlukla fusiform, baziler arterde."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-04-c0163",
+       "ses": "Bu bilgi çıkmış sınavda sorulmuştur.",
+       "ekran": "Baziler arteri tutan **aterosklerotik anevrizma** soruldu.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "aterosklerotik anevrizma",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [
+        "past-1790877036011-607293"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 51,
+        "satir": [
+         "Aterosklerotik",
+         "Mikotik",
+         "Travmatik",
+         "Diseksiyonel.",
+         "Aterosklerotikler çoğunlukla fusiform, baziler arterde."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-04-c0090",
+       "ses": "Bu anevrizmalar klinikte sıklıkla vasküler tıkanıklığa bağlı serebral enfarkt ile ortaya çıkar, subaraknoid kanama daha nadirdir.",
+       "ekran": "Klinik: çoğunlukla **enfarkt**, subaraknoid kanama nadir",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "enfarkt",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 51,
+        "satir": [
+         "Vasküler tıkanıklığa bağlı serebral enfarkt ile ortaya çıkar.",
+         "Subaraknoid kanama daha nadirdir."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-04-b11",
+   "baslik": "Vasküler malformasyonlar",
+   "paragraflar": [
+    {
+     "id": "k2-04-p050",
+     "sayfa": 52,
+     "cumleler": [
+      {
+       "id": "k2-04-c0091",
+       "ses": "Beyin damar malformasyonları dört ana tiptir: arteriyovenöz malformasyonlar, kavernöz malformasyonlar, kapiller telanjiektaziler ve venöz anjiyomlar.",
+       "ekran": "Dört tip: **arteriyovenöz**, kavernöz, kapiller telanjiektazi, venöz anjiyom",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "arteriyovenöz",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 52,
+        "satir": [
+         "Arteriyovenöz malformasyonlar (AVM’ler)",
+         "Kavernöz malformasyonlar",
+         "Kapiller telanjiektaziler",
+         "Venöz anjiyomlar."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-04-p051",
+     "sayfa": 53,
+     "cumleler": [
+      {
+       "id": "k2-04-c0164",
+       "ses": "Arteriyovenöz malformasyon en sık görülen malformasyon tipidir.",
+       "ekran": "En sık malformasyon: **arteriyovenöz malformasyon**.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "arteriyovenöz malformasyon",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [
+        "198ba383b503"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 53,
+        "satir": [
+         "En sık görülen malformasyon tipidir."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-04-c0165",
+       "ses": "Bu bilgi çıkmış sınavda sorulmuştur.",
+       "ekran": "En sık **vasküler malformasyon** sorusu çıkmışta yer aldı.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "vasküler malformasyon",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [
+        "198ba383b503"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 53,
+        "satir": [
+         "En sık görülen malformasyon tipidir."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-04-c0092",
+       "ses": "Bu malformasyon erkeklerde kadınlara göre yaklaşık iki kat daha sıktır ve genellikle on ile otuz yaş arasında nöbet, intraserebral kanama ya da subaraknoid kanama ile belirti verir.",
+       "ekran": "**En sık malformasyon: arteriyovenöz malformasyon**; erkekte iki kat; on ile otuz yaşta nöbet ve kanama",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "En sık malformasyon: arteriyovenöz malformasyon",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 53,
+        "satir": [
+         "En sık görülen malformasyon tipidir.",
+         "Erkeklerde kadınlara göre ≈ 2 kat daha sık.",
+         "Nöbet",
+         "İntraserebral kanama"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-04-c0093",
+       "ses": "Yenidoğanda büyük bir malformasyon arter ile ven arasındaki şant nedeniyle yüksek debili kalp yetmezliği yapabilir; kanama riski nedeniyle en tehlikeli vasküler malformasyondur, çoklu olanlar ise te ge ef beta yolunu etkileyen mutasyonlarla ilişkili kalıtsal hemorajik telanjiektazide görülebilir.",
+       "ekran": "Yenidoğanda **yüksek debili kalp yetmezliği**; en tehlikeli tip; çoklu olanlar kalıtsal hemorajik telanjiektazide",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "yüksek debili kalp yetmezliği",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 53,
+        "satir": [
+         "Arter–ven şantı ile yüksek debili kalp yetmezliği yapabilir.",
+         "En tehlikeli vasküler malformasyon tipidir."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-04-p052",
+     "sayfa": 54,
+     "cumleler": [
+      {
+       "id": "k2-04-c0094",
+       "ses": "Arteriyovenöz malformasyonda subaraknoid damarlar beyin içine uzanabilir ya da lezyon yalnız parankimde yer alır; makroskopide solucan benzeri, kıvrımlı vasküler kanal ağı, mikroskopide gliotik doku ile ayrılmış genişlemiş damarlar ve sıklıkla eski kanama bulguları görülür.",
+       "ekran": "Makroskopi **solucan benzeri kıvrımlı kanal ağı**; mikroskopi gliotik dokuyla ayrılmış geniş damarlar",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "solucan benzeri kıvrımlı kanal ağı",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 54,
+        "satir": [
+         "Makroskopi: solucan benzeri, kıvrımlı vasküler kanal ağı",
+         "Mikroskopi: gliotik doku ile ayrılmış genişlemiş damarlar; sıklıkla eski kanama bulguları."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-04-c0095",
+       "ses": "Kavernöz malformasyon ince kolajenli duvarlı, geniş ve gevşek organize damar boşluklarından oluşur; en sık serebellum, pons ve subkortikal alanlarda yerleşir, düşük akımlıdır ve belirgin arteriyovenöz şant içermez, çevresinde eski kanama, enfarkt ve kalsifikasyon odakları bulunur.",
+       "ekran": "**Kavernöz malformasyon:** düşük akım, şant yok; serebellum, pons, subkortikal",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Kavernöz malformasyon:",
+         "tur": "tuzak"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 54,
+        "satir": [
+         "İnce kolajenli duvarlı, geniş gevşek organize damar boşlukları.",
+         "En sık serebellum, pons, subkortikal alanlarda.",
+         "Düşük akım, belirgin arteriyovenöz şant yok."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-04-p053",
+     "sayfa": 55,
+     "cumleler": [
+      {
+       "id": "k2-04-c0096",
+       "ses": "Şekil yirmi bir on iki, arteriyovenöz malformasyonun beyin yüzeyinde solucan benzeri kıvrımlı damar ağı olarak makroskopik görünümünü gösterir.",
+       "ekran": "Şekil: **arteriyovenöz malformasyon** makroskopisi",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "arteriyovenöz malformasyon",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 55,
+        "satir": [],
+        "sekil": "arteriyovenöz malformasyonun kıvrımlı damar ağı"
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-04-p054",
+     "sayfa": 56,
+     "cumleler": [
+      {
+       "id": "k2-04-c0100",
+       "ses": "Kapiller telanjiektazi ince duvarlı, genişlemiş kapillerlerin mikroskopik odaklarıdır ve çoğunlukla ponstadır; venöz anjiyom ya da venöz varis ise ektatik venöz kanalların agregatıdır.",
+       "ekran": "Kapiller telanjiektazi: **pons**; venöz anjiyom: ektatik venöz kanallar",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "pons",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 56,
+        "satir": [
+         "İnce duvarlı, genişlemiş kapillerlerin mikroskopik odakları.",
+         "Çoğunlukla pons’ta.",
+         "Ektatik venöz kanalların agregatı."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-04-c0101",
+       "ses": "Bu iki tip genellikle asemptomatiktir; kanama ya da belirgin klinik bulgu nadirdir ve çoğu olgu tesadüfen saptanır.",
+       "ekran": "Genellikle **asemptomatik**, tesadüfen saptanır",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "asemptomatik",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 56,
+        "satir": [
+         "Genellikle asemptomatiktir.",
+         "Kanama veya belirgin klinik bulgu nadirdir.",
+         "Çoğu olgu tesadüfen saptanır."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-04-b12",
+   "baslik": "Hipertansif serebrovasküler hastalık",
+   "paragraflar": [
+    {
+     "id": "k2-04-p055",
+     "sayfa": 57,
+     "cumleler": [
+      {
+       "id": "k2-04-c0102",
+       "ses": "Hipertansiyon özellikle bazal gangliyon, hemisferik beyaz madde ve beyin sapındaki derin penetran arter ve arteriyollerde hiyalin arteriyoloskleroz yapar; sonuçta damar duvarı zayıflar, yırtılma eğilimi artar ve üç yüz mikrometreden küçük damarlarda minik anevrizmalar oluşur.",
+       "ekran": "Derin penetran arteriyollerde **hiyalin arteriyoloskleroz** → duvar zayıflığı, yırtılma, minik anevrizma",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "hiyalin arteriyoloskleroz",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 57,
+        "satir": [
+         "Derin penetran arter ve arteriyollerde hiyalin arteriyoloskleroz yapar",
+         "Damar duvar zayıflaması",
+         "Yırtılma eğilimi"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-04-p056",
+     "sayfa": 58,
+     "cumleler": [
+      {
+       "id": "k2-04-c0103",
+       "ses": "Laküner enfarktlar derin gri madde, yani bazal gangliyonlar ve talamus, iç kapsül, derin beyaz madde ve ponsta tek penetran dal tıkanmasıyla oluşan birkaç milimetre çapında kaviteli küçük enfarktlardır; sessiz kalabilir ya da önemli nörolojik defisit yapabilirler.",
+       "ekran": "**Laküner enfarkt:** tek penetran dal tıkanması, birkaç milimetre kaviteli",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Laküner enfarkt:",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 58,
+        "satir": [
+         "Birkaç mm çapında kaviteli küçük enfarktlar.",
+         "Tek penetran dal tıkanması sonucu.",
+         "Sessiz olabilir veya önemli nörolojik defisit yapabilir."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-04-c0104",
+       "ses": "Yarık kanama küçük penetran damar yırtılmasıyla oluşan minik kanamadır; zamanla rezorbe olur ve kahverengi kenarlı, yarık benzeri bir boşluk bırakır.",
+       "ekran": "**Yarık kanama:** küçük penetran damar yırtılması; kahverengi kenarlı yarık",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Yarık kanama:",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 58,
+        "satir": [
+         "Küçük penetran damar yırtılması ile minik kanamalar.",
+         "Zamanla rezorbe olur; kahverengi kenarlı, yarık benzeri boşluk bırakır."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-04-p057",
+     "sayfa": 59,
+     "cumleler": [
+      {
+       "id": "k2-04-c0105",
+       "ses": "Akut hipertansif ensefalopati, diyastolik kan basıncının yüz otuz milimetre cıva değerini aştığı şiddetli ya da malign hipertansiyonla ilişkilidir; baş ağrısı, konfüzyon, kusma, konvülsiyon ve koma yapar.",
+       "ekran": "Diyastolik basınç **yüz otuz milimetre cıva üstü**; baş ağrısı, konfüzyon, kusma, konvülsiyon, koma",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "yüz otuz milimetre cıva üstü",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 59,
+        "satir": [
+         "Baş ağrısı",
+         "Konfüzyon",
+         "Kusma",
+         "Konvülsiyon"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-04-c0106",
+       "ses": "Tabloda artmış kafa içi basınç ve global serebral disfonksiyon vardır ve hızlı kan basıncı düşürülmesi yaşamsaldır.",
+       "ekran": "**Hızlı kan basıncı düşürülmesi** yaşamsal",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Hızlı kan basıncı düşürülmesi",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 59,
+        "satir": [
+         "Artmış intrakraniyal basınç ve global serebral disfonksiyon söz konusudur.",
+         "Hızlı kan basıncı düşürülmesi yaşamsaldır."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-04-p058",
+     "sayfa": 60,
+     "cumleler": [
+      {
+       "id": "k2-04-c0107",
+       "ses": "Otopside beyin ödemi bulunur, transtentoryal ya da tonsiller herniasyon olabilir veya olmayabilir; mikroskopide gri ve beyaz madde arteriyollerinde peteşiler ve diğer organlardakine benzer fibrinoid nekroz görülür.",
+       "ekran": "Beyin ödemi; arteriyollerde peteşi ve **fibrinoid nekroz**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "fibrinoid nekroz",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 60,
+        "satir": [
+         "Beyin ödemi",
+         "Gri ve beyaz madde arteriyollerinde peteşiler",
+         "Fibrinoid nekroz (diğer organlardakine benzer)."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-04-b13",
+   "baslik": "Vaskülit ve vasküler demans",
+   "paragraflar": [
+    {
+     "id": "k2-04-p059",
+     "sayfa": 61,
+     "cumleler": [
+      {
+       "id": "k2-04-c0108",
+       "ses": "Merkezi sinir sistemi vasküliti çoğunlukla enfeksiyonlar ya da sistemik otoimmün hastalıklar sonucudur ve kan akımını bozarak serebral disfonksiyon ve enfarkt yapabilir.",
+       "ekran": "Vaskülit: **enfeksiyon** ya da sistemik otoimmün hastalık; serebral disfonksiyon, enfarkt",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "enfeksiyon",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 61,
+        "satir": [
+         "Enfeksiyonlar",
+         "Serebral disfonksiyon",
+         "Enfarkt yapabilir."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-04-c0109",
+       "ses": "Enfeksiyona bağlı arterit eskiden daha çok sifiliz ve tüberkülozla ilişkiliydi; günümüzde ise immün yetmezlikte Aspergillus türleri, herpes zoster ve sitomegalovirüs gibi fırsatçı enfeksiyonlarla görülür.",
+       "ekran": "Eskiden sifiliz, tüberküloz; bugün **fırsatçı enfeksiyonlar**: Aspergillus, herpes zoster, sitomegalovirüs",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "fırsatçı enfeksiyonlar",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 61,
+        "satir": [
+         "Eskiden daha çok sifiliz, tüberküloz ile ilişkiliydi.",
+         "Herpes zoster"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-04-p060",
+     "sayfa": 62,
+     "cumleler": [
+      {
+       "id": "k2-04-c0110",
+       "ses": "Poliarteritis nodosa gibi sistemik vaskülitler de serebral damarları tutabilir ve tek ya da çoklu enfarktlara yol açabilir.",
+       "ekran": "**Poliarteritis nodosa** serebral damarları tutar; tek ya da çoklu enfarkt",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Poliarteritis nodosa",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 62,
+        "satir": [
+         "Serebral damarları tutabilir.",
+         "Tek veya çoklu enfarktlara yol açabilir."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-04-p061",
+     "sayfa": 63,
+     "cumleler": [
+      {
+       "id": "k2-04-c0111",
+       "ses": "Vasküler demans, korteks, talamus, bazal gangliyonlar ve beyaz maddede çoklu, bilateral gri ve beyaz madde enfarktları sonucunda gelişen klinik sendromdur; demans, yürüyüş bozuklukları, duygusal labilite şeklinde psödobulbar belirtiler ve üzerine eklenmiş fokal nörolojik defisitlerle seyreder.",
+       "ekran": "**Vasküler demans:** çoklu bilateral enfarkt; demans, yürüyüş bozukluğu, psödobulbar belirtiler",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Vasküler demans:",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 63,
+        "satir": [
+         "Çoklu, bilateral gri ve beyaz madde enfarktları sonucunda gelişen klinik sendrom.",
+         "Yürüyüş bozuklukları",
+         "Psödobulbar belirtiler (duygusal labilite)",
+         "Üzerine eklenmiş fokal nörolojik defisitler."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-04-p062",
+     "sayfa": 64,
+     "cumleler": [
+      {
+       "id": "k2-04-c0112",
+       "ses": "Altta yatan multifokal vasküler hastalık serebral ateroskleroz, karotis ya da kalp kaynaklı tromboemboli veya kronik hipertansiyona bağlı serebral arteriyosklerozdur; birçok nörodejeneratif demans olgusuna da serebrovasküler hastalık eşlik eder ve buna karışık demans denir.",
+       "ekran": "Nedenler: ateroskleroz, tromboemboli, hipertansif arteriyoskleroz; eşlik ederse **karışık demans**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "karışık demans",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 64,
+        "satir": [
+         "Serebral ateroskleroz",
+         "Karotis veya kalp kaynaklı tromboemboli",
+         "Kronik hipertansiyona bağlı serebral arteriyoskleroz.",
+         "Eşlik eden serebrovasküler hastalık bulunur (karışık demans)."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-04-b14",
+   "baslik": "Merkezi sinir sistemi travması ve kontüzyon",
+   "paragraflar": [
+    {
+     "id": "k2-04-p063",
+     "sayfa": 65,
+     "cumleler": [
+      {
+       "id": "k2-04-c0113",
+       "ses": "Kafa travması kafatası kırığı, parankimal yaralanma ve vasküler yaralanmaya yol açabilir ve bunlar sık birlikte görülür; sonucu belirleyen ana faktörler lezyonun anatomik yeri ve beynin sınırlı fonksiyonel onarım kapasitesidir.",
+       "ekran": "Kırık, parankimal ve vasküler yaralanma birlikte; sonucu **lezyonun yeri** ve sınırlı onarım belirler",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "lezyonun yeri",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 65,
+        "satir": [
+         "Kafatası kırığı",
+         "Parankimal yaralanma",
+         "Lezyonun anatomik yeri",
+         "Beynin sınırlı fonksiyonel onarım kapasitesi."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-04-p064",
+     "sayfa": 66,
+     "cumleler": [
+      {
+       "id": "k2-04-c0114",
+       "ses": "Travma delici ya da künt, açık ya da kapalı olabilir; beyin parankiminde birkaç santimetreküplük bir lezyon frontal lobda sessiz kalabilirken omurilikte ağır sakatlayıcı, beyin sapında ise ölümcül olabilir, yani yer boyuttan daha belirleyicidir.",
+       "ekran": "Travma **delici ya da künt**, açık ya da kapalı olabilir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "delici ya da künt",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 66,
+        "satir": [
+         "Delici veya künt",
+         "Açık veya kapalı yaralanma.",
+         "Frontal lobda sessiz",
+         "Omurilikte ağır sakatlayıcı",
+         "Beyin sapında ölümcül olabilir."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-04-c0166",
+       "ses": "Burası önemli: aynı büyüklükteki lezyonun sonucunu yerleşim yeri belirler.",
+       "ekran": "Lezyonun sonucunu boyutundan çok **yerleşim yeri** belirler.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "yerleşim yeri",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 66,
+        "satir": [
+         "Delici veya künt",
+         "Açık veya kapalı yaralanma.",
+         "Frontal lobda sessiz",
+         "Omurilikte ağır sakatlayıcı",
+         "Beyin sapında ölümcül olabilir."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-04-p065",
+     "sayfa": 67,
+     "cumleler": [
+      {
+       "id": "k2-04-c0115",
+       "ses": "Baş sabit bir cisme çarptığında darbe yerinde hasar, yani coup ve karşı tarafta hasar, yani contre coup oluşur, çünkü beyin kafatası içinde ileri geri hareket eder.",
+       "ekran": "Darbe yerinde **coup**, karşı tarafta contre coup",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "coup",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 67,
+        "satir": [
+         "Darbe yerinde hasar (coup)",
+         "Karşı tarafta hasar (contre-coup)."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-04-c0116",
+       "ses": "Kontüzyonda hızlı doku yer değiştirmesi vasküler bozulma, kanama, doku hasarı ve ödem yapar; girus tepeleri en duyarlı alanlardır ve orbitofrontal ile temporal kutup bölgelerinde sıktır, laserasyon ise kurşun ya da kemik parçası gibi cisimlerin beyne penetre olmasıyla doku yırtılması ve kanamadır.",
+       "ekran": "Kontüzyon: **girus tepeleri**, orbitofrontal ve temporal kutup; laserasyon: penetrasyonla yırtılma",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "girus tepeleri",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 67,
+        "satir": [
+         "Vasküler bozulma, kanama, doku hasarı, ödem.",
+         "Girus tepeleri en duyarlı alanlardır.",
+         "Orbitofrontal ve temporal kutup bölgelerinde sık.",
+         "Doku yırtılması ve kanama ile."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-04-p066",
+     "sayfa": 68,
+     "cumleler": [
+      {
+       "id": "k2-04-c0117",
+       "ses": "Kontüzyonlar kama şeklindedir ve en geniş kısmı darbe noktasına yakındır; saatler içinde kan korteks, beyaz madde ve subaraknoid boşluğa yayılır ve yirmi dört saatte piknoz, eozinofili ve parçalanmayla nöronal hasar morfolojisi belirginleşir.",
+       "ekran": "Kontüzyon **kama şeklinde**, geniş kısmı darbe noktasında; yirmi dört saatte nöronal hasar belirgin",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "kama şeklinde",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 68,
+        "satir": [
+         "Kontüzyonlar kama şeklindedir; en geniş kısmı darbe noktasına yakındır",
+         "Korteks, beyaz madde ve subaraknoid boşluğa yayılır."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-04-c0118",
+       "ses": "Eski lezyonlar girus tepelerinde çökük, büzülmüş, sarı kahverengi alanlardır ve plak jön diye adlandırılır; gliyoz ve hemosiderin yüklü makrofajlar içerir.",
+       "ekran": "Eski kontüzyon: sarı kahverengi **plak jön**; gliyoz ve hemosiderinli makrofaj",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "plak jön",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 68,
+        "satir": [
+         "Gliyoz ve hemosiderin yüklü makrofajlar içerir."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-04-c0119",
+       "ses": "Travma ayrıca beyaz maddede yaygın aksonal hasar yapabilir; bu genelde travmadan saatler sonra akson şişmeleriyle görülür ve kafa darbesi olmasa bile açısal ivme ile oluşabilir.",
+       "ekran": "**Yaygın aksonal hasar:** saatler sonra akson şişmeleri; darbesiz açısal ivmeyle de",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Yaygın aksonal hasar:",
+         "tur": "tuzak"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 68,
+        "satir": [
+         "Beyaz maddede yaygın aksonal hasar yapabilir.",
+         "Genelde travmadan saatler sonra akson şişmeleri ile görülür.",
+         "Kafa darbesi olmasa bile açısal ivme ile oluşabilir."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-04-p067",
+     "sayfa": 69,
+     "cumleler": [
+      {
+       "id": "k2-04-c0120",
+       "ses": "Şekil yirmi bir on üç A'da her iki temporal lobda kanama ve doku hasarı alanlarıyla akut kontüzyonlar, B'de ise beynin alt frontal yüzeyinde sarı renkli alanlar olarak görülen uzak kontüzyonlar var.",
+       "ekran": "Akut temporal kontüzyonlar ve alt frontal yüzeyde **sarı eski kontüzyonlar**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "sarı eski kontüzyonlar",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 69,
+        "satir": [],
+        "sekil": "temporal loblarda akut, alt frontal yüzeyde eski sarı kontüzyonlar"
+       }
+      },
+      {
+       "id": "k2-04-c0121",
+       "ses": "Akut kontüzyon kanamalı ve koyu renklidir, eski kontüzyon ise hemosiderin nedeniyle sarı renk alır.",
+       "ekran": "Akut koyu, eski **sarı** renk",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 69,
+        "satir": [
+         "Her iki temporal lobda da kanama ve doku hasarı alanları"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-04-p068",
+     "sayfa": 70,
+     "cumleler": [
+      {
+       "id": "k2-04-c0122",
+       "ses": "Sarsıntı, kafa travması sonrası geçici ve geri dönüşlü beyin fonksiyon bozukluğudur; geçici bilinç kaybı, solunum durması ve refleks kaybı olabilir, tam nörolojik iyileşme olur ama olaya ait amnezi kalabilir ve mekanizması, yani ani sinir aktivite bozulması tam bilinmiyor.",
+       "ekran": "**Sarsıntı:** geçici, geri dönüşlü; tam iyileşme, olaya ait amnezi kalabilir",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Sarsıntı:",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 70,
+        "satir": [
+         "Kafa travması sonrası geçici, geri dönüşlü beyin fonksiyon bozukluğu.",
+         "Geçici bilinç kaybı, solunum durması, refleks kaybı olabilir.",
+         "Tam nörolojik iyileşme; olaya ait amnezi kalabilir."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-04-c0123",
+       "ses": "Kronik travmatik ensefalopati tekrarlayan kafa travması sonrası, özellikle futbol oyuncuları ve boksörlerde gelişen demans tablosudur; beyinde atrofi, ventrikül genişlemesi ve frontal temporal kortekste girus derinliklerinde ve perivasküler alanlarda tau pozitif nörofibriler yumaklar görülür, hangi travma sayısı ve şiddetinin buna yol açtığı ise belirsizdir.",
+       "ekran": "**Kronik travmatik ensefalopati:** tekrarlayan travma; tau pozitif nörofibriler yumaklar",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Kronik travmatik ensefalopati:",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 70,
+        "satir": [
+         "Tekrarlayan kafa travması sonrası gelişen demans tablosu.",
+         "Özellikle futbol oyuncuları, boksörlerde.",
+         "Beyinde atrofi, ventrikül genişlemesi"
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-04-b15",
+   "baslik": "Travmatik vasküler yaralanma ve epidural hematom",
+   "paragraflar": [
+    {
+     "id": "k2-04-p069",
+     "sayfa": 71,
+     "cumleler": [
+      {
+       "id": "k2-04-c0124",
+       "ses": "Vasküler yaralanma merkezi sinir sistemi travmasının sık bileşenidir; damar duvarı bozulunca epidural, subdural, subaraknoid ya da intraparenkimal kanama gelişebilir, travmatik subaraknoid ve intraparenkimal kanamalar ise genellikle kontüzyon ve laserasyon alanlarındadır.",
+       "ekran": "Vasküler yaralanma sık; travmatik subaraknoid ve parenkim kanaması **kontüzyon alanlarında**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "kontüzyon alanlarında",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 71,
+        "satir": [
+         "Vasküler yaralanma, MSS travmasının sık bileşenidir.",
+         "Genellikle kontüzyon / laserasyon alanlarında."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-04-p070",
+     "sayfa": 72,
+     "cumleler": [
+      {
+       "id": "k2-04-c0125",
+       "ses": "Şekil yirmi bir on dört A'daki şemada epidural hematom genellikle kafa kırığına bağlı meninks arterinin yırtılmasıyla oluşur ve dura ile kafatası arasında arteriyel kan birikir.",
+       "ekran": "Epidural: kırık, **orta meningeal arter** yırtığı, dura ile kafatası arasında arteriyel kan",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "orta meningeal arter",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 72,
+        "satir": [],
+        "sekil": "şemada epidural hematom: kırık hattı ve orta meningeal arter hasarı"
+       }
+      },
+      {
+       "id": "k2-04-c0126",
+       "ses": "Subdural hematom ise beyin ile superior sagittal sinüs arasındaki köprü damarların hasar görmesiyle oluşur ve kan dura zarının iki tabakası arasında birikir; B panelinde duranın bir kısmını kaplayan epidural hematom görülüyor.",
+       "ekran": "Subdural: **köprü ven** hasarı, duranın iki tabakası arasında venöz kan",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "köprü ven",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 72,
+        "satir": [],
+        "sekil": "şemada subdural hematom: köprü ven hasarı ve venöz kan"
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-04-p071",
+     "sayfa": 73,
+     "cumleler": [
+      {
+       "id": "k2-04-c0127",
+       "ses": "Epidural hematomun en sık kaynağı dural damarlar, özellikle arteria meningea mediadır ve çocuk ile yetişkinde genellikle kafa kırığıyla birliktedir.",
+       "ekran": "En sık kaynak: **arteria meningea media**; genellikle kafa kırığıyla",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "arteria meningea media",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 73,
+        "satir": [
+         "Dural damarlar, özellikle a. meningea media.",
+         "Genellikle kafa kırığı ile birliktedir."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-04-c0128",
+       "ses": "Bebeklerde kafatası kolay deforme olduğu için kırık olmadan da damar yırtılabilir; arter basıncıyla gelen kan durayı iç yüzeyden ayırır ve beyin yüzeyini komprese eden hematom oluşturur.",
+       "ekran": "Bebekte **kırıksız** da olabilir; kan durayı kemikten ayırır",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "kırıksız",
+         "tur": "tuzak"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 73,
+        "satir": [
+         "Kafatası kolay deforme olduğu için kırık olmadan da damar yırtılabilir.",
+         "Dura’yı iç yüzeyden ayırır",
+         "Beyin yüzeyini komprese eden hematom oluşturur"
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-04-c0130",
+       "ses": "Kaynak arteriyel olduğu için hematom hızla büyür.",
+       "ekran": "Kaynak arteriyel olduğu için hematom hızla büyür.",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 74,
+        "satir": [],
+        "sekil": "epidural hematomda arteriyel kan birikimi"
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-04-p073",
+     "sayfa": 75,
+     "cumleler": [
+      {
+       "id": "k2-04-c0131",
+       "ses": "Tipik olarak travma sonrası kısa süren bir açık dönem, yani lusid interval vardır ve ardından saatler içinde hızla kötüleşen nörolojik bulgular gelir.",
+       "ekran": "**Lusid interval**, sonra saatler içinde hızla kötüleşme: epidural hematom",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Lusid interval",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 75,
+        "satir": [
+         "Travma sonrası kısa süre “açık” dönem",
+         "Saatler içinde hızla kötüleşen nörolojik bulgular."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-04-c0167",
+       "ses": "Burası önemli: arteria meningea media kaynaklı kanama ve ardından gelen açık dönem epidural hematomu düşündürür.",
+       "ekran": "Orta meningeal arter kanaması + açık dönem: **epidural hematom**.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "epidural hematom",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 75,
+        "satir": [
+         "Travma sonrası kısa süre “açık” dönem",
+         "Saatler içinde hızla kötüleşen nörolojik bulgular."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-04-c0132",
+       "ses": "Hematom hızla genişleyerek hayatı tehdit eder; nöroşirürjik acil durumdur ve acil boşaltım ile damar tamiri gerekir.",
+       "ekran": "**Nöroşirürjik acil**: acil boşaltım ve damar tamiri",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Nöroşirürjik acil",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 75,
+        "satir": [
+         "Hayatı tehdit eder.",
+         "Acil boşaltım ve damar tamiri gerekir."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-04-p074",
+     "sayfa": 76,
+     "cumleler": [
+      {
+       "id": "k2-04-c0133",
+       "ses": "Bilgisayarlı tomografide sağdaki büyük epidural hematom, düz duranın alttaki kortekse doğru girintili hale gelmesi nedeniyle mercek şeklinde bir kontura sahiptir ve duranın kafatasına sıkıca yapıştığı kranial sütürlerle sınırlıdır.",
+       "ekran": "Tomografide **mercek şeklinde**, sütürlerle sınırlı parlak kan",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "mercek şeklinde",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 76,
+        "satir": [],
+        "sekil": "tomografide mercek şeklinde sağ epidural hematom"
+       }
+      },
+      {
+       "id": "k2-04-c0134",
+       "ses": "Lateral ventriküllerin silinmesi ve orta hattın sola kaymasıyla kitle etkisi belirgindir; bu hasta yüksekten düşüp başının sağ tarafına çarpmış, orta meninks arterini kesmiş ve hematom saatler içinde akut olarak oluşmuştur.",
+       "ekran": "Kitle etkisi: **ventrikül silinmesi**, orta hat kayması",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "ventrikül silinmesi",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 76,
+        "satir": [],
+        "sekil": "epidural hematomda ventrikül silinmesi ve orta hat kayması"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-04-b16",
+   "baslik": "Subdural hematom",
+   "paragraflar": [
+    {
+     "id": "k2-04-p075",
+     "sayfa": 77,
+     "cumleler": [
+      {
+       "id": "k2-04-c0135",
+       "ses": "Bu tomografide büyük bir sol subdural hematom görüyoruz; kan bitişik girus ve sulkuslarla iç içe geçerek beyin yüzeyini hilal biçiminde izler ve beyni sıkıştırır.",
+       "ekran": "Tomografide beyin yüzeyini izleyen **hilal biçimli** subdural hematom",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "hilal biçimli",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 77,
+        "satir": [],
+        "sekil": "tomografide hilal biçimli sol subdural hematom"
+       }
+      },
+      {
+       "id": "k2-04-c0136",
+       "ses": "Soldan sağa kayma ve ventriküler daralma eşlik eder; sütürlerle sınırlı olmaması, onu mercek biçimli epidural hematomdan ayırır.",
+       "ekran": "Orta hat kayması, ventriküler daralma; **sütürle sınırlı değil**",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "sütürle sınırlı değil",
+         "tur": "tuzak"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 77,
+        "satir": [],
+        "sekil": "subdural hematomda orta hat kayması"
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-04-p076",
+     "sayfa": 78,
+     "cumleler": [
+      {
+       "id": "k2-04-c0137",
+       "ses": "Subdural hematomun mekanizması, beynin ani hareketiyle korteks yüzeyinden dural sinüslere uzanan köprü venlerin yırtılmasıdır; kanama duranın iki tabakası arasına olur ve dura ile araknoid arasında gibi görünür.",
+       "ekran": "Mekanizma: **köprü venlerin yırtılması**; kan duranın iki tabakası arasında",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "köprü venlerin yırtılması",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 78,
+        "satir": [
+         "Beynin ani hareketi ile köprü venlerin yırtılması.",
+         "Bu venler, korteks yüzeyinden dural sinüslere uzanır.",
+         "Dura–araknoid arasında gibi görünür."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-04-c0138",
+       "ses": "Yaşlılarda beyin atrofisi nedeniyle köprü venler gerilmiştir ve beyin daha fazla hareket edebilir, bu yüzden küçük travmalarda bile risk artar; bebekler de ince duvarlı köprü venler nedeniyle risk altındadır.",
+       "ekran": "Yaşlıda **beyin atrofisi** ile küçük travmada risk; bebekte ince duvarlı venler",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "beyin atrofisi",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 78,
+        "satir": [
+         "Köprü venler gerilmiş",
+         "Beyin daha fazla hareket edebilir → küçük travmalarda bile risk artar.",
+         "İnce duvarlı köprü venler nedeniyle de risk altındadır."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-04-p077",
+     "sayfa": 79,
+     "cumleler": [
+      {
+       "id": "k2-04-c0139",
+       "ses": "Subdural hematom genellikle travmadan sonraki ilk kırk sekiz saatte belirti verir; en sık serebral hemisferlerin lateral yüzlerinde yerleşir ve olguların yaklaşık yüzde onunda bilateraldir, belirtiler baş ağrısı, konfüzyon ve yavaş ilerleyen nörolojik kötüleşmedir.",
+       "ekran": "İlk **kırk sekiz saatte** belirti; lateral yüz, yüzde onu bilateral; yavaş kötüleşme",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "kırk sekiz saatte",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 79,
+        "satir": [
+         "Genellikle travmadan sonraki ilk 48 saatte belirti verir.",
+         "Serebral hemisferlerin lateral yüzlerinde",
+         "Yavaş ilerleyen nörolojik kötüleşme."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-04-c0140",
+       "ses": "Makroskopide beyin konturuna bitişik, sulkuslara girmeyen taze bir pıhtı tabakası, altta gergin beyin dokusu ve genelde temiz bir subaraknoid boşluk görülür.",
+       "ekran": "Sulkuslara girmeyen **taze pıhtı tabakası**; subaraknoid boşluk temiz",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "taze pıhtı tabakası",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 79,
+        "satir": [
+         "Beyin konturuna bitişik, sulkuslara girmeyen taze pıhtı tabakası",
+         "Altta gergin beyin dokusu; subaraknoid boşluk genelde temiz."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-04-p078",
+     "sayfa": 80,
+     "cumleler": [
+      {
+       "id": "k2-04-c0141",
+       "ses": "Şekil yirmi bir on dört C'de dura zarına yapışık büyük, organize bir subdural hematom görülüyor; organizasyon dura yüzeyinden başlar.",
+       "ekran": "Duraya yapışık **organize subdural hematom**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "organize subdural hematom",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 80,
+        "satir": [],
+        "sekil": "duraya yapışık büyük organize subdural hematom"
+       }
+      },
+      {
+       "id": "k2-04-c0142",
+       "ses": "Bu organize doku tekrarlayan kanamaların kaynağıdır.",
+       "ekran": "Bu organize doku tekrarlayan kanamaların kaynağıdır.",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 80,
+        "satir": [],
+        "sekil": "organize subdural hematom"
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-04-p079",
+     "sayfa": 81,
+     "cumleler": [
+      {
+       "id": "k2-04-c0143",
+       "ses": "Subdural hematomda pıhtı yaklaşık bir haftada lize olur, iki hafta içinde dura yüzeyinden hematoma doğru granülasyon dokusu gelişir ve bir ile üç ayda fibrozis oluşur.",
+       "ekran": "Bir hafta liz, iki hafta **granülasyon dokusu**, bir ile üç ay fibrozis",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "granülasyon dokusu",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 81,
+        "satir": [
+         "Pıhtı lizisi: ≈ 1 hafta.",
+         "Dura yüzeyinden hematoma granülasyon dokusu gelişir.",
+         "Fibrozis."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-04-c0144",
+       "ses": "Subdural hematomlar tekrarlayan kanamalara eğilimlidir; kaynak granülasyon dokusundaki ince duvarlı damarlar olabilir ve bu da farklı yaşta kanama ve reaktif doku bulgularıyla görülür.",
+       "ekran": "Tekrarlayan kanama: **granülasyon dokusundaki ince duvarlı damarlar**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "granülasyon dokusundaki ince duvarlı damarlar",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 81,
+        "satir": [
+         "Subdural hematomlar tekrarlayan kanamalara eğilimlidir:",
+         "Granülasyon dokusundaki ince duvarlı damarlar kaynak olabilir."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-04-b17",
+   "baslik": "Perinatal beyin hasarı",
+   "paragraflar": [
+    {
+     "id": "k2-04-p080",
+     "sayfa": 82,
+     "cumleler": [
+      {
+       "id": "k2-04-c0145",
+       "ses": "Serebral palsi, prenatal ya da perinatal dönemdeki hasar sonucu spastisite, distoni, ataksi veya atetoz ve parezi ile giden, ilerleyici olmayan motor nörolojik yetersizliklerdir; zihinsel engellilik eşlik edebilir ya da etmeyebilir.",
+       "ekran": "**Serebral palsi:** ilerleyici olmayan motor yetersizlik; spastisite, distoni, ataksi, atetoz, parezi",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Serebral palsi:",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 82,
+        "satir": [
+         "Prenatal / perinatal dönemde hasar sonucu",
+         "İlerleyici olmayan motor nörolojik yetersizlikler.",
+         "Zihinsel engellilik eşlik edebilir veya etmeyebilir."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-04-c0146",
+       "ses": "Klinik bulgular doğumda olmayabilir ve nedensel olaydan uzun süre sonra ortaya çıkabilir.",
+       "ekran": "Bulgular doğumda olmayabilir, **uzun süre sonra** çıkabilir",
+       "duzey": 1,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 82,
+        "satir": [
+         "Klinik bulgular doğumda olmayabilir;",
+         "Nedensel olaydan uzun süre sonra ortaya çıkabilir."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-04-p081",
+     "sayfa": 83,
+     "cumleler": [
+      {
+       "id": "k2-04-c0147",
+       "ses": "Perinatal dönemde iki ana hasar tipi kanamalar ve enfarktlardır; bunlar erişkin lezyonlarına göre yerleşim ve doku yanıt paternleri bakımından farklıdır, çünkü gelişmekte olan beyin farklı yanıt verir.",
+       "ekran": "İki tip: **kanama ve enfarkt**; yerleşim ve doku yanıtı erişkinden farklı",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "kanama ve enfarkt",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 83,
+        "satir": [
+         "Kanamalar",
+         "Enfarktlar.",
+         "Yerleşim ve doku yanıt paternleri farklıdır."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-04-p082",
+     "sayfa": 84,
+     "cumleler": [
+      {
+       "id": "k2-04-c0148",
+       "ses": "Prematüre bebeklerde germinal matriks içinde, sıklıkla lateral ventrikülün ön boynuzu komşuluğunda intraparenkimal kanama riski yüksektir; kanama ventrikül sistemine ve subaraknoid boşluğa ilerleyip hidrosefaliye neden olabilir.",
+       "ekran": "Prematürede **germinal matriks kanaması**: ön boynuz komşuluğu; ventriküle ilerleyip hidrosefali",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "germinal matriks kanaması",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 84,
+        "satir": [
+         "Germinal matriks içinde intraparenkimal kanama riski yüksek.",
+         "Sıklıkla lateral ventrikülün ön boynuzu komşuluğunda.",
+         "Hidrosefali gelişimine neden olabilir."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-04-c0168",
+       "ses": "Burası önemli: prematürede germinal matriks kanamasının ardından hidrosefali gelişebileceğini unutmayın.",
+       "ekran": "Prematürede germinal matriks kanaması sonrası **hidrosefali** gelişebilir.",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "hidrosefali",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 84,
+        "satir": [
+         "Germinal matriks içinde intraparenkimal kanama riski yüksek.",
+         "Sıklıkla lateral ventrikülün ön boynuzu komşuluğunda.",
+         "Hidrosefali gelişimine neden olabilir."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-04-p083",
+     "sayfa": 85,
+     "cumleler": [
+      {
+       "id": "k2-04-c0149",
+       "ses": "Özellikle prematürelerde supratentoryal periventriküler beyaz maddedeki iskemik enfarktlara periventriküler lökomalazi denir; sekel olarak beyaz madde nekrozu ve distrofik kalsifikasyon odaklarından oluşan tebeşir sarısı plaklar kalır.",
+       "ekran": "**Periventriküler lökomalazi:** periventriküler beyaz madde enfarktı; tebeşir sarısı plaklar",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Periventriküler lökomalazi:",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 85,
+        "satir": [
+         "Supratentorial periventriküler beyaz maddede iskemik enfarktlar.",
+         "Beyaz madde nekrozu",
+         "Distrofik kalsifikasyon odakları → tebeşir sarısı plaklar."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-04-c0150",
+       "ses": "Yaygın tutulumda hem gri hem beyaz madde etkilenir, her iki hemisferde büyük kistik lezyonlar oluşur ve multikistik ensefalopati gelişir.",
+       "ekran": "Yaygın tutulum: iki hemisferde kistler → **multikistik ensefalopati**",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "multikistik ensefalopati",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 85,
+        "satir": [
+         "Hem gri hem beyaz madde etkilenir",
+         "Her iki hemisferde büyük kistik lezyonlar",
+         "Multikistik ensefalopati gelişir."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-04-p084",
+     "sayfa": 86,
+     "cumleler": [
+      {
+       "id": "k2-04-c0151",
+       "ses": "Şekil yirmi bir on beş A'da periventriküler lökomalazinin kronik evresi görülüyor: periventriküler beyaz maddedeki büyük kistik boşluklar her iki yarım kürede de vardır ve şiddetli prenatal ya da perinatal iskemik hasarın uzun vadeli sekelidir.",
+       "ekran": "Kronik evre: iki hemisferde periventriküler **kistik boşluklar**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "kistik boşluklar",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 86,
+        "satir": [],
+        "sekil": "periventriküler lökomalazide iki hemisferde kistik boşluklar"
+       }
+      },
+      {
+       "id": "k2-04-c0152",
+       "ses": "B panelindeki histolojik kesit, mineralize aksonal uzantılardan oluşan çevresel bir halkayla çevrili, merkezi bir beyaz madde nekrozu odağını gösterir.",
+       "ekran": "Histoloji: **mineralize aksonal halka** ile çevrili beyaz madde nekrozu",
+       "duzey": 1,
+       "vurgu": [
+        {
+         "metin": "mineralize aksonal halka",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 86,
+        "satir": [],
+        "sekil": "mineralize aksonal halkayla çevrili beyaz madde nekrozu"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-04-b18",
+   "baslik": "Merkezi sinir sistemi enfeksiyonları tablosu ve özet",
+   "paragraflar": [
+    {
+     "id": "k2-04-p085",
+     "sayfa": 87,
+     "cumleler": [
+      {
+       "id": "k2-04-c0153",
+       "ses": "Özetle, serebrovasküler hastalıklar tromboz, emboli, kanama ve vaskülit mekanizmalarıyla ağır nörolojik hasar yapar ve hem global hem fokal iskeminin kendine özgü morfolojik zaman çizelgesi vardır.",
+       "ekran": "Dört mekanizma; global ve fokal iskemide **morfolojik zaman çizelgesi**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "morfolojik zaman çizelgesi",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 87,
+        "satir": [
+         "Tromboz, emboli, kanama ve vaskülit mekanizmaları ile ağır nörolojik hasar yapar.",
+         "Kendine özgü morfolojik zaman çizelgesine sahiptir."
+        ],
+        "sekil": null
+       }
+      },
+      {
+       "id": "k2-04-c0154",
+       "ses": "Kafa içi kanamalar ve anevrizmalar ani ölüm ve kalıcı sekel riskini belirler; hipertansiyon, vaskülit ve vasküler malformasyonlar enfarkt, kanama ve vasküler demansa neden olabilir, travmatik ve perinatal lezyonlar ise yaşam boyu süren nörolojik bozuklukların önemli nedenleridir.",
+       "ekran": "Kanama ve anevrizma: **ani ölüm ve kalıcı sekel**; travmatik ve perinatal lezyon: yaşam boyu bozukluk",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "ani ölüm ve kalıcı sekel",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 87,
+        "satir": [
+         "Ani ölüm ve kalıcı sekel riskini belirler.",
+         "Enfarkt, kanama ve vasküler demansa neden olabilir.",
+         "Yaşam boyu süren nörolojik bozuklukların önemli nedenleridir."
+        ],
+        "sekil": null
+       }
+      }
+     ]
+    },
+    {
+     "id": "k2-04-p086",
+     "sayfa": 88,
+     "cumleler": [
+      {
+       "id": "k2-04-c0155",
+       "ses": "Tablo yirmi bir iki, merkezi sinir sistemini tutan başlıca enfeksiyonları klinik sendrom ve sık etkenlere göre özetler; riketsiya, spiroket ve mantarlar grubunda Rocky Mountain benekli ateşi Rickettsia rickettsii, nörosifiliz Treponema pallidum, Lyme hastalığı Borrelia burgdorferi ile ilişkilidir.",
+       "ekran": "Nörosifiliz **Treponema pallidum**; Lyme Borrelia burgdorferi; Rocky Mountain Rickettsia rickettsii",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Treponema pallidum",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 88,
+        "satir": [],
+        "sekil": "merkezi sinir sistemi enfeksiyonları tablosu, riketsiya ve spiroket satırları",
+        "tablo": true
+       }
+      },
+      {
+       "id": "k2-04-c0156",
+       "ses": "Fungal menenjit Cryptococcus neoformans ve Candida albicans, serebral sıtma Plasmodium falciparum, amipik ensefalit Naegleria türleri ile oluşur; lokalize enfeksiyonlarda ise toksoplazmoz Toxoplasma gondii, sistiserkoz da domuz tenyası Taenia solium kaynaklıdır.",
+       "ekran": "Fungal menenjit **Cryptococcus**, Candida; sıtma Plasmodium; amip Naegleria; toksoplazma; sistiserkoz Taenia solium",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Cryptococcus",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 88,
+        "satir": [],
+        "sekil": "merkezi sinir sistemi enfeksiyonları tablosu, mantar, protozoa ve metazoa satırları",
+        "tablo": true
+       }
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "anahtar": "k2-04-serebrovaskuler-hastaliklar-ve-inme"
+}

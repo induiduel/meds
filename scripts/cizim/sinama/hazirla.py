@@ -19,7 +19,13 @@ if arsiv_mi:
     kurul = key.split("-")[1].replace("k", "kurul")
     pdf = str(MEDS_KOK.parent / "meds_database_25_26" / "pdf" / kurul / f"{key}.pdf")
 else:
-    pdf = sorted(glob.glob(str(KOK / ".pdf_onbellek" / f"{hz['deckId']}_0_*.pdf")))[-1]
+    pdfler = sorted(glob.glob(str(KOK / ".pdf_onbellek" / f"{hz['deckId']}_0_*.pdf")))
+    if not pdfler:  # H91: önbellek boşsa capa_dok/cizim_uret ile aynı yol (indirme klasörü → ders PDF ucu)
+        sys.path.insert(0, str(MEDS_KOK / "scripts" / "sesli_anlatim"))
+        from pdf_isaret import INDIR, pdf_indir
+        y = INDIR / hz["dosyalar"][0]["path"]
+        pdfler = [str(y if y.exists() else pdf_indir(hz["deckId"], hz["dosyalar"][0], 0))]
+    pdf = pdfler[-1]
 doc = pymupdf.open(pdf)
 komut, oran = {}, {}
 for cs in cz["p"].values():
