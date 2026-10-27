@@ -135,7 +135,7 @@ function okumaUygula(o: CdOkuma) {
   }
 }
 if (typeof document !== 'undefined') okumaUygula(okumaOku());
-function useOkuma(): [CdOkuma, (y: Partial<CdOkuma>) => void] {
+export function useOkuma(): [CdOkuma, (y: Partial<CdOkuma>) => void] {
   const [o, setO] = useState(okumaOku);
   return [o, (y) => setO((x) => { const n = { ...x, ...y }; try { localStorage.setItem(OKUMA_KEY, JSON.stringify(n)); } catch { /* yok */ } okumaUygula(n); return n; })];
 }

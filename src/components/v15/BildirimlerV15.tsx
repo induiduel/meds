@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo, useState } from 'react';
-import { AlertTriangle, Bell, BellRing, CalendarClock, CheckCircle2, Headphones, Info, MessageSquare, PenLine, RotateCcw, Sparkles, Trash2, Users, XCircle } from 'lucide-react';
+import { AlertTriangle, Bell, Settings2, BellRing, CalendarClock, CheckCircle2, Headphones, Info, MessageSquare, PenLine, RotateCcw, Sparkles, Trash2, Users, XCircle } from 'lucide-react';
 import { navigateTo, pathFor } from '../../router';
 import { userNotificationService, type UserNotification } from '../../services/userNotificationService';
 import { openDeepLink } from '../../services/universalRedirectService';
@@ -10,6 +10,8 @@ import { hatirlatOku, kisiselOku } from '../../services/sinavlarim';
 import { confirmDialog } from '../ui/ConfirmDialog';
 import { toast } from '../ui/Toast';
 import { useV15Baslik } from './baslik';
+import BildirimTercihV15 from './BildirimTercihV15';
+import { hesapTuru, turAcik, useBildirimTercih, type BildirimTur } from '../../services/bildirimTercih';
 import '../../styles/v15/ogren.css';
 import '../../styles/v15/dersler.css';
 import '../../styles/v15/bildirim.css';
@@ -80,7 +82,19 @@ function useYeniDersler() {
   return yeni;
 }
 
+/** /bildirimler?gorunum=tercih → tercihler (AB06); aksi halde bildirim listesi */
 export default function BildirimlerV15() {
+  const [tercihGor, setTercihGor] = useState(() => new URLSearchParams(location.search).get('gorunum') === 'tercih');
+  useEffect(() => {
+    const f = () => setTercihGor(new URLSearchParams(location.search).get('gorunum') === 'tercih');
+    window.addEventListener('popstate', f);
+    return () => window.removeEventListener('popstate', f);
+  }, []);
+  return tercihGor ? <BildirimTercihV15 /> : <BildirimListesi />;
+}
+
+function BildirimListesi() {
+  const [tercih] = useBildirimTercih();
   const [liste, setListe] = useState<UserNotification[]>(() => userNotificationService.getAll());
   const [durum, setDurum0] = useState<Durum>(durumOku);
   const [sekme, setSekme] = useState<Sekme>('tum');
@@ -92,13 +106,13 @@ export default function BildirimlerV15() {
   useEffect(() => { const t = window.setInterval(() => tik((x) => x + 1), 30000); return () => window.clearInterval(t); }, []);
 
   const satirlar = useMemo<Satir[]>(() => {
-    const tur = (id: string, s: Omit<Satir, 'okundu' | 'sil' | 'turetilmis'>): Satir | null =>
-      durum.silindi[id] ? null : { ...s, okundu: !!durum.okundu[id], turetilmis: true, sil: () => setDurum((d) => ({ ...d, silindi: { ...d.silindi, [id]: 1 } })) };
+    const tur = (id: string, s: Omit<Satir, 'okundu' | 'sil' | 'turetilmis'>, bt: BildirimTur): Satir | null =>
+      durum.silindi[id] || !turAcik(bt, tercih) ? null : { ...s, okundu: !!durum.okundu[id], turetilmis: true, sil: () => setDurum((d) => ({ ...d, silindi: { ...d.silindi, [id]: 1 } })) };
     const out: (Satir | null)[] = [];
     yeniDersler.forEach((d) => out.push(tur(`ders:${d.key}`, {
       id: `ders:${d.key}`, sekme: 'ders', baslik: 'Yeni sesli ders hazır', ileti: [d.brans?.replace(/^Tıbbi\s+/, ''), d.baslik].filter(Boolean).join(' · '),
       at: d.t, icon: Headphones, ton: 'a', git: () => navigateTo(pathFor('canli_ders', d.key)),
-    })));
+    }, 'yeni_ders')));
     const kalan = sinavaKalanGun();
     if (kalan >= 0 && kalan <= 14) {
       const k = aktifKurul();
@@ -106,7 +120,7 @@ export default function BildirimlerV15() {
       out.push(tur(`sinav:${k.kurul}:${gunAnahtari()}`, {
         id: `sinav:${k.kurul}:${gunAnahtari()}`, sekme: 'ders', baslik: kalan === 0 ? `Kurul ${k.kurul} sınavı bugün` : `Kurul ${k.kurul} sınavına ${kalan} gün`,
         ileti: 'Sınav planında bugün ne çalışacağın hazır', at: Math.min(Date.now(), bugunBas.getTime()), icon: CalendarClock, ton: 'w', git: () => navigateTo(pathFor('sinav_plani')),
-      }));
+      }, 'sinav'));
     }
     // D06 pratik hatırlatması: kurul ve kişisel sınavdan 5/3/1 gün önce
     if (hatirlatOku()) {
@@ -116,7 +130,7 @@ export default function BildirimlerV15() {
         const n = Math.round((new Date(`${x.gun}T00:00:00`).getTime() - bg.getTime()) / 86400000);
         if (n === 5 || n === 3 || n === 1) {
           const id = `pratik:${x.gun}:${x.ad}:${n}`;
-          out.push(tur(id, { id, sekme: 'soru', baslik: `${x.ad} için pratik: ${n} gün kaldı`, ileti: '20 soruluk karma test hazır', at: bg.getTime() + 18 * 3600000 > Date.now() ? bg.getTime() : bg.getTime() + 18 * 3600000, icon: Bell, ton: 'w', git: () => navigateTo(pathFor('hub_sorular')) }));
+          out.push(tur(id, { id, sekme: 'soru', baslik: `${x.ad} için pratik: ${n} gün kaldı`, ileti: '20 soruluk karma test hazır', at: bg.getTime() + 18 * 3600000 > Date.now() ? bg.getTime() : bg.getTime() + 18 * 3600000, icon: Bell, ton: 'w', git: () => navigateTo(pathFor('hub_sorular')) }, 'pratik'));
         }
       });
     }
@@ -125,9 +139,10 @@ export default function BildirimlerV15() {
       out.push(tur(`yanlis:${gunAnahtari()}`, {
         id: `yanlis:${gunAnahtari()}`, sekme: 'soru', baslik: `${hazir.length} sorunun tekrar zamanı geldi`, ileti: 'Yanlış yaptığın sorular seni bekliyor',
         at: Math.max(...hazir.map((e) => e.due)), icon: RotateCcw, ton: 'b', git: () => navigateTo(pathFor('yanlislarim')),
-      }));
+      }, 'yanlis'));
     }
     liste.forEach((n) => {
+      if (!turAcik(hesapTuru(n.type), tercih)) return;
       const m = TUR[n.type] || { icon: Bell, ton: 'n' };
       out.push({
         id: n.id, sekme: n.type.startsWith('app_') ? 'sistem' : 'soru', baslik: n.title, ileti: n.message, at: new Date(n.createdAt).getTime() || 0,
@@ -137,7 +152,7 @@ export default function BildirimlerV15() {
       });
     });
     return (out.filter(Boolean) as Satir[]).sort((a, b) => b.at - a.at);
-  }, [liste, durum, yeniDersler]);
+  }, [liste, durum, yeniDersler, tercih]);
 
   const goster = sekme === 'tum' ? satirlar : satirlar.filter((s) => s.sekme === sekme);
   const okunmamis = satirlar.filter((s) => !s.okundu).length;
@@ -173,6 +188,7 @@ export default function BildirimlerV15() {
       </div>
       <div className="bd15-eylem">
         <button type="button" className="v15-btn is-ghost" onClick={hepsiOkundu} disabled={!okunmamis}>Tümünü okundu say</button>
+        <button type="button" className="v15-btn is-ghost" onClick={() => navigateTo('/bildirimler?gorunum=tercih')}><Settings2 aria-hidden /> Tercihler</button>
         <button type="button" className="v15-btn is-ghost" onClick={temizle} disabled={!satirlar.some((s) => s.okundu)}><Trash2 aria-hidden /> Okunmuşları temizle</button>
       </div>
       {goster.length ? (

@@ -115,6 +115,31 @@ export interface Appearance {
   /** V04 Yazı tipleri: arayüz ve okuma yazısı (FONT_LIST kimliği; boş = tasarımın varsayılanı) */
   fontUi?: string;
   fontRead?: string;
+  /** K07 Yazı ve okuma: okuma metninin kalınlığı, hizası, satır/harf aralığı ve vurgu (işaretleyici) rengi */
+  okuma?: OkumaAyar;
+}
+
+export interface OkumaAyar { kalinlik: 400 | 500 | 600; hizala: 'sol' | 'iki'; satir: number; harf: number; vurgu?: string }
+export const OKUMA_VARSAYILAN: OkumaAyar = { kalinlik: 400, hizala: 'sol', satir: 1.65, harf: 0 };
+/** Vurgu (işaretleyici) rengi seçenekleri: [kimlik, ad, açık zemin rengi, koyu tema rengi] — yazı rengi --color-hl-ink */
+export const VURGU_RENKLERI: [string, string, string, string][] = [
+  ['sari', 'Sarı', '#FFE58A', '#5A4A12'],
+  ['yesil', 'Yeşil', '#BFEBC4', '#1E4A2A'],
+  ['mavi', 'Mavi', '#BFDDFB', '#163A5C'],
+  ['pembe', 'Pembe', '#FBCFE0', '#5A1F38'],
+  ['turuncu', 'Turuncu', '#FFD3A8', '#5C3310'],
+];
+export function okumaNormal(o: unknown): OkumaAyar | undefined {
+  if (!o || typeof o !== 'object') return undefined;
+  const x = o as Partial<OkumaAyar>;
+  const sayi = (v: unknown, a: number, b: number, d: number) => (typeof v === 'number' && isFinite(v) ? Math.min(b, Math.max(a, v)) : d);
+  return {
+    kalinlik: x.kalinlik === 500 || x.kalinlik === 600 ? x.kalinlik : 400,
+    hizala: x.hizala === 'iki' ? 'iki' : 'sol',
+    satir: sayi(x.satir, 1.3, 2.2, OKUMA_VARSAYILAN.satir),
+    harf: sayi(x.harf, 0, 0.12, 0),
+    vurgu: VURGU_RENKLERI.some((r) => r[0] === x.vurgu) ? x.vurgu : undefined,
+  };
 }
 
 export type MotifId = 'yok' | 'ekg' | 'hex' | 'hucre' | 'dna' | 'arti' | 'damar';
@@ -229,6 +254,7 @@ function read(): Appearance {
         motif: isMotif(p.motif) ? p.motif : 'yok',
         fontUi: findFont(p.fontUi, 'ui')?.id,
         fontRead: findFont(p.fontRead, 'read')?.id,
+        okuma: okumaNormal(p.okuma),
       };
       // Taşınan tasarım seçimi kalıcı olsun (aksi halde sonraki açılışta v11'e döner)
       if (out.design !== p.design) { try { localStorage.setItem(KEY, JSON.stringify(out)); } catch { /* ignore */ } }
@@ -305,6 +331,19 @@ export function applyAppearance(a: Appearance = current) {
   loadFont(fu); loadFont(fr);
   for (const v of ['--font-sans', '--font-display']) { if (fu) el.style.setProperty(v, fu.family); else el.style.removeProperty(v); }
   for (const v of ['--font-read', '--read-font']) { if (fr) el.style.setProperty(v, fr.family); else el.style.removeProperty(v); }
+  // K07 okuma ayarları: okuma metni seçicileri bu değişkenleri okur (styles/v15/ek15.css); ayar yoksa değişken yok
+  const ok = a.okuma;
+  const OK_VARS: [string, string | null][] = [
+    ['--okuma-kalinlik', ok ? String(ok.kalinlik) : null],
+    ['--okuma-hiza', ok ? (ok.hizala === 'iki' ? 'justify' : 'start') : null],
+    ['--okuma-satir', ok ? String(ok.satir) : null],
+    ['--okuma-harf', ok ? `${ok.harf}em` : null],
+  ];
+  for (const [v, d] of OK_VARS) { if (d != null) el.style.setProperty(v, d); else el.style.removeProperty(v); }
+  if (ok) el.dataset.okuma = 'on'; else delete el.dataset.okuma;
+  const vr = ok?.vurgu ? VURGU_RENKLERI.find((r) => r[0] === ok.vurgu) : undefined;
+  if (vr) { el.style.setProperty('--color-hl', a.mode === 'dark' ? vr[3] : vr[2]); el.style.setProperty('--color-hl-ink', a.mode === 'dark' ? '#FFF6E8' : '#1A1405'); }
+  else { el.style.removeProperty('--color-hl'); el.style.removeProperty('--color-hl-ink'); }
   el.classList.toggle('theme-dark', a.mode === 'dark');
   el.style.colorScheme = a.mode === 'dark' ? 'dark' : 'light';
   syncPwaChrome(a);
@@ -434,8 +473,10 @@ async function switchAppearance(next: Appearance) {
   }
 }
 
-export function setAppearance(patch: Partial<Omit<Appearance, 'palettes' | 'accents' | 'qcard' | 'customAccents'>> & { qcard?: Partial<QCardPrefs>; palette?: Palette; accent?: string; customAccent?: string | null; choice?: DesignChoice }) {
+export function setAppearance(patch: Partial<Omit<Appearance, 'palettes' | 'accents' | 'qcard' | 'customAccents' | 'okuma'>> & { qcard?: Partial<QCardPrefs>; palette?: Palette; accent?: string; customAccent?: string | null; choice?: DesignChoice; okuma?: Partial<OkumaAyar> | null }) {
   const next: Appearance = { ...current, palettes: { ...current.palettes }, accents: { ...(current.accents || {}) } };
+  if (patch.okuma === null) next.okuma = undefined;
+  else if (patch.okuma) next.okuma = okumaNormal({ ...(current.okuma || OKUMA_VARSAYILAN), ...patch.okuma });
   if (patch.mode) next.mode = patch.mode;
   if (patch.density) next.density = patch.density;
   if (patch.layout) next.layout = patch.layout;

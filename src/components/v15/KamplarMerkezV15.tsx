@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { ChevronDown, ChevronRight, ClipboardCheck, Download, FileText } from 'lucide-react';
-import { linkClick, navigateTo, type AppRoute } from '../../router';
+import { linkClick, navigateTo, pathFor, type AppRoute } from '../../router';
+import SinavAgirligiV15, { sinavAgirligiVar } from './SinavAgirligiV15';
 import { NAV_ITEMS } from '../shell/navModel';
 import { KURUL_NOLAR, kurulIcerikVar, kurulKaydet, varsayilanKurul } from '../kurul/KurulSecici';
 import { CHECKUPLAR, MERKEZ_ARACLARI, PDF_NOTLAR } from '../merkez/merkezModel';
@@ -8,6 +9,7 @@ import { KAMP_SEKMELER, SEKME_ROUTE, aracYolu, kampOku, type KampSekme } from '.
 import { useV15Baslik } from './baslik';
 import KurulSecV15 from './KurulSecV15';
 import '../../styles/v15/dersler.css';
+import '../../styles/v15/ek15.css';
 
 /**
  * v15 · Sınava hazırlan merkezi (tasarım sistemi v15 › D01). Sekmeler adrestir (/kamplar/kurulN/<sekme>, site haritası
@@ -85,6 +87,32 @@ export default function KamplarMerkezV15() {
             </li>
           ))}
         </ul>
+        {sekme === 'hepsi' && (
+          <section className="k15-plan" aria-labelledby="k15-plan-b">
+            <h2 id="k15-plan-b" className="v15-cap">Planlama</h2>
+            <ul className="k15-izgara" role="list">
+              {NAV_ITEMS.olasi_sorular && (() => {
+                const url = `${pathFor('olasi_sorular')}?kurul=${kurul}`;
+                const it = NAV_ITEMS.olasi_sorular;
+                return (
+                  <li>
+                    <a className="k15-kart v15-card" href={url} onClick={git(url)}>
+                      <span className="v15-tile is-b"><it.icon aria-hidden /></span>
+                      <span className="k15-kart-t"><b>{it.label}</b><span>Sınavdan sonra öğrenci hatıralarından kurulan soruları çöz</span></span>
+                      <ChevronRight className="v15-chev" aria-hidden />
+                    </a>
+                  </li>
+                );
+              })()}
+            </ul>
+            {sinavAgirligiVar(kurul) && (
+              <a className="k15-agirlik v15-card" href={pathFor('sinav_plani')} onClick={git(pathFor('sinav_plani'))}>
+                <span className="k15-kart-t"><b>Sınav ağırlığı</b><span>Kurul {kurul} teorik sınavında branş başına soru sayısı; kabarcık büyüdükçe soru artar</span></span>
+                <SinavAgirligiV15 kurul={kurul} />
+              </a>
+            )}
+          </section>
+        )}
         {sekme === 'checkup' && !checkup.length && (
           <p className="d15-bos v15-card">Kurul {kurul} için henüz check-up yok; içerik hazırlandıkça burada görünecek.</p>
         )}

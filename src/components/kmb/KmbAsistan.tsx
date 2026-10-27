@@ -4,6 +4,7 @@
  * vaka senaryoları, sahnede bul). İçerik src/data/kmb/<kod>.json, ses zamanlaması src/data/kmb/ses_<kod>.json,
  * klipler /api/cozucu-ses/kmb/ema/<kod>/<klip>.mp3. Ayrıntı: docs/KMB_GORSEL_ASISTAN.md
  */
+import { createPortal } from 'react-dom';
 import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { getCustomApiUrl } from '../../services/api';
 import { navigateTo } from '../../router';
@@ -427,6 +428,47 @@ function Yerlestir({ ders }: { ders: Ders }) {
   const [isaret, setIsaret] = useState<{ id: string; dogru: boolean } | null>(null);
   useEffect(() => { setSecili(null); setYerlesen([]); setYanlis(0); setIsaret(null); }, [sahne]);
   const durum = useMemo<SahneDurum>(() => Object.fromEntries(yerlesen.map((id) => [id, { etiket: true, gor: true, vurgu: 0 }])), [yerlesen]);
+  const dene = (yapi: string, hedef: string) => {
+    const d = hedef === yapi;
+    setIsaret({ id: hedef, dogru: d });
+    if (d) { setYerlesen((l) => [...l, hedef]); setSecili(null); } else { setSecili(yapi); setYanlis((n) => n + 1); }
+  };
+  // Sürükle-bırak (tasarım E04): pointer events, fare + dokunmatik. 6 px'ten az kayma = dokunuş → "seç ve dokun" yolu sürer.
+  const [surukle, setSurukle] = useState<{ id: string; x: number; y: number; hareket: boolean } | null>(null);
+  const surukleBitti = useRef(false);
+  const basla = (e: React.PointerEvent<HTMLButtonElement>, id: string) => {
+    if (e.button !== 0 || bitti) return;
+    const x0 = e.clientX, y0 = e.clientY, pid = e.pointerId;
+    let hareket = false;
+    const tasi = (ev: PointerEvent) => {
+      if (ev.pointerId !== pid) return;
+      if (!hareket && Math.hypot(ev.clientX - x0, ev.clientY - y0) < 6) return;
+      if (!hareket) { hareket = true; setIsaret(null); }
+      ev.preventDefault();
+      setSurukle({ id, x: ev.clientX, y: ev.clientY, hareket: true });
+    };
+    const bitir = (ev: PointerEvent) => {
+      if (ev.pointerId !== pid) return;
+      window.removeEventListener('pointermove', tasi);
+      window.removeEventListener('pointerup', bitir);
+      window.removeEventListener('pointercancel', bitir);
+      setSurukle(null);
+      if (!hareket) return;
+      surukleBitti.current = true;
+      setTimeout(() => { surukleBitti.current = false; }, 0);
+      if (ev.type === 'pointercancel') return;
+      let el = document.elementFromPoint(ev.clientX, ev.clientY);
+      const svg = el?.closest('.kmb-sahne');
+      while (el && svg && el !== svg) {
+        const hid = el.getAttribute('data-id');
+        if (hid && !el.classList.contains('kmb-gizli')) { dene(id, hid); return; }
+        el = el.parentElement;
+      }
+    };
+    window.addEventListener('pointermove', tasi, { passive: false });
+    window.addEventListener('pointerup', bitir);
+    window.addEventListener('pointercancel', bitir);
+  };
   if (!sahne) return <p className="kmb-yukleniyor">Bu derste etiket yerleştirilecek sahne yok.</p>;
   const bitti = yerlesen.length === yapilar.length;
   return (
@@ -436,17 +478,13 @@ function Yerlestir({ ders }: { ders: Ders }) {
           {sahneler.map((id, i) => <button key={id} className={i === si ? 'etkin' : ''} aria-pressed={i === si} onClick={() => setSi(i)}>{SAHNELER[id].ad}</button>)}
         </div>
       )}
-      <p className="kmb-yonerge">{bitti ? <b>Hepsi yerinde.</b> : secili ? <>Şimdi sahnede <b>{etiket[secili]?.[2]}</b> yapısına dokun.</> : 'Aşağıdan bir yapı seç, sonra sahnede yerine dokun.'}</p>
-      <div className="kmb-sahne-kap"><SahneCiz sahne={sahne} durum={durum} secilebilir={!!secili && !bitti} isaret={isaret} onSec={(id) => {
-        if (!secili) return;
-        const d = id === secili;
-        setIsaret({ id, dogru: d });
-        if (d) { setYerlesen((l) => [...l, id]); setSecili(null); } else setYanlis((n) => n + 1);
-      }} /></div>
+      <p className="kmb-yonerge">{bitti ? <b>Hepsi yerinde.</b> : secili ? <>Şimdi sahnede <b>{etiket[secili]?.[2]}</b> yapısına dokun.</> : 'Bir yapıyı sahnede yerine sürükle ya da seçip yerine dokun.'}</p>
+      <div className={`kmb-sahne-kap${surukle?.hareket ? ' kmb-surukleniyor' : ''}`}><SahneCiz sahne={sahne} durum={durum} secilebilir={(!!secili || !!surukle) && !bitti} isaret={isaret} onSec={(id) => { if (secili) dene(secili, id); }} /></div>
+      {surukle?.hareket && createPortal(<div className="kmb-hayalet" style={{ left: surukle.x, top: surukle.y }} aria-hidden>{etiket[surukle.id]?.[2]}</div>, document.body)}
       <div className="kmb-yer-cip" role="listbox" aria-label="Yapılar">
         {yapilar.map((y) => {
           const yerde = yerlesen.includes(y.id);
-          return <button key={y.id} role="option" aria-selected={secili === y.id} disabled={yerde} className={`${secili === y.id ? 'etkin' : ''}${yerde ? ' yerde' : ''}`} onClick={() => { setSecili(y.id); setIsaret(null); }}>{yerde ? '✓ ' : ''}{y.ad}</button>;
+          return <button key={y.id} role="option" aria-selected={secili === y.id} disabled={yerde} className={`${secili === y.id ? 'etkin' : ''}${yerde ? ' yerde' : ''}`} onPointerDown={(e) => basla(e, y.id)} onClick={() => { if (surukleBitti.current) { surukleBitti.current = false; return; } setSecili(y.id); setIsaret(null); }}>{yerde ? '✓ ' : ''}{y.ad}</button>;
         })}
       </div>
       {isaret && !isaret.dogru && <div className="kmb-kutu dikkat"><b>Burası değil</b><p>{etiket[secili || '']?.[2]} başka bir yerde; yeniden dene.</p></div>}

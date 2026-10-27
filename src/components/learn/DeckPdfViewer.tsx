@@ -11,7 +11,7 @@ import {
 } from 'lucide-react';
 import type { InteractiveDeck, SlideItem } from './InteractiveDeckView';
 import { getSlidePdfLocation } from '../../services/slidePdfMappingService';
-import { drivePreviewUrl, driveViewUrl, useDeckPdf, type DeckPdfFile } from '../../services/deckPdfService';
+import { drivePreviewUrl, driveViewUrl, useDeckPdf, useDeckPdfSecenekleri, type DeckPdfFile } from '../../services/deckPdfService';
 import { PDF_SAVED_EVENT, removeSavedPdf, savePdfOffline, savedPdfObjectUrl } from '../../services/deviceStorage';
 import { shouldAvoidNativeFullscreen } from '../../utils/device';
 import { useAppFullscreenWhile, wasRecentlyScrollingOrTouching } from '../../utils/fullscreen';
@@ -111,6 +111,10 @@ export const DeckPdfViewer: React.FC<DeckPdfViewerProps> = ({
   const [searchOpen, setSearchOpen] = useState(false);
   const [izgara, setIzgara] = useState<null | { sadece: boolean }>(null);
   const [ikinci, setIkinci] = useState<number | null>(null);
+  // İkinci bölmede başka dersin PDF'i (O07): null = bu ders; anahtar "<deckId>#<dosya>"
+  const [ikinciPdf, setIkinciPdf] = useState<string | null>(null);
+  const [ikinciSayfa, setIkinciSayfa] = useState<number | null>(null);
+  const pdfSecenek = useDeckPdfSecenekleri(ikinci != null);
   const [isaretler, setIsaretler] = useState<number[]>([]);
   const [query, setQuery] = useState('');
   const [debounced, setDebounced] = useState('');
@@ -279,6 +283,9 @@ export const DeckPdfViewer: React.FC<DeckPdfViewerProps> = ({
     }
   };
   const appSrc = custom?.url || (isSaved ? offline!.src : file?.url);
+  const ikinciSec = ikinciPdf ? pdfSecenek?.find((o) => `${o.deckId}#${o.i}` === ikinciPdf) : undefined;
+  const ikinciSrc = ikinciSec?.url || appSrc;
+  const ikinciToplam = ikinciSec ? ikinciSayfa : numPages;
   const driveId = !custom && !file?.url ? file?.fileId : undefined;
   const openHref = custom?.url || (file?.url ? `${file.url}#page=${page}` : file?.fileId ? driveViewUrl(file.fileId) : undefined);
   const name = custom?.name || file?.name || `${deck.title}.pdf`;
@@ -350,15 +357,21 @@ export const DeckPdfViewer: React.FC<DeckPdfViewerProps> = ({
         {ikinci != null && (
           <div className="dpv-ikinci" aria-label="Karşılaştırılan sayfa">
             <form className="dpv-ikinci-ust" onSubmit={(e) => e.preventDefault()}>
-              <span>Karşılaştır</span>
+              <select className="dpv-ikinci-ders" value={ikinciPdf || ''} aria-label="Karşılaştırılan ders"
+                onChange={(e) => { setIkinciPdf(e.target.value || null); setIkinciSayfa(null); setIkinci(1); }}>
+                <option value="">Bu ders</option>
+                {(pdfSecenek || []).filter((o) => o.deckId !== deck.id).map((o) => (
+                  <option key={`${o.deckId}#${o.i}`} value={`${o.deckId}#${o.i}`}>{o.title}{o.i ? ` (${o.i + 1})` : ''}</option>
+                ))}
+              </select>
               <button type="button" className="dpv-ib" onClick={() => setIkinci(Math.max(1, ikinci - 1))} aria-label="Önceki sayfa"><ChevronLeft aria-hidden /></button>
-              <input inputMode="numeric" value={ikinci} onChange={(e) => { const v = parseInt(e.target.value, 10); if (v > 0) setIkinci(Math.min(numPages || v, v)); }} aria-label="Karşılaştırılan sayfa numarası" />
-              <small>/ {numPages || '…'}</small>
-              <button type="button" className="dpv-ib" onClick={() => setIkinci(Math.min(numPages || ikinci + 1, ikinci + 1))} aria-label="Sonraki sayfa"><ChevronRight aria-hidden /></button>
+              <input inputMode="numeric" value={ikinci} onChange={(e) => { const v = parseInt(e.target.value, 10); if (v > 0) setIkinci(Math.min(ikinciToplam || v, v)); }} aria-label="Karşılaştırılan sayfa numarası" />
+              <small>/ {ikinciToplam || '…'}</small>
+              <button type="button" className="dpv-ib" onClick={() => setIkinci(Math.min(ikinciToplam || ikinci + 1, ikinci + 1))} aria-label="Sonraki sayfa"><ChevronRight aria-hidden /></button>
               <span className="e12-grow" />
               <button type="button" className="dpv-ib" onClick={() => setIkinci(null)} aria-label="Karşılaştırmayı kapat"><X aria-hidden /></button>
             </form>
-            <PdfDocView src={appSrc} page={ikinci} zoom={1} fit="page" rotation={rotation} onVisiblePage={(p) => setIkinci(p)} />
+            <PdfDocView key={ikinciSrc} src={ikinciSrc!} page={ikinci} zoom={1} fit="page" rotation={ikinciPdf ? 0 : rotation} onVisiblePage={(p) => setIkinci(p)} onLoaded={ikinciPdf ? setIkinciSayfa : undefined} />
           </div>
         )}
       </Suspense>

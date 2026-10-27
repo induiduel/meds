@@ -100,7 +100,13 @@ export type AppRoute =
   | 'hub_kaynaklar'
   | 'ders_detay'
   | 'kisi'
-  | 'arkadaslar';
+  | 'arkadaslar'
+  | 'program_ekle'
+  | 'arka_plan'
+  | 'dil_bolge'
+  | 'ilk_adimlar'
+  | 'yardim'
+  | 'bulunamadi';
 
 export const ROUTE_PATHS: Record<AppRoute, string> = {
   quick_add: '/',
@@ -173,6 +179,14 @@ export const ROUTE_PATHS: Record<AppRoute, string> = {
   ders_detay: '/ders',
   kisi: '/kisi',
   arkadaslar: '/arkadaslar',
+  // görünen /dersler/program/ekle (siteHaritasi çevirir)
+  program_ekle: '/program-ekle',
+  arka_plan: '/arka-plan',
+  dil_bolge: '/dil-bolge',
+  ilk_adimlar: '/ilk-adimlar',
+  yardim: '/yardim',
+  // AB16: bilinmeyen adres — parseLocation yalnız eşleşmeyen yolda döndürür
+  bulunamadi: '/bulunamadi',
 };
 
 export const ROUTE_TITLES: Record<AppRoute, string> = {
@@ -244,6 +258,12 @@ export const ROUTE_TITLES: Record<AppRoute, string> = {
   ders_detay: 'Ders',
   kisi: 'Profil',
   arkadaslar: 'Arkadaşlar',
+  program_ekle: 'Programa ekle',
+  arka_plan: 'Arka plan işleri',
+  dil_bolge: 'Dil ve bölge',
+  ilk_adimlar: 'İlk adımlar',
+  yardim: 'Yardım',
+  bulunamadi: 'Sayfa bulunamadı',
 };
 
 const BY_SEGMENT: Record<string, AppRoute> = Object.fromEntries(
@@ -253,7 +273,7 @@ const BY_SEGMENT: Record<string, AppRoute> = Object.fromEntries(
 );
 
 // Legacy aliases (old hash ids, English slugs) so shared links never 404 into the home page silently.
-const ALIASES: Record<string, AppRoute> = {
+export const ALIASES: Record<string, AppRoute> = {
   quick_add: 'quick_add',
   today: 'today',
   bugun: 'today',
@@ -386,6 +406,12 @@ const ALIASES: Record<string, AppRoute> = {
   kisi: 'kisi',
   arkadaslar: 'arkadaslar',
   arkadas: 'arkadaslar',
+  'arka-plan-isleri': 'arka_plan',
+  'dil-ve-bolge': 'dil_bolge',
+  'ilk-adim': 'ilk_adimlar',
+  yardim: 'yardim',
+  'yardim-merkezi': 'yardim',
+  sss: 'yardim',
   hucrem: 'hucrem',
   'zihin-haritasi': 'zihin_haritasi',
   yanlislarim: 'yanlislarim',
@@ -449,6 +475,8 @@ export const parseLocation = (gorunen: Pick<Location, 'pathname' | 'hash' | 'sea
   if (segs.length > 0) {
     const route = BY_SEGMENT[segs[0]] || ALIASES[segs[0]];
     if (route) return { route, param: segs[1] };
+    // AB16: tanınmayan yol sessizce ana sayfaya düşmez; siteHaritasi çevirisi ve takma adlar yukarıda denendi
+    return { route: 'bulunamadi' };
   }
   // Legacy #tab links (only on the root path)
   if (hash === 'tester/ozet' || hash === 'tester_ozet') return { route: 'tester_ozet' };

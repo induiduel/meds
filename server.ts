@@ -168,6 +168,7 @@ import {
 import { censorProfanity } from './src/utils/profanityFilter.ts';
 import { registerDataCatalogRoutes } from './src/services/dataCatalogService.ts';
 import { registerRagRelatedRoutes } from './src/services/ragRelatedRoutes.ts';
+import { registerBakimHataRoutes } from './src/services/bakimHataRoutes.ts';
 import { registerUserNotesRoutes, createNotesStore } from './src/services/userNotesService.ts';
 import { createQuestionIntake, formatUnitsForPrompt, applyIntakeToQuestion } from './src/services/questionIntake.ts';
 import { havuzDondurDosyasi, havuzDonduruldu } from './src/services/havuzDondur.ts';
@@ -397,6 +398,8 @@ app.use(express.json({ limit: '100mb' }));
 configureAdminAuthLog(path.resolve(__dirname, 'data'));
 app.use(adminAuthMiddleware('nofrostlife@gmail.com'));
 app.use(express.urlencoded({ extended: true, limit: '100mb' }));
+// AB17/AB18: bakım kipi (MEDS_BAKIM=1 ya da POST /api/admin/bakim; varsayılan kapalı) + istemci hata bildirimi
+registerBakimHataRoutes(app, { dataDir: path.resolve(__dirname, 'data'), requireAdmin });
 
 // Başarım: puan + ATP, hedefler, başarımlar, sıralama (src/services/basarim; kurallar src/data/basarim/tanim.json).
 // CORS'tan sonra (api. alt alanından okunur), diğer rotalardan önce kurulur (topluluk eylemi ara katmanı); profil yedeği kaydedilince kişi yeniden değerlendirilir.
@@ -7772,11 +7775,13 @@ Görevin:
       content: m.content
     }));
 
+    // Kural 10/20: yerel GPU (Ollama) sağlayıcısı istemciden istense de kullanılmaz; yalnız ücretsiz bulut zinciri
+    const yerelIstek = provider === 'ollama' || provider === 'local-ollama' || /^(gemma3|deepseek-r1|qwen3|medgemma)/.test(String(model || ''));
     const result = await generateResilientMedicalAi({
       prompt: fullPrompt,
       systemInstruction,
-      preferredProvider: provider === 'ollama' ? 'local-ollama' : (provider || 'auto'),
-      model: model || (provider === 'ollama' ? 'gemma3:4b' : undefined),
+      preferredProvider: yerelIstek ? 'auto' : (provider || 'auto'),
+      model: yerelIstek ? undefined : model || undefined,
       responseFormat: 'text',
       customGeminiKey: apiKey,
       customGroqKey: groqApiKey,
@@ -7804,6 +7809,8 @@ Görevin:
       providerUsed: result.providerUsed,
       planUsed: result.planUsed,
       matchedQuestionsCount: matchedQuestions.length,
+      // G03: modele bağlam olarak verilen ders notu parçaları (kaynak çipi: ders · PDF sayfası)
+      sources: await (async () => { try { const { toSourceRef } = await import('./src/services/ragService.ts'); return relevantChunks.map((c: any) => toSourceRef(c)); } catch { return []; } })(),
       matchedQuestions: matchedQuestions.map((q: any) => ({
         id: q.id,
         discipline: q.discipline,

@@ -118,6 +118,14 @@ export default function CanliDersDock({ activeTab, dersKey }: { activeTab: strin
         cdToggle();
         return;
       }
+      // AB10: [ ve ] oynatma hızını bir basamak düşürür / artırır (CD_HIZLAR)
+      if (e.key === '[' || e.key === ']') {
+        const i = (CD_HIZLAR as readonly number[]).indexOf(cdDurum().rate);
+        const j = Math.max(0, Math.min(CD_HIZLAR.length - 1, (i < 0 ? 2 : i) + (e.key === ']' ? 1 : -1)));
+        e.preventDefault();
+        cdHiz(CD_HIZLAR[j]);
+        return;
+      }
       const ey = cdTvTus(e, tv);
       if (!ey) return;
       // OK: odakta düğme/bağlantı varsa onu çalıştırsın

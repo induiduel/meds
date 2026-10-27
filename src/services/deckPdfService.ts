@@ -176,3 +176,26 @@ export function useDeckPdfMissing(): Record<string, string> | null {
   }, []);
   return m;
 }
+
+export interface DeckPdfSecenek { deckId: string; i: number; title: string; name: string; url: string }
+/** Sunucuda açılabilen bütün ders PDF'leri (yan yana karşılaştırmada ikinci bölmeye başka ders seçmek için; O07). */
+export function useDeckPdfSecenekleri(acik = true): DeckPdfSecenek[] | null {
+  const [liste, setListe] = useState<DeckPdfSecenek[] | null>(null);
+  useEffect(() => {
+    if (!acik || liste) return;
+    let live = true;
+    Promise.all([fetchAvailability(), loadBundledSources()]).then(([avail, src]) => {
+      const out: DeckPdfSecenek[] = [];
+      for (const [deckId, files] of Object.entries(avail || {})) {
+        (files || []).forEach((f, i) => {
+          if (!f.available) return;
+          out.push({ deckId, i, title: src.decks[deckId]?.title || deckId, name: f.name, url: fileUrl(deckId, i, f) });
+        });
+      }
+      out.sort((a, b) => a.title.localeCompare(b.title, 'tr') || a.i - b.i);
+      if (live) setListe(out);
+    });
+    return () => { live = false; };
+  }, [acik, liste]);
+  return liste;
+}

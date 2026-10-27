@@ -338,6 +338,9 @@
 .kmb-yer > *, .kmb-kontrol > * { min-width: 0; max-width: 100%; }
 .kmb-yer-cip { display: flex; gap: 6px; flex-wrap: wrap; }
 .kmb-yer-cip button.yerde { background: var(--color-ok-soft, #dff3e7); border-color: transparent; color: var(--color-ok, #2e9e5b); cursor: default; }
+.kmb-yer-cip button:not(.yerde) { touch-action: none; cursor: grab; -webkit-user-select: none; user-select: none; }
+.kmb-hayalet { position: fixed; z-index: 1000; transform: translate(-50%, -130%); pointer-events: none; padding: 6px 12px; border-radius: 999px; background: var(--color-accent, #3a6df0); color: #fff; font-size: 13px; font-weight: 600; box-shadow: 0 6px 18px rgb(0 0 0 / .25); white-space: nowrap; }
+.kmb-surukleniyor .kmb-sahne { outline: 2px dashed var(--color-accent, #3a6df0); outline-offset: 4px; border-radius: 12px; }
 .kmb-kontrol-l { list-style: none; margin: 0; padding: 0; border-radius: var(--kmb-r); background: var(--kmb-yuzey); border: 1px solid var(--color-line-soft, var(--kmb-cizgi)); overflow: hidden; }
 .kmb-kontrol-l li { display: grid; grid-template-columns: 28px minmax(0, 1fr) auto; gap: 8px 10px; padding: 9px 12px; align-items: center; }
 .kmb-kontrol-l li + li { border-top: 1px solid var(--color-line-soft, var(--kmb-cizgi)); }

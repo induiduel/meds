@@ -9,6 +9,7 @@ import path from 'path';
 import crypto from 'crypto';
 import { metinParagraflari } from './sesliAnlatim';
 import { kaynakBulunamadi } from './questionQuarantine';
+import { registerCanliDersAra } from './canliDersAra';
 
 const KOK = path.join(process.cwd(), 'data', 'sesli_anlatim');
 const ARSIV_KOK = path.join(process.cwd(), 'data', 'arsiv_25_26', 'sesli_anlatim');
@@ -347,6 +348,12 @@ export function registerCanliDersRoutes(app: Express) {
     }
     res.setHeader('Cache-Control', 'public, max-age=600');
     res.json({ q: dizinOnbellek.q });
+  });
+
+  // Sesli derste geçen yerler (A05): :key'den önce kayıtlı olmalı
+  registerCanliDersAra(app, {
+    dersler: () => dersler('2026-2027').filter((d) => !LISTEDE_GIZLI.has(d.key)),
+    metinYolu: P.metin, cumleYolu: P.cumle, sesVar: (k) => varyantlar(k).length > 0,
   });
 
   app.get('/api/canli-ders/:key', (req: Request, res: Response) => {

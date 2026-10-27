@@ -1,10 +1,13 @@
 import React, { useEffect, useMemo, useState } from 'react';
-import { ArrowLeftRight, ChevronLeft, ChevronRight, Headphones } from 'lucide-react';
+import { ArrowLeftRight, ChevronLeft, ChevronRight, Headphones, Plus, UserRound } from 'lucide-react';
 import { safeJsonFetch } from '../../services/api';
 import { fetchMyAccess } from '../../services/moderatorSession';
 import { linkClick, navigateTo, pathFor } from '../../router';
 import { KURULLAR, aktifKurul, bugun } from '../../services/kurulTakvimi';
 import { useDersListesi } from './dersVeri';
+import { OGLE, PROGRAM_KAYITLARI, SABAH, programYukle, saatBas, type ProgDers } from '../../services/programVeri';
+import { useKisiselProgram } from '../../services/kisiselProgram';
+import { saatYaz, tarihYaz, useBolge } from '../../services/bolgeTercih';
 import { useV15Baslik } from './baslik';
 import '../../styles/v15/ogren.css';
 import '../../styles/v15/dersler.css';
@@ -16,25 +19,20 @@ import '../../styles/v15/program.css';
  * programı PDF'i). Görünümler: Gün (önceki/sonraki gün), Hafta (Pzt–Cum), Liste (kurulun bütün dersleri).
  * Sesli dersi yayında olan satır ders ayrıntısına götürür; olmayan yalnız bilgi satırıdır.
  */
-interface ProgDers { id: string; brans: string; konu: string; ogretim_uyesi?: string; tarih: string; saat?: string; saat_sayisi?: number }
 type Gorunum = 'gun' | 'hafta' | 'ay' | 'liste';
 
-const KAYITLAR = import.meta.glob('../../data/dersler/k[1-6].json');
+const KAYITLAR = PROGRAM_KAYITLARI;
 const tarih = (g: string) => new Date(`${g}T12:00:00`);
 const iso = (d: Date) => `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
 const ekle = (g: string, n: number) => { const d = tarih(g); d.setDate(d.getDate() + n); return iso(d); };
 const pazartesi = (g: string) => { const d = tarih(g); return ekle(g, -((d.getDay() + 6) % 7)); };
-const gunYaz = (g: string, uzun = true) =>
-  tarih(g).toLocaleDateString('tr-TR', uzun ? { weekday: 'long', day: 'numeric', month: 'long' } : { weekday: 'short', day: 'numeric' });
+/** Tarih yazımı dil ve bölge tercihine göre (uzun: 29 Ekim Perşembe, kısa: 29.10.2026 Perşembe) */
+const gunYaz = (g: string, uzun = true) => tarihYaz(g, undefined, { gunAdi: true, kisaAd: !uzun });
 /** Kayıtta öğretim üyesi kimi yerde büyük harf: Türkçe kurallarıyla sözcük başı büyük */
 const adYaz = (s = '') => s.toLocaleLowerCase('tr-TR').replace(/(^|[\s.(/-])(\p{L})/gu, (_, a: string, b: string) => a + b.toLocaleUpperCase('tr-TR'));
-const saatBas = (s?: string) => s?.split('-')[0] || '';
 /** Branş başına sabit renk tonu (palet vurgusu üstünde açı); renk sözcüğü değil, ayırt etmek için */
 const ton = (b: string) => { let h = 0; for (const c of b) h = (h * 31 + c.charCodeAt(0)) % 360; return h; };
 
-/** Saat çizelgesi: sabah ve öğleden sonra blokları; çok saatlik ders aynı blokta ardışık dilimleri doldurur */
-const SABAH = ['08:00-08:40', '08:50-09:30', '09:40-10:20', '10:30-11:10', '11:20-12:00'];
-const OGLE = ['13:00-13:40', '13:50-14:30', '14:40-15:20', '15:30-16:10'];
 
 export default function DersProgramiV15() {
   const g = bugun();
@@ -47,6 +45,8 @@ export default function DersProgramiV15() {
   const [gun, setGun] = useState(ilkGun);
   const [veri, setVeri] = useState<ProgDers[] | null>(null);
   const { dersler: sesli } = useDersListesi();
+  const bolge = useBolge();
+  const kisisel = useKisiselProgram();
   // Yer değiştirme: yalnız yönetici/moderatör (rol sunucudan; yazma ucu da sunucuda denetlenir)
   const [yetkili, setYetkili] = useState(false);
   const [duzenle, setDuzenle] = useState(false);
@@ -61,14 +61,7 @@ export default function DersProgramiV15() {
   useEffect(() => {
     let c = true;
     setVeri(null);
-    const yukle = KAYITLAR[`../../data/dersler/k${kurul}.json`];
-    if (!yukle) { setVeri([]); return; }
-    yukle().then(async (m) => {
-      const d = ((m as { default?: { dersler: ProgDers[] } }).default ?? (m as { dersler: ProgDers[] })).dersler || [];
-      let duzen: Record<string, { tarih: string; saat?: string }> = {};
-      try { duzen = (await safeJsonFetch<{ duzen: typeof duzen }>(`/api/ders-programi/duzen?kurul=${kurul}`)).data?.duzen || {}; } catch { /* resmî program */ }
-      if (c) setVeri(d.map((x) => (duzen[x.id] ? { ...x, ...duzen[x.id] } : x)).sort((a, b) => a.tarih.localeCompare(b.tarih) || saatBas(a.saat).localeCompare(saatBas(b.saat))));
-    }, () => c && setVeri([]));
+    programYukle(kurul, true).then((d) => { if (c) setVeri(d); }, () => c && setVeri([]));
     return () => { c = false; };
   }, [kurul]);
   useEffect(() => { try { localStorage.setItem('medsoru_v15_program_gorunum', gorunum); } catch { /* yok */ } }, [gorunum]);
@@ -83,8 +76,18 @@ export default function DersProgramiV15() {
   const gunluk = useMemo(() => {
     const m = new Map<string, ProgDers[]>();
     for (const d of veri || []) { const a = m.get(d.tarih) || []; a.push(d); m.set(d.tarih, a); }
-    return m;
-  }, [veri]);
+    // Öğrencinin kendi eklediği etkinlikler (yalnız bu kurulun tarih aralığında; düzenleme kipinde gösterilmez)
+    if (!duzenle) {
+      for (const e of kisisel) {
+        if (e.tarih < kb.baslangic || e.tarih > kb.bitis) continue;
+        const a = m.get(e.tarih) || [];
+        a.push({ id: e.id, brans: 'Kişisel', konu: e.baslik, ogretim_uyesi: e.yer, tarih: e.tarih, saat: `${e.bas}-${e.bit}`, kisisel: true });
+        a.sort((x, y) => saatBas(x.saat).localeCompare(saatBas(y.saat)));
+        m.set(e.tarih, a);
+      }
+    }
+    return new Map([...m].sort((x, y) => x[0].localeCompare(y[0])));
+  }, [veri, kisisel, duzenle, kb.baslangic, kb.bitis]);
   const gunler = useMemo(() => [...gunluk.keys()], [gunluk]);
   const pzt = pazartesi(gun);
   const hafta = [0, 1, 2, 3, 4].map((i) => ekle(pzt, i));
@@ -167,19 +170,20 @@ export default function DersProgramiV15() {
     const gecti = d.tarih < g;
     const ic = (
       <>
-        <span className="pg15-s">{d.saat ? saatBas(d.saat) : '—'}{d.saat_sayisi && d.saat_sayisi > 1 ? <small>{d.saat_sayisi} saat</small> : null}</span>
-        <span className="pg15-c" style={{ '--t': ton(d.brans) } as React.CSSProperties} aria-hidden />
+        <span className="pg15-s">{d.saat ? saatYaz(saatBas(d.saat), bolge) : '—'}{d.saat_sayisi && d.saat_sayisi > 1 ? <small>{d.saat_sayisi} saat</small> : null}</span>
+        <span className={`pg15-c${d.kisisel ? ' is-kisisel' : ''}`} style={{ '--t': ton(d.brans) } as React.CSSProperties} aria-hidden />
         <span className="pg15-t">
           <b>{d.konu}</b>
-          <small>{d.brans}{d.ogretim_uyesi ? ` · ${adYaz(d.ogretim_uyesi)}` : ''}{tarihGoster ? ` · ${gunYaz(d.tarih, false)}` : ''}</small>
+          <small>{d.kisisel ? `Kişisel${d.ogretim_uyesi ? ` · ${d.ogretim_uyesi}` : ''}` : `${d.brans}${d.ogretim_uyesi ? ` · ${adYaz(d.ogretim_uyesi)}` : ''}`}{tarihGoster ? ` · ${gunYaz(d.tarih, false)}` : ''}</small>
         </span>
         {key && <Headphones className="pg15-i" aria-label="Sesli ders var" />}
+        {d.kisisel && <UserRound className="pg15-i" aria-label="Kendi eklediğin" />}
       </>
     );
     const cls = `pg15-r${gecti ? ' is-gecti' : ''}${d.tarih === g ? ' is-bugun' : ''}${secili === d.id ? ' is-secili' : ''}`;
     return (
       <li key={d.id}>
-        {duzenle ? (
+        {d.kisisel ? <a className={cls} href={pathFor('program_ekle')} onClick={linkClick(() => navigateTo(pathFor('program_ekle')))}>{ic}</a> : duzenle ? (
           <button type="button" className={`${cls} pg15-duz`} aria-pressed={secili === d.id} onClick={() => sec(d)}>{ic}</button>
         ) : key ? (
           <a className={cls} href={pathFor('ders_detay', key)} onClick={linkClick(() => navigateTo(pathFor('ders_detay', key)))}>{ic}</a>
@@ -210,6 +214,9 @@ export default function DersProgramiV15() {
           <button type="button" className={`pg15-duzbtn${duzenle ? ' is-on' : ''}`} aria-pressed={duzenle} onClick={() => { setDuzenle(!duzenle); setSecili(null); setHata(''); }}>
             <ArrowLeftRight /> {duzenle ? 'Düzenlemeyi bitir' : 'Yerleri değiştir'}
           </button>
+        )}
+        {!duzenle && (
+          <a className="pg15-duzbtn" href={pathFor('program_ekle')} onClick={linkClick(() => navigateTo(pathFor('program_ekle')))}><Plus /> Ekle</a>
         )}
         {gorunum !== 'liste' && (
           <div className="pg15-gez">
@@ -245,7 +252,7 @@ export default function DersProgramiV15() {
           ))}
         </div>
       ) : gorunum === 'ay' ? (
-        <AyIzgara acik={duzenle} baslangic={kb.baslangic} bitis={kb.bitis} gun={gun} bugun={g} sinav={kb.sinav} gunluk={gunluk} sec={(x) => { setGun(x); setGorunum('gun'); }} />
+        <AyIzgara haftaBas={bolge.haftaBas} acik={duzenle} baslangic={kb.baslangic} bitis={kb.bitis} gun={gun} bugun={g} sinav={kb.sinav} gunluk={gunluk} sec={(x) => { setGun(x); setGorunum('gun'); }} />
       ) : (
         <div className="pg15-hafta is-liste">
           {gunler.map((h) => (
@@ -263,16 +270,17 @@ export default function DersProgramiV15() {
 }
 
 /** Ay görünümü: pazartesiden başlayan 6×7 ızgara; her günde ders sayısı noktaları, dokununca o günün listesi */
-function AyIzgara({ acik, baslangic, bitis, gun, bugun, sinav, gunluk, sec }: { acik: boolean; baslangic: string; bitis: string; gun: string; bugun: string; sinav: string; gunluk: Map<string, ProgDers[]>; sec: (g: string) => void }) {
+function AyIzgara({ haftaBas, acik, baslangic, bitis, gun, bugun, sinav, gunluk, sec }: { haftaBas: 0 | 1; acik: boolean; baslangic: string; bitis: string; gun: string; bugun: string; sinav: string; gunluk: Map<string, ProgDers[]>; sec: (g: string) => void }) {
   const ilk = tarih(gun); ilk.setDate(1);
   const ay = ilk.getMonth();
-  const bas = pazartesi(iso(ilk));
+  // haftanın ilk günü dil ve bölge tercihinden (Pazartesi ya da Pazar)
+  const bas = haftaBas === 0 ? ekle(iso(ilk), -tarih(iso(ilk)).getDay()) : pazartesi(iso(ilk));
   const gunler = Array.from({ length: 42 }, (_, i) => ekle(bas, i));
   const haftaSay = gunler.findIndex((x, i) => i % 7 === 0 && tarih(x).getMonth() !== ay && i > 7);
   const goster = haftaSay > 0 ? gunler.slice(0, haftaSay) : gunler;
   return (
     <div className="pg15-ay v15-card" role="grid" aria-label="Ay görünümü">
-      {['Pzt', 'Sal', 'Çar', 'Per', 'Cum', 'Cmt', 'Paz'].map((x) => <span key={x} className="pg15-ay-b" role="columnheader">{x}</span>)}
+      {(haftaBas === 0 ? ['Paz', 'Pzt', 'Sal', 'Çar', 'Per', 'Cum', 'Cmt'] : ['Pzt', 'Sal', 'Çar', 'Per', 'Cum', 'Cmt', 'Paz']).map((x) => <span key={x} className="pg15-ay-b" role="columnheader">{x}</span>)}
       {goster.map((x) => {
         const n = (gunluk.get(x) || []).length;
         const disarida = tarih(x).getMonth() !== ay;

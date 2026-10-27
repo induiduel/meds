@@ -1,11 +1,13 @@
 {
  "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
- "onem": 525,
- "baslik": "Yıldızlı paragraflar daha derli toplu",
+ "onem": 526,
+ "baslik": "Yeni ekranlar ve ayarlar",
  "maddeler": [
-  "Yıldızlı paragraflar kurul, ders ve konuya göre açılıp kapanan gruplarda listeleniyor.",
-  "Her paragraf kısa bir satır olarak görünüyor; metne dokununca kaydettiğin yere gidiyorsun.",
-  "Tümünü aç/kapat düğmesiyle listeyi tek dokunuşla genişletebilirsin."
+  "Aramada sesli derste geçen yerler (zamanıyla)",
+  "Programa kendi etkinliğini ekle, Bugün'de şimdiki ders kartı",
+  "Arka plan işleri, Dil ve bölge, İlk adımlar, Yardım merkezi",
+  "Yazı ve okuma ayarları, bildirim tercihleri ve sessiz saatler",
+  "Asistan yanıtlarında kaynak, yeni 404 ve hata ekranları"
  ],
  "eklenen": [],
  "degisen": [],

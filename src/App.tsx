@@ -160,10 +160,16 @@ const NotlarimV15 = React.lazy(() => wrapLazy(import('./components/v15/NotlarimV
 const VideoDersV15 = React.lazy(() => wrapLazy(import('./components/v15/VideoDersV15')));
 const OyunlarV15 = React.lazy(() => wrapLazy(import('./components/v15/OyunlarV15')));
 const DersProgramiV15 = React.lazy(() => wrapLazy(import('./components/v15/DersProgramiV15')));
+const ProgramEkleV15 = React.lazy(() => wrapLazy(import('./components/v15/ProgramEkleV15')));
+const ArkaPlanV15 = React.lazy(() => wrapLazy(import('./components/v15/ArkaPlanV15')));
+const DilBolgeV15 = React.lazy(() => wrapLazy(import('./components/v15/DilBolgeV15')));
+const IlkAdimlarV15 = React.lazy(() => wrapLazy(import('./components/v15/IlkAdimlarV15')));
+const YardimV15 = React.lazy(() => wrapLazy(import('./components/v15/YardimV15')));
 const SinavTakvimiV15 = React.lazy(() => wrapLazy(import('./components/v15/SinavTakvimiV15')));
 const SiralamaV15 = React.lazy(() => wrapLazy(import('./components/v15/SiralamaV15')));
 const DersDetayV15 = React.lazy(() => wrapLazy(import('./components/v15/DersDetayV15')));
 const NeYapmak = React.lazy(() => wrapLazy(import('./components/merkez/MerkezView').then((m) => ({ default: m.NeYapmak }))));
+const BulunamadiV15 = React.lazy(() => wrapLazy(import('./components/v15/BulunamadiV15')));
 const GuncellemeGunluguView = React.lazy(() => wrapLazy(import('./components/guncellemeler/GuncellemeGunluguView')));
 const SinavCalismaView = React.lazy(() => wrapLazy(import('./components/SinavCalismaView').then(m => ({ default: m.SinavCalismaView }))));
 
@@ -539,7 +545,8 @@ export default function App() {
   useEffect(() => {
     // Yol normalleştirilirken derin bağlantının sorgu (?opt, ?sec, ?highlight) ve çapası (#…) korunur.
     // Karşılaştırma iç adreste yapılır (siteHaritasi): görünen adres iç içe olsa da sayfa/parametre aynıysa dokunulmaz.
-    try {
+    // AB16: bulunamayan adres olduğu gibi kalır (öğrenci yanlış yazdığı adresi görsün)
+    if (initialRoute.route !== 'bulunamadi') try {
       const next = icPathFor(initialRoute.route, initialRoute.param);
       const ic = icKonum();
       const sp = new URLSearchParams(ic.search);
@@ -2157,6 +2164,17 @@ export default function App() {
           </Suspense>
         )}
 
+        {/* TAB: /program-ekle (görünen /dersler/program/ekle) — kişisel etkinlik ekleme + hazır sınıf programı */}
+        {activeTab === 'program_ekle' && (<Suspense fallback={<ViewFallback />}><ProgramEkleV15 /></Suspense>)}
+        {/* TAB: /arka-plan — süren indirmeler, video dışa aktarımı, eşitleme */}
+        {activeTab === 'arka_plan' && (<Suspense fallback={<ViewFallback />}><ArkaPlanV15 /></Suspense>)}
+        {/* TAB: /dil-bolge — tarih/saat biçimi, haftanın ilk günü (cihaz tercihi) */}
+        {activeTab === 'dil_bolge' && (<Suspense fallback={<ViewFallback />}><DilBolgeV15 /></Suspense>)}
+        {/* TAB: /ilk-adimlar — başlangıç görevleri */}
+        {activeTab === 'ilk_adimlar' && (<Suspense fallback={<ViewFallback />}><IlkAdimlarV15 /></Suspense>)}
+        {/* TAB: /yardim — yardım merkezi */}
+        {activeTab === 'yardim' && (<Suspense fallback={<ViewFallback />}><YardimV15 /></Suspense>)}
+
         {/* TAB: /takvim (görünen /kamplar/takvim) — kurul sınavları, final, bütünleme ve kalan gün */}
         {activeTab === 'sinav_takvimi' && (
           <Suspense fallback={<ViewFallback />}>
@@ -2210,6 +2228,13 @@ export default function App() {
         {activeTab === 'kamp' && (
           <Suspense fallback={<ViewFallback />}>
             <KampView />
+          </Suspense>
+        )}
+
+        {/* AB16: bilinmeyen adres — gerçek 404 ekranı */}
+        {activeTab === 'bulunamadi' && (
+          <Suspense fallback={<ViewFallback />}>
+            <BulunamadiV15 />
           </Suspense>
         )}
 

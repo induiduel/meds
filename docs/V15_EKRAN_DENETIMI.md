@@ -11,12 +11,12 @@ Toplam 280 ekran.
 
 | Durum | Sayı |
 |---|---|
-| VAR | 127 |
+| VAR | 131 |
 | KURULDU | 64 |
-| KISMİ | 4 |
-| YOK | 48 |
+| KISMİ | 12 |
+| YOK | 51 |
 | BİLİNÇLİ YOK | 16 |
-| DOĞRULANMADI | 21 |
+| DOĞRULANMADI | 6 |
 
 Not: YOK sayısının 6'sı tasarım belgesi ekranıdır (A09, K08, P01, W03, X09, Z01: bileşen, ikon, yazı örneği, ekran haritası); kod karşılığı gerekmez.
 
@@ -164,11 +164,11 @@ Not: YOK sayısının 6'sı tasarım belgesi ekranıdır (A09, K08, P01, W03, X0
 |---|---|---|---|---|
 | G01 | kaynaklar | hub_kaynaklar → v15/KaynaklarMerkezV15.tsx | VAR | KaynaklarMerkezV15 arama + önerilen + satırlar |
 | G02 | saglik | health_ministry → SaglikView + saglik.css | VAR | bölüm seçici (aşı, tarama, yenidoğan, Karabük…) + ders bağları |
-| G03 | asistan | ai_chat | DOĞRULANMADI | v15 dalı yok |
+| G03 | asistan | ai_chat → LocalAiChatView | KISMİ | Sohbet sayfası var (v15 dışı); eksik: v15 kabuğu, "Kaynaklı yanıt · ders notlarından" alt başlığı, yanıt altında kaynak chip'i (ders · dakika · PDF sayfası); sayfa hâlâ "Yerel GPU (RTX 4060)/gemma3" sağlayıcısı gösteriyor (kural 10/20) |
 | G04 | profil | settings → ProfileV12 (v15 dalı) + profil.css | KURULDU | Seri/Soru/Biten konu/Rozet + haftalık etkinlik çubukları (ProfilOzetV15) |
 | G05 | basarim | basarimlar | VAR | BasarimView: hedefler, rozet seviyeleri, ATP, rozet ayrıntısı (M11) |
 | G06 | ayarlar | ProfileV12 #hash bölümleri | VAR | Profil bölümleri ayrı ekran; paneller v15 renkleriyle (v12 yapısı) |
-| G07 | cevrimdisi | cevrimdisi | DOĞRULANMADI | v15 dalı yok |
+| G07 | cevrimdisi | cevrimdisi → cevrimdisi/CevrimdisiView.tsx | VAR | Alan bilgisi, paket listesi + indirme kuyruğu, Yalnız Wi-Fi'de indir; tarayıcıda doğrulandı |
 | G08 | yonetim | /manage (v14 kabuğu) | BİLİNÇLİ YOK | yönetim ayrı v14 konsolu; v15 geçişi planlanmadı |
 
 ## H · Diyalog, çekmece, tost
@@ -179,8 +179,8 @@ Not: YOK sayısının 6'sı tasarım belgesi ekranıdır (A09, K08, P01, W03, X0
 | H02 | dlgSil | shell.css › Katmanlar | VAR |  |
 | H03 | dlgBilgi | shell.css › Katmanlar | VAR |  |
 | H04 | dlgForm | shell.css › Katmanlar | VAR | DOĞRULANMADI: form alanları |
-| H05 | tur1 | CanliDersTur / tanıtım | DOĞRULANMADI |  |
-| H06 | tur2 | CanliDersTur / tanıtım | DOĞRULANMADI |  |
+| H05 | tur1 | canliDers/CanliDersTur.tsx, onboarding/LearnTour.tsx | KISMİ | Koç kartı mekaniği var (n/toplam, kapat, önceki/sonraki) ama yalnız sesli derste/Öğren'de; eksik: Bugün ekranında halkayı anlatan tur (Tur 1/4, Atla, Sonraki) |
+| H06 | tur2 | canliDers/CanliDersTur.tsx | KISMİ | Eksik: "cümleye uzun bas → spot/not/kart yap, PDF yeri işaretlenir" turu ve arkasındaki uzun basma eylemi (kodda yok) |
 | H07 | acilir | shell.css | VAR |  |
 | H08 | cekmece | shell.css (bulanık perde, 22–24 px köşe) | VAR |  |
 | H09 | altCekmece | shell.css | VAR |  |
@@ -191,7 +191,7 @@ Not: YOK sayısının 6'sı tasarım belgesi ekranıdır (A09, K08, P01, W03, X0
 
 | Kod | Ad | Site karşılığı | Durum | Not |
 |---|---|---|---|---|
-| I01 | splash | — | DOĞRULANMADI |  |
+| I01 | splash | index.html #app-splash | VAR | Açılış ekranı (kalp + EKG), temaya göre zemin |
 | I02 | intro1 | OnboardingV12 (v15 ilerleme çubuğu) | KURULDU | tam sayfa tanıtım |
 | I03 | intro2 | OnboardingV12 | KURULDU | tam sayfa tanıtım |
 | I04 | intro3 | OnboardingV12 | KURULDU | tam sayfa tanıtım |
@@ -224,7 +224,7 @@ Not: YOK sayısının 6'sı tasarım belgesi ekranıdır (A09, K08, P01, W03, X0
 | K04 | notEditor | NotlarimV15 | KURULDU | madde listesi düğmesi + Enter ile yeni madde; ses damgası (B11) var |
 | K05 | notPaylas | — | VAR | NotPaylasV15 + notPaylas.ts |
 | K06 | paylasilan | — | VAR | /notlarim?gorunum=paylasilan |
-| K07 | yaziAyar | Ayarlar › Görünüm | DOĞRULANMADI |  |
+| K07 | yaziAyar | Profil › Görünüm/Erişilebilirlik (v12/ProfileV12.tsx), sesli ders okuma (canliDers/CdV15.tsx) | KISMİ | Okuma yazısı, arayüz ölçeği, geniş satır/harf aralığı anahtarı, sesli derste boyut/satır aralığı/zemin var; eksik: canlı önizleme metni, kalınlık (400/500/600), hizalama (Sola/İki yana), harf aralığı kaydırıcısı, vurgu (işaretleyici) rengi seçimi tek ekranda |
 | K08 | yaziOrnek | — (tasarım belgesi) | YOK | Kod karşılığı gerekmez |
 
 ## L · Topluluk ve listeler
@@ -250,7 +250,7 @@ Not: YOK sayısının 6'sı tasarım belgesi ekranıdır (A09, K08, P01, W03, X0
 | M06 | seviyeAtla | — | VAR | HucremV15: seviye atlama kutlaması (Paylaş + Harika) |
 | M07 | siralama | leaderboard + Hucrem "Hücre sırası" | VAR | SiralamaV15: Sınıfım/Üniversite/Türkiye/Arkadaşlar; üniversite süzgeci sunucuda; arkadaş sistemi yok (boş durum) |
 | M08 | profil2 | ProfileV12 v15 | KURULDU | profil kartında okul/sınıf/kurul |
-| M09 | profilDuzenle | — | DOĞRULANMADI |  |
+| M09 | profilDuzenle | v15/ProfilKurulumV15.tsx + Hesap paneli + v15/GizlilikAnahtari.tsx | VAR | Okul, sınıf, öğrenci no, eğitim yılı, kurul, hedef; ad/fotoğraf Hesap'ta; "herkese açık" anahtarı. Ayrı "Hücremi herkese göster" anahtarı yok |
 | M10 | basarim2 | basarimlar | VAR | BasarimView + rozet ayrıntısı |
 | M11 | rozetDetay | — | VAR | BasarimView: rozet ayrıntısı (baklava rozet, seviye, tarih, Paylaş) |
 | M12 | evrimYol | HucremV15 basamak yolu | VAR | HucremV15: evrim yolculuğu, önceki/sonraki, zaman çizgisi |
@@ -399,8 +399,8 @@ Not: YOK sayısının 6'sı tasarım belgesi ekranıdır (A09, K08, P01, W03, X0
 | Z01 | ekranHaritasi | — (tasarım belgesi) | YOK | Kod karşılığı gerekmez |
 | Z02 | arac_dersler | DerslerMerkezV15 Diğer araçlar çekmecesi | VAR |  |
 | Z03 | arac_soruMerkez | SorularMerkezV15 "Araçlar" | KURULDU | Soru çöz araçlar ızgarası |
-| Z04 | arac_kamplar | KamplarMerkezV15 | DOĞRULANMADI |  |
-| Z05 | arac_kaynaklar | KaynaklarMerkezV15 | DOĞRULANMADI |  |
+| Z04 | arac_kamplar | KamplarMerkezV15 | KISMİ | Tasarımdaki "Planlama" listesi: Sınav takvimi ve Sınav planı (yol haritası) var; eksik: Olası sorular satırı (rota var, merkezde yok), Sınav ağırlığı kabarcık haritası (yok) |
+| Z05 | arac_kaynaklar | KaynaklarMerkezV15 | KISMİ | Tasarımdaki "Topluluk ve belgeler" listesinin hiçbir satırı merkezde yok: Sohbet (topluluk), Paylaşılan notlar, Oluşturduğum PDF'ler, Kurul takvimi; sayfada yalnız başvuru kartları |
 | Z06 | arac_oyunMerkez | OyunlarV15 | KURULDU | Oyunlar mod kartları |
 | Z07 | arac_profil2 | v15/TumSayfalarV15.tsx | VAR | Menü (TumSayfalarV15) grupları |
 
@@ -425,19 +425,19 @@ Not: YOK sayısının 6'sı tasarım belgesi ekranıdır (A09, K08, P01, W03, X0
 | AB03 | kisisel | ProfileV12 | VAR | Profil › Hesap |
 | AB04 | hesapGuvenlik | ProfileV12 hesap | VAR | Profil › Hesap (şifre, oturum) |
 | AB05 | veriGizlilik | ProfileV12 verilerim | VAR | Profil › Veriler ve gizlilik |
-| AB06 | bildirimTercih | — | DOĞRULANMADI |  |
+| AB06 | bildirimTercih | — | YOK | Bildirim türü başına anahtarlar (sınav öncesi pratik, yeni ders, düello/sınıf, hücre, sohbet, yenilikler) ve Sessiz saatler yok |
 | AB07 | erisilebilirlik | ProfileV12 Erişilebilirlik | VAR |  |
 | AB08 | dilBolge | — | YOK |  |
 | AB09 | komutPaleti | ⌘K arama | KURULDU | ⌘K: karma test, yanlışlar, kronometre, odak, yeni not, tam ekran, tema komutları |
-| AB10 | kisayollar | — | DOĞRULANMADI |  |
+| AB10 | kisayollar | v15/TamEkranAyarV15.tsx (Profil › Tam ekran ve kısayollar) | KISMİ | 8 kısayolluk düz liste var; eksik: Genel/Sesli ders/Soru/Kronometre grupları ve ?, G sonra B, [ ] hız, M işaretle, H yardım al, T/L/R kronometre kısayolları |
 | AB11 | baslangicGorev | — | YOK |  |
 | AB12 | geriAl | NotlarimV15 "Geri al" | KURULDU | geriAlinabilir(): not, yanlış, kişisel sınav silmede 6 sn "Geri al" bildirimi (onay penceresi yerine) |
-| AB13 | cevrimdisiBanner | — | DOĞRULANMADI |  |
+| AB13 | cevrimdisiBanner | system/NetworkBanner.tsx | VAR | "Çevrimdışısın" + "n sırada" hapı, bağlanınca gönderim; metin tasarımdaki "cevapların bağlanınca eşitlenecek" değil |
 | AB14 | yardimMerkezi | — | YOK |  |
 | AB15 | yenilikler | guncellemeler | VAR | GuncellemeGunluguView: sürüm kartları (sürüm, gün/saat, başlık, eklenen/değişen/düzeltilen maddeler) |
-| AB16 | hata404 | — | DOĞRULANMADI |  |
-| AB17 | hataSunucu | — | DOĞRULANMADI |  |
-| AB18 | bakim | — | DOĞRULANMADI |  |
+| AB16 | hata404 | — | YOK | Bilinmeyen adres sessizce ana sayfaya (Soru ekle) düşüyor (router.ts parseLocation → quick_add); eksik: "Bu sayfa bulunamadı" ekranı + Ara + Bugün'e dön |
+| AB17 | hataSunucu | main.tsx RootErrorBoundary | KISMİ | Hata ekranı (Geri dön / Sayfayı yenile) var; eksik: tasarım metni ("Bir şeyler ters gitti", "Sorun bize iletildi"), İndirilenler düğmesi; ham hata metnini öğrenciye gösteriyor; v15 görünümü değil |
+| AB18 | bakim | — | YOK | Bakım ekranı (dişli, "Kısa bakım", tahmini süre, çalışman kaydedildi) yok; yalnız UpdatePrompt "Site güncellendi" |
 
 - S08: KURULDU (2026-10-27): satır aralığı, yazı tipi (Okuma/Sade/Kolay okunur), zemin, okunan cümleyi ortala
 - S09: KURULDU: oynatıcı çekmecesinde Bölümler / Yıldızlılarım sekmeleri

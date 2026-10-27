@@ -47,6 +47,10 @@ import {
   UserPlus,
   FileDown,
   Grid3x3,
+  ArrowDownUp,
+  Languages,
+  ListTodo,
+  LifeBuoy,
 } from 'lucide-react';
 import type React from 'react';
 import type { AppRoute } from '../../router';
@@ -129,6 +133,10 @@ const I: Record<string, NavItem> = {
   bitirdiklerim: { id: 'bitirdiklerim', label: 'Bitirdiklerim', short: 'Bitenler', tile: 'Bitirdiklerim', hint: 'Konu konu bitenler, harcanan süre, kalanların tahmini', icon: CircleCheckBig, tint: '#30D158' },
   stats: { id: 'stats', label: 'İstatistiklerim', short: 'İstatistik', tile: 'İstatistik', hint: 'İlerleme, puan ve etkinlik', icon: BarChart3, tint: '#5E5CE6' },
   music: { id: 'music', label: 'Müzik', hint: 'Çalışırken dinle', icon: Music, tint: '#FF375F' },
+  arka_plan: { id: 'arka_plan', label: 'Arka plan işleri', short: 'Arka plan', tile: 'Arka plan işleri', hint: 'Süren indirmeler, video dışa aktarımı ve eşitleme', icon: ArrowDownUp, tint: '#0A84FF' },
+  ilk_adimlar: { id: 'ilk_adimlar', label: 'İlk adımlar', short: 'İlk adımlar', tile: 'İlk adımlar', hint: 'Başlangıç görevleri: profil, ilk ders, ilk sorular', icon: ListTodo, tint: '#30D158' },
+  dil_bolge: { id: 'dil_bolge', label: 'Dil ve bölge', short: 'Dil, bölge', tile: 'Dil ve bölge', hint: 'Tarih ve saat biçimi, haftanın ilk günü', icon: Languages, tint: '#8E8E93' },
+  yardim: { id: 'yardim', label: 'Yardım', short: 'Yardım', tile: 'Yardım', hint: 'Sık sorulanlar, klavye kısayolları, iletişim', icon: LifeBuoy, tint: '#5E5CE6' },
   settings: { id: 'settings', label: 'Profil ve ayarlar', short: 'Ayarlar', hint: 'Tema, palet, yoğunluk, fotoğraf', icon: Settings2, tint: '#8E8E93' },
 };
 
@@ -150,7 +158,7 @@ const NAV_TREE_HAM: NavGroup[] = [
   { label: 'Check Up', items: [I.genetik_checkup, I.patoloji_checkup] },
   { label: 'Başvuru', items: [I.oncelikli_dersler, I.glossary, I.diseases, I.health_ministry, I.kazanimlar, I.gecmis_kurullar, I.guncellemeler] },
   { label: 'Topluluk', items: [I.topluluk, I.arkadaslar, I.basarimlar, I.hucrem, I.leaderboard, I.matrix] },
-  { label: 'Kişisel', items: [I.bitirdiklerim, I.cevrimdisi, I.study, I.stats, I.music] },
+  { label: 'Kişisel', items: [I.bitirdiklerim, I.cevrimdisi, I.study, I.stats, I.music, I.ilk_adimlar, I.arka_plan, I.dil_bolge, I.yardim] },
 ];
 
 export const NAV_TREE: NavGroup[] = NAV_TREE_HAM

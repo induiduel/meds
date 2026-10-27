@@ -1,5 +1,7 @@
 import { useBasarim } from '../../services/basarimIstemci';
 import { kronometreAc } from '../v15/KronometreV15';
+import ProgramSimdiKarti from '../v15/ProgramSimdiKarti';
+import { IlkAdimlarKarti } from '../v15/IlkAdimlarV15';
 import { profilOku } from '../../services/profilKurulum';
 import React, { useEffect, useMemo, useState } from 'react';
 import { ArrowRight, CircleHelp, Flag, Gamepad2, Headphones, Layers, Lightbulb, RotateCcw, Search, Sparkles, Star } from 'lucide-react';
@@ -15,6 +17,7 @@ import '../../styles/today.css';
 import '../../styles/v13/today.css';
 import '../../styles/v15/today.css';
 import { useAppearance } from '../../utils/appearance';
+import { useCdTur } from '../canliDers/useCdTur';
 import { TodayViewV10 } from './TodayViewV10';
 
 /**
@@ -99,6 +102,8 @@ export const TodayView: React.FC<TodayViewProps> = (props) => {
 /** v11 ve v12 aynı verileri kullanır; v12 yalnız düzeni değiştirir (iki sütun, tek birincil blok, satır listeleri). */
 const TodayViewV11: React.FC<TodayViewProps & { v12?: boolean; v13?: boolean; v15?: boolean }> = ({ committeeLabel, onGo, v12, v13, v15 }) => {
   const basarim = useBasarim();
+  // H05: Bugün koç turu — v15'te ilk girişte bir kez (görüldü bilgisi cihazda, canliDersTurDurum)
+  const bugunTur = useCdTur('bugun', !!v15, () => !!document.querySelector('.t15-ring'));
   const today = dayKey();
   const dateLine = useMemo(
     () => new Date().toLocaleDateString('tr-TR', { day: 'numeric', month: 'long', weekday: 'long' }),
@@ -360,6 +365,7 @@ const TodayViewV11: React.FC<TodayViewProps & { v12?: boolean; v13?: boolean; v1
     const C = 2 * Math.PI * R;
     return (
       <div className="t15">
+        {bugunTur.tur}
         <div className="t15-in">
           <h1 className="sr-only">Bugün</h1>
           <div className="t15-main">
@@ -391,6 +397,9 @@ const TodayViewV11: React.FC<TodayViewProps & { v12?: boolean; v13?: boolean; v1
                 )}
               </div>
             </section>
+            {/* tasarım AA07: ders programı şimdi/sonra kartı · AB11: ilk adımlar (kapatılabilir) */}
+            <ProgramSimdiKarti />
+            <IlkAdimlarKarti />
 
             <section className="t15-flow" aria-labelledby="t15-flow-h">
               <div className="t15-sec-h">

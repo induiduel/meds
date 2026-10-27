@@ -11,6 +11,7 @@
  * Deep Linking ile tam uyumludur: Her bildirimin tıklandığında hedef elemana
  * odaklanan bir deepLinkUrl'i vardır.
  */
+import { hesapTuru, sessizSaatte, tercihOku, turAcik } from './bildirimTercih';
 import { setToastRecorder, toast, type ToastKind } from '../components/ui/Toast';
 
 import { openDeepLink } from './universalRedirectService';
@@ -216,6 +217,9 @@ class UserNotificationService {
     notification: Omit<UserNotification, 'id' | 'createdAt' | 'read'>,
     opts: { read?: boolean; silent?: boolean } = {}
   ) {
+    // AB06: kapalı türün bildirimi üretilmez (tercih: services/bildirimTercih.ts)
+    const tercih = tercihOku();
+    if (!turAcik(hesapTuru(notification.type), tercih)) return null;
     const newNotif: UserNotification = {
       ...notification,
       id: 'notif-' + Date.now() + '-' + Math.random().toString(36).substring(2, 7),
@@ -228,7 +232,8 @@ class UserNotificationService {
     this.saveToStorage();
 
     // Sistem anlık bildirimi tetikle
-    if (!opts.silent) this.triggerSystemPush(newNotif);
+    // Sessiz saatlerde liste kaydı kalır, anlık (sistem) bildirimi gösterilmez
+    if (!opts.silent && !sessizSaatte(tercih)) this.triggerSystemPush(newNotif);
 
     return newNotif;
   }

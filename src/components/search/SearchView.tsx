@@ -6,6 +6,7 @@ import { PageHeader } from '../ui/PageHeader';
 import '../../styles/v12/secondary.css';
 import { fetchSearch, Highlight, TypeTag, TYPE_META, TYPE_ORDER, type SearchDocType, type SearchHit, type SearchResponse } from './searchShared';
 import { rememberSearch } from './SearchPalette';
+import { SesliYerler } from './SesliYerler';
 import { UnderstandingBar } from './QueryIntelUi';
 import { formatHit } from './hitFormat';
 import { HitDetail, HitPreview } from './HitView';
@@ -146,6 +147,7 @@ export const SearchView: React.FC<SearchViewProps> = ({ initialQuery, focusId, c
         <button type="submit" className="ms-search-submit">Ara</button>
       </form>
 
+      {query && <SesliYerler query={query} n={10} className="is-sayfa" />}
       {query && data?.understanding && (
         <UnderstandingBar
           u={data.understanding}

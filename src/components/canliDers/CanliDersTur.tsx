@@ -11,11 +11,12 @@ import React, { useCallback, useEffect, useLayoutEffect, useRef, useState } from
 import { createPortal } from 'react-dom';
 import {
   AudioLines, ChevronLeft, ChevronRight, Crosshair, Download, FileText, Gauge, Headphones, Keyboard, ListOrdered,
-  MonitorSmartphone, Play, ScrollText, Search, SlidersHorizontal, Smartphone, X,
+  MonitorSmartphone, Play, ScrollText, Search, SlidersHorizontal, Smartphone, X, Target, Route, Zap, Flame, Hand, Highlighter,
 } from 'lucide-react';
 import { cdTurIsaretle, type CdTurTuru } from './canliDersTurDurum';
 import '../onboarding/welcome-tour.css';
 import '../onboarding/learn-tour.css';
+import '../../styles/v15/ek15.css';
 
 type Durak = {
   /** Vurgulanacak öğe; yoksa kart ortada açılır */
@@ -222,6 +223,44 @@ const DERS: Durak[] = [
   },
 ];
 
+/** H05 · Bugün ekranı koç turu (ilk girişte bir kez; seçiciler today/TodayView.tsx v15 dalı) */
+const BUGUN: Durak[] = [
+  {
+    sel: '.t15-ring', icon: Target, eyebrow: 'Halka', title: 'Günlük hedef halkası',
+    text: 'Halka bugünkü hedefine ne kadar yaklaştığını gösterir. Hedef koymadıysan son çözdüğün soruların doğru oranını gösterir.',
+    points: ['Soru ve çalışma süresi hedefleri Profil › Okul ve hedef bölümünden belirlenir', 'Gün içinde çalıştıkça halka kendiliğinden dolar'],
+  },
+  {
+    sel: '.t15-cta', icon: Route, eyebrow: 'Plan', title: 'Kaldığın yerden sürdür',
+    text: 'Bugünün planı kartındaki düğme seni en son yarım bıraktığın derse ya da soruya götürür.',
+    points: ['Hiç başlamadıysan derslere yönlendirir'], optional: true,
+  },
+  {
+    sel: '.t15-quick', icon: Zap, eyebrow: 'Hızlı başla', title: 'Tek dokunuşla başla',
+    text: 'Dinle, Çöz, Oyna ve Kamp kısayolları en sık kullanılan araçları açar.',
+    points: ['Dinle sesli dersleri, Çöz sesli soru çözücüyü açar', 'Kamp sınava hazırlık merkezine götürür'], optional: true,
+  },
+  {
+    sel: '.t15-strip', icon: Flame, eyebrow: 'Durum', title: 'Seri, hücre ve kronometre',
+    text: 'Üst üste kaç gün çalıştığını, Hücrem basamağını ve kronometreyi buradan izlersin.',
+    points: ['Hücre satırı Hücrem sayfasını açar', 'Kronometre düğmesi çalışma süreni başlatır'], optional: true,
+  },
+];
+
+/** H06 · Sesli derste uzun basma (seçim araç çubuğu) turu: ders ekranı ilk açılışta, ders turu görüldükten sonra */
+const SECIM: Durak[] = [
+  {
+    sel: '.cd-metin .cd-p', icon: Hand, eyebrow: 'Uzun bas', title: 'Cümleye uzun bas',
+    text: 'Metindeki bir cümleye parmağınla ya da fareyle yarım saniye basılı tut; o cümle seçilir ve araç çubuğu açılır.',
+    points: ['Kısa dokunuş eskisi gibi o cümleye atlar', 'Metni sürükleyerek de seçebilirsin'], optional: true,
+  },
+  {
+    icon: Highlighter, eyebrow: 'Araç çubuğu', title: 'Spot yap, not al, kart oluştur',
+    text: 'Seçimin üstünde açılan çubukla cümleyi spot olarak saklar, nota ekler, akıl kartına çevirir ya da açıklama istersin.',
+    points: ['Kayıtlar ders ve PDF sayfasıyla birlikte saklanır', 'Spotlar ve notlar Notlarım sayfasında toplanır'],
+  },
+];
+
 const gorunur = (el: Element | null): el is HTMLElement => {
   if (!(el instanceof HTMLElement)) return false;
   const r = el.getBoundingClientRect();
@@ -254,7 +293,7 @@ export default function CanliDersTur({ tur, onClose }: { tur: CdTurTuru; onClose
   const [tum] = useState(() => {
     let ince = true;
     try { ince = window.matchMedia('(hover: hover) and (pointer: fine)').matches; } catch { /* eski tarayıcı */ }
-    return (tur === 'liste' ? LISTE : DERS).filter((d) => ince || !d.masaustu);
+    return (tur === 'liste' ? LISTE : tur === 'bugun' ? BUGUN : tur === 'secim' ? SECIM : DERS).filter((d) => ince || !d.masaustu);
   });
   const [cur, setCur] = useState(0);
   // Sayfada bulunmayan isteğe bağlı duraklar her çizimde ayıklanır (oynatıcı geç yüklenebilir; sayaç doğru kalsın)
@@ -418,6 +457,7 @@ export default function CanliDersTur({ tur, onClose }: { tur: CdTurTuru; onClose
   if (!durak) return null;
   const Icon = durak.icon;
   const son = i === toplam - 1;
+  const metinli = tur === 'bugun' || tur === 'secim';
   return createPortal(
     <div className="wt-tour lt-root cd-tur" role="dialog" aria-modal="true" aria-labelledby="cdt-t" aria-describedby="cdt-d">
       {hole ? (
@@ -437,8 +477,10 @@ export default function CanliDersTur({ tur, onClose }: { tur: CdTurTuru; onClose
         <div className="wt-card-h">
           <span className="lt-ico" aria-hidden="true"><Icon /></span>
           <span className="wt-card-eb">{durak.eyebrow}</span>
-          <span className="wt-count" aria-label={`${toplam} duraktan ${i + 1}.`}>{i + 1}/{toplam}</span>
-          <button type="button" className="wt-x is-sm" onClick={() => bitir('atlandi')} aria-label="Turu kapat"><X /></button>
+          <span className="wt-count" aria-label={`${toplam} duraktan ${i + 1}.`}>{metinli ? `Tur ${i + 1}/${toplam}` : `${i + 1}/${toplam}`}</span>
+          {metinli
+            ? <button type="button" className="wt-atla" onClick={() => bitir('atlandi')}>Atla</button>
+            : <button type="button" className="wt-x is-sm" onClick={() => bitir('atlandi')} aria-label="Turu kapat"><X /></button>}
         </div>
         <div className="wt-card-b" key={i} aria-live="polite">
           <h2 id="cdt-t" className="wt-card-t">{durak.title}</h2>
@@ -453,7 +495,7 @@ export default function CanliDersTur({ tur, onClose }: { tur: CdTurTuru; onClose
           </div>
           <button type="button" className="wt-nav" onClick={geri} disabled={i === 0} aria-label="Önceki"><ChevronLeft /></button>
           <button type="button" className="wt-nav is-primary" onClick={ileri}>
-            {son ? 'Bitir' : 'İleri'} {!son && <ChevronRight aria-hidden="true" />}
+            {son ? 'Bitir' : metinli ? 'Sonraki' : 'İleri'} {!son && <ChevronRight aria-hidden="true" />}
           </button>
         </div>
       </div>

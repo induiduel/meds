@@ -1,4 +1,5 @@
 import { useEffect, useState, useSyncExternalStore } from 'react';
+import { navigateTo, pathFor } from '../../router';
 
 /**
  * Kabuğun ortak durum kancaları: klasik (v10/v11) ve v12 kabuğu aynı davranışı paylaşır.
@@ -72,6 +73,13 @@ export function useSearchShortcut(open: () => void) {
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
       const t = e.target as HTMLElement;
+      // AB10: ? (yazı alanı dışında) Yardım merkezini açar — kısayol listesi oradadır
+      if (e.key === '?' && !e.metaKey && !e.ctrlKey && !e.altKey && !['INPUT', 'TEXTAREA', 'SELECT'].includes(t.tagName) && !t.isContentEditable
+        && !t.closest?.('[role="dialog"]')) {
+        e.preventDefault();
+        navigateTo(pathFor('yardim'));
+        return;
+      }
       const isK = (e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k';
       if (!isK && (e.key !== '/' || ['INPUT', 'TEXTAREA', 'SELECT'].includes(t.tagName) || t.isContentEditable)) return;
       e.preventDefault();

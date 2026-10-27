@@ -36,6 +36,8 @@ const SYNC_PATTERNS: RegExp[] = [
   // Yıldızlı paragraflar (tekrar listesi) ve WhatsApp günlük tekrar tercihleri
   /^medsoru_yildizli_paragraflar(_v1)?$/,
   /^medsoru_whatsapp_prefs_v1$/,
+  // Bildirim tercihleri: tür başına aç/kapa + sessiz saatler (services/bildirimTercih.ts)
+  /^medsoru_bildirim_tercih_v1$/,
   /^medsoru_favoriler_v1$/,
   /^medsoru_slide_drawings_v2(:.*)?$/,
   /^medsoru_annotations:.+$/,
@@ -56,6 +58,8 @@ const SYNC_PATTERNS: RegExp[] = [
   /^medsoru_spot_(ogrendim|ilerleme_v1|yildiz_v1)$/,
   // Öğrenci profili (üniversite, sınıf, kurul, günlük hedef)
   /^medsoru_profil_v1$/,
+  // Ders programına elle eklenen etkinlikler + İlk adımlar kartı kapatıldı mı (v15)
+  /^medsoru_(kisisel_program|ilk_adimlar)_v1$/,
   /^medsoru_(sinavlarim|sinav_hatirlat)_v1$/,
   // Patoloji önem listesi: öğrendim işaretleri, ekran ve PDF tercihleri, son ders
   /^medsoru_onem_(ogrendim|tercih|pdf|asistan|asistan_tercih|son)_v1$/,
@@ -140,7 +144,7 @@ const MAX_VALUE = 2_000_000; // sunucudaki sınırla aynı
  * Cihaza özgü görünüm/düzen tercihleri: profile eşitlenmez, her cihaz (telefon, tablet, bilgisayar) kendi
  * ayarını saklar — yoksa telefondaki değişiklik bilgisayarın görünümünü eziyordu. Sunucudaki eski kopyaları da uygulanmaz.
  */
-export const DEVICE_PREFS = /^(medsoru_appearance|medsoru_theme|medsoru_rail_collapsed|medsoru_tabbar_v1|medsoru_learn_(layout|mode|toc|zoom)|medsoru_lesson_day_mode|medsoru_(glossary|search|studio)_view|medsoru_reader_prefs|tc_layout|medsoru_auto_reveal|medsoru_solve_drawer|medsoru_study_section|medsoru_music_volume_v1|medsoru_card_note_open|medsoru_canli_ders_(gorunum|tam_yazi)|medsoru_(cikmis_gorunum|cikmis_mod|saglik_gorunum|saglik_yogunluk|r12_reader))$/;
+export const DEVICE_PREFS = /^(medsoru_appearance|medsoru_theme|medsoru_rail_collapsed|medsoru_tabbar_v1|medsoru_learn_(layout|mode|toc|zoom)|medsoru_lesson_day_mode|medsoru_(glossary|search|studio)_view|medsoru_reader_prefs|tc_layout|medsoru_auto_reveal|medsoru_solve_drawer|medsoru_study_section|medsoru_music_volume_v1|medsoru_card_note_open|medsoru_canli_ders_(gorunum|tam_yazi|oto_tam|yatay_yan)|medsoru_(cikmis_gorunum|cikmis_mod|saglik_gorunum|saglik_yogunluk|r12_reader)|medsoru_bolge_v1)$/;
 export const isProfileKey = (key: string): boolean => !DEVICE_PREFS.test(key) && SYNC_PATTERNS.some((re) => re.test(key));
 /** Öğrenciye ait (profil, paket ya da sayaç) anahtar mı — oturum değişince ayrılır (userScope). */
 export const isUserDataKey = (key: string): boolean => isProfileKey(key) || BUNDLE_KEYS.has(key) || QUIET_KEYS.has(key);

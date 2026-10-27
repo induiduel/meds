@@ -29,6 +29,7 @@ import {
   X,
   GraduationCap,
   Maximize,
+  Type,
 } from 'lucide-react';
 import { AppUser, updateUserProfileData, setOrUpdateAccountPassword, sendPasswordReset } from '../../services/auth';
 import { pwaService } from '../../services/pwaService';
@@ -89,6 +90,7 @@ import { erisimYaz, useErisim } from '../../utils/erisilebilirlik';
 import { useV15Baslik } from '../v15/baslik';
 import { useProfil } from '../../services/profilKurulum';
 import TamEkranAyarV15 from '../v15/TamEkranAyarV15';
+import YaziAyarV15 from '../v15/YaziAyarV15';
 import ProfilOzetV15 from '../v15/ProfilOzetV15';
 import '../../styles/v15/kronometre.css';
 import { profilKurulumAc } from '../v15/ProfilKurulumV15';
@@ -119,7 +121,7 @@ export interface ProfileV12Props {
 }
 
 type Tab = 'genel' | 'katki' | 'kayit' | 'hesap' | 'veri' | 'erisim';
-type View = Tab | 'gorunum' | 'menu' | 'tamekran';
+type View = Tab | 'gorunum' | 'menu' | 'tamekran' | 'yazi';
 
 const TABS: { id: Tab; label: string }[] = [
   { id: 'genel', label: 'Genel bakış' },
@@ -417,7 +419,7 @@ export const ProfileV12: React.FC<ProfileV12Props> = ({ currentUser, isAdmin, qu
   const [view, setView0] = useState<View>(() => {
     const h = typeof window !== 'undefined' ? window.location.hash.replace('#', '') : '';
     if (v15 && !h) return 'menu';
-    return h === 'gorunum' ? 'gorunum' : h === 'hesap' ? 'hesap' : h === 'erisim' ? 'erisim' : h === 'veri' ? 'veri' : h === 'tamekran' ? 'tamekran' : 'genel';
+    return h === 'gorunum' ? 'gorunum' : h === 'hesap' ? 'hesap' : h === 'erisim' ? 'erisim' : h === 'veri' ? 'veri' : h === 'tamekran' ? 'tamekran' : h === 'yazi' ? 'yazi' : 'genel';
   });
   // v15: her bölüm kendi ekranı; adres #bolum, üst bardaki Geri ve tarayıcı geri listeye (#'siz) döner
   const setView = (v: View) => {
@@ -430,7 +432,7 @@ export const ProfileV12: React.FC<ProfileV12Props> = ({ currentUser, isAdmin, qu
     window.addEventListener('popstate', f); window.addEventListener('hashchange', f);
     return () => { window.removeEventListener('popstate', f); window.removeEventListener('hashchange', f); };
   }, [v15]);
-  const BOLUM_AD: Record<View, string> = { menu: 'Profil ve ayarlar', genel: 'Genel bakış', katki: 'Katkılarım', kayit: 'Kaydettiklerim', hesap: 'Hesap', veri: 'Veriler ve gizlilik', erisim: 'Erişilebilirlik', gorunum: 'Görünüm ve tasarım', tamekran: 'Tam ekran ve kısayollar' };
+  const BOLUM_AD: Record<View, string> = { menu: 'Profil ve ayarlar', genel: 'Genel bakış', katki: 'Katkılarım', kayit: 'Kaydettiklerim', hesap: 'Hesap', veri: 'Veriler ve gizlilik', erisim: 'Erişilebilirlik', gorunum: 'Görünüm ve tasarım', tamekran: 'Tam ekran ve kısayollar', yazi: 'Yazı ve okuma' };
   useV15Baslik(v15 ? (view === 'menu' ? { baslik: 'Profil ve ayarlar' } : { baslik: BOLUM_AD[view], alt: 'Profil ve ayarlar', geri: '/ayarlar' }) : null);
   const ed = useProfileEditor(currentUser, onUpdateUser);
   const [cropFile, setCropFile] = useState<File | null>(null);
@@ -472,6 +474,7 @@ export const ProfileV12: React.FC<ProfileV12Props> = ({ currentUser, isAdmin, qu
       {view === 'erisim' && <ErisimPanel />}
       {view === 'gorunum' && <AppearancePanel />}
       {view === 'tamekran' && <TamEkranAyarV15 />}
+      {view === 'yazi' && <YaziAyarV15 />}
     </>
   );
   const dosyaGirdi = (
@@ -531,6 +534,8 @@ export const ProfileV12: React.FC<ProfileV12Props> = ({ currentUser, isAdmin, qu
             <h2 className="pf15-h">Ayarlar</h2>
             <ul className="pf15-liste v15-card">
               {satir('gorunum', PaletteIcon, 'Görünüm ve tasarım', 'Tasarım, tema, palet, yazı boyutu', () => setView('gorunum'), '#AF52DE')}
+              {satir('yazi', Type, 'Yazı ve okuma', 'Yazı tipi, kalınlık, aralık, vurgu rengi, sesli ders', () => setView('yazi'), '#FF9F0A')}
+              {satir('bildirim', Bell, 'Bildirim tercihleri', 'Tür başına aç/kapa, sessiz saatler', () => navigateTo('/bildirimler?gorunum=tercih'), '#FF3B30')}
               {satir('tamekran', Maximize, 'Tam ekran ve kısayollar', 'Tam ekran, ekran kararmasın, klavye', () => setView('tamekran'), '#0A84FF')}
               {satir('erisim', Accessibility, 'Erişilebilirlik', 'Hareket, kontrast, satır aralığı, odak', () => setView('erisim'), '#5E5CE6')}
               {satir('hesap', Lock, 'Hesap', 'Ad, fotoğraf, şifre, oturum', () => setView('hesap'), '#64748B')}

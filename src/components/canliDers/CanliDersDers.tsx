@@ -18,12 +18,15 @@ import { cumleDuzeyleri } from '../../utils/maddele';
 import {
   cdCumleAraligi, cdParagrafSinirlari, cdDetayBagla, cdKelimeBas, cdKonusulanKarakter, cdDetayGetir, cdDurum, cdMedspakUrl, cdOynat, cdParagrafa, cdSesUrl, cdTercihVaryant, cdToggle, cdBolumAtla, fmtSure, useCd, type CdDetay,
 } from './canliDersStore';
+import { useDersEkranTercih, useYatayDokunmatik } from '../../services/dersEkranTercih';
 import { CdAiPanel, CdBolumSonu, CdMasa, CdSesliKitap, cdAiIste, cdBolumSonuDurAyarla, useCdBolumSonuDur, useMasaUygun } from './CdSesliEk';
 import { toggleFavoriteCard } from '../../services/studyStore';
 import { CdV15Bas, CdV15Gorunum, CdV15KalemDugme, CdV15KalemKutusu, CdV15Menu } from './CdV15';
 import { GunlukDiyalog } from './CanliDersView';
 import { CdCikmisChip, CdCikmisPencereKok, cikmisSayfada } from './CdCikmisChip';
 import { useCdTur } from './useCdTur';
+import { useUzunBasSecim } from './cdUzunBas';
+import { cdTurGoruldu } from './canliDersTurDurum';
 import { cdDersEtiketi } from './canliDersKategori';
 import { ListeEkleDugme } from './CanliDersListem';
 import { CevrimdisiDugme } from './CanliDersCevrimdisi';
@@ -223,6 +226,9 @@ export default function CanliDersDers({ dersKey, kamp }: { dersKey: string; kamp
   const [ozelKip, setOzelKipDurum] = useState<'kitap' | 'masa' | null>(() => { try { const v = localStorage.getItem('medsoru_cd_ozel_kip'); return v === 'kitap' || v === 'masa' ? v : null; } catch { return null; } });
   const setOzelKip = (k: 'kitap' | 'masa' | null) => { setOzelKipDurum(k); try { localStorage.setItem('medsoru_cd_ozel_kip', k || ''); } catch { /* yok */ } };
   const masaUygun = useMasaUygun();
+  const [otoTam] = useDersEkranTercih('otoTam');
+  const [yatayYan] = useDersEkranTercih('yatayYan');
+  const yatayDokunmatik = useYatayDokunmatik();
   const bolumSonuDur = useCdBolumSonuDur();
   const [yazi, setYaziDurum] = useState<number>(() => { try { return Number(localStorage.getItem(YAZI_KEY)) || 20; } catch { return 20; } });
   const setYazi = (n: number | ((y: number) => number)) => setYaziDurum((y) => {
@@ -245,6 +251,8 @@ export default function CanliDersDers({ dersKey, kamp }: { dersKey: string; kamp
   const caliyorKey = useCd((s) => s.key);
   const caliyorBaslik = useCd((s) => s.baslik);
   const tanitim = useCdTur('ders', !!detay, () => !!document.querySelector('.cd-dock') && !!document.querySelector('.cd-metin p'));
+  // H06: uzun basma turu — ders turu görüldükten sonra bir kez (metin bölmesi görünürken)
+  const secimTur = useCdTur('secim', !!detay && !tanitim.tur && cdTurGoruldu('ders'), () => !!document.querySelector('.cd-metin .cd-p'));
 
   // Deeplink ile gelen paragraf (?p=N ya da #p-N): o paragrafa kaydır ve hedef vurgusu ver
   const kaydirParagrafa = useCallback((pIdx: number) => {
@@ -301,7 +309,11 @@ export default function CanliDersDers({ dersKey, kamp }: { dersKey: string; kamp
       (d) => {
         if (!canli) return;
         setDetay(d);
-        setBaglanti(cdDetayBagla(d));
+        const bag = cdDetayBagla(d);
+        setBaglanti(bag);
+        // ?t=<sn> (arama "Sesli derste geçen yerler"): ders o saniyeye konur (oynatma kullanıcı hareketiyle başlar)
+        const tSn = Number(new URLSearchParams(window.location.search).get('t'));
+        if (bag !== 'baska' && Number.isFinite(tSn) && tSn > 0) cdOynat(d, undefined, { t: tSn, oynat: false });
         document.title = `${cdDersEtiketi(d)} · ${d.baslik} · Sesli ders · MeDSor`;
       },
       (e) => canli && setHata(e?.message || 'Ders açılamadı.'),
@@ -424,6 +436,25 @@ export default function CanliDersDers({ dersKey, kamp }: { dersKey: string; kamp
       }
     }
   };
+  // O10 "Ders açılınca kendiliğinden tam ekran": Fullscreen API kullanıcı hareketi ister → ders açıldıktan sonraki ilk
+  // dokunuş/tuşta bir kez açılır (sayfa yüklenir yüklenmez istek yapılmaz; reddedilirse yalnız uygulama içi tam ekran kalır)
+  const otoTamYapildi = useRef(false);
+  const tamAcRef = useRef(tamEkranAc);
+  tamAcRef.current = tamEkranAc;
+  useEffect(() => {
+    if (!otoTam || !detay || kamp || otoTamYapildi.current) return;
+    if (tamEkran) { otoTamYapildi.current = true; return; }
+    const f = (e: Event) => {
+      if (e instanceof KeyboardEvent && (e.key === 'Escape' || e.key === 'Tab' || e.ctrlKey || e.metaKey || e.altKey)) return;
+      otoTamYapildi.current = true;
+      kaldir();
+      tamAcRef.current();
+    };
+    const kaldir = () => { window.removeEventListener('pointerup', f, true); window.removeEventListener('keydown', f, true); };
+    window.addEventListener('pointerup', f, true);
+    window.addEventListener('keydown', f, true);
+    return kaldir;
+  }, [otoTam, detay, kamp, tamEkran]);
   const tamEkranKapat = () => {
     hadNativeFsRef.current = false;
     document.documentElement.classList.remove('is-app-fullscreen', 'cd-tam-ekran', 'cd-tam-oynatici');
@@ -510,10 +541,12 @@ export default function CanliDersDers({ dersKey, kamp }: { dersKey: string; kamp
   }
 
   const pdfVar = !!detay.pdf && detay.pdf.dosyalar.length > 0;
-  const mod: Gorunum = pdfVar ? gorunum : 'metin';
+  // O10 "Yatayda yan yana": yatay telefon/tablette PDF + metin yan yana
+  const yatayYanEtkin = yatayYan && yatayDokunmatik && pdfVar && !kamp;
+  const mod: Gorunum = pdfVar ? (yatayYanEtkin ? 'ikisi' : gorunum) : 'metin';
   const metinGoster = mod === 'metin' || mod === 'ikisi';
   const pdfGoster = mod !== 'metin';
-  const aktifYon: 'yan-yana' | 'ust-alt' = bolmeYon === 'oto' ? (genis ? 'yan-yana' : 'ust-alt') : bolmeYon;
+  const aktifYon: 'yan-yana' | 'ust-alt' = yatayYanEtkin ? 'yan-yana' : bolmeYon === 'oto' ? (genis ? 'yan-yana' : 'ust-alt') : bolmeYon;
   const pdfOran = bolmeTers ? 100 - bolmeOran : bolmeOran;
   const metinOran = 100 - pdfOran;
 
@@ -939,6 +972,7 @@ export default function CanliDersDers({ dersKey, kamp }: { dersKey: string; kamp
         )}
       </div>
       {tanitim.tur}
+      {secimTur.tur}
       {odak && <CdOdakModu onKapat={() => setOdak(false)} />}
       <CanliDersKimlikHedef detay={detay} kok={rootRef} />
       {gunlukAcik && <GunlukDiyalog dersKey={detay.key} onKapat={() => setGunlukAcik(false)} />}
@@ -1538,6 +1572,7 @@ function useCdSecimCubugu(paneRef: React.RefObject<HTMLDivElement | null>, detay
 function CdMetinBolme({ detay, canli, kamp = false }: { detay: CdDetay; canli: boolean; kamp?: boolean }) {
   const paneRef = useRef<HTMLDivElement>(null);
   useCdSecimCubugu(paneRef, detay);
+  useUzunBasSecim(paneRef);
   const aktif = useCd((s) => (canli ? s.aktif : -1));
   const cumle = useCd((s) => (canli ? s.cumle : -1));
   const { durdu, durdur, surdur } = useTakip();

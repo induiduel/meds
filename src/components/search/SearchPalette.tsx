@@ -2,6 +2,7 @@ import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
 import { ArrowRight, CornerDownLeft, Loader2, Maximize, Moon, NotebookPen, Play, RotateCcw, Search, Sun, Target, Timer, X } from 'lucide-react';
 import { fetchSearch, Highlight, TypeTag, TYPE_META, type SearchHit, type SearchResponse } from './searchShared';
+import { SesliYerler } from './SesliYerler';
 import { DidYouMean, SuggestList, useQuerySuggest, type SuggestItem } from './QueryIntelUi';
 import { navigateTo, pathFor, type AppRoute } from '../../router';
 import { useAppearance } from '../../utils/appearance';
@@ -242,6 +243,7 @@ export const SearchPalette: React.FC<SearchPaletteProps> = ({ initialQuery = '',
               ))}
             </ul>
           )}
+          {query.length >= 3 && <SesliYerler query={query} n={5} onGo={onClose} />}
           {A > 0 && (
             <ul className="m-0 px-2 pb-2 list-none" role="listbox" aria-label="Sayfalar ve komutlar">
               {actions.map((a, j) => {

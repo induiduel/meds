@@ -30,6 +30,11 @@ import './styles/v13/wide.css';
 import { installToastBridge } from './components/ui/Toast';
 import { installNetworkBanner } from './components/system/NetworkBanner';
 import { installUpdatePrompt } from './components/system/UpdatePrompt';
+import { installBakimEkrani } from './components/system/BakimEkrani';
+import { getLocalAdminSession, isAdminUser } from './services/auth';
+import { AlertTriangle, RefreshCw } from 'lucide-react';
+import './styles/v15/ek15.css';
+declare const __MEDS_SURUM__: string;
 import { installPullToRefresh } from './components/system/PullToRefresh';
 import { installNotesSync } from './services/notesSync';
 import { installUserDataAutoBackup } from './services/userDataSyncService';
@@ -106,6 +111,7 @@ if (typeof window !== 'undefined') {
 installToastBridge();
 installNetworkBanner();
 installUpdatePrompt();
+installBakimEkrani();
 installPullToRefresh();
 installNotesSync();
 // Günlük önce kurulur: sekme gizlenince önce son ziyaret yazılır, sonra eşitleme gönderir
@@ -144,6 +150,9 @@ interface ErrorBoundaryProps {
 interface ErrorBoundaryState {
   hasError: boolean;
   error: Error | null;
+  /** Hata sunucuya (POST /api/istemci-hata) gerçekten ulaştıysa true — "Sorun bize iletildi" yalnız o zaman yazılır */
+  iletildi?: boolean;
+  yigin?: string;
 }
 
 class RootErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
@@ -158,8 +167,16 @@ class RootErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     console.error('[RootErrorBoundary]:', error, errorInfo);
+    this.setState({ yigin: `${error?.stack || ''}\n${errorInfo?.componentStack || ''}`.trim() });
     if (!navigator.onLine) return;
     const msg = error?.message || '';
+    if (!/Failed to fetch dynamically imported module|Importing a module script failed/i.test(msg)) {
+      void fetch('/api/istemci-hata', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ mesaj: msg, yigin: error?.stack || '', bilesen: errorInfo?.componentStack || '', adres: location.pathname + location.search, surum: typeof __MEDS_SURUM__ === 'string' ? __MEDS_SURUM__ : '' }),
+      }).then((r) => { if (r.ok) this.setState({ iletildi: true }); }).catch(() => {});
+    }
     if (/Failed to fetch dynamically imported module|Importing a module script failed/i.test(msg)) {
       void sunucuyaUlasilir().then((ok) => {
         if (!ok) { this.forceUpdate(); return; } // internetsiz: "cihazında yok" ekranı (render cevrimdisiGibi'ye bakar)
@@ -214,27 +231,42 @@ class RootErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState
       const isChunkError = /Failed to fetch dynamically imported module|Importing a module script failed/i.test(msg);
       if (isChunkError && cevrimdisiGibi()) return <CevrimdisiYok />;
 
+      const yonetici = isAdminUser(getLocalAdminSession());
+      if (isChunkError) {
+        return (
+          <div className="eh15">
+            <div className="eh15-k" role="alert">
+              <RefreshCw className="eh15-ik" aria-hidden />
+              <h1>Yeni sürüm hazır</h1>
+              <p>Sayfayı yenileyince güncel sürüm açılır.</p>
+              <div className="eh15-d">
+                <button type="button" onClick={this.handleSoftReload} className="v15-btn">Sayfayı yenile</button>
+                <button type="button" onClick={this.handleHardReset} className="v15-btn is-ghost">Önbelleği tazele</button>
+              </div>
+            </div>
+          </div>
+        );
+      }
+      // AB17: ham hata metni öğrenciye gösterilmez; yönetici "Ayrıntı"yı açar
       return (
-        <div className="min-h-dvh bg-canvas text-ink flex flex-col items-center justify-center p-4">
-          <div className="ui-card max-w-md w-full p-6 text-center flex flex-col gap-4" role="alert" style={{ boxShadow: 'var(--shadow-lg)' }}>
-            <div className="w-12 h-12 bg-bad-soft text-bad-text rounded-full flex items-center justify-center mx-auto text-xl font-bold" aria-hidden="true">
-              !
+        <div className="eh15">
+          <div className="eh15-k" role="alert">
+            <AlertTriangle className="eh15-ik" aria-hidden />
+            <h1>Bir şeyler ters gitti</h1>
+            <p>{this.state.iletildi ? 'Sorun bize iletildi. Sayfayı yenileyerek devam edebilirsin.' : 'Sayfayı yenileyerek devam edebilirsin.'}</p>
+            <p className="v15-cap">İnternet yoksa indirdiğin dersler çalışmaya devam eder.</p>
+            <div className="eh15-d">
+              <button type="button" onClick={this.handleSoftReload} className="v15-btn">Sayfayı yenile</button>
+              <button type="button" onClick={this.handleGoBack} className="v15-btn is-ghost">Geri dön</button>
+              <a href="/cevrimdisi" className="v15-btn is-ghost">İndirilenler</a>
             </div>
-            <h2 className="m-0 text-lg font-bold text-ink">
-              {isChunkError ? 'Yeni sürüm hazır' : 'Uygulama yüklenirken bir sorun oluştu'}
-            </h2>
-            <p className="m-0 text-xs text-ink-2 font-mono bg-field p-3 rounded-lg text-left overflow-auto max-h-32">{msg}</p>
-            <div className="flex flex-col sm:flex-row gap-2 justify-center">
-              <button type="button" onClick={this.handleGoBack} className="ui-btn">
-                Geri dön
-              </button>
-              <button type="button" onClick={this.handleSoftReload} className="ui-btn is-primary">
-                Sayfayı yenile
-              </button>
-              <button type="button" onClick={this.handleHardReset} className="ui-btn is-ghost text-xs">
-                Önbelleği tazele
-              </button>
-            </div>
+            {yonetici && (
+              <details className="eh15-ay">
+                <summary>Ayrıntı (yönetici)</summary>
+                <pre>{msg}{this.state.yigin ? `\n\n${this.state.yigin}` : ''}</pre>
+                <button type="button" onClick={this.handleHardReset} className="v15-btn is-ghost">Önbelleği tazele</button>
+              </details>
+            )}
           </div>
         </div>
       );
