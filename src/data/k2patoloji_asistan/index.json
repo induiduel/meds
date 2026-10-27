@@ -1,0 +1,29 @@
+{
+ "surum": "k2patoloji-asistan-v1",
+ "brans": "k2patoloji",
+ "ses": "EMA Lightning",
+ "dersler": [
+  {
+   "kod": "2p02",
+   "no": 4,
+   "baslik": "Serebrovasküler Hastalıklar ve İnme",
+   "bolum": 7,
+   "adim": 27,
+   "soru": 28,
+   "cikmis": 5,
+   "ses": false,
+   "sure": 0
+  },
+  {
+   "kod": "2p01",
+   "no": 3,
+   "baslik": "SSS Hücresel Reaksiyonları ve Ödem / Herniasyon",
+   "bolum": 6,
+   "adim": 27,
+   "soru": 27,
+   "cikmis": 6,
+   "ses": true,
+   "sure": 878
+  }
+ ]
+}

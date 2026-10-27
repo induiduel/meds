@@ -1,0 +1,563 @@
+{
+ "id": "k2-04-serebrovaskuler-hastaliklar-ve-inme",
+ "sira": 4,
+ "kurul": 1,
+ "ders": "Tıbbi Patoloji",
+ "konu": "Serebrovasküler Hastalıklar ve İnme",
+ "ogretim_uyesi": "Prof. Dr. Hikmet Keleş",
+ "tarih": "2026-10-26",
+ "kazanimlar": [
+  {
+   "no": 1,
+   "metin": "Serebrovasküler Hastalıklar ve İnme konusunun temel kavramlarını, etiyolojisini ve patofizyolojik mekanizmalarını açıklar.",
+   "sorular": [
+    {
+     "id": "k2-04-serebrovaskuler-hastaliklar-ve-inme-q01",
+     "kazanim": 1,
+     "zorluk": "kolay",
+     "soru": "Global serebral iskemiye en duyarlı nöron grupları arasında aşağıdakilerden hangisi yer alır?",
+     "secenekler": {
+      "A": "Serebellum Purkinje hücreleri",
+      "B": "Beyin sapı motor nöronları",
+      "C": "Omurilik ön boynuz hücreleri",
+      "D": "Oligodendrositler",
+      "E": "Mikroglia hücreleri"
+     },
+     "dogru": "A",
+     "aciklama": "Derste global iskemide en duyarlı hücreler hipokampus piramidal, neokorteks piramidal ve serebellum Purkinje hücreleri olarak sayılır (s. 13). Nöronlar glialardan daha duyarlıdır.",
+     "sik_aciklamalari": {
+      "A": "Purkinje hücreleri serebellar korteksin büyük çıkış nöronlarıdır ve yüksek oksijen gereksinimleri vardır. Derste hipokampus ve neokorteks piramidal hücreleriyle birlikte global iskemiye en duyarlı grup olarak sayıldıkları için doğru cevaptır (s. 13).",
+      "B": "Beyin sapı motor nöronları kraniyal sinir çekirdeklerini oluşturan ve kas hareketini başlatan hücrelerdir. Ders global iskemide seçici duyarlılık listesine bunları koymaz; liste hipokampus, neokorteks ve Purkinje hücreleridir (s. 13).",
+      "C": "Ön boynuz hücreleri omurilikte iskelet kaslarını uyaran alt motor nöronlardır. Derste global iskemiye seçici duyarlılık gösteren hücreler arasında sayılmadıkları için bu şık yanlıştır (s. 13).",
+      "D": "Oligodendrositler merkezi sinir sisteminde miyelin kılıfı yapan glial hücrelerdir. Derse göre nöronlar glialara göre hipoksiye daha duyarlı olduğundan glial bir hücre en duyarlı grup olamaz (s. 13).",
+      "E": "Mikroglia beynin yerleşik makrofajı olup hasar sonrası temizlik yapan glial hücredir. Ders hipoksiye en duyarlı hücreleri nöronlar arasında sayar, bu nedenle mikroglia doğru seçenek olamaz (s. 13)."
+     },
+     "bilgi": [
+      13,
+      14
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 13,
+      "alinti": "Hipokampus piramidal hücreleri – Neokorteks piramidal hücreleri – Serebellum Purkinje hücreleri."
+     }
+    },
+    {
+     "id": "k2-04-serebrovaskuler-hastaliklar-ve-inme-q02",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Serebral arter tıkanmasına bağlı enfarktlarla ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Trombotik enfarktlar embolik enfarktlardan daha sıktır",
+      "B": "Embolilerin en sık yerleştiği alan orta serebral arter bölgesidir",
+      "C": "Talamus ve bazal gangliyonların kollateral akımı zengindir",
+      "D": "Paradoksal emboli karotis plağından kaynaklanır",
+      "E": "Emboliler en çok damar bifürkasyonlarından uzak düz segmentlere yerleşir"
+     },
+     "dogru": "B",
+     "aciklama": "Derse göre emboliler bifürkasyon ve darlık bölgelerine yerleşir ve en sık tutulan alan orta serebral arter bölgesidir (s. 21); embolik enfarktlar trombotiklerden sıktır (s. 20).",
+     "sik_aciklamalari": {
+      "A": "Trombotik enfarkt aterosklerotik plak üzerinde yerinde gelişen pıhtının yaptığı enfarkttır. Ders sıralamayı tersine verir: embolik enfarktlar trombotik enfarktlardan daha sıktır, bu yüzden önerme yanlıştır (s. 20).",
+      "B": "Orta serebral arter karotisin doğrudan devamı olduğundan embolilerin en kolay ulaştığı daldır. Derste embolilerin en sık tuttuğu alan olarak MCA bölgesi açıkça belirtildiği için doğru cevaptır (s. 21).",
+      "C": "Talamus ve bazal gangliyonlar derin penetran damarlarla beslenen derin gri madde yapılarıdır. Derse göre bu alanların kollateral akımı çok azdır ve bu nedenle iskemiye duyarlıdır; önerme bunun tersini söyler (s. 19).",
+      "D": "Paradoksal emboli venöz kaynaklı bir pıhtının açık foramen ovale üzerinden sistemik dolaşıma geçmesidir. Karotis plağı kaynaklı olan ise arterden artere tromboembolidir, bu yüzden tanım karıştırılmıştır (s. 20).",
+      "E": "Emboli damar içinde taşınan ve daraldığı yerde takılan pıhtı parçasıdır. Ders embolilerin bifürkasyonlara ve darlık bölgelerine yerleştiğini vurgular; düz segmentlere yerleşim ifadesi bu bilgiyle çelişir (s. 21)."
+     },
+     "bilgi": [
+      22,
+      24
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 21,
+      "alinti": "İç karotis arterin devamı olan orta serebral arter bölgesi."
+     }
+    },
+    {
+     "id": "k2-04-serebrovaskuler-hastaliklar-ve-inme-q03",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Sakküler (berry) anevrizmalarla ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Yaklaşık %90'ı ön dolaşımda yerleşir",
+      "B": "En sık ön kominikan arter bölgesinde görülür",
+      "C": "Doğuştan var olan, doğumda tam gelişmiş bir lezyondur",
+      "D": "Otozomal dominant polikistik böbrek hastalığında risk artar",
+      "E": "Kese duvarında kas tabakası ve intimal elastik lamina yoktur"
+     },
+     "dogru": "C",
+     "aciklama": "Ders sakküler anevrizmanın doğuştan olmadığını, medyadaki yapısal kusur zemininde zamanla geliştiğini belirtir (s. 46); diğer önermeler derste doğrudur.",
+     "sik_aciklamalari": {
+      "A": "Yanlış seçenek; ifade doğrudur: sakküler anevrizmaların yaklaşık %90'ı ön dolaşımda, büyük arter bifürkasyonlarına yakın yerleşir. Bu dağılım Willis çemberinin ön bölümündeki dallanma noktalarını işaret eder (s. 46).",
+      "B": "Yanlış seçenek; ifade doğrudur: Şekil 21.10'a göre en sık yer yaklaşık %40 ile ön kominikan arter bölgesidir. Bunu MCA dallanması ve iç karotis–arka kominikan bileşkesi izler (s. 47).",
+      "C": "Sakküler anevrizma arter duvarından dışa doğru gelişen ince duvarlı bir kesedir. Derse göre doğuştan değildir, medyadaki yapısal kusur zemininde zamanla oluşur; bu yüzden yanlış önerme ve doğru cevaptır (s. 46).",
+      "D": "Yanlış seçenek; ifade doğrudur: otozomal dominant polikistik böbrek hastalığı ve Ehlers-Danlos gibi ekstraselüler matriks bozuklukları anevrizma riskini artırır. Damar duvarı bağ dokusunun zayıflığı bu ilişkiyi açıklar (s. 48).",
+      "E": "Yanlış seçenek; ifade doğrudur: kese boynun ötesinde kas tabakası ve intimal elastik lamina taşımaz, duvarı kalınlaşmış hiyalinize intimadır. Duvarın bu zayıflığı rüptürün çoğunlukla kese tepesinde olmasını açıklar (s. 49)."
+     },
+     "bilgi": [
+      62,
+      63,
+      64,
+      65,
+      68
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 46,
+      "alinti": "Olguların %20–30'unda birden fazla anevrizma vardır."
+     }
+    },
+    {
+     "id": "k2-04-serebrovaskuler-hastaliklar-ve-inme-q04",
+     "kazanim": 1,
+     "zorluk": "zor",
+     "soru": "Epidural ve subdural hematomun oluşum mekanizmaları karşılaştırıldığında aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Epidural hematomda köprü venler yırtılır ve kan duranın iki tabakası arasına birikir",
+      "B": "Subdural hematomun en sık kaynağı a. meningea mediadır",
+      "C": "Epidural hematomda kafa kırığına bağlı meninks arteri yırtılır ve kan dura ile kafatası arasında birikir",
+      "D": "Yaşlılarda beyin atrofisi köprü venleri gevşeterek subdural riski azaltır",
+      "E": "Subdural hematom yalnız ağır travmalardan sonra gelişir"
+     },
+     "dogru": "C",
+     "aciklama": "Derse göre epidural hematom kafa kırığına bağlı meninks arteri yırtılmasıyla dura-kafatası arasında arteriyel kan birikimidir (s. 74); subdural ise köprü ven yırtılmasıyla oluşur (s. 78).",
+     "sik_aciklamalari": {
+      "A": "Köprü venler korteks yüzeyinden dural sinüslere uzanan ince venlerdir. Bunların yırtılması ve kanın duranın iki tabakası arasına birikmesi subdural hematomun mekanizmasıdır, epidural hematomunki ile karıştırılmıştır (s. 78).",
+      "B": "Orta meningeal arter kafatası iç yüzünde seyreden dural bir arterdir. Derste epidural hematomun en sık kaynağı olarak verilir; subdural hematom ise venöz kaynaklıdır, bu yüzden şık yanlıştır (s. 73).",
+      "C": "Epidural hematom dura ile kafatası arasındaki potansiyel boşlukta arteriyel kan toplanmasıdır. Derste kafa kırığına bağlı meninks arteri yırtılmasıyla oluştuğu açıkça yazıldığı için doğru cevaptır (s. 74).",
+      "D": "Beyin atrofisi beyin hacminin azalıp kafatası içinde boşluk artmasıdır. Derse göre atrofi köprü venleri gerer ve beynin hareketini artırır; bu nedenle yaşlıda küçük travmada bile risk yükselir (s. 78).",
+      "E": "Subdural hematom köprü venlerin yırtılmasıyla oluşan venöz kanamadır. Ders yaşlılarda küçük travmalardan sonra bile gelişebildiğini ve belirtilerin gecikebildiğini vurgular; yalnız ağır travma ifadesi yanlıştır (s. 78)."
+     },
+     "bilgi": [
+      97,
+      98,
+      99,
+      103,
+      104
+     ],
+     "benzer_cikmis": [
+      "e1454640ed84",
+      "d3-k2-bey-001"
+     ],
+     "kanit": {
+      "sayfa": 74,
+      "alinti": "genellikle kafa kırığına bağlı olarak meninks arterinin travmatik yırtılması sonucu oluşur"
+     }
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "e1454640ed84",
+     "soru": "Oksipital kemik kırıkları orta meningeal arteri çaprazlayıp subdural hematoma neden olabilirler",
+     "secenekler": {
+      "A": "Subgaleal hematoma",
+      "B": "Epidural hematoma",
+      "C": "Subdural hematoma",
+      "D": "Intraserebral hematoma",
+      "E": "Subaraknoid kanama"
+     },
+     "cevap": "C"
+    },
+    {
+     "id": "d3-k2-bey-001",
+     "soru": "Kraniyal travmalarda dural venöz sinüslere açılan köprü venlerinin yırtılması sonucu gelişen, dura mater ile araknoid mater arasında biriken ve kraniyal BT'de hilal (yarım ay) şeklinde izlenen kanama aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Epidural hematom",
+      "B": "Subdural hematom",
+      "C": "İntraserebral hematom",
+      "D": "İntraventriküler kanama",
+      "E": "Subgaleal hematom"
+     },
+     "cevap": "B"
+    }
+   ]
+  },
+  {
+   "no": 2,
+   "metin": "Serebrovasküler Hastalıklar ve İnme ile ilişkili klinik semptomları, tanı kriterlerini ve ayırıcı tanı basamaklarını değerlendirir.",
+   "sorular": [
+    {
+     "id": "k2-04-serebrovaskuler-hastaliklar-ve-inme-q05",
+     "kazanim": 2,
+     "zorluk": "kolay",
+     "soru": "Hastanın 'hayatımın en kötü baş ağrısı' diye tanımladığı ani başlangıçlı baş ağrısında derse göre ilk düşünülmesi gereken tablo hangisidir?",
+     "secenekler": {
+      "A": "Laküner enfarkt",
+      "B": "Sakküler anevrizma rüptürüne bağlı subaraknoid kanama",
+      "C": "Kronik subdural hematom",
+      "D": "Vasküler demans",
+      "E": "Periventriküler lökomalazi"
+     },
+     "dogru": "B",
+     "aciklama": "Derste SAK'ın tipik yakınması 'hayatımın en kötü baş ağrısı' olarak verilir (s. 45); travmatik olmayan klinik anlamlı SAK'ın en sık nedeni sakküler anevrizma rüptürüdür (s. 44).",
+     "sik_aciklamalari": {
+      "A": "Laküner enfarkt tek bir derin penetran dalın tıkanmasıyla oluşan birkaç milimetrelik kaviteli enfarkttır. Küçük ve derin olduğu için ani, yıkıcı baş ağrısıyla değil çoğu kez sınırlı nörolojik bulguyla seyreder (s. 58).",
+      "B": "Subaraknoid kanama kanın beyin zarları arasındaki boşluğa dolmasıdır ve en sık nedeni sakküler anevrizma rüptürüdür. Ders tipik yakınmayı 'hayatımın en kötü baş ağrısı' olarak verdiği için doğru cevaptır (s. 45).",
+      "C": "Kronik subdural hematom köprü ven yırtılmasıyla duranın tabakaları arasında biriken venöz kanın organize olmasıdır. Belirtileri gecikmeli ve yavaş ilerlediği için ani şiddetli baş ağrısı tablosuna uymaz (s. 35).",
+      "D": "Vasküler demans çoklu bilateral enfarktlarla gelişen bilişsel yıkım sendromudur. Yavaş biriken bir süreç olduğundan aniden başlayan şiddetli baş ağrısını açıklamaz (s. 63).",
+      "E": "Periventriküler lökomalazi prematüre bebeklerde periventriküler beyaz maddenin iskemik enfarktıdır. Perinatal döneme ait bir lezyon olduğundan erişkinde ani baş ağrısı tablosuyla ilişkili değildir (s. 85)."
+     },
+     "bilgi": [
+      59,
+      61
+     ],
+     "benzer_cikmis": [
+      "d3-k2-pat-001",
+      "past-q-25-26_d_nem_3_kurul_1-96",
+      "6564d8e6355f",
+      "past-q-I_SKENDERUN_TI_Mu_du_rlu_g_u_ne0__1__230709_230251-62",
+      "q-No_ropsikiyatri_gis_kardiyo_-2023-2024-C__km_s_lar__240625_053302__2_-20"
+     ],
+     "kanit": {
+      "sayfa": 45,
+      "alinti": "“Hayatımın en kötü baş ağrısı”, “şimşek çakması gibi baş ağrısı”."
+     }
+    },
+    {
+     "id": "k2-04-serebrovaskuler-hastaliklar-ve-inme-q06",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Kafa travması sonrası kısa bir bilinç açıklığı (lucid dönem) ardından saatler içinde hızla kötüleşen hastanın BT'sinde beklenen bulgu hangisidir?",
+     "secenekler": {
+      "A": "Beyin yüzeyini izleyen hilal biçimli birikim",
+      "B": "Sütürlerle sınırlı mercek (bikonveks) şekilli parlak kan birikimi",
+      "C": "Girus tepelerinde kama şeklinde kontüzyon",
+      "D": "Korteks loblarında lobar kanama",
+      "E": "Periventriküler kistik boşluklar"
+     },
+     "dogru": "B",
+     "aciklama": "Lucid dönem sonrası hızlı kötüleşme epidural hematomun kliniğidir (s. 75); BT'de duranın sıkı yapıştığı sütürlerle sınırlı mercek şekilli birikim görülür (s. 76).",
+     "sik_aciklamalari": {
+      "A": "Hilal biçimli, beyin yüzeyini izleyen birikim subdural hematomun BT görünümüdür. Subdural hematom köprü ven kaynaklı olup belirtileri genellikle daha yavaş ilerlediğinden bu klinik tabloya uymaz (s. 77).",
+      "B": "Mercek şekilli birikim epidural hematomun BT görünümüdür; dura sütürlere sıkı yapıştığı için kan sütürleri aşamaz. Lucid dönem ve hızlı kötüleşme epidural hematoma ait olduğundan doğru cevaptır (s. 76).",
+      "C": "Kontüzyon beynin kafatasına çarpmasıyla oluşan parankim ezilmesidir ve kama şeklindedir. Lucid dönem sonrası hızlı kötüleşme tablosu arteriyel ekstraaksiyel kanamayı düşündürür, kontüzyonu değil (s. 68).",
+      "D": "Lobar kanama serebral amiloid anjiyopatinin tipik kanama biçimidir ve korteks loblarına yerleşir. Travmatik değil serebrovasküler kökenlidir, bu nedenle tarif edilen travma sonrası tabloya uymaz (s. 42).",
+      "E": "Periventriküler kistik boşluklar kronik periventriküler lökomalazinin bulgusudur. Prematürelerde iskemik beyaz madde hasarını gösterir ve akut travmatik kanamayla ilişkisizdir (s. 86)."
+     },
+     "bilgi": [
+      100,
+      101
+     ],
+     "benzer_cikmis": [
+      "5d883361979e",
+      "e7ce2a6a67b6",
+      "d3-k2-bey-005"
+     ],
+     "kanit": {
+      "sayfa": 76,
+      "alinti": "mercek şeklinde bir kontura (kırmızı artı işareti) sahiptir."
+     }
+    },
+    {
+     "id": "k2-04-serebrovaskuler-hastaliklar-ve-inme-q07",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Sıklıkla serebral korteks loblarında kanamaya (lobar hemoraji) ve 1 mm'den küçük kortikal mikrokanamalara yol açan durum hangisidir?",
+     "secenekler": {
+      "A": "Hipertansif hiyalin arteriyoloskleroz",
+      "B": "Serebral amiloid anjiyopati",
+      "C": "Kavernöz malformasyon",
+      "D": "Germinal matriks kanaması",
+      "E": "Sakküler anevrizma rüptürü"
+     },
+     "dogru": "B",
+     "aciklama": "Derse göre serebral amiloid anjiyopatide en sık lobar kanama ve genellikle sessiz, <1 mm kortikal mikrokanamalar görülür (s. 42).",
+     "sik_aciklamalari": {
+      "A": "Hiyalin arteriyoloskleroz hipertansiyonun derin penetran arteriyollerde yaptığı duvar kalınlaşmasıdır. Kanamaları bazal gangliyon, talamus, pons ve serebellum gibi derin yapılarda yerleşir, lobar değildir (s. 37).",
+      "B": "Serebral amiloid anjiyopati korteks ve meninks damar duvarlarında Alzheimer'dakine benzer amiloid birikimidir. Derste lobar kanama ve kortikal mikrokanamaların tipik nedeni olarak verildiği için doğru cevaptır (s. 42).",
+      "C": "Kavernöz malformasyon ince duvarlı, gevşek organize geniş damar boşluklarından oluşur. En sık serebellum, pons ve subkortikal alanda yerleşir ve düşük akımlıdır; lobar kanama ile mikrokanama ikilisinin tipik nedeni olarak verilmez (s. 54).",
+      "D": "Germinal matriks kanaması prematüre bebeklerde lateral ventrikül komşuluğundaki matrikste olan kanamadır. Ventriküle açılma eğilimi gösterir ve erişkin lobar kanamasıyla ilişkili değildir (s. 84).",
+      "E": "Sakküler anevrizma rüptürü Willis çemberindeki kesenin yırtılmasıdır. Kanı öncelikle subaraknoid boşluğa verir; korteks loblarına sınırlı lobar kanama ve mikrokanama tablosunun nedeni olarak verilmez (s. 44)."
+     },
+     "bilgi": [
+      56,
+      57
+     ],
+     "benzer_cikmis": [
+      "past-1790877045058-97770"
+     ],
+     "kanit": {
+      "sayfa": 42,
+      "alinti": "Genellikle sessiz, <1 mm'lik kortikal mikrokanamalar."
+     }
+    },
+    {
+     "id": "k2-04-serebrovaskuler-hastaliklar-ve-inme-q08",
+     "kazanim": 2,
+     "zorluk": "zor",
+     "soru": "Beyin otopsisinde girus tepelerini seçici tutan, beynin kafatası iç yüzüne temas ettiği orbitofrontal ve temporal uçlarda yerleşen kama şeklindeki kanamalı lezyonların en olası nedeni hangisidir?",
+     "secenekler": {
+      "A": "Hipertansif parenkim kanaması",
+      "B": "Serebral amiloid anjiyopati",
+      "C": "Travmatik kontüzyon",
+      "D": "İskeminin hemorajik dönüşümü",
+      "E": "Sınır bölgesi (su havzası) enfarktı"
+     },
+     "dogru": "C",
+     "aciklama": "Tablo 21.1'e göre travmatik kontüzyon girus tepelerini seçici tutar ve kafatası iç yüzüne temas eden bölgelerde yerleşir (s. 35); kontüzyonlar kama şeklindedir (s. 68).",
+     "sik_aciklamalari": {
+      "A": "Hipertansif parenkim kanaması derin penetran arteriyollerin yırtılmasıyla oluşur. Derin beyaz cevher, talamus, bazal gangliyon ve beyin sapında merkezlenir; girus tepelerine seçici yerleşim göstermez (s. 35).",
+      "B": "Serebral amiloid anjiyopati kortikal damarlarda amiloid birikimiyle lobar kanama yapan hastalıktır. Subkortikal beyaz cevheri tutar ve subaraknoid aralığa uzanır; orbitofrontal ve temporal uçlarda girus tepesi seçiciliği göstermez (s. 35).",
+      "C": "Kontüzyon beynin kafatası iç yüzeyine çarpmasıyla oluşan kanamalı parankim ezilmesidir. Girus tepelerinin seçici tutulumu, orbitofrontal ve temporal kutup yerleşimi ve kama şekli tam olarak kontüzyona uyduğu için doğru cevaptır (s. 67).",
+      "D": "İskeminin hemorajik dönüşümü enfarkt alanına kanın sızmasıyla oluşur. Tablo 21.1'e göre kortikal şeridi izleyen peteşiler şeklindedir ve bir arter alanını izler; kafatası temas bölgelerine özgü değildir (s. 35).",
+      "E": "Sınır bölgesi enfarktı arterlerin en distal sahalarında, sistemik hipotansiyondan sonra gelişen iskemik nekrozdur. Ön ve orta serebral arter sınırında konveksite üzerinde nekroz bandı yapar, travmatik kanama değildir (s. 32)."
+     },
+     "bilgi": [
+      45,
+      90,
+      91
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 67,
+      "alinti": "Girus tepeleri en duyarlı alanlardır. – Orbitofrontal ve temporal kutup bölgelerinde sık."
+     }
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "d3-k2-pat-001",
+     "soru": "Spontan, non-travmatik subaraknoid kanamanın en sık etiyolojik nedeni aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Arteriyovenöz malformasyon (AVM)",
+      "B": "Willis poligonundaki sakküler (Berry) anevrizma rüptürü",
+      "C": "Mikotik anevrizma",
+      "D": "Hipertansif Charcot-Bouchard anevrizması",
+      "E": "Serebral amiloid anjiyopati"
+     },
+     "cevap": "B"
+    },
+    {
+     "id": "past-q-25-26_d_nem_3_kurul_1-96",
+     "soru": "Subaraknoid kanamanın en sık travmatik olmayan (spontan) sebebi aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Sakküler (berry) anevrizma rüptürü",
+      "B": "Arteriyovenöz malformasyon",
+      "C": "Hipertansif intraserebral kanamanın ventriküle açılması",
+      "D": "Serebral amiloid anjiyopati",
+      "E": "Kavernöz anjiyom"
+     },
+     "cevap": "A"
+    },
+    {
+     "id": "6564d8e6355f",
+     "soru": "SEREBROVASKÜLER HASTALIKLAR Klinik belirti veren subaraknoid kanamanın en sık nedeni aşağıdakilerden hangisidir? Anevrizma rüptürü Hipertansiyon Arteriovenöz malformasyon Travma Vaskülit Anevrizma",
+     "secenekler": {
+      "A": "Anevrizma rüptürü",
+      "B": "Hipertansiyon",
+      "C": "Arteriovenöz malformasyon",
+      "D": "Travma",
+      "E": "Vaskülit"
+     },
+     "cevap": "A"
+    },
+    {
+     "id": "past-q-I_SKENDERUN_TI_Mu_du_rlu_g_u_ne0__1__230709_230251-62",
+     "soru": "Hastanın \"hayatımdaki en şiddetli baş ağrısı\" ifadesinde ilk akla gelmesi gereken baş ağrısı nedeni aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Gerilim tipi baş ağrısı",
+      "B": "Migren",
+      "C": "Sinüzit",
+      "D": "Trigeminal otonomik sefalji",
+      "E": "Subaraknoid kanama (SAK)"
+     },
+     "cevap": "E"
+    },
+    {
+     "id": "q-No_ropsikiyatri_gis_kardiyo_-2023-2024-C__km_s_lar__240625_053302__2_-20",
+     "soru": "Hastanın 'hayatımda gördüğüm en şiddetli baş ağrısı' olarak tanımladığı ani başlangıçlı baş ağrısında öncelikle düşünülmesi gereken tanı hangisidir?",
+     "secenekler": {
+      "A": "Migren",
+      "B": "Gerilim tipi baş ağrısı",
+      "C": "Küme baş ağrısı",
+      "D": "Subaraknoid kanama",
+      "E": "Trigeminal nevralji"
+     },
+     "cevap": "D"
+    },
+    {
+     "id": "5d883361979e",
+     "soru": "Lucid intervale ait klinik tabloya hangi kanama yol açmaktadır?",
+     "secenekler": {
+      "A": "Epidural hematom",
+      "B": "Subdural hematom",
+      "C": "Subaraknoid kanama",
+      "D": "Intraserebral hematom",
+      "E": "Subgaleal hematom"
+     },
+     "cevap": "C"
+    },
+    {
+     "id": "e7ce2a6a67b6",
+     "soru": "Lucid interval en sık hangi beyin yaralanmasında görülür?",
+     "secenekler": {
+      "A": "Epidural hematom",
+      "B": "Subdural hematom",
+      "C": "İntraserebral hematom",
+      "D": "Serebral kontüzyon"
+     },
+     "cevap": "C"
+    },
+    {
+     "id": "d3-k2-bey-005",
+     "soru": "Temporal kemik skuama kırıklarında arteria meningea media yırtılması sonucu kafatası kemiği ile dura mater arasında biriken ve kranyal BT'de sütür hatlarıyla sınırlı bikonveks (mercek/lens) şeklinde hiperdens alan oluşturan patoloji hangisidir?",
+     "secenekler": {
+      "A": "Subdural hematom",
+      "B": "Epidural hematom",
+      "C": "Subaraknoid kanama",
+      "D": "Subdural higroma",
+      "E": "Diffüz aksonal hasar"
+     },
+     "cevap": "B"
+    },
+    {
+     "id": "past-1790877045058-97770",
+     "soru": "Sıklıkla serebral korteks loblarında kanamaya (lober hemoraji) neden olan durum hangisidir?",
+     "secenekler": {
+      "A": "Hipertansiyon",
+      "B": "Kavernöz malformasyon",
+      "C": "Serebral amiloid anjiyopati",
+      "D": "Sakküler anevrizma",
+      "E": "Travma"
+     },
+     "cevap": "C"
+    }
+   ]
+  },
+  {
+   "no": 3,
+   "metin": "Serebrovasküler Hastalıklar ve İnme klinik yönetimini, farmakoterapi ilkelerini ve komplikasyonlardan korunma yaklaşımlarını sıralar.",
+   "sorular": [
+    {
+     "id": "k2-04-serebrovaskuler-hastaliklar-ve-inme-q09",
+     "kazanim": 3,
+     "zorluk": "kolay",
+     "soru": "Primer beyin parankim kanamasının en sık risk faktörü aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Serebral amiloid anjiyopati",
+      "B": "Hipertansiyon",
+      "C": "Arteriyovenöz malformasyon",
+      "D": "Kavernöz malformasyon",
+      "E": "Beyin tümörü"
+     },
+     "dogru": "B",
+     "aciklama": "Derse göre primer parankim kanamasının en sık risk faktörü hipertansiyondur ve klinik olarak önemli parankim kanamalarının %50'sinden fazlasından sorumludur (s. 37).",
+     "sik_aciklamalari": {
+      "A": "Serebral amiloid anjiyopati kortikal damar duvarında amiloid birikimidir ve lobar kanamanın önemli nedenidir. Ancak ders parankim kanamalarında en sık risk faktörü olarak hipertansiyonu verir (s. 37).",
+      "B": "Hipertansiyon derin penetran arteriyollerde hiyalin arteriyoloskleroz yaparak damarı yırtılmaya hazırlar. Ders klinik olarak önemli parankim kanamalarının yarısından fazlasından sorumlu tuttuğu için doğru cevaptır (s. 37).",
+      "C": "Arteriyovenöz malformasyon arter ile ven arasında kapiller olmadan kurulan kıvrımlı damar ağıdır. Genç erişkinde kanama yapabilse de ders onu yapısal lezyonlar arasında sayar, en sık risk faktörü olarak vermez (s. 34).",
+      "D": "Kavernöz malformasyon ince duvarlı geniş damar boşluklarından oluşan düşük akımlı bir lezyondur. Kanama nedeni olabilir, fakat ders en sık risk faktörü olarak hipertansiyonu gösterir (s. 34).",
+      "E": "Beyin tümörleri yeni damar oluşumu ve nekroz nedeniyle içine kanayabilen kitlelerdir. Ders tümörleri intrakraniyal kanama nedenleri arasında sayar ama en sık neden olarak göstermez (s. 34)."
+     },
+     "bilgi": [
+      49,
+      50
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 37,
+      "alinti": "En sık risk faktörü: hipertansiyon. • Klinik olarak önemli parankimal kanamaların >%50’si."
+     }
+    },
+    {
+     "id": "k2-04-serebrovaskuler-hastaliklar-ve-inme-q10",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Sakküler anevrizma rüptürüne bağlı subaraknoid kanama sonrası gelişen komplikasyonlarla ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Erken dönemde vazospazma bağlı iskemi, geç dönemde hidrosefali gelişebilir",
+      "B": "Hidrosefali erken dönemin, vazospazm geç dönemin komplikasyonudur",
+      "C": "Vazospazm yalnız travmatik subaraknoid kanamada görülür",
+      "D": "Hidrosefali BOS üretiminin artmasıyla oluşur",
+      "E": "Anevrizma çapı arttıkça rüptür riski azalır"
+     },
+     "dogru": "A",
+     "aciklama": "Derse göre SAK sonrası erken dönemde vazospazma bağlı iskemi, geç dönemde meninks fibrozisiyle BOS akım/absorpsiyon bozukluğu ve hidrosefali gelişir (s. 48).",
+     "sik_aciklamalari": {
+      "A": "Vazospazm subaraknoid kandaki ürünlerin arterleri daraltmasıdır ve erken iskemi yapar; meninks fibrozisi ise BOS emilimini bozarak geç hidrosefaliye yol açar. Ders sırayı tam böyle verdiği için doğru cevaptır (s. 48).",
+      "B": "Vazospazm ve hidrosefali SAK'ın iki ana komplikasyonudur. Ancak ders vazospazmı erken, fibrozise bağlı hidrosefaliyi geç dönem komplikasyonu olarak verir; şık zamanlamayı tersine çevirmiştir (s. 48).",
+      "C": "Vazospazm serebral arterlerin kasılarak daralmasıdır. Ders vasküler anomaliye bağlı subaraknoid kanamada sekonder hasarın genellikle vazospazmla ilişkili olduğunu belirtir, bu yüzden yalnız travmatik ifadesi yanlıştır (s. 35).",
+      "D": "Hidrosefali ventriküllerde BOS birikmesiyle genişlemedir. SAK sonrasında meninks fibrozisi BOS akımını ve emilimini bozduğu için gelişir, aşırı üretimle açıklanmaz (s. 48).",
+      "E": "Rüptür riski anevrizmanın yıllık yırtılma olasılığıdır ve ortalama yaklaşık %1,3'tür. Ders çap 1 cm'yi aşınca yıllık riskin yaklaşık %50'ye çıktığını söyler, yani risk çapla artar (s. 48)."
+     },
+     "bilgi": [
+      66,
+      67
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 48,
+      "alinti": "Çap >1 cm ise yıllık rüptür riski ≈ %50."
+     }
+    },
+    {
+     "id": "k2-04-serebrovaskuler-hastaliklar-ve-inme-q11",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Uzun süreli hipertansiyonun beyin damarlarında yaptığı değişikliklerle ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Derin penetran arteriyollerde hiyalin arteriyoloskleroz yapar",
+      "B": "Birkaç milimetrelik laküner enfarktlara yol açar",
+      "C": "Küçük damar yırtılmasıyla yarık kanama oluşturabilir",
+      "D": "Akut hipertansif ensefalopatide arteriyollerde fibrinoid nekroz görülebilir",
+      "E": "Kanamaları tipik olarak korteks loblarında lobar yerleşim gösterir"
+     },
+     "dogru": "E",
+     "aciklama": "Hipertansif kanamalar bazal gangliyon, talamus, pons ve serebellum gibi derin yapılarda yerleşir (s. 37); lobar kanama serebral amiloid anjiyopatiye özgüdür (s. 42).",
+     "sik_aciklamalari": {
+      "A": "Yanlış seçenek; ifade doğrudur: hipertansiyon bazal gangliyon, hemisferik beyaz madde ve beyin sapındaki derin penetran arter ve arteriyollerde hiyalin arteriyoloskleroz yapar. Bu duvar değişikliği tıkanma ve yırtılmanın zeminidir (s. 57).",
+      "B": "Yanlış seçenek; ifade doğrudur: laküner enfarktlar tek penetran dalın tıkanmasıyla oluşan birkaç milimetrelik kaviteli enfarktlardır. Derin gri madde, iç kapsül ve ponsta yerleşirler (s. 58).",
+      "C": "Yanlış seçenek; ifade doğrudur: yarık kanama küçük penetran damarın yırtılmasıyla oluşan minik kanamadır. Zamanla rezorbe olup kahverengi kenarlı yarık benzeri boşluk bırakır (s. 58).",
+      "D": "Yanlış seçenek; ifade doğrudur: hipertansif ensefalopatide otopside beyin ödemi, mikroskopide arteriyollerde peteşiler ve fibrinoid nekroz görülür. Tablo diyastolik basıncın 130 mmHg'yi aştığı ağır hipertansiyonla ilişkilidir (s. 60).",
+      "E": "Lobar kanama korteks loblarına ve subkortikal beyaz cevhere yerleşen kanamadır. Ders bunu serebral amiloid anjiyopatiye bağlar; hipertansif kanama ise derin yapılarda olduğundan bu yanlış önerme doğru cevaptır (s. 37)."
+     },
+     "bilgi": [
+      50,
+      78,
+      79,
+      80,
+      82
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 57,
+      "alinti": "Derin penetran arter ve arteriyollerde hiyalin arteriyoloskleroz yapar"
+     }
+    },
+    {
+     "id": "k2-04-serebrovaskuler-hastaliklar-ve-inme-q12",
+     "kazanim": 3,
+     "zorluk": "zor",
+     "soru": "Subdural hematomun zaman içindeki seyri ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Pıhtı ilk gün içinde tamamen lize olur",
+      "B": "Yaklaşık 2. haftada duradan granülasyon dokusu gelişir",
+      "C": "Fibrozis ilk 48 saat içinde tamamlanır",
+      "D": "Olguların çoğunda bilateraldir",
+      "E": "En sık hemisferlerin medial yüzünde yerleşir"
+     },
+     "dogru": "B",
+     "aciklama": "Derse göre subdural hematomda pıhtı yaklaşık 1 haftada lize olur, 2 haftada duradan granülasyon dokusu gelişir ve 1–3 ayda fibrozis olur (s. 81).",
+     "sik_aciklamalari": {
+      "A": "Liziz pıhtının fibrinolizle çözülmesidir. Ders subdural hematomda bu çözülmenin yaklaşık 1 haftada olduğunu belirtir; ilk gün içinde tam liziz ifadesi bu zaman çizelgesiyle çelişir (s. 81).",
+      "B": "Granülasyon dokusu yeni kapiller ve fibroblastlardan oluşan onarım dokusudur. Ders subdural hematomda bunun yaklaşık ikinci haftada dura tarafından geliştiğini söylediği için doğru cevaptır (s. 81).",
+      "C": "Fibrozis organize olan pıhtının kolajenden zengin skar dokusuna dönüşmesidir. Derste 1–3 ayda geliştiği belirtilir; 48 saat ise subdural hematomun belirti verme süresidir (s. 79).",
+      "D": "Bilateral yerleşim hematomun iki hemisferde birden bulunmasıdır. Derse göre subdural hematom olguların yalnız yaklaşık %10'unda bilateraldir, çoğunlukta değil (s. 79).",
+      "E": "Subdural hematom beyin yüzeyini izleyerek yayılan venöz kan birikimidir. Ders en sık hemisferlerin lateral yüzünde yerleştiğini belirtir, medial yüz ifadesi yanlıştır (s. 79)."
+     },
+     "bilgi": [
+      105,
+      107
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 81,
+      "alinti": "Pıhtı lizisi: ≈ 1 hafta. • 2 hafta içinde:"
+     }
+    }
+   ],
+   "ilgili_cikmis": []
+  }
+ ],
+ "soru_sayisi": 12
+}
