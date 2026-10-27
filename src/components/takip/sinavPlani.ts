@@ -25,7 +25,7 @@ import { elemeOku } from '../../services/konuEleme';
 import { bittiMi, type Hiz, type TakipModul, takipOku, sesliKonuId } from '../../services/calismaTakip';
 import { aktifKurul } from '../../services/kurulTakvimi';
 import { cdListeGetir, type CdListeDers } from '../canliDers/canliDersStore';
-import { CD_SPOT_BRANS, cdTekSurum } from '../canliDers/canliDersKategori';
+import { CD_SPOT_BRANS, cdBransSlug, cdTekSurum } from '../canliDers/canliDersKategori';
 import { BRANSLAR, bransTanim, type Brans } from '../spots/brans';
 import { cozucuDizinYukle, ilerlemeOku, ozet, type CDizinDers } from '../spots/cozucu/cozucuVeri';
 import { dizinYukle as onemDizinYukle, ogrenilenler, type DizinDers } from '../spots/onem/onemVeri';
@@ -92,8 +92,9 @@ export async function planVerisiYukle(): Promise<PlanVeri | null> {
   });
   // Sesli ders yalnız bilinen bir derse bağlanır (kamp / son prova bölümleri ayrı)
   for (const d of cdTekSurum(sesli as CdListeDers[])) {
-    const b = d.brans ? CD_SPOT_BRANS[d.brans] : undefined;
-    if (!b || (d.kurul && d.kurul !== k.kurul) || /-son-prova-|-blok-ozet-|-sinav-kampi/.test(d.key)) continue;
+    // Kurul 2+ branşları kurul önekli (k2noroloji); K1 eşlemesi (farmakoloji) K2 dersine uygulanmaz
+    const b = !d.brans ? undefined : k.kurul > 1 ? `k${k.kurul}${cdBransSlug(d.brans)}` as Brans : CD_SPOT_BRANS[d.brans];
+    if (!b || (k.kurul > 1 ? d.kurul !== k.kurul : d.kurul && d.kurul !== k.kurul) || /-son-prova-|-blok-ozet-|-sinav-kampi/.test(d.key)) continue;
     const x = dersler.get(`${b}|${Number(d.no)}`);
     if (x) x.sesli.push(d);
   }
@@ -327,7 +328,8 @@ export function planHesapla(veri: PlanVeri, hiz: Partial<Record<TakipModul, Hiz>
     const r = n / (n + 30);
     kalibre[b] = 1 + r * (f - 1);
   }
-  const bransP = (b: Brans) => ders[b].reduce((s, x) => s + x.w * Math.min(0.92, pOf(x.s, kalibre[b])), 0);
+  // İçeriği henüz olmayan branş (Kurul 2+) 0 değil çalışılmamış taban olasılıkla sayılır; yoksa her soru yanlış varsayılıp baraj cezası yazılır
+  const bransP = (b: Brans) => ders[b].length ? ders[b].reduce((s, x) => s + x.w * Math.min(0.92, pOf(x.s, kalibre[b])), 0) : TABAN;
   const dagOf = (b: Brans) => bransDag(veri.dagilim.branslar[b], bransP(b));
   const hedef = veri.dagilim.hedef;
   const J = (t: Dag) => beklenen(t) + 30 * enAz(t, hedef);

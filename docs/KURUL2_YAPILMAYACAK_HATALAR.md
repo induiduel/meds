@@ -912,3 +912,9 @@ Her maddede: belirti · kök neden · Kurul 2 kuralı · kapı durumu. Kanıtlar
 - **Kök neden:** `KronometreV15` ve `KapsulV15` `TopBarV15` içinde bağlanmıştı; odak ekranlarında üst bar `null` döndüğünden bileşenler sökülüyordu. Odak oturumu ayrı bileşen + ayrı portal olduğu için iki sayaç bağımsızdı. Oynatıcı konumunu bilen bir mekanizma yoktu.
 - **Çözüm:** Kronometre uygulama kökünde (`App.tsx`, `V15Icinde`) tek kez bağlanır; Odak panelin sekmesidir (`KapsulV15 gomulu`), biri başlayınca öteki duraklar (`medsoru:sayac`). Baloncuk `.cd-dock`'u izler: mini oynatıcının sağ ucuna kaynaşır, tam oynatıcının sağ üstüne oturur.
 - **Kural:** Sayfalar arası kalıcı olması gereken yüzen öğe (sayaç, oynatıcı) asla sayfaya/üst bara bağlı bileşenin içine konmaz; uygulama kökünde tek örnek olarak bağlanır. Aynı işlevin ikinci yüzen örneği eklenmez.
+
+## H102 · Sınav planı Kurul 2'de yanlış puan/plan veriyor (2026-10-27)
+- **Belirti:** Kurul 2 aktifken Bitirdiklerim › Sınav planı çok düşük beklenen puan ve gerçek dışı plan gösteriyordu; sesli dersler hiç hesaba girmiyordu.
+- **Kök neden:** (1) `sinavPlani.ts` sesli dersi `CD_SPOT_BRANS` ile eşliyordu; bu tablo yalnız Kurul 1 branşlarını bilir, K2 dersleri (`k2noroloji` …) `!b` diye atlanıyordu. (2) İçeriği henüz olmayan branşta (psikiyatri, aile, ftr…) ders listesi boş olduğundan `bransP` = 0 çıkıyor, tüm sorular yanlış sayılıp baraj cezası (−n/2) yazılıyordu.
+- **Çözüm:** K2+ için branş `k<kurul><slug>` olarak türetilir ve ders kurulu eşleşmelidir; içeriksiz branşın olasılığı çalışılmamış taban (0,30) alınır.
+- **Kural:** Kurul 1 sabit tablolarına dayanan eşleme Kurul 2+ için kurul önekli türetilmeli; içeriği olmayan branş 0 olasılıkla değil taban olasılıkla modellenmeli.
