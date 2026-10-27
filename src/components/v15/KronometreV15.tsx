@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { createPortal } from 'react-dom';
-import { Flag, Pause, Play, Square, Timer, X } from 'lucide-react';
+import { Flag, Pause, Play, Square, Target, Timer, X } from 'lucide-react';
 import '../../styles/v15/kronometre.css';
 
 /**
@@ -73,6 +73,7 @@ export default function KronometreV15() {
               {d.turlar.map((t, i) => <li key={i}><span>Tur {i + 1}</span><span>{sureYaz(t - (d.turlar[i - 1] || 0))}</span><span className="v15-cap">{sureYaz(t)}</span></li>).reverse()}
             </ol>
           )}
+          <button type="button" className="v15-btn is-soft" onClick={() => { setPanel(false); window.dispatchEvent(new Event('medsoru:kapsul')); }}><Target aria-hidden /> Odak oturumu (çalışma kapsülü)</button>
           <p className="v15-cap kr15-not">Bugün kronometreyle {sureYaz(bugunSn * 1000)} · sistemin ölçtüğü çalışma süresinden ayrıdır.</p>
         </div>
       ) : (

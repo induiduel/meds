@@ -16,3 +16,20 @@
 .kr15-tur li { display: grid; grid-template-columns: 1fr auto auto; gap: 10px; padding: 5px 2px; border-top: 1px solid var(--color-line-soft, var(--color-line)); color: var(--color-ink-2); }
 .kr15-not { margin: 0; }
 @media (min-width: 600px) { .kr15 { right: 24px; bottom: 24px; } }
+/* Çalışma kapsülü (KapsulV15): kronometrenin solunda durur; ikisi açıkken çakışmaz */
+.kp15 { right: auto; left: 16px; }
+.kp15-konu { display: inline-flex; align-items: center; gap: 6px; justify-content: center; font-weight: 600; color: var(--color-ink-2); text-align: center; overflow-wrap: anywhere; }
+.kp15-konu svg { width: 16px; height: 16px; }
+.kp15-orta { text-align: center; }
+.kp15-bar { height: 6px; border-radius: 999px; background: var(--color-accent-soft); overflow: hidden; }
+.kp15-bar i { display: block; height: 100%; background: var(--color-accent); transition: width 1s linear; }
+.kp15-secim { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; }
+.kp15-secim .v15-btn { padding: 0 4px; white-space: nowrap; font-size: .88rem; }
+.kp15-secim .kp15-girdi { padding: 0 6px; font-size: 16px; }
+.kp15 .kp15-secim .v15-btn.is-soft.is-on { background: var(--color-accent); color: var(--color-on-accent, #fff); }
+.kp15-girdi { min-width: 0; height: 38px; padding: 0 10px; border-radius: 10px; border: 1px solid var(--color-line); background: var(--color-field); color: var(--color-ink); font: inherit; font-size: 16px; }
+.kp15-oneri { display: flex; flex-wrap: wrap; gap: 6px; }
+.kp15-hap { border: 1px solid var(--color-line-soft, var(--color-line)); background: var(--color-white); color: var(--color-ink-2); border-radius: 999px; padding: 4px 10px; font-size: .82rem; cursor: pointer; max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.kp15-bitti { display: flex; flex-direction: column; gap: 6px; padding: 10px; border-radius: 12px; background: var(--color-ok-soft); color: var(--color-ink); }
+.kp15 .kr15-tur li span:first-child { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; min-width: 0; }
+@media (min-width: 600px) { .kp15 { left: auto; right: 360px; bottom: 24px; } }

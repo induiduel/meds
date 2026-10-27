@@ -131,7 +131,8 @@ Yeni bileşen önce buraya eklenir; sayfa CSS'i yalnız yerleşim yazar.
   Hücre → `/sorular/cikmis?kurul=&ders=&yil=` (PastExamsView `?ders=`/`?yil=` ile süzgeç başlatır).
 - Yüzen kronometre (T): `v15/KronometreV15.tsx` + `styles/v15/kronometre.css`; Menü › Araçlar ve kenar menüsünden (`kronometreAc`).
   Başlat/duraklat, tur, bitir (geçmiş 50 oturum, localStorage), sistem süresinden ayrı. Odak ekranında (sesli ders) gizli.
-  Yapılmadı: çalışma kapsülü (U, ses oynatıcıyla birleşme), Profil › Kronometre geçmişi ekranı.
+- Çalışma kapsülü (U, 2026-10-27): `v15/KapsulV15.tsx` (`kapsulAc`, anahtar `medsoru_v15_kapsul_v1` eşitlenir); hedef 25/50/90/serbest, konu, mola önerisi, günlük geçmiş. Menü › Araçlar › Odak + kronometre paneli.
+  Yapılmadı: ses oynatıcıyla birleşme, Profil › Kronometre geçmişi ekranı.
 
 ## Kalan iç sayfalar (kullanıcı kararı 2026-10-27: eski görünümün hepsi v15'e geçecek)
 Tasarımı olan: sesli ders listesi (B04), Öğren etkileşimleri (B07), spotlar (B08), önem (B09), sözlük (B10), notlar (B11),

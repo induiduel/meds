@@ -43,6 +43,8 @@ const SYNC_PATTERNS: RegExp[] = [
   /^medsoru_card_notes_v1$/,
   // Notlarım (v15): not listesi + not başına çizim katmanı (components/v15/NotlarimV15)
   /^medsoru_notlarim_v1$/,
+  // Çalışma kapsülü (v15): odak oturumu geçmişi (components/v15/KapsulV15)
+  /^medsoru_v15_kapsul_v1$/,
   /^medsoru_notlarim_cizim:[a-z0-9]+$/,
   /^medsoru_card_note_open$/,
   /^medsoru_custom_encyclopedia_v1$/,

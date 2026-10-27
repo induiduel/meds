@@ -1,10 +1,11 @@
 {
  "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
- "onem": 425,
- "baslik": "Pencere ve bildirimler yenilendi",
+ "onem": 426,
+ "baslik": "Çalışma kapsülü geldi",
  "maddeler": [
-  "Onay pencereleri, alt çekmeceler ve bildirimler yeni görünümde: yumuşak köşeler, bulanık arka plan",
-  "Onay pencerelerinde düğmeler yan yana ve büyük"
+  "Menü › Odak ya da kronometre panelinden hedef süreli odak oturumu: 25, 50, 90 dk ya da serbest",
+  "Ne çalışacağını yaz, oturum bitince kısa mola önerisi",
+  "Bugünkü oturumların ve günlük toplamın; hesabına eşitlenir"
  ],
  "eklenen": [],
  "degisen": [],
