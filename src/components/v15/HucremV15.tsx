@@ -1,23 +1,38 @@
-import React, { useEffect, useMemo, useState } from 'react';
-import { Check, Lock, Zap } from 'lucide-react';
+import React, { Suspense, lazy, useEffect, useMemo, useState } from 'react';
+import { Check, Droplet, Lock, Trophy, Zap } from 'lucide-react';
 import { linkClick, navigateTo, pathFor } from '../../router';
-import { satinAl, sayi, useBasarim, yenile, type KilitT } from '../../services/basarimIstemci';
+import { hucreSiralamaGetir, satinAl, sayi, sureYaz, useBasarim, yenile, type HucreSatir, type KilitT } from '../../services/basarimIstemci';
 import { useV15Baslik } from './baslik';
 import '../../styles/v15/ogren.css';
 import '../../styles/v15/hucrem.css';
 
 /**
  * v15 · Hücrem (tasarım sistemi v15 › M "Hücrem"). Yeni sayfa: /hucrem (Menü › Topluluk).
- * Çalışarak kazandığın ATP ile hücreni 28 evrim basamağında büyütürsün: ilkel çorbadan insana. Basamaklar
+ * Çalışarak kazandığın ATP ya da glukozla hücreni 28 evrim basamağında büyütürsün: lipit keseciğinden hekim hücresine. Basamaklar
  * başarım tanımındaki `tur: "hucre"` kilitleridir (src/data/basarim/tanim.json); satın alma, ATP defteri ve eşitleme
  * mevcut başarım motorundan (POST /api/basarim/satin-al; sunucu "önceki basamak" şartını denetler). Her basamak bir
- * tıbbi bilgi açar. Çizim açılan basamak sayısına göre katman katman büyür (SVG, palet tokenları).
+ * tıbbi bilgi açar. 3B sahne (Hucre3D, three.js) açılan basamağa göre katman katman büyür; glukoz bakiyesi akan parçacık sayısını, canlılık solgunluğu belirler. WebGL yoksa SVG çizim.
  */
+const Hucre3D = lazy(() => import('./Hucre3D'));
+
+/** 3B sahne (WebGL); yüklenene ya da WebGL yoksa düz SVG çizim */
+function Sahne({ n, glukoz, canlilik }: { n: number; glukoz: number; canlilik: number }) {
+  const [yok, setYok] = useState(false);
+  if (yok) return <Hucre n={n} />;
+  return (
+    <Suspense fallback={<Hucre n={n} />}>
+      <Hucre3D n={n} glukoz={glukoz} canlilik={canlilik} onHata={() => setYok(true)} />
+    </Suspense>
+  );
+}
+
 export default function HucremV15() {
   const { tanim, durum, hata } = useBasarim();
   const [is, setIs] = useState(false);
   const [mesaj, setMesaj] = useState('');
+  const [sira, setSira] = useState<{ satir: HucreSatir[]; benim: number | null; odul: number[]; carpan: number[] } | null>(null);
   useEffect(() => { void yenile(); }, []);
+  useEffect(() => { let vazgec = false; void hucreSiralamaGetir().then((r) => !vazgec && setSira(r), () => 0); return () => { vazgec = true; }; }, [durum?.hucre?.basamak]);
   const basamaklar = useMemo(() => tanim.kilitler.filter((k) => k.tur === 'hucre' && k.etkin), [tanim]);
   const acik = durum?.kilit || {};
   const n = basamaklar.filter((b) => acik[b.id]).length;
@@ -32,10 +47,12 @@ export default function HucremV15() {
     return [...m];
   }, [basamaklar]);
 
-  const ac = async () => {
+  const hc = durum?.hucre;
+  const glukozFiyat = sonraki ? Math.ceil(sonraki.fiyat * (hc?.glukozFiyatCarpan ?? 1)) : 0;
+  const ac = async (odeme: 'atp' | 'glukoz') => {
     if (!sonraki || is) return;
     setIs(true); setMesaj('');
-    try { await satinAl(sonraki.id); setMesaj(`${sonraki.ad} açıldı!`); }
+    try { await satinAl(sonraki.id, odeme); setMesaj(`${sonraki.ad} açıldı!`); }
     catch (e: any) { setMesaj(e?.message || 'Açılamadı.'); }
     setIs(false);
   };
@@ -44,9 +61,9 @@ export default function HucremV15() {
     return (
       <div className="hc15">
         <section className="v15-card hc15-bos">
-          <Hucre n={0} />
+          <Sahne n={0} glukoz={0} canlilik={100} />
           <b>Hücreni büyütmek için giriş yap</b>
-          <p>Çalıştıkça ATP kazanırsın; ATP ile hücren ilkel çorbadan insana 28 basamakta evrimleşir. {hata && <small>({hata})</small>}</p>
+          <p>Ders çalışıp soru çözdükçe glukoz kazanırsın; glukoz hücreni yaşatır, ATP ya da glukozla hücren lipit keseciğinden hekim hücresine 28 basamakta evrimleşir. {hata && <small>({hata})</small>}</p>
         </section>
       </div>
     );
@@ -56,14 +73,43 @@ export default function HucremV15() {
     <div className="hc15">
       <h1 className="sr-only">Hücrem</h1>
       <section className="v15-card hc15-sahne">
-        <Hucre n={n} />
+        <Sahne n={n} glukoz={hc?.glukoz ?? 0} canlilik={hc?.canlilik ?? 100} />
         <div className="hc15-durum">
           <span className="hc15-cag">{simdiki?.cag || 'Başlangıç'}</span>
           <b>{simdiki ? simdiki.ad : 'Henüz boş bir damla'}</b>
           <div className="v15-bar hc15-bar" aria-label={`${n} / ${basamaklar.length} basamak`}><span style={{ width: `${(n / Math.max(1, basamaklar.length)) * 100}%` }} /></div>
           <span className="hc15-atp"><Zap aria-hidden /> {sayi(bakiye)} mol ATP{durum.atp.kuyrukta ? ` · ${sayi(durum.atp.kuyrukta)} kuyrukta` : ''}</span>
+          {hc && <>
+            <span className="hc15-atp hc15-glk"><Droplet aria-hidden /> {sayi(hc.glukoz)} glukoz{hc.saatKaldi != null ? ` · ~${hc.saatKaldi} saat yeter` : ''}</span>
+            <div className={`hc15-can${hc.uyku ? ' is-uyku' : hc.canlilik < 35 ? ' is-az' : ''}`}>
+              <span>{hc.uyku ? 'Hücren uykuda' : hc.canlilik < 35 ? 'Hücren aç kalıyor' : 'Canlılık'}</span>
+              <div className="v15-bar" role="meter" aria-valuemin={0} aria-valuemax={100} aria-valuenow={hc.canlilik} aria-label="Canlılık"><span style={{ width: `${hc.canlilik}%` }} /></div>
+              <b>%{hc.canlilik}</b>
+            </div>
+          </>}
         </div>
       </section>
+
+      {hc && (
+        <section className="v15-card hc15-enerji">
+          <h2 className="v15-cap">Hücren nasıl yaşar?</h2>
+          <ul>
+            <li><b>Glukoz kazan:</b> her çalışma dakikası {hc.glukozDk}, her çözülen soru {hc.glukozSoru} glukoz verir{hc.carpan > 1 ? ` (sıralamadaki yerin sayesinde ×${hc.carpan})` : ''}.</li>
+            <li><b>Hücre yer:</b> saatte {hc.saatlik.toLocaleString('tr-TR')} glukoz harcar; büyüdükçe daha çok yer. Glukoz biterse canlılık düşer, hücre uykuya geçer (sıralamada yarım sayılır). Çalışınca toparlanır.</li>
+            <li><b>Büyüt:</b> yeni basamağı ATP ile ya da glukozla açabilirsin.</li>
+          </ul>
+          <dl className="hc15-ist">
+            <div><dt>Çalışma</dt><dd>{sureYaz(hc.calismaSn)}</dd></div>
+            <div><dt>Çözülen soru</dt><dd>{sayi(hc.soru)}</dd></div>
+            <div><dt>Kazanılan glukoz</dt><dd>{sayi(hc.kazanilan)}</dd></div>
+            <div><dt>Harcanan (büyüme)</dt><dd>{sayi(hc.harcanan)}</dd></div>
+            <div><dt>Yaşam gideri</dt><dd>{sayi(hc.metabolik)}</dd></div>
+            <div><dt>Kazanılan ATP</dt><dd>{sayi(hc.atpKazanilan)}</dd></div>
+            <div><dt>Başarım</dt><dd>{sayi(hc.basarim)}</dd></div>
+            <div><dt>Hücre sırası</dt><dd>{hc.sira ? `${hc.sira}. / ${hc.kisi}` : '—'}</dd></div>
+          </dl>
+        </section>
+      )}
 
       {sonraki ? (
         <section className="v15-card hc15-sonraki">
@@ -72,15 +118,42 @@ export default function HucremV15() {
             <b>{sonraki.ad}</b>
             <p>{sonraki.cag} çağı. Açınca bu basamağın tıbbi bilgisi ve hücrendeki yeni parçası görünür.</p>
           </div>
-          <button type="button" className="hc15-ac" onClick={ac} disabled={is || bakiye < sonraki.fiyat}>
-            <Zap aria-hidden /> {sayi(sonraki.fiyat)} mol ile aç
-          </button>
-          {bakiye < sonraki.fiyat && <p className="v15-cap hc15-eksik">{sayi(sonraki.fiyat - bakiye)} mol daha gerekli. ATP'yi günlük hedefler ve başarımlar verir.{' '}
+          <div className="hc15-odeme">
+            <button type="button" className="hc15-ac" onClick={() => ac('atp')} disabled={is || bakiye < sonraki.fiyat}>
+              <Zap aria-hidden /> {sayi(sonraki.fiyat)} mol ATP ile aç
+            </button>
+            <button type="button" className="hc15-ac is-glk" onClick={() => ac('glukoz')} disabled={is || (hc?.glukoz ?? 0) < glukozFiyat}>
+              <Droplet aria-hidden /> {sayi(glukozFiyat)} glukozla aç
+            </button>
+          </div>
+          {bakiye < sonraki.fiyat && (hc?.glukoz ?? 0) < glukozFiyat && <p className="v15-cap hc15-eksik">ATP için {sayi(sonraki.fiyat - bakiye)} mol, glukoz için {sayi(glukozFiyat - (hc?.glukoz ?? 0))} eksik. Ders çalışıp soru çözerek glukoz kazan.{' '}
             <a href={pathFor('basarimlar')} onClick={linkClick(() => navigateTo(pathFor('basarimlar')))}>Hedeflere bak</a></p>}
           {mesaj && <p className="hc15-mesaj" role="status">{mesaj}</p>}
         </section>
       ) : (
         <section className="v15-card hc15-sonraki is-bitti"><b>Evrim tamamlandı.</b><p>28 basamağın hepsini açtın. Hücrelerin uyumu artık sensin.</p>{mesaj && <p className="hc15-mesaj">{mesaj}</p>}</section>
+      )}
+
+      {sira && (
+        <section className="hc15-cagbolum">
+          <h2 className="v15-cap"><Trophy aria-hidden className="hc15-kupa" /> En büyük hücreler{sira.benim ? ` · sen ${sira.benim}.` : ''}</h2>
+          <p className="v15-cap hc15-ipucu">İlk üç haftalık ATP kazanır ({sira.odul.join(' / ')}) ve glukoz kazancı ×{sira.carpan.join(' / ×')} olur.</p>
+          {sira.satir.length ? (
+            <ol className="hc15-liste v15-card hc15-sira">
+              {sira.satir.slice(0, 20).map((x) => (
+                <li key={x.sira + x.ad} className={`hc15-b hc15-s${x.ben ? ' is-ben' : ''}${x.uyku ? ' is-uyku' : ''}`}>
+                  <span className="hc15-no" aria-hidden>{x.sira}</span>
+                  <span className="hc15-bt">
+                    <b>{x.ad}{x.ben ? ' (sen)' : ''}</b>
+                    <span>{x.basamak}. basamak · {x.cag}{x.uyku ? ' · uykuda' : ''}</span>
+                    <span>{sureYaz(x.calismaSn)} ders · {sayi(x.soru)} soru · {sayi(x.glukoz)} glukoz · {sayi(x.basarim)} başarım</span>
+                  </span>
+                  <span className="hc15-boyut" title="Canlılık">%{x.canlilik}</span>
+                </li>
+              ))}
+            </ol>
+          ) : <p className="v15-card hc15-bos">Henüz sıralamada hücre yok. İlk basamağı aç!</p>}
+        </section>
       )}
 
       {cag.map(([ad, liste]) => (

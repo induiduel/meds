@@ -5,8 +5,9 @@
  *   GET  /api/basarim/durum                 giriş kaydı + değerlendirme + özet (Firebase jetonu zorunlu)
  *   POST /api/basarim/profil {donem,kurul}  dönem/kurul (girişte bir kez sorulur, ayarlardan değişir)
  *   POST /api/basarim/goruldu {at}          kutlaması gösterilen ödüller
- *   POST /api/basarim/satin-al {id}         ATP ile kilit açma
+ *   POST /api/basarim/satin-al {id,odeme?}  ATP ile kilit açma (odeme:'glukoz' → hücre basamağı glukozla)
  *   POST /api/basarim/sec {tur,id}          unvan/çerçeve/efekt seçimi
+ *   GET  /api/basarim/hucre-siralama?donem=3  hücre büyüklüğü sıralaması (basamak, glukoz, çalışma, soru)
  *   GET  /api/basarim/siralama?kapsam=hafta|kurul|tum&donem=3
  *   GET  /api/basarim/calisma?kapsam=gun|hafta&donem=3     çalışma süresi sıralaması + en çok çalışılan dersler
  *   PUT  /api/admin/basarim/tanim           kuralları güncelle (doğrulayıcı geçmezse 400)
@@ -98,7 +99,7 @@ export function registerBasarimRoutes(app: express.Express, motor: BasarimMotor,
   }));
   app.post('/api/basarim/goruldu', korumali((req, res, uid) => { motor.goruldu(uid, String(req.body?.at || '')); res.json({ ok: true }); }));
   app.post('/api/basarim/satin-al', korumali((req, res, uid) => {
-    const r = motor.satinAl(uid, String(req.body?.id || ''));
+    const r = motor.satinAl(uid, String(req.body?.id || ''), req.body?.odeme === 'glukoz' ? 'glukoz' : 'atp');
     if ('hata' in r) return res.status(400).json({ error: r.hata });
     opts.onDegisti?.(uid);
     res.json(motor.ozet(motor.kisi(uid)));
@@ -116,6 +117,12 @@ export function registerBasarimRoutes(app: express.Express, motor: BasarimMotor,
     const donem = Number(req.query.donem) || (u ? motor.kisi(u.uid).donem : null) || 3;
     res.set('Cache-Control', 'no-store');
     res.json({ donem, ...motor.calismaListesi(u?.uid || null, donem, kapsam) });
+  });
+  app.get('/api/basarim/hucre-siralama', async (req, res) => {
+    const u = await kim(req);
+    const donem = Number(req.query.donem) || (u ? motor.kisi(u.uid).donem : null) || 3;
+    res.set('Cache-Control', 'no-store');
+    res.json({ donem, ...motor.hucreListesi(u?.uid || null, donem) });
   });
   app.get('/api/basarim/siralama', async (req, res) => {
     const u = await kim(req);

@@ -145,7 +145,15 @@ export interface Kisi {
   /** Konu (calisma_takip anahtarı) → son görülen etkin süre; gün → konu → o gün eklenen süre (35 gün) */
   konuSn?: Record<string, number>;
   konuGun?: Record<string, Record<string, number>>;
+  /** Hücrem: glukoz (enerji) bakiyesi, canlılık 0–100, istatistikler; `sn`/`soru` en son işlenen toplam ölçüler */
+  hucre?: HucreKayit;
 }
+export interface HucreKayit { glukoz: number; kazanilan: number; harcanan: number; metabolik: number; canlilik: number; son: number; sn: number; soru: number }
+/** Hücrem kuralları; tanim.json'daki `hucre` bölümü varsayılanların üstüne yazar. */
+export const HUCRE_VARSAYILAN = {
+  baslangic: 100, glukozDk: 1, glukozSoru: 2, tuketimTaban: 0.5, tuketimBasamak: 0.25, aclikHiz: 8, toparlanma: 10, glukozFiyatCarpan: 1,
+  sampiyonCarpan: [1.25, 1.15, 1.1], haftalikSiralama: [40, 25, 15],
+};
 /** Yönetim günlüğü satırı (data/basarim/yonetim_gunlugu.jsonl, yalnız ekleme). */
 export interface YonetimKaydi { at: string; by: string; uid: string; ad: string; tur: string; gerekce: string; ayrinti: any; once: any; sonra: any }
 
@@ -337,6 +345,8 @@ export function createBasarimMotor(deps: MotorDeps) {
       case 'seri': return enUzunSeri([...Object.keys(k.giris.gun), ...(k.korunan || [])]);
       case 'oturum_max': return Math.max(0, ...Object.values(k.giris.gun));
       case 'ust_hedef': return k.defter.filter((d) => d.t === 'hedef' && d.ust).length;
+      case 'hucre_basamak': return hucreBasamak(k);
+      case 'glukoz_kazanilan': return Math.floor(k.hucre?.kazanilan || 0);
       case 'podyum': return k.defter.filter((d) => d.t === 'siralama' && d.id.startsWith('s:hafta:')).length;
       default: return k.eylem.toplam[olcu] || 0;
     }
@@ -359,6 +369,46 @@ export function createBasarimMotor(deps: MotorDeps) {
     return kurulPencere(k.donem || 3, g);
   };
   const pencereOlcu = (k: Kisi, p: Pencere, olcu: string) => pencereGunleri(p.bas, p.son).reduce((a, g) => a + olcuGun(k, g, olcu), 0);
+
+  // ───── Hücrem: glukoz, canlılık, büyüklük sıralaması ─────
+  const HV = () => ({ ...HUCRE_VARSAYILAN, ...((tanim as any).hucre || {}) });
+  const hucreBasamak = (k: Kisi) => tanim.kilitler.reduce<number>((a, x) => (x.tur === 'hucre' && x.etkin && k.kilit[x.id] ? a + 1 : a), 0);
+  const sinirla = (n: number, a = 0, b = 100) => Math.max(a, Math.min(b, n));
+  /** Sıralama anlık görüntüsü (60 sn): uid → dönemindeki sırası; ilk üçe glukoz kazanç çarpanı verir. */
+  const siraOnb = { t: 0, m: new Map<string, number>() };
+  const hucreSatirlari = (donem: number) => {
+    hepsiniYukle();
+    return [...onbellek.values()].filter((k) => (k.donem || VARSAYILAN_DONEM) === donem && k.uid !== 'ai-test' && !k.birlesti && hucreBasamak(k) > 0)
+      .map((k) => { const n = hucreBasamak(k); const uyku = (k.hucre?.canlilik ?? 100) <= 0; return { k, n, boyut: uyku ? n / 2 : n, uyku, kazanilan: k.hucre?.kazanilan || 0 }; })
+      .sort((a, b) => b.boyut - a.boyut || b.kazanilan - a.kazanilan || a.k.uid.localeCompare(b.k.uid));
+  };
+  const siraYenile = () => {
+    if (Date.now() - siraOnb.t < 60_000) return;
+    siraOnb.t = Date.now(); siraOnb.m = new Map();
+    hepsiniYukle();
+    for (const d of new Set([...onbellek.values()].map((k) => k.donem || VARSAYILAN_DONEM))) hucreSatirlari(d).forEach((x, i) => siraOnb.m.set(x.k.uid, i + 1));
+  };
+  const hucreCarpan = (k: Kisi) => { const r = siraOnb.m.get(k.uid); return r ? (HV().sampiyonCarpan[r - 1] || 1) : 1; };
+  /** Çalışma/soru → glukoz; geçen süre kadar metabolizma glukozu yer, yetmezse canlılık düşer, yetince toparlanır. */
+  const hucreGuncelle = (k: Kisi, simdi = Date.now()): HucreKayit => {
+    const v = HV();
+    const sn = toplamOlcu(k, 'calisma_sn'), soru = toplamOlcu(k, 'soru');
+    let h = k.hucre;
+    if (!h) { h = k.hucre = { glukoz: v.baslangic, kazanilan: 0, harcanan: 0, metabolik: 0, canlilik: 100, son: simdi, sn, soru }; return h; }
+    siraYenile();
+    const kazan = ((Math.max(0, sn - h.sn) / 60) * v.glukozDk + Math.max(0, soru - h.soru) * v.glukozSoru) * hucreCarpan(k);
+    h.sn = Math.max(h.sn, sn); h.soru = Math.max(h.soru, soru);
+    h.glukoz += kazan; h.kazanilan += kazan;
+    const saat = Math.min(72, Math.max(0, (simdi - h.son) / 3_600_000)); h.son = simdi;
+    if (saat > 0) {
+      const gerek = saat * (v.tuketimTaban + hucreBasamak(k) * v.tuketimBasamak);
+      const odenen = Math.min(h.glukoz, gerek);
+      h.glukoz -= odenen; h.metabolik += odenen;
+      const oran = gerek > 0 ? odenen / gerek : 1;
+      h.canlilik = sinirla(h.canlilik + saat * oran * v.toparlanma - saat * (1 - oran) * v.aclikHiz);
+    }
+    return h;
+  };
 
   // ───── Değerlendirme ─────
   const tabanPuan = (k: Kisi, g: string) => {
@@ -397,6 +447,7 @@ export function createBasarimMotor(deps: MotorDeps) {
       }
     }
     const bugun = gunOf();
+    hucreGuncelle(k);
     if (!k.donem) { gunPuanHesapla(k); k.degerAt = new Date().toISOString(); kaydet(k); return; }
     // Hedefler: bugün + dün (geç eşitlenen veri), bu + geçen hafta, bu + geçen kurul
     for (const h of tanim.hedefler) {
@@ -478,6 +529,14 @@ export function createBasarimMotor(deps: MotorDeps) {
         const ilk = calismaSiralama(d, 'hafta', gecenHafta).satir[0];
         if (ilk && ilk.sn >= (tanim.atp.calismaEsikSn || 0) && odul(ilk.k, { id: `s:${ck}`, t: 'siralama', ad: `Haftanın en çok çalışanı (${Math.round(ilk.sn / 3600)} sa)`, p: 0, a: tanim.atp.calismaHaftaBirinci })) degisen.add(ilk.k);
         kayit[ck] = new Date().toISOString();
+      }
+      const hk = `hucre:${gecenHafta}:d${d}`;
+      if (!kayit[hk]) {
+        hucreSatirlari(d).slice(0, 3).forEach((x, i) => {
+          const a = HV().haftalikSiralama[i]; if (!a) return;
+          if (odul(x.k, { id: `s:${hk}`, t: 'siralama', ad: `Haftanın en büyük hücresi · ${i + 1}.`, p: 0, a })) degisen.add(x.k);
+        });
+        kayit[hk] = new Date().toISOString();
       }
       for (const is of isler) {
         if (kayit[is.anahtar]) continue;
@@ -564,8 +623,39 @@ export function createBasarimMotor(deps: MotorDeps) {
         defter: k.defter.slice(-80).reverse(),
         yeni: k.defter.filter((x) => x.at > k.goruldu && x.t !== 'baslangic'),
         kilit: k.kilit, secili: k.secili,
+        hucre: this.hucreOzet(k),
         ozel: k.ozel ? { unvan: k.ozel.unvan, muaf: k.ozel.muaf } : null,
       };
+    },
+    hucreOzet(k: Kisi) {
+      const v = HV(); const h = hucreGuncelle(k); const n = hucreBasamak(k);
+      const d = k.donem || VARSAYILAN_DONEM; const sat = hucreSatirlari(d); const i = sat.findIndex((x) => x.k.uid === k.uid);
+      const saatlik = v.tuketimTaban + n * v.tuketimBasamak;
+      return {
+        glukoz: Math.floor(h.glukoz * 10) / 10, kazanilan: Math.floor(h.kazanilan), harcanan: Math.floor(h.harcanan), metabolik: Math.floor(h.metabolik),
+        canlilik: Math.round(h.canlilik), uyku: h.canlilik <= 0, basamak: n, saatlik, carpan: hucreCarpan(k),
+        saatKaldi: saatlik > 0 ? Math.floor(h.glukoz / saatlik) : null,
+        sira: i < 0 ? null : i + 1, kisi: sat.length, calismaSn: toplamOlcu(k, 'calisma_sn'), soru: toplamOlcu(k, 'soru'),
+        atpKazanilan: k.defter.reduce((a, x) => (x.a > 0 && !x.geriAlindi ? a + x.a : a), 0),
+        basarim: k.defter.filter((x) => x.t === 'basarim' && !x.geriAlindi).length,
+        glukozDk: v.glukozDk, glukozSoru: v.glukozSoru, glukozFiyatCarpan: v.glukozFiyatCarpan,
+      };
+    },
+    /** Hücre büyüklüğü sıralaması: basamak sayısı (uykudaki hücre yarım), eşitlikte toplam kazanılan glukoz. */
+    hucreListesi(uid: string | null, donem: number) {
+      try { odemeleriIsle(); } catch { /* */ }
+      const v = HV(); siraOnb.t = 0;
+      const sat = hucreSatirlari(donem);
+      const mk = (x: (typeof sat)[number], i: number) => ({
+        sira: i + 1, ad: x.k.ad || 'Tıbbiyeli', ben: x.k.uid === uid, foto: foto(x.k.uid), renk: x.k.secili.renk, cerceve: x.k.secili.cerceve, kidem: kidemOf(x.k).ad,
+        basamak: x.n, cag: tanim.kilitler.filter((t) => t.tur === 'hucre' && t.etkin && x.k.kilit[t.id]).pop()?.cag || '',
+        canlilik: Math.round(x.k.hucre?.canlilik ?? 100), uyku: x.uyku, glukoz: Math.floor(x.kazanilan), calismaSn: toplamOlcu(x.k, 'calisma_sn'), soru: toplamOlcu(x.k, 'soru'),
+        atp: x.k.defter.reduce((a, d) => (d.a > 0 && !d.geriAlindi ? a + d.a : a), 0), basarim: x.k.defter.filter((d) => d.t === 'basarim' && !d.geriAlindi).length,
+      });
+      const satir = sat.slice(0, 100).map(mk);
+      const benim = uid ? sat.findIndex((x) => x.k.uid === uid) : -1;
+      if (benim >= 100) satir.push(mk(sat[benim], benim));
+      return { satir, benim: benim >= 0 ? benim + 1 : null, odul: v.haftalikSiralama, carpan: v.sampiyonCarpan };
     },
     goruldu(uid: string, at: string) { const k = kisi(uid); if (at > k.goruldu) { k.goruldu = at; kaydet(k); } },
     profil(uid: string, donem: number, kurul: number, ad?: string) {
@@ -597,7 +687,7 @@ export function createBasarimMotor(deps: MotorDeps) {
       const k = kisi(uid);
       return !!k.kilit[id] || !!k.ozel?.muaf || yoneticiMi(k);
     },
-    satinAl(uid: string, id: string): { ok: true } | { hata: string } {
+    satinAl(uid: string, id: string, odeme: 'atp' | 'glukoz' = 'atp'): { ok: true } | { hata: string } {
       const k = kisi(uid);
       const item = tanim.kilitler.find((x) => x.id === id);
       if (!item) return { hata: 'Böyle bir içerik yok.' };
@@ -611,8 +701,16 @@ export function createBasarimMotor(deps: MotorDeps) {
       if (item.tur === 'hucre' && item.onceki && !k.kilit[item.onceki]) {
         return { hata: `Önce "${tanim.kilitler.find((x) => x.id === item.onceki)?.ad || item.onceki}" basamağını aç.` };
       }
-      if (k.atp.bakiye < item.fiyat) return { hata: `Yetersiz ATP: ${item.fiyat} mol gerekli, ${k.atp.bakiye} mol var.` };
-      k.atp.bakiye -= item.fiyat;
+      const glukozla = odeme === 'glukoz';
+      if (glukozla) {
+        if (item.tur !== 'hucre') return { hata: 'Glukozla yalnız hücre basamakları açılır.' };
+        const h = hucreGuncelle(k); const f = Math.ceil(item.fiyat * HV().glukozFiyatCarpan);
+        if (h.glukoz < f) return { hata: `Yetersiz glukoz: ${f} gerekli, ${Math.floor(h.glukoz)} var. Ders çalışıp soru çözerek glukoz kazan.` };
+        h.glukoz -= f; h.harcanan += f;
+      } else {
+        if (k.atp.bakiye < item.fiyat) return { hata: `Yetersiz ATP: ${item.fiyat} mol gerekli, ${k.atp.bakiye} mol var.` };
+        k.atp.bakiye -= item.fiyat;
+      }
       const at = new Date().toISOString();
       if (item.tur === 'esya') {
         (k.esya ||= {})[id] = (k.esya[id] || 0) + 1;
@@ -621,7 +719,7 @@ export function createBasarimMotor(deps: MotorDeps) {
         return { ok: true };
       }
       k.kilit[id] = at;
-      k.defter.push({ id: `x:${id}`, t: 'harcama', ad: item.tur === 'unvan' && item.kidemAcar ? `${item.ad} · kıdem yükseldi` : item.ad, p: 0, a: -item.fiyat, at, g: gunOf() });
+      k.defter.push({ id: `x:${id}`, t: 'harcama', ad: (item.tur === 'unvan' && item.kidemAcar ? `${item.ad} · kıdem yükseldi` : item.ad) + (glukozla ? ' (glukoz)' : ''), p: 0, a: glukozla ? 0 : -item.fiyat, at, g: gunOf() });
       if (item.tur !== 'icerik') (k.secili as any)[item.tur] = id;
       kaydet(k);
       return { ok: true };

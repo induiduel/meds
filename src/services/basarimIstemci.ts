@@ -20,6 +20,12 @@ export interface Tanim {
   hedefler: HedefT[]; basarimlar: BasarimT[]; kilitler: KilitT[]; kidemler?: KidemT[];
 }
 export interface Odul { id: string; t: 'baslangic' | 'hedef' | 'basarim' | 'siralama' | 'harcama' | 'yonetici'; by?: string; geriAlindi?: string; ad: string; p: number; a: number; at: string; g: string; ust?: boolean; ref?: string }
+export interface HucreOzet {
+  glukoz: number; kazanilan: number; harcanan: number; metabolik: number; canlilik: number; uyku: boolean; basamak: number; saatlik: number; carpan: number;
+  saatKaldi: number | null; sira: number | null; kisi: number; calismaSn: number; soru: number; atpKazanilan: number; basarim: number;
+  glukozDk: number; glukozSoru: number; glukozFiyatCarpan: number;
+}
+export interface HucreSatir { sira: number; ad: string; ben: boolean; foto?: string; renk?: string; cerceve?: string; kidem?: string; basamak: number; cag: string; canlilik: number; uyku: boolean; glukoz: number; calismaSn: number; soru: number; atp: number; basarim: number }
 export interface Pencere { id: string; bas: string; son: string; ad: string }
 export interface Durum {
   profil: { donem: number | null; kurul: number | null; ad: string };
@@ -38,6 +44,7 @@ export interface Durum {
   yeni: Odul[];
   kilit: Record<string, string>;
   secili: { unvan?: string; cerceve?: string; efekt?: string; renk?: string };
+  hucre?: HucreOzet;
   /** Yöneticinin verdiği gizli unvan (muaf: günlük sınırlar ve içerik kilitleri uygulanmaz) */
   ozel?: { unvan: string; muaf: boolean } | null;
 }
@@ -119,9 +126,11 @@ export function basarimBaslat(uid: string | null) {
 export async function profilKaydet(donem: number, kurul: number, ad?: string) {
   durumAl(await istek<Durum>('/api/basarim/profil', { method: 'POST', body: JSON.stringify({ donem, kurul, ad }) }));
 }
-export async function satinAl(id: string) {
-  durumAl(await istek<Durum>('/api/basarim/satin-al', { method: 'POST', body: JSON.stringify({ id }) }));
+export async function satinAl(id: string, odeme: 'atp' | 'glukoz' = 'atp') {
+  durumAl(await istek<Durum>('/api/basarim/satin-al', { method: 'POST', body: JSON.stringify({ id, odeme }) }));
 }
+export const hucreSiralamaGetir = (donem?: number) =>
+  istek<{ donem: number; satir: HucreSatir[]; benim: number | null; odul: number[]; carpan: number[] }>(`/api/basarim/hucre-siralama${donem ? `?donem=${donem}` : ''}`);
 export async function sec(tur: 'unvan' | 'cerceve' | 'efekt' | 'renk', id: string | null) {
   durumAl(await istek<Durum>('/api/basarim/sec', { method: 'POST', body: JSON.stringify({ tur, id }) }));
 }
@@ -157,7 +166,7 @@ export function olcuYaz(olcu: string, n: number): string {
   }
   const birim: Record<string, string> = {
     soru: 'soru', bitirilen: 'ders', oturum: 'oturum', aktif_gun: 'gün', giris_gun: 'gün', seri: 'gün', oturum_max: 'oturum',
-    ust_hedef: 'hedef', podyum: 'hafta', soru_ekle: 'soru', parca: 'katkı', sik: 'şık', yorum: 'yorum', begeni: 'beğeni', hata: 'bildirim',
+    ust_hedef: 'hedef', podyum: 'hafta', soru_ekle: 'soru', parca: 'katkı', sik: 'şık', yorum: 'yorum', begeni: 'beğeni', hata: 'bildirim', hucre_basamak: 'basamak', glukoz_kazanilan: 'glukoz',
   };
   return `${sayi(n)} ${birim[olcu] || ''}`.trim();
 }
