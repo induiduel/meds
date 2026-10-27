@@ -517,6 +517,12 @@ export default function CanliDersDers({ dersKey, kamp }: { dersKey: string; kamp
           onMenu={() => setMenu15(true)}
           ek={kamp && metinGoster ? <YaziAyar yazi={yazi} setYazi={setYazi} /> : null}
         />
+          hizli={{
+            yildiz: yildizSayisi, onYildiz: () => setYildizModalAcik(true),
+            onOgren: detay.desteId ? () => navigateTo(`/dersler/interaktif/${detay.desteId}`) : undefined,
+            vurguVar: !!detay.vurgu, vurgu: vurguAcik, setVurgu: setVurguAcik,
+            yazi, setYazi, yaziEnaz: YAZI_ENAZ, yaziEncok: YAZI_ENCOK,
+          }}
       ) : (
       <header className="cd-ders-bas">
         {kamp ? kamp.geri : <GeriBag arsiv={Boolean(detay.arsiv || detay.donem === '2025-2026' || detay.key.startsWith('y25-'))} />}

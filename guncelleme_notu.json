@@ -1,18 +1,14 @@
 {
  "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
- "onem": 431,
- "baslik": "Tam ekran üst çubukta, hesap menüsü sadeleşti",
+ "onem": 432,
+ "baslik": "Ders başlığında hızlı düğmeler",
  "maddeler": [
-  "Tam ekran düğmesi üst çubuğa taşındı (telefonda da görünür)",
-  "Hesap menüsü sadeleştirildi; yönetici işlemleri Yönetim paneline taşındı"
+  "Yazı boyutu, önemli yer vurgusu, yıldızlı paragraflar ve Öğren destesi düğmeleri ders başlığına taşındı"
  ],
  "eklenen": [
-  "Üst çubukta tam ekran düğmesi",
-  "Yönetim › Kısayollar › Yönetici işlemleri"
+  "Ders başlığında A−/A+, vurgu, yıldız (sayaçlı) ve Öğren kısayolları"
  ],
- "degisen": [
-  "Hesap menüsünde yalnız profil, tema ve çıkış kaldı"
- ],
+ "degisen": [],
  "duzeltilen": [],
  "silinen": []
 }

@@ -8,7 +8,7 @@
  * Davranışlar değişmez; yalnız yerleşim ve gruplama v15'e göredir. Stiller styles/v15/sesli.css.
  */
 import React, { useState } from 'react';
-import { ArrowLeftRight, Eraser, Highlighter, Info, Maximize2, Minimize2, MoreHorizontal, PenTool, SlidersHorizontal, Undo2, X } from 'lucide-react';
+import { ArrowLeftRight, Eraser, Highlighter, Info, Maximize2, Minimize2, MoreHorizontal, PenTool, SlidersHorizontal, Star, BookOpen, Undo2, X } from 'lucide-react';
 import { Sheet } from '../ui/Sheet';
 import { penPalette, setDrawingGlobalState, undoLastDrawing, useCanUndoDrawing, useDrawingGlobalState } from '../learn/SlideDrawingCanvas';
 import { useAppearance } from '../../utils/appearance';
@@ -46,6 +46,12 @@ export function CdV15Bas(p: {
   onGorunum: () => void;
   onMenu: () => void;
   ek?: React.ReactNode;
+  hizli?: {
+    yildiz: number; onYildiz: () => void;
+    onOgren?: () => void;
+    vurguVar: boolean; vurgu: boolean; setVurgu: (v: boolean) => void;
+    yazi: number; setYazi: (n: number) => void; yaziEnaz: number; yaziEncok: number;
+  };
 }) {
   const terim = useTerimYardimci();
   const [appFs, toggleAppFs] = useAppFullscreen();
@@ -72,6 +78,28 @@ export function CdV15Bas(p: {
           aria-label={`Görünüm: ${GOR_AD[p.mod]}. ${GOR_AD[sonraki]} görünümüne geç`} title={`Görünüm: ${GOR_AD[p.mod]}`}>
           <ArrowLeftRight aria-hidden />
         </button>
+      )}
+      {p.hizli && (
+        <span className="cd15-hizli">
+          <span className="cd15-yazi" role="group" aria-label="Yazı boyutu">
+            <button type="button" className="v15-ib" onClick={() => p.hizli!.setYazi(p.hizli!.yazi - 2)} disabled={p.hizli.yazi <= p.hizli.yaziEnaz} aria-label="Yazıyı küçült" title="Yazıyı küçült">A−</button>
+            <button type="button" className="v15-ib" onClick={() => p.hizli!.setYazi(p.hizli!.yazi + 2)} disabled={p.hizli.yazi >= p.hizli.yaziEncok} aria-label="Yazıyı büyüt" title="Yazıyı büyüt">A+</button>
+          </span>
+          {p.hizli.vurguVar && (
+            <button type="button" className={`v15-ib${p.hizli.vurgu ? ' is-on' : ''}`} aria-pressed={p.hizli.vurgu} onClick={() => p.hizli!.setVurgu(!p.hizli!.vurgu)}
+              aria-label="Önemli yerleri vurgula" title={p.hizli.vurgu ? 'Önemli yer vurgusu açık (kapat)' : 'Önemli yerleri vurgula'}>
+              <Highlighter aria-hidden />
+            </button>
+          )}
+          <button type="button" className="v15-ib" onClick={p.hizli.onYildiz} aria-label={`Yıldızlı paragraflar (${p.hizli.yildiz})`} title={`Yıldızlı paragraflar (${p.hizli.yildiz})`}>
+            <Star aria-hidden />{p.hizli.yildiz > 0 && <i className="cd15-rozet">{p.hizli.yildiz}</i>}
+          </button>
+          {p.hizli.onOgren && (
+            <button type="button" className="v15-ib" onClick={p.hizli.onOgren} aria-label="Öğren destesine geç" title="Öğren destesine geç">
+              <BookOpen aria-hidden />
+            </button>
+          )}
+        </span>
       )}
       {p.ek}
       {p.terimVar && (
