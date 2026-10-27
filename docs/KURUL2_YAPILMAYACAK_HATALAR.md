@@ -1100,3 +1100,9 @@ Her maddede: belirti · kök neden · Kurul 2 kuralı · kapı durumu. Kanıtlar
 - **Kök neden:** `sharedId` yalnız soru listesini süzüyordu (`paginatedQuestions`); süzgeç alanları `sharedId`'ye bakmadan çiziliyordu.
 - **Çözüm:** `PastExamsView.tsx`'te `sharedId` varken PageToolbar, v15 giriş kartları ve V12Frame gizlenir; "Tüm sorular" düğmesi paylaşım bandında kalır.
 - **Kural:** Tek öğeye indirgenen (paylaşım/derin bağlantı) görünümde yeni süzgeç/giriş bileşeni eklenirse `sharedId` ile koşullanır.
+
+## H109 · Aynı cihazda iki sekme açıkken profil eşitleme fırtınası (2026-10-28)
+- **Belirti:** İkinci sekme açılınca iki sekme ~25–30 sn boyunca saniyede birden fazla `/api/user-data/backup` + `/api/notes` isteği attı (ölçüm: 25 sn'de 55 istek, her sekmede 17–19 yedek); sunucu 429 döndü, bekleyen gerçek değişikliğin gönderimi reddedilebiliyordu.
+- **Kök neden:** (1) `userDataSyncService` yayın kaynağı `ORIGIN` sekme başına üretiliyordu; aynı cihazın öteki sekmesinin gönderimi `user_data_changed` ile "başka cihaz" sayılıp `pullFromServer` başlatıyordu. (2) `lastBackedUpFingerprint` sekme belleğindeydi ama `localStorage` sekmeler arasında ortak: öteki sekmenin yazdıkları bu sekmenin parmak izini değiştirdiği için `pullFromServer` çekmek yerine yeniden yedek gönderiyor, bu da öteki sekmeyi tetikliyordu (ping-pong).
+- **Çözüm:** `ORIGIN` cihaz düzeyinde (`medsoru_sync_origin_v1`), son gönderilen parmak izi `localStorage`'da (`medsoru_sync_fp_v1`); ikisi de eşitleme izin listesinde değil. Sınama: iki yeni kodlu sekmede ikinci sekme açılınca ilk sekme 25 sn'de 1 not çekme + 1 yedek (önce 55 istek).
+- **Kural:** Sekmeler arası ortak olan duruma (localStorage) bağlı karar verilerini sekme belleğinde tutma; yayın kaynağı kimliği cihaz düzeyinde olmalı. Sınamada eski kodlu açık sekmeleri kapat (yeni/eski sürüm karışımı ölçümü bozar).

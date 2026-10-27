@@ -90,7 +90,13 @@ const NOTES_DELETED_KEY = 'medsoru_notes_deleted_v1'; // notesSync ile ortak
 const NOTIF_DELETED_KEY = 'medsoru_user_notifications_deleted_v1'; // userNotificationService ile ortak
 const KV_SINCE_KEY = 'medsoru_kv_since_v1'; // kimlik → sunucudan alınan son kv zamanı
 /** Bu sayfanın kimliği: kendi gönderimimizin SSE yankısını yeniden çekmeyelim. */
-const ORIGIN = `tab-${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 8)}`;
+/** Yayın kaynağı CİHAZ düzeyinde (localStorage ortak): aynı cihazın başka sekmesinin gönderimi "başka cihaz" sayılıp
+ *  yeniden çekme/gönderme döngüsü başlatmasın (H109). Eşitleme izin listesinde değil, cihazda kalır. */
+const ORIGIN = (() => {
+  const yeni = `dev-${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 8)}`;
+  try { const k = 'medsoru_sync_origin_v1'; const v = localStorage.getItem(k); if (v) return v; localStorage.setItem(k, yeni); } catch { /* yok */ }
+  return yeni;
+})();
 
 const readJson = <T>(key: string, fallback: T): T => {
   try {
@@ -384,7 +390,7 @@ export async function backupUserDataToDatabase(): Promise<{
     if (data?.data) {
       try {
         applyBundleToLocal(data.data, who.uid);
-        lastBackedUpFingerprint = fingerprint();
+        parmakIziYaz(fingerprint());
       } catch (e) {
         console.warn('[UserDataSync] Birleştirilmiş paket uygulanamadı:', e);
       }
@@ -449,7 +455,7 @@ export async function restoreUserDataFromDatabase(opts: { kvSince?: boolean; qui
 
     const bundle: FullUserDataBundle = json.data;
     applyBundleToLocal(bundle, who.uid);
-    lastBackedUpFingerprint = fingerprint();
+    parmakIziYaz(fingerprint());
 
     const nowIso = new Date().toISOString();
     if (typeof localStorage !== 'undefined' && !opts.quiet) {
@@ -486,7 +492,12 @@ export function getLastBackupTime(): string {
 }
 
 /** Yerel verinin parmak izi (zaman damgası hariç): değişmediyse otomatik yedek gönderilmez. */
-let lastBackedUpFingerprint = '';
+/** Son gönderilen verinin parmak izi CİHAZ düzeyinde: localStorage sekmeler arasında ortak olduğundan sekme belleğinde
+ *  tutulunca öteki sekmenin yazdıkları "gönderilmemiş değişiklik" sanılıyor, iki sekme birbirini tetikliyordu (H109). */
+const FP_KEY = 'medsoru_sync_fp_v1';
+let fpBellek = '';
+const sonParmakIzi = (): string => { try { return localStorage.getItem(FP_KEY) ?? fpBellek; } catch { return fpBellek; } };
+const parmakIziYaz = (v: string) => { fpBellek = v; try { localStorage.setItem(FP_KEY, v); } catch { /* yok */ } };
 function fingerprint(): string {
   try {
     const { clientUpdatedAt: _t, ...rest } = collectLocalUserData();
@@ -530,12 +541,12 @@ async function autoBackupIfChanged(force = false): Promise<void> {
     return;
   }
   const fp = fingerprint();
-  if (!force && (!fp || (fp === lastBackedUpFingerprint && !hasDirtyKv()))) return;
+  if (!force && (!fp || (fp === sonParmakIzi() && !hasDirtyKv()))) return;
   autoBackupRunning = true;
   try {
     const r = await backupUserDataToDatabase();
     if (r.success) {
-      lastBackedUpFingerprint = fingerprint();
+      parmakIziYaz(fingerprint());
       retryCount = 0;
     } else scheduleRetry();
   } finally {
@@ -632,7 +643,7 @@ let pulling: Promise<unknown> | null = null;
 /** Sunucudaki profili (yalnız yeni kv kayıtlarıyla) çekip uygular; bekleyen yerel değişiklik varsa önce gönderir. */
 export async function pullFromServer(): Promise<void> {
   if (getNetState() === 'offline') return;
-  if (hasDirtyKv() || fingerprint() !== lastBackedUpFingerprint) {
+  if (hasDirtyKv() || fingerprint() !== sonParmakIzi()) {
     await autoBackupIfChanged(); // gönderim yanıtı birleştirilmiş profili zaten getirir
     return;
   }

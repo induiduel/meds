@@ -1,16 +1,12 @@
 {
  "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
- "onem": 511,
- "baslik": "Site daha hızlı açılıyor",
+ "onem": 512,
+ "baslik": "Veri eşitlemesi düzeltildi",
  "maddeler": [
-  "Tasarım ve uygulama kodu cihazda kalıcı tutulur; güncellemede yalnız değişen dosyalar iner",
-  "Açılışta gereksiz animasyon verisi artık yüklenmiyor"
+  "Aynı cihazda iki sekme açıkken oluşan gereksiz eşitleme istekleri ve 'çok fazla istek' hataları giderildi"
  ],
  "eklenen": [],
- "degisen": [
-  "Tasarım ve uygulama kodu cihazda kalıcı tutulur; güncellemede yalnız değişen dosyalar iner",
-  "Açılışta gereksiz animasyon verisi artık yüklenmiyor"
- ],
+ "degisen": [],
  "duzeltilen": [],
  "silinen": []
 }
