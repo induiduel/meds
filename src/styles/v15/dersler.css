@@ -337,3 +337,18 @@ a.k15-kart:hover { border-color: var(--color-accent); }
 .sl15 .v15-tile.is-tekrar { background: color-mix(in srgb, var(--color-accent) 18%, transparent); color: var(--color-accent); }
 .sl15 .sl15-tekrar { font-style: normal; font-weight: 600; color: var(--color-accent); margin-right: .4em; }
 .sl15 .sl15-tekrar::after { content: ' ·'; color: inherit; opacity: .6; font-weight: 400; }
+
+/* ders ayrıntısı: açılır "Bu dersteki çalışman" istatistikleri (DersIstatV15) */
+.dd15-istat { margin: 12px 0 4px; }
+.dd15-istat > summary .v15-tile { width: 28px; height: 28px; border-radius: 8px; flex: none; }
+.dd15-istat > summary .v15-tile svg { width: 16px; height: 16px; }
+.dd15-istat > summary .v15-cap { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; flex: 0 1 auto; min-width: 0; }
+.dd15-istat-g { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; padding: 0 12px 12px; }
+.dd15-istat-g section { background: var(--color-field); border-radius: 12px; padding: 10px 12px; min-width: 0; }
+.dd15-istat-g h3 { margin: 0 0 6px; font: 650 12px/1.2 var(--font-sans); letter-spacing: .04em; text-transform: uppercase; color: var(--color-accent); }
+.dd15-istat-g dl { margin: 0; display: grid; gap: 4px; }
+.dd15-istat-g dl > div { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; font-size: 13px; }
+.dd15-istat-g dt { opacity: .7; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.dd15-istat-g dd { margin: 0; font-weight: 650; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.dd15-istat-g dd small { font-weight: 400; opacity: .6; margin-left: 1px; }
+@media (max-width: 720px) { .dd15-istat-g { grid-template-columns: 1fr; gap: 8px; padding: 0 8px 8px; } .dd15-istat > summary .v15-cap { display: none; } }

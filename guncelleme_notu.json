@@ -1,10 +1,10 @@
 {
  "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
- "onem": 513,
- "baslik": "Sesli derslerde tekrar göstergesi",
+ "onem": 514,
+ "baslik": "Ders sayfasında çalışma istatistikleri",
  "maddeler": [
-  "Bitirdiğin bir sesli derse yeniden başlayınca listede tekrar simgesi ve tekrarın ilerlemesi görünür",
-  "Yarıda bırakılan tekrarlar \"Yarım kalan\" süzgecinde de listelenir"
+  "Her dersin sayfasında açılır \"Bu dersteki çalışman\" kartı: toplam ve modül modül süre, tekrar sayısı, ilk/son çalışma",
+  "Çözülen çıkmış, örnek ve mini soru sayıları artık derse göre tutulur"
  ],
  "eklenen": [],
  "degisen": [],

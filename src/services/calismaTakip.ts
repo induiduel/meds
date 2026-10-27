@@ -27,7 +27,12 @@ export interface KonuKaydi {
   bittiAt?: string;
   ilkAt?: string;
   sonAt?: string;
+  /** yalnız sesli ders kaydında: dersin sayfasında çözülen soruların kimlikleri (tür başına, tekrarsız) */
+  cz?: Partial<Record<DersSoruTur, string[]>>;
 }
+
+/** Ders sayfası istatistiği için çözülen soru türleri: örnek soru, mini soru, sesli dersteki çıkmış soru */
+export type DersSoruTur = 'ornek' | 'mini' | 'cikmis';
 
 interface TakipVeri {
   k: Record<string, KonuKaydi>;
@@ -123,6 +128,12 @@ export function sureEkle(m: TakipModul, konu: string, sn: number) {
 export const soruEkle = (m: TakipModul, konu: string, n = 1) => {
   soruSay(undefined, n);
   guncelle(m, konu, (k) => ({ ...k, soru: k.soru + n, sonAt: new Date().toISOString() }));
+};
+
+/** Ders sayfasında çözülen soruyu sesli ders kaydına yazar (aynı soru bir kez sayılır) */
+export const dersSoruKaydet = (dersKey: string | null | undefined, tur: DersSoruTur, id: string) => {
+  if (!dersKey || !id || konuKaydi('sesli', dersKey)?.cz?.[tur]?.includes(id)) return;
+  guncelle('sesli', dersKey, (k) => ({ ...k, cz: { ...k.cz, [tur]: [...(k.cz?.[tur] || []), id] }, sonAt: new Date().toISOString() }));
 };
 
 export const bitir = (m: TakipModul, konu: string) =>

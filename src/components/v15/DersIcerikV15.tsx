@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useRef, useState } from 'react';
+import React, { useContext, useEffect, useMemo, useRef, useState } from 'react';
 import {
   Activity, ArrowDown, ArrowRight, ArrowUpDown, ChevronLeft, ChevronRight, ArrowUp, Check, ChevronDown, CircleHelp, FlaskConical, Layers, ListChecks, Microscope,
   ListOrdered, Pill, Pin, RotateCw, Scale, Search, Sparkles, Stethoscope, Table2, X,
@@ -6,6 +6,7 @@ import {
 import { linkClick, navigateTo, pathFor } from '../../router';
 import { DI_BOLUMLER, dersIcerikGetir, dersSorulariGetir, type DiBolum, type DiPaket, type DiSoru, type DiTablo } from './dersIcerik';
 import { FavBaglam, FavDugme } from './FavDugme';
+import { dersSoruKaydet } from '../../services/calismaTakip';
 import '../../styles/v15/dersIcerik.css';
 
 const SL = (s: unknown): number[] => (Array.isArray(s) ? s : s ? [s as number] : []).filter((v) => typeof v === 'number');
@@ -280,7 +281,7 @@ export default function DersIcerikV15({ dersKey, bolum }: { dersKey: string; bol
       {bolum === 'quiz' && (
         <div className="di15-yigin">
           {p.quiz.filter((x) => ok(x.q, ...x.o.map((o) => o.t))).map((x, i) => (
-            <Soru key={i} no={i + 1} s={{ id: `q${i}`, kazanim: 0, zorluk: '', soru: x.q, secenekler: Object.fromEntries(x.o.map((o) => [o.k, o.t])), dogru: x.o.find((o) => o.d)?.k || '', aciklama: x.o.find((o) => o.d)?.a || '' }} />
+            <Soru key={i} no={i + 1} tur="mini" s={{ id: `q${i}`, kazanim: 0, zorluk: '', soru: x.q, secenekler: Object.fromEntries(x.o.map((o) => [o.k, o.t])), dogru: x.o.find((o) => o.d)?.k || '', aciklama: x.o.find((o) => o.d)?.a || '' }} />
           ))}
         </div>
       )}
@@ -417,15 +418,16 @@ function CevirKart({ o, a, c }: { o: string; a: string; c: string }) {
   );
 }
 
-function Soru({ s, no }: { s: DiSoru; no: number }) {
+function Soru({ s, no, tur = 'ornek' }: { s: DiSoru; no: number; tur?: 'ornek' | 'mini' }) {
   const [sec, setSec] = useState<string | null>(null);
+  const dersKey = useContext(FavBaglam)?.dersKey;
   return (
     <article className="v15-card di15-soru">
       <header><span className="di15-soru-n">{no}</span><span className={`di15-zor is-${norm(s.zorluk || '')}`}>{s.zorluk}</span></header>
       <p className="di15-soru-k">{s.soru}</p>
       <div className="di15-sik">
         {Object.entries(s.secenekler).map(([k, v]) => (
-          <button key={k} type="button" disabled={!!sec} onClick={() => setSec(k)} className={sec ? (k === s.dogru ? 'is-d' : k === sec ? 'is-y' : 'is-s') : ''}>
+          <button key={k} type="button" disabled={!!sec} onClick={() => { setSec(k); dersSoruKaydet(dersKey, tur, String(s.id)); }} className={sec ? (k === s.dogru ? 'is-d' : k === sec ? 'is-y' : 'is-s') : ''}>
             <span className="di15-sik-h">{k}</span><span>{v}</span>{sec && k === s.dogru && <Check aria-hidden />}{sec === k && k !== s.dogru && <X aria-hidden />}
           </button>
         ))}

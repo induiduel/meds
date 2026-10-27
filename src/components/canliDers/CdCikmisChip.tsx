@@ -6,6 +6,7 @@ import { createPortal } from 'react-dom';
 import { ChevronLeft, ChevronRight, Maximize2, Minimize2, Play, Star, X } from 'lucide-react';
 import { useAppearance } from '../../utils/appearance';
 import { safeJsonFetch } from '../../services/api';
+import { dersSoruKaydet } from '../../services/calismaTakip';
 import { cdDurum, cdDuraklat, cdToggle, type CdCikmisKonum } from './canliDersStore';
 
 interface TekSoru {
@@ -141,7 +142,7 @@ function CikmisKart({ sorular, i, setI, onKapat }: { sorular: CdCikmisKonum[]; i
                   const d = s.k === veri.dogru;
                   const cls = !cozuldu ? '' : d ? ' is-dogru' : s.k === secim ? ' is-yanlis' : ' is-soluk';
                   return (
-                    <button key={s.k} type="button" role="radio" aria-checked={s.k === secim} disabled={cozuldu} className={`cd15-cq-sik${cls}`} onClick={() => setSecim(s.k)}>
+                    <button key={s.k} type="button" role="radio" aria-checked={s.k === secim} disabled={cozuldu} className={`cd15-cq-sik${cls}`} onClick={() => { setSecim(s.k); dersSoruKaydet(cdDurum().key, 'cikmis', q.id); }}>
                       <b>{s.k}</b>
                       <span>{s.m}{cozuldu && s.a && (d || s.k === secim) && <small>{s.a}</small>}</span>
                     </button>
@@ -213,7 +214,7 @@ function CikmisPencere({ sorular, i, setI, onKapat }: { sorular: CdCikmisKonum[]
                   const cls = !cozuldu ? '' : dogru ? ' is-dogru' : s.k === secim ? ' is-yanlis' : ' is-soluk';
                   return (
                     <button key={s.k} type="button" role="radio" aria-checked={s.k === secim} disabled={cozuldu}
-                      className={`cd-cikp-sik${cls}`} onClick={() => setSecim(s.k)}>
+                      className={`cd-cikp-sik${cls}`} onClick={() => { setSecim(s.k); dersSoruKaydet(cdDurum().key, 'cikmis', q.id); }}>
                       <b>{s.k}</b><span>{s.m}{cozuldu && s.a && (dogru || s.k === secim) && <small>{s.a}</small>}</span>
                     </button>
                   );

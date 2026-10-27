@@ -10,6 +10,7 @@ import { bransYolu, dersBransi, dersKurulu, hocaYaz, merkezYolu, saatYaz, sureDk
 import { Halka } from './Halka';
 import { dersCozucu } from '../canliDers/dersCozucu';
 import DersIcerikV15 from './DersIcerikV15';
+import DersIstatV15 from './DersIstatV15';
 import DersPdfEkranV15 from './DersPdfEkranV15';
 import { DI_BOLUMLER, dersIcerikGetir, type DiBolum, type DiPaket } from './dersIcerik';
 import '../../styles/v15/dersler.css';
@@ -218,6 +219,9 @@ export default function DersDetayV15() {
               )}
             </div>
           </section>
+
+          <DersIstatV15 dersKey={key} desteId={desteId} cozucuUrl={coz?.url} cikmisN={cikmis.length} miniN={paket?.quiz.length || 0}
+            acik={grupAcik.istat ?? false} onToggle={(a) => grupYaz('istat', a)} />
 
           <section aria-labelledby="dd15-ic-h">
             <h2 id="dd15-ic-h" className="v15-h2 dd15-h">Bu dersin içerikleri</h2>
