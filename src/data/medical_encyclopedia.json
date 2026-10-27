@@ -96139,5 +96139,770 @@
       "accuracyScore": 100,
       "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
     }
+  },
+  {
+    "id": "s13-anamnez",
+    "term": "Anamnez",
+    "aliases": [
+      "Öykü"
+    ],
+    "category": "tani",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 1)Nörolojik hastaya yaklaşım s.2",
+    "definition": "Hastanın yakınmasının, belirtilerin başlangıç şeklinin ve kronolojik gidişinin öyküsünün alınmasıdır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "İyi anamnez doğru yönelim sağlar.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-etyoloji",
+    "term": "Etyoloji",
+    "aliases": [],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 1)Nörolojik hastaya yaklaşım s.2",
+    "definition": "Bir hastalığın nedenidir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Öykü anatomik lokalizasyonla birlikte etyolojiyi aydınlatır.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-anatomik_lokalizasyon",
+    "term": "Anatomik lokalizasyon",
+    "aliases": [
+      "Lokalizasyon"
+    ],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 1)Nörolojik hastaya yaklaşım s.2",
+    "definition": "Sorunun sinir sisteminin hangi bölgesinde olduğunun belirlenmesidir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-uyusma",
+    "term": "Uyuşma",
+    "aliases": [],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 1)Nörolojik hastaya yaklaşım s.2",
+    "definition": "Hastaların sık kullandığı, duyu kusurunu da kuvvet kaybını da anlatabilen yakınmadır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Ders bu sözcüğün iki anlama gelebileceğini vurgular.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-duyu_kusuru",
+    "term": "Duyu kusuru",
+    "aliases": [],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 1)Nörolojik hastaya yaklaşım s.2",
+    "definition": "Dokunma, ağrı gibi duyuların algılanmasındaki bozukluktur.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-kuvvet_kaybi",
+    "term": "Kuvvet kaybı",
+    "aliases": [],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 1)Nörolojik hastaya yaklaşım s.2",
+    "definition": "Bir uzvun istenen güçte hareket ettirilememesidir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-subjektif",
+    "term": "Sübjektif",
+    "aliases": [],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 1)Nörolojik hastaya yaklaşım s.2",
+    "definition": "Ölçülemeyen, yalnızca hastanın kendi anlatımına dayanan niteliktir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Ağrı sübjektiftir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-akut_baslangic",
+    "term": "Akut başlangıç",
+    "aliases": [],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 1)Nörolojik hastaya yaklaşım s.3",
+    "definition": "Belirtilerin dakika veya saat içinde ortaya çıkmasıdır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Örneği hemiplejidir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-sinsi_baslangic",
+    "term": "Sinsi başlangıç",
+    "aliases": [],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 1)Nörolojik hastaya yaklaşım s.3",
+    "definition": "Belirtilerin haftalar, aylar, yıllar içinde yavaş yavaş yerleşmesidir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Beyin tümörü ve dejeneratif hastalıklar örnektir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-dejeneratif_hastalik",
+    "term": "Dejeneratif hastalık",
+    "aliases": [],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 1)Nörolojik hastaya yaklaşım s.3",
+    "definition": "Sinir hücrelerinin zamanla ilerleyici biçimde bozulduğu hastalık grubudur.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Sinsi başlayan hastalıklara örnek verilir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-relapsing_remitting_ms",
+    "term": "Relapsing-remitting MS",
+    "aliases": [
+      "RRMS"
+    ],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 1)Nörolojik hastaya yaklaşım s.3",
+    "definition": "Kötüleşme (relaps) ve iyileşme (remisyon) dönemleriyle seyreden dalgalı MS biçimidir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Dalgalı gidişin örneğidir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-migren",
+    "term": "Migren",
+    "aliases": [],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 1)Nörolojik hastaya yaklaşım s.4",
+    "definition": "Tanısı öyküye dayanan nörolojik hastalıktır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Nörolojik belirti ve laboratuvar bulgusu yoktur.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-trigeminal_nevralji",
+    "term": "Trigeminal nevralji",
+    "aliases": [],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 1)Nörolojik hastaya yaklaşım s.4",
+    "definition": "Tanısı öyküye dayanan nörolojik hastalıktır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Nörolojik belirti ve laboratuvar bulgusu yoktur.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-epilepsi",
+    "term": "Epilepsi",
+    "aliases": [],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 1)Nörolojik hastaya yaklaşım s.4",
+    "definition": "Klinik olarak, yani öyküyle tanınan nörolojik hastalıktır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Normal EEG epilepsi tanısından uzaklaştırmaz.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-parkinson_hastaligi",
+    "term": "Parkinson hastalığı",
+    "aliases": [],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 1)Nörolojik hastaya yaklaşım s.5",
+    "definition": "Maske yüz, monoton konuşma, salya akması, kol sallamama ve fleksör postürle tanınan hareket bozukluğu hastalığıdır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "İlk izlenimde tanınır.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-kas_distrofisi",
+    "term": "Kas distrofisi",
+    "aliases": [],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 1)Nörolojik hastaya yaklaşım s.5",
+    "definition": "Karın önde, ördeğe benzeyen badi-badi yürüyüşüyle tanınan kas hastalığıdır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-fleksor_postur",
+    "term": "Fleksör postür",
+    "aliases": [],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 1)Nörolojik hastaya yaklaşım s.5",
+    "definition": "Vücudun öne doğru bükük duruşudur.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Parkinson hastalığında görülür.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-dizartri",
+    "term": "Dizartri",
+    "aliases": [],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 1)Nörolojik hastaya yaklaşım s.5",
+    "definition": "Konuşmanın bozuk telaffuzla çıkmasıdır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Konuşmadan hemen fark edilir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-hemipleji",
+    "term": "Hemipleji",
+    "aliases": [],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 1)Nörolojik hastaya yaklaşım s.3",
+    "definition": "Vücudun bir yarısındaki kasların felcidir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Akut başlangıçlı tablonun örneğidir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-parapleji",
+    "term": "Parapleji",
+    "aliases": [],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 1)Nörolojik hastaya yaklaşım s.6",
+    "definition": "İki bacağın felcidir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Medulla spinalis lezyonunda görülür.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-diplopi",
+    "term": "Diplopi",
+    "aliases": [],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 1)Nörolojik hastaya yaklaşım s.6",
+    "definition": "Çift görmedir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Beyin sapı lezyonunun bulgusudur.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-piramidal_bulgu",
+    "term": "Piramidal bulgu",
+    "aliases": [],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 1)Nörolojik hastaya yaklaşım s.6",
+    "definition": "Hareketi ileten piramidal yolun tutulduğunu gösteren muayene bulgusudur.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-serebellar_bulgu",
+    "term": "Serebellar bulgu",
+    "aliases": [],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 1)Nörolojik hastaya yaklaşım s.6",
+    "definition": "Beyincik (serebellum) tutulumunu gösteren muayene bulgusudur.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-sfinkter_bozuklugu",
+    "term": "Sfinkter bozukluğu",
+    "aliases": [],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 1)Nörolojik hastaya yaklaşım s.6",
+    "definition": "İdrar ve dışkı kontrolünü sağlayan kasların işlevinin bozulmasıdır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Medulla spinalis lezyonunda görülür.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-medulla_spinalis",
+    "term": "Medulla spinalis",
+    "aliases": [
+      "Omurilik"
+    ],
+    "category": "anatomi",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 1)Nörolojik hastaya yaklaşım s.6",
+    "definition": "Omuriliktir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-radiks",
+    "term": "Radiks",
+    "aliases": [
+      "Sinir kökü"
+    ],
+    "category": "anatomi",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 1)Nörolojik hastaya yaklaşım s.6",
+    "definition": "Omurilikten çıkan sinir köküdür.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Aşil refleksi ile birinci sakral radiks (S1) incelenir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-ykl",
+    "term": "YKL",
+    "aliases": [
+      "Yer kaplayan lezyon"
+    ],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 1)Nörolojik hastaya yaklaşım s.7",
+    "definition": "Yer kaplayan lezyondur; kitle oluşturan bir süreçtir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Yavaş yerleşip giderek ağırlaşan hemiplejide düşünülür.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-svo",
+    "term": "SVO",
+    "aliases": [
+      "Serebrovasküler olay"
+    ],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 1)Nörolojik hastaya yaklaşım s.7",
+    "definition": "Serebrovasküler olaydır; damarsal bir beyin olayıdır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Yaşlı ve aterosklerozlu hastada düşünülür.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-ateroskleroz",
+    "term": "Ateroskleroz",
+    "aliases": [],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 1)Nörolojik hastaya yaklaşım s.7",
+    "definition": "Damar sertliğidir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-post_infeksiyoz_miyelit",
+    "term": "Post-infeksiyöz miyelit",
+    "aliases": [],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 1)Nörolojik hastaya yaklaşım s.7",
+    "definition": "Aşı ya da viral enfeksiyondan sonra gelişen omurilik iltihabıdır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Paraplejiyle ortaya çıkar.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-bos",
+    "term": "BOS",
+    "aliases": [
+      "Beyin omurilik sıvısı"
+    ],
+    "category": "tani",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 1)Nörolojik hastaya yaklaşım s.8",
+    "definition": "Beyin omurilik sıvısıdır; BOS incelemesi nörolojide spesifik incelemedir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-eeg",
+    "term": "EEG",
+    "aliases": [],
+    "category": "tani",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 1)Nörolojik hastaya yaklaşım s.8",
+    "definition": "Beynin elektriksel etkinliğinin kaydıdır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Normal olması epilepsiyi dışlamaz.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-emg",
+    "term": "EMG",
+    "aliases": [],
+    "category": "tani",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 1)Nörolojik hastaya yaklaşım s.8",
+    "definition": "Kasların elektriksel etkinliğinin kaydıdır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-uyarilmis_potansiyeller",
+    "term": "Uyarılmış potansiyeller",
+    "aliases": [
+      "EP"
+    ],
+    "category": "tani",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 1)Nörolojik hastaya yaklaşım s.8",
+    "definition": "Uyarana yanıt olarak sinir sisteminde ortaya çıkan potansiyellerin ölçümüdür (evoked potentials, EP).",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-bbt",
+    "term": "BBT",
+    "aliases": [
+      "Beyin tomografisi"
+    ],
+    "category": "tani",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 1)Nörolojik hastaya yaklaşım s.8",
+    "definition": "Bilgisayarlı beyin tomografisidir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Acilde hemen çekilir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-beyin_mr",
+    "term": "Beyin MR",
+    "aliases": [
+      "MRI"
+    ],
+    "category": "tani",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 1)Nörolojik hastaya yaklaşım s.8",
+    "definition": "Radyo dalgaları kullanılarak yapılan beyin görüntülemesidir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-progresyon",
+    "term": "Progresyon",
+    "aliases": [
+      "Progrese olma"
+    ],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 1)Nörolojik hastaya yaklaşım s.9",
+    "definition": "Hastalığın ilerlemesi, hastanın giderek kötüleşmesidir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-miyokloni",
+    "term": "Miyokloni",
+    "aliases": [],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 1)Nörolojik hastaya yaklaşım s.9",
+    "definition": "Kasların ani, kısa süreli kasılmasıdır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Sevk yazısında bu deyim yerine görülen yazılır.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-kore",
+    "term": "Kore",
+    "aliases": [],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 1)Nörolojik hastaya yaklaşım s.9",
+    "definition": "Düzensiz, istemsiz hareketlerdir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Sevk yazısında bu deyim yerine görülen yazılır.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
   }
 ]

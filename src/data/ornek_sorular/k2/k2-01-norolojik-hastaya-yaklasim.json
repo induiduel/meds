@@ -1,0 +1,1709 @@
+{
+ "id": "k2-01-norolojik-hastaya-yaklasim",
+ "sira": 1,
+ "kurul": 1,
+ "ders": "Nöroloji",
+ "konu": "Nörolojik Hastaya Yaklaşım",
+ "ogretim_uyesi": "Dr. Öğr. Üyesi İrfan Yavaş",
+ "tarih": "2026-10-27",
+ "kazanimlar": [
+  {
+   "no": 1,
+   "metin": "Anamnezin tanıdaki yerini, hastanın kullandığı sözcüklerin (uyuşma, ağrı, sıkıntı) anlamını sorgulamayı ve öykünün kaynağını açıklar.",
+   "sorular": [
+    {
+     "id": "k2-01-norolojik-hastaya-yaklasim-q01",
+     "kazanim": 1,
+     "zorluk": "kolay",
+     "soru": "Merritt'in sözüne göre hastayı dinledikten sonra nesi olduğunu anlamayan hekim, muayene ettikten sonra ne yaşar?",
+     "secenekler": {
+      "A": "Muayene bulgularıyla tanıyı kolayca koyar",
+      "B": "EEG ile tanıyı doğrular",
+      "C": "Yine de anlayamaz",
+      "D": "BT ve MR ile öykünün eksiğini tamamlar",
+      "E": "Sevk yazısı yazarak sorunu çözer"
+     },
+     "dogru": "C",
+     "aciklama": "Merritt'in sözü, anamnezin muayenenin yerine geçemeyeceğini anlatır: öykü anlaşılmadıysa muayeneden sonra da anlaşılmaz (sayfa 2).",
+     "sik_aciklamalari": {
+      "A": "Muayene, öykü alındıktan sonra yapılan değerlendirmedir. Merritt'in sözü, öyküde anlaşılmayan tablonun muayeneyle de anlaşılmayacağını söyler; bu yüzden muayeneden kolay tanı beklenmez (sayfa 2).",
+      "B": "EEG, epilepsi bağlamında anılan bir laboratuvar incelemesidir ve normal olması epilepsiyi dışlamaz. Merritt'in sözü öykünün anlaşılmasıyla ilgilidir; EEG öykünün eksikliğini kapatmaz (sayfa 4).",
+      "C": "Merritt'e göre öykü anlaşılmadıysa muayene bu eksikliği kapatmaz. Hekim muayene ettikten sonra da hastanın nesi olduğunu anlayamaz; bu söz anamnezin tanıdaki öncelikli yerini vurgular (sayfa 2).",
+      "D": "BT ve MR, migren ve trigeminal nevraljide tanının doğru olduğunu göstermek için çekilir. Öykünün eksikliğini kapatmak için değil, öyküyle konan tanıyı doğrulamak için kullanılırlar (sayfa 4).",
+      "E": "Tanı konulamayan hasta nöroloji kliniğine gönderilir ve sevk yazısı bu aşamada hazırlanır (sayfa 9). Öykü anlaşılmadığında önerilen ilk adım ise Holmes'a göre hastayı yeniden dinlemektir (sayfa 4); yazı bu anlaşılmazlığı gidermez."
+     },
+     "bilgi": [
+      2
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 2,
+      "alinti": "Hastayı dinledikten sonra nesi olduğunu anlamadıysanız muayene ettikten sonra da anlamayacaksınız"
+     }
+    },
+    {
+     "id": "k2-01-norolojik-hastaya-yaklasim-q07",
+     "kazanim": 1,
+     "zorluk": "kolay",
+     "soru": "Hastanın kullandığı «uyuşma» sözcüğü hangi iki yakınmayı anlatıyor olabilir?",
+     "secenekler": {
+      "A": "Duyu kusurunu ya da kuvvet kaybını",
+      "B": "Diplopiyi ya da vertigoyu",
+      "C": "Afaziyi ya da dizartriyi",
+      "D": "Paraplejiyi ya da sfinkter bozukluğunu",
+      "E": "Akut başlangıcı ya da sinsi başlangıcı"
+     },
+     "dogru": "A",
+     "aciklama": "Uyuşma duyu kusurunu da kuvvet kaybını da anlatabilir (sayfa 2).",
+     "sik_aciklamalari": {
+      "A": "Uyuşma sözcüğü hasta tarafından hem duyu kusuru hem kuvvet kaybı için kullanılabilir. Hekim hangisi olduğunu sorularla ayırır (sayfa 2). Hekimin ilk işi, hastanın bu sözcükle neyi anlattığını sorarak yakınmayı netleştirmektir.",
+      "B": "Diplopi çift görme, vertigo baş dönmesidir. Bunlar uyuşma sözcüğüyle anlatılmaz ve beyin sapı lezyonunun bulgularındandır (sayfa 6). Diplopi, çift görmedir ve vertigo, piramidal bulgu ve serebellar bulguyla birlikte beyin sapı lezyonunu düşündürür.",
+      "C": "Afazi ve dizartri konuşma bozukluklarıdır. Hasta yakınmasını anlatırken değil, konuşurken fark edilirler (sayfa 5). Afazi, dil kullanımının bozulmasıdır ve konuşmadan hemen fark edilir.",
+      "D": "Parapleji bacak felci, sfinkter bozukluğu idrar ve dışkı kontrolünün bozulmasıdır. İkisi de uyuşma sözcüğünün karşıladığı iki yakınma değildir (sayfa 6).",
+      "E": "Akut ve sinsi başlangıç yakınma değil, belirtilerin yerleşme hızını anlatan başlangıç şekilleridir (sayfa 3). Akut başlangıç, belirtilerin dakika veya saat içinde ortaya çıkmasıdır."
+     },
+     "bilgi": [
+      5
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 2,
+      "alinti": "Uyuşma duyu kusuru olabilir ya da kuvvet kaybını anlatıyor olabilir"
+     }
+    },
+    {
+     "id": "k2-01-norolojik-hastaya-yaklasim-q02",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Hastanın yakınması, belirtilerin başlangıç şekli ve kronolojik gidişi problemi hangi iki yönden büyük ölçüde aydınlatır?",
+     "secenekler": {
+      "A": "Anatomik lokalizasyon ve etyoloji",
+      "B": "BOS bulgusu ve EEG sonucu",
+      "C": "Pupil büyüklüğü ve bilinç düzeyi",
+      "D": "Doğal gidiş ve tedavi yanıtı",
+      "E": "Aşil refleksi ve duyu seviyesi"
+     },
+     "dogru": "A",
+     "aciklama": "Yakınma, başlangıç şekli ve kronolojik gidiş lezyonun yerini (anatomik lokalizasyon) ve nedenini (etyoloji) büyük ölçüde aydınlatır (sayfa 2).",
+     "sik_aciklamalari": {
+      "A": "Öykünün üç unsuru lezyonun nerede olduğunu (anatomik lokalizasyon) ve neden olduğunu (etyoloji) büyük ölçüde aydınlatır. Soruda sorulan iki yön bunlardır (sayfa 2).",
+      "B": "BOS incelemesi ve EEG, öyküden sonra başvurulan laboratuvar incelemeleridir. Öykünün kendi katkısı lezyonun yerini ve nedenini göstermektir; laboratuvar sonuçları öykünün aydınlattığı yönler olarak sayılmaz (sayfa 8).",
+      "C": "Pupil büyüklüğü ve bilinç düzeyi, sevk yazısında kaydedilmesi istenen bulgulardır. Öykünün aydınlattığı yönler ise lezyonun yeri ve nedenidir (sayfa 9).",
+      "D": "Doğal gidiş, tanı kadar tedavi sonuçlarının değerlendirilmesi için de önemlidir. Öykünün aydınlattığı iki yön ise anatomik lokalizasyon ve etyolojidir (sayfa 3).",
+      "E": "Aşil refleksinin alınamaması birinci sakral radiksi, seviye veren duyu kaybı ise medulla spinalisi gösteren muayene bulgularıdır. Öykünün aydınlattığı yönler muayene bulgusu değil, lokalizasyon ve etyolojidir (sayfa 6)."
+     },
+     "bilgi": [
+      3
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 2,
+      "alinti": "kronolojik gidişi anatomik lokalizasyon ve etyoloji yönünden problemi büyük ölçüde aydınlatır"
+     }
+    },
+    {
+     "id": "k2-01-norolojik-hastaya-yaklasim-q03",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Hasta «kolum uyuştu» diyor. Hekimin ilk yapması gereken aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Uyuşmayı duyu kusuru kabul edip sonraki adıma geçmek",
+      "B": "Hemen BOS incelemesi istemek",
+      "C": "Yakınmayı anlamadan muayeneye geçmek",
+      "D": "Duyu kusurunu mu kuvvet kaybını mı kastettiğini sorularla netleştirmek",
+      "E": "Öyküyü yakınından almak"
+     },
+     "dogru": "D",
+     "aciklama": "Uyuşma duyu kusuru ya da kuvvet kaybı olabileceği için hekim önce hastanın ne kastettiğini sorularla netleştirir (sayfa 2).",
+     "sik_aciklamalari": {
+      "A": "Duyu kusuru, uyuşma sözcüğünün karşılayabildiği iki anlamdan yalnız biridir. Hasta kuvvet kaybını da bu sözcükle anlatıyor olabilir; varsayımla ilerlemek yakınmayı yanlış yönlendirir (sayfa 2).",
+      "B": "BOS incelemesi nörolojide spesifik laboratuvar incelemesidir. Yakınmanın anlamı netleşmeden inceleme istemek yerine önce hastanın kastettiği sorularla anlaşılır (sayfa 8). BOS incelemesi, beyin omurilik sıvısının incelenmesidir ve nörolojik hastada genel metodlardan ayrı verilen spesifik laboratuvar incelemesidir.",
+      "C": "Muayene, anlaşılmış bir yakınmaya yöneltilir. Hekim hastanın sıkıntısının ne olduğunu ve ne söylemek istediğini anlamadan muayeneye geçmemelidir (sayfa 2). Önce yakınma anlaşılır, ardından muayene bu yakınmaya göre yapılır.",
+      "D": "Uyuşma sözcüğü duyu kusurunu da kuvvet kaybını da anlatabilir. Hekim hastanın neyi kastettiğini sorularla netleştirir, sonra muayeneye geçer (sayfa 2).",
+      "E": "Yakınından ya da getiren kişiden öykü alma, hasta bilinçsizse veya konuşma bozukluğu varsa başvurulan yoldur. Konuşabilen hastanın kendi yakınması önce sorularla açıklığa kavuşturulur (sayfa 2)."
+     },
+     "bilgi": [
+      4,
+      5,
+      7
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 2,
+      "alinti": "Uyuşma duyu kusuru olabilir ya da kuvvet kaybını anlatıyor olabilir"
+     }
+    },
+    {
+     "id": "k2-01-norolojik-hastaya-yaklasim-q04",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Ağrıyla ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Ağrı nesneldir; niteliği ölçülerek belirlenir",
+      "B": "Ağrı sübjektiftir; nitelikleri sorularla ortaya konur",
+      "C": "Ağrının niteliği sorulmaz, yalnız yeri sorulur",
+      "D": "Hasta ağrısını tarif edemezse öykü hiç alınamaz",
+      "E": "Ağrı yakınmasında hastanın sözcüğü olduğu gibi kabul edilir"
+     },
+     "dogru": "B",
+     "aciklama": "Ağrı sübjektiftir; nitelikleri hekimin sorularıyla ortaya konur (sayfa 2).",
+     "sik_aciklamalari": {
+      "A": "Ağrı, hastanın duyduğu ve kendisinin anlattığı bir yakınmadır; ölçülebilir nesnel bir bulgu değil sübjektif bir duyudur. Bu yüzden niteliği ölçümle değil, hekimin sorularıyla belirlenir (sayfa 2). Ağrının niteliği, hekimin zonklayıcı, yanıcı ya da sabit gibi seçenekleri sorgulamasıyla belirlenir.",
+      "B": "Ağrı hastanın kendi anlatımına dayanır ve zonklayıcı, yanıcı, sabit gibi nitelikleri sorularla belirlenir. Bu nedenle ağrı için doğru ifade budur (sayfa 2).",
+      "C": "Ağrının niteliği öykünün önemli bir parçasıdır. Hekim ağrının yeri kadar zonklayıcı, yanıcı ya da sabit olup olmadığını da sorar (sayfa 2).",
+      "D": "Konuşamayan ya da bilinçsiz hastada öykü yakınından veya getiren kişiden alınır. Böylece ağrı gibi yakınmalar tarif edilemese de öykü tamamlanabilir (sayfa 2).",
+      "E": "Hastanın kullandığı sözcükle neyi kastettiğini anlamak çok önemlidir. Hekim sözcüğü olduğu gibi kabul etmek yerine kastedileni sorularla netleştirir (sayfa 2)."
+     },
+     "bilgi": [
+      6,
+      4
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 2,
+      "alinti": "Ağrı sübjektif, sorularla nitelikleri ortaya konmalı"
+     }
+    },
+    {
+     "id": "k2-01-norolojik-hastaya-yaklasim-q06",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Bilinçsiz bir hastanın öyküsü kimden alınır?",
+     "secenekler": {
+      "A": "Hastanın kendisinden, uyanana kadar bekleyerek",
+      "B": "Yalnız nörolojik muayene bulgularından",
+      "C": "Yakınından ya da getiren kişiden",
+      "D": "BOS incelemesinin sonucundan",
+      "E": "Sevk edilen kliniğin hekiminden"
+     },
+     "dogru": "C",
+     "aciklama": "Bilinçsiz ya da konuşma bozukluğu olan hastada öykü yakınından ya da getiren kişiden alınır (sayfa 2).",
+     "sik_aciklamalari": {
+      "A": "Bilinçsiz hasta anlatım yapamaz ve beklemek acil durumda zaman kaybettirir. Bu yüzden öykü başka kaynaktan alınır (sayfa 2). Bilinçsiz hastada öykü yakınından ya da getiren kişiden alınır.",
+      "B": "Muayene öykünün yerini tutmaz. Merritt'e göre öykü anlaşılmadıysa muayeneden sonra da anlaşılmaz, bu yüzden öykü kaynağı aranır (sayfa 2).",
+      "C": "Hasta bilinçsizse öyküyü kendisi veremez; yakını ya da getiren kişi öykü kaynağı olur. Konuşma bozukluğu olan hastada da aynı yol izlenir (sayfa 2).",
+      "D": "BOS incelemesi nörolojide spesifik laboratuvar incelemesidir ve öykü sağlamaz. Öykü yakından ya da getiren kişiden alınır (sayfa 8). BOS incelemesi, beyin omurilik sıvısının incelenmesidir ve nörolojik hastada genel metodlardan ayrı verilen spesifik laboratuvar incelemesidir.",
+      "E": "Sevk, tanı konulamayan hasta için yapılır ve öykü sevk yazısıyla birlikte iletilir. Öykünün asıl kaynağı hastanın yakını ya da getiren kişidir (sayfa 9)."
+     },
+     "bilgi": [
+      8
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 2,
+      "alinti": "Hasta bilinçsiz, ya da konuşma bozukluğu varsa yakını ya da getiren kişiden"
+     }
+    },
+    {
+     "id": "k2-01-norolojik-hastaya-yaklasim-q08",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Hekim aşağıdakilerden hangisini anlamadan muayeneye geçmemelidir?",
+     "secenekler": {
+      "A": "BOS incelemesinin sonucunu",
+      "B": "Aşil refleksinin derecesini",
+      "C": "Beyin MR sonucunu",
+      "D": "Hastanın sıkıntısının ne olduğunu ve ne söylemek istediğini",
+      "E": "Sevk yazısının biçimini"
+     },
+     "dogru": "D",
+     "aciklama": "Hekim hastanın sıkıntısını ve anlatmak istediğini anlamadan muayeneye geçmemelidir (sayfa 2).",
+     "sik_aciklamalari": {
+      "A": "BOS incelemesi spesifik laboratuvar incelemesidir ve muayeneden önce sonucunun alınması gerekmez. Muayene yakınmanın anlaşılmasına bağlıdır (sayfa 8). BOS incelemesi, beyin omurilik sıvısının incelenmesidir ve nörolojik hastada genel metodlardan ayrı verilen spesifik laboratuvar incelemesidir.",
+      "B": "Aşil refleksi muayenede alınan bir bulgudur ve muayene sırasında değerlendirilir. Muayeneye geçmeden önce anlaşılması gereken şey hastanın yakınmasıdır (sayfa 6).",
+      "C": "Beyin MR radyo dalgalarıyla ölçüm yapan görüntülemedir ve muayeneyi öncelemez. Önce yakınma anlaşılır (sayfa 8). Beyin MR, radyo dalgaları kullanarak ölçüm yapan görüntüleme yöntemidir.",
+      "D": "Muayene, anlaşılmış bir yakınmaya yöneltilir. Bu yüzden hekim hastanın sıkıntısını ve anlatmak istediğini anlamadan muayeneye geçmemelidir (sayfa 2). Hekim önce bu yakınmayı açıklığa kavuşturur, sonra muayeneyi yapar.",
+      "E": "Sevk yazısı tanı konulamayan hastanın gönderilmesinde yazılır ve muayeneden sonraki bir adımdır (sayfa 9). Muayeneden önce anlaşılması gereken şey ise hastanın yakınmasıdır."
+     },
+     "bilgi": [
+      7
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 2,
+      "alinti": "ne olduğunu ne söylemek istediğini anlamadan muayeneye geçmemelidir"
+     }
+    },
+    {
+     "id": "k2-01-norolojik-hastaya-yaklasim-q05",
+     "kazanim": 1,
+     "zorluk": "zor",
+     "soru": "Öykü alma ilkeleriyle ilgili aşağıdaki ifadelerden hangisi YANLIŞTIR?",
+     "secenekler": {
+      "A": "Hasta bilinçsizse öykü yakınından ya da getiren kişiden alınır",
+      "B": "İyi bir anamnez doğru bir yönelim ve yaklaşım sağlar",
+      "C": "Uyuşma hem duyu kusurunu hem kuvvet kaybını anlatabilir",
+      "D": "Ağrının nitelikleri sorularla ortaya konmalıdır",
+      "E": "Hekim hastanın sıkıntısını anlamadan da muayeneye geçebilir"
+     },
+     "dogru": "E",
+     "aciklama": "Hekim, hastanın sıkıntısını anlamadan muayeneye geçmemelidir; diğer ifadeler dersin öykü ilkelerini doğru aktarır (sayfa 2).",
+     "sik_aciklamalari": {
+      "A": "Hasta bilinçsizse ya da konuşma bozukluğu varsa öyküyü kendisi veremez; bu durumda yakını ya da getiren kişi öykü kaynağı olur. İfade dersin öykü ilkesine uygundur (sayfa 2).",
+      "B": "Anamnez, hastanın yakınmasının, başlangıç şeklinin ve gidişinin öyküsüdür ve muayeneden önce gelir. İyi alınmış öykü hastaya nasıl yaklaşılacağını belirlediği için ifade doğrudur (sayfa 2).",
+      "C": "Uyuşma hastaların kullandığı bir sözcüktür ve duyu kusurunu da kuvvet kaybını da anlatabilir. Bu yüzden hekimin kastedileni sorması gerekir; ifade doğrudur (sayfa 2).",
+      "D": "Ağrı sübjektif bir yakınma olduğundan zonklayıcı, yanıcı ya da sabit gibi nitelikleri ancak hastaya sorularak belirlenir. İfade dersin söylediğiyle uyumludur (sayfa 2).",
+      "E": "Bu ifade yanlıştır: hekim hastanın sıkıntısının ne olduğunu ve ne söylemek istediğini anlamadan muayeneye geçmemelidir. Önce yakınma anlaşılır, ardından muayene yapılır (sayfa 2)."
+     },
+     "bilgi": [
+      7,
+      8
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 2,
+      "alinti": "ne olduğunu ne söylemek istediğini anlamadan muayeneye geçmemelidir"
+     }
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 2,
+   "metin": "Nörolojik hastalıkların başlangıç şeklini (akut, sinsi, dalgalı) örneklerle ayırır ve doğal gidişin tanı ile tedavi değerlendirmesindeki önemini açıklar.",
+   "sorular": [
+    {
+     "id": "k2-01-norolojik-hastaya-yaklasim-q09",
+     "kazanim": 2,
+     "zorluk": "kolay",
+     "soru": "Aşağıdakilerden hangisi akut başlangıçlı bir tabloya örnektir?",
+     "secenekler": {
+      "A": "Beyin tümörü",
+      "B": "Hemipleji",
+      "C": "MS",
+      "D": "Dejeneratif hastalıklar",
+      "E": "Kas distrofisi"
+     },
+     "dogru": "B",
+     "aciklama": "Dakika veya saat içinde yerleşen hemipleji, akut başlangıcın dersteki örneğidir.",
+     "sik_aciklamalari": {
+      "A": "Beyin tümörü, sinsi başlangıçlı hastalıklara örnek verilir. Belirtileri haftalar, aylar, yıllar içinde yavaşça yerleşir; dakikalar içinde gelişen tablolar için örnek verilmez.",
+      "B": "Hemipleji, vücudun bir yarısındaki kasların felcidir ve dakika veya saat içinde akut başlayabilir. Dakika veya saat içinde yerleşen hemipleji, akut başlangıcın dersteki örneğidir.",
+      "C": "MS, sinir sisteminin farklı bölgelerini etkileyip düzelen epizodlarla seyreden ve dalgalı gidişin örneği olan hastalıktır. Öyküsü genç hastada kısa sürede gelişen, düzelen çok bölgeli epizodlardır; yaşlılık ve ateroskleroz öyküsü bu tanıdan çok damarsal nedeni düşündürür.",
+      "D": "Dejeneratif hastalıklar, beyin tümörüyle birlikte sinsi başlayan hastalıklara örnek verilen gruptur. Yıllar içinde yerleşen yavaş seyri anlatır; ani gelişen bir tabloyu açıklamaz.",
+      "E": "Kas distrofisinde karın önde, ördeğe benzeyen badi-badi yürüyüşü görülür. Yürüyüşün karın önde ve ördeğe benzer olmasıyla tanınır; maske yüz ve monoton konuşma bu hastalığın görünümü değildir."
+     },
+     "bilgi": [
+      9
+     ],
+     "benzer_cikmis": [
+      "q-2__kurul_-1"
+     ],
+     "kanit": {
+      "sayfa": 3,
+      "alinti": "Akut başlangıç. Dakika veya saat içinde. Örneğin hemipleji"
+     }
+    },
+    {
+     "id": "k2-01-norolojik-hastaya-yaklasim-q10",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Belirtilerin haftalar, aylar, yıllar içinde yerleştiği başlangıç şekli hangisidir?",
+     "secenekler": {
+      "A": "Akut başlangıç",
+      "B": "Dalgalı gidiş",
+      "C": "Akut ve dalgalı gidişin birlikteliği",
+      "D": "Başlangıç şekli tanıya katkı vermez",
+      "E": "Sinsi başlangıç"
+     },
+     "dogru": "E",
+     "aciklama": "Sinsi başlayan hastalıklar haftalar, aylar, yıllar içinde yerleşir; beyin tümörü ve dejeneratif hastalıklar örnektir (sayfa 3).",
+     "sik_aciklamalari": {
+      "A": "Akut başlangıç, dakika veya saat içinde ortaya çıkan başlangıç şeklidir ve örneği hemiplejidir. Haftalar ve aylar içinde yerleşen tablo bu grupta olmaz (sayfa 3).",
+      "B": "Dalgalı gidişte kötüleşme ve iyileşme dönemleri birbirini izler; örneği relapsing-remitting MS'tir. Soruda yavaş yerleşme anlatılmaktadır (sayfa 3). Dalgalı gidiş, kötüleşme ve iyileşme dönemlerinin birbirini izlediği gidiştir.",
+      "C": "Ders başlangıç şekillerini akut, sinsi ve dalgalı olarak ayrı ayrı verir. Haftalar, aylar, yıllar içinde yerleşme bunların arasından yalnız sinsi başlangıca aittir (sayfa 3).",
+      "D": "Başlangıç şekli öykünün unsurlarındandır ve lezyonun nedenini aydınlatır. Hastalıkların başlayış şekli tanıya yön verdiği için bu ifade ders bilgisiyle uyuşmaz (sayfa 2).",
+      "E": "Sinsi başlangıç, belirtilerin haftalar, aylar, yıllar içinde yerleştiği başlangıç şeklidir. Beyin tümörü ve dejeneratif hastalıklar örnektir (sayfa 3). Sinsi başlangıç, belirtilerin haftalar, aylar, yıllar içinde yerleşmesidir."
+     },
+     "bilgi": [
+      10
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 3,
+      "alinti": "Haftalar, aylar, yıllar içinde yerleşir. Beyin tümörü, dejeneratif hastalıklar gibi"
+     }
+    },
+    {
+     "id": "k2-01-norolojik-hastaya-yaklasim-q11",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Kötüleşme ve iyileşme dönemlerinin birbirini izlediği gidiş hangisidir ve örneği nedir?",
+     "secenekler": {
+      "A": "Akut başlangıç; hemipleji",
+      "B": "Sinsi başlangıç; beyin tümörü",
+      "C": "Dalgalı gidiş; relapsing-remitting MS",
+      "D": "Sinsi başlangıç; dejeneratif hastalıklar",
+      "E": "Dalgalı gidiş; hemipleji"
+     },
+     "dogru": "C",
+     "aciklama": "Dalgalı gidişin örneği relapsing-remitting MS'tir; tabloda kötüleşme ve iyileşme dönemleri birbirini izler (sayfa 3).",
+     "sik_aciklamalari": {
+      "A": "Akut başlangıç dakika veya saat içinde ortaya çıkan başlangıçtır ve örneği hemiplejidir. Kötüleşme ve iyileşme dönemlerinden oluşan bir seyri tarif etmez (sayfa 3).",
+      "B": "Sinsi başlangıç haftalar, aylar, yıllar içinde yerleşen yavaş bir örüntüdür ve beyin tümörü örnektir. Belirgin bir iyileşme dönemini içermez (sayfa 3).",
+      "C": "Dalgalı gidişte kötüleşme ve iyileşme dönemleri vardır ve örneği relapsing-remitting MS'tir. Soruda tarif edilen tablo budur (sayfa 3).",
+      "D": "Dejeneratif hastalıklar sinsi başlayıp haftalar, aylar, yıllar içinde yerleşir. Kötüleşme ve iyileşme dönemlerinin birbirini izlediği gidişin örneği değildir (sayfa 3).",
+      "E": "Dalgalı gidiş doğru kavramdır ancak örnek yanlıştır. Hemipleji dakika veya saat içinde yerleşen akut başlangıca örnektir; dalgalı gidişin örneği ise kötüleşme ve iyileşme dönemleri gösteren relapsing-remitting MS'tir (sayfa 3)."
+     },
+     "bilgi": [
+      11
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 3,
+      "alinti": "Dalgalı gidiş. Kötüleşme ve iyileşme dönemleri vardır. Relapsing-remitting MS"
+     }
+    },
+    {
+     "id": "k2-01-norolojik-hastaya-yaklasim-q12",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Düzelme saptanan bir hastada tedavi sonucunu değerlendirirken hangi ayrım gözetilmelidir?",
+     "secenekler": {
+      "A": "Düzelmenin tedaviye mi yoksa doğal seyre mi bağlı olduğu",
+      "B": "Düzelmenin her zaman tedaviye bağlı olduğu",
+      "C": "Düzelmenin her zaman doğal seyre bağlı olduğu",
+      "D": "Düzelmenin yalnız laboratuvar bulgusuyla gösterileceği",
+      "E": "Dalgalı gidişte iyileşmenin hiç görülmediği"
+     },
+     "dogru": "A",
+     "aciklama": "Düzelmenin tedaviye mi yoksa hastalığın doğal seyrine mi bağlı olduğu ayrılmalıdır (sayfa 3).",
+     "sik_aciklamalari": {
+      "A": "Hastalığın doğal gidişi tedavi sonuçlarının değerlendirilmesi için önemlidir. Düzelmenin uygulanan tedaviye mi doğal seyre mi bağlı olduğu ayrılmalıdır (sayfa 3).",
+      "B": "Doğal gidiş bu varsayımı sınar. Düzelme hastalığın kendi seyrinden de gelebileceği için her zaman tedaviye bağlanamaz (sayfa 3). Tedavinin etkisi ile hastalığın kendi seyri birbirinden ayrılarak değerlendirilir.",
+      "C": "Tedavinin etkisi de düzelmeye katkı yapabilir. Ders düzelmenin tedaviye mi doğal seyre mi bağlı olduğunun ayrılmasını ister, birini baştan seçmeyi değil (sayfa 3).",
+      "D": "Düzelmeyi yorumlamak için dersin önerdiği yol doğal gidişi dikkate almaktır. Laboratuvar bulgusu bu ayrımı kendiliğinden yapmaz (sayfa 3). Seyir, laboratuvar sonucuyla değil kronolojik gidişle izlenir.",
+      "E": "Dalgalı gidişin tanımı kötüleşme ve iyileşme dönemlerinin bulunmasıdır. Bu ifade tanıma karşıdır ve relapsing-remitting MS ile uyuşmaz (sayfa 3)."
+     },
+     "bilgi": [
+      12,
+      13
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 3,
+      "alinti": "Düzelme uygulanan tedaviye mi bağlı yoksa doğal seyrine mi"
+     }
+    },
+    {
+     "id": "k2-01-norolojik-hastaya-yaklasim-q13",
+     "kazanim": 2,
+     "zorluk": "zor",
+     "soru": "Başlangıç şekli ve örnek eşlemelerinden hangisi YANLIŞTIR?",
+     "secenekler": {
+      "A": "Akut başlangıç - hemipleji",
+      "B": "Sinsi başlangıç - beyin tümörü",
+      "C": "Sinsi başlangıç - dejeneratif hastalıklar",
+      "D": "Dalgalı gidiş - beyin tümörü",
+      "E": "Dalgalı gidiş - relapsing-remitting MS"
+     },
+     "dogru": "D",
+     "aciklama": "Beyin tümörü sinsi başlangıca örnektir; dalgalı gidişin örneği relapsing-remitting MS'tir (sayfa 3).",
+     "sik_aciklamalari": {
+      "A": "Hemipleji vücudun bir yarısındaki kasların felcidir ve dakika veya saat içinde yerleşebilir. Eşleme dersin verdiği akut başlangıç örneğiyle uyumludur (sayfa 3).",
+      "B": "Beyin tümörünün belirtileri haftalar, aylar, yıllar içinde yavaşça yerleşir. Bu özellik sinsi başlangıcın tanımıdır ve eşleme doğrudur (sayfa 3). Sinsi başlangıç, belirtilerin haftalar, aylar, yıllar içinde yerleşmesidir.",
+      "C": "Dejeneratif hastalıklar yıllar içinde yavaş yerleşen bir gruptur ve derste sinsi başlangıca örnek verilir. Eşleme dersin verdiği biçimdedir (sayfa 3).",
+      "D": "Bu eşleme yanlıştır: beyin tümörü haftalar, aylar, yıllar içinde yerleşen sinsi başlangıca örnektir. Dalgalı gidişin örneği kötüleşme ve iyileşme dönemleri gösteren relapsing-remitting MS'tir (sayfa 3).",
+      "E": "Relapsing-remitting MS'te kötüleşme ve iyileşme dönemleri birbirini izler. Bu özellik dalgalı gidişin tanımıdır ve eşleme doğrudur (sayfa 3)."
+     },
+     "bilgi": [
+      9,
+      10,
+      11
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 3,
+      "alinti": "Dalgalı gidiş. Kötüleşme ve iyileşme dönemleri vardır. Relapsing-remitting MS"
+     }
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "q-2__kurul_-1",
+     "soru": "Nörolojik hastalıkların başlangıç şekli değerlendirildiğinde, aşağıdakilerden hangisi tipik olarak akut başlangıçlı (dakikalar-saatler içinde yerleşen) bir tablodur?",
+     "secenekler": {
+      "A": "Beyin tümörü",
+      "B": "Alzheimer hastalığı",
+      "C": "Hemipleji",
+      "D": "Parkinson hastalığı",
+      "E": "Amiyotrofik lateral skleroz"
+     },
+     "cevap": "C"
+    }
+   ]
+  },
+  {
+   "no": 3,
+   "metin": "Tanısı öyküye dayanan hastalıkları (migren, trigeminal nevralji, epilepsi) ve BT, MR ile EEG'nin bu hastalıklardaki yerini açıklar.",
+   "sorular": [
+    {
+     "id": "k2-01-norolojik-hastaya-yaklasim-q14",
+     "kazanim": 3,
+     "zorluk": "kolay",
+     "soru": "Migrenle birlikte tanısı öyküye dayanan, muayenede nörolojik bulgu ve laboratuvar bulgusu olmayan ve BT ile MR'ın tanıyı doğrulamak için çekildiği hastalık hangisidir?",
+     "secenekler": {
+      "A": "Epilepsi",
+      "B": "Trigeminal nevralji",
+      "C": "SVO",
+      "D": "Medulla spinalis basısı",
+      "E": "Post-infeksiyöz miyelit"
+     },
+     "dogru": "B",
+     "aciklama": "Muayenede nörolojik bulgu ve laboratuvar bulgusunun bulunmaması tanının öyküye dayandığını, BT ve MR'ın ise yalnız doğrulama amacıyla çekildiğini gösterir.",
+     "sik_aciklamalari": {
+      "A": "Epilepsi klinik tanıdır, yani tanı öykü ve klinik değerlendirmeyle konur. Normal EEG tanıyı dışlamaz; bu yüzden tanıyı belirleyen laboratuvar sonucu değil, öyküdür.",
+      "B": "Trigeminal nevralji, tanısı öyküye dayanan nörolojik hastalıklardandır. Muayenede nörolojik bulgu ve laboratuvar bulgusunun bulunmaması tanının öyküye dayandığını, BT ve MR'ın ise yalnız doğrulama amacıyla çekildiğini gösterir.",
+      "C": "SVO, serebrovasküler olaydır, yani beyin damarlarına bağlı gelişen bir olaydır. Yaşlı hasta ve ateroskleroz öyküsüyle düşünülür; genç hastadaki düzelen çok bölgeli epizodlar bu tanıya değil MS'e yönlendirir.",
+      "D": "Medulla spinalis basısı, omuriliğin dışarıdan bir yapı tarafından sıkıştırılmasıdır ve paraplejiye yol açar. Sinsi başlayan ve yavaş ilerleyen seyirle tanınır; aşı ya da viral enfeksiyondan sonra gelişen parapleji bu tanıdan çok post-infeksiyöz miyeliti düşündürür.",
+      "E": "Post-infeksiyöz miyelit, enfeksiyondan ya da aşıdan sonra gelişen bir omurilik tutulumudur. Tanıyı aşı ya da viral enfeksiyon öyküsü koydurur; böyle bir öykü olmayan sinsi ve ilerleyici paraplejide medulla spinalis basısı akla gelir."
+     },
+     "bilgi": [
+      14,
+      15,
+      16
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 4,
+      "alinti": "Nörolojik belirti, lab. bulgusu yoktur"
+     }
+    },
+    {
+     "id": "k2-01-norolojik-hastaya-yaklasim-q15",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Tanısı öyküye dayanan hastalıklarda BT ve MR hangi amaçla çekilir?",
+     "secenekler": {
+      "A": "Tanıyı ilk kez koymak için",
+      "B": "Nörolojik belirtiyi ortaya çıkarmak için",
+      "C": "Laboratuvar bulgusunu göstermek için",
+      "D": "EEG'nin yerini tutmak için",
+      "E": "Tanının doğru olduğunu göstermek için"
+     },
+     "dogru": "E",
+     "aciklama": "BT ve MR, öyküye dayanan tanının doğru olduğunu göstermek için çekilir (sayfa 4).",
+     "sik_aciklamalari": {
+      "A": "Migren ve trigeminal nevraljide tanıyı öykü koydurur. Görüntüleme tanıyı ilk kez koymak için değil, doğrulamak için kullanılır (sayfa 4). Tanıyı koyan doğru alınan anamnezdir; görüntüleme bu tanıyı doğrulamakla görevlidir.",
+      "B": "Bu hastalıklarda nörolojik belirti yoktur. Görüntülemenin amacı olmayan bir belirtiyi ortaya çıkarmak değil, tanının doğruluğunu göstermektir (sayfa 4). Görüntülemenin amacı, öykünün koyduğu tanının doğruluğunu göstermektir.",
+      "C": "Migren ve trigeminal nevraljide laboratuvar bulgusu yoktur. Çekilen BT ve MR yeni bir bulgu aramaz, tanıyı doğrulama amacını taşır (sayfa 4).",
+      "D": "EEG, epilepsi bağlamında anılır ve normal olması tanıdan uzaklaştırmaz. BT ve MR EEG'nin yerini tutmaz; tanının doğru olduğunu göstermek için çekilir (sayfa 4).",
+      "E": "BT ve MR tanıyı koymaz, doğrular. Tanı öyküyle konduğundan görüntüleme tanının doğru olduğunu göstermek için çekilir (sayfa 4). Görüntüleme bu hastalıklarda öykünün yerine geçmez, onu destekler."
+     },
+     "bilgi": [
+      16
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 4,
+      "alinti": "BT, MR tanının doğru olduğunu göstermek için çekilir"
+     }
+    },
+    {
+     "id": "k2-01-norolojik-hastaya-yaklasim-q16",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Epilepsi tanısıyla ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "EEG normalse epilepsi tanısı dışlanır",
+      "B": "Tanıyı yalnız BT ve MR koydurur",
+      "C": "Klinik tanıdır; EEG'nin normal olması tanıdan uzaklaştırmaz",
+      "D": "Tanı yalnız BOS incelemesiyle konur",
+      "E": "Tanı laboratuvar bulgusuna dayanır"
+     },
+     "dogru": "C",
+     "aciklama": "Epilepsi klinik tanıdır; EEG'nin normal olması tanıdan uzaklaştırmaz (sayfa 4).",
+     "sik_aciklamalari": {
+      "A": "EEG'nin normal olması tanıdan uzaklaştırmaz; tanı klinik öyküye dayanır. Normal EEG'ye bakıp tanıdan vazgeçmek ders bilgisiyle uyuşmaz (sayfa 4).",
+      "B": "BT ve MR, öykü ile konan tanıyı doğrulamak için çekilir. Epilepsi gibi klinik tanıları koydurmaz, öykü belirleyicidir (sayfa 4). Beyin MR, radyo dalgaları kullanarak ölçüm yapan görüntüleme yöntemidir.",
+      "C": "Epilepsi öyküyle konabilen klinik bir tanıdır. EEG normal olsa bile tanıdan uzaklaşılmaz (sayfa 4). EEG, laboratuvar incelemeleri arasında sayılan bir testtir.",
+      "D": "BOS incelemesi nörolojide spesifik laboratuvar incelemesidir. Epilepsi ise klinik tanıdır ve öyküyle konabilir (sayfa 8). BOS incelemesi, beyin omurilik sıvısının incelenmesidir ve nörolojik hastada genel metodlardan ayrı verilen spesifik laboratuvar incelemesidir.",
+      "E": "Epilepsi klinik tanıdır, yani tanı öykü ve klinik değerlendirmeye dayanır. Laboratuvar bulgusu tanı için zorunlu değildir (sayfa 4). Epilepside tanıyı belirleyen öykü ve klinik gözlemdir; EEG normal olsa da tanı sürer."
+     },
+     "bilgi": [
+      17
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 4,
+      "alinti": "Epilepsi de klinik tanıdır. EEG normal olması tanıdan uzaklaştırmaz"
+     }
+    },
+    {
+     "id": "k2-01-norolojik-hastaya-yaklasim-q17",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Gordon Holmes'a göre hasta karşınızda bir muamma gibi duruyorsa ne yapılmalıdır?",
+     "secenekler": {
+      "A": "Hasta ikinci kez dinlenmelidir",
+      "B": "Tüm araştırma yöntemleri hemen uygulanmalıdır",
+      "C": "BOS incelemesi istenmelidir",
+      "D": "EEG tekrarlanmalıdır",
+      "E": "Hastanın yakınmaları göz ardı edilip yalnız muayeneye bakılmalıdır"
+     },
+     "dogru": "A",
+     "aciklama": "Muamma gibi duran hasta ikinci kez dinlenir; bu, tüm araştırma yöntemlerine oranla bilmeceyi çözme şansını artırır (sayfa 4).",
+     "sik_aciklamalari": {
+      "A": "Holmes'a göre muamma gibi duran hasta ikinci kez dinlenir. Bilmeceyi çözme şansı tüm araştırma yöntemlerine oranla daha büyüktür (sayfa 4).",
+      "B": "Holmes ikinci kez dinlemenin, bütün araştırma yöntemlerine oranla bilmeceyi çözme şansını artırdığını söyler. Araştırma yöntemleri öykünün yerine geçmez (sayfa 4).",
+      "C": "BOS incelemesi spesifik laboratuvar incelemesidir. Holmes'un önerisi ise önce hastayı ikinci kez dinlemektir (sayfa 4). BOS incelemesi, beyin omurilik sıvısının incelenmesidir ve nörolojik hastada genel metodlardan ayrı verilen spesifik laboratuvar incelemesidir.",
+      "D": "EEG epilepsi bağlamında anılır ve normal olması tanıdan uzaklaştırmaz. Holmes'un sözü araştırma değil, hastayı yeniden dinleme önerir (sayfa 4).",
+      "E": "Merritt'e göre öykü anlaşılmadıysa muayeneden sonra da anlaşılmaz. Holmes'un önerisi muayeneye geçmek değil, hastayı ikinci kez dinlemektir (sayfa 2)."
+     },
+     "bilgi": [
+      18
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 4,
+      "alinti": "Hasta karşınızda bir muamma gibi duruyorsa onu ikinci kez dinleyiniz"
+     }
+    },
+    {
+     "id": "k2-01-norolojik-hastaya-yaklasim-q18",
+     "kazanim": 3,
+     "zorluk": "zor",
+     "soru": "Migren, trigeminal nevralji ve epilepsinin ortak özelliği aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Tanının BT ile konması",
+      "B": "Tanının BOS incelemesine dayanması",
+      "C": "Muayenede belirgin nörolojik bulgu bulunması",
+      "D": "Tanının öyküye ve klinik değerlendirmeye dayanması",
+      "E": "EEG'nin her üçünde tanıyı kesinleştirmesi"
+     },
+     "dogru": "D",
+     "aciklama": "Üç hastalığın ortak özelliği tanının öyküye ve klinik değerlendirmeye dayanmasıdır (sayfa 4).",
+     "sik_aciklamalari": {
+      "A": "BT ve MR tanıyı koymaz, öyküyle konan tanının doğru olduğunu göstermek için çekilir. Epilepside ise tanıyı klinik öykü belirler (sayfa 4).",
+      "B": "BOS incelemesi nörolojide spesifik laboratuvar incelemesidir. Bu üç hastalığın tanısı ise laboratuvar sonucuna değil öyküye dayanır (sayfa 8). BOS incelemesi, beyin omurilik sıvısının incelenmesidir ve nörolojik hastada genel metodlardan ayrı verilen spesifik laboratuvar incelemesidir.",
+      "C": "Migren ve trigeminal nevraljide muayenede nörolojik bulgu yoktur. Bu hastalıklar muayeneyle değil öyküyle tanınır (sayfa 4). Bu iki hastalıkta tanı doğru alınan anamnezle konur, görüntüleme yalnız doğrulama amacı taşır.",
+      "D": "Üç hastalıkta da tanıyı belirleyen laboratuvar sonucu değil, doğru alınmış öyküdür. Epilepsi klinik tanıdır; migren ve trigeminal nevraljide de doğru anamnezle tanı konur (sayfa 4).",
+      "E": "EEG yalnız epilepsi bağlamında anılır ve normal olması epilepsiyi dışlamaz. Tanıyı kesinleştiren bir test olarak sunulmaz (sayfa 4). EEG, laboratuvar incelemeleri arasında sayılan bir testtir."
+     },
+     "bilgi": [
+      14,
+      15,
+      16,
+      17
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 4,
+      "alinti": "Tanısı Öyküye Dayanan Nörolojik Hastalıklar Migren Trigeminal nevralji"
+     }
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 4,
+   "metin": "İlk izlenimde hemiplejik hastanın, Parkinson hastalığının ve kas distrofisinin görünümünü ve dizartri ile afaziyi tanır.",
+   "sorular": [
+    {
+     "id": "k2-01-norolojik-hastaya-yaklasim-q19",
+     "kazanim": 4,
+     "zorluk": "kolay",
+     "soru": "Maske yüz, monoton konuşma, salya akması, yürürken kolları sallamama ve fleksör postür hangi hastalığı düşündürür?",
+     "secenekler": {
+      "A": "Kas distrofisi",
+      "B": "Parkinson hastalığı",
+      "C": "Hemipleji",
+      "D": "Medulla spinalis basısı",
+      "E": "MS"
+     },
+     "dogru": "B",
+     "aciklama": "Maske yüz, monoton konuşma, salya akması, kol sallamama ve fleksör postür birlikte Parkinson hastalığını düşündürür.",
+     "sik_aciklamalari": {
+      "A": "Kas distrofisinde karın önde, ördeğe benzeyen badi-badi yürüyüşü görülür. Yürüyüşün karın önde ve ördeğe benzer olmasıyla tanınır; maske yüz ve monoton konuşma bu hastalığın görünümü değildir.",
+      "B": "Parkinson hastalığında maske yüz, monoton konuşma, salya akması, yürürken kolları sallamama ve vücudun fleksör postürü görülür. Maske yüz, monoton konuşma, salya akması, kol sallamama ve fleksör postür birlikte Parkinson hastalığını düşündürür.",
+      "C": "Hemipleji, vücudun bir yarısındaki kasların felcidir ve dakika veya saat içinde akut başlayabilir. Hemiplejik hastada kol gövdeye yapışık, bacak yürürken oraklanmış görünür; haftalar içinde yerleşen seyrin örneği olarak verilmez.",
+      "D": "Medulla spinalis basısı, omuriliğin dışarıdan bir yapı tarafından sıkıştırılmasıdır ve paraplejiye yol açar. Sinsi başlayan ve yavaş ilerleyen seyirle tanınır; aşı ya da viral enfeksiyondan sonra gelişen parapleji bu tanıdan çok post-infeksiyöz miyeliti düşündürür.",
+      "E": "MS, sinir sisteminin farklı bölgelerini etkileyip düzelen epizodlarla seyreden ve dalgalı gidişin örneği olan hastalıktır. Öyküsü genç hastada kısa sürede gelişen, düzelen çok bölgeli epizodlardır; yaşlılık ve ateroskleroz öyküsü bu tanıdan çok damarsal nedeni düşündürür."
+     },
+     "bilgi": [
+      22
+     ],
+     "benzer_cikmis": [
+      "804e82ac79db",
+      "5e72fc758888"
+     ],
+     "kanit": {
+      "sayfa": 5,
+      "alinti": "Parkinson H. maske yüz, monoton konuşma, salya akması, yürürken kollarını sallamaması, vücudun fleksör postürü"
+     }
+    },
+    {
+     "id": "k2-01-norolojik-hastaya-yaklasim-q20",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Karın önde, ördeğe benzeyen badi-badi yürüyüşü hangi hastalıkta görülür?",
+     "secenekler": {
+      "A": "Parkinson hastalığı",
+      "B": "Hemipleji",
+      "C": "Medulla spinalis basısı",
+      "D": "Trigeminal nevralji",
+      "E": "Kas distrofisi"
+     },
+     "dogru": "E",
+     "aciklama": "Karın önde, ördeğe benzer badi-badi yürüyüşü kas distrofisini gösterir.",
+     "sik_aciklamalari": {
+      "A": "Parkinson hastalığında maske yüz, monoton konuşma, salya akması, yürürken kolları sallamama ve vücudun fleksör postürü görülür. Maske yüz, monoton konuşma ve kol sallamama ile tanınır; karın önde ördek yürüyüşü ya da bacağı oraklayarak yürüme bu tabloya ait değildir.",
+      "B": "Hemipleji, vücudun bir yarısındaki kasların felcidir ve dakika veya saat içinde akut başlayabilir. Hemiplejik hastada kol gövdeye yapışık, bacak yürürken oraklanmış görünür; haftalar içinde yerleşen seyrin örneği olarak verilmez.",
+      "C": "Medulla spinalis basısı, omuriliğin dışarıdan bir yapı tarafından sıkıştırılmasıdır ve paraplejiye yol açar. Sinsi başlayan ve yavaş ilerleyen seyirle tanınır; aşı ya da viral enfeksiyondan sonra gelişen parapleji bu tanıdan çok post-infeksiyöz miyeliti düşündürür.",
+      "D": "Trigeminal nevralji, tanısı öyküye dayanan nörolojik hastalıklardandır. Tanıyı doğru anamnez koydurur; muayenede nörolojik bulgu ve laboratuvar bulgusu yoktur, BT ve MR yalnız tanıyı doğrulamak için çekilir.",
+      "E": "Kas distrofisinde karın önde, ördeğe benzeyen badi-badi yürüyüşü görülür. Karın önde, ördeğe benzer badi-badi yürüyüşü kas distrofisini gösterir."
+     },
+     "bilgi": [
+      23
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 5,
+      "alinti": "Kas distrofisinde karın önde badi-badi yürüyüşü ördeğe benzer"
+     }
+    },
+    {
+     "id": "k2-01-norolojik-hastaya-yaklasim-q21",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Kolu gövdeye yapışık olan ve yürürken bacağını oraklayan hasta hangi tabloyu düşündürür?",
+     "secenekler": {
+      "A": "Parkinson hastalığı",
+      "B": "Kas distrofisi",
+      "C": "Hemipleji",
+      "D": "Trigeminal nevralji",
+      "E": "Post-infeksiyöz miyelit"
+     },
+     "dogru": "C",
+     "aciklama": "Dakika veya saat içinde yerleşen hemipleji, akut başlangıcın dersteki örneğidir.",
+     "sik_aciklamalari": {
+      "A": "Parkinson hastalığında maske yüz, monoton konuşma, salya akması, yürürken kolları sallamama ve vücudun fleksör postürü görülür. Maske yüz, monoton konuşma ve kol sallamama ile tanınır; karın önde ördek yürüyüşü ya da bacağı oraklayarak yürüme bu tabloya ait değildir.",
+      "B": "Kas distrofisinde karın önde, ördeğe benzeyen badi-badi yürüyüşü görülür. Yürüyüşün karın önde ve ördeğe benzer olmasıyla tanınır; maske yüz ve monoton konuşma bu hastalığın görünümü değildir.",
+      "C": "Hemipleji, vücudun bir yarısındaki kasların felcidir ve dakika veya saat içinde akut başlayabilir. Dakika veya saat içinde yerleşen hemipleji, akut başlangıcın dersteki örneğidir.",
+      "D": "Trigeminal nevralji, tanısı öyküye dayanan nörolojik hastalıklardandır. Tanıyı doğru anamnez koydurur; muayenede nörolojik bulgu ve laboratuvar bulgusu yoktur, BT ve MR yalnız tanıyı doğrulamak için çekilir.",
+      "E": "Post-infeksiyöz miyelit, enfeksiyondan ya da aşıdan sonra gelişen bir omurilik tutulumudur. Tanıyı aşı ya da viral enfeksiyon öyküsü koydurur; böyle bir öykü olmayan sinsi ve ilerleyici paraplejide medulla spinalis basısı akla gelir."
+     },
+     "bilgi": [
+      21
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 5,
+      "alinti": "Hemiplejik kolun gövdeye yapışık olması, yürürken bacağını oraklaması"
+     }
+    },
+    {
+     "id": "k2-01-norolojik-hastaya-yaklasim-q22",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Hasta odaya girerken yürümesi, yüzü, bakışları, ses tonu ve konuşması için aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Tanıya ipucu verir; ilk izlenim bile tanıya yardımcı olur",
+      "B": "Yalnız muayene sırasında anlam kazanır",
+      "C": "Laboratuvar sonuçları gelmeden değerlendirilemez",
+      "D": "Yalnız dizartri ve afazi için geçerlidir",
+      "E": "Anamnezle çelişirse önemsenmez"
+     },
+     "dogru": "A",
+     "aciklama": "İlk izlenim, yani hastanın yürüyüşü, yüzü, bakışı, ses tonu ve konuşması tanıya ipucu verir (sayfa 5).",
+     "sik_aciklamalari": {
+      "A": "Yürüme, yüz, bakış, ses tonu ve konuşma baştan itibaren pek çok ipucu verir. Bu nedenle ilk izlenim bile tanıya yardımcı olur (sayfa 5).",
+      "B": "Muayene hasta odaya girdiği anda başlar. Ders, gözlemin baştan itibaren ipucu verdiğini söyler; muayene sırasını beklemeye gerek yoktur (sayfa 5).",
+      "C": "Laboratuvar incelemeleri öykü ve muayeneden sonra başvurulan yöntemlerdir. Yürüyüş ve yüz görünümü ise hasta içeri girdiğinde hemen değerlendirilir (sayfa 5).",
+      "D": "Dizartri ve afazi hemen fark edilen bulgulardandır, ancak ipucu yalnız onlarla sınırlı değildir. Yürüyüş, yüz, bakış ve ses tonu da tanıya yardım eder (sayfa 5).",
+      "E": "İlk izlenim bulguları tek bir hastalığa özgü değildir: hemiplejik hastada kol gövdeye yapışık, Parkinson hastalığında maske yüzlü, kas distrofisinde ördek yürüyüşlü görünüm ipucu verir. Bu nedenle ilk izlenim yalnız tek bir tabloyu ilgilendirmez (sayfa 5)."
+     },
+     "bilgi": [
+      19,
+      20
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 5,
+      "alinti": "İlk izlenim bile tanıya yardımcı olur"
+     }
+    },
+    {
+     "id": "k2-01-norolojik-hastaya-yaklasim-q23",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Hasta konuşmaya başladığı anda muayeneden önce hemen fark edilebilen bozukluklar hangileridir?",
+     "secenekler": {
+      "A": "Diplopi ve vertigo",
+      "B": "Seviye veren duyu kaybı ve sfinkter bozukluğu",
+      "C": "Aşil refleksi kaybı ve bacak ağrısı",
+      "D": "Dizartri ve afazi",
+      "E": "Serebellar ve piramidal bulgu"
+     },
+     "dogru": "D",
+     "aciklama": "Dizartri ve afazi hemen fark edilir (sayfa 5).",
+     "sik_aciklamalari": {
+      "A": "Diplopi çift görme, vertigo baş dönmesidir. Bunlar hastanın anlatımıyla ortaya çıkan, beyin sapı lezyonunun bulgularıdır, konuşmadan fark edilmez (sayfa 6).",
+      "B": "Bu bulgular medulla spinalis lezyonunu gösterir ve sorgulamayla ya da muayeneyle ortaya konur. Hasta konuşurken hemen görülmez (sayfa 6). Sfinkter bozukluğu, idrar ve dışkı kontrolünü sağlayan kasların işlevinin bozulmasıdır.",
+      "C": "Aşil refleksinin alınamaması muayeneyle saptanır ve birinci sakral radiksi gösterir. Ağrı ise sorularla niteliği belirlenen bir yakınmadır (sayfa 6). Aşil refleksi, aşil tendonundan alınan bir reflekstir ve S1 kökünü gösterir.",
+      "D": "Dizartri ve afazi konuşma bozukluklarıdır. Hasta konuştuğu anda hemen fark edilir ve ilk izlenimin parçası olur (sayfa 5). Afazi, dil kullanımının bozulmasıdır ve konuşmadan hemen fark edilir.",
+      "E": "Piramidal ve serebellar bulgular diplopi ve vertigo ile birlikte beyin sapı lezyonunu gösterir ve muayeneyle belirlenir (sayfa 6). Seviye veren duyu kaybı ve sfinkter bozukluğu ise omurilik lezyonunun bulgularıdır."
+     },
+     "bilgi": [
+      24
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 5,
+      "alinti": "Dizartri, afazi hemen farkedilir"
+     }
+    },
+    {
+     "id": "k2-01-norolojik-hastaya-yaklasim-q25",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Parkinson hastasında maske yüz ve monoton konuşmaya yürüyüşte hangi bulgu eşlik eder?",
+     "secenekler": {
+      "A": "Karın önde ördek yürüyüşü",
+      "B": "Bacağın yürürken oraklanması",
+      "C": "Kolun gövdeye yapışık olması",
+      "D": "Gövdede seviye veren duyu kaybı",
+      "E": "Yürürken kolların sallanmaması"
+     },
+     "dogru": "E",
+     "aciklama": "Parkinson hastalığında maske yüz ve monoton konuşmaya yürürken kolların sallanmaması eşlik eder (sayfa 5).",
+     "sik_aciklamalari": {
+      "A": "Karın önde, ördeğe benzer badi-badi yürüyüş kas distrofisinin bulgusudur ve Parkinson hastalığında görülmez (sayfa 5). Parkinson hastasının yürüyüşünde öne çıkan, kolların sallanmaması ve vücudun fleksör postürüdür.",
+      "B": "Bacağın oraklanması hemiplejik yürüyüşün bulgusudur. Parkinson hastasında yürürken kol sallamama öne çıkar (sayfa 5). Hemiplejik yürüyüşte kol gövdeye yapışık kalır ve bacak yarım daire çizerek öne taşınır.",
+      "C": "Kolun gövdeye yapışık olması hemiplejik hastada görülen bir duruştur. Parkinson hastasında bulgu kol sallamama ve fleksör postürdür (sayfa 5). Parkinson hastasının duruşunu ise fleksör postür ve yürürken kol sallamama belirler.",
+      "D": "Gövdede seviye veren duyu kaybı parapleji ve sfinkter bozukluğuyla birlikte medulla spinalis lezyonunu gösterir. Parkinson hastasının görünümüne ait değildir (sayfa 6).",
+      "E": "Parkinson hastalığında yürürken kollar sallanmaz ve vücut fleksör postürdedir. Bu bulgu maske yüz ve monoton konuşmayla birlikte tabloyu tamamlar (sayfa 5)."
+     },
+     "bilgi": [
+      22
+     ],
+     "benzer_cikmis": [
+      "804e82ac79db"
+     ],
+     "kanit": {
+      "sayfa": 5,
+      "alinti": "Parkinson H. maske yüz, monoton konuşma, salya akması, yürürken kollarını sallamaması, vücudun fleksör postürü"
+     }
+    },
+    {
+     "id": "k2-01-norolojik-hastaya-yaklasim-q24",
+     "kazanim": 4,
+     "zorluk": "zor",
+     "soru": "Aşağıdaki karşılaştırmalardan hangisi hemiplejik hasta ile Parkinson hastasını doğru ayırır?",
+     "secenekler": {
+      "A": "Hemiplejide maske yüz görülür; Parkinson'da bacak oraklanır",
+      "B": "Hemiplejide kol gövdeye yapışık ve bacak oraklanır; Parkinson'da maske yüz ve kol sallamama görülür",
+      "C": "Her ikisinde de karın önde ördek yürüyüşü görülür",
+      "D": "Parkinson'da kol gövdeye yapışıktır; hemiplejide fleksör postür vardır",
+      "E": "İkisinde de salya akması ve monoton konuşma ilk izlenimin parçasıdır"
+     },
+     "dogru": "B",
+     "aciklama": "Hemiplejik hastada kol gövdeye yapışık, bacak oraklanır; Parkinson hastalığında maske yüz ve kol sallamama görülür (sayfa 5).",
+     "sik_aciklamalari": {
+      "A": "Maske yüz Parkinson hastalığının bulgusudur, bacak oraklama ise hemiplejik yürüyüşün. Eşleme ters kurulmuştur (sayfa 5). Hemipleji, vücudun bir yarısındaki kasların felcidir ve dakika veya saat içinde akut başlayabilir.",
+      "B": "Hemiplejik hastada kol gövdeye yapışıktır ve bacak yürürken oraklanır; Parkinson hastalığında maske yüz, monoton konuşma ve yürürken kolları sallamama görülür. İki görünüm bu bulgularla ayrılır (sayfa 5).",
+      "C": "Ördeğe benzer badi-badi yürüyüşü kas distrofisinin bulgusudur. Ne hemiplejik hastada ne Parkinson hastasında beklenir (sayfa 5). Hemiplejik hastada bacak oraklanır, Parkinson hastasında kollar sallanmaz; ördek yürüyüşü ise kas distrofisini düşündürür.",
+      "D": "Kolun gövdeye yapışık olması hemiplejik hastanın, fleksör postür ise Parkinson hastalığının bulgusudur. Eşleme ters kurulmuştur (sayfa 5). Hemipleji, vücudun bir yarısındaki kasların felcidir ve dakika veya saat içinde akut başlayabilir.",
+      "E": "Salya akması ve monoton konuşma Parkinson hastalığının görünümüdür. Hemiplejik hastanın ilk izlenimi kol ve bacak duruşuyla ayrılır (sayfa 5). Hemiplejik hastayı Parkinson hastasından kolun gövdeye yapışıklığı ve bacağın oraklanması ayırır."
+     },
+     "bilgi": [
+      21,
+      22
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 5,
+      "alinti": "Hemiplejik kolun gövdeye yapışık olması, yürürken bacağını oraklaması"
+     }
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "804e82ac79db",
+     "soru": "Nöroloji\n\nNÖROLOJİK HASTAYA YAKLAŞIM\nHastanın muayene odasına girerken yürümesinin yavaş olması, yürürken kollarını sallamaması, maske yüz olması, monoton konuşması hangi nörolojik hastalığı düşündürür?",
+     "secenekler": {
+      "A": "MS",
+      "B": "Primer başağrısı",
+      "C": "Polinöropati",
+      "D": "Parkinson hastalığı",
+      "E": "Epilepsi"
+     },
+     "cevap": "D"
+    },
+    {
+     "id": "5e72fc758888",
+     "soru": "Yürüyüşünün yavaş olması, yürürken kolları sallamaması, maske yüz olması, monoton konuşması hangi nörolojik hastalığı düşündürür?",
+     "secenekler": {
+      "A": "MS",
+      "B": "Primer başağrısı",
+      "C": "Polinöropati",
+      "D": "Parkinson hastalığı",
+      "E": "Epilepsi"
+     },
+     "cevap": "D"
+    }
+   ]
+  },
+  {
+   "no": 5,
+   "metin": "Bulguların birleşmesiyle oluşan sendromdan lezyonun yerini (sol hemisfer, beyin sapı, medulla spinalis, birinci sakral radiks) belirler.",
+   "sorular": [
+    {
+     "id": "k2-01-norolojik-hastaya-yaklasim-q26",
+     "kazanim": 5,
+     "zorluk": "kolay",
+     "soru": "Afazi ile sağ hemipleji birlikte bulunan hastada lezyon nerededir?",
+     "secenekler": {
+      "A": "Sağ hemisfer",
+      "B": "Beyin sapı",
+      "C": "Sol hemisfer",
+      "D": "Medulla spinalis",
+      "E": "Birinci sakral radiks (S1)"
+     },
+     "dogru": "C",
+     "aciklama": "Motor yollar çaprazlaştığı için sağ yarımın felci sol hemisfer lezyonunu gösterir; afazi de konuşma alanının bu hemisferde olduğunu doğrular.",
+     "sik_aciklamalari": {
+      "A": "Sağ hemisfer, vücudun sol yarımının hareketini yöneten motor yolları taşır. Motor yollar çaprazlaştığı ve konuşma alanı sol hemisferde bulunduğu için afazi ile sağ hemiplejinin birlikteliği bu bölgeyi göstermez.",
+      "B": "Beyin sapı, diplopi, vertigo, piramidal bulgu ve serebellar bulgunun birlikte bulunduğu tablonun lezyon yeridir. Bu bölgenin lezyonu dört bulgunun birlikteliğiyle tanınır; bunlar bir arada bulunmadıkça lokalizasyon beyin sapına yönlendirilmez.",
+      "C": "Sol hemisfer, konuşma alanını ve sağ vücut yarımının hareketini yöneten piramidal yolu içerir. Motor yollar çaprazlaştığı için sağ yarımın felci sol hemisfer lezyonunu gösterir; afazi de konuşma alanının bu hemisferde olduğunu doğrular.",
+      "D": "Medulla spinalis, omuriliktir ve lezyonu paraplejiyle, gövdede seviye veren duyu kaybıyla ve sfinkter bozukluğuyla kendini gösterir. Bu üçlü bir arada bulunmadıkça medulla spinalis lezyonu düşünülmez; afazi ya da diplopi gibi bulgular daha üst bölgeleri işaret eder.",
+      "E": "Birinci sakral radiks (S1), omurilikten çıkan bir sinir köküdür ve aşil refleksi ile incelenir. Tutulumu bel ve bacak arkasına vuran ağrı ile aşil refleksinin alınamamasından anlaşılır; hemisfer ve omurilik lezyonlarında bu ikili görülmez."
+     },
+     "bilgi": [
+      27
+     ],
+     "benzer_cikmis": [
+      "9d2e0b3d81c4"
+     ],
+     "kanit": {
+      "sayfa": 6,
+      "alinti": "Afazi+ sağ hemipleji piramidal yolu+ konuşma alanı. Sol hemisferde lezyon"
+     }
+    },
+    {
+     "id": "k2-01-norolojik-hastaya-yaklasim-q31",
+     "kazanim": 5,
+     "zorluk": "kolay",
+     "soru": "Afazi ile birlikte bulunduğunda sol hemisfer lezyonunu düşündüren bulgu hangisidir?",
+     "secenekler": {
+      "A": "Diplopi",
+      "B": "Gövdede seviye veren duyu kaybı",
+      "C": "Sağ hemipleji",
+      "D": "Aşil refleksinin alınamaması",
+      "E": "Sfinkter bozukluğu"
+     },
+     "dogru": "C",
+     "aciklama": "Afazi ile sağ hemiplejinin birlikteliği konuşma alanının ve piramidal yolun tutulduğunu, yani sol hemisfer lezyonunu gösterir.",
+     "sik_aciklamalari": {
+      "A": "Diplopi, çift görmedir ve vertigo, piramidal bulgu ve serebellar bulguyla birlikte beyin sapı lezyonunu düşündürür. Afazi ile birlikte bulunan bir bulgu olarak sol hemisferi göstermez; lokalizasyonu beyin sapına yöneltir.",
+      "B": "Gövdede seviye veren duyu kaybı, duyunun belli bir düzeyden itibaren kaybolmasıdır. Parapleji ve sfinkter bozukluğuyla birlikte medulla spinalis lezyonunu gösterir; afazi ile sol hemisferi ayırt etmez.",
+      "C": "Sağ hemipleji, vücudun sağ yarısındaki kasların felcidir ve motor yollar çaprazlaştığı için sol hemisfer lezyonunda görülür. Afazi ile sağ hemiplejinin birlikteliği konuşma alanının ve piramidal yolun tutulduğunu, yani sol hemisfer lezyonunu gösterir.",
+      "D": "Aşil refleksi, aşil tendonundan alınan bir reflekstir ve S1 kökünü gösterir. Alınamaması bel ve bacak arkasına vuran ağrıyla birlikte birinci sakral radiksi gösterir; hemisfer ya da beyin sapı lezyonu için kullanılmaz.",
+      "E": "Sfinkter bozukluğu, idrar ve dışkı kontrolünü sağlayan kasların işlevinin bozulmasıdır. Parapleji ve seviye veren duyu kaybıyla birlikte medulla spinalisi gösterir; bel ve bacak arkası ağrısıyla birlikte S1 radiks tutulumunu işaret etmez."
+     },
+     "bilgi": [
+      27
+     ],
+     "benzer_cikmis": [
+      "9d2e0b3d81c4"
+     ],
+     "kanit": {
+      "sayfa": 6,
+      "alinti": "Afazi+ sağ hemipleji piramidal yolu+ konuşma alanı. Sol hemisferde lezyon"
+     }
+    },
+    {
+     "id": "k2-01-norolojik-hastaya-yaklasim-q27",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Aşağıdaki bulgu - lezyon yeri eşlemelerinden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Diplopi, vertigo, piramidal ve serebellar bulgu - beyin sapı",
+      "B": "Afazi ve sağ hemipleji - beyin sapı",
+      "C": "Parapleji ve sfinkter bozukluğu - sol hemisfer",
+      "D": "Aşil refleksi kaybı - medulla spinalis",
+      "E": "Seviye veren duyu kaybı - birinci sakral radiks"
+     },
+     "dogru": "A",
+     "aciklama": "Diplopi, vertigo, piramidal ve serebellar bulgu birlikteliği beyin sapı lezyonunu gösterir (sayfa 6).",
+     "sik_aciklamalari": {
+      "A": "Bu dört bulgunun birlikteliği lokalizasyonu tek bir bölgeye, beyin sapına daraltır (sayfa 6). Beyin sapı, diplopi, vertigo, piramidal bulgu ve serebellar bulgunun birlikte bulunduğu tablonun lezyon yeridir.",
+      "B": "Afazi konuşma alanının, sağ hemipleji piramidal yolun tutulduğunu gösterir. Motor yollar çaprazlaştığı için lezyon sol hemisferdedir (sayfa 6). Hemipleji, vücudun bir yarısındaki kasların felcidir ve dakika veya saat içinde akut başlayabilir.",
+      "C": "Parapleji ve sfinkter bozukluğu, gövdede seviye veren duyu kaybıyla birlikte omuriliğin, yani medulla spinalisin lezyonunu gösterir (sayfa 6). Sol hemisfer, konuşma alanını ve sağ vücut yarımının hareketini yöneten piramidal yolu içerir.",
+      "D": "Aşil refleksinin alınamaması bel ve bacak arkası ağrısıyla birlikte birinci sakral radiks tutulumunu gösterir. Omurilik lezyonu paraplejiyle tanınır (sayfa 6).",
+      "E": "Gövdede seviye veren duyu kaybı parapleji ve sfinkter bozukluğuyla birlikte medulla spinalisi gösterir. Radiks tutulumu bel ve bacak ağrısıyla anlaşılır (sayfa 6)."
+     },
+     "bilgi": [
+      28
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 6,
+      "alinti": "Diplopi+ vertigo+ piramidal bulgu+serebellar bulgu lezyon beyin sapında"
+     }
+    },
+    {
+     "id": "k2-01-norolojik-hastaya-yaklasim-q28",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Parapleji, gövdede seviye veren duyu kaybı ve sfinkter bozukluğu birlikte bulunan hastada lezyon nerededir?",
+     "secenekler": {
+      "A": "Beyin sapı",
+      "B": "Sol hemisfer",
+      "C": "Birinci sakral radiks (S1)",
+      "D": "Medulla spinalis",
+      "E": "Sağ hemisfer"
+     },
+     "dogru": "D",
+     "aciklama": "Paraplejiye gövdede seviye veren duyu kaybı ve sfinkter bozukluğunun eşlik etmesi lezyonu medulla spinalise yerleştirir.",
+     "sik_aciklamalari": {
+      "A": "Beyin sapı, diplopi, vertigo, piramidal bulgu ve serebellar bulgunun birlikte bulunduğu tablonun lezyon yeridir. Bu bölgenin lezyonu dört bulgunun birlikteliğiyle tanınır; bunlar bir arada bulunmadıkça lokalizasyon beyin sapına yönlendirilmez.",
+      "B": "Sol hemisfer, konuşma alanını ve sağ vücut yarımının hareketini yöneten piramidal yolu içerir. Lezyonu afazi ile sağ hemiplejinin birlikteliğiyle anlaşılır; bu iki bulgu bir arada bulunmadıkça sol hemisfer lezyonu düşünülmez.",
+      "C": "Birinci sakral radiks (S1), omurilikten çıkan bir sinir köküdür ve aşil refleksi ile incelenir. Tutulumu bel ve bacak arkasına vuran ağrı ile aşil refleksinin alınamamasından anlaşılır; hemisfer ve omurilik lezyonlarında bu ikili görülmez.",
+      "D": "Medulla spinalis, omuriliktir ve lezyonu paraplejiyle, gövdede seviye veren duyu kaybıyla ve sfinkter bozukluğuyla kendini gösterir. Paraplejiye gövdede seviye veren duyu kaybı ve sfinkter bozukluğunun eşlik etmesi lezyonu medulla spinalise yerleştirir.",
+      "E": "Sağ hemisfer, vücudun sol yarımının hareketini yöneten motor yolları taşır. Motor yollar çaprazlaştığı ve konuşma alanı sol hemisferde bulunduğu için afazi ile sağ hemiplejinin birlikteliği bu bölgeyi göstermez."
+     },
+     "bilgi": [
+      29
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 6,
+      "alinti": "Parapleji+ gövdede seviye veren duyu kaybı+ sfinkter boz. Medulla spinalis"
+     }
+    },
+    {
+     "id": "k2-01-norolojik-hastaya-yaklasim-q29",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Aşil refleksi ile hangi kök seviyesi incelenir?",
+     "secenekler": {
+      "A": "Medulla spinalis",
+      "B": "Birinci sakral radiks (S1)",
+      "C": "Beyin sapı",
+      "D": "Sol hemisfer",
+      "E": "Sağ hemisfer"
+     },
+     "dogru": "B",
+     "aciklama": "Bel ve bacak arkasına vuran ağrıya aşil refleksinin alınamaması eşlik ettiğinde lezyon bu köke yerleştirilir.",
+     "sik_aciklamalari": {
+      "A": "Medulla spinalis, omuriliktir ve lezyonu paraplejiyle, gövdede seviye veren duyu kaybıyla ve sfinkter bozukluğuyla kendini gösterir. Bu üçlü bir arada bulunmadıkça medulla spinalis lezyonu düşünülmez; afazi ya da diplopi gibi bulgular daha üst bölgeleri işaret eder.",
+      "B": "Birinci sakral radiks (S1), omurilikten çıkan bir sinir köküdür ve aşil refleksi ile incelenir. Bel ve bacak arkasına vuran ağrıya aşil refleksinin alınamaması eşlik ettiğinde lezyon bu köke yerleştirilir.",
+      "C": "Beyin sapı, diplopi, vertigo, piramidal bulgu ve serebellar bulgunun birlikte bulunduğu tablonun lezyon yeridir. Bu bölgenin lezyonu dört bulgunun birlikteliğiyle tanınır; bunlar bir arada bulunmadıkça lokalizasyon beyin sapına yönlendirilmez.",
+      "D": "Sol hemisfer, konuşma alanını ve sağ vücut yarımının hareketini yöneten piramidal yolu içerir. Lezyonu afazi ile sağ hemiplejinin birlikteliğiyle anlaşılır; bu iki bulgu bir arada bulunmadıkça sol hemisfer lezyonu düşünülmez.",
+      "E": "Sağ hemisfer, vücudun sol yarımının hareketini yöneten motor yolları taşır. Motor yollar çaprazlaştığı ve konuşma alanı sol hemisferde bulunduğu için afazi ile sağ hemiplejinin birlikteliği bu bölgeyi göstermez."
+     },
+     "bilgi": [
+      30
+     ],
+     "benzer_cikmis": [
+      "past-1790877037327-292692"
+     ],
+     "kanit": {
+      "sayfa": 6,
+      "alinti": "Bel ve bacak arkasına vuran ağrı+ aşil refleksi alınamıyorsa 1. sakral radiks"
+     }
+    },
+    {
+     "id": "k2-01-norolojik-hastaya-yaklasim-q32",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Parapleji ile birlikte medulla spinalis lezyonunu gösteren bulgu çifti hangisidir?",
+     "secenekler": {
+      "A": "Gövdede seviye veren duyu kaybı ve sfinkter bozukluğu",
+      "B": "Afazi ve sağ hemipleji",
+      "C": "Diplopi ve vertigo",
+      "D": "Bel ve bacak arkası ağrısı ile aşil refleksi kaybı",
+      "E": "Piramidal ve serebellar bulgu"
+     },
+     "dogru": "A",
+     "aciklama": "Paraplejiye gövdede seviye veren duyu kaybı ve sfinkter bozukluğu eşlik ettiğinde lezyon medulla spinalistedir.",
+     "sik_aciklamalari": {
+      "A": "Gövdede seviye veren duyu kaybı ile sfinkter bozukluğu, paraplejiyle birlikte omurilik tutulumunun bulgularıdır. Paraplejiye gövdede seviye veren duyu kaybı ve sfinkter bozukluğu eşlik ettiğinde lezyon medulla spinalistedir.",
+      "B": "Afazi ve sağ hemipleji, konuşma alanı ile piramidal yolun birlikte tutulduğu tablonun bulgularıdır. Bu çift sol hemisfer lezyonunu gösterir; paraplejiyle birlikte medulla spinalis lokalizasyonu için kullanılmaz.",
+      "C": "Diplopi çift görme, vertigo baş dönmesidir; piramidal ve serebellar bulguyla birlikte beyin sapı lezyonunu gösterir. Paraplejiyle ve sfinkter bozukluğuyla birlikte bulunmadığından medulla spinalisi göstermez; lokalizasyonu beyin sapına yöneltir.",
+      "D": "Bel ve bacak arkasına vuran ağrı ile aşil refleksinin alınamaması birinci sakral radiks tutulumunun bulgularıdır. Bu çift kök düzeyini gösterir; paraplejisiz bulunduğundan medulla spinalis lezyonu olarak yorumlanmaz.",
+      "E": "Piramidal ve serebellar bulgular, diplopi ve vertigoyla birlikte beyin sapı lezyonunun bulgularıdır. Tek başlarına seviye veren duyu kaybı ya da sfinkter bozukluğu içermediğinden medulla spinalisi göstermez."
+     },
+     "bilgi": [
+      29
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 6,
+      "alinti": "Parapleji+ gövdede seviye veren duyu kaybı+ sfinkter boz. Medulla spinalis"
+     }
+    },
+    {
+     "id": "k2-01-norolojik-hastaya-yaklasim-q33",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Bulguların bir araya gelmesiyle ortaya çıkan ve hemipleji ya da parapleji gibi adlar alan yapı nedir?",
+     "secenekler": {
+      "A": "Etyoloji",
+      "B": "Doğal gidiş",
+      "C": "Başlangıç şekli",
+      "D": "Sendrom",
+      "E": "Laboratuvar bulgusu"
+     },
+     "dogru": "D",
+     "aciklama": "Bulguların bir araya gelmesiyle sendrom ortaya çıkar (sayfa 6).",
+     "sik_aciklamalari": {
+      "A": "Etyoloji hastalığın nedenidir ve öykü ile lezyonun natüründen çıkarılır. Bulguların birleşimine verilen ad değildir (sayfa 7). Etyoloji, öykü ve hasta özellikleriyle lezyonun natürü sorgulanırken belirlenir.",
+      "B": "Doğal gidiş hastalığın kendi seyridir ve tanıya, tedavi sonucunun yorumuna yardım eder. Bulguların birleşimi anlamına gelmez (sayfa 3). Doğal gidiş, tanıya yardımcı olduğu gibi tedaviye yanıtın yorumlanmasında da kullanılır.",
+      "C": "Başlangıç şekli belirtilerin yerleşme hızıdır (akut, sinsi, dalgalı). Bulgu kümesinin adı değildir (sayfa 3). Akut, sinsi ve dalgalı olmak üzere üç örüntüsü vardır.",
+      "D": "Birlikte görülen bulgular topluluğudur. Hemipleji sendromu ve parapleji sendromu dersteki örneklerdir ve lezyonun yerinin bulunmasını sağlar (sayfa 6). Sendromu oluşturan bulgular birlikte değerlendirildiğinde tek bir bölgeye karşılık gelebilir.",
+      "E": "Laboratuvar bulgusu biyokimya, BOS gibi incelemelerden gelen sonuçtur. Muayene bulgularının bir araya gelmesiyle oluşan sendrom bu değildir (sayfa 8). Sendromu oluşturan ise hastanın başında saptanan muayene bulgularıdır."
+     },
+     "bilgi": [
+      25,
+      26
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 6,
+      "alinti": "Elde edilen bulguların bir araya gelmesiyle bir sendrom ortaya çıkar. Hemipleji send, parapleji sendromu g.b"
+     }
+    },
+    {
+     "id": "k2-01-norolojik-hastaya-yaklasim-q34",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Bel ve bacak arkasına vuran ağrıya hangi muayene bulgusu eşlik ederse birinci sakral radiks (S1) tutulumu düşünülür?",
+     "secenekler": {
+      "A": "Afazi",
+      "B": "Aşil refleksinin alınamaması",
+      "C": "Diplopi",
+      "D": "Sfinkter bozukluğu",
+      "E": "Maske yüz"
+     },
+     "dogru": "B",
+     "aciklama": "Aşil refleksinin alınamaması, bel ve bacak arkasına vuran ağrıyla birlikte S1 radiks tutulumunu gösterir.",
+     "sik_aciklamalari": {
+      "A": "Afazi, dil kullanımının bozulmasıdır ve konuşmadan hemen fark edilir. Sağ hemiplejiyle birlikte bulunduğunda konuşma alanının sol hemisferde olması nedeniyle lezyonu sol hemisfere yerleştirir; tek başına radiks ya da omurilik bulgusu değildir.",
+      "B": "Aşil refleksi, aşil tendonundan alınan bir reflekstir ve S1 kökünü gösterir. Aşil refleksinin alınamaması, bel ve bacak arkasına vuran ağrıyla birlikte S1 radiks tutulumunu gösterir.",
+      "C": "Diplopi, çift görmedir ve vertigo, piramidal bulgu ve serebellar bulguyla birlikte beyin sapı lezyonunu düşündürür. Afazi ile birlikte bulunan bir bulgu olarak sol hemisferi göstermez; lokalizasyonu beyin sapına yöneltir.",
+      "D": "Sfinkter bozukluğu, idrar ve dışkı kontrolünü sağlayan kasların işlevinin bozulmasıdır. Parapleji ve seviye veren duyu kaybıyla birlikte medulla spinalisi gösterir; bel ve bacak arkası ağrısıyla birlikte S1 radiks tutulumunu işaret etmez.",
+      "E": "Maske yüz, yüzün donuk, mimiksiz görünmesidir ve Parkinson hastalığının ilk izlenimde görülen bulgularındandır. Parkinson hastalığının görünümünü tamamlar; radiks tutulumunu belirleyen bir muayene bulgusu değildir."
+     },
+     "bilgi": [
+      30
+     ],
+     "benzer_cikmis": [
+      "past-1790877037327-292692"
+     ],
+     "kanit": {
+      "sayfa": 6,
+      "alinti": "Bel ve bacak arkasına vuran ağrı+ aşil refleksi alınamıyorsa 1. sakral radiks"
+     }
+    },
+    {
+     "id": "k2-01-norolojik-hastaya-yaklasim-q30",
+     "kazanim": 5,
+     "zorluk": "zor",
+     "soru": "Lokalizasyonla ilgili aşağıdaki ifadelerden hangisi YANLIŞTIR?",
+     "secenekler": {
+      "A": "Afazi ile sağ hemipleji sol hemisfer lezyonunu gösterir",
+      "B": "Bel ve bacak arkasına vuran ağrı ile aşil refleksinin alınamaması birinci sakral radiksi gösterir",
+      "C": "Diplopi, vertigo, piramidal ve serebellar bulgu beyin sapı lezyonunu gösterir",
+      "D": "Bulgular birbirini tamamlayarak yalnız bir bölgeye karşılık gelebilir",
+      "E": "Gövdede seviye veren duyu kaybı beyin sapı lezyonunu gösterir"
+     },
+     "dogru": "E",
+     "aciklama": "Seviye veren duyu kaybı medulla spinalis lezyonunu gösterir; diğer ifadeler dersin lokalizasyon bilgilerini doğru aktarır (sayfa 6).",
+     "sik_aciklamalari": {
+      "A": "Afazi konuşma alanının, sağ hemipleji piramidal yolun tutulduğunu gösterir; motor yollar çaprazlaştığı ve konuşma alanı sol hemisferde bulunduğu için lezyon sol hemisferdedir. İfade doğrudur (sayfa 6).",
+      "B": "Bel ve bacak arkasına vuran ağrıya aşil refleksinin alınamaması eşlik ediyorsa lezyon birinci sakral radikstedir; aşil refleksi bu kökün muayenesidir. İfade doğrudur (sayfa 6).",
+      "C": "Diplopi, vertigo, piramidal ve serebellar bulgunun bir arada bulunması lezyonu beyin sapına yerleştirir. Bu dört bulgunun birlikteliği ifadenin dayanağıdır; ifade doğrudur (sayfa 6).",
+      "D": "Bulgular bir araya geldiğinde sendrom oluşur ve bazen yalnız tek bir bölgeye karşılık gelir; böylece lokalizasyon daralır. İfade dersin ilkesidir (sayfa 6).",
+      "E": "Bu ifade yanlıştır: gövdede seviye veren duyu kaybı, parapleji ve sfinkter bozukluğuyla birlikte medulla spinalis lezyonunu gösterir. Beyin sapı için dört bulgunun birlikteliği gerekir (sayfa 6)."
+     },
+     "bilgi": [
+      25,
+      26,
+      29
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 6,
+      "alinti": "Parapleji+ gövdede seviye veren duyu kaybı+ sfinkter boz. Medulla spinalis"
+     }
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "9d2e0b3d81c4",
+     "soru": "No\nNöroloji\nNöroloji\nFelçler\nMuayenede sağ\nvücut yarımında\ngüçsüzlük ve derin\ntendon\nreflekslerinde artış\nsaptadığınız\nhastada lezyon\nhangiisinde olamaz?",
+     "secenekler": {
+      "A": "Beyin sapı",
+      "B": "Servikal spinal kord",
+      "C": "Sol serebral hemisfer",
+      "D": "Sol korona radiata",
+      "E": "Dorsal spinal kord"
+     },
+     "cevap": "E"
+    },
+    {
+     "id": "past-1790877037327-292692",
+     "soru": "Aşil refleksi ile hangi kök seviyesi incelenebilir?",
+     "secenekler": {
+      "A": "S1",
+      "B": "L1",
+      "C": "L4",
+      "D": "L3",
+      "E": "C7"
+     },
+     "cevap": "A"
+    }
+   ]
+  },
+  {
+   "no": 6,
+   "metin": "Hemipleji, beyin sapı tablosu ve parapleji için hasta özelliklerine ve gidişe göre lezyonun natürünü (damarsal, YKL, metastaz, MS, SVO, bası, post-infeksiyöz miyelit) ayırır.",
+   "sorular": [
+    {
+     "id": "k2-01-norolojik-hastaya-yaklasim-q35",
+     "kazanim": 6,
+     "zorluk": "kolay",
+     "soru": "Hipertansiyon ve diyabeti olan hemiplejik hastada ilk sırada hangi etyoloji düşünülür?",
+     "secenekler": {
+      "A": "Yer kaplayan lezyon (YKL)",
+      "B": "Metastaz",
+      "C": "Post-infeksiyöz miyelit",
+      "D": "MS",
+      "E": "Damarsal etyoloji"
+     },
+     "dogru": "E",
+     "aciklama": "Hipertansiyon ve diyabet damar hastalığına zemin hazırlar; bu risk etkenleriyle gelen hemiplejide önce damarsal neden düşünülür.",
+     "sik_aciklamalari": {
+      "A": "Yer kaplayan lezyon, bulunduğu yerde yer kaplayarak belirti veren bir süreçtir. Yavaş yerleşme ve giderek ağırlaşma öyküsüyle akla gelir; dakikalar içinde gelişen ya da düzelen epizodlarla seyreden tablolar bu nedeni göstermez.",
+      "B": "Metastaz, başka bir yerdeki malign tümörün yayılmasıdır. Bilinen malignite öyküsü olmayan hemiplejik hastada ilk akla gelen neden değildir; risk etkenleri varsa önce damarsal neden düşünülür.",
+      "C": "Post-infeksiyöz miyelit, enfeksiyondan ya da aşıdan sonra gelişen bir omurilik tutulumudur. Tanıyı aşı ya da viral enfeksiyon öyküsü koydurur; böyle bir öykü olmayan sinsi ve ilerleyici paraplejide medulla spinalis basısı akla gelir.",
+      "D": "MS, sinir sisteminin farklı bölgelerini etkileyip düzelen epizodlarla seyreden ve dalgalı gidişin örneği olan hastalıktır. Öyküsü genç hastada kısa sürede gelişen, düzelen çok bölgeli epizodlardır; yaşlılık ve ateroskleroz öyküsü bu tanıdan çok damarsal nedeni düşündürür.",
+      "E": "Damarsal etyoloji, damar hastalığına bağlı bir nedeni anlatır. Hipertansiyon ve diyabet damar hastalığına zemin hazırlar; bu risk etkenleriyle gelen hemiplejide önce damarsal neden düşünülür."
+     },
+     "bilgi": [
+      31
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 7,
+      "alinti": "HT+DM ilk sırada damarsal etyoloji"
+     }
+    },
+    {
+     "id": "k2-01-norolojik-hastaya-yaklasim-q40",
+     "kazanim": 6,
+     "zorluk": "kolay",
+     "soru": "Malignite öyküsü olan hemiplejik hastada hangi neden akla gelir?",
+     "secenekler": {
+      "A": "Damarsal etyoloji",
+      "B": "MS",
+      "C": "Post-infeksiyöz miyelit",
+      "D": "SVO",
+      "E": "Metastaz"
+     },
+     "dogru": "E",
+     "aciklama": "Hemiplejik hastada bilinen bir malignite öyküsü, nedenin metastaz olabileceğini düşündürür; bu öykü bulunmadığında metastaz ön planda düşünülmez.",
+     "sik_aciklamalari": {
+      "A": "Damarsal etyoloji, damar hastalığına bağlı bir nedeni anlatır. Hipertansiyon ve diyabet gibi risk etkenlerinin varlığında öne çıkar; yavaş ilerleyen ya da malignite öyküsü bulunan tabloda başka nedenler öncelik kazanır.",
+      "B": "MS, sinir sisteminin farklı bölgelerini etkileyip düzelen epizodlarla seyreden ve dalgalı gidişin örneği olan hastalıktır. Öyküsü genç hastada kısa sürede gelişen, düzelen çok bölgeli epizodlardır; yaşlılık ve ateroskleroz öyküsü bu tanıdan çok damarsal nedeni düşündürür.",
+      "C": "Post-infeksiyöz miyelit, enfeksiyondan ya da aşıdan sonra gelişen bir omurilik tutulumudur. Tanıyı aşı ya da viral enfeksiyon öyküsü koydurur; böyle bir öykü olmayan sinsi ve ilerleyici paraplejide medulla spinalis basısı akla gelir.",
+      "D": "SVO, serebrovasküler olaydır, yani beyin damarlarına bağlı gelişen bir olaydır. Yaşlı hasta ve ateroskleroz öyküsüyle düşünülür; genç hastadaki düzelen çok bölgeli epizodlar bu tanıya değil MS'e yönlendirir.",
+      "E": "Metastaz, başka bir yerdeki malign tümörün yayılmasıdır. Hemiplejik hastada bilinen bir malignite öyküsü, nedenin metastaz olabileceğini düşündürür; bu öykü bulunmadığında metastaz ön planda düşünülmez."
+     },
+     "bilgi": [
+      33
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 7,
+      "alinti": "yavaş yerleşmişse, giderek ağırlaşıyorsa YKL malignite öyküsü + metastaz"
+     }
+    },
+    {
+     "id": "k2-01-norolojik-hastaya-yaklasim-q36",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Genç hastada kısa zamanda gelişmiş, sinir sisteminin farklı bölgelerini etkileyip düzelen epizodlar öyküsü hangi tanıyı düşündürür?",
+     "secenekler": {
+      "A": "SVO",
+      "B": "Yer kaplayan lezyon (YKL)",
+      "C": "MS",
+      "D": "Post-infeksiyöz miyelit",
+      "E": "Medulla spinalis basısı"
+     },
+     "dogru": "C",
+     "aciklama": "Genç yaş, kısa sürede gelişim ve farklı bölgeleri tutup düzelen epizodlar birlikte MS'in öyküsünü oluşturur.",
+     "sik_aciklamalari": {
+      "A": "SVO, serebrovasküler olaydır, yani beyin damarlarına bağlı gelişen bir olaydır. Yaşlı hasta ve ateroskleroz öyküsüyle düşünülür; genç hastadaki düzelen çok bölgeli epizodlar bu tanıya değil MS'e yönlendirir.",
+      "B": "Yer kaplayan lezyon, bulunduğu yerde yer kaplayarak belirti veren bir süreçtir. Yavaş yerleşme ve giderek ağırlaşma öyküsüyle akla gelir; dakikalar içinde gelişen ya da düzelen epizodlarla seyreden tablolar bu nedeni göstermez.",
+      "C": "MS, sinir sisteminin farklı bölgelerini etkileyip düzelen epizodlarla seyreden ve dalgalı gidişin örneği olan hastalıktır. Genç yaş, kısa sürede gelişim ve farklı bölgeleri tutup düzelen epizodlar birlikte MS'in öyküsünü oluşturur.",
+      "D": "Post-infeksiyöz miyelit, enfeksiyondan ya da aşıdan sonra gelişen bir omurilik tutulumudur. Tanıyı aşı ya da viral enfeksiyon öyküsü koydurur; böyle bir öykü olmayan sinsi ve ilerleyici paraplejide medulla spinalis basısı akla gelir.",
+      "E": "Medulla spinalis basısı, omuriliğin dışarıdan bir yapı tarafından sıkıştırılmasıdır ve paraplejiye yol açar. Sinsi başlayan ve yavaş ilerleyen seyirle tanınır; aşı ya da viral enfeksiyondan sonra gelişen parapleji bu tanıdan çok post-infeksiyöz miyeliti düşündürür."
+     },
+     "bilgi": [
+      34
+     ],
+     "benzer_cikmis": [
+      "4c4eb178b88b"
+     ],
+     "kanit": {
+      "sayfa": 7,
+      "alinti": "genç hasta, kısa zamanda gelişmiş, öyküsünde sinir sisteminin farklı bölgelerinin etkilendiği epizodlar geçirip düzelmişse MS"
+     }
+    },
+    {
+     "id": "k2-01-norolojik-hastaya-yaklasim-q37",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Yaşlı hastada ateroskleroz zemininde gelişen beyin sapı tablosu hangi tanıyı düşündürür?",
+     "secenekler": {
+      "A": "SVO",
+      "B": "MS",
+      "C": "Yer kaplayan lezyon (YKL)",
+      "D": "Metastaz",
+      "E": "Post-infeksiyöz miyelit"
+     },
+     "dogru": "A",
+     "aciklama": "Yaşlı hastada ateroskleroz zemininde gelişen beyin sapı tablosu damarsal bir olay olan SVO'yu düşündürür.",
+     "sik_aciklamalari": {
+      "A": "SVO, serebrovasküler olaydır, yani beyin damarlarına bağlı gelişen bir olaydır. Yaşlı hastada ateroskleroz zemininde gelişen beyin sapı tablosu damarsal bir olay olan SVO'yu düşündürür.",
+      "B": "MS, sinir sisteminin farklı bölgelerini etkileyip düzelen epizodlarla seyreden ve dalgalı gidişin örneği olan hastalıktır. Öyküsü genç hastada kısa sürede gelişen, düzelen çok bölgeli epizodlardır; yaşlılık ve ateroskleroz öyküsü bu tanıdan çok damarsal nedeni düşündürür.",
+      "C": "Yer kaplayan lezyon, bulunduğu yerde yer kaplayarak belirti veren bir süreçtir. Yavaş yerleşme ve giderek ağırlaşma öyküsüyle akla gelir; dakikalar içinde gelişen ya da düzelen epizodlarla seyreden tablolar bu nedeni göstermez.",
+      "D": "Metastaz, başka bir yerdeki malign tümörün yayılmasıdır. Bilinen malignite öyküsü olmayan hemiplejik hastada ilk akla gelen neden değildir; risk etkenleri varsa önce damarsal neden düşünülür.",
+      "E": "Post-infeksiyöz miyelit, enfeksiyondan ya da aşıdan sonra gelişen bir omurilik tutulumudur. Tanıyı aşı ya da viral enfeksiyon öyküsü koydurur; böyle bir öykü olmayan sinsi ve ilerleyici paraplejide medulla spinalis basısı akla gelir."
+     },
+     "bilgi": [
+      35
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 7,
+      "alinti": "Yaşlı hasta+ ateroskleroz SVO"
+     }
+    },
+    {
+     "id": "k2-01-norolojik-hastaya-yaklasim-q38",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Yavaş yerleşen ve giderek ağırlaşan hemipleji hangi nedeni düşündürür?",
+     "secenekler": {
+      "A": "Damarsal etyoloji",
+      "B": "MS",
+      "C": "Post-infeksiyöz miyelit",
+      "D": "Yer kaplayan lezyon (YKL)",
+      "E": "Medulla spinalis basısı"
+     },
+     "dogru": "D",
+     "aciklama": "Yavaş yerleşen ve giderek ağırlaşan seyir, yer kaplayan bir sürecin belirtisidir ve YKL'yi düşündürür.",
+     "sik_aciklamalari": {
+      "A": "Damarsal etyoloji, damar hastalığına bağlı bir nedeni anlatır. Hipertansiyon ve diyabet gibi risk etkenlerinin varlığında öne çıkar; yavaş ilerleyen ya da malignite öyküsü bulunan tabloda başka nedenler öncelik kazanır.",
+      "B": "MS, sinir sisteminin farklı bölgelerini etkileyip düzelen epizodlarla seyreden ve dalgalı gidişin örneği olan hastalıktır. Öyküsü genç hastada kısa sürede gelişen, düzelen çok bölgeli epizodlardır; yaşlılık ve ateroskleroz öyküsü bu tanıdan çok damarsal nedeni düşündürür.",
+      "C": "Post-infeksiyöz miyelit, enfeksiyondan ya da aşıdan sonra gelişen bir omurilik tutulumudur. Tanıyı aşı ya da viral enfeksiyon öyküsü koydurur; böyle bir öykü olmayan sinsi ve ilerleyici paraplejide medulla spinalis basısı akla gelir.",
+      "D": "Yer kaplayan lezyon, bulunduğu yerde yer kaplayarak belirti veren bir süreçtir. Yavaş yerleşen ve giderek ağırlaşan seyir, yer kaplayan bir sürecin belirtisidir ve YKL'yi düşündürür.",
+      "E": "Medulla spinalis basısı, omuriliğin dışarıdan bir yapı tarafından sıkıştırılmasıdır ve paraplejiye yol açar. Sinsi başlayan ve yavaş ilerleyen seyirle tanınır; aşı ya da viral enfeksiyondan sonra gelişen parapleji bu tanıdan çok post-infeksiyöz miyeliti düşündürür."
+     },
+     "bilgi": [
+      32
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 7,
+      "alinti": "yavaş yerleşmişse, giderek ağırlaşıyorsa YKL"
+     }
+    },
+    {
+     "id": "k2-01-norolojik-hastaya-yaklasim-q41",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Aşı ya da viral enfeksiyondan sonra gelişen paraplejide hangi tanı düşünülür?",
+     "secenekler": {
+      "A": "Medulla spinalis basısı",
+      "B": "MS",
+      "C": "Post-infeksiyöz miyelit",
+      "D": "SVO",
+      "E": "Yer kaplayan lezyon (YKL)"
+     },
+     "dogru": "C",
+     "aciklama": "Aşıdan ya da viral enfeksiyondan sonra gelişen parapleji, enfeksiyon sonrası bir omurilik tutulumunu düşündürür.",
+     "sik_aciklamalari": {
+      "A": "Medulla spinalis basısı, omuriliğin dışarıdan bir yapı tarafından sıkıştırılmasıdır ve paraplejiye yol açar. Sinsi başlayan ve yavaş ilerleyen seyirle tanınır; aşı ya da viral enfeksiyondan sonra gelişen parapleji bu tanıdan çok post-infeksiyöz miyeliti düşündürür.",
+      "B": "MS, sinir sisteminin farklı bölgelerini etkileyip düzelen epizodlarla seyreden ve dalgalı gidişin örneği olan hastalıktır. Öyküsü genç hastada kısa sürede gelişen, düzelen çok bölgeli epizodlardır; yaşlılık ve ateroskleroz öyküsü bu tanıdan çok damarsal nedeni düşündürür.",
+      "C": "Post-infeksiyöz miyelit, enfeksiyondan ya da aşıdan sonra gelişen bir omurilik tutulumudur. Aşıdan ya da viral enfeksiyondan sonra gelişen parapleji, enfeksiyon sonrası bir omurilik tutulumunu düşündürür.",
+      "D": "SVO, serebrovasküler olaydır, yani beyin damarlarına bağlı gelişen bir olaydır. Yaşlı hasta ve ateroskleroz öyküsüyle düşünülür; genç hastadaki düzelen çok bölgeli epizodlar bu tanıya değil MS'e yönlendirir.",
+      "E": "Yer kaplayan lezyon, bulunduğu yerde yer kaplayarak belirti veren bir süreçtir. Yavaş yerleşme ve giderek ağırlaşma öyküsüyle akla gelir; dakikalar içinde gelişen ya da düzelen epizodlarla seyreden tablolar bu nedeni göstermez."
+     },
+     "bilgi": [
+      37
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 7,
+      "alinti": "aşı ya da viral enf + post-infeksiyöz miyelit"
+     }
+    },
+    {
+     "id": "k2-01-norolojik-hastaya-yaklasim-q42",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Beyin sapı lokalizasyonlu bir hastada MS ile SVO'yu ayıran öykü özelliği hangisidir?",
+     "secenekler": {
+      "A": "Genç yaş ve düzelen çok bölgeli epizodlar MS'i; yaşlı yaş ve ateroskleroz SVO'yu gösterir",
+      "B": "Genç yaş SVO'yu, yaşlı yaş MS'i gösterir",
+      "C": "Malignite öyküsü MS'i, HT ve DM SVO'yu gösterir",
+      "D": "Sinsi ilerleyici seyir MS'i, aşı öyküsü SVO'yu gösterir",
+      "E": "İkisi de yalnız genç hastada görülür"
+     },
+     "dogru": "A",
+     "aciklama": "Genç yaş ve düzelen çok bölgeli epizodlar MS'i, yaşlı yaş ve ateroskleroz SVO'yu düşündürür (sayfa 7).",
+     "sik_aciklamalari": {
+      "A": "Genç hastada kısa sürede gelişen ve farklı bölgeleri tutup düzelen epizodlar MS'in, yaşlı hastada ateroskleroz ise damarsal bir olay olan SVO'nun öyküsüdür (sayfa 7). MS, sinir sisteminin farklı bölgelerini etkileyip düzelen epizodlarla seyreden ve dalgalı gidişin örneği olan hastalıktır.",
+      "B": "Eşleme ters kurulmuştur: yaşlı hastada ateroskleroz SVO'yu, genç hastada düzelen çok bölgeli epizodlar MS'i düşündürür (sayfa 7). MS, sinir sisteminin farklı bölgelerini etkileyip düzelen epizodlarla seyreden ve dalgalı gidişin örneği olan hastalıktır.",
+      "C": "Malignite öyküsü hemiplejide metastazı, HT ve DM damarsal etyolojiyi düşündürür. Beyin sapında MS ile SVO'yu ayıran yaş ve gidiştir (sayfa 7).",
+      "D": "Sinsi ilerleyici seyir paraplejide medulla spinalis basısını, aşı öyküsü post-infeksiyöz miyeliti düşündürür. MS ve SVO bu öykülerle ayrılmaz (sayfa 7).",
+      "E": "SVO derste yaşlı ve aterosklerozlu hastayla eşleştirilir; MS ise genç hastayla. İkisinin aynı yaş grubunda olduğu söylenmez (sayfa 7). Beyin sapı lokalizasyonunda ayırıcı tanıyı yaş, ateroskleroz ve düzelen epizodlar öyküsü belirler."
+     },
+     "bilgi": [
+      34,
+      35
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 7,
+      "alinti": "genç hasta, kısa zamanda gelişmiş, öyküsünde sinir sisteminin farklı bölgelerinin etkilendiği epizodlar geçirip düzelmişse MS"
+     }
+    },
+    {
+     "id": "k2-01-norolojik-hastaya-yaklasim-q39",
+     "kazanim": 6,
+     "zorluk": "zor",
+     "soru": "Paraplejili hastalarda öykü ile olası neden eşlemesi aşağıdakilerden hangisinde doğrudur?",
+     "secenekler": {
+      "A": "Aşı sonrası gelişim - medulla spinalis basısı",
+      "B": "Sinsi başlangıç ve ilerleyici seyir - medulla spinalis basısı",
+      "C": "Sinsi başlangıç ve ilerleyici seyir - post-infeksiyöz miyelit",
+      "D": "Viral enfeksiyon sonrası gelişim - MS",
+      "E": "Aşı sonrası gelişim - yer kaplayan lezyon"
+     },
+     "dogru": "B",
+     "aciklama": "Sinsi ve ilerleyici parapleji medulla spinalis basısını, aşı ya da viral enfeksiyon sonrası parapleji post-infeksiyöz miyeliti düşündürür (sayfa 7).",
+     "sik_aciklamalari": {
+      "A": "Aşı ya da viral enfeksiyon sonrası gelişen parapleji post-infeksiyöz miyeliti düşündürür. Medulla spinalis basısı ise sinsi başlangıç ve ilerleyici seyirle eşleşir (sayfa 7).",
+      "B": "Sinsi başlayan ve ilerleyen paraplejide medulla spinalis basısı düşünülür. Eşleme dersin verdiği eşlemedir (sayfa 7). Sinsi başlangıç, belirtilerin haftalar, aylar, yıllar içinde yerleşmesidir.",
+      "C": "Post-infeksiyöz miyelit aşı veya viral enfeksiyon öyküsüyle eşleşir. Sinsi ve ilerleyici seyir medulla spinalis basısını gösterir (sayfa 7). Sinsi başlangıç, belirtilerin haftalar, aylar, yıllar içinde yerleşmesidir.",
+      "D": "MS genç hastada sinir sisteminin farklı bölgelerini etkileyip düzelen epizodlarla düşünülür. Viral enfeksiyon sonrası parapleji post-infeksiyöz miyelitle eşleşir (sayfa 7).",
+      "E": "Yer kaplayan lezyon yavaş yerleşen ve giderek ağırlaşan hemiplejide düşünülür. Aşı sonrası gelişen parapleji post-infeksiyöz miyeliti gösterir (sayfa 7)."
+     },
+     "bilgi": [
+      36,
+      37
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 7,
+      "alinti": "sinsi başlangıç, ilerleyici seyir medulla spinalis basısı"
+     }
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "4c4eb178b88b",
+     "soru": "Nörolojik muayenede hastaya yaklaşırken öyküsünde sinir sisteminin farklı bölgelerinin etkilendiği epizodlar geçirip düzeldiği anlaşılana, olası tanınız nedir?",
+     "secenekler": {
+      "A": "Serebrovasküler hastalık",
+      "B": "Guillain-Barre sendromu",
+      "C": "Kafa içi yer kaplayan lezyon",
+      "D": "MS",
+      "E": "Parkinson hastalığı"
+     },
+     "cevap": "D"
+    }
+   ]
+  },
+  {
+   "no": 7,
+   "metin": "Laboratuvar incelemelerini sayar; acil nörolojik hastaya yaklaşımı ve nöroloji kliniğine sevk yazısının ilkelerini açıklar.",
+   "sorular": [
+    {
+     "id": "k2-01-norolojik-hastaya-yaklasim-q43",
+     "kazanim": 7,
+     "zorluk": "kolay",
+     "soru": "Genel metodlar arasında verilen yöntem aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "BOS incelemesi",
+      "B": "EEG",
+      "C": "BBT",
+      "D": "Bakteriyolojik metodlar",
+      "E": "EMG"
+     },
+     "dogru": "D",
+     "aciklama": "Bakteriyolojik metodlar, biyokimyayla birlikte genel laboratuvar yöntemleri grubunu oluşturur ve nörolojiye özgü spesifik BOS incelemesinden ayrı tutulur.",
+     "sik_aciklamalari": {
+      "A": "BOS incelemesi, beyin omurilik sıvısının incelenmesidir ve nörolojik hastada genel metodlardan ayrı verilen spesifik laboratuvar incelemesidir. Biyokimya ve bakteriyolojik metodlar gibi genel yöntemlerden ayrı bir başlıktır.",
+      "B": "EEG, laboratuvar incelemeleri arasında sayılan bir testtir. Epilepside normal çıkması tanıdan uzaklaştırmaz; tanıyı EEG sonucu değil, hastanın klinik öyküsü belirler.",
+      "C": "BBT, bilgisayarlı beyin tomografisidir ve acilde hemen çekilen görüntüleme yöntemidir. Acil durumda hemen çekilmesiyle öne çıkar; radyo dalgalarıyla ölçüm yapan beyin MR ile ve elektriksel kayıt yöntemleriyle karıştırılmamalıdır.",
+      "D": "Bakteriyolojik metodlar, biyokimyayla birlikte genel laboratuvar metodlarındandır. Bakteriyolojik metodlar, biyokimyayla birlikte genel laboratuvar yöntemleri grubunu oluşturur ve nörolojiye özgü spesifik BOS incelemesinden ayrı tutulur.",
+      "E": "EMG, EEG ve uyarılmış potansiyellerle birlikte sayılan laboratuvar incelemesidir. Acilde hemen çekilen görüntüleme ya da spesifik inceleme olarak değil, ayrı bir inceleme başlığı olarak verilir."
+     },
+     "bilgi": [
+      38
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 8,
+      "alinti": "Genel metodlar: biyokimya, bakteriyolojik metodlar g.b Spesifik: BOS incelemesi"
+     }
+    },
+    {
+     "id": "k2-01-norolojik-hastaya-yaklasim-q50",
+     "kazanim": 7,
+     "zorluk": "kolay",
+     "soru": "Tanı konulamayan, tedavi edilemeyen hasta nereye gönderilmelidir?",
+     "secenekler": {
+      "A": "Yalnız laboratuvara",
+      "B": "Görüntüleme birimine, yalnız BBT için",
+      "C": "Yakınına teslim edilir",
+      "D": "Bekletilip doğal seyri izlenir",
+      "E": "Nöroloji kliniğine"
+     },
+     "dogru": "E",
+     "aciklama": "Tanı konulamayan, tedavi edilemeyen hasta nöroloji kliniğine gönderilir (sayfa 9).",
+     "sik_aciklamalari": {
+      "A": "Laboratuvar incelemeleri tanıya yardımcıdır ama tanı konulamayan hastanın yönlendirileceği yer değildir. Hasta nöroloji kliniğine gönderilir (sayfa 8). Hasta nöroloji kliniğine gönderilir ve yanında anlaşılır bir sevk yazısı bulunur.",
+      "B": "BBT acilde hemen çekilen bir görüntülemedir. Ancak tanı ve tedavi sorunu olan hasta için dersin gösterdiği yönlendirme nöroloji kliniğidir (sayfa 9).",
+      "C": "Yakın, öykü kaynağı olabilir ama tanısı konulamayan hastanın tedavisi için nöroloji kliniğine gönderilmesi gerekir (sayfa 9). Hastanın yakını öykü kaynağıdır; tedavi için hasta nöroloji kliniğine gönderilir.",
+      "D": "Doğal seyir tanı ve tedavi değerlendirmesinde önemlidir. Ancak giderek kapanan, tanı konulamayan hastada beklemek zarar verir ve sevk gerekir (sayfa 9).",
+      "E": "İlk gören hekim, tanı koyamadığı ve tedavi edemediği hastayı nöroloji kliniğine gönderir ve yanında açık, anlaşılır bir sevk yazısı hazırlar (sayfa 9). Sevk yazısı, öykü ve muayene bulgularını açık biçimde aktarır."
+     },
+     "bilgi": [
+      47
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 9,
+      "alinti": "Tanı konulamayan, tedavi edilemeyen hastayı nöroloji kliniğine göndermeli"
+     }
+    },
+    {
+     "id": "k2-01-norolojik-hastaya-yaklasim-q44",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Acilde hemen çekilen görüntüleme yöntemi hangisidir?",
+     "secenekler": {
+      "A": "Beyin MR",
+      "B": "BBT",
+      "C": "EEG",
+      "D": "EMG",
+      "E": "BOS incelemesi"
+     },
+     "dogru": "B",
+     "aciklama": "Acil hastada görüntüleme gerektiğinde beklemeden, hemen çekilen yöntem BBT'dir ve bu özelliği onu diğer incelemelerden ayırır.",
+     "sik_aciklamalari": {
+      "A": "Beyin MR, radyo dalgaları kullanarak ölçüm yapan görüntüleme yöntemidir. Acilde hemen çekilen yöntem olarak değil, radyo dalgalarıyla ölçüm yapan görüntüleme olarak tanımlanır.",
+      "B": "BBT, bilgisayarlı beyin tomografisidir ve acilde hemen çekilen görüntüleme yöntemidir. Acil hastada görüntüleme gerektiğinde beklemeden, hemen çekilen yöntem BBT'dir ve bu özelliği onu diğer incelemelerden ayırır.",
+      "C": "EEG, laboratuvar incelemeleri arasında sayılan bir testtir. Epilepside normal çıkması tanıdan uzaklaştırmaz; tanıyı EEG sonucu değil, hastanın klinik öyküsü belirler.",
+      "D": "EMG, EEG ve uyarılmış potansiyellerle birlikte sayılan laboratuvar incelemesidir. Acilde hemen çekilen görüntüleme ya da spesifik inceleme olarak değil, ayrı bir inceleme başlığı olarak verilir.",
+      "E": "BOS incelemesi, beyin omurilik sıvısının incelenmesidir ve nörolojik hastada genel metodlardan ayrı verilen spesifik laboratuvar incelemesidir. Biyokimya ve bakteriyolojik metodlar gibi genel yöntemlerden ayrı bir başlıktır."
+     },
+     "bilgi": [
+      40
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 8,
+      "alinti": "Uyarılmış potansiyeller- EP evoked potentials BBT beyin MRI"
+     }
+    },
+    {
+     "id": "k2-01-norolojik-hastaya-yaklasim-q45",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Acil olarak bilinçsiz bir hasta getirilmiş ve getiren kişi bilgi sahibi değildir. İlk yapılması gereken aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Getiren kişiden tam öykü alınmasını beklemek",
+      "B": "BOS incelemesi sonucunu beklemek",
+      "C": "Hastayı gözlemleyip laboratuvar sonuçlarını beklemek",
+      "D": "Önce sevk yazısını hazırlamak",
+      "E": "Bilgi toplarken tedaviye başlamak ve vital bulguları stabil hale getirmek"
+     },
+     "dogru": "E",
+     "aciklama": "Acilde bilgi hızlı toplanırken tedaviye de başlanır ve vital bulgular stabil hale getirilir (sayfa 9).",
+     "sik_aciklamalari": {
+      "A": "Zaman hastanın ve hekimin aleyhine işler. Geri dönüşü olmayan noktaya gelmeden önce müdahale gerektiği için öykünün tamamlanması beklenmez (sayfa 9).",
+      "B": "BOS incelemesi spesifik bir laboratuvar incelemesidir. Acil durumda müdahale, inceleme sonuçları beklenmeden bilgi toplarken başlar (sayfa 9). BOS incelemesi, beyin omurilik sıvısının incelenmesidir ve nörolojik hastada genel metodlardan ayrı verilen spesifik laboratuvar incelemesidir.",
+      "C": "Laboratuvar incelemeleri öykü ve muayeneden sonra başvurulan yöntemlerdir. Acilde gecikme hastanın aleyhine olduğundan müdahale beklenmez (sayfa 9). Bu nedenle öykü ve muayene sürerken tedavi de eş zamanlı başlatılır.",
+      "D": "Sevk yazısı, tanı konulamayan ve tedavi edilemeyen hastanın nöroloji kliniğine gönderilmesinde yazılır. Bilinçsiz acil hastada ilk adım vital bulguları stabil hale getirmektir (sayfa 9).",
+      "E": "Acilde hızlı bilgi toplanırken tedaviye de başlanır. İlk öncelik vital bulguları stabil hale getirmek, solunum yolunu açık tutmak ve nöbet varsa durdurmaktır (sayfa 9)."
+     },
+     "bilgi": [
+      41,
+      44,
+      45
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 9,
+      "alinti": "Hızlı bir şekilde bilgi toplarken tedaviye de başlanır"
+     }
+    },
+    {
+     "id": "k2-01-norolojik-hastaya-yaklasim-q46",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Sevk yazısında epilepsi, miyokloni, kore gibi deyimler yerine ne yazılmalıdır?",
+     "secenekler": {
+      "A": "Tanıyı kesinleştiren laboratuvar sonucu",
+      "B": "Anlaşılmaz kısaltmalar",
+      "C": "Hekimin gördüğü",
+      "D": "Yalnız hemiparezi terimi",
+      "E": "Hastanın kendi tanı adı"
+     },
+     "dogru": "C",
+     "aciklama": "Sevk yazısında epilepsi, miyokloni ve kore gibi deyimler yerine hekimin gördüğü yazılır (sayfa 9).",
+     "sik_aciklamalari": {
+      "A": "Sevk edilen hastanın tanısı konulamamıştır. Yazıda tanı sonucu değil, öykü ve muayene bulguları açık ve anlaşılır biçimde yazılır (sayfa 9).",
+      "B": "Sevk yazısı açık ve anlaşılır olmalıdır. Anlaşılmaz kısaltmalar kullanılmamalıdır ve deyimlerin yerini tutmaz (sayfa 9). Böylece sevk edilen kliniğin hekimi hastanın durumunu yanlış anlamaz.",
+      "C": "Epilepsi, miyokloni ve kore gibi deyimler yorum içerir. Sevk yazısında bunlar yerine hekimin gördüğü bulgu yazılır (sayfa 9). Böylece alıcı hekim hastanın durumunu kendi gözüyle değerlendirebilir.",
+      "D": "Hemiparezi açıklanarak yazılmalıdır; yalnız terim yetmez. Ayrıca deyimlerin yerine hekimin gördüğü bulgu yazılır (sayfa 9). Terimin yanında hastanın yapıp yapamadığı hareketler de yazılır.",
+      "E": "Sevkte hekimin gördüğü yazılır. Hastanın koyduğu tanı adı gözlem değildir ve yazıdaki anlaşılırlığı sağlamaz (sayfa 9). Hekimin gözlemi sevk yazısında yorumdan önce gelir."
+     },
+     "bilgi": [
+      49
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 9,
+      "alinti": "epilepsi, miyokloni, kore gibi deyimler yerine gördüğünü yazmalı"
+     }
+    },
+    {
+     "id": "k2-01-norolojik-hastaya-yaklasim-q49",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Acil getirilen hastanın nöbet geçirdiği görülüyorsa ne yapılır?",
+     "secenekler": {
+      "A": "Nöbetin kendiliğinden geçmesi beklenir",
+      "B": "Nöbet durdurulmaya çalışılır",
+      "C": "Önce BBT çekilip sonuç beklenir",
+      "D": "Getiren kişiden ayrıntılı öykü alınana kadar işlem yapılmaz",
+      "E": "Hasta nöroloji kliniğine gönderilip müdahale orada başlatılır"
+     },
+     "dogru": "B",
+     "aciklama": "Nöbet geçiren acil hastada nöbet durdurulmaya çalışılır (sayfa 9).",
+     "sik_aciklamalari": {
+      "A": "Zaman hastanın aleyhine işlediğinden acil durumda beklemek yerine müdahale edilir. Nöbet durdurulmaya çalışılır (sayfa 9). Nöbet geçiren hastada müdahale gecikmeden, bilgi toplanırken yapılır.",
+      "B": "Nöbet geçiren hastada nöbetin durdurulması, vital bulguları stabil hale getirmenin parçasıdır ve bilgi toplanırken tedaviyle birlikte yürütülür (sayfa 9). Hava yolunun açık tutulması da aynı ilk müdahalenin parçasıdır.",
+      "C": "BBT acilde hemen çekilen bir görüntülemedir ama sonuç beklenirken tedavi ertelenmez. Önce vital bulgular stabil hale getirilir (sayfa 8). BBT, bilgisayarlı beyin tomografisidir ve acilde hemen çekilen görüntüleme yöntemidir.",
+      "D": "Acilde bilgi toplanırken tedaviye de başlanır. Öykünün tamamlanması beklenmez (sayfa 9). Acil durumda tam öykü beklenmez; bilgi hızla toplanırken tedavi başlar ve zaman kaybı önlenir.",
+      "E": "Sevk, tanı konulamayan ve tedavi edilemeyen hasta için yapılır. Acil hastada ilk gören hekim müdahaleye hemen başlar (sayfa 9). Sevk, ilk müdahaleden sonra ve tanı konulamadığında yapılan bir adımdır."
+     },
+     "bilgi": [
+      45
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 9,
+      "alinti": "Vital bulguları stabil hale getirmek g.b solunum yolunu açık tutmak, nöbet geçiriyorsa durdurmaya çalışmak"
+     }
+    },
+    {
+     "id": "k2-01-norolojik-hastaya-yaklasim-q51",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Sevk yazısında hemiparezi nasıl belirtilmelidir?",
+     "secenekler": {
+      "A": "Yalnız hemiparezi terimiyle",
+      "B": "Epilepsi ya da kore gibi bir deyimle",
+      "C": "Açıklanarak; örneğin hasta bacağını kaldıramıyor ama yatak içinde çekebiliyor",
+      "D": "Anlaşılmaz bir kısaltmayla",
+      "E": "Hiç yazılmaz, yalnız bilinç düzeyi yazılır"
+     },
+     "dogru": "C",
+     "aciklama": "Hemiparezi açıklanarak yazılır (sayfa 9).",
+     "sik_aciklamalari": {
+      "A": "Terim tek başına hastanın yapabildiği ve yapamadığı hareketi göstermez. Dersin istediği açıklamalı yazımdır (sayfa 9). Hemiparezi, örneğin bacağı kaldıramama ama yatak içinde çekebilme gibi yazılarak açıklanır.",
+      "B": "Epilepsi, miyokloni ve kore gibi deyimler yorum içerir. Sevk yazısında bunlar yerine hekimin gördüğü yazılır (sayfa 9). Epilepsi klinik tanıdır, yani tanı öykü ve klinik değerlendirmeyle konur.",
+      "C": "Hemiparezi, terim olarak bırakılmaz. Hastanın neyi yapıp neyi yapamadığı yazılarak açıklanır ve alıcı hekim durumu net anlar (sayfa 9). Böylece sevk edilen hekim hastanın hareket kabiliyetini doğrudan görmüş gibi bilgilenir.",
+      "D": "Sevk yazısı açık ve anlaşılır olmalıdır. Anlaşılmaz kısaltmalar alıcı hekimin durumu kavramasını zorlaştırır (sayfa 9). Bu yüzden yazıda yalnız herkesin anlayacağı sözcükler ve açıklamalar yer alır.",
+      "E": "Bilinç düzeyi, saat ve pupil büyüklükleri kaydedilir ama hemiparezi de açıklanarak yazılır. İkisi birbirinin yerine geçmez (sayfa 9). Hemiparezi ise ayrıca, hastanın ne yapıp ne yapamadığı belirtilerek açıklanır."
+     },
+     "bilgi": [
+      51
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 9,
+      "alinti": "Hemiparezi açıklamalı ( bacağını kaldıramıyor yatak içinde çekebiliyor)"
+     }
+    },
+    {
+     "id": "k2-01-norolojik-hastaya-yaklasim-q47",
+     "kazanim": 7,
+     "zorluk": "zor",
+     "soru": "Sevk yazısında kaydedilmesi istenenler aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Bilinç düzeyi, saat ve pupil büyüklükleri",
+      "B": "Aşil refleksi, saat ve bilinç düzeyi",
+      "C": "Bilinç düzeyi, EEG sonucu ve saat",
+      "D": "Pupil büyüklükleri, BOS sonucu ve saat",
+      "E": "Bilinç düzeyi, MR sonucu ve pupil büyüklükleri"
+     },
+     "dogru": "A",
+     "aciklama": "Sevk yazısında bilinç düzeyi, saat ve pupil büyüklükleri kaydedilir (sayfa 9).",
+     "sik_aciklamalari": {
+      "A": "Sevk yazısında bilinç düzeyi, saat ve pupil büyüklükleri kaydedilir. Bu üçü hastanın o anki durumunu gösterir (sayfa 9). Bilinç düzeyi, saat ve pupil büyüklükleri alıcı hekimin hastanın o anki durumunu karşılaştırmasını sağlar.",
+      "B": "Aşil refleksi birinci sakral radiksi gösteren bir muayene bulgusudur. Sevk yazısında istenen kayıt bilinç düzeyi, saat ve pupil büyüklükleridir (sayfa 9).",
+      "C": "EEG laboratuvar incelemesidir ve sevk yazısındaki kayıt listesinde yer almaz. İstenen üçlü bilinç düzeyi, saat ve pupil büyüklükleridir (sayfa 9).",
+      "D": "BOS incelemesi nörolojide spesifik laboratuvar incelemesidir ve kayıt listesine girmez. Kaydedilecek üçlü bilinç düzeyi, saat ve pupil büyüklükleridir (sayfa 9).",
+      "E": "Beyin MR radyo dalgaları kullanarak ölçüm yapan bir görüntülemedir. Sevk yazısında kaydedilecek üçlü bilinç düzeyi, saat ve pupil büyüklükleridir (sayfa 9)."
+     },
+     "bilgi": [
+      50
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 9,
+      "alinti": "Bilinç düzeyini , saatini, pupil büyüklüklerini kaydetmeli"
+     }
+    },
+    {
+     "id": "k2-01-norolojik-hastaya-yaklasim-q48",
+     "kazanim": 7,
+     "zorluk": "zor",
+     "soru": "Acil hastaya yaklaşım ve sevkle ilgili aşağıdaki ifadelerden hangisi YANLIŞTIR?",
+     "secenekler": {
+      "A": "Bilgi toplanırken tedaviye de başlanır",
+      "B": "Nöbet geçiren hastada nöbet durdurulmaya çalışılır",
+      "C": "Solunum yolu açık tutulur",
+      "D": "Zaman hastanın lehinedir, bu nedenle müdahale ertelenebilir",
+      "E": "Tanı konulamayan, tedavi edilemeyen hasta nöroloji kliniğine gönderilir"
+     },
+     "dogru": "D",
+     "aciklama": "Zaman hastanın ve hekimin aleyhine işler; diğer ifadeler acil yaklaşım ve sevk bilgilerini doğru aktarır (sayfa 9).",
+     "sik_aciklamalari": {
+      "A": "Acilde zaman hastanın aleyhine işlediğinden bilgi hızlı toplanırken tedaviye de başlanır; öykünün tamamlanması beklenmez. İfade doğrudur (sayfa 9). Müdahale bu nedenle öykü tamamlanmadan başlar.",
+      "B": "Nöbet geçiren hastada nöbetin durdurulmaya çalışılması, vital bulguları stabil hale getirmenin bir parçasıdır. İfade doğrudur (sayfa 9). Nöbetin sürmesi hastanın yaşamsal işlevlerini tehdit edebilir; bu yüzden müdahale gerekir.",
+      "C": "Hava yolunun açık tutulması vital bulguları stabil hale getirmenin ilk adımlarındandır ve hastanın yaşamsal işlevini korur. İfade doğrudur (sayfa 9).",
+      "D": "Bu ifade yanlıştır: zaman hastanın ve hekimin aleyhine işler. Geri dönüşü olmayan noktaya gelmeden önce müdahale gerekir (sayfa 9). Doğru bilgi, gecikmenin hasta ve hekim aleyhine olduğudur.",
+      "E": "Tanı konulamayan ve tedavi edilemeyen hasta, ilk gören hekimden nöroloji kliniğine gönderilir; sevk bu koşulda yapılır. İfade doğrudur (sayfa 9)."
+     },
+     "bilgi": [
+      42,
+      43,
+      44,
+      45,
+      47
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 9,
+      "alinti": "Zaman hastanın ve hekimin aleyhine işler. Zaman=beyin"
+     }
+    }
+   ],
+   "ilgili_cikmis": []
+  }
+ ],
+ "soru_sayisi": 51
+}

@@ -77,6 +77,10 @@ def uret(key):
                 out['onemli'] = [{'p': x['puan'], 'b': x['baslik'], 'm': x['bilgi'], 'alt': x.get('alt', []), 'n': x.get('neden', ''), 's': [a['sayfa'] for a in x.get('alinti', [])], 'tur': x.get('tur', '')} for x in m]
     # --- deste: spot, tablo, karşılaştırma, sıralı liste, kart, mini quiz
     spot, tab, lis, kart, quiz = [], [], [], [], []
+    def karsi_ok(gerekce):
+        # H118: anlamsız/faydasız karşılaştırma tablosu yayına girmez (gerekçe boş, kısa ya da tekrar)
+        g = [x.strip() for x in gerekce]
+        return len(g) >= 3 and all(len(x.split()) >= 7 for x in g) and len(set(g)) == len(g)
     for s in deck['slides']:
         n = s['slideNumber']; bl = s.get('bolum', '')
         for p in s.get('spotPearls', []): spot.append({'m': re.sub(r'^📌\s*\[SINAV SPOTU\]\s*', '', p), 'n': n, 'bolum': bl})
@@ -85,18 +89,19 @@ def uret(key):
             ty = it['type']
             if ty == 'interactive_table':
                 tab.append({'t': it['tableTitle'], 'h': it['tableHeaders'], 'r': [[c['text'] for c in row['cells']] for row in it['tableRows']], 'n': n})
+            elif ty == 'swipe_matching':
+                continue  # H118: Öge/Sınıf (meta sınıflama) tablosu tıbbi bilgi taşımaz; ders içeriğine alınmaz
             elif ty == 'venn_grid':
+                if not karsi_ok([i.get('explanation', '') for i in it['items']]): continue
                 ad = {'A': it['labelA'], 'B': it['labelB'], 'both': 'İkisi de', 'neither': 'İkisi de değil'}
                 tab.append({'t': it['title'], 'h': ['Ölçüt', 'Hangisine ait', 'Gerekçe'], 'r': [[i['criterion'], ad.get(i['correct'], i['correct']), i.get('explanation', '')] for i in it['items']], 'n': n, 'k': 'karsilastirma'})
             elif ty == 'before_after_slider':
                 L, Rr = it['leftPoints'], it['rightPoints']
                 tab.append({'t': f"{it['leftTitle']} ve {it['rightTitle']}", 'h': [it['leftTitle'], it['rightTitle']], 'r': [[L[i] if i < len(L) else '', Rr[i] if i < len(Rr) else ''] for i in range(max(len(L), len(Rr)))], 'n': n, 'k': 'karsilastirma'})
             elif ty == 'feature_bidding':
+                if not karsi_ok([r.get('explanation', '') for r in it['rounds']]): continue
                 ad = {'A': it['optionA'], 'B': it['optionB']}
                 tab.append({'t': it['title'], 'h': ['Özellik', 'Hangisine ait', 'Gerekçe'], 'r': [[r['feature'], ad.get(r['correct'], r['correct']), r.get('explanation', '')] for r in it['rounds']], 'n': n, 'k': 'karsilastirma'})
-            elif ty == 'swipe_matching':
-                ad = {'left': it['leftCategory'], 'right': it['rightCategory']}
-                tab.append({'t': it['title'], 'h': ['Öge', 'Sınıf', 'Gerekçe'], 'r': [[c['text'], ad.get(c['category'], c['category']), c.get('explanation', '')] for c in it['cards']], 'n': n, 'k': 'karsilastirma'})
             elif ty == 'causal_chain':
                 lis.append({'t': it['chainTitle'], 'sira': 'numara', 'm': [{'m': SIRA_ON.sub('', x)} for x in it['steps']], 'n': n})
             elif ty == 'sequence_order':

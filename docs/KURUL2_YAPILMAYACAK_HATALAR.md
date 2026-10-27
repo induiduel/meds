@@ -1072,3 +1072,8 @@ Her maddede: belirti · kök neden · Kurul 2 kuralı · kapı durumu. Kanıtlar
 - **Kök neden (çubuk):** `.st-col` `flex: 1`, içindeki `.ok/.bad` çubuk sütunun tüm genişliğini alıyor. **Kök neden (veri):** istatistik alt ajanı boş ekranı sınamak için `medsoru_study_progress_v1` / `medsoru_selftest_history_v1`'e sahte kayıt yazdı, "geri aldım" dedi ama kayıtlar tarayıcıda kaldı (sunucuya ulaşmadı: yerel + Oracle `user_data`'da yok).
 - **Çözüm:** çubuk `max-width: 24px; align-self: center`. Sahte kayıtlar (hepsi `20:11:00.929Z` damgalı) silindi, eşitleme sarmalayıcısıyla temiz hal yazıldı.
 - **Kural:** Alt ajan/ajan, eşitlenen profil anahtarlarına (userKvSync izin listesi) sınama verisi YAZMAZ; sınama gerekiyorsa ayrı anahtar ya da `?demo` bayrağı kullanılır. Ajan raporunda "geri aldım" deniyorsa tarayıcıda doğrulanır.
+
+## H120 · Dallanmalı soruda doğru/yanlış bayrağı ters işaretliydi (2026-10-27, k2-01)
+- **Belirti:** Öğren destesi slayt 1 klinik karar sorusunda, Merritt'e uyan şık `isCorrect:false` ama geri bildirimi "Doğru…", ters şık `isCorrect:true` ama "Yanlış…". Öğrenci doğruyu yanlış öğrenirdi.
+- **Kök neden:** Yazar ajan şıkları ve bayrakları ayrı yazdı; `validate_learning_decks.py` yalnız "tek isCorrect var mı" bakıyordu, bayrak ↔ geri bildirim yönünü karşılaştırmıyordu. İlk bağımsız denetçi bunu yakalamadı; ikincisi betikle taradı.
+- **Kalıcı çözüm:** doğrulayıcıya `klinik-karar-bayrak` HATA kapısı (geri bildirim "Doğru/Yanlış" ile başlıyor ve bayrakla çelişiyorsa). Önleme: bayrak ve geri bildirim tek yerden üretilir; denetçi kapı dışı tutarlılık taraması yapar; doğru şık hep ilk sırada olmaz.

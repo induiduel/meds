@@ -11,7 +11,7 @@ Kullanım:
 
 Çıkış kodu: HATA varsa 1, yalnız UYARI varsa 0. Yeni deste eklemeden önce HATA sayısı 0 olmalı.
 """
-import json, os, re, sys, collections
+import json, re, os, re, sys, collections
 
 ROOT = os.path.join(os.path.dirname(__file__), '..')
 DEFAULT = os.path.join(ROOT, 'src', 'data', 'interactive_learning_decks.json')
@@ -218,6 +218,11 @@ def check_deck(d, out):
                 opts = next((x for x in (e.get('options'), e.get('choices'), e.get('branchingOptions')) if isinstance(x, list) and x), [])
                 if not e.get('scenario') or len(opts) < 2 or sum(1 for o in opts if o.get('isCorrect') or o.get('correct')) != 1:
                     add('HATA', 'klinik-karar', n, 'scenario, ≥2 seçenek (options/choices) ve tek isCorrect gerekli')
+                for o in opts:  # H120: geri bildirimin Doğru/Yanlış yönü isCorrect ile çelişemez
+                    fb = (o.get('feedback') or o.get('explanation') or '').lstrip().lower()
+                    ok = bool(o.get('isCorrect') or o.get('correct'))
+                    if (re.match(r'(doğru|yanlış)[.,!:]', fb) and (fb.startswith('doğru') != ok)):
+                        add('HATA', 'klinik-karar-bayrak', n, f'isCorrect={ok} ama geri bildirim {fb[:12]!r} ile başlıyor')
                 if any(not (o.get('feedback') or o.get('explanation')) for o in opts):
                     add('UYARI', 'klinik-karar-geri', n, 'her seçenekte feedback olmalı')
                 if KAPI_SEVIYE:

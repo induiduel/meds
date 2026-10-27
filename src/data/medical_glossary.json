@@ -109019,5 +109019,1003 @@
         "alinti": "Retinoik asit→TF gibi davranır ve Hox genlerinin ekspresyonu regülasyonu, oFGF,Wnt, Sonic"
       }
     ]
+  },
+  "anamnez": {
+    "term": "Anamnez",
+    "category": "tani",
+    "definition": "Hastanın yakınmasının, belirtilerin başlangıç şeklinin ve kronolojik gidişinin öyküsünün alınmasıdır.",
+    "description": "Hastanın yakınmasının, belirtilerin başlangıç şeklinin ve kronolojik gidişinin öyküsünün alınmasıdır.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "clinicalPearl": "İyi anamnez doğru yönelim sağlar.",
+    "aliases": [
+      "Öykü"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-01"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/1)Nörolojik hastaya yaklaşım.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 2,
+        "alinti": "İyi bir anamnez doğru bir yönelim ve yaklaşım sağlar"
+      }
+    ]
+  },
+  "etyoloji": {
+    "term": "Etyoloji",
+    "category": "terim",
+    "definition": "Bir hastalığın nedenidir.",
+    "description": "Bir hastalığın nedenidir.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "clinicalPearl": "Öykü anatomik lokalizasyonla birlikte etyolojiyi aydınlatır.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-01"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/1)Nörolojik hastaya yaklaşım.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 2,
+        "alinti": "kronolojik gidişi anatomik lokalizasyon ve etyoloji yönünden problemi büyük ölçüde aydınlatır"
+      }
+    ]
+  },
+  "anatomik lokalizasyon": {
+    "term": "Anatomik lokalizasyon",
+    "category": "terim",
+    "definition": "Sorunun sinir sisteminin hangi bölgesinde olduğunun belirlenmesidir.",
+    "description": "Sorunun sinir sisteminin hangi bölgesinde olduğunun belirlenmesidir.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "aliases": [
+      "Lokalizasyon"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-01"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/1)Nörolojik hastaya yaklaşım.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 2,
+        "alinti": "kronolojik gidişi anatomik lokalizasyon ve etyoloji yönünden problemi büyük ölçüde aydınlatır"
+      }
+    ]
+  },
+  "uyuşma": {
+    "term": "Uyuşma",
+    "category": "terim",
+    "definition": "Hastaların sık kullandığı, duyu kusurunu da kuvvet kaybını da anlatabilen yakınmadır.",
+    "description": "Hastaların sık kullandığı, duyu kusurunu da kuvvet kaybını da anlatabilen yakınmadır.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "clinicalPearl": "Ders bu sözcüğün iki anlama gelebileceğini vurgular.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-01"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/1)Nörolojik hastaya yaklaşım.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 2,
+        "alinti": "Uyuşma duyu kusuru olabilir ya da kuvvet kaybını anlatıyor olabilir"
+      }
+    ]
+  },
+  "duyu kusuru": {
+    "term": "Duyu kusuru",
+    "category": "terim",
+    "definition": "Dokunma, ağrı gibi duyuların algılanmasındaki bozukluktur.",
+    "description": "Dokunma, ağrı gibi duyuların algılanmasındaki bozukluktur.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-01"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/1)Nörolojik hastaya yaklaşım.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 2,
+        "alinti": "Uyuşma duyu kusuru olabilir ya da kuvvet kaybını anlatıyor olabilir"
+      }
+    ]
+  },
+  "kuvvet kaybı": {
+    "term": "Kuvvet kaybı",
+    "category": "terim",
+    "definition": "Bir uzvun istenen güçte hareket ettirilememesidir.",
+    "description": "Bir uzvun istenen güçte hareket ettirilememesidir.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-01"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/1)Nörolojik hastaya yaklaşım.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 2,
+        "alinti": "Uyuşma duyu kusuru olabilir ya da kuvvet kaybını anlatıyor olabilir"
+      }
+    ]
+  },
+  "sübjektif": {
+    "term": "Sübjektif",
+    "category": "terim",
+    "definition": "Ölçülemeyen, yalnızca hastanın kendi anlatımına dayanan niteliktir.",
+    "description": "Ölçülemeyen, yalnızca hastanın kendi anlatımına dayanan niteliktir.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "clinicalPearl": "Ağrı sübjektiftir.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-01"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/1)Nörolojik hastaya yaklaşım.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 2,
+        "alinti": "Ağrı sübjektif, sorularla nitelikleri ortaya konmalı"
+      }
+    ]
+  },
+  "akut başlangıç": {
+    "term": "Akut başlangıç",
+    "category": "hastalik",
+    "definition": "Belirtilerin dakika veya saat içinde ortaya çıkmasıdır.",
+    "description": "Belirtilerin dakika veya saat içinde ortaya çıkmasıdır.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "clinicalPearl": "Örneği hemiplejidir.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-01"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/1)Nörolojik hastaya yaklaşım.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 3,
+        "alinti": "Akut başlangıç. Dakika veya saat içinde. Örneğin hemipleji"
+      }
+    ]
+  },
+  "sinsi başlangıç": {
+    "term": "Sinsi başlangıç",
+    "category": "hastalik",
+    "definition": "Belirtilerin haftalar, aylar, yıllar içinde yavaş yavaş yerleşmesidir.",
+    "description": "Belirtilerin haftalar, aylar, yıllar içinde yavaş yavaş yerleşmesidir.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "clinicalPearl": "Beyin tümörü ve dejeneratif hastalıklar örnektir.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-01"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/1)Nörolojik hastaya yaklaşım.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 3,
+        "alinti": "Haftalar, aylar, yıllar içinde yerleşir. Beyin tümörü, dejeneratif hastalıklar gibi"
+      }
+    ]
+  },
+  "dejeneratif hastalık": {
+    "term": "Dejeneratif hastalık",
+    "category": "hastalik",
+    "definition": "Sinir hücrelerinin zamanla ilerleyici biçimde bozulduğu hastalık grubudur.",
+    "description": "Sinir hücrelerinin zamanla ilerleyici biçimde bozulduğu hastalık grubudur.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "clinicalPearl": "Sinsi başlayan hastalıklara örnek verilir.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-01"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/1)Nörolojik hastaya yaklaşım.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 3,
+        "alinti": "Haftalar, aylar, yıllar içinde yerleşir. Beyin tümörü, dejeneratif hastalıklar gibi"
+      }
+    ]
+  },
+  "relapsing-remitting ms": {
+    "term": "Relapsing-remitting MS",
+    "category": "hastalik",
+    "definition": "Kötüleşme (relaps) ve iyileşme (remisyon) dönemleriyle seyreden dalgalı MS biçimidir.",
+    "description": "Kötüleşme (relaps) ve iyileşme (remisyon) dönemleriyle seyreden dalgalı MS biçimidir.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "clinicalPearl": "Dalgalı gidişin örneğidir.",
+    "aliases": [
+      "RRMS"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-01"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/1)Nörolojik hastaya yaklaşım.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 3,
+        "alinti": "Dalgalı gidiş. Kötüleşme ve iyileşme dönemleri vardır. Relapsing-remitting MS"
+      }
+    ]
+  },
+  "migren": {
+    "term": "Migren",
+    "category": "hastalik",
+    "definition": "Tanısı öyküye dayanan nörolojik hastalıktır.",
+    "description": "Tanısı öyküye dayanan nörolojik hastalıktır.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "clinicalPearl": "Muayenede nörolojik bulgu ve laboratuvar bulgusu yoktur.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-01"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/1)Nörolojik hastaya yaklaşım.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 4,
+        "alinti": "Tanısı Öyküye Dayanan Nörolojik Hastalıklar Migren Trigeminal nevralji"
+      }
+    ]
+  },
+  "trigeminal nevralji": {
+    "term": "Trigeminal nevralji",
+    "category": "hastalik",
+    "definition": "Tanısı öyküye dayanan nörolojik hastalıktır.",
+    "description": "Tanısı öyküye dayanan nörolojik hastalıktır.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "clinicalPearl": "Muayenede nörolojik bulgu ve laboratuvar bulgusu yoktur.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-01"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/1)Nörolojik hastaya yaklaşım.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 4,
+        "alinti": "Tanısı Öyküye Dayanan Nörolojik Hastalıklar Migren Trigeminal nevralji"
+      }
+    ]
+  },
+  "epilepsi": {
+    "term": "Epilepsi",
+    "category": "hastalik",
+    "definition": "Klinik olarak, yani öyküyle tanınan nörolojik hastalıktır.",
+    "description": "Klinik olarak, yani öyküyle tanınan nörolojik hastalıktır.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "clinicalPearl": "Normal EEG epilepsi tanısından uzaklaştırmaz.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-01"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/1)Nörolojik hastaya yaklaşım.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 4,
+        "alinti": "Epilepsi de klinik tanıdır. EEG normal olması tanıdan uzaklaştırmaz"
+      }
+    ]
+  },
+  "parkinson hastalığı": {
+    "term": "Parkinson hastalığı",
+    "category": "hastalik",
+    "definition": "Maske yüz, monoton konuşma, salya akması, kol sallamama ve fleksör postürle tanınan hareket bozukluğu hastalığıdır.",
+    "description": "Maske yüz, monoton konuşma, salya akması, kol sallamama ve fleksör postürle tanınan hareket bozukluğu hastalığıdır.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "clinicalPearl": "İlk izlenimde tanınır.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-01"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/1)Nörolojik hastaya yaklaşım.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 5,
+        "alinti": "Parkinson H. maske yüz, monoton konuşma, salya akması, yürürken kollarını sallamaması, vücudun fleksör postürü"
+      }
+    ]
+  },
+  "kas distrofisi": {
+    "term": "Kas distrofisi",
+    "category": "hastalik",
+    "definition": "Karın önde, ördeğe benzeyen badi-badi yürüyüşüyle tanınan kas hastalığıdır.",
+    "description": "Karın önde, ördeğe benzeyen badi-badi yürüyüşüyle tanınan kas hastalığıdır.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-01"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/1)Nörolojik hastaya yaklaşım.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 5,
+        "alinti": "Kas distrofisinde karın önde badi-badi yürüyüşü ördeğe benzer"
+      }
+    ]
+  },
+  "fleksör postür": {
+    "term": "Fleksör postür",
+    "category": "terim",
+    "definition": "Vücudun öne doğru bükük duruşudur.",
+    "description": "Vücudun öne doğru bükük duruşudur.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "clinicalPearl": "Parkinson hastalığında görülür.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-01"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/1)Nörolojik hastaya yaklaşım.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 5,
+        "alinti": "Parkinson H. maske yüz, monoton konuşma, salya akması, yürürken kollarını sallamaması, vücudun fleksör postürü"
+      }
+    ]
+  },
+  "dizartri": {
+    "term": "Dizartri",
+    "category": "terim",
+    "definition": "Konuşmanın bozuk telaffuzla çıkmasıdır.",
+    "description": "Konuşmanın bozuk telaffuzla çıkmasıdır.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "clinicalPearl": "Konuşmadan hemen fark edilir.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-01"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/1)Nörolojik hastaya yaklaşım.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 5,
+        "alinti": "Dizartri, afazi hemen farkedilir"
+      }
+    ]
+  },
+  "hemipleji": {
+    "term": "Hemipleji",
+    "category": "hastalik",
+    "definition": "Vücudun bir yarısındaki kasların felcidir.",
+    "description": "Vücudun bir yarısındaki kasların felcidir.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "clinicalPearl": "Akut başlangıçlı tablonun örneğidir.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-01"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/1)Nörolojik hastaya yaklaşım.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 3,
+        "alinti": "Akut başlangıç. Dakika veya saat içinde. Örneğin hemipleji"
+      }
+    ]
+  },
+  "parapleji": {
+    "term": "Parapleji",
+    "category": "hastalik",
+    "definition": "İki bacağın felcidir.",
+    "description": "İki bacağın felcidir.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "clinicalPearl": "Medulla spinalis lezyonunda görülür.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-01"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/1)Nörolojik hastaya yaklaşım.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 6,
+        "alinti": "Parapleji+ gövdede seviye veren duyu kaybı+ sfinkter boz. Medulla spinalis"
+      }
+    ]
+  },
+  "diplopi": {
+    "term": "Diplopi",
+    "category": "terim",
+    "definition": "Çift görmedir.",
+    "description": "Çift görmedir.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "clinicalPearl": "Beyin sapı lezyonunun bulgusudur.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-01"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/1)Nörolojik hastaya yaklaşım.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 6,
+        "alinti": "Diplopi+ vertigo+ piramidal bulgu+serebellar bulgu lezyon beyin sapında"
+      }
+    ]
+  },
+  "piramidal bulgu": {
+    "term": "Piramidal bulgu",
+    "category": "terim",
+    "definition": "Hareketi ileten piramidal yolun tutulduğunu gösteren muayene bulgusudur.",
+    "description": "Hareketi ileten piramidal yolun tutulduğunu gösteren muayene bulgusudur.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-01"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/1)Nörolojik hastaya yaklaşım.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 6,
+        "alinti": "Diplopi+ vertigo+ piramidal bulgu+serebellar bulgu lezyon beyin sapında"
+      }
+    ]
+  },
+  "serebellar bulgu": {
+    "term": "Serebellar bulgu",
+    "category": "terim",
+    "definition": "Beyincik (serebellum) tutulumunu gösteren muayene bulgusudur.",
+    "description": "Beyincik (serebellum) tutulumunu gösteren muayene bulgusudur.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-01"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/1)Nörolojik hastaya yaklaşım.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 6,
+        "alinti": "Diplopi+ vertigo+ piramidal bulgu+serebellar bulgu lezyon beyin sapında"
+      }
+    ]
+  },
+  "sfinkter bozukluğu": {
+    "term": "Sfinkter bozukluğu",
+    "category": "terim",
+    "definition": "İdrar ve dışkı kontrolünü sağlayan kasların işlevinin bozulmasıdır.",
+    "description": "İdrar ve dışkı kontrolünü sağlayan kasların işlevinin bozulmasıdır.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "clinicalPearl": "Medulla spinalis lezyonunda görülür.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-01"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/1)Nörolojik hastaya yaklaşım.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 6,
+        "alinti": "Parapleji+ gövdede seviye veren duyu kaybı+ sfinkter boz. Medulla spinalis"
+      }
+    ]
+  },
+  "medulla spinalis": {
+    "term": "Medulla spinalis",
+    "category": "anatomi",
+    "definition": "Omuriliktir.",
+    "description": "Omuriliktir.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "aliases": [
+      "Omurilik"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-01"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/1)Nörolojik hastaya yaklaşım.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 6,
+        "alinti": "Parapleji+ gövdede seviye veren duyu kaybı+ sfinkter boz. Medulla spinalis"
+      }
+    ]
+  },
+  "radiks": {
+    "term": "Radiks",
+    "category": "anatomi",
+    "definition": "Omurilikten çıkan sinir köküdür.",
+    "description": "Omurilikten çıkan sinir köküdür.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "clinicalPearl": "Aşil refleksi ile birinci sakral radiks (S1) incelenir.",
+    "aliases": [
+      "Sinir kökü"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-01"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/1)Nörolojik hastaya yaklaşım.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 6,
+        "alinti": "Bel ve bacak arkasına vuran ağrı+ aşil refleksi alınamıyorsa 1. sakral radiks"
+      }
+    ]
+  },
+  "ykl": {
+    "term": "YKL",
+    "category": "hastalik",
+    "definition": "Yer kaplayan lezyondur; kitle oluşturan bir süreçtir.",
+    "description": "Yer kaplayan lezyondur; kitle oluşturan bir süreçtir.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "clinicalPearl": "Yavaş yerleşip giderek ağırlaşan hemiplejide düşünülür.",
+    "aliases": [
+      "Yer kaplayan lezyon"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-01"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/1)Nörolojik hastaya yaklaşım.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 7,
+        "alinti": "yavaş yerleşmişse, giderek ağırlaşıyorsa YKL"
+      }
+    ]
+  },
+  "svo": {
+    "term": "SVO",
+    "category": "hastalik",
+    "definition": "Serebrovasküler olaydır; damarsal bir beyin olayıdır.",
+    "description": "Serebrovasküler olaydır; damarsal bir beyin olayıdır.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "clinicalPearl": "Yaşlı ve aterosklerozlu hastada düşünülür.",
+    "aliases": [
+      "Serebrovasküler olay"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-01"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/1)Nörolojik hastaya yaklaşım.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 7,
+        "alinti": "Yaşlı hasta+ ateroskleroz SVO"
+      }
+    ]
+  },
+  "ateroskleroz": {
+    "term": "Ateroskleroz",
+    "category": "hastalik",
+    "definition": "Damar sertliğidir.",
+    "description": "Damar sertliğidir.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-01"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/1)Nörolojik hastaya yaklaşım.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 7,
+        "alinti": "Yaşlı hasta+ ateroskleroz SVO"
+      }
+    ]
+  },
+  "post-infeksiyöz miyelit": {
+    "term": "Post-infeksiyöz miyelit",
+    "category": "hastalik",
+    "definition": "Aşı ya da viral enfeksiyondan sonra gelişen omurilik iltihabıdır.",
+    "description": "Aşı ya da viral enfeksiyondan sonra gelişen omurilik iltihabıdır.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "clinicalPearl": "Paraplejiyle ortaya çıkar.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-01"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/1)Nörolojik hastaya yaklaşım.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 7,
+        "alinti": "aşı ya da viral enf + post-infeksiyöz miyelit"
+      }
+    ]
+  },
+  "bos": {
+    "term": "BOS",
+    "category": "tani",
+    "definition": "Beyin omurilik sıvısıdır; BOS incelemesi nörolojide spesifik incelemedir.",
+    "description": "Beyin omurilik sıvısıdır; BOS incelemesi nörolojide spesifik incelemedir.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "aliases": [
+      "Beyin omurilik sıvısı"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-01"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/1)Nörolojik hastaya yaklaşım.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 8,
+        "alinti": "Genel metodlar: biyokimya, bakteriyolojik metodlar g.b Spesifik: BOS incelemesi"
+      }
+    ]
+  },
+  "eeg": {
+    "term": "EEG",
+    "category": "tani",
+    "definition": "Beynin elektriksel etkinliğinin kaydıdır.",
+    "description": "Beynin elektriksel etkinliğinin kaydıdır.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "clinicalPearl": "Normal olması epilepsiyi dışlamaz.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-01"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/1)Nörolojik hastaya yaklaşım.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 8,
+        "alinti": "EEG EMG Uyarılmış potansiyeller- EP evoked potentials"
+      }
+    ]
+  },
+  "emg": {
+    "term": "EMG",
+    "category": "tani",
+    "definition": "Kasların elektriksel etkinliğinin kaydıdır.",
+    "description": "Kasların elektriksel etkinliğinin kaydıdır.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-01"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/1)Nörolojik hastaya yaklaşım.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 8,
+        "alinti": "EEG EMG Uyarılmış potansiyeller- EP evoked potentials"
+      }
+    ]
+  },
+  "uyarılmış potansiyeller": {
+    "term": "Uyarılmış potansiyeller",
+    "category": "tani",
+    "definition": "Uyarana yanıt olarak sinir sisteminde ortaya çıkan potansiyellerin ölçümüdür (evoked potentials, EP).",
+    "description": "Uyarana yanıt olarak sinir sisteminde ortaya çıkan potansiyellerin ölçümüdür (evoked potentials, EP).",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "aliases": [
+      "EP"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-01"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/1)Nörolojik hastaya yaklaşım.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 8,
+        "alinti": "EEG EMG Uyarılmış potansiyeller- EP evoked potentials"
+      }
+    ]
+  },
+  "bbt": {
+    "term": "BBT",
+    "category": "tani",
+    "definition": "Bilgisayarlı beyin tomografisidir.",
+    "description": "Bilgisayarlı beyin tomografisidir.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "clinicalPearl": "Acilde hemen çekilir.",
+    "aliases": [
+      "Beyin tomografisi"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-01"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/1)Nörolojik hastaya yaklaşım.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 8,
+        "alinti": "Uyarılmış potansiyeller- EP evoked potentials BBT beyin MRI"
+      }
+    ]
+  },
+  "beyin mr": {
+    "term": "Beyin MR",
+    "category": "tani",
+    "definition": "Radyo dalgaları kullanılarak yapılan beyin görüntülemesidir.",
+    "description": "Radyo dalgaları kullanılarak yapılan beyin görüntülemesidir.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "aliases": [
+      "MRI"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-01"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/1)Nörolojik hastaya yaklaşım.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 8,
+        "alinti": "Uyarılmış potansiyeller- EP evoked potentials BBT beyin MRI"
+      }
+    ]
+  },
+  "progresyon": {
+    "term": "Progresyon",
+    "category": "terim",
+    "definition": "Hastalığın ilerlemesi, hastanın giderek kötüleşmesidir.",
+    "description": "Hastalığın ilerlemesi, hastanın giderek kötüleşmesidir.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "aliases": [
+      "Progrese olma"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-01"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/1)Nörolojik hastaya yaklaşım.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 9,
+        "alinti": "İlk gören hekim hastanın giderek kapandığını, progrese olduğunu farketmeli"
+      }
+    ]
+  },
+  "miyokloni": {
+    "term": "Miyokloni",
+    "category": "terim",
+    "definition": "Kasların ani, kısa süreli kasılmasıdır.",
+    "description": "Kasların ani, kısa süreli kasılmasıdır.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "clinicalPearl": "Sevk yazısında bu deyim yerine görülen yazılır.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-01"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/1)Nörolojik hastaya yaklaşım.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 9,
+        "alinti": "epilepsi, miyokloni, kore gibi deyimler yerine gördüğünü yazmalı"
+      }
+    ]
+  },
+  "kore": {
+    "term": "Kore",
+    "category": "terim",
+    "definition": "Düzensiz, istemsiz hareketlerdir.",
+    "description": "Düzensiz, istemsiz hareketlerdir.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "clinicalPearl": "Sevk yazısında bu deyim yerine görülen yazılır.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-01"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/1)Nörolojik hastaya yaklaşım.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 9,
+        "alinti": "epilepsi, miyokloni, kore gibi deyimler yerine gördüğünü yazmalı"
+      }
+    ]
   }
 }
