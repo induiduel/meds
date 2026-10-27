@@ -15,7 +15,7 @@ import '../../styles/v15/program.css';
  * Sesli dersi yayında olan satır ders ayrıntısına götürür; olmayan yalnız bilgi satırıdır.
  */
 interface ProgDers { id: string; brans: string; konu: string; ogretim_uyesi?: string; tarih: string; saat?: string; saat_sayisi?: number }
-type Gorunum = 'gun' | 'hafta' | 'liste';
+type Gorunum = 'gun' | 'hafta' | 'ay' | 'liste';
 
 const KAYITLAR = import.meta.glob('../../data/dersler/k[1-6].json');
 const tarih = (g: string) => new Date(`${g}T12:00:00`);
@@ -76,6 +76,7 @@ export default function DersProgramiV15() {
 
   const kaydir = (n: number) => {
     if (gorunum === 'hafta') { setGun(ekle(gun, 7 * n)); return; }
+    if (gorunum === 'ay') { const d = tarih(gun); d.setDate(1); d.setMonth(d.getMonth() + n); setGun(iso(d)); return; }
     // gün görünümünde dersi olmayan günleri (hafta sonu, tatil) atla
     const sonraki = n > 0 ? gunler.find((x) => x > gun) : [...gunler].reverse().find((x) => x < gun);
     if (sonraki) setGun(sonraki);
@@ -119,15 +120,15 @@ export default function DersProgramiV15() {
 
       <div className="pg15-ust">
         <div className="pg15-seg" role="tablist" aria-label="Görünüm">
-          {([['gun', 'Gün'], ['hafta', 'Hafta'], ['liste', 'Liste']] as const).map(([id, ad]) => (
+          {([['gun', 'Gün'], ['hafta', 'Hafta'], ['ay', 'Ay'], ['liste', 'Liste']] as const).map(([id, ad]) => (
             <button key={id} type="button" role="tab" aria-selected={gorunum === id} className={gorunum === id ? 'is-on' : ''} onClick={() => setGorunum(id)}>{ad}</button>
           ))}
         </div>
         {gorunum !== 'liste' && (
           <div className="pg15-gez">
-            <button type="button" className="pg15-ok" aria-label={gorunum === 'gun' ? 'Önceki ders günü' : 'Önceki hafta'} onClick={() => kaydir(-1)}><ChevronLeft /></button>
-            <b>{gorunum === 'gun' ? gunYaz(gun) : `${tarih(hafta[0]).toLocaleDateString('tr-TR', { day: 'numeric', month: 'short' })} – ${tarih(hafta[4]).toLocaleDateString('tr-TR', { day: 'numeric', month: 'short' })}`}</b>
-            <button type="button" className="pg15-ok" aria-label={gorunum === 'gun' ? 'Sonraki ders günü' : 'Sonraki hafta'} onClick={() => kaydir(1)}><ChevronRight /></button>
+            <button type="button" className="pg15-ok" aria-label={gorunum === 'gun' ? 'Önceki ders günü' : gorunum === 'ay' ? 'Önceki ay' : 'Önceki hafta'} onClick={() => kaydir(-1)}><ChevronLeft /></button>
+            <b>{gorunum === 'gun' ? gunYaz(gun) : gorunum === 'ay' ? tarih(gun).toLocaleDateString('tr-TR', { month: 'long', year: 'numeric' }) : `${tarih(hafta[0]).toLocaleDateString('tr-TR', { day: 'numeric', month: 'short' })} – ${tarih(hafta[4]).toLocaleDateString('tr-TR', { day: 'numeric', month: 'short' })}`}</b>
+            <button type="button" className="pg15-ok" aria-label={gorunum === 'gun' ? 'Sonraki ders günü' : gorunum === 'ay' ? 'Sonraki ay' : 'Sonraki hafta'} onClick={() => kaydir(1)}><ChevronRight /></button>
             {gun !== g && g >= kb.baslangic && g <= kb.bitis && <button type="button" className="pg15-bugun" onClick={() => setGun(g)}>Bugün</button>}
           </div>
         )}
@@ -153,6 +154,8 @@ export default function DersProgramiV15() {
             </section>
           ))}
         </div>
+      ) : gorunum === 'ay' ? (
+        <AyIzgara gun={gun} bugun={g} sinav={kb.sinav} gunluk={gunluk} sec={(x) => { setGun(x); setGorunum('gun'); }} />
       ) : (
         <div className="pg15-hafta is-liste">
           {gunler.map((h) => (
@@ -164,6 +167,33 @@ export default function DersProgramiV15() {
         </div>
       )}
       <p className="v15-cap pg15-ac">Kaynak: {kb.ad.toLocaleLowerCase('tr-TR').replace(/(^|\s)(\p{L})/gu, (_, a: string, b: string) => a + b.toLocaleUpperCase('tr-TR'))} resmî ders programı. Kulaklık simgeli derslerin sesli anlatımı hazır; dokununca açılır.</p>
+    </div>
+  );
+}
+
+/** Ay görünümü: pazartesiden başlayan 6×7 ızgara; her günde ders sayısı noktaları, dokununca o günün listesi */
+function AyIzgara({ gun, bugun, sinav, gunluk, sec }: { gun: string; bugun: string; sinav: string; gunluk: Map<string, ProgDers[]>; sec: (g: string) => void }) {
+  const ilk = tarih(gun); ilk.setDate(1);
+  const ay = ilk.getMonth();
+  const bas = pazartesi(iso(ilk));
+  const gunler = Array.from({ length: 42 }, (_, i) => ekle(bas, i));
+  const haftaSay = gunler.findIndex((x, i) => i % 7 === 0 && tarih(x).getMonth() !== ay && i > 7);
+  const goster = haftaSay > 0 ? gunler.slice(0, haftaSay) : gunler;
+  return (
+    <div className="pg15-ay v15-card" role="grid" aria-label="Ay görünümü">
+      {['Pzt', 'Sal', 'Çar', 'Per', 'Cum', 'Cmt', 'Paz'].map((x) => <span key={x} className="pg15-ay-b" role="columnheader">{x}</span>)}
+      {goster.map((x) => {
+        const n = (gunluk.get(x) || []).length;
+        const disarida = tarih(x).getMonth() !== ay;
+        return (
+          <button key={x} type="button" role="gridcell" disabled={!n && x !== sinav} onClick={() => sec(x)}
+            className={`pg15-ay-g${disarida ? ' is-dis' : ''}${x === bugun ? ' is-bugun' : ''}${x === sinav ? ' is-sinav' : ''}`}
+            aria-label={`${tarih(x).toLocaleDateString('tr-TR', { day: 'numeric', month: 'long' })}: ${x === sinav ? 'kurul sınavı' : n ? `${n} ders` : 'ders yok'}`}>
+            <b>{tarih(x).getDate()}</b>
+            {x === sinav ? <small>Sınav</small> : n ? <span className="pg15-ay-n">{Array.from({ length: Math.min(n, 4) }, (_, i) => <i key={i} />)}</span> : null}
+          </button>
+        );
+      })}
     </div>
   );
 }
