@@ -629,13 +629,6 @@ export default function PdfDocView({ src, page, highlight, highlightLabel = 'Bu 
 
   return (
     <>
-    {/* Temiz tema: açık fon/şablon renklerini (krem, pastel şeritler) beyaza çeker; koyu metin ve çizgiler değişmez */}
-    <svg width="0" height="0" style={{ position: 'absolute' }} aria-hidden focusable="false">
-      <filter id="pdv-temiz-f" colorInterpolationFilters="sRGB" x="0" y="0" width="100%" height="100%">
-        <feColorMatrix in="SourceGraphic" type="matrix" result="m" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  1.28 4.29 0.43 0 -4.2" />
-        <feComposite in="m" in2="SourceGraphic" operator="over" />
-      </filter>
-    </svg>
     {thumbs && doc && (
       <PdfThumbs doc={doc} getPage={getPage} dims={dims} rot={rot} current={current} onPick={(p) => { lastTarget.current = p; visible.current = p; setCurrent(p); goTo(p, false); cb.current.onVisiblePage?.(p); }} />
     )}

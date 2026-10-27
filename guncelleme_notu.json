@@ -1,16 +1,15 @@
 {
  "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
  "onem": 439,
- "baslik": "Okuma yazısı: Roboto",
+ "baslik": "Temiz PDF teması daha beyaz",
  "maddeler": [
-  "Profilde okuma yazısı seçeneklerine Roboto eklendi",
-  "Roboto seçilince soru kökü, ders anlatımı ve notlar Roboto ile gösterilir"
+  "Temiz temada slayt fonları (krem, mavi, pastel şeritler) tamamen beyaza çekilir"
  ],
  "eklenen": [
   "Çevrimdışı kurul ve dönem süzgeci"
  ],
  "degisen": [
-  "Temiz sayfa teması açık fon renklerini kaldırır"
+  "Temiz tema fon temizleme yöntemi"
  ],
  "duzeltilen": [],
  "silinen": []
