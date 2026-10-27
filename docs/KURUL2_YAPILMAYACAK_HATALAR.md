@@ -929,3 +929,57 @@ Her maddede: belirti · kök neden · Kurul 2 kuralı · kapı durumu. Kanıtlar
 - **Kök neden:** Ekran denetimi I07–I10'u "DOĞRULANMADI" diye bıraktı; iş yalnız kullanıcının sıraladığı öncelik listesinden yürüdü, denetim tablosundaki DOĞRULANMADI/KISMİ satırları hiçbir zaman iş listesine dönüştürülmedi.
 - **Çözüm:** ProfilKurulumV15 (I07–I11) + Profil › Okul ve hedef; denetim belgesine "Değerlendirilmemiş ekranların değerlendirmesi" tablosu (her satıra karar).
 - **Kural:** Tasarım geçişinde "DOĞRULANMADI" durumu iş sonu kabul edilmez; her ekran KURULDU / SIRADA / VAR / BİLİNÇLİ / altyapı yok kararından birini alır ve tur sonunda tablo güncellenir.
+
+
+## H104 · Hoca ses kaydı: tek model dökümü sınav vurgularını bozuyordu; kayıt dersin ortasından başlıyordu (2026-10-27, k2-08)
+- **Belirti:** large-v3-turbo dökümünde hocanın dersin sonunda saydığı sınav yerleri gen adlarını bozuyordu (HOX "koks/COX", PAX6 "faksa altı", holoprozensefali tipleri "Dövar, övar, sevdövar"); kayıt 45. slayt civarından başlıyor, 1–44. slaytlar dökümde yoktu; "Altyazı M.K." sanrıları arada segment kapatıyordu.
+- **Kök neden:** Kısık amfi sesi + tek model; sınav özeti hızlı konuşulduğu için en çok bozulan bölüm tam da en önemli bölüm.
+- **Çözüm:** Son 7 dk Systran medium ile 30 sn parçalarla ikinci kez döküldü (CPU, systemd-run MemoryMax=4G); iki dökümün ortak anlaşılan kısmı alındı; her vurguya `kaynak_dokum`, `not` ve (öğrenci notuyla örtüşme) yazıldı; anlaşılmayan/slayta ters (Becker kardiyak tutulum) kayıtlar `hoca_vurgulari_dusuk_guven.md`'ye ayrıldı, pakete alınmadı.
+- **Kural:** Sınav vurgusu tek dökümden çıkarılmaz; alıntı birebir döküm, anlaşılmayan sözcük "düzeltilerek" yazılmaz (düzeltme `not`ta); gen adı/sayı yalnız slayt ve/veya öğrenci notu ile örtüşünce vurgu olur; kaydın hangi slayttan başladığı rapora yazılır.
+
+## H105 · Harita `adimlar` = deste `slideNumber` (checkpoint dahil); iskelet ajanı içerik adımlarını 1..N saydı (2026-10-27, k2-08)
+- **Belirti:** Deste birleşince `denetle.py` 138 HATA (adım X: pdfSayfalari … ama harita … diyor).
+- **Kök neden:** TALIMAT §1b "içerik adımı" diyor; denetleyici `adimlar`'ı destedeki slideNumber olarak okuyor, araya giren checkpoint slaytları numaraları kaydırıyor.
+- **Çözüm:** Deste birleştirildikten sonra haritadaki k. içerik adımı → k. içerik slaytının slideNumber'ına çevrildi (sayfa kayıtları ve ana başlık aralıkları).
+- **Kural:** Harita deste birleşmeden planlı sayıyla yazılır; birleştirmeden sonra slideNumber'a çevrilir ve `denetle.py` yeniden çalıştırılır (TALIMAT §1b'ye not eklendi).
+
+## H106 · `baglam.kazanimlar` kapak metninden türetilmiş çöp şablon cümleler içeriyor (2026-10-27, k2-08)
+- **Belirti:** "BEYİN VE İSKELET sİSTEMİ GELİŞİMİ gENETİĞİ dr. Öğr. Üyesi Serap ARSLAN … mekanizmasını ve klinik önemini analiz eder." gibi kazanımlar.
+- **Kök neden:** `isle.kazanimlar` kayıtlı kazanımı olmayan derste konu adından şablon kurup PDF kapak satırlarını da içine alıyor; TALIMAT "varsa baglam.kazanimlar'ı aynen kullan" dediği için işçi bunları ders paketine kopyalar.
+- **Çözüm:** k2-08 kazanımları dersten elle yazıldı (8 ölçülebilir kazanım).
+- **Kural:** Genel şablon ("temel kavramlarını … analiz eder") ya da kapak metni içeren kazanım kullanılmaz. Açık iş: `isle.kazanimlar` kayıt yoksa boş dönmeli (kod düzeltmesi bu turda yapılmadı).
+
+## H107 · Çıkmış eşlemesi: banka yıl etiketi ham belgeyle çelişiyor, yeniden yazılmış kökler, basılı anahtar yok (2026-10-27, k2-08)
+- **Belirti:** `past-1790877040110-917236` etiketi 2020-2021, ham belge `22 23.pdf` = 2022-2023 Kurul 5; `past-q-18-85` etiketi 2018-2019 Kurul 1, ham belge `2016GKurul 5 soruları…pdf`; `d3-b-053` (Marfan) ham eşlemesi güvenilmez ve doğru şık (pektus karinatum) slayttaki pektus excavatum ile çelişiyor; `e07675f936c7`, `dea0348ff630` kökleri ham belgeden farklı yazılmış; `d3-k2-pat-008`/`d3-k2-tbg-008`/`d3-k5-pat-023` ham belgede yok. `22 23.pdf`, `İSKENDERUN…pdf`, `KURUL 2 ÇIKMIŞ 3.pdf` basılı anahtar taşımıyor.
+- **Kök neden:** H83/H103 ile aynı: banka etiketi (yıl, kurul, "doğrulanmış") ham belgenin yılını/anahtarını kanıtlamıyor.
+- **Kural:** `kaynak` ham belge adı + sayfa/soru no; çelişen yıl `yil_notu`na; basılı anahtar yoksa `anahtar_notu` ("tıbbi tutarlılık kontrol edildi"); kökü yeniden yazılmış sürüm ya da slayta ters doğru şık eşlenmez.
+
+## H108 · Kısaltma kapısı slayttaki gen sembollerini ve slayt yazım hatalarını (LMXIB, WTI) Faz A'da HATA sayıyor (2026-10-27, k2-08)
+- **Belirti:** `degerlendirme_dogrula.py` 19 HATA: OTX, MSX, SRY, TWIST, MITF, HOXA, HOXD, DCX, LFNG, FND, FGFR, MD, HMG, HD, TGF, LMXIB, WTI "sözlükte yok".
+- **Kök neden:** Kapı `src/data/kisaltma_sozluk.json`'a bakıyor; kısaltma katmanı (aşama 10) daha sonra çalışıyor, arşivdeki y25 sözlüğü yalnız bazı genleri taşıyor; slayt yazım hatası (LMXIB, WTI) ayrı anahtar sayılıyor.
+- **Çözüm:** 17 anahtar yalnız bu ders için eklendi (açılım standart, slayttaki yazım hatası belirtilerek).
+- **Kural:** Genetik derslerde Faz A'da slayttaki gen sembolleri + kısaltmalar sözlüğe önce eklenir; yazım hatalı sembol (LMXIB/WTI) aynen ayrı anahtar olur ve açılımında doğru gen belirtilir.
+
+## H109 · v2 cümlesinin `ses` alanında iç cümle sonu: sunucu cümle sayısı v2 ile tutmuyor (2026-10-27, k2-05 Nörolojik Muayene)
+- **Belirti:** `konusma_v2.py --dogrula` 0 HATA verirken 4 cümlenin `ses` alanı ("Optik disk … çukurdur. Makula ise …") iki cümle içeriyordu; sunucu ve istemci bunu iki cümle sayar, v2/çapa/cümle zamanı/işaret/çıkmış konumu (`p`, `c`) tek cümle varsayar → çapa ve işaret bir cümle kayardı (`capa_baslangic` cümle sayısı tutmayan paragrafta v2 sayfasını kullanmaz).
+- **Kök neden:** v2 doğrulayıcı `ses` içeriğini yalnız işaretleme/uzunluk bakımından denetliyordu; cümle sınırı kuralı (`pdf_hizala.cumle_sinirlari` = `canliDersStore.ts::cumleSinirlari`) v2 şemasında zorunlu değildi.
+- **Çözüm:** `konusma_v2.dogrula` her `ses`'in tek cümle olmasını HATA sayar (`_cumle_sayisi`, sunucu kuralıyla aynı); yazar iki cümleyi iki v2 cümlesine böler. k2-01…k2-05 veride ihlal yok.
+- **Kural:** her v2 `ses` tam bir cümledir; yazım betiğinde ayrıca kendi sınır kontrolü (cümle sayısı = 1, ≤25 kelime) çalıştırılır.
+
+## H110 · Kısaltma kapısı `kisaltma_elle`deki OD/OR/ID/SED'i "kısaltma biçiminde değil" diye reddetti (2026-10-27, k2-08 Tıbbi Genetik)
+- **Belirti:** `kisaltma_sozlugu.py denetle` 12 HATA: OD, OR, ID, SED "kısaltma biçiminde değil"; `otomatik` aynı kısaltmaları (slaytta onlarca kez geçen "OD kalıtım") hiç aday saymadı.
+- **Kök neden:** `kisaltma_mi()` büyük harfli sözcüğü Türkçe sözlükte (hunspell) bulursa eler (od, or, id, sed); istisna yalnız genel `kisaltma_bilinen.json` içindi, dersin kendi `kisaltma_elle/<key>.json` anahtarları dikkate alınmıyordu (H92'nin önerdiği branşa özgü elle sözlük bu yüzden OD/OR için işe yaramıyordu).
+- **Çözüm:** `ELLE_AKTIF` (işlenen dersin elle anahtarları) `kisaltma_mi`de kabul edilir; `k_adaylar/k_otomatik/k_dogrula` başında doldurulur. Çok anlamlı kısaltma (CVS: kardiyovasküler sistem s.49 / koryonik villus örneklemesi s.70) genel sözlüğe konmaz, sayfa bazlı yazar dosyasıyla verilir.
+- **Kural:** branşa özgü, Türkçe sözcüğe benzeyen kısaltma (OD, OR, ID, SED) dersin `kisaltma_elle` dosyasına yazılır; genel `kisaltma_bilinen.json`a eklenmez.
+
+## H111 · Alt ajan çapası: görüntüyü açmadan betikle eşleme, indeks kayması; kapı yalnız sınır denetliyor (2026-10-27, k2-08)
+- **Belirti:** `capa_dogrula.py` 1 HATA (P82.C3 "madde M[6, 7] sayfada yok"); elle bakınca s.75 (2 cümle) ve s.83 (4 cümle) yanlış kutuya bağlıydı. Ajan raporları "kutu numaralarını txt'den eşledim, PNG'yi açmadım" diyordu.
+- **Kök neden:** `sNN.txt` madde kutuları bir madde imi içinde birleşik (M1 = üç bullet) ya da bölünmüş (M3/M4) olabilir; ajan satır sırasından numara türetti. `capa_dogrula.py` sınır dışı indeksi yakalar ama yanlış ama geçerli kutuyu yakalamaz.
+- **Çözüm:** ana oturum çıktıyı cümle×kutu kelime örtüşmesiyle taradı (şüpheli 81), kritik sayfaları tek tek okudu, 6 cümle düzeltildi; 422 cümle %98 anlamsal, 0 HATA.
+- **Kural:** alt ajan çapası kapıdan geçmeden kabul edilmez ve ana oturum her sayfa için "cümle ↔ atanan kutu metni" dökümünü (`goster.py` benzeri) okur; birleşik maddeli (bullet'ları tek kutuda toplayan) sayfalarda kutu numarası satır sayısından türetilmez.
+
+## H112 · İlk anlatım taslağı öğrenci denetçide KALDI: aynı sözcük iki anlamda, kilit kavram tanımsız, gen sembolü okunuşu çözülemedi (2026-10-27, k2-08)
+- **Belirti:** bağımsız denetçi tur 1 KALIR: "tip bir kollajen" ile "osteogenezis imperfekta tip bir" aynı sesle okunup karışıyor; distrofinin işlevi ve "okuma çerçevesi" anlatılmadan ekzon rakamları verilmiş; sklerotom/dermatom/miyotom türevsiz; kraniyoraşizis tanımı anensefaliyle çakışıyor; WT1 "çifte ve te bir" çözülemedi; "Hoca da ... söyledi" onaylama cümleleri bilgi taşımayıp dolgu hissi veriyor.
+- **Kök neden:** slayt satırı sırasıyla yazılırken ses dinleyicisinin görmediği ayrım (tip/tür) ve kilit kavramın önceden tanımı atlandı; Hoca atfı "her yerde ekleyelim" refleksiyle kuruldu.
+- **Çözüm:** kollajen için "birinci/üçüncü tür", hastalık için "birinci tip" kullanıldı; okuma çerçevesi ve distrofin işlevi kısaca tanımlandı; somit türevleri, kraniyoraşizis tanımı düzeltildi; W harfi "duble ve" okunur; yalnız yeni bilgi (ayırt edici vurgu, klinik örnek, tedavi) taşıyan hoca atıfları kaldı. Tur 2 GEÇER (%90 yanıtlanabilirlik).
+- **Kural:** sesle okunan metinde aynı sözcük iki ayrı kavramı gösteriyorsa yazım ayrıştırılır; sayısal/ekzon gibi kavram ancak tanımından sonra kullanılır; "hoca da ... söyledi" yalnız slaytın vermediği ek bilgi ya da sınav vurgusu içerdiğinde yazılır.

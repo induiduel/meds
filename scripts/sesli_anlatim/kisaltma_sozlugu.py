@@ -97,6 +97,7 @@ def turkce_sozcuk(w: str) -> bool:
 
 # ── aday bulma ────────────────────────────────────────────────────────────────────────────────────────────────────
 _BILINEN_CACHE: dict[str, str] | None = None
+ELLE_AKTIF: set[str] = set()  # işlenen dersin kisaltma_elle anahtarları (H110: OD/OR/ID/SED Türkçe sözcük sayılıp elenmesin)
 
 
 def kisaltma_mi(w: str) -> bool:
@@ -108,7 +109,7 @@ def kisaltma_mi(w: str) -> bool:
     global _BILINEN_CACHE
     if _BILINEN_CACHE is None:
         _BILINEN_CACHE = bilinen()
-    if w in _BILINEN_CACHE:  # elle/bilinen sözlükte olan kısaltma Türkçe sözcüğe benzese de kabul (SAK, KS)
+    if w in _BILINEN_CACHE or w in ELLE_AKTIF:  # elle/bilinen sözlükte olan kısaltma Türkçe sözcüğe benzese de kabul (SAK, KS, OD, OR)
         return True
     if turkce_sozcuk(w):  # BİLİNÇ, KOMA, NÖBET gibi büyük harfli Türkçe sözcükler
         return False
@@ -284,6 +285,7 @@ def yaz(key: str, cikti: dict) -> Path:
 
 # ── komutlar ─────────────────────────────────────────────────────────────────────────────────────────────────────
 def k_adaylar(key: str) -> int:
+    ELLE_AKTIF.clear(); ELLE_AKTIF.update(elle(key))
     sy = T.sayfalar(T.ders(key))
     if not sy:
         print(f"{key}: PDF yok"); return 2
@@ -303,6 +305,7 @@ def k_adaylar(key: str) -> int:
 
 
 def k_otomatik(key: str, yazilsin: bool, metinden: bool = False) -> int:
+    ELLE_AKTIF.clear(); ELLE_AKTIF.update(elle(key))
     sy = T.sayfalar(T.ders(key))
     if not sy:
         print(f"{key}: PDF yok"); return 2
@@ -324,6 +327,7 @@ def k_otomatik(key: str, yazilsin: bool, metinden: bool = False) -> int:
 
 
 def k_dogrula(key: str, dosya: Path, yazilsin: bool) -> int:
+    ELLE_AKTIF.clear(); ELLE_AKTIF.update(elle(key))
     dosya = Path(dosya)
     yazar = json.loads(dosya.read_text(encoding="utf-8"))
     hata, cikti = denetle(key, yazar, T.sayfalar(T.ders(key)))

@@ -110,6 +110,7 @@ adımlarda ve hangi özet (bilgi_paketi) maddelerinde anlatıldığı yazılır.
    {"sayfa": 9, "tur": "sekil", "baslik": "1.1", "ne_anlatiliyor": "...", "adimlar": [7], "bilgi": [14],
     "sekiller": ["Şekil 55-2: NK hücresinin MHC-I ile inhibisyonu — ne gösteriyor, önemli bulgusu ne"]}]}
 ```
+- **Adım numaraları (H105):** haritadaki `adimlar` değerleri, deste birleşince destedeki `slideNumber`'dır (checkpoint slaytları araya girer). Haritayı planlı 1..N içerik adımıyla yazıp deste birleşince slideNumber'a çevir ve `denetle.py`'yi yeniden çalıştır.
 - **Başlıklar:** dersin akışına göre ana başlıklar (`"1"`, `"2"` …) ve gerekirse alt başlıklar (`"1.1"`, `ust` ile).
   Her **ana başlık 1–20 içerik adımından** oluşur (tekrar/oyun sayfaları sayılmaz); ana başlıkların `adimlar`
   aralıkları içerik adımlarını sırayla, boşluksuz ve çakışmasız böler. Alt başlık aralığı üst başlığın içinde kalır.

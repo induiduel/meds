@@ -132,3 +132,20 @@ alt ajanlar `model: sonnet, effort: medium`. Öğrenci notu ayrı ekran katmanı
 
 **D. Kayıt** — `DEGISIKLIK_KAYDI.md`'ye ders + aşama durumu; atlanan aşamanın gerekçesi; yeni hata → hata defteri (belirti/kök neden/kural).
 Eksik katmanla ders "tamamlandı" denmez.
+
+## 10. Titizlik protokolü: orijinal PDF + öğrenci notu + hoca sesi birlikte (kullanıcı kararı 2026-10-27, k2-05 / k2-08 ile yazıldı)
+Kullanıcı "tam içerik işçisini çalıştır, tüm adımlar" dediğinde (AGENTS kural 22) bu protokol sormadan uygulanır. Amaç: halüsinasyonsuz,
+kaynağa sadık, çıkmışa ve hocanın vurguladığı yere ağırlık veren ders.
+1. **Dosyaları önce kendin bul:** `ogrenci_drive.py --tara` (öğrenci Drive) ve okul Drive'ı (`hizli_bakis.klasor_listesi`, kök `1ozu5KiL…`) gezilir;
+   `dosya_indir` ile `meds_temp/ogrenci_ders/<ders>/` altına `orijinal.pdf`, `ogrenci_not.pdf`, `hoca_ses.m4a` indirilir. Kullanıcı "Genetik 1 / Nöroloji 3" gibi
+   yazarsa ders kaydından (`dersler/kN.json`, kod `2g01`, `2n03`) kimliğe çevrilir. Orijinal ↔ not sayfa sayısı eşit mi, kapak başlığı tutuyor mu doğrulanır.
+2. **Kıyas = üç kaynak:** orijinal slayt asıl gerçektir; öğrenci notu ve hoca sesi onun üstüne işlenir. Öğrenci notundaki her madde slayt metnine geri bağlanır
+   (sayfa kayması en sık hata); slayttakiyle çelişen not kullanılmaz. Her sayfa GÖRÜNTÜSÜ okunur (metin çıkarımı el yazısını/işareti vermez).
+3. **Hoca sesi:** CPU'da (`hoca_dokum.py`, mutlak yol, systemd-run `MemoryMax=4G`); dersin SON dakikalarında hoca çoğu zaman sınav yerlerini sayar —
+   o bölüm ayrıca dinlenir/gerekirse yeniden dökülür, her vurgu zaman damgalı alıntı + slayt sayfası ile kaydedilir; anlaşılmayan yer vurgu olmaz.
+4. **Çıkmışla birleştirme:** hoca vurgusu + doğrulanmış çıkmış + öğrenci işareti kesişen yerler en önemli sayılır, anlatımda en ayrıntılı ve en vurgulu yerlerdir.
+   Yalnız hoca/çıkmış dayanaklı vurgu cümlesi kurulur; ikisi yoksa vurgu cümlesi yok. Çıkmış eşleme ham belgede yer göstermeden yapılmaz.
+5. **Her şey kaynak sağlamalı:** kritik tıbbi iddia (eşik, sayı, gen–hastalık, dereceleme) slayt sayfasıyla `kanit`ta eşlenir; emin olunmayan atlanır.
+6. **Fazlı iş + alt ajan:** A (aşama 1–6 içerik) → B (7–11 anlatım/yayın/ses/çapa) → C (12–16 çizim, önem/çözücü/asistan, quiz, dağıtım). Her faz sonunda
+   ana oturum çıktıyı kapılarla yeniden çalıştırıp doğrular (ajan raporuna güvenilmez). İki ders paralel çalışırsa paylaşılan dosyalara yalnız Edit ile satır eklenir.
+7. **Bitişte katman katman rapor:** hangi katman yapıldı / atlandı ve gerekçesi; hata defterine kök neden; `DEGISIKLIK_KAYDI.md`.
