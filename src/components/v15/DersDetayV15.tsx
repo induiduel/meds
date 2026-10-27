@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
-import { Check, ChevronRight, CircleHelp, Download, Headphones, Layers, Play, RotateCcw, MessageCircle } from 'lucide-react';
+import { BookA, Check, ChevronRight, CircleHelp, ClipboardList, Download, Headphones, Layers, Lightbulb, Play, RotateCcw, MessageCircle, Stethoscope, Table2, WalletCards } from 'lucide-react';
 import { linkClick, navigateTo, parseLocation, pathFor } from '../../router';
 import { useAppearance } from '../../utils/appearance';
 import { cdDetayGetir, cdKayitliKonum, cdSesUrl, cdTercihVaryant, fmtMb, type CdDetay } from '../canliDers/canliDersStore';
@@ -8,6 +8,8 @@ import { bittiMi, sesliKonuId, useTakip } from '../../services/calismaTakip';
 import { useV15Baslik } from './baslik';
 import { bransYolu, dersBransi, dersKurulu, hocaYaz, merkezYolu, saatYaz, sureDk, useDersListesi } from './dersVeri';
 import { Halka } from './Halka';
+import DersIcerikV15 from './DersIcerikV15';
+import { DI_BOLUMLER, dersIcerikGetir, type DiBolum, type DiPaket } from './dersIcerik';
 import '../../styles/v15/dersler.css';
 
 /**
@@ -33,6 +35,17 @@ export default function DersDetayV15() {
     if (!v15 && key) navigateTo(pathFor('canli_ders', key));
   }, [v15, key]);
 
+  const [bolumAd, setBolumAd] = useState(() => new URLSearchParams(window.location.search).get('b') || '');
+  useEffect(() => {
+    const f = () => setBolumAd(new URLSearchParams(window.location.search).get('b') || '');
+    window.addEventListener('popstate', f);
+    return () => window.removeEventListener('popstate', f);
+  }, []);
+  const [paket, setPaket] = useState<DiPaket | null>(null);
+  useEffect(() => {
+    setPaket(null);
+    if (key) dersIcerikGetir(key).then(setPaket).catch(() => undefined);
+  }, [key]);
   const { dersler } = useDersListesi();
   const ozet = useMemo(() => dersler?.find((d) => d.key === key) || null, [dersler, key]);
   const [detay, setDetay] = useState<CdDetay | null>(null);
@@ -114,11 +127,13 @@ export default function DersDetayV15() {
   const hoca = hocaYaz(ozet?.hoca || detay?.hoca);
   useV15Baslik({
     baslik,
-    alt: [brans && cdBransKisa(brans), no != null ? `Ders ${no}` : '', hoca].filter(Boolean).join(' · '),
-    geri: brans ? bransYolu(kurul, brans) : merkezYolu(kurul),
+    alt: bolumAd ? DI_BOLUMLER.find((b) => b.id === bolumAd)?.ad || '' : [brans && cdBransKisa(brans), no != null ? `Ders ${no}` : '', hoca].filter(Boolean).join(' · '),
+    geri: bolumAd ? `${pathFor('ders_detay', key)}` : brans ? bransYolu(kurul, brans) : merkezYolu(kurul),
   });
 
   if (!key) return <p className="dd15-bos v15-card">Ders bulunamadı.</p>;
+  const altSayfa = DI_BOLUMLER.find((b) => b.id === bolumAd);
+  if (altSayfa) return <DersIcerikV15 dersKey={key} bolum={altSayfa.id} />;
   const dinle = pathFor('canli_ders', key);
   const cikmis = detay?.cikmisKonum || [];
   const yillar = [...new Set(cikmis.map((c) => Number(c.yil)).filter((y) => y > 1990))].sort();
@@ -135,6 +150,22 @@ export default function DersDetayV15() {
       s: `${cikmis.length} soru${yillar.length ? ` · ${yillar[0]}${yillar.length > 1 ? `–${yillar[yillar.length - 1]}` : ''}` : ''} · derste geçtiği yerde işaretli`,
       url: `${dinle}?p=${cikmis[0].p}`,
     });
+
+  if (paket) {
+    const say: Record<DiBolum, [number, string, React.ElementType, string]> = {
+      terimler: [paket.terimler.length + paket.kisaltmalar.length, 'terim ve kısaltma · tanımlarıyla', BookA, 'is-ok'],
+      hastaliklar: [paket.hastaliklar.length, 'hastalık ve bulgu · kart kart', Stethoscope, 'is-c'],
+      bilgiler: [paket.onemli.length + paket.spotlar.length, 'önemli nokta ve sınav spotu', Lightbulb, ''],
+      tablolar: [paket.tablolar.length, 'tablo ve karşılaştırma', Table2, 'is-c'],
+      sorular: [-1, 'müfredata sadık örnek soru · anında geri bildirim', ClipboardList, 'is-ok'],
+      kartlar: [paket.kartlar.length, 'hatırlatma kartı', WalletCards, ''],
+    };
+    for (const b of DI_BOLUMLER) {
+      const [n, a, ic, tone] = say[b.id];
+      if (n === 0) continue;
+      icerik.push({ id: b.id, tone, icon: ic, t: b.ad, s: n > 0 ? `${n} ${a}` : a, url: `${pathFor('ders_detay', key)}?b=${b.id}` });
+    }
+  }
 
   const durum = bitti ? 'Bu dersi bitirdin' : t != null ? `Kaldığın yer: ${saatYaz(t)}` : 'Henüz başlamadın';
   const durumAlt =

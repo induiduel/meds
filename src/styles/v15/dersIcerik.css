@@ -1,0 +1,31 @@
+.di15{display:grid;gap:12px;max-width:960px;margin:0 auto;padding:0 0 32px}
+.di15-tabs{display:flex;gap:8px;overflow-x:auto;padding:2px 0}
+.di15-tabs a{white-space:nowrap;padding:8px 14px;border-radius:999px;background:var(--surface-2,rgba(128,128,128,.12));color:inherit;text-decoration:none;font-size:14px}
+.di15-tabs a.is-on{background:var(--accent,#f4cf4a);color:#1a1a1a;font-weight:600}
+.di15-tabs a span{opacity:.65;margin-left:4px}
+.di15-ara{display:flex;align-items:center;gap:8px;padding:10px 14px}
+.di15-ara svg{width:18px;height:18px;opacity:.6}
+.di15-ara input{flex:1;background:none;border:0;outline:0;color:inherit;font:inherit}
+.di15-list{list-style:none;margin:0;padding:4px 16px}
+.di15-list>li{padding:12px 0;border-bottom:1px solid rgba(128,128,128,.18)}
+.di15-list>li:last-child{border:0}
+.di15-list p{margin:4px 0 0;line-height:1.5}
+.di15-list ul{margin:6px 0 0 18px}
+.di15 small{display:block;opacity:.6;margin-top:4px}
+.di15 em{opacity:.65;font-style:normal}
+.di15-kart{padding:12px 16px}
+.di15-kart summary{cursor:pointer}
+.di15-kart h3,.di15-tablo h3{font-size:14px;margin:12px 0 4px;opacity:.8}
+.di15-kart ul{margin:0 0 0 18px}
+.di15-tablo{padding:12px 16px}
+.di15-kay{overflow-x:auto}
+.di15-tablo table{border-collapse:collapse;width:100%;font-size:14px}
+.di15-tablo th,.di15-tablo td{text-align:left;padding:8px 10px;border-bottom:1px solid rgba(128,128,128,.2);vertical-align:top}
+.di15-puan{font-size:12px;padding:1px 7px;border-radius:99px;background:rgba(128,128,128,.18);margin-left:6px}
+.di15-soru{padding:14px 16px;display:grid;gap:8px;margin-top:8px}
+.di15-soru button,.di15-kb{text-align:left;padding:10px 12px;border-radius:10px;border:1px solid rgba(128,128,128,.25);background:none;color:inherit;font:inherit;cursor:pointer}
+.di15-soru button.is-d{border-color:#3cb371;background:rgba(60,179,113,.15)}
+.di15-soru button.is-y{border-color:#e5484d;background:rgba(229,72,77,.15)}
+.di15-ac{opacity:.85;line-height:1.5}
+.di15-kb{width:100%;border:0;padding:0}
+.di15-bos{padding:20px}
