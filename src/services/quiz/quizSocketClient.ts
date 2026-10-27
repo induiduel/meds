@@ -8,6 +8,8 @@
  * 4. Milisaniye hassasiyetinde anlık cevap iletimi.
  */
 
+import { getCustomApiUrl } from '../api';
+
 export type QuizClientEventType =
   | 'room_joined'
   | 'player_joined'
@@ -18,7 +20,9 @@ export type QuizClientEventType =
   | 'answer_ack'
   | 'player_answered'
   | 'round_revealed'
-  | 'game_finished';
+  | 'game_finished'
+  | 'room_error'
+  | 'baglanti';
 
 export interface PreFetchedQuestion {
   id: string;
@@ -48,23 +52,32 @@ export class QuizSocketClient {
   private listeners: Map<QuizClientEventType, ((data: any) => void)[]> = new Map();
 
   constructor() {
-    const protocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
-    const host = window.location.host;
-    this.url = `${protocol}//${host}/api/quiz/ws`;
+    this.url = '';
   }
 
-  public connect(roomId: string, userId: string, displayName: string, courseId?: string, topicId?: string) {
+  /** Kullanıcının ayarladığı API adresine (getCustomApiUrl) uyar; yoksa sayfanın kendi kökü */
+  private adres() {
+    const ozel = getCustomApiUrl('/api/quiz/ws');
+    const kok = ozel ? new URL(ozel, window.location.href) : new URL(window.location.href);
+    return `${kok.protocol === 'https:' ? 'wss:' : 'ws:'}//${kok.host}/api/quiz/ws`;
+  }
+
+  /** kaynak: yalnız odayı kuran verir (branş, ders, soru sayısı, başlık); kodla katılan vermez */
+  public connect(roomId: string, userId: string, displayName: string, courseId?: string, topicId?: string, kaynak?: Record<string, unknown>) {
     this.roomId = roomId;
     this.userId = userId;
     this.displayName = displayName;
 
     if (this.ws) {
+      this.ws.onclose = null;
       this.ws.close();
     }
 
-    this.ws = new WebSocket(this.url);
+    this.url = this.adres();
+    const ws = new WebSocket(this.url);
+    this.ws = ws;
 
-    this.ws.onopen = () => {
+    ws.onopen = () => {
       this.isConnected = true;
       this.startClockSync();
 
@@ -75,11 +88,13 @@ export class QuizSocketClient {
         userId,
         displayName,
         courseId,
-        topicId
+        topicId,
+        kaynak
       });
+      this.emit('baglanti', { bagli: true });
     };
 
-    this.ws.onmessage = (event) => {
+    ws.onmessage = (event) => {
       try {
         const msg = JSON.parse(event.data);
         this.handleServerMessage(msg);
@@ -88,9 +103,11 @@ export class QuizSocketClient {
       }
     };
 
-    this.ws.onclose = () => {
+    ws.onclose = () => {
+      if (this.ws !== ws) return;
       this.isConnected = false;
       this.stopClockSync();
+      this.emit('baglanti', { bagli: false });
       // Yeniden bağlanma denemesi (3 sn sonra)
       setTimeout(() => {
         if (!this.isConnected && this.roomId) {
@@ -99,14 +116,17 @@ export class QuizSocketClient {
       }, 3000);
     };
 
-    this.ws.onerror = (err) => {
+    ws.onerror = (err) => {
       console.warn('[QuizSocketClient] Hata:', err);
     };
   }
 
   public disconnect() {
     this.stopClockSync();
+    // oda kimliği silinmezse onclose kendiliğinden yeniden bağlanıyordu
+    this.roomId = '';
     if (this.ws) {
+      this.ws.onclose = null;
       this.ws.close();
       this.ws = null;
     }
@@ -183,6 +203,12 @@ export class QuizSocketClient {
           rttMs: this.rttMs,
           timeOffsetMs: this.timeOffsetMs
         });
+        break;
+      }
+
+      case 'room_error': {
+        this.roomId = '';
+        this.emit('room_error', msg);
         break;
       }
 

@@ -56,7 +56,7 @@ Yeni bileşen önce buraya eklenir; sayfa CSS'i yalnız yerleşim yazar.
 ### Yeni sayfalar (tasarım sohbetinde istenenler; sitede yok, sıfırdan kurulacak)
 | Sayfa | v15 ekranları | Not |
 |---|---|---|
-| Oyunlar merkezi (boşluk, eşleştir, kartlar, sırala, blitz, ızgara, düello, sınıf yarışması) | F01–F11, N01–N08 | Menüde 5. bölüm "Oyunlar"; realtime quiz altyapısı (`/api/quiz/ws`) |
+| Oyunlar merkezi (boşluk, eşleştir, kartlar, sırala, blitz, ızgara, düello, sınıf yarışması) | F01–F11, N01–N08 | ✅ Canlı yarışma kuruldu (Soru çöz › Oyunlar); diğer oyun türleri (boşluk, eşleştir, sırala, blitz) yok |
 | Hücrem (DNA, glukoz, mitokondri, 28 evrim basamağı) | M01–M17 | Puan kuralları README'de; 3B hücre canvas |
 | Yüzen kronometre + çalışma kapsülü | T01–T15, U01–U12 | Sistem süresinden ayrı tutulur |
 | Ders programı (liste/hafta/gün/ay, içe aktar) | AA01–AA07 | ✅ gün/hafta/liste kuruldu (ay ve içe aktarma yok) |
@@ -147,3 +147,4 @@ kullanıcı onayı. Dağıtım yalnız `deploy/oracle/dagit.sh` (onem +1), kulla
 
 - **Ders programı** `DersProgramiV15.tsx` + `styles/v15/program.css`, rota `ders_programi` (`/program` ↔ `/dersler/program`). Veri `src/data/dersler/kN.json`; sesli dersi olan satır ders ayrıntısına gider. Kurul 1 kaydında saat yok (—).
 - **Çalışma grafikleri** `CalismaGrafikleriV15.tsx` + `styles/v15/grafik.css`: İstatistiklerim tepesinde (yalnız v15), sayfanın 7/30 gün seçimine bağlı; özet kutuları, günlük süre çubukları (dokun/üzerine gel → gün ayrıntısı), modül dağılımı. Veri calismaTakip.
+- **Oyunlar** `OyunlarV15.tsx` + `styles/v15/oyun.css`, rota `oyunlar` (`/oyunlar` ↔ `/sorular/oyunlar?oda=KOD`). Sunucu `services/quiz/quizRealtimeServer` (/api/quiz/ws) + soru kaynağı `services/quiz/oyunSoruKaynagi.ts` (sesli çözücü setleri, kök ≤220 karakter, LLM yok), `GET /api/oyun/kaynaklar`. Oda RAM'de; kopan oyuncu oyun sürerken puanıyla kalır.

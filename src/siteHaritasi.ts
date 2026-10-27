@@ -192,6 +192,8 @@ export function disYol(adres: string): string {
       return birlestir('/sorular/olasi', sp, hash);
     case 'soru-haritasi':
       return birlestir('/sorular/soru-haritasi', sp, hash);
+    case 'oyunlar':
+      return birlestir('/sorular/oyunlar', sp, hash);
     case 'havuz':
       return birlestir(`/sorular/havuz${s[1] ? `/${s.slice(1).map(enc).join('/')}` : ''}`, sp, hash);
     case 'sorular': {
@@ -337,6 +339,7 @@ export function icYol(adres: string): string {
     if (arac === 'ornek') return birlestir(`/ornek-sorular${s[2] ? `/${enc(s[2])}` : ''}`, sp, hash);
     if (arac === 'olasi') return birlestir('/olasi-sorular', sp, hash);
     if (arac === 'soru-haritasi') return birlestir('/soru-haritasi', sp, hash);
+    if (arac === 'oyunlar') return birlestir('/oyunlar', sp, hash);
     // eski havuz soru bağlantısı /sorular/<soruId>
     return birlestir(`/havuz/${s.slice(1).map(enc).join('/')}`, sp, hash);
   }

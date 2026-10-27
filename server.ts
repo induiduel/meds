@@ -37,6 +37,7 @@ import { registerOgrenSesRoutes } from './src/services/ogrenSes';
 import { registerCevrimdisiKatalogRoutes } from './src/services/cevrimdisiKatalog';
 import { registerWhatsAppRoutes, runScheduledWhatsAppDigests } from './src/services/whatsappService';
 import { quizRealtimeServer } from './src/services/quiz/quizRealtimeServer';
+import { oyunKaynaklari } from './src/services/quiz/oyunSoruKaynagi';
 import crypto from 'crypto';
 
 const require = createRequire(import.meta.url);
@@ -702,6 +703,11 @@ app.get('/api/test/kurul1/2627', (req, res) => {
   res.setHeader('Content-Disposition', 'inline; filename="kurul1_2026-2027_cikmis.pdf"');
   res.type('application/pdf');
   res.sendFile(file);
+});
+
+// Oyunlar (canlı yarışma): oyuna uygun soru kaynakları (sesli soru çözücü setleri; src/services/quiz/oyunSoruKaynagi.ts)
+app.get('/api/oyun/kaynaklar', (_req, res) => {
+  try { res.json({ kaynaklar: oyunKaynaklari() }); } catch (e: any) { res.status(500).json({ error: e?.message || 'Kaynaklar okunamadı' }); }
 });
 
 // Hybrid Database & Server Health Check

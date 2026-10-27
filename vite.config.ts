@@ -103,7 +103,7 @@ export default defineConfig(({ mode }) => {
       },
     },
     preview: {
-      proxy: { '/api': { target: 'http://localhost:3000', changeOrigin: true } },
+      proxy: { '/api': { target: 'http://localhost:3000', changeOrigin: true, ws: true } },
     },
     server: {
       port: 5174,
@@ -111,6 +111,8 @@ export default defineConfig(({ mode }) => {
         '/api': {
           target: 'http://localhost:3000',
           changeOrigin: true,
+          // Oyunlar: /api/quiz/ws websocket'i de geçsin
+          ws: true,
         },
       },
       // HMR kapalı (iframe önizleme), ama dosya izleme açık: yoksa Vite ilk

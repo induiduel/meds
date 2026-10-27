@@ -73,3 +73,4 @@ dört kategori kartını görür. Yönetici adresle açabilir. Geri açmak kulla
 - Ekranda `window.location.pathname`'i yeni adrese göre ayrıştırmak; iç adres (`icKonum`) okunur.
 
 - 2026-10-27: `/dersler/program` (iç `/program`, eski `/ders-programi`) — Ders programı.
+- 2026-10-27: `/sorular/oyunlar` (iç `/oyunlar`, `?oda=KOD` davet) — Oyunlar.

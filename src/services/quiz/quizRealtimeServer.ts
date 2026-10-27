@@ -11,6 +11,7 @@
 
 import { createRequire } from 'module';
 import type { QuizQuestion } from '../../types/quiz';
+import { oyunSorulari } from './oyunSoruKaynagi';
 
 const require = createRequire(import.meta.url);
 const wsModule = require('ws');
@@ -45,6 +46,9 @@ export interface QuizRoom {
   roundDeadlineMs: number;
   players: Map<string, PlayerState>;
   revealTimeoutId?: any;
+  /** Oyunlar: kaynak adı (lobide gösterilir) ve odayı kuran */
+  baslik?: string;
+  kurucu?: string;
 }
 
 class QuizRealtimeManager {
@@ -109,10 +113,24 @@ class QuizRealtimeManager {
 
           // 2. Odaya katılma
           case 'join_room': {
-            const { roomId, userId, displayName, courseId, topicId } = msg;
+            const { userId, displayName, courseId, topicId, kaynak } = msg;
+            const roomId = String(msg.roomId || '').toUpperCase().slice(0, 12);
+            if (!roomId || !userId) break;
+            // Oyunlar: oda yalnız kaynak (branş + isteğe bağlı ders + soru sayısı) verilerek kurulur; kodla katılan
+            // kaynaksız gelir — oda yoksa hata döner (sorusuz oda kurulup oyun hiç başlamıyordu)
+            if (!this.rooms.has(roomId)) {
+              const sorular = kaynak?.brans ? oyunSorulari(String(kaynak.brans), kaynak.ders ? String(kaynak.ders) : undefined, Number(kaynak.n) || 10) : [];
+              if (!sorular.length) {
+                ws.send(JSON.stringify({ type: 'room_error', mesaj: kaynak ? 'Bu kaynakta oyuna uygun soru yok.' : 'Bu kodla açık oda yok. Kodu kontrol et.' }));
+                break;
+              }
+              const oda = this.createOrJoinRoom(roomId, String(kaynak.brans), String(kaynak.ders || ''), sorular);
+              oda.baslik = String(kaynak.baslik || '').slice(0, 120);
+              oda.kurucu = String(userId);
+            }
             currentRoomId = roomId;
-            currentUserId = userId;
-            this.handleJoinRoom(ws, roomId, userId, displayName || 'Öğrenci', courseId, topicId);
+            currentUserId = String(userId);
+            this.handleJoinRoom(ws, roomId, String(userId), String(displayName || 'Öğrenci').slice(0, 40), courseId, topicId);
             break;
           }
 
@@ -144,6 +162,8 @@ class QuizRealtimeManager {
     });
 
     ws.on('close', () => {
+      // aynı oyuncu yeni soketle döndüyse eski soketin kapanışı onu odadan silmesin
+      if ((ws as any).__eskiOyuncu) return;
       if (currentRoomId && currentUserId) {
         this.handleDisconnect(currentRoomId, currentUserId);
       }
@@ -179,8 +199,15 @@ class QuizRealtimeManager {
       room = this.createOrJoinRoom(roomId, courseId || 'pharmacology', topicId || 'k2-07', []);
     }
 
+    // Yeniden bağlanan oyuncu puanını ve cevaplarını korur (yalnız soketi yenilenir)
+    const eski = room.players.get(userId);
+    if (eski) {
+      if (eski.socket && eski.socket !== ws) { try { eski.socket.__eskiOyuncu = true; eski.socket.close(); } catch { /* yok */ } }
+      eski.socket = ws;
+      eski.displayName = displayName;
+    }
     // Oyuncu kaydı
-    const player: PlayerState = {
+    const player: PlayerState = eski || {
       userId,
       displayName,
       socket: ws,
@@ -210,13 +237,17 @@ class QuizRealtimeManager {
       status: room.status,
       currentQuestionIndex: room.currentQuestionIndex,
       questions: sanitizedQuestions, // Pre-fetched questions
-      players: this.getPublicPlayersList(room)
+      players: this.getPublicPlayersList(room),
+      baslik: room.baslik || '',
+      kurucu: room.kurucu || '',
+      deadlineMs: room.status === 'in_round' ? room.roundDeadlineMs : 0,
+      serverTime: Date.now()
     }));
 
     // Diğer oyunculara duyur
     this.broadcast(room, {
       type: 'player_joined',
-      player: { userId, displayName, score: 0, streak: 0, isReady: false }
+      player: { userId, displayName, score: player.score, streak: player.streak, isReady: player.isReady }
     }, userId);
   }
 
@@ -234,7 +265,7 @@ class QuizRealtimeManager {
     });
 
     // Tüm oyuncular hazırsa ve en az 1 kişi varsa geri sayımı başlat
-    const allReady = Array.from(room.players.values()).every(p => p.isReady);
+    const allReady = Array.from(room.players.values()).filter(p => p.socket).every(p => p.isReady);
     if (allReady && room.players.size >= 1 && room.status === 'lobby' && room.questions.length > 0) {
       this.startCountdown(room);
     }
@@ -351,7 +382,7 @@ class QuizRealtimeManager {
     }, userId);
 
     // Eğer odadaki herkes cevap verdiyse sürenin bitmesini beklemeden hemen açıkla!
-    const allAnswered = Array.from(room.players.values()).every(p => !!p.answers[questionId]);
+    const allAnswered = Array.from(room.players.values()).filter(p => p.socket).every(p => !!p.answers[questionId]);
     if (allAnswered) {
       if (room.revealTimeoutId) clearTimeout(room.revealTimeoutId);
       this.revealRound(room);
@@ -396,13 +427,17 @@ class QuizRealtimeManager {
     const room = this.rooms.get(roomId);
     if (!room) return;
 
-    room.players.delete(userId);
+    const p = room.players.get(userId);
+    // Oyun sürerken kopan oyuncu puanıyla kalır (aynı kimlikle dönebilir); lobide/bitişte odadan çıkar
+    if (p && (room.status === 'lobby' || room.status === 'finished')) room.players.delete(userId);
+    else if (p) p.socket = null;
     this.broadcast(room, {
       type: 'player_left',
       userId
     });
 
-    if (room.players.size === 0) {
+    const bagli = [...room.players.values()].some((x) => x.socket && x.socket.readyState === 1);
+    if (room.players.size === 0 || !bagli) {
       if (room.revealTimeoutId) clearTimeout(room.revealTimeoutId);
       this.rooms.delete(roomId);
     }

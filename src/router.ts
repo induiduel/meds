@@ -82,6 +82,7 @@ export type AppRoute =
   | 'cevrimdisi'
   | 'olasi_sorular'
   | 'soru_haritasi'
+  | 'oyunlar'
   | 'gecmis_kurullar'
   | 'kamp'
   | 'guncellemeler'
@@ -141,6 +142,7 @@ export const ROUTE_PATHS: Record<AppRoute, string> = {
   cevrimdisi: '/cevrimdisi',
   olasi_sorular: '/olasi-sorular',
   soru_haritasi: '/soru-haritasi',
+  oyunlar: '/oyunlar',
   gecmis_kurullar: '/gecmis-kurullar',
   kamp: '/kamp',
   guncellemeler: '/guncellemeler',
@@ -203,6 +205,7 @@ export const ROUTE_TITLES: Record<AppRoute, string> = {
   cevrimdisi: 'Çevrimdışı',
   olasi_sorular: 'Olası sorular',
   soru_haritasi: 'Soru haritası',
+  oyunlar: 'Oyunlar',
   gecmis_kurullar: 'Geçmiş kurullar',
   kamp: 'Kurul kampı',
   guncellemeler: 'Güncelleme günlüğü',
@@ -343,6 +346,8 @@ const ALIASES: Record<string, AppRoute> = {
   'cevrimdisi-mod': 'cevrimdisi',
   olasi_sorular: 'olasi_sorular',
   'soru-haritasi': 'soru_haritasi',
+  oyunlar: 'oyunlar',
+  oyun: 'oyunlar',
   olasi: 'olasi_sorular',
   'olasi-soru': 'olasi_sorular',
   gecmis_kurullar: 'gecmis_kurullar',

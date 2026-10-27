@@ -29,6 +29,7 @@ export const MERKEZ_ARACLARI: Record<KategoriId, MerkezArac[]> = {
     { id: 'practice', ne: 'Süreli bir sınav provası yapmak istiyorsan' },
     { id: 'questions', ne: 'Bu yılın sınavından hatırlananları birlikte kurmak istiyorsan' },
     { id: 'ornek_sorular', ne: 'Kazanım kazanım örnek soru çözmek istiyorsan' },
+    { id: 'oyunlar', ne: 'Arkadaşlarınla canlı soru yarışması yapmak istiyorsan' },
     { id: 'soru_haritasi', ne: 'Hangi dersten hangi yıl kaç soru çıktığını görmek istiyorsan' },
     { id: 'olasi_sorular', ne: 'Sınavdan sonra kurulan olası soruları çözmek istiyorsan' },
   ],

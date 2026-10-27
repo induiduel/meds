@@ -1,0 +1,66 @@
+/* v15 · Oyunlar (OyunlarV15) — canlı yarışma; renkler palet tokenından */
+.oy15 { container-type: inline-size; display: flex; flex-direction: column; gap: 12px; max-width: 640px; margin-inline: auto; width: 100%; }
+.oy15-kart { padding: 16px; display: flex; flex-direction: column; gap: 12px; }
+.oy15-kart h2 { margin: 0; font-size: 1rem; color: var(--color-ink); }
+.oy15-bas { display: flex; gap: 12px; align-items: flex-start; }
+.oy15-bas > svg { flex: none; width: 36px; height: 36px; padding: 7px; border-radius: 10px; background: var(--color-accent-soft); color: var(--color-accent); }
+.oy15-bas > div { display: flex; flex-direction: column; gap: 3px; }
+.oy15-bas b { color: var(--color-ink); }
+.oy15-alan { display: flex; flex-direction: column; gap: 6px; font-size: .85rem; color: var(--color-ink-2); }
+.oy15-alan input, .oy15-alan select, .oy15-kod-gir input {
+  font: inherit; font-size: 1rem; color: var(--color-ink); background: var(--color-field); border: 1px solid transparent; border-radius: 10px; padding: 10px 12px; min-height: 44px; width: 100%; min-width: 0; }
+.oy15-alan input:focus, .oy15-alan select:focus, .oy15-kod-gir input:focus { outline: none; border-color: var(--color-accent); background: var(--color-white); }
+.oy15-ana { width: 100%; }
+.oy15-ana:disabled { opacity: .55; cursor: default; }
+.oy15-kod-gir { display: flex; gap: 8px; }
+.oy15-kod-gir input { letter-spacing: .25em; font-weight: 700; text-transform: uppercase; }
+.oy15-hata { margin: 0; padding: 10px 14px; border-radius: 10px; background: var(--color-bad-soft); color: var(--color-bad); font-size: .9rem; }
+.oy15-uyari { margin: 0; padding: 10px 14px; background: var(--color-warn-soft); color: var(--color-ink); font-size: .88rem; }
+.oy15-lobi { align-items: center; text-align: center; }
+.oy15-kod { font-size: 2.6rem; letter-spacing: .18em; color: var(--color-ink); line-height: 1.1; font-variant-numeric: tabular-nums; }
+.oy15-paylas { display: inline-flex; align-items: center; gap: 6px; border: 1px solid var(--color-line); background: var(--color-white); color: var(--color-accent); border-radius: 999px; padding: 8px 14px; font: inherit; font-size: .88rem; cursor: pointer; }
+.oy15-paylas svg { width: 16px; height: 16px; }
+.oy15-oyuncular { list-style: none; margin: 4px 0 0; padding: 0; width: 100%; display: flex; flex-direction: column; gap: 6px; }
+.oy15-oyuncular li { display: flex; align-items: center; gap: 8px; padding: 10px 12px; border-radius: 10px; background: var(--color-field); text-align: left; }
+.oy15-oyuncular li > span { flex: 1; min-width: 0; color: var(--color-ink); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.oy15-oyuncular li > svg { width: 16px; height: 16px; color: var(--color-warn); }
+.oy15-oyuncular small { color: var(--color-ink-3); }
+.oy15-oyuncular li.is-hazir small { color: var(--color-ok); font-weight: 600; }
+.oy15-ic { width: 14px; height: 14px; vertical-align: -2px; }
+.oy15-alt { display: flex; gap: 8px; width: 100%; }
+.oy15-alt .oy15-ana { flex: 1; }
+.oy15-cik { display: inline-flex; align-items: center; gap: 6px; border: 1px solid var(--color-line); background: var(--color-white); color: var(--color-ink-2); border-radius: 10px; padding: 0 14px; min-height: 44px; font: inherit; cursor: pointer; }
+.oy15-cik svg { width: 16px; height: 16px; }
+.oy15-geri { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; min-height: 50dvh; }
+.oy15-geri b { font-size: 5rem; line-height: 1; color: var(--color-accent); font-variant-numeric: tabular-nums; }
+.oy15-geri span { color: var(--color-ink-2); }
+.oy15-soru { display: flex; flex-direction: column; gap: 12px; }
+.oy15-ust { display: flex; justify-content: space-between; gap: 8px; }
+.oy15-sure > span { transition: none; }
+.oy15-kok { margin: 4px 0; font-family: var(--font-read); font-size: 1.12rem; line-height: 1.45; color: var(--color-ink); }
+.oy15-siklar { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; }
+.oy15-sik { width: 100%; display: flex; align-items: center; gap: 12px; text-align: left; padding: 12px 14px; min-height: 52px; border-radius: 12px; border: 1px solid var(--color-line); background: var(--color-white); color: var(--color-ink); font: inherit; cursor: pointer; }
+.oy15-sik > b { flex: none; width: 28px; height: 28px; border-radius: 8px; display: grid; place-items: center; background: var(--color-field); color: var(--color-ink-2); font-size: .85rem; }
+.oy15-sik > span { flex: 1; min-width: 0; line-height: 1.35; }
+.oy15-sik > svg { flex: none; width: 20px; height: 20px; }
+.oy15-sik:not(:disabled):hover { border-color: var(--color-accent); }
+.oy15-sik:disabled { cursor: default; }
+.oy15-sik.is-secili { border-color: var(--color-accent); background: var(--color-accent-soft); }
+.oy15-sik.is-secili > b { background: var(--color-accent); color: var(--color-on-accent); }
+.oy15-sik.is-dogru { border-color: var(--color-ok); background: var(--color-ok-soft); }
+.oy15-sik.is-dogru > b, .oy15-sik.is-dogru > svg { background: var(--color-ok); color: var(--color-white); border-radius: 8px; }
+.oy15-sik.is-yanlis { border-color: var(--color-bad); background: var(--color-bad-soft); }
+.oy15-sik.is-yanlis > svg { color: var(--color-bad); }
+.oy15-sik.is-sonuk { opacity: .55; }
+.oy15-durum { text-align: center; margin: 0; }
+.oy15-aciklama { padding: 14px; display: flex; flex-direction: column; gap: 8px; font-size: .92rem; color: var(--color-ink-2); }
+.oy15-aciklama > b { color: var(--color-ink); }
+.oy15-aciklama p { margin: 0; line-height: 1.45; }
+.oy15-tablo { list-style: none; margin: 4px 0 0; padding: 0; display: flex; flex-direction: column; gap: 4px; width: 100%; }
+.oy15-tablo li { display: flex; justify-content: space-between; gap: 8px; padding: 7px 10px; border-radius: 8px; background: var(--color-field); color: var(--color-ink); font-size: .9rem; }
+.oy15-tablo li.is-ben { background: var(--color-accent-soft); font-weight: 600; }
+.oy15-tablo b { font-variant-numeric: tabular-nums; }
+.oy15-son { align-items: center; text-align: center; }
+.oy15-tac { width: 40px; height: 40px; color: var(--color-warn); }
+.oy15-kazanan { font-size: 1.3rem; color: var(--color-ink); }
+.oy15-lobi p.v15-cap { display: block; }

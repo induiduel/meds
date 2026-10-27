@@ -841,3 +841,18 @@ Her maddede: belirti · kök neden · Kurul 2 kuralı · kapı durumu. Kanıtlar
   (aynı bağlar, LLM anahtarı yok) ile; deste PDF'i 200 doğrulandı.
 - **Önleme kuralı:** yayın betiği değişikliği Oracle'a gitmeden önce yerel taslakla `kaynak_kimligi_esnek` ve `--deneme` akışı
   çalıştırılır; yayından sonra `/api/lecture-pdf/deck/<deck>/0` 200 kontrolü zorunlu.
+
+## H96 — Önem/çözücü zinciri ham belgede olmayan soruyu "çıkmış" diye kullandı (2026-10-27, k2-03)
+- **Belirti:** k2patoloji 2p01 önem maddesi ve çözücüde "2020-2021 Final" etiketli `q-2021final_230619_142600-3-r68`; kaynak
+  PDF'inde (`meds_sorular/2021final_230619_142600.pdf`) bu soru yok.
+- **Kök neden:** `ders_zinciri` `hazirla` adımı çıkmış adaylarını bankadan konu eşlemesiyle seçer; ders için elle doğrulanan
+  liste (`cikmis_konum`, kaynak taraması) ile karşılaştırılmaz. Bankadaki türetilmiş (`-rNN`) kayıtlar da aday olur.
+- **Çözüm:** soru önemden `elenen_cikmis`e, çözücü ve `cikmis/2p01.json`'dan çıkarıldı (numaralar `numara.json`'da sabit).
+- **Önleme kuralı:** zincirden sonra önem/çözücü/asistandaki her çıkmış kimliği ham belge taramasında `bulundu` ve `/tek` 200
+  olmalı; değilse yayına girmez. `-rNN` türetilmiş kayıt hiçbir zaman çıkmış sayılmaz.
+
+### H89 — Canlı yarışma odası sorusuz kuruluyor, oyun hiç başlamıyordu (2026-10-27)
+- **Belirti:** `/api/quiz/ws` odasına katılan herkes "Hazırım" dese de oyun başlamıyordu.
+- **Kök neden:** `handleJoinRoom` olmayan odayı `createOrJoinRoom(..., [])` ile **boş soru listesiyle** kuruyordu; `handleSetReady` `questions.length > 0` şartıyla geri sayımı hiç başlatmıyordu. Ayrıca yeniden bağlanan oyuncu yeni kayıtla puanını kaybediyor, istemci `disconnect()` sonrası `onclose` içinde kendiliğinden yeniden bağlanıyordu.
+- **Çözüm:** oda yalnız `kaynak` (branş/ders/n) ile kurulur, sorular `oyunSoruKaynagi.ts`'ten; kaynaksız katılımda oda yoksa `room_error`. Yeniden bağlanan aynı kimlik puanını korur; istemci `disconnect` oda kimliğini siler.
+- **Kural:** realtime odası veri olmadan kurulamaz; sunucu her başarısız katılımı açık hata mesajıyla döner.
