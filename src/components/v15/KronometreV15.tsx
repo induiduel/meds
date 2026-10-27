@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
-import { Flag, Pause, Play, RotateCcw, Square, Timer, X } from 'lucide-react';
+import { BarChart3, Flag, Pause, Play, RotateCcw, Settings, Square, Timer, X } from 'lucide-react';
+import KronometreEkranV15, { ayarOku, KR_AYAR_KEY, type KrAyar } from './KronometreEkranV15';
 import KapsulV15, { kapsulOku, KAPSUL_KEY } from './KapsulV15';
 import '../../styles/v15/kronometre.css';
 
@@ -16,7 +17,7 @@ import '../../styles/v15/kronometre.css';
  */
 const KEY = 'medsoru_v15_kronometre';
 const KONUM_KEY = 'medsoru_v15_kronometre_konum';
-interface Durum { acik: boolean; calisiyor: boolean; bas: number; birikmis: number; turlar: number[]; gecmis: { t: string; sn: number; tur: number }[] }
+interface Durum { acik: boolean; calisiyor: boolean; bas: number; birikmis: number; turlar: number[]; gecmis: { t: string; sn: number; tur: number; ad?: string }[] }
 interface Konum { sag: boolean; y: number; gizli: boolean }
 const BOS: Durum = { acik: false, calisiyor: false, bas: 0, birikmis: 0, turlar: [], gecmis: [] };
 const oku = (): Durum => { try { return { ...BOS, ...JSON.parse(localStorage.getItem(KEY) || '{}') }; } catch { return BOS; } };
@@ -31,7 +32,9 @@ export const sureYaz = (ms: number) => {
 /** Menü ve kenar menüsünden açmak için */
 export const kronometreAc = () => window.dispatchEvent(new CustomEvent('medsoru:kronometre', { detail: 'kronometre' }));
 
-const BOY = 48;
+const BOY_ORTA = 48, BOY_KUCUK = 38;
+/** Oturuma ad: o an açık sayfanın başlığı ("Patoloji 3 · … · MeDSor" → ilk parça) */
+const sayfaAdi = () => { const p = document.title.split(' · ').filter((x) => x && x !== 'MeDSor'); return p[0]?.slice(0, 60) || 'Kronometre'; };
 /** Sesli ders oynatıcısı (mini ya da tam) — baloncuk ona kaynaşır */
 const yuva = () => document.querySelector<HTMLElement>('.cd-dock');
 
@@ -43,6 +46,11 @@ export default function KronometreV15() {
   const [surukle, setSurukle] = useState<{ x: number; y: number } | null>(null);
   const [kaynak, setKaynak] = useState<DOMRect | null>(null);
   const [, tik] = useState(0);
+  const [ayar, setAyar0] = useState<KrAyar>(ayarOku);
+  const [ekran, setEkran] = useState<'ayar' | 'gecmis' | null>(null);
+  const setAyar = (a: KrAyar) => { if (a.sag !== ayar.sag) setKonum({ ...konum, sag: a.sag, y: 0.72, gizli: false }); setAyar0(a); try { localStorage.setItem(KR_AYAR_KEY, JSON.stringify(a)); } catch { /* yok */ } };
+  const molaUyari = useRef(0);
+  const BOY = ayar.boyut === 'kucuk' ? BOY_KUCUK : BOY_ORTA;
   const setD = (f: (x: Durum) => Durum) => setD0((x) => { const n = f(x); yaz(n); return n; });
   const setKonum = (k: Konum) => { setKonum0(k); try { localStorage.setItem(KONUM_KEY, JSON.stringify(k)); } catch { /* yok */ } };
   const bas = useRef<{ x: number; y: number; t: number; tasindi: boolean; uzun: number } | null>(null);
@@ -56,7 +64,7 @@ export default function KronometreV15() {
       setKonum0((k) => ({ ...k, gizli: false }));
       setPanel(true);
     };
-    const st = (e: StorageEvent) => { if (e.key === KEY) setD0(oku()); if (e.key === KAPSUL_KEY) tik((n) => n + 1); };
+    const st = (e: StorageEvent) => { if (e.key === KEY) setD0(oku()); if (e.key === KR_AYAR_KEY) setAyar0(ayarOku()); if (e.key === KAPSUL_KEY) tik((n) => n + 1); };
     // odak başlayınca kronometre duraklar (aynı anda tek sayaç)
     const sayac = (e: Event) => { if ((e as CustomEvent).detail === 'odak') setD((x) => ({ ...x, acik: true, ...(x.calisiyor ? { calisiyor: false, birikmis: gecen(x), bas: 0 } : {}) })); };
     window.addEventListener('medsoru:kronometre', ac);
@@ -90,15 +98,29 @@ export default function KronometreV15() {
   }, [d.acik]);
 
   // kaynaşınca mini oynatıcı sağ ucunda baloncuğa yer açar
-  const kaynasma = d.acik && !!kaynak && kaynak.height < 110;
+  const kaynasma = d.acik && ayar.birles && !!kaynak && kaynak.height < 110;
   useEffect(() => {
     document.documentElement.classList.toggle('kr-kaynasik', kaynasma);
     return () => document.documentElement.classList.remove('kr-kaynasik');
   }, [kaynasma]);
 
+  // "Sayfa değişince çalışmaya devam et" kapalıysa adres değişiminde duraklar
+  useEffect(() => {
+    if (ayar.devam || !d.calisiyor) return;
+    let yol = location.pathname;
+    const id = window.setInterval(() => {
+      if (location.pathname !== yol) { yol = location.pathname; setD((x) => (x.calisiyor ? { ...x, calisiyor: false, birikmis: gecen(x), bas: 0 } : x)); }
+    }, 500);
+    return () => window.clearInterval(id);
+  }, [ayar.devam, d.calisiyor]);
+
   if (!d.acik) return null;
 
   const ms = gecen(d);
+  // Mola hatırlatması: kesintisiz çalışma eşiği geçince baloncuk uyarı rengine döner, bir kez titrer
+  const kesintisiz = d.calisiyor ? Date.now() - d.bas : 0;
+  const molaZamani = ayar.molaDk > 0 && kesintisiz >= ayar.molaDk * 60000;
+  if (molaZamani && molaUyari.current !== d.bas) { molaUyari.current = d.bas; navigator.vibrate?.([30, 60, 30]); }
   const baslat = () => {
     if (!d.calisiyor) window.dispatchEvent(new CustomEvent('medsoru:sayac', { detail: 'kronometre' }));
     setD((x) => (x.calisiyor ? { ...x, calisiyor: false, birikmis: gecen(x), bas: 0 } : { ...x, calisiyor: true, bas: Date.now() }));
@@ -106,7 +128,7 @@ export default function KronometreV15() {
   const tur = () => setD((x) => (gecen(x) ? { ...x, turlar: [...x.turlar, gecen(x)].slice(-30) } : x));
   const sifirla = () => setD((x) => {
     const sn = Math.round(gecen(x) / 1000);
-    return { ...x, calisiyor: false, bas: 0, birikmis: 0, turlar: [], gecmis: sn ? [{ t: new Date().toISOString(), sn, tur: x.turlar.length }, ...x.gecmis].slice(0, 50) : x.gecmis };
+    return { ...x, calisiyor: false, bas: 0, birikmis: 0, turlar: [], gecmis: sn ? [{ t: new Date().toISOString(), sn, tur: x.turlar.length, ad: sayfaAdi() }, ...x.gecmis].slice(0, 200) : x.gecmis };
   });
   const kapat = () => { sifirla(); setPanel(false); setD((x) => ({ ...x, acik: false })); };
   const bugun = new Date().toDateString();
@@ -123,7 +145,7 @@ export default function KronometreV15() {
   const tasarim = kaynak && !surukle;
   let stil: React.CSSProperties;
   if (surukle) stil = { left: surukle.x - BOY / 2, top: surukle.y - BOY / 2 };
-  else if (kaynak) {
+  else if (kaynak && ayar.birles) {
     const mini = kaynak.height < 110;
     stil = mini
       ? { left: Math.min(vw - BOY - 6, kaynak.right - BOY - 6), top: kaynak.top + kaynak.height / 2 - BOY / 2 }
@@ -133,7 +155,7 @@ export default function KronometreV15() {
     const kenar = konum.gizli ? -BOY / 2 : 12;
     stil = konum.sag ? { right: kenar, top } : { left: kenar, top };
   }
-  const kaynasik = !!tasarim && kaynak!.height < 110;
+  const kaynasik = !!tasarim && ayar.birles && kaynak!.height < 110;
 
   const indir = (e: React.PointerEvent) => {
     if (e.button !== 0) return;
@@ -155,7 +177,7 @@ export default function KronometreV15() {
       return;
     }
     if (b.tasindi) return;
-    if (konum.gizli && !kaynak) { setKonum({ ...konum, gizli: false }); return; }
+    if (konum.gizli && !(kaynak && ayar.birles)) { setKonum({ ...konum, gizli: false }); return; }
     const simdi = Date.now();
     if (simdi - sonDokun.current < 300) { window.clearTimeout(tekTimer.current); sonDokun.current = 0; tur(); navigator.vibrate?.(10); return; }
     sonDokun.current = simdi;
@@ -204,7 +226,11 @@ export default function KronometreV15() {
               )}
               <div className="krp15-alt">
                 <span>Bugün kronometre: {sureYaz(bugunSn * 1000)}</span>
-                <button type="button" onClick={kapat}><Square aria-hidden /> Kapat</button>
+                <span className="krp15-alt-d">
+                  <button type="button" onClick={() => setEkran('gecmis')} aria-label="Kronometre geçmişi" title="Geçmiş"><BarChart3 aria-hidden /></button>
+                  <button type="button" onClick={() => setEkran('ayar')} aria-label="Kronometre ayarları" title="Ayarlar"><Settings aria-hidden /></button>
+                  <button type="button" onClick={kapat}><Square aria-hidden /> Kapat</button>
+                </span>
               </div>
             </>
           ) : (
@@ -213,8 +239,9 @@ export default function KronometreV15() {
           <p className="v15-cap krp15-not">Dokun: aç · uzun bas: başlat/duraklat · iki kez dokun: tur · sürükle: kenara yapışır.</p>
         </div>
       )}
-      <div
-        className={`kr15z${calisiyorGor ? '' : ' is-dur'}${kaynasik ? ' is-kaynasik' : ''}${konum.gizli && !kaynak ? ' is-gizli' : ''}${surukle ? ' is-surukle' : ''}`}
+      {ekran && <KronometreEkranV15 gorunum={ekran} ayar={ayar} setAyar={setAyar} gecmis={d.gecmis} onKapat={() => setEkran(null)} />}
+      {(ayar.goster || panel) && <div
+        className={`kr15z${ayar.boyut === 'kucuk' ? ' is-kucuk' : ''}${molaZamani ? ' is-uyari' : ''}${calisiyorGor ? '' : ' is-dur'}${kaynasik ? ' is-kaynasik' : ''}${konum.gizli && !kaynak ? ' is-gizli' : ''}${surukle ? ' is-surukle' : ''}`}
         style={{ ...stil, ['--s' as string]: `${Math.round(halka * 100)}%` }}
         role="timer"
         aria-label={`${odakGoster ? 'Odak, kalan' : 'Kronometre'} ${yazi}. Dokun: aç, uzun bas: başlat veya duraklat`}
@@ -227,7 +254,7 @@ export default function KronometreV15() {
         <span className="kr15z-zar" aria-hidden />
         <span className="kr15z-cek" aria-hidden />
         {ms || odakGoster ? <span className="kr15z-zm">{yazi}</span> : <Timer className="kr15z-ik" aria-hidden />}
-      </div>
+      </div>}
     </>,
     document.body,
   );

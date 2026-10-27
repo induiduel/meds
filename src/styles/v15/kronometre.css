@@ -73,3 +73,62 @@
 .kp15-oneri { display: flex; flex-wrap: wrap; gap: 6px; }
 .kp15-hap { border: 1px solid var(--color-line-soft, var(--color-line)); background: var(--color-white); color: var(--color-ink-2); border-radius: 999px; padding: 4px 10px; font-size: .82rem; cursor: pointer; max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .kp15-bitti { display: flex; flex-direction: column; gap: 6px; padding: 10px; border-radius: 12px; background: var(--color-ok-soft); color: var(--color-ink); }
+
+/* boyut + mola uyarısı (ayarlar) */
+.kr15z.is-kucuk { width: 38px; height: 38px; }
+.kr15z.is-kucuk .kr15z-zm { font-size: 8.5px; margin-top: 4px; }
+.kr15z.is-kucuk .kr15z-cek { width: 4px; height: 4px; top: 7px; }
+.kr15z.is-kucuk .kr15z-ik { width: 15px; height: 15px; }
+.kr15z.is-uyari .kr15z-zar { border-color: var(--color-warn); background: radial-gradient(circle at 34% 28%, var(--color-white) 0 30%, var(--color-warn-soft, var(--color-accent-soft)) 100%); }
+.kr15z.is-uyari .kr15z-cek { background: var(--color-warn); }
+.krp15-alt-d { display: inline-flex; align-items: center; gap: 2px; }
+
+/* Ayarlar / Geçmiş tam ekran görünümü (KronometreEkranV15) */
+.kre { position: fixed; inset: 0; z-index: 1000; background: var(--color-canvas); color: var(--color-ink); overflow-y: auto; overscroll-behavior: contain; }
+.kre-ust { position: sticky; top: 0; z-index: 1; display: flex; align-items: center; gap: 8px; padding: calc(env(safe-area-inset-top) + 10px) 16px 10px; background: var(--color-canvas); border-bottom: 1px solid var(--color-line-soft, var(--color-line)); }
+.kre-ust div { display: flex; flex-direction: column; }
+.kre-ust b { font-size: 1.05rem; }
+.kre-ust span { font-size: .8rem; color: var(--color-ink-3); }
+.kre-ic { max-width: 880px; margin: 0 auto; padding: 16px 16px calc(env(safe-area-inset-bottom) + 24px); display: flex; flex-direction: column; gap: 12px; }
+.kre-cols { display: grid; gap: 12px; grid-template-columns: minmax(0, 1fr); }
+@media (min-width: 760px) { .kre-cols { grid-template-columns: 1fr 1fr; align-items: start; } }
+.kre-kart { padding: 14px 16px; display: flex; flex-direction: column; gap: 12px; }
+.kre-sat { display: flex; align-items: center; justify-content: space-between; gap: 12px; font-size: .95rem; min-height: 36px; }
+.kre-sat > span { min-width: 0; }
+.kre-seg { flex: none; }
+.kre-seg button { padding-inline: 10px; white-space: nowrap; }
+.kre-tgl { flex: none; position: relative; width: 44px; height: 26px; border-radius: 999px; border: 0; background: var(--color-line); cursor: pointer; transition: background .2s; }
+.kre-tgl i { position: absolute; left: 3px; top: 3px; width: 20px; height: 20px; border-radius: 50%; background: var(--color-white); box-shadow: 0 1px 3px rgba(0, 0, 0, .25); transition: transform .2s; }
+.kre-tgl.is-on { background: var(--color-accent); }
+.kre-tgl.is-on i { transform: translateX(18px); }
+.kre-tgl:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; }
+.kre-not { margin: 0; padding: 10px 12px; border-radius: 12px; background: var(--color-accent-soft); color: var(--color-ink-2); font-size: .85rem; line-height: 1.45; }
+.kre-stat { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+.kre-stat > div { padding: 12px; display: flex; flex-direction: column; gap: 2px; }
+.kre-stat b { font-size: 1.05rem; font-variant-numeric: tabular-nums; }
+.kre-stat span { font-size: .78rem; color: var(--color-ink-3); }
+.kre-bas { display: flex; justify-content: space-between; align-items: center; gap: 8px; flex-wrap: wrap; }
+.kre-lej { display: inline-flex; align-items: center; gap: 6px; font-size: .78rem; color: var(--color-ink-3); }
+.kre-lej i { width: 8px; height: 8px; border-radius: 50%; display: inline-block; }
+.kre-lej i + * { margin-right: 4px; }
+.is-kr { background: var(--color-accent); }
+.is-sis { background: var(--color-line); }
+.kre-bar { position: relative; height: 140px; display: flex; align-items: flex-end; gap: 10px; }
+.kre-bar.is-ay { gap: 3px; }
+.kre-gun { flex: 1; height: 100%; display: flex; align-items: flex-end; gap: 3px; min-width: 0; }
+.kre-bar.is-ay .kre-gun { gap: 1px; }
+.kre-gun i { flex: 1; min-height: 2px; border-radius: 5px 5px 2px 2px; }
+.kre-hedef { position: absolute; left: 0; right: 0; border-top: 1.5px dashed var(--color-ink-3); opacity: .6; pointer-events: none; }
+.kre-eks { display: flex; gap: 10px; font-size: .75rem; color: var(--color-ink-3); }
+.kre-eks.is-ay { gap: 3px; }
+.kre-eks span { flex: 1; text-align: center; min-width: 0; }
+.kre-h { margin: 6px 2px 0; }
+.kre-liste { list-style: none; margin: 0; padding: 4px 0; }
+.kre-liste li { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 10px 16px; }
+.kre-liste li + li { border-top: 1px solid var(--color-line-soft, var(--color-line)); }
+.kre-li-t { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.kre-li-t b { font-weight: 600; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.kre-li-t span, .kre-li-z { font-size: .82rem; color: var(--color-ink-3); font-variant-numeric: tabular-nums; }
+.kre-li-z { flex: none; }
+.kre-bos { margin: 0; padding: 16px; color: var(--color-ink-2); }
+@media (max-width: 420px) { .kre-sat.is-sec { flex-wrap: wrap; } .kre-seg { width: 100%; } .kre-seg button { flex: 1; } }

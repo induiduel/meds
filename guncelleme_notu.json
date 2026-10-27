@@ -1,13 +1,13 @@
 {
- "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
- "onem": 449,
- "baslik": "Sınav planı Kurul 2 için düzeltildi",
- "maddeler": [
-  "Sınav planı artık Kurul 2 sesli derslerini hesaba katıyor",
-  "İçeriği henüz hazır olmayan branşlar plan puanını yanlışlıkla düşürmüyor"
- ],
- "eklenen": [],
- "degisen": [],
- "duzeltilen": [],
- "silinen": []
+  "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
+  "onem": 451,
+  "baslik": "Bitirdiklerim ve Sınav planı artık kurula göre",
+  "maddeler": [
+    "Bitirdiklerim sayfasında Kurul 1–6 seçilir; ilerleme, süre ve hız yalnız seçilen kurulun içeriğinden hesaplanır.",
+    "Sınav planı da seçilen kurulun soru dağılımı ve sınav tarihine göre kurulur."
+  ],
+  "eklenen": [],
+  "degisen": [],
+  "duzeltilen": [],
+  "silinen": []
 }
