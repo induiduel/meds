@@ -1,0 +1,11 @@
+/* v15 · Notlarım katmanı (NotesView): kart yüzeyi, sabit yükseklik (liste ve düzenleyici kendi alanında kayar), okuma yazısı */
+:root[data-v15='on'] .nt { background: var(--color-surface); border: 1px solid var(--color-line-soft, var(--color-line)); border-radius: var(--v15-r-lg, 16px);
+  min-height: 0; height: max(480px, calc(100dvh / var(--ch-zoom, 1) - var(--sh-top-h, 0px) - var(--sh-tabs-h, 0px) - env(safe-area-inset-bottom) - 170px)); }
+:root[data-v15='on'] .nt-side { background: var(--color-surface); border-right-color: var(--color-line-soft, var(--color-line)); min-height: 0; }
+:root[data-v15='on'] .nt-list { flex: 1; min-height: 0; max-height: none; overflow-y: auto; overscroll-behavior: contain; }
+:root[data-v15='on'] .nt-main { min-height: 0; overflow-y: auto; }
+:root[data-v15='on'] .nt-row { border-radius: var(--v15-r-md, 12px); }
+:root[data-v15='on'] .nt-search { border-radius: 999px; }
+:root[data-v15='on'] .nt-title { font-family: var(--v15-serif, 'Newsreader', Georgia, serif); font-weight: 600; }
+:root[data-v15='on'] .nt-doc textarea { font-family: var(--v15-serif, 'Newsreader', Georgia, serif); font-size: 1.05rem; line-height: 1.6; }
+:root[data-v15='on'] .nt-empty { border-radius: var(--v15-r-lg, 16px); box-shadow: none; }

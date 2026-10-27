@@ -1,0 +1,4 @@
+/* v15 · Sağlık Bakanlığı katmanı: giriş bloğunun simgesi, üst etiketi ve başlığı üst barda; düz yüzey */
+:root[data-v15='on'] :is(.sbk-giris-ic, .sbk-giris-ust) { display: none; }
+:root[data-v15='on'] .sbk-giris-m h1 { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+:root[data-v15='on'] .sbk-giris-m p { margin: 0; font-size: .88rem; color: var(--color-ink-3); }

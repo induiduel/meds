@@ -27,9 +27,11 @@ import {
 } from './spVeri';
 import SpTest from './SpTest';
 import { KurulBos } from '../kurul/KurulSuzgec';
-import { KurulSecici, kurulIcerikVar } from '../kurul/KurulSecici';
+import { KurulSecici, kurulIcerikVar, varsayilanKurul } from '../kurul/KurulSecici';
 import '../../styles/genetik-kamp.css'; // kamp kipinin aşama çubuğu (.cd-k-cubuk) stilleri
 import '../../styles/son-prova.css';
+import V15BaslikYaz from '../v15/V15BaslikYaz';
+import '../../styles/v15/kamp.css';
 
 const CanliDersDers = lazy(() => import('../canliDers/CanliDersDers'));
 
@@ -78,7 +80,7 @@ export default function SonProvaView() {
     return () => window.removeEventListener('popstate', f);
   }, []);
   const kurullar = spKurullar();
-  const kurul = Number(new URLSearchParams(icKonum().search).get('kurul')) || kurullar[kurullar.length - 1] || 1;
+  const kurul = Number(new URLSearchParams(icKonum().search).get('kurul')) || varsayilanKurul();
   const [ix, setIx] = useState<SpIndex | null>(null);
   const [hata, setHata] = useState<string | null>(null);
   useEffect(() => { spIndexYukle(kurul).then(setIx).catch((e) => setHata(String(e?.message || e))); }, [kurul]);
@@ -158,7 +160,7 @@ function Merkez({ ix, secici }: { ix: SpIndex; secici: React.ReactNode }) {
         <span className="sp-ic"><Flag aria-hidden /></span>
         <div className="sp-bas-t">
           <p className="sp-ust">Kurul {ix.kurul} · {toplam} soruluk sınav</p>
-          <h1>Son Prova</h1>
+          <h1>Son Prova</h1><V15BaslikYaz baslik="Son Prova" alt={`Kurul ${ix.kurul} · ${toplam} soru`} />
           <p>Her dersin sınavda sorulan ve sorulmaya en müsait bilgileri, ders slaytlarıyla birlikte sesli özet olarak. Her aşamanın sonunda
             soru, her partın sonunda check-up, en sonda 100 soruluk üç deneme. Yanlışların seni eksik bölüme götürür.</p>
         </div>
@@ -229,7 +231,7 @@ function DersSayfa({ ix, ders }: { ix: SpIndex; ders: SpDers }) {
         <span className="sp-ic"><BookOpenCheck aria-hidden /></span>
         <div className="sp-bas-t">
           <p className="sp-ust">Kurul {ix.kurul} · sınavda {ders.soru} soru</p>
-          <h1>{ders.ad}</h1>
+          <h1>{ders.ad}</h1><V15BaslikYaz baslik={ders.ad} alt={`Son Prova · ${ders.soru} soru`} />
           <p>Partları sırayla dinle; her aşamanın sonundaki soruları çöz, partın sonunda check-up'ı yap. Hepsi bitince genel check-up seni eksik kalan bölüme yönlendirir.</p>
         </div>
       </header>

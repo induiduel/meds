@@ -10,6 +10,7 @@ import { DersCtx, dersDiziniYukle, type DersDizin } from './saglikDers';
 import { DersKatmani } from './SaglikDersKatmani';
 import { BolumSonu, SaglikBaslik, SaglikDizin } from './SaglikGezinti';
 import '../../styles/saglik.css';
+import '../../styles/v15/saglik.css';
 
 /**
  * Sağlık Bakanlığı sekmesi (/saglik, /saglik/<bölüm>). Resmî halk sağlığı verileri (Sağlık Bakanlığı, TÜİK,

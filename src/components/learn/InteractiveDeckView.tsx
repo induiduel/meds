@@ -34,6 +34,7 @@ import { LessonPlayer } from './lesson/LessonPlayer';
 import { touchRecent } from './LearnHub';
 import { LearnLibrary, LessonSkeleton, isPublished } from './LearnLibrary';
 import { LearnLibraryV12 } from '../v12/LearnLibraryV12';
+import { OgrenKutuphaneV15 } from '../v15/OgrenKutuphaneV15';
 import { TopluPdfDugme } from '../ui/TopluPdf';
 import { useAppearance } from '../../utils/appearance';
 import { Dialog } from '../ui/Dialog';
@@ -737,7 +738,8 @@ export const InteractiveDeckView: React.FC<InteractiveDeckViewProps> = ({ initia
   ) : null;
   /** Hata defteri tekrar ekranı (deckId: yalnız o ders) ve "Kaynağa git" ile açılacak adım */
   /** v12 "Net": kitaplık kendi yapısıyla çizilir (components/v12/LearnLibraryV12); v10/v11 LearnLibrary */
-  const Library = useAppearance().design === 'v12' ? LearnLibraryV12 : LearnLibrary;
+  const gorunum = useAppearance();
+  const Library = gorunum.v15 ? OgrenKutuphaneV15 : gorunum.design === 'v12' ? LearnLibraryV12 : LearnLibrary;
   const [review, setReview] = useState<{ deckId?: string } | null>(null);
   // Bugün ekranındaki "Tekrara başla": bayrak mount sonrası okunur (başlatıcıda okumak StrictMode çift çağrısında kayboluyordu)
   useEffect(() => {

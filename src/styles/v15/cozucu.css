@@ -1,0 +1,10 @@
+/* v15 · Soru çözücü branş sayfası katmanı: başlık üst barda, ek düğmeler tek satır kaydırılan şerit, düz yüzey */
+:root[data-v15='on'] .scs-head-t, :root[data-v15='on'] .scs-desc { display: none; }
+:root[data-v15='on'] .scs-devam { border-radius: var(--v15-r-lg, 16px); background: var(--color-surface); border: 1px solid var(--color-line-soft, var(--color-line)); box-shadow: none; }
+:root[data-v15='on'] .scs-ara, :root[data-v15='on'] .scs-btn-sure { border-radius: 999px; }
+:root[data-v15='on'] .scs-liste.is-satir { background: var(--color-surface); border-color: var(--color-line-soft, var(--color-line)); border-radius: var(--v15-r-lg, 16px); }
+:root[data-v15='on'] .scs-row-ek { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; padding-right: 12px;
+  mask-image: linear-gradient(90deg, #000 calc(100% - 24px), transparent); }
+:root[data-v15='on'] .scs-row-ek > * { flex: none; }
+:root[data-v15='on'] .scs-row-ek :is(button, a) { border-radius: 999px; white-space: nowrap; }
+@media (max-width: 599px) { :root[data-v15='on'] .scs-row-ek { padding-left: 12px; } }

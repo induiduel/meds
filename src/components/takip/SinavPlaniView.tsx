@@ -8,6 +8,8 @@ import { IZLEME_HIZI_MODULLER, hizHesapla, onOran, useIzlemeHizi, useTakip, type
 import { MODUL_YUKLE, type BdDers } from './bitirdiklerimVeri';
 import SinavPlani from './SinavPlani';
 import '../../styles/takip.css';
+import V15BaslikYaz from '../v15/V15BaslikYaz';
+import '../../styles/v15/kamp.css';
 
 const MODULLER: TakipModul[] = ['sesli', 'ogren', 'cozucu', 'onem', 'kamp'];
 
@@ -41,7 +43,7 @@ export default function SinavPlaniView() {
       <header className="bd-bas">
         <span className="bd-ic" aria-hidden><Target /></span>
         <div>
-          <h1>Sınav planı</h1>
+          <h1>Sınav planı</h1><V15BaslikYaz baslik="Sınav planı" alt="60 için gün gün yol haritası" />
           <p>Bitirdiklerine bakarak sınavda kaç puan alacağını tahmin eder ve 60 için bugün neyi çalışman gerektiğini sıralar.</p>
         </div>
       </header>

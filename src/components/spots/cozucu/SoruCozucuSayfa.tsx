@@ -9,6 +9,9 @@ import { SpotsSureDiyalog } from '../sure/SpotsSureDiyalog';
 import { useSpotCozucuStats, fmtSureDk } from '../../../services/spotCozucuIstatistik';
 import { navigateTo, pathFor } from '../../../router';
 import '../../../styles/soru-cozucu.css';
+import '../../../styles/v15/cozucu.css';
+import { useAppearance } from '../../../utils/appearance';
+import { useV15Baslik } from '../../v15/baslik';
 import CihazdaIsaret from '../../cevrimdisi/CihazdaIsaret';
 
 /**
@@ -29,6 +32,7 @@ const katla = (s: string) => s.toLocaleLowerCase('tr-TR').normalize('NFD').repla
 
 export const SoruCozucuSayfa: React.FC<{ brans?: Brans }> = ({ brans = 'patoloji' }) => {
   const bt = bransTanim(brans);
+  useV15Baslik(useAppearance().v15 ? { baslik: 'Soru çözücü', alt: bt.tam } : null);
   const [dizin, setDizin] = useState<CDizin | null>(null);
   const [hata, setHata] = useState(false);
   const [ara, setAra] = useState('');

@@ -77,6 +77,7 @@ const IskeletKart: React.FC<{ i: number }> = ({ i }) => (
 );
 
 /** v12 "Net" ayrı bileşendir (canvas Cards.dc.html › Spotlar); tasarım değişince kancalar karışmasın diye ayrı tür. */
+const SpotsV15 = React.lazy(() => import('../v15/SpotsV15'));
 const OnemListesi = React.lazy(() => import('./OnemListesi'));
 const SoruCozucuSayfa = React.lazy(() => import('./cozucu/SoruCozucuSayfa'));
 type Gorunum = 'spot' | 'onem' | 'cozucu';
@@ -101,7 +102,9 @@ const okuBrans = (): Brans | null => {
  * Eski /spotlar?gorunum=cozucu|onem bağlantıları yeni adrese yönlenir.
  */
 export const ExamSpotsView: React.FC<{ gorunum?: Gorunum }> = ({ gorunum: g = 'spot' }) => {
-  const v12 = useAppearance().design === 'v12';
+  const gorunum = useAppearance();
+  const v12 = gorunum.design === 'v12';
+  const v15 = !!gorunum.v15;
   const [brans, setBrans] = useState<Brans | null>(okuBrans);
   const kurulP = useKurulParam();
   // eski adres: /spotlar?gorunum=… → /soru-cozucu | /en-onemliler (diğer parametreler korunur)
@@ -175,10 +178,12 @@ export const ExamSpotsView: React.FC<{ gorunum?: Gorunum }> = ({ gorunum: g = 's
       <>
         <h1 className="sr-only">Sınav spotları · Kurul {kurulP}</h1>
         <div className="ks-ust"><KurulSecici secili={kurulP} yol={(k) => `/kamplar/kurul${k}/spotlar`} icerik={(k) => kurulIcerikVar('spots', k)} /></div>
-        {kurulP === SPOT_KURUL ? (v12 ? <SpotsV12 /> : <ExamSpotsClassic />) : <KurulBos kurul={kurulP} ne="sınav spotu" />}
+        {kurulP === SPOT_KURUL ? (v15 ? <React.Suspense fallback={null}><SpotsV15 /></React.Suspense> : v12 ? <SpotsV12 /> : <ExamSpotsClassic />) : <KurulBos kurul={kurulP} ne="sınav spotu" />}
       </>
     );
   }
+
+  if (v15) return <React.Suspense fallback={null}><SpotsV15 /></React.Suspense>;
 
   return (
     <>

@@ -1,0 +1,9 @@
+/* v15 · Sınava hazırlan iç sayfaları (Kurul kampı, Son Prova, Check Up, Sınav planı) ortak katmanı:
+   başlık üst barda (V15BaslikYaz), simge ve h1 gizli, açıklama tek kısa satır; düz yüzey, hap düğmeler */
+:root[data-v15='on'] :is(.tk-ic, .sp-ic, .cu-ic, .bd-ic) { display: none; }
+:root[data-v15='on'] :is(.tk-bas, .sp-bas, .cu-bas, .bd-bas) h1 { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+:root[data-v15='on'] :is(.tk-bas, .sp-bas, .cu-bas, .bd-bas) { background: none; border: 0; box-shadow: none; padding: 0 2px; }
+:root[data-v15='on'] :is(.tk-bas, .sp-bas, .cu-bas, .bd-bas) p { font-size: .88rem; line-height: 1.45; color: var(--color-ink-3); margin: 0; }
+:root[data-v15='on'] :is(.tk-ust, .sp-ust) { display: none; }
+:root[data-v15='on'] :is(.tk-btn, .sp-btn, .cu-btn) { border-radius: 999px; }
+:root[data-v15='on'] :is(.tk-kart, .sp-kart, .sp-part, .cu-tablo, .cu-bolum) { border-radius: var(--v15-r-lg, 16px); box-shadow: none; background: var(--color-surface); }

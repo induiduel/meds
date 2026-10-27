@@ -1,0 +1,7 @@
+/* v15 · Çıkmış sorular katmanı (CikmisV12 çerçevesi + soru kartları): başlık üst barda, hap denetimler, düz kart */
+:root[data-v15='on'] .c12-title { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+:root[data-v15='on'][data-design] :is(.c12-field, .c12-btn, .c12-seg, .c12-chip) { border-radius: 999px; }
+:root[data-v15='on'][data-design] .c12-seg > * { border-radius: 999px; }
+:root[data-v15='on'][data-design] .c12-panel-h, :root[data-v15='on'][data-design] .c12-filters { border-radius: var(--v15-r-lg, 16px); }
+:root[data-v15='on'] .sh-main :is(.qc, .question-card, .pq-card) { border-radius: var(--v15-r-lg, 16px); box-shadow: none; }
+:root[data-v15='on'] .c12-top > .c12-meta { visibility: hidden; }

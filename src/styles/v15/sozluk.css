@@ -1,0 +1,11 @@
+/* v15 · Sözlük (GlossaryV12 üstünde katman): başlık üst barda, düz yüzey, v15 yarıçapları; liste + bilgi kartı yan yana (≥1024) */
+:root[data-v15='on'] .g12 { --g12-r: var(--v15-r-lg, 16px); --g12-r-sm: 999px; }
+:root[data-v15='on'] .g12-h1 { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+:root[data-v15='on'] .g12-head { gap: 8px; }
+:root[data-v15='on'] .g12-seg a { border-radius: 999px; }
+:root[data-v15='on'] .g12-panel { background: var(--color-surface); border-color: var(--color-line-soft, var(--color-line)); box-shadow: none; }
+:root[data-v15='on'] .g12-field { background: var(--color-field, var(--color-surface)); border-color: transparent; }
+:root[data-v15='on'] .g12-title { font-family: var(--v15-serif, 'Newsreader', Georgia, serif); font-weight: 600; font-size: 1.6rem; }
+:root[data-v15='on'] .g12-read { font-family: var(--v15-serif, 'Newsreader', Georgia, serif); font-size: 1.05rem; line-height: 1.6; }
+:root[data-v15='on'] .g12-box { border-radius: var(--v15-r-md, 12px); }
+:root[data-v15='on'] .g12-head > .g12-m { display: none; }

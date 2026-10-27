@@ -1,29 +1,26 @@
 {
  "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
- "onem": 384,
- "baslik": "Sesli Ders: Daha Sade ve Okunur Slayt Çizimleri",
+ "onem": 385,
+ "baslik": "Yeni görünüm: Yalın (v15) tasarım",
  "maddeler": [
-  "Resim üstündeki işaretler artık anlatılan yapıyı örtmüyor: ince, yumuşak hat, çok hafif ton; yapı tam kapsanıyor.",
-  "Çizgi kalınlığı işaretlenen bölgeye göre ayarlanıyor; küçük yapılarda daha ince.",
-  "Yakınlaştırma yalnız resimdeki küçük bölgede ve ölçülü yapılıyor; yazı slaytında ve tablolarda yakınlaştırma yok.",
-  "Yazı satırları arasında çizilen oklar kaldırıldı; tablolarda yalnız satır işaretleniyor.",
-  "Çıkmış soru penceresine 'Çıkmış soruyu görüntüle' düğmesi eklendi."
+  "Ayarlar › Tasarım'dan seçilebilen yeni sade görünüm: Yalın (v15). Varsayılan görünüm değişmedi.",
+  "Bugün, Ders çalış, Soru çöz, Sınava hazırlan ve Başvuru merkezleri yeni düzende; sayfa başlığı üst barda.",
+  "Yeni ders ayrıntısı sayfası: bölümler, sesli ders, Öğren ve çıkmışlar tek yerde.",
+  "Sesli derste sade üst çubuk, gruplu menü, Görünüm çekmecesi ve kompakt çıkmış soru kartı.",
+  "Sesli dersler, özetler, spotlar, en önemliler, sözlük, kartlar, notlar, Bitirdiklerim, çıkmışlar, soru çözücü, kamplar, Son Prova, Check Up ve Başvuru sayfaları v15'te sadeleşti.",
+  "Sınav planı: aktif kurulun dağılımı yoksa boş sayfa yerine nedeni yazıyor."
  ],
  "eklenen": [
-  "CizimLayer H85",
-  "takip_kapisi.py",
-  "KURUL2_DERS_STANDARDI.md"
+  "src/components/v15/",
+  "src/styles/v15/",
+  "src/components/canliDers/CdV15.tsx",
+  "docs/V15_PLAN.md"
  ],
  "degisen": [
-  "src/services/canliDers.ts",
-  "src/components/canliDers/canliDersStore.ts",
-  "src/components/canliDers/CdTerimKatman.tsx",
-  "src/components/canliDers/CanliDersDers.tsx",
-  "src/styles/canli-ders.css",
-  "src/data/glossary.ts",
-  "src/components/encyclopedia/MedicalEncyclopediaView.tsx",
-  "deploy/oracle/deploy-code.sh",
-  "otomasyon/hat.json"
+  "src/utils/appearance.ts",
+  "src/components/shell/*",
+  "src/router.ts",
+  "src/siteHaritasi.ts"
  ],
  "duzeltilen": [
   "Tireyle bitişik yazılan kısaltmalar (DSM-5, MAO-A, HIV-1, 5-HTTLPR) artık slaytta doğru yerde işaretleniyor.",

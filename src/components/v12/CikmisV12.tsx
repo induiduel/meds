@@ -21,6 +21,8 @@ import { Sheet } from '../ui/Sheet';
 import { CikmisViewSwitch, type CikmisGorunum } from '../cikmis/CikmisViewSwitch';
 import '../../styles/v12/cikmis.css';
 import '../../styles/v13/cikmis.css';
+import '../../styles/v15/cikmis.css';
+import { useV15Baslik } from '../v15/baslik';
 
 export interface C12Option { id: string; label: string; count?: number; group?: string }
 export interface C12Facet { id: string; label: string; value: string; options: C12Option[]; onPick: (v: string) => void }
@@ -112,6 +114,7 @@ const SelectField: React.FC<{ id: string; label: string; p: Pick; all: string }>
 
 export const CikmisV12: React.FC<CikmisV12Props> = (p) => {
   const look = useAppearance();
+  useV15Baslik(look.v15 ? { baslik: 'Çıkmış sorular', alt: `${p.total.toLocaleString('tr-TR')} soru` } : null);
   const adv = look.filters === 'gelismis';
   const rootRef = useRef<HTMLDivElement>(null);
   const asideRef = useRef<HTMLElement>(null);

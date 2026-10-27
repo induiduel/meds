@@ -26,6 +26,7 @@ import { linkedQuestionCount, WHERE_ROWS, type useDiseaseInsights } from '../dis
 import { lessonFlagText, type LessonSel } from '../diseases/diseaseLessons';
 import { linkClick, navigateTo, pathFor } from '../../router';
 import '../../styles/v12/glossary.css';
+import '../../styles/v15/sozluk.css';
 
 type Insights = ReturnType<typeof useDiseaseInsights>['data'];
 export interface DiseaseLessonRow { ti: number; n: number; f: number; x: { k: number; d: string; t: string } }

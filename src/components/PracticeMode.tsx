@@ -9,6 +9,7 @@ import { confirmDialog } from './ui/ConfirmDialog';
 import { TestNavigator, navCounts, NavItem } from './practice/TestNavigator';
 import '../styles/practice-v10.css';
 import { PracticeV12, PracticeResultsV12, PracticeEmptyV12 } from './v12/PracticeV12';
+import { PracticeV15 } from './v15/PracticeV15';
 
 interface PracticeModeProps {
   questions: QuestionItem[];
@@ -48,7 +49,9 @@ export const PracticeMode: React.FC<PracticeModeProps> = ({
   subtitle,
 }) => {
   // v12 "Net": aynı durum ve işlevlerle ayrı yapı (components/v12/PracticeV12.tsx)
-  const v12 = useAppearance().design === 'v12';
+  const gorunum = useAppearance();
+  const v12 = gorunum.design === 'v12';
+  const v15 = !!gorunum.v15;
   // Only reconstructed questions can be practiced
   const items = useMemo(() => questions.filter((q) => q.status === 'completed' && q.reconstruction), [questions]);
 
@@ -227,6 +230,36 @@ export const PracticeMode: React.FC<PracticeModeProps> = ({
       }
     />
   );
+
+  if (v15) {
+    return (
+      <>
+        <PracticeV15
+          title={title}
+          subtitle={subtitle}
+          items={items}
+          index={currentIndex}
+          answers={selectedAnswers}
+          marked={marked}
+          elapsed={elapsed}
+          paused={paused}
+          finished={finished}
+          shortExplanation={shortExplanation}
+          onSelect={handleSelect}
+          onToggleMark={toggleMark}
+          onGo={go}
+          onFinish={finish}
+          onRestart={restart}
+          onReview={() => setFinished(false)}
+          onTogglePause={() => setPaused((v) => !v)}
+          onOpenAi={() => setAiChatOpen(true)}
+          onOpenQuestion={onOpenQuestion}
+          onExit={onExit}
+        />
+        {aiDrawer}
+      </>
+    );
+  }
 
   if (v12) {
     return (

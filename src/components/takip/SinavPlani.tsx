@@ -8,6 +8,7 @@ import { sureYaz, useTakip, type Hiz, type TakipModul } from '../../services/cal
 import IzlemeHizi from './IzlemeHizi';
 import SinavSenaryo from './SinavSenaryo';
 import { planHesapla, planVerisiYukle, type AdimTur, type PlanAdim, type PlanGun, type PlanVeri } from './sinavPlani';
+import { aktifKurul } from '../../services/kurulTakvimi';
 
 const SAAT_KEY = 'medsoru_sinav_plani_saat_v1';
 const SAATLER = [3, 5, 7, 9, 11];
@@ -44,7 +45,8 @@ export default function SinavPlani({ hiz }: { hiz: Partial<Record<TakipModul, Hi
   const plan = useMemo(() => (veri ? planHesapla(veri, hiz, { gunlukSaat: saat }) : null), [veri, hiz, saat, takip]);
 
   if (veri === undefined) return <section className="sp sp-bos" aria-busy="true"><span className="bd-spin" aria-hidden /> Sınav planı hazırlanıyor…</section>;
-  if (!plan) return null;
+  // Aktif kurulun sınav dağılımı (sinav_dagilimi.json) yoksa plan kurulamaz: boş ekran yerine nedenini söyle
+  if (!plan) return <section className="sp sp-bos"><p>Kurul {aktifKurul().kurul} için sınav dağılımı henüz girilmedi; plan dağılım gelince hazırlanır.</p></section>;
 
   const { simdi, sonra } = plan;
   const durum: 'iyi' | 'orta' | 'zor' = plan.guvende ? 'iyi' : !plan.yetersiz ? 'orta' : 'zor';

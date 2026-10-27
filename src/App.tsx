@@ -32,6 +32,7 @@ const QuickAddYerTutucu = () => (
   <div className="w-full max-w-[760px] mx-auto lg:mx-0 flex flex-col gap-5 pt-4 sm:pt-8 min-h-[252px] sm:min-h-[262px]" aria-busy="true" />
 );
 import KurulSeridi from './components/olasi/KurulSeridi';
+import { V15Disinda } from './components/v15/V15Disinda';
 import { MusicPlayerProvider } from './components/music/MusicPlayerContext';
 import { MiniMusicPlayer } from './components/music/MiniMusicPlayer';
 import { SideNav } from './components/shell/SideNav';
@@ -142,6 +143,7 @@ const OlasiSorularView = React.lazy(() => wrapLazy(import('./components/olasi/Ol
 const GecmisKurullarView = React.lazy(() => wrapLazy(import('./components/olasi/GecmisKurullarView')));
 const KampView = React.lazy(() => wrapLazy(import('./components/kamp/KampView')));
 const MerkezView = React.lazy(() => wrapLazy(import('./components/merkez/MerkezView')));
+const DersDetayV15 = React.lazy(() => wrapLazy(import('./components/v15/DersDetayV15')));
 const NeYapmak = React.lazy(() => wrapLazy(import('./components/merkez/MerkezView').then((m) => ({ default: m.NeYapmak }))));
 const GuncellemeGunluguView = React.lazy(() => wrapLazy(import('./components/guncellemeler/GuncellemeGunluguView')));
 const SinavCalismaView = React.lazy(() => wrapLazy(import('./components/SinavCalismaView').then(m => ({ default: m.SinavCalismaView }))));
@@ -1855,6 +1857,13 @@ export default function App() {
           </Suspense>
         )}
 
+        {/* v15 ders ayrıntısı (/dersler/ders/kurulN/<key>): içerikler + bölümler; v15 dışında sesli derse yönlenir */}
+        {activeTab === 'ders_detay' && (
+          <Suspense fallback={<ViewFallback />}>
+            <DersDetayV15 />
+          </Suspense>
+        )}
+
         {/* TAB: Sağlık Bakanlığı — resmî halk sağlığı verileri + ders/sınav bağları (/saglik/<bölüm>) */}
         {activeTab === 'health_ministry' && (
           <Suspense fallback={<ViewFallback />}>
@@ -2160,8 +2169,10 @@ export default function App() {
         {/* /bugun — günlük giriş: kaldığın yer, hızlı erişim, günün spotu, haftalık çalışma */}
         {activeTab === 'today' && (
           <Suspense fallback={<ViewFallback />}>
-            <KurulSeridi />
-            <div className="mz-bugun"><NeYapmak kart /></div>
+            <V15Disinda>
+              <KurulSeridi />
+              <div className="mz-bugun"><NeYapmak kart /></div>
+            </V15Disinda>
             <TodayView committeeLabel={currentCommittee ? committeeShortLabel(currentCommittee) : undefined} onGo={(r) => setActiveTab(r)} />
           </Suspense>
         )}

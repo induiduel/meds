@@ -14,6 +14,8 @@ import { PoolLiveFeed, usePoolActivity } from '../pool/PoolLiveFeed';
 import { poolDisciplineOptions, useMedia, usePoolClusters } from '../pool/poolHooks';
 import '../../styles/pool.css';
 import '../../styles/v12/pool.css';
+import '../../styles/v15/havuz.css';
+import { useV15Baslik } from '../v15/baslik';
 
 /**
  * Soru havuzu — v12 "Net" (canvas panosu Pool.dc.html, sol yarı).
@@ -144,7 +146,8 @@ const PoolItemSkeleton: React.FC = () => (
 );
 
 export const PoolV12: React.FC<PoolViewProps> = (p) => {
-  const { layout } = useAppearance();
+  const { layout, v15 } = useAppearance();
+  useV15Baslik(v15 ? { baslik: 'Soru havuzu', alt: 'Hatırladığın parçaları birleştir' } : null);
   const wide = useMedia('(min-width: 1180px)');
   const split = layout !== 'akis' && wide;
 

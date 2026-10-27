@@ -16,6 +16,7 @@ import { userNotificationService } from '../../services/userNotificationService'
 import { NotificationHistoryModal } from '../notifications/NotificationHistoryModal';
 import { TabBarV12 } from '../v12/ShellV12';
 import { TabBarV13 } from '../v13/ShellV13';
+import { TabBarV15 } from '../v15/ShellV15';
 
 const MODE_ICONS: Record<ThemeMode, React.ElementType> = { light: Sun, sepia: SunMedium, dark: Moon };
 
@@ -37,6 +38,7 @@ export type TabBarProps = {
 export const TabBar: React.FC<TabBarProps> = (props) => {
   const a = useAppearance();
   if (a.design !== 'v12') return <TabBarClassic {...props} />;
+  if (a.v15) return <TabBarV15 {...props} />;
   return a.v13 ? <TabBarV13 {...props} /> : <TabBarV12 {...props} />;
 };
 

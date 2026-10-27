@@ -17,7 +17,7 @@ import { cdListeOzetleri, useCdListe } from './canliDersListe';
 import { ListeEkleDugme, Listem } from './CanliDersListem';
 import { useCdTur } from './useCdTur';
 import { CevrimdisiDugme, useCevrimdisiSuzgec } from './CanliDersCevrimdisi';
-import { CD_SPOT_BRANS, cdBransKisa, cdDersEtiketi, cdKategoriGrupla, cdKonuSayisi, cdParca, type CdKategori } from './canliDersKategori';
+import { CD_SPOT_BRANS, cdBransKisa, cdBransSlug, cdDersEtiketi, cdKategoriGrupla, cdKonuSayisi, cdParca, type CdKategori } from './canliDersKategori';
 import { bransAdresi, icKonum } from '../../siteHaritasi';
 import { useCdTvGezinme } from './CanliDersTv';
 import { useYildizliSayisi } from '../../services/yildizliParagrafStore';
@@ -30,6 +30,10 @@ import CihazdaIsaret from '../cevrimdisi/CihazdaIsaret';
 import { KurulBos, kurulKimlikten, useKurulParam } from '../kurul/KurulSuzgec';
 import { KurulSecici } from '../kurul/KurulSecici';
 import KMB_INDEX from '../../data/kmb/index.json';
+import { useAppearance } from '../../utils/appearance';
+
+const BransV15 = React.lazy(() => import('../v15/BransV15'));
+const SesliListeV15 = React.lazy(() => import('../v15/SesliListeV15'));
 
 const fold = (s: string) =>
   s.toLocaleLowerCase('tr').normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/ı/g, 'i').replace(/\s+/g, ' ').trim();
@@ -42,16 +46,18 @@ export function sonProvaYolu(key: string): string | null {
 
 export default function CanliDersView({ dersKey }: { dersKey?: string }) {
   const sp = dersKey ? sonProvaYolu(dersKey) : null;
+  const { v15 } = useAppearance();
   useEffect(() => { if (sp) navigateTo(sp); }, [sp]);
   if (sp) return null;
+  // v15: branş adresi (/dersler/canliders/kurulN/<branş>) branş ders listesini açar (components/v15/BransV15)
+  if (!dersKey && v15 && new URLSearchParams(icKonum().search).get('brans')) return <React.Suspense fallback={null}><BransV15 /></React.Suspense>;
+  // v15: branşsız liste (arşiv dönemi ve #listem gibi özel görünümler eski listede kalır)
+  if (!dersKey && v15 && !new URLSearchParams(icKonum().search).get('donem') && !window.location.hash) return <React.Suspense fallback={null}><SesliListeV15 /></React.Suspense>;
   return dersKey ? <CanliDersDers key={dersKey} dersKey={dersKey} /> : <CanliDersListe />;
 }
 
 /** Sesli ders kategorisinin adres adı (Tıbbi Genetik → tbg; Kurul 2+ branşları adından) */
-const katSlug = (kat: CdKategori) => {
-  const b = CD_SPOT_BRANS[kat.ad];
-  return b ? bransAdresi(b).slug : fold(kat.ad).replace(/^tibbi /, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
-};
+const katSlug = (kat: CdKategori) => cdBransSlug(kat.ad);
 
 const dersAc = (key: string) => navigateTo(pathFor('canli_ders', key));
 

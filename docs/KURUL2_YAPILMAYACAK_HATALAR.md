@@ -746,3 +746,11 @@ Her maddede: belirti · kök neden · Kurul 2 kuralı · kapı durumu. Kanıtlar
   kapısı `takip_kapisi.py` (T1–T6).
 - **Önleme kuralı:** okumayı bozan hiçbir çizim/zoom yayına girmez; yeni ders kapıları K10–K12 + `takip_kapisi.py` 0 HATA.
   Yayındaki eski derslerin verisi kapıda 36 ihlal gösteriyor; görüntüleyici aynı kuralları uygular, yeniden üretimde düzelir.
+
+## H86 — Sınav planı Kurul 2'de boş sayfa (2026-10-27)
+- **Belirti:** `/kamplar/sinav-plani` yalnız başlık ve açıklamayı gösteriyor, altı bomboş.
+- **Kök neden:** aktif kurul takvimden 2; `planVerisiYukle` `kurulDagilimi(2)` bulamayınca (sinav_dagilimi.json'da Kurul 2 yok)
+  `null` dönüyor, `SinavPlani` da `if (!plan) return null` ile hiçbir şey çizmiyordu.
+- **Çözüm:** boş durum iletisi ("Kurul N için sınav dağılımı henüz girilmedi"). Kurul 2 dağılımı girilince plan kendiliğinden kurulur.
+- **Önleme kuralı:** kurula bağlı veriyle çizilen her ekran, veri yokken `null` değil nedenini söyleyen boş durum gösterir;
+  yeni kurul açılırken `sinav_dagilimi.json`'a o kurulun dağılımı eklenir.

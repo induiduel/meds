@@ -10,6 +10,7 @@
  *   /dersler/interaktif[/<desteId>]          Etkileşimli ders (Öğren)
  *   /dersler/canliders[/kurul1[/tbg]]        Sesli ders listesi (kurul / branş süzgeci)
  *   /dersler/canliders/kurul1/<dersKey>      Tek sesli ders
+ *   /dersler/ders/kurulN/<dersKey>           Ders ayrıntısı (v15: dersin tüm içerikleri ve bölümleri)
  *   /dersler/ozetler[/<id>] · /dersler/kartlar
  *   /sorular[/kurulN]                        Soru çöz merkezi
  *   /sorular/soru-cozucu[/kurul1/patoloji]   Sesli soru çözücü (?ders=&coz= korunur)
@@ -147,6 +148,9 @@ export function disYol(adres: string): string {
       return birlestir(`/dersler/ozetler${s[1] ? `/${enc(s[1])}` : ''}`, sp, hash);
     case 'kartlar':
       return birlestir(`/dersler/kartlar${s[1] ? `/${enc(s[1])}` : ''}`, sp, hash);
+    case 'ders':
+      if (s[1]) return birlestir(`/dersler/ders/kurul${anahtarKurul(s[1])}/${enc(s[1])}`, sp, hash);
+      return birlestir('/dersler', sp, hash);
     case 'canliders': {
       const k = sorguKurul(sp);
       const b = sp.get('brans');
@@ -289,6 +293,10 @@ export function icYol(adres: string): string {
       if (s[2]) koy('beceri', s[2]);
       if (s[3]) koy('b', s[3]);
       return birlestir('/kmb', sp, hash);
+    }
+    if (arac === 'ders') {
+      const key = kurulSeg(s[2]) ? s[3] : s[2];
+      return key ? birlestir(`/ders/${enc(key)}`, sp, hash) : birlestir('/ders-merkezi', sp, hash);
     }
     if (arac === 'canliders' || arac === 'sesli-ders') {
       const k = kurulSeg(s[2]);

@@ -1,14 +1,16 @@
 import React, { useEffect, useMemo, useState } from 'react';
-import { ArrowRight, Search } from 'lucide-react';
+import { ArrowRight, CircleHelp, Flag, Headphones, Layers, Lightbulb, RotateCcw, Search, Sparkles, Star } from 'lucide-react';
 import { type AppRoute, linkClick, navigateTo, pathFor } from '../../router';
 import { NAV_ITEMS, openSearch } from '../shell/navModel';
 import { dayKey, getActivity, getStudySeconds } from '../../services/activityLog';
 import { getProgress } from '../../services/studyStore';
 import { KAT, Zengin, okuOgrenilen, type Spot, type Veri } from '../spots/spotsShared';
 import { useReviewCounts } from '../../hooks/useReviewCounts';
+import { gunluBag, takvimDurumu } from '../../services/kurulPencere';
 import { OPEN_REVIEW_FLAG } from '../../services/learnReview';
 import '../../styles/today.css';
 import '../../styles/v13/today.css';
+import '../../styles/v15/today.css';
 import { useAppearance } from '../../utils/appearance';
 import { TodayViewV10 } from './TodayViewV10';
 
@@ -83,12 +85,16 @@ interface ResumeCard {
 
 /** Tasarım seçimi: v11 Sade (bu dosya) ya da Klasik v10 (TodayViewV10.tsx, dokunulmadan korunur) */
 export const TodayView: React.FC<TodayViewProps> = (props) => {
-  const { design, v13 } = useAppearance();
-  return design === 'v10' ? <TodayViewV10 {...props} /> : <TodayViewV11 {...props} v12={design === 'v12'} v13={design === 'v12' && !!v13} />;
+  const { design, v13, v15 } = useAppearance();
+  return design === 'v10' ? (
+    <TodayViewV10 {...props} />
+  ) : (
+    <TodayViewV11 {...props} v12={design === 'v12'} v13={design === 'v12' && !!v13 && !v15} v15={design === 'v12' && !!v15} />
+  );
 };
 
 /** v11 ve v12 aynı verileri kullanır; v12 yalnız düzeni değiştirir (iki sütun, tek birincil blok, satır listeleri). */
-const TodayViewV11: React.FC<TodayViewProps & { v12?: boolean; v13?: boolean }> = ({ committeeLabel, onGo, v12, v13 }) => {
+const TodayViewV11: React.FC<TodayViewProps & { v12?: boolean; v13?: boolean; v15?: boolean }> = ({ committeeLabel, onGo, v12, v13, v15 }) => {
   const today = dayKey();
   const dateLine = useMemo(
     () => new Date().toLocaleDateString('tr-TR', { day: 'numeric', month: 'long', weekday: 'long' }),
@@ -275,6 +281,169 @@ const TodayViewV11: React.FC<TodayViewProps & { v12?: boolean; v13?: boolean }> 
   const primary = resume[0];
   const reviewDue = review.total.due;
   const totalDue = reviewDue + dueCards;
+
+  if (v15) {
+    const goReview = () => {
+      try { sessionStorage.setItem(OPEN_REVIEW_FLAG, '1'); } catch { /* yok say */ }
+      onGo('learn');
+    };
+    // Halka: bugünkü hedefler (son 14 günün ortalamasına göre); hedef yoksa soru doğruluğu; veri yoksa boş
+    const ring = goals.length
+      ? { pct: Math.round(goals.reduce((n, g) => n + g.pct, 0) / goals.length), label: 'günlük hedef' }
+      : solveCard
+        ? { pct: solveCard.pct, label: 'doğru oranı' }
+        : null;
+    const planLine = goals.length
+      ? goals.map((g) => `${g.label} ${g.value}`).join(' · ')
+      : primary
+        ? `${primary.kicker} · ${primary.sub}`
+        : 'Bir derse başla; hedeflerin çalıştıkça burada oluşur.';
+    type Row = { id: string; tone: string; icon: React.ElementType; title: string; sub: string; tag: string; href: string; go: () => void };
+    const KIND: Record<ResumeCard['kind'], { tone: string; icon: React.ElementType; tag: string }> = {
+      learn: { tone: 'is-c', icon: Layers, tag: 'Çalış' },
+      solve: { tone: 'is-ok', icon: CircleHelp, tag: 'Çöz' },
+      spots: { tone: 'is-w', icon: Star, tag: 'Oku' },
+    };
+    const rows: Row[] = [];
+    // Sınav sonrası 7 gün: hatırlanan soruları ekleme ve olası sorular çağrısı (eski kurul şeridinin yerine)
+    const pencere = takvimDurumu().pencere;
+    if (pencere) {
+      const ne = pencere.gecenGun === 0 ? 'sınavı bugün' : pencere.gecenGun === 1 ? 'sınavı dündü' : `sınavı ${pencere.gecenGun} gün önceydi`;
+      const href = gunluBag(`/olasi-sorular?kurul=${pencere.kurul.kurul}`);
+      rows.push({
+        id: 'olasi', tone: 'is-ai', icon: Sparkles, tag: 'Olası',
+        title: `Kurul ${pencere.kurul.kurul} ${ne}`,
+        sub: 'Hatırladığın soruları ekle; olası sorular her gece bunlardan kurulur',
+        href, go: () => navigateTo(href),
+      });
+    }
+    rows.push(...resume.map((r) => ({ id: r.id, ...KIND[r.kind], title: r.title, sub: `${r.kicker} · ${r.sub}`, href: r.href, go: r.go })));
+    if (totalDue > 0) {
+      rows.push({
+        id: 'due', tone: 'is-b', icon: RotateCcw, tag: 'Tekrar',
+        title: `${totalDue} tekrar zamanı geldi`,
+        sub: [reviewDue ? `${reviewDue} hata defteri` : '', dueCards ? `${dueCards} ezber kartı` : ''].filter(Boolean).join(' · '),
+        href: reviewDue ? pathFor('learn') : pathFor('flashcards'),
+        go: reviewDue ? goReview : () => onGo('flashcards'),
+      });
+    }
+    const spotHref = spotOfDay ? `${pathFor('spots')}?id=${encodeURIComponent(spotOfDay.s.id)}` : '';
+    if (spotOfDay) {
+      rows.push({
+        id: 'spot', tone: 'is-w', icon: Lightbulb, tag: 'Oku',
+        title: 'Günün spotu',
+        sub: spotOfDay.ders ? `Ders ${spotOfDay.ders.no} · ${spotOfDay.ders.baslik}` : 'Sınav spotu',
+        href: spotHref, go: () => navigateTo(spotHref),
+      });
+    }
+    const quick: { id: AppRoute; label: string; tone: string; icon: React.ElementType }[] = [
+      { id: 'canli_ders', label: 'Dinle', tone: '', icon: Headphones },
+      { id: 'soru_cozucu', label: 'Çöz', tone: 'is-ok', icon: CircleHelp },
+      { id: 'flashcards', label: 'Tekrar', tone: 'is-w', icon: Layers },
+      { id: 'hub_kamplar', label: 'Kamp', tone: 'is-ai', icon: Flag },
+    ];
+    const R = 44;
+    const C = 2 * Math.PI * R;
+    return (
+      <div className="t15">
+        <div className="t15-in">
+          <h1 className="sr-only">Bugün</h1>
+          <div className="t15-main">
+            <section className="t15-hero v15-card" aria-label="Bugünün planı">
+              <div className="t15-ring" role="img" aria-label={ring ? `%${ring.pct} ${ring.label}` : 'Henüz veri yok'}>
+                <svg viewBox="0 0 100 100" aria-hidden="true">
+                  <circle cx="50" cy="50" r={R} className="t15-ring-bg" />
+                  {ring && <circle cx="50" cy="50" r={R} className="t15-ring-fg" strokeDasharray={`${(C * ring.pct) / 100} ${C}`} />}
+                </svg>
+                <span className="t15-ring-v">
+                  <b>{ring ? `%${ring.pct}` : '—'}</b>
+                  <span>{ring ? ring.label : 'veri yok'}</span>
+                </span>
+              </div>
+              <div className="t15-plan">
+                <h2 className="v15-h2">Bugünün planı</h2>
+                <p className="t15-plan-l">{planLine}</p>
+                {goals[0] && (
+                  <span className="v15-bar" role="progressbar" aria-valuemin={0} aria-valuemax={100} aria-valuenow={goals[0].pct} aria-label={goals[0].label}>
+                    <span style={{ width: `${goals[0].pct}%` }} />
+                  </span>
+                )}
+                {primary ? (
+                  <a className="v15-btn t15-cta" href={primary.href} onClick={linkClick(primary.go)}>Kaldığın yerden sürdür</a>
+                ) : resumeLoading ? (
+                  <span className="v15-skel t15-cta-skel" aria-hidden />
+                ) : (
+                  <a className="v15-btn t15-cta" href={pathFor('hub_dersler')} onClick={linkClick(() => onGo('hub_dersler'))}>Derslere başla</a>
+                )}
+              </div>
+            </section>
+
+            <section className="t15-flow" aria-labelledby="t15-flow-h">
+              <div className="t15-sec-h">
+                <h2 id="t15-flow-h" className="v15-h2">Bugünkü akış</h2>
+                <a className="t15-more" href={pathFor('hub_dersler')} onClick={linkClick(() => onGo('hub_dersler'))}>Tümü</a>
+              </div>
+              {rows.length ? (
+                <ul className="t15-rows v15-card" role="list">
+                  {rows.map((r) => (
+                    <li key={r.id} data-k={r.id}>
+                      <a className="t15-row" href={r.href} onClick={linkClick(r.go)}>
+                        <span className={`v15-tile ${r.tone}`}><r.icon aria-hidden /></span>
+                        <span className="t15-row-t">
+                          <b>{r.title}</b>
+                          <span>{r.sub}</span>
+                        </span>
+                        <span className={`v15-tag ${r.tone}`}>{r.tag}</span>
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              ) : resumeLoading ? (
+                <span className="v15-skel t15-rows-skel" aria-hidden />
+              ) : (
+                <p className="t15-empty v15-card">Henüz bir şey başlatmadın. Aşağıdan bir yol seç; kaldığın yer burada görünür.</p>
+              )}
+            </section>
+          </div>
+
+          <aside className="t15-side" aria-label="Kısayollar ve özet">
+            <nav className="t15-quick" aria-label="Hızlı başla">
+              {quick.map((q) => (
+                <a key={q.id} className="t15-q" href={pathFor(q.id)} onClick={linkClick(() => onGo(q.id))}>
+                  <span className={`v15-tile ${q.tone}`}><q.icon aria-hidden /></span>
+                  <span>{q.label}</span>
+                </a>
+              ))}
+            </nav>
+            <div className="t15-strip v15-card">
+              <div><span className="v15-label">Seri</span><b>{week.streak} gün</b></div>
+              <div><span className="v15-label">Bugün</span><b>{fmtMin(seconds[today] || 0)}</b></div>
+              <div><span className="v15-label">Bu hafta</span><b>{fmtMin(week.total)}</b></div>
+            </div>
+            {hasAnyStudy && (
+              <div className="t15-week v15-card" aria-label="Bu haftanın çalışma süresi">
+                <span className="v15-label">Hafta</span>
+                <ol className="t15-week-bars" role="list">
+                  {week.days.map((d) => (
+                    <li key={d.key} className={d.isToday ? 'is-today' : d.future ? 'is-future' : ''} title={`${d.label}: ${fmtMin(d.sec)}`}>
+                      <span className="t15-wb"><i style={{ height: `${Math.max(4, Math.round((d.sec / week.max) * 100))}%` }} /></span>
+                      <span className="t15-wl">{d.label}</span>
+                    </li>
+                  ))}
+                </ol>
+              </div>
+            )}
+            {spotOfDay && (
+              <a className="t15-spot v15-card" href={spotHref} onClick={linkClick(() => navigateTo(spotHref))}>
+                <span className="v15-label">Günün spotu</span>
+                <p className="t15-spot-x"><Zengin metin={spotOfDay.s.spot} /></p>
+              </a>
+            )}
+          </aside>
+        </div>
+      </div>
+    );
+  }
 
   if (v13) {
     const goReview = () => {

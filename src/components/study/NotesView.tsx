@@ -4,6 +4,7 @@ import { StudyNote, getNotes, saveNotes, newNoteId, notesToMarkdown } from '../.
 import { disciplineClass, disciplineLabel } from '../../utils/discipline';
 import { RichTextArea } from '../ui/RichTextArea';
 import { TagInput } from '../ui/TagInput';
+import '../../styles/v15/notlar.css';
 
 interface NotesViewProps {
   disciplines: string[];

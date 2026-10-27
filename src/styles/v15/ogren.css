@@ -1,0 +1,58 @@
+/*
+ * v15 · Öğren (tasarım sistemi v15 › B05 kitaplık, B06/B07 slayt). Kitaplık .o15-* (components/v15/OgrenKutuphaneV15);
+ * slayt ekranı v12 yapısını korur, yalnız v15 katmanı: okuma yazı tipi, sakin sütun, ince ilerleme, tek ana düğme.
+ */
+:root[data-v15='on'] .o15 {
+  --o15-ekran: calc(100dvh / var(--ch-zoom, 1) - var(--sh-top-h) - var(--sh-tabs-h) - env(safe-area-inset-bottom, 0px) - 48px);
+  display: flex; flex-direction: column; gap: 14px; height: var(--o15-ekran); min-height: 360px; min-width: 0; font-family: var(--font-sans); color: var(--color-ink);
+}
+.o15-ust { display: flex; align-items: center; gap: 6px; min-width: 0; flex: none; }
+.o15-cipler { flex: 1; min-width: 0; display: flex; align-items: center; gap: 8px; }
+.o15-cip { flex: none; display: inline-flex; align-items: center; gap: 6px; height: 36px; padding: 0 14px; border: 1px solid var(--color-line); border-radius: 999px;
+  background: var(--color-white); color: var(--color-ink); font: 600 13.5px/1 var(--font-sans); white-space: nowrap; cursor: pointer; }
+.o15-cip span { color: var(--color-ink-3); font-variant-numeric: tabular-nums; }
+.o15-cip.is-on { background: var(--color-ink); border-color: var(--color-ink); color: var(--color-white); }
+.o15-cip.is-on span { color: inherit; opacity: .8; }
+.o15-ayr { flex: none; width: 1px; height: 22px; background: var(--color-line); }
+.o15-ara { flex: 1; min-width: 0; display: flex; align-items: center; gap: 8px; height: 40px; padding: 0 4px 0 12px; border: 1px solid var(--color-accent);
+  border-radius: 999px; background: var(--color-white); }
+.o15-ara > svg { width: 17px; height: 17px; color: var(--color-ink-3); flex: none; }
+.o15-ara input { flex: 1; min-width: 0; border: 0; outline: 0; background: transparent; color: var(--color-ink); font: 500 14px/1 var(--font-sans); }
+.o15-eylem { flex: none; display: flex; }
+.o15-hata { flex: none; display: flex; align-items: center; gap: 12px; padding: 10px 14px; border: 0; border-radius: var(--v15-r-lg); background: var(--color-bad-soft);
+  color: var(--color-ink); text-align: left; cursor: pointer; }
+.o15-hata .v15-tile { width: 36px; height: 36px; background: var(--color-white); }
+.o15-hata-t { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
+.o15-hata-t b { font: 650 14.5px/1.2 var(--font-sans); }
+.o15-hata-t span { font: var(--v15-t-caption); color: var(--color-ink-2); }
+.o15-alan { flex: 1 1 auto; min-height: 0; overflow-y: auto; overscroll-behavior: contain; scrollbar-width: thin; margin: 0 -4px; padding: 0 4px 8px;
+  container: o15 / inline-size; display: flex; flex-direction: column; gap: 12px; }
+.o15-izgara { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: minmax(0, 1fr); gap: 12px; }
+@container o15 (min-width: 560px) { .o15-izgara { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@container o15 (min-width: 900px) { .o15-izgara { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; } }
+.o15-izgara > li { position: relative; min-width: 0; }
+.o15-kart { width: 100%; height: 100%; display: flex; flex-direction: column; gap: 6px; padding: 14px 16px; text-align: left; color: inherit; cursor: pointer;
+  transition: border-color .15s; }
+.o15-kart:hover { border-color: var(--color-accent); }
+.o15-kart:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; }
+.o15-kart-ust { display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px; }
+.o15-ad { font: 650 15.5px/1.3 var(--font-sans); display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.o15-alt { font: var(--v15-t-caption); color: var(--color-ink-3); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.o15-kart .v15-bar { margin-top: 4px; }
+.o15-tekrar { position: absolute; right: 12px; bottom: 12px; width: 34px; height: 34px; display: grid; place-items: center; border: 0; border-radius: 10px;
+  background: var(--color-field); color: var(--color-ink-2); cursor: pointer; }
+.o15-tekrar svg { width: 16px; height: 16px; }
+.o15-bos { margin: 0; padding: 18px 16px; font: var(--v15-t-body); color: var(--color-ink-2); }
+.o15-temizle { border: 0; background: none; padding: 0; color: var(--color-accent); font: 650 14px/1 var(--font-sans); cursor: pointer; }
+.o15-daha { align-self: center; }
+
+/* ── Slayt ekranı: v15 katmanı ── */
+:root[data-v15='on'] {
+  & .ls-root { font-family: var(--font-sans); }
+  & .ls-content > .ls-prose { font-family: var(--font-read); font-size: calc(var(--read-size, 16px) + 2px); line-height: 1.68; max-width: 64ch; }
+  & .ls-root .ls-prog { height: 3px; background: var(--color-field); }
+  & .ls-root .ls-prog > i { background: var(--color-accent); border-radius: 0 2px 2px 0; }
+  & .ls-root .ls-next, & .ls-root .lv-bb-btn.is-primary { background: var(--color-accent); color: var(--color-on-accent); border-color: transparent; border-radius: var(--v15-r-md); }
+  & .ls-root .ls-next:hover { background: var(--color-accent-hover); }
+}
+@media (max-width: 599px) { .o15-eylem :is(button, a) > :not(svg) { display: none; } .o15-eylem :is(button, a) { padding: 0 10px; } }

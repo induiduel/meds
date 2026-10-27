@@ -1,0 +1,21 @@
+/* v15 · En önemliler (OnemListesi) katmanı — düz yüzey, tek vurgu, gölgesiz; yerleşim OnemListesi'nin kendi kap sorgularında */
+:root[data-v15='on'] .on-page { font-family: var(--v15-font, inherit); }
+:root[data-v15='on'] .on-sayfa-bas { padding: 0 2px; border: 0; background: none; }
+:root[data-v15='on'] .on-sayfa-t h2 { font-size: 1.15rem; letter-spacing: -.01em; }
+:root[data-v15='on'] .on-btn { border-radius: 999px; min-height: 40px; box-shadow: none; }
+:root[data-v15='on'] .on-giris-bas { background: var(--color-surface); border-color: var(--color-line-soft, var(--color-line)); border-radius: var(--v15-r-lg, 16px); padding: 16px; }
+:root[data-v15='on'] .on-giris-no { background: var(--color-accent-soft, var(--color-field)); color: var(--color-accent); box-shadow: none; border-radius: 14px; font-weight: 700; }
+:root[data-v15='on'] .on-giris-t h2 { font-size: 1.35rem; font-weight: 700; }
+:root[data-v15='on'] .on-giris-ilerle { background: radial-gradient(closest-side, var(--color-surface) 80%, transparent 82%), conic-gradient(var(--color-accent) var(--p), var(--color-field) 0); }
+:root[data-v15='on'] .on-giris-soru { font-size: .95rem; color: var(--color-ink); }
+:root[data-v15='on'] .on-giris-k, :root[data-v15='on'] .on-giris-detay {
+  background: var(--color-surface); border-color: var(--color-line-soft, var(--color-line)); border-radius: var(--v15-r-lg, 16px); box-shadow: none; transform: none; }
+:root[data-v15='on'] .on-giris-k:hover, :root[data-v15='on'] .on-giris-detay:hover { transform: none; box-shadow: none; border-color: var(--color-accent); }
+:root[data-v15='on'] .on-giris-k.t-ana { background: var(--color-surface); color: var(--color-ink); border-color: var(--color-accent); }
+:root[data-v15='on'] .on-giris-k.t-ana .on-giris-ikon { background: var(--color-accent); color: var(--color-on-accent, #fff); }
+:root[data-v15='on'] .on-giris-k.t-ana small, :root[data-v15='on'] .on-giris-k.t-ana .on-giris-ok { color: var(--color-ink-3); opacity: 1; }
+:root[data-v15='on'] .on-giris-k.t-ana b em { background: var(--color-accent-soft, var(--color-field)); color: var(--color-accent); }
+:root[data-v15='on'] .on-giris-ikon { border-radius: 12px; }
+:root[data-v15='on'] .on-giris-ac { background: var(--color-accent); color: var(--color-on-accent, #fff); }
+:root[data-v15='on'] .on-m { border-radius: var(--v15-r-md, 12px); }
+:root[data-v15='on'] .on-m.is-odak { box-shadow: inset 0 0 0 1.5px var(--color-accent); }

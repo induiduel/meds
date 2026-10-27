@@ -7,7 +7,7 @@
 import CanliDersKimlikHedef from './CanliDersKimlikHedef';
 import { CanliDersBaslangic } from './CanliDersBaslangic';
 import React, { Suspense, lazy, memo, useCallback, useMemo, useEffect, useLayoutEffect, useRef, useState } from 'react';
-import { AlertTriangle, ArrowLeftRight, ArrowUpDown, BookOpen, ChevronDown, ChevronLeft, ChevronRight, ChevronUp, Check, Columns2, Copy, Crosshair, FileText, Maximize2, Minimize2, Minus, Package, Pause, Play, Plus, RotateCcw, Rows2, ScrollText } from 'lucide-react';
+import { AlertTriangle, ArrowLeftRight, ArrowUpDown, BookOpen, Download, ChevronDown, ChevronLeft, ChevronRight, ChevronUp, Check, Columns2, Copy, Crosshair, FileText, Maximize2, Minimize2, Minus, Package, Pause, Play, Plus, RotateCcw, Rows2, ScrollText } from 'lucide-react';
 import { navigateTo, pathFor } from '../../router';
 import { driveViewUrl, useDeckPdf } from '../../services/deckPdfService';
 import { releasePageFullscreen, wasRecentlyScrollingOrTouching } from '../../utils/fullscreen';
@@ -16,8 +16,9 @@ import { isIosBrowserTab, shouldAvoidNativeFullscreen } from '../../utils/device
 import { openPwaInstallGuide } from '../../services/pwaService';
 import { cumleDuzeyleri } from '../../utils/maddele';
 import {
-  cdCumleAraligi, cdParagrafSinirlari, cdDetayBagla, cdKelimeBas, cdKonusulanKarakter, cdDetayGetir, cdDurum, cdMedspakUrl, cdOynat, cdParagrafa, cdTercihVaryant, cdToggle, fmtSure, useCd, type CdDetay,
+  cdCumleAraligi, cdParagrafSinirlari, cdDetayBagla, cdKelimeBas, cdKonusulanKarakter, cdDetayGetir, cdDurum, cdMedspakUrl, cdOynat, cdParagrafa, cdSesUrl, cdTercihVaryant, cdToggle, fmtSure, useCd, type CdDetay,
 } from './canliDersStore';
+import { CdV15Bas, CdV15Gorunum, CdV15KalemDugme, CdV15KalemKutusu, CdV15Menu } from './CdV15';
 import { GunlukDiyalog } from './CanliDersView';
 import { CdCikmisChip, CdCikmisPencereKok, cikmisSayfada } from './CdCikmisChip';
 import { useCdTur } from './useCdTur';
@@ -198,6 +199,10 @@ export default function CanliDersDers({ dersKey, kamp }: { dersKey: string; kamp
   const hadNativeFsRef = useRef(false);
   /** Tam ekranda yüzen araçlar (yazı boyutu, PDF araç çubuğu) yalnız istenince açılır. */
   const [aracAcik, setAracAcik] = useState(false);
+  // v15: üst bar + Görünüm çekmecesi + gruplu Ders seçenekleri (components/canliDers/CdV15.tsx)
+  const { v15 } = useAppearance();
+  const [gor15, setGor15] = useState(false);
+  const [menu15, setMenu15] = useState(false);
   const [yazi, setYaziDurum] = useState<number>(() => { try { return Number(localStorage.getItem(YAZI_KEY)) || 20; } catch { return 20; } });
   const setYazi = (n: number | ((y: number) => number)) => setYaziDurum((y) => {
     const v = Math.min(YAZI_ENCOK, Math.max(YAZI_ENAZ, typeof n === 'function' ? n(y) : n));
@@ -490,8 +495,29 @@ export default function CanliDersDers({ dersKey, kamp }: { dersKey: string; kamp
     <div
       className={`cd-root cd-ders is-${mod}${tamEkran ? ' is-tam' : ''}${tamEkran && aracAcik ? ' is-arac-acik' : ''}${vurguAcik ? '' : ' cd-vurgu-kapali'}${kamp ? ' cd-kamp' : ''}`}
       ref={rootRef}
-      style={tamEkran ? ({ '--cd-tam-yazi': `${yazi}px` } as React.CSSProperties) : yuk ? ({ height: yuk, ...(kamp ? { '--cd-tam-yazi': `${yazi}px` } : {}) } as React.CSSProperties) : undefined}
+      style={tamEkran ? ({ '--cd-tam-yazi': `${yazi}px` } as React.CSSProperties) : yuk ? ({ height: yuk, ...(kamp || v15 ? { '--cd-tam-yazi': `${yazi}px` } : {}) } as React.CSSProperties) : undefined}
     >
+      {v15 && !tamEkran ? (
+        <CdV15Bas
+          geri={kamp ? kamp.geri : (
+            // v15: geri, dersin ayrıntı sayfasına (içerikler + bölümler) döner
+            <a className="cd-geri" href={pathFor('ders_detay', detay.key)} aria-label="Ders ayrıntısına dön"
+              onClick={(e) => { if (e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return; e.preventDefault(); navigateTo(pathFor('ders_detay', detay.key)); }}>
+              <ChevronLeft aria-hidden />
+            </a>
+          )}
+          ust={<>{cdDersEtiketi(detay)}<DersBolumEtiketi detay={detay} /></>}
+          baslik={detay.baslik}
+          title={`${cdDersEtiketi(detay)} · ${detay.baslik}`}
+          pdfVar={pdfVar}
+          terimVar={!!(detay.terim || detay.kisaltma)}
+          mod={mod}
+          setGorunum={setGorunum}
+          onGorunum={() => setGor15(true)}
+          onMenu={() => setMenu15(true)}
+          ek={kamp && metinGoster ? <YaziAyar yazi={yazi} setYazi={setYazi} /> : null}
+        />
+      ) : (
       <header className="cd-ders-bas">
         {kamp ? kamp.geri : <GeriBag arsiv={Boolean(detay.arsiv || detay.donem === '2025-2026' || detay.key.startsWith('y25-'))} />}
         <div className="cd-ders-baslik">
@@ -687,6 +713,92 @@ export default function CanliDersDers({ dersKey, kamp }: { dersKey: string; kamp
           )}
         </div>
       </header>
+      )}
+      {v15 && (
+        <>
+          <CdV15Gorunum
+            acik={gor15}
+            onKapat={() => setGor15(false)}
+            pdfVar={pdfVar}
+            terimVar={!!(detay.terim || detay.kisaltma)}
+            mod={mod}
+            setGorunum={setGorunum}
+            yon={bolmeYon}
+            setYon={setBolmeYon}
+            oran={pdfOran}
+            setOran={setPdfOranHedef}
+            ters={bolmeTers}
+            setTers={setBolmeTers}
+            onTamEkran={tamEkranAc}
+            vurguVar={!!detay.vurgu}
+            vurgu={vurguAcik}
+            setVurgu={setVurguAcik}
+            yazi={yazi}
+            setYazi={setYazi}
+            yaziEnaz={YAZI_ENAZ}
+            yaziEncok={YAZI_ENCOK}
+          />
+          <CdV15Menu
+            acik={menu15}
+            onKapat={() => setMenu15(false)}
+            gruplar={[
+              {
+                ad: 'Çalışma',
+                ogeler: (
+                  <>
+                    <KonuDugmeleri kucuk className="cd-ders-takip" modul="sesli" konu={detay.key} ad={detay.baslik}
+                      onTekrar={() => { const v = cdTercihVaryant(detay.varyantlar); if (v) cdOynat(detay, v.id, { t: 0 }); }} />
+                    <button type="button" className="cd-btn" onClick={() => { setMenu15(false); setYildizModalAcik(true); }}>
+                      <Star aria-hidden /> <span>Yıldızlı paragraflar ({yildizSayisi})</span>
+                    </button>
+                    <ListeEkleDugme dersKey={detay.key} baslik={detay.baslik} etiketli />
+                    {detay.desteId && (
+                      <button type="button" className="cd-btn" onClick={() => { setMenu15(false); navigateTo(`/dersler/interaktif/${detay.desteId}`); }}>
+                        <BookOpen aria-hidden /> <span>Öğren destesine geç</span>
+                      </button>
+                    )}
+                  </>
+                ),
+              },
+              {
+                ad: 'Dışa aktar ve çevrimdışı',
+                ogeler: (
+                  <>
+                    <CevrimdisiDugme dersKey={detay.key} baslik={detay.baslik} varyantlar={detay.varyantlar} />
+                    {(() => {
+                      const v = cdTercihVaryant(detay.varyantlar);
+                      return v ? (
+                        <a className="cd-btn" href={cdSesUrl(detay.key, v.id, true)} download>
+                          <Download aria-hidden /> <span>MP3 indir</span>
+                        </a>
+                      ) : null;
+                    })()}
+                    <MetniAktarDugme detay={detay} vurguAcik={vurguAcik} />
+                    {detay.pdf && <VideoOlusturDugme detay={detay} />}
+                    {detay.medspakVar && (
+                      <a className="cd-btn" href={cdMedspakUrl(detay.key)} download={`${detay.key}.medspak`} title="PDF + ses + deste + günlük tek pakette">
+                        <Package aria-hidden /> <span>.medspak ders paketi</span>
+                      </a>
+                    )}
+                  </>
+                ),
+              },
+              {
+                ad: 'Ders hakkında',
+                ogeler: (
+                  <>
+                    <button type="button" className="cd-btn" onClick={() => { setMenu15(false); setGunlukAcik(true); }}>
+                      <FileText aria-hidden /> <span>Güncelleme günlüğü</span>
+                    </button>
+                    {tanitim.dugme}
+                  </>
+                ),
+              },
+              { ad: 'Tercihler', ogeler: <MotivasyonDugme /> },
+            ]}
+          />
+        </>
+      )}
       {(detay.arsiv || detay.donem === '2025-2026' || detay.key.startsWith('y25-')) && !tamEkran && (
         <div className="cd-arsiv-uyari is-kompakt" role="note">
           <AlertTriangle aria-hidden />
@@ -1521,6 +1633,7 @@ function CdPdfBolme({ detay, canli }: { detay: CdDetay; canli: boolean }) {
   const terimKatman = useMemo(() => cdTerimKatmani(detay.terim, detay.kisaltma), [detay.terim, detay.kisaltma]);
   const terimDosya = terimKatman?.[String(gor.dosya)] || null;
   const gorunum = usePdfGorunum();
+  const { v15 } = useAppearance();
   // Kelime takibi yalnız işaret katmanında (useFocus): görüntüleyici cümle başına bir kez çizilir, kelimede yeniden çizilmez
   const marks = useMemo<PdfMarks | null>(() => {
     // Slayt aynıysa (gor.sayfa === isr.s) kullanıcı elle kaysa/durdursa bile işaret ve çizim gizlenmez (kullanıcı inceleyebilsin)
@@ -1599,12 +1712,12 @@ function CdPdfBolme({ detay, canli }: { detay: CdDetay; canli: boolean }) {
         </div>
       )}
       <SlideDrawingCanvas scope={`${cizimKok}:${n}`} controls={false} />
-      <CdCikmisChip sorular={cikmisSayfada(detay.cikmisKonum, gor.dosya, n)} />
+      {gorunum.cikmis && <CdCikmisChip sorular={cikmisSayfada(detay.cikmisKonum, gor.dosya, n)} />}
       {terimDosya?.[String(n)] && (
         <CdTerimKatman sayfa={terimDosya[String(n)]} gizle={cizimAcik} />
       )}
     </React.Fragment>
-  ), [cizimKok, cikYer, cikSec, gor.dosya, terimDosya, cizimAcik, detay.cikmisKonum]);
+  ), [cizimKok, cikYer, cikSec, gor.dosya, terimDosya, cizimAcik, detay.cikmisKonum, gorunum.cikmis]);
   const cikmisSec = useCallback((q: CdCikmisKonum | null) => {
     setCikSec(q);
     if (q) { setElle(null); durdur(); }
@@ -1630,14 +1743,22 @@ function CdPdfBolme({ detay, canli }: { detay: CdDetay; canli: boolean }) {
         )}
         <span className="cd-grow" />
         {!!detay.cikmisKonum?.length && <CikmisKonumDugme liste={detay.cikmisKonum} secili={cikSec} onSec={cikmisSec} />}
-        {terimDosya && <TerimDugme />}
-        <PdfGorunumDugme />
-        <CizimDugme />
-        <button type="button" className="cd-ib" onClick={undoLastDrawing} disabled={!geriAlinir} aria-label="Son çizimi geri al" title="Son çizimi geri al"><Undo2 /></button>
+        {/* v15: terim ve görünüm üst bara/Görünüm çekmecesine taşındı; çizim araçları PDF'in yanında yüzer */}
+        {v15 ? (
+          <CdV15KalemDugme />
+        ) : (
+          <>
+            {terimDosya && <TerimDugme />}
+            <PdfGorunumDugme />
+            <CizimDugme />
+            <button type="button" className="cd-ib" onClick={undoLastDrawing} disabled={!geriAlinir} aria-label="Son çizimi geri al" title="Son çizimi geri al"><Undo2 /></button>
+          </>
+        )}
         <button type="button" className="cd-ib" onClick={() => setZoom((z) => Math.max(0.5, +(z - 0.25).toFixed(2)))} aria-label="Uzaklaştır"><Minus /></button>
         <span className="cd-pdf-zoom">{Math.round(zoom * 100)}%</span>
         <button type="button" className="cd-ib" onClick={() => setZoom((z) => Math.min(3, +(z + 0.25).toFixed(2)))} aria-label="Yakınlaştır"><Plus /></button>
       </div>
+      {v15 && <CdV15KalemKutusu />}
       <div className="cd-pdf-govde dpv-body" ref={wrapRef}>
         {!info ? (
           <div className="cd-bos" role="status"><span className="cd-spin" aria-hidden /> PDF aranıyor…</div>

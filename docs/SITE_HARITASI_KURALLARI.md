@@ -15,7 +15,7 @@ Tek kaynak: `src/siteHaritasi.ts` (adres çevirisi + kategoriler) ve `src/compon
 
 | Kategori | Merkez | Araçlar (görünen adres) |
 |---|---|---|
-| Ders çalış | `/dersler[/kurulN]` | `/dersler/canliders[/kurul1[/tbg]]`, `/dersler/canliders/kurul1/<dersKey>`, `/dersler/interaktif[/<desteId>]`, `/dersler/ozetler`, `/dersler/kartlar` |
+| Ders çalış | `/dersler[/kurulN]` | `/dersler/canliders[/kurul1[/tbg]]`, `/dersler/canliders/kurul1/<dersKey>`, `/dersler/ders/kurulN/<dersKey>` (v15 ders ayrıntısı), `/dersler/interaktif[/<desteId>]`, `/dersler/ozetler`, `/dersler/kartlar` |
 | Soru çöz | `/sorular[/kurulN]` | `/sorular/soru-cozucu[/kurulN[/<branş>]]?ders=…`, `/sorular/cikmis[/<id>]`, `/sorular/deneme`, `/sorular/havuz[/<id>]`, `/sorular/ornek`, `/sorular/olasi` |
 | Sınava hazırlan | `/kamplar[/kurulN]` | `/kamplar/kurul1/son-prova/…`, `/kamplar/kurul1/cikmis-cozucu[/<branş>]?ders=cp1-<branş>-<n>&coz=1`, `/kamplar/kurul1/kamp[/<branş>]`, `/kamplar/kurulN/en-onemliler[/<branş>]`, `/kamplar[/kurulN]/spotlar` |
 | Check Up (ayrı sekme) | `/kamplar/kurul1/checkup` | `/kamplar/kurul1/checkup/patoloji`, `/kamplar/kurul1/checkup/tbg/v1/{sesli-ders,soru-coz,kaliplar,deneme}` |

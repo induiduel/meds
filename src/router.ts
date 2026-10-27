@@ -85,7 +85,8 @@ export type AppRoute =
   | 'hub_dersler'
   | 'hub_sorular'
   | 'hub_kamplar'
-  | 'hub_kaynaklar';
+  | 'hub_kaynaklar'
+  | 'ders_detay';
 
 export const ROUTE_PATHS: Record<AppRoute, string> = {
   quick_add: '/',
@@ -142,6 +143,8 @@ export const ROUTE_PATHS: Record<AppRoute, string> = {
   hub_sorular: '/soru-merkezi',
   hub_kamplar: '/kamp-merkezi',
   hub_kaynaklar: '/kaynak-merkezi',
+  // v15 ders ayrıntısı: görünen /dersler/ders/kurulN/<dersKey>
+  ders_detay: '/ders',
 };
 
 export const ROUTE_TITLES: Record<AppRoute, string> = {
@@ -198,6 +201,7 @@ export const ROUTE_TITLES: Record<AppRoute, string> = {
   hub_sorular: 'Soru çöz',
   hub_kamplar: 'Sınava hazırlan',
   hub_kaynaklar: 'Başvuru',
+  ders_detay: 'Ders',
 };
 
 const BY_SEGMENT: Record<string, AppRoute> = Object.fromEntries(

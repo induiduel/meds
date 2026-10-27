@@ -44,10 +44,16 @@ export const isSadeFamily = (d: DesignVersion) => d !== 'v10';
  * şerit yok. Kök öğeye `data-v13="on"` yazılır; kurallar styles/v13/*.css, kabuk components/v13/ShellV13.tsx.
  * Seçim isteğe bağlıdır: ilk açılışta bir kez sorulur (components/v13/V13Invite.tsx), Ayarlar › Tasarım'dan değişir.
  */
-export type DesignChoice = 'v13' | DesignVersion;
-export const DESIGN_CHOICES: DesignChoice[] = ['v13', 'v12', 'v11', 'v10'];
-export const DESIGN_CHOICE_LABELS: Record<DesignChoice, string> = { v13: 'Ada (v13)', v12: 'Net (v12)', v11: 'Sade (v11)', v10: 'Klasik (v10)' };
-export const designChoiceOf = (a: Pick<Appearance, 'design' | 'v13'>): DesignChoice => (a.design === 'v12' && a.v13 ? 'v13' : a.design);
+/**
+ * v15: tasarım sistemi "MeDSor Tasarım Sistemi v15" (artifact D8pMJwGTeeGG5y9jwtpurR). v13 gibi v12 sayfa bileşenleri
+ * üstünde çalışır (design = 'v12'); kök öğeye `data-v15="on"` yazılır. Kabuk components/v15/ShellV15.tsx, stiller
+ * styles/v15/*.css; sayfalar aşama aşama v15 düzenine taşınır (docs/V15_PLAN.md). v13 ile birlikte açık olamaz.
+ */
+export type DesignChoice = 'v15' | 'v13' | DesignVersion;
+export const DESIGN_CHOICES: DesignChoice[] = ['v15', 'v13', 'v12', 'v11', 'v10'];
+export const DESIGN_CHOICE_LABELS: Record<DesignChoice, string> = { v15: 'Yalın (v15)', v13: 'Ada (v13)', v12: 'Net (v12)', v11: 'Sade (v11)', v10: 'Klasik (v10)' };
+export const designChoiceOf = (a: Pick<Appearance, 'design' | 'v13' | 'v15'>): DesignChoice =>
+  a.design === 'v12' && a.v15 ? 'v15' : a.design === 'v12' && a.v13 ? 'v13' : a.design;
 
 /** Çıkmış soru kartı: tam (varsayılan) · katlanır (yalnız kök + künye, dokununca şıklar) · dar (sıkı şıklar) */
 export type QCardMode = 'tam' | 'katlanir' | 'dar';
@@ -97,6 +103,8 @@ export interface Appearance {
   v13?: boolean;
   /** v13 daveti cevaplandı mı (bir kez sorulur) */
   v13Asked?: boolean;
+  /** v15 kabuğu ve sayfaları açık mı (design === 'v12' iken geçerli; v13 ile birlikte açık olmaz) */
+  v15?: boolean;
   /** Vurgu rengi seçimi, "<tema>:<palet>" anahtarıyla (yalnız `accents` tanımlı paletler; utils/palettes.ts) */
   accents?: Record<string, string>;
 }
@@ -166,7 +174,8 @@ function read(): Appearance {
         designPicked: p.designPicked === true,
         designMigratedAt: typeof p.designMigratedAt === 'number' ? p.designMigratedAt : undefined,
         accents: p.accents && typeof p.accents === 'object' ? { ...p.accents } : {},
-        v13: p.v13 === true,
+        v13: p.v13 === true && p.v15 !== true,
+        v15: p.v15 === true,
         v13Asked: p.v13Asked === true,
       };
       // Taşınan tasarım seçimi kalıcı olsun (aksi halde sonraki açılışta v11'e döner)
@@ -229,7 +238,8 @@ export function applyAppearance(a: Appearance = current) {
   el.dataset.qtags = a.qtags ? 'on' : 'off';
   el.dataset.motion = a.motion;
   el.dataset.design = a.design;
-  if (a.design === 'v12' && a.v13) el.dataset.v13 = 'on'; else delete el.dataset.v13;
+  if (a.design === 'v12' && a.v13 && !a.v15) el.dataset.v13 = 'on'; else delete el.dataset.v13;
+  if (a.design === 'v12' && a.v15) el.dataset.v15 = 'on'; else delete el.dataset.v15;
   el.classList.toggle('theme-dark', a.mode === 'dark');
   el.style.colorScheme = a.mode === 'dark' ? 'dark' : 'light';
   syncPwaChrome(a);
@@ -255,7 +265,7 @@ function syncPwaChrome(a: Appearance) {
   const cs = getComputedStyle(document.documentElement);
   // v12 üst/alt çubuğu yüzey rengindedir (--color-white); Klasik/Sade üst çubuğu zemin rengindedir
   // v13'te tam genişlik çubuk yok: tarayıcı kromu zemin rengini alır
-  const tc = hex6(cs.getPropertyValue(a.design === 'v12' && !a.v13 ? '--color-white' : '--color-canvas'));
+  const tc = hex6(cs.getPropertyValue(a.design === 'v12' && !a.v13 && !a.v15 ? '--color-white' : '--color-canvas'));
   const bg = hex6(cs.getPropertyValue('--color-canvas'));
   if (!tc || !bg) return;
   document.querySelector('meta[name="theme-color"]')?.setAttribute('content', `#${tc}`);
@@ -371,14 +381,16 @@ export function setAppearance(patch: Partial<Omit<Appearance, 'palettes' | 'acce
   if (typeof patch.qtags === 'boolean') next.qtags = patch.qtags;
   if (patch.qcard) next.qcard = readQCard({ ...next.qcard, ...patch.qcard });
   if (patch.motion) next.motion = patch.motion;
-  if (patch.design) { next.design = patch.design; next.designPicked = true; if (patch.design !== 'v12') next.v13 = false; }
+  if (patch.design) { next.design = patch.design; next.designPicked = true; if (patch.design !== 'v12') { next.v13 = false; next.v15 = false; } }
   if (patch.choice) {
-    next.design = patch.choice === 'v13' ? 'v12' : patch.choice;
+    next.design = patch.choice === 'v13' || patch.choice === 'v15' ? 'v12' : patch.choice;
     next.v13 = patch.choice === 'v13';
+    next.v15 = patch.choice === 'v15';
     next.designPicked = true;
     next.v13Asked = true;
   }
-  if (typeof patch.v13 === 'boolean') next.v13 = patch.v13;
+  if (typeof patch.v13 === 'boolean') { next.v13 = patch.v13; if (patch.v13) next.v15 = false; }
+  if (typeof patch.v15 === 'boolean') { next.v15 = patch.v15; if (patch.v15) next.v13 = false; }
   if (typeof patch.v13Asked === 'boolean') next.v13Asked = patch.v13Asked;
   if (patch.palette) next.palettes[next.mode] = patch.palette;
   // Vurgu rengi: örtüsüz, anında (yalnız 4 token değişir)

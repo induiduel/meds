@@ -15,6 +15,9 @@ import { KonuIsaret, KonuSureEtiketi } from './KonuTakip';
 import { MODUL_YUKLE, type BdDers, type BdKonu } from './bitirdiklerimVeri';
 import { navigateTo, pathFor } from '../../router';
 import '../../styles/takip.css';
+import '../../styles/v15/bitir.css';
+import { useAppearance } from '../../utils/appearance';
+import { useV15Baslik } from '../v15/baslik';
 
 const MODULLER: { id: TakipModul; ikon: React.ComponentType<{ 'aria-hidden'?: boolean }> }[] = [
   { id: 'sesli', ikon: Headphones },
@@ -47,6 +50,7 @@ export default function BitirdiklerimView() {
   const takip = useTakip();
   const izHiz = useIzlemeHizi();
   const eleme = useEleme();
+  const v15 = !!useAppearance().v15;
 
   useEffect(() => { document.title = 'Bitirdiklerim · MeDSor'; }, []);
   useEffect(() => {
@@ -122,7 +126,9 @@ export default function BitirdiklerimView() {
     (o.biten > 0 && o.biten < o.toplam) || o.tekrarda > 0 || (i === 0 && !(oz?.dersler.some((x) => x.o.biten > 0 && x.o.biten < x.o.toplam)));
 
   return (
-    <div className="bd">
+    <div className={`bd${v15 ? ' bd15' : ''}`}>
+      {v15 && <V15Bas modul={modul} />}
+      {!v15 && <>
       <header className="bd-bas">
         <span className="bd-ic" aria-hidden><ListChecks /></span>
         <div>
@@ -142,6 +148,7 @@ export default function BitirdiklerimView() {
       </a>
 
       <h3 className="sp-h"><span className="sp-h-no">1</span> Hangi çalışmana bakıyorsun?</h3>
+      </>}
       <div className="bd-modul" role="tablist" aria-label="Modül">
         {MODULLER.map(({ id, ikon: Ikon }) => {
           const g = ozetler[id]?.genel;
@@ -168,11 +175,11 @@ export default function BitirdiklerimView() {
         <div className="bd-bos"><p>{MODUL_AD[modul]} için henüz konu yok.</p></div>
       ) : (
         <>
-          <h3 className="sp-h"><span className="sp-h-no">2</span> Durumun</h3>
+          {!v15 && <h3 className="sp-h"><span className="sp-h-no">2</span> Durumun</h3>}
           {(modul === 'sesli' || modul === 'onem' || modul === 'cozucu') && <IzlemeHizi />}
           <OzetKartlari genel={oz.genel} hiz={oz.hiz} modul={modul} sirada={siradaki} izHiz={izHiz} />
 
-          <h3 className="sp-h"><span className="sp-h-no">3</span> Konu konu liste</h3>
+          {!v15 && <h3 className="sp-h"><span className="sp-h-no">3</span> Konu konu liste</h3>}
 
           <div className="bd-arac">
             <label className="bd-ara">
@@ -232,6 +239,21 @@ export default function BitirdiklerimView() {
         </>
       )}
     </div>
+  );
+}
+
+/** v15: başlık üst barda; Sınav planı bağlantısı ve kısa kullanım ipucu tek satırda */
+function V15Bas({ modul }: { modul: TakipModul }) {
+  useV15Baslik({ baslik: 'Bitirdiklerim', alt: MODUL_AD[modul] });
+  return (
+    <>
+      <h1 className="sr-only">Bitirdiklerim</h1>
+      <a className="bd15-plan v15-card" href={pathFor('sinav_plani')} onClick={(e) => { if (e.button || e.metaKey || e.ctrlKey) return; e.preventDefault(); navigateTo(pathFor('sinav_plani')); }}>
+        <span className="v15-tile is-a" aria-hidden><Target /></span>
+        <span className="bd15-plan-t"><b>Sınav planı</b><span className="v15-cap">En az 60 için gün gün yol haritası</span></span>
+        <ChevronRight className="v15-chev" aria-hidden />
+      </a>
+    </>
   );
 }
 

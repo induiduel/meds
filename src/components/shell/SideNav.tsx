@@ -8,6 +8,7 @@ import { useSideCollapse } from './shellHooks';
 import { useAppearance } from '../../utils/appearance';
 import { SideNavV12 } from '../v12/ShellV12';
 import { SideNavV13 } from '../v13/ShellV13';
+import { SideNavV15 } from '../v15/ShellV15';
 
 export type SideNavProps = { active: AppRoute; onGo: (r: AppRoute) => void; isAdmin: boolean; user: AppUser | null };
 
@@ -15,6 +16,7 @@ export type SideNavProps = { active: AppRoute; onGo: (r: AppRoute) => void; isAd
 export const SideNav: React.FC<SideNavProps> = (props) => {
   const a = useAppearance();
   if (a.design !== 'v12') return <SideNavClassic {...props} />;
+  if (a.v15) return <SideNavV15 {...props} />;
   return a.v13 ? <SideNavV13 {...props} /> : <SideNavV12 {...props} />;
 };
 

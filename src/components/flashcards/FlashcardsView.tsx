@@ -12,6 +12,8 @@ import './fcHero.css';
 import '../../styles/flashcards-v10.css';
 import { useAppearance } from '../../utils/appearance';
 import { FlashcardsV12 } from '../v12/FlashcardsV12';
+import { useV15Baslik } from '../v15/baslik';
+import '../../styles/v15/kartlar.css';
 
 // ---------------------------------------------------------------------------
 // Card model + spaced repetition (Leitner boxes, stored per device)
@@ -145,7 +147,9 @@ const plain = (s?: string) => String(s || '').replace(/\*\*/g, '');
 // Page
 // ---------------------------------------------------------------------------
 export const FlashcardsView: React.FC = () => {
-  const v12 = useAppearance().design === 'v12';
+  const gorunum = useAppearance();
+  const v12 = gorunum.design === 'v12';
+  useV15Baslik(gorunum.v15 ? { baslik: 'Ezber kartları' } : null);
   const [source, setSource] = useState<'terms' | 'lessons'>('terms');
   const [deckCards, setDeckCards] = useState<StudyCard[] | null>(null);
   // Sözlük panelden değişince (canlı içerik) terim kartları yeniden kurulur

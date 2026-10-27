@@ -22,6 +22,9 @@ import { bittiMi, useKonuSayaci, useTakip } from '../../services/calismaTakip';
 import { KonuDugmeleri, KonuSureEtiketi } from '../takip/KonuTakip';
 import { onemAsistanBasaAl } from '../takip/basaAl';
 import '../../styles/onem-listesi.css';
+import '../../styles/v15/onem.css';
+import { useV15Baslik } from '../v15/baslik';
+import { useAppearance } from '../../utils/appearance';
 import CihazdaIsaret from '../cevrimdisi/CihazdaIsaret';
 
 const OnemPdfPenceresi = React.lazy(() => import('./onem/OnemPdfPenceresi'));
@@ -178,6 +181,7 @@ const KISAYOLLAR: [string, string][] = [['j / k', 'Sonraki / önceki madde'], ['
 
 export const OnemListesi: React.FC<{ brans?: Brans }> = ({ brans = 'patoloji' }) => {
   const bt = bransTanim(brans);
+  useV15Baslik(useAppearance().v15 ? { baslik: 'En önemliler', alt: bt.tam } : null);
   const DERS_KEY = brans === 'patoloji' ? 'medsoru_onem_ders' : `medsoru_onem_ders_${brans}`;
   const [dizin, setDizin] = useState<Dizin | null>(null);
   const [yuklu, setYuklu] = useState<Record<string, Ders>>({});

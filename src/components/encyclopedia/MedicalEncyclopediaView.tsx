@@ -28,6 +28,8 @@ import { triggerDomHighlightAndScroll, shareDeepLink } from '../../services/univ
 import { useAppearance } from '../../utils/appearance';
 import { GlossaryV12 } from '../v12/GlossaryV12';
 import './glossary.css';
+import '../../styles/v15/sozluk.css';
+import { useV15Baslik } from '../v15/baslik';
 
 /**
  * Sözlük (v10): kompakt PageToolbar + A–Z akordeon liste.
@@ -833,7 +835,8 @@ export const MedicalEncyclopediaView: React.FC<MedicalEncyclopediaViewProps> = (
   /* ---------------- Açma/kapama, hedefe gitme ---------------- */
 
   const isWide = useWide();
-  const { layout, design } = useAppearance();
+  const { layout, design, v15 } = useAppearance();
+  useV15Baslik(v15 ? { baslik: 'Sözlük', alt: entries ? `${entries.length.toLocaleString('tr-TR')} terim` : undefined } : null);
   // v11: geniş ekranda liste + ayrıntı bölmesi varsayılan (Akış modunda tek sütun akordeon kalır)
   // v12: geniş ekranda liste + ayrıntı; Akış (sade) modunda tek sütun, ayrıntı tam görünüm (GlossaryV12)
   const v12 = design === 'v12';

@@ -18,6 +18,7 @@ import { usePhone, useSearchShortcut } from './shellHooks';
 import { useAppearance } from '../../utils/appearance';
 import { TopBarV12 } from '../v12/ShellV12';
 import { TopBarV13 } from '../v13/ShellV13';
+import { TopBarV15 } from '../v15/ShellV15';
 
 /**
  * v8 üst çubuk. Sol: telefonda logo; sayfa aşağı kayınca logo yerine sayfa adı belirir (büyük başlık → çubuk başlığı).
@@ -40,6 +41,7 @@ export type TopBarProps = {
 export const TopBar: React.FC<TopBarProps> = (props) => {
   const a = useAppearance();
   if (a.design !== 'v12') return <TopBarClassic {...props} />;
+  if (a.v15) return <TopBarV15 {...props} />;
   return a.v13 ? <TopBarV13 {...props} /> : <TopBarV12 {...props} />;
 };
 

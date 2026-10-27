@@ -12,6 +12,8 @@ import React, { useCallback, useDeferredValue, useEffect, useMemo, useState } fr
 import { Check, Eye, EyeOff, RotateCcw, Search, Table2, X } from 'lucide-react';
 import { BOLUMLER, CHECKUP_KURUL, TOPLAM, kaynakGrupla, katla, type CuBolum, type CuNot, type CuTablo } from './checkupVeri';
 import '../../styles/checkup.css';
+import V15BaslikYaz from '../v15/V15BaslikYaz';
+import '../../styles/v15/kamp.css';
 
 const KEY = 'medsoru_checkup_v1';
 type Mod = 'oku' | 'sina';
@@ -208,6 +210,7 @@ export const PatolojiCheckUp: React.FC = () => {
         <span className="cu-ic" aria-hidden><Table2 /></span>
         <div className="cu-bas-t">
           <h1>Patoloji Hızlı Check Up{CHECKUP_KURUL > 1 ? ` · Kurul ${CHECKUP_KURUL}` : ''}</h1>
+          <V15BaslikYaz baslik="Patoloji Check Up" alt={`Kurul ${CHECKUP_KURUL}`} />
           <p>Mediyatörler, sitokinler, hücre tipleri, nekroz ve hastalıklar karşılaştırmalı tablolarda. Her tablo ders slaytına dayanır.</p>
           <p className="cu-ozet cu-mono">
             {BOLUMLER.length} bölüm · {TOPLAM.tablo} tablo · {TOPLAM.satir} satır · {TOPLAM.not} kısa not ·{' '}

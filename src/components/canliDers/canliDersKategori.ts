@@ -4,6 +4,7 @@
  */
 import type { CdListeDers } from './canliDersStore';
 import type { Brans } from '../spots/brans';
+import { bransAdresi } from '../../siteHaritasi';
 
 export interface CdKategori { id: string; ad: string; kisa: string; alt: string }
 
@@ -23,6 +24,12 @@ export const CD_SPOT_BRANS: Record<string, Brans> = {
   'Halk Sağlığı': 'halksagligi',
   'Kadın Hastalıkları ve Doğum': 'kadindogum',
   'Tıbbi Farmakoloji': 'farmakoloji',
+};
+const katla = (s: string) => s.toLocaleLowerCase('tr-TR').replace(/ı/g, 'i').normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+/** Sesli ders branş adının adres adı (Tıbbi Genetik → tbg; Kurul 2+ branşları adından: Nöroloji → noroloji) */
+export const cdBransSlug = (ad: string) => {
+  const b = CD_SPOT_BRANS[ad];
+  return b ? bransAdresi(b).slug : katla(ad).replace(/^tibbi /, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 };
 export const cdBransKisa = (brans: string) => KISA[brans] || brans.replace(/^Tıbbi\s+/, '');
 const bransAdi = (d: CdListeDers) => d.brans || 'Diğer';

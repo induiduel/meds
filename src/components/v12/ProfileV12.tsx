@@ -1134,6 +1134,7 @@ const DataPanel: React.FC<{ onOpenOffline: () => void }> = ({ onOpenOffline }) =
  * ---------------------------------------------------------------------------------------------- */
 
 const DESIGN_INFO: Record<DesignChoice, { name: string; hint: string }> = {
+  v15: { name: 'Yalın', hint: 'Yeni tasarım: tek vurgu rengi, her iş tek ekranda; telefon, tablet ve bilgisayara ayrı düzen.' },
   v13: { name: 'Ada', hint: 'Yüzen menü adaları, şeritsiz, en kompakt. Telefon ve tablete göre kuruldu.' },
   v12: { name: 'Net', hint: 'Sade, kompakt, tek ekranda bilgi.' },
   v11: { name: 'Sade', hint: 'Geniş boşluklar, okuma odaklı.' },

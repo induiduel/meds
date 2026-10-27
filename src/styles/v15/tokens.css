@@ -1,0 +1,123 @@
+/*
+ * v15 · temel ölçüler (tasarım sistemi v15 › tokens.json). Renkler BURADA TANIMLANMAZ: tüm renkler palet kaydından
+ * (utils/palettes.ts → --color-*) gelir; tema/palet/vurgu değişimi her v15 bileşenine kendiliğinden yansır.
+ * v15 bileşenleri yalnız şu adları kullanır: --color-* (renk), --v15-* (ölçü), --font-* (yazı).
+ * Kesme noktaları: <600 telefon, 600–1023 tablet / yarım ekran, ≥1024 PC.
+ */
+:root[data-v15='on'] {
+  --font-sans: 'Plus Jakarta Sans', 'Geist', ui-sans-serif, system-ui, sans-serif;
+  --font-display: 'Plus Jakarta Sans', 'Geist', ui-sans-serif, system-ui, sans-serif;
+  --font-read: 'Newsreader', 'Literata', Georgia, serif;
+
+  /* boşluk: space-1…8 */
+  --v15-s1: 4px;
+  --v15-s2: 8px;
+  --v15-s3: 12px;
+  --v15-s4: 16px;
+  --v15-s6: 24px;
+  --v15-s8: 32px;
+  /* kenar boşluğu ve bölüm arası (mobil / tablet / PC) */
+  --v15-pad: var(--v15-s4);
+  --v15-gap: 20px;
+
+  /* köşe */
+  --v15-r-sm: 8px;
+  --v15-r-md: 12px;
+  --v15-r-lg: 16px;
+  --v15-r-xl: 22px;
+  --v15-r-pill: 999px;
+
+  /* yazı ölçeği (Arayüz grubu) */
+  --v15-t-display: 700 30px/34px var(--font-sans);
+  --v15-t-title: 650 19px/1.2 var(--font-sans);
+  --v15-t-heading: 650 17px/22px var(--font-sans);
+  --v15-t-body: 400 15px/22px var(--font-sans);
+  --v15-t-caption: 400 13px/18px var(--font-sans);
+  --v15-t-label: 600 11.5px/14px var(--font-sans);
+  --v15-t-reading: 400 18px/30px var(--font-read);
+
+  /* gölge (tema bazlı) */
+  --v15-sh-1: 0 1px 2px rgb(16 24 40 / .06);
+  --v15-sh-2: 0 4px 16px rgb(16 24 40 / .08);
+  --v15-sh-3: 0 12px 40px rgb(16 24 40 / .18);
+  &[data-mode='sepia'] { --v15-sh-1: 0 1px 2px rgb(60 40 10 / .08); --v15-sh-2: 0 4px 16px rgb(60 40 10 / .10); --v15-sh-3: 0 12px 40px rgb(60 40 10 / .2); }
+  &[data-mode='dark'] { --v15-sh-1: 0 1px 2px rgb(0 0 0 / .4); --v15-sh-2: 0 4px 16px rgb(0 0 0 / .5); --v15-sh-3: 0 0 0 1px var(--color-line), 0 12px 40px rgb(0 0 0 / .7); }
+
+  /* kabuk ölçüleri (styles/shell.css değişkenleri) */
+  --sh-side-w: 0px;
+  --sh-top-h: 60px;
+  --sh-tabs-h: 64px;
+
+  @media (min-width: 600px) {
+    --v15-pad: var(--v15-s6);
+    --v15-gap: 22px;
+    --v15-t-title: 650 22px/28px var(--font-sans);
+    --sh-side-w: calc(76px * var(--ch-zoom, 1));
+    --sh-tabs-h: 0px;
+  }
+  @media (min-width: 1024px) {
+    --v15-pad: var(--v15-s8);
+    --v15-gap: 26px;
+    --v15-t-title: 650 24px/30px var(--font-sans);
+    --v15-t-body: 400 16px/24px var(--font-sans);
+    --v15-t-reading: 400 19px/31px var(--font-read);
+    --sh-side-w: calc(236px * var(--ch-zoom, 1));
+    &[data-side='collapsed'] { --sh-side-w: calc(76px * var(--ch-zoom, 1)); }
+  }
+}
+
+/* Ortak v15 parçaları: her sayfa bunları kullanır (bileşen kaydı: docs/V15_PLAN.md › Bileşenler) */
+:root[data-v15='on'] {
+  & .v15-card { min-width: 0; background: var(--color-white); border: 1px solid var(--color-line-soft); border-radius: var(--v15-r-lg); }
+  & .v15-label { margin: 0; font: var(--v15-t-label); letter-spacing: .05em; text-transform: uppercase; color: var(--color-ink-3); }
+  & .v15-h2 { margin: 0; font: var(--v15-t-heading); color: var(--color-ink); letter-spacing: -.01em; }
+  & .v15-cap { font: var(--v15-t-caption); color: var(--color-ink-3); }
+  & .v15-btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 44px; padding: 0 18px; border: 0;
+    border-radius: var(--v15-r-md); background: var(--color-accent); color: var(--color-on-accent); font: 600 14.5px/1 var(--font-sans);
+    text-decoration: none; cursor: pointer; transition: background-color .15s; }
+  & .v15-btn:hover { background: var(--color-accent-hover); }
+  & .v15-btn.is-soft { background: var(--color-accent-soft); color: var(--color-accent); }
+  & .v15-btn svg { width: 17px; height: 17px; }
+  & .v15-tag { display: inline-flex; align-items: center; height: 24px; padding: 0 10px; border-radius: var(--v15-r-pill); font: 600 12px/1 var(--font-sans);
+    background: var(--color-field); color: var(--color-ink-2); white-space: nowrap; }
+  & .v15-tag.is-a { background: var(--color-accent-soft); color: var(--color-accent); }
+  & .v15-tag.is-ok { background: var(--color-ok-soft); color: var(--color-ok); }
+  & .v15-tag.is-w { background: var(--color-warn-soft); color: var(--color-warn); }
+  & .v15-tag.is-b { background: var(--color-bad-soft); color: var(--color-bad); }
+  & .v15-tag.is-ai { background: var(--color-ai-soft); color: var(--color-ai); }
+  & .v15-tag.is-c { background: var(--color-clinic-soft); color: var(--color-clinic); }
+  /* Simge karosu: tonlar a · ok · w · b · ai · c */
+  & .v15-tile { width: 42px; height: 42px; flex: none; border-radius: var(--v15-r-md); display: grid; place-items: center; background: var(--color-accent-soft); color: var(--color-accent); }
+  & .v15-tile svg { width: 20px; height: 20px; }
+  & .v15-tile.is-ok { background: var(--color-ok-soft); color: var(--color-ok); }
+  & .v15-tile.is-w { background: var(--color-warn-soft); color: var(--color-warn); }
+  & .v15-tile.is-b { background: var(--color-bad-soft); color: var(--color-bad); }
+  & .v15-tile.is-ai { background: var(--color-ai-soft); color: var(--color-ai); }
+  & .v15-tile.is-c { background: var(--color-clinic-soft); color: var(--color-clinic); }
+  & .v15-bar { height: 6px; border-radius: 3px; background: var(--color-field); overflow: hidden; }
+  & .v15-bar > span { display: block; height: 100%; border-radius: inherit; background: var(--color-accent); }
+  & .v15-skel { border-radius: var(--v15-r-md); background: var(--color-field); animation: v15-pulse 1.4s ease-in-out infinite; }
+  &[data-motion='reduced'] .v15-skel { animation: none; }
+}
+@keyframes v15-pulse { 50% { opacity: .55; } }
+
+/* ========================= v15 ortak: halka, seçici, kaydırma satırı (bileşen kaydı: docs/V15_PLAN.md) ========================= */
+:root[data-v15='on'] {
+  & .v15-halka { position: relative; width: var(--h15, 36px); height: var(--h15, 36px); flex: none; display: inline-grid; place-items: center; }
+  & .v15-halka svg { position: absolute; inset: 0; width: 100%; height: 100%; transform: rotate(-90deg); }
+  & .v15-halka circle { fill: none; stroke-width: 3.6; }
+  & .v15-halka-bg { stroke: var(--color-field); }
+  & .v15-halka-fg { stroke: var(--color-accent); stroke-linecap: round; }
+  & .v15-halka-v { position: relative; font: 700 calc(var(--h15, 36px) * .3) / 1 var(--font-sans); color: var(--color-ink); font-variant-numeric: tabular-nums; }
+  & .v15-seg { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(0, 1fr); gap: 4px; padding: 4px; border-radius: var(--v15-r-md); background: var(--color-field); flex: none; }
+  & .v15-seg > * { display: grid; place-items: center; min-height: 36px; padding: 0 8px; border-radius: 9px; color: var(--color-ink-2); font: 600 13.5px/1.1 var(--font-sans);
+    text-align: center; text-decoration: none; }
+  & .v15-seg > a:hover { color: var(--color-ink); background: color-mix(in srgb, var(--color-white) 55%, transparent); }
+  & .v15-seg > [aria-current='page'] { background: var(--color-white); color: var(--color-ink); box-shadow: var(--v15-sh-1); }
+  & .v15-hscroll { overflow-x: auto; scrollbar-width: none; overscroll-behavior-x: contain; margin-inline: calc(var(--v15-pad) * -1); padding-inline: var(--v15-pad);
+    mask-image: linear-gradient(90deg, transparent 0, #000 var(--v15-pad), #000 calc(100% - var(--v15-pad)), transparent 100%); }
+  & .v15-hscroll::-webkit-scrollbar { display: none; }
+  & .v15-tile.is-n { background: var(--color-field); color: var(--color-ink-2); }
+  & .v15-btn.is-ghost { background: var(--color-white); color: var(--color-ink); border: 1px solid var(--color-line); }
+  & .v15-btn.is-ghost:hover { background: var(--color-field); }
+}

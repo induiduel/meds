@@ -162,6 +162,8 @@ const Row: React.FC<{ s: SummaryMeta; no: number; mark?: ReadingMark; showKurul:
   </li>
 );
 
+const OzetlerV15 = React.lazy(() => import('./v15/OzetlerV15'));
+
 export const LectureSummariesView: React.FC<LectureSummariesViewProps> = ({ onOpenPdfModal, initialSummaryId }) => {
   const [kurul, setKurul] = useState<number | 'all'>('all');
   const [discipline, setDiscipline] = useState('all');
@@ -169,7 +171,9 @@ export const LectureSummariesView: React.FC<LectureSummariesViewProps> = ({ onOp
   const [readFilter, setReadFilter] = useState<ReadFilter>('all');
   const [active, setActive] = useState<SummaryDetail | null>(null);
   const progress = useReadingProgress();
-  const v12 = useAppearance().design === 'v12';
+  const gorunum = useAppearance();
+  const v12 = gorunum.design === 'v12';
+  const v15 = !!gorunum.v15;
 
   // Ders programından gelen gerçek ders adı, branş ve öğretim üyesi; kaynak PDF yılı
   const summaries: SummaryMeta[] = useMemo(
@@ -382,6 +386,28 @@ export const LectureSummariesView: React.FC<LectureSummariesViewProps> = ({ onOp
     <SummaryReader summary={active} onClose={closeReader} onOpenPdfModal={onOpenPdfModal} next={next} onOpenNext={next ? () => openAt(next, true) : undefined} />
   );
 
+  if (v15)
+    return (
+      <React.Suspense fallback={null}>
+        <OzetlerV15
+          inProgress={inProgress}
+          groups={groups}
+          progress={progress}
+          toplam={summaries.length}
+          bitti={doneCount}
+          sorgu={query}
+          setSorgu={setQuery}
+          kurul={kurul}
+          kurullar={[{ id: 'all', label: 'Tümü' }, ...KURULS.filter((k) => kurulCount(k) > 0).map((k) => ({ id: String(k), label: `Kurul ${k}` }))]}
+          setKurul={(v) => setKurul(v === 'all' ? 'all' : Number(v))}
+          dallar={disciplines}
+          dal={discipline}
+          setDal={setDiscipline}
+          onOpen={(m) => openAt(m)}
+          reader={reader}
+        />
+      </React.Suspense>
+    );
   if (v12)
     return (
       <LectureSummariesV12

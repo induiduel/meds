@@ -14,6 +14,12 @@ import { NAV_ITEMS } from '../shell/navModel';
 import { KurulSecici, kurulIcerikVar, varsayilanKurul } from '../kurul/KurulSecici';
 import { CHECKUPLAR, MERKEZ_ARACLARI, MERKEZ_ROUTE, PDF_NOTLAR, kategoriOf } from './merkezModel';
 import '../../styles/merkez.css';
+import { useAppearance } from '../../utils/appearance';
+
+const DerslerMerkezV15 = React.lazy(() => import('../v15/DerslerMerkezV15'));
+const SorularMerkezV15 = React.lazy(() => import('../v15/SorularMerkezV15'));
+const KamplarMerkezV15 = React.lazy(() => import('../v15/KamplarMerkezV15'));
+const KaynaklarMerkezV15 = React.lazy(() => import('../v15/KaynaklarMerkezV15'));
 
 export const KATEGORI_IKON: Record<KategoriId, React.ElementType> = {
   dersler: GraduationCap, sorular: MessageCircleQuestion, kamplar: Flag, kaynaklar: BookOpenText,
@@ -24,7 +30,7 @@ const Bag: React.FC<{ url: string; className?: string; children: React.ReactNode
 );
 
 /** Kurula bağlı araçlar merkezde seçili kurulun altında açılır (kurulsuz araçlar kendi adresinde) */
-function aracYolu(id: AppRoute, kurul: number | null): string {
+export function aracYolu(id: AppRoute, kurul: number | null): string {
   const k = kurul ? `/kurul${kurul}` : '';
   if (id === 'son_prova') return `/kamplar${k}/son-prova`;
   if (id === 'kamp') return `/kamplar${k}/kamp`;
@@ -94,18 +100,28 @@ export const BolumSeridi: React.FC<{ route: AppRoute }> = ({ route }) => {
   );
 };
 
-type KampSekme = 'hepsi' | 'son-prova' | 'kamp' | 'checkup' | 'en-onemliler';
-const KAMP_SEKMELER: [KampSekme, string][] = [['hepsi', 'Hepsi'], ['son-prova', 'Son Prova'], ['kamp', 'Kamplar'], ['checkup', 'Check Up'], ['en-onemliler', 'En önemliler']];
-const SEKME_ROUTE: Partial<Record<KampSekme, AppRoute[]>> = { 'son-prova': ['son_prova', 'cikmis_cozucu'], kamp: ['kamp'], 'en-onemliler': ['en_onemliler', 'spots'] };
+export type KampSekme = 'hepsi' | 'son-prova' | 'kamp' | 'checkup' | 'en-onemliler';
+export const KAMP_SEKMELER: [KampSekme, string][] = [['hepsi', 'Hepsi'], ['son-prova', 'Son Prova'], ['kamp', 'Kamplar'], ['checkup', 'Check Up'], ['en-onemliler', 'En önemliler']];
+export const SEKME_ROUTE: Partial<Record<KampSekme, AppRoute[]>> = { 'son-prova': ['son_prova', 'cikmis_cozucu'], kamp: ['kamp'], 'en-onemliler': ['en_onemliler', 'spots'] };
 
-const kampOku = () => {
+export const kampOku = () => {
   const sp = new URLSearchParams(icKonum().search);
   const n = Number(sp.get('kurul'));
   const s = sp.get('sekme') as KampSekme | null;
   return { kurul: n >= 1 && n <= 6 ? n : null, sekme: s && KAMP_SEKMELER.some(([id]) => id === s) ? s : 'hepsi' as KampSekme };
 };
 
+/** v15'te Ders çalış merkezi kendi düzenini kullanır (components/v15/DerslerMerkezV15); diğerleri aşama aşama taşınır */
 export default function MerkezView({ kategori }: { kategori: KategoriId }) {
+  const { v15 } = useAppearance();
+  if (v15 && kategori === 'dersler') return <React.Suspense fallback={null}><DerslerMerkezV15 /></React.Suspense>;
+  if (v15 && kategori === 'sorular') return <React.Suspense fallback={null}><SorularMerkezV15 /></React.Suspense>;
+  if (v15 && kategori === 'kamplar') return <React.Suspense fallback={null}><KamplarMerkezV15 /></React.Suspense>;
+  if (v15 && kategori === 'kaynaklar') return <React.Suspense fallback={null}><KaynaklarMerkezV15 /></React.Suspense>;
+  return <MerkezViewEski kategori={kategori} />;
+}
+
+function MerkezViewEski({ kategori }: { kategori: KategoriId }) {
   const tanim = KATEGORILER.find((k) => k.id === kategori)!;
   const [kamp, setKamp] = useState(kampOku);
   useEffect(() => {

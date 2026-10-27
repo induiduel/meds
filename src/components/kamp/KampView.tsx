@@ -18,15 +18,17 @@ import {
   bildimDegistir, cevapSil, cevapla, dinlendi, kalipSatirId, kampAnahtar, kampOzeti, useKampKaydi, useKampVeri, kampKaydi,
 } from './kampIlerleme';
 import { linkClick, navigateTo } from '../../router';
-import { KURULLAR, aktifKurul } from '../../services/kurulTakvimi';
+import { KURULLAR } from '../../services/kurulTakvimi';
 import { kurulAdi } from '../../services/kurulPencere';
-import { KurulSecici } from '../kurul/KurulSecici';
+import { KurulSecici, varsayilanKurul } from '../kurul/KurulSecici';
 import {
   bransAdi, bransKisa, kampSesUrl, kaynakHedef, kaynakYaz, kurulKampYollari, type Kamp, type KampSoru,
 } from './kampVeri';
 import { TuyoFormu } from './TuyoFormu';
 import '../../styles/genetik-kamp.css';
 import '../../styles/kamp.css';
+import V15BaslikYaz from '../v15/V15BaslikYaz';
+import '../../styles/v15/kamp.css';
 
 type Sekme = 'anlatim' | 'kalip' | 'deneme';
 
@@ -39,7 +41,7 @@ function adresOku(): { kurul: number; brans?: string } {
   const segs = icKonum().pathname.split('/').filter(Boolean);
   const q = Number(new URLSearchParams(icKonum().search).get('kurul'));
   const yol = Number(segs[1]);
-  const kurul = [yol, q].find((n) => Number.isInteger(n) && n >= 1 && n <= 6) || aktifKurul().kurul;
+  const kurul = [yol, q].find((n) => Number.isInteger(n) && n >= 1 && n <= 6) || varsayilanKurul();
   const brans = segs[2] && /^[a-z0-9]{2,30}$/.test(segs[2]) ? segs[2] : undefined;
   return { kurul, brans };
 }
@@ -105,7 +107,7 @@ function KampListesi({ kurul }: { kurul: number }) {
         <span className="tk-ic" aria-hidden><Tent /></span>
         <div className="tk-bas-t">
           <span className="tk-ust">Kurul {kurul}{kurulBilgi ? ` · ${kurulAdi(kurulBilgi)}` : ''}</span>
-          <h1>Kurul kampı</h1>
+          <h1>Kurul kampı</h1><V15BaslikYaz baslik="Kurul kampı" alt={`Kurul ${kurul}`} />
           <p>Hocalarınızın derste “bunu sorarım” dediği yerler ve ders notlarındaki en önemli bilgiler: sesli anlatım, kalıp kartları ve deneme.</p>
         </div>
         <div className="tk-bas-arac">
@@ -226,7 +228,7 @@ function KampSayfasi({ kurul, brans }: { kurul: number; brans: string }) {
         <span className="tk-ic" aria-hidden><Tent /></span>
         <div className="tk-bas-t">
           <span className="tk-ust">Kurul {kurul} · {bransAdi(kamp.brans)}</span>
-          <h1>{kamp.baslik}</h1>
+          <h1>{kamp.baslik}</h1><V15BaslikYaz baslik={kamp.baslik} alt={`Kurul ${kurul} · ${bransAdi(kamp.brans)}`} />
           {kamp.kisa && <p>{kamp.kisa}</p>}
         </div>
         <div className="tk-bas-arac">

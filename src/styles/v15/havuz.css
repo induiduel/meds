@@ -1,0 +1,4 @@
+/* v15 · Soru havuzu / Soru ekle katmanı (PoolV12): başlık üst barda, hap denetimler, düz panel */
+:root[data-v15='on'] .q12-head-t { display: none; }
+:root[data-v15='on'][data-design] :is(.q12-btn, .q12-field) { border-radius: 999px; }
+:root[data-v15='on'][data-design] .q12-panel { border-radius: var(--v15-r-lg, 16px); border-color: var(--color-line-soft, var(--color-line)); box-shadow: none; }

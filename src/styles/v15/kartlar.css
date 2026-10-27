@@ -1,0 +1,9 @@
+/* v15 · Ezber kartları katmanı (FlashcardsV12 üstünde): yuvarlak hap düğmeler, büyük kart yarıçapı, okuma yazısıyla kart yüzü */
+:root[data-v15='on'][data-design] .f12-page { font-family: var(--v15-font, var(--font-sans)); max-width: 760px; margin: 0 auto; }
+:root[data-v15='on'][data-design] .f12-btn { border-radius: 999px; height: 40px; }
+:root[data-v15='on'][data-design] .f12-seg { border-radius: 999px; padding: 4px; }
+:root[data-v15='on'][data-design] .f12-seg > * { border-radius: 999px; }
+:root[data-v15='on'][data-design] .f12-panel { background: var(--color-surface); border-color: var(--color-line-soft, var(--color-line)); border-radius: var(--v15-r-lg, 16px); }
+:root[data-v15='on'][data-design] .f12-card { border-radius: var(--v15-r-xl, 22px); min-height: min(340px, 38dvh); }
+:root[data-v15='on'][data-design] .f12-q { font-family: var(--v15-serif, 'Newsreader', Georgia, serif); font-size: 1.25rem; line-height: 1.5; }
+:root[data-v15='on'][data-design] .f12-field { border-radius: 999px; background: var(--color-field, var(--color-surface)); }

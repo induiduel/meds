@@ -35,13 +35,15 @@ export const PDF_GORUNUM = [
   { id: 'iliski', ad: 'Kelime ilişki kurucusu', acik: 'Kelimeler ve metinler arasındaki ilişki oklarla gösterilir' },
   { id: 'metin', ad: 'Metin vurgusu', acik: 'Okunan satır ve kelime PDF üstünde takip edilir' },
   { id: 'not', ad: 'Öğrenci/hoca vurgusu', acik: 'Öğrenci notu ve hoca anlatımından gelen önemli yerler işaretlenir' },
+  { id: 'cikmis', ad: 'Çıkmış soru işaretleri', acik: 'Doğrulanmış çıkmışı olan slaytta çip görünür; dokununca soru açılır' },
 ] as const;
 export type PdfGorunumId = typeof PDF_GORUNUM[number]['id'];
 const gorunumT = Object.fromEntries(PDF_GORUNUM.map((g) => [g.id, tercih(`cd-pdf-${g.id}`, true)])) as Record<PdfGorunumId, ReturnType<typeof tercih>>;
 export function usePdfGorunum(): Record<PdfGorunumId, boolean> {
-  const r = gorunumT.resim.use(), t = gorunumT.tablo.use(), i = gorunumT.iliski.use(), m = gorunumT.metin.use(), n = gorunumT.not.use();
-  return useMemo(() => ({ resim: r, tablo: t, iliski: i, metin: m, not: n }), [r, t, i, m, n]);
+  const r = gorunumT.resim.use(), t = gorunumT.tablo.use(), i = gorunumT.iliski.use(), m = gorunumT.metin.use(), n = gorunumT.not.use(), c = gorunumT.cikmis.use();
+  return useMemo(() => ({ resim: r, tablo: t, iliski: i, metin: m, not: n, cikmis: c }), [r, t, i, m, n, c]);
 }
+export const pdfGorunumAyarla = (id: PdfGorunumId, v: boolean) => gorunumT[id].ayarla(v);
 
 export const TERIM_TUR: Record<CdTerim['k'], string> = {
   terim: 'Tıbbi terim', latince: 'Latince / yabancı', karisan: 'Karıştırılabilir', kisaltma: 'Kısaltma',
