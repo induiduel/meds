@@ -5,7 +5,7 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import {
   AlertTriangle, BookOpen, Check, ChevronDown, CloudDownload, CloudOff, Database, Download, Headphones, HardDrive, Loader2,
-  MessageCircleQuestion, Pause, Play, RefreshCw, Search, Smartphone, Star, Trash2, Wifi, X, FileText, VolumeX, Sparkles,
+  GraduationCap, MessageCircleQuestion, Pause, Play, RefreshCw, Search, Smartphone, Star, Trash2, Wifi, X, FileText, VolumeX, Sparkles,
 } from 'lucide-react';
 import {
   agTuru, ayarYaz, cevrimdisiBaslat, cevrimdisiModuAc, cevrimdisiModuKapat, duraklat, guncellemeler, katalogYenile, kuyrugaEkle,
@@ -15,11 +15,13 @@ import {
 import { useNetState } from '../../services/net';
 import EsitlemeKarti from './EsitlemeKarti';
 const MedspakOkuyucu = React.lazy(() => import('./MedspakOkuyucu'));
+const DersBirimleriPano = React.lazy(() => import('./DersBirimleriPano'));
 import { sayfaPaketleri } from '../../services/cevrimdisi/sayfaPaketleri';
 import '../../styles/cevrimdisi.css';
 
-type Sekme = 'sesli' | 'cozucu' | 'onem' | 'alt' | 'ogren' | 'veri';
+type Sekme = 'dersler' | 'sesli' | 'cozucu' | 'onem' | 'alt' | 'ogren' | 'veri';
 const SEKMELER: { id: Sekme; ad: string; kisa: string; ikon: React.ComponentType<any>; moduller: Modul[] }[] = [
+  { id: 'dersler', ad: 'Dersler (hepsi bir arada)', kisa: 'Dersler', ikon: GraduationCap, moduller: ['sesli', 'medspak', 'ogren', 'cozucu', 'onem', 'alt'] },
   { id: 'sesli', ad: 'Sesli dersler', kisa: 'Sesli', ikon: Headphones, moduller: ['sesli'] },
   { id: 'cozucu', ad: 'Soru çözücü', kisa: 'Çözücü', ikon: MessageCircleQuestion, moduller: ['cozucu'] },
   { id: 'onem', ad: 'En önemliler', kisa: 'Önemli', ikon: Star, moduller: ['onem'] },
@@ -129,12 +131,12 @@ function HizliKurulum({ katalog, kapat }: { katalog: Paket[]; kapat?: () => void
     return [...m.entries()].sort((a, b) => b[1] - a[1]).map(([g]) => g);
   }, [katalog]);
   const [grupSec, setGrupSec] = useState<string[]>([]);
-  const [modulSec, setModulSec] = useState<Modul[]>(['sesli', 'cozucu', 'onem', 'db']);
+  const [modulSec, setModulSec] = useState<Modul[]>(['sesli', 'medspak', 'ogren', 'cozucu', 'onem', 'db']);
   const ayar = useCevrimdisi().ayar;
   const [secim, setSecim] = useState<Secim>({ ses: ayar.ses, pdf: ayar.pdf });
   useEffect(() => { if (!grupSec.length && gruplar.length) setGrupSec(gruplar.slice(0, 1)); }, [gruplar]); // eslint-disable-line react-hooks/exhaustive-deps
   const MODS: { id: Modul; ad: string }[] = [
-    { id: 'sesli', ad: 'Sesli dersler' }, { id: 'cozucu', ad: 'Soru çözücü' }, { id: 'onem', ad: 'En önemliler + sesli asistan' },
+    { id: 'sesli', ad: 'Sesli dersler' }, { id: 'medspak', ad: 'Ders paketi (.medspak)' }, { id: 'cozucu', ad: 'Soru çözücü' }, { id: 'onem', ad: 'En önemliler + sesli asistan' },
     { id: 'alt', ad: 'Alternatif çözücü' }, { id: 'ogren', ad: 'Etkileşimli dersler' }, { id: 'db', ad: 'Çıkmış sorular ve havuz' },
     { id: 'veri', ad: 'Sözlük, özetler, notlar' },
   ];
@@ -195,7 +197,7 @@ export default function CevrimdisiView() {
   const S = useCevrimdisi();
   const dep = useDepolama();
   const ag = useNetState();
-  const [sekme, setSekme] = useState<Sekme>('sesli');
+  const [sekme, setSekme] = useState<Sekme>('dersler');
   const [ara, setAra] = useState('');
   const [suzgec, setSuzgec] = useState<Suzgec>('tum');
   const [kapali, setKapali] = useState<Record<string, boolean>>({});
@@ -398,7 +400,9 @@ export default function CevrimdisiView() {
         })}
       </nav>
 
-      <div className="cv-arac">
+      {sekme === 'dersler' && <React.Suspense fallback={<div className="cv-bos"><Loader2 className="cv-don" aria-hidden="true" /> Dersler yükleniyor…</div>}><DersBirimleriPano /></React.Suspense>}
+
+      {sekme !== 'dersler' && <div className="cv-arac">
         <label className="cv-ara">
           <Search aria-hidden="true" />
           <input type="search" value={ara} onChange={(e) => setAra(e.target.value)} placeholder="Ders ara" aria-label="Ders ara" />
@@ -409,9 +413,9 @@ export default function CevrimdisiView() {
             <button key={s} type="button" className={`cv-cip${suzgec === s ? ' is-on' : ''}`} aria-pressed={suzgec === s} onClick={() => setSuzgec(s)}>{SUZGEC_AD[s]}</button>
           ))}
         </div>
-      </div>
+      </div>}
 
-      {!S.hazir || (!S.katalog.length && !S.katalogHata) ? (
+      {sekme !== 'dersler' && (!S.hazir || (!S.katalog.length && !S.katalogHata) ? (
         <div className="cv-bos"><Loader2 className="cv-don" aria-hidden="true" /> Paketler yükleniyor…</div>
       ) : !gruplu.length ? (
         <div className="cv-bos">Bu süzgeçte paket yok.</div>
@@ -461,7 +465,7 @@ export default function CevrimdisiView() {
             </section>
           );
         })
-      )}
+      ))}
 
       {cihazSay > 0 && <AlanKarti />}
 
@@ -497,7 +501,7 @@ function GrupSil({ ids, etiket = 'Sil' }: { ids: string[]; etiket?: string }) {
 }
 
 const MODUL_AD: Record<Modul, string> = {
-  uygulama: 'Uygulama dosyaları', sesli: 'Sesli dersler', cozucu: 'Soru çözücü', onem: 'En önemliler', alt: 'Alternatif çözücü',
+  uygulama: 'Uygulama dosyaları', sesli: 'Sesli dersler', medspak: 'Ders paketleri (.medspak)', cozucu: 'Soru çözücü', onem: 'En önemliler', alt: 'Alternatif çözücü',
   ogren: 'Etkileşimli dersler', veri: 'Başvuru verileri', db: 'Çıkmış sorular ve havuz',
 };
 

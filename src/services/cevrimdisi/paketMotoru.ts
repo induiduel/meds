@@ -26,7 +26,7 @@ const KUYRUK_KEY = 'medsoru_cevrimdisi_kuyruk_v1';
 const SECIM_KEY = 'medsoru_cevrimdisi_secim_v1';
 const KATALOG_KEY = '/__cevrimdisi/katalog';
 
-export type Modul = 'uygulama' | 'sesli' | 'cozucu' | 'onem' | 'alt' | 'ogren' | 'veri' | 'db';
+export type Modul = 'uygulama' | 'sesli' | 'medspak' | 'cozucu' | 'onem' | 'alt' | 'ogren' | 'veri' | 'db';
 export interface PDosya { u: string; v?: string; b: number }
 export interface Paket {
   id: string;
@@ -46,6 +46,9 @@ export interface Paket {
   bagimli?: string[];
   /** İsteğe bağlı öneri: aynı dersin öteki modüllerdeki paketleri */
   ilgili?: string[];
+  /** Yalnız istemci kataloğundaki sesli ders / .medspak paketleri: branş içi ders numarası ve bağlı Öğren destesi (ders birimi eşlemesi) */
+  dersNo?: number;
+  desteId?: string;
 }
 /** Paket başına içerik seçimi: sesler ve PDF'ler inecek mi */
 export interface Secim { ses: boolean; pdf: boolean }
@@ -235,7 +238,7 @@ export async function kayitSilDisaridan(id: string) {
 }
 
 /* ------------------------------------------------------------------ katalog ------------------------------------------------------------------ */
-type Ekler = { sesli: () => Promise<Paket[]>; db: () => Promise<Paket[]> };
+type Ekler = { sesli: () => Promise<Paket[]>; db: () => Promise<Paket[]>; medspak?: () => Promise<Paket[]> };
 let ekler: Ekler | null = null;
 /** Sesli ders ve veritabanı uyarlayıcıları (uyarlayicilar.ts) kendini kaydeder */
 export function ekKaydet(e: Ekler) { ekler = e; }
@@ -269,7 +272,7 @@ export function katalogYenile(zorla = false): Promise<void> {
       if (eski) sunucu = (await eski.json()).paketler;
       if (!sunucu) guncelle({ katalogHata: navigator.onLine ? 'Paket listesi alınamadı.' : 'Paket listesi için bir kez internete bağlanman gerekiyor.' });
     }
-    const ek = ekler ? (await Promise.all([ekler.sesli().catch(() => []), ekler.db().catch(() => [])])).flat() : [];
+    const ek = ekler ? (await Promise.all([ekler.sesli().catch(() => []), ekler.db().catch(() => []), ekler.medspak?.().catch(() => []) ?? []])).flat() : [];
     const hepsi = [...(sunucu || []), ...ek].map((p) => ({ ...p, grup: grupAdi(p.grup) }));
     guncelle({ katalog: hepsi, katalogAt: Date.now() });
   })().finally(() => { katalogP = null; });
@@ -312,7 +315,7 @@ function guncelMi(p: Paket, k: Kayit): boolean {
 
 /* ------------------------------------------------------------------ özel türler ------------------------------------------------------------------ */
 export interface OzelTur {
-  indir(id: string, ilerle: (alinan: number, toplam: number) => void, signal: AbortSignal): Promise<{ surum: string; bayt: number }>;
+  indir(id: string, ilerle: (alinan: number, toplam: number) => void, signal: AbortSignal): Promise<{ surum: string; bayt: number; dosyalar?: PDosya[] }>;
   sil(id: string): Promise<void>;
 }
 const ozel: Partial<Record<Modul, OzelTur>> = {};
@@ -415,7 +418,7 @@ async function paketIndir(id: string, signal: AbortSignal) {
   const oz = ozel[m];
   if (oz) {
     const r = await oz.indir(id, ilerle, signal);
-    await kayitYaz({ id, surum: r.surum || p?.surum || '', bayt: r.bayt, dosyalar: [], at: Date.now(), baslik: p?.baslik || id, modul: m, grup: p?.grup || '' });
+    await kayitYaz({ id, surum: r.surum || p?.surum || '', bayt: r.bayt, dosyalar: r.dosyalar || [], at: Date.now(), baslik: p?.baslik || id, modul: m, grup: p?.grup || '' });
     return;
   }
 
@@ -658,6 +661,95 @@ export async function depolamaYenile() {
   depSubs.forEach((f) => f());
 }
 export const useDepolama = () => useSyncExternalStore((f) => { depSubs.add(f); return () => { depSubs.delete(f); }; }, () => depolama, () => null);
+
+/* ------------------------------------------------------------------ denetim · onarım ------------------------------------------------------------------ */
+export interface DenetimSonuc { id: string; ad: string; ok: boolean; ayrinti: string; eksik: number; toplam: number }
+/** Medspak önbellek adresi (paket dosyası olarak defterde de bu adresle durur) */
+export const medspakAdresi = (key: string) => `/__medspak/${encodeURIComponent(key)}`;
+
+/**
+ * Cihazdaki bir paketin gerçekten çalışır durumda olduğunu sınar: defterdeki HER dosya önbellekte var mı, boyutu tutuyor mu,
+ * JSON ise ayrıştırılabiliyor mu. Sesli ders kendi önbelleğinden (ses + metin + zamanlama), .medspak paketi dosyayı sql.js ile
+ * açıp cümle sayısını okuyarak sınanır (dosya bozuksa burada yakalanır). Hiçbir ağ isteği yapmaz: internetsiz de çalışır.
+ */
+export async function paketiDenetle(id: string): Promise<DenetimSonuc> {
+  const p = S.katalog.find((x) => x.id === id);
+  const k = S.kayitlar[id];
+  const ad = p?.baslik || k?.baslik || id;
+  const sonuc = (ok: boolean, ayrinti: string, eksik = 0, toplam = 0): DenetimSonuc => ({ id, ad, ok, ayrinti, eksik, toplam });
+  if (!k || k.yarim) return sonuc(false, 'Cihazda tam değil.');
+  try {
+    const m = k.modul;
+    if (m === 'sesli') {
+      const mod = await import('../../components/canliDers/canliDersCevrimdisi');
+      const kay = await import('../../components/canliDers/canliDersCevrimdisiKayit');
+      const key = id.slice('sesli:'.length);
+      const kayit = kay.cdCevrimdisiKayitlari()[key];
+      if (!kayit) return sonuc(false, 'Ses kaydı defterde yok.');
+      const cache = await caches.open(mod.CD_OFFLINE_CACHE);
+      const anahtarlar = (await cache.keys()).map((r) => r.url);
+      const sesler = kay.cdKayitSesleri(kayit);
+      let eksik = 0;
+      for (const s of sesler) {
+        if (!anahtarlar.some((u) => u.includes(`/ses/${encodeURIComponent(key)}/${encodeURIComponent(s.vid)}.mp3`))) eksik++;
+      }
+      const detay = await mod.cdYerelDetay(key).catch(() => null);
+      if (!detay) eksik++;
+      return eksik ? sonuc(false, `${eksik} parça eksik (ses ya da konuşma metni).`, eksik, sesler.length + 1)
+        : sonuc(true, `${sesler.length} ses + konuşma metni cihazda.`, 0, sesler.length + 1);
+    }
+    if (m === 'db') {
+      const { offlineDatabaseService } = await import('../offlineDatabaseService');
+      const st = await offlineDatabaseService.loadStats().catch(() => null);
+      return st && st.totalItems > 0 ? sonuc(true, `${st.totalItems.toLocaleString('tr-TR')} kayıt cihazda.`, 0, 1) : sonuc(false, 'Veritabanı boş görünüyor.', 1, 1);
+    }
+    const cache = await caches.open(PAKET_CACHE);
+    let eksik = 0;
+    let bozuk = 0;
+    for (const d of k.dosyalar) {
+      const r = await cache.match(anahtar(d));
+      if (!r) { eksik++; continue; }
+      const beklenen = Number(r.headers.get('Content-Length') || 0);
+      if (d.b > 0 && d.b < 50_000_000 && beklenen && Math.abs(beklenen - d.b) > Math.max(2048, d.b * 0.02) && !d.u.startsWith('/index')) { bozuk++; continue; }
+      if (/\.json($|\?)/i.test(d.u) || (/^\/api\//.test(d.u) && dosyaTuru(d.u) === 'veri')) {
+        try { await r.clone().json(); } catch { bozuk++; }
+      }
+    }
+    if (m === 'medspak') {
+      if (eksik) return sonuc(false, 'Paket dosyası cihazda yok.', eksik, k.dosyalar.length);
+      const dosya = await medspakCihazdan(id.slice('medspak:'.length));
+      if (!dosya) return sonuc(false, 'Paket dosyası okunamadı.', 1, 1);
+      const { medspakAc } = await import('../medspakOku');
+      const ders = await medspakAc(dosya);
+      ders.ses && URL.revokeObjectURL(ders.ses.url);
+      ders.pdfler.forEach((x) => URL.revokeObjectURL(x.url));
+      return ders.cumleler.length ? sonuc(true, `Açıldı: ${ders.cumleler.length} cümle, ${ders.slaytSayisi} slayt${ders.ses ? ', ses' : ''}${ders.pdfler.length ? ', PDF' : ''}.`, 0, 1)
+        : sonuc(false, 'Paket açıldı ama içinde ders metni yok.', 0, 1);
+    }
+    if (eksik || bozuk) return sonuc(false, `${eksik ? `${eksik} dosya eksik` : ''}${eksik && bozuk ? ', ' : ''}${bozuk ? `${bozuk} dosya bozuk` : ''}.`, eksik + bozuk, k.dosyalar.length);
+    return sonuc(true, `${k.dosyalar.length} dosyanın hepsi cihazda ve sağlam.`, 0, k.dosyalar.length);
+  } catch (e: any) {
+    return sonuc(false, `Sınanamadı: ${e?.message || e}`);
+  }
+}
+
+/** Cihazdaki .medspak dosyasını (internetsiz) Dosya olarak verir */
+export async function medspakCihazdan(key: string): Promise<File | null> {
+  if (!destek()) return null;
+  const r = await (await caches.open(PAKET_CACHE)).match(new URL(medspakAdresi(key), location.href).href);
+  if (!r) return null;
+  return new File([await r.blob()], `${key}.medspak`, { type: 'application/vnd.sqlite3' });
+}
+
+/** Bozuk / eksik paketi onarır: defterde yarım işaretlenir, yalnız eksik dosyalar yeniden iner */
+export async function paketOnar(ids: string[]) {
+  for (const id of ids) {
+    const k = S.kayitlar[id];
+    if (k && !k.yarim && !ozel[k.modul]) await kayitYaz({ ...k, yarim: true });
+    else if (k && ozel[k.modul]) await kayitYaz(null, id);
+  }
+  kuyrugaEkle(ids);
+}
 
 /* ------------------------------------------------------------------ doğrulama ------------------------------------------------------------------ */
 /** Kullanıcı site verisini temizlediyse: önbellekte olmayan paketler defterden düşer, yarım paketler kuyruğa döner */

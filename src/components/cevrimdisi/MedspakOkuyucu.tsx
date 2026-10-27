@@ -36,6 +36,31 @@ export default function MedspakOkuyucu() {
     }
   };
 
+  // Ders listesindeki "Paketi aç": cihazdaki (çevrimdışı indirilmiş) .medspak, internetsiz açılır
+  const kok = useRef<HTMLElement>(null);
+  useEffect(() => {
+    const dinle = (e: Event) => {
+      const key = String((e as CustomEvent).detail || '');
+      if (!key) return;
+      setHata(''); setYukleniyor(true);
+      void (async () => {
+        try {
+          const { medspakCihazdan } = await import('../../services/cevrimdisi/paketMotoru');
+          const f = await medspakCihazdan(key);
+          if (!f) throw new Error('Bu ders paketi cihazda yok.');
+          const { medspakAc } = await import('../../services/medspakOku');
+          setDers(await medspakAc(f));
+          setAn(0);
+          kok.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        } catch (er: any) {
+          setHata(er?.message || 'Paket açılamadı.');
+        } finally { setYukleniyor(false); }
+      })();
+    };
+    window.addEventListener('cv-medspak-ac', dinle);
+    return () => window.removeEventListener('cv-medspak-ac', dinle);
+  }, []);
+
   const etkin = useMemo(() => {
     const z = ders?.ses?.zamanlama || [];
     return z.findIndex((x) => an >= x[0] && an < x[1]);
@@ -52,7 +77,7 @@ export default function MedspakOkuyucu() {
     && !document.createElement('audio').canPlayType('audio/ogg; codecs=opus');
 
   return (
-    <section className="cv-kart" aria-labelledby="cv-mp-b">
+    <section className="cv-kart" aria-labelledby="cv-mp-b" ref={kok}>
       <div className="cv-kart-bas">
         <h2 id="cv-mp-b">Ders paketi aç (.medspak)</h2>
         {ders && (

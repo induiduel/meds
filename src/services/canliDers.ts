@@ -206,6 +206,16 @@ function medspakYoluBul(key: string): string | null {
   return null;
 }
 
+/** Paketin boyutu + sürümü (mtime): çevrimdışı merkezi bununla "güncelleme var" kararını verir */
+function medspakBilgi(key: string): { medspakBayt?: number; medspakSurum?: string } {
+  const y = medspakYoluBul(key);
+  if (!y) return {};
+  try {
+    const st = fs.statSync(y);
+    return { medspakBayt: st.size, medspakSurum: `${Math.round(st.mtimeMs)}-${st.size}` };
+  } catch { return {}; }
+}
+
 export function registerCanliDersRoutes(app: Express) {
   app.get('/api/canli-ders', (req: Request, res: Response) => {
     const donem = String(req.query.donem || '2026-2027');
@@ -240,6 +250,7 @@ export function registerCanliDersRoutes(app: Express) {
           pdf: fs.existsSync(P.hizalama(d.key)),
           gunlukVar: fs.existsSync(P.gunluk(d.key)),
           medspakVar: Boolean(medspakYoluBul(d.key)),
+          ...medspakBilgi(d.key),
         };
       })
       .filter(Boolean);

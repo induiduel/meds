@@ -1,12 +1,17 @@
 {
  "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
- "onem": 433,
- "baslik": "Sesli derste PDF sayfa teması",
+ "onem": 435,
+ "baslik": "Çevrimdışı: dersler tek yerde, test ve onarım",
  "maddeler": [
-  "Sesli ders PDF araç çubuğuna tema düğmesi eklendi: Özgün, Temiz, Sepya, Gece"
+  "Çevrimdışı ekranında yeni \"Dersler\" sekmesi: bir dersin sesli dersi, ders paketi (.medspak), etkileşimli dersi, soru çözücüsü ve en önemlileri tek düğmeyle iner",
+  "Arama, branş ve durum süzgeciyle dersleri kaydırmadan bulabilirsin",
+  "\"Test et\" indirdiğin dersin internetsiz çalışıp çalışmadığını denetler, sorun varsa \"Onar\" eksikleri yeniden indirir",
+  ".medspak ders paketleri artık çevrimdışı yönetimde: güncellemesi izlenir, cihazdan açılır"
  ],
  "eklenen": [
-  "Sesli derste sayfa teması düğmesi"
+  "Çevrimdışı Dersler sekmesi",
+  "Ders paketi (.medspak) çevrimdışı indirme",
+  "Ders testi ve onarım"
  ],
  "degisen": [],
  "duzeltilen": [],

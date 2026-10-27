@@ -42,6 +42,8 @@ export interface CdListeDers {
   desteId?: string;
   gunlukVar?: boolean;
   medspakVar?: boolean;
+  medspakBayt?: number;
+  medspakSurum?: string;
   /** Branş içi numara (Tıbbi Patoloji 16); eski sunucu/çevrimdışı kayıtta kurul sırası olabilir */
   no: string | number;
   /** Ders (branş) adı: "Tıbbi Patoloji"; kurulNo: kurul genelindeki sıra */
@@ -104,6 +106,8 @@ export interface CdDetay {
   desteId?: string;
   gunlukVar?: boolean;
   medspakVar?: boolean;
+  medspakBayt?: number;
+  medspakSurum?: string;
   no: string | number;
   brans?: string;
   hoca?: string;

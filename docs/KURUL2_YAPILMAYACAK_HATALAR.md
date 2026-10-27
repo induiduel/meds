@@ -887,3 +887,9 @@ Her maddede: belirti · kök neden · Kurul 2 kuralı · kapı durumu. Kanıtlar
 - **Belirti:** "Asklepios Asası" kutlama efekti çalışmıyor; asa/yılan hiç görünmüyordu.
 - **Kök neden:** `KutlamaKatmani.tsx` canvas'ı kartın ARKASINDA ve asayı tam merkeze (`cx`) çiziyordu; opak 380 px kart (`.bs-k-kart`) ortayı tamamen örtüyordu. Işıltılar da merkezden doğup kartın altında kalıyordu.
 - **Kural:** ortada çizilen efekt kartın altında kalmaz; kartı örtmeyen konuma (iki yan) çizilir ve canvas kart üstüne (`is-ust-katman`) alınır. Yeni kutlama efektini canlı kartla birlikte gör.
+
+### H100 — Koyu temada "beyaz" yazılar kayboluyordu; spinner/iskelet renkleri temaya uymuyordu (2026-10-27)
+- **Belirti:** Koyu temada renkli düğmelerdeki, koyu başlık şeritlerindeki ve perde üstündeki "beyaz" yazılar okunmuyordu; yükleme iskeleti her temada sabit maviydi; bazı ekranlarda doğru şık/zor etiketi renksizdi.
+- **Kök neden:** Tailwind `white` rengi `--color-white` = palet **yüzeyine** bağlı; koyu temada `text-white` koyu lacivert çıkıyordu. `.ms-shimmer` sabit `rgba(30,79,216,…)`; `--color-good`, `--color-danger`, `--color-text(-sub)`, `--color-bg/border/text-dim` hiçbir yerde tanımlı değildi.
+- **Çözüm:** `index.css`: `.text-white` → `var(--color-on-solid)` (katmansız kural utilities katmanını ezer), `.bg-ink-surface .text-white` → `--color-canvas`, koyu perde için `.on-perde`; iskelet `color-mix(accent)`; tanımsız değişkenler gerçek tokenlara bağlandı. Tam döküm `docs/V15_TEMA_DENETIMI.md`.
+- **Kural:** Yazı rengi için `text-white` değil `text-on-accent`/`text-on-solid`; yeni CSS değişkeni yalnız `palettes.ts` TOKEN_KEYS ya da v15 tokens.css içindekilerden; sabit renk yalnız bilinçli süs (çerçeve, kâğıt üstü çizim) için.
