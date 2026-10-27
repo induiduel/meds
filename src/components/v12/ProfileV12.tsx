@@ -27,6 +27,7 @@ import {
   Trash2,
   UserRound,
   X,
+  GraduationCap,
 } from 'lucide-react';
 import { AppUser, updateUserProfileData, setOrUpdateAccountPassword, sendPasswordReset } from '../../services/auth';
 import { pwaService } from '../../services/pwaService';
@@ -84,6 +85,8 @@ import { WhatsAppDailyDigestRow } from '../settings/WhatsAppDailyDigestRow';
 import { ProgressResetRow } from '../settings/ProgressResetRow';
 import { erisimYaz, useErisim } from '../../utils/erisilebilirlik';
 import { useV15Baslik } from '../v15/baslik';
+import { useProfil } from '../../services/profilKurulum';
+import { profilKurulumAc } from '../v15/ProfilKurulumV15';
 import '../../styles/v15/profil.css';
 import { getStatsAttempts } from '../../services/progressReset';
 import { startWelcomeTour } from '../onboarding/tourState';
@@ -405,6 +408,7 @@ const CONTRIB_SEGS: { id: ContribKind; label: string; note: string; empty: strin
 
 export const ProfileV12: React.FC<ProfileV12Props> = ({ currentUser, isAdmin, questions, onUpdateUser, onOpenAuth, onLogout, onOpenAdmin, onOpenOffline }) => {
   const v15 = useAppearance().v15;
+  const profil = useProfil();
   const [view, setView0] = useState<View>(() => {
     const h = typeof window !== 'undefined' ? window.location.hash.replace('#', '') : '';
     if (v15 && !h) return 'menu';
@@ -501,6 +505,7 @@ export const ProfileV12: React.FC<ProfileV12Props> = ({ currentUser, isAdmin, qu
                 <b>{shownName}</b>
                 <span>{currentUser ? currentUser.email : 'Giriş yapmadın'}</span>
                 {currentUser?.studentNumber && <small>Öğrenci no {currentUser.studentNumber}</small>}
+                {profil.universite && <small>{[profil.universite, profil.sinif ? `${profil.sinif}. sınıf` : '', profil.kurul ? `Kurul ${profil.kurul}` : ''].filter(Boolean).join(' · ')}</small>}
               </div>
               {currentUser
                 ? <button type="button" className="pf15-btn" onClick={() => { setView('hesap'); setFocusName(true); }}><Pencil aria-hidden />Düzenle</button>
@@ -511,6 +516,7 @@ export const ProfileV12: React.FC<ProfileV12Props> = ({ currentUser, isAdmin, qu
             <ul className="pf15-liste v15-card">
               {satir('genel', BarChart3, 'Genel bakış', 'Sayıların, son etkinlik, devam eden dersler', () => setView('genel'), '#0A84FF')}
               {satir('katki', MessageSquare, 'Katkılarım', 'Eklediğin sorular, parçalar, şıklar, yorumlar', () => setView('katki'), '#30B0C7')}
+              {currentUser && satir('okul', GraduationCap, 'Okul ve hedef', profil.tamam ? [profil.universite, profil.hedef ? `${profil.hedef.ad} hedef` : ''].filter(Boolean).join(' · ') : 'Üniversite, sınıf, kurul, günlük hedef', profilKurulumAc, '#5E5CE6')}
               {satir('kayit', Bookmark, 'Kaydettiklerim', 'Kaydettiğin sorular ve kartlar', () => setView('kayit'), '#FF9F0A')}
               {satir('basarim', ThumbsUp, 'Başarımlar ve ATP', 'Hedefler, rozetler, kıdem', sayfa('basarimlar'), '#34C759')}
             </ul>

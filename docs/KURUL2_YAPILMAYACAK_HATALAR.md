@@ -918,3 +918,14 @@ Her maddede: belirti · kök neden · Kurul 2 kuralı · kapı durumu. Kanıtlar
 - **Kök neden:** (1) `sinavPlani.ts` sesli dersi `CD_SPOT_BRANS` ile eşliyordu; bu tablo yalnız Kurul 1 branşlarını bilir, K2 dersleri (`k2noroloji` …) `!b` diye atlanıyordu. (2) İçeriği henüz olmayan branşta (psikiyatri, aile, ftr…) ders listesi boş olduğundan `bransP` = 0 çıkıyor, tüm sorular yanlış sayılıp baraj cezası (−n/2) yazılıyordu.
 - **Çözüm:** K2+ için branş `k<kurul><slug>` olarak türetilir ve ders kurulu eşleşmelidir; içeriksiz branşın olasılığı çalışılmamış taban (0,30) alınır.
 - **Kural:** Kurul 1 sabit tablolarına dayanan eşleme Kurul 2+ için kurul önekli türetilmeli; içeriği olmayan branş 0 olasılıkla değil taban olasılıkla modellenmeli.
+
+## H103 · Çıkmış adayı farklı dönem/ders sınavından geliyor; ham anahtar bankadaki cevapla çelişiyor; bankada olmayan çıkmışlar (2026-10-27, k2-05 Nörolojik Muayene)
+- **Belirti:** Bankada "Nörolojik Muayene / Kraniyal Sinir Muayenesi" konulu 32 kayıt vardı; ham belgelerde yeri açıldığında: laterale bakış (abdusens) sorusu Dönem 2 Anatomi sınavından (`tüm sorular.pdf` s.544), Broca/Brodmann 44 sorusunun ham anahtarı "İdeomotor apraksi" (banka "Broca"), dil sapması sorusunun üç varyantında anahtarlar çelişkili. Buna karşılık dersin slayt bilgisini birebir ölçen sorular (kornea refleksi V–VII, Babinski patolojik, kas gücü 3/5 profili; `2.Kurul-2021.pdf` s.18, s.22) bankada hiç yoktu.
+- **Kök neden:** Banka konu etiketi başka kaynaktan (Dönem 2 anatomi kitapçığı, FTR bölümü, türetilmiş `-rNN` kayıt) gelen soruyu bu derse atamış; etiket ham belgenin dönemini/dersini/anahtarını doğrulamıyor. Öte yandan banka, ham Kurul 2 sınavındaki tüm soruları taşımıyor.
+- **Kural:** Çıkmış eşlemesi yalnız (a) ham belgenin DÖNEMİ ve DERSİ bu ders olan, (b) basılı anahtarı banka cevabıyla uyuşan, (c) slayt kanıtı birebir olan sorularla yapılır. Ham belgede olup bankada olmayan soru eşlenmez, `cikmis_taslak.json › bankada_yok_ham_belgede_var` listesine yazılıp bankaya ekleme kararı ana oturuma bırakılır. `-rNN` kayıt ham belgede doğrulansa bile karar ana oturumundur.
+
+## H102 · Tasarımdaki kayıt adımları (üniversite, sınıf, kurul, hedef) koda geçirilmemişti (2026-10-27)
+- **Belirti:** Kullanıcının v15 tasarımında çizdiği giriş sonrası bilgi toplama akışı sitede yoktu.
+- **Kök neden:** Ekran denetimi I07–I10'u "DOĞRULANMADI" diye bıraktı; iş yalnız kullanıcının sıraladığı öncelik listesinden yürüdü, denetim tablosundaki DOĞRULANMADI/KISMİ satırları hiçbir zaman iş listesine dönüştürülmedi.
+- **Çözüm:** ProfilKurulumV15 (I07–I11) + Profil › Okul ve hedef; denetim belgesine "Değerlendirilmemiş ekranların değerlendirmesi" tablosu (her satıra karar).
+- **Kural:** Tasarım geçişinde "DOĞRULANMADI" durumu iş sonu kabul edilmez; her ekran KURULDU / SIRADA / VAR / BİLİNÇLİ / altyapı yok kararından birini alır ve tur sonunda tablo güncellenir.

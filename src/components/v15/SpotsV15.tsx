@@ -1,5 +1,6 @@
 import React, { startTransition, useCallback, useEffect, useMemo, useRef, useState } from 'react';
-import { Check, ChevronDown, CopyCheck, CopyPlus, Eye, Search, X } from 'lucide-react';
+import { Check, ChevronDown, CopyCheck, CopyPlus, Eye, Headphones, Search, Star, X } from 'lucide-react';
+import { linkClick, navigateTo, pathFor } from '../../router';
 import { useStorageRefresh } from '../../hooks/useStorageRefresh';
 import { getFavoriteCards, toggleFavoriteCard } from '../../services/studyStore';
 import { kaydetSpotZiyaret } from '../../services/spotCozucuIstatistik';
@@ -18,8 +19,13 @@ import '../../styles/v15/spot.css';
  */
 const SAYFA = 30;
 const KART_ONEK = 'spot:';
-type Durum = 'hepsi' | 'yuksek' | 'ogrenilmemis';
-const DURUM: [Durum, string][] = [['hepsi', 'Tümü'], ['yuksek', 'Kesin sorulur'], ['ogrenilmemis', 'Öğrenilmemiş']];
+type Durum = 'hepsi' | 'yuksek' | 'ogrenilmemis' | 'yildizli';
+const DURUM: [Durum, string][] = [['hepsi', 'Tümü'], ['yuksek', 'Kesin sorulur'], ['ogrenilmemis', 'Öğrenilmemiş'], ['yildizli', 'Yıldızlı']];
+/** Yıldızlı spotlar (userKvSync ile hesaba eşitlenir) */
+const YILDIZ_KEY = 'medsoru_spot_yildiz_v1';
+const yildizOku = (): Set<string> => { try { return new Set(JSON.parse(localStorage.getItem(YILDIZ_KEY) || '[]')); } catch { return new Set(); } };
+/** Spotun dersteki yeri: sesli ders, spotun kaynak cümlesine en yakın paragrafa (?ara=) açılır */
+const dersteYol = (dersId: string, s: Spot) => `${pathFor('canli_ders', dersId)}${s.kaynak?.[0]?.alinti ? `?ara=${encodeURIComponent(s.kaynak[0].alinti.slice(0, 120))}` : ''}`;
 const ONEM: Record<number, [string, string]> = { 3: ['Kesin sorulur', 'is-w'], 2: ['Sık sorulur', 'is-a'], 1: ['Destekleyici', ''] };
 const duz = (s?: string) => String(s || '').replace(/\*\*/g, '');
 const tr = (n: number) => n.toLocaleString('tr-TR');
@@ -37,6 +43,9 @@ export default function SpotsV15() {
   const [gorulen, setGorulen] = useState<Set<string>>(() => new Set());
   const [limit, setLimit] = useState(SAYFA);
   const [ogrenilen, setOgrenilen] = useState<Set<string>>(okuOgrenilen);
+  const [yildiz, setYildiz] = useState<Set<string>>(yildizOku);
+  useStorageRefresh([YILDIZ_KEY], () => setYildiz(yildizOku()));
+  const yildizla = (id: string) => setYildiz((p) => { const n = new Set(p); if (n.has(id)) n.delete(id); else n.add(id); try { localStorage.setItem(YILDIZ_KEY, JSON.stringify([...n])); } catch { /* dolu */ } return n; });
   useStorageRefresh([ANAHTAR], () => setOgrenilen(okuOgrenilen()));
   const [kartta, setKartta] = useState<Set<string>>(() => new Set(getFavoriteCards().map((c) => c.id)));
   useStorageRefresh(['medsoru_flashcard_favorites_v1'], () => setKartta(new Set(getFavoriteCards().map((c) => c.id))));
@@ -71,10 +80,11 @@ export default function SpotsV15() {
       if (disiplin && dersMap.get(s.ders)?.disiplin !== disiplin) return false;
       if (durum === 'yuksek' && s.onem < 3) return false;
       if (durum === 'ogrenilmemis' && ogrenilen.has(s.id)) return false;
+      if (durum === 'yildizli' && !yildiz.has(s.id)) return false;
       if (k.length) { const t = metin.get(s.id) || ''; if (!k.every((w) => t.includes(w))) return false; }
       return true;
     });
-  }, [veri, disiplin, durum, ogrenilen, q, metin, dersMap]);
+  }, [veri, disiplin, durum, ogrenilen, yildiz, q, metin, dersMap]);
 
   useEffect(() => { setLimit(SAYFA); alan.current?.scrollTo({ top: 0 }); }, [disiplin, durum, q]);
   useEffect(() => {
@@ -176,6 +186,13 @@ export default function SpotsV15() {
                     {!gizli && <span className="sp15-spot"><Zengin metin={s.spot} /></span>}
                     <ChevronDown className="sp15-ok2" aria-hidden />
                   </button>
+                  <button type="button" className={`sp15-yildiz${yildiz.has(s.id) ? ' is-on' : ''}`} onClick={() => yildizla(s.id)} aria-pressed={yildiz.has(s.id)} aria-label={yildiz.has(s.id) ? 'Yıldızı kaldır' : 'Yıldızla'}><Star aria-hidden /></button>
+                  {d && (
+                    <div className="sp15-alt">
+                      <span>{d.disiplin.replace(/^Tıbbi\s+/, '')} · {d.no}. ders</span>
+                      <a href={dersteYol(d.id, s)} onClick={linkClick(() => navigateTo(dersteYol(d.id, s)))}><Headphones aria-hidden /> Derste dinle</a>
+                    </div>
+                  )}
                   {gizli && (
                     <button type="button" className="v15-btn is-soft sp15-goster" onClick={() => setGorulen((p) => new Set(p).add(s.id))}>Cevabı göster</button>
                   )}

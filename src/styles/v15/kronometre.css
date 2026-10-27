@@ -132,3 +132,5 @@
 .kre-li-z { flex: none; }
 .kre-bos { margin: 0; padding: 16px; color: var(--color-ink-2); }
 @media (max-width: 420px) { .kre-sat.is-sec { flex-wrap: wrap; } .kre-seg { width: 100%; } .kre-seg button { flex: 1; } }
+.kre { bottom: auto; height: 100vh; height: 100lvh; }
+:root.tam-katman .v15-tabs, :root.tam-katman .kr15z { display: none !important; }

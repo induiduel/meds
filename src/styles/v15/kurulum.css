@@ -1,0 +1,52 @@
+/* v15 · Kayıt adımları (ProfilKurulumV15, tasarım I07–I11); renkler palet tokenından */
+.kr15k { position: fixed; inset: 0; z-index: 1100; background: var(--color-canvas); color: var(--color-ink); display: flex; flex-direction: column; }
+.kr15k-ust { display: flex; align-items: center; gap: 10px; padding: calc(env(safe-area-inset-top) + 10px) 16px 10px; max-width: 560px; width: 100%; margin: 0 auto; }
+.kr15k-seg { flex: 1; display: flex; gap: 6px; }
+.kr15k-seg i { flex: 1; height: 5px; border-radius: 999px; background: var(--color-field); }
+.kr15k-seg i.is-on { background: var(--color-accent); }
+.kr15k-no { font-size: .85rem; color: var(--color-ink-3); font-variant-numeric: tabular-nums; }
+.kr15k-ic { flex: 1; overflow-y: auto; padding: 8px 24px; max-width: 560px; width: 100%; margin: 0 auto; display: flex; flex-direction: column; gap: 12px; }
+.kr15k-ic h2 { margin: 4px 0 4px; font-size: 1.5rem; line-height: 1.2; }
+.kr15k-lbl { font-size: .8rem; font-weight: 600; color: var(--color-ink-2); margin-top: 4px; }
+.kr15k-not { margin: 0; font-size: .85rem; color: var(--color-ink-2); line-height: 1.45; }
+.kr15k-inp { display: flex; align-items: center; gap: 8px; height: 48px; padding: 0 14px; border-radius: 14px; border: 1.5px solid var(--color-line); background: var(--color-white); }
+.kr15k-inp:focus-within { border-color: var(--color-accent); }
+.kr15k-inp svg { width: 18px; height: 18px; color: var(--color-ink-3); flex: none; }
+.kr15k-inp input { flex: 1; min-width: 0; border: 0; background: none; color: var(--color-ink); font: inherit; font-size: 16px; outline: none; }
+.kr15k-liste { list-style: none; margin: 0; padding: 4px 0; }
+.kr15k-liste li + li { border-top: 1px solid var(--color-line-soft, var(--color-line)); }
+.kr15k-liste button { width: 100%; display: flex; align-items: center; gap: 12px; padding: 11px 14px; border: 0; background: none; color: inherit; font: inherit; text-align: left; cursor: pointer; }
+.kr15k-liste button > span:nth-child(2) { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 1px; }
+.kr15k-liste small { font-size: .8rem; color: var(--color-ink-3); }
+.kr15k-yok { padding: 12px 14px; color: var(--color-ink-3); font-size: .9rem; }
+.kr15k-radio { flex: none; width: 20px; height: 20px; border-radius: 50%; border: 2px solid var(--color-line); }
+.kr15k-radio.is-on { border-color: var(--color-accent); box-shadow: inset 0 0 0 4px var(--color-white); background: var(--color-accent); }
+.kr15k-link { align-self: flex-start; display: inline-flex; align-items: center; gap: 4px; border: 0; background: none; color: var(--color-accent); font: inherit; font-size: .9rem; font-weight: 600; cursor: pointer; padding: 4px 0; }
+.kr15k-link svg { width: 15px; height: 15px; }
+.kr15k-elle { display: flex; flex-direction: column; gap: 10px; }
+.kr15k-elle label { display: flex; flex-direction: column; gap: 4px; font-size: .8rem; color: var(--color-ink-2); }
+.kr15k-elle input { height: 46px; padding: 0 12px; border-radius: 12px; border: 1.5px solid var(--color-line); background: var(--color-white); color: var(--color-ink); font: inherit; font-size: 16px; }
+.kr15k-sinif { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+.kr15k-sinif .v15-btn { height: 58px; font-size: 1.05rem; }
+.kr15k-hedef { display: flex; flex-direction: column; gap: 8px; }
+.kr15k-hedef button { display: flex; align-items: center; gap: 10px; padding: 12px 14px; border-radius: 14px; border: 1.5px solid var(--color-line); background: var(--color-white); color: inherit; font: inherit; text-align: left; cursor: pointer; }
+.kr15k-hedef button span { flex: 1; display: flex; flex-direction: column; gap: 2px; }
+.kr15k-hedef small { font-size: .8rem; color: var(--color-ink-3); }
+.kr15k-hedef button.is-on { border-color: var(--color-accent); background: var(--color-accent-soft); }
+.kr15k-hedef svg { width: 18px; height: 18px; color: var(--color-accent); }
+.kr15k-saat { display: flex; align-items: center; justify-content: space-between; gap: 10px; font-size: .95rem; }
+.kr15k-saat input { height: 40px; padding: 0 10px; border-radius: 10px; border: 1.5px solid var(--color-line); background: var(--color-white); color: var(--color-ink); font: inherit; font-size: 16px; }
+.kr15k-alt { padding: 12px 24px calc(env(safe-area-inset-bottom) + 20px); max-width: 560px; width: 100%; margin: 0 auto; display: flex; flex-direction: column; align-items: center; gap: 6px; }
+.kr15k-ana { width: 100%; min-height: 50px; font-size: 1rem; }
+.kr15k-bitti { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px; padding: 24px; text-align: center; max-width: 420px; margin: 0 auto; width: 100%; }
+.kr15k-bitti h2 { margin: 0; font-size: 1.6rem; }
+.kr15k-bitti p { margin: 0; color: var(--color-ink-2); line-height: 1.45; }
+.kr15k-hucre { width: 170px; height: 170px; }
+.kr15k-zar { fill: color-mix(in oklab, var(--color-accent) 10%, var(--color-white)); stroke: var(--color-accent); stroke-width: 3; }
+.kr15k-rna { fill: none; stroke: var(--color-bad); stroke-width: 2.5; }
+.kr15k-ribo { fill: var(--color-ink-2); }
+/* telefonda görünür alan (dvh) alt sekme şeridini dışarıda bırakıyordu: tam ekran yüksekliği */
+.kr15k { bottom: auto; height: 100vh; height: 100lvh; }
+.kr15k-alt .kr15k-link { align-self: center; }
+.kr15k-ana:disabled { opacity: .45; cursor: default; }
+:root.tam-katman .v15-tabs, :root.tam-katman .kr15z { display: none !important; }

@@ -1,5 +1,6 @@
 import { useBasarim } from '../../services/basarimIstemci';
 import { kronometreAc } from '../v15/KronometreV15';
+import { profilOku } from '../../services/profilKurulum';
 import React, { useEffect, useMemo, useState } from 'react';
 import { ArrowRight, CircleHelp, Flag, Gamepad2, Headphones, Layers, Lightbulb, RotateCcw, Search, Sparkles, Star } from 'lucide-react';
 import { type AppRoute, linkClick, navigateTo, pathFor } from '../../router';
@@ -258,12 +259,14 @@ const TodayViewV11: React.FC<TodayViewProps & { v12?: boolean; v13?: boolean; v1
       return act.length ? act.reduce((a, b) => a + b, 0) / act.length : 0;
     };
     const rows: { id: string; label: string; value: string; pct: number }[] = [];
-    const qTarget = Math.round(avgOf(prevKeys.map((k) => solvedByDay.get(k) || 0)));
+    // Profilde seçilen günlük hedef (kayıt adımları) varsa o; yoksa son 14 günün ortalaması
+    const hedef = profilOku().hedef;
+    const qTarget = hedef?.soru || Math.round(avgOf(prevKeys.map((k) => solvedByDay.get(k) || 0)));
     if (qTarget > 0) {
       const v = solvedByDay.get(today) || 0;
       rows.push({ id: 'q', label: 'Soru çöz', value: `${v} / ${qTarget}`, pct: Math.min(100, Math.round((v / qTarget) * 100)) });
     }
-    const sTarget = avgOf(prevKeys.map((k) => seconds[k] || 0));
+    const sTarget = hedef ? hedef.dk * 60 : avgOf(prevKeys.map((k) => seconds[k] || 0));
     if (sTarget >= 60) {
       const v = seconds[today] || 0;
       rows.push({ id: 's', label: 'Çalışma süresi', value: `${fmtMin(v)} / ${fmtMin(sTarget)}`, pct: Math.min(100, Math.round((v / sTarget) * 100)) });

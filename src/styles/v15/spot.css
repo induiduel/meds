@@ -32,3 +32,13 @@
 .sp15-eylem { display: flex; gap: 8px; flex-wrap: wrap; }
 .sp15-eylem svg { width: 16px; height: 16px; }
 .sp15-bekci { list-style: none; height: 80px; border-radius: var(--v15-r-lg, 14px); }
+/* B08: yıldız + kart altı (ders · Derste dinle) */
+.sp15-kart { position: relative; }
+.sp15-kart .sp15-bas { padding-right: 44px; }
+.sp15-yildiz { position: absolute; top: 8px; right: 8px; width: 34px; height: 34px; border: 0; border-radius: 50%; background: transparent; color: var(--color-ink-3); display: grid; place-items: center; cursor: pointer; }
+.sp15-yildiz svg { width: 17px; height: 17px; }
+.sp15-yildiz.is-on { color: var(--color-warn); }
+.sp15-yildiz.is-on svg { fill: currentColor; }
+.sp15-alt { display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 0 14px 12px; font-size: .78rem; color: var(--color-ink-3); }
+.sp15-alt a { display: inline-flex; align-items: center; gap: 4px; color: var(--color-accent); font-weight: 600; text-decoration: none; white-space: nowrap; }
+.sp15-alt a svg { width: 14px; height: 14px; }

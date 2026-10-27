@@ -459,3 +459,33 @@ Not: YOK sayısının 6'sı tasarım belgesi ekranıdır (A09, K08, P01, W03, X0
 - B11 notlar: Tümü / Yıldızlı / Ses damgalı süzgeci, kartta yıldız; sesli dersten "Nota ekle" ders · bölüm · zaman damgasıyla gelir, damgaya dokununca derste o yere gider (eski notlarda "Kaynak:" satırından okunur).
 - Kronometre ayarları + geçmişi (T › kronoAyar, kronoGecmis).
 - A06 bildirim merkezi: /bildirimler (zil buraya), Tümü/Ders/Soru/Sistem sekmeleri + okunmamış sayıları, Tümünü okundu say, Okunmuşları temizle; hesap bildirimleri + gerçek veriden türeyen (yeni sesli ders, sınava ≤14 gün, tekrar zamanı gelen yanlışlar). Düello daveti yok (düello özelliği yok).
+
+## Değerlendirilmemiş ekranların değerlendirmesi (2026-10-27)
+
+Kök neden: ilk denetim "DOĞRULANMADI" (50) ve "KISMİ" satırlarını sıraya koymadı; iş yalnız kullanıcının saydığı öncelik
+listesinden yürüdü, I07–I10 kayıt adımları gibi bütün bir akış hiç ele alınmadı. Bundan sonra her tur bu tablodan seçer;
+"DOĞRULANMADI" kalmaz.
+
+| Kod | Karar | Not |
+|---|---|---|
+| I07–I11 kayitUni/Sinif/Kurul/Hedef/Bitti | KURULDU | ProfilKurulumV15: girişten sonra eksik profile bir kez; Profil › Okul ve hedef; hedef Bugün planına bağlı. Hatırlatma saati kaydediliyor, bildirim gönderimi yok |
+| M09 profilDuzenle | KISMİ → KURULDU (okul/sınıf/kurul/hedef) | Ad/fotoğraf Hesap panelinde |
+| B08 spotlar | KURULDU | Yıldızlı süzgeci, kart altı ders + "Derste dinle" (?ara= ile en yakın paragrafa). "n kez çıktı": spot verisinde çıkmış eşlemesi yok → yazılmadı |
+| I01 splash | VAR | index.html açılış ekranı (kalp + EKG) |
+| I02–I04 intro1-3 | SIRADA | Onboarding sahneleri eski metinle; tasarım metni (PDF takip, şık açıklaması, hücre) ile değiştirilecek |
+| I05 girisSecenek / A01 | SIRADA | Google + e-posta var; Apple ve sınıf kodu altyapısı yok (sınıf kodu: sunucu gerektirir) |
+| I06 otp | YAPILMAYACAK (altyapı yok) | Firebase e-posta/şifre; tek kullanımlık kod sunucusu yok |
+| A05 arama | VAR | SearchPalette ⌘K |
+| B18 b2ornek, B19 b2oncelik, B21 b2masa, B22 b2muzik | SIRADA | Sayfalar var, v15 yapısı denetlenecek |
+| S04 altyazı şeridi, S15 yatay telefon, S17 bağlantı koptu | SIRADA | S17: oynatıcıda çevrimdışı kaydı varken uyarı kartı |
+| C09 hatalar | KURULDU | YanlislarimV15 |
+| E04 kmbCizim, E05 kmbKontrol | SIRADA | KMB veri yapısına bağlı |
+| G03 asistan | BİLİNÇLİ | Yapay zekâ sohbeti LLM gerektirir (kural 20) |
+| G07 cevrimdisi | VAR | CevrimdisiView (başka oturum geliştiriyor) |
+| H05–H06 tur | VAR | Tanıtım turu |
+| K07 yaziAyar | VAR | Erişilebilirlik + sesli ders okuma ayarları |
+| L04 soruListe | SIRADA | Havuz listesi v15 yapısı |
+| M03, M06, M11–M16 hücre/evrim/rozet/çağlar | SIRADA | HucremV15 3B sahne var; seviye atlama, rozet ayrıntısı, çağ ekranları yok |
+| O04–O07, O10 PDF okuyucu/ızgara/arama/ikili/tam ekran | SIRADA | PDF.js görüntüleyici tek sayfa; ızgara, arama, ikili sayfa yok |
+| Kronometre T, U | KURULDU | Kaynaşma, ayarlar, geçmiş |
+| A06 bildirim | KURULDU | /bildirimler |

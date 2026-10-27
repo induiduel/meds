@@ -41,6 +41,7 @@ export default function KronometreEkranV15({ gorunum, ayar, setAyar, gecmis, onK
   gorunum: 'ayar' | 'gecmis'; ayar: KrAyar; setAyar: (a: KrAyar) => void; gecmis: KrKayit[]; onKapat: () => void;
 }) {
   const [aralik, setAralik] = useState<7 | 30>(7);
+  React.useEffect(() => { document.documentElement.classList.add('tam-katman'); return () => document.documentElement.classList.remove('tam-katman'); }, []);
   const ay = (k: Partial<KrAyar>) => setAyar({ ...ayar, ...k });
 
   let govde: React.ReactNode;

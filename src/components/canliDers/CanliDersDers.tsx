@@ -243,7 +243,21 @@ export default function CanliDersDers({ dersKey, kamp }: { dersKey: string; kamp
   useEffect(() => {
     if (!detay) return;
     const sp = new URLSearchParams(window.location.search);
-    const pStr = sp.get('p') || (window.location.hash.startsWith('#p-') ? window.location.hash.replace('#p-', '') : null);
+    let pStr = sp.get('p') || (window.location.hash.startsWith('#p-') ? window.location.hash.replace('#p-', '') : null);
+    // ?ara=<cümle> (spot "Derste dinle"): kelimeleri en çok örtüşen paragrafa git; zayıf eşleşmede kaydırma yok
+    const ara = sp.get('ara');
+    if (!pStr && ara) {
+      const kel = (x: string) => x.toLocaleLowerCase('tr-TR').replace(/[^\p{L}\p{N}\s]/gu, ' ').split(/\s+/).filter((w) => w.length > 3).map((w) => w.slice(0, 5));
+      const hedef = new Set(kel(ara));
+      let en = -1, enP = 0;
+      if (hedef.size) detay.bolumler.forEach((b) => b.paragraflar.forEach((p) => {
+        const k = new Set(kel(p.metin));
+        let n = 0; hedef.forEach((w) => { if (k.has(w)) n += 1; });
+        const puan = n / hedef.size;
+        if (puan > enP) { enP = puan; en = p.i; }
+      }));
+      if (en >= 0 && enP >= 0.45) pStr = String(en);
+    }
     if (!pStr) return;
     const pIdx = parseInt(pStr, 10);
     const t = setTimeout(() => kaydirParagrafa(pIdx), 400);

@@ -1,11 +1,11 @@
 {
  "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
- "onem": 456,
- "baslik": "Yeni bildirim merkezi",
+ "onem": 457,
+ "baslik": "Okul bilgileri, günlük hedef ve spot yıldızları",
  "maddeler": [
-  "Zil artık Bildirimler sayfasını açar: Tümü, Ders, Soru, Sistem sekmeleri",
-  "Yeni sesli ders eklendiğinde, sınav yaklaştığında ve yanlışlarının tekrar zamanı geldiğinde bildirim",
-  "Tümünü okundu say ve okunmuşları temizle"
+  "Girişten sonra üniversite, sınıf, kurul ve günlük hedef bir kez sorulur; Profil › Okul ve hedef'ten değiştirilir",
+  "Bugün planı seçtiğin günlük hedefe göre ilerler",
+  "Sınav spotları: Yıldızlı süzgeci ve her kartta Derste dinle bağlantısı"
  ],
  "eklenen": [],
  "degisen": [],
