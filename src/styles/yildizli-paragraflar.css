@@ -652,3 +652,40 @@
 .yp-ders > summary { font-size: 13px; padding: 6px 2px 6px 10px; opacity: .85; }
 .yp-kurul > summary span, .yp-ders > summary span { font-size: 11px; padding: 1px 7px; border-radius: 99px; background: rgba(245,158,11,.18); color: #f59e0b; }
 .yp-ders { margin-left: 6px; }
+
+/* ── Kompakt ağaç: Kurul → Ders → Konu → satır (2026-10-28) ── */
+.yp-panel .yp-kurul, .yp-panel .yp-ders, .yp-panel .yp-konu { margin: 0; }
+.yp-panel .yp-kurul-baslik, .yp-panel .yp-ders-baslik, .yp-panel .yp-konu-baslik {
+  display: flex; align-items: center; gap: 6px; cursor: pointer; list-style: none;
+  user-select: none; border-radius: 8px;
+}
+.yp-panel summary::-webkit-details-marker { display: none; }
+.yp-panel .yp-ok { width: 14px; height: 14px; flex: none; transition: transform .15s; opacity: .6; }
+.yp-panel details[open] > summary > .yp-ok { transform: rotate(90deg); }
+.yp-panel .yp-kurul-baslik { padding: 6px 4px; font-size: 14px; font-weight: 700; }
+.yp-panel .yp-ders-baslik { padding: 6px 4px 6px 14px; font-size: 13px; font-weight: 600; }
+.yp-panel .yp-kurul-baslik > span, .yp-panel .yp-ders-baslik > span, .yp-konu-sayi {
+  font-size: 11px; font-weight: 600; padding: 1px 7px; border-radius: 999px;
+  background: rgba(245, 158, 11, .15); color: #d97706;
+}
+.yp-panel .yp-konu { margin: 2px 0 2px 28px; border: 1px solid var(--color-line, #e2e8f0); border-radius: 10px; overflow: hidden; }
+.yp-panel .yp-konu-baslik { padding: 7px 10px; font-size: 13px; font-weight: 600; color: var(--color-ink, #0f172a); }
+.yp-panel .yp-konu-baslik:hover { background: var(--color-field, #f8fafc); }
+.yp-konu-ad { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.yp-satirlar { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--color-line-soft, #f1f5f9); }
+.yp-satir { display: flex; align-items: flex-start; gap: 8px; padding: 6px 8px 6px 10px; }
+.yp-satir + .yp-satir { border-top: 1px solid var(--color-line-soft, #f1f5f9); }
+.yp-satir.is-hap { box-shadow: inset 3px 0 0 #f59e0b; }
+.yp-satir-tur { flex: none; display: grid; place-items: center; width: 18px; height: 18px; margin-top: 2px; color: #d97706; }
+.yp-satir-tur svg { width: 14px; height: 14px; }
+.yp-satir-govde {
+  flex: 1; min-width: 0; text-align: left; background: none; border: 0; padding: 0; cursor: pointer;
+  color: var(--color-ink-2, #334155); font: inherit; font-size: 13px; line-height: 1.45;
+}
+.yp-satir-govde:hover .yp-satir-metin { color: var(--color-ink, #0f172a); text-decoration: underline dotted; }
+.yp-satir-alt { display: block; font-size: 11px; font-weight: 600; color: var(--color-ink-3, #64748b); margin-bottom: 1px; }
+.yp-satir-metin { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+.yp-satir-yildiz { flex: none; background: none; border: 0; padding: 2px; cursor: pointer; opacity: .8; }
+.yp-satir-yildiz:hover { opacity: 1; }
+.yp-satir-yildiz svg { width: 14px; height: 14px; }
+@media (max-width: 600px) { .yp-panel .yp-konu { margin-left: 10px; } .yp-panel .yp-ders-baslik { padding-left: 6px; } }

@@ -1,7 +1,7 @@
 import React, { useMemo, useState } from 'react';
 import { createPortal } from 'react-dom';
 import {
-  ExternalLink, Headphones, Layers, MessageCircleQuestion,
+  ChevronRight, ChevronsDownUp, ChevronsUpDown, Headphones, Layers, MessageCircleQuestion,
   Search, Star, Trash2, X,
 } from 'lucide-react';
 import {
@@ -53,6 +53,27 @@ function ogeSiraDegeri(p: YildizliParagraf): number {
   return p.tarih;
 }
 
+/** Başlık "Konu: alt başlık" biçimindeyse konu iki noktadan öncesidir. */
+function konuAdi(g: ParagrafGrubu): string {
+  const i = g.baslik.indexOf(':');
+  return i > 0 ? g.baslik.slice(0, i).trim() : g.baslik;
+}
+
+function altBaslikAdi(g: ParagrafGrubu): string {
+  const i = g.baslik.indexOf(':');
+  const alt = i > 0 ? g.baslik.slice(i + 1).trim() : '';
+  return [alt, g.bolumBaslik].filter(Boolean).join(' · ');
+}
+
+function konularaAyir(gs: ParagrafGrubu[]): [string, ParagrafGrubu[]][] {
+  const m = new Map<string, ParagrafGrubu[]>();
+  for (const g of gs) {
+    const k = konuAdi(g);
+    m.set(k, [...(m.get(k) ?? []), g]);
+  }
+  return [...m].sort((a, b) => a[0].localeCompare(b[0], 'tr'));
+}
+
 export const YildizliParagraflarPanel: React.FC<PanelProps> = ({ onClose, onGecis, inline = false, dersKey }) => {
   const hepsi = useYildizliParagraflar();
   const [yalnizDers, setYalnizDers] = useState(!!dersKey);
@@ -65,6 +86,8 @@ export const YildizliParagraflarPanel: React.FC<PanelProps> = ({ onClose, onGeci
     [hepsi, dersKey, yalnizDers]
   );
   const [arama, setArama] = useState('');
+  const [hepsiAcik, setHepsiAcik] = useState(false);
+  const [acikSurum, setAcikSurum] = useState(0);
   const [kaynakFiltre, setKaynakFiltre] = useState<ParagrafKaynak | 'hepsi'>('hepsi');
 
   const filtrelenmis = useMemo(() => {
@@ -148,12 +171,6 @@ export const YildizliParagraflarPanel: React.FC<PanelProps> = ({ onClose, onGeci
     }
     onClose?.();
     navigateTo(item.deeplink);
-  };
-
-  const grubuCikar = (g: ParagrafGrubu) => {
-    for (const item of g.ogeler) {
-      yildizCikar(item.id);
-    }
   };
 
   const kaynakIkon = (kaynak: ParagrafKaynak) => {
@@ -266,6 +283,15 @@ export const YildizliParagraflarPanel: React.FC<PanelProps> = ({ onClose, onGeci
             <button
               type="button"
               className="yp-btn-temizle"
+              onClick={() => { setHepsiAcik((v) => !v); setAcikSurum((v) => v + 1); }}
+              title={hepsiAcik ? 'Tümünü kapat' : 'Tümünü aç'}
+              aria-label={hepsiAcik ? 'Tümünü kapat' : 'Tümünü aç'}
+            >
+              {hepsiAcik ? <ChevronsDownUp aria-hidden /> : <ChevronsUpDown aria-hidden />}
+            </button>
+            <button
+              type="button"
+              className="yp-btn-temizle"
               onClick={temizleOnay}
               title="Tüm yıldızlıları temizle"
               aria-label="Tümünü temizle"
@@ -299,119 +325,45 @@ export const YildizliParagraflarPanel: React.FC<PanelProps> = ({ onClose, onGeci
           </div>
         ) : (
           agac.map(([kurul, dersler]) => (
-            <details key={kurul} className="yp-kurul" open>
+            <details key={`${kurul}-${acikSurum}`} className="yp-kurul" open>
               <summary className="yp-kurul-baslik">
+                <ChevronRight className="yp-ok" aria-hidden />
                 Kurul {kurul} <span>{[...dersler.values()].reduce((n, gs) => n + gs.reduce((a, g) => a + g.ogeler.length, 0), 0)}</span>
               </summary>
               {[...dersler].map(([ders, gs]) => (
-                <details key={ders} className="yp-ders" open>
+                <details key={`${ders}-${acikSurum}`} className="yp-ders" open={hepsiAcik || arama.trim() !== ''}>
                   <summary className="yp-ders-baslik">
+                    <ChevronRight className="yp-ok" aria-hidden />
                     {ders} <span>{gs.reduce((a, g) => a + g.ogeler.length, 0)}</span>
                   </summary>
-                  {gs.map((grup) => {
-            const ilkOge = grup.ogeler[0];
-            const coklu = grup.ogeler.length > 1;
-            return (
-              <article key={grup.anahtar} className="yp-kart">
-                <div className="yp-kart-ust">
-                  <div className="yp-kart-kaynak-blok">
-                    <span className={`yp-tur t-${grup.kaynak}`}>
-                      {kaynakIkon(grup.kaynak)}
-                      {grup.kaynakAd}
-                    </span>
-                    <span className="yp-kart-baslik">{grup.baslik}</span>
-                    {grup.bolumBaslik && (
-                      <span className="yp-kart-alt-baslik">· {grup.bolumBaslik}</span>
-                    )}
-                    {coklu && (
-                      <span className="yp-grup-sayi">{grup.ogeler.length} paragraf</span>
-                    )}
-                  </div>
-                  {!coklu && (
-                    <button
-                      type="button"
-                      className="yp-kart-yildiz is-on"
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        yildizCikar(ilkOge.id);
-                      }}
-                      title="Listeden çıkar"
-                      aria-label="Listeden çıkar"
-                    >
-                      <Star fill="#f59e0b" color="#f59e0b" />
-                    </button>
-                  )}
-                </div>
-
-                <div className="yp-grup-metinler">
-                  {grup.ogeler.map((item) => {
-                    const hapMi = item.altBaslik === 'Akılda kalsın' || item.id.endsWith('_hap');
-                    return (
-                      <div key={item.id} className={`yp-parca-satir${hapMi ? ' is-hap' : ''}`}>
-                        <div
-                          className="yp-kart-metin"
-                          onClick={() => git(item)}
-                          role="button"
-                          tabIndex={0}
-                          onKeyDown={(e) => {
-                            if (e.key === 'Enter') git(item);
-                          }}
-                        >
-                          {hapMi && <span className="yp-hap-etiket">Akılda kalsın</span>}
-                          <p>{item.metin.replace(/\*\*/g, '')}</p>
-                        </div>
-                        {coklu && (
-                          <button
-                            type="button"
-                            className="yp-kart-yildiz is-on"
-                            onClick={(e) => {
-                              e.stopPropagation();
-                              yildizCikar(item.id);
-                            }}
-                            title="Bu paragrafı listeden çıkar"
-                            aria-label="Bu paragrafı listeden çıkar"
-                          >
-                            <Star fill="#f59e0b" color="#f59e0b" />
-                          </button>
-                        )}
-                      </div>
-                    );
-                  })}
-                </div>
-
-                <div className="yp-kart-alt">
-                  <span className="yp-tarih">
-                    {new Date(grup.sonTarih).toLocaleDateString('tr-TR', {
-                      day: 'numeric',
-                      month: 'short',
-                      hour: '2-digit',
-                      minute: '2-digit',
-                    })}
-                  </span>
-                  <div className="yp-kart-alt-sag">
-                    {coklu && (
-                      <button
-                        type="button"
-                        className="yp-grup-cikar-btn"
-                        onClick={() => grubuCikar(grup)}
-                        title="Bu başlıktaki tüm paragrafları çıkar"
-                      >
-                        Tümünü çıkar
-                      </button>
-                    )}
-                    <button
-                      type="button"
-                      className="yp-git-btn"
-                      onClick={() => git(ilkOge)}
-                    >
-                      <span>Doğrudan git</span>
-                      <ExternalLink aria-hidden />
-                    </button>
-                  </div>
-                </div>
-              </article>
-            );
-                  })}
+                  {konularaAyir(gs).map(([konu, kgs]) => (
+                    <details key={`${konu}-${acikSurum}`} className="yp-konu" open={hepsiAcik || arama.trim() !== ''}>
+                      <summary className="yp-konu-baslik">
+                        <ChevronRight className="yp-ok" aria-hidden />
+                        <span className="yp-konu-ad">{konu}</span>
+                        <span className="yp-konu-sayi">{kgs.reduce((a, g) => a + g.ogeler.length, 0)}</span>
+                      </summary>
+                      <ul className="yp-satirlar">
+                        {kgs.flatMap((grup) => grup.ogeler.map((item, i) => {
+                          const hapMi = item.altBaslik === 'Akılda kalsın' || item.id.endsWith('_hap');
+                          const alt = altBaslikAdi(grup);
+                          return (
+                            <li key={item.id} className={`yp-satir${hapMi ? ' is-hap' : ''}`}>
+                              <span className={`yp-satir-tur t-${grup.kaynak}`} title={grup.kaynakAd}>{kaynakIkon(grup.kaynak)}</span>
+                              <button type="button" className="yp-satir-govde" onClick={() => git(item)} title="Doğrudan git">
+                                {i === 0 && alt && <span className="yp-satir-alt">{alt}</span>}
+                                <span className="yp-satir-metin">{item.metin.replace(/\*\*/g, '')}</span>
+                              </button>
+                              <button type="button" className="yp-satir-yildiz" onClick={() => yildizCikar(item.id)}
+                                title="Listeden çıkar" aria-label="Listeden çıkar">
+                                <Star fill="#f59e0b" color="#f59e0b" />
+                              </button>
+                            </li>
+                          );
+                        }))}
+                      </ul>
+                    </details>
+                  ))}
                 </details>
               ))}
             </details>

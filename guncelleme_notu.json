@@ -1,11 +1,11 @@
 {
  "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
- "onem": 524,
- "baslik": "Yıldızlı paragraflar düzeltildi",
+ "onem": 525,
+ "baslik": "Yıldızlı paragraflar daha derli toplu",
  "maddeler": [
-  "Yıldızlı paragrafların artık Bugün sayfasında kurul, ders ve konuya göre gruplu görünüyor.",
-  "Sesli derste yıldız listesi yalnız o dersin paragraflarıyla açılıyor; istersen tüm derslere geçebilirsin.",
-  "Bir cihazda kaldırdığın yıldız öbür cihazda geri gelmiyor."
+  "Yıldızlı paragraflar kurul, ders ve konuya göre açılıp kapanan gruplarda listeleniyor.",
+  "Her paragraf kısa bir satır olarak görünüyor; metne dokununca kaydettiğin yere gidiyorsun.",
+  "Tümünü aç/kapat düğmesiyle listeyi tek dokunuşla genişletebilirsin."
  ],
  "eklenen": [],
  "degisen": [],
