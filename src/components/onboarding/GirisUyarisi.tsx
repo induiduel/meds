@@ -8,7 +8,9 @@ import { createPortal } from 'react-dom';
 import { Activity, BookOpen, Check, Flag, ShieldAlert, Sparkles, Stethoscope, Users } from 'lucide-react';
 import { lockScroll, unlockScroll } from '../../utils/scrollLock';
 import { girisUyarisiKabulEt } from './girisUyarisiDurum';
+import { useAppearance } from '../../utils/appearance';
 import './giris-uyarisi.css';
+import '../../styles/v15/giris.css';
 
 const FOCUSABLE = 'a[href],button:not([disabled]),input:not([disabled]),[tabindex]:not([tabindex="-1"])';
 
@@ -38,6 +40,7 @@ const MADDELER: { ikon: React.ReactNode; baslik: string; metin: string }[] = [
 export default function GirisUyarisi({ onKabul }: { onKabul: () => void }) {
   const id = useId();
   const panelRef = useRef<HTMLDivElement>(null);
+  const v15 = useAppearance().v15;
   const [onay, setOnay] = useState(false);
   const [cikiyor, setCikiyor] = useState(false);
 
@@ -84,7 +87,7 @@ export default function GirisUyarisi({ onKabul }: { onKabul: () => void }) {
   };
 
   return createPortal(
-    <div className={`gu-ortu${cikiyor ? ' is-cikis' : ''}`}>
+    <div className={`gu-ortu${cikiyor ? ' is-cikis' : ''}${v15 ? ' v15g-gu' : ''}`}>
       <div
         ref={panelRef}
         className="gu-kart"
@@ -99,6 +102,7 @@ export default function GirisUyarisi({ onKabul }: { onKabul: () => void }) {
           <div>
             <small>MeDSor · Başlamadan önce</small>
             <h2 id={`${id}-b`}>Önemli bilgilendirme</h2>
+            {v15 && <p className="v15g-gu-lead">Bir dakikanı ayır; aşağıdakileri okuyup onayla.</p>}
           </div>
         </header>
 

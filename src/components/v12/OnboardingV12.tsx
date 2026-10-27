@@ -7,7 +7,9 @@ import {
 import { lockScroll, unlockScroll } from '../../utils/scrollLock';
 import { NAV_ITEMS } from '../shell/navModel';
 import type { AppRoute } from '../../router';
+import { useAppearance } from '../../utils/appearance';
 import '../../styles/v12/entry.css';
+import '../../styles/v15/giris.css';
 
 /* =============================================================================
  * v12 "Net" — giriş yüzeyleri (canvas: Entry.dc.html + Overlays.dc.html). Önek: e12-.
@@ -159,6 +161,7 @@ export interface OnboardingV12Props {
 }
 
 export const OnboardingV12: React.FC<OnboardingV12Props> = ({ steps, step, dir, go, onTouchStart, onTouchEnd, auth, onClose }) => {
+  const v15 = useAppearance().v15;
   const last = steps.length - 1;
   const isAuth = step === last;
   const s = steps[step];
@@ -180,7 +183,7 @@ export const OnboardingV12: React.FC<OnboardingV12Props> = ({ steps, step, dir, 
   );
 
   return (
-    <div className="e12-ob" role="dialog" aria-modal="true" aria-label="MeDSor tanıtımı" onTouchStart={onTouchStart} onTouchEnd={onTouchEnd}>
+    <div className={`e12-ob${v15 ? ' v15g-ob' : ''}`} role="dialog" aria-modal="true" aria-label="MeDSor tanıtımı" onTouchStart={onTouchStart} onTouchEnd={onTouchEnd}>
       <div className="e12-ob-top"><BrandV12 /></div>
       <div className="e12-ob-body">
         <div className={`e12-ob-card ${isAuth ? 'is-auth' : ''}`}>
@@ -203,7 +206,12 @@ export const OnboardingV12: React.FC<OnboardingV12Props> = ({ steps, step, dir, 
           ) : (
             <>
               <div className="e12-ob-main">
-                {dots}
+                {v15 ? (
+                  <div className="v15g-ilerleme">
+                    <span>{step + 1} / {steps.length}</span>
+                    <i aria-hidden="true"><b style={{ width: `${((step + 1) / steps.length) * 100}%` }} /></i>
+                  </div>
+                ) : dots}
                 <div key={step} className={`e12-ob-step ${dir > 0 ? 'from-right' : 'from-left'}`}>
                   <h1 className="e12-ob-t">{s.title}</h1>
                   <p className="e12-ob-p">{s.text}</p>

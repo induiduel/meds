@@ -1,7 +1,9 @@
 import React, { useEffect, useId, useRef, useState } from 'react';
-import { AlertCircle, ArrowLeft, Check, CheckCircle2, Copy, ExternalLink, Globe, KeyRound, Loader2, ShieldAlert, ShieldCheck, X } from 'lucide-react';
+import { Activity, AlertCircle, ArrowLeft, Check, CheckCircle2, Copy, ExternalLink, Globe, KeyRound, Loader2, ShieldAlert, ShieldCheck, X } from 'lucide-react';
 import { EntryDialogV12 } from './OnboardingV12';
+import { useAppearance } from '../../utils/appearance';
 import '../../styles/v12/entry.css';
+import '../../styles/v15/giris.css';
 
 /* =============================================================================
  * v12 "Net" — giriş / kayıt kartı ve yetkili alan adı uyarısı (canvas: Entry.dc.html "Giriş", Overlays.dc.html).
@@ -49,6 +51,7 @@ export interface AuthCardV12Props {
 export const AuthCardV12: React.FC<AuthCardV12Props> = (p) => {
   const uid = useId();
   const { mode, disabled } = p;
+  const v15 = useAppearance().v15;
   const title = mode === 'admin' ? 'Yönetici girişi' : mode === 'login' ? 'Giriş yap' : 'Hesap oluştur';
   const sub =
     mode === 'admin'
@@ -100,8 +103,9 @@ export const AuthCardV12: React.FC<AuthCardV12Props> = (p) => {
   );
 
   return (
-    <div className={`e12-auth ${p.embedded ? 'is-embedded' : ''}`}>
+    <div className={`e12-auth ${p.embedded ? 'is-embedded' : ''}${v15 ? ' v15g' : ''}`}>
       <header className="e12-auth-h">
+        {v15 && <span className="v15g-mark" aria-hidden="true"><Activity strokeWidth={2.4} /></span>}
         <div>
           <h2>{title}</h2>
           <p>{sub}</p>
@@ -115,6 +119,15 @@ export const AuthCardV12: React.FC<AuthCardV12Props> = (p) => {
 
       {mode !== 'admin' ? (
         <>
+          {v15 && (
+            <div className="v15g-seg" role="tablist" aria-label="Giriş ya da kayıt">
+              {(['login', 'register'] as const).map((m) => (
+                <button key={m} type="button" role="tab" aria-selected={mode === m} className={mode === m ? 'is-on' : ''} onClick={() => mode !== m && p.onMode(m)}>
+                  {m === 'login' ? 'Giriş yap' : 'Kayıt ol'}
+                </button>
+              ))}
+            </div>
+          )}
           <button type="button" className="e12-btn is-lg is-block e12-google" onClick={() => p.onGoogle(false)} disabled={disabled}>
             {p.busy === 'google' ? spin : p.googleIcon}
             Google ile devam et
@@ -156,12 +169,12 @@ export const AuthCardV12: React.FC<AuthCardV12Props> = (p) => {
             </button>
           </form>
 
-          <p className="e12-swap">
+          {!v15 && <p className="e12-swap">
             {mode === 'login' ? 'Hesabın yok mu?' : 'Hesabın var mı?'}{' '}
             <button type="button" className="e12-link" onClick={() => p.onMode(mode === 'login' ? 'register' : 'login')}>
               {mode === 'login' ? 'Kayıt ol' : 'Giriş yap'}
             </button>
-          </p>
+          </p>}
         </>
       ) : (
         <>

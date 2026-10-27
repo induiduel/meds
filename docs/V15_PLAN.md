@@ -51,7 +51,7 @@ Yeni bileşen önce buraya eklenir; sayfa CSS'i yalnız yerleşim yazar.
 | 7 | Başvuru: kaynaklar, Sağlık Bakanlığı, sözlük, spotlar, önem | G01–G02, B08–B10 | **Onay bekliyor** — merkez `KaynaklarMerkezV15`; iç sayfalar açık iş |
 | 8 | Profil, ayarlar, görünüm (tema/palet/yazı), başarımlar | G04–G06, V01–V04, W01–W02, AB01–AB08 | Kuruldu (2026-10-27): ProfileV12 v15 dalı — profil kartı + gruplu satırlar (Ben/Ayarlar/Diğer), her bölüm #hash ekranı, Geri listeye; paneller v12'den, `styles/v15/profil.css` |
 | 9 | Diyaloglar, çekmeceler, tostlar, durumlar | H01–H11, A06–A08, AB12–AB18 | Kuruldu (2026-10-27): `styles/v15/shell.css` › Katmanlar — bulanık perde, 22–24 px köşe, ortalı uyarı + tam genişlik düğmeler, hap bildirim |
-| 10 | Açılış + kayıt akışı | I01–I11 | |
+| 10 | Açılış + kayıt akışı | I01–I11 | Kuruldu (2026-10-27): AuthV12 v15 dalı (marka simgesi + Giriş yap/Kayıt ol sekmesi, alt değiştir bağlantısı yok), OnboardingV12 ilerleme çubuğu (n / toplam), GirisUyarisi `v15g-gu` (telefonda alttan sayfa, maddeler tek kartta); `styles/v15/giris.css` |
 
 ### Yeni sayfalar (tasarım sohbetinde istenenler; sitede yok, sıfırdan kurulacak)
 | Sayfa | v15 ekranları | Not |
