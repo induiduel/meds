@@ -1,10 +1,10 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 453,
-  "baslik": "Ders programında ders yerlerini değiştirme",
+  "onem": 454,
+  "baslik": "Ders programında boş saatlere yerleştirme",
   "maddeler": [
-    "Yönetici ve moderatör, Ders programı sayfasından iki dersin tarih ve saatini birbiriyle değiştirebilir",
-    "Değişiklik bütün öğrencilerde görünür; resmî program kaydı korunur"
+    "Yönetici ve moderatör, bir dersi saat çizelgesindeki boş saatlere de taşıyabilir (yalnız takas değil)",
+    "Ay görünümünde dersi olmayan hafta içi günlere de geçilebilir"
   ],
   "eklenen": [],
   "degisen": [],

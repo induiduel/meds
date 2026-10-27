@@ -55,3 +55,6 @@ button.pg15-duz:hover { background: var(--color-field); }
 .pg15-r.is-secili { background: var(--color-field); box-shadow: inset 3px 0 0 var(--color-accent); }
 .pg15-hata { color: var(--color-danger, #b3261e); margin: 0 2px; }
 .pg15-duzbilgi { margin: 0 2px; }
+.pg15-bos { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; padding: 8px 2px 0; }
+.pg15-bosbtn { border: 1px dashed var(--color-accent); background: none; color: var(--color-accent); border-radius: 8px; padding: 4px 10px; font: inherit; font-size: .85rem; font-variant-numeric: tabular-nums; cursor: pointer; min-height: 32px; }
+.pg15-bosbtn:hover { background: var(--color-field); }
