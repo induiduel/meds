@@ -30,6 +30,7 @@ import {
   DENSITY_LABELS,
   LAYOUT_LABELS,
   READING_LABELS,
+  READING_ORDER,
   DESIGN_CHOICES, DESIGN_CHOICE_LABELS, designChoiceOf, type DesignChoice,
   type DesignVersion,
   TEXT_SIZE_ORDER,
@@ -282,7 +283,7 @@ const ProfileSettingsClassic: React.FC<Props> = ({ currentUser, isAdmin, questio
               </span>
               <span style={{ display: 'flex', gap: 8, flexWrap: 'wrap', justifyContent: 'flex-end' }}>
                 <Segmented<ReadingFont> label="Okuma yazısı" value={look.reading} onChange={(v) => look.set({ reading: v })}
-                  options={(['serif', 'sans'] as ReadingFont[]).map((v) => ({ value: v, label: READING_LABELS[v] }))} />
+                  options={READING_ORDER.map((v) => ({ value: v, label: READING_LABELS[v] }))} />
                 <TextSizeSlider />
               </span>
             </div>

@@ -1273,6 +1273,8 @@ const AppearancePanel: React.FC = () => {
             options={[
               { value: 'serif', label: 'Tırnaklı', style: { fontFamily: 'var(--read-font, Georgia, serif)' } },
               { value: 'sans', label: 'Düz' },
+              { value: 'kitap', label: 'Kitap', style: { fontFamily: "'Newsreader', var(--read-font, Georgia, serif)" } },
+              { value: 'klasik', label: 'Klasik', style: { fontFamily: 'Georgia, serif' } },
             ]} />
         </SetRow>
       </section>

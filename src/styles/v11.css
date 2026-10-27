@@ -1,6 +1,6 @@
 /*
  * v11 "Sade" katmanı — tasarım: https://claude.ai/artifact/2QG4vWxi3qNZcGhvZKbieh
- * Kök öğedeki tercihler (utils/appearance.ts): data-reading (serif|sans), data-text-size (s|m|l),
+ * Kök öğedeki tercihler (utils/appearance.ts): data-reading (serif|sans|kitap|klasik), data-text-size (s|m|l),
  * data-filters (basit|gelismis), data-qtags (on|off), data-motion (full|reduced).
  * data-design='v10' (Klasik) seçiliyken okuma/geçiş kuralları devre dışıdır; taşma ve etiket kuralları her iki tasarımda geçerlidir.
  * Bu dosya renk tanımlamaz (renkler utils/palettes.ts); yalnız okuma, taşma güvenliği, hareket ve görünürlük kuralları.
@@ -9,6 +9,8 @@
 /* ── Okuma yazısı: soru kökü, ders anlatımı, not/özet okuyucu ── */
 :root:is([data-design='v11'],[data-design='v12']) { --read-font: 'Literata', 'Iowan Old Style', Georgia, serif; --read-size: 16px; --read-lh: 1.68; }
 :root:is([data-design='v11'],[data-design='v12'])[data-reading='sans'] { --read-font: var(--font-sans); --read-lh: 1.6; }
+:root:is([data-design='v11'],[data-design='v12'])[data-reading='kitap'] { --read-font: 'Newsreader', 'Literata', Georgia, serif; --read-lh: 1.62; }
+:root:is([data-design='v11'],[data-design='v12'])[data-reading='klasik'] { --read-font: Georgia, 'Times New Roman', 'Liberation Serif', serif; --read-lh: 1.66; }
 :root:is([data-design='v11'],[data-design='v12'])[data-text-size='xs'] { --read-size: 14px; }
 :root:is([data-design='v11'],[data-design='v12'])[data-text-size='s'] { --read-size: 15px; }
 :root:is([data-design='v11'],[data-design='v12'])[data-text-size='l'] { --read-size: 18px; }
