@@ -92956,5 +92956,3188 @@
       "accuracyScore": 100,
       "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
     }
+  },
+  {
+    "id": "s13-model_organizma",
+    "term": "Model organizma",
+    "aliases": [],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.3",
+    "definition": "İnsan ve hayvan gelişiminin temel mekanizmalarını anlamak için moleküler çalışmaların yürütüldüğü canlıdır. Derste meyve sineği, nematod, deniz kestanesi, zebra balığı, kurbağa, civciv ve fare sayılır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-drosophila_melanogaster",
+    "term": "Drosophila melanogaster",
+    "aliases": [
+      "Meyve sineği",
+      "Drosophila"
+    ],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.4",
+    "definition": "Meyve sineğidir; detaylı olarak çalışılan ilk hayvan modelidir. Genetik yapısı basit olduğundan mutasyon taramalarına ve genetik analize uygundur.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Erken embriyonik gelişimin temelindeki moleküler mekanizmaların çoğu bu model sayesinde saptanmıştır.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-danio_rerio",
+    "term": "Danio rerio",
+    "aliases": [
+      "Zebra balığı",
+      "Zebra fish"
+    ],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.4",
+    "definition": "Zebra balığının bilimsel adıdır. Kolay üretilebilmesi ve genetik müdahalenin kolay olması nedeniyle model organizma olarak sık tercih edilir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-morfogenez",
+    "term": "Morfogenez",
+    "aliases": [
+      "Şekil oluşumu"
+    ],
+    "category": "fizyoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.5",
+    "definition": "Embriyonun normal büyüklük ve şekilde oluşumunu tanımlayan süreçtir; organların uygun büyüklük, şekil ve yerleşimde olmasını sağlar. İç ve dış faktörlere karşı morfogenler aracılığıyla oluşur.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-determinasyon",
+    "term": "Determinasyon",
+    "aliases": [
+      "Kararlılık"
+    ],
+    "category": "fizyoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.5",
+    "definition": "Morfogenezin üç aşamasından ilkidir; hücrenin gelişim yolunun belirlenmesi, yani kararlılık aşamasıdır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-diferansiyasyon",
+    "term": "Diferansiyasyon",
+    "aliases": [
+      "Farklılaşma",
+      "Diferensiasyon"
+    ],
+    "category": "fizyoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.5",
+    "definition": "Morfogenezin ikinci aşamasıdır; hücrelerin farklılaşmasını anlatır. Morfogenezin üçüncü aşaması gelişimdir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-morfogen",
+    "term": "Morfogen",
+    "aliases": [],
+    "category": "fizyoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.6",
+    "definition": "Hücreler tarafından üretilen ve diğer hücrelere yayılarak bir model oluşturan maddedir. Üretildiği bölgede sinyal merkezi kurar; merkeze yakın hücrelerde derişimi yüksek, uzak hücrelerde düşüktür.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Memelilerde bilinen morfogenler retinoik asit, FGF, Wnt, Sonic hedgehog ve TGF/BMP ailesidir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-retinoik_asit",
+    "term": "Retinoik asit",
+    "aliases": [],
+    "category": "fizyoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.6",
+    "definition": "Memelilerde en iyi bilinen morfogenlerden biridir. Transkripsiyon faktörü gibi davranır ve Hox genlerinin ifadesini düzenler.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-sonic_hedgehog",
+    "term": "Sonic hedgehog",
+    "aliases": [
+      "SHH",
+      "Shh"
+    ],
+    "category": "genetik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.6",
+    "definition": "Erken embriyonik gelişim döneminde önemli bir morfogen ve sinyal molekülüdür; işlevi için kolesterol gerekir. SHH genindeki heterozigot mutasyonlar holoprozensefali başta olmak üzere yüz ve beynin orta hat defektlerine yol açar.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-tgf_ailesi",
+    "term": "TGF ailesi",
+    "aliases": [
+      "TGF",
+      "TGF/BMP"
+    ],
+    "category": "fizyoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.6",
+    "definition": "Morfogen ailelerinden biridir. Dorsoventral şekillenmede ve bazı organların oluşumunda görev alır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-bmp",
+    "term": "BMP",
+    "aliases": [
+      "Kemik morfogenetik protein"
+    ],
+    "category": "fizyoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.19",
+    "definition": "TGF ailesine bağlı morfogen sinyalidir. Nöral krista hücrelerinin indüksiyonundan ve gastrulasyonda ektodermin anteriordan posteriora şekillenmesinden sorumludur.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-homeotik_gen",
+    "term": "Homeotik gen",
+    "aliases": [
+      "Homeotik genler"
+    ],
+    "category": "genetik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.8",
+    "definition": "Başka genleri devreye sokan ya da devre dışı bırakan, gelişimin organizasyonunda etkili genlerdir. Mutasyonları vücut parçalarının yanlış yerde oluşmasına yol açar; meyve sineğinde anten yerine bacak oluşumu buna örnektir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-homeotik_transformasyon",
+    "term": "Homeotik transformasyon",
+    "aliases": [],
+    "category": "patoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.10",
+    "definition": "Hox genlerinin mutasyonuyla bir vücut bölgesinin yapısının başka bir bölgeye ait yapıya dönüşmesidir. Sineklerde anten yerine bacakların oluşması örnek olarak anlatılır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-hox_genleri",
+    "term": "HOX genleri",
+    "aliases": [
+      "Hox genleri",
+      "HOXA",
+      "HOXB",
+      "HOXC",
+      "HOXD"
+    ],
+    "category": "genetik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.10",
+    "definition": "Hücrelerin pozisyonel kimliğini belirleyen, ilk kez Drosophila'da tanımlanmış homeotik genlerdir. İnsanda HOXA, HOXB, HOXC ve HOXD gruplarında bulunur; mutasyonları ekstremite ve genital organ malformasyonlarına neden olur.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "HOXD13 mutasyonu sinpolidaktili, HOXA13 mutasyonu el-ayak-genital sendromu ile ilişkilidir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-homeobox",
+    "term": "Homeobox",
+    "aliases": [],
+    "category": "genetik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.8",
+    "definition": "Tüm HOX genlerinde bulunan 180 baz çiftlik ortak dizidir. Genin ürettiği proteinin başka bir geni açmak ya da kapatmak üzere DNA'ya bağlanmasını sağlayan bölümü şifreler.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-homeodomain_proteinleri",
+    "term": "Homeodomain proteinleri",
+    "aliases": [
+      "Homeodomain"
+    ],
+    "category": "fizyoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.9",
+    "definition": "Ökaryotlarda embriyonik gelişim boyunca gen ifadesinin düzenlenmesinde kritik rol üstlenen proteinlerdir. Homeobox dizisi tarafından şifrelenen bölgeyi taşırlar.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-otx_geni",
+    "term": "OTX geni",
+    "aliases": [
+      "OTX1",
+      "OTX2"
+    ],
+    "category": "genetik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.12",
+    "definition": "Beyin ve kafa gelişiminde etkili transkripsiyon faktörü genidir. OTX1 mutantları serebral korteksin çeşitli bölgelerini etkileyen çoklu anomalilere, OTX2 ise anterior kafa oluşumunda önemli işleve sahiptir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-emx_genleri",
+    "term": "EMX genleri",
+    "aliases": [
+      "EMX1",
+      "EMX2",
+      "Emx"
+    ],
+    "category": "genetik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.8",
+    "definition": "Farelerde beyin dokusunu oluşturan Emx1 ve Emx2 genleridir; meyve sineğinde baş gelişiminde görevli iki genin neredeyse tam karşılığıdır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-msx_ailesi",
+    "term": "MSX ailesi",
+    "aliases": [
+      "MSX1"
+    ],
+    "category": "genetik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.13",
+    "definition": "Kraniyofasiyal ve diş gelişiminde etkili bir homeobox gen ailesidir. MSX1 mutasyonları ailesel diş agenezisinden sorumludur.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-pax3",
+    "term": "PAX3",
+    "aliases": [],
+    "category": "genetik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.20",
+    "definition": "Transkripsiyon faktörünü kodlayan gendir. Mutasyonu Waardenburg sendromu tip 1 ve tip 3'te patogeneze neden olur; MITF ifadesinin PAX3'e bağlı olduğu düşünülür.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-pax6",
+    "term": "PAX6",
+    "aliases": [],
+    "category": "genetik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.15",
+    "definition": "Göz gelişimini düzenleyen, iki tip DNA bağlayıcı bölgesi olan korunmuş bir transkripsiyon faktörü genidir. Fonksiyon kaybı mutasyonları heterozigot durumda aniridiye, homozigot durumda göz yapılarının tamamen yokluğuna yol açar.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-pitx2",
+    "term": "PITX2",
+    "aliases": [],
+    "category": "genetik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.14",
+    "definition": "Gelişimde fenotipi etkileyen transkripsiyon faktörünü kodlayan gendir. Mutasyonu Rieger sendromuna neden olur. Slaytta PTX2 diye yazılmıştır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-pitx3",
+    "term": "PITX3",
+    "aliases": [],
+    "category": "genetik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.14",
+    "definition": "Transkripsiyon faktörünü kodlayan gendir; mutasyonu konjenital katarakta neden olur.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-pou3f4",
+    "term": "POU3F4",
+    "aliases": [],
+    "category": "genetik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.14",
+    "definition": "Transkripsiyon faktörünü kodlayan gendir; mutasyonu sağırlık ve distoniye neden olur.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-sox9",
+    "term": "SOX9",
+    "aliases": [],
+    "category": "genetik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.14",
+    "definition": "Transkripsiyon faktörünü kodlayan gendir. Mutasyonu kamptomelik displaziye ve erkek cinsiyet gelişim kusuruna yol açar.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-sry",
+    "term": "SRY",
+    "aliases": [],
+    "category": "genetik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.14",
+    "definition": "Transkripsiyon faktörünü kodlayan gendir; mutasyonu erkek cinsiyet gelişim bozukluğuna neden olur.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-tbx3",
+    "term": "TBX3",
+    "aliases": [],
+    "category": "genetik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.14",
+    "definition": "Transkripsiyon faktörünü kodlayan gendir; mutasyonu Schinzel sendromuna (ulna-mammary sendromu) neden olur.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-tbx5",
+    "term": "TBX5",
+    "aliases": [],
+    "category": "genetik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.14",
+    "definition": "Transkripsiyon faktörünü kodlayan gendir; mutasyonu Holt-Oram sendromuna neden olur.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-gli3",
+    "term": "GLI3",
+    "aliases": [],
+    "category": "genetik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.14",
+    "definition": "Transkripsiyon faktörünü kodlayan gendir; mutasyonu Greig sendromuna neden olur. Slaytta Gl13 diye yazılmıştır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-hoxa13",
+    "term": "HOXA13",
+    "aliases": [],
+    "category": "genetik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.14",
+    "definition": "HOX ailesinden gendir; mutasyonu el-ayak-genital sendromuna neden olur.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-hoxd13",
+    "term": "HOXD13",
+    "aliases": [],
+    "category": "genetik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.11",
+    "definition": "HOX ailesinden gendir; mutasyonu polisindaktiliye neden olur. İnsanda HOXD13 mutasyonuyla sinpolidaktili görülen beş aile bildirilmiştir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-lmx1b",
+    "term": "LMX1B",
+    "aliases": [],
+    "category": "genetik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.14",
+    "definition": "Transkripsiyon faktörünü kodlayan gendir; mutasyonu nail-patella sendromuna neden olur. Slaytta LMXIB diye yazılmıştır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-mitf",
+    "term": "MITF",
+    "aliases": [],
+    "category": "genetik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.21",
+    "definition": "Pigment hücrelerinin gelişimi için gerekli bir transkripsiyon faktörüdür. Mutasyonu Waardenburg sendromu tip 2'ye neden olur; ifadesinin PAX3'e bağlı olduğu düşünülür.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-pax2",
+    "term": "PAX2",
+    "aliases": [],
+    "category": "genetik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.14",
+    "definition": "Transkripsiyon faktörünü kodlayan gendir; mutasyonu renal-kolobom sendromuna neden olur.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-twist",
+    "term": "TWIST",
+    "aliases": [
+      "TWIST1"
+    ],
+    "category": "genetik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.14",
+    "definition": "Transkripsiyon faktörünü kodlayan gendir; mutasyonu Saethre-Chotzen sendromuna neden olur.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-wt1",
+    "term": "WT1",
+    "aliases": [],
+    "category": "genetik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.14",
+    "definition": "Transkripsiyon faktörünü kodlayan gendir; mutasyonu ürogenital anomalilere neden olur.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-tcof1",
+    "term": "TCOF1",
+    "aliases": [
+      "TCOF"
+    ],
+    "category": "genetik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.39",
+    "definition": "Treacher Collins-Franceschetti 1 sendromuna neden olan gendir; mutasyonları nöral krista kaynaklı kraniyofasiyal gelişimi bozar.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-smoc1",
+    "term": "SMOC1",
+    "aliases": [],
+    "category": "genetik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.22",
+    "definition": "Waardenburg-anoftalmi sendromuna neden olan gendir. Fare ve kurbağada erken embriyo gelişiminde BMP antagonisti olarak işlev görür; göz, ekstremite, kraniyofasiyal ve somit gelişiminde ifade edilir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-lis1",
+    "term": "LIS1",
+    "aliases": [
+      "PAFAH1B1"
+    ],
+    "category": "genetik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.26",
+    "definition": "17p13.3'te yerleşik, nöral progenitör çoğalması ve göçünde görevli gendir. Kaybı mikrotübül işlev bozukluğuna yol açar; mutasyonları lizensefaliye neden olur.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-dcx",
+    "term": "DCX",
+    "aliases": [
+      "Doublecortin"
+    ],
+    "category": "genetik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.26",
+    "definition": "Lizensefali etiyolojisinde ilişkili ikinci gendir. X'e bağlı lizensefaliye neden olur ve mikrotübül polimerizasyonu aracılığıyla nöronal göçü etkiler.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-mcph_genleri",
+    "term": "MCPH genleri",
+    "aliases": [
+      "MCPH1",
+      "MCPH3",
+      "MCPH5",
+      "MCPH6",
+      "MCPH7"
+    ],
+    "category": "genetik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.28",
+    "definition": "Primer mikrosefaliyle ilişkili yedi lokus (MCPH1-MCPH7) tanımlıdır; bunlardan MCPH1, MCPH3, MCPH5, MCPH6 ve MCPH7 olmak üzere beş gen bilinir. Hepsi mitotik hücrelerde iğ iplikçik kutuplarıyla ilişkilidir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-dll3",
+    "term": "DLL3",
+    "aliases": [
+      "DLL proteinleri"
+    ],
+    "category": "genetik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.30",
+    "definition": "Notch ligandı DLL ailesinden gendir. Mutasyonu bulunan farelerde insan vertebra malformasyonlarına benzer fenotip görülür; bazı spondilokostal dizostozis olgularında mutasyon bildirilmiştir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-notch2",
+    "term": "NOTCH2",
+    "aliases": [],
+    "category": "genetik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.32",
+    "definition": "Notch sinyal yolağında yer alan gendir; bazı spondilokostal dizostozis olgularında mutasyonu bildirilmiştir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-lfng",
+    "term": "LFNG",
+    "aliases": [],
+    "category": "genetik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.32",
+    "definition": "Paraksiyel mezodermde Notch salınımını sürdürmek için gerekli proteini kodlar. Etkilendiğinde vertebralarda füzyon ya da hemivertebra gibi malformasyonlar görülür.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-eya1",
+    "term": "EYA1",
+    "aliases": [],
+    "category": "genetik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.34",
+    "definition": "Brankio-oto-renal sendromuna neden olan gendir. 1. faringeal ark ile 2., 3. ve 4. faringeal kese ve yarıklardaki nöral krista hücrelerinde ifade edilir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-ephb1",
+    "term": "EPHB1",
+    "aliases": [],
+    "category": "genetik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.38",
+    "definition": "X'e bağlı kraniyofrontonazal sendroma neden olan gendir. Nöronal ve epitel gelişimde hücre göçü ve adhezyonunda önemli rol oynar.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-alx_gen_ailesi",
+    "term": "ALX gen ailesi",
+    "aliases": [
+      "ALX1",
+      "ALX3",
+      "ALX4"
+    ],
+    "category": "genetik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.38",
+    "definition": "ALX1, ALX3 ve ALX4 genlerinden oluşur; mutasyonları çeşitli tipte frontonazal displazilere neden olur.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-col2a1",
+    "term": "COL2A1",
+    "aliases": [],
+    "category": "genetik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.57",
+    "definition": "Tip 2 kollajeni kodlayan gendir. Mutasyonları letal (akondrogenezis tip 2, hipokondrogenezis, platispondilik displazi) ya da letal olmayan (Stickler sendromu, SED congenita, Kniest displazi) tip 2 kollajenopatilere yol açar.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-col1a1",
+    "term": "COL1A1",
+    "aliases": [],
+    "category": "genetik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.64",
+    "definition": "Tip 1 kollajen sentezinde görevli iki gen COL1A1 ve COL1A2'den biridir. Mutasyonları osteogenezis imperfektaya neden olur; slayta göre fibrokondrogenezis de bu iki gendeki mutasyonla gelişir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-col1a2",
+    "term": "COL1A2",
+    "aliases": [],
+    "category": "genetik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.64",
+    "definition": "Tip 1 kollajen sentezinde görevli iki gen COL1A1 ve COL1A2'den biridir. Mutasyonları osteogenezis imperfektaya neden olur; slayta göre fibrokondrogenezis de bu iki gendeki mutasyonla gelişir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-flnb",
+    "term": "FLNB",
+    "aliases": [],
+    "category": "genetik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.62",
+    "definition": "Atelostenogenezise neden olan gendir. Slaytta FLBN diye yazılmıştır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-slc26a2",
+    "term": "SLC26A2",
+    "aliases": [],
+    "category": "genetik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.63",
+    "definition": "Diastrofik displaziye neden olan gendir. Olguların %65'inde bu gendeki dört mutasyondan biri sorumludur.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-fbn1",
+    "term": "FBN1",
+    "aliases": [],
+    "category": "genetik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.74",
+    "definition": "Elastik olmayan dokularda destek sağlayan mikrofibrillerin yapısına giren fibrillin 1 glikoproteinini kodlar. Mutasyonları Marfan sendromuna neden olur.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-g380r",
+    "term": "G380R",
+    "aliases": [
+      "G380R mutasyonu"
+    ],
+    "category": "genetik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.51",
+    "definition": "FGFR3 genindeki mutasyondur; akondroplazi vakalarının %95'inde bulunur.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-n540k",
+    "term": "N540K",
+    "aliases": [
+      "N540K mutasyonu"
+    ],
+    "category": "genetik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.55",
+    "definition": "FGFR3 genindeki mutasyondur; hipokondroplazide sık görülür.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-r248c",
+    "term": "R248C",
+    "aliases": [
+      "R248C mutasyonu"
+    ],
+    "category": "genetik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.56",
+    "definition": "FGFR3 genindeki mutasyondur; tanatoforik displazi tip 1'de görülür.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-k650e",
+    "term": "K650E",
+    "aliases": [
+      "K650E mutasyonu"
+    ],
+    "category": "genetik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.56",
+    "definition": "FGFR3 genindeki mutasyondur; tanatoforik displazi tip 2'de görülür.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-distrofin",
+    "term": "Distrofin",
+    "aliases": [],
+    "category": "fizyoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.76",
+    "definition": "Xp21'de yerleşik, 79 ekzonlu genin ürettiği proteindir. Tam ya da tama yakın eksikliği Duchenne müsküler distrofiye, anormal molekül ağırlıklı distrofin Becker müsküler distrofiye yol açar.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-xp21",
+    "term": "Xp21",
+    "aliases": [],
+    "category": "genetik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.76",
+    "definition": "X kromozomunun kısa kolundaki 21. banttır. Bu bölgedeki mutasyon DMD/BMD fenotipini ortaya çıkarır ve distrofin genini içerir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-noral_tup",
+    "term": "Nöral tüp",
+    "aliases": [],
+    "category": "anatomi",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.17",
+    "definition": "Nöral plak ve nöral kıvrımların birleşmesiyle oluşan yapıdır. Kapanma orta hattan başlayarak kaudal ve kraniyale doğru sürer; önce kraniyal, sonra kaudal kısım kapanır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-noral_plak",
+    "term": "Nöral plak",
+    "aliases": [],
+    "category": "anatomi",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.16",
+    "definition": "Nöral plağın ektoderminden beyin ve medulla spinalisten oluşan merkezi sinir sistemi gelişir. Nöral oluğu oluşturur; notokord nöral plak oluşumunu indükler.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-norulasyon",
+    "term": "Nörülasyon",
+    "aliases": [
+      "Nörulasyon"
+    ],
+    "category": "fizyoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.16",
+    "definition": "Nöral plak ve nöral kıvrımların birleşerek nöral tüpü oluşturmasıdır. Bu süreçteki bozukluklar beyin ve medulla spinalisin ciddi anomalileriyle sonuçlanır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-notokord",
+    "term": "Notokord",
+    "aliases": [],
+    "category": "anatomi",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.16",
+    "definition": "Mezenşimal hücrelerin primitif düğüm ve çukurdan kraniyale doğru göçüyle oluşan yapıdır. Nöral plak oluşumunu indükler.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-kraniyorasizis",
+    "term": "Kraniyoraşizis",
+    "aliases": [],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.17",
+    "definition": "Nöral tüp kapanma kusurlarından biridir; spina bifida ve anensefali ile birlikte en sık görülen nöral tüp defektleri arasında sayılır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-noral_krista",
+    "term": "Nöral krista",
+    "aliases": [
+      "Nöral kret"
+    ],
+    "category": "anatomi",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.18",
+    "definition": "Nöroektodermal hücrelerden oluşur. İkiye bölünerek spinal ve kraniyal sinirlerin duysal ganglionlarını yapar; kafa kemikleri, dişler, bağırsağın nöral hücreleri ve kalp dahil pek çok dokuya göç eder.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Nöral krista migrasyon veya diferansiyasyon defektleri pek çok sendroma neden olur; bunlardan en önemlisi Waardenburg sendromudur.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-waardenburg_sendromu",
+    "term": "Waardenburg sendromu",
+    "aliases": [],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.20",
+    "definition": "Nöral krista göç ya da farklılaşma kusurlarından biridir. Telekantus ve heterokromi gibi tipik yüz görünümü, saçta hipopigmente alan ve işitme kaybı ile karakterizedir. Tip 1 ve 3'te PAX3, tip 2'de MITF mutasyonu bulunur.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-waardenburg_anoftalmi_sendromu",
+    "term": "Waardenburg-anoftalmi sendromu",
+    "aliases": [],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.22",
+    "definition": "Mikoftalmiden anoftalmiye kadar değişen göz bulguları ve alt-üst ekstremite anomalileriyle giden sendromdur. SMOC1 geni mutasyonları neden olur.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-anoftalmi",
+    "term": "Anoftalmi",
+    "aliases": [],
+    "category": "patoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.22",
+    "definition": "Göz küresinin hiç bulunmamasıdır. Waardenburg-anoftalmi sendromunda mikoftalmiden anoftalmiye kadar değişen derecelerde görülür; PAX6'nın homozigot mutasyonunda göz yapılarının tamamen yokluğu söz konusudur.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-mikoftalmi",
+    "term": "Mikoftalmi",
+    "aliases": [],
+    "category": "patoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.22",
+    "definition": "Göz küresinin küçük olmasıdır. Waardenburg-anoftalmi sendromunda anoftalmiyle birlikte aynı spektrumda yer alır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-aniridi",
+    "term": "Aniridi",
+    "aliases": [
+      "İris yokluğu"
+    ],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.15",
+    "definition": "İris yokluğudur. PAX6 genindeki fonksiyon kaybı mutasyonlarında heterozigot durumda görülür.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-heterokromi",
+    "term": "Heterokromi",
+    "aliases": [],
+    "category": "patoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.21",
+    "definition": "İki gözün irislerinin farklı renkte olmasıdır. Waardenburg sendromunda tip 2'de daha belirgindir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-lizensefali",
+    "term": "Lizensefali",
+    "aliases": [
+      "Düz beyin",
+      "Smooth brain",
+      "Lisensefali"
+    ],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.26",
+    "definition": "Beyinde kıvrımların azalması (pakigri) ya da yokluğu (agri) ile karakterizedir; düz beyin (smooth brain) karşılığı kullanılır. Anormal kalın korteks ve kortikal laminasyon kaybı görülür; LIS1 ve DCX genleri sorumludur.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-pakigri",
+    "term": "Pakigri",
+    "aliases": [],
+    "category": "patoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.26",
+    "definition": "Lizensefalide beyin kıvrımlarının (girusların) azalmasıdır; kıvrımların tamamen yokluğuna agri denir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-agri",
+    "term": "Agri",
+    "aliases": [],
+    "category": "patoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.26",
+    "definition": "Lizensefalide beyin kıvrımlarının tamamen yokluğudur; azalmasına pakigri denir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-kortikal_laminasyon",
+    "term": "Kortikal laminasyon",
+    "aliases": [],
+    "category": "fizyoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.26",
+    "definition": "Beyin korteksinin katmanlı düzenidir. Lizensefalide kıvrımların kaybıyla birlikte kortikal laminasyon da kaybolur ve korteks anormal kalın olur.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-mikrotubul",
+    "term": "Mikrotübül",
+    "aliases": [],
+    "category": "fizyoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.26",
+    "definition": "Hücre iskeletinin bir bileşenidir. LIS1 kaybı mikrotübül işlev bozukluğuna yol açar; DCX mikrotübül polimerizasyonu aracılığıyla nöronal göçü etkiler.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-primer_mikrosefali",
+    "term": "Primer mikrosefali",
+    "aliases": [
+      "Gerçek mikrosefali",
+      "True mikrosefali"
+    ],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.28",
+    "definition": "Beyinde herhangi bir malformasyon olmaksızın beyin boyutunun küçük olmasıdır; kafatası küçüktür ve değişik derecelerde zihinsel gerilik vardır. Klinik olarak homojen, genetik olarak heterojendir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-sentrozom",
+    "term": "Sentrozom",
+    "aliases": [],
+    "category": "fizyoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.28",
+    "definition": "Hücre bölünmesinde iğ iplikçiği kutuplarıyla ilişkili yapıdır. MCPH genlerinin mutasyonları bölünme sırasında sentrozomal mekanizmayı etkiler.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-holoprozensefali",
+    "term": "Holoprozensefali",
+    "aliases": [
+      "HPE"
+    ],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.23",
+    "definition": "Ön beyin ve orta hat yüz yapılarının gelişiminin bozulmasıdır; ön beynin serebral yarım kürelere bölündüğü orta hat çizgisinin yetersizliğiyle gelişir. En ileri şeklinde yüzün orta hattında tek göz (siklops) bulunur.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-lobar_hpe",
+    "term": "Lobar HPE",
+    "aliases": [],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.25",
+    "definition": "Holoprozensefalinin en hafif biçimidir; iki hemisfer ayrılmıştır, ancak genellikle mikrosefali vardır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-semilobar_hpe",
+    "term": "Semilobar HPE",
+    "aliases": [],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.25",
+    "definition": "Holoprozensefalinin ara biçimidir; hemisferler arası fissür kısmen vardır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-alobar_hpe",
+    "term": "Alobar HPE",
+    "aliases": [],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.25",
+    "definition": "Holoprozensefalinin en ciddi biçimidir; ön beyin sağ ve sol hemisfere tamamen ayrılamaz. Tek ventrikül, yüzde siklopia, orta hat yarığı ve tek burun deliği ile karakterizedir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-somit",
+    "term": "Somit",
+    "aliases": [
+      "Somitler"
+    ],
+    "category": "anatomi",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.29",
+    "definition": "Üçüncü haftada paraksiyel mezodermdeki epitel hücrelerinden oluşan kübik cisimlerdir; beşinci hafta sonunda sayıları 42-44'e ulaşır. Geçici düzenleyici yapılardır ve embriyo yaşının belirlenmesinde kullanılır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-paraksiyel_mezoderm",
+    "term": "Paraksiyel mezoderm",
+    "aliases": [],
+    "category": "anatomi",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.29",
+    "definition": "Notokord oluştuktan sonra her iki tarafta mezodermin çoğalmasıyla oluşan kolonlardır; somitler bu kolonlardaki epitel hücrelerinden gelişir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-sklerotom",
+    "term": "Sklerotom",
+    "aliases": [],
+    "category": "anatomi",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.31",
+    "definition": "Somitin üç ana bölümünden biridir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-dermatom",
+    "term": "Dermatom",
+    "aliases": [],
+    "category": "anatomi",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.31",
+    "definition": "Somitin üç ana bölümünden biridir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-miyotom",
+    "term": "Miyotom",
+    "aliases": [],
+    "category": "anatomi",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.31",
+    "definition": "Somitin üç ana bölümünden biridir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-sindetom",
+    "term": "Sindetom",
+    "aliases": [],
+    "category": "anatomi",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.31",
+    "definition": "Somitlerde sklerotom, dermatom ve miyotoma ek olarak tanımlanan bölgelerden biridir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-spondilokostal_dizostozis",
+    "term": "Spondilokostal dizostozis",
+    "aliases": [
+      "SCD"
+    ],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.31",
+    "definition": "Kosta ve vertebra anormalliklerinin görüldüğü aksiyel iskelet anomalileri grubudur. Genetik olarak oldukça heterojendir; bazı olgularda DLL3 ve NOTCH2 gibi Notch yolağı genlerinde mutasyon bildirilmiştir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-hemivertebra",
+    "term": "Hemivertebra",
+    "aliases": [],
+    "category": "patoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.32",
+    "definition": "Omurun yalnız yarısının gelişmesidir. LFNG proteininden etkilenmiş kişilerde vertebra füzyonu ile birlikte görülebilen malformasyondur.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-faringeal_ark",
+    "term": "Faringeal ark",
+    "aliases": [
+      "FA1",
+      "FA2"
+    ],
+    "category": "anatomi",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.33",
+    "definition": "Embriyonun boyun bölgesinde, nöral krista hücreleriyle oluşan kemik ve kıkırdak iskeletin kaynağı olan yapılardır. 1. ve 2. faringeal ark FA1-FA2 olarak anılır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-brankio_oto_renal_sendrom",
+    "term": "Brankio-oto-renal sendrom",
+    "aliases": [
+      "BOR",
+      "Branchio-oto-renal sendrom"
+    ],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.34",
+    "definition": "Faringeal ark anomalilerine örnektir; işitme kaybı, preauriküler çukur, brankiyal fistül ve renal displaziyle karakterizedir. EYA1 geni mutasyonları neden olur.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-preaurikuler_cukur",
+    "term": "Preaurikuler çukur",
+    "aliases": [
+      "Preaurikuler pit"
+    ],
+    "category": "patoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.34",
+    "definition": "Kulak önünde yerleşen küçük çukurdur. Brankio-oto-renal sendromun bulgularından biridir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-brankiyal_fistul",
+    "term": "Brankiyal fistül",
+    "aliases": [
+      "Brankial fistül"
+    ],
+    "category": "patoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.34",
+    "definition": "Faringeal ark kalıntısına bağlı fistüldür. Brankio-oto-renal sendromda işitme kaybı, preaurikuler çukur ve renal displaziyle birlikte görülür.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-goldenhar_sendromu",
+    "term": "Goldenhar sendromu",
+    "aliases": [],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.35",
+    "definition": "Otozomal dominant kalıtılır; 1. ve 2. faringeal arkın anormal morfogenezi ile karakterizedir. Dış kulak, orta kulak, mandibula, temporomandibular eklem anomalileri ve asimetrik yüz bulguları vardır; kalp, böbrek ve SSS anomalileri eşlik edebilir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-frontonazal_kabarti",
+    "term": "Frontonazal kabartı",
+    "aliases": [],
+    "category": "anatomi",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.36",
+    "definition": "Dördüncü haftada oluşan yüz taslaklarından biridir; alın, burun ucu ve burun kökünü oluşturur.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-maksiller_kabarti",
+    "term": "Maksiller kabartı",
+    "aliases": [],
+    "category": "anatomi",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.36",
+    "definition": "Dördüncü haftada oluşan yüz taslaklarından biridir; üst yanak ve üst dudağı oluşturur.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-mandibular_kabarti",
+    "term": "Mandibular kabartı",
+    "aliases": [],
+    "category": "anatomi",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.36",
+    "definition": "Dördüncü haftada oluşan yüz taslaklarından biridir; alt dudak, alt yanak ve çeneyi oluşturur.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-nazal_kabartilar",
+    "term": "Nazal kabartılar",
+    "aliases": [
+      "Lateral ve medial nazal kabartılar"
+    ],
+    "category": "anatomi",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.36",
+    "definition": "Lateral ve medial nazal kabartılar burun yapılarını oluşturur.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-frontonazal_displazi",
+    "term": "Frontonazal displazi",
+    "aliases": [
+      "FND"
+    ],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.37",
+    "definition": "Nöral krista ve mezenkimal hücre göçündeki gecikmelere bağlı gelişen en önemli yüz anomalilerinden biridir. Klinik fenotip değişkendir: yalnız hipertelorizm gibi hafif bulgular ya da burun, dudak, damak ve alnı içine alan orta hat yarıkları görülebilir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-kraniyofrontonazal_sendrom",
+    "term": "Kraniyofrontonazal sendrom",
+    "aliases": [],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.38",
+    "definition": "X'e bağlı kalıtılır; EPHB1 geni mutasyonları neden olur. Hipertelorizm, koronal sinostoz, brakisefali, burun ucunda yarık ve eklem anomalileriyle karakterizedir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-treacher_collins_sendromu",
+    "term": "Treacher Collins sendromu",
+    "aliases": [
+      "Treacher Collins-Franceschetti 1 sendromu",
+      "TCS"
+    ],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.39",
+    "definition": "Treacher Collins-Franceschetti 1 sendromudur; TCOF1 mutasyonuyla gelişir ve otozomal dominant kalıtılır. Yarık damak, işitme kaybı, mandibula ve zigomatik kompleks hipoplazisi ve downslanting palpebral aralıkla karakterizedir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-downslanting_palpebral_aralik",
+    "term": "Downslanting palpebral aralık",
+    "aliases": [],
+    "category": "patoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.39",
+    "definition": "Göz kapağı aralığının dış ucunun aşağı doğru eğimli olmasıdır. Treacher Collins sendromunun bulgularından biridir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-kraniyosinostoz",
+    "term": "Kraniyosinostoz",
+    "aliases": [],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.40",
+    "definition": "Bir veya daha fazla kafatası sütürünün erken kapanmasıdır; yenidoğan ya da erken bebeklik döneminde anormal kafatası yapısıyla dikkat çeker. Primer ya da sekonder, izole ya da sendromik olabilir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-primer_kraniyosinostoz",
+    "term": "Primer kraniyosinostoz",
+    "aliases": [],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.40",
+    "definition": "Kraniyal sütürlerin genetik etkenlerden dolayı erken kapandığı kraniyosinostozdur.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-sekonder_kraniyosinostoz",
+    "term": "Sekonder kraniyosinostoz",
+    "aliases": [],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.40",
+    "definition": "Erken sütür kapanmasının metabolik hastalıklar, hematolojik hastalıklar, MSS kusurları ve teratojenik kaynaklı hastalıklar sonucu geliştiği kraniyosinostozdur.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-sagital_kraniyosinostoz",
+    "term": "Sagital kraniyosinostoz",
+    "aliases": [],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.42",
+    "definition": "En sık gözlenen izole kraniyosinostoz tipidir; erkek/kız oranı 3,5/1'dir. Dar ve uzun kafatası (skafosefali, dolikosefali, tekne şeklinde kafa) oluşur.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-koronal_kraniyosinostoz",
+    "term": "Koronal kraniyosinostoz",
+    "aliases": [],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.43",
+    "definition": "İkinci en sık görülen kraniyosinostoz tipidir. Bilateral olduğunda kısa ve geniş kafatasına (brakisefali), unilateral olduğunda diyagonal kafatası deformasyonuna (plajiyosefali) yol açar.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-plajiyosefali",
+    "term": "Plajiyosefali",
+    "aliases": [
+      "Plajyosefali"
+    ],
+    "category": "patoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.43",
+    "definition": "Unilateral koronal kraniyosinostozda görülen diyagonal kafatası deformasyonudur. Slaytta plajyosefali diye yazılmıştır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-dolikosefali",
+    "term": "Dolikosefali",
+    "aliases": [],
+    "category": "patoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.42",
+    "definition": "Sagital kraniyosinostozda görülen dar-uzun kafatası yapısına verilen adlardan biridir; skafosefali ve tekne şekilli kafa ile aynı görünümü anlatır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-metopik_sutur",
+    "term": "Metopik sütür",
+    "aliases": [],
+    "category": "anatomi",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.44",
+    "definition": "Erken kapanması trigonosefaliye yol açan sütürdür.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-trilobarsefali",
+    "term": "Trilobarsefali",
+    "aliases": [
+      "Yonca yaprağı kafatası",
+      "Pansinostoz"
+    ],
+    "category": "patoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.44",
+    "definition": "Yonca yaprağı kafatası ya da pansinostoz olarak da anılır; antenatal incelemede belirlenebilir. Slayta göre FGFR3 gen mutasyon analizi yapılmalıdır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-aksiyel_iskelet",
+    "term": "Aksiyel iskelet",
+    "aliases": [],
+    "category": "anatomi",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.45",
+    "definition": "Kranium, kolumna vertebralis, kostalar ve sternumdan oluşan, somitlerden köken alan iskelet bölümüdür.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-appendikuler_iskelet",
+    "term": "Appendiküler iskelet",
+    "aliases": [],
+    "category": "anatomi",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.45",
+    "definition": "Pelvis, omuz kavşağı ve ekstremite kemiklerinden oluşur; lateral plak mezoderme yerleşmiş mezenkimal hücrelerden köken alır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-iskelet_displazisi",
+    "term": "İskelet displazisi",
+    "aliases": [],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.47",
+    "definition": "İskeletin yapı ve şekil anomalilerine yol açan, karmaşık bir grup, sıklıkla kötü prognozlu kemik gelişim patolojileridir. Sıklığı 1/5000'dir; büyük çoğunluğu genetik kökenlidir ve genelde de novo mutasyona bağlıdır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-orantisiz_boy_kisaligi",
+    "term": "Orantısız boy kısalığı",
+    "aliases": [],
+    "category": "patoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.48",
+    "definition": "İskelet displazilerinin önde gelen bulgusudur; ekstremitelerde kısalıkla birlikte olabilir ve çocukluk döneminde belirginleşir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-akondroplazi",
+    "term": "Akondroplazi",
+    "aliases": [],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.51",
+    "definition": "Kalıtsal iskelet displazileri içinde en sık görülenidir. FGFR3 mutasyonu (%95'inde G380R) ile büyüme plağındaki artmış sinyal iletimi sonucu gelişir; otozomal dominant geçişli olsa da çoğu yeni mutasyondur.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-hipokondroplazi",
+    "term": "Hipokondroplazi",
+    "aliases": [],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.55",
+    "definition": "Akondroplazinin hafif şeklidir; FGFR3 mutasyonuyla (N540K sık) gelişir ve otozomal dominant kalıtılır. Bulgular 2-4 yaş arasında belirginleşir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-platispondili",
+    "term": "Platispondili",
+    "aliases": [],
+    "category": "patoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.56",
+    "definition": "Vertebra cisimlerinin yassılaşmasıdır; tanatoforik displazide ileri derecede görülür.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-mikromeli",
+    "term": "Mikromeli",
+    "aliases": [],
+    "category": "patoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.56",
+    "definition": "Ekstremitelerin kısalığıdır; tanatoforik displazinin en belirgin bulgularından biri olarak anlatılır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-tip_2_kollajenopatiler",
+    "term": "Tip 2 kollajenopatiler",
+    "aliases": [],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.57",
+    "definition": "COL2A1 mutasyonlarıyla gelişen, letal ya da letal olmayan iskelet displazileri grubudur. Letal olanlar akondrogenezis tip 2, hipokondrogenezis ve platispondilik displazi; letal olmayanlar Stickler sendromu, SED congenita, Kniest displazi ve benzerleridir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-akondrogenezis_tip_2",
+    "term": "Akondrogenezis tip 2",
+    "aliases": [],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.58",
+    "definition": "Otozomal dominant kalıtılan letal iskelet displazisidir; sıklığı 1/40.000'dir. Omurga, kostalar ve ekstremiteler ileri derecede hipoplaziktir; ileri pulmoner hipoplazi ölüme neden olur.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-hipokondrogenezis",
+    "term": "Hipokondrogenezis",
+    "aliases": [],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.59",
+    "definition": "Çok kısa boylu hidropik yenidoğan fenotipiyle seyreden iskelet displazisidir. Kemik bulguları akondrogenezise göre daha hafiftir; olguların çoğu solunum yetmezliğinden yenidoğan döneminde kaybedilir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-spondiloepifizyal_displazi_congenita",
+    "term": "Spondiloepifizyal displazi congenita",
+    "aliases": [
+      "SEDC",
+      "SED congenita"
+    ],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.60",
+    "definition": "Otozomal dominant kalıtılan; orantısız boy kısalığı ve doğumda epifizlerde gecikmiş ossifikasyonla karakterize displazidir. Gövde kısadır, odontoid hipoplazi sık görülür.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-odontoid_hipoplazi",
+    "term": "Odontoid hipoplazi",
+    "aliases": [],
+    "category": "patoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.60",
+    "definition": "Aksis vertebranın odontoid çıkıntısının az gelişmesidir; spondiloepifizyal displazi congenitada sık görülen anomalidir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-rizomelik_kisalik",
+    "term": "Rizomelik kısalık",
+    "aliases": [],
+    "category": "patoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.60",
+    "definition": "Ekstremitenin kök (proksimal) kesiminin kısalığıdır. SEDC bulguları arasında sayılır; akondroplazide ekstremitelerin proksimal kesimleri kısadır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-fibrokondrogenezis",
+    "term": "Fibrokondrogenezis",
+    "aliases": [],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.61",
+    "definition": "Otozomal resesif kalıtılan letal iskelet displazisidir; slayta göre COL1A1 ve COL1A2 mutasyonuyla gelişir. Belirgin gözler, düz yüz, küçük burun, ileri derecede kısa uzun kemikler, polihidramniyoz öyküsü, hidrops ve hepatosplenomegali görülür.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-atelostenogenezis",
+    "term": "Atelostenogenezis",
+    "aliases": [],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.62",
+    "definition": "FLNB mutasyonlarıyla gelişen displazidir. Humerus ve femur distalinde hipoplazi ve el kemiklerinde ossifikasyon eksikliği görülür; tip 2 neonatal letaldir, diastrofik displaziye benzer ama daha ağırdır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-diastrofik_displazi",
+    "term": "Diastrofik displazi",
+    "aliases": [],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.63",
+    "definition": "SLC26A2 mutasyonlarıyla gelişen displazidir. Kısa ekstremiteler, normal ölçülerde kafatası, skolyoz, lordoz, kifoz ve osteoartrit bulgularıyla karakterizedir; zeka normaldir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-dentinogenezis_imperfekta",
+    "term": "Dentinogenezis imperfekta",
+    "aliases": [],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.64",
+    "definition": "Osteogenezis imperfektanın klinik bulgularından biridir; kemik kırılganlığına eşlik eden diş anomalisidir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-mavi_sklera",
+    "term": "Mavi sklera",
+    "aliases": [],
+    "category": "patoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.66",
+    "definition": "Osteogenezis imperfektada görülen sklera maviliğidir; ayırıcı tanıda önemlidir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-sillence_siniflamasi",
+    "term": "Sillence sınıflaması",
+    "aliases": [],
+    "category": "tani",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.65",
+    "definition": "Osteogenezis imperfektayı dört tipe ayıran sınıflamadır. Genişletilmiş sınıflamada 15 tip, 2009 sınıflamasında beş ana sınıf tanımlanır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-tip_iii_i_kollajen_orani",
+    "term": "Tip III/I kollajen oranı",
+    "aliases": [],
+    "category": "tani",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.70",
+    "definition": "Osteogenezis imperfektada deri biyopsisi fibroblast kültürlerinde kollajenin biyokimyasal analiziyle belirlenen orandır; oran yüksektir ve kesin tanıda kullanılır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-mikrofibril",
+    "term": "Mikrofibril",
+    "aliases": [],
+    "category": "anatomi",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.71",
+    "definition": "Elastinin temel yapısını oluşturan, elastik olmayan dokularda destek görevi gören yapılardır. Fibrillin 1 glikoproteini mikrofibrillerin yapısına girer.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-lens_ektopisi",
+    "term": "Lens ektopisi",
+    "aliases": [
+      "Lens dislokasyonu"
+    ],
+    "category": "patoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.72",
+    "definition": "Göz merceğinin yerinden kaymasıdır. Marfan sendromunda yenidoğanda önde gelen bulgulardandır; lens dislokasyonu erken çocukluk döneminde daha sık görülür.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-aort_dilatasyonu",
+    "term": "Aort dilatasyonu",
+    "aliases": [],
+    "category": "patoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.72",
+    "definition": "Aortun genişlemesidir. Marfan sendromunun iskelet anomalileri, mitral valv prolapsusu ve göz bozukluklarıyla birlikte görülen kardiyovasküler bulgusudur.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-mitral_valv_prolapsusu",
+    "term": "Mitral valv prolapsusu",
+    "aliases": [],
+    "category": "patoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.72",
+    "definition": "Mitral kapağın sol atriyuma doğru sarkmasıdır. Marfan sendromunda aort dilatasyonu ve göz bozukluklarıyla birlikte görülür.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-pektus_ekskavatum",
+    "term": "Pektus ekskavatum",
+    "aliases": [
+      "Pectus excavatum"
+    ],
+    "category": "patoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.73",
+    "definition": "Göğüs ön duvarının içe çökük olmasıdır; Marfan sendromunda uzun boy ve aort dilatasyonu ile birlikte anılır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-alelik_heterojenite",
+    "term": "Alelik heterojenite",
+    "aliases": [
+      "Allelik heterojenite"
+    ],
+    "category": "genetik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.74",
+    "definition": "Aynı lokus içinde değişik mutasyonların aynı hastalığa yol açmasıdır. Marfan sendromunda FBN1 mutasyonlarıyla tanıyı doğrulamayı güçleştirir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-lokus_heterojenite",
+    "term": "Lokus heterojenite",
+    "aliases": [
+      "Lokus heterojenitesi"
+    ],
+    "category": "genetik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.74",
+    "definition": "İki veya daha fazla lokustaki mutasyonların aynı fenotipi oluşturmasıdır. Primer mikrosefalide yedi MCPH lokusu bu duruma örnektir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-muskuler_distrofi",
+    "term": "Müsküler distrofi",
+    "aliases": [
+      "Muskuler distrofi"
+    ],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.75",
+    "definition": "Kalıtım modeli farklı hastalıkların bütünüdür. Çocukluk çağında en sık biçimi Duchenne/Becker distrofisidir; erişkinlerde miyotonik distrofi daha sıktır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-duchenne_muskuler_distrofi",
+    "term": "Duchenne müsküler distrofi",
+    "aliases": [
+      "DMD"
+    ],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.80",
+    "definition": "X'e bağlı resesif kalıtılan, çocukluk çağında en sık ve en ağır seyirli müsküler distrofidir. Tam ya da tama yakın distrofin eksikliğiyle gelişir; 100.000 canlı erkek doğumda 13-33 görülür.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-becker_muskuler_distrofi",
+    "term": "Becker müsküler distrofi",
+    "aliases": [
+      "BMD"
+    ],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.83",
+    "definition": "Duchenne'e göre daha geç başlayan, daha yavaş ilerleyen ve daha hafif seyreden distrofindir; anormal molekül ağırlıklı distrofin vardır. Kardiyak tutulum daha ciddidir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-miyotonik_distrofi",
+    "term": "Miyotonik distrofi",
+    "aliases": [],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.75",
+    "definition": "Müsküler distrofiler içinde erişkinlerde daha sık görülen biçimdir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-gowers_belirtisi",
+    "term": "Gowers belirtisi",
+    "aliases": [
+      "Gowers belirtisi pozitif"
+    ],
+    "category": "tani",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.82",
+    "definition": "Duchenne müsküler distrofide pozitif olan belirtidir: çocuk yerden kalkarken önce dört ekstremiteyle yerden güç alır, sonra ellerini bacaklarında yukarı ilerleterek dik konuma çıkar. Kalça ekstansörlerindeki belirgin güçsüzlükten kaynaklanır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-psodohipertrofi",
+    "term": "Psödohipertrofi",
+    "aliases": [
+      "Pseudohipertrofi"
+    ],
+    "category": "patoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.85",
+    "definition": "Kasların güçsüz olmasına rağmen iri görünmesidir. Becker müsküler distrofinin klinik bulguları arasında sayılır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-ordekvari_yuruyus",
+    "term": "Ördekvari yürüyüş",
+    "aliases": [
+      "Ördek yürüyüşü"
+    ],
+    "category": "tani",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.85",
+    "definition": "Becker müsküler distrofinin klinik bulguları arasında pelvik güçsüzlük, merdiven çıkmada ve koşmada güçsüzlükle birlikte sayılan yürüyüş biçimidir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-manifesting_heterozigosite",
+    "term": "Manifesting heterozigosite",
+    "aliases": [],
+    "category": "genetik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.79",
+    "definition": "X'e bağlı resesif hastalıkta heterozigot kadında hastalığın ortaya çıkmasıdır. Kız çocuklarda DMD'nin nedenlerinden biri olarak sağlam X'in tesadüfen inaktive olması düşünülür.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-cerceve_disi_delesyon",
+    "term": "Çerçeve dışı delesyon",
+    "aliases": [
+      "Out-of-frame delesyon"
+    ],
+    "category": "genetik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.78",
+    "definition": "Dystrophin transkriptinde okuma çerçevesini bozan delesyondur. Görselde ekzon 45-54 delesyonu stop kodonuna yol açar, kısalmış distrofin oluşur ve DMD ortaya çıkar.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-cerceve_ici_delesyon",
+    "term": "Çerçeve içi delesyon",
+    "aliases": [
+      "In-frame delesyon"
+    ],
+    "category": "genetik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.78",
+    "definition": "Dystrophin transkriptinde okuma çerçevesini koruyan delesyondur. Görselde ekzon 44-54 eksikliği BMD tipi distrofin ve BMD benzeri fenotip oluşturur.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-mr_id",
+    "term": "MR (ID)",
+    "aliases": [
+      "Mental retardasyon",
+      "ID"
+    ],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.26",
+    "definition": "Mental retardasyon, yani zihinsel yetersizlik anlamında kullanılan kısaltmadır. Slaytta gelişme geriliği ve epilepsiyle birlikte beyin malformasyonlarının önemli sonuçları arasında anılır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-hpe",
+    "term": "HPE",
+    "aliases": [],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.23",
+    "definition": "Holoprozensefali kısaltmasıdır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-scd",
+    "term": "SCD",
+    "aliases": [],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.31",
+    "definition": "Spondilokostal dizostozis kısaltmasıdır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-fnd",
+    "term": "FND",
+    "aliases": [],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.37",
+    "definition": "Frontonazal displazi kısaltmasıdır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-bor",
+    "term": "BOR",
+    "aliases": [],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.34",
+    "definition": "Brankio-oto-renal sendrom kısaltmasıdır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-dmd",
+    "term": "DMD",
+    "aliases": [],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.76",
+    "definition": "Duchenne müsküler distrofi kısaltmasıdır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-bmd",
+    "term": "BMD",
+    "aliases": [],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.76",
+    "definition": "Becker müsküler distrofi kısaltmasıdır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-oi",
+    "term": "OI",
+    "aliases": [
+      "Oİ"
+    ],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.64",
+    "definition": "Osteogenezis imperfekta kısaltmasıdır. Slaytta Oİ olarak yazılmıştır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-sedc",
+    "term": "SEDC",
+    "aliases": [],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.60",
+    "definition": "Spondiloepifizyal displazi congenita kısaltmasıdır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-tf",
+    "term": "TF",
+    "aliases": [
+      "Transkripsiyon faktörü"
+    ],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 1)BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ s.6",
+    "definition": "Transkripsiyon faktörü kısaltmasıdır; slaytta retinoik asit ve MITF gibi gen düzenleyiciler için kullanılır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
   }
 ]

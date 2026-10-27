@@ -1,0 +1,1508 @@
+{
+ "id": "k2-08-beyin-ve-iskelet-sistemi-gelisimi-genetigi",
+ "sira": 8,
+ "kurul": 1,
+ "ders": "Tıbbi Genetik",
+ "konu": "Beyin ve İskelet Sistemi Gelişimi Genetiği",
+ "ogretim_uyesi": "Dr. Öğr. Üyesi Serap Arslan",
+ "tarih": "2026-10-28",
+ "kazanimlar": [
+  {
+   "no": 1,
+   "metin": "Öğrenci, insan embriyosu gelişiminin genetik ve çevresel belirleyicilerini, model organizmaları ve morfogen kavramını açıklar.",
+   "sorular": [
+    {
+     "id": "k2-08-beyin-ve-iskelet-sistemi-gelisimi-genetigi-q01",
+     "kazanim": 1,
+     "zorluk": "kolay",
+     "soru": "Gelişim genetiğinde detaylı olarak çalışılan ilk hayvan modeli aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Xenopus laevis (kurbağa)",
+      "B": "Caenorhabditis elegans (nematod)",
+      "C": "Danio rerio (zebra balığı)",
+      "D": "Drosophila melanogaster (meyve sineği)",
+      "E": "Lytechinus variegatus (deniz kestanesi)"
+     },
+     "dogru": "D",
+     "aciklama": "Derste Drosophila detaylı olarak çalışılan ilk hayvan modeli olarak verilir; genetik yapısı basit olduğu için mutasyon taramasına uygundur (sayfa 4).",
+     "sik_aciklamalari": {
+      "A": "Xenopus laevis kurbağası, anne dışında embriyo geliştirdiği için omurgalı model organ sistemi olarak kullanılır. İlk detaylı çalışılan hayvan modeli olma özelliği ise Drosophila'ya aittir (sayfa 4).",
+      "B": "Caenorhabditis elegans, her canlıda aynı biçimde ilerleyen stereotipik bir gelişimsel programa sahip nematoddur. Bu özelliği ile kullanılır, ancak detaylı çalışılan ilk hayvan modeli olarak derste meyve sineği anılır (sayfa 4).",
+      "C": "Zebra balığı kolay üretilebilmesi ve genetik müdahaleye uygunluğu nedeniyle sıklıkla tercih edilen bir omurgalı modeldir. İlk detaylı çalışılan model olarak derste meyve sineği verildiği için bu şık yanlıştır (sayfa 4).",
+      "D": "Meyve sineği Drosophila, genetik yapısı basit olduğundan mutasyon taraması, genetik analiz ve manipülasyona uygundur. Erken embriyonik gelişimin moleküler mekanizmalarının çoğu bu model sayesinde saptandığı için doğru cevaptır (sayfa 4).",
+      "E": "Deniz kestanesi gastrulasyon sürecinin incelenmesinde önemli bir model organizmadır. Detaylı çalışılan ilk hayvan modeli ise Drosophila olduğundan bu şık doğru değildir (sayfa 4)."
+     },
+     "bilgi": [
+      5,
+      6
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 4,
+      "alinti": "Drosophila detaylı olarak çalışılan ilk hayvan modeli,"
+     }
+    },
+    {
+     "id": "k2-08-beyin-ve-iskelet-sistemi-gelisimi-genetigi-q02",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Morfogenlerle ilgili aşağıdaki ifadelerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Üretildikleri hücrenin içinde kalır ve diğer hücrelere yayılmaz.",
+      "B": "Üretildikleri bölgede sinyal merkezi oluşturur ve merkeze yakın hücrelerde konsantrasyonları yüksektir.",
+      "C": "Yalnızca dış çevre faktörlerine yanıt veren, genetik kontrolü olmayan moleküllerdir.",
+      "D": "Yalnızca retinoik asit morfogen olarak kabul edilir.",
+      "E": "Konsantrasyonları sinyal merkezinden uzak hücrelerde yüksek, yakın hücrelerde düşüktür."
+     },
+     "dogru": "B",
+     "aciklama": "Morfogen hücrelerce üretilip diğer hücrelere yayılan bir sinyal molekülüdür; sinyal merkezine yakın hücrelerde konsantrasyonu yüksek, uzakta düşüktür (sayfa 6).",
+     "sik_aciklamalari": {
+      "A": "Morfogen, hücreler tarafından üretilip diğer hücrelere yayılarak bir model organize eden maddedir. Yayılmadığını söyleyen bu ifade tanıma ters düştüğü için yanlıştır (sayfa 6).",
+      "B": "Morfogenler üretildikleri bölgede sinyal merkezi oluşturur ve konsantrasyon gradiyenti sayesinde komşu hücrelere konumsal bilgi taşır. Merkeze yakın hücrelerde yüksek, uzakta düşük olmaları nedeniyle doğru seçenektir (sayfa 6).",
+      "C": "Morfogenez, organların uygun büyüklük, şekil ve yerde oluşmasını sağlayan süreçtir ve iç ile dış faktörlere karşı morfogenler aracılığıyla gerçekleşir. Genetik kontrolden bağımsız olduklarını söylemek yanlıştır (sayfa 5).",
+      "D": "Retinoik asit memelilerde en iyi bilinen morfogenlerden biridir ve Hox genlerinin ifadesini düzenler. Ancak FGF, Wnt, Sonic hedgehog ve TGF/BMP aileleri de morfogendir, bu yüzden yalnızca retinoik asit demek yanlıştır (sayfa 6).",
+      "E": "Gradiyentin yönü tersine çevrilmiştir. Morfogen sinyal merkezinde üretildiği için merkeze yakın hücrelerde yüksek, uzak hücrelerde düşük konsantrasyonda bulunur ve hücreler bu farka göre farklı davranır (sayfa 6)."
+     },
+     "bilgi": [
+      11,
+      12
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 6,
+      "alinti": "Sinyal merkezine yakın hücrelerde konsantrasyonları yüksek, uzak hücrelerde ise düşüktür"
+     }
+    },
+    {
+     "id": "k2-08-beyin-ve-iskelet-sistemi-gelisimi-genetigi-q03",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Memelilerde en iyi bilinen morfogenler arasında aşağıdakilerden hangisi sayılmaz?",
+     "secenekler": {
+      "A": "TGF/BMP ailesi",
+      "B": "Retinoik asit",
+      "C": "Sonic hedgehog (Shh)",
+      "D": "Wnt ailesi",
+      "E": "HOX gen ailesi"
+     },
+     "dogru": "E",
+     "aciklama": "Derste memelilerin en iyi bilinen morfogenleri retinoik asit, FGF, Wnt, Shh ve TGF/BMP aileleridir; HOX genleri ise hücrenin konumsal kimliğini belirleyen homeobox genleridir (sayfa 6, 10).",
+     "sik_aciklamalari": {
+      "A": "Yanlış seçenek; ifade doğrudur: TGF ailesi morfogen olarak dorsoventral şekillenmede ve bazı organların oluşumunda görev alır (sayfa 6). BMP de bu ailenin üyesidir.",
+      "B": "Yanlış seçenek; ifade doğrudur: retinoik asit memelilerde en iyi bilinen morfogenlerden biridir (sayfa 6). Transkripsiyon faktörü gibi davranır ve Hox genlerinin ifadesini düzenler.",
+      "C": "Yanlış seçenek; ifade doğrudur: Shh erken embriyonik gelişim döneminde önemli bir morfogendir (sayfa 6). Sinyal merkezi oluşturup komşu hücrelere konumsal bilgi taşır.",
+      "D": "Yanlış seçenek; ifade doğrudur: Wnt, memelilerde en iyi bilinen morfogen ailelerinden biridir (sayfa 6). FGF, Shh ve TGF/BMP ile birlikte embriyonik şekillenmede rol alır.",
+      "E": "HOX genleri hücrelerin pozisyonel kimliğini belirleyen homeobox genleridir. İfadeleri retinoik asit gibi morfogenler tarafından düzenlenir, kendileri morfogen sayılmadığı için doğru cevap budur (sayfa 10)."
+     },
+     "bilgi": [
+      13,
+      14
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 6,
+      "alinti": "FGF,Wnt, Sonic hedgehog(Shh) ve TGF/BMP aileleridir"
+     }
+    },
+    {
+     "id": "k2-08-beyin-ve-iskelet-sistemi-gelisimi-genetigi-q04",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Memeli morfogenlerinden hangisi transkripsiyon faktörü gibi davranarak Hox genlerinin ifadesini düzenler?",
+     "secenekler": {
+      "A": "Sonic hedgehog (Shh)",
+      "B": "TGF ailesi",
+      "C": "Retinoik asit",
+      "D": "Wnt ailesi",
+      "E": "FGF ailesi"
+     },
+     "dogru": "C",
+     "aciklama": "Derste retinoik asit, transkripsiyon faktörü gibi davranan ve Hox genlerinin ekspresyonunu düzenleyen morfogen olarak verilir (sayfa 6).",
+     "sik_aciklamalari": {
+      "A": "Sonic hedgehog erken embriyonik gelişimde önemli bir morfogendir ve sinyal merkezi oluşturur. Hox ifadesini düzenleyen ve transkripsiyon faktörü gibi davranan morfogen derste retinoik asittir (sayfa 6).",
+      "B": "TGF ailesi dorsoventral şekillenmede ve bazı organların oluşumunda görev alan bir morfogen grubudur. Hox genlerinin ifadesini düzenleme işlevi derste retinoik asit için verildiğinden bu şık yanlıştır (sayfa 6).",
+      "C": "Retinoik asit morfogen olmasının yanında transkripsiyon faktörü gibi davranır ve Hox genlerinin ekspresyonunu düzenler. Sorunun tarif ettiği hem düzenleyici rol hem de Hox bağlantısı yalnız bu seçenekte bulunur (sayfa 6).",
+      "D": "Wnt, memelilerde en iyi bilinen morfogen ailelerinden biridir. Hox genlerinin ifadesini düzenleyen morfogen olarak derste retinoik asit gösterildiği için Wnt doğru cevap olmaz (sayfa 6).",
+      "E": "FGF ailesi de en iyi bilinen morfogenler arasında sayılır. Transkripsiyon faktörü gibi davranarak Hox ifadesini düzenleyen morfogen retinoik asit olduğundan bu seçenek yanlıştır (sayfa 6)."
+     },
+     "bilgi": [
+      13
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 6,
+      "alinti": "Retinoik asit→TF gibi davranır ve Hox genlerinin ekspresyonu"
+     }
+    },
+    {
+     "id": "k2-08-beyin-ve-iskelet-sistemi-gelisimi-genetigi-q05",
+     "kazanim": 1,
+     "zorluk": "zor",
+     "soru": "Model organizma ve özellik eşleştirmelerinden hangisi YANLIŞTIR?",
+     "secenekler": {
+      "A": "Drosophila: anne dışında embriyo geliştirdiği için kullanılan vertebralı model sistemi",
+      "B": "Deniz kestanesi: gastrulasyon çalışmalarında önemli model organizma",
+      "C": "Caenorhabditis elegans: stereotipik gelişimsel programa sahip model",
+      "D": "Zebra balığı: kolay üretilebilme ve genetik müdahale kolaylığı nedeniyle tercih edilen model",
+      "E": "Kurbağa ve civciv: anne dışında embriyo geliştirdikleri için kullanılan vertebralı model sistemi"
+     },
+     "dogru": "A",
+     "aciklama": "Anne dışında embriyo geliştirme özelliğiyle vertebralı model olarak kullanılanlar kurbağa ve civcivdir; Drosophila omurgasız bir meyve sineğidir (sayfa 3-4).",
+     "sik_aciklamalari": {
+      "A": "Drosophila meyve sineğidir ve genetik yapısının basitliği ile erken embriyonik mekanizmaların çözülmesinde kullanılan ilk detaylı modeldir. Vertebralı model olarak kurbağa ve civciv anılır, bu nedenle bu eşleştirme yanlıştır (sayfa 3-4).",
+      "B": "Yanlış seçenek; ifade doğrudur: deniz kestanesi gastrulasyon sürecinin incelenmesinde önemli bir model organizmadır (sayfa 4). Bu eşleştirme derste aynen verilir.",
+      "C": "Yanlış seçenek; ifade doğrudur: Caenorhabditis elegans her gelişim evresi önceden belirli olan stereotipik bir programa sahip nematoddur (sayfa 4). Bu özellik onu model yapar.",
+      "D": "Yanlış seçenek; ifade doğrudur: zebra balığı kolay üretilebildiği ve genetik müdahaleye elverişli olduğu için sıklıkla tercih edilir (sayfa 4). Eşleştirme derse uygundur.",
+      "E": "Yanlış seçenek; ifade doğrudur: kurbağa ve civciv anne dışında embriyo geliştirdikleri için vertebralı model organ sistemi olarak kullanılır (sayfa 4). Embriyo gözlemini kolaylaştırır."
+     },
+     "bilgi": [
+      7,
+      8
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 4,
+      "alinti": "Kurbağa ve civciv; anne dışında embriyo geliştirme özellikleri nedeniyle vertebralı model organ sistemi olarak kullanılır"
+     }
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 2,
+   "metin": "Öğrenci, homeobox ve HOX genlerinin özelliklerini açıklar ve gelişimi etkileyen transkripsiyon faktörü genlerini (PAX3, PAX6, MITF, TBX5, SOX9, GLI3, TWIST, TCOF1 vb.) ilişkili sendromlarla eşleştirir.",
+   "sorular": [
+    {
+     "id": "k2-08-beyin-ve-iskelet-sistemi-gelisimi-genetigi-q06",
+     "kazanim": 2,
+     "zorluk": "kolay",
+     "soru": "PAX6 geninde fonksiyon kaybıyla giden heterozigot mutasyonlar hangi tabloya yol açar?",
+     "secenekler": {
+      "A": "Nail-patella sendromu",
+      "B": "Treacher Collins sendromu",
+      "C": "Greig sendromu",
+      "D": "Aniridi (iris yokluğu)",
+      "E": "Holt-Oram sendromu"
+     },
+     "dogru": "D",
+     "aciklama": "PAX6 göz gelişimini düzenleyen korunmuş bir transkripsiyon faktörü genidir; fonksiyon kaybı mutasyonları heterozigot durumda aniridiye yol açar (sayfa 15).",
+     "sik_aciklamalari": {
+      "A": "Nail-patella sendromu LMX1B geni mutasyonu ile ilişkilidir. PAX6 ile ilgili klinik tablo ise iris yokluğudur, bu yüzden bu seçenek doğru olmaz (sayfa 14-15).",
+      "B": "Treacher Collins sendromu TCOF1 geninin mutasyonu ile gelişen ve yüz kemiklerini etkileyen bir sendromdur. PAX6 mutasyonunun karşılığı ise aniridi olduğundan bu şık yanlıştır (sayfa 14-15).",
+      "C": "Greig sendromu GLI3 geni mutasyonu ile ilişkili bir sendromdur. PAX6 mutasyonu iris yokluğuna yol açtığı için Greig sendromu doğru cevap olamaz (sayfa 14-15).",
+      "D": "PAX6 göz gelişimini düzenleyen korunmuş bir gendir. Heterozigot fonksiyon kaybı mutasyonlarında iris yokluğu yani aniridi gibi göz anomalileri görüldüğü için doğru cevaptır (sayfa 15).",
+      "E": "Holt-Oram sendromu TBX5 geninin mutasyonuna bağlı gelişen bir sendromdur. PAX6 mutasyonlarının sonucu göz bulgularıdır, bu nedenle bu şık yanlıştır (sayfa 14-15)."
+     },
+     "bilgi": [
+      34,
+      52
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 15,
+      "alinti": "Pax6 geninde fonksiyon kaybıyla giden mutasyonlar heterozigot durumda iken aniridi yada iris yokluğu"
+     }
+    },
+    {
+     "id": "k2-08-beyin-ve-iskelet-sistemi-gelisimi-genetigi-q07",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Aşağıdaki gen ve sendrom eşleştirmelerinden hangisi YANLIŞTIR?",
+     "secenekler": {
+      "A": "TWIST: Saethre-Chotzen sendromu",
+      "B": "TBX5: Treacher Collins sendromu",
+      "C": "MITF: Waardenburg sendromu tip 2",
+      "D": "GLI3: Greig sendromu",
+      "E": "LMX1B: Nail-patella sendromu"
+     },
+     "dogru": "B",
+     "aciklama": "TBX5 mutasyonları Holt-Oram sendromuna yol açar; Treacher Collins sendromu ise TCOF1 geni mutasyonuna bağlıdır (sayfa 14).",
+     "sik_aciklamalari": {
+      "A": "Yanlış seçenek; ifade doğrudur: TWIST geninin mutasyonu Saethre-Chotzen sendromuna yol açar (sayfa 14). Bu gen de fenotipi etkileyen transkripsiyon faktörlerindendir.",
+      "B": "TBX5 geni Holt-Oram sendromuna neden olan transkripsiyon faktörü genidir. Treacher Collins sendromu TCOF1 mutasyonuyla gelişir, bu yüzden TBX5 ile Treacher Collins eşleştirmesi yanlıştır (sayfa 14).",
+      "C": "Yanlış seçenek; ifade doğrudur: MITF mutasyonu Waardenburg sendromu tip 2 ile ilişkilidir (sayfa 14). MITF pigment hücrelerinin gelişimi için gerekli bir transkripsiyon faktörüdür.",
+      "D": "Yanlış seçenek; ifade doğrudur: GLI3 geninin mutasyonu Greig sendromuna neden olur (sayfa 14). GLI3 gelişimi etkileyen transkripsiyon faktörü genlerinden biridir.",
+      "E": "Yanlış seçenek; ifade doğrudur: LMX1B geninin mutasyonu nail-patella sendromuna neden olur (sayfa 14). Bu gen de gelişimi etkileyen transkripsiyon faktörlerini kodlayan genler arasında yer alır ve sendromla doğru eşleşir."
+     },
+     "bilgi": [
+      41,
+      50
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 14,
+      "alinti": "Gelişimde etkili olan fenotipi etkileyen transkripsiyon faktörlerini kodlayan genler"
+     }
+    },
+    {
+     "id": "k2-08-beyin-ve-iskelet-sistemi-gelisimi-genetigi-q08",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Homeobox ile ilgili aşağıdaki ifadelerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Yalnızca Drosophila'da bulunur, memelilerde benzer gen saptanmamıştır.",
+      "B": "Hücre dışına salgılanarak komşu hücrelere sinyal ileten bir morfogendir.",
+      "C": "Mitotik hücrelerde iğ iplikçik kutuplarıyla ilişkili proteinleri şifreler.",
+      "D": "Yaklaşık 18 bazlık kısa bir dizidir ve yalnız HOX genlerinde bulunur.",
+      "E": "Genin ürettiği proteinin, başka bir geni açmak veya kapatmak üzere DNA'ya bağlanan kısmını şifreler."
+     },
+     "dogru": "E",
+     "aciklama": "Homeobox, homeotik genlerin ürettiği proteinin başka genleri açıp kapatmak için DNA'ya bağlanmasını sağlayan kısmı şifreler (sayfa 8).",
+     "sik_aciklamalari": {
+      "A": "Hox benzeri genler memelilerde de bulunmuştur ve insanda HOXA, HOXB, HOXC ve HOXD gen kümeleri vardır. Yalnızca Drosophila'ya özgü olduğunu söyleyen ifade bu nedenle yanlıştır (sayfa 10).",
+      "B": "Morfogenler hücre dışına yayılan sinyal molekülleridir. Homeobox ise genin protein ürününün DNA'ya bağlanan kısmını şifreler, yani hücre içinde işleyen bir transkripsiyon düzenleme bölgesidir (sayfa 6, 8).",
+      "C": "İğ iplikçik kutuplarıyla ilişkili proteinler MCPH genlerinin ürünleridir ve primer mikrosefaliyle ilgilidir. Homeobox'ın işlevi gen ifadesini düzenlemektir, bu nedenle bu ifade yanlıştır (sayfa 8, 28).",
+      "D": "Homeobox, HOX genlerinin tümünde bulunan 180 bp uzunluğunda ortak bir dizidir. Uzunluğu 18 değil 180 baz çiftidir, bu nedenle bu seçenek yanlıştır (sayfa 7).",
+      "E": "Homeobox, homeodomain proteinlerinin DNA'ya bağlanan bölümünü şifreleyen ortak dizidir. Bu bölüm sayesinde protein başka bir geni devreye sokar ya da devre dışı bırakır, bu yüzden ifade doğrudur (sayfa 8)."
+     },
+     "bilgi": [
+      17,
+      18
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 8,
+      "alinti": "Homeobox, genin ürettiği proteinin, başka bir geni faaliyete geçirmek veya durdurmak üzere DNA ipliği üzerine bağlanmasını sağlayan parçasını şifreler"
+     }
+    },
+    {
+     "id": "k2-08-beyin-ve-iskelet-sistemi-gelisimi-genetigi-q10",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Kraniyofasiyal ve diş gelişiminde etkili MSX ailesinden hangi genin mutasyonu familyal diş agenezisinden sorumludur?",
+     "secenekler": {
+      "A": "MSX1",
+      "B": "OTX1",
+      "C": "OTX2",
+      "D": "PAX6",
+      "E": "POU3F4"
+     },
+     "dogru": "A",
+     "aciklama": "MSX ailesi kraniyofasiyal ve diş gelişiminde etkili bir homeobox grubudur; MSX1 mutasyonları familyal diş agenezisine yol açar (sayfa 13).",
+     "sik_aciklamalari": {
+      "A": "MSX1, kraniyofasiyal ve diş gelişiminde etkili olan MSX ailesinin bir homeobox üyesidir. Mutasyonları familyal diş agenezisine yol açtığı için doğru cevaptır (sayfa 13).",
+      "B": "OTX1 beyin gelişiminde etkili genlerdendir ve mutantları serebral korteksin çeşitli bölgelerini etkileyen multipl anomalilere neden olur. Diş agenezisi ile ilişkilendirilen gen ise MSX1'dir (sayfa 12-13).",
+      "C": "OTX2 gelişim sırasında eksprese olan ve anterior kafa oluşumunda önemli olan genlerden biridir. Diş gelişimiyle ilgili olan gen ise MSX1 olduğundan bu şık yanlıştır (sayfa 12-13).",
+      "D": "PAX6 göz gelişimini düzenleyen bir transkripsiyon faktörü genidir ve mutasyonu aniridiye yol açar. Diş agenezisi sorumlusu olarak MSX1 gösterildiği için bu seçenek yanlıştır (sayfa 13, 15).",
+      "E": "POU3F4 geni mutasyonu sağırlık ve distoni ile eşleştirilir. Diş agenezisinden sorumlu olan gen MSX1 olduğundan POU3F4 doğru seçenek olamaz (sayfa 13-14)."
+     },
+     "bilgi": [
+      31,
+      32
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 13,
+      "alinti": "MSX1 mutasyonları familyal diş agenezisinden sorumlu olmaktadır"
+     }
+    },
+    {
+     "id": "k2-08-beyin-ve-iskelet-sistemi-gelisimi-genetigi-q09",
+     "kazanim": 2,
+     "zorluk": "zor",
+     "soru": "İnsanda HOXD13 geni mutasyonu bulunan 5 ailede bildirilen klinik bulgu aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Holt-Oram sendromu",
+      "B": "Kamptomelik displazi",
+      "C": "Sinpolidaktili (polisindaktili)",
+      "D": "El-ayak-genital sendromu",
+      "E": "Aniridi"
+     },
+     "dogru": "C",
+     "aciklama": "Derste HOXD13 mutasyonuna bağlı olarak 5 ailede sinpolidaktili bildirildiği belirtilir; HOXD13 polisindaktili ile eşleştirilir (sayfa 11, 14).",
+     "sik_aciklamalari": {
+      "A": "Holt-Oram sendromu TBX5 geninin mutasyonuna bağlıdır. HOXD13 mutasyonunun ailelerde gösterilen sonucu ise sinpolidaktilidir, bu yüzden bu seçenek yanlıştır (sayfa 11, 14).",
+      "B": "Kamptomelik displazi SOX9 geni mutasyonları ile ilişkilidir ve SOX9 erkek cinsiyet gelişim kusuruna da yol açar. HOXD13 ile eşleşen bulgu ise sinpolidaktilidir (sayfa 14).",
+      "C": "HOXD13 mutasyonu, parmaklarda fazlalık ve birleşme ile giden sinpolidaktili tablosuna yol açar. Derste bu bulgunun görüldüğü 5 aile bildirildiği için doğru cevaptır (sayfa 11).",
+      "D": "El-ayak-genital sendromu komşu bir gen olan HOXA13 mutasyonu ile ilişkilidir ve ekstremite ile genital organları etkiler. HOXD13 ise polisindaktili ile eşleştiği için bu şık yanlıştır (sayfa 14).",
+      "E": "Aniridi iris yokluğudur ve PAX6 geninin heterozigot fonksiyon kaybı mutasyonuyla gelişir. HOXD13 mutasyonunun karşılığı bir göz bulgusu değil ekstremite bulgusudur (sayfa 14-15)."
+     },
+     "bilgi": [
+      26,
+      44
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 11,
+      "alinti": "İnsanda HOXD13 mutasyonu sonucu sinpolidaktili görülen 5 aile rapor edilmiştir"
+     }
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 3,
+   "metin": "Öğrenci, nörulasyonu, nöral tüp defektlerini, nöral krista gelişimini ve Waardenburg sendromu tiplerini gen ve klinik bulgularıyla açıklar.",
+   "sorular": [
+    {
+     "id": "k2-08-beyin-ve-iskelet-sistemi-gelisimi-genetigi-q11",
+     "kazanim": 3,
+     "zorluk": "kolay",
+     "soru": "Gebelik sırasında folik asit replasmanı nöral tüp defektlerinin yaklaşık yüzde kaçını önler?",
+     "secenekler": {
+      "A": "%100",
+      "B": "%25",
+      "C": "%50",
+      "D": "%75",
+      "E": "%90"
+     },
+     "dogru": "D",
+     "aciklama": "Derste gebelik sırasında folik asit replasmanının nöral tüp defektlerinin %75'ini önlediği belirtilir (sayfa 18).",
+     "sik_aciklamalari": {
+      "A": "Folik asit replasmanı koruyucu bir önlemdir ancak nöral tüp defektlerinde genetik faktörler de rol oynadığı için bütün olguları önlemez. Bu nedenle %100 oranı yanlıştır (sayfa 18).",
+      "B": "Folik asit, kolesterol ile birlikte normal sinir sistemi gelişimi için önemli diyet faktörlerindendir. Replasmanın önlediği oran %25 değil %75 olduğundan bu şık yanlıştır (sayfa 18).",
+      "C": "Folik asit gebelikte verilen ve nöral tüp kapanmasını destekleyen bir diyet faktörüdür. Önleme oranı derste yarı yarıya değil %75 olarak verildiği için bu seçenek yanlıştır (sayfa 18).",
+      "D": "Folik asit replasmanı gebelik sırasında nöral tüp defektlerinin %75'ini önler. Etiyolojide hem çevresel hem genetik faktörler rol oynadığı için bu oran tamamı değil büyük bir kısmıdır ve doğru cevap budur (sayfa 18).",
+      "E": "Folik asit diyetle ilgili önemli bir gelişim faktörüdür. Nöral tüp defektlerinin etiyolojisinde genetik faktörler de etkili olduğundan %90 gibi daha yüksek bir oran derste verilmez (sayfa 18)."
+     },
+     "bilgi": [
+      61,
+      62
+     ],
+     "benzer_cikmis": [
+      "47c343375d15"
+     ],
+     "kanit": {
+      "sayfa": 18,
+      "alinti": "Gebelik sırasında folik asit replasmanı nöral tüp defektlerini"
+     }
+    },
+    {
+     "id": "k2-08-beyin-ve-iskelet-sistemi-gelisimi-genetigi-q12",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Sonic hedgehog sinyal molekülünün işlevi için gerekli olan diyetle ilgili faktör hangisidir?",
+     "secenekler": {
+      "A": "Retinoik asit",
+      "B": "Kolesterol",
+      "C": "Wnt",
+      "D": "FGF",
+      "E": "Folik asit"
+     },
+     "dogru": "B",
+     "aciklama": "Derste Shh sinyal molekülünün fonksiyonu için kolesterolün gerekli olduğu, folik asidin ise nöral tüp defektlerini önlediği belirtilir (sayfa 18).",
+     "sik_aciklamalari": {
+      "A": "Retinoik asit bir morfogendir ve Hox genlerinin ifadesini düzenler. Shh'nin işlevi için gerekli diyet faktörü olarak derste kolesterol verildiği için bu seçenek yanlıştır (sayfa 6, 18).",
+      "B": "Kolesterol normal gelişim için önemli diyet faktörlerindendir ve Shh sinyal molekülünün fonksiyonu için gereklidir. Bu nedenle kolesterol yetersizliği Shh sinyalini aksatır ve doğru cevap budur (sayfa 18).",
+      "C": "Wnt ailesi morfogen olarak görev yapan ve β-katenin aracılığıyla nöral krista hücrelerinin özelleşmesine katılan bir sinyal yolağıdır. Diyetle alınan bir madde olmadığı ve Shh işlevi için gereken faktör kolesterol olduğu için bu seçenek yanlıştır (sayfa 6, 18, 19).",
+      "D": "FGF ailesi morfogen olarak embriyonik şekillenmede rol alan bir büyüme faktörü grubudur. Shh'nin işlevi için gerekli diyet faktörü kolesterol olduğundan FGF yanlış seçenektir (sayfa 6, 18).",
+      "E": "Folik asit nöral tüp defektlerinin %75'ini önleyen diyet faktörüdür. Shh sinyalinin işlevi için gerekli olan faktör ise kolesterol olduğundan bu şık yanlıştır (sayfa 18)."
+     },
+     "bilgi": [
+      61
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 18,
+      "alinti": "Shh sinyal molekülünün fonksiyonu için kolesterol gereklidir"
+     }
+    },
+    {
+     "id": "k2-08-beyin-ve-iskelet-sistemi-gelisimi-genetigi-q13",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Nöral krista hücrelerinin migrasyon veya diferansiasyon defektleri neden çok sayıda sendroma yol açar?",
+     "secenekler": {
+      "A": "Yalnızca beyin ve medulla spinalisi oluşturdukları için",
+      "B": "Notokordu oluşturarak nöral plağı indükledikleri için",
+      "C": "Somit sayısını 42-44'te sabitledikleri için",
+      "D": "Yalnızca pigment hücrelerine farklılaştıkları için",
+      "E": "Kafa kemikleri, dişler, bağırsağın nöral hücreleri ve kalp gibi birçok dokuya göç ettikleri için"
+     },
+     "dogru": "E",
+     "aciklama": "Nöral krista hücreleri kafa kemikleri, dişler, bağırsağın nöral hücreleri ve kalp dahil pek çok dokuya göç ettiği için defektleri birçok sendroma neden olur (sayfa 20).",
+     "sik_aciklamalari": {
+      "A": "Beyin ve medulla spinalis nöral plağın ektoderminden gelişir, nöral kristadan değil. Nöral kristanın etkisi çok daha geniş bir doku grubuna yayıldığı için bu açıklama yanlıştır (sayfa 16, 20).",
+      "B": "Notokordu mezenşimal hücreler oluşturur ve notokord nöral plağın oluşumunu indükler. Nöral krista bu işlevi görmez, sendromların nedeni kristanın göç ettiği dokulardır (sayfa 16, 20).",
+      "C": "Somitler paraksiyel mezodermden köken alır ve 5. hafta sonunda sayıları 42-44'e ulaşır. Nöral krista somit sayısını belirlemez, bu nedenle bu seçenek yanlıştır (sayfa 29).",
+      "D": "Nöral kristadan gelişen pigment hücreleri yalnızca bir sonuçtur. Krista hücreleri kafa kemikleri, dişler, bağırsak nöronları ve kalp gibi birçok dokuya da dönüştüğü için sendrom çeşitliliği yalnız pigmentle açıklanamaz (sayfa 20).",
+      "E": "Nöral krista hücreleri embriyoda kafa kemikleri, dişler, bağırsağın nöral hücreleri ve kalp dahil çok sayıda dokuya göç eder. Göç ya da farklılaşma bozulunca bu dokuların hepsi etkilenebileceğinden doğru cevaptır (sayfa 20)."
+     },
+     "bilgi": [
+      69,
+      70
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 20,
+      "alinti": "Nöral krista hücreleri embriyo gelişimi sırasında; kafa kemikleri, dişler, bağırsağın nöral hücreleri ve kalp olmak üzere pek çok dokuya göç eder"
+     }
+    },
+    {
+     "id": "k2-08-beyin-ve-iskelet-sistemi-gelisimi-genetigi-q15",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Mikoftalmiden anoftalmiye uzanan göz bulguları ve alt-üst ekstremite anomalileriyle giden Waardenburg-anoftalmi sendromundan hangi gen ve işlev sorumludur?",
+     "secenekler": {
+      "A": "SMOC1: erken embriyo gelişiminde BMP antagonisti olarak işlev gören gen",
+      "B": "EYA1: faringeal ark ve keselerdeki nöral krista hücrelerinden eksprese olan gen",
+      "C": "LIS1: nöral progenitör proliferasyon ve migrasyonda görevli gen",
+      "D": "MITF: pigment hücrelerinin gelişimi için gerekli transkripsiyon faktörü",
+      "E": "PAX6: iki tip DNA bağlayıcı bölgesi olan transkripsiyon faktörü"
+     },
+     "dogru": "A",
+     "aciklama": "Waardenburg-anoftalmi sendromu SMOC1 geni mutasyonlarıyla gelişir; SMOC1 erken embriyoda BMP antagonisti olarak çalışır ve kaybı göz ile ekstremite anomalilerine yol açar (sayfa 22).",
+     "sik_aciklamalari": {
+      "A": "SMOC1 fare ve kurbağa çalışmalarında erken embriyo gelişimi sırasında BMP antagonisti olarak çalışan ve göz, ekstremite, kraniyofasiyal ve somit gelişiminde eksprese olan bir gendir. Antagonistik etkinin kaybı göz ve ekstremite anomalilerine yol açtığı için doğru cevaptır (sayfa 22).",
+      "B": "EYA1 brankio-oto-renal sendromun geni olup işitme kaybı, preaurikuler çukur ve renal displaziyle ilişkilidir. Waardenburg-anoftalmi sendromunun geni değildir, yanlış seçenektir (sayfa 34).",
+      "C": "LIS1 nöral progenitör çoğalması ve migrasyonunda görev alır ve mutasyonu lizensefaliye neden olur. Göz ve ekstremite anomalileriyle giden bu sendromla ilgisi olmadığı için yanlıştır (sayfa 26).",
+      "D": "MITF pigment hücrelerinin gelişimi için gerekli bir transkripsiyon faktörüdür ve Waardenburg tip 2 ile ilişkilidir. Anoftalmi ve ekstremite anomalileriyle giden form ise SMOC1 mutasyonuna bağlı olduğundan bu şık yanlıştır (sayfa 21-22).",
+      "E": "PAX6 göz gelişimini düzenleyen korunmuş bir gendir ve mutasyonu aniridiye yol açar. Waardenburg-anoftalmi sendromunun geni ise SMOC1 olduğu için bu seçenek yanlıştır (sayfa 15, 22)."
+     },
+     "bilgi": [
+      75,
+      76
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 22,
+      "alinti": "Bu sendroma SMOC1 geni mutasyonları neden olur"
+     }
+    },
+    {
+     "id": "k2-08-beyin-ve-iskelet-sistemi-gelisimi-genetigi-q14",
+     "kazanim": 3,
+     "zorluk": "zor",
+     "soru": "Gözde telekantus belirgin, bazı olgularda üst ekstremite anomalileri eşlik eden ve PAX3 mutasyonuna bağlı Waardenburg sendromu tipi hangisidir?",
+     "secenekler": {
+      "A": "Tip I",
+      "B": "Tip II",
+      "C": "Tip III",
+      "D": "Waardenburg-anoftalmi sendromu",
+      "E": "Treacher Collins sendromu"
+     },
+     "dogru": "C",
+     "aciklama": "Tip I ve Tip III'te PAX3 mutasyonu vardır; Tip III'te telekantus daha belirgindir ve üst ekstremite anomalileri eşlik edebilir (sayfa 20-21).",
+     "sik_aciklamalari": {
+      "A": "Tip I de PAX3 mutasyonuna bağlıdır ve tipik yüz görünümü ile telekantus gösterir. Üst ekstremite anomalilerinin eşlik etmesi ise Tip III'ü ayırır, bu yüzden bu şık yanlıştır (sayfa 20-21).",
+      "B": "Tip II'de MITF geni mutasyonu vardır, saçta hipopigmente alan ve heterokromi daha belirgindir. PAX3 ile ilişkili değildir, bu nedenle bu seçenek yanlıştır (sayfa 21).",
+      "C": "Tip III Waardenburg sendromunda PAX3 mutasyonu bulunur, gözdeki telekantus daha belirgindir ve bazı olgularda üst ekstremite anomalileri eşlik eder. Sorudaki üç özellik birlikte bu tipi gösterir (sayfa 20-21).",
+      "D": "Waardenburg-anoftalmi sendromu SMOC1 geni mutasyonuna bağlıdır ve mikoftalmiden anoftalmiye uzanan göz bulguları ile ekstremite anomalileri verir. PAX3 ile ilişkili olmadığı için yanlıştır (sayfa 22).",
+      "E": "Treacher Collins sendromu TCOF1 mutasyonu ile gelişen otozomal dominant bir kraniyofasiyal sendromdur. Waardenburg sendromu grubundan ayrı bir sendromdur ve tipik bulguları yarık damak, işitme kaybı ile mandibula ve zigomatik kompleks hipoplazisidir (sayfa 39)."
+     },
+     "bilgi": [
+      71,
+      72
+     ],
+     "benzer_cikmis": [
+      "q-No_ropsikiyatri_gis_kardiyo_-2023-2024-C__km_s_lar__240625_053302__2_-18"
+     ],
+     "kanit": {
+      "sayfa": 21,
+      "alinti": "Tip III Waardenburg sendromunda; gözdeki telekantus daha belirgin, bazı olgularda üst ekstremite anomalileri eşlik eder"
+     }
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "47c343375d15",
+     "soru": "FTR\nFTR\nPEDİATRİK\nREHABİLİTASYON\nSpina bifida ile ilgili\nşağıdakilerden\nhangisi/hangileri\ndir doğrudur? I. Nöral\ntüpte kapanma\ndefektidir. II. En sık\ngörülen pediatrik\nnörolojik hastalıktır\nIII. İlk çocukta spina\nbifida varsa risk\ngğer çocuklar için\nartmaktadır. IV. Gebelik dönemi\ntaramalarında",
+     "secenekler": {
+      "A": "I,II,III,IV",
+      "B": "I,III",
+      "C": "II, IV",
+      "D": "Yalnız IV",
+      "E": "I,II,III,IV"
+     },
+     "cevap": null
+    },
+    {
+     "id": "q-No_ropsikiyatri_gis_kardiyo_-2023-2024-C__km_s_lar__240625_053302__2_-18",
+     "soru": "Aşağıdakilerden hangisi sendromik işitme kayıplarından değildir?",
+     "secenekler": {
+      "A": "Waardenburg sendromu",
+      "B": "Usher sendromu",
+      "C": "Pendred sendromu",
+      "D": "Alport sendromu",
+      "E": "GJB2 (konneksin 26) mutasyonuna bağlı işitme kaybı"
+     },
+     "cevap": "E"
+    }
+   ]
+  },
+  {
+   "no": 4,
+   "metin": "Öğrenci, holoprozensefali, lizensefali ve primer mikrosefaliyi tanım, gen ve klinik özelliklerine göre ayırt eder.",
+   "sorular": [
+    {
+     "id": "k2-08-beyin-ve-iskelet-sistemi-gelisimi-genetigi-q16",
+     "kazanim": 4,
+     "zorluk": "kolay",
+     "soru": "Holoprozensefalinin kromozomal nedenleri arasında en sık görülen aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Triploidi",
+      "B": "22q11 delesyonu",
+      "C": "Xp21 delesyonu",
+      "D": "Trizomi 13",
+      "E": "Trizomi 18"
+     },
+     "dogru": "D",
+     "aciklama": "Derste trizomi 13 holoprozensefalinin en sık görülen kromozomal nedeni olarak verilir; trizomi 18 ve triploidi ile birlikte olguların %25'inin sebebidir (sayfa 23).",
+     "sik_aciklamalari": {
+      "A": "Triploidi, holoprozensefali nedenleri arasında trizomi 13 ve trizomi 18 ile birlikte anılan bir kromozom sayı anomalisidir. En sık neden olarak anılmadığı için yanlış seçenektir (sayfa 23).",
+      "B": "22q11 delesyonu DiGeorge sendromuna yol açan 3 Mb'lık heterozigot delesyondur. Holoprozensefalinin kromozomal nedenleri arasında sayılmadığı için bu şık yanlıştır (sayfa 23, 39).",
+      "C": "Xp21 bölgesi distrofin genini taşır ve delesyonları Duchenne ile Becker müsküler distrofiye yol açar. Holoprozensefali nedenleri arasında anılmadığı için bu seçenek yanlıştır (sayfa 23, 76).",
+      "D": "Trizomi 13, holoprozensefalinin en sık görülen nedenidir. Trizomi 18 ve triploidi ile birlikte HPE olgularının %25'ini açıklar, bu yüzden doğru cevaptır (sayfa 23).",
+      "E": "Trizomi 18 holoprozensefaliye yol açan kromozomal anomalilerden biridir. Ancak en sık görülen neden olarak derste trizomi 13 gösterildiği için bu şık yanlıştır (sayfa 23)."
+     },
+     "bilgi": [
+      79
+     ],
+     "benzer_cikmis": [
+      "past-1790877045052-543953"
+     ],
+     "kanit": {
+      "sayfa": 23,
+      "alinti": "Tri 13(en sık görülen nedeni), tri 18 ve triploidi anomalileri"
+     }
+    },
+    {
+     "id": "k2-08-beyin-ve-iskelet-sistemi-gelisimi-genetigi-q17",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Ön beynin sağ ve sol hemisfere tamamen ayrılamadığı, tek ventrikül, yüzde siklopia, orta hat yarığı ve tek burun deliği ile giden en ciddi holoprozensefali biçimi hangisidir?",
+     "secenekler": {
+      "A": "Semilobar HPE",
+      "B": "Alobar HPE",
+      "C": "Lizensefali",
+      "D": "Primer mikrosefali",
+      "E": "Lobar HPE"
+     },
+     "dogru": "B",
+     "aciklama": "Alobar HPE en ciddi formdur; ön beyin hemisferlere tamamen ayrılamaz ve tek ventrikül, siklopia, orta hat yarığı ve tek burun deliği görülür (sayfa 25).",
+     "sik_aciklamalari": {
+      "A": "Semilobar HPE'de hemisferler arası fissür kısmen vardır, yani ayrılma kısmen gerçekleşmiştir. Soruda ayrılmanın tamamen olmadığı belirtildiği için bu şık yanlıştır (sayfa 25).",
+      "B": "Alobar HPE ön beynin sağ ve sol hemisfere tamamen ayrılamamasıdır ve en ciddi biçimdir. Tek ventrikül, siklopia, orta hat yarığı ve tek burun deliği birlikte bu tipi gösterir (sayfa 25).",
+      "C": "Lizensefali beyin kıvrımlarının azalması ya da yokluğu ile giden bir migrasyon bozukluğudur. Hemisferlerin ayrılamaması ve siklopi ile ilgisi olmadığı için yanlıştır (sayfa 26).",
+      "D": "Primer mikrosefali beyinde malformasyon olmaksızın beyin boyutunun küçük olmasıdır. Orta hat yüz kusurları ve tek ventrikül görülmediği için bu seçenek yanlıştır (sayfa 28).",
+      "E": "Lobar HPE'de iki hemisfer ayrılmıştır ve genellikle mikrosefali vardır. Soruda tarif edilen tam ayrılamama bu forma uymadığı için yanlıştır (sayfa 25)."
+     },
+     "bilgi": [
+      84
+     ],
+     "benzer_cikmis": [
+      "past-1790877045052-543953"
+     ],
+     "kanit": {
+      "sayfa": 25,
+      "alinti": "En ciddi form, ön beynin sağ ve sol hemisfere tamamen ayrılamaması durumudur"
+     }
+    },
+    {
+     "id": "k2-08-beyin-ve-iskelet-sistemi-gelisimi-genetigi-q18",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Holoprozensefali her 250 gebelikte birinde görülürken canlı doğum sıklığının yaklaşık 1/10.000 olmasının nedeni aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Olguların %80'inde yüz orta hat çizgisi kusurlarının eşlik etmesi",
+      "B": "Hastalığın yalnızca tek gen mutasyonlarına bağlı olması",
+      "C": "Trizomi 13 olgularının tamamının canlı doğması",
+      "D": "Lobar tipte hemisferlerin ayrılmış olması",
+      "E": "Etkilenen fetüslerin büyük kısmının abortusla sonuçlanması"
+     },
+     "dogru": "E",
+     "aciklama": "HPE 1/250 hamilelikte görülür, ancak etkilenen fetüslerin büyük kısmı abortusla sonuçlandığı için canlı doğumda sıklık 1/10.000'dir (sayfa 23).",
+     "sik_aciklamalari": {
+      "A": "Olguların %80'inde yüz orta hat çizgisi kusurları eşlik eder, bu klinik bir özelliktir. Sıklık farkını açıklamadığı ve fetal kaybı anlatmadığı için bu şık yanlıştır (sayfa 23).",
+      "B": "Holoprozensefalinin genetik sebepleri hem kromozomal hem tek gen mutasyonlarıdır. Yalnız tek gene bağlı olmadığı gibi bu bilgi canlı doğum sıklığındaki düşüşü de açıklamaz (sayfa 23).",
+      "C": "Trizomi 13 holoprozensefalinin en sık görülen nedenidir. Olguların canlı doğması sıklık farkını açıklamaz, çünkü fark etkilenen fetüslerin abortusla sonuçlanmasından kaynaklanır (sayfa 23).",
+      "D": "Lobar HPE'de iki hemisfer ayrılmıştır ve tipin kendisi bir şiddet sınıfıdır. Hemisferlerin ayrılması gebelik ve canlı doğum sıklıkları arasındaki farkı açıklamaz (sayfa 25).",
+      "E": "Holoprozensefalide etkilenen fetüslerin büyük bölümü doğumdan önce kaybedilir. Bu nedenle gebelikteki sıklık 1/250 iken canlı doğumdaki sıklık 1/10.000'e düşer ve doğru cevap budur (sayfa 23)."
+     },
+     "bilgi": [
+      77
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 23,
+      "alinti": "Ancak etkilenen fetüslerin büyük kısmı abortusla sonuçlanır"
+     }
+    },
+    {
+     "id": "k2-08-beyin-ve-iskelet-sistemi-gelisimi-genetigi-q20",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Primer mikrosefali (gerçek mikrosefali) ile ilgili aşağıdaki ifadelerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Beyinde malformasyon olmaksızın beyin boyutu küçüktür; klinik olarak homojen, genetik olarak heterojendir.",
+      "B": "Beyin yüzeyi düzdür ve kortikal laminasyon kaybolmuştur.",
+      "C": "Ön beynin serebral yarı kürelere bölünmesindeki yetersizlikle gelişir.",
+      "D": "Tek bir gen mutasyonuna bağlıdır ve genetik heterojenite göstermez.",
+      "E": "Mutasyonlar mikrotübül polimerizasyonunu bozarak nöronal migrasyonu etkiler."
+     },
+     "dogru": "A",
+     "aciklama": "Primer mikrosefalide beyinde malformasyon yoktur, kafatası küçüktür ve klinik olarak homojen olmasına rağmen genetik olarak heterojendir (sayfa 28).",
+     "sik_aciklamalari": {
+      "A": "Primer mikrosefali beyin malformasyonu olmaksızın beyin boyutunun küçük olduğu durumdur. Klinik olarak homojen, 7 lokus nedeniyle genetik olarak heterojen olduğu için bu ifade doğrudur (sayfa 28).",
+      "B": "Düz beyin yüzeyi ve kortikal laminasyon kaybı lizensefalinin özellikleridir. Primer mikrosefalide beyinde herhangi bir malformasyon bulunmadığı için bu şık yanlıştır (sayfa 26, 28).",
+      "C": "Ön beynin hemisferlere bölünmesindeki orta hat yetersizliği holoprozensefalinin tanımıdır. Primer mikrosefali ise malformasyonsuz küçük beyindir, bu nedenle bu seçenek yanlıştır (sayfa 23, 28).",
+      "D": "Primer mikrosefali için MCPH1 ile MCPH7 arasında 7 lokus tanımlanmıştır ve şimdiye kadar 5 gen bulunmuştur. Tek gene bağlı olmadığı, genetik heterojenite gösterdiği için bu ifade yanlıştır (sayfa 28).",
+      "E": "Mikrotübül polimerizasyonu ve nöronal migrasyon DCX geniyle ilişkili X'e bağlı lizensefaliyi anlatır. Primer mikrosefali genleri ise iğ iplikçik kutuplarıyla ilişkilidir ve sentrozomal mekanizmayı etkiler (sayfa 26, 28)."
+     },
+     "bilgi": [
+      92,
+      93
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 28,
+      "alinti": "Klinik olarak homojen olmasına rağmen genetik olarak heterojendir"
+     }
+    },
+    {
+     "id": "k2-08-beyin-ve-iskelet-sistemi-gelisimi-genetigi-q19",
+     "kazanim": 4,
+     "zorluk": "zor",
+     "soru": "Beyin yüzeyi düz, korteks anormal kalın ve kortikal laminasyon kaybolmuş bir olguda mikrotübül fonksiyon bozukluğu saptanıyor. 17p13.3 bölgesinde yerleşen ve nöral progenitör proliferasyon ile migrasyonda görevli olan gen hangisidir?",
+     "secenekler": {
+      "A": "PAX6",
+      "B": "DCX",
+      "C": "LIS1",
+      "D": "SHH",
+      "E": "MCPH1"
+     },
+     "dogru": "C",
+     "aciklama": "Lizensefalide düz beyin yüzeyi, kalın korteks ve laminasyon kaybı görülür; LIS1 geni 17p13.3'te yerleşir ve kaybı mikrotübül fonksiyon bozukluğuna yol açar (sayfa 26-27).",
+     "sik_aciklamalari": {
+      "A": "PAX6 göz gelişimini düzenleyen bir transkripsiyon faktörüdür ve mutasyonu aniridiye yol açar. Kortikal laminasyon kaybı ile ilgisi olmadığı için bu seçenek yanlıştır (sayfa 15).",
+      "B": "DCX, X'e bağlı lizensefaliye yol açan diğer gendir ve mikrotübül polimerizasyonu üzerinden nöronal migrasyonu etkiler. Sorudaki 17p13.3 konumu ise LIS1'e aittir, bu yüzden bu şık yanlıştır (sayfa 26-27).",
+      "C": "LIS1 geni 17p13.3'te yerleşir ve nöral progenitör proliferasyon ile migrasyondan sorumludur. Kaybı mikrotübül fonksiyon bozukluğuna ve lizensefaliye yol açtığı için doğru cevaptır (sayfa 26-27).",
+      "D": "SHH geni holoprozensefaliye yol açan sonic hedgehog sinyal molekülünü kodlar. Düz beyin yüzeyi ve laminasyon kaybı gibi lizensefali bulguları SHH mutasyonuna bağlı değildir (sayfa 25).",
+      "E": "MCPH1 primer mikrosefali genlerinden biridir ve iğ iplikçik kutuplarıyla ilişkili sentrozomal mekanizmayı etkiler. Primer mikrosefalide beyin malformasyonu olmadığı için bu şık yanlıştır (sayfa 28)."
+     },
+     "bilgi": [
+      88,
+      91
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 26,
+      "alinti": "LIS1; nöral progenitör proliferasyon ve migrasyonda görevli"
+     }
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "past-1790877045052-543953",
+     "soru": "Beynin hemisferlere veya loblara bölünemediği ve siklopi gibi yüze ait orta hat kusurları ile birlikte olabilen anomali hangisidir?",
+     "secenekler": {
+      "A": "Lizensefali",
+      "B": "Holoprosensefali",
+      "C": "Polimikrogiri",
+      "D": "Arnold-Chiari malformasyonu",
+      "E": "Dandy-Walker anomalisi"
+     },
+     "cevap": "B"
+    }
+   ]
+  },
+  {
+   "no": 5,
+   "metin": "Öğrenci, somit gelişimini ve Notch yolağı genlerini (DLL3, NOTCH2, LFNG) ile kraniyofasiyal gelişim anomalilerini (BOR, Goldenhar, FND, Treacher Collins, DiGeorge) açıklar.",
+   "sorular": [
+    {
+     "id": "k2-08-beyin-ve-iskelet-sistemi-gelisimi-genetigi-q21",
+     "kazanim": 5,
+     "zorluk": "kolay",
+     "soru": "İşitme kaybı, preaurikuler çukur, brankial fistül ve renal displaziyle karakterize brankio-oto-renal sendromun nedeni olan gen hangisidir?",
+     "secenekler": {
+      "A": "LFNG",
+      "B": "TCOF1",
+      "C": "DLL3",
+      "D": "EYA1",
+      "E": "EPHB1"
+     },
+     "dogru": "D",
+     "aciklama": "Brankio-oto-renal sendrom faringeal ark anomalilerine örnektir ve EYA1 geni mutasyonları sonucu gelişir (sayfa 34).",
+     "sik_aciklamalari": {
+      "A": "LFNG paraksiyel mezodermden Notch salınımını sürdürmek için gerekli bir proteindir ve eksikliğinde vertebra füzyonu ya da hemivertebra görülür. Faringeal ark sendromuyla ilgisi olmadığı için yanlıştır (sayfa 32).",
+      "B": "TCOF1 mutasyonu Treacher Collins sendromuna yol açar. Brankio-oto-renal sendromun geni EYA1 olduğundan bu şık yanlıştır (sayfa 34, 39).",
+      "C": "DLL3 Notch ligandıdır ve mutasyonları vertebra malformasyonları ile spondilokostal dizostozise yol açar. Brankio-oto-renal sendromla ilgisi olmadığı için yanlıştır (sayfa 30, 32).",
+      "D": "EYA1, birinci faringeal ark ile ikinci, üçüncü ve dördüncü faringeal kese ve yarıklardaki nöral krista hücrelerinden eksprese olur. Mutasyonu işitme kaybı, preaurikuler çukur, brankial fistül ve renal displaziye yol açtığı için doğru cevaptır (sayfa 34).",
+      "E": "EPHB1 mutasyonları hipertelorizm, koronal sinostozis ve brakisefali ile giden X'e bağlı kraniyofrontonazal sendroma neden olur. Bu bulgular brankio-oto-renal sendromdan farklıdır (sayfa 38)."
+     },
+     "bilgi": [
+      107,
+      108
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 34,
+      "alinti": "İşitme kaybı, preaurikularpits, brankial fistül ve renal displazi ile karakterizedir"
+     }
+    },
+    {
+     "id": "k2-08-beyin-ve-iskelet-sistemi-gelisimi-genetigi-q22",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Somit polaritesindeki herhangi bir karışıklığın sonucu aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Somit sayısının 5. hafta sonunda 42-44'ün üzerine çıkması",
+      "B": "Somitlerin anormal aralıklarla yerleşmesi ve komşu somitlerin birleşmesi",
+      "C": "Notokordun hiç oluşmaması",
+      "D": "Nöral kıvrımların birleşememesi ve spina bifida gelişmesi",
+      "E": "Sklerotom, dermatom ve miyotomun tamamen kaybolması"
+     },
+     "dogru": "B",
+     "aciklama": "Somit büyüklük ve polaritesinde karışıklık somitlerin anormal aralıklarla yerleşmesine ve komşu somitlerin birleşmesine, dolayısıyla vertebral malformasyonlara yol açar (sayfa 30).",
+     "sik_aciklamalari": {
+      "A": "Somit sayısı 5. hafta sonunda 42-44'e ulaşır ve embriyo yaşının belirlenmesinde kullanılır. Polarite bozukluğu sayıyı artırmaz, aralıklı yerleşim ve birleşme yapar (sayfa 29-30).",
+      "B": "DLL proteinlerinin diferansiyel ekspresyonu somit büyüklüğünü ve polaritesini belirler. Polarite bozulunca somitler anormal aralıklarla yerleşir ve komşu somitler birleşir, bu da vertebra taslağında anormallik yaratır (sayfa 30).",
+      "C": "Notokord, primitif düğüm ve çukurdan göç eden mezenşimal hücrelerden oluşur ve nöral plağı indükler. Somit polaritesi bu sürecin parçası olmadığı için notokordun oluşmaması sonuç değildir (sayfa 16, 30).",
+      "D": "Nöral tüp defektleri nörülasyonun bozulmasıyla ortaya çıkar. Somit polaritesi vertebra taslağını etkilediği için sonuç spina bifida değil vertebral malformasyonlardır (sayfa 17, 30).",
+      "E": "Somitler sklerotom, dermatom ve miyotom bölümlerinden oluşur. Polarite karışıklığı somitlerin yerleşimini ve birleşmesini bozar, bölümlerin yok olmasına yol açtığı derste anlatılmaz (sayfa 30-31)."
+     },
+     "bilgi": [
+      99
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 30,
+      "alinti": "Polaritedeki herhangi bir karışıklık somitlerin anormal aralıklarla yerleşimine ve komşu somitlerin birleşmesine neden olur"
+     }
+    },
+    {
+     "id": "k2-08-beyin-ve-iskelet-sistemi-gelisimi-genetigi-q23",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Spondilokostal dizostozis (SCD) ile ilgili aşağıdaki ifadelerden hangisi YANLIŞTIR?",
+     "secenekler": {
+      "A": "Aksiyel iskelet anomalileri SCD olarak sınıflandırılır.",
+      "B": "Bazı olgularda DLL3 ve NOTCH2 gibi Notch yolağı genlerinde mutasyon bildirilmiştir.",
+      "C": "LFNG, paraksiyel mezodermden Notch salınımını sürdürmek için gereklidir.",
+      "D": "Etkilenen kişilerde vertebralarda füzyon ya da hemivertebra görülebilir.",
+      "E": "Genetik olarak homojen bir hastalıktır ve tüm olgulardan tek bir gen sorumludur."
+     },
+     "dogru": "E",
+     "aciklama": "SCD genetik olarak oldukça heterojen bir grup sendromdur; DLL3, NOTCH2 ve LFNG gibi birden fazla Notch yolağı geni ilişkilidir (sayfa 31-32).",
+     "sik_aciklamalari": {
+      "A": "Yanlış seçenek; ifade doğrudur: aksiyel iskelet anomalileri spondilokostal dizostozis olarak sınıflandırılır (sayfa 31). Kosta ve vertebra anormallikleri malformasyon sendromlarında oldukça yaygındır.",
+      "B": "Yanlış seçenek; ifade doğrudur: bazı SCD olgularında DLL3 ve NOTCH2 gibi Notch sinyal yolağı genlerinde mutasyon bildirilmiştir (sayfa 32). Bu genler somit gelişimini düzenler.",
+      "C": "Yanlış seçenek; ifade doğrudur: LFNG proteini paraksiyel mezodermden Notch salınımını sürdürmek için gereklidir (sayfa 32). Eksikliğinde Notch sinyali sürdürülemez ve somit gelişimi bozulur.",
+      "D": "Yanlış seçenek; ifade doğrudur: etkilenmiş kişilerde vertebralarda füzyon ya da hemivertebra gibi malformasyonlar görülür (sayfa 32). Bu bulgular somit hatalarının sonucudur.",
+      "E": "SCD genetik olarak oldukça heterojen bir sendrom grubudur, yani farklı genlerdeki mutasyonlar benzer tabloya yol açar. Tüm olguları tek bir gene bağlayan bu ifade derse ters olduğu için yanlıştır (sayfa 32)."
+     },
+     "bilgi": [
+      103,
+      104
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 32,
+      "alinti": "SCD; genetik olarak oldukça heterojen bir grup sendromdur"
+     }
+    },
+    {
+     "id": "k2-08-beyin-ve-iskelet-sistemi-gelisimi-genetigi-q25",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "3 Mb'lık heterozigot delesyon sonucu oluşan; kardiyak anomaliler, yarık damak, kulak anomalileri, hipokalsemi ve T-hücre eksikliği ile giden sendrom hangisidir?",
+     "secenekler": {
+      "A": "22q11 delesyon (DiGeorge) sendromu",
+      "B": "Goldenhar sendromu",
+      "C": "Brankio-oto-renal sendrom",
+      "D": "Frontonazal displazi",
+      "E": "Treacher Collins sendromu"
+     },
+     "dogru": "A",
+     "aciklama": "22q11 delesyon sendromu (DiGeorge) 3 Mb'lık heterozigot delesyonla oluşur ve kardiyak anomaliler, yarık damak, kulak anomalileri, hipokalsemi ve T-hücre eksikliği ile karakterizedir (sayfa 39).",
+     "sik_aciklamalari": {
+      "A": "22q11 delesyon sendromu, DiGeorge sendromu olarak da bilinir ve 3 Mb'lık heterozigot delesyonla oluşur. Kardiyak anomaliler, yarık damak, kulak anomalileri, hipokalsemi ve T-hücre eksikliği birlikte bu tabloyu gösterdiği için doğru cevaptır (sayfa 39).",
+      "B": "Goldenhar sendromu otozomal dominant kalıtılır ve kulak, mandibula ile asimetrik yüz bulguları verir. Bir delesyona bağlı değildir ve hipokalsemi ile T-hücre eksikliği içermez (sayfa 35).",
+      "C": "Brankio-oto-renal sendrom EYA1 mutasyonuna bağlıdır ve işitme kaybı, preaurikuler çukur, brankial fistül ve renal displaziyle karakterizedir. Delesyon sendromu olmadığı için bu şık yanlıştır (sayfa 34).",
+      "D": "Frontonazal displazi yüzün orta hat yapılarını etkileyen, hipertelorizmden orta hat yarıklarına uzanan bir kraniyofasiyal anomalidir. Hipokalsemi ve T-hücre eksikliği ile ilişkilendirilmediği için yanlıştır (sayfa 37).",
+      "E": "Treacher Collins sendromu bir gen mutasyonuyla, yani TCOF1 mutasyonuyla gelişir ve delesyon sendromu değildir. Hipokalsemi ve T-hücre eksikliği bulguları bu sendromda tanımlanmadığı için yanlıştır (sayfa 39)."
+     },
+     "bilgi": [
+      119
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 39,
+      "alinti": "kardiyak anomaliler, yarık damak, kulak anomalileri, hipokalsemi"
+     }
+    },
+    {
+     "id": "k2-08-beyin-ve-iskelet-sistemi-gelisimi-genetigi-q24",
+     "kazanim": 5,
+     "zorluk": "zor",
+     "soru": "Dış ve orta kulak, mandibula ve temporomandibular eklem anomalileri ile asimetrik yüz bulguları gösteren, otozomal dominant kalıtılan ve 1. ile 2. faringeal arkın anormal morfogenezi ile karakterize olan sendrom hangisidir?",
+     "secenekler": {
+      "A": "Frontonazal displazi",
+      "B": "Brankio-oto-renal sendrom",
+      "C": "Goldenhar sendromu",
+      "D": "Treacher Collins sendromu",
+      "E": "DiGeorge sendromu"
+     },
+     "dogru": "C",
+     "aciklama": "Goldenhar sendromu otozomal dominant kalıtılır, FA1-FA2'nin anormal morfogenezi ile karakterizedir ve dış kulak, orta kulak, mandibula ile temporomandibular eklem anomalileri ve asimetrik yüz bulguları verir (sayfa 35).",
+     "sik_aciklamalari": {
+      "A": "Frontonazal displazi nöral krista ve mezenkimal hücre göçündeki gecikmelerden doğar ve hipertelorizmden orta hat yarıklarına uzanan değişken bir fenotip gösterir. Soruda tarif edilen kulak ve mandibula odaklı tablo bu hastalığa uymaz (sayfa 37).",
+      "B": "Brankio-oto-renal sendrom EYA1 mutasyonuyla gelişir ve işitme kaybı, preaurikuler çukur, brankial fistül ve renal displaziyle karakterizedir. Asimetrik yüz ve çene eklemi anomalileri bu sendromun tanımında yer almadığından yanlıştır (sayfa 34).",
+      "C": "Goldenhar sendromu otozomal dominant kalıtılır ve birinci ile ikinci faringeal arkın anormal morfogenezi ile karakterizedir. Dış-orta kulak, mandibula, çene eklemi ve asimetrik yüz bulguları ile kalp, böbrek ve SSS anomalileri eşlik edebildiği için doğru cevaptır (sayfa 35).",
+      "D": "Treacher Collins sendromu TCOF1 mutasyonuyla gelişen otozomal dominant bir sendromdur ve yarık damak, işitme kaybı, mandibula ve zigomatik kompleks hipoplazisi, downslanting palpebral aralıkla karakterizedir. Asimetrik yüz ve çene eklemi anomalileri Goldenhar'ı ayırır (sayfa 35, 39).",
+      "E": "DiGeorge sendromu 22q11 bölgesindeki 3 Mb'lık heterozigot delesyonla oluşur ve kardiyak anomaliler, yarık damak, kulak anomalileri, hipokalsemi ile T-hücre eksikliği verir. Faringeal ark morfogenezi ve asimetrik yüz tanımı Goldenhar'a aittir (sayfa 35, 39)."
+     },
+     "bilgi": [
+      109,
+      110
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 35,
+      "alinti": "Olgularda dış kulak, orta kulak, mandibula, temporamandibular eklem anomalileri ve asimetrik yüz bulguları vardır"
+     }
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 6,
+   "metin": "Öğrenci, kraniyosinostoz türlerini (sagital, koronal, trigonosefali) sıklık, kafa şekli ve kalıtım özelliklerine göre karşılaştırır ve iskelet displazilerinin genel özelliklerini sayar.",
+   "sorular": [
+    {
+     "id": "k2-08-beyin-ve-iskelet-sistemi-gelisimi-genetigi-q26",
+     "kazanim": 6,
+     "zorluk": "kolay",
+     "soru": "Dar ve uzun, tekne şekilli (skafosefali) bir kafatasına yol açan ve en sık gözlenen izole kraniyosinostoz tipi hangisidir?",
+     "secenekler": {
+      "A": "Trilobarsefali (pansinostoz)",
+      "B": "Sekonder kraniyosinostoz",
+      "C": "Koronal kraniyosinostoz",
+      "D": "Sagital kraniyosinostoz",
+      "E": "Metopik kraniyosinostoz (trigonosefali)"
+     },
+     "dogru": "D",
+     "aciklama": "Sagital kraniyosinostoz en sık gözlenen izole kraniyosinostoz tipidir ve dar-uzun, tekne şekilli kafa yapısı verir (sayfa 42).",
+     "sik_aciklamalari": {
+      "A": "Trilobarsefali yonca yaprağı kafatası olarak da bilinen pansinostozdur ve antenatal incelemede belirlenebilir. En sık izole tip olmadığı için yanlıştır (sayfa 44).",
+      "B": "Sekonder kraniyosinostozda sütür kapanması metabolik, hematolojik, MSS kaynaklı ya da teratojenik nedenlerle gelişir. Sorulan en sık izole tip primer bir sinostozdur, bu yüzden yanlıştır (sayfa 40, 42).",
+      "C": "Koronal kraniyosinostoz ikinci en sık görülen tiptir ve bilateral olduğunda kısa ve geniş kafatasına (brakisefali) yol açar. En sık izole tip olmadığı ve dar-uzun kafa vermediği için yanlıştır (sayfa 43).",
+      "D": "Sagital sütürün erken kapanması kafatasının dar ve uzun, tekne şekilli olmasına yol açar. En sık gözlenen izole kraniyosinostoz tipi olduğu için doğru cevaptır (sayfa 42).",
+      "E": "Metopik sütürün erken kapanmasına trigonosefali denir ve kafatası üçgen şekilli olur. En sık görülen üçüncü tip olduğu için yanlış seçenektir (sayfa 44)."
+     },
+     "bilgi": [
+      125
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 42,
+      "alinti": "Sagital kraniyosinostoz,en sık gözlenen izole kraniyosinostoz tipi"
+     }
+    },
+    {
+     "id": "k2-08-beyin-ve-iskelet-sistemi-gelisimi-genetigi-q28",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Metopik sütürün erken kapanması sonucu gelişen kafatası şekli ve bu tipin tüm kraniyosinostozlar içindeki yaklaşık payı aşağıdakilerden hangisinde doğru verilmiştir?",
+     "secenekler": {
+      "A": "Dar-uzun, tekne şekilli kafatası; %72",
+      "B": "Kısa ve geniş kafatası; %61",
+      "C": "Diyagonal kafatası; %25",
+      "D": "Yonca yaprağı şeklinde kafatası; %10-15",
+      "E": "Üçgen şekilli kafatası; %10-15"
+     },
+     "dogru": "E",
+     "aciklama": "Trigonosefali metopik sütürün erken kapanmasıdır, kafatasını üçgen şekilli yapar ve tüm kraniyosinostozların %10-15'ini oluşturur (sayfa 44).",
+     "sik_aciklamalari": {
+      "A": "Dar-uzun, tekne şekilli kafatası sagital sinostoza aittir ve %72 sagital olguların izole ve sporadik oranıdır. Metopik sütürün sonucu bu değildir (sayfa 42).",
+      "B": "Kısa ve geniş kafatası bilateral koronal sinostozdaki brakisefalidir ve %61 koronal olguların sporadik oranıdır. Metopik sütürle ilgili olmadığı için yanlıştır (sayfa 43).",
+      "C": "Diyagonal kafatası tek taraflı koronal sinostozun plajyosefalisidir ve %25 koronal olguların sendromik oranıdır. Metopik sütürle ilgili olmadığı için yanlıştır (sayfa 43).",
+      "D": "Yonca yaprağı kafatası trilobarsefali yani pansinostozdur ve ayrı bir tablo olarak anılır. Metopik sütür kapanması üçgen kafatası verdiği için bu eşleştirme yanlıştır (sayfa 44).",
+      "E": "Trigonosefali metopik sütürün erken kapanmasıdır ve kafatasının üçgen şeklinde deformasyonuna yol açar. Tüm kraniyosinostozların %10-15'ini oluşturduğu için bu eşleştirme doğrudur (sayfa 44)."
+     },
+     "bilgi": [
+      129
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 44,
+      "alinti": "Kafatasının üçgen şeklinde deformasyonuna sebep olur"
+     }
+    },
+    {
+     "id": "k2-08-beyin-ve-iskelet-sistemi-gelisimi-genetigi-q30",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Aşağıdakilerden hangisi sekonder kraniyosinostozun nedenleri arasında YER ALMAZ?",
+     "secenekler": {
+      "A": "Kraniyal sütürların genetik etkenlerle erken kapanması",
+      "B": "Metabolik hastalıklar",
+      "C": "Hematolojik hastalıklar",
+      "D": "Merkezi sinir sistemi kusurları",
+      "E": "Teratojenik kaynaklı hastalıklar"
+     },
+     "dogru": "A",
+     "aciklama": "Genetik etkenlere bağlı erken sütür kapanması primer sinostozdur; sekonder sinostoz metabolik, hematolojik, MSS kaynaklı ve teratojenik nedenlerle gelişir (sayfa 40).",
+     "sik_aciklamalari": {
+      "A": "Kraniyal sütürların genetik etkenlerle erken kapanması en sık görülen primer sinostozu tanımlar. Sekonder sinostoz ise başka bir hastalığın sonucu geliştiği için bu şık sekonder nedenlerden biri değildir ve doğru cevaptır (sayfa 40).",
+      "B": "Yanlış seçenek; ifade doğrudur: metabolik hastalıklar sekonder sütür kapanmasına yol açabilir (sayfa 40). Bu gruptaki kraniyosinostoz başka bir hastalığın sonucu olarak gelişir.",
+      "C": "Yanlış seçenek; ifade doğrudur: hematolojik hastalıklar sekonder kraniyosinostozun nedenleri arasında sayılır (sayfa 40). Bu durumda sütür kapanması altta yatan hastalığın sonucu olarak ikincil gelişir.",
+      "D": "Yanlış seçenek; ifade doğrudur: MSS kusurları sekonder sinostoza neden olabilir (sayfa 40). Burada sütür kapanması primer bir kemik sorunu değildir.",
+      "E": "Yanlış seçenek; ifade doğrudur: teratojenik kaynaklı hastalıklar sekonder kraniyosinostozun nedenlerindendir (sayfa 40). Bu grup dış etkenlerin yol açtığı olguları kapsar."
+     },
+     "bilgi": [
+      121
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 40,
+      "alinti": "Sekonder sitonozda ise erken sütür kapanması, metabolik hastalıklar, hematolojik hastalıklar, MSS kusurları"
+     }
+    },
+    {
+     "id": "k2-08-beyin-ve-iskelet-sistemi-gelisimi-genetigi-q27",
+     "kazanim": 6,
+     "zorluk": "zor",
+     "soru": "Koronal kraniyosinostozun tek taraflı (unilateral) olduğu bir olguda beklenen kafatası deformasyonu aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Brakisefali",
+      "B": "Plajyosefali",
+      "C": "Trigonosefali",
+      "D": "Trilobarsefali",
+      "E": "Skafosefali"
+     },
+     "dogru": "B",
+     "aciklama": "Koronal sinostoz bilateral ise kısa ve geniş kafatası (brakisefali), unilateral ise diyagonal kafatası deformasyonu (plajyosefali) yapar (sayfa 43).",
+     "sik_aciklamalari": {
+      "A": "Brakisefali koronal sinostoz iki taraflı olduğunda ortaya çıkan kısa ve geniş kafatasıdır. Soruda sinostoz tek taraflı olduğu için bu şık yanlıştır (sayfa 43).",
+      "B": "Plajyosefali tek taraflı koronal sinostozda gelişen diyagonal kafatası deformasyonudur. İki taraflı olguda brakisefali, tek taraflı olguda plajyosefali görüldüğü için doğru cevaptır (sayfa 43).",
+      "C": "Trigonosefali metopik sütürün erken kapanması sonucu kafatasının üçgen şekilli olmasıdır ve en sık görülen üçüncü tiptir. Koronal sütürle ilgili olmadığı ve tek taraflı koronal sinostozdaki diyagonal deformasyonu açıklamadığı için yanlıştır (sayfa 43-44).",
+      "D": "Trilobarsefali yonca yaprağı kafatası olarak bilinen pansinostozdur ve birden çok sütürü etkiler. Tek taraflı koronal sinostozun sonucu olmadığı için yanlış seçenektir (sayfa 44).",
+      "E": "Skafosefali sagital sütürün erken kapanmasında görülen dar-uzun, tekne şekilli kafadır. Unilateral koronal sinostozda beklenen deformasyon bu değildir (sayfa 42-43)."
+     },
+     "bilgi": [
+      127
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 43,
+      "alinti": "Bilateral olup, kısa ve geniş bir kafatasına yol açabileceği gibi"
+     }
+    },
+    {
+     "id": "k2-08-beyin-ve-iskelet-sistemi-gelisimi-genetigi-q29",
+     "kazanim": 6,
+     "zorluk": "zor",
+     "soru": "Aşağıdaki özelliklerden hangisi sagital kraniyosinostozu en iyi tanımlar?",
+     "secenekler": {
+      "A": "Olguların %25'i tek gen mutasyonlarına ya da kromozomal bozukluklara bağlı sendromiktir.",
+      "B": "Kafatasının üçgen şeklinde deformasyonuna yol açar.",
+      "C": "Çoğu vaka izole ve sporadiktir (%72) ve tekrarlama riski %3'ün altındadır.",
+      "D": "Genetik mekanizması tam anlaşılamamıştır ve FGFR3 gen analizi yapılmalıdır.",
+      "E": "İleri paternal yaş ile ilişkilidir."
+     },
+     "dogru": "C",
+     "aciklama": "Sagital kraniyosinostozda çoğu vaka izole ve sporadiktir (%72), kalıtılma riski %3'ün altındadır ve yalnızca %6'sı ailesel otozomal dominanttır (sayfa 42).",
+     "sik_aciklamalari": {
+      "A": "Olguların %25'inin sendromik olması koronal kraniyosinostozun özelliğidir ve tek gen ile kromozomal bozukluklara bağlıdır. Sagital tipte çoğu vaka izole olduğu için bu şık yanlıştır (sayfa 42-43).",
+      "B": "Kafatasının üçgen şeklinde deformasyonu metopik sütürün erken kapandığı trigonosefaliye aittir. Sagital tipte kafa dar ve uzundur, bu yüzden yanlıştır (sayfa 42, 44).",
+      "C": "Sagital kraniyosinostozda çoğu vaka izole ve sporadiktir (%72), kalıtılma riski %3'ün altındadır ve yalnız %6'sı ailesel otozomal dominanttır. Bu ifadeler birlikte sagital tipi tanımladığı için doğru cevaptır (sayfa 42).",
+      "D": "Genetik mekanizmasının tam anlaşılamaması ve FGFR3 analizi önerisi trigonosefali için verilen bilgidir. Sagital tipin özelliği olmadığı için bu seçenek yanlıştır (sayfa 44).",
+      "E": "İleri paternal yaş ilişkisi derste koronal kraniyosinostoz için verilir. Sagital tip için böyle bir ilişki belirtilmediğinden bu şık yanlıştır (sayfa 43)."
+     },
+     "bilgi": [
+      126
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 42,
+      "alinti": "Çoğu vaka izole ve sporadik %72"
+     }
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 7,
+   "metin": "Öğrenci, FGFR3 grubu displazileri, tip 2 kollajenopatileri ve diğer displazileri gen, kalıtım ve klinik bulgularıyla eşleştirir.",
+   "sorular": [
+    {
+     "id": "k2-08-beyin-ve-iskelet-sistemi-gelisimi-genetigi-q31",
+     "kazanim": 7,
+     "zorluk": "kolay",
+     "soru": "Kalıtsal iskelet displazileri içinde en sık görülen ve FGFR3 grubunda yer alan hastalık hangisidir?",
+     "secenekler": {
+      "A": "Fibrokondrogenezis",
+      "B": "Diastrofik displazi",
+      "C": "Hipokondrogenezis",
+      "D": "Akondroplazi",
+      "E": "Akondrogenezis tip 2"
+     },
+     "dogru": "D",
+     "aciklama": "Akondroplazi kalıtsal iskelet displazileri içinde en sık görülenidir ve FGFR3 grubundaki üç displaziden biridir (sayfa 50-51).",
+     "sik_aciklamalari": {
+      "A": "Fibrokondrogenezis COL1A1 ve COL1A2 mutasyonlarıyla gelişen, otozomal resesif kalıtılan letal bir displazidir. FGFR3 grubuna ait olmadığı için yanlıştır (sayfa 61).",
+      "B": "Diastrofik displazi SLC26A2 geni mutasyonları sonucu gelişir ve normal zeka ile skolyoz, kifoz gibi bulgular verir. FGFR3 grubunda yer almadığı için bu şık yanlıştır (sayfa 63).",
+      "C": "Hipokondrogenezis COL2A1 ile ilişkili letal bir displazidir ve çoğu olgu yenidoğan döneminde solunum yetmezliğinden kaybedilir. FGFR3 grubunda olmadığı için yanlıştır (sayfa 57, 59).",
+      "D": "Akondroplazi FGFR3 mutasyonuyla gelişir ve kalıtsal iskelet displazileri içinde en sık görülenidir. Otozomal dominant geçiş gösterse de çoğu olgu yeni mutasyonlara bağlı olduğu için doğru cevaptır (sayfa 51).",
+      "E": "Akondrogenezis tip 2 COL2A1 mutasyonuyla gelişen letal bir displazidir ve 1/40.000 sıklıktadır. FGFR3 grubunda yer almadığı ve en sık displazi olmadığı için yanlıştır (sayfa 57-58)."
+     },
+     "bilgi": [
+      142
+     ],
+     "benzer_cikmis": [
+      "past-q-18-85"
+     ],
+     "kanit": {
+      "sayfa": 51,
+      "alinti": "Kalıtsal iskelet displazileri içinde en sık görülenidir"
+     }
+    },
+    {
+     "id": "k2-08-beyin-ve-iskelet-sistemi-gelisimi-genetigi-q32",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Akondroplazide vakaların çoğunu oluşturan de novo mutasyon ile ilgili aşağıdaki ifadelerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "X kromozomu üzerindeki bir gende oluşur.",
+      "B": "Babaların germ hücrelerinde oluşur ve ileri baba yaşıyla sıklığı artar.",
+      "C": "Annelerin germ hücrelerinde oluşur ve ileri anne yaşıyla sıklığı artar.",
+      "D": "Yalnızca somatik hücrelerde oluşur ve çocuğa geçmez.",
+      "E": "Aile öyküsü olan olgularda görülür, yeni mutasyon bildirilmemiştir."
+     },
+     "dogru": "B",
+     "aciklama": "Akondroplazide vakaların %80-90'ından fazlasında de novo mutasyon vardır; bu mutasyon babaların germ hücrelerinde oluşur ve ileri baba yaşıyla artar (sayfa 51).",
+     "sik_aciklamalari": {
+      "A": "Akondroplazi FGFR3 geni mutasyonuyla gelişir ve otozomal dominant geçiş gösterir. X kromozomuna bağlı bir hastalık değildir, X'e bağlı olan Duchenne ve Becker distrofisidir (sayfa 51, 76).",
+      "B": "De novo FGFR3 mutasyonu babaların germ hücrelerinde oluşur. İleri baba yaşıyla sıklığı arttığı için ebeveynleri sağlıklı bir bebekte bile akondroplazi görülebilir ve bu ifade doğrudur (sayfa 51).",
+      "C": "Akondroplazide yeni FGFR3 mutasyonu babaların germ hücrelerinde oluşur. Sıklık artışı ileri baba yaşıyla ilişkilidir, annenin yaşıyla ilişkili olduğunu söyleyen bu ifade yanlıştır (sayfa 51).",
+      "D": "Çocuğa geçen mutasyon germ hücrelerinde yer alır. Bir mutasyon yalnızca somatik hücrelerde kalsaydı hastalık yavrulara aktarılmazdı, oysa mutasyon babanın germ hücrelerinde oluşur (sayfa 51).",
+      "E": "Akondroplazi otozomal dominant geçiş gösterir ancak vakaların %80-90'ından fazlası de novo mutasyona bağlıdır. Yeni mutasyon bulunmadığını söyleyen ifade yanlıştır (sayfa 51)."
+     },
+     "bilgi": [
+      144
+     ],
+     "benzer_cikmis": [
+      "past-q-18-85"
+     ],
+     "kanit": {
+      "sayfa": 51,
+      "alinti": "bu mutasyon babaların germ hücrelerinde oluşur ve ileri baba yaşıyla sıklığı artar"
+     }
+    },
+    {
+     "id": "k2-08-beyin-ve-iskelet-sistemi-gelisimi-genetigi-q33",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Akondroplazinin hafif şekli olan, FGFR3 mutasyonlarına bağlı, otozomal dominant kalıtılan ve bulguları 2-4 yaş arasında belirginleşen displazi hangisidir?",
+     "secenekler": {
+      "A": "Tanatoforik displazi tip 1",
+      "B": "Hipokondrogenezis",
+      "C": "Akondrogenezis tip 2",
+      "D": "Akondroplazi",
+      "E": "Hipokondroplazi"
+     },
+     "dogru": "E",
+     "aciklama": "Hipokondroplazi FGFR3 mutasyonlarıyla gelişen, otozomal dominant kalıtılan ve akondroplazinin hafif şekli olan bir displazidir; bulgular 2-4 yaşta belirginleşir (sayfa 55).",
+     "sik_aciklamalari": {
+      "A": "Tanatoforik displazi tip 1, R248C mutasyonuyla gelişen ve genellikle letal seyreden bir FGFR3 displazisidir. Soruda tarif edilen hafif seyirli akondroplazi benzeri tabloya uymadığı için bu şık yanlıştır (sayfa 55-56).",
+      "B": "Hipokondrogenezis ismi hipokondroplaziye benzer, ancak COL2A1 ile ilişkili letal bir displazidir. Çok kısa boylu hidropik yenidoğan fenotipiyle giden bu hastalık FGFR3 grubunda değildir (sayfa 57, 59).",
+      "C": "Akondrogenezis tip 2 otozomal dominant kalıtılan letal bir iskelet displazisidir ve pulmoner hipoplaziyle ölüme yol açar. Hafif seyirli FGFR3 displazisi olmadığı için yanlıştır (sayfa 58).",
+      "D": "Akondroplazi FGFR3 grubunda yer alır ve hipokondroplazinin ağır karşılığıdır. Soruda hafif şekil tarif edildiği için bu şık yanlıştır (sayfa 55).",
+      "E": "Hipokondroplazi FGFR3 mutasyonlarıyla gelişir ve N540K mutasyonu sık görülür. Akondroplazinin hafif şeklidir, bulgular 2-4 yaş arasında belirginleştiği için doğru cevaptır (sayfa 55)."
+     },
+     "bilgi": [
+      154,
+      155
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 55,
+      "alinti": "Kemik büyümesindeki geriliğe bağlı orantısız alt ve üst ekstremite kısalığının eşlik ettiği boy kısalığı ile karakterizedir"
+     }
+    },
+    {
+     "id": "k2-08-beyin-ve-iskelet-sistemi-gelisimi-genetigi-q35",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "COL2A1 mutasyonlarına bağlı tip 2 kollajenopatiler arasında nonletal olarak sınıflanan hastalık aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Spondiloepifizyal displazi congenita (SEDC)",
+      "B": "Fibrokondrogenezis",
+      "C": "Akondrogenezis tip 2",
+      "D": "Hipokondrogenezis",
+      "E": "Platispondilik displazi"
+     },
+     "dogru": "A",
+     "aciklama": "Tip 2 kollajenopatilerde letal olanlar akondrogenezis tip 2, hipokondrogenezis ve platispondilik displazidir; SED congenita, Stickler ve Kniest displazisi nonletaldir (sayfa 57).",
+     "sik_aciklamalari": {
+      "A": "Spondiloepifizyal displazi congenita otozomal dominant kalıtılır ve orantısız boy kısalığı ile doğumda epifizlerde gecikmiş ossifikasyonla karakterizedir. Nonletal tip 2 kollajenopatiler arasında sayıldığı için doğru cevaptır (sayfa 57, 60).",
+      "B": "Fibrokondrogenezis letal bir displazidir ancak COL1A1 ve COL1A2 mutasyonlarıyla gelişir ve otozomal resesif kalıtılır. COL2A1 ile ilişkili olmadığı için yanlış seçenektir (sayfa 61).",
+      "C": "Akondrogenezis tip 2 COL2A1 ile ilişkili olmakla birlikte otozomal dominant kalıtılan letal bir displazidir. Pulmoner hipoplaziyle hastaların kaybına yol açtığı için nonletal grupta yer almaz (sayfa 57-58).",
+      "D": "Hipokondrogenezis çok kısa boylu hidropik yenidoğan fenotipiyle görülür ve çoğu olgu solunum yetmezliğiyle yenidoğan döneminde kaybedilir. Letal gruptadır, bu yüzden yanlıştır (sayfa 57, 59).",
+      "E": "Platispondilik displazi COL2A1 mutasyonlarına bağlı tip 2 kollajenopatiler arasında letal formlar içinde sayılır. Soru nonletal formu sorduğu için bu şık yanlıştır (sayfa 57)."
+     },
+     "bilgi": [
+      159,
+      160,
+      167
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 57,
+      "alinti": "Nonletal olanlar; oStickler sendromu, oSpondiloepifizyal displazi(SED) congenita,"
+     }
+    },
+    {
+     "id": "k2-08-beyin-ve-iskelet-sistemi-gelisimi-genetigi-q34",
+     "kazanim": 7,
+     "zorluk": "zor",
+     "soru": "Genellikle letal seyreden tanatoforik displazinin tip 2'sinde görülen mutasyon aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "COL2A1 geninde mutasyon",
+      "B": "R248C",
+      "C": "K650E",
+      "D": "G380R",
+      "E": "N540K"
+     },
+     "dogru": "C",
+     "aciklama": "Tanatoforik displazi genellikle letaldir; tip 1'de R248C, tip 2'de K650E mutasyonu görülür (sayfa 56).",
+     "sik_aciklamalari": {
+      "A": "COL2A1 mutasyonları tip 2 kollajenopatilere yol açar. Tanatoforik displazi ise FGFR3 grubunda yer aldığı için bu seçenek yanlıştır (sayfa 50, 57).",
+      "B": "R248C tanatoforik displazinin tip 1'inde görülen FGFR3 mutasyonudur. Soru tip 2'yi sorduğu için bu şık yanlıştır (sayfa 56).",
+      "C": "K650E tanatoforik displazi tip 2'ye özgü FGFR3 mutasyonudur. Bu hastalık ağır orantısız boy kısalığı, çok kısa ekstremiteler ve dar toraks ile erken bebeklik ölümüne yol açtığı için doğru cevaptır (sayfa 56).",
+      "D": "G380R, akondroplazi vakalarının %95'inde saptanan FGFR3 mutasyonudur ve büyüme plağındaki sinyal iletimini artırır. Tanatoforik displazi tip 2 için K650E verildiğinden bu şık yanlıştır (sayfa 51, 56).",
+      "E": "N540K, hipokondroplazide sık görülen FGFR3 mutasyonudur ve akondroplazinin hafif şeklini oluşturur. Tanatoforik displazi tip 2 için K650E verildiğinden bu şık yanlıştır (sayfa 55-56)."
+     },
+     "bilgi": [
+      156
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 56,
+      "alinti": "Tip 1’de R248C mutasyonu, oTip 2’de K650E mutasyonu görülür"
+     }
+    },
+    {
+     "id": "k2-08-beyin-ve-iskelet-sistemi-gelisimi-genetigi-q36",
+     "kazanim": 7,
+     "zorluk": "zor",
+     "soru": "Aşağıdaki gen ve displazi eşleştirmelerinden hangisi doğrudur?",
+     "secenekler": {
+      "A": "FGFR3: akondrogenezis tip 2",
+      "B": "FLNB: diastrofik displazi",
+      "C": "SLC26A2: atelostenogenezis",
+      "D": "COL1A1 ve COL1A2: fibrokondrogenezis",
+      "E": "COL2A1: diastrofik displazi"
+     },
+     "dogru": "D",
+     "aciklama": "Fibrokondrogenezis COL1A1 ve COL1A2 mutasyonlarıyla gelişir; atelostenogenezis FLNB, diastrofik displazi SLC26A2 ile ilişkilidir (sayfa 61-63).",
+     "sik_aciklamalari": {
+      "A": "FGFR3 akondroplazi, hipokondroplazi ve tanatoforik displazi grubunun genidir. Akondrogenezis tip 2 COL2A1 mutasyonlarıyla ilişkili olduğundan bu eşleştirme yanlıştır (sayfa 50, 57-58).",
+      "B": "FLNB geni mutasyonları atelostenogenezise yol açar ve humerus ile femur distalinde hipoplaziyle seyreder. Diastrofik displazi ise SLC26A2 mutasyonlarıyla geliştiği için bu eşleştirme yanlıştır (sayfa 62-63).",
+      "C": "SLC26A2 geni diastrofik displazinin sorumlusudur ve olguların %65'inde bu gendeki 4 mutasyon bulunur. Atelostenogenezis FLNB ile ilişkili olduğundan bu şık yanlıştır (sayfa 62-63).",
+      "D": "Fibrokondrogenezis COL1A1 ve COL1A2 genlerindeki mutasyonlarla gelişir ve otozomal resesif kalıtılan letal bir iskelet displazisidir. Eşleştirme derse uygun olduğu için doğrudur (sayfa 61).",
+      "E": "COL2A1 tip 2 kollajenopatilerin genidir ve akondrogenezis tip 2, SED congenita gibi displazilere yol açar. Diastrofik displazi SLC26A2 ile ilişkilidir, bu nedenle bu şık yanlıştır (sayfa 57, 63)."
+     },
+     "bilgi": [
+      169,
+      171,
+      173
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 61,
+      "alinti": "COL1A1 ve COL1A2 genlerinde mutasyon sonucu gelişir"
+     }
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "past-q-18-85",
+     "soru": "Aşağıdakilerden hangisi otozomal dominant hastalıklara örnek olarak verilemez?",
+     "secenekler": {
+      "A": "Akondroplazi",
+      "B": "Retinoblastoma",
+      "C": "Ailesel polipozis koli",
+      "D": "Duchenne musküler distrofi",
+      "E": "Polikistik böbrek hastalığı tip 1"
+     },
+     "cevap": "D"
+    }
+   ]
+  },
+  {
+   "no": 8,
+   "metin": "Öğrenci, osteogenezis imperfekta, Marfan sendromu ve DMD/BMD'nin etiyolojisini, kalıtımını ve klinik bulgularını birbirinden ayırt eder.",
+   "sorular": [
+    {
+     "id": "k2-08-beyin-ve-iskelet-sistemi-gelisimi-genetigi-q37",
+     "kazanim": 8,
+     "zorluk": "kolay",
+     "soru": "Osteogenezis imperfektada ayırıcı tanıda önemli olan klinik bulgu aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Psödohipertrofi",
+      "B": "Skleranın mavi renkte olması",
+      "C": "Lens ektopisi",
+      "D": "Aort dilatasyonu",
+      "E": "Gowers belirtisi"
+     },
+     "dogru": "B",
+     "aciklama": "Osteogenezis imperfektada mavi sklera klinik bulgular arasındadır ve skleranın maviliği ayırıcı tanıda önemlidir (sayfa 64, 66).",
+     "sik_aciklamalari": {
+      "A": "Psödohipertrofi kas dokusunu ilgilendiren müsküler distrofi bulgusudur. Osteogenezis imperfektanın bir kemik ve bağ dokusu hastalığı olması nedeniyle ayırıcı bulgu olamaz (sayfa 85).",
+      "B": "Osteogenezis imperfekta kollajen tip 1 biyosentezi defektine bağlı bir kemik kırılganlığı hastalığıdır. Skleranın mavi renkte olması bu hastalığın klinik bulgularındandır ve ayırıcı tanıda önemli olduğu için doğru cevaptır (sayfa 64, 66).",
+      "C": "Lens ektopisi Marfan sendromunda yenidoğan döneminde görülen bir bulgudur ve fibrillin 1 defektiyle ilişkilidir. Osteogenezis imperfekta için ayırıcı özellik olmadığından yanlıştır (sayfa 72).",
+      "D": "Aort dilatasyonu Marfan sendromunun klasik bulgusudur. Osteogenezis imperfektada ayırıcı tanıyı sağlayan bulgu mavi sklera olduğundan bu şık yanlıştır (sayfa 72-73).",
+      "E": "Gowers belirtisi Duchenne müsküler distrofide pelvik güçsüzlük nedeniyle ortaya çıkan bir bulgudur. Kemik kırılganlığı hastalığıyla ilgisi olmadığı için yanlıştır (sayfa 82)."
+     },
+     "bilgi": [
+      176,
+      181
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 66,
+      "alinti": "Skleranın maviliği ayırıcı tanıda önemlidir"
+     }
+    },
+    {
+     "id": "k2-08-beyin-ve-iskelet-sistemi-gelisimi-genetigi-q43",
+     "kazanim": 8,
+     "zorluk": "kolay",
+     "soru": "Çocukluk çağında en sık rastlanan müsküler distrofi formu ve kalıtım biçimi aşağıdakilerden hangisinde doğru verilmiştir?",
+     "secenekler": {
+      "A": "Miyotonik distrofi; X'e bağlı resesif",
+      "B": "Duchenne/Becker distrofisi; otozomal dominant",
+      "C": "Osteogenezis imperfekta; otozomal dominant",
+      "D": "Marfan sendromu; X'e bağlı resesif",
+      "E": "Duchenne/Becker distrofisi; X'e bağlı resesif"
+     },
+     "dogru": "E",
+     "aciklama": "Çocukluk çağında en sık müsküler distrofi Duchenne/Becker distrofisidir, yaklaşık 3500 erkek doğumda 1 görülür ve X'e bağlı resesif aktarılır (sayfa 75-76).",
+     "sik_aciklamalari": {
+      "A": "Miyotonik distrofi çocukluk çağının değil erişkinlerin daha sık rastlanan müsküler distrofisidir. Bu nedenle çocukluk çağındaki en sık form olarak yanlış seçenektir (sayfa 75).",
+      "B": "Duchenne/Becker distrofisi çocukluk çağında en sık form olarak doğru verilmiştir. Ancak kalıtım biçimi X'e bağlı resesiftir, otozomal dominant değildir (sayfa 75-76).",
+      "C": "Osteogenezis imperfekta kollajen biyosentezi defektine bağlı bir kemik kırılganlığı hastalığıdır ve müsküler distrofi değildir. Soru müsküler distrofi formunu sorduğu için yanlıştır (sayfa 64, 75).",
+      "D": "Marfan sendromu fibrillin 1 sentez bozukluğuna bağlı otozomal dominant geçişli bir bağ dokusu hastalığıdır, müsküler distrofi değildir. Soru müsküler distrofi formunu sorduğu için yanlıştır (sayfa 71, 75).",
+      "E": "Duchenne ve Becker distrofileri çocukluk çağında en sık rastlanan müsküler distrofi formudur. Kadın taşıyıcılar tarafından X'e bağlı resesif aktarılan bu hastalık erkek çocuklarda görüldüğü için doğru cevaptır (sayfa 75-76)."
+     },
+     "bilgi": [
+      201,
+      203
+     ],
+     "benzer_cikmis": [
+      "d700decc9b5b",
+      "past-q-18-85"
+     ],
+     "kanit": {
+      "sayfa": 75,
+      "alinti": "Çocukluk çağında en sık rastlanan formu; Duchenne/Becker distrofisi olup, yaklaşık 3500 erkek doğumda 1 görülür"
+     }
+    },
+    {
+     "id": "k2-08-beyin-ve-iskelet-sistemi-gelisimi-genetigi-q38",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Osteogenezis imperfektanın daha nadir görülen letal formu olan, doğanların yaklaşık yarısının ölü doğduğu ve otozomal dominant kalıtım gösteren tip hangisidir?",
+     "secenekler": {
+      "A": "Tip 3",
+      "B": "Tip 4",
+      "C": "Fibrokondrogenezis",
+      "D": "Tip 1",
+      "E": "Tip 2"
+     },
+     "dogru": "E",
+     "aciklama": "Oİ tip 2 daha nadir görülen letal formdur, yarısı ölü doğar ve otozomal dominant kalıtım kalıbı gösterir (sayfa 68).",
+     "sik_aciklamalari": {
+      "A": "Tip 3'te doğumda normal görünüm ya da kırıklarla birlikte deformiteler olabilir ve kalıtım otozomal dominant ya da nadiren otozomal resesiftir. Letal ve ölü doğumla giden form tip 2 olduğu için yanlıştır (sayfa 69).",
+      "B": "Tip 4 otozomal dominant geçer ve tip 1'den daha fazla frajilite ile osteoporoz gösterir, ancak ağır deformitelere yol açan multipl kırıklar görülmez. Letal form olmadığı için yanlıştır (sayfa 69).",
+      "C": "Fibrokondrogenezis COL1A1 ve COL1A2 mutasyonlarına bağlı letal bir iskelet displazisidir, ancak otozomal resesif kalıtılır. Soru osteogenezis imperfekta tipini sorduğu için yanlıştır (sayfa 61).",
+      "D": "Tip 1 Oİ'nin en sık rastlanan tipidir ve hafif seyreder. Letal olmadığı ve nadir olmadığı için bu şık yanlıştır (sayfa 66, 68).",
+      "E": "Oİ tip 2 daha nadir olan letal formdur ve olguların yarısı ölü doğar. Otozomal dominant kalıtım gösterdiği için soruda tarif edilen tablonun tamamı bu tipe uyar (sayfa 68)."
+     },
+     "bilgi": [
+      185
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 68,
+      "alinti": "Tip-2 : Daha nadir olan letal formudur. Yarısı ölü doğar. OD kalıtım kalıbı gösterir."
+     }
+    },
+    {
+     "id": "k2-08-beyin-ve-iskelet-sistemi-gelisimi-genetigi-q39",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Osteogenezis imperfektanın kesin tanısı aşağıdakilerden hangisiyle konulur?",
+     "secenekler": {
+      "A": "Distrofin geninde okuma çerçevesi analizi",
+      "B": "Yalnızca aile öyküsünün sorgulanması",
+      "C": "Deri biyopsi kültürlerindeki fibroblastlarda kollajenin biyokimyasal analizi (Tip I ve Tip III oranı) ve moleküler inceleme",
+      "D": "Yalnızca mavi sklera bulgusunun varlığı",
+      "E": "Fibrillin 1 geninde alelik heterojenite analizi"
+     },
+     "dogru": "C",
+     "aciklama": "Oİ'nin kesin tanısı deri biyopsi kültürlerinden elde edilen fibroblastlarda kollajenin biyokimyasal analizi ve moleküler incelemeyle konur; Tip III/I kollajen oranı yüksektir (sayfa 70).",
+     "sik_aciklamalari": {
+      "A": "Distrofin geninin okuma çerçevesi analizi Duchenne ve Becker müsküler distrofilerin mutasyon tipini belirlemek için kullanılan bir kavramdır. Osteogenezis imperfekta tanısında kullanılmadığı için yanlıştır (sayfa 77-78).",
+      "B": "Aile öyküsü pozitif olanlarda koryonik villus biyopsisi ile ilk trimesterde tanı konabilir, ancak kesin tanı fibroblast kollajen analizi ve moleküler inceleme ister. Yalnız aile öyküsü kesin tanı sağlamaz (sayfa 70).",
+      "C": "Fibroblastlarda kollajen analizi, Tip I ve Tip III kollajen oranını gösterir ve Oİ'de Tip III/I oranı yüksektir. Moleküler incelemeyle birleştiğinde kesin tanı sağladığı için doğru cevaptır (sayfa 70).",
+      "D": "Mavi sklera ayırıcı tanıda önemli bir klinik bulgudur ancak tek başına kesin tanı koydurmaz. Kesin tanı biyokimyasal ve moleküler incelemeyle konduğu için bu şık yanlıştır (sayfa 66, 70).",
+      "E": "FBN1 geninde alelik heterojenite Marfan sendromunda tanıyı zorlaştıran bir özelliktir. Osteogenezis imperfekta ise kollajen genlerinin defektiyle ilgili olduğundan bu şık yanlıştır (sayfa 74)."
+     },
+     "bilgi": [
+      188,
+      189
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 70,
+      "alinti": "deri biyopsi kültürlerinden elde edilen fibroblastlarda kollajenin biyokimyasal analizi ile Tip I ve Tip III kollajen oranının belirlenmesiyle"
+     }
+    },
+    {
+     "id": "k2-08-beyin-ve-iskelet-sistemi-gelisimi-genetigi-q41",
+     "kazanim": 8,
+     "zorluk": "orta",
+     "soru": "Uzun boylu, ince uzun parmaklı, aort dilatasyonu ve lens ektopisi olan, otozomal dominant geçişli bir hastada temel defekt aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Distrofin eksikliği",
+      "B": "COL2A1 mutasyonu",
+      "C": "Kollajen tip 1 biyosentezi defekti",
+      "D": "Fibrillin 1 glikoprotein sentez bozukluğu",
+      "E": "FGFR3 geninde artmış sinyal iletimi"
+     },
+     "dogru": "D",
+     "aciklama": "Marfan sendromu mikrofibrillerin yapısına giren fibrillin 1 glikoproteininin sentez bozukluğuyla oluşur; iskelet anomalileri, aort dilatasyonu, mitral valv prolapsusu ve göz bozuklukları görülür (sayfa 71-72).",
+     "sik_aciklamalari": {
+      "A": "Distrofin eksikliği Duchenne ve Becker müsküler distrofilerde kas güçsüzlüğü yapar ve X'e bağlı resesif aktarılır. Otozomal dominant geçişle ve aort dilatasyonuyla uyuşmadığı için yanlıştır (sayfa 76-77).",
+      "B": "COL2A1 mutasyonları tip 2 kollajenopatilere yol açar ve kemik kısalığı ile giden displazilere neden olur. Uzun boy, aort dilatasyonu ve lens ektopisiyle uyuşmadığı için yanlıştır (sayfa 57).",
+      "C": "Kollajen tip 1 biyosentezi defekti osteogenezis imperfektayı oluşturur ve kemik kırılganlığı verir. Aort dilatasyonu ile lens ektopisi gibi Marfan bulgularıyla uyuşmadığı için yanlıştır (sayfa 64, 72).",
+      "D": "Fibrillin 1, elastinin temel yapısını oluşturan mikrofibrillerin yapısına giren bir glikoproteindir. Sentez bozukluğu uzun boy, araknodaktili, aort dilatasyonu ve lens ektopisine yol açtığı için doğru cevaptır (sayfa 71-73).",
+      "E": "FGFR3 geninde artmış sinyal iletimi büyüme plağında akondroplazi gibi displazilerde boy kısalığına yol açar. Uzun boy ve aort dilatasyonu ile giden bu tabloyla uyuşmadığı için yanlıştır (sayfa 51)."
+     },
+     "bilgi": [
+      190,
+      191,
+      192
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 71,
+      "alinti": "mikrofibrillerin yapısına giren fibrillin 1 glikoprotein sentez bozukluğu ile oluşur"
+     }
+    },
+    {
+     "id": "k2-08-beyin-ve-iskelet-sistemi-gelisimi-genetigi-q40",
+     "kazanim": 8,
+     "zorluk": "zor",
+     "soru": "Marfan sendromunda tanının FBN1 mutasyonlarının saptanmasıyla doğrulanması neden zordur?",
+     "secenekler": {
+      "A": "Yüksek oranda alelik heterojenite görüldüğü için, yani aynı lokus içinde değişik mutasyonlar bulunduğu için",
+      "B": "Lokus heterojenitesi görüldüğü için, yani iki veya daha fazla lokustaki mutasyon aynı fenotipi oluşturduğu için",
+      "C": "Hastalık X'e bağlı resesif aktarıldığı için",
+      "D": "Hastaların tamamında mutasyon de novo geliştiği için",
+      "E": "Hastalık kollajen tip 1 biyosentezi bozukluğundan kaynaklandığı için"
+     },
+     "dogru": "A",
+     "aciklama": "Marfan tanısının FBN1 mutasyonlarıyla doğrulanması zordur çünkü yüksek oranda alelik heterojenite vardır; alelik heterojenite aynı lokus içindeki değişik mutasyonlardan kaynaklanır (sayfa 74).",
+     "sik_aciklamalari": {
+      "A": "Alelik heterojenite aynı lokus yani FBN1 içinde çok sayıda değişik mutasyonun bulunmasıdır. Her ailede farklı mutasyon çıkabildiği için tek bir mutasyonu aramak tanıyı doğrulamayı zorlaştırır ve doğru cevap budur (sayfa 74).",
+      "B": "Lokus heterojenitesi iki veya daha fazla lokustaki mutasyonların aynı fenotipi oluşturmasıdır. Derste Marfan için vurgulanan, aynı lokus içindeki değişik mutasyonlardır, yani alelik heterojenitedir; bu yüzden bu şık yanlıştır (sayfa 74).",
+      "C": "Marfan sendromu otozomal dominant geçişlidir, X'e bağlı resesif aktarım DMD ve BMD için tanımlanır. Tanıdaki zorluk kalıtım biçiminden değil mutasyon çeşitliliğinden kaynaklandığı için yanlıştır (sayfa 71, 76).",
+      "D": "Marfan sendromunda olguların yaklaşık %30'u sporadiktir ve %25-35'inde de novo mutasyon sorumludur. Hastaların tamamında olmadığı ve tanıyı zorlaştıran asıl neden alelik heterojenite olduğu için bu şık yanlıştır (sayfa 71-72, 74).",
+      "E": "Kollajen tip 1 biyosentezi defekti osteogenezis imperfektanın nedenidir. Marfan sendromunda defekt fibrillin 1 sentezindedir, bu yüzden bu şık yanlıştır (sayfa 64, 71)."
+     },
+     "bilgi": [
+      198,
+      199
+     ],
+     "benzer_cikmis": [
+      "past-1790877040110-917236"
+     ],
+     "kanit": {
+      "sayfa": 74,
+      "alinti": "Marfan sendromu tanısının FBN1 mutasyonlarının saptanması ile doğrulanması zordur çünkü yüksek oranda gözlenen alelik heterojenite görülür"
+     }
+    },
+    {
+     "id": "k2-08-beyin-ve-iskelet-sistemi-gelisimi-genetigi-q42",
+     "kazanim": 8,
+     "zorluk": "zor",
+     "soru": "Duchenne ve Becker müsküler distrofileri arasındaki klinik ayrılığın temel nedeni aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "BMD'de de novo mutasyon yoktur, DMD'nin ise tamamı de novo gelişir.",
+      "B": "Farklı mutasyonların distrofin protein sentezine etkileri: tam veya tama yakın eksiklik DMD'ye, anormal molekül ağırlıklı distrofin BMD'ye yol açar.",
+      "C": "DMD otozomal dominant, BMD X'e bağlı resesif aktarılır.",
+      "D": "DMD'de Xp21 geni, BMD'de farklı bir kromozomdaki gen etkilenir.",
+      "E": "DMD yalnızca kadınlarda, BMD yalnızca erkeklerde görülür."
+     },
+     "dogru": "B",
+     "aciklama": "DMD ile BMD arasındaki klinik ayrılık farklı mutasyonların protein sentezine etkisinden kaynaklanır; tam veya tama yakın distrofin eksikliği DMD'ye, anormal molekül ağırlıklı distrofin BMD'ye yol açar (sayfa 77).",
+     "sik_aciklamalari": {
+      "A": "DMD olgularının yaklaşık üçte birinde neden yeni oluşan de novo bir mutasyondur, geri kalanı kalıtılır. Klinik ayrımı belirleyen şey mutasyonun kaynağı değil distrofin proteininin durumudur, bu yüzden bu şık yanlıştır (sayfa 75, 77).",
+      "B": "Her iki hastalık da Xp21'deki distrofin geninin mutasyonuyla gelişir ve ayrımı protein düzeyi belirler. Tam veya tama yakın distrofin eksikliği ağır DMD'ye, anormal molekül ağırlıklı distrofin daha hafif BMD'ye yol açtığı için doğru cevaptır (sayfa 76-77).",
+      "C": "DMD ve BMD kadın taşıyıcılar tarafından X'e bağlı resesif olarak aktarılır. Kalıtım biçimi iki hastalıkta aynı olduğundan klinik farkı açıklamaz (sayfa 76).",
+      "D": "Xp21 geni distrofin proteinini üretir ve DMD ile BMD fenotipi bu genin mutasyonlarıyla ortaya çıkar. İki hastalığın farklı genlerden kaynaklandığı derste belirtilmediği için yanlıştır (sayfa 76).",
+      "E": "DMD ve BMD kadın taşıyıcılar tarafından aktarılır ve hastalık erkek çocuklarda görülür. Cinsiyet dağılımı iki hastalıkta benzer olduğundan bu ifade yanlıştır (sayfa 76)."
+     },
+     "bilgi": [
+      205,
+      206
+     ],
+     "benzer_cikmis": [
+      "447c07f50aed",
+      "past-1790877040110-917236"
+     ],
+     "kanit": {
+      "sayfa": 77,
+      "alinti": "Tam veya tama yakın distrofin eksikliği DMD’ye sebep olur"
+     }
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "d700decc9b5b",
+     "soru": "Muskuler distrofileri ile\nilgili doğru olanı\nişaretleyiniz.",
+     "secenekler": {
+      "A": "Duchenne muskuler\ndistrofi en sık rastlanan\nformudur",
+      "B": "Distrofin proteinin fazla\nolması sorumludur",
+      "C": "En ağır tipi\nfasioskapulohumeral tiptir",
+      "D": "Kaslarda hipertrofi\nmevcuttur",
+      "E": "Tanıda en değerli yöntem\nMR görüntülemedir"
+     },
+     "cevap": "A"
+    },
+    {
+     "id": "past-q-18-85",
+     "soru": "Aşağıdakilerden hangisi otozomal dominant hastalıklara örnek olarak verilemez?",
+     "secenekler": {
+      "A": "Akondroplazi",
+      "B": "Retinoblastoma",
+      "C": "Ailesel polipozis koli",
+      "D": "Duchenne musküler distrofi",
+      "E": "Polikistik böbrek hastalığı tip 1"
+     },
+     "cevap": "D"
+    },
+    {
+     "id": "past-1790877040110-917236",
+     "soru": "Sıklıkla yeni mutasyonlar sonucu ortaya çıkan, allelik heterojenite ve fenotipik değişkenlik gösteren ve taşıyıcılarda da fenotipik bulgu veren kas distrofisi hastalık grubu hangisidir?",
+     "secenekler": {
+      "A": "Okülofaringeal müsküler distrofi (OPMD)",
+      "B": "Duchenne müsküler distrofi (DMD)",
+      "C": "Limb-girdle müsküler distrofi (LGMD)",
+      "D": "Fasiyoskapulohumeral müsküler distrofi (FSHD)",
+      "E": "Emery-Dreifuss müsküler distrofi (EDMD)"
+     },
+     "cevap": "B"
+    },
+    {
+     "id": "447c07f50aed",
+     "soru": "İskelet kası\nhastalıkları\nDistroÕn-glikoprotein\nkompleksindeki hücre\n sinyalizasyonunun\nbozulmasına yol açan\nzamanla onarım\nkapasitesini aşan\nmiyoÕbril dejenerasyonları ile\nortaya çıkan iskelet\nkası hastalığı\nhangisidir?",
+     "secenekler": {
+      "A": "Fasyoskapulohumeral distroÕ",
+      "B": "İyon kanalı miyopatileri",
+      "C": "Duchenne ve Becker musküler distroÕsi",
+      "D": "Polimiyozit",
+      "E": "Dermatomiyozit"
+     },
+     "cevap": "C"
+    }
+   ]
+  }
+ ],
+ "soru_sayisi": 43
+}
