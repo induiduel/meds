@@ -1075,27 +1075,6 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [questions, doubtInfo]);
   // v15 C07 girişi: seçili kuruldaki sorular yıla ve derse göre (toplam · çözülen · doğru · yeni)
-  const girisGruplari = useMemo(() => {
-    if (!v15 || !prepared.length) return null;
-    const yil = new Map<string, CikmisGrup>(), ders = new Map<string, CikmisGrup>();
-    for (const p of prepared) {
-      if (selectedCommittee !== 'all' && !p.comms.includes(selectedCommittee)) continue;
-      const a = attempts[p.q.id];
-      for (const [m, k] of [[yil, p.year], [ders, p.disc || 'Diğer']] as [Map<string, CikmisGrup>, string][]) {
-        const g = m.get(k) || { ad: k, toplam: 0, cozulen: 0, dogru: 0, yeni: 0 };
-        g.toplam++; if (a) { g.cozulen++; if (a.correct) g.dogru++; } if (p.isNew) g.yeni++;
-        m.set(k, g);
-      }
-    }
-    return {
-      // gerçek öğretim yılı (2023-2024) önde ve yeniden eskiye; düzensiz adlar (2026, "Geçmiş yıllar…", Kategorisiz) sonda
-      yillar: [...yil.values()].sort((x, y) => {
-        const d = (g: CikmisGrup) => (/^\d{4}-\d{4}$/.test(g.ad) ? 0 : 1);
-        return d(x) - d(y) || y.ad.localeCompare(x.ad, 'tr');
-      }),
-      dersler: [...ders.values()].sort((x, y) => y.toplam - x.toplam),
-    };
-  }, [v15, prepared, attempts, selectedCommittee]);
 
   // Arama alanlarını tarayıcı boştayken parça parça hazırla: yoksa ilk tuşta binlerce soru birden katlanıyor
   // (telefonda ~0,4 sn donma). Hazırlanan alanlar soru nesnesinde önbellekte kalır.
@@ -1271,6 +1250,34 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [statusFilter, statusSnap, attempts, savedIds, prepared, searchScores, ambiguityTab, selectedCommittee, selectedYear, selectedDiscipline, selectedTopic, answerFilter, explanationFilter, sourceFilter, phase14Filter, denetleyiciFilter, newnessFilter, manualFilter, repeatedFilter, quarantineFilter, editedFilter, sortOrder]);
   const fc = (k: FacetKey, v = 'all') => facetCounts[k].get(v) || 0;
+  // Yıl/ders çipleri: liste ile aynı süzgeç zinciri (facetPass + arama); yalnız çipin kendi boyutu hariç tutulur.
+  // Önceden yalnız kurul süzgeci uygulanıyordu → varsayılan "standart" süzgecin elediği karantina/gizli sorular da
+  // sayılıyor, çip 21 derken liste 20 gösteriyordu (H110).
+  const girisGruplari = useMemo(() => {
+    if (!v15 || !prepared.length) return null;
+    const keys = Object.keys(facetPass) as FacetKey[];
+    const yil = new Map<string, CikmisGrup>(), ders = new Map<string, CikmisGrup>();
+    for (const p of prepared) {
+      if (searchScores && !searchScores.has(p.q.id)) continue;
+      const kalan = keys.filter((k) => !facetPass[k](p));
+      const a = attempts[p.q.id];
+      for (const [m, k, boyut] of [[yil, p.year, 'year'], [ders, p.disc || 'Diğer', 'discipline']] as [Map<string, CikmisGrup>, string, FacetKey][]) {
+        if (kalan.some((x) => x !== boyut)) continue;
+        const g = m.get(k) || { ad: k, toplam: 0, cozulen: 0, dogru: 0, yeni: 0 };
+        g.toplam++; if (a) { g.cozulen++; if (a.correct) g.dogru++; } if (p.isNew) g.yeni++;
+        m.set(k, g);
+      }
+    }
+    return {
+      // gerçek öğretim yılı (2023-2024) önde ve yeniden eskiye; düzensiz adlar (2026, "Geçmiş yıllar…", Kategorisiz) sonda
+      yillar: [...yil.values()].sort((x, y) => {
+        const d = (g: CikmisGrup) => (/^\d{4}-\d{4}$/.test(g.ad) ? 0 : 1);
+        return d(x) - d(y) || y.ad.localeCompare(x.ad, 'tr');
+      }),
+      dersler: [...ders.values()].sort((x, y) => y.toplam - x.toplam),
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [v15, prepared, attempts, searchScores, ambiguityTab, selectedCommittee, selectedYear, selectedDiscipline, selectedTopic, answerFilter, explanationFilter, sourceFilter, phase14Filter, denetleyiciFilter, newnessFilter, manualFilter, repeatedFilter, quarantineFilter, editedFilter]);
 
   // Seçili kurul/ders artık sonuç vermiyorsa (başka seçim yüzünden) seçimi düşürme: kullanıcı neyi seçtiyse o kalır,
   // yalnızca listelerde 0 sayılı seçenekler sönük gösterilir.
