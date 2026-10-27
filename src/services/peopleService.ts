@@ -254,6 +254,14 @@ export interface StudyMatrixPerson {
 }
 export const loadStudyMatrix = () => adminCall<{ at: string; kisiler: StudyMatrixPerson[] }>('/api/admin/people/calisma-matris');
 
+/** Giriş serisi ve günlük/haftalık görev verisi */
+export interface GorevKisi {
+  key: string; kind: string; ad: string; email: string | null;
+  seri: number; enUzun: number; toplamGun: number; sonGiris: string | null;
+  gun: { d: string; giris: boolean; calisma: number; soru: number }[];
+}
+export const loadGorevTakip = () => adminCall<{ at: string; bugun: string; kisiler: GorevKisi[] }>('/api/admin/people/gorev-takip');
+
 /** Hesap birleştirme: ikinci hesap sıralamadan çıkar, istenirse çalışma takibi asıl hesaba aktarılır */
 export interface MergeInfo {
   uid: string | null; kind: string;

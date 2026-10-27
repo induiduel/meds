@@ -1051,6 +1051,61 @@ export function registerPeopleInsights(app: express.Express, deps: PeopleDeps) {
     }
   });
 
+  // Giriş serisi + günlük/haftalık görev verisi (tüm kişiler). /:key'den önce kurulmalı.
+  app.get('/api/admin/people/gorev-takip', async (req, res) => {
+    if (!(await guard(req, res))) return;
+    try {
+      const gunler = Array.from({ length: 14 }, (_, i) => gunTr(new Date(Date.now() - (13 - i) * 86400_000)));
+      const kisiler = people()
+        .filter((p) => p.backup)
+        .map((p) => {
+          const { g } = calismaVeri(p.backup);
+          const aktif = new Set<string>();
+          const calisma: Record<string, number> = {};
+          const soru: Record<string, number> = {};
+          for (const [m, gm] of Object.entries(g)) {
+            for (const [d, s] of Object.entries(gm || {})) {
+              const v = Number(s) || 0;
+              if (v > 0) aktif.add(d);
+              calisma[d] = (calisma[d] || 0) + v;
+              if (m === 'cozucu') soru[d] = (soru[d] || 0) + v;
+            }
+          }
+          const zr = kvJson(p.backup, 'medsoru_etkinlik_v1', []);
+          for (const z of Array.isArray(zr) ? zr : []) if (Number(z?.g) > 0) aktif.add(gunTr(new Date(Number(z.g))));
+          if (p.lastLoginAt) aktif.add(gunTr(new Date(p.lastLoginAt)));
+          const bugun = gunTr();
+          const dun = gunTr(new Date(Date.now() - 86400_000));
+          let seri = 0;
+          let c = aktif.has(bugun) ? bugun : aktif.has(dun) ? dun : '';
+          while (c && aktif.has(c)) {
+            seri++;
+            c = gunTr(new Date(new Date(c + 'T12:00:00Z').getTime() - 86400_000 - 3 * 3600_000 + 3 * 3600_000));
+          }
+          const sirali = [...aktif].sort();
+          let enUzun = 0;
+          let cur = 0;
+          let onceki = '';
+          for (const d of sirali) {
+            const beklenen = onceki ? new Date(new Date(onceki + 'T12:00:00Z').getTime() + 86400_000).toISOString().slice(0, 10) : '';
+            cur = d === beklenen ? cur + 1 : 1;
+            enUzun = Math.max(enUzun, cur);
+            onceki = d;
+          }
+          return {
+            key: p.key, kind: p.kind, ad: p.name, email: p.email,
+            seri, enUzun, toplamGun: aktif.size, sonGiris: sirali[sirali.length - 1] || null,
+            gun: gunler.map((d) => ({ d, giris: aktif.has(d), calisma: calisma[d] || 0, soru: soru[d] || 0 })),
+          };
+        })
+        .filter((x) => x.toplamGun > 0);
+      res.setHeader('Cache-Control', 'no-store');
+      res.json({ at: new Date().toISOString(), bugun: gunTr(), kisiler });
+    } catch (e: any) {
+      res.status(500).json({ error: e?.message || String(e) });
+    }
+  });
+
   app.get('/api/admin/people/:key', async (req, res) => {
     if (!(await guard(req, res))) return;
     try {

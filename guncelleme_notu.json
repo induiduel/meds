@@ -1,11 +1,10 @@
 {
  "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
- "onem": 427,
- "baslik": "Giriş ve açılış ekranları yenilendi",
+ "onem": 428,
+ "baslik": "Yönetimde giriş serileri ve görev takibi",
  "maddeler": [
-  "Giriş/kayıt kartı yeni görünümde: üstte Giriş yap · Kayıt ol sekmesi, büyük alanlar ve düğmeler",
-  "Önemli bilgilendirme ekranı telefonda alttan açılan sayfa, maddeler tek kartta",
-  "Tanıtım ekranlarında adım sayacı ve ilerleme çubuğu"
+  "Yeni \"Giriş ve görevler\" sekmesi: ardışık giriş serileri",
+  "Günlük ve haftalık çalışma ile soru çözme görevleri kişi bazında izlenir"
  ],
  "eklenen": [],
  "degisen": [],
