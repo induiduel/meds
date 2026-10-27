@@ -45,6 +45,7 @@ export function CdV15Bas(p: {
   setGorunum: (g: CdGorunum) => void;
   onGorunum: () => void;
   onMenu: () => void;
+  onTamEkran?: () => void;
   ek?: React.ReactNode;
   hizli?: {
     yildiz: number; onYildiz: () => void;
@@ -85,20 +86,9 @@ export function CdV15Bas(p: {
             <button type="button" className="v15-ib" onClick={() => p.hizli!.setYazi(p.hizli!.yazi - 2)} disabled={p.hizli.yazi <= p.hizli.yaziEnaz} aria-label="Yazıyı küçült" title="Yazıyı küçült">A−</button>
             <button type="button" className="v15-ib" onClick={() => p.hizli!.setYazi(p.hizli!.yazi + 2)} disabled={p.hizli.yazi >= p.hizli.yaziEncok} aria-label="Yazıyı büyüt" title="Yazıyı büyüt">A+</button>
           </span>
-          {p.hizli.vurguVar && (
-            <button type="button" className={`v15-ib${p.hizli.vurgu ? ' is-on' : ''}`} aria-pressed={p.hizli.vurgu} onClick={() => p.hizli!.setVurgu(!p.hizli!.vurgu)}
-              aria-label="Önemli yerleri vurgula" title={p.hizli.vurgu ? 'Önemli yer vurgusu açık (kapat)' : 'Önemli yerleri vurgula'}>
-              <Highlighter aria-hidden />
-            </button>
-          )}
           <button type="button" className="v15-ib" onClick={p.hizli.onYildiz} aria-label={`Yıldızlı paragraflar (${p.hizli.yildiz})`} title={`Yıldızlı paragraflar (${p.hizli.yildiz})`}>
             <Star aria-hidden />{p.hizli.yildiz > 0 && <i className="cd15-rozet">{p.hizli.yildiz}</i>}
           </button>
-          {p.hizli.onOgren && (
-            <button type="button" className="v15-ib" onClick={p.hizli.onOgren} aria-label="Öğren destesine geç" title="Öğren destesine geç">
-              <BookOpen aria-hidden />
-            </button>
-          )}
         </span>
       )}
       {p.terimVar && (
@@ -107,7 +97,11 @@ export function CdV15Bas(p: {
           <Info aria-hidden />
         </button>
       )}
-      {/* tam ekran üst barda değil: Görünüm › Düzen (tasarım S25) */}
+      {p.onTamEkran && (
+        <button type="button" className="v15-ib" onClick={p.onTamEkran} aria-label="Tam ekran" title="Tam ekran (Esc ile çıkılır)">
+          <Maximize2 aria-hidden />
+        </button>
+      )}
       <button type="button" className="v15-ib" onClick={p.onGorunum} aria-haspopup="dialog" aria-label="Görünüm ayarları" title="Görünüm: düzen, PDF katmanları, okuma">
         <SlidersHorizontal aria-hidden />
       </button>

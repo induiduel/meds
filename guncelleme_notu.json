@@ -1,11 +1,10 @@
 {
  "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
- "onem": 444,
- "baslik": "Yanlışlarım ve daha sade ders menüsü",
+ "onem": 445,
+ "baslik": "Sesli ders üst barında tam ekran düğmesi",
  "maddeler": [
-  "Yeni: Soru çöz › Yanlışlarım — yanlış yaptığın sorular 48 saat sonra yeniden sorulur, doğru yaptıkça aralık uzar",
-  "Sesli dersin ⋯ menüsü sadeleşti: üç grup, büyük simgeli düğmeler",
-  "Soru çözerken art arda doğrularda seri rozeti"
+  "Sesli ders başlığına tam ekran düğmesi eklendi (Esc ile çıkılır)",
+  "\"Önemli yerleri vurgula\" ve \"Öğren destesine geç\" artık ⋯ Ders seçenekleri menüsünde"
  ],
  "eklenen": [],
  "degisen": [],
