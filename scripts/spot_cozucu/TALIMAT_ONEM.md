@@ -76,6 +76,14 @@ Sesli çözücünün açıklamaları ikinci adımdadır (`TALIMAT_COZUCU.md`).
 - Bir çıkmış soru, onu çözdürecek bilgiyi taşıyan maddeye bağlanır (en çok 2 madde). O maddenin puanı yüksek olmalı (çoğu 80+).
 
 ### Örnek sorular (`ornek`)
+- **Soru üslubu ve tıbbi kapsam (ZORUNLU, kullanıcı uyarısı 2026-10-27):**
+  - Soru kökünde dersi/slaytı/bölümü çağrıştıran, öznel ya da kaynağa gönderen ifade YASAK: "dersin bölümüne göre", "bu derste anlatıldığına göre",
+    "slaytta belirtildiği gibi", "notlara göre", "yukarıdaki bilgiye göre", "hocaya göre". Soru kendi başına, ders okunmamış bir sınav sorusu gibi tam ve bağımsız olur.
+  - Üslup çıkmış sorulara benzer olmalı; yalnız genel kabul görmüş kalıplar kullanılır: klinik vaka kökü (yaş, cinsiyet, yakınma, bulgu → "Bu hastada en olası tanı/
+    tanıyı doğrulayan/en olası mekanizma/ilk yapılacak/tedavi hangisidir?"), "Aşağıdakilerden hangisi …dir?", "… ile ilgili aşağıdakilerden hangisi YANLIŞTIR/ doğrudur?",
+    "Hangisi … özelliğidir?". Garip, oyunsu, meta ("bu bilgi hangi başlıkta") veya tanımsız kalıp kurulmaz.
+  - Her soru müfredat → kazanım → konu zincirinde yer alan, tıbbi olarak anlamlı ve sınavda sorulabilir bir bilgiyi ölçer. Slayttaki rastgele bir ayrıntıyı
+    (başlık sırası, görsel düzen, anekdot, sayfa notu, tıbbi olmayan öge) sormak YASAK; soru önce hangi kazanıma hizmet ettiğiyle gerekçelendirilebilmelidir.
 - Toplam örnek soru sayısı: **`max(ornek_hedef, 20 − kullanılan çıkmış sayısı)`** ile **`ornek_hedef + 6`** arası. Ders çözücüsü = örnek +
   kullanılan çıkmış (karışık, 20–40'lık setler).
 - **Çıkmışlara uygun:** bu dersin çıkmış sorularının biçim ve üslubunda yaz — "Aşağıdakilerden hangisi … değildir/yanlıştır?", "en sık …",

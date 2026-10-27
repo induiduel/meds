@@ -326,6 +326,12 @@ class Denetim:
                     self.hata(f"soru {qid}: kazanim tamsayı, bilgi liste olmalı")
                 if len(str(q.get("soru", "")).strip()) < 15:
                     self.hata(f"soru {qid}: soru kökü kısa")
+                _kok = str(q.get("soru", "")).lower()
+                for _y in ("dersin ", "derste ", "bu derse", "slayt", "bölümüne göre", "notlara göre", "notlarına göre",
+                           "hocaya göre", "yukarıdaki bilgi", "anlatıldığına göre", "sunumda", "kazanıma göre"):
+                    if _y in _kok:
+                        self.hata(f"soru {qid}: kökte ders/slayt göndermesi yasak ('{_y.strip()}'); soru bağımsız sınav sorusu olmalı (H119)")
+                        break
                 self.kanit(q.get("kanit"), f"soru {qid}")
                 per.setdefault(q.get("kazanim"), []).append(q.get("zorluk"))
             for k, zs in per.items():

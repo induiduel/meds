@@ -1,10 +1,10 @@
 {
  "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
- "onem": 496,
- "baslik": "Ders PDF'i düzeltildi",
+ "onem": 497,
+ "baslik": "Örnek soru kalitesi",
  "maddeler": [
-  "PDF artık uygulamadan yalıtılmış çerçevede hazırlanıyor: renkler karışmıyor, sayfa kenar boşlukları var",
-  "Boş sayfalar kalktı, özet anlatımın hemen altından devam ediyor"
+  "Örnek sorular artık dersi çağrıştıran ifadeler içermeden, çıkmış sorulara benzer sınav üslubunda hazırlanıyor",
+  "Her soru müfredat ve kazanım kapsamında, tıbbi olarak anlamlı bilgiyi ölçüyor"
  ],
  "eklenen": [],
  "degisen": [],

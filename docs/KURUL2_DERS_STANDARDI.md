@@ -154,3 +154,5 @@ kaynağa sadık, çıkmışa ve hocanın vurguladığı yere ağırlık veren de
    ayrıntı bilgi kapsamının (önem listesi dışındaki atomik bilgilerin) yaklaşık %40'ı örnek soruya çevrilir. Böylece dersin örnek soru sayısı
    **50'yi aşar, 100'ü geçmez** (50 < n ≤ 100). Sayı bu aralığın dışına çıkarsa önce kapsam oranı ayarlanır, aralık gevşetilmez. Kaynak sadakati ve
    çeldirici/şık standartları değişmez (kural 4, SIK_ACIKLAMA_STANDARDI).
+
+9. **Örnek soru üslubu ve tıbbi kapsam (kullanıcı uyarısı 2026-10-27):** soru kökünde "dersin bölümüne göre", "slaytta belirtildiği gibi" gibi dersi çağrıştıran/öznel ifade yok; çıkmış sorulara benzer, genel kabul görmüş soru kalıpları; her soru müfredat–kazanım–konu ışığında tıbbi ve sınavda sorulabilir bilgiyi ölçer (rastgele slayt ayrıntısı yasak). Ayrıntı: `scripts/ders_isci/TALIMAT.md` §4, `scripts/spot_cozucu/TALIMAT_ONEM.md`.

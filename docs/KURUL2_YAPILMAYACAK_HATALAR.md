@@ -1054,3 +1054,15 @@ Her maddede: belirti · kök neden · Kurul 2 kuralı · kapı durumu. Kanıtlar
 - **Çözüm:** swipe_matching tablo dışı bırakıldı; venn/feature_bidding yalnız ≥3 satır, her gerekçe ≥7 kelime ve benzersizse alınır.
 - **Kural:** Karşılaştırma yalnız iki GERÇEK tıbbi kavramı (hastalık, yapı, ilaç, mekanizma) ayırt eder; "X mi Y başlığı mı" gibi meta sınıflama, tek cümlelik özdeş gerekçe, bozuk Türkçe yasak. Yazar parçalarında da yazılmaz; yazar/denetçi bunu kontrol eder.
 - PDF/yazdırma: belge yalıtılmış iframe'de yazdırılır; uygulama DOM'unda yazdırma ve sayfa yüksekliğine eşit sabit yükseklik YASAK (boş sayfa/renk karışması).
+
+## H119 · Örnek sorularda öznel/ders çağrıştıran kök ve rastgele slayt sorusu (2026-10-27)
+- **Belirti:** Soru kökleri "dersin bölümüne göre…" gibi ifadeler içeriyor, çıkmış soru kalıplarına uymuyor, bazı sorular müfredat/kazanım dışı rastgele ayrıntı soruyordu.
+- **Kök neden:** Talimat kaynak sadakatini ve şık standardını söylüyordu ama soru kökü üslubunu ve "her soru bir kazanıma hizmet etmeli" şartını söylemiyordu; yazar slayttan çıkan her bilgiyi soruya çevirdi.
+- **Kural:** Kök bağımsız ve çıkmış-benzeri kalıpta; ders/slayt/bölüm göndermesi yok; her soru kazanım–konu bağlı, tıbbi ve sınav değerli. Kaynak: `TALIMAT.md` §4, `TALIMAT_ONEM.md`, `KURUL2_DERS_STANDARDI.md` §10.9.
+
+
+## H106 · Çalışma takvimi (ısı haritası) hücreleri dev görünüyordu (2026-10-27)
+- **Belirti:** İstatistiklerim › Çalışma takvimi geniş ekranda ~80 px'lik kutularla sayfayı kaplıyordu.
+- **Kök neden:** `.gf15-isi` sütunları `minmax(0, 1fr)` (kart genişliğini paylaşır) + hücre `aspect-ratio: 1` → hücre yüksekliği kart genişliğiyle büyüyor.
+- **Çözüm:** Sütun `minmax(0, 16px)` + `justify-content: start`; hücre en çok 16 px.
+- **Kural:** Kare hücreli ızgaralarda (ısı haritası, takvim) sütun genişliğine üst sınır koy; `1fr` + `aspect-ratio` birlikte kullanılmaz.

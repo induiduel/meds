@@ -181,6 +181,14 @@ iyi yazman yeterli.
   "aciklama": "≥20 karakter, mekanizma gerekçeli", "sik_aciklamalari": {"A": "...", "B": "...", "C": "...", "D": "...", "E": "..."},
   "bilgi": [3, 7], "benzer_cikmis": ["<çıkmış soru id>"], "kanit": {"sayfa": 9, "alinti": "..."}}]}
 ```
+- **Soru üslubu ve tıbbi kapsam (ZORUNLU, kullanıcı uyarısı 2026-10-27):**
+  - Soru kökünde dersi/slaytı/bölümü çağrıştıran, öznel ya da kaynağa gönderen ifade YASAK: "dersin bölümüne göre", "bu derste anlatıldığına göre",
+    "slaytta belirtildiği gibi", "notlara göre", "yukarıdaki bilgiye göre", "hocaya göre". Soru kendi başına, ders okunmamış bir sınav sorusu gibi tam ve bağımsız olur.
+  - Üslup çıkmış sorulara benzer olmalı; yalnız genel kabul görmüş kalıplar kullanılır: klinik vaka kökü (yaş, cinsiyet, yakınma, bulgu → "Bu hastada en olası tanı/
+    tanıyı doğrulayan/en olası mekanizma/ilk yapılacak/tedavi hangisidir?"), "Aşağıdakilerden hangisi …dir?", "… ile ilgili aşağıdakilerden hangisi YANLIŞTIR/ doğrudur?",
+    "Hangisi … özelliğidir?". Garip, oyunsu, meta ("bu bilgi hangi başlıkta") veya tanımsız kalıp kurulmaz.
+  - Her soru müfredat → kazanım → konu zincirinde yer alan, tıbbi olarak anlamlı ve sınavda sorulabilir bir bilgiyi ölçer. Slayttaki rastgele bir ayrıntıyı
+    (başlık sırası, görsel düzen, anekdot, sayfa notu, tıbbi olmayan öge) sormak YASAK; soru önce hangi kazanıma hizmet ettiğiyle gerekçelendirilebilmelidir.
 - **Yalnız bu dersin bilgisiyle** (bilgi_paketi numaralarına bağla). Her kazanım için 3–10 soru; her kazanımda
   kolay/orta/zor en az birer, çoğunluk orta. Şıklar tam A–E, tekrarsız. Çıkmış soruyu kopyalama (yakın benzer
   olabilir, kopya değil); benzeri varsa id'sini `benzer_cikmis`'e yaz.
