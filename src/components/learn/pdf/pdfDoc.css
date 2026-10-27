@@ -153,6 +153,7 @@
 /* Temiz: saf beyaz zemin, koyu ve keskin metin, yumuşak gölge */
 .tema-temiz .pdv-canvas, .tema-temiz .pdv-thumb-c canvas { filter: brightness(1.14) contrast(1.9); }
 .tema-temiz .pdv-page, .tema-temiz .pdv-thumb-c { background: #fff; box-shadow: 0 1px 2px rgb(15 23 42 / .06), 0 6px 20px rgb(15 23 42 / .07); }
+.tema-temiz .pdv-page-ek { filter: brightness(1.14) contrast(1.9); }
 .tema-temiz .pdv-track { background: #f4f6fa; }
 /* Sepya: göz yormayan sıcak kâğıt */
 .tema-sepya .pdv-canvas, .tema-sepya .pdv-thumb-c canvas { filter: sepia(.28) contrast(.96) brightness(.98); mix-blend-mode: multiply; }
