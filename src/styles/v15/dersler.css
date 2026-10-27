@@ -286,3 +286,6 @@ a.k15-kart:hover { border-color: var(--color-accent); }
 .s15-sat .v15-tile { width: 34px; height: 34px; }
 .s15-sat-t b { font-size: 14px; }
 .s15-sat-t > span { -webkit-line-clamp: 1; }
+:root[data-v15='on'] .sl15-donem { flex: none; }
+:root[data-v15='on'] .sl15-donem button { display: inline-flex; align-items: center; gap: 4px; padding-inline: 10px; white-space: nowrap; }
+:root[data-v15='on'] .sl15-donem svg { width: 14px; height: 14px; }

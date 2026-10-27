@@ -1,6 +1,6 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
-import { ArrowRight, CornerDownLeft, Loader2, Moon, Search, Sun, X } from 'lucide-react';
+import { ArrowRight, CornerDownLeft, Loader2, Maximize, Moon, NotebookPen, Play, RotateCcw, Search, Sun, Target, Timer, X } from 'lucide-react';
 import { fetchSearch, Highlight, TypeTag, TYPE_META, type SearchHit, type SearchResponse } from './searchShared';
 import { DidYouMean, SuggestList, useQuerySuggest, type SuggestItem } from './QueryIntelUi';
 import { navigateTo, pathFor, type AppRoute } from '../../router';
@@ -93,6 +93,13 @@ export const SearchPalette: React.FC<SearchPaletteProps> = ({ initialQuery = '',
     const cmds: (PaletteAction & { words: string })[] = [
       { key: 'c:add', label: 'Soru ekle', meta: 'komut', icon: NAV_ITEMS.quick_add.icon, run: go('quick_add'), words: 'soru ekle katki yeni' },
       { key: 'c:theme', label: theme === 'dark' ? 'Aydınlık temaya geç' : 'Koyu temaya geç', meta: 'komut', icon: theme === 'dark' ? Sun : Moon, run: toggleTheme, words: 'tema koyu aydinlik karanlik gece' },
+      // tasarım AB09 komut paleti: sık eylemler (sayfa değil iş)
+      { key: 'c:karma', label: 'Karma test başlat (20 soru)', meta: 'komut', icon: Play, run: () => { navigateTo('/sorular/deneme?n=20&basla=1'); onClose(); }, words: 'karma test basla deneme soru coz' },
+      { key: 'c:yanlis', label: 'Yanlışlarımı çöz', meta: 'komut', icon: RotateCcw, run: go('yanlislarim'), words: 'yanlis tekrar hata' },
+      { key: 'c:kron', label: 'Kronometreyi aç', meta: 'komut', icon: Timer, run: () => { onClose(); window.dispatchEvent(new CustomEvent('medsoru:kronometre', { detail: 'kronometre' })); }, words: 'kronometre sure zaman sayac' },
+      { key: 'c:odak', label: 'Odak oturumu başlat', meta: 'komut', icon: Target, run: () => { onClose(); window.dispatchEvent(new CustomEvent('medsoru:kronometre', { detail: 'odak' })); }, words: 'odak pomodoro calisma kapsul' },
+      { key: 'c:not', label: 'Yeni not', meta: 'komut', icon: NotebookPen, run: go('notlarim'), words: 'not yaz kalem' },
+      { key: 'c:tam', label: 'Tam ekran', meta: 'komut', icon: Maximize, run: () => { onClose(); void (document.fullscreenElement ? document.exitFullscreen() : document.documentElement.requestFullscreen?.()).catch?.(() => {}); }, words: 'tam ekran fullscreen' },
     ];
     const cmdHits = cmds.filter((c) => !fq || c.words.split(' ').some((w) => w.startsWith(fq)) || foldTr(c.label).includes(fq));
     // Sağlık Bakanlığı alt sayfaları (/saglik/<bölüm>): "aşı takvimi", "karabük", "yenidoğan tarama" doğrudan açılır

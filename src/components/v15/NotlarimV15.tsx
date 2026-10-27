@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo, useRef, useState, useSyncExternalStore } from 'react';
-import { Eraser, Headphones, Highlighter, Pen, Plus, Search, Share2, Star, Trash2, Type, Undo2, X } from 'lucide-react';
+import { Eraser, Headphones, List, Highlighter, Pen, Plus, Search, Share2, Star, Trash2, Type, Undo2, X } from 'lucide-react';
 import { linkClick, navigateTo } from '../../router';
 import { useV15Baslik } from './baslik';
 import '../../styles/v15/ogren.css';
@@ -201,6 +201,17 @@ function Duzenleyici({ not, guncelle, sil, kapat }: { not: Not; guncelle: (d: Pa
     try { if (navigator.share) await navigator.share({ title: not.baslik || 'Not', text: metin }); else await navigator.clipboard.writeText(metin); } catch { /* vazgeçti */ }
   };
 
+  // tasarım K04 liste biçimi: seçili satırların başına "- " ekler/kaldırır
+  const metinRef = useRef<HTMLTextAreaElement | null>(null);
+  const listele = () => {
+    const t = metinRef.current; if (!t) return;
+    const v = t.value, a = v.lastIndexOf('\n', t.selectionStart - 1) + 1, bIdx = v.indexOf('\n', t.selectionEnd), b = bIdx < 0 ? v.length : bIdx;
+    const satirlar = v.slice(a, b).split('\n');
+    const hepsi = satirlar.every((x) => /^- /.test(x));
+    const yeni = satirlar.map((x) => (hepsi ? x.replace(/^- /, '') : /^- /.test(x) ? x : `- ${x}`)).join('\n');
+    guncelle({ metin: v.slice(0, a) + yeni + v.slice(b) });
+    requestAnimationFrame(() => { t.focus(); t.setSelectionRange(a, a + yeni.length); });
+  };
   const AR: [Arac, string, React.ElementType][] = [['yaz', 'Yaz', Type], ['kalem', 'Kalem', Pen], ['fosfor', 'Fosforlu', Highlighter], ['silgi', 'Silgi', Eraser]];
   return (
     <div className="nt15 nt15-d">
@@ -217,6 +228,7 @@ function Duzenleyici({ not, guncelle, sil, kapat }: { not: Not; guncelle: (d: Pa
             </select>
           </>
         )}
+        {arac === 'yaz' && <button type="button" className="nt15-ab" onClick={listele} title="Madde listesi"><List aria-hidden /><span>Liste</span></button>}
         <button type="button" className="nt15-ab" onClick={() => setCizgiler((c) => c.slice(0, -1))} disabled={!cizgiler.length} title="Geri al"><Undo2 aria-hidden /><span>Geri al</span></button>
       </div>
 
@@ -231,8 +243,17 @@ function Duzenleyici({ not, guncelle, sil, kapat }: { not: Not; guncelle: (d: Pa
         <div ref={kap} className={`nt15-yuzey${arac !== 'yaz' ? ' is-ciz' : ''}`}
           onPointerDown={bas} onPointerMove={surukle} onPointerUp={birak} onPointerCancel={birak}>
           <input className="nt15-baslik" value={not.baslik} onChange={(e) => guncelle({ baslik: e.target.value.slice(0, 120) })} placeholder="Başlık" aria-label="Başlık" readOnly={arac !== 'yaz'} />
-          <textarea className="nt15-metin" value={not.metin} onChange={(e) => guncelle({ metin: e.target.value })} placeholder="Yazmaya başla…" aria-label="Not metni" readOnly={arac !== 'yaz'}
-            ref={(t) => { if (t) { t.style.height = 'auto'; t.style.height = `${t.scrollHeight}px`; } }} />
+          <textarea ref={(t) => { metinRef.current = t; if (t) { t.style.height = 'auto'; t.style.height = `${t.scrollHeight}px`; } }} className="nt15-metin" value={not.metin} onChange={(e) => guncelle({ metin: e.target.value })} placeholder="Yazmaya başla…" aria-label="Not metni" readOnly={arac !== 'yaz'}
+            onKeyDown={(e) => {
+              // madde satırında Enter yeni madde açar; boş maddede Enter maddeyi bitirir
+              if (e.key !== 'Enter' || e.shiftKey) return;
+              const t = e.currentTarget, bas = t.value.lastIndexOf('\n', t.selectionStart - 1) + 1, satir = t.value.slice(bas, t.selectionStart);
+              if (!/^\s*- /.test(satir)) return;
+              e.preventDefault();
+              if (satir.trim() === '-') { const v = t.value.slice(0, bas) + t.value.slice(t.selectionStart); guncelle({ metin: v }); return; }
+              const v = `${t.value.slice(0, t.selectionStart)}\n- ${t.value.slice(t.selectionEnd)}`; const k = t.selectionStart + 3;
+              guncelle({ metin: v }); requestAnimationFrame(() => t.setSelectionRange(k, k));
+            }} />
           <canvas ref={tuval} className="nt15-tuval" aria-hidden />
         </div>
         <p className="v15-cap nt15-not">{tarihYaz(not.at)} · {arac === 'yaz' ? 'Kalemle çizmek için üstten Kalem\'i seç.' : arac === 'silgi' ? 'Silmek istediğin çizginin üstünden geç.' : 'Parmağınla ya da kalemle çiz.'}</p>

@@ -84,8 +84,11 @@ export default function SesliListeV15() {
         ) : (
           <div className="o15-cipler v15-hscroll" role="toolbar" aria-label="Süzgeç">
             <KurulSecV15 kurul={kurul} onSec={(k) => navigateTo(`/dersler/canliders/kurul${k}${arsiv ? '?donem=2025-2026' : ''}`)} />
-            <button type="button" className={`o15-cip sl15-arsiv${arsiv ? ' is-on' : ''}`} aria-pressed={arsiv} onClick={() => setArsiv(!arsiv)}
-              title="Geçen yılın (2025-2026) sesli dersleri"><Archive aria-hidden />2025-26 arşivi</button>
+            {/* tasarım L06: dönem seçici (bu yıl · geçen yılın arşivi) */}
+            <div className="v15-seg sl15-donem" role="radiogroup" aria-label="Dönem">
+              <button type="button" role="radio" aria-checked={!arsiv} aria-current={!arsiv ? 'page' : undefined} onClick={() => setArsiv(false)}>2026–27</button>
+              <button type="button" role="radio" aria-checked={arsiv} aria-current={arsiv ? 'page' : undefined} onClick={() => setArsiv(true)} title="Geçen yılın (2025-2026) sesli dersleri"><Archive aria-hidden />2025–26</button>
+            </div>
             {DURUM.map(([id, t]) => (
               <button key={id} type="button" className={`o15-cip${durum === id ? ' is-on' : ''}`} aria-pressed={durum === id} onClick={() => setDurum(id)}>{t}</button>
             ))}

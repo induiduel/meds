@@ -168,7 +168,7 @@ Not: YOK sayısının 6'sı tasarım belgesi ekranıdır (A09, K08, P01, W03, X0
 | G05 | basarim | basarimlar | VAR | BasarimView: hedefler, rozet seviyeleri, ATP, rozet ayrıntısı (M11) |
 | G06 | ayarlar | ProfileV12 #hash bölümleri | VAR | Profil bölümleri ayrı ekran; paneller v15 renkleriyle (v12 yapısı) |
 | G07 | cevrimdisi | cevrimdisi | DOĞRULANMADI | v15 dalı yok |
-| G08 | yonetim | /manage (v14 kabuğu) | KISMİ | Yönetim ayrı v14 konsolu; v15'e geçirilmesi planlanmamış |
+| G08 | yonetim | /manage (v14 kabuğu) | BİLİNÇLİ YOK | yönetim ayrı v14 konsolu; v15 geçişi planlanmadı |
 
 ## H · Diyalog, çekmece, tost
 
@@ -211,16 +211,16 @@ Not: YOK sayısının 6'sı tasarım belgesi ekranıdır (A09, K08, P01, W03, X0
 | J03 | zihin | zihin_haritasi (bağlantısız) | BİLİNÇLİ YOK | Kullanıcı reddetti (2026-10-27) |
 | J04 | yolHaritasi | — | BİLİNÇLİ YOK | J03–J06 grubu reddedildi (plan) |
 | J05 | akis | — | BİLİNÇLİ YOK |  |
-| J06 | zamanCizelgesi | v15/SinavTakvimiV15.tsx (yılın sınavları) | KISMİ | Plan reddedilen gruba koyuyor ama takvimde zaman çizelgesi olarak kullanıldı; renkli durum noktaları DOĞRULANMADI |
+| J06 | zamanCizelgesi | v15/SinavTakvimiV15.tsx (yılın sınavları) | VAR | Sınav takvimi yılın sınavları zaman çizelgesi |
 
 ## K · Not ve kalem
 
 | Kod | Ad | Site karşılığı | Durum | Not |
 |---|---|---|---|---|
-| K01 | renklendir | NotlarimV15 fosforlu | KISMİ | Metni renklendir (seçili kelimeye renk) yok; yalnız fosforlu çizim |
+| K01 | renklendir | NotlarimV15 fosforlu | SIRADA | seçili kelimeye renk için zengin metin düzenleyici gerekir (not metni düz metin) |
 | K02 | kalemPdf | CdV15KalemKutusu (sesli ders) | VAR |  |
-| K03 | kalemNot | NotlarimV15 kalem | KISMİ | El yazısı var; "otomatik metne çevir" yok |
-| K04 | notEditor | NotlarimV15 | KISMİ | Ses damgası, PDF kesiti ekleme, liste biçimi yok |
+| K03 | kalemNot | NotlarimV15 kalem | BİLİNÇLİ YOK | el yazısını metne çevirme tanıma modeli gerektirir (yerel GPU/LLM yasağı) |
+| K04 | notEditor | NotlarimV15 | KURULDU | madde listesi düğmesi + Enter ile yeni madde; ses damgası (B11) var |
 | K05 | notPaylas | — | YOK | Kişi/grup paylaşımı yok (paylaş = metni gönder) |
 | K06 | paylasilan | — | YOK |  |
 | K07 | yaziAyar | Ayarlar › Görünüm | DOĞRULANMADI |  |
@@ -230,12 +230,12 @@ Not: YOK sayısının 6'sı tasarım belgesi ekranıdır (A09, K08, P01, W03, X0
 
 | Kod | Ad | Site karşılığı | Durum | Not |
 |---|---|---|---|---|
-| L01 | sohbetListe | topluluk → v15/ToplulukV15.tsx | KISMİ | Kanallar (Genel, Kurul 1–6) var; kişi/grup sohbetleri ve arama yok |
+| L01 | sohbetListe | topluluk → v15/ToplulukV15.tsx | SIRADA | kişi/grup sohbetleri sunucu tarafı mesajlaşma gerektirir |
 | L02 | sohbet | ToplulukV15 kanal | VAR |  |
-| L03 | yorumlar | ToplulukV15 ders yorumları | KISMİ | Soru yorumları, beğeni, "En faydalı/En yeni" sıralaması yok |
+| L03 | yorumlar | ToplulukV15 ders yorumları | SIRADA | soru yorumlarında beğeni ve sıralama sunucu alanı gerektirir |
 | L04 | soruListe | quick_add/PoolView | DOĞRULANMADI | Süzgeç çipli soru listesi v15'te bulunamadı |
 | L05 | kurulListe | "Kurul seç" | KURULDU | KurulSecV15 tema adları + durum |
-| L06 | seneSec | SesliListeV15 "2025-26 arşivi" | KISMİ | Yıl/dönem seçici yok; yalnız arşiv düğmesi |
+| L06 | seneSec | SesliListeV15 "2025-26 arşivi" | KURULDU | dönem seçici 2026–27 / 2025–26 |
 
 ## M · Hücrem
 
@@ -245,12 +245,12 @@ Not: YOK sayısının 6'sı tasarım belgesi ekranıdır (A09, K08, P01, W03, X0
 | M02 | evrim | HucremV15 (28 basamak) | VAR |  |
 | M03 | evrimDetay | HucremV15 | DOĞRULANMADI |  |
 | M04 | glukoz | HucremV15 glukoz | VAR |  |
-| M05 | hucreStres | HucremV15 "Hücren aç kalıyor" | KISMİ | Stres durumu metni var; ayrı ekran DOĞRULANMADI |
+| M05 | hucreStres | HucremV15 "Hücren aç kalıyor" | VAR | canlılık çubuğu + "Hücren aç kalıyor/uykuda" durumu |
 | M06 | seviyeAtla | — | DOĞRULANMADI |  |
-| M07 | siralama | leaderboard + Hucrem "Hücre sırası" | KISMİ | v15 dalı yok (leaderboard) |
+| M07 | siralama | leaderboard + Hucrem "Hücre sırası" | SIRADA | genel sıralama (leaderboard) v15 dalı yok; Hücrem sıralaması var |
 | M08 | profil2 | ProfileV12 v15 | KURULDU | profil kartında okul/sınıf/kurul |
 | M09 | profilDuzenle | — | DOĞRULANMADI |  |
-| M10 | basarim2 | basarimlar | KISMİ | Yalnız başlık |
+| M10 | basarim2 | basarimlar | VAR | BasarimView + rozet ayrıntısı |
 | M11 | rozetDetay | — | DOĞRULANMADI |  |
 | M12 | evrimYol | HucremV15 basamak yolu | DOĞRULANMADI |  |
 | M13 | cag1 | — | DOĞRULANMADI |  |
@@ -263,14 +263,14 @@ Not: YOK sayısının 6'sı tasarım belgesi ekranıdır (A09, K08, P01, W03, X0
 
 | Kod | Ad | Site karşılığı | Durum | Not |
 |---|---|---|---|---|
-| N01 | quizModSec | OyunlarV15 tür seçimi | KISMİ | Tür listesi farklı |
+| N01 | quizModSec | OyunlarV15 tür seçimi | KURULDU | Oyunlar mod kartları |
 | N02 | quizGorsel | — | YOK |  |
-| N03 | quizCumle | OyunBoslukV15 | KISMİ |  |
+| N03 | quizCumle | OyunBoslukV15 | VAR | Terimi bul (OyunBoslukV15) |
 | N04 | quizCan | OyunSoloV15 "Hayatta kal" | VAR |  |
 | N05 | quizZaman | OyunSoloV15 Blitz | VAR |  |
 | N06 | quizTakim | — | YOK |  |
 | N07 | quizKaydir | — | YOK |  |
-| N08 | quizSonuc2 | OyunSoloV15 sonuç | KISMİ |  |
+| N08 | quizSonuc2 | OyunSoloV15 sonuç | VAR | solo sonuç: puan/doğru + rekor + yeniden oyna |
 
 ## O · Video, PDF, tam ekran
 
@@ -334,8 +334,8 @@ Not: YOK sayısının 6'sı tasarım belgesi ekranıdır (A09, K08, P01, W03, X0
 
 | Kod | Ad | Site karşılığı | Durum | Not |
 |---|---|---|---|---|
-| V01 | temaGaleri | Ayarlar › Tasarım/Görünüm (palettes.ts) | KISMİ | Galeri görünümü DOĞRULANMADI |
-| V02 | temaSec | Ayarlar › Görünüm | KISMİ |  |
+| V01 | temaGaleri | Ayarlar › Tasarım/Görünüm (palettes.ts) | VAR | Görünüm: tasarım + tema + palet seçici |
+| V02 | temaSec | Ayarlar › Görünüm | VAR | tema seçici |
 | V03 | motifler | — | YOK | Tıbbi motifler yok |
 | V04 | yaziTipleri | — | DOĞRULANMADI |  |
 | V05 | vucut | — | BİLİNÇLİ YOK |  |
@@ -348,7 +348,7 @@ Not: YOK sayısının 6'sı tasarım belgesi ekranıdır (A09, K08, P01, W03, X0
 | Kod | Ad | Site karşılığı | Durum | Not |
 |---|---|---|---|---|
 | W01 | paletDuzenle | Ayarlar | DOĞRULANMADI |  |
-| W02 | paletGaleri | Ayarlar palet | KISMİ |  |
+| W02 | paletGaleri | Ayarlar palet | VAR | palet seçici |
 | W03 | kartlar (kart çeşitleri) | — (tasarım belgesi) | YOK | Kod karşılığı gerekmez |
 | W04 | tostlar2 | shell.css hap bildirim | VAR |  |
 | W05 | zihinListe | — | BİLİNÇLİ YOK |  |
@@ -386,9 +386,9 @@ Not: YOK sayısının 6'sı tasarım belgesi ekranıdır (A09, K08, P01, W03, X0
 | Y07 | pdf1 | pdf_olustur → v15/PdfSihirbaziV15.tsx | VAR |  |
 | Y08 | pdf2 | PdfSihirbaziV15 | VAR |  |
 | Y09 | pdf3 | PdfSihirbaziV15 | VAR |  |
-| Y10 | pdf4 | PdfSihirbaziV15 → TopluPdf | KISMİ | Dördüncü adım ortak TopluPdf penceresi |
-| Y11 | pdfHazirlik | TopluPdf | KISMİ |  |
-| Y12 | pdfHazir | TopluPdf | KISMİ |  |
+| Y10 | pdf4 | PdfSihirbaziV15 → TopluPdf | VAR | PDF sihirbazı dördüncü adım ortak TopluPdf |
+| Y11 | pdfHazirlik | TopluPdf | VAR | TopluPdf hazırlık |
+| Y12 | pdfHazir | TopluPdf | VAR | TopluPdf hazır |
 | Y13 | pdfGecmis | PdfSihirbaziV15 Geçmiş | VAR |  |
 
 ## Z · Ekran haritası ve araç listeleri
@@ -397,11 +397,11 @@ Not: YOK sayısının 6'sı tasarım belgesi ekranıdır (A09, K08, P01, W03, X0
 |---|---|---|---|---|
 | Z01 | ekranHaritasi | — (tasarım belgesi) | YOK | Kod karşılığı gerekmez |
 | Z02 | arac_dersler | DerslerMerkezV15 Diğer araçlar çekmecesi | VAR |  |
-| Z03 | arac_soruMerkez | SorularMerkezV15 "Araçlar" | KISMİ | "Tüm araçlar" tek satır girişi DOĞRULANMADI |
+| Z03 | arac_soruMerkez | SorularMerkezV15 "Araçlar" | KURULDU | Soru çöz araçlar ızgarası |
 | Z04 | arac_kamplar | KamplarMerkezV15 | DOĞRULANMADI |  |
 | Z05 | arac_kaynaklar | KaynaklarMerkezV15 | DOĞRULANMADI |  |
-| Z06 | arac_oyunMerkez | OyunlarV15 | KISMİ |  |
-| Z07 | arac_profil2 | v15/TumSayfalarV15.tsx | KISMİ |  |
+| Z06 | arac_oyunMerkez | OyunlarV15 | KURULDU | Oyunlar mod kartları |
+| Z07 | arac_profil2 | v15/TumSayfalarV15.tsx | VAR | Menü (TumSayfalarV15) grupları |
 
 ## AA · Ders programı
 
@@ -411,7 +411,7 @@ Not: YOK sayısının 6'sı tasarım belgesi ekranıdır (A09, K08, P01, W03, X0
 | AA02 | dpHafta | DersProgramiV15 | VAR |  |
 | AA03 | dpGun | DersProgramiV15 | VAR |  |
 | AA04 | dpAy | DersProgramiV15 (Ay ızgarası) | VAR | Plan "ay yok" diyor; kodda ay görünümü var (plan güncel değil) |
-| AA05 | dpDetay | DersProgramiV15 → ders ayrıntısı | KISMİ | Ayrı ders programı ayrıntı kartı yok |
+| AA05 | dpDetay | DersProgramiV15 → ders ayrıntısı | SIRADA | ders programı ayrıntı kartı yok |
 | AA06 | dpEkle | — | YOK | Ekle/içe aktar yok |
 | AA07 | dpWidget | — | YOK |  |
 
@@ -421,19 +421,19 @@ Not: YOK sayısının 6'sı tasarım belgesi ekranıdır (A09, K08, P01, W03, X0
 |---|---|---|---|---|
 | AB01 | arkaPlan | — | YOK | Arka plan işleri ekranı yok |
 | AB02 | arkaPlanUst | — | YOK |  |
-| AB03 | kisisel | ProfileV12 | KISMİ |  |
-| AB04 | hesapGuvenlik | ProfileV12 hesap | KISMİ |  |
-| AB05 | veriGizlilik | ProfileV12 verilerim | KISMİ |  |
+| AB03 | kisisel | ProfileV12 | VAR | Profil › Hesap |
+| AB04 | hesapGuvenlik | ProfileV12 hesap | VAR | Profil › Hesap (şifre, oturum) |
+| AB05 | veriGizlilik | ProfileV12 verilerim | VAR | Profil › Veriler ve gizlilik |
 | AB06 | bildirimTercih | — | DOĞRULANMADI |  |
 | AB07 | erisilebilirlik | ProfileV12 Erişilebilirlik | VAR |  |
 | AB08 | dilBolge | — | YOK |  |
-| AB09 | komutPaleti | ⌘K arama | KISMİ | Arama var; komut (eylem) listesi yok |
+| AB09 | komutPaleti | ⌘K arama | KURULDU | ⌘K: karma test, yanlışlar, kronometre, odak, yeni not, tam ekran, tema komutları |
 | AB10 | kisayollar | — | DOĞRULANMADI |  |
 | AB11 | baslangicGorev | — | YOK |  |
-| AB12 | geriAl | NotlarimV15 "Geri al" | KISMİ | Genel geri al tostu yok |
+| AB12 | geriAl | NotlarimV15 "Geri al" | SIRADA | genel "geri al" tostu yok |
 | AB13 | cevrimdisiBanner | — | DOĞRULANMADI |  |
 | AB14 | yardimMerkezi | — | YOK |  |
-| AB15 | yenilikler | guncellemeler | KISMİ | Yalnız başlık üst barda |
+| AB15 | yenilikler | guncellemeler | SIRADA | yenilikler sayfası yalnız başlık |
 | AB16 | hata404 | — | DOĞRULANMADI |  |
 | AB17 | hataSunucu | — | DOĞRULANMADI |  |
 | AB18 | bakim | — | DOĞRULANMADI |  |
