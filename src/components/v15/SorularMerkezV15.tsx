@@ -111,16 +111,16 @@ export default function SorularMerkezV15() {
             ))}
           </div>
         </div>
-        <div className="s15-test-sat">
-          <span className="v15-label">Zorluk</span>
-          <div className="s15-cipler" role="group" aria-label="Zorluk (örnek sorular)">
-            <button type="button" aria-pressed={!zorluk.length} className={`s15-cip${!zorluk.length ? ' is-on' : ''}`} onClick={() => setZorluk([])}>Hepsi</button>
-            {([['kolay', 'Kolay'], ['orta', 'Orta'], ['zor', 'Zor']] as const).map(([id, t]) => (
-              <button key={id} type="button" aria-pressed={zorluk.includes(id)} className={`s15-cip${zorluk.includes(id) ? ' is-on' : ''}`} onClick={() => setZorluk((l) => degis(l, id))}>{t}</button>
-            ))}
-          </div>
-        </div>
         <div className="s15-test-alt">
+          <div className="s15-test-sat">
+            <span className="v15-label">Zorluk</span>
+            <div className="s15-cipler" role="group" aria-label="Zorluk (örnek sorular)">
+              <button type="button" aria-pressed={!zorluk.length} className={`s15-cip${!zorluk.length ? ' is-on' : ''}`} onClick={() => setZorluk([])}>Hepsi</button>
+              {([['kolay', 'Kolay'], ['orta', 'Orta'], ['zor', 'Zor']] as const).map(([id, t]) => (
+                <button key={id} type="button" aria-pressed={zorluk.includes(id)} className={`s15-cip${zorluk.includes(id) ? ' is-on' : ''}`} onClick={() => setZorluk((l) => degis(l, id))}>{t}</button>
+              ))}
+            </div>
+          </div>
           <div className="s15-test-sat">
             <span className="v15-label">Soru sayısı</span>
             <div className="v15-seg" role="radiogroup" aria-label="Soru sayısı">

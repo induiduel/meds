@@ -319,3 +319,16 @@ a.k15-kart:hover { border-color: var(--color-accent); }
 :root[data-v15='on'] .dd15-grup-on .v15-tile { width: 24px; height: 24px; border-radius: 7px; }
 :root[data-v15='on'] .dd15-grup-on .v15-tile svg { width: 14px; height: 14px; }
 .dd15-grup > summary b, .dd15-grup > summary .v15-cap { white-space: nowrap; flex: none; }
+
+/* Test oluştur: kompakt — zorluk/sayı/kip/başlat tek satırda, açıklama altta ince */
+.s15-test { gap: 6px; padding: 10px 14px; }
+.s15-test .v15-h2 { margin: 0; font-size: 15px; }
+.s15-test .s15-test-sat > .v15-label { width: 64px; }
+.s15-test .s15-cip { height: 26px; padding: 0 10px; font-size: 12px; }
+.s15-test-alt { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 16px; }
+.s15-test-alt .s15-test-sat { flex: 0 1 auto; }
+.s15-test-alt .s15-test-sat > .v15-label { width: auto; }
+.s15-test-alt .v15-seg { display: inline-flex; }
+.s15-test-alt .v15-seg > button { min-height: 28px; padding: 0 10px; font-size: 12.5px; }
+.s15-test-alt .s15-basla { margin-left: auto; min-height: 34px; padding: 0 16px; grid-column: auto; grid-row: auto; }
+.s15-kip-ac { flex: 1 0 100%; order: 9; font-size: 11.5px; }

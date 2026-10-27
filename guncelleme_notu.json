@@ -1,10 +1,10 @@
 {
  "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
- "onem": 503,
- "baslik": "Ders içerikleri kapalı ve kompakt",
+ "onem": 504,
+ "baslik": "Test oluştur paneli kompakt",
  "maddeler": [
-  "Ders sayfasındaki içerik grupları artık kapalı başlar, dokununca açılır",
-  "Kapalıyken grubun içindekiler küçük simgelerle görünür"
+  "Soru çöz › Test oluştur paneli daha az yer kaplıyor",
+  "Zorluk, soru sayısı, kip ve Testi başlat tek satırda"
  ],
  "eklenen": [],
  "degisen": [],
