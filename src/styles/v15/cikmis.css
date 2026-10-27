@@ -5,3 +5,15 @@
 :root[data-v15='on'][data-design] .c12-panel-h, :root[data-v15='on'][data-design] .c12-filters { border-radius: var(--v15-r-lg, 16px); }
 :root[data-v15='on'] .sh-main :is(.qc, .question-card, .pq-card) { border-radius: var(--v15-r-lg, 16px); box-shadow: none; }
 :root[data-v15='on'] .c12-top > .c12-meta { visibility: hidden; }
+
+/* C07 giriş: yıl / konu kartları */
+.cg15 { container-type: inline-size; display: flex; flex-direction: column; gap: 10px; margin-bottom: 12px; }
+.cg15-seg { align-self: flex-start; }
+.cg15-izgara { display: grid; gap: 8px; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+@container (min-width: 720px) { .cg15-izgara { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+.cg15-kart { position: relative; display: flex; flex-direction: column; gap: 6px; padding: 12px 28px 12px 12px; text-align: left; font: inherit; color: inherit; cursor: pointer; }
+.cg15-kart:hover { border-color: var(--color-accent); }
+.cg15-ust { display: flex; align-items: center; justify-content: space-between; gap: 6px; flex-wrap: wrap; }
+.cg15-ust b { color: var(--color-ink); font-size: .95rem; }
+.cg15-ok { position: absolute; right: 8px; top: 50%; transform: translateY(-50%); width: 16px; height: 16px; color: var(--color-ink-3); }
+.cg15-alt { margin: 6px 2px 0; }

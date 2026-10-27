@@ -21,9 +21,13 @@ const gecen = (o: Oturum, simdi = Date.now()) => o.birikmis + (o.calisiyor ? sim
 const SURELER = [25, 50, 90];
 const molaDk = (dk: number) => (dk >= 90 ? 15 : dk >= 50 ? 10 : 5);
 
-export const kapsulAc = () => window.dispatchEvent(new Event('medsoru:kapsul'));
+/** Odak artık kronometre panelinin sekmesi: tek yüzen sayaç (tasarım T/U, çift sayaç yok) */
+export const kapsulAc = () => window.dispatchEvent(new CustomEvent('medsoru:kronometre', { detail: 'odak' }));
+/** Kronometre baloncuğunun okuduğu odak durumu */
+export const kapsulOku = () => { const d = oku(); const o = d.oturum; return o ? { kalan: Math.max(0, o.hedefDk * 60000 - gecen(o)), oran: Math.min(1, gecen(o) / (o.hedefDk * 60000)), calisiyor: o.calisiyor } : null; };
+export const KAPSUL_KEY = KEY;
 
-export default function KapsulV15() {
+export default function KapsulV15({ gomulu = false }: { gomulu?: boolean }) {
   const [d, setD0] = useState<Durum>(oku);
   const [panel, setPanel] = useState(false);
   const [hedef, setHedef] = useState(25);
@@ -34,11 +38,12 @@ export default function KapsulV15() {
   const setD = (f: (x: Durum) => Durum) => setD0((x) => { const n = f(x); yaz(n); return n; });
 
   useEffect(() => {
-    const ac = () => { setD((x) => ({ ...x, acik: true })); setPanel(true); };
     const st = (e: StorageEvent) => { if (e.key === KEY) setD0(oku()); };
-    window.addEventListener('medsoru:kapsul', ac);
+    // kronometre başlayınca odak duraklar (aynı anda tek sayaç)
+    const sayac = (e: Event) => { if ((e as CustomEvent).detail === 'kronometre') setD((x) => x.oturum?.calisiyor ? { ...x, oturum: { ...x.oturum, calisiyor: false, birikmis: gecen(x.oturum), bas: 0 } } : x); };
+    window.addEventListener('medsoru:sayac', sayac);
     window.addEventListener('storage', st);
-    return () => { window.removeEventListener('medsoru:kapsul', ac); window.removeEventListener('storage', st); };
+    return () => { window.removeEventListener('medsoru:sayac', sayac); window.removeEventListener('storage', st); };
   }, []);
   const sayiyor = !!d.oturum?.calisiyor || d.molaBitis > Date.now();
   useEffect(() => {
@@ -60,15 +65,16 @@ export default function KapsulV15() {
   const hedefMs = o ? o.hedefDk * 60000 : 0;
   useEffect(() => { if (o && hedefMs && ms >= hedefMs) bitir(true); });
 
-  if (!d.acik) return null;
+  if (!gomulu) return null;
 
   const baslat = () => {
     const dk = serbest ? Math.max(1, Math.min(240, Math.round(Number(serbest) || 0))) : hedef;
     setBitti(null);
+    window.dispatchEvent(new CustomEvent('medsoru:sayac', { detail: 'odak' }));
     setD((x) => ({ ...x, molaBitis: 0, oturum: { hedefDk: dk, konu: konu.trim() || 'Serbest çalışma', bas: Date.now(), birikmis: 0, calisiyor: true } }));
   };
-  const duraklat = () => setD((x) => x.oturum ? { ...x, oturum: x.oturum.calisiyor
-    ? { ...x.oturum, calisiyor: false, birikmis: gecen(x.oturum), bas: 0 } : { ...x.oturum, calisiyor: true, bas: Date.now() } } : x);
+  const duraklat = () => { if (!d.oturum?.calisiyor) window.dispatchEvent(new CustomEvent('medsoru:sayac', { detail: 'odak' })); setD((x) => x.oturum ? { ...x, oturum: x.oturum.calisiyor
+    ? { ...x.oturum, calisiyor: false, birikmis: gecen(x.oturum), bas: 0 } : { ...x.oturum, calisiyor: true, bas: Date.now() } } : x); };
   const mola = (dk: number) => { setBitti(null); setD((x) => ({ ...x, molaBitis: Date.now() + dk * 60000 })); };
   const kapat = () => { setPanel(false); if (!d.oturum && d.molaBitis <= Date.now()) { setBitti(null); setD((x) => ({ ...x, acik: false, molaBitis: 0 })); } };
 
@@ -80,14 +86,8 @@ export default function KapsulV15() {
   const kalan = Math.max(0, hedefMs - ms);
   const yuzde = hedefMs ? Math.min(100, (ms / hedefMs) * 100) : 0;
 
-  return createPortal(
-    <div className={`kr15 kp15${panel ? ' is-acik' : ''}`} role="region" aria-label="Çalışma kapsülü">
-      {panel ? (
-        <div className="kr15-panel v15-card">
-          <div className="kr15-ust">
-            <span className="v15-label">Çalışma kapsülü</span>
-            <button type="button" className="v15-ib" onClick={kapat} aria-label="Küçült"><X aria-hidden /></button>
-          </div>
+  return (
+    <div className="kp15-ic">
           {o ? (
             <>
               <span className="kp15-konu">{o.konu}</span>
@@ -140,15 +140,6 @@ export default function KapsulV15() {
             </ol>
           )}
           <p className="v15-cap kr15-not">Bugün {bugunKayit.length} oturum, toplam {sureYaz(bugunSn * 1000)} · sistemin ölçtüğü çalışma süresinden ayrıdır.</p>
-        </div>
-      ) : (
-        <button type="button" className={`kr15-balon${o?.calisiyor ? ' is-calisiyor' : ''}`} onClick={() => setPanel(true)}
-          aria-label={o ? `Odak oturumu, ${sureYaz(kalan)} kaldı, aç` : 'Çalışma kapsülü, aç'}>
-          {molaKalan > 0 && !o ? <Coffee aria-hidden /> : <Target aria-hidden />}
-          <span>{o ? sureYaz(kalan) : molaKalan > 0 ? sureYaz(molaKalan) : 'Odak'}</span>
-        </button>
-      )}
-    </div>,
-    document.body,
+    </div>
   );
 }

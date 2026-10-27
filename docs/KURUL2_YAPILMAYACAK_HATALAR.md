@@ -906,3 +906,9 @@ Her maddede: belirti · kök neden · Kurul 2 kuralı · kapı durumu. Kanıtlar
 
 ## Sesli ders: çizimsiz resimde zoom takılı kalması
 - Belirti: çizim yokken resim yakınlaşmış kalır. Kök neden: React unmount temizliğinde `ref.current` null; `CizimLayer` sayfayı ref'ten bulup sıfırlıyordu. Önleme: temizlikte ref okuma, DOM öğesini önceden yakala.
+
+## H101 · Kronometre sayfa değişince kayboluyor, iki sayaç aynı anda açılıyor (2026-10-27)
+- **Belirti:** Yüzen kronometre sesli ders / Öğren ekranına geçince kayboluyordu; "Odak" ayrı bir ikinci baloncuk olarak kronometreyle aynı anda çalışabiliyordu; sesli ders oynatıcısıyla üst üste biniyordu.
+- **Kök neden:** `KronometreV15` ve `KapsulV15` `TopBarV15` içinde bağlanmıştı; odak ekranlarında üst bar `null` döndüğünden bileşenler sökülüyordu. Odak oturumu ayrı bileşen + ayrı portal olduğu için iki sayaç bağımsızdı. Oynatıcı konumunu bilen bir mekanizma yoktu.
+- **Çözüm:** Kronometre uygulama kökünde (`App.tsx`, `V15Icinde`) tek kez bağlanır; Odak panelin sekmesidir (`KapsulV15 gomulu`), biri başlayınca öteki duraklar (`medsoru:sayac`). Baloncuk `.cd-dock`'u izler: mini oynatıcının sağ ucuna kaynaşır, tam oynatıcının sağ üstüne oturur.
+- **Kural:** Sayfalar arası kalıcı olması gereken yüzen öğe (sayaç, oynatıcı) asla sayfaya/üst bara bağlı bileşenin içine konmaz; uygulama kökünde tek örnek olarak bağlanır. Aynı işlevin ikinci yüzen örneği eklenmez.

@@ -39,6 +39,7 @@ export default function SorularMerkezV15() {
   const [dersler, setDersler] = useState<[string, number][] | null>(null);
   const [ders, setDers] = useState('');
   const [adet, setAdet] = useState(20);
+  const [kip, setKip] = useState<'ogrenme' | 'sinav' | 'sesli'>('ogrenme');
   useEffect(() => {
     let canli = true;
     setDersler(null);
@@ -49,7 +50,9 @@ export default function SorularMerkezV15() {
       .catch(() => canli && setDersler([]));
     return () => { canli = false; };
   }, [kurul]);
-  const testYolu = `/sorular/deneme?${new URLSearchParams({ kurul: String(kurul), ders, n: String(adet), basla: '1' })}`;
+  const testYolu = kip === 'sesli' ? aracYolu('soru_cozucu', kurul)
+    : `/sorular/deneme?${new URLSearchParams({ kurul: String(kurul), ders, n: String(adet), basla: '1', ...(kip === 'sinav' ? { kip: 'sinav' } : {}) })}`;
+  const karmaYolu = `/sorular/deneme?${new URLSearchParams({ kurul: String(kurul), ders: '', n: '20', basla: '1' })}`;
 
   const tekrarAc = () => {
     try { sessionStorage.setItem(OPEN_REVIEW_FLAG, '1'); } catch { /* yok say */ }
@@ -65,7 +68,7 @@ export default function SorularMerkezV15() {
           <span className="s15-oz-h"><span className="v15-label">Çözdüğün</span><span className="v15-tile is-ok"><CircleHelp aria-hidden /></span></span>
           <b className="s15-say">{cozum.n.toLocaleString('tr-TR')}</b>
           <span className="v15-cap">{cozum.n ? `%${cozum.pct} doğru · ${cozum.yanlis} yanlış` : 'Henüz soru çözmedin'}</span>
-          <a className="v15-btn" href={aracYolu('soru_cozucu', kurul)} onClick={git(aracYolu('soru_cozucu', kurul))}><span className="s15-uzun">Soru çözücüyü aç</span><span className="s15-kisa">Çöz</span></a>
+          <a className="v15-btn" href={karmaYolu} onClick={git(karmaYolu)}><span className="s15-uzun">Karma test başlat</span><span className="s15-kisa">Karma</span></a>
         </div>
         <div className="s15-oz v15-card">
           <span className="s15-oz-h"><span className="v15-label">Tekrar zamanı</span><span className="v15-tile is-b"><RotateCcw aria-hidden /></span></span>
@@ -98,12 +101,21 @@ export default function SorularMerkezV15() {
           <div className="s15-test-sat">
             <span className="v15-label">Soru sayısı</span>
             <div className="v15-seg" role="radiogroup" aria-label="Soru sayısı">
-              {[10, 20, 40, 60].map((n) => (
+              {[10, 20, 40, 60, 100].map((n) => (
                 <button key={n} type="button" role="radio" aria-checked={adet === n} aria-current={adet === n ? 'page' : undefined} onClick={() => setAdet(n)}>{n}</button>
               ))}
             </div>
           </div>
-          <a className="v15-btn s15-basla" href={testYolu} onClick={git(testYolu)}><Play aria-hidden /> Testi başlat</a>
+          <div className="s15-test-sat">
+            <span className="v15-label">Kip</span>
+            <div className="v15-seg" role="radiogroup" aria-label="Kip">
+              {([['ogrenme', 'Öğrenme'], ['sinav', 'Sınav'], ['sesli', 'Sesli çözücü']] as const).map(([id, t]) => (
+                <button key={id} type="button" role="radio" aria-checked={kip === id} aria-current={kip === id ? 'page' : undefined} onClick={() => setKip(id)}>{t}</button>
+              ))}
+            </div>
+          </div>
+          <p className="v15-cap s15-kip-ac">{kip === 'ogrenme' ? 'Her cevaptan sonra doğru/yanlış ve açıklama görünür.' : kip === 'sinav' ? 'Cevaplar test bitince açılır; gerçek sınav gibi.' : 'Konu konu sesli çözüm: her şıkkın nedenini dinlersin.'}</p>
+          <a className="v15-btn s15-basla" href={testYolu} onClick={git(testYolu)}><Play aria-hidden /> {kip === 'sesli' ? 'Sesli çözücüyü aç' : 'Testi başlat'}</a>
         </div>
       </section>
 

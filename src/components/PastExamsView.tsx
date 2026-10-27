@@ -7,6 +7,8 @@ import { CikmisViewSwitch, useCikmisGorunum } from './cikmis/CikmisViewSwitch';
 import { PageToolbar, QuickOptions, type ToolbarChip, type ToolbarQuick } from './ui/PageToolbar';
 import { useAppearance } from '../utils/appearance';
 import { CikmisV12, type C12Facet } from './v12/CikmisV12';
+import type { CikmisGrup } from './v15/CikmisGirisV15';
+const CikmisGirisV15 = React.lazy(() => import('./v15/CikmisGirisV15'));
 import { getProgress, recordAttempt, getFavorites, setFavorite, OptionKey, AttemptRecord } from '../services/studyStore';
 import { logActivity } from '../services/activityLog';
 import { FilterGroup } from './ui/FilterGroup';
@@ -292,6 +294,7 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
 }) => {
   // v12 "Net": araç çubuğu + gelişmiş süzgeç sütunu components/v12/CikmisV12'de; kart listesi ortak
   const v12 = useAppearance().design === 'v12';
+  const v15 = useAppearance().v15;
   const [questions, setQuestions] = useState<QuestionItem[]>([]);
   const [internalNotes, setInternalNotes] = useState<LectureNote[]>([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -1067,6 +1070,28 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
     });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [questions, doubtInfo]);
+  // v15 C07 girişi: seçili kuruldaki sorular yıla ve derse göre (toplam · çözülen · doğru · yeni)
+  const girisGruplari = useMemo(() => {
+    if (!v15 || !prepared.length) return null;
+    const yil = new Map<string, CikmisGrup>(), ders = new Map<string, CikmisGrup>();
+    for (const p of prepared) {
+      if (selectedCommittee !== 'all' && !p.comms.includes(selectedCommittee)) continue;
+      const a = attempts[p.q.id];
+      for (const [m, k] of [[yil, p.year], [ders, p.disc || 'Diğer']] as [Map<string, CikmisGrup>, string][]) {
+        const g = m.get(k) || { ad: k, toplam: 0, cozulen: 0, dogru: 0, yeni: 0 };
+        g.toplam++; if (a) { g.cozulen++; if (a.correct) g.dogru++; } if (p.isNew) g.yeni++;
+        m.set(k, g);
+      }
+    }
+    return {
+      // gerçek öğretim yılı (2023-2024) önde ve yeniden eskiye; düzensiz adlar (2026, "Geçmiş yıllar…", Kategorisiz) sonda
+      yillar: [...yil.values()].sort((x, y) => {
+        const d = (g: CikmisGrup) => (/^\d{4}-\d{4}$/.test(g.ad) ? 0 : 1);
+        return d(x) - d(y) || y.ad.localeCompare(x.ad, 'tr');
+      }),
+      dersler: [...ders.values()].sort((x, y) => y.toplam - x.toplam),
+    };
+  }, [v15, prepared, attempts, selectedCommittee]);
 
   // Arama alanlarını tarayıcı boştayken parça parça hazırla: yoksa ilk tuşta binlerce soru birden katlanıyor
   // (telefonda ~0,4 sn donma). Hazırlanan alanlar soru nesnesinde önbellekte kalır.
@@ -1856,6 +1881,13 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
           </section>
         );
       })()}
+
+      {/* v15 giriş (tasarım C07): süzgeç seçilmemişken yıl / konu kartları */}
+      {v15 && selectedYear === 'all' && selectedDiscipline === 'all' && !searchQuery && girisGruplari && (
+        <React.Suspense fallback={null}>
+          <CikmisGirisV15 yillar={girisGruplari.yillar} dersler={girisGruplari.dersler} onYil={setSelectedYear} onDers={setSelectedDiscipline} />
+        </React.Suspense>
+      )}
 
       {/* Questions Listing (v12: CikmisV12 çerçevesinin sonuç sütununda) */}
       <V12Frame on={v12} props={v12 ? buildV12Props : undefined}>

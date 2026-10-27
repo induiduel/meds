@@ -1,5 +1,7 @@
+import { useBasarim } from '../../services/basarimIstemci';
+import { kronometreAc } from '../v15/KronometreV15';
 import React, { useEffect, useMemo, useState } from 'react';
-import { ArrowRight, CircleHelp, Flag, Headphones, Layers, Lightbulb, RotateCcw, Search, Sparkles, Star } from 'lucide-react';
+import { ArrowRight, CircleHelp, Flag, Gamepad2, Headphones, Layers, Lightbulb, RotateCcw, Search, Sparkles, Star } from 'lucide-react';
 import { type AppRoute, linkClick, navigateTo, pathFor } from '../../router';
 import { NAV_ITEMS, openSearch } from '../shell/navModel';
 import { dayKey, getActivity, getStudySeconds } from '../../services/activityLog';
@@ -95,6 +97,7 @@ export const TodayView: React.FC<TodayViewProps> = (props) => {
 
 /** v11 ve v12 aynı verileri kullanır; v12 yalnız düzeni değiştirir (iki sütun, tek birincil blok, satır listeleri). */
 const TodayViewV11: React.FC<TodayViewProps & { v12?: boolean; v13?: boolean; v15?: boolean }> = ({ committeeLabel, onGo, v12, v13, v15 }) => {
+  const basarim = useBasarim();
   const today = dayKey();
   const dateLine = useMemo(
     () => new Date().toLocaleDateString('tr-TR', { day: 'numeric', month: 'long', weekday: 'long' }),
@@ -336,10 +339,18 @@ const TodayViewV11: React.FC<TodayViewProps & { v12?: boolean; v13?: boolean; v1
         href: spotHref, go: () => navigateTo(spotHref),
       });
     }
+    const hucreBasamak = (() => { const k = basarim.durum?.kilit || {}; return basarim.tanim.kilitler.filter((x) => x.tur === 'hucre' && k[x.id]).length; })();
+    const kronoYazi = (() => {
+      try {
+        const d = JSON.parse(localStorage.getItem('medsoru_v15_kronometre') || '{}');
+        const sn = Math.floor(((d.birikmis || 0) + (d.calisiyor && d.bas ? Date.now() - d.bas : 0)) / 1000);
+        return sn ? `${Math.floor(sn / 60)}:${String(sn % 60).padStart(2, '0')}` : 'Başlat';
+      } catch { return 'Başlat'; }
+    })();
     const quick: { id: AppRoute; label: string; tone: string; icon: React.ElementType }[] = [
       { id: 'canli_ders', label: 'Dinle', tone: '', icon: Headphones },
       { id: 'soru_cozucu', label: 'Çöz', tone: 'is-ok', icon: CircleHelp },
-      { id: 'flashcards', label: 'Tekrar', tone: 'is-w', icon: Layers },
+      { id: 'oyunlar', label: 'Oyna', tone: 'is-w', icon: Gamepad2 },
       { id: 'hub_kamplar', label: 'Kamp', tone: 'is-ai', icon: Flag },
     ];
     const R = 44;
@@ -415,10 +426,11 @@ const TodayViewV11: React.FC<TodayViewProps & { v12?: boolean; v13?: boolean; v1
                 </a>
               ))}
             </nav>
+            {/* tasarım A02 durum şeridi: seri · Hücrem basamağı · kronometre (her biri kendi sayfasını açar) */}
             <div className="t15-strip v15-card">
               <div><span className="v15-label">Seri</span><b>{week.streak} gün</b></div>
-              <div><span className="v15-label">Bugün</span><b>{fmtMin(seconds[today] || 0)}</b></div>
-              <div><span className="v15-label">Bu hafta</span><b>{fmtMin(week.total)}</b></div>
+              <a href={pathFor('hucrem')} onClick={linkClick(() => onGo('hucrem'))}><span className="v15-label">Hücre</span><b>{hucreBasamak}/28</b></a>
+              <button type="button" onClick={kronometreAc}><span className="v15-label">Kronometre</span><b>{kronoYazi}</b></button>
             </div>
             {hasAnyStudy && (
               <div className="t15-week v15-card" aria-label="Bu haftanın çalışma süresi">

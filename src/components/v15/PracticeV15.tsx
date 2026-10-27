@@ -37,6 +37,8 @@ export interface PracticeV15Props {
   onOpenAi: () => void;
   onOpenQuestion?: (q: QuestionItem) => void;
   onExit?: () => void;
+  /** Sınav kipi: test bitene dek doğru/yanlış gösterilmez, sonuçtan sonra incelemede açılır */
+  sinav?: boolean;
 }
 
 const saat = (s: number) => {
@@ -46,9 +48,14 @@ const saat = (s: number) => {
 const kalin = (t: string) => t.split(/\*\*(.+?)\*\*/g).map((p, i) => (i % 2 ? <b key={i}>{p}</b> : p));
 
 export const PracticeV15: React.FC<PracticeV15Props> = (p) => {
-  const { items, index, answers } = p;
+  const { items, index } = p;
   const q = items[index];
   const rec = q.reconstruction!;
+  // Sınav kipi: bitip "İncele"ye basılana dek cevaplar gizli (seçilen şık yalnız işaretli görünür)
+  const [incelendi, setIncelendi] = useState(false);
+  const gizli = !!p.sinav && !incelendi;
+  const secilen = p.answers[q.id];
+  const answers = gizli ? {} as Record<string, string> : p.answers;
   const cevap = answers[q.id];
   const dogruMu = !!cevap && cevap === rec.correctAnswer;
   const [secim, setSecim] = useState<string | null>(null);
@@ -65,6 +72,7 @@ export const PracticeV15: React.FC<PracticeV15Props> = (p) => {
     if (!secim) return;
     p.onSelect(secim);
     yanlisKaydet(q, secim === rec.correctAnswer);
+    if (gizli) { if (sonda) p.onFinish(); else p.onGo(index + 1); return; }
     if (secim !== rec.correctAnswer) setCekmece(true);
   };
   // Klavye: A–E seçer, Enter cevaplar (PracticeMode'un A–E doğrudan cevaplamasından önce yakalanır)
@@ -81,7 +89,11 @@ export const PracticeV15: React.FC<PracticeV15Props> = (p) => {
     return () => window.removeEventListener('keydown', k, true);
   });
 
-  if (p.finished) return <SonucV15 {...p} dogru={dogru} yanlis={yanlis} />;
+  if (p.finished) {
+    const d = items.filter((x) => p.answers[x.id] && p.answers[x.id] === x.reconstruction?.correctAnswer).length;
+    const y = items.filter((x) => p.answers[x.id] && p.answers[x.id] !== x.reconstruction?.correctAnswer).length;
+    return <SonucV15 {...p} dogru={d} yanlis={y} onReview={() => { setIncelendi(true); p.onReview(); }} />;
+  }
 
   return (
     <div className={`q15${p.paused ? ' is-dur' : ''}`}>
@@ -120,7 +132,7 @@ export const PracticeV15: React.FC<PracticeV15Props> = (p) => {
         <div className="q15-siklar" role="radiogroup" aria-label="Şıklar">
           {rec.options.map((o, i) => {
             const k = (o.key || 'ABCDE'[i]) as string;
-            const durum = cevap ? (k === rec.correctAnswer ? 'is-ok' : k === cevap ? 'is-yok' : 'is-soluk') : secim === k ? 'is-sec' : '';
+            const durum = cevap ? (k === rec.correctAnswer ? 'is-ok' : k === cevap ? 'is-yok' : 'is-soluk') : (secim || (gizli ? secilen : null)) === k ? 'is-sec' : '';
             return (
               <button key={k} type="button" role="radio" aria-checked={(cevap || secim) === k} disabled={!!cevap || p.paused} className={`q15-sik ${durum}`} onClick={() => setSecim(k)}>
                 <b>{k}</b><span>{o.text}</span>

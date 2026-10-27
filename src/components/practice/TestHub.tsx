@@ -78,7 +78,7 @@ export const TestHub: React.FC<TestHubProps> = (props) => (
  * Adresten ölçüt (v15 Soru çöz merkezi › Test oluştur): ?kurul=N&ders=A|B&n=20&basla=1. Verilen alanlar kayıtlı ölçütü
  * ezer; basla=1 ise test sayfa açılınca bir kez kurulur ve parametre adresten silinir (yenilemede yeniden başlamasın).
  */
-const adrestenOlcut = (): { c: TestCriteria; basla: boolean } | null => {
+const adrestenOlcut = (): { c: TestCriteria; basla: boolean; sinav: boolean } | null => {
   const sp = new URLSearchParams(icKonum().search);
   if (!sp.has('kurul') && !sp.has('ders') && !sp.has('n') && !sp.has('basla')) return null;
   const c = readSaved();
@@ -88,7 +88,7 @@ const adrestenOlcut = (): { c: TestCriteria; basla: boolean } | null => {
   if (d !== null) c.disciplines = d ? d.split('|').filter(Boolean) : [];
   const n = Number(sp.get('n'));
   if (COUNTS.includes(n)) c.count = n;
-  return { c, basla: sp.get('basla') === '1' };
+  return { c, basla: sp.get('basla') === '1', sinav: sp.get('kip') === 'sinav' };
 };
 
 const TestHubIc: React.FC<TestHubProps> = ({ onExit }) => {
@@ -204,6 +204,7 @@ const TestHubIc: React.FC<TestHubProps> = ({ onExit }) => {
         subtitle={run.subtitle}
         onExit={() => setRun(null)}
         onOpenContributeModal={() => setRun(null)}
+        sinav={adres?.sinav}
       />
     );
   }

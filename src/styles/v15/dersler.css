@@ -184,7 +184,11 @@
 /* Test oluştur */
 .s15-test { flex: none; display: flex; flex-direction: column; gap: 10px; padding: 14px 16px; }
 .s15-test-sat { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
-.s15-test-alt { display: flex; align-items: flex-end; gap: 12px; flex-wrap: wrap; }
+.s15-test-alt { display: grid; grid-template-columns: minmax(0, 1fr); gap: 12px; }
+.s15-test-alt .v15-seg { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(0, 1fr); }
+.s15-kip-ac { margin: 0; }
+.s15-test-alt .s15-basla { justify-content: center; }
+@container d15 (min-width: 720px) { .s15-test-alt { grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr); align-items: end; } .s15-kip-ac, .s15-test-alt .s15-basla { grid-column: 1 / -1; } }
 .s15-test-alt .s15-test-sat { flex: 1 1 220px; }
 .s15-test .v15-seg > button { border: 0; background: transparent; cursor: pointer; }
 .s15-cipler { display: flex; gap: 8px; }
@@ -195,7 +199,7 @@
 .s15-cip.is-on span { color: inherit; opacity: .8; }
 .s15-cip-iskelet { display: block; width: 180px; height: 34px; border-radius: 999px; }
 .s15-basla { flex: none; }
-@container d15 (max-width: 599px) { .s15-test { padding: 12px 14px; gap: 8px; } .s15-test-alt { flex-wrap: nowrap; } .s15-test-alt .s15-test-sat { flex: 1 1 auto; } .s15-basla { min-height: 40px; padding: 0 14px; } }
+@container d15 (max-width: 599px) { .s15-test { padding: 12px 14px; gap: 8px; } .s15-basla { min-height: 40px; padding: 0 14px; } }
 
 .s15-kisa { display: none; }
 @container d15 (max-width: 599px) { .s15-kisa { display: inline; } }

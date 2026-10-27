@@ -18,6 +18,8 @@ interface PracticeModeProps {
   onOpenQuestion?: (question: QuestionItem) => void;
   title?: string;
   subtitle?: string;
+  /** Sınav kipi (v15 C01): cevaplar test bitene dek açılmaz */
+  sinav?: boolean;
 }
 
 const formatElapsed = (s: number) => {
@@ -47,6 +49,7 @@ export const PracticeMode: React.FC<PracticeModeProps> = ({
   onOpenQuestion,
   title = 'Deneme sınavı',
   subtitle,
+  sinav,
 }) => {
   // v12 "Net": aynı durum ve işlevlerle ayrı yapı (components/v12/PracticeV12.tsx)
   const gorunum = useAppearance();
@@ -255,6 +258,7 @@ export const PracticeMode: React.FC<PracticeModeProps> = ({
           onOpenAi={() => setAiChatOpen(true)}
           onOpenQuestion={onOpenQuestion}
           onExit={onExit}
+          sinav={sinav}
         />
         {aiDrawer}
       </>

@@ -1,9 +1,13 @@
 {
  "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
- "onem": 446,
- "baslik": "Sesli derste çizimsiz resimde zoom takılı kalması giderildi",
+ "onem": 447,
+ "baslik": "Kronometre yenilendi, çıkmış kartları ve Bugün şeridi",
  "maddeler": [
-  "Çizim bittiğinde ya da çizimsiz cümleye geçildiğinde resim artık normal boyuta dönüyor"
+  "Kronometre artık her sayfada seni takip ediyor; aynı anda tek sayaç çalışır, Odak paneldeki sekmede",
+  "Sesli ders açıkken kronometre oynatıcıya yapışır",
+  "Çıkmışlarda Yıla göre / Konuya göre kartlar",
+  "Soru çöz: Öğrenme / Sınav kipi seçimi",
+  "Bugün sayfasında Seri, Hücre ve Kronometre şeridi"
  ],
  "eklenen": [],
  "degisen": [],

@@ -49,8 +49,8 @@ import { TOP_SLOT_ID } from '../v12/ShellV12';
 import { V15_SECTIONS, menuGrubuOf, menuGruplari, sectionOf, type V15Section } from './navV15';
 import { TumSayfalarV15, type Arac } from './TumSayfalarV15';
 import { useV15BaslikOku } from './baslik';
-import KronometreV15, { kronometreAc } from './KronometreV15';
-import KapsulV15, { kapsulAc } from './KapsulV15';
+import { kronometreAc } from './KronometreV15';
+import { kapsulAc } from './KapsulV15';
 import { Target } from 'lucide-react';
 import { MENU_SAYFALARI, geriGit, kokMu, sekmeOf, sekmeyeGit, useGezinmeKaydi } from './gezinme';
 import '../../styles/v15/tokens.css';
@@ -373,8 +373,6 @@ export const TopBarV15: React.FC<TopBarProps> = ({ active, onGo, user, isAdmin, 
 
   return (
     <>
-    <KronometreV15 />
-    <KapsulV15 />
     <header className="v15-top print:hidden">
       {geriVar && (
         <button type="button" className="v15-ib v15-back" onClick={() => (sayfa?.geri ? navigateTo(sayfa.geri) : geriGit(active))} aria-label="Geri" title="Geri">

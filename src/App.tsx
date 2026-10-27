@@ -32,7 +32,8 @@ const QuickAddYerTutucu = () => (
   <div className="w-full max-w-[760px] mx-auto lg:mx-0 flex flex-col gap-5 pt-4 sm:pt-8 min-h-[252px] sm:min-h-[262px]" aria-busy="true" />
 );
 import KurulSeridi from './components/olasi/KurulSeridi';
-import { V15Disinda } from './components/v15/V15Disinda';
+import { V15Disinda, V15Icinde } from './components/v15/V15Disinda';
+import KronometreV15 from './components/v15/KronometreV15';
 import { MusicPlayerProvider } from './components/music/MusicPlayerContext';
 import { MiniMusicPlayer } from './components/music/MiniMusicPlayer';
 import { SideNav } from './components/shell/SideNav';
@@ -2381,6 +2382,7 @@ export default function App() {
       </main>
 
       {/* Canlı ders oynatıcısı: rota değişse de çalma sürer (ders ekranında tam çubuk, başka sayfada mini) */}
+      <V15Icinde><KronometreV15 /></V15Icinde>
       <CanliDersDockGate activeTab={activeTab} dersKey={activeTab === 'canli_ders' ? canliDersKey : undefined} />
 
       {/* Alt gezinme (telefon) */}
