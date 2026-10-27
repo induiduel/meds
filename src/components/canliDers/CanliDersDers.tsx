@@ -1473,6 +1473,8 @@ function CdMetinBolme({ detay, canli, kamp = false }: { detay: CdDetay; canli: b
   const ilk = useRef(true);
   /** Programatik kaydırmanın sürdüğü an (bu süre dışındaki scroll olayları kullanıcınındır) */
   const progUntil = useRef(0);
+  const yenidenDene = useRef(0);
+  const sonUst = useRef(0);
 
   const onTik = useCallback((i: number) => {
     // Metin seçiliyse (kopyalama) atlama yapılmaz
@@ -1541,10 +1543,18 @@ function CdMetinBolme({ detay, canli, kamp = false }: { detay: CdDetay; canli: b
     const pane = paneRef.current;
     const st = cdDurum();
     const el = st.aktif >= 0 ? pEl(st.aktif) : null;
-    if (!pane || !el) return;
+    if (!pane || st.aktif < 0) return;
+    // Paragraf henüz çizilmemiş (ders yeni açıldı/aşama değişti): kısa aralıkla birkaç kez yeniden dene
+    if (!el) {
+      if (yenidenDene.current < 12) { yenidenDene.current += 1; window.setTimeout(() => kaydirRef.current(ani), 120); }
+      return;
+    }
+    yenidenDene.current = 0;
     const z = elementZoom(pane) || 1;
     const pr = pane.getBoundingClientRect();
     let hr = el.getBoundingClientRect();
+    // Gizli sekme/aşama (display:none) ya da sıfır boyutlu bölme: ölçüm anlamsız, yanlış konuma kaydırma
+    if (pr.height < 8 || (hr.height === 0 && hr.width === 0)) return;
     if (hr.height > pr.height * 0.6) {
       const m = el.querySelector('mark.cd-cumle');
       if (m) hr = m.getBoundingClientRect();
@@ -1590,8 +1600,13 @@ function CdMetinBolme({ detay, canli, kamp = false }: { detay: CdDetay; canli: b
     const onDown = (e: PointerEvent) => { if (e.target === pane) durdur(); }; // kaydırma çubuğu
     const onKey = (e: KeyboardEvent) => { if (['PageUp', 'PageDown', 'Home', 'End', 'ArrowUp', 'ArrowDown'].includes(e.key)) durdur(); };
     // Diğer yollar (kaydırma çubuğu, erişilebilirlik araçları): bizim kaydırmamız dışında gelen scroll olayı
+    sonUst.current = pane.scrollTop;
     const onScroll = () => {
       const n = Date.now();
+      // Yerleşim kaynaklı küçük oynamalar (yazı tipi/görsel yüklenmesi, yuvarlama) elle gezinme sayılmaz
+      const fark = Math.abs(pane.scrollTop - sonUst.current);
+      sonUst.current = pane.scrollTop;
+      if (fark < 3) return;
       if (n <= progUntil.current) progUntil.current = Math.max(progUntil.current, n + 120); // yumuşak kaydırma sürüyor
       else durdur();
     };

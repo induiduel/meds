@@ -996,3 +996,8 @@ Her maddede: belirti · kök neden · Kurul 2 kuralı · kapı durumu. Kanıtlar
 - **Belirti:** Sesli ders listesinden bir ders açılıp geri oka basılınca liste yerine "Ders çalış" sayfası açılıyordu.
 - **Kök neden:** Ders içindeki geri oku her zaman ders ayrıntı sayfasına (`ders_detay`) gidiyordu; o sayfanın geri bağlantısı da kurul/branş merkezine çıkıyordu. Liste doğrudan derse açıldığı için ayrıntı sayfası hiç görülmeden araya girip yolu bozuyordu.
 - **Çözüm / kural:** Uygulama içinden gelindiyse (`navigateTo` `__icGezinti` bayrağını koyar) ok `history.back()` yapar; doğrudan bağlantıyla açıldıysa ayrıntı sayfasına gider. Geri düğmeleri sabit hedefe değil, geldiği yere dönmelidir.
+
+## Sesli derste canlı konum bazen çalışmıyor / bozuk çalışıyordu (2026-10-27)
+- **Belirti:** Okunan cümle bazen izlenmiyor, bazen metin yanlış yere atlıyor, "Canlı konuma dön" kendiliğinden çıkıyordu.
+- **Kök neden:** (1) Paragraf henüz çizilmemişken kaydırma tek denemeyle vazgeçiyordu. (2) Gizli (display:none) bölmede ölçüm sıfır çıkıp yanlış konuma kaydırıyordu. (3) Yerleşim kaynaklı küçük scroll olayları elle gezinme sayılıp takibi 8 sn durduruyordu.
+- **Çözüm / kural:** Eksik öğede kısa aralıkla yeniden dene; sıfır boyutta kaydırma yapma; 3 px altı scroll farkını kullanıcı eylemi sayma. Yeni takip/kaydırma kodu bu üç durumu karşılamalı.

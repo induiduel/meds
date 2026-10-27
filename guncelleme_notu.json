@@ -1,9 +1,11 @@
 {
  "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
- "onem": 467,
- "baslik": "Sesli derste geri tuşu düzeldi",
+ "onem": 468,
+ "baslik": "Sesli derste canlı konum takibi daha sağlam",
  "maddeler": [
-  "Sesli ders içindeki geri oku artık ders listesine dönüyor (Ders çalış sayfasına atmıyor)"
+  "Sesli derste metin, okunan cümleyi daha güvenilir izliyor",
+  "Ders yeni açıldığında ya da aşama değiştiğinde takip kaçmıyor",
+  "Sayfa yerleşimi oynayınca \"Canlı konuma dön\" kendiliğinden çıkmıyor"
  ],
  "eklenen": [],
  "degisen": [],
