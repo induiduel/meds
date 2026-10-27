@@ -6,6 +6,9 @@ Bir branşta kamp: en az 1 onaylı tüyo + en az 1 deposu hazır ders. Tüyolar 
 üretilmez (karma). Kapı geçmezse yayımlanan kamp değişmez (önceki sürüm kalır) ve yöneticiye bildirim gider.
   kamp_zinciri.py [--kurul N] [--brans farmakoloji] [--kuru]
 """
+import sys as _llm_sys, pathlib as _llm_pl; _llm_sys.path[:0] = [str(p / "otomasyon") for p in _llm_pl.Path(__file__).resolve().parents]; from llm_kilit import kilit as _llm_kilit  # noqa: E402  LLM kilidi 2026-10-27
+if __name__ == "__main__":
+    _llm_kilit("kamp_zinciri")
 import argparse, datetime as dt, hashlib, json, shutil, subprocess, sys, urllib.request
 from pathlib import Path
 

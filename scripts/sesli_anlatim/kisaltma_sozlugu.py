@@ -122,7 +122,7 @@ def adaylar(s: T.Sayfa) -> list[str]:
     out: list[str] = []
     for w in s.metin_satir:
         for ham in re.split(r"[\s,;:()\[\]\"]+", w):
-            for parca in re.split(r"[/\-–]", ham):
+            for parca in re.split(r"[/\-–+]", ham):  # "HT+DM" bitişik yazımı (2026-10-27)
                 parca = parca.strip(".,;:!?'\"’“”")
                 if kisaltma_mi(parca) and parca not in out:
                     out.append(parca)

@@ -626,6 +626,7 @@
   "category": "kisaltma",
   "decks": [
    "k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim",
+   "y25-k2-01-norolojik-hastaya-yaklasim",
    "y25-k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim",
    "y25-k2-26-norolojik-hastaliklar-genetigi",
    "y25-k2-28-norolojik-hastaliklarda-rehabilitasyon"
@@ -804,6 +805,14 @@
   ],
   "definition": "Elektromiyografi",
   "term": "EMG"
+ },
+ "EP": {
+  "category": "kisaltma",
+  "decks": [
+   "y25-k2-01-norolojik-hastaya-yaklasim"
+  ],
+  "definition": "Uyarılmış potansiyeller (evoked potentials)",
+  "term": "EP"
  },
  "F1": {
   "category": "kisaltma",
@@ -1057,6 +1066,14 @@
   ],
   "definition": "Holoprozensefali",
   "term": "HPE"
+ },
+ "HT": {
+  "category": "kisaltma",
+  "decks": [
+   "y25-k2-01-norolojik-hastaya-yaklasim"
+  ],
+  "definition": "Hipertansiyon",
+  "term": "HT"
  },
  "HTLV": {
   "category": "kisaltma",
@@ -2079,6 +2096,14 @@
   "definition": "Sineptik vezikül proteini 2A",
   "term": "SV2A"
  },
+ "SVO": {
+  "category": "kisaltma",
+  "decks": [
+   "y25-k2-01-norolojik-hastaya-yaklasim"
+  ],
+  "definition": "Serebrovasküler olay",
+  "term": "SVO"
+ },
  "SWI": {
   "category": "kisaltma",
   "decks": [
@@ -2290,6 +2315,14 @@
   ],
   "definition": "Klinefelter sendromu",
   "term": "XXY"
+ },
+ "YKL": {
+  "category": "kisaltma",
+  "decks": [
+   "y25-k2-01-norolojik-hastaya-yaklasim"
+  ],
+  "definition": "Yer kaplayan lezyon",
+  "term": "YKL"
  },
  "ZY": {
   "category": "kisaltma",

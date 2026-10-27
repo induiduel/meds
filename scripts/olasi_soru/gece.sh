@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 # Olası soru gece işi: yeni kanıt varsa Claude sentezi + kapı. Hat kayıt defterinden (otomasyon/hat.json) çağrılır.
 # Kullanım: gece.sh [kurul]   (kurul verilmezse takvimden sınavı geçmiş en son kurul)
+[ "${MEDS_LLM_ELLE:-}" = 1 ] && [ -z "${INVOCATION_ID:-}" ] || { echo "[llm_kilit] olasi_soru gece.sh elle komut gerektirir" >&2; exit 75; }
 set -euo pipefail
 KOK="$(cd "$(dirname "$0")/../../.." && pwd)"; cd "$KOK/meds"
 # Akşam (meds-olasi-soru.timer) ve gece (meds-hat-gece) çalıştırmaları üst üste binmesin

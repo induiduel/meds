@@ -1,5 +1,5 @@
 {
-  "taranma_zamani": "2026-10-26 16:27:12",
+  "taranma_zamani": "2026-10-27 02:22:08",
   "kok_id": "17K7doMGg0xupQekTD5_Vz9xMXc5gd7BA",
   "kurullar": {
     "2": {
@@ -28,6 +28,22 @@
               "uzanti": ".m4a",
               "tur": "ses",
               "path": "Kurullar/Kurul 2/Nöroloji/Nöro 2 Bilinç Bozukluklarına Yaklaşım.m4a"
+            },
+            {
+              "id": "1FrvK21XJhvTD8UpC5W13OtUJ43gjcRC3",
+              "name": "Nöroloji 1 - Nörolojik Hastaya Yaklaşım",
+              "mime": "application/pdf",
+              "uzanti": "",
+              "tur": "diger",
+              "path": "Kurullar/Kurul 2/Nöroloji/Nöroloji 1 - Nörolojik Hastaya Yaklaşım"
+            },
+            {
+              "id": "1kDKU_EMrbRVlEVwxTyCh88v2kAEZd_tV",
+              "name": "Nöroloji 2 - Bilinç Bozukluklarına Yaklaşım",
+              "mime": "application/pdf",
+              "uzanti": "",
+              "tur": "diger",
+              "path": "Kurullar/Kurul 2/Nöroloji/Nöroloji 2 - Bilinç Bozukluklarına Yaklaşım"
             }
           ]
         },
@@ -35,12 +51,36 @@
           "id": "1rthgw076C49fuVepo_Smi9KJUw0kNLpM",
           "dosyalar": [
             {
+              "id": "1tLzgb2qhJf7eoBJo_6DW4SVFV_qQovit",
+              "name": "Pato k2_2 s35.m4a",
+              "mime": "audio/mp4",
+              "uzanti": ".m4a",
+              "tur": "ses",
+              "path": "Kurullar/Kurul 2/Tıbbi Patoloji/Pato k2_2 s35.m4a"
+            },
+            {
               "id": "1DseZsQT8_XXGkcCFKWDqEEpO09qoHN2I",
               "name": "Patoloji K2_1.m4a",
               "mime": "audio/mp4",
               "uzanti": ".m4a",
               "tur": "ses",
               "path": "Kurullar/Kurul 2/Tıbbi Patoloji/Patoloji K2_1.m4a"
+            },
+            {
+              "id": "1V27owzf2A2y_zofBdmCbqA9exoGs0uYj",
+              "name": "s34_261026_133405.pdf",
+              "mime": "application/pdf",
+              "uzanti": ".pdf",
+              "tur": "not",
+              "path": "Kurullar/Kurul 2/Tıbbi Patoloji/s34_261026_133405.pdf"
+            },
+            {
+              "id": "1kygC9ZDI8HUVttWBlW7CmHCqDKYBeauR",
+              "name": "s35_261026_142328.pdf",
+              "mime": "application/pdf",
+              "uzanti": ".pdf",
+              "tur": "not",
+              "path": "Kurullar/Kurul 2/Tıbbi Patoloji/s35_261026_142328.pdf"
             }
           ]
         }

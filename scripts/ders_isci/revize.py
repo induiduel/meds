@@ -6,6 +6,9 @@ kalitesinde baştan üretir; çıktı taslak/<is_id>/'e yazılır, durum "onay_b
   MEDS_REVIZE_PARALEL=2 python3 revize.py
 """
 from __future__ import annotations
+import sys as _llm_sys, pathlib as _llm_pl; _llm_sys.path[:0] = [str(p / "otomasyon") for p in _llm_pl.Path(__file__).resolve().parents]; from llm_kilit import kilit as _llm_kilit  # noqa: E402  LLM kilidi 2026-10-27
+if __name__ == "__main__":
+    _llm_kilit("revize")
 
 import hashlib
 import json

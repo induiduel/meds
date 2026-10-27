@@ -19,6 +19,7 @@ import {
   cdCumleAraligi, cdParagrafSinirlari, cdDetayBagla, cdKelimeBas, cdKonusulanKarakter, cdDetayGetir, cdDurum, cdMedspakUrl, cdOynat, cdParagrafa, cdTercihVaryant, cdToggle, fmtSure, useCd, type CdDetay,
 } from './canliDersStore';
 import { GunlukDiyalog } from './CanliDersView';
+import { CdCikmisChip, CdCikmisPencereKok, cikmisSayfada } from './CdCikmisChip';
 import { useCdTur } from './useCdTur';
 import { cdDersEtiketi } from './canliDersKategori';
 import { ListeEkleDugme } from './CanliDersListem';
@@ -1596,11 +1597,12 @@ function CdPdfBolme({ detay, canli }: { detay: CdDetay; canli: boolean }) {
         </div>
       )}
       <SlideDrawingCanvas scope={`${cizimKok}:${n}`} controls={false} />
+      <CdCikmisChip sorular={cikmisSayfada(detay.cikmisKonum, gor.dosya, n)} />
       {terimDosya?.[String(n)] && (
         <CdTerimKatman sayfa={terimDosya[String(n)]} gizle={cizimAcik} />
       )}
     </React.Fragment>
-  ), [cizimKok, cikYer, cikSec, gor.dosya, terimDosya, cizimAcik]);
+  ), [cizimKok, cikYer, cikSec, gor.dosya, terimDosya, cizimAcik, detay.cikmisKonum]);
   const cikmisSec = useCallback((q: CdCikmisKonum | null) => {
     setCikSec(q);
     if (q) { setElle(null); durdur(); }
@@ -1610,6 +1612,7 @@ function CdPdfBolme({ detay, canli }: { detay: CdDetay; canli: boolean }) {
 
   return (
     <div className="cd-bolme cd-pdf-bolme">
+      <CdCikmisPencereKok />
       <div className="cd-pdf-bar">
         <FileText aria-hidden />
         {pdf.sayfaKaynak?.[gor.sayfa - 1] ? (() => {

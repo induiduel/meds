@@ -139,7 +139,10 @@ def tara_tum_agac(kok_id: str = KOK_ID) -> dict:
                     dosyalar = []
                     for d in b_ogeleri:
                         d_uz = Path(d["name"]).suffix.lower()
-                        tur = "ses" if d_uz in SES_UZANTILARI else ("not" if d_uz in NOT_UZANTILARI else "diger")
+                        # Uzantısız Drive adları (ör. "Nöroloji 1 - …") MIME'den sınıflanır (2026-10-27)
+                        mime = d.get("mime") or ""
+                        tur = ("ses" if d_uz in SES_UZANTILARI or mime.startswith("audio/") else
+                               "not" if d_uz in NOT_UZANTILARI or mime == "application/pdf" else "diger")
                         dosyalar.append({
                             "id": d["id"],
                             "name": d["name"],

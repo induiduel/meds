@@ -660,3 +660,50 @@ Her maddede: belirti · kök neden · Kurul 2 kuralı · kapı durumu. Kanıtlar
   2. `kutular()` eklendi: tam eşleşme yoksa kısaltma, kelime içinde **önek/sonek sınırı** denetlenerek (ör. "o5-httlpr", "t12-l1", "dsm-iii-r", "gabaa-reseptor") karakter oranıyla daraltılmış kutuda işaretlenir. Kapı gevşetilmedi; yalnız doğru konum hesaplandı.
   3. Dağıtım listesine `kisaltma` eklendi; canlı API'de `kisaltma` alanı `curl` ile doğrulandı.
 - **Önleme kuralı:** (i) Her yeni veri türü hem `canliDers.ts` yol tanımına hem `deploy-code.sh` [1b] listesine yazılır. (ii) Kısaltma/açılım **yalnız dersin kendi metninden ya da elle/bilinen sözlükten** alınır; metinde açılımı olmayan kısaltmaya tahminle açılım yazılmaz (yanlış açılım, eksik açılımdan kötüdür).
+
+## H78 — Gece otomatik LLM hattı kullanıcının Claude limitini tüketti; Oracle ders işçisi manuel moda geçişin dışında kalmıştı (2026-10-27)
+- **Belirti:** 26.10 gecesi kullanıcıdan habersiz ~266 `claude -p` çağrısı (00:00–04:00, arşiv şekil/çizim onarımı `sekil_cizim.py`
+  partileri) ve Oracle `meds-ders-isci` konteyneri (`CLAUDE_CODE_OAUTH_TOKEN` ile, `duraklat:false`, `otomatik_tarama:true`,
+  günde 8 ders, 50 dk'da bir tarama) aboneliğin limitini bitirdi.
+- **Kök neden:** (1) 26.10'daki "manuel mod" yalnız yerel systemd birimlerini durdurdu; Oracle konteynerindeki `/isci/ayar.json`
+  ayrı bir dosyaydı ve değişmedi. (2) LLM çağıran betiklerde ortak bir "elle komut" kilidi yoktu. (3) Sunucuda Gemini onarım
+  işçisi (`startAutoRepairWorker`, 20 sn) ve Faz14 kullanıcı kuyruğu (bildirim gelince / 10 dk'da bir) kendiliğinden LLM'e gidiyordu.
+- **Çözüm:** Oracle işçisi durduruldu (`restart=no`, ayar duraklat/otomatik kapalı/günlük 0), `.env` anahtarı `#KAPALI`;
+  `meds-hat-gece`, `meds-olasi-soru` maskelendi; `otomasyon/llm_kilit.py` (MEDS_LLM_ELLE=1 yoksa çıkış 75, systemd altında
+  panel bayrağı şart) 11 betiğe ve `yonlendir._claude/_ajan`'a bağlandı; Gemini onarım işçisi duraklatılmış başlar, Faz14
+  kuyruğu yalnız `POST /api/admin/faz14-kuyruk/baslat` ile.
+- **Önleme kuralı (AGENTS.md kural 20):** "kapat" kararı her makinede (yerel + Oracle konteyner ayarları + `.env` anahtarları)
+  ayrı ayrı doğrulanır; yeni LLM betiği kilitsiz yazılmaz; zamanlayıcı/izleyici/setInterval ile LLM çağrısı yasak.
+
+## H79 — Otomatik çıkmış→cümle eşlemesi (vektör) derse ait olmayan soruları "çıkmış" diye bağladı (2026-10-27, y25-k2-01)
+- **Belirti:** "Nörolojik Hastaya Yaklaşım" çıkmış listesinde hasta merkezli klinik yöntem, SVO prognozu, konversiyon bozukluğu,
+  angular gyrus gibi bu derste geçmeyen 10 soru 0,92 puanla slayt 1'e bağlıydı.
+- **Kök neden:** `cikmis_konum.py` her soruyu bge-m3 ile dersin en benzer cümlesine eşleyip eşik üstünü yazıyordu; "soru bu
+  slayttaki bilgiyi mi soruyor" denetimi yoktu. Genel giriş cümlesi her nöroloji/psikiyatri sorusuna yüksek benzerlik verdi.
+- **Çözüm:** Elle doğrulandı: 7 soru (4 doğrudan, 3 ilişkili), her birine `s` (slayt), birebir `kanit`, `seviye`,
+  `dogrulandi:true`. Slayttaki yanıp sönen çıkmış chip'i yalnız `dogrulandi` kayıtları gösterir; `degerlendirme_dogrula.py`
+  kanıtın slaytta birebir geçtiğini denetler.
+- **Önleme kuralı:** "Çıkmışta soruldu" vurgusu ve chip yalnız doğrulanmış, slayt kanıtlı eşlemeye dayanır; vektör benzerliği
+  yalnız aday listesidir. Metindeki "Bu bilgi çıkmış sınavda sorulmuştur" cümleleri de aynı kanıtla teyit edilir.
+
+## H80 — Öğrenci Drive betiği uzantısız PDF'i not saymadı; kısaltma bulucu "HT+DM" yazımını kaçırdı (2026-10-27)
+- **Belirti:** Öğrenci notu "Nöroloji 1 - Nörolojik Hastaya Yaklaşım" (uzantısız PDF) envanterde "diger" kaldı; slayttaki HT, DM,
+  EP kısaltma sözlüğüne girmedi.
+- **Kök neden:** Sınıflama yalnız uzantıya bakıyordu; kısaltma bölme deseni `+` işaretini ayırıcı saymıyordu; "EP" hunspell'de
+  Türkçe sözcük sayılıp elendi.
+- **Çözüm / kural:** Tür MIME'den de belirlenir; bölme deseni `[/\-–+]`; EP `kisaltma_bilinen.json`'a eklendi.
+  `degerlendirme_dogrula.py` slayttaki her kısaltmanın sözlükte olmasını HATA ile ister.
+
+## H81 — Amfi kaydı tek parça + VAD ile verilince Whisper "Altyazı M.K." sanrısıyla erken bitti; eşzamanlı tsc OOM'a yol açtı (2026-10-27)
+- **Belirti:** 28 dk hoca kaydından 1 segment ("Altyazı M.K.") ya da istem cümlesi tekrarları çıktı; sonra iş OOM ile öldü.
+- **Kök neden:** Kısık/yankılı amfi sesinde VAD konuşmayı eliyor, `initial_prompt` sanrı tekrarına yol açıyor; tüm dosya tek
+  çağrıda verilince model ilk sanrıdan sonra susuyor. Aynı anda iki `tsc --noEmit` (5,6 + 3,5 GB) belleği bitirdi.
+- **Çözüm / kural:** `hoca_dokum.py`: ham ses, VAD ve istem yok, 60 sn parça + 2 sn bindirme, sanrı süzgeci, her parçadan sonra
+  `.yarim` yazılır ve kaldığı yerden sürer; birim `MemoryMax=4G`. Döküm sürerken `tsc --noEmit` çalıştırılmaz.
+
+## H82 — Çıkmış soru penceresi şık seçilince kayboldu, ders sürmedi (2026-10-27, sınamada yakalandı)
+- **Belirti:** Slayt 3'teki chip'e basıp şık seçince pencere kapandı, görünüm slayt 1'e döndü, ses sürmedi.
+- **Kök neden:** Pencere durumu slayt katmanındaki chip bileşenindeydi. Ses durunca görünüm canlı konuma döndü, PDF
+  görüntüleyici ekran dışı slaytı (chip + pencere) kaldırdı; durum ve "çalıyordu" bilgisi kayboldu.
+- **Çözüm / kural:** Durum modül düzeyinde (`useSyncExternalStore`), pencere `CdCikmisPencereKok` ile `document.body`'ye
+  portal; sanal listede çizilen bileşen kalıcı durum tutmaz. Sınama: çalarken aç → ses durur, kapat → aynı saniyeden sürer.

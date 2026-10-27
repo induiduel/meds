@@ -1,21 +1,20 @@
 {
  "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
- "onem": 378,
- "baslik": "Slayt Kısaltmaları Artık Açılıyor (Ayrı Kısaltmalar Bölümü)",
+ "onem": 379,
+ "baslik": "Sesli Derste Çıkmış Soru Chip'i: Slayttan Çık, Çöz, Derse Dön",
  "maddeler": [
-  "Sesli derste slayt üstündeki kısaltmalar mavi noktalı çizgiyle işaretleniyor; dokununca açılımı (ör. DD → Duygu durum, ÜSYE → Üst solunum yolu enfeksiyonu) kartta açılıyor.",
-  "Terimler sayfasına terimlerden ayrı 'Kısaltma' bölümü eklendi; kısaltmalar da arama ve süzgeçle bulunabiliyor.",
-  "Kısaltma açılımları dersin kendi slayt metninden ya da doğrulanmış sözlükten alınıyor; tahminle yanlış açılım yazılmıyor.",
-  "Kurul 2 derslerinin tamamı tarandı: 60 ders, 1 134 kısaltma işareti, 263 ayrı kısaltma.",
-  "Kök nedenler H77 olarak hata defterine işlendi (büyük harfli Türkçe sözcükler, tireyle bitişik yazım, dağıtım listesi)."
+  "Çıkmışta sorulan bilginin geçtiği slaytın sağ üstünde yanıp sönen 'Çıkmış' etiketi çıkıyor; dokununca ders sesi duruyor.",
+  "Soru normal ya da tam ekran pencerede çözülüyor; şık açıklamaları ve slayttaki dayanak gösteriliyor.",
+  "'Derse dön' ile ders kaldığı saniyeden devam ediyor.",
+  "Etiket yalnız slayt metniyle tek tek doğrulanmış çıkmışlarda görünür; Nöroloji 1 (Nörolojik Hastaya Yaklaşım) için 7 soru doğrulandı, yanlış eşleşen 10 soru kaldırıldı.",
+  "Nöroloji 1 kısaltmaları tamamlandı: HT, DM, YKL, SVO ve EP sözlüğe eklendi."
  ],
  "eklenen": [
-  "scripts/sesli_anlatim/kisaltma_sozlugu.py",
-  "data/sesli_anlatim/kisaltma/",
-  "data/arsiv_25_26/sesli_anlatim/kisaltma/",
-  "data/sesli_anlatim/kisaltma_bilinen.json",
-  "data/sesli_anlatim/kisaltma_elle/",
-  "src/data/kisaltma_sozluk.json"
+  "src/components/canliDers/CdCikmisChip.tsx",
+  "GET /api/past-exams/tek/:id",
+  "otomasyon/llm_kilit.py",
+  "scripts/ogrenci_drive/degerlendirme_dogrula.py",
+  "scripts/ogrenci_drive/hoca_dokum.py"
  ],
  "degisen": [
   "src/services/canliDers.ts",

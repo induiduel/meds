@@ -26,6 +26,9 @@ Kullanım:
   /home/indu/medsor/meds/.venv-ocr/bin/python scripts/arsiv_25_26/paralel_arsiv_isci.py --kurul2-sirali --baslangic 4 --bitis 15
 """
 from __future__ import annotations
+import sys as _llm_sys, pathlib as _llm_pl; _llm_sys.path[:0] = [str(p / "otomasyon") for p in _llm_pl.Path(__file__).resolve().parents]; from llm_kilit import kilit as _llm_kilit  # noqa: E402  LLM kilidi 2026-10-27
+if __name__ == "__main__":
+    _llm_kilit("paralel_arsiv_isci")
 
 import argparse
 import json

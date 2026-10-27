@@ -130,7 +130,10 @@ export interface CdDetay {
 export interface CdTerim { t: string; a: string; k: 'terim' | 'latince' | 'karisan' | 'kisaltma'; f?: string; acilim?: string; b: number[][] }
 export interface CdTerimSayfa { bos: number; t: CdTerim[] }
 export interface CdV2Cumle { e: string; d: number; v: [string, string][]; c: string[]; a: number | null; s?: unknown }
-export interface CdCikmisKonum { id: string; kok: string; cevap: string; yil?: number | string | null; p: number; c: number; skor: number }
+/** s/d: elle doğrulanmış slayt (PDF sayfası) ve dosya; dogrulandi olanlar slaytta yanıp sönen chip olarak gösterilir.
+ *  seviye: dogrudan (slayttaki bilgi doğrudan soruldu) | ilgili; kanit: slayttan birebir dayanak */
+export interface CdCikmisKonum { id: string; kok: string; cevap: string; yil?: number | string | null; p: number; c: number; skor: number;
+  s?: number; d?: number; seviye?: 'dogrudan' | 'ilgili'; kanit?: string; dogrulandi?: boolean }
 /** Kutular sayfa oranıdır (0–1). l: ≥%80'i okunan madde satırları (ya da resim); w: [kelimenin cümle içi baş, son, x0, y0, x1, y1] */
 /** y: hareketli imleç yolu [[cümle içi karakter, x, y]] — ses o karaktere gelince imleç (x, y)'ye kayar */
 export interface CdIsaret { d: number; s: number; t: 'metin' | 'tablo' | 'kelime' | 'resim' | 'sayfa'; l: number[][]; w: number[][]; y?: number[][] }

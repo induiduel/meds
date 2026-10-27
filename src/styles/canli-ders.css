@@ -1188,3 +1188,37 @@
 .cd-p-trm-oge dd i { color: var(--color-ink-3); }
 .cd-trm-bas.is-on { color: var(--color-accent); border-color: var(--color-accent); background: color-mix(in srgb, var(--color-accent) 10%, var(--color-white)); }
 .cd-gor-menu { display: flex; flex-direction: column; padding: 6px 0 2px; border-top: 1px solid var(--color-line); margin-top: 4px; min-width: 280px; }
+
+/* Slayt üstü çıkmış chip'i + çözülebilir soru penceresi (CdCikmisChip, 2026-10-27) */
+.cd-cikc { position: absolute; top: 8px; right: 8px; z-index: 6; display: inline-flex; align-items: center; gap: 4px; height: 26px; padding: 0 10px; border-radius: 999px; border: 1px solid var(--color-bad); background: var(--color-white); color: var(--color-bad); font-size: 12px; font-weight: 700; cursor: pointer; box-shadow: 0 1px 4px rgb(0 0 0 / .12); animation: cd-cikc-nabiz 1.6s ease-in-out infinite; }
+.cd-cikc > svg { width: 13px; height: 13px; fill: currentColor; }
+.cd-cikc.is-ilgili { border-color: var(--color-warn, var(--color-bad)); color: var(--color-warn, var(--color-bad)); }
+.cd-cikc:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; }
+@keyframes cd-cikc-nabiz { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: .55; transform: scale(.96); } }
+@media (prefers-reduced-motion: reduce) { .cd-cikc { animation: none; } }
+.cd-cikp-zemin { position: fixed; inset: 0; z-index: 1000; display: flex; align-items: center; justify-content: center; padding: 16px; background: rgb(0 0 0 / .45); }
+.cd-cikp { display: flex; flex-direction: column; width: min(640px, 100%); max-height: min(86vh, 100%); border-radius: 14px; background: var(--color-white); color: var(--color-ink); box-shadow: 0 12px 40px rgb(0 0 0 / .3); overflow: hidden; }
+.cd-cikp.is-tam { width: 100%; height: 100%; max-height: none; border-radius: 0; }
+.cd-cikp-zemin:has(.cd-cikp.is-tam) { padding: 0; }
+.cd-cikp-bas, .cd-cikp-alt { display: flex; align-items: center; gap: 8px; padding: 10px 14px; border-bottom: 1px solid var(--color-line); }
+.cd-cikp-alt { border-bottom: 0; border-top: 1px solid var(--color-line); }
+.cd-cikp-etiket { display: inline-flex; align-items: center; gap: 5px; font-size: 13px; font-weight: 700; color: var(--color-bad); }
+.cd-cikp-etiket > svg { width: 14px; height: 14px; fill: currentColor; }
+.cd-cikp-no { font-size: 12px; color: var(--color-ink-2); }
+.cd-cikp-govde { flex: 1; overflow: auto; padding: 14px; }
+.cd-cikp-kok { margin: 0 0 12px; font-size: 15px; line-height: 1.5; font-weight: 600; white-space: pre-line; }
+.cd-cikp-siklar { display: grid; gap: 8px; }
+.cd-cikp-sik { display: flex; gap: 10px; align-items: flex-start; text-align: left; padding: 10px 12px; border-radius: 10px; border: 1px solid var(--color-line); background: var(--color-white); color: var(--color-ink); font-size: 14px; cursor: pointer; }
+.cd-cikp-sik:disabled { cursor: default; }
+.cd-cikp-sik > span { display: flex; flex-direction: column; gap: 4px; }
+.cd-cikp-sik small { font-size: 12.5px; color: var(--color-ink-2); line-height: 1.45; }
+.cd-cikp-sik.is-dogru { border-color: var(--color-good); background: color-mix(in srgb, var(--color-good) 10%, var(--color-white)); }
+.cd-cikp-sik.is-yanlis { border-color: var(--color-bad); background: color-mix(in srgb, var(--color-bad) 10%, var(--color-white)); }
+.cd-cikp-sik.is-soluk { opacity: .55; }
+.cd-cikp-sonuc { margin-top: 12px; font-size: 14px; line-height: 1.5; }
+.cd-cikp-sonuc .is-dogru { color: var(--color-good); }
+.cd-cikp-sonuc .is-yanlis { color: var(--color-bad); }
+.cd-cikp-kanit { color: var(--color-ink-2); font-size: 13px; }
+.cd-cikp-btn { height: 34px; padding: 0 14px; border-radius: 8px; border: 1px solid var(--color-line); background: var(--color-white); color: var(--color-ink); font-weight: 600; cursor: pointer; }
+.cd-cikp-btn.is-ana { background: var(--color-accent); border-color: var(--color-accent); color: var(--color-white); }
+.cd-cikp-btn:disabled { opacity: .5; cursor: default; }

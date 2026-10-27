@@ -14,6 +14,9 @@ Kodlar defterden (2n03): kurullar ve branşlar arası tekil.
   ders_zinciri.py --durum [--kurul 2]                 hangi ders hangi adımda
   ders_zinciri.py --kurul 2 [--ders k2-07] [--adim hazirla] [--kuru]
 """
+import sys as _llm_sys, pathlib as _llm_pl; _llm_sys.path[:0] = [str(p / "otomasyon") for p in _llm_pl.Path(__file__).resolve().parents]; from llm_kilit import kilit as _llm_kilit  # noqa: E402  LLM kilidi 2026-10-27
+if __name__ == "__main__":
+    _llm_kilit("ders_zinciri")
 import argparse, datetime as dt, hashlib, json, os, re, shutil, subprocess, sys
 from collections import defaultdict
 from pathlib import Path

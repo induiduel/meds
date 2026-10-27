@@ -21,7 +21,9 @@ import json
 import os
 import re
 import subprocess
+import sys
 import time
+from pathlib import Path
 
 from . import cekirdek as c
 
@@ -96,6 +98,9 @@ _ANSI = re.compile(r"\x1b\[[0-9;?]*[A-Za-z]")
 
 
 def _ajan(ad: str, istem: str) -> tuple[str | None, str | None]:
+    sys.path.insert(0, str(Path(__file__).resolve().parents[1])); from llm_kilit import serbest  # LLM kilidi 2026-10-27
+    if not serbest():
+        return None, "kilit"
     """A katmanı: ajan CLI'si (OpenCode, Command Code, Antigravity; Claude ayrı bütçeyle `_claude`). İstem stdin'den,
     boş bir çalışma klasöründe, salt okunur kipte; cevap metni döner (derleyicinin json_cikar'ı önsöz/ANSI'ye hoşgörülü).
     Ajanın `modeller` listesi sırayla denenir (ilk dolu cevap). Günlük tavan butce.json'dan; dolunca (None, "butce")."""
@@ -166,6 +171,9 @@ def _ucretsiz(istem: str, aile: str, k: dict) -> tuple[str | None, str | None]:
 
 
 def _claude(istem: str, model: str | None = None) -> tuple[str | None, str | None]:
+    sys.path.insert(0, str(Path(__file__).resolve().parents[1])); from llm_kilit import serbest  # LLM kilidi 2026-10-27
+    if not serbest():
+        return None, "kilit"
     b = _butce()
     if claude_kalan() <= 0:
         return None, "butce"

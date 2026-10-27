@@ -1,69 +1,22 @@
 {
- "surum": 1,
+ "surum": 2,
  "metinHash": "8cab1e20518f1f72220c575cb88c6579d714a5ae",
+ "dogrulama": "elle, slayt metniyle birebir (2026-10-27); otomatik vektör eşlemesi 7 yanlış soru içeriyordu",
  "q": [
-  {
-   "id": "4f0d71643782",
-   "kok": "Hasta merkezli klinik yöntem ile ilgili olarak aşağıdakilerden hangisi yanlıştır?",
-   "cevap": "Hasta merkezli klinik yöntem hastanın rahatsızlığını yalnızca patolojik düzeyde anlamayı hedefler.",
-   "yil": "2023-2024",
-   "p": 0,
-   "c": 1,
-   "skor": 0.92
-  },
-  {
-   "id": "ed41695f77aa",
-   "kok": "Serebrovasküler olaylarda fonksiyonel düzeyi olumsuz yönde etkileyen kötü prognoz belirteçleri ile ilgili aşağıdaki öncüller verilmiştir:\nI. Multipl nörolojik defisit\nII. Zayıf kognitif fonksiyon\nIII. Algısal ve uzaysal kayıplar\nIV. Başlangıçta koma olmaması\nBunlardan hangileri kötü prognoz belirtecidir?",
-   "cevap": "I, II ve III",
-   "yil": "2020-2021",
-   "p": 0,
-   "c": 5,
-   "skor": 0.92
-  },
-  {
-   "id": "past-1790877481517-691074",
-   "kok": "Okuduklarını anlayamama ile karakterize beyin lezyonu hangi durumda görülür?",
-   "cevap": "Angular gyrus lezyonu",
-   "yil": "2020-2021",
-   "p": 0,
-   "c": 5,
-   "skor": 0.92
-  },
-  {
-   "id": "d3-k2-psi-016",
-   "kok": "Herhangi bir nörolojik veya organik patoloji ile açıklanamayan, sıklıkla psikolojik bir stresör sonrasında aniden ortaya çıkan motor veya duyusal defisitler (örn. psödofelç, afoni, psikojenik körlük) hangi bozukluğu tanımlar?",
-   "cevap": "Konversiyon Bozukluğu (Fonksiyonel Nörolojik Belirti Bozukluğu)",
-   "yil": "2021-2026",
-   "p": 0,
-   "c": 5,
-   "skor": 0.92
-  },
-  {
-   "id": "d3-k2-psi-004",
-   "kok": "Epileptik nöbet ile psikojenik nonepileptik nöbet (psödonöbet / konversiyon) ayırıcı tanısında aşağıdakilerden hangisi psödonöbet lehine bir bulgudur?",
-   "cevap": "Atak sırasında gözlerin sıkıca kapatılması ve muayenede göz açılmasına direnç gösterilmesi",
-   "yil": "2021-2026",
-   "p": 2,
-   "c": 7,
-   "skor": 0.92
-  },
   {
    "id": "q-2__kurul_-1",
    "kok": "Nörolojik hastalıkların başlangıç şekli değerlendirildiğinde, aşağıdakilerden hangisi tipik olarak akut başlangıçlı (dakikalar-saatler içinde yerleşen) bir tablodur?",
    "cevap": "Hemipleji",
    "yil": "Geçmiş Yıllar Çıkmışı (Arşiv)",
    "p": 3,
-   "c": 1,
-   "skor": 0.92
-  },
-  {
-   "id": "4c4eb178b88b",
-   "kok": "Nörolojik öyküsünde sinir sisteminin farklı bölgelerinin etkilendiği, zamanla düzelen ve tekrarlayan epizodlar geçirdiği anlaşılan bir hastada en olası tanı aşağıdakilerden hangisidir?",
-   "cevap": "Multipl skleroz (MS)",
-   "yil": "2020-2021",
-   "p": 3,
-   "c": 7,
-   "skor": 0.92
+   "c": 0,
+   "skor": 1.0,
+   "s": 3,
+   "d": 0,
+   "seviye": "dogrudan",
+   "kanit": "Akut başlangıç. Dakika veya saat içinde. Örneğin hemipleji.",
+   "dogrulandi": true,
+   "konu": "Nörolojik Hastaya Yaklaşım"
   },
   {
    "id": "4ba07c308e35",
@@ -71,35 +24,14 @@
    "cevap": "Multipl skleroz (MS)",
    "yil": "2020-2021",
    "p": 3,
-   "c": 7,
-   "skor": 0.92
-  },
-  {
-   "id": "past-q-I_SKENDERUN_TI_Mu_du_rlu_g_u_ne0__1__230709_230251-76",
-   "kok": "Geleneksel tıbbi veya psikiyatrik anlayışı aşan, belirtilerin olağan dışı ve dramatik sunumu, alışılmış tedavi ve ilaçlara uygun cevap vermeyen belirtiler, diğer belirtiler çözülürken yeni olağan dışı belirtilerin ortaya çıkması, işlemlere ve testlere girmeye ve belirtileri tekrar anlatmaya istek duyma, olağan dışı belirtilerin gelişimi şeklinde ortaya çıkan bir tabloda aşağıdakilerden hangisi düşünülmelidir?",
-   "cevap": "Yapay bozukluk",
-   "yil": "Geçmiş Yıllar Çıkmışı (Arşiv)",
-   "p": 4,
-   "c": 3,
-   "skor": 0.92
-  },
-  {
-   "id": "past-1790877044869-84754",
-   "kok": "\"Devamlı kendisinden bahsedilmesini ister, başkalarının duygularını anlamaz, empati yapamaz.\" Yukarıda tanımlanan hasta için aşağıdakilerden hangisi en olası tanıdır?",
-   "cevap": "Narsistik kişilik bozukluğu",
-   "yil": "2021-2022",
-   "p": 5,
-   "c": 0,
-   "skor": 0.92
-  },
-  {
-   "id": "past-1790877039274-141162",
-   "kok": "Aşağıdakilerin hangisinde nörolojik tanı esas olarak anamnez bilgisi ile konabilir?",
-   "cevap": "Migren",
-   "yil": "2022-2023",
-   "p": 5,
-   "c": 1,
-   "skor": 0.92
+   "c": 6,
+   "skor": 1.0,
+   "s": 3,
+   "d": 0,
+   "seviye": "ilgili",
+   "kanit": "Dalgalı gidiş. Kötüleşme ve iyileşme dönemleri vardır. Relapsing-remitting MS",
+   "dogrulandi": true,
+   "konu": "Nörolojik Hastaya Yaklaşım"
   },
   {
    "id": "804e82ac79db",
@@ -107,53 +39,77 @@
    "cevap": "Parkinson hastalığı",
    "yil": "2020-2021",
    "p": 6,
+   "c": 2,
+   "skor": 1.0,
+   "s": 5,
+   "d": 0,
+   "seviye": "dogrudan",
+   "kanit": "Parkinson H. maske yüz, monoton konuşma, salya akması, yürürken kollarını sallamaması",
+   "dogrulandi": true,
+   "konu": "Nörolojik Hastaya Yaklaşım",
+   "kopyalar": [
+    "5e72fc758888"
+   ]
+  },
+  {
+   "id": "past-1790877037327-292692",
+   "kok": "Aşil refleksi ile hangi kök seviyesi incelenebilir?",
+   "cevap": "S1",
+   "yil": "2020-2021",
+   "p": 9,
    "c": 3,
-   "skor": 0.92
+   "skor": 1.0,
+   "s": 6,
+   "d": 0,
+   "seviye": "dogrudan",
+   "kanit": "Bel ve bacak arkasına vuran ağrı+ aşil refleksi alınamıyorsa → 1. sakral radiks",
+   "dogrulandi": true,
+   "konu": "Nörolojik Muayene"
   },
   {
-   "id": "5e72fc758888",
-   "kok": "Yürüyüşünün yavaş olması, yürürken kolları sallamaması, maske yüz olması, monoton konuşması hangi nörolojik hastalığı düşündürür?",
-   "cevap": "Parkinson hastalığı",
+   "id": "9d2e0b3d81c4",
+   "kok": "Muayenede sağ vücut yarımında güçsüzlük ve derin tendon reflekslerinde artış saptadığınız hastada lezyon hangisinde olamaz?",
+   "cevap": "Dorsal spinal kord",
    "yil": "2020-2021",
-   "p": 6,
-   "c": 3,
-   "skor": 0.92
+   "p": 8,
+   "c": 1,
+   "skor": 1.0,
+   "s": 6,
+   "d": 0,
+   "seviye": "ilgili",
+   "kanit": "Afazi+ sağ hemipleji → piramidal yolu+ konuşma alanı. Sol hemisferde lezyon",
+   "dogrulandi": true,
+   "konu": "Nörolojik Muayene"
   },
   {
-   "id": "88612c9f5ce5",
-   "kok": "Evet\nNöroloji\nNöroloji\nKranyal Sinir\nMuayenesi\nKranial sinir\nmuayenesi\nesnasında hasta,\ndilini dışarı\nçıkarıldığında sağ\ntarafa sapma olduğu\ngörülmektedir. Dil\natrofisi olmayan bu\nhastada lezyon\nnerede olabilir?",
-   "cevap": "Sağ nervus hypoglossus",
+   "id": "4c4eb178b88b",
+   "kok": "Nörolojik öyküsünde sinir sisteminin farklı bölgelerinin etkilendiği, zamanla düzelen ve tekrarlayan epizodlar geçirdiği anlaşılan bir hastada en olası tanı aşağıdakilerden hangisidir?",
+   "cevap": "Multipl skleroz (MS)",
    "yil": "2020-2021",
-   "p": 12,
+   "p": 11,
    "c": 0,
-   "skor": 0.92
+   "skor": 1.0,
+   "s": 7,
+   "d": 0,
+   "seviye": "dogrudan",
+   "kanit": "öyküsünde sinir sisteminin farklı bölgelerinin etkilendiği epizodlar geçirip düzelmişse → MS",
+   "dogrulandi": true,
+   "konu": "Nörolojik Hastaya Yaklaşım"
   },
   {
-   "id": "ca9d700174bb",
-   "kok": "Evet\nNöroloji\nNöroloji\nKranyal Sinir\nMuayenesi\nKranial sinir\nmuayenesi\nesnasında hasta,\ndilini dışarı\nçıkarıldığında sağ\ntarafa sapma olduğu\ngörülmektedir. Dil\natrofisi olmayan bu\nhastada lezyon\nnerede olabilir?",
-   "cevap": "Sağ nervus hypoglossus",
-   "yil": "2020-2021",
+   "id": "d3-k2-nor-014",
+   "kok": "Aniden konuşamama ve sağ kol ile bacakta ani güç kaybı (akut hemipleji) ile başvuran hastada, semptomların ilk saatlerinde iskemik inme ile hemorajik inme ayrımını yapmak için ilk seçilecek acil tetkik hangisidir?",
+   "cevap": "Kontrastsız beyin bilgisayarlı tomografi (BT)",
+   "yil": "2021-2026",
    "p": 12,
-   "c": 0,
-   "skor": 0.92
-  },
-  {
-   "id": "3807e9b207c5",
-   "kok": "Serebrovasküler hastalık ve hipertansiyon öyküsü olan, sol tarafta ani güç kaybı, dizartri ve baş ağrısı ile acile başvuran hastada öncelikle hangi tetkik istenir?",
-   "cevap": "Kontrastsız beyin bilgisayarlı tomografi-difüzyon manyetik rezonans görüntüleme",
-   "yil": "2020-2021",
-   "p": 12,
-   "c": 7,
-   "skor": 0.92
-  },
-  {
-   "id": "past-1790877044163-968531",
-   "kok": "34 yaşında erkek hasta iş yerinde başına malzeme düştüğü için acil servise getirildi. Hasta emirlere uymuyor, ağrılı uyaranı lokalize edebiliyor, kendi haline bırakıldığında uyuyor; ismiyle seslenildiğinde anlamsız sözcüklerle sayıklıyor. Hastanın bilinç düzeyi hangisi ile tanımlanır?",
-   "cevap": "Somnolans",
-   "yil": "Geçmiş Yıllar Çıkmışı (Arşiv)",
-   "p": 13,
-   "c": 0,
-   "skor": 0.92
+   "c": 6,
+   "skor": 1.0,
+   "s": 8,
+   "d": 0,
+   "seviye": "ilgili",
+   "kanit": "BBT (öğrenci notu: acilde hemen çekilir)",
+   "dogrulandi": true,
+   "konu": "Felçler"
   }
  ]
 }

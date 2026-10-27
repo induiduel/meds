@@ -3793,6 +3793,19 @@ app.post('/api/past-exams/verify-unverified', requireAdmin, async (req, res) => 
 });
 
 // 3. Doğrulama ve Güvenilirlik Özet İstatistikleri
+// Sesli ders çıkmış chip'i: tek sorunun çözülebilir hâli (kök, şıklar, cevap, açıklama) — 2026-10-27
+app.get('/api/past-exams/tek/:id', (req, res) => {
+  const q: any = getServedPastList().list.find((x: any) => String(x.id) === String(req.params.id));
+  if (!q) return res.status(404).json({ error: 'Soru bulunamadı' });
+  const sik = q.sik_analizi && typeof q.sik_analizi === 'object' ? q.sik_analizi : {};
+  res.json({
+    id: q.id, kok: q.stem, yil: q.examYear || null, konu: q.topic || null,
+    siklar: (Array.isArray(q.options) ? q.options : []).map((o: any) => ({ k: o.key, m: o.text, a: sik[o.key] || null })),
+    dogru: q.correctAnswer || null,
+    aciklama: q.tibbi_aciklama || q.explanation || null,
+  });
+});
+
 app.get('/api/past-exams/verification-summary', (req, res) => {
   try {
     const list = getPastQuestionsDb();
@@ -4152,8 +4165,11 @@ function phase14UserWorkerRunning(): boolean {
 }
 
 /** Bekleyen istek varsa ve işleyici çalışmıyorsa başlatır. force=false iken 10 dk'da bir denenir (kota bitince boşa dönmesin). */
-function kickPhase14UserQueue(force = false) {
+/** LLM kilidi (kullanıcı kararı 2026-10-27): kuyruk yalnız yönetici komutuyla işlenir (`yonetici=true`);
+ *  bildirim/zamanlayıcı çağrıları isteği kuyrukta bırakır. Eski davranış yalnız MEDS_LLM_OTOMATIK=1 ile. */
+function kickPhase14UserQueue(force = false, yonetici = false) {
   try {
+    if (!yonetici && process.env.MEDS_LLM_OTOMATIK !== '1') return false;
     if (phase14Queue.pendingCount() === 0 || phase14UserWorkerRunning()) return false;
     if (!force && Date.now() - phase14UserLastKick < 10 * 60 * 1000) return false;
     phase14UserLastKick = Date.now();
@@ -4286,6 +4302,11 @@ setInterval(() => {
 const isAdminEmail = (e: unknown) => String(e || '').trim().toLowerCase() === ADMIN_EMAIL.toLowerCase();
 
 // Herkes: soruyu yapay zekâ incelemesine gönder (isteğe bağlı not)
+// Faz14 kullanıcı kuyruğunu yönetici elle başlatır (otomatik LLM yok, 2026-10-27)
+app.post('/api/admin/faz14-kuyruk/baslat', requireAdmin, (_req, res) => {
+  res.json({ ok: true, basladi: kickPhase14UserQueue(true, true), bekleyen: phase14Queue.pendingCount() });
+});
+
 app.post('/api/past-exams/:id/ai-review', (req, res) => {
   try {
     const qId = String(req.params.id);
@@ -11998,6 +12019,8 @@ async function startServer() {
     // 🤖 Ücretsiz Gemini Hata İnceleme ve Onarım Otomasyonunu Başlat
     hydrateExistingReportsToAutoRepair();
     startAutoRepairWorker();
+    // LLM kilidi (2026-10-27): onarım işçisi duraklatılmış başlar; panelden elle açılır
+    if (process.env.MEDS_LLM_OTOMATIK !== '1') setAutoRepairWorkerPaused(true);
     // Masaüstü klasör izleyicisi arka planı meşgul etmemesi için otomatik başlatılmaz.
     // İhtiyaç olduğunda Admin Panel üzerinden tek tuşla veya manuel başlatılabilir.
     console.log('[DesktopSync] ℹ️ Arka plan kaynak tasarrufu devrede: Masaüstü belge izleyicisi manuel bekleme modunda.');
