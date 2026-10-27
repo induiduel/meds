@@ -411,21 +411,122 @@ function SahnedeBul({ ders, oynatici }: { ders: Ders; oynatici: ReturnType<typeo
   );
 }
 
+/** Etiketleri yerleştir (tasarım E04 kmbCizim): sahnenin etiketli yapılarından biri seçilir, sahnede yerine dokunulur.
+ *  Doğruysa etiket kalıcı görünür; hepsi bitince puan. Yapılar ve adları sahne tanımından (SAHNELER[..].etiket). */
+function Yerlestir({ ders }: { ders: Ders }) {
+  const sahneler = useMemo(() => {
+    const ids = [...new Set([...ders.adimlar.map((a) => a.sahne), ...ders.sinav.bul.map((b) => b.sahne)])];
+    return ids.filter((id) => SAHNELER[id] && Object.keys(SAHNELER[id].etiket).length >= 2);
+  }, [ders]);
+  const [si, setSi] = useState(0);
+  const sahne = sahneler[si];
+  const etiket = sahne ? SAHNELER[sahne].etiket : {};
+  const yapilar = useMemo(() => Object.entries(etiket).map(([id, [, , ad]]) => ({ id, ad })).sort((a, b) => a.ad.localeCompare(b.ad, 'tr')), [sahne]);
+  const [secili, setSecili] = useState<string | null>(null);
+  const [yerlesen, setYerlesen] = useState<string[]>([]);
+  const [yanlis, setYanlis] = useState(0);
+  const [isaret, setIsaret] = useState<{ id: string; dogru: boolean } | null>(null);
+  useEffect(() => { setSecili(null); setYerlesen([]); setYanlis(0); setIsaret(null); }, [sahne]);
+  const durum = useMemo<SahneDurum>(() => Object.fromEntries(yerlesen.map((id) => [id, { etiket: true, gor: true, vurgu: 0 }])), [yerlesen]);
+  if (!sahne) return <p className="kmb-yukleniyor">Bu derste etiket yerleştirilecek sahne yok.</p>;
+  const bitti = yerlesen.length === yapilar.length;
+  return (
+    <div className="kmb-yer">
+      {sahneler.length > 1 && (
+        <div className="kmb-yer-sahne" role="group" aria-label="Sahne">
+          {sahneler.map((id, i) => <button key={id} className={i === si ? 'etkin' : ''} aria-pressed={i === si} onClick={() => setSi(i)}>{SAHNELER[id].ad}</button>)}
+        </div>
+      )}
+      <p className="kmb-yonerge">{bitti ? <b>Hepsi yerinde.</b> : secili ? <>Şimdi sahnede <b>{etiket[secili]?.[2]}</b> yapısına dokun.</> : 'Aşağıdan bir yapı seç, sonra sahnede yerine dokun.'}</p>
+      <div className="kmb-sahne-kap"><SahneCiz sahne={sahne} durum={durum} secilebilir={!!secili && !bitti} isaret={isaret} onSec={(id) => {
+        if (!secili) return;
+        const d = id === secili;
+        setIsaret({ id, dogru: d });
+        if (d) { setYerlesen((l) => [...l, id]); setSecili(null); } else setYanlis((n) => n + 1);
+      }} /></div>
+      <div className="kmb-yer-cip" role="listbox" aria-label="Yapılar">
+        {yapilar.map((y) => {
+          const yerde = yerlesen.includes(y.id);
+          return <button key={y.id} role="option" aria-selected={secili === y.id} disabled={yerde} className={`${secili === y.id ? 'etkin' : ''}${yerde ? ' yerde' : ''}`} onClick={() => { setSecili(y.id); setIsaret(null); }}>{yerde ? '✓ ' : ''}{y.ad}</button>;
+        })}
+      </div>
+      {isaret && !isaret.dogru && <div className="kmb-kutu dikkat"><b>Burası değil</b><p>{etiket[secili || '']?.[2]} başka bir yerde; yeniden dene.</p></div>}
+      <div className="kmb-denetim">
+        <span className="kmb-sayac">{yerlesen.length} / {yapilar.length} yerinde{yanlis ? ` · ${yanlis} yanlış deneme` : ''}</span>
+        <button onClick={() => { setYerlesen([]); setYanlis(0); setSecili(null); setIsaret(null); }}>Sıfırla</button>
+      </div>
+    </div>
+  );
+}
+
+/** Değerlendirme (tasarım E05 kmbKontrol): OSCE akışının ana basamakları kontrol listesi; her basamak "Yaptım / Atladım".
+ *  Sonuç n/N ve %80 ile Geçti/Tekrar çalış; son sonuç cihazda (medsoru_kmb_kontrol_v1). */
+const KONTROL_KEY = 'medsoru_kmb_kontrol_v1';
+function Kontrol({ ders }: { ders: Ders }) {
+  const [ai, setAi] = useState(0);
+  const ak = ders.sinav.akislar[ai];
+  const basamak = ak ? ak.basamaklar : [];
+  const [isa, setIsa] = useState<Record<string, boolean>>({});
+  const [son, setSon] = useState<Record<string, { n: number; top: number; t: number }>>(() => { try { return JSON.parse(localStorage.getItem(KONTROL_KEY) || '{}'); } catch { return {}; } });
+  useEffect(() => setIsa({}), [ai]);
+  const cevap = Object.keys(isa).length;
+  const yapti = basamak.filter((b) => isa[b.id]).length;
+  const bitti = basamak.length > 0 && cevap === basamak.length;
+  const gecti = bitti && yapti / basamak.length >= 0.8;
+  const anahtar = `${ders.kod}:${ak?.id}`;
+  useEffect(() => {
+    if (!bitti) return;
+    const n = { ...son, [anahtar]: { n: yapti, top: basamak.length, t: Date.now() } };
+    setSon(n);
+    try { localStorage.setItem(KONTROL_KEY, JSON.stringify(n)); } catch { /* dolu */ }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [bitti]);
+  if (!ak) return <p className="kmb-yukleniyor">Bu derste değerlendirme akışı yok.</p>;
+  return (
+    <div className="kmb-kontrol">
+      {ders.sinav.akislar.length > 1 && (
+        <div className="kmb-yer-sahne" role="group" aria-label="Akış">
+          {ders.sinav.akislar.map((a, i) => <button key={a.id} className={i === ai ? 'etkin' : ''} aria-pressed={i === ai} onClick={() => setAi(i)}>{a.ad}</button>)}
+        </div>
+      )}
+      <p className="kmb-yonerge">Uygulamayı yaparken (ya da bir arkadaşın yaparken) her adımı işaretle. <b>{ak.ad}</b> · {basamak.length} adım{son[anahtar] ? ` · son: ${son[anahtar].n}/${son[anahtar].top}` : ''}</p>
+      <ol className="kmb-kontrol-l">
+        {basamak.map((b, i) => (
+          <li key={b.id} className={isa[b.id] === true ? 'ok' : isa[b.id] === false ? 'atla' : ''}>
+            <span className="kmb-kontrol-no" aria-hidden>{isa[b.id] === true ? '✓' : isa[b.id] === false ? '✕' : i + 1}</span>
+            <span className="kmb-kontrol-t">{b.metin}{isa[b.id] === false && <small>{b.aciklama}</small>}</span>
+            <span className="kmb-kontrol-d">
+              <button aria-pressed={isa[b.id] === true} className={isa[b.id] === true ? 'etkin' : ''} onClick={() => setIsa((x) => ({ ...x, [b.id]: true }))}>Yaptım</button>
+              <button aria-pressed={isa[b.id] === false} className={isa[b.id] === false ? 'etkin atla' : ''} onClick={() => setIsa((x) => ({ ...x, [b.id]: false }))}>Atladım</button>
+            </span>
+          </li>
+        ))}
+      </ol>
+      <div className={`kmb-kontrol-sonuc${bitti ? (gecti ? ' gecti' : ' kaldi') : ''}`}>
+        <b>{yapti} / {basamak.length}{bitti ? (gecti ? ' · Geçti' : ' · Tekrar çalış') : ` · ${basamak.length - cevap} adım kaldı`}</b>
+        <button onClick={() => setIsa({})} disabled={!cevap}>Tekrar dene</button>
+      </div>
+    </div>
+  );
+}
+
 function Sinav({ ders, ses }: { ders: Ders; ses: SesKayit | null }) {
-  const [sekme, setSekme] = useState<'vaka' | 'sira' | 'bul'>('vaka');
+  const [sekme, setSekme] = useState<'vaka' | 'sira' | 'bul' | 'yer' | 'kontrol'>('vaka');
   const oynatici = useOynatici(ders.kod, ses);
   const { oynat, durdur } = oynatici;
   useEffect(() => durdur, [sekme, durdur]);
   return (
     <div className="kmb-sinav">
       <div className="kmb-sekmeler" role="tablist">
-        {([['vaka', `Vaka senaryoları (${ders.sinav.senaryolar.length})`], ['sira', 'OSCE sıralama'], ['bul', `Sahnede bul (${ders.sinav.bul.length})`]] as const).map(([k, ad]) => (
+        {([['vaka', `Vaka senaryoları (${ders.sinav.senaryolar.length})`], ['sira', 'OSCE sıralama'], ['bul', `Sahnede bul (${ders.sinav.bul.length})`], ['yer', 'Etiketleri yerleştir'], ['kontrol', 'Değerlendirme']] as const).map(([k, ad]) => (
           <button key={k} role="tab" aria-selected={sekme === k} className={sekme === k ? 'etkin' : ''} onClick={() => setSekme(k)}>{ad}</button>
         ))}
       </div>
       {sekme === 'vaka' && <Senaryolar ders={ders} ses={ses} oynatici={oynatici} />}
       {sekme === 'sira' && <Siralama ders={ders} oyna={(k, m) => oynat(k || 'yok', m)} />}
       {sekme === 'bul' && <SahnedeBul ders={ders} oynatici={oynatici} />}
+      {sekme === 'yer' && <Yerlestir ders={ders} />}
+      {sekme === 'kontrol' && <Kontrol ders={ders} />}
     </div>
   );
 }
