@@ -703,7 +703,7 @@ def sunucu() -> int:
     print(time.strftime("[%Y-%m-%d %H:%M:%S]"), "yeniden uygulanacak:", [d.name for d in yeniden],
           "yeni:", [d.name for d in yeni])
     sonuc, red = uygula([d for d in yeniden if d.is_dir()] + yeni,
-                        lambda y: yayin_kaydi_bul(y.d.name, asil) or kaynak_kimligi_esnek(y.b.get("pdf_yolu") or "", manifest, y.ders_id))  # H88
+                        lambda y: yayin_kaydi_bul(y.d.name, asil) or kaynak_kimligi_esnek(y.b.get("pdf_yolu") or "", manifest, y.b.get("ders_id") or ""))  # H88
     for y in red:  # denetimden geçmeyen onaylı taslak: yöneticiye bildir, bir daha denenmesin diye işaretle
         if y.d.parent == ONAYLANAN:
             yaz_json(L_TASLAK / y.d.name / "yayin.json", {"durum": "denetim_hatasi", "hatalar": y.hata[:20],
@@ -912,7 +912,7 @@ def main() -> int:
         subprocess.run(["rsync", "-a", "--delete", f"{ORACLE}:{L_TASLAK}/{a.tek}/", str(hedef) + "/"], check=True)
         r = ssh(f"cat {L_MANIFEST}")
         manifest = json.loads(r.stdout) if r.returncode == 0 else {}
-        uygula([hedef], lambda y: kaynak_kimligi_esnek(y.b.get("pdf_yolu") or "", manifest, y.ders_id), deneme=True)
+        uygula([hedef], lambda y: kaynak_kimligi_esnek(y.b.get("pdf_yolu") or "", manifest, y.b.get("ders_id") or ""), deneme=True)
         return 0
     ap.print_help()
     return 2

@@ -1,17 +1,15 @@
 {
- "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
- "onem": 391,
- "baslik": "Yeni: Kronometre",
- "maddeler": [
-  "Menü › Araçlar › Kronometre: istediğin zaman başlat, duraklat, tur al.",
-  "Küçültünce köşede küçük bir baloncuk olarak süre akmaya devam eder; sayfa değişse de kaldığı yerden sürer.",
-  "Kronometre süresi sistemin ölçtüğü çalışma süresinden ayrı tutulur."
- ],
- "eklenen": [],
- "degisen": [],
- "duzeltilen": [
-  "Tireyle bitişik yazılan kısaltmalar (DSM-5, MAO-A, HIV-1, 5-HTTLPR) artık slaytta doğru yerde işaretleniyor.",
-  "Büyük harfli Türkçe sözcükler (BİLİNÇ, KOMA) kısaltma sayılmıyor."
- ],
- "silinen": []
+  "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
+  "onem": 392,
+  "baslik": "Ders yayın düzeltmesi",
+  "maddeler": [
+    "Kurul 2 Patoloji derslerinin yayınını durduran hata giderildi."
+  ],
+  "eklenen": [],
+  "degisen": [],
+  "duzeltilen": [
+    "Tireyle bitişik yazılan kısaltmalar (DSM-5, MAO-A, HIV-1, 5-HTTLPR) artık slaytta doğru yerde işaretleniyor.",
+    "Büyük harfli Türkçe sözcükler (BİLİNÇ, KOMA) kısaltma sayılmıyor."
+  ],
+  "silinen": []
 }
