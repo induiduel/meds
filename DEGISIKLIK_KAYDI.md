@@ -61,3 +61,10 @@
 - **Tema kilidi:** `tanim.json` › kilitler `sohbet_tema_kalp/tibbi/papatya` (tur `icerik`, 150/200/150 mol); sunucu tema kaydında `basarimMotor.kilitAcikMi` ister. **Oracle'da `data/basarim/tanim.json` üst katmanı varsa bu üç kilit oraya da eklenmeli**, yoksa tema "kilit yok" sayılıp bedava açılır.
 - **Ön yüz:** `SohbetEkleri.tsx` (paylaşım paneli/kartı, tema seçici, `SohbetZemin` SVG desenleri; renkler paletin `--color-accent` belirteçlerinden), `ToplulukV15.tsx`, `styles/v15/sohbet-ayar.css`.
 - **Açık:** `onem` 509 yapıldı; Oracle’da tanim.json üst katmanı YOK (src sürümü kullanılır); sunucu kodu değiştiği için `systemctl --user restart meds-web` gerekir; girişli tarayıcı sınaması yapılamadı.
+
+## 2026-10-28 — Önbellek sınıfları + açılış hızlandırma
+- sw.js v17: kalıcı sınıflı önbellekler `medsor-tasarim-v1` (CSS, yazı tipi, ikon, görsel, Google Fonts) ve `medsor-kod-v1` (JS parçaları, pdf.js). SW sürümü artınca silinmez; özetli adres değişince (yalnız o dosya değişince) yenilenir; etkinleşmede `cevrimdisi-manifest.json`'da olmayan /assets/ kayıtları budanır. Veri (`medsoru-data-*`) ve kabuk (`medsoru-static-*`) ayrı kalır.
+- Kök neden (yavaş açılış): her SW sürümü/UpdatePrompt tüm runtime önbelleğini (CSS+JS+yazı tipi) siliyordu → her güncellemede tasarım baştan iniyordu.
+- server.ts: kabuk ve dist JSON'ları `no-store` yerine `no-cache` (ETag/304); surum.json ve manifest yanlışlıkla 1 yıl önbellekleniyordu.
+- Lottie: 8 animasyon JSON'u statik içe aktarılıyordu (açılışta 353 KB) → isteğe bağlı dinamik içe aktarma (1,5 KB).
+- Doğrulanmadı: SW önbellek davranışı tarayıcı panelinde (SW kaydı ortamda reddedildi); canlıda bakılmalı.

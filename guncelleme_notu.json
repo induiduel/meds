@@ -1,12 +1,16 @@
 {
  "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
- "onem": 510,
- "baslik": "Paylaşılan çıkmış soru artık tek başına görünüyor",
+ "onem": 511,
+ "baslik": "Site daha hızlı açılıyor",
  "maddeler": [
-  "Sohbette paylaşılan çıkmış soru açıldığında yalnız o soru gösterilir, süzgeçler ve kategori kartları gizlenir"
+  "Tasarım ve uygulama kodu cihazda kalıcı tutulur; güncellemede yalnız değişen dosyalar iner",
+  "Açılışta gereksiz animasyon verisi artık yüklenmiyor"
  ],
  "eklenen": [],
- "degisen": [],
+ "degisen": [
+  "Tasarım ve uygulama kodu cihazda kalıcı tutulur; güncellemede yalnız değişen dosyalar iner",
+  "Açılışta gereksiz animasyon verisi artık yüklenmiyor"
+ ],
  "duzeltilen": [],
  "silinen": []
 }

@@ -1,8 +1,32 @@
 // MeDSor Service Worker - PWA v8: Yüksek Hızlı Açılış, Optimize Edilmiş Bellek & Modül Parçalama
-const CACHE_VERSION = 'medsoru-pwa-v16';
+const CACHE_VERSION = 'medsoru-pwa-v17';
 const STATIC_CACHE = `medsoru-static-${CACHE_VERSION}`;
 const RUNTIME_CACHE = `medsoru-runtime-${CACHE_VERSION}`;
 const DATA_CACHE = `medsoru-data-${CACHE_VERSION}`;
+// Sınıflı kalıcı önbellekler (2026-10-28): SW sürümü artınca SİLİNMEZ. İçerik özetli adresler değişmez; tasarım (CSS,
+// yazı tipi, ikon, görsel) ve kod (JS parçaları, pdf.js) yalnız kendi dosyası değişince (yeni özet → yeni adres) yenilenir.
+// Derlemede artık olmayan /assets/ kayıtları etkinleşmede dist/cevrimdisi-manifest.json'a göre budanır.
+const TASARIM_CACHE = 'medsor-tasarim-v1';
+const KOD_CACHE = 'medsor-kod-v1';
+const TASARIM_RE = /\.(css|woff2?|ttf|otf|png|jpe?g|gif|svg|ico|webp|avif)$/i;
+const sinifOnbellegi = (url) => (url.hostname === 'fonts.googleapis.com' || url.hostname === 'fonts.gstatic.com' || TASARIM_RE.test(url.pathname) ? TASARIM_CACHE : KOD_CACHE);
+async function kaliciBuda() {
+  try {
+    const r = await fetch('/cevrimdisi-manifest.json', { cache: 'no-store' });
+    if (!r.ok) return;
+    const m = await r.json();
+    const gecerli = new Set((m.kod || []).map((a) => '/' + String(a).replace(/^\//, '')));
+    for (const v of Object.values(m.veri || {})) for (const a of v) gecerli.add('/' + String(a).replace(/^\//, ''));
+    if (gecerli.size < 5) return; // bozuk manifest: hiçbir şey silme
+    for (const ad of [TASARIM_CACHE, KOD_CACHE]) {
+      const c = await caches.open(ad);
+      for (const k of await c.keys()) {
+        const u = new URL(k.url);
+        if (u.origin === self.location.origin && u.pathname.startsWith('/assets/') && !gecerli.has(u.pathname)) await c.delete(k);
+      }
+    }
+  } catch { /* budama isteğe bağlı */ }
+}
 // Canlı ders çevrimdışı paketleri (canliDersCevrimdisi.ts): sürüm temizliğinde silinmez, yalnız kullanıcı siler
 const CD_OFFLINE_CACHE = 'medsoru-canli-ders-offline';
 /** Arka planda (Background Fetch) inen ders dosyaları; uygulama açılınca kaydedilir (canliDersCevrimdisi.ts) */
@@ -140,7 +164,7 @@ async function cdSesYanit(req, url) {
 // önbelleğinde binlerce ses/PDF varken açılıştaki her dosya isteği bu taramayı baştan yapıyor, paket indirmiş cihazlarda
 // (tablet) sayfa dakikalarca açılmıyordu, önbellek silinince düzeliyordu (2026-10-23). Burada yalnız tam adresle (dizinli)
 // ve bilinen önbelleklerde sırayla aranır; sorgusuz=true ise sorgu dizesiz adres de denenir.
-const ARAMA_SIRASI = [STATIC_CACHE, RUNTIME_CACHE, PAKET_CACHE, DATA_CACHE];
+const ARAMA_SIRASI = [TASARIM_CACHE, KOD_CACHE, STATIC_CACHE, RUNTIME_CACHE, PAKET_CACHE, DATA_CACHE];
 async function onbellekte(istek, sorgusuz = false) {
   const u = new URL(typeof istek === 'string' ? istek : istek.url, self.location.href);
   const adresler = sorgusuz && u.search ? [u.href, u.origin + u.pathname] : [u.href];
@@ -213,7 +237,7 @@ self.addEventListener('activate', (event) => {
       .then((keys) => {
         return Promise.all(
           keys.map((key) => {
-            if (key !== STATIC_CACHE && key !== RUNTIME_CACHE && key !== DATA_CACHE && key !== 'medsoru-pdf-offline' && key !== CD_OFFLINE_CACHE && key !== CD_BEKLEYEN_CACHE && key !== PAKET_CACHE) {
+            if (key !== STATIC_CACHE && key !== RUNTIME_CACHE && key !== DATA_CACHE && key !== 'medsoru-pdf-offline' && key !== CD_OFFLINE_CACHE && key !== CD_BEKLEYEN_CACHE && key !== PAKET_CACHE && key !== TASARIM_CACHE && key !== KOD_CACHE) {
               console.log('[SW] Eski önbellek temizleniyor:', key);
               return caches.delete(key);
             }
@@ -221,6 +245,7 @@ self.addEventListener('activate', (event) => {
         );
       })
       .then(() => self.clients.claim())
+      .then(() => { kaliciBuda(); })
   );
 });
 
@@ -385,7 +410,7 @@ self.addEventListener('fetch', (event) => {
         const res = await fetch(req);
         if (res && res.status === 200) {
           const clone = res.clone();
-          caches.open(RUNTIME_CACHE).then((cache) => cache.put(req, clone)).catch(() => {});
+          caches.open(KOD_CACHE).then((cache) => cache.put(req, clone)).catch(() => {});
         }
         return res;
       })()
@@ -399,7 +424,7 @@ self.addEventListener('fetch', (event) => {
       (async () => {
         const cached = await onbellekte(req.url);
         const ag = fetch(req).then((res) => {
-          if (res && res.ok) { const k = res.clone(); caches.open(RUNTIME_CACHE).then((c) => c.put(req.url, k)).catch(() => {}); }
+          if (res && res.ok) { const k = res.clone(); caches.open(TASARIM_CACHE).then((c) => c.put(req.url, k)).catch(() => {}); }
           return res;
         });
         if (cached) { ag.catch(() => {}); return cached; }
@@ -417,7 +442,8 @@ self.addEventListener('fetch', (event) => {
     url.pathname.startsWith('/fonts/') ||
     /\.(js|css|woff2?|ttf|png|jpe?g|gif|svg|ico)$/i.test(url.pathname)
   ) {
-    const isImmutableAsset = url.pathname.startsWith('/assets/');
+    // Özetli derleme dosyaları ve gstatic yazı tipleri değişmez: önbellekte varsa ağa hiç gidilmez
+    const isImmutableAsset = url.pathname.startsWith('/assets/') || url.hostname === 'fonts.gstatic.com';
     event.respondWith(
       (async () => {
         const cached = await onbellekte(req, true);
@@ -429,9 +455,7 @@ self.addEventListener('fetch', (event) => {
           .then((networkRes) => {
             if (networkRes && networkRes.status === 200) {
               const clone = networkRes.clone();
-              caches.open(RUNTIME_CACHE).then((cache) => {
-                cache.put(req, clone);
-              });
+              caches.open(sinifOnbellegi(url)).then((cache) => cache.put(req, clone)).catch(() => {});
             }
             return networkRes;
           })

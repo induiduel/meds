@@ -12020,10 +12020,14 @@ async function startServer() {
       maxAge: '1y',
       immutable: true,
       setHeaders: (res: express.Response, filePath: string) => {
-        if (filePath.endsWith('.html') || filePath.endsWith('sw.js') || filePath.endsWith('manifest.json')) {
-          res.setHeader('Cache-Control', 'no-cache, no-store, must-revalidate');
-        } else if (filePath.includes('assets')) {
+        // Önbellek sınıfları (2026-10-28): özetli /assets/ (tasarım + kod) 1 yıl değişmez; kabuk ve sürüm/manifest JSON'ları
+        // her açılışta ETag ile doğrulanır (no-cache → değişmediyse 304, gövde inmez). no-store kabuğu her seferinde baştan indiriyordu.
+        if (filePath.includes(`${path.sep}assets${path.sep}`)) {
           res.setHeader('Cache-Control', 'public, max-age=31536000, immutable');
+        } else if (filePath.endsWith('sw.js')) {
+          res.setHeader('Cache-Control', 'no-cache, no-store, must-revalidate');
+        } else if (/\.(html|json)$/.test(filePath)) {
+          res.setHeader('Cache-Control', 'no-cache');
         }
       },
     };
@@ -12061,7 +12065,7 @@ async function startServer() {
         res.setHeader('Cache-Control', 'no-store');
         return res.status(404).send('Asset not found');
       }
-      res.setHeader('Cache-Control', 'public, max-age=0, must-revalidate');
+      res.setHeader('Cache-Control', 'no-cache');
       res.sendFile(path.resolve(__dirname, 'dist', 'index.html'));
     });
   }
