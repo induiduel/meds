@@ -2,7 +2,7 @@
  * Canlı ders ekranı (/canliders/<key>): üç görünüm — Metin, Metin + PDF (bölünmüş: masaüstünde yan yana, telefonda üst-alt),
  * yalnız PDF (seçim cihazda saklanır). Tam ekran: kabuk gizlenir, oynatıcı saklanır ama tek dokunuşla açılır.
  * Metin sesle akar (etkin paragraf + tahmini cümle vurgusu), görünüm etkin paragrafı ortada tutar; kullanıcı elle
- * kaydırınca/PDF'i gezince takip 8 sn durur ve "Canlı konuma dön" çıkar. Oynatıcı alt çubuktadır (CanliDersDock).
+ * kaydırınca/PDF'i gezince takip dokunma sonrası 5 sn durur ve "Canlı konuma dön" çıkar. Oynatıcı alt çubuktadır (CanliDersDock).
  */
 import CanliDersKimlikHedef from './CanliDersKimlikHedef';
 import { CanliDersBaslangic } from './CanliDersBaslangic';
@@ -75,23 +75,30 @@ const PdfDocView = lazy(() => import('../learn/pdf/PdfDocView'));
 import type { PdfMarks } from '../learn/pdf/PdfDocView';
 import { CdParagrafTerimleri, CdTerimKatman, PdfAyarlarMenu, PdfGorunumDugme, TerimBaslikDugme, TerimDugme, cdTerimKatmani, usePdfGorunum } from './CdTerimKatman';
 
-const TAKIP_ARA = 8000;
+const TAKIP_ARA = 5000;
 
-/** Kullanıcı elle gezince takibi 8 sn duraklatır; süre dolunca ya da "Canlı konuma dön" ile sürer. */
+/** Kullanıcı ekrana dokununca/gezince takibi duraklatır; 5 sn etkileşim olmazsa metin ve PDF birlikte canlı konuma döner
+ *  ("Canlı konuma dön" ile hemen de dönülür). Durum ortaktır: iki bölme aynı anda durur ve aynı anda sürer. */
+let takipDurdu = false;
+let takipZaman = 0;
+const takipDinleyen = new Set<() => void>();
+const takipYay = () => takipDinleyen.forEach((f) => f());
+const takipDurdur = () => {
+  window.clearTimeout(takipZaman);
+  takipZaman = window.setTimeout(() => { takipDurdu = false; takipYay(); }, TAKIP_ARA);
+  if (!takipDurdu) { takipDurdu = true; takipYay(); }
+};
+const takipSurdur = () => {
+  window.clearTimeout(takipZaman);
+  if (takipDurdu) { takipDurdu = false; takipYay(); }
+};
+const takipAbone = (f: () => void) => { takipDinleyen.add(f); return () => { takipDinleyen.delete(f); }; };
+const takipOku = () => takipDurdu;
+
 function useTakip() {
-  const [durdu, setDurdu] = useState(false);
-  const timer = useRef(0);
-  const durdur = useCallback(() => {
-    setDurdu(true);
-    window.clearTimeout(timer.current);
-    timer.current = window.setTimeout(() => setDurdu(false), TAKIP_ARA);
-  }, []);
-  const surdur = useCallback(() => {
-    window.clearTimeout(timer.current);
-    setDurdu(false);
-  }, []);
-  useEffect(() => () => window.clearTimeout(timer.current), []);
-  return { durdu, durdur, surdur };
+  const durdu = React.useSyncExternalStore(takipAbone, takipOku, takipOku);
+  useEffect(() => () => { if (takipDinleyen.size === 0) takipSurdur(); }, []);
+  return { durdu, durdur: takipDurdur, surdur: takipSurdur };
 }
 
 // yatay telefon (tasarım S15): alçak ve yatay ekranda da bölmeler yan yana

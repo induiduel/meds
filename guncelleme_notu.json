@@ -1,10 +1,9 @@
 {
  "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
- "onem": 504,
- "baslik": "Test oluştur paneli kompakt",
+ "onem": 505,
+ "baslik": "Sesli derste otomatik canlı konuma dönüş",
  "maddeler": [
-  "Soru çöz › Test oluştur paneli daha az yer kaplıyor",
-  "Zorluk, soru sayısı, kip ve Testi başlat tek satırda"
+  "Ekrana dokunup gezindikten 5 saniye sonra PDF ve metin birlikte canlı konuma döner"
  ],
  "eklenen": [],
  "degisen": [],
