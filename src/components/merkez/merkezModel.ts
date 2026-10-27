@@ -20,7 +20,6 @@ export const MERKEZ_ARACLARI: Record<KategoriId, MerkezArac[]> = {
     { id: 'learn', ne: 'Konuyu adım adım, mini sorularla öğrenmek istiyorsan' },
     { id: 'summaries', ne: 'Kısa sürede konunun özetini okumak istiyorsan' },
     { id: 'flashcards', ne: 'Öğrendiklerini aralıklı tekrarla ezberlemek istiyorsan' },
-    { id: 'zihin_haritasi', ne: 'Dersin bölümlerini ve anahtar terimlerini tek bakışta görmek istiyorsan' },
     { id: 'ders_programi', ne: 'Bugün ve bu hafta hangi derslerin olduğunu görmek istiyorsan' },
     { id: 'kmb_asistan', ne: 'Klinik mesleki beceriyi (KMB) sesli videolarla aşama aşama öğrenip pratik sınava hazırlanmak istiyorsan' },
   ],

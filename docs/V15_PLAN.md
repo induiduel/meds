@@ -61,7 +61,7 @@ Yeni bileşen önce buraya eklenir; sayfa CSS'i yalnız yerleşim yazar.
 | Yüzen kronometre + çalışma kapsülü | T01–T15, U01–U12 | Sistem süresinden ayrı tutulur |
 | Ders programı (liste/hafta/gün/ay, içe aktar) | AA01–AA07 | ✅ gün/hafta/liste kuruldu (ay ve içe aktarma yok) |
 | İstatistik ve grafikler (14 grafik) | J01–J02, X01–X10 | |
-| Zihin haritası biçimleri, şemalar | J03–J06, W05–W10, V05–V08 | ✅ /dersler/zihin-haritasi: sesli ders bölümleri + slayt terim katmanı + vurgu terimleri, çıkmış rozeti; geniş ekranda dairesel, dar ekranda ağaç |
+| Zihin haritası biçimleri, şemalar | J03–J06, W05–W10, V05–V08 | ✖ Kullanıcı reddetti (2026-10-27, "çok kötü"): menüden ve ders sayfasından kaldırıldı; kod duruyor, adres açık ama bağlantısız. Yeniden yapılacaksa önce tasarım onayı |
 | Not / kalem / renklendirme, paylaşılan notlar | K01–K08 | ✅ Notlarım (yaz/kalem/fosforlu/silgi, renk etiketi, hesaba eşitleme); paylaşılan not (ortak) yok, paylaş = metni gönder |
 | Topluluk: sohbet, yorumlar | L01–L06 | ✅ /topluluk: Genel + Kurul 1–6 kanalları, ders yorumları (ders ayrıntısı › Yorumlar), yanıt, sil, şikâyet |
 | PDF oluştur sihirbazı + geçmiş | Y07–Y13 | ✅ /pdf-olustur (sesli · etkileşimli · arşiv → kurul → ortak TopluPdf penceresi), geçmiş cihazda |
