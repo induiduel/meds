@@ -1,0 +1,35 @@
+/* v15 · Ders programı (DersProgramiV15) — yerleşim; renkler palet tokenından */
+.pg15 { container-type: inline-size; display: flex; flex-direction: column; gap: 12px; max-width: 1100px; }
+.pg15-ust { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px; }
+.pg15-seg { display: inline-flex; padding: 3px; border-radius: 10px; background: var(--color-field); }
+.pg15-seg button { border: 0; background: none; padding: 6px 14px; border-radius: 8px; font: inherit; font-size: .88rem; color: var(--color-ink-2); cursor: pointer; min-height: 32px; }
+.pg15-seg button.is-on { background: var(--color-white); color: var(--color-ink); font-weight: 600; box-shadow: 0 1px 2px rgb(0 0 0 / .08); }
+.pg15-gez { display: flex; align-items: center; gap: 6px; min-width: 0; flex: 1 1 100%; }
+@container (min-width: 640px) { .pg15-gez { flex-basis: 0; } }
+.pg15-gez > b { flex: 1; min-width: 0; text-align: center; color: var(--color-ink); font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.pg15-bugun { border: 1px solid var(--color-line); background: var(--color-white); color: var(--color-accent); border-radius: 8px; padding: 5px 10px; font: inherit; font-size: .82rem; cursor: pointer; }
+.pg15-l { list-style: none; margin: 0; padding: 2px 0; }
+.pg15-l li + li { border-top: 1px solid var(--color-line-soft, var(--color-line)); }
+.pg15-r { display: flex; align-items: center; gap: 12px; padding: 11px 14px; color: inherit; text-decoration: none; min-height: 56px; }
+a.pg15-r:hover { background: var(--color-field); }
+.pg15-r.is-gecti .pg15-t b { color: var(--color-ink-3); }
+.pg15-s { flex: none; width: 46px; display: flex; flex-direction: column; font-variant-numeric: tabular-nums; font-weight: 600; color: var(--color-ink); font-size: .9rem; }
+.pg15-s small { font-weight: 400; font-size: .7rem; color: var(--color-ink-3); }
+.pg15-c { flex: none; align-self: stretch; width: 4px; border-radius: 2px; background: oklch(0.68 0.13 var(--t)); }
+.pg15-t { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
+.pg15-t b { color: var(--color-ink); font-weight: 600; line-height: 1.3; }
+.pg15-t small { color: var(--color-ink-3); font-size: .78rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.pg15-i { flex: none; width: 18px; height: 18px; color: var(--color-accent); }
+.pg15-hafta { display: grid; gap: 14px; grid-template-columns: minmax(0, 1fr); }
+@container (min-width: 900px) {
+  .pg15-hafta:not(.is-liste) { grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 10px; }
+  .pg15-hafta:not(.is-liste) .pg15-r { flex-wrap: wrap; gap: 6px 8px; padding: 10px; }
+  .pg15-hafta:not(.is-liste) .pg15-t small { white-space: normal; }
+  .pg15-hafta:not(.is-liste) .pg15-c { display: none; }
+}
+.pg15-hg h2 { margin: 0 2px 6px; text-transform: capitalize; }
+.pg15-hg.is-bugun h2 { color: var(--color-accent); font-weight: 700; }
+.pg15-yok { margin: 0; padding: 10px 2px; color: var(--color-ink-3); font-size: .85rem; }
+.pg15-ac { margin: 4px 2px 0; }
+.pg15-ok { flex: none; width: 36px; height: 36px; display: grid; place-items: center; border: 1px solid var(--color-line); border-radius: 10px; background: var(--color-white); color: var(--color-ink-2); cursor: pointer; }
+.pg15-ok svg { width: 18px; height: 18px; }

@@ -38,6 +38,7 @@ import {
   Target,
   Trophy,
   CalendarDays,
+  CalendarClock,
   Grid3x3,
 } from 'lucide-react';
 import type React from 'react';
@@ -105,6 +106,7 @@ const I: Record<string, NavItem> = {
   study: { id: 'study', label: 'Çalışma masam', short: 'Masam', tile: 'Çalışma masam', hint: 'Kendi listelerin, notların, hızlı test', icon: ListChecks, tint: '#34C759' },
   cevrimdisi: { id: 'cevrimdisi', label: 'Çevrimdışı', short: 'Çevrimdışı', tile: 'Çevrimdışı', hint: 'Dersleri cihaza indir, internetsiz çalış; indirilenleri yönet', icon: CloudDownload, tint: '#0A84FF' },
   basarimlar: { id: 'basarimlar', label: 'Başarımlar', short: 'Başarım', tile: 'Başarımlar', hint: 'Günlük, haftalık, kurul hedefleri; başarımlar, puan ve ATP', icon: Medal, tint: '#FF9F0A' },
+  ders_programi: { id: 'ders_programi', label: 'Ders programı', short: 'Program', tile: 'Ders programı', hint: 'Kurulun günlük ve haftalık ders saatleri', icon: CalendarClock, tint: '#30B0C7' },
   sinav_takvimi: { id: 'sinav_takvimi', label: 'Sınav takvimi', short: 'Takvim', tile: 'Sınav takvimi', hint: 'Kurul sınavları, final ve bütünleme; kalan gün', icon: CalendarDays, tint: '#FF9F0A' },
   sinav_plani: { id: 'sinav_plani', label: 'Sınav planı', short: 'Plan', tile: 'Sınav planı', hint: 'En az 60 için kişiye özel, gün gün yol haritası', icon: Target, tint: '#FF9F0A' },
   bitirdiklerim: { id: 'bitirdiklerim', label: 'Bitirdiklerim', short: 'Bitenler', tile: 'Bitirdiklerim', hint: 'Konu konu bitenler, harcanan süre, kalanların tahmini', icon: CircleCheckBig, tint: '#30D158' },
@@ -125,7 +127,7 @@ export const NAV_ITEMS = I;
  */
 export const NAV_TREE: NavGroup[] = [
   { label: null, items: [I.today] },
-  { label: 'Ders çalış', items: [I.canli_ders, I.kmb_asistan, I.learn, I.summaries, I.flashcards] },
+  { label: 'Ders çalış', items: [I.canli_ders, I.kmb_asistan, I.learn, I.summaries, I.flashcards, I.ders_programi] },
   { label: 'Soru çöz', items: [I.soru_cozucu, I.past_exams, I.practice, I.questions, I.ornek_sorular, I.olasi_sorular, I.soru_haritasi] },
   { label: 'Sınava hazırlan', items: [I.sinav_takvimi, I.sinav_plani, I.son_prova, I.cikmis_cozucu, I.kamp, I.en_onemliler, I.spots] },
   { label: 'Check Up', items: [I.genetik_checkup, I.patoloji_checkup] },
@@ -147,7 +149,7 @@ export const MORE_TREE: NavGroup[] = NAV_TREE.map((g) => ({ ...g, items: g.items
  */
 const V12_RAIL_IDS = new Set<AppRoute>([
   'today',
-  'canli_ders', 'kmb_asistan', 'learn', 'summaries', 'flashcards',
+  'canli_ders', 'kmb_asistan', 'learn', 'summaries', 'flashcards', 'ders_programi',
   'soru_cozucu', 'past_exams', 'practice', 'questions', 'olasi_sorular',
   'sinav_takvimi', 'sinav_plani', 'son_prova', 'cikmis_cozucu', 'kamp', 'en_onemliler', 'spots',
   'genetik_checkup', 'patoloji_checkup',

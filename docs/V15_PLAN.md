@@ -59,7 +59,7 @@ Yeni bileşen önce buraya eklenir; sayfa CSS'i yalnız yerleşim yazar.
 | Oyunlar merkezi (boşluk, eşleştir, kartlar, sırala, blitz, ızgara, düello, sınıf yarışması) | F01–F11, N01–N08 | Menüde 5. bölüm "Oyunlar"; realtime quiz altyapısı (`/api/quiz/ws`) |
 | Hücrem (DNA, glukoz, mitokondri, 28 evrim basamağı) | M01–M17 | Puan kuralları README'de; 3B hücre canvas |
 | Yüzen kronometre + çalışma kapsülü | T01–T15, U01–U12 | Sistem süresinden ayrı tutulur |
-| Ders programı (liste/hafta/gün/ay, içe aktar) | AA01–AA07 | |
+| Ders programı (liste/hafta/gün/ay, içe aktar) | AA01–AA07 | ✅ gün/hafta/liste kuruldu (ay ve içe aktarma yok) |
 | İstatistik ve grafikler (14 grafik) | J01–J02, X01–X10 | |
 | Zihin haritası biçimleri, şemalar | J03–J06, W05–W10, V05–V08 | |
 | Not / kalem / renklendirme, paylaşılan notlar | K01–K08 | |
@@ -144,3 +144,5 @@ Tasarımı v15.4'te eklenen (B2, artifact sürüm 18): Ders özetleri + okuyucu,
 ## Her aşamanın kapısı
 `npx tsc --noEmit` 0 · 390/820/1366 genişlikte taşma 0, konsol hatası 0 · açık + koyu tema ekran görüntüsü ·
 kullanıcı onayı. Dağıtım yalnız `deploy/oracle/dagit.sh` (onem +1), kullanıcı isterse.
+
+- **Ders programı** `DersProgramiV15.tsx` + `styles/v15/program.css`, rota `ders_programi` (`/program` ↔ `/dersler/program`). Veri `src/data/dersler/kN.json`; sesli dersi olan satır ders ayrıntısına gider. Kurul 1 kaydında saat yok (—).

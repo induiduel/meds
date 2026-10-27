@@ -144,6 +144,7 @@ const GecmisKurullarView = React.lazy(() => wrapLazy(import('./components/olasi/
 const KampView = React.lazy(() => wrapLazy(import('./components/kamp/KampView')));
 const MerkezView = React.lazy(() => wrapLazy(import('./components/merkez/MerkezView')));
 const SoruHaritasiV15 = React.lazy(() => wrapLazy(import('./components/v15/SoruHaritasiV15')));
+const DersProgramiV15 = React.lazy(() => wrapLazy(import('./components/v15/DersProgramiV15')));
 const SinavTakvimiV15 = React.lazy(() => wrapLazy(import('./components/v15/SinavTakvimiV15')));
 const DersDetayV15 = React.lazy(() => wrapLazy(import('./components/v15/DersDetayV15')));
 const NeYapmak = React.lazy(() => wrapLazy(import('./components/merkez/MerkezView').then((m) => ({ default: m.NeYapmak }))));
@@ -2031,6 +2032,13 @@ export default function App() {
         {activeTab === 'soru_haritasi' && (
           <Suspense fallback={<ViewFallback />}>
             <SoruHaritasiV15 />
+          </Suspense>
+        )}
+
+        {/* TAB: /program (görünen /dersler/program) — kurulun ders programı: gün / hafta / liste */}
+        {activeTab === 'ders_programi' && (
+          <Suspense fallback={<ViewFallback />}>
+            <DersProgramiV15 />
           </Suspense>
         )}
 

@@ -71,3 +71,5 @@ dört kategori kartını görür. Yönetici adresle açabilir. Geri açmak kulla
 - Bir kampın bölümlerini tek sayfada sekmeyle (`?b=`) göstermek; her bölüm kendi adresi ve görünümüyle olur.
 - Eski adresi kırmak: eski biçim her zaman `disYol` ile yeni adrese yönlenmelidir (bildirim/paylaşım bağlantıları).
 - Ekranda `window.location.pathname`'i yeni adrese göre ayrıştırmak; iç adres (`icKonum`) okunur.
+
+- 2026-10-27: `/dersler/program` (iç `/program`, eski `/ders-programi`) — Ders programı.
