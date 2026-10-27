@@ -512,6 +512,7 @@ export const navigateTo = (url: string) => {
     const next = kanonik(u.pathname + u.search + u.hash);
     if (window.location.pathname + window.location.search + window.location.hash !== next) {
       window.history.pushState({}, '', next);
+      (window as unknown as { __icGezinti?: boolean }).__icGezinti = true;
     }
     window.dispatchEvent(new PopStateEvent('popstate'));
     window.scrollTo({ top: 0 });

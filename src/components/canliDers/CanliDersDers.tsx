@@ -523,7 +523,7 @@ export default function CanliDersDers({ dersKey, kamp }: { dersKey: string; kamp
           geri={kamp ? kamp.geri : (
             // v15: geri, dersin ayrıntı sayfasına (içerikler + bölümler) döner
             <a className="cd-geri" href={pathFor('ders_detay', detay.key)} aria-label="Ders ayrıntısına dön"
-              onClick={(e) => { if (e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return; e.preventDefault(); navigateTo(pathFor('ders_detay', detay.key)); }}>
+              onClick={(e) => { if (e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return; e.preventDefault(); if ((window as unknown as { __icGezinti?: boolean }).__icGezinti && history.length > 1) history.back(); else navigateTo(pathFor('ders_detay', detay.key)); }}>
               <ChevronLeft aria-hidden />
             </a>
           )}

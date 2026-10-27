@@ -991,3 +991,8 @@ Her maddede: belirti · kök neden · Kurul 2 kuralı · kapı durumu. Kanıtlar
   `korumali` yalnız içerik küçülmesini (%10) yakalar, başka dersin içerik farkını değil.
 - **Kural:** elle zincirde her birleştirmeden sonra `git diff --stat`; yalnız yeni dersin dosyaları ve indeksteki yeni ders satırı sahnelenir;
   eski dersin dosyaları `git checkout` ile geri alınır, indekste eski ders satırı HEAD'den korunur (bilerek yapılan toplu yenileme hariç).
+
+## Sesli derste geri oku "Ders çalış"a atıyordu (2026-10-27)
+- **Belirti:** Sesli ders listesinden bir ders açılıp geri oka basılınca liste yerine "Ders çalış" sayfası açılıyordu.
+- **Kök neden:** Ders içindeki geri oku her zaman ders ayrıntı sayfasına (`ders_detay`) gidiyordu; o sayfanın geri bağlantısı da kurul/branş merkezine çıkıyordu. Liste doğrudan derse açıldığı için ayrıntı sayfası hiç görülmeden araya girip yolu bozuyordu.
+- **Çözüm / kural:** Uygulama içinden gelindiyse (`navigateTo` `__icGezinti` bayrağını koyar) ok `history.back()` yapar; doğrudan bağlantıyla açıldıysa ayrıntı sayfasına gider. Geri düğmeleri sabit hedefe değil, geldiği yere dönmelidir.
