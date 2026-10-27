@@ -458,3 +458,27 @@
 .lbx-av.bs-cerceve.cerceve_dna { overflow: visible; }
 .lbx-av.bs-cerceve.cerceve_dna img { border-radius: inherit; }
 @media (prefers-reduced-motion: reduce) { .bs-cerceve-ornek.cerceve_asklepios::after, .lbx-av.bs-cerceve.cerceve_asklepios::after { animation: none !important; } }
+
+/* Rozet ayrıntısı (RozetDetay, tasarım M11) */
+.bs-rozet-gor { display: inline-flex; align-items: center; gap: 6px; margin: 4px 14px 12px; border: 0; background: none; color: var(--color-accent); font: inherit; font-size: .88rem; font-weight: 600; cursor: pointer; }
+.bs-rozet-gor svg { width: 16px; height: 16px; }
+.bs-rd { position: fixed; inset: 0; z-index: 1000; height: 100vh; height: 100lvh; background: var(--color-canvas); color: var(--color-ink); display: flex; flex-direction: column; }
+.bs-rd-ust { display: flex; justify-content: flex-end; padding: calc(env(safe-area-inset-top) + 10px) 14px 10px; }
+.bs-rd-x { width: 40px; height: 40px; border: 0; border-radius: 50%; background: var(--color-field); color: var(--color-ink); display: grid; place-items: center; cursor: pointer; }
+.bs-rd-x svg { width: 20px; height: 20px; }
+.bs-rd-ic { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px; padding: 24px; text-align: center; }
+.bs-rd-rozet { width: 120px; height: 120px; border-radius: 36px; display: grid; place-items: center; transform: rotate(45deg); margin-bottom: 10px;
+  background: color-mix(in oklab, var(--bs-renk) 16%, var(--color-white)); color: var(--bs-renk); box-shadow: 0 0 0 6px color-mix(in oklab, var(--bs-renk) 10%, transparent); animation: bsRd .45s ease-out; }
+.bs-rd-rozet > span { transform: rotate(-45deg); display: grid; place-items: center; }
+.bs-rd-rozet svg { width: 56px; height: 56px; }
+@keyframes bsRd { from { transform: rotate(45deg) scale(.7); opacity: 0; } }
+.bs-rd-sv { font: 700 .78rem/1 var(--font-sans); letter-spacing: .06em; text-transform: uppercase; color: var(--bs-renk); }
+.bs-rd h2 { margin: 0; font-size: 1.75rem; }
+.bs-rd p { margin: 0; max-width: 340px; color: var(--color-ink-2); line-height: 1.5; }
+.bs-rd-tarih { display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px; border-radius: 999px; background: var(--color-field); font-size: .85rem; color: var(--color-ink-2); }
+.bs-rd-tarih svg { width: 15px; height: 15px; }
+.bs-rd-btn { display: inline-flex; align-items: center; gap: 6px; min-height: 44px; padding: 0 20px; border-radius: 999px; border: 1px solid var(--color-line); background: var(--color-white); color: var(--color-ink); font: inherit; font-weight: 600; cursor: pointer; }
+.bs-rd-btn svg { width: 16px; height: 16px; }
+.bs-rd-tum { border: 0; background: none; color: var(--color-accent); font: 700 .78rem/1 var(--font-sans); letter-spacing: .04em; cursor: pointer; padding: 6px; }
+@media (prefers-reduced-motion: reduce) { .bs-rd-rozet { animation: none; } }
+:root.tam-katman .v15-tabs, :root.tam-katman .kr15z { display: none !important; }

@@ -77,3 +77,52 @@
 .hc15-s.is-ben { background: color-mix(in oklab, var(--color-accent) 8%, transparent); }
 .hc15-s.is-uyku { opacity: .65; }
 .hc15-boyut { align-self: center; font-weight: 700; font-size: .85rem; color: var(--color-ink-2); font-variant-numeric: tabular-nums; }
+
+/* Çağ sekmesi + basamak kartları (M13–M16) */
+.hc15-cagseg button { display: inline-flex; flex-direction: column; align-items: center; gap: 1px; line-height: 1.1; padding-block: 6px; }
+.hc15-cagseg small { font-size: .7rem; color: var(--color-ink-3); font-variant-numeric: tabular-nums; }
+.hc15-kartlar { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 10px; }
+.hc15-kart { width: 100%; height: 100%; display: flex; flex-direction: column; gap: 6px; padding: 10px; border: 0; text-align: left; font: inherit; color: inherit; cursor: pointer; }
+.hc15-kart.is-sirada { box-shadow: 0 0 0 2px var(--color-accent); }
+.hc15-kart.is-kilitli .hc15-kart-r { opacity: .45; filter: grayscale(.6); }
+.hc15-kart-r .hc15-svg { max-width: 100%; }
+.hc15-kart-t { display: flex; align-items: flex-start; justify-content: space-between; gap: 6px; }
+.hc15-kart-t b { font-size: .85rem; line-height: 1.25; color: var(--color-ink); }
+.hc15-kart-t .v15-tag { flex: none; display: inline-flex; align-items: center; gap: 3px; }
+.hc15-kart-t .v15-tag svg { width: 11px; height: 11px; }
+.hc15-kart small { font-size: .75rem; color: var(--color-ink-2); line-height: 1.35; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+
+/* Evrim yolculuğu / ayrıntı (M03, M12) */
+.hc15-ev { position: fixed; inset: 0; z-index: 1000; height: 100vh; height: 100lvh; background: var(--color-canvas); color: var(--color-ink); display: flex; flex-direction: column; overflow-y: auto; }
+.hc15-ev-ust { position: sticky; top: 0; z-index: 2; display: flex; align-items: center; gap: 8px; padding: calc(env(safe-area-inset-top) + 10px) 16px 10px; background: var(--color-canvas); border-bottom: 1px solid var(--color-line-soft, var(--color-line)); }
+.hc15-ev-ust div { display: flex; flex-direction: column; } .hc15-ev-ust small { font-size: .8rem; color: var(--color-ink-3); }
+.hc15-ev-ic { container-type: inline-size; max-width: 980px; width: 100%; margin: 0 auto; padding: 16px; display: grid; gap: 14px; grid-template-columns: minmax(0, 1fr); }
+@container (min-width: 760px) { .hc15-ev-ic { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: start; } }
+.hc15-ev-sahne { padding: 14px; display: flex; flex-direction: column; align-items: center; gap: 10px; background: radial-gradient(circle at 50% 40%, var(--color-accent-soft), var(--color-white) 70%); }
+.hc15-ev-kilit { display: flex; flex-direction: column; align-items: center; gap: 8px; width: 100%; max-width: 300px; }
+.hc15-ev-kilit .hc15-svg { opacity: .4; filter: grayscale(.7); }
+.hc15-ev-kilit span { display: inline-flex; align-items: center; gap: 5px; font-size: .85rem; color: var(--color-ink-3); }
+.hc15-ev-kilit svg:not(.hc15-svg) { width: 14px; height: 14px; }
+.hc15-ev-gez { display: flex; align-items: center; gap: 10px; }
+.hc15-ev-gez span { display: flex; flex-direction: column; align-items: center; text-align: center; min-width: 150px; }
+.hc15-ev-gez small { font-size: .78rem; color: var(--color-ink-3); }
+.hc15-ev-yan { display: flex; flex-direction: column; gap: 10px; }
+.hc15-ev-cizgi { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 6px; }
+.hc15-ev-cizgi button { padding: 2px; border: 0; border-radius: 50%; background: var(--color-white); cursor: pointer; aspect-ratio: 1; display: grid; place-items: center; overflow: hidden; }
+.hc15-ev-cizgi button .hc15-svg { width: 100%; }
+.hc15-ev-cizgi button.is-kilit { opacity: .35; }
+.hc15-ev-cizgi button.is-on { box-shadow: 0 0 0 2px var(--color-accent); opacity: 1; }
+.hc15-ev-kart { padding: 14px 16px; display: flex; flex-direction: column; gap: 6px; }
+.hc15-ev-kart p { margin: 0; color: var(--color-ink-2); line-height: 1.5; font-size: .92rem; }
+.hc15-ev-gec { color: var(--color-ink-3) !important; font-size: .85rem !important; }
+
+/* Seviye atlama (M06) */
+.hc15-sa-perde { position: fixed; inset: 0; z-index: 1001; background: rgba(0, 0, 0, .38); display: grid; place-items: center; padding: 20px; }
+.hc15-sa { position: relative; width: min(380px, 100%); padding: 22px 20px 18px; display: flex; flex-direction: column; align-items: center; gap: 10px; text-align: center; animation: hc15sa .35s ease-out; }
+@keyframes hc15sa { from { transform: scale(.92); opacity: 0; } }
+.hc15-sa-x { position: absolute; top: 8px; right: 8px; }
+.hc15-sa-r { width: 190px; }
+.hc15-sa h2 { margin: 0; font-size: 1.4rem; }
+.hc15-sa p { margin: 0; color: var(--color-ink-2); font-size: .9rem; line-height: 1.45; }
+.hc15-sa-d { display: flex; gap: 8px; margin-top: 4px; }
+@media (prefers-reduced-motion: reduce) { .hc15-sa { animation: none; } }

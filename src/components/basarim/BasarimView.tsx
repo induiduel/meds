@@ -4,7 +4,8 @@
  * Kurallar sunucudaki tanımdan gelir (src/data/basarim/tanim.json) — liste burada olduğu gibi gösterilir.
  */
 import React, { useEffect, useMemo, useState } from 'react';
-import { Award, CalendarClock, Crown, ShieldCheck, Check, ChevronDown, Flame, History, Lock, ScrollText, ShoppingBag, Sparkles, Target, Trophy } from 'lucide-react';
+import { createPortal } from 'react-dom';
+import { Award, CalendarClock, Crown, ShieldCheck, Check, ChevronDown, Flame, History, Lock, ScrollText, Share2, ShoppingBag, Sparkles, Target, Trophy, X } from 'lucide-react';
 import { KILIT_TUR_AD, sureYaz, olcuYaz, profilKaydet, satinAl, sayi, sec, useBasarim, yenile, type BasarimT, type HedefT, type KilitT } from '../../services/basarimIstemci';
 import { navigateTo, pathFor } from '../../router';
 import { AtpIkon, Basamaklar, Ikon, OdulCip } from './ortak';
@@ -176,6 +177,7 @@ function Hedefler() {
 function BasarimKart({ b }: { b: BasarimT }) {
   const { durum } = useBasarim();
   const [acik, setAcik] = useState(false);
+  const [rozet, setRozet] = useState(false);
   const d = durum!.basarimlar.find((x) => x.id === b.id);
   const deger = d?.deger || 0;
   const alinan = Math.max(d?.alinan || 0, b.seviyeler.filter(([e]) => deger >= e).length);
@@ -207,7 +209,38 @@ function BasarimKart({ b }: { b: BasarimT }) {
         <ChevronDown className="bs-bsm-ok" aria-hidden />
       </button>
       {acik && <Basamaklar seviyeler={b.seviyeler} deger={deger} alinan={d?.alinan || 0} olcu={b.olcu} renk={b.renk} />}
+      {acik && alinan > 0 && <button type="button" className="bs-rozet-gor" onClick={() => setRozet(true)}><Award aria-hidden /> Rozeti gör</button>}
+      {rozet && <RozetDetay b={b} seviye={alinan} deger={deger} tarih={durum!.defter.find((o) => o.id === `b:${b.id}:${alinan}`)?.at} onKapat={() => setRozet(false)} />}
     </article>
+  );
+}
+
+/** Rozet ayrıntısı (tasarım M11 rozetDetay): baklava rozet, seviye, ad, açıklama + değer, kazanma tarihi, Paylaş */
+function RozetDetay({ b, seviye, deger, tarih, onKapat }: { b: BasarimT; seviye: number; deger: number; tarih?: string; onKapat: () => void }) {
+  const [kopya, setKopya] = useState(false);
+  useEffect(() => {
+    const k = (e: KeyboardEvent) => { if (e.key === 'Escape') onKapat(); };
+    window.addEventListener('keydown', k); document.documentElement.classList.add('tam-katman');
+    return () => { window.removeEventListener('keydown', k); document.documentElement.classList.remove('tam-katman'); };
+  }, [onKapat]);
+  const paylas = async () => {
+    const metin = `MeDSor'da "${b.ad}" rozetinin ${seviye}. seviyesini kazandım.`;
+    try { if (navigator.share) await navigator.share({ title: b.ad, text: metin }); else { await navigator.clipboard.writeText(metin); setKopya(true); } } catch { /* vazgeçti */ }
+  };
+  return createPortal(
+    <div className="bs-rd" role="dialog" aria-modal="true" aria-label={`${b.ad} rozeti`} style={{ '--bs-renk': b.renk || 'var(--color-warn)' } as React.CSSProperties}>
+      <div className="bs-rd-ust"><button type="button" className="bs-rd-x" onClick={onKapat} aria-label="Kapat"><X aria-hidden /></button></div>
+      <div className="bs-rd-ic">
+        <span className="bs-rd-rozet" aria-hidden><span><Ikon ad={b.ikon} /></span></span>
+        <span className="bs-rd-sv">Seviye {seviye}{seviye >= b.seviyeler.length ? ' · en üst' : ` / ${b.seviyeler.length}`}</span>
+        <h2>{b.ad}</h2>
+        <p>{b.aciklama}{b.aciklama ? ' · ' : ''}Şu an <b>{olcuYaz(b.olcu, deger)}</b>.</p>
+        {tarih && <span className="bs-rd-tarih"><CalendarClock aria-hidden /> {new Date(tarih).toLocaleDateString('tr-TR', { day: 'numeric', month: 'long', year: 'numeric' })}</span>}
+        <button type="button" className="bs-rd-btn" onClick={paylas}><Share2 aria-hidden /> {kopya ? 'Kopyalandı' : 'Paylaş'}</button>
+        <button type="button" className="bs-rd-tum" onClick={onKapat}>TÜM ROZETLER →</button>
+      </div>
+    </div>,
+    document.body,
   );
 }
 

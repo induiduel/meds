@@ -1,5 +1,6 @@
 import React, { Suspense, lazy, useEffect, useMemo, useState } from 'react';
-import { Check, Droplet, Lock, Trophy, Zap } from 'lucide-react';
+import { Check, ChevronLeft, ChevronRight, Droplet, Lock, Share2, Trophy, X, Zap } from 'lucide-react';
+import { createPortal } from 'react-dom';
 import { linkClick, navigateTo, pathFor } from '../../router';
 import { hucreSiralamaGetir, satinAl, sayi, sureYaz, useBasarim, yenile, type HucreSatir, type KilitT } from '../../services/basarimIstemci';
 import { useV15Baslik } from './baslik';
@@ -30,6 +31,9 @@ export default function HucremV15() {
   const { tanim, durum, hata } = useBasarim();
   const [is, setIs] = useState(false);
   const [mesaj, setMesaj] = useState('');
+  const [detay, setDetay] = useState<number | null>(null);
+  const [kutlama, setKutlama] = useState<number | null>(null);
+  const [cagSec, setCagSec] = useState<string | null>(null);
   const [sira, setSira] = useState<{ satir: HucreSatir[]; benim: number | null; odul: number[]; carpan: number[] } | null>(null);
   useEffect(() => { void yenile(); }, []);
   useEffect(() => { let vazgec = false; void hucreSiralamaGetir().then((r) => !vazgec && setSira(r), () => 0); return () => { vazgec = true; }; }, [durum?.hucre?.basamak]);
@@ -52,7 +56,7 @@ export default function HucremV15() {
   const ac = async (odeme: 'atp' | 'glukoz') => {
     if (!sonraki || is) return;
     setIs(true); setMesaj('');
-    try { await satinAl(sonraki.id, odeme); setMesaj(`${sonraki.ad} açıldı!`); }
+    try { await satinAl(sonraki.id, odeme); setMesaj(`${sonraki.ad} açıldı!`); setKutlama(basamaklar.indexOf(sonraki) + 1); }
     catch (e: any) { setMesaj(e?.message || 'Açılamadı.'); }
     setIs(false);
   };
@@ -156,27 +160,122 @@ export default function HucremV15() {
         </section>
       )}
 
-      {cag.map(([ad, liste]) => (
-        <section key={ad} className="hc15-cagbolum">
-          <h2 className="v15-cap">{ad} · {liste.filter((b) => acik[b.id]).length}/{liste.length}</h2>
-          <ol className="hc15-liste v15-card">
-            {liste.map((b) => {
-              const no = basamaklar.indexOf(b) + 1;
-              const durumu = acik[b.id] ? 'acik' : b === sonraki ? 'sirada' : 'kilitli';
-              return (
-                <li key={b.id} className={`hc15-b is-${durumu}`}>
-                  <span className="hc15-no" aria-hidden>{durumu === 'acik' ? <Check /> : durumu === 'kilitli' ? <Lock /> : no}</span>
-                  <span className="hc15-bt">
-                    <b>{no}. {b.ad}</b>
-                    {durumu === 'acik' ? <span>{b.aciklama}</span> : <span>{durumu === 'sirada' ? `${sayi(b.fiyat)} mol ile açılır` : 'Önceki basamağı aç'}</span>}
-                  </span>
-                </li>
-              );
-            })}
-          </ol>
-        </section>
-      ))}
+      {/* Çağlar (tasarım M13–M16): çağ sekmesi + basamak kartları; karta dokununca evrim ayrıntısı */}
+      {cag.length > 0 && (() => {
+        const secili = cagSec || simdiki?.cag || cag[0][0];
+        const liste = cag.find(([ad]) => ad === secili)?.[1] || [];
+        const ilk = basamaklar.indexOf(liste[0]) + 1, son = basamaklar.indexOf(liste[liste.length - 1]) + 1;
+        return (
+          <section className="hc15-cagbolum">
+            <div className="v15-seg hc15-cagseg" role="tablist" aria-label="Çağlar">
+              {cag.map(([ad, l]) => (
+                <button key={ad} type="button" role="tab" aria-selected={ad === secili} aria-current={ad === secili ? 'page' : undefined} onClick={() => setCagSec(ad)}>
+                  {ad.replace(/ çağı$/i, '')}<small>{l.filter((b) => acik[b.id]).length}/{l.length}</small>
+                </button>
+              ))}
+            </div>
+            <h2 className="v15-cap">{secili} · basamak {ilk}–{son}</h2>
+            <ul className="hc15-kartlar" role="list">
+              {liste.map((b) => {
+                const no = basamaklar.indexOf(b) + 1;
+                const durumu = acik[b.id] ? 'acik' : b === sonraki ? 'sirada' : 'kilitli';
+                return (
+                  <li key={b.id}>
+                    <button type="button" className={`v15-card hc15-kart is-${durumu}`} onClick={() => setDetay(no)}>
+                      <span className="hc15-kart-r"><Hucre n={durumu === 'kilitli' ? Math.max(0, no - 1) : no} /></span>
+                      <span className="hc15-kart-t"><b>{no} · {b.ad}</b>
+                        <span className={`v15-tag ${durumu === 'acik' ? 'is-ok' : durumu === 'sirada' ? 'is-a' : ''}`}>{durumu === 'acik' ? 'Açık' : durumu === 'sirada' ? `${sayi(b.fiyat)} mol` : <><Lock aria-hidden /> Kilitli</>}</span>
+                      </span>
+                      <small>{durumu === 'acik' ? b.aciklama : durumu === 'sirada' ? 'Sıradaki basamak' : 'Önceki basamağı aç'}</small>
+                    </button>
+                  </li>
+                );
+              })}
+            </ul>
+          </section>
+        );
+      })()}
+
+      {detay != null && basamaklar[detay - 1] && (
+        <EvrimDetay no={detay} basamaklar={basamaklar} acik={acik} onGit={setDetay} onKapat={() => setDetay(null)} glukoz={hc?.glukoz ?? 0} canlilik={hc?.canlilik ?? 100} />
+      )}
+      {kutlama != null && basamaklar[kutlama - 1] && (
+        <SeviyeAtla no={kutlama} b={basamaklar[kutlama - 1]} toplam={basamaklar.length} onKapat={() => setKutlama(null)} />
+      )}
     </div>
+  );
+}
+
+/** Evrim yolculuğu + basamak ayrıntısı (tasarım M12 evrimYol, M03 evrimDetay): büyük hücre, önceki/sonraki, zaman çizgisi */
+function EvrimDetay({ no, basamaklar, acik, onGit, onKapat, glukoz, canlilik }: {
+  no: number; basamaklar: KilitT[]; acik: Record<string, unknown>; onGit: (n: number) => void; onKapat: () => void; glukoz: number; canlilik: number;
+}) {
+  const b = basamaklar[no - 1];
+  const onceki = no > 1 ? basamaklar[no - 2] : null;
+  const ac = !!acik[b.id];
+  useEffect(() => {
+    const k = (e: KeyboardEvent) => { if (e.key === 'Escape') onKapat(); if (e.key === 'ArrowLeft' && no > 1) onGit(no - 1); if (e.key === 'ArrowRight' && no < basamaklar.length) onGit(no + 1); };
+    window.addEventListener('keydown', k); document.documentElement.classList.add('tam-katman');
+    return () => { window.removeEventListener('keydown', k); document.documentElement.classList.remove('tam-katman'); };
+  }, [no, basamaklar.length, onGit, onKapat]);
+  return createPortal(
+    <div className="hc15-ev" role="dialog" aria-modal="true" aria-label={`Basamak ${no}: ${b.ad}`}>
+      <header className="hc15-ev-ust">
+        <button type="button" className="v15-ib" onClick={onKapat} aria-label="Kapat"><ChevronLeft aria-hidden /></button>
+        <div><b>Evrim yolculuğu</b><small>{b.cag} · basamak {no}/{basamaklar.length}</small></div>
+      </header>
+      <div className="hc15-ev-ic">
+        <section className="v15-card hc15-ev-sahne">
+          {ac ? <Sahne n={no} glukoz={glukoz} canlilik={canlilik} /> : <div className="hc15-ev-kilit"><Hucre n={no} /><span><Lock aria-hidden /> Henüz açılmadı</span></div>}
+          <div className="hc15-ev-gez">
+            <button type="button" className="v15-ib" onClick={() => onGit(no - 1)} disabled={no <= 1} aria-label="Önceki basamak"><ChevronLeft aria-hidden /></button>
+            <span><b>{no} · {b.ad}</b><small>{b.cag}</small></span>
+            <button type="button" className="v15-ib" onClick={() => onGit(no + 1)} disabled={no >= basamaklar.length} aria-label="Sonraki basamak"><ChevronRight aria-hidden /></button>
+          </div>
+        </section>
+        <div className="hc15-ev-yan">
+          <span className="v15-cap">Zaman çizgisi</span>
+          <div className="hc15-ev-cizgi" role="list" aria-label="Basamaklar">
+            {basamaklar.map((x, i) => (
+              <button key={x.id} type="button" role="listitem" className={`${i + 1 === no ? 'is-on' : ''}${acik[x.id] ? '' : ' is-kilit'}`} onClick={() => onGit(i + 1)} aria-label={`${i + 1}. ${x.ad}${acik[x.id] ? '' : ', kilitli'}`} title={`${i + 1} · ${x.ad}`}>
+                <Hucre n={i + 1} />
+              </button>
+            ))}
+          </div>
+          <section className="v15-card hc15-ev-kart">
+            <span className="v15-cap">Bu basamakta</span>
+            {onceki && <p className="hc15-ev-gec">{onceki.ad} → <b>{b.ad}</b></p>}
+            <p>{ac ? b.aciklama : `Açınca bu basamağın tıbbi bilgisi görünür. ${sayi(b.fiyat)} mol ATP ile açılır${onceki && !acik[onceki.id] ? '; önce bir önceki basamak açılmalı' : ''}.`}</p>
+          </section>
+        </div>
+      </div>
+    </div>,
+    document.body,
+  );
+}
+
+/** Seviye atlama kutlaması (tasarım M06): yeni basamağın hücresi, adı, bilgisi; Paylaş + Harika */
+function SeviyeAtla({ no, b, toplam, onKapat }: { no: number; b: KilitT; toplam: number; onKapat: () => void }) {
+  const paylas = async () => {
+    const metin = `MeDSor'da hücrem ${no}. basamağa evrimleşti: ${b.ad}`;
+    try { if (navigator.share) await navigator.share({ title: 'Hücrem', text: metin }); else { await navigator.clipboard.writeText(metin); setKopya(true); } } catch { /* vazgeçti */ }
+  };
+  const [kopya, setKopya] = useState(false);
+  return createPortal(
+    <div className="hc15-sa-perde" role="dialog" aria-modal="true" aria-label={`Seviye ${no}: ${b.ad}`} onClick={onKapat}>
+      <div className="hc15-sa v15-card" onClick={(e) => e.stopPropagation()}>
+        <button type="button" className="v15-ib hc15-sa-x" onClick={onKapat} aria-label="Kapat"><X aria-hidden /></button>
+        <div className="hc15-sa-r"><Hucre n={no} /></div>
+        <span className="v15-tag is-ai">Seviye {no} / {toplam}</span>
+        <h2>{b.ad}</h2>
+        {b.aciklama && <p>{b.aciklama}</p>}
+        <div className="hc15-sa-d">
+          <button type="button" className="v15-btn is-soft" onClick={paylas}><Share2 aria-hidden /> {kopya ? 'Kopyalandı' : 'Paylaş'}</button>
+          <button type="button" className="v15-btn" onClick={onKapat}>Harika</button>
+        </div>
+      </div>
+    </div>,
+    document.body,
   );
 }
 
