@@ -117,3 +117,11 @@
 .yl15-sat { display: flex; align-items: center; }
 .yl15-sat > .b15-row { flex: 1; min-width: 0; width: 100%; text-align: left; border: 0; background: none; font: inherit; color: inherit; cursor: pointer; }
 .yl15-sil { flex: none; margin-right: 8px; color: var(--color-ink-3); }
+
+/* C05 Neden yanlış yaptın? (yanlış çekmecesi) */
+.q15-neden { display: flex; flex-direction: column; gap: 8px; padding: 12px; border-radius: 14px; background: var(--color-ai-soft, var(--color-accent-soft)); }
+.q15-neden > b { font-size: .92rem; }
+.q15-neden > div { display: flex; flex-wrap: wrap; gap: 6px; }
+.q15-neden button { min-height: 32px; padding: 0 12px; border-radius: 999px; border: 1px solid var(--color-line); background: var(--color-white); color: var(--color-ink); font: inherit; font-size: .82rem; cursor: pointer; }
+.q15-neden button.is-on { background: var(--color-accent); border-color: var(--color-accent); color: var(--color-on-accent, #fff); }
+.q15-neden small { font-size: .8rem; color: var(--color-ink-2); line-height: 1.4; }

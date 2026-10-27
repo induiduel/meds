@@ -41,6 +41,10 @@ export default function SorularMerkezV15() {
   const [ders, setDers] = useState('');
   const [adet, setAdet] = useState(20);
   const [kip, setKip] = useState<'ogrenme' | 'sinav' | 'sesli'>('ogrenme');
+  // tasarım Y01/Y02: kaynak ve zorluk süzgeci (boş = hepsi)
+  const [kaynak, setKaynak] = useState<string[]>([]);
+  const [zorluk, setZorluk] = useState<string[]>([]);
+  const degis = (l: string[], x: string) => (l.includes(x) ? l.filter((y) => y !== x) : [...l, x]);
   useEffect(() => {
     let canli = true;
     setDersler(null);
@@ -52,7 +56,7 @@ export default function SorularMerkezV15() {
     return () => { canli = false; };
   }, [kurul]);
   const testYolu = kip === 'sesli' ? aracYolu('soru_cozucu', kurul)
-    : `/sorular/deneme?${new URLSearchParams({ kurul: String(kurul), ders, n: String(adet), basla: '1', ...(kip === 'sinav' ? { kip: 'sinav' } : {}) })}`;
+    : `/sorular/deneme?${new URLSearchParams({ kurul: String(kurul), ders, n: String(adet), basla: '1', ...(kip === 'sinav' ? { kip: 'sinav' } : {}), ...(kaynak.length ? { kaynak: kaynak.join('|') } : {}), ...(zorluk.length ? { zorluk: zorluk.join('|') } : {}) })}`;
   const karmaYolu = `/sorular/deneme?${new URLSearchParams({ kurul: String(kurul), ders: '', n: '20', basla: '1' })}`;
 
   const tekrarAc = () => {
@@ -95,6 +99,24 @@ export default function SorularMerkezV15() {
               <button key={d} type="button" role="radio" aria-checked={ders === d} className={`s15-cip${ders === d ? ' is-on' : ''}`} onClick={() => setDers(d)}>
                 {d.replace(/^Tıbbi\s+/, '')}<span>{n}</span>
               </button>
+            ))}
+          </div>
+        </div>
+        <div className="s15-test-sat">
+          <span className="v15-label">Kaynak</span>
+          <div className="s15-cipler v15-hscroll" role="group" aria-label="Kaynak">
+            <button type="button" aria-pressed={!kaynak.length} className={`s15-cip${!kaynak.length ? ' is-on' : ''}`} onClick={() => setKaynak([])}>Hepsi</button>
+            {([['cikmis', 'Çıkmış'], ['ornek', 'Örnek soru'], ['mini', 'Mini soru'], ['vaka', 'Klinik karar'], ['tuzak', 'Tuzak avı'], ['bosluk', 'Boşluk']] as const).map(([id, t]) => (
+              <button key={id} type="button" aria-pressed={kaynak.includes(id)} className={`s15-cip${kaynak.includes(id) ? ' is-on' : ''}`} onClick={() => setKaynak((l) => degis(l, id))}>{t}</button>
+            ))}
+          </div>
+        </div>
+        <div className="s15-test-sat">
+          <span className="v15-label">Zorluk</span>
+          <div className="s15-cipler" role="group" aria-label="Zorluk (örnek sorular)">
+            <button type="button" aria-pressed={!zorluk.length} className={`s15-cip${!zorluk.length ? ' is-on' : ''}`} onClick={() => setZorluk([])}>Hepsi</button>
+            {([['kolay', 'Kolay'], ['orta', 'Orta'], ['zor', 'Zor']] as const).map(([id, t]) => (
+              <button key={id} type="button" aria-pressed={zorluk.includes(id)} className={`s15-cip${zorluk.includes(id) ? ' is-on' : ''}`} onClick={() => setZorluk((l) => degis(l, id))}>{t}</button>
             ))}
           </div>
         </div>

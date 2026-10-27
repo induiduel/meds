@@ -8,7 +8,9 @@
 import { useSyncExternalStore } from 'react';
 import type { QuestionItem } from '../types';
 
-export interface YanlisKayit { q: QuestionItem; box: number; due: number; son: number; yanlis: number }
+/** neden: öğrencinin kendi seçtiği yanlış nedeni (tasarım C05 "Neden yanlış yaptın?") */
+export interface YanlisKayit { q: QuestionItem; box: number; due: number; son: number; yanlis: number; neden?: string }
+export const NEDENLER = ['Bilmiyordum', 'Karıştırdım', 'Dikkatsizlik', 'Soruyu yanlış okudum'] as const;
 export const YANLIS_KEY = 'medsoru_yanlislarim_v1';
 const OLAY = 'medsoru:yanlislarim';
 const GUN = 86_400_000;
@@ -41,6 +43,7 @@ export function yanlisKaydet(q: QuestionItem, dogru: boolean, simdi = Date.now()
   } else return;
   yaz(d);
 }
+export const yanlisNeden = (id: string, neden: string | null) => { const d = { ...yanlisOku() }; if (!d[id]) return; d[id] = { ...d[id], neden: neden || undefined }; yaz(d); };
 export const yanlisSil = (id: string) => { const d = { ...yanlisOku() }; delete d[id]; yaz(d); };
 
 export function yanlisGruplari(simdi = Date.now()) {

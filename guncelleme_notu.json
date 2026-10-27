@@ -1,11 +1,10 @@
 {
  "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
- "onem": 474,
- "baslik": "Sesli derste odak modu",
+ "onem": 475,
+ "baslik": "Test süzgeçleri ve yanlış nedeni",
  "maddeler": [
-  "Sesli ders: Odak modu, yalnız metin ve üç düğme",
-  "Slayt eşleşmesi olmayan bölümde son eşleşen sayfa uyarısı",
-  "Ders yüklenirken iskelet görünüm; mini oynatıcı yenilendi"
+  "Test oluştur: kaynak (çıkmış, örnek, mini…) ve zorluk seçimi",
+  "Yanlış yapınca Neden yanlış yaptın? seç; Yanlışlarım'da görünür"
  ],
  "eklenen": [],
  "degisen": [],

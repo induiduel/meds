@@ -52,7 +52,7 @@ export default function YanlislarimV15() {
                 </span>
                 <span className="b15-row-t">
                   <b>{e.q.reconstruction?.stem?.slice(0, 110) || 'Soru'}{(e.q.reconstruction?.stem?.length || 0) > 110 ? '…' : ''}</b>
-                  <span>{[e.q.discipline?.replace(/^Tıbbi\s+/, ''), e.q.examYear, sekme === 'bekleyen' ? kalan(e.due) : sekme === 'hazir' ? 'şimdi' : 'öğrenildi', e.yanlis > 1 ? `${e.yanlis} kez yanlış` : ''].filter(Boolean).join(' · ')}</span>
+                  <span>{[e.q.discipline?.replace(/^Tıbbi\s+/, ''), e.q.examYear, sekme === 'bekleyen' ? kalan(e.due) : sekme === 'hazir' ? 'şimdi' : 'öğrenildi', e.yanlis > 1 ? `${e.yanlis} kez yanlış` : '', e.neden || ''].filter(Boolean).join(' · ')}</span>
                 </span>
                 {sekme === 'hazir' && <span className="v15-tag is-b">Hazır</span>}
               </button>

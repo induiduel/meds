@@ -1,4 +1,4 @@
-import { yanlisKaydet } from '../../services/yanlislarim';
+import { NEDENLER, yanlisKaydet, yanlisNeden } from '../../services/yanlislarim';
 import { navigateTo } from '../../router';
 import React, { useEffect, useMemo, useState } from 'react';
 import { Bookmark, BookmarkCheck, Check, ChevronLeft, FileText, Pause, Play, RotateCcw, Sparkles, X } from 'lucide-react';
@@ -60,6 +60,7 @@ export const PracticeV15: React.FC<PracticeV15Props> = (p) => {
   const dogruMu = !!cevap && cevap === rec.correctAnswer;
   const [secim, setSecim] = useState<string | null>(null);
   const [cekmece, setCekmece] = useState(false);
+  const [neden, setNeden] = useState<string | null>(null);
   useEffect(() => { setSecim(null); setCekmece(false); }, [q.id]);
 
   const dogru = items.filter((x) => answers[x.id] && answers[x.id] === x.reconstruction?.correctAnswer).length;
@@ -68,6 +69,7 @@ export const PracticeV15: React.FC<PracticeV15Props> = (p) => {
 
   // Seri (tasarım C03): bu testte şu ana dek art arda doğru
   const seri = (() => { let n = 0; for (let i = index; i >= 0; i--) { const a = answers[items[i].id]; if (a && a === items[i].reconstruction?.correctAnswer) n++; else if (a || i < index) break; } return n; })();
+  useEffect(() => setNeden(null), [q.id]);
   const cevapla = () => {
     if (!secim) return;
     p.onSelect(secim);
@@ -170,6 +172,15 @@ export const PracticeV15: React.FC<PracticeV15Props> = (p) => {
       <Sheet open={cekmece} onClose={() => setCekmece(false)} title="Birlikte toparlayalım" width={440} className="q15-sheet">
         <div className="q15-cek">
           <span className="v15-tag is-b q15-cek-et">Cevabın doğru değil · doğru cevap {rec.correctAnswer}</span>
+          <div className="q15-neden">
+            <b>Neden yanlış yaptın?</b>
+            <div role="group" aria-label="Yanlış nedeni">
+              {NEDENLER.map((n) => (
+                <button key={n} type="button" aria-pressed={neden === n} className={neden === n ? 'is-on' : ''} onClick={() => { const y = neden === n ? null : n; setNeden(y); yanlisNeden(q.id, y); }}>{n}</button>
+              ))}
+            </div>
+            {neden && <small>{neden === 'Bilmiyordum' ? 'Yardım al ile her şıkkı öğren; 48 saat sonra yeniden sorulacak.' : neden === 'Karıştırdım' ? 'Doğru şıkla seçtiğin şıkkın farkını Yardım al ile karşılaştır.' : 'Bilgin var; tekrar zamanında acele etmeden oku.'}</small>}
+          </div>
           <p className="q15-cek-not">Bu soruyu 48 saat sonra yeniden soracağım. <a href="/sorular/yanlislarim" onClick={(e) => { e.preventDefault(); setCekmece(false); navigateTo('/sorular/yanlislarim'); }}>Yanlışlarım</a></p>
           <ul className="q15-cek-l" role="list">
             <li>

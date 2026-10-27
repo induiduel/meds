@@ -88,6 +88,11 @@ const adrestenOlcut = (): { c: TestCriteria; basla: boolean; sinav: boolean } | 
   if (d !== null) c.disciplines = d ? d.split('|').filter(Boolean) : [];
   const n = Number(sp.get('n'));
   if (COUNTS.includes(n)) c.count = n;
+  // tasarım Y01 tam süzgeç: ?kaynak=cikmis|ornek…&zorluk=kolay|orta
+  const kay = sp.get('kaynak');
+  if (kay !== null) { const l = kay.split('|').filter((x): x is TestSource => (SOURCE_ORDER as string[]).includes(x)); c.sources = l.length ? l : [...SOURCE_ORDER]; }
+  const zor = sp.get('zorluk');
+  if (zor !== null) c.difficulties = zor.split('|').filter((x): x is Difficulty => x === 'kolay' || x === 'orta' || x === 'zor');
   return { c, basla: sp.get('basla') === '1', sinav: sp.get('kip') === 'sinav' };
 };
 

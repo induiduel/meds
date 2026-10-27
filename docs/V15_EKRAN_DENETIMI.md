@@ -110,14 +110,14 @@ Not: YOK sayısının 6'sı tasarım belgesi ekranıdır (A09, K08, P01, W03, X0
 |---|---|---|---|---|
 | C01 | soruMerkez | hub_sorular → v15/SorularMerkezV15.tsx | KURULDU | Karma test + kip seçici |
 | C02 | soru | practice → v15/PracticeV15.tsx | VAR |  |
-| C03 | soruDogru | PracticeV15 | KISMİ | "Derste 04:18" bağlantısı, "Takip sorusu", "+puan · seri" satırı yok |
+| C03 | soruDogru | PracticeV15 | SIRADA | seri rozeti var; "Derste 04:18" için soru→sesli ders konum dizini yok (yalnız ders verisinde cikmisKonum); "Takip sorusu" LLM gerektirir |
 | C04 | soruYanlis | PracticeV15 (yanlış çekmecesi) | KURULDU | 48 saat + Yanlışlarım |
-| C05 | yardim | PracticeV15 Yardım al | KISMİ | Şık açıklamaları var; "Neden yanlış yaptın?" ve takip sorusu alanı yok |
-| C06 | cozucu | soru_cozucu → SoruCozucuSayfa + cozucu.css | KISMİ | Başlangıç v15; çözücü ekranı yalnız CSS katmanı |
+| C05 | yardim | PracticeV15 Yardım al | KURULDU | yanlış çekmecesinde "Neden yanlış yaptın?" seçimi → Yanlışlarım kaydı; takip sorusu LLM (kural 20) |
+| C06 | cozucu | soru_cozucu → SoruCozucuSayfa + cozucu.css | VAR | SoruCozucu: soru + şıklar + sesli açıklama vurgusu + oynatıcı |
 | C07 | cikmis | past_exams → CikmisV12 + cikmis.css | KURULDU | Yıla/Konuya göre kartlar |
 | C08 | sonuc | PracticeV15 Test sonucu | VAR | Halka + stat var; konu dağılımı çubukları DOĞRULANMADI |
 | C09 | hatalar (Yanlışlarım) | Hata defteri (Öğren kitaplığı bağlantısı) | DOĞRULANMADI | Tekrar zamanı/Bekleyen/Öğrenildi sekmeli v15 ekranı bulunamadı |
-| C10 | soruEkle | quick_add → PoolV12 + havuz.css | KISMİ | Yalnız CSS katmanı; 4 adımlı çekmece eski |
+| C10 | soruEkle | quick_add → PoolV12 + havuz.css | VAR | soru ekle: kök/şıklar + yazım yardımcısı (composer) |
 
 ## D · Sınava hazırlan
 
@@ -377,8 +377,8 @@ Not: YOK sayısının 6'sı tasarım belgesi ekranıdır (A09, K08, P01, W03, X0
 
 | Kod | Ad | Site karşılığı | Durum | Not |
 |---|---|---|---|---|
-| Y01 | filtreTam | SorularMerkezV15 Test oluştur | KISMİ | Yalnız ders + soru sayısı; tam süzgeç sayfası yok |
-| Y02 | filtreHizli | SorularMerkezV15 çipleri | KISMİ |  |
+| Y01 | filtreTam | SorularMerkezV15 Test oluştur | KURULDU | Test oluştur: ders + kaynak + zorluk + sayı + kip (adres parametreleri) |
+| Y02 | filtreHizli | SorularMerkezV15 çipleri | KURULDU | kaynak/zorluk hızlı çipleri |
 | Y03 | filtreAktif | — | YOK |  |
 | Y04 | filtrePanel | — | YOK | PC yan süzgeç paneli yok |
 | Y05 | filtreKayitli | — | YOK |  |
