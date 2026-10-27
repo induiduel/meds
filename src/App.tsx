@@ -143,6 +143,7 @@ const OlasiSorularView = React.lazy(() => wrapLazy(import('./components/olasi/Ol
 const GecmisKurullarView = React.lazy(() => wrapLazy(import('./components/olasi/GecmisKurullarView')));
 const KampView = React.lazy(() => wrapLazy(import('./components/kamp/KampView')));
 const MerkezView = React.lazy(() => wrapLazy(import('./components/merkez/MerkezView')));
+const SinavTakvimiV15 = React.lazy(() => wrapLazy(import('./components/v15/SinavTakvimiV15')));
 const DersDetayV15 = React.lazy(() => wrapLazy(import('./components/v15/DersDetayV15')));
 const NeYapmak = React.lazy(() => wrapLazy(import('./components/merkez/MerkezView').then((m) => ({ default: m.NeYapmak }))));
 const GuncellemeGunluguView = React.lazy(() => wrapLazy(import('./components/guncellemeler/GuncellemeGunluguView')));
@@ -2022,6 +2023,13 @@ export default function App() {
         {activeTab === 'basarimlar' && (
           <Suspense fallback={<ViewFallback />}>
             <BasarimView />
+          </Suspense>
+        )}
+
+        {/* TAB: /takvim (görünen /kamplar/takvim) — kurul sınavları, final, bütünleme ve kalan gün */}
+        {activeTab === 'sinav_takvimi' && (
+          <Suspense fallback={<ViewFallback />}>
+            <SinavTakvimiV15 />
           </Suspense>
         )}
 

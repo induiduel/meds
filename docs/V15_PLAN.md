@@ -122,6 +122,11 @@ Yeni bileşen önce buraya eklenir; sayfa CSS'i yalnız yerleşim yazar.
   gizli "yeniden dokun / uzun bas" kalktı. Menü: Başvuru · Ben (masam, Bitirdiklerim, istatistik, başarımlar, ayarlar) · Araçlar.
 - Kenar menüsü alt kısmı: Çalışma masam, Bitirdiklerim, İstatistiklerim, Başarımlar + ayarlar.
 
+## Yeni sayfalar (kuruldu)
+- Sınav takvimi (D06 + J zaman çizelgesi): `v15/SinavTakvimiV15.tsx` + `styles/v15/takvim.css`; rota `sinav_takvimi`, iç `/takvim` ↔
+  görünen `/kamplar/takvim`; merkezModel kamplar + navModel (Sınava hazırlan). Sıradaki sınav (kalan gün, kurul ilerlemesi),
+  T‑5/T‑3/T‑1 hazırlık günleri (Son Prova / Çıkmış çözücü / En önemliler'e götürür), yılın sınavları.
+
 ## Kalan iç sayfalar (kullanıcı kararı 2026-10-27: eski görünümün hepsi v15'e geçecek)
 Tasarımı olan: sesli ders listesi (B04), Öğren etkileşimleri (B07), spotlar (B08), önem (B09), sözlük (B10), notlar (B11),
 Bitirdiklerim (B12), çıkmışlar (C07), soru çözücü (C06), soru ekle (C10), kamp aşamaları (D02), Check Up (D03), Son Prova (D04),

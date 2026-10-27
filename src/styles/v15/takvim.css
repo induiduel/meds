@@ -1,0 +1,31 @@
+/* v15 · Sınav takvimi (SinavTakvimiV15) — yerleşim; renkler palet tokenından */
+.tk15 { container-type: inline-size; display: flex; flex-direction: column; gap: 16px; max-width: 920px; }
+.tk15-hero { display: flex; align-items: center; gap: 16px; padding: 18px; }
+.tk15-hero-t { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 4px; }
+.tk15-hero-t > b { font-size: 1.15rem; color: var(--color-ink); }
+.tk15-hero-t .v15-bar { margin: 8px 0 2px; }
+.tk15-n { display: flex; flex-direction: column; align-items: center; line-height: 1; font-weight: 700; font-size: 1.4rem; color: var(--color-ink); }
+.tk15-n small { font-size: .7rem; font-weight: 500; color: var(--color-ink-3); margin-top: 2px; }
+.tk15-h { margin: 0 2px 8px; }
+.tk15-hz { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; grid-template-columns: minmax(0, 1fr); }
+@container (min-width: 720px) { .tk15-hz { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+.tk15-hz-a { display: flex; align-items: center; gap: 12px; padding: 12px 14px; color: inherit; text-decoration: none; min-height: 64px; }
+.tk15-hz-a.is-gecti { opacity: 1; background: var(--color-surface); }
+.tk15-hz-a.is-gecti b { color: var(--color-ink-3); }
+.tk15-hz-a.is-bugun { border-color: var(--color-accent); }
+.tk15-hz-t { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
+.tk15-hz-t b { color: var(--color-ink); font-weight: 650; }
+.tk15-ok { width: 18px; height: 18px; color: var(--color-success, var(--color-accent)); }
+.tk15-cizelge { list-style: none; margin: 0; padding: 6px 14px; }
+.tk15-cizelge li { position: relative; display: flex; align-items: center; gap: 12px; padding: 12px 0 12px 0; }
+.tk15-cizelge li + li { border-top: 1px solid var(--color-line-soft, var(--color-line)); }
+.tk15-nokta { flex: none; width: 22px; height: 22px; border-radius: 50%; display: grid; place-items: center;
+  border: 2px solid var(--color-line); background: var(--color-surface); }
+.tk15-nokta svg { width: 13px; height: 13px; }
+.is-gecti .tk15-nokta { background: var(--color-success-soft, var(--color-field)); border-color: transparent; color: var(--color-success, var(--color-ink-2)); }
+.is-simdi .tk15-nokta { border-color: var(--color-accent); box-shadow: inset 0 0 0 4px var(--color-accent-soft, transparent); }
+.tk15-c-t { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 1px; }
+.tk15-c-t b { color: var(--color-ink); font-weight: 600; }
+.is-gecti .tk15-c-t b { color: var(--color-ink-3); }
+.is-simdi .tk15-c-t b { color: var(--color-accent); }
+.tk15-c-g { flex: none; display: flex; flex-direction: column; align-items: flex-end; gap: 1px; color: var(--color-ink-2); font-size: .9rem; text-align: right; }

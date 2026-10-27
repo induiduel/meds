@@ -21,7 +21,7 @@
  *   /kamplar/kurul1/kamp[/<branş>]           Hoca tüyolarından kurul kampı
  *   /kamplar/kurul1/checkup/patoloji         Patoloji Check Up
  *   /kamplar/kurul1/checkup/tbg/v1/{sesli-ders,soru-coz,kaliplar,deneme}   TBG Sınav Kampı (her bölüm ayrı sayfa)
- *   /kamplar[/kurulN]/en-onemliler[/<branş>] · /kamplar[/kurulN]/spotlar · /kamplar/sinav-plani
+ *   /kamplar[/kurulN]/en-onemliler[/<branş>] · /kamplar[/kurulN]/spotlar · /kamplar/sinav-plani · /kamplar/takvim
  *   Check-up'u olmayan kurulun check-up adresi (/kamplar/kurul2/checkup/patoloji) o kurulun Check Up sekmesine düşer.
  *   /dersler/kmb[/<beceri>[/<bölüm>]]        KMB görsel sesli asistan (iç /kmb?beceri=&b=; eski /kamplar/kmb/… yönlenir)
  *   /kaynaklar                               Başvuru merkezi (sözlük, hastalıklar … kendi düz adreslerinde kalır)
@@ -256,6 +256,8 @@ export function disYol(adres: string): string {
     }
     case 'sinav-plani':
       return birlestir('/kamplar/sinav-plani', sp, hash);
+    case 'takvim':
+      return birlestir('/kamplar/takvim', sp, hash);
     case 'spotlar':
       if (sp.get('gorunum')) return adres; // eski /spotlar?gorunum=… ExamSpotsView'da yönlenir
       {
@@ -382,6 +384,7 @@ export function icYol(adres: string): string {
     }
     if (arac === 'spotlar') { koy('kurul', k); return birlestir('/spotlar', sp, hash); }
     if (arac === 'sinav-plani') return birlestir('/sinav-plani', sp, hash);
+    if (arac === 'takvim') return birlestir('/takvim', sp, hash);
     koy('kurul', k);
     return birlestir('/kamp-merkezi', sp, hash);
   }

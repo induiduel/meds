@@ -1,11 +1,11 @@
 {
  "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
- "onem": 388,
- "baslik": "Yalın (v15): kolay geri dönüş ve yeni alt menü",
+ "onem": 389,
+ "baslik": "Yeni: Sınav takvimi",
  "maddeler": [
-  "Her alt sayfada üst çubukta Geri düğmesi: bir önceki sayfaya, yoksa bölümün başına döner.",
-  "Alt çubuk: Bugün, Ders, Soru, Sınav, Menü. Her sekme kaldığın sayfayı hatırlar; açık sekmeye dokununca başına döner.",
-  "Menü: Başvuru kaynakları, kişisel sayfalar ve araçlar tek yerde, gruplu."
+  "Sınava hazırlan › Sınav takvimi: sıradaki sınava kaç gün kaldığı ve kurulun ne kadarının geçtiği.",
+  "Sınavdan 5, 3 ve 1 gün önceki hazırlık günleri; her biri o günün işine (Son Prova, çıkmış çözücü, en önemliler) götürür.",
+  "Yılın bütün sınavları (kurullar, final, bütünleme) tek çizelgede."
  ],
  "eklenen": [],
  "degisen": [],

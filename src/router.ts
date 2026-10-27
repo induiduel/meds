@@ -51,6 +51,7 @@ export type AppRoute =
   | 'summaries'
   | 'spots'
   | 'sinav_plani'
+  | 'sinav_takvimi'
   | 'transcripts'
   | 'ai_chat'
   | 'admin'
@@ -110,6 +111,7 @@ export const ROUTE_PATHS: Record<AppRoute, string> = {
   summaries: '/ozetler',
   spots: '/spotlar',
   sinav_plani: '/sinav-plani',
+  sinav_takvimi: '/takvim',
   transcripts: '/ses-kayitlari',
   ai_chat: '/asistan',
   matrix: '/harita',
@@ -172,6 +174,7 @@ export const ROUTE_TITLES: Record<AppRoute, string> = {
   summaries: 'Ders özetleri',
   spots: 'Sınav spotları',
   sinav_plani: 'Sınav planı',
+  sinav_takvimi: 'Sınav takvimi',
   transcripts: 'Ses kayıtları',
   ai_chat: 'Asistan',
   matrix: 'Soru haritası',
@@ -219,6 +222,7 @@ const ALIASES: Record<string, AppRoute> = {
   learn: 'learn',
   spotlar: 'spots',
   'sinav-plani': 'sinav_plani',
+  takvim: 'sinav_takvimi',
   spots: 'spots',
   'sinav-spotlari': 'spots',
   glossary: 'glossary',
