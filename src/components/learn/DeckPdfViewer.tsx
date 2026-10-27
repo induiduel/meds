@@ -28,13 +28,17 @@ interface ViewPrefs {
   fit: 'width' | 'page';
   thumbs: boolean;
   night: boolean;
+  /** Sayfa teması: özgün, temiz (beyaz, keskin), sepya, gece */
+  tema: 'ozgun' | 'temiz' | 'sepya' | 'gece';
   /** Başlık şeridi (ad · Tam PDF · Tam ekran) gizli */
   hideBar: boolean;
 }
 const loadPrefs = (): ViewPrefs => {
-  const d: ViewPrefs = { fit: 'width', thumbs: false, night: false, hideBar: false };
+  const d: ViewPrefs = { fit: 'width', thumbs: false, night: false, tema: 'ozgun', hideBar: false };
   try {
-    return { ...d, ...JSON.parse(localStorage.getItem(PREF_KEY) || '{}') };
+    const k = { ...d, ...JSON.parse(localStorage.getItem(PREF_KEY) || '{}') };
+    if (k.night && k.tema === 'ozgun') k.tema = 'gece';
+    return k;
   } catch {
     return d;
   }
@@ -417,7 +421,7 @@ export const DeckPdfViewer: React.FC<DeckPdfViewerProps> = ({
   return (
     <div
       ref={rootRef}
-      className={`dpv${compact ? ' is-compact' : ''}${maxed ? ' is-max' : ''}${prefs.night ? ' is-night' : ''}`}
+      className={`dpv${compact ? ' is-compact' : ''}${maxed ? ' is-max' : ''}${prefs.tema === 'gece' ? ' is-night' : ''} tema-${prefs.tema}`}
       onKeyDown={onKeyDown}
       role={maxed ? 'dialog' : undefined}
       aria-modal={maxed || undefined}
@@ -482,9 +486,14 @@ export const DeckPdfViewer: React.FC<DeckPdfViewerProps> = ({
                     <button type="button" role="menuitemcheckbox" aria-checked={prefs.thumbs} className="dpv-mi" onClick={() => setPref('thumbs', !prefs.thumbs)}>
                       <PanelLeft aria-hidden /> Sayfa önizlemeleri<span className="dpv-tog" />
                     </button>
-                    <button type="button" role="menuitemcheckbox" aria-checked={prefs.night} className="dpv-mi" onClick={() => setPref('night', !prefs.night)}>
-                      <Moon aria-hidden /> Gece okuması<span className="dpv-tog" />
-                    </button>
+                    <span className="dpv-menu-h">Sayfa teması</span>
+                    <div className="dpv-seg" role="radiogroup" aria-label="Sayfa teması">
+                      {([['ozgun', 'Özgün'], ['temiz', 'Temiz'], ['sepya', 'Sepya'], ['gece', 'Gece']] as const).map(([k, ad]) => (
+                        <button key={k} type="button" role="radio" aria-checked={prefs.tema === k} onClick={() => setPref('tema', k)}>
+                          {k === 'gece' ? <Moon aria-hidden /> : null} {ad}
+                        </button>
+                      ))}
+                    </div>
                     <button type="button" role="menuitem" className="dpv-mi" onClick={() => setRotation((r) => (r + 90) % 360)}>
                       <RotateCw aria-hidden /> Döndür{rotation ? ` · ${rotation}°` : ''}<kbd>R</kbd>
                     </button>

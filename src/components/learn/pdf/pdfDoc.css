@@ -149,6 +149,15 @@
 .dpv.is-night .pdv-canvas, .dpv.is-night .pdv-thumb-c canvas { filter: invert(.9) hue-rotate(180deg); }
 .dpv.is-night .pdv-page, .dpv.is-night .pdv-thumb-c { background: #1b1b1b; }
 
+/* ---------- sayfa temaları (yalnız görünüm; PDF değişmez, çevrimdışı çalışır) ---------- */
+/* Temiz: saf beyaz zemin, koyu ve keskin metin, yumuşak gölge */
+.dpv.tema-temiz .pdv-canvas, .dpv.tema-temiz .pdv-thumb-c canvas { filter: contrast(1.12) brightness(1.03) saturate(.92); }
+.dpv.tema-temiz .pdv-page, .dpv.tema-temiz .pdv-thumb-c { background: #fff; box-shadow: 0 1px 2px rgb(15 23 42 / .06), 0 6px 20px rgb(15 23 42 / .07); }
+.dpv.tema-temiz .pdv-track { background: #f4f6fa; }
+/* Sepya: göz yormayan sıcak kâğıt */
+.dpv.tema-sepya .pdv-canvas, .dpv.tema-sepya .pdv-thumb-c canvas { filter: sepia(.28) contrast(.96) brightness(.98); mix-blend-mode: multiply; }
+.dpv.tema-sepya .pdv-page, .dpv.tema-sepya .pdv-thumb-c { background: #f4ecd8; }
+
 /* Başlık gizliyken geri açma sekmesi */
 .dpv { position: relative; }
 .dpv-bar-show { position: absolute; top: 0; left: 50%; transform: translateX(-50%); z-index: 5; display: grid; place-items: center; width: 30px; height: 16px; border-top: 0 !important; border-radius: 0 0 8px 8px; border: 1px solid var(--color-line); background: var(--color-white); color: var(--color-ink-3); cursor: pointer; opacity: .75; }

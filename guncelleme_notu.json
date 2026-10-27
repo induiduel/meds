@@ -1,14 +1,16 @@
 {
  "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
- "onem": 429,
- "baslik": "Asklepios kutlama efekti düzeltildi",
+ "onem": 430,
+ "baslik": "PDF sayfa teması seçilebiliyor",
  "maddeler": [
-  "Asklepios Asası efekti artık kutlama kartının iki yanında görünüyor"
+  "PDF görüntüleyicisinde Özgün, Temiz, Sepya ve Gece sayfa temaları eklendi"
  ],
- "eklenen": [],
- "degisen": [],
- "duzeltilen": [
-  "Kutlama efekti kartın arkasında kaldığı için görünmüyordu"
+ "eklenen": [
+  "Görünüm menüsünde sayfa teması seçimi"
  ],
+ "degisen": [
+  "Gece okuması artık tema seçeneklerinden biri"
+ ],
+ "duzeltilen": [],
  "silinen": []
 }
