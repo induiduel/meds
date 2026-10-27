@@ -1,15 +1,17 @@
 {
  "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
- "onem": 430,
- "baslik": "PDF sayfa teması seçilebiliyor",
+ "onem": 431,
+ "baslik": "Tam ekran üst çubukta, hesap menüsü sadeleşti",
  "maddeler": [
-  "PDF görüntüleyicisinde Özgün, Temiz, Sepya ve Gece sayfa temaları eklendi"
+  "Tam ekran düğmesi üst çubuğa taşındı (telefonda da görünür)",
+  "Hesap menüsü sadeleştirildi; yönetici işlemleri Yönetim paneline taşındı"
  ],
  "eklenen": [
-  "Görünüm menüsünde sayfa teması seçimi"
+  "Üst çubukta tam ekran düğmesi",
+  "Yönetim › Kısayollar › Yönetici işlemleri"
  ],
  "degisen": [
-  "Gece okuması artık tema seçeneklerinden biri"
+  "Hesap menüsünde yalnız profil, tema ve çıkış kaldı"
  ],
  "duzeltilen": [],
  "silinen": []

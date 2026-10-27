@@ -413,6 +413,9 @@ export const TopBarV15: React.FC<TopBarProps> = ({ active, onGo, user, isAdmin, 
             <Smartphone aria-hidden="true" />
           </button>
         )}
+        <button type="button" className="v15-ib" onClick={() => toggleAppFs()} aria-label={appFs ? 'Tam ekrandan çık' : 'Tam ekran'} title={appFs ? 'Tam ekrandan çık' : 'Tam ekran'}>
+          {appFs ? <Minimize2 aria-hidden="true" /> : <Maximize2 aria-hidden="true" />}
+        </button>
         <button type="button" className="v15-ib" onClick={() => setShowNotifModal(true)} aria-label={unread ? `Bildirimler, ${unread} okunmamış` : 'Bildirimler'} title="Bildirimler">
           <Bell aria-hidden="true" />
           {unread > 0 && <i className="v15-dot" aria-hidden="true" />}

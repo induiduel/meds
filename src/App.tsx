@@ -950,6 +950,22 @@ export default function App() {
     }
   }, [thresholdStatus.isThresholdMet, accessToken, hasAutoBackedUp]);
 
+  // Yönetim paneli › Kısayollar › Yönetici işlemleri: kabuktaki modalleri olayla açar
+  useEffect(() => {
+    const onAct = (e: Event) => {
+      const k = (e as CustomEvent<string>).detail;
+      if (k === 'diagnostics') setIsDiagnosticsOpen(true);
+      else if (k === 'pastExam') setIsPastExamImporterOpen(true);
+      else if (k === 'notebooklm') setIsNotebookLMModalOpen(true);
+      else if (k === 'drive') void handleDriveUpload(false);
+      else if (k === 'newCommittee') setIsNewCommitteeModalOpen(true);
+      else if (k === 'subagents') setIsSubagentMonitorOpen(true);
+      else if (k === 'faz14') setActiveTab('test_cikmis');
+    };
+    window.addEventListener('meds:admin-action', onAct);
+    return () => window.removeEventListener('meds:admin-action', onAct);
+  });
+
   // Upload to Google Drive
   const handleDriveUpload = async (isAuto: boolean = false) => {
     if (!isAuto) {

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import {
-  Database, Globe, HardDrive, Link2, Users, Table2, Boxes, Activity, Github, Flame, Cloud, KeyRound, FolderOpen, Terminal, Copy, Server, Search,
+  Database, Globe, HardDrive, Link2, Users, Table2, Boxes, Activity, Github, Flame, Cloud, KeyRound, FolderOpen, Terminal, Copy, Server, Search, FileUp, NotebookPen, CloudUpload, FolderPlus, ShieldCheck,
 } from 'lucide-react';
 import { Panel } from './consoleUi';
 import { PageActions, Toolbar, SearchField, Pill, Card14 } from '../v14/pageKit';
@@ -32,6 +32,17 @@ const VERI: Card[] = [
   { label: 'Tüm veriler', hint: 'JSON veri kümeleri tablo halinde, CSV', icon: Table2, section: 'tum-veriler' },
   { label: 'Veritabanı ve yedek', hint: 'Etkin veritabanı, eşitleme, dışa/içe aktarım', icon: HardDrive, section: 'veritabani' },
   { label: 'Sistem ve günlükler', hint: 'Servis sağlığı, AI, tarayıcı konsolu', icon: Activity, section: 'sistem' },
+];
+
+const act = (k: string) => window.dispatchEvent(new CustomEvent('meds:admin-action', { detail: k }));
+const ISLEM: { label: string; hint: string; icon: React.ElementType; k: string }[] = [
+  { label: 'Faz 14 · test edilen çıkmışlar', hint: 'Çıkmış soru test sonuçları', icon: Activity, k: 'faz14' },
+  { label: 'Veritabanı ve limitler', hint: 'Kota ve kullanım tanılaması', icon: Activity, k: 'diagnostics' },
+  { label: 'Çıkmış soru yükle', hint: 'PDF/metinden çıkmış soru içe aktar', icon: FileUp, k: 'pastExam' },
+  { label: 'NotebookLM / Gemini', hint: 'Kaynak paketi ve istem', icon: NotebookPen, k: 'notebooklm' },
+  { label: "Drive'a kaydet", hint: 'Yedeği Drive’a yükle', icon: CloudUpload, k: 'drive' },
+  { label: 'Yeni kurul ekle', hint: 'Kurul oluştur', icon: FolderPlus, k: 'newCommittee' },
+  { label: 'AI alt ajan izleme', hint: 'Çalışan alt ajanlar', icon: ShieldCheck, k: 'subagents' },
 ];
 
 const DIS: Card[] = [
@@ -110,6 +121,15 @@ export const ManageShortcuts: React.FC<{ notify: (m: string) => void }> = ({ not
       </Toolbar>
       <Panel title="Veri ve veritabanı" icon={Database} desc="Panelin içindeki veri ekranları — tüm site verisi buradan görülür ve düzenlenir.">
         {kartlar(VERI)}
+      </Panel>
+      <Panel title="Yönetici işlemleri" icon={ShieldCheck} desc="Hesap menüsünden buraya taşındı.">
+        <div className="ksy-grid">
+          {ISLEM.filter((c) => match(c)).map((c) => (
+            <button key={c.k} type="button" className="ksy-card" onClick={() => act(c.k)}>
+              <c.icon aria-hidden /><span><b>{c.label}</b><small>{c.hint}</small></span>
+            </button>
+          ))}
+        </div>
       </Panel>
       <Panel title="Veritabanına bağlan" icon={Terminal} desc="Masaüstü araçla (psql, DBeaver, TablePlus) doğrudan bağlanmak için. Parola Oracle'da ~/medsor/meds/.env → MEDS_PG_PASSWORD.">
         <div className="ksy-grid" style={{ gridTemplateColumns: 'minmax(0,1fr)' }}>

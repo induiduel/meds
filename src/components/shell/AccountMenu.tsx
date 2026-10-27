@@ -98,28 +98,12 @@ const MenuBody: React.FC<{ user: AppUser | null; a: AccountActions; close: () =>
       </div>
 
       <div className="ui-group" role="menu">
-        {item(appFs ? Minimize2 : Maximize2, '#007AFF', appFs ? 'Tam ekrandan çık' : 'Tam ekran görünümü', () => toggleAppFs())}
-        {a.onInstall && item(Smartphone, '#34C759', 'Uygulamayı cihaza yükle (PWA)', a.onInstall, <span className="ui-tag is-ok">Ana Ekran</span>)}
-        {a.onNotifications && item(Bell, '#FF9500', 'Bildirim geçmişi', a.onNotifications)}
-        {item(SquarePen, '#FF2D55', 'Soru katkısı yap', a.onContribute)}
-        {item(FileDown, '#5856D6', 'PDF indir', a.onPdf)}
-        {a.onOffline && item(Database, '#30B0C7', 'Çevrimdışı veritabanı', a.onOffline)}
       </div>
 
       {a.admin && (
-        <>
-          <span className="sh-acct-gl">Yönetim</span>
-          <div className="ui-group" role="menu">
-            {item(ShieldCheck, '#FF9500', 'Yönetim konsolu', a.admin.onConsole)}
-            {item(Activity, '#AF52DE', 'Faz 14 · test edilen çıkmışlar', a.admin.onFaz14)}
-            {a.admin.onDiagnostics && item(Activity, '#64748B', 'Veritabanı ve limitler', a.admin.onDiagnostics)}
-            {a.admin.onPastExam && item(FileUp, '#007AFF', 'Çıkmış soru yükle', a.admin.onPastExam)}
-            {a.admin.onNotebookLM && item(NotebookPen, '#00A79D', 'NotebookLM / Gemini', a.admin.onNotebookLM)}
-            {item(CloudUpload, '#32ADE6', a.admin.driveBusy ? "Drive'a yükleniyor…" : "Drive'a kaydet", a.admin.onDrive, a.admin.driveFresh ? <span className="ui-tag is-ok">Güncel</span> : undefined, a.admin.driveBusy)}
-            {item(FolderPlus, '#A2845E', 'Yeni kurul ekle', a.admin.onNewCommittee)}
-            {a.admin.onSubagents && item(Activity, '#8E8E93', 'AI alt ajan izleme', a.admin.onSubagents)}
-          </div>
-        </>
+        <div className="ui-group" role="menu">
+          {item(ShieldCheck, '#FF9500', 'Yönetim konsolu', a.admin.onConsole)}
+        </div>
       )}
 
       <div className="ui-group" role="menu">
