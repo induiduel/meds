@@ -36,7 +36,6 @@ import { useReviewCounts } from '../../hooks/useReviewCounts';
 import { useAppFullscreen } from '../../utils/fullscreen';
 import { OfflineStatusBadge } from '../pwa/OfflineStatusBadge';
 import { GuncellemeSimgesi } from '../system/UpdatePrompt';
-import { NotificationHistoryModal } from '../notifications/NotificationHistoryModal';
 import { SearchPalette } from '../search/SearchPalette';
 import { Sheet } from '../ui/Sheet';
 import { AccountMenu } from '../shell/AccountMenu';
@@ -342,7 +341,6 @@ export const TopBarV15: React.FC<TopBarProps> = ({ active, onGo, user, isAdmin, 
   const [menu, setMenu] = useState(false);
   const [search, setSearch] = useState(false);
   const [canInstall, setCanInstall] = useState(pwaService.getState().canInstall);
-  const [showNotifModal, setShowNotifModal] = useState(false);
   const unread = useUnread();
   const { kurul, kalan } = useKurul();
   useV15Fonts();
@@ -414,7 +412,7 @@ export const TopBarV15: React.FC<TopBarProps> = ({ active, onGo, user, isAdmin, 
         <button type="button" className="v15-ib" onClick={() => toggleAppFs()} aria-label={appFs ? 'Tam ekrandan çık' : 'Tam ekran'} title={appFs ? 'Tam ekrandan çık' : 'Tam ekran'}>
           {appFs ? <Minimize2 aria-hidden="true" /> : <Maximize2 aria-hidden="true" />}
         </button>
-        <button type="button" className="v15-ib" onClick={() => setShowNotifModal(true)} aria-label={unread ? `Bildirimler, ${unread} okunmamış` : 'Bildirimler'} title="Bildirimler">
+        <button type="button" className="v15-ib" onClick={() => onGo('bildirimler')} aria-label={unread ? `Bildirimler, ${unread} okunmamış` : 'Bildirimler'} title="Bildirimler">
           <Bell aria-hidden="true" />
           {unread > 0 && <i className="v15-dot" aria-hidden="true" />}
         </button>
@@ -429,7 +427,7 @@ export const TopBarV15: React.FC<TopBarProps> = ({ active, onGo, user, isAdmin, 
             phone={phone}
             actions={{
               ...actions,
-              onNotifications: () => setShowNotifModal(true),
+              onNotifications: () => onGo('bildirimler'),
               onInstall: canInstall ? () => pwaService.promptInstall() : undefined,
             }}
           />
@@ -444,7 +442,6 @@ export const TopBarV15: React.FC<TopBarProps> = ({ active, onGo, user, isAdmin, 
           onGo={onGo}
         />
       )}
-      <NotificationHistoryModal isOpen={showNotifModal} onClose={() => setShowNotifModal(false)} />
       {appFs &&
         createPortal(
           <button type="button" className="s12-fs-exit v15-fs-exit print:hidden" onClick={exitAppFs} aria-label="Tam ekrandan çık" title="Tam ekrandan çık (Esc)">

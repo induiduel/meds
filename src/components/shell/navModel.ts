@@ -1,4 +1,5 @@
 import {
+  Bell,
   Stethoscope,
   Medal,
   Gauge,
@@ -121,6 +122,7 @@ const I: Record<string, NavItem> = {
   hucrem: { id: 'hucrem', label: 'Hücrem', short: 'Hücrem', tile: 'Hücrem', hint: 'ATP ile hücreni 28 evrim basamağında büyüt', icon: Dna, tint: '#34C759' },
   topluluk: { id: 'topluluk', label: 'Topluluk', short: 'Topluluk', tile: 'Topluluk', hint: 'Sohbet kanalları ve ders yorumları', icon: MessagesSquare, tint: '#32ADE6' },
   pdf_olustur: { id: 'pdf_olustur', label: 'PDF oluştur', short: 'PDF', tile: 'PDF oluştur', hint: 'Ders metinlerini tek ya da ayrı PDF olarak indir', icon: FileDown, tint: '#FF3B30' },
+  bildirimler: { id: 'bildirimler', label: 'Bildirimler', short: 'Bildirim', tile: 'Bildirimler', hint: 'Yeni ders, sınav hatırlatması, tekrar zamanı, yorum ve düzeltmeler', icon: Bell, tint: '#FF3B30' },
   notlarim: { id: 'notlarim', label: 'Notlarım', short: 'Notlar', tile: 'Notlarım', hint: 'Yaz, kalemle çiz, fosforluyla işaretle; hesabına kaydedilir', icon: NotebookPen, tint: '#FF9F0A' },
   bitirdiklerim: { id: 'bitirdiklerim', label: 'Bitirdiklerim', short: 'Bitenler', tile: 'Bitirdiklerim', hint: 'Konu konu bitenler, harcanan süre, kalanların tahmini', icon: CircleCheckBig, tint: '#30D158' },
   stats: { id: 'stats', label: 'İstatistiklerim', short: 'İstatistik', tile: 'İstatistik', hint: 'İlerleme, puan ve etkinlik', icon: BarChart3, tint: '#5E5CE6' },

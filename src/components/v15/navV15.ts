@@ -62,7 +62,7 @@ export const sectionOf = (r: AppRoute): V15Section | undefined =>
 export interface MenuGrubu { id: string; label: string; icon: React.ElementType; hub?: AppRoute; items: NavItem[]; alt?: string }
 /** Tasarım A03: Oyunlar dört işin yanında ayrı bölüm (yarışma, Hücrem, başarımlar) */
 const OYUNLAR: AppRoute[] = ['oyunlar', 'hucrem', 'basarimlar'];
-const KISISEL: AppRoute[] = ['bitirdiklerim', 'study', 'notlarim', 'stats', 'pdf_olustur', 'cevrimdisi', 'music', 'settings'];
+const KISISEL: AppRoute[] = ['bitirdiklerim', 'study', 'notlarim', 'bildirimler', 'stats', 'pdf_olustur', 'cevrimdisi', 'music', 'settings'];
 
 const YONETIM = { id: 'manage', label: 'Yönetim', short: 'Yönetim', hint: 'Yönetim konsolu', icon: ShieldCheck, tint: '#64748B' } as NavItem;
 

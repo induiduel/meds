@@ -1,11 +1,11 @@
 {
  "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
- "onem": 455,
- "baslik": "Menüde Oyunlar, sesli liste süzgeçleri, not damgaları",
+ "onem": 456,
+ "baslik": "Yeni bildirim merkezi",
  "maddeler": [
-  "Menü: Oyunlar ayrı bölüm, her bölümün altında içerik açıklaması",
-  "Sesli dersler: Yeni ve İndirilen süzgeçleri, sıralama (son dinlenen, kısa olan önce)",
-  "Notlarım: Yıldızlı ve Ses damgalı süzgeci; sesli dersten eklenen not ders ve zaman damgasıyla gelir, dokununca o yere gider"
+  "Zil artık Bildirimler sayfasını açar: Tümü, Ders, Soru, Sistem sekmeleri",
+  "Yeni sesli ders eklendiğinde, sınav yaklaştığında ve yanlışlarının tekrar zamanı geldiğinde bildirim",
+  "Tümünü okundu say ve okunmuşları temizle"
  ],
  "eklenen": [],
  "degisen": [],

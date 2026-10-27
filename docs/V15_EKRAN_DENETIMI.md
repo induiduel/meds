@@ -458,3 +458,4 @@ Not: YOK sayısının 6'sı tasarım belgesi ekranıdır (A09, K08, P01, W03, X0
 - B04 sesli liste: Yeni (hiç dinlenmemiş; listede eklenme tarihi yok) ve İndirilen süzgeçleri, sıralama (ders sırası / son dinlenen / kısa olan önce), indirildi işareti.
 - B11 notlar: Tümü / Yıldızlı / Ses damgalı süzgeci, kartta yıldız; sesli dersten "Nota ekle" ders · bölüm · zaman damgasıyla gelir, damgaya dokununca derste o yere gider (eski notlarda "Kaynak:" satırından okunur).
 - Kronometre ayarları + geçmişi (T › kronoAyar, kronoGecmis).
+- A06 bildirim merkezi: /bildirimler (zil buraya), Tümü/Ders/Soru/Sistem sekmeleri + okunmamış sayıları, Tümünü okundu say, Okunmuşları temizle; hesap bildirimleri + gerçek veriden türeyen (yeni sesli ders, sınava ≤14 gün, tekrar zamanı gelen yanlışlar). Düello daveti yok (düello özelliği yok).

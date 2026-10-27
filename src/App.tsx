@@ -146,6 +146,7 @@ const KampView = React.lazy(() => wrapLazy(import('./components/kamp/KampView'))
 const MerkezView = React.lazy(() => wrapLazy(import('./components/merkez/MerkezView')));
 const SoruHaritasiV15 = React.lazy(() => wrapLazy(import('./components/v15/SoruHaritasiV15')));
 const YanlislarimV15 = React.lazy(() => wrapLazy(import('./components/v15/YanlislarimV15')));
+const BildirimlerV15 = React.lazy(() => wrapLazy(import('./components/v15/BildirimlerV15')));
 const ZihinHaritasiV15 = React.lazy(() => wrapLazy(import('./components/v15/ZihinHaritasiV15')));
 const HucremV15 = React.lazy(() => wrapLazy(import('./components/v15/HucremV15')));
 const ToplulukV15 = React.lazy(() => wrapLazy(import('./components/v15/ToplulukV15')));
@@ -2060,6 +2061,13 @@ export default function App() {
         {activeTab === 'yanlislarim' && (
           <Suspense fallback={<ViewFallback />}>
             <YanlislarimV15 />
+          </Suspense>
+        )}
+
+        {/* TAB: /bildirimler — bildirim merkezi (tasarım A06): hesap bildirimleri + gerçek veriden türeyen hatırlatmalar */}
+        {activeTab === 'bildirimler' && (
+          <Suspense fallback={<ViewFallback />}>
+            <BildirimlerV15 />
           </Suspense>
         )}
 
