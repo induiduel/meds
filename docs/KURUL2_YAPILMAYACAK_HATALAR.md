@@ -707,3 +707,15 @@ Her maddede: belirti · kök neden · Kurul 2 kuralı · kapı durumu. Kanıtlar
   görüntüleyici ekran dışı slaytı (chip + pencere) kaldırdı; durum ve "çalıyordu" bilgisi kayboldu.
 - **Çözüm / kural:** Durum modül düzeyinde (`useSyncExternalStore`), pencere `CdCikmisPencereKok` ile `document.body`'ye
   portal; sanal listede çizilen bileşen kalıcı durum tutmaz. Sınama: çalarken aç → ses durur, kapat → aynı saniyeden sürer.
+
+## H83 — "Çıkmış" diye gösterilen iki soru doğrulanamadı; biri sitede yüklenmedi (2026-10-27, kullanıcı bildirdi)
+- **Belirti:** k2-01 slayt 3 chip'inde 2/2. soru "Soru yüklenemedi"; kullanıcı soruların orijinalini veritabanında bulamadı.
+- **Kök neden:** (1) `4ba07c308e35`, `4c4eb178b88b`'nin yeniden yazılmış gizli kopyasıydı (sunulan listede yok → `/tek` 404).
+  (2) `d3-k2-nor-014`'ün kaynak dosyası (`Noroloji_Kurul2_Cikmis_Sorular.json`) hiçbir ham klasörde yok; banka kaydı
+  "doğrulanmış" etiketli olsa da özgün sınav belgesi bulunamadı. Eşlemede banka etiketine güvenildi, ham belge açılmadı.
+  (3) Aşil sorusu bankada "2020-2021 / Kurul 1" etiketli; ham metinde 2021-2022 Kurul 5.
+- **Çözüm:** Her soru ham belgede arandı (`meds_downloads/donem3/3. Sınıf/Kurul 2/2.Kurul-2021.pdf`, `21 22.txt`,
+  `2. kurul .pdf`); kaynağı bulunan 5 soru kaldı, her kayda `kaynak` (belge + sayfa) yazıldı ve pencerede gösteriliyor.
+- **Önleme kuralı:** Çıkmış eşlemesi yalnız **ham sınav belgesinde bulunan** soruyla yapılır; banka etiketi ("verified",
+  "altin_standart") kanıt değildir. `kaynak` alanı olmayan kayıt `degerlendirme_dogrula.py`'de HATA. Gizli kopya
+  (sunulmayan id) eşlenmez; hatırlama listesinden gelen sorunun şıkları "sonradan tamamlandı" diye belirtilir.

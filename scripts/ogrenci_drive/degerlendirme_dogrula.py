@@ -57,6 +57,8 @@ def main() -> int:
     for q in ck["q"]:
         if q["id"] not in banka:
             hata.append(f"çıkmış {q['id']}: bankada yok")
+        if not q.get("kaynak"):
+            hata.append(f"çıkmış {q['id']}: ham sınav belgesindeki yeri (kaynak) yazılmamış (H83)")
         if not q.get("dogrulandi") or not q.get("s"):
             hata.append(f"çıkmış {q['id']}: elle doğrulanmamış / slayt yok")
         elif not slaytta(q["s"], q["kanit"].split(" (")[0].split(" → ")[0]):

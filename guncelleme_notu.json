@@ -1,15 +1,15 @@
 {
  "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
- "onem": 381,
- "baslik": "Nöroloji 1: Slayt Üstü Çizim Panelleri Eklendi",
+ "onem": 382,
+ "baslik": "Çıkmış Soru Etiketleri: Yalnız Özgün Sınav Belgesindeki Sorular",
  "maddeler": [
-  "Nöroloji 1 (Nörolojik Hastaya Yaklaşım) sesli dersinde anlatılan cümleyle eş zamanlı 24 açıklayıcı panel çıkıyor.",
-  "Başlangıç şekli, bulgu → düşündürdüğü, lezyon yeri → bulgu, karar ve algoritma gibi 11 farklı panel tasarımı konuya göre kullanıldı.",
-  "Her cümle slayttaki ilgili maddeyi işaretliyor; çıkmışta sorulan satırlar öncelikli gösteriliyor.",
-  "Paneller bağımsız tıbbi anlam denetiminden ve telefon/tablet/masaüstü yerleşim sınamasından geçti."
+  "Sesli derste 'Çıkmış' etiketi artık yalnız özgün sınav belgesinde bulunan soruları gösteriyor; kaynağı bulunamayan bir soru ve yinelenen bir kopya kaldırıldı.",
+  "Soru penceresinde sorunun hangi sınav belgesinden geldiği (yıl, kurul, sayfa) yazıyor.",
+  "'Soru yüklenemedi' hatası giderildi."
  ],
  "eklenen": [
-  "data/sesli_anlatim/capa|cizim|isaret/k2-01-norolojik-hastaya-yaklasim.json"
+  "CdCikmisChip kaynak satırı",
+  "degerlendirme_dogrula.py kaynak zorunluluğu (H83)"
  ],
  "degisen": [
   "src/services/canliDers.ts",

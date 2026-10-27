@@ -1,13 +1,13 @@
 {
  "surum": 2,
  "metinHash": "8cab1e20518f1f72220c575cb88c6579d714a5ae",
- "dogrulama": "elle, slayt metniyle birebir (2026-10-27); otomatik vektör eşlemesi 7 yanlış soru içeriyordu",
+ "dogrulama": "ham sınav belgeleriyle birebir (2026-10-27); kaynağı bulunamayan d3-k2-nor-014 ve gizli kopya 4ba07c308e35 çıkarıldı",
  "q": [
   {
    "id": "q-2__kurul_-1",
    "kok": "Nörolojik hastalıkların başlangıç şekli değerlendirildiğinde, aşağıdakilerden hangisi tipik olarak akut başlangıçlı (dakikalar-saatler içinde yerleşen) bir tablodur?",
    "cevap": "Hemipleji",
-   "yil": "Geçmiş Yıllar Çıkmışı (Arşiv)",
+   "yil": "Hatırlanan",
    "p": 3,
    "c": 0,
    "skor": 1.0,
@@ -16,22 +16,8 @@
    "seviye": "dogrudan",
    "kanit": "Akut başlangıç. Dakika veya saat içinde. Örneğin hemipleji.",
    "dogrulandi": true,
-   "konu": "Nörolojik Hastaya Yaklaşım"
-  },
-  {
-   "id": "4ba07c308e35",
-   "kok": "Öyküsünde sinir sisteminin farklı bölgelerinin etkilendiği, zaman içinde atak ve düzelmelerle seyreden epizodlar geçirdiği anlaşılan hastada olası tanı nedir?",
-   "cevap": "Multipl skleroz (MS)",
-   "yil": "2020-2021",
-   "p": 3,
-   "c": 6,
-   "skor": 1.0,
-   "s": 3,
-   "d": 0,
-   "seviye": "ilgili",
-   "kanit": "Dalgalı gidiş. Kötüleşme ve iyileşme dönemleri vardır. Relapsing-remitting MS",
-   "dogrulandi": true,
-   "konu": "Nörolojik Hastaya Yaklaşım"
+   "konu": "Nörolojik Hastaya Yaklaşım",
+   "kaynak": "Öğrenci hatırlama listesi (2. kurul .pdf, 1. soru); şıklar sonradan tamamlandı"
   },
   {
    "id": "804e82ac79db",
@@ -49,13 +35,14 @@
    "konu": "Nörolojik Hastaya Yaklaşım",
    "kopyalar": [
     "5e72fc758888"
-   ]
+   ],
+   "kaynak": "Karabük Üni. sınav analizi 28.12.2020 (2.Kurul-2021.pdf s.62)"
   },
   {
    "id": "past-1790877037327-292692",
    "kok": "Aşil refleksi ile hangi kök seviyesi incelenebilir?",
    "cevap": "S1",
-   "yil": "2020-2021",
+   "yil": "2021-2022 K5",
    "p": 9,
    "c": 3,
    "skor": 1.0,
@@ -64,7 +51,8 @@
    "seviye": "dogrudan",
    "kanit": "Bel ve bacak arkasına vuran ağrı+ aşil refleksi alınamıyorsa → 1. sakral radiks",
    "dogrulandi": true,
-   "konu": "Nörolojik Muayene"
+   "konu": "Nörolojik Muayene",
+   "kaynak": "2021-2022 Dönem 3 Kurul 5 sınavı, 7. soru (21 22.txt)"
   },
   {
    "id": "9d2e0b3d81c4",
@@ -79,7 +67,8 @@
    "seviye": "ilgili",
    "kanit": "Afazi+ sağ hemipleji → piramidal yolu+ konuşma alanı. Sol hemisferde lezyon",
    "dogrulandi": true,
-   "konu": "Nörolojik Muayene"
+   "konu": "Nörolojik Muayene",
+   "kaynak": "Karabük Üni. sınav analizi 28.12.2020 (2.Kurul-2021.pdf s.248, Felçler)"
   },
   {
    "id": "4c4eb178b88b",
@@ -94,22 +83,8 @@
    "seviye": "dogrudan",
    "kanit": "öyküsünde sinir sisteminin farklı bölgelerinin etkilendiği epizodlar geçirip düzelmişse → MS",
    "dogrulandi": true,
-   "konu": "Nörolojik Hastaya Yaklaşım"
-  },
-  {
-   "id": "d3-k2-nor-014",
-   "kok": "Aniden konuşamama ve sağ kol ile bacakta ani güç kaybı (akut hemipleji) ile başvuran hastada, semptomların ilk saatlerinde iskemik inme ile hemorajik inme ayrımını yapmak için ilk seçilecek acil tetkik hangisidir?",
-   "cevap": "Kontrastsız beyin bilgisayarlı tomografi (BT)",
-   "yil": "2021-2026",
-   "p": 12,
-   "c": 6,
-   "skor": 1.0,
-   "s": 8,
-   "d": 0,
-   "seviye": "ilgili",
-   "kanit": "BBT (öğrenci notu: acilde hemen çekilir)",
-   "dogrulandi": true,
-   "konu": "Felçler"
+   "konu": "Nörolojik Hastaya Yaklaşım",
+   "kaynak": "Karabük Üni. sınav analizi 28.12.2020 (2.Kurul-2021.pdf s.149)"
   }
  ]
 }
