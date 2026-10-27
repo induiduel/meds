@@ -566,9 +566,15 @@ export const CizimLayer = memo(function CizimLayer({ z, useChar }: { z: CizimKom
     const id = window.setTimeout(() => yenile((n) => n + 1), kalan + 30);
     return () => window.clearTimeout(id);
   }, [kalan, hedefAnahtar]);
-  useEffect(() => () => {                // işaret katmanı kalkınca (cümle bitti / sayfa değişti) sayfa normale döner
-    const pg = kokRef.current?.closest('.pdv-page') as HTMLElement | null;
-    if (pg) yakinUygula(pg, null);
+  // Sayfa öğesi bağlanırken yakalanır: kaldırma sırasında React ref'i çoktan boşalttığı için kokRef.current null olur ve
+  // sayfa yakınlaşmış halde takılı kalırdı (çizimsiz resimde zoom kalıyordu).
+  const sayfaRef = useRef<HTMLElement | null>(null);
+  useLayoutEffect(() => {
+    sayfaRef.current = kokRef.current?.closest('.pdv-page') as HTMLElement | null;
+    const pg = sayfaRef.current;
+    return () => {                       // işaret katmanı kalkınca (cümle bitti / sayfa değişti) sayfa normale döner
+      if (pg) { pg.style.removeProperty('--yakin-t'); pg.classList.remove('is-yakin'); }
+    };
   }, []);
   const cizimler = z.filter((x) => x.tur !== 'sema');
   // şema yalnız betiğin boş bulduğu yerde (konum); boş yer yoksa (konum null) sayfanın önü kapanmasın diye gösterilmez

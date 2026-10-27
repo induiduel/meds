@@ -1,10 +1,9 @@
 {
  "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
- "onem": 445,
- "baslik": "Sesli ders üst barında tam ekran düğmesi",
+ "onem": 446,
+ "baslik": "Sesli derste çizimsiz resimde zoom takılı kalması giderildi",
  "maddeler": [
-  "Sesli ders başlığına tam ekran düğmesi eklendi (Esc ile çıkılır)",
-  "\"Önemli yerleri vurgula\" ve \"Öğren destesine geç\" artık ⋯ Ders seçenekleri menüsünde"
+  "Çizim bittiğinde ya da çizimsiz cümleye geçildiğinde resim artık normal boyuta dönüyor"
  ],
  "eklenen": [],
  "degisen": [],
