@@ -1,11 +1,12 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
-import { Check, Copy, Crown, Gamepad2, Heart, LogOut, Timer, Users, X } from 'lucide-react';
+import { Check, Copy, Crown, Gamepad2, Heart, Link2, LogOut, Timer, Users, X } from 'lucide-react';
 import { safeJsonFetch } from '../../services/api';
 import { auth, getRememberedStudentInfo } from '../../services/auth';
 import { quizSocketClient, type PreFetchedQuestion } from '../../services/quiz/quizSocketClient';
 import { icKonum } from '../../siteHaritasi';
 import { useV15Baslik } from './baslik';
 import OyunSoloV15, { type SoloMod } from './OyunSoloV15';
+import OyunEslestirV15, { ESLESTIR_KATEGORI } from './OyunEslestirV15';
 import '../../styles/v15/ogren.css';
 import '../../styles/v15/oyun.css';
 
@@ -66,6 +67,7 @@ export default function OyunlarV15() {
   const [kopyalandi, setKopyalandi] = useState(false);
   const raf = useRef(0);
   const [solo, setSolo] = useState<SoloMod | null>(null);
+  const [eslestir, setEslestir] = useState<string | null>(null);
 
   useV15Baslik({ baslik: 'Oyunlar', alt: oda ? `Oda ${oda}${baslik ? ` · ${baslik}` : ''}` : 'Canlı soru yarışması' });
 
@@ -155,6 +157,7 @@ export default function OyunlarV15() {
   };
 
   const ben = oyuncular.find((o) => o.userId === benim);
+  if (eslestir !== null) return <div className="oy15"><OyunEslestirV15 kategori={eslestir} onCik={() => setEslestir(null)} /></div>;
   if (solo && kaynak) {
     const d = kaynak.ders.find((x) => x.kod === ders);
     return <div className="oy15"><OyunSoloV15 mod={solo} brans={brans} ders={ders || undefined} baslik={d ? `${kaynak.ad} · ${d.baslik}` : `${kaynak.ad} · karışık`} onCik={() => setSolo(null)} /></div>;
@@ -209,6 +212,14 @@ export default function OyunlarV15() {
                 </div>
               </>
             )}
+          </section>
+
+          <section className="v15-card oy15-kart">
+            <h2><Link2 aria-hidden className="oy15-ic" /> Eşleştir</h2>
+            <p className="v15-cap">Sözlükten 5 terimi tanımıyla eşleştir; 3 tur, en kısa sürede.</p>
+            <div className="oy15-es-kat">
+              {ESLESTIR_KATEGORI.map(([k, a]) => <button key={k || 'karisik'} type="button" className="o15-cip" onClick={() => setEslestir(k)}>{a}</button>)}
+            </div>
           </section>
 
           <section className="v15-card oy15-kart">

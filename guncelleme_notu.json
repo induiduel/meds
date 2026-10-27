@@ -1,15 +1,16 @@
 {
-  "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 416,
-  "baslik": "Sesli derslerde Sınama bölümü",
-  "maddeler": [
-    "Kurul 2 Farmakoloji (2026-27) dersleri sınama (test) verisi olarak ayrı \"Sınama\" bölümünde ve SINAMA etiketiyle gösteriliyor; güncel ders listesine karışmıyor."
-  ],
-  "eklenen": [],
-  "degisen": [],
-  "duzeltilen": [
-    "Tetkik ve bilinç dersleri: EMG, BT/MR amacı, asit-baz nedenleri, pupil ve ilaç önerileri tıbben düzeltildi.",
-    "Çıkmış soru çipleri yalnız ham sınav belgesinde bulunan sorulara bağlandı."
-  ],
-  "silinen": []
+ "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
+ "onem": 417,
+ "baslik": "Oyunlar: Eşleştir",
+ "maddeler": [
+  "Oyunlar'a Eşleştir: sözlükten 5 terimi tanımıyla eşleştir, 3 tur",
+  "Hastalık, patoloji, ilaç, genetik, mikroorganizma ya da tanı terimleri arasından seç; en iyi süren saklanır"
+ ],
+ "eklenen": [],
+ "degisen": [],
+ "duzeltilen": [
+  "Tetkik ve bilinç dersleri: EMG, BT/MR amacı, asit-baz nedenleri, pupil ve ilaç önerileri tıbben düzeltildi.",
+  "Çıkmış soru çipleri yalnız ham sınav belgesinde bulunan sorulara bağlandı."
+ ],
+ "silinen": []
 }

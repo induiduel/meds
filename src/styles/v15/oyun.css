@@ -79,3 +79,14 @@
 .oy15-x { border: 0; background: none; color: var(--color-ink-3); display: grid; cursor: pointer; padding: 2px; }
 .oy15-x svg { width: 18px; height: 18px; }
 .oy15-ust { align-items: center; }
+/* Eşleştir (OyunEslestirV15): telefonda terimler üstte yatay kaydırma değil, iki sütun dar ekranda alt alta */
+.es15 { display: grid; gap: 10px; grid-template-columns: minmax(0, 1fr); }
+@container (min-width: 560px) { .es15 { grid-template-columns: minmax(0, 2fr) minmax(0, 3fr); } }
+.es15-sutun { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 6px; }
+.es15-k { width: 100%; text-align: left; padding: 10px 12px; min-height: 44px; border-radius: 12px; border: 1px solid var(--color-line); background: var(--color-white); color: var(--color-ink); font: inherit; font-size: .88rem; line-height: 1.35; cursor: pointer; transition: opacity .2s, transform .15s; }
+.es15-k.is-terim { font-weight: 600; background: var(--color-field); border-color: transparent; }
+.es15-k.is-secili { background: var(--color-accent); color: var(--color-on-accent); }
+.es15-k.is-tamam { opacity: .35; background: var(--color-ok-soft); border-color: transparent; cursor: default; }
+.es15-k.is-hata { border-color: var(--color-bad); background: var(--color-bad-soft); transform: translateX(3px); }
+.es15-k:disabled:not(.is-tamam) { cursor: default; }
+.oy15-es-kat { display: flex; flex-wrap: wrap; gap: 6px; }
