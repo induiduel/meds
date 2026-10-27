@@ -312,6 +312,43 @@ export function registerCanliDersRoutes(app: Express) {
     res.sendFile(yol, { headers: { 'Content-Type': 'application/vnd.sqlite3' } });
   });
 
+  // Çıkmış soru → sesli ders konum dizini (tasarım C03 "Derste 04:18"): bütün güncel derslerin cikmis_konum dosyaları
+  // birleştirilir; metni değişmiş dersin eşleşmesi alınmaz (metinHash), cümle başlangıcı cumle_zaman'dan (EMA varyantı
+  // öncelikli). 10 dk bellekte; dosya yoksa boş dizin. Yanıt: { q: { [soruId]: { k, b, p, c, t? } } }
+  let dizinOnbellek: { at: number; q: Record<string, { k: string; b: string; p: number; c: number; t?: number }> } | null = null;
+  app.get('/api/canli-ders/cikmis-dizin', (_req: Request, res: Response) => {
+    if (!dizinOnbellek || Date.now() - dizinOnbellek.at > 600_000) {
+      const q: Record<string, { k: string; b: string; p: number; c: number; t?: number }> = {};
+      const klasor = path.join(KOK, 'cikmis_konum');
+      let dosyalar: string[] = [];
+      try { dosyalar = fs.readdirSync(klasor).filter((f) => f.endsWith('.json')); } catch { /* yok */ }
+      for (const f of dosyalar) {
+        const key = f.replace(/\.json$/, '');
+        try {
+          const d = dersBul(key);
+          if (!d || !fs.existsSync(P.metin(key))) continue;
+          const ck = oku<any>(P.cikmisKonum(key), null);
+          if (!ck || !Array.isArray(ck.q) || !ck.q.length) continue;
+          const pars = metinParagraflari(fs.readFileSync(P.metin(key), 'utf8'));
+          const h = crypto.createHash('sha1').update(pars.map((x) => x.t).join('\n')).digest('hex');
+          if (ck.metinHash !== h) continue;
+          const cz = oku<any>(P.cumle(key), null);
+          const vz = cz && cz.metinHash === h && cz.varyantlar ? (Object.entries(cz.varyantlar).find(([v]) => /ema/i.test(v)) || Object.entries(cz.varyantlar)[0])?.[1] as any : null;
+          for (const x of ck.q) {
+            const id = String(x?.id || '');
+            if (!id || kaynakBulunamadi(id) || (q[id] && (q[id] as any).skor >= (x.skor || 0))) continue;
+            const t = vz?.p?.[String(x.p)]?.[x.c];
+            q[id] = { k: key, b: d.baslik, p: x.p, c: x.c, ...(Number.isFinite(t) ? { t: Math.floor(t) } : {}), ...({ skor: x.skor || 0 } as any) };
+          }
+        } catch { /* bozuk dosya atlanır */ }
+      }
+      for (const v of Object.values(q)) delete (v as any).skor;
+      dizinOnbellek = { at: Date.now(), q };
+    }
+    res.setHeader('Cache-Control', 'public, max-age=600');
+    res.json({ q: dizinOnbellek.q });
+  });
+
   app.get('/api/canli-ders/:key', (req: Request, res: Response) => {
     const key = req.params.key;
     if (!anahtarGecerli(key)) return res.status(400).json({ error: 'geçersiz ders' });

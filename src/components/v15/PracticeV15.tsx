@@ -1,7 +1,8 @@
 import { NEDENLER, yanlisKaydet, yanlisNeden } from '../../services/yanlislarim';
-import { navigateTo } from '../../router';
+import { dkSn, useDersKonum } from '../../services/dersKonum';
+import { linkClick, navigateTo, pathFor } from '../../router';
 import React, { useEffect, useMemo, useState } from 'react';
-import { Bookmark, BookmarkCheck, Check, ChevronLeft, FileText, Pause, Play, RotateCcw, Sparkles, X } from 'lucide-react';
+import { Bookmark, BookmarkCheck, Check, ChevronLeft, FileText, Headphones, Pause, Play, RotateCcw, Sparkles, X } from 'lucide-react';
 import type { QuestionItem } from '../../types';
 import { Sheet } from '../ui/Sheet';
 import { Halka } from './Halka';
@@ -61,6 +62,7 @@ export const PracticeV15: React.FC<PracticeV15Props> = (p) => {
   const [secim, setSecim] = useState<string | null>(null);
   const [cekmece, setCekmece] = useState(false);
   const [neden, setNeden] = useState<string | null>(null);
+  const dersKonum = useDersKonum(items[index]?.id);
   useEffect(() => { setSecim(null); setCekmece(false); }, [q.id]);
 
   const dogru = items.filter((x) => answers[x.id] && answers[x.id] === x.reconstruction?.correctAnswer).length;
@@ -151,6 +153,11 @@ export const PracticeV15: React.FC<PracticeV15Props> = (p) => {
             <span className="q15-sonuc-a">
               <button type="button" className="v15-btn is-soft" onClick={p.onOpenAi}><Sparkles aria-hidden /> Yardım al</button>
               {p.onOpenQuestion && <button type="button" className="v15-btn is-ghost" onClick={() => p.onOpenQuestion!(q)}><FileText aria-hidden /> Soru ayrıntısı</button>}
+              {dersKonum && (
+                <a className="v15-btn is-ghost q15-derste" href={`${pathFor('canli_ders', dersKonum.k)}?p=${dersKonum.p}`} onClick={linkClick(() => navigateTo(`${pathFor('canli_ders', dersKonum.k)}?p=${dersKonum.p}`))} title={`${dersKonum.b} — bu sorunun dayandığı yer`}>
+                  <Headphones aria-hidden /> Derste{dersKonum.t != null ? ` ${dkSn(dersKonum.t)}` : ''}
+                </a>
+              )}
             </span>
           </div>
         )}

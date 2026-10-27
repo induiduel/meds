@@ -1,11 +1,9 @@
 {
  "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
- "onem": 482,
- "baslik": "Komut paleti, not listesi, dönem seçici",
+ "onem": 483,
+ "baslik": "Soruda Derste bağlantısı",
  "maddeler": [
-  "Arama (⌘K): karma test, kronometre, odak, yeni not gibi komutlar",
-  "Notlarım: madde listesi düğmesi",
-  "Sesli dersler: 2026–27 / 2025–26 dönem seçici"
+  "Çıkmış soruyu cevaplayınca Derste mm:ss: sorunun dayandığı sesli ders yerine git"
  ],
  "eklenen": [],
  "degisen": [],

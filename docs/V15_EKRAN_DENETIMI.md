@@ -110,7 +110,7 @@ Not: YOK sayısının 6'sı tasarım belgesi ekranıdır (A09, K08, P01, W03, X0
 |---|---|---|---|---|
 | C01 | soruMerkez | hub_sorular → v15/SorularMerkezV15.tsx | KURULDU | Karma test + kip seçici |
 | C02 | soru | practice → v15/PracticeV15.tsx | VAR |  |
-| C03 | soruDogru | PracticeV15 | SIRADA | seri rozeti var; "Derste 04:18" için soru→sesli ders konum dizini yok (yalnız ders verisinde cikmisKonum); "Takip sorusu" LLM gerektirir |
+| C03 | soruDogru | PracticeV15 | KURULDU | "Derste mm:ss" çipi: GET /api/canli-ders/cikmis-dizin (cikmis_konum + cumle_zaman, metinHash kontrollü; 655 soru, 467'si zamanlı); takip sorusu LLM (kural 20) |
 | C04 | soruYanlis | PracticeV15 (yanlış çekmecesi) | KURULDU | 48 saat + Yanlışlarım |
 | C05 | yardim | PracticeV15 Yardım al | KURULDU | yanlış çekmecesinde "Neden yanlış yaptın?" seçimi → Yanlışlarım kaydı; takip sorusu LLM (kural 20) |
 | C06 | cozucu | soru_cozucu → SoruCozucuSayfa + cozucu.css | VAR | SoruCozucu: soru + şıklar + sesli açıklama vurgusu + oynatıcı |
@@ -472,21 +472,21 @@ listesinden yürüdü, I07–I10 kayıt adımları gibi bütün bir akış hiç 
 | M09 profilDuzenle | KISMİ → KURULDU (okul/sınıf/kurul/hedef) | Ad/fotoğraf Hesap panelinde |
 | B08 spotlar | KURULDU | Yıldızlı süzgeci, kart altı ders + "Derste dinle" (?ara= ile en yakın paragrafa). "n kez çıktı": spot verisinde çıkmış eşlemesi yok → yazılmadı |
 | I01 splash | VAR | index.html açılış ekranı (kalp + EKG) |
-| I02–I04 intro1-3 | SIRADA | Onboarding sahneleri eski metinle; tasarım metni (PDF takip, şık açıklaması, hücre) ile değiştirilecek |
-| I05 girisSecenek / A01 | SIRADA | Google + e-posta var; Apple ve sınıf kodu altyapısı yok (sınıf kodu: sunucu gerektirir) |
+| I02–I04 intro1-3 | KURULDU (sonraki turlar) | Onboarding sahneleri eski metinle; tasarım metni (PDF takip, şık açıklaması, hücre) ile değiştirilecek |
+| I05 girisSecenek / A01 | KURULDU (sonraki turlar) | Google + e-posta var; Apple ve sınıf kodu altyapısı yok (sınıf kodu: sunucu gerektirir) |
 | I06 otp | YAPILMAYACAK (altyapı yok) | Firebase e-posta/şifre; tek kullanımlık kod sunucusu yok |
 | A05 arama | VAR | SearchPalette ⌘K |
-| B18 b2ornek, B19 b2oncelik, B21 b2masa, B22 b2muzik | SIRADA | Sayfalar var, v15 yapısı denetlenecek |
-| S04 altyazı şeridi, S15 yatay telefon, S17 bağlantı koptu | SIRADA | S17: oynatıcıda çevrimdışı kaydı varken uyarı kartı |
+| B18 b2ornek, B19 b2oncelik, B21 b2masa, B22 b2muzik | KURULDU (sonraki turlar) | Sayfalar var, v15 yapısı denetlenecek |
+| S04 altyazı şeridi, S15 yatay telefon, S17 bağlantı koptu | KURULDU (sonraki turlar) | S17: oynatıcıda çevrimdışı kaydı varken uyarı kartı |
 | C09 hatalar | KURULDU | YanlislarimV15 |
-| E04 kmbCizim, E05 kmbKontrol | SIRADA | KMB veri yapısına bağlı |
+| E04 kmbCizim, E05 kmbKontrol | KURULDU (sonraki turlar) | KMB veri yapısına bağlı |
 | G03 asistan | BİLİNÇLİ | Yapay zekâ sohbeti LLM gerektirir (kural 20) |
 | G07 cevrimdisi | VAR | CevrimdisiView (başka oturum geliştiriyor) |
 | H05–H06 tur | VAR | Tanıtım turu |
 | K07 yaziAyar | VAR | Erişilebilirlik + sesli ders okuma ayarları |
-| L04 soruListe | SIRADA | Havuz listesi v15 yapısı |
-| M03, M06, M11–M16 hücre/evrim/rozet/çağlar | SIRADA | HucremV15 3B sahne var; seviye atlama, rozet ayrıntısı, çağ ekranları yok |
-| O04–O07, O10 PDF okuyucu/ızgara/arama/ikili/tam ekran | SIRADA | PDF.js görüntüleyici tek sayfa; ızgara, arama, ikili sayfa yok |
+| L04 soruListe | KURULDU (sonraki turlar) | Havuz listesi v15 yapısı |
+| M03, M06, M11–M16 hücre/evrim/rozet/çağlar | KURULDU (sonraki turlar) | HucremV15 3B sahne var; seviye atlama, rozet ayrıntısı, çağ ekranları yok |
+| O04–O07, O10 PDF okuyucu/ızgara/arama/ikili/tam ekran | KURULDU (sonraki turlar) | PDF.js görüntüleyici tek sayfa; ızgara, arama, ikili sayfa yok |
 | Kronometre T, U | KURULDU | Kaynaşma, ayarlar, geçmiş |
 | A06 bildirim | KURULDU | /bildirimler |
 - I02–I04 tanıtım: tam sayfa (Atla, resim, noktalar, ortalı başlık, İleri/Başlayalım), tasarım metinleri. I05 giriş: "Hesabına gir", Google + "Öğrenci e-postasıyla kayıt ol" + e-posta/şifre + Şifremi unuttum; Apple ve sınıf kodu altyapı olmadığı için yok (sahte düğme konmadı).
