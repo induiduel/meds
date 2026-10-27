@@ -7,6 +7,7 @@ import { icKonum } from '../../siteHaritasi';
 import { useV15Baslik } from './baslik';
 import OyunSoloV15, { type SoloMod } from './OyunSoloV15';
 import OyunEslestirV15, { ESLESTIR_KATEGORI } from './OyunEslestirV15';
+import OyunBoslukV15 from './OyunBoslukV15';
 import '../../styles/v15/ogren.css';
 import '../../styles/v15/oyun.css';
 
@@ -68,6 +69,7 @@ export default function OyunlarV15() {
   const raf = useRef(0);
   const [solo, setSolo] = useState<SoloMod | null>(null);
   const [eslestir, setEslestir] = useState<string | null>(null);
+  const [sozlukMod, setSozlukMod] = useState<'eslestir' | 'bosluk'>('eslestir');
 
   useV15Baslik({ baslik: 'Oyunlar', alt: oda ? `Oda ${oda}${baslik ? ` · ${baslik}` : ''}` : 'Canlı soru yarışması' });
 
@@ -157,7 +159,7 @@ export default function OyunlarV15() {
   };
 
   const ben = oyuncular.find((o) => o.userId === benim);
-  if (eslestir !== null) return <div className="oy15"><OyunEslestirV15 kategori={eslestir} onCik={() => setEslestir(null)} /></div>;
+  if (eslestir !== null) return <div className="oy15">{sozlukMod === 'bosluk' ? <OyunBoslukV15 kategori={eslestir} onCik={() => setEslestir(null)} /> : <OyunEslestirV15 kategori={eslestir} onCik={() => setEslestir(null)} />}</div>;
   if (solo && kaynak) {
     const d = kaynak.ders.find((x) => x.kod === ders);
     return <div className="oy15"><OyunSoloV15 mod={solo} brans={brans} ders={ders || undefined} baslik={d ? `${kaynak.ad} · ${d.baslik}` : `${kaynak.ad} · karışık`} onCik={() => setSolo(null)} /></div>;
@@ -215,8 +217,12 @@ export default function OyunlarV15() {
           </section>
 
           <section className="v15-card oy15-kart">
-            <h2><Link2 aria-hidden className="oy15-ic" /> Eşleştir</h2>
-            <p className="v15-cap">Sözlükten 5 terimi tanımıyla eşleştir; 3 tur, en kısa sürede.</p>
+            <h2><Link2 aria-hidden className="oy15-ic" /> Sözlük oyunları</h2>
+            <div className="pg15-seg" role="tablist" aria-label="Oyun">
+              <button type="button" role="tab" aria-selected={sozlukMod === 'eslestir'} className={sozlukMod === 'eslestir' ? 'is-on' : ''} onClick={() => setSozlukMod('eslestir')}>Eşleştir</button>
+              <button type="button" role="tab" aria-selected={sozlukMod === 'bosluk'} className={sozlukMod === 'bosluk' ? 'is-on' : ''} onClick={() => setSozlukMod('bosluk')}>Terimi bul</button>
+            </div>
+            <p className="v15-cap">{sozlukMod === 'eslestir' ? 'Sözlükten 5 terimi tanımıyla eşleştir; 3 tur, en kısa sürede.' : 'Tanımı oku, terimi yaz; 10 soru, ipucu harf açar.'} Konu seç:</p>
             <div className="oy15-es-kat">
               {ESLESTIR_KATEGORI.map(([k, a]) => <button key={k || 'karisik'} type="button" className="o15-cip" onClick={() => setEslestir(k)}>{a}</button>)}
             </div>

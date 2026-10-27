@@ -19,7 +19,7 @@ const kacir = (s: string) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 function tanimYap(e: GlossaryEntry): string {
   let t = String(e.definition || '').split(/(?<=[.!?])\s+/)[0] || '';
   const ad = String(e.term || '').replace(/\s*\(.*?\)\s*/g, ' ').trim();
-  for (const p of [ad, ad.split(/\s+/)[0]].filter((x) => x.length > 3)) t = t.replace(new RegExp(kacir(p), 'gi'), '…');
+  for (const p of [ad, ad.split(/\s+/)[0]].filter((x) => x.length > 3)) t = t.replace(new RegExp(`(?<!\\p{L})${kacir(p)}`, 'giu'), '…');
   return t.length > 150 ? `${t.slice(0, 147)}…` : t;
 }
 

@@ -90,3 +90,18 @@
 .es15-k.is-hata { border-color: var(--color-bad); background: var(--color-bad-soft); transform: translateX(3px); }
 .es15-k:disabled:not(.is-tamam) { cursor: default; }
 .oy15-es-kat { display: flex; flex-wrap: wrap; gap: 6px; }
+/* Terimi bul (OyunBoslukV15) */
+.bs15-maske { margin: 0; font-family: ui-monospace, var(--font-sans); letter-spacing: .28em; font-size: 1.05rem; color: var(--color-ink-2); overflow-wrap: anywhere; }
+.bs15-form { display: flex; flex-wrap: wrap; gap: 8px; }
+.bs15-form input { flex: 1 1 180px; min-width: 0; font: inherit; font-size: 1rem; padding: 10px 12px; min-height: 46px; border-radius: 12px; border: 1px solid var(--color-line); background: var(--color-white); color: var(--color-ink); outline: none; }
+.bs15-form input:focus { border-color: var(--color-accent); }
+.bs15-form input.is-dogru { border-color: var(--color-ok); background: var(--color-ok-soft); }
+.bs15-form input.is-yanlis { border-color: var(--color-bad); background: var(--color-bad-soft); }
+.bs15-form .oy15-cik svg { width: 16px; height: 16px; }
+.bs15-gec { align-self: flex-start; border: 0; background: none; color: var(--color-ink-3); font: inherit; font-size: .85rem; text-decoration: underline; cursor: pointer; padding: 4px 0; }
+.bs15-sonuc { margin: 0; display: flex; align-items: center; gap: 6px; color: var(--color-bad); font-weight: 600; }
+.bs15-sonuc.is-dogru { color: var(--color-ok); }
+.bs15-sonuc svg { width: 18px; height: 18px; }
+.oy15 .pg15-seg { display: inline-flex; align-self: flex-start; padding: 3px; border-radius: 10px; background: var(--color-field); }
+.oy15 .pg15-seg button { border: 0; background: none; padding: 6px 14px; border-radius: 8px; font: inherit; font-size: .88rem; color: var(--color-ink-2); cursor: pointer; min-height: 32px; }
+.oy15 .pg15-seg button.is-on { background: var(--color-white); color: var(--color-ink); font-weight: 600; box-shadow: 0 1px 2px rgb(0 0 0 / .08); }
