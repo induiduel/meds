@@ -302,3 +302,19 @@
   .cv-ders-eylem { justify-content: flex-start; padding-left: 26px; }
   .cv-uye-liste > li { flex-direction: column; align-items: stretch; }
 }
+
+/* ---- Dönem / kurul süzgeci ---- */
+.cv-kd { display: flex; align-items: center; gap: 10px; min-width: 0; }
+.cv-kd-ad { flex: none; width: 48px; font: 650 12px/1 var(--font-sans); letter-spacing: .05em; text-transform: uppercase; color: var(--color-ink-3); }
+.cv-kd .cv-brans { flex: 1; min-width: 0; }
+.cv-segment { display: inline-flex; padding: 3px; gap: 2px; border-radius: 12px; background: var(--color-field); max-width: 100%; overflow-x: auto; }
+.cv-segment button { min-height: 32px; padding: 4px 12px; border: 0; border-radius: 9px; background: transparent; cursor: pointer; font-size: 13px; color: var(--color-ink-2); white-space: nowrap; }
+.cv-segment button small { opacity: .7; margin-left: 3px; }
+.cv-segment button.is-on { background: var(--color-white); color: var(--color-ink); font-weight: 600; box-shadow: 0 1px 2px color-mix(in srgb, var(--color-ink) 14%, transparent); }
+.cv-cip.is-aktif:not(.is-on) { border-color: var(--color-accent); color: var(--color-accent); }
+.cv-cip:disabled { opacity: .4; cursor: default; }
+.cv-cip small { opacity: .7; margin-left: 2px; }
+.cv-etiket.is-arsiv { background: color-mix(in srgb, var(--color-ink) 10%, transparent); color: var(--color-ink-2); }
+.cv-bos-sut { flex-direction: column; text-align: center; }
+.cv-bos-eylem { display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; }
+@media (max-width: 640px) { .cv-kd { flex-direction: column; align-items: stretch; gap: 4px; } .cv-kd-ad { width: auto; } }

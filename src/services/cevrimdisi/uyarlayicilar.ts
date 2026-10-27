@@ -42,6 +42,8 @@ export function uyarlayicilariKur() {
           surum: String((v as any)?.surum || v?.bayt || ''),
           dersNo: Number(d.no) || undefined,
           desteId: d.desteId,
+          kurul: d.kurul,
+          donem: d.donem,
         };
       });
     },
@@ -61,6 +63,8 @@ export function uyarlayicilariKur() {
         surum: String(d.medspakSurum || d.medspakBayt || ''),
         dersNo: Number(d.no) || undefined,
         desteId: d.desteId,
+        kurul: d.kurul,
+        donem: d.donem,
       }));
     },
     db: async () => [{

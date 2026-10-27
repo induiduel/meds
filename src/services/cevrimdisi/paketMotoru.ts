@@ -49,6 +49,9 @@ export interface Paket {
   /** Yalnız istemci kataloğundaki sesli ders / .medspak paketleri: branş içi ders numarası ve bağlı Öğren destesi (ders birimi eşlemesi) */
   dersNo?: number;
   desteId?: string;
+  /** Kurul numarası ve dönem (yalnız sesli / .medspak: ders birimi süzgeci) */
+  kurul?: number;
+  donem?: '2025-2026' | '2026-2027';
 }
 /** Paket başına içerik seçimi: sesler ve PDF'ler inecek mi */
 export interface Secim { ses: boolean; pdf: boolean }

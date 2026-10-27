@@ -1,11 +1,14 @@
 {
  "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
- "onem": 437,
- "baslik": "Temiz PDF teması: fon beyaza çekildi",
+ "onem": 438,
+ "baslik": "Çevrimdışı: kurul ve dönem süzgeci",
  "maddeler": [
-  "Temiz temada slaytın krem fonu ve pastel şablon şeritleri beyaza dönüşür"
+  "Çevrimdışı › Dersler sekmesinde kurul seçilebiliyor; aktif kurul kendiliğinden seçili gelir",
+  "Güncel (2026-27) ve arşiv (2025-26) dersleri ayrı süzülür, her derste dönem etiketi görünür"
  ],
- "eklenen": [],
+ "eklenen": [
+  "Çevrimdışı kurul ve dönem süzgeci"
+ ],
  "degisen": [
   "Temiz sayfa teması açık fon renklerini kaldırır"
  ],

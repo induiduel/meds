@@ -19,6 +19,9 @@ export interface DersBirimi {
   no: number;
   baslik: string;
   uyeler: Paket[];
+  /** Sesli / .medspak üyesinden: kurul ve dönem (yoksa belirsiz) */
+  kurul?: number;
+  donem?: '2025-2026' | '2026-2027';
 }
 export type BirimDurum = 'tam' | 'kismi' | 'yok' | 'iniyor' | 'guncelleme' | 'hata';
 
@@ -105,6 +108,10 @@ export function dersBirimleri(katalog: Paket[]): DersBirimi[] {
     kullanilan.add(og.id);
   }
   void al;
+  for (const b of birimler) {
+    const k = b.uyeler.find((u) => u.kurul);
+    if (k) { b.kurul = k.kurul; b.donem = k.donem; }
+  }
   for (const b of birimler) b.uyeler.sort((x, y) => UYE_SIRA.indexOf(x.modul) - UYE_SIRA.indexOf(y.modul));
   return birimler.sort((a, b) => a.grup.localeCompare(b.grup, 'tr') || a.no - b.no || a.baslik.localeCompare(b.baslik, 'tr'));
 }

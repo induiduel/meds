@@ -11,11 +11,25 @@ import {
 } from '../../services/cevrimdisi/paketMotoru';
 import { birimDurumu, boyutYaz, dersBirimleri, katla, UYE_AD, type BirimDurum, type DersBirimi } from '../../services/cevrimdisi/dersBirimleri';
 import { navigateTo } from '../../router';
+import { aktifKurul } from '../../services/kurulTakvimi';
 
 type Suz = 'tum' | 'tam' | 'kismi' | 'yok' | 'guncelleme';
 const SUZ_AD: Record<Suz, string> = { tum: 'Tümü', tam: 'Tam cihazda', kismi: 'Yarım kalan', yok: 'İndirilmedi', guncelleme: 'Güncelleme var' };
 const DURUM_AD: Record<BirimDurum, string> = { tam: 'Tam cihazda', kismi: 'Kısmen', yok: 'İndirilmedi', iniyor: 'İniyor', guncelleme: 'Güncelleme var', hata: 'Hata' };
 const SAYFA = 40;
+type Donem = 'hepsi' | 'guncel' | 'arsiv';
+const DONEM_AD: Record<Donem, string> = { hepsi: 'Hepsi', guncel: 'Güncel 2026-27', arsiv: 'Arşiv 2025-26' };
+const SUZ_KEY = 'medsoru_cv_suzgec_v1';
+/** Kurul: 0 = tümü, -1 = kurulu belirsiz (soru çözücü / etkileşimli ders gibi tüm kurullara ortak içerik) */
+function suzOku(): { kurul: number; donem: Donem } {
+  const aktif = aktifKurul().kurul;
+  try {
+    const v = JSON.parse(localStorage.getItem(SUZ_KEY) || 'null');
+    // Seçim yalnız aynı aktif kurulda hatırlanır: kurul değişince kendiliğinden yeni aktif kurula geçer
+    if (v && v.aktif === aktif) return { kurul: Number(v.kurul) || 0, donem: ['hepsi', 'guncel', 'arsiv'].includes(v.donem) ? v.donem : 'hepsi' };
+  } catch { /* depo yok */ }
+  return { kurul: aktif, donem: 'hepsi' };
+}
 
 /** Üyenin ilgili sayfası: çevrimdışı iken açılarak gerçek kullanımda denenir */
 function uyeAdresi(p: Paket): string | null {
@@ -34,16 +48,33 @@ export default function DersBirimleriPano() {
   const [ara, setAra] = useState('');
   const [grup, setGrup] = useState('');
   const [suz, setSuz] = useState<Suz>('tum');
+  const [{ kurul, donem }, setKd] = useState(suzOku);
+  useEffect(() => {
+    try { localStorage.setItem(SUZ_KEY, JSON.stringify({ aktif: aktifKurul().kurul, kurul, donem })); } catch { /* depo yok */ }
+  }, [kurul, donem]);
+  const aktifNo = aktifKurul().kurul;
   const [acik, setAcik] = useState<Record<string, boolean>>({});
   const [limit, setLimit] = useState(SAYFA);
   const [sonuclar, setSonuclar] = useState<Record<string, DenetimSonuc>>({});
   const [deniyor, setDeniyor] = useState<{ yapilan: number; toplam: number } | null>(null);
 
+  const donemdeki = useMemo(() => birimler.filter((b) => donem === 'hepsi' || (donem === 'arsiv' ? b.donem === '2025-2026' : b.donem !== '2025-2026')), [birimler, donem]);
+  const kurulSayi = useMemo(() => {
+    const m = new Map<number, number>();
+    donemdeki.forEach((b) => m.set(b.kurul || -1, (m.get(b.kurul || -1) || 0) + 1));
+    return m;
+  }, [donemdeki]);
+  const donemSayi = useMemo(() => ({
+    hepsi: birimler.length,
+    guncel: birimler.filter((b) => b.donem !== '2025-2026').length,
+    arsiv: birimler.filter((b) => b.donem === '2025-2026').length,
+  }), [birimler]);
+
   const grupAdlari = useMemo(() => {
     const m = new Map<string, number>();
-    birimler.forEach((b) => m.set(b.grup, (m.get(b.grup) || 0) + 1));
+    donemdeki.filter((b) => kurul === 0 || (kurul === -1 ? !b.kurul : b.kurul === kurul)).forEach((b) => m.set(b.grup, (m.get(b.grup) || 0) + 1));
     return [...m.entries()].sort((a, b) => b[1] - a[1]);
-  }, [birimler]);
+  }, [donemdeki, kurul]);
   const durumlar = useMemo(() => {
     const m = new Map<string, ReturnType<typeof birimDurumu>>();
     birimler.forEach((b) => m.set(b.id, birimDurumu(b, S)));
@@ -59,7 +90,8 @@ export default function DersBirimleriPano() {
 
   const liste = useMemo(() => {
     const q = katla(ara.trim());
-    return birimler.filter((b) => {
+    return donemdeki.filter((b) => {
+      if (kurul === -1 ? !!b.kurul : kurul > 0 && b.kurul !== kurul) return false;
       if (grup && b.grup !== grup) return false;
       if (q && !katla(`${b.baslik} ${b.grup} ${b.uyeler.map((u) => UYE_AD[u.modul]).join(' ')}`).includes(q)) return false;
       const d = durumlar.get(b.id)!.durum;
@@ -69,7 +101,8 @@ export default function DersBirimleriPano() {
       if (suz === 'guncelleme') return d === 'guncelleme';
       return true;
     });
-  }, [birimler, ara, grup, suz, durumlar]);
+  }, [donemdeki, kurul, ara, grup, suz, durumlar]);
+  useEffect(() => { setLimit(SAYFA); setGrup(''); }, [kurul, donem]);
   useEffect(() => { setLimit(SAYFA); }, [ara, grup, suz]);
 
   const cihazdaki = (ids: string[]) => ids.filter((id) => ['tamam', 'guncelleme'].includes(paketDurumu(id, S)));
@@ -118,6 +151,29 @@ export default function DersBirimleriPano() {
         </div>
       )}
 
+      <div className="cv-kd" role="group" aria-label="Dönem">
+        <span className="cv-kd-ad">Dönem</span>
+        <div className="cv-segment">
+          {(Object.keys(DONEM_AD) as Donem[]).map((d) => (
+            <button key={d} type="button" className={donem === d ? 'is-on' : ''} aria-pressed={donem === d} onClick={() => setKd({ kurul, donem: d })}>
+              {DONEM_AD[d]} <small>{donemSayi[d]}</small>
+            </button>
+          ))}
+        </div>
+      </div>
+      <div className="cv-kd" role="group" aria-label="Kurul">
+        <span className="cv-kd-ad">Kurul</span>
+        <div className="cv-brans">
+          <button type="button" className={`cv-cip${kurul === 0 ? ' is-on' : ''}`} aria-pressed={kurul === 0} onClick={() => setKd({ kurul: 0, donem })}>Tümü <small>{donemdeki.length}</small></button>
+          {[1, 2, 3, 4, 5, 6].map((n) => (
+            <button key={n} type="button" className={`cv-cip${kurul === n ? ' is-on' : ''}${n === aktifNo ? ' is-aktif' : ''}`} aria-pressed={kurul === n}
+              disabled={!kurulSayi.get(n) && kurul !== n} onClick={() => setKd({ kurul: n, donem })}>
+              Kurul {n}{n === aktifNo ? ' · şimdi' : ''} <small>{kurulSayi.get(n) || 0}</small>
+            </button>
+          ))}
+          {!!kurulSayi.get(-1) && <button type="button" className={`cv-cip${kurul === -1 ? ' is-on' : ''}`} aria-pressed={kurul === -1} onClick={() => setKd({ kurul: -1, donem })}>Kurula bağlı olmayan <small>{kurulSayi.get(-1)}</small></button>}
+        </div>
+      </div>
       <div className="cv-arac">
         <label className="cv-ara">
           <Search aria-hidden="true" />
@@ -137,7 +193,16 @@ export default function DersBirimleriPano() {
         ))}
       </div>
 
-      {!liste.length ? <div className="cv-bos">Bu süzgeçte ders yok.</div> : (
+      {!liste.length ? (
+        <div className="cv-bos cv-bos-sut">
+          <span>Bu süzgeçte ders yok{kurul > 0 ? ` (Kurul ${kurul}${donem === 'guncel' ? ', güncel dönem' : donem === 'arsiv' ? ', arşiv' : ''})` : ''}.</span>
+          <span className="cv-bos-eylem">
+            {donem !== 'hepsi' && <button type="button" className="cv-btn" onClick={() => setKd({ kurul, donem: 'hepsi' })}>Güncel + arşivi göster</button>}
+            {kurul !== 0 && <button type="button" className="cv-btn" onClick={() => setKd({ kurul: 0, donem })}>Tüm kurullar</button>}
+            {(ara || suz !== 'tum') && <button type="button" className="cv-btn" onClick={() => { setAra(''); setSuz('tum'); }}>Aramayı ve durumu sıfırla</button>}
+          </span>
+        </div>
+      ) : (
         <ul className="cv-dliste">
           {liste.slice(0, limit).map((b, i) => {
             const d = durumlar.get(b.id)!;
@@ -155,6 +220,7 @@ export default function DersBirimleriPano() {
                       <b>{b.no && b.uyeler.every((u) => u.modul !== 'ogren' || b.uyeler.length > 1) ? `${b.no}. ` : ''}{b.baslik}</b>
                       <small>
                         <em className={`cv-etiket is-d-${d.durum}`}>{DURUM_AD[d.durum]}</em>
+                        {b.donem && <em className={`cv-etiket${b.donem === '2025-2026' ? ' is-arsiv' : ' is-acc'}`}>{b.donem === '2025-2026' ? 'Arşiv 2025-26' : 'Güncel 2026-27'}{b.kurul ? ` · K${b.kurul}` : ''}</em>}
                         {' '}{d.tamam}/{d.toplam} bölüm · {boyutYaz(d.durum === 'tam' ? d.toplamBayt : d.kalanBayt || d.toplamBayt)}{d.durum !== 'tam' && d.kalanBayt ? ' kalan' : ''}
                       </small>
                     </span>
