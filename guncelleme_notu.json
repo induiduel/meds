@@ -1,17 +1,17 @@
 {
- "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
- "onem": 408,
- "baslik": "Menü yeni görünümde",
- "maddeler": [
-  "Menüde sınava kalan gün kartı, son açtığın sayfalar ve renkli sayfa simgeleri",
-  "Gruplar ayrı kartlarda; araçlar tek sırada küçük simgeler",
-  "Bilgisayarda kenar menüsü gruplarına simge eklendi"
- ],
- "eklenen": [],
- "degisen": [],
- "duzeltilen": [
-  "Tireyle bitişik yazılan kısaltmalar (DSM-5, MAO-A, HIV-1, 5-HTTLPR) artık slaytta doğru yerde işaretleniyor.",
-  "Büyük harfli Türkçe sözcükler (BİLİNÇ, KOMA) kısaltma sayılmıyor."
- ],
- "silinen": []
+  "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
+  "onem": 409,
+  "baslik": "Menü yeni görünümde",
+  "maddeler": [
+    "Menüde sınava kalan gün kartı, son açtığın sayfalar ve renkli sayfa simgeleri",
+    "Gruplar ayrı kartlarda; araçlar tek sırada küçük simgeler",
+    "Bilgisayarda kenar menüsü gruplarına simge eklendi"
+  ],
+  "eklenen": [],
+  "degisen": [],
+  "duzeltilen": [
+    "Tireyle bitişik yazılan kısaltmalar (DSM-5, MAO-A, HIV-1, 5-HTTLPR) artık slaytta doğru yerde işaretleniyor.",
+    "Büyük harfli Türkçe sözcükler (BİLİNÇ, KOMA) kısaltma sayılmıyor."
+  ],
+  "silinen": []
 }
