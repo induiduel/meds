@@ -7,7 +7,7 @@
 import CanliDersKimlikHedef from './CanliDersKimlikHedef';
 import { CanliDersBaslangic } from './CanliDersBaslangic';
 import React, { Suspense, lazy, memo, useCallback, useMemo, useEffect, useLayoutEffect, useRef, useState } from 'react';
-import { AlertTriangle, ArrowLeftRight, ArrowUpDown, BookOpen, Download, ChevronDown, ChevronLeft, ChevronRight, ChevronUp, Check, Columns2, Copy, Crosshair, FileText, Maximize2, Minimize2, Minus, Package, Pause, Play, Plus, RotateCcw, Rows2, ScrollText } from 'lucide-react';
+import { AlertTriangle, ArrowLeftRight, ArrowUpDown, BookOpen, Download, ChevronDown, ChevronLeft, ChevronRight, ChevronUp, Check, Columns2, Copy, Crosshair, FileText, Maximize2, Minimize2, Minus, Package, Pause, Play, Palette, Plus, RotateCcw, Rows2, ScrollText } from 'lucide-react';
 import { navigateTo, pathFor } from '../../router';
 import { driveViewUrl, useDeckPdf } from '../../services/deckPdfService';
 import { releasePageFullscreen, wasRecentlyScrollingOrTouching } from '../../utils/fullscreen';
@@ -101,7 +101,8 @@ const ilkGorunum = (): Gorunum => {
     const v = localStorage.getItem(GORUNUM_KEY);
     if (v === 'metin' || v === 'ikisi' || v === 'pdf') return v;
   } catch { /* yok */ }
-  return genisMi() ? 'ikisi' : 'metin';
+  // v15 (tasarım S19): telefonda da PDF üstte, metin altta
+  return genisMi() || document.documentElement.dataset.v15 === 'on' ? 'ikisi' : 'metin';
 };
 const GORUNUMLER: { id: Gorunum; ad: string; ikon: React.ReactNode }[] = [
   { id: 'metin', ad: 'Metin', ikon: <ScrollText aria-hidden /> },
@@ -211,7 +212,8 @@ export default function CanliDersDers({ dersKey, kamp }: { dersKey: string; kamp
   });
   const [oynaticiAcik, setOynaticiAcik] = useState(true);
   // Açılış paneli: bu ders zaten çalmıyorsa ve paragraf bağlantısıyla gelinmediyse ders açılınca gösterilir
-  const [acilis, setAcilis] = useState(() => !kamp && !(cdDurum().key === dersKey && cdDurum().playing)
+  // v15 (tasarım S19): açılış kartı yok, ders doğrudan PDF + metinle açılır; ses oynat düğmesiyle başlar
+  const [acilis, setAcilis] = useState(() => !v15 && !kamp && !(cdDurum().key === dersKey && cdDurum().playing)
     && !new URLSearchParams(location.search).get('p') && !location.hash.startsWith('#p-'));
   useEffect(() => { if (buDersCaliyor) setAcilis(false); }, [buDersCaliyor]);
   const [yildizModalAcik, setYildizModalAcik] = useState(false);
@@ -515,14 +517,14 @@ export default function CanliDersDers({ dersKey, kamp }: { dersKey: string; kamp
           setGorunum={setGorunum}
           onGorunum={() => setGor15(true)}
           onMenu={() => setMenu15(true)}
-          ek={kamp && metinGoster ? <YaziAyar yazi={yazi} setYazi={setYazi} /> : null}
-        />
           hizli={{
             yildiz: yildizSayisi, onYildiz: () => setYildizModalAcik(true),
             onOgren: detay.desteId ? () => navigateTo(`/dersler/interaktif/${detay.desteId}`) : undefined,
             vurguVar: !!detay.vurgu, vurgu: vurguAcik, setVurgu: setVurguAcik,
             yazi, setYazi, yaziEnaz: YAZI_ENAZ, yaziEncok: YAZI_ENCOK,
           }}
+          ek={kamp && metinGoster ? <YaziAyar yazi={yazi} setYazi={setYazi} /> : null}
+        />
       ) : (
       <header className="cd-ders-bas">
         {kamp ? kamp.geri : <GeriBag arsiv={Boolean(detay.arsiv || detay.donem === '2025-2026' || detay.key.startsWith('y25-'))} />}
@@ -1568,6 +1570,14 @@ function CdPdfBolme({ detay, canli }: { detay: CdDetay; canli: boolean }) {
   const cumle = useCd((s) => (canli ? s.cumle : -1));
   const { durdu, durdur, surdur } = useTakip();
   const [zoom, setZoom] = useState(1);
+  const [sayfaTema, setSayfaTema] = useState<'ozgun' | 'temiz' | 'sepya' | 'gece'>(() => {
+    try { const v = localStorage.getItem('medsoru_cd_sayfa_tema'); return v === 'temiz' || v === 'sepya' || v === 'gece' ? v : 'ozgun'; } catch { return 'ozgun'; }
+  });
+  const sonrakiTema = () => setSayfaTema((t) => {
+    const n = ({ ozgun: 'temiz', temiz: 'sepya', sepya: 'gece', gece: 'ozgun' } as const)[t];
+    try { localStorage.setItem('medsoru_cd_sayfa_tema', n); } catch { /* yok */ }
+    return n;
+  });
   const [elle, setElle] = useState<{ dosya: number; sayfa: number } | null>(null);
   const wrapRef = useRef<HTMLDivElement>(null);
   const [hataMsj, setHataMsj] = useState<string | null>(null);
@@ -1769,12 +1779,13 @@ function CdPdfBolme({ detay, canli }: { detay: CdDetay; canli: boolean }) {
             <button type="button" className="cd-ib" onClick={undoLastDrawing} disabled={!geriAlinir} aria-label="Son çizimi geri al" title="Son çizimi geri al"><Undo2 /></button>
           </>
         )}
+        <button type="button" className="cd-ib" onClick={sonrakiTema} aria-label="Sayfa temasını değiştir" title={`Sayfa teması: ${({ ozgun: 'Özgün', temiz: 'Temiz', sepya: 'Sepya', gece: 'Gece' })[sayfaTema]} (değiştirmek için tıkla)`}><Palette /></button>
         <button type="button" className="cd-ib" onClick={() => setZoom((z) => Math.max(0.5, +(z - 0.25).toFixed(2)))} aria-label="Uzaklaştır"><Minus /></button>
         <span className="cd-pdf-zoom">{Math.round(zoom * 100)}%</span>
         <button type="button" className="cd-ib" onClick={() => setZoom((z) => Math.min(3, +(z + 0.25).toFixed(2)))} aria-label="Yakınlaştır"><Plus /></button>
       </div>
       {v15 && <CdV15KalemKutusu />}
-      <div className="cd-pdf-govde dpv-body" ref={wrapRef}>
+      <div className={`cd-pdf-govde dpv-body tema-${sayfaTema}`} ref={wrapRef}>
         {!info ? (
           <div className="cd-bos" role="status"><span className="cd-spin" aria-hidden /> PDF aranıyor…</div>
         ) : src && !hataMsj ? (

@@ -1,12 +1,12 @@
 {
  "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
- "onem": 432,
- "baslik": "Ders başlığında hızlı düğmeler",
+ "onem": 433,
+ "baslik": "Sesli derste PDF sayfa teması",
  "maddeler": [
-  "Yazı boyutu, önemli yer vurgusu, yıldızlı paragraflar ve Öğren destesi düğmeleri ders başlığına taşındı"
+  "Sesli ders PDF araç çubuğuna tema düğmesi eklendi: Özgün, Temiz, Sepya, Gece"
  ],
  "eklenen": [
-  "Ders başlığında A−/A+, vurgu, yıldız (sayaçlı) ve Öğren kısayolları"
+  "Sesli derste sayfa teması düğmesi"
  ],
  "degisen": [],
  "duzeltilen": [],

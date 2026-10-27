@@ -151,12 +151,12 @@
 
 /* ---------- sayfa temaları (yalnız görünüm; PDF değişmez, çevrimdışı çalışır) ---------- */
 /* Temiz: saf beyaz zemin, koyu ve keskin metin, yumuşak gölge */
-.dpv.tema-temiz .pdv-canvas, .dpv.tema-temiz .pdv-thumb-c canvas { filter: contrast(1.12) brightness(1.03) saturate(.92); }
-.dpv.tema-temiz .pdv-page, .dpv.tema-temiz .pdv-thumb-c { background: #fff; box-shadow: 0 1px 2px rgb(15 23 42 / .06), 0 6px 20px rgb(15 23 42 / .07); }
-.dpv.tema-temiz .pdv-track { background: #f4f6fa; }
+.tema-temiz .pdv-canvas, .tema-temiz .pdv-thumb-c canvas { filter: contrast(1.12) brightness(1.03) saturate(.92); }
+.tema-temiz .pdv-page, .tema-temiz .pdv-thumb-c { background: #fff; box-shadow: 0 1px 2px rgb(15 23 42 / .06), 0 6px 20px rgb(15 23 42 / .07); }
+.tema-temiz .pdv-track { background: #f4f6fa; }
 /* Sepya: göz yormayan sıcak kâğıt */
-.dpv.tema-sepya .pdv-canvas, .dpv.tema-sepya .pdv-thumb-c canvas { filter: sepia(.28) contrast(.96) brightness(.98); mix-blend-mode: multiply; }
-.dpv.tema-sepya .pdv-page, .dpv.tema-sepya .pdv-thumb-c { background: #f4ecd8; }
+.tema-sepya .pdv-canvas, .tema-sepya .pdv-thumb-c canvas { filter: sepia(.28) contrast(.96) brightness(.98); mix-blend-mode: multiply; }
+.tema-sepya .pdv-page, .tema-sepya .pdv-thumb-c { background: #f4ecd8; }
 
 /* Başlık gizliyken geri açma sekmesi */
 .dpv { position: relative; }
@@ -375,3 +375,5 @@ ol.pdv-sb-liste { list-style-type: decimal; } ul.pdv-sb-liste { list-style-type:
 @media (prefers-reduced-motion: reduce) { .pdv-cz path, .pdv-cz rect, .pdv-cz-parca { transition: none; } .pdv-cz-bag-cizgi, .pdv-cz-bag-uc, .pdv-cz-sema, .pdv-cz-dugum { animation: none; } .pdv-cz-perde { transition: none; } }
 @keyframes pdv-cz-gel { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }
 @media (prefers-reduced-motion: reduce) { .pdv-cz-dugum-kap { animation: none; } }
+.tema-gece .pdv-canvas, .tema-gece .pdv-thumb-c canvas { filter: invert(.9) hue-rotate(180deg); }
+.tema-gece .pdv-page, .tema-gece .pdv-thumb-c { background: #1b1b1b; }
