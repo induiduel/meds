@@ -13,11 +13,17 @@ import { getAsistanSureGruplari, getCozucuSureGruplari } from './sure/spotsSureV
 import { SpotsSureDiyalog } from './sure/SpotsSureDiyalog';
 import { SpotCozucuIstatistikModal } from './stats/SpotCozucuIstatistikModal';
 import { cozucuyaGit, onemeGit } from './spotsYol';
-import { KurulBos, kurulKimlikten, useKurulParam } from '../kurul/KurulSuzgec';
-import { KurulSecici, kurulIcerikVar } from '../kurul/KurulSecici';
+import { KurulBos, kurulKimlikten } from '../kurul/KurulSuzgec';
+import { KurulSecici, kurulIcerikVar, useSeciliKurul } from '../kurul/KurulSecici';
 
-/** ?kurul=N varsa yalnız o kurulun branşları (Kurul 1: önek yok; Kurul 2+: k2noroloji) */
-const kurulBranslari = (k: number | null) => (k ? BRANSLAR.filter((b) => kurulKimlikten(b.id) === k) : BRANSLAR);
+/** Seçili kurulun branşları (Kurul 1: önek yok; Kurul 2+: k2noroloji). Adreste kurul yoksa seçicinin vurguladığı
+ * varsayılan kurul kullanılır: vurgu ile liste aynı kurulu gösterir (eski hata: Kurul 2 vurgulu, liste süzgeçsizdi). */
+const kurulBranslari = (k: number) => BRANSLAR.filter((b) => kurulKimlikten(b.id) === k);
+/** Kurul zaten seçili: "Kurul 2 Tıbbi Genetik" → "Tıbbi Genetik" */
+const sadeAd = (ad: string) => ad.replace(/^Kurul \d+ /, '');
+/** Başlanmış dersler önce (ilerlemeye göre), sonra büyükten küçüğe */
+const sirala = <T extends { pay?: number; n: number }>(a: T[]) =>
+  [...a].sort((x, y) => (+((y.pay || 0) > 0) - +((x.pay || 0) > 0)) || ((y.pay || 0) > 0 ? (y.pay || 0) - (x.pay || 0) : 0) || y.n - x.n);
 
 const sayi = (n: number) => n.toLocaleString('tr-TR');
 const yuzde = (a: number, b: number) => (b ? Math.round((a / b) * 100) : 0);
@@ -41,12 +47,12 @@ export const CozucuBaslangic: React.FC = () => {
   const stats = useSpotCozucuStats();
   const [sure, setSure] = useState(false);
   const [istatistik, setIstatistik] = useState(false);
-  const kurul = useKurulParam();
+  const kurul = useSeciliKurul();
   const branslar = useMemo(() => kurulBranslari(kurul), [kurul]);
 
   const satirlar = useMemo<BaslangicSatir[] | null>(() => {
     if (!dizinler) return null;
-    return branslar.flatMap((b) => {
+    return sirala(branslar.flatMap((b) => {
       const dz = dizinler[b.id];
       if (!dz?.dersler.length) return [];
       let toplam = 0, cozulen = 0;
@@ -54,13 +60,14 @@ export const CozucuBaslangic: React.FC = () => {
       const konu = new Set(dz.dersler.map((d) => d.no)).size;
       return [{
         id: b.id,
-        ad: b.tam,
+        n: toplam,
+        ad: sadeAd(b.tam),
         alt: `${konu} konu · ${sayi(toplam)} soru${cozulen ? ` · ${sayi(cozulen)} çözüldü` : ''}`,
         pay: toplam ? cozulen / toplam : 0,
         durum: cozulen ? `%${yuzde(cozulen, toplam)}` : undefined,
         onSec: () => cozucuyaGit({ brans: b.id }),
       }];
-    });
+    }));
   }, [dizinler, ilerleme, branslar]);
 
   const toplam = useMemo(() => {
@@ -72,7 +79,7 @@ export const CozucuBaslangic: React.FC = () => {
 
   const son = stats.lastCozucu;
   const sonDers = son ? dizinler?.[son.brans]?.dersler.find((d) => d.kod === son.kod) : undefined;
-  const devam = son && (!kurul || kurulKimlikten(son.brans) === kurul) && (!dizinler || sonDers) && !(sonDers && ozet(ilerleme[sonDers.kod], sonDers.soru).tamam)
+  const devam = son && kurulKimlikten(son.brans) === kurul && (!dizinler || sonDers) && !(sonDers && ozet(ilerleme[sonDers.kod], sonDers.soru).tamam)
     ? {
         etiket: `Kaldığın yerden devam · ${bransTanim(son.brans).ad}`,
         ad: `${son.dersNo}. ${son.baslik}${sonDers && setAdi(sonDers) ? ` · ${setAdi(sonDers)}` : ''}`,
@@ -89,10 +96,10 @@ export const CozucuBaslangic: React.FC = () => {
         aciklama="Soruyu sesli dinle, cevapla; her seçeneğin nedenini ders sunumundan öğren."
         ozet={toplam !== null ? <><b>{satirlar?.length ?? 0}</b> ders · <b>{sayi(toplam)}</b> soru{stats.cozulenSoru > 0 && <> · <b>%{stats.dogrulukOrani}</b> doğru</>}</> : undefined}
         devam={devam}
-        listeAd="Bir ders seç"
+        listeAd={`Kurul ${kurul} dersleri`}
         satirlar={satirlar}
-        ust={<KurulSecici secili={kurul} yol={(k) => `/sorular/soru-cozucu/kurul${k}`} tumuYol="/sorular/soru-cozucu" icerik={(k) => kurulIcerikVar('soru_cozucu', k)} />}
-        bos={kurul ? <KurulBos kurul={kurul} ne="soru çözücü dersi" /> : undefined}
+        ust={<KurulSecici secili={kurul} yol={(k) => `/sorular/soru-cozucu/kurul${k}`} icerik={(k) => kurulIcerikVar('soru_cozucu', k)} />}
+        bos={<KurulBos kurul={kurul} ne="soru çözücü dersi" />}
         alt={
           <>
             <details className="bs-nasil">
@@ -137,9 +144,9 @@ export const OnemBaslangic: React.FC = () => {
   const ogr = useOgrenilen();
   const [sure, setSure] = useState(false);
   const son0 = useMemo(onemSonOku, []);
-  const kurul = useKurulParam();
+  const kurul = useSeciliKurul();
   const branslar = useMemo(() => kurulBranslari(kurul), [kurul]);
-  const son = son0 && (!kurul || kurulKimlikten(son0.brans) === kurul) ? son0 : null;
+  const son = son0 && kurulKimlikten(son0.brans) === kurul ? son0 : null;
 
   const ogrKod = useMemo(() => {
     const r: Record<string, number> = {};
@@ -149,20 +156,21 @@ export const OnemBaslangic: React.FC = () => {
 
   const satirlar = useMemo<BaslangicSatir[] | null>(() => {
     if (!dizinler) return null;
-    return branslar.flatMap((b) => {
+    return sirala(branslar.flatMap((b) => {
       const dz = dizinler[b.id];
       if (!dz?.dersler.length) return [];
       const madde = dz.dersler.reduce((t, d) => t + d.madde, 0);
       const o = dz.dersler.reduce((t, d) => t + Math.min(d.madde, ogrKod[d.kod] || 0), 0);
       return [{
         id: b.id,
-        ad: b.tam,
+        n: madde,
+        ad: sadeAd(b.tam),
         alt: `${dz.dersler.length} konu · ${sayi(madde)} madde${o ? ` · ${sayi(o)} öğrenildi` : ''}`,
         pay: madde ? o / madde : 0,
         durum: o ? `%${yuzde(o, madde)}` : undefined,
         onSec: () => onemeGit({ brans: b.id }),
       }];
-    });
+    }));
   }, [dizinler, ogrKod, branslar]);
 
   const toplam = useMemo(() => (dizinler ? branslar.reduce((t, b) => t + (dizinler[b.id]?.dersler.reduce((s, d) => s + d.madde, 0) || 0), 0) : null), [dizinler, branslar]);
@@ -182,10 +190,10 @@ export const OnemBaslangic: React.FC = () => {
         aciklama="Her konunun sınavda en çok sorulan bilgileri, önem sırasıyla."
         ozet={toplam !== null ? <><b>{sayi(toplam)}</b> madde · <b>{sayi(ogr.size)}</b> öğrenildi</> : undefined}
         devam={devam}
-        listeAd="Bir ders seç"
+        listeAd={`Kurul ${kurul} dersleri`}
         satirlar={satirlar}
-        ust={<KurulSecici secili={kurul} yol={(k) => `/kamplar/kurul${k}/en-onemliler`} tumuYol="/en-onemliler" icerik={(k) => kurulIcerikVar('en_onemliler', k)} />}
-        bos={kurul ? <KurulBos kurul={kurul} ne="önem listesi" /> : undefined}
+        ust={<KurulSecici secili={kurul} yol={(k) => `/kamplar/kurul${k}/en-onemliler`} icerik={(k) => kurulIcerikVar('en_onemliler', k)} />}
+        bos={<KurulBos kurul={kurul} ne="önem listesi" />}
         alt={<button type="button" className="bs-link" onClick={() => setSure(true)}><Clock aria-hidden />Sesli asistan süreleri</button>}
       />
       {sure && (

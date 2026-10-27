@@ -19,7 +19,7 @@ export default function KurulSeridi({ soruEkleGoster = true, sola = false }: { s
   if (p) {
     const ne = p.gecenGun === 0 ? 'sınavı bugün' : p.gecenGun === 1 ? 'sınavı dündü' : `sınavı ${p.gecenGun} gün önceydi`;
     return (
-      <aside className={`ks is-sinav${sola ? ' is-sol' : ''}`} aria-label="Sınav sonrası">
+      <aside className={`ks kseridi is-sinav${sola ? ' is-sol' : ''}`} aria-label="Sınav sonrası">
         <Sparkles aria-hidden className="ks-i" />
         <p className="ks-m">
           <b>Kurul {p.kurul.kurul} {ne}.</b> Hatırladığın soruları kaçıncı soru olduğuyla ekle; olası sorular her gece bunlardan kurulur.
@@ -32,7 +32,7 @@ export default function KurulSeridi({ soruEkleGoster = true, sola = false }: { s
     );
   }
   return (
-    <aside className={`ks${sola ? ' is-sol' : ''}`} aria-label="Aktif kurul">
+    <aside className={`ks kseridi${sola ? ' is-sol' : ''}`} aria-label="Aktif kurul">
       <CalendarClock aria-hidden className="ks-i" />
       <p className="ks-m">
         <b>Kurul {t.aktif.kurul}</b> <span className="ks-ad">{kurulAdi(t.aktif)}</span>

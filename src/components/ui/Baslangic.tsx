@@ -8,7 +8,6 @@ import React, { useId } from 'react';
 import { ChevronRight, Play, type LucideIcon } from 'lucide-react';
 import { useAppearance } from '../../utils/appearance';
 import { useV15Baslik } from '../v15/baslik';
-import { Halka } from '../v15/Halka';
 import '../../styles/baslangic.css';
 
 export interface BaslangicSatir {
@@ -19,6 +18,8 @@ export interface BaslangicSatir {
   pay?: number;
   /** sağdaki kısa durum (ör. "%40", "Bitti") */
   durum?: string;
+  /** sıralama ağırlığı (soru/madde sayısı) */
+  n?: number;
   onSec: () => void;
 }
 
@@ -53,19 +54,23 @@ export const Baslangic: React.FC<{
     return (
       <div className="bsl15">
         <h1 className="sr-only">{baslik}</h1>
-        {ust && <div className="bsl15-ust">{ust}</div>}
+        {(ust || ozet) && (
+          <div className="bsl15-ust">
+            {ust}
+            {ozet && <p className="v15-cap bsl15-ozet">{ozet}</p>}
+          </div>
+        )}
         {devam && (
-          <button type="button" className="bsl15-devam v15-card" onClick={devam.onClick}>
-            <span className="v15-tile is-a" aria-hidden><Play /></span>
+          <button type="button" className="bsl15-devam" onClick={devam.onClick}>
+            <span className="bsl15-oynat" aria-hidden><Play /></span>
             <span className="bsl15-t">
-              <span className="v15-label">{devam.etiket}</span>
+              <span className="bsl15-etiket">{devam.etiket}</span>
               <b>{devam.ad}</b>
             </span>
-            {devam.sag && <span className="v15-cap">{devam.sag}</span>}
-            <ChevronRight className="v15-chev" aria-hidden />
+            {devam.sag && <span className="bsl15-sag">{devam.sag}</span>}
+            <ChevronRight className="bsl15-ok" aria-hidden />
           </button>
         )}
-        {ozet && <p className="v15-cap bsl15-ozet">{ozet}</p>}
         <section className="bsl15-sec" aria-labelledby={capId}>
           <h2 className="v15-h2" id={capId}>{listeAd}</h2>
           {satirlar === null ? (
@@ -78,12 +83,14 @@ export const Baslangic: React.FC<{
                 const pay = Math.max(0, Math.min(1, s.pay || 0));
                 return (
                   <li key={s.id}>
-                    <button type="button" className="bsl15-kart v15-card" onClick={s.onSec}>
+                    <button type="button" className={`bsl15-kart${pay > 0 ? ' is-basladi' : ''}${pay >= 1 ? ' is-bitti' : ''}`} onClick={s.onSec}>
                       <span className="bsl15-t">
                         <b>{s.ad}</b>
                         <span className="v15-cap">{s.alt}</span>
                       </span>
-                      <Halka pct={pay * 100} etiket={s.durum || `%${Math.round(pay * 100)}`} boyut={40} />
+                      {s.durum ? <span className="bsl15-durum">{s.durum}</span> : <span className="bsl15-basla">Başla</span>}
+                      <ChevronRight className="bsl15-ok" aria-hidden />
+                      <span className="bsl15-cubuk" aria-hidden><i style={{ width: `${pay * 100}%` }} /></span>
                     </button>
                   </li>
                 );

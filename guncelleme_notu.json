@@ -1,10 +1,10 @@
 {
  "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
- "onem": 514,
- "baslik": "Ders sayfasında çalışma istatistikleri",
+ "onem": 515,
+ "baslik": "Soru çözücü: kurul listesi düzeltildi, yeni sade görünüm",
  "maddeler": [
-  "Her dersin sayfasında açılır \"Bu dersteki çalışman\" kartı: toplam ve modül modül süre, tekrar sayısı, ilk/son çalışma",
-  "Çözülen çıkmış, örnek ve mini soru sayıları artık derse göre tutulur"
+  "Soru çözücü ve En önemliler artık yalnız seçili kurulun derslerini gösterir",
+  "Ders kartları sadeleşti: ilerleme çubuğu, başladığın dersler önde, dokunuşa tepki veren kartlar"
  ],
  "eklenen": [],
  "degisen": [],

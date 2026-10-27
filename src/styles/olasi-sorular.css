@@ -180,7 +180,7 @@
 }
 
 /* ── Ana ekran kurul şeridi ──────────────────────────────────────────── */
-.ks {
+.ks.kseridi {
   display: flex; align-items: center; gap: 10px; width: 100%; max-width: 860px; min-width: 0; box-sizing: border-box;
   margin: 0 auto; padding: 8px 12px; border: 1px solid var(--color-line); border-radius: 12px; background: var(--color-white);
   font: 400 13.5px/1.4 var(--font-sans); color: var(--color-ink-2);
@@ -190,9 +190,9 @@
 .ks-m b { color: var(--color-ink); font-weight: 600; }
 .ks-kalan { flex: none; white-space: nowrap; font-variant-numeric: tabular-nums; }
 .ks-kalan b { color: var(--color-ink); }
-.ks.is-sinav { flex-wrap: wrap; align-items: flex-start; border-color: var(--color-accent); background: var(--color-accent-soft); padding: 10px 12px; }
-.ks.is-sinav .ks-i { margin-top: 2px; }
-.ks.is-sinav .ks-m { flex: 1 1 240px; white-space: normal; }
+.ks.kseridi.is-sinav { flex-wrap: wrap; align-items: flex-start; border-color: var(--color-accent); background: var(--color-accent-soft); padding: 10px 12px; }
+.ks.kseridi.is-sinav .ks-i { margin-top: 2px; }
+.ks.kseridi.is-sinav .ks-m { flex: 1 1 240px; white-space: normal; }
 .ks-d { display: flex; gap: 6px; flex-wrap: wrap; margin-left: auto; }
 .ks-dug {
   display: inline-flex; align-items: center; gap: 6px; min-height: 34px; padding: 0 12px; border-radius: 999px;
@@ -202,4 +202,4 @@
 .ks-dug svg { width: 14px; height: 14px; }
 .ks-dug.is-ana { background: var(--color-accent); color: var(--color-on-accent, var(--color-white)); }
 @media (max-width: 420px) { .ks-ad { display: none; } }
-.ks.is-sol { max-width: 740px; margin: 0; }
+.ks.kseridi.is-sol { max-width: 740px; margin: 0; }

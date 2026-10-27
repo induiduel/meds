@@ -1106,3 +1106,21 @@ Her maddede: belirti · kök neden · Kurul 2 kuralı · kapı durumu. Kanıtlar
 - **Kök neden:** (1) `userDataSyncService` yayın kaynağı `ORIGIN` sekme başına üretiliyordu; aynı cihazın öteki sekmesinin gönderimi `user_data_changed` ile "başka cihaz" sayılıp `pullFromServer` başlatıyordu. (2) `lastBackedUpFingerprint` sekme belleğindeydi ama `localStorage` sekmeler arasında ortak: öteki sekmenin yazdıkları bu sekmenin parmak izini değiştirdiği için `pullFromServer` çekmek yerine yeniden yedek gönderiyor, bu da öteki sekmeyi tetikliyordu (ping-pong).
 - **Çözüm:** `ORIGIN` cihaz düzeyinde (`medsoru_sync_origin_v1`), son gönderilen parmak izi `localStorage`'da (`medsoru_sync_fp_v1`); ikisi de eşitleme izin listesinde değil. Sınama: iki yeni kodlu sekmede ikinci sekme açılınca ilk sekme 25 sn'de 1 not çekme + 1 yedek (önce 55 istek).
 - **Kural:** Sekmeler arası ortak olan duruma (localStorage) bağlı karar verilerini sekme belleğinde tutma; yayın kaynağı kimliği cihaz düzeyinde olmalı. Sınamada eski kodlu açık sekmeleri kapat (yeni/eski sürüm karışımı ölçümü bozar).
+
+## H123 · Tam içerik hattı ders başına 4–6 saat sürüyor, soru/metin/PDF hataları geri dönüş yaratıyordu (2026-10-28)
+- **Belirti:** k2-05 ve k2-08 her biri ≈5 saat; sorularda çıkmış dışı üslup ve ipuçlu şık, metinde kaynak dışı bilgi, PDF'te tasarım hataları.
+- **Kök neden:** (1) hoca dökümü CPU'da tek başına saatler sürüyordu; (2) birbirinden bağımsız adımlar sırayla yürüyordu;
+  (3) her alt ajan 1.100 satırlık defteri bütünüyle okuyordu, ilgili kural kalabalıkta kayboluyordu; (4) denetçi reddedince
+  bütün metin yeniden yazılıyordu; (5) soru üslubu, sayfa kaynağı ve PDF görünümü için betik kapısı yoktu, hatalar ancak
+  denetçide ya da kullanıcıda ortaya çıkıyordu.
+- **Kural:** `docs/TAM_HAT_HIZLI_AKIS.md` — E0 `hazirlik.py` (döküm GPU ≤2500 MHz, AGENTS §10 altıncı istisna); alt ajana yalnız
+  `kural_secici.py --oku <aşama>`; yalnız hatalı parça yeniden yazılır (sayısal hedefte ±%10, kalite hatasında tolerans yok);
+  ders başına tek denetçi.
+- **Kapı — EKLENDİ:** `scripts/tam_hat/soru_uslup.py` (ders çağrıştıran kök, ipuçlu uzun doğru şık, kazanım bağı, kalıp payı),
+  `kaynak_kapisi.py` (kayıt içeriği `s` sayfasında mı), `pdf_tarama.py` (boş sayfa, taşma, üst üste, harf harf kırılma).
+
+## H124 · Soru çözücüde Kurul 2 seçili görünürken Kurul 1 dersleri listeleniyordu (2026-10-28)
+- **Belirti:** `/sorular/soru-cozucu` açılınca kurul şeridinde "Kurul 2 · şimdi" vurgulu, ama liste 11 dersi (Kurul 1 + "Kurul 2 …" önekli) birlikte gösteriyordu; şeridin etrafında da boş, geniş bir kutu vardı.
+- **Kök neden:** `KurulSecici` adreste kurul yokken vurguyu `varsayilanKurul()`'dan alıyor, `BransBaslangic` ise süzgeci `useKurulParam()`'dan (adres → null = süzgeçsiz) alıyordu; vurgu ve liste iki ayrı kaynaktan besleniyordu. Kutu: `olasi-sorular.css` içindeki kapsamsız `.ks` kuralı aynı sınıf adını taşıyan kurul seçicisine kenarlık/zemin/860 px veriyordu.
+- **Çözüm:** çözücü ve En önemliler başlangıcı `useSeciliKurul()` kullanır (vurgulanan kurul = listelenen kurul), "Tümü" kaldırıldı, ad önekindeki "Kurul N" atılır, başlanmış dersler önde sıralanır. Olası sorular şeridi `.ks.kseridi` olarak kapsamlandı.
+- **Kural:** seçili durum gösteren bir bileşen ile içeriği süzen kod AYNI kaynaktan (aynı kanca) okur; görsel vurgu için ayrı varsayılan hesaplanmaz. Ortak bileşenlerin sınıf önekleri (`.ks`, `.kh`) başka sayfa CSS'inde kapsamsız kullanılmaz.
