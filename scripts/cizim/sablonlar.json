@@ -555,6 +555,20 @@
         "kaynak": "k2-04-serebrovaskuler-hastaliklar-ve-inme",
         "zaman": "2026-10-27"
       }
+    },
+    "tip_ozellik": {
+      "ad": "Tip → ayırt edici özellik",
+      "duzen": "tablo",
+      "basliklar": [
+        "Tip",
+        "Ayırt edici özellik"
+      ],
+      "ne_zaman": "bir hastalığın tiplerinin ya da alt türlerinin her birini ayıran özellik (kalıtım, şiddet, bulgu)",
+      "ornek": "Lobar / semilobar / alobar holoprozensefali",
+      "eklenme": {
+        "kaynak": "k2-08-beyin-ve-iskelet-sistemi-gelisimi-genetigi",
+        "zaman": "2026-10-27"
+      }
     }
   }
 }

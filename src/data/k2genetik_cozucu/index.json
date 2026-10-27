@@ -1,0 +1,60 @@
+{
+ "surum": "k2genetik-cozucu-v1",
+ "ses": "EMA",
+ "sesler": [
+  {
+   "id": "ema",
+   "ad": "EMA",
+   "varsayilan": true
+  }
+ ],
+ "ortak": {
+  "yanlis": {
+   "v": "1e0f04980772",
+   "sure": 1.2
+  },
+  "dene": {
+   "v": "542e22f41067",
+   "sure": 1.464
+  },
+  "oc-bas": {
+   "v": "d4294f978922",
+   "sure": 4.056
+  },
+  "oc-yol": {
+   "v": "78ce651ad1c9",
+   "sure": 2.736
+  },
+  "oc-ele": {
+   "v": "82d7cc9f8aaf",
+   "sure": 3.888
+  },
+  "oc-elendi": {
+   "v": "7262be77f830",
+   "sure": 2.424
+  },
+  "oc-kalan": {
+   "v": "fa784d764914",
+   "sure": 4.656
+  },
+  "oc-son": {
+   "v": "86b08b507f99",
+   "sure": 3.84
+  }
+ },
+ "dersler": [
+  {
+   "kod": "2g01",
+   "no": 8,
+   "baslik": "Beyin ve İskelet Sistemi Gelişimi Genetiği",
+   "soru": 28,
+   "ornek": 22,
+   "cikmis": 6,
+   "ses": true,
+   "sayfa": [
+    8,
+    85
+   ]
+  }
+ ]
+}

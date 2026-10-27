@@ -1001,3 +1001,30 @@ Her maddede: belirti · kök neden · Kurul 2 kuralı · kapı durumu. Kanıtlar
 - **Belirti:** Okunan cümle bazen izlenmiyor, bazen metin yanlış yere atlıyor, "Canlı konuma dön" kendiliğinden çıkıyordu.
 - **Kök neden:** (1) Paragraf henüz çizilmemişken kaydırma tek denemeyle vazgeçiyordu. (2) Gizli (display:none) bölmede ölçüm sıfır çıkıp yanlış konuma kaydırıyordu. (3) Yerleşim kaynaklı küçük scroll olayları elle gezinme sayılıp takibi 8 sn durduruyordu.
 - **Çözüm / kural:** Eksik öğede kısa aralıkla yeniden dene; sıfır boyutta kaydırma yapma; 3 px altı scroll farkını kullanıcı eylemi sayma. Yeni takip/kaydırma kodu bu üç durumu karşılamalı.
+
+## H113 · KMB video oynatıcısı takılıyor, yazılar üst üste biniyor (2026-10-27)
+- **Belirti:** KMB adım/ders videoları cümle geçişlerinde takıla takıla ilerliyor, adımdan adıma geçişte duraksıyor; altyazı,
+  denetim çubuğu, "Adım n" başlık kartı ve sahne etiketleri üst üste biniyor; mobilde denetimler iki satıra kırılıyor, ±10 sn yazıları
+  görüntüyü sürekli kapatıyordu.
+- **Kök neden:** (1) Adım videosu tek sürekli EMA klibine bağlı ama cümleler arasına görüntüde bekleme payı konmuş; oynatıcı her bekleme
+  sonunda sesi duraklatıp `currentTime` ile ağdan (HTTP aralık isteği) yeniden konumluyordu → her cümlede tamponlama duraksaması.
+  Ayrıca saat her karede ses saatine sert eşleniyordu (ses zamanı kaba güncellendiğinde görüntü ileri-geri zıplıyordu). (2) Ders videosunda
+  adım geçişinde 0,9 sn bekleme + 1,8 sn başlık kartı + yeni sesin ilk kez inmesi. (3) `kmb.css` v1→v6 altı katman birbirini
+  ezen kurallarla büyümüştü (altyazı bir katmanda akışta, ötekinde mutlak; denetim çubuğu tam ekranda yüzerken altyazı da aynı yere).
+- **Kalıcı çözüm:** Klip bütünüyle blob olarak önceden indirilir (`sesOnYukle`, sonraki adımınki de); bekleme sonrası yakın konumdaysa ses
+  konumlanmadan sürer, yalnız 0,6 sn üstü sapmada (bellekten, anında) konumlanır; küçük sapma yumuşak düzeltilir, ses tamponlanırken görüntü
+  bekler. Başlık kartı kaldırıldı, geçiş 250 ms. `kmb.css` tek katman olarak yeniden yazıldı: normal kipte denetimler sahnenin ALTINDA tek
+  satır, altyazı sahne içinde tek kutu; tam ekranda denetim yüzer, altyazı onun üstüne çıkar; aynı anda görünen etiketler birbirinden itilir.
+- **Kural:** Sesle eşlenen animasyonda ses ağdan parça parça konumlanmaz (blob/önbellek); saat sert değil yumuşak eşlenir. Stil dosyasına
+  "vN: önceki kuralları ez" katmanı eklenmez — kural yerinde değiştirilir; üst üste binen öge eklerken mutlak konumlu her katmanın yeri tek yerde tanımlanır.
+
+## H114 · Çizim ileri-sızıntı denetimi yalnız ses metnine bakıyordu: gen sembolleri (HOX, PAX6, FGFR3) panelde reddedildi (2026-10-27, k2-08)
+- **Belirti:** Genetik dersinde şablonlu panelde "PAX6", "FGFR3" gibi sembol içeren hücreler "henüz anlatılmamış terim" diye elendi.
+- **Kök neden:** `cizim_uret` `onceki` metni `cumleler.md` (ses metni, "paks altı", "fe ge fe re üç") idi; öğrencinin okuduğu `ekran` metni (PAX6) denetime girmiyordu.
+- **Çözüm:** `cizim_uret.py` v2 `ekran` metnini de `onceki`ye katar (cümle sayısı tutuyorsa). Eşik değişmedi.
+- **Kural:** ileri-sızıntı, öğrencinin gördüğü (ekran) ve duyduğu (ses) metnin birleşimine göre denetlenir.
+
+## H115 · Elle çizimde koordinat tahmini kenar kapısından geçmiyor; `cizim_kapisi` K3 elle çapada boş geçiyor (2026-10-27, k2-08)
+- **Belirti:** gözle yazılan kontur noktaları `kenar_orani` < %70 ile düştü (s.82 fotoğraf: %26); `cizim_kapisi` "şekil 0/0 çizimli" verdi.
+- **Kök neden:** kontur noktaları Canny kenarına ±5 px içinde olmalı; tahmin yetmez. K3 çapadaki `sekil` alanını sayar, elle yazılan çapa `resim: 0` kullandığı için (k2-04 dahil) K3 boş (0/0) geçer.
+- **Çözüm/kural:** noktalar görüntüden kenara oturtulur (eşik/snap, ham kenar haritası bakılır, bindirme görüntüsü okunur); K3 yerine elle ölçü: lazeri resim olan cümlelerin ≥%40'ı çizimli (k2-08: 8/14). Açık iş: K3 `resim` alanını da şekil beyanı saymalı (diğer derslerin sonucunu değiştireceği için bu turda dokunulmadı).

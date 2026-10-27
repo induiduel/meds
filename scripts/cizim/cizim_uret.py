@@ -899,6 +899,19 @@ def main() -> int:
     W.mkdir(parents=True, exist_ok=True)
     dok = Path(a.dok) if a.dok else (W / "dok")
     C = cumleler(dok / "cumleler.md")
+    EK: dict[str, str] = {}   # H113: ileri sızıntı denetimi öğrencinin okuduğu 'ekran' metnini de bilir (gen sembolleri: HOX ↔ ses 'hoks')
+    try:
+        _v2 = json.loads((KOK / "v2" / f"{a.key}.json").read_text(encoding="utf-8"))
+        _pn = 0
+        for _b in _v2["bolumler"]:
+            for _p in _b["paragraflar"]:
+                for _ci, _c in enumerate(_p["cumleler"]):
+                    EK[f"P{_pn}.C{_ci}"] = _c.get("ekran") or ""
+                _pn += 1
+    except Exception:  # noqa: BLE001
+        EK = {}
+    if len(EK) != len(C):
+        EK = {}
     capa = json.loads(Path(a.capa).read_text())["p"]
     isr = json.loads(Path(a.isaret).read_text())
     hz = json.loads((KOK / "hizalama" / f"{a.key}.json").read_text())
@@ -1062,7 +1075,7 @@ def main() -> int:
                     x0, x1 = sorted((a_[0], b_[0])); y0, y1 = sorted((a_[1], b_[1]))
                     k = {**k, "pdf_oku": [round(max(0, x0 - 0.012), 4), round(max(0, y0 - 0.012), 4), round(min(1, x1 + 0.012), 4), round(min(1, y1 + 0.012), 4)]}
                     say["pdf_oku_odak"] = say.get("pdf_oku_odak", 0) + 1
-            onceki = " ".join(C[x] for x in sira[:sira.index(cid) + 1])
+            onceki = " ".join(C[x] + " " + EK.get(x, "") for x in sira[:sira.index(cid) + 1])
             if k.get("_sil"):
                 say["ret"]["anlam denetimi sildi"] = say["ret"].get("anlam denetimi sildi", 0) + 1
                 continue
