@@ -1,12 +1,11 @@
 {
  "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
- "onem": 435,
- "baslik": "Çevrimdışı: dersler tek yerde, test ve onarım",
+ "onem": 436,
+ "baslik": "Sesli ders yeni oynatıcı ve renk düzeltmeleri",
  "maddeler": [
-  "Çevrimdışı ekranında yeni \"Dersler\" sekmesi: bir dersin sesli dersi, ders paketi (.medspak), etkileşimli dersi, soru çözücüsü ve en önemlileri tek düğmeyle iner",
-  "Arama, branş ve durum süzgeciyle dersleri kaydırmadan bulabilirsin",
-  "\"Test et\" indirdiğin dersin internetsiz çalışıp çalışmadığını denetler, sorun varsa \"Onar\" eksikleri yeniden indirir",
-  ".medspak ders paketleri artık çevrimdışı yönetimde: güncellemesi izlenir, cihazdan açılır"
+  "Sesli ders tasarıma göre yenilendi: ders doğrudan slayt + metinle açılır, okunan cümle sarı vurgulu",
+  "Alt oynatıcıda bölüm dilimli çubuk, bölüm adı ve büyük oynat düğmesi",
+  "Koyu temada kaybolan beyaz yazılar ve yükleme göstergelerinin renkleri düzeltildi"
  ],
  "eklenen": [
   "Çevrimdışı Dersler sekmesi",
