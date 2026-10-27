@@ -90455,5 +90455,1621 @@
       "accuracyScore": 100,
       "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
     }
+  },
+  {
+    "id": "s13-kirmizi_noron",
+    "term": "Kırmızı nöron",
+    "aliases": [
+      "red neuron"
+    ],
+    "category": "patoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Patoloji",
+    "instructorAndSource": "Ders notu: Herniasyon  s.13",
+    "definition": "Akut geri dönüşümsüz hipoksik-iskemik hasara uğramış, gövdesi büzülmüş, çekirdeği piknotik ve sitoplazması yoğun eozinofilik nöron.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Hasardan yaklaşık 12 saat sonra H&E ile tanınır; Nissl maddesi ve çekirdekçik kaybolur.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-merkezi_kromatoliz",
+    "term": "Merkezi kromatoliz",
+    "aliases": [
+      "santral kromatoliz",
+      "central chromatolysis"
+    ],
+    "category": "patoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Patoloji",
+    "instructorAndSource": "Ders notu: Herniasyon  s.14",
+    "definition": "Akson hasarı sonrası nöron gövdesinin büyüyüp yuvarlaklaşması, çekirdeğin perifere itilmesi ve Nissl maddesinin perifere dağılmasıyla tanımlanan tablo.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Kırmızı nöronda gövde küçülür; merkezi kromatolizde ise büyür.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-gliyoz",
+    "term": "Gliyoz",
+    "aliases": [
+      "glioz",
+      "gliosis"
+    ],
+    "category": "patoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Patoloji",
+    "instructorAndSource": "Ders notu: Herniasyon  s.18",
+    "definition": "Astrositlerin hipertrofi ve hiperplaziyle onarım ve yara izi oluşturduğu, MSS'nin en temel kronik hasar yanıtı.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Beyinde iyileşmeye fibroblast katkısı sınırlıdır; skar astrositlerle oluşur.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-gemistositik_astrosit",
+    "term": "Gemistositik astrosit",
+    "aliases": [
+      "reaktif astrosit"
+    ],
+    "category": "patoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Patoloji",
+    "instructorAndSource": "Ders notu: Herniasyon  s.19",
+    "definition": "Hasar sonrası büyümüş veziküler çekirdekli, belirgin çekirdekçikli, geniş parlak pembe sitoplazmalı ve kalın dallanan uzantılı reaktif astrosit.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-rosenthal_lifleri",
+    "term": "Rosenthal lifleri",
+    "aliases": [
+      "Rosenthal fibers"
+    ],
+    "category": "patoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Patoloji",
+    "instructorAndSource": "Ders notu: Herniasyon  s.21",
+    "definition": "Astrosit uzantılarında görülen kalın, parlak eozinofilik protein agregatları.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Kronik gliyozda ve bazı düşük dereceli gliomalarda görülür.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-distrofik_norit",
+    "term": "Distrofik nörit",
+    "aliases": [],
+    "category": "patoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Patoloji",
+    "instructorAndSource": "Ders notu: Herniasyon  s.17",
+    "definition": "Bazı nörodejeneratif hastalıklarda kalınlaşmış ve kıvrımlı hâle gelen nöronal uzantı.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-cubuk_hucre",
+    "term": "Çubuk hücre",
+    "aliases": [
+      "rod hücre",
+      "rod cell"
+    ],
+    "category": "patoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Patoloji",
+    "instructorAndSource": "Ders notu: Herniasyon  s.24",
+    "definition": "Enfeksiyonlarda çekirdeği uzamış aktive mikroglia hücresi.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-mikroglia_nodulu",
+    "term": "Mikroglia nodülü",
+    "aliases": [
+      "mikrogliyal nodül"
+    ],
+    "category": "patoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Patoloji",
+    "instructorAndSource": "Ders notu: Herniasyon  s.24",
+    "definition": "Hasar alanında, özellikle viral enfeksiyonlarda kümelenen aktive mikroglia hücrelerinin oluşturduğu belirsiz nodül.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-noronofaji",
+    "term": "Nöronofaji",
+    "aliases": [
+      "neuronophagia"
+    ],
+    "category": "patoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Patoloji",
+    "instructorAndSource": "Ders notu: Herniasyon  s.24",
+    "definition": "Hasarlı nöronların mikroglia tarafından fagosite edilmesi.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-vazojenik_odem",
+    "term": "Vazojenik ödem",
+    "aliases": [],
+    "category": "patoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Patoloji",
+    "instructorAndSource": "Ders notu: Herniasyon  s.32",
+    "definition": "Kan-beyin bariyeri bütünlüğünün bozulmasıyla sıvının damar içinden hücre dışı alana geçtiği serebral ödem tipi.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Lokal ya da yaygın olabilir; inflamasyon ve tümör örnektir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-sitotoksik_odem",
+    "term": "Sitotoksik ödem",
+    "aliases": [],
+    "category": "patoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Patoloji",
+    "instructorAndSource": "Ders notu: Herniasyon  s.33",
+    "definition": "Nöron ve glia hasarına bağlı hücre içi sıvı artışıyla giden serebral ödem tipi.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Yaygın hipoksik-iskemik hasar ve toksin maruziyeti sonrası görülür.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-iletisim_kurmayan_hidrosefali",
+    "term": "İletişim kurmayan hidrosefali",
+    "aliases": [
+      "obstrüktif hidrosefali",
+      "nonkomünikan hidrosefali"
+    ],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Patoloji",
+    "instructorAndSource": "Ders notu: Herniasyon  s.38",
+    "definition": "Ventriküler sistemdeki lokal bir engel nedeniyle yalnız engelin proksimalindeki ventriküllerin genişlediği hidrosefali.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Monro deliği tıkanması ve akuaduktus basısı tipik nedenlerdir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-iletisimsel_hidrosefali",
+    "term": "İletişimsel hidrosefali",
+    "aliases": [
+      "komünikan hidrosefali"
+    ],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Patoloji",
+    "instructorAndSource": "Ders notu: Herniasyon  s.39",
+    "definition": "Ventriküller arası akış korunmuşken BOS emiliminin azalması nedeniyle tüm ventriküler sistemin genişlediği hidrosefali.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-hidrosefali_ex_vacuo",
+    "term": "Hidrosefali ex vacuo",
+    "aliases": [],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Patoloji",
+    "instructorAndSource": "Ders notu: Herniasyon  s.42",
+    "definition": "Beyin hacmi kaybına sekonder BOS artışı; BOS kaybolan dokunun yerini doldurur.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "BOS artışı primer süreç değildir; enfarkt ve nörodejeneratif hastalıklar nedendir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-subfalsin_herniasyon",
+    "term": "Subfalsin herniasyon",
+    "aliases": [
+      "singulat herniasyon",
+      "subfalcine herniation"
+    ],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Patoloji",
+    "instructorAndSource": "Ders notu: Herniasyon  s.47",
+    "definition": "Asimetrik hemisfer genişlemesinde singulat girusun falks serebri kenarının altına itilmesi.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Ön serebral arter basısı karşı bacakta güçsüzlük yapar.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-transtentorial_herniasyon",
+    "term": "Transtentorial herniasyon",
+    "aliases": [
+      "unkal herniasyon",
+      "uncinate herniasyon"
+    ],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Patoloji",
+    "instructorAndSource": "Ders notu: Herniasyon  s.48",
+    "definition": "Temporal lobun medial kısmının tentorium serbest kenarına sıkışması.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "3. kraniyal sinir basısıyla aynı tarafta pupil dilatasyonu olur.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-tonsiller_herniasyon",
+    "term": "Tonsiller herniasyon",
+    "aliases": [
+      "tonsillar herniation"
+    ],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Patoloji",
+    "instructorAndSource": "Ders notu: Herniasyon  s.51",
+    "definition": "Serebellar tonsillerin foramen magnumdan aşağı yer değiştirip beyin sapı ve medullayı sıkıştırması.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Solunum ve kardiyak merkezler etkilendiği için sıklıkla hızla ölümcüldür.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-kernohan_centigi",
+    "term": "Kernohan çentiği",
+    "aliases": [
+      "Kernohan notch"
+    ],
+    "category": "patoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Patoloji",
+    "instructorAndSource": "Ders notu: Herniasyon  s.49",
+    "definition": "Transtentorial herniasyonda karşı serebral pedinkülün tentoriuma sıkışmasıyla oluşan çentik.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Herniasyon tarafında (ipsilateral) hemipareziye yol açar; yanlış lokalize edici bulgudur.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-duret_kanamasi",
+    "term": "Duret kanaması",
+    "aliases": [
+      "Duret hemorrhage"
+    ],
+    "category": "patoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Patoloji",
+    "instructorAndSource": "Ders notu: Herniasyon  s.49",
+    "definition": "İlerlemiş transtentorial herniasyonda orta beyin ve ponsta orta hat damarlarının bozulmasıyla oluşan küçük, çoğul kanamalar.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-lokalize_edici_belirti",
+    "term": "Lokalize edici belirti",
+    "aliases": [],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Patoloji",
+    "instructorAndSource": "Ders notu: Herniasyon  s.27",
+    "definition": "Lezyonun yerini gösteren nörolojik belirti; örneğin serebral arter tıkanıklığı sonrası karşı tarafta güçsüzlük.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Zihinsel durum değişikliği gibi lokalize edici olmayan belirtiler yalnız bozukluğun varlığını gösterir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-secici_duyarlilik",
+    "term": "Seçici duyarlılık",
+    "aliases": [
+      "selektif vulnerabilite"
+    ],
+    "category": "fizyoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Patoloji",
+    "instructorAndSource": "Ders notu: Herniasyon  s.7",
+    "definition": "Aynı popülasyondaki nöronların ortak özellikleri nedeniyle belirli hasar türlerine özellikle duyarlı olması.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Klinik tablonun neden bölgesel olduğunu açıklar.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-ependimal_hucre",
+    "term": "Ependimal hücre",
+    "aliases": [
+      "ependim"
+    ],
+    "category": "anatomi",
+    "kurul": "Kurul 1",
+    "discipline": "Patoloji",
+    "instructorAndSource": "Ders notu: Herniasyon  s.26",
+    "definition": "Ventrikülleri ve omuriliğin santral kanalını döşeyen hücre.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "CMV yaygın ependimal hasar ve viral inklüzyon yapabilir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-koroid_pleksus",
+    "term": "Koroid pleksus",
+    "aliases": [
+      "plexus choroideus"
+    ],
+    "category": "anatomi",
+    "kurul": "Kurul 1",
+    "discipline": "Patoloji",
+    "instructorAndSource": "Ders notu: Herniasyon  s.26",
+    "definition": "Ependimle devamlı olan ve BOS üretiminden sorumlu ventrikül içi yapı.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-araknoid_granulasyon",
+    "term": "Araknoid granülasyon",
+    "aliases": [
+      "araknoid villus",
+      "Pacchioni granülasyonu"
+    ],
+    "category": "anatomi",
+    "kurul": "Kurul 1",
+    "discipline": "Patoloji",
+    "instructorAndSource": "Ders notu: Herniasyon  s.36",
+    "definition": "BOS'un subaraknoid boşluktan emilerek kana karıştığı yapı (araknoid villus).",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Emilim azalırsa iletişimsel hidrosefali gelişir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-lissensefali",
+    "term": "Lissensefali",
+    "aliases": [
+      "agiri"
+    ],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Patoloji",
+    "instructorAndSource": "Ders notu: Herniasyon  s.60",
+    "definition": "Girusların tam kaybıyla giden kortikal gelişim anomalisi.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Derste 'kuş beyinli' benzetmesiyle anlatılır.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-polimikrogiri",
+    "term": "Polimikrogiri",
+    "aliases": [],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Patoloji",
+    "instructorAndSource": "Ders notu: Herniasyon  s.60",
+    "definition": "Düzensiz şekilli çok sayıda küçük girusla karakterize kortikal anomali.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-arrinensefali",
+    "term": "Arrinensefali",
+    "aliases": [
+      "arhinensefali"
+    ],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Patoloji",
+    "instructorAndSource": "Ders notu: Herniasyon  s.60",
+    "definition": "Holoprosensefalinin hafif formu; olfaktör bulbusların yokluğu.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-siklopi",
+    "term": "Siklopi",
+    "aliases": [
+      "cyclopia"
+    ],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Patoloji",
+    "instructorAndSource": "Ders notu: Herniasyon  s.60",
+    "definition": "Ağır holoprosensefalide görülen yüz orta hat kusuru.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-chiari_tip_ii_malformasyonu",
+    "term": "Chiari tip II malformasyonu",
+    "aliases": [
+      "Arnold–Chiari malformasyonu"
+    ],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Patoloji",
+    "instructorAndSource": "Ders notu: Herniasyon  s.62",
+    "definition": "Küçük posterior fossa, şekilsiz orta hat serebellum ve vermisin foramen magnumdan aşağı uzandığı malformasyon.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Sıklıkla hidrosefali ve lomber miyelomeningoselle birliktedir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-chiari_tip_i_malformasyonu",
+    "term": "Chiari tip I malformasyonu",
+    "aliases": [],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Patoloji",
+    "instructorAndSource": "Ders notu: Herniasyon  s.62",
+    "definition": "Düşük yerleşimli serebellar tonsillerin foramen magnumdan sarktığı hafif posterior fossa malformasyonu.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Belirtiler çoğu kez erişkinde ortaya çıkar; cerrahi dekompresyonla gerileyebilir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-dandy_walker_malformasyonu",
+    "term": "Dandy–Walker malformasyonu",
+    "aliases": [
+      "Dandy-Walker"
+    ],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Patoloji",
+    "instructorAndSource": "Ders notu: Herniasyon  s.63",
+    "definition": "Genişlemiş posterior fossa, serebellar vermis yokluğu ve orta hatta büyük kistle karakterize malformasyon.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Sıklıkla hidrosefali ve gelişim geriliğiyle birliktedir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-noronal_depolama_hastaliklari",
+    "term": "Nöronal depolama hastalıkları",
+    "aliases": [],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Patoloji",
+    "instructorAndSource": "Ders notu: Herniasyon  s.65",
+    "definition": "Nöron içinde depolama materyali birikip sonunda nöron ölümüne yol açan, çoğu otozomal resesif kalıtsal hastalıklar.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Kortikal tutulum bilişsel kayıp ve nöbet yapar; Tay–Sachs, Niemann–Pick örnektir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-mitokondriyal_ensefalomiyopati",
+    "term": "Mitokondriyal ensefalomiyopati",
+    "aliases": [],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Patoloji",
+    "instructorAndSource": "Ders notu: Herniasyon  s.66",
+    "definition": "Mitokondriyal veya nükleer gen mutasyonlarına bağlı, beyin ve iskelet kası başta çoklu dokuyu etkileyen oksidatif fosforilasyon bozuklukları.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Gri madde yüksek metabolik gereksinim nedeniyle beyaz maddeden ağır etkilenir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-afazi",
+    "term": "Afazi",
+    "aliases": [
+      "aphasia"
+    ],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Patoloji",
+    "instructorAndSource": "Ders notu: Herniasyon  s.47",
+    "definition": "Dili anlama, konuşma, okuma ve yazmayı kontrol eden beyin bölgelerinin hasarıyla oluşan iletişim bozukluğu.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Subfalsin herniasyonda dominant hemisfer etkilenirse görülebilir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-hemiparezi",
+    "term": "Hemiparezi",
+    "aliases": [],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Patoloji",
+    "instructorAndSource": "Ders notu: Herniasyon  s.49",
+    "definition": "Vücudun bir yarısında kol, bacak, yüz veya gövde kaslarında kısmi güç kaybı.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-yukselen_retikuler_aktive_edici_sistem",
+    "term": "Yükselen retiküler aktive edici sistem",
+    "aliases": [
+      "ARAS"
+    ],
+    "category": "anatomi",
+    "kurul": "Kurul 1",
+    "discipline": "Patoloji",
+    "instructorAndSource": "Ders notu: Herniasyon  s.49",
+    "definition": "Beyin sapında bulunan, uyarıları talamus yoluyla kortekse ileterek uyanıklık ve bilinci düzenleyen nöron ağı.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Transtentorial herniasyonda basısı bilinç kaybı yapar.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-serebral_palsi",
+    "term": "Serebral palsi",
+    "aliases": [
+      "SP"
+    ],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Patoloji",
+    "instructorAndSource": "Ders notu: Herniasyon  s.52",
+    "definition": "Gelişen bebek beyninde doğum öncesi, sırası veya sonrası ilk aylardaki hasarla oluşan, ilerleyici olmayan kalıcı hareket ve duruş bozukluğu.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-serebrovaskuler_hastalik",
+    "term": "Serebrovasküler hastalık",
+    "aliases": [
+      "SVH"
+    ],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Patoloji",
+    "instructorAndSource": "Ders notu: 2)Serebrovasküler Hastalıklar ve İnme s.4",
+    "definition": "Beyni besleyen kan damarlarını tutan patolojik süreçlerden kaynaklanan beyin bozukluklarının genel adıdır. Trombotik tıkanma, embolik tıkanma ve damar yırtılması ana mekanizmalardır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-inme",
+    "term": "İnme",
+    "aliases": [
+      "Strok",
+      "Serebrovasküler olay"
+    ],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Patoloji",
+    "instructorAndSource": "Ders notu: 2)Serebrovasküler Hastalıklar ve İnme s.5",
+    "definition": "Trombotik tıkanma, embolik tıkanma ya da damar yırtılmasına bağlı olarak beyinde ani gelişen klinik tablodur.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-serebral_otoregulasyon",
+    "term": "Serebral otoregülasyon",
+    "aliases": [],
+    "category": "fizyoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Patoloji",
+    "instructorAndSource": "Ders notu: 2)Serebrovasküler Hastalıklar ve İnme s.8",
+    "definition": "Beyin damarlarının direncini ayarlayarak geniş bir kan basıncı aralığında serebral kan akımını sabit tutma yeteneğidir. Bozulduğunda iskemi riski artar.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-fonksiyonel_hipoksi",
+    "term": "Fonksiyonel hipoksi",
+    "aliases": [],
+    "category": "patoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Patoloji",
+    "instructorAndSource": "Ders notu: 2)Serebrovasküler Hastalıklar ve İnme s.9",
+    "definition": "Kan akımı korunduğu hâlde dokuya yeterli oksijenin ulaşamaması ya da kullanılamamasıdır. Yüksek rakım, ağır anemi, karbonmonoksit zehirlenmesi ve siyanür nedenleri arasındadır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-global_serebral_iskemi",
+    "term": "Global serebral iskemi",
+    "aliases": [
+      "Global hipoksik-iskemik ensefalopati"
+    ],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Patoloji",
+    "instructorAndSource": "Ders notu: 2)Serebrovasküler Hastalıklar ve İnme s.10",
+    "definition": "Kalp durması, şok ya da ağır hipotansiyon nedeniyle beynin tamamına yeterli kan ve oksijenin gidememesidir. Hipokampus ve neokorteks piramidal hücreleri ile Purkinje hücreleri ilk hasarlanır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-purkinje_hucresi",
+    "term": "Purkinje hücresi",
+    "aliases": [],
+    "category": "anatomi",
+    "kurul": "Kurul 1",
+    "discipline": "Patoloji",
+    "instructorAndSource": "Ders notu: 2)Serebrovasküler Hastalıklar ve İnme s.13",
+    "definition": "Serebellum korteksinin büyük nöronlarıdır; global iskemide en duyarlı nöron gruplarından biridir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Global iskemide en duyarlı üçlü: hipokampus piramidal, neokorteks piramidal ve Purkinje hücreleri.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-reaktif_gliyoz",
+    "term": "Reaktif gliyoz",
+    "aliases": [
+      "Gliozis"
+    ],
+    "category": "patoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Patoloji",
+    "instructorAndSource": "Ders notu: 2)Serebrovasküler Hastalıklar ve İnme s.16",
+    "definition": "Beyin hasarına yanıt olarak astrositlerin büyüyüp çoğalması ve glial lif ağı oluşturmasıdır; beyinde skar dokusunun karşılığıdır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Beyinde fibrozis yerine gliyoz gelişir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-fokal_serebral_iskemi",
+    "term": "Fokal serebral iskemi",
+    "aliases": [],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Patoloji",
+    "instructorAndSource": "Ders notu: 2)Serebrovasküler Hastalıklar ve İnme s.18",
+    "definition": "Bir serebral arterin tıkanması sonucu yalnız o arterin besleme alanında gelişen iskemi ve enfarkttır; boyutu ve klinik etkisi kollateral dolaşımla değişir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-kortikal_leptomeningeal_anastomoz",
+    "term": "Kortikal-leptomeningeal anastomoz",
+    "aliases": [],
+    "category": "anatomi",
+    "kurul": "Kurul 1",
+    "discipline": "Patoloji",
+    "instructorAndSource": "Ders notu: 2)Serebrovasküler Hastalıklar ve İnme s.19",
+    "definition": "Beyin yüzeyinde serebral arter dalları arasındaki bağlantılardır; Willis poligonu ile birlikte bazı bölgelerde iskemik hasarı sınırlayabilir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-embolik_enfarkt",
+    "term": "Embolik enfarkt",
+    "aliases": [],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Patoloji",
+    "instructorAndSource": "Ders notu: 2)Serebrovasküler Hastalıklar ve İnme s.20",
+    "definition": "Kalp ya da büyük arterlerden kopan bir pıhtının serebral artere yerleşmesiyle gelişen enfarkttır; trombotik enfarkttan daha sıktır ve en çok orta serebral arter alanını tutar.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "En sık tutulan alan: iç karotis arterin devamı olan orta serebral arter.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-lakuner_enfarkt",
+    "term": "Laküner enfarkt",
+    "aliases": [
+      "Lakün"
+    ],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Patoloji",
+    "instructorAndSource": "Ders notu: 2)Serebrovasküler Hastalıklar ve İnme s.58",
+    "definition": "Uzun süreli hipertansiyonda tek bir küçük penetran arter dalının tıkanmasıyla oluşan, birkaç mm çaplı kaviteli küçük enfarkttır. Bazal gangliyonlar, talamus, iç kapsül, derin beyaz madde ve ponsta görülür.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-hemorajik_enfarkt",
+    "term": "Hemorajik enfarkt",
+    "aliases": [],
+    "category": "patoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Patoloji",
+    "instructorAndSource": "Ders notu: 2)Serebrovasküler Hastalıklar ve İnme s.24",
+    "definition": "Reperfüzyonla (kollateral akım ya da embolinin çözünmesi) kan sızmasının eklendiği, çoğunlukla çoklu peteşiyal kanamalar gösteren enfarkttır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-sinir_bolgesi_su_havzasi_enfarkti",
+    "term": "Sınır bölgesi (su havzası) enfarktı",
+    "aliases": [
+      "Watershed enfarktı"
+    ],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Patoloji",
+    "instructorAndSource": "Ders notu: 2)Serebrovasküler Hastalıklar ve İnme s.32",
+    "definition": "İki büyük arterin besleme alanının en distalinde, sistemik hipotansiyon sonrası gelişen enfarkttır. En riskli bölge ön ve orta serebral arter sınırıdır; konveksitede kama şeklinde nekroz bandı oluşur.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-lobar_kanama",
+    "term": "Lobar kanama",
+    "aliases": [],
+    "category": "patoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Patoloji",
+    "instructorAndSource": "Ders notu: 2)Serebrovasküler Hastalıklar ve İnme s.42",
+    "definition": "Serebral korteks loblarında, subkortikal beyaz maddede yerleşen ve sıklıkla subaraknoid aralığa uzanan kanamadır; serebral amiloid anjiyopatinin tipik bulgusudur.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-serebral_amiloid_anjiyopati",
+    "term": "Serebral amiloid anjiyopati",
+    "aliases": [
+      "CAA"
+    ],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Patoloji",
+    "instructorAndSource": "Ders notu: 2)Serebrovasküler Hastalıklar ve İnme s.41",
+    "definition": "Orta ve küçük meningeal ve kortikal damar duvarlarında, Alzheimer hastalığındakine benzer amiloid birikmesidir. Damarlar sert ve kırılgan olur; lobar kanama ve küçük kortikal mikrokanamalar yapar.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-sakkuler_anevrizma",
+    "term": "Sakküler anevrizma",
+    "aliases": [
+      "Berry anevrizma",
+      "Çilek anevrizma"
+    ],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Patoloji",
+    "instructorAndSource": "Ders notu: 2)Serebrovasküler Hastalıklar ve İnme s.44",
+    "definition": "Büyük arter bifürkasyonlarına yakın gelişen, kas tabakası ve elastik laminası olmayan ince duvarlı arter kesesidir. Travmatik olmayan subaraknoid kanamanın en sık nedenidir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Doğuştan değildir; medyadaki yapısal kusur zemininde zamanla gelişir. ~%90'ı ön dolaşımda.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-valsalva_manevrasi",
+    "term": "Valsalva manevrası",
+    "aliases": [],
+    "category": "fizyoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Patoloji",
+    "instructorAndSource": "Ders notu: 2)Serebrovasküler Hastalıklar ve İnme s.45",
+    "definition": "Ağız ve burun kapalıyken nefes vermeye çalışarak göğüs içi basıncın geçici olarak artırılmasıdır; intrakraniyal basıncı da artırarak anevrizma rüptürünü tetikleyebilir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-fusiform_anevrizma",
+    "term": "Fusiform anevrizma",
+    "aliases": [],
+    "category": "patoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Patoloji",
+    "instructorAndSource": "Ders notu: 2)Serebrovasküler Hastalıklar ve İnme s.51",
+    "definition": "Damarın ortası geniş, uçlara doğru incelen iğ biçimli genişlemesidir; aterosklerotik anevrizmalar çoğunlukla bu şekilde ve baziler arterde görülür.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-mikotik_anevrizma",
+    "term": "Mikotik anevrizma",
+    "aliases": [],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Patoloji",
+    "instructorAndSource": "Ders notu: 2)Serebrovasküler Hastalıklar ve İnme s.51",
+    "definition": "Enfeksiyona bağlı damar duvarı hasarıyla gelişen keseciksiz intrakraniyal anevrizma tipidir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-arteriyovenoz_malformasyon",
+    "term": "Arteriyovenöz malformasyon",
+    "aliases": [
+      "AVM"
+    ],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Patoloji",
+    "instructorAndSource": "Ders notu: 2)Serebrovasküler Hastalıklar ve İnme s.53",
+    "definition": "Arterlerin kapiller ağ olmadan doğrudan venlere bağlandığı, solucan benzeri kıvrımlı damar yumağıdır. En sık ve kanama riski nedeniyle en tehlikeli beyin damar malformasyonudur; 10–30 yaşta nöbet ya da kanamayla belirti verir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Erkeklerde ≈2 kat sık; yenidoğanda yüksek debili kalp yetmezliği yapabilir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-kavernoz_malformasyon",
+    "term": "Kavernöz malformasyon",
+    "aliases": [],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Patoloji",
+    "instructorAndSource": "Ders notu: 2)Serebrovasküler Hastalıklar ve İnme s.54",
+    "definition": "İnce kolajenli duvarlı, geniş ve gevşek organize damar boşluklarından oluşan düşük akımlı malformasyondur; belirgin arteriyovenöz şant yoktur. En sık serebellum, pons ve subkortikal alanlardadır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-kapiller_telanjiektazi",
+    "term": "Kapiller telanjiektazi",
+    "aliases": [],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Patoloji",
+    "instructorAndSource": "Ders notu: 2)Serebrovasküler Hastalıklar ve İnme s.56",
+    "definition": "İnce duvarlı, genişlemiş kapillerlerin mikroskobik odaklarıdır; çoğunlukla ponsta bulunur ve genellikle belirti vermez.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-venoz_anjiyom",
+    "term": "Venöz anjiyom",
+    "aliases": [
+      "Venöz varis"
+    ],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Patoloji",
+    "instructorAndSource": "Ders notu: 2)Serebrovasküler Hastalıklar ve İnme s.56",
+    "definition": "Genişlemiş venöz kanalların bir araya gelmesiyle oluşan, genellikle belirtisiz ve tesadüfen saptanan malformasyondur.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-kalitsal_hemorajik_telanjiektazi",
+    "term": "Kalıtsal hemorajik telanjiektazi",
+    "aliases": [],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Patoloji",
+    "instructorAndSource": "Ders notu: 2)Serebrovasküler Hastalıklar ve İnme s.53",
+    "definition": "TGF-β yolunu etkileyen mutasyonlarla ilişkili kalıtsal hastalıktır; beyinde çoklu AVM görülebilir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-yarik_kanama",
+    "term": "Yarık kanama",
+    "aliases": [],
+    "category": "patoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Patoloji",
+    "instructorAndSource": "Ders notu: 2)Serebrovasküler Hastalıklar ve İnme s.58",
+    "definition": "Hipertansiyonda küçük penetran damarların yırtılmasıyla oluşan minik kanamalardır; zamanla emilip kahverengi kenarlı, yarık benzeri boşluk bırakır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-akut_hipertansif_ensefalopati",
+    "term": "Akut hipertansif ensefalopati",
+    "aliases": [],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Patoloji",
+    "instructorAndSource": "Ders notu: 2)Serebrovasküler Hastalıklar ve İnme s.59",
+    "definition": "Diyastolik basıncın 130 mmHg'yi aştığı ağır ya da malign hipertansiyonda gelişen yaygın beyin işlev bozukluğudur; baş ağrısı, konfüzyon, kusma, konvülsiyon ve koma yapar.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-mss_vaskuliti",
+    "term": "MSS vasküliti",
+    "aliases": [],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Patoloji",
+    "instructorAndSource": "Ders notu: 2)Serebrovasküler Hastalıklar ve İnme s.61",
+    "definition": "Beyin damarlarının çoğunlukla enfeksiyon ya da sistemik otoimmün hastalıklara bağlı iltihabıdır; kan akımını bozarak enfarkt yapabilir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-vaskuler_demans",
+    "term": "Vasküler demans",
+    "aliases": [],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Patoloji",
+    "instructorAndSource": "Ders notu: 2)Serebrovasküler Hastalıklar ve İnme s.63",
+    "definition": "Çoklu, iki taraflı gri ve beyaz madde enfarktları sonucu gelişen demans sendromudur; yürüyüş bozukluğu, psödobulbar belirtiler ve fokal defisitler eşlik eder.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-karisik_demans",
+    "term": "Karışık demans",
+    "aliases": [],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Patoloji",
+    "instructorAndSource": "Ders notu: 2)Serebrovasküler Hastalıklar ve İnme s.64",
+    "definition": "Nörodejeneratif demansa serebrovasküler hastalığın eşlik ettiği tablodur.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-psodobulbar_belirtiler",
+    "term": "Psödobulbar belirtiler",
+    "aliases": [],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Patoloji",
+    "instructorAndSource": "Ders notu: 2)Serebrovasküler Hastalıklar ve İnme s.63",
+    "definition": "Duygusal labilite gibi, beyin sapı üstü yolların iki taraflı hasarına bağlı belirtilerdir; vasküler demansta görülür.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-coup_contre_coup_hasari",
+    "term": "Coup–contre-coup hasarı",
+    "aliases": [],
+    "category": "patoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Patoloji",
+    "instructorAndSource": "Ders notu: 2)Serebrovasküler Hastalıklar ve İnme s.67",
+    "definition": "Hareketli başın sabit bir cisme çarpmasıyla hem darbe yerinde (coup) hem de karşı tarafta (contre-coup) oluşan beyin kontüzyonudur.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-kontuzyon",
+    "term": "Kontüzyon",
+    "aliases": [
+      "Beyin ezilmesi"
+    ],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Patoloji",
+    "instructorAndSource": "Ders notu: 2)Serebrovasküler Hastalıklar ve İnme s.67",
+    "definition": "Hızlı doku yer değiştirmesiyle damar bozulması, kanama, doku hasarı ve ödem oluşmasıdır; girus tepeleri, orbitofrontal ve temporal kutuplar en duyarlıdır. Kama şeklindedir, geniş kısmı darbe noktasına yakındır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-laserasyon",
+    "term": "Laserasyon",
+    "aliases": [],
+    "category": "patoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Patoloji",
+    "instructorAndSource": "Ders notu: 2)Serebrovasküler Hastalıklar ve İnme s.67",
+    "definition": "Kurşun ya da kemik parçası gibi bir cismin beyne girmesiyle doku yırtılması ve kanamadır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-plaque_jaune",
+    "term": "Plaque jaune",
+    "aliases": [
+      "Sarı plak"
+    ],
+    "category": "patoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Patoloji",
+    "instructorAndSource": "Ders notu: 2)Serebrovasküler Hastalıklar ve İnme s.68",
+    "definition": "Eski kontüzyonların girus tepelerinde bıraktığı çökük, büzülmüş, sarı-kahverengi alanlardır; gliyoz ve hemosiderin yüklü makrofaj içerir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-yaygin_aksonal_hasar",
+    "term": "Yaygın aksonal hasar",
+    "aliases": [
+      "Diffüz aksonal hasar"
+    ],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Patoloji",
+    "instructorAndSource": "Ders notu: 2)Serebrovasküler Hastalıklar ve İnme s.68",
+    "definition": "Travmada açısal ivmeyle beyaz maddede aksonların hasarlanmasıdır; kafa darbesi olmadan da gelişebilir ve saatler sonra akson şişmeleriyle görülür.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-sarsinti",
+    "term": "Sarsıntı",
+    "aliases": [
+      "Konküzyon"
+    ],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Patoloji",
+    "instructorAndSource": "Ders notu: 2)Serebrovasküler Hastalıklar ve İnme s.70",
+    "definition": "Kafa travması sonrası geçici ve geri dönüşlü beyin işlev bozukluğudur; geçici bilinç kaybı olabilir, tam iyileşme olur, olaya ait amnezi kalabilir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-kronik_travmatik_ensefalopati",
+    "term": "Kronik travmatik ensefalopati",
+    "aliases": [
+      "KTE",
+      "CTE"
+    ],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Patoloji",
+    "instructorAndSource": "Ders notu: 2)Serebrovasküler Hastalıklar ve İnme s.70",
+    "definition": "Tekrarlayan kafa travması sonrası gelişen demans tablosudur; futbolcu ve boksörlerde görülür, frontal-temporal kortekste girus derinliklerinde ve damar çevresinde tau-pozitif nörofibriler yumaklar bulunur.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-kopru_venler",
+    "term": "Köprü venler",
+    "aliases": [],
+    "category": "anatomi",
+    "kurul": "Kurul 1",
+    "discipline": "Patoloji",
+    "instructorAndSource": "Ders notu: 2)Serebrovasküler Hastalıklar ve İnme s.78",
+    "definition": "Korteks yüzeyinden dural sinüslere uzanan venlerdir; yırtılmaları subdural hematoma yol açar.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-arteria_meningea_media",
+    "term": "Arteria meningea media",
+    "aliases": [
+      "Orta meningeal arter"
+    ],
+    "category": "anatomi",
+    "kurul": "Kurul 1",
+    "discipline": "Patoloji",
+    "instructorAndSource": "Ders notu: 2)Serebrovasküler Hastalıklar ve İnme s.73",
+    "definition": "Dura beslenmesini sağlayan arterdir; kafatası kırığında yırtılması epidural hematomun en sık nedenidir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-lucid_acik_donem",
+    "term": "Lucid (açık) dönem",
+    "aliases": [],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Patoloji",
+    "instructorAndSource": "Ders notu: 2)Serebrovasküler Hastalıklar ve İnme s.75",
+    "definition": "Epidural hematomda travmadan sonra hastanın kısa süre bilinçli kaldığı, ardından saatler içinde hızla kötüleştiği aralıktır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-germinal_matriks_kanamasi",
+    "term": "Germinal matriks kanaması",
+    "aliases": [],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Patoloji",
+    "instructorAndSource": "Ders notu: 2)Serebrovasküler Hastalıklar ve İnme s.84",
+    "definition": "Prematüre bebeklerde lateral ventrikül ön boynuzu komşuluğundaki germinal matrikste gelişen kanamadır; ventriküllere ilerleyip hidrosefali yapabilir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-periventrikuler_lokomalazi",
+    "term": "Periventriküler lökomalazi",
+    "aliases": [],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Patoloji",
+    "instructorAndSource": "Ders notu: 2)Serebrovasküler Hastalıklar ve İnme s.85",
+    "definition": "Prematürelerde supratentoryal periventriküler beyaz maddede gelişen iskemik enfarktlardır; beyaz madde nekrozu ve tebeşir sarısı kalsifiye plaklar bırakır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-multikistik_ensefalopati",
+    "term": "Multikistik ensefalopati",
+    "aliases": [],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Patoloji",
+    "instructorAndSource": "Ders notu: 2)Serebrovasküler Hastalıklar ve İnme s.85",
+    "definition": "Perinatal iskeminin yaygın olduğu durumlarda gri ve beyaz maddenin birlikte tutulup her iki yarıkürede büyük kistik boşlukların oluşmasıdır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
   }
 ]
