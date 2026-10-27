@@ -376,7 +376,14 @@ function TabloKart({ t }: { t: DiTablo }) {
             {t.r.map((r, j) => (
               <li key={j} style={{ '--i': j } as React.CSSProperties}>
                 <b>{r[0]}</b>
+                {t.k && t.h.length >= 3 ? (
+                  <div className="di15-kars">
+                    <span className={`di15-kars-ch is-r${(1 + t.r.map((x) => x[1]).filter((v, a, l) => l.indexOf(v) === a).indexOf(r[1])) % 5}`}>{r[1]}</span>
+                    {r.slice(2).map((c, k) => <p key={k}>{c}</p>)}
+                  </div>
+                ) : (
                 <dl>{r.slice(1).map((c, k) => <div key={k} className={`is-r${(k + 1) % 5}`}><dt>{t.h[k + 1]}</dt><dd><Hucre v={c} /></dd></div>)}</dl>
+                )}
               </li>
             ))}
           </ul>

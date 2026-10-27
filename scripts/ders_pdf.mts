@@ -4,10 +4,8 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { execFileSync } from 'node:child_process';
-import { renderToStaticMarkup } from 'react-dom/server';
-import React from 'react';
 import { dersPdfAkisi } from '../src/components/v15/dersPdfAkis';
-import DersPdfBelge from '../src/components/v15/DersPdfBelge';
+import { dersPdfHtml } from '../src/components/v15/dersPdfHtml';
 
 const R = path.resolve(import.meta.dirname, '..');
 const key = process.argv[2];
@@ -16,7 +14,7 @@ const paket = JSON.parse(fs.readFileSync(path.join(R, 'src/data/ders_icerik', ke
 const deste = JSON.parse(fs.readFileSync(path.join(R, 'src/data/decks/items', `k2p-${key}.json`), 'utf8'));
 const akis = dersPdfAkisi({ ...paket, baslik: paket.baslik || deste.title }, deste.slides);
 const css = fs.readFileSync(path.join(R, 'src/styles/v15/dersPdf.css'), 'utf8');
-const html = `<!doctype html><html lang="tr"><meta charset="utf-8"><title>${akis.baslik}</title><style>${css}</style><body>${renderToStaticMarkup(React.createElement(DersPdfBelge, { akis, kod: key.split('-').slice(0, 2).join('-').toUpperCase() }))}</body></html>`;
+const html = dersPdfHtml(akis, key.split('-').slice(0, 2).join('-').toUpperCase(), css);
 const cikti = path.resolve(process.argv[3] || `${key}.pdf`);
 const gecici = cikti.replace(/\.pdf$/, '') + '.html';
 fs.writeFileSync(gecici, html);

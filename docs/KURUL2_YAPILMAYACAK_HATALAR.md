@@ -1047,3 +1047,10 @@ Her maddede: belirti · kök neden · Kurul 2 kuralı · kapı durumu. Kanıtlar
 - **Kök neden:** Yazar parçası (`uret/parca_A.json`) interactive_table'ı yazarken 3. satırı atlamış; slayt metni beş başlığı doğru sayıyordu, tabloyla metin kıyaslanmadı. `ders_icerik_uret.py` tabloyu aynen kopyaladığı için hata iki yüzeye taşındı.
 - **Çözüm:** 3. satır (Motor sistem) parça, taslak deste ve `interactive_learning_decks.json`'a eklendi; ders içerik paketi yeniden yazıldı.
 - **Kural:** Sıra/Adım sütunlu tablolarda numaralar 1'den kesintisiz olmalı ve slayt metnindeki sayımla eşleşmeli (`docs/DERS_ICERIK_BICIMI.md`). Kapı: `scripts/ders_icerik/sira_kapisi.py`.
+
+## H118 · Anlamsız karşılaştırma tabloları (Öge / Sınıf / Gerekçe) (2026-10-27)
+- **Belirti:** "Anatomik basamak mı, muayene başlığı mı?" gibi karşılaştırma kartı/tablosu: Türkçesi bozuk, tıbbi olarak anlamsız ve öğretmiyor.
+- **Kök neden:** `ders_icerik_uret.py` tüm karşılaştırma tipli Öğren ögelerini (swipe_matching, venn_grid, feature_bidding) koşulsuz tabloya çeviriyordu; yazar, öğretilmiş iki tıbbi kavram yerine "üst kategori etiketi" (basamak/başlık) ile sınıflama kurmuştu.
+- **Çözüm:** swipe_matching tablo dışı bırakıldı; venn/feature_bidding yalnız ≥3 satır, her gerekçe ≥7 kelime ve benzersizse alınır.
+- **Kural:** Karşılaştırma yalnız iki GERÇEK tıbbi kavramı (hastalık, yapı, ilaç, mekanizma) ayırt eder; "X mi Y başlığı mı" gibi meta sınıflama, tek cümlelik özdeş gerekçe, bozuk Türkçe yasak. Yazar parçalarında da yazılmaz; yazar/denetçi bunu kontrol eder.
+- PDF/yazdırma: belge yalıtılmış iframe'de yazdırılır; uygulama DOM'unda yazdırma ve sayfa yüksekliğine eşit sabit yükseklik YASAK (boş sayfa/renk karışması).

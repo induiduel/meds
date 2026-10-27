@@ -1,11 +1,5 @@
-/* DersPdfEkranV15: ekranda kâğıt görünümü + araç çubuğu; yazdırmada uygulama kabuğu gizlenir (CLI üretiminde yüklenmez). */
+/* DersPdfEkranV15: araç çubuğu + yalıtılmış belge çerçevesi. Belgenin kendi stili dersPdf.css'te (iframe içinde). */
 .dpdf-ekran { max-width: 1010px; margin: 0 auto; width: 100%; }
 .dpdf-arac { position: sticky; top: 0; z-index: 5; display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 10px 14px; margin-bottom: 12px; border-radius: 14px; background: var(--color-white, #fff); border: 1px solid var(--color-line-soft, #e3e6ec); }
-.dpdf-ekran .dpdf { width: 960px; max-width: none; margin: 0 auto; padding: 28px 36px; box-shadow: 0 2px 24px rgba(0,0,0,.18); border-radius: 6px; }
-@media (max-width: 1040px) { .dpdf-ekran { overflow-x: auto; } }
-@media print {
-  body * { visibility: hidden; }
-  .dpdf-ekran .dpdf, .dpdf-ekran .dpdf * { visibility: visible; }
-  .dpdf-ekran .dpdf { position: absolute; left: 0; top: 0; width: auto; padding: 0; box-shadow: none; border-radius: 0; }
-  .dpdf-arac { display: none; }
-}
+.dpdf-cerceve { display: block; width: 100%; border: 0; border-radius: 8px; background: #d8dce3; }
+@media (max-width: 1040px) { .dpdf-ekran { overflow-x: auto; } .dpdf-cerceve { min-width: 1000px; } }
