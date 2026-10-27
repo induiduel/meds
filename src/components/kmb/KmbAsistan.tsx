@@ -173,16 +173,15 @@ function Ogret({ ders, ses, onBitir }: { ders: Ders; ses: SesKayit | null; onBit
             sonraki={sonraki ? { ad: `adim-${sonraki.id}`, baslik: sonraki.baslik, git: () => git(ai + 1) } : undefined} />
         ) : <div className="kmb-sahne-kap"><SahneCiz sahne={adim.sahne} durum={durum} /></div>}
         <div className="kmb-denetim">
-          <button onClick={() => git(Math.max(0, ai - 1))} disabled={ai === 0}>‹ Önceki adım</button>
-          <button onClick={() => (sonraki ? git(ai + 1) : onBitir())} className="ana">{sonraki ? 'Sonraki adım ›' : 'Hedeflerle çalışmaya geç ›'}</button>
-          <label className="kmb-oto"><input type="checkbox" checked={otomatik} onChange={(e) => setOtomatik(e.target.checked)} /> Bitince sonraki adıma geç</label>
-          <button onClick={() => setVideo(true)}>🎬 Tüm dersi tam ekran izle</button>
-          <span className="kmb-sayac">{ai + 1} / {ders.adimlar.length}</span>
+          <button onClick={() => git(Math.max(0, ai - 1))} disabled={ai === 0} aria-label="Önceki adım">‹ Önceki</button>
+          <button onClick={() => (sonraki ? git(ai + 1) : onBitir())} className="ana">{sonraki ? 'Sonraki adım ›' : 'Hedeflere geç ›'}</button>
+          <label className="kmb-oto" title="Video bitince sonraki adıma kendiliğinden geç"><input type="checkbox" checked={otomatik} onChange={(e) => setOtomatik(e.target.checked)} /> Otomatik geç</label>
+          <button className="kmb-tum" onClick={() => setVideo(true)}>Tüm ders · tam ekran</button>
         </div>
         {video && <DersVideo ders={ders} ses={ses} bas={ai} onKapat={() => setVideo(false)} izlendi={(id) => listeyeEkle(ders.kod, 'izlenen', id)} />}
       </section>
       <section className="kmb-anlatim">
-        <h2><span className="kmb-adim-no">Adım {ai + 1}</span>{adim.baslik}</h2>
+        <h2><span className="kmb-adim-no">Adım {ai + 1} / {ders.adimlar.length}</span>{adim.baslik}</h2>
         <ol className="kmb-cumleler">
           {adim.cumleler.map((c, i) => <li key={i} className={i === bi ? 'aktif' : i < bi ? 'okundu' : ''}><span>{c.metin}</span></li>)}
         </ol>
@@ -291,7 +290,7 @@ function Siralama({ ders, oyna }: { ders: Ders; oyna: (klip: string, metin: stri
           {Y.map((y, i) => <button key={y.ad} role="radio" aria-checked={i === yi} className={i === yi ? 'etkin' : ''} onClick={() => setYi(i)}>{y.ad}</button>)}
         </div>
       )}
-      <p className="kmb-yonerge">{ak.yonerge} Sağdaki kartlara sırayla dokun; yanlış yerleştirdiğine dokunursan geri alınır.</p>
+      <p className="kmb-yonerge">{ak.yonerge} Kartlara sırayla dokun; yerleştirdiğine dokunursan geri alınır.</p>
       {harita && <div className="kmb-harita-kap"><Harita L={ak.basamaklar} ak={ak.id} oyna={oyna} /></div>}
       <div className="kmb-sira-iki">
         <ol className="kmb-yuvalar">
@@ -518,7 +517,7 @@ function Sinav({ ders, ses }: { ders: Ders; ses: SesKayit | null }) {
   return (
     <div className="kmb-sinav">
       <div className="kmb-sekmeler" role="tablist">
-        {([['vaka', `Vaka senaryoları (${ders.sinav.senaryolar.length})`], ['sira', 'OSCE sıralama'], ['bul', `Sahnede bul (${ders.sinav.bul.length})`], ['yer', 'Etiketleri yerleştir'], ['kontrol', 'Değerlendirme']] as const).map(([k, ad]) => (
+        {([['vaka', 'Vakalar'], ['sira', 'OSCE sırası'], ['bul', 'Sahnede bul'], ['yer', 'Etiketle'], ['kontrol', 'Kontrol listesi']] as const).map(([k, ad]) => (
           <button key={k} role="tab" aria-selected={sekme === k} className={sekme === k ? 'etkin' : ''} onClick={() => setSekme(k)}>{ad}</button>
         ))}
       </div>
@@ -632,7 +631,7 @@ function Videolar({ ders, ses }: { ders: Ders; ses: SesKayit | null }) {
           sonraki={sonraki ? { ad: sonraki.ad, baslik: sonraki.baslik, git: () => sec(vi + 1) } : undefined} />
         <div className="kmb-video-ust">
           <h2>{v.baslik}</h2>
-          <button className="kmb-dv-ac" onClick={() => setTum(true)}>🎬 Bütün dersi tam ekran izle</button>
+          <button className="kmb-dv-ac" onClick={() => setTum(true)}>Tüm ders · tam ekran</button>
         </div>
       </div>
       <nav className="kmb-video-liste" aria-label="Videolar">
@@ -657,7 +656,7 @@ function Videolar({ ders, ses }: { ders: Ders; ses: SesKayit | null }) {
 
 // ———————————————————————————————— Kabuk: öğrenme yolu (İzle → Öğren → Hedefler → Sınav), kaldığın yerden devam
 
-function Yol({ ders, b, git, izle }: { ders: Ders; b: string; git: (b: string) => void; izle: () => void }) {
+function Yol({ ders, b, git, izle, ek }: { ders: Ders; b: string; git: (b: string) => void; izle: () => void; ek?: React.ReactNode }) {
   const il = useIlerleme(ders.kod);
   const n = ders.adimlar.length;
   const asamalar = [
@@ -669,20 +668,26 @@ function Yol({ ders, b, git, izle }: { ders: Ders; b: string; git: (b: string) =
   const siradaki = asamalar.find((a) => a.yap < a.top) || asamalar[3];
   return (
     <div className="kmb-yol">
-      <ol className="kmb-yol-adimlar">
-        {asamalar.map((a, i) => (
-          <li key={a.b} className={`${b === a.b ? 'etkin' : ''}${a.top && a.yap >= a.top ? ' tamam' : ''}`}>
-            <button onClick={() => git(a.b)}>
-              <span className="no">{a.top && a.yap >= a.top ? '✓' : i + 1}</span>
-              <span className="ad"><b>{a.ad}</b><small>{a.alt} · {a.yap}/{a.top}</small></span>
+      <nav className="kmb-yol-adimlar" aria-label="Öğrenme yolu">
+        {asamalar.map((a, i) => {
+          const tamam = !!a.top && a.yap >= a.top;
+          return (
+            <button key={a.b} className={`${b === a.b ? 'etkin' : ''}${tamam ? ' tamam' : ''}`} aria-current={b === a.b ? 'page' : undefined} onClick={() => git(a.b)}>
+              <span className="ad"><span className="no">{tamam ? '✓' : i + 1}</span>{a.ad}</span>
+              <small>{a.yap}/{a.top}</small>
               <span className="cubuk"><i style={{ width: `${a.top ? (a.yap / a.top) * 100 : 0}%` }} /></span>
             </button>
-          </li>
-        ))}
-      </ol>
-      <button className="kmb-devam" onClick={() => (siradaki.b === 'video' ? izle() : git(siradaki.b))}>
-        Kaldığın yerden devam et: <b>{siradaki.ad}</b> ›
-      </button>
+          );
+        })}
+      </nav>
+      <div className="kmb-yol-alt">
+        {siradaki.b !== b && (
+          <button className="kmb-devam" onClick={() => (siradaki.b === 'video' ? izle() : git(siradaki.b))}>
+            Kaldığın yerden devam: <b>{siradaki.ad}</b> ›
+          </button>
+        )}
+        {ek}
+      </div>
     </div>
   );
 }
@@ -707,22 +712,26 @@ export default function KmbAsistan() {
     return (
       <div className="kmb-kok">
         <header className="kmb-baslik">
-          <p className="ust">Ders çalış · {INDEX.ders}</p>
+          <p className="ust">{INDEX.ders}</p>
           <h1>KMB görsel asistan</h1>
-          <p>Hocanın anlattığı her aşamayı videoyla izle, adım adım öğren, KMB hedefleriyle pekiştir ve vaka sorularıyla pratik sınava hazırlan.</p>
-          <p className="kmb-not">{INDEX.degerlendirme}</p>
+          <p>Her beceriyi videoyla izle, adım adım öğren, hedeflerle pekiştir, vaka ve OSCE ile sına.</p>
         </header>
         <div className="kmb-kartlar">
           {INDEX.beceriler.map((x) => (
             <button key={x.slug} className={`kmb-kart${x.durum === 'hazir' ? '' : ' bekliyor'}`} disabled={x.durum !== 'hazir'} onClick={() => git(x.slug)}>
-              <span className="kod">{x.belgeKodu}</span>
+              <span className="ust"><span className="kod">{x.belgeKodu}</span><span className="durum">{x.durum === 'hazir' ? 'Hazır' : 'Yakında'}</span></span>
               <b>{x.ad}</b>
-              <span className="durum">{x.durum === 'hazir' ? 'Hazır · başla' : 'Ders kaydı bekleniyor'}</span>
               {!!x.hocalar.length && <span className="hoca">{x.hocalar.join(' · ')}</span>}
             </button>
           ))}
         </div>
-        <ul className="kmb-takvim">{INDEX.takvim.map((t) => <li key={t.tarih}><b>{new Date(t.tarih).toLocaleDateString('tr-TR', { day: 'numeric', month: 'long' })}</b> {t.ad}</li>)}</ul>
+        <p className="kmb-not">{INDEX.degerlendirme}</p>
+        {!!INDEX.takvim.length && (
+          <details className="kmb-takvim-kap">
+            <summary>Uygulama takvimi</summary>
+            <ul className="kmb-takvim">{INDEX.takvim.map((t) => <li key={t.tarih}><b>{new Date(t.tarih).toLocaleDateString('tr-TR', { day: 'numeric', month: 'long' })}</b> {t.ad}</li>)}</ul>
+          </details>
+        )}
       </div>
     );
   }
@@ -731,12 +740,10 @@ export default function KmbAsistan() {
   return (
     <div className="kmb-kok">
       <header className="kmb-baslik">
-        <button className="kmb-geri" onClick={() => git('')}>‹ KMB becerileri</button>
-        <div className="kmb-baslik-satir">
-          <h1>{kayit.ad}</h1>
-          <button className={`kmb-kazanim-dugme${kapsam ? ' etkin' : ''}`} onClick={() => setKapsam((k) => !k)}>Kazanımlar</button>
-        </div>
-        {ders && <Yol ders={ders} b={b} git={sekme} izle={() => setIzle(true)} />}
+        <button className="kmb-geri" onClick={() => git('')}>KMB becerileri</button>
+        <h1>{kayit.ad}</h1>
+        {ders && <Yol ders={ders} b={b} git={sekme} izle={() => setIzle(true)}
+          ek={<button className={`kmb-kazanim-dugme${kapsam ? ' etkin' : ''}`} aria-expanded={kapsam} onClick={() => setKapsam((k) => !k)}>Kazanımlar</button>} />}
       </header>
       {kapsam && ders && (
         <ol className="kmb-kazanim">

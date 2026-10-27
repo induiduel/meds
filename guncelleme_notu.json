@@ -1,9 +1,11 @@
 {
  "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
- "onem": 472,
- "baslik": "Tam ekran ders: ayar düğmesi düzeltildi",
+ "onem": 473,
+ "baslik": "KMB sayfası yenilendi: akıcı video oynatıcı",
  "maddeler": [
-  "Sesli derste tam ekranda sağ üstteki ayar düğmesi araç şeridini yeniden açıyor"
+  "KMB videoları cümle ve adım geçişlerinde artık takılmadan akıyor",
+  "Altyazı, denetimler ve etiketler üst üste binmiyor",
+  "Telefonda kompakt, tek satırlık denetimler ve sade öğrenme yolu çubuğu"
  ],
  "eklenen": [],
  "degisen": [],

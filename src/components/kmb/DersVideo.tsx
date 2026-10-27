@@ -15,7 +15,6 @@ export default function DersVideo({ ders, ses, bas = 0, onKapat, izlendi }: {
   const kap = useRef<HTMLDivElement>(null);
   const adimlar = ders.adimlar.filter((a) => LOTTILER.some((x) => x.adim === a.id));
   const [i, setI] = useState(Math.max(0, adimlar.findIndex((a) => a.id === ders.adimlar[bas]?.id)));
-  const [gecis, setGecis] = useState(true);
   const [uyanik, setUyanik] = useState(true);
   const zaman = useRef(0);
   const uyandir = () => { setUyanik(true); window.clearTimeout(zaman.current); zaman.current = window.setTimeout(() => setUyanik(false), 2800); };
@@ -29,12 +28,7 @@ export default function DersVideo({ ders, ses, bas = 0, onKapat, izlendi }: {
     uyandir();
     return () => { document.body.style.overflow = ''; window.dispatchEvent(new CustomEvent(KMB_DURDUR, { detail: 'kapat' })); };
   }, []);
-  useEffect(() => {
-    setGecis(true);
-    const z = window.setTimeout(() => setGecis(false), 1800);
-    if (sonraki) lottieOnYukle(`adim-${sonraki.id}`).catch(() => {});
-    return () => window.clearTimeout(z);
-  }, [i, sonraki]);
+  useEffect(() => { if (sonraki) lottieOnYukle(`adim-${sonraki.id}`).catch(() => {}); }, [sonraki]);
 
   const kapat = () => { if (document.fullscreenElement) document.exitFullscreen().catch(() => {}); onKapat(); };
   const ileri = () => { izlendi?.(a.id); if (i < adimlar.length - 1) setI(i + 1); };
@@ -50,15 +44,16 @@ export default function DersVideo({ ders, ses, bas = 0, onKapat, izlendi }: {
           ))}
         </div>
         <div className="kmb-dv-baslik"><span className="kmb-dv-no">{i + 1} / {adimlar.length}</span><b>{a.baslik}</b></div>
-        <button className="kmb-dv-gec" onClick={() => setI(Math.max(0, i - 1))} disabled={i === 0} aria-label="Önceki adım">⏮</button>
-        <button className="kmb-dv-gec" onClick={ileri} disabled={i === adimlar.length - 1} aria-label="Sonraki adım">⏭</button>
-        <button className="kmb-dv-kapat" onClick={kapat} aria-label="Kapat">✕</button>
+        <div className="kmb-dv-dugmeler">
+          <button onClick={() => setI(Math.max(0, i - 1))} disabled={i === 0} aria-label="Önceki adım"><svg viewBox="0 0 24 24"><path d="M6 5h2v14H6zM20 5v14L9 12z" /></svg></button>
+          <button onClick={ileri} disabled={i === adimlar.length - 1} aria-label="Sonraki adım"><svg viewBox="0 0 24 24"><path d="M16 5h2v14h-2zM4 5v14l11-7z" /></svg></button>
+          <button onClick={kapat} aria-label="Kapat"><svg viewBox="0 0 24 24"><path d="M6.4 5 5 6.4 10.6 12 5 17.6 6.4 19l5.6-5.6 5.6 5.6 1.4-1.4-5.6-5.6L19 6.4 17.6 5 12 10.6z" /></svg></button>
+        </div>
       </div>
       <div className="kmb-dv-govde">
         <LottieVideo key={a.id} ad={`adim-${a.id}`} kod={ders.kod} ses={ses} otomatik doldur
-          onBitti={() => { izlendi?.(a.id); if (sonraki) window.setTimeout(() => setI((n) => n + 1), 900); }}
+          onBitti={() => { izlendi?.(a.id); if (sonraki) window.setTimeout(() => setI((n) => n + 1), 250); }}
           sonraki={sonraki ? { ad: `adim-${sonraki.id}`, baslik: sonraki.baslik, git: ileri } : undefined} />
-        {gecis && <div className="kmb-dv-kart" aria-hidden><span>Adım {i + 1}</span><b>{a.baslik}</b></div>}
       </div>
     </div>,
     document.body,

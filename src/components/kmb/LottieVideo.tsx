@@ -42,6 +42,18 @@ export function lottieOnYukle(ad: string): Promise<any> {
   }
   return p;
 }
+/** EMA klibi bütünüyle belleğe alınır (blob): cümle geçişlerinde ses ağdan yeniden konumlanmaz → takılma yok */
+const SES = new Map<string, Promise<string>>();
+export function sesOnYukle(url: string): Promise<string> {
+  let p = SES.get(url);
+  if (!p) {
+    p = fetch(url).then((r) => (r.ok ? r.blob() : Promise.reject(new Error(String(r.status))))).then((b) => URL.createObjectURL(b))
+      .catch(() => { SES.delete(url); return url; });
+    SES.set(url, p);
+  }
+  return p;
+}
+export const klipUrl = (kod: string, v: LottieBilgi, h: string) => `${getCustomApiUrl() || ''}/api/cozucu-ses/kmb/ema/${kod}/${klipAdi(v)}.mp3?v=${h}`;
 let OYNATICI: Promise<any> | null = null;
 // canvas çizici: mobil/tablette yüzlerce SVG öğesi yerine tek tuval boyanır (çok daha hızlı)
 const oynaticiYukle = () => (OYNATICI ||= import('lottie-web/build/player/lottie_canvas').then((L: any) => L.default || L));
@@ -79,17 +91,24 @@ export function Katman({ v, t }: { v: LottieBilgi; t: number }) {
   const [cx, cy, z] = kameraAn(v, t);
   const k = z / 100;
   const sik = (n: number, a: number, b: number) => Math.min(b, Math.max(a, n));
-  // altta altyazı bölgesi (%78+) etiketlere kapalı
-  const yer = (x: number, y: number) => ({ left: `${sik((400 + (x - cx) * k) / 8, 14, 86)}%`, top: `${sik((250 + (y - cy) * k) / 5, 8, 74)}%` });
+  // altta altyazı bölgesi (%76+) etiketlere kapalı; aynı anda görünen etiketler birbirine binmesin diye aşağı itilir
+  const dolu: [number, number][] = [];
+  const yer = (x: number, y: number) => {
+    const l = sik((400 + (x - cx) * k) / 8, 12, 88);
+    let tp = sik((250 + (y - cy) * k) / 5, 8, 72);
+    for (let n = 0; n < 6 && dolu.some(([a, b]) => Math.abs(a - l) < 26 && Math.abs(b - tp) < 8); n++) tp = tp + 8 > 72 ? tp - 8 * (n + 1) : tp + 8;
+    dolu.push([l, tp]);
+    return { left: `${l}%`, top: `${sik(tp, 6, 72)}%` };
+  };
   return (
     <div className="kmb-lv-katman" aria-hidden>
-      {v.etiketler.filter((e) => t >= e.bas && t <= e.son).map((e, i) => (
-        <span key={`${e.bas}-${i}`} className={`kmb-lv-etiket ${e.tur}`} style={yer(e.x, e.y)}>{e.metin}</span>
-      ))}
       {v.sayaclar.filter((s) => t >= s.bas).map((s, i) => {
         const f = Math.min(1, Math.max(0, (t - s.bas) / Math.max(0.01, s.son - s.bas)));
         return <span key={`s${i}`} className="kmb-lv-sayac" style={yer(s.x, s.y)}>{(s.v1 + (s.v2 - s.v1) * f).toFixed(s.ondalik)} {s.birim}</span>;
       })}
+      {v.etiketler.filter((e) => t >= e.bas && t <= e.son).map((e, i) => (
+        <span key={`${e.bas}-${i}`} className={`kmb-lv-etiket ${e.tur}`} style={yer(e.x, e.y)}>{e.metin}</span>
+      ))}
     </div>
   );
 }
@@ -166,8 +185,7 @@ export default function LottieVideo({ ad, kod, ses, zaman, kompakt, otomatik, on
   const tRef = useRef(0);
   const sahne = useRef<SahneTutamac>(null);
   const bekliyor = useRef(false);
-  const sonSes = useRef(-1);
-  const [t, setT] = useState(0);
+    const [t, setT] = useState(0);
   const [cal, setCal] = useState(false);
   const [hiz, setHiz] = useState(1);
   const [altyazi, setAltyazi] = useState(true);
@@ -197,7 +215,13 @@ export default function LottieVideo({ ad, kod, ses, zaman, kompakt, otomatik, on
   const oynat = useCallback((bas?: number) => {
     window.dispatchEvent(new CustomEvent(KMB_DURDUR, { detail: ad }));
     const s = bas ?? (tRef.current >= sure - 0.1 ? 0 : tRef.current);
-    if (klip && v && !audio.current) audio.current = new Audio(`${getCustomApiUrl() || ''}/api/cozucu-ses/kmb/ema/${kod}/${klipAdi(v)}.mp3?v=${klip.h}`);
+    if (klip && v && !audio.current) {
+      const url = klipUrl(kod, v, klip.h);
+      const a = new Audio();
+      a.preload = 'auto';
+      audio.current = a;
+      sesOnYukle(url).then((u) => { if (audio.current === a && !a.src) a.src = u; });
+    }
     saat.current = { bas: performance.now(), t: s };
     tRef.current = s;
     setBitti(false);
@@ -205,33 +229,39 @@ export default function LottieVideo({ ad, kod, ses, zaman, kompakt, otomatik, on
     uyandir(); // oynatma başlayınca da gizlenme sayacı işler
   }, [sure, klip, kod, ad, v, uyandir]);
 
-  // oynatma döngüsü: saat video saatidir; ses yalnız bölüm içinde, ses saatine eşlenerek çalar; sapma 0,25 sn'yi geçerse düzeltilir
+  // oynatma döngüsü: saat video saatidir. Ses bölüm içinde ses saatine eşlenir; bekleme payında durur, sonraki bölümde
+  // kaldığı yerden sürer (yakınsa konumlanmaz). Sapma küçükse saat yumuşakça sese çekilir (zıplama yok), ses tamponlanırken
+  // görüntü bekler (ses görüntünün gerisinde kalmaz), yalnız büyük sapmada ses konumlanır (blob olduğu için anında).
   useEffect(() => {
     if (!cal || dis) return;
-    let id = 0, son = 0;
+    let id = 0, son = 0, onceki = performance.now();
     const adim = (now: number) => {
       let s = saat.current.t + ((now - saat.current.bas) / 1000) * hiz;
       const a = audio.current;
       if (a && klip && v) {
-        // ses çalarken saat sestir (yeniden konumlama yok → takılma yok); bekleme payında iç saat işler, ses durur
         const b = v.bolumler.find((x) => x.ses_bas !== undefined && s >= x.bas - 0.05 && s < x.son + 0.15);
         if (b && b.ses_bas !== undefined) {
           const hedef = b.ses_bas + (s - b.bas);
-          if (a.paused) {
+          if (!a.src) {
+            // ses henüz inmedi: görüntü beklesin
+            s = tRef.current; saat.current = { bas: now, t: s };
+          } else if (a.paused) {
             if (!bekliyor.current && hedef < klip.sure) {
               bekliyor.current = true;
               a.playbackRate = hiz;
-              a.currentTime = Math.max(0, hedef);
+              if (Math.abs(a.currentTime - hedef) > 0.3) a.currentTime = Math.max(0, hedef);
               a.play().catch(() => { /* görüntü iç saatle sürer */ }).finally(() => { bekliyor.current = false; });
             }
-          } else if (!a.seeking && a.readyState >= 3 && a.currentTime > sonSes.current) {
-            // ses gerçekten ilerliyorsa saat sestir (takılma yok); tamponlanırken iç saat sürer, görüntü donmaz
-            const sa = b.bas + (a.currentTime - b.ses_bas);
-            if (Math.abs(sa - s) < 0.6) { s = sa; saat.current = { bas: now, t: s }; } else if (!bekliyor.current) a.currentTime = Math.max(0, hedef);
+          } else if (a.readyState < 3 || a.seeking) {
+            s = tRef.current; saat.current = { bas: now, t: s };
+          } else {
+            const fark = b.bas + (a.currentTime - b.ses_bas) - s;
+            if (Math.abs(fark) > 0.6) a.currentTime = Math.max(0, hedef);
+            else if (Math.abs(fark) > 0.03) { s += fark * Math.min(1, (now - onceki) / 250); saat.current = { bas: now, t: s }; }
           }
-          sonSes.current = a.currentTime;
         } else if (!a.paused) a.pause();
       }
+      onceki = now;
       if (s >= sure) {
         s = sure; a?.pause(); tRef.current = s; setT(s); setCal(false); setBitti(true); onBitti?.();
         return;
@@ -246,8 +276,16 @@ export default function LottieVideo({ ad, kod, ses, zaman, kompakt, otomatik, on
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [cal, dis, klip, hiz, sure, v]);
 
+  // açılışta sesi önceden indir (ilk oynatmada bekleme olmasın); sonraki videonun sesi de
+  useEffect(() => { if (klip && v && !dis) sesOnYukle(klipUrl(kod, v, klip.h)).catch(() => {}); }, [klip, v, kod, dis]);
   useEffect(() => { if (dis) setT((zaman as number) % sure); }, [dis, zaman, sure]);
-  useEffect(() => { if (sonraki) lottieOnYukle(sonraki.ad).catch(() => {}); }, [sonraki]);
+  useEffect(() => {
+    if (!sonraki) return;
+    lottieOnYukle(sonraki.ad).catch(() => {});
+    const sv = LOTTILER.find((x) => x.ad === sonraki.ad);
+    const sk = sv && ses?.[klipAdi(sv)];
+    if (sv && sk) sesOnYukle(klipUrl(kod, sv, sk.h)).catch(() => {});
+  }, [sonraki, ses, kod]);
   useEffect(() => { if (otomatik && !dis) oynat(0); /* eslint-disable-next-line react-hooks/exhaustive-deps */ }, [ad]);
   useEffect(() => {
     const f = (e: Event) => { if ((e as CustomEvent).detail !== ad) durdur(); };
@@ -300,46 +338,49 @@ export default function LottieVideo({ ad, kod, ses, zaman, kompakt, otomatik, on
       </div>
     );
   }
+  const yuzde = (t / sure) * 100;
   return (
-    <div ref={kap} className={`kmb-lv${tamMi ? ' tam' : ''}${sahte ? ' sahte' : ''}${kompakt ? ' kompakt' : ''}${doldur ? ' doldur' : ''}${(tamMi || doldur) && gizli && cal ? ' gizli' : ''}`}
+    <div ref={kap} className={`kmb-lv${tamMi ? ' tam' : ''}${sahte ? ' sahte' : ''}${kompakt ? ' kompakt' : ''}${doldur ? ' doldur' : ''}${gizli && cal ? ' gizli' : ''}${cal ? ' calan' : ''}`}
       tabIndex={0} onKeyDown={tus} onMouseMove={uyandir} onTouchStart={uyandir} aria-label={`Video: ${v.baslik}`}>
       <div className="kmb-lv-sahne">
         {/* durgun ve başta: ilk bölümün bir karesi kapak olarak (boş sahne görünmesin) */}
         <LottieSahne ref={sahne} ad={ad} kare={!cal && t < 0.05 ? Math.min(sure, (v.bolumler[0]?.bas ?? 0) + 1.2) : t} />
         <Katman v={v} t={t} />
-        {/* altyazı: görüntünün en altında, hafif saydam zeminli, 1–2 satır (bant yok) */}
-        {altyazi && <div className={`kmb-lv-altyazi${konusuyor ? '' : ' sessiz'}`} aria-live="polite"><span>{bolum?.metin}</span></div>}
-        {/* dokunma alanları: sol 10 sn geri, orta oynat/duraklat, sağ 10 sn ileri */}
-        <button className="kmb-lv-alan sol" aria-label="10 saniye geri" onClick={() => atla(-1)}><span>⟲ 10</span></button>
+        {/* dokunma alanları: sol 10 sn geri, orta oynat/duraklat, sağ 10 sn ileri (yazısız; geri bildirim yalnız dokununca) */}
+        <button className="kmb-lv-alan sol" aria-label="10 saniye geri" onClick={() => atla(-1)} />
         <button className="kmb-lv-alan orta" aria-label={cal ? 'Duraklat' : 'Oynat'} onClick={() => (cal ? durdur() : oynat())} />
-        <button className="kmb-lv-alan sag" aria-label="10 saniye ileri" onClick={() => atla(1)}><span>10 ⟳</span></button>
+        <button className="kmb-lv-alan sag" aria-label="10 saniye ileri" onClick={() => atla(1)} />
         {atlama && <span className={`kmb-lv-atlama ${atlama}`}>{atlama === 'ileri' ? '+10 sn' : '−10 sn'}</span>}
-        {!cal && !bitti && <span className="kmb-lv-buyuk-oynat" aria-hidden>▶</span>}
+        {!cal && !bitti && <span className="kmb-lv-buyuk-oynat" aria-hidden><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg></span>}
+        {altyazi && bolum?.metin && <div className={`kmb-lv-altyazi${konusuyor ? '' : ' sessiz'}`} aria-live="polite"><span>{bolum.metin}</span></div>}
         {bitti && (
           <div className="kmb-lv-son">
             <button onClick={() => oynat(0)}>↺ Yeniden izle</button>
             {sonraki && <button className="ana" onClick={sonraki.git}>Sıradaki: {sonraki.baslik} ›</button>}
           </div>
         )}
-        {tamMi && !doldur && <div className="kmb-lv-ust"><b>{v.baslik}</b><span>{bolum?.baslik}</span><button onClick={tamEkran} aria-label="Tam ekrandan çık">✕</button></div>}
+        {tamMi && !doldur && <div className="kmb-lv-ust"><b>{v.baslik}</b><button onClick={tamEkran} aria-label="Tam ekrandan çık">✕</button></div>}
       </div>
       <div className="kmb-lv-cubuk">
         <div className="kmb-lv-zaman">
-          {v.bolumler.map((b, i) => <span key={i} className="kmb-lv-bolum-isaret" style={{ left: `${(b.bas / sure) * 100}%` }} title={b.baslik} />)}
-          <div className="kmb-lv-dolu" style={{ width: `${(t / sure) * 100}%` }} />
+          <div className="kmb-lv-iz">
+            <div className="kmb-lv-dolu" style={{ width: `${yuzde}%` }} />
+            {v.bolumler.slice(1).map((b, i) => <span key={i} className="kmb-lv-bolum-isaret" style={{ left: `${(b.bas / sure) * 100}%` }} />)}
+          </div>
+          <span className="kmb-lv-tutamac" style={{ left: `${yuzde}%` }} />
           <input type="range" min={0} max={sure} step={0.1} value={t} aria-label="Zaman" onChange={(e) => { git(Number(e.target.value)); if (cal) saat.current = { bas: performance.now(), t: Number(e.target.value) }; }} />
         </div>
         <div className="kmb-lv-dugmeler">
-          <button onClick={() => (cal ? durdur() : oynat())} aria-label={cal ? 'Duraklat' : 'Oynat'}>{cal ? '❚❚' : '▶'}</button>
-          <button onClick={() => atla(-1)} aria-label="10 sn geri">⟲10</button>
-          <button onClick={() => atla(1)} aria-label="10 sn ileri">10⟳</button>
+          <button onClick={() => (cal ? durdur() : oynat())} aria-label={cal ? 'Duraklat' : 'Oynat'}>
+            <svg viewBox="0 0 24 24">{cal ? <path d="M7 5h3.5v14H7zM13.5 5H17v14h-3.5z" /> : <path d="M8 5v14l11-7z" />}</svg>
+          </button>
           <span className="kmb-lv-sure">{sn(t)} / {sn(sure)}</span>
-          <span className="kmb-lv-baslik">{bolum ? `${bi + 1}/${v.bolumler.length} · ${bolum.baslik}` : v.baslik}</span>
-          <select value={hiz} onChange={(e) => setHiz(Number(e.target.value))} aria-label="Hız">
-            {[0.75, 1, 1.25, 1.5].map((h) => <option key={h} value={h}>{h}×</option>)}
-          </select>
-          <button className={altyazi ? 'etkin' : ''} onClick={() => setAltyazi((x) => !x)} aria-label="Altyazı">CC</button>
-          <button onClick={tamEkran} aria-label="Tam ekran">{tamMi ? '⤡' : '⤢'}</button>
+          <span className="kmb-lv-baslik">{bolum ? `${bi + 1}/${v.bolumler.length} · ${bolum.baslik}` : ''}</span>
+          <button className="kmb-lv-hiz" onClick={() => setHiz((h) => [1, 1.25, 1.5, 0.75][([1, 1.25, 1.5, 0.75].indexOf(h) + 1) % 4])} aria-label="Oynatma hızı">{hiz}×</button>
+          <button className={altyazi ? 'etkin' : ''} onClick={() => setAltyazi((x) => !x)} aria-label="Altyazı" aria-pressed={altyazi}>CC</button>
+          <button onClick={tamEkran} aria-label={tamMi ? 'Tam ekrandan çık' : 'Tam ekran'}>
+            <svg viewBox="0 0 24 24">{tamMi ? <path d="M9 4v5H4v2h7V4zM15 4h-2v7h7V9h-5zM4 15h5v5h2v-7H4zM13 13v7h2v-5h5v-2z" /> : <path d="M4 4h7v2H6v5H4zM13 4h7v7h-2V6h-5zM4 13h2v5h5v2H4zM18 13h2v7h-7v-2h5z" />}</svg>
+          </button>
         </div>
       </div>
     </div>
