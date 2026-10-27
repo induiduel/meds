@@ -9,6 +9,7 @@ import { dersKurulu } from './dersVeri';
 import { useV15Baslik } from './baslik';
 import '../../styles/toplu-pdf.css';
 import '../../styles/v15/ogren.css';
+import '../../styles/v15/dersler.css';
 import '../../styles/v15/pdfsihirbaz.css';
 
 /**

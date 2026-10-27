@@ -1,15 +1,17 @@
 {
-  "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 406,
-  "baslik": "Nöroloji dersleri yenileniyor",
-  "maddeler": [
-    "Nörolojik Hastaya Yaklaşım ve Bilinç Bozukluğu Olan Hastaya Yaklaşım dersleri daha açıklayıcı anlatımla yeniden hazırlanıyor."
-  ],
-  "eklenen": [],
-  "degisen": [],
-  "duzeltilen": [
-    "Tireyle bitişik yazılan kısaltmalar (DSM-5, MAO-A, HIV-1, 5-HTTLPR) artık slaytta doğru yerde işaretleniyor.",
-    "Büyük harfli Türkçe sözcükler (BİLİNÇ, KOMA) kısaltma sayılmıyor."
-  ],
-  "silinen": []
+ "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
+ "onem": 407,
+ "baslik": "Yeni menü: bütün sayfalar tek yerde",
+ "maddeler": [
+  "Telefonda ve tablette Menü: bütün sayfalar gruplu simgelerle, üstte sayfa arama",
+  "Bilgisayarda kenar menüsü: her grup açılıp kapanır, bütün sayfalar listede",
+  "Tam ekran, kronometre, kuyruk gibi araçlar menünün üstünde küçük simgeler olarak"
+ ],
+ "eklenen": [],
+ "degisen": [],
+ "duzeltilen": [
+  "Tireyle bitişik yazılan kısaltmalar (DSM-5, MAO-A, HIV-1, 5-HTTLPR) artık slaytta doğru yerde işaretleniyor.",
+  "Büyük harfli Türkçe sözcükler (BİLİNÇ, KOMA) kısaltma sayılmıyor."
+ ],
+ "silinen": []
 }

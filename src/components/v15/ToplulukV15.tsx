@@ -7,6 +7,7 @@ import { aktifKurul } from '../../services/kurulTakvimi';
 import { navigateTo } from '../../router';
 import { useV15Baslik } from './baslik';
 import '../../styles/v15/ogren.css';
+import '../../styles/v15/dersler.css';
 import '../../styles/v15/topluluk.css';
 
 /**

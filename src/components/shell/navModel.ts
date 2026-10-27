@@ -104,7 +104,7 @@ const I: Record<string, NavItem> = {
   oncelikli_dersler: { id: 'oncelikli_dersler', label: 'Öncelikli dersler', short: 'Öncelikli', tile: 'Öncelikli dersler', hint: 'Az ezberli, mantıkla çözülen, kolay puan getiren sesli dersler önce', icon: Gauge, tint: '#34C759' },
   kazanimlar: { id: 'kazanimlar', label: 'Kazanımlar', hint: 'Müfredat ve kazanım haritası', icon: Compass, tint: '#00A79D' },
   // Topluluk
-  matrix: { id: 'matrix', label: 'Soru haritası', short: 'Harita', hint: 'Havuzda 1–100 soru doluluğu', icon: LayoutGrid, tint: '#64748B' },
+  matrix: { id: 'matrix', label: 'Havuz doluluğu', short: 'Doluluk', hint: 'Havuzda 1–100 soru doluluğu', icon: LayoutGrid, tint: '#64748B' },
   leaderboard: { id: 'leaderboard', label: 'Sıralama', hint: 'Dönemindeki haftalık ve kurul sıralaması', icon: Trophy, tint: '#FFB340' },
   // Kişisel
   study: { id: 'study', label: 'Çalışma masam', short: 'Masam', tile: 'Çalışma masam', hint: 'Kendi listelerin, notların, hızlı test', icon: ListChecks, tint: '#34C759' },

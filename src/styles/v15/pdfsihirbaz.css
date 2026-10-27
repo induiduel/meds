@@ -19,3 +19,4 @@
 .ps15-gb { display: flex; align-items: center; justify-content: space-between; padding: 0 2px; }
 .ps15-gb h2 { margin: 0; }
 .ps15-gecmis > .v15-cap { margin: 0 2px; }
+.ps15 button.b15-row { width: 100%; text-align: left; border: 0; background: none; font: inherit; color: inherit; cursor: pointer; }

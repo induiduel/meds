@@ -193,3 +193,43 @@
 .v15-sheet-h:first-child { margin-top: 2px; }
 .v15-tabs > button.v15-tab { border: 0; background: none; font: inherit; color: inherit; cursor: pointer; }
 button.v15-nav-a { border: 0; background: none; font: inherit; color: inherit; width: 100%; text-align: left; cursor: pointer; }
+
+/* ---------------------------------------------------------------------------
+ * Bütün sayfalar (TumSayfalarV15): telefon/tablet Menü ızgarası
+ * ------------------------------------------------------------------------- */
+:root[data-v15='on'] .ts15 { container-type: inline-size; display: flex; flex-direction: column; gap: 14px; padding-bottom: 8px; }
+:root[data-v15='on'] .ts15-ara { display: flex; align-items: center; gap: 8px; min-height: 42px; padding: 0 12px; border-radius: 12px; background: var(--color-field); color: var(--color-ink-3); }
+:root[data-v15='on'] .ts15-ara svg { width: 17px; height: 17px; flex: none; }
+:root[data-v15='on'] .ts15-ara input { flex: 1; min-width: 0; border: 0; background: none; font: inherit; font-size: 1rem; color: var(--color-ink); outline: none; }
+:root[data-v15='on'] .ts15-ara button { border: 0; background: none; color: var(--color-ink-3); display: grid; cursor: pointer; padding: 4px; }
+/* araçlar: tek sıra, kaydırılabilir kompakt simgeler */
+:root[data-v15='on'] .ts15-arac { display: flex; gap: 4px; overflow-x: auto; scrollbar-width: none; margin: 0 -4px; padding: 0 4px; }
+:root[data-v15='on'] .ts15-arac::-webkit-scrollbar { display: none; }
+:root[data-v15='on'] .ts15-arac > button { flex: none; width: 64px; display: flex; flex-direction: column; align-items: center; gap: 4px; border: 0; background: none; padding: 2px 0; cursor: pointer; color: var(--color-ink-2); font: inherit; }
+:root[data-v15='on'] .ts15-arac-ic { position: relative; width: 40px; height: 40px; border-radius: 50%; display: grid; place-items: center; background: var(--color-field); }
+:root[data-v15='on'] .ts15-arac-ic svg { width: 19px; height: 19px; }
+:root[data-v15='on'] .ts15-arac-ic i { position: absolute; top: -2px; right: -4px; min-width: 18px; height: 18px; padding: 0 4px; border-radius: 9px; background: var(--color-bad); color: var(--color-white); font-style: normal; font-size: .68rem; font-weight: 700; display: grid; place-items: center; }
+:root[data-v15='on'] .ts15-arac > button.is-on .ts15-arac-ic { background: var(--color-accent); color: var(--color-on-accent); }
+:root[data-v15='on'] .ts15-arac-l { font-size: .7rem; line-height: 1.15; text-align: center; white-space: nowrap; }
+:root[data-v15='on'] .ts15-gb { display: flex; align-items: center; justify-content: space-between; margin: 0 2px 8px; }
+:root[data-v15='on'] .ts15-gb h3 { margin: 0; font-size: .78rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; color: var(--color-ink-3); }
+:root[data-v15='on'] .ts15-merkez { display: inline-flex; align-items: center; gap: 2px; font-size: .8rem; color: var(--color-accent); text-decoration: none; }
+:root[data-v15='on'] .ts15-merkez svg { width: 14px; height: 14px; }
+:root[data-v15='on'] .ts15-izgara { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; grid-template-columns: repeat(4, minmax(0, 1fr)); }
+@container (min-width: 520px) { :root[data-v15='on'] .ts15-izgara { grid-template-columns: repeat(6, minmax(0, 1fr)); } }
+:root[data-v15='on'] .ts15-oge { display: flex; flex-direction: column; align-items: center; gap: 5px; padding: 8px 2px; border-radius: 12px; color: var(--color-ink); text-decoration: none; min-height: 76px; }
+:root[data-v15='on'] .ts15-oge:hover { background: var(--color-field); }
+:root[data-v15='on'] .ts15-ic { width: 44px; height: 44px; border-radius: 13px; display: grid; place-items: center; background: var(--color-white); border: 1px solid var(--color-line-soft, var(--color-line)); color: var(--color-ink-2); }
+:root[data-v15='on'] .ts15-ic svg { width: 21px; height: 21px; }
+:root[data-v15='on'] .ts15-oge[aria-current='page'] .ts15-ic { background: var(--color-accent-soft); border-color: transparent; color: var(--color-accent); }
+:root[data-v15='on'] .ts15-l { font-size: .72rem; line-height: 1.2; text-align: center; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; overflow-wrap: anywhere; }
+:root[data-v15='on'] .ts15-bos { margin: 8px 2px; color: var(--color-ink-3); font-size: .88rem; }
+
+/* masaüstü kenar çubuğu: açılır-kapanır gruplar + kompakt araç sırası */
+:root[data-v15='on'] .v15-grp-b { width: 100%; display: flex; align-items: center; gap: 10px; border: 0; background: none; font: inherit; cursor: pointer; text-align: left; }
+:root[data-v15='on'] .v15-grp-b .v15-grp-ok { margin-left: auto; width: 15px; height: 15px; color: var(--color-ink-3); transition: transform .15s; }
+:root[data-v15='on'] .v15-grp-b[aria-expanded='true'] .v15-grp-ok { transform: rotate(90deg); }
+:root[data-v15='on'] .v15-side-araclar { display: flex; gap: 2px; padding: 4px 6px; }
+:root[data-v15='on'] .v15-side-araclar > button, :root[data-v15='on'] .v15-side-araclar > a { flex: 1; height: 34px; display: grid; place-items: center; border: 0; border-radius: 9px; background: none; color: var(--color-ink-2); cursor: pointer; }
+:root[data-v15='on'] .v15-side-araclar > button:hover, :root[data-v15='on'] .v15-side-araclar > a:hover { background: var(--color-field); color: var(--color-ink); }
+:root[data-v15='on'] .v15-side-araclar svg { width: 17px; height: 17px; }

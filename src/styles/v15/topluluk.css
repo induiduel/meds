@@ -40,3 +40,4 @@
 .tp15-gonder { flex: none; width: 44px; height: 44px; border-radius: 50%; border: 0; background: var(--color-accent); color: var(--color-on-accent); display: grid; place-items: center; cursor: pointer; }
 .tp15-gonder:disabled { opacity: .45; cursor: default; }
 .tp15-gonder svg { width: 18px; height: 18px; }
+.tp15 button.b15-row { width: 100%; text-align: left; border: 0; background: none; font: inherit; color: inherit; cursor: pointer; }

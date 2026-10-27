@@ -871,3 +871,9 @@ Her maddede: belirti · kök neden · Kurul 2 kuralı · kapı durumu. Kanıtlar
 ## H98 — Çizim panelleri dar ekranda taşıyor/sözcük kırıyor (2026-10-27, k2-03/k2-04)
 - **Belirti:** `panel_sinama` 366 px'te 10–16 hata (5+ maddeli neden listeleri, dar karşılaştırma sütunlarında "Kafatası", "Korunur" kırılması).
 - **Kural:** çizim ajan talimatına panel başına en çok 4 madde ve ≤60 karakter eklendi; taşan panel silinir/kısaltılır, kapı gevşetilmez.
+
+### H99 — v15'te yeni ve bazı eski sayfalara menüden ulaşılamıyordu (2026-10-27)
+- **Belirti:** Topluluk, PDF oluştur, Check Up, sıralama, müzik gibi sayfalar telefonda/tablette/masaüstünde menüde görünmüyordu; tam ekran gibi araçlar dağınıktı.
+- **Kök neden:** v15 kabuğunda üç ayrı elle yazılmış liste vardı (telefon menüsü: yalnız Başvuru + MENU_SAYFALARI; kenar çubuğu: yalnız açık bölümün alt sayfaları + sabit 5 kişisel bağlantı; tablet rayı: yalnız 5 bölüm). NAV_TREE'ye eklenen sayfa bu listelere girmiyordu.
+- **Çözüm:** `navV15.menuGruplari` tek kaynak; üç görünüm de ondan çizer. Araçlar ayrı kompakt sıra.
+- **Kural:** yeni sayfa yalnız NAV_TREE'ye (ve gerekirse KISISEL'e) eklenir; kabukta elle sayfa listesi yazılmaz.
