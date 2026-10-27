@@ -1028,3 +1028,8 @@ Her maddede: belirti · kök neden · Kurul 2 kuralı · kapı durumu. Kanıtlar
 - **Belirti:** gözle yazılan kontur noktaları `kenar_orani` < %70 ile düştü (s.82 fotoğraf: %26); `cizim_kapisi` "şekil 0/0 çizimli" verdi.
 - **Kök neden:** kontur noktaları Canny kenarına ±5 px içinde olmalı; tahmin yetmez. K3 çapadaki `sekil` alanını sayar, elle yazılan çapa `resim: 0` kullandığı için (k2-04 dahil) K3 boş (0/0) geçer.
 - **Çözüm/kural:** noktalar görüntüden kenara oturtulur (eşik/snap, ham kenar haritası bakılır, bindirme görüntüsü okunur); K3 yerine elle ölçü: lazeri resim olan cümlelerin ≥%40'ı çizimli (k2-08: 8/14). Açık iş: K3 `resim` alanını da şekil beyanı saymalı (diğer derslerin sonucunu değiştireceği için bu turda dokunulmadı).
+
+## H117 · Tam ekranda ayar düğmesi araç şeridini göstermiyordu (2026-10-27)
+- **Belirti:** Sesli ders tam ekranda sağ üstteki ayar düğmesine basınca şerit açılmıyor, kenarda ince "s." şeridi kalıyordu.
+- **Kök neden:** `.cd-pdf-bar` `container-type: inline-size` taşıyor; tam ekranda mutlak konumlanınca genişliği 0'a çöküyordu. Ayrıca `:is(> svg, …)` geçersiz seçiciydi, kural tümden atılıyordu.
+- **Çözüm/kural:** tam ekran şeridinde `container-type: normal; width: max-content`; seçici düzeltildi. Mutlak konumlu öğeye `container-type: inline-size` verilirse genişlik açıkça verilir; `:is()` içinde başa combinator yazılmaz.

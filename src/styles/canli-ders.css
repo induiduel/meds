@@ -1120,9 +1120,10 @@
 .cd-ders.is-tam.is-arac-acik .cd-pdf-bar {
   position: absolute; top: calc(env(safe-area-inset-top, 0px) + 56px); right: 8px; z-index: 19; max-width: calc(100% - 16px);
   padding: 3px 6px; gap: 2px; border: 0; border-radius: 12px; color: #fff;
+  container-type: normal; width: max-content;
   background: rgb(18 18 22 / .55); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
 }
-.cd-ders.is-tam.is-arac-acik .cd-pdf-bar :is(> svg, .cd-pdf-ad, .cd-pdf-dosya, .cd-grow) { display: none; }
+.cd-ders.is-tam.is-arac-acik .cd-pdf-bar > svg, .cd-ders.is-tam.is-arac-acik .cd-pdf-bar :is(.cd-pdf-ad, .cd-pdf-dosya, .cd-grow) { display: none; }
 .cd-ders.is-tam.is-arac-acik .cd-pdf-bar :is(.cd-ib, .cd-btn) { color: #fff; background: transparent; border: 0; }
 .cd-ders.is-tam .cd-pdf-govde { padding-top: 0; }
 .cd-ders.is-tam .cd-bolme { border: 0; border-radius: 0; }
