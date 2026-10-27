@@ -6,6 +6,7 @@ import { openDeepLink } from '../../services/universalRedirectService';
 import { aktifKurul, sinavaKalanGun } from '../../services/kurulTakvimi';
 import { cdListeGetir } from '../canliDers/canliDersStore';
 import { useYanlislar, yanlisGruplari } from '../../services/yanlislarim';
+import { hatirlatOku, kisiselOku } from '../../services/sinavlarim';
 import { confirmDialog } from '../ui/ConfirmDialog';
 import { toast } from '../ui/Toast';
 import { useV15Baslik } from './baslik';
@@ -106,6 +107,18 @@ export default function BildirimlerV15() {
         id: `sinav:${k.kurul}:${gunAnahtari()}`, sekme: 'ders', baslik: kalan === 0 ? `Kurul ${k.kurul} sınavı bugün` : `Kurul ${k.kurul} sınavına ${kalan} gün`,
         ileti: 'Sınav planında bugün ne çalışacağın hazır', at: Math.min(Date.now(), bugunBas.getTime()), icon: CalendarClock, ton: 'w', git: () => navigateTo(pathFor('sinav_plani')),
       }));
+    }
+    // D06 pratik hatırlatması: kurul ve kişisel sınavdan 5/3/1 gün önce
+    if (hatirlatOku()) {
+      const bg = new Date(); bg.setHours(0, 0, 0, 0);
+      const sinavlar = [{ ad: `Kurul ${aktifKurul().kurul} sınavı`, gun: aktifKurul().sinav }, ...kisiselOku().map((x) => ({ ad: x.ad, gun: x.gun }))];
+      sinavlar.forEach((x) => {
+        const n = Math.round((new Date(`${x.gun}T00:00:00`).getTime() - bg.getTime()) / 86400000);
+        if (n === 5 || n === 3 || n === 1) {
+          const id = `pratik:${x.gun}:${x.ad}:${n}`;
+          out.push(tur(id, { id, sekme: 'soru', baslik: `${x.ad} için pratik: ${n} gün kaldı`, ileti: '20 soruluk karma test hazır', at: bg.getTime() + 18 * 3600000 > Date.now() ? bg.getTime() : bg.getTime() + 18 * 3600000, icon: Bell, ton: 'w', git: () => navigateTo(pathFor('hub_sorular')) }));
+        }
+      });
     }
     const hazir = yanlisGruplari().hazir;
     if (hazir.length) {

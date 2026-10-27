@@ -1,10 +1,12 @@
-import React from 'react';
-import { Check, ChevronRight } from 'lucide-react';
+import React, { useState } from 'react';
+import { Bell, Check, ChevronRight, Plus, Trash2, X } from 'lucide-react';
+import { kisiselOku, kisiselYaz, hatirlatOku, hatirlatYaz, type KisiselSinav } from '../../services/sinavlarim';
 import { linkClick, navigateTo, pathFor, type AppRoute } from '../../router';
 import { BUTUNLEME_TARIHI, FINAL_TARIHI, KURULLAR, aktifKurul, bugun } from '../../services/kurulTakvimi';
 import { useV15Baslik } from './baslik';
 import { Halka } from './Halka';
 import '../../styles/v15/takvim.css';
+import '../../styles/v15/kronometre.css';
 
 /**
  * v15 · Sınav takvimi (tasarım sistemi v15 › D06 "Sınavlarım" + J "Kurul takvimi"). Yeni sayfa: /takvim ↔ /kamplar/takvim.
@@ -46,7 +48,13 @@ export default function SinavTakvimiV15() {
     ...(FINAL_TARIHI ? [{ id: 'final', gun: FINAL_TARIHI, ad: 'Final', alt: 'Dönem sonu sınavı' }] : []),
     ...(BUTUNLEME_TARIHI ? [{ id: 'but', gun: BUTUNLEME_TARIHI, ad: 'Bütünleme', alt: 'Telafi sınavı' }] : []),
   ].sort((a, b) => a.gun.localeCompare(b.gun));
-  const siradaki = olaylar.find((o) => o.gun >= g)?.id;
+  const [kisisel, setKisisel0] = useState<KisiselSinav[]>(kisiselOku);
+  const [hatirlat, setHatirlat0] = useState(hatirlatOku);
+  const [form, setForm] = useState<{ ad: string; gun: string; tur: KisiselSinav['tur'] } | null>(null);
+  const setKisisel = (l: KisiselSinav[]) => { setKisisel0(l); kisiselYaz(l); };
+  const olaylarK = [...olaylar, ...kisisel.map((x) => ({ id: x.id, gun: x.gun, ad: x.ad, alt: x.tur, kisisel: true as const }))].sort((a, b) => a.gun.localeCompare(b.gun));
+  const yaklasan = kisisel.filter((x) => x.gun >= g).sort((a, b) => a.gun.localeCompare(b.gun));
+  const siradaki = olaylarK.find((o) => o.gun >= g)?.id;
   const git = (r: AppRoute) => linkClick(() => navigateTo(pathFor(r)));
 
   return (
@@ -61,6 +69,41 @@ export default function SinavTakvimiV15() {
           <span className="v15-cap">Kurul {yaz(k.baslangic, false)} başladı · {gecen}/{sure} gün</span>
         </div>
         <Halka pct={(gecen / sure) * 100} boyut={84} etiket={kalanYaz(kalan)} yazi={<span className="tk15-n">{Math.max(0, kalan)}<small>gün</small></span>} />
+      </section>
+
+      {/* tasarım D06: pratik soru hatırlatması + kişisel sınav ekleme */}
+      <section className="tk15-hat v15-card">
+        <Bell aria-hidden />
+        <div><b>Sınav öncesi pratik soruları gönder</b><span className="v15-cap">5, 3 ve 1 gün önce Bildirimler'e soru çözme hatırlatması düşer</span></div>
+        <button type="button" role="switch" aria-checked={hatirlat} className={`kre-tgl${hatirlat ? ' is-on' : ''}`} onClick={() => { setHatirlat0(!hatirlat); hatirlatYaz(!hatirlat); }}><i /></button>
+      </section>
+
+      <section aria-label="Sınavlarım">
+        <div className="tk15-bas"><h2 className="v15-h2 tk15-h">Sınavlarım</h2>
+          <button type="button" className="v15-ib" onClick={() => setForm(form ? null : { ad: '', gun: ekle(g, 7), tur: 'Pratik' })} aria-label={form ? 'Vazgeç' : 'Sınav ekle'} title="Sınav ekle">{form ? <X aria-hidden /> : <Plus aria-hidden />}</button>
+        </div>
+        {form && (
+          <form className="v15-card tk15-form" onSubmit={(e) => { e.preventDefault(); if (!form.ad.trim()) return; setKisisel([...kisisel, { id: `ks${Date.now().toString(36)}`, ad: form.ad.trim().slice(0, 60), gun: form.gun, tur: form.tur }]); setForm(null); }}>
+            <input value={form.ad} onChange={(e) => setForm({ ...form, ad: e.target.value })} placeholder="Sınavın adı (örn. KMB uygulama)" aria-label="Sınavın adı" autoFocus />
+            <input type="date" value={form.gun} min={g} onChange={(e) => setForm({ ...form, gun: e.target.value })} aria-label="Tarih" />
+            <div className="v15-seg" role="radiogroup" aria-label="Tür">
+              {(['Komite', 'Pratik', 'Ara sınav', 'Diğer'] as const).map((t) => <button key={t} type="button" role="radio" aria-checked={form.tur === t} aria-current={form.tur === t ? 'page' : undefined} onClick={() => setForm({ ...form, tur: t })}>{t}</button>)}
+            </div>
+            <button type="submit" className="v15-btn" disabled={!form.ad.trim()}>Ekle</button>
+          </form>
+        )}
+        {yaklasan.length ? (
+          <ul className="tk15-ks" role="list">
+            {yaklasan.map((x) => (
+              <li key={x.id} className="v15-card">
+                <div className="tk15-ks-u"><b>{x.ad}</b><span className="v15-tag is-a">{x.tur}</span></div>
+                <span className="v15-cap">{yaz(x.gun)} · {kalanYaz(fark(x.gun, g))}</span>
+                <div className="tk15-ks-t">{[5, 3, 1].map((t) => { const d = ekle(x.gun, -t); return <span key={t} className={`v15-tag ${d < g ? 'is-ok' : d === g ? 'is-w' : ''}`}>T‑{t} · {tarih(d).toLocaleDateString('tr-TR', { day: 'numeric', month: 'short' })}</span>; })}</div>
+                <button type="button" className="v15-ib tk15-ks-sil" onClick={() => setKisisel(kisisel.filter((y) => y.id !== x.id))} aria-label={`${x.ad} sınavını sil`}><Trash2 aria-hidden /></button>
+              </li>
+            ))}
+          </ul>
+        ) : !form && <p className="v15-cap tk15-ks-bos">Kurul sınavları takvimden gelir. Pratik, KMB ya da ara sınavlarını + ile ekle; yılın çizelgesinde de görünür.</p>}
       </section>
 
       <section aria-label="Hazırlık günleri">
@@ -88,13 +131,13 @@ export default function SinavTakvimiV15() {
       <section aria-label="Yılın sınavları">
         <h2 className="v15-h2 tk15-h">Yılın sınavları</h2>
         <ol className="tk15-cizelge v15-card">
-          {olaylar.map((o) => {
+          {olaylarK.map((o) => {
             const durum = o.gun < g ? 'gecti' : o.id === siradaki ? 'simdi' : 'gelecek';
             return (
               <li key={o.id} className={`is-${durum}`}>
                 <span className="tk15-nokta" aria-hidden>{durum === 'gecti' ? <Check /> : null}</span>
                 <span className="tk15-c-t">
-                  <b>{o.ad}</b>
+                  <b>{o.ad}{'kisisel' in o && <span className="v15-tag is-a tk15-k">Senin</span>}</b>
                   <span className="v15-cap">{o.alt}</span>
                 </span>
                 <span className="tk15-c-g">

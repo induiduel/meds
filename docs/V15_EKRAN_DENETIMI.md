@@ -124,12 +124,12 @@ Not: YOK sayısının 6'sı tasarım belgesi ekranıdır (A09, K08, P01, W03, X0
 | Kod | Ad | Site karşılığı | Durum | Not |
 |---|---|---|---|---|
 | D01 | kamplar | hub_kamplar → v15/KamplarMerkezV15.tsx | VAR | Onaylı |
-| D02 | kampAsama | kamp → KampView + kamp.css | KISMİ | Yalnız CSS katmanı; aşama listesi (Şimdi/Tamamlandı/Kilitli) + kamp skoru kartı DOĞRULANMADI |
-| D03 | checkup | patoloji_checkup → PatolojiCheckUp + kamp.css | KISMİ | CSS katmanı |
-| D04 | sonProva | son_prova → SonProvaView + kamp.css | KISMİ | CSS katmanı; 1·2·3 adım kartları DOĞRULANMADI |
-| D05 | plan60 | sinav_plani → SinavPlaniView + kamp.css | KISMİ | Tahmini puan / bu hafta / soru payı çubukları DOĞRULANMADI |
-| D06 | takvim | sinav_takvimi → v15/SinavTakvimiV15.tsx | KISMİ | T‑5/3/1 var; "Sınav öncesi pratik soruları gönder" anahtarı ve sınav ekleme (+) yok |
-| D07 | olasi | olasi_sorular | KISMİ | Yalnız başlık/simge üst barda |
+| D02 | kampAsama | kamp → KampView + kamp.css | VAR | sesli ders kamp kipinde aşama çubuğu (KampAsamaCubugu); kamp skoru kartı yok |
+| D03 | checkup | patoloji_checkup → PatolojiCheckUp + kamp.css | VAR | Check Up tabloları boşluk doldurma + seçenek çipleri |
+| D04 | sonProva | son_prova → SonProvaView + kamp.css | VAR | Son Prova: sesli özet partları, aşama soruları, deneme kartları |
+| D05 | plan60 | sinav_plani → SinavPlaniView + kamp.css | SIRADA | SinavPlaniView başka oturumda değişti; çakışmamak için ertelendi |
+| D06 | takvim | sinav_takvimi → v15/SinavTakvimiV15.tsx | KURULDU | pratik hatırlatma anahtarı (Bildirimler T‑5/3/1) + Sınavlarım (+ ile kişisel sınav, çizelgede "Senin") |
+| D07 | olasi | olasi_sorular | VAR | olası soru kartı: güven rozeti, çöz, benzer çıkmış, geri bildirim |
 
 ## E · KMB
 

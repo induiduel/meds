@@ -29,3 +29,18 @@
 .is-gecti .tk15-c-t b { color: var(--color-ink-3); }
 .is-simdi .tk15-c-t b { color: var(--color-accent); }
 .tk15-c-g { flex: none; display: flex; flex-direction: column; align-items: flex-end; gap: 1px; color: var(--color-ink-2); font-size: .9rem; text-align: right; }
+
+/* D06 hatırlatma + Sınavlarım */
+.tk15-hat { display: flex; align-items: center; gap: 12px; padding: 12px 14px; }
+.tk15-hat > svg { width: 20px; height: 20px; color: var(--color-accent); flex: none; }
+.tk15-hat > div { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
+.tk15-bas { display: flex; align-items: center; justify-content: space-between; }
+.tk15-form { padding: 12px; display: flex; flex-direction: column; gap: 8px; margin-bottom: 8px; }
+.tk15-form input { height: 42px; padding: 0 12px; border-radius: 12px; border: 1px solid var(--color-line); background: var(--color-field); color: var(--color-ink); font: inherit; font-size: 16px; }
+.tk15-ks { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); }
+.tk15-ks li { position: relative; padding: 12px 44px 12px 14px; display: flex; flex-direction: column; gap: 6px; }
+.tk15-ks-u { display: flex; align-items: center; gap: 8px; }
+.tk15-ks-t { display: flex; gap: 6px; flex-wrap: wrap; }
+:root[data-v15='on'] .tk15-ks .tk15-ks-sil { position: absolute; top: 8px; right: 8px; color: var(--color-ink-3); }
+.tk15-ks-bos { margin: 0; }
+.tk15-k { margin-left: 6px; vertical-align: 1px; }

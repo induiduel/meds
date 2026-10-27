@@ -55,6 +55,7 @@ const SYNC_PATTERNS: RegExp[] = [
   /^medsoru_spot_(ogrendim|ilerleme_v1|yildiz_v1)$/,
   // Öğrenci profili (üniversite, sınıf, kurul, günlük hedef)
   /^medsoru_profil_v1$/,
+  /^medsoru_(sinavlarim|sinav_hatirlat)_v1$/,
   // Patoloji önem listesi: öğrendim işaretleri, ekran ve PDF tercihleri, son ders
   /^medsoru_onem_(ogrendim|tercih|pdf|asistan|asistan_tercih|son)_v1$/,
   /^medsoru_onem_ders(_[a-z0-9_]+)?$/,
