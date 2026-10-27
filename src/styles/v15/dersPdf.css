@@ -1,0 +1,87 @@
+/* Ders PDF belgesi (.dpdf): açık, baskıya uygun; sayfa = ders slaytı boyutu 720×540 pt (960×720 px). Renkler sabit (tema bağımsız). */
+@page { size: 960px 720px; margin: 28px 36px; }
+.dpdf { --ink:#1c1f26; --ink2:#454b57; --ink3:#7a808c; --line:#e3e6ec; --field:#f3f5f8; --acc:#0a84ff; --accs:#e6f1ff; --w:#b7791f; --ws:#fff6df; --b:#d63a3a; --bs:#fdeaea; --ok:#1f9d55; --oks:#e6f6ec; --ai:#8e44ad; --ais:#f3e9f9; --c:#1a8fa3; --cs:#e3f4f7;
+  font: 13px/1.5 'Inter', 'Segoe UI', system-ui, sans-serif; color: var(--ink); background: #fff; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+.dpdf * { box-sizing: border-box; }
+.dpdf h1, .dpdf h2, .dpdf h3, .dpdf h4, .dpdf p, .dpdf ul, .dpdf ol { margin: 0; }
+.dpdf strong, .dpdf b { font-weight: 700; }
+
+.dpdf-kapak { height: 664px; display: flex; flex-direction: column; justify-content: center; gap: 12px; padding: 0 24px; break-after: page; border-left: 10px solid var(--acc); }
+.dpdf-kapak small { color: var(--acc); font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+.dpdf-kapak h1 { font-size: 42px; line-height: 1.12; }
+.dpdf-kapak p { color: var(--ink2); font-size: 16px; }
+
+.dpdf-adim { break-before: page; display: flex; flex-direction: column; gap: 12px; }
+.dpdf-ust { display: flex; align-items: center; gap: 14px; padding-bottom: 10px; border-bottom: 2px solid var(--line); break-after: avoid; }
+.dpdf-no { flex: none; min-width: 46px; height: 46px; padding: 0 10px; border-radius: 12px; display: grid; place-items: center; background: var(--acc); color: #fff; font-weight: 800; font-size: 18px; }
+.is-tekrar .dpdf-no { background: var(--ok); font-size: 13px; }
+.dpdf-ust h2 { font-size: 22px; line-height: 1.2; }
+.dpdf-ust p { color: var(--ink2); font-size: 13px; margin-top: 2px; }
+
+.dpdf-anlatim { display: flex; flex-direction: column; gap: 9px; font-size: 14px; }
+.dpdf-anlatim p { color: var(--ink); }
+.dpdf-maddeler, .dpdf-alt, .dpdf-sira { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 5px; }
+.dpdf-maddeler > li { position: relative; padding-left: 16px; break-inside: avoid; }
+.dpdf-maddeler > li::before { content: ""; position: absolute; left: 2px; top: .6em; width: 7px; height: 7px; border-radius: 50%; background: var(--t, var(--acc)); }
+.dpdf-alt { margin-top: 4px; }
+.dpdf-alt > li { position: relative; padding-left: 14px; color: var(--ink2); font-size: .95em; }
+.dpdf-alt > li::before { content: ""; position: absolute; left: 2px; top: .75em; width: 7px; height: 2px; background: var(--ink3); }
+.dpdf-et::after { content: ": "; }
+.dpdf-kutu { display: flex; gap: 10px; padding: 10px 14px; border-radius: 10px; background: var(--ws); border-left: 4px solid var(--w); break-inside: avoid; }
+.dpdf-kutu > b { flex: none; color: var(--w); text-transform: uppercase; font-size: 11px; letter-spacing: .06em; padding-top: 2px; }
+.dpdf-kutu.is-note { background: var(--accs); border-color: var(--acc); }
+.dpdf-kutu.is-note > b { color: var(--acc); }
+
+.dpdf-ayrac { margin-top: 6px; padding: 5px 12px; border-radius: 8px; background: var(--ink); color: #fff; font-weight: 700; font-size: 11px; letter-spacing: .08em; text-transform: uppercase; break-after: avoid; }
+.dpdf-ozet { display: flex; flex-direction: column; gap: 10px; }
+.dpdf-bas { display: flex; align-items: center; gap: 8px; margin-top: 4px; font-size: 12px; text-transform: uppercase; letter-spacing: .06em; color: var(--ink2); break-after: avoid; }
+.dpdf-bas small { padding: 1px 8px; border-radius: 999px; background: var(--field); color: var(--ink3); font-size: 11px; }
+
+.dpdf-terimler { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+.dpdf-terim { padding: 8px 10px; border: 1px solid var(--line); border-radius: 10px; break-inside: avoid; }
+.dpdf-terim b { display: block; }
+.dpdf-terim small { display: block; color: var(--ink3); font-size: 11px; }
+.dpdf-terim p { color: var(--ink2); font-size: 12px; margin-top: 3px; }
+.dpdf-kisa { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; }
+.dpdf-kisa > div { display: flex; align-items: center; gap: 8px; padding: 6px 8px; border: 1px solid var(--line); border-radius: 8px; font-size: 12px; color: var(--ink2); break-inside: avoid; }
+.dpdf-kisa span { flex: none; padding: 2px 7px; border-radius: 6px; background: var(--ink); color: #fff; font: 800 11px/1.3 ui-monospace, monospace; }
+
+.dpdf-hast { border: 1px solid var(--line); border-radius: 12px; padding: 10px; break-inside: avoid; }
+.dpdf-hast > header { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+.dpdf-hast > header b { font-size: 15px; display: block; }
+.dpdf-hast > header em { color: var(--ink3); font-size: 12px; }
+.dpdf-harf { width: 30px; height: 30px; border-radius: 9px; display: grid; place-items: center; background: var(--bs); color: var(--b); font-weight: 800; }
+.dpdf-hast-g { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+.dpdf-bol { --t: var(--c); --ts: var(--cs); padding: 8px 10px; border-radius: 10px; background: var(--ts); border-left: 4px solid var(--t); font-size: 12.5px; }
+.dpdf-bol h4 { margin-bottom: 5px; font-size: 11px; letter-spacing: .06em; text-transform: uppercase; color: var(--t); }
+.dpdf-bol.is-w { --t: var(--w); --ts: var(--ws); } .dpdf-bol.is-b { --t: var(--b); --ts: var(--bs); } .dpdf-bol.is-a { --t: var(--acc); --ts: var(--accs); }
+.dpdf-bol.is-ok { --t: var(--ok); --ts: var(--oks); } .dpdf-bol.is-ai { --t: var(--ai); --ts: var(--ais); }
+
+.dpdf-liste, .dpdf-tablo { break-inside: avoid; }
+.dpdf-liste h4, .dpdf-tablo h4 { font-size: 13px; margin-bottom: 5px; }
+.dpdf-sira { counter-reset: s; }
+.dpdf-sira > li { counter-increment: s; position: relative; padding-left: 32px; min-height: 24px; }
+.dpdf-sira > li::before { content: counter(s); position: absolute; left: 0; top: 0; width: 22px; height: 22px; border-radius: 50%; background: var(--acc); color: #fff; font-weight: 800; font-size: 11px; display: grid; place-items: center; }
+.dpdf-tablo table { width: 100%; border-collapse: collapse; font-size: 12px; }
+.dpdf-tablo th, .dpdf-tablo td { text-align: left; vertical-align: top; padding: 5px 8px; border: 1px solid var(--line); }
+.dpdf-tablo thead th { background: var(--accs); color: var(--acc); font-size: 11px; text-transform: uppercase; letter-spacing: .04em; }
+.dpdf-tablo.is-k thead th { background: var(--ais); color: var(--ai); }
+.dpdf-tablo tbody th { background: var(--field); font-weight: 700; width: 28%; }
+.dpdf-tablo tr { break-inside: avoid; }
+
+.dpdf-spot { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 5px; }
+.dpdf-spot li { padding: 6px 10px 6px 12px; border-left: 3px solid var(--w); background: var(--ws); border-radius: 6px; font-size: 12.5px; break-inside: avoid; }
+.dpdf-spot li.is-onem { border-color: var(--b); background: var(--bs); }
+.dpdf-kartlar { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px; }
+.dpdf-kartlar > div { display: flex; flex-direction: column; gap: 2px; padding: 6px 10px; border: 1px dashed var(--ink3); border-radius: 8px; font-size: 12px; break-inside: avoid; }
+.dpdf-kartlar span { color: var(--ink2); }
+
+.dpdf-quiz { padding-left: 20px; display: flex; flex-direction: column; gap: 10px; }
+.dpdf-quiz > li { break-inside: avoid; }
+.dpdf-quiz small { margin-left: 8px; color: var(--ink3); }
+.dpdf-quiz ul { list-style: none; padding: 0; margin-top: 4px; display: flex; flex-direction: column; gap: 3px; }
+.dpdf-quiz ul li { padding: 3px 8px; border-radius: 6px; font-size: 12px; }
+.dpdf-quiz ul li span { display: inline-block; width: 18px; font-weight: 700; color: var(--ink3); }
+.dpdf-quiz ul li.is-dogru { background: var(--oks); }
+.dpdf-quiz ul li em { display: block; font-style: normal; color: var(--ink2); font-size: 11.5px; padding-left: 18px; }
+

@@ -25,6 +25,12 @@ for key in sys.argv[1:]:
             if not b['m']: e.append(f"boş bölüm: {x['ad']}/{b['b']}")
     for q in d.get('quiz', []):
         if sum(o['d'] for o in q['o']) != 1: e.append(f"quiz tek doğru değil: {q['q'][:40]}")
+    # PDF akışı: her kayıt `adim` (Öğren slayt no) taşır; eşlenemeyen (0) payı yüksekse üretim eksiktir
+    kay = [x for k, v in d.items() if isinstance(v, list) for x in v if isinstance(x, dict)]
+    ya = [x for x in kay if 'adim' not in x]
+    if ya: e.append(f'{len(ya)} kayıtta adim yok: python3 scripts/ders_icerik_adim.py {key}')
+    s0 = sum(1 for x in kay if x.get('adim') == 0)
+    if kay and s0 / len(kay) > 0.05: e.append(f'adim eşlenemeyen kayıt %{100 * s0 // len(kay)} (>%5): slayt/sayfa kaynağı eksik')
     # sesli örnek soru çözücü (kaynak gösteren, şık şık açıklamalı) zorunlu
     nz = lambda t: re.sub(r'\W+', ' ', (t or '').lower()).strip()
     bas = nz(d.get('baslik'))

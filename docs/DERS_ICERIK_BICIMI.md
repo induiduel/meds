@@ -36,3 +36,13 @@ Ekran: `src/components/v15/DersIcerikV15.tsx` + `src/styles/v15/dersIcerik.css`.
 - Yeni sayfa türü gerekirse `DI_BOLUMLER` + `DersIcerikV15` + `DersDetayV15` satırı + bu belge BİRLİKTE güncellenir (tasarım–kod uyumu).
 
 - **Sesli örnek soru çözücü** da paketin parçasıdır: her şık için kaynak (slayt/sayfa) gösteren ayrıntılı açıklama + EMA sesi; çözücü yoksa kapı HATA verir.
+
+## Ders PDF'i ve `adim` anahtarı (kullanıcı kararı 2026-10-27)
+- Paketteki HER kayıt (`terimler, kisaltmalar, bilgiler, hastaliklar, onemli, spotlar, tablolar, listeler, kartlar, quiz`) `adim` taşır:
+  ait olduğu Öğren slaytının numarası (`slideNumber`); `0` = eşlenemedi (PDF'te "Ek"). `n` taşıyanda `adim = n`; PDF sayfası (`s`) taşıyanda
+  sayfayı kapsayan ilk içerik slaytı; kısaltmada adı ilk geçtiği slayt. Yazan: `scripts/ders_icerik_adim.py` (üreteç sonunda kendiliğinden çalışır, yinelenebilir).
+- Yeni kayıt türü/üretim adımı eklerken kaydın slayt kaynağını `n` ya da `s` ile işle; yoksa PDF akışı onu adıma bağlayamaz. Kapı (`ders_icerik_dogrula.py`): `adim` yoksa ya da eşlenemeyen >%5 ise HATA.
+- PDF akışı (saf gruplama, yapay zeka yok): `src/components/v15/dersPdfAkis.ts` slaytları ders sırasıyla dizer, her slaytın anlatımından hemen sonra `adim` eşit kayıtları
+  "Bu adımın özeti" olarak ekler (terim → kısaltma → hastalık → sıralama → tablo → spot → kart); mini sorular sonda "Kendini sına", eşlenemeyenler "Ek".
+  Render `DersPdfBelge.tsx` + `styles/v15/dersPdf.css` (sayfa 720×540 pt = slayt boyutu). Ekran: ders sayfası › "Ders PDF'i" (`?b=pdf`) › "PDF olarak kaydet".
+  Komut satırı: `npx tsx scripts/ders_pdf.mts <key> [çıktı.pdf]` (google-chrome headless). Yeni ders ögesi türü = veri + `dersPdfAkis` + `DersPdfBelge` birlikte.

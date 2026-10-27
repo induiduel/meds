@@ -475,3 +475,7 @@ LLM otomasyonu kapalıdır (AGENTS kural 20). Yeni ders, kullanıcı hangi dosya
 11. **Kayıt + dağıtım:** veriler `data/sesli_anlatim/*/<key>` olarak commit, `guncelleme_notu.json` onem+1, `dagit.sh`; canlı API'de
     ders, ses, PDF (`/api/lecture-pdf/deck/<deckId>/0` 200), çıkmış, işaret, terim, kısaltma doğrulanır.
 
+
+
+### PDF akışı için etiketleme (2026-10-27)
+`ders_icerik_uret.py` sonunda `ders_icerik_adim.py` çalışır: her kayda `adim` (slayt no) yazılır; `ders_icerik_dogrula.py` eksik/eşlenemeyen `adim`'de HATA verir. PDF: `npx tsx scripts/ders_pdf.mts <key>`; ekranda ders sayfası › Ders PDF'i. Ayrıntı: `DERS_ICERIK_BICIMI.md`.

@@ -1,16 +1,18 @@
 /** Ders içerik paketi (scripts/ders_icerik_uret.py → src/data/ders_icerik/<key>.json): terim, hastalık, bilgi, tablo, kart, örnek soru. */
-export interface DiTerim { t: string; a: string; i: string; e: string[]; s?: number }
-export interface DiHastalik { id: string; ad: string; latin: string; kat: string; bolumler: { b: string; m: { m: string; s?: number | null }[] }[]; s: number[] }
-export interface DiTablo { t: string; h: string[]; r: string[][]; n: number; k?: string }
-export interface DiOnemli { p: number; b: string; m: string; alt: string[]; n: string; s: number[]; tur?: string }
+/** adim: ait olduğu Öğren slayt numarası (0 = eşlenemedi → PDF'te 'Ek'); scripts/ders_icerik_adim.py yazar. */
+export interface DiAdim { adim?: number }
+export interface DiTerim extends DiAdim { t: string; a: string; i: string; e: string[]; s?: number }
+export interface DiHastalik extends DiAdim { id: string; ad: string; latin: string; kat: string; bolumler: { b: string; m: { m: string; s?: number | null }[] }[]; s: number[] }
+export interface DiTablo extends DiAdim { t: string; h: string[]; r: string[][]; n: number; k?: string }
+export interface DiOnemli extends DiAdim { p: number; b: string; m: string; alt: string[]; n: string; s: number[]; tur?: string }
 /** sira: numara (1,2,3) | alfa (a,b,c) | azalan (büyükten küçüğe) | madde (sırasız) */
-export interface DiListe { t: string; sira: 'numara' | 'alfa' | 'azalan' | 'madde'; m: { m: string; alt?: { m: string }[] }[]; n: number; a?: string }
-export interface DiQuiz { q: string; o: { k: string; t: string; d: boolean; a: string }[]; n: number }
+export interface DiListe extends DiAdim { t: string; sira: 'numara' | 'alfa' | 'azalan' | 'madde'; m: { m: string; alt?: { m: string }[] }[]; n: number; a?: string }
+export interface DiQuiz extends DiAdim { q: string; o: { k: string; t: string; d: boolean; a: string }[]; n: number }
 export interface DiPaket {
   key: string; baslik?: string; ozet?: string;
-  terimler: DiTerim[]; kisaltmalar: { k: string; acilim: string }[]; hastaliklar: DiHastalik[];
-  bilgiler: { b: string; m: string; s?: number }[]; onemli: DiOnemli[]; spotlar: { m: string; n: number; bolum: string }[];
-  tablolar: DiTablo[]; listeler: DiListe[]; quiz: DiQuiz[]; cikmis?: number; kartlar: { o: string; a: string; c: string; n: number }[];
+  terimler: DiTerim[]; kisaltmalar: (DiAdim & { k: string; acilim: string })[]; hastaliklar: DiHastalik[];
+  bilgiler: (DiAdim & { b: string; m: string; s?: number })[]; onemli: DiOnemli[]; spotlar: (DiAdim & { m: string; n: number; bolum: string })[];
+  tablolar: DiTablo[]; listeler: DiListe[]; quiz: DiQuiz[]; cikmis?: number; kartlar: (DiAdim & { o: string; a: string; c: string; n: number })[];
 }
 export interface DiSoru { id: string; kazanim: number; zorluk: string; soru: string; secenekler: Record<string, string>; dogru: string; aciklama: string }
 
@@ -30,3 +32,8 @@ export const DI_BOLUMLER: { id: DiBolum; ad: string }[] = [
   { id: 'bilgiler', ad: 'Bilgi spotları' }, { id: 'listeler', ad: 'Sıralamalar ve listeler' }, { id: 'tablolar', ad: 'Tablolar ve karşılaştırmalar' },
   { id: 'sorular', ad: 'Örnek sorular' }, { id: 'quiz', ad: 'Mini sorular' }, { id: 'kartlar', ad: 'Hatırlatma kartları' },
 ];
+
+/** PDF için ders slaytları (Öğren destesi; anlatım metni + sırası). */
+export interface DiSlayt { slideNumber: number; title: string; subtitle?: string; badge?: string; bolum?: string; synthesisNarrative?: string; content?: string; isCheckpoint?: boolean; isGameFinale?: boolean; pdfSayfalari?: number[] }
+const DESTELER = import.meta.glob('../../data/decks/items/*.json', { import: 'default' }) as Record<string, () => Promise<{ slides: DiSlayt[]; title?: string }>>;
+export const dersSlaytlariGetir = async (key: string) => (await Object.entries(DESTELER).find(([p]) => p.endsWith(`/k2p-${anahtar(key)}.json`))?.[1]?.()) || null;

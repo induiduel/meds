@@ -109,6 +109,9 @@ def uret(key):
     out['cikmis'] = len(J(cj)) if os.path.exists(cj) else 0
     p = os.path.join(R, 'src/data/ders_icerik', key + '.json')
     json.dump(out, open(p, 'w', encoding='utf-8'), ensure_ascii=False, separators=(',', ':'))
+    sys.path.insert(0, os.path.dirname(__file__))
+    from ders_icerik_adim import adim_yaz
+    adim_yaz(key)  # her kayda `adim` (slayt no) → PDF akışı yapay zekasız kurulur
     print(key, {k: len(v) for k, v in out.items() if isinstance(v, list)})
 for k in sys.argv[1:]: uret(k)
 # H105 kapısı: sıralı tablolarda numara atlanmamalı (0 HATA değilse çıkış 1)

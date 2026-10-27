@@ -1,13 +1,11 @@
 {
  "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
- "onem": 494,
- "baslik": "Yeni ekranlar: sohbet, yorumlar, sıralama, anatomi",
+ "onem": 495,
+ "baslik": "Ders PDF'i: anlatım + her adımın özeti",
  "maddeler": [
-  "Topluluk: kişi/grup sohbetleri ve beğenili, sıralanabilir yorumlar",
-  "Sıralama: Sınıfım, Üniversite, Türkiye sekmeleri",
-  "Hastalıklar: Anatomiden gez görünümü ve bulgu süzgeci",
-  "Bitirdiklerim ve 60 planı üst özet kartları",
-  "Sesli derste yeni değer kartı çizim paneli"
+  "Ders sayfasında yeni \"Ders PDF'i\": slaytlar ders sırasıyla, her anlatımın hemen ardından o adımın terim, tablo, sıralama ve spotları",
+  "Sayfalar ders slaytı boyutunda; \"PDF olarak kaydet\" ile indirilir",
+  "Tüm ders içerik kayıtları ait olduğu slayt numarasını (adim) taşır"
  ],
  "eklenen": [],
  "degisen": [],
