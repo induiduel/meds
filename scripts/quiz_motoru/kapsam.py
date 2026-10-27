@@ -2,7 +2,7 @@
 """Quiz Motoru Kapsam ve Öncelik Kilidi Denetleyicisi.
 
 Faz 1: Kapsam Kilidi (Scope Lock)
-- Şimdilik yalnızca 'Farmakoloji' (pharmacology, f, Tıbbi Farmakoloji) dersi için aktiftir.
+- Kullanıcı kararı 2026-10-27: Quiz üretimi HER ders için aktiftir (eski Farmakoloji kilidi kalktı).
 - Ders-bağımsız (course-agnostic) mimari: MEDS_QUIZ_ETKIN_KURSLAR ortam değişkeni
   veya yapılandırma ile diğer branşlar (patoloji, mikrobiyoloji vb.) tek satırla etkinleştirilebilir.
 
@@ -19,8 +19,8 @@ from typing import Dict, Any, Optional
 MEDS = Path(__file__).resolve().parents[2]
 KOK = MEDS.parent
 
-# Varsayılan etkin dersler (Scope Lock: Sadece Farmakoloji)
-VARSAYILAN_ETKIN_BRANSLAR = {"farmakoloji", "pharmacology", "tibbi farmakoloji", "f"}
+# Varsayılan: her ders etkin (kullanıcı kararı 2026-10-27). Kısıtlamak için MEDS_QUIZ_ETKIN_KURSLAR=a,b
+TUM_DERSLER = True
 
 
 def quiz_etkin_mi(brans_veya_kurs: str) -> bool:
@@ -36,8 +36,7 @@ def quiz_etkin_mi(brans_veya_kurs: str) -> bool:
             return True
         return brans_veya_kurs.strip().casefold() in etkinler
 
-    # Varsayılan kapsam kilidi
-    return brans_veya_kurs.strip().casefold() in VARSAYILAN_ETKIN_BRANSLAR
+    return TUM_DERSLER
 
 
 def sesli_ders_tamamlandi_mi(ders_id: str, taslak_klasor: Optional[Path] = None) -> bool:
@@ -54,7 +53,8 @@ def sesli_ders_tamamlandi_mi(ders_id: str, taslak_klasor: Optional[Path] = None)
         oturum_sesli = taslak_klasor / "oturum_sesli.json"
         
         # konusma_v2.json veya konusma_metni.md bulunmalı
-        if not (v2.exists() or metin.exists()):
+        yayinli = (MEDS / "data/sesli_anlatim/metin" / f"{ders_id}.md").exists() and (MEDS / "data/sesli_anlatim/cumle_zaman" / f"{ders_id}.json").exists()  # elle üretilen dersler: yayınlanmış sesli ders = COMPLETED
+        if not (v2.exists() or metin.exists() or yayinli):
             return False
             
         # Denetim dosyası veya oturumda hata var mı kontrol et

@@ -11,8 +11,8 @@ Görevin: Bu ders taslağında yer alan ve **Sesli Ders (Audio Lesson) süreci b
 1. **Öncelik Kilidi (Priority Lock):**
    - Sesli Ders pipeline'ı `COMPLETED` (Tamamlandı) durumuna geçmeden Quiz soru üretimi **KESİNLİKLE BAŞLAYAMAZ**.
    - Taslak dizininde onaylanmış `konusma_v2.json` (veya `konusma_metni.md`) ve geçerli bir sesli ders metin denetim sonucu bulunmalıdır.
-2. **Kapsam Kilidi (Scope Lock):**
-   - Quiz üretim modülü şimdilik **yalnızca `Farmakoloji` (`Tıbbi Farmakoloji`, `pharmacology`)** dersi için aktiftir. Ancak veri yapısı diğer tüm derslere (Patoloji, Mikrobiyoloji, Biyokimya vb.) şema değişikliği gerektirmeden uygulanabilecek ders-bağımsız (course-agnostic) mimaridedir.
+2. **Kapsam (kullanıcı kararı 2026-10-27):**
+   - Quiz üretimi HER ders için aktiftir (Farmakoloji kilidi kalktı). Ders-bağımsız şema; `course_id` dersin branşına göre yazılır.
 3. **Kırmızı Çizgi (Sıfır Halüsinasyon & Kaynak Sadakati):**
    - Kaynakta (slaytta / `atomik_bilgi_envanteri.json`) yer almayan hiçbir bilgi, ilaç, yan etki veya mekanizma **uydurulamaz**.
    - Kaynaktaki tekil atomik bilgilerin hiçbir tanesi atlanamaz.

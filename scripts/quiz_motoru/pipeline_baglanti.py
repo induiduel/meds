@@ -37,10 +37,10 @@ def pipeline_kos(taslak_klasor: Path, ders_id: str = None, brans: str = None, ku
 
     # Faz 1: Kapsam Kilidi Kontrolü (Scope Lock)
     if not quiz_etkin_mi(brans):
-        print(f"ℹ Faz 1 Kapsam Kilidi: '{brans}' dersi için Quiz üretimi şu an aktif değil (yalnızca Farmakoloji). Atlanıyor.")
+        print(f"ℹ Faz 1 Kapsam Kilidi: '{brans}' dersi için Quiz üretimi şu an aktif değil (MEDS_QUIZ_ETKIN_KURSLAR ile kısıtlanmış). Atlanıyor.")
         return 0
 
-    print("✔ Faz 1: Kapsam Kilidi Doğrulandı (Farmakoloji aktif).")
+    print("✔ Faz 1: Kapsam Doğrulandı (tüm dersler aktif).")
 
     # Faz 3: Öncelik Kilidi (Sesli Ders Tamamlanma Kontrolü)
     if not sesli_ders_tamamlandi_mi(ders_id, taslak_klasor):

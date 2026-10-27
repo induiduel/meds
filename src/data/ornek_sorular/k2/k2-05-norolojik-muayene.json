@@ -163,6 +163,68 @@
      }
     },
     {
+     "id": "k2-05-norolojik-muayene-q35",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Aşağıdakilerden hangisi mental durum başlığı altında sayılan bozukluk terimlerinden biri değildir?",
+     "secenekler": {
+      "A": "Konfüzyon",
+      "B": "Disdiadokinezi",
+      "C": "Stupor",
+      "D": "Amnezi",
+      "E": "Deliriyum"
+     },
+     "dogru": "B",
+     "aciklama": "Konfüzyon, somnolans-letarji, stupor, koma, amnezi ve deliriyum mental durum bozukluklarıdır; disdiadokinezi ise serebellar bulgudur (s. 5, 71).",
+     "sik_aciklamalari": {
+      "A": "Konfüzyon, düşüncenin açıklığının ve çevreye yönelimin bozulduğu bir mental durum bozukluğudur. Slaytta mental durum bozuklukları listesinin başında yer aldığı için bu soruda aranan seçenek değildir (s. 5).",
+      "B": "Disdiadokinezi, ardışık hareketlerin düzenli yapılamaması olup serebellar koordinasyon muayenesinin bulgusudur. Mental durumu değil, hareketlerin ritmini ve düzenini etkileyen serebellar işlevi gösterir; bu nedenle mental durum bozuklukları arasında sayılmaz (s. 5, 71).",
+      "C": "Stupor, uyaranlara ancak güçlü uyarıyla yanıt verilen derin bir uyanıklık azlığıdır ve koma öncesi basamaklardan biridir. Mental durum bozuklukları arasında sayıldığı için sorunun koşuluna uymaz (s. 5).",
+      "D": "Amnezi, belleğin kaybıdır ve mental durumun bellek bileşenindeki bozukluğu anlatır. Slaytta mental durum bozuklukları arasında verildiğinden sorudaki dışlama koşuluna uymaz (s. 5).",
+      "E": "Deliriyum, dikkatin ve bilinç berraklığının dalgalandığı, akut gelişen bir mental durum bozukluğudur. Slaytta mental durum bozukluğu olarak sayıldığı için bu soruda doğru seçenek olamaz (s. 5)."
+     },
+     "bilgi": [
+      5,
+      119
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 5,
+      "alinti": "Konfüzyon Somnolans- Letarji Stupor Koma Amnezi Deliriyum"
+     }
+    },
+    {
+     "id": "k2-05-norolojik-muayene-q36",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Konuşmanın akıcılık, anlama, tekrarlama, isimlendirme, okuma ve yazma yönünden değerlendirildiği muayenede saptanan konuşma bozukluğuna verilen genel ad hangisidir?",
+     "secenekler": {
+      "A": "Disartri",
+      "B": "Dismetri",
+      "C": "Disfazi ya da afazi",
+      "D": "Amnezi",
+      "E": "Parestezi"
+     },
+     "dogru": "C",
+     "aciklama": "Konuşma bozukluğuna disfazi ya da afazi denir; motor disfazi Broca, sensoriyal afazi Wernicke ile anılır (s. 6).",
+     "sik_aciklamalari": {
+      "A": "Disartri, konuşma kaslarının koordinasyonunun bozulmasıyla sözcüklerin düzgün söylenememesidir ve serebellar sistem bulgusu olarak sayılır. Dil işlevinin kendisini değil söyleyişi etkilediği için mental durumdaki konuşma bozukluğunun adı değildir (s. 71).",
+      "B": "Dismetri, hedefe uzanan harekette mesafenin yanlış ayarlanmasıdır ve parmak-burun gibi metrik muayenede ortaya çıkar. Konuşmayla ilgisi olmayan bir serebellar bulgu olduğundan bu soruda uygun değildir (s. 67, 71).",
+      "C": "Disfazi ya da afazi, dil işlevinin akıcılık, anlama, tekrarlama, isimlendirme, okuma ve yazma gibi boyutlarındaki bozukluğu anlatan genel addır. Motor tipi Broca, sensoriyal tipi Wernicke ile anılır; soru bu genel adı sorduğu için doğru seçenek budur (s. 6).",
+      "D": "Amnezi, belleğin kaybıdır ve mental durumun bellek bileşeniyle ilgilidir. Konuşmanın akıcılık ve anlama gibi boyutlarını değil anıları etkilediği için konuşma bozukluğunun adı olarak kullanılmaz (s. 5).",
+      "E": "Parestezi, dış uyarım olmadan hissedilen uyuşma ve karıncalanma gibi bir duyu terimidir. Duyu sistemi muayenesine ait olduğundan konuşma bozukluğunu anlatmaz (s. 59)."
+     },
+     "bilgi": [
+      7,
+      8
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 6,
+      "alinti": "Disfazi, afazi Motor disfazi (Broca) Sensoriyal afazi (Wernicke)"
+     }
+    },
+    {
      "id": "k2-05-norolojik-muayene-q06",
      "kazanim": 1,
      "zorluk": "zor",
@@ -451,6 +513,379 @@
      }
     },
     {
+     "id": "k2-05-norolojik-muayene-q37",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Göz dibi muayenesinde papilla kenarları ve damar silikleşmiş, optik çukur kaybolmuş, retinal venler kalınlaşmış ve pulsasyonlar kaybolmuş olan hastada bu tablonun en sık nedeni hangisidir?",
+     "secenekler": {
+      "A": "Karotid arterden kopan embolinin retinal arteri tıkaması",
+      "B": "Burun mukozası enfeksiyonu",
+      "C": "Kokain alışkanlığı",
+      "D": "Kafa içi basınç artışı sendromu (KİBAS)",
+      "E": "Troklear sinir felci"
+     },
+     "dogru": "D",
+     "aciklama": "Papil ödeminin en sık rastlanan nedeni KİBAS'tır; embolik retinal arter tıkanması amorozis fugax'a yol açar (s. 19).",
+     "sik_aciklamalari": {
+      "A": "Retinal arterin embolik tıkanması tek gözde ani ve geçici görme kaybıyla seyreden amorozis fugax tablosunu yapar. Göz dibinde papilla kenarlarının silikleşmesiyle giden papil ödeminin en sık nedeni değildir (s. 19).",
+      "B": "Burun mukozası enfeksiyonları koku sinirinin işlevini bozarak anosmiye yol açan nedenler arasında sayılır. Optik diskte ödem oluşturmadığından papil ödeminin nedeni olarak düşünülmez (s. 14).",
+      "C": "Kokain alışkanlığı da anosmi nedenleri arasında verilir ve koku duyusunu etkiler. Papil ödemiyle ilişkilendirilen bir neden olarak anlatılmadığından bu soruda doğru değildir (s. 14, 19).",
+      "D": "KİBAS, kafa içi basıncın yükseldiği bir tablodur ve papil ödemine en sık yol açan nedendir. Papilla kenarlarının silikleşmesi, optik çukurun kaybolması ve venöz pulsasyonların kaybı bu basınç artışının göz dibindeki yansımasıdır (s. 19).",
+      "E": "Troklear sinir felci, medial deviasyondaki gözün aşağı çekilememesine bağlı çift görmeye, özellikle merdiven inerken yol açar. Optik diskte ödem yapmaz; papil ödeminin nedeni olamaz (s. 21, 22)."
+     },
+     "bilgi": [
+      31,
+      32
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 19,
+      "alinti": "KİBAS en sık rastlanan nedenidir"
+     }
+    },
+    {
+     "id": "k2-05-norolojik-muayene-q38",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Görme keskinliği Snellen ve Jaeger kartlarıyla, görme alanı dört kadran yöntemiyle muayene edilen sinirin pupillar ışık refleksindeki yeri hangisidir?",
+     "secenekler": {
+      "A": "Afferent (getirici) kol",
+      "B": "Efferent (götürücü) kol",
+      "C": "Hem getirici hem götürücü kol",
+      "D": "Kornea refleksinin getirici kolu",
+      "E": "Çene refleksinin götürücü kolu"
+     },
+     "dogru": "A",
+     "aciklama": "KS II ışık refleksinin afferent koludur, efferent kolu KS III taşır (s. 12, 17, 23).",
+     "sik_aciklamalari": {
+      "A": "Optik sinir, retinadan gelen ışık uyarısını beyne taşıyarak pupillar ışık refleksinin getirici kolunu oluşturur. Götürücü kolu ise okülomotor sinir taşır; bu soruda sorulan optik sinirin getirici rolüdür (s. 17, 23).",
+      "B": "Efferent kol, refleksin yanıtını pupilla daraltıcı kasa ileten okülomotor sinirdir. Optik sinir uyarıyı iletir, yanıtı taşımaz; bu yüzden götürücü kol seçeneği bu soruda uymaz (s. 23).",
+      "C": "Bir refleks yayında getirici ve götürücü kollar farklı sinirler tarafından taşınır; ışık refleksinde getirici kol KS II, götürücü kol KS III'tür. Optik sinir yalnızca birini üstlendiğinden bu seçenek uymaz (s. 12, 17).",
+      "D": "Kornea refleksinde getirici kolu trigeminal sinir, götürücü kolu fasiyal sinir taşır. Optik sinir bu refleksin yoluna katılmaz; seçenek ışık refleksiyle karıştırılmıştır (s. 25, 28).",
+      "E": "Çene refleksinde hem getirici hem götürücü kol trigeminal sinirdir. Optik sinirin görmeyle ilgili işlevi bu refleks yolunda yer almadığı için seçenek uymaz (s. 25)."
+     },
+     "bilgi": [
+      26,
+      27,
+      42
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 17,
+      "alinti": "Işık refleksinin afferentidir"
+     }
+    },
+    {
+     "id": "k2-05-norolojik-muayene-q39",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Gözünü dışa (laterale) çeviremeyen bir hastada tutulan sinir ve onun innerve ettiği kas aşağıdakilerin hangisinde doğru eşleştirilmiştir?",
+     "secenekler": {
+      "A": "N. troklearis (KS IV) – m. obliquus superior",
+      "B": "N. abdusens (KS VI) – m. rectus lateralis",
+      "C": "N. okülomotorius (KS III) – m. levator palpebra",
+      "D": "N. okülomotorius (KS III) – m. constrictor pupilla",
+      "E": "N. trigeminus (KS V) – m. masseter"
+     },
+     "dogru": "B",
+     "aciklama": "Abdusens siniri m. rectus lateralis'i innerve eder; lezyonunda göz dışa bakamaz (s. 22).",
+     "sik_aciklamalari": {
+      "A": "Troklear sinir, medial deviasyondaki gözü aşağı çeken m. obliquus superior'u innerve eder. Lezyonunda göz aşağı ve içe bakamaz; dışa bakış bozukluğunu açıklamaz (s. 22).",
+      "B": "N. abdusens, m. rectus lateralis'i innerve ederek göze lateral deviasyon yaptırır. Lezyonunda göz dışa bakamadığı için sorudaki bulguyu bu sinir ve kas çifti açıklar (s. 22).",
+      "C": "Okülomotor sinir, üst göz kapağını kaldıran m. levator palpebra'yı da innerve eder; lezyonunda ptozis görülür. Dışa bakış kısıtlılığına değil göz kapağı düşüklüğüne yol açtığı için uymaz (s. 23).",
+      "D": "Okülomotor sinir, pupillayı daraltan m. constrictor pupilla'ya parasempatik innervasyon verir. Bu kasın bozulması pupilla genişlemesine yol açar, gözün dışa çevrilmesiyle ilgisi yoktur (s. 23).",
+      "E": "Trigeminal sinir masseter ve temporal kasları innerve eder ve çiğnemeyi sağlar. Göz hareketleriyle ilgisi olmadığı için dışa bakış bozukluğunu açıklayamaz (s. 25)."
+     },
+     "bilgi": [
+      38
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 22,
+      "alinti": "N. Abducens (CN VI) Göze lateral deviasyon yaptırır ( m. rectus lateralis)"
+     }
+    },
+    {
+     "id": "k2-05-norolojik-muayene-q42",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "III, IV ve VI. kraniyal sinirlerin muayenesinde hastaya hangi yönerge verilir ve neler değerlendirilir?",
+     "secenekler": {
+      "A": "Başını serbestçe çevirmesi istenir; yalnızca tek bir kadranda bakış izlenir",
+      "B": "Gözlerini kapatması istenir; hastaya nane ve limon kokusu tutulur",
+      "C": "Ağzını açıp aaa demesi istenir; yutma ve öğürme refleksi değerlendirilir",
+      "D": "Başının üstüne diyapazon konulur; Rinne ve Weber testleri uygulanır",
+      "E": "Başını sabit tutması istenir; gözlerin tüm kadranlardaki hareketine bakılır, göz kapağı ve pupilla değerlendirilir, varsa nistagmus not edilir"
+     },
+     "dogru": "E",
+     "aciklama": "Göz hareketi muayenesinde hastanın başı sabit tutulur ve gözlerin tüm kadranlardaki hareketine bakılır (s. 21, 22).",
+     "sik_aciklamalari": {
+      "A": "Baş serbest bırakılırsa gözlerin gerçek hareketi baş hareketiyle karışır. Muayenede tüm kadranlar izlenir, tek kadranla yetinilmez. Başın sabit tutulması bu nedenle muayenenin temel koşuludur (s. 21).",
+      "B": "Nane ve limon gibi kokular I. kraniyal sinirin, yani koku muayenesinin uyaranıdır. Göz hareketleriyle ilgisi olmadığından III, IV ve VI. sinir muayenesinde kullanılmaz (s. 14).",
+      "C": "Bu yönerge IX ve X. kraniyal sinirlerin muayenesinde kullanılır ve palatal hareketleri gösterir. Göz hareketleri sınanmadığı için bu seçenek uymaz (s. 36).",
+      "D": "Rinne ve Weber testleri VIII. kraniyal sinirin işitme işlevini değerlendirir. Gözün hareketleri bu testlerle incelenmediğinden seçenek uygun değildir (s. 32).",
+      "E": "Göz hareketlerini sınarken hastanın başı sabit tutulur, böylece hareket yalnızca gözlerden kaynaklanır ve her kadrandaki bakış izlenir. Göz kapağı, pupilla ve varsa nistagmus da aynı muayenede kaydedilir (s. 21, 22)."
+     },
+     "bilgi": [
+      34,
+      37
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 21,
+      "alinti": "Hastanın başını sabit tutması istenir Gözlerin tüm kadranlardaki hareketine bakılır"
+     }
+    },
+    {
+     "id": "k2-05-norolojik-muayene-q43",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Yüzünde dokunma, ağrı ve ısı duyusunu algılayamayan, ayrıca masseter ve temporal kaslarında kuvvet azlığı bulunan hastada hangi kraniyal sinir tutulmuştur?",
+     "secenekler": {
+      "A": "N. fasialis (KS VII)",
+      "B": "N. vestibulokoklearis (KS VIII)",
+      "C": "N. hipoglossus (KS XII)",
+      "D": "N. trigeminus (KS V)",
+      "E": "N. glossofaringeus (KS IX)"
+     },
+     "dogru": "D",
+     "aciklama": "Trigeminal sinir yüz duyusundan ve masseter-temporal kasların hareketinden sorumludur (s. 25).",
+     "sik_aciklamalari": {
+      "A": "Fasiyal sinir yüzün mimik kaslarını innerve eder ve dilin ön üçte ikisinin tat duyusunu taşır. Çiğneme kaslarını ve yüzün dokunma-ağrı duyusunu taşımadığı için bu hastayı açıklamaz (s. 28).",
+      "B": "Bu sinir işitme ve dengeden sorumludur ve Rinne, Weber gibi testlerle değerlendirilir. Yüz duyusu ve çiğneme kasıyla ilgisi olmadığından uymaz (s. 32).",
+      "C": "Hipoglossus siniri dil kaslarını hareket ettiren motor sinirdir; lezyonunda dil atrofisi olur ve dil lezyon tarafına kayar. Yüz duyusunu taşımaz, bu nedenle seçenek uymaz (s. 40).",
+      "D": "Trigeminal sinir yüzün dokunma, ağrı ve ısı duyusunu alır ve masseter ile temporal kasları innerve eder. Hastadaki hem duyu hem çiğneme kası bulgusu bu sinirin iki işlevinin birlikte bozulduğunu gösterir (s. 25).",
+      "E": "Glossofaringeal sinir farenks, tonsilla ve yumuşak damağın duyusunu, dilin arka üçte birinin duyusunu sağlar. Yüzün duyusunu ve çiğneme kaslarını ilgilendirmediği için seçenek uymaz (s. 35)."
+     },
+     "bilgi": [
+      45,
+      46
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 25,
+      "alinti": "Yüzün Duyusundan sorumlu (dokunma, ağrı, ısı) Motor-masseter ve temporal kasları innerve eder"
+     }
+    },
+    {
+     "id": "k2-05-norolojik-muayene-q44",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Trigeminal sinir lezyonunda aşağıdaki bulgulardan hangisi beklenir?",
+     "secenekler": {
+      "A": "Alın çizgilerinin silinmesi ve kaş kaldıramama",
+      "B": "Yüzde hipoestezi ve kornea refleksi kaybı",
+      "C": "Dilin lezyon tarafına kayması ve dil atrofisi",
+      "D": "Ptozis ve midriyazis",
+      "E": "Omuz elevasyonunda güçsüzlük"
+     },
+     "dogru": "B",
+     "aciklama": "Trigeminal lezyonda yüzde hipoestezi, kornea refleksi kaybı, motor bozukluk ve trigeminal nevralji görülür (s. 26).",
+     "sik_aciklamalari": {
+      "A": "Bu bulgular yüzün bir yarısının tamamını etkileyen periferik fasial paralizide görülür. Mimik kaslar fasiyal sinire ait olduğundan trigeminal lezyon bulgusu değildir (s. 30).",
+      "B": "Trigeminal sinir yüz duyusunu ve kornea refleksinin getirici kolunu taşıdığı için lezyonunda yüzde hipoestezi ve kornea refleksi kaybı görülür. Motor lifler de etkilenirse çiğneme kaslarında bozukluk eklenir (s. 25, 26).",
+      "C": "Bu tablo hipoglossus siniri lezyonunda görülür; sinir dil kaslarının motor siniridir. Trigeminal sinirin işlevleriyle ilgisi yoktur. Dilin kayması ve atrofisi hipoglossus tutulumunu gösterir (s. 40).",
+      "D": "Ptozis ve geniş pupilla okülomotor sinir lezyonunun bulgularıdır; sinir levator palpebra ve pupilla daraltıcı kasları innerve eder. Trigeminal lezyonla ilişkilendirilmez (s. 23).",
+      "E": "Omuz elevasyonu trapezius kasıyla sağlanır ve aksesuar sinire bağlıdır. Trigeminal lezyonda yüz duyusu ve çiğneme etkilenir, omuz hareketi etkilenmez (s. 38)."
+     },
+     "bilgi": [
+      49
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 26,
+      "alinti": "Yüzde hipoestezi Kornea refleksi kaybı Trigeminal motor bozukluk Trigeminal nevralji"
+     }
+    },
+    {
+     "id": "k2-05-norolojik-muayene-q45",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Aşağıdakilerden hangisi N. fasialisin (KS VII) işlevlerindendir?",
+     "secenekler": {
+      "A": "Dilin ön üçte ikisinin tat duyusunu taşımak",
+      "B": "Dilin arka üçte birinin duyusunu sağlamak",
+      "C": "Parotisin parasempatik innervasyonunu yapmak",
+      "D": "Masseter ve temporal kasları innerve etmek",
+      "E": "Omuz elevasyonunu sağlamak"
+     },
+     "dogru": "A",
+     "aciklama": "Fasiyal sinir mimik kasları, tükrük ve gözyaşı bezlerini innerve eder; dilin ön üçte ikisinin tadını alır (s. 28).",
+     "sik_aciklamalari": {
+      "A": "Fasiyal sinir mimik kasları, sublingual ve submandibüler tükrük bezlerini, gl. lakrimalis'i ve ağız-burun mukozası bezlerini innerve eder. Dilin ön üçte ikisinin tat duyusu da bu sinirle taşınır ve sorunun aradığı işlev budur (s. 28).",
+      "B": "Dilin arka üçte birinin duyusu glossofaringeal sinirin görevidir. Fasiyal sinir dilin ön kısmının tadını taşıdığı için bu seçenek ona ait değildir (s. 35).",
+      "C": "Parotisin parasempatik innervasyonunu glossofaringeal sinir yapar. Fasiyal sinir parotis dışındaki tükrük bezlerini innerve ettiğinden seçenek ona ait değildir (s. 28, 35).",
+      "D": "Bu kaslar çiğnemeyi sağlar ve trigeminal sinirin motor liflerince innerve edilir. Fasiyal sinir ise çiğneme değil mimik kaslarını harekete geçirir (s. 25, 28).",
+      "E": "Omuz elevasyonu trapezius kasıyla yapılır ve aksesuar sinire bağlıdır. Fasiyal sinirin işlevleri arasında omuz hareketi yoktur. Aksesuar sinirin işlevi omuz hareketidir (s. 38)."
+     },
+     "bilgi": [
+      51,
+      52,
+      53
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 28,
+      "alinti": "Dil 2/3 ön tat duyusu Kornea refleksinin efferent"
+     }
+    },
+    {
+     "id": "k2-05-norolojik-muayene-q47",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Periferik fasial paralizide paralitik tarafta gözyaşı salgısının ve dilin tat duyusunun azalabilmesi, N. fasialisin hangi işlevleriyle açıklanır?",
+     "secenekler": {
+      "A": "Gl. lakrimalise parasempatik innervasyon vermesi ve dilin ön üçte ikisinin tat duyusunu taşıması",
+      "B": "Parotise parasempatik innervasyon vermesi ve dilin arka üçte birinin duyusunu taşıması",
+      "C": "Kornea refleksinin getirici kolu olması ve masseteri innerve etmesi",
+      "D": "Stilofaringeal kas aracılığıyla farenksi yukarı kaldırması ve parotisi innerve etmesi",
+      "E": "Dil kaslarını hareket ettirmesi ve dil atrofisi yapması"
+     },
+     "dogru": "A",
+     "aciklama": "Fasiyal sinir gl. lakrimalis'i innerve eder ve dilin ön üçte ikisinin tat duyusunu taşır (s. 28, 30).",
+     "sik_aciklamalari": {
+      "A": "Fasiyal sinir gözyaşı bezine (gl. lakrimalis) parasempatik innervasyon verir ve dilin ön üçte ikisinin tat duyusunu taşır. Periferik lezyonda bu lifler de etkilendiğinden gözyaşı salgısı ve tat duyusu azalabilir (s. 28, 30).",
+      "B": "Bu iki işlev glossofaringeal sinire aittir. Gözyaşı salgısı ile dilin ön kısmındaki tat duyusunun azalmasını açıklayamaz. Gözyaşı bezi ve ön dil tadı fasiyal sinirin görev alanındadır (s. 35).",
+      "C": "Kornea refleksinin getirici kolu trigeminal sinirdir ve masseteri de bu sinir innerve eder. Fasiyal sinirin işlevi bu refleksin götürücü koludur, bu yüzden açıklama tutmaz (s. 25, 28).",
+      "D": "Bu işlevler glossofaringeal sinire aittir. Gözyaşı ve ön dil tadıyla ilişkisi olmadığından tabloyu açıklamaz. Gözyaşı bezi ve dilin ön üçte ikisinin tadı ise fasiyal sinirin işlevidir (s. 35).",
+      "E": "Dil kaslarının motor innervasyonu hipoglossus sinirindedir ve lezyonunda dil atrofisi görülür. Gözyaşı ve tat duyusundaki azalmayı açıklamaz (s. 40)."
+     },
+     "bilgi": [
+      52,
+      53,
+      57
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 30,
+      "alinti": "Paralitik taraf gözyaşı salgısı ve dilin tad duyusu azalabilir"
+     }
+    },
+    {
+     "id": "k2-05-norolojik-muayene-q48",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "N. vestibulokoklearisin denge işlevi değerlendirilirken aşağıdakilerden hangisi kullanılır?",
+     "secenekler": {
+      "A": "Rinne ve Weber testleri",
+      "B": "Snellen ve Jaeger kartları",
+      "C": "Serebellar testler, duruş ve yürüyüş, nistagmus ve denge testleri ile kalorik testler",
+      "D": "Nane ve limon gibi tahriş etmeyen kokular",
+      "E": "Kornea ve çene refleksleri"
+     },
+     "dogru": "C",
+     "aciklama": "VIII. sinirin işitmesi Rinne ve Weber ile, dengesi serebellar testler, nistagmus ve kalorik testlerle değerlendirilir (s. 32).",
+     "sik_aciklamalari": {
+      "A": "Rinne ve Weber testleri aynı sinirin işitme işlevini değerlendirir. Denge işlevini değil duymayı sınadıkları için bu soruda uymaz (s. 32).",
+      "B": "Bu kartlar optik sinirin görme keskinliğini ölçmek için kullanılır. Denge ve vestibüler işlevle ilgisi yoktur. Denge, bu kartlarla değil serebellar ve kalorik testlerle incelenir (s. 17).",
+      "C": "Vestibüler işlevler, serebellar testler, duruş, yürüyüş, nistagmus ve denge testleri ile kalorik testlerle değerlendirilir. Bu yaklaşım santral ve periferik vertigoyu ayırmaya da yardımcı olur (s. 32).",
+      "D": "Bu kokular koku sinirinin, yani birinci kraniyal sinirin muayenesinde kullanılır. Denge işlevini sınamadığı için seçenek uymaz (s. 14).",
+      "E": "Bu refleksler trigeminal ve fasiyal sinirlerin yollarını gösterir. Vestibüler işlevi değerlendirmedikleri için seçenek uygun değildir. Denge ve duruş ise serebellar testler ve nistagmus muayenesiyle değerlendirilir (s. 25)."
+     },
+     "bilgi": [
+      59,
+      60
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 32,
+      "alinti": "Vestibular fonksiyonlar için serebellar testler Duruş, yürüyüş, nistagmus ve denge testleri, kalorik testler"
+     }
+    },
+    {
+     "id": "k2-05-norolojik-muayene-q49",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Dilin arka üçte birinin duyusundan sorumlu olan ve parotisin parasempatik innervasyonunu yapan sinir hangisidir?",
+     "secenekler": {
+      "A": "N. fasialis (KS VII)",
+      "B": "N. glossofaringeus (KS IX)",
+      "C": "N. vagus (KS X)",
+      "D": "N. hipoglossus (KS XII)",
+      "E": "N. trigeminus (KS V)"
+     },
+     "dogru": "B",
+     "aciklama": "Dilin arka üçte birinin duyusu ve parotisin parasempatik innervasyonu glossofaringeal sinirin işlevidir (s. 35).",
+     "sik_aciklamalari": {
+      "A": "Fasiyal sinir de tükrük bezlerini innerve eder ancak parotis dışındakileri, yani sublingual ve submandibüler bezleri. Dilin ön üçte ikisinin tadını taşır, arka üçte birinin duyusunu değil (s. 28).",
+      "B": "Glossofaringeal sinir farenks, tonsilla ve yumuşak damağın duyusunu sağlar, dilin arka üçte birinin duyusundan sorumludur ve parotise parasempatik innervasyon verir. İki işlevin birlikte sorulması bu siniri gösterir (s. 35).",
+      "C": "Vagus dış kulak yolunun küçük bir alanının duyusunu sağlar, ses tellerinin motor siniridir ve göğüs ile abdomenin parasempatik innervasyonunu yapar. Parotis ve dil arka üçte birin duyusu onun görevi değildir (s. 36).",
+      "D": "Hipoglossus dil kaslarını hareket ettiren motor sinirdir. Duyu ve parasempatik işlev taşımadığı için bu soruyu karşılamaz (s. 40).",
+      "E": "Trigeminal sinir yüzün dokunma, ağrı ve ısı duyusunu alır, masseter ve temporal kasları innerve eder. Dilin arka kısmının duyusu ve parotis innervasyonu ona ait değildir (s. 25)."
+     },
+     "bilgi": [
+      63,
+      64
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 35,
+      "alinti": "Dilin arka 1/3 duyusundan sorumludur Parotisin parasempatik innervasyonunu yapar"
+     }
+    },
+    {
+     "id": "k2-05-norolojik-muayene-q50",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Aşağıdaki sinir–işlev eşleştirmelerinden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Glossofaringeal (KS IX) – ses tellerinin motor innervasyonu",
+      "B": "Vagus (KS X) – dilin arka üçte birinin duyusu",
+      "C": "Aksesuar (KS XI) – dil hareketleri",
+      "D": "Vagus (KS X) – göğüs ve abdomenin parasempatik innervasyonu",
+      "E": "Fasiyal (KS VII) – parotisin parasempatik innervasyonu"
+     },
+     "dogru": "D",
+     "aciklama": "Vagus göğüs ve abdomenin parasempatik innervasyonunu, ses tellerinin motor innervasyonunu sağlar (s. 36).",
+     "sik_aciklamalari": {
+      "A": "Ses tellerinin motor siniri vagustur. Glossofaringeal sinir farenks duyusu, dil arka üçte bir duyusu ve parotis innervasyonuyla ilişkilidir; eşleştirme bu yüzden doğru değildir (s. 35, 36).",
+      "B": "Dilin arka üçte birinin duyusunu glossofaringeal sinir taşır. Vagus bu işleve sahip olmadığından eşleştirme uymaz. Vagusun görev alanı göğüs, abdomen ve ses tellerindedir (s. 35).",
+      "C": "Dil hareketleri hipoglossus siniri tarafından sağlanır. Aksesuar sinir SCM ve trapezius kaslarını innerve eder; eşleştirme bu nedenle doğru değildir (s. 38, 40).",
+      "D": "Vagus siniri göğüs ve abdomenin parasempatik innervasyonunu yapar; ayrıca dış kulak yolundaki küçük bir alanın duyusunu sağlar ve ses tellerinin motor siniridir. Bu nedenle verilen eşleştirme doğrudur (s. 36).",
+      "E": "Parotisin parasempatik innervasyonunu glossofaringeal sinir yapar. Fasiyal sinir parotis dışındaki tükrük bezlerini innerve eder; eşleştirme bu yüzden doğru değildir (s. 28, 35)."
+     },
+     "bilgi": [
+      65,
+      66
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 36,
+      "alinti": "Göğüs ve abdomenin parasempatik innervasyonunu yapar"
+     }
+    },
+    {
+     "id": "k2-05-norolojik-muayene-q51",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Hastanın konuşması burundan geliyor (nazone). Hastaya aaa dedirtiliyor, yutma ve öğürme refleksi değerlendiriliyor. Bu muayene hangi kraniyal sinirleri sınar?",
+     "secenekler": {
+      "A": "KS IX ve KS X",
+      "B": "KS III ve KS IV",
+      "C": "KS V ve KS VII",
+      "D": "KS XI ve KS XII",
+      "E": "KS VI ve KS VIII"
+     },
+     "dogru": "A",
+     "aciklama": "Palatal hareketler, konuşma, yutma ve öğürme refleksi KS IX ve KS X ile sınanır (s. 12, 36).",
+     "sik_aciklamalari": {
+      "A": "Konuşmaya dikkat edilmesi, aaa dedirtilmesi, yutma ve öğürme refleksinin değerlendirilmesi palatal hareketleri sınar. Palatal hareketler glossofaringeal ve vagus sinirlerine, yani KS IX ve KS X'a aittir (s. 12, 36).",
+      "B": "Bu iki sinir göz hareketlerini ve pupillayı ilgilendirir; muayenesinde başın sabit tutulup gözlerin kadranlara bakışı izlenir. Palatal hareketler ve yutma bu sinirlere bağlı değildir (s. 21, 22).",
+      "C": "Trigeminal ve fasiyal sinirler yüz duyusu ile çiğneme ve mimik kasları için değerlendirilir. Yutma ve öğürme muayenesi bu sinirlerin işlevi değildir (s. 12).",
+      "D": "Aksesuar sinir baş rotasyonu ve omuz elevasyonunu, hipoglossus ise dil hareketlerini sağlar. Palatal hareketleri ve öğürme refleksini sınamaz (s. 12).",
+      "E": "Abdusens sinir gözün dışa bakışını, vestibülokoklear sinir ise işitme ve dengeyi sağlar. Nazone konuşma ve yutma bu sinirlerle ilişkili değildir (s. 12, 32)."
+     },
+     "bilgi": [
+      67,
+      68
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 36,
+      "alinti": "Konuşmasına dikkat edilir (nazone, burundan konuşma) Aaaa demesi istenir"
+     }
+    },
+    {
      "id": "k2-05-norolojik-muayene-q11",
      "kazanim": 2,
      "zorluk": "zor",
@@ -511,6 +946,163 @@
      "kanit": {
       "sayfa": 40,
       "alinti": "Tek taraflı lezyonlarda dilde atrofi Dil lezyon tarafına kayar"
+     }
+    },
+    {
+     "id": "k2-05-norolojik-muayene-q40",
+     "kazanim": 2,
+     "zorluk": "zor",
+     "soru": "Troklear sinir felcinde hasta çift görmeyi azaltmak için başını nasıl tutar ve çift görme hangi durumlarda en belirgindir?",
+     "secenekler": {
+      "A": "Başını aynı tarafa eğer; kitap okurken ve merdivenden inerken",
+      "B": "Başını karşı tarafa eğer; yalnızca dışa bakarken",
+      "C": "Başını aynı tarafa eğer; yalnızca dışa bakarken",
+      "D": "Başını sabit tutar; yalnızca ışığa bakarken",
+      "E": "Başını karşı tarafa eğer; kitap okurken ve merdivenden inerken"
+     },
+     "dogru": "E",
+     "aciklama": "Troklear sinir felcinde hasta başını karşı tarafa eğer; çift görme en çok kitap okurken ve merdivenden inerken belirgindir (s. 21).",
+     "sik_aciklamalari": {
+      "A": "Bu seçenekte çift görmenin zamanı doğru verilmiştir ancak baş eğimi tersine çevrilmiştir. Hasta çift görmeyi engellemek için başını felçli tarafın karşısına eğer, aynı tarafa değil (s. 21).",
+      "B": "Baş eğimi doğrudur ancak dışa bakış, abdusens sinirin işlevidir. Troklear sinir felcinde şikâyet gözün aşağı ve içe bakmasıyla ortaya çıkar (s. 21, 22).",
+      "C": "Hem baş eğimi hem de çift görmenin ortaya çıktığı bakış yönü yanlış verilmiştir. Dışa bakış kısıtlılığı abdusens lezyonunun bulgusudur, troklear felcin değil (s. 22).",
+      "D": "Troklear sinir ışık refleksi yoluna katılmaz ve felcinde hasta baş eğerek uyum sağlar. Bu seçenek hem baş tutuşunu hem şikâyetin zamanını yanlış verir (s. 21, 23).",
+      "E": "Troklear sinir felcinde hasta çift görmeye engel olmak için başını karşı tarafa doğru eğer. Çift görme, gözün aşağı ve içe bakması gereken durumlarda, yani en çok kitap okurken ve merdivenden aşağı inerken belirginleşir (s. 21, 22)."
+     },
+     "bilgi": [
+      35,
+      40
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 21,
+      "alinti": "Troklear sinir felcinde çift görmeye engel olmak için başını karşı tarafa doğru eğer"
+     }
+    },
+    {
+     "id": "k2-05-norolojik-muayene-q41",
+     "kazanim": 2,
+     "zorluk": "zor",
+     "soru": "Okülomotor sinir lezyonunda pupilla ve ışık refleksi açısından aşağıdakilerden hangisi beklenir?",
+     "secenekler": {
+      "A": "Pupilla dardır ve ışık refleksi canlıdır",
+      "B": "Pupilla geniştir ve ışık refleksinin afferent kolu bozulmuştur",
+      "C": "Pupilla geniştir (midriyatik) ve ışık refleksinin efferent kolu bozulduğu için ışık refleksi alınamaz",
+      "D": "Pupilla normal boyuttadır, yalnızca ptozis görülür",
+      "E": "Pupilla dardır ve parasempatik uyarı artmıştır"
+     },
+     "dogru": "C",
+     "aciklama": "Okülomotor lezyonunda ptozis, midriyazis ve ışık refleksi kaybı görülür; sinir ışık refleksinin efferent koludur (s. 23).",
+     "sik_aciklamalari": {
+      "A": "Dar pupilla, daraltıcı kasın etkinliğinin arttığı durumda beklenir. Okülomotor sinir lezyonunda daraltıcı kasın innervasyonu kaybolduğu için pupilla geniş olur ve yanıt alınamaz (s. 23).",
+      "B": "Getirici kolu optik sinir taşır ve bozulması görme uyarısının iletilmemesine yol açar. Okülomotor sinirin payı götürücü koldur; sorudaki bozukluk efferent düzeydedir (s. 17, 23).",
+      "C": "Okülomotor sinir, pupillayı daraltan m. constrictor pupilla'ya parasempatik innervasyon verir ve ışık refleksinin götürücü kolunu oluşturur. Lezyonda bu daraltıcı etki kaybolduğundan pupilla geniş kalır ve ışık refleksi alınamaz (s. 23).",
+      "D": "Okülomotor sinir lezyonunda ptozis vardır ancak pupilla daraltıcı kasın innervasyonu da bozulduğundan pupilla normal kalmaz, midriyatik olur (s. 23).",
+      "E": "Okülomotor sinir parasempatik uyarıyı pupilla daraltıcı kasa iletir; lezyonda bu uyarı artmaz, azalır veya kaybolur. Bu nedenle pupilla dar değil geniş olur (s. 23)."
+     },
+     "bilgi": [
+      42,
+      43
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 23,
+      "alinti": "Lezyonunda Göz aşağı, yukarı ve içe bakamaz Ptozis görülür IR alınamaz Gözler midriatiktir"
+     }
+    },
+    {
+     "id": "k2-05-norolojik-muayene-q46",
+     "kazanim": 2,
+     "zorluk": "zor",
+     "soru": "Yüzün bir yarısındaki kuvvet azlığı değerlendirilirken aşağıdakilerden hangisi periferik fasial paralizide bulunur, santral fasial paralizide bulunmaz?",
+     "secenekler": {
+      "A": "Nazolabial olukta silinme",
+      "B": "Ağzın sağlam tarafa kayması",
+      "C": "Aynı tarafta hemiparezinin eşlik etmesi",
+      "D": "Gözün kapatılıp sıkılabilmesi",
+      "E": "Kaş kaldıramama ve alın çizgilerinin silinmesi"
+     },
+     "dogru": "E",
+     "aciklama": "Alın tutulumu (kaş kaldıramama, alın çizgilerinin silinmesi, göz kapatılamaması) periferik fasial paralizinin ayırıcı bulgusudur (s. 29, 30).",
+     "sik_aciklamalari": {
+      "A": "Nazolabial olukta silinme hem santral hem periferik fasial paralizide slaytta sayılır. İki tabloda ortak olduğu için ayırıcı bulgu değildir (s. 29, 30).",
+      "B": "Ağzın sağlam tarafa kayması da her iki paralizi türünde bulunur. Ortak bir bulgu olduğundan santral ile periferik formu ayıramaz (s. 29, 30).",
+      "C": "Hemiparezinin aynı tarafta eşlik etmesi santral fasial paralizinin özelliğidir. Periferik formda böyle bir eşlik tanımlanmadığı için bu seçenek ters yönden uyar (s. 29).",
+      "D": "Hastanın gözünü kapatıp sıkabilmesi santral fasial paralizide korunan bir işlevdir. Periferik formda göz kapatılamaz, bu nedenle seçenek periferik paralizinin bulgusu değildir (s. 29, 30).",
+      "E": "Periferik fasial paralizide yüzün yarısının tamamı etkilenir; bu yüzden alın da tutulur, kaş kaldırılamaz ve alın çizgileri silinir. Santral formda yalnız alt yüz zayıftır, bu nedenle ayırıcı bulgu alın tutulumudur (s. 29, 30)."
+     },
+     "bilgi": [
+      54,
+      55,
+      56,
+      57
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 30,
+      "alinti": "Kaş kaldıramaz Alın çizgileri silinmiş Göz kapatılamaz"
+     }
+    },
+    {
+     "id": "k2-05-norolojik-muayene-q52",
+     "kazanim": 2,
+     "zorluk": "zor",
+     "soru": "M. sternocleidomastoideus (SCM) kasının başa yaptırdığı hareket hangisidir?",
+     "secenekler": {
+      "A": "Aynı tarafa lateral rotasyon ve karşı tarafa lateral fleksiyon",
+      "B": "Omuz elevasyonu ve başa ekstansiyon",
+      "C": "Aynı tarafa lateral fleksiyon ve karşı tarafa lateral rotasyon; iki taraf birlikte çalışınca fleksiyon",
+      "D": "Yalnızca karşı tarafa lateral fleksiyon",
+      "E": "Başın sabit tutulması, hareket yaptırmaması"
+     },
+     "dogru": "C",
+     "aciklama": "SCM aynı tarafa lateral fleksiyon, karşı tarafa lateral rotasyon yaptırır; birlikte çalışınca fleksiyon yaptırır (s. 38).",
+     "sik_aciklamalari": {
+      "A": "Burada fleksiyon ve rotasyon yönleri birbirine karıştırılmıştır. SCM aynı tarafa fleksiyon, karşı tarafa rotasyon yaptırır. Bu nedenle SCM'nin başı hangi yöne çevirdiği karşı taraf rotasyonuyla hatırlanmalıdır (s. 38).",
+      "B": "Omuz elevasyonu trapezius kasının görevidir. SCM iki taraflı çalıştığında ekstansiyon değil fleksiyon yaptırır. Omuzu kaldıran, aksesuar sinirin innerve ettiği trapezius'un üst kısmıdır (s. 38).",
+      "C": "SCM kası başı aynı tarafa lateral fleksiyonla eğer ve karşı tarafa lateral rotasyonla çevirir. İki taraftaki kas birlikte çalıştığında başa fleksiyon yaptırır; aksesuar sinir tarafından innerve edilir (s. 38).",
+      "D": "SCM karşı tarafa değil aynı tarafa lateral fleksiyon yaptırır; karşı yöne yaptırdığı hareket rotasyondur. Seçenek hareketin yönünü ve türünü yanlış vermektedir (s. 38).",
+      "E": "SCM bir postür kası gibi sabitlemekle sınırlı değildir; aksesuar sinirin motor lifleriyle başı eğdirir ve çevirir. Bu nedenle hareket yaptırmadığını söyleyen seçenek uymaz (s. 38)."
+     },
+     "bilgi": [
+      70,
+      71
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 38,
+      "alinti": "SCM kası boyun üzerinde başa aynı tarafa doğru lateral fleksiyon ve karşı tarafa lateral rotasyon yaptırır"
+     }
+    },
+    {
+     "id": "k2-05-norolojik-muayene-q53",
+     "kazanim": 2,
+     "zorluk": "zor",
+     "soru": "Tek taraflı hipoglossus lezyonunda dilde atrofi olur ve dil lezyon tarafına kayar. İki taraflı (bilateral) lezyonda tablo nasıldır?",
+     "secenekler": {
+      "A": "Dil tek tarafa kayar ve atrofi görülmez",
+      "B": "Dilde atrofi ve her yöne hareket azlığı vardır",
+      "C": "Dil sağlam tarafa kayar ve hareketler normaldir",
+      "D": "Ptozis ve midriyazis görülür",
+      "E": "Yalnızca omuz elevasyonunda güçsüzlük olur"
+     },
+     "dogru": "B",
+     "aciklama": "Bilateral hipoglossus lezyonunda atrofi ve her yöne hareket azlığı vardır; tek taraflı lezyonda dil lezyon tarafına kayar (s. 40).",
+     "sik_aciklamalari": {
+      "A": "Tek tarafa kayma tek taraflı lezyonun özelliğidir ve atrofi her iki durumda da gelişir. Seçenek iki taraflı lezyondaki hareket azlığını anlatmaz (s. 40).",
+      "B": "Bilateral hipoglossus lezyonunda dil kaslarının her iki yanı etkilenir, atrofi gelişir ve dil her yöne zor hareket eder. Tek taraflı lezyondaki gibi belirli bir tarafa kayma yerine genel bir hareket azlığı ortaya çıkar (s. 40).",
+      "C": "Dil lezyon tarafına kayar, sağlam tarafa değil; ayrıca bilateral lezyonda hareketler normal kalmaz. Seçenek hem yönü hem hareket durumunu yanlış verir (s. 40).",
+      "D": "Ptozis ve midriyazis okülomotor sinirin lezyon bulgularıdır. Dil kaslarını ilgilendiren hipoglossus lezyonunu açıklamaz. Dil bulguları için hipoglossus siniri akla gelmelidir (s. 23).",
+      "E": "Omuz elevasyonu aksesuar sinire bağlıdır. Hipoglossus sinir dil kaslarını ilgilendirdiğinden bilateral lezyonda dil bulguları beklenir. Omuz hareketi bu tabloda sorgulanmaz (s. 38, 40)."
+     },
+     "bilgi": [
+      74,
+      75
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 40,
+      "alinti": "Bilateral lezyonlarda atrofi ve her yöne hareket azlığı vardır"
      }
     }
    ],
@@ -671,6 +1263,157 @@
      }
     },
     {
+     "id": "k2-05-norolojik-muayene-q54",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Aşağıdakilerden hangisi motor sistem muayenesinin ögesi değildir, serebellar sistem muayenesinde yer alır?",
+     "secenekler": {
+      "A": "Yürüyüş",
+      "B": "Kas kuvveti",
+      "C": "Tonus",
+      "D": "Trofik kusur",
+      "E": "Koordinasyon"
+     },
+     "dogru": "E",
+     "aciklama": "Motor sistem muayenesi yürüyüş, kas kuvveti, tonus ve trofik kusuru kapsar; koordinasyon serebellar sisteme aittir (s. 42, 67).",
+     "sik_aciklamalari": {
+      "A": "Yürüyüş, motor sistem muayenesinin ilk ögesidir ve kasların birlikte işleyişi hakkında bilgi verir. Slaytta motor sistem ögeleri arasında sayıldığı için bu soruda aranan seçenek değildir (s. 42).",
+      "B": "Kas kuvveti 0 ile 5 arasında derecelendirilerek değerlendirilir ve motor sistemin temel ögesidir. Motor sistem muayenesinde yer aldığından sorudaki dışlama koşuluna uymaz (s. 42, 44).",
+      "C": "Tonus, kasın dinlenme durumundaki gerginliğini gösterir ve motor sistem muayenesinin ögesidir. Slaytta motor ögeler arasında bulunduğu için seçenek dışlanmaz (s. 42).",
+      "D": "Trofik kusur, kas kitlesindeki azalmayı yani atrofiyi gösterir ve motor sistem muayenesinde değerlendirilir. Motor ögelerden biri olduğundan sorunun koşuluna uymaz (s. 42, 49).",
+      "E": "Koordinasyon, parmak-burun ve diz-topuk gibi metrik muayene ile ardışık hareketlerle sınanan bir serebellar sistem bölümüdür. Motor sistem muayenesi ise yürüyüş, kas kuvveti, tonus ve trofik kusuru kapsar (s. 42, 67)."
+     },
+     "bilgi": [
+      77,
+      115
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 42,
+      "alinti": "Motor Sistem Muayenesi Yürüyüş Kas kuvveti (0-5 arasında değerlendirilir) Tonus Trofik kusur"
+     }
+    },
+    {
+     "id": "k2-05-norolojik-muayene-q56",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Yalnızca sağ kolunda kuvvet azlığı olan bir hastada bu durum hangi terimle adlandırılır?",
+     "secenekler": {
+      "A": "Hemiparazi",
+      "B": "Monoparazi",
+      "C": "Paraparazi",
+      "D": "Kuadriparazi",
+      "E": "Spastisite"
+     },
+     "dogru": "B",
+     "aciklama": "Tek ekstremitede kuvvet azlığı monoparazi olarak adlandırılır (s. 50).",
+     "sik_aciklamalari": {
+      "A": "Hemiparazi, vücudun bir yarısında, yani aynı taraftaki kol ve bacakta kuvvet azlığıdır. Yalnızca tek kol etkilendiğinden terim uymaz (s. 50).",
+      "B": "Monoparazi, tek bir ekstremitede kuvvet azlığı olması durumudur. Hastada yalnızca sağ kol etkilendiği için bulgu bu terimle adlandırılır (s. 50).",
+      "C": "Paraparazi, iki alt ekstremitede kuvvet azlığıdır. Burada etkilenen yer tek bir kol olduğundan terim uymaz. İki alt ekstremitenin etkilendiği bir hastada bu terim kullanılırdı (s. 50).",
+      "D": "Kuadriparazi, dört ekstremitenin birlikte etkilenmesidir. Hastada yalnız tek kol tutulduğundan terim uymaz. Dört ekstremite tutulsaydı bu terim doğru olurdu (s. 50).",
+      "E": "Spastisite, tonus artışıyla giden bir bulgudur ve kuvvet azlığının dağılımını değil kasın gerginliğini anlatır. Soru tutulan bölgenin adını sorduğundan seçenek uymaz (s. 50)."
+     },
+     "bilgi": [
+      87
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 50,
+      "alinti": "Parazi Pleji Monoparazi Hemiparazi Paraparazi Kuadriparazi"
+     }
+    },
+    {
+     "id": "k2-05-norolojik-muayene-q58",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Kas zaafı düzeylerinden hangisinde duyu kusuru +/- olabilir?",
+     "secenekler": {
+      "A": "Birinci motor nöron",
+      "B": "Nöromusküler kavşak",
+      "C": "Doğrudan çizgili kas",
+      "D": "Hiçbirinde duyu kusuru beklenmez",
+      "E": "İkinci motor nöron"
+     },
+     "dogru": "E",
+     "aciklama": "Duyu kusuru yalnızca ikinci motor nöron tutulumunda +/- olarak verilir (s. 52).",
+     "sik_aciklamalari": {
+      "A": "Birinci motor nöron tutulumunda atrofi ve duyu kusuru yoktur; tonus artar ve refleksler canlıdır. Duyu kusuru beklenmediğinden seçenek uymaz (s. 52).",
+      "B": "Nöromusküler kavşak zaafında tonus ve refleksler değişmez, atrofi ve duyu kusuru yoktur. Duyu kusuru bulunmadığı için seçenek uymaz (s. 52).",
+      "C": "Çizgili kas hastalığında tonus değişmez ya da az azalır, refleksler değişmez ve atrofi vardır; duyu kusuru yoktur. Seçenek bu nedenle uymaz (s. 52).",
+      "D": "Dört düzeyin içinde ikinci motor nöronda duyu kusuru +/- olarak verildiğinden bu iddia doğru değildir. Duyu kusuru her düzeyde yok sayılamaz (s. 52).",
+      "E": "İkinci motor nöron tutulumunda tonus azalır, refleksler kaybolur, atrofi gelişir ve duyu kusuru +/- olabilir. Duyu kusurunun olabileceği tek düzey slaytta bu düzeydir (s. 52)."
+     },
+     "bilgi": [
+      91
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 52,
+      "alinti": "2. motor nöron Tonus azalır Refleksler kaybolur Atrofi gelişir Duyu kusuru +/-"
+     }
+    },
+    {
+     "id": "k2-05-norolojik-muayene-q59",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Kas kuvveti 2/5 olarak derecelendirilen bir hastada hangisi beklenir?",
+     "secenekler": {
+      "A": "Kas yer çekimine karşı direnç gösteremez",
+      "B": "Uygulanan kuvvete direnç gösterilemez ancak yer çekimine direnç gösterilir",
+      "C": "Gözle görülür hareket yoktur ancak dokunmayla kasılma hissedilir",
+      "D": "Uygulanan kuvvete maksimum direnç gösterilir",
+      "E": "Gözle ve dokunmayla hiç hareket gözlenmez"
+     },
+     "dogru": "A",
+     "aciklama": "2/5'te yer çekimine direnç gösterilemez; 3/5'te gösterilir (s. 44).",
+     "sik_aciklamalari": {
+      "A": "Kas kuvveti 2/5'te kas yer çekimine direnç gösteremez; 3/5'te ise yer çekimine direnç gösterilir ancak uygulanan kuvvete direnç gösterilemez. İki derece arasındaki sınır yer çekimini yenebilmektir (s. 44).",
+      "B": "Bu tanım 3/5 derecesine aittir. 2/5'te kas yer çekimini yenemez, bu yüzden seçenek bir üst dereceyi anlatır (s. 44).",
+      "C": "Gözle görülür hareket olmaması ve dokunmayla kasılmanın hissedilmesi 1/5 derecesinin tanımıdır. Seçenek bir alt dereceyi anlatır (s. 44).",
+      "D": "Maksimum direnç gösterilmesi 5/5 derecesine karşılık gelir. 2/5'te kas bu düzeyden çok uzaktır. Bu derece güçlü bir kasa özgüdür; 2/5'teki kas bu kuvvetin çok altındadır (s. 44).",
+      "E": "Hiç hareket gözlenmemesi 0/5 derecesidir. 2/5'te kasın hareketi vardır; yalnız yer çekimini yenemez. Kas kuvveti 2/5 olan hastada hareket sağlanabildiğinden 0/5 tanımı uygun değildir (s. 44)."
+     },
+     "bilgi": [
+      80
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 44,
+      "alinti": "2/5: Yer çekimine direnç gösterilemez."
+     }
+    },
+    {
+     "id": "k2-05-norolojik-muayene-q60",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Kasta gözle görülür bir hareket yokken dokunmayla kasılma hissedilebilen hastada kas kuvveti kaç olarak değerlendirilir?",
+     "secenekler": {
+      "A": "0/5",
+      "B": "1/5",
+      "C": "2/5",
+      "D": "3/5",
+      "E": "4/5"
+     },
+     "dogru": "B",
+     "aciklama": "1/5'te gözle görülür hareket yoktur, dokunmayla kasılma hissedilir (s. 44).",
+     "sik_aciklamalari": {
+      "A": "0/5'te kasta gözle ve dokunmayla hiç hareket gözlenmez. Hastada kasılma hissedildiği için bu derece olamaz (s. 44).",
+      "B": "1/5 derecesinde kasta gözle görülür hareket olmaz ama dokunmayla kasılma hissedilebilir. Kasılmanın hissedilmesi, 1/5'i hiç hareketin olmadığı 0/5'ten ayırır (s. 44).",
+      "C": "2/5'te kas hareket eder ancak yer çekimine direnç gösteremez. Hastada gözle görülür hareket olmadığı için bu derece değildir (s. 44).",
+      "D": "3/5'te kas yer çekimine direnç gösterir ama uygulanan kuvvete direnç gösteremez. Bu derecede hareket belirgindir, hastadaki tablo çok daha zayıftır (s. 44).",
+      "E": "4/5'te kas uygulanan kuvvete direnç gösterebilir. Hastadaki hareketsizlikle uyuşmadığı için bu derece değildir. 4/5'te hasta hâlâ hekimin uyguladığı kuvvete direnç gösterir; bu hastada ise hareket görülmez (s. 44)."
+     },
+     "bilgi": [
+      81
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 44,
+      "alinti": "1/5: Kasda gözle görülür bir hareket olmaz, dokunmayla kasılma hissedilebilir."
+     }
+    },
+    {
      "id": "k2-05-norolojik-muayene-q22",
      "kazanim": 3,
      "zorluk": "zor",
@@ -699,6 +1442,70 @@
      "kanit": {
       "sayfa": 52,
       "alinti": "Çizgili Kas Tonus değişmez, az Refleksler değişmez Atrofi VAR"
+     }
+    },
+    {
+     "id": "k2-05-norolojik-muayene-q55",
+     "kazanim": 3,
+     "zorluk": "zor",
+     "soru": "Kas zaafı düzeylerinden hangi ikisinde atrofi gelişmez?",
+     "secenekler": {
+      "A": "İkinci motor nöron ve çizgili kas",
+      "B": "Birinci motor nöron ve çizgili kas",
+      "C": "İkinci motor nöron ve nöromusküler kavşak",
+      "D": "Birinci motor nöron ve nöromusküler kavşak",
+      "E": "Yalnızca nöromusküler kavşak"
+     },
+     "dogru": "D",
+     "aciklama": "Atrofi ikinci motor nöron ve çizgili kasta gelişir; birinci motor nöron ve nöromusküler kavşakta yoktur (s. 28, 52).",
+     "sik_aciklamalari": {
+      "A": "Bu iki düzeyde atrofi gelişir; ikinci motor nöronda kas, sinir uyarısını kaybettiği için incelir, çizgili kas hastalığında ise kas doğrudan etkilenir. Seçenek soruda sorulanın tersini verir (s. 52).",
+      "B": "Birinci motor nöronda atrofi yoktur ancak çizgili kas hastalığında atrofi vardır. Seçenek yarım doğru olduğundan iki düzeyi birlikte karşılamaz (s. 52).",
+      "C": "Nöromusküler kavşakta atrofi yoktur fakat ikinci motor nöron lezyonunda atrofi gelişir. Seçenek yarım doğru olduğundan uymaz. Doğru yanıt için ikinci motor nöron bu çiftten çıkarılmalıdır (s. 52).",
+      "D": "Birinci motor nöron tutulumunda ve nöromusküler kavşak hastalığında atrofi yoktur. Atrofi yalnızca ikinci motor nöron ve doğrudan çizgili kas düzeylerinde gelişir (s. 28, 52).",
+      "E": "Nöromusküler kavşakta atrofi yoktur ancak birinci motor nöronda da atrofi görülmez. Seçenek eksik olduğundan sorulan iki düzeyi karşılamaz. Doğru yanıt iki düzeyi birlikte vermelidir (s. 52)."
+     },
+     "bilgi": [
+      90,
+      91,
+      92,
+      93
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 52,
+      "alinti": "1. motor nöron Atrofi yok Nöromusküler Kavşak Atrofi yok 2. motor nöron Atrofi gelişir Çizgili Kas Atrofi VAR"
+     }
+    },
+    {
+     "id": "k2-05-norolojik-muayene-q57",
+     "kazanim": 3,
+     "zorluk": "zor",
+     "soru": "Birinci motor nöron zaafını nöromusküler kavşak zaafından ayıran bulgu kümesi hangisidir?",
+     "secenekler": {
+      "A": "Atrofi ve duyu kusuru",
+      "B": "Tonus azalması ve reflekslerin kaybolması",
+      "C": "Tonus ve reflekslerin değişmemesi",
+      "D": "Tonus artışı, canlı refleksler ve patolojik refleksin varlığı",
+      "E": "Atrofi gelişmesi ve patolojik refleksin olmaması"
+     },
+     "dogru": "D",
+     "aciklama": "Birinci motor nöronda tonus artar, refleksler canlıdır, patolojik refleks pozitiftir; nöromusküler kavşakta bunlar değişmez (s. 52).",
+     "sik_aciklamalari": {
+      "A": "Atrofi ve duyu kusuru her iki düzeyde de yoktur. Ortak olduğu için iki düzeyi birbirinden ayırmaz. Ayırıcı olabilmesi için iki düzeyde farklı olması gerekir (s. 52).",
+      "B": "Bu bulgular ikinci motor nöron tutulumunda görülür. Birinci motor nöronda tonus artar, nöromusküler kavşakta ise tonus değişmez; seçenek ne birini ne ötekini gösterir (s. 52).",
+      "C": "Tonus ve reflekslerin değişmemesi nöromusküler kavşak zaafının özelliğidir. Birinci motor nöronu tanımlayan bulgu bunun tersidir. Birinci motor nöronda ise tonus artar ve refleksler canlıdır (s. 52).",
+      "D": "Birinci motor nöron tutulumunda tonus artar, refleksler canlı olur ve patolojik refleks pozitiftir. Nöromusküler kavşakta ise tonus, refleksler ve patolojik refleks değişmez; bu üç bulgu iki düzeyi birbirinden ayırır (s. 52).",
+      "E": "Atrofi gelişmesi birinci motor nöron ve nöromusküler kavşakta görülmez. Bu bulgu kümesi ikinci motor nöron ya da çizgili kas düzeyiyle ilişkilidir (s. 52)."
+     },
+     "bilgi": [
+      90,
+      92
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 52,
+      "alinti": "1. motor nöron Tonus artar Refleksler canlı Patolojik refleks (+) Nöromusküler Kavşak Tonus değişmez"
      }
     }
    ],
@@ -886,6 +1693,219 @@
      "kanit": {
       "sayfa": 60,
       "alinti": "Derin duyu muayenesi Pozisyon Pasif hareket Vibrasyon Romberg"
+     }
+    },
+    {
+     "id": "k2-05-norolojik-muayene-q61",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Aşağıdakilerden hangisi yüzeysel refleks grubunda yer alan reflekslerdir?",
+     "secenekler": {
+      "A": "Taban cildi refleksi (Babinski) ve Hoffman refleksi",
+      "B": "Derin tendon refleksleri",
+      "C": "Karın cildi refleksi ve kremaster refleksi",
+      "D": "Primitif (ilkel) refleksler",
+      "E": "Kornea ve çene refleksleri"
+     },
+     "dogru": "C",
+     "aciklama": "Yüzeysel refleksler karın cildi ve kremaster reflekslerdir (s. 53).",
+     "sik_aciklamalari": {
+      "A": "Bu iki refleks patolojik reflekslerdir ve birinci motor nöron tutulumunda pozitif olur. Yüzeysel refleks grubuna girmedikleri için seçenek uymaz (s. 53).",
+      "B": "Derin tendon refleksleri çekiçle tendona vurularak alınır ve ayrı bir refleks grubudur. Yüzeysel reflekslerden farklı olduğundan seçenek uymaz (s. 53, 55).",
+      "C": "Yüzeysel refleksler cilt ya da mukoza uyarısıyla alınır ve slaytta karın cildi refleksi ile kremaster refleksi olarak verilir. Bu iki refleks, derin tendon ve patolojik reflekslerden ayrı bir grubu oluşturur (s. 53).",
+      "D": "Primitif refleksler slaytta ayrı bir grup olarak verilir. Yüzeysel refleksler arasında sayılmadığı için seçenek uymaz. Primitif refleksler yüzeysel refleks grubunun değil ayrı bir grubun üyesidir (s. 53).",
+      "E": "Kornea ve çene refleksleri kraniyal sinir muayenesinde trigeminal ve fasiyal sinir yollarını gösterir. Refleks muayenesindeki yüzeysel refleks grubunda sayılmazlar (s. 25, 53)."
+     },
+     "bilgi": [
+      94
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 53,
+      "alinti": "Yüzeysel Refleksler: Karın cildi refleksi, kremaster refleksi"
+     }
+    },
+    {
+     "id": "k2-05-norolojik-muayene-q62",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Hoffman refleksi hangi refleks grubuna girer ve hangi motor nöron düzeyindeki tutulumda pozitif olması beklenir?",
+     "secenekler": {
+      "A": "Patolojik refleks; birinci motor nöron",
+      "B": "Yüzeysel refleks; birinci motor nöron",
+      "C": "Patolojik refleks; ikinci motor nöron",
+      "D": "Primitif refleks; ikinci motor nöron",
+      "E": "Derin tendon refleksi; nöromusküler kavşak"
+     },
+     "dogru": "A",
+     "aciklama": "Hoffman ve Babinski patolojik reflekslerdir; birinci motor nöron tutulumunda pozitiftir (s. 52, 53).",
+     "sik_aciklamalari": {
+      "A": "Hoffman refleksi, taban cildi refleksi (Babinski) ile birlikte patolojik refleks grubunda verilir. Patolojik refleks birinci motor nöron tutulumunda pozitiftir, ikinci motor nöron tutulumunda görülmez (s. 52, 53).",
+      "B": "Yüzeysel refleksler karın cildi ve kremaster reflekstir; Hoffman bu gruba girmez. Düzey olarak birinci motor nöron doğru olsa da grup yanlış verilmiştir (s. 53).",
+      "C": "Grup doğru verilmiş ancak ikinci motor nöron tutulumunda patolojik refleks görülmez. Hoffman'ın pozitifliği birinci motor nöronla ilişkilidir (s. 52, 53).",
+      "D": "Primitif refleksler ayrı bir gruptur ve Hoffman bu gruba girmez. Düzey olarak da ikinci motor nöron tutulumunda patolojik refleks görülmediğinden seçenek uymaz (s. 52, 53).",
+      "E": "Derin tendon refleksleri ayrı bir gruptur ve Hoffman patolojik refleks olarak verilir. Nöromusküler kavşakta patolojik refleks de yoktur; seçenek uymaz (s. 52, 53)."
+     },
+     "bilgi": [
+      95,
+      90
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 53,
+      "alinti": "Patolojik Refleksler: Taban cildi refleksi (Babinski), Hoffman refleksi"
+     }
+    },
+    {
+     "id": "k2-05-norolojik-muayene-q63",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "İkinci motor nöron tutulumunda reflekslerin kaybolduğu bilinmektedir. Refleks derecelendirmesinde reflekslerin kaybolması hangi dereceye karşılık gelir?",
+     "secenekler": {
+      "A": "0",
+      "B": "1",
+      "C": "2",
+      "D": "3",
+      "E": "5"
+     },
+     "dogru": "A",
+     "aciklama": "Refleks 0 yok, 1 azalmış, 2 normal, 3 artmış, 4 aşırı artmış, 5 klonustur; ikinci motor nöronda refleksler kaybolur (s. 52, 54).",
+     "sik_aciklamalari": {
+      "A": "Refleks derecelendirmesinde 0 refleksin olmaması anlamına gelir. İkinci motor nöron tutulumunda refleksler kaybolduğu için bu durum 0 derecesiyle ifade edilir (s. 52, 54).",
+      "B": "1 derecesi azalmış (hipoaktif) refleksi gösterir; refleks hâlâ alınabilir. İkinci motor nöronda ise refleksler tamamen kaybolur (s. 54).",
+      "C": "2 derecesi normal refleks anlamına gelir. Refleksler kaybolmuş olduğundan hasta için uygun değildir. Normal refleks alınabildiği hâlde, bu hastada refleksin hiç alınamaması beklenir (s. 54).",
+      "D": "3 derecesi artmış (hiperaktif) refleksi gösterir ve birinci motor nöron tutulumu gibi canlı refleks durumlarıyla ilişkilidir. İkinci motor nöronda bu görülmez (s. 52, 54).",
+      "E": "5 derecesi klonusu gösterir ve refleksin aşırı artışının ötesindeki durumdur. Reflekslerin kaybolmasıyla ilgisi yoktur. Klonus aşırı canlı refleks yanıtını, 0 ise yanıtın hiç olmamasını anlatır (s. 54)."
+     },
+     "bilgi": [
+      91,
+      96
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 54,
+      "alinti": "Refleks: O: yok 1: azalmış (hipoaktif) 2: normal"
+     }
+    },
+    {
+     "id": "k2-05-norolojik-muayene-q64",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Sağ ayağında dokunma ve ağrıyı hiç algılamayan, sol ayağında ise duyusu azalmış olan hastada bulgular sırasıyla hangi terimlerle adlandırılır?",
+     "secenekler": {
+      "A": "Sağda hipoestezi, solda anestezi",
+      "B": "Sağda hiperestezi, solda hipoestezi",
+      "C": "Sağda parestezi, solda anestezi",
+      "D": "Sağda anestezi, solda hiperestezi",
+      "E": "Sağda anestezi, solda hipoestezi"
+     },
+     "dogru": "E",
+     "aciklama": "Anestezi duyu yokluğu, hipoestezi duyu azlığıdır (s. 59).",
+     "sik_aciklamalari": {
+      "A": "Terimler yer değiştirmiştir. Duyunun hiç algılanmadığı yerde anestezi, azaldığı yerde hipoestezi denir. Bu seçenek sağ ve sol ayağın durumunu ters eşleştirmektedir (s. 59).",
+      "B": "Hiperestezi uyarının normalden şiddetli hissedilmesidir. Sağ ayakta duyu hiç algılanmadığından hiperestezi değil anestezi söz konusudur. Solda duyu azaldığından hiperestezi de uygun değildir (s. 59).",
+      "C": "Parestezi, dış uyarım olmadan hissedilen uyuşma ve karıncalanmadır. Sağ ayaktaki duyu yokluğunu tanımlamaz, sol ayaktaki azlık da anestezi değildir (s. 59).",
+      "D": "Sağdaki terim doğrudur ancak solda duyu azalmıştır. Duyu azlığı hipoestezi olup hiperestezi artmış algıyı anlatır. Hiperestezi ise uyarının daha şiddetli hissedildiği durumu anlatır (s. 59).",
+      "E": "Anestezi duyu yokluğunu, hipoestezi ise duyu azlığını anlatır. Sağ ayakta duyu hiç algılanmadığı için anestezi, sol ayakta duyu azaldığı için hipoestezi uygun terimlerdir (s. 59)."
+     },
+     "bilgi": [
+      104
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 59,
+      "alinti": "Hipoestezi: Duyu azlığı Anestezi: Duyu yokluğu"
+     }
+    },
+    {
+     "id": "k2-05-norolojik-muayene-q65",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Ağrısız bir uyarıyla hoş olmayan, ağrılı bir duyum algılanması hangi terimle adlandırılır?",
+     "secenekler": {
+      "A": "Parestezi",
+      "B": "Hiperestezi",
+      "C": "Dizestezi",
+      "D": "Hipoestezi",
+      "E": "Anestezi"
+     },
+     "dogru": "C",
+     "aciklama": "Dizestezi ağrısız uyarıyla hoş olmayan ağrılı duyum algılanmasıdır (s. 59).",
+     "sik_aciklamalari": {
+      "A": "Parestezi, görünür bir dış uyarım olmadan hissedilen uyuşma, keçeleşme, karıncalanma ve sızlamadır. Uyarı bulunmadığı için dizestezi tanımına uymaz (s. 59).",
+      "B": "Hiperestezi, uyarının normalden daha şiddetliymiş gibi hissedilmesidir. Duyumun şiddeti artmıştır ancak sorudaki hoş olmayan ağrılı algı tanımlanmaz (s. 59).",
+      "C": "Dizestezi, ağrısız bir uyarının hoş olmayan ağrılı bir duyum olarak algılanmasıdır. Tanımın temel unsuru uyarının kendisinin ağrısız olması, algının ise rahatsız edici olmasıdır (s. 59).",
+      "D": "Hipoestezi duyu azlığıdır. Sorudaki duyum azalmış değil, hoş olmayan ve ağrılı hâle gelmiştir. Hastadaki algı azalmış duyu değil, rahatsız edici bir duyumdur (s. 59).",
+      "E": "Anestezi duyu yokluğudur. Hasta bir duyum algıladığı için anestezi söz konusu değildir. Anestezide uyarıya hiç duyum oluşmaz, oysa burada ağrılı bir duyum oluşur (s. 59)."
+     },
+     "bilgi": [
+      102
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 59,
+      "alinti": "Dizestezi: Ağrısız bir uyarıyla hoş olmayan ağrılı duyum algılanması"
+     }
+    },
+    {
+     "id": "k2-05-norolojik-muayene-q66",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Hastaya ağrı oluşturmayacak hafif bir uyaranla dokunulduğunda hasta ağrı hissetmektedir. Bu duyu terimi hangisidir?",
+     "secenekler": {
+      "A": "Parestezi",
+      "B": "Hiperestezi",
+      "C": "Hipoestezi",
+      "D": "Allodini",
+      "E": "Anestezi"
+     },
+     "dogru": "D",
+     "aciklama": "Allodini ağrı oluşturmayacak uyaranla ağrı hissedilmesidir (s. 59).",
+     "sik_aciklamalari": {
+      "A": "Parestezi, dış uyarım olmadan hissedilen uyuşma ve karıncalanmadır. Hastada bir uyaran ve ağrı olduğu için tanıma uymaz (s. 59).",
+      "B": "Hiperestezi, uyarının normalden daha şiddetli hissedilmesidir. Normalde ağrı yapmayan uyaranın ağrı olarak algılanması bundan farklıdır. Normalde ağrısız bir uyaranla ağrı hissedilmesi allodinidir (s. 59).",
+      "C": "Hipoestezi, duyu azlığıdır. Hastada duyu azalmamış, uyaran ağrı olarak algılanmaktadır. Duyu azlığında ağrı hissi oluşmaz; hastada ise ağrı hissi vardır (s. 59).",
+      "D": "Allodini, ağrı oluşturmayacak bir uyaranla ağrı hissedilmesidir. Hafif bir dokunmanın ağrı olarak algılanması bu tanıma tam uyar (s. 59).",
+      "E": "Anestezi, duyu yokluğudur. Hasta uyaranı algıladığı için anestezi söz konusu değildir. Duyu yokluğunda ağrı hissedilmez; hastada ise uyaran ağrı olarak algılanmaktadır (s. 59)."
+     },
+     "bilgi": [
+      105
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 59,
+      "alinti": "Allodini: Ağrı oluşturmayacak bir uyaran ile ağrı hissedilmesi"
+     }
+    },
+    {
+     "id": "k2-05-norolojik-muayene-q67",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Kortikal duyu muayenesinde grafestezi ve stereognozinin yitirilmesi sırasıyla hangi terimlerle adlandırılır?",
+     "secenekler": {
+      "A": "Astereognozi ve agrafestezi",
+      "B": "Anestezi ve hipoestezi",
+      "C": "Parestezi ve dizestezi",
+      "D": "Disdiadokinezi ve dismetri",
+      "E": "Agrafestezi ve astereognozi"
+     },
+     "dogru": "E",
+     "aciklama": "Duyu muayenesi bulguları arasında agrafestezi ve astereognozi sayılır (s. 65).",
+     "sik_aciklamalari": {
+      "A": "Terimler yer değiştirmiştir. Grafestezinin yitirilmesi agrafestezi, stereognozinin yitirilmesi astereognozidir. Sıralama sorudaki sıraya uymalıdır, bu yüzden ters eşleştirme doğru değildir (s. 65).",
+      "B": "Bu terimler duyunun tamamen yokluğunu ve azlığını anlatır. Kortikal duyuya özgü grafestezi ve stereognozi kayıplarını adlandırmazlar (s. 59, 65).",
+      "C": "Parestezi uyarı olmadan hissedilen karıncalanmayı, dizestezi ağrısız uyarıyla ağrılı duyumu anlatır. Kortikal duyu kayıplarının adı değildir (s. 59, 65).",
+      "D": "Bu terimler serebellar sistemin bulgularıdır ve koordinasyonun bozulmasını anlatır. Duyu muayenesindeki kortikal duyu kayıplarıyla ilgisi yoktur (s. 71).",
+      "E": "Grafestezi avuca yazılan işaretin tanınması, stereognozi ise cismin elle tanınmasıdır. Bunların yitirilmesi sırasıyla agrafestezi ve astereognozi olarak adlandırılır ve duyu muayenesi bulguları arasında sayılır (s. 60, 65)."
+     },
+     "bilgi": [
+      108,
+      113
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 65,
+      "alinti": "Agrafestezi Astereognozi"
      }
     },
     {
@@ -1079,10 +2099,72 @@
       "sayfa": 71,
       "alinti": "Ataksi Disartri Hipotoni Dismetri Disdiadokinezi"
      }
+    },
+    {
+     "id": "k2-05-norolojik-muayene-q68",
+     "kazanim": 5,
+     "zorluk": "zor",
+     "soru": "İşaret parmağıyla hekimin parmağına dokunmaya çalışan hasta hedefi şaşırmakta, mesafeyi ayarlayamamaktadır. Bu serebellar bulgu hangisidir?",
+     "secenekler": {
+      "A": "Disdiadokinezi",
+      "B": "Dismetri",
+      "C": "Disartri",
+      "D": "Hipotoni",
+      "E": "Ataksi"
+     },
+     "dogru": "B",
+     "aciklama": "Metrik muayenede hedefi şaşırma dismetridir; ardışık hareketlerin bozulması disdiadokinezidir (s. 67, 70, 71).",
+     "sik_aciklamalari": {
+      "A": "Disdiadokinezi, ardışık hareketlerin (avuç içi yukarı-aşağı çevirme gibi) düzenli yapılamamasıdır. Burada sorun hedefe uzanmada olduğu için bu bulgu uymaz (s. 70, 71).",
+      "B": "Dismetri, hedefe uzanan harekette mesafenin yanlış ayarlanmasıdır ve parmak-burun gibi metrik muayenede ortaya çıkar. Hastanın hedefi şaşırması bu bulguyu gösterir (s. 67, 69, 71).",
+      "C": "Disartri, konuşma kaslarının koordinasyonunun bozulmasıdır. Hastanın hareketle ilgili hedef şaşırması konuşma bozukluğu değildir. Konuşma bozukluğu disartri ile adlandırılsa da hastadaki sorun harekettir (s. 71).",
+      "D": "Hipotoni, kas tonusunun azalmasıdır ve tonus muayenesinde saptanır. Hastadaki sorun tonus değil hedefe ulaşma becerisidir. Tonus muayenesi serebellar sistemin ayrı bir bölümünü oluşturur (s. 67, 71).",
+      "E": "Ataksi, hareketlerin ve dengenin koordinasyonsuzluğunu gösteren genel bir serebellar bulgudur. Hedefi şaşırmaya özgü terim dismetridir. Ataksi daha genel bir terimdir ve hedefe ulaşmadaki mesafe hatasını özel olarak anlatmaz (s. 71)."
+     },
+     "bilgi": [
+      117,
+      119
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 69,
+      "alinti": "Serebellar Sistem: Metrik Muayene"
+     }
+    },
+    {
+     "id": "k2-05-norolojik-muayene-q69",
+     "kazanim": 5,
+     "zorluk": "zor",
+     "soru": "Serebellar bulgu olarak sayılan ve konuşmayla ilgili olan bulgu hangisidir?",
+     "secenekler": {
+      "A": "Dismetri",
+      "B": "Hipotoni",
+      "C": "Disartri",
+      "D": "Disdiadokinezi",
+      "E": "Motor disfazi (Broca)"
+     },
+     "dogru": "C",
+     "aciklama": "Serebellar bulgular ataksi, disartri, hipotoni, dismetri ve disdiadokinezidir; konuşmayla ilgili olan disartridir (s. 71).",
+     "sik_aciklamalari": {
+      "A": "Dismetri, hedefe uzanan harekette mesafenin yanlış ayarlanmasıdır. Serebellar bir bulgudur ancak konuşmayla ilgisi yoktur. Dismetri hareketin mesafesini, disartri ise konuşmayı etkiler (s. 71).",
+      "B": "Hipotoni, kas tonusunun azalmasıdır. Serebellar bulgu olmakla birlikte konuşmayı değil kas gerginliğini ilgilendirir. Hipotoni kas tonusunun azalmasıyla ilgilidir, konuşmayla değil (s. 71).",
+      "C": "Disartri, konuşma kaslarının koordinasyonunun bozulması sonucu söyleyişin bozulmasıdır ve serebellar sistem bulguları arasında sayılır. Mental durumdaki afaziden farklı olarak dil işlevi değil söyleyiş koordinasyonu etkilenir (s. 71).",
+      "D": "Disdiadokinezi, ardışık hareketlerin düzenli yapılamamasıdır. Serebellar bir bulgudur ancak konuşmayla ilgili değildir. Disdiadokinezi ardışık el hareketlerinin bozulmasını anlatır, konuşmayı değil (s. 70, 71).",
+      "E": "Motor disfazi mental durum başlığında yer alan bir konuşma bozukluğudur ve serebellar bulgu değildir. Soru serebellar bulgular arasından konuşmayla ilgili olanı sorduğundan uymaz (s. 6, 71)."
+     },
+     "bilgi": [
+      119,
+      8
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 71,
+      "alinti": "Ataksi Disartri Hipotoni Dismetri Disdiadokinezi"
+     }
     }
    ],
    "ilgili_cikmis": []
   }
  ],
- "soru_sayisi": 34
+ "soru_sayisi": 69
 }

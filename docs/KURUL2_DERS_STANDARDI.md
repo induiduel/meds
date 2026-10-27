@@ -149,3 +149,8 @@ kaynağa sadık, çıkmışa ve hocanın vurguladığı yere ağırlık veren de
 6. **Fazlı iş + alt ajan:** A (aşama 1–6 içerik) → B (7–11 anlatım/yayın/ses/çapa) → C (12–16 çizim, önem/çözücü/asistan, quiz, dağıtım). Her faz sonunda
    ana oturum çıktıyı kapılarla yeniden çalıştırıp doğrular (ajan raporuna güvenilmez). İki ders paralel çalışırsa paylaşılan dosyalara yalnız Edit ile satır eklenir.
 7. **Bitişte katman katman rapor:** hangi katman yapıldı / atlandı ve gerekçesi; hata defterine kök neden; `DEGISIKLIK_KAYDI.md`.
+
+8. **Örnek soru kapsamı (kullanıcı kararı 2026-10-27; bundan sonra işçiye verilen HER ders / HER slayt dosyası için geçerli):** her ders üretilirken (a) "En önemliler" listesindeki maddelerin TAMAMI ve (b) diğer
+   ayrıntı bilgi kapsamının (önem listesi dışındaki atomik bilgilerin) yaklaşık %40'ı örnek soruya çevrilir. Böylece dersin örnek soru sayısı
+   **50'yi aşar, 100'ü geçmez** (50 < n ≤ 100). Sayı bu aralığın dışına çıkarsa önce kapsam oranı ayarlanır, aralık gevşetilmez. Kaynak sadakati ve
+   çeldirici/şık standartları değişmez (kural 4, SIK_ACIKLAMA_STANDARDI).

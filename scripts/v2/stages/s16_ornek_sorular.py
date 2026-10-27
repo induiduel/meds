@@ -237,10 +237,11 @@ def _denetle(p: dict, d: dict, cik: list[dict], tum_cik: set[str]) -> list[str]:
             if _benzerlik(metin, _soru_metni(c)) >= 0.75:
                 sorun.append(f"{qid}: çıkmış soruyla birebir benzer ({c['question_id']})")
                 break
+    ust = max(10, 100 - 3 * (len(kaz) - 1))  # 2026-10-27: ders başına 50<n≤100 kuralı (KURUL2_DERS_STANDARDI §10.8); diğer kazanımlar ≥3 soru, tek kazanım tavanı buna göre
     for kn in range(1, len(kaz) + 1):
         qs = sayac.get(kn, [])
-        if not 3 <= len(qs) <= 10:
-            sorun.append(f"K{kn}: {len(qs)} soru (3-10 olmalı)")
+        if not 3 <= len(qs) <= ust:
+            sorun.append(f"K{kn}: {len(qs)} soru (3-{ust} olmalı)")
             continue
         z = Counter(q.get("zorluk") for q in qs)
         if any(z[x] < 1 for x in ZORLUK):

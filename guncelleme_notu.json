@@ -1,15 +1,13 @@
 {
  "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
- "onem": 483,
- "baslik": "Soruda Derste bağlantısı",
+ "onem": 484,
+ "baslik": "Nöroloji 3 ve Genetik 1: daha çok örnek soru",
  "maddeler": [
-  "Çıkmış soruyu cevaplayınca Derste mm:ss: sorunun dayandığı sesli ders yerine git"
+  "Nörolojik Muayene dersinde örnek soru sayısı 34'ten 69'a, Beyin ve İskelet Sistemi Gelişimi Genetiği dersinde 43'ten 95'e çıktı",
+  "En önemliler listesindeki her madde artık en az bir örnek soruyla pekiştiriliyor"
  ],
  "eklenen": [],
  "degisen": [],
- "duzeltilen": [
-  "Sesli ders Geri düğmesi gelinen listeye dönmüyordu",
-  "Sesli ders Geri düğmesi gelinen listeye dönmüyordu"
- ],
+ "duzeltilen": [],
  "silinen": []
 }

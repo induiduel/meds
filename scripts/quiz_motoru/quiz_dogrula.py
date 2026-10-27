@@ -19,6 +19,8 @@ from typing import Dict, Any, List
 MEDS = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from kapsam import sesli_ders_tamamlandi_mi
+sys.path.insert(0, str(MEDS / "scripts"))
+from sik_aciklama import denetle as sik_denetle  # kural 14: şık açıklama standardı (20–55 kelime, 2–3 cümle)
 
 
 def dogrula(quiz_dosyasi: Path, taslak_klasor: Path = None) -> List[str]:
@@ -106,6 +108,7 @@ def dogrula(quiz_dosyasi: Path, taslak_klasor: Path = None) -> List[str]:
             exp = explanations.get(opt_key, "")
             if not exp or len(exp.strip()) < 15:
                 hatalar.append(f"Soru {q_id}: '{opt_key}' şıkkı için gerekçeli açıklama eksik veya çok kısa (<15 karakter).")
+            hatalar.extend(sik_denetle(exp, f"Soru {q_id} şık {opt_key}"))
             # Yasaklı geçiştirme ifadeleri kontrolü
             if re.search(r"^(bu sorunun cevabı değil|olarak geçmez|yapmaz|doğrudur|yanlıştır)\.?$", exp.strip().casefold()):
                 hatalar.append(f"Soru {q_id}: '{opt_key}' şıkkı için yüzeysel geçiştirme açıklaması YASAKTIR: '{exp}'")
