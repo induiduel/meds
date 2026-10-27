@@ -1,13 +1,12 @@
 {
  "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
- "onem": 422,
- "baslik": "Sesli derste tam ekran düğmesi",
+ "onem": 423,
+ "baslik": "Profil ve ayarlar yeni düzende",
  "maddeler": [
-  "Sesli ders üst çubuğuna doğrudan tam ekran düğmesi eklendi"
+  "Profil sayfası yenilendi: üstte profil kartı, altında Ben, Ayarlar ve Diğer grupları",
+  "Her bölüm kendi ekranında açılır; Geri ile listeye dönülür"
  ],
- "eklenen": [
-  "Sesli ders ekranında tek tıkla tam ekrana girip çıkma"
- ],
+ "eklenen": [],
  "degisen": [],
  "duzeltilen": [],
  "silinen": []

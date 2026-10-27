@@ -49,7 +49,7 @@ Yeni bileşen önce buraya eklenir; sayfa CSS'i yalnız yerleşim yazar.
 | 5 | Soru çöz merkezi + soru + yanlış çekmecesi + sonuç | C01–C10, Y01–Y06 süzgeç | Onaylandı (2026-10-27) — merkez `SorularMerkezV15` (+ Test oluştur → `/sorular/deneme?kurul=&ders=&n=&basla=1`), soru/yanlış çekmecesi/sonuç `PracticeV15` |
 | 6 | Sınava hazırlan: kamplar, Check Up, Son Prova, 60 planı, takvim, olası | D01–D07 | Onaylandı (2026-10-27) — merkez `KamplarMerkezV15`; kamp/Son Prova/60 planı iç sayfaları açık iş |
 | 7 | Başvuru: kaynaklar, Sağlık Bakanlığı, sözlük, spotlar, önem | G01–G02, B08–B10 | **Onay bekliyor** — merkez `KaynaklarMerkezV15`; iç sayfalar açık iş |
-| 8 | Profil, ayarlar, görünüm (tema/palet/yazı), başarımlar | G04–G06, V01–V04, W01–W02, AB01–AB08 | |
+| 8 | Profil, ayarlar, görünüm (tema/palet/yazı), başarımlar | G04–G06, V01–V04, W01–W02, AB01–AB08 | Kuruldu (2026-10-27): ProfileV12 v15 dalı — profil kartı + gruplu satırlar (Ben/Ayarlar/Diğer), her bölüm #hash ekranı, Geri listeye; paneller v12'den, `styles/v15/profil.css` |
 | 9 | Diyaloglar, çekmeceler, tostlar, durumlar | H01–H11, A06–A08, AB12–AB18 | |
 | 10 | Açılış + kayıt akışı | I01–I11 | |
 

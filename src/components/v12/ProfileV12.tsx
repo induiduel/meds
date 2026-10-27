@@ -2,6 +2,10 @@ import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { createPortal } from 'react-dom';
 import {
   AlertCircle,
+  Accessibility,
+  BarChart3,
+  Bell,
+  Bookmark,
   BookOpen,
   Camera,
   Check,
@@ -79,6 +83,8 @@ import { ArkaPlanRow } from '../settings/ArkaPlanRow';
 import { WhatsAppDailyDigestRow } from '../settings/WhatsAppDailyDigestRow';
 import { ProgressResetRow } from '../settings/ProgressResetRow';
 import { erisimYaz, useErisim } from '../../utils/erisilebilirlik';
+import { useV15Baslik } from '../v15/baslik';
+import '../../styles/v15/profil.css';
 import { getStatsAttempts } from '../../services/progressReset';
 import { startWelcomeTour } from '../onboarding/tourState';
 import { onLearnTour } from '../onboarding/learnTourState';
@@ -105,7 +111,7 @@ export interface ProfileV12Props {
 }
 
 type Tab = 'genel' | 'katki' | 'kayit' | 'hesap' | 'veri' | 'erisim';
-type View = Tab | 'gorunum';
+type View = Tab | 'gorunum' | 'menu';
 
 const TABS: { id: Tab; label: string }[] = [
   { id: 'genel', label: 'Genel bakış' },
@@ -398,10 +404,25 @@ const CONTRIB_SEGS: { id: ContribKind; label: string; note: string; empty: strin
  * ---------------------------------------------------------------------------------------------- */
 
 export const ProfileV12: React.FC<ProfileV12Props> = ({ currentUser, isAdmin, questions, onUpdateUser, onOpenAuth, onLogout, onOpenAdmin, onOpenOffline }) => {
-  const [view, setView] = useState<View>(() => {
+  const v15 = useAppearance().v15;
+  const [view, setView0] = useState<View>(() => {
     const h = typeof window !== 'undefined' ? window.location.hash.replace('#', '') : '';
+    if (v15 && !h) return 'menu';
     return h === 'gorunum' ? 'gorunum' : h === 'hesap' ? 'hesap' : h === 'erisim' ? 'erisim' : h === 'veri' ? 'veri' : 'genel';
   });
+  // v15: her bölüm kendi ekranı; adres #bolum, üst bardaki Geri ve tarayıcı geri listeye (#'siz) döner
+  const setView = (v: View) => {
+    setView0(v);
+    if (v15) { try { history.pushState(history.state, '', `${location.pathname}${v === 'menu' ? '' : `#${v}`}`); } catch { /* yok */ } }
+  };
+  useEffect(() => {
+    if (!v15) return;
+    const f = () => { const h = location.hash.replace('#', ''); setView0((h || 'menu') as View); };
+    window.addEventListener('popstate', f); window.addEventListener('hashchange', f);
+    return () => { window.removeEventListener('popstate', f); window.removeEventListener('hashchange', f); };
+  }, [v15]);
+  const BOLUM_AD: Record<View, string> = { menu: 'Profil ve ayarlar', genel: 'Genel bakış', katki: 'Katkılarım', kayit: 'Kaydettiklerim', hesap: 'Hesap', veri: 'Veriler ve gizlilik', erisim: 'Erişilebilirlik', gorunum: 'Görünüm ve tasarım' };
+  useV15Baslik(v15 ? (view === 'menu' ? { baslik: 'Profil ve ayarlar' } : { baslik: BOLUM_AD[view], alt: 'Profil ve ayarlar', geri: '/ayarlar' }) : null);
   const ed = useProfileEditor(currentUser, onUpdateUser);
   const [cropFile, setCropFile] = useState<File | null>(null);
   const fileRef = useRef<HTMLInputElement>(null);
@@ -428,6 +449,94 @@ export const ProfileV12: React.FC<ProfileV12Props> = ({ currentUser, isAdmin, qu
     setView(TABS[next].id);
     tabRefs.current[next]?.focus();
   };
+
+  const paneller = (
+    <>
+      {view === 'genel' && <OverviewPanel currentUser={currentUser} questions={questions} />}
+      {view === 'katki' && <ContribPanel currentUser={currentUser} questions={questions} onOpenAuth={onOpenAuth} />}
+      {view === 'kayit' && <SavedPanel questions={questions} />}
+      {view === 'hesap' && (
+        <AccountPanel currentUser={currentUser} isAdmin={isAdmin} ed={ed} nameRef={nameRef} photo={photo} onPickPhoto={pickPhoto}
+          onRemovePhoto={() => ed.save({ photoURL: '' })} onOpenAuth={onOpenAuth} onLogout={onLogout} onOpenAdmin={onOpenAdmin} onAppearance={() => setView('gorunum')} />
+      )}
+      {view === 'veri' && <DataPanel onOpenOffline={onOpenOffline} />}
+      {view === 'erisim' && <ErisimPanel />}
+      {view === 'gorunum' && <AppearancePanel />}
+    </>
+  );
+  const dosyaGirdi = (
+    <>
+      <input ref={fileRef} type="file" accept="image/*" hidden onChange={(e) => {
+        const f = e.target.files?.[0]; e.target.value = '';
+        if (!f) return;
+        if (f.size > 15 * 1024 * 1024) { toast.error('Dosya çok büyük', 'En fazla 15 MB bir görsel seç.'); return; }
+        setCropFile(f);
+      }} />
+      {cropFile && <AvatarCropper file={cropFile} onCancel={() => setCropFile(null)} onDone={(url) => { setCropFile(null); ed.save({ photoURL: url }); }} />}
+    </>
+  );
+
+  if (v15) {
+    const satir = (id: View | string, Icon: React.ElementType, ad: string, alt: string, git: () => void, ton = 'var(--color-accent)') => (
+      <li key={id}>
+        <button type="button" className="pf15-s" onClick={git}>
+          <span className="pf15-ic" style={{ '--t': ton } as React.CSSProperties}><Icon aria-hidden /></span>
+          <span className="pf15-st"><b>{ad}</b><small>{alt}</small></span>
+          <ChevronRight aria-hidden className="pf15-ok" />
+        </button>
+      </li>
+    );
+    const sayfa = (r: Parameters<typeof pathFor>[0]) => () => navigateTo(pathFor(r));
+    return (
+      <div className="pf15">
+        <h1 className="sr-only">{BOLUM_AD[view]}</h1>
+        {view === 'menu' ? (
+          <>
+            <section className="pf15-kart v15-card">
+              <div className="u12-av-wrap pf15-av">
+                <span className="u12-av" aria-hidden="true">{photo ? <img src={photo} alt="" /> : currentUser ? initialsOf(currentUser) : <UserRound />}</span>
+                {currentUser && <button type="button" className="u12-av-edit" aria-label="Profil fotoğrafını değiştir" onClick={pickPhoto}><Pencil aria-hidden /></button>}
+              </div>
+              <div className="pf15-kt">
+                <b>{shownName}</b>
+                <span>{currentUser ? currentUser.email : 'Giriş yapmadın'}</span>
+                {currentUser?.studentNumber && <small>Öğrenci no {currentUser.studentNumber}</small>}
+              </div>
+              {currentUser
+                ? <button type="button" className="pf15-btn" onClick={() => { setView('hesap'); setFocusName(true); }}><Pencil aria-hidden />Düzenle</button>
+                : <button type="button" className="pf15-btn is-pri" onClick={onOpenAuth}><LogIn aria-hidden />Giriş yap</button>}
+            </section>
+
+            <h2 className="pf15-h">Ben</h2>
+            <ul className="pf15-liste v15-card">
+              {satir('genel', BarChart3, 'Genel bakış', 'Sayıların, son etkinlik, devam eden dersler', () => setView('genel'), '#0A84FF')}
+              {satir('katki', MessageSquare, 'Katkılarım', 'Eklediğin sorular, parçalar, şıklar, yorumlar', () => setView('katki'), '#30B0C7')}
+              {satir('kayit', Bookmark, 'Kaydettiklerim', 'Kaydettiğin sorular ve kartlar', () => setView('kayit'), '#FF9F0A')}
+              {satir('basarim', ThumbsUp, 'Başarımlar ve ATP', 'Hedefler, rozetler, kıdem', sayfa('basarimlar'), '#34C759')}
+            </ul>
+
+            <h2 className="pf15-h">Ayarlar</h2>
+            <ul className="pf15-liste v15-card">
+              {satir('gorunum', PaletteIcon, 'Görünüm ve tasarım', 'Tasarım, tema, palet, yazı boyutu', () => setView('gorunum'), '#AF52DE')}
+              {satir('erisim', Accessibility, 'Erişilebilirlik', 'Hareket, kontrast, satır aralığı, odak', () => setView('erisim'), '#5E5CE6')}
+              {satir('hesap', Lock, 'Hesap', 'Ad, fotoğraf, şifre, oturum', () => setView('hesap'), '#64748B')}
+              {satir('veri', Database, 'Veriler ve gizlilik', 'Eşitleme, bildirimler, indir, sıfırla', () => setView('veri'), '#FF3B30')}
+            </ul>
+
+            <h2 className="pf15-h">Diğer</h2>
+            <ul className="pf15-liste v15-card">
+              {satir('tur', Compass, 'Tanıtım turu', 'Sayfaları ve özellikleri yeniden gez', startWelcomeTour, '#32ADE6')}
+              {isAdmin && satir('yonetim', ShieldCheck, 'Yönetim konsolu', 'Taslaklar, moderasyon, sistem', onOpenAdmin, '#64748B')}
+              {currentUser && satir('cikis', LogOut, 'Çıkış yap', 'Eşitlenmiş ilerlemen hesabında kalır', onLogout, '#FF3B30')}
+            </ul>
+          </>
+        ) : (
+          <div className="pf15-panel u12-pf">{paneller}</div>
+        )}
+        {dosyaGirdi}
+      </div>
+    );
+  }
 
   return (
     <div className="ui-page is-wide u12-pf">
