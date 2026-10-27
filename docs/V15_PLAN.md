@@ -64,7 +64,7 @@ Yeni bileşen önce buraya eklenir; sayfa CSS'i yalnız yerleşim yazar.
 | Zihin haritası biçimleri, şemalar | J03–J06, W05–W10, V05–V08 | |
 | Not / kalem / renklendirme, paylaşılan notlar | K01–K08 | ✅ Notlarım (yaz/kalem/fosforlu/silgi, renk etiketi, hesaba eşitleme); paylaşılan not (ortak) yok, paylaş = metni gönder |
 | Topluluk: sohbet, yorumlar | L01–L06 | |
-| PDF oluştur sihirbazı + geçmiş | Y07–Y13 | |
+| PDF oluştur sihirbazı + geçmiş | Y07–Y13 | ✅ /pdf-olustur (sesli · etkileşimli · arşiv → kurul → ortak TopluPdf penceresi), geçmiş cihazda |
 | Arka plan işleri, hesap, güvenlik, verilerim, erişilebilirlik, komut paleti | AB01–AB18 | |
 
 ## Aşama 2 notları
@@ -149,3 +149,4 @@ kullanıcı onayı. Dağıtım yalnız `deploy/oracle/dagit.sh` (onem +1), kulla
 - **Çalışma grafikleri** `CalismaGrafikleriV15.tsx` + `styles/v15/grafik.css`: İstatistiklerim tepesinde (yalnız v15), sayfanın 7/30 gün seçimine bağlı; özet kutuları, günlük süre çubukları (dokun/üzerine gel → gün ayrıntısı), modül dağılımı. Veri calismaTakip.
 - **Oyunlar** `OyunlarV15.tsx` + `styles/v15/oyun.css`, rota `oyunlar` (`/oyunlar` ↔ `/sorular/oyunlar?oda=KOD`). Sunucu `services/quiz/quizRealtimeServer` (/api/quiz/ws) + soru kaynağı `services/quiz/oyunSoruKaynagi.ts` (sesli çözücü setleri, kök ≤220 karakter, LLM yok), `GET /api/oyun/kaynaklar`. Oda RAM'de; kopan oyuncu oyun sürerken puanıyla kalır.
 - **Notlarım** `NotlarimV15.tsx` + `styles/v15/notlarim.css`, rota `notlarim` (`/notlarim?not=<id>`), Menü › Ben. Anahtarlar `medsoru_notlarim_v1` + `medsoru_notlarim_cizim:<id>` userKvSync'te. Tuval yüksekliği `clientHeight` (scrollHeight tuvali sonsuz büyütür).
+- **PDF oluştur** `PdfSihirbaziV15.tsx` + `styles/v15/pdfsihirbaz.css`, rota `pdf_olustur` (`/pdf-olustur`), Menü › Araçlar (eski "PDF" düğmesi "Soru kitapçığı" oldu). TopluPdf'e `dugmeYazi`/`onBitti`, pencere body'ye portal.

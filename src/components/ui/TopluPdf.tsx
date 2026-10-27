@@ -6,6 +6,7 @@
  * Belge üretimi çağırana aittir (`belgeAl`): tek ders "Metni indir" ile aynı biçim kullanılır.
  */
 import React, { useEffect, useMemo, useRef, useState } from 'react';
+import { createPortal } from 'react-dom';
 import { FileDown, X } from 'lucide-react';
 import type { AktarBelge, AktarBolum } from '../../services/metinDisaAktar';
 import { duzenOku, duzenYaz, type PdfDuzen } from '../../services/pdfDuzen';
@@ -24,6 +25,10 @@ export interface TopluPdfProps {
   /** Birleşik PDF'in alt satırı */
   altMetin?: (n: number, ayar: TopluAyar) => string;
   dugmeSinif?: string;
+  /** düğme yazısı (varsayılan "Toplu PDF") */
+  dugmeYazi?: string;
+  /** iş bitince (PDF sihirbazının geçmişi için) */
+  onBitti?: (s: { tamam: number; atlanan: number; bicim: 'zip' | 'tek' }) => void;
 }
 
 const dosyaAdi = (s: string) => s.replace(/[\\/:*?"<>|\u0000-\u001f]/g, '-').replace(/\s+/g, ' ').trim().slice(0, 110);
@@ -41,14 +46,15 @@ export function TopluPdfDugme(p: TopluPdfProps) {
   return (
     <>
       <button type="button" className={p.dugmeSinif || 'tp-btn'} onClick={() => setAcik(true)} aria-haspopup="dialog" title="Birden çok dersin metnini PDF olarak indir">
-        <FileDown aria-hidden /> <span>Toplu PDF</span>
+        <FileDown aria-hidden /> <span>{p.dugmeYazi || 'Toplu PDF'}</span>
       </button>
-      {acik && <TopluPdfDiyalog {...p} onKapat={() => setAcik(false)} />}
+      {/* body'ye taşınır: sayfa kabının katman bağlamında kalınca v15 üst/alt çubuğu pencerenin üstüne biniyordu */}
+      {acik && createPortal(<TopluPdfDiyalog {...p} onKapat={() => setAcik(false)} />, document.body)}
     </>
   );
 }
 
-function TopluPdfDiyalog({ ad, ogeler, belgeAl, secenek, altMetin, onKapat }: TopluPdfProps & { onKapat: () => void }) {
+function TopluPdfDiyalog({ ad, ogeler, belgeAl, secenek, altMetin, onKapat, onBitti }: TopluPdfProps & { onKapat: () => void }) {
   const gruplar = useMemo(() => {
     const m = new Map<string, TopluOge[]>();
     for (const o of ogeler) m.set(o.grup, [...(m.get(o.grup) || []), o]);
@@ -139,6 +145,7 @@ function TopluPdfDiyalog({ ad, ogeler, belgeAl, secenek, altMetin, onKapat }: To
       atlanan.push(`Dosya oluşturulamadı${e instanceof Error && e.message ? `: ${e.message}` : ''}`);
     }
     setSonuc({ tamam: bicim === 'zip' ? dosyalar.length : icindekiler.length, atlanan });
+    onBitti?.({ tamam: bicim === 'zip' ? dosyalar.length : icindekiler.length, atlanan: atlanan.length, bicim });
     setIs(null);
   };
 

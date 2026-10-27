@@ -144,6 +144,7 @@ const GecmisKurullarView = React.lazy(() => wrapLazy(import('./components/olasi/
 const KampView = React.lazy(() => wrapLazy(import('./components/kamp/KampView')));
 const MerkezView = React.lazy(() => wrapLazy(import('./components/merkez/MerkezView')));
 const SoruHaritasiV15 = React.lazy(() => wrapLazy(import('./components/v15/SoruHaritasiV15')));
+const PdfSihirbaziV15 = React.lazy(() => wrapLazy(import('./components/v15/PdfSihirbaziV15')));
 const NotlarimV15 = React.lazy(() => wrapLazy(import('./components/v15/NotlarimV15')));
 const OyunlarV15 = React.lazy(() => wrapLazy(import('./components/v15/OyunlarV15')));
 const DersProgramiV15 = React.lazy(() => wrapLazy(import('./components/v15/DersProgramiV15')));
@@ -2027,6 +2028,13 @@ export default function App() {
         {activeTab === 'basarimlar' && (
           <Suspense fallback={<ViewFallback />}>
             <BasarimView />
+          </Suspense>
+        )}
+
+        {/* TAB: /pdf-olustur — PDF oluştur sihirbazı (kaynak → kurul → dersler; ortak TopluPdf penceresi) */}
+        {activeTab === 'pdf_olustur' && (
+          <Suspense fallback={<ViewFallback />}>
+            <PdfSihirbaziV15 />
           </Suspense>
         )}
 

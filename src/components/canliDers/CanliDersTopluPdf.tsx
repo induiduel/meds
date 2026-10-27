@@ -16,7 +16,7 @@ async function belgeAl(key: string, ayar: TopluAyar, etiketYedek: string) {
   return cdAktarBelgesi(detay, cdDersEtiketi(detay) || etiketYedek, ayar.vurgu, bas);
 }
 
-export function TopluPdfDugme({ dersler }: { dersler: CdListeDers[] }) {
+export function TopluPdfDugme({ dersler, ad = 'Sesli dersler', dugmeYazi, dugmeSinif = 'cd-btn', onBitti }: { dersler: CdListeDers[]; ad?: string; dugmeYazi?: string; dugmeSinif?: string; onBitti?: (s: { tamam: number; atlanan: number; bicim: 'zip' | 'tek' }) => void }) {
   const ogeler = useMemo(
     () => cdKategoriGrupla(dersler).flatMap(({ kat, dersler: ds }) => ds.map((d) => ({ key: d.key, grup: kat.ad, etiket: cdDersEtiketi(d), baslik: d.baslik }))),
     [dersler],
@@ -24,8 +24,10 @@ export function TopluPdfDugme({ dersler }: { dersler: CdListeDers[] }) {
   const etiketler = useMemo(() => new Map(ogeler.map((o) => [o.key, o.etiket || ''])), [ogeler]);
   return (
     <Ortak
-      ad="Sesli dersler"
-      dugmeSinif="cd-btn"
+      ad={ad}
+      dugmeYazi={dugmeYazi}
+      onBitti={onBitti}
+      dugmeSinif={dugmeSinif}
       ogeler={ogeler}
       secenek={{ vurgu: true, basliklar: true }}
       belgeAl={(key, ayar) => belgeAl(key, ayar, etiketler.get(key) || '')}

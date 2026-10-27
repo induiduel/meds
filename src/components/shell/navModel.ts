@@ -40,6 +40,7 @@ import {
   CalendarDays,
   CalendarClock,
   Gamepad2,
+  FileDown,
   Grid3x3,
 } from 'lucide-react';
 import type React from 'react';
@@ -111,6 +112,7 @@ const I: Record<string, NavItem> = {
   ders_programi: { id: 'ders_programi', label: 'Ders programı', short: 'Program', tile: 'Ders programı', hint: 'Kurulun günlük ve haftalık ders saatleri', icon: CalendarClock, tint: '#30B0C7' },
   sinav_takvimi: { id: 'sinav_takvimi', label: 'Sınav takvimi', short: 'Takvim', tile: 'Sınav takvimi', hint: 'Kurul sınavları, final ve bütünleme; kalan gün', icon: CalendarDays, tint: '#FF9F0A' },
   sinav_plani: { id: 'sinav_plani', label: 'Sınav planı', short: 'Plan', tile: 'Sınav planı', hint: 'En az 60 için kişiye özel, gün gün yol haritası', icon: Target, tint: '#FF9F0A' },
+  pdf_olustur: { id: 'pdf_olustur', label: 'PDF oluştur', short: 'PDF', tile: 'PDF oluştur', hint: 'Ders metinlerini tek ya da ayrı PDF olarak indir', icon: FileDown, tint: '#FF3B30' },
   notlarim: { id: 'notlarim', label: 'Notlarım', short: 'Notlar', tile: 'Notlarım', hint: 'Yaz, kalemle çiz, fosforluyla işaretle; hesabına kaydedilir', icon: NotebookPen, tint: '#FF9F0A' },
   bitirdiklerim: { id: 'bitirdiklerim', label: 'Bitirdiklerim', short: 'Bitenler', tile: 'Bitirdiklerim', hint: 'Konu konu bitenler, harcanan süre, kalanların tahmini', icon: CircleCheckBig, tint: '#30D158' },
   stats: { id: 'stats', label: 'İstatistiklerim', short: 'İstatistik', tile: 'İstatistik', hint: 'İlerleme, puan ve etkinlik', icon: BarChart3, tint: '#5E5CE6' },

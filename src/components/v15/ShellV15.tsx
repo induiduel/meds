@@ -7,6 +7,7 @@ import {
   CloudUpload,
   Database,
   FileDown,
+  FileText,
   LayoutGrid,
   Maximize2,
   Minimize2,
@@ -511,7 +512,8 @@ export const TabBarV15: React.FC<TabBarProps> = ({ active, onGo, isAdmin, onPdf,
           <div className="v15-sheet-tools" role="group" aria-label="Araçlar">
             <button type="button" onClick={() => { setMenu(false); openSearch(); }}><Search aria-hidden="true" />Ara</button>
             <button type="button" onClick={() => { setMenu(false); kronometreAc(); }}><Timer aria-hidden="true" />Kronometre</button>
-            <button type="button" onClick={() => { setMenu(false); onPdf(); }}><FileDown aria-hidden="true" />PDF</button>
+            <button type="button" onClick={() => { setMenu(false); onGo('pdf_olustur'); }}><FileDown aria-hidden="true" />PDF oluştur</button>
+            <button type="button" onClick={() => { setMenu(false); onPdf(); }}><FileText aria-hidden="true" />Soru kitapçığı</button>
             {onOffline && <button type="button" onClick={() => { setMenu(false); onOffline(); }}><Database aria-hidden="true" />Çevrimdışı</button>}
             <button type="button" onClick={() => { setMenu(false); window.dispatchEvent(new Event('medsoru:pending')); }}>
               <CloudUpload aria-hidden="true" />Kuyruk{queued > 0 ? ` · ${queued}` : ''}

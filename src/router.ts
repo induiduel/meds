@@ -84,6 +84,7 @@ export type AppRoute =
   | 'soru_haritasi'
   | 'oyunlar'
   | 'notlarim'
+  | 'pdf_olustur'
   | 'gecmis_kurullar'
   | 'kamp'
   | 'guncellemeler'
@@ -145,6 +146,7 @@ export const ROUTE_PATHS: Record<AppRoute, string> = {
   soru_haritasi: '/soru-haritasi',
   oyunlar: '/oyunlar',
   notlarim: '/notlarim',
+  pdf_olustur: '/pdf-olustur',
   gecmis_kurullar: '/gecmis-kurullar',
   kamp: '/kamp',
   guncellemeler: '/guncellemeler',
@@ -209,6 +211,7 @@ export const ROUTE_TITLES: Record<AppRoute, string> = {
   soru_haritasi: 'Soru haritası',
   oyunlar: 'Oyunlar',
   notlarim: 'Notlarım',
+  pdf_olustur: 'PDF oluştur',
   gecmis_kurullar: 'Geçmiş kurullar',
   kamp: 'Kurul kampı',
   guncellemeler: 'Güncelleme günlüğü',
@@ -352,6 +355,7 @@ const ALIASES: Record<string, AppRoute> = {
   oyunlar: 'oyunlar',
   oyun: 'oyunlar',
   notlarim: 'notlarim',
+  'pdf-olustur': 'pdf_olustur',
   'notlarım': 'notlarim',
   olasi: 'olasi_sorular',
   'olasi-soru': 'olasi_sorular',

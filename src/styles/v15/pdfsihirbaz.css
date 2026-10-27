@@ -1,0 +1,21 @@
+/* v15 · PDF oluştur sihirbazı (PdfSihirbaziV15) — renkler palet tokenından */
+.ps15 { container-type: inline-size; display: flex; flex-direction: column; gap: 12px; max-width: 720px; width: 100%; margin-inline: auto; }
+.ps15-adim { padding: 16px; display: flex; flex-direction: column; gap: 12px; }
+.ps15-adim h2 { margin: 0; display: flex; align-items: center; gap: 10px; font-size: 1rem; color: var(--color-ink); }
+.ps15-adim h2 > span { flex: none; width: 24px; height: 24px; border-radius: 50%; display: grid; place-items: center; background: var(--color-accent); color: var(--color-on-accent); font-size: .8rem; }
+.ps15-adim > .v15-cap { margin: 0; }
+.ps15-kaynak { display: grid; gap: 8px; grid-template-columns: minmax(0, 1fr); }
+@container (min-width: 620px) { .ps15-kaynak { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+.ps15-k { display: flex; align-items: flex-start; gap: 10px; text-align: left; padding: 12px; border-radius: 12px; border: 1px solid var(--color-line); background: var(--color-white); color: var(--color-ink); font: inherit; cursor: pointer; position: relative; }
+.ps15-k > svg:first-child { flex: none; width: 20px; height: 20px; color: var(--color-ink-2); margin-top: 1px; }
+.ps15-k > span { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
+.ps15-k small { color: var(--color-ink-3); font-size: .78rem; line-height: 1.35; }
+.ps15-k.is-on { border-color: var(--color-accent); background: var(--color-accent-soft); }
+.ps15-k.is-on > svg:first-child { color: var(--color-accent); }
+.ps15-ok { flex: none; width: 18px; height: 18px; color: var(--color-accent); }
+.ps15-btn { width: 100%; display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 46px; border: 0; border-radius: 12px; background: var(--color-accent); color: var(--color-on-accent); font: inherit; font-weight: 600; cursor: pointer; }
+.ps15-btn svg { width: 18px; height: 18px; }
+.ps15-gecmis { display: flex; flex-direction: column; gap: 6px; }
+.ps15-gb { display: flex; align-items: center; justify-content: space-between; padding: 0 2px; }
+.ps15-gb h2 { margin: 0; }
+.ps15-gecmis > .v15-cap { margin: 0 2px; }

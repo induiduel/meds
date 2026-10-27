@@ -1,10 +1,11 @@
 {
  "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
- "onem": 399,
- "baslik": "Notlarım",
+ "onem": 400,
+ "baslik": "PDF oluştur",
  "maddeler": [
-  "Yeni: Menü › Notlarım — not yaz, kalemle çiz, fosforluyla işaretle, renk etiketi ver",
-  "Notların hesabına kaydedilir; telefonda yazdığını bilgisayarda açabilirsin"
+  "Yeni: Menü › Araçlar › PDF oluştur — sesli ders metinlerini, etkileşimli dersleri ya da 2025-26 arşivini kurul kurul PDF olarak indir",
+  "Oluşturduğun PDF'lerin geçmişi; tek dokunuşla aynı seçimle yeniden oluştur",
+  "Düzeltme: Toplu PDF penceresi artık üst ve alt çubuğun altında kalmıyor"
  ],
  "eklenen": [],
  "degisen": [],

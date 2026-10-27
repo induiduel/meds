@@ -856,3 +856,9 @@ Her maddede: belirti · kök neden · Kurul 2 kuralı · kapı durumu. Kanıtlar
 - **Kök neden:** `handleJoinRoom` olmayan odayı `createOrJoinRoom(..., [])` ile **boş soru listesiyle** kuruyordu; `handleSetReady` `questions.length > 0` şartıyla geri sayımı hiç başlatmıyordu. Ayrıca yeniden bağlanan oyuncu yeni kayıtla puanını kaybediyor, istemci `disconnect()` sonrası `onclose` içinde kendiliğinden yeniden bağlanıyordu.
 - **Çözüm:** oda yalnız `kaynak` (branş/ders/n) ile kurulur, sorular `oyunSoruKaynagi.ts`'ten; kaynaksız katılımda oda yoksa `room_error`. Yeniden bağlanan aynı kimlik puanını korur; istemci `disconnect` oda kimliğini siler.
 - **Kural:** realtime odası veri olmadan kurulamaz; sunucu her başarısız katılımı açık hata mesajıyla döner.
+
+### H90 — v15'te Toplu PDF penceresinin üstüne üst/alt çubuk biniyordu (2026-10-27)
+- **Belirti:** Sesli dersler (ve PDF oluştur) › Toplu PDF açılınca pencerenin başlığı ve "indir" düğmesi v15 üst çubuğunun ve alt sekme çubuğunun altında kalıyordu.
+- **Kök neden:** pencere (`.tp-perde`, z-index 120) sayfa kabının içinde çiziliyordu; kap kendi katman bağlamını kurduğu için z-index'i kabın dışına taşmıyor, sabit konumlu v15 çubukları (z 30/40) üstte kalıyordu.
+- **Çözüm:** `TopluPdfDugme` pencereyi `createPortal(..., document.body)` ile çizer.
+- **Kural:** tam ekran örtü/pencere bileşenleri daima body'ye portal ile çizilir; sayfa içi z-index'e güvenilmez.
