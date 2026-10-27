@@ -1,14 +1,16 @@
 import React, { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
-import { ChevronRight, Flag, Hash, Heart, Link2, LogOut, Mail, MessageCircle, MessagesSquare, Reply, Search, Send, SquarePen, Trash2, UserRound, X } from 'lucide-react';
+import { Bell, BellOff, Check, CheckCheck, ChevronRight, Eye, EyeOff, Flag, Hash, Heart, Link2, LogOut, Mail, MessageCircle, MessagesSquare, Palette, Reply, Search, Send, Settings2, Share2, SquarePen, Trash2, UserRound, X } from 'lucide-react';
 import { safeJsonFetch } from '../../services/api';
 import { auth, getRememberedStudentInfo } from '../../services/auth';
 import { useLiveEvent } from '../../hooks/useLiveEvent';
 import { aktifKurul } from '../../services/kurulTakvimi';
 import { navigateTo } from '../../router';
 import { useV15Baslik } from './baslik';
+import { EkKart, PaylasPaneli, SohbetZemin, TemaSecici, type Ek, type Tema } from './SohbetEkleri';
 import '../../styles/v15/ogren.css';
 import '../../styles/v15/dersler.css';
 import '../../styles/v15/topluluk.css';
+import '../../styles/v15/sohbet-ayar.css';
 
 /**
  * v15 · Topluluk (tasarım sistemi v15 › L01–L06). Yeni sayfa: /topluluk[?kanal=…] (Menü › Ben).
@@ -16,7 +18,9 @@ import '../../styles/v15/topluluk.css';
  * Sunucu: services/topluluk.ts (meds-pg, doğrulanmış kimlik, hız sınırı, şikâyet → 3'te gizlenir). Canlı: SSE `topluluk`.
  * Görünen ad cihazda tutulur; e-posta ya da uid hiçbir yerde gösterilmez.
  */
-interface Mesaj { id: number; kanal: string; ad: string; metin: string; yanitId: number | null; at: number; yazar: string; benim: boolean; sikayet?: number }
+interface Mesaj { id: number; kanal: string; ad: string; metin: string; yanitId: number | null; at: number; yazar: string; benim: boolean; sikayet?: number; ek?: Ek }
+interface Diger { ad: string; okunduId: number; okunduAt: number | null; son: number | null; cevrimici: boolean }
+interface OdaBilgi { ad: string; tur: string; kod?: string; uyeler: string[]; digerler: Diger[]; ayar: { tema: Tema | null; sessiz: boolean; durumGizli: boolean } }
 interface KanalOzet { kanal: string; n: number; son: number }
 const AD_KEY = 'medsoru_topluluk_ad';
 const kanalAdi = (k: string) => (k === 'genel' ? 'Genel' : k.startsWith('kurul-') ? `Kurul ${k.slice(6)}` : `Ders yorumları · ${k.slice(5).replace(/^y\d+-/, '').replace(/^k\d+-\d+-/, '').replace(/-/g, ' ')}`);
@@ -28,7 +32,7 @@ const saat = (t: number) => {
 /** yazar özetinden sabit ton (renk kimlik değil, ayırt etmek için; ad her zaman yazılı) */
 const ton = (s: string) => parseInt(s.slice(0, 4), 16) % 360;
 
-interface SohbetOzet { id: number; tur: 'dm' | 'grup'; ad: string; kod?: string; uyeN: number; okunmamis: number; son: { ad: string; metin: string; at: number } | null; at: number }
+interface SohbetOzet { id: number; tur: 'dm' | 'grup'; ad: string; kod?: string; uyeN: number; okunmamis: number; sessiz?: boolean; cevrimici?: boolean; son: { ad: string; metin: string; at: number } | null; at: number }
 interface Yorum extends Mesaj { begeni: number; begendim: boolean; yanitlar?: Yorum[] }
 const benimAd = () => { try { const a = localStorage.getItem(AD_KEY); if (a) return a; } catch { /* yok */ } return (auth.currentUser?.displayName || getRememberedStudentInfo().name || 'Öğrenci').split(' ')[0]; };
 const basHarf = (s: string) => s.split(/\s+/).filter(Boolean).slice(0, 2).map((w) => w[0]).join('').toLocaleUpperCase('tr-TR') || '?';
@@ -36,6 +40,15 @@ const kisaZaman = (t: number) => {
   const dk = Math.round((Date.now() - t) / 60_000);
   if (dk < 1) return 'şimdi'; if (dk < 60) return `${dk} dk`; if (dk < 24 * 60) return `${Math.round(dk / 60)} sa`;
   if (dk < 48 * 60) return 'dün'; return new Date(t).toLocaleDateString('tr-TR', { day: 'numeric', month: 'short' });
+};
+/** "çevrimiçi" / "son görülme bugün 14:32" */
+const sonGorulme = (t: number | null) => {
+  if (!t) return 'Son görülme gizli';
+  const d = new Date(t), b = new Date(), dun = new Date(b.getTime() - 86_400_000);
+  const sa = d.toLocaleTimeString('tr-TR', { hour: '2-digit', minute: '2-digit' });
+  if (d.toDateString() === b.toDateString()) return `Son görülme bugün ${sa}`;
+  if (d.toDateString() === dun.toDateString()) return `Son görülme dün ${sa}`;
+  return `Son görülme ${d.toLocaleDateString('tr-TR', { day: 'numeric', month: 'short' })} ${sa}`;
 };
 const post = <T,>(url: string, body?: any) => safeJsonFetch<T>(url, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body || {}) });
 
@@ -112,7 +125,7 @@ function SohbetListe() {
               <li key={s.id}>
                 <button type="button" className="b15-row tp15-sr" onClick={() => git(`/topluluk?sohbet=${s.id}`)}>
                   <span className="tp15-av" style={{ '--t': (s.id * 47) % 360 } as React.CSSProperties}>{basHarf(s.ad)}</span>
-                  <span className="b15-row-t"><b>{s.ad}</b><span>{s.son ? `${s.son.ad}: ${s.son.metin}` : s.tur === 'grup' ? `${s.uyeN} üye · henüz mesaj yok` : 'Henüz mesaj yok'}</span></span>
+                  <span className="b15-row-t"><b>{s.ad}{s.sessiz && <BellOff aria-label="Sessiz" style={{ width: 13, height: 13, marginLeft: 6, verticalAlign: '-2px', opacity: .55 }} />}</b><span>{s.cevrimici && <><span className="sa-nokta is-on" style={{ display: 'inline-block', marginRight: 5 }} />Çevrimiçi · </>}{s.son ? `${s.son.ad}: ${s.son.metin}` : s.tur === 'grup' ? `${s.uyeN} üye · henüz mesaj yok` : 'Henüz mesaj yok'}</span></span>
                   <span className="tp15-sag"><time>{kisaZaman(s.at)}</time>{s.okunmamis > 0 && <span className="tp15-rozet">{s.okunmamis > 99 ? '99+' : s.okunmamis}</span>}</span>
                 </button>
               </li>
@@ -270,7 +283,9 @@ function Sohbet({ kanal, oda }: { kanal: string; oda?: number }) {
   const [gonderiyor, setGonderiyor] = useState(false);
   const liste = useRef<HTMLDivElement>(null);
   const altta = useRef(true);
-  const [odaBilgi, setOdaBilgi] = useState<{ ad: string; tur: string; kod?: string; uyeler: string[] } | null>(null);
+  const [odaBilgi, setOdaBilgi] = useState<OdaBilgi | null>(null);
+  const [panel, setPanel] = useState<'' | 'paylas' | 'tema' | 'ayar'>('');
+  const [ek, setEk] = useState<Ek | null>(null);
   useV15Baslik(oda ? { baslik: odaBilgi?.ad || 'Sohbet', alt: odaBilgi?.tur === 'grup' ? `${odaBilgi.uyeler.length} üye` : 'Birebir sohbet', geri: '/topluluk?gorunum=sohbetler' }
     : { baslik: kanalAdi(kanal), alt: 'Topluluk', geri: '/topluluk' });
 
@@ -286,6 +301,14 @@ function Sohbet({ kanal, oda }: { kanal: string; oda?: number }) {
     else { setMesajlar((m) => m || []); setHata((r.data as any)?.error || 'Mesajlar alınamadı.'); }
   }, [kanal, oda]);
   useEffect(() => { setMesajlar(null); void yukle(); }, [yukle]);
+  // Çevrimiçi nabzı + durum yenileme (yalnız özel sohbet odasında, sekme görünürken)
+  useEffect(() => {
+    if (!oda) return;
+    const f = () => { if (document.visibilityState === 'visible') { void post('/api/topluluk/sohbet/nabiz'); void yukle(); } };
+    const t = setInterval(f, 60_000);
+    document.addEventListener('visibilitychange', f);
+    return () => { clearInterval(t); document.removeEventListener('visibilitychange', f); };
+  }, [oda, yukle]);
   useLiveEvent(oda ? 'topluluk_sohbet' : 'topluluk', (p) => { if (!p || p.resync || (oda ? p.oda === oda : p.kanal === kanal)) void yukle(); }, { debounceMs: 200 });
   const eskiler = async () => {
     const ilk = mesajlar?.[0]?.id; if (!ilk) return;
@@ -296,14 +319,14 @@ function Sohbet({ kanal, oda }: { kanal: string; oda?: number }) {
   const kaydir = () => { const el = liste.current; if (el) altta.current = el.scrollHeight - el.scrollTop - el.clientHeight < 80; };
 
   const gonder = async () => {
-    const t = metin.trim(); if (!t || gonderiyor) return;
+    const t = metin.trim(); if ((!t && !ek) || gonderiyor) return;
     const gorunen = ad.trim() || (auth.currentUser?.displayName || getRememberedStudentInfo().name || 'Öğrenci').split(' ')[0];
     setGonderiyor(true); setHata('');
-    const r = oda ? await post<{ mesaj: Mesaj }>(`/api/topluluk/sohbet/${oda}/mesaj`, { metin: t, yanitId: yanit?.id })
+    const r = oda ? await post<{ mesaj: Mesaj }>(`/api/topluluk/sohbet/${oda}/mesaj`, { metin: t, yanitId: yanit?.id, ek: ek || undefined })
       : await post<{ mesaj: Mesaj }>('/api/topluluk/mesaj', { kanal, metin: t, ad: gorunen, yanitId: yanit?.id });
     setGonderiyor(false);
     if (r.ok && r.data?.mesaj) {
-      altta.current = true; setMetin(''); setYanit(null);
+      altta.current = true; setMetin(''); setYanit(null); setEk(null); setPanel('');
       try { if (ad.trim()) localStorage.setItem(AD_KEY, ad.trim()); } catch { /* yok */ }
       setMesajlar((m) => (m?.some((x) => x.id === r.data!.mesaj.id) ? m : [...(m || []), r.data!.mesaj]));
     } else setHata((r.data as any)?.error || r.error || 'Gönderilemedi.');
@@ -332,17 +355,58 @@ function Sohbet({ kanal, oda }: { kanal: string; oda?: number }) {
     const r = await post(`/api/topluluk/sohbet/${oda}/ayril`);
     if (r.ok) git('/topluluk?gorunum=sohbetler'); else setHata((r.data as any)?.error || 'Ayrılınamadı.');
   };
+  const ayarKaydet = async (yama: { sessiz?: boolean; tema?: Tema | null }) => {
+    if (!oda) return;
+    const r = await post(`/api/topluluk/sohbet/${oda}/ayar`, yama);
+    if (!r.ok) { setHata((r.data as any)?.error || r.error || 'Ayar kaydedilemedi.'); return; }
+    setOdaBilgi((o) => o && { ...o, ayar: { ...o.ayar, ...yama } });
+  };
+  const durumGizle = async () => {
+    const yeni = !odaBilgi?.ayar.durumGizli;
+    const r = await post('/api/topluluk/sohbet/ayar', { durumGizli: yeni });
+    if (r.ok) { setOdaBilgi((o) => o && { ...o, ayar: { ...o.ayar, durumGizli: yeni } }); void yukle(); }
+    else setHata((r.data as any)?.error || 'Ayar kaydedilemedi.');
+  };
+  const tema = odaBilgi?.ayar.tema || null;
+  const dm = odaBilgi?.tur === 'dm';
+  const diger = dm ? odaBilgi?.digerler[0] : undefined;
+  const cevrimiciN = odaBilgi?.digerler.filter((d) => d.cevrimici).length || 0;
+  const sonBenimId = useMemo(() => { const l = (mesajlar || []).filter((m) => m.benim); return l.length ? l[l.length - 1].id : 0; }, [mesajlar]);
   const byId = useMemo(() => new Map((mesajlar || []).map((x) => [x.id, x])), [mesajlar]);
 
   return (
     <div className="tp15 tp15-s">
       {oda && odaBilgi && (
-        <div className="tp15-odaust">
-          <span className="v15-cap">{odaBilgi.uyeler.join(', ')}</span>
-          {odaBilgi.kod && <button type="button" className="tp15-ib" onClick={davet} aria-label="Davet bağlantısını kopyala"><Link2 aria-hidden /></button>}
-          <button type="button" className="tp15-ib" onClick={ayril} aria-label="Sohbetten ayrıl"><LogOut aria-hidden /></button>
-        </div>
+        <>
+          <div className="tp15-odaust">
+            <span className="sa-durum">
+              {dm ? <><span className={`sa-nokta${diger?.cevrimici ? ' is-on' : ''}`} />{diger?.cevrimici ? 'Çevrimiçi' : sonGorulme(diger?.son ?? null)}</>
+                : <><span className={`sa-nokta${cevrimiciN ? ' is-on' : ''}`} />{cevrimiciN ? `${cevrimiciN} kişi çevrimiçi · ` : ''}{odaBilgi.uyeler.join(', ')}</>}
+            </span>
+            <button type="button" className="tp15-ib" onClick={() => setPanel(panel === 'tema' ? '' : 'tema')} aria-label="Arka plan teması" aria-expanded={panel === 'tema'}><Palette aria-hidden /></button>
+            <button type="button" className="tp15-ib" onClick={() => setPanel(panel === 'ayar' ? '' : 'ayar')} aria-label="Sohbet ayarları" aria-expanded={panel === 'ayar'}><Settings2 aria-hidden /></button>
+            {odaBilgi.kod && <button type="button" className="tp15-ib" onClick={davet} aria-label="Davet bağlantısını kopyala"><Link2 aria-hidden /></button>}
+            <button type="button" className="tp15-ib" onClick={ayril} aria-label="Sohbetten ayrıl"><LogOut aria-hidden /></button>
+          </div>
+          {panel === 'tema' && <TemaSecici aktif={tema} kapat={() => setPanel('')} sec={(t) => { void ayarKaydet({ tema: t }); }} />}
+          {panel === 'ayar' && (
+            <div className="sa-paylas v15-card">
+              <div className="sa-baslik"><b>Sohbet ayarları</b><button type="button" className="tp15-ib" onClick={() => setPanel('')} aria-label="Kapat"><X aria-hidden /></button></div>
+              <div className="sa-ayar">
+                <button type="button" onClick={() => void ayarKaydet({ sessiz: !odaBilgi.ayar.sessiz })}>
+                  {odaBilgi.ayar.sessiz ? <BellOff aria-hidden /> : <Bell aria-hidden />}Bildirimler<em className={odaBilgi.ayar.sessiz ? '' : 'is-on'}>{odaBilgi.ayar.sessiz ? 'Sessiz' : 'Açık'}</em>
+                </button>
+                <button type="button" onClick={() => void durumGizle()}>
+                  {odaBilgi.ayar.durumGizli ? <EyeOff aria-hidden /> : <Eye aria-hidden />}Son görülme ve çevrimiçi<em className={odaBilgi.ayar.durumGizli ? '' : 'is-on'}>{odaBilgi.ayar.durumGizli ? 'Gizli' : 'Görünür'}</em>
+                </button>
+              </div>
+              <p className="v15-cap">Son görülmeyi gizlersen başkalarının son görülmesini de göremezsin. Bildirim ayarı yalnız bu sohbet içindir.</p>
+            </div>
+          )}
+        </>
       )}
+      <div className="tp15-zemin" data-tema={tema || undefined}>
+      <SohbetZemin tema={tema} />
       <div ref={liste} className="tp15-liste" onScroll={kaydir} aria-live="polite">
         {dahaVar && <button type="button" className="tp15-eski" onClick={eskiler}>Daha eski mesajlar</button>}
         {mesajlar === null ? <span className="v15-skel b15-skel" aria-hidden /> : !mesajlar.length ? (
@@ -356,8 +420,16 @@ function Sohbet({ kanal, oda }: { kanal: string; oda?: number }) {
               {!grup && <header><b>{x.benim ? 'Sen' : x.ad}</b><time>{saat(x.at)}</time>{x.sikayet ? <span className="tp15-sk">{x.sikayet} bildirim</span> : null}</header>}
               <div className="tp15-balon">
                 {x.yanitId && <p className="tp15-alinti">{y ? <><b>{y.ad}:</b> {y.metin.slice(0, 90)}</> : 'Silinmiş mesaja yanıt'}</p>}
-                <p>{x.metin}</p>
+                {x.ek && <EkKart ek={x.ek} ac={git} />}
+                {!(x.ek && x.metin === `Paylaştı: ${x.ek.baslik}`) && <p>{x.metin}</p>}
               </div>
+              {oda && x.benim && x.id === sonBenimId && odaBilgi && (() => {
+                const okuyan = odaBilgi.digerler.filter((d) => d.okunduId >= x.id);
+                if (dm) return okuyan.length
+                  ? <span className="sa-okundu is-ok"><CheckCheck aria-hidden />Okundu {okuyan[0].okunduAt ? saat(okuyan[0].okunduAt) : ''}</span>
+                  : <span className="sa-okundu"><Check aria-hidden />İletildi</span>;
+                return okuyan.length ? <span className="sa-okundu is-ok"><CheckCheck aria-hidden />{okuyan.length} kişi okudu</span> : <span className="sa-okundu"><Check aria-hidden />İletildi</span>;
+              })()}
               <div className="tp15-is">
                 <button type="button" onClick={() => setYanit(x)} aria-label="Yanıtla"><Reply aria-hidden /></button>
                 {!x.benim && girisli && <button type="button" onClick={() => git(`/kisi/${x.yazar}`)} aria-label="Profilini aç, arkadaş ekle"><UserRound aria-hidden /></button>}
@@ -369,16 +441,20 @@ function Sohbet({ kanal, oda }: { kanal: string; oda?: number }) {
           );
         })}
       </div>
+      </div>
       <div className="tp15-yaz v15-card">
         {hata && <p className="tp15-hata" role="status">{hata}</p>}
         {!girisli ? <p className="v15-cap">Yazmak için giriş yapmalısın.</p> : (
           <>
             {yanit && <p className="tp15-yanit"><Reply aria-hidden /><span><b>{yanit.ad}</b> · {yanit.metin.slice(0, 70)}</span><button type="button" onClick={() => setYanit(null)} aria-label="Yanıtı kaldır"><X aria-hidden /></button></p>}
             {!ad && !oda && <input className="tp15-ad" value={ad} onChange={(e) => setAd(e.target.value.slice(0, 24))} placeholder="Görünen adın (isteğe bağlı)" aria-label="Görünen ad" />}
+            {oda && panel === 'paylas' && <PaylasPaneli kapat={() => setPanel('')} sec={(e) => { setEk(e); setPanel(''); }} />}
+            {ek && <div className="tp15-yanit"><Share2 aria-hidden /><span><b>{ek.baslik}</b>{ek.alt ? ` · ${ek.alt.slice(0, 50)}` : ''}</span><button type="button" onClick={() => setEk(null)} aria-label="Paylaşımı kaldır"><X aria-hidden /></button></div>}
             <div className="tp15-giris">
-              <textarea value={metin} onChange={(e) => setMetin(e.target.value.slice(0, 800))} placeholder="Mesaj yaz…" rows={1} aria-label="Mesaj"
+              {oda && <button type="button" className="tp15-ib" onClick={() => setPanel(panel === 'paylas' ? '' : 'paylas')} aria-label="Paylaş: sayfa, soru, favori, terim" aria-expanded={panel === 'paylas'}><Share2 aria-hidden /></button>}
+              <textarea value={metin} onChange={(e) => setMetin(e.target.value.slice(0, 800))} placeholder={ek ? 'İstersen not ekle…' : 'Mesaj yaz…'} rows={1} aria-label="Mesaj"
                 onKeyDown={(e) => { if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); void gonder(); } }} />
-              <button type="button" className="tp15-gonder" onClick={gonder} disabled={!metin.trim() || gonderiyor} aria-label="Gönder"><Send aria-hidden /></button>
+              <button type="button" className="tp15-gonder" onClick={gonder} disabled={(!metin.trim() && !ek) || gonderiyor} aria-label="Gönder"><Send aria-hidden /></button>
             </div>
           </>
         )}

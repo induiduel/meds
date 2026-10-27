@@ -54,3 +54,10 @@
 
 ## 2026-10-27 — Sınama dersi Öğren kitaplığında ayrıldı
 - `LearnLibraryV12`: `sinama` işaretli desteler "Sınama — test verisi" bölümüne taşındı (en sonda). `ornek_sorular/k2/index.json` k2-07 girdisine `sinama:true`. Dağıtılmadı (onem artmadı); `vite build` yapıldı.
+
+## 2026-10-28 · Özel sohbet ayarları (paylaşım, bildirim, durum, ATP temaları) — yerel; commit/dağıtım yok
+- **İstek:** özel sohbete paylaşım (sayfa, soru, favori, çıkmış soru, terim), anlık bildirim, son görülme/çevrimiçi/okunma saati ve ATP ile açılan 3 arka plan.
+- **Sunucu** (`toplulukSohbet.ts`, `deploy/pg/sql/topluluk_sohbet.sql`): `topluluk_mesajlar.ek` (jsonb; `ekTemizle` yalnız uygulama içi `/…` adres kabul eder), `sohbet_uyeleri.okundu_zaman/sessiz/tema`, `sohbet_durum` (son görülme, `gizli` karşılıklı). Yeni uçlar: `POST /sohbet/nabiz`, `/sohbet/ayar`, `/sohbet/:id/ayar`. Mesajda diğer üyelere `notifyStudent` (dakikada tek, sessiz mod hariç). `okundu` yalnız işaret ilerlerse yayın yapar (yayın döngüsü olmasın).
+- **Tema kilidi:** `tanim.json` › kilitler `sohbet_tema_kalp/tibbi/papatya` (tur `icerik`, 150/200/150 mol); sunucu tema kaydında `basarimMotor.kilitAcikMi` ister. **Oracle'da `data/basarim/tanim.json` üst katmanı varsa bu üç kilit oraya da eklenmeli**, yoksa tema "kilit yok" sayılıp bedava açılır.
+- **Ön yüz:** `SohbetEkleri.tsx` (paylaşım paneli/kartı, tema seçici, `SohbetZemin` SVG desenleri; renkler paletin `--color-accent` belirteçlerinden), `ToplulukV15.tsx`, `styles/v15/sohbet-ayar.css`.
+- **Açık:** `onem` 509 yapıldı; Oracle’da tanim.json üst katmanı YOK (src sürümü kullanılır); sunucu kodu değiştiği için `systemctl --user restart meds-web` gerekir; girişli tarayıcı sınaması yapılamadı.

@@ -496,7 +496,7 @@ const STUDENT_WRITE_ROUTES: Array<[string, RegExp, StudentWriteKind]> = [
   ['POST', /^\/api\/topluluk\/mesaj$/, 'icerik'],
   ['POST', /^\/api\/topluluk\/mesaj\/\d+\/(sil|sikayet|begen)$/, 'oy'],
   // Topluluk sohbet odaları (kimlik + hız sınırı services/toplulukSohbet.ts'te)
-  ['POST', /^\/api\/topluluk\/sohbet(\/katil|\/\d+\/(mesaj|okundu|ayril))?$/, 'esles'],
+  ['POST', /^\/api\/topluluk\/sohbet(\/katil|\/nabiz|\/ayar|\/\d+\/(mesaj|okundu|ayril|ayar))?$/, 'esles'],
   // Arkadaşlık, gizlilik, davet (kimlik + uid başına hız sınırı services/arkadaslik.ts'te)
   ['POST', /^\/api\/(arkadas\/(istek|kabul|reddet|cikar|sohbet|davet)|kisi\/gizlilik)$/, 'esles'],
   // Not paylaşımı (kimlik + hız sınırı services/notPaylas.ts'te)
@@ -566,7 +566,7 @@ registerTopluluk(app, {
   isAdmin: (req) => isRequestAdminVerified(req, 'nofrostlife@gmail.com'),
   broadcast: (event, data) => broadcastRealtimeEvent(event, data),
 });
-registerToplulukSohbet(app, { rootDir: __dirname, isPgOnline: () => pgOnline, broadcast: (event, data) => broadcastRealtimeEvent(event, data) });
+registerToplulukSohbet(app, { rootDir: __dirname, isPgOnline: () => pgOnline, broadcast: (event, data) => broadcastRealtimeEvent(event, data), notify: (target, n) => notifyStudent(target, n), kilitAcik: (uid, kilit) => basarimMotor.kilitAcikMi(uid, kilit) });
 // Arkadaşlık + açık profil + kapsamlı sıralama (services/arkadaslik.ts; notifyStudent aşağıda tanımlı, istek anında çağrılır)
 registerArkadaslik(app, {
   rootDir: __dirname, isPgOnline: () => pgOnline, motor: basarimMotor, userEventHash,

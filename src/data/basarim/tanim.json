@@ -1681,6 +1681,30 @@
       "cag": "Çok hücreli çağ",
       "aciklama": "Evrimin son basamağı: öğrenen, çalışan hekim hücresi (15.000 DNA).",
       "onceki": "h27"
+    },
+    {
+      "id": "sohbet_tema_kalp",
+      "tur": "icerik",
+      "ad": "Sohbet teması: Kalpli",
+      "fiyat": 150,
+      "etkin": true,
+      "aciklama": "Özel sohbet arka planı; kalpler seçtiğin renk paletinin rengine uyar."
+    },
+    {
+      "id": "sohbet_tema_tibbi",
+      "tur": "icerik",
+      "ad": "Sohbet teması: Tıbbi",
+      "fiyat": 200,
+      "etkin": true,
+      "aciklama": "Özel sohbet arka planı; artı, kapsül ve EKG çizgisi desenleri."
+    },
+    {
+      "id": "sohbet_tema_papatya",
+      "tur": "icerik",
+      "ad": "Sohbet teması: Papatyalı",
+      "fiyat": 150,
+      "etkin": true,
+      "aciklama": "Özel sohbet arka planı; beyaz papatyalar ve yapraklar."
     }
   ],
   "kidemler": [

@@ -26,3 +26,14 @@ create table if not exists yorum_begeni (
   primary key (mesaj_id, uid)
 );
 create index if not exists topluluk_yanit on topluluk_mesajlar (yanit_id) where yanit_id is not null;
+
+-- Özel sohbet ayarları (2026-10-28): paylaşım eki, okunma zamanı, sessiz mod, oda teması, son görülme
+alter table topluluk_mesajlar add column if not exists ek jsonb;
+alter table sohbet_uyeleri add column if not exists okundu_zaman timestamptz;
+alter table sohbet_uyeleri add column if not exists sessiz boolean not null default false;
+alter table sohbet_uyeleri add column if not exists tema text;
+create table if not exists sohbet_durum (
+  uid text primary key,
+  son timestamptz not null default now(),
+  gizli boolean not null default false
+);
