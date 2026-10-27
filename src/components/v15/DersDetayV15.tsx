@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
-import { Check, ChevronRight, CircleHelp, Download, Headphones, Layers, Play, RotateCcw } from 'lucide-react';
+import { Check, ChevronRight, CircleHelp, Download, Headphones, Layers, Play, RotateCcw, MessageCircle } from 'lucide-react';
 import { linkClick, navigateTo, parseLocation, pathFor } from '../../router';
 import { useAppearance } from '../../utils/appearance';
 import { cdDetayGetir, cdKayitliKonum, cdSesUrl, cdTercihVaryant, fmtMb, type CdDetay } from '../canliDers/canliDersStore';
@@ -185,6 +185,14 @@ export default function DersDetayV15() {
                   </a>
                 </li>
               ))}
+              {/* Topluluk: bu dersin yorum kanalı (V2 ayrı ders sayılmaz) */}
+              <li>
+                <a className="dd15-row" href={`/topluluk?kanal=ders:${key.replace(/-v\d+$/, '')}`} onClick={linkClick(() => navigateTo(`/topluluk?kanal=ders:${key.replace(/-v\d+$/, '')}`))}>
+                  <span className="v15-tile is-n"><MessageCircle aria-hidden /></span>
+                  <span className="dd15-row-t"><b>Yorumlar</b><span>Bu ders hakkında arkadaşlarınla yazış</span></span>
+                  <ChevronRight className="v15-chev" aria-hidden />
+                </a>
+              </li>
             </ul>
           </section>
         </div>

@@ -1,0 +1,42 @@
+/* v15 · Topluluk (ToplulukV15) — kanal listesi + sohbet; renkler palet tokenından */
+.tp15 { container-type: inline-size; display: flex; flex-direction: column; gap: 10px; max-width: 760px; width: 100%; margin-inline: auto; }
+.tp15-h { margin: 6px 2px 0; }
+.tp15-kural { margin: 6px 2px; line-height: 1.45; }
+.tp15-uyari { margin: 0; padding: 10px 14px; background: var(--color-warn-soft); color: var(--color-ink); font-size: .88rem; }
+/* sohbet: sayfa sabit, liste kendi içinde kayar */
+.tp15-s { height: calc(100dvh / var(--ch-zoom, 1) - var(--sh-top-h, 56px) - var(--sh-tabs-h, 0px) - env(safe-area-inset-bottom) - 40px); min-height: 360px; gap: 8px; }
+.tp15-liste { flex: 1; min-height: 0; overflow-y: auto; overscroll-behavior: contain; display: flex; flex-direction: column; gap: 2px; padding: 4px 2px 8px; }
+.tp15-bos { margin: auto; color: var(--color-ink-3); text-align: center; max-width: 34ch; }
+.tp15-eski { align-self: center; border: 1px solid var(--color-line); background: var(--color-white); color: var(--color-accent); border-radius: 999px; padding: 6px 14px; font: inherit; font-size: .82rem; cursor: pointer; margin-bottom: 6px; }
+.tp15-m { position: relative; display: flex; flex-direction: column; align-items: flex-start; max-width: 86%; margin-top: 10px; }
+.tp15-m.is-grup { margin-top: 2px; }
+.tp15-m.is-ben { align-self: flex-end; align-items: flex-end; }
+.tp15-m header { display: flex; align-items: baseline; gap: 8px; margin: 0 6px 3px; font-size: .78rem; }
+.tp15-m header b { color: oklch(0.5 0.12 var(--t)); }
+.tp15-m.is-ben header b { color: var(--color-accent); }
+.tp15-m time { color: var(--color-ink-3); }
+.tp15-sk { color: var(--color-bad); font-weight: 600; }
+.tp15-balon { padding: 8px 12px; border-radius: 14px; background: var(--color-white); border: 1px solid var(--color-line-soft, var(--color-line)); color: var(--color-ink); }
+.tp15-m.is-ben .tp15-balon { background: var(--color-accent-soft); border-color: transparent; }
+.tp15-balon p { margin: 0; white-space: pre-wrap; overflow-wrap: anywhere; line-height: 1.42; font-size: .95rem; }
+.tp15-alinti { margin-bottom: 4px !important; padding-left: 8px; border-left: 3px solid var(--color-line); color: var(--color-ink-2); font-size: .82rem !important; }
+.tp15-is { display: flex; gap: 2px; opacity: 0; transition: opacity .12s; margin: 2px 4px 0; }
+.tp15-m:hover .tp15-is, .tp15-m:focus-within .tp15-is { opacity: 1; }
+@media (hover: none) { .tp15-is { opacity: .7; } }
+.tp15-is button { border: 0; background: none; color: var(--color-ink-3); width: 28px; height: 28px; display: grid; place-items: center; border-radius: 8px; cursor: pointer; }
+.tp15-is button:hover { background: var(--color-field); color: var(--color-ink); }
+.tp15-is svg { width: 15px; height: 15px; }
+.tp15-yaz { padding: 8px; display: flex; flex-direction: column; gap: 6px; }
+.tp15-hata { margin: 0; font-size: .82rem; color: var(--color-ink-2); padding: 0 4px; }
+.tp15-yanit { margin: 0; display: flex; align-items: center; gap: 8px; padding: 6px 8px; border-radius: 8px; background: var(--color-field); font-size: .82rem; color: var(--color-ink-2); }
+.tp15-yanit > svg { flex: none; width: 15px; height: 15px; }
+.tp15-yanit > span { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.tp15-yanit button { border: 0; background: none; color: var(--color-ink-3); cursor: pointer; display: grid; }
+.tp15-yanit button svg { width: 15px; height: 15px; }
+.tp15-ad { font: inherit; font-size: .88rem; border: 1px solid var(--color-line); border-radius: 8px; padding: 7px 10px; background: var(--color-white); color: var(--color-ink); }
+.tp15-giris { display: flex; align-items: flex-end; gap: 8px; }
+.tp15-giris textarea { flex: 1; min-width: 0; resize: none; font: inherit; font-size: 1rem; line-height: 1.4; max-height: 8.4em; field-sizing: content; border: 1px solid transparent; background: var(--color-field); color: var(--color-ink); border-radius: 12px; padding: 10px 12px; outline: none; }
+.tp15-giris textarea:focus { border-color: var(--color-accent); background: var(--color-white); }
+.tp15-gonder { flex: none; width: 44px; height: 44px; border-radius: 50%; border: 0; background: var(--color-accent); color: var(--color-on-accent); display: grid; place-items: center; cursor: pointer; }
+.tp15-gonder:disabled { opacity: .45; cursor: default; }
+.tp15-gonder svg { width: 18px; height: 18px; }

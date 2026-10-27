@@ -40,6 +40,7 @@ import {
   CalendarDays,
   CalendarClock,
   Gamepad2,
+  MessagesSquare,
   FileDown,
   Grid3x3,
 } from 'lucide-react';
@@ -112,6 +113,7 @@ const I: Record<string, NavItem> = {
   ders_programi: { id: 'ders_programi', label: 'Ders programı', short: 'Program', tile: 'Ders programı', hint: 'Kurulun günlük ve haftalık ders saatleri', icon: CalendarClock, tint: '#30B0C7' },
   sinav_takvimi: { id: 'sinav_takvimi', label: 'Sınav takvimi', short: 'Takvim', tile: 'Sınav takvimi', hint: 'Kurul sınavları, final ve bütünleme; kalan gün', icon: CalendarDays, tint: '#FF9F0A' },
   sinav_plani: { id: 'sinav_plani', label: 'Sınav planı', short: 'Plan', tile: 'Sınav planı', hint: 'En az 60 için kişiye özel, gün gün yol haritası', icon: Target, tint: '#FF9F0A' },
+  topluluk: { id: 'topluluk', label: 'Topluluk', short: 'Topluluk', tile: 'Topluluk', hint: 'Sohbet kanalları ve ders yorumları', icon: MessagesSquare, tint: '#32ADE6' },
   pdf_olustur: { id: 'pdf_olustur', label: 'PDF oluştur', short: 'PDF', tile: 'PDF oluştur', hint: 'Ders metinlerini tek ya da ayrı PDF olarak indir', icon: FileDown, tint: '#FF3B30' },
   notlarim: { id: 'notlarim', label: 'Notlarım', short: 'Notlar', tile: 'Notlarım', hint: 'Yaz, kalemle çiz, fosforluyla işaretle; hesabına kaydedilir', icon: NotebookPen, tint: '#FF9F0A' },
   bitirdiklerim: { id: 'bitirdiklerim', label: 'Bitirdiklerim', short: 'Bitenler', tile: 'Bitirdiklerim', hint: 'Konu konu bitenler, harcanan süre, kalanların tahmini', icon: CircleCheckBig, tint: '#30D158' },
@@ -137,7 +139,7 @@ export const NAV_TREE: NavGroup[] = [
   { label: 'Sınava hazırlan', items: [I.sinav_takvimi, I.sinav_plani, I.son_prova, I.cikmis_cozucu, I.kamp, I.en_onemliler, I.spots] },
   { label: 'Check Up', items: [I.genetik_checkup, I.patoloji_checkup] },
   { label: 'Başvuru', items: [I.oncelikli_dersler, I.glossary, I.diseases, I.health_ministry, I.kazanimlar, I.gecmis_kurullar, I.guncellemeler] },
-  { label: 'Topluluk', items: [I.basarimlar, I.leaderboard, I.matrix] },
+  { label: 'Topluluk', items: [I.topluluk, I.basarimlar, I.leaderboard, I.matrix] },
   { label: 'Kişisel', items: [I.bitirdiklerim, I.cevrimdisi, I.study, I.stats, I.music] },
 ];
 

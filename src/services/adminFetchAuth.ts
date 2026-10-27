@@ -49,8 +49,8 @@ function ogrenciJetonu(input: RequestInfo | URL, init?: RequestInit): boolean {
   const m = String(init?.method || (typeof Request !== 'undefined' && input instanceof Request ? input.method : 'GET')).toUpperCase();
   if (m !== 'GET' && m !== 'HEAD') return true;
   const raw = typeof input === 'string' ? input : input instanceof URL ? input.href : (input as Request).url;
-  // Okuma isteklerinden yalnız jeton gerektirenler: başarım ve ATP kilitli içerik (olası sorular)
-  try { return /^\/api\/(basarim|olasi-sorular)\//.test(new URL(raw, window.location.href).pathname); } catch { return false; }
+  // Okuma isteklerinden yalnız jeton gerektirenler: başarım, ATP kilitli içerik (olası sorular), topluluk (kendi mesajın)
+  try { return /^\/api\/(basarim|olasi-sorular|topluluk)\//.test(new URL(raw, window.location.href).pathname); } catch { return false; }
 }
 
 let installed = false;

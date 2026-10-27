@@ -144,6 +144,7 @@ const GecmisKurullarView = React.lazy(() => wrapLazy(import('./components/olasi/
 const KampView = React.lazy(() => wrapLazy(import('./components/kamp/KampView')));
 const MerkezView = React.lazy(() => wrapLazy(import('./components/merkez/MerkezView')));
 const SoruHaritasiV15 = React.lazy(() => wrapLazy(import('./components/v15/SoruHaritasiV15')));
+const ToplulukV15 = React.lazy(() => wrapLazy(import('./components/v15/ToplulukV15')));
 const PdfSihirbaziV15 = React.lazy(() => wrapLazy(import('./components/v15/PdfSihirbaziV15')));
 const NotlarimV15 = React.lazy(() => wrapLazy(import('./components/v15/NotlarimV15')));
 const OyunlarV15 = React.lazy(() => wrapLazy(import('./components/v15/OyunlarV15')));
@@ -2028,6 +2029,13 @@ export default function App() {
         {activeTab === 'basarimlar' && (
           <Suspense fallback={<ViewFallback />}>
             <BasarimView />
+          </Suspense>
+        )}
+
+        {/* TAB: /topluluk — sohbet kanalları ve ders yorumları (services/topluluk.ts, SSE topluluk) */}
+        {activeTab === 'topluluk' && (
+          <Suspense fallback={<ViewFallback />}>
+            <ToplulukV15 />
           </Suspense>
         )}
 

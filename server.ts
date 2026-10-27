@@ -38,6 +38,7 @@ import { registerCevrimdisiKatalogRoutes } from './src/services/cevrimdisiKatalo
 import { registerWhatsAppRoutes, runScheduledWhatsAppDigests } from './src/services/whatsappService';
 import { quizRealtimeServer } from './src/services/quiz/quizRealtimeServer';
 import { oyunKaynaklari } from './src/services/quiz/oyunSoruKaynagi';
+import { registerTopluluk } from './src/services/topluluk';
 import crypto from 'crypto';
 
 const require = createRequire(import.meta.url);
@@ -486,6 +487,9 @@ const STUDENT_WRITE_ROUTES: Array<[string, RegExp, StudentWriteKind]> = [
   ['POST', /^\/api\/learn\/feedback$/, 'icerik'],
   ['PUT|DELETE', /^\/api\/learn\/feedback\/[^/]+$/, 'icerik'], // yazar kimliği denetlenir
   ['POST', /^\/api\/learn\/feedback\/[^/]+\/vote$/, 'oy'],
+  // Topluluk: mesaj, kendi mesajını silme, şikâyet (kimlik + uid başına hız sınırı services/topluluk.ts'te)
+  ['POST', /^\/api\/topluluk\/mesaj$/, 'icerik'],
+  ['POST', /^\/api\/topluluk\/mesaj\/\d+\/(sil|sikayet)$/, 'oy'],
 ];
 const studentWriteHits = new Map<string, number[]>();
 /** Eşleşen uç sırası (sayaç uç başına ayrı tutulur) ya da -1 */
@@ -542,6 +546,14 @@ app.use('/api', requireWritePassword);
 
 // Kişiler (yönetim): cihaz/kullanım varlığı + öğrenci eylem günlüğü (meds-pg user_devices/user_events → SSE people_changed).
 // Ara katmanı rotalardan ÖNCE kaydedilir (yazma yanıtı bitince eylemi günlüğe yazar).
+// Topluluk (v15): kanal mesajları ve ders yorumları (meds-pg topluluk_mesajlar; src/services/topluluk.ts)
+registerTopluluk(app, {
+  rootDir: __dirname,
+  isPgOnline: () => pgOnline,
+  isAdmin: (req) => isRequestAdminVerified(req, 'nofrostlife@gmail.com'),
+  broadcast: (event, data) => broadcastRealtimeEvent(event, data),
+});
+
 const peopleInsights = registerPeopleInsights(app, {
   rootDir: __dirname,
   dataDir: path.resolve(__dirname, 'data'),
