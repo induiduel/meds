@@ -1,5 +1,5 @@
 import React, { useDeferredValue, useEffect, useMemo, useState } from 'react';
-import { Archive, ArrowUpDown, Check, ChevronDown, ChevronRight, Download, Headphones, Search, X } from 'lucide-react';
+import { Archive, ArrowUpDown, Check, ChevronDown, ChevronRight, Download, Headphones, RotateCcw, Search, X } from 'lucide-react';
 import { cdCevrimdisiKayitlari, CD_CEVRIMDISI_DEGISTI } from '../canliDers/canliDersCevrimdisiKayit';
 import { linkClick, navigateTo, pathFor } from '../../router';
 import { icKonum } from '../../siteHaritasi';
@@ -60,7 +60,7 @@ export default function SesliListeV15() {
             const i = ilerleme(d);
             if (durum === 'yeni' && (i.bitti || i.t != null)) return false;
             if (durum === 'indirilen' && !indirilen[d.key]) return false;
-            if (durum === 'yarim' && !(i.t != null && !i.bitti)) return false;
+            if (durum === 'yarim' && !(i.t != null && (!i.bitti || i.tekrar))) return false;
             if (durum === 'bitti' && !i.bitti) return false;
             return !q || fold(`${d.no} ${d.baslik} ${b.ad} ${d.hoca || ''}`).includes(q);
           }).sort((a, c) => (sira === 'son' ? ilerleme(c).at - ilerleme(a).at : sira === 'kisa' ? (ilerleme(a).sure || 1e9) - (ilerleme(c).sure || 1e9) : 0)),
@@ -127,12 +127,12 @@ export default function SesliListeV15() {
                   return (
                     <li key={d.key}>
                       <a className="b15-row" href={satirYolu(d.key)} onClick={linkClick(() => navigateTo(satirYolu(d.key)))}>
-                        <span className={`v15-tile ${i.bitti ? 'is-ok' : i.t != null ? '' : 'is-n'}`}>{i.bitti ? <Check aria-hidden /> : <Headphones aria-hidden />}</span>
+                        <span className={`v15-tile ${i.tekrar ? 'is-tekrar' : i.bitti ? 'is-ok' : i.t != null ? '' : 'is-n'}`}>{i.tekrar ? <RotateCcw aria-hidden /> : i.bitti ? <Check aria-hidden /> : <Headphones aria-hidden />}</span>
                         <span className="b15-row-t">
                           <b>{dersAdi(d)}{indirilen[d.key] && <Download className="sl15-indi" aria-label="İndirildi" />}</b>
-                          <span>{[hocaYaz(d.hoca), sureDk(i.sure)].filter(Boolean).join(' · ')}</span>
+                          <span>{i.tekrar && <em className="sl15-tekrar">{i.tur > 0 ? `${i.tur + 1}. tekrar` : 'Tekrarda'} · %{i.pct}</em>}{[hocaYaz(d.hoca), sureDk(i.sure)].filter(Boolean).join(' · ')}</span>
                         </span>
-                        <Halka pct={i.pct} etiket={i.bitti ? 'Bitti' : `%${i.pct} dinlendi`} />
+                        <Halka pct={i.pct} etiket={i.tekrar ? `Tekrar: %${i.pct} dinlendi` : i.bitti ? 'Bitti' : `%${i.pct} dinlendi`} />
                       </a>
                     </li>
                   );

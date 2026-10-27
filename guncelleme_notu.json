@@ -1,9 +1,10 @@
 {
  "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
- "onem": 512,
- "baslik": "Veri eşitlemesi düzeltildi",
+ "onem": 513,
+ "baslik": "Sesli derslerde tekrar göstergesi",
  "maddeler": [
-  "Aynı cihazda iki sekme açıkken oluşan gereksiz eşitleme istekleri ve 'çok fazla istek' hataları giderildi"
+  "Bitirdiğin bir sesli derse yeniden başlayınca listede tekrar simgesi ve tekrarın ilerlemesi görünür",
+  "Yarıda bırakılan tekrarlar \"Yarım kalan\" süzgecinde de listelenir"
  ],
  "eklenen": [],
  "degisen": [],

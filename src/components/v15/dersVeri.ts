@@ -38,6 +38,10 @@ export interface Ilerleme {
   t: number | null;
   sure: number;
   at: number;
+  /** bitmiş derse yeniden başlandı (bitişten sonra kaldığın yer kaydı var) */
+  tekrar: boolean;
+  /** tamamlanan tekrar turu sayısı */
+  tur: number;
 }
 
 /** Ders başına ilerleme: "bitti" işareti %100, yoksa kayıtlı konum / ses süresi */
@@ -45,12 +49,17 @@ export function useIlerleme() {
   const takip = useTakip();
   const konum = useMemo(() => new Map(cdKonumListesi().map((k) => [k.key, k])), []);
   return (d: CdListeDers): Ilerleme => {
-    const bitti = bittiMi(takip.k[`sesli:${sesliKonuId(d.key)}`]);
+    const kayit = takip.k[`sesli:${sesliKonuId(d.key)}`];
+    const bitti = bittiMi(kayit);
     const k = konum.get(d.key);
     const sure = d.varsayilan?.sureSn || 0;
     const t = k ? k.t : null;
-    const pct = bitti ? 100 : t != null && sure > 0 ? Math.min(99, Math.round((t / sure) * 100)) : 0;
-    return { pct, bitti, t, sure, at: k?.at || 0 };
+    const bittiAt = kayit?.bittiAt ? Date.parse(kayit.bittiAt) || 0 : 0;
+    // bitişte konum silinir; bitmiş derste konum varsa (bitişten sonra kaydedildiyse) tekrar sürüyor
+    const tekrar = bitti && k != null && k.at > bittiAt;
+    const kismi = t != null && sure > 0 ? Math.min(99, Math.round((t / sure) * 100)) : 0;
+    const pct = bitti && !tekrar ? 100 : kismi;
+    return { pct, bitti, t, sure, at: k?.at || 0, tekrar, tur: kayit?.tur || 0 };
   };
 }
 
