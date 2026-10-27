@@ -76,3 +76,4 @@ dört kategori kartını görür. Yönetici adresle açabilir. Geri açmak kulla
 - 2026-10-27: `/sorular/oyunlar` (iç `/oyunlar`, `?oda=KOD` davet) — Oyunlar.
 
 - 2026-10-27 (v15 menü): bütün sayfa erişimi tek kaynaktan — `components/v15/navV15.ts::menuGruplari` (NAV_TREE grupları + Kişisel listesi). Telefon alt çubuğu Menü ve tablet rayı Menü `TumSayfalarV15` ızgarasını (arama + kompakt araçlar) açar; masaüstü kenar çubuğu aynı grupları açılır-kapanır listeler. Yeni sayfa NAV_TREE'ye eklenince üç yerde birden görünür; ayrı menü listesi yazılmaz. Tam ekran/kronometre/kuyruk sayfa değil araçtır: menünün üst sırasında ve kenar çubuğu altındaki simge sırasında durur (üst bardan kaldırıldı).
+- 2026-10-27: `/dersler/zihin-haritasi?ders=<key>` (iç `/zihin-haritasi`) — Zihin haritası.

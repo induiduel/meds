@@ -61,7 +61,7 @@ Yeni bileşen önce buraya eklenir; sayfa CSS'i yalnız yerleşim yazar.
 | Yüzen kronometre + çalışma kapsülü | T01–T15, U01–U12 | Sistem süresinden ayrı tutulur |
 | Ders programı (liste/hafta/gün/ay, içe aktar) | AA01–AA07 | ✅ gün/hafta/liste kuruldu (ay ve içe aktarma yok) |
 | İstatistik ve grafikler (14 grafik) | J01–J02, X01–X10 | |
-| Zihin haritası biçimleri, şemalar | J03–J06, W05–W10, V05–V08 | |
+| Zihin haritası biçimleri, şemalar | J03–J06, W05–W10, V05–V08 | ✅ /dersler/zihin-haritasi: sesli ders bölümleri + slayt terim katmanı + vurgu terimleri, çıkmış rozeti; geniş ekranda dairesel, dar ekranda ağaç |
 | Not / kalem / renklendirme, paylaşılan notlar | K01–K08 | ✅ Notlarım (yaz/kalem/fosforlu/silgi, renk etiketi, hesaba eşitleme); paylaşılan not (ortak) yok, paylaş = metni gönder |
 | Topluluk: sohbet, yorumlar | L01–L06 | ✅ /topluluk: Genel + Kurul 1–6 kanalları, ders yorumları (ders ayrıntısı › Yorumlar), yanıt, sil, şikâyet |
 | PDF oluştur sihirbazı + geçmiş | Y07–Y13 | ✅ /pdf-olustur (sesli · etkileşimli · arşiv → kurul → ortak TopluPdf penceresi), geçmiş cihazda |
@@ -152,3 +152,4 @@ kullanıcı onayı. Dağıtım yalnız `deploy/oracle/dagit.sh` (onem +1), kulla
 - **PDF oluştur** `PdfSihirbaziV15.tsx` + `styles/v15/pdfsihirbaz.css`, rota `pdf_olustur` (`/pdf-olustur`), Menü › Araçlar (eski "PDF" düğmesi "Soru kitapçığı" oldu). TopluPdf'e `dugmeYazi`/`onBitti`, pencere body'ye portal.
 - **Topluluk** `ToplulukV15.tsx` + `styles/v15/topluluk.css`, rota `topluluk` (`/topluluk?kanal=genel|kurul-N|ders:<key>`). Sunucu `services/topluluk.ts` + `deploy/pg/sql/topluluk.sql` (açılışta uygulanır); yazma doğrulanmış Firebase uid ile, STUDENT_WRITE_ROUTES'ta; GET'ler jeton taşır (adminFetchAuth ogrenciJetonu). Dışarı uid/e-posta çıkmaz.
 - **Hücrem** `HucremV15.tsx` + `styles/v15/hucrem.css`, rota `hucrem`. Basamaklar `src/data/basarim/tanim.json` (fiyat 50+15·i, toplam 7.070 mol); motor `satinAl` önceki basamağı ister. Mağaza ekranı hucre türünü listelemez.
+- **Zihin haritası** `ZihinHaritasiV15.tsx` + `styles/v15/zihin.css`, rota `zihin_haritasi` (`/zihin-haritasi?ders=<key>` ↔ `/dersler/zihin-haritasi`). Ders ayrıntısında "Zihin haritası" satırı.

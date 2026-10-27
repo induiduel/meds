@@ -87,6 +87,7 @@ export type AppRoute =
   | 'pdf_olustur'
   | 'topluluk'
   | 'hucrem'
+  | 'zihin_haritasi'
   | 'gecmis_kurullar'
   | 'kamp'
   | 'guncellemeler'
@@ -151,6 +152,7 @@ export const ROUTE_PATHS: Record<AppRoute, string> = {
   pdf_olustur: '/pdf-olustur',
   topluluk: '/topluluk',
   hucrem: '/hucrem',
+  zihin_haritasi: '/zihin-haritasi',
   gecmis_kurullar: '/gecmis-kurullar',
   kamp: '/kamp',
   guncellemeler: '/guncellemeler',
@@ -218,6 +220,7 @@ export const ROUTE_TITLES: Record<AppRoute, string> = {
   pdf_olustur: 'PDF oluştur',
   topluluk: 'Topluluk',
   hucrem: 'Hücrem',
+  zihin_haritasi: 'Zihin haritası',
   gecmis_kurullar: 'Geçmiş kurullar',
   kamp: 'Kurul kampı',
   guncellemeler: 'Güncelleme günlüğü',
@@ -364,6 +367,7 @@ const ALIASES: Record<string, AppRoute> = {
   'pdf-olustur': 'pdf_olustur',
   topluluk: 'topluluk',
   hucrem: 'hucrem',
+  'zihin-haritasi': 'zihin_haritasi',
   'hücrem': 'hucrem',
   'notlarım': 'notlarim',
   olasi: 'olasi_sorular',

@@ -144,6 +144,7 @@ const GecmisKurullarView = React.lazy(() => wrapLazy(import('./components/olasi/
 const KampView = React.lazy(() => wrapLazy(import('./components/kamp/KampView')));
 const MerkezView = React.lazy(() => wrapLazy(import('./components/merkez/MerkezView')));
 const SoruHaritasiV15 = React.lazy(() => wrapLazy(import('./components/v15/SoruHaritasiV15')));
+const ZihinHaritasiV15 = React.lazy(() => wrapLazy(import('./components/v15/ZihinHaritasiV15')));
 const HucremV15 = React.lazy(() => wrapLazy(import('./components/v15/HucremV15')));
 const ToplulukV15 = React.lazy(() => wrapLazy(import('./components/v15/ToplulukV15')));
 const PdfSihirbaziV15 = React.lazy(() => wrapLazy(import('./components/v15/PdfSihirbaziV15')));
@@ -2030,6 +2031,13 @@ export default function App() {
         {activeTab === 'basarimlar' && (
           <Suspense fallback={<ViewFallback />}>
             <BasarimView />
+          </Suspense>
+        )}
+
+        {/* TAB: /zihin-haritasi (görünen /dersler/zihin-haritasi) — ders bölümleri + anahtar terimler */}
+        {activeTab === 'zihin_haritasi' && (
+          <Suspense fallback={<ViewFallback />}>
+            <ZihinHaritasiV15 />
           </Suspense>
         )}
 

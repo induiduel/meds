@@ -148,6 +148,8 @@ export function disYol(adres: string): string {
       return birlestir(`/dersler/ozetler${s[1] ? `/${enc(s[1])}` : ''}`, sp, hash);
     case 'program':
       return birlestir('/dersler/program', sp, hash);
+    case 'zihin-haritasi':
+      return birlestir('/dersler/zihin-haritasi', sp, hash);
     case 'kartlar':
       return birlestir(`/dersler/kartlar${s[1] ? `/${enc(s[1])}` : ''}`, sp, hash);
     case 'ders':
@@ -297,6 +299,7 @@ export function icYol(adres: string): string {
     if (arac === 'interaktif') return birlestir(`/ogren${s[2] && !kurulSeg(s[2]) ? `/${enc(s[2])}` : s[3] ? `/${enc(s[3])}` : ''}`, sp, hash);
     if (arac === 'ozetler') return birlestir(`/ozetler${s[2] ? `/${enc(s[2])}` : ''}`, sp, hash);
     if (arac === 'program') return birlestir('/program', sp, hash);
+    if (arac === 'zihin-haritasi') return birlestir('/zihin-haritasi', sp, hash);
     if (arac === 'kartlar') return birlestir(`/kartlar${s[2] ? `/${enc(s[2])}` : ''}`, sp, hash);
     if (arac === 'kmb') {
       if (s[2]) koy('beceri', s[2]);

@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
-import { Check, ChevronRight, CircleHelp, Download, Headphones, Layers, Play, RotateCcw, MessageCircle } from 'lucide-react';
+import { Check, ChevronRight, CircleHelp, Download, Headphones, Layers, Play, RotateCcw, MessageCircle, Network } from 'lucide-react';
 import { linkClick, navigateTo, parseLocation, pathFor } from '../../router';
 import { useAppearance } from '../../utils/appearance';
 import { cdDetayGetir, cdKayitliKonum, cdSesUrl, cdTercihVaryant, fmtMb, type CdDetay } from '../canliDers/canliDersStore';
@@ -135,6 +135,7 @@ export default function DersDetayV15() {
       s: `${cikmis.length} soru${yillar.length ? ` · ${yillar[0]}${yillar.length > 1 ? `–${yillar[yillar.length - 1]}` : ''}` : ''} · derste geçtiği yerde işaretli`,
       url: `${dinle}?p=${cikmis[0].p}`,
     });
+  if (bolumler.length > 1) icerik.push({ id: 'harita', tone: 'is-n', icon: Network, t: 'Zihin haritası', s: `${bolumler.length} bölüm ve anahtar terimler tek bakışta`, url: `/dersler/zihin-haritasi?ders=${encodeURIComponent(key)}` });
 
   const durum = bitti ? 'Bu dersi bitirdin' : t != null ? `Kaldığın yer: ${saatYaz(t)}` : 'Henüz başlamadın';
   const durumAlt =
