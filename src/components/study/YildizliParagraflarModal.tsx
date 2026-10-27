@@ -19,6 +19,8 @@ interface PanelProps {
   onClose?: () => void;
   onGecis?: (item: YildizliParagraf) => boolean;
   inline?: boolean;
+  /** Sesli ders içinden açılınca yalnız o dersin paragrafları listelenir (kullanıcı "Tüm dersler"e geçebilir). */
+  dersKey?: string;
 }
 
 interface ParagrafGrubu {
@@ -51,8 +53,17 @@ function ogeSiraDegeri(p: YildizliParagraf): number {
   return p.tarih;
 }
 
-export const YildizliParagraflarPanel: React.FC<PanelProps> = ({ onClose, onGecis, inline = false }) => {
-  const tumParagraflar = useYildizliParagraflar();
+export const YildizliParagraflarPanel: React.FC<PanelProps> = ({ onClose, onGecis, inline = false, dersKey }) => {
+  const hepsi = useYildizliParagraflar();
+  const [yalnizDers, setYalnizDers] = useState(!!dersKey);
+  const dersSayisi = useMemo(
+    () => (dersKey ? hepsi.filter((p) => p.meta?.dersKey === dersKey).length : 0),
+    [hepsi, dersKey]
+  );
+  const tumParagraflar = useMemo(
+    () => (dersKey && yalnizDers ? hepsi.filter((p) => p.meta?.dersKey === dersKey) : hepsi),
+    [hepsi, dersKey, yalnizDers]
+  );
   const [arama, setArama] = useState('');
   const [kaynakFiltre, setKaynakFiltre] = useState<ParagrafKaynak | 'hepsi'>('hepsi');
 
@@ -185,6 +196,17 @@ export const YildizliParagraflarPanel: React.FC<PanelProps> = ({ onClose, onGeci
           </button>
         )}
       </header>
+
+      {dersKey && (
+        <div className="yp-filtreler" role="group" aria-label="Kapsam" style={{ padding: '10px 20px 0' }}>
+          <button type="button" className={`yp-filtre-btn${yalnizDers ? ' is-aktif' : ''}`} onClick={() => setYalnizDers(true)}>
+            Bu ders <span>{dersSayisi}</span>
+          </button>
+          <button type="button" className={`yp-filtre-btn${!yalnizDers ? ' is-aktif' : ''}`} onClick={() => setYalnizDers(false)}>
+            Tüm dersler <span>{hepsi.length}</span>
+          </button>
+        </div>
+      )}
 
       {tumParagraflar.length > 0 && (
         <div className="yp-araclar">
@@ -403,6 +425,7 @@ export const YildizliParagraflarPanel: React.FC<PanelProps> = ({ onClose, onGeci
 export const YildizliParagraflarModal: React.FC<Omit<PanelProps, 'inline'>> = ({
   onClose,
   onGecis,
+  dersKey,
 }) => {
   const portalHedef =
     (typeof document !== 'undefined' && (document.fullscreenElement as HTMLElement | null)) ||
@@ -418,7 +441,7 @@ export const YildizliParagraflarModal: React.FC<Omit<PanelProps, 'inline'>> = ({
         if (e.target === e.currentTarget) onClose?.();
       }}
     >
-      <YildizliParagraflarPanel onClose={onClose} onGecis={onGecis} inline={false} />
+      <YildizliParagraflarPanel onClose={onClose} onGecis={onGecis} inline={false} dersKey={dersKey} />
     </div>,
     portalHedef
   );

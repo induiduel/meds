@@ -421,7 +421,10 @@ export function mergeKvJsonValue(key: string, olderRaw: string, newerRaw: string
       if (b.length === 0 && a.length > 0) return olderRaw;
       const byId = new Map<string, any>();
       for (const item of [...a, ...b]) {
-        if (item && typeof item === 'object' && item.id) byId.set(String(item.id), item);
+        if (!item || typeof item !== 'object' || !item.id) continue;
+        // Aynı kimlikte en yeni işlem (ekleme ya da silme mezar taşı) kazanır.
+        const cur = byId.get(String(item.id));
+        if (!cur || (Number(item.tarih) || 0) >= (Number(cur.tarih) || 0)) byId.set(String(item.id), item);
       }
       return JSON.stringify(Array.from(byId.values()).sort((x, y) => (Number(y?.tarih) || 0) - (Number(x?.tarih) || 0)));
     }

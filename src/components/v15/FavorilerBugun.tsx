@@ -1,5 +1,7 @@
 import React, { useMemo, useState } from 'react';
 import { FileDown, Repeat, Star, Trash2 } from 'lucide-react';
+import { YildizliParagraflarPanel } from '../study/YildizliParagraflarModal';
+import { useYildizliSayisi } from '../../services/yildizliParagrafStore';
 import { favoriSil, useFavoriler, type Favori } from '../../services/favoriStore';
 import { linkClick, navigateTo, pathFor } from '../../router';
 
@@ -36,6 +38,20 @@ export function favoriPdfAc(liste: Favori[]) {
 
 /** Bugün: ★ / ↻ ile işaretlenen kayıtlar; kaynağına gider, PDF'e aktarılır */
 export default function FavorilerBugun() {
+  const ySay = useYildizliSayisi();
+  return (
+    <>
+      <FavoriListesi />
+      {ySay > 0 && (
+        <section className="v15-card" aria-label="Yıldızlı paragraflar">
+          <YildizliParagraflarPanel inline />
+        </section>
+      )}
+    </>
+  );
+}
+
+function FavoriListesi() {
   const l = useFavoriler();
   const [suz, setSuz] = useState<'hepsi' | 'yildiz' | 'tekrar'>('hepsi');
   const g = useMemo(() => l.filter((f) => suz === 'hepsi' || f[suz]), [l, suz]);

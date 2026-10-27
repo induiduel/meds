@@ -266,7 +266,7 @@ export function buildDailyDigestMessage(
     const rawKv = userBundle?.kv?.medsoru_yildizli_paragraflar_v1?.v || userBundle?.kv?.medsoru_yildizli_paragraflar?.v;
     if (rawKv) {
       const parsed = typeof rawKv === 'string' ? JSON.parse(rawKv) : rawKv;
-      if (Array.isArray(parsed)) starredParagraphs = parsed;
+      if (Array.isArray(parsed)) starredParagraphs = parsed.filter((p: any) => p && !p.silindi);
     }
   } catch {}
 

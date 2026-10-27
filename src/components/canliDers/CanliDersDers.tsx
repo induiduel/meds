@@ -944,6 +944,7 @@ export default function CanliDersDers({ dersKey, kamp }: { dersKey: string; kamp
       {gunlukAcik && <GunlukDiyalog dersKey={detay.key} onKapat={() => setGunlukAcik(false)} />}
       {yildizModalAcik && (
         <YildizliParagraflarModal
+          dersKey={dersKey}
           onClose={() => setYildizModalAcik(false)}
           onGecis={(item) => {
             if (item.kaynak === 'canli_ders' && item.meta?.dersKey === dersKey && item.meta?.paragrafIndex !== undefined) {

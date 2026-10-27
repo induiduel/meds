@@ -20,6 +20,8 @@ export interface YildizliParagraf {
   metin: string; // Paragrafın tam metni
   deeplink: string; // Tıklandığında doğrudan noktaya/paragrafa giden yol
   tarih: number; // Date.now()
+  /** Silme mezar taşı: cihazlar arası birleştirmede silinen yıldız geri dirilmesin diye tutulur. */
+  silindi?: boolean;
   meta?: {
     dersKey?: string;
     brans?: string;
@@ -39,7 +41,7 @@ function emitChange() {
   }
 }
 
-export function getYildizliParagraflar(): YildizliParagraf[] {
+function hamListe(): YildizliParagraf[] {
   if (typeof window === 'undefined') return [];
   try {
     const raw = localStorage.getItem(YILDIZLI_PARAGRAFLAR_KEY);
@@ -49,6 +51,10 @@ export function getYildizliParagraflar(): YildizliParagraf[] {
   } catch {
     return [];
   }
+}
+
+export function getYildizliParagraflar(): YildizliParagraf[] {
+  return hamListe().filter((x) => !x.silindi);
 }
 
 function saveYildizliParagraflar(list: YildizliParagraf[]) {
@@ -67,8 +73,7 @@ export function yildizliMi(id: string): boolean {
 }
 
 export function yildizEkle(item: Omit<YildizliParagraf, 'tarih'>): void {
-  const list = getYildizliParagraflar();
-  const filtered = list.filter((x) => x.id !== item.id);
+  const filtered = hamListe().filter((x) => x.id !== item.id);
   const yeni: YildizliParagraf = { ...item, tarih: Date.now() };
   saveYildizliParagraflar([yeni, ...filtered]);
   logActivity('kaydet', `Bir paragrafı tekrar listene ekledin: ${item.baslik.slice(0, 50)}`);
@@ -76,10 +81,11 @@ export function yildizEkle(item: Omit<YildizliParagraf, 'tarih'>): void {
 }
 
 export function yildizCikar(id: string): void {
-  const list = getYildizliParagraflar();
-  const item = list.find((x) => x.id === id);
+  const list = hamListe();
+  const item = list.find((x) => x.id === id && !x.silindi);
+  if (!item) return;
   const filtered = list.filter((x) => x.id !== id);
-  saveYildizliParagraflar(filtered);
+  saveYildizliParagraflar([{ ...item, metin: '', silindi: true, tarih: Date.now() }, ...filtered]);
   toast.info('Listeden çıkarıldı', item ? item.baslik.slice(0, 40) : undefined);
 }
 
@@ -94,7 +100,8 @@ export function yildizToggle(item: Omit<YildizliParagraf, 'tarih'>): boolean {
 }
 
 export function yildizTemizle(): void {
-  saveYildizliParagraflar([]);
+  const t = Date.now();
+  saveYildizliParagraflar(hamListe().map((x) => ({ ...x, metin: '', silindi: true, tarih: x.silindi ? x.tarih : t })));
   toast.info('Yıldızlı paragraflar temizlendi');
 }
 
