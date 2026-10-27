@@ -1,47 +1,97 @@
 # Nörolojik Hastaya Yaklaşım
 
 @@ Nöroloji muayenesinin mantığı
-Nörolojik hastaya yaklaşımda amaç, şikâyetleri nöroanatomiye göre düşünüp lezyonun yerini, yani lokalizasyonu, sonra da lezyonun ne olduğunu bulmaktır. Bu derste sırasıyla anamnez, hastalığın başlangıç şekli ve doğal gidişi, öyküyle konan tanılar, nörolojik muayene, lokalizasyon, lezyonun natürü, laboratuvar incelemeleri ve acil hastaya yaklaşım işlenir.
+Nörolojik hastaya yaklaşımda amaç, şikâyetleri nöroanatomiye göre düşünüp lezyonun yerini bulmaktır. Lezyonun yeri lokalizasyon, lezyonun ne olduğu ise natür diye adlandırılır. Natür, hastalığın nedeni demektir.
+
+Bu derste önce anamnez ve doğal gidiş, sonra muayene, lokalizasyon ve natür işlenir. Son olarak laboratuvar incelemeleri ve acil hastaya yaklaşım anlatılır.
 
 @@ Anamnez tanının temelidir
-Merritt'in sözüyle, hastayı dinledikten sonra nesi olduğunu anlamadıysanız muayene ettikten sonra da anlamayacaksınız. İyi bir anamnez doğru bir yönelim ve yaklaşım sağlar. Hastanın yakınması, belirtilerin başlangıç şekli ve kronolojik gidişi, problemi hem anatomik lokalizasyon hem de etiyoloji yönünden büyük ölçüde aydınlatır.
+Merritt'in sözüyle, hastayı dinledikten sonra nesi olduğunu anlamadıysanız muayene ettikten sonra da anlamayacaksınız. İyi bir anamnez doğru bir yönelim ve yaklaşım sağlar.
 
-Öykü alınırken hastanın kullandığı kelimelerle neyi kastettiğini anlamak gerekir. Örneğin hastanın uyuşma dediği şey bir duyu kusuru olabileceği gibi kuvvet kaybı da olabilir. Ağrı sübjektiftir ve genellikle kolay tarif edilemez; zonklayıcı mı, yanıcı mı, sabit mi olduğu gibi nitelikleri tek tek sorularla ortaya konur. Hekim, hastanın sıkıntısının ne olduğunu anlamadan muayeneye geçmemelidir. Hasta bilinçsizse ya da konuşma bozukluğu varsa öykü yakınından veya getiren kişiden alınır.
+Hastanın yakınması, belirtilerin başlangıç şekli ve kronolojik gidişi, problemi hem anatomik lokalizasyon hem de etiyoloji yönünden büyük ölçüde aydınlatır.
+
+Hastanın kullandığı kelimelerle neyi kastettiğini anlamak gerekir. Hasta uyuşma dediğinde bu bir duyu kusuru olabilir, kuvvet kaybı da olabilir. Duyu kusuru duyu yollarını, kuvvet kaybı ise motor yolu, yani piramidal yolu gösterir. Ayırmak için hastaya dokunmayı hissedip hissetmediği ya da kolunu kaldırıp kaldıramadığı sorulur.
+
+Ağrı sübjektiftir, yani hastanın kendi algısına dayanır ve genellikle kolay tarif edilemez. Zonklayıcı mı, yanıcı mı, sabit mi olduğu tek tek sorularla ortaya konur. Örneğin zonklama damarsal bir ağrıyı, yanma sinir ağrısını düşündürür.
+
+Hasta bilinçsizse ya da konuşma bozukluğu varsa öykü yakınından veya getiren kişiden alınır.
 
 @@ Başlangıç şekli ve doğal gidiş
-Hastalığın başlangıç şekli tanıya en güçlü ipuçlarından birini verir. Akut başlangıçta tablo dakikalar ya da saatler içinde yerleşir; bunun tipik örneği hemiplejidir. Bu bilgi çıkmış sınavda sorulmuştur.
+Hastalığın başlangıç şekli tanıya en güçlü ipuçlarından birini verir. Akut başlangıçta tablo dakikalar ya da saatler içinde yerleşir. Tipik örneği hemiplejidir, yani vücudun bir yarısındaki tam kuvvet kaybıdır. Bu bilgi çıkmış sınavda sorulmuştur.
 
-Bazı hastalıklar ise sinsi başlar ve haftalar, aylar, hatta yıllar içinde yerleşir; beyin tümörü ve Parkinson gibi dejeneratif hastalıklar bu gruptadır. Dalgalı gidişte kötüleşme ve iyileşme dönemleri birbirini izler; bunun klasik örneği yineleyici ve düzelen ataklarla seyreden multipl sklerozdur. Doğal gidişi bilmek tedavi sonucunu değerlendirmek için de gerekir: hastadaki düzelmenin uygulanan tedaviye mi, yoksa hastalığın kendi seyrine mi bağlı olduğu ancak böyle ayırt edilir.
+Bazı hastalıklar ise sinsi başlar, yani fark edilmeden ilerler ve haftalar, aylar, hatta yıllar içinde yerleşir. Beyin tümörleri ve Parkinson gibi dejeneratif hastalıklar bu gruptadır; tümör kitle yapar, dejeneratif hastalık ise sinir hücrelerinin giderek kaybıyla ilerler.
+
+Dalgalı gidişte kötüleşme ve iyileşme dönemleri birbirini izler. Klasik örnek multipl sklerozdur. Multipl sklerozda ataklar düzelir ve yinelenir. Akut hemiplejide ise tablo bir kez, ani yerleşir.
+
+Doğal gidiş, hastalığa hiç müdahale edilmezse seyridir. Bunu bilmek tanı kadar tedavi sonucunu değerlendirmek için de gereklidir. Ataklar kendiliğinden düzelen bir hastalıkta iyileşme ilaca bağlanamaz.
 
 @@ Tanısı öyküye dayanan hastalıklar
-Migren ve trigeminal nevralji gibi hastalıklarda nörolojik belirti ve laboratuvar bulgusu yoktur; tanı doğru bir anamnezle konur. Bilgisayarlı tomografi ve manyetik rezonans bu durumlarda tanının doğru olduğunu göstermek için çekilir.
+Migren ve trigeminal nevralji gibi hastalıklarda nörolojik muayene bulgusu ve laboratuvar bulgusu yoktur. Tanı doğru bir anamnezle konur.
 
-Epilepsi de klinik bir tanıdır ve öyküyle konur. Elektroensefalografinin normal olması tanıdan uzaklaştırmaz; tersine, elektroensefalografisi bozuk olan sağlıklı bir kişiye yalnız bu yüzden epileptik denemez. Gordon Holmes'un dediği gibi, hasta karşınızda bir muamma gibi duruyorsa onu ikinci kez dinlemek, bütün araştırma yöntemlerinden daha çok tanı şansı verir; hastayla ilgilenmek ayrıca güven duygusu oluşturur.
+Bilgisayarlı tomografi ve manyetik rezonans bu hastalıkları doğrulamak için çekilmez. Amaç, benzer yakınma yapabilecek başka bir yapısal nedeni dışlamaktır. Görüntünün normal çıkması tanıyı bozmaz, çünkü tanı klinik olarak konur.
+
+Epilepsi de klinik bir tanıdır ve öyküyle konur. Elektroensefalografinin normal olması hastayı epilepsiden uzaklaştırmaz.
+
+Bozuk elektroensefalografi de tek başına epilepsi tanısı koydurmaz. Elektroensefalografisi bozuk olan sağlıklı bir kişiye yalnız bu yüzden epileptik denemez. Tetkik öyküyü desteklemek içindir, yerine geçmez.
+
+Gordon Holmes der ki: hasta karşınızda çözülmesi zor bir bilmece gibi duruyorsa onu ikinci kez dinleyin. Bu, bütün araştırma yöntemlerinden daha çok tanı şansı verir.
 
 @@ İlk izlenim ve gözlem
-Nörolojik muayene anamnezden sonra gelir, ama ilk izlenim bile tanıya yardımcı olur. Hastanın odaya girerken yürümesi, oturduğunda yüzü, bakışları, ses tonu ve konuşması baştan itibaren pek çok ipucu verir. Hemiplejik hastada kol gövdeye yapışık durur ve hasta yürürken bacağını oraklar; bu görünüm spastisitenin belirtisidir.
+Nörolojik muayene anamnezden sonra gelir, ama ilk izlenim bile tanıya yardımcı olur. Yürüyüşü, yüzü, bakışları ve konuşması baştan itibaren ipucu verir.
 
-Parkinson hastalığında maske yüz, monoton konuşma, salya akması, yürürken kolların sallanmaması ve vücudun fleksör postürü görülür. Bu bilgi çıkmış sınavda sorulmuştur. Kas distrofisinde hasta karnı önde, ördeğe benzeyen badi badi bir yürüyüşle gelir. Dizartri ve afazi ise hastanın konuşmasından hemen fark edilir.
+Hemiplejik hastada kol gövdeye yapışık durur ve hasta yürürken bacağını oraklar; yani bacak yana doğru yarım daire çizerek ileri atılır. Bunun nedeni spastisitedir, yani kasların istemsiz sertleşmesidir. Spastik bacak dizden bükülemez ve uzamış kalır. Ayak ucu yere takılacağı için hasta bacağı yana savurarak ilerletir.
+
+Parkinson hastalığında maske yüz, yani mimiksiz yüz, görülür. Monoton konuşma, salya akması, kolların sallanmaması ve fleksör postür eşlik eder. Fleksör postür, vücudun öne eğik, kasılmış bir duruşta olmasıdır. Hasta yavaş ve küçük adımlarla yürür. Bu bilgi çıkmış sınavda sorulmuştur.
+
+Kas distrofisinde hasta karnı önde, iki yana sallanarak yürür; buna ördek yürüyüşü denir. Kalça çevresindeki kaslar güçsüz olduğu için gövde her adımda yana devrilir. Hemiplejideki oraklama tek taraflıdır; distrofideki ördek yürüyüşü ise iki yanlıdır.
+
+Dizartri, konuşma kaslarının bozulmasından doğan telaffuz bozukluğudur. Afazi ise dil işlevinin kaybıdır. İkisi de hastanın konuşmasından hemen fark edilir.
 
 @@ Nörolojik lokalizasyon
-Muayeneden elde edilen bulgular bir araya gelerek bir sendrom oluşturur; hemipleji sendromu ya da parapleji sendromu gibi. Bazen bulgular birbirini o kadar tamamlar ki yalnız tek bir bölgeye karşılık gelir.
+Muayenede bulgular bir araya gelerek sendrom oluşturur. Sendrom, birlikte görülen ve lezyonun yerini gösteren bulgu paketidir. Hemipleji sendromu ya da parapleji sendromu buna örnektir. Parapleji, iki bacağın birlikte felcidir.
 
-Afazi ile birlikte sağ hemipleji varsa hem piramidal yol hem de konuşma alanı tutulmuştur ve lezyon sol hemisferdedir. Diplopi, vertigo, piramidal bulgu ve serebellar bulgu birlikteyse lezyon beyin sapındadır. Parapleji ile gövdede seviye veren duyu kaybı ve sfinkter bozukluğu medulla spinalis lezyonunu gösterir. Bel ve bacak arkasına vuran ağrı ile aşil refleksinin alınamaması birinci sakral radiksin tutulduğunu gösterir. Aşil refleksiyle birinci sakral kök seviyesinin incelendiği bilgisi çıkmış sınavda sorulmuştur.
+Afazi ile birlikte sağ hemipleji varsa hem piramidal yol, yani istemli hareketi ileten yol, hem de konuşma alanı tutulmuştur. Lezyon sol hemisferdedir.
+
+Diplopi, vertigo, piramidal bulgu ve serebellar bulgu birlikte görülüyorsa lezyon beyin sapındadır. Diplopi çift görmeyi, vertigo baş dönmesini, serebellar bulgu ise beyincik tutulumunu gösteren denge ve koordinasyon bozukluğunu anlatır. Bilinç, solunum ve kraniyal sinirler beyin sapında çok dar bir alanda toplanır. Bu yüzden küçük bir lezyon bu işlevleri birlikte bozar.
+
+Parapleji ile gövdede seviye veren duyu kaybı ve sfinkter bozukluğu medulla spinalis, yani omurilik lezyonunu gösterir. Sfinkter bozukluğu idrar ve dışkı tutma sorunudur.
+
+Bel ve bacak arkasına vuran ağrı ile aşil refleksinin alınamaması birinci sakral radiksin, yani omurilikten çıkan birinci sakral sinir kökünün tutulduğunu gösterir. Aşil refleksiyle birinci sakral kök seviyesinin incelendiği bilgisi çıkmış sınavda sorulmuştur.
 
 @@ Lezyonun natürü
-Lokalizasyondan sonra lezyonun ne olduğu düşünülür. Hemiplejili bir hastada hipertansiyon ve diyabet varsa ilk sırada damarsal etiyoloji akla gelir. Hemipleji yavaş yerleşmiş ve giderek ağırlaşıyorsa yer kaplayan lezyon, malignite öyküsü varsa metastaz düşünülür.
+Lokalizasyondan sonra lezyonun ne olduğu düşünülür. Hemiplejili bir hastada hipertansiyon ve diyabet varsa ilk sırada damarsal etiyoloji akla gelir.
 
-Beyin sapı lokalizasyonu olan genç bir hastada tablo kısa zamanda gelişmişse ve öyküde sinir sisteminin farklı bölgelerinin etkilendiği, sonra düzelen epizodlar varsa en olası tanı multipl sklerozdur. Bu bilgi çıkmış sınavda sorulmuştur. Aynı lokalizasyon yaşlı ve aterosklerozu olan bir hastada ise serebrovasküler olayı düşündürür.
+Hemipleji yavaş yerleşmiş ve giderek ağırlaşıyorsa yer kaplayan lezyon düşünülür. Yer kaplayan lezyon, tümör gibi boşluk işgal eden ve zamanla büyüyen oluşumdur. Büyüdükçe belirtiler yavaşça ağırlaşır. Malignite öyküsü de varsa metastaz akla gelir.
 
-Paraplejide sinsi başlangıç ve ilerleyici seyir medulla spinalis basısını, aşı ya da viral enfeksiyonu izleyen tablo ise postenfeksiyöz miyeliti düşündürür.
+Genç bir hastada beyin sapı bulguları kısa sürede gelişmişse, en olası tanı multipl sklerozdur. Bunun için öyküde sinir sisteminin farklı bölgelerini tutan ve sonra düzelen epizodlar da bulunmalıdır. Bu bilgi çıkmış sınavda sorulmuştur.
+
+Aynı lokalizasyon yaşlı ve aterosklerozu, yani damar sertliği olan bir hastada serebrovasküler olayı düşündürür. Yaş ve zemin hastalıklar natürü değiştirir.
+
+Paraplejide sinsi başlangıç ve ilerleyici seyir medulla spinalis basısını düşündürür. Aşı ya da viral enfeksiyonu izleyen tablo ise postenfeksiyöz miyeliti, yani enfeksiyon sonrası omurilik iltihabını düşündürür.
 
 @@ Laboratuvar incelemeleri
-Genel yöntemler arasında biyokimya ve bakteriyolojik incelemeler vardır. Spesifik incelemelerin başında beyin omurilik sıvısı incelemesi gelir. Bunun yanında elektroensefalografi, elektromiyografi ve uyarılmış potansiyeller kullanılır; elektromiyografi özellikle demiyelinizan hastalıklarda ve kas hastalıklarında yol gösterir. Acil durumda bilgisayarlı beyin tomografisi hemen çekilir. Beyin manyetik rezonans görüntülemesi radyo dalgalarıyla elde edilir.
+Genel yöntemler arasında biyokimya ve bakteriyolojik incelemeler vardır. Örneğin kan şekeri ölçülür ya da enfeksiyon için kültür alınır. Spesifik incelemelerin başında beyin omurilik sıvısı incelemesi gelir.
+
+Üç elektrofizyolojik test farklı şeyi ölçer. Elektroensefalografi beynin elektriksel etkinliğini yazar. Elektromiyografi kasın elektriksel etkinliğini yazar. Sinirin ileti hızını ise ayrı bir sinir ileti çalışması ölçer; ikisi çoğu zaman birlikte yapılır. Uyarılmış potansiyel, uyaran verip sinir yolunun yanıtını ölçer.
+
+Elektromiyografi kasın elektriksel etkinliğini kaydeder ve özellikle kas hastalıklarında yol gösterir; demiyelinizan hastalıkta iletim yavaşlığını daha çok sinir ileti çalışması gösterir. Demiyelinizan hastalık, sinirin miyelin kılıfının hasar gördüğü hastalıktır.
+
+Uyarılmış potansiyel, görme, işitme ya da duyu yolunun verdiği elektriksel yanıtı ve iletim süresini ölçer. Tanıyı destekler, tek başına belirleyici değildir.
+
+Acil durumda bilgisayarlı beyin tomografisi hemen çekilir. Kanama ve kitle böylece hızla ayrılır; erken dönemdeki iskemik inme ise tomografide çoğu kez görünmez, bu yüzden normal tomografi inmeyi dışlamaz. Beyin manyetik rezonans görüntülemesi ise güçlü bir manyetik alan ve radyo dalgalarıyla elde edilir; X ışını kullanılmaz.
 
 @@ Acil gelen hasta
-Acil olarak getirilen hasta bilinçsiz ya da afazik olabilir ve getiren kişi bilgi sahibi olmayabilir. Böyle bir durumda geri dönüşü olmayan bir noktaya gelmeden müdahale etmek gerekir; zaman hem hastanın hem hekimin aleyhine işler ve zaman beyindir. Bilgi toplanırken bir yandan da tedaviye başlanır: önce vital bulgular stabil hale getirilir, solunum yolu açık tutulur, hasta nöbet geçiriyorsa nöbet durdurulmaya çalışılır.
+Acil getirilen hasta bilinçsiz ya da afazik olabilir ve getiren kişi bilgi sahibi olmayabilir. Geri dönüşü olmayan noktaya gelmeden müdahale etmek gerekir.
+
+Zaman hem hastanın hem hekimin aleyhine işler, çünkü zaman beyindir. İskemide, yani damar tıkanıklığında, dakikalar içinde sinir hücreleri ölmeye başlar. Bu yüzden bilgi toplanırken bir yandan da tedaviye başlanır.
+
+Önce vital bulgular stabil hale getirilir. Solunum yolu açık tutulur, çünkü hastanın nefesi durabilir. Gerekirse entübasyon yani soluk borusuna tüp yerleştirme ve yoğun bakım gündeme gelir. Hasta nöbet geçiriyorsa nöbet durdurulmaya çalışılır.
 
 @@ İlk gören hekim ve sevk
-Hastayı ilk gören hekim, hastanın bilincinin giderek kapandığını ve tablonun ilerlediğini fark etmelidir. Tanı konulamayan ve tedavi edilemeyen hasta nöroloji kliniğine gönderilir.
+Hastayı ilk gören hekim, hastanın bilincinin giderek kapandığını ve tablonun ilerlediğini fark etmelidir. Bilinci kapanan ya da tablosu ilerleyen hasta bekletilmeden gönderilir. Tanı konulamayan ve tedavi edilemeyen hasta da nöroloji kliniğine gönderilir.
 
-Sevk ederken öykü ve muayene bulguları açık ve anlaşılır biçimde yazılır. Anlaşılmaz kısaltmalar kullanılmaz; epilepsi, miyokloni, kore gibi deyimler yerine görülen şey yazılır. Bilinç düzeyi, saati ve pupil büyüklükleri kaydedilir. Hemiparezi de açıklanır; örneğin hasta bacağını kaldıramıyor ama yatak içinde çekebiliyor diye yazılır.
+Sevkte öykü ve bulgular açıkça yazılır; anlaşılmaz kısaltma kullanılmaz. Pratisyen hekim yazıda yalnız tanı etiketi yazmak yerine gözlediği bulguyu açıkça tarif eder ve hastayı sevk eder.
+
+Epilepsi bir tanıdır; miyokloni ve kore ise bulgu adlarıdır. Bunların yerine hastanın nasıl hareket ettiği, ne kadar sürdüğü ve bilincinin nasıl olduğu yazılır. Miyokloni kısa ve ani kas sıçramasıdır. Kore, akıcı, amaçsız ve kısa süreli istemsiz hareketlerdir.
+
+Bilinç düzeyi, muayene saati ve pupil büyüklükleri kaydedilir. Hemiparezi, yani kısmi güç kaybı da açıklanır; örneğin hasta bacağını kaldıramıyor ama yatak içinde çekebiliyor diye yazılır.

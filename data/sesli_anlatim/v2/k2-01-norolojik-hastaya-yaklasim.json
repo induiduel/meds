@@ -1,0 +1,2954 @@
+{
+ "surum": 2,
+ "ders_id": "k2-01",
+ "baslik": "Nörolojik Hastaya Yaklaşım",
+ "bolumler": [
+  {
+   "id": "k2-01-b01",
+   "baslik": "Nöroloji muayenesinin mantığı",
+   "paragraflar": [
+    {
+     "id": "k2-01-p001",
+     "sayfa": 1,
+     "cumleler": [
+      {
+       "ses": "Nörolojik hastaya yaklaşımda amaç, şikâyetleri nöroanatomiye göre düşünüp lezyonun yerini bulmaktır.",
+       "ekran": "Amaç: şikâyetlerden **lezyonun yerini** bulmak",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "lezyonun yerini",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": null,
+       "id": "k2-01-c0001"
+      },
+      {
+       "ses": "Lezyonun yeri lokalizasyon, lezyonun ne olduğu ise natür diye adlandırılır.",
+       "ekran": "Yeri **lokalizasyon**, ne olduğu **natür**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "lokalizasyon",
+         "tur": "terim"
+        },
+        {
+         "metin": "natür",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": null,
+       "id": "k2-01-c0002"
+      },
+      {
+       "ses": "Natür, hastalığın nedeni demektir.",
+       "ekran": "**Natür**: hastalığın nedeni",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Natür",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": null,
+       "id": "k2-01-c0003"
+      }
+     ]
+    },
+    {
+     "id": "k2-01-p002",
+     "sayfa": 1,
+     "cumleler": [
+      {
+       "ses": "Bu derste önce anamnez ve doğal gidiş, sonra muayene, lokalizasyon ve natür işlenir.",
+       "ekran": "Önce **anamnez**, doğal gidiş, muayene, lokalizasyon, natür",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "anamnez",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": null,
+       "id": "k2-01-c0004"
+      },
+      {
+       "ses": "Son olarak laboratuvar incelemeleri ve acil hastaya yaklaşım anlatılır.",
+       "ekran": "Sonra laboratuvar incelemeleri ve **acil hasta**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "acil hasta",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": null,
+       "id": "k2-01-c0005"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-01-b02",
+   "baslik": "Anamnez tanının temelidir",
+   "paragraflar": [
+    {
+     "id": "k2-01-p003",
+     "sayfa": 2,
+     "cumleler": [
+      {
+       "ses": "Merritt'in sözüyle, hastayı dinledikten sonra nesi olduğunu anlamadıysanız muayene ettikten sonra da anlamayacaksınız.",
+       "ekran": "**Merritt**: dinledikten sonra anlamadıysanız muayeneyle de anlayamazsınız",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Merritt",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "«Hastayı dinledikten sonra nesi olduğunu anlamadıysanız muayene ettikten sonra da anlamayacaksınız.»  Merritt"
+        ],
+        "sekil": null
+       },
+       "id": "k2-01-c0006"
+      },
+      {
+       "ses": "İyi bir anamnez doğru bir yönelim ve yaklaşım sağlar.",
+       "ekran": "İyi **anamnez** doğru yönelim sağlar",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "anamnez",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "• İyi bir anamnez doğru bir yönelim ve yaklaşım sağlar"
+        ],
+        "sekil": null
+       },
+       "id": "k2-01-c0007"
+      }
+     ]
+    },
+    {
+     "id": "k2-01-p004",
+     "sayfa": 2,
+     "cumleler": [
+      {
+       "ses": "Hastanın yakınması, belirtilerin başlangıç şekli ve kronolojik gidişi, problemi hem anatomik lokalizasyon hem de etiyoloji yönünden büyük ölçüde aydınlatır.",
+       "ekran": "Yakınma, başlangıç şekli, gidiş: **lokalizasyon** ve **etiyoloji** ipucu verir",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "lokalizasyon",
+         "tur": "terim"
+        },
+        {
+         "metin": "etiyoloji",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "• Hastanın yakınması, belirtilerin başlangıç şekli, kronolojik gidişi anatomik lokalizasyon ve etyoloji yönünden problemi büyük ölçüde aydınlatır"
+        ],
+        "sekil": null
+       },
+       "id": "k2-01-c0008"
+      }
+     ]
+    },
+    {
+     "id": "k2-01-p005",
+     "sayfa": 2,
+     "cumleler": [
+      {
+       "ses": "Hastanın kullandığı kelimelerle neyi kastettiğini anlamak gerekir.",
+       "ekran": "Hastanın **kullandığı kelimelerin** anlamı sorulur",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "kullandığı kelimelerin",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "• Hastanın öyküsü alınırken kullandığı kelimelerle neyi kasdettiğini anlamak çok önemli."
+        ],
+        "sekil": null
+       },
+       "id": "k2-01-c0009"
+      },
+      {
+       "ses": "Hasta uyuşma dediğinde bu bir duyu kusuru olabilir, kuvvet kaybı da olabilir.",
+       "ekran": "«Uyuşma» = **duyu kusuru** ya da **kuvvet kaybı**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "duyu kusuru",
+         "tur": "terim"
+        },
+        {
+         "metin": "kuvvet kaybı",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "• «Uyuşma» duyu kusuru olabilir ya da kuvvet kaybını anlatıyor olabilir"
+        ],
+        "sekil": null
+       },
+       "id": "k2-01-c0010"
+      },
+      {
+       "ses": "Duyu kusuru duyu yollarını, kuvvet kaybı ise motor yolu, yani piramidal yolu gösterir.",
+       "ekran": "Duyu kusuru: duyu yolları; kuvvet kaybı: **piramidal yol**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "piramidal yol",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "• «Uyuşma» duyu kusuru olabilir ya da kuvvet kaybını anlatıyor olabilir"
+        ],
+        "sekil": null
+       },
+       "id": "k2-01-c0011"
+      },
+      {
+       "ses": "Ayırmak için hastaya dokunmayı hissedip hissetmediği ya da kolunu kaldırıp kaldıramadığı sorulur.",
+       "ekran": "Ayırmak için sor: dokunmayı hissediyor mu, kolunu kaldırabiliyor mu?",
+       "duzey": 0,
+       "vurgu": [],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "• «Uyuşma» duyu kusuru olabilir ya da kuvvet kaybını anlatıyor olabilir"
+        ],
+        "sekil": null
+       },
+       "id": "k2-01-c0012"
+      }
+     ]
+    },
+    {
+     "id": "k2-01-p006",
+     "sayfa": 2,
+     "cumleler": [
+      {
+       "ses": "Ağrı sübjektiftir, yani hastanın kendi algısına dayanır ve genellikle kolay tarif edilemez.",
+       "ekran": "**Ağrı** sübjektiftir; hastanın kendi algısı",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Ağrı",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "• Ağrı sübjektif, sorularla nitelikleri ortaya konmalı"
+        ],
+        "sekil": null
+       },
+       "id": "k2-01-c0013"
+      },
+      {
+       "ses": "Zonklayıcı mı, yanıcı mı, sabit mi olduğu tek tek sorularla ortaya konur.",
+       "ekran": "Zonklayıcı mı, yanıcı mı, sabit mi? **Tek tek sorulur**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Tek tek sorulur",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "• Ağrı sübjektif, sorularla nitelikleri ortaya konmalı"
+        ],
+        "sekil": null
+       },
+       "id": "k2-01-c0014"
+      },
+      {
+       "ses": "Örneğin zonklama damarsal bir ağrıyı, yanma sinir ağrısını düşündürür.",
+       "ekran": "**Zonklama** damarsal, **yanma** sinir ağrısını düşündürür",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Zonklama",
+         "tur": "terim"
+        },
+        {
+         "metin": "yanma",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "• Ağrı sübjektif, sorularla nitelikleri ortaya konmalı"
+        ],
+        "sekil": null
+       },
+       "id": "k2-01-c0015"
+      }
+     ]
+    },
+    {
+     "id": "k2-01-p007",
+     "sayfa": 2,
+     "cumleler": [
+      {
+       "ses": "Hasta bilinçsizse ya da konuşma bozukluğu varsa öykü yakınından veya getiren kişiden alınır.",
+       "ekran": "Bilinçsiz ya da konuşma bozukluğu: öykü **yakınından**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "yakınından",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 2,
+        "satir": [
+         "• Hasta bilinçsiz, ya da konuşma bozukluğu varsa yakını ya da getiren kişiden"
+        ],
+        "sekil": null
+       },
+       "id": "k2-01-c0016"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-01-b03",
+   "baslik": "Başlangıç şekli ve doğal gidiş",
+   "paragraflar": [
+    {
+     "id": "k2-01-p008",
+     "sayfa": 3,
+     "cumleler": [
+      {
+       "ses": "Hastalığın başlangıç şekli tanıya en güçlü ipuçlarından birini verir.",
+       "ekran": "**Başlangıç şekli** tanıya en güçlü ipuçlarından biri",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Başlangıç şekli",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "Nörolojik Hastalıklarda Başlayış Şekli ve Doğal Gidiş"
+        ],
+        "sekil": null
+       },
+       "id": "k2-01-c0017"
+      },
+      {
+       "ses": "Akut başlangıçta tablo dakikalar ya da saatler içinde yerleşir.",
+       "ekran": "**Akut**: dakika veya saat içinde",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Akut",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "• Akut başlangıç. Dakika veya saat içinde. Örneğin hemipleji."
+        ],
+        "sekil": null
+       },
+       "id": "k2-01-c0018"
+      },
+      {
+       "ses": "Tipik örneği hemiplejidir, yani vücudun bir yarısındaki tam kuvvet kaybıdır.",
+       "ekran": "Tipik örnek: **hemipleji** (yarım vücutta tam kuvvet kaybı)",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "hemipleji",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [
+        "q-2__kurul_-1"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "• Akut başlangıç. Dakika veya saat içinde. Örneğin hemipleji."
+        ],
+        "sekil": null
+       },
+       "id": "k2-01-c0019"
+      },
+      {
+       "ses": "Bu bilgi çıkmış sınavda sorulmuştur.",
+       "ekran": "**Bu bilgi çıkmış sınavda sorulmuştur.**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Bu bilgi çıkmış sınavda sorulmuştur.",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": null,
+       "id": "k2-01-c0020"
+      }
+     ]
+    },
+    {
+     "id": "k2-01-p009",
+     "sayfa": 3,
+     "cumleler": [
+      {
+       "ses": "Bazı hastalıklar ise sinsi başlar, yani fark edilmeden ilerler ve haftalar, aylar, hatta yıllar içinde yerleşir.",
+       "ekran": "**Sinsi** başlangıç: haftalar, aylar, yıllar",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Sinsi",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "• Bazı hastalıklar sinsi başlar. Haftalar, aylar, yıllar içinde yerleşir. Beyin tümörü, dejeneratif hastalıklar gibi"
+        ],
+        "sekil": null
+       },
+       "id": "k2-01-c0021"
+      },
+      {
+       "ses": "Beyin tümörleri ve Parkinson gibi dejeneratif hastalıklar bu gruptadır; tümör kitle yapar, dejeneratif hastalık ise sinir hücrelerinin giderek kaybıyla ilerler.",
+       "ekran": "Örnek: **beyin tümörü**, **Parkinson**, dejeneratif hastalıklar",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "beyin tümörü",
+         "tur": "terim"
+        },
+        {
+         "metin": "Parkinson",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "• Bazı hastalıklar sinsi başlar. Haftalar, aylar, yıllar içinde yerleşir. Beyin tümörü, dejeneratif hastalıklar gibi"
+        ],
+        "sekil": null
+       },
+       "id": "k2-01-c0022"
+      }
+     ]
+    },
+    {
+     "id": "k2-01-p010",
+     "sayfa": 3,
+     "cumleler": [
+      {
+       "ses": "Dalgalı gidişte kötüleşme ve iyileşme dönemleri birbirini izler.",
+       "ekran": "**Dalgalı** gidiş: kötüleşme ve iyileşme dönemleri",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Dalgalı",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "• Dalgalı gidiş. Kötüleşme ve iyileşme dönemleri vardır. Relapsing-remitting MS"
+        ],
+        "sekil": null
+       },
+       "id": "k2-01-c0023"
+      },
+      {
+       "ses": "Klasik örnek multipl sklerozdur.",
+       "ekran": "Klasik örnek: **multipl skleroz**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "multipl skleroz",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "• Dalgalı gidiş. Kötüleşme ve iyileşme dönemleri vardır. Relapsing-remitting MS"
+        ],
+        "sekil": null
+       },
+       "id": "k2-01-c0024"
+      },
+      {
+       "ses": "Multipl sklerozda ataklar düzelir ve yinelenir.",
+       "ekran": "MS'de **ataklar** düzelir ve yinelenir",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "ataklar",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "• Dalgalı gidiş. Kötüleşme ve iyileşme dönemleri vardır. Relapsing-remitting MS"
+        ],
+        "sekil": null
+       },
+       "id": "k2-01-c0025"
+      },
+      {
+       "ses": "Akut hemiplejide ise tablo bir kez, ani yerleşir.",
+       "ekran": "Akut hemipleji: tablo **bir kez, ani** yerleşir",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "bir kez, ani",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "• Akut başlangıç. Dakika veya saat içinde. Örneğin hemipleji."
+        ],
+        "sekil": null
+       },
+       "id": "k2-01-c0026"
+      }
+     ]
+    },
+    {
+     "id": "k2-01-p011",
+     "sayfa": 3,
+     "cumleler": [
+      {
+       "ses": "Doğal gidiş, hastalığa hiç müdahale edilmezse seyridir.",
+       "ekran": "**Doğal gidiş**: hastalığa müdahale edilmezse seyir",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Doğal gidiş",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "• Hastalığın doğal gidişi tanı yönünden olduğu kadar tedavi sonuçlarının değerlendirilmesi bakımından da önemlidir"
+        ],
+        "sekil": null
+       },
+       "id": "k2-01-c0027"
+      },
+      {
+       "ses": "Bunu bilmek tanı kadar tedavi sonucunu değerlendirmek için de gereklidir.",
+       "ekran": "Tanı kadar **tedavi sonucunu** değerlendirmek için de gerekli",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "tedavi sonucunu",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "• Hastalığın doğal gidişi tanı yönünden olduğu kadar tedavi sonuçlarının değerlendirilmesi bakımından da önemlidir"
+        ],
+        "sekil": null
+       },
+       "id": "k2-01-c0028"
+      },
+      {
+       "ses": "Ataklar kendiliğinden düzelen bir hastalıkta iyileşme ilaca bağlanamaz.",
+       "ekran": "Kendiliğinden düzelen hastalıkta iyileşme **ilaca bağlanamaz**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "ilaca bağlanamaz",
+         "tur": "tuzak"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 3,
+        "satir": [
+         "• Düzelme uygulanan tedaviye mi bağlı yoksa doğal seyrine mi?"
+        ],
+        "sekil": null
+       },
+       "id": "k2-01-c0029"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-01-b04",
+   "baslik": "Tanısı öyküye dayanan hastalıklar",
+   "paragraflar": [
+    {
+     "id": "k2-01-p012",
+     "sayfa": 4,
+     "cumleler": [
+      {
+       "ses": "Migren ve trigeminal nevralji gibi hastalıklarda nörolojik muayene bulgusu ve laboratuvar bulgusu yoktur.",
+       "ekran": "**Migren**, **trigeminal nevralji**: muayene ve laboratuvar bulgusu yok",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Migren",
+         "tur": "terim"
+        },
+        {
+         "metin": "trigeminal nevralji",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 4,
+        "satir": [
+         "• Migren • Trigeminal nevralji • Nörolojik belirti, lab. bulgusu yoktur"
+        ],
+        "sekil": null
+       },
+       "id": "k2-01-c0030"
+      },
+      {
+       "ses": "Tanı doğru bir anamnezle konur.",
+       "ekran": "Tanı **doğru anamnezle** konur",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "doğru anamnezle",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 4,
+        "satir": [
+         "Tanısı Öyküye Dayanan Nörolojik Hastalıklar"
+        ],
+        "sekil": null
+       },
+       "id": "k2-01-c0031"
+      }
+     ]
+    },
+    {
+     "id": "k2-01-p013",
+     "sayfa": 4,
+     "cumleler": [
+      {
+       "ses": "Bilgisayarlı tomografi ve manyetik rezonans bu hastalıkları doğrulamak için çekilmez.",
+       "ekran": "**BT ve MR** bu hastalıkları doğrulamak için çekilmez",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "BT ve MR",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": null,
+       "id": "k2-01-c0032"
+      },
+      {
+       "ses": "Amaç, benzer yakınma yapabilecek başka bir yapısal nedeni dışlamaktır.",
+       "ekran": "Amaç: başka **yapısal nedeni dışlamak**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "yapısal nedeni dışlamak",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": null,
+       "id": "k2-01-c0033"
+      },
+      {
+       "ses": "Görüntünün normal çıkması tanıyı bozmaz, çünkü tanı klinik olarak konur.",
+       "ekran": "Normal görüntü tanıyı bozmaz; tanı **klinik**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "klinik",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": null,
+       "id": "k2-01-c0034"
+      }
+     ]
+    },
+    {
+     "id": "k2-01-p014",
+     "sayfa": 4,
+     "cumleler": [
+      {
+       "ses": "Epilepsi de klinik bir tanıdır ve öyküyle konur.",
+       "ekran": "**Epilepsi** klinik tanıdır, öyküyle konur",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Epilepsi",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 4,
+        "satir": [
+         "• Epilepsi de klinik tanıdır. EEG normal olması tanıdan uzaklaştırmaz"
+        ],
+        "sekil": null
+       },
+       "id": "k2-01-c0035"
+      },
+      {
+       "ses": "Elektroensefalografinin normal olması hastayı epilepsiden uzaklaştırmaz.",
+       "ekran": "Normal **EEG** epilepsiyi dışlatmaz",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "EEG",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 4,
+        "satir": [
+         "• Epilepsi de klinik tanıdır. EEG normal olması tanıdan uzaklaştırmaz"
+        ],
+        "sekil": null
+       },
+       "id": "k2-01-c0036"
+      }
+     ]
+    },
+    {
+     "id": "k2-01-p015",
+     "sayfa": 4,
+     "cumleler": [
+      {
+       "ses": "Bozuk elektroensefalografi de tek başına epilepsi tanısı koydurmaz.",
+       "ekran": "Bozuk **EEG** tek başına epilepsi tanısı koydurmaz",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "EEG",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 4,
+        "satir": [
+         "• Epilepsi de klinik tanıdır. EEG normal olması tanıdan uzaklaştırmaz"
+        ],
+        "sekil": null
+       },
+       "id": "k2-01-c0037"
+      },
+      {
+       "ses": "Elektroensefalografisi bozuk olan sağlıklı bir kişiye yalnız bu yüzden epileptik denemez.",
+       "ekran": "EEG'si bozuk sağlıklı kişiye **epileptik denemez**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "epileptik denemez",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 4,
+        "satir": [
+         "• Epilepsi de klinik tanıdır. EEG normal olması tanıdan uzaklaştırmaz"
+        ],
+        "sekil": null
+       },
+       "id": "k2-01-c0038"
+      },
+      {
+       "ses": "Tetkik öyküyü desteklemek içindir, yerine geçmez.",
+       "ekran": "Tetkik öyküyü **destekler**, yerine geçmez",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "destekler",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 4,
+        "satir": [
+         "• Epilepsi de klinik tanıdır. EEG normal olması tanıdan uzaklaştırmaz"
+        ],
+        "sekil": null
+       },
+       "id": "k2-01-c0039"
+      }
+     ]
+    },
+    {
+     "id": "k2-01-p016",
+     "sayfa": 4,
+     "cumleler": [
+      {
+       "ses": "Gordon Holmes der ki: hasta karşınızda çözülmesi zor bir bilmece gibi duruyorsa onu ikinci kez dinleyin.",
+       "ekran": "**Gordon Holmes**: bilmece gibi hastayı **ikinci kez dinleyin**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Gordon Holmes",
+         "tur": "terim"
+        },
+        {
+         "metin": "ikinci kez dinleyin",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 4,
+        "satir": [
+         "• «Hasta karşınızda bir muamma gibi duruyorsa onu ikinci kez dinleyiniz. Bütün araştırma yöntemlerine oranla bilmeceyi çözme şansınız daha büyük olacaktır» Gordon Holmes"
+        ],
+        "sekil": null
+       },
+       "id": "k2-01-c0040"
+      },
+      {
+       "ses": "Bu, bütün araştırma yöntemlerinden daha çok tanı şansı verir.",
+       "ekran": "Tüm yöntemlerden **daha çok tanı şansı** verir",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "daha çok tanı şansı",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 4,
+        "satir": [
+         "• «Hasta karşınızda bir muamma gibi duruyorsa onu ikinci kez dinleyiniz. Bütün araştırma yöntemlerine oranla bilmeceyi çözme şansınız daha büyük olacaktır» Gordon Holmes"
+        ],
+        "sekil": null
+       },
+       "id": "k2-01-c0041"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-01-b05",
+   "baslik": "İlk izlenim ve gözlem",
+   "paragraflar": [
+    {
+     "id": "k2-01-p017",
+     "sayfa": 5,
+     "cumleler": [
+      {
+       "ses": "Nörolojik muayene anamnezden sonra gelir, ama ilk izlenim bile tanıya yardımcı olur.",
+       "ekran": "**İlk izlenim** bile tanıya yardım eder",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "İlk izlenim",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "• İlk izlenim bile tanıya yardımcı olur"
+        ],
+        "sekil": null
+       },
+       "id": "k2-01-c0042"
+      },
+      {
+       "ses": "Yürüyüşü, yüzü, bakışları ve konuşması baştan itibaren ipucu verir.",
+       "ekran": "Yürüyüş, yüz, bakış, konuşma baştan **ipucu** verir",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "ipucu",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "• Odaya girerken yürümesi, karşınıza oturduğunda yüzü, bakışları, ses tonu, konuşması baştan itibaren pek çok ipucu verir"
+        ],
+        "sekil": null
+       },
+       "id": "k2-01-c0043"
+      }
+     ]
+    },
+    {
+     "id": "k2-01-p018",
+     "sayfa": 5,
+     "cumleler": [
+      {
+       "ses": "Hemiplejik hastada kol gövdeye yapışık durur ve hasta yürürken bacağını oraklar; yani bacak yana doğru yarım daire çizerek ileri atılır.",
+       "ekran": "Hemiplejik hasta: kol gövdeye yapışık, bacak **oraklar**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "oraklar",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "• Hemiplejik kolun gövdeye yapışık olması, yürürken bacağını oraklaması"
+        ],
+        "sekil": null
+       },
+       "id": "k2-01-c0044"
+      },
+      {
+       "ses": "Bunun nedeni spastisitedir, yani kasların istemsiz sertleşmesidir.",
+       "ekran": "Neden: **spastisite**, kasların istemsiz sertleşmesi",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "spastisite",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "• Hemiplejik kolun gövdeye yapışık olması, yürürken bacağını oraklaması"
+        ],
+        "sekil": null
+       },
+       "id": "k2-01-c0045"
+      },
+      {
+       "ses": "Spastik bacak dizden bükülemez ve uzamış kalır.",
+       "ekran": "Spastik bacak dizden bükülmez, **uzamış kalır**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "uzamış kalır",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "• Hemiplejik kolun gövdeye yapışık olması, yürürken bacağını oraklaması"
+        ],
+        "sekil": null
+       },
+       "id": "k2-01-c0046"
+      },
+      {
+       "ses": "Ayak ucu yere takılacağı için hasta bacağı yana savurarak ilerletir.",
+       "ekran": "Ayak ucu takılır; bacak **yana savrulur**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "yana savrulur",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "• Hemiplejik kolun gövdeye yapışık olması, yürürken bacağını oraklaması"
+        ],
+        "sekil": null
+       },
+       "id": "k2-01-c0047"
+      }
+     ]
+    },
+    {
+     "id": "k2-01-p019",
+     "sayfa": 5,
+     "cumleler": [
+      {
+       "ses": "Parkinson hastalığında maske yüz, yani mimiksiz yüz, görülür.",
+       "ekran": "**Parkinson**: maske yüz (mimiksiz yüz)",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Parkinson",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "• Parkinson H. maske yüz, monoton konuşma, salya akması, yürürken kollarını sallamaması, vücudun fleksör postürü"
+        ],
+        "sekil": null
+       },
+       "id": "k2-01-c0048"
+      },
+      {
+       "ses": "Monoton konuşma, salya akması, kolların sallanmaması ve fleksör postür eşlik eder.",
+       "ekran": "Monoton konuşma, salya akması, **kolların sallanmaması**, fleksör postür",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "kolların sallanmaması",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [
+        "804e82ac79db"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "• Parkinson H. maske yüz, monoton konuşma, salya akması, yürürken kollarını sallamaması, vücudun fleksör postürü"
+        ],
+        "sekil": null
+       },
+       "id": "k2-01-c0049"
+      },
+      {
+       "ses": "Fleksör postür, vücudun öne eğik, kasılmış bir duruşta olmasıdır.",
+       "ekran": "**Fleksör postür**: öne eğik, kasılmış duruş",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Fleksör postür",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "• Parkinson H. maske yüz, monoton konuşma, salya akması, yürürken kollarını sallamaması, vücudun fleksör postürü"
+        ],
+        "sekil": null
+       },
+       "id": "k2-01-c0050"
+      },
+      {
+       "ses": "Hasta yavaş ve küçük adımlarla yürür.",
+       "ekran": "**Yavaş, küçük adımlarla** yürür",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Yavaş, küçük adımlarla",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "• Parkinson H. maske yüz, monoton konuşma, salya akması, yürürken kollarını sallamaması, vücudun fleksör postürü"
+        ],
+        "sekil": null
+       },
+       "id": "k2-01-c0051"
+      },
+      {
+       "ses": "Bu bilgi çıkmış sınavda sorulmuştur.",
+       "ekran": "**Bu bilgi çıkmış sınavda sorulmuştur.**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Bu bilgi çıkmış sınavda sorulmuştur.",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": null,
+       "id": "k2-01-c0052"
+      }
+     ]
+    },
+    {
+     "id": "k2-01-p020",
+     "sayfa": 5,
+     "cumleler": [
+      {
+       "ses": "Kas distrofisinde hasta karnı önde, iki yana sallanarak yürür; buna ördek yürüyüşü denir.",
+       "ekran": "Kas distrofisi: karın önde, iki yana sallanma; **ördek yürüyüşü**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "ördek yürüyüşü",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "• Kas distrofisinde karın önde «badi-badi» yürüyüşü ördeğe benzer"
+        ],
+        "sekil": null
+       },
+       "id": "k2-01-c0053"
+      },
+      {
+       "ses": "Kalça çevresindeki kaslar güçsüz olduğu için gövde her adımda yana devrilir.",
+       "ekran": "Kalça çevresi kasları güçsüz; gövde her adımda **yana devrilir**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "yana devrilir",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "• Kas distrofisinde karın önde «badi-badi» yürüyüşü ördeğe benzer"
+        ],
+        "sekil": null
+       },
+       "id": "k2-01-c0054"
+      },
+      {
+       "ses": "Hemiplejideki oraklama tek taraflıdır; distrofideki ördek yürüyüşü ise iki yanlıdır.",
+       "ekran": "Hemipleji oraklama **tek taraflı**; ördek yürüyüşü **iki yanlı**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "tek taraflı",
+         "tur": "tuzak"
+        },
+        {
+         "metin": "iki yanlı",
+         "tur": "tuzak"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "• Hemiplejik kolun gövdeye yapışık olması, yürürken bacağını oraklaması",
+         "• Kas distrofisinde karın önde «badi-badi» yürüyüşü ördeğe benzer"
+        ],
+        "sekil": null
+       },
+       "id": "k2-01-c0055"
+      }
+     ]
+    },
+    {
+     "id": "k2-01-p021",
+     "sayfa": 5,
+     "cumleler": [
+      {
+       "ses": "Dizartri, konuşma kaslarının bozulmasından doğan telaffuz bozukluğudur.",
+       "ekran": "**Dizartri**: konuşma kaslarının bozulmasına bağlı telaffuz bozukluğu",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Dizartri",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "• Dizartri, afazi hemen farkedilir"
+        ],
+        "sekil": null
+       },
+       "id": "k2-01-c0056"
+      },
+      {
+       "ses": "Afazi ise dil işlevinin kaybıdır.",
+       "ekran": "**Afazi**: dil işlevinin kaybı",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Afazi",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "• Dizartri, afazi hemen farkedilir"
+        ],
+        "sekil": null
+       },
+       "id": "k2-01-c0057"
+      },
+      {
+       "ses": "İkisi de hastanın konuşmasından hemen fark edilir.",
+       "ekran": "İkisi de konuşmadan **hemen fark edilir**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "hemen fark edilir",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "• Dizartri, afazi hemen farkedilir"
+        ],
+        "sekil": null
+       },
+       "id": "k2-01-c0058"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-01-b06",
+   "baslik": "Nörolojik lokalizasyon",
+   "paragraflar": [
+    {
+     "id": "k2-01-p022",
+     "sayfa": 6,
+     "cumleler": [
+      {
+       "ses": "Muayenede bulgular bir araya gelerek sendrom oluşturur.",
+       "ekran": "Bulgular birleşince **sendrom** oluşur",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "sendrom",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "• Elde edilen bulguların bir araya gelmesiyle bir sendrom ortaya çıkar. Hemipleji send, parapleji sendromu g.b"
+        ],
+        "sekil": null
+       },
+       "id": "k2-01-c0059"
+      },
+      {
+       "ses": "Sendrom, birlikte görülen ve lezyonun yerini gösteren bulgu paketidir.",
+       "ekran": "**Sendrom**: lezyonun yerini gösteren bulgu paketi",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Sendrom",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "• Elde edilen bulguların bir araya gelmesiyle bir sendrom ortaya çıkar. Hemipleji send, parapleji sendromu g.b"
+        ],
+        "sekil": null
+       },
+       "id": "k2-01-c0060"
+      },
+      {
+       "ses": "Hemipleji sendromu ya da parapleji sendromu buna örnektir.",
+       "ekran": "Örnek: **hemipleji** ve **parapleji** sendromları",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "hemipleji",
+         "tur": "terim"
+        },
+        {
+         "metin": "parapleji",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "• Elde edilen bulguların bir araya gelmesiyle bir sendrom ortaya çıkar. Hemipleji send, parapleji sendromu g.b"
+        ],
+        "sekil": null
+       },
+       "id": "k2-01-c0061"
+      },
+      {
+       "ses": "Parapleji, iki bacağın birlikte felcidir.",
+       "ekran": "**Parapleji**: iki bacağın birlikte felci",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Parapleji",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "• Elde edilen bulguların bir araya gelmesiyle bir sendrom ortaya çıkar. Hemipleji send, parapleji sendromu g.b"
+        ],
+        "sekil": null
+       },
+       "id": "k2-01-c0062"
+      }
+     ]
+    },
+    {
+     "id": "k2-01-p023",
+     "sayfa": 6,
+     "cumleler": [
+      {
+       "ses": "Afazi ile birlikte sağ hemipleji varsa hem piramidal yol, yani istemli hareketi ileten yol, hem de konuşma alanı tutulmuştur.",
+       "ekran": "**Afazi + sağ hemipleji**: piramidal yol ve konuşma alanı",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Afazi + sağ hemipleji",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [
+        "9d2e0b3d81c4"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "1. Afazi+ sağ hemipleji piramidal yolu+ konuşma alanı. Sol hemisferde lezyon"
+        ],
+        "sekil": null
+       },
+       "id": "k2-01-c0063"
+      },
+      {
+       "ses": "Lezyon sol hemisferdedir.",
+       "ekran": "Lezyon **sol hemisferde**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "sol hemisferde",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "1. Afazi+ sağ hemipleji piramidal yolu+ konuşma alanı. Sol hemisferde lezyon"
+        ],
+        "sekil": null
+       },
+       "id": "k2-01-c0064"
+      }
+     ]
+    },
+    {
+     "id": "k2-01-p024",
+     "sayfa": 6,
+     "cumleler": [
+      {
+       "ses": "Diplopi, vertigo, piramidal bulgu ve serebellar bulgu birlikte görülüyorsa lezyon beyin sapındadır.",
+       "ekran": "Diplopi, vertigo, piramidal ve serebellar bulgu: **beyin sapı**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "beyin sapı",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "2. Diplopi+ vertigo+ piramidal bulgu+serebellar bulgu             lezyon beyin sapında"
+        ],
+        "sekil": null
+       },
+       "id": "k2-01-c0065"
+      },
+      {
+       "ses": "Diplopi çift görmeyi, vertigo baş dönmesini, serebellar bulgu ise beyincik tutulumunu gösteren denge ve koordinasyon bozukluğunu anlatır.",
+       "ekran": "**Diplopi**: çift görme; **vertigo**: baş dönmesi; serebellar bulgu: denge ve koordinasyon bozukluğu",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Diplopi",
+         "tur": "terim"
+        },
+        {
+         "metin": "vertigo",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "2. Diplopi+ vertigo+ piramidal bulgu+serebellar bulgu             lezyon beyin sapında"
+        ],
+        "sekil": null
+       },
+       "id": "k2-01-c0066"
+      },
+      {
+       "ses": "Bilinç, solunum ve kraniyal sinirler beyin sapında çok dar bir alanda toplanır.",
+       "ekran": "Bilinç, solunum, kraniyal sinirler beyin sapında **dar alanda**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "dar alanda",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "2. Diplopi+ vertigo+ piramidal bulgu+serebellar bulgu             lezyon beyin sapında"
+        ],
+        "sekil": null
+       },
+       "id": "k2-01-c0067"
+      },
+      {
+       "ses": "Bu yüzden küçük bir lezyon bu işlevleri birlikte bozar.",
+       "ekran": "Küçük lezyon bu işlevleri **birlikte bozar**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "birlikte bozar",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "2. Diplopi+ vertigo+ piramidal bulgu+serebellar bulgu             lezyon beyin sapında"
+        ],
+        "sekil": null
+       },
+       "id": "k2-01-c0068"
+      }
+     ]
+    },
+    {
+     "id": "k2-01-p025",
+     "sayfa": 6,
+     "cumleler": [
+      {
+       "ses": "Parapleji ile gövdede seviye veren duyu kaybı ve sfinkter bozukluğu medulla spinalis, yani omurilik lezyonunu gösterir.",
+       "ekran": "Parapleji + seviyeli duyu kaybı + sfinkter bozukluğu: **medulla spinalis**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "medulla spinalis",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "3. Parapleji+ gövdede seviye veren duyu kaybı+ sfinkter boz.          Medulla spinalis"
+        ],
+        "sekil": null
+       },
+       "id": "k2-01-c0069"
+      },
+      {
+       "ses": "Sfinkter bozukluğu idrar ve dışkı tutma sorunudur.",
+       "ekran": "**Sfinkter bozukluğu**: idrar ve dışkı tutma sorunu",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Sfinkter bozukluğu",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "3. Parapleji+ gövdede seviye veren duyu kaybı+ sfinkter boz.          Medulla spinalis"
+        ],
+        "sekil": null
+       },
+       "id": "k2-01-c0070"
+      }
+     ]
+    },
+    {
+     "id": "k2-01-p026",
+     "sayfa": 6,
+     "cumleler": [
+      {
+       "ses": "Bel ve bacak arkasına vuran ağrı ile aşil refleksinin alınamaması birinci sakral radiksin, yani omurilikten çıkan birinci sakral sinir kökünün tutulduğunu gösterir.",
+       "ekran": "Bel-bacak arkası ağrısı + aşil refleksi yok: **1. sakral radiks**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "1. sakral radiks",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [
+        "past-1790877037327-292692"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "4. Bel ve bacak arkasına vuran ağrı+ aşil refleksi alınamıyorsa            1. sakral radiks"
+        ],
+        "sekil": null
+       },
+       "id": "k2-01-c0071"
+      },
+      {
+       "ses": "Aşil refleksiyle birinci sakral kök seviyesinin incelendiği bilgisi çıkmış sınavda sorulmuştur.",
+       "ekran": "**Aşil refleksi** = birinci sakral kök seviyesi",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Aşil refleksi",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "4. Bel ve bacak arkasına vuran ağrı+ aşil refleksi alınamıyorsa            1. sakral radiks"
+        ],
+        "sekil": null
+       },
+       "id": "k2-01-c0072"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-01-b07",
+   "baslik": "Lezyonun natürü",
+   "paragraflar": [
+    {
+     "id": "k2-01-p027",
+     "sayfa": 7,
+     "cumleler": [
+      {
+       "ses": "Lokalizasyondan sonra lezyonun ne olduğu düşünülür.",
+       "ekran": "Lokalizasyondan sonra **lezyonun natürü** düşünülür",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "lezyonun natürü",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "Lezyonun Natürü"
+        ],
+        "sekil": null
+       },
+       "id": "k2-01-c0073"
+      },
+      {
+       "ses": "Hemiplejili bir hastada hipertansiyon ve diyabet varsa ilk sırada damarsal etiyoloji akla gelir.",
+       "ekran": "Hemipleji + hipertansiyon + diyabet: **damarsal etiyoloji**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "damarsal etiyoloji",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "• Hemipleji HT+DM ilk sırada damarsal etyoloji"
+        ],
+        "sekil": null
+       },
+       "id": "k2-01-c0074"
+      }
+     ]
+    },
+    {
+     "id": "k2-01-p028",
+     "sayfa": 7,
+     "cumleler": [
+      {
+       "ses": "Hemipleji yavaş yerleşmiş ve giderek ağırlaşıyorsa yer kaplayan lezyon düşünülür.",
+       "ekran": "Yavaş yerleşen, ağırlaşan hemipleji: **yer kaplayan lezyon**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "yer kaplayan lezyon",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "• Hemipleji",
+         "yavaş yerleşmişse, giderek ağırlaşıyorsa YKL"
+        ],
+        "sekil": null
+       },
+       "id": "k2-01-c0075"
+      },
+      {
+       "ses": "Yer kaplayan lezyon, tümör gibi boşluk işgal eden ve zamanla büyüyen oluşumdur.",
+       "ekran": "**Yer kaplayan lezyon**: tümör gibi, boşluk işgal eden, büyüyen oluşum",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Yer kaplayan lezyon",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "yavaş yerleşmişse, giderek ağırlaşıyorsa YKL"
+        ],
+        "sekil": null
+       },
+       "id": "k2-01-c0076"
+      },
+      {
+       "ses": "Büyüdükçe belirtiler yavaşça ağırlaşır.",
+       "ekran": "Büyüdükçe belirtiler **yavaşça ağırlaşır**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "yavaşça ağırlaşır",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "yavaş yerleşmişse, giderek ağırlaşıyorsa YKL"
+        ],
+        "sekil": null
+       },
+       "id": "k2-01-c0077"
+      },
+      {
+       "ses": "Malignite öyküsü de varsa metastaz akla gelir.",
+       "ekran": "Malignite öyküsü: **metastaz**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "metastaz",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "malignite öyküsü +  metastaz"
+        ],
+        "sekil": null
+       },
+       "id": "k2-01-c0078"
+      }
+     ]
+    },
+    {
+     "id": "k2-01-p029",
+     "sayfa": 7,
+     "cumleler": [
+      {
+       "ses": "Genç bir hastada beyin sapı bulguları kısa sürede gelişmişse, en olası tanı multipl sklerozdur.",
+       "ekran": "Genç hasta, hızlı beyin sapı bulgusu: **multipl skleroz**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "multipl skleroz",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [
+        "4c4eb178b88b"
+       ],
+       "spot": null,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "• Beyin sapı lokalizasyonu       genç hasta, kısa zamanda gelişmiş, öyküsünde sinir sisteminin farklı bölgelerinin etkilendiği epizodlar geçirip düzelmişse            MS"
+        ],
+        "sekil": null
+       },
+       "id": "k2-01-c0079"
+      },
+      {
+       "ses": "Bunun için öyküde sinir sisteminin farklı bölgelerini tutan ve sonra düzelen epizodlar da bulunmalıdır.",
+       "ekran": "Öyküde farklı bölgeleri tutan, **düzelen epizodlar**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "düzelen epizodlar",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "• Beyin sapı lokalizasyonu       genç hasta, kısa zamanda gelişmiş, öyküsünde sinir sisteminin farklı bölgelerinin etkilendiği epizodlar geçirip düzelmişse            MS"
+        ],
+        "sekil": null
+       },
+       "id": "k2-01-c0080"
+      },
+      {
+       "ses": "Bu bilgi çıkmış sınavda sorulmuştur.",
+       "ekran": "**Bu bilgi çıkmış sınavda sorulmuştur.**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Bu bilgi çıkmış sınavda sorulmuştur.",
+         "tur": "cikmis"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": null,
+       "id": "k2-01-c0081"
+      }
+     ]
+    },
+    {
+     "id": "k2-01-p030",
+     "sayfa": 7,
+     "cumleler": [
+      {
+       "ses": "Aynı lokalizasyon yaşlı ve aterosklerozu, yani damar sertliği olan bir hastada serebrovasküler olayı düşündürür.",
+       "ekran": "Yaşlı hasta + **ateroskleroz**: serebrovasküler olay (SVO)",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "ateroskleroz",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "Yaşlı hasta+ ateroskleroz SVO"
+        ],
+        "sekil": null
+       },
+       "id": "k2-01-c0082"
+      },
+      {
+       "ses": "Yaş ve zemin hastalıklar natürü değiştirir.",
+       "ekran": "**Yaş** ve zemin hastalıklar natürü değiştirir",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Yaş",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "Yaşlı hasta+ ateroskleroz SVO"
+        ],
+        "sekil": null
+       },
+       "id": "k2-01-c0083"
+      }
+     ]
+    },
+    {
+     "id": "k2-01-p031",
+     "sayfa": 7,
+     "cumleler": [
+      {
+       "ses": "Paraplejide sinsi başlangıç ve ilerleyici seyir medulla spinalis basısını düşündürür.",
+       "ekran": "Parapleji + sinsi başlangıç, ilerleyici seyir: **medulla spinalis basısı**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "medulla spinalis basısı",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "• Parapleji sinsi başlangıç, ilerleyici seyir           medulla spinalis basısı"
+        ],
+        "sekil": null
+       },
+       "id": "k2-01-c0084"
+      },
+      {
+       "ses": "Aşı ya da viral enfeksiyonu izleyen tablo ise postenfeksiyöz miyeliti, yani enfeksiyon sonrası omurilik iltihabını düşündürür.",
+       "ekran": "Aşı ya da viral enfeksiyon sonrası: **postenfeksiyöz miyelit**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "postenfeksiyöz miyelit",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "• Parapleji",
+         "aşı ya da viral enf +             post-infeksiyöz miyelit"
+        ],
+        "sekil": null
+       },
+       "id": "k2-01-c0085"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-01-b08",
+   "baslik": "Laboratuvar incelemeleri",
+   "paragraflar": [
+    {
+     "id": "k2-01-p032",
+     "sayfa": 8,
+     "cumleler": [
+      {
+       "ses": "Genel yöntemler arasında biyokimya ve bakteriyolojik incelemeler vardır.",
+       "ekran": "Genel: **biyokimya** ve bakteriyolojik incelemeler",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "biyokimya",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "• Genel metodlar: biyokimya, bakteriyolojik metodlar g.b"
+        ],
+        "sekil": null
+       },
+       "id": "k2-01-c0086"
+      },
+      {
+       "ses": "Örneğin kan şekeri ölçülür ya da enfeksiyon için kültür alınır.",
+       "ekran": "Örnek: kan şekeri, enfeksiyonda **kültür**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "kültür",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "• Genel metodlar: biyokimya, bakteriyolojik metodlar g.b"
+        ],
+        "sekil": null
+       },
+       "id": "k2-01-c0087"
+      },
+      {
+       "ses": "Spesifik incelemelerin başında beyin omurilik sıvısı incelemesi gelir.",
+       "ekran": "Spesifik: önce **BOS incelemesi**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "BOS incelemesi",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "• Spesifik: BOS incelemesi"
+        ],
+        "sekil": null
+       },
+       "id": "k2-01-c0088"
+      }
+     ]
+    },
+    {
+     "id": "k2-01-p033",
+     "sayfa": 8,
+     "cumleler": [
+      {
+       "ses": "Üç elektrofizyolojik test farklı şeyi ölçer.",
+       "ekran": "**Üç elektrofizyolojik test** farklı şeyi ölçer",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Üç elektrofizyolojik test",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "• EEG • EMG • Uyarılmış potansiyeller- EP evoked potentials"
+        ],
+        "sekil": null
+       },
+       "id": "k2-01-c0089"
+      },
+      {
+       "ses": "Elektroensefalografi beynin elektriksel etkinliğini yazar.",
+       "ekran": "**EEG**: beynin elektriksel etkinliği",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "EEG",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "• EEG"
+        ],
+        "sekil": null
+       },
+       "id": "k2-01-c0090"
+      },
+      {
+       "ses": "Elektromiyografi kasın elektriksel etkinliğini yazar.",
+       "ekran": "**EMG**: kasın elektriksel etkinliği",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "EMG",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "• EMG"
+        ],
+        "sekil": null
+       },
+       "id": "k2-01-c0091"
+      },
+      {
+       "ses": "Sinirin ileti hızını ise ayrı bir sinir ileti çalışması ölçer; ikisi çoğu zaman birlikte yapılır.",
+       "ekran": "İleti hızını **sinir ileti çalışması** ölçer; ikisi sık birlikte yapılır",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "sinir ileti çalışması",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "• EMG"
+        ],
+        "sekil": null
+       },
+       "id": "k2-01-c0092"
+      },
+      {
+       "ses": "Uyarılmış potansiyel, uyaran verip sinir yolunun yanıtını ölçer.",
+       "ekran": "**Uyarılmış potansiyel**: uyaran verip yolun yanıtını ölçer",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Uyarılmış potansiyel",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "• Uyarılmış potansiyeller- EP evoked potentials"
+        ],
+        "sekil": null
+       },
+       "id": "k2-01-c0093"
+      }
+     ]
+    },
+    {
+     "id": "k2-01-p034",
+     "sayfa": 8,
+     "cumleler": [
+      {
+       "ses": "Elektromiyografi kasın elektriksel etkinliğini kaydeder ve özellikle kas hastalıklarında yol gösterir; demiyelinizan hastalıkta iletim yavaşlığını daha çok sinir ileti çalışması gösterir.",
+       "ekran": "**EMG** kas hastalıklarında yol gösterir; iletim yavaşlığını **sinir ileti çalışması** gösterir",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "EMG",
+         "tur": "terim"
+        },
+        {
+         "metin": "sinir ileti çalışması",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "• EMG"
+        ],
+        "sekil": null
+       },
+       "id": "k2-01-c0094"
+      },
+      {
+       "ses": "Demiyelinizan hastalık, sinirin miyelin kılıfının hasar gördüğü hastalıktır.",
+       "ekran": "**Demiyelinizan** hastalık: miyelin kılıfı hasarlı",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Demiyelinizan",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "• EMG"
+        ],
+        "sekil": null
+       },
+       "id": "k2-01-c0095"
+      }
+     ]
+    },
+    {
+     "id": "k2-01-p035",
+     "sayfa": 8,
+     "cumleler": [
+      {
+       "ses": "Uyarılmış potansiyel, görme, işitme ya da duyu yolunun verdiği elektriksel yanıtı ve iletim süresini ölçer.",
+       "ekran": "**Uyarılmış potansiyel**: görme, işitme, duyu yolu yanıtı ve iletim süresi",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Uyarılmış potansiyel",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "• Uyarılmış potansiyeller- EP evoked potentials"
+        ],
+        "sekil": null
+       },
+       "id": "k2-01-c0096"
+      },
+      {
+       "ses": "Tanıyı destekler, tek başına belirleyici değildir.",
+       "ekran": "Tanıyı **destekler**, tek başına belirleyici değil",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "destekler",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "• Uyarılmış potansiyeller- EP evoked potentials"
+        ],
+        "sekil": null
+       },
+       "id": "k2-01-c0097"
+      }
+     ]
+    },
+    {
+     "id": "k2-01-p036",
+     "sayfa": 8,
+     "cumleler": [
+      {
+       "ses": "Acil durumda bilgisayarlı beyin tomografisi hemen çekilir.",
+       "ekran": "Acilde **BBT** hemen çekilir",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "BBT",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "• BBT"
+        ],
+        "sekil": null
+       },
+       "id": "k2-01-c0098"
+      },
+      {
+       "ses": "Kanama ve kitle böylece hızla ayrılır; erken dönemdeki iskemik inme ise tomografide çoğu kez görünmez, bu yüzden normal tomografi inmeyi dışlamaz.",
+       "ekran": "Kanama, kitle ayrılır; erken iskemik inme görünmeyebilir: **normal BBT inmeyi dışlamaz**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "normal BBT inmeyi dışlamaz",
+         "tur": "tuzak"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "• BBT"
+        ],
+        "sekil": null
+       },
+       "id": "k2-01-c0099"
+      },
+      {
+       "ses": "Beyin manyetik rezonans görüntülemesi ise güçlü bir manyetik alan ve radyo dalgalarıyla elde edilir; X ışını kullanılmaz.",
+       "ekran": "**Beyin MRI**: manyetik alan ve radyo dalgaları; X ışını yok",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Beyin MRI",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 8,
+        "satir": [
+         "• beyin MRI"
+        ],
+        "sekil": null
+       },
+       "id": "k2-01-c0100"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-01-b09",
+   "baslik": "Acil gelen hasta",
+   "paragraflar": [
+    {
+     "id": "k2-01-p037",
+     "sayfa": 9,
+     "cumleler": [
+      {
+       "ses": "Acil getirilen hasta bilinçsiz ya da afazik olabilir ve getiren kişi bilgi sahibi olmayabilir.",
+       "ekran": "Acil hasta **bilinçsiz ya da afazik** olabilir; getiren bilgisiz olabilir",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "bilinçsiz ya da afazik",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [
+         "• Acil olarak getirilen hasta bilinçsiz ya da afazik olabilir. Getiren kişi bilgi sahibi olmayabilir. Böyle bir durumda geri dönüşü olmayan bir noktaya gelmeden önce"
+        ],
+        "sekil": null
+       },
+       "id": "k2-01-c0101"
+      },
+      {
+       "ses": "Geri dönüşü olmayan noktaya gelmeden müdahale etmek gerekir.",
+       "ekran": "**Geri dönüşsüz noktadan** önce müdahale",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Geri dönüşsüz noktadan",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [
+         "olmayabilir. Böyle bir durumda geri dönüşü olmayan bir noktaya gelmeden önce müdahale etmek gerekiyor. Zaman hastanın ve hekimin aleyhine işler."
+        ],
+        "sekil": null
+       },
+       "id": "k2-01-c0102"
+      }
+     ]
+    },
+    {
+     "id": "k2-01-p038",
+     "sayfa": 9,
+     "cumleler": [
+      {
+       "ses": "Zaman hem hastanın hem hekimin aleyhine işler, çünkü zaman beyindir.",
+       "ekran": "Zaman hasta ve hekim aleyhine: **zaman = beyin**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "zaman = beyin",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [
+         "müdahale etmek gerekiyor. Zaman hastanın ve hekimin aleyhine işler. Zaman=beyin"
+        ],
+        "sekil": null
+       },
+       "id": "k2-01-c0103"
+      },
+      {
+       "ses": "İskemide, yani damar tıkanıklığında, dakikalar içinde sinir hücreleri ölmeye başlar.",
+       "ekran": "**İskemi**: dakikalar içinde sinir hücreleri ölmeye başlar",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "İskemi",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [
+         "Zaman=beyin"
+        ],
+        "sekil": null
+       },
+       "id": "k2-01-c0104"
+      },
+      {
+       "ses": "Bu yüzden bilgi toplanırken bir yandan da tedaviye başlanır.",
+       "ekran": "Bilgi toplarken **aynı anda tedavi** başlanır",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "aynı anda tedavi",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [
+         "• Hızlı bir şekilde bilgi toplarken tedaviye de başlanır. Vital bulguları stabil hale getirmek g.b solunum yolunu açık tutmak, nöbet geçiriyorsa durdurmaya çalışmak"
+        ],
+        "sekil": null
+       },
+       "id": "k2-01-c0105"
+      }
+     ]
+    },
+    {
+     "id": "k2-01-p039",
+     "sayfa": 9,
+     "cumleler": [
+      {
+       "ses": "Önce vital bulgular stabil hale getirilir.",
+       "ekran": "Önce **vital bulgular** stabilize edilir",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "vital bulgular",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [
+         "• Hızlı bir şekilde bilgi toplarken tedaviye de başlanır. Vital bulguları stabil hale getirmek g.b solunum yolunu açık tutmak, nöbet geçiriyorsa durdurmaya çalışmak"
+        ],
+        "sekil": null
+       },
+       "id": "k2-01-c0106"
+      },
+      {
+       "ses": "Solunum yolu açık tutulur, çünkü hastanın nefesi durabilir.",
+       "ekran": "**Solunum yolu** açık tutulur: nefes durabilir",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Solunum yolu",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [
+         "• Hızlı bir şekilde bilgi toplarken tedaviye de başlanır. Vital bulguları stabil hale getirmek g.b solunum yolunu açık tutmak, nöbet geçiriyorsa durdurmaya çalışmak"
+        ],
+        "sekil": null
+       },
+       "id": "k2-01-c0107"
+      },
+      {
+       "ses": "Gerekirse entübasyon yani soluk borusuna tüp yerleştirme ve yoğun bakım gündeme gelir.",
+       "ekran": "Gerekirse **entübasyon** ve yoğun bakım",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "entübasyon",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": null,
+       "id": "k2-01-c0108"
+      },
+      {
+       "ses": "Hasta nöbet geçiriyorsa nöbet durdurulmaya çalışılır.",
+       "ekran": "Nöbet varsa **nöbet durdurulur**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "nöbet durdurulur",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [
+         "• Hızlı bir şekilde bilgi toplarken tedaviye de başlanır. Vital bulguları stabil hale getirmek g.b solunum yolunu açık tutmak, nöbet geçiriyorsa durdurmaya çalışmak"
+        ],
+        "sekil": null
+       },
+       "id": "k2-01-c0109"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k2-01-b10",
+   "baslik": "İlk gören hekim ve sevk",
+   "paragraflar": [
+    {
+     "id": "k2-01-p040",
+     "sayfa": 9,
+     "cumleler": [
+      {
+       "ses": "Hastayı ilk gören hekim, hastanın bilincinin giderek kapandığını ve tablonun ilerlediğini fark etmelidir.",
+       "ekran": "İlk gören hekim: bilinç **giderek kapanıyor**, tablo ilerliyor",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "giderek kapanıyor",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [
+         "• İlk gören hekim hastanın giderek kapandığını, progrese olduğunu farketmeli. Tanı konulamayan, tedavi edilemeyen hastayı nöroloji kliniğine göndermeli"
+        ],
+        "sekil": null
+       },
+       "id": "k2-01-c0110"
+      },
+      {
+       "ses": "Bilinci kapanan ya da tablosu ilerleyen hasta bekletilmeden gönderilir.",
+       "ekran": "Bilinci kapanan ya da ilerleyen hasta **bekletilmeden** gönderilir",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "bekletilmeden",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [
+         "• İlk gören hekim hastanın giderek kapandığını, progrese olduğunu farketmeli. Tanı konulamayan, tedavi edilemeyen hastayı nöroloji kliniğine göndermeli"
+        ],
+        "sekil": null
+       },
+       "id": "k2-01-c0111"
+      },
+      {
+       "ses": "Tanı konulamayan ve tedavi edilemeyen hasta da nöroloji kliniğine gönderilir.",
+       "ekran": "Tanı konulamayan, tedavi edilemeyen hasta **nöroloji kliniğine**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "nöroloji kliniğine",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [
+         "• İlk gören hekim hastanın giderek kapandığını, progrese olduğunu farketmeli. Tanı konulamayan, tedavi edilemeyen hastayı nöroloji kliniğine göndermeli"
+        ],
+        "sekil": null
+       },
+       "id": "k2-01-c0112"
+      }
+     ]
+    },
+    {
+     "id": "k2-01-p041",
+     "sayfa": 9,
+     "cumleler": [
+      {
+       "ses": "Sevkte öykü ve bulgular açıkça yazılır; anlaşılmaz kısaltma kullanılmaz.",
+       "ekran": "Sevkte öykü ve bulgular **açık yazılır**; anlaşılmaz kısaltma yok",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "açık yazılır",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [
+         "• Gönderirken öykü ve muayene bulgularını açık, anlaşılır bir şekilde yazmalı. Anlaşılmaz kısaltmalar kullanmamalı, epilepsi, miyokloni, kore gibi deyimler"
+        ],
+        "sekil": null
+       },
+       "id": "k2-01-c0113"
+      },
+      {
+       "ses": "Pratisyen hekim yazıda yalnız tanı etiketi yazmak yerine gözlediği bulguyu açıkça tarif eder ve hastayı sevk eder.",
+       "ekran": "Tanı etiketi yerine **gözlenen bulgu** tarif edilir",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "gözlenen bulgu",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [
+         "• Gönderirken öykü ve muayene bulgularını açık, anlaşılır bir şekilde yazmalı. Anlaşılmaz kısaltmalar kullanmamalı, epilepsi, miyokloni, kore gibi deyimler yerine gördüğünü yazmalı. Bilinç düzeyini , saatini, pupil büyüklüklerini"
+        ],
+        "sekil": null
+       },
+       "id": "k2-01-c0114"
+      }
+     ]
+    },
+    {
+     "id": "k2-01-p042",
+     "sayfa": 9,
+     "cumleler": [
+      {
+       "ses": "Epilepsi bir tanıdır; miyokloni ve kore ise bulgu adlarıdır.",
+       "ekran": "**Epilepsi** tanı; **miyokloni**, **kore** bulgu adı",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Epilepsi",
+         "tur": "terim"
+        },
+        {
+         "metin": "miyokloni",
+         "tur": "terim"
+        },
+        {
+         "metin": "kore",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [
+         "Anlaşılmaz kısaltmalar kullanmamalı, epilepsi, miyokloni, kore gibi deyimler yerine gördüğünü yazmalı. Bilinç düzeyini , saatini, pupil büyüklüklerini"
+        ],
+        "sekil": null
+       },
+       "id": "k2-01-c0115"
+      },
+      {
+       "ses": "Bunların yerine hastanın nasıl hareket ettiği, ne kadar sürdüğü ve bilincinin nasıl olduğu yazılır.",
+       "ekran": "Hastanın hareketi, süresi ve **bilinci** yazılır",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "bilinci",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [
+         "Anlaşılmaz kısaltmalar kullanmamalı, epilepsi, miyokloni, kore gibi deyimler yerine gördüğünü yazmalı. Bilinç düzeyini , saatini, pupil büyüklüklerini"
+        ],
+        "sekil": null
+       },
+       "id": "k2-01-c0116"
+      },
+      {
+       "ses": "Miyokloni kısa ve ani kas sıçramasıdır.",
+       "ekran": "**Miyokloni**: kısa, ani kas sıçraması",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Miyokloni",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [
+         "Anlaşılmaz kısaltmalar kullanmamalı, epilepsi, miyokloni, kore gibi deyimler yerine gördüğünü yazmalı. Bilinç düzeyini , saatini, pupil büyüklüklerini"
+        ],
+        "sekil": null
+       },
+       "id": "k2-01-c0117"
+      },
+      {
+       "ses": "Kore, akıcı, amaçsız ve kısa süreli istemsiz hareketlerdir.",
+       "ekran": "**Kore**: akıcı, amaçsız, kısa süreli istemsiz hareket",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Kore",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [
+         "Anlaşılmaz kısaltmalar kullanmamalı, epilepsi, miyokloni, kore gibi deyimler yerine gördüğünü yazmalı. Bilinç düzeyini , saatini, pupil büyüklüklerini"
+        ],
+        "sekil": null
+       },
+       "id": "k2-01-c0118"
+      }
+     ]
+    },
+    {
+     "id": "k2-01-p043",
+     "sayfa": 9,
+     "cumleler": [
+      {
+       "ses": "Bilinç düzeyi, muayene saati ve pupil büyüklükleri kaydedilir.",
+       "ekran": "**Bilinç düzeyi**, saat, pupil büyüklükleri kaydedilir",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Bilinç düzeyi",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [
+         "yerine gördüğünü yazmalı. Bilinç düzeyini , saatini, pupil büyüklüklerini kaydetmeli. Hemiparezi açıklamalı ( bacağını kaldıramıyor yatak içinde çekebiliyor)"
+        ],
+        "sekil": null
+       },
+       "id": "k2-01-c0119"
+      },
+      {
+       "ses": "Hemiparezi, yani kısmi güç kaybı da açıklanır; örneğin hasta bacağını kaldıramıyor ama yatak içinde çekebiliyor diye yazılır.",
+       "ekran": "**Hemiparezi** açıklanır: bacağını kaldıramıyor, yatakta çekebiliyor",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Hemiparezi",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 9,
+        "satir": [
+         "kaydetmeli. Hemiparezi açıklamalı ( bacağını kaldıramıyor yatak içinde çekebiliyor)"
+        ],
+        "sekil": null
+       },
+       "id": "k2-01-c0120"
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "anahtar": "k2-01-norolojik-hastaya-yaklasim"
+}

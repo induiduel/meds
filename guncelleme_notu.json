@@ -1,17 +1,15 @@
 {
- "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
- "onem": 405,
- "baslik": "Topluluk",
- "maddeler": [
-  "Yeni: Menü › Topluluk — Genel ve kurul kanallarında arkadaşlarınla yazış",
-  "Her dersin sayfasında 'Yorumlar': o ders hakkında soru sor, not paylaş",
-  "Mesajı yanıtla, kendi mesajını sil, uygunsuz mesajı bildir"
- ],
- "eklenen": [],
- "degisen": [],
- "duzeltilen": [
-  "Tireyle bitişik yazılan kısaltmalar (DSM-5, MAO-A, HIV-1, 5-HTTLPR) artık slaytta doğru yerde işaretleniyor.",
-  "Büyük harfli Türkçe sözcükler (BİLİNÇ, KOMA) kısaltma sayılmıyor."
- ],
- "silinen": []
+  "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
+  "onem": 406,
+  "baslik": "Nöroloji dersleri yenileniyor",
+  "maddeler": [
+    "Nörolojik Hastaya Yaklaşım ve Bilinç Bozukluğu Olan Hastaya Yaklaşım dersleri daha açıklayıcı anlatımla yeniden hazırlanıyor."
+  ],
+  "eklenen": [],
+  "degisen": [],
+  "duzeltilen": [
+    "Tireyle bitişik yazılan kısaltmalar (DSM-5, MAO-A, HIV-1, 5-HTTLPR) artık slaytta doğru yerde işaretleniyor.",
+    "Büyük harfli Türkçe sözcükler (BİLİNÇ, KOMA) kısaltma sayılmıyor."
+  ],
+  "silinen": []
 }
