@@ -44,6 +44,7 @@ import {
   RotateCcw,
   Network,
   MessagesSquare,
+  UserPlus,
   FileDown,
   Grid3x3,
 } from 'lucide-react';
@@ -120,6 +121,7 @@ const I: Record<string, NavItem> = {
   sinav_takvimi: { id: 'sinav_takvimi', label: 'Sınav takvimi', short: 'Takvim', tile: 'Sınav takvimi', hint: 'Kurul sınavları, final ve bütünleme; kalan gün', icon: CalendarDays, tint: '#FF9F0A' },
   sinav_plani: { id: 'sinav_plani', label: 'Sınav planı', short: 'Plan', tile: 'Sınav planı', hint: 'En az 60 için kişiye özel, gün gün yol haritası', icon: Target, tint: '#FF9F0A' },
   hucrem: { id: 'hucrem', label: 'Hücrem', short: 'Hücrem', tile: 'Hücrem', hint: 'ATP ile hücreni 28 evrim basamağında büyüt', icon: Dna, tint: '#34C759' },
+  arkadaslar: { id: 'arkadaslar', label: 'Arkadaşlar', short: 'Arkadaş', tile: 'Arkadaşlar', hint: 'Arkadaş ekle, mesajlaş, soru çözmeye davet et', icon: UserPlus, tint: '#34C759' },
   topluluk: { id: 'topluluk', label: 'Topluluk', short: 'Topluluk', tile: 'Topluluk', hint: 'Sohbet kanalları ve ders yorumları', icon: MessagesSquare, tint: '#32ADE6' },
   pdf_olustur: { id: 'pdf_olustur', label: 'PDF oluştur', short: 'PDF', tile: 'PDF oluştur', hint: 'Ders metinlerini tek ya da ayrı PDF olarak indir', icon: FileDown, tint: '#FF3B30' },
   bildirimler: { id: 'bildirimler', label: 'Bildirimler', short: 'Bildirim', tile: 'Bildirimler', hint: 'Yeni ders, sınav hatırlatması, tekrar zamanı, yorum ve düzeltmeler', icon: Bell, tint: '#FF3B30' },
@@ -147,7 +149,7 @@ const NAV_TREE_HAM: NavGroup[] = [
   { label: 'Sınava hazırlan', items: [I.sinav_takvimi, I.sinav_plani, I.son_prova, I.cikmis_cozucu, I.kamp, I.en_onemliler, I.spots] },
   { label: 'Check Up', items: [I.genetik_checkup, I.patoloji_checkup] },
   { label: 'Başvuru', items: [I.oncelikli_dersler, I.glossary, I.diseases, I.health_ministry, I.kazanimlar, I.gecmis_kurullar, I.guncellemeler] },
-  { label: 'Topluluk', items: [I.topluluk, I.basarimlar, I.hucrem, I.leaderboard, I.matrix] },
+  { label: 'Topluluk', items: [I.topluluk, I.arkadaslar, I.basarimlar, I.hucrem, I.leaderboard, I.matrix] },
   { label: 'Kişisel', items: [I.bitirdiklerim, I.cevrimdisi, I.study, I.stats, I.music] },
 ];
 

@@ -11,11 +11,12 @@ Toplam 280 ekran.
 
 | Durum | Sayı |
 |---|---|
-| VAR | 55 |
-| KISMİ | 111 |
-| YOK | 50 |
-| BİLİNÇLİ YOK | 14 |
-| DOĞRULANMADI | 50 |
+| VAR | 127 |
+| KURULDU | 64 |
+| KISMİ | 4 |
+| YOK | 48 |
+| BİLİNÇLİ YOK | 16 |
+| DOĞRULANMADI | 21 |
 
 Not: YOK sayısının 6'sı tasarım belgesi ekranıdır (A09, K08, P01, W03, X09, Z01: bileşen, ikon, yazı örneği, ekran haritası); kod karşılığı gerekmez.
 
@@ -36,8 +37,8 @@ Not: YOK sayısının 6'sı tasarım belgesi ekranıdır (A09, K08, P01, W03, X0
 | A02 | ana (Bugün) | today → today/TodayView.tsx (v15 dalı), today.css | KURULDU | Seri·Hücre·Kronometre şeridi, Oyna |
 | A03 | menu | ShellV15 › TabBarV15 Menü | KURULDU | Oyunlar bölümü + bölüm açıklamaları |
 | A04 | kurul | Merkezlerdeki "Kurul seç" (DerslerMerkezV15 vb.) | KURULDU | KurulSecV15: Bitti/Aktif/tarih + Takvimi aç (4 merkez) |
-| A05 | arama | search → SearchView (⌘K) | DOĞRULANMADI | Tasarımdaki tür çipleri ve "Sesli derste geçen yerler" (zaman damgalı) bölümü bulunamadı |
-| A06 | bildirim | — | YOK | Sekmeli bildirim merkezi (Tümü/Ders/Soru/Sistem, düello daveti) sitede yok; ShellV15'te yalnız "Bildirimler" girişi |
+| A05 | arama | search → SearchView (⌘K) | KISMİ | SearchPalette (⌘K) komut paleti + SearchView; "Sesli derste geçen yerler" (zaman damgalı) bölümü bulunamadı |
+| A06 | bildirim | — | VAR | v15/BildirimlerV15.tsx (/bildirimler): Tümü/Ders/Soru/Sistem sekmeleri; düello daveti türü yok |
 | A07 | guncelle | UpdatePrompt + shell.css hap bildirim | VAR |  |
 | A08 | durumlar | v15-skel, sayfa içi boş/hata metinleri | KURULDU | .b15-bos ortak durum kartı (simge + metin, hata + Yeniden dene) |
 | A09 | bilesenler | — (tasarım belgesi) | YOK | Kod karşılığı gerekmez; ortak sınıflar V15_PLAN tablosunda |
@@ -63,11 +64,11 @@ Not: YOK sayısının 6'sı tasarım belgesi ekranıdır (A09, K08, P01, W03, X0
 | B15 | b2hastalik | diseases → DiseasesV12 + sozluk.css | VAR | Liste/Anatomi seçici, DiseaseAnatomy: sistem noktaları (category + ad kökünden), bulgu süzgeci; 199/474 "Diğer" |
 | B16 | b2hastalikDetay | DiseasesV12 ayrıntı | VAR | tanım listesi (Klinik/Tanı/Tedavi…), çıkmış sayısı, dersler; sekme yerine bölüm |
 | B17 | b2kazanim | kazanimlar (PageToolbar) | KURULDU | kapsam halkası + Tam kapsam/Çıkmışta/Kapsamsız |
-| B18 | b2ornek | ornek_sorular | DOĞRULANMADI | v15 dalı/stili bulunamadı |
-| B19 | b2oncelik | oncelikli_dersler | DOĞRULANMADI | v15 dalı/stili bulunamadı |
+| B18 | b2ornek | ornek_sorular | VAR | KazanimSorulariView: Toplam/Çözdüğün/Bugün özet kartları (ks15) |
+| B19 | b2oncelik | oncelikli_dersler | VAR | OncelikliDerslerView: B19 panosu (kalan ders, süre, beklenen soru, branş puan/emek çubukları) |
 | B20 | b2harita | soru_haritasi → v15/SoruHaritasiV15.tsx | VAR |  |
-| B21 | b2masa | study (Çalışma masam) | DOĞRULANMADI | Notlar sekmesine notlar.css; masa ekranının kendisi DOĞRULANMADI |
-| B22 | b2muzik | music | DOĞRULANMADI | v15 dalı bulunamadı |
+| B21 | b2masa | study (Çalışma masam) | VAR | v15/MasaGunV15.tsx: hafta şeridi, günün akışı, bugünkü süre + seri |
+| B22 | b2muzik | music | VAR | v15/MuzikV15.tsx: çalar kartı, süre çipleri (25/45 dk/ders bitene kadar), liste |
 
 ## S · Sesli ders
 
@@ -76,21 +77,21 @@ Not: YOK sayısının 6'sı tasarım belgesi ekranıdır (A09, K08, P01, W03, X0
 | S01 | sdA (PDF üstte, metin altta) | canli_ders › CanliDersDers + CdV15 + sesli.css | VAR |  |
 | S02 | sdB (yan yana) | CdV15Gorunum › Bölme yönü "Yan yana" | VAR |  |
 | S03 | sdC (yalnız metin) | Görünüm "Metin" | VAR |  |
-| S04 | sdD (PDF + altyazı şeridi) | — | DOĞRULANMADI | "Altyazı" kipi kodda bulunamadı; büyük olasılıkla YOK |
+| S04 | sdD (PDF + altyazı şeridi) | — | VAR | CanliDersDers: "Slayt + altyazı" görünümü (altyazi) |
 | S05 | sdE (odak modu) | ShellV15 odakEkrani + Tam ekran | KURULDU | Odak modu (menü › Diğer): yalnız metin, 3 düğme, dokununca denetimler, Esc/Çık |
-| S06 | sdF (sesli kitap kipi) | — | YOK | Kapak + dalga + uyku zamanlayıcı kipi yok |
-| S07 | sdG (üç bölmeli masa) | — | YOK | PC'de bölümler + PDF + metin üç bölme yok; "Vurgularım" yok |
+| S06 | sdF (sesli kitap kipi) | — | VAR | CdSesliEk sesli kitap kipi |
+| S07 | sdG (üç bölmeli masa) | — | VAR | CdSesliEk üç bölmeli masa (≥1200px) + Vurgularım |
 | S08 | sdH (okuma ayarları) | CdV15Gorunum › Yazı boyutu | KURULDU | okuma ayarları (satır, yazı tipi, zemin, ortala) |
 | S09 | sdI (bölümler ve işaretler) | CanliDersDers bölüm/aşama listesi | KURULDU | Bölümler + Yıldızlılarım |
-| S10 | sdJ (seçim araç çubuğu) | — | YOK | Cümle seçince Spot yap/Not/Kart/Açıkla/Soru üret çubuğu yok |
+| S10 | sdJ (seçim araç çubuğu) | — | VAR | seçim çubuğu: Spot yap/Not/Kart/Açıkla (Soru üret kaynaksız olduğu için yok) |
 | S11 | sdK (mini oynatıcı + çevrimdışı) | CanliDersDock + CanliDersCevrimdisi | KURULDU | mini oynatıcı simge karosu + çevrimdışı/bağlantı kartı (S17) |
 | S12 | sdL (ders içi ara soru) | CdCikmisChip (çıkmış soru) | VAR | "Bölüm sonunda dur" + Pekiştir (S18) ses durur, soru çözülür |
 | S13 | sdM (yükleniyor) | CanliDersDers "hazırlanıyor" | KURULDU | Ders hazırlanıyor iskeleti; ses iniş yüzdesi yok |
 | S14 | sdN (PDF eşleşmesi yok) | CanliDersDers "bulunamadı" | KURULDU | PDF eşleşmesi yok notu: son eşleşen sayfa, orada kal, elle gez (bildir yok) |
-| S15 | sdO (yatay telefon) | — | DOĞRULANMADI | Yatay telefon tek satır oynatıcı kipi kodda görülmedi |
-| S16 | sdP (kilit ekranı) | — | YOK | Sesli derste navigator.mediaSession yok (yalnız asistan/çözücü/müzikte); kilit ekranı altyazı satırı yok |
-| S17 | sdQ (bağlantı koptu) | — | DOĞRULANMADI | Arabellek uyarısı/"Tekrar dene"/indir kartı bulunamadı |
-| S18 | sdR (bölüm sonu) | — | YOK | "Bölüm bitti · 3 soruyla pekiştir · Devam (5 sn)" kutusu ve "bölüm sonlarında dur" ayarı yok |
+| S15 | sdO (yatay telefon) | — | VAR | CanliDersDers GENIS_SORGU + sesli.css yatay telefon kuralı (tek satır oynatıcı) |
+| S16 | sdP (kilit ekranı) | — | VAR | canliDersStore mediaSession |
+| S17 | sdQ (bağlantı koptu) | — | VAR | CanliDersDock: Bağlantı koptu kartı, "Ses mm:ss'de durdu", Tekrar dene; indirilmiş derste çıkmaz |
+| S18 | sdR (bölüm sonu) | — | VAR | bölüm sonu kutusu + Bölüm sonlarında dur |
 | S19 | sdS (ana ekran v2) | CdV15Bas + PDF şeridi | VAR |  |
 | S20 | sdT (terim bilgi kartı) | CdTerimKatman | KURULDU | Sözlükte aç + Karta ekle |
 | S21 | sdU0 (çıkmış belirdi) | CdCikmisChip | KURULDU | oynatıcı çıkmış şeridi |
@@ -116,7 +117,7 @@ Not: YOK sayısının 6'sı tasarım belgesi ekranıdır (A09, K08, P01, W03, X0
 | C06 | cozucu | soru_cozucu → SoruCozucuSayfa + cozucu.css | VAR | SoruCozucu: soru + şıklar + sesli açıklama vurgusu + oynatıcı |
 | C07 | cikmis | past_exams → CikmisV12 + cikmis.css | KURULDU | Yıla/Konuya göre kartlar |
 | C08 | sonuc | PracticeV15 Test sonucu | VAR | Halka + stat var; konu dağılımı çubukları DOĞRULANMADI |
-| C09 | hatalar (Yanlışlarım) | Hata defteri (Öğren kitaplığı bağlantısı) | DOĞRULANMADI | Tekrar zamanı/Bekleyen/Öğrenildi sekmeli v15 ekranı bulunamadı |
+| C09 | hatalar (Yanlışlarım) | Hata defteri (Öğren kitaplığı bağlantısı) | VAR | v15/YanlislarimV15.tsx: Tekrar zamanı/Bekleyen/Öğrenildi sekmeleri |
 | C10 | soruEkle | quick_add → PoolV12 + havuz.css | VAR | soru ekle: kök/şıklar + yazım yardımcısı (composer) |
 
 ## D · Sınava hazırlan
@@ -138,8 +139,8 @@ Not: YOK sayısının 6'sı tasarım belgesi ekranıdır (A09, K08, P01, W03, X0
 | E01 | kmbListe | kmb_asistan → kmb/KmbAsistan.tsx | VAR | kmb.css 2026-10-27 token tabanlı yeniden yazıldı (başka oturum); kart ızgarası + durum |
 | E02 | kmbOgret | KmbAsistan öğret adımı | VAR | aynı stil katmanı; öğret adımı sahne + ses |
 | E03 | kmbVaka | KmbAsistan vaka sınavı | VAR | aynı; vaka sınavı + yeni Etiketleri yerleştir/Değerlendirme |
-| E04 | kmbCizim | — | DOĞRULANMADI | Sürükle-bırak canlı çizim bulunamadı |
-| E05 | kmbKontrol | — | DOĞRULANMADI | Kontrol listesi değerlendirme ekranı bulunamadı |
+| E04 | kmbCizim | — | KISMİ | KmbAsistan Yerlestir: etiket seçip sahnede yerine dokunma; sürükle-bırak yok |
+| E05 | kmbKontrol | — | VAR | KmbAsistan: kontrol listesi Yaptım/Atladım, n/N ve %80 Geçti/Tekrar çalış |
 
 ## F · Oyunlar
 
@@ -149,9 +150,9 @@ Not: YOK sayısının 6'sı tasarım belgesi ekranıdır (A09, K08, P01, W03, X0
 | F02 | bosluk | v15/OyunBoslukV15.tsx | VAR |  |
 | F03 | eslestir | v15/OyunEslestirV15.tsx | VAR |  |
 | F04 | kartlar | flashcards → FlashcardsV12 + kartlar.css | KURULDU | Tekrar/Zor/İyi/Kolay dörtlüsü (Kolay: kutu +2, kısayol 4) |
-| F05 | sirala | — | YOK |  |
+| F05 | sirala | — | VAR | OyunDersV15 Sırala |
 | F06 | blitz | OyunSoloV15 (Blitz) | KURULDU | Blitz: önerme Doğru/Yanlış + seri çarpanı (×1, ×2…), puan rekoru |
-| F07 | izgara | — | YOK |  |
+| F07 | izgara | — | VAR | OyunDersV15 Izgara (terim–tanım) |
 | F08 | duelloLobi | OyunlarV15 Oda kur/Koda katıl | VAR | Oda kur + Koda katıl; rastgele rakip/çevrimiçi arkadaşlar eşleştirme sunucusu gerektirir |
 | F09 | duello | OyunlarV15 canlı oyun | VAR |  |
 | F10 | duelloSonuc | OyunlarV15 Oyun bitti | KURULDU | puan özeti, Yanlışları gör, Rövanş (kurucu, aynı ayar), Yeni oyun |
@@ -195,11 +196,11 @@ Not: YOK sayısının 6'sı tasarım belgesi ekranıdır (A09, K08, P01, W03, X0
 | I03 | intro2 | OnboardingV12 | KURULDU | tam sayfa tanıtım |
 | I04 | intro3 | OnboardingV12 | KURULDU | tam sayfa tanıtım |
 | I05 | girisSecenek | AuthV12 Giriş/Kayıt sekmesi | KURULDU | Hesabına gir |
-| I06 | otp | — | YOK | E-posta/şifre; tek kullanımlık kod ekranı yok |
-| I07 | kayitUni | OnboardingV12? | DOĞRULANMADI |  |
-| I08 | kayitSinif | OnboardingV12? | DOĞRULANMADI |  |
-| I09 | kayitKurul | OnboardingV12? | DOĞRULANMADI |  |
-| I10 | kayitHedef | OnboardingV12? | DOĞRULANMADI |  |
+| I06 | otp | — | KISMİ | e-posta bağlantısıyla şifresiz giriş; Firebase konsolunda Email link açılmalı |
+| I07 | kayitUni | OnboardingV12? | VAR | v15/ProfilKurulumV15.tsx (üniversite adımı) |
+| I08 | kayitSinif | OnboardingV12? | VAR | v15/ProfilKurulumV15.tsx (sınıf adımı) |
+| I09 | kayitKurul | OnboardingV12? | VAR | v15/ProfilKurulumV15.tsx (kurul adımı, kurulKaydet) |
+| I10 | kayitHedef | OnboardingV12? | VAR | v15/ProfilKurulumV15.tsx (hedef adımı) |
 | I11 | kayitBitti | OnboardingV12 Bitir | KURULDU | Hücren doğdu (ProfilKurulumV15) |
 
 ## J · Grafik ve şemalar
@@ -207,7 +208,7 @@ Not: YOK sayısının 6'sı tasarım belgesi ekranıdır (A09, K08, P01, W03, X0
 | Kod | Ad | Site karşılığı | Durum | Not |
 |---|---|---|---|---|
 | J01 | grafikler | stats → StatsView + v15/CalismaGrafikleriV15.tsx | KURULDU | doğru oranı çizgisi (baraj %60) + çalışma takvimi; sınıf ortalaması verisi yok |
-| J02 | grafikDetay | — | YOK | Konu performansı + unutma eğrisi yok |
+| J02 | grafikDetay | — | VAR | IstatistikV15 Konular: performans + unutma eğrisi |
 | J03 | zihin | zihin_haritasi (bağlantısız) | BİLİNÇLİ YOK | Kullanıcı reddetti (2026-10-27) |
 | J04 | yolHaritasi | — | BİLİNÇLİ YOK | J03–J06 grubu reddedildi (plan) |
 | J05 | akis | — | BİLİNÇLİ YOK |  |
@@ -221,8 +222,8 @@ Not: YOK sayısının 6'sı tasarım belgesi ekranıdır (A09, K08, P01, W03, X0
 | K02 | kalemPdf | CdV15KalemKutusu (sesli ders) | VAR |  |
 | K03 | kalemNot | NotlarimV15 kalem | BİLİNÇLİ YOK | el yazısını metne çevirme tanıma modeli gerektirir (yerel GPU/LLM yasağı) |
 | K04 | notEditor | NotlarimV15 | KURULDU | madde listesi düğmesi + Enter ile yeni madde; ses damgası (B11) var |
-| K05 | notPaylas | — | YOK | Kişi/grup paylaşımı yok (paylaş = metni gönder) |
-| K06 | paylasilan | — | YOK |  |
+| K05 | notPaylas | — | VAR | NotPaylasV15 + notPaylas.ts |
+| K06 | paylasilan | — | VAR | /notlarim?gorunum=paylasilan |
 | K07 | yaziAyar | Ayarlar › Görünüm | DOĞRULANMADI |  |
 | K08 | yaziOrnek | — (tasarım belgesi) | YOK | Kod karşılığı gerekmez |
 
@@ -233,7 +234,7 @@ Not: YOK sayısının 6'sı tasarım belgesi ekranıdır (A09, K08, P01, W03, X0
 | L01 | sohbetListe | topluluk → v15/ToplulukV15.tsx | VAR | sohbet listesi + oda + davet kodu (toplulukSohbet.ts, topluluk_sohbet.sql) |
 | L02 | sohbet | ToplulukV15 kanal | VAR |  |
 | L03 | yorumlar | ToplulukV15 ders yorumları | VAR | yorumlar: En faydalı/En yeni, beğeni toggle (yorum_begeni), yanıt |
-| L04 | soruListe | quick_add/PoolView | DOĞRULANMADI | Süzgeç çipli soru listesi v15'te bulunamadı |
+| L04 | soruListe | quick_add/PoolView | VAR | PoolV12: kişisel süzgeç çipleri (Hepsi/Yanlışlarım/Kaydettiklerim/Yorumlu) |
 | L05 | kurulListe | "Kurul seç" | KURULDU | KurulSecV15 tema adları + durum |
 | L06 | seneSec | SesliListeV15 "2025-26 arşivi" | KURULDU | dönem seçici 2026–27 / 2025–26 |
 
@@ -243,49 +244,49 @@ Not: YOK sayısının 6'sı tasarım belgesi ekranıdır (A09, K08, P01, W03, X0
 |---|---|---|---|---|
 | M01 | hucrem | hucrem → v15/HucremV15.tsx + Hucre3D | VAR |  |
 | M02 | evrim | HucremV15 (28 basamak) | VAR |  |
-| M03 | evrimDetay | HucremV15 | DOĞRULANMADI |  |
+| M03 | evrimDetay | HucremV15 | VAR | HucremV15: basamak ayrıntısı (evrimDetay) |
 | M04 | glukoz | HucremV15 glukoz | VAR |  |
 | M05 | hucreStres | HucremV15 "Hücren aç kalıyor" | VAR | canlılık çubuğu + "Hücren aç kalıyor/uykuda" durumu |
-| M06 | seviyeAtla | — | DOĞRULANMADI |  |
+| M06 | seviyeAtla | — | VAR | HucremV15: seviye atlama kutlaması (Paylaş + Harika) |
 | M07 | siralama | leaderboard + Hucrem "Hücre sırası" | VAR | SiralamaV15: Sınıfım/Üniversite/Türkiye/Arkadaşlar; üniversite süzgeci sunucuda; arkadaş sistemi yok (boş durum) |
 | M08 | profil2 | ProfileV12 v15 | KURULDU | profil kartında okul/sınıf/kurul |
 | M09 | profilDuzenle | — | DOĞRULANMADI |  |
 | M10 | basarim2 | basarimlar | VAR | BasarimView + rozet ayrıntısı |
-| M11 | rozetDetay | — | DOĞRULANMADI |  |
-| M12 | evrimYol | HucremV15 basamak yolu | DOĞRULANMADI |  |
-| M13 | cag1 | — | DOĞRULANMADI |  |
-| M14 | cag2 | — | DOĞRULANMADI |  |
-| M15 | cag3 | — | DOĞRULANMADI |  |
-| M16 | cag4 | — | DOĞRULANMADI |  |
-| M17 | hucreKarsilastir | — | YOK |  |
+| M11 | rozetDetay | — | VAR | BasarimView: rozet ayrıntısı (baklava rozet, seviye, tarih, Paylaş) |
+| M12 | evrimYol | HucremV15 basamak yolu | VAR | HucremV15: evrim yolculuğu, önceki/sonraki, zaman çizgisi |
+| M13 | cag1 | — | VAR | HucremV15: çağ sekmesi + basamak kartları |
+| M14 | cag2 | — | VAR | HucremV15: çağ sekmesi + basamak kartları |
+| M15 | cag3 | — | VAR | HucremV15: çağ sekmesi + basamak kartları |
+| M16 | cag4 | — | VAR | HucremV15: çağ sekmesi + basamak kartları |
+| M17 | hucreKarsilastir | — | VAR | Hücrem Karşılaştır |
 
 ## N · Quiz kipleri
 
 | Kod | Ad | Site karşılığı | Durum | Not |
 |---|---|---|---|---|
 | N01 | quizModSec | OyunlarV15 tür seçimi | KURULDU | Oyunlar mod kartları |
-| N02 | quizGorsel | — | YOK |  |
+| N02 | quizGorsel | — | KISMİ | kod hazır; havuzda görselli soru yok, kart gizli |
 | N03 | quizCumle | OyunBoslukV15 | VAR | Terimi bul (OyunBoslukV15) |
 | N04 | quizCan | OyunSoloV15 "Hayatta kal" | VAR |  |
 | N05 | quizZaman | OyunSoloV15 Blitz | VAR |  |
-| N06 | quizTakim | — | YOK |  |
-| N07 | quizKaydir | — | YOK |  |
+| N06 | quizTakim | — | VAR | takım modu (quizRealtimeServer) |
+| N07 | quizKaydir | — | VAR | OyunDersV15 Kaydır |
 | N08 | quizSonuc2 | OyunSoloV15 sonuç | VAR | solo sonuç: puan/doğru + rekor + yeniden oyna |
 
 ## O · Video, PDF, tam ekran
 
 | Kod | Ad | Site karşılığı | Durum | Not |
 |---|---|---|---|---|
-| O01 | video | — | YOK | Video oynatıcı ekranı yok (yalnız dışa aktarım) |
-| O02 | videoTam | — | YOK |  |
-| O03 | videoPip | — | YOK |  |
-| O04 | pdfOkuyucu | Öğren ders PDF'i (PDF.js) | DOĞRULANMADI |  |
-| O05 | pdfIzgara | — | DOĞRULANMADI |  |
-| O06 | pdfArama | — | DOĞRULANMADI |  |
-| O07 | pdfIkili | — | DOĞRULANMADI |  |
+| O01 | video | — | KISMİ | VideoDersV15; hazır video yok, giriş gizli |
+| O02 | videoTam | — | KISMİ | VideoDersV15 tam ekran |
+| O03 | videoPip | — | KISMİ | VideoDersV15 PiP |
+| O04 | pdfOkuyucu | Öğren ders PDF'i (PDF.js) | VAR | DeckPdfViewer/PdfDocView: sayfa gezinme, yakınlaştırma, tema, tam ekran |
+| O05 | pdfIzgara | — | VAR | DeckPdfViewer: sayfa ızgarası, Tümü/İşaretli, sayfa işaretleme |
+| O06 | pdfArama | — | VAR | DeckPdfViewer: arama, eşleşme listesi + parça metin |
+| O07 | pdfIkili | — | KISMİ | DeckPdfViewer: aynı PDF'te iki sayfa yan yana; başka dersle karşılaştırma yok |
 | O08 | tamEkranOgren | ShellV15 Tam ekran | KURULDU | tam ekran + tam-katman |
 | O09 | tamEkranSoru | ShellV15 Tam ekran | KURULDU | tam ekran + tam-katman |
-| O10 | tamEkranAyar | — | DOĞRULANMADI |  |
+| O10 | tamEkranAyar | — | KISMİ | v15/TamEkranAyarV15.tsx: uygulama tam ekranı, Wake Lock, kısayollar; "kendiliğinden tam ekran" ve "yatayda yan yana" yok |
 
 ## P · İkonlar
 
@@ -297,21 +298,21 @@ Not: YOK sayısının 6'sı tasarım belgesi ekranıdır (A09, K08, P01, W03, X0
 
 | Kod | Ad | Site karşılığı | Durum | Not |
 |---|---|---|---|---|
-| T01 | kronoSoru | — | YOK | Soru ekranı içi kronometre yok |
+| T01 | kronoSoru | — | VAR | soru ekranında kronometre |
 | T02 | kronoAcik | v15/KronometreV15.tsx | VAR |  |
 | T03 | kronoSesli | — | YOK | Sesli derste gizli (bilinçli tasarım dışı seçim) |
-| T04 | kronoVideo | — | YOK |  |
-| T05 | kronoBirlesme | — | YOK | Ses oynatıcıyla birleşme yapılmadı (plan) |
+| T04 | kronoVideo | — | VAR | data-kr-yuva="video" yuvası |
+| T05 | kronoBirlesme | — | VAR | mini oynatıcıyla birleşme |
 | T06 | kronoDurum | KronometreV15 | KURULDU | zar baloncuğu durumları |
-| T07 | kronoAyar | — | YOK |  |
+| T07 | kronoAyar | — | VAR | v15/KronometreEkranV15.tsx: kronometre ayarları + geçmiş |
 | T08 | kronoGecmis | KronometreV15 (localStorage 50 oturum) | KURULDU | Kronometre geçmişi ekranı |
 | T09 | kronoPc | KronometreV15 | KURULDU | PC: aynı baloncuk, sürüklenebilir |
-| T10 | kronoFormlar | — | YOK | Tek biçim |
-| T11 | kronoF1 | — | YOK |  |
-| T12 | kronoF2 | — | YOK |  |
-| T13 | kronoF3 | — | YOK |  |
-| T14 | kronoF4 | — | YOK |  |
-| T15 | kronoF5 | — | YOK |  |
+| T10 | kronoFormlar | — | VAR | biçim seçimi |
+| T11 | kronoF1 | — | VAR | Nokta |
+| T12 | kronoF2 | — | VAR | Hap |
+| T13 | kronoF3 | — | VAR | Kenar sekmesi |
+| T14 | kronoF4 | — | VAR | Başlık çipi |
+| T15 | kronoF5 | — | VAR | İnce çizgi |
 
 ## U · Çalışma kapsülü
 
@@ -328,7 +329,7 @@ Not: YOK sayısının 6'sı tasarım belgesi ekranıdır (A09, K08, P01, W03, X0
 | U09 | kapSoru | KapsulV15 | KURULDU | aynı |
 | U10 | kapAcik | KapsulV15 | VAR |  |
 | U11 | kapYanMenu | SideNavV15 Odak girişi | KURULDU | Menü › Odak/Kronometre |
-| U12 | kapYanMenuSesli | — | YOK | Sesli derste yan menü kapsülü yok |
+| U12 | kapYanMenuSesli | — | VAR | ShellV15 yan menü oynatıcı kapsülü |
 
 ## V · Tema, motif, şema
 
@@ -336,8 +337,8 @@ Not: YOK sayısının 6'sı tasarım belgesi ekranıdır (A09, K08, P01, W03, X0
 |---|---|---|---|---|
 | V01 | temaGaleri | Ayarlar › Tasarım/Görünüm (palettes.ts) | VAR | Görünüm: tasarım + tema + palet seçici |
 | V02 | temaSec | Ayarlar › Görünüm | VAR | tema seçici |
-| V03 | motifler | — | YOK | Tıbbi motifler yok |
-| V04 | yaziTipleri | — | DOĞRULANMADI |  |
+| V03 | motifler | — | VAR | motifler.css + GorunumEkleri |
+| V04 | yaziTipleri | — | VAR | GorunumEkleri yazı tipleri |
 | V05 | vucut | — | BİLİNÇLİ YOK |  |
 | V06 | kalpSema | — | BİLİNÇLİ YOK |  |
 | V07 | labSema | — | BİLİNÇLİ YOK |  |
@@ -347,7 +348,7 @@ Not: YOK sayısının 6'sı tasarım belgesi ekranıdır (A09, K08, P01, W03, X0
 
 | Kod | Ad | Site karşılığı | Durum | Not |
 |---|---|---|---|---|
-| W01 | paletDuzenle | Ayarlar | DOĞRULANMADI |  |
+| W01 | paletDuzenle | Ayarlar | VAR | palet düzenle (kontrast kapılı) |
 | W02 | paletGaleri | Ayarlar palet | VAR | palet seçici |
 | W03 | kartlar (kart çeşitleri) | — (tasarım belgesi) | YOK | Kod karşılığı gerekmez |
 | W04 | tostlar2 | shell.css hap bildirim | VAR |  |
@@ -365,13 +366,13 @@ Not: YOK sayısının 6'sı tasarım belgesi ekranıdır (A09, K08, P01, W03, X0
 | X01 | istatGun | StatsView (7/30 gün) | VAR | çubuğa dokununca gün ayrıntısı |
 | X02 | istatHafta | StatsView 7 gün | VAR | 7 gün kipi |
 | X03 | istatAy | StatsView 30 gün | KURULDU | 30 gün kipi + 15 haftalık çalışma takvimi |
-| X04 | istatSoru | StatsView | DOĞRULANMADI |  |
-| X05 | istatSoruTek | — | DOĞRULANMADI |  |
-| X06 | istatSoruDetay | — | DOĞRULANMADI |  |
-| X07 | istatPuan | — | DOĞRULANMADI |  |
-| X08 | istatKonu | — | YOK |  |
+| X04 | istatSoru | StatsView | VAR | IstatistikV15 Genel |
+| X05 | istatSoruTek | — | VAR | IstatistikV15 Sorular |
+| X06 | istatSoruDetay | — | VAR | soru detayı |
+| X07 | istatPuan | — | VAR | puan |
+| X08 | istatKonu | — | VAR | IstatistikV15 Konular |
 | X09 | grafikTurleri | — (tasarım belgesi) | YOK | Kod karşılığı gerekmez |
-| X10 | grafikAyar | — | YOK |  |
+| X10 | grafikAyar | — | VAR | grafik ayarı |
 
 ## Y · Süzgeç ve PDF oluştur
 
@@ -379,9 +380,9 @@ Not: YOK sayısının 6'sı tasarım belgesi ekranıdır (A09, K08, P01, W03, X0
 |---|---|---|---|---|
 | Y01 | filtreTam | SorularMerkezV15 Test oluştur | KURULDU | Test oluştur: ders + kaynak + zorluk + sayı + kip (adres parametreleri) |
 | Y02 | filtreHizli | SorularMerkezV15 çipleri | KURULDU | kaynak/zorluk hızlı çipleri |
-| Y03 | filtreAktif | — | YOK |  |
-| Y04 | filtrePanel | — | YOK | PC yan süzgeç paneli yok |
-| Y05 | filtreKayitli | — | YOK |  |
+| Y03 | filtreAktif | — | VAR | SoruSuzgecV15 çipler |
+| Y04 | filtrePanel | — | VAR | SoruSuzgecV15 yan panel |
+| Y05 | filtreKayitli | — | VAR | kayıtlı süzgeçler |
 | Y06 | filtreBos | "Bu süzgeçte … yok" metinleri | VAR |  |
 | Y07 | pdf1 | pdf_olustur → v15/PdfSihirbaziV15.tsx | VAR |  |
 | Y08 | pdf2 | PdfSihirbaziV15 | VAR |  |

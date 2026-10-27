@@ -1741,3 +1741,5 @@ html.theme-dark .deep-link-highlight-pulse, html[data-mode="dark"] .deep-link-hi
 @media (pointer: coarse) {
   *, *::before, *::after { -webkit-backdrop-filter: none !important; backdrop-filter: none !important; }
 }
+/* Günlük çözülen soru: sütun geniş olsa da çubuk en çok 24 px, ortalı (H107) */
+.st-col .ok, .st-col .bad { width: 100%; max-width: 24px; align-self: center; }

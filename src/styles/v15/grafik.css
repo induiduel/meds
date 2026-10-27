@@ -39,7 +39,7 @@
 .gf15-baraj { stroke: var(--color-warn); stroke-width: 1.2; stroke-dasharray: 4 4; }
 .gf15-cizgi-l { fill: none; stroke: var(--color-accent); stroke-width: 2.2; stroke-linejoin: round; vector-effect: non-scaling-stroke; }
 .gf15-nokta { fill: var(--color-white); stroke: var(--color-accent); stroke-width: 2; vector-effect: non-scaling-stroke; }
-.gf15-isi { display: grid; grid-template-rows: repeat(7, 1fr); grid-auto-flow: column; grid-auto-columns: minmax(0, 1fr); gap: 3px; }
+.gf15-isi { display: grid; grid-template-rows: repeat(7, auto); grid-auto-flow: column; grid-auto-columns: minmax(0, 16px); gap: 3px; justify-content: start; }
 .gf15-isi i, .gf15-lej i { display: block; aspect-ratio: 1; border-radius: 3px; background: var(--color-field); }
 .gf15-isi i.l1, .gf15-lej i.l1 { background: var(--color-accent-soft); }
 .gf15-isi i.l2, .gf15-lej i.l2 { background: color-mix(in oklab, var(--color-accent) 50%, var(--color-white)); }

@@ -1,8 +1,9 @@
 import React, { useEffect, useMemo, useRef, useState, useSyncExternalStore } from 'react';
-import { Eraser, Headphones, List, Highlighter, Pen, Plus, Search, Share2, Star, Trash2, Type, Undo2, X } from 'lucide-react';
+import { Eraser, Headphones, Inbox, List, Highlighter, Pen, Plus, Search, Share2, Star, Trash2, Type, Undo2, X } from 'lucide-react';
 import { linkClick, navigateTo } from '../../router';
 import { geriAlinabilir } from '../ui/Toast';
 import { useV15Baslik } from './baslik';
+import { NotPaylasSayfasi, Paylasilanlar } from './NotPaylasV15';
 import '../../styles/v15/ogren.css';
 import '../../styles/v15/notlarim.css';
 
@@ -91,8 +92,16 @@ export default function NotlarimV15() {
   };
   const [ara, setAra] = useState('');
   const [suz, setSuz] = useState<Suzgec>('tum');
+  // K06 Benimle paylaşılanlar: /notlarim?gorunum=paylasilan
+  const gorParam = () => new URLSearchParams(location.search).get('gorunum') === 'paylasilan';
+  const [paylasilan, setPaylasilan0] = useState(gorParam);
+  useEffect(() => { const f = () => setPaylasilan0(gorParam()); window.addEventListener('popstate', f); return () => window.removeEventListener('popstate', f); }, []);
+  const setPaylasilan = (v: boolean) => {
+    try { if (v) history.pushState(history.state, '', `${location.pathname}?gorunum=paylasilan`); else history.back(); } catch { /* yok */ }
+    setPaylasilan0(v);
+  };
   const acik = notlar.find((n) => n.id === acikId) || null;
-  useV15Baslik({ baslik: acik ? (acik.baslik || 'Başlıksız not') : 'Notlarım', alt: acik ? 'Notlarım' : `${notlar.length} not`, ...(acik ? { geri: '/notlarim' } : {}) });
+  useV15Baslik({ baslik: acik ? (acik.baslik || 'Başlıksız not') : paylasilan ? 'Paylaşılan notlar' : 'Notlarım', alt: acik || paylasilan ? 'Notlarım' : `${notlar.length} not`, ...(acik || paylasilan ? { geri: '/notlarim' } : {}) });
 
   const sirali = useMemo(() => [...notlar].sort((a, b) => b.at - a.at)
     .filter((n) => (suz === 'yildiz' ? n.yildiz : suz === 'ses' ? !!kaynakOf(n) : true))
@@ -110,13 +119,22 @@ export default function NotlarimV15() {
     geriAlinabilir('Not silindi', () => { yaz(onceki); cizimYaz(id, cizim); });
   };
 
+  const kopyala = (p: { baslik: string; metin: string; renk: string }) => {
+    const n: Not = { id: `n${Date.now().toString(36)}`, baslik: p.baslik, metin: p.metin, renk: RENKLER.includes(p.renk as any) ? p.renk : 'none', at: Date.now() };
+    yaz([n, ...anlik()]);
+    return () => yaz(anlik().filter((x) => x.id !== n.id));
+  };
+
   if (acik) return <Duzenleyici not={acik} guncelle={(d) => guncelle(acik.id, d)} sil={() => sil(acik.id)} kapat={() => setAcikId(null)} />;
+
+  if (paylasilan) return <div className="nt15"><h1 className="sr-only">Paylaşılan notlar</h1><Paylasilanlar kaydet={kopyala} /></div>;
 
   return (
     <div className="nt15">
       <h1 className="sr-only">Notlarım</h1>
       <div className="nt15-ust">
         <label className="o15-ara nt15-ara"><Search aria-hidden /><input type="search" value={ara} onChange={(e) => setAra(e.target.value)} placeholder="Notlarda ara" aria-label="Notlarda ara" /></label>
+        <button type="button" className="v15-btn is-soft" onClick={() => setPaylasilan(true)} aria-label="Benimle paylaşılanlar" title="Benimle paylaşılanlar"><Inbox aria-hidden /><span className="nt15-pl">Paylaşılanlar</span></button>
         <button type="button" className="v15-btn" onClick={yeni}><Plus aria-hidden />Yeni not</button>
       </div>
       {notlar.length > 0 && (
@@ -226,10 +244,9 @@ function Duzenleyici({ not, guncelle, sil, kapat }: { not: Not; guncelle: (d: Pa
     const kalan = c.filter((s) => { for (let i = 0; i < s.p.length; i += 2) if (Math.hypot(s.p[i] - x, s.p[i + 1] - y) < 14 + s.w * (s.f ? 3 : 1)) return false; return true; });
     return kalan.length === c.length ? c : kalan;
   });
-  const paylas = async () => {
-    const metin = `${not.baslik || 'Not'}\n\n${not.metin}`.trim();
-    try { if (navigator.share) await navigator.share({ title: not.baslik || 'Not', text: metin }); else await navigator.clipboard.writeText(metin); } catch { /* vazgeçti */ }
-  };
+  // K05: grup/kişi seçimli paylaşım sayfası (sistem paylaşımı / kopyalama da içinde)
+  const [paylasAcik, setPaylasAcik] = useState(false);
+  const paylas = () => setPaylasAcik(true);
 
   // tasarım K04 liste biçimi: seçili satırların başına "- " ekler/kaldırır
   const metinRef = useRef<HTMLTextAreaElement | null>(null);
@@ -306,6 +323,7 @@ function Duzenleyici({ not, guncelle, sil, kapat }: { not: Not; guncelle: (d: Pa
           </div>
           <canvas ref={tuval} className="nt15-tuval" aria-hidden />
         </div>
+        <NotPaylasSayfasi not={{ baslik: not.baslik, metin: metinTemiz(not.metin), renk: not.renk }} acik={paylasAcik} kapat={() => setPaylasAcik(false)} />
         <p className="v15-cap nt15-not">{tarihYaz(not.at)} · {arac === 'yaz' ? 'Kalemle çizmek için üstten Kalem\'i seç.' : arac === 'silgi' ? 'Silmek istediğin çizginin üstünden geç.' : 'Parmağınla ya da kalemle çiz.'}</p>
       </div>
     </div>

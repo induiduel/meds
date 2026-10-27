@@ -155,6 +155,8 @@ export interface Kisi {
   /** Konu (calisma_takip anahtarı) → son görülen etkin süre; gün → konu → o gün eklenen süre (35 gün) */
   konuSn?: Record<string, number>;
   konuGun?: Record<string, Record<string, number>>;
+  /** Profilim herkese açık değil (2026-10-27): sıralamada "Gizli kullanıcı", açık profil kapalı */
+  gizli?: boolean;
   /** Hücrem: glukoz (enerji) bakiyesi, canlılık 0–100, istatistikler; `sn`/`soru` en son işlenen toplam ölçüler */
   hucre?: HucreKayit;
 }
@@ -496,6 +498,10 @@ export function createBasarimMotor(deps: MotorDeps) {
       return /^data:image\/(jpeg|png|webp);base64,/.test(f) && f.length < 80_000 ? f : undefined;
     } catch { return undefined; }
   };
+  /** Açık profil kimliği: topluluk yazar özetiyle aynı (sohbet ile tutarlı; uid/e-posta dışarı çıkmaz). */
+  const kisiKimlik = (uid: string) => crypto.createHash('sha256').update(`topluluk:${uid}`).digest('hex').slice(0, 10);
+  const gizliMi = (k: Kisi, bakan: string | null) => !!k.gizli && k.uid !== bakan;
+  const gorunenAd = (k: Kisi, bakan: string | null) => (gizliMi(k, bakan) ? 'Gizli kullanıcı' : k.ad || 'Tıbbiyeli');
   /** donem -1 + universite: üniversitenin tüm dönemleri; universite verilirse yalnız o üniversite. */
   const siralama = (donem: number, kapsam: 'hafta' | 'kurul' | 'tum', g = gunOf(), universite?: string) => {
     hepsiniYukle();
@@ -659,7 +665,7 @@ export function createBasarimMotor(deps: MotorDeps) {
       const v = HV(); siraOnb.t = 0;
       const sat = hucreSatirlari(donem);
       const mk = (x: (typeof sat)[number], i: number) => ({
-        sira: i + 1, ad: x.k.ad || 'Tıbbiyeli', ben: x.k.uid === uid, foto: foto(x.k.uid), renk: x.k.secili.renk, cerceve: x.k.secili.cerceve, kidem: kidemOf(x.k).ad,
+        sira: i + 1, ad: gorunenAd(x.k, uid), ben: x.k.uid === uid, foto: gizliMi(x.k, uid) ? undefined : foto(x.k.uid), kimlik: gizliMi(x.k, uid) ? undefined : kisiKimlik(x.k.uid), renk: x.k.secili.renk, cerceve: x.k.secili.cerceve, kidem: kidemOf(x.k).ad,
         basamak: x.n, cag: tanim.kilitler.filter((t) => t.tur === 'hucre' && t.etkin && x.k.kilit[t.id]).pop()?.cag || '',
         canlilik: Math.round(x.k.hucre?.canlilik ?? 100), uyku: x.uyku, glukoz: Math.floor(x.kazanilan), calismaSn: toplamOlcu(x.k, 'calisma_sn'), soru: toplamOlcu(x.k, 'soru'),
         atp: x.k.defter.reduce((a, d) => (d.a > 0 && !d.geriAlindi ? a + d.a : a), 0), basarim: x.k.defter.filter((d) => d.t === 'basarim' && !d.geriAlindi).length,
@@ -753,8 +759,8 @@ export function createBasarimMotor(deps: MotorDeps) {
       try { odemeleriIsle(); } catch { /* */ }
       const s = calismaSiralama(donem, kapsam);
       const satir = s.satir.slice(0, 100).map((x, i) => ({
-        sira: i + 1, ad: x.k.ad || 'Tıbbiyeli', sn: x.sn, ben: x.k.uid === uid, foto: foto(x.k.uid), renk: x.k.secili.renk, cerceve: x.k.secili.cerceve, kidem: kidemOf(x.k).ad,
-        dersler: enCokDersler(x.k, s.pencere.bas, s.pencere.son, 3),
+        sira: i + 1, ad: gorunenAd(x.k, uid), sn: x.sn, ben: x.k.uid === uid, foto: gizliMi(x.k, uid) ? undefined : foto(x.k.uid), renk: x.k.secili.renk, cerceve: x.k.secili.cerceve, kidem: kidemOf(x.k).ad,
+        dersler: gizliMi(x.k, uid) ? [] : enCokDersler(x.k, s.pencere.bas, s.pencere.son, 3), kimlik: gizliMi(x.k, uid) ? undefined : kisiKimlik(x.k.uid),
       }));
       const benim = uid ? s.satir.findIndex((x) => x.k.uid === uid) : -1;
       return { pencere: s.pencere, satir, benim: benim >= 0 ? benim + 1 : null, odul: kapsam === 'hafta' ? tanim.atp.calismaHaftaBirinci || 0 : 0, esikSn: tanim.atp.calismaEsikSn || 0 };
@@ -763,7 +769,7 @@ export function createBasarimMotor(deps: MotorDeps) {
       try { odemeleriIsle(); } catch { /* */ }
       const s = siralama(donem, kapsam, gunOf(), universite);
       const satir = s.satir.slice(0, 100).map((x, i) => ({
-        sira: i + 1, ad: x.k.ad || 'Tıbbiyeli', puan: x.puan, ben: x.k.uid === uid, foto: foto(x.k.uid),
+        sira: i + 1, ad: gorunenAd(x.k, uid), puan: x.puan, ben: x.k.uid === uid, foto: gizliMi(x.k, uid) ? undefined : foto(x.k.uid), kimlik: gizliMi(x.k, uid) ? undefined : kisiKimlik(x.k.uid),
         ozel: !!x.k.ozel?.gorunur,
         unvan: x.k.ozel?.gorunur ? x.k.ozel.unvan : x.k.secili.unvan ? tanim.kilitler.find((t) => t.id === x.k.secili.unvan)?.ad.replace(/^Unvan:\s*/, '') : undefined,
         cerceve: x.k.secili.cerceve,
@@ -772,8 +778,63 @@ export function createBasarimMotor(deps: MotorDeps) {
         basarim: x.k.defter.filter((d) => d.t === 'basarim').length,
       }));
       const benim = uid ? s.satir.findIndex((x) => x.k.uid === uid) : -1;
-      if (benim >= 100) satir.push({ sira: benim + 1, ad: s.satir[benim].k.ad, puan: s.satir[benim].puan, ben: true, foto: foto(s.satir[benim].k.uid), ozel: false, unvan: undefined, cerceve: undefined, renk: undefined, kidem: kidemOf(s.satir[benim].k).ad, basarim: 0 });
+      if (benim >= 100) satir.push({ sira: benim + 1, ad: s.satir[benim].k.ad, puan: s.satir[benim].puan, ben: true, foto: foto(s.satir[benim].k.uid), kimlik: kisiKimlik(s.satir[benim].k.uid), ozel: false, unvan: undefined, cerceve: undefined, renk: undefined, kidem: kidemOf(s.satir[benim].k).ad, basarim: 0 });
       return { pencere: s.pencere, satir, atpOdul: kapsam === 'hafta' ? tanim.atp.haftalikSiralama : kapsam === 'kurul' ? tanim.atp.kurulSiralama : [] };
+    },
+    // ───── Açık profil + arkadaş sıralaması (services/arkadaslik.ts, 2026-10-27) ─────
+    kisiKimlik,
+    konuAdi,
+    /** Sıralamaya giren tüm kişiler (yüklü önbellek; birleştirilmiş ikinci hesaplar ve test oturumu hariç) */
+    hepsi(): Kisi[] { hepsiniYukle(); return [...onbellek.values()].filter((k) => k.uid !== 'ai-test' && !k.birlesti); },
+    varMi(uid: string) { hepsiniYukle(); return onbellek.has(uid); },
+    gizlilik(uid: string, gizli: boolean) { const k = kisi(uid); if (!!k.gizli === gizli) return; k.gizli = gizli || undefined; kaydet(k); },
+    /** Profilde gösterilen sunucu ölçüleri (profil yedeğinden türetilmiş gün ölçüleri) */
+    profilOlcu(uid: string) {
+      const k = kisi(uid);
+      const bugun = gunOf(); const hb = haftaOf(bugun); const hs = gunEkle(hb, 6);
+      const soruAralik = (bas: string, son: string) => Object.entries(k.metrik).reduce((a, [g, m]) => (g >= bas && g <= son ? a + (m.soru || 0) : a), 0);
+      return {
+        ad: k.ad || 'Tıbbiyeli', donem: k.donem, universite: k.universite || '', foto: foto(uid), kidem: kidemOf(k).ad,
+        unvan: k.ozel?.gorunur ? k.ozel.unvan : k.secili.unvan ? tanim.kilitler.find((t) => t.id === k.secili.unvan)?.ad.replace(/^Unvan:\s*/, '') : undefined,
+        cerceve: k.secili.cerceve, renk: k.secili.renk, gizli: !!k.gizli,
+        calisma: { toplam: snAralik(k, '0000', '9999'), hafta: snAralik(k, hb, hs), bugun: snAralik(k, bugun, bugun) },
+        soru: { toplam: soruAralik('0000', '9999'), hafta: soruAralik(hb, hs), bugun: soruAralik(bugun, bugun) },
+        bitirilen: Object.values(k.metrik).reduce((a, m) => a + (m.bitir || 0), 0),
+        haftaDersler: enCokDersler(k, hb, hs, 5),
+        basarim: k.defter.filter((d) => d.t === 'basarim' && !d.geriAlindi).length,
+        puan: { hafta: puanAralik(k, hb, hs), toplam: puanAralik(k, '0000', '9999') },
+      };
+    },
+    /**
+     * Genel sıralama: ölçü puan (hafta|kurul|tum) ya da çalışma (gun|hafta); kapsam süzgeci uidler (arkadaşlar),
+     * universite (+donem: sınıf) ya da donem (Türkiye). Gizli kişi adsız, kimliksiz görünür.
+     */
+    kisiSiralama(o: { uid: string | null; olcu: 'puan' | 'calisma'; kapsam: string; donem: number | null; universite?: string; uidler?: Set<string> }) {
+      hepsiniYukle();
+      const g = gunOf();
+      const p = o.olcu === 'calisma'
+        ? (o.kapsam === 'gun' ? { bas: g, son: g, ad: 'Bugün', id: g } : { bas: haftaOf(g), son: gunEkle(haftaOf(g), 6), ad: 'Bu hafta', id: haftaOf(g) })
+        : o.kapsam === 'kurul' ? kurulPencere(o.donem ?? VARSAYILAN_DONEM, g) : o.kapsam === 'tum' ? { bas: '0000', son: '9999', ad: 'Tüm zamanlar', id: 'tum' } : { bas: haftaOf(g), son: gunEkle(haftaOf(g), 6), ad: 'Bu hafta', id: haftaOf(g) };
+      const deger = (k: Kisi) => (o.olcu === 'calisma' ? snAralik(k, p.bas, p.son) : puanAralik(k, p.bas, p.son));
+      const esik = o.olcu === 'calisma' ? 60 : 1;
+      const tum = this.hepsi()
+        .filter((k) => (!o.uidler || o.uidler.has(k.uid)) && (o.donem == null || (k.donem || VARSAYILAN_DONEM) === o.donem) && (!o.universite || k.universite === o.universite))
+        .map((k) => ({ k, v: deger(k) })).filter((x) => x.v >= esik || (o.uidler && x.k.uid === o.uid))
+        .sort((a, b) => b.v - a.v || a.k.uid.localeCompare(b.k.uid));
+      const satirOf = (x: { k: Kisi; v: number }, i: number) => {
+        const gz = gizliMi(x.k, o.uid);
+        return {
+          sira: i + 1, ad: gorunenAd(x.k, o.uid), puan: o.olcu === 'puan' ? x.v : 0, sn: o.olcu === 'calisma' ? x.v : undefined,
+          ben: x.k.uid === o.uid, foto: gz ? undefined : foto(x.k.uid), kimlik: gz ? undefined : kisiKimlik(x.k.uid), gizli: gz || undefined,
+          unvan: gz ? undefined : x.k.ozel?.gorunur ? x.k.ozel.unvan : x.k.secili.unvan ? tanim.kilitler.find((t) => t.id === x.k.secili.unvan)?.ad.replace(/^Unvan:\s*/, '') : undefined,
+          kidem: kidemOf(x.k).ad, renk: x.k.secili.renk, cerceve: x.k.secili.cerceve,
+          dersler: gz || o.olcu !== 'calisma' ? undefined : enCokDersler(x.k, p.bas, p.son, 2),
+        };
+      };
+      const satir = tum.slice(0, 100).map(satirOf);
+      const benim = o.uid ? tum.findIndex((x) => x.k.uid === o.uid) : -1;
+      if (benim >= 100) satir.push(satirOf(tum[benim], benim));
+      return { pencere: p, satir, benim: benim >= 0 ? benim + 1 : null, kisi: tum.length };
     },
     // ───── Yönetim (yalnız yönetici uçları çağırır; her işlem gerekçeli, defterde iz + yonetim_gunlugu.jsonl) ─────
     yonetimListe() {

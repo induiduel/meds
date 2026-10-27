@@ -84,6 +84,7 @@ export type AppRoute =
   | 'soru_haritasi'
   | 'oyunlar'
   | 'notlarim'
+  | 'video_ders'
   | 'pdf_olustur'
   | 'topluluk'
   | 'hucrem'
@@ -97,7 +98,9 @@ export type AppRoute =
   | 'hub_sorular'
   | 'hub_kamplar'
   | 'hub_kaynaklar'
-  | 'ders_detay';
+  | 'ders_detay'
+  | 'kisi'
+  | 'arkadaslar';
 
 export const ROUTE_PATHS: Record<AppRoute, string> = {
   quick_add: '/',
@@ -151,6 +154,7 @@ export const ROUTE_PATHS: Record<AppRoute, string> = {
   soru_haritasi: '/soru-haritasi',
   oyunlar: '/oyunlar',
   notlarim: '/notlarim',
+  video_ders: '/video-ders',
   pdf_olustur: '/pdf-olustur',
   topluluk: '/topluluk',
   hucrem: '/hucrem',
@@ -167,6 +171,8 @@ export const ROUTE_PATHS: Record<AppRoute, string> = {
   hub_kaynaklar: '/kaynak-merkezi',
   // v15 ders ayrıntısı: görünen /dersler/ders/kurulN/<dersKey>
   ders_detay: '/ders',
+  kisi: '/kisi',
+  arkadaslar: '/arkadaslar',
 };
 
 export const ROUTE_TITLES: Record<AppRoute, string> = {
@@ -221,6 +227,7 @@ export const ROUTE_TITLES: Record<AppRoute, string> = {
   soru_haritasi: 'Soru haritası',
   oyunlar: 'Oyunlar',
   notlarim: 'Notlarım',
+  video_ders: 'Video ders',
   pdf_olustur: 'PDF oluştur',
   topluluk: 'Topluluk',
   hucrem: 'Hücrem',
@@ -235,6 +242,8 @@ export const ROUTE_TITLES: Record<AppRoute, string> = {
   hub_kamplar: 'Sınava hazırlan',
   hub_kaynaklar: 'Başvuru',
   ders_detay: 'Ders',
+  kisi: 'Profil',
+  arkadaslar: 'Arkadaşlar',
 };
 
 const BY_SEGMENT: Record<string, AppRoute> = Object.fromEntries(
@@ -370,8 +379,13 @@ const ALIASES: Record<string, AppRoute> = {
   oyunlar: 'oyunlar',
   oyun: 'oyunlar',
   notlarim: 'notlarim',
+  'video-ders': 'video_ders',
+  videolar: 'video_ders',
   'pdf-olustur': 'pdf_olustur',
   topluluk: 'topluluk',
+  kisi: 'kisi',
+  arkadaslar: 'arkadaslar',
+  arkadas: 'arkadaslar',
   hucrem: 'hucrem',
   'zihin-haritasi': 'zihin_haritasi',
   yanlislarim: 'yanlislarim',

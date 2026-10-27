@@ -13,6 +13,7 @@ import { useSpotCozucuStats, fmtSureDk } from '../../services/spotCozucuIstatist
 import './stats.css';
 import { useAppearance } from '../../utils/appearance';
 const CalismaGrafikleriV15 = React.lazy(() => import('../v15/CalismaGrafikleriV15'));
+const IstatistikV15 = React.lazy(() => import('../v15/IstatistikV15'));
 import '../../styles/v12/secondary.css';
 
 /**
@@ -273,6 +274,9 @@ export const StatsView: React.FC<Props> = ({ questions, currentUser, onGo }) => 
 
       {v15 && <React.Suspense fallback={null}><CalismaGrafikleriV15 aralik={period === 'hafta' ? 7 : 30} /></React.Suspense>}
 
+      {v15 && <React.Suspense fallback={null}><IstatistikV15 /></React.Suspense>}
+
+      {!v15 && <>
       {/* Bento pano (styles/bento.css): dört sayı kutusu, altında geniş doğruluk kartı + yanda etkinlik / zayıf konular */}
       <div className="stv-bento bento" role="group" aria-label="Özet">
         {kpis.map((k) => (
@@ -331,6 +335,7 @@ export const StatsView: React.FC<Props> = ({ questions, currentUser, onGo }) => 
       {!attempts.length && !heatActive && (
         <p className="stv-empty-all">Çalış sayfasında soru çözdükçe doğruluk, ders dökümü ve etkinlik burada belirir.</p>
       )}
+      </>}
 
       <h2 className="stv-sec">Ayrıntılar</h2>
 

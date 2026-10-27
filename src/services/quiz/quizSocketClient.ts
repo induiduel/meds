@@ -22,6 +22,7 @@ export type QuizClientEventType =
   | 'round_revealed'
   | 'game_finished'
   | 'room_error'
+  | 'player_team_changed'
   | 'baglanti';
 
 export interface PreFetchedQuestion {
@@ -156,6 +157,11 @@ export class QuizSocketClient {
 
   public setReady() {
     this.send({ type: 'set_ready' });
+  }
+
+  /** Takım modu (lobide): oyuncu A ya da B takımına geçer */
+  public setTeam(takim: 'A' | 'B') {
+    this.send({ type: 'set_team', takim });
   }
 
   public submitAnswer(questionId: string, option: string) {

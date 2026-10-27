@@ -82,6 +82,7 @@ import { TextSizeSlider } from '../settings/TextSizeSlider';
 import { NotesSyncRow } from '../settings/NotesSyncRow';
 import { UserDataSyncRow } from '../settings/UserDataSyncRow';
 import { ArkaPlanRow } from '../settings/ArkaPlanRow';
+import { GorunumEkleri } from '../settings/GorunumEkleri';
 import { WhatsAppDailyDigestRow } from '../settings/WhatsAppDailyDigestRow';
 import { ProgressResetRow } from '../settings/ProgressResetRow';
 import { erisimYaz, useErisim } from '../../utils/erisilebilirlik';
@@ -1400,6 +1401,10 @@ const AppearancePanel: React.FC = () => {
               { value: 'roboto', label: 'Roboto', style: { fontFamily: "'Roboto', system-ui, sans-serif" } },
             ]} />
         </SetRow>
+      </section>
+
+      <section className="u12-panel u12-ge" aria-label="Motif, yazı tipi ve özel renk">
+        <GorunumEkleri look={look} />
       </section>
 
       <section className="u12-panel" aria-label="Kullanım">

@@ -13,6 +13,9 @@ import {
   onAuthStateChanged, 
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
+  sendSignInLinkToEmail,
+  isSignInWithEmailLink,
+  signInWithEmailLink,
   updateProfile,
   User 
 } from 'firebase/auth';
@@ -219,6 +222,8 @@ export const initAuth = (
   onAuthSuccess?: (user: AppUser, token: string | null) => void,
   onAuthFailure?: () => void
 ) => {
+  // I06: e-posta bağlantısıyla dönüldüyse ve e-posta bu cihazda kayıtlıysa girişi tamamla (oturumu onAuthStateChanged alır)
+  if (emailLinkPending() && storedEmailForLink()) void completeEmailLinkLogin().catch((e) => console.warn('E-posta bağlantısı:', e?.message));
   // Capture redirect sign in result (if returning from Google redirect)
   getRedirectResult(auth)
     .then(async (result) => {
@@ -414,6 +419,48 @@ export const sendPasswordReset = async (email: string): Promise<void> => {
   try {
     await sendPasswordResetEmail(auth, cleanEmail);
   } catch (err: any) {
+    throw new Error(authErrorMessage(err));
+  }
+};
+
+/*
+ * I06 · Şifresiz giriş: e-posta bağlantısı (Firebase "Email link"). Firebase e-postayla 6 haneli kod göndermez; tasarımdaki
+ * OTP ekranının karşılığı "bağlantı gönderildi" ekranıdır. Bağlantı aynı cihazda açılırsa e-posta yerel kayıttan alınır,
+ * başka cihazda açılırsa giriş penceresi e-postayı onaylatır. Oturumu onAuthStateChanged (initAuth) devralır.
+ * Firebase konsolunda Authentication › Sign-in method › Email/Password altında "Email link (passwordless sign-in)" açık
+ * olmalı; aksi halde 'auth/operation-not-allowed' döner.
+ */
+const EPOSTA_BAG_KEY = 'medsoru_eposta_bag';
+export const sendEmailLoginLink = async (email: string): Promise<void> => {
+  const clean = email.trim().toLowerCase();
+  if (!clean || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(clean)) throw new Error('Geçerli bir e-posta adresi yazın.');
+  try {
+    await sendSignInLinkToEmail(auth, clean, { url: `${window.location.origin}/?eposta-giris=1`, handleCodeInApp: true });
+    safeStorage.setItem(EPOSTA_BAG_KEY, clean);
+  } catch (err: any) {
+    if (String(err?.code) === 'auth/operation-not-allowed') throw new Error('E-posta bağlantısıyla giriş henüz açılmadı. Şifrenle ya da Google ile giriş yapabilirsin.');
+    throw new Error(authErrorMessage(err));
+  }
+};
+/** Adres bir giriş bağlantısı mı (e-posta onayı bekleniyorsa true) */
+export const emailLinkPending = (): boolean => {
+  try { return isSignInWithEmailLink(auth, window.location.href); } catch { return false; }
+};
+export const storedEmailForLink = (): string => safeStorage.getItem(EPOSTA_BAG_KEY) || '';
+/** Bağlantıyla girişi tamamlar; adres çubuğundaki tek kullanımlık kodu temizler. */
+export const completeEmailLinkLogin = async (email?: string): Promise<boolean> => {
+  if (!emailLinkPending()) return false;
+  const clean = (email || storedEmailForLink()).trim().toLowerCase();
+  if (!clean) return false;
+  try {
+    await signInWithEmailLink(auth, clean, window.location.href);
+    safeStorage.removeItem(EPOSTA_BAG_KEY);
+    try { window.history.replaceState(window.history.state, '', window.location.pathname); } catch { /* yok */ }
+    return true;
+  } catch (err: any) {
+    const code = String(err?.code || '');
+    if (code === 'auth/invalid-action-code' || code === 'auth/expired-action-code') throw new Error('Giriş bağlantısının süresi dolmuş ya da kullanılmış. Yeni bağlantı iste.');
+    if (code === 'auth/invalid-email') throw new Error('Bu bağlantı başka bir e-posta adresi için gönderilmiş.');
     throw new Error(authErrorMessage(err));
   }
 };

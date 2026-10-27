@@ -1,0 +1,41 @@
+/* v15 · Ortak soru süzgeci (SoruSuzgecV15) — Y03 çipler, Y04 yan panel, Y05 kayıtlı süzgeçler */
+.sz15 { container-type: inline-size; display: grid; grid-template-columns: minmax(0, 1fr); gap: 16px; min-width: 0; }
+.sz15-yan { display: none; }
+@container (min-width: 900px) {
+  .sz15 { grid-template-columns: 260px minmax(0, 1fr); align-items: start; }
+  .sz15-yan { display: block; padding: 14px; position: sticky; top: 12px; max-height: calc(100vh - 24px); overflow: auto; }
+  .sz15-ac { display: none !important; }
+}
+.sz15-ana { min-width: 0; display: flex; flex-direction: column; gap: 12px; }
+.sz15-cubuk { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; min-width: 0; }
+.sz15-ac { min-height: 36px; padding: 0 12px; display: inline-flex; gap: 6px; align-items: center; }
+.sz15-ac svg { width: 16px; height: 16px; }
+.sz15-aktif { display: flex; flex-wrap: wrap; gap: 6px; min-width: 0; }
+.sz15-sonuc { margin-left: auto; }
+.sz15-cip { display: inline-flex; align-items: center; gap: 6px; max-width: 100%; min-height: 32px; padding: 0 10px; border-radius: 999px;
+  border: 1px solid var(--color-line); background: var(--color-white); color: var(--color-ink-2); font: 500 13px/1.1 var(--font-sans); cursor: pointer; }
+.sz15-cip > span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.sz15-cip small { color: var(--color-ink-3); font-variant-numeric: tabular-nums; }
+.sz15-cip svg { width: 14px; height: 14px; flex: none; }
+.sz15-cip.is-on { background: var(--color-accent-soft); border-color: transparent; color: var(--color-accent); }
+.sz15-cip.is-on small { color: inherit; }
+.sz15-temizle { border: 0; background: none; color: var(--color-accent); font: 600 13px/1 var(--font-sans); cursor: pointer; padding: 0 6px; min-height: 32px; }
+.sz15-panel-i { display: flex; flex-direction: column; gap: 16px; }
+.sz15-yon { border: 0; margin: 0; padding: 0; min-width: 0; }
+.sz15-yon legend { margin-bottom: 8px; padding: 0; }
+.sz15-sec { display: flex; flex-wrap: wrap; gap: 6px; max-height: 220px; overflow: auto; }
+.sz15-kayit { display: flex; flex-direction: column; gap: 8px; border-top: 1px solid var(--color-line-soft); padding-top: 12px; }
+.sz15-kayit ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 4px; }
+.sz15-kayit li { display: flex; align-items: center; gap: 4px; min-width: 0; }
+.sz15-kayit-b { flex: 1; min-width: 0; display: flex; gap: 8px; align-items: center; text-align: left; border: 0; background: var(--color-field); border-radius: 10px; padding: 8px 10px; cursor: pointer; color: var(--color-ink); }
+.sz15-kayit-b svg { width: 16px; height: 16px; flex: none; color: var(--color-accent); }
+.sz15-kayit-b > span { display: flex; flex-direction: column; min-width: 0; }
+.sz15-kayit-b b { font-size: 13.5px; }
+.sz15-kayit-b small { color: var(--color-ink-3); font-size: 12px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.sz15-kaydet { display: flex; gap: 6px; min-width: 0; }
+.sz15-kaydet input { flex: 1; min-width: 0; min-height: 36px; border: 1px solid var(--color-line); border-radius: 10px; padding: 0 10px; background: var(--color-white); color: var(--color-ink); font: 14px var(--font-sans); }
+.sz15-kaydet .v15-btn { min-height: 36px; padding: 0 12px; }
+.sz15-perde { position: fixed; inset: 0; z-index: 80; background: color-mix(in srgb, var(--color-ink) 40%, transparent); display: flex; align-items: flex-end; justify-content: center; }
+.sz15-sayfa { width: min(100%, 560px); max-height: 85vh; overflow: auto; background: var(--color-white); border-radius: 18px 18px 0 0; padding: 16px 16px calc(16px + env(safe-area-inset-bottom)); display: flex; flex-direction: column; gap: 14px; }
+.sz15-sayfa-b { display: flex; align-items: center; justify-content: space-between; color: var(--color-ink); }
+.sz15-tamam { width: 100%; }

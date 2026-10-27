@@ -6,6 +6,7 @@ import { registerWithEmailPassword, loginWithEmailPassword, googleSignIn, sendPa
 import { validateNamePolicy } from '../utils/namePolicy';
 import { useAppearance } from '../utils/appearance';
 import { AuthCardV12 } from './v12/AuthV12';
+import { EpostaBaglantiGiris } from './EpostaBaglantiGiris';
 
 /**
  * Giriş / kayıt kartı (kompakt). Tanıtım akışının son adımında gömülü, diğer yerlerde katmanlı pencere olarak açılır.
@@ -272,6 +273,7 @@ export const UserAuthModal: React.FC<UserAuthModalProps> = ({
               {mode === 'login' ? 'Giriş yap' : 'Kayıt ol'}
             </button>
           </form>
+          {mode === 'login' && <EpostaBaglantiGiris email={email} setEmail={setEmail} disabled={disabled} />}
         </>
       ) : (
         <div className="au-form">
@@ -335,6 +337,7 @@ export const UserAuthModal: React.FC<UserAuthModalProps> = ({
       onRegister={onRegister}
       onAdminPassword={onAdminPassword}
       onResetPassword={onResetPassword}
+      loginExtra={<EpostaBaglantiGiris email={email} setEmail={setEmail} disabled={disabled} v12 />}
     />
   ) : card;
 

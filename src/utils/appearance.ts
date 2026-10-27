@@ -1,5 +1,5 @@
 import { useSyncExternalStore } from 'react';
-import { PALETTES, findAccent, findPalette, installPaletteStyles, type ThemeMode } from './palettes';
+import { PALETTES, findAccent, findPalette, installPaletteStyles, ozelVurgu, type AccentDef, type ThemeMode } from './palettes';
 import { refreshZoomGuard } from './uiZoom';
 
 /**
@@ -108,6 +108,51 @@ export interface Appearance {
   v15?: boolean;
   /** Vurgu rengi seçimi, "<tema>:<palet>" anahtarıyla (yalnız `accents` tanımlı paletler; utils/palettes.ts) */
   accents?: Record<string, string>;
+  /** W01 Paleti düzenle: "<tema>:<palet>" başına özel vurgu (#RRGGBB). Uygulanırken kontrast kapısından geçirilir (ozelVurgu). */
+  customAccents?: Record<string, string>;
+  /** V03 Tıbbi arka plan motifi (yalnız zemin dokusu, %6 opaklık; metnin altında kalır) */
+  motif?: MotifId;
+  /** V04 Yazı tipleri: arayüz ve okuma yazısı (FONT_LIST kimliği; boş = tasarımın varsayılanı) */
+  fontUi?: string;
+  fontRead?: string;
+}
+
+export type MotifId = 'yok' | 'ekg' | 'hex' | 'hucre' | 'dna' | 'arti' | 'damar';
+export const MOTIFS: { id: MotifId; name: string; hint: string }[] = [
+  { id: 'yok', name: 'Motif yok', hint: 'Düz zemin' },
+  { id: 'ekg', name: 'EKG çizgisi', hint: 'Kardiyoloji, başlıklar' },
+  { id: 'hex', name: 'Molekül', hint: 'Biyokimya, farmakoloji' },
+  { id: 'hucre', name: 'Hücre', hint: 'Hücre, patoloji' },
+  { id: 'dna', name: 'DNA sarmalı', hint: 'Genetik' },
+  { id: 'arti', name: 'Tıp artısı', hint: 'Acil, KMB' },
+  { id: 'damar', name: 'Damar ağı', hint: 'Fizyoloji, dolaşım' },
+];
+const isMotif = (v: unknown): v is MotifId => MOTIFS.some((m) => m.id === v);
+
+/** V04: seçilebilir yazı tipleri. g = Google Fonts aile parametresi (seçilince yüklenir; yerel/varsayılan olanlarda yok). */
+export interface FontDef { id: string; name: string; hint: string; kind: 'ui' | 'read'; family: string; g?: string }
+export const FONT_LIST: FontDef[] = [
+  { id: 'jakarta', name: 'Plus Jakarta Sans', hint: 'Arayüz · varsayılan', kind: 'ui', family: "'Plus Jakarta Sans', 'Geist', system-ui, sans-serif", g: 'Plus+Jakarta+Sans:wght@400;500;600;700' },
+  { id: 'inter', name: 'Inter', hint: 'Arayüz · nötr', kind: 'ui', family: 'Inter, system-ui, sans-serif', g: 'Inter:wght@400;500;600;700' },
+  { id: 'plex', name: 'IBM Plex Sans', hint: 'Arayüz · teknik, tablolar', kind: 'ui', family: "'IBM Plex Sans', system-ui, sans-serif", g: 'IBM+Plex+Sans:wght@400;500;600;700' },
+  { id: 'lexend', name: 'Lexend', hint: 'Okuma güçlüğü', kind: 'ui', family: 'Lexend, system-ui, sans-serif', g: 'Lexend:wght@400;500;600;700' },
+  { id: 'atkinson', name: 'Atkinson Hyperlegible', hint: 'Az görme · ayırt edici', kind: 'ui', family: "'Atkinson Hyperlegible', system-ui, sans-serif", g: 'Atkinson+Hyperlegible:wght@400;700' },
+  { id: 'nunito', name: 'Nunito', hint: 'Yuvarlak, sıcak', kind: 'ui', family: 'Nunito, system-ui, sans-serif', g: 'Nunito:wght@400;500;600;700' },
+  { id: 'newsreader', name: 'Newsreader', hint: 'Okuma · varsayılan', kind: 'read', family: "'Newsreader', 'Literata', Georgia, serif", g: 'Newsreader:opsz,wght@6..72,400;6..72,600' },
+  { id: 'sourceserif', name: 'Source Serif 4', hint: 'Okuma · uzun metin', kind: 'read', family: "'Source Serif 4', Georgia, serif", g: 'Source+Serif+4:opsz,wght@8..60,400;8..60,600' },
+  { id: 'literata', name: 'Literata', hint: 'Okuma · e-kitap', kind: 'read', family: 'Literata, Georgia, serif' },
+  { id: 'merriweather', name: 'Merriweather', hint: 'Okuma · küçük ekran', kind: 'read', family: 'Merriweather, Georgia, serif', g: 'Merriweather:wght@400;700' },
+  { id: 'lora', name: 'Lora', hint: 'Notlar', kind: 'read', family: 'Lora, Georgia, serif', g: 'Lora:wght@400;600' },
+  { id: 'plexmono', name: 'IBM Plex Mono', hint: 'Doz, değer, kod', kind: 'read', family: "'IBM Plex Mono', ui-monospace, monospace", g: 'IBM+Plex+Mono:wght@400;600' },
+];
+const findFont = (id: string | undefined, kind: 'ui' | 'read') => FONT_LIST.find((f) => f.id === id && f.kind === kind);
+function loadFont(f: FontDef | undefined) {
+  if (!f?.g || typeof document === 'undefined') return;
+  const id = `font-${f.id}`;
+  if (document.getElementById(id)) return;
+  const l = document.createElement('link');
+  l.id = id; l.rel = 'stylesheet'; l.href = `https://fonts.googleapis.com/css2?family=${f.g}&display=swap`;
+  document.head.appendChild(l);
 }
 
 export const MODE_LABELS: Record<ThemeMode, string> = { light: 'Açık', sepia: 'Sarı', dark: 'Koyu' };
@@ -179,6 +224,11 @@ function read(): Appearance {
         // v15 kullanıcılar için varsayılan (2026-10-27): tasarımı bilerek seçmeyen herkes v15'e geçer
         v15: p.v15 === true || (!p.designPicked && p.v15 !== false && p.v13 !== true && migrateDesign(p) === 'v12'),
         v13Asked: p.v13Asked === true,
+        customAccents: p.customAccents && typeof p.customAccents === 'object'
+          ? Object.fromEntries(Object.entries(p.customAccents).filter(([, v]) => typeof v === 'string' && /^#[0-9a-f]{6}$/i.test(v))) : {},
+        motif: isMotif(p.motif) ? p.motif : 'yok',
+        fontUi: findFont(p.fontUi, 'ui')?.id,
+        fontRead: findFont(p.fontRead, 'read')?.id,
       };
       // Taşınan tasarım seçimi kalıcı olsun (aksi halde sonraki açılışta v11'e döner)
       if (out.design !== p.design) { try { localStorage.setItem(KEY, JSON.stringify(out)); } catch { /* ignore */ } }
@@ -242,6 +292,19 @@ export function applyAppearance(a: Appearance = current) {
   el.dataset.design = a.design;
   if (a.design === 'v12' && a.v13 && !a.v15) el.dataset.v13 = 'on'; else delete el.dataset.v13;
   if (a.design === 'v12' && a.v15) el.dataset.v15 = 'on'; else delete el.dataset.v15;
+  // W01 özel vurgu: kontrast kapısından geçmiş değerler satır içi yazılır (palet/vurgu bloklarını ezer)
+  const ozelKey = `${a.mode}:${a.palettes[a.mode]}`;
+  const ozel = a.customAccents?.[ozelKey] ? ozelVurgu(a.customAccents[ozelKey], findPalette(a.mode, a.palettes[a.mode]).vars, a.mode) : null;
+  const OZEL_VARS: [string, keyof AccentDef][] = [['--color-accent', 'accent'], ['--color-accent-hover', 'hover'], ['--color-accent-soft', 'soft'], ['--color-on-accent', 'on'], ['--ui-focus', 'accent'], ['--color-teal-600', 'accent']];
+  for (const [v, k] of OZEL_VARS) { if (ozel) el.style.setProperty(v, ozel[k]); else el.style.removeProperty(v); }
+  if (ozel) el.dataset.ozelVurgu = 'on'; else delete el.dataset.ozelVurgu;
+  // V03 motif
+  if (a.motif && a.motif !== 'yok') el.dataset.motif = a.motif; else delete el.dataset.motif;
+  // V04 yazı tipleri (seçilmediyse tasarımın kendi değişkenleri geçerli)
+  const fu = findFont(a.fontUi, 'ui'), fr = findFont(a.fontRead, 'read');
+  loadFont(fu); loadFont(fr);
+  for (const v of ['--font-sans', '--font-display']) { if (fu) el.style.setProperty(v, fu.family); else el.style.removeProperty(v); }
+  for (const v of ['--font-read', '--read-font']) { if (fr) el.style.setProperty(v, fr.family); else el.style.removeProperty(v); }
   el.classList.toggle('theme-dark', a.mode === 'dark');
   el.style.colorScheme = a.mode === 'dark' ? 'dark' : 'light';
   syncPwaChrome(a);
@@ -371,12 +434,15 @@ async function switchAppearance(next: Appearance) {
   }
 }
 
-export function setAppearance(patch: Partial<Omit<Appearance, 'palettes' | 'accents' | 'qcard'>> & { qcard?: Partial<QCardPrefs>; palette?: Palette; accent?: string; choice?: DesignChoice }) {
+export function setAppearance(patch: Partial<Omit<Appearance, 'palettes' | 'accents' | 'qcard' | 'customAccents'>> & { qcard?: Partial<QCardPrefs>; palette?: Palette; accent?: string; customAccent?: string | null; choice?: DesignChoice }) {
   const next: Appearance = { ...current, palettes: { ...current.palettes }, accents: { ...(current.accents || {}) } };
   if (patch.mode) next.mode = patch.mode;
   if (patch.density) next.density = patch.density;
   if (patch.layout) next.layout = patch.layout;
-  if (patch.reading) next.reading = patch.reading;
+  if (patch.reading) { next.reading = patch.reading; next.fontRead = undefined; }
+  if (patch.motif) next.motif = patch.motif;
+  if ('fontUi' in patch) next.fontUi = findFont(patch.fontUi, 'ui')?.id;
+  if ('fontRead' in patch && !patch.reading) next.fontRead = findFont(patch.fontRead, 'read')?.id;
   if (patch.textSize) { next.textSize = patch.textSize; next.textPx = TEXT_SIZE_PX[patch.textSize]; }
   if (typeof patch.textPx === 'number' && isFinite(patch.textPx)) { next.textPx = clampTextPx(patch.textPx); next.textSize = nearestTextSize(next.textPx); }
   if (patch.filters) next.filters = patch.filters;
@@ -395,9 +461,14 @@ export function setAppearance(patch: Partial<Omit<Appearance, 'palettes' | 'acce
   if (typeof patch.v15 === 'boolean') { next.v15 = patch.v15; if (patch.v15) next.v13 = false; }
   if (typeof patch.v13Asked === 'boolean') next.v13Asked = patch.v13Asked;
   if (patch.palette) next.palettes[next.mode] = patch.palette;
-  // Vurgu rengi: örtüsüz, anında (yalnız 4 token değişir)
-  if (patch.accent) {
-    next.accents![`${next.mode}:${next.palettes[next.mode]}`] = patch.accent;
+  // Vurgu rengi: örtüsüz, anında (yalnız 4 token değişir). Hazır vurgu seçilince o paletin özel rengi kalkar.
+  // customAccent: '#RRGGBB' özel renk, null = sıfırla
+  if (patch.accent || patch.customAccent !== undefined) {
+    const k = `${next.mode}:${next.palettes[next.mode]}`;
+    next.customAccents = { ...(current.customAccents || {}) };
+    if (patch.accent) { next.accents![k] = patch.accent; delete next.customAccents[k]; }
+    if (patch.customAccent === null) delete next.customAccents[k];
+    else if (typeof patch.customAccent === 'string' && /^#[0-9a-f]{6}$/i.test(patch.customAccent)) next.customAccents[k] = patch.customAccent.toUpperCase();
     current = next;
     try { localStorage.setItem(KEY, JSON.stringify(next)); } catch { /* ignore */ }
     applyAppearance(next);
@@ -435,5 +506,6 @@ export function useAppearance() {
     () => current
   );
   const pal = findPalette(a.mode, a.palettes[a.mode]);
-  return { ...a, palette: a.palettes[a.mode], accent: findAccent(pal, a.accents?.[`${a.mode}:${pal.id}`])?.id, set: setAppearance };
+  const custom = a.customAccents?.[`${a.mode}:${pal.id}`];
+  return { ...a, palette: a.palettes[a.mode], accent: custom ? undefined : findAccent(pal, a.accents?.[`${a.mode}:${pal.id}`])?.id, customAccent: custom, set: setAppearance };
 }

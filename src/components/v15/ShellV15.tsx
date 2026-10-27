@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { createPortal } from 'react-dom';
+import { CdYanKapsul } from '../canliDers/CdSesliEk';
 import {
   Bell,
   House,
@@ -312,6 +313,7 @@ export const SideNavV15: React.FC<SideNavProps> = ({ active, onGo, isAdmin, user
       </div>
 
       <div className="v15-side-foot">
+        <CdYanKapsul />
         <div className="v15-side-araclar" role="group" aria-label="Araçlar">
           <button type="button" onClick={kronometreAc} title="Kronometre" aria-label="Kronometre"><Timer aria-hidden="true" /></button>
           <button type="button" onClick={() => toggleAppFs()} title={appFs ? 'Tam ekrandan çık' : 'Tam ekran'} aria-label={appFs ? 'Tam ekrandan çık' : 'Tam ekran'}>{appFs ? <Minimize2 aria-hidden="true" /> : <Maximize2 aria-hidden="true" />}</button>

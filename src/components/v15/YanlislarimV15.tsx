@@ -4,6 +4,7 @@ import { PracticeMode } from '../PracticeMode';
 import { OGRENILDI_KUTU, useYanlislar, yanlisGeriKoy, yanlisGruplari, yanlisSil, type YanlisKayit } from '../../services/yanlislarim';
 import { geriAlinabilir } from '../ui/Toast';
 import { useV15Baslik } from './baslik';
+import SoruSuzgecV15, { suzgecUyar, type SuzgecDegeri, type SuzgecYonu } from './SoruSuzgecV15';
 import '../../styles/v15/ogren.css';
 import '../../styles/v15/dersler.css';
 import '../../styles/v15/soru.css';
@@ -25,7 +26,15 @@ export default function YanlislarimV15() {
   const [sekme, setSekme] = useState<Sekme>(g.hazir.length ? 'hazir' : 'bekleyen');
   const [coz, setCoz] = useState<YanlisKayit[] | null>(null);
   useV15Baslik(coz ? null : { baslik: 'Yanlışlarım', alt: `${g.hazir.length} tekrar zamanı · ${g.bekleyen.length} bekleyen` });
-  const liste = g[sekme];
+  const [suz, setSuz] = useState<SuzgecDegeri>({});
+  const ham = g[sekme];
+  const dersOf = (e: YanlisKayit) => e.q.discipline?.replace(/^Tıbbi\s+/, '') || 'Diğer';
+  const yilOf = (e: YanlisKayit) => String(e.q.examYear || 'Bilinmiyor');
+  const yonler: SuzgecYonu[] = useMemo(() => {
+    const say = (f: (e: YanlisKayit) => string) => { const m = new Map<string, number>(); ham.forEach((e) => { const v = f(e); m.set(v, (m.get(v) || 0) + 1); }); return [...m.entries()].sort((a, b) => b[1] - a[1]).map(([deger, n]) => ({ deger, n })); };
+    return [{ id: 'ders', ad: 'Ders', secenekler: say(dersOf) }, { id: 'yil', ad: 'Yıl', secenekler: say(yilOf) }, { id: 'neden', ad: 'Neden', secenekler: say((e) => e.neden || 'Belirtilmedi') }];
+  }, [ham]);
+  const liste = ham.filter((e) => suzgecUyar(suz, 'ders', dersOf(e)) && suzgecUyar(suz, 'yil', yilOf(e)) && suzgecUyar(suz, 'neden', e.neden || 'Belirtilmedi'));
   const sorular = useMemo(() => (coz || []).map((e) => e.q), [coz]);
 
   if (coz) {
@@ -40,9 +49,10 @@ export default function YanlislarimV15() {
           <button key={id} type="button" role="tab" aria-selected={sekme === id} aria-current={sekme === id ? 'page' : undefined} onClick={() => setSekme(id)}>{t}</button>
         ))}
       </div>
-      {sekme === 'hazir' && g.hazir.length > 0 && (
-        <button type="button" className="v15-btn yl15-coz" onClick={() => setCoz(g.hazir.slice(0, 40))}><RotateCcw aria-hidden /> Hazır olanları çöz ({Math.min(40, g.hazir.length)})</button>
+      {sekme === 'hazir' && liste.length > 0 && (
+        <button type="button" className="v15-btn yl15-coz" onClick={() => setCoz(liste.slice(0, 40))}><RotateCcw aria-hidden /> Hazır olanları çöz ({Math.min(40, liste.length)})</button>
       )}
+      <SoruSuzgecV15 yonler={yonler} deger={suz} onChange={setSuz} kayitAnahtari="yanlislarim" sonuc={liste.length}>
       {liste.length ? (
         <ul className="b15-list v15-card" role="list">
           {liste.map((e) => (
@@ -63,9 +73,10 @@ export default function YanlislarimV15() {
         </ul>
       ) : (
         <p className="b15-bos v15-card">
-          {sekme === 'hazir' ? 'Şu an tekrar zamanı gelen soru yok.' : sekme === 'bekleyen' ? 'Yanlış yaptığın sorular burada birikir; 48 saat sonra tekrar zamanına geçer.' : 'Tekrarda dört kez doğru yaptığın sorular burada.'}
+          {ham.length && !liste.length ? 'Süzgece uyan soru yok; süzgeci gevşet ya da temizle.' : sekme === 'hazir' ? 'Şu an tekrar zamanı gelen soru yok.' : sekme === 'bekleyen' ? 'Yanlış yaptığın sorular burada birikir; 48 saat sonra tekrar zamanına geçer.' : 'Tekrarda dört kez doğru yaptığın sorular burada.'}
         </p>
       )}
+      </SoruSuzgecV15>
       <p className="v15-cap">Yanlış yaptığın soru 48 saat sonra yeniden sorulur; doğru yaptıkça aralık uzar (2 · 4 · 8 · 16 gün), dördüncü doğrudan sonra öğrenilmiş sayılır.</p>
     </div>
   );

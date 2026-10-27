@@ -1,0 +1,73 @@
+/* v15 · Soru istatistikleri (IstatistikV15) — X04–X08, J02, X10 */
+.is15-seg { align-self: stretch; }
+.is15-svg { width: 100%; height: 130px; display: block; overflow: visible; }
+.is15-cubuk { fill: var(--color-accent); }
+.is15-ozet { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; justify-content: center; }
+.is15-yuzde { display: flex; flex-direction: column; align-items: center; font-size: 1.3rem; font-weight: 700; color: var(--color-ink); line-height: 1.1; }
+.is15-yuzde small { font-size: .7rem; font-weight: 500; color: var(--color-ink-3); }
+.is15-uc { display: flex; gap: 20px; flex-wrap: wrap; justify-content: center; }
+.is15-uc > div { display: grid; grid-template-columns: auto auto; column-gap: 6px; align-items: center; }
+.is15-uc small { color: var(--color-ink-3); font-size: .8rem; }
+.is15-uc b { grid-column: 1 / -1; font-size: 1.3rem; color: var(--color-ink); font-variant-numeric: tabular-nums; }
+.is15-nokta { display: inline-block; width: 10px; height: 10px; border-radius: 50%; flex: none; background: var(--color-ink-3); }
+.is15-nokta.is-ok { background: var(--color-ok); }
+.is15-nokta.is-b { background: var(--color-bad); }
+.v15-bar.is-ok > span { background: var(--color-ok); }
+.v15-bar.is-w > span { background: var(--color-warn); }
+.is15-izgara { display: grid; grid-template-columns: repeat(auto-fill, minmax(18px, 1fr)); gap: 4px; }
+.is15-q { aspect-ratio: 1; border: 0; border-radius: 4px; cursor: pointer; padding: 0; background: var(--color-line); }
+.is15-q.is-ok { background: var(--color-ok); }
+.is15-q.is-b { background: var(--color-bad); }
+.is15-q:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 1px; }
+.is15-l-ok, .is15-l-b { display: inline-block; width: 10px; height: 10px; border-radius: 3px; }
+.is15-l-ok { background: var(--color-ok) !important; }
+.is15-l-b { background: var(--color-bad) !important; }
+.is15-liste { list-style: none; margin: 0; padding: 4px 0; }
+.is15-liste li + li { border-top: 1px solid var(--color-line-soft); }
+.is15-liste button, .is15-test { width: 100%; display: flex; align-items: center; gap: 10px; padding: 10px 14px; border: 0; background: none; text-align: left; cursor: pointer; color: var(--color-ink); min-width: 0; }
+.is15-test { cursor: default; }
+.is15-liste button:hover { background: var(--color-field); }
+.is15-l-t { display: flex; flex-direction: column; gap: 2px; min-width: 0; flex: 1; }
+.is15-l-t b { font-size: .9rem; font-weight: 500; overflow-wrap: anywhere; }
+.is15-l-t small { color: var(--color-ink-3); font-size: .78rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.is15-puan { font-variant-numeric: tabular-nums; }
+.is15-konu { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 12px; }
+.is15-konu li { display: grid; grid-template-columns: minmax(0, 1fr) minmax(60px, 30%) 3rem; align-items: center; gap: 10px; }
+.is15-k-ad { display: flex; flex-direction: column; min-width: 0; }
+.is15-k-ad b { font-size: .88rem; font-weight: 500; color: var(--color-ink); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.is15-k-ad small { font-size: .75rem; color: var(--color-ink-3); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.is15-konu .gf15-mod-n { text-align: right; }
+.is15-egri { height: 150px; }
+.is15-egri-l { fill: none; stroke: currentColor; stroke-width: 2; vector-effect: non-scaling-stroke; }
+.is15-egri-n { fill: currentColor; stroke: var(--color-white); stroke-width: 1.5; }
+.is15-e1 { color: var(--color-accent); }
+.is15-e2 { color: var(--color-bad); }
+.is15-e3 { color: var(--color-warn); }
+.is15-e4 { color: var(--color-ink-3); }
+.is15-egri-x { display: flex; justify-content: space-between; margin-top: 4px; }
+.is15-egri-lej { list-style: none; margin: 10px 0 0; padding: 0; display: flex; flex-direction: column; gap: 6px; }
+.is15-egri-lej li { display: grid; grid-template-columns: 14px minmax(0, 1fr) auto; column-gap: 8px; align-items: center; font-size: .85rem; color: var(--color-ink-2); }
+.is15-egri-lej i { width: 14px; height: 3px; border-radius: 2px; background: currentColor; }
+.is15-egri-lej span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: var(--color-ink); }
+.is15-egri-lej b { font-variant-numeric: tabular-nums; color: var(--color-ink); }
+.is15-egri-lej small { grid-column: 2 / -1; color: var(--color-ink-3); font-size: .75rem; }
+.is15-tur { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.is15-tur > button { padding: 10px; cursor: pointer; display: flex; flex-direction: column; gap: 6px; align-items: stretch; color: var(--color-ink); }
+.is15-tur > button .is15-svg { height: 50px; }
+.is15-tur > button > span { display: flex; justify-content: center; align-items: center; gap: 4px; font-size: .85rem; }
+.is15-tur > button svg[class*='lucide'] { width: 14px; height: 14px; color: var(--color-accent); }
+.is15-tur > button.is-on { box-shadow: 0 0 0 2px var(--color-accent); }
+.is15-anahtar { display: flex; justify-content: space-between; align-items: center; gap: 12px; color: var(--color-ink); font-size: .9rem; }
+.is15-anahtar input { width: 20px; height: 20px; accent-color: var(--color-accent); }
+.is15-alt { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.is15-det-b { display: flex; align-items: center; gap: 8px; color: var(--color-ink); }
+.is15-det { display: flex; flex-direction: column; gap: 10px; }
+.is15-kok { margin: 0; color: var(--color-ink); line-height: 1.5; overflow-wrap: anywhere; }
+.is15-sik { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 6px; }
+.is15-sik li { display: flex; gap: 10px; align-items: flex-start; padding: 8px 10px; border-radius: 10px; background: var(--color-field); color: var(--color-ink-2); overflow-wrap: anywhere; }
+.is15-sik li span { flex: 1; min-width: 0; }
+.is15-sik li.is-ok { background: var(--color-ok-soft); color: var(--color-ink); }
+.is15-sik li svg { width: 16px; height: 16px; color: var(--color-ok); flex: none; }
+.is15-gecmis { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; }
+.is15-gecmis li { display: flex; align-items: center; gap: 8px; color: var(--color-ink); font-size: .9rem; }
+.is15-gecmis small { margin-left: auto; color: var(--color-ink-3); }

@@ -8,9 +8,11 @@ import fs from 'fs';
 import path from 'path';
 import type { QuizQuestion } from '../../types/quiz';
 
-interface CSoru { no: number; soru: string; secenekler: Record<string, string>; dogru: string; siklar?: Record<string, string>; ipucu?: string; zorluk?: string }
+interface CSoru { no: number; soru: string; secenekler: Record<string, string>; dogru: string; siklar?: Record<string, string>; ipucu?: string; zorluk?: string; gorsel?: string }
 interface CDers { kod: string; no?: number; baslik: string; sorular: CSoru[] }
-export interface OyunKaynak { brans: string; ad: string; kurul: number; ders: { kod: string; baslik: string; n: number }[]; n: number }
+export interface OyunKaynak { brans: string; ad: string; kurul: number; ders: { kod: string; baslik: string; n: number }[]; n: number; gorselN: number }
+/** görselli soru: sorunun `gorsel` alanı yayındaki bir görsel adresi (/… ya da https://…) */
+const gorselli = (s: CSoru) => typeof s.gorsel === 'string' && /^(\/|https:\/\/)/.test(s.gorsel);
 
 const KOK = path.join(process.cwd(), 'src', 'data');
 const KOK_SINIR = 220;
@@ -58,6 +60,7 @@ export function oyunKaynaklari(): OyunKaynak[] {
       kurul: k ? Number(k[1]) : 1,
       ders: dersler.map((d) => ({ kod: String(d.kod), baslik: d.baslik, n: d.sorular.length })),
       n: dersler.reduce((a, d) => a + d.sorular.length, 0),
+      gorselN: dersler.reduce((a, d) => a + d.sorular.filter(gorselli).length, 0),
     };
   }).sort((a, b) => b.kurul - a.kurul || b.n - a.n);
 }
@@ -69,9 +72,9 @@ const karistir = <T,>(a: T[]): T[] => {
 };
 
 /** brans (zorunlu), ders kodu (isteğe bağlı), n soru (3–20) → QuizQuestion listesi; kaynak yoksa boş */
-export function oyunSorulari(brans: string, ders: string | undefined, n: number): QuizQuestion[] {
+export function oyunSorulari(brans: string, ders: string | undefined, n: number, yalnizGorselli = false): QuizQuestion[] {
   const dersler = (yukle().get(brans) || []).filter((d) => !ders || String(d.kod) === ders);
-  const havuz = dersler.flatMap((d) => d.sorular.map((s) => ({ d, s })));
+  const havuz = dersler.flatMap((d) => d.sorular.filter((s) => !yalnizGorselli || gorselli(s)).map((s) => ({ d, s })));
   const adet = Math.max(3, Math.min(20, Math.round(n) || 10));
   return karistir(havuz).slice(0, adet).map(({ d, s }) => {
     const uzunluk = s.soru.length + Object.values(s.secenekler).join(' ').length;
@@ -97,6 +100,7 @@ export function oyunSorulari(brans: string, ders: string | undefined, n: number)
       estimated_reading_sec: sure,
       difficulty: s.zorluk === 'zor' ? 'hard' : s.zorluk === 'kolay' ? 'easy' : 'medium',
       evidence: { page: 0, quote: '' },
+      ...(gorselli(s) ? { gorsel: s.gorsel } : {}),
     } as QuizQuestion;
   });
 }

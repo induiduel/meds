@@ -1,0 +1,9 @@
+/* I06 şifresiz giriş (EpostaBaglantiGiris.tsx) — giriş kartının altında */
+.eb { display: flex; flex-direction: column; gap: 8px; margin-top: 10px; min-width: 0; }
+.eb > button svg { width: 17px; height: 17px; flex: none; }
+.eb-baslik { display: flex; align-items: center; gap: 8px; margin: 0; font-weight: 650; color: var(--color-ink); }
+.eb-baslik svg { width: 20px; height: 20px; color: var(--color-accent); flex: none; }
+.eb-not { margin: 0; font-size: .86rem; line-height: 1.5; color: var(--color-ink-2); overflow-wrap: anywhere; }
+.eb-link { align-self: center; min-height: 40px; padding: 0 8px; border: 0; background: none; color: var(--color-accent); font: 600 .88rem/1.2 inherit; cursor: pointer; }
+.eb-link:disabled { color: var(--color-ink-3); cursor: default; }
+.eb-hata { margin: 0; font-size: .85rem; color: var(--color-bad-text); }

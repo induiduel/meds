@@ -56,6 +56,7 @@ import { toast } from '../ui/Toast';
 import { NotesSyncRow } from './NotesSyncRow';
 import { UserDataSyncRow } from './UserDataSyncRow';
 import { ArkaPlanRow } from './ArkaPlanRow';
+import { GorunumEkleri } from './GorunumEkleri';
 import { ProgressResetRow } from './ProgressResetRow';
 import { startWelcomeTour } from '../onboarding/tourState';
 import { onLearnTour } from '../onboarding/learnTourState';
@@ -228,6 +229,8 @@ const ProfileSettingsClassic: React.FC<Props> = ({ currentUser, isAdmin, questio
               </div>
             );
           })()}
+
+          <GorunumEkleri look={look} />
 
           <div className="ayr-block">
             <h3 id="ayr-duzen-h">Görüntüleme modu</h3>

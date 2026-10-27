@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
-import { ChevronRight, Flag, Hash, Heart, Link2, LogOut, Mail, MessageCircle, MessagesSquare, Reply, Search, Send, SquarePen, Trash2, X } from 'lucide-react';
+import { ChevronRight, Flag, Hash, Heart, Link2, LogOut, Mail, MessageCircle, MessagesSquare, Reply, Search, Send, SquarePen, Trash2, UserRound, X } from 'lucide-react';
 import { safeJsonFetch } from '../../services/api';
 import { auth, getRememberedStudentInfo } from '../../services/auth';
 import { useLiveEvent } from '../../hooks/useLiveEvent';
@@ -360,6 +360,7 @@ function Sohbet({ kanal, oda }: { kanal: string; oda?: number }) {
               </div>
               <div className="tp15-is">
                 <button type="button" onClick={() => setYanit(x)} aria-label="Yanıtla"><Reply aria-hidden /></button>
+                {!x.benim && girisli && <button type="button" onClick={() => git(`/kisi/${x.yazar}`)} aria-label="Profilini aç, arkadaş ekle"><UserRound aria-hidden /></button>}
                 {!oda && !x.benim && girisli && <button type="button" onClick={() => ozel(x)} aria-label="Özel mesaj gönder"><Mail aria-hidden /></button>}
                 {x.benim || x.sikayet !== undefined ? <button type="button" onClick={() => sil(x)} aria-label="Sil"><Trash2 aria-hidden /></button>
                   : oda ? null : <button type="button" onClick={() => bildir(x)} aria-label="Uygunsuz olarak bildir"><Flag aria-hidden /></button>}

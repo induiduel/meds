@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo, useState } from 'react';
-import { ChevronDown, ChevronRight, Headphones } from 'lucide-react';
+import { ChevronDown, ChevronRight, Headphones, Video } from 'lucide-react';
 import { linkClick, navigateTo, pathFor, type AppRoute } from '../../router';
 import { NAV_ITEMS } from '../shell/navModel';
 import { KURUL_NOLAR, kurulKaydet, useSeciliKurul } from '../kurul/KurulSecici';
@@ -7,6 +7,7 @@ import { MERKEZ_ARACLARI } from '../merkez/merkezModel';
 import { Sheet } from '../ui/Sheet';
 import { useV15Baslik } from './baslik';
 import KurulSecV15 from './KurulSecV15';
+import { useHazirVideolar } from './VideoDersV15';
 import { bransYolu, dersAdi, dersKurulu, dersSirala, dersYolu, kurulBranslari, merkezYolu, sureDk, useDersListesi, useIlerleme } from './dersVeri';
 import { cdBransKisa } from '../canliDers/canliDersKategori';
 import '../../styles/v15/dersler.css';
@@ -30,6 +31,8 @@ export default function DerslerMerkezV15() {
   const { dersler, hata } = useDersListesi();
   const ilerleme = useIlerleme();
   const [diger, setDiger] = useState(false);
+  // O01 giriş: yalnız sunucuda hazır ders videosu varken görünür
+  const videolar = useHazirVideolar();
   const [desteN, setDesteN] = useState<number | null>(null);
 
   useEffect(() => {
@@ -137,6 +140,17 @@ export default function DerslerMerkezV15() {
           </span>
           <ChevronRight className="v15-chev" aria-hidden />
         </button>
+      )}
+
+      {!!videolar?.length && (
+        <a className="d15-diger" href="/video-ders" onClick={git('/video-ders')}>
+          <span className="d15-diger-ic" aria-hidden><span className="v15-tile"><Video /></span></span>
+          <span className="d15-diger-t">
+            <b>Video dersler</b>
+            <span>{videolar.length} hazır video · tam ekran, resim içinde resim</span>
+          </span>
+          <ChevronRight className="v15-chev" aria-hidden />
+        </a>
       )}
 
       <Sheet open={diger} onClose={() => setDiger(false)} title="Diğer araçlar">

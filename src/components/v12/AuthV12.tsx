@@ -42,6 +42,8 @@ export interface AuthCardV12Props {
   onRegister: (e: React.FormEvent) => void;
   onAdminPassword: (e: React.FormEvent) => void;
   onResetPassword?: () => void;
+  /** Giriş kipinde formun altına eklenen bölüm (ör. I06 e-posta bağlantısıyla şifresiz giriş) */
+  loginExtra?: React.ReactNode;
 }
 
 /**
@@ -173,6 +175,7 @@ export const AuthCardV12: React.FC<AuthCardV12Props> = (p) => {
               {mode === 'login' ? 'Giriş yap' : 'Kayıt ol'}
             </button>
           </form>
+          {mode === 'login' && p.loginExtra}
 
           {<p className="e12-swap">
             {mode === 'login' ? 'Hesabın yok mu?' : 'Hesabın var mı?'}{' '}

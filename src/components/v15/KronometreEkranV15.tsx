@@ -7,9 +7,10 @@ import { takipOku } from '../../services/calismaTakip';
  * görünüm. Ayarlar cihazda (`medsoru_v15_kronometre_ayar`); geçmiş kronometre kayıtları ile sistemin ölçtüğü çalışma
  * süresini (calismaTakip günlük toplamları) yan yana gösterir — ikisi birbirine karışmaz.
  */
-export interface KrAyar { goster: boolean; birles: boolean; devam: boolean; boyut: 'kucuk' | 'orta'; sag: boolean; molaDk: number; hedefDk: number }
+export type KrBicim = 'zar' | 'nokta' | 'hap' | 'kenar' | 'cip' | 'cizgi';
+export interface KrAyar { bicim: KrBicim; goster: boolean; birles: boolean; devam: boolean; boyut: 'kucuk' | 'orta'; sag: boolean; molaDk: number; hedefDk: number }
 export const KR_AYAR_KEY = 'medsoru_v15_kronometre_ayar';
-export const AYAR_VARSAYILAN: KrAyar = { goster: true, birles: true, devam: true, boyut: 'orta', sag: true, molaDk: 50, hedefDk: 120 };
+export const AYAR_VARSAYILAN: KrAyar = { bicim: 'zar', goster: true, birles: true, devam: true, boyut: 'orta', sag: true, molaDk: 50, hedefDk: 120 };
 export const ayarOku = (): KrAyar => { try { return { ...AYAR_VARSAYILAN, ...JSON.parse(localStorage.getItem(KR_AYAR_KEY) || '{}') }; } catch { return AYAR_VARSAYILAN; } };
 export interface KrKayit { t: string; sn: number; tur: number; ad?: string }
 
@@ -37,6 +38,34 @@ function Secim<T extends string | number>({ etiket, deger, secenek, onDegis }: {
   );
 }
 
+/** Tasarım kronoFormlar: varsayılan zar + F1–F5 */
+const BICIMLER: [KrBicim, string, string][] = [
+  ['zar', 'Zar', 'Varsayılan yüzen baloncuk; süre ve ilerleme halkası.'],
+  ['nokta', 'F1 · Nokta', '22 px halka; süre yalnız dokununca baloncukta görünür.'],
+  ['hap', 'F2 · Hap', 'Süreli küçük hap; kenarı nefes alır.'],
+  ['kenar', 'F3 · Kenar sekmesi', 'Ekran kenarına yapışık yarım kapsül; içeriği kapatmaz.'],
+  ['cip', 'F4 · Başlık çipi', 'Üstte küçük çip; yüzmez, yer kaplamaz.'],
+  ['cizgi', 'F5 · İnce çizgi', 'Ekran tepesinde 2 px ilerleme çizgisi + küçük süre.'],
+];
+function BicimSec({ deger, onDegis }: { deger: KrBicim; onDegis: (v: KrBicim) => void }) {
+  return (
+    <div className="kre-bicim" role="radiogroup" aria-label="Kronometre biçimi">
+      <span className="kre-bicim-b">Biçim</span>
+      <div className="kre-bicim-g">
+        {BICIMLER.map(([v, ad, ac]) => (
+          <button key={v} type="button" role="radio" aria-checked={deger === v} className={`kre-bk${deger === v ? ' is-on' : ''}`} onClick={() => onDegis(v)}>
+            <span className={`kre-bk-o is-${v}`} aria-hidden>
+              {v === 'zar' ? <i className="o-zar">12:48</i> : v === 'nokta' ? <i className="o-nokta" /> : v === 'hap' ? <i className="o-hap"><b />12:48</i>
+                : v === 'kenar' ? <i className="o-kenar"><b />12<br />48</i> : v === 'cip' ? <i className="o-cip"><b />12:48</i> : <i className="o-cizgi"><b /><em>12:48</em></i>}
+            </span>
+            <b>{ad}</b><small>{ac}</small>
+          </button>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 export default function KronometreEkranV15({ gorunum, ayar, setAyar, gecmis, onKapat }: {
   gorunum: 'ayar' | 'gecmis'; ayar: KrAyar; setAyar: (a: KrAyar) => void; gecmis: KrKayit[]; onKapat: () => void;
 }) {
@@ -49,6 +78,7 @@ export default function KronometreEkranV15({ gorunum, ayar, setAyar, gecmis, onK
     govde = (
       <div className="kre-cols">
         <section className="v15-card kre-kart">
+          <BicimSec deger={ayar.bicim} onDegis={(v) => ay({ bicim: v })} />
           <Anahtar etiket="Yüzen kronometreyi göster" acik={ayar.goster} onDegis={(v) => ay({ goster: v })} />
           <Anahtar etiket="Medya açıkken oynatıcıyla birleş" acik={ayar.birles} onDegis={(v) => ay({ birles: v })} />
           <Anahtar etiket="Sayfa değişince çalışmaya devam et" acik={ayar.devam} onDegis={(v) => ay({ devam: v })} />

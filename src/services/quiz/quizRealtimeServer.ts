@@ -26,6 +26,8 @@ export interface PlayerState {
   streak: number;
   rttMs: number;
   timeOffsetMs: number;
+  /** Takım modu: A ya da B */
+  takim?: 'A' | 'B';
   answers: Record<string, {
     option: string;
     responseTimeMs: number;
@@ -49,6 +51,8 @@ export interface QuizRoom {
   /** Oyunlar: kaynak adı (lobide gösterilir) ve odayı kuran */
   baslik?: string;
   kurucu?: string;
+  /** Takım modu: oyuncular iki takıma ayrılır, takım puanı = üyelerin puan toplamı */
+  takimli?: boolean;
 }
 
 class QuizRealtimeManager {
@@ -127,10 +131,24 @@ class QuizRealtimeManager {
               const oda = this.createOrJoinRoom(roomId, String(kaynak.brans), String(kaynak.ders || ''), sorular);
               oda.baslik = String(kaynak.baslik || '').slice(0, 120);
               oda.kurucu = String(userId);
+              oda.takimli = !!kaynak.takim;
             }
             currentRoomId = roomId;
             currentUserId = String(userId);
             this.handleJoinRoom(ws, roomId, String(userId), String(displayName || 'Öğrenci').slice(0, 40), courseId, topicId);
+            break;
+          }
+
+          // Takım modu: lobide takım değiştirme
+          case 'set_team': {
+            if (currentRoomId && currentUserId) {
+              const room = this.rooms.get(currentRoomId);
+              const p = room?.players.get(currentUserId);
+              if (room?.takimli && room.status === 'lobby' && p && (msg.takim === 'A' || msg.takim === 'B')) {
+                p.takim = msg.takim;
+                this.broadcast(room, { type: 'player_team_changed', userId: currentUserId, takim: p.takim });
+              }
+            }
             break;
           }
 
@@ -219,6 +237,11 @@ class QuizRealtimeManager {
       answers: {}
     };
 
+    // Takım modu: yeni oyuncu az kişili takıma (eşitse A)
+    if (room.takimli && !player.takim) {
+      const say = (t: 'A' | 'B') => [...room.players.values()].filter((p) => p.userId !== userId && p.takim === t).length;
+      player.takim = say('B') < say('A') ? 'B' : 'A';
+    }
     room.players.set(userId, player);
 
     // Önceden Yükleme (Pre-fetching): Soru metinlerini (doğru cevap gizlenmiş olarak) istemciye tek seferde yolla!
@@ -240,6 +263,8 @@ class QuizRealtimeManager {
       players: this.getPublicPlayersList(room),
       baslik: room.baslik || '',
       kurucu: room.kurucu || '',
+      takimli: !!room.takimli,
+      takimSkor: this.getTakimSkor(room),
       deadlineMs: room.status === 'in_round' ? room.roundDeadlineMs : 0,
       serverTime: Date.now()
     }));
@@ -247,7 +272,7 @@ class QuizRealtimeManager {
     // Diğer oyunculara duyur
     this.broadcast(room, {
       type: 'player_joined',
-      player: { userId, displayName, score: player.score, streak: player.streak, isReady: player.isReady }
+      player: { userId, displayName, score: player.score, streak: player.streak, isReady: player.isReady, takim: player.takim }
     }, userId);
   }
 
@@ -404,7 +429,8 @@ class QuizRealtimeManager {
       questionId: currentQ.id,
       correctOption: currentQ.correct_option,
       optionExplanations: currentQ.option_explanations,
-      leaderboard
+      leaderboard,
+      takimSkor: this.getTakimSkor(room)
     });
 
     // 4 saniye sonra sonraki tura geç
@@ -419,7 +445,8 @@ class QuizRealtimeManager {
 
     this.broadcast(room, {
       type: 'game_finished',
-      finalLeaderboard
+      finalLeaderboard,
+      takimSkor: this.getTakimSkor(room)
     });
   }
 
@@ -459,8 +486,17 @@ class QuizRealtimeManager {
       displayName: p.displayName,
       isReady: p.isReady,
       score: p.score,
-      streak: p.streak
+      streak: p.streak,
+      takim: p.takim
     }));
+  }
+
+  /** Takım modu: üyelerin puan toplamı ve kişi sayısı; takımsız odada null */
+  private getTakimSkor(room: QuizRoom) {
+    if (!room.takimli) return null;
+    const t = { A: { puan: 0, kisi: 0 }, B: { puan: 0, kisi: 0 } };
+    for (const p of room.players.values()) if (p.takim) { t[p.takim].puan += p.score; t[p.takim].kisi += 1; }
+    return t;
   }
 
   private getLeaderboard(room: QuizRoom) {
@@ -469,7 +505,8 @@ class QuizRealtimeManager {
         userId: p.userId,
         displayName: p.displayName,
         score: p.score,
-        streak: p.streak
+        streak: p.streak,
+        takim: p.takim
       }))
       .sort((a, b) => b.score - a.score);
   }

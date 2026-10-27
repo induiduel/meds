@@ -18,6 +18,8 @@ import { cumleDuzeyleri } from '../../utils/maddele';
 import {
   cdCumleAraligi, cdParagrafSinirlari, cdDetayBagla, cdKelimeBas, cdKonusulanKarakter, cdDetayGetir, cdDurum, cdMedspakUrl, cdOynat, cdParagrafa, cdSesUrl, cdTercihVaryant, cdToggle, cdBolumAtla, fmtSure, useCd, type CdDetay,
 } from './canliDersStore';
+import { CdAiPanel, CdBolumSonu, CdMasa, CdSesliKitap, cdAiIste, cdBolumSonuDurAyarla, useCdBolumSonuDur, useMasaUygun } from './CdSesliEk';
+import { toggleFavoriteCard } from '../../services/studyStore';
 import { CdV15Bas, CdV15Gorunum, CdV15KalemDugme, CdV15KalemKutusu, CdV15Menu } from './CdV15';
 import { GunlukDiyalog } from './CanliDersView';
 import { CdCikmisChip, CdCikmisPencereKok, cikmisSayfada } from './CdCikmisChip';
@@ -30,7 +32,7 @@ import { cdMotivasyonAyarla, useCdMotivasyonAcik } from './canliDersMotivasyon';
 import { CdTvKumanda } from './CanliDersTv';
 import { MetniAktarDugme } from './CanliDersAktarDugme';
 import { VideoOlusturDugme } from './CanliDersVideo';
-import { Highlighter, SlidersHorizontal, Sparkles, Star } from 'lucide-react';
+import { Columns3, Headphones, Highlighter, SlidersHorizontal, Sparkles, Star } from 'lucide-react';
 import { useKonuSayaci } from '../../services/calismaTakip';
 import { KonuDugmeleri } from '../takip/KonuTakip';
 import { toast } from '../ui/Toast';
@@ -210,6 +212,11 @@ export default function CanliDersDers({ dersKey, kamp }: { dersKey: string; kamp
   const [gor15, setGor15] = useState(false);
   const [menu15, setMenu15] = useState(false);
   const [odak, setOdak] = useState(false);
+  // S06 sesli kitap / S07 üç bölmeli masa: mevcut görünümlerin üstünde ek kip (cihazda saklanır)
+  const [ozelKip, setOzelKipDurum] = useState<'kitap' | 'masa' | null>(() => { try { const v = localStorage.getItem('medsoru_cd_ozel_kip'); return v === 'kitap' || v === 'masa' ? v : null; } catch { return null; } });
+  const setOzelKip = (k: 'kitap' | 'masa' | null) => { setOzelKipDurum(k); try { localStorage.setItem('medsoru_cd_ozel_kip', k || ''); } catch { /* yok */ } };
+  const masaUygun = useMasaUygun();
+  const bolumSonuDur = useCdBolumSonuDur();
   const [yazi, setYaziDurum] = useState<number>(() => { try { return Number(localStorage.getItem(YAZI_KEY)) || 20; } catch { return 20; } });
   const setYazi = (n: number | ((y: number) => number)) => setYaziDurum((y) => {
     const v = Math.min(YAZI_ENCOK, Math.max(YAZI_ENAZ, typeof n === 'function' ? n(y) : n));
@@ -785,6 +792,17 @@ export default function CanliDersDers({ dersKey, kamp }: { dersKey: string; kamp
                   <>
                     <KonuDugmeleri kucuk className="cd-ders-takip" modul="sesli" konu={detay.key} ad={detay.baslik}
                       onTekrar={() => { const v = cdTercihVaryant(detay.varyantlar); if (v) cdOynat(detay, v.id, { t: 0 }); }} />
+                    <button type="button" className={`cd-btn${ozelKip === 'kitap' ? ' is-on' : ''}`} onClick={() => { setMenu15(false); setOzelKip(ozelKip === 'kitap' ? null : 'kitap'); }}>
+                      <Headphones aria-hidden /> <span>{ozelKip === 'kitap' ? 'Sesli kitaptan çık' : 'Sesli kitap kipi'}</span>
+                    </button>
+                    {masaUygun && (
+                      <button type="button" className={`cd-btn${ozelKip === 'masa' ? ' is-on' : ''}`} onClick={() => { setMenu15(false); setOzelKip(ozelKip === 'masa' ? null : 'masa'); }}>
+                        <Columns3 aria-hidden /> <span>{ozelKip === 'masa' ? 'Üç bölmeli masadan çık' : 'Üç bölmeli masa'}</span>
+                      </button>
+                    )}
+                    <button type="button" className={`cd-btn${bolumSonuDur ? ' is-on' : ''}`} aria-pressed={bolumSonuDur} onClick={() => cdBolumSonuDurAyarla(!bolumSonuDur)}>
+                      <Pause aria-hidden /> <span>Bölüm sonlarında dur: {bolumSonuDur ? 'Açık' : 'Kapalı'}</span>
+                    </button>
                     <button type="button" className="cd-btn" onClick={() => { setMenu15(false); setYildizModalAcik(true); }}>
                       <Star aria-hidden /> <span>Yıldızlı paragraflar ({yildizSayisi})</span>
                     </button>
@@ -873,9 +891,19 @@ export default function CanliDersDers({ dersKey, kamp }: { dersKey: string; kamp
         <CanliDersBaslangic detay={detay} gorunum={mod} pdfVar={pdfVar}
           setGorunum={(g) => setGorunum(g)} onKapat={() => { setAcilis(false); setBaglanti(cdDetayBagla(detay)); }} />
       )}
+      {!acilis && ozelKip === 'kitap' && (
+        <CdSesliKitap detay={detay} onMetin={() => setOzelKip(null)} onBasla={() => { cdOynat(detay); setBaglanti('bagli'); }} />
+      )}
+      {!acilis && ozelKip === 'masa' && masaUygun && (
+        <CdMasa detay={detay} onParagraf={kaydirParagrafa}
+          orta={pdfVar ? <CdPdfBolme detay={detay} canli={buDers} /> : <CdAltyazi detay={detay} canli={buDers} />}
+          sag={<CdMetinBolme detay={detay} canli={buDers} kamp={!!kamp} />} />
+      )}
+      <CdBolumSonu detay={detay} />
+      <CdAiPanel />
       <div
         ref={govdeRef}
-        hidden={acilis}
+        hidden={acilis || ozelKip === 'kitap' || (ozelKip === 'masa' && masaUygun)}
         className={`cd-govde${mod === 'altyazi' ? ' is-altyazi' : ''}${mod === 'ikisi' ? (aktifYon === 'yan-yana' ? ' is-iki' : ' is-ust-alt') : ''}`}
         style={govdeStil}
       >
@@ -1446,7 +1474,7 @@ function CdKelimeIsaret({ pane, aktif, acik }: { pane: React.RefObject<HTMLDivEl
 }
 
 /** Seçim araç çubuğu (tasarım S10): metinde seçim yapılınca Notlarım'a ekle · Yıldızla · Kopyala (utils/selectionShare).
- *  "Açıkla / Soru üret" yapay zekâ ister; otomatik LLM çağrısı yasağı (AGENTS 20) nedeniyle eklenmedi. */
+ *  "Açıkla / Soru üret" yalnız kullanıcı tıklamasıyla mevcut /api/ai/general-chat ucunu çağırır (otomatik çağrı yok, AGENTS 20). */
 function useCdSecimCubugu(paneRef: React.RefObject<HTMLDivElement | null>, detay: CdDetay) {
   useEffect(() => registerSelectionActions(({ host }) => {
     const pane = paneRef.current;
@@ -1471,12 +1499,26 @@ function useCdSecimCubugu(paneRef: React.RefObject<HTMLDivElement | null>, detay
         },
       },
       ...(par ? [{
-        id: 'cd-yildiz', label: 'Yıldızla', icon: 'M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.5 2.9 1-6.1L3.2 9.5l6.1-.9z',
+        id: 'cd-yildiz', label: 'Spot yap', icon: 'M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.5 2.9 1-6.1L3.2 9.5l6.1-.9z',
         run: () => {
           yildizToggle({ id: `cd_${detay.key}_p${pi}`, kaynak: 'canli_ders', kaynakAd: 'Sesli ders', baslik: detay.baslik, altBaslik: bolum?.baslik, metin: par.metin, deeplink: link, meta: { dersKey: detay.key, paragrafIndex: pi } });
           window.getSelection()?.removeAllRanges();
         },
       }] : []),
+      {
+        id: 'cd-kart', label: 'Kart', icon: 'M4 7h13v12H4zM7 4h13v12',
+        run: ({ text }) => {
+          const t = text.trim();
+          toggleFavoriteCard({ id: `cd-secim:${detay.key}:${t.slice(0, 80)}`, front: t, back: `${detay.baslik}${bolum?.baslik ? ` · ${bolum.baslik}` : ''}`, group: 'Sesli ders seçimleri' });
+          toast.success('Kartlarına eklendi', '');
+          window.getSelection()?.removeAllRanges();
+        },
+      },
+      {
+        id: 'cd-acikla', label: 'Açıkla', icon: 'M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z',
+        run: ({ text }) => { cdAiIste('acikla', text, detay.baslik); window.getSelection()?.removeAllRanges(); },
+      },
+      // "Soru üret" kaldırıldı: soru yazan özellik kaynak getirmeli (CLAUDE.md Grounding); kaynaksız uç yok
       {
         id: 'cd-kopya', label: 'Kopyala', icon: 'M8 8h11v11H8zM5 16V5h11',
         run: ({ text }) => { void navigator.clipboard?.writeText(text.trim()).then(() => toast.success('Kopyalandı', '')); window.getSelection()?.removeAllRanges(); },

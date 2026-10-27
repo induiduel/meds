@@ -45,7 +45,7 @@
 .d15-bos, .b15-bos, .dd15-bos { margin: 0; padding: 18px 16px; font: var(--v15-t-body); color: var(--color-ink-2); }
 
 .d15-diger { display: flex; align-items: center; gap: 14px; width: 100%; padding: 12px 14px; border: 0; border-radius: var(--v15-r-lg); background: var(--color-field);
-  color: var(--color-ink); text-align: left; cursor: pointer; transition: background-color .15s; }
+  color: var(--color-ink); text-align: left; cursor: pointer; text-decoration: none; box-sizing: border-box; transition: background-color .15s; }
 .d15-diger:hover { background: var(--color-accent-soft); }
 .d15-diger-ic { display: flex; flex: none; }
 .d15-diger-ic .v15-tile { width: 32px; height: 32px; border-radius: 50%; box-shadow: 0 0 0 2px var(--color-field); }

@@ -126,3 +126,24 @@
 .hc15-sa p { margin: 0; color: var(--color-ink-2); font-size: .9rem; line-height: 1.45; }
 .hc15-sa-d { display: flex; gap: 8px; margin-top: 4px; }
 @media (prefers-reduced-motion: reduce) { .hc15-sa { animation: none; } }
+
+/* M17 Hücre karşılaştır */
+.hc15-kars-b { flex: none; width: 36px; height: 36px; display: grid; place-items: center; border: 1px solid var(--color-line); border-radius: 10px; background: var(--color-white); color: var(--color-accent); cursor: pointer; }
+.hc15-kars-b svg { width: 16px; height: 16px; }
+.hc15-kars-ort { position: fixed; inset: 0; z-index: 80; display: grid; place-items: center; padding: 16px; background: color-mix(in oklab, var(--color-ink) 45%, transparent); }
+.hc15-kars { width: 100%; max-width: 480px; max-height: calc(100dvh - 32px); overflow: auto; padding: 16px; display: flex; flex-direction: column; gap: 12px; background: var(--color-white); }
+.hc15-kars-ust { display: flex; justify-content: space-between; align-items: center; color: var(--color-ink); }
+.hc15-kars-x { border: 0; background: none; color: var(--color-ink-3); display: grid; cursor: pointer; padding: 4px; }
+.hc15-kars-x svg { width: 18px; height: 18px; }
+.hc15-kars-iki { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 10px; }
+.hc15-kars-iki > div { display: flex; flex-direction: column; align-items: center; gap: 2px; text-align: center; min-width: 0; padding: 8px; border-radius: 14px; background: var(--color-field); }
+.hc15-kars-iki > div.is-ben { background: var(--color-accent-soft); }
+.hc15-kars-iki .hc15-svg { width: 100%; max-width: 160px; height: auto; }
+.hc15-kars-iki b { color: var(--color-ink); max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.hc15-kars-iki small { color: var(--color-ink-2); font-size: .78rem; }
+.hc15-kars-tab { margin: 0; display: flex; flex-direction: column; gap: 4px; }
+.hc15-kars-tab > div { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 8px; padding: 7px 10px; border-radius: 10px; background: var(--color-field); }
+.hc15-kars-tab dt { font-size: .78rem; color: var(--color-ink-3); text-align: center; }
+.hc15-kars-tab dd { margin: 0; color: var(--color-ink-2); font-variant-numeric: tabular-nums; }
+.hc15-kars-tab dd:last-child { text-align: right; }
+.hc15-kars-tab dd.is-ust { color: var(--color-ok); font-weight: 700; }

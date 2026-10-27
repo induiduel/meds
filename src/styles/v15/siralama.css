@@ -33,3 +33,12 @@
   & .sr15-bos p { margin: 0; color: var(--color-ink-2); font-size: 13.5px; max-width: 42ch; }
   @media (max-width: 400px) { & .sr15-podyum { gap: 6px; } & .sr15-pd { width: 88px; } }
 }
+/* 2026-10-27: satır ve podyum düğme (dokununca açık profil) */
+:root[data-v15='on'] {
+  & .sr15-liste > li { display: block; border-top: 1px solid var(--color-line); }
+  & .sr15-liste > li:first-child { border-top: 0; }
+  & button.sr15-sat { width: 100%; border: 0; border-top: 0; background: transparent; font: inherit; color: inherit; text-align: left; cursor: pointer; }
+  & button.sr15-sat.is-ben { background: var(--color-accent-soft); }
+  & button.sr15-sat:disabled, & button.sr15-pd:disabled { cursor: default; }
+  & button.sr15-pd { border: 0; background: transparent; padding: 0; font: inherit; color: inherit; cursor: pointer; }
+}

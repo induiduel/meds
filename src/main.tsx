@@ -10,6 +10,7 @@ import './index.css';
 import './styles/health.css';
 import './styles/appearance.css';
 import './styles/shell.css';
+import './styles/motifler.css';
 import './styles/screens.css';
 import './styles/rebuild.css';
 import './styles/toolbar.css';

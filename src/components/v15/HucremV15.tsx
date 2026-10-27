@@ -1,5 +1,5 @@
 import React, { Suspense, lazy, useEffect, useMemo, useState } from 'react';
-import { Check, ChevronLeft, ChevronRight, Droplet, Lock, Share2, Trophy, X, Zap } from 'lucide-react';
+import { ArrowLeftRight, Check, ChevronLeft, ChevronRight, Droplet, Lock, Share2, Trophy, X, Zap } from 'lucide-react';
 import { createPortal } from 'react-dom';
 import { linkClick, navigateTo, pathFor } from '../../router';
 import { hucreSiralamaGetir, satinAl, sayi, sureYaz, useBasarim, yenile, type HucreSatir, type KilitT } from '../../services/basarimIstemci';
@@ -34,6 +34,7 @@ export default function HucremV15() {
   const [detay, setDetay] = useState<number | null>(null);
   const [kutlama, setKutlama] = useState<number | null>(null);
   const [cagSec, setCagSec] = useState<string | null>(null);
+  const [karsi, setKarsi] = useState<HucreSatir | null>(null);
   const [sira, setSira] = useState<{ satir: HucreSatir[]; benim: number | null; odul: number[]; carpan: number[] } | null>(null);
   useEffect(() => { void yenile(); }, []);
   useEffect(() => { let vazgec = false; void hucreSiralamaGetir().then((r) => !vazgec && setSira(r), () => 0); return () => { vazgec = true; }; }, [durum?.hucre?.basamak]);
@@ -153,12 +154,58 @@ export default function HucremV15() {
                     <span>{sureYaz(x.calismaSn)} ders · {sayi(x.soru)} soru · {sayi(x.glukoz)} glukoz · {sayi(x.basarim)} başarım</span>
                   </span>
                   <span className="hc15-boyut" title="Canlılık">%{x.canlilik}</span>
+                  {!x.ben && <button type="button" className="hc15-kars-b" onClick={() => setKarsi(x)} aria-label={`Hücreni ${x.ad} ile karşılaştır`} title="Karşılaştır"><ArrowLeftRight aria-hidden /></button>}
                 </li>
               ))}
             </ol>
           ) : <p className="v15-card hc15-bos">Henüz sıralamada hücre yok. İlk basamağı aç!</p>}
         </section>
       )}
+
+      {/* M17 Hücre karşılaştır: sıralamadan seçilen kullanıcıyla yan yana (hücre-sıralama verisi; benim satırım listede yoksa durumdan) */}
+      {karsi && (() => {
+        const benS: HucreSatir | null = sira?.satir.find((x) => x.ben) || (hc ? {
+          sira: hc.sira || 0, ad: 'Sen', ben: true, basamak: hc.basamak, cag: simdiki?.cag || 'Başlangıç', canlilik: hc.canlilik, uyku: hc.uyku,
+          glukoz: hc.glukoz, calismaSn: hc.calismaSn, soru: hc.soru, atp: hc.atpKazanilan, basarim: hc.basarim,
+        } : null);
+        if (!benS) return null;
+        const olcu: [string, (x: HucreSatir) => number, (x: HucreSatir) => string][] = [
+          ['Basamak', (x) => x.basamak, (x) => `${x.basamak}`],
+          ['Canlılık', (x) => x.canlilik, (x) => `%${x.canlilik}`],
+          ['Glukoz', (x) => x.glukoz, (x) => sayi(x.glukoz)],
+          ['Ders süresi', (x) => x.calismaSn, (x) => sureYaz(x.calismaSn)],
+          ['Soru', (x) => x.soru, (x) => sayi(x.soru)],
+          ['ATP', (x) => x.atp, (x) => sayi(x.atp)],
+          ['Başarım', (x) => x.basarim, (x) => sayi(x.basarim)],
+        ];
+        return createPortal(
+          <div className="hc15-kars-ort" role="presentation" onClick={() => setKarsi(null)}>
+            <section className="hc15-kars v15-card" role="dialog" aria-modal="true" aria-label="Hücre karşılaştırma" onClick={(e) => e.stopPropagation()}>
+              <div className="hc15-kars-ust"><b>Hücre karşılaştır</b><button type="button" className="hc15-kars-x" onClick={() => setKarsi(null)} aria-label="Kapat"><X aria-hidden /></button></div>
+              <div className="hc15-kars-iki">
+                {[benS, karsi].map((x, i) => (
+                  <div key={i} className={i === 0 ? 'is-ben' : ''}>
+                    <Hucre n={x.basamak} />
+                    <b>{i === 0 ? 'Sen' : x.ad}</b>
+                    <small>{x.sira ? `${x.sira}. sıra · ` : ''}{x.cag}{x.uyku ? ' · uykuda' : ''}</small>
+                  </div>
+                ))}
+              </div>
+              <dl className="hc15-kars-tab">
+                {olcu.map(([ad, d, y]) => {
+                  const a = d(benS), b = d(karsi);
+                  return (
+                    <div key={ad}>
+                      <dd className={a > b ? 'is-ust' : ''}>{y(benS)}</dd>
+                      <dt>{ad}</dt>
+                      <dd className={b > a ? 'is-ust' : ''}>{y(karsi)}</dd>
+                    </div>
+                  );
+                })}
+              </dl>
+            </section>
+          </div>, document.body);
+      })()}
 
       {/* Çağlar (tasarım M13–M16): çağ sekmesi + basamak kartları; karta dokununca evrim ayrıntısı */}
       {cag.length > 0 && (() => {

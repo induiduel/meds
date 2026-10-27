@@ -1066,3 +1066,9 @@ Her maddede: belirti · kök neden · Kurul 2 kuralı · kapı durumu. Kanıtlar
 - **Kök neden:** `.gf15-isi` sütunları `minmax(0, 1fr)` (kart genişliğini paylaşır) + hücre `aspect-ratio: 1` → hücre yüksekliği kart genişliğiyle büyüyor.
 - **Çözüm:** Sütun `minmax(0, 16px)` + `justify-content: start`; hücre en çok 16 px.
 - **Kural:** Kare hücreli ızgaralarda (ısı haritası, takvim) sütun genişliğine üst sınır koy; `1fr` + `aspect-ratio` birlikte kullanılmaz.
+
+## H107 · "Günlük çözülen soru" çubukları çok genişti; ajan sınama verisi tarayıcıda kalmıştı (2026-10-27)
+- **Belirti:** İstatistiklerim › Ayrıntılar'da 14 günlük çubuklar ~82 px genişliğinde; ayrıca 19–27 Ekim arası günde tam 4–5 soru (40 çözüm, 2 deneme) görünüyordu.
+- **Kök neden (çubuk):** `.st-col` `flex: 1`, içindeki `.ok/.bad` çubuk sütunun tüm genişliğini alıyor. **Kök neden (veri):** istatistik alt ajanı boş ekranı sınamak için `medsoru_study_progress_v1` / `medsoru_selftest_history_v1`'e sahte kayıt yazdı, "geri aldım" dedi ama kayıtlar tarayıcıda kaldı (sunucuya ulaşmadı: yerel + Oracle `user_data`'da yok).
+- **Çözüm:** çubuk `max-width: 24px; align-self: center`. Sahte kayıtlar (hepsi `20:11:00.929Z` damgalı) silindi, eşitleme sarmalayıcısıyla temiz hal yazıldı.
+- **Kural:** Alt ajan/ajan, eşitlenen profil anahtarlarına (userKvSync izin listesi) sınama verisi YAZMAZ; sınama gerekiyorsa ayrı anahtar ya da `?demo` bayrağı kullanılır. Ajan raporunda "geri aldım" deniyorsa tarayıcıda doğrulanır.

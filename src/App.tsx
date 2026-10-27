@@ -152,8 +152,11 @@ const MuzikV15 = React.lazy(() => wrapLazy(import('./components/v15/MuzikV15')))
 const ZihinHaritasiV15 = React.lazy(() => wrapLazy(import('./components/v15/ZihinHaritasiV15')));
 const HucremV15 = React.lazy(() => wrapLazy(import('./components/v15/HucremV15')));
 const ToplulukV15 = React.lazy(() => wrapLazy(import('./components/v15/ToplulukV15')));
+const KisiProfilV15 = React.lazy(() => wrapLazy(import('./components/v15/KisiProfilV15')));
+const ArkadaslarV15 = React.lazy(() => wrapLazy(import('./components/v15/ArkadaslarV15')));
 const PdfSihirbaziV15 = React.lazy(() => wrapLazy(import('./components/v15/PdfSihirbaziV15')));
 const NotlarimV15 = React.lazy(() => wrapLazy(import('./components/v15/NotlarimV15')));
+const VideoDersV15 = React.lazy(() => wrapLazy(import('./components/v15/VideoDersV15')));
 const OyunlarV15 = React.lazy(() => wrapLazy(import('./components/v15/OyunlarV15')));
 const DersProgramiV15 = React.lazy(() => wrapLazy(import('./components/v15/DersProgramiV15')));
 const SinavTakvimiV15 = React.lazy(() => wrapLazy(import('./components/v15/SinavTakvimiV15')));
@@ -1572,11 +1575,15 @@ export default function App() {
         <MiniMusicPlayer onOpen={() => setActiveTab('music')} />
       )}
       {activeTab === 'practice' ? (
+        <>
         <main className="contents">
           <Suspense fallback={<ViewFallback />}>
             <TestHub onExit={() => setActiveTab('study')} />
           </Suspense>
         </main>
+        {/* Kronometre soru çözme ekranında da sürer (tasarım kronoSoru); dallar ayrık olduğundan tek örnek korunur */}
+        <V15Icinde><KronometreV15 /></V15Icinde>
+        </>
       ) : activeTab === 'manage' || activeTab === 'admin' ? (
         isAdmin || isModerator ? (
           <Suspense fallback={<ViewFallback />}>
@@ -2095,6 +2102,18 @@ export default function App() {
           </Suspense>
         )}
 
+        {/* TAB: /kisi/<kimlik> açık profil, /arkadaslar arkadaş listesi (services/arkadaslik.ts) */}
+        {activeTab === 'kisi' && (
+          <Suspense fallback={<ViewFallback />}>
+            <KisiProfilV15 />
+          </Suspense>
+        )}
+        {activeTab === 'arkadaslar' && (
+          <Suspense fallback={<ViewFallback />}>
+            <ArkadaslarV15 />
+          </Suspense>
+        )}
+
         {/* TAB: /pdf-olustur — PDF oluştur sihirbazı (kaynak → kurul → dersler; ortak TopluPdf penceresi) */}
         {activeTab === 'pdf_olustur' && (
           <Suspense fallback={<ViewFallback />}>
@@ -2106,6 +2125,13 @@ export default function App() {
         {activeTab === 'notlarim' && (
           <Suspense fallback={<ViewFallback />}>
             <NotlarimV15 />
+          </Suspense>
+        )}
+
+        {/* TAB: /video-ders — hazır ders videoları (yönetici GPU kuyruğundan; oynat, tam ekran, resim içinde resim) */}
+        {activeTab === 'video_ders' && (
+          <Suspense fallback={<ViewFallback />}>
+            <VideoDersV15 />
           </Suspense>
         )}
 

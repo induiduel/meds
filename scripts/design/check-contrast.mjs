@@ -1,6 +1,6 @@
 // Palet kaydındaki (src/utils/palettes.ts) tüm paletlerin metin/zemin çiftlerini WCAG oranıyla ölçer.
 // Kullanım: npx tsx scripts/design/check-contrast.mjs   (çıkış kodu 1 = en az bir çift eşik altında)
-import { PALETTES, TOKEN_KEYS } from '../../src/utils/palettes.ts';
+import { PALETTES, TOKEN_KEYS, ozelVurgu } from '../../src/utils/palettes.ts';
 
 const lum = (h) => { const n = parseInt(h.slice(1), 16); return [n >> 16, (n >> 8) & 255, n & 255].map((c) => { c /= 255; return c <= 0.03928 ? c / 12.92 : ((c + 0.055) / 1.055) ** 2.4; }).reduce((a, c, i) => a + c * [0.2126, 0.7152, 0.0722][i], 0); };
 const ratio = (a, b) => { const [x, y] = [lum(a), lum(b)].sort((p, q) => q - p); return (x + 0.05) / (y + 0.05); };
@@ -40,5 +40,15 @@ const dist = (a, b) => { const [x, y] = [oklab(a), oklab(b)]; return Math.hypot(
 for (const m of ['light', 'sepia', 'dark']) { const ps = PALETTES.filter((p) => p.mode === m);
   for (let i = 0; i < ps.length; i++) for (let j = i + 1; j < ps.length; j++) { const da = dist(ps[i].vars.accent, ps[j].vars.accent), dc = dist(ps[i].vars.canvas, ps[j].vars.canvas);
     if (da < 0.08 && dc < 0.03) { console.log(`✗ ${m}: ${ps[i].name} ile ${ps[j].name} neredeyse aynı (vurgu Δ${da.toFixed(3)}, zemin Δ${dc.toFixed(3)})`); fails++; } } }
+// W01 özel vurgu (Paleti düzenle): her palette 24 ton × 3 doygunluk/açıklık; ozelVurgu çıktısı zeminlerde okunur olmalı
+let ozelN = 0;
+for (const p of PALETTES) for (let h = 0; h < 360; h += 15) for (const [s, l] of [[90, 50], [60, 80], [100, 20]]) {
+  const f = (n) => { const k = (n + h / 30) % 12, a = (s / 100) * Math.min(l / 100, 1 - l / 100); return Math.round(255 * (l / 100 - a * Math.max(-1, Math.min(k - 3, 9 - k, 1)))).toString(16).padStart(2, '0'); };
+  const a = ozelVurgu(`#${f(0)}${f(8)}${f(4)}`, p.vars, p.mode); ozelN++;
+  const v = p.vars; const bad = [];
+  for (const [x, y, min] of [[a.accent, v.white, 4.5], [a.accent, v.canvas, 4.5], [a.accent, v.field, 4.5], [a.accent, a.soft, 4.5], [a.on, a.accent, 4.5], [a.on, a.hover, 4.5]]) { const r = ratio(x, y); if (r < min) bad.push(`${x}/${y} ${r.toFixed(2)}`); }
+  if (bad.length) { console.log(`✗ ${p.mode}/${p.id} özel vurgu h${h} s${s} l${l}: ${bad.join(', ')}`); fails += bad.length; }
+}
+console.log(`özel vurgu: ${ozelN} deneme tarandı`);
 console.log(fails ? `\n${fails} sorun` : `\n${PALETTES.length} palet × ${PAIRS.length} çift: tümü eşiğin üstünde`);
 process.exit(fails ? 1 : 0);

@@ -40,6 +40,9 @@ import { quizRealtimeServer } from './src/services/quiz/quizRealtimeServer';
 import { oyunKaynaklari, oyunSorulari } from './src/services/quiz/oyunSoruKaynagi';
 import { registerTopluluk } from './src/services/topluluk';
 import { registerToplulukSohbet } from './src/services/toplulukSohbet';
+import { registerArkadaslik } from './src/services/arkadaslik';
+import { registerNotPaylas } from './src/services/notPaylas';
+import { registerDersVideoOynat } from './src/services/dersVideoOynat';
 import crypto from 'crypto';
 
 const require = createRequire(import.meta.url);
@@ -494,6 +497,10 @@ const STUDENT_WRITE_ROUTES: Array<[string, RegExp, StudentWriteKind]> = [
   ['POST', /^\/api\/topluluk\/mesaj\/\d+\/(sil|sikayet|begen)$/, 'oy'],
   // Topluluk sohbet odaları (kimlik + hız sınırı services/toplulukSohbet.ts'te)
   ['POST', /^\/api\/topluluk\/sohbet(\/katil|\/\d+\/(mesaj|okundu|ayril))?$/, 'esles'],
+  // Arkadaşlık, gizlilik, davet (kimlik + uid başına hız sınırı services/arkadaslik.ts'te)
+  ['POST', /^\/api\/(arkadas\/(istek|kabul|reddet|cikar|sohbet|davet)|kisi\/gizlilik)$/, 'esles'],
+  // Not paylaşımı (kimlik + hız sınırı services/notPaylas.ts'te)
+  ['POST', /^\/api\/not-paylas(\/\d+\/kaldir)?$/, 'icerik'],
 ];
 const studentWriteHits = new Map<string, number[]>();
 /** Eşleşen uç sırası (sayaç uç başına ayrı tutulur) ya da -1 */
@@ -560,6 +567,19 @@ registerTopluluk(app, {
   broadcast: (event, data) => broadcastRealtimeEvent(event, data),
 });
 registerToplulukSohbet(app, { rootDir: __dirname, isPgOnline: () => pgOnline, broadcast: (event, data) => broadcastRealtimeEvent(event, data) });
+// Arkadaşlık + açık profil + kapsamlı sıralama (services/arkadaslik.ts; notifyStudent aşağıda tanımlı, istek anında çağrılır)
+registerArkadaslik(app, {
+  rootDir: __dirname, isPgOnline: () => pgOnline, motor: basarimMotor, userEventHash,
+  okuYedek: (uid) => {
+    try {
+      const f = path.join(__dirname, 'data', 'user_backups', `${crypto.createHash('sha256').update(uid.trim().toLowerCase()).digest('hex').slice(0, 40)}.json`);
+      return fs.existsSync(f) ? JSON.parse(fs.readFileSync(f, 'utf8')) : null;
+    } catch { return null; }
+  },
+  broadcast: (event, data) => broadcastRealtimeEvent(event, data),
+  notifyStudent: (target, n) => notifyStudent(target, n),
+});
+registerNotPaylas(app, { rootDir: __dirname, isPgOnline: () => pgOnline, broadcast: (event, data) => broadcastRealtimeEvent(event, data) });
 
 const peopleInsights = registerPeopleInsights(app, {
   rootDir: __dirname,
@@ -730,8 +750,10 @@ app.get('/api/oyun/sorular', (req, res) => {
   const brans = String(req.query.brans || '');
   if (!/^[a-z0-9]{2,40}$/.test(brans)) return res.status(400).json({ error: 'Geçersiz ders.' });
   const ders = req.query.ders ? String(req.query.ders).slice(0, 20) : undefined;
-  const sorular = oyunSorulari(brans, ders, Math.min(20, Number(req.query.n) || 20)).map((q) => ({
+  // ?gorsel=1: yalnız görselli sorular (Görselli soru kipi)
+  const sorular = oyunSorulari(brans, ders, Math.min(20, Number(req.query.n) || 20), req.query.gorsel === '1').map((q) => ({
     id: q.id, prompt: q.prompt, options: q.options, correct: q.correct_option, aciklama: q.option_explanations?.[q.correct_option] || '', baslik: q.archetype,
+    ...((q as any).gorsel ? { gorsel: (q as any).gorsel } : {}),
   }));
   res.json({ sorular });
 });
@@ -2914,6 +2936,7 @@ registerDbQueryRoute(app, isRequestAdmin);
 registerTtsRoute(app);
 registerSesliAnlatimRoutes(app, requireAdmin, (ev, data) => broadcastRealtimeEvent(ev, data, true), ADMIN_EMAIL);
 registerDersVideoIsRoutes(app, ADMIN_EMAIL); // /api/canli-ders/:key'den önce
+registerDersVideoOynat(app); // hazır ders videoları (öğrenci, giriş gerekli)
 registerCanliDersRoutes(app);
 registerPatolojiAsistanRoutes(app);
 registerOlasiSoruRoutes(app, { rootDir: __dirname, requireAdmin });

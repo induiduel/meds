@@ -18,7 +18,7 @@ import '../../styles/v15/kronometre.css';
 const KEY = 'medsoru_v15_kronometre';
 const KONUM_KEY = 'medsoru_v15_kronometre_konum';
 interface Durum { acik: boolean; calisiyor: boolean; bas: number; birikmis: number; turlar: number[]; gecmis: { t: string; sn: number; tur: number; ad?: string }[] }
-interface Konum { sag: boolean; y: number; gizli: boolean }
+interface Konum { sag: boolean; y: number; gizli: boolean; oz?: boolean }
 const BOS: Durum = { acik: false, calisiyor: false, bas: 0, birikmis: 0, turlar: [], gecmis: [] };
 const oku = (): Durum => { try { return { ...BOS, ...JSON.parse(localStorage.getItem(KEY) || '{}') }; } catch { return BOS; } };
 const yaz = (d: Durum) => { try { localStorage.setItem(KEY, JSON.stringify(d)); } catch { /* özel pencere */ } };
@@ -37,6 +37,11 @@ const BOY_ORTA = 48, BOY_KUCUK = 38;
 const sayfaAdi = () => { const p = document.title.split(' · ').filter((x) => x && x !== 'MeDSor'); return p[0]?.slice(0, 60) || 'Kronometre'; };
 /** Sesli ders oynatıcısı (mini ya da tam) — baloncuk ona kaynaşır */
 const yuva = () => document.querySelector<HTMLElement>('.cd-dock');
+/** Video oynatıcı (PiP) yuvası — video ekranı `data-kr-yuva="video"` işaretini taşıdığında baloncuk köşesine oturur (tasarım kronoVideo) */
+const videoYuva = () => document.querySelector<HTMLElement>('[data-kr-yuva="video"]');
+/** Biçim boyutları (tasarım kronoF1–F5): yüzen biçimler için genişlik × yükseklik */
+const OLCU: Record<string, [number, number]> = { nokta: [22, 22], hap: [70, 26], kenar: [30, 64] };
+const rectImza = (r: DOMRect | null) => (r ? `${Math.round(r.left)},${Math.round(r.top)},${Math.round(r.width)},${Math.round(r.height)}` : '');
 
 export default function KronometreV15() {
   const [d, setD0] = useState<Durum>(oku);
@@ -45,12 +50,18 @@ export default function KronometreV15() {
   const [konum, setKonum0] = useState<Konum>(konumOku);
   const [surukle, setSurukle] = useState<{ x: number; y: number } | null>(null);
   const [kaynak, setKaynak] = useState<DOMRect | null>(null);
+  const [video, setVideo] = useState<DOMRect | null>(null);
+  const [soruAlt, setSoruAlt] = useState<DOMRect | null>(null);
+  const [cipYer, setCipYer] = useState<DOMRect | null>(null);
   const [, tik] = useState(0);
   const [ayar, setAyar0] = useState<KrAyar>(ayarOku);
   const [ekran, setEkran] = useState<'ayar' | 'gecmis' | null>(null);
   const setAyar = (a: KrAyar) => { if (a.sag !== ayar.sag) setKonum({ ...konum, sag: a.sag, y: 0.72, gizli: false }); setAyar0(a); try { localStorage.setItem(KR_AYAR_KEY, JSON.stringify(a)); } catch { /* yok */ } };
   const molaUyari = useRef(0);
+  const bicim = ayar.bicim || 'zar';
+  const yuzen = bicim === 'zar' || bicim === 'nokta' || bicim === 'hap';
   const BOY = ayar.boyut === 'kucuk' ? BOY_KUCUK : BOY_ORTA;
+  const [W, H] = OLCU[bicim] || [BOY, BOY];
   const setD = (f: (x: Durum) => Durum) => setD0((x) => { const n = f(x); yaz(n); return n; });
   const setKonum = (k: Konum) => { setKonum0(k); try { localStorage.setItem(KONUM_KEY, JSON.stringify(k)); } catch { /* yok */ } };
   const bas = useRef<{ x: number; y: number; t: number; tasindi: boolean; uzun: number } | null>(null);
@@ -84,12 +95,12 @@ export default function KronometreV15() {
   // Sesli ders oynatıcısını izle: varsa konumunu al (kaynaşma)
   useEffect(() => {
     if (!d.acik) return;
-    let son = '';
+    const son = ['', '', '', ''];
+    const olc = (el: HTMLElement | null) => (el && el.offsetHeight ? el.getBoundingClientRect() : null);
     const bak = () => {
-      const el = yuva();
-      const r = el && el.offsetHeight ? el.getBoundingClientRect() : null;
-      const imza = r ? `${Math.round(r.left)},${Math.round(r.top)},${Math.round(r.width)},${Math.round(r.height)}` : '';
-      if (imza !== son) { son = imza; setKaynak(r); }
+      const r = [olc(yuva()), olc(videoYuva()), olc(document.querySelector<HTMLElement>('.q15 .q15-alt')), olc(document.querySelector<HTMLElement>('.q15 .q15-bas .q15-say'))];
+      const set = [setKaynak, setVideo, setSoruAlt, setCipYer];
+      r.forEach((x, i) => { const im = rectImza(x); if (im !== son[i]) { son[i] = im; set[i](x); } });
     };
     bak();
     const id = window.setInterval(bak, 400);
@@ -98,11 +109,17 @@ export default function KronometreV15() {
   }, [d.acik]);
 
   // kaynaşınca mini oynatıcı sağ ucunda baloncuğa yer açar
-  const kaynasma = d.acik && ayar.birles && !!kaynak && kaynak.height < 110;
+  const kaynasma = d.acik && ayar.goster && yuzen && ayar.birles && !!kaynak && kaynak.height < 110;
   useEffect(() => {
     document.documentElement.classList.toggle('kr-kaynasik', kaynasma);
     return () => document.documentElement.classList.remove('kr-kaynasik');
   }, [kaynasma]);
+  // F4 başlık çipi soru ekranında başlıkta yer açar
+  const cipBaslikta = d.acik && ayar.goster && bicim === 'cip' && !!cipYer;
+  useEffect(() => {
+    document.documentElement.classList.toggle('kr-cip-q15', cipBaslikta);
+    return () => document.documentElement.classList.remove('kr-cip-q15');
+  }, [cipBaslikta]);
 
   // "Sayfa değişince çalışmaya devam et" kapalıysa adres değişiminde duraklar
   useEffect(() => {
@@ -142,20 +159,32 @@ export default function KronometreV15() {
 
   // ---- konum ----
   const vw = window.innerWidth, vh = window.innerHeight;
-  const tasarim = kaynak && !surukle;
+  const birlesik = yuzen && ayar.birles && !!kaynak;
   let stil: React.CSSProperties;
-  if (surukle) stil = { left: surukle.x - BOY / 2, top: surukle.y - BOY / 2 };
-  else if (kaynak && ayar.birles) {
-    const mini = kaynak.height < 110;
+  if (bicim === 'cizgi') stil = {};
+  else if (bicim === 'cip') stil = cipYer ? { left: cipYer.left - 78, top: cipYer.top + cipYer.height / 2 - 12 } : {};
+  else if (surukle && bicim === 'kenar') stil = konum.sag ? { right: 0, top: surukle.y - H / 2 } : { left: 0, top: surukle.y - H / 2 };
+  else if (surukle) stil = { left: surukle.x - W / 2, top: surukle.y - H / 2 };
+  else if (birlesik) {
+    const mini = kaynak!.height < 110;
     stil = mini
-      ? { left: Math.min(vw - BOY - 6, kaynak.right - BOY - 6), top: kaynak.top + kaynak.height / 2 - BOY / 2 }
-      : { left: Math.min(vw - BOY - 8, kaynak.right - BOY - 8), top: kaynak.top - BOY - 10 };
+      ? { left: Math.min(vw - W - 6, kaynak!.right - W - 6), top: kaynak!.top + kaynak!.height / 2 - H / 2 }
+      : { left: Math.min(vw - W - 8, kaynak!.right - W - 8), top: kaynak!.top - H - 10 };
+  } else if (yuzen && video) {
+    // tasarım kronoVideo: baloncuk PiP oynatıcının sol üst köşesine oturur
+    stil = { left: Math.max(4, video.left - W / 2), top: Math.max(4, video.top - H / 2) };
+  } else if (bicim === 'kenar') {
+    const top = Math.max(70, Math.min(vh - H - 80, konum.y * vh));
+    stil = konum.sag ? { right: 0, top } : { left: 0, top };
+  } else if (soruAlt && !konum.oz) {
+    // tasarım kronoSoru: soru ekranında eylem çubuğunun hemen üstünde, sağda (kullanıcı taşımadıysa)
+    stil = konum.sag ? { right: 14, top: soruAlt.top - H - 12 } : { left: 14, top: soruAlt.top - H - 12 };
   } else {
-    const top = Math.max(70, Math.min(vh - BOY - 80, konum.y * vh));
-    const kenar = konum.gizli ? -BOY / 2 : 12;
+    const top = Math.max(70, Math.min(vh - H - 80, konum.y * vh));
+    const kenar = konum.gizli ? -W / 2 : 12;
     stil = konum.sag ? { right: kenar, top } : { left: kenar, top };
   }
-  const kaynasik = !!tasarim && ayar.birles && kaynak!.height < 110;
+  const kaynasik = !surukle && birlesik && kaynak!.height < 110;
 
   const indir = (e: React.PointerEvent) => {
     if (e.button !== 0) return;
@@ -165,6 +194,7 @@ export default function KronometreV15() {
   const hareket = (e: React.PointerEvent) => {
     const b = bas.current; if (!b) return;
     if (!b.tasindi && Math.hypot(e.clientX - b.x, e.clientY - b.y) > 8) { b.tasindi = true; window.clearTimeout(b.uzun); }
+    if (bicim === 'cip' || bicim === 'cizgi') return;
     if (b.tasindi && Date.now() - b.t > 0 && Math.hypot(e.clientX - b.x, e.clientY - b.y) > 8) setSurukle({ x: e.clientX, y: e.clientY });
   };
   const birak = (e: React.PointerEvent) => {
@@ -173,7 +203,7 @@ export default function KronometreV15() {
     if (surukle) {
       const x = e.clientX;
       setSurukle(null);
-      setKonum({ sag: x > vw / 2, y: Math.max(0.1, Math.min(0.9, e.clientY / vh)), gizli: x < 6 || x > vw - 6 });
+      setKonum({ sag: bicim === 'kenar' ? konum.sag : x > vw / 2, y: Math.max(0.1, Math.min(0.9, e.clientY / vh)), gizli: bicim === 'zar' && (x < 6 || x > vw - 6), oz: true });
       return;
     }
     if (b.tasindi) return;
@@ -185,11 +215,11 @@ export default function KronometreV15() {
   };
 
   // panel konumu: baloncuğun yanında, ekranda kalacak biçimde
-  const balonSol = typeof stil.left === 'number' ? stil.left : vw - (stil.right as number) - BOY;
-  const balonUst = stil.top as number;
+  const balonSol = typeof stil.left === 'number' ? stil.left : typeof stil.right === 'number' ? vw - stil.right - W : vw - W - 12;
+  const balonUst = typeof stil.top === 'number' ? stil.top : 8;
   const panelGen = Math.min(300, vw - 24);
-  const panelStil: React.CSSProperties = { left: Math.max(12, Math.min(vw - panelGen - 12, balonSol + BOY - panelGen)), width: panelGen };
-  if (balonUst > vh / 2) panelStil.bottom = vh - balonUst + 10; else panelStil.top = balonUst + BOY + 10;
+  const panelStil: React.CSSProperties = { left: Math.max(12, Math.min(vw - panelGen - 12, balonSol + W - panelGen)), width: panelGen };
+  if (balonUst > vh / 2) panelStil.bottom = vh - balonUst + 10; else panelStil.top = balonUst + H + 10;
 
   const R = 66, CEVRE = 2 * Math.PI * R;
   return createPortal(
@@ -241,7 +271,7 @@ export default function KronometreV15() {
       )}
       {ekran && <KronometreEkranV15 gorunum={ekran} ayar={ayar} setAyar={setAyar} gecmis={d.gecmis} onKapat={() => setEkran(null)} />}
       {(ayar.goster || panel) && <div
-        className={`kr15z${ayar.boyut === 'kucuk' ? ' is-kucuk' : ''}${molaZamani ? ' is-uyari' : ''}${calisiyorGor ? '' : ' is-dur'}${kaynasik ? ' is-kaynasik' : ''}${konum.gizli && !kaynak ? ' is-gizli' : ''}${surukle ? ' is-surukle' : ''}`}
+        className={`kr15z is-f-${bicim}${ayar.boyut === 'kucuk' ? ' is-kucuk' : ''}${molaZamani ? ' is-uyari' : ''}${calisiyorGor ? '' : ' is-dur'}${kaynasik ? ' is-kaynasik' : ''}${!yuzen ? '' : video && !birlesik ? ' is-video' : ''}${konum.gizli && !kaynak && bicim === 'zar' ? ' is-gizli' : ''}${!konum.sag ? ' is-sol' : ''}${surukle ? ' is-surukle' : ''}${bicim === 'cip' && !cipYer ? ' is-ust' : ''}`}
         style={{ ...stil, ['--s' as string]: `${Math.round(halka * 100)}%` }}
         role="timer"
         aria-label={`${odakGoster ? 'Odak, kalan' : 'Kronometre'} ${yazi}. Dokun: aç, uzun bas: başlat veya duraklat`}
@@ -250,10 +280,22 @@ export default function KronometreV15() {
         onPointerCancel={() => { if (bas.current) window.clearTimeout(bas.current.uzun); bas.current = null; setSurukle(null); }}
         onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); setPanel((p) => !p); } }}
       >
-        {kaynasik && <span className="kr15z-boyun" aria-hidden />}
-        <span className="kr15z-zar" aria-hidden />
-        <span className="kr15z-cek" aria-hidden />
-        {ms || odakGoster ? <span className="kr15z-zm">{yazi}</span> : <Timer className="kr15z-ik" aria-hidden />}
+        {bicim === 'zar' ? (
+          <>
+            {kaynasik && <span className="kr15z-boyun" aria-hidden />}
+            <span className="kr15z-zar" aria-hidden />
+            <span className="kr15z-cek" aria-hidden />
+            {ms || odakGoster ? <span className="kr15z-zm">{yazi}</span> : <Timer className="kr15z-ik" aria-hidden />}
+          </>
+        ) : bicim === 'nokta' ? (
+          <>{kaynasik && <span className="kr15z-boyun" aria-hidden />}<span className="krf-nokta" aria-hidden /><i className="krf-balon">{yazi}</i></>
+        ) : bicim === 'kenar' ? (
+          <><b className="krf-cek" aria-hidden />{yazi.split(':').slice(-2).map((p, k) => <span key={k}>{p}</span>)}</>
+        ) : bicim === 'cizgi' ? (
+          <><i className="krf-dolu" aria-hidden /><span className="krf-zm">{yazi}</span></>
+        ) : (
+          <>{kaynasik && <span className="kr15z-boyun" aria-hidden />}<b className="krf-cek" aria-hidden />{yazi}</>
+        )}
       </div>}
     </>,
     document.body,

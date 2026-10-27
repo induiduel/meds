@@ -7,8 +7,10 @@ import { safeJsonFetch } from '../../services/api';
  * Sorular GET /api/oyun/sorular (sesli soru çözücü setleri, cevap + doğru şık açıklaması); puan istemcide.
  * Biten soruların yerine arka planda yenisi çekilir; aynı oyunda soru yinelenmez. En iyi skor cihazda tutulur.
  */
-export type SoloMod = 'blitz' | 'hayatta';
-interface S { id: string; prompt: string; options: Record<string, string>; correct: string; aciklama: string; baslik: string }
+/** gorsel: görselli soru kipi (yalnız `gorsel` alanı olan sorular, 10 soru, açıklamalı) */
+export type SoloMod = 'blitz' | 'hayatta' | 'gorsel';
+const GORSEL_N = 10;
+interface S { id: string; prompt: string; options: Record<string, string>; correct: string; aciklama: string; baslik: string; gorsel?: string }
 const REKOR_KEY = 'medsoru_oyun_rekor_v1';
 const SURE = 60_000;
 const rekorOku = (k: string): number => { try { return JSON.parse(localStorage.getItem(REKOR_KEY) || '{}')[k] || 0; } catch { return 0; } };
@@ -46,14 +48,14 @@ export default function OyunSoloV15({ mod, brans, ders, baslik, onCik }: { mod: 
   const getir = useCallback(async () => {
     if (getiriyor.current) return;
     getiriyor.current = true;
-    const r = await safeJsonFetch<{ sorular: S[] }>(`/api/oyun/sorular?brans=${encodeURIComponent(brans)}${ders ? `&ders=${encodeURIComponent(ders)}` : ''}&n=20`);
+    const r = await safeJsonFetch<{ sorular: S[] }>(`/api/oyun/sorular?brans=${encodeURIComponent(brans)}${ders ? `&ders=${encodeURIComponent(ders)}` : ''}&n=20${mod === 'gorsel' ? '&gorsel=1' : ''}`);
     getiriyor.current = false;
     if (!r.ok || !r.data) { setHata('Sorular alınamadı.'); return; }
     const yeni = r.data.sorular.filter((x) => !goruldu.current.has(x.id));
     // havuz küçükse (tek ders) görülenleri sıfırla, oyun sürsün
     if (!yeni.length && r.data.sorular.length) { goruldu.current.clear(); setKuyruk((k) => [...k, ...r.data!.sorular]); return; }
     setKuyruk((k) => [...k, ...yeni]);
-  }, [brans, ders]);
+  }, [brans, ders, mod]);
 
   useEffect(() => { void getir(); }, [getir]);
   // ilk soru ve kuyruk azalınca yenisi
@@ -95,6 +97,7 @@ export default function OyunSoloV15({ mod, brans, ders, baslik, onCik }: { mod: 
   };
   const sonraki = () => {
     if (mod === 'hayatta' && can <= 0) { setBitti(true); return; }
+    if (mod === 'gorsel' && dogru + yanlis >= GORSEL_N) { setBitti(true); return; }
     setSecim(null); setSoru(null);
   };
   const yeniden = () => {
@@ -109,7 +112,7 @@ export default function OyunSoloV15({ mod, brans, ders, baslik, onCik }: { mod: 
       <section className="v15-card oy15-kart oy15-son">
         <Trophy aria-hidden className="oy15-tac" />
         <b className="oy15-kazanan">{mod === 'blitz' ? `${puan} puan · ${dogru} doğru` : `${dogru} doğru`}{yeniRekor ? ' · yeni rekor!' : ''}</b>
-        <p className="v15-cap">{baslik} · {mod === 'blitz' ? '60 saniye' : 'Hayatta kal'} · {yanlis} yanlış · en iyi {rekor}</p>
+        <p className="v15-cap">{baslik} · {mod === 'blitz' ? '60 saniye' : mod === 'gorsel' ? 'Görselli soru' : 'Hayatta kal'} · {yanlis} yanlış · en iyi {rekor}</p>
         <div className="oy15-alt">
           <button type="button" className="oy15-cik" onClick={onCik}>Oyunlar</button>
           <button type="button" className="v15-btn oy15-ana" onClick={yeniden}><RotateCcw aria-hidden />Yeniden oyna</button>
@@ -123,6 +126,7 @@ export default function OyunSoloV15({ mod, brans, ders, baslik, onCik }: { mod: 
       <div className="oy15-ust">
         {mod === 'blitz'
           ? <span className="oy15-sayac"><Timer aria-hidden /> {Math.ceil(kalan / 1000)} sn</span>
+          : mod === 'gorsel' ? <span className="v15-cap">Soru {Math.min(GORSEL_N, dogru + yanlis + (secim ? 0 : 1))}/{GORSEL_N}</span>
           : <span className="oy15-canlar" aria-label={`${can} can`}>{[0, 1, 2].map((i) => <Heart key={i} aria-hidden className={i < can ? 'is-dolu' : ''} />)}</span>}
         <span className="v15-cap">{mod === 'blitz' ? <>{puan} puan{carpan > 1 && <b className="oy15-carpan"> ×{carpan}</b>}</> : `${dogru} doğru`}{seri > 2 ? ` · ${seri} seri` : ''} · en iyi {rekor}</span>
         <button type="button" className="oy15-x" onClick={() => setBitti(true)} aria-label="Oyunu bitir"><X aria-hidden /></button>
@@ -130,6 +134,11 @@ export default function OyunSoloV15({ mod, brans, ders, baslik, onCik }: { mod: 
       {mod === 'blitz' && <div className="v15-bar oy15-sure" aria-hidden><span style={{ width: `${(kalan / SURE) * 100}%` }} /></div>}
       {!soru ? <span className="v15-skel b15-skel" aria-hidden /> : (
         <>
+          {mod === 'gorsel' && soru.gorsel && (
+            <a className="oy15-gorsel" href={soru.gorsel} target="_blank" rel="noopener noreferrer" aria-label="Görseli büyük aç">
+              <img src={soru.gorsel} alt="Soru görseli" loading="eager" />
+            </a>
+          )}
           <p className="oy15-kok">{soru.prompt}</p>
           {mod === 'blitz' && oneri ? (
             <div className="oy15-dy">
@@ -156,11 +165,11 @@ export default function OyunSoloV15({ mod, brans, ders, baslik, onCik }: { mod: 
             })}
           </ul>
           )}
-          {mod === 'hayatta' && secim && (
+          {(mod === 'hayatta' || mod === 'gorsel') && secim && (
             <div className="v15-card oy15-aciklama">
               <b>{secim === soru.correct ? 'Doğru.' : `Doğru cevap ${soru.correct}.`}</b>
               {soru.aciklama && <p>{soru.aciklama}</p>}
-              <button type="button" className="v15-btn oy15-ana" onClick={sonraki}>{can <= 0 ? 'Sonucu gör' : 'Sonraki soru'}</button>
+              <button type="button" className="v15-btn oy15-ana" onClick={sonraki}>{(mod === 'hayatta' && can <= 0) || (mod === 'gorsel' && dogru + yanlis >= GORSEL_N) ? 'Sonucu gör' : 'Sonraki soru'}</button>
             </div>
           )}
         </>
