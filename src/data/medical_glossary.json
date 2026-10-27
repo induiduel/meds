@@ -103797,5 +103797,1175 @@
         "alinti": "Her iki hemisferde büyük kistik lezyonlar"
       }
     ]
+  },
+  "amnezi": {
+    "term": "Amnezi",
+    "category": "terim",
+    "definition": "Bellek kaybıdır; yeni bilgilerin öğrenilememesi ya da geçmiş bilgilerin hatırlanamaması şeklinde görülür.",
+    "description": "Bellek kaybıdır; yeni bilgilerin öğrenilememesi ya da geçmiş bilgilerin hatırlanamaması şeklinde görülür.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "clinicalPearl": "Ders amnezi sözcüğünü mental durum bozuklukları listesinde verir.",
+    "aliases": [
+      "Bellek kaybı"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-05"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/3)Nörolojik Muayene.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 5,
+        "alinti": "Stupor Koma Amnezi Deliriyum"
+      }
+    ]
+  },
+  "deliriyum": {
+    "term": "Deliriyum",
+    "category": "terim",
+    "definition": "Dikkat ve bilinçte dalgalanma, algı ve düşünce bozukluğuyla seyreden akut mental durum bozukluğudur.",
+    "description": "Dikkat ve bilinçte dalgalanma, algı ve düşünce bozukluğuyla seyreden akut mental durum bozukluğudur.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "clinicalPearl": "Ders yalnız adı sayar.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-05"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/3)Nörolojik Muayene.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 5,
+        "alinti": "Stupor Koma Amnezi Deliriyum"
+      }
+    ]
+  },
+  "broca afazisi": {
+    "term": "Broca afazisi",
+    "category": "hastalik",
+    "definition": "Motor disfazidir; konuşmanın üretiminin bozulduğu afazi tipidir.",
+    "description": "Motor disfazidir; konuşmanın üretiminin bozulduğu afazi tipidir.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "clinicalPearl": "Slayt: motor disfazi (Broca).",
+    "aliases": [
+      "Motor disfazi"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-05"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/3)Nörolojik Muayene.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 6,
+        "alinti": "Motor disfazi (Broca) Sensoriyal afazi (Wernicke)"
+      }
+    ]
+  },
+  "wernicke afazisi": {
+    "term": "Wernicke afazisi",
+    "category": "hastalik",
+    "definition": "Sensoriyal afazidir; konuşulanın anlaşılmasının bozulduğu afazi tipidir.",
+    "description": "Sensoriyal afazidir; konuşulanın anlaşılmasının bozulduğu afazi tipidir.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "clinicalPearl": "Slayt: sensoriyal afazi (Wernicke).",
+    "aliases": [
+      "Sensoriyal afazi"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-05"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/3)Nörolojik Muayene.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 6,
+        "alinti": "Motor disfazi (Broca) Sensoriyal afazi (Wernicke)"
+      }
+    ]
+  },
+  "anosmi": {
+    "term": "Anosmi",
+    "category": "terim",
+    "definition": "Koku duyusunun kaybıdır; N. olfaktorius lezyonunda görülür.",
+    "description": "Koku duyusunun kaybıdır; N. olfaktorius lezyonunda görülür.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "clinicalPearl": "Kafa travmasında bilateral anosmi görülebilir.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-05"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/3)Nörolojik Muayene.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 14,
+        "alinti": "Lezyonunda anosmi olur (hiposmi, kokosmi, parosmi)"
+      }
+    ]
+  },
+  "hiposmi": {
+    "term": "Hiposmi",
+    "category": "terim",
+    "definition": "Koku duyusunun azalmasıdır.",
+    "description": "Koku duyusunun azalmasıdır.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "clinicalPearl": "Ders yalnız adı sayar.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-05"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/3)Nörolojik Muayene.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 14,
+        "alinti": "Lezyonunda anosmi olur (hiposmi, kokosmi, parosmi)"
+      }
+    ]
+  },
+  "kakosmi": {
+    "term": "Kakosmi",
+    "category": "terim",
+    "definition": "Hoş olmayan, kötü koku algılanmasıdır.",
+    "description": "Hoş olmayan, kötü koku algılanmasıdır.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "clinicalPearl": "Ders bu terimi 'kokosmi' diye yazar; doğru yazımı kakosmidir.",
+    "aliases": [
+      "Kokosmi"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-05"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/3)Nörolojik Muayene.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 14,
+        "alinti": "Lezyonunda anosmi olur (hiposmi, kokosmi, parosmi)"
+      }
+    ]
+  },
+  "parosmi": {
+    "term": "Parosmi",
+    "category": "terim",
+    "definition": "Kokuların yanlış ya da değişmiş algılanmasıdır.",
+    "description": "Kokuların yanlış ya da değişmiş algılanmasıdır.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "clinicalPearl": "Ders yalnız adı sayar.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-05"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/3)Nörolojik Muayene.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 14,
+        "alinti": "Lezyonunda anosmi olur (hiposmi, kokosmi, parosmi)"
+      }
+    ]
+  },
+  "amorozis fugax": {
+    "term": "Amorozis fugax",
+    "category": "hastalik",
+    "definition": "Tek gözde ani, geçici görme kaybıdır; genelde karotid arterden kopan embolinin retinal arterleri tıkamasına bağlıdır.",
+    "description": "Tek gözde ani, geçici görme kaybıdır; genelde karotid arterden kopan embolinin retinal arterleri tıkamasına bağlıdır.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "clinicalPearl": "Baş-boyun oskültasyonu önerilir.",
+    "aliases": [
+      "Geçici monoküler görme kaybı"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-05"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/3)Nörolojik Muayene.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 19,
+        "alinti": "Amorozis fugax Tek gözde ani, geçici görme kaybı"
+      }
+    ]
+  },
+  "papil ödemi": {
+    "term": "Papil ödemi",
+    "category": "hastalik",
+    "definition": "Göz dibinde papilla kenarlarının ve damarın silikleşmesi, optik çukurun kaybolması, retinal venlerin kalınlaşması ve pulsasyonların kaybolmasıyla belli olan bulgudur.",
+    "description": "Göz dibinde papilla kenarlarının ve damarın silikleşmesi, optik çukurun kaybolması, retinal venlerin kalınlaşması ve pulsasyonların kaybolmasıyla belli olan bulgudur.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "clinicalPearl": "En sık rastlanan nedeni KİBAS'tır.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-05"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/3)Nörolojik Muayene.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 19,
+        "alinti": "Papilla kenarlarının ve damarın silikleşmesi, optik çukurun kaybolması"
+      }
+    ]
+  },
+  "kibas": {
+    "term": "KİBAS",
+    "category": "hastalik",
+    "definition": "Kafa içi basınç artışı sendromudur; papil ödeminin en sık rastlanan nedenidir.",
+    "description": "Kafa içi basınç artışı sendromudur; papil ödeminin en sık rastlanan nedenidir.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "clinicalPearl": "Çıkmış sorularda ana bulguları baş ağrısı, bulantı-kusma ve papil ödemidir.",
+    "aliases": [
+      "Kafa içi basınç artışı sendromu"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-05"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/3)Nörolojik Muayene.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 19,
+        "alinti": "KİBAS en sık rastlanan nedenidir"
+      }
+    ]
+  },
+  "nistagmus": {
+    "term": "Nistagmus",
+    "category": "terim",
+    "definition": "Gözlerin istemsiz, ritmik hareketidir.",
+    "description": "Gözlerin istemsiz, ritmik hareketidir.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "clinicalPearl": "Göz hareketi muayenesinde varsa nistagmus not edilir.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-05"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/3)Nörolojik Muayene.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 22,
+        "alinti": "pupilla değerlendirilir, varsa nistagmus not edilir"
+      }
+    ]
+  },
+  "ptozis": {
+    "term": "Ptozis",
+    "category": "terim",
+    "definition": "Üst göz kapağının düşmesidir; okülomotor sinir lezyonunda görülür.",
+    "description": "Üst göz kapağının düşmesidir; okülomotor sinir lezyonunda görülür.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "clinicalPearl": "Üst göz kapağını kaldıran m. levator palpebrae okülomotor sinirle innerve edilir.",
+    "aliases": [
+      "Göz kapağı düşüklüğü"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-05"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/3)Nörolojik Muayene.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 23,
+        "alinti": "Lezyonunda Göz aşağı, yukarı ve içe bakamaz Ptozis görülür"
+      }
+    ]
+  },
+  "midriyatik göz": {
+    "term": "Midriyatik göz",
+    "category": "terim",
+    "definition": "Pupillanın geniş olduğu gözdür; okülomotor lezyonda ışık refleksi alınamaz ve gözler midriyatiktir.",
+    "description": "Pupillanın geniş olduğu gözdür; okülomotor lezyonda ışık refleksi alınamaz ve gözler midriyatiktir.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "clinicalPearl": "Pupilla daraltıcı kasa parasempatik lifleri okülomotor sinir verir.",
+    "aliases": [
+      "Midriyazis"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-05"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/3)Nörolojik Muayene.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 23,
+        "alinti": "Ptozis görülür IR alınamaz Gözler midriatiktir"
+      }
+    ]
+  },
+  "kornea refleksi": {
+    "term": "Kornea refleksi",
+    "category": "fizyoloji",
+    "definition": "Kornea uyarıldığında göz kapağının kapanmasıdır; getirici kol 5., götürücü kol 7. kraniyal sinirdir.",
+    "description": "Kornea uyarıldığında göz kapağının kapanmasıdır; getirici kol 5., götürücü kol 7. kraniyal sinirdir.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "clinicalPearl": "Çene refleksinde hem getirici hem götürücü kol 5. kraniyal sinirdir.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-05"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/3)Nörolojik Muayene.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 25,
+        "alinti": "kornea refleksi (getirici (aff) 5. sinir, götürücü (eff) 7. sinir)"
+      }
+    ]
+  },
+  "santral fasial paralizi": {
+    "term": "Santral fasial paralizi",
+    "category": "hastalik",
+    "definition": "Yüzün bir yarısının yalnız alt kısmında kuvvet azlığıyla giden fasial paralizidir.",
+    "description": "Yüzün bir yarısının yalnız alt kısmında kuvvet azlığıyla giden fasial paralizidir.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "clinicalPearl": "Gözünü kapatır, sıkar; her zaman aynı tarafta hemiparezi ile birliktedir.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-05"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/3)Nörolojik Muayene.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 29,
+        "alinti": "Santral fasial paralizi Yüzün bir yarısını alt kısmında kuvvet azlığı"
+      }
+    ]
+  },
+  "periferik fasial paralizi": {
+    "term": "Periferik fasial paralizi",
+    "category": "hastalik",
+    "definition": "Yüzün bir yarısının tamamında kuvvet azlığıyla giden fasial paralizidir.",
+    "description": "Yüzün bir yarısının tamamında kuvvet azlığıyla giden fasial paralizidir.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "clinicalPearl": "Kaş kaldıramaz, alın çizgileri silinir, göz kapatılamaz, ıslık çalınamaz.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-05"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/3)Nörolojik Muayene.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 30,
+        "alinti": "Periferik fasial paralizi Yüzün bir yarısının tamamında kuvvet azlığı"
+      }
+    ]
+  },
+  "nazolabial oluk": {
+    "term": "Nazolabial oluk",
+    "category": "anatomi",
+    "definition": "Burun kanadından ağız köşesine doğru uzanan yüz kıvrımıdır.",
+    "description": "Burun kanadından ağız köşesine doğru uzanan yüz kıvrımıdır.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "clinicalPearl": "Hem santral hem periferik fasial paralizide silinir ve ağız sağlam tarafa kayar.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-05"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/3)Nörolojik Muayene.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 29,
+        "alinti": "Aynı taraf nazolabial oluk silik, ağız sağlam tarafa kaymıştır"
+      }
+    ]
+  },
+  "vertigo": {
+    "term": "Vertigo",
+    "category": "terim",
+    "definition": "Çevrenin ya da kişinin kendisinin dönüyormuş gibi hissedilmesidir.",
+    "description": "Çevrenin ya da kişinin kendisinin dönüyormuş gibi hissedilmesidir.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "clinicalPearl": "Santral ve periferik vertigo ayrılır.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-05"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/3)Nörolojik Muayene.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 32,
+        "alinti": "Duruş, yürüyüş, nistagmus ve denge testleri, kalorik testler Santral ve periferik vertigo"
+      }
+    ]
+  },
+  "nazone konuşma": {
+    "term": "Nazone konuşma",
+    "category": "terim",
+    "definition": "Seslerin burundan çıkıyormuş gibi duyulduğu konuşmadır.",
+    "description": "Seslerin burundan çıkıyormuş gibi duyulduğu konuşmadır.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "clinicalPearl": "IX-X muayenesinde konuşmaya dikkat edilir (nazone, burundan konuşma).",
+    "aliases": [
+      "Burundan konuşma"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-05"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/3)Nörolojik Muayene.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 36,
+        "alinti": "Konuşmasına dikkat edilir (nazone, burundan konuşma)"
+      }
+    ]
+  },
+  "parazi": {
+    "term": "Parazi",
+    "category": "terim",
+    "definition": "Kas gücünde kısmi azalmadır.",
+    "description": "Kas gücünde kısmi azalmadır.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "clinicalPearl": "Ders yalnız adı sayar.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-05"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/3)Nörolojik Muayene.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 50,
+        "alinti": "Motor Sistem Muayenesi Bulguları Parazi Pleji Monoparazi Hemiparazi"
+      }
+    ]
+  },
+  "pleji": {
+    "term": "Pleji",
+    "category": "terim",
+    "definition": "Kas gücünün tamamen kaybıdır.",
+    "description": "Kas gücünün tamamen kaybıdır.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "clinicalPearl": "Ders yalnız adı sayar.",
+    "aliases": [
+      "Paralizi"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-05"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/3)Nörolojik Muayene.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 50,
+        "alinti": "Motor Sistem Muayenesi Bulguları Parazi Pleji Monoparazi Hemiparazi"
+      }
+    ]
+  },
+  "monoparazi": {
+    "term": "Monoparazi",
+    "category": "terim",
+    "definition": "Tek ekstremitede kas gücünün kısmi azalmasıdır.",
+    "description": "Tek ekstremitede kas gücünün kısmi azalmasıdır.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "clinicalPearl": "Ders yalnız adı sayar.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-05"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/3)Nörolojik Muayene.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 50,
+        "alinti": "Pleji Monoparazi Hemiparazi Paraparazi Kuadriparazi"
+      }
+    ]
+  },
+  "hemiparazi": {
+    "term": "Hemiparazi",
+    "category": "terim",
+    "definition": "Vücudun bir yarısında kas gücünün kısmi azalmasıdır.",
+    "description": "Vücudun bir yarısında kas gücünün kısmi azalmasıdır.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "clinicalPearl": "Santral fasial paralizide aynı tarafta hemiparezi birlikte bulunur.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-05"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/3)Nörolojik Muayene.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 50,
+        "alinti": "Pleji Monoparazi Hemiparazi Paraparazi Kuadriparazi"
+      }
+    ]
+  },
+  "paraparazi": {
+    "term": "Paraparazi",
+    "category": "terim",
+    "definition": "İki alt ekstremitede kas gücünün kısmi azalmasıdır.",
+    "description": "İki alt ekstremitede kas gücünün kısmi azalmasıdır.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "clinicalPearl": "Ders yalnız adı sayar.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-05"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/3)Nörolojik Muayene.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 50,
+        "alinti": "Pleji Monoparazi Hemiparazi Paraparazi Kuadriparazi"
+      }
+    ]
+  },
+  "kuadriparazi": {
+    "term": "Kuadriparazi",
+    "category": "terim",
+    "definition": "Dört ekstremitede kas gücünün kısmi azalmasıdır.",
+    "description": "Dört ekstremitede kas gücünün kısmi azalmasıdır.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "clinicalPearl": "Ders yalnız adı sayar.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-05"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/3)Nörolojik Muayene.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 50,
+        "alinti": "Monoparazi Hemiparazi Paraparazi Kuadriparazi Spastisite"
+      }
+    ]
+  },
+  "spastisite": {
+    "term": "Spastisite",
+    "category": "terim",
+    "definition": "Pasif harekete karşı direncin hızla ve artarak arttığı tonus artışıdır.",
+    "description": "Pasif harekete karşı direncin hızla ve artarak arttığı tonus artışıdır.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "clinicalPearl": "Birinci motor nöron lezyonunda tonus artar.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-05"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/3)Nörolojik Muayene.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 50,
+        "alinti": "Paraparazi Kuadriparazi Spastisite Rijidite Atrofi"
+      }
+    ]
+  },
+  "rijidite": {
+    "term": "Rijidite",
+    "category": "terim",
+    "definition": "Pasif harekete karşı direncin tüm hareket boyunca sürdüğü tonus artışıdır.",
+    "description": "Pasif harekete karşı direncin tüm hareket boyunca sürdüğü tonus artışıdır.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "clinicalPearl": "Ders yalnız adı sayar.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-05"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/3)Nörolojik Muayene.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 50,
+        "alinti": "Paraparazi Kuadriparazi Spastisite Rijidite Atrofi"
+      }
+    ]
+  },
+  "klonus": {
+    "term": "Klonus",
+    "category": "terim",
+    "definition": "Uyaranla başlayan, tekrarlayan ritmik kasılmalardır.",
+    "description": "Uyaranla başlayan, tekrarlayan ritmik kasılmalardır.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "clinicalPearl": "Ders refleks derecelendirmesinde 5. dereceyi klonus olarak verir.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-05"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/3)Nörolojik Muayene.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 54,
+        "alinti": "4: aşırı artmış 5: klonus"
+      }
+    ]
+  },
+  "babinski refleksi": {
+    "term": "Babinski refleksi",
+    "category": "tani",
+    "definition": "Ayak tabanı uyarıldığında alınan patolojik taban cildi refleksidir.",
+    "description": "Ayak tabanı uyarıldığında alınan patolojik taban cildi refleksidir.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "clinicalPearl": "Birinci motor nöron lezyonunda patolojik refleks pozitiftir.",
+    "aliases": [
+      "Taban cildi refleksi"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-05"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/3)Nörolojik Muayene.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 53,
+        "alinti": "Patolojik Refleksler: Taban cildi refleksi (Babinski), Hoffman refleksi"
+      }
+    ]
+  },
+  "hoffman refleksi": {
+    "term": "Hoffman refleksi",
+    "category": "tani",
+    "definition": "El parmağına yapılan uyarıyla alınan patolojik reflekstir.",
+    "description": "El parmağına yapılan uyarıyla alınan patolojik reflekstir.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "clinicalPearl": "Ders Babinski ile birlikte patolojik refleks olarak verir.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-05"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/3)Nörolojik Muayene.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 53,
+        "alinti": "Patolojik Refleksler: Taban cildi refleksi (Babinski), Hoffman refleksi"
+      }
+    ]
+  },
+  "parestezi": {
+    "term": "Parestezi",
+    "category": "terim",
+    "definition": "Uyuşma, keçeleşme, karıncalanma, sızlama gibi, görünür dış uyarım olmadan hissedilen duyumdur.",
+    "description": "Uyuşma, keçeleşme, karıncalanma, sızlama gibi, görünür dış uyarım olmadan hissedilen duyumdur.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "clinicalPearl": "Dış uyarım yoktur; dizestezide ağrısız bir uyarı vardır.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-05"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/3)Nörolojik Muayene.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 59,
+        "alinti": "Parestezi: Uyuşma, keçeleşme, karıncalanma, sızlama gibi görünür dış uyarım olmadan hissettiği duyum"
+      }
+    ]
+  },
+  "dizestezi": {
+    "term": "Dizestezi",
+    "category": "terim",
+    "definition": "Ağrısız bir uyarıyla hoş olmayan, ağrılı bir duyum algılanmasıdır.",
+    "description": "Ağrısız bir uyarıyla hoş olmayan, ağrılı bir duyum algılanmasıdır.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "clinicalPearl": "Parestezi ile karıştırılmamalı: dizestezi bir uyarıya verilen yanlış yanıttır.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-05"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/3)Nörolojik Muayene.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 59,
+        "alinti": "Dizestezi: Ağrısız bir uyarıyla hoş olmayan ağrılı duyum algılanması"
+      }
+    ]
+  },
+  "hiperestezi": {
+    "term": "Hiperestezi",
+    "category": "terim",
+    "definition": "Uyarının normalden daha şiddetliymiş gibi hissedilmesidir.",
+    "description": "Uyarının normalden daha şiddetliymiş gibi hissedilmesidir.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "clinicalPearl": "Hipoestezi duyu azlığı, anestezi duyu yokluğudur.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-05"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/3)Nörolojik Muayene.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 59,
+        "alinti": "Hiperestezi: Uyarının normalden daha şiddetliymiş gibi hissedilmesi"
+      }
+    ]
+  },
+  "hipoestezi": {
+    "term": "Hipoestezi",
+    "category": "terim",
+    "definition": "Duyu azlığıdır; yüzde hipoestezi trigeminal patolojinin bulgularındandır.",
+    "description": "Duyu azlığıdır; yüzde hipoestezi trigeminal patolojinin bulgularındandır.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "clinicalPearl": "Hiperestezi ile karıştırılmamalı.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-05"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/3)Nörolojik Muayene.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 59,
+        "alinti": "Hipoestezi: Duyu azlığı Anestezi: Duyu yokluğu"
+      }
+    ]
+  },
+  "anestezi": {
+    "term": "Anestezi",
+    "category": "terim",
+    "definition": "Duyu yokluğudur.",
+    "description": "Duyu yokluğudur.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "clinicalPearl": "Hipoestezi duyu azlığıdır.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-05"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/3)Nörolojik Muayene.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 59,
+        "alinti": "Hipoestezi: Duyu azlığı Anestezi: Duyu yokluğu"
+      }
+    ]
+  },
+  "allodini": {
+    "term": "Allodini",
+    "category": "terim",
+    "definition": "Ağrı oluşturmayacak bir uyaranla ağrı hissedilmesidir.",
+    "description": "Ağrı oluşturmayacak bir uyaranla ağrı hissedilmesidir.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "clinicalPearl": "Ders parestezi, dizestezi ve allodiniyi ayrı terimler olarak verir.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-05"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/3)Nörolojik Muayene.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 59,
+        "alinti": "Allodini: Ağrı oluşturmayacak bir uyaran ile ağrı hissedilmesi"
+      }
+    ]
+  },
+  "stereognozi": {
+    "term": "Stereognozi",
+    "category": "fizyoloji",
+    "definition": "Elle dokunarak bir cismin ne olduğunu tanıma yeteneğidir; kortikal duyu muayenesinde sınanır.",
+    "description": "Elle dokunarak bir cismin ne olduğunu tanıma yeteneğidir; kortikal duyu muayenesinde sınanır.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "clinicalPearl": "Bozukluğuna astereognozi denir. Ders terimi 'sterognazi' diye yazar.",
+    "aliases": [
+      "Sterognazi"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-05"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/3)Nörolojik Muayene.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 60,
+        "alinti": "Kortikal duyular muayenesi Sterognazi İki nokta ayrımı Grafestezi Taktil lokalizasyon"
+      }
+    ]
+  },
+  "grafestezi": {
+    "term": "Grafestezi",
+    "category": "fizyoloji",
+    "definition": "Deriye çizilen sayı ya da harfi tanıma yeteneğidir; kortikal duyu muayenesinde sınanır.",
+    "description": "Deriye çizilen sayı ya da harfi tanıma yeteneğidir; kortikal duyu muayenesinde sınanır.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "clinicalPearl": "Bozukluğuna agrafestezi denir.",
+    "aliases": [
+      "Agrafestezi"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-05"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/3)Nörolojik Muayene.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 60,
+        "alinti": "Kortikal duyular muayenesi Sterognazi İki nokta ayrımı Grafestezi Taktil lokalizasyon"
+      }
+    ]
+  },
+  "romberg testi": {
+    "term": "Romberg testi",
+    "category": "tani",
+    "definition": "Ayaklar birleşik ve gözler kapalı durulduğunda dengenin korunup korunmadığına bakılan testtir.",
+    "description": "Ayaklar birleşik ve gözler kapalı durulduğunda dengenin korunup korunmadığına bakılan testtir.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "clinicalPearl": "Ders Romberg testini derin duyu muayenesi içinde verir.",
+    "aliases": [
+      "Romberg"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-05"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/3)Nörolojik Muayene.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 60,
+        "alinti": "Derin duyu muayenesi Pozisyon Pasif hareket Vibrasyon Romberg"
+      }
+    ]
+  },
+  "ataksi": {
+    "term": "Ataksi",
+    "category": "terim",
+    "definition": "Hareketlerin koordinasyonunun bozulması ve dengesiz, sendeleyerek yürümedir.",
+    "description": "Hareketlerin koordinasyonunun bozulması ve dengesiz, sendeleyerek yürümedir.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "clinicalPearl": "Serebellar sistem bulgusudur.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-05"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/3)Nörolojik Muayene.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 71,
+        "alinti": "Serebellar Sistem Muayenesi Bulguları Ataksi Disartri Hipotoni"
+      }
+    ]
+  },
+  "disartri": {
+    "term": "Disartri",
+    "category": "terim",
+    "definition": "Konuşma kaslarının koordinasyonunun bozulmasıyla konuşmanın anlaşılırlığının azalmasıdır.",
+    "description": "Konuşma kaslarının koordinasyonunun bozulmasıyla konuşmanın anlaşılırlığının azalmasıdır.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "clinicalPearl": "Serebellar sistem bulgusudur.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-05"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/3)Nörolojik Muayene.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 71,
+        "alinti": "Bulguları Ataksi Disartri Hipotoni Dismetri Disdiadokinezi"
+      }
+    ]
+  },
+  "hipotoni": {
+    "term": "Hipotoni",
+    "category": "terim",
+    "definition": "Kas tonusunun azalmasıdır.",
+    "description": "Kas tonusunun azalmasıdır.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "clinicalPearl": "Serebellar bulgudur; ikinci motor nöron lezyonunda da tonus azalır.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-05"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/3)Nörolojik Muayene.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 71,
+        "alinti": "Bulguları Ataksi Disartri Hipotoni Dismetri Disdiadokinezi"
+      }
+    ]
+  },
+  "dismetri": {
+    "term": "Dismetri",
+    "category": "terim",
+    "definition": "Hareketin mesafesini ve gücünü ayarlayamama, hedefi aşma ya da ulaşamamadır.",
+    "description": "Hareketin mesafesini ve gücünü ayarlayamama, hedefi aşma ya da ulaşamamadır.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "clinicalPearl": "Parmak-burun ve diz-topuk testleri (metrik muayene) ile ortaya çıkar.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-05"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/3)Nörolojik Muayene.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 71,
+        "alinti": "Bulguları Ataksi Disartri Hipotoni Dismetri Disdiadokinezi"
+      }
+    ]
+  },
+  "disdiadokinezi": {
+    "term": "Disdiadokinezi",
+    "category": "terim",
+    "definition": "Ardışık, zıt yönlü hareketleri hızlı ve düzenli yapamamadır.",
+    "description": "Ardışık, zıt yönlü hareketleri hızlı ve düzenli yapamamadır.",
+    "discipline": "Nöroloji",
+    "committee": "",
+    "clinicalPearl": "Ardışık hareketler (diadokinezi) avuç yukarı-aşağı çevirmeyle sınanır.",
+    "aliases": [
+      "Diadokinezi bozukluğu"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "elle-k2-05"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 2/Nöroloji/3)Nörolojik Muayene.pdf",
+        "ders": "Nöroloji",
+        "kurul": 2,
+        "sayfa": 71,
+        "alinti": "Bulguları Ataksi Disartri Hipotoni Dismetri Disdiadokinezi"
+      }
+    ]
   }
 }

@@ -92071,5 +92071,890 @@
       "accuracyScore": 100,
       "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
     }
+  },
+  {
+    "id": "s13-amnezi",
+    "term": "Amnezi",
+    "aliases": [
+      "Bellek kaybı"
+    ],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 3)Nörolojik Muayene s.5",
+    "definition": "Bellek kaybıdır; yeni bilgilerin öğrenilememesi ya da geçmiş bilgilerin hatırlanamaması şeklinde görülür.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Ders amnezi sözcüğünü mental durum bozuklukları listesinde verir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-deliriyum",
+    "term": "Deliriyum",
+    "aliases": [],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 3)Nörolojik Muayene s.5",
+    "definition": "Dikkat ve bilinçte dalgalanma, algı ve düşünce bozukluğuyla seyreden akut mental durum bozukluğudur.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Ders yalnız adı sayar.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-broca_afazisi",
+    "term": "Broca afazisi",
+    "aliases": [
+      "Motor disfazi"
+    ],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 3)Nörolojik Muayene s.6",
+    "definition": "Motor disfazidir; konuşmanın üretiminin bozulduğu afazi tipidir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Slayt: motor disfazi (Broca).",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-wernicke_afazisi",
+    "term": "Wernicke afazisi",
+    "aliases": [
+      "Sensoriyal afazi"
+    ],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 3)Nörolojik Muayene s.6",
+    "definition": "Sensoriyal afazidir; konuşulanın anlaşılmasının bozulduğu afazi tipidir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Slayt: sensoriyal afazi (Wernicke).",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-anosmi",
+    "term": "Anosmi",
+    "aliases": [],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 3)Nörolojik Muayene s.14",
+    "definition": "Koku duyusunun kaybıdır; N. olfaktorius lezyonunda görülür.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Kafa travmasında bilateral anosmi görülebilir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-hiposmi",
+    "term": "Hiposmi",
+    "aliases": [],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 3)Nörolojik Muayene s.14",
+    "definition": "Koku duyusunun azalmasıdır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Ders yalnız adı sayar.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-kakosmi",
+    "term": "Kakosmi",
+    "aliases": [
+      "Kokosmi"
+    ],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 3)Nörolojik Muayene s.14",
+    "definition": "Hoş olmayan, kötü koku algılanmasıdır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Ders bu terimi 'kokosmi' diye yazar; doğru yazımı kakosmidir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-parosmi",
+    "term": "Parosmi",
+    "aliases": [],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 3)Nörolojik Muayene s.14",
+    "definition": "Kokuların yanlış ya da değişmiş algılanmasıdır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Ders yalnız adı sayar.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-amorozis_fugax",
+    "term": "Amorozis fugax",
+    "aliases": [
+      "Geçici monoküler görme kaybı"
+    ],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 3)Nörolojik Muayene s.19",
+    "definition": "Tek gözde ani, geçici görme kaybıdır; genelde karotid arterden kopan embolinin retinal arterleri tıkamasına bağlıdır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Baş-boyun oskültasyonu önerilir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-papil_odemi",
+    "term": "Papil ödemi",
+    "aliases": [],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 3)Nörolojik Muayene s.19",
+    "definition": "Göz dibinde papilla kenarlarının ve damarın silikleşmesi, optik çukurun kaybolması, retinal venlerin kalınlaşması ve pulsasyonların kaybolmasıyla belli olan bulgudur.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "En sık rastlanan nedeni KİBAS'tır.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-kibas",
+    "term": "KİBAS",
+    "aliases": [
+      "Kafa içi basınç artışı sendromu"
+    ],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 3)Nörolojik Muayene s.19",
+    "definition": "Kafa içi basınç artışı sendromudur; papil ödeminin en sık rastlanan nedenidir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Çıkmış sorularda ana bulguları baş ağrısı, bulantı-kusma ve papil ödemidir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-nistagmus",
+    "term": "Nistagmus",
+    "aliases": [],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 3)Nörolojik Muayene s.22",
+    "definition": "Gözlerin istemsiz, ritmik hareketidir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Göz hareketi muayenesinde varsa nistagmus not edilir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-ptozis",
+    "term": "Ptozis",
+    "aliases": [
+      "Göz kapağı düşüklüğü"
+    ],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 3)Nörolojik Muayene s.23",
+    "definition": "Üst göz kapağının düşmesidir; okülomotor sinir lezyonunda görülür.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Üst göz kapağını kaldıran m. levator palpebrae okülomotor sinirle innerve edilir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-midriyatik_goz",
+    "term": "Midriyatik göz",
+    "aliases": [
+      "Midriyazis"
+    ],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 3)Nörolojik Muayene s.23",
+    "definition": "Pupillanın geniş olduğu gözdür; okülomotor lezyonda ışık refleksi alınamaz ve gözler midriyatiktir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Pupilla daraltıcı kasa parasempatik lifleri okülomotor sinir verir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-kornea_refleksi",
+    "term": "Kornea refleksi",
+    "aliases": [],
+    "category": "fizyoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 3)Nörolojik Muayene s.25",
+    "definition": "Kornea uyarıldığında göz kapağının kapanmasıdır; getirici kol 5., götürücü kol 7. kraniyal sinirdir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Çene refleksinde hem getirici hem götürücü kol 5. kraniyal sinirdir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-santral_fasial_paralizi",
+    "term": "Santral fasial paralizi",
+    "aliases": [],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 3)Nörolojik Muayene s.29",
+    "definition": "Yüzün bir yarısının yalnız alt kısmında kuvvet azlığıyla giden fasial paralizidir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Gözünü kapatır, sıkar; her zaman aynı tarafta hemiparezi ile birliktedir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-periferik_fasial_paralizi",
+    "term": "Periferik fasial paralizi",
+    "aliases": [],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 3)Nörolojik Muayene s.30",
+    "definition": "Yüzün bir yarısının tamamında kuvvet azlığıyla giden fasial paralizidir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Kaş kaldıramaz, alın çizgileri silinir, göz kapatılamaz, ıslık çalınamaz.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-nazolabial_oluk",
+    "term": "Nazolabial oluk",
+    "aliases": [],
+    "category": "anatomi",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 3)Nörolojik Muayene s.29",
+    "definition": "Burun kanadından ağız köşesine doğru uzanan yüz kıvrımıdır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Hem santral hem periferik fasial paralizide silinir ve ağız sağlam tarafa kayar.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-vertigo",
+    "term": "Vertigo",
+    "aliases": [],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 3)Nörolojik Muayene s.32",
+    "definition": "Çevrenin ya da kişinin kendisinin dönüyormuş gibi hissedilmesidir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Santral ve periferik vertigo ayrılır.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-nazone_konusma",
+    "term": "Nazone konuşma",
+    "aliases": [
+      "Burundan konuşma"
+    ],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 3)Nörolojik Muayene s.36",
+    "definition": "Seslerin burundan çıkıyormuş gibi duyulduğu konuşmadır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "IX-X muayenesinde konuşmaya dikkat edilir (nazone, burundan konuşma).",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-parazi",
+    "term": "Parazi",
+    "aliases": [],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 3)Nörolojik Muayene s.50",
+    "definition": "Kas gücünde kısmi azalmadır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Ders yalnız adı sayar.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-pleji",
+    "term": "Pleji",
+    "aliases": [
+      "Paralizi"
+    ],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 3)Nörolojik Muayene s.50",
+    "definition": "Kas gücünün tamamen kaybıdır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Ders yalnız adı sayar.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-monoparazi",
+    "term": "Monoparazi",
+    "aliases": [],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 3)Nörolojik Muayene s.50",
+    "definition": "Tek ekstremitede kas gücünün kısmi azalmasıdır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Ders yalnız adı sayar.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-hemiparazi",
+    "term": "Hemiparazi",
+    "aliases": [],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 3)Nörolojik Muayene s.50",
+    "definition": "Vücudun bir yarısında kas gücünün kısmi azalmasıdır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Santral fasial paralizide aynı tarafta hemiparezi birlikte bulunur.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-paraparazi",
+    "term": "Paraparazi",
+    "aliases": [],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 3)Nörolojik Muayene s.50",
+    "definition": "İki alt ekstremitede kas gücünün kısmi azalmasıdır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Ders yalnız adı sayar.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-kuadriparazi",
+    "term": "Kuadriparazi",
+    "aliases": [],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 3)Nörolojik Muayene s.50",
+    "definition": "Dört ekstremitede kas gücünün kısmi azalmasıdır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Ders yalnız adı sayar.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-spastisite",
+    "term": "Spastisite",
+    "aliases": [],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 3)Nörolojik Muayene s.50",
+    "definition": "Pasif harekete karşı direncin hızla ve artarak arttığı tonus artışıdır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Birinci motor nöron lezyonunda tonus artar.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-rijidite",
+    "term": "Rijidite",
+    "aliases": [],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 3)Nörolojik Muayene s.50",
+    "definition": "Pasif harekete karşı direncin tüm hareket boyunca sürdüğü tonus artışıdır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Ders yalnız adı sayar.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-klonus",
+    "term": "Klonus",
+    "aliases": [],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 3)Nörolojik Muayene s.54",
+    "definition": "Uyaranla başlayan, tekrarlayan ritmik kasılmalardır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Ders refleks derecelendirmesinde 5. dereceyi klonus olarak verir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-babinski_refleksi",
+    "term": "Babinski refleksi",
+    "aliases": [
+      "Taban cildi refleksi"
+    ],
+    "category": "tani",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 3)Nörolojik Muayene s.53",
+    "definition": "Ayak tabanı uyarıldığında alınan patolojik taban cildi refleksidir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Birinci motor nöron lezyonunda patolojik refleks pozitiftir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-hoffman_refleksi",
+    "term": "Hoffman refleksi",
+    "aliases": [],
+    "category": "tani",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 3)Nörolojik Muayene s.53",
+    "definition": "El parmağına yapılan uyarıyla alınan patolojik reflekstir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Ders Babinski ile birlikte patolojik refleks olarak verir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-parestezi",
+    "term": "Parestezi",
+    "aliases": [],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 3)Nörolojik Muayene s.59",
+    "definition": "Uyuşma, keçeleşme, karıncalanma, sızlama gibi, görünür dış uyarım olmadan hissedilen duyumdur.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Dış uyarım yoktur; dizestezide ağrısız bir uyarı vardır.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-dizestezi",
+    "term": "Dizestezi",
+    "aliases": [],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 3)Nörolojik Muayene s.59",
+    "definition": "Ağrısız bir uyarıyla hoş olmayan, ağrılı bir duyum algılanmasıdır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Parestezi ile karıştırılmamalı: dizestezi bir uyarıya verilen yanlış yanıttır.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-hiperestezi",
+    "term": "Hiperestezi",
+    "aliases": [],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 3)Nörolojik Muayene s.59",
+    "definition": "Uyarının normalden daha şiddetliymiş gibi hissedilmesidir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Hipoestezi duyu azlığı, anestezi duyu yokluğudur.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-hipoestezi",
+    "term": "Hipoestezi",
+    "aliases": [],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 3)Nörolojik Muayene s.59",
+    "definition": "Duyu azlığıdır; yüzde hipoestezi trigeminal patolojinin bulgularındandır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Hiperestezi ile karıştırılmamalı.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-anestezi",
+    "term": "Anestezi",
+    "aliases": [],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 3)Nörolojik Muayene s.59",
+    "definition": "Duyu yokluğudur.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Hipoestezi duyu azlığıdır.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-allodini",
+    "term": "Allodini",
+    "aliases": [],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 3)Nörolojik Muayene s.59",
+    "definition": "Ağrı oluşturmayacak bir uyaranla ağrı hissedilmesidir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Ders parestezi, dizestezi ve allodiniyi ayrı terimler olarak verir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-stereognozi",
+    "term": "Stereognozi",
+    "aliases": [
+      "Sterognazi"
+    ],
+    "category": "fizyoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 3)Nörolojik Muayene s.60",
+    "definition": "Elle dokunarak bir cismin ne olduğunu tanıma yeteneğidir; kortikal duyu muayenesinde sınanır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Bozukluğuna astereognozi denir. Ders terimi 'sterognazi' diye yazar.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-grafestezi",
+    "term": "Grafestezi",
+    "aliases": [
+      "Agrafestezi"
+    ],
+    "category": "fizyoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 3)Nörolojik Muayene s.60",
+    "definition": "Deriye çizilen sayı ya da harfi tanıma yeteneğidir; kortikal duyu muayenesinde sınanır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Bozukluğuna agrafestezi denir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-romberg_testi",
+    "term": "Romberg testi",
+    "aliases": [
+      "Romberg"
+    ],
+    "category": "tani",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 3)Nörolojik Muayene s.60",
+    "definition": "Ayaklar birleşik ve gözler kapalı durulduğunda dengenin korunup korunmadığına bakılan testtir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Ders Romberg testini derin duyu muayenesi içinde verir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-ataksi",
+    "term": "Ataksi",
+    "aliases": [],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 3)Nörolojik Muayene s.71",
+    "definition": "Hareketlerin koordinasyonunun bozulması ve dengesiz, sendeleyerek yürümedir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Serebellar sistem bulgusudur.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-disartri",
+    "term": "Disartri",
+    "aliases": [],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 3)Nörolojik Muayene s.71",
+    "definition": "Konuşma kaslarının koordinasyonunun bozulmasıyla konuşmanın anlaşılırlığının azalmasıdır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Serebellar sistem bulgusudur.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-hipotoni",
+    "term": "Hipotoni",
+    "aliases": [],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 3)Nörolojik Muayene s.71",
+    "definition": "Kas tonusunun azalmasıdır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Serebellar bulgudur; ikinci motor nöron lezyonunda da tonus azalır.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-dismetri",
+    "term": "Dismetri",
+    "aliases": [],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 3)Nörolojik Muayene s.71",
+    "definition": "Hareketin mesafesini ve gücünü ayarlayamama, hedefi aşma ya da ulaşamamadır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Parmak-burun ve diz-topuk testleri (metrik muayene) ile ortaya çıkar.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-disdiadokinezi",
+    "term": "Disdiadokinezi",
+    "aliases": [
+      "Diadokinezi bozukluğu"
+    ],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Nöroloji",
+    "instructorAndSource": "Ders notu: 3)Nörolojik Muayene s.71",
+    "definition": "Ardışık, zıt yönlü hareketleri hızlı ve düzenli yapamamadır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Ardışık hareketler (diadokinezi) avuç yukarı-aşağı çevirmeyle sınanır.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-27",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
   }
 ]
