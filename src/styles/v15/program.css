@@ -46,3 +46,12 @@ a.pg15-r:hover { background: var(--color-field); }
 .pg15-ay-g.is-sinav small { font-size: .62rem; font-weight: 700; color: var(--color-bad); }
 .pg15-ay-n { display: flex; gap: 2px; }
 .pg15-ay-n i { width: 5px; height: 5px; border-radius: 50%; background: var(--color-accent); }
+/* yönetici/moderatör: ders yerlerini değiştirme */
+.pg15-duzbtn { display: inline-flex; align-items: center; gap: 6px; border: 1px solid var(--color-line); background: var(--color-white); color: var(--color-ink-2); border-radius: 10px; padding: 6px 12px; font: inherit; font-size: .85rem; cursor: pointer; min-height: 36px; }
+.pg15-duzbtn svg { width: 16px; height: 16px; }
+.pg15-duzbtn.is-on { background: var(--color-accent); border-color: var(--color-accent); color: var(--color-white); }
+button.pg15-duz { width: 100%; border: 0; background: none; font: inherit; text-align: left; cursor: pointer; }
+button.pg15-duz:hover { background: var(--color-field); }
+.pg15-r.is-secili { background: var(--color-field); box-shadow: inset 3px 0 0 var(--color-accent); }
+.pg15-hata { color: var(--color-danger, #b3261e); margin: 0 2px; }
+.pg15-duzbilgi { margin: 0 2px; }

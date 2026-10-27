@@ -1,11 +1,10 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 452,
-  "baslik": "Kronometre ayarları ve geçmişi",
+  "onem": 453,
+  "baslik": "Ders programında ders yerlerini değiştirme",
   "maddeler": [
-    "Kronometre panelinden Ayarlar: göster, oynatıcıyla birleş, sayfa değişince devam, boyut, konum, mola hatırlatması, günlük hedef",
-    "Kronometre geçmişi: hafta/ay grafiği, sistem süresiyle karşılaştırma, odak oranı, oturum listesi",
-    "Bitirdiklerim ve Sınav planı kurula göre (önceki güncelleme)"
+    "Yönetici ve moderatör, Ders programı sayfasından iki dersin tarih ve saatini birbiriyle değiştirebilir",
+    "Değişiklik bütün öğrencilerde görünür; resmî program kaydı korunur"
   ],
   "eklenen": [],
   "degisen": [],

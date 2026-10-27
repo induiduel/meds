@@ -1,5 +1,7 @@
 import React, { useEffect, useMemo, useState } from 'react';
-import { ChevronLeft, ChevronRight, Headphones } from 'lucide-react';
+import { ArrowLeftRight, ChevronLeft, ChevronRight, Headphones } from 'lucide-react';
+import { safeJsonFetch } from '../../services/api';
+import { fetchMyAccess } from '../../services/moderatorSession';
 import { linkClick, navigateTo, pathFor } from '../../router';
 import { KURULLAR, aktifKurul, bugun } from '../../services/kurulTakvimi';
 import { useDersListesi } from './dersVeri';
@@ -41,15 +43,27 @@ export default function DersProgramiV15() {
   const [gun, setGun] = useState(ilkGun);
   const [veri, setVeri] = useState<ProgDers[] | null>(null);
   const { dersler: sesli } = useDersListesi();
+  // Yer değiştirme: yalnız yönetici/moderatör (rol sunucudan; yazma ucu da sunucuda denetlenir)
+  const [yetkili, setYetkili] = useState(false);
+  const [duzenle, setDuzenle] = useState(false);
+  const [secili, setSecili] = useState<string | null>(null);
+  const [hata, setHata] = useState('');
+  useEffect(() => {
+    let c = true;
+    void fetchMyAccess().then((a) => { if (c) setYetkili(!!a && a.role !== 'student' && !a.suspended); });
+    return () => { c = false; };
+  }, []);
 
   useEffect(() => {
     let c = true;
     setVeri(null);
     const yukle = KAYITLAR[`../../data/dersler/k${kurul}.json`];
     if (!yukle) { setVeri([]); return; }
-    yukle().then((m) => {
+    yukle().then(async (m) => {
       const d = ((m as { default?: { dersler: ProgDers[] } }).default ?? (m as { dersler: ProgDers[] })).dersler || [];
-      if (c) setVeri([...d].sort((a, b) => a.tarih.localeCompare(b.tarih) || saatBas(a.saat).localeCompare(saatBas(b.saat))));
+      let duzen: Record<string, { tarih: string; saat?: string }> = {};
+      try { duzen = (await safeJsonFetch<{ duzen: typeof duzen }>(`/api/ders-programi/duzen?kurul=${kurul}`)).data?.duzen || {}; } catch { /* resmî program */ }
+      if (c) setVeri(d.map((x) => (duzen[x.id] ? { ...x, ...duzen[x.id] } : x)).sort((a, b) => a.tarih.localeCompare(b.tarih) || saatBas(a.saat).localeCompare(saatBas(b.saat))));
     }, () => c && setVeri([]));
     return () => { c = false; };
   }, [kurul]);
@@ -82,6 +96,23 @@ export default function DersProgramiV15() {
     if (sonraki) setGun(sonraki);
   };
 
+  /** İki dersin tarih + saatini değiştirir; sunucuya yazılır, başarısızsa ekran eski haline döner */
+  const degistir = async (a: ProgDers, b: ProgDers) => {
+    const onceki = veri;
+    const yeni = [{ id: a.id, tarih: b.tarih, saat: b.saat }, { id: b.id, tarih: a.tarih, saat: a.saat }];
+    setVeri((v) => (v || []).map((x) => { const y = yeni.find((z) => z.id === x.id); return y ? { ...x, tarih: y.tarih, saat: y.saat } : x; })
+      .sort((p, q) => p.tarih.localeCompare(q.tarih) || saatBas(p.saat).localeCompare(saatBas(q.saat))));
+    const r = await safeJsonFetch(`/api/ders-programi/duzen`, { method: 'PUT', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ kurul: String(kurul), degisimler: yeni }) });
+    if (!r.ok) { setVeri(onceki); setHata(r.error || 'Kaydedilemedi.'); } else setHata('');
+  };
+  const sec = (d: ProgDers) => {
+    if (!secili) { setSecili(d.id); return; }
+    if (secili === d.id) { setSecili(null); return; }
+    const a = (veri || []).find((x) => x.id === secili);
+    setSecili(null);
+    if (a) void degistir(a, d);
+  };
+
   const satir = (d: ProgDers, tarihGoster = false) => {
     const key = sesliKey.get(d.id);
     const gecti = d.tarih < g;
@@ -96,10 +127,12 @@ export default function DersProgramiV15() {
         {key && <Headphones className="pg15-i" aria-label="Sesli ders var" />}
       </>
     );
-    const cls = `pg15-r${gecti ? ' is-gecti' : ''}${d.tarih === g ? ' is-bugun' : ''}`;
+    const cls = `pg15-r${gecti ? ' is-gecti' : ''}${d.tarih === g ? ' is-bugun' : ''}${secili === d.id ? ' is-secili' : ''}`;
     return (
       <li key={d.id}>
-        {key ? (
+        {duzenle ? (
+          <button type="button" className={`${cls} pg15-duz`} aria-pressed={secili === d.id} onClick={() => sec(d)}>{ic}</button>
+        ) : key ? (
           <a className={cls} href={pathFor('ders_detay', key)} onClick={linkClick(() => navigateTo(pathFor('ders_detay', key)))}>{ic}</a>
         ) : <div className={cls}>{ic}</div>}
       </li>
@@ -124,6 +157,11 @@ export default function DersProgramiV15() {
             <button key={id} type="button" role="tab" aria-selected={gorunum === id} className={gorunum === id ? 'is-on' : ''} onClick={() => setGorunum(id)}>{ad}</button>
           ))}
         </div>
+        {yetkili && (
+          <button type="button" className={`pg15-duzbtn${duzenle ? ' is-on' : ''}`} aria-pressed={duzenle} onClick={() => { setDuzenle(!duzenle); setSecili(null); setHata(''); }}>
+            <ArrowLeftRight /> {duzenle ? 'Düzenlemeyi bitir' : 'Yerleri değiştir'}
+          </button>
+        )}
         {gorunum !== 'liste' && (
           <div className="pg15-gez">
             <button type="button" className="pg15-ok" aria-label={gorunum === 'gun' ? 'Önceki ders günü' : gorunum === 'ay' ? 'Önceki ay' : 'Önceki hafta'} onClick={() => kaydir(-1)}><ChevronLeft /></button>
@@ -134,6 +172,8 @@ export default function DersProgramiV15() {
         )}
       </div>
 
+      {duzenle && <p className="v15-cap pg15-duzbilgi" role="status">{secili ? 'Şimdi yerini değiştireceğin ikinci dersi seç (başka gün de olabilir).' : 'Yerini değiştirmek istediğin ilk dersi seç.'} Değişiklik bütün öğrencilerde görünür.</p>}
+      {hata && <p className="v15-cap pg15-hata" role="alert">{hata}</p>}
       {!veri ? (
         <span className="v15-skel b15-skel" aria-hidden />
       ) : !veri.length ? (

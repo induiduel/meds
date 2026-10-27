@@ -175,6 +175,7 @@ import { registerUserAdminRoutes } from './src/services/userAdminRoutes.ts';
 import { registerServiceControlRoutes } from './src/services/serviceControlRoutes.ts';
 import { registerModerationActionRoutes } from './src/services/moderationActionsRoutes.ts';
 import { createModeratorAccess, moderatorOf } from './src/services/moderatorAccess.ts';
+import { registerDersProgramiDuzenRoutes } from './src/services/dersProgramiDuzen.ts';
 import { registerHatActionRoutes } from './src/services/hatActionsRoutes.ts';
 import { createBasarimMotor } from './src/services/basarim/basarimMotor.ts';
 import { registerBasarimRoutes } from './src/services/basarim/basarimRoutes.ts';
@@ -524,6 +525,8 @@ function requireWritePassword(req: express.Request, res: express.Response, next:
   if (reqPath.startsWith('/api/learn/social/') || reqPath === '/api/learn/social') return next();
   // Profil eşitleme kimliği kendisi doğrular (Firebase ID jetonu, yalnız kendi kaydı); parola istemez.
   if (reqPath === '/api/users/sync') return next();
+  // Ders programı düzeni: yetkiyi (yönetici/moderatör) rotanın kendisi denetler
+  if (reqPath === '/api/ders-programi/duzen') return next();
   // Doğrulanmış yönetici (Firebase jetonu / gizli anahtar / vekilsiz gerçek loopback) şifre sorgusundan muaf
   if (isRequestAdmin(req)) return next();
 
@@ -1274,6 +1277,7 @@ function requireAdmin(req: express.Request, res: express.Response, next: express
 
 // Moderatör: yalnız moderasyon rotalarında (doğrulanmış Firebase jetonu + users.json rolü; bkz. moderatorAccess.ts)
 const { requireModeratorOrAdmin } = createModeratorAccess({ dataDir: DATA_DIR, adminEmail: ADMIN_EMAIL, loadUsers: () => loadUsers() as any[], isAdmin: isRequestAdmin });
+registerDersProgramiDuzenRoutes(app, { dataDir: DATA_DIR, yazmaYetkisi: requireModeratorOrAdmin });
 
 
 // HTTP Koşullu İstek (Conditional Request - ETag & 304 Not Modified) Motoru
