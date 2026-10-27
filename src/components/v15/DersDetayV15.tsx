@@ -25,11 +25,11 @@ const anahtarOku = () => {
   return route === 'ders_detay' ? param || '' : '';
 };
 
-const GRUP_KEY = 'medsoru_dd15_grup_v1';
+const GRUP_KEY = 'medsoru_dd15_grup_v2'; // v2: varsayılan kapalı (eski açık tercihleri sayılmaz)
 const ICERIK_GRUP: { id: string; ad: string; idler: string[]; varsayilan: boolean }[] = [
-  { id: 'calis', ad: 'Dinle ve çalış', idler: ['sesli', 'deste', 'pdf'], varsayilan: true },
-  { id: 'soru', ad: 'Soru çöz', idler: ['cikmis', 'cozucu', 'sorular', 'quiz'], varsayilan: true },
-  { id: 'bilgi', ad: 'Bilgi kartları', idler: ['terimler', 'hastaliklar', 'bilgiler', 'listeler', 'tablolar', 'kartlar'], varsayilan: true },
+  { id: 'calis', ad: 'Dinle ve çalış', idler: ['sesli', 'deste', 'pdf'], varsayilan: false },
+  { id: 'soru', ad: 'Soru çöz', idler: ['cikmis', 'cozucu', 'sorular', 'quiz'], varsayilan: false },
+  { id: 'bilgi', ad: 'Bilgi kartları', idler: ['terimler', 'hastaliklar', 'bilgiler', 'listeler', 'tablolar', 'kartlar'], varsayilan: false },
 ];
 
 export default function DersDetayV15() {
@@ -230,6 +230,7 @@ export default function DersDetayV15() {
                 <details key={g.id} className="dd15-grup v15-card" open={acik} onToggle={(e) => grupYaz(g.id, (e.currentTarget as HTMLDetailsElement).open)}>
                   <summary>
                     <b>{g.ad}</b>
+                    <span className="dd15-grup-on" aria-hidden>{L.map((x) => <span key={x.id} className={`v15-tile ${x.tone}`} title={x.t}><x.icon /></span>)}</span>
                     <span className="v15-cap">{L.length} içerik</span>
                     <ChevronDown className="dd15-grup-ok" aria-hidden />
                   </summary>

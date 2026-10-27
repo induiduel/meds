@@ -311,3 +311,11 @@ a.k15-kart:hover { border-color: var(--color-accent); }
 .dd15-yorum > span { flex: 1; min-width: 0; color: var(--color-ink-2); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .dd15-yorum b { color: var(--color-ink); }
 @media (max-width: 520px) { .dd15-izgara { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px; padding: 0 8px 8px; } .dd15-kutu { gap: 8px; padding: 8px; } .dd15-kutu .v15-tile { width: 28px; height: 28px; } .dd15-kutu .v15-tile svg { width: 16px; height: 16px; } .dd15-kutu-t b { font-size: 13px; white-space: normal; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; } .dd15-grup > summary { padding: 10px 14px; } }
+.dd15-grup-on { display: inline-flex; gap: 4px; min-width: 0; overflow: hidden; }
+.dd15-grup-on .v15-tile { width: 24px; height: 24px; flex: none; border-radius: 7px; }
+.dd15-grup-on .v15-tile svg { width: 14px; height: 14px; }
+.dd15-grup[open] .dd15-grup-on { display: none; }
+@media (max-width: 380px) { .dd15-grup-on .v15-tile:nth-child(n+5) { display: none; } }
+:root[data-v15='on'] .dd15-grup-on .v15-tile { width: 24px; height: 24px; border-radius: 7px; }
+:root[data-v15='on'] .dd15-grup-on .v15-tile svg { width: 14px; height: 14px; }
+.dd15-grup > summary b, .dd15-grup > summary .v15-cap { white-space: nowrap; flex: none; }
