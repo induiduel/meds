@@ -78,6 +78,7 @@ import { UserDataSyncRow } from '../settings/UserDataSyncRow';
 import { ArkaPlanRow } from '../settings/ArkaPlanRow';
 import { WhatsAppDailyDigestRow } from '../settings/WhatsAppDailyDigestRow';
 import { ProgressResetRow } from '../settings/ProgressResetRow';
+import { erisimYaz, useErisim } from '../../utils/erisilebilirlik';
 import { getStatsAttempts } from '../../services/progressReset';
 import { startWelcomeTour } from '../onboarding/tourState';
 import { onLearnTour } from '../onboarding/learnTourState';
@@ -103,7 +104,7 @@ export interface ProfileV12Props {
   onOpenOffline: () => void;
 }
 
-type Tab = 'genel' | 'katki' | 'kayit' | 'hesap' | 'veri';
+type Tab = 'genel' | 'katki' | 'kayit' | 'hesap' | 'veri' | 'erisim';
 type View = Tab | 'gorunum';
 
 const TABS: { id: Tab; label: string }[] = [
@@ -112,6 +113,7 @@ const TABS: { id: Tab; label: string }[] = [
   { id: 'kayit', label: 'Kaydettiklerim' },
   { id: 'hesap', label: 'Hesap' },
   { id: 'veri', label: 'Veriler ve gizlilik' },
+  { id: 'erisim', label: 'Erişilebilirlik' },
 ];
 
 const nf = new Intl.NumberFormat('tr-TR');
@@ -398,7 +400,7 @@ const CONTRIB_SEGS: { id: ContribKind; label: string; note: string; empty: strin
 export const ProfileV12: React.FC<ProfileV12Props> = ({ currentUser, isAdmin, questions, onUpdateUser, onOpenAuth, onLogout, onOpenAdmin, onOpenOffline }) => {
   const [view, setView] = useState<View>(() => {
     const h = typeof window !== 'undefined' ? window.location.hash.replace('#', '') : '';
-    return h === 'gorunum' ? 'gorunum' : h === 'hesap' ? 'hesap' : 'genel';
+    return h === 'gorunum' ? 'gorunum' : h === 'hesap' ? 'hesap' : h === 'erisim' ? 'erisim' : h === 'veri' ? 'veri' : 'genel';
   });
   const ed = useProfileEditor(currentUser, onUpdateUser);
   const [cropFile, setCropFile] = useState<File | null>(null);
@@ -509,6 +511,7 @@ export const ProfileV12: React.FC<ProfileV12Props> = ({ currentUser, isAdmin, qu
           />
         )}
         {view === 'veri' && <DataPanel onOpenOffline={onOpenOffline} />}
+        {view === 'erisim' && <ErisimPanel />}
         {view === 'gorunum' && <AppearancePanel />}
       </div>
 
@@ -1125,6 +1128,45 @@ const DataPanel: React.FC<{ onOpenOffline: () => void }> = ({ onOpenOffline }) =
       </section>
 
       <p className="u12-foot u12-meta">E-posta adresin her kurulda ilk katkın için teşekkür e-postası almak içindir; kimseyle paylaşılmaz.</p>
+    </div>
+  );
+};
+
+/* ------------------------------------------------------------------------------------------------
+ * Erişilebilirlik (utils/erisilebilirlik.ts; cihazda saklanır, açılışta boyamadan önce uygulanır)
+ * ---------------------------------------------------------------------------------------------- */
+
+const ErisimPanel: React.FC = () => {
+  const e = useErisim();
+  const sistemAzalt = typeof matchMedia !== 'undefined' && matchMedia('(prefers-reduced-motion: reduce)').matches;
+  return (
+    <div role="tabpanel" id="u12-panel-erisim" aria-labelledby="u12-tab-erisim" className="u12-stack">
+      <section className="u12-panel">
+        <div className="u12-panel-h"><h2 className="u12-h2 u12-grow">Hareket</h2></div>
+        <Seg label="Animasyonlar" value={e.hareket} onChange={(v) => erisimYaz({ hareket: v })}
+          options={[{ value: 'sistem', label: 'Sisteme uy' }, { value: 'azalt', label: 'Azalt' }, { value: 'normal', label: 'Normal' }]} />
+        <p className="u12-foot u12-meta">{sistemAzalt ? 'Cihazın "hareketi azalt" diyor; "Sisteme uy" seçiliyken çoğu animasyon zaten kısalır.' : 'Geçişler ve kutlama efektleri seni yoruyorsa "Azalt"ı seç.'}</p>
+      </section>
+      <section className="u12-panel">
+        <div className="u12-panel-h"><h2 className="u12-h2 u12-grow">Okuma ve görme</h2></div>
+        <SetRow id="u12-er-kontrast" title="Yüksek kontrast" sub="Soluk yazılar ve ayırıcı çizgiler koyulaşır.">
+          <Toggle checked={e.kontrast} onChange={(v) => erisimYaz({ kontrast: v })} labelledBy="u12-er-kontrast" />
+        </SetRow>
+        <SetRow id="u12-er-aralik" title="Geniş satır ve harf aralığı" sub="Uzun metinleri okumayı kolaylaştırır (disleksi dostu).">
+          <Toggle checked={e.aralik} onChange={(v) => erisimYaz({ aralik: v })} labelledBy="u12-er-aralik" />
+        </SetRow>
+        <SetRow id="u12-er-cizgi" title="Bağlantıların altını çiz" sub="Metin içindeki bağlantılar renge ek olarak çizgiyle ayrılır.">
+          <Toggle checked={e.altCizgi} onChange={(v) => erisimYaz({ altCizgi: v })} labelledBy="u12-er-cizgi" />
+        </SetRow>
+        <p className="u12-foot u12-meta">Yazı boyutu ve yakınlaştırma Görünüm ve tasarım bölümünde.</p>
+      </section>
+      <section className="u12-panel">
+        <div className="u12-panel-h"><h2 className="u12-h2 u12-grow">Klavye</h2></div>
+        <SetRow id="u12-er-odak" title="Belirgin odak halkası" sub="Tab tuşuyla gezerken seçili öğe kalın bir çerçeveyle görünür.">
+          <Toggle checked={e.odak} onChange={(v) => erisimYaz({ odak: v })} labelledBy="u12-er-odak" />
+        </SetRow>
+        <p className="u12-foot u12-meta">Kısayollar: Ara için / ya da Ctrl+K, kapatmak için Esc.</p>
+      </section>
     </div>
   );
 };

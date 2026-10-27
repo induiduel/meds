@@ -65,7 +65,7 @@ Yeni bileşen önce buraya eklenir; sayfa CSS'i yalnız yerleşim yazar.
 | Not / kalem / renklendirme, paylaşılan notlar | K01–K08 | ✅ Notlarım (yaz/kalem/fosforlu/silgi, renk etiketi, hesaba eşitleme); paylaşılan not (ortak) yok, paylaş = metni gönder |
 | Topluluk: sohbet, yorumlar | L01–L06 | ✅ /topluluk: Genel + Kurul 1–6 kanalları, ders yorumları (ders ayrıntısı › Yorumlar), yanıt, sil, şikâyet |
 | PDF oluştur sihirbazı + geçmiş | Y07–Y13 | ✅ /pdf-olustur (sesli · etkileşimli · arşiv → kurul → ortak TopluPdf penceresi), geçmiş cihazda |
-| Arka plan işleri, hesap, güvenlik, verilerim, erişilebilirlik, komut paleti | AB01–AB18 | |
+| Arka plan işleri, hesap, güvenlik, verilerim, erişilebilirlik, komut paleti | AB01–AB18 | ✅ Erişilebilirlik sekmesi (hareket, yüksek kontrast, geniş aralık, alt çizgi, belirgin odak); hesap/veriler zaten vardı; komut paleti = ⌘K arama |
 
 ## Aşama 2 notları
 - Merkez `components/v15/DerslerMerkezV15.tsx` (MerkezView v15'te buna döner): kurul seçici + branş çipleri, 4 araç kartı

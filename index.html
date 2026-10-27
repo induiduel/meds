@@ -40,6 +40,9 @@
           d.dataset.palette = (a && a.palettes && a.palettes[mode]) || 'a';
           d.dataset.density = (a && a.density) || 'normal';
           d.dataset.layout = (a && a.layout) || 'pano';
+          // Erişilebilirlik (utils/erisilebilirlik.ts ile aynı anahtar)
+          var er = JSON.parse(localStorage.getItem('medsoru_erisilebilirlik') || 'null');
+          if (er) { if (er.hareket === 'azalt') d.dataset.azHareket = 'on'; if (er.hareket === 'normal') d.dataset.normalHareket = 'on'; if (er.kontrast) d.dataset.yuksekKontrast = 'on'; if (er.altCizgi) d.dataset.altCizgi = 'on'; if (er.odak) d.dataset.belirginOdak = 'on'; if (er.aralik) d.dataset.genisAralik = 'on'; }
           if (a && a.design === 'v12' && a.v15) { d.dataset.design = 'v12'; d.dataset.v15 = 'on'; }
           else if (a && a.design === 'v12' && a.v13) { d.dataset.design = 'v12'; d.dataset.v13 = 'on'; }
           if (mode === 'dark') d.classList.add('theme-dark');

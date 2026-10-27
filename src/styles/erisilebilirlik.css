@@ -1,0 +1,20 @@
+/* Erişilebilirlik tercihleri (utils/erisilebilirlik.ts) — kök data-* bayrakları; renkler palet tokenından */
+:root[data-az-hareket='on'] *, :root[data-az-hareket='on'] *::before, :root[data-az-hareket='on'] *::after {
+  animation-duration: .001ms !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; scroll-behavior: auto !important;
+}
+html:root:root[data-yuksek-kontrast='on'][data-mode][data-palette] {
+  --color-ink-2: var(--color-ink);
+  --color-ink-3: color-mix(in oklab, var(--color-ink) 82%, var(--color-white));
+  --color-line: color-mix(in oklab, var(--color-ink) 45%, var(--color-white));
+  --color-line-soft: color-mix(in oklab, var(--color-ink) 30%, var(--color-white));
+}
+:root[data-alt-cizgi='on'] a:not([role]):not([class]) { text-decoration: underline; text-underline-offset: 2px; }
+:root[data-belirgin-odak='on'] :focus-visible { outline: 3px solid var(--color-accent) !important; outline-offset: 2px !important; box-shadow: 0 0 0 6px color-mix(in oklab, var(--color-accent) 25%, transparent) !important; }
+:root[data-genis-aralik='on'] body { line-height: 1.75; letter-spacing: .02em; word-spacing: .08em; }
+:root[data-genis-aralik='on'] p, :root[data-genis-aralik='on'] li { line-height: 1.8; }
+/* "Sisteme uy": cihaz hareketi azalt diyorsa (kullanıcı "Normal" seçmediyse) */
+@media (prefers-reduced-motion: reduce) {
+  :root:not([data-normal-hareket='on']) *, :root:not([data-normal-hareket='on']) *::before, :root:not([data-normal-hareket='on']) *::after {
+    animation-duration: .001ms !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; scroll-behavior: auto !important;
+  }
+}

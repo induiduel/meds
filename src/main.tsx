@@ -245,6 +245,9 @@ class RootErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState
 
 import { QueryClientProvider } from '@tanstack/react-query';
 import { queryClient } from './queryClient';
+import './styles/erisilebilirlik.css';
+import { erisimUygula } from './utils/erisilebilirlik';
+erisimUygula();
 
 createRoot(document.getElementById('root')!).render(
   <RootErrorBoundary>
