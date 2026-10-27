@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useRef, useState } from 'react';
+import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { Check, Heart, RotateCcw, Timer, Trophy, X } from 'lucide-react';
 import { safeJsonFetch } from '../../services/api';
 
@@ -31,6 +31,17 @@ export default function OyunSoloV15({ mod, brans, ders, baslik, onCik }: { mod: 
   const [rekor, setRekor] = useState(() => rekorOku(rekorAnahtar));
   const [yeniRekor, setYeniRekor] = useState(false);
   const getiriyor = useRef(false);
+  // Blitz (tasarım F06): kök + tek bir şık önerme olarak gelir; "Doğru mu?" Doğru/Yanlış ile cevaplanır. Önerme yarı
+  // olasılıkla doğru şık, değilse rastgele yanlış şık. Seri çarpanı: her 3 doğru seri puanı 1 artırır (×1, ×2, ×3…).
+  const [puan, setPuan] = useState(0);
+  const oneri = useMemo(() => {
+    if (!soru || mod !== 'blitz') return null;
+    const yanlislar = Object.keys(soru.options).filter((h) => h !== soru.correct);
+    const h = Math.random() < 0.5 || !yanlislar.length ? soru.correct : yanlislar[Math.floor(Math.random() * yanlislar.length)];
+    return { h, metin: soru.options[h], dogruMu: h === soru.correct };
+  }, [soru, mod]);
+  const [dySec, setDySec] = useState<boolean | null>(null);
+  const carpan = 1 + Math.floor(seri / 3);
 
   const getir = useCallback(async () => {
     if (getiriyor.current) return;
@@ -63,7 +74,7 @@ export default function OyunSoloV15({ mod, brans, ders, baslik, onCik }: { mod: 
   }, [mod, bitis, bitti]);
   useEffect(() => {
     if (!bitti) return;
-    const skor = dogru;
+    const skor = mod === 'blitz' ? puan : dogru;
     if (skor > rekor) { rekorYaz(rekorAnahtar, skor); setRekor(skor); setYeniRekor(true); }
   }, [bitti]); // eslint-disable-line react-hooks/exhaustive-deps
 
@@ -75,12 +86,19 @@ export default function OyunSoloV15({ mod, brans, ders, baslik, onCik }: { mod: 
     // Blitz akar (doğruda 0,5 sn, yanlışta 1,5 sn doğruyu gösterir); Hayatta kal açıklamayı okutur, "Sonraki"yle geçilir
     if (mod === 'blitz') setTimeout(sonraki, ok ? 500 : 1500);
   };
+  const dyCevapla = (cevap: boolean) => {
+    if (!oneri || dySec !== null || bitti) return;
+    setDySec(cevap);
+    const ok = cevap === oneri.dogruMu;
+    if (ok) { setDogru((x) => x + 1); setPuan((p) => p + carpan); setSeri((x) => x + 1); } else { setYanlis((x) => x + 1); setSeri(0); }
+    setTimeout(() => { setDySec(null); setSecim(null); setSoru(null); }, ok ? 450 : 1400);
+  };
   const sonraki = () => {
     if (mod === 'hayatta' && can <= 0) { setBitti(true); return; }
     setSecim(null); setSoru(null);
   };
   const yeniden = () => {
-    goruldu.current.clear(); setKuyruk([]); setSoru(null); setSecim(null); setDogru(0); setYanlis(0); setCan(3); setSeri(0);
+    goruldu.current.clear(); setKuyruk([]); setSoru(null); setSecim(null); setDySec(null); setPuan(0); setDogru(0); setYanlis(0); setCan(3); setSeri(0);
     setBitis(0); setKalan(SURE); setBitti(false); setYeniRekor(false); void getir();
   };
 
@@ -90,7 +108,7 @@ export default function OyunSoloV15({ mod, brans, ders, baslik, onCik }: { mod: 
     return (
       <section className="v15-card oy15-kart oy15-son">
         <Trophy aria-hidden className="oy15-tac" />
-        <b className="oy15-kazanan">{dogru} doğru{yeniRekor ? ' · yeni rekor!' : ''}</b>
+        <b className="oy15-kazanan">{mod === 'blitz' ? `${puan} puan · ${dogru} doğru` : `${dogru} doğru`}{yeniRekor ? ' · yeni rekor!' : ''}</b>
         <p className="v15-cap">{baslik} · {mod === 'blitz' ? '60 saniye' : 'Hayatta kal'} · {yanlis} yanlış · en iyi {rekor}</p>
         <div className="oy15-alt">
           <button type="button" className="oy15-cik" onClick={onCik}>Oyunlar</button>
@@ -106,13 +124,25 @@ export default function OyunSoloV15({ mod, brans, ders, baslik, onCik }: { mod: 
         {mod === 'blitz'
           ? <span className="oy15-sayac"><Timer aria-hidden /> {Math.ceil(kalan / 1000)} sn</span>
           : <span className="oy15-canlar" aria-label={`${can} can`}>{[0, 1, 2].map((i) => <Heart key={i} aria-hidden className={i < can ? 'is-dolu' : ''} />)}</span>}
-        <span className="v15-cap">{dogru} doğru{seri > 2 ? ` · ${seri} seri` : ''} · en iyi {rekor}</span>
+        <span className="v15-cap">{mod === 'blitz' ? <>{puan} puan{carpan > 1 && <b className="oy15-carpan"> ×{carpan}</b>}</> : `${dogru} doğru`}{seri > 2 ? ` · ${seri} seri` : ''} · en iyi {rekor}</span>
         <button type="button" className="oy15-x" onClick={() => setBitti(true)} aria-label="Oyunu bitir"><X aria-hidden /></button>
       </div>
       {mod === 'blitz' && <div className="v15-bar oy15-sure" aria-hidden><span style={{ width: `${(kalan / SURE) * 100}%` }} /></div>}
       {!soru ? <span className="v15-skel b15-skel" aria-hidden /> : (
         <>
           <p className="oy15-kok">{soru.prompt}</p>
+          {mod === 'blitz' && oneri ? (
+            <div className="oy15-dy">
+              <div className={`oy15-oneri${dySec === null ? '' : dySec === oneri.dogruMu ? ' is-dogru' : ' is-yanlis'}`}>
+                <small>Önerme</small><b>{oneri.metin}</b>
+                {dySec !== null && dySec !== oneri.dogruMu && <span>{oneri.dogruMu ? 'Bu şık doğruydu.' : `Doğru cevap: ${soru.options[soru.correct]}`}</span>}
+              </div>
+              <div className="oy15-dy-d">
+                <button type="button" className="is-y" disabled={dySec !== null} onClick={() => dyCevapla(false)}><X aria-hidden /> Yanlış</button>
+                <button type="button" className="is-d" disabled={dySec !== null} onClick={() => dyCevapla(true)}><Check aria-hidden /> Doğru</button>
+              </div>
+            </div>
+          ) : (
           <ul className="oy15-siklar">
             {Object.entries(soru.options).map(([h, t]) => {
               const cls = secim ? (h === soru.correct ? ' is-dogru' : h === secim ? ' is-yanlis' : ' is-sonuk') : '';
@@ -125,6 +155,7 @@ export default function OyunSoloV15({ mod, brans, ders, baslik, onCik }: { mod: 
               );
             })}
           </ul>
+          )}
           {mod === 'hayatta' && secim && (
             <div className="v15-card oy15-aciklama">
               <b>{secim === soru.correct ? 'Doğru.' : `Doğru cevap ${soru.correct}.`}</b>

@@ -69,6 +69,10 @@ export default function OyunlarV15() {
   const raf = useRef(0);
   const [solo, setSolo] = useState<SoloMod | null>(null);
   const [eslestir, setEslestir] = useState<string | null>(null);
+  // F10 oyun sonu: bu oyunda yanlış (ya da boş) geçen sorular
+  const [yanlislar, setYanlislar] = useState<{ soru: string; sec: string | null; dogru: string; metin: string; aciklama?: string }[]>([]);
+  const [yanlisAcik, setYanlisAcik] = useState(false);
+  const sonRef = useRef<{ soru: (PreFetchedQuestion & { sira: number }) | null; secim: string | null }>({ soru: null, secim: null });
   const [sozlukMod, setSozlukMod] = useState<'eslestir' | 'bosluk'>('eslestir');
   const [mod, setMod] = useState<'canli' | 'katil' | 'blitz' | 'hayatta' | 'eslestir' | 'bosluk'>(() => (new URLSearchParams(icKonum().search).get('oda') ? 'katil' : 'canli'));
 
@@ -99,7 +103,7 @@ export default function OyunlarV15() {
       player_joined: (m) => setOyuncular((o) => [...o.filter((x) => x.userId !== m.player.userId), m.player]),
       player_left: (m) => setOyuncular((o) => o.filter((x) => x.userId !== m.userId)),
       player_ready_changed: (m) => setOyuncular((o) => o.map((x) => (x.userId === m.userId ? { ...x, isReady: m.isReady } : x))),
-      game_countdown: (m) => { setAsama('geri'); setBitis(m.startTime - ofset()); },
+      game_countdown: (m) => { setYanlislar([]); setYanlisAcik(false); setAsama('geri'); setBitis(m.startTime - ofset()); },
       round_started: (m) => {
         if (!m.question) return;
         setSoru({ ...m.question, sira: m.questionIndex });
@@ -109,7 +113,10 @@ export default function OyunlarV15() {
       },
       answer_ack: (m) => setAck({ isCorrect: m.isCorrect, pointsAwarded: m.pointsAwarded }),
       player_answered: (m) => setCevaplayan((s) => new Set(s).add(m.userId)),
-      round_revealed: (m) => { setAcik(m); setOyuncular((o) => mergeSkor(o, m.leaderboard)); setAsama('acik'); },
+      round_revealed: (m) => {
+        const { soru: sq, secim: sc } = sonRef.current;
+        if (sq && sc !== m.correctOption) setYanlislar((l) => [...l, { soru: sq.prompt, sec: sc, dogru: m.correctOption, metin: sq.options?.[m.correctOption] || '', aciklama: m.optionExplanations?.[m.correctOption] }]);
+        setAcik(m); setOyuncular((o) => mergeSkor(o, m.leaderboard)); setAsama('acik'); },
       game_finished: (m) => { setOyuncular((o) => mergeSkor(o, m.finalLeaderboard)); setAsama('bitti'); },
       baglanti: (m) => setBagli(!!m.bagli),
     };
@@ -159,6 +166,7 @@ export default function OyunlarV15() {
     } catch { /* vazgeçti */ }
   };
 
+  sonRef.current = { soru, secim };
   const ben = oyuncular.find((o) => o.userId === benim);
   if (eslestir !== null) return <div className="oy15">{sozlukMod === 'bosluk' ? <OyunBoslukV15 kategori={eslestir} onCik={() => setEslestir(null)} /> : <OyunEslestirV15 kategori={eslestir} onCik={() => setEslestir(null)} />}</div>;
   if (solo && kaynak) {
@@ -331,7 +339,28 @@ export default function OyunlarV15() {
           <Crown aria-hidden className="oy15-tac" />
           <b className="oy15-kazanan">{sirali[0] ? (sirali[0].userId === benim ? 'Kazandın!' : `${sirali[0].displayName} kazandı`) : 'Oyun bitti'}</b>
           <ol className="oy15-tablo">{sirali.map((o, i) => <li key={o.userId} className={o.userId === benim ? 'is-ben' : ''}><span>{i + 1}. {o.displayName}</span><b>{tr(o.score)}</b></li>)}</ol>
-          <button type="button" className="v15-btn oy15-ana" onClick={cik}>Yeni oyun</button>
+          {ben && <p className="v15-cap oy15-son-oz">{tr(ben.score)} puan · {toplamSoru - yanlislar.length}/{toplamSoru} doğru</p>}
+          {yanlislar.length > 0 && (
+            <div className="oy15-yanlis">
+              <button type="button" className="v15-btn is-soft" onClick={() => setYanlisAcik((v) => !v)} aria-expanded={yanlisAcik}>{yanlisAcik ? 'Yanlışları gizle' : `Yanlışları gör (${yanlislar.length})`}</button>
+              {yanlisAcik && (
+                <ol>
+                  {yanlislar.map((y, i) => (
+                    <li key={i}>
+                      <b>{y.soru}</b>
+                      <span className="is-dogru">Doğru: {y.dogru}) {y.metin}</span>
+                      {y.sec ? <span className="is-yanlis">Senin cevabın: {y.sec}</span> : <span className="is-yanlis">Süre doldu</span>}
+                      {y.aciklama && <small>{y.aciklama}</small>}
+                    </li>
+                  ))}
+                </ol>
+              )}
+            </div>
+          )}
+          <div className="oy15-son-d">
+            {kurucu === benim && <button type="button" className="v15-btn oy15-ana" onClick={() => { cik(); window.setTimeout(kur, 50); }}>Rövanş (aynı ayarlarla)</button>}
+            <button type="button" className={`v15-btn ${kurucu === benim ? 'is-soft' : 'oy15-ana'}`} onClick={cik}>Yeni oyun</button>
+          </div>
         </section>
       )}
     </div>

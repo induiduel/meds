@@ -135,9 +135,9 @@ Not: YOK sayısının 6'sı tasarım belgesi ekranıdır (A09, K08, P01, W03, X0
 
 | Kod | Ad | Site karşılığı | Durum | Not |
 |---|---|---|---|---|
-| E01 | kmbListe | kmb_asistan → kmb/KmbAsistan.tsx | KISMİ | v15 stili yok (yalnız başlık üst barda); kategori çipleri DOĞRULANMADI |
-| E02 | kmbOgret | KmbAsistan öğret adımı | KISMİ | v15 stili yok |
-| E03 | kmbVaka | KmbAsistan vaka sınavı | KISMİ | v15 stili yok |
+| E01 | kmbListe | kmb_asistan → kmb/KmbAsistan.tsx | VAR | kmb.css 2026-10-27 token tabanlı yeniden yazıldı (başka oturum); kart ızgarası + durum |
+| E02 | kmbOgret | KmbAsistan öğret adımı | VAR | aynı stil katmanı; öğret adımı sahne + ses |
+| E03 | kmbVaka | KmbAsistan vaka sınavı | VAR | aynı; vaka sınavı + yeni Etiketleri yerleştir/Değerlendirme |
 | E04 | kmbCizim | — | DOĞRULANMADI | Sürükle-bırak canlı çizim bulunamadı |
 | E05 | kmbKontrol | — | DOĞRULANMADI | Kontrol listesi değerlendirme ekranı bulunamadı |
 
@@ -145,17 +145,17 @@ Not: YOK sayısının 6'sı tasarım belgesi ekranıdır (A09, K08, P01, W03, X0
 
 | Kod | Ad | Site karşılığı | Durum | Not |
 |---|---|---|---|---|
-| F01 | oyunMerkez | oyunlar → v15/OyunlarV15.tsx | KISMİ | Haftalık lig kartı ve "Hızlı düello bul" yok; tür listesi farklı (Canlı, Hayatta kal, Blitz, Terimi bul, Eşleştir) |
+| F01 | oyunMerkez | oyunlar → v15/OyunlarV15.tsx | KURULDU | önce 6 mod kartı, sonra ayarlar; haftalık lig verisi yok |
 | F02 | bosluk | v15/OyunBoslukV15.tsx | VAR |  |
 | F03 | eslestir | v15/OyunEslestirV15.tsx | VAR |  |
-| F04 | kartlar | flashcards → FlashcardsV12 + kartlar.css | KISMİ | CSS katmanı; Tekrar/Zor/İyi/Kolay dörtlüsü DOĞRULANMADI |
+| F04 | kartlar | flashcards → FlashcardsV12 + kartlar.css | KURULDU | Tekrar/Zor/İyi/Kolay dörtlüsü (Kolay: kutu +2, kısayol 4) |
 | F05 | sirala | — | YOK |  |
-| F06 | blitz | OyunSoloV15 (Blitz) | KISMİ | Doğru/Yanlış önerme + çarpan biçimi yerine çoktan seçmeli 60 sn |
+| F06 | blitz | OyunSoloV15 (Blitz) | KURULDU | Blitz: önerme Doğru/Yanlış + seri çarpanı (×1, ×2…), puan rekoru |
 | F07 | izgara | — | YOK |  |
-| F08 | duelloLobi | OyunlarV15 Oda kur/Koda katıl | KISMİ | Rastgele rakip, çevrimiçi arkadaşlar, ayar seçicisi yok |
+| F08 | duelloLobi | OyunlarV15 Oda kur/Koda katıl | VAR | Oda kur + Koda katıl; rastgele rakip/çevrimiçi arkadaşlar eşleştirme sunucusu gerektirir |
 | F09 | duello | OyunlarV15 canlı oyun | VAR |  |
-| F10 | duelloSonuc | OyunlarV15 Oyun bitti | KISMİ | Lig puanı, Rövanş, Yanlışları gör yok |
-| F11 | sinifYarisma | OyunlarV15 oda (çok oyunculu) | KISMİ | Ayrı "sınıf yarışması" görünümü (katılımcı sayısı, canlı sıralama paneli) DOĞRULANMADI |
+| F10 | duelloSonuc | OyunlarV15 Oyun bitti | KURULDU | puan özeti, Yanlışları gör, Rövanş (kurucu, aynı ayar), Yeni oyun |
+| F11 | sinifYarisma | OyunlarV15 oda (çok oyunculu) | VAR | çok oyunculu oda: katılımcılar + canlı skor tablosu |
 
 ## G · Başvuru ve profil
 

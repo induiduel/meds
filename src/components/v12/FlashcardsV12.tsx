@@ -242,6 +242,7 @@ const GRADES: [Grade, string, string, string][] = [
   ['again', 'Tekrar', '1', 'is-again'],
   ['hard', 'Zor', '2', 'is-hard'],
   ['good', 'İyi', '3', 'is-good'],
+  ['easy', 'Kolay', '4', 'is-easy'],
 ];
 
 const StudyV12: React.FC<{
@@ -293,7 +294,7 @@ const StudyV12: React.FC<{
     (g: Grade) => {
       if (!card || !flipped || leaving) return;
       onGrade(card, g);
-      setTally((t) => ({ ...t, [g]: t[g] + 1 }));
+      setTally((t) => { const k = g === 'easy' ? 'good' : g; return { ...t, [k]: t[k] + 1 }; });
       setLeaving(g);
       window.setTimeout(() => {
         // "Tekrar" verilen kart bu oturumun sonunda yeniden gelir
@@ -325,6 +326,7 @@ const StudyV12: React.FC<{
       if (e.key === '1') answer('again');
       if (e.key === '2') answer('hard');
       if (e.key === '3') answer('good');
+      if (e.key === '4') answer('easy');
     };
     document.addEventListener('keydown', onKey);
     return () => document.removeEventListener('keydown', onKey);

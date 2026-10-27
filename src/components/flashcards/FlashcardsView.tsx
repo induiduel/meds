@@ -29,7 +29,7 @@ export interface StudyCard {
   kurullar?: number[];
 }
 
-export type Grade = 'again' | 'hard' | 'good';
+export type Grade = 'again' | 'hard' | 'good' | 'easy';
 export interface CardState {
   box: number; // 0 = learning … 5 = long-term
   due: number; // epoch ms
@@ -64,7 +64,8 @@ const nextState = (prev: CardState | undefined, grade: Grade, now = Date.now()):
     const b = Math.max(1, box);
     return { box: b, due: now + Math.max(INTERVALS[1] / 2, INTERVALS[b] / 2), seen };
   }
-  const b = Math.min(5, box + 1);
+  // Kolay (tasarım F04 dörtlüsü): kutu iki basamak ilerler
+  const b = Math.min(5, box + (grade === 'easy' ? 2 : 1));
   return { box: b, due: now + INTERVALS[b], seen };
 };
 

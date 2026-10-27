@@ -130,3 +130,29 @@
 @container (min-width: 620px) { .oy15-ayar-iki { grid-template-columns: 1fr 1fr; } }
 .oy15-kod-in { letter-spacing: .2em; font-weight: 700; text-transform: uppercase; }
 @media (prefers-reduced-motion: reduce) { .oy15-mod { transition: none; } .oy15-mod:hover { transform: none; } }
+
+/* F10 oyun sonu: puan özeti, yanlışları gör, rövanş */
+.oy15-son-oz { margin: 0; text-align: center; }
+.oy15-yanlis { display: flex; flex-direction: column; gap: 8px; width: 100%; }
+.oy15-yanlis ol { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; text-align: left; }
+.oy15-yanlis li { display: flex; flex-direction: column; gap: 3px; padding: 10px 12px; border-radius: 12px; background: var(--color-field); font-size: .88rem; }
+.oy15-yanlis .is-dogru { color: var(--color-ok); font-weight: 600; }
+.oy15-yanlis .is-yanlis { color: var(--color-bad); }
+.oy15-yanlis small { color: var(--color-ink-2); line-height: 1.4; }
+.oy15-son-d { display: flex; flex-direction: column; gap: 8px; width: 100%; }
+
+/* F06 Blitz doğru/yanlış önerme + çarpan */
+.oy15-dy { display: flex; flex-direction: column; gap: 12px; }
+.oy15-oneri { display: flex; flex-direction: column; gap: 4px; padding: 16px; border-radius: 18px; background: var(--color-white); border: 2px solid var(--color-line); text-align: center; transition: border-color .15s, background .15s; }
+.oy15-oneri small { font-size: .72rem; letter-spacing: .06em; text-transform: uppercase; color: var(--color-ink-3); }
+.oy15-oneri b { font-size: 1.1rem; line-height: 1.35; color: var(--color-ink); }
+.oy15-oneri span { font-size: .82rem; color: var(--color-ink-2); }
+.oy15-oneri.is-dogru { border-color: var(--color-ok); background: var(--color-ok-soft); }
+.oy15-oneri.is-yanlis { border-color: var(--color-bad); background: var(--color-bad-soft); }
+.oy15-dy-d { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.oy15-dy-d button { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 58px; border: 0; border-radius: 16px; font: inherit; font-size: 1.05rem; font-weight: 700; color: var(--color-white); cursor: pointer; }
+.oy15-dy-d button svg { width: 20px; height: 20px; }
+.oy15-dy-d .is-d { background: var(--color-ok); }
+.oy15-dy-d .is-y { background: var(--color-bad); }
+.oy15-dy-d button:disabled { opacity: .6; cursor: default; }
+.oy15-carpan { color: var(--color-warn); }

@@ -1,10 +1,11 @@
 {
  "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
- "onem": 479,
- "baslik": "Sınavlarım ve pratik hatırlatması",
+ "onem": 480,
+ "baslik": "Blitz doğru/yanlış, kartlarda Kolay, oyun sonu",
  "maddeler": [
-  "Sınav takvimi: kendi sınavlarını (KMB, pratik, ara sınav) ekle",
-  "Sınavdan 5, 3 ve 1 gün önce Bildirimler'e soru çözme hatırlatması"
+  "Blitz: önermeye Doğru ya da Yanlış de, seri yaptıkça puan çarpanı artar",
+  "Ezber kartları: Kolay düğmesi (Tekrar, Zor, İyi, Kolay)",
+  "Canlı oyun sonu: yanlışlarını gör, aynı ayarlarla rövanş"
  ],
  "eklenen": [],
  "degisen": [],
