@@ -1,5 +1,6 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
-import { RotateCcw, Timer, Trophy, X } from 'lucide-react';
+import { Check, Timer } from 'lucide-react';
+import { OyunUst, SonKart } from './OyunKitV15';
 import type { GlossaryEntry } from '../../data/glossary';
 
 /**
@@ -38,13 +39,15 @@ export default function OyunEslestirV15({ kategori, onCik }: { kategori: string;
   const [rekor, setRekor] = useState<number>(() => { try { return JSON.parse(localStorage.getItem(REKOR_KEY) || '{}')[anahtar] || 0; } catch { return 0; } });
   const [yeniRekor, setYeniRekor] = useState(false);
   const zaman = useRef(0);
+  const [seri, setSeri] = useState(0);
+  const [yeni, setYeni] = useState<string | null>(null);
 
   const kur = () => {
     import('../../data/glossary').then(({ GLOSSARY }) => {
       const aday = GLOSSARY.filter((e) => (!kategori || e.category === kategori) && e.term && e.definition && e.term.length <= 40)
         .map((e) => ({ id: e.term, terim: e.term, tanim: tanimYap(e) })).filter((c) => c.tanim.length >= 30 && !c.tanim.startsWith('…'));
       setHavuz(karistir(aday).slice(0, TUR * CIFT));
-      setTur(0); setTamam(new Set()); setSecili(null); setYanlis(0); setBas(Date.now()); setSn(0); setBitti(false); setYeniRekor(false);
+      setTur(0); setTamam(new Set()); setSecili(null); setYanlis(0); setBas(Date.now()); setSn(0); setBitti(false); setYeniRekor(false); setSeri(0);
     });
   };
   useEffect(kur, [kategori]); // eslint-disable-line react-hooks/exhaustive-deps
@@ -62,7 +65,7 @@ export default function OyunEslestirV15({ kategori, onCik }: { kategori: string;
     if (!secili || tamam.has(id)) return;
     if (id === secili) {
       const n = new Set(tamam).add(id);
-      setTamam(n); setSecili(null);
+      setTamam(n); setSecili(null); setYeni(id); setSeri((x) => x + 1);
       if (ciftler.every((c) => n.has(c.id))) {
         if (tur + 1 >= TUR) {
           const skor = Math.floor((Date.now() - bas) / 1000) + yanlis * 5;
@@ -71,7 +74,7 @@ export default function OyunEslestirV15({ kategori, onCik }: { kategori: string;
         } else setTimeout(() => { setTur((t) => t + 1); setTamam(new Set()); }, 450);
       }
     } else {
-      setYanlis((y) => y + 1); setHatali(id);
+      setYanlis((y) => y + 1); setHatali(id); setSeri(0);
       setTimeout(() => setHatali(null), 450);
     }
   };
@@ -82,37 +85,28 @@ export default function OyunEslestirV15({ kategori, onCik }: { kategori: string;
   if (bitti) {
     const skor = sn + yanlis * 5;
     return (
-      <section className="v15-card oy15-kart oy15-son">
-        <Trophy aria-hidden className="oy15-tac" />
-        <b className="oy15-kazanan">{skor} puan süre{yeniRekor ? ' · yeni rekor!' : ''}</b>
-        <p className="v15-cap">{TUR * CIFT} eşleşme · {sn} sn · {yanlis} yanlış (her yanlış +5 sn) · en iyi {rekor} — az olan iyi</p>
-        <div className="oy15-alt">
-          <button type="button" className="oy15-cik" onClick={onCik}>Oyunlar</button>
-          <button type="button" className="v15-btn oy15-ana" onClick={kur}><RotateCcw aria-hidden />Yeniden oyna</button>
-        </div>
-      </section>
+      <SonKart baslik={`${skor} sn skor`} alt={`${katAd} · ${TUR * CIFT} eşleşme · her yanlış +5 sn · az olan iyi`}
+        dogru={TUR * CIFT} yanlis={yanlis} sureSn={sn} enIyi={rekor} rekor={yeniRekor}
+        oran={TUR * CIFT / (TUR * CIFT + yanlis)} onCik={onCik} onYeniden={kur} />
     );
   }
 
+  const k = (c: Cift, terim: boolean) => {
+    const ok = tamam.has(c.id);
+    const cls = ok ? ` is-tamam${yeni === c.id ? ' og15-onay' : ''}` : !terim && hatali === c.id ? ' is-hata og15-titre' : terim && secili === c.id ? ' is-secili' : '';
+    return (
+      <li key={c.id}><button type="button" className={`es15-k${terim ? ' is-terim' : ''}${cls}`} disabled={ok || (!terim && !secili)} aria-pressed={terim ? secili === c.id : undefined}
+        onClick={() => (terim ? terimSec(c.id) : tanimSec(c.id))}>{ok && <Check aria-hidden className="oy15-iz-ok" />}<span>{terim ? c.terim : c.tanim}</span></button></li>
+    );
+  };
   return (
-    <section className="oy15-soru">
-      <div className="oy15-ust">
-        <span className="oy15-sayac"><Timer aria-hidden /> {sn} sn</span>
-        <span className="v15-cap">{katAd} · Tur {tur + 1}/{TUR} · {yanlis} yanlış</span>
-        <button type="button" className="oy15-x" onClick={onCik} aria-label="Oyundan çık"><X aria-hidden /></button>
-      </div>
+    <section className="oy15-soru og15-oyun" lang="tr">
+      <OyunUst ilerleme={(tur * CIFT + tamam.size) / (TUR * CIFT)} sol={`Tur ${tur + 1}/${TUR}`} puan={tur * CIFT + tamam.size} puanEtiket="eşleşme" seri={seri}
+        ek={<><span className="og15-cip"><Timer aria-hidden /> {sn} sn</span><span className="og15-cip is-sonuk">{katAd} · {yanlis} yanlış</span></>} onCik={onCik} />
       <p className="v15-cap">Önce bir terime, sonra onun tanımına dokun.</p>
-      <div className="es15">
-        <ul className="es15-sutun" aria-label="Terimler">
-          {ciftler.map((c) => (
-            <li key={c.id}><button type="button" className={`es15-k is-terim${secili === c.id ? ' is-secili' : ''}${tamam.has(c.id) ? ' is-tamam' : ''}`} disabled={tamam.has(c.id)} onClick={() => terimSec(c.id)}>{c.terim}</button></li>
-          ))}
-        </ul>
-        <ul className="es15-sutun" aria-label="Tanımlar">
-          {tanimlar.map((c) => (
-            <li key={c.id}><button type="button" className={`es15-k${tamam.has(c.id) ? ' is-tamam' : ''}${hatali === c.id ? ' is-hata' : ''}`} disabled={tamam.has(c.id) || !secili} onClick={() => tanimSec(c.id)}>{c.tanim}</button></li>
-          ))}
-        </ul>
+      <div className="oy15-iz">
+        <div className="oy15-iz-b"><h3 className="oy15-iz-h">Terimler</h3><ul className="es15-sutun oy15-iz-terimler" aria-label="Terimler">{ciftler.map((c) => k(c, true))}</ul></div>
+        <div className="oy15-iz-b"><h3 className="oy15-iz-h">Tanımlar</h3><ul className="es15-sutun" aria-label="Tanımlar">{tanimlar.map((c) => k(c, false))}</ul></div>
       </div>
     </section>
   );

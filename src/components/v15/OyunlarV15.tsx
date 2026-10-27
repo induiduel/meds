@@ -9,6 +9,7 @@ import OyunSoloV15, { type SoloMod } from './OyunSoloV15';
 import OyunEslestirV15, { ESLESTIR_KATEGORI } from './OyunEslestirV15';
 import OyunBoslukV15 from './OyunBoslukV15';
 import OyunDersV15, { oyunVeriVar, useDersPaketleri, type DersOyun } from './OyunDersV15';
+import { Konfeti } from './OyunKitV15';
 import '../../styles/v15/ogren.css';
 import '../../styles/v15/oyun.css';
 
@@ -342,14 +343,15 @@ export default function OyunlarV15() {
       )}
 
       {asama === 'geri' && (
-        <section className="oy15-geri" aria-live="assertive"><b>{Math.max(1, Math.ceil(kalan / 1000))}</b><span>Hazır ol</span></section>
+        <section className="oy15-geri" aria-live="assertive"><b key={Math.ceil(kalan / 1000)}>{Math.max(1, Math.ceil(kalan / 1000))}</b><span>Hazır ol</span></section>
       )}
 
       {(asama === 'soru' || asama === 'acik') && soru && (
         <section className="oy15-soru">
-          <div className="oy15-ust">
-            <span className="v15-cap">Soru {soru.sira + 1}/{toplamSoru}</span>
-            <span className="v15-cap">{tr(ben?.score || 0)} puan{ben && ben.streak > 1 ? ` · ${ben.streak} seri` : ''}</span>
+          <div className="og15-ust-s">
+            <span className="og15-cip">Soru {soru.sira + 1}/{toplamSoru}</span>
+            <span key={ben?.score || 0} className="og15-cip is-puan og15-zipla">{tr(ben?.score || 0)} puan</span>
+            {ben && ben.streak > 1 && <span key={ben.streak} className="og15-cip is-seri">{ben.streak} seri</span>}
           </div>
           <div className="v15-bar oy15-sure" aria-hidden><span style={{ width: asama === 'soru' ? `${(kalan / (sure * 1000)) * 100}%` : 0 }} /></div>
           <p className="oy15-kok">{soru.prompt}</p>
@@ -357,7 +359,7 @@ export default function OyunlarV15() {
             {Object.entries(soru.options).map(([h, t]) => {
               const dogru = acik?.correctOption === h;
               const benimki = secim === h;
-              const cls = acik ? (dogru ? ' is-dogru' : benimki ? ' is-yanlis' : ' is-sonuk') : benimki ? ' is-secili' : '';
+              const cls = acik ? (dogru ? ` is-dogru${benimki ? ' og15-parla' : ''}` : benimki ? ' is-yanlis og15-titre' : ' is-sonuk') : benimki ? ' is-secili' : '';
               return (
                 <li key={h}>
                   <button type="button" className={`oy15-sik${cls}`} disabled={!!secim || asama !== 'soru'} onClick={() => cevapla(h)}>
@@ -383,7 +385,8 @@ export default function OyunlarV15() {
       )}
 
       {asama === 'bitti' && (
-        <section className="v15-card oy15-kart oy15-son">
+        <section className="v15-card oy15-kart oy15-son og15-son">
+          {(sirali[0]?.userId === benim || (takimSkor && ben?.takim === (takimSkor.A.puan > takimSkor.B.puan ? 'A' : 'B') && takimSkor.A.puan !== takimSkor.B.puan)) && <Konfeti />}
           <Crown aria-hidden className="oy15-tac" />
           {takimSkor ? (
             <b className="oy15-kazanan">{takimSkor.A.puan === takimSkor.B.puan ? 'Berabere!' : `Takım ${takimSkor.A.puan > takimSkor.B.puan ? 'A' : 'B'} kazandı${ben?.takim === (takimSkor.A.puan > takimSkor.B.puan ? 'A' : 'B') ? ' — tebrikler!' : ''}`}</b>

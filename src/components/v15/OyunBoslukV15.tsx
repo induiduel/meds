@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { Check, Lightbulb, RotateCcw, Trophy, X } from 'lucide-react';
+import { Check, Lightbulb, X } from 'lucide-react';
+import { OyunUst, SonKart, useGecenSure } from './OyunKitV15';
 import type { GlossaryEntry } from '../../data/glossary';
 import { ESLESTIR_KATEGORI } from './OyunEslestirV15';
 
@@ -36,12 +37,14 @@ export default function OyunBoslukV15({ kategori, onCik }: { kategori: string; o
   const [rekor, setRekor] = useState<number>(() => { try { return JSON.parse(localStorage.getItem(REKOR_KEY) || '{}')[anahtar] || 0; } catch { return 0; } });
   const [yeniRekor, setYeniRekor] = useState(false);
   const girdi = useRef<HTMLInputElement>(null);
+  const [seri, setSeri] = useState(0);
+  const sure = useGecenSure();
   const katAd = ESLESTIR_KATEGORI.find(([k]) => k === kategori)?.[1] || 'Karışık';
 
   const kur = () => import('../../data/glossary').then(({ GLOSSARY }) => {
     const aday = GLOSSARY.filter((e) => !kategori || e.category === kategori).map(soruYap).filter((x): x is Soru => !!x);
     for (let k = aday.length - 1; k > 0; k--) { const j = Math.floor(Math.random() * (k + 1)); [aday[k], aday[j]] = [aday[j], aday[k]]; }
-    setSorular(aday.slice(0, N)); setI(0); setCevap(''); setIpucu(0); setSonuc(null); setPuan(0); setDogru(0); setYeniRekor(false);
+    setSorular(aday.slice(0, N)); setI(0); setCevap(''); setIpucu(0); setSonuc(null); setPuan(0); setDogru(0); setYeniRekor(false); setSeri(0); sure.sifirla();
   });
   useEffect(() => { void kur(); }, [kategori]); // eslint-disable-line react-hooks/exhaustive-deps
   useEffect(() => { if (sonuc === null) girdi.current?.focus(); }, [i, sonuc]);
@@ -57,37 +60,27 @@ export default function OyunBoslukV15({ kategori, onCik }: { kategori: string; o
     if (!s || sonuc !== null || !cevap.trim()) return;
     const ok = s.kabul.includes(fold(cevap));
     setSonuc(ok);
-    if (ok) { setDogru((d) => d + 1); setPuan((p) => p + Math.max(2, 10 - ipucu * 2)); }
+    if (ok) { setDogru((d) => d + 1); setPuan((p) => p + Math.max(2, 10 - ipucu * 2)); setSeri((x) => x + 1); } else setSeri(0);
   };
-  const gec = () => { setSonuc(false); };
+  const gec = () => { setSonuc(false); setSeri(0); };
   const sonraki = () => { setI((x) => x + 1); setCevap(''); setIpucu(0); setSonuc(null); };
   const maske = s ? s.terim.split('').map((c, k) => (c === ' ' ? ' ' : k < ipucu ? c : '_')).join('') : '';
 
   if (!sorular) return <span className="v15-skel b15-skel" aria-hidden />;
   if (bitti) {
     return (
-      <section className="v15-card oy15-kart oy15-son">
-        <Trophy aria-hidden className="oy15-tac" />
-        <b className="oy15-kazanan">{puan} puan{yeniRekor ? ' · yeni rekor!' : ''}</b>
-        <p className="v15-cap">{katAd} · {dogru}/{sorular.length} doğru · en iyi {rekor}</p>
-        <div className="oy15-alt">
-          <button type="button" className="oy15-cik" onClick={onCik}>Oyunlar</button>
-          <button type="button" className="v15-btn oy15-ana" onClick={() => void kur()}><RotateCcw aria-hidden />Yeniden oyna</button>
-        </div>
-      </section>
+      <SonKart baslik={`${puan} puan`} alt={`Terimi bul · ${katAd}`} dogru={dogru} yanlis={sorular.length - dogru} sureSn={sure.sn()}
+        enIyi={rekor} rekor={yeniRekor} oran={sorular.length ? dogru / sorular.length : 0} onCik={onCik} onYeniden={() => void kur()} />
     );
   }
   if (!s) return null;
 
   return (
-    <section className="oy15-soru">
-      <div className="oy15-ust">
-        <span className="v15-cap">Terimi bul · {katAd} · {i + 1}/{sorular.length}</span>
-        <span className="v15-cap">{puan} puan</span>
-        <button type="button" className="oy15-x" onClick={onCik} aria-label="Oyundan çık"><X aria-hidden /></button>
-      </div>
-      <p className="oy15-kok">{s.tanim}</p>
-      <p className="bs15-maske" aria-label={`${s.terim.replace(/\s/g, '').length} harf`}>{sonuc === null ? maske : s.terim}</p>
+    <section className="oy15-soru og15-oyun" lang="tr">
+      <OyunUst ilerleme={(i + (sonuc !== null ? 1 : 0)) / sorular.length} sol={`Soru ${i + 1}/${sorular.length}`} puan={puan} seri={seri}
+        ek={<span className="og15-cip is-sonuk">{katAd} · en iyi {rekor}</span>} onCik={onCik} />
+      <p key={i} className="oy15-kok bs15-kart og15-gir">{s.tanim}</p>
+      <p className={`bs15-maske${sonuc === true ? ' og15-parla' : sonuc === false ? ' og15-titre' : ''}`} aria-label={`${s.terim.replace(/\s/g, '').length} harf`}>{sonuc === null ? maske : s.terim}</p>
       <form className="bs15-form" onSubmit={(e) => { e.preventDefault(); if (sonuc === null) kontrol(); else sonraki(); }}>
         <input ref={girdi} value={cevap} onChange={(e) => setCevap(e.target.value)} placeholder="Terimi yaz" aria-label="Cevap" disabled={sonuc !== null}
           className={sonuc === true ? 'is-dogru' : sonuc === false ? 'is-yanlis' : ''} autoComplete="off" autoCapitalize="off" spellCheck={false} />
