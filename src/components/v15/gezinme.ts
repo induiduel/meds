@@ -54,6 +54,15 @@ export function geriGit(active: AppRoute) {
   navigateTo(pathFor(s && s.hub !== active ? s.hub : 'today'));
 }
 
+/** Sayfa kendi Geri hedefini verdiyse: önceki sayfa aynı ders ailesindeyse (örn. /dersler/canliders/kurul2 listesi)
+ *  oraya gerçekten geri döner; böylece liste → ders → Geri döngüsü gelinen adrese iner (hedef sabit branşa itmez). */
+export function geriHedefe(hedef: string) {
+  const onceki = yigin[yigin.length - 2];
+  const aile = (u: string) => /^\/dersler\/(canliders|ders)\//.test(u);
+  if (onceki && aile(onceki) && aile(hedef) && history.length > 1) { history.back(); return; }
+  navigateTo(hedef);
+}
+
 /** Alt sekmeye dokunma: başka sekmeden gelince kaldığın sayfa, aynı sekmede merkeze dönüş */
 export function sekmeyeGit(s: V15Section, active: AppRoute, onGo: (r: AppRoute) => void) {
   const burada = sekmeOf(active) === s.id;

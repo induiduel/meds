@@ -51,7 +51,7 @@ import { useV15BaslikOku } from './baslik';
 import { kronometreAc } from './KronometreV15';
 import { kapsulAc } from './KapsulV15';
 import { Target } from 'lucide-react';
-import { MENU_SAYFALARI, geriGit, kokMu, sekmeOf, sekmeyeGit, useGezinmeKaydi } from './gezinme';
+import { MENU_SAYFALARI, geriGit, geriHedefe, kokMu, sekmeOf, sekmeyeGit, useGezinmeKaydi } from './gezinme';
 import '../../styles/v15/tokens.css';
 import '../../styles/v15/shell.css';
 
@@ -373,7 +373,7 @@ export const TopBarV15: React.FC<TopBarProps> = ({ active, onGo, user, isAdmin, 
     <>
     <header className="v15-top print:hidden">
       {geriVar && (
-        <button type="button" className="v15-ib v15-back" onClick={() => (sayfa?.geri ? navigateTo(sayfa.geri) : geriGit(active))} aria-label="Geri" title="Geri">
+        <button type="button" className="v15-ib v15-back" onClick={() => (sayfa?.geri ? geriHedefe(sayfa.geri) : geriGit(active))} aria-label="Geri" title="Geri">
           <ChevronLeft aria-hidden="true" />
         </button>
       )}
