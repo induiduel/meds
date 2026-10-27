@@ -447,3 +447,8 @@ Not: YOK sayısının 6'sı tasarım belgesi ekranıdır (A09, K08, P01, W03, X0
 - S21: KURULDU: oynatıcıda "n kez çıkmışta soruldu · Çöz" şeridi (yalnız doğrulanmış eşleme)
 - S26: VAR (denetim kaçırmıştı): dört gruplu ders seçenekleri
 - S28: KURULDU: oynatıcı seçenekleri alt çekmecesi
+- S26 ders seçenekleri: v15.4 yeniden düzen (kullanıcı geri bildirimi: uzun/okunaksız) — 3 grup, simgeli kare ızgara
+- C01: Tekrar zamanı kartı Yanlışlarım'a bağlandı (karma test/kip seçici henüz yok)
+- C03: seri rozeti (Derste 04:18 bağlantısı: soru–ders zaman eşlemesi verisi yok; takip sorusu: LLM, yok)
+- C04: '48 saat sonra yeniden soracağım' + Yanlışlarım bağlantısı (services/yanlislarim.ts)
+- C09: KURULDU /sorular/yanlislarim (Tekrar zamanı · Bekleyen · Öğrenildi, hazırları çöz)

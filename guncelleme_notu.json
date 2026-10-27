@@ -1,17 +1,14 @@
 {
  "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
- "onem": 443,
- "baslik": "Ezber kartları kurula göre ayrıldı; bazı bölümler gizlendi",
+ "onem": 444,
+ "baslik": "Yanlışlarım ve daha sade ders menüsü",
  "maddeler": [
-  "Ezber kartlarında Kurul seçici: her kurulun kartları ayrı sunulur",
-  "Soru ekle, soru havuzu, olası sorular, kamp/check-up, son prova, sınav spotları ve ders özetleri geçici olarak gizlendi"
+  "Yeni: Soru çöz › Yanlışlarım — yanlış yaptığın sorular 48 saat sonra yeniden sorulur, doğru yaptıkça aralık uzar",
+  "Sesli dersin ⋯ menüsü sadeleşti: üç grup, büyük simgeli düğmeler",
+  "Soru çözerken art arda doğrularda seri rozeti"
  ],
- "eklenen": [
-  "Ezber kartlarında kurul süzgeci"
- ],
- "degisen": [
-  "Gizlenen bölümler menüden kalktı"
- ],
+ "eklenen": [],
+ "degisen": [],
  "duzeltilen": [],
  "silinen": []
 }

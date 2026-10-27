@@ -77,18 +77,20 @@
   & .cd15-adim button:disabled { opacity: .45; cursor: default; }
   @media (max-width: 420px) { & .cd15-sat:has(> .v15-seg) { flex-wrap: wrap; } & .cd15-sat .v15-seg { width: 100%; } }
 
-  /* ── Ders seçenekleri (gruplu menü): içteki düğmeler satır görünümünde ── */
-  & .cd15-menu { display: flex; flex-direction: column; gap: 6px; font-family: var(--font-sans); }
-  & .cd15-mgrup h3 { margin: 8px 0 2px; font: 700 11px/1 var(--font-sans); letter-spacing: .06em; text-transform: uppercase; color: var(--color-ink-3); }
-  & .cd15-mliste { display: flex; flex-direction: column; }
-  & .cd15-mliste > :is(.cd-btn, a.cd-btn, button), & .cd15-mliste > * > :is(.cd-btn, button, a) { justify-content: flex-start; width: 100%; height: auto; min-height: 46px; padding: 8px 2px;
-    border: 0; border-bottom: 1px solid var(--color-line-soft); border-radius: 0; background: transparent; color: var(--color-ink); font: 500 14.5px/1.3 var(--font-sans); gap: 12px; text-align: left; }
-  & .cd15-mliste .cd-btn > svg, & .cd15-mliste > * > :is(button, a) > svg { width: 19px; height: 19px; color: var(--color-ink-2); flex: none; }
-  & .cd15-mliste .cd-btn.is-on { color: var(--color-accent); }
-  & .cd15-mliste .cd-btn.is-on > svg { color: var(--color-accent); }
-  & .cd15-mliste .cd-ders-takip { display: flex; flex-direction: column; }
-  & .cd15-mliste .cd-ders-takip > * { width: 100%; }
-  & .cd15-mliste :is(.cd-btn, button, a):hover { background: var(--color-field); }
+  /* ── Ders seçenekleri (gruplu menü, v15.4): her öge simgeli kare düğme; telefonda 3, geniş çekmecede 4 sütun ──
+     (kullanıcı geri bildirimi 2026-10-27: satır listesi uzun, okunaksız ve kötü gruplanmıştı) */
+  & .cd15-menu { display: flex; flex-direction: column; gap: 16px; font-family: var(--font-sans); }
+  & .cd15-mgrup h3 { margin: 0 2px 8px; font: 700 13px/1.2 var(--font-sans); color: var(--color-ink); }
+  & .cd15-mliste { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+  & .cd15-mliste > :not(:is(.cd-btn, a, button)) { display: contents; }
+  & .cd15-mliste :is(.cd-btn, a.cd-btn, button) { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; width: 100%; min-height: 86px; height: auto;
+    padding: 10px 6px; border: 1px solid var(--color-line-soft, var(--color-line)); border-radius: 16px; background: var(--color-white); color: var(--color-ink);
+    font: 600 12.5px/1.25 var(--font-sans); text-align: center; text-decoration: none; white-space: normal; box-shadow: none; }
+  & .cd15-mliste :is(.cd-btn, button, a) > svg { width: 22px; height: 22px; color: var(--color-accent); flex: none; }
+  & .cd15-mliste :is(.cd-btn, button).is-on, & .cd15-mliste [aria-pressed='true'] { background: var(--color-accent-soft); border-color: var(--color-accent); color: var(--color-accent); }
+  & .cd15-mliste :is(.cd-btn, button, a):hover { background: var(--color-accent-soft); border-color: transparent; }
+  & .cd15-mliste :is(.cd-btn, button, a) :is(span, small) { display: block; }
+  @media (min-width: 640px) { & .cd15-mliste { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
 
   /* ── Yüzen kalem kutusu ── */
   & .cd-pdf-bolme { position: relative; }
@@ -250,3 +252,4 @@
 .cd15-sat.cd15-sat-blok { flex-direction: column; align-items: stretch; gap: 8px; }
 .cd15-sat-blok .cd15-hizlar { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); }
 .cd15-sat-blok > .cd15-sat-t { padding: 0; margin: 0; }
+

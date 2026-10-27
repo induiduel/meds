@@ -518,6 +518,7 @@ export default function CanliDersDers({ dersKey, kamp }: { dersKey: string; kamp
           setGorunum={setGorunum}
           onGorunum={() => setGor15(true)}
           onMenu={() => setMenu15(true)}
+          onTamEkran={tamEkranAc}
           hizli={{
             yildiz: yildizSayisi, onYildiz: () => setYildizModalAcik(true),
             onOgren: detay.desteId ? () => navigateTo(`/dersler/interaktif/${detay.desteId}`) : undefined,
@@ -762,6 +763,12 @@ export default function CanliDersDers({ dersKey, kamp }: { dersKey: string; kamp
                       <Star aria-hidden /> <span>Yıldızlı paragraflar ({yildizSayisi})</span>
                     </button>
                     <ListeEkleDugme dersKey={detay.key} baslik={detay.baslik} etiketli />
+                    {detay.vurgu && (
+                      <button type="button" className={`cd-btn${vurguAcik ? ' is-on' : ''}`} aria-pressed={vurguAcik} onClick={() => setVurguAcik(!vurguAcik)}
+                        title="Çıkmışta, örnek sorularda ve spotlarda geçen cümleleri kırmızı ve işaretli göster">
+                        <Highlighter aria-hidden /> <span>Önemli yerleri vurgula</span>
+                      </button>
+                    )}
                     {detay.desteId && (
                       <button type="button" className="cd-btn" onClick={() => { setMenu15(false); navigateTo(`/dersler/interaktif/${detay.desteId}`); }}>
                         <BookOpen aria-hidden /> <span>Öğren destesine geç</span>
@@ -771,7 +778,7 @@ export default function CanliDersDers({ dersKey, kamp }: { dersKey: string; kamp
                 ),
               },
               {
-                ad: 'Dışa aktar ve çevrimdışı',
+                ad: 'Kaydet ve paylaş',
                 ogeler: (
                   <>
                     <CevrimdisiDugme dersKey={detay.key} baslik={detay.baslik} varyantlar={detay.varyantlar} />
@@ -794,17 +801,17 @@ export default function CanliDersDers({ dersKey, kamp }: { dersKey: string; kamp
                 ),
               },
               {
-                ad: 'Ders hakkında',
+                ad: 'Diğer',
                 ogeler: (
                   <>
                     <button type="button" className="cd-btn" onClick={() => { setMenu15(false); setGunlukAcik(true); }}>
-                      <FileText aria-hidden /> <span>Güncelleme günlüğü</span>
+                      <FileText aria-hidden /> <span>Ders günlüğü</span>
                     </button>
                     {tanitim.dugme}
+                    <MotivasyonDugme />
                   </>
                 ),
               },
-              { ad: 'Tercihler', ogeler: <MotivasyonDugme /> },
             ]}
           />
         </>

@@ -1,3 +1,4 @@
+import { useYanlislar, yanlisGruplari } from '../../services/yanlislarim';
 import React, { useEffect, useMemo, useState } from 'react';
 import { ChevronDown, ChevronRight, CircleHelp, Clock, Play, RotateCcw } from 'lucide-react';
 import { linkClick, navigateTo, pathFor, type AppRoute } from '../../router';
@@ -25,6 +26,8 @@ const git = (url: string) => linkClick(() => navigateTo(url));
 export default function SorularMerkezV15() {
   const kurul = useSeciliKurul();
   const review = useReviewCounts();
+  useYanlislar();
+  const yanlis = yanlisGruplari();
   const cozum = useMemo(() => {
     const all = Object.values(getProgress());
     const dogru = all.filter((a) => a.correct).length;
@@ -66,9 +69,9 @@ export default function SorularMerkezV15() {
         </div>
         <div className="s15-oz v15-card">
           <span className="s15-oz-h"><span className="v15-label">Tekrar zamanı</span><span className="v15-tile is-b"><RotateCcw aria-hidden /></span></span>
-          <b className="s15-say">{review.total.due}</b>
-          <span className="v15-cap">Hata defterinde vadesi gelen kart</span>
-          <button type="button" className="v15-btn is-ghost" onClick={tekrarAc} disabled={!review.total.due}><span className="s15-uzun">Tekrara başla</span><span className="s15-kisa">Tekrar</span></button>
+          <b className="s15-say">{yanlis.hazir.length}</b>
+          <span className="v15-cap">{yanlis.bekleyen.length ? `${yanlis.bekleyen.length} yanlış bekliyor` : 'Yanlış yaptığın sorular 48 saat sonra burada'}{review.total.due ? ` · Öğren'de ${review.total.due} kart` : ''}</span>
+          <a className="v15-btn is-ghost" href="/sorular/yanlislarim" onClick={git('/sorular/yanlislarim')}><span className="s15-uzun">Yanlışlarımı çöz</span><span className="s15-kisa">Yanlışlar</span></a>
         </div>
         <div className="s15-oz v15-card">
           <span className="s15-oz-h"><span className="v15-label">Çıkmışlar</span><span className="v15-tile is-w"><Clock aria-hidden /></span></span>

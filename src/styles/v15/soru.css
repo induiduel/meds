@@ -107,3 +107,13 @@
 }
 @media (min-width: 600px) { :root[data-v15='on'] main.contents > .q15 { padding-inline: 24px; } }
 @media (min-width: 1024px) { :root[data-v15='on'] main.contents > .q15 { padding-inline: 32px; } }
+/* C03/C04: seri rozeti, 48 saat notu */
+.q15-seri { align-self: center; }
+.q15-cek-not { margin: 0; font-size: .85rem; color: var(--color-ink-2); }
+.q15-cek-not a { color: var(--color-accent); font-weight: 600; }
+/* C09 Yanlışlarım */
+.yl15 { display: flex; flex-direction: column; gap: 12px; max-width: 760px; width: 100%; margin-inline: auto; }
+.yl15-coz { align-self: stretch; }
+.yl15-sat { display: flex; align-items: center; }
+.yl15-sat > .b15-row { flex: 1; min-width: 0; width: 100%; text-align: left; border: 0; background: none; font: inherit; color: inherit; cursor: pointer; }
+.yl15-sil { flex: none; margin-right: 8px; color: var(--color-ink-3); }

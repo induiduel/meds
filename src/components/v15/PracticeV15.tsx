@@ -1,3 +1,5 @@
+import { yanlisKaydet } from '../../services/yanlislarim';
+import { navigateTo } from '../../router';
 import React, { useEffect, useMemo, useState } from 'react';
 import { Bookmark, BookmarkCheck, Check, ChevronLeft, FileText, Pause, Play, RotateCcw, Sparkles, X } from 'lucide-react';
 import type { QuestionItem } from '../../types';
@@ -57,9 +59,12 @@ export const PracticeV15: React.FC<PracticeV15Props> = (p) => {
   const yanlis = items.filter((x) => answers[x.id] && answers[x.id] !== x.reconstruction?.correctAnswer).length;
   const sonda = index >= items.length - 1;
 
+  // Seri (tasarım C03): bu testte şu ana dek art arda doğru
+  const seri = (() => { let n = 0; for (let i = index; i >= 0; i--) { const a = answers[items[i].id]; if (a && a === items[i].reconstruction?.correctAnswer) n++; else if (a || i < index) break; } return n; })();
   const cevapla = () => {
     if (!secim) return;
     p.onSelect(secim);
+    yanlisKaydet(q, secim === rec.correctAnswer);
     if (secim !== rec.correctAnswer) setCekmece(true);
   };
   // Klavye: A–E seçer, Enter cevaplar (PracticeMode'un A–E doğrudan cevaplamasından önce yakalanır)
@@ -142,6 +147,7 @@ export const PracticeV15: React.FC<PracticeV15Props> = (p) => {
         {!cevap && (
           <button type="button" className="q15-bilmiyorum" onClick={() => (sonda ? p.onFinish() : p.onGo(index + 1))} disabled={p.paused}>Bilmiyorum</button>
         )}
+        {cevap && dogruMu && seri > 1 && <span className="v15-tag is-ok q15-seri">Seri {seri}</span>}
         {cevap ? (
           <button type="button" className="v15-btn q15-ana" onClick={() => (sonda ? p.onFinish() : p.onGo(index + 1))}>{sonda ? 'Testi bitir' : 'Sonraki soru'}</button>
         ) : (
@@ -152,6 +158,7 @@ export const PracticeV15: React.FC<PracticeV15Props> = (p) => {
       <Sheet open={cekmece} onClose={() => setCekmece(false)} title="Birlikte toparlayalım" width={440} className="q15-sheet">
         <div className="q15-cek">
           <span className="v15-tag is-b q15-cek-et">Cevabın doğru değil · doğru cevap {rec.correctAnswer}</span>
+          <p className="q15-cek-not">Bu soruyu 48 saat sonra yeniden soracağım. <a href="/sorular/yanlislarim" onClick={(e) => { e.preventDefault(); setCekmece(false); navigateTo('/sorular/yanlislarim'); }}>Yanlışlarım</a></p>
           <ul className="q15-cek-l" role="list">
             <li>
               <button type="button" onClick={() => { setCekmece(false); p.onOpenAi(); }}>

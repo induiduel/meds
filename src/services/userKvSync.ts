@@ -41,6 +41,8 @@ const SYNC_PATTERNS: RegExp[] = [
   /^medsoru_highlights_v1$/,
   // Kartlar, sözlük, hastalıklar
   /^medsoru_card_notes_v1$/,
+  // Yanlışlarım (v15 C04/C09): soru tekrar defteri (services/yanlislarim.ts)
+  /^medsoru_yanlislarim_v1$/,
   // Notlarım (v15): not listesi + not başına çizim katmanı (components/v15/NotlarimV15)
   /^medsoru_notlarim_v1$/,
   // Çalışma kapsülü (v15): odak oturumu geçmişi (components/v15/KapsulV15)
