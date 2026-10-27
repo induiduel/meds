@@ -151,7 +151,7 @@
 
 /* ---------- sayfa temaları (yalnız görünüm; PDF değişmez, çevrimdışı çalışır) ---------- */
 /* Temiz: saf beyaz zemin, koyu ve keskin metin, yumuşak gölge */
-.tema-temiz .pdv-canvas, .tema-temiz .pdv-thumb-c canvas { filter: contrast(1.12) brightness(1.03) saturate(.92); }
+.tema-temiz .pdv-canvas, .tema-temiz .pdv-thumb-c canvas { filter: url(#pdv-temiz-f) contrast(1.08); }
 .tema-temiz .pdv-page, .tema-temiz .pdv-thumb-c { background: #fff; box-shadow: 0 1px 2px rgb(15 23 42 / .06), 0 6px 20px rgb(15 23 42 / .07); }
 .tema-temiz .pdv-track { background: #f4f6fa; }
 /* Sepya: göz yormayan sıcak kâğıt */

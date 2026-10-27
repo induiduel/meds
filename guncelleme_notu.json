@@ -1,18 +1,14 @@
 {
  "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
- "onem": 436,
- "baslik": "Sesli ders yeni oynatıcı ve renk düzeltmeleri",
+ "onem": 437,
+ "baslik": "Temiz PDF teması: fon beyaza çekildi",
  "maddeler": [
-  "Sesli ders tasarıma göre yenilendi: ders doğrudan slayt + metinle açılır, okunan cümle sarı vurgulu",
-  "Alt oynatıcıda bölüm dilimli çubuk, bölüm adı ve büyük oynat düğmesi",
-  "Koyu temada kaybolan beyaz yazılar ve yükleme göstergelerinin renkleri düzeltildi"
+  "Temiz temada slaytın krem fonu ve pastel şablon şeritleri beyaza dönüşür"
  ],
- "eklenen": [
-  "Çevrimdışı Dersler sekmesi",
-  "Ders paketi (.medspak) çevrimdışı indirme",
-  "Ders testi ve onarım"
+ "eklenen": [],
+ "degisen": [
+  "Temiz sayfa teması açık fon renklerini kaldırır"
  ],
- "degisen": [],
  "duzeltilen": [],
  "silinen": []
 }
