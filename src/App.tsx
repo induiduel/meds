@@ -8,7 +8,7 @@ import { foldTurkish } from './utils/fuzzyMatching';
 import type { SearchHit } from './components/search/searchShared';
 import { AppRoute, parseLocation, writeLocation, pathFor, icPathFor, ROUTE_TITLES, deepLinkIdFor, navigateTo } from './router';
 import { icKonum, kanonik } from './siteHaritasi';
-import { KAPALI_SAYFALAR } from './components/merkez/merkezModel';
+import { GIZLI_SAYFALAR, KAPALI_SAYFALAR } from './components/merkez/merkezModel';
 import {
   Sparkles,
   Plus,
@@ -876,6 +876,10 @@ export default function App() {
   const targetCount = currentCommittee?.targetCount || 100;
   const isAdmin = isAdminUser(currentUser);
   const sayfaKapali = KAPALI_SAYFALAR.has(activeTab) && !isAdmin;
+  // Gizlenen sayfalar (merkezModel.GIZLI_SAYFALAR): öğrenci adresle girse de Bugün'e döner
+  useEffect(() => {
+    if (!isAdmin && !isAdminAppMode() && GIZLI_SAYFALAR.has(activeTab)) setActiveTab('today');
+  }, [isAdmin, activeTab, setActiveTab]);
   // Moderatör: rol sunucudan (GET /api/me/access, Firebase jetonu) öğrenilir; yalnız moderasyon bölümleri açılır
   const [isModerator, setIsModerator] = useState(false);
   useEffect(() => {

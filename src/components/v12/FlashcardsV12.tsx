@@ -58,6 +58,7 @@ export interface FlashcardsV12Props {
   statusFor: (id: string) => Status;
   favCount: number;
   reportDialog: React.ReactNode;
+  kurulBar?: React.ReactNode;
 }
 
 /** Kartlar | Spotlar — iki ayrı rota, tek gezinme (canvas üst segmenti) */
@@ -100,6 +101,7 @@ export const FlashcardsV12: React.FC<FlashcardsV12Props> = (p) => {
     <div className="f12-page">
       <h1 className="sr-only">Ezber kartları</h1>
       <div className={`f12-col${p.loading ? '' : ' has-browse'}`}>
+        {!p.session && p.kurulBar}
         <div className="f12-head">
           <CardsSpotsNav active="cards" />
           <span className="f12-grow" />

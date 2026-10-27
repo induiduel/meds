@@ -20,6 +20,8 @@ export interface GlossaryEntry {
   clinicalPearls?: string;
   badgeColor?: string;
   discipline?: string;
+  /** Kaynak derslerin kurulları (medical_glossary kaynaklar[].kurul) */
+  kurullar?: number[];
 }
 
 const CATEGORY_LABELS: Record<string, string> = {
@@ -119,6 +121,9 @@ function ingest(rawGlossary: unknown) {
             clinicalPearls: String(val.clinicalPearls || val.clinicalPearl || '').trim() || undefined,
             badgeColor: val.badgeColor || BADGE_BY_CATEGORY[rawCat.toLowerCase()] || 'purple',
             discipline: val.discipline || undefined,
+            kurullar: Array.isArray(val.kaynaklar)
+              ? [...new Set<number>(val.kaynaklar.map((k: any) => Number(k?.kurul)).filter((n: number) => n >= 1 && n <= 6))].sort()
+              : undefined,
           });
         }
       }

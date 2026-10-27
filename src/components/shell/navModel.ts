@@ -47,6 +47,7 @@ import {
 } from 'lucide-react';
 import type React from 'react';
 import type { AppRoute } from '../../router';
+import { GIZLI_SAYFALAR } from '../merkez/merkezModel';
 
 /**
  * v8 kabuğunun tek gezinme modeli: kenar menüsü, alt gezinme ve "Daha" sayfası buradan beslenir.
@@ -135,7 +136,7 @@ export const NAV_ITEMS = I;
  * Öğrenciye kapatılan sayfalar (Sınav çalışması, Alternatif çözücü, Ders notları) menüde yoktur (merkezModel.KAPALI_SAYFALAR).
  * "Soru ekle" menünün tepesinde tek başına duran birincil düğmedir; telefonda alt gezinmenin ortasındadır.
  */
-export const NAV_TREE: NavGroup[] = [
+const NAV_TREE_HAM: NavGroup[] = [
   { label: null, items: [I.today] },
   { label: 'Ders çalış', items: [I.canli_ders, I.kmb_asistan, I.learn, I.summaries, I.flashcards, I.ders_programi] },
   { label: 'Soru çöz', items: [I.soru_cozucu, I.past_exams, I.practice, I.questions, I.ornek_sorular, I.olasi_sorular, I.oyunlar, I.soru_haritasi] },
@@ -145,6 +146,10 @@ export const NAV_TREE: NavGroup[] = [
   { label: 'Topluluk', items: [I.topluluk, I.basarimlar, I.hucrem, I.leaderboard, I.matrix] },
   { label: 'Kişisel', items: [I.bitirdiklerim, I.cevrimdisi, I.study, I.stats, I.music] },
 ];
+
+export const NAV_TREE: NavGroup[] = NAV_TREE_HAM
+  .map((g) => ({ ...g, items: g.items.filter((it) => !GIZLI_SAYFALAR.has(it.id)) }))
+  .filter((g) => g.items.length > 0);
 
 /** Telefonda alt gezinmede doğrudan duran sayfalar (v10 sıra: Ekle · Öğren · Havuz · Çıkmış); gerisi "Daha" sayfasında */
 export const TAB_ITEMS: NavItem[] = [I.quick_add, I.learn, I.questions, I.past_exams];

@@ -6,6 +6,13 @@
 import type { AppRoute } from '../../router';
 import type { KategoriId } from '../../siteHaritasi';
 
+/** Gizlenenler (2026-10-27, kullanıcı kararı): menüden/merkezden kalkar, öğrenci adresle girse Bugün'e yönlenir; yönetici açabilir.
+ *  Soru ekle (ana ekran) sınav günü açılır; Kurul 1 check-up/kamp, olası sorular, soru havuzu, kurul kampı, son prova, sınav spotları, ders özetleri. */
+export const GIZLI_SAYFALAR = new Set<AppRoute>([
+  'quick_add', 'genetik_checkup', 'patoloji_checkup', 'olasi_sorular', 'questions', 'matrix',
+  'kamp', 'son_prova', 'spots', 'summaries',
+]);
+
 export interface MerkezArac {
   id: AppRoute;
   /** Öğrenciye: bu aracı ne zaman açmalıyım */
@@ -14,7 +21,7 @@ export interface MerkezArac {
   oner?: boolean;
 }
 
-export const MERKEZ_ARACLARI: Record<KategoriId, MerkezArac[]> = {
+const MERKEZ_HAM: Record<KategoriId, MerkezArac[]> = {
   dersler: [
     { id: 'canli_ders', ne: 'Dersi baştan sona dinlemek istiyorsan: metin ve slayt sesle akar', oner: true },
     { id: 'learn', ne: 'Konuyu adım adım, mini sorularla öğrenmek istiyorsan' },
@@ -53,9 +60,13 @@ export const MERKEZ_ARACLARI: Record<KategoriId, MerkezArac[]> = {
   ],
 };
 
+export const MERKEZ_ARACLARI = Object.fromEntries(
+  Object.entries(MERKEZ_HAM).map(([k, l]) => [k, l.filter((a) => !GIZLI_SAYFALAR.has(a.id))]),
+) as Record<KategoriId, MerkezArac[]>;
+
 /** Check Up sınamaları: kamplar merkezinde ayrı sekme; her biri kendi adresinde */
 export interface CheckUpTanim { id: string; ad: string; alt: string; yol: string; kurul: number; surum?: string; route: AppRoute }
-export const CHECKUPLAR: CheckUpTanim[] = [
+const CHECKUP_HAM: CheckUpTanim[] = [
   {
     id: 'tbg', ad: 'TBG Sınav Kampı', surum: 'v1', kurul: 1, route: 'genetik_checkup', yol: '/kamplar/kurul1/checkup/tbg/v1/sesli-ders',
     alt: 'Tıbbi Biyoloji ve Genetik: sesli ders, soru çözerek tekrar, kalıp kartları ve 12 soruluk deneme ayrı sayfalarda',
@@ -65,6 +76,8 @@ export const CHECKUPLAR: CheckUpTanim[] = [
     alt: 'Mediyatör, sitokin, hücre ve hastalık karşılaştırma tabloları; kendini sına',
   },
 ];
+
+export const CHECKUPLAR: CheckUpTanim[] = CHECKUP_HAM.filter((c) => !GIZLI_SAYFALAR.has(c.route));
 
 /** PDF notlar: kamplar merkezinde (Hepsi + En önemliler) indirilebilir tek dosyalık özetler; dosya public/pdf/ */
 export interface PdfNotTanim { id: string; ad: string; alt: string; dosya: string; kurul: number; sayfa: number }
@@ -89,3 +102,4 @@ export const MERKEZ_ROUTE: Record<KategoriId, AppRoute> = {
 
 /** Öğrenciye kapatılan sayfalar (2026-10-21, kullanıcı kararı): yalnız yönetici adresle açabilir */
 export const KAPALI_SAYFALAR = new Set<AppRoute>(['sinav_calisma', 'alternatif_cozucu', 'notes']);
+

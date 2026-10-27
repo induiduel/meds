@@ -25,6 +25,8 @@ export interface StudyCard {
   back: string;
   sub?: string; // pronunciation or source line
   pearl?: string;
+  /** Kartın ait olduğu kurullar; boşsa yalnız "Tümü"nde görünür */
+  kurullar?: number[];
 }
 
 export type Grade = 'again' | 'hard' | 'good';
@@ -101,14 +103,26 @@ const glossaryCards = (): StudyCard[] => GLOSSARY.map((g) => ({
   back: g.definition,
   sub: g.pronunciation,
   pearl: g.clinicalPearls,
+  kurullar: g.kurullar,
 }));
 
 const deckGroup = (raw: string) => (raw || 'Diğer').split(/\s*(?:\/|&|,|\sve\s)\s*/)[0].trim() || 'Diğer';
 
 const loadDeckCards = async (): Promise<StudyCard[]> => {
-  const { loadDeckFlashcards, loadAllDecks } = await import('../../data/deckStore');
+  const { loadDeckFlashcards, loadAllDecks, loadDeckCatalog } = await import('../../data/deckStore');
+  const katalog = await loadDeckCatalog();
+  const kurulOf = new Map<string, number[]>();
+  katalog.forEach((d: any) => {
+    const m = /Kurul\s*(\d)/gi;
+    const ks = new Set<number>();
+    for (const x of String(d.committee || '').matchAll(m)) ks.add(Number(x[1]));
+    if (!ks.size && /Ürogenital Sistem Komitesi/i.test(String(d.committee || ''))) ks.add(1);
+    if (ks.size) kurulOf.set(d.id, [...ks].sort());
+  });
   const prebuilt = await loadDeckFlashcards();
-  if (prebuilt && prebuilt.length > 0) return prebuilt as StudyCard[];
+  if (prebuilt && prebuilt.length > 0) {
+    return (prebuilt as StudyCard[]).map((c) => ({ ...c, kurullar: kurulOf.get(String(c.id).split(':')[1]) }));
+  }
   const decks: any[] = await loadAllDecks();
   const out: StudyCard[] = [];
   decks.forEach((d) =>
@@ -124,6 +138,7 @@ const loadDeckCards = async (): Promise<StudyCard[]> => {
           back,
           sub: `${deckGroup(d.discipline)} · slayt ${s.slideNumber}`,
           pearl: c.hint,
+          kurullar: kurulOf.get(d.id),
         });
       })
     )
@@ -160,6 +175,7 @@ export const FlashcardsView: React.FC = () => {
     return () => window.removeEventListener('medsoru:glossary-changed', onChange);
   }, []);
   const [group, setGroup] = useState('all');
+  const [kurul, setKurul] = useState<number>(0); // 0 = tüm kurullar
   const [query, setQuery] = useState('');
   // Göz atma süzgeci: duruma göre ya da favoriler (favoriler kaynak/konu seçiminden bağımsız)
   type View = 'all' | 'new' | 'due' | 'learning' | 'mastered' | 'fav';
@@ -177,7 +193,34 @@ export const FlashcardsView: React.FC = () => {
   }, [source, deckCards]);
   useEffect(() => setGroup('all'), [source]);
 
-  const all = source === 'terms' ? termCards : deckCards || [];
+  const allRaw = source === 'terms' ? termCards : deckCards || [];
+  const kurulSayilari = useMemo(() => {
+    const m: Record<number, number> = {};
+    allRaw.forEach((c) => c.kurullar?.forEach((k) => (m[k] = (m[k] || 0) + 1)));
+    return m;
+  }, [allRaw]);
+  const all = useMemo(() => (kurul ? allRaw.filter((c) => c.kurullar?.includes(kurul)) : allRaw), [allRaw, kurul]);
+  useEffect(() => setGroup('all'), [kurul]);
+  const kurulBar = (
+    <div className="fv-kurul" role="radiogroup" aria-label="Kurul" style={{ display: 'flex', gap: 6, flexWrap: 'wrap', margin: '8px 0' }}>
+      {[0, ...Object.keys(kurulSayilari).map(Number).sort()].map((k) => (
+        <button
+          key={k}
+          type="button"
+          role="radio"
+          aria-checked={kurul === k}
+          onClick={() => { setSession(null); setKurul(k); }}
+          style={{
+            padding: '4px 12px', borderRadius: 999, font: 'inherit', cursor: 'pointer',
+            border: '1px solid var(--line, #8884)', background: kurul === k ? 'var(--accent, #2563eb)' : 'transparent',
+            color: kurul === k ? '#fff' : 'inherit',
+          }}
+        >
+          {k === 0 ? 'Tüm kurullar' : `Kurul ${k} · ${kurulSayilari[k]}`}
+        </button>
+      ))}
+    </div>
+  );
   const groups = useMemo(() => {
     const m: Record<string, number> = {};
     all.forEach((c) => (m[c.group] = (m[c.group] || 0) + 1));
@@ -390,6 +433,7 @@ export const FlashcardsView: React.FC = () => {
           setSource(s);
         }}
         sourceCounts={{ terms: termCards.length, lessons: deckCards?.length }}
+        kurulBar={kurulBar}
         decks={decks}
         group={group}
         onPickDeck={(id) => {
@@ -455,6 +499,7 @@ export const FlashcardsView: React.FC = () => {
       />
 
       <div className="fv-main">
+        {!session && kurulBar}
         {session ? (
           <FlashcardStudy
             cards={session}

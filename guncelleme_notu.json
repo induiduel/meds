@@ -1,17 +1,17 @@
 {
  "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
- "onem": 442,
- "baslik": "Sesli derse yeni özellikler",
+ "onem": 443,
+ "baslik": "Ezber kartları kurula göre ayrıldı; bazı bölümler gizlendi",
  "maddeler": [
-  "Okuma ayarları: satır aralığı, yazı tipi, zemin rengi, okunan cümleyi ortada tut",
-  "İstersen her bölüm sonunda ses durur: tekrar dinle, pekiştir ya da devam et",
-  "Metinden seçtiğin yeri nota ekle ya da yıldızla; terim kartından sözlüğe git ya da karta ekle",
-  "Oynatıcı seçenekleri ve bölüm listesi yeni çekmecede; kilit ekranında okunan cümle görünür"
+  "Ezber kartlarında Kurul seçici: her kurulun kartları ayrı sunulur",
+  "Soru ekle, soru havuzu, olası sorular, kamp/check-up, son prova, sınav spotları ve ders özetleri geçici olarak gizlendi"
  ],
- "eklenen": [],
- "degisen": [],
- "duzeltilen": [
-  "Temiz temada uzatıcı alan mavi kalıyordu"
+ "eklenen": [
+  "Ezber kartlarında kurul süzgeci"
  ],
+ "degisen": [
+  "Gizlenen bölümler menüden kalktı"
+ ],
+ "duzeltilen": [],
  "silinen": []
 }

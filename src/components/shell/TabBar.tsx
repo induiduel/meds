@@ -69,7 +69,7 @@ const TabBarClassic: React.FC<TabBarProps> = ({ active, onGo, isAdmin, onPdf, on
     setMore(false);
     onGo(r);
   };
-  const [addTab, learnTab, poolTab, pastTab] = TAB_ITEMS;
+  const [addTab, learnTab, , pastTab] = TAB_ITEMS;
   const tabLink = ({ id, short, label, icon: Icon }: (typeof TAB_ITEMS)[number]) => {
     const on = active === id;
     return (
@@ -91,7 +91,7 @@ const TabBarClassic: React.FC<TabBarProps> = ({ active, onGo, isAdmin, onPdf, on
     <>
       <nav aria-label="Alt gezinme" className="sh-tabs ms-hide-on-kb print:hidden">
         <div className="sh-tabs-in">
-          {[learnTab, poolTab].map((t) => tabLink(t))}
+          {[NAV_ITEMS.today, learnTab].map((t) => tabLink(t))}
           {/* Ortadaki birincil eylem: soru ekle (yükseltilmiş yuvarlak düğme) */}
           <a
             href={pathFor(addTab.id)}
