@@ -15,7 +15,8 @@ import { dizinYukle as onemDizinYukle, ogrenilenler, type Dizin as OnemDizin } f
 import { getAsistanSureGruplari } from '../spots/sure/spotsSureVeri';
 import { cozucuyaGit, onemeGit } from '../spots/spotsYol';
 import { DECK_CATALOG, type DeckCatalogEntry, loadDeckCatalog } from '../../data/deckStore';
-import { branchOf, isPublished, stateOf, type Progress } from '../learn/LearnLibrary';
+import { branchOf, isPublished, kurulOf, stateOf, type Progress } from '../learn/LearnLibrary';
+import { kurulKimlikten } from '../kurul/KurulSuzgec';
 import { ogrenBasaAl, onemAsistanBasaAl } from './basaAl';
 import { KURULLAR } from '../../services/kurulTakvimi';
 import { bransAdi, kurulKampYollari, type Kamp } from '../kamp/kampVeri';
@@ -35,9 +36,14 @@ export interface BdKonu {
   ekSoru?: number;
   /** modüller arası ortak ders anahtarı `<branş>|<no>` (Sınav planı ile aynı; konu eleme bunu kullanır) */
   ders?: string;
+  /** konunun kurulu (1–6); Bitirdiklerim ve Sınav planı yalnız seçili kurulu hesaplar */
+  kurul?: number;
   ac: () => void;
   tekrar: () => void;
 }
+/** Yalnız seçili kurulun konuları; konusu kalmayan ders düşer */
+export const kurulaGore = (dz: BdDers[], kurul: number): BdDers[] =>
+  dz.map((d) => ({ ...d, konular: d.konular.filter((k) => (k.kurul ?? 1) === kurul) })).filter((d) => d.konular.length);
 export interface BdDers { id: string; ad: string; konular: BdKonu[] }
 
 /** Soru çözücüde ortalama soru süresi (ses dizininde süre yoksa) */
@@ -88,6 +94,7 @@ async function sesliYukle(): Promise<BdDers[]> {
         no: d.no,
         ad: d.baslik,
         alt: cdParca(d) || undefined,
+        kurul: d.kurul ?? kurulKimlikten(d.key),
         beklenen: v?.sureSn || 0,
         turetilen: false,
         ekSoru: ek,
@@ -123,6 +130,7 @@ async function ogrenYukle(): Promise<BdDers[]> {
     const ac = () => navigateTo(`${pathFor('learn')}/${d.id}`);
     const konu: BdKonu = {
       id: g,
+      kurul: Number(/(\d+)/.exec(kurulOf(d))?.[1]) || 1,
       ad: String(d.shortTitle || d.title || '').replace(/^\d+\s*[.)-]\s*/, ''),
       alt: d.instructor ? String(d.instructor) : undefined,
       beklenen: (d.slideCount || 0) * ADIM_SN,
@@ -148,6 +156,7 @@ async function cozucuYukle(): Promise<BdDers[]> {
         const ac = () => cozucuyaGit({ brans: b.id, ders: d.kod, coz: '1' });
         return {
           id: `${b.id}/${d.kod}`,
+          kurul: kurulKimlikten(b.id),
           no: d.no,
           ders: `${b.id}|${Number(d.no)}`,
           ad: d.baslik,
@@ -178,6 +187,7 @@ async function onemYukle(): Promise<BdDers[]> {
         const ac = () => onemeGit({ brans: b.id, ders: d.kod });
         return {
           id: `${b.id}/${d.kod}`,
+          kurul: kurulKimlikten(b.id),
           no: d.no,
           ders: `${b.id}|${Number(d.no)}`,
           ad: d.baslik,
@@ -207,6 +217,7 @@ async function kampYukle(): Promise<BdDers[]> {
         const ac = () => navigateTo(`/kamp/${k.kurul}/${k.brans}`);
         return {
           id: a,
+          kurul: k.kurul,
           ad: k.baslik,
           alt: `${bransAdi(k.brans)} · %${o.yuzde}`,
           beklenen: k.anlatim.length * MADDE_SN + k.deneme.length * SORU_SN + o.satirToplam * 10,

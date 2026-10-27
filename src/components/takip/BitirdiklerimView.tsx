@@ -10,9 +10,11 @@ import {
   MODUL_AD, bittiMi, sesHizi, grupOzeti, hizHesapla, sureYaz, tekrarBasla, useIzlemeHizi, useTakip, type Hiz, type TakipModul,
 } from '../../services/calismaTakip';
 import IzlemeHizi from './IzlemeHizi';
+import { KurulSecici, useSeciliKurul } from '../kurul/KurulSecici';
+import { icKonum } from '../../siteHaritasi';
 import { ELEME_AD, elemeAnahtari, elemeYaz, konuElemesi, useEleme, type ElemeTur } from '../../services/konuEleme';
 import { KonuIsaret, KonuSureEtiketi } from './KonuTakip';
-import { MODUL_YUKLE, type BdDers, type BdKonu } from './bitirdiklerimVeri';
+import { MODUL_YUKLE, kurulaGore, type BdDers, type BdKonu } from './bitirdiklerimVeri';
 import { navigateTo, pathFor } from '../../router';
 import '../../styles/takip.css';
 import '../../styles/v15/bitir.css';
@@ -48,6 +50,7 @@ export default function BitirdiklerimView() {
   const [suzgec, setSuzgec] = useState<Suzgec>('tum');
   const [acik, setAcik] = useState<Record<string, boolean>>({});
   const takip = useTakip();
+  const kurul = useSeciliKurul();
   const izHiz = useIzlemeHizi();
   const eleme = useEleme();
   const v15 = !!useAppearance().v15;
@@ -79,8 +82,9 @@ export default function BitirdiklerimView() {
   const ozetler = useMemo(() => {
     const r: Partial<Record<TakipModul, { hiz: Hiz; dersler: { d: BdDers; o: ReturnType<typeof grupOzeti> }[]; genel: ReturnType<typeof grupOzeti> }>> = {};
     for (const { id } of MODULLER) {
-      const dz = durumlar[id];
-      if (!dz || !('veri' in dz)) continue;
+      const dz0 = durumlar[id];
+      if (!dz0 || !('veri' in dz0)) continue;
+      const dz = { veri: kurulaGore(dz0.veri, kurul) };
       // hesaba girenler: çalışmayacağım / sorusuz düşer; başka yerden çalışılan bitmiş sayılır (süresi ölçülmediği için hıza girmez)
       const hesap = (L: BdKonu[]) => L.flatMap((k) => {
         const e = konuElemesi(eleme, id, k);
@@ -91,7 +95,7 @@ export default function BitirdiklerimView() {
       r[id] = { hiz, dersler: dz.veri.map((d) => ({ d, o: grupOzeti(id, hesap(d.konular), hiz, takip) })), genel: grupOzeti(id, tum, hiz, takip) };
     }
     return r;
-  }, [durumlar, takip, izHiz, eleme]);
+  }, [durumlar, takip, izHiz, eleme, kurul]);
 
   const dz = durumlar[modul];
   const oz = ozetler[modul];
@@ -127,7 +131,7 @@ export default function BitirdiklerimView() {
 
   return (
     <div className={`bd${v15 ? ' bd15' : ''}`}>
-      {v15 && <V15Bas modul={modul} />}
+      {v15 && <V15Bas modul={modul} kurul={kurul} />}
       {!v15 && <>
       <header className="bd-bas">
         <span className="bd-ic" aria-hidden><ListChecks /></span>
@@ -143,12 +147,13 @@ export default function BitirdiklerimView() {
         <li><span>3</span><div><b>Sıradakine geç</b><small>"Devam et" bitmemiş ilk konuyu açar.</small></div></li>
       </ol>
 
-      <a className="bd-plan-bag" href={pathFor('sinav_plani')} onClick={(e) => { if (e.button || e.metaKey || e.ctrlKey) return; e.preventDefault(); navigateTo(pathFor('sinav_plani')); }}>
+      <a className="bd-plan-bag" href={`${pathFor('sinav_plani')}?kurul=${kurul}`} onClick={(e) => { if (e.button || e.metaKey || e.ctrlKey) return; e.preventDefault(); navigateTo(`${pathFor('sinav_plani')}?kurul=${kurul}`); }}>
         <Target aria-hidden /> <span>Sınav planı: en az 60 için gün gün yol haritası</span> <ChevronRight aria-hidden />
       </a>
 
       <h3 className="sp-h"><span className="sp-h-no">1</span> Hangi çalışmana bakıyorsun?</h3>
       </>}
+      <KurulSecici secili={kurul} yol={(k) => `${icKonum().pathname}?m=${modul}&kurul=${k}`} />
       <div className="bd-modul" role="tablist" aria-label="Modül">
         {MODULLER.map(({ id, ikon: Ikon }) => {
           const g = ozetler[id]?.genel;
@@ -171,7 +176,7 @@ export default function BitirdiklerimView() {
         <div className="bd-bos" role="status"><span className="bd-spin" aria-hidden /> Konular yükleniyor…</div>
       ) : 'hata' in dz ? (
         <div className="bd-bos"><p>{MODUL_AD[modul]} listesi alınamadı. Bağlantını kontrol edip sayfayı yenile.</p></div>
-      ) : !oz || !dz.veri.length ? (
+      ) : !oz || !oz.dersler.length ? (
         <div className="bd-bos"><p>{MODUL_AD[modul]} için henüz konu yok.</p></div>
       ) : (
         <>
@@ -190,7 +195,7 @@ export default function BitirdiklerimView() {
             <div className="bd-suz" role="group" aria-label="Duruma göre süz">
               {(Object.keys(SUZGEC_AD) as Suzgec[]).map((s) => {
                 const n = s === 'tum' ? oz.genel.toplam : s === 'biten' ? oz.genel.biten : s === 'kalan' ? oz.genel.toplam - oz.genel.biten
-                  : s === 'elenen' ? (dz.veri.flatMap((d) => d.konular).filter((k) => konuElemesi(eleme, modul, k)).length) : oz.genel.tekrarda;
+                  : s === 'elenen' ? (oz.dersler.flatMap(({ d }) => d.konular).filter((k) => konuElemesi(eleme, modul, k)).length) : oz.genel.tekrarda;
                 if ((s === 'tekrar' || s === 'elenen') && !n) return null;
                 return (
                   <button key={s} type="button" aria-pressed={suzgec === s} className={suzgec === s ? 'is-on' : ''} onClick={() => setSuzgec(s)}>
@@ -243,12 +248,12 @@ export default function BitirdiklerimView() {
 }
 
 /** v15: başlık üst barda; Sınav planı bağlantısı ve kısa kullanım ipucu tek satırda */
-function V15Bas({ modul }: { modul: TakipModul }) {
+function V15Bas({ modul, kurul }: { modul: TakipModul; kurul: number }) {
   useV15Baslik({ baslik: 'Bitirdiklerim', alt: MODUL_AD[modul] });
   return (
     <>
       <h1 className="sr-only">Bitirdiklerim</h1>
-      <a className="bd15-plan v15-card" href={pathFor('sinav_plani')} onClick={(e) => { if (e.button || e.metaKey || e.ctrlKey) return; e.preventDefault(); navigateTo(pathFor('sinav_plani')); }}>
+      <a className="bd15-plan v15-card" href={`${pathFor('sinav_plani')}?kurul=${kurul}`} onClick={(e) => { if (e.button || e.metaKey || e.ctrlKey) return; e.preventDefault(); navigateTo(`${pathFor('sinav_plani')}?kurul=${kurul}`); }}>
         <span className="v15-tile is-a" aria-hidden><Target /></span>
         <span className="bd15-plan-t"><b>Sınav planı</b><span className="v15-cap">En az 60 için gün gün yol haritası</span></span>
         <ChevronRight className="v15-chev" aria-hidden />

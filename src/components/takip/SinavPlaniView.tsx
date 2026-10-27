@@ -5,8 +5,10 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import { Target } from 'lucide-react';
 import { IZLEME_HIZI_MODULLER, hizHesapla, onOran, useIzlemeHizi, useTakip, type Hiz, type TakipModul } from '../../services/calismaTakip';
-import { MODUL_YUKLE, type BdDers } from './bitirdiklerimVeri';
+import { MODUL_YUKLE, kurulaGore, type BdDers } from './bitirdiklerimVeri';
 import SinavPlani from './SinavPlani';
+import { KurulSecici, useSeciliKurul } from '../kurul/KurulSecici';
+import { icKonum } from '../../siteHaritasi';
 import '../../styles/takip.css';
 import V15BaslikYaz from '../v15/V15BaslikYaz';
 import '../../styles/v15/kamp.css';
@@ -17,6 +19,7 @@ export default function SinavPlaniView() {
   const [veriler, setVeriler] = useState<Partial<Record<TakipModul, BdDers[]>>>({});
   const takip = useTakip();
   const izHiz = useIzlemeHizi();
+  const kurul = useSeciliKurul();
 
   useEffect(() => { document.title = 'Sınav planı · MeDSor'; }, []);
   useEffect(() => {
@@ -27,13 +30,14 @@ export default function SinavPlaniView() {
 
   const hizlar = useMemo(() => {
     const r: Partial<Record<TakipModul, Hiz>> = {};
-    for (const id of MODULLER) { const v = veriler[id]; if (!v) continue;
+    for (const id of MODULLER) { const v0 = veriler[id]; if (!v0) continue;
+      const v = kurulaGore(v0, kurul);
       const h = hizHesapla(id, v.flatMap((d) => d.konular), takip);
       // izleme hızı girildiyse sesli modüllerin süresi yalnız o hızla (onOran zaten seçilen hızı kullanır)
       r[id] = izHiz != null && IZLEME_HIZI_MODULLER.includes(id) ? { ...h, oran: onOran(id), kaynak: 'icerik' } : h;
     }
     return r;
-  }, [veriler, takip, izHiz]);
+  }, [veriler, takip, izHiz, kurul]);
   // plan hızı değişmedikçe yeniden hesaplamasın
   const anahtar = MODULLER.map((id) => hizlar[id]?.oran.toFixed(3) ?? '-').join('|');
   const planHiz = useMemo(() => hizlar, [anahtar]); // eslint-disable-line react-hooks/exhaustive-deps
@@ -47,7 +51,8 @@ export default function SinavPlaniView() {
           <p>Bitirdiklerine bakarak sınavda kaç puan alacağını tahmin eder ve 60 için bugün neyi çalışman gerektiğini sıralar.</p>
         </div>
       </header>
-      <SinavPlani hiz={planHiz} />
+      <KurulSecici secili={kurul} yol={(k) => `${icKonum().pathname}?kurul=${k}`} />
+      <SinavPlani hiz={planHiz} kurul={kurul} />
     </div>
   );
 }

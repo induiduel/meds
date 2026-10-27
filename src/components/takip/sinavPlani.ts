@@ -23,7 +23,7 @@ import bransKaydi from '../../data/dersler/branslar.json';
 import { navigateTo, pathFor } from '../../router';
 import { elemeOku } from '../../services/konuEleme';
 import { bittiMi, type Hiz, type TakipModul, takipOku, sesliKonuId } from '../../services/calismaTakip';
-import { aktifKurul } from '../../services/kurulTakvimi';
+import { KURULLAR, aktifKurul } from '../../services/kurulTakvimi';
 import { cdListeGetir, type CdListeDers } from '../canliDers/canliDersStore';
 import { CD_SPOT_BRANS, cdBransSlug, cdTekSurum } from '../canliDers/canliDersKategori';
 import { BRANSLAR, bransTanim, type Brans } from '../spots/brans';
@@ -64,8 +64,8 @@ export interface PlanVeri { kurul: number; sinav: string; dagilim: KurulDagilim;
 const SORU_SN = 75;
 const MADDE_SN = 40;
 
-export async function planVerisiYukle(): Promise<PlanVeri | null> {
-  const k = aktifKurul();
+export async function planVerisiYukle(kurul?: number): Promise<PlanVeri | null> {
+  const k = KURULLAR.find((x) => x.kurul === kurul) || aktifKurul();
   const dg = kurulDagilimi(k.kurul);
   if (!dg) return null;
   const branslar = Object.keys(dg.branslar) as Brans[];

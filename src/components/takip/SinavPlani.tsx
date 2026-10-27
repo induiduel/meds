@@ -8,7 +8,6 @@ import { sureYaz, useTakip, type Hiz, type TakipModul } from '../../services/cal
 import IzlemeHizi from './IzlemeHizi';
 import SinavSenaryo from './SinavSenaryo';
 import { planHesapla, planVerisiYukle, type AdimTur, type PlanAdim, type PlanGun, type PlanVeri } from './sinavPlani';
-import { aktifKurul } from '../../services/kurulTakvimi';
 
 const SAAT_KEY = 'medsoru_sinav_plani_saat_v1';
 const SAATLER = [3, 5, 7, 9, 11];
@@ -27,7 +26,7 @@ function kalanYaz(sinav: string) {
   return sa >= 24 ? `${Math.floor(sa / 24)} gün ${sa % 24} sa kaldı` : `${sa} sa kaldı`;
 }
 
-export default function SinavPlani({ hiz }: { hiz: Partial<Record<TakipModul, Hiz>> }) {
+export default function SinavPlani({ hiz, kurul }: { hiz: Partial<Record<TakipModul, Hiz>>; kurul: number }) {
   const [veri, setVeri] = useState<PlanVeri | null | undefined>(undefined);
   const [saat, setSaat0] = useState(okuSaat);
   const [tumGun, setTumGun] = useState<Record<number, boolean>>({});
@@ -38,7 +37,7 @@ export default function SinavPlani({ hiz }: { hiz: Partial<Record<TakipModul, Hi
     window.addEventListener('storage', f);
     return () => window.removeEventListener('storage', f);
   }, []);
-  useEffect(() => { let c = true; planVerisiYukle().then((v) => c && setVeri(v), () => c && setVeri(null)); return () => { c = false; }; }, []);
+  useEffect(() => { let c = true; setVeri(undefined); planVerisiYukle(kurul).then((v) => c && setVeri(v), () => c && setVeri(null)); return () => { c = false; }; }, [kurul]);
   const setSaat = (n: number) => { setSaat0(n); try { localStorage.setItem(SAAT_KEY, String(n)); } catch { /* yok */ } };
 
   // takip değişince (işaret, süre) yeniden hesaplanır
@@ -46,7 +45,7 @@ export default function SinavPlani({ hiz }: { hiz: Partial<Record<TakipModul, Hi
 
   if (veri === undefined) return <section className="sp sp-bos" aria-busy="true"><span className="bd-spin" aria-hidden /> Sınav planı hazırlanıyor…</section>;
   // Aktif kurulun sınav dağılımı (sinav_dagilimi.json) yoksa plan kurulamaz: boş ekran yerine nedenini söyle
-  if (!plan) return <section className="sp sp-bos"><p>Kurul {aktifKurul().kurul} için sınav dağılımı henüz girilmedi; plan dağılım gelince hazırlanır.</p></section>;
+  if (!plan) return <section className="sp sp-bos"><p>Kurul {kurul} için sınav dağılımı henüz girilmedi; plan dağılım gelince hazırlanır.</p></section>;
 
   const { simdi, sonra } = plan;
   const tahmini = (veri?.dagilim as { tahmini?: boolean } | undefined)?.tahmini;
