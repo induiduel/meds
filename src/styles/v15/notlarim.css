@@ -1,0 +1,43 @@
+/* v15 · Notlarım (NotlarimV15) — not listesi + kalem/fosforlu düzenleyici; renkler palet tokenından */
+.nt15 { container-type: inline-size; display: flex; flex-direction: column; gap: 12px; max-width: 980px; width: 100%; margin-inline: auto; }
+.nt15-ust { display: flex; gap: 8px; align-items: center; }
+.nt15-ara { flex: 1; min-width: 0; }
+.nt15-bos { padding: 28px 20px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 8px; }
+.nt15-bos > svg { width: 40px; height: 40px; padding: 9px; border-radius: 12px; background: var(--color-accent-soft); color: var(--color-accent); }
+.nt15-bos b { color: var(--color-ink); font-size: 1.05rem; }
+.nt15-bos p { margin: 0 0 6px; color: var(--color-ink-2); max-width: 46ch; line-height: 1.45; }
+.nt15-izgara { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+@container (min-width: 720px) { .nt15-izgara { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+.nt15-kart { width: 100%; height: 100%; min-height: 128px; display: flex; flex-direction: column; gap: 6px; text-align: left; padding: 12px; font: inherit; cursor: pointer; border-top: 4px solid var(--nt-r, var(--color-line)); }
+.nt15-kart b { color: var(--color-ink); font-weight: 600; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.nt15-kart span { flex: 1; color: var(--color-ink-2); font-size: .85rem; line-height: 1.4; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; white-space: pre-line; }
+.nt15-kart small { color: var(--color-ink-3); font-size: .72rem; }
+.is-red { --nt-r: var(--color-bad); } .is-amber { --nt-r: var(--color-warn); } .is-green { --nt-r: var(--color-ok); }
+.is-blue { --nt-r: var(--color-accent); } .is-violet { --nt-r: oklch(0.58 0.17 300); }
+
+.nt15-arac { position: sticky; top: 0; z-index: 2; display: flex; flex-wrap: wrap; align-items: center; gap: 4px; padding: 6px; }
+.nt15-ab { display: inline-flex; align-items: center; gap: 6px; min-height: 38px; padding: 0 10px; border: 0; border-radius: 9px; background: none; color: var(--color-ink-2); font: inherit; font-size: .85rem; cursor: pointer; }
+.nt15-ab svg { width: 18px; height: 18px; }
+.nt15-ab.is-on { background: var(--color-accent-soft); color: var(--color-accent); font-weight: 600; }
+.nt15-ab:disabled { opacity: .4; cursor: default; }
+@container (max-width: 520px) { .nt15-ab span { display: none; } }
+.nt15-ayir { width: 1px; height: 22px; background: var(--color-line); margin: 0 2px; }
+.nt15-mr { width: 26px; height: 26px; border-radius: 50%; border: 2px solid var(--color-white); box-shadow: 0 0 0 1px var(--color-line); cursor: pointer; padding: 0; }
+.nt15-mr.is-on { box-shadow: 0 0 0 2px var(--color-accent); }
+.nt15-mr.is-ink { background: var(--color-ink); } .nt15-mr.is-red { background: var(--color-bad); } .nt15-mr.is-blue { background: var(--color-accent); }
+.nt15-mr.is-green { background: var(--color-ok); } .nt15-mr.is-amber { background: var(--color-warn); }
+.nt15-kalin { font: inherit; font-size: .82rem; border: 1px solid var(--color-line); background: var(--color-white); color: var(--color-ink); border-radius: 8px; padding: 6px; }
+
+.nt15-kagit { padding: 0; overflow: hidden; border-top: 4px solid var(--nt-r, var(--color-line)); }
+.nt15-renk { display: flex; align-items: center; gap: 8px; padding: 8px 10px; border-bottom: 1px solid var(--color-line-soft, var(--color-line)); }
+.nt15-rk { width: 22px; height: 22px; border-radius: 50%; padding: 0; cursor: pointer; border: 2px solid var(--color-white); box-shadow: 0 0 0 1px var(--color-line); background: var(--nt-r, var(--color-field)); }
+.nt15-rk.is-none { background: repeating-linear-gradient(45deg, var(--color-field) 0 3px, var(--color-white) 3px 6px); }
+.nt15-rk.is-on { box-shadow: 0 0 0 2px var(--color-accent); }
+.nt15-bosluk { flex: 1; }
+.nt15-yuzey { position: relative; padding: 14px 16px 24px; background-image: linear-gradient(transparent calc(1.7em - 1px), var(--color-line-soft, var(--color-line)) 1px); background-size: 100% 1.7em; background-position: 0 calc(14px + 2.6em); }
+.nt15-yuzey.is-ciz { touch-action: none; cursor: crosshair; user-select: none; }
+.nt15-baslik { width: 100%; border: 0; background: none; font: inherit; font-size: 1.3rem; font-weight: 700; color: var(--color-ink); padding: 0; margin-bottom: 8px; outline: none; }
+.nt15-metin { width: 100%; border: 0; background: none; resize: none; font-family: var(--font-read); font-size: 1rem; line-height: 1.7em; color: var(--color-ink); padding: 0; outline: none; min-height: 50vh; overflow: hidden; }
+.nt15-yuzey.is-ciz .nt15-baslik, .nt15-yuzey.is-ciz .nt15-metin { pointer-events: none; }
+.nt15-tuval { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
+.nt15-not { margin: 0; padding: 8px 14px 12px; }

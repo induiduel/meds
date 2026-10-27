@@ -268,7 +268,7 @@ export const SideNavV15: React.FC<SideNavProps> = ({ active, onGo, isAdmin, user
       <div className="v15-side-foot">
         <button type="button" className="v15-nav-a" onClick={kronometreAc}><Timer aria-hidden="true" /><span className="v15-nav-t">Kronometre</span></button>
         {isAdmin && link('manage', <><ShieldCheck aria-hidden="true" /><span className="v15-nav-t">Yönetim</span></>, 'v15-nav-a')}
-        {(['study', 'bitirdiklerim', 'stats', 'basarimlar'] as AppRoute[]).map((r) => {
+        {(['study', 'notlarim', 'bitirdiklerim', 'stats', 'basarimlar'] as AppRoute[]).map((r) => {
           const it = NAV_ITEMS[r];
           return it ? link(r, <><it.icon aria-hidden="true" /><span className="v15-nav-t">{it.label}</span></>, 'v15-nav-a') : null;
         })}

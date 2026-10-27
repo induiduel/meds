@@ -144,6 +144,7 @@ const GecmisKurullarView = React.lazy(() => wrapLazy(import('./components/olasi/
 const KampView = React.lazy(() => wrapLazy(import('./components/kamp/KampView')));
 const MerkezView = React.lazy(() => wrapLazy(import('./components/merkez/MerkezView')));
 const SoruHaritasiV15 = React.lazy(() => wrapLazy(import('./components/v15/SoruHaritasiV15')));
+const NotlarimV15 = React.lazy(() => wrapLazy(import('./components/v15/NotlarimV15')));
 const OyunlarV15 = React.lazy(() => wrapLazy(import('./components/v15/OyunlarV15')));
 const DersProgramiV15 = React.lazy(() => wrapLazy(import('./components/v15/DersProgramiV15')));
 const SinavTakvimiV15 = React.lazy(() => wrapLazy(import('./components/v15/SinavTakvimiV15')));
@@ -2026,6 +2027,13 @@ export default function App() {
         {activeTab === 'basarimlar' && (
           <Suspense fallback={<ViewFallback />}>
             <BasarimView />
+          </Suspense>
+        )}
+
+        {/* TAB: /notlarim — kişisel notlar + kalem/fosforlu çizim (userKvSync ile hesaba eşitlenir) */}
+        {activeTab === 'notlarim' && (
+          <Suspense fallback={<ViewFallback />}>
+            <NotlarimV15 />
           </Suspense>
         )}
 
