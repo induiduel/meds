@@ -146,3 +146,4 @@ Tasarımı v15.4'te eklenen (B2, artifact sürüm 18): Ders özetleri + okuyucu,
 kullanıcı onayı. Dağıtım yalnız `deploy/oracle/dagit.sh` (onem +1), kullanıcı isterse.
 
 - **Ders programı** `DersProgramiV15.tsx` + `styles/v15/program.css`, rota `ders_programi` (`/program` ↔ `/dersler/program`). Veri `src/data/dersler/kN.json`; sesli dersi olan satır ders ayrıntısına gider. Kurul 1 kaydında saat yok (—).
+- **Çalışma grafikleri** `CalismaGrafikleriV15.tsx` + `styles/v15/grafik.css`: İstatistiklerim tepesinde (yalnız v15), sayfanın 7/30 gün seçimine bağlı; özet kutuları, günlük süre çubukları (dokun/üzerine gel → gün ayrıntısı), modül dağılımı. Veri calismaTakip.

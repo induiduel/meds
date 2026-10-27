@@ -1,10 +1,10 @@
 {
  "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
- "onem": 396,
- "baslik": "Sesli derslerde arşiv",
+ "onem": 397,
+ "baslik": "İstatistik grafikleri",
  "maddeler": [
-  "Sesli dersler listesine '2025-26 arşivi' tuşu: geçen yılın sesli derslerine tek dokunuşla geç",
-  "'Bu yıla dön' ile güncel döneme geri dön"
+  "İstatistiklerim sayfasında yeni çalışma grafikleri: toplam süre, aktif gün ortalaması, seri ve biten konu",
+  "Günlük çalışma süresi çubukları (çubuğa dokununca o günün süresi) ve hangi bölümde ne kadar çalıştığın"
  ],
  "eklenen": [],
  "degisen": [],

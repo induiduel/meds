@@ -11,6 +11,8 @@ import { dayKey, getActivity, getStudySeconds, type ActivityKind } from '../../s
 import { computeContributorStats } from '../../utils/contributionScore';
 import { useSpotCozucuStats, fmtSureDk } from '../../services/spotCozucuIstatistik';
 import './stats.css';
+import { useAppearance } from '../../utils/appearance';
+const CalismaGrafikleriV15 = React.lazy(() => import('../v15/CalismaGrafikleriV15'));
 import '../../styles/v12/secondary.css';
 
 /**
@@ -246,6 +248,7 @@ export const StatsView: React.FC<Props> = ({ questions, currentUser, onGo }) => 
   const showBars = lessonsLoading || bars.length > 0;
   const showSide = heatActive || weak.length > 0;
 
+  const { v15 } = useAppearance();
   return (
     <div className="stv flex flex-col min-w-0 pb-12 o12-page o12-stv">
       <header className="stv-head">
@@ -267,6 +270,8 @@ export const StatsView: React.FC<Props> = ({ questions, currentUser, onGo }) => 
           ))}
         </div>
       </header>
+
+      {v15 && <React.Suspense fallback={null}><CalismaGrafikleriV15 aralik={period === 'hafta' ? 7 : 30} /></React.Suspense>}
 
       {/* Bento pano (styles/bento.css): dört sayı kutusu, altında geniş doğruluk kartı + yanda etkinlik / zayıf konular */}
       <div className="stv-bento bento" role="group" aria-label="Özet">

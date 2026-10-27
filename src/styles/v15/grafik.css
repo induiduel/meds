@@ -1,0 +1,34 @@
+/* v15 · Çalışma grafikleri (CalismaGrafikleriV15) — tek renk (vurgu), renkler palet tokenından */
+.gf15 { container-type: inline-size; display: flex; flex-direction: column; gap: 12px; margin-bottom: 20px; }
+.gf15-ust { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.gf15-ust h2 { margin: 0; font-size: 1.05rem; color: var(--color-ink); }
+.gf15-kpi { display: grid; gap: 8px; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+@container (min-width: 640px) { .gf15-kpi { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+.gf15-kpi > div { padding: 12px 14px; display: flex; flex-direction: column; gap: 2px; }
+.gf15-kpi small { color: var(--color-ink-3); font-size: .78rem; }
+.gf15-kpi b { color: var(--color-ink); font-size: 1.25rem; font-weight: 700; font-variant-numeric: tabular-nums; }
+.gf15-kart { padding: 14px; }
+.gf15-kb { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 4px 12px; margin-bottom: 12px; }
+.gf15-kb b { color: var(--color-ink); font-weight: 600; }
+.gf15-bos { margin: 0; color: var(--color-ink-2); font-size: .9rem; }
+.gf15-grafik { display: grid; grid-template-columns: 28px minmax(0, 1fr); grid-template-rows: 150px auto; column-gap: 6px; }
+.gf15-y { display: flex; flex-direction: column; justify-content: space-between; align-items: flex-end; font-size: .7rem; color: var(--color-ink-3); font-variant-numeric: tabular-nums; transform: translateY(-.4em); }
+.gf15-y span:last-child { transform: translateY(.4em); }
+.gf15-cubuklar { position: relative; display: flex; align-items: flex-end; gap: 2px; border-bottom: 1px solid var(--color-line); }
+.gf15-cizgi { position: absolute; left: 0; right: 0; height: 0; border-top: 1px dashed var(--color-line-soft, var(--color-line)); pointer-events: none; }
+.gf15-c { flex: 1; min-width: 0; height: 100%; display: flex; align-items: flex-end; justify-content: center; border: 0; padding: 0; background: none; cursor: pointer; position: relative; }
+.gf15-c > span { display: block; width: min(100%, 22px); border-radius: 4px 4px 0 0; background: color-mix(in oklab, var(--color-accent) 70%, var(--color-white)); transition: background .12s; }
+.gf15-c.is-bugun > span { background: var(--color-accent); }
+.gf15-c.is-on { background: var(--color-field); border-radius: 4px; }
+.gf15-c.is-on > span { background: var(--color-accent); }
+.gf15-c:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 1px; border-radius: 4px; }
+.gf15-x { grid-column: 2; display: flex; gap: 2px; padding-top: 4px; }
+.gf15-x span { flex: 1; min-width: 0; text-align: center; white-space: nowrap; overflow: visible; display: flex; justify-content: center; font-size: .7rem; color: var(--color-ink-3); font-variant-numeric: tabular-nums; }
+.gf15-mod { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px; }
+.gf15-mod li { display: grid; grid-template-columns: minmax(0, 8.5rem) minmax(0, 1fr) auto; align-items: center; gap: 10px; }
+.gf15-mod-ad { color: var(--color-ink-2); font-size: .88rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.gf15-mod-bar { height: 10px; border-radius: 5px; background: var(--color-field); overflow: hidden; }
+.gf15-mod-bar > span { display: block; height: 100%; border-radius: 5px; background: var(--color-accent); }
+.gf15-mod-n { color: var(--color-ink); font-size: .85rem; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.gf15-mod-n small { color: var(--color-ink-3); }
+.gf15-not { margin: 12px 0 0; }
