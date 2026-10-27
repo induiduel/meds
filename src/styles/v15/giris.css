@@ -99,3 +99,30 @@
   :root[data-v15='on'] .v15g-gu .gu-govde { padding: var(--v15-s1) var(--v15-s4) var(--v15-s3); }
   :root[data-v15='on'] .v15g-gu .gu-alt { padding: var(--v15-s3) var(--v15-s4) calc(var(--v15-s4) + env(safe-area-inset-bottom, 0px)); }
 }
+
+/* I02–I04 tanıtım (tam sayfa) */
+.v15i { position: fixed; inset: 0; z-index: 1000; display: flex; flex-direction: column; background: var(--color-canvas); color: var(--color-ink); font-family: var(--font-sans); }
+.v15i-ust { display: flex; align-items: center; padding: calc(env(safe-area-inset-top) + 8px) 16px 8px; min-height: 52px; }
+.v15i-atla, .v15i-geri { border: 0; background: none; color: var(--color-ink-3); font: inherit; font-size: .95rem; cursor: pointer; padding: 8px; border-radius: 10px; display: inline-grid; place-items: center; }
+.v15i-geri svg { width: 22px; height: 22px; }
+.v15i-ic { flex: 1; display: flex; flex-direction: column; justify-content: center; gap: 20px; padding: 0 28px; max-width: 520px; width: 100%; margin: 0 auto; }
+.v15i-ic.from-right { animation: v15iSag .32s ease-out; }
+.v15i-ic.from-left { animation: v15iSol .32s ease-out; }
+@keyframes v15iSag { from { opacity: 0; transform: translateX(24px); } }
+@keyframes v15iSol { from { opacity: 0; transform: translateX(-24px); } }
+.v15i-resim { aspect-ratio: 1.1; width: 100%; max-height: 42vh; border-radius: 28px; display: grid; place-items: center;
+  background: radial-gradient(circle at 50% 45%, color-mix(in oklab, var(--color-accent) 16%, var(--color-white)), var(--color-accent-soft) 72%); color: var(--color-accent); }
+.v15i-resim.is-1 { background: radial-gradient(circle at 50% 45%, color-mix(in oklab, var(--color-ok) 16%, var(--color-white)), var(--color-ok-soft) 72%); color: var(--color-ok); }
+.v15i-resim.is-2 { background: radial-gradient(circle at 50% 45%, color-mix(in oklab, var(--color-warn) 16%, var(--color-white)), var(--color-warn-soft) 72%); color: var(--color-warn); }
+.v15i-resim svg { width: 46%; height: auto; }
+.v15i-nokta { display: flex; justify-content: center; gap: 8px; }
+.v15i-nokta button { width: 8px; height: 8px; padding: 0; border: 0; border-radius: 999px; background: var(--color-line); cursor: pointer; transition: width .25s, background .25s; }
+.v15i-nokta button.is-on { width: 22px; background: var(--color-accent); }
+.v15i-t { margin: 0; font: 700 26px/1.2 var(--font-sans); letter-spacing: -0.015em; text-align: center; }
+.v15i-p { margin: 0; font-size: 15px; line-height: 1.5; color: var(--color-ink-2); text-align: center; }
+.v15i-alt { padding: 16px 24px calc(env(safe-area-inset-bottom) + 28px); max-width: 520px; width: 100%; margin: 0 auto; }
+.v15i-btn { width: 100%; min-height: 52px; border: 0; border-radius: 999px; background: var(--color-accent); color: var(--color-on-accent, #fff); font: 600 1rem/1 var(--font-sans); cursor: pointer; }
+@media (prefers-reduced-motion: reduce) { .v15i-ic { animation: none !important; } }
+/* I05: ikinci giriş yolu (öğrenci e-postası) */
+:root[data-v15='on'] .v15g .v15g-yol { margin-top: 8px; gap: 8px; }
+:root[data-v15='on'] .v15g .v15g-yol svg { width: 18px; height: 18px; }

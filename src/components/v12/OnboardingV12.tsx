@@ -1,7 +1,7 @@
 import React, { useEffect, useId, useRef } from 'react';
 import { createPortal } from 'react-dom';
 import {
-  Activity, Archive, ArrowRight, Check, ChevronLeft, ChevronRight, CloudDownload, FileText, Layers, Monitor,
+  Activity, Archive, ArrowRight, Check, ChevronLeft, ChevronRight, CircleHelp, CloudDownload, Dna, FileText, Headphones, Layers, Monitor,
   Search, Smartphone, Sparkles, Tablet, WifiOff, X,
 } from 'lucide-react';
 import { lockScroll, unlockScroll } from '../../utils/scrollLock';
@@ -163,6 +163,8 @@ export interface OnboardingV12Props {
 export const OnboardingV12: React.FC<OnboardingV12Props> = ({ steps, step, dir, go, onTouchStart, onTouchEnd, auth, onClose }) => {
   const v15 = useAppearance().v15;
   const last = steps.length - 1;
+  // tam sayfa tanıtım açıkken alt sekme çubuğu gizlenir (kurulum.css › .tam-katman)
+  useEffect(() => { if (!v15) return; document.documentElement.classList.add('tam-katman'); return () => document.documentElement.classList.remove('tam-katman'); }, [v15]);
   const isAuth = step === last;
   const s = steps[step];
 
@@ -181,6 +183,34 @@ export const OnboardingV12: React.FC<OnboardingV12Props> = ({ steps, step, dir, 
       ))}
     </div>
   );
+
+  // v15 (tasarım I02–I04): tam sayfa tanıtım — sağ üstte Atla, ortada resim + noktalar + ortalı başlık, altta tek düğme
+  if (v15 && !isAuth) {
+    const RESIM = [Headphones, CircleHelp, Dna];
+    const Resim = RESIM[step] || Activity;
+    return (
+      <div className="v15i" role="dialog" aria-modal="true" aria-label="MeDSor tanıtımı" onTouchStart={onTouchStart} onTouchEnd={onTouchEnd}>
+        <div className="v15i-ust">
+          {step > 0 && <button type="button" className="v15i-geri" onClick={() => go(step - 1)} aria-label="Geri"><ChevronLeft aria-hidden="true" /></button>}
+          <span className="e12-grow" />
+          <button type="button" className="v15i-atla" onClick={() => go(last)}>Atla</button>
+        </div>
+        <div key={step} className={`v15i-ic ${dir > 0 ? 'from-right' : 'from-left'}`}>
+          <div className={`v15i-resim is-${step}`} aria-hidden="true"><Resim strokeWidth={1.1} /></div>
+          <div className="v15i-nokta" role="tablist" aria-label="Tanıtım adımları">
+            {steps.slice(0, last).map((st, i) => (
+              <button key={i} type="button" role="tab" aria-selected={i === step} aria-label={`${i + 1}. adım: ${st.title}`} className={i === step ? 'is-on' : ''} onClick={() => go(i)} />
+            ))}
+          </div>
+          <h1 className="v15i-t">{s.title}</h1>
+          <p className="v15i-p">{s.text}</p>
+        </div>
+        <div className="v15i-alt">
+          <button type="button" className="v15i-btn" onClick={() => go(step + 1)}>{step === last - 1 ? 'Başlayalım' : 'İleri'}</button>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className={`e12-ob${v15 ? ' v15g-ob' : ''}`} role="dialog" aria-modal="true" aria-label="MeDSor tanıtımı" onTouchStart={onTouchStart} onTouchEnd={onTouchEnd}>

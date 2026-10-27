@@ -489,3 +489,4 @@ listesinden yürüdü, I07–I10 kayıt adımları gibi bütün bir akış hiç 
 | O04–O07, O10 PDF okuyucu/ızgara/arama/ikili/tam ekran | SIRADA | PDF.js görüntüleyici tek sayfa; ızgara, arama, ikili sayfa yok |
 | Kronometre T, U | KURULDU | Kaynaşma, ayarlar, geçmiş |
 | A06 bildirim | KURULDU | /bildirimler |
+- I02–I04 tanıtım: tam sayfa (Atla, resim, noktalar, ortalı başlık, İleri/Başlayalım), tasarım metinleri. I05 giriş: "Hesabına gir", Google + "Öğrenci e-postasıyla kayıt ol" + e-posta/şifre + Şifremi unuttum; Apple ve sınıf kodu altyapı olmadığı için yok (sahte düğme konmadı).

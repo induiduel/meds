@@ -76,6 +76,14 @@ const Scene: React.FC<{ step: number }> = ({ step }) => {
   );
 };
 
+/** v15 tasarımı (I02–I04): üç tanıtım + giriş (I05) */
+const STEPS_V15 = [
+  { title: 'Dinlerken PDF’in seni takip etsin', text: 'Hocanın anlattığı cümle metinde ve PDF’te aynı anda işaretlenir.' },
+  { title: 'Yanlışın anında açıklanır', text: 'Her şık için ne olduğu, ne işe yaradığı ve neden doğru ya da yanlış olduğu.' },
+  { title: 'Hücreni büyüt', text: 'Çalıştıkça glukoz, başardıkça DNA kazan; hücren evrimleşsin.' },
+  { title: 'Hesabına gir', text: '' },
+];
+
 interface OnboardingProps {
   onAuthSuccess: (user: AppUser, token?: string | null) => void;
   onClose?: () => void;
@@ -85,8 +93,10 @@ export const Onboarding: React.FC<OnboardingProps> = ({ onAuthSuccess, onClose }
   const [step, setStep] = useState(0);
   const [dir, setDir] = useState<1 | -1>(1);
   const touchX = useRef<number | null>(null);
-  const v12 = useAppearance().design === 'v12';
-  const last = STEPS.length - 1;
+  const gor = useAppearance();
+  const v12 = gor.design === 'v12';
+  const adimlar = gor.v15 ? STEPS_V15 : STEPS;
+  const last = adimlar.length - 1;
 
   const go = (n: number) => {
     const next = Math.max(0, Math.min(last, n));
@@ -105,7 +115,7 @@ export const Onboarding: React.FC<OnboardingProps> = ({ onAuthSuccess, onClose }
     return () => window.removeEventListener('keydown', onKey);
   });
 
-  const s = STEPS[step];
+  const s = adimlar[step] || adimlar[last];
   const isAuth = step === last;
   const onTouchStart = (e: React.TouchEvent) => { if (!isAuth) touchX.current = e.touches[0].clientX; };
   const onTouchEnd = (e: React.TouchEvent) => {
@@ -118,7 +128,7 @@ export const Onboarding: React.FC<OnboardingProps> = ({ onAuthSuccess, onClose }
   if (v12) {
     return (
       <OnboardingV12
-        steps={STEPS}
+        steps={adimlar}
         step={step}
         dir={dir}
         go={go}
@@ -127,7 +137,7 @@ export const Onboarding: React.FC<OnboardingProps> = ({ onAuthSuccess, onClose }
         onClose={onClose}
         auth={
           <Suspense fallback={<div className="e12-auth-skel" aria-hidden="true" />}>
-            <UserAuthModal isOpen embedded mandatory onClose={() => {}} onAuthSuccess={onAuthSuccess} initialMode="register" />
+            <UserAuthModal isOpen embedded mandatory onClose={() => {}} onAuthSuccess={onAuthSuccess} initialMode={gor.v15 ? 'login' : 'register'} />
           </Suspense>
         }
       />

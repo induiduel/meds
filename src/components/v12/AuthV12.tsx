@@ -1,5 +1,5 @@
 import React, { useEffect, useId, useRef, useState } from 'react';
-import { Activity, AlertCircle, ArrowLeft, Check, CheckCircle2, Copy, ExternalLink, Globe, KeyRound, Loader2, ShieldAlert, ShieldCheck, X } from 'lucide-react';
+import { Activity, AlertCircle, GraduationCap, ArrowLeft, Check, CheckCircle2, Copy, ExternalLink, Globe, KeyRound, Loader2, ShieldAlert, ShieldCheck, X } from 'lucide-react';
 import { EntryDialogV12 } from './OnboardingV12';
 import { useAppearance } from '../../utils/appearance';
 import '../../styles/v12/entry.css';
@@ -52,13 +52,13 @@ export const AuthCardV12: React.FC<AuthCardV12Props> = (p) => {
   const uid = useId();
   const { mode, disabled } = p;
   const v15 = useAppearance().v15;
-  const title = mode === 'admin' ? 'Yönetici girişi' : mode === 'login' ? 'Giriş yap' : 'Hesap oluştur';
+  const title = mode === 'admin' ? 'Yönetici girişi' : mode === 'login' ? (v15 ? 'Hesabına gir' : 'Giriş yap') : 'Hesap oluştur';
   const sub =
     mode === 'admin'
       ? 'Yönetim konsoluna erişim'
       : mode === 'login'
-        ? 'Tek dokunuşla Google, ya da e-postan ve şifrenle.'
-        : 'Katkıların adınla görünsün; soru eklemek için giriş şart değil.';
+        ? (v15 ? 'İlerlemen, notların ve hücren hesabında saklanır.' : 'Tek dokunuşla Google, ya da e-postan ve şifrenle.')
+        : v15 ? 'Okul e-postan ve öğrenci numaranla hesabını oluştur.' : 'Katkıların adınla görünsün; soru eklemek için giriş şart değil.';
 
   const field = (o: {
     id: string; label: string; value: string; set: (v: string) => void;
@@ -119,7 +119,7 @@ export const AuthCardV12: React.FC<AuthCardV12Props> = (p) => {
 
       {mode !== 'admin' ? (
         <>
-          {v15 && (
+          {false && (
             <div className="v15g-seg" role="tablist" aria-label="Giriş ya da kayıt">
               {(['login', 'register'] as const).map((m) => (
                 <button key={m} type="button" role="tab" aria-selected={mode === m} className={mode === m ? 'is-on' : ''} onClick={() => mode !== m && p.onMode(m)}>
@@ -133,7 +133,12 @@ export const AuthCardV12: React.FC<AuthCardV12Props> = (p) => {
             Google ile devam et
           </button>
 
-          <div className="e12-or" aria-hidden="true"><span>ya da e-posta ile</span></div>
+          {v15 && mode === 'login' && (
+            <button type="button" className="e12-btn is-lg is-block v15g-yol" onClick={() => p.onMode('register')} disabled={disabled}>
+              <GraduationCap aria-hidden="true" /> Öğrenci e-postasıyla kayıt ol
+            </button>
+          )}
+          <div className="e12-or" aria-hidden="true"><span>{v15 ? 'ya da' : 'ya da e-posta ile'}</span></div>
 
           <form key={mode} onSubmit={mode === 'login' ? p.onLogin : p.onRegister} className="e12-form" noValidate>
             {mode === 'register' && (
@@ -169,7 +174,7 @@ export const AuthCardV12: React.FC<AuthCardV12Props> = (p) => {
             </button>
           </form>
 
-          {!v15 && <p className="e12-swap">
+          {<p className="e12-swap">
             {mode === 'login' ? 'Hesabın yok mu?' : 'Hesabın var mı?'}{' '}
             <button type="button" className="e12-link" onClick={() => p.onMode(mode === 'login' ? 'register' : 'login')}>
               {mode === 'login' ? 'Kayıt ol' : 'Giriş yap'}
