@@ -70,6 +70,7 @@ export default function OyunlarV15() {
   const [solo, setSolo] = useState<SoloMod | null>(null);
   const [eslestir, setEslestir] = useState<string | null>(null);
   const [sozlukMod, setSozlukMod] = useState<'eslestir' | 'bosluk'>('eslestir');
+  const [mod, setMod] = useState<'canli' | 'katil' | 'blitz' | 'hayatta' | 'eslestir' | 'bosluk'>(() => (new URLSearchParams(icKonum().search).get('oda') ? 'katil' : 'canli'));
 
   useV15Baslik({ baslik: 'Oyunlar', alt: oda ? `Oda ${oda}${baslik ? ` · ${baslik}` : ''}` : 'Canlı soru yarışması' });
 
@@ -171,75 +172,96 @@ export default function OyunlarV15() {
       <h1 className="sr-only">Oyunlar</h1>
       {!bagli && asama !== 'giris' && <p className="oy15-uyari v15-card">Bağlantı koptu, yeniden bağlanılıyor…</p>}
 
-      {asama === 'giris' && (
-        <>
-          <section className="v15-card oy15-kart">
-            <div className="oy15-bas"><Gamepad2 aria-hidden /><div><b>Canlı soru yarışması</b><span className="v15-cap">Arkadaşlarınla aynı anda aynı soruyu çöz; hızlı ve doğru olan kazanır. Tek başına da oynayabilirsin.</span></div></div>
-            <label className="oy15-alan"><span>Adın</span>
-              <input value={ad} onChange={(e) => setAd(e.target.value.slice(0, 24))} placeholder="Oyunda görünecek ad" maxLength={24} />
-            </label>
-          </section>
+      {asama === 'giris' && (() => {
+        // Önce mod seçilir (renkli kartlar), ayarlar altta seçilen moda göre (kullanıcı isteği 2026-10-27)
+        const MODLAR: { id: typeof mod; ad: string; alt: string; ic: React.ElementType; ton: string }[] = [
+          { id: 'canli', ad: 'Canlı yarışma', alt: 'Oda kur, arkadaşlarınla aynı anda', ic: Users, ton: 'a' },
+          { id: 'katil', ad: 'Koda katıl', alt: 'Arkadaşının odasına gir', ic: Link2, ton: 'c' },
+          { id: 'blitz', ad: 'Blitz', alt: '60 saniyede kaç doğru?', ic: Timer, ton: 'w' },
+          { id: 'hayatta', ad: 'Hayatta kal', alt: '3 can, her yanlış bir can', ic: Heart, ton: 'b' },
+          { id: 'eslestir', ad: 'Eşleştir', alt: 'Terim ↔ tanım, en kısa sürede', ic: Gamepad2, ton: 'ai' },
+          { id: 'bosluk', ad: 'Terimi bul', alt: 'Tanımı oku, terimi yaz', ic: Crown, ton: 'ok' },
+        ];
+        const sozluk = mod === 'eslestir' || mod === 'bosluk';
+        const basla = () => {
+          if (mod === 'canli') kur();
+          else if (mod === 'katil') katil();
+          else if (mod === 'blitz' || mod === 'hayatta') setSolo(mod);
+        };
+        return (
+          <>
+            <section aria-label="Oyun modları">
+              <ul className="oy15-modlar" role="radiogroup" aria-label="Oyun modu">
+                {MODLAR.map((m) => (
+                  <li key={m.id}>
+                    <button type="button" role="radio" aria-checked={mod === m.id} className={`oy15-mod is-${m.ton}${mod === m.id ? ' is-on' : ''}`} onClick={() => { setMod(m.id); setHata(''); }}>
+                      <span className="oy15-mod-ic"><m.ic aria-hidden /></span>
+                      <b>{m.ad}</b>
+                      <small>{m.alt}</small>
+                    </button>
+                  </li>
+                ))}
+              </ul>
+            </section>
 
-          <section className="v15-card oy15-kart">
-            <h2>Oda kur</h2>
-            {kaynaklar === null ? <span className="v15-skel b15-skel" aria-hidden /> : !kaynaklar.length ? (
-              <p className="v15-cap">Oyun sunucusuna ulaşılamadı ya da oyuna uygun soru yok.</p>
-            ) : (
-              <>
-                <label className="oy15-alan"><span>Ders</span>
-                  <select value={brans} onChange={(e) => { setBrans(e.target.value); setDers(''); }}>
-                    {kaynaklar.map((k) => <option key={k.brans} value={k.brans}>Kurul {k.kurul} · {k.ad} ({tr(k.n)} soru)</option>)}
-                  </select>
+            <section className="v15-card oy15-ayar" aria-label="Ayarlar">
+              <h2>{MODLAR.find((m) => m.id === mod)?.ad} · ayarlar</h2>
+              {(mod === 'canli' || mod === 'katil') && (
+                <label className="oy15-alan"><span>Adın</span>
+                  <input value={ad} onChange={(e) => setAd(e.target.value.slice(0, 24))} placeholder="Oyunda görünecek ad" maxLength={24} />
                 </label>
-                {kaynak && (
-                  <label className="oy15-alan"><span>Konu</span>
-                    <select value={ders} onChange={(e) => setDers(e.target.value)}>
-                      <option value="">Karışık (bütün konular)</option>
-                      {kaynak.ders.map((d) => <option key={d.kod} value={d.kod}>{d.baslik} ({d.n})</option>)}
-                    </select>
-                  </label>
-                )}
+              )}
+              {mod === 'katil' && (
+                <label className="oy15-alan"><span>Oda kodu</span>
+                  <input className="oy15-kod-in" value={kodGir} onChange={(e) => setKodGir(e.target.value.toUpperCase().replace(/[^A-Z0-9]/g, '').slice(0, 5))}
+                    placeholder="Örn. K7MPA" aria-label="Oda kodu" autoCapitalize="characters" onKeyDown={(e) => { if (e.key === 'Enter') katil(); }} />
+                </label>
+              )}
+              {(mod === 'canli' || mod === 'blitz' || mod === 'hayatta') && (
+                kaynaklar === null ? <span className="v15-skel b15-skel" aria-hidden /> : !kaynaklar.length ? (
+                  <p className="v15-cap">Oyun sunucusuna ulaşılamadı ya da oyuna uygun soru yok.</p>
+                ) : (
+                  <div className="oy15-ayar-iki">
+                    <label className="oy15-alan"><span>Ders</span>
+                      <select value={brans} onChange={(e) => { setBrans(e.target.value); setDers(''); }}>
+                        {kaynaklar.map((k) => <option key={k.brans} value={k.brans}>Kurul {k.kurul} · {k.ad} ({tr(k.n)} soru)</option>)}
+                      </select>
+                    </label>
+                    {kaynak && (
+                      <label className="oy15-alan"><span>Konu</span>
+                        <select value={ders} onChange={(e) => setDers(e.target.value)}>
+                          <option value="">Karışık (bütün konular)</option>
+                          {kaynak.ders.map((d) => <option key={d.kod} value={d.kod}>{d.baslik} ({d.n})</option>)}
+                        </select>
+                      </label>
+                    )}
+                  </div>
+                )
+              )}
+              {mod === 'canli' && (
                 <div className="oy15-alan"><span>Soru sayısı</span>
                   <div className="pg15-seg" role="radiogroup" aria-label="Soru sayısı">
                     {[5, 10, 15, 20].map((n) => <button key={n} type="button" role="radio" aria-checked={adet === n} className={adet === n ? 'is-on' : ''} onClick={() => setAdet(n)}>{n}</button>)}
                   </div>
                 </div>
-                <button type="button" className="v15-btn oy15-ana" onClick={kur} disabled={!kaynak}>Oda kur</button>
-                <div className="oy15-solo">
-                  <span className="v15-cap">Ya da tek başına, aynı dersle:</span>
-                  <div className="oy15-solo-b">
-                    <button type="button" onClick={() => setSolo('blitz')} disabled={!kaynak}><Timer aria-hidden /><b>Blitz</b><small>60 saniyede kaç doğru?</small></button>
-                    <button type="button" onClick={() => setSolo('hayatta')} disabled={!kaynak}><Heart aria-hidden /><b>Hayatta kal</b><small>3 can, her yanlış bir can</small></button>
+              )}
+              {sozluk ? (
+                <>
+                  <p className="v15-cap">{mod === 'eslestir' ? 'Sözlükten 5 terimi tanımıyla eşleştir; 3 tur, en kısa sürede.' : 'Tanımı oku, terimi yaz; 10 soru, ipucu harf açar.'} Konu seç, oyun başlasın:</p>
+                  <div className="oy15-es-kat">
+                    {ESLESTIR_KATEGORI.map(([k, a]) => <button key={k || 'karisik'} type="button" className="o15-cip" onClick={() => { setSozlukMod(mod === 'bosluk' ? 'bosluk' : 'eslestir'); setEslestir(k); }}>{a}</button>)}
                   </div>
-                </div>
-              </>
-            )}
-          </section>
-
-          <section className="v15-card oy15-kart">
-            <h2><Link2 aria-hidden className="oy15-ic" /> Sözlük oyunları</h2>
-            <div className="pg15-seg" role="tablist" aria-label="Oyun">
-              <button type="button" role="tab" aria-selected={sozlukMod === 'eslestir'} className={sozlukMod === 'eslestir' ? 'is-on' : ''} onClick={() => setSozlukMod('eslestir')}>Eşleştir</button>
-              <button type="button" role="tab" aria-selected={sozlukMod === 'bosluk'} className={sozlukMod === 'bosluk' ? 'is-on' : ''} onClick={() => setSozlukMod('bosluk')}>Terimi bul</button>
-            </div>
-            <p className="v15-cap">{sozlukMod === 'eslestir' ? 'Sözlükten 5 terimi tanımıyla eşleştir; 3 tur, en kısa sürede.' : 'Tanımı oku, terimi yaz; 10 soru, ipucu harf açar.'} Konu seç:</p>
-            <div className="oy15-es-kat">
-              {ESLESTIR_KATEGORI.map(([k, a]) => <button key={k || 'karisik'} type="button" className="o15-cip" onClick={() => setEslestir(k)}>{a}</button>)}
-            </div>
-          </section>
-
-          <section className="v15-card oy15-kart">
-            <h2>Koda katıl</h2>
-            <div className="oy15-kod-gir">
-              <input value={kodGir} onChange={(e) => setKodGir(e.target.value.toUpperCase().replace(/[^A-Z0-9]/g, '').slice(0, 5))}
-                placeholder="Örn. K7MPA" aria-label="Oda kodu" inputMode="text" autoCapitalize="characters"
-                onKeyDown={(e) => { if (e.key === 'Enter') katil(); }} />
-              <button type="button" className="v15-btn" onClick={katil}>Katıl</button>
-            </div>
-          </section>
-          {hata && <p className="oy15-hata" role="alert">{hata}</p>}
-        </>
-      )}
+                </>
+              ) : (
+                <button type="button" className="v15-btn oy15-ana" onClick={basla} disabled={mod !== 'katil' && !kaynak}>
+                  {mod === 'canli' ? 'Oda kur' : mod === 'katil' ? 'Odaya katıl' : 'Başla'}
+                </button>
+              )}
+              {hata && <p className="oy15-hata" role="alert">{hata}</p>}
+            </section>
+          </>
+        );
+      })()}
 
       {asama === 'lobi' && (
         <section className="v15-card oy15-kart oy15-lobi">

@@ -176,10 +176,8 @@
 .s15-sat-t b { display: flex; align-items: center; gap: 8px; font: 650 15px/1.25 var(--font-sans); }
 .s15-sat-t > span { font: var(--v15-t-caption); color: var(--color-ink-3); display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
 
-/* Sayfa ekrana sabit; araç listesi kalan alanda kayar */
-:root[data-v15='on'] .d15.s15 { height: calc(100dvh / var(--ch-zoom, 1) - var(--sh-top-h) - var(--sh-tabs-h) - env(safe-area-inset-bottom, 0px) - 48px); min-height: 420px; }
-.s15 > section { flex: 1 1 auto; min-height: 0; display: flex; flex-direction: column; }
-.s15-liste { flex: 0 1 auto; min-height: 0; overflow-y: auto; overscroll-behavior: contain; }
+/* Sayfa normal kayar (ekrana sabit yükseklik, araç listesini kalan dar alanda kesiyordu) */
+.s15 > section { flex: none; display: flex; flex-direction: column; }
 @container d15 (max-width: 599px) { .s15-ozet { gap: 8px; } .s15 { gap: 14px; } }
 /* Test oluştur */
 .s15-test { flex: none; display: flex; flex-direction: column; gap: 10px; padding: 14px 16px; }
@@ -258,3 +256,33 @@ a.k15-kart:hover { border-color: var(--color-accent); }
 :root[data-v15='on'] .b15-bos::before { content: ""; flex: none; width: 44px; height: 44px; border-radius: var(--v15-r-md, 12px); background: var(--color-accent-soft) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23888' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M22 12h-6l-2 3h-4l-2-3H2'/%3E%3Cpath d='M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z'/%3E%3C/svg%3E") no-repeat center / 22px; }
 :root[data-v15='on'] .b15-bos.is-hata::before { background: var(--color-bad-soft) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23d33' stroke-width='2' stroke-linecap='round'%3E%3Cpath d='M18 6 6 18M6 6l12 12'/%3E%3C/svg%3E") no-repeat center / 20px; }
 :root[data-v15='on'] .b15-bos .v15-btn { margin-top: 2px; }
+
+/* Kompakt Soru çöz (kullanıcı isteği 2026-10-27): özet kartları tek satır, test kutusu sıkı, araçlar ızgara */
+@container d15 (min-width: 600px) {
+  .s15-oz { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; grid-template-rows: auto auto; align-items: center; column-gap: 12px; row-gap: 0; padding: 12px 14px; }
+  .s15-oz .s15-oz-h { grid-column: 1; grid-row: 1 / 3; }
+  .s15-oz .s15-oz-h .v15-label { display: none; }
+  .s15-oz .s15-say { grid-column: 2; grid-row: 1; font-size: 26px; line-height: 1.1; }
+  .s15-oz .s15-say-k { font-size: 18px; }
+  .s15-oz .v15-cap { grid-column: 2; grid-row: 2; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .s15-oz .v15-btn { grid-column: 3; grid-row: 1 / 3; margin: 0; min-height: 38px; padding: 0 14px; font-size: 13.5px; white-space: nowrap; }
+}
+.s15-test { gap: 8px; padding: 12px 14px; }
+.s15-test .s15-test-sat { flex-direction: row; align-items: center; gap: 10px; }
+.s15-test .s15-test-sat > .v15-label { flex: none; width: 78px; }
+.s15-test .s15-cipler { overflow-x: auto; scrollbar-width: none; min-width: 0; flex: 1; }
+.s15-test .s15-cip { height: 30px; padding: 0 11px; font-size: 12.5px; }
+.s15-test-alt { gap: 8px; }
+@container d15 (min-width: 720px) {
+  .s15-test-alt { grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr) auto; align-items: center; }
+  .s15-kip-ac { grid-column: 1 / -1; grid-row: 2; }
+  .s15-test-alt .s15-basla { grid-column: 3; grid-row: 1; min-height: 38px; padding: 0 18px; }
+}
+.s15-test-alt .v15-seg > button { min-height: 32px; }
+.s15-liste { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 0; }
+.s15-liste li + li { border-top: 0; }
+.s15-liste li { border-bottom: 1px solid var(--color-line-soft); border-right: 1px solid var(--color-line-soft); }
+.s15-sat { min-height: 56px; padding: 8px 12px; gap: 10px; }
+.s15-sat .v15-tile { width: 34px; height: 34px; }
+.s15-sat-t b { font-size: 14px; }
+.s15-sat-t > span { -webkit-line-clamp: 1; }

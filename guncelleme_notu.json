@@ -1,15 +1,15 @@
 {
  "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
- "onem": 475,
- "baslik": "Test süzgeçleri ve yanlış nedeni",
+ "onem": 477,
+ "baslik": "Soru çöz sıkılaştı, Oyunlar yenilendi",
  "maddeler": [
-  "Test oluştur: kaynak (çıkmış, örnek, mini…) ve zorluk seçimi",
-  "Yanlış yapınca Neden yanlış yaptın? seç; Yanlışlarım'da görünür"
+  "Soru çöz sayfası daha kompakt; Araçlar artık hep görünür",
+  "Oyunlar: önce oyun modları, sonra seçtiğin modun ayarları"
  ],
  "eklenen": [],
  "degisen": [],
  "duzeltilen": [
-  "Tam ekran araç şeridi görünmüyordu"
+  "Sesli ders Geri düğmesi gelinen listeye dönmüyordu"
  ],
  "silinen": []
 }

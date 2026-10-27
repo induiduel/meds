@@ -105,3 +105,28 @@
 .oy15 .pg15-seg { display: inline-flex; align-self: flex-start; padding: 3px; border-radius: 10px; background: var(--color-field); }
 .oy15 .pg15-seg button { border: 0; background: none; padding: 6px 14px; border-radius: 8px; font: inherit; font-size: .88rem; color: var(--color-ink-2); cursor: pointer; min-height: 32px; }
 .oy15 .pg15-seg button.is-on { background: var(--color-white); color: var(--color-ink); font-weight: 600; box-shadow: 0 1px 2px rgb(0 0 0 / .08); }
+
+/* Giriş: önce mod kartları, sonra seçilen modun ayarları (kullanıcı isteği 2026-10-27) */
+.oy15 { max-width: 880px; }
+.oy15-modlar { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+@container (min-width: 620px) { .oy15-modlar { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+.oy15-mod { --t: var(--color-accent); --ts: var(--color-accent-soft); position: relative; width: 100%; height: 100%; min-height: 128px; display: flex; flex-direction: column; align-items: flex-start; gap: 4px; padding: 14px; border-radius: 20px; border: 1.5px solid transparent;
+  background: linear-gradient(150deg, var(--ts), var(--color-white) 72%); color: var(--color-ink); font: inherit; text-align: left; cursor: pointer; transition: transform .15s, border-color .15s, box-shadow .15s; box-shadow: 0 1px 0 var(--color-line-soft, var(--color-line)); }
+.oy15-mod:hover { transform: translateY(-2px); box-shadow: 0 10px 24px -14px rgba(0, 0, 0, .35); }
+.oy15-mod.is-on { border-color: var(--t); box-shadow: 0 10px 28px -14px color-mix(in oklab, var(--t) 70%, transparent); }
+.oy15-mod.is-on::after { content: "✓"; position: absolute; top: 10px; right: 12px; width: 22px; height: 22px; border-radius: 50%; display: grid; place-items: center; background: var(--t); color: var(--color-white); font-size: 12px; font-weight: 700; }
+.oy15-mod-ic { width: 44px; height: 44px; border-radius: 14px; display: grid; place-items: center; background: var(--t); color: var(--color-white); margin-bottom: 6px; }
+.oy15-mod-ic svg { width: 22px; height: 22px; }
+.oy15-mod b { font-size: 1rem; }
+.oy15-mod small { font-size: .8rem; color: var(--color-ink-2); line-height: 1.35; }
+.oy15-mod.is-c { --t: var(--color-clinic, #30b0c7); --ts: var(--color-clinic-soft, var(--color-accent-soft)); }
+.oy15-mod.is-w { --t: var(--color-warn); --ts: var(--color-warn-soft); }
+.oy15-mod.is-b { --t: var(--color-bad); --ts: var(--color-bad-soft); }
+.oy15-mod.is-ai { --t: var(--color-ai, #af52de); --ts: var(--color-ai-soft, var(--color-accent-soft)); }
+.oy15-mod.is-ok { --t: var(--color-ok); --ts: var(--color-ok-soft); }
+.oy15-ayar { padding: 16px; display: flex; flex-direction: column; gap: 12px; }
+.oy15-ayar h2 { margin: 0; font-size: 1rem; }
+.oy15-ayar-iki { display: grid; gap: 12px; grid-template-columns: minmax(0, 1fr); }
+@container (min-width: 620px) { .oy15-ayar-iki { grid-template-columns: 1fr 1fr; } }
+.oy15-kod-in { letter-spacing: .2em; font-weight: 700; text-transform: uppercase; }
+@media (prefers-reduced-motion: reduce) { .oy15-mod { transition: none; } .oy15-mod:hover { transform: none; } }

@@ -1033,3 +1033,11 @@ Her maddede: belirti · kök neden · Kurul 2 kuralı · kapı durumu. Kanıtlar
 - **Belirti:** Sesli ders tam ekranda sağ üstteki ayar düğmesine basınca şerit açılmıyor, kenarda ince "s." şeridi kalıyordu.
 - **Kök neden:** `.cd-pdf-bar` `container-type: inline-size` taşıyor; tam ekranda mutlak konumlanınca genişliği 0'a çöküyordu. Ayrıca `:is(> svg, …)` geçersiz seçiciydi, kural tümden atılıyordu.
 - **Çözüm/kural:** tam ekran şeridinde `container-type: normal; width: max-content`; seçici düzeltildi. Mutlak konumlu öğeye `container-type: inline-size` verilirse genişlik açıkça verilir; `:is()` içinde başa combinator yazılmaz.
+
+- **Geri düğmesi gelinen listeye dönmeli (2026-10-27):** Sayfa başlığındaki sabit `geri` hedefi her zaman push yapıp gezinme yığınını bozuyordu (liste→ders→Geri ≠ liste). Geri hedefi için `geriHedefe` kullanılır; sabit hedefe doğrudan `navigateTo` yok.
+
+## H104 · Soru çöz sayfasında Araçlar görünmüyordu (2026-10-27)
+- **Belirti:** Masaüstünde Araçlar listesi ekranın altında kesik kalıyor, üç satırdan fazlası görünmüyordu.
+- **Kök neden:** `.d15.s15` ekran yüksekliğine sabitlenmişti (`height: calc(100dvh - …)`) ve araç listesi kalan alanda kendi içinde kayıyordu; Test oluştur kutusu büyüdükçe (yeni süzgeç satırları) listeye kalan alan birkaç piksele indi.
+- **Çözüm:** Sabit yükseklik kaldırıldı (sayfa normal kayar); özet kartları tek satır, test kutusu sıkı, araçlar ızgara.
+- **Kural:** İçerik sayfalarında ekrana sabit yükseklik + iç kaydırma kurma; büyüyebilen içerik (süzgeç, liste) başka bölümü görünmez kılar.
