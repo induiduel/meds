@@ -132,5 +132,33 @@
         }
       ]
     }
+  ],
+  "share_target": {
+    "action": "/cevrimdisi/paket-paylas",
+    "method": "POST",
+    "enctype": "multipart/form-data",
+    "params": {
+      "files": [
+        {
+          "name": "paket",
+          "accept": [
+            ".medspak",
+            "application/x-medspak",
+            "application/octet-stream",
+            "application/zip"
+          ]
+        }
+      ]
+    }
+  },
+  "file_handlers": [
+    {
+      "action": "/cevrimdisi",
+      "accept": {
+        "application/x-medspak": [
+          ".medspak"
+        ]
+      }
+    }
   ]
 }

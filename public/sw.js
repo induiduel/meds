@@ -28,6 +28,8 @@ async function kaliciBuda() {
   } catch { /* budama isteğe bağlı */ }
 }
 // Canlı ders çevrimdışı paketleri (canliDersCevrimdisi.ts): sürüm temizliğinde silinmez, yalnız kullanıcı siler
+const PAYLASIM_CACHE = 'medsor-paylasim';
+const PAYLASIM_ANAHTAR = '/__paylasilan-paket';
 const CD_OFFLINE_CACHE = 'medsoru-canli-ders-offline';
 /** Arka planda (Background Fetch) inen ders dosyaları; uygulama açılınca kaydedilir (canliDersCevrimdisi.ts) */
 const CD_BEKLEYEN_CACHE = 'medsoru-cd-bekleyen';
@@ -237,7 +239,7 @@ self.addEventListener('activate', (event) => {
       .then((keys) => {
         return Promise.all(
           keys.map((key) => {
-            if (key !== STATIC_CACHE && key !== RUNTIME_CACHE && key !== DATA_CACHE && key !== 'medsoru-pdf-offline' && key !== CD_OFFLINE_CACHE && key !== CD_BEKLEYEN_CACHE && key !== PAKET_CACHE && key !== TASARIM_CACHE && key !== KOD_CACHE) {
+            if (key !== STATIC_CACHE && key !== RUNTIME_CACHE && key !== DATA_CACHE && key !== 'medsoru-pdf-offline' && key !== CD_OFFLINE_CACHE && key !== CD_BEKLEYEN_CACHE && key !== PAKET_CACHE && key !== TASARIM_CACHE && key !== KOD_CACHE && key !== PAYLASIM_CACHE) {
               console.log('[SW] Eski önbellek temizleniyor:', key);
               return caches.delete(key);
             }
@@ -275,6 +277,21 @@ self.addEventListener('fetch', (event) => {
     if (url.pathname.startsWith('/api/lecture-pdf/')) {
       return;
     }
+  }
+
+  // Android "Paylaş → MeDSor" (manifest share_target): .medspak cihazda kalır, okuyucu /cevrimdisi'de açar
+  if (req.method === 'POST' && url.origin === self.location.origin && url.pathname === '/cevrimdisi/paket-paylas') {
+    event.respondWith((async () => {
+      try {
+        const f = (await req.formData()).get('paket');
+        if (f && typeof f !== 'string') {
+          const c = await caches.open(PAYLASIM_CACHE);
+          await c.put(PAYLASIM_ANAHTAR, new Response(f, { headers: { 'X-Ad': encodeURIComponent(f.name || 'paket.medspak') } }));
+        }
+      } catch (_) { /* boş paylaşım: okuyucu yine açılır */ }
+      return Response.redirect('/cevrimdisi?paylasim=1', 303);
+    })());
+    return;
   }
 
   // Sadece GET isteklerini önbellekle

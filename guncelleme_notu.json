@@ -1,10 +1,10 @@
 {
  "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
- "onem": 515,
- "baslik": "Soru çözücü: kurul listesi düzeltildi, yeni sade görünüm",
+ "onem": 516,
+ "baslik": "Ders paketini telefondan paylaşarak aç",
  "maddeler": [
-  "Soru çözücü ve En önemliler artık yalnız seçili kurulun derslerini gösterir",
-  "Ders kartları sadeleşti: ilerleme çubuğu, başladığın dersler önde, dokunuşa tepki veren kartlar"
+  "Android: .medspak dosyasında Paylaş → MeDSor seçince ders paketi sitede açılır (MeDSor ana ekrana eklenmiş olmalı)",
+  "Bilgisayar: yüklü MeDSor ile .medspak dosyasını \"Birlikte aç\" ile açabilirsin"
  ],
  "eklenen": [],
  "degisen": [],

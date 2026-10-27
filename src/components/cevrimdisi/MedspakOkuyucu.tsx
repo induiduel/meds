@@ -36,6 +36,32 @@ export default function MedspakOkuyucu() {
     }
   };
 
+  // Telefondan gelen paket: Android "Paylaş → MeDSor" (sw.js önbelleğe koyar, ?paylasim=1) ya da masaüstü PWA
+  // "Birlikte aç" (manifest file_handlers → launchQueue)
+  useEffect(() => {
+    const q = new URLSearchParams(location.search);
+    if (q.get('paylasim') === '1') {
+      q.delete('paylasim');
+      history.replaceState(history.state, '', location.pathname + (q.toString() ? `?${q}` : '') + location.hash);
+      void (async () => {
+        try {
+          const c = await caches.open('medsor-paylasim');
+          const y = await c.match('/__paylasilan-paket');
+          if (!y) { setHata('Paylaşılan paket alınamadı.'); return; }
+          await c.delete('/__paylasilan-paket');
+          const ad = decodeURIComponent(y.headers.get('X-Ad') || 'paket.medspak');
+          await ac(new File([await y.blob()], ad));
+          kok.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        } catch (e: any) { setHata(e?.message || 'Paylaşılan paket açılamadı.'); }
+      })();
+    }
+    const lq = (window as any).launchQueue;
+    lq?.setConsumer?.(async (p: any) => {
+      const h = p?.files?.[0];
+      if (h?.getFile) await ac(await h.getFile());
+    });
+  }, []);
+
   // Ders listesindeki "Paketi aç": cihazdaki (çevrimdışı indirilmiş) .medspak, internetsiz açılır
   const kok = useRef<HTMLElement>(null);
   useEffect(() => {
