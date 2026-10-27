@@ -14,7 +14,7 @@
  *   /dersler/ozetler[/<id>] · /dersler/kartlar
  *   /sorular[/kurulN]                        Soru çöz merkezi
  *   /sorular/soru-cozucu[/kurul1/patoloji]   Sesli soru çözücü (?ders=&coz= korunur)
- *   /sorular/cikmis[/<id>] · /sorular/havuz[/<id>] · /sorular/deneme · /sorular/ornek · /sorular/olasi
+ *   /sorular/cikmis[/<id>] · /sorular/havuz[/<id>] · /sorular/deneme · /sorular/ornek · /sorular/olasi · /sorular/soru-haritasi
  *   /kamplar[/kurul1]                        Sınava hazırlan merkezi (sekmeler: Son Prova, Kamplar, Check Up, En önemliler)
  *   /kamplar/kurul1/son-prova/...            Son Prova
  *   /kamplar/kurul1/cikmis-cozucu[/<branş>]  Çıkmış çözücü (?ders=<paket>&coz=1)
@@ -188,6 +188,8 @@ export function disYol(adres: string): string {
       return birlestir('/sorular/ornek', sp, hash);
     case 'olasi-sorular':
       return birlestir('/sorular/olasi', sp, hash);
+    case 'soru-haritasi':
+      return birlestir('/sorular/soru-haritasi', sp, hash);
     case 'havuz':
       return birlestir(`/sorular/havuz${s[1] ? `/${s.slice(1).map(enc).join('/')}` : ''}`, sp, hash);
     case 'sorular': {
@@ -271,7 +273,7 @@ export function disYol(adres: string): string {
 }
 
 /** /sorular/<x> altında araç olan adlar (gerisi eski havuz soru kimliğidir) */
-const SORU_ARACLARI = new Set(['soru-cozucu', 'cikmis', 'havuz', 'deneme', 'ornek', 'olasi']);
+const SORU_ARACLARI = new Set(['soru-cozucu', 'cikmis', 'havuz', 'deneme', 'ornek', 'olasi', 'soru-haritasi']);
 
 /* ——— görünen adres → iç adres ——— */
 
@@ -331,6 +333,7 @@ export function icYol(adres: string): string {
     if (arac === 'deneme') return birlestir('/test', sp, hash);
     if (arac === 'ornek') return birlestir(`/ornek-sorular${s[2] ? `/${enc(s[2])}` : ''}`, sp, hash);
     if (arac === 'olasi') return birlestir('/olasi-sorular', sp, hash);
+    if (arac === 'soru-haritasi') return birlestir('/soru-haritasi', sp, hash);
     // eski havuz soru bağlantısı /sorular/<soruId>
     return birlestir(`/havuz/${s.slice(1).map(enc).join('/')}`, sp, hash);
   }

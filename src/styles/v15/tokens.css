@@ -5,6 +5,14 @@
  * Kesme noktaları: <600 telefon, 600–1023 tablet / yarım ekran, ≥1024 PC.
  */
 :root[data-v15='on'] {
+  /* Takma adlar: v15 sayfa katmanlarının kullandığı adlar palet kaydındaki gerçek jetonlara bağlanır (tanımsız ad =
+     saydam yüzey/varsayılan yazı tipi hatası, 2026-10-27). Yeni renk adı uydurulmaz; önce palettes.ts'te var mı bakılır. */
+  --color-surface: var(--color-white);
+  --color-success: var(--color-ok);
+  --color-success-soft: var(--color-ok-soft);
+  --color-warning-soft: var(--color-warn-soft);
+  --v15-font: var(--font-sans);
+  --v15-serif: var(--font-read);
   --font-sans: 'Plus Jakarta Sans', 'Geist', ui-sans-serif, system-ui, sans-serif;
   --font-display: 'Plus Jakarta Sans', 'Geist', ui-sans-serif, system-ui, sans-serif;
   --font-read: 'Newsreader', 'Literata', Georgia, serif;

@@ -126,6 +126,9 @@ Yeni bileşen önce buraya eklenir; sayfa CSS'i yalnız yerleşim yazar.
 - Sınav takvimi (D06 + J zaman çizelgesi): `v15/SinavTakvimiV15.tsx` + `styles/v15/takvim.css`; rota `sinav_takvimi`, iç `/takvim` ↔
   görünen `/kamplar/takvim`; merkezModel kamplar + navModel (Sınava hazırlan). Sıradaki sınav (kalan gün, kurul ilerlemesi),
   T‑5/T‑3/T‑1 hazırlık günleri (Son Prova / Çıkmış çözücü / En önemliler'e götürür), yılın sınavları.
+- Soru haritası (b2harita): `v15/SoruHaritasiV15.tsx` + `styles/v15/harita.css`; rota `soru_haritasi` (/soru-haritasi ↔ /sorular/soru-haritasi).
+  Dizin `src/data/soru_haritasi.json` ← `scripts/v15/soru_haritasi.py` (pastQuestions.json sayımı; çıkmış verisi değişince yeniden çalıştır).
+  Hücre → `/sorular/cikmis?kurul=&ders=&yil=` (PastExamsView `?ders=`/`?yil=` ile süzgeç başlatır).
 
 ## Kalan iç sayfalar (kullanıcı kararı 2026-10-27: eski görünümün hepsi v15'e geçecek)
 Tasarımı olan: sesli ders listesi (B04), Öğren etkileşimleri (B07), spotlar (B08), önem (B09), sözlük (B10), notlar (B11),

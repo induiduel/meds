@@ -1,11 +1,11 @@
 {
  "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
- "onem": 389,
- "baslik": "Yeni: Sınav takvimi",
+ "onem": 390,
+ "baslik": "Yeni: Soru haritası",
  "maddeler": [
-  "Sınava hazırlan › Sınav takvimi: sıradaki sınava kaç gün kaldığı ve kurulun ne kadarının geçtiği.",
-  "Sınavdan 5, 3 ve 1 gün önceki hazırlık günleri; her biri o günün işine (Son Prova, çıkmış çözücü, en önemliler) götürür.",
-  "Yılın bütün sınavları (kurullar, final, bütünleme) tek çizelgede."
+  "Soru çöz › Soru haritası: hangi dersten hangi yıl kaç çıkmış soru geldiği, ısı tablosunda.",
+  "Hücreye dokununca o ders ve yılın çıkmış soruları süzülü açılır.",
+  "Yalın görünümde bazı kartların zemini ve okuma yazı tipi düzeltildi."
  ],
  "eklenen": [],
  "degisen": [],

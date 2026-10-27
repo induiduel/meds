@@ -793,3 +793,14 @@ Her maddede: belirti · kök neden · Kurul 2 kuralı · kapı durumu. Kanıtlar
   (claude kapalı) boş sonuçla devam eder.
 - **Çözüm / kural:** elle üretimde her yerleşimden sonra `rapor.anlam_denetimi.bakilan` panel sayısına eşit olmalı; değilse kararlar
   yeni girdi anahtarına (sıra korunarak) eşlenir ya da denetim yeniden yapılır. `bakilan: 0` ile çizim yayına girmez.
+
+## H87 — v15 katmanlarında tanımsız renk/yazı değişkenleri: saydam kartlar, varsayılan yazı tipi (2026-10-27)
+- **Belirti:** Soru haritasında ısı hücreleri renksiz; v15 katmanlı sayfalarda bazı kartların zemini saydam, Newsreader okuma
+  yazısı uygulanmıyor.
+- **Kök neden:** v15 CSS'inde `--color-surface`, `--color-success(-soft)`, `--color-warning-soft`, `--v15-serif`, `--v15-font`
+  kullanıldı; palet kaydında (`utils/palettes.ts`) bu adlar yok (gerçekleri `--color-white`, `--color-ok(-soft)`,
+  `--color-warn-soft`, `--font-read`, `--font-sans`). Tanımsız değişken hesaplanınca özellik geçersiz → zemin saydam,
+  `color-mix` boş, yazı tipi miras.
+- **Çözüm:** `styles/v15/tokens.css`'e takma adlar (gerçek jetonlara bağlı).
+- **Önleme kuralı:** yeni CSS'te renk/yazı değişkeni yazmadan önce `getComputedStyle(document.documentElement)` ile ya da
+  palettes.ts/tokens.css'te var olduğu doğrulanır; yeni ad uydurulmaz.

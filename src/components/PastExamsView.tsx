@@ -301,8 +301,10 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
   // ?kurul=N (Geçmiş kurullar bağlantısı): açılışta o kurula süzülür; parametre yoksa tüm kurullar
   const [selectedCommittee, setSelectedCommittee] = useState<string>(() => { const k = kurulParam(); return k ? `donem3-kurul${k}` : 'all'; });
   const kurulP = useKurulParam();
-  const [selectedYear, setSelectedYear] = useState<string>('all');
-  const [selectedDiscipline, setSelectedDiscipline] = useState<string>('all');
+  // ?yil= / ?ders= ile açılış (v15 Soru haritası hücresi): süzgeç o yıl ve dersle başlar
+  const adresSuzgec = (k: string) => { try { return new URLSearchParams(window.location.search).get(k) || 'all'; } catch { return 'all'; } };
+  const [selectedYear, setSelectedYear] = useState<string>(() => adresSuzgec('yil'));
+  const [selectedDiscipline, setSelectedDiscipline] = useState<string>(() => adresSuzgec('ders'));
   const browseRef = useRef<HTMLUListElement>(null);
   const [deepseekFilter, setDeepseekFilter] = useState<'all' | 'deepseek_only' | 'standard_only'>('all');
   const [sourceFilter, setSourceFilter] = useState<'all' | 'gemini_v3' | 'existing'>('all');
