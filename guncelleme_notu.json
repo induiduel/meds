@@ -1,15 +1,16 @@
 {
-  "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 392,
-  "baslik": "Ders yayın düzeltmesi",
-  "maddeler": [
-    "Kurul 2 Patoloji derslerinin yayınını durduran hata giderildi."
-  ],
-  "eklenen": [],
-  "degisen": [],
-  "duzeltilen": [
-    "Tireyle bitişik yazılan kısaltmalar (DSM-5, MAO-A, HIV-1, 5-HTTLPR) artık slaytta doğru yerde işaretleniyor.",
-    "Büyük harfli Türkçe sözcükler (BİLİNÇ, KOMA) kısaltma sayılmıyor."
-  ],
-  "silinen": []
+ "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
+ "onem": 393,
+ "baslik": "Kurul 2 sınav planı",
+ "maddeler": [
+  "Kurul 2 için tahmini sınav dağılımı: ders programındaki branş saatlerine göre hesaplandı, her dersten çift sayıda soru",
+  "Sınav planı artık Kurul 2'de de açılıyor; resmî dağılım gelince güncellenecek"
+ ],
+ "eklenen": [],
+ "degisen": [],
+ "duzeltilen": [
+  "Tireyle bitişik yazılan kısaltmalar (DSM-5, MAO-A, HIV-1, 5-HTTLPR) artık slaytta doğru yerde işaretleniyor.",
+  "Büyük harfli Türkçe sözcükler (BİLİNÇ, KOMA) kısaltma sayılmıyor."
+ ],
+ "silinen": []
 }

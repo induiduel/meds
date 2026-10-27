@@ -1,18 +1,46 @@
 {
-  "aciklama": "Kurul teorik sınavı branş başına soru sayısı (fakülte duyurusu). Baraj: bir branşta soruların yarısından az doğru yapılırsa eksik kalan her doğru kadar puan düşülür (puan = 2·doğru − n/2). Bitirdiklerim › 60 planı (components/takip/sinavPlani.ts) okur; scripts/son_prova/plan.py ile aynı olmalı.",
-  "kurullar": {
-    "1": {
-      "toplam": 100,
-      "hedef": 60,
-      "branslar": {
-        "patoloji": 34,
-        "enfeksiyon": 22,
-        "genetik": 12,
-        "uroloji": 12,
-        "halksagligi": 10,
-        "kadindogum": 6,
-        "farmakoloji": 4
-      }
-    }
+ "aciklama": "Kurul teorik sınavı branş başına soru sayısı (fakülte duyurusu). Baraj: bir branşta soruların yarısından az doğru yapılırsa eksik kalan her doğru kadar puan düşülür (puan = 2·doğru − n/2). Bitirdiklerim › 60 planı (components/takip/sinavPlani.ts) okur; scripts/son_prova/plan.py ile aynı olmalı.",
+ "kurullar": {
+  "1": {
+   "toplam": 100,
+   "hedef": 60,
+   "branslar": {
+    "patoloji": 34,
+    "enfeksiyon": 22,
+    "genetik": 12,
+    "uroloji": 12,
+    "halksagligi": 10,
+    "kadindogum": 6,
+    "farmakoloji": 4
+   }
+  },
+  "2": {
+   "toplam": 100,
+   "hedef": 60,
+   "tahmini": true,
+   "yontem": "Resmî dağılım açıklanmadı; ders programındaki branş saatlerine (109 saat) orantılı, her branş çift sayıya yuvarlandı.",
+   "saatler": {
+    "k2noroloji": 22,
+    "k2patoloji": 5,
+    "k2anestezi": 2,
+    "k2farmakoloji": 28,
+    "k2genetik": 10,
+    "k2psikiyatri": 24,
+    "k2beyincerrahi": 6,
+    "k2ftr": 4,
+    "k2aile": 8
+   },
+   "branslar": {
+    "k2farmakoloji": 26,
+    "k2psikiyatri": 22,
+    "k2noroloji": 20,
+    "k2genetik": 8,
+    "k2aile": 8,
+    "k2beyincerrahi": 6,
+    "k2patoloji": 4,
+    "k2ftr": 4,
+    "k2anestezi": 2
+   }
   }
+ }
 }

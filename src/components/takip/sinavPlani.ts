@@ -19,17 +19,27 @@
  * P(≥60) %90'a ulaşınca plan durur: kalan vakit dinlenme ve isteğe bağlı tekrar.
  */
 import dagilim from '../../data/sinav_dagilimi.json';
+import bransKaydi from '../../data/dersler/branslar.json';
 import { navigateTo, pathFor } from '../../router';
 import { elemeOku } from '../../services/konuEleme';
 import { bittiMi, type Hiz, type TakipModul, takipOku, sesliKonuId } from '../../services/calismaTakip';
 import { aktifKurul } from '../../services/kurulTakvimi';
 import { cdListeGetir, type CdListeDers } from '../canliDers/canliDersStore';
 import { CD_SPOT_BRANS, cdTekSurum } from '../canliDers/canliDersKategori';
-import { bransTanim, type Brans } from '../spots/brans';
+import { BRANSLAR, bransTanim, type Brans } from '../spots/brans';
 import { cozucuDizinYukle, ilerlemeOku, ozet, type CDizinDers } from '../spots/cozucu/cozucuVeri';
 import { dizinYukle as onemDizinYukle, ogrenilenler, type DizinDers } from '../spots/onem/onemVeri';
 import { getAsistanSureGruplari } from '../spots/sure/spotsSureVeri';
 import { cozucuyaGit, onemeGit } from '../spots/spotsYol';
+
+// İçeriği henüz yüklenmemiş Kurul 2+ branşı BRANSLAR'da yok; bransTanim patolojiye düşmesin, adı kayıt defterinden gelsin
+const bransAdi = (b: Brans): string => {
+  const t = BRANSLAR.find((x) => x.id === b);
+  if (t) return t.ad;
+  const m = /^k(\d+)(.+)$/.exec(b);
+  const k = m && (bransKaydi as { branslar: { slug: string; kisa?: string; ad: string }[] }).branslar.find((x) => x.slug === m[2]);
+  return k ? `${k.kisa || k.ad} · K${m![1]}` : b;
+};
 
 export type AdimTur = 'onem' | 'cozucu' | 'sesli';
 export type Asama = 'baraj' | 'puan' | 'pekistir';
@@ -413,7 +423,7 @@ export function planHesapla(veri: PlanVeri, hiz: Partial<Record<TakipModul, Hiz>
     const n = veri.dagilim.branslar[b];
     const A = adimlar.filter((a) => a.ders.brans === b);
     return {
-      brans: b, ad: bransTanim(b).ad, n,
+      brans: b, ad: bransAdi(b), n,
       dogru: ilkBrans[i].dogru, puan: ilkBrans[i].puan,
       planDogru: n * bransP(b), planPuan: beklenen(dag[i]),
       calismaSn: A.filter((a) => a.tur !== 'cozucu').reduce((s, a) => s + a.sn, 0),

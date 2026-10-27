@@ -49,6 +49,7 @@ export default function SinavPlani({ hiz }: { hiz: Partial<Record<TakipModul, Hi
   if (!plan) return <section className="sp sp-bos"><p>Kurul {aktifKurul().kurul} için sınav dağılımı henüz girilmedi; plan dağılım gelince hazırlanır.</p></section>;
 
   const { simdi, sonra } = plan;
+  const tahmini = (veri?.dagilim as { tahmini?: boolean } | undefined)?.tahmini;
   const durum: 'iyi' | 'orta' | 'zor' = plan.guvende ? 'iyi' : !plan.yetersiz ? 'orta' : 'zor';
   const DURUM_AD = { iyi: 'Güvendesin', orta: 'Plana uyarsan geçersin', zor: 'Zor ama puanını artırabilirsin' } as const;
   const ozet = plan.guvende
@@ -150,6 +151,7 @@ export default function SinavPlani({ hiz }: { hiz: Partial<Record<TakipModul, Hi
       {bugun && (
         <div className="sp-kutu">
           <h3 className="sp-h"><span className="sp-h-no">3</span> Bugün ne yapacaksın?</h3>
+          {tahmini && <p className="sp-acikla"><b>Tahmini dağılım:</b> resmî soru sayıları açıklanmadı; ders programındaki branş saatlerine göre hesaplandı (her dersten çift sayıda soru). Resmî dağılım gelince güncellenir.</p>}
           <p className="sp-acikla">Sırayla git; her satırdaki tahmini süre senin çalışma hızına göredir. Yeşil "+puan" o işin sınav puanına katkısıdır.</p>
           {gunListesi(bugun, true)}
           {sonraki.length > 0 && (
@@ -191,7 +193,7 @@ export default function SinavPlani({ hiz }: { hiz: Partial<Record<TakipModul, Hi
                   <span className={`sp-rozet ${alt ? (planAlt ? 'is-kotu' : 'is-orta') : 'is-iyi'}`}>
                     {alt ? (planAlt ? 'Baraj altında' : 'Planla barajı geçer') : 'Barajı geçiyor'}
                   </span>
-                  <small>{sure ? `${sureYaz(sure)} çalışma` : 'Ek çalışma gerekmiyor'}</small>
+                  <small>{sure ? `${sureYaz(sure)} çalışma` : alt ? 'Bu dersin içeriği henüz yüklenmedi' : 'Ek çalışma gerekmiyor'}</small>
                   {b.isabet != null && <small>Çözücüde ilk deneme {yuzde(b.isabet)} ({b.cozulen} soru)</small>}
                 </div>
               </li>
