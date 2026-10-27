@@ -297,7 +297,10 @@ export default function Hucre3D({ n, glukoz, canlilik, onHata }: Props) {
   const kapEl = useRef<HTMLDivElement>(null);
   const pr = useRef({ n, glukoz, canlilik });
   const kirli = useRef(true);
+  const uyandir = useRef<() => void>(() => {});
   pr.current = { n, glukoz, canlilik }; kirli.current = true;
+  // Prop değişince (basamak/glukoz/canlılık) duran döngüyü bir kare için uyandır
+  useEffect(() => { uyandir.current(); }, [n, glukoz, canlilik]);
 
   useEffect(() => {
     const el = kapEl.current; if (!el) return;
@@ -331,7 +334,11 @@ export default function Hucre3D({ n, glukoz, canlilik, onHata }: Props) {
       if (nn === sonN) return;
       if (sar) { kok.remove(sar); atKaldir(sar); sar = null; parca = null; }
       sonN = nn;
-      if (nn >= 1) {
+      if (nn === 0) {
+        // Basamak 0: boş bir su damlası (sahne boş görünmesin)
+        parca = kap(); ekle(parca, kure(1.15, mat(0x93c5fd, { transparent: true, opacity: 0.28, roughness: 0.1 }), 40));
+        sar = new THREE.Group(); sar.add(parca); kok.add(sar); sar.userData.boy = 1.2;
+      } else {
         parca = kurHucre(nn); sar = new THREE.Group(); sar.add(parca); kok.add(sar);
         born = ilk || azHareket ? -10 : simdi; if (!ilk && !azHareket) halkaT = simdi;
         // Geniş basamaklar (doku, ağ, koloni) kameraya sığsın
@@ -343,29 +350,34 @@ export default function Hucre3D({ n, glukoz, canlilik, onHata }: Props) {
     let sonBoy = '';
     const boyutla = () => {
       const w = el.clientWidth || 1, h = el.clientHeight || 1; const anahtar = `${w}x${h}`; if (anahtar === sonBoy) return; sonBoy = anahtar;
-      renderer.setSize(w, h, false); kamera.aspect = w / h; kamera.position.z = w / h < 1 ? 7.2 / Math.max(0.6, w / h) * 0.85 : 7.2; kamera.updateProjectionMatrix(); kirli.current = true;
+      renderer.setSize(w, h, false); kamera.aspect = w / h; kamera.position.z = w / h < 1 ? 7.2 / Math.max(0.6, w / h) * 0.85 : 7.2; kamera.updateProjectionMatrix(); kirli.current = true; uyandir.current();
     };
     const ro = new ResizeObserver(boyutla); ro.observe(el); boyutla();
 
     let surukle = false, sx = 0, yaw = 0;
     const d = renderer.domElement;
     const ptrDown = (e: PointerEvent) => { surukle = true; sx = e.clientX; d.setPointerCapture(e.pointerId); };
-    const ptrMove = (e: PointerEvent) => { if (!surukle) return; yaw += (e.clientX - sx) * 0.01; sx = e.clientX; kirli.current = true; };
+    const ptrMove = (e: PointerEvent) => { if (!surukle) return; yaw += (e.clientX - sx) * 0.01; sx = e.clientX; kirli.current = true; uyan(); };
     const ptrUp = () => { surukle = false; };
     d.addEventListener('pointerdown', ptrDown); d.addEventListener('pointermove', ptrMove); d.addEventListener('pointerup', ptrUp); d.addEventListener('pointercancel', ptrUp);
 
-    let gorunur = true;
-    const io = new IntersectionObserver(([e]) => { gorunur = !!e?.isIntersecting; if (gorunur) kirli.current = true; }, { threshold: 0 }); io.observe(el);
-
+    // Döngü yalnız sahne ekranda VE sekme görünürken döner; durunca rAF hiç planlanmaz (sızıntı yok).
+    let gorunur = false, sekme = document.visibilityState !== 'hidden';
     let raf = 0; let t = 0; let son = performance.now();
-    const dongu = (now: number) => {
-      raf = requestAnimationFrame(dongu);
-      if (!gorunur) { son = now; return; } // yalnız ekranda görünen hücre canlandırılır
+    const uyan = () => { if (raf || !gorunur || !sekme) return; son = performance.now(); raf = requestAnimationFrame(dongu); };
+    const io = new IntersectionObserver(([e]) => { gorunur = !!e?.isIntersecting; if (gorunur) { kirli.current = true; uyan(); } else if (raf) { cancelAnimationFrame(raf); raf = 0; } }, { threshold: 0 }); io.observe(el);
+    const gorunurluk = () => { sekme = document.visibilityState !== 'hidden'; if (sekme) { kirli.current = true; uyan(); } else if (raf) { cancelAnimationFrame(raf); raf = 0; } };
+    document.addEventListener('visibilitychange', gorunurluk);
+    uyandir.current = () => { kirli.current = true; uyan(); };
+
+    function dongu(now: number) {
+      raf = 0;
+      if (!gorunur || !sekme) return;
       const dt = Math.min(0.05, (now - son) / 1000); son = now;
       const { canlilik: can, glukoz: gl } = pr.current;
       const e = azHareket ? 0 : can <= 0 ? 0.08 : 0.35 + 0.65 * (can / 100);
       senkron(t);
-      if (e === 0 && !kirli.current && halkaT < 0) return; // hareketi azalt: tek kare
+      if (e === 0 && !kirli.current && halkaT < 0) return; // hareketi azalt: tek kare, döngü durur
       t += dt;
       if (!surukle) yaw += dt * 0.25 * e;
       kok.rotation.y = yaw; kok.rotation.x = Math.sin(t * 0.25) * 0.12 * e;
@@ -396,18 +408,24 @@ export default function Hucre3D({ n, glukoz, canlilik, onHata }: Props) {
       d.style.filter = sol < 0.01 ? '' : `grayscale(${Math.min(0.95, sol * 1.1).toFixed(2)}) brightness(${(1 - sol * 0.3).toFixed(2)})`;
       renderer.render(sahne, kamera);
       kirli.current = false;
-    };
-    raf = requestAnimationFrame(dongu);
+      // Hareketsiz kipte (azaltılmış hareket) doğum/halka bitince planlama durur; değişiklikte uyandir() yeniden başlatır
+      if (e > 0 || halkaT >= 0 || surukle || t - born < 1.4) raf = requestAnimationFrame(dongu);
+    }
 
     return () => {
-      cancelAnimationFrame(raf); ro.disconnect(); io.disconnect();
+      cancelAnimationFrame(raf); raf = 0; gorunur = false; uyandir.current = () => {};
+      ro.disconnect(); io.disconnect(); document.removeEventListener('visibilitychange', gorunurluk);
       d.removeEventListener('pointerdown', ptrDown); d.removeEventListener('pointermove', ptrMove); d.removeEventListener('pointerup', ptrUp); d.removeEventListener('pointercancel', ptrUp);
-      atKaldir(sahne); gGeo.dispose(); gMat.dispose(); gluk.dispose(); renderer.dispose(); d.remove();
+      atKaldir(sahne); gGeo.dispose(); gMat.dispose(); gluk.dispose(); renderer.dispose(); renderer.forceContextLoss(); d.remove();
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  return <div ref={kapEl} className="hc15-3d" role="img" aria-label={`Üç boyutlu hücre: ${n}. basamak, canlılık %${Math.round(canlilik)}${glukoz < SOLGUN_ESIK ? ', glukoz az' : ''}`} />;
+  return (
+    <div ref={kapEl} className="hc15-3d" role="img" aria-label={`Üç boyutlu hücre: ${n}. basamak, canlılık %${Math.round(canlilik)}${glukoz < SOLGUN_ESIK ? ', glukoz az' : ''}`}>
+      <span className="hc15-3d-ipucu" aria-hidden>Sürükle: döndür</span>
+    </div>
+  );
 }
 
 const easeOutBack = (x: number) => { const c1 = 1.70158, c3 = c1 + 1; return 1 + c3 * Math.pow(x - 1, 3) + c1 * Math.pow(x - 1, 2); };

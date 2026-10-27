@@ -1,13 +1,11 @@
 {
  "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
- "onem": 526,
- "baslik": "Yeni ekranlar ve ayarlar",
+ "onem": 527,
+ "baslik": "Çevrimdışı, Hücrem ve Sohbet yenilendi",
  "maddeler": [
-  "Aramada sesli derste geçen yerler (zamanıyla)",
-  "Programa kendi etkinliğini ekle, Bugün'de şimdiki ders kartı",
-  "Arka plan işleri, Dil ve bölge, İlk adımlar, Yardım merkezi",
-  "Yazı ve okuma ayarları, bildirim tercihleri ve sessiz saatler",
-  "Asistan yanıtlarında kaynak, yeni 404 ve hata ekranları"
+  "Çevrimdışı sayfası baştan: durum kartı, İndirilenler, İndirilebilir, ayarlar",
+  "Sohbetler: bilgisayarda yan yana liste ve sohbet, gruplu balonlar, gün ayırıcıları",
+  "Hücrem: tam boy evrim ekranı, düzenli kartlar, 3B sahne görünmezken durur"
  ],
  "eklenen": [],
  "degisen": [],

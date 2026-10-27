@@ -1,9 +1,8 @@
 /* v15 · Hücrem (HucremV15) — evrim basamakları; renkler palet tokenından */
 .hc15 { container-type: inline-size; display: flex; flex-direction: column; gap: 12px; max-width: 760px; width: 100%; margin-inline: auto; }
 .hc15-sahne { display: grid; gap: 12px; padding: 16px; grid-template-columns: minmax(0, 1fr); align-items: center; }
-@container (min-width: 600px) { .hc15-sahne { grid-template-columns: 260px minmax(0, 1fr); } }
 .hc15-svg { width: 100%; max-width: 280px; margin: 0 auto; display: block; overflow: visible; }
-.hc15-su { fill: color-mix(in oklab, var(--color-accent) 7%, var(--color-white)); stroke: color-mix(in oklab, var(--color-accent) 18%, transparent); stroke-dasharray: 4 6; }
+.hc15-su { fill: color-mix(in oklab, var(--color-accent) 11%, var(--color-white)); stroke: color-mix(in oklab, var(--color-accent) 34%, transparent); stroke-dasharray: 4 6; }
 .hc15-mol { fill: color-mix(in oklab, var(--color-accent) 35%, var(--color-white)); }
 .hc15-zar { stroke: var(--color-accent); stroke-width: 3; fill: color-mix(in oklab, var(--color-accent) 10%, var(--color-white)); }
 .hc15-zar.is-proto { stroke-width: 2; }
@@ -36,7 +35,7 @@
 .hc15-eksik { margin: 0 !important; }
 .hc15-eksik a { color: var(--color-accent); }
 .hc15-mesaj { margin: 0 !important; padding: 8px 12px; border-radius: 10px; background: var(--color-field); color: var(--color-ink) !important; }
-.hc15-cagbolum h2 { margin: 6px 2px 6px; }
+.hc15-cagbolum h2 { margin: 6px 2px 6px; display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
 .hc15-liste { list-style: none; margin: 0; padding: 4px 0; }
 .hc15-b { display: flex; gap: 12px; padding: 10px 14px; align-items: flex-start; }
 .hc15-b + .hc15-b { border-top: 1px solid var(--color-line-soft, var(--color-line)); }
@@ -56,6 +55,8 @@
 .hc15-3d { position: relative; width: 100%; max-width: 340px; aspect-ratio: 1; margin: 0 auto; border-radius: 20px; background: radial-gradient(circle at 50% 45%, color-mix(in oklab, var(--color-accent) 10%, var(--color-white)), color-mix(in oklab, var(--color-accent) 4%, var(--color-field)) 70%); overflow: hidden; touch-action: pan-y; }
 .hc15-3d-tuval { position: absolute; inset: 0; width: 100%; height: 100%; display: block; cursor: grab; transition: filter .6s; }
 .hc15-3d-tuval:active { cursor: grabbing; }
+.hc15-3d-ipucu { position: absolute; left: 0; right: 0; bottom: 8px; z-index: 1; text-align: center; font-size: .72rem; color: var(--color-ink-3); pointer-events: none; }
+.hc15-sahne.is-stres { background: color-mix(in oklab, var(--color-bad-soft) 70%, var(--color-white)); }
 @container (min-width: 600px) { .hc15-sahne { grid-template-columns: 340px minmax(0, 1fr); } }
 .hc15-glk svg { color: var(--color-warn); }
 .hc15-can { display: grid; grid-template-columns: auto 1fr auto; gap: 8px; align-items: center; font-size: .85rem; color: var(--color-ink-2); }
@@ -64,55 +65,58 @@
 .hc15-can.is-az, .hc15-can.is-uyku { color: var(--color-bad); }
 .hc15-enerji { padding: 16px; display: flex; flex-direction: column; gap: 10px; }
 .hc15-enerji h2 { margin: 0; }
-.hc15-enerji ul { margin: 0; padding-left: 18px; display: flex; flex-direction: column; gap: 6px; color: var(--color-ink-2); font-size: .9rem; line-height: 1.45; }
+.hc15-enerji ul { margin: 0; padding-left: 1.1em; display: flex; flex-direction: column; gap: 6px; color: var(--color-ink-2); font-size: .9rem; line-height: 1.45; }
 .hc15-enerji li b { color: var(--color-ink); }
-.hc15-ist { margin: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 8px; }
+.hc15-ist { margin: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 8px; }
 .hc15-ist div { background: var(--color-field); border-radius: 12px; padding: 8px 10px; }
 .hc15-ist dt { font-size: .72rem; color: var(--color-ink-3); }
 .hc15-ist dd { margin: 2px 0 0; font-weight: 700; color: var(--color-ink); font-variant-numeric: tabular-nums; }
 .hc15-odeme { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 8px; }
-.hc15-ac.is-glk { background: var(--color-warn); color: var(--color-ink); }
-.hc15-kupa { width: 14px; height: 14px; vertical-align: -2px; color: var(--color-warn); }
+.hc15-ac.is-glk { background: var(--color-warn-soft); color: var(--color-warn); box-shadow: inset 0 0 0 1px color-mix(in oklab, var(--color-warn) 30%, transparent); }
+.hc15-ac.is-glk svg { color: currentColor; }
+.hc15-kupa { flex: none; width: 14px; height: 14px; color: var(--color-warn); }
 .hc15-ipucu { margin: 0 2px 6px; }
 .hc15-s.is-ben { background: color-mix(in oklab, var(--color-accent) 8%, transparent); }
 .hc15-s.is-uyku { opacity: .65; }
 .hc15-boyut { align-self: center; font-weight: 700; font-size: .85rem; color: var(--color-ink-2); font-variant-numeric: tabular-nums; }
 
 /* Çağ sekmesi + basamak kartları (M13–M16) */
-.hc15-cagseg button { display: inline-flex; flex-direction: column; align-items: center; gap: 1px; line-height: 1.1; padding-block: 6px; }
+.hc15-cagseg button { font-size: .82rem; text-align: center; display: inline-flex; flex-direction: column; align-items: center; gap: 1px; line-height: 1.1; padding-block: 6px; }
 .hc15-cagseg small { font-size: .7rem; color: var(--color-ink-3); font-variant-numeric: tabular-nums; }
-.hc15-kartlar { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 10px; }
+.hc15-kartlar { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 10px; }
 .hc15-kart { width: 100%; height: 100%; display: flex; flex-direction: column; gap: 6px; padding: 10px; border: 0; text-align: left; font: inherit; color: inherit; cursor: pointer; }
 .hc15-kart.is-sirada { box-shadow: 0 0 0 2px var(--color-accent); }
 .hc15-kart.is-kilitli .hc15-kart-r { opacity: .45; filter: grayscale(.6); }
 .hc15-kart-r .hc15-svg { max-width: 100%; }
-.hc15-kart-t { display: flex; align-items: flex-start; justify-content: space-between; gap: 6px; }
+.hc15-kart-t { display: flex; flex-wrap: wrap; align-items: flex-start; justify-content: space-between; gap: 4px 6px; }
 .hc15-kart-t b { font-size: .85rem; line-height: 1.25; color: var(--color-ink); }
 .hc15-kart-t .v15-tag { flex: none; display: inline-flex; align-items: center; gap: 3px; }
 .hc15-kart-t .v15-tag svg { width: 11px; height: 11px; }
 .hc15-kart small { font-size: .75rem; color: var(--color-ink-2); line-height: 1.35; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
 
 /* Evrim yolculuğu / ayrıntı (M03, M12) */
-.hc15-ev { position: fixed; inset: 0; z-index: 1000; height: 100vh; height: 100lvh; background: var(--color-canvas); color: var(--color-ink); display: flex; flex-direction: column; overflow-y: auto; }
+/* tam ekran katman: genel [role=dialog] max-height (vvh − 24px) alttan şerit bırakıyordu */
+.hc15-ev { container-type: inline-size; position: fixed; inset: 0; z-index: 1000; background: var(--color-canvas); color: var(--color-ink); display: flex; flex-direction: column; overflow-y: auto; }
+.hc15-ev.hc15-ev[role="dialog"], .hc15-sa-perde.hc15-sa-perde[role="dialog"] { max-height: none; }
 .hc15-ev-ust { position: sticky; top: 0; z-index: 2; display: flex; align-items: center; gap: 8px; padding: calc(env(safe-area-inset-top) + 10px) 16px 10px; background: var(--color-canvas); border-bottom: 1px solid var(--color-line-soft, var(--color-line)); }
 .hc15-ev-ust div { display: flex; flex-direction: column; } .hc15-ev-ust small { font-size: .8rem; color: var(--color-ink-3); }
-.hc15-ev-ic { container-type: inline-size; max-width: 980px; width: 100%; margin: 0 auto; padding: 16px; display: grid; gap: 14px; grid-template-columns: minmax(0, 1fr); }
+.hc15-ev-ic { max-width: 980px; width: 100%; margin: 0 auto; padding: 16px; display: grid; gap: 14px; grid-template-columns: minmax(0, 1fr); }
 @container (min-width: 760px) { .hc15-ev-ic { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: start; } }
 .hc15-ev-sahne { padding: 14px; display: flex; flex-direction: column; align-items: center; gap: 10px; background: radial-gradient(circle at 50% 40%, var(--color-accent-soft), var(--color-white) 70%); }
 .hc15-ev-kilit { display: flex; flex-direction: column; align-items: center; gap: 8px; width: 100%; max-width: 300px; }
-.hc15-ev-kilit .hc15-svg { opacity: .4; filter: grayscale(.7); }
+.hc15-ev-kilit .hc15-svg { opacity: .6; filter: grayscale(.6); }
 .hc15-ev-kilit span { display: inline-flex; align-items: center; gap: 5px; font-size: .85rem; color: var(--color-ink-3); }
 .hc15-ev-kilit svg:not(.hc15-svg) { width: 14px; height: 14px; }
 .hc15-ev-gez { display: flex; align-items: center; gap: 10px; }
 .hc15-ev-gez span { display: flex; flex-direction: column; align-items: center; text-align: center; min-width: 150px; }
 .hc15-ev-gez small { font-size: .78rem; color: var(--color-ink-3); }
 .hc15-ev-yan { display: flex; flex-direction: column; gap: 10px; }
-.hc15-ev-cizgi { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 6px; }
+.hc15-ev-cizgi { display: grid; grid-template-columns: repeat(auto-fill, minmax(44px, 1fr)); gap: 6px; }
 .hc15-ev-cizgi button { padding: 2px; border: 0; border-radius: 50%; background: var(--color-white); cursor: pointer; aspect-ratio: 1; display: grid; place-items: center; overflow: hidden; }
 .hc15-ev-cizgi button .hc15-svg { width: 100%; }
-.hc15-ev-cizgi button.is-kilit { opacity: .35; }
+.hc15-ev-cizgi button.is-kilit { opacity: .5; }
 .hc15-ev-cizgi button.is-on { box-shadow: 0 0 0 2px var(--color-accent); opacity: 1; }
-.hc15-ev-kart { padding: 14px 16px; display: flex; flex-direction: column; gap: 6px; }
+.hc15-ev-kart { order: -1; padding: 14px 16px; display: flex; flex-direction: column; gap: 6px; }
 .hc15-ev-kart p { margin: 0; color: var(--color-ink-2); line-height: 1.5; font-size: .92rem; }
 .hc15-ev-gec { color: var(--color-ink-3) !important; font-size: .85rem !important; }
 

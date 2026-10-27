@@ -77,7 +77,7 @@ export default function HucremV15() {
   return (
     <div className="hc15">
       <h1 className="sr-only">Hücrem</h1>
-      <section className="v15-card hc15-sahne">
+      <section className={`v15-card hc15-sahne${hc && (hc.uyku || hc.glukoz < 20) ? ' is-stres' : ''}`}>
         <Sahne n={n} glukoz={hc?.glukoz ?? 0} canlilik={hc?.canlilik ?? 100} />
         <div className="hc15-durum">
           <span className="hc15-cag">{simdiki?.cag || 'Başlangıç'}</span>
@@ -217,7 +217,7 @@ export default function HucremV15() {
             <div className="v15-seg hc15-cagseg" role="tablist" aria-label="Çağlar">
               {cag.map(([ad, l]) => (
                 <button key={ad} type="button" role="tab" aria-selected={ad === secili} aria-current={ad === secili ? 'page' : undefined} onClick={() => setCagSec(ad)}>
-                  {ad.replace(/ çağı$/i, '')}<small>{l.filter((b) => acik[b.id]).length}/{l.length}</small>
+                  {ad.replace(/\s+çağı?$/i, '')}<small>{l.filter((b) => acik[b.id]).length}/{l.length}</small>
                 </button>
               ))}
             </div>
