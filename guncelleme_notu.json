@@ -1,13 +1,14 @@
 {
  "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
- "onem": 428,
- "baslik": "Yönetimde giriş serileri ve görev takibi",
+ "onem": 429,
+ "baslik": "Asklepios kutlama efekti düzeltildi",
  "maddeler": [
-  "Yeni \"Giriş ve görevler\" sekmesi: ardışık giriş serileri",
-  "Günlük ve haftalık çalışma ile soru çözme görevleri kişi bazında izlenir"
+  "Asklepios Asası efekti artık kutlama kartının iki yanında görünüyor"
  ],
  "eklenen": [],
  "degisen": [],
- "duzeltilen": [],
+ "duzeltilen": [
+  "Kutlama efekti kartın arkasında kaldığı için görünmüyordu"
+ ],
  "silinen": []
 }

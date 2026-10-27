@@ -55,6 +55,9 @@ function Parcacik({ efekt, renk, ust }: { efekt: Efekt; renk: string; ust: boole
         // Asklepios Asası: altın asa belirir, yılan alttan yukarı dolanarak tırmanır, sonra söner
         const alfa = kare < 150 ? Math.min(1, kare / 20) : Math.max(0, 1 - (kare - 150) / 40);
         const boy = 120 * dpr, ust = cy - boy, alt = cy + boy;
+        // kart ortada ve opak: asalar kartın iki yanında (dar ekranda kenar boşluğunda) çizilir
+        const yan = Math.max(18 * dpr, Math.min(cx - 34 * dpr, (190 + 52) * dpr));
+        for (const cx of [W() / 2 - yan, W() / 2 + yan]) {
         ctx.save(); ctx.globalAlpha = alfa;
         const asa = ctx.createLinearGradient(cx - 6 * dpr, 0, cx + 6 * dpr, 0);
         asa.addColorStop(0, '#8A6A00'); asa.addColorStop(0.5, '#FFE58A'); asa.addColorStop(1, '#8A6A00');
@@ -82,6 +85,7 @@ function Parcacik({ efekt, renk, ust }: { efekt: Efekt; renk: string; ust: boole
           ctx.restore();
         }
         ctx.restore();
+        }
       }
       if (efekt === 'sentaz' && kare < 140) {
         // dönen F0 rotoru
@@ -95,7 +99,7 @@ function Parcacik({ efekt, renk, ust }: { efekt: Efekt; renk: string; ust: boole
         if (efekt === 'konfeti') { p.vy += 0.25 * dpr; p.vx *= 0.985; p.vy *= 0.985; }
         else if (efekt === 'mitoz') { p.vx *= 0.97; p.vy = p.vy * 0.97 + 0.04 * dpr; }
         else if (efekt === 'kalp') { p.vx *= 0.97; p.vy = p.vy * 0.97 - 0.06 * dpr; }
-        else if (efekt === 'asklepios') { if (kare < 70) { p.omur--; continue; } p.vx *= 0.96; p.vy = p.vy * 0.96 - 0.05 * dpr; }
+        else if (efekt === 'asklepios') { if (kare < 70) { p.omur = 0; continue; } p.vx *= 0.96; p.vy = p.vy * 0.96 - 0.05 * dpr; }
         else { const aci = Math.atan2(p.vy, p.vx) + 0.025; const h = Math.hypot(p.vx, p.vy) * 1.004; p.vx = Math.cos(aci) * h; p.vy = Math.sin(aci) * h; }
         p.x += p.vx; p.y += p.vy; p.a += p.va;
         const alfa = Math.max(0, 1 - p.omur / (efekt === 'konfeti' ? 170 : 150));
@@ -141,7 +145,7 @@ function Parcacik({ efekt, renk, ust }: { efekt: Efekt; renk: string; ust: boole
     raf = requestAnimationFrame(ciz);
     return () => { cancelAnimationFrame(raf); window.removeEventListener('resize', boyut); };
   }, [efekt, renk, ust]);
-  return <canvas ref={ref} className="bs-k-tuval" aria-hidden />;
+  return <canvas ref={ref} className={`bs-k-tuval${efekt === 'asklepios' ? ' is-ust-katman' : ''}`} aria-hidden />;
 }
 
 /** 0'dan hedefe sayar. */
