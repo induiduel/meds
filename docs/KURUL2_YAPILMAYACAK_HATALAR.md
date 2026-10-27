@@ -1139,3 +1139,9 @@ Her maddede: belirti · kök neden · Kurul 2 kuralı · kapı durumu. Kanıtlar
   (Gl13, FLBN, speksifikasyon) `e`'ye girer. Şekilden okunan kayıt `gorsel: true`. Doğru şık çeldiricilerle benzer uzunlukta yazılır.
 - **Kapı — EKLENDİ:** `scripts/tam_hat/kaynak_kapisi.py` (terim adı sayfada mı → HATA; tanım az örtüşüyorsa UYARI, denetçi bağlamı okur),
   `soru_uslup.py` (≥6 kelimelik doğru şık en uzun ve 1,8× → HATA), `hazirlik.py` madde imi temizliği.
+
+## H126 · Sesli ders ekranında gen sembolleri okunuşla görünüyordu: "hoks, o te iks, me se iks, paks 6" (2026-10-28, k2-08)
+- **Belirti:** Beyin ve İskelet Sistemi Gelişimi Genetiği sesli dersinde ana metin "hoks, o te iks ve me se iks genleri ile göz geni paks 6" yazıyordu; doğrusu HOX, OTX, MSX, PAX6.
+- **Kök neden:** Ders metni iki katmanlıdır: `ses` (EMA'nın okuduğu) ve `ekran` (v2 `cumleler[].ekran`, doğru yazımla). Ana paragraf ise `ses` metninden `ekranYazim.ts` ile geri çevrilerek gösterilir; bu geri çeviri sözlüğü (`yazim_sozlugu.json`) yalnız kaynak md'den türetiliyordu ve harf harf okunmayan / kelime gibi okunan gen sembollerini (hoks, paks, soks) hiç tanımıyordu. Sayı geçişi "altı"yı "6" yaptığı için "paks 6" gibi karma yazım çıktı. Sözlük ayrıca uzun süre yeniden üretilmediği için yeni derslerin kısaltmaları hiç girmemişti.
+- **Çözüm:** `yazim_sozlugu.py` artık her v2 dersinin `ses` ↔ `ekran` cümle çiftlerini hizalayıp okunuş → yazım eşlemesini kendisi çıkarır ("hoks" → HOX, "paks altı" → PAX6, "ce o le bir a bir" → COL1A1); Türkçe sözcük, Roma rakamı ve rakamsız okunuşa rakamlı yazım eşlemeleri elenir.
+- **Kural:** Kullanıcıya gösterilen metin daima yazımla (HOX, OTX, PAX6), EMA'ya giden metin okunuşla olur. Tam içerik hattında her yeni v2 metni yazılınca `python3 scripts/sesli_anlatim/yazim_sozlugu.py` yeniden çalıştırılır ve ekran metni okunuş artığı için gözle denetlenir; `ekran` alanı her cümlede doldurulur (sembol içeren cümlede boş bırakılmaz).

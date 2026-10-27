@@ -46,6 +46,48 @@ EL_KISALTMA = {"ce re pe": "CRP", "pe ha": "pH", "ha ı ve": "HIV", "e koli": "E
 ELE = {"germinal vezikül varlığı", "tetanoz bağışıklaması", "fingolimod hidroklorür", "nitrik oksit sentaz", "glatiramer asetat"}
 
 
+SAYI_SOZ = {"sıfır", "bir", "iki", "üç", "dört", "beş", "altı", "yedi", "sekiz", "dokuz", "on", "yirmi", "otuz", "kırk", "elli",
+            "altmış", "yetmiş", "seksen", "doksan", "yüz", "bin"}
+
+
+KENAR = {"ile", "ise", "bu", "ya", "yani"}  # "ve"/"de" harf adı da olabilir (V, D): kesilmez
+
+
+def v2_kisaltmalari() -> dict[str, str]:
+    """Kurul 2+ v2 metinleri (ses ↔ ekran cümle çifti) → okunuş → yazım ("hoks" → "HOX", "paks altı" → "PAX6").
+    Kaynak md'den türetilemeyen gen sembolleri ekranda okunuşla görünüyordu (H124, k2-08, 2026-10-28)."""
+    import difflib
+    oy: dict[str, collections.Counter] = collections.defaultdict(collections.Counter)
+    soz = re.compile(r"[A-Za-zÇĞİÖŞÜçğıöşüÂâ0-9]+(?:-[A-Za-z0-9]+)*")
+    for f in sorted(glob.glob(str(MEDS / "data/sesli_anlatim/v2/*.json"))):
+        try:
+            v = json.load(open(f, encoding="utf-8"))
+        except Exception:
+            continue
+        for b in v.get("bolumler") or []:
+            for p in b.get("paragraflar") or []:
+                for c in p.get("cumleler") or []:
+                    ses, ekr = soz.findall(c.get("ses") or ""), soz.findall(c.get("ekran") or "")
+                    sl, el = [O.tr_lower(x) for x in ses], [O.tr_lower(x) for x in ekr]
+                    for op, a1, a2, b1, b2 in difflib.SequenceMatcher(None, sl, el, autojunk=False).get_opcodes():
+                        if op != "replace" or b2 - b1 != 1 or not 1 <= a2 - a1 <= 6:
+                            continue
+                        y = ekr[b1]
+                        # yalnız sembol yazımı (HOX, PAX6, COL1A1); Roma rakamı ve "Bölüm" gibi sözcükler değil
+                        if not re.fullmatch(r"[A-Z][A-Z0-9]+", y) or re.fullmatch(r"[IVXLC]+", y) or sum(ch.isupper() for ch in y) < 2:
+                            continue
+                        okun = sl[a1:a2]
+                        while okun and okun[0] in KENAR:
+                            okun = okun[1:]
+                        while okun and okun[-1] in KENAR:
+                            okun = okun[:-1]
+                        # okunuş hece dizisidir: gerçek sözcük ya da salt sayı dizisi eşlenmez
+                        if not okun or any(len(w) > 4 and w not in SAYI_SOZ for w in okun) or all(w in SAYI_SOZ for w in okun):
+                            continue
+                        oy[" ".join(okun)][y] += 1
+    return {k: c.most_common(1)[0][0] for k, c in oy.items()}
+
+
 def kaynak_metni() -> str:
     return "\n".join(open(f, encoding="utf-8", errors="ignore").read()
                      for f in glob.glob(str(O.KAYNAK / "**/*.md"), recursive=True))
@@ -126,6 +168,13 @@ def main():
     for k in [k for k, v in acilim.items() if re.search(r"\d", v) or k in ELE]:
         del acilim[k]
     acilim.update(EL_ACILIM)
+    for k, y in v2_kisaltmalari().items():
+        kisa.setdefault(k, y)
+    # Türkçe sözcük yazım sayılmaz ("be el em" → "Bölüm", "be a ka" → "Bakış"; kaynak md'deki büyük harfli başlıklar)
+    kisa = {k: y for k, y in kisa.items() if not re.search(r"[ÇĞİÖŞÜçğıöşü]", y)
+            and (len(y) <= 2 or sum(ch.isupper() for ch in y) >= 2)
+            # rakamlı/Yunan harfli yazım okunuşta sayı/harf adı yoksa eksik eşlemedir ("te i ef" → "TIF1γ")
+            and not (re.search(r"[\dα-ω]", y) and not set(k.split()) & (SAYI_SOZ | set(YUNAN)))}
     kisa.update(EL_KISALTMA)
     CIKTI.parent.mkdir(parents=True, exist_ok=True)
     # rakamla bitişik yazılan kısaltmalar (TP53, HER2, BRCA1, C3, CD4, Ki-67): ekranda "TP 53" → "TP53"
