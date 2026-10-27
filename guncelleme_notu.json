@@ -1,20 +1,17 @@
 {
  "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
- "onem": 385,
- "baslik": "Yeni görünüm: Yalın (v15) tasarım",
+ "onem": 386,
+ "baslik": "Nöroloji 2 · Bilinç Bozukluğu Olan Hastaya Yaklaşım Yenilendi",
  "maddeler": [
-  "Ayarlar › Tasarım'dan seçilebilen yeni sade görünüm: Yalın (v15). Varsayılan görünüm değişmedi.",
-  "Bugün, Ders çalış, Soru çöz, Sınava hazırlan ve Başvuru merkezleri yeni düzende; sayfa başlığı üst barda.",
-  "Yeni ders ayrıntısı sayfası: bölümler, sesli ders, Öğren ve çıkmışlar tek yerde.",
-  "Sesli derste sade üst çubuk, gruplu menü, Görünüm çekmecesi ve kompakt çıkmış soru kartı.",
-  "Sesli dersler, özetler, spotlar, en önemliler, sözlük, kartlar, notlar, Bitirdiklerim, çıkmışlar, soru çözücü, kamplar, Son Prova, Check Up ve Başvuru sayfaları v15'te sadeleşti.",
-  "Sınav planı: aktif kurulun dağılımı yoksa boş sayfa yerine nedeni yazıyor."
+  "Sesli ders öğrenci notlarına göre yenilendi: Glasgow koma skalası hesabı, hipoglisemi, beyin ölümü, koma algoritması öne çıkarıldı.",
+  "Ders bu yılın okul slaytlarıyla eşleşiyor; yeni seslendirme ve kelime kelime takip hazır.",
+  "Slaytlar üzerinde konuya uygun 54 açıklayıcı panel ve işaret var; tablolar yalnız işaretleniyor, okumayı bozan çizim yok.",
+  "Soru çözücü ve önem listesinde yalnız özgün sınav belgesinde bulunan çıkmışlar 'çıkmış' olarak gösteriliyor."
  ],
  "eklenen": [
-  "src/components/v15/",
-  "src/styles/v15/",
-  "src/components/canliDers/CdV15.tsx",
-  "docs/V15_PLAN.md"
+  "k2-02 sesli ders v2",
+  "yayinla.py kaynak kimliği esnek eşleme (H88)",
+  "denetle.py şık açıklama kapısı (H86)"
  ],
  "degisen": [
   "src/utils/appearance.ts",

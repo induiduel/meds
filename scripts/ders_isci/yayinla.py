@@ -484,6 +484,12 @@ def kaynak_kimligi_esnek(pdf_yolu: str, manifest: dict | None, ders_id: str = ""
     aday = [i.get("source_id") for i in items if klasor(i["path"]) == klasor(yol) and baslik(i["path"]) == baslik(yol)]
     if len(set(aday)) == 1:
         return aday[0]
+    # H88: Drive'da klasör yeniden adlandırılmış olabilir (Patoloji → Tıbbi Patoloji) ve '/' içeren ad alt klasör gibi
+    # görünür: tam dosya yolu (klasör hariç) ya da numarasız başlık manifestte TEKSE onu kullan.
+    kuyruk = lambda s: sade(s.split("/", 2)[-1]) if s.count("/") >= 2 else sade(s)  # noqa: E731  (Kurul N/<branş>/ sonrası)
+    aday = [i.get("source_id") for i in items if kuyruk(i["path"]) == kuyruk(yol)]
+    if len(set(aday)) == 1:
+        return aday[0]
     return next((y["kaynak_idleri"][0] for y in oku(KAYIT, []) if ders_id and y.get("ders_id") == ders_id
                  and y.get("kaynak_idleri")), None)
 
@@ -697,7 +703,7 @@ def sunucu() -> int:
     print(time.strftime("[%Y-%m-%d %H:%M:%S]"), "yeniden uygulanacak:", [d.name for d in yeniden],
           "yeni:", [d.name for d in yeni])
     sonuc, red = uygula([d for d in yeniden if d.is_dir()] + yeni,
-                        lambda y: yayin_kaydi_bul(y.d.name, asil) or kaynak_kimligi(y.b.get("pdf_yolu") or "", manifest))
+                        lambda y: yayin_kaydi_bul(y.d.name, asil) or kaynak_kimligi_esnek(y.b.get("pdf_yolu") or "", manifest, y.ders_id))  # H88
     for y in red:  # denetimden geçmeyen onaylı taslak: yöneticiye bildir, bir daha denenmesin diye işaretle
         if y.d.parent == ONAYLANAN:
             yaz_json(L_TASLAK / y.d.name / "yayin.json", {"durum": "denetim_hatasi", "hatalar": y.hata[:20],
@@ -906,7 +912,7 @@ def main() -> int:
         subprocess.run(["rsync", "-a", "--delete", f"{ORACLE}:{L_TASLAK}/{a.tek}/", str(hedef) + "/"], check=True)
         r = ssh(f"cat {L_MANIFEST}")
         manifest = json.loads(r.stdout) if r.returncode == 0 else {}
-        uygula([hedef], lambda y: kaynak_kimligi(y.b.get("pdf_yolu") or "", manifest), deneme=True)
+        uygula([hedef], lambda y: kaynak_kimligi_esnek(y.b.get("pdf_yolu") or "", manifest, y.ders_id), deneme=True)
         return 0
     ap.print_help()
     return 2

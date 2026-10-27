@@ -257,6 +257,7 @@
  "BBT": {
   "category": "kisaltma",
   "decks": [
+   "k2-01-norolojik-hastaya-yaklasim",
    "k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim",
    "y25-k2-01-norolojik-hastaya-yaklasim",
    "y25-k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim",
@@ -319,6 +320,7 @@
  "BOS": {
   "category": "kisaltma",
   "decks": [
+   "k2-01-norolojik-hastaya-yaklasim",
    "k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim",
    "y25-k2-01-norolojik-hastaya-yaklasim",
    "y25-k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim",
@@ -351,6 +353,7 @@
  "BT": {
   "category": "kisaltma",
   "decks": [
+   "k2-01-norolojik-hastaya-yaklasim",
    "y25-k2-01-norolojik-hastaya-yaklasim",
    "y25-k2-12-kafa-travmalari",
    "y25-k2-14-beyin-tumorleri",
@@ -625,6 +628,7 @@
  "DM": {
   "category": "kisaltma",
   "decks": [
+   "k2-01-norolojik-hastaya-yaklasim",
    "k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim",
    "y25-k2-01-norolojik-hastaya-yaklasim",
    "y25-k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim",
@@ -772,6 +776,7 @@
  "EEG": {
   "category": "kisaltma",
   "decks": [
+   "k2-01-norolojik-hastaya-yaklasim",
    "k2-07-genel-anestezik-ilaclar",
    "y25-k2-01-norolojik-hastaya-yaklasim",
    "y25-k2-07-genel-anestezik-ilaclar",
@@ -799,6 +804,7 @@
  "EMG": {
   "category": "kisaltma",
   "decks": [
+   "k2-01-norolojik-hastaya-yaklasim",
    "y25-k2-01-norolojik-hastaya-yaklasim",
    "y25-k2-16-norolojik-rehabilitasyona-giris",
    "y25-k2-32-felcler"
@@ -809,6 +815,7 @@
  "EP": {
   "category": "kisaltma",
   "decks": [
+   "k2-01-norolojik-hastaya-yaklasim",
    "y25-k2-01-norolojik-hastaya-yaklasim"
   ],
   "definition": "Uyarılmış potansiyeller (evoked potentials)",
@@ -1070,6 +1077,7 @@
  "HT": {
   "category": "kisaltma",
   "decks": [
+   "k2-01-norolojik-hastaya-yaklasim",
    "y25-k2-01-norolojik-hastaya-yaklasim"
   ],
   "definition": "Hipertansiyon",
@@ -1158,6 +1166,14 @@
   ],
   "definition": "Uluslararası ünite",
   "term": "IU"
+ },
+ "KB": {
+  "category": "kisaltma",
+  "decks": [
+   "k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim"
+  ],
+  "definition": "Kan basıncı",
+  "term": "KB"
  },
  "KCNQ2": {
   "category": "kisaltma",
@@ -1452,6 +1468,7 @@
  "MR": {
   "category": "kisaltma",
   "decks": [
+   "k2-01-norolojik-hastaya-yaklasim",
    "y25-k2-01-norolojik-hastaya-yaklasim",
    "y25-k2-08-beyin-ve-iskelet-sistemi-gelisimi-genetigi",
    "y25-k2-10-bas-agrisina-yaklasim",
@@ -1486,6 +1503,7 @@
  "MRI": {
   "category": "kisaltma",
   "decks": [
+   "k2-01-norolojik-hastaya-yaklasim",
    "k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim",
    "y25-k2-01-norolojik-hastaya-yaklasim",
    "y25-k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim",
@@ -1499,6 +1517,7 @@
  "MS": {
   "category": "kisaltma",
   "decks": [
+   "k2-01-norolojik-hastaya-yaklasim",
    "y25-k2-01-norolojik-hastaya-yaklasim",
    "y25-k2-27-periyodik-muayeneler",
    "y25-k2-31-medulla-spinalis-hastaliklari",
@@ -2099,6 +2118,7 @@
  "SVO": {
   "category": "kisaltma",
   "decks": [
+   "k2-01-norolojik-hastaya-yaklasim",
    "y25-k2-01-norolojik-hastaya-yaklasim"
   ],
   "definition": "Serebrovasküler olay",
@@ -2319,6 +2339,7 @@
  "YKL": {
   "category": "kisaltma",
   "decks": [
+   "k2-01-norolojik-hastaya-yaklasim",
    "y25-k2-01-norolojik-hastaya-yaklasim"
   ],
   "definition": "Yer kaplayan lezyon",

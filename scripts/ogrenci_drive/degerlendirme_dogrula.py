@@ -28,7 +28,7 @@ DEPO = MEDS.parent / "meds_database_v2" / "ders_bilgi"
 
 def norm(s: str) -> str:
     s = unicodedata.normalize("NFKC", s).replace("İ", "i").replace("I", "ı").lower()
-    s = re.sub(r"[«»“”\"'’→]", " ", s)
+    s = re.sub(r"[«»“”\"'’→•–—\uf000-\uf8ff\u25aa-\u25ff]", " ", s)  # özel madde imi glifleri (U+F06E…) yok sayılır
     return re.sub(r"\s+", " ", s).strip()
 
 
@@ -45,9 +45,13 @@ def main() -> int:
         return norm(metin) in sayfa.get(s, "")
 
     for n in paket["ogrenci_notlari"]:
+        if n.get("resim") and not n["hedef"]:
+            continue  # metni olmayan resim sayfası: açıklama "not" alanında
         if not slaytta(n["s"], n["hedef"]):
             hata.append(f"öğrenci notu s{n['s']}: hedef slaytta yok → {n['hedef'][:60]}")
     for at in paket["atomik_bilgi_envanteri"]["atomlar"]:
+        if at.get("gorsel") and len(sayfa.get(at["s"], "")) < 60:
+            continue  # metni olmayan görsel sayfa: kanıt görüntüden okunmuş (ders işçisi gorsel_kanit)
         if not slaytta(at["s"], at["kanit"]):
             hata.append(f"atom {at['id']}: kanıt s{at['s']}'de yok → {at['kanit'][:60]}")
 
@@ -76,6 +80,8 @@ def main() -> int:
     for v in paket.get("hoca_vurgulari", []):
         if not (v.get("t") is not None and v.get("s") and v.get("alinti")):
             hata.append(f"hoca vurgusu eksik alan: {v}")
+        elif v.get("konu") and not slaytta(v["s"], v["konu"]):
+            hata.append(f"hoca vurgusu s{v['s']}: konu slaytta yok → {v['konu'][:60]}")
     kapsanan = {s for b in paket["bilgi_paketleri"] for s in b["s"]}
     for s in sayfa:
         if s > 1 and s not in kapsanan:

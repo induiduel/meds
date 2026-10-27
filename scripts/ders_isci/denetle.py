@@ -313,6 +313,13 @@ class Denetim:
                 kisa = [h for h in "ABCDE" if len(str(sa.get(h, "")).strip()) < 20]
                 if kisa:  # yayın (s16) kuralı: her şıkkın gerekçeli açıklaması; "Yanlış. Doğrudur." yetmez
                     self.hata(f"soru {qid}: şık açıklaması eksik/kısa (<20 karakter, gerekçe+sayfa yaz): {''.join(kisa)}")
+                if int((paket or {}).get("kurul") or 0) >= 2:  # H86: Kurul 2+ şık açıklama + Türkçe üslup standardı
+                    sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+                    from sik_aciklama import denetle as _sik
+                    from turkce_uslup import denetle as _uslup
+                    for h, v in sa.items():
+                        for e in _sik(str(v), f"soru {qid}/{h}") + _uslup(str(v), f"soru {qid}/{h}"):
+                            self.hata(e)
                 if q.get("zorluk") not in ("kolay", "orta", "zor"):
                     self.hata(f"soru {qid}: zorluk kolay|orta|zor olmalı")
                 if not isinstance(q.get("kazanim"), int) or not isinstance(q.get("bilgi"), list):

@@ -121,7 +121,7 @@ def adaylar(s: T.Sayfa) -> list[str]:
     """Sayfadaki kısaltma adayları (geçiş sırasıyla, tekrarsız)."""
     out: list[str] = []
     for w in s.metin_satir:
-        for ham in re.split(r"[\s,;:()\[\]\"]+", w):
+        for ham in re.split(r"[\s,;:()\[\]\"\uf000-\uf8ff•▪■□◆✓✔]+", w):  # H89: yapışık madde imi glifi (U+F06E…) ayırıcıdır
             for parca in re.split(r"[/\-–+]", ham):  # "HT+DM" bitişik yazımı (2026-10-27)
                 parca = parca.strip(".,;:!?'\"’“”")
                 if kisaltma_mi(parca) and parca not in out:

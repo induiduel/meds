@@ -754,3 +754,42 @@ Her maddede: belirti · kök neden · Kurul 2 kuralı · kapı durumu. Kanıtlar
 - **Çözüm:** boş durum iletisi ("Kurul N için sınav dağılımı henüz girilmedi"). Kurul 2 dağılımı girilince plan kendiliğinden kurulur.
 - **Önleme kuralı:** kurula bağlı veriyle çizilen her ekran, veri yokken `null` değil nedenini söyleyen boş durum gösterir;
   yeni kurul açılırken `sinav_dagilimi.json`'a o kurulun dağılımı eklenir.
+
+## H86 — Ders işçisi denetimi örnek soru şık açıklamalarını standart kapıdan geçirmiyordu (2026-10-27, k2-03)
+- **Belirti:** k2-03 taslağı `denetle.py` ile 0 HATA verdi, ama örnek soruların şık açıklamalarında `sik_aciklama.py` 98 hata
+  buldu (20 kelimenin altında, "ne/ne işe yarar/neden" eksik); q18'de müfredat dışı iki çeldirici (oligoklonal bant, LP basıncı).
+- **Kök neden:** `denetle.py` yalnız ≥20 karakter uzunluk denetliyordu; şık açıklama standardı (kural 14) yalnız asistan/çözücü
+  doğrulayıcılarına bağlıydı, ders paketinin örnek sorularına bağlı değildi.
+- **Çözüm:** `denetle.py` Kurul 2+ dersinde her şık açıklamasını `sik_aciklama.denetle` + `turkce_uslup.denetle` ile HATA verir.
+  k2-03'ün 110 şık açıklaması yeniden yazıldı; q18 çeldiricileri dersin kendi kavramlarıyla değiştirildi.
+- **Önleme kuralı:** örnek soru çeldiricisi de müfredattan (öğretilmiş komşu kavram) seçilir (AGENTS kural 4, 9).
+
+## H87 — Çizim doğrulayıcısının komut satırı Kurul 2 cümle kimliklerini ve resim kutularını tanımıyor; sarmalayıcı yanıltıcı 0 HATA verdi (2026-10-27, k2-02)
+- **Belirti:** çizim parti ajanları `cizim_dogrula.py` CLI'sini çalıştıramayıp kendi sarmalayıcılarıyla "0 HATA" bildirdi; gerçek
+  yerleşimde (`cizim_uret.py`) 69 adaydan 9'u reddedildi (8 kontur çizgi üstünde değil, 1 resim sayfasında panel).
+- **Kök neden:** CLI `denetle()`'ye resim kutularını boş veriyor, `konusma_v2` cümle kimliklerini (`k2-02-c####`) parti biçimine
+  (`P#.C#`) çevirmiyor. Ajanlar eksik bağlamla kendi kapılarını kurdu.
+- **Çözüm / kural:** çizim için geçerli kapılar YALNIZ `cizim_uret.py` (yerleşim + doğrulama, gerçek kutu ve görüntüyle) →
+  `cizim_kapisi.py` → `panel_sinama.mjs`. Parti ajanının kendi sarmalayıcı sonucu kanıt sayılmaz; reddedilen çizim
+  yayına girmez (emin olunmayan yer çizilmez). CLI düzeltmesi açık iş.
+
+## H88 — Drive klasör adı değişince yayın PDF'in kaynak kimliğini bulamadı (2026-10-27, k2-03)
+- **Belirti:** onaylanan k2-03 taslağı Oracle yayınında "PDF'in kaynak kimliği (manifest) bulunamadı" ile durdu (hiçbir şey yazılmadı).
+- **Kök neden:** okul Drive'ında klasör "Patoloji" → "Tıbbi Patoloji" olarak yeniden adlandırılmış; dosya diskte eski yolda,
+  manifest yeni yolda ("…/ Herniasyon .pdf", '/' içeren ad). Sunucu kipi yalnız birebir yol eşleyen `kaynak_kimligi`'ni kullanıyordu.
+- **Çözüm / kural:** sunucu ve deneme kipi `kaynak_kimligi_esnek` kullanır; esnek eşleme klasör farkını yok sayıp `Kurul N/<branş>/`
+  sonrası yol manifestte tekse onu kabul eder. Yayın denetim hatasında taslağın `yayin.json`'u silinip yeniden onaylanır.
+
+## H89 — Slayttaki yapışık madde imi glifi (U+F06E) kısaltmayı ve kanıt eşlemesini bozdu (2026-10-27, k2-02/k2-03)
+- **Belirti:** "KB" (kan basıncı) kısaltması sözlüğe girmedi; değerlendirme kapısı slayt metninde birebir geçen kanıtları "yok" saydı.
+- **Kök neden:** PowerPoint madde imi özel kullanım alanı karakteri (``) sözcüğe boşluksuz yapışık geliyor; kısaltma bölme
+  deseni ve kapı normalleştirmesi bu karakterleri ayırıcı saymıyordu.
+- **Çözüm / kural:** `kisaltma_sozlugu.adaylar` ve `degerlendirme_dogrula.norm` U+F000–F8FF ve madde imi işaretlerini ayırıcı/boşluk
+  sayar. Yeni metin işleyen her betik slayt metnini bu karakterlerden arındırarak karşılaştırır.
+
+## H90 — Anlam denetimi önbellek anahtarı değişince denetim sessizce atlandı (2026-10-27, k2-02)
+- **Belirti:** parti çizimi düzeltilince yerleşim "anlam denetimi bakılan 0" verdi; denetimin düzeltme/silme kararları uygulanmadan çizim yazıldı.
+- **Kök neden:** `cizim_uret.anlam_denetimi` önbelleği girdinin sha1'ine bağlı; girdi değişince yeni denetim ister, çağrı yapılamazsa
+  (claude kapalı) boş sonuçla devam eder.
+- **Çözüm / kural:** elle üretimde her yerleşimden sonra `rapor.anlam_denetimi.bakilan` panel sayısına eşit olmalı; değilse kararlar
+  yeni girdi anahtarına (sıra korunarak) eşlenir ya da denetim yeniden yapılır. `bakilan: 0` ile çizim yayına girmez.

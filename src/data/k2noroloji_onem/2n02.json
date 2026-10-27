@@ -1,1 +1,1104 @@
-{"kod":"2n02","no":2,"baslik":"Bilinç Bozukluğu Olan Hastaya Yaklaşım","pdf":"1. Bilinç Bozukluğu Olan Hastaya Yaklaşım.pdf","ozet":"Bilinç değişiklikleri acil serviste ve yoğun bakımda en sık nöroloji konsültasyonu nedenidir; yüzde seksen beşi metabolik ve sistemik, yüzde on beşi SSS'e ait nedenlerle oluşur. Ders; uyanıklığı sağlayan ARAS ağını, bilinç düzeylerinin tanımlarını, Glasgow Koma Skalasını, pupil, göz hareketi, motor yanıt ve solunumla lezyon lokalizasyonunu anlatır. Son bölümde laboratuvar incelemesi ve bilinci kapalı hastaya basamaklı yaklaşım algoritması verilir.","neden_onemli":"Bu dersin konularından 6 farklı çıkmış soru vardır; en çok Glasgow Koma Skalası (puan aralığı ve vaka üzerinden hesap; 2020-21, 2022-23, 2023-24) ve bilinç düzeylerinin tanımları (letarji-somnolans; 2021-22, 2025-26) soruluyor. Beyin sapı refleksleri iki yıl (2021-22, 2022-23) aynı biçimde sorulmuş; hipoglisemi, ayırıcı tanıda mutlaka düşünülecek durum olarak çıkmıştır.","maddeler":[{"id":"2n02-18","puan":98,"baslik":"Glasgow Koma Skalası: bileşenler ve puan aralığı","bilgi":"GKS **göz (4), motor (6)** ve **sözel (5)** yanıttan oluşur; en düşük puan **3**, en yüksek puan **15**tir.","alt":["Göz: 1–4 puan","Motor: 1–6 puan","Sözel: 1–5 puan"],"tur":"sayi","alinti":[{"sayfa":29,"metin":"Eye Movement Verbal 4 6 5"},{"sayfa":30,"metin":"5-Oriente 4-Dezoriente 3-Uygunsuz cevap 2-Homurtu 1-Yanıt yok"}],"neden":"2020-21, 2022-23 ve 2023-24'te soruldu; hem puan aralığı hem vaka üzerinden hesaplama istenir.","detay":"- **Göz açma (4):** 4 spontan açık, 3 sözel uyaranla, 2 ağrılı uyaranla, 1 açmıyor.\n- **Motor yanıt (6):** 6 emre uyma, 5 ağrıyı lokalize etme, 4 fleksör yanıt (çekme), 3 dekortike, 2 deserebre, 1 yanıt yok.\n- **Sözel yanıt (5):** 5 oryante, 4 dezoryante (konfüze konuşma), 3 uygunsuz cevap, 2 homurtu, 1 yanıt yok.\n- **Puan aralığı:** Her bölümün en düşük puanı 1 olduğundan toplam en az 3, en çok 4+6+5 = 15 olur; sıfır puan yoktur.\n- **Hesap örneği:** Ağrıyla göz açan (2), ağrıda dirsekleri büküp ayakları plantar fleksiyona alan (dekortike, 3), hiç konuşmayan (1) hasta 6 puan alır.\n- **Tek taraflı tutulum:** Hemiplejik hastada sağlam koluyla ağrıyı lokalize ediyorsa motor puan 5'tir; ağrıyla göz açan (2) ve konfüze konuşan (4) bu hasta 11 puan alır.","cikmis":["04c8b92b1242","past-1790877040005-770270","260b60a805e9"]},{"id":"2n02-05","puan":97,"baslik":"Bilinç düzeyleri: somnolans, stupor, koma","bilgi":"**Somnolan** hasta çabuk uyandırılır ve farkındadır; **stupor**da zorlukla uyandırılır ve farkındalık azalmıştır; **koma**da uyandırılamaz.","alt":["Bilinç açık: uyanık ve farkında","Koma: uyandırılamaz ve farkında değil"],"tur":"tanim","alinti":[{"sayfa":6,"metin":"Somnolan: çabuk uyandırılabilir ve farkında Stupor: zorlukla uyandırılabiliyor ve farkındalık azalmış"},{"sayfa":6,"metin":"Koma: uyandırılamıyor ve farkında değil"}],"neden":"Bu konudan 2021-22 ve 2025-26'da soruldu; sözel uyaranla uyanıp uyaran kesilince uykuya dönen hasta tanımı sorulur.","detay":"- **Bilinç açık:** Hasta uyanık ve çevresinin farkındadır.\n- **Somnolans (letarji):** Hasta sesle, adıyla seslenince çabuk uyandırılabilir ve farkındadır; uyaran kesilince yeniden uykuya dalar. Ders listesinde letarji ve somnolans aynı başlıkta verilir.\n- **Stupor:** Hasta ancak zorlukla, güçlü uyaranla uyandırılabilir ve farkındalığı azalmıştır.\n- **Koma:** Hasta hiçbir uyaranla uyandırılamaz ve farkında değildir.\n- **Vejetatif durum:** Uyandırılabilir ama farkında değildir.\n- **Vaka yorumu:** Kendi hâline bırakılınca uyuyan, adıyla seslenince uyanıp sayıklayan, ağrıyı lokalize eden hasta sesle uyandırılabildiği için somnolandır; stuporda sesli uyaran yetmez, komada ise hiç uyanma olmaz.","cikmis":["past-q-2025-2026_DO_NEM_3_FI_NAL_SINAVI-64"],"ornek26":[{"kok":"Zorlukla uyandırılabilen ve farkındalığı azalmış bir hastanın bilinç düzeyi aşağıdakilerden hangisi ile tanımlanır?","secenekler":{"A":"Somnolans","B":"Koma","C":"Vejetatif durum","D":"Stupor","E":"Bilinç açık"},"dogru":"D","aciklama":"Stupor, hastanın ancak zorlukla uyandırılabildiği ve farkındalığının azaldığı düzeydir. Somnolan hasta çabuk uyandırılır ve farkındadır; koma hastası ise hiç uyandırılamaz.","zorluk":"orta"}]},{"id":"2n02-10","puan":93,"baslik":"Stick kan şekeri: hipoglisemi gerçek acildir","bilgi":"İlk aşamada **stick kan şekerine** bakılır; çünkü **hipoglisemi gerçek bir acildir** ve bilinç bozukluğunda mutlaka düşünülür.","alt":[],"tur":"tani_tedavi","alinti":[{"sayfa":10,"metin":"Stick Kan şekeri (hipoglisemi gerçek bir acildir)"},{"sayfa":42,"metin":"Özellikle DM ve Kr. Alkolizmde etiyoloji hipoglisemi"}],"neden":"Slaytta iki kez vurgulanır (\"hipoglisemiyi atlama\"); ayırıcı tanıda mutlaka düşünülecek durum olarak sorulmuştur.","detay":"- **Hızlı değerlendirme:** İlk aşamada hızlı nörolojik muayene, fokal defisit araştırması ve stick kan şekeri yapılır; opioid aşırı dozu da sorgulanır.\n- **Hipoglisemi:** Gerçek bir acildir; laboratuvarda da \"hipoglisemiyi atlama\" uyarısıyla ilk sırada yer alır.\n- **Risk grubu:** Özellikle diyabetli ve kronik alkolik hastada etiyoloji hipoglisemi olabilir.\n- **Sistemik neden:** Hipoglisemi, SSS'i difüz etkileyen sistemik nedenler listesindedir.\n- **Algoritmada:** Bilinci kapalı hastada tetkiklerle birlikte IV glukoz verilir.\n- **Ayırıcı tanı listesi:** Sistemik nedenler (hipoksi, hipoglisemi, hiponatremi, ensefalopatiler) ve SSS'e ait nedenler (travma, kanama, inme, kitle, enfeksiyon, nöbet) bilinci doğrudan bozan durumlardır; periferik sinir ve kas hastalıkları bu listede yer almaz.","cikmis":["q-No_ropsikiyatri_gis_kardiyo_-2023-2024-C__km_s_lar__240625_053302__2_-19"]},{"id":"2n02-21","puan":92,"baslik":"Komada kullanılan beyin sapı refleksleri","bilgi":"Komada başlıca beyin sapı refleksleri **pupiller ışık refleksi, kornea-göz kırpma refleksi** ve **refleks konjuge göz hareketleri** (okülosefalik, okülovestibüler) dır.","alt":["Pupiller ışık refleksi","Kornea-göz kırpma refleksi (V → VII)","Okülosefalik ve okülovestibüler refleks"],"tur":"siniflama","alinti":[{"sayfa":31,"metin":"Komada Kullanılan Başlıca Beyin sapı Refleksleri"},{"sayfa":34,"metin":"Göz Hareketleri: Okülosefalik R"}],"neden":"2021-22 ve 2022-23'te \"hangisi beyin sapı refleksi değildir\" diye soruldu.","detay":"- **Pupiller ışık refleksi:** Işık gözden mezensefalona ulaşır, yanıt III. kranial sinirle pupillaya döner.\n- **Kornea-göz kırpma refleksi:** Duyusal yol V. kranial sinir, göz kırpma yanıtı VII. kranial sinirle oluşur; ponsta düzenlenir.\n- **Refleks konjuge göz hareketleri:** VIII. kranial sinirden gelen uyarı MLF aracılığıyla III. ve VI. kranial sinir çekirdeklerine ulaşır; okülosefalik refleks ve okülovestibüler (kalorik) refleks bu yolu sınar.\n- **Solunum nöronları:** Medulladadır; solunum şekli de beyin sapı düzeyini gösterir.\n- **Çeldirici:** Kremasterik refleks beyin sapı refleksleri arasında sayılmaz; komadaki hastanın beyin sapı muayenesinde kullanılmaz.","cikmis":["d3-b-056"],"ornek26":[{"kok":"Komadaki hastada kornea-göz kırpma refleksinin duyusal ve motor yolunu oluşturan kranial sinirler aşağıdakilerin hangisinde doğru verilmiştir?","secenekler":{"A":"V ve VII","B":"III ve III","C":"VIII ve VI","D":"VII ve V","E":"V ve III"},"dogru":"A","aciklama":"Kornea uyarısı V. kranial sinirle ponsa taşınır, göz kırpma yanıtı VII. kranial sinirle oluşur. VIII ve VI ise refleks konjuge göz hareketlerinin yoludur; ters sıra (VII ve V) en güçlü çeldiricidir.","zorluk":"zor"}]},{"id":"2n02-22","puan":91,"baslik":"Pupil bulgusuyla lezyon düzeyi","bilgi":"Metabolik ensefalopatide ve diensefalik lezyonda pupil **küçük-reaktif**, pretektalde **büyük-fikse-hippus**, unkalde **dilate-fikse**, mezensefalikte **orta-fikse**, ponsta **pinpoint**tir.","alt":[],"tur":"eslesme","alinti":[{"sayfa":32,"metin":"metabolik ansefalopati: küçük, reaktif diensefalik: küçük, reaktif pretektal: büyük, fikse,hippus"},{"sayfa":32,"metin":"mezansefalik: orta büyüklük, fikse pons: pinpoint"}],"neden":"Lezyon düzeyi–pupil eşleşmesi slaytta şemayla vurgulanmış; sınavda en sık eşleştirme bilgisidir.","detay":"- **Metabolik ensefalopati:** Pupiller küçük ve ışığa reaktiftir; ışık yanıtının korunması metabolik nedeni düşündürür.\n- **Diensefalik lezyon:** Küçük ve reaktif pupil.\n- **Pretektal lezyon:** Büyük, fikse pupil; hippus görülebilir.\n- **III. kranial sinir (unkal herniasyon):** O taraftaki pupil dilate ve fiksedir.\n- **Mezensefalik lezyon:** Orta büyüklükte, fikse pupil.\n- **Pons lezyonu:** İğne ucu (pinpoint) pupil.\n- **Kural:** Işık yanıtı korunmuş küçük pupil metabolik nedeni, fikse pupil yapısal beyin sapı ya da sinir tutulumunu düşündürür.","cikmis":[],"ornek26":[{"kok":"Komadaki hastada pupil bulgularıyla ilgili aşağıdaki ifadeler veriliyor.\nI. Metabolik ensefalopatide pupiller küçük ve reaktiftir.\nII. Pons lezyonunda pupiller iğne ucu (pinpoint) büyüklüğündedir.\nIII. Mezensefalik lezyonda pupiller dilate ve fiksedir.\nIV. Pretektal lezyonda pupiller büyük, fikse ve hippus gösterir.\nBu ifadelerden hangileri doğrudur?","secenekler":{"A":"I ve II","B":"I, II ve IV","C":"II ve III","D":"I, III ve IV","E":"I, II, III ve IV"},"dogru":"B","aciklama":"Metabolik ensefalopatide küçük-reaktif, ponsta iğne ucu, pretektal lezyonda büyük-fikse-hippus pupil görülür. Mezensefalik lezyonda pupil dilate değil orta büyüklükte ve fiksedir; dilate-fikse pupil unkal herniasyondaki III. kranial sinir tutulumuna aittir.","zorluk":"zor"}]},{"id":"2n02-01","puan":90,"baslik":"Bilinç değişikliğinin nedenleri: %85 ve %15","bilgi":"Bilinç değişikliklerinin **%85'i metabolik ve sistemik**, yalnız **%15'i santral sinir sistemine (SSS) ait** nedenlerden kaynaklanır.","alt":["%85: metabolik ve sistemik neden","%15: SSS'e ait neden"],"tur":"sayi","alinti":[{"sayfa":2,"metin":"metabolik ve sistemik neden"},{"sayfa":2,"metin":"15 SSS ait neden"}],"neden":"Slaytta büyük ve renkli yazılan oran; nedenlerin çoğunun sistemik olduğu sınavda sayı olarak sorulur.","detay":"- **Oran:** Bilinç değişikliğinin yüzde seksen beşi metabolik ve sistemik, yüzde on beşi SSS'e ait nedenlerle ortaya çıkar.\n- **Klinik sonucu:** Bilinci bozuk her hastada sistemik nedenler (hipoglisemi, hipoksi, elektrolit bozukluğu, toksik madde) mutlaka gözden geçirilir; SSS'e ait nedenler daha küçük bir gruptur.\n- **Yaklaşımla bağı:** Bu nedenle ilk aşamanın temel amacı, fokal yapısal SSS lezyonunu global metabolik sorundan ayırmaktır.\n- **Sık karşılaşılan tablo:** Bilinç değişiklikleri acil serviste ve yoğun bakımda en sık nöroloji konsültasyonu nedenidir.","cikmis":[],"ornek26":[{"kok":"Bilinç değişikliği ile gelen hastalarda nedenlerin yaklaşık yüzde kaçı metabolik ve sistemik kökenlidir?","secenekler":{"A":"%15","B":"%30","C":"%85","D":"%50","E":"%70"},"dogru":"C","aciklama":"Bilinç değişikliklerinin yüzde seksen beşi metabolik ve sistemik nedenlidir. Yüzde on beş ise SSS'e ait nedenlerin payıdır; bu iki sayı en sık karıştırılan çeldiricidir.","zorluk":"kolay"}]},{"id":"2n02-20","puan":89,"baslik":"GKS göz ve sözel yanıt basamakları","bilgi":"GKS'de göz açma **4 spontan, 3 sözel uyaranla, 2 ağrıyla, 1 açmıyor**; sözel yanıt **5 oryante, 4 dezoryante, 3 uygunsuz, 2 homurtu, 1 yok** olarak puanlanır.","alt":[],"tur":"siniflama","alinti":[{"sayfa":22,"metin":"4- Spontan açık 3- Verbal uyaranla 2- Ağrılı uyaranla 1- Açmıyor"},{"sayfa":30,"metin":"5-Oriente 4-Dezoriente 3-Uygunsuz cevap 2-Homurtu 1-Yanıt yok"}],"neden":"2023-24'te konfüze konuşan hemiplejik hastada puan hesaplatıldı; ara basamaklar sık karıştırılır.","detay":"- **Göz açma:** Kendiliğinden açık 4, sözel uyaranla açıyor 3, ağrılı uyaranla açıyor 2, hiç açmıyor 1.\n- **Sözel yanıt:** Oryante 5; oryantasyonu bozuk ama konuşabilen (konfüze, dezoryante) 4; uygunsuz kelimeler 3; anlaşılmaz sesler (homurtu) 2; yanıt yok 1.\n- **Ayırt etme:** Konfüze konuşma 4 puandır, uygunsuz cevap 3 puandır; ikisi en sık karıştırılan basamaklardır.\n- **Hesap:** Ağrıyla göz açan (2), konfüze konuşan (4) ve sağlam eliyle ağrıyı lokalize eden (5) hastanın GKS'si 11'dir.","cikmis":["260b60a805e9"],"ornek26":[{"kok":"Glasgow Koma Skalasının sözel yanıt bölümünde \"uygunsuz cevap\" kaç puan alır?","secenekler":{"A":"1","B":"2","C":"3","D":"4","E":"5"},"dogru":"C","aciklama":"Sözel yanıtta oryante 5, dezoryante 4, uygunsuz cevap 3, homurtu 2, yanıt yok 1 puandır. Dezoryante (konfüze) konuşma 4 puandır ve uygunsuz cevapla en sık karıştırılır.","zorluk":"kolay"}]},{"id":"2n02-19","puan":88,"baslik":"GKS motor yanıt basamakları ve postürler","bilgi":"GKS motor yanıtı **6 emre uyma, 5 ağrıyı lokalize, 4 fleksör yanıt, 3 dekortike, 2 deserebre, 1 yanıt yok** şeklinde puanlanır.","alt":[],"tur":"siniflama","alinti":[{"sayfa":24,"metin":"6-Emre uyma 5-Ağrıyı lokalize 4-Fleksör Yanıt 3-Dekortike 2-Deserebe 1-Yanıt yok"},{"sayfa":28,"metin":"Motor yanıtlar: Lezyon Lokalizasyonu Hemisferik Lezyon"}],"neden":"2022-23'te dekortike postürden puan hesaplatıldı; motor yanıt aynı zamanda lezyon düzeyini gösterir.","detay":"- **Basamaklar:** Emre uyma 6, ağrıyı lokalize etme 5, fleksör yanıt (ağrıdan çekme) 4, dekortike 3, deserebre 2, yanıt yok 1.\n- **Dekortike postür:** Ağrıda kollar dirsekten bükülür (fleksiyon), bacaklar gerilir ve ayaklar plantar fleksiyona gelir; 3 puandır.\n- **Deserebre postür:** Kollar ve bacaklar ekstansiyondadır; 2 puandır.\n- **Lezyon yeri:** Hemisferik lezyonda hasta ağrıya yönelik anlamlı hareket yapabilir; üst mezensefalon hasarında kollar fleksiyonda, bacaklar ekstansiyonda (dekortike) kalır; üst pontin hasarda kollar ve bacaklar ekstansiyondadır (deserebre).\n- **Sıra:** Lezyon aşağı (beyin sapına doğru) indikçe motor yanıt bozulur ve GKS motor puanı düşer.","cikmis":["past-1790877040005-770270"]},{"id":"2n02-27","puan":88,"baslik":"Laboratuvar: kan şekeri ve elektrolitler","bilgi":"Laboratuvarda **kan şekeri** (hipoglisemiyi atlama) ve **elektrolitler** bakılır; en sık **sodyum** bozulur, tümörlü hastada **kalsiyum** bozukluğu sıktır.","alt":["En sık etkilenen elektrolit: sodyum","Tümörlü hastada kalsiyum bozukluğu sık"],"tur":"en_sik","alinti":[{"sayfa":42,"metin":"Elektrolitler (en sık Na)"},{"sayfa":42,"metin":"Hiponatremi sık neden, tümör olanlarda kalsiyum metabolizma bozukluğu sık"}],"neden":"Slaytta \"en sık\" vurgusuyla verilen iki bilgi: hiponatremi ve tümörlü hastada kalsiyum.","detay":"- **Kan şekeri:** İlk bakılacak testtir; hipoglisemi atlanmamalıdır. Diyabetli ve kronik alkolik hastada etiyoloji hipoglisemi olabilir.\n- **Elektrolitler:** En sık sodyum etkilenir; hiponatremi bilinç bozukluğunun sık nedenidir.\n- **Tümörlü hasta:** Kalsiyum metabolizması bozukluğu sıktır; bilinci kapalı hastanın ilk tetkiklerinde kalsiyum da yer alır.\n- **Algoritmadaki karşılığı:** Bilinci kapalı hastada kan gazları, glukoz, elektrolitler, kalsiyum, magnezyum, üre, kreatinin, amonyak, AST ve toksikolojik tarama istenir.","cikmis":[],"ornek26":[{"kok":"Bilinç bozukluğu olan hastanın laboratuvar incelemesinde en sık saptanan elektrolit bozukluğu aşağıdakilerden hangisidir?","secenekler":{"A":"Hiperkalsemi","B":"Hipomagnezemi","C":"Hiponatremi","D":"Hipokalsemi","E":"Hipermagnezemi"},"dogru":"C","aciklama":"Komadaki hastada elektrolitler içinde en sık sodyum bozulur ve hiponatremi bilinç bozukluğunun sık nedenidir. Kalsiyum bozukluğu ise özellikle tümörlü hastalarda öne çıkar; genel olarak en sık değildir.","zorluk":"orta"}]},{"id":"2n02-23","puan":87,"baslik":"Midriyatik ve miyotik pupil nedenleri","bilgi":"Midriyatik, ışığa yanıtsız pupil **atropin, skopolamin, glutetimid, barbiturat, hipoksi** ve **hipotermi**de; ileri miyotik pupil **opiat intoksikasyonunda** görülür.","alt":[],"tur":"eslesme","alinti":[{"sayfa":33,"metin":"Midriyatik, ışığa yanıtsız pupil"},{"sayfa":33,"metin":"İleri miyotik pupil"}],"neden":"Toksik nedenlerin pupil bulgusuyla eşleştirilmesi slaytta vurgulanmış; \"hangisi midriyazis yapmaz\" tuzağı klasiktir.","detay":"- **Midriyatik ve ışığa yanıtsız pupil:** Atropin, skopolamin, glutetimid, barbiturat zehirlenmesi; ayrıca hipoksi ve hipotermi.\n- **İleri miyotik pupil:** Opiat intoksikasyonu.\n- **Ayırt etme:** Opiat zehirlenmesinde pupil daralır; bu nedenle midriyazis nedenleri arasında sayılmaz.\n- **Tedaviyle bağı:** Bilinci kapalı hastada opioid aşırı dozu ilk aşamada sorgulanır ve algoritmada naloksan uygulanır.\n- **Yapısal lezyonla karıştırma:** Pons lezyonunda da iğne ucu pupil görülür; öykü ve diğer beyin sapı bulguları ayırımı sağlar.","cikmis":[],"ornek26":[{"kok":"Aşağıdakilerden hangisi komadaki hastada midriyatik ve ışığa yanıtsız pupil nedenlerinden biri değildir?","secenekler":{"A":"Atropin","B":"Hipoksi","C":"Hipotermi","D":"Opiat intoksikasyonu","E":"Barbiturat"},"dogru":"D","aciklama":"Opiat intoksikasyonu ileri derecede miyotik (daralmış) pupil yapar. Atropin, barbiturat, hipoksi ve hipotermi ise pupili genişletip ışığa yanıtsız hâle getiren nedenlerdir.","zorluk":"orta"}]},{"id":"2n02-08","puan":86,"baslik":"İlk aşamanın primer amacı","bilgi":"İlk aşamadaki **primer amaç**, **fokal yapısal SSS lezyonlarını global metabolik problemlerden** ayırmaktır.","alt":[],"tur":"tani_tedavi","alinti":[{"sayfa":9,"metin":"Fokal yapısal SSS lezyonlarının, global metabolik problemlerden ayrımını yapmak"}],"neden":"Slaytta \"Primer Amaç\" başlığıyla vurgulanmış; yaklaşımın temel mantığını verir.","detay":"- **Primer amaç:** Bilinç bozukluğunun fokal yapısal bir SSS lezyonundan mı, yoksa global metabolik bir sorundan mı kaynaklandığını ayırmak.\n- **Eş zamanlı planlama:** Muayene ile birlikte stabilizasyon, laboratuvar, görüntüleme ve tedavi aynı anda planlanır.\n- **Fokal nörolojik defisit:** Hızlı nörolojik değerlendirmede fokal defisit bulunması yapısal lezyon yönünde önemlidir.\n- **Lokalizan bulgular:** Motor yanıtlar, pupiller, göz hareketleri ve solunum şekli bu ayrımın yapılmasını sağlar.","cikmis":[],"ornek26":[{"kok":"Bilinç bozukluğu olan hastaya yaklaşımda ilk aşamadaki primer amaç aşağıdakilerden hangisidir?","secenekler":{"A":"Fokal yapısal SSS lezyonunu global metabolik problemden ayırmak","B":"Glasgow Koma Skorunu hesaplamak","C":"BOS incelemesi ile enfeksiyonu dışlamak","D":"EEG ile nonkonvülzif status epileptikusu araştırmak","E":"Tiroid fonksiyon testlerini istemek"},"dogru":"A","aciklama":"İlk aşamada temel amaç bilinç bozukluğunun fokal yapısal bir SSS lezyonundan mı, global metabolik sorundan mı kaynaklandığını ayırmaktır. GKS hesaplamak muayenenin bir parçasıdır ama primer amaç değildir.","zorluk":"kolay"}]},{"id":"2n02-06","puan":85,"baslik":"Vejetatif durum: uyanık ama farkında değil","bilgi":"**Vejetatif durumda** hasta uyandırılabilir ancak **farkında değildir**; komadan uyandırılabilmesiyle ayrılır.","alt":[],"tur":"tuzak","alinti":[{"sayfa":6,"metin":"Vejetatif durum: uyandırılıyor ancak farkında değil"}],"neden":"Koma ile karıştırılan klasik tuzak: ikisinde de farkındalık yoktur, ama yalnız vejetatif hasta uyandırılabilir.","detay":"- **Tanım:** Vejetatif durumda hasta uyandırılabilir, ancak çevresinin farkında değildir.\n- **Komadan farkı:** Koma hastası ne uyandırılabilir ne de farkındadır; vejetatif hastada uyanıklık vardır, farkındalık yoktur.\n- **Stupordan farkı:** Stuporda hasta zorlukla uyandırılır ve farkındalığı azalmış da olsa vardır.\n- **Somnolanstan farkı:** Somnolan hasta çabuk uyandırılır ve farkındadır.\n- **Kural:** Bilinç düzeyleri iki soruyla ayrılır: hasta uyandırılabiliyor mu ve farkında mı?","cikmis":[],"ornek26":[{"kok":"Uyandırılabilen ancak çevresinin farkında olmayan hastadaki tablo aşağıdakilerden hangisidir?","secenekler":{"A":"Koma","B":"Somnolans","C":"Stupor","D":"Bilinç açık","E":"Vejetatif durum"},"dogru":"E","aciklama":"Vejetatif durumda hasta uyandırılır fakat farkında değildir. Koma hastasında da farkındalık yoktur ama hasta uyandırılamaz; bu yüzden en güçlü çeldirici komadır.","zorluk":"orta"}]},{"id":"2n02-03","puan":84,"baslik":"Uyanıklığı sağlayan yapılar (ARAS)","bilgi":"Normal uyku-uyanıklık ve uyarılabilirlik, **ARAS** ile talamus, bazal ön beyin, hipotalamus ve **serebral korteks** arasındaki bağlantı bütünlüğüne bağlıdır.","alt":["Rostral pons ve mezensefalon santral gri cevheri","Talamusun IL ve CM nükleusları","Bazal ön beyin ve hipotalamus"],"tur":"mekanizma","alinti":[{"sayfa":5,"metin":"Rostral pons ve mezensefalondaki santral gri cevherden çıkan eksitatör aktivitenin (ARAS)"},{"sayfa":5,"metin":"Talamusun IL ve CM nükleusları"}],"neden":"Bu sayfa çıkmış sorularla en çok örtüşen mekanizma sayfasıdır; bilinç bozukluğunun anatomik temelini verir.","detay":"- **ARAS'ın çıkış yeri:** Rostral pons ve mezensefalondaki santral gri cevherden çıkan uyarıcı (eksitatör) aktivitedir.\n- **Talamus:** ARAS aktivitesi talamusun intralaminar (IL) ve sentromedyan (CM) nükleuslarıyla bağlantı kurar.\n- **Diğer halkalar:** Bazal ön beyin ve hipotalamus da bu ağın parçasıdır.\n- **Korteks:** Uyanıklık ve uyarılabilirlik, bu yapıların serebral korteksle bağlantısı bütün kaldığı sürece korunur.\n- **Klinik sonucu:** Beyin sapının üst kısmını, talamusu ya da iki hemisferi birden etkileyen lezyon, bu ağı bozarak bilinci kapatabilir.","cikmis":[],"ornek26":[{"kok":"Normal uyku-uyanıklık ve uyarılabilirliğin sürdürülmesinde rol alan bağlantı ağında aşağıdakilerden hangisi yer almaz?","secenekler":{"A":"Talamusun IL ve CM nükleusları","B":"Bazal ön beyin","C":"Hipotalamus","D":"Rostral pons ve mezensefalon santral gri cevheri","E":"Medulladaki solunum nöronları"},"dogru":"E","aciklama":"Uyanıklık; rostral pons ve mezensefalondaki ARAS, talamusun IL ve CM nükleusları, bazal ön beyin, hipotalamus ve korteks bağlantısına dayanır. Medulladaki solunum nöronları solunumu yönetir, uyanıklık ağının parçası olarak sayılmaz.","zorluk":"orta"}]},{"id":"2n02-30","puan":83,"baslik":"Bilinç kapalıysa ilk tetkik ve tedaviler","bilgi":"Bilinci kapalı hastada **kan gazları, glukoz, elektrolitler, Ca, Mg, üre, kreatinin, NH3, AST, toksikolojik tarama** istenir; **IV glukoz, naloksan, flumazenil** verilir.","alt":[],"tur":"tani_tedavi","alinti":[{"sayfa":51,"metin":"Kan gazları, glu, elektrolitler, Ca, Mg, üre, Cre, NH3, AST, tox tarama, ıv glu, naloksan, flumazenil"}],"neden":"Algoritmanın tedavi basamağı; tetkiklerle eş zamanlı verilen üç ilaç sınavda sorulabilir.","detay":"- **Tetkikler:** Kan gazları, glukoz, elektrolitler, kalsiyum, magnezyum, üre, kreatinin, amonyak (NH3), AST ve toksikolojik tarama.\n- **Tedavi:** IV glukoz (hipoglisemi gerçek bir acildir), naloksan (opioid aşırı dozu) ve flumazenil eş zamanlı uygulanır.\n- **Sonraki soru:** Beyin sapı bulguları var mı?\n- **Tiamin:** Beyin sapı bulgusu olan dalda BBT/MRI, glukoz, metabolik ve toksik taramayla birlikte tiamin yer alır; Wernicke ensefalopatisi sistemik nedenler arasındadır.","cikmis":[],"ornek26":[{"kok":"Bilinci kapalı hastada tetkiklerle eş zamanlı uygulanan tedaviler aşağıdakilerin hangisinde doğru verilmiştir?","secenekler":{"A":"Naloksan, tiamin, EEG","B":"IV glukoz, naloksan, flumazenil","C":"Flumazenil, BOS incelemesi, tiamin","D":"IV glukoz, T3-T4, naloksan","E":"Flumazenil, MR, IV glukoz"},"dogru":"B","aciklama":"Bilinci kapalı hastada kan gazları, glukoz, elektrolit ve toksikolojik tarama alınırken IV glukoz, naloksan ve flumazenil verilir. Tiamin algoritmada beyin sapı bulgusu olan dalda yer alır; EEG, MR ve BOS ise ilaç değil tanı yöntemidir.","zorluk":"orta"}]},{"id":"2n02-16","puan":82,"baslik":"Lokalizan değeri olan klinik bulgular","bilgi":"Komada lokalizan değeri olan bulgular **iskelet kası motor yanıtları, pupil çapı ve reaktivitesi, göz hareketleri-okülovestibüler yanıtlar** ve **solunum şekli**dir.","alt":["Motor yanıtlar","Pupil çapı ve reaktivitesi","Göz hareketleri ve okülovestibüler yanıt","Solunum şekli"],"tur":"siniflama","alinti":[{"sayfa":19,"metin":"Lokalizan değeri olan klinik bulgular"}],"neden":"Lezyon düzeyini belirleyen dört bulgu; dersin muayene bölümü bu dört başlık üzerine kuruludur.","detay":"- **Motor yanıtlar:** Ağrılı uyarana verilen yanıtın biçimi hemisferik, üst mezensefalon ya da üst pontin hasarı ayırmaya yardım eder.\n- **Pupiller:** Çap ve ışığa yanıt; metabolik ensefalopatide küçük ve reaktif, ponsta iğne ucu (pinpoint) pupil görülür.\n- **Göz hareketleri:** Okülosefalik ve okülovestibüler (kalorik) yanıtlar beyin sapının sağlam olup olmadığını gösterir.\n- **Solunum şekli:** Cheyne-Stokes, santral nörojenik hiperventilasyon, apnestik, küme ve ataksik solunum.\n- **Lokalizan olmayan bulgu:** Ateş gibi vital bulgular sistemik enfeksiyonu düşündürür, lezyon yeri hakkında bilgi vermez.","cikmis":[],"ornek26":[{"kok":"Aşağıdakilerden hangisi komadaki hastada lokalizan değeri olan klinik bulgulardan biri değildir?","secenekler":{"A":"İskelet kası motor yanıtları","B":"Pupillerin çapı ve reaktivitesi","C":"Göz hareketleri ve okülovestibüler yanıtlar","D":"Ateş","E":"Solunum şekli"},"dogru":"D","aciklama":"Ateş vital bulgular içinde değerlendirilir ve sistemik enfeksiyonu düşündürür; lezyonun yerini göstermez. Motor yanıtlar, pupiller, göz hareketleri ve solunum şekli ise lokalizan bulgulardır.","zorluk":"orta"}]},{"id":"2n02-29","puan":81,"baslik":"Bilinç kapalı değilse: psikojen ve taklitçiler","bilgi":"Yanıt alınamayan ama **bilinci kapalı olmayan** hastada **psikojen yanıtsızlık, locked-in sendromu, nöromüsküler paralizi** ve **rijidite** düşünülür.","alt":[],"tur":"tuzak","alinti":[{"sayfa":48,"metin":"Psikojen, locked-in synd, N-M paralizi, rijidite"}],"neden":"Algoritmanın ilk ayrımı: yanıtsızlık her zaman bilinç kaybı değildir; klasik tuzak.","detay":"- **İlk adım:** Yanıt alınamayan hastada önce ABC ve oksijenasyon sağlanır.\n- **Soru:** Hastanın bilinci gerçekten kapalı mı?\n- **Hayır ise:** Psikojen yanıtsızlık, locked-in sendromu, nöromüsküler paralizi ve rijidite düşünülür ve uygun yaklaşım uygulanır.\n- **Locked-in sendromu:** Hasta yanıt veremez gibi görünür ama bilinci açıktır; koma ile karıştırılmamalıdır.\n- **Evet ise:** Kan gazları, glukoz, elektrolitler ve diğer tetkikler alınır; IV glukoz, naloksan ve flumazenil verilir, ardından beyin sapı bulguları değerlendirilir.","cikmis":[],"ornek26":[{"kok":"Yanıt alınamayan hastada bilincin kapalı olmadığı saptanırsa ayırıcı tanıda aşağıdakilerden hangisi düşünülmez?","secenekler":{"A":"Hipoglisemi","B":"Locked-in sendromu","C":"Psikojen yanıtsızlık","D":"Nöromüsküler paralizi","E":"Rijidite"},"dogru":"A","aciklama":"Bilinci kapalı olmayan yanıtsız hastada psikojen yanıtsızlık, locked-in sendromu, nöromüsküler paralizi ve rijidite düşünülür. Hipoglisemi bilinci gerçekten kapatan sistemik bir nedendir ve bilinci kapalı hasta basamağında IV glukozla ele alınır.","zorluk":"orta"}]},{"id":"2n02-07","puan":80,"baslik":"Bilinç bozukluklarının tanım listesi","bilgi":"Bilinç bozuklukları **konfüzyon, letarji-somnolans, stupor, koma, deliryum, demans** ve **beyin ölümü** olarak tanımlanır.","alt":[],"tur":"siniflama","alinti":[{"sayfa":7,"metin":"Bilinç Bozuklukları: Tanımlar"}],"neden":"Çıkmış sorularla en çok örtüşen sayfa (2021-22, 2025-26); letarji ile somnolansın aynı tabloyu anlattığı bilinmelidir.","detay":"- **Liste:** Konfüzyon, letarji-somnolans, stupor, koma, deliryum, demans ve beyin ölümü.\n- **Letarji ve somnolans:** Slaytta iki terim tek başlıkta verilir; hasta sözel uyaranla uyandırılır, uyaran kesilince yeniden uykuya geçer.\n- **Stupor ve koma:** Stuporda hasta zorlukla uyandırılır; komada hiç uyandırılamaz.\n- **Konfüzyon:** Listede ayrı bir bilinç bozukluğudur; uykuya meyil ile tanımlanmaz.\n- **Etiyolojide demans:** Demans, SSS'e ait bilinç değişikliği nedenleri arasında da sayılır.","cikmis":["past-q-2025-2026_DO_NEM_3_FI_NAL_SINAVI-64"]},{"id":"2n02-24","puan":79,"baslik":"Okülosefalik refleks","bilgi":"Okülosefalik refleks için baş **30 derecede** her iki tarafa çevrilir; beyin sapı sağlamsa gözler başın tersine hareket eder, hasarlıysa orta hatta kalır.","alt":[],"tur":"tani_tedavi","alinti":[{"sayfa":34,"metin":"Baş 30 derecede: her iki tarafa çevrilir ve göz hareketleri gözlenir"},{"sayfa":35,"metin":"Bilinç kapalı Beyin sapı HASARLI"}],"neden":"Beyin sapının sağlam olup olmadığını gösteren yatak başı testi; sağlam–hasarlı karşılaştırması şekille verilmiş.","detay":"- **Yapılışı:** Baş 30 derecedeyken her iki tarafa çevrilir ve göz hareketleri izlenir.\n- **Bilinç kapalı, beyin sapı sağlam:** Baş bir yana çevrildiğinde gözler konjuge olarak ters yöne kayar; refleks korunmuştur.\n- **Bilinç kapalı, beyin sapı hasarlı:** Baş çevrilince gözler başla birlikte hareket eder ve orta hatta kalır; refleks kaybolmuştur.\n- **Yol:** VIII. kranial sinirden gelen uyarı MLF ile III. ve VI. kranial sinir çekirdeklerine iletilir.\n- **Değeri:** Göz hareketleri ve okülovestibüler yanıtlar lokalizan bulgulardandır; kalorik testte de aynı sağlam–hasarlı ayrımı soğuk suyla yapılır.","cikmis":[],"ornek26":[{"kok":"Bilinci kapalı hastada okülosefalik refleks bakılırken baş her iki yana çevrildiğinde gözlerin başla birlikte orta hatta kaldığı görülüyor. Bu bulgu neyi gösterir?","secenekler":{"A":"Beyin sapı hasarı","B":"Beyin sapı sağlam metabolik koma","C":"Psikojenik yanıtsızlık","D":"Bilincin açık olduğunu","E":"Vejetatif durum"},"dogru":"A","aciklama":"Beyin sapı sağlamsa baş çevrildiğinde gözler ters yöne kayar; gözlerin başla birlikte orta hatta kalması refleksin kaybolduğunu, yani beyin sapı hasarını gösterir. Beyin sapı sağlam olan bilinci kapalı hastada ise refleks korunur.","zorluk":"orta"}]},{"id":"2n02-11","puan":78,"baslik":"Sistemik nedenler: SSS'in difüz etkilenimi","bilgi":"Sistemik nedenler arasında **hipoksi, hiperkapni, hipo/hiperglisemi, hiponatremi**, Wernicke, üremik, hepatik ve hipertansif ensefalopati ile **sepsis** bulunur.","alt":["Wernicke, üremik, hepatik ve hipertansif ensefalopati","Serotonin sendromu ve nöroleptik malign sendrom"],"tur":"siniflama","alinti":[{"sayfa":11,"metin":"Etiyoloji: Sistemik Neden – SSS Difüz Etkilenimi"},{"sayfa":12,"metin":"İlaç veya alkol geri çekilmesi"}],"neden":"Etiyoloji listesi slaytlarda renkle vurgulanmış; \"hangisi sistemik neden değildir\" biçiminde sorulabilir.","detay":"- **Gaz ve glukoz bozuklukları:** Hipoksi, hiperkapni, hipoglisemi, hiperglisemi.\n- **Elektrolitler:** Elektrolit anormallikleri, özellikle hiponatremi.\n- **Ensefalopatiler:** Wernicke, üremik, hepatik ve hipertansif ensefalopati; ayrıca sepsis.\n- **Dolaşım:** Düşük kardiyak debi, yaygın hipoperfüzyon, hipovolemi, anemi.\n- **Endokrin:** Endokrin hipo- ya da hiperfonksiyon.\n- **Toksik ve ilaç:** Toksik madde maruziyeti, ilaç ya da alkol geri çekilmesi, ilaç etkileşimi, serotonin sendromu, nöroleptik malign sendrom.\n- **Ortak özellik:** Hepsi SSS'i difüz (yaygın) etkiler ve bilinç bozukluklarının büyük çoğunluğunu oluşturur.","cikmis":[]},{"id":"2n02-26","puan":77,"baslik":"Komada solunum şekilleri","bilgi":"Komada görülen solunum şekilleri **Cheyne-Stokes, santral nörojenik hiperventilasyon, apnestik, küme** ve **ataksik solunum**dur.","alt":["Cheyne-Stokes solunumu","Santral nörojenik hiperventilasyon","Apnestik, küme ve ataksik solunum"],"tur":"siniflama","alinti":[{"sayfa":40,"metin":"Cheyne-Stokes solunumu Santral nörojenik hiperventilasyon Apnestik solunum"}],"neden":"Solunum şekli lokalizan bulgulardandır; beş solunum tipinin adı bilinmelidir.","detay":"- **Cheyne-Stokes solunumu:** Solunum derinliği giderek artıp azalır, aralarda duraklama olur.\n- **Santral nörojenik hiperventilasyon:** Sürekli, hızlı ve derin solunum.\n- **Apnestik solunum:** Derin inspirasyonun sonunda uzun duraklama olur.\n- **Küme solunum:** Düzensiz aralarla gelen solunum kümeleri.\n- **Ataksik solunum:** Hızı ve derinliği tamamen düzensiz solunum.\n- **Lokalizasyon:** Solunum şekli, motor yanıt, pupil ve göz hareketleriyle birlikte lezyon düzeyini gösterir; beyin sapındaki solunum nöronları medulladadır.","cikmis":[]},{"id":"2n02-12","puan":76,"baslik":"SSS'e ait bilinç bozukluğu nedenleri","bilgi":"SSS'e ait nedenler **travma, intrakranyal kanama-SAK, iskemik inme, yer kaplayan oluşum, SSS enfeksiyonu, nöbetler** ve **demans**tır.","alt":[],"tur":"siniflama","alinti":[{"sayfa":13,"metin":"Etiyoloji: SSS Ait Nedenler"},{"sayfa":13,"metin":"Nöbetler (status epileptikus / postiktal periyod)"}],"neden":"Sistemik nedenlerle karıştırılmaya uygun bir liste; nöbetlerde status epileptikus ve postiktal dönem birlikte vurgulanmış.","detay":"- **Travma:** SSS travması; skalp ayrıntılı muayene edilmezse küçük, gizli travmalar atlanır.\n- **Kanama:** İntrakranyal kanama ve subaraknoid kanama (SAK).\n- **İskemi:** İskemik inme.\n- **Kitle:** Yer kaplayan oluşum; ileri evrede serebral herniasyona yol açabilir.\n- **Enfeksiyon:** SSS enfeksiyonu; tanısında BOS incelemesi kullanılır.\n- **Nöbet:** Status epileptikus ya da postiktal dönem.\n- **Demans:** SSS'e ait nedenler arasında sayılır.\n- **Ayırt etme:** Hiponatremi, hipoglisemi, üremi gibi durumlar SSS'e ait değil, sistemik nedenlerdir.","cikmis":[],"ornek26":[{"kok":"Aşağıdakilerden hangisi bilinç bozukluğunun SSS'e ait nedenlerinden biri değildir?","secenekler":{"A":"Subaraknoid kanama","B":"İskemik inme","C":"SSS enfeksiyonu","D":"Status epileptikus","E":"Üremik ensefalopati"},"dogru":"E","aciklama":"Üremik ensefalopati SSS'i difüz etkileyen sistemik bir nedendir. Subaraknoid kanama, iskemik inme, SSS enfeksiyonu ve status epileptikus ise doğrudan SSS'e ait nedenler listesindedir.","zorluk":"kolay"}]},{"id":"2n02-15","puan":74,"baslik":"Komada gözden kaçırılmaması gereken bulgular","bilgi":"Postiktal durumdan şüphelenilen konfüze hastada **dilde ısırık** nöbeti düşündürür; **skalp** ayrıntılı muayene edilir, alkolün altında **SAK-subdural** aranır.","alt":[],"tur":"tuzak","alinti":[{"sayfa":18,"metin":"Konfüze hastada postiktal durumdan şüpheleniliyorsa: Dilde ısırık ? NÖBET"},{"sayfa":18,"metin":"Sıklıkla küçük-gizli travmalar atlanır"}],"neden":"Slaytta \"Anahtar Noktalar\" başlığı ve ünlemlerle vurgulanmış klasik tuzaklar.","detay":"- **Dilde ısırık:** Konfüze hastada postiktal durumdan şüpheleniliyorsa dilde ısırık aranır; varsa nöbet düşünülür.\n- **Skalp muayenesi:** Skalp ayrıntılı muayene edilmelidir; küçük ve gizli travmalar sıklıkla atlanır, bu da travma sonrası tabloyu gözden kaçırır.\n- **Alkol tuzağı:** Koma nedeni alkol gibi görünse bile altta başka bir etiyoloji olup olmadığı sorgulanır; özellikle subaraknoid kanama (SAK) ve subdural kanama araştırılır.\n- **Muayenede sorulacaklar:** Bilinç düzeyi, pupiller, uyaranlara yanıt, travma belirtileri ve koma skalası.","cikmis":[],"ornek26":[{"kok":"Konfüzyon ile getirilen hastanın muayenesinde dilde ısırık saptanıyor. Bu bulgu öncelikle hangi tabloyu düşündürür?","secenekler":{"A":"Hepatik ensefalopati","B":"Postiktal dönem (nöbet)","C":"Wernicke ensefalopatisi","D":"Hipertansif ensefalopati","E":"Opioid aşırı dozu"},"dogru":"B","aciklama":"Konfüze hastada dilde ısırık, nöbet sonrası (postiktal) dönemi düşündüren bulgudur. Hepatik, Wernicke ve hipertansif ensefalopati de konfüzyon yapar ama dilde ısırık oluşturmaz.","zorluk":"orta"}]},{"id":"2n02-28","puan":73,"baslik":"Kan gazı ve tam kan sayımı","bilgi":"Arteryel kan gazında **asidoz** önemlidir: pH **salisilat ve metanol**, COHb **karbonmonoksit-duman** zehirlenmesini; **trombositopeni** kanama ve sepsisi düşündürür.","alt":[],"tur":"tani_tedavi","alinti":[{"sayfa":43,"metin":"Arteryal Kan Gazı (asidoz önemli)"},{"sayfa":43,"metin":"pH: (salisilat zehirlenmesi, methanol)"},{"sayfa":43,"metin":"Trombositopeni; Kanama, sepsis"}],"neden":"Laboratuvar bulgusu ile nedenin eşleştirilmesi; zehirlenme ve kanama soruları için temel bilgi.","detay":"- **Arteryel kan gazı:** Asidoz önemlidir.\n- **pH:** Salisilat ve metanol zehirlenmesinde bozulur.\n- **Karboksihemoglobin (COHb):** Karbonmonoksit ve duman zehirlenmesini gösterir.\n- **Tam kan sayımı:** Uzamış kanama zamanı önemlidir; trombositopeni kanamayı ve sepsisi düşündürür.\n- **Kanama profili:** Ayrıca istenir.\n- **Algoritmadaki yeri:** BT ve BOS normal olan komalı hastada kan gazı, metabolik ya da solunumsal asit-baz bozukluğunu ayırmak için kullanılır.","cikmis":[],"ornek26":[{"kok":"Bilinç bozukluğu ile getirilen hastanın tam kan sayımında trombositopeni saptanıyor. Bu bulgu öncelikle hangi durumları düşündürür?","secenekler":{"A":"Hiponatremi ve hipoglisemi","B":"Hipotermi ve hipoksi","C":"Üremi ve hepatik ensefalopati","D":"Kanama ve sepsis","E":"Status epileptikus ve demans"},"dogru":"D","aciklama":"Trombositopeni, komadaki hastada kanamayı ve sepsisi düşündürür; bu yüzden kanama profili de istenir. Hiponatremi ve hipoglisemi elektrolit ve kan şekeriyle saptanır, trombosit sayısıyla ilişkili değildir.","zorluk":"orta"}]},{"id":"2n02-02","puan":72,"baslik":"En sık nöroloji konsültasyonu nedeni","bilgi":"Bilinç değişiklikleri **acil servis ve yoğun bakım** ünitelerinde **en sık nöroloji konsültasyonu** nedenidir.","alt":[],"tur":"en_sik","alinti":[{"sayfa":2,"metin":"Bilinç değişiklikleri acil servis ve yoğun bakım ünitelerinde en sık nöroloji konsültasyonu nedenidir"}],"neden":"Dersin açılış cümlesi; \"en sık\" vurgusu taşıdığı için sınavda kısa bilgi sorusu olabilir.","detay":"- **Nerede görülür:** Bilinç değişikliği özellikle acil serviste ve yoğun bakım ünitelerinde karşımıza çıkar.\n- **Önemi:** Bu birimlerden nörolojiye en sık danışılan sorun bilinç değişikliğidir.\n- **Ekip yaklaşımı:** Ders sonunda vurgulandığı gibi bilinç bozukluğunda ayırıcı tanı önemlidir; hızlı ve ekip hâlinde çalışmak gerekir.\n- **Etiyoloji dağılımı:** Bu hastaların çoğunda (yüzde seksen beş) neden metabolik ya da sistemiktir; bu yüzden konsültasyonda sistemik nedenler de mutlaka gözden geçirilir.","cikmis":[]},{"id":"2n02-09","puan":70,"baslik":"İlk aşamada stabilizasyon","bilgi":"Muayeneyle birlikte stabilizasyon, laboratuvar, görüntüleme ve tedavi **eş zamanlı** planlanır: **O2, iki geniş IV yol, EKG, kardiyak monitörizasyon**.","alt":[],"tur":"tani_tedavi","alinti":[{"sayfa":9,"metin":"O2, iki geniş IV yol, EKG, kardiak monitorizasyon"}],"neden":"Acil yaklaşımın ilk basamağı; algoritmanın başında da \"ABC ve oksijenasyon\" yer alır.","detay":"- **Eş zamanlılık:** Bilinç bozukluğunda muayene, stabilizasyon, laboratuvar, görüntüleme ve tedavi sırayla değil, aynı anda planlanır.\n- **Stabilizasyon:** Oksijen verilir, iki geniş damar yolu açılır, EKG çekilir ve kardiyak monitörizasyon yapılır.\n- **Algoritmadaki karşılığı:** Yanıt alınamayan hastada ilk adım ABC (hava yolu, solunum, dolaşım) ve oksijenasyondur.\n- **Hızlı nörolojik değerlendirme:** Aynı aşamada fokal nörolojik defisit aranır, stick kan şekerine bakılır ve opioid aşırı dozu düşünülür.","cikmis":[]},{"id":"2n02-32","puan":69,"baslik":"Beyin sapı bulgusu varsa","bilgi":"Beyin sapı bulgusu varsa **posterior fossada yapısal lezyon, transtentoryal herniasyon**, toksik ve metabolik nedenler düşünülür; **BBT/MRI, glukoz, tiamin** ve tarama yapılır.","alt":[],"tur":"tani_tedavi","alinti":[{"sayfa":58,"metin":"Posterior fossada yapısal lezyon, transtentional herniasyon, toksik ve metabolik nedenler"},{"sayfa":59,"metin":"BBT/MRI, glu, tiamin, metobolik ve toksik tarama"}],"neden":"Algoritmanın \"evet\" kolu; beyin sapı bulgusunun posterior fossa lezyonunu düşündürdüğü vaka biçiminde sorulabilir.","detay":"- **Durum:** Bilinci kapalı hastada beyin sapı bulguları (pupil, göz hareketleri, motor yanıt, solunum bozukluğu) var.\n- **Düşünülecek nedenler:** Posterior fossada yapısal lezyon, transtentoryal herniasyon, toksik ve metabolik nedenler.\n- **İncelemeler:** Beyin BT ya da MRI, glukoz, tiamin, metabolik ve toksik tarama.\n- **Karşıt kol:** Beyin sapı bulgusu yoksa lateral şift yapan tek serebral lezyon, biserebral yapısal, talamik ve metabolik-toksik-enfeksiyöz nedenler düşünülür; BBT, tarama ve BOS incelemesi yapılır.","cikmis":[],"ornek26":[{"kok":"Bilinci kapalı hastada ilk tetkik ve tedaviler yapıldıktan sonra belirgin beyin sapı bulguları saptanıyor. Algoritmaya göre öncelikle düşünülmesi gereken yapısal neden aşağıdakilerden hangisidir?","secenekler":{"A":"Lateral şift yapan tek serebral lezyon","B":"Talamik lezyon","C":"Posterior fossada yapısal lezyon","D":"Biserebral yapısal lezyon","E":"Psikojen yanıtsızlık"},"dogru":"C","aciklama":"Beyin sapı bulgusu olan bilinci kapalı hastada posterior fossada yapısal lezyon ve transtentoryal herniasyon düşünülür. Lateral şift yapan tek serebral lezyon, talamik ve biserebral lezyonlar ise beyin sapı bulgusu olmayan kolda yer alır.","zorluk":"zor"}]},{"id":"2n02-25","puan":68,"baslik":"Kalorik test (vestibülo-oküler refleks)","bilgi":"Kalorik testte kulağa **soğuk su** verilir; bilinci kapalı ama **beyin sapı sağlam** hastada gözler uyarılan kulağa doğru kayar, hasarlıysa yanıt alınmaz.","alt":[],"tur":"tani_tedavi","alinti":[{"sayfa":37,"metin":"Vestibülo-oküler refleksler Bilinç kapalı Beyin sapı sağlam Soğuk Su"},{"sayfa":38,"metin":"Bilinç kapalı Beyin sapı HASARLI Soğuk Su"}],"neden":"Okülovestibüler yanıt lokalizan bulgular arasında sayılır ve beyin sapı refleksi sorularında çeldirici olarak geçer.","detay":"- **Yapılışı:** Dış kulak yoluna enjektörle soğuk su verilir ve göz hareketleri izlenir.\n- **Beyin sapı sağlam:** Bilinci kapalı hastada gözler konjuge olarak soğuk su verilen kulağa doğru kayar.\n- **Beyin sapı hasarlı:** Gözler orta hatta kalır, yanıt alınamaz.\n- **Okülosefalik refleksle ilişkisi:** İkisi de aynı vestibülo-oküler yolu (VIII → MLF → III ve VI) sınar; ikisinde de sağlam ve hasarlı beyin sapı aynı biçimde ayrılır.\n- **Lokalizan değeri:** Göz hareketleri ve okülovestibüler yanıtlar komada lezyon yerini gösteren bulgulardandır.","cikmis":[],"ornek26":[{"kok":"Bilinci kapalı ancak beyin sapı sağlam olan bir hastada kalorik testte bir kulağa soğuk su verildiğinde beklenen yanıt aşağıdakilerden hangisidir?","secenekler":{"A":"Gözler orta hatta sabit kalır","B":"Yalnız uyarılan taraftaki pupil daralır","C":"Gözler konjuge olarak soğuk su verilen kulağa doğru kayar","D":"İki taraflı göz kırpma olur","E":"Gözler aşağı ve içe döner"},"dogru":"C","aciklama":"Beyin sapı sağlamsa soğuk su uyarısıyla gözler konjuge biçimde uyarılan kulağa doğru kayar. Gözlerin orta hatta sabit kalması beyin sapı hasarında görülen yanıtsızlıktır.","zorluk":"zor"}]},{"id":"2n02-31","puan":66,"baslik":"Beyin sapı bulgusu yoksa","bilgi":"Beyin sapı bulgusu yoksa **lateral şift yapan tek serebral lezyon**, biserebral yapısal, talamik, metabolik, toksik ve enfeksiyöz nedenler düşünülür; **BBT, tarama ve BOS** yapılır.","alt":[],"tur":"tani_tedavi","alinti":[{"sayfa":54,"metin":"Lateral şift yapan tek serebral lezyon, biserebral yapısal, talamik, metabolik, toksik, enfeksiyöz?"},{"sayfa":56,"metin":"BBT, metabolik ve ilaç tarama, BOS inceleme, enfeksiyöz"}],"neden":"Algoritmanın \"hayır\" kolu; hangi nedenlerin beyin sapı bulgusu vermeden koma yaptığı ayırıcı tanı sorusu olabilir.","detay":"- **Durum:** Bilinci kapalı hastada beyin sapı bulgusu yok.\n- **Düşünülecek nedenler:** Lateral şift yapan tek serebral lezyon, iki hemisferi birden tutan (biserebral) yapısal lezyon, talamik lezyon, metabolik, toksik ve enfeksiyöz nedenler.\n- **Acil incelemeler:** Beyin BT, metabolik ve ilaç taraması, BOS incelemesi ve enfeksiyon araştırması.\n- **Karşıt kol:** Beyin sapı bulgusu varsa posterior fossada yapısal lezyon, transtentoryal herniasyon ya da toksik-metabolik nedenler düşünülür.","cikmis":[]},{"id":"2n02-33","puan":64,"baslik":"Komalı hasta: BT, BOS, kan gazı ve osmolar açık","bilgi":"Komalı hastada sırayla **BT**, **BOS** ve **kan gazı** yapılır; metabolik asidoz nedenleri **laktat, metanol, etilen glikol, salisilat, üremi, diyabet, etil alkol**dür.","alt":[],"tur":"tani_tedavi","alinti":[{"sayfa":60,"metin":"Komalı Hasta Laktat"}],"neden":"Algoritmanın son şeması; asit-baz ve osmolar açık ayrımı zor soru kaynağıdır.","detay":"- **BT:** Yapısal beyin hasarını gösterir; normalse BOS'a geçilir.\n- **BOS:** SSS enfeksiyonunu gösterir; normalse arteryel kan gazına geçilir.\n- **Metabolik asidoz:** Laktat, metanol, etilen glikol, salisilat, üremi, diyabet, etil alkol.\n- **Metabolik alkaloz:** Dehidratasyon.\n- **Osmolar açık pozitif:** Metanol, izopropil alkol, etil eter, etilen glikol, aseton, trikloroetan.\n- **Osmolar açık negatif:** Anoksik-iskemik ensefalopati, belirlenemeyen toksin alımı; MSS demiyelinizan hastalık ve akut baziler arter tıkanması için MR, akut baziler migren için anamnez, nonkonvülzif status epileptikus için EEG, miksödem koması-Hashimoto ensefaliti-tiroid fırtınası için T3, T4, TSH; psikojenik koma.","cikmis":[],"ornek26":[{"kok":"BT ve BOS incelemesi normal olan komalı hastanın arteryel kan gazında metabolik asidoz saptanıyor. Aşağıdakilerden hangisi bu tablonun nedenleri arasında yer almaz?","secenekler":{"A":"Laktat","B":"Metanol","C":"Salisilat","D":"Dehidratasyon","E":"Üremi"},"dogru":"D","aciklama":"Komalı hastada metabolik asidoz nedenleri laktat, metanol, etilen glikol, salisilat, üremi, diyabet ve etil alkoldür. Dehidratasyon ise şemada metabolik alkalozun nedeni olarak verilir.","zorluk":"zor"},{"kok":"Osmolar açığı negatif olan komalı hastada nonkonvülzif status epileptikus düşünülüyorsa tanı için kullanılacak yöntem aşağıdakilerden hangisidir?","secenekler":{"A":"MR","B":"EEG","C":"T3, T4, TSH","D":"Anamnez","E":"BOS incelemesi"},"dogru":"B","aciklama":"Nonkonvülzif status epileptikus tanısı EEG ile konur. MR demiyelinizan hastalık ve akut baziler arter tıkanmasında, T3-T4-TSH miksödem koması ve tiroid fırtınasında kullanılır.","zorluk":"orta"}]},{"id":"2n02-04","puan":62,"baslik":"ARAS'ın bileşenleri ve afferent sistemleri","bilgi":"Bilinç sisteminde **ARAS**, **sentral tegmental fasikül** ve **raphe nükleusu, locus ceruleus, parabrachialis** gibi direkt afferent sistemler yer alır.","alt":["Raphe nükleusu","Locus ceruleus","Parabrachial nükleus"],"tur":"siniflama","alinti":[{"sayfa":4,"metin":"raphe nucleus, locus ceruleus, parabrachialis"}],"neden":"Ayrıntı düzeyinde bir slayt; ARAS ile birlikte sayılan yapılar çeldirici olarak kullanılabilir.","detay":"- **ARAS:** Asendan retiküler aktive edici sistem, bilincin temel yapısıdır.\n- **Sentral tegmental fasikül:** ARAS ile birlikte bilinç sisteminde sayılan yol.\n- **Direkt afferent sistemler:** Raphe nükleusu, locus ceruleus ve parabrachial nükleus doğrudan bu sisteme katkı verir.\n- **Ayırt edilmesi gereken yapılar:** Talamusun IL ve CM nükleusları, bazal ön beyin ve hipotalamus ise ARAS'ın bağlantı kurduğu üst merkezlerdir; direkt afferent sistemler listesinde değil, uyanıklık ağının bağlantı halkaları arasında sayılır.","cikmis":[]},{"id":"2n02-13","puan":60,"baslik":"Serebral herniasyon tipleri","bilgi":"Serebral herniasyon tipleri **unkal, santral, singulat, transkalvaryal, yukarı (asendan)** ve **tonsiller** herniasyondur.","alt":[],"tur":"siniflama","alinti":[{"sayfa":14,"metin":"Santral 1.Unkal"},{"sayfa":14,"metin":"6 Tonsiller SEREBRAL HERNIASYON"}],"neden":"Şekille anlatılan sayfa; unkal herniasyon pupil bulgusuyla, transtentoryal herniasyon algoritmayla bağlantılıdır.","detay":"- **Unkal herniasyon:** Temporal lobun iç kısmı (unkus) aşağı doğru yer değiştirir; pupil şemasında III. kranial sinir (unkal) tutulumunda pupil dilate ve fiksedir.\n- **Santral herniasyon:** Beyin dokusunun orta hatta aşağı doğru yer değiştirmesidir.\n- **Singulat herniasyon:** Singulat girusun karşı tarafa, orta hattın altına itilmesidir.\n- **Transkalvaryal herniasyon:** Beyin dokusunun kafatası defektinden dışarı çıkmasıdır.\n- **Yukarı herniasyon:** Posterior fossadaki dokunun yukarı doğru yer değiştirmesidir.\n- **Tonsiller herniasyon:** Serebellar tonsillerin aşağı doğru yer değiştirmesidir.\n- **Algoritmada:** Beyin sapı bulgusu olan bilinci kapalı hastada transtentoryal herniasyon düşünülür.","cikmis":[]},{"id":"2n02-17","puan":58,"baslik":"Koma skorları","bilgi":"Komada kullanılan skorlar **Glasgow Koma Skoru**, **dörtlü test** ve **hepatik koma skalası**dır.","alt":[],"tur":"siniflama","alinti":[{"sayfa":20,"metin":"Glasgow koma skoru"}],"neden":"Skor adları listesi; en çok kullanılan ve sorulan Glasgow Koma Skalasıdır.","detay":"- **Glasgow Koma Skoru (GKS):** Göz açma, motor yanıt ve sözel yanıtla hesaplanır; en düşük puan 3, en yüksek puan 15'tir.\n- **Dörtlü test:** Komada kullanılan diğer bir skorlama yöntemidir.\n- **Hepatik koma skalası:** Listedeki üçüncü skordur; hepatik ensefalopati de SSS'i difüz etkileyen sistemik nedenler arasındadır.\n- **Muayenedeki yeri:** Bilinç düzeyi, pupiller, uyaranlara yanıt ve travma belirtilerinden sonra koma skalası belirlenir.","cikmis":[]},{"id":"2n02-14","puan":55,"baslik":"Vital bulguların değerlendirilmesi","bilgi":"Fizik muayenede **solunum, kan basıncı, kan gazı, ateş** ve **hipotermi** değerlendirilir.","alt":[],"tur":"tani_tedavi","alinti":[{"sayfa":16,"metin":"Solunum: hiper- veya hipoventilasyon"}],"neden":"Muayene sırasının ilk basamağı; ateşin sistemik enfeksiyonu düşündürdüğü bilinmelidir.","detay":"- **Solunum:** Hiperventilasyon ya da hipoventilasyon aranır.\n- **Kan basıncı:** Hipertansiyon ya da hipotansiyon değerlendirilir.\n- **Kan gazı:** Hipoksi ya da hiperkarbi saptanabilir.\n- **Ateş:** Sistemik enfeksiyonu düşündürür.\n- **Hipotermi:** Ayrıca sorgulanır; midriyatik ve ışığa yanıtsız pupil nedenleri arasında da yer alır.\n- **Sonraki adım:** Bilinç düzeyi, pupiller, uyaranlara yanıt, travma belirtileri ve koma skalası belirlenir.","cikmis":[]},{"id":"2n02-34","puan":52,"baslik":"Sonuç: erken tanı ve tedavinin önemi","bilgi":"Bilinç bozukluğunda **ayırıcı tanı** ve **hızlı ekip yaklaşımı** önemlidir; etiyolojiye yönelik tetkik ve **erken tedavi prognozu iyi yönde etkiler**.","alt":[],"tur":"tani_tedavi","alinti":[{"sayfa":61,"metin":"Bilinç bozukluğunda ayırıcı tanısı önemli Hızlı ve ekip yaklaşımı önemli"}],"neden":"Dersin sonuç slaytı; ayırıcı tanının önemi hipoglisemi sorusunun da temelidir.","detay":"- **Ayırıcı tanı:** Bilinç bozukluğunun nedeni sistemik mi, yapısal mı ayrılmalıdır; nedenlerin yüzde seksen beşi metabolik ve sistemiktir.\n- **Hız ve ekip:** Muayene, stabilizasyon, laboratuvar, görüntüleme ve tedavi eş zamanlı ve ekip hâlinde yürütülür.\n- **Erken tedavi:** Etiyolojiye yönelik tetkik ve erken tedavi prognozu iyi yönde etkiler; hipoglisemi gibi düzeltilebilir nedenler hemen ele alınır.","cikmis":[]}],"cikmis":{"04c8b92b1242":{"sinav":"2020-2021 Kurul 2","kok":"Glasgow Koma Skalasında bir hastanın alabileceği minimum ve maksimum puanlar aşağıdaki seçeneklerin hangisinde doğru olarak verilmiştir?","secenekler":{"A":"1 ve 3","B":"3 ve 10","C":"3 ve 15","D":"0 ve 15","E":"0 ve 10"},"dogru":"C"},"260b60a805e9":{"sinav":"Yılı belirsiz","kok":"Sağ hemiplejili bir hastada gözlerin ağrılı uyaranla açıldığı, sözel yanıtta oryantasyonun bozuk olduğu ancak konfüze konuştuğu, motor muayenede sağ tarafta yanıt alınamazken sol üst ekstremitesiyle ağrılı uyaranı lokalize edebildiği saptanmıştır. Bu hastanın Glasgow Koma Skalası (GKS) skoru kaçtır?","secenekler":{"A":"11","B":"10","C":"12","D":"14","E":"13"},"dogru":"A"},"d3-b-056":{"sinav":"2022-2023 Bütünleme","kok":"Aşağıdakilerden hangisi komadaki bir hastada nörolojik muayenede kullanılan beyin sapı reflekslerinden biri değildir?","secenekler":{"A":"Okülosefalik refleks","B":"Işık refleksi","C":"Kremasterik refleks","D":"Kornea refleksi","E":"Okülovestibüler refleks"},"dogru":"C","tekrar":["2021-2022 Final"]},"past-1790877040005-770270":{"sinav":"2022-2023 Kurul 5","kok":"Çalıştığınız kuruma bilinç bozukluğu ile bir hasta getirildi. Yaptığınız bilinç muayenesi sırasında ağrılı uyaranla gözlerini açtığını, ağrı verdiğiniz sırada hastanın üst ekstremitesinde dirseklerini kırdığını ve ayak bileklerini plantar fleksiyona aldığını ve sözlü herhangi bir cevap vermediğini saptadınız. Hastanızın GKS (Glasgow Koma Skoru) skoru kaçtır?","secenekler":{"A":"5","B":"6","C":"3","D":"7","E":"4"},"dogru":"B"},"past-q-2025-2026_DO_NEM_3_FI_NAL_SINAVI-64":{"sinav":"2025-2026 Final","kok":"Aşağıdakilerden hangisi, hastanın sözel uyaranla uyandırılabilip uyaran kesildiğinde tekrar uyku hâline geçtiği tabloyu tanımlar?","secenekler":{"A":"Stupor","B":"Abuli","C":"Letarji","D":"Koma","E":"Konfüzyon"},"dogru":"C","tekrar":["2021-2022 Final"]},"q-No_ropsikiyatri_gis_kardiyo_-2023-2024-C__km_s_lar__240625_053302__2_-19":{"sinav":"Yılı belirsiz","kok":"Bilinç bozukluğu olan hastanın ayırıcı tanısında aşağıdakilerden hangisi mutlaka düşünülmelidir?","secenekler":{"A":"Miyastenia gravis","B":"Guillain-Barré sendromu","C":"Hipoglisemi","D":"Periferik fasiyal paralizi","E":"Amyotrofik lateral skleroz"},"dogru":"C"}}}
+{
+ "kod": "2n02",
+ "no": 2,
+ "baslik": "Bilinç Bozukluğu Olan Hastaya Yaklaşım",
+ "pdf": "1. Bilinç Bozukluğu Olan Hastaya Yaklaşım.pdf",
+ "ozet": "Bilinç değişiklikleri acil serviste ve yoğun bakımda en sık nöroloji konsültasyonu nedenidir; yüzde seksen beşi metabolik ve sistemik, yüzde on beşi SSS'e ait nedenlerle oluşur. Ders; uyanıklığı sağlayan ARAS ağını, bilinç düzeylerinin tanımlarını, Glasgow Koma Skalasını, pupil, göz hareketi, motor yanıt ve solunumla lezyon lokalizasyonunu anlatır. Son bölümde laboratuvar incelemesi ve bilinci kapalı hastaya basamaklı yaklaşım algoritması verilir.",
+ "neden_onemli": "Bu dersin konularından 6 farklı çıkmış soru vardır; en çok Glasgow Koma Skalası (puan aralığı ve vaka üzerinden hesap; 2020-21, 2022-23, 2023-24) ve bilinç düzeylerinin tanımları (letarji-somnolans; 2021-22, 2025-26) soruluyor. Beyin sapı refleksleri iki yıl (2021-22, 2022-23) aynı biçimde sorulmuş; hipoglisemi, ayırıcı tanıda mutlaka düşünülecek durum olarak çıkmıştır.",
+ "maddeler": [
+  {
+   "id": "2n02-18",
+   "puan": 98,
+   "baslik": "Glasgow Koma Skalası: bileşenler ve puan aralığı",
+   "bilgi": "GKS **göz (4), motor (6)** ve **sözel (5)** yanıttan oluşur; en düşük puan **3**, en yüksek puan **15**tir.",
+   "alt": [
+    "Göz: 1–4 puan",
+    "Motor: 1–6 puan",
+    "Sözel: 1–5 puan"
+   ],
+   "tur": "sayi",
+   "alinti": [
+    {
+     "sayfa": 29,
+     "metin": "Eye Movement Verbal 4 6 5"
+    },
+    {
+     "sayfa": 30,
+     "metin": "5-Oriente 4-Dezoriente 3-Uygunsuz cevap 2-Homurtu 1-Yanıt yok"
+    }
+   ],
+   "neden": "2020-21, 2022-23 ve 2023-24'te soruldu; hem puan aralığı hem vaka üzerinden hesaplama istenir.",
+   "detay": "- **Göz açma (4):** 4 spontan açık, 3 sözel uyaranla, 2 ağrılı uyaranla, 1 açmıyor.\n- **Motor yanıt (6):** 6 emre uyma, 5 ağrıyı lokalize etme, 4 fleksör yanıt (çekme), 3 dekortike, 2 deserebre, 1 yanıt yok.\n- **Sözel yanıt (5):** 5 oryante, 4 dezoryante (konfüze konuşma), 3 uygunsuz cevap, 2 homurtu, 1 yanıt yok.\n- **Puan aralığı:** Her bölümün en düşük puanı 1 olduğundan toplam en az 3, en çok 4+6+5 = 15 olur; sıfır puan yoktur.\n- **Hesap örneği:** Ağrıyla göz açan (2), ağrıda dirsekleri büküp ayakları plantar fleksiyona alan (dekortike, 3), hiç konuşmayan (1) hasta 6 puan alır.\n- **Tek taraflı tutulum:** Hemiplejik hastada sağlam koluyla ağrıyı lokalize ediyorsa motor puan 5'tir; ağrıyla göz açan (2) ve konfüze konuşan (4) bu hasta 11 puan alır.",
+   "cikmis": [
+    "04c8b92b1242"
+   ]
+  },
+  {
+   "id": "2n02-05",
+   "puan": 97,
+   "baslik": "Bilinç düzeyleri: somnolans, stupor, koma",
+   "bilgi": "**Somnolan** hasta çabuk uyandırılır ve farkındadır; **stupor**da zorlukla uyandırılır ve farkındalık azalmıştır; **koma**da uyandırılamaz.",
+   "alt": [
+    "Bilinç açık: uyanık ve farkında",
+    "Koma: uyandırılamaz ve farkında değil"
+   ],
+   "tur": "tanim",
+   "alinti": [
+    {
+     "sayfa": 6,
+     "metin": "Somnolan: çabuk uyandırılabilir ve farkında Stupor: zorlukla uyandırılabiliyor ve farkındalık azalmış"
+    },
+    {
+     "sayfa": 6,
+     "metin": "Koma: uyandırılamıyor ve farkında değil"
+    }
+   ],
+   "neden": "Bu konudan 2021-22 ve 2025-26'da soruldu; sözel uyaranla uyanıp uyaran kesilince uykuya dönen hasta tanımı sorulur.",
+   "detay": "- **Bilinç açık:** Hasta uyanık ve çevresinin farkındadır.\n- **Somnolans (letarji):** Hasta sesle, adıyla seslenince çabuk uyandırılabilir ve farkındadır; uyaran kesilince yeniden uykuya dalar. Ders listesinde letarji ve somnolans aynı başlıkta verilir.\n- **Stupor:** Hasta ancak zorlukla, güçlü uyaranla uyandırılabilir ve farkındalığı azalmıştır.\n- **Koma:** Hasta hiçbir uyaranla uyandırılamaz ve farkında değildir.\n- **Vejetatif durum:** Uyandırılabilir ama farkında değildir.\n- **Vaka yorumu:** Kendi hâline bırakılınca uyuyan, adıyla seslenince uyanıp sayıklayan, ağrıyı lokalize eden hasta sesle uyandırılabildiği için somnolandır; stuporda sesli uyaran yetmez, komada ise hiç uyanma olmaz.",
+   "cikmis": [],
+   "ornek26": [
+    {
+     "kok": "Zorlukla uyandırılabilen ve farkındalığı azalmış bir hastanın bilinç düzeyi aşağıdakilerden hangisi ile tanımlanır?",
+     "secenekler": {
+      "A": "Somnolans",
+      "B": "Koma",
+      "C": "Vejetatif durum",
+      "D": "Stupor",
+      "E": "Bilinç açık"
+     },
+     "dogru": "D",
+     "aciklama": "Stupor, hastanın ancak zorlukla uyandırılabildiği ve farkındalığının azaldığı düzeydir. Somnolan hasta çabuk uyandırılır ve farkındadır; koma hastası ise hiç uyandırılamaz.",
+     "zorluk": "orta"
+    }
+   ]
+  },
+  {
+   "id": "2n02-10",
+   "puan": 93,
+   "baslik": "Stick kan şekeri: hipoglisemi gerçek acildir",
+   "bilgi": "İlk aşamada **stick kan şekerine** bakılır; çünkü **hipoglisemi gerçek bir acildir** ve bilinç bozukluğunda mutlaka düşünülür.",
+   "alt": [],
+   "tur": "tani_tedavi",
+   "alinti": [
+    {
+     "sayfa": 10,
+     "metin": "Stick Kan şekeri (hipoglisemi gerçek bir acildir)"
+    },
+    {
+     "sayfa": 42,
+     "metin": "Özellikle DM ve Kr. Alkolizmde etiyoloji hipoglisemi"
+    }
+   ],
+   "neden": "Slaytta iki kez vurgulanır (\"hipoglisemiyi atlama\"); ayırıcı tanıda mutlaka düşünülecek durum olarak sorulmuştur.",
+   "detay": "- **Hızlı değerlendirme:** İlk aşamada hızlı nörolojik muayene, fokal defisit araştırması ve stick kan şekeri yapılır; opioid aşırı dozu da sorgulanır.\n- **Hipoglisemi:** Gerçek bir acildir; laboratuvarda da \"hipoglisemiyi atlama\" uyarısıyla ilk sırada yer alır.\n- **Risk grubu:** Özellikle diyabetli ve kronik alkolik hastada etiyoloji hipoglisemi olabilir.\n- **Sistemik neden:** Hipoglisemi, SSS'i difüz etkileyen sistemik nedenler listesindedir.\n- **Algoritmada:** Bilinci kapalı hastada tetkiklerle birlikte IV glukoz verilir.\n- **Ayırıcı tanı listesi:** Sistemik nedenler (hipoksi, hipoglisemi, hiponatremi, ensefalopatiler) ve SSS'e ait nedenler (travma, kanama, inme, kitle, enfeksiyon, nöbet) bilinci doğrudan bozan durumlardır; periferik sinir ve kas hastalıkları bu listede yer almaz.",
+   "cikmis": []
+  },
+  {
+   "id": "2n02-21",
+   "puan": 92,
+   "baslik": "Komada kullanılan beyin sapı refleksleri",
+   "bilgi": "Komada başlıca beyin sapı refleksleri **pupiller ışık refleksi, kornea-göz kırpma refleksi** ve **refleks konjuge göz hareketleri** (okülosefalik, okülovestibüler) dır.",
+   "alt": [
+    "Pupiller ışık refleksi",
+    "Kornea-göz kırpma refleksi (V → VII)",
+    "Okülosefalik ve okülovestibüler refleks"
+   ],
+   "tur": "siniflama",
+   "alinti": [
+    {
+     "sayfa": 31,
+     "metin": "Komada Kullanılan Başlıca Beyin sapı Refleksleri"
+    },
+    {
+     "sayfa": 34,
+     "metin": "Göz Hareketleri: Okülosefalik R"
+    }
+   ],
+   "neden": "2021-22 ve 2022-23'te \"hangisi beyin sapı refleksi değildir\" diye soruldu.",
+   "detay": "- **Pupiller ışık refleksi:** Işık gözden mezensefalona ulaşır, yanıt III. kranial sinirle pupillaya döner.\n- **Kornea-göz kırpma refleksi:** Duyusal yol V. kranial sinir, göz kırpma yanıtı VII. kranial sinirle oluşur; ponsta düzenlenir.\n- **Refleks konjuge göz hareketleri:** VIII. kranial sinirden gelen uyarı MLF aracılığıyla III. ve VI. kranial sinir çekirdeklerine ulaşır; okülosefalik refleks ve okülovestibüler (kalorik) refleks bu yolu sınar.\n- **Solunum nöronları:** Medulladadır; solunum şekli de beyin sapı düzeyini gösterir.\n- **Çeldirici:** Kremasterik refleks beyin sapı refleksleri arasında sayılmaz; komadaki hastanın beyin sapı muayenesinde kullanılmaz.",
+   "cikmis": [],
+   "ornek26": [
+    {
+     "kok": "Komadaki hastada kornea-göz kırpma refleksinin duyusal ve motor yolunu oluşturan kranial sinirler aşağıdakilerin hangisinde doğru verilmiştir?",
+     "secenekler": {
+      "A": "V ve VII",
+      "B": "III ve III",
+      "C": "VIII ve VI",
+      "D": "VII ve V",
+      "E": "V ve III"
+     },
+     "dogru": "A",
+     "aciklama": "Kornea uyarısı V. kranial sinirle ponsa taşınır, göz kırpma yanıtı VII. kranial sinirle oluşur. VIII ve VI ise refleks konjuge göz hareketlerinin yoludur; ters sıra (VII ve V) en güçlü çeldiricidir.",
+     "zorluk": "zor"
+    }
+   ]
+  },
+  {
+   "id": "2n02-22",
+   "puan": 91,
+   "baslik": "Pupil bulgusuyla lezyon düzeyi",
+   "bilgi": "Metabolik ensefalopatide ve diensefalik lezyonda pupil **küçük-reaktif**, pretektalde **büyük-fikse-hippus**, unkalde **dilate-fikse**, mezensefalikte **orta-fikse**, ponsta **pinpoint**tir.",
+   "alt": [],
+   "tur": "eslesme",
+   "alinti": [
+    {
+     "sayfa": 32,
+     "metin": "metabolik ansefalopati: küçük, reaktif diensefalik: küçük, reaktif pretektal: büyük, fikse,hippus"
+    },
+    {
+     "sayfa": 32,
+     "metin": "mezansefalik: orta büyüklük, fikse pons: pinpoint"
+    }
+   ],
+   "neden": "Lezyon düzeyi–pupil eşleşmesi slaytta şemayla vurgulanmış; sınavda en sık eşleştirme bilgisidir.",
+   "detay": "- **Metabolik ensefalopati:** Pupiller küçük ve ışığa reaktiftir; ışık yanıtının korunması metabolik nedeni düşündürür.\n- **Diensefalik lezyon:** Küçük ve reaktif pupil.\n- **Pretektal lezyon:** Büyük, fikse pupil; hippus görülebilir.\n- **III. kranial sinir (unkal herniasyon):** O taraftaki pupil dilate ve fiksedir.\n- **Mezensefalik lezyon:** Orta büyüklükte, fikse pupil.\n- **Pons lezyonu:** İğne ucu (pinpoint) pupil.\n- **Kural:** Işık yanıtı korunmuş küçük pupil metabolik nedeni, fikse pupil yapısal beyin sapı ya da sinir tutulumunu düşündürür.",
+   "cikmis": [],
+   "ornek26": [
+    {
+     "kok": "Komadaki hastada pupil bulgularıyla ilgili aşağıdaki ifadeler veriliyor.\nI. Metabolik ensefalopatide pupiller küçük ve reaktiftir.\nII. Pons lezyonunda pupiller iğne ucu (pinpoint) büyüklüğündedir.\nIII. Mezensefalik lezyonda pupiller dilate ve fiksedir.\nIV. Pretektal lezyonda pupiller büyük, fikse ve hippus gösterir.\nBu ifadelerden hangileri doğrudur?",
+     "secenekler": {
+      "A": "I ve II",
+      "B": "I, II ve IV",
+      "C": "II ve III",
+      "D": "I, III ve IV",
+      "E": "I, II, III ve IV"
+     },
+     "dogru": "B",
+     "aciklama": "Metabolik ensefalopatide küçük-reaktif, ponsta iğne ucu, pretektal lezyonda büyük-fikse-hippus pupil görülür. Mezensefalik lezyonda pupil dilate değil orta büyüklükte ve fiksedir; dilate-fikse pupil unkal herniasyondaki III. kranial sinir tutulumuna aittir.",
+     "zorluk": "zor"
+    }
+   ]
+  },
+  {
+   "id": "2n02-01",
+   "puan": 90,
+   "baslik": "Bilinç değişikliğinin nedenleri: %85 ve %15",
+   "bilgi": "Bilinç değişikliklerinin **%85'i metabolik ve sistemik**, yalnız **%15'i santral sinir sistemine (SSS) ait** nedenlerden kaynaklanır.",
+   "alt": [
+    "%85: metabolik ve sistemik neden",
+    "%15: SSS'e ait neden"
+   ],
+   "tur": "sayi",
+   "alinti": [
+    {
+     "sayfa": 2,
+     "metin": "metabolik ve sistemik neden"
+    },
+    {
+     "sayfa": 2,
+     "metin": "15 SSS ait neden"
+    }
+   ],
+   "neden": "Slaytta büyük ve renkli yazılan oran; nedenlerin çoğunun sistemik olduğu sınavda sayı olarak sorulur.",
+   "detay": "- **Oran:** Bilinç değişikliğinin yüzde seksen beşi metabolik ve sistemik, yüzde on beşi SSS'e ait nedenlerle ortaya çıkar.\n- **Klinik sonucu:** Bilinci bozuk her hastada sistemik nedenler (hipoglisemi, hipoksi, elektrolit bozukluğu, toksik madde) mutlaka gözden geçirilir; SSS'e ait nedenler daha küçük bir gruptur.\n- **Yaklaşımla bağı:** Bu nedenle ilk aşamanın temel amacı, fokal yapısal SSS lezyonunu global metabolik sorundan ayırmaktır.\n- **Sık karşılaşılan tablo:** Bilinç değişiklikleri acil serviste ve yoğun bakımda en sık nöroloji konsültasyonu nedenidir.",
+   "cikmis": [],
+   "ornek26": [
+    {
+     "kok": "Bilinç değişikliği ile gelen hastalarda nedenlerin yaklaşık yüzde kaçı metabolik ve sistemik kökenlidir?",
+     "secenekler": {
+      "A": "%15",
+      "B": "%30",
+      "C": "%85",
+      "D": "%50",
+      "E": "%70"
+     },
+     "dogru": "C",
+     "aciklama": "Bilinç değişikliklerinin yüzde seksen beşi metabolik ve sistemik nedenlidir. Yüzde on beş ise SSS'e ait nedenlerin payıdır; bu iki sayı en sık karıştırılan çeldiricidir.",
+     "zorluk": "kolay"
+    }
+   ]
+  },
+  {
+   "id": "2n02-20",
+   "puan": 89,
+   "baslik": "GKS göz ve sözel yanıt basamakları",
+   "bilgi": "GKS'de göz açma **4 spontan, 3 sözel uyaranla, 2 ağrıyla, 1 açmıyor**; sözel yanıt **5 oryante, 4 dezoryante, 3 uygunsuz, 2 homurtu, 1 yok** olarak puanlanır.",
+   "alt": [],
+   "tur": "siniflama",
+   "alinti": [
+    {
+     "sayfa": 22,
+     "metin": "4- Spontan açık 3- Verbal uyaranla 2- Ağrılı uyaranla 1- Açmıyor"
+    },
+    {
+     "sayfa": 30,
+     "metin": "5-Oriente 4-Dezoriente 3-Uygunsuz cevap 2-Homurtu 1-Yanıt yok"
+    }
+   ],
+   "neden": "2023-24'te konfüze konuşan hemiplejik hastada puan hesaplatıldı; ara basamaklar sık karıştırılır.",
+   "detay": "- **Göz açma:** Kendiliğinden açık 4, sözel uyaranla açıyor 3, ağrılı uyaranla açıyor 2, hiç açmıyor 1.\n- **Sözel yanıt:** Oryante 5; oryantasyonu bozuk ama konuşabilen (konfüze, dezoryante) 4; uygunsuz kelimeler 3; anlaşılmaz sesler (homurtu) 2; yanıt yok 1.\n- **Ayırt etme:** Konfüze konuşma 4 puandır, uygunsuz cevap 3 puandır; ikisi en sık karıştırılan basamaklardır.\n- **Hesap:** Ağrıyla göz açan (2), konfüze konuşan (4) ve sağlam eliyle ağrıyı lokalize eden (5) hastanın GKS'si 11'dir.",
+   "cikmis": [],
+   "ornek26": [
+    {
+     "kok": "Glasgow Koma Skalasının sözel yanıt bölümünde \"uygunsuz cevap\" kaç puan alır?",
+     "secenekler": {
+      "A": "1",
+      "B": "2",
+      "C": "3",
+      "D": "4",
+      "E": "5"
+     },
+     "dogru": "C",
+     "aciklama": "Sözel yanıtta oryante 5, dezoryante 4, uygunsuz cevap 3, homurtu 2, yanıt yok 1 puandır. Dezoryante (konfüze) konuşma 4 puandır ve uygunsuz cevapla en sık karıştırılır.",
+     "zorluk": "kolay"
+    }
+   ]
+  },
+  {
+   "id": "2n02-19",
+   "puan": 88,
+   "baslik": "GKS motor yanıt basamakları ve postürler",
+   "bilgi": "GKS motor yanıtı **6 emre uyma, 5 ağrıyı lokalize, 4 fleksör yanıt, 3 dekortike, 2 deserebre, 1 yanıt yok** şeklinde puanlanır.",
+   "alt": [],
+   "tur": "siniflama",
+   "alinti": [
+    {
+     "sayfa": 24,
+     "metin": "6-Emre uyma 5-Ağrıyı lokalize 4-Fleksör Yanıt 3-Dekortike 2-Deserebe 1-Yanıt yok"
+    },
+    {
+     "sayfa": 28,
+     "metin": "Motor yanıtlar: Lezyon Lokalizasyonu Hemisferik Lezyon"
+    }
+   ],
+   "neden": "2022-23'te dekortike postürden puan hesaplatıldı; motor yanıt aynı zamanda lezyon düzeyini gösterir.",
+   "detay": "- **Basamaklar:** Emre uyma 6, ağrıyı lokalize etme 5, fleksör yanıt (ağrıdan çekme) 4, dekortike 3, deserebre 2, yanıt yok 1.\n- **Dekortike postür:** Ağrıda kollar dirsekten bükülür (fleksiyon), bacaklar gerilir ve ayaklar plantar fleksiyona gelir; 3 puandır.\n- **Deserebre postür:** Kollar ve bacaklar ekstansiyondadır; 2 puandır.\n- **Lezyon yeri:** Hemisferik lezyonda hasta ağrıya yönelik anlamlı hareket yapabilir; üst mezensefalon hasarında kollar fleksiyonda, bacaklar ekstansiyonda (dekortike) kalır; üst pontin hasarda kollar ve bacaklar ekstansiyondadır (deserebre).\n- **Sıra:** Lezyon aşağı (beyin sapına doğru) indikçe motor yanıt bozulur ve GKS motor puanı düşer.",
+   "cikmis": []
+  },
+  {
+   "id": "2n02-27",
+   "puan": 88,
+   "baslik": "Laboratuvar: kan şekeri ve elektrolitler",
+   "bilgi": "Laboratuvarda **kan şekeri** (hipoglisemiyi atlama) ve **elektrolitler** bakılır; en sık **sodyum** bozulur, tümörlü hastada **kalsiyum** bozukluğu sıktır.",
+   "alt": [
+    "En sık etkilenen elektrolit: sodyum",
+    "Tümörlü hastada kalsiyum bozukluğu sık"
+   ],
+   "tur": "en_sik",
+   "alinti": [
+    {
+     "sayfa": 42,
+     "metin": "Elektrolitler (en sık Na)"
+    },
+    {
+     "sayfa": 42,
+     "metin": "Hiponatremi sık neden, tümör olanlarda kalsiyum metabolizma bozukluğu sık"
+    }
+   ],
+   "neden": "Slaytta \"en sık\" vurgusuyla verilen iki bilgi: hiponatremi ve tümörlü hastada kalsiyum.",
+   "detay": "- **Kan şekeri:** İlk bakılacak testtir; hipoglisemi atlanmamalıdır. Diyabetli ve kronik alkolik hastada etiyoloji hipoglisemi olabilir.\n- **Elektrolitler:** En sık sodyum etkilenir; hiponatremi bilinç bozukluğunun sık nedenidir.\n- **Tümörlü hasta:** Kalsiyum metabolizması bozukluğu sıktır; bilinci kapalı hastanın ilk tetkiklerinde kalsiyum da yer alır.\n- **Algoritmadaki karşılığı:** Bilinci kapalı hastada kan gazları, glukoz, elektrolitler, kalsiyum, magnezyum, üre, kreatinin, amonyak, AST ve toksikolojik tarama istenir.",
+   "cikmis": [],
+   "ornek26": [
+    {
+     "kok": "Bilinç bozukluğu olan hastanın laboratuvar incelemesinde en sık saptanan elektrolit bozukluğu aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Hiperkalsemi",
+      "B": "Hipomagnezemi",
+      "C": "Hiponatremi",
+      "D": "Hipokalsemi",
+      "E": "Hipermagnezemi"
+     },
+     "dogru": "C",
+     "aciklama": "Komadaki hastada elektrolitler içinde en sık sodyum bozulur ve hiponatremi bilinç bozukluğunun sık nedenidir. Kalsiyum bozukluğu ise özellikle tümörlü hastalarda öne çıkar; genel olarak en sık değildir.",
+     "zorluk": "orta"
+    }
+   ]
+  },
+  {
+   "id": "2n02-23",
+   "puan": 87,
+   "baslik": "Midriyatik ve miyotik pupil nedenleri",
+   "bilgi": "Midriyatik, ışığa yanıtsız pupil **atropin, skopolamin, glutetimid, barbiturat, hipoksi** ve **hipotermi**de; ileri miyotik pupil **opiat intoksikasyonunda** görülür.",
+   "alt": [],
+   "tur": "eslesme",
+   "alinti": [
+    {
+     "sayfa": 33,
+     "metin": "Midriyatik, ışığa yanıtsız pupil"
+    },
+    {
+     "sayfa": 33,
+     "metin": "İleri miyotik pupil"
+    }
+   ],
+   "neden": "Toksik nedenlerin pupil bulgusuyla eşleştirilmesi slaytta vurgulanmış; \"hangisi midriyazis yapmaz\" tuzağı klasiktir.",
+   "detay": "- **Midriyatik ve ışığa yanıtsız pupil:** Atropin, skopolamin, glutetimid, barbiturat zehirlenmesi; ayrıca hipoksi ve hipotermi.\n- **İleri miyotik pupil:** Opiat intoksikasyonu.\n- **Ayırt etme:** Opiat zehirlenmesinde pupil daralır; bu nedenle midriyazis nedenleri arasında sayılmaz.\n- **Tedaviyle bağı:** Bilinci kapalı hastada opioid aşırı dozu ilk aşamada sorgulanır ve algoritmada naloksan uygulanır.\n- **Yapısal lezyonla karıştırma:** Pons lezyonunda da iğne ucu pupil görülür; öykü ve diğer beyin sapı bulguları ayırımı sağlar.",
+   "cikmis": [],
+   "ornek26": [
+    {
+     "kok": "Aşağıdakilerden hangisi komadaki hastada midriyatik ve ışığa yanıtsız pupil nedenlerinden biri değildir?",
+     "secenekler": {
+      "A": "Atropin",
+      "B": "Hipoksi",
+      "C": "Hipotermi",
+      "D": "Opiat intoksikasyonu",
+      "E": "Barbiturat"
+     },
+     "dogru": "D",
+     "aciklama": "Opiat intoksikasyonu ileri derecede miyotik (daralmış) pupil yapar. Atropin, barbiturat, hipoksi ve hipotermi ise pupili genişletip ışığa yanıtsız hâle getiren nedenlerdir.",
+     "zorluk": "orta"
+    }
+   ]
+  },
+  {
+   "id": "2n02-08",
+   "puan": 86,
+   "baslik": "İlk aşamanın primer amacı",
+   "bilgi": "İlk aşamadaki **primer amaç**, **fokal yapısal SSS lezyonlarını global metabolik problemlerden** ayırmaktır.",
+   "alt": [],
+   "tur": "tani_tedavi",
+   "alinti": [
+    {
+     "sayfa": 9,
+     "metin": "Fokal yapısal SSS lezyonlarının, global metabolik problemlerden ayrımını yapmak"
+    }
+   ],
+   "neden": "Slaytta \"Primer Amaç\" başlığıyla vurgulanmış; yaklaşımın temel mantığını verir.",
+   "detay": "- **Primer amaç:** Bilinç bozukluğunun fokal yapısal bir SSS lezyonundan mı, yoksa global metabolik bir sorundan mı kaynaklandığını ayırmak.\n- **Eş zamanlı planlama:** Muayene ile birlikte stabilizasyon, laboratuvar, görüntüleme ve tedavi aynı anda planlanır.\n- **Fokal nörolojik defisit:** Hızlı nörolojik değerlendirmede fokal defisit bulunması yapısal lezyon yönünde önemlidir.\n- **Lokalizan bulgular:** Motor yanıtlar, pupiller, göz hareketleri ve solunum şekli bu ayrımın yapılmasını sağlar.",
+   "cikmis": [],
+   "ornek26": [
+    {
+     "kok": "Bilinç bozukluğu olan hastaya yaklaşımda ilk aşamadaki primer amaç aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Fokal yapısal SSS lezyonunu global metabolik problemden ayırmak",
+      "B": "Glasgow Koma Skorunu hesaplamak",
+      "C": "BOS incelemesi ile enfeksiyonu dışlamak",
+      "D": "EEG ile nonkonvülzif status epileptikusu araştırmak",
+      "E": "Tiroid fonksiyon testlerini istemek"
+     },
+     "dogru": "A",
+     "aciklama": "İlk aşamada temel amaç bilinç bozukluğunun fokal yapısal bir SSS lezyonundan mı, global metabolik sorundan mı kaynaklandığını ayırmaktır. GKS hesaplamak muayenenin bir parçasıdır ama primer amaç değildir.",
+     "zorluk": "kolay"
+    }
+   ]
+  },
+  {
+   "id": "2n02-06",
+   "puan": 85,
+   "baslik": "Vejetatif durum: uyanık ama farkında değil",
+   "bilgi": "**Vejetatif durumda** hasta uyandırılabilir ancak **farkında değildir**; komadan uyandırılabilmesiyle ayrılır.",
+   "alt": [],
+   "tur": "tuzak",
+   "alinti": [
+    {
+     "sayfa": 6,
+     "metin": "Vejetatif durum: uyandırılıyor ancak farkında değil"
+    }
+   ],
+   "neden": "Koma ile karıştırılan klasik tuzak: ikisinde de farkındalık yoktur, ama yalnız vejetatif hasta uyandırılabilir.",
+   "detay": "- **Tanım:** Vejetatif durumda hasta uyandırılabilir, ancak çevresinin farkında değildir.\n- **Komadan farkı:** Koma hastası ne uyandırılabilir ne de farkındadır; vejetatif hastada uyanıklık vardır, farkındalık yoktur.\n- **Stupordan farkı:** Stuporda hasta zorlukla uyandırılır ve farkındalığı azalmış da olsa vardır.\n- **Somnolanstan farkı:** Somnolan hasta çabuk uyandırılır ve farkındadır.\n- **Kural:** Bilinç düzeyleri iki soruyla ayrılır: hasta uyandırılabiliyor mu ve farkında mı?",
+   "cikmis": [],
+   "ornek26": [
+    {
+     "kok": "Uyandırılabilen ancak çevresinin farkında olmayan hastadaki tablo aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Koma",
+      "B": "Somnolans",
+      "C": "Stupor",
+      "D": "Bilinç açık",
+      "E": "Vejetatif durum"
+     },
+     "dogru": "E",
+     "aciklama": "Vejetatif durumda hasta uyandırılır fakat farkında değildir. Koma hastasında da farkındalık yoktur ama hasta uyandırılamaz; bu yüzden en güçlü çeldirici komadır.",
+     "zorluk": "orta"
+    }
+   ]
+  },
+  {
+   "id": "2n02-03",
+   "puan": 84,
+   "baslik": "Uyanıklığı sağlayan yapılar (ARAS)",
+   "bilgi": "Normal uyku-uyanıklık ve uyarılabilirlik, **ARAS** ile talamus, bazal ön beyin, hipotalamus ve **serebral korteks** arasındaki bağlantı bütünlüğüne bağlıdır.",
+   "alt": [
+    "Rostral pons ve mezensefalon santral gri cevheri",
+    "Talamusun IL ve CM nükleusları",
+    "Bazal ön beyin ve hipotalamus"
+   ],
+   "tur": "mekanizma",
+   "alinti": [
+    {
+     "sayfa": 5,
+     "metin": "Rostral pons ve mezensefalondaki santral gri cevherden çıkan eksitatör aktivitenin (ARAS)"
+    },
+    {
+     "sayfa": 5,
+     "metin": "Talamusun IL ve CM nükleusları"
+    }
+   ],
+   "neden": "Bu sayfa çıkmış sorularla en çok örtüşen mekanizma sayfasıdır; bilinç bozukluğunun anatomik temelini verir.",
+   "detay": "- **ARAS'ın çıkış yeri:** Rostral pons ve mezensefalondaki santral gri cevherden çıkan uyarıcı (eksitatör) aktivitedir.\n- **Talamus:** ARAS aktivitesi talamusun intralaminar (IL) ve sentromedyan (CM) nükleuslarıyla bağlantı kurar.\n- **Diğer halkalar:** Bazal ön beyin ve hipotalamus da bu ağın parçasıdır.\n- **Korteks:** Uyanıklık ve uyarılabilirlik, bu yapıların serebral korteksle bağlantısı bütün kaldığı sürece korunur.\n- **Klinik sonucu:** Beyin sapının üst kısmını, talamusu ya da iki hemisferi birden etkileyen lezyon, bu ağı bozarak bilinci kapatabilir.",
+   "cikmis": [],
+   "ornek26": [
+    {
+     "kok": "Normal uyku-uyanıklık ve uyarılabilirliğin sürdürülmesinde rol alan bağlantı ağında aşağıdakilerden hangisi yer almaz?",
+     "secenekler": {
+      "A": "Talamusun IL ve CM nükleusları",
+      "B": "Bazal ön beyin",
+      "C": "Hipotalamus",
+      "D": "Rostral pons ve mezensefalon santral gri cevheri",
+      "E": "Medulladaki solunum nöronları"
+     },
+     "dogru": "E",
+     "aciklama": "Uyanıklık; rostral pons ve mezensefalondaki ARAS, talamusun IL ve CM nükleusları, bazal ön beyin, hipotalamus ve korteks bağlantısına dayanır. Medulladaki solunum nöronları solunumu yönetir, uyanıklık ağının parçası olarak sayılmaz.",
+     "zorluk": "orta"
+    }
+   ]
+  },
+  {
+   "id": "2n02-30",
+   "puan": 83,
+   "baslik": "Bilinç kapalıysa ilk tetkik ve tedaviler",
+   "bilgi": "Bilinci kapalı hastada **kan gazları, glukoz, elektrolitler, Ca, Mg, üre, kreatinin, NH3, AST, toksikolojik tarama** istenir; **IV glukoz, naloksan, flumazenil** verilir.",
+   "alt": [],
+   "tur": "tani_tedavi",
+   "alinti": [
+    {
+     "sayfa": 51,
+     "metin": "Kan gazları, glu, elektrolitler, Ca, Mg, üre, Cre, NH3, AST, tox tarama, ıv glu, naloksan, flumazenil"
+    }
+   ],
+   "neden": "Algoritmanın tedavi basamağı; tetkiklerle eş zamanlı verilen üç ilaç sınavda sorulabilir.",
+   "detay": "- **Tetkikler:** Kan gazları, glukoz, elektrolitler, kalsiyum, magnezyum, üre, kreatinin, amonyak (NH3), AST ve toksikolojik tarama.\n- **Tedavi:** IV glukoz (hipoglisemi gerçek bir acildir), naloksan (opioid aşırı dozu) ve flumazenil eş zamanlı uygulanır.\n- **Sonraki soru:** Beyin sapı bulguları var mı?\n- **Tiamin:** Beyin sapı bulgusu olan dalda BBT/MRI, glukoz, metabolik ve toksik taramayla birlikte tiamin yer alır; Wernicke ensefalopatisi sistemik nedenler arasındadır.",
+   "cikmis": [],
+   "ornek26": [
+    {
+     "kok": "Bilinci kapalı hastada tetkiklerle eş zamanlı uygulanan tedaviler aşağıdakilerin hangisinde doğru verilmiştir?",
+     "secenekler": {
+      "A": "Naloksan, tiamin, EEG",
+      "B": "IV glukoz, naloksan, flumazenil",
+      "C": "Flumazenil, BOS incelemesi, tiamin",
+      "D": "IV glukoz, T3-T4, naloksan",
+      "E": "Flumazenil, MR, IV glukoz"
+     },
+     "dogru": "B",
+     "aciklama": "Bilinci kapalı hastada kan gazları, glukoz, elektrolit ve toksikolojik tarama alınırken IV glukoz, naloksan ve flumazenil verilir. Tiamin algoritmada beyin sapı bulgusu olan dalda yer alır; EEG, MR ve BOS ise ilaç değil tanı yöntemidir.",
+     "zorluk": "orta"
+    }
+   ]
+  },
+  {
+   "id": "2n02-16",
+   "puan": 82,
+   "baslik": "Lokalizan değeri olan klinik bulgular",
+   "bilgi": "Komada lokalizan değeri olan bulgular **iskelet kası motor yanıtları, pupil çapı ve reaktivitesi, göz hareketleri-okülovestibüler yanıtlar** ve **solunum şekli**dir.",
+   "alt": [
+    "Motor yanıtlar",
+    "Pupil çapı ve reaktivitesi",
+    "Göz hareketleri ve okülovestibüler yanıt",
+    "Solunum şekli"
+   ],
+   "tur": "siniflama",
+   "alinti": [
+    {
+     "sayfa": 19,
+     "metin": "Lokalizan değeri olan klinik bulgular"
+    }
+   ],
+   "neden": "Lezyon düzeyini belirleyen dört bulgu; dersin muayene bölümü bu dört başlık üzerine kuruludur.",
+   "detay": "- **Motor yanıtlar:** Ağrılı uyarana verilen yanıtın biçimi hemisferik, üst mezensefalon ya da üst pontin hasarı ayırmaya yardım eder.\n- **Pupiller:** Çap ve ışığa yanıt; metabolik ensefalopatide küçük ve reaktif, ponsta iğne ucu (pinpoint) pupil görülür.\n- **Göz hareketleri:** Okülosefalik ve okülovestibüler (kalorik) yanıtlar beyin sapının sağlam olup olmadığını gösterir.\n- **Solunum şekli:** Cheyne-Stokes, santral nörojenik hiperventilasyon, apnestik, küme ve ataksik solunum.\n- **Lokalizan olmayan bulgu:** Ateş gibi vital bulgular sistemik enfeksiyonu düşündürür, lezyon yeri hakkında bilgi vermez.",
+   "cikmis": [],
+   "ornek26": [
+    {
+     "kok": "Aşağıdakilerden hangisi komadaki hastada lokalizan değeri olan klinik bulgulardan biri değildir?",
+     "secenekler": {
+      "A": "İskelet kası motor yanıtları",
+      "B": "Pupillerin çapı ve reaktivitesi",
+      "C": "Göz hareketleri ve okülovestibüler yanıtlar",
+      "D": "Ateş",
+      "E": "Solunum şekli"
+     },
+     "dogru": "D",
+     "aciklama": "Ateş vital bulgular içinde değerlendirilir ve sistemik enfeksiyonu düşündürür; lezyonun yerini göstermez. Motor yanıtlar, pupiller, göz hareketleri ve solunum şekli ise lokalizan bulgulardır.",
+     "zorluk": "orta"
+    }
+   ]
+  },
+  {
+   "id": "2n02-29",
+   "puan": 81,
+   "baslik": "Bilinç kapalı değilse: psikojen ve taklitçiler",
+   "bilgi": "Yanıt alınamayan ama **bilinci kapalı olmayan** hastada **psikojen yanıtsızlık, locked-in sendromu, nöromüsküler paralizi** ve **rijidite** düşünülür.",
+   "alt": [],
+   "tur": "tuzak",
+   "alinti": [
+    {
+     "sayfa": 48,
+     "metin": "Psikojen, locked-in synd, N-M paralizi, rijidite"
+    }
+   ],
+   "neden": "Algoritmanın ilk ayrımı: yanıtsızlık her zaman bilinç kaybı değildir; klasik tuzak.",
+   "detay": "- **İlk adım:** Yanıt alınamayan hastada önce ABC ve oksijenasyon sağlanır.\n- **Soru:** Hastanın bilinci gerçekten kapalı mı?\n- **Hayır ise:** Psikojen yanıtsızlık, locked-in sendromu, nöromüsküler paralizi ve rijidite düşünülür ve uygun yaklaşım uygulanır.\n- **Locked-in sendromu:** Hasta yanıt veremez gibi görünür ama bilinci açıktır; koma ile karıştırılmamalıdır.\n- **Evet ise:** Kan gazları, glukoz, elektrolitler ve diğer tetkikler alınır; IV glukoz, naloksan ve flumazenil verilir, ardından beyin sapı bulguları değerlendirilir.",
+   "cikmis": [],
+   "ornek26": [
+    {
+     "kok": "Yanıt alınamayan hastada bilincin kapalı olmadığı saptanırsa ayırıcı tanıda aşağıdakilerden hangisi düşünülmez?",
+     "secenekler": {
+      "A": "Hipoglisemi",
+      "B": "Locked-in sendromu",
+      "C": "Psikojen yanıtsızlık",
+      "D": "Nöromüsküler paralizi",
+      "E": "Rijidite"
+     },
+     "dogru": "A",
+     "aciklama": "Bilinci kapalı olmayan yanıtsız hastada psikojen yanıtsızlık, locked-in sendromu, nöromüsküler paralizi ve rijidite düşünülür. Hipoglisemi bilinci gerçekten kapatan sistemik bir nedendir ve bilinci kapalı hasta basamağında IV glukozla ele alınır.",
+     "zorluk": "orta"
+    }
+   ]
+  },
+  {
+   "id": "2n02-07",
+   "puan": 80,
+   "baslik": "Bilinç bozukluklarının tanım listesi",
+   "bilgi": "Bilinç bozuklukları **konfüzyon, letarji-somnolans, stupor, koma, deliryum, demans** ve **beyin ölümü** olarak tanımlanır.",
+   "alt": [],
+   "tur": "siniflama",
+   "alinti": [
+    {
+     "sayfa": 7,
+     "metin": "Bilinç Bozuklukları: Tanımlar"
+    }
+   ],
+   "neden": "Çıkmış sorularla en çok örtüşen sayfa (2021-22, 2025-26); letarji ile somnolansın aynı tabloyu anlattığı bilinmelidir.",
+   "detay": "- **Liste:** Konfüzyon, letarji-somnolans, stupor, koma, deliryum, demans ve beyin ölümü.\n- **Letarji ve somnolans:** Slaytta iki terim tek başlıkta verilir; hasta sözel uyaranla uyandırılır, uyaran kesilince yeniden uykuya geçer.\n- **Stupor ve koma:** Stuporda hasta zorlukla uyandırılır; komada hiç uyandırılamaz.\n- **Konfüzyon:** Listede ayrı bir bilinç bozukluğudur; uykuya meyil ile tanımlanmaz.\n- **Etiyolojide demans:** Demans, SSS'e ait bilinç değişikliği nedenleri arasında da sayılır.",
+   "cikmis": []
+  },
+  {
+   "id": "2n02-24",
+   "puan": 79,
+   "baslik": "Okülosefalik refleks",
+   "bilgi": "Okülosefalik refleks için baş **30 derecede** her iki tarafa çevrilir; beyin sapı sağlamsa gözler başın tersine hareket eder, hasarlıysa orta hatta kalır.",
+   "alt": [],
+   "tur": "tani_tedavi",
+   "alinti": [
+    {
+     "sayfa": 34,
+     "metin": "Baş 30 derecede: her iki tarafa çevrilir ve göz hareketleri gözlenir"
+    },
+    {
+     "sayfa": 35,
+     "metin": "Bilinç kapalı Beyin sapı HASARLI"
+    }
+   ],
+   "neden": "Beyin sapının sağlam olup olmadığını gösteren yatak başı testi; sağlam–hasarlı karşılaştırması şekille verilmiş.",
+   "detay": "- **Yapılışı:** Baş 30 derecedeyken her iki tarafa çevrilir ve göz hareketleri izlenir.\n- **Bilinç kapalı, beyin sapı sağlam:** Baş bir yana çevrildiğinde gözler konjuge olarak ters yöne kayar; refleks korunmuştur.\n- **Bilinç kapalı, beyin sapı hasarlı:** Baş çevrilince gözler başla birlikte hareket eder ve orta hatta kalır; refleks kaybolmuştur.\n- **Yol:** VIII. kranial sinirden gelen uyarı MLF ile III. ve VI. kranial sinir çekirdeklerine iletilir.\n- **Değeri:** Göz hareketleri ve okülovestibüler yanıtlar lokalizan bulgulardandır; kalorik testte de aynı sağlam–hasarlı ayrımı soğuk suyla yapılır.",
+   "cikmis": [],
+   "ornek26": [
+    {
+     "kok": "Bilinci kapalı hastada okülosefalik refleks bakılırken baş her iki yana çevrildiğinde gözlerin başla birlikte orta hatta kaldığı görülüyor. Bu bulgu neyi gösterir?",
+     "secenekler": {
+      "A": "Beyin sapı hasarı",
+      "B": "Beyin sapı sağlam metabolik koma",
+      "C": "Psikojenik yanıtsızlık",
+      "D": "Bilincin açık olduğunu",
+      "E": "Vejetatif durum"
+     },
+     "dogru": "A",
+     "aciklama": "Beyin sapı sağlamsa baş çevrildiğinde gözler ters yöne kayar; gözlerin başla birlikte orta hatta kalması refleksin kaybolduğunu, yani beyin sapı hasarını gösterir. Beyin sapı sağlam olan bilinci kapalı hastada ise refleks korunur.",
+     "zorluk": "orta"
+    }
+   ]
+  },
+  {
+   "id": "2n02-11",
+   "puan": 78,
+   "baslik": "Sistemik nedenler: SSS'in difüz etkilenimi",
+   "bilgi": "Sistemik nedenler arasında **hipoksi, hiperkapni, hipo/hiperglisemi, hiponatremi**, Wernicke, üremik, hepatik ve hipertansif ensefalopati ile **sepsis** bulunur.",
+   "alt": [
+    "Wernicke, üremik, hepatik ve hipertansif ensefalopati",
+    "Serotonin sendromu ve nöroleptik malign sendrom"
+   ],
+   "tur": "siniflama",
+   "alinti": [
+    {
+     "sayfa": 11,
+     "metin": "Etiyoloji: Sistemik Neden – SSS Difüz Etkilenimi"
+    },
+    {
+     "sayfa": 12,
+     "metin": "İlaç veya alkol geri çekilmesi"
+    }
+   ],
+   "neden": "Etiyoloji listesi slaytlarda renkle vurgulanmış; \"hangisi sistemik neden değildir\" biçiminde sorulabilir.",
+   "detay": "- **Gaz ve glukoz bozuklukları:** Hipoksi, hiperkapni, hipoglisemi, hiperglisemi.\n- **Elektrolitler:** Elektrolit anormallikleri, özellikle hiponatremi.\n- **Ensefalopatiler:** Wernicke, üremik, hepatik ve hipertansif ensefalopati; ayrıca sepsis.\n- **Dolaşım:** Düşük kardiyak debi, yaygın hipoperfüzyon, hipovolemi, anemi.\n- **Endokrin:** Endokrin hipo- ya da hiperfonksiyon.\n- **Toksik ve ilaç:** Toksik madde maruziyeti, ilaç ya da alkol geri çekilmesi, ilaç etkileşimi, serotonin sendromu, nöroleptik malign sendrom.\n- **Ortak özellik:** Hepsi SSS'i difüz (yaygın) etkiler ve bilinç bozukluklarının büyük çoğunluğunu oluşturur.",
+   "cikmis": []
+  },
+  {
+   "id": "2n02-26",
+   "puan": 77,
+   "baslik": "Komada solunum şekilleri",
+   "bilgi": "Komada görülen solunum şekilleri **Cheyne-Stokes, santral nörojenik hiperventilasyon, apnestik, küme** ve **ataksik solunum**dur.",
+   "alt": [
+    "Cheyne-Stokes solunumu",
+    "Santral nörojenik hiperventilasyon",
+    "Apnestik, küme ve ataksik solunum"
+   ],
+   "tur": "siniflama",
+   "alinti": [
+    {
+     "sayfa": 40,
+     "metin": "Cheyne-Stokes solunumu Santral nörojenik hiperventilasyon Apnestik solunum"
+    }
+   ],
+   "neden": "Solunum şekli lokalizan bulgulardandır; beş solunum tipinin adı bilinmelidir.",
+   "detay": "- **Cheyne-Stokes solunumu:** Solunum derinliği giderek artıp azalır, aralarda duraklama olur.\n- **Santral nörojenik hiperventilasyon:** Sürekli, hızlı ve derin solunum.\n- **Apnestik solunum:** Derin inspirasyonun sonunda uzun duraklama olur.\n- **Küme solunum:** Düzensiz aralarla gelen solunum kümeleri.\n- **Ataksik solunum:** Hızı ve derinliği tamamen düzensiz solunum.\n- **Lokalizasyon:** Solunum şekli, motor yanıt, pupil ve göz hareketleriyle birlikte lezyon düzeyini gösterir; beyin sapındaki solunum nöronları medulladadır.",
+   "cikmis": []
+  },
+  {
+   "id": "2n02-12",
+   "puan": 76,
+   "baslik": "SSS'e ait bilinç bozukluğu nedenleri",
+   "bilgi": "SSS'e ait nedenler **travma, intrakranyal kanama-SAK, iskemik inme, yer kaplayan oluşum, SSS enfeksiyonu, nöbetler** ve **demans**tır.",
+   "alt": [],
+   "tur": "siniflama",
+   "alinti": [
+    {
+     "sayfa": 13,
+     "metin": "Etiyoloji: SSS Ait Nedenler"
+    },
+    {
+     "sayfa": 13,
+     "metin": "Nöbetler (status epileptikus / postiktal periyod)"
+    }
+   ],
+   "neden": "Sistemik nedenlerle karıştırılmaya uygun bir liste; nöbetlerde status epileptikus ve postiktal dönem birlikte vurgulanmış.",
+   "detay": "- **Travma:** SSS travması; skalp ayrıntılı muayene edilmezse küçük, gizli travmalar atlanır.\n- **Kanama:** İntrakranyal kanama ve subaraknoid kanama (SAK).\n- **İskemi:** İskemik inme.\n- **Kitle:** Yer kaplayan oluşum; ileri evrede serebral herniasyona yol açabilir.\n- **Enfeksiyon:** SSS enfeksiyonu; tanısında BOS incelemesi kullanılır.\n- **Nöbet:** Status epileptikus ya da postiktal dönem.\n- **Demans:** SSS'e ait nedenler arasında sayılır.\n- **Ayırt etme:** Hiponatremi, hipoglisemi, üremi gibi durumlar SSS'e ait değil, sistemik nedenlerdir.",
+   "cikmis": [],
+   "ornek26": [
+    {
+     "kok": "Aşağıdakilerden hangisi bilinç bozukluğunun SSS'e ait nedenlerinden biri değildir?",
+     "secenekler": {
+      "A": "Subaraknoid kanama",
+      "B": "İskemik inme",
+      "C": "SSS enfeksiyonu",
+      "D": "Status epileptikus",
+      "E": "Üremik ensefalopati"
+     },
+     "dogru": "E",
+     "aciklama": "Üremik ensefalopati SSS'i difüz etkileyen sistemik bir nedendir. Subaraknoid kanama, iskemik inme, SSS enfeksiyonu ve status epileptikus ise doğrudan SSS'e ait nedenler listesindedir.",
+     "zorluk": "kolay"
+    }
+   ]
+  },
+  {
+   "id": "2n02-15",
+   "puan": 74,
+   "baslik": "Komada gözden kaçırılmaması gereken bulgular",
+   "bilgi": "Postiktal durumdan şüphelenilen konfüze hastada **dilde ısırık** nöbeti düşündürür; **skalp** ayrıntılı muayene edilir, alkolün altında **SAK-subdural** aranır.",
+   "alt": [],
+   "tur": "tuzak",
+   "alinti": [
+    {
+     "sayfa": 18,
+     "metin": "Konfüze hastada postiktal durumdan şüpheleniliyorsa: Dilde ısırık ? NÖBET"
+    },
+    {
+     "sayfa": 18,
+     "metin": "Sıklıkla küçük-gizli travmalar atlanır"
+    }
+   ],
+   "neden": "Slaytta \"Anahtar Noktalar\" başlığı ve ünlemlerle vurgulanmış klasik tuzaklar.",
+   "detay": "- **Dilde ısırık:** Konfüze hastada postiktal durumdan şüpheleniliyorsa dilde ısırık aranır; varsa nöbet düşünülür.\n- **Skalp muayenesi:** Skalp ayrıntılı muayene edilmelidir; küçük ve gizli travmalar sıklıkla atlanır, bu da travma sonrası tabloyu gözden kaçırır.\n- **Alkol tuzağı:** Koma nedeni alkol gibi görünse bile altta başka bir etiyoloji olup olmadığı sorgulanır; özellikle subaraknoid kanama (SAK) ve subdural kanama araştırılır.\n- **Muayenede sorulacaklar:** Bilinç düzeyi, pupiller, uyaranlara yanıt, travma belirtileri ve koma skalası.",
+   "cikmis": [],
+   "ornek26": [
+    {
+     "kok": "Konfüzyon ile getirilen hastanın muayenesinde dilde ısırık saptanıyor. Bu bulgu öncelikle hangi tabloyu düşündürür?",
+     "secenekler": {
+      "A": "Hepatik ensefalopati",
+      "B": "Postiktal dönem (nöbet)",
+      "C": "Wernicke ensefalopatisi",
+      "D": "Hipertansif ensefalopati",
+      "E": "Opioid aşırı dozu"
+     },
+     "dogru": "B",
+     "aciklama": "Konfüze hastada dilde ısırık, nöbet sonrası (postiktal) dönemi düşündüren bulgudur. Hepatik, Wernicke ve hipertansif ensefalopati de konfüzyon yapar ama dilde ısırık oluşturmaz.",
+     "zorluk": "orta"
+    }
+   ]
+  },
+  {
+   "id": "2n02-28",
+   "puan": 73,
+   "baslik": "Kan gazı ve tam kan sayımı",
+   "bilgi": "Arteryel kan gazında **asidoz** önemlidir: pH **salisilat ve metanol**, COHb **karbonmonoksit-duman** zehirlenmesini; **trombositopeni** kanama ve sepsisi düşündürür.",
+   "alt": [],
+   "tur": "tani_tedavi",
+   "alinti": [
+    {
+     "sayfa": 43,
+     "metin": "Arteryal Kan Gazı (asidoz önemli)"
+    },
+    {
+     "sayfa": 43,
+     "metin": "pH: (salisilat zehirlenmesi, methanol)"
+    },
+    {
+     "sayfa": 43,
+     "metin": "Trombositopeni; Kanama, sepsis"
+    }
+   ],
+   "neden": "Laboratuvar bulgusu ile nedenin eşleştirilmesi; zehirlenme ve kanama soruları için temel bilgi.",
+   "detay": "- **Arteryel kan gazı:** Asidoz önemlidir.\n- **pH:** Salisilat ve metanol zehirlenmesinde bozulur.\n- **Karboksihemoglobin (COHb):** Karbonmonoksit ve duman zehirlenmesini gösterir.\n- **Tam kan sayımı:** Uzamış kanama zamanı önemlidir; trombositopeni kanamayı ve sepsisi düşündürür.\n- **Kanama profili:** Ayrıca istenir.\n- **Algoritmadaki yeri:** BT ve BOS normal olan komalı hastada kan gazı, metabolik ya da solunumsal asit-baz bozukluğunu ayırmak için kullanılır.",
+   "cikmis": [],
+   "ornek26": [
+    {
+     "kok": "Bilinç bozukluğu ile getirilen hastanın tam kan sayımında trombositopeni saptanıyor. Bu bulgu öncelikle hangi durumları düşündürür?",
+     "secenekler": {
+      "A": "Hiponatremi ve hipoglisemi",
+      "B": "Hipotermi ve hipoksi",
+      "C": "Üremi ve hepatik ensefalopati",
+      "D": "Kanama ve sepsis",
+      "E": "Status epileptikus ve demans"
+     },
+     "dogru": "D",
+     "aciklama": "Trombositopeni, komadaki hastada kanamayı ve sepsisi düşündürür; bu yüzden kanama profili de istenir. Hiponatremi ve hipoglisemi elektrolit ve kan şekeriyle saptanır, trombosit sayısıyla ilişkili değildir.",
+     "zorluk": "orta"
+    }
+   ]
+  },
+  {
+   "id": "2n02-02",
+   "puan": 72,
+   "baslik": "En sık nöroloji konsültasyonu nedeni",
+   "bilgi": "Bilinç değişiklikleri **acil servis ve yoğun bakım** ünitelerinde **en sık nöroloji konsültasyonu** nedenidir.",
+   "alt": [],
+   "tur": "en_sik",
+   "alinti": [
+    {
+     "sayfa": 2,
+     "metin": "Bilinç değişiklikleri acil servis ve yoğun bakım ünitelerinde en sık nöroloji konsültasyonu nedenidir"
+    }
+   ],
+   "neden": "Dersin açılış cümlesi; \"en sık\" vurgusu taşıdığı için sınavda kısa bilgi sorusu olabilir.",
+   "detay": "- **Nerede görülür:** Bilinç değişikliği özellikle acil serviste ve yoğun bakım ünitelerinde karşımıza çıkar.\n- **Önemi:** Bu birimlerden nörolojiye en sık danışılan sorun bilinç değişikliğidir.\n- **Ekip yaklaşımı:** Ders sonunda vurgulandığı gibi bilinç bozukluğunda ayırıcı tanı önemlidir; hızlı ve ekip hâlinde çalışmak gerekir.\n- **Etiyoloji dağılımı:** Bu hastaların çoğunda (yüzde seksen beş) neden metabolik ya da sistemiktir; bu yüzden konsültasyonda sistemik nedenler de mutlaka gözden geçirilir.",
+   "cikmis": []
+  },
+  {
+   "id": "2n02-09",
+   "puan": 70,
+   "baslik": "İlk aşamada stabilizasyon",
+   "bilgi": "Muayeneyle birlikte stabilizasyon, laboratuvar, görüntüleme ve tedavi **eş zamanlı** planlanır: **O2, iki geniş IV yol, EKG, kardiyak monitörizasyon**.",
+   "alt": [],
+   "tur": "tani_tedavi",
+   "alinti": [
+    {
+     "sayfa": 9,
+     "metin": "O2, iki geniş IV yol, EKG, kardiak monitorizasyon"
+    }
+   ],
+   "neden": "Acil yaklaşımın ilk basamağı; algoritmanın başında da \"ABC ve oksijenasyon\" yer alır.",
+   "detay": "- **Eş zamanlılık:** Bilinç bozukluğunda muayene, stabilizasyon, laboratuvar, görüntüleme ve tedavi sırayla değil, aynı anda planlanır.\n- **Stabilizasyon:** Oksijen verilir, iki geniş damar yolu açılır, EKG çekilir ve kardiyak monitörizasyon yapılır.\n- **Algoritmadaki karşılığı:** Yanıt alınamayan hastada ilk adım ABC (hava yolu, solunum, dolaşım) ve oksijenasyondur.\n- **Hızlı nörolojik değerlendirme:** Aynı aşamada fokal nörolojik defisit aranır, stick kan şekerine bakılır ve opioid aşırı dozu düşünülür.",
+   "cikmis": []
+  },
+  {
+   "id": "2n02-32",
+   "puan": 69,
+   "baslik": "Beyin sapı bulgusu varsa",
+   "bilgi": "Beyin sapı bulgusu varsa **posterior fossada yapısal lezyon, transtentoryal herniasyon**, toksik ve metabolik nedenler düşünülür; **BBT/MRI, glukoz, tiamin** ve tarama yapılır.",
+   "alt": [],
+   "tur": "tani_tedavi",
+   "alinti": [
+    {
+     "sayfa": 58,
+     "metin": "Posterior fossada yapısal lezyon, transtentional herniasyon, toksik ve metabolik nedenler"
+    },
+    {
+     "sayfa": 59,
+     "metin": "BBT/MRI, glu, tiamin, metobolik ve toksik tarama"
+    }
+   ],
+   "neden": "Algoritmanın \"evet\" kolu; beyin sapı bulgusunun posterior fossa lezyonunu düşündürdüğü vaka biçiminde sorulabilir.",
+   "detay": "- **Durum:** Bilinci kapalı hastada beyin sapı bulguları (pupil, göz hareketleri, motor yanıt, solunum bozukluğu) var.\n- **Düşünülecek nedenler:** Posterior fossada yapısal lezyon, transtentoryal herniasyon, toksik ve metabolik nedenler.\n- **İncelemeler:** Beyin BT ya da MRI, glukoz, tiamin, metabolik ve toksik tarama.\n- **Karşıt kol:** Beyin sapı bulgusu yoksa lateral şift yapan tek serebral lezyon, biserebral yapısal, talamik ve metabolik-toksik-enfeksiyöz nedenler düşünülür; BBT, tarama ve BOS incelemesi yapılır.",
+   "cikmis": [],
+   "ornek26": [
+    {
+     "kok": "Bilinci kapalı hastada ilk tetkik ve tedaviler yapıldıktan sonra belirgin beyin sapı bulguları saptanıyor. Algoritmaya göre öncelikle düşünülmesi gereken yapısal neden aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Lateral şift yapan tek serebral lezyon",
+      "B": "Talamik lezyon",
+      "C": "Posterior fossada yapısal lezyon",
+      "D": "Biserebral yapısal lezyon",
+      "E": "Psikojen yanıtsızlık"
+     },
+     "dogru": "C",
+     "aciklama": "Beyin sapı bulgusu olan bilinci kapalı hastada posterior fossada yapısal lezyon ve transtentoryal herniasyon düşünülür. Lateral şift yapan tek serebral lezyon, talamik ve biserebral lezyonlar ise beyin sapı bulgusu olmayan kolda yer alır.",
+     "zorluk": "zor"
+    }
+   ]
+  },
+  {
+   "id": "2n02-25",
+   "puan": 68,
+   "baslik": "Kalorik test (vestibülo-oküler refleks)",
+   "bilgi": "Kalorik testte kulağa **soğuk su** verilir; bilinci kapalı ama **beyin sapı sağlam** hastada gözler uyarılan kulağa doğru kayar, hasarlıysa yanıt alınmaz.",
+   "alt": [],
+   "tur": "tani_tedavi",
+   "alinti": [
+    {
+     "sayfa": 37,
+     "metin": "Vestibülo-oküler refleksler Bilinç kapalı Beyin sapı sağlam Soğuk Su"
+    },
+    {
+     "sayfa": 38,
+     "metin": "Bilinç kapalı Beyin sapı HASARLI Soğuk Su"
+    }
+   ],
+   "neden": "Okülovestibüler yanıt lokalizan bulgular arasında sayılır ve beyin sapı refleksi sorularında çeldirici olarak geçer.",
+   "detay": "- **Yapılışı:** Dış kulak yoluna enjektörle soğuk su verilir ve göz hareketleri izlenir.\n- **Beyin sapı sağlam:** Bilinci kapalı hastada gözler konjuge olarak soğuk su verilen kulağa doğru kayar.\n- **Beyin sapı hasarlı:** Gözler orta hatta kalır, yanıt alınamaz.\n- **Okülosefalik refleksle ilişkisi:** İkisi de aynı vestibülo-oküler yolu (VIII → MLF → III ve VI) sınar; ikisinde de sağlam ve hasarlı beyin sapı aynı biçimde ayrılır.\n- **Lokalizan değeri:** Göz hareketleri ve okülovestibüler yanıtlar komada lezyon yerini gösteren bulgulardandır.",
+   "cikmis": [],
+   "ornek26": [
+    {
+     "kok": "Bilinci kapalı ancak beyin sapı sağlam olan bir hastada kalorik testte bir kulağa soğuk su verildiğinde beklenen yanıt aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Gözler orta hatta sabit kalır",
+      "B": "Yalnız uyarılan taraftaki pupil daralır",
+      "C": "Gözler konjuge olarak soğuk su verilen kulağa doğru kayar",
+      "D": "İki taraflı göz kırpma olur",
+      "E": "Gözler aşağı ve içe döner"
+     },
+     "dogru": "C",
+     "aciklama": "Beyin sapı sağlamsa soğuk su uyarısıyla gözler konjuge biçimde uyarılan kulağa doğru kayar. Gözlerin orta hatta sabit kalması beyin sapı hasarında görülen yanıtsızlıktır.",
+     "zorluk": "zor"
+    }
+   ]
+  },
+  {
+   "id": "2n02-31",
+   "puan": 66,
+   "baslik": "Beyin sapı bulgusu yoksa",
+   "bilgi": "Beyin sapı bulgusu yoksa **lateral şift yapan tek serebral lezyon**, biserebral yapısal, talamik, metabolik, toksik ve enfeksiyöz nedenler düşünülür; **BBT, tarama ve BOS** yapılır.",
+   "alt": [],
+   "tur": "tani_tedavi",
+   "alinti": [
+    {
+     "sayfa": 54,
+     "metin": "Lateral şift yapan tek serebral lezyon, biserebral yapısal, talamik, metabolik, toksik, enfeksiyöz?"
+    },
+    {
+     "sayfa": 56,
+     "metin": "BBT, metabolik ve ilaç tarama, BOS inceleme, enfeksiyöz"
+    }
+   ],
+   "neden": "Algoritmanın \"hayır\" kolu; hangi nedenlerin beyin sapı bulgusu vermeden koma yaptığı ayırıcı tanı sorusu olabilir.",
+   "detay": "- **Durum:** Bilinci kapalı hastada beyin sapı bulgusu yok.\n- **Düşünülecek nedenler:** Lateral şift yapan tek serebral lezyon, iki hemisferi birden tutan (biserebral) yapısal lezyon, talamik lezyon, metabolik, toksik ve enfeksiyöz nedenler.\n- **Acil incelemeler:** Beyin BT, metabolik ve ilaç taraması, BOS incelemesi ve enfeksiyon araştırması.\n- **Karşıt kol:** Beyin sapı bulgusu varsa posterior fossada yapısal lezyon, transtentoryal herniasyon ya da toksik-metabolik nedenler düşünülür.",
+   "cikmis": []
+  },
+  {
+   "id": "2n02-33",
+   "puan": 64,
+   "baslik": "Komalı hasta: BT, BOS, kan gazı ve osmolar açık",
+   "bilgi": "Komalı hastada sırayla **BT**, **BOS** ve **kan gazı** yapılır; metabolik asidoz nedenleri **laktat, metanol, etilen glikol, salisilat, üremi, diyabet, etil alkol**dür.",
+   "alt": [],
+   "tur": "tani_tedavi",
+   "alinti": [
+    {
+     "sayfa": 60,
+     "metin": "Komalı Hasta Laktat"
+    }
+   ],
+   "neden": "Algoritmanın son şeması; asit-baz ve osmolar açık ayrımı zor soru kaynağıdır.",
+   "detay": "- **BT:** Yapısal beyin hasarını gösterir; normalse BOS'a geçilir.\n- **BOS:** SSS enfeksiyonunu gösterir; normalse arteryel kan gazına geçilir.\n- **Metabolik asidoz:** Laktat, metanol, etilen glikol, salisilat, üremi, diyabet, etil alkol.\n- **Metabolik alkaloz:** Dehidratasyon.\n- **Osmolar açık pozitif:** Metanol, izopropil alkol, etil eter, etilen glikol, aseton, trikloroetan.\n- **Osmolar açık negatif:** Anoksik-iskemik ensefalopati, belirlenemeyen toksin alımı; MSS demiyelinizan hastalık ve akut baziler arter tıkanması için MR, akut baziler migren için anamnez, nonkonvülzif status epileptikus için EEG, miksödem koması-Hashimoto ensefaliti-tiroid fırtınası için T3, T4, TSH; psikojenik koma.",
+   "cikmis": [],
+   "ornek26": [
+    {
+     "kok": "BT ve BOS incelemesi normal olan komalı hastanın arteryel kan gazında metabolik asidoz saptanıyor. Aşağıdakilerden hangisi bu tablonun nedenleri arasında yer almaz?",
+     "secenekler": {
+      "A": "Laktat",
+      "B": "Metanol",
+      "C": "Salisilat",
+      "D": "Dehidratasyon",
+      "E": "Üremi"
+     },
+     "dogru": "D",
+     "aciklama": "Komalı hastada metabolik asidoz nedenleri laktat, metanol, etilen glikol, salisilat, üremi, diyabet ve etil alkoldür. Dehidratasyon ise şemada metabolik alkalozun nedeni olarak verilir.",
+     "zorluk": "zor"
+    },
+    {
+     "kok": "Osmolar açığı negatif olan komalı hastada nonkonvülzif status epileptikus düşünülüyorsa tanı için kullanılacak yöntem aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "MR",
+      "B": "EEG",
+      "C": "T3, T4, TSH",
+      "D": "Anamnez",
+      "E": "BOS incelemesi"
+     },
+     "dogru": "B",
+     "aciklama": "Nonkonvülzif status epileptikus tanısı EEG ile konur. MR demiyelinizan hastalık ve akut baziler arter tıkanmasında, T3-T4-TSH miksödem koması ve tiroid fırtınasında kullanılır.",
+     "zorluk": "orta"
+    }
+   ]
+  },
+  {
+   "id": "2n02-04",
+   "puan": 62,
+   "baslik": "ARAS'ın bileşenleri ve afferent sistemleri",
+   "bilgi": "Bilinç sisteminde **ARAS**, **sentral tegmental fasikül** ve **raphe nükleusu, locus ceruleus, parabrachialis** gibi direkt afferent sistemler yer alır.",
+   "alt": [
+    "Raphe nükleusu",
+    "Locus ceruleus",
+    "Parabrachial nükleus"
+   ],
+   "tur": "siniflama",
+   "alinti": [
+    {
+     "sayfa": 4,
+     "metin": "raphe nucleus, locus ceruleus, parabrachialis"
+    }
+   ],
+   "neden": "Ayrıntı düzeyinde bir slayt; ARAS ile birlikte sayılan yapılar çeldirici olarak kullanılabilir.",
+   "detay": "- **ARAS:** Asendan retiküler aktive edici sistem, bilincin temel yapısıdır.\n- **Sentral tegmental fasikül:** ARAS ile birlikte bilinç sisteminde sayılan yol.\n- **Direkt afferent sistemler:** Raphe nükleusu, locus ceruleus ve parabrachial nükleus doğrudan bu sisteme katkı verir.\n- **Ayırt edilmesi gereken yapılar:** Talamusun IL ve CM nükleusları, bazal ön beyin ve hipotalamus ise ARAS'ın bağlantı kurduğu üst merkezlerdir; direkt afferent sistemler listesinde değil, uyanıklık ağının bağlantı halkaları arasında sayılır.",
+   "cikmis": []
+  },
+  {
+   "id": "2n02-13",
+   "puan": 60,
+   "baslik": "Serebral herniasyon tipleri",
+   "bilgi": "Serebral herniasyon tipleri **unkal, santral, singulat, transkalvaryal, yukarı (asendan)** ve **tonsiller** herniasyondur.",
+   "alt": [],
+   "tur": "siniflama",
+   "alinti": [
+    {
+     "sayfa": 14,
+     "metin": "Santral 1.Unkal"
+    },
+    {
+     "sayfa": 14,
+     "metin": "6 Tonsiller SEREBRAL HERNIASYON"
+    }
+   ],
+   "neden": "Şekille anlatılan sayfa; unkal herniasyon pupil bulgusuyla, transtentoryal herniasyon algoritmayla bağlantılıdır.",
+   "detay": "- **Unkal herniasyon:** Temporal lobun iç kısmı (unkus) aşağı doğru yer değiştirir; pupil şemasında III. kranial sinir (unkal) tutulumunda pupil dilate ve fiksedir.\n- **Santral herniasyon:** Beyin dokusunun orta hatta aşağı doğru yer değiştirmesidir.\n- **Singulat herniasyon:** Singulat girusun karşı tarafa, orta hattın altına itilmesidir.\n- **Transkalvaryal herniasyon:** Beyin dokusunun kafatası defektinden dışarı çıkmasıdır.\n- **Yukarı herniasyon:** Posterior fossadaki dokunun yukarı doğru yer değiştirmesidir.\n- **Tonsiller herniasyon:** Serebellar tonsillerin aşağı doğru yer değiştirmesidir.\n- **Algoritmada:** Beyin sapı bulgusu olan bilinci kapalı hastada transtentoryal herniasyon düşünülür.",
+   "cikmis": []
+  },
+  {
+   "id": "2n02-17",
+   "puan": 58,
+   "baslik": "Koma skorları",
+   "bilgi": "Komada kullanılan skorlar **Glasgow Koma Skoru**, **dörtlü test** ve **hepatik koma skalası**dır.",
+   "alt": [],
+   "tur": "siniflama",
+   "alinti": [
+    {
+     "sayfa": 20,
+     "metin": "Glasgow koma skoru"
+    }
+   ],
+   "neden": "Skor adları listesi; en çok kullanılan ve sorulan Glasgow Koma Skalasıdır.",
+   "detay": "- **Glasgow Koma Skoru (GKS):** Göz açma, motor yanıt ve sözel yanıtla hesaplanır; en düşük puan 3, en yüksek puan 15'tir.\n- **Dörtlü test:** Komada kullanılan diğer bir skorlama yöntemidir.\n- **Hepatik koma skalası:** Listedeki üçüncü skordur; hepatik ensefalopati de SSS'i difüz etkileyen sistemik nedenler arasındadır.\n- **Muayenedeki yeri:** Bilinç düzeyi, pupiller, uyaranlara yanıt ve travma belirtilerinden sonra koma skalası belirlenir.",
+   "cikmis": []
+  },
+  {
+   "id": "2n02-14",
+   "puan": 55,
+   "baslik": "Vital bulguların değerlendirilmesi",
+   "bilgi": "Fizik muayenede **solunum, kan basıncı, kan gazı, ateş** ve **hipotermi** değerlendirilir.",
+   "alt": [],
+   "tur": "tani_tedavi",
+   "alinti": [
+    {
+     "sayfa": 16,
+     "metin": "Solunum: hiper- veya hipoventilasyon"
+    }
+   ],
+   "neden": "Muayene sırasının ilk basamağı; ateşin sistemik enfeksiyonu düşündürdüğü bilinmelidir.",
+   "detay": "- **Solunum:** Hiperventilasyon ya da hipoventilasyon aranır.\n- **Kan basıncı:** Hipertansiyon ya da hipotansiyon değerlendirilir.\n- **Kan gazı:** Hipoksi ya da hiperkarbi saptanabilir.\n- **Ateş:** Sistemik enfeksiyonu düşündürür.\n- **Hipotermi:** Ayrıca sorgulanır; midriyatik ve ışığa yanıtsız pupil nedenleri arasında da yer alır.\n- **Sonraki adım:** Bilinç düzeyi, pupiller, uyaranlara yanıt, travma belirtileri ve koma skalası belirlenir.",
+   "cikmis": []
+  },
+  {
+   "id": "2n02-34",
+   "puan": 52,
+   "baslik": "Sonuç: erken tanı ve tedavinin önemi",
+   "bilgi": "Bilinç bozukluğunda **ayırıcı tanı** ve **hızlı ekip yaklaşımı** önemlidir; etiyolojiye yönelik tetkik ve **erken tedavi prognozu iyi yönde etkiler**.",
+   "alt": [],
+   "tur": "tani_tedavi",
+   "alinti": [
+    {
+     "sayfa": 61,
+     "metin": "Bilinç bozukluğunda ayırıcı tanısı önemli Hızlı ve ekip yaklaşımı önemli"
+    }
+   ],
+   "neden": "Dersin sonuç slaytı; ayırıcı tanının önemi hipoglisemi sorusunun da temelidir.",
+   "detay": "- **Ayırıcı tanı:** Bilinç bozukluğunun nedeni sistemik mi, yapısal mı ayrılmalıdır; nedenlerin yüzde seksen beşi metabolik ve sistemiktir.\n- **Hız ve ekip:** Muayene, stabilizasyon, laboratuvar, görüntüleme ve tedavi eş zamanlı ve ekip hâlinde yürütülür.\n- **Erken tedavi:** Etiyolojiye yönelik tetkik ve erken tedavi prognozu iyi yönde etkiler; hipoglisemi gibi düzeltilebilir nedenler hemen ele alınır.",
+   "cikmis": []
+  }
+ ],
+ "cikmis": {
+  "04c8b92b1242": {
+   "sinav": "2020-2021 Kurul 2",
+   "kok": "Glasgow Koma Skalasında bir hastanın alabileceği minimum ve maksimum puanlar aşağıdaki seçeneklerin hangisinde doğru olarak verilmiştir?",
+   "secenekler": {
+    "A": "1 ve 3",
+    "B": "3 ve 10",
+    "C": "3 ve 15",
+    "D": "0 ve 15",
+    "E": "0 ve 10"
+   },
+   "dogru": "C"
+  },
+  "260b60a805e9": {
+   "sinav": "Yılı belirsiz",
+   "kok": "Sağ hemiplejili bir hastada gözlerin ağrılı uyaranla açıldığı, sözel yanıtta oryantasyonun bozuk olduğu ancak konfüze konuştuğu, motor muayenede sağ tarafta yanıt alınamazken sol üst ekstremitesiyle ağrılı uyaranı lokalize edebildiği saptanmıştır. Bu hastanın Glasgow Koma Skalası (GKS) skoru kaçtır?",
+   "secenekler": {
+    "A": "11",
+    "B": "10",
+    "C": "12",
+    "D": "14",
+    "E": "13"
+   },
+   "dogru": "A"
+  },
+  "d3-b-056": {
+   "sinav": "2022-2023 Bütünleme",
+   "kok": "Aşağıdakilerden hangisi komadaki bir hastada nörolojik muayenede kullanılan beyin sapı reflekslerinden biri değildir?",
+   "secenekler": {
+    "A": "Okülosefalik refleks",
+    "B": "Işık refleksi",
+    "C": "Kremasterik refleks",
+    "D": "Kornea refleksi",
+    "E": "Okülovestibüler refleks"
+   },
+   "dogru": "C",
+   "tekrar": [
+    "2021-2022 Final"
+   ]
+  },
+  "past-1790877040005-770270": {
+   "sinav": "2022-2023 Kurul 5",
+   "kok": "Çalıştığınız kuruma bilinç bozukluğu ile bir hasta getirildi. Yaptığınız bilinç muayenesi sırasında ağrılı uyaranla gözlerini açtığını, ağrı verdiğiniz sırada hastanın üst ekstremitesinde dirseklerini kırdığını ve ayak bileklerini plantar fleksiyona aldığını ve sözlü herhangi bir cevap vermediğini saptadınız. Hastanızın GKS (Glasgow Koma Skoru) skoru kaçtır?",
+   "secenekler": {
+    "A": "5",
+    "B": "6",
+    "C": "3",
+    "D": "7",
+    "E": "4"
+   },
+   "dogru": "B"
+  },
+  "past-q-2025-2026_DO_NEM_3_FI_NAL_SINAVI-64": {
+   "sinav": "2025-2026 Final",
+   "kok": "Aşağıdakilerden hangisi, hastanın sözel uyaranla uyandırılabilip uyaran kesildiğinde tekrar uyku hâline geçtiği tabloyu tanımlar?",
+   "secenekler": {
+    "A": "Stupor",
+    "B": "Abuli",
+    "C": "Letarji",
+    "D": "Koma",
+    "E": "Konfüzyon"
+   },
+   "dogru": "C",
+   "tekrar": [
+    "2021-2022 Final"
+   ]
+  },
+  "q-No_ropsikiyatri_gis_kardiyo_-2023-2024-C__km_s_lar__240625_053302__2_-19": {
+   "sinav": "Yılı belirsiz",
+   "kok": "Bilinç bozukluğu olan hastanın ayırıcı tanısında aşağıdakilerden hangisi mutlaka düşünülmelidir?",
+   "secenekler": {
+    "A": "Miyastenia gravis",
+    "B": "Guillain-Barré sendromu",
+    "C": "Hipoglisemi",
+    "D": "Periferik fasiyal paralizi",
+    "E": "Amyotrofik lateral skleroz"
+   },
+   "dogru": "C"
+  }
+ }
+}
