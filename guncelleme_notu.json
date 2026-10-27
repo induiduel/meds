@@ -1,16 +1,15 @@
 {
  "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
- "onem": 380,
- "baslik": "Yeni Ders: Nöroloji 1 · Nörolojik Hastaya Yaklaşım (2026-2027)",
+ "onem": 381,
+ "baslik": "Nöroloji 1: Slayt Üstü Çizim Panelleri Eklendi",
  "maddeler": [
-  "Kurul 2 Nöroloji 1. ders bu yılın slaytlarıyla sesli ders olarak eklendi (yaklaşık 7 dakika, EMA sesi).",
-  "Anlatım; okul slaytları, öğrenci notları ve doğrulanmış çıkmış sorulardan hazırlandı ve bağımsız denetimden geçti.",
-  "Çıkmışta sorulan bilgilerin olduğu slaytlarda 'Çıkmış' etiketi yanıp söner; dokununca soru çözülür, ders kaldığı yerden sürer.",
-  "Slaytlardaki 35 terim ve 15 kısaltma işareti dokununca açıklanıyor."
+  "Nöroloji 1 (Nörolojik Hastaya Yaklaşım) sesli dersinde anlatılan cümleyle eş zamanlı 24 açıklayıcı panel çıkıyor.",
+  "Başlangıç şekli, bulgu → düşündürdüğü, lezyon yeri → bulgu, karar ve algoritma gibi 11 farklı panel tasarımı konuya göre kullanıldı.",
+  "Her cümle slayttaki ilgili maddeyi işaretliyor; çıkmışta sorulan satırlar öncelikli gösteriliyor.",
+  "Paneller bağımsız tıbbi anlam denetiminden ve telefon/tablet/masaüstü yerleşim sınamasından geçti."
  ],
  "eklenen": [
-  "data/sesli_anlatim/*/k2-01-norolojik-hastaya-yaklasim",
-  "src/services/lecturePdfLocator.ts (k2p-k2-01 PDF bağı)"
+  "data/sesli_anlatim/capa|cizim|isaret/k2-01-norolojik-hastaya-yaklasim.json"
  ],
  "degisen": [
   "src/services/canliDers.ts",
