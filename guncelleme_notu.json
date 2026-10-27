@@ -1,11 +1,11 @@
 {
  "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
- "onem": 407,
- "baslik": "Yeni menü: bütün sayfalar tek yerde",
+ "onem": 408,
+ "baslik": "Menü yeni görünümde",
  "maddeler": [
-  "Telefonda ve tablette Menü: bütün sayfalar gruplu simgelerle, üstte sayfa arama",
-  "Bilgisayarda kenar menüsü: her grup açılıp kapanır, bütün sayfalar listede",
-  "Tam ekran, kronometre, kuyruk gibi araçlar menünün üstünde küçük simgeler olarak"
+  "Menüde sınava kalan gün kartı, son açtığın sayfalar ve renkli sayfa simgeleri",
+  "Gruplar ayrı kartlarda; araçlar tek sırada küçük simgeler",
+  "Bilgisayarda kenar menüsü gruplarına simge eklendi"
  ],
  "eklenen": [],
  "degisen": [],

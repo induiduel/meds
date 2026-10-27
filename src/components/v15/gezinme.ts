@@ -38,6 +38,7 @@ export function useGezinmeKaydi(active: AppRoute) {
       if (yigin.length > 60) yigin = yigin.slice(-60);
       yaz(YIGIN_KEY, yigin);
     }
+    sonSayfaEkle(active);
     const sk = sekmeOf(active);
     if (sk && sk !== 'menu') { son = { ...son, [sk]: y }; yaz(SON_KEY, son); }
   });
@@ -59,4 +60,13 @@ export function sekmeyeGit(s: V15Section, active: AppRoute, onGo: (r: AppRoute) 
   const hedef = son[s.id];
   if (!burada && hedef && hedef !== pathFor(s.hub)) navigateTo(hedef);
   else onGo(s.hub);
+}
+
+/** Menüdeki "Son açtıkların": son 8 sayfa (rota), cihazda kalıcı; merkezler ve Bugün sayılmaz */
+const SON_SAYFA_KEY = 'medsoru_v15_son_sayfalar';
+export function sonSayfalar(): AppRoute[] { try { return JSON.parse(localStorage.getItem(SON_SAYFA_KEY) || '[]'); } catch { return []; } }
+function sonSayfaEkle(r: AppRoute) {
+  if (kokMu(r) || r === 'ders_detay') return;
+  const l = [r, ...sonSayfalar().filter((x) => x !== r)].slice(0, 8);
+  try { localStorage.setItem(SON_SAYFA_KEY, JSON.stringify(l)); } catch { /* yok */ }
 }

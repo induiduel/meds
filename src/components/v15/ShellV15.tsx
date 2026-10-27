@@ -159,11 +159,11 @@ function useAraclar(kapat: () => void, ek: { onPdf?: () => void; onOffline?: () 
   return [
     { id: 'ara', ad: 'Ara', icon: Search, tikla: yap(openSearch) },
     { id: 'kronometre', ad: 'Kronometre', icon: Timer, tikla: yap(kronometreAc) },
-    { id: 'tam', ad: appFs ? 'Tam ekrandan çık' : 'Tam ekran', icon: appFs ? Minimize2 : Maximize2, on: appFs, tikla: yap(() => toggleAppFs()) },
-    ...(ek.onPdf ? [{ id: 'kitapcik', ad: 'Soru kitapçığı', icon: FileText, tikla: yap(ek.onPdf) }] : []),
-    ...(ek.onOffline ? [{ id: 'cevrimdisi', ad: 'İndirilenler', icon: Database, tikla: yap(ek.onOffline) }] : []),
+    { id: 'tam', ad: appFs ? 'Çık' : 'Tam ekran', icon: appFs ? Minimize2 : Maximize2, on: appFs, tikla: yap(() => toggleAppFs()) },
+    ...(ek.onPdf ? [{ id: 'kitapcik', ad: 'Kitapçık', icon: FileText, tikla: yap(ek.onPdf) }] : []),
+    ...(ek.onOffline ? [{ id: 'cevrimdisi', ad: 'İndirilen', icon: Database, tikla: yap(ek.onOffline) }] : []),
     { id: 'kuyruk', ad: 'Kuyruk', icon: CloudUpload, rozet: queued, tikla: yap(() => window.dispatchEvent(new Event('medsoru:pending'))) },
-    ...(canInstall ? [{ id: 'yukle', ad: 'Uygulamayı yükle', icon: Smartphone, tikla: yap(() => pwaService.promptInstall()) }] : []),
+    ...(canInstall ? [{ id: 'yukle', ad: 'Yükle', icon: Smartphone, tikla: yap(() => pwaService.promptInstall()) }] : []),
   ];
 }
 

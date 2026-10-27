@@ -195,35 +195,65 @@
 button.v15-nav-a { border: 0; background: none; font: inherit; color: inherit; width: 100%; text-align: left; cursor: pointer; }
 
 /* ---------------------------------------------------------------------------
- * Bütün sayfalar (TumSayfalarV15): telefon/tablet Menü ızgarası
+ * Bütün sayfalar (TumSayfalarV15): telefon/tablet Menü — uygulama arşivi düzeni
  * ------------------------------------------------------------------------- */
-:root[data-v15='on'] .ts15 { container-type: inline-size; display: flex; flex-direction: column; gap: 14px; padding-bottom: 8px; }
-:root[data-v15='on'] .ts15-ara { display: flex; align-items: center; gap: 8px; min-height: 42px; padding: 0 12px; border-radius: 12px; background: var(--color-field); color: var(--color-ink-3); }
-:root[data-v15='on'] .ts15-ara svg { width: 17px; height: 17px; flex: none; }
+:root[data-v15='on'] .ts15 { container-type: inline-size; display: flex; flex-direction: column; gap: 14px; padding-bottom: 12px; }
+:root[data-v15='on'] .ts15-ara { display: flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 14px; border-radius: 14px; background: var(--color-field); color: var(--color-ink-3); }
+:root[data-v15='on'] .ts15-ara svg { width: 18px; height: 18px; flex: none; }
 :root[data-v15='on'] .ts15-ara input { flex: 1; min-width: 0; border: 0; background: none; font: inherit; font-size: 1rem; color: var(--color-ink); outline: none; }
 :root[data-v15='on'] .ts15-ara button { border: 0; background: none; color: var(--color-ink-3); display: grid; cursor: pointer; padding: 4px; }
-/* araçlar: tek sıra, kaydırılabilir kompakt simgeler */
-:root[data-v15='on'] .ts15-arac { display: flex; gap: 4px; overflow-x: auto; scrollbar-width: none; margin: 0 -4px; padding: 0 4px; }
+/* kurul kartı: vurgu renginde, sınava kalan gün */
+:root[data-v15='on'] .ts15-kurul { display: flex; align-items: center; gap: 14px; padding: 14px 16px; border-radius: 18px; text-decoration: none;
+  background: linear-gradient(135deg, var(--color-accent), color-mix(in oklab, var(--color-accent) 70%, var(--color-ink))); color: var(--color-on-accent); }
+:root[data-v15='on'] .ts15-kurul-n { flex: none; width: 54px; height: 54px; border-radius: 16px; display: flex; flex-direction: column; align-items: center; justify-content: center;
+  background: color-mix(in oklab, var(--color-on-accent) 18%, transparent); line-height: 1; }
+:root[data-v15='on'] .ts15-kurul-n b { font-size: 1.35rem; font-variant-numeric: tabular-nums; }
+:root[data-v15='on'] .ts15-kurul-n small { font-size: .68rem; opacity: .85; margin-top: 2px; }
+:root[data-v15='on'] .ts15-kurul-t { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
+:root[data-v15='on'] .ts15-kurul-t b { font-size: 1rem; }
+:root[data-v15='on'] .ts15-kurul-t span { font-size: .82rem; opacity: .85; }
+:root[data-v15='on'] .ts15-kurul > svg { width: 18px; height: 18px; opacity: .8; }
+/* araçlar: tek sıra kompakt kart */
+:root[data-v15='on'] .ts15-arac { display: flex; gap: 2px; overflow-x: auto; scrollbar-width: none; padding: 8px 6px; border-radius: 18px; background: var(--color-white); border: 1px solid var(--color-line-soft, var(--color-line)); }
 :root[data-v15='on'] .ts15-arac::-webkit-scrollbar { display: none; }
-:root[data-v15='on'] .ts15-arac > button { flex: none; width: 64px; display: flex; flex-direction: column; align-items: center; gap: 4px; border: 0; background: none; padding: 2px 0; cursor: pointer; color: var(--color-ink-2); font: inherit; }
-:root[data-v15='on'] .ts15-arac-ic { position: relative; width: 40px; height: 40px; border-radius: 50%; display: grid; place-items: center; background: var(--color-field); }
-:root[data-v15='on'] .ts15-arac-ic svg { width: 19px; height: 19px; }
-:root[data-v15='on'] .ts15-arac-ic i { position: absolute; top: -2px; right: -4px; min-width: 18px; height: 18px; padding: 0 4px; border-radius: 9px; background: var(--color-bad); color: var(--color-white); font-style: normal; font-size: .68rem; font-weight: 700; display: grid; place-items: center; }
+:root[data-v15='on'] .ts15-arac > button { flex: 1 0 60px; display: flex; flex-direction: column; align-items: center; gap: 5px; border: 0; background: none; padding: 2px 0; cursor: pointer; color: var(--color-ink-2); font: inherit; border-radius: 12px; }
+:root[data-v15='on'] .ts15-arac-ic { position: relative; width: 38px; height: 38px; border-radius: 50%; display: grid; place-items: center; background: var(--color-field); }
+:root[data-v15='on'] .ts15-arac-ic svg { width: 18px; height: 18px; }
+:root[data-v15='on'] .ts15-arac-ic i { position: absolute; top: -3px; right: -5px; min-width: 18px; height: 18px; padding: 0 4px; border-radius: 9px; background: var(--color-bad); color: var(--color-white); font-style: normal; font-size: .66rem; font-weight: 700; display: grid; place-items: center; }
 :root[data-v15='on'] .ts15-arac > button.is-on .ts15-arac-ic { background: var(--color-accent); color: var(--color-on-accent); }
-:root[data-v15='on'] .ts15-arac-l { font-size: .7rem; line-height: 1.15; text-align: center; white-space: nowrap; }
-:root[data-v15='on'] .ts15-gb { display: flex; align-items: center; justify-content: space-between; margin: 0 2px 8px; }
-:root[data-v15='on'] .ts15-gb h3 { margin: 0; font-size: .78rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; color: var(--color-ink-3); }
-:root[data-v15='on'] .ts15-merkez { display: inline-flex; align-items: center; gap: 2px; font-size: .8rem; color: var(--color-accent); text-decoration: none; }
+:root[data-v15='on'] .ts15-arac-l { font-size: .68rem; line-height: 1.15; text-align: center; white-space: nowrap; }
+:root[data-v15='on'] .ts15-h { margin: 0; font-size: .95rem; font-weight: 700; color: var(--color-ink); }
+/* son açtıkların: yatay kaydırma */
+:root[data-v15='on'] .ts15-son ul { list-style: none; margin: 8px -4px 0; padding: 0 4px; display: flex; gap: 4px; overflow-x: auto; scrollbar-width: none; }
+:root[data-v15='on'] .ts15-son li { flex: none; width: 76px; }
+/* grup kartı */
+:root[data-v15='on'] .ts15-grup { padding: 12px 10px 8px; border-radius: 20px; background: var(--color-white); border: 1px solid var(--color-line-soft, var(--color-line)); }
+:root[data-v15='on'] .ts15-gb { display: flex; align-items: center; gap: 8px; margin: 0 4px 8px; }
+:root[data-v15='on'] .ts15-gi { width: 26px; height: 26px; border-radius: 8px; display: grid; place-items: center; background: var(--color-accent-soft); color: var(--color-accent); }
+:root[data-v15='on'] .ts15-gi svg { width: 15px; height: 15px; }
+:root[data-v15='on'] .ts15-gb .ts15-h { flex: 1; }
+:root[data-v15='on'] .ts15-merkez { display: inline-flex; align-items: center; gap: 2px; font-size: .8rem; font-weight: 600; color: var(--color-accent); text-decoration: none; padding: 4px 6px; border-radius: 8px; }
+:root[data-v15='on'] .ts15-merkez:hover { background: var(--color-accent-soft); }
 :root[data-v15='on'] .ts15-merkez svg { width: 14px; height: 14px; }
-:root[data-v15='on'] .ts15-izgara { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; grid-template-columns: repeat(4, minmax(0, 1fr)); }
-@container (min-width: 520px) { :root[data-v15='on'] .ts15-izgara { grid-template-columns: repeat(6, minmax(0, 1fr)); } }
-:root[data-v15='on'] .ts15-oge { display: flex; flex-direction: column; align-items: center; gap: 5px; padding: 8px 2px; border-radius: 12px; color: var(--color-ink); text-decoration: none; min-height: 76px; }
+:root[data-v15='on'] .ts15-izgara { list-style: none; margin: 0; padding: 0; display: grid; gap: 2px; grid-template-columns: repeat(4, minmax(0, 1fr)); }
+@container (min-width: 560px) { :root[data-v15='on'] .ts15-izgara { grid-template-columns: repeat(6, minmax(0, 1fr)); } }
+/* uygulama simgesi: kimlik tonu yumuşak zeminde */
+:root[data-v15='on'] .ts15-oge { display: flex; flex-direction: column; align-items: center; gap: 6px; padding: 8px 2px; border-radius: 14px; color: var(--color-ink); text-decoration: none; min-height: 80px; transition: background .12s; }
 :root[data-v15='on'] .ts15-oge:hover { background: var(--color-field); }
-:root[data-v15='on'] .ts15-ic { width: 44px; height: 44px; border-radius: 13px; display: grid; place-items: center; background: var(--color-white); border: 1px solid var(--color-line-soft, var(--color-line)); color: var(--color-ink-2); }
-:root[data-v15='on'] .ts15-ic svg { width: 21px; height: 21px; }
-:root[data-v15='on'] .ts15-oge[aria-current='page'] .ts15-ic { background: var(--color-accent-soft); border-color: transparent; color: var(--color-accent); }
-:root[data-v15='on'] .ts15-l { font-size: .72rem; line-height: 1.2; text-align: center; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; overflow-wrap: anywhere; }
+:root[data-v15='on'] .ts15-oge:active .ts15-ic { transform: scale(.94); }
+:root[data-v15='on'] .ts15-ic { width: 48px; height: 48px; border-radius: 15px; display: grid; place-items: center; transition: transform .1s;
+  background: color-mix(in oklab, var(--t) 15%, var(--color-white)); color: color-mix(in oklab, var(--t) 82%, var(--color-ink)); }
+:root[data-v15='on'] .ts15-ic svg { width: 23px; height: 23px; }
+:root[data-v15='on'] .ts15-oge[aria-current='page'] .ts15-ic { background: var(--t); color: var(--color-white); box-shadow: 0 4px 12px color-mix(in oklab, var(--t) 35%, transparent); }
+:root[data-v15='on'] .ts15-l { font-size: .72rem; line-height: 1.2; text-align: center; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; overflow-wrap: anywhere; color: var(--color-ink-2); }
+:root[data-v15='on'] .ts15-oge[aria-current='page'] .ts15-l { color: var(--color-ink); font-weight: 600; }
 :root[data-v15='on'] .ts15-bos { margin: 8px 2px; color: var(--color-ink-3); font-size: .88rem; }
+/* koyu temada ton zemini yüzeye göre */
+:root[data-v15='on'][data-mode='dark'] .ts15-ic { background: color-mix(in oklab, var(--t) 24%, var(--color-white)); color: color-mix(in oklab, var(--t) 70%, var(--color-ink)); }
+
+/* kenar çubuğu grup simgesi */
+:root[data-v15='on'] .v15-grp-b > svg:first-child { width: 26px; height: 26px; padding: 5px; border-radius: 8px; background: var(--color-field); }
+:root[data-v15='on'] .v15-grp-b[aria-current='true'] > svg:first-child { background: var(--color-accent-soft); color: var(--color-accent); }
 
 /* masaüstü kenar çubuğu: açılır-kapanır gruplar + kompakt araç sırası */
 :root[data-v15='on'] .v15-grp-b { width: 100%; display: flex; align-items: center; gap: 10px; border: 0; background: none; font: inherit; cursor: pointer; text-align: left; }
