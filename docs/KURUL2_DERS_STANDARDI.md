@@ -97,3 +97,10 @@ Metinler slaytı özetlemekle kalmaz, **öğretir**. Kapılar biçimi ölçer; a
 7. **Öğrenci rolünde bağımsız denetçi (GEÇER şart):** metni slayta bakmadan okur, "anlamadığım yerler" listesi çıkarır, metinden üretilen
    sorularla kendini sınar; cevaplayamadığı yer yeniden yazılır. Bu geçmeden seslendirmeye geçilmez.
 8. **Altın örnek:** Patoloji 2 (k2-04) örnek bölümü yeni derslerin karşılaştırma ölçüsüdür.
+9. **Genişleyen anlatımda slayt çapası ve takip kapısı (T5 ≤%5 yalnız-sayfa işaret):** anlatım slayttan çok genişlediğinde çapasız cümle oranı artar.
+   Çözüm kapıyı gevşetmek ya da çapa uydurmak değil: tanım/açıklama cümlesi, slaytta **aynı konuyu başlatan satıra** (aynı terim/başlık) bağlanır;
+   "bu bilgi çıkmış sınavda sorulmuştur" cümlesi önceki cümlenin çapasını alır; slaytta metne **zıt** ifade varsa o satıra çapa verilmez.
+   Slaytta karşılığı olmayan giriş/yorum cümleleri çapasız kalır (toplamın ≤%5'i).
+10. **Panel yoğunluğu:** bir panelde en çok 4 madde, hücre ≤60 karakter; uzun terimler dar sütunda kırılıyorsa (panel_sinama "kelime ortasından kırılmış") panel silinir ya da kısaltılır.
+    Metin satırlarını/akış şemasındaki küçük yazıyı saran ve anlamlı yapı göstermeyen kontur çizilmez.
+
