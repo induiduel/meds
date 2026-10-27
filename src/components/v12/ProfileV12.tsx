@@ -88,6 +88,7 @@ import { erisimYaz, useErisim } from '../../utils/erisilebilirlik';
 import { useV15Baslik } from '../v15/baslik';
 import { useProfil } from '../../services/profilKurulum';
 import TamEkranAyarV15 from '../v15/TamEkranAyarV15';
+import ProfilOzetV15 from '../v15/ProfilOzetV15';
 import '../../styles/v15/kronometre.css';
 import { profilKurulumAc } from '../v15/ProfilKurulumV15';
 import '../../styles/v15/profil.css';
@@ -516,6 +517,7 @@ export const ProfileV12: React.FC<ProfileV12Props> = ({ currentUser, isAdmin, qu
                 : <button type="button" className="pf15-btn is-pri" onClick={onOpenAuth}><LogIn aria-hidden />Giriş yap</button>}
             </section>
 
+            {currentUser && <ProfilOzetV15 />}
             <h2 className="pf15-h">Ben</h2>
             <ul className="pf15-liste v15-card">
               {satir('genel', BarChart3, 'Genel bakış', 'Sayıların, son etkinlik, devam eden dersler', () => setView('genel'), '#0A84FF')}

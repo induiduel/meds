@@ -1,5 +1,6 @@
 import React, { useMemo, useState } from 'react';
 import { MODUL_AD, sureYaz, useTakip, type TakipModul } from '../../services/calismaTakip';
+import { getActivity } from '../../services/activityLog';
 import '../../styles/v15/grafik.css';
 
 /**
@@ -44,7 +45,19 @@ export default function CalismaGrafikleriV15({ aralik }: { aralik: 7 | 30 }) {
     const konular = Object.values(takip.k);
     const biten = konular.filter((k) => k.durum === 'bitti' && k.bittiAt && k.bittiAt.slice(0, 10) >= ilk).length;
     const soru = konular.reduce((a, k) => a + (k.sonAt && k.sonAt.slice(0, 10) >= ilk ? k.soru || 0 : 0), 0);
-    return { gunler, modul, seri, toplam, aktif, biten, soru, enCok: Math.max(1, ...gunler.map((g) => g.sn)) };
+    // Doğru oranı (tasarım J01): etkinlik günlüğündeki çözülen (coz) / yanlış (yanlis) olaylarından gün gün
+    const ol: Record<string, [number, number]> = {};
+    for (const e of getActivity()) {
+      if (e.kind !== 'coz' && e.kind !== 'yanlis') continue;
+      const d = anahtar(new Date(e.at));
+      const x = ol[d] || (ol[d] = [0, 0]);
+      if (e.kind === 'coz') x[0] += 1; else x[1] += 1;
+    }
+    const oran = gunler.map((g) => { const x = ol[g.d]; const n = x ? x[0] + x[1] : 0; return n ? { d: g.d, t: g.t, p: Math.round((x![0] / n) * 100), n } : null; });
+    // Çalışma takvimi (son 15 hafta, Pazartesi başlı sütunlar)
+    const pzt = new Date(simdi); pzt.setHours(12, 0, 0, 0); pzt.setDate(pzt.getDate() - ((pzt.getDay() + 6) % 7) - 14 * 7);
+    const isi = Array.from({ length: 15 * 7 }, (_, i) => { const t = new Date(pzt.getTime() + i * GUN); return { d: anahtar(t), t, sn: t > simdi ? -1 : gunluk[anahtar(t)] || 0 }; });
+    return { gunler, modul, seri, toplam, aktif, biten, soru, enCok: Math.max(1, ...gunler.map((g) => g.sn)), oran, isi };
   }, [takip, aralik]);
 
   const modSira = (Object.entries(v.modul) as [TakipModul, number][]).filter(([, s]) => s >= 60).sort((a, b) => b[1] - a[1]);
@@ -102,6 +115,32 @@ export default function CalismaGrafikleriV15({ aralik }: { aralik: 7 | 30 }) {
             </div>
           </div>
         )}
+      </div>
+
+      {v.oran.some(Boolean) && (() => {
+        const W = 320, H = 120, P = 6;
+        const nk = v.oran.map((o, i) => (o ? { x: P + (i * (W - 2 * P)) / Math.max(1, v.oran.length - 1), y: P + ((100 - o.p) / 100) * (H - 2 * P), o } : null)).filter(Boolean) as { x: number; y: number; o: NonNullable<(typeof v.oran)[number]> }[];
+        const ort = Math.round(nk.reduce((a, k) => a + k.o.p * k.o.n, 0) / Math.max(1, nk.reduce((a, k) => a + k.o.n, 0)));
+        return (
+          <div className="v15-card gf15-kart">
+            <div className="gf15-kb"><b>Doğru oranı</b><span className="v15-cap">Son {aralik} gün · ort. %{ort}</span></div>
+            <svg className="gf15-cizgi-g" viewBox={`0 0 ${W} ${H}`} role="img" aria-label={`Doğru oranı ortalama yüzde ${ort}`} preserveAspectRatio="none">
+              {[25, 50, 75].map((y) => <line key={y} x1={P} x2={W - P} y1={P + ((100 - y) / 100) * (H - 2 * P)} y2={P + ((100 - y) / 100) * (H - 2 * P)} className="gf15-izgara" />)}
+              <line x1={P} x2={W - P} y1={P + ((100 - 60) / 100) * (H - 2 * P)} y2={P + ((100 - 60) / 100) * (H - 2 * P)} className="gf15-baraj" />
+              {nk.length > 1 && <polyline points={nk.map((k) => `${k.x},${k.y}`).join(' ')} className="gf15-cizgi-l" />}
+              {nk.map((k) => <circle key={k.o.d} cx={k.x} cy={k.y} r="3.5" className="gf15-nokta"><title>{`${k.o.t.toLocaleDateString('tr-TR', { day: 'numeric', month: 'short' })}: %${k.o.p} (${k.o.n} soru)`}</title></circle>)}
+            </svg>
+            <p className="v15-cap gf15-not">Kesik çizgi baraj (%60). Yalnız soru çözdüğün günler noktalı.</p>
+          </div>
+        );
+      })()}
+
+      <div className="v15-card gf15-kart">
+        <div className="gf15-kb"><b>Çalışma takvimi</b><span className="v15-cap">Son 15 hafta</span></div>
+        <div className="gf15-isi" role="img" aria-label="Son 15 haftanın günlük çalışma yoğunluğu">
+          {v.isi.map((g) => <i key={g.d} className={g.sn < 0 ? 'is-gelecek' : g.sn >= 3 * 3600 ? 'l3' : g.sn >= 3600 ? 'l2' : g.sn >= 300 ? 'l1' : ''} title={g.sn >= 0 ? `${g.t.toLocaleDateString('tr-TR', { day: 'numeric', month: 'short' })}: ${g.sn ? sureYaz(g.sn) : 'çalışma yok'}` : undefined} />)}
+        </div>
+        <div className="gf15-lej"><span><i /> yok</span><span><i className="l1" /> &lt;1 sa</span><span><i className="l2" /> 1–3 sa</span><span><i className="l3" /> 3 sa+</span></div>
       </div>
 
       {!bos && (

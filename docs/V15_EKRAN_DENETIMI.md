@@ -161,12 +161,12 @@ Not: YOK sayısının 6'sı tasarım belgesi ekranıdır (A09, K08, P01, W03, X0
 
 | Kod | Ad | Site karşılığı | Durum | Not |
 |---|---|---|---|---|
-| G01 | kaynaklar | hub_kaynaklar → v15/KaynaklarMerkezV15.tsx | KISMİ | Onay bekliyor; arama + önerilen var, satırlar merkezModel'den (Ders PDF'leri/Kurul takvimi/Sınav dağılımı/Asistan) DOĞRULANMADI |
-| G02 | saglik | health_ministry → SaglikView + saglik.css | KISMİ | CSS katmanı; Rehberler/Aşı/Bildirimi zorunlu/İstatistik seçicisi DOĞRULANMADI |
+| G01 | kaynaklar | hub_kaynaklar → v15/KaynaklarMerkezV15.tsx | VAR | KaynaklarMerkezV15 arama + önerilen + satırlar |
+| G02 | saglik | health_ministry → SaglikView + saglik.css | VAR | bölüm seçici (aşı, tarama, yenidoğan, Karabük…) + ders bağları |
 | G03 | asistan | ai_chat | DOĞRULANMADI | v15 dalı yok |
-| G04 | profil | settings → ProfileV12 (v15 dalı) + profil.css | KISMİ | Profil kartı + gruplu satırlar; 4'lü stat ve haftalık etkinlik grafiği DOĞRULANMADI |
-| G05 | basarim | basarimlar | KISMİ | Yalnız başlık üst barda |
-| G06 | ayarlar | ProfileV12 #hash bölümleri | KISMİ | Paneller v12'den |
+| G04 | profil | settings → ProfileV12 (v15 dalı) + profil.css | KURULDU | Seri/Soru/Biten konu/Rozet + haftalık etkinlik çubukları (ProfilOzetV15) |
+| G05 | basarim | basarimlar | VAR | BasarimView: hedefler, rozet seviyeleri, ATP, rozet ayrıntısı (M11) |
+| G06 | ayarlar | ProfileV12 #hash bölümleri | VAR | Profil bölümleri ayrı ekran; paneller v15 renkleriyle (v12 yapısı) |
 | G07 | cevrimdisi | cevrimdisi | DOĞRULANMADI | v15 dalı yok |
 | G08 | yonetim | /manage (v14 kabuğu) | KISMİ | Yönetim ayrı v14 konsolu; v15'e geçirilmesi planlanmamış |
 
@@ -206,7 +206,7 @@ Not: YOK sayısının 6'sı tasarım belgesi ekranıdır (A09, K08, P01, W03, X0
 
 | Kod | Ad | Site karşılığı | Durum | Not |
 |---|---|---|---|---|
-| J01 | grafikler | stats → StatsView + v15/CalismaGrafikleriV15.tsx | KISMİ | Özet + günlük çubuk + modül dağılımı var; doğru oranı çizgi grafiği (sınıf ort.), çalışma ısı takvimi yok |
+| J01 | grafikler | stats → StatsView + v15/CalismaGrafikleriV15.tsx | KURULDU | doğru oranı çizgisi (baraj %60) + çalışma takvimi; sınıf ortalaması verisi yok |
 | J02 | grafikDetay | — | YOK | Konu performansı + unutma eğrisi yok |
 | J03 | zihin | zihin_haritasi (bağlantısız) | BİLİNÇLİ YOK | Kullanıcı reddetti (2026-10-27) |
 | J04 | yolHaritasi | — | BİLİNÇLİ YOK | J03–J06 grubu reddedildi (plan) |
@@ -362,9 +362,9 @@ Not: YOK sayısının 6'sı tasarım belgesi ekranıdır (A09, K08, P01, W03, X0
 
 | Kod | Ad | Site karşılığı | Durum | Not |
 |---|---|---|---|---|
-| X01 | istatGun | StatsView (7/30 gün) | KISMİ | Gün ayrıntısı dokununca; ayrı gün ekranı yok |
-| X02 | istatHafta | StatsView 7 gün | KISMİ |  |
-| X03 | istatAy | StatsView 30 gün | KISMİ |  |
+| X01 | istatGun | StatsView (7/30 gün) | VAR | çubuğa dokununca gün ayrıntısı |
+| X02 | istatHafta | StatsView 7 gün | VAR | 7 gün kipi |
+| X03 | istatAy | StatsView 30 gün | KURULDU | 30 gün kipi + 15 haftalık çalışma takvimi |
 | X04 | istatSoru | StatsView | DOĞRULANMADI |  |
 | X05 | istatSoruTek | — | DOĞRULANMADI |  |
 | X06 | istatSoruDetay | — | DOĞRULANMADI |  |

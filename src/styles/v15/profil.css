@@ -25,3 +25,18 @@
 .pf15-panel { display: flex; flex-direction: column; gap: 12px; }
 :root[data-v15='on'][data-design] .pf15 .pf15-panel.u12-pf, :root[data-v15='on'][data-design] .pf15 .pf15-panel .u12-panel { --font-mono: var(--font-sans); font-variant-numeric: tabular-nums; }
 :root[data-v15='on'] .pf15-panel .u12-panel { border-radius: 16px; }
+
+/* G04 profil özeti: 4'lü stat + haftalık etkinlik */
+.pf15-oz { display: flex; flex-direction: column; gap: 10px; }
+.pf15-oz-stat { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; }
+.pf15-oz-stat > div { padding: 10px; display: flex; flex-direction: column; align-items: center; gap: 2px; text-align: center; }
+.pf15-oz-stat b { font-size: 1.25rem; font-variant-numeric: tabular-nums; color: var(--color-ink); }
+.pf15-oz-stat small { font-size: .72rem; color: var(--color-ink-3); }
+.pf15-oz-hafta { padding: 12px 14px; display: flex; flex-direction: column; gap: 8px; }
+.pf15-oz-bas { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; }
+.pf15-oz-bas small { font-size: .78rem; color: var(--color-ink-3); }
+.pf15-oz-cubuk { display: flex; align-items: flex-end; gap: 8px; height: 90px; }
+.pf15-oz-cubuk span { flex: 1; height: 100%; display: flex; flex-direction: column; justify-content: flex-end; align-items: center; gap: 4px; }
+.pf15-oz-cubuk i { width: 100%; max-width: 28px; border-radius: 6px 6px 2px 2px; background: var(--color-accent-soft); }
+.pf15-oz-cubuk span.is-on i { background: var(--color-accent); }
+.pf15-oz-cubuk small { font-size: .7rem; color: var(--color-ink-3); }
