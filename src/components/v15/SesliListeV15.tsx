@@ -1,6 +1,7 @@
 import React, { useDeferredValue, useMemo, useState } from 'react';
-import { Check, ChevronDown, ChevronRight, Headphones, Search, X } from 'lucide-react';
-import { linkClick, navigateTo } from '../../router';
+import { Archive, Check, ChevronDown, ChevronRight, Headphones, Search, X } from 'lucide-react';
+import { linkClick, navigateTo, pathFor } from '../../router';
+import { icKonum } from '../../siteHaritasi';
 import { KURUL_NOLAR, kurulKaydet, useSeciliKurul } from '../kurul/KurulSecici';
 import { useV15Baslik } from './baslik';
 import { bransYolu, dersAdi, dersSirala, dersYolu, hocaYaz, kurulBranslari, sureDk, useDersListesi, useIlerleme } from './dersVeri';
@@ -11,7 +12,8 @@ import '../../styles/v15/ogren.css';
 /**
  * v15 · Sesli ders listesi (tasarım sistemi v15 › B04). Adres /dersler/canliders[/kurulN] (branşsız). Arama, durum
  * çipleri (Tümü · Yarım kalan · Bitti), branş bölümleri (ilerleme + "Tümü" → branş sayfası), satır → ders ayrıntısı.
- * Liste kendi alanında kayar; sayfa sabit.
+ * Liste kendi alanında kayar; sayfa sabit. "2025-26 arşivi" çipi (?donem=2025-2026) geçen yılın kayıtlarını listeler;
+ * arşiv dersleri ders ayrıntısında değil doğrudan oynatıcıda açılır (ayrıntı sayfası yalnız güncel dönemi bilir).
  */
 type Durum = 'tum' | 'yarim' | 'bitti';
 const DURUM: [Durum, string][] = [['tum', 'Tümü'], ['yarim', 'Yarım kalan'], ['bitti', 'Bitti']];
@@ -19,7 +21,16 @@ const fold = (s: string) => s.toLocaleLowerCase('tr-TR').normalize('NFD').replac
 
 export default function SesliListeV15() {
   const kurul = useSeciliKurul();
-  const { dersler, hata } = useDersListesi();
+  const [arsiv, setArsiv0] = useState(() => new URLSearchParams(icKonum().search).get('donem') === '2025-2026');
+  const setArsiv = (a: boolean) => {
+    setArsiv0(a);
+    const sp = new URLSearchParams(location.search);
+    if (a) sp.set('donem', '2025-2026'); else sp.delete('donem');
+    const qs = sp.toString();
+    try { history.replaceState(history.state, '', location.pathname + (qs ? `?${qs}` : '') + location.hash); } catch { /* yok */ }
+  };
+  const { dersler, hata } = useDersListesi(arsiv ? '2025-2026' : '2026-2027');
+  const satirYolu = (key: string) => (arsiv ? pathFor('canli_ders', key) : dersYolu(key));
   const ilerleme = useIlerleme();
   const [ara, setAra] = useState('');
   const [araAcik, setAraAcik] = useState(false);
@@ -44,7 +55,7 @@ export default function SesliListeV15() {
         .filter((g) => g.liste.length),
     [branslar, durum, q, ilerleme],
   );
-  useV15Baslik({ baslik: 'Sesli dersler', alt: dersler ? `Kurul ${kurul} · ${toplam} ders` : `Kurul ${kurul}` });
+  useV15Baslik({ baslik: arsiv ? 'Sesli dersler · Arşiv' : 'Sesli dersler', alt: `${arsiv ? '2025-2026 · ' : ''}Kurul ${kurul}${dersler ? ` · ${toplam} ders` : ''}` });
 
   return (
     <div className="b15 sl15">
@@ -60,11 +71,13 @@ export default function SesliListeV15() {
           <div className="o15-cipler v15-hscroll" role="toolbar" aria-label="Süzgeç">
             <label className="d15-kurul">
               <span className="sr-only">Kurul seç</span>
-              <select value={kurul} onChange={(e) => { const k = Number(e.target.value); kurulKaydet(k); navigateTo(`/dersler/canliders/kurul${k}`); }}>
+              <select value={kurul} onChange={(e) => { const k = Number(e.target.value); kurulKaydet(k); navigateTo(`/dersler/canliders/kurul${k}${arsiv ? '?donem=2025-2026' : ''}`); }}>
                 {KURUL_NOLAR.map((k) => <option key={k} value={k}>Kurul {k}</option>)}
               </select>
               <ChevronDown aria-hidden />
             </label>
+            <button type="button" className={`o15-cip sl15-arsiv${arsiv ? ' is-on' : ''}`} aria-pressed={arsiv} onClick={() => setArsiv(!arsiv)}
+              title="Geçen yılın (2025-2026) sesli dersleri"><Archive aria-hidden />2025-26 arşivi</button>
             {DURUM.map(([id, t]) => (
               <button key={id} type="button" className={`o15-cip${durum === id ? ' is-on' : ''}`} aria-pressed={durum === id} onClick={() => setDurum(id)}>{t}</button>
             ))}
@@ -73,13 +86,17 @@ export default function SesliListeV15() {
         {!araAcik && <button type="button" className="v15-ib" onClick={() => setAraAcik(true)} aria-label="Ara"><Search aria-hidden /></button>}
       </div>
 
+      {arsiv && (
+        <p className="sl15-not v15-card"><Archive aria-hidden /><span><b>Geçen yılın arşivi.</b> 2025-2026 kayıtları; bu yılın programı ve hocası farklı olabilir.</span>
+          <button type="button" onClick={() => setArsiv(false)}>Bu yıla dön</button></p>
+      )}
       <div className="sl15-alan">
         {dersler === null ? (
           <span className="v15-skel b15-skel" aria-hidden />
         ) : gruplar.length ? (
           gruplar.map((g) => (
             <section key={g.ad} className="sl15-grup" aria-label={g.kisa}>
-              <a className="sl15-bas" href={bransYolu(kurul, g.ad)} onClick={linkClick(() => navigateTo(bransYolu(kurul, g.ad)))}>
+              <a className="sl15-bas" href={bransYolu(kurul, g.ad)} onClick={linkClick(() => navigateTo(bransYolu(kurul, g.ad)))} {...(arsiv ? { onClick: (e: React.MouseEvent) => e.preventDefault(), 'aria-disabled': true, tabIndex: -1 } : {})}>
                 <b>{g.kisa}</b>
                 <span className="v15-cap">{g.biten}/{g.dersler.length} bitti</span>
                 <span className="v15-bar sl15-bar" aria-hidden><span style={{ width: `${g.dersler.length ? (g.biten / g.dersler.length) * 100 : 0}%` }} /></span>
@@ -90,7 +107,7 @@ export default function SesliListeV15() {
                   const i = ilerleme(d);
                   return (
                     <li key={d.key}>
-                      <a className="b15-row" href={dersYolu(d.key)} onClick={linkClick(() => navigateTo(dersYolu(d.key)))}>
+                      <a className="b15-row" href={satirYolu(d.key)} onClick={linkClick(() => navigateTo(satirYolu(d.key)))}>
                         <span className={`v15-tile ${i.bitti ? 'is-ok' : i.t != null ? '' : 'is-n'}`}>{i.bitti ? <Check aria-hidden /> : <Headphones aria-hidden />}</span>
                         <span className="b15-row-t">
                           <b>{dersAdi(d)}</b>
@@ -105,7 +122,7 @@ export default function SesliListeV15() {
             </section>
           ))
         ) : (
-          <p className="b15-bos v15-card">{hata ? `Ders listesi alınamadı: ${hata}` : q || durum !== 'tum' ? 'Bu süzgeçte ders yok.' : `Kurul ${kurul} için sesli ders henüz yok.`}</p>
+          <p className="b15-bos v15-card">{hata ? `Ders listesi alınamadı: ${hata}` : q || durum !== 'tum' ? 'Bu süzgeçte ders yok.' : arsiv ? `2025-2026 arşivinde Kurul ${kurul} dersi yok.` : `Kurul ${kurul} için sesli ders henüz yok.`}</p>
         )}
       </div>
     </div>

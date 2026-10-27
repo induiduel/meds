@@ -12,18 +12,19 @@ import { kurulKimlikten } from '../kurul/KurulSuzgec';
 export type DersListeDurum = { dersler: CdListeDers[] | null; hata: string | null };
 
 /** Son Prova partları ve blok özetleri ders değildir; V2/V3 ayrı ders sayılmaz */
-export function useDersListesi(): DersListeDurum {
+export function useDersListesi(donem: '2026-2027' | '2025-2026' = '2026-2027'): DersListeDurum {
   const [d, setD] = useState<DersListeDurum>({ dersler: null, hata: null });
   useEffect(() => {
     let canli = true;
-    cdListeGetir().then(
+    setD({ dersler: null, hata: null });
+    cdListeGetir(false, donem).then(
       (ds) => canli && setD({ dersler: cdTekSurum(ds.filter((x) => !/-son-prova-|-blok-ozet-/.test(x.key))), hata: null }),
       (e) => canli && setD({ dersler: [], hata: e?.message || 'Ders listesi alınamadı.' }),
     );
     return () => {
       canli = false;
     };
-  }, []);
+  }, [donem]);
   return d;
 }
 

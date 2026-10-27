@@ -52,7 +52,7 @@ export default function CanliDersView({ dersKey }: { dersKey?: string }) {
   // v15: branş adresi (/dersler/canliders/kurulN/<branş>) branş ders listesini açar (components/v15/BransV15)
   if (!dersKey && v15 && new URLSearchParams(icKonum().search).get('brans')) return <React.Suspense fallback={null}><BransV15 /></React.Suspense>;
   // v15: branşsız liste (arşiv dönemi ve #listem gibi özel görünümler eski listede kalır)
-  if (!dersKey && v15 && !new URLSearchParams(icKonum().search).get('donem') && !window.location.hash) return <React.Suspense fallback={null}><SesliListeV15 /></React.Suspense>;
+  if (!dersKey && v15 && !window.location.hash) return <React.Suspense fallback={null}><SesliListeV15 /></React.Suspense>;
   return dersKey ? <CanliDersDers key={dersKey} dersKey={dersKey} /> : <CanliDersListe />;
 }
 

@@ -234,3 +234,13 @@ a.k15-kart:hover { border-color: var(--color-accent); }
 .sl15-bas b { font: var(--v15-t-heading); }
 .sl15-bar { flex: 1; max-width: 200px; margin-left: auto; }
 .sl15 .b15-list { flex: none; overflow: visible; }
+/* Sesli liste · 2025-26 arşivi çipi ve uyarı satırı */
+.sl15-arsiv { display: inline-flex; align-items: center; gap: 6px; }
+.sl15-arsiv svg { width: 15px; height: 15px; }
+.sl15 .sl15-not { display: flex; align-items: center; gap: 10px; margin: 0; padding: 10px 14px; font-size: .85rem; color: var(--color-ink-2); background: var(--color-warn-soft); border-color: transparent; }
+.sl15-not > svg { flex: none; width: 18px; height: 18px; color: var(--color-warn); }
+.sl15-not > span { flex: 1; min-width: 0; }
+.sl15-not b { color: var(--color-ink); }
+.sl15-not button { flex: none; border: 0; background: none; color: var(--color-accent); font: inherit; font-weight: 600; cursor: pointer; padding: 6px 2px; }
+.sl15 .sl15-bas[aria-disabled] { pointer-events: none; }
+.sl15 .sl15-bas[aria-disabled] .v15-chev { display: none; }
