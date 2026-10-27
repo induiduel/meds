@@ -55,10 +55,13 @@ zenginleştirmedir: yalnız cümle gerçekten o görseli/ilişkiyi anlatıyorsa 
   - gerçek neden → sonuç: `neden_sonuc` / `mekanizma_adimlari` (zincir) · birçok neden → tek sonuç: `cok_neden_tek_sonuc`
   - karar: `karar` (dal) · sıralı yapılacaklar: `algoritma` (numaralı) · alt türler: `siniflama` (madde imli;
     aynı grubun SIRALI öğeleriyse `"numarali": true`) · iki durumu ayırma: `karsilastirma` · gizleyen neden: `maskeleyen`
+  - tek sayı (eşik, kesim noktası, doz, oran, süre) anlatılıyorsa: `deger_karti` (değer kartı). Cümlede sayının
+    kendisi geçmeli; birden çok sayı karşılaştırılıyorsa tablo kullan. `cikmis` (kaç kez soruldu) YALNIZ doğrulanmış
+    çıkmış eşlemesi varsa yazılır (kural 21), tahminle yazılmaz.
   Alanlar düzene göre: tablo `satirlar` [[hücre, hücre]] · zincir/adimlar `ogeler` · liste `baslik`+`ogeler` ·
   grup `kaynaklar`+`sonuc` · dal `soru`+`dallar` [[koşul, sonuç]] · maske `gorunen`+`altta` · karşıt `kutuplar`+`satirlar`
-  [[özellik, A, B]]. Hücre ≤60 karakter, yalnız cümlede/önceki cümlelerde geçen bilgi.
-  **Uygun şablon yoksa** komuta `"yeni_sablon": {"id": "kisa_ad", "ad": "...", "duzen": "tablo|zincir|grup|dal|karsit|maske|liste|adimlar",
+  [[özellik, A, B]] · değer `deger` (sayı içerir, ≤12 karakter) + `aciklama` + isteğe bağlı `birim`, `cikmis` (tam sayı). Hücre ≤60 karakter, yalnız cümlede/önceki cümlelerde geçen bilgi.
+  **Uygun şablon yoksa** komuta `"yeni_sablon": {"id": "kisa_ad", "ad": "...", "duzen": "tablo|zincir|grup|dal|karsit|maske|liste|adimlar|deger",
   "basliklar": [...], "ne_zaman": "hangi tıbbi ilişki", "ornek": "..."}` ekle ve aynı kimliği `sablon`'a yaz; betik kütüphaneye
   ekler, sonraki derslerde de kullanılır. Bağımsız bir denetçi her paneli cümleyle karşılaştırıp tıbben yanlış ya da yanlış
   anlaşılır olanı düzeltir ya da siler.

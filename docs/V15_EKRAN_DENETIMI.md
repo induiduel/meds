@@ -57,10 +57,10 @@ Not: YOK sayısının 6'sı tasarım belgesi ekranıdır (A09, K08, P01, W03, X0
 | B09 | onem | en_onemliler → OnemListesi + onem.css | VAR | Arama, Sesli asistan, her maddede puan + PDF alıntı (tasarımdakinden zengin; tablo yerine kart satır) |
 | B10 | sozluk | glossary → GlossaryV12 + sozluk.css | KURULDU | bilgi kartında Derste dinle (ders adı eşleşmesi + ?ara=) + n soru çipi |
 | B11 | notlar | notlarim → v15/NotlarimV15.tsx | KURULDU | Yıldızlı/Ses damgalı + damga |
-| B12 | bitirdiklerim | bitirdiklerim → BitirdiklerimView + bitir.css | SIRADA | BitirdiklerimView başka oturumda düzenleniyor; çakışmamak için ertelendi |
+| B12 | bitirdiklerim | bitirdiklerim → BitirdiklerimView + bitir.css | VAR | üst istatistik şeridi (Ders/Soru/Doğru oranı/Süre) + "baraj %60" alt başlığı |
 | B13 | b2ozet | summaries → v15/OzetlerV15.tsx | VAR |  |
 | B14 | b2ozetOku | summaries okuyucu (LectureSummariesView) | VAR | SummaryReader: içindekiler, ilerleme çizgisi, Aa, ara |
-| B15 | b2hastalik | diseases → DiseasesV12 + sozluk.css | SIRADA | "Anatomiden gez" için hastalık kayıtlarında organ sistemi alanı yok (veri gerekir) |
+| B15 | b2hastalik | diseases → DiseasesV12 + sozluk.css | VAR | Liste/Anatomi seçici, DiseaseAnatomy: sistem noktaları (category + ad kökünden), bulgu süzgeci; 199/474 "Diğer" |
 | B16 | b2hastalikDetay | DiseasesV12 ayrıntı | VAR | tanım listesi (Klinik/Tanı/Tedavi…), çıkmış sayısı, dersler; sekme yerine bölüm |
 | B17 | b2kazanim | kazanimlar (PageToolbar) | KURULDU | kapsam halkası + Tam kapsam/Çıkmışta/Kapsamsız |
 | B18 | b2ornek | ornek_sorular | DOĞRULANMADI | v15 dalı/stili bulunamadı |
@@ -101,7 +101,7 @@ Not: YOK sayısının 6'sı tasarım belgesi ekranıdır (A09, K08, P01, W03, X0
 | S26 | sdX (ders seçenekleri) | CdV15Menu (gruplar CanliDersDers'ten) | KURULDU | menü gruplu kutucuklar |
 | S27 | sdY (kalem araç kutusu) | CdV15KalemDugme/KalemKutusu | VAR |  |
 | S28 | sdOy (oynatıcı seçenekleri) | eski açılır menü (Hız, Kaç kez) | KURULDU | oynatıcı ⋯ sheet v15 |
-| S29 | sdZ (çizim panelleri) | canlı çizim katmanı | SIRADA | "değer kartı" çizim paneli içerik hattına (cizim_uret) bağlı; arayüz değil |
+| S29 | sdZ (çizim panelleri) | canlı çizim katmanı | VAR | değer kartı (`deger_karti`) CizimLayer + şablon + kapı K13; 8 türün tamamı destekli |
 | S30 | sdZ2 (PDF üstü işaretler) | canlı çizim (kontur, ok, lazer) | VAR | DOĞRULANMADI: tüm işaret türleri tek tek sınanmadı |
 
 ## C · Soru çöz
@@ -127,7 +127,7 @@ Not: YOK sayısının 6'sı tasarım belgesi ekranıdır (A09, K08, P01, W03, X0
 | D02 | kampAsama | kamp → KampView + kamp.css | VAR | sesli ders kamp kipinde aşama çubuğu (KampAsamaCubugu); kamp skoru kartı yok |
 | D03 | checkup | patoloji_checkup → PatolojiCheckUp + kamp.css | VAR | Check Up tabloları boşluk doldurma + seçenek çipleri |
 | D04 | sonProva | son_prova → SonProvaView + kamp.css | VAR | Son Prova: sesli özet partları, aşama soruları, deneme kartları |
-| D05 | plan60 | sinav_plani → SinavPlaniView + kamp.css | SIRADA | SinavPlaniView başka oturumda değişti; çakışmamak için ertelendi |
+| D05 | plan60 | sinav_plani → SinavPlaniView + kamp.css | VAR | tahmini puan + baraj rozeti + sınav dağılımı kartı (sinav_dagilimi) |
 | D06 | takvim | sinav_takvimi → v15/SinavTakvimiV15.tsx | KURULDU | pratik hatırlatma anahtarı (Bildirimler T‑5/3/1) + Sınavlarım (+ ile kişisel sınav, çizelgede "Senin") |
 | D07 | olasi | olasi_sorular | VAR | olası soru kartı: güven rozeti, çöz, benzer çıkmış, geri bildirim |
 
@@ -230,9 +230,9 @@ Not: YOK sayısının 6'sı tasarım belgesi ekranıdır (A09, K08, P01, W03, X0
 
 | Kod | Ad | Site karşılığı | Durum | Not |
 |---|---|---|---|---|
-| L01 | sohbetListe | topluluk → v15/ToplulukV15.tsx | SIRADA | kişi/grup sohbetleri sunucu tarafı mesajlaşma gerektirir |
+| L01 | sohbetListe | topluluk → v15/ToplulukV15.tsx | VAR | sohbet listesi + oda + davet kodu (toplulukSohbet.ts, topluluk_sohbet.sql) |
 | L02 | sohbet | ToplulukV15 kanal | VAR |  |
-| L03 | yorumlar | ToplulukV15 ders yorumları | SIRADA | soru yorumlarında beğeni ve sıralama sunucu alanı gerektirir |
+| L03 | yorumlar | ToplulukV15 ders yorumları | VAR | yorumlar: En faydalı/En yeni, beğeni toggle (yorum_begeni), yanıt |
 | L04 | soruListe | quick_add/PoolView | DOĞRULANMADI | Süzgeç çipli soru listesi v15'te bulunamadı |
 | L05 | kurulListe | "Kurul seç" | KURULDU | KurulSecV15 tema adları + durum |
 | L06 | seneSec | SesliListeV15 "2025-26 arşivi" | KURULDU | dönem seçici 2026–27 / 2025–26 |
@@ -247,7 +247,7 @@ Not: YOK sayısının 6'sı tasarım belgesi ekranıdır (A09, K08, P01, W03, X0
 | M04 | glukoz | HucremV15 glukoz | VAR |  |
 | M05 | hucreStres | HucremV15 "Hücren aç kalıyor" | VAR | canlılık çubuğu + "Hücren aç kalıyor/uykuda" durumu |
 | M06 | seviyeAtla | — | DOĞRULANMADI |  |
-| M07 | siralama | leaderboard + Hucrem "Hücre sırası" | SIRADA | genel sıralama (leaderboard) v15 dalı yok; Hücrem sıralaması var |
+| M07 | siralama | leaderboard + Hucrem "Hücre sırası" | VAR | SiralamaV15: Sınıfım/Üniversite/Türkiye/Arkadaşlar; üniversite süzgeci sunucuda; arkadaş sistemi yok (boş durum) |
 | M08 | profil2 | ProfileV12 v15 | KURULDU | profil kartında okul/sınıf/kurul |
 | M09 | profilDuzenle | — | DOĞRULANMADI |  |
 | M10 | basarim2 | basarimlar | VAR | BasarimView + rozet ayrıntısı |

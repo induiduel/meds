@@ -345,6 +345,13 @@ ol.pdv-sb-liste { list-style-type: decimal; } ul.pdv-sb-liste { list-style-type:
 .pdv-sb-maske-satir.is-alt .pdv-sb-maske-ogeler { filter: blur(.25em); opacity: .35; transition: filter .6s ease-out, opacity .6s ease-out; }
 .pdv-sb-maske-satir.is-alt.is-acik .pdv-sb-maske-ogeler { filter: none; opacity: 1; }
 @media (prefers-reduced-motion: reduce) { .pdv-sb-maske-satir.is-alt .pdv-sb-maske-ogeler { transition: none; } }
+/* değer kartı (duzen 'deger', v15 sdZ P7): eşik/doz/oran gibi tek sayı */
+.pdv-sb-deger { display: grid; gap: .3em; justify-items: start; }
+.pdv-sb-deger-sayi { font-size: 2em; font-weight: 800; line-height: 1; color: #1d4ed8; font-variant-numeric: tabular-nums; animation: pdv-cz-gel .35s ease-out both; }
+.pdv-sb-deger-sayi small { font-size: .45em; font-weight: 700; margin-left: .2em; color: #475569; }
+.pdv-sb-deger-aciklama { font-weight: 600; color: #0f172a; animation: pdv-cz-gel .35s ease-out both; }
+.pdv-sb-deger-cikmis { display: inline-block; padding: .1em .5em; border-radius: 999px; background: #fef3c7; border: 1px solid #fcd34d; color: #92400e; font-size: .78em; font-weight: 800; animation: pdv-cz-gel .35s ease-out both; }
+@media (prefers-reduced-motion: reduce) { .pdv-sb-deger-sayi, .pdv-sb-deger-aciklama, .pdv-sb-deger-cikmis { animation: none; } }
 .pdv-cz path.pdv-cz-etiket-bag { stroke: #0f172a; stroke-width: 1.4; stroke-dasharray: 4 3; opacity: .75; fill: none; animation: pdv-cz-gel .3s ease-out both; }
 /* Yakınlaşma: resim üstündeki çizimde sayfa içeriği çizim bölgesine büyür, çizim biter, geri döner (CizimLayer.yakinUygula).
    Sayfa kutusu ve kaydırma sabit; yalnız tuval/metin/işaret/not katmanları dönüşür. */

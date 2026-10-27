@@ -15,3 +15,29 @@
 .g15-cip a { display: inline-flex; align-items: center; gap: 6px; min-height: 32px; padding: 0 12px; border-radius: 999px; border: 1px solid var(--color-line); background: var(--color-white); color: var(--color-ink); font-size: .85rem; font-weight: 600; text-decoration: none; }
 .g15-cip a:first-child { background: var(--color-accent-soft); border-color: transparent; color: var(--color-accent); }
 .g15-cip svg { width: 15px; height: 15px; }
+/* Anatomiden gez (DiseaseAnatomy) */
+.an15-mode button { min-height: 32px; padding: 0 12px; border: 0; background: none; color: inherit; font: inherit; cursor: pointer; border-radius: inherit; }
+.an15-sub { margin: 0 0 12px; }
+.an15 { display: grid; grid-template-columns: minmax(220px, 300px) minmax(0, 1fr); gap: 16px; align-items: start; min-width: 0; }
+.an15-g { display: flex; flex-direction: column; align-items: center; gap: 12px; padding: 16px; }
+.an15-fig { position: relative; width: 100%; max-width: 220px; aspect-ratio: 120 / 260; }
+.an15-body { position: absolute; inset: 0; width: 100%; height: 100%; }
+.an15-dot { position: absolute; width: 18px; height: 18px; margin: -9px 0 0 -9px; border-radius: 50%; border: 2px solid var(--color-surface, #fff); background: var(--color-ink-3); cursor: pointer; padding: 0; box-shadow: 0 0 0 1px var(--color-line); }
+.an15-dot.is-on { background: var(--color-accent); box-shadow: 0 0 0 5px var(--color-accent-soft, transparent); }
+.an15-dot:disabled { opacity: .35; cursor: default; }
+.an15-dot:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; }
+.an15-diger.is-on { background: var(--color-accent-soft); color: var(--color-accent); }
+.an15-y { display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+.an15-sys { display: flex; align-items: center; gap: 12px; padding: 14px 16px; }
+.an15-sys-t { display: flex; flex-direction: column; flex: 1; min-width: 0; gap: 2px; }
+.an15-sys > svg { width: 18px; height: 18px; color: var(--color-ink-3); }
+.an15-lbl { margin: 6px 0 0; }
+.an15-cips { flex-wrap: wrap; }
+.an15-add { border-style: dashed; }
+.an15-pick { display: flex; flex-direction: column; gap: 10px; padding: 12px; }
+.an15-list { padding: 4px; min-width: 0; }
+.an15-list ul { list-style: none; margin: 0; padding: 0; }
+.an15-list .g12-row { width: 100%; }
+.an15-empty { padding: 12px; margin: 0; }
+@media (max-width: 720px) { .an15 { grid-template-columns: minmax(0, 1fr); } .an15-fig { max-width: 160px; } }
+.an15-mode button { height: 28px; min-height: 0; border-radius: 7px; color: var(--color-ink-2); font-size: 13px; font-weight: 500; } .an15-mode button.is-on { background: var(--color-white); color: var(--color-ink); box-shadow: inset 0 0 0 1px var(--color-line); }

@@ -25,6 +25,7 @@ import { Sheet } from '../ui/Sheet';
 import { linkedQuestionCount, WHERE_ROWS, type useDiseaseInsights } from '../diseases/DiseaseInsights';
 import { lessonFlagText, type LessonSel } from '../diseases/diseaseLessons';
 import { linkClick, navigateTo, pathFor } from '../../router';
+import { DiseaseAnatomy } from '../diseases/DiseaseAnatomy';
 import '../../styles/v12/glossary.css';
 import '../../styles/v15/sozluk.css';
 
@@ -169,6 +170,7 @@ export const DiseasesV12: React.FC<DiseasesV12Props> = (p) => {
     return () => window.removeEventListener('keydown', onKey);
   }, []);
   const [filtersOpen, setFiltersOpen] = useState(false);
+  const [mode, setMode] = useState<'liste' | 'anatomi'>('liste');
 
   /* ---------- A–Z: harf grupları ve harfe gitme ---------- */
   const letterSet = useMemo(() => new Set(p.alphabetical ? filtered.map((d) => letterOf(d.name)) : []), [filtered, p.alphabetical]);
@@ -219,6 +221,10 @@ export const DiseasesV12: React.FC<DiseasesV12Props> = (p) => {
       </nav>
       <span className="g12-m g12-num" aria-live="polite">{count}</span>
       <span className="g12-grow" />
+      <div className="g12-seg an15-mode" role="group" aria-label="Görünüm">
+        <button type="button" className={mode === 'liste' ? 'is-on' : ''} aria-pressed={mode === 'liste'} onClick={() => setMode('liste')}>Liste</button>
+        <button type="button" className={mode === 'anatomi' ? 'is-on' : ''} aria-pressed={mode === 'anatomi'} onClick={() => setMode('anatomi')}>Anatomi</button>
+      </div>
       <button type="button" className="g12-btn is-sm" onClick={p.onAdd}>
         <Plus aria-hidden /> <span>Profil ekle</span>
       </button>
@@ -326,6 +332,12 @@ export const DiseasesV12: React.FC<DiseasesV12Props> = (p) => {
   return (
     <div className={`g12 ${split ? 'is-wide' : ''}`}>
       {!detailOnly && header}
+      {mode === 'anatomi' && !detailOnly && p.dataReady ? (
+        <>
+          <p className="g12-m an15-sub">Anatomiden gez · {filtered.length.toLocaleString('tr-TR')} profil</p>
+          <DiseaseAnatomy diseases={filtered} onOpen={(d) => { setMode('liste'); p.onOpen(d); }} />
+        </>
+      ) : (
       <div className="g12-split">
         {!detailOnly && list}
         {(split || sel) && (sel ? (
@@ -338,6 +350,7 @@ export const DiseasesV12: React.FC<DiseasesV12Props> = (p) => {
           </section>
         ))}
       </div>
+      )}
       <Sheet open={filtersOpen} onClose={() => setFiltersOpen(false)} title="Hastalık süzgeci" width={460}
         footer={<button type="button" className="ui-btn is-primary" style={{ width: '100%' }} onClick={() => setFiltersOpen(false)}>Uygula</button>}>
         <div className="pt-sheet">{p.filters}</div>

@@ -7,3 +7,19 @@
 :root[data-v15='on'] :is(.tk-ust, .sp-ust) { display: none; }
 :root[data-v15='on'] :is(.tk-btn, .sp-btn, .cu-btn) { border-radius: 999px; }
 :root[data-v15='on'] :is(.tk-kart, .sp-kart, .sp-part, .cu-tablo, .cu-bolum) { border-radius: var(--v15-r-lg, 16px); box-shadow: none; background: var(--color-surface); }
+
+/* D05 · 60 planı üst bölümü */
+.sp15-ust { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 12px; margin-bottom: 14px; }
+.sp15-puan, .sp15-dag { padding: 16px; display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+.sp15-puan-bas { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; }
+.sp15-puan-bas b { display: block; font-size: 40px; line-height: 1.1; font-weight: 700; color: var(--color-ink); font-variant-numeric: tabular-nums; margin-top: 4px; }
+.sp15-rozet { display: flex; flex-direction: column; align-items: flex-end; gap: 4px; }
+.sp15-rozet small, .sp15-sonra { font-size: 12px; color: var(--color-ink-3); }
+.sp15-dag-s > div { display: flex; justify-content: space-between; font-size: 13px; color: var(--color-ink); margin-bottom: 5px; }
+.sp15-dag-s small { color: var(--color-ink-3); }
+@media (max-width: 700px) { .sp15-ust { grid-template-columns: minmax(0, 1fr); } }
+:root:not([data-v15="on"]) .sp15-ust { display: none; }
+:root[data-v15="on"] .sp15-puan .v15-bar { display: block; }
+:root[data-v15="on"] .sp15-puan .v15-bar.is-ok > span { background: var(--color-ok); }
+:root[data-v15="on"] .sp15-puan .v15-bar.is-w > span { background: var(--color-warn); }
+:root[data-v15="on"] .sp15-dag .v15-bar { display: block; }

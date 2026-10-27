@@ -157,6 +157,7 @@ const NotlarimV15 = React.lazy(() => wrapLazy(import('./components/v15/NotlarimV
 const OyunlarV15 = React.lazy(() => wrapLazy(import('./components/v15/OyunlarV15')));
 const DersProgramiV15 = React.lazy(() => wrapLazy(import('./components/v15/DersProgramiV15')));
 const SinavTakvimiV15 = React.lazy(() => wrapLazy(import('./components/v15/SinavTakvimiV15')));
+const SiralamaV15 = React.lazy(() => wrapLazy(import('./components/v15/SiralamaV15')));
 const DersDetayV15 = React.lazy(() => wrapLazy(import('./components/v15/DersDetayV15')));
 const NeYapmak = React.lazy(() => wrapLazy(import('./components/merkez/MerkezView').then((m) => ({ default: m.NeYapmak }))));
 const GuncellemeGunluguView = React.lazy(() => wrapLazy(import('./components/guncellemeler/GuncellemeGunluguView')));
@@ -2294,7 +2295,8 @@ export default function App() {
         )}
         {activeTab === 'leaderboard' && (
           <Suspense fallback={<ViewFallback />}>
-            <LeaderboardView
+            <V15Icinde><SiralamaV15 /></V15Icinde>
+            <V15Disinda><LeaderboardView
               questions={questions}
               committees={committees}
               selectedCommitteeId={selectedCommitteeId}
@@ -2304,7 +2306,7 @@ export default function App() {
                 setContributeDefaultNumber(undefined);
                 setIsContributeModalOpen(true);
               }}
-            />
+            /></V15Disinda>
           </Suspense>
         )}
 

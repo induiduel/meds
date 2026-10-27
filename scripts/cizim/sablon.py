@@ -14,6 +14,8 @@ Komut biçimi (tur "sema" + "sablon"):
   grup    : "kaynaklar": ["A", "B"], "sonuc": "C"
   dal     : "soru": "koşul?", "dallar": [["evet", "sonuç"], ["hayır", "sonuç"]]
   maske   : "gorunen": "A", "altta": ["B", "C"]
+  deger   : "deger": "3", "birim": "g/dL", "aciklama": "eksüda/transüda protein eşiği", "cikmis": 2 (isteğe bağlı;
+            yalnız doğrulanmış çıkmış eşlemesi sayısı — kural 21)
 """
 from __future__ import annotations
 
@@ -35,7 +37,7 @@ def _metin(x) -> str:
 
 def hucreler(k: dict) -> list[str]:
     """Panelin öğrenciye görünen bütün metin parçaları (ileri sızıntı ve anlam denetimi için)."""
-    out = [k.get("baslik"), k.get("sonuc"), k.get("soru"), k.get("gorunen")]
+    out = [k.get("baslik"), k.get("sonuc"), k.get("soru"), k.get("gorunen"), k.get("deger"), k.get("birim"), k.get("aciklama")]
     for x in (k.get("ogeler") or []) + (k.get("kaynaklar") or []) + (k.get("altta") or []) + (k.get("kutuplar") or []):
         out.append(x)
     for r in (k.get("satirlar") or []) + (k.get("dallar") or []):
@@ -82,6 +84,12 @@ def coz(k: dict, kut: dict | None = None) -> tuple[dict, str | None]:
     elif d == "maske":
         if not _metin(k.get("gorunen")) or not 1 <= len(k.get("altta") or []) <= 4:
             return k, "maske: görünen + 1–4 altta"
+    elif d == "deger":
+        dg, cm = _metin(k.get("deger")), k.get("cikmis")
+        if not dg or len(dg) > 12 or not re.search(r"\d", dg) or not _metin(k.get("aciklama")) or len(_metin(k.get("birim"))) > 12:
+            return k, "değer: sayı içeren deger (≤12 karakter) + aciklama (+ birim ≤12)"
+        if cm is not None and (not isinstance(cm, int) or isinstance(cm, bool) or cm < 0):
+            return k, "değer: cikmis tam sayı (doğrulanmış eşleme sayısı)"
     else:
         return k, f"düzen '{d}' tanımsız"
     if any(len(c) > 60 for c in hucreler(k)):
@@ -125,6 +133,8 @@ def okunus(k: dict) -> str:
         return f"{k.get('soru')} " + " ; ".join(f"{x[0]} → {x[1]}" for x in k.get("dallar") or [])
     if d == "maske":
         return f"görünen: {k.get('gorunen')} ; altta aranacak: " + ", ".join(k.get("altta") or [])
+    if d == "deger":
+        return f"{k.get('aciklama')}: {k.get('deger')} {k.get('birim') or ''}".strip()
     return json.dumps({x: k.get(x) for x in ("dugum", "kenar")}, ensure_ascii=False)
 
 
@@ -163,4 +173,6 @@ def boyu(k: dict, g: float, oran: float, em: float, yon: str = "yatay", olcek: f
         toplam += satir(k.get("soru"), W) * 1.3 + 0.8 + sum(satir(x[1], W * 0.6) * 1.3 + 0.6 for x in dl)
     elif d == "maske":
         toplam += 2 * 1.85 + 1.3 + 0.7 + max(0, sum(gw(x) + 0.3 for x in k.get("altta") or []) - (W - 9)) / max(4.0, W - 9) * 1.85
+    elif d == "deger":
+        toplam += 2.4 + satir(k.get("aciklama"), W) * 1.3 + (1.4 if k.get("cikmis") else 0)
     return toplam * em * olcek * oran * 1.32

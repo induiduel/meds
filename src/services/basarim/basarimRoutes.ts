@@ -8,7 +8,8 @@
  *   POST /api/basarim/satin-al {id,odeme?}  ATP ile kilit açma (odeme:'glukoz' → hücre basamağı glukozla)
  *   POST /api/basarim/sec {tur,id}          unvan/çerçeve/efekt seçimi
  *   GET  /api/basarim/hucre-siralama?donem=3  hücre büyüklüğü sıralaması (basamak, glukoz, çalışma, soru)
- *   GET  /api/basarim/siralama?kapsam=hafta|kurul|tum&donem=3
+ *   GET  /api/basarim/siralama?kapsam=hafta|kurul|tum&donem=3[&yer=sinif|uni]
+ *   POST /api/basarim/universite  {universite}
  *   GET  /api/basarim/calisma?kapsam=gun|hafta&donem=3     çalışma süresi sıralaması + en çok çalışılan dersler
  *   PUT  /api/admin/basarim/tanim           kuralları güncelle (doğrulayıcı geçmezse 400)
  *
@@ -127,10 +128,18 @@ export function registerBasarimRoutes(app: express.Express, motor: BasarimMotor,
   app.get('/api/basarim/siralama', async (req, res) => {
     const u = await kim(req);
     const kapsam = (['hafta', 'kurul', 'tum'].includes(String(req.query.kapsam)) ? req.query.kapsam : 'hafta') as 'hafta' | 'kurul' | 'tum';
-    const donem = Number(req.query.donem) || (u ? motor.kisi(u.uid).donem : null) || 3;
+    const yer = req.query.yer === 'sinif' || req.query.yer === 'uni' ? req.query.yer : null;
+    const uni = yer && u ? motor.universiteOf(u.uid) : '';
+    const donem = yer === 'uni' ? -1 : Number(req.query.donem) || (u ? motor.kisi(u.uid).donem : null) || 3;
     res.set('Cache-Control', 'no-store');
-    res.json({ donem, ...motor.siralamaListesi(u?.uid || null, donem, kapsam) });
+    if (yer && !uni) return res.json({ donem, universite: '', satir: [], pencere: null, atpOdul: [] });
+    res.json({ donem, universite: uni || undefined, ...motor.siralamaListesi(u?.uid || null, donem, kapsam, uni || undefined) });
   });
+  // Profil kurulumundaki üniversite (Sıralama › Sınıfım/Üniversite süzgeci için)
+  app.post('/api/basarim/universite', korumali((req, res, uid) => {
+    motor.universiteAyarla(uid, String(req.body?.universite || ''));
+    res.json({ ok: true });
+  }));
   // Aynı kişinin ikinci hesabını sıralamadan çıkar: {kaynak, hedef} (hedef null → geri al)
   app.post('/api/admin/basarim/birlestir', opts.requireAdmin, (req, res) => {
     const kaynak = String(req.body?.kaynak || ''), hedef = req.body?.hedef ? String(req.body.hedef) : null;

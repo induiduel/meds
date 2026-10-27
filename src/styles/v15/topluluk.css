@@ -41,3 +41,38 @@
 .tp15-gonder:disabled { opacity: .45; cursor: default; }
 .tp15-gonder svg { width: 18px; height: 18px; }
 .tp15 button.b15-row { width: 100%; text-align: left; border: 0; background: none; font: inherit; color: inherit; cursor: pointer; }
+/* L01 · sohbet listesi */
+.tp15-arac { display: flex; gap: 8px; align-items: center; }
+.tp15-ara { flex: 1; min-width: 0; display: flex; align-items: center; gap: 8px; height: 42px; padding: 0 12px; border-radius: 12px; background: var(--color-field); color: var(--color-ink-3); }
+.tp15-ara svg { flex: none; width: 17px; height: 17px; }
+.tp15-ara input { flex: 1; min-width: 0; border: 0; background: none; font: inherit; font-size: 1rem; color: var(--color-ink); outline: none; }
+.tp15-ib { flex: none; width: 42px; height: 42px; border-radius: 12px; border: 1px solid var(--color-line); background: var(--color-white); color: var(--color-ink-2); display: grid; place-items: center; cursor: pointer; }
+.tp15-ib svg { width: 18px; height: 18px; }
+.tp15-yeni { padding: 12px; display: flex; flex-direction: column; gap: 8px; }
+.tp15-yeni .tp15-ad { flex: 1; min-width: 0; }
+.tp15-av { --v: 40px; flex: none; width: var(--v); height: var(--v); border-radius: 50%; display: grid; place-items: center; font-size: .82rem; font-weight: 700; background: oklch(0.92 0.05 var(--t, 250)); color: oklch(0.4 0.12 var(--t, 250)); }
+.tp15-av.is-k { --v: 24px; font-size: .62rem; }
+.tp15-sr { display: flex; align-items: center; gap: 12px; }
+.tp15-sr .b15-row-t { min-width: 0; flex: 1; }
+.tp15-sr .b15-row-t > span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; display: block; }
+.tp15-sag { flex: none; display: flex; flex-direction: column; align-items: flex-end; gap: 4px; font-size: .74rem; color: var(--color-ink-3); }
+.tp15-rozet { min-width: 20px; height: 20px; padding: 0 6px; border-radius: 999px; background: var(--color-accent); color: var(--color-on-accent); font-weight: 700; display: grid; place-items: center; }
+.tp15-odaust { display: flex; align-items: center; gap: 6px; }
+.tp15-odaust .v15-cap { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.tp15-odaust .tp15-ib { width: 36px; height: 36px; }
+/* L03 · yorumlar */
+.tp15-seg { display: grid; grid-template-columns: 1fr 1fr; gap: 4px; padding: 4px; border-radius: 12px; background: var(--color-field); }
+.tp15-seg > button { border: 0; background: transparent; font: inherit; font-size: .9rem; color: var(--color-ink-2); min-height: 34px; border-radius: 9px; cursor: pointer; }
+.tp15-seg > button.is-on { background: var(--color-white); color: var(--color-ink); font-weight: 600; }
+.tp15-yorum { padding: 12px 14px; display: flex; flex-direction: column; gap: 10px; }
+.tp15-yb { display: flex; align-items: center; gap: 8px; font-size: .9rem; min-width: 0; }
+.tp15-yb .tp15-av { --v: 30px; font-size: .7rem; }
+.tp15-ym { margin: 6px 0; white-space: pre-wrap; overflow-wrap: anywhere; line-height: 1.45; font-size: .93rem; color: var(--color-ink); }
+.tp15-yis { display: flex; align-items: center; gap: 14px; font-size: .78rem; color: var(--color-ink-3); }
+.tp15-yis button { border: 0; background: none; font: inherit; color: inherit; display: inline-flex; align-items: center; gap: 4px; cursor: pointer; padding: 4px 0; min-height: 28px; }
+.tp15-yis button:disabled { cursor: default; }
+.tp15-yis button svg { width: 15px; height: 15px; }
+.tp15-yis button.is-on { color: var(--color-bad); }
+.tp15-yis button.is-on svg { fill: currentColor; }
+.tp15-yic { margin-left: 18px; padding-left: 12px; border-left: 2px solid var(--color-line); }
+.tp15-yic .tp15-ym { font-size: .86rem; color: var(--color-ink-2); }

@@ -20,10 +20,10 @@ interface Deps {
   broadcast: (event: string, data: any) => void;
 }
 
-const KANAL = /^(genel|kurul-[1-6]|ders:[a-z0-9][a-z0-9-]{2,90})$/;
+export const KANAL = /^(genel|kurul-[1-6]|ders:[a-z0-9][a-z0-9-]{2,90}|soru:[A-Za-z0-9][A-Za-z0-9_.-]{0,120})$/;
 const SIKAYET_GIZLE = 3;
-const ozet = (uid: string) => crypto.createHash('sha256').update(`topluluk:${uid}`).digest('hex').slice(0, 10);
-const temizle = (s: unknown, n: number) => String(s ?? '').replace(/[\u0000-\u0008\u000b-\u001f\u007f‪-‮⁦-⁩]/g, '').replace(/\n{3,}/g, '\n\n').trim().slice(0, n);
+export const ozet = (uid: string) => crypto.createHash('sha256').update(`topluluk:${uid}`).digest('hex').slice(0, 10);
+export const temizle = (s: unknown, n: number) => String(s ?? '').replace(/[\u0000-\u0008\u000b-\u001f\u007f‪-‮⁦-⁩]/g, '').replace(/\n{3,}/g, '\n\n').trim().slice(0, n);
 const sonYazma = new Map<string, number[]>();
 
 export function registerTopluluk(app: express.Express, d: Deps) {

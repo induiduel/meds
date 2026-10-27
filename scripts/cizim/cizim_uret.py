@@ -1021,7 +1021,7 @@ def main() -> int:
         elif kr.get("karar") == "duzelt" and isinstance(kr.get("alanlar"), dict):
             k = tum_komut[i]
             for x in ("dugum", "kenar", "satirlar", "ogeler", "kaynaklar", "sonuc", "soru", "dallar", "gorunen", "altta",
-                      "kutuplar", "baslik", "basliklar", "bag", "duzen", "sablon_ad"):
+                      "kutuplar", "baslik", "basliklar", "bag", "duzen", "sablon_ad", "deger", "birim", "aciklama", "cikmis"):
                 k.pop(x, None) if k.get("tur") == "sema" else None
             k.update(kr["alanlar"])
             if k.get("tur") == "sema" and k.get("sablon"):
@@ -1121,7 +1121,8 @@ def main() -> int:
             komut = {x: k[x] for x in ("tur", "nokta", "a", "b", "iliski", "fazlar", "dugum", "kenar", "etiket",
                                        "kaynak_metin", "hedef_metin", "dal", "sablon", "sablon_ad", "duzen", "basliklar",
                                        "bag", "satirlar", "ogeler", "kaynaklar", "sonuc", "soru", "dallar", "gorunen", "altta",
-                                       "kutuplar", "baslik", "numarali", "pdf_oku") if x in k}
+                                       "kutuplar", "baslik", "numarali", "deger", "birim", "aciklama", "cikmis",
+                                       "pdf_oku") if x in k}
             komut.update(s=s, k=[ka[k["bas"]][0], ka[k["son"]][1]])
             if s not in satir_onbellek and belge is not None and 1 <= s <= belge.page_count:
                 satir_onbellek[s] = sayfa_satirlari(belge[s - 1])

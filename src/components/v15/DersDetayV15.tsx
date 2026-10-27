@@ -10,6 +10,7 @@ import { bransYolu, dersBransi, dersKurulu, hocaYaz, merkezYolu, saatYaz, sureDk
 import { Halka } from './Halka';
 import { dersCozucu } from '../canliDers/dersCozucu';
 import DersIcerikV15 from './DersIcerikV15';
+import DersPdfEkranV15 from './DersPdfEkranV15';
 import { DI_BOLUMLER, dersIcerikGetir, type DiBolum, type DiPaket } from './dersIcerik';
 import '../../styles/v15/dersler.css';
 
@@ -128,11 +129,12 @@ export default function DersDetayV15() {
   const hoca = hocaYaz(ozet?.hoca || detay?.hoca);
   useV15Baslik({
     baslik,
-    alt: bolumAd ? DI_BOLUMLER.find((b) => b.id === bolumAd)?.ad || '' : [brans && cdBransKisa(brans), no != null ? `Ders ${no}` : '', hoca].filter(Boolean).join(' · '),
+    alt: bolumAd ? (bolumAd === 'pdf' ? 'Ders PDF\'i' : DI_BOLUMLER.find((b) => b.id === bolumAd)?.ad || '') : [brans && cdBransKisa(brans), no != null ? `Ders ${no}` : '', hoca].filter(Boolean).join(' · '),
     geri: bolumAd ? `${pathFor('ders_detay', key)}` : brans ? bransYolu(kurul, brans) : merkezYolu(kurul),
   });
 
   if (!key) return <p className="dd15-bos v15-card">Ders bulunamadı.</p>;
+  if (bolumAd === 'pdf') return <DersPdfEkranV15 dersKey={key} />;
   const altSayfa = DI_BOLUMLER.find((b) => b.id === bolumAd);
   if (altSayfa) return <DersIcerikV15 dersKey={key} bolum={altSayfa.id} />;
   const dinle = pathFor('canli_ders', key);
@@ -171,6 +173,7 @@ export default function DersDetayV15() {
       if (n === 0) continue;
       icerik.push({ id: b.id, tone, icon: ic, t: b.ad, s: n > 0 ? `${n} ${a}` : a, url: `${pathFor('ders_detay', key)}?b=${b.id}` });
     }
+    if (paket.spotlar.some((x) => x.adim)) icerik.push({ id: 'pdf', tone: 'is-c', icon: Download, t: 'Ders PDF\'i', s: 'slayt sırasıyla anlatım + her adımın özeti · slayt boyutunda', url: `${pathFor('ders_detay', key)}?b=pdf` });
   }
 
   const durum = bitti ? 'Bu dersi bitirdin' : t != null ? `Kaldığın yer: ${saatYaz(t)}` : 'Henüz başlamadın';
@@ -224,7 +227,7 @@ export default function DersDetayV15() {
               ))}
               {/* Topluluk: bu dersin yorum kanalı (V2 ayrı ders sayılmaz) */}
               <li>
-                <a className="dd15-row" href={`/topluluk?kanal=ders:${key.replace(/-v\d+$/, '')}`} onClick={linkClick(() => navigateTo(`/topluluk?kanal=ders:${key.replace(/-v\d+$/, '')}`))}>
+                <a className="dd15-row" href={`/topluluk?yorum=ders:${key.replace(/-v\d+$/, '')}`} onClick={linkClick(() => navigateTo(`/topluluk?yorum=ders:${key.replace(/-v\d+$/, '')}`))}>
                   <span className="v15-tile is-n"><MessageCircle aria-hidden /></span>
                   <span className="dd15-row-t"><b>Yorumlar</b><span>Bu ders hakkında arkadaşlarınla yazış</span></span>
                   <ChevronRight className="v15-chev" aria-hidden />

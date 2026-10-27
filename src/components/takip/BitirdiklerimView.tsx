@@ -16,6 +16,7 @@ import { ELEME_AD, elemeAnahtari, elemeYaz, konuElemesi, useEleme, type ElemeTur
 import { KonuIsaret, KonuSureEtiketi } from './KonuTakip';
 import { MODUL_YUKLE, kurulaGore, type BdDers, type BdKonu } from './bitirdiklerimVeri';
 import { navigateTo, pathFor } from '../../router';
+import { getActivity } from '../../services/activityLog';
 import '../../styles/takip.css';
 import '../../styles/v15/bitir.css';
 import { useAppearance } from '../../utils/appearance';
@@ -131,7 +132,7 @@ export default function BitirdiklerimView() {
 
   return (
     <div className={`bd${v15 ? ' bd15' : ''}`}>
-      {v15 && <V15Bas modul={modul} kurul={kurul} />}
+      {v15 && <V15Bas modul={modul} kurul={kurul} oz={oz} />}
       {!v15 && <>
       <header className="bd-bas">
         <span className="bd-ic" aria-hidden><ListChecks /></span>
@@ -248,11 +249,25 @@ export default function BitirdiklerimView() {
 }
 
 /** v15: başlık üst barda; Sınav planı bağlantısı ve kısa kullanım ipucu tek satırda */
-function V15Bas({ modul, kurul }: { modul: TakipModul; kurul: number }) {
-  useV15Baslik({ baslik: 'Bitirdiklerim', alt: MODUL_AD[modul] });
+function V15Bas({ modul, kurul, oz }: { modul: TakipModul; kurul: number; oz?: { dersler: { o: ReturnType<typeof grupOzeti> }[]; genel: ReturnType<typeof grupOzeti> } }) {
+  useV15Baslik({ baslik: 'Bitirdiklerim', alt: `${MODUL_AD[modul]} · baraj %60` });
+  // doğru oranı: cihazdaki etkinlik günlüğünden (çözülen doğru ÷ tüm cevaplar)
+  const oran = useMemo(() => {
+    const L = getActivity(); const d = L.filter((e) => e.kind === 'coz').length; const y = L.filter((e) => e.kind === 'yanlis').length;
+    return d + y ? Math.round((d / (d + y)) * 100) : null;
+  }, []);
+  const biten = oz ? oz.dersler.filter(({ o }) => o.toplam && o.biten === o.toplam).length : 0;
   return (
     <>
       <h1 className="sr-only">Bitirdiklerim</h1>
+      {oz && (
+        <div className="bd15-stat" aria-label="Genel durum">
+          <div className="v15-card"><b>{biten}/{oz.dersler.length}</b><small>Ders</small></div>
+          <div className="v15-card"><b>{sayi(oz.genel.soru)}</b><small>Soru</small></div>
+          <div className="v15-card"><b>{oran == null ? '—' : `%${oran}`}</b><small>Doğru oranı</small></div>
+          <div className="v15-card"><b>{oz.genel.sn ? sureYaz(oz.genel.sn) : '0 dk'}</b><small>Süre</small></div>
+        </div>
+      )}
       <a className="bd15-plan v15-card" href={`${pathFor('sinav_plani')}?kurul=${kurul}`} onClick={(e) => { if (e.button || e.metaKey || e.ctrlKey) return; e.preventDefault(); navigateTo(`${pathFor('sinav_plani')}?kurul=${kurul}`); }}>
         <span className="v15-tile is-a" aria-hidden><Target /></span>
         <span className="bd15-plan-t"><b>Sınav planı</b><span className="v15-cap">En az 60 için gün gün yol haritası</span></span>

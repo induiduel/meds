@@ -1,11 +1,13 @@
 {
  "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
- "onem": 493,
- "baslik": "Ders içeriklerinde sıralama ve süzme",
+ "onem": 494,
+ "baslik": "Yeni ekranlar: sohbet, yorumlar, sıralama, anatomi",
  "maddeler": [
-  "Terim, hastalık, bilgi, liste ve tablo sayfalarına alfabetik / slayt sırasına göre sıralama eklendi",
-  "Tablolar ve listeler türe göre süzülebiliyor",
-  "Üstteki sekme çipleri fare tekerleği, sürükleme ve okla kaydırılabiliyor"
+  "Topluluk: kişi/grup sohbetleri ve beğenili, sıralanabilir yorumlar",
+  "Sıralama: Sınıfım, Üniversite, Türkiye sekmeleri",
+  "Hastalıklar: Anatomiden gez görünümü ve bulgu süzgeci",
+  "Bitirdiklerim ve 60 planı üst özet kartları",
+  "Sesli derste yeni değer kartı çizim paneli"
  ],
  "eklenen": [],
  "degisen": [],

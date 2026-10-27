@@ -33,12 +33,12 @@ Panel, ilişkinin **tıbbi anlamına** göre bir şablona bağlanır; düzen anl
   başlıklı tablodur. ("üremik ensefalopati → istenir → üre" ya da "glukoz ⊣ hipoglisemi" yanlış okunur.)
 - Gerçek neden-sonuç: `neden_sonuc` / `mekanizma_adimlari` (zincir); birçok neden → tek sonuç: `cok_neden_tek_sonuc`
   (numaralı kaynaklar + "}"); karar: `karar` (dal); sıralı yapılacaklar: `algoritma` (numaralı); alt türler: `siniflama`
-  (madde imli; aynı grubun sıralı öğeleri numaralı); ayırıcı tanı: `karsilastirma`; gizleyen neden: `maskeleyen`.
+  (madde imli; aynı grubun sıralı öğeleri numaralı); ayırıcı tanı: `karsilastirma`; gizleyen neden: `maskeleyen`; tek sayı (eşik, doz, oran): `deger_karti` (değer kartı, `cikmis` yalnız doğrulanmış eşlemeyle).
 - **Numara / madde:** aynı grubun sıralı ya da sayılan öğeleri numaralı; birbirinden bağımsız şeyler madde imli.
 - **Kesikli ayraç:** bir panelde iki ayrı öğenin satırları ve sütunları kesikli çizgiyle ayrılır (karışmasın).
 - **Yeni şablon:** uygun şablon yoksa model `yeni_sablon` önerir (kimlik, ad, genel düzen, başlıklar, ne zaman, örnek);
   kapıdan geçen öneri kütüphaneye eklenir (`eklenme.kaynak` = ders) ve sonraki derslerde kullanılır. Düzenler istemcide
-  geneldir (tablo, zincir, grup, dal, karşıt, maske, liste, adımlar); yeni şablon için kod değişmez.
+  geneldir (tablo, zincir, grup, dal, karşıt, maske, liste, adımlar, değer); yeni şablon için kod değişmez.
 - **Bağımsız tıbbi anlam denetimi:** bütün paneller ve ok etiketleri, öğrencinin okuyacağı biçimde (`sablon.okunus`)
   cümleyle yan yana ikinci bir Claude geçişine verilir: tamam / düzelt (yeni şablon alanları) / sil. Sonuç önbellekte.
 
@@ -178,5 +178,5 @@ farklı yerlere yanlış ve fazla yapılıyor."
 - **Tablo:** metni okunabilen tabloda çizim, panel ve zoom yok; en çok marker.
 - **Zoom (7c'nin yerine):** yalnız resim üstündeki bölgede; birleşik hedef sayfanın ≤%20'si; en çok **1,6×**, en az 1,25×
   (daha az gerekiyorsa hiç yapılmaz); hedef çizimin kendi bölgesi. Yazı slaytında, tabloda, panel anlatımında zoom yok.
-- **Kapı:** `cizim_kapisi.py` K10 (tabloda çizim), K11 (resim dışı ok), K12 (zoom alanı/oranı) HATA verir.
+- **Kapı:** `cizim_kapisi.py` K10 (tabloda çizim), K11 (resim dışı ok), K12 (zoom alanı/oranı) HATA verir. K13: panel `duzen`i sablonlar.json `duzenler` listesinde olmalı; değer kartı alanları `sablon.coz` kuralına uymalı.
 

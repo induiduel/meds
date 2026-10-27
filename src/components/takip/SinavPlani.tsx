@@ -103,6 +103,26 @@ export default function SinavPlani({ hiz, kurul }: { hiz: Partial<Record<TakipMo
 
   return (
     <section className="sp is-sayfa" aria-label="Sınav planı">
+      {/* v15 (D05 plan60): tahmini puan + baraj rozeti, sınav dağılımı (gerçek dağılım dosyasından) */}
+      <div className="sp15-ust">
+        <div className="v15-card sp15-puan">
+          <div className="sp15-puan-bas">
+            <div><span className="v15-label">Tahmini puan</span><b>{tamYaz(simdi.beklenen)}</b></div>
+            <div className="sp15-rozet"><span className={`v15-tag ${simdi.beklenen >= plan.hedef ? 'is-ok' : 'is-w'}`}>{simdi.beklenen >= plan.hedef ? 'Baraj üstü' : 'Baraj altı'}</span><small>hedef {plan.hedef}</small></div>
+          </div>
+          <span className={`v15-bar${simdi.beklenen >= plan.hedef ? ' is-ok' : ' is-w'}`}><span style={{ width: `${Math.max(0, Math.min(100, simdi.beklenen))}%` }} /></span>
+          <small className="sp15-sonra">Bu planı bitirirsen ~{tamYaz(sonra.beklenen)} puan</small>
+        </div>
+        <div className="v15-card sp15-dag">
+          <span className="v15-label">Sınav dağılımı</span>
+          {[...plan.branslar].sort((a, b) => b.n - a.n).map((b) => (
+            <div key={b.brans} className="sp15-dag-s">
+              <div><span>{b.ad}</span><small>{b.n} soru</small></div>
+              <span className="v15-bar"><span style={{ width: `${(b.n / Math.max(1, ...plan.branslar.map((x) => x.n))) * 100}%` }} /></span>
+            </div>
+          ))}
+        </div>
+      </div>
       <ol className="sp-nasil-kullan" aria-label="Nasıl kullanılır">
         <li><span>1</span><div><b>Günlük saatini seç</b><small>Saatini ve dersleri kaç × izlediğini seç; plan buna göre bölünür.</small></div></li>
         <li><span>2</span><div><b>Bugünün listesine bas</b><small>"Başla" ilgili dersi ya da soruları açar.</small></div></li>

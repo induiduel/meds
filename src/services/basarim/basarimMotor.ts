@@ -116,12 +116,22 @@ export function kurulPencere(donem: number, g: string): Pencere {
   const sonGun = new Date(Date.UTC(+ay.slice(0, 4), +ay.slice(5, 7), 0)).toISOString().slice(0, 10);
   return { id: `d${donem}-ay-${ay}`, bas: `${ay}-01`, son: sonGun, ad: 'Bu ay' };
 }
+/** Takvimli dönemde (D3) kurul her zaman takvimdeki aktif kurul; elle seçilen eski değer sayılmaz. */
+export function efektifKurul(donem: number | null, kurul: number | null, g: string = gunOf()): number | null {
+  if (donem === Number((takvim as any).donem || 3) && KURULLAR.length) {
+    const m = /^d\d+-k(\d+)$/.exec(kurulPencere(donem, g).id);
+    if (m) return Number(m[1]);
+  }
+  return kurul;
+}
 const pencereGunleri = (bas: string, son: string) => { const r: string[] = []; for (let g = bas; g <= son && r.length < 400; g = gunEkle(g, 1)) r.push(g); return r; };
 
 // ───────────────────────── Kayıt ─────────────────────────
 export interface DefterKaydi { id: string; t: 'baslangic' | 'hedef' | 'basarim' | 'siralama' | 'harcama' | 'yonetici'; by?: string; geriAlindi?: string; ad: string; p: number; a: number; at: string; g: string; ust?: boolean; ref?: string }
 export interface Kisi {
   uid: string; ad: string; donem: number | null; kurul: number | null; profilAt?: string;
+  /** Profil kurulumundaki üniversite (Sıralama › Üniversite/Sınıfım süzgeci) */
+  universite?: string;
   defter: DefterKaydi[];
   atp: { bakiye: number; kuyruk: { id: string; a: number; ad: string; at: string }[]; gun: Record<string, number> };
   eylem: { gun: Record<string, Record<string, number>>; toplam: Record<string, number>; begeni: string[] };
@@ -486,10 +496,12 @@ export function createBasarimMotor(deps: MotorDeps) {
       return /^data:image\/(jpeg|png|webp);base64,/.test(f) && f.length < 80_000 ? f : undefined;
     } catch { return undefined; }
   };
-  const siralama = (donem: number, kapsam: 'hafta' | 'kurul' | 'tum', g = gunOf()) => {
+  /** donem -1 + universite: üniversitenin tüm dönemleri; universite verilirse yalnız o üniversite. */
+  const siralama = (donem: number, kapsam: 'hafta' | 'kurul' | 'tum', g = gunOf(), universite?: string) => {
     hepsiniYukle();
-    const p = kapsam === 'hafta' ? { bas: haftaOf(g), son: gunEkle(haftaOf(g), 6), ad: 'Bu hafta', id: haftaOf(g) } : kapsam === 'kurul' ? kurulPencere(donem, g) : { bas: '0000', son: '9999', ad: 'Tüm zamanlar', id: 'tum' };
-    const satir = [...onbellek.values()].filter((k) => (k.donem || VARSAYILAN_DONEM) === donem && k.uid !== 'ai-test' && !k.birlesti).map((k) => ({ k, puan: puanAralik(k, p.bas, p.son) }))
+    const dSuz = universite && donem === -1 ? null : donem;
+    const p = kapsam === 'hafta' ? { bas: haftaOf(g), son: gunEkle(haftaOf(g), 6), ad: 'Bu hafta', id: haftaOf(g) } : kapsam === 'kurul' ? kurulPencere(dSuz ?? VARSAYILAN_DONEM, g) : { bas: '0000', son: '9999', ad: 'Tüm zamanlar', id: 'tum' };
+    const satir = [...onbellek.values()].filter((k) => (dSuz == null || (k.donem || VARSAYILAN_DONEM) === dSuz) && (!universite || k.universite === universite) && k.uid !== 'ai-test' && !k.birlesti).map((k) => ({ k, puan: puanAralik(k, p.bas, p.son) }))
       .filter((x) => x.puan > 0)
       .sort((a, b) => b.puan - a.puan || a.k.uid.localeCompare(b.k.uid));
     return { pencere: p, satir };
@@ -610,7 +622,7 @@ export function createBasarimMotor(deps: MotorDeps) {
       const d = k.donem || 3;
       const sira = (kap: 'hafta' | 'kurul' | 'tum') => { const s = siralama(d, kap); const i = s.satir.findIndex((x) => x.k.uid === k.uid); return { sira: i < 0 ? null : i + 1, kisi: s.satir.length, puan: i < 0 ? 0 : s.satir[i].puan }; };
       return {
-        profil: { donem: k.donem, kurul: k.kurul, ad: k.ad },
+        profil: { donem: k.donem, kurul: efektifKurul(k.donem, k.kurul), ad: k.ad },
         puan: { toplam: puanAralik(k, '0000', '9999'), bugun: k.gunPuan[bugun] || 0 },
         atp: { bakiye: k.atp.bakiye, kuyrukta: k.atp.kuyruk.reduce((a, q) => a + q.a, 0), bugunAlinan: k.atp.gun[bugun] || 0, tavan: tavanOf(k) },
         kidem: { ...kidemOf(k), sonraki: kidemler().find((x) => x.no === kidemOf(k).no + 1) || null },
@@ -657,6 +669,12 @@ export function createBasarimMotor(deps: MotorDeps) {
       if (benim >= 100) satir.push(mk(sat[benim], benim));
       return { satir, benim: benim >= 0 ? benim + 1 : null, odul: v.haftalikSiralama, carpan: v.sampiyonCarpan };
     },
+    universiteAyarla(uid: string, universite: string) {
+      const k = kisi(uid); const u = universite.trim().slice(0, 120);
+      if ((k.universite || '') === u) return;
+      k.universite = u || undefined; kaydet(k);
+    },
+    universiteOf(uid: string) { return kisi(uid).universite || ''; },
     goruldu(uid: string, at: string) { const k = kisi(uid); if (at > k.goruldu) { k.goruldu = at; kaydet(k); } },
     profil(uid: string, donem: number, kurul: number, ad?: string) {
       const k = kisi(uid);
@@ -741,9 +759,9 @@ export function createBasarimMotor(deps: MotorDeps) {
       const benim = uid ? s.satir.findIndex((x) => x.k.uid === uid) : -1;
       return { pencere: s.pencere, satir, benim: benim >= 0 ? benim + 1 : null, odul: kapsam === 'hafta' ? tanim.atp.calismaHaftaBirinci || 0 : 0, esikSn: tanim.atp.calismaEsikSn || 0 };
     },
-    siralamaListesi(uid: string | null, donem: number, kapsam: 'hafta' | 'kurul' | 'tum') {
+    siralamaListesi(uid: string | null, donem: number, kapsam: 'hafta' | 'kurul' | 'tum', universite?: string) {
       try { odemeleriIsle(); } catch { /* */ }
-      const s = siralama(donem, kapsam);
+      const s = siralama(donem, kapsam, gunOf(), universite);
       const satir = s.satir.slice(0, 100).map((x, i) => ({
         sira: i + 1, ad: x.k.ad || 'Tıbbiyeli', puan: x.puan, ben: x.k.uid === uid, foto: foto(x.k.uid),
         ozel: !!x.k.ozel?.gorunur,
@@ -764,7 +782,7 @@ export function createBasarimMotor(deps: MotorDeps) {
       return [...onbellek.values()].filter((k) => k.uid !== 'ai-test').map((k) => {
         const kp = kurulPencere(k.donem || 3, bugun);
         return {
-          uid: k.uid, ad: k.ad, email: k.email || '', donem: k.donem, kurul: k.kurul, birlesti: k.birlesti || null,
+          uid: k.uid, ad: k.ad, email: k.email || '', donem: k.donem, kurul: efektifKurul(k.donem, k.kurul), birlesti: k.birlesti || null,
           puan: puanAralik(k, '0000', '9999'), hafta: puanAralik(k, hb, gunEkle(hb, 6)), kurulPuan: puanAralik(k, kp.bas, kp.son),
           atp: k.atp.bakiye, kuyruk: k.atp.kuyruk.reduce((a, q) => a + q.a, 0), kilit: Object.keys(k.kilit).length,
           basarim: k.defter.filter((d) => d.t === 'basarim' && !d.geriAlindi).length,
@@ -783,7 +801,7 @@ export function createBasarimMotor(deps: MotorDeps) {
       if (gerekce.length < 3) return { hata: 'Gerekçe yazılmalı (en az 3 harf).' };
       const k = kisi(uid);
       const kuyrukT = () => k.atp.kuyruk.reduce((a, q) => a + q.a, 0);
-      const anlik = () => ({ puan: puanAralik(k, '0000', '9999'), atp: k.atp.bakiye, kuyruk: kuyrukT(), donem: k.donem, kurul: k.kurul, kilit: Object.keys(k.kilit), ozel: k.ozel || null });
+      const anlik = () => ({ puan: puanAralik(k, '0000', '9999'), atp: k.atp.bakiye, kuyruk: kuyrukT(), donem: k.donem, kurul: efektifKurul(k.donem, k.kurul), kilit: Object.keys(k.kilit), ozel: k.ozel || null });
       const once = anlik();
       const at = new Date().toISOString();
       const iz = (ad: string, p: number, a: number) => k.defter.push({ id: `y:${at}:${Math.random().toString(36).slice(2, 7)}`, t: 'yonetici', ad, p, a, at, g: gunOf(), by });

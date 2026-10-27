@@ -39,6 +39,7 @@ import { registerWhatsAppRoutes, runScheduledWhatsAppDigests } from './src/servi
 import { quizRealtimeServer } from './src/services/quiz/quizRealtimeServer';
 import { oyunKaynaklari, oyunSorulari } from './src/services/quiz/oyunSoruKaynagi';
 import { registerTopluluk } from './src/services/topluluk';
+import { registerToplulukSohbet } from './src/services/toplulukSohbet';
 import crypto from 'crypto';
 
 const require = createRequire(import.meta.url);
@@ -490,7 +491,9 @@ const STUDENT_WRITE_ROUTES: Array<[string, RegExp, StudentWriteKind]> = [
   ['POST', /^\/api\/learn\/feedback\/[^/]+\/vote$/, 'oy'],
   // Topluluk: mesaj, kendi mesajını silme, şikâyet (kimlik + uid başına hız sınırı services/topluluk.ts'te)
   ['POST', /^\/api\/topluluk\/mesaj$/, 'icerik'],
-  ['POST', /^\/api\/topluluk\/mesaj\/\d+\/(sil|sikayet)$/, 'oy'],
+  ['POST', /^\/api\/topluluk\/mesaj\/\d+\/(sil|sikayet|begen)$/, 'oy'],
+  // Topluluk sohbet odaları (kimlik + hız sınırı services/toplulukSohbet.ts'te)
+  ['POST', /^\/api\/topluluk\/sohbet(\/katil|\/\d+\/(mesaj|okundu|ayril))?$/, 'esles'],
 ];
 const studentWriteHits = new Map<string, number[]>();
 /** Eşleşen uç sırası (sayaç uç başına ayrı tutulur) ya da -1 */
@@ -556,6 +559,7 @@ registerTopluluk(app, {
   isAdmin: (req) => isRequestAdminVerified(req, 'nofrostlife@gmail.com'),
   broadcast: (event, data) => broadcastRealtimeEvent(event, data),
 });
+registerToplulukSohbet(app, { rootDir: __dirname, isPgOnline: () => pgOnline, broadcast: (event, data) => broadcastRealtimeEvent(event, data) });
 
 const peopleInsights = registerPeopleInsights(app, {
   rootDir: __dirname,

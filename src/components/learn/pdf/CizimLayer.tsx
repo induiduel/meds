@@ -22,7 +22,12 @@ export interface CizimKomut {
   /** şablonlu panel (scripts/cizim/sablon.py, sablonlar.json): düzen + alanlar */
   sablon?: string;
   sablon_ad?: string;
-  duzen?: 'tablo' | 'zincir' | 'grup' | 'dal' | 'karsit' | 'maske' | 'liste' | 'adimlar';
+  duzen?: 'tablo' | 'zincir' | 'grup' | 'dal' | 'karsit' | 'maske' | 'liste' | 'adimlar' | 'deger';
+  /** değer kartı (duzen 'deger'): tek sayı + birim + ne olduğu; `cikmis` yalnız doğrulanmış çıkmış eşlemesinin sayısı */
+  deger?: string;
+  birim?: string;
+  aciklama?: string;
+  cikmis?: number;
   basliklar?: string[];
   bag?: string;
   satirlar?: string[][];
@@ -428,6 +433,17 @@ function SablonPanel({ z, t }: { z: CizimKomut; t: number }) {
             <span className="pdv-sb-etk is-uyari">{b2}</span>
             <span className="pdv-sb-maske-ogeler">{(z.altta || []).map((x, i) => <span key={i} className="pdv-sb-kutu is-sonuc">{x}</span>)}</span>
           </div>
+        </div>,
+      );
+    }
+    case 'deger': {
+      // değer kartı (v15 sdZ P7): büyük sayı + birim, altında ne olduğu; çıkmış etiketi yalnız doğrulanmış eşlemeyle
+      const n = say(3);
+      return kap(
+        <div className="pdv-sb-deger">
+          <div className={`pdv-sb-deger-sayi${t < 1 ? ' is-simdi' : ''}`}>{z.deger}{z.birim && <small>{z.birim}</small>}</div>
+          {n >= 2 && z.aciklama && <div className="pdv-sb-deger-aciklama">{z.aciklama}</div>}
+          {n >= 3 && (z.cikmis || 0) > 0 && <span className="pdv-sb-deger-cikmis">★ {z.cikmis} kez soruldu</span>}
         </div>,
       );
     }

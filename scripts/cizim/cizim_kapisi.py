@@ -21,6 +21,8 @@ yayına gitmez (ders zinciri `cizim` adımı, arsiv_yayinla.py, sekil_cizim.py b
   K10 Okunabilir metinli tabloda çizim yok: lazeri tablo olan cümlede kontur/akış/eğri/panel HATA — yalnız marker (H85).
   K11 Kelime ↔ kelime oku yok: akış oku yalnız lazeri resim olan cümlede (resim içinde iki görsel yapı arası) (H85).
   K12 Zoom ölçülü: `yakin` yalnız resim cümlesinde ve sayfanın ≤%20'si (H85).
+  K13 Panel düzeni tanımlı olmalı: `sema` komutunun `duzen`i sablonlar.json `duzenler` listesinde değilse HATA; değer
+      kartı (`deger`) alanları sablon.coz kuralına uymalı (sayı içeren `deger`, `aciklama`, `cikmis` tam sayı).
 
 Kullanım:
   .venv-ocr/bin/python scripts/cizim/cizim_kapisi.py <key> [--kok data/sesli_anlatim | data/arsiv_25_26/sesli_anlatim]
@@ -44,6 +46,11 @@ TUM_RESIM = 0.85
 
 
 ZOOM_UST = 0.20  # H85: zoom yalnız küçük resim bölgesine
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import sablon as SB  # noqa: E402
+
+DUZENLER = set(SB.kutuphane().get("duzenler") or [])
 
 
 def _alan(b):
@@ -126,6 +133,13 @@ def denetle(key: str, kok: Path) -> tuple[list[str], dict]:
                 yk = z.get("yakin")
                 if yk and (not (i and i["t"] == "resim") or _alan(yk) > ZOOM_UST):
                     H.append(f"K12 {yer}: zoom resim dışında ya da sayfanın %{round(100 * _alan(yk))}'i (üst %{int(ZOOM_UST * 100)})")
+                if z.get("tur") == "sema" and z.get("duzen"):
+                    if z["duzen"] not in DUZENLER:
+                        H.append(f"K13 {yer}: panel düzeni '{z['duzen']}' tanımsız (sablonlar.json duzenler)")
+                    elif z["duzen"] == "deger":
+                        _, ret = SB.coz({**z, "sablon": z.get("sablon") or "deger_karti"})
+                        if ret:
+                            H.append(f"K13 {yer}: {ret}")
                 if z.get("tur") == "akis" and not str(z.get("etiket") or "").strip():
                     H.append(f"K8 {yer}: etiketsiz ok")
                 nk = z.get("nokta") or []

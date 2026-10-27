@@ -1,6 +1,6 @@
 {
   "surum": 1,
-  "aciklama": "Canlı çizim panel şablonları (docs/CIZIM_KURALLARI.md §2b). Dersten bağımsızdır; her şablon bir tıbbi anlam ilişkisini doğru okunan bir düzene bağlar. Model uygun şablon yoksa `yeni_sablon` önerir, kapıdan geçerse buraya eklenir ve sonraki derslerde de kullanılır. düzen: yalnız istemcinin bildiği genel düzenler (tablo, zincir, grup, dal, karsit, maske, liste, adimlar).",
+  "aciklama": "Canlı çizim panel şablonları (docs/CIZIM_KURALLARI.md §2b). Dersten bağımsızdır; her şablon bir tıbbi anlam ilişkisini doğru okunan bir düzene bağlar. Model uygun şablon yoksa `yeni_sablon` önerir, kapıdan geçerse buraya eklenir ve sonraki derslerde de kullanılır. düzen: yalnız istemcinin bildiği genel düzenler (tablo, zincir, grup, dal, karsit, maske, liste, adimlar, deger).",
   "duzenler": [
     "tablo",
     "zincir",
@@ -9,7 +9,8 @@
     "karsit",
     "maske",
     "liste",
-    "adimlar"
+    "adimlar",
+    "deger"
   ],
   "sablonlar": {
     "neden_sonuc": {
@@ -569,6 +570,12 @@
         "kaynak": "k2-08-beyin-ve-iskelet-sistemi-gelisimi-genetigi",
         "zaman": "2026-10-27"
       }
+    },
+    "deger_karti": {
+      "ad": "Değer kartı",
+      "duzen": "deger",
+      "ne_zaman": "Cümle tek bir sayıyı anlatıyor: eşik, kesim noktası, doz, oran, süre (ör. eksüda/transüda protein eşiği). Çıkmış etiketi (cikmis) yalnız doğrulanmış eşlemeyle.",
+      "ornek": "3 g/dL · eksüda/transüda protein eşiği"
     }
   }
 }
