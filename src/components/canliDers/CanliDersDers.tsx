@@ -7,7 +7,7 @@
 import CanliDersKimlikHedef from './CanliDersKimlikHedef';
 import { CanliDersBaslangic } from './CanliDersBaslangic';
 import React, { Suspense, lazy, memo, useCallback, useMemo, useEffect, useLayoutEffect, useRef, useState } from 'react';
-import { AlertTriangle, ArrowLeftRight, ArrowUpDown, BookOpen, Captions, Download, ChevronDown, ChevronLeft, ChevronRight, ChevronUp, Check, Columns2, Copy, Crosshair, FileText, Maximize2, Minimize2, Minus, Package, Pause, Play, Palette, Plus, RotateCcw, Rows2, ScrollText } from 'lucide-react';
+import { AlertTriangle, ArrowLeftRight, ArrowUpDown, BookOpen, Captions, MapPin, Download, ChevronDown, ChevronLeft, ChevronRight, ChevronUp, Check, Columns2, Copy, Crosshair, FileText, Maximize2, Minimize2, Minus, Package, Pause, Play, Palette, Plus, RotateCcw, Rows2, ScrollText, SkipBack, SkipForward } from 'lucide-react';
 import { navigateTo, pathFor } from '../../router';
 import { driveViewUrl, useDeckPdf } from '../../services/deckPdfService';
 import { releasePageFullscreen, wasRecentlyScrollingOrTouching } from '../../utils/fullscreen';
@@ -16,7 +16,7 @@ import { isIosBrowserTab, shouldAvoidNativeFullscreen } from '../../utils/device
 import { openPwaInstallGuide } from '../../services/pwaService';
 import { cumleDuzeyleri } from '../../utils/maddele';
 import {
-  cdCumleAraligi, cdParagrafSinirlari, cdDetayBagla, cdKelimeBas, cdKonusulanKarakter, cdDetayGetir, cdDurum, cdMedspakUrl, cdOynat, cdParagrafa, cdSesUrl, cdTercihVaryant, cdToggle, fmtSure, useCd, type CdDetay,
+  cdCumleAraligi, cdParagrafSinirlari, cdDetayBagla, cdKelimeBas, cdKonusulanKarakter, cdDetayGetir, cdDurum, cdMedspakUrl, cdOynat, cdParagrafa, cdSesUrl, cdTercihVaryant, cdToggle, cdBolumAtla, fmtSure, useCd, type CdDetay,
 } from './canliDersStore';
 import { CdV15Bas, CdV15Gorunum, CdV15KalemDugme, CdV15KalemKutusu, CdV15Menu } from './CdV15';
 import { GunlukDiyalog } from './CanliDersView';
@@ -209,6 +209,7 @@ export default function CanliDersDers({ dersKey, kamp }: { dersKey: string; kamp
   const { v15 } = useAppearance();
   const [gor15, setGor15] = useState(false);
   const [menu15, setMenu15] = useState(false);
+  const [odak, setOdak] = useState(false);
   const [yazi, setYaziDurum] = useState<number>(() => { try { return Number(localStorage.getItem(YAZI_KEY)) || 20; } catch { return 20; } });
   const setYazi = (n: number | ((y: number) => number)) => setYaziDurum((y) => {
     const v = Math.min(YAZI_ENCOK, Math.max(YAZI_ENAZ, typeof n === 'function' ? n(y) : n));
@@ -482,7 +483,14 @@ export default function CanliDersDers({ dersKey, kamp }: { dersKey: string; kamp
     return (
       <div className="cd-root">
         {kamp ? kamp.geri : <GeriBag />}
-        <div className="cd-bos" role="status"><span className="cd-spin" aria-hidden /> Ders yükleniyor…</div>
+        {v15 ? (
+          // tasarım S13: slayt iskeleti + "Ders hazırlanıyor" + metin satırı iskeletleri
+          <div className="cd-hazir" role="status" aria-label="Ders hazırlanıyor">
+            <div className="cd-hazir-pdf" aria-hidden><i style={{ width: '50%' }} /><i /><i style={{ width: '80%' }} /><b /><i style={{ width: '70%' }} /></div>
+            <div className="cd-hazir-bas"><span className="cd-spin" aria-hidden /><div><b>Ders hazırlanıyor</b><small>Metin, slayt eşleşmesi ve ses yükleniyor</small></div></div>
+            <div className="cd-hazir-metin" aria-hidden><i style={{ width: '95%' }} /><i style={{ width: '88%' }} /><i style={{ width: '92%' }} /><i style={{ width: '60%' }} /></div>
+          </div>
+        ) : <div className="cd-bos" role="status"><span className="cd-spin" aria-hidden /> Ders yükleniyor…</div>}
       </div>
     );
   }
@@ -822,6 +830,9 @@ export default function CanliDersDers({ dersKey, kamp }: { dersKey: string; kamp
                 ad: 'Diğer',
                 ogeler: (
                   <>
+                    <button type="button" className="cd-btn" onClick={() => { setMenu15(false); setOdak(true); }}>
+                      <ScrollText aria-hidden /> <span>Odak modu</span>
+                    </button>
                     <button type="button" className="cd-btn" onClick={() => { setMenu15(false); setGunlukAcik(true); }}>
                       <FileText aria-hidden /> <span>Ders günlüğü</span>
                     </button>
@@ -893,6 +904,7 @@ export default function CanliDersDers({ dersKey, kamp }: { dersKey: string; kamp
         )}
       </div>
       {tanitim.tur}
+      {odak && <CdOdakModu onKapat={() => setOdak(false)} />}
       <CanliDersKimlikHedef detay={detay} kok={rootRef} />
       {gunlukAcik && <GunlukDiyalog dersKey={detay.key} onKapat={() => setGunlukAcik(false)} />}
       {yildizModalAcik && (
@@ -1109,6 +1121,39 @@ function GeriBag({ arsiv = false }: { arsiv?: boolean }) {
 /* ---------------- metin ---------------- */
 
 const hlDestek = () => typeof CSS !== 'undefined' && 'highlights' in CSS && typeof (window as any).Highlight === 'function';
+/**
+ * Odak modu (tasarım S05): yalnız akan metin; üst bar, slayt, oynatıcı ve yüzen öğeler gizlenir. Ortada altta üç düğme
+ * (önceki bölüm · oynat/duraklat · sonraki bölüm); ekrana dokununca denetimler görünür, 3 sn sonra kendiliğinden kaybolur.
+ */
+function CdOdakModu({ onKapat }: { onKapat: () => void }) {
+  const playing = useCd((s) => s.playing);
+  const [goster, setGoster] = useState(true);
+  const zaman = useRef(0);
+  const uyandir = useCallback(() => {
+    setGoster(true);
+    window.clearTimeout(zaman.current);
+    zaman.current = window.setTimeout(() => setGoster(false), 3000);
+  }, []);
+  useEffect(() => {
+    document.documentElement.setAttribute('data-cd-odak', 'on');
+    uyandir();
+    const tik = (e: PointerEvent) => { if (!(e.target as HTMLElement).closest('.cd-odak-d')) uyandir(); };
+    const tus = (e: KeyboardEvent) => { if (e.key === 'Escape') onKapat(); else uyandir(); };
+    document.addEventListener('pointerdown', tik); document.addEventListener('keydown', tus);
+    return () => { document.documentElement.removeAttribute('data-cd-odak'); document.removeEventListener('pointerdown', tik); document.removeEventListener('keydown', tus); window.clearTimeout(zaman.current); };
+  }, [onKapat, uyandir]);
+  return (
+    <div className={`cd-odak-d${goster ? ' is-gor' : ''}`} role="toolbar" aria-label="Odak modu denetimleri">
+      <div className="cd-odak-dug">
+        <button type="button" onClick={() => { cdBolumAtla(-1); uyandir(); }} aria-label="Önceki bölüm"><SkipBack aria-hidden /></button>
+        <button type="button" className="is-pl" onClick={() => { cdToggle(); uyandir(); }} aria-label={playing ? 'Duraklat' : 'Oynat'}>{playing ? <Pause aria-hidden /> : <Play aria-hidden />}</button>
+        <button type="button" onClick={() => { cdBolumAtla(1); uyandir(); }} aria-label="Sonraki bölüm"><SkipForward aria-hidden /></button>
+      </div>
+      <small>Odak modu · ekrana dokun: denetimler · <button type="button" onClick={onKapat}>Çık</button></small>
+    </div>
+  );
+}
+
 /** Altyazı şeridi (tasarım S04): önceki cümle soluk, okunan cümle vurgulu; slayt kipinde PDF'in altında */
 function CdAltyazi({ detay, canli }: { detay: CdDetay; canli: boolean }) {
   const aktif = useCd((s) => (canli ? s.aktif : -1));
@@ -1682,6 +1727,7 @@ function CdPdfBolme({ detay, canli }: { detay: CdDetay; canli: boolean }) {
     return n;
   });
   const [elle, setElle] = useState<{ dosya: number; sayfa: number } | null>(null);
+  const [eslesmeKapali, setEslesmeKapali] = useState(-1);
   const wrapRef = useRef<HTMLDivElement>(null);
   const [hataMsj, setHataMsj] = useState<string | null>(null);
 
@@ -1920,6 +1966,17 @@ function CdPdfBolme({ detay, canli }: { detay: CdDetay; canli: boolean }) {
           </div>
         )}
       </div>
+      {/* tasarım S14: anlatılan paragrafın PDF eşleşmesi yoksa slayt soluklaşır, son eşleşen sayfa söylenir */}
+      {canli && !durdu && aktif >= 0 && !(es && Number.isFinite(es.sayfa)) && eslesmeKapali !== aktif && (
+        <div className="cd-eslesme-yok" role="status">
+          <MapPin aria-hidden />
+          <div><b>Bu bölüm PDF'te bulunamadı</b><small>Hoca slayt dışında anlatıyor. Son eşleşen yer: s. {hedef.sayfa}.</small></div>
+          <div className="cd-eslesme-d">
+            <button type="button" onClick={() => setEslesmeKapali(aktif)}>s. {hedef.sayfa}'te kal</button>
+            <button type="button" onClick={durdur}>PDF'i elle gez</button>
+          </div>
+        </div>
+      )}
       {durdu && canli && (
         <button type="button" className="cd-donus" onClick={surdur}>
           <Crosshair aria-hidden /> Canlı konuma dön

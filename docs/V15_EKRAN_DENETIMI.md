@@ -77,16 +77,16 @@ Not: YOK sayısının 6'sı tasarım belgesi ekranıdır (A09, K08, P01, W03, X0
 | S02 | sdB (yan yana) | CdV15Gorunum › Bölme yönü "Yan yana" | VAR |  |
 | S03 | sdC (yalnız metin) | Görünüm "Metin" | VAR |  |
 | S04 | sdD (PDF + altyazı şeridi) | — | DOĞRULANMADI | "Altyazı" kipi kodda bulunamadı; büyük olasılıkla YOK |
-| S05 | sdE (odak modu) | ShellV15 odakEkrani + Tam ekran | KISMİ | Kabuk gizleniyor; "yalnız metin + üç düğme, dokununca denetimler" kipi yok |
+| S05 | sdE (odak modu) | ShellV15 odakEkrani + Tam ekran | KURULDU | Odak modu (menü › Diğer): yalnız metin, 3 düğme, dokununca denetimler, Esc/Çık |
 | S06 | sdF (sesli kitap kipi) | — | YOK | Kapak + dalga + uyku zamanlayıcı kipi yok |
 | S07 | sdG (üç bölmeli masa) | — | YOK | PC'de bölümler + PDF + metin üç bölme yok; "Vurgularım" yok |
 | S08 | sdH (okuma ayarları) | CdV15Gorunum › Yazı boyutu | KURULDU | okuma ayarları (satır, yazı tipi, zemin, ortala) |
 | S09 | sdI (bölümler ve işaretler) | CanliDersDers bölüm/aşama listesi | KURULDU | Bölümler + Yıldızlılarım |
 | S10 | sdJ (seçim araç çubuğu) | — | YOK | Cümle seçince Spot yap/Not/Kart/Açıkla/Soru üret çubuğu yok |
-| S11 | sdK (mini oynatıcı + çevrimdışı) | CanliDersDock + CanliDersCevrimdisi | KISMİ | Mini oynatıcı ve çevrimdışı var; v15 biçimi DOĞRULANMADI |
-| S12 | sdL (ders içi ara soru) | CdCikmisChip (çıkmış soru) | KISMİ | Çıkmış chip'iyle soru var; "bölüm sonunda ses durur, tek soru" akışı yok |
-| S13 | sdM (yükleniyor) | CanliDersDers "hazırlanıyor" | KISMİ | Ses iniş halkası ve "metni oku" seçeneği DOĞRULANMADI |
-| S14 | sdN (PDF eşleşmesi yok) | CanliDersDers "bulunamadı" | KISMİ | PDF soluklaşma + "Eşleşme hatası bildir" DOĞRULANMADI |
+| S11 | sdK (mini oynatıcı + çevrimdışı) | CanliDersDock + CanliDersCevrimdisi | KURULDU | mini oynatıcı simge karosu + çevrimdışı/bağlantı kartı (S17) |
+| S12 | sdL (ders içi ara soru) | CdCikmisChip (çıkmış soru) | VAR | "Bölüm sonunda dur" + Pekiştir (S18) ses durur, soru çözülür |
+| S13 | sdM (yükleniyor) | CanliDersDers "hazırlanıyor" | KURULDU | Ders hazırlanıyor iskeleti; ses iniş yüzdesi yok |
+| S14 | sdN (PDF eşleşmesi yok) | CanliDersDers "bulunamadı" | KURULDU | PDF eşleşmesi yok notu: son eşleşen sayfa, orada kal, elle gez (bildir yok) |
 | S15 | sdO (yatay telefon) | — | DOĞRULANMADI | Yatay telefon tek satır oynatıcı kipi kodda görülmedi |
 | S16 | sdP (kilit ekranı) | — | YOK | Sesli derste navigator.mediaSession yok (yalnız asistan/çözücü/müzikte); kilit ekranı altyazı satırı yok |
 | S17 | sdQ (bağlantı koptu) | — | DOĞRULANMADI | Arabellek uyarısı/"Tekrar dene"/indir kartı bulunamadı |
@@ -101,7 +101,7 @@ Not: YOK sayısının 6'sı tasarım belgesi ekranıdır (A09, K08, P01, W03, X0
 | S26 | sdX (ders seçenekleri) | CdV15Menu (gruplar CanliDersDers'ten) | KURULDU | menü gruplu kutucuklar |
 | S27 | sdY (kalem araç kutusu) | CdV15KalemDugme/KalemKutusu | VAR |  |
 | S28 | sdOy (oynatıcı seçenekleri) | eski açılır menü (Hız, Kaç kez) | KURULDU | oynatıcı ⋯ sheet v15 |
-| S29 | sdZ (çizim panelleri) | canlı çizim katmanı | KISMİ | 8 panelden "değer kartı" türü yalnız tasarımda (plan) |
+| S29 | sdZ (çizim panelleri) | canlı çizim katmanı | SIRADA | "değer kartı" çizim paneli içerik hattına (cizim_uret) bağlı; arayüz değil |
 | S30 | sdZ2 (PDF üstü işaretler) | canlı çizim (kontur, ok, lazer) | VAR | DOĞRULANMADI: tüm işaret türleri tek tek sınanmadı |
 
 ## C · Soru çöz

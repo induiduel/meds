@@ -282,3 +282,45 @@
   .cd15-ust { display: none; }
   .cd-altyazi { font-size: 15px; padding: 8px 16px; max-height: 26vh; }
 }
+
+/* S14 PDF eşleşmesi yok notu (PDF bölmesinin altında) */
+.cd-pdf-bolme { position: relative; }
+.cd-eslesme-yok { position: absolute; left: 12px; right: 12px; bottom: 12px; z-index: 5; display: flex; flex-wrap: wrap; align-items: flex-start; gap: 8px 10px; padding: 10px 12px; border-radius: 14px; background: var(--color-warn-soft); color: var(--color-ink); box-shadow: 0 8px 24px -12px rgba(0, 0, 0, .35); }
+.cd-eslesme-yok > svg { width: 18px; height: 18px; flex: none; color: var(--color-warn); margin-top: 2px; }
+.cd-eslesme-yok > div:first-of-type { flex: 1; min-width: 160px; display: flex; flex-direction: column; gap: 2px; }
+.cd-eslesme-yok b { font-size: .88rem; }
+.cd-eslesme-yok small { font-size: .78rem; color: var(--color-ink-2); }
+.cd-eslesme-d { display: flex; gap: 6px; flex-wrap: wrap; }
+.cd-eslesme-d button { min-height: 32px; padding: 0 12px; border-radius: 999px; border: 1px solid var(--color-line); background: var(--color-white); color: var(--color-ink); font: inherit; font-size: .8rem; font-weight: 600; cursor: pointer; }
+
+/* S05 Odak modu: yalnız metin; üst bar, slayt, oynatıcı, kronometre gizli */
+:root[data-cd-odak='on'] :is(.cd15-bas, .cd-ders-bas, .cd-pdf-bolme, .cd-bolme-ayrac, .cd-dock, .kr15z, .v15-tabs, .v15-top, .cd-donus, .cd-tv-iz) { display: none !important; }
+:root[data-cd-odak='on'] .cd-govde { display: block !important; max-width: 720px; margin-inline: auto; padding: 32px 20px 140px; }
+:root[data-cd-odak='on'] .cd-govde > * { height: auto; }
+.cd-odak-d { position: fixed; left: 0; right: 0; bottom: calc(env(safe-area-inset-bottom) + 18px); z-index: 80; display: flex; flex-direction: column; align-items: center; gap: 8px; opacity: 0; pointer-events: none; transition: opacity .25s; }
+.cd-odak-d.is-gor { opacity: 1; pointer-events: auto; }
+.cd-odak-dug { display: flex; align-items: center; gap: 16px; padding: 8px 14px; border-radius: 999px; background: var(--color-white); box-shadow: 0 10px 30px -12px rgba(0, 0, 0, .35); }
+.cd-odak-dug button { width: 44px; height: 44px; border: 0; border-radius: 50%; background: transparent; color: var(--color-ink); display: grid; place-items: center; cursor: pointer; }
+.cd-odak-dug button.is-pl { width: 56px; height: 56px; background: var(--color-accent); color: var(--color-on-accent, #fff); }
+.cd-odak-dug svg { width: 22px; height: 22px; }
+.cd-odak-d small { font-size: .78rem; color: var(--color-ink-3); }
+.cd-odak-d small button { border: 0; background: none; color: var(--color-accent); font: inherit; font-weight: 600; cursor: pointer; padding: 0; }
+@media (prefers-reduced-motion: reduce) { .cd-odak-d { transition: none; } }
+
+/* S13 Ders hazırlanıyor iskeleti */
+.cd-hazir { display: flex; flex-direction: column; gap: 14px; padding: 12px 16px; max-width: 900px; margin: 0 auto; width: 100%; }
+.cd-hazir-pdf { height: 34vh; border-radius: 14px; background: var(--color-field); padding: 18px; display: flex; flex-direction: column; gap: 10px; }
+.cd-hazir i, .cd-hazir-pdf b { display: block; height: 12px; width: 100%; border-radius: 6px; background: var(--color-line-soft, var(--color-line)); animation: cdHazir 1.4s ease-in-out infinite; }
+.cd-hazir-pdf b { height: 60px; margin: 6px 0; }
+.cd-hazir-bas { display: flex; align-items: center; gap: 12px; }
+.cd-hazir-bas div { display: flex; flex-direction: column; gap: 2px; }
+.cd-hazir-bas small { font-size: .8rem; color: var(--color-ink-3); }
+.cd-hazir-metin { display: flex; flex-direction: column; gap: 10px; }
+.cd-hazir-metin i { height: 14px; }
+@keyframes cdHazir { 50% { opacity: .5; } }
+@media (prefers-reduced-motion: reduce) { .cd-hazir i, .cd-hazir-pdf b { animation: none; } }
+
+/* S11 mini oynatıcı: koyu kart + simge karosu (tasarım sdK) */
+.cd-mini-kare { display: none; }
+:root[data-v15='on'] .cd-mini-kare { flex: none; width: 38px; height: 38px; border-radius: 10px; display: grid; place-items: center; background: var(--color-accent); color: var(--color-on-accent, #fff); }
+:root[data-v15='on'] .cd-mini-kare svg { width: 18px; height: 18px; }

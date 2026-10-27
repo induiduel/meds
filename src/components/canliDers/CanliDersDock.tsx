@@ -20,7 +20,7 @@ import { Star } from 'lucide-react';
 import { cdCikmisAc, cikmisSayfada } from './CdCikmisChip';
 import { Sheet } from '../ui/Sheet';
 import { useYildizliParagraflar } from '../../services/yildizliParagrafStore';
-import { MoreHorizontal, WifiOff } from 'lucide-react';
+import { Headphones, MoreHorizontal, WifiOff } from 'lucide-react';
 import { cdTampon, cdYenidenDene } from './canliDersStore';
 import { useCdCevrimdisi } from './canliDersCevrimdisi';
 
@@ -659,6 +659,7 @@ function MiniOynatici() {
   return (
     <div className="cd-mini">
       <div className="cd-mini-ilerleme" aria-hidden><i style={{ transform: `scaleX(${dur ? Math.min(1, t / dur) : 0})` }} /></div>
+      <span className="cd-mini-kare" aria-hidden><Headphones /></span>
       <button type="button" className="cd-mini-ad" onClick={don} aria-label={`Derse dön: ${baslik}`}>
         <b>{no ? `${no} · ` : ''}{baslik}</b>
         <small>{hata || `Sesli ders · ${fmtSure(t)} / ${fmtSure(dur)}`}</small>
