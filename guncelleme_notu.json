@@ -1,11 +1,10 @@
 {
  "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
- "onem": 500,
- "baslik": "Ders sayfası daha derli toplu",
+ "onem": 501,
+ "baslik": "Sesli derste PDF çubuğu gizlenebilir",
  "maddeler": [
-  "Ders içerikleri Dinle ve çalış, Soru çöz, Bilgi kartları gruplarında",
-  "Gruplar açılıp kapanabilir, tercih hatırlanır",
-  "Telefon, tablet ve bilgisayarda kompakt ızgara"
+  "Telefonda PDF araç çubuğu tek dokunuşla gizlenip açılabilir",
+  "Tercih hatırlanır, PDF daha geniş görünür"
  ],
  "eklenen": [],
  "degisen": [],

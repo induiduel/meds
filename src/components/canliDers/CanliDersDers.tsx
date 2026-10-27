@@ -1760,6 +1760,8 @@ function CdPdfBolme({ detay, canli }: { detay: CdDetay; canli: boolean }) {
   const cumle = useCd((s) => (canli ? s.cumle : -1));
   const { durdu, durdur, surdur } = useTakip();
   const [zoom, setZoom] = useState(1);
+  const [barGizli, setBarGizli] = useState(() => { try { return localStorage.getItem('cd_pdf_bar_gizli') === '1'; } catch { return false; } });
+  const barDegis = () => setBarGizli((g) => { try { localStorage.setItem('cd_pdf_bar_gizli', g ? '0' : '1'); } catch { /* yok */ } return !g; });
   const [sayfaTema, setSayfaTema] = useState<'ozgun' | 'temiz' | 'sepya' | 'gece'>(() => {
     try { const v = localStorage.getItem('medsoru_cd_sayfa_tema'); return v === 'temiz' || v === 'sepya' || v === 'gece' ? v : 'ozgun'; } catch { return 'ozgun'; }
   });
@@ -1942,9 +1944,11 @@ function CdPdfBolme({ detay, canli }: { detay: CdDetay; canli: boolean }) {
   useEffect(() => () => setDrawingGlobalState({ activeMode: 'none' }), []);
 
   return (
-    <div className="cd-bolme cd-pdf-bolme">
+    <div className={`cd-bolme cd-pdf-bolme${barGizli ? ' is-bar-gizli' : ''}`}>
       <CdCikmisPencereKok />
+      <button type="button" className="cd-ib cd-bar-tgl is-ac" onClick={barDegis} aria-label="PDF araç çubuğunu göster" title="Araç çubuğunu göster"><ChevronDown /></button>
       <div className="cd-pdf-bar">
+        <button type="button" className="cd-ib cd-bar-tgl is-gizle" onClick={barDegis} aria-label="PDF araç çubuğunu gizle" title="Araç çubuğunu gizle"><ChevronUp /></button>
         <FileText aria-hidden />
         {pdf.sayfaKaynak?.[gor.sayfa - 1] ? (() => {
           // Özet (kırpılmış) PDF: sayfanın asıl dersi ve slayt numarası (Son Prova)
