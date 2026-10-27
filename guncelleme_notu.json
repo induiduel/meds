@@ -1,23 +1,18 @@
 {
  "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
- "onem": 386,
- "baslik": "Nöroloji 2 · Bilinç Bozukluğu Olan Hastaya Yaklaşım Yenilendi",
+ "onem": 387,
+ "baslik": "Yalın (v15): Öğren ve kalan sayfalar",
  "maddeler": [
-  "Sesli ders öğrenci notlarına göre yenilendi: Glasgow koma skalası hesabı, hipoglisemi, beyin ölümü, koma algoritması öne çıkarıldı.",
-  "Ders bu yılın okul slaytlarıyla eşleşiyor; yeni seslendirme ve kelime kelime takip hazır.",
-  "Slaytlar üzerinde konuya uygun 54 açıklayıcı panel ve işaret var; tablolar yalnız işaretleniyor, okumayı bozan çizim yok.",
-  "Soru çözücü ve önem listesinde yalnız özgün sınav belgesinde bulunan çıkmışlar 'çıkmış' olarak gösteriliyor."
+  "Öğren destesi v15'te odak ekranı: üst çubuk ve alt sekmeler dersin çubuklarını artık örtmüyor.",
+  "Öğren etkileşimleri (mini soru, boşluk, zincir, tablo, kartlar) yeni sade görünümde.",
+  "Başarımlar, İstatistiklerim, Olası sorular, KMB ve Güncelleme günlüğünde başlık üst çubukta; tekrar eden başlıklar kaldırıldı."
  ],
- "eklenen": [
-  "k2-02 sesli ders v2",
-  "yayinla.py kaynak kimliği esnek eşleme (H88)",
-  "denetle.py şık açıklama kapısı (H86)"
- ],
+ "eklenen": [],
  "degisen": [
-  "src/utils/appearance.ts",
-  "src/components/shell/*",
-  "src/router.ts",
-  "src/siteHaritasi.ts"
+  "src/components/v15/ShellV15.tsx",
+  "src/styles/v15/ogren.css",
+  "src/styles/v15/shell.css",
+  "src/components/learn/lesson/LessonPlayer.tsx"
  ],
  "duzeltilen": [
   "Tireyle bitişik yazılan kısaltmalar (DSM-5, MAO-A, HIV-1, 5-HTTLPR) artık slaytta doğru yerde işaretleniyor.",

@@ -79,6 +79,7 @@ import { selectionContext, useLearnSocial } from './learnSocial';
 import { ComposerReq, ReportReq, ReportSheet, setSocialVisible, SocialProvider, StepSocial, ThreadSheet, useSocialVisible } from './LearnSocialUI';
 import '../../../styles/learn-v10.css';
 import '../../../styles/v12/lesson.css';
+import '../../../styles/v15/ogren.css';
 import { useAppearance, setAppearance } from '../../../utils/appearance';
 
 // Gece modu: dersten çıkmadan Koyu ↔ son açık tema (Açık/Sarı) arasında geçer.

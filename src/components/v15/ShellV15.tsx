@@ -134,6 +134,12 @@ const Mark: React.FC = () => (
 /* =============================================================================
  * Yan menü (≥1024) ve ray (600–1023)
  * ============================================================================= */
+/** Odak ekranı: sesli ders ve açık Öğren destesi kendi üst/alt çubuklarını çizer; kabuk üst bar ve sekmeleri çizmez */
+const odakEkrani = (active: string) => {
+  const yol = icKonum().pathname;
+  return (active === 'canli_ders' && yol.startsWith('/canliders/')) || (active === 'learn' && /^\/ogren\/[^/]+/.test(yol));
+};
+
 export const SideNavV15: React.FC<SideNavProps> = ({ active, onGo, isAdmin, user }) => {
   const { collapsed, setCollapsed } = useSideCollapse();
   const wide = useMedia('(min-width: 1024px)');
@@ -292,7 +298,7 @@ export const TopBarV15: React.FC<TopBarProps> = ({ active, onGo, user, isAdmin, 
   const sec = sectionOf(active);
   const sayfa = useV15BaslikOku();
   // Odak ekranı: sesli ders açıkken kendi üst barını kullanır (tasarım sistemi v15 › Kabuk)
-  const odak = active === 'canli_ders' && icKonum().pathname.startsWith('/canliders/');
+  const odak = odakEkrani(active);
   const title = sayfa?.baslik || (active === 'today' ? greeting(user) : ROUTE_TITLES[active]);
   const sub =
     sayfa?.alt ??
@@ -428,7 +434,7 @@ export const TabBarV15: React.FC<TabBarProps> = ({ active, onGo, isAdmin, onPdf,
     onGo(r);
   };
   // Odak ekranı (sesli ders): alt sekme yerine oynatıcı durur
-  if (active === 'canli_ders' && icKonum().pathname.startsWith('/canliders/')) return null;
+  if (odakEkrani(active)) return null;
 
   return (
     <>

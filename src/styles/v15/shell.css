@@ -178,3 +178,12 @@
 /* Ortak PageToolbar (eski sayfalar, ör. Kazanımlar): başlık üst barda; sayaç kalır */
 :root[data-v15='on'] .pt-title > .pt-h { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
 :root[data-v15='on'] .pt-search, :root[data-v15='on'] .pt-pill, :root[data-v15='on'] .pt-icon { border-radius: 999px; }
+
+/* Kişisel sayfalar (Başarımlar, İstatistiklerim): sayfa başlığı üst barda; alt satır/rozetler kalır */
+:root[data-v15='on'] :is(.bs-bas-ust h1, .stv-title h1) { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+:root[data-v15='on'] .stv-title p { font-size: .85rem; color: var(--color-ink-3); }
+
+/* Olası sorular, KMB, Güncelleme günlüğü: sayfa başlığı ve simgesi üst barda; açıklama kısa satır */
+:root[data-v15='on'] :is(.os-bas-m, .kmb-baslik, .gg-bas-m) h1 { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+:root[data-v15='on'] :is(.os-bas, .gg-bas) > :first-child:not(.os-bas-m):not(.gg-bas-m) { display: none; }
+:root[data-v15='on'] :is(.os-bas-m, .gg-bas-m, .kmb-baslik) p { font-size: .88rem; color: var(--color-ink-3); }

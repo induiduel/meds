@@ -56,3 +56,13 @@
   & .ls-root .ls-next:hover { background: var(--color-accent-hover); }
 }
 @media (max-width: 599px) { .o15-eylem :is(button, a) > :not(svg) { display: none; } .o15-eylem :is(button, a) { padding: 0 10px; } }
+
+/* v15 · Öğren etkileşimleri (LessonBlocks: mini soru, boşluk, zincir, tablo, tuzak avı, eşleme…): düz kart, büyük yarıçap,
+   hap düğmeler, okuma yazısıyla soru kökü; davranış değişmez */
+:root[data-v15='on'][data-design] .ls-ix { border-radius: var(--v15-r-lg, 16px); border-color: var(--color-line-soft, var(--color-line)); background: var(--color-surface); box-shadow: none; }
+:root[data-v15='on'][data-design] .ls-ix-head { border-bottom-color: var(--color-line-soft, var(--color-line)); }
+:root[data-v15='on'][data-design] .ls-ix-head > svg { border-radius: 10px; background: var(--color-accent-soft, var(--color-field)); color: var(--color-accent); }
+:root[data-v15='on'][data-design] .ls-ix-q { font-family: var(--v15-serif, 'Newsreader', Georgia, serif); font-size: 1.08rem; line-height: 1.5; }
+:root[data-v15='on'][data-design] .ls-btn { border-radius: 999px; }
+:root[data-v15='on'][data-design] :is(.ls-optcard, .ls-chain > *, .ls-flip-face) { border-radius: var(--v15-r-md, 12px); }
+:root[data-v15='on'][data-design] .ls-table { border-radius: var(--v15-r-md, 12px); overflow: hidden; }

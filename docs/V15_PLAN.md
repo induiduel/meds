@@ -110,6 +110,10 @@ Yeni bileşen önce buraya eklenir; sayfa CSS'i yalnız yerleşim yazar.
 - Başvuru iç sayfaları: Hastalıklar (DiseasesV12, sözlük katmanı `styles/v15/sozluk.css`), Kazanımlar (ortak PageToolbar kuralı
   `styles/v15/shell.css`: v15'te `.pt-h` başlığı üst barda, sayaç kalır — PageToolbar kullanan tüm eski sayfalara yayılır),
   Sağlık Bakanlığı (`styles/v15/saglik.css`, giriş bloğu simge/etiket/başlık gizli).
+- Kişisel: Başarımlar ve İstatistiklerim başlığı üst barda (`styles/v15/shell.css`); Profil ve ayarlar yapısı (kullanıcı başlığı + sekmeler) tasarıma uygun, değişmedi.
+- Dağıtım: 2026-10-27 commit bdaeb994, onem 385 (v15 isteğe bağlı).
+- Öğren etkileşimleri (B07): `styles/v15/ogren.css` etkileşim katmanı (ls-ix kart, hap düğme, Newsreader soru kökü); katman artık LessonPlayer'da da yüklenir (derin bağlantıyla açılan destede eksikti). Açık deste odak ekranı (ShellV15 `odakEkrani`: üst bar + sekmeler gizli, dersin kendi çubukları).
+- Olası sorular, KMB, Güncelleme günlüğü: başlık/simge üst barda (`styles/v15/shell.css`). Takvim sayfası sitede yok (`/takvim` → soru ekle); tasarımdaki D06 yeni sayfa olarak bekliyor.
 
 ## Kalan iç sayfalar (kullanıcı kararı 2026-10-27: eski görünümün hepsi v15'e geçecek)
 Tasarımı olan: sesli ders listesi (B04), Öğren etkileşimleri (B07), spotlar (B08), önem (B09), sözlük (B10), notlar (B11),
