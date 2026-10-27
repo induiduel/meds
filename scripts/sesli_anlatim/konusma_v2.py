@@ -42,6 +42,20 @@ VURGU_TUR = {"terim", "sayi", "tuzak", "cikmis", "tanim"}
 CUMLE = re.compile(r"(?<=[.!?])\s+(?=[A-ZÇĞİÖŞÜ0-9\"“(])")
 
 
+def _cumle_sayisi(metin):
+    """Sunucu/istemci cümle bölmesiyle (pdf_hizala.cumle_sinirlari, canliDersStore.ts::cumleSinirlari) aynı kural."""
+    out = []
+    for m in re.finditer(r"[.!?…]+[\"'”’)\]]*(?:\s+|$)", metin):
+        e = m.end()
+        if e < len(metin) and metin[e].islower():
+            continue
+        if e > (out[-1] if out else 0):
+            out.append(e)
+    if not out or out[-1] < len(metin):
+        out.append(len(metin))
+    return len(out)
+
+
 def cumlelere(paragraf):
     return [c.strip() for c in CUMLE.split(paragraf.strip()) if c.strip()]
 
@@ -84,6 +98,7 @@ def dogrula(d, kaynak_sayfalar=None, kaynak_metin=None):
                 if not ses or not ekran: h.append(f"{i}: ses/ekran boş"); continue
                 # yalnız markdown işaretleri (tıbbi gösterim serbest: "2n = 46", "benzo[a]piren")
                 if re.search(r"\*\*|==|`|\||^\s*[#>]|^\s*-\s|\[\[", ses): h.append(f"{i}: ses metninde işaretleme (okunur)")
+                if _cumle_sayisi(ses) != 1: h.append(f"{i}: ses birden çok cümle içeriyor ({_cumle_sayisi(ses)}); her v2 cümlesi tek cümle olmalı (H109)")
                 if ses.endswith(("...", "…")) or ekran.endswith(("...", "…")): h.append(f"{i}: kesik metin")
                 if len(ekran.replace("**", "").split()) > 28: h.append(f"{i}: ekran maddesi 28 kelimeden uzun")
                 if c.get("duzey", 0) not in (0, 1, 2): h.append(f"{i}: duzey 0–2")
