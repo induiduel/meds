@@ -7,6 +7,7 @@ import React, { Suspense, lazy, useEffect, useMemo, useRef, useState } from 'rea
 import {
   ChevronDown, ChevronLeft, ChevronRight, ChevronUp, Columns2, Download, ExternalLink, FileText, FileX, MapPin, Maximize, Maximize2, Minimize, Moon, MoreHorizontal,
   CloudDownload, CloudOff, MoveHorizontal, MoveVertical, PanelLeft, RotateCw, Search, Upload, ZoomIn, ZoomOut, X,
+  Bookmark, BookmarkCheck, LayoutGrid, SplitSquareHorizontal,
 } from 'lucide-react';
 import type { InteractiveDeck, SlideItem } from './InteractiveDeckView';
 import { getSlidePdfLocation } from '../../services/slidePdfMappingService';
@@ -42,6 +43,13 @@ const loadPrefs = (): ViewPrefs => {
   } catch {
     return d;
   }
+};
+/** İşaretli sayfalar (tasarım O05 "İşaretli"): PDF adresi (sorgusuz) → sayfa listesi, cihazda */
+const ISARET_KEY = 'medsoru_pdf_isaret_v1';
+const isaretAnahtar = (src: string) => src.split('?')[0].replace(/^blob:.*/, '');
+const isaretOku = (src: string): number[] => { try { return JSON.parse(localStorage.getItem(ISARET_KEY) || '{}')[isaretAnahtar(src)] || []; } catch { return []; } };
+const isaretYaz = (src: string, l: number[]) => {
+  try { const o = JSON.parse(localStorage.getItem(ISARET_KEY) || '{}'); if (l.length) o[isaretAnahtar(src)] = l; else delete o[isaretAnahtar(src)]; localStorage.setItem(ISARET_KEY, JSON.stringify(o)); } catch { /* dolu */ }
 };
 const ZOOM_MIN = 0.5;
 const ZOOM_MAX = 4;
@@ -101,6 +109,9 @@ export const DeckPdfViewer: React.FC<DeckPdfViewerProps> = ({
   const [rotation, setRotation] = useState(0);
   const [moreOpen, setMoreOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
+  const [izgara, setIzgara] = useState<null | { sadece: boolean }>(null);
+  const [ikinci, setIkinci] = useState<number | null>(null);
+  const [isaretler, setIsaretler] = useState<number[]>([]);
   const [query, setQuery] = useState('');
   const [debounced, setDebounced] = useState('');
   const [search, setSearch] = useState<SearchState>(null);
@@ -334,7 +345,22 @@ export const DeckPdfViewer: React.FC<DeckPdfViewerProps> = ({
           thumbs={prefs.thumbs}
           query={debounced}
           onSearch={setSearch}
+          izgara={izgara ? { isaretli: isaretler, sadece: izgara.sadece, onKapat: () => setIzgara(null) } : null}
         />
+        {ikinci != null && (
+          <div className="dpv-ikinci" aria-label="Karşılaştırılan sayfa">
+            <form className="dpv-ikinci-ust" onSubmit={(e) => e.preventDefault()}>
+              <span>Karşılaştır</span>
+              <button type="button" className="dpv-ib" onClick={() => setIkinci(Math.max(1, ikinci - 1))} aria-label="Önceki sayfa"><ChevronLeft aria-hidden /></button>
+              <input inputMode="numeric" value={ikinci} onChange={(e) => { const v = parseInt(e.target.value, 10); if (v > 0) setIkinci(Math.min(numPages || v, v)); }} aria-label="Karşılaştırılan sayfa numarası" />
+              <small>/ {numPages || '…'}</small>
+              <button type="button" className="dpv-ib" onClick={() => setIkinci(Math.min(numPages || ikinci + 1, ikinci + 1))} aria-label="Sonraki sayfa"><ChevronRight aria-hidden /></button>
+              <span className="e12-grow" />
+              <button type="button" className="dpv-ib" onClick={() => setIkinci(null)} aria-label="Karşılaştırmayı kapat"><X aria-hidden /></button>
+            </form>
+            <PdfDocView src={appSrc} page={ikinci} zoom={1} fit="page" rotation={rotation} onVisiblePage={(p) => setIkinci(p)} />
+          </div>
+        )}
       </Suspense>
     );
   } else if (appSrc && failed) {
@@ -380,6 +406,14 @@ export const DeckPdfViewer: React.FC<DeckPdfViewerProps> = ({
   }
 
   const canNav = !!appSrc && !failed;
+  const isaretli = !!appSrc && isaretler.includes(page);
+  const isaretDegis = () => {
+    if (!appSrc) return;
+    const n = isaretli ? isaretler.filter((x) => x !== page) : [...isaretler, page].sort((x, y) => x - y);
+    setIsaretler(n); isaretYaz(appSrc, n);
+    toast.success(isaretli ? 'İşaret kaldırıldı' : `Sayfa ${page} işaretlendi`, isaretli ? '' : 'Izgarada "İşaretli" ile bulursun');
+  };
+  useEffect(() => { setIsaretler(appSrc ? isaretOku(appSrc) : []); setIzgara(null); setIkinci(null); }, [appSrc]);
   const byFolder = !!info && new Set(info.files.map((f) => f.folder)).size === info.files.length;
   const hits = search?.hits ?? [];
   const goHit = (i: number) => {
@@ -452,6 +486,13 @@ export const DeckPdfViewer: React.FC<DeckPdfViewerProps> = ({
             <button type="button" className={`dpv-ib${searchOpen ? ' is-on' : ''}`} onClick={() => (searchOpen ? setSearchOpen(false) : openSearch())} title="PDF'te ara (Ctrl+F)" aria-pressed={searchOpen}>
               <Search aria-hidden />
             </button>
+          )}
+          {canNav && (
+            <>
+              <button type="button" className={`dpv-ib${izgara ? ' is-on' : ''}`} onClick={() => setIzgara((v) => (v ? null : { sadece: false }))} title="Sayfa ızgarası" aria-pressed={!!izgara}><LayoutGrid aria-hidden /></button>
+              <button type="button" className={`dpv-ib${isaretli ? ' is-on' : ''}`} onClick={isaretDegis} title={isaretli ? 'İşareti kaldır' : 'Bu sayfayı işaretle'} aria-pressed={isaretli}>{isaretli ? <BookmarkCheck aria-hidden /> : <Bookmark aria-hidden />}</button>
+              <button type="button" className={`dpv-ib${ikinci != null ? ' is-on' : ''}`} onClick={() => setIkinci((v) => (v != null ? null : Math.min(numPages || page + 1, page + 1)))} title="İki sayfayı yan yana karşılaştır" aria-pressed={ikinci != null}><SplitSquareHorizontal aria-hidden /></button>
+            </>
           )}
           {onToggleSplitView && !fsOn && (
             <button type="button" className={`dpv-ib${isSplitView ? ' is-on' : ''}`} onClick={onToggleSplitView} title={isSplitView ? 'PDF tüm alanı kaplasın' : 'Ders ile yan yana'} aria-pressed={isSplitView}>
@@ -650,7 +691,21 @@ export const DeckPdfViewer: React.FC<DeckPdfViewerProps> = ({
         </div>
       )}
 
-      <div className="dpv-body">{body}</div>
+      <div className={`dpv-body${ikinci != null ? ' is-ikili' : ''}${izgara ? ' is-izgara' : ''}`}>
+        {izgara && canNav && (
+          <div className="dpv-izgara-ust">
+            <b>Sayfalar</b>
+            <small>{numPages ? `${numPages} sayfa · ` : ''}{isaretler.length} işaretli</small>
+            <span className="e12-grow" />
+            <div className="dpv-seg" role="tablist" aria-label="Sayfa süzgeci">
+              <button type="button" role="tab" aria-selected={!izgara.sadece} onClick={() => setIzgara({ sadece: false })}>Tümü</button>
+              <button type="button" role="tab" aria-selected={izgara.sadece} onClick={() => setIzgara({ sadece: true })} disabled={!isaretler.length}>İşaretli</button>
+            </div>
+            <button type="button" className="dpv-ib" onClick={() => setIzgara(null)} aria-label="Izgarayı kapat"><X aria-hidden /></button>
+          </div>
+        )}
+        {body}
+      </div>
     </div>
   );
 };

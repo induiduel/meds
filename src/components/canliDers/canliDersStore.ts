@@ -7,6 +7,7 @@
  * Durum `useCd(seçici)` ile okunur; seçici ilkel değer döndürmeli (her çağrıda yeni nesne → sonsuz çizim).
  * Zaman (t) çalarken her karede güncellenir; paragraf/cümle dizini yalnız değişince değişir (metin listesi yeniden çizilmez).
  */
+import { ekranUyanik } from '../../services/ekranUyanik';
 import { ekranYazimiEslemeli } from '../../services/ekranYazim';
 import { useSyncExternalStore } from 'react';
 import { getCustomApiUrl, safeJsonFetch } from '../../services/api';
@@ -636,15 +637,15 @@ function ses(): HTMLAudioElement {
   pitch(a);
   a.addEventListener('play', () => {
     kullaniciDurdurdu = false;
-    set({ playing: true, hata: null }); loopBaslat();
+    set({ playing: true, hata: null }); loopBaslat(); ekranUyanik(true);
     // Medya oturumunu müzik çalardan geri al (yoksa arka planda bildirim/kulaklık "oynat" müziği başlatır)
     (window as any).__medsorMsSahip = 'canli';
     window.dispatchEvent(new Event('medsor:canli-ders-oynuyor'));
     msKur(); msMeta(); msDurum();
   });
-  a.addEventListener('pause', () => { set({ playing: false }); tick(); konumKaydet(); msDurum(); });
+  a.addEventListener('pause', () => { ekranUyanik(false); set({ playing: false }); tick(); konumKaydet(); msDurum(); });
   // Bitirdiklerim: dersin sonuna kadar dinlenince konu "bitti" olur
-  a.addEventListener('ended', () => { if (st.key) konuBitir('sesli', st.key); set({ playing: false }); konumKaydet(true); msDurum(); bitinceFn?.(); });
+  a.addEventListener('ended', () => { ekranUyanik(false); if (st.key) konuBitir('sesli', st.key); set({ playing: false }); konumKaydet(true); msDurum(); bitinceFn?.(); });
   // Bitirdiklerim: ses çalarken (sekme arka planda da) konunun dinleme süresi
   window.setInterval(() => { if (st.playing && st.key && !st.bekliyor) sureEkle('sesli', st.key, 5); }, 5000);
   a.addEventListener('timeupdate', () => { if (!raf) tick(); });

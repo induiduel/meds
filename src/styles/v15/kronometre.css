@@ -134,3 +134,9 @@
 @media (max-width: 420px) { .kre-sat.is-sec { flex-wrap: wrap; } .kre-seg { width: 100%; } .kre-seg button { flex: 1; } }
 .kre { bottom: auto; height: 100vh; height: 100lvh; }
 :root.tam-katman .v15-tabs, :root.tam-katman .kr15z { display: none !important; }
+/* Tam ekran ve kısayollar (TamEkranAyarV15) — kre-* ayar satırlarını paylaşır */
+.te15-kl { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; }
+.te15-kl li { display: flex; justify-content: space-between; align-items: center; gap: 10px; padding: 8px 0; font-size: .92rem; }
+.te15-kl li + li { border-top: 1px solid var(--color-line-soft, var(--color-line)); }
+.te15-kl kbd { font: 600 12px/1 var(--font-sans); padding: 5px 8px; border-radius: 7px; background: var(--color-field); border: 1px solid var(--color-line); color: var(--color-ink); white-space: nowrap; }
+.kre-tgl:disabled { opacity: .45; cursor: default; }

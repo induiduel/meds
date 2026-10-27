@@ -55,6 +55,8 @@ export interface PdfDocViewProps {
   /** sayfa altına eklenecek boş alan (sayfa yüksekliği oranı) ve zemin rengi: sayfaya sığmayan çizim paneli buraya
    *  konur (cizim_uret ek_alt). Sayfanın kendi kutusu ve işaret koordinatları değişmez; alan sayfanın altına eklenir. */
   ekAlt?: Record<number, { h: number; renk?: string }> | null;
+  /** Sayfa ızgarası (tasarım O05): tüm alanı kaplayan önizleme ızgarası; işaretli sayfalarda yer imi, "sadece" ile yalnız onlar */
+  izgara?: { isaretli: number[]; sadece?: boolean; onKapat: () => void } | null;
 }
 
 export interface PdfMarks {
@@ -203,7 +205,7 @@ interface Slot {
   textFor?: number; // metin katmanı kuruldu (döndürme)
 }
 
-export default function PdfDocView({ src, page, highlight, highlightLabel = 'Bu adımın kaynağı', zoom, onZoom, onVisiblePage, onLoaded, onError, fit = 'width', rotation = 0, thumbs = false, query = '', onSearch, marks = null, preload, notes = null, pageOverlay, ekAlt = null }: PdfDocViewProps) {
+export default function PdfDocView({ src, page, highlight, highlightLabel = 'Bu adımın kaynağı', zoom, onZoom, onVisiblePage, onLoaded, onError, fit = 'width', rotation = 0, thumbs = false, query = '', onSearch, marks = null, preload, notes = null, pageOverlay, ekAlt = null, izgara = null }: PdfDocViewProps) {
   const scrollRef = useRef<HTMLDivElement>(null);
   const [doc, setDoc] = useState<PDFDocumentProxy | null>(null);
   const [sizes, setSizes] = useState<{ w: number; h: number }[]>([]);
@@ -629,8 +631,9 @@ export default function PdfDocView({ src, page, highlight, highlightLabel = 'Bu 
 
   return (
     <>
-    {thumbs && doc && (
-      <PdfThumbs doc={doc} getPage={getPage} dims={dims} rot={rot} current={current} onPick={(p) => { lastTarget.current = p; visible.current = p; setCurrent(p); goTo(p, false); cb.current.onVisiblePage?.(p); }} />
+    {(thumbs || izgara) && doc && (
+      <PdfThumbs doc={doc} getPage={getPage} dims={dims} rot={rot} current={current} izgara={izgara}
+        onPick={(p) => { lastTarget.current = p; visible.current = p; setCurrent(p); goTo(p, false); cb.current.onVisiblePage?.(p); izgara?.onKapat(); }} />
     )}
     <div className="pdv" ref={scrollRef} onScroll={schedule} tabIndex={0} aria-label="PDF sayfaları">
       {progress !== null && (
@@ -685,7 +688,8 @@ function markHits(layer: HTMLElement, q: string) {
 const THUMB_W = 92;
 
 /** Küçük sayfa önizlemeleri: görünür olanlar düşük çözünürlükte bir kez çizilir. */
-function PdfThumbs({ doc, getPage, dims, rot, current, onPick }: {
+function PdfThumbs({ doc, getPage, dims, rot, current, onPick, izgara = null }: {
+  izgara?: PdfDocViewProps['izgara'];
   doc: PDFDocumentProxy;
   getPage: (n: number) => Promise<PDFPageProxy>;
   dims: { w: number; h: number }[];
@@ -728,7 +732,7 @@ function PdfThumbs({ doc, getPage, dims, rot, current, onPick }: {
     );
     list.querySelectorAll('.pdv-thumb-c').forEach((el) => io.observe(el));
     return () => io.disconnect();
-  }, [doc, getPage, rot, dims.length]);
+  }, [doc, getPage, rot, dims.length, izgara?.sadece]);
 
   // Geçerli sayfa önizlemesi görünür kalsın
   useEffect(() => {
@@ -740,12 +744,16 @@ function PdfThumbs({ doc, getPage, dims, rot, current, onPick }: {
   }, [current]);
 
   return (
-    <div className="pdv-thumbs" ref={listRef} aria-label="Sayfa önizlemeleri">
+    <div className={`pdv-thumbs${izgara ? ' is-izgara' : ''}`} ref={listRef} aria-label={izgara ? 'Sayfa ızgarası' : 'Sayfa önizlemeleri'}>
       {dims.map((d, i) => {
         const n = i + 1;
+        const isaret = !!izgara?.isaretli.includes(n);
+        if (izgara?.sadece && !isaret) return null;
         return (
-          <button key={n} type="button" data-thumb={n} className={`pdv-thumb${n === current ? ' is-on' : ''}`} onClick={() => onPick(n)} aria-label={`Sayfa ${n}`} aria-current={n === current ? 'page' : undefined}>
-            <span className="pdv-thumb-c" data-page={n} style={{ width: THUMB_W, height: Math.round((THUMB_W * d.h) / d.w) }} />
+          <button key={n} type="button" data-thumb={n} className={`pdv-thumb${n === current ? ' is-on' : ''}`} onClick={() => onPick(n)} aria-label={`Sayfa ${n}${isaret ? ', işaretli' : ''}`} aria-current={n === current ? 'page' : undefined}>
+            <span className="pdv-thumb-c" data-page={n} style={{ width: THUMB_W, height: Math.round((THUMB_W * d.h) / d.w) }}>
+              {isaret && <i className="pdv-isaret" aria-hidden />}
+            </span>
             <small>{n}</small>
           </button>
         );

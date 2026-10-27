@@ -28,6 +28,7 @@ import {
   UserRound,
   X,
   GraduationCap,
+  Maximize,
 } from 'lucide-react';
 import { AppUser, updateUserProfileData, setOrUpdateAccountPassword, sendPasswordReset } from '../../services/auth';
 import { pwaService } from '../../services/pwaService';
@@ -86,6 +87,8 @@ import { ProgressResetRow } from '../settings/ProgressResetRow';
 import { erisimYaz, useErisim } from '../../utils/erisilebilirlik';
 import { useV15Baslik } from '../v15/baslik';
 import { useProfil } from '../../services/profilKurulum';
+import TamEkranAyarV15 from '../v15/TamEkranAyarV15';
+import '../../styles/v15/kronometre.css';
 import { profilKurulumAc } from '../v15/ProfilKurulumV15';
 import '../../styles/v15/profil.css';
 import { getStatsAttempts } from '../../services/progressReset';
@@ -114,7 +117,7 @@ export interface ProfileV12Props {
 }
 
 type Tab = 'genel' | 'katki' | 'kayit' | 'hesap' | 'veri' | 'erisim';
-type View = Tab | 'gorunum' | 'menu';
+type View = Tab | 'gorunum' | 'menu' | 'tamekran';
 
 const TABS: { id: Tab; label: string }[] = [
   { id: 'genel', label: 'Genel bakış' },
@@ -412,7 +415,7 @@ export const ProfileV12: React.FC<ProfileV12Props> = ({ currentUser, isAdmin, qu
   const [view, setView0] = useState<View>(() => {
     const h = typeof window !== 'undefined' ? window.location.hash.replace('#', '') : '';
     if (v15 && !h) return 'menu';
-    return h === 'gorunum' ? 'gorunum' : h === 'hesap' ? 'hesap' : h === 'erisim' ? 'erisim' : h === 'veri' ? 'veri' : 'genel';
+    return h === 'gorunum' ? 'gorunum' : h === 'hesap' ? 'hesap' : h === 'erisim' ? 'erisim' : h === 'veri' ? 'veri' : h === 'tamekran' ? 'tamekran' : 'genel';
   });
   // v15: her bölüm kendi ekranı; adres #bolum, üst bardaki Geri ve tarayıcı geri listeye (#'siz) döner
   const setView = (v: View) => {
@@ -425,7 +428,7 @@ export const ProfileV12: React.FC<ProfileV12Props> = ({ currentUser, isAdmin, qu
     window.addEventListener('popstate', f); window.addEventListener('hashchange', f);
     return () => { window.removeEventListener('popstate', f); window.removeEventListener('hashchange', f); };
   }, [v15]);
-  const BOLUM_AD: Record<View, string> = { menu: 'Profil ve ayarlar', genel: 'Genel bakış', katki: 'Katkılarım', kayit: 'Kaydettiklerim', hesap: 'Hesap', veri: 'Veriler ve gizlilik', erisim: 'Erişilebilirlik', gorunum: 'Görünüm ve tasarım' };
+  const BOLUM_AD: Record<View, string> = { menu: 'Profil ve ayarlar', genel: 'Genel bakış', katki: 'Katkılarım', kayit: 'Kaydettiklerim', hesap: 'Hesap', veri: 'Veriler ve gizlilik', erisim: 'Erişilebilirlik', gorunum: 'Görünüm ve tasarım', tamekran: 'Tam ekran ve kısayollar' };
   useV15Baslik(v15 ? (view === 'menu' ? { baslik: 'Profil ve ayarlar' } : { baslik: BOLUM_AD[view], alt: 'Profil ve ayarlar', geri: '/ayarlar' }) : null);
   const ed = useProfileEditor(currentUser, onUpdateUser);
   const [cropFile, setCropFile] = useState<File | null>(null);
@@ -466,6 +469,7 @@ export const ProfileV12: React.FC<ProfileV12Props> = ({ currentUser, isAdmin, qu
       {view === 'veri' && <DataPanel onOpenOffline={onOpenOffline} />}
       {view === 'erisim' && <ErisimPanel />}
       {view === 'gorunum' && <AppearancePanel />}
+      {view === 'tamekran' && <TamEkranAyarV15 />}
     </>
   );
   const dosyaGirdi = (
@@ -524,6 +528,7 @@ export const ProfileV12: React.FC<ProfileV12Props> = ({ currentUser, isAdmin, qu
             <h2 className="pf15-h">Ayarlar</h2>
             <ul className="pf15-liste v15-card">
               {satir('gorunum', PaletteIcon, 'Görünüm ve tasarım', 'Tasarım, tema, palet, yazı boyutu', () => setView('gorunum'), '#AF52DE')}
+              {satir('tamekran', Maximize, 'Tam ekran ve kısayollar', 'Tam ekran, ekran kararmasın, klavye', () => setView('tamekran'), '#0A84FF')}
               {satir('erisim', Accessibility, 'Erişilebilirlik', 'Hareket, kontrast, satır aralığı, odak', () => setView('erisim'), '#5E5CE6')}
               {satir('hesap', Lock, 'Hesap', 'Ad, fotoğraf, şifre, oturum', () => setView('hesap'), '#64748B')}
               {satir('veri', Database, 'Veriler ve gizlilik', 'Eşitleme, bildirimler, indir, sıfırla', () => setView('veri'), '#FF3B30')}
