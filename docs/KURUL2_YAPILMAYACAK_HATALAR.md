@@ -983,3 +983,11 @@ Her maddede: belirti · kök neden · Kurul 2 kuralı · kapı durumu. Kanıtlar
 - **Kök neden:** slayt satırı sırasıyla yazılırken ses dinleyicisinin görmediği ayrım (tip/tür) ve kilit kavramın önceden tanımı atlandı; Hoca atfı "her yerde ekleyelim" refleksiyle kuruldu.
 - **Çözüm:** kollajen için "birinci/üçüncü tür", hastalık için "birinci tip" kullanıldı; okuma çerçevesi ve distrofin işlevi kısaca tanımlandı; somit türevleri, kraniyoraşizis tanımı düzeltildi; W harfi "duble ve" okunur; yalnız yeni bilgi (ayırt edici vurgu, klinik örnek, tedavi) taşıyan hoca atıfları kaldı. Tur 2 GEÇER (%90 yanıtlanabilirlik).
 - **Kural:** sesle okunan metinde aynı sözcük iki ayrı kavramı gösteriyorsa yazım ayrıştırılır; sayısal/ekzon gibi kavram ancak tanımından sonra kullanılır; "hoca da ... söyledi" yalnız slaytın vermediği ek bilgi ya da sınav vurgusu içerdiğinde yazılır.
+
+## H110 · Birleştiriciler yeni ders eklerken branştaki eski dersin dosyalarını da yeniden yazıyor (2026-10-27, k2-05 Nörolojik Muayene)
+- **Belirti:** `birlestir.py k2noroloji --taslak` ve `asistan_birlestir.py k2noroloji` sonrası `git status`ta k2-02'nin (2n02) önem/çözücü/asistan
+  dosyaları ve indeks satırları değişmişti (önem `cikmis`, çözücü/asistan `klip` alanı, asistan indeksinde `ses`/`sure`); k2-02'ye dokunulmamıştı.
+- **Kök neden:** birleştiriciler branştaki TÜM dersleri çalışma klasöründen ve yerel ses dosyalarının o anki durumundan yeniden üretir.
+  `korumali` yalnız içerik küçülmesini (%10) yakalar, başka dersin içerik farkını değil.
+- **Kural:** elle zincirde her birleştirmeden sonra `git diff --stat`; yalnız yeni dersin dosyaları ve indeksteki yeni ders satırı sahnelenir;
+  eski dersin dosyaları `git checkout` ile geri alınır, indekste eski ders satırı HEAD'den korunur (bilerek yapılan toplu yenileme hariç).
