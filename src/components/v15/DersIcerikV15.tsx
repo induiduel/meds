@@ -5,7 +5,10 @@ import {
 } from 'lucide-react';
 import { linkClick, navigateTo, pathFor } from '../../router';
 import { DI_BOLUMLER, dersIcerikGetir, dersSorulariGetir, type DiBolum, type DiPaket, type DiSoru, type DiTablo } from './dersIcerik';
+import { FavBaglam, FavDugme } from './FavDugme';
 import '../../styles/v15/dersIcerik.css';
+
+const SL = (s: unknown): number[] => (Array.isArray(s) ? s : s ? [s as number] : []).filter((v) => typeof v === 'number');
 
 /**
  * Ders içerik sayfaları (/dersler/ders/kurulN/<key>?b=terimler|hastaliklar|bilgiler|tablolar|sorular|kartlar), v15.
@@ -136,6 +139,7 @@ export default function DersIcerikV15({ dersKey, bolum }: { dersKey: string; bol
   const altSec = (ilk: string) => alt || ilk;
 
   return (
+    <FavBaglam.Provider value={{ dersKey, ders: p.baslik || dersKey, bolum }}>
     <div className="di15">
       <div className="di15-seritkap">
       {serit.kenar.sol && <button type="button" className="di15-ser-ok is-sol" onClick={() => serit.kaydir(-1)} aria-label="Sola kaydır"><ChevronLeft aria-hidden /></button>}
@@ -190,6 +194,7 @@ export default function DersIcerikV15({ dersKey, bolum }: { dersKey: string; bol
                     <div className="di15-terim-u"><span className="di15-harf" aria-hidden>{x.t.charAt(0)}</span><b>{x.t}</b></div>
                     {x.e.length > 0 && <div className="di15-cipler">{x.e.map((e) => <span key={e}>{e}</span>)}</div>}
                     <p>{x.a}</p>
+                    <FavDugme k={{ tur: 'terim', baslik: x.t, metin: x.a, slayt: SL(x.s), adim: x.adim }} />
                     {x.s && <small className="di15-slayt">Slayt s.{x.s}</small>}
                   </li>
                 ))}
@@ -227,6 +232,7 @@ export default function DersIcerikV15({ dersKey, bolum }: { dersKey: string; bol
                     <p className="di15-ozet"><Zengin t={x.m} /></p>
                     {x.alt.length > 0 && <ul className="di15-maddeler">{x.alt.map((a, j) => <Madde key={j} t={a} />)}</ul>}
                     {x.n && <p className="di15-neden"><Sparkles aria-hidden /><span>{x.n}</span></p>}
+                    <FavDugme k={{ tur: 'onemli', baslik: x.b, metin: [x.m, ...x.alt.map((a) => '- ' + a)].join('\n'), slayt: SL(x.s), adim: x.adim }} />
                     {x.s?.length > 0 && <small className="di15-slayt">Slayt s.{x.s.join(', ')}</small>}
                   </article>
                 ))}
@@ -238,6 +244,7 @@ export default function DersIcerikV15({ dersKey, bolum }: { dersKey: string; bol
                   <li key={i} className="v15-card di15-spot" style={{ '--i': i } as React.CSSProperties}>
                     <Pin aria-hidden />
                     <div><p><Zengin t={x.m.replace(/^📌\s*\[SINAV SPOTU\]\s*/, '')} /></p><small>{x.bolum} · adım {x.n}</small></div>
+                    <FavDugme k={{ tur: 'spot', baslik: x.m.replace(/^📌\s*\[SINAV SPOTU\]\s*/, '').slice(0, 70), metin: x.m.replace(/^📌\s*\[SINAV SPOTU\]\s*/, ''), adim: x.n }} />
                   </li>
                 ))}
               </ul>
@@ -245,7 +252,7 @@ export default function DersIcerikV15({ dersKey, bolum }: { dersKey: string; bol
             {sec === 'slayt' && (
               <ul className="di15-izgara di15-anim" role="list">
                 {sirala(p.bilgiler.filter((x) => ok(x.b, x.m)), sira, (x) => x.b, (x) => x.s).map((x, i) => (
-                  <li key={i} className="v15-card di15-bilgi" style={{ '--i': i } as React.CSSProperties}><b>{x.b}</b><p><Zengin t={x.m} /></p>{x.s && <small className="di15-slayt">Slayt s.{x.s}</small>}</li>
+                  <li key={i} className="v15-card di15-bilgi" style={{ '--i': i } as React.CSSProperties}><b>{x.b}</b><p><Zengin t={x.m} /></p><FavDugme k={{ tur: 'bilgi', baslik: x.b, metin: x.m, slayt: SL(x.s), adim: x.adim }} />{x.s && <small className="di15-slayt">Slayt s.{x.s}</small>}</li>
                 ))}
               </ul>
             )}
@@ -264,6 +271,7 @@ export default function DersIcerikV15({ dersKey, bolum }: { dersKey: string; bol
               {React.createElement(l.sira === 'madde' ? 'ul' : 'ol', { className: `di15-maddeler${l.sira === 'madde' ? '' : ' di15-num is-' + l.sira}`, type: l.sira === 'alfa' ? 'a' : undefined },
                 l.m.map((x, j) => <Madde key={j} t={x.m} />))}
               {l.a && <p className="di15-ac is-d">{l.a}</p>}
+              <FavDugme k={{ tur: 'liste', baslik: l.t, metin: l.m.map((x, j) => (l.sira === 'madde' ? '- ' : `${j + 1}. `) + x.m).join('\n'), adim: l.n }} />
             </section>
           ))}
         </div>
@@ -299,6 +307,7 @@ export default function DersIcerikV15({ dersKey, bolum }: { dersKey: string; bol
         </ul>
       )}
     </div>
+    </FavBaglam.Provider>
   );
 }
 
@@ -311,6 +320,7 @@ function HastalikKart({ h, i, acik }: { h: DiPaket['hastaliklar'][number]; i: nu
         <span className="di15-hast-t"><b>{h.ad}</b>{h.latin && <em>{h.latin}</em>}<small>{h.kat.split('/').map((x) => x.trim()).join(' › ')}</small></span>
         <ChevronDown className="di15-ok" aria-hidden />
       </button>
+      <FavDugme k={{ tur: 'hastalik', baslik: h.ad, metin: h.bolumler.map((b) => b.b + ':\n' + b.m.map((x) => '- ' + x.m).join('\n')).join('\n'), slayt: SL(h.s), adim: h.adim }} />
       {ac && (
         <div className="di15-hast-g">
           {h.bolumler.map((b) => {
@@ -333,6 +343,7 @@ function TabloKart({ t }: { t: DiTablo }) {
   const tur = tabloTuru(t);
   return (
     <section className={`v15-card di15-tb is-${tur}${t.k ? ' is-kars' : ''}`}>
+      <FavDugme k={{ tur: 'tablo', baslik: t.t, metin: [t.h.join(' | '), ...t.r.map((r) => r.join(' | '))].join('\n'), adim: t.n }} />
       <header className="di15-tb-u">
         <span className="di15-tb-ik" aria-hidden>{t.k ? <Scale aria-label="Karşılaştırma" /> : tur === 'sira' ? <ListChecks /> : tur === 'eslesme' ? <Layers /> : <Table2 />}</span>
         <div><h3>{t.t}</h3><small>{t.k ? 'Karşılaştırma' : tur === 'sira' ? 'Sıralama' : tur === 'eslesme' ? 'Eşleştirme' : 'Tablo'} · adım {t.n}</small></div>

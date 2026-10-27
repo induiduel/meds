@@ -1088,3 +1088,9 @@ Her maddede: belirti · kök neden · Kurul 2 kuralı · kapı durumu. Kanıtlar
 - **Kök neden (rozet):** başka bir oturum `dersIcerik.css`'e bir simge için aynı sınıf adıyla `.di15-ik{width:16px;height:16px}` ekledi; rozet `span.di15-ik` 16 px'e sıkıştı. **Kök neden (menü):** `.cd15-mliste > :not(.cd-btn) { display: contents }` sarmalayıcıyı çözünce dışa aktar alt listesi ve PDF düzeni ızgara hücresi oldu; satır `align-items: stretch` ile tüm kartları uzattı.
 - **Çözüm:** eski kural `svg.di15-ik` ile kapsandı, rozete `white-space: nowrap; flex: none`. Menüde alt liste/düzen `grid-column: 1 / -1`, ızgara `align-items: start`.
 - **Kural:** Yeni CSS sınıfı eklemeden önce aynı adın kullanılmadığını grep'le; kısa ortak adlara (`-ik`, `-ad`) element/üst seçici kapsamı ver. `display: contents` ile çözülen sarmalayıcının açılır alt parçaları tam satır olmalı.
+
+## H109 · Ders içerik kayıtlarında "Slayt s.N" kaynağı eksik (2026-10-28)
+- **Belirti:** k2-05 Terimler ekranında bazı terimlerde slayt/sayfa rozeti yoktu; k2-01..08 paketlerinde 650'den fazla terim `s` taşımıyordu; "Checkpoint" gibi slayt iskeleti ve slaytta olmayan "Afferent / efferent" terim olarak yazılmıştı.
+- **Kök neden:** `ders_icerik_adim.py` terime `adim` yazıyor ama PDF sayfası `s`'yi yazmıyordu; doğrulayıcı yalnız `adim` eksikliğine bakıyordu, ekranın gösterdiği `s` denetlenmiyordu.
+- **Çözüm:** `scripts/ders_icerik_kaynak.py` (adim→slayt→pdfSayfalari[0]) tüm paketlere uygulandı; kaynaksız iki terim silindi; `ders_icerik_dogrula.py` `s` eksikse ve iskelet terimde HATA verir.
+- **Kural:** Ekranda gösterilen her kaynak alanı doğrulayıcıda zorunlu olur; sayfa uydurulmaz, bulunamayan kayıt silinir (el kitabı §19 11a).

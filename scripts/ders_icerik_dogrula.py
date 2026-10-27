@@ -25,6 +25,12 @@ for key in sys.argv[1:]:
             if not b['m']: e.append(f"boş bölüm: {x['ad']}/{b['b']}")
     for q in d.get('quiz', []):
         if sum(o['d'] for o in q['o']) != 1: e.append(f"quiz tek doğru değil: {q['q'][:40]}")
+    # kaynak bilgisi: her terim/bilgi/hastalık/önemli kaydı PDF sayfası (s) taşır; 'Checkpoint' gibi slayt iskeleti terim olamaz
+    for k, ad in (('terimler', 't'), ('bilgiler', 'b'), ('hastaliklar', 'ad'), ('onemli', 'b')):
+        ks = [x.get(ad) for x in d.get(k, []) if not x.get('s')]
+        if ks: e.append(f'{len(ks)} {k} kaydında kaynak sayfa (s) yok: python3 scripts/ders_icerik_kaynak.py {key} ({ks[:3]})')
+    for t in d.get('terimler', []):
+        if re.match(r'(?i)^(checkpoint|oyun sayfası|tekrar sayfası)', t['t'].strip()): e.append(f"slayt iskeleti terim olamaz: {t['t']}")
     # PDF akışı: her kayıt `adim` (Öğren slayt no) taşır; eşlenemeyen (0) payı yüksekse üretim eksiktir
     kay = [x for k, v in d.items() if isinstance(v, list) for x in v if isinstance(x, dict)]
     ya = [x for x in kay if 'adim' not in x]

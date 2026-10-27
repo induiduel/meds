@@ -36,6 +36,7 @@ const SYNC_PATTERNS: RegExp[] = [
   // Yıldızlı paragraflar (tekrar listesi) ve WhatsApp günlük tekrar tercihleri
   /^medsoru_yildizli_paragraflar(_v1)?$/,
   /^medsoru_whatsapp_prefs_v1$/,
+  /^medsoru_favoriler_v1$/,
   /^medsoru_slide_drawings_v2(:.*)?$/,
   /^medsoru_annotations:.+$/,
   /^medsoru_highlights_v1$/,

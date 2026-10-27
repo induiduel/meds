@@ -238,3 +238,67 @@ svg.di15-ik{width:16px;height:16px;vertical-align:-2px;opacity:.8}
 .di15-tb.is-kars .di15-mat th:first-child { width: 28%; }
 .di15-tb.is-kars .di15-mat td.is-taraf { width: 26%; font-weight: 700; --t: var(--color-accent); color: var(--t); background: color-mix(in srgb, var(--t) 14%, transparent); }
 .di15-tb.is-kars .di15-mat td.is-t1 { --t: var(--color-ok); } .di15-tb.is-kars .di15-mat td.is-t2 { --t: var(--color-warn); } .di15-tb.is-kars .di15-mat td.is-t3 { --t: var(--color-ai, #af52de); }
+
+/* ===== Sade düzen katmanı (2026-10-28): tek araç satırı, sakin renkler, eşit kartlar ===== */
+:root[data-v15='on'] .di15 { flex-direction: row; flex-wrap: wrap; align-items: center; column-gap: 8px; row-gap: 12px; }
+:root[data-v15='on'] .di15 > * { flex: 1 1 100%; min-width: 0; }
+/* araç satırı: arama + sırala + alt sekmeler yan yana, aynı yükseklik (40px) */
+:root[data-v15='on'] .di15 > .di15-ara { flex: 1 1 260px; height: 40px; border-radius: 12px; padding: 0 12px; }
+:root[data-v15='on'] .di15 > .di15-ara input { font-size: 15px; }
+:root[data-v15='on'] .di15 > .di15-sirala { flex: 0 0 auto; height: 40px; }
+:root[data-v15='on'] .di15 > .di15-alts { flex: 0 0 auto; align-self: center; height: 40px; padding: 3px; border-radius: 12px; display: inline-flex; gap: 2px; }
+:root[data-v15='on'] .di15 > .di15-alts button { flex-direction: row; height: 34px; padding: 0 12px; border-radius: 9px; gap: 6px; font-size: 13.5px; white-space: nowrap; }
+:root[data-v15='on'] .di15 > .di15-alts button small { font-size: 11.5px; opacity: .75; }
+/* sekme şeridi: daha alçak, seçili sekme yumuşak vurgu (göz yormayan) */
+:root[data-v15='on'] .di15-tabs a { height: 34px; padding: 0 12px; font-size: 13.5px; background: transparent; border-color: var(--color-line-soft, var(--color-line)); color: var(--color-ink-2); }
+:root[data-v15='on'] .di15-tabs a:hover { background: var(--color-field); }
+:root[data-v15='on'] .di15-tabs a.is-on { background: var(--color-accent-soft); border-color: transparent; color: var(--color-accent); font-weight: 650; }
+:root[data-v15='on'] .di15-tabs a.is-on span { color: inherit; opacity: .85; }
+/* terim kartları: eşit boy, sakin harf kutusu, çipler çerçeveli, slayt etiketi altta hizalı */
+:root[data-v15='on'] .di15-izgara { gap: 8px; align-items: stretch; }
+:root[data-v15='on'] .di15-terim { padding: 12px 14px; gap: 6px; border-radius: 14px; }
+:root[data-v15='on'] .di15-terim-u { gap: 10px; }
+:root[data-v15='on'] .di15-terim-u b { font-size: 15px; font-weight: 650; }
+:root[data-v15='on'] .di15-harf { width: 28px; height: 28px; border-radius: 8px; font-size: 13px; background: var(--color-field); color: var(--color-ink-2); }
+:root[data-v15='on'] .di15-terim p { font-size: 14px; line-height: 1.5; color: var(--color-ink-2); }
+:root[data-v15='on'] .di15-cipler span { background: transparent; border: 1px solid var(--color-line-soft, var(--color-line)); color: var(--color-ink-3); font-size: 12px; padding: 1px 8px; }
+:root[data-v15='on'] .di15-terim .di15-slayt { margin-top: auto; font-size: 11.5px; }
+@container (min-width: 900px) { :root[data-v15='on'] .di15-izgara { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (max-width: 520px) { :root[data-v15='on'] .di15 > .di15-ara { flex-basis: 100%; } :root[data-v15='on'] .di15 > .di15-alts { overflow-x: auto; max-width: 100%; } }
+:root[data-v15='on'] .di15 > .di15-alts.v15-seg > button { display: inline-flex; align-items: center; }
+:root[data-v15='on'] .di15 > .di15-alts.v15-seg > button small { display: inline; }
+/* telefonda sırala + alt sekmeler aynı satırda: "Sırala" yazısı gizli, seçici daralır */
+@media (max-width: 520px) {
+  :root[data-v15='on'] .di15 > .di15-sirala { padding: 0 8px; gap: 4px; max-width: 46%; }
+  :root[data-v15='on'] .di15 > .di15-sirala > span { display: none; }
+  :root[data-v15='on'] .di15 > .di15-sirala select { min-width: 0; width: 100%; text-overflow: ellipsis; }
+  :root[data-v15='on'] .di15 > .di15-alts { flex: 1 1 0; }
+  :root[data-v15='on'] .di15 > .di15-alts.v15-seg > button { padding: 0 9px; flex: 1 1 auto; justify-content: center; }
+}
+
+/* Favori düğmeleri (★ kaydet, ↻ tekrar et) */
+.di15 .v15-card { position: relative; }
+.fav-dugme { position: absolute; top: 8px; right: 8px; display: inline-flex; gap: 2px; z-index: 2; }
+.fav-dugme button { width: 30px; height: 30px; display: grid; place-items: center; border: 0; border-radius: 8px; background: transparent; color: var(--color-ink-3); cursor: pointer; }
+.fav-dugme button:hover { background: var(--color-field); }
+.fav-dugme button svg { width: 16px; height: 16px; }
+.fav-dugme button.is-on { color: #e0a100; }
+.fav-dugme button.is-on svg { fill: currentColor; }
+.fav-dugme button:last-child.is-on { color: var(--color-accent, #3b82f6); }
+.fav-dugme button:last-child.is-on svg { fill: none; stroke-width: 3; }
+.di15-hast .fav-dugme { top: 14px; right: 44px; }
+
+/* Bugün › Favorilerim */
+.fvb { padding: 16px; margin: 16px auto; max-width: 1100px; }
+.fvb-u { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-bottom: 10px; }
+.fvb-u h2 { font-size: 1.05rem; margin: 0 auto 0 0; } .fvb-u h2 small { color: var(--color-ink-3); font-weight: 500; }
+.fvb-sec { display: inline-flex; gap: 4px; } .fvb-sec button, .fvb-pdf { border: 0; border-radius: 999px; padding: 6px 12px; background: var(--color-field); color: var(--color-ink); cursor: pointer; font: inherit; font-size: .8rem; }
+.fvb-sec button[aria-selected='true'] { background: var(--color-ink); color: var(--color-bg, #fff); }
+.fvb-pdf { display: inline-flex; gap: 6px; align-items: center; } .fvb-pdf svg { width: 15px; height: 15px; } .fvb-pdf:disabled { opacity: .5; }
+.fvb-l { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 10px; }
+.fvb-l li { position: relative; border-radius: 12px; background: var(--color-field); }
+.fvb-l a { display: grid; gap: 3px; padding: 12px 40px 12px 12px; color: inherit; text-decoration: none; }
+.fvb-l b { display: flex; align-items: center; gap: 5px; } .fvb-l b svg { width: 14px; height: 14px; color: #e0a100; }
+.fvb-l small { color: var(--color-ink-3); font-size: .72rem; } .fvb-l span { font-size: .82rem; color: var(--color-ink-2, inherit); }
+.fvb-l li > button { position: absolute; top: 8px; right: 8px; border: 0; background: transparent; color: var(--color-ink-3); cursor: pointer; }
+.fvb-l li > button svg { width: 15px; height: 15px; }

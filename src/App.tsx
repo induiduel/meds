@@ -116,6 +116,7 @@ const StudyHub = React.lazy(() => wrapLazy(import('./components/study/StudyHub')
 const BookletView = React.lazy(() => wrapLazy(import('./components/BookletView').then(m => ({ default: m.BookletView }))));
 const LeaderboardView = React.lazy(() => wrapLazy(import('./components/LeaderboardView').then(m => ({ default: m.LeaderboardView }))));
 const StatsView = React.lazy(() => wrapLazy(import('./components/stats/StatsView').then(m => ({ default: m.StatsView }))));
+const FavorilerBugun = React.lazy(() => wrapLazy(import('./components/v15/FavorilerBugun')));
 const TodayView = React.lazy(() => wrapLazy(import('./components/today/TodayView').then(m => ({ default: m.TodayView }))));
 const MusicView = React.lazy(() => wrapLazy(import('./components/MusicView').then(m => ({ default: m.MusicView }))));
 const LectureNotesView = React.lazy(() => wrapLazy(import('./components/LectureNotesView').then(m => ({ default: m.LectureNotesView }))));
@@ -2312,6 +2313,7 @@ export default function App() {
               <div className="mz-bugun"><NeYapmak kart /></div>
             </V15Disinda>
             <TodayView committeeLabel={currentCommittee ? committeeShortLabel(currentCommittee) : undefined} onGo={(r) => setActiveTab(r)} />
+            <FavorilerBugun />
           </Suspense>
         )}
         {activeTab === 'stats' && (

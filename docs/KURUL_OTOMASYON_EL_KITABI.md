@@ -470,6 +470,10 @@ LLM otomasyonu kapalıdır (AGENTS kural 20). Yeni ders, kullanıcı hangi dosya
 11a. **Ders içerik paketi (ZORUNLU, 2026-10-27):** `python3 scripts/ders_icerik_uret.py <key>` → `src/data/ders_icerik/<key>.json`, ardından
     `python3 scripts/ders_icerik_dogrula.py <key>` 0 HATA. Biçim ve kaynak kuralı `docs/DERS_ICERIK_BICIMI.md`; eksik/boş bölüm gerekçeyle raporlanır.
     Ders Öğren destesi ve bilgi havuzu olmadan paket boş kalır — önce deste + havuz üretilir.
+    **Kaynak bilgisi kuralı (2026-10-28, ZORUNLU):** paketteki her terim/bilgi/hastalık/önemli kaydı PDF sayfasını (`s`) ve Öğren slaytını (`adim`) taşır;
+    ekranda "Slayt s.N" görünmeyen kayıt HATADIR (kullanıcı k2-05'te gördü). Sıra: `ders_icerik_adim.py <key>` → `ders_icerik_kaynak.py <key>`
+    (eksik `s`'yi slayttan yazar) → `ders_icerik_dogrula.py` 0 HATA. Slayt/PDF'te adı geçmeyen genel kayıt ("Checkpoint", "Afferent / efferent" gibi
+    iskelet ya da kaynaksız terim) üretilmez, bulunduysa silinir; sayfa uydurmak YASAK. Konu/branş bilgisi (hastalık `kat`) boş bırakılmaz.
 11b. **Sesli örnek soru çözücü (ZORUNLU, 2026-10-27):** her ders için kaynak gösteren, şık şık açıklamalı çözücü (`TALIMAT_COZUCU.md`,
     `cozucu_dogrula.py` 0 HATA, bağımsız denetçi, EMA GPU sesi §19 adım 8). `ders_icerik_dogrula.py` çözücü yoksa HATA verir; çalıştığı canlıda denenir.
 11. **Kayıt + dağıtım:** veriler `data/sesli_anlatim/*/<key>` olarak commit, `guncelleme_notu.json` onem+1, `dagit.sh`; canlı API'de

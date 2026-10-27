@@ -1,11 +1,12 @@
 {
  "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
- "onem": 506,
- "baslik": "Ders içerik ve sesli ders iyileştirmeleri",
+ "onem": 507,
+ "baslik": "Favoriler: yıldızla, tekrar et, PDF olarak aktar",
  "maddeler": [
-  "Yıldızlı paragraflar ve sesli ders ekranında düzeltmeler",
-  "Kurul seçici ve ders içerik sayfası güncellemeleri",
-  "Genetik dersi için sesli asistan ve soru çözücü içeriği"
+  "Ders içerik sayfalarında terim, hastalık, bilgi, spot, tablo ve listelere ★ ve ↻ düğmesi eklendi",
+  "İşaretlediklerin Bugün sayfasında Favorilerim bölümünde; kaynağına tek tıkla gidersin",
+  "Favorilerini ders, slayt ve sayfa bilgisiyle maddeli PDF olarak dışa aktarabilirsin",
+  "Eksik slayt/sayfa bilgisi olan terimler tamamlandı"
  ],
  "eklenen": [],
  "degisen": [],

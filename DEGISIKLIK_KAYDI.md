@@ -1,3 +1,7 @@
+## 2026-10-28 — Kaynak sayfa kapısı (H109) + Favoriler (★/↻, Bugün, PDF)
+- `scripts/ders_icerik_kaynak.py` (adim→slayt→PDF sayfası `s`) k2-01..08 paketlerine uygulandı (650+ terim); kaynaksız 2 terim silindi; `ders_icerik_dogrula.py` `s` eksik/iskelet terimde HATA; el kitabı §19 11a + H109.
+- Favoriler: `services/favoriStore.ts` (`medsoru_favoriler_v1`, userKvSync'te), `v15/FavDugme.tsx` (ders içerik kartlarında), `v15/FavorilerBugun.tsx` (Bugün, kaynağa gider, ders/slayt/sayfa bilgili maddeli PDF = iframe yazdır). Canlıya gönderilmedi (dagit.sh bekliyor).
+
 ## 2026-10-27 — Quiz her ders için açık + örnek soru kapsamı (k2-05, k2-08)
 - Farmakoloji kapsam kilidi kalktı (`quiz_motoru/kapsam.py`, AGENTS kural 19); `quiz_dogrula.py` artık `sik_aciklama` standardını da denetler; elle üretilen ders yayınlı sesli dersle "tamamlandı" sayılır.
 - `quiz_havuzu.json` (meds_database_v2/ders_isci/yayinlanan/elle-k2-05|k2-08/): k2-05 116 atom/232 soru, k2-08 205 atom/410 soru, 0 HATA. Kaynakta çelişkili/görsele bağlı/kanıtı eşleşmeyen atomlar havuza alınmadı (k2-05: 12, 33, 36; k2-08: 056, 057, 068, 083, 093, 131, 188, 198, 211). Quiz havuzu henüz sitede bir ekrana bağlı değil.
