@@ -248,3 +248,7 @@ a.k15-kart:hover { border-color: var(--color-accent); }
 .sl15-not button { flex: none; border: 0; background: none; color: var(--color-accent); font: inherit; font-weight: 600; cursor: pointer; padding: 6px 2px; }
 .sl15 .sl15-bas[aria-disabled] { pointer-events: none; }
 .sl15 .sl15-bas[aria-disabled] .v15-chev { display: none; }
+/* B04: sıralama seçici (görünmez select simge düğmesinin üstünde) + indirildi işareti */
+:root[data-v15='on'] .sl15-sira { position: relative; flex: none; }
+:root[data-v15='on'] .sl15-sira select { position: absolute; inset: 0; opacity: 0; cursor: pointer; font-size: 16px; }
+:root[data-v15='on'] .sl15-indi { width: 13px; height: 13px; margin-left: 6px; vertical-align: -1px; color: var(--color-ok); }

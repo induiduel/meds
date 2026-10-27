@@ -452,3 +452,9 @@ Not: YOK sayısının 6'sı tasarım belgesi ekranıdır (A09, K08, P01, W03, X0
 - C03: seri rozeti (Derste 04:18 bağlantısı: soru–ders zaman eşlemesi verisi yok; takip sorusu: LLM, yok)
 - C04: '48 saat sonra yeniden soracağım' + Yanlışlarım bağlantısı (services/yanlislarim.ts)
 - C09: KURULDU /sorular/yanlislarim (Tekrar zamanı · Bekleyen · Öğrenildi, hazırları çöz)
+
+### KURULDU (2026-10-27, devam)
+- A03 menü: Oyunlar ayrı bölüm (Oyunlar · Hücrem · Başarımlar), her bölüm başlığının altında içerik açıklaması.
+- B04 sesli liste: Yeni (hiç dinlenmemiş; listede eklenme tarihi yok) ve İndirilen süzgeçleri, sıralama (ders sırası / son dinlenen / kısa olan önce), indirildi işareti.
+- B11 notlar: Tümü / Yıldızlı / Ses damgalı süzgeci, kartta yıldız; sesli dersten "Nota ekle" ders · bölüm · zaman damgasıyla gelir, damgaya dokununca derste o yere gider (eski notlarda "Kaynak:" satırından okunur).
+- Kronometre ayarları + geçmişi (T › kronoAyar, kronoGecmis).

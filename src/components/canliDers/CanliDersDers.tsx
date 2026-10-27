@@ -1380,7 +1380,7 @@ function useCdSecimCubugu(paneRef: React.RefObject<HTMLDivElement | null>, detay
           try {
             const k = 'medsoru_notlarim_v1';
             const l = JSON.parse(localStorage.getItem(k) || '[]');
-            l.unshift({ id: `n${Date.now().toString(36)}`, baslik: `${detay.baslik}${bolum?.baslik ? ` · ${bolum.baslik}` : ''}`, metin: `“${text.trim()}”\n\nKaynak: ${location.origin}${link}`, renk: 'blue', at: Date.now() });
+            l.unshift({ id: `n${Date.now().toString(36)}`, baslik: `${detay.baslik}${bolum?.baslik ? ` · ${bolum.baslik}` : ''}`, metin: `“${text.trim()}”`, renk: 'blue', at: Date.now(), kaynak: { ad: detay.baslik, bolum: bolum?.baslik, link, t: cdDurum().key === detay.key ? Math.floor(cdDurum().t) : undefined } });
             localStorage.setItem(k, JSON.stringify(l));
             window.dispatchEvent(new Event('medsoru:notlarim'));
             toast.success('Notlarım\'a eklendi', 'Menü › Notlarım');

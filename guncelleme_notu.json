@@ -1,13 +1,14 @@
 {
-  "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 454,
-  "baslik": "Ders programında boş saatlere yerleştirme",
-  "maddeler": [
-    "Yönetici ve moderatör, bir dersi saat çizelgesindeki boş saatlere de taşıyabilir (yalnız takas değil)",
-    "Ay görünümünde dersi olmayan hafta içi günlere de geçilebilir"
-  ],
-  "eklenen": [],
-  "degisen": [],
-  "duzeltilen": [],
-  "silinen": []
+ "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
+ "onem": 455,
+ "baslik": "Menüde Oyunlar, sesli liste süzgeçleri, not damgaları",
+ "maddeler": [
+  "Menü: Oyunlar ayrı bölüm, her bölümün altında içerik açıklaması",
+  "Sesli dersler: Yeni ve İndirilen süzgeçleri, sıralama (son dinlenen, kısa olan önce)",
+  "Notlarım: Yıldızlı ve Ses damgalı süzgeci; sesli dersten eklenen not ders ve zaman damgasıyla gelir, dokununca o yere gider"
+ ],
+ "eklenen": [],
+ "degisen": [],
+ "duzeltilen": [],
+ "silinen": []
 }

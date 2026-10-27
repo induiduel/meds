@@ -73,7 +73,7 @@ export function TumSayfalarV15({ active, onGo, isAdmin, araclar }: { active: App
         <section key={g.id} className="ts15-grup" aria-label={g.label}>
           <div className="ts15-gb">
             <span className="ts15-gi"><g.icon aria-hidden="true" /></span>
-            <h3 className="ts15-h">{g.label}</h3>
+            <span className="ts15-gt"><h3 className="ts15-h">{g.label}</h3>{!f && g.alt && <span className="ts15-galt">{g.alt}</span>}</span>
             {g.hub && !f && <a href={pathFor(g.hub)} onClick={linkClick(() => onGo(g.hub!))} className="ts15-merkez">Merkez<ChevronRight aria-hidden="true" /></a>}
           </div>
           <ul className="ts15-izgara" role="list">{g.items.map((it) => <li key={it.id}>{oge(it)}</li>)}</ul>

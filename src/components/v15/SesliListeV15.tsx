@@ -1,5 +1,6 @@
-import React, { useDeferredValue, useMemo, useState } from 'react';
-import { Archive, Check, ChevronDown, ChevronRight, Headphones, Search, X } from 'lucide-react';
+import React, { useDeferredValue, useEffect, useMemo, useState } from 'react';
+import { Archive, ArrowUpDown, Check, ChevronDown, ChevronRight, Download, Headphones, Search, X } from 'lucide-react';
+import { cdCevrimdisiKayitlari, CD_CEVRIMDISI_DEGISTI } from '../canliDers/canliDersCevrimdisiKayit';
 import { linkClick, navigateTo, pathFor } from '../../router';
 import { icKonum } from '../../siteHaritasi';
 import { KURUL_NOLAR, kurulKaydet, useSeciliKurul } from '../kurul/KurulSecici';
@@ -15,8 +16,11 @@ import '../../styles/v15/ogren.css';
  * Liste kendi alanında kayar; sayfa sabit. "2025-26 arşivi" çipi (?donem=2025-2026) geçen yılın kayıtlarını listeler;
  * arşiv dersleri ders ayrıntısında değil doğrudan oynatıcıda açılır (ayrıntı sayfası yalnız güncel dönemi bilir).
  */
-type Durum = 'tum' | 'yarim' | 'bitti';
-const DURUM: [Durum, string][] = [['tum', 'Tümü'], ['yarim', 'Yarım kalan'], ['bitti', 'Bitti']];
+type Durum = 'tum' | 'yeni' | 'yarim' | 'bitti' | 'indirilen';
+/** "Yeni" = henüz hiç dinlemediğin (listede eklenme tarihi yok; uydurma tarih kullanılmaz) */
+const DURUM: [Durum, string][] = [['tum', 'Tümü'], ['yeni', 'Yeni'], ['yarim', 'Yarım kalan'], ['bitti', 'Bitti'], ['indirilen', 'İndirilen']];
+type Sira = 'sira' | 'son' | 'kisa';
+const SIRA: [Sira, string][] = [['sira', 'Ders sırası'], ['son', 'Son dinlenen'], ['kisa', 'Kısa olan önce']];
 const fold = (s: string) => s.toLocaleLowerCase('tr-TR').normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/ı/g, 'i');
 
 export default function SesliListeV15() {
@@ -36,6 +40,13 @@ export default function SesliListeV15() {
   const [araAcik, setAraAcik] = useState(false);
   const q = fold(useDeferredValue(ara).trim());
   const [durum, setDurum] = useState<Durum>('tum');
+  const [sira, setSira] = useState<Sira>('sira');
+  const [indirilen, setIndirilen] = useState(() => cdCevrimdisiKayitlari());
+  useEffect(() => {
+    const f = () => setIndirilen(cdCevrimdisiKayitlari());
+    window.addEventListener(CD_CEVRIMDISI_DEGISTI, f);
+    return () => window.removeEventListener(CD_CEVRIMDISI_DEGISTI, f);
+  }, []);
 
   const branslar = useMemo(() => (dersler ? kurulBranslari(dersler, kurul) : []), [dersler, kurul]);
   const toplam = branslar.reduce((n, b) => n + b.dersler.length, 0);
@@ -46,14 +57,16 @@ export default function SesliListeV15() {
           ...b,
           liste: dersSirala(b.dersler).filter((d) => {
             const i = ilerleme(d);
+            if (durum === 'yeni' && (i.bitti || i.t != null)) return false;
+            if (durum === 'indirilen' && !indirilen[d.key]) return false;
             if (durum === 'yarim' && !(i.t != null && !i.bitti)) return false;
             if (durum === 'bitti' && !i.bitti) return false;
             return !q || fold(`${d.no} ${d.baslik} ${b.ad} ${d.hoca || ''}`).includes(q);
-          }),
+          }).sort((a, c) => (sira === 'son' ? ilerleme(c).at - ilerleme(a).at : sira === 'kisa' ? (ilerleme(a).sure || 1e9) - (ilerleme(c).sure || 1e9) : 0)),
           biten: b.dersler.filter((d) => ilerleme(d).bitti).length,
         }))
         .filter((g) => g.liste.length),
-    [branslar, durum, q, ilerleme],
+    [branslar, durum, q, ilerleme, sira, indirilen],
   );
   useV15Baslik({ baslik: arsiv ? 'Sesli dersler · Arşiv' : 'Sesli dersler', alt: `${arsiv ? '2025-2026 · ' : ''}Kurul ${kurul}${dersler ? ` · ${toplam} ders` : ''}` });
 
@@ -83,6 +96,14 @@ export default function SesliListeV15() {
             ))}
           </div>
         )}
+        {!araAcik && (
+          <label className="v15-ib sl15-sira" title={`Sıralama: ${SIRA.find((x) => x[0] === sira)![1]}`}>
+            <ArrowUpDown aria-hidden />
+            <select value={sira} onChange={(e) => setSira(e.target.value as Sira)} aria-label="Sıralama">
+              {SIRA.map(([id, t]) => <option key={id} value={id}>{t}</option>)}
+            </select>
+          </label>
+        )}
         {!araAcik && <button type="button" className="v15-ib" onClick={() => setAraAcik(true)} aria-label="Ara"><Search aria-hidden /></button>}
       </div>
 
@@ -110,7 +131,7 @@ export default function SesliListeV15() {
                       <a className="b15-row" href={satirYolu(d.key)} onClick={linkClick(() => navigateTo(satirYolu(d.key)))}>
                         <span className={`v15-tile ${i.bitti ? 'is-ok' : i.t != null ? '' : 'is-n'}`}>{i.bitti ? <Check aria-hidden /> : <Headphones aria-hidden />}</span>
                         <span className="b15-row-t">
-                          <b>{dersAdi(d)}</b>
+                          <b>{dersAdi(d)}{indirilen[d.key] && <Download className="sl15-indi" aria-label="İndirildi" />}</b>
                           <span>{[hocaYaz(d.hoca), sureDk(i.sure)].filter(Boolean).join(' · ')}</span>
                         </span>
                         <Halka pct={i.pct} etiket={i.bitti ? 'Bitti' : `%${i.pct} dinlendi`} />

@@ -41,3 +41,15 @@
 .nt15-yuzey.is-ciz .nt15-baslik, .nt15-yuzey.is-ciz .nt15-metin { pointer-events: none; }
 .nt15-tuval { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
 .nt15-not { margin: 0; padding: 8px 14px 12px; }
+/* B11: süzgeç, yıldız, ses damgası */
+.nt15-suz { margin-bottom: 4px; }
+.nt15-li { position: relative; display: flex; flex-direction: column; }
+.nt15-li .nt15-kart { padding-right: 40px; }
+.nt15-yildiz { position: absolute; top: 8px; right: 8px; width: 32px; height: 32px; border: 0; border-radius: 50%; background: transparent; color: var(--color-ink-3); display: grid; place-items: center; cursor: pointer; }
+.nt15-yildiz svg { width: 17px; height: 17px; }
+.nt15-yildiz.is-on { color: var(--color-warn); }
+.nt15-yildiz.is-on svg { fill: currentColor; }
+.nt15-damga { display: flex; align-items: center; gap: 6px; margin-top: -6px; padding: 10px 12px 7px; border-radius: 0 0 14px 14px; background: var(--color-accent-soft); color: var(--color-accent); font-size: .8rem; text-decoration: none; min-width: 0; }
+.nt15-damga svg { width: 14px; height: 14px; flex: none; }
+.nt15-damga span { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.nt15-damga b { font-variant-numeric: tabular-nums; }

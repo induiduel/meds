@@ -299,3 +299,14 @@ button.v15-nav-a { border: 0; background: none; font: inherit; color: inherit; w
 :root[data-v15='on'][data-design] .tst-m { font-size: .82rem; opacity: .85; }
 :root[data-v15='on'][data-design] .tst-act { border-radius: 10px; height: 32px; padding: 0 12px; background: color-mix(in oklab, var(--color-white) 16%, transparent); color: var(--color-white); }
 :root[data-v15='on'][data-design] .tst-x { color: color-mix(in oklab, var(--color-white) 70%, transparent); }
+
+/* Tam ekran: yan menü/ray ve üst bar gizlenir (gezinme TamEkranGezinme adasında, çıkış hapı sağ üstte).
+   Kök neden: v12.css tam ekranda .sh-app dolgusunu sıfırlıyordu ama v15 ray/üst barı gizlenmiyordu; ray içeriğin üstüne biniyordu. */
+:root[data-v15='on'].is-app-fullscreen {
+  --sh-side-w: 0px;
+  --sh-top-h: 0px;
+  & :is(.v15-side, .v15-top) { display: none !important; }
+}
+/* A03: bölüm başlığı + içerik açıklaması */
+:root[data-v15='on'] .ts15-gt { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 1px; }
+:root[data-v15='on'] .ts15-galt { font-size: .78rem; color: var(--color-ink-3); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }

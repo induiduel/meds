@@ -1,5 +1,6 @@
 import React, { useEffect, useMemo, useRef, useState, useSyncExternalStore } from 'react';
-import { Eraser, Highlighter, Pen, Plus, Search, Share2, Trash2, Type, Undo2, X } from 'lucide-react';
+import { Eraser, Headphones, Highlighter, Pen, Plus, Search, Share2, Star, Trash2, Type, Undo2, X } from 'lucide-react';
+import { linkClick, navigateTo } from '../../router';
 import { useV15Baslik } from './baslik';
 import '../../styles/v15/ogren.css';
 import '../../styles/v15/notlarim.css';
@@ -11,7 +12,19 @@ import '../../styles/v15/notlarim.css';
  * Çizim anahtarı nota ayrıdır (medsoru_notlarim_cizim:<id>) — liste küçük kalır, 2 MB sınırı not başına uygulanır.
  * Çizgiler 1000 birim genişliğe göre saklanır; her ekran boyutunda aynı yerde durur.
  */
-interface Not { id: string; baslik: string; metin: string; renk: string; at: number }
+/** kaynak: sesli dersten "Nota ekle" ile gelen ses damgası (ders, bölüm, zaman, adres) */
+interface NotKaynak { ad: string; bolum?: string; link: string; t?: number }
+interface Not { id: string; baslik: string; metin: string; renk: string; at: number; yildiz?: boolean; kaynak?: NotKaynak }
+type Suzgec = 'tum' | 'yildiz' | 'ses';
+const dkSn = (t: number) => `${String(Math.floor(t / 60)).padStart(2, '0')}:${String(t % 60).padStart(2, '0')}`;
+/** Eski notlarda damga metnin sonundaki "Kaynak: <adres>" satırıdır */
+const kaynakOf = (n: Not): NotKaynak | null => {
+  if (n.kaynak) return n.kaynak;
+  const m = n.metin.match(/Kaynak: (\S*\/canliders\/\S+)/);
+  if (!m) return null;
+  try { const u = new URL(m[1], location.origin); return { ad: n.baslik.split(' · ')[0] || 'Sesli ders', link: u.pathname + u.search }; } catch { return null; }
+};
+const metinTemiz = (s: string) => s.replace(/\n*Kaynak: \S+\s*$/, '');
 interface Cizgi { r: string; w: number; f?: 1; p: number[] }
 type Arac = 'yaz' | 'kalem' | 'fosfor' | 'silgi';
 
@@ -49,10 +62,14 @@ export default function NotlarimV15() {
     setAcikId0(id);
   };
   const [ara, setAra] = useState('');
+  const [suz, setSuz] = useState<Suzgec>('tum');
   const acik = notlar.find((n) => n.id === acikId) || null;
   useV15Baslik({ baslik: acik ? (acik.baslik || 'Başlıksız not') : 'Notlarım', alt: acik ? 'Notlarım' : `${notlar.length} not`, ...(acik ? { geri: '/notlarim' } : {}) });
 
-  const sirali = useMemo(() => [...notlar].sort((a, b) => b.at - a.at).filter((n) => !ara || fold(`${n.baslik} ${n.metin}`).includes(fold(ara))), [notlar, ara]);
+  const sirali = useMemo(() => [...notlar].sort((a, b) => b.at - a.at)
+    .filter((n) => (suz === 'yildiz' ? n.yildiz : suz === 'ses' ? !!kaynakOf(n) : true))
+    .filter((n) => !ara || fold(`${n.baslik} ${n.metin}`).includes(fold(ara))), [notlar, ara, suz]);
+  const yildizla = (id: string) => yaz(anlik().map((n) => (n.id === id ? { ...n, yildiz: !n.yildiz } : n)));
   const yeni = () => {
     const n: Not = { id: `n${Date.now().toString(36)}`, baslik: '', metin: '', renk: 'none', at: Date.now() };
     yaz([n, ...notlar]); setAcikId(n.id);
@@ -72,6 +89,13 @@ export default function NotlarimV15() {
         <label className="o15-ara nt15-ara"><Search aria-hidden /><input type="search" value={ara} onChange={(e) => setAra(e.target.value)} placeholder="Notlarda ara" aria-label="Notlarda ara" /></label>
         <button type="button" className="v15-btn" onClick={yeni}><Plus aria-hidden />Yeni not</button>
       </div>
+      {notlar.length > 0 && (
+        <div className="v15-seg nt15-suz" role="tablist" aria-label="Süzgeç">
+          {([['tum', `Tümü (${notlar.length})`], ['yildiz', `Yıldızlı (${notlar.filter((n) => n.yildiz).length})`], ['ses', `Ses damgalı (${notlar.filter((n) => kaynakOf(n)).length})`]] as [Suzgec, string][]).map(([id, t]) => (
+            <button key={id} type="button" role="tab" aria-selected={suz === id} aria-current={suz === id ? 'page' : undefined} onClick={() => setSuz(id)}>{t}</button>
+          ))}
+        </div>
+      )}
       {!notlar.length ? (
         <div className="v15-card nt15-bos">
           <Pen aria-hidden />
@@ -80,18 +104,27 @@ export default function NotlarimV15() {
           <button type="button" className="v15-btn" onClick={yeni}><Plus aria-hidden />İlk notu yaz</button>
         </div>
       ) : !sirali.length ? (
-        <p className="b15-bos v15-card">"{ara}" geçen not yok.</p>
+        <p className="b15-bos v15-card">{ara ? `"${ara}" geçen not yok.` : suz === 'yildiz' ? 'Yıldızlı notun yok. Kartın köşesindeki yıldızla işaretle.' : 'Ses damgalı notun yok. Sesli derste metni seçip "Nota ekle" dediğinde ders ve zaman damgasıyla buraya gelir.'}</p>
       ) : (
         <ul className="nt15-izgara">
-          {sirali.map((n) => (
-            <li key={n.id}>
-              <button type="button" className={`v15-card nt15-kart is-${n.renk}`} onClick={() => setAcikId(n.id)}>
-                <b>{n.baslik || 'Başlıksız not'}</b>
-                <span>{n.metin.slice(0, 160) || (localStorage.getItem(CKEY(n.id)) ? 'Çizim' : 'Boş not')}</span>
-                <small>{tarihYaz(n.at)}</small>
-              </button>
-            </li>
-          ))}
+          {sirali.map((n) => {
+            const k = kaynakOf(n);
+            return (
+              <li key={n.id} className="nt15-li">
+                <button type="button" className={`v15-card nt15-kart is-${n.renk}`} onClick={() => setAcikId(n.id)}>
+                  <b>{n.baslik || 'Başlıksız not'}</b>
+                  <span>{metinTemiz(n.metin).slice(0, 160) || (localStorage.getItem(CKEY(n.id)) ? 'Çizim' : 'Boş not')}</span>
+                  <small>{tarihYaz(n.at)}</small>
+                </button>
+                {k && (
+                  <a className="nt15-damga" href={k.link} onClick={linkClick(() => navigateTo(k.link))} title="Derste bu yere git">
+                    <Headphones aria-hidden /><span>{[k.ad, k.bolum].filter(Boolean).join(' · ')}</span>{k.t != null && <b>{dkSn(k.t)}</b>}
+                  </a>
+                )}
+                <button type="button" className={`nt15-yildiz${n.yildiz ? ' is-on' : ''}`} onClick={() => yildizla(n.id)} aria-pressed={!!n.yildiz} aria-label={n.yildiz ? 'Yıldızı kaldır' : 'Yıldızla'}><Star aria-hidden /></button>
+              </li>
+            );
+          })}
         </ul>
       )}
     </div>

@@ -1,4 +1,4 @@
-import { BookOpen, CircleHelp, Flag, House, Library, MessagesSquare, ShieldCheck, Stethoscope, UserRound } from 'lucide-react';
+import { BookOpen, CircleHelp, Flag, Gamepad2, House, Library, MessagesSquare, ShieldCheck, Stethoscope, UserRound } from 'lucide-react';
 import type React from 'react';
 import type { AppRoute } from '../../router';
 import { MERKEZ_ARACLARI } from '../merkez/merkezModel';
@@ -59,7 +59,9 @@ export const sectionOf = (r: AppRoute): V15Section | undefined =>
  * Bütün sayfalar menüsü (telefon/tablet "Menü" ızgarası ve masaüstü kenar çubuğu aynı listeyi kullanır).
  * Yeni sayfa NAV_TREE'ye (shell/navModel) eklenince burada kendiliğinden görünür; Kişisel'e yalnız aşağıdaki liste.
  * ------------------------------------------------------------------------- */
-export interface MenuGrubu { id: string; label: string; icon: React.ElementType; hub?: AppRoute; items: NavItem[] }
+export interface MenuGrubu { id: string; label: string; icon: React.ElementType; hub?: AppRoute; items: NavItem[]; alt?: string }
+/** Tasarım A03: Oyunlar dört işin yanında ayrı bölüm (yarışma, Hücrem, başarımlar) */
+const OYUNLAR: AppRoute[] = ['oyunlar', 'hucrem', 'basarimlar'];
 const KISISEL: AppRoute[] = ['bitirdiklerim', 'study', 'notlarim', 'stats', 'pdf_olustur', 'cevrimdisi', 'music', 'settings'];
 
 const YONETIM = { id: 'manage', label: 'Yönetim', short: 'Yönetim', hint: 'Yönetim konsolu', icon: ShieldCheck, tint: '#64748B' } as NavItem;
@@ -69,16 +71,19 @@ export function menuGruplari(isAdmin: boolean): MenuGrubu[] {
   const al = (ids: (NavItem | undefined)[]) => ids.filter((it): it is NavItem => !!it && !seen.has(it.id) && (seen.add(it.id), true));
   const grup = (label: string) => NAV_TREE.find((g) => g.label === label)?.items || [];
   const sec = (id: V15Section['id']) => V15_SECTIONS.find((s) => s.id === id)!;
+  const oyun = al(OYUNLAR.map((r) => NAV_ITEMS[r]));
   const out: MenuGrubu[] = [
     { id: 'dersler', label: 'Ders çalış', icon: BookOpen, hub: 'hub_dersler', items: al(sec('dersler').items) },
     { id: 'sorular', label: 'Soru çöz', icon: CircleHelp, hub: 'hub_sorular', items: al(sec('sorular').items) },
     { id: 'kamplar', label: 'Sınava hazırlan', icon: Flag, hub: 'hub_kamplar', items: al(sec('kamplar').items) },
     { id: 'checkup', label: 'Check Up', icon: Stethoscope, items: al(grup('Check Up')) },
     { id: 'kaynaklar', label: 'Başvuru', icon: Library, hub: 'hub_kaynaklar', items: al(sec('kaynaklar').items) },
+    { id: 'oyunlar', label: 'Oyunlar', icon: Gamepad2, items: oyun },
     { id: 'topluluk', label: 'Topluluk', icon: MessagesSquare, items: al(grup('Topluluk')) },
     { id: 'kisisel', label: 'Kişisel', icon: UserRound, items: al([...KISISEL.map((r) => NAV_ITEMS[r]), ...(isAdmin ? [YONETIM] : [])]) },
   ];
-  return out.filter((g) => g.items.length);
+  // Bölüm başlığının altındaki açıklama: ilk birkaç sayfanın kısa adı (tasarım: "Sesli dersler, Öğren, Spotlar…")
+  return out.filter((g) => g.items.length).map((g) => ({ ...g, alt: g.items.slice(0, 4).map((it) => it.short || it.label).join(', ') + (g.items.length > 4 ? '…' : '') }));
 }
 /** Sayfanın menü grubu (kenar çubuğunda hangi grup açık başlasın) */
 export const menuGrubuOf = (r: AppRoute, gruplar: MenuGrubu[]) => gruplar.find((g) => g.hub === r || g.items.some((it) => it.id === r))?.id;
