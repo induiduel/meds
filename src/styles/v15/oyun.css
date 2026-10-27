@@ -64,3 +64,18 @@
 .oy15-tac { width: 40px; height: 40px; color: var(--color-warn); }
 .oy15-kazanan { font-size: 1.3rem; color: var(--color-ink); }
 .oy15-lobi p.v15-cap { display: block; }
+/* tek kişilik oyunlar (OyunSoloV15) */
+.oy15-solo { display: flex; flex-direction: column; gap: 8px; padding-top: 6px; border-top: 1px solid var(--color-line-soft, var(--color-line)); }
+.oy15-solo-b { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+.oy15-solo-b button { display: flex; flex-direction: column; align-items: flex-start; gap: 3px; padding: 12px; border-radius: 12px; border: 1px solid var(--color-line); background: var(--color-white); color: var(--color-ink); font: inherit; text-align: left; cursor: pointer; }
+.oy15-solo-b button:hover { border-color: var(--color-accent); }
+.oy15-solo-b svg { width: 20px; height: 20px; color: var(--color-accent); }
+.oy15-solo-b small { color: var(--color-ink-3); font-size: .76rem; line-height: 1.3; }
+.oy15-sayac { display: inline-flex; align-items: center; gap: 5px; font-weight: 700; color: var(--color-ink); font-variant-numeric: tabular-nums; }
+.oy15-sayac svg { width: 16px; height: 16px; color: var(--color-accent); }
+.oy15-canlar { display: inline-flex; gap: 3px; }
+.oy15-canlar svg { width: 18px; height: 18px; color: var(--color-line); }
+.oy15-canlar svg.is-dolu { color: var(--color-bad); fill: var(--color-bad); }
+.oy15-x { border: 0; background: none; color: var(--color-ink-3); display: grid; cursor: pointer; padding: 2px; }
+.oy15-x svg { width: 18px; height: 18px; }
+.oy15-ust { align-items: center; }

@@ -37,7 +37,7 @@ import { registerOgrenSesRoutes } from './src/services/ogrenSes';
 import { registerCevrimdisiKatalogRoutes } from './src/services/cevrimdisiKatalog';
 import { registerWhatsAppRoutes, runScheduledWhatsAppDigests } from './src/services/whatsappService';
 import { quizRealtimeServer } from './src/services/quiz/quizRealtimeServer';
-import { oyunKaynaklari } from './src/services/quiz/oyunSoruKaynagi';
+import { oyunKaynaklari, oyunSorulari } from './src/services/quiz/oyunSoruKaynagi';
 import { registerTopluluk } from './src/services/topluluk';
 import crypto from 'crypto';
 
@@ -718,6 +718,17 @@ app.get('/api/test/kurul1/2627', (req, res) => {
 });
 
 // Oyunlar (canlı yarışma): oyuna uygun soru kaynakları (sesli soru çözücü setleri; src/services/quiz/oyunSoruKaynagi.ts)
+// Tek kişilik oyunlar (Blitz, Hayatta kal): cevap ve açıklamalar istemcide puanlanır (sıralama yok, hile önemsiz)
+app.get('/api/oyun/sorular', (req, res) => {
+  const brans = String(req.query.brans || '');
+  if (!/^[a-z0-9]{2,40}$/.test(brans)) return res.status(400).json({ error: 'Geçersiz ders.' });
+  const ders = req.query.ders ? String(req.query.ders).slice(0, 20) : undefined;
+  const sorular = oyunSorulari(brans, ders, Math.min(20, Number(req.query.n) || 20)).map((q) => ({
+    id: q.id, prompt: q.prompt, options: q.options, correct: q.correct_option, aciklama: q.option_explanations?.[q.correct_option] || '', baslik: q.archetype,
+  }));
+  res.json({ sorular });
+});
+
 app.get('/api/oyun/kaynaklar', (_req, res) => {
   try { res.json({ kaynaklar: oyunKaynaklari() }); } catch (e: any) { res.status(500).json({ error: e?.message || 'Kaynaklar okunamadı' }); }
 });

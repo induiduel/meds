@@ -1,10 +1,11 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
-import { Check, Copy, Crown, Gamepad2, LogOut, Users, X } from 'lucide-react';
+import { Check, Copy, Crown, Gamepad2, Heart, LogOut, Timer, Users, X } from 'lucide-react';
 import { safeJsonFetch } from '../../services/api';
 import { auth, getRememberedStudentInfo } from '../../services/auth';
 import { quizSocketClient, type PreFetchedQuestion } from '../../services/quiz/quizSocketClient';
 import { icKonum } from '../../siteHaritasi';
 import { useV15Baslik } from './baslik';
+import OyunSoloV15, { type SoloMod } from './OyunSoloV15';
 import '../../styles/v15/ogren.css';
 import '../../styles/v15/oyun.css';
 
@@ -64,6 +65,7 @@ export default function OyunlarV15() {
   const [bagli, setBagli] = useState(true);
   const [kopyalandi, setKopyalandi] = useState(false);
   const raf = useRef(0);
+  const [solo, setSolo] = useState<SoloMod | null>(null);
 
   useV15Baslik({ baslik: 'Oyunlar', alt: oda ? `Oda ${oda}${baslik ? ` · ${baslik}` : ''}` : 'Canlı soru yarışması' });
 
@@ -153,6 +155,10 @@ export default function OyunlarV15() {
   };
 
   const ben = oyuncular.find((o) => o.userId === benim);
+  if (solo && kaynak) {
+    const d = kaynak.ders.find((x) => x.kod === ders);
+    return <div className="oy15"><OyunSoloV15 mod={solo} brans={brans} ders={ders || undefined} baslik={d ? `${kaynak.ad} · ${d.baslik}` : `${kaynak.ad} · karışık`} onCik={() => setSolo(null)} /></div>;
+  }
   const sirali = [...oyuncular].sort((a, b) => b.score - a.score);
 
   return (
@@ -194,6 +200,13 @@ export default function OyunlarV15() {
                   </div>
                 </div>
                 <button type="button" className="v15-btn oy15-ana" onClick={kur} disabled={!kaynak}>Oda kur</button>
+                <div className="oy15-solo">
+                  <span className="v15-cap">Ya da tek başına, aynı dersle:</span>
+                  <div className="oy15-solo-b">
+                    <button type="button" onClick={() => setSolo('blitz')} disabled={!kaynak}><Timer aria-hidden /><b>Blitz</b><small>60 saniyede kaç doğru?</small></button>
+                    <button type="button" onClick={() => setSolo('hayatta')} disabled={!kaynak}><Heart aria-hidden /><b>Hayatta kal</b><small>3 can, her yanlış bir can</small></button>
+                  </div>
+                </div>
               </>
             )}
           </section>
