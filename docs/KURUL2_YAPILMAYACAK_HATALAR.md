@@ -862,3 +862,12 @@ Her maddede: belirti · kök neden · Kurul 2 kuralı · kapı durumu. Kanıtlar
 - **Kök neden:** pencere (`.tp-perde`, z-index 120) sayfa kabının içinde çiziliyordu; kap kendi katman bağlamını kurduğu için z-index'i kabın dışına taşmıyor, sabit konumlu v15 çubukları (z 30/40) üstte kalıyordu.
 - **Çözüm:** `TopluPdfDugme` pencereyi `createPortal(..., document.body)` ile çizer.
 - **Kural:** tam ekran örtü/pencere bileşenleri daima body'ye portal ile çizilir; sayfa içi z-index'e güvenilmez.
+
+## H97 — Dağıtım, yeni sesli ders metnini git'teki eski sürümle geri aldı; ses eski metinle üretildi (2026-10-27, k2-03/k2-04)
+- **Belirti:** ders-ekle "metinDegisti" döndü ama Oracle'da metin 08:18'deki eski sürümdü; k2-04'ün yeni EMA varyantı eski metnin süresiyle (1609 sn) çıktı; doğrulayıcı eski 65 paragrafı gördü.
+- **Kök neden:** `dagit.sh` git'teki sesli_anlatim verisini Oracle'a eşitler; yeni metin git'e işlenmeden ders-ekle yapılınca (başka oturumun dağıtımı dahil) canlı metin eski commit'e döner. EMA işi metni çalışırken Oracle'dan okur.
+- **Kural:** yeni metin + v2 + vurgu + hizalama önce commit/push, sonra ders-ekle; ses tamamlanınca eski metne ait varyantlar silinir (`DELETE /api/sesli-anlatim/ses/<key>/<vid>`); `kayit.json` süre/özet ve `takip_kapisi --api` ile doğrulanır.
+
+## H98 — Çizim panelleri dar ekranda taşıyor/sözcük kırıyor (2026-10-27, k2-03/k2-04)
+- **Belirti:** `panel_sinama` 366 px'te 10–16 hata (5+ maddeli neden listeleri, dar karşılaştırma sütunlarında "Kafatası", "Korunur" kırılması).
+- **Kural:** çizim ajan talimatına panel başına en çok 4 madde ve ≤60 karakter eklendi; taşan panel silinir/kısaltılır, kapı gevşetilmez.
