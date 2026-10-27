@@ -1384,6 +1384,7 @@ const AppearancePanel: React.FC = () => {
               { value: 'sans', label: 'Düz' },
               { value: 'kitap', label: 'Kitap', style: { fontFamily: "'Newsreader', var(--read-font, Georgia, serif)" } },
               { value: 'klasik', label: 'Klasik', style: { fontFamily: 'Georgia, serif' } },
+              { value: 'roboto', label: 'Roboto', style: { fontFamily: "'Roboto', system-ui, sans-serif" } },
             ]} />
         </SetRow>
       </section>

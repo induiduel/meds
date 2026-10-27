@@ -18,8 +18,8 @@ export type Density = 'compact' | 'normal' | 'wide';
  */
 export type LayoutMode = 'akis' | 'pano' | 'odak';
 /** v11 okuma ve kullanım tercihleri (kök öğeye data-* olarak yazılır; kurallar styles/v11.css) */
-export type ReadingFont = 'serif' | 'sans' | 'kitap' | 'klasik';
-export const READING_ORDER: ReadingFont[] = ['serif', 'sans', 'kitap', 'klasik'];
+export type ReadingFont = 'serif' | 'sans' | 'kitap' | 'klasik' | 'roboto';
+export const READING_ORDER: ReadingFont[] = ['serif', 'sans', 'kitap', 'klasik', 'roboto'];
 /** Okuma yazısı boyutu (soru kökü, şıklar, ders anlatımı, kartlar, okuyucular): 14 → 20 px, beş adım */
 export type TextSize = 'xs' | 's' | 'm' | 'l' | 'xl';
 export const TEXT_SIZE_ORDER: TextSize[] = ['xs', 's', 'm', 'l', 'xl'];
@@ -112,7 +112,7 @@ export interface Appearance {
 
 export const MODE_LABELS: Record<ThemeMode, string> = { light: 'Açık', sepia: 'Sarı', dark: 'Koyu' };
 export const LAYOUT_LABELS: Record<LayoutMode, string> = { akis: 'Akış', pano: 'Pano', odak: 'Odak' };
-export const READING_LABELS: Record<ReadingFont, string> = { serif: 'Tırnaklı', sans: 'Düz', kitap: 'Kitap', klasik: 'Klasik' };
+export const READING_LABELS: Record<ReadingFont, string> = { serif: 'Tırnaklı', sans: 'Düz', kitap: 'Kitap', klasik: 'Klasik', roboto: 'Roboto' };
 export const TEXT_SIZE_LABELS: Record<TextSize, string> = { xs: 'En küçük', s: 'Küçük', m: 'Orta', l: 'Büyük', xl: 'En büyük' };
 export const FILTER_MODE_LABELS: Record<FilterMode, string> = { basit: 'Basit', gelismis: 'Gelişmiş' };
 const V11_DEFAULTS = { v15: true, reading: 'serif' as ReadingFont, textSize: 'm' as TextSize, textPx: 16, filters: 'basit' as FilterMode, qtags: false, qcard: QCARD_DEFAULTS, motion: 'full' as MotionPref, design: 'v12' as DesignVersion };

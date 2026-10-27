@@ -64,9 +64,9 @@ import '../../styles/v15/shell.css';
  * Sayfalar kendi araçlarını #s12-top-slot yuvasına koyar (TopBarSlotV12).
  */
 
-/** v15 yazı tipleri (Plus Jakarta Sans, Newsreader) yalnız v15 seçiliyken bir kez yüklenir */
+/** v15 yazı tipleri (Plus Jakarta Sans, Newsreader, Roboto) yalnız v15 seçiliyken bir kez yüklenir */
 const FONT_HREF =
-  'https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,400;6..72,600&display=swap';
+  'https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,400;6..72,600&family=Roboto:wght@400;500;700&display=swap';
 const useV15Fonts = () => {
   useEffect(() => {
     if (document.getElementById('v15-fonts')) return;

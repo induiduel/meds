@@ -1,10 +1,10 @@
 {
  "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
- "onem": 438,
- "baslik": "Çevrimdışı: kurul ve dönem süzgeci",
+ "onem": 439,
+ "baslik": "Okuma yazısı: Roboto",
  "maddeler": [
-  "Çevrimdışı › Dersler sekmesinde kurul seçilebiliyor; aktif kurul kendiliğinden seçili gelir",
-  "Güncel (2026-27) ve arşiv (2025-26) dersleri ayrı süzülür, her derste dönem etiketi görünür"
+  "Profilde okuma yazısı seçeneklerine Roboto eklendi",
+  "Roboto seçilince soru kökü, ders anlatımı ve notlar Roboto ile gösterilir"
  ],
  "eklenen": [
   "Çevrimdışı kurul ve dönem süzgeci"
