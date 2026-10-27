@@ -103,4 +103,6 @@ Metinler slaytı özetlemekle kalmaz, **öğretir**. Kapılar biçimi ölçer; a
    Slaytta karşılığı olmayan giriş/yorum cümleleri çapasız kalır (toplamın ≤%5'i).
 10. **Panel yoğunluğu:** bir panelde en çok 4 madde, hücre ≤60 karakter; uzun terimler dar sütunda kırılıyorsa (panel_sinama "kelime ortasından kırılmış") panel silinir ya da kısaltılır.
     Metin satırlarını/akış şemasındaki küçük yazıyı saran ve anlamlı yapı göstermeyen kontur çizilmez.
+11. **Öğrenci notu katmanı (`ogrenci_not/<fileId>.json`, canlı derste `ogrenciNot`) yalnız kullanıcı isterse eklenir** (kullanıcı kararı 2026-10-27).
+    Öğrenci notları değerlendirme paketine, metne ve vurgulara girer; ayrı ekran katmanı kendiliğinden üretilmez.
 

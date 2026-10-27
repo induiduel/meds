@@ -1,15 +1,21 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 411,
-  "baslik": "Nöroloji 1–2 dersleri yenilendi",
+  "onem": 412,
+  "baslik": "Nöroloji ve Patoloji dersleri yenilendi",
   "maddeler": [
-    "Nörolojik Hastaya Yaklaşım ve Bilinç Bozukluğu Olan Hastaya Yaklaşım sesli dersleri daha açıklayıcı anlatımla yenilendi (yeni ses, çıkmış soru çipleri, çizimler)."
+    "Kurul 2: Nörolojik Hastaya Yaklaşım, Bilinç Bozukluğu Olan Hastaya Yaklaşım, SSS Hücresel Reaksiyonları ve Ödem/Herniasyon ile Serebrovasküler Hastalıklar ve İnme sesli dersleri daha açıklayıcı anlatımla yeniden hazırlandı."
   ],
-  "eklenen": [],
-  "degisen": [],
+  "eklenen": [
+    "Patoloji 1–2: sınav önem listesi, sesli soru çözücü, sınav asistanı ve örnek sorular.",
+    "Dört derste slayt üstünde çıkmış soru çipleri, resim üstü çizimler, terim ve kısaltma açıklamaları yeni metne göre güncellendi."
+  ],
+  "degisen": [
+    "Dersler yeni sesle (hocanın örnekleri ve ayırıcı noktalarla genişletilmiş anlatım) dinleniyor; anlatım süreleri uzadı.",
+    "Yalın (v15) tasarım artık varsayılan; eski tasarımlar Ayarlar › Görünüm’den seçilebilir."
+  ],
   "duzeltilen": [
-    "Tireyle bitişik yazılan kısaltmalar (DSM-5, MAO-A, HIV-1, 5-HTTLPR) artık slaytta doğru yerde işaretleniyor.",
-    "Büyük harfli Türkçe sözcükler (BİLİNÇ, KOMA) kısaltma sayılmıyor."
+    "Tetkik ve bilinç dersleri: EMG, BT/MR amacı, asit-baz nedenleri, pupil ve ilaç önerileri tıbben düzeltildi.",
+    "Çıkmış soru çipleri yalnız ham sınav belgesinde bulunan sorulara bağlandı."
   ],
   "silinen": []
 }
