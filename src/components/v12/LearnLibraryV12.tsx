@@ -29,6 +29,9 @@ import '../../styles/v13/learn.css';
 import { useAppearance } from '../../utils/appearance';
 import CihazdaIsaret from '../cevrimdisi/CihazdaIsaret';
 
+const SINAMA_GRUPU = 'Sınama — test verisi';
+const groupOf = (d: DeckCatalogEntry) => ((d as any).sinama ? SINAMA_GRUPU : branchOf(d));
+
 export interface LearnLibraryV12Props {
   decks: DeckCatalogEntry[];
   progress: Progress;
@@ -167,7 +170,7 @@ export const LearnLibraryV12: React.FC<LearnLibraryV12Props> = ({ decks: all, pr
   const groupStats = useMemo(() => {
     const m = new Map<string, { n: number; done: number }>();
     visible.forEach((d) => {
-      const g = branchOf(d);
+      const g = groupOf(d);
       const s = m.get(g) || { n: 0, done: 0 };
       s.n += 1;
       if (stateOf(d, progress).status === 'done') s.done += 1;
@@ -183,11 +186,12 @@ export const LearnLibraryV12: React.FC<LearnLibraryV12Props> = ({ decks: all, pr
   const groups = useMemo(() => {
     const m = new Map<string, DeckCatalogEntry[]>();
     shown.forEach((d) => {
-      const g = branchOf(d);
+      const g = groupOf(d);
       const l = m.get(g);
       if (l) l.push(d); else m.set(g, [d]);
     });
-    return [...m.entries()];
+    // Sınama (test verisi) dersleri gerçek derslerle karışmasın: ayrı bölüm, en sonda
+    return [...m.entries()].sort((a, b) => Number(a[0] === SINAMA_GRUPU) - Number(b[0] === SINAMA_GRUPU));
   }, [shown]);
 
   const sentinel = useRef<HTMLDivElement>(null);

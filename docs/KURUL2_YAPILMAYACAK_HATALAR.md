@@ -1077,3 +1077,8 @@ Her maddede: belirti · kök neden · Kurul 2 kuralı · kapı durumu. Kanıtlar
 - **Belirti:** Öğren destesi slayt 1 klinik karar sorusunda, Merritt'e uyan şık `isCorrect:false` ama geri bildirimi "Doğru…", ters şık `isCorrect:true` ama "Yanlış…". Öğrenci doğruyu yanlış öğrenirdi.
 - **Kök neden:** Yazar ajan şıkları ve bayrakları ayrı yazdı; `validate_learning_decks.py` yalnız "tek isCorrect var mı" bakıyordu, bayrak ↔ geri bildirim yönünü karşılaştırmıyordu. İlk bağımsız denetçi bunu yakalamadı; ikincisi betikle taradı.
 - **Kalıcı çözüm:** doğrulayıcıya `klinik-karar-bayrak` HATA kapısı (geri bildirim "Doğru/Yanlış" ile başlıyor ve bayrakla çelişiyorsa). Önleme: bayrak ve geri bildirim tek yerden üretilir; denetçi kapı dışı tutarlılık taraması yapar; doğru şık hep ilk sırada olmaz.
+
+## H121 · Sınama (test) Öğren dersi gerçek Kurul 2 dersleriyle aynı listede görünüyordu (2026-10-27, k2-07 Genel Anestezik İlaçlar)
+- **Belirti:** Sınama olarak eklenen `k2p-k2-07-genel-anestezik-ilaclar` Öğren kitaplığında Tıbbi Farmakoloji grubunda gerçek derslerle karışık duruyordu (yalnız küçük "Sınama" rozeti vardı); gerçek ders işlenince karışma riski.
+- **Kök neden:** `data/sinama.json` ayrımı yalnız Canlı ders servisinde (`canliDers.ts`) uygulanıyordu; Öğren kitaplığı (`LearnLibraryV12`) `deck.sinama` alanını yalnız rozet olarak gösterip dal (branş) ile grupluyordu.
+- **Kalıcı çözüm:** kitaplıkta `sinama` işaretli desteler ayrı "Sınama — test verisi" bölümünde, en sonda gösterilir. Önleme: yeni listeleyen her ekran `sinama` alanını bölüm ayrımı için kullanır; gerçek PDF gelince `yayinla.py` aynı kimliği günceller ve `sinama` alanını bırakır (H97/H99 sırası).
