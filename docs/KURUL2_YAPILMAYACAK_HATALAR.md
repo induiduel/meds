@@ -1082,3 +1082,9 @@ Her maddede: belirti · kök neden · Kurul 2 kuralı · kapı durumu. Kanıtlar
 - **Belirti:** Sınama olarak eklenen `k2p-k2-07-genel-anestezik-ilaclar` Öğren kitaplığında Tıbbi Farmakoloji grubunda gerçek derslerle karışık duruyordu (yalnız küçük "Sınama" rozeti vardı); gerçek ders işlenince karışma riski.
 - **Kök neden:** `data/sinama.json` ayrımı yalnız Canlı ders servisinde (`canliDers.ts`) uygulanıyordu; Öğren kitaplığı (`LearnLibraryV12`) `deck.sinama` alanını yalnız rozet olarak gösterip dal (branş) ile grupluyordu.
 - **Kalıcı çözüm:** kitaplıkta `sinama` işaretli desteler ayrı "Sınama — test verisi" bölümünde, en sonda gösterilir. Önleme: yeni listeleyen her ekran `sinama` alanını bölüm ayrımı için kullanır; gerçek PDF gelince `yayinla.py` aynı kimliği günceller ve `sinama` alanını bırakır (H97/H99 sırası).
+
+## H108 · Tablo rozetleri harf harf dikey; Ders seçenekleri kartları uzayıp taşıyordu (2026-10-28)
+- **Belirti:** Ders içerik tablolarında "Kayboldu/Azalır" gibi rozetli hücreler harf harf alt alta yazılıyordu. Sesli ders › Ders seçenekleri'nde "Metni dışa aktar" açılınca Cihazda/MP3 kartları dev boyuta uzayıp seçenekler sağa taşıyordu.
+- **Kök neden (rozet):** başka bir oturum `dersIcerik.css`'e bir simge için aynı sınıf adıyla `.di15-ik{width:16px;height:16px}` ekledi; rozet `span.di15-ik` 16 px'e sıkıştı. **Kök neden (menü):** `.cd15-mliste > :not(.cd-btn) { display: contents }` sarmalayıcıyı çözünce dışa aktar alt listesi ve PDF düzeni ızgara hücresi oldu; satır `align-items: stretch` ile tüm kartları uzattı.
+- **Çözüm:** eski kural `svg.di15-ik` ile kapsandı, rozete `white-space: nowrap; flex: none`. Menüde alt liste/düzen `grid-column: 1 / -1`, ızgara `align-items: start`.
+- **Kural:** Yeni CSS sınıfı eklemeden önce aynı adın kullanılmadığını grep'le; kısa ortak adlara (`-ik`, `-ad`) element/üst seçici kapsamı ver. `display: contents` ile çözülen sarmalayıcının açılır alt parçaları tam satır olmalı.

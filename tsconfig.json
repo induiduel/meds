@@ -25,5 +25,6 @@
     "allowImportingTsExtensions": true,
     "noEmit": true
   },
-  "exclude": ["node_modules", "dist", "scripts/archive"]
+  "include": ["src", "scripts", "server.ts", "vite.config.ts", "capacitor.config.ts"],
+  "exclude": ["node_modules", "dist", "dist-android", "android", "data", "scripts/archive", "public"]
 }

@@ -1,5 +1,6 @@
 import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
-import { Check, Heart, RotateCcw, Timer, Trophy, X } from 'lucide-react';
+import { Check, Heart, Timer, X } from 'lucide-react';
+import { OyunUst, SonKart, useGecenSure } from './OyunKitV15';
 import { safeJsonFetch } from '../../services/api';
 
 /**
@@ -44,6 +45,7 @@ export default function OyunSoloV15({ mod, brans, ders, baslik, onCik }: { mod: 
   }, [soru, mod]);
   const [dySec, setDySec] = useState<boolean | null>(null);
   const carpan = 1 + Math.floor(seri / 3);
+  const sure = useGecenSure();
 
   const getir = useCallback(async () => {
     if (getiriyor.current) return;
@@ -108,30 +110,27 @@ export default function OyunSoloV15({ mod, brans, ders, baslik, onCik }: { mod: 
   if (hata) return <section className="v15-card oy15-kart"><p className="oy15-hata">{hata}</p><button type="button" className="oy15-cik" onClick={onCik}>Geri</button></section>;
 
   if (bitti) {
+    const skor = mod === 'blitz' ? puan : dogru;
     return (
-      <section className="v15-card oy15-kart oy15-son">
-        <Trophy aria-hidden className="oy15-tac" />
-        <b className="oy15-kazanan">{mod === 'blitz' ? `${puan} puan · ${dogru} doğru` : `${dogru} doğru`}{yeniRekor ? ' · yeni rekor!' : ''}</b>
-        <p className="v15-cap">{baslik} · {mod === 'blitz' ? '60 saniye' : mod === 'gorsel' ? 'Görselli soru' : 'Hayatta kal'} · {yanlis} yanlış · en iyi {rekor}</p>
-        <div className="oy15-alt">
-          <button type="button" className="oy15-cik" onClick={onCik}>Oyunlar</button>
-          <button type="button" className="v15-btn oy15-ana" onClick={yeniden}><RotateCcw aria-hidden />Yeniden oyna</button>
-        </div>
-      </section>
+      <SonKart
+        baslik={mod === 'blitz' ? `${puan} puan` : `${dogru} doğru`}
+        alt={`${baslik} · ${mod === 'blitz' ? '60 saniye' : mod === 'gorsel' ? 'Görselli soru' : 'Hayatta kal'}`}
+        dogru={dogru} yanlis={yanlis} sureSn={sure.sn()} enIyi={Math.max(rekor, skor)} rekor={yeniRekor}
+        oran={dogru + yanlis ? dogru / (dogru + yanlis) : 0} onCik={onCik} onYeniden={() => { sure.sifirla(); yeniden(); }}
+      />
     );
   }
 
   return (
-    <section className="oy15-soru">
-      <div className="oy15-ust">
-        {mod === 'blitz'
-          ? <span className="oy15-sayac"><Timer aria-hidden /> {Math.ceil(kalan / 1000)} sn</span>
-          : mod === 'gorsel' ? <span className="v15-cap">Soru {Math.min(GORSEL_N, dogru + yanlis + (secim ? 0 : 1))}/{GORSEL_N}</span>
+    <section className="oy15-soru" lang="tr">
+      <OyunUst
+        ilerleme={mod === 'blitz' ? kalan / SURE : mod === 'gorsel' ? (dogru + yanlis) / GORSEL_N : can / 3}
+        sol={mod === 'blitz'
+          ? <span className={`oy15-sayac${kalan < 10_000 ? ' is-az' : ''}`}><Timer aria-hidden /> {Math.ceil(kalan / 1000)} sn</span>
+          : mod === 'gorsel' ? `Soru ${Math.min(GORSEL_N, dogru + yanlis + (secim ? 0 : 1))}/${GORSEL_N}`
           : <span className="oy15-canlar" aria-label={`${can} can`}>{[0, 1, 2].map((i) => <Heart key={i} aria-hidden className={i < can ? 'is-dolu' : ''} />)}</span>}
-        <span className="v15-cap">{mod === 'blitz' ? <>{puan} puan{carpan > 1 && <b className="oy15-carpan"> ×{carpan}</b>}</> : `${dogru} doğru`}{seri > 2 ? ` · ${seri} seri` : ''} · en iyi {rekor}</span>
-        <button type="button" className="oy15-x" onClick={() => setBitti(true)} aria-label="Oyunu bitir"><X aria-hidden /></button>
-      </div>
-      {mod === 'blitz' && <div className="v15-bar oy15-sure" aria-hidden><span style={{ width: `${(kalan / SURE) * 100}%` }} /></div>}
+        puan={mod === 'blitz' ? puan : dogru} puanEtiket={mod === 'blitz' ? 'puan' : 'doğru'} seri={seri} carpan={mod === 'blitz' ? carpan : undefined}
+        ek={<span className="og15-cip is-sonuk">En iyi {rekor}</span>} onCik={() => setBitti(true)} cikEtiket="Oyunu bitir" />
       {!soru ? <span className="v15-skel b15-skel" aria-hidden /> : (
         <>
           {mod === 'gorsel' && soru.gorsel && (
@@ -142,7 +141,7 @@ export default function OyunSoloV15({ mod, brans, ders, baslik, onCik }: { mod: 
           <p className="oy15-kok">{soru.prompt}</p>
           {mod === 'blitz' && oneri ? (
             <div className="oy15-dy">
-              <div className={`oy15-oneri${dySec === null ? '' : dySec === oneri.dogruMu ? ' is-dogru' : ' is-yanlis'}`}>
+              <div key={oneri.metin} className={`oy15-oneri og15-gir${dySec === null ? '' : dySec === oneri.dogruMu ? ' is-dogru og15-parla' : ' is-yanlis og15-titre'}`}>
                 <small>Önerme</small><b>{oneri.metin}</b>
                 {dySec !== null && dySec !== oneri.dogruMu && <span>{oneri.dogruMu ? 'Bu şık doğruydu.' : `Doğru cevap: ${soru.options[soru.correct]}`}</span>}
               </div>
@@ -154,7 +153,7 @@ export default function OyunSoloV15({ mod, brans, ders, baslik, onCik }: { mod: 
           ) : (
           <ul className="oy15-siklar">
             {Object.entries(soru.options).map(([h, t]) => {
-              const cls = secim ? (h === soru.correct ? ' is-dogru' : h === secim ? ' is-yanlis' : ' is-sonuk') : '';
+              const cls = secim ? (h === soru.correct ? ` is-dogru${h === secim ? ' og15-parla' : ''}` : h === secim ? ' is-yanlis og15-titre' : ' is-sonuk') : '';
               return (
                 <li key={h}>
                   <button type="button" className={`oy15-sik${cls}`} disabled={!!secim} onClick={() => cevapla(h)}>

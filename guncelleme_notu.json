@@ -1,9 +1,11 @@
 {
  "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
- "onem": 505,
- "baslik": "Sesli derste otomatik canlı konuma dönüş",
+ "onem": 503,
+ "baslik": "Ders içerik ve sesli ders iyileştirmeleri",
  "maddeler": [
-  "Ekrana dokunup gezindikten 5 saniye sonra PDF ve metin birlikte canlı konuma döner"
+  "Yıldızlı paragraflar ve sesli ders ekranında düzeltmeler",
+  "Kurul seçici ve ders içerik sayfası güncellemeleri",
+  "Genetik dersi için sesli asistan ve soru çözücü içeriği"
  ],
  "eklenen": [],
  "degisen": [],

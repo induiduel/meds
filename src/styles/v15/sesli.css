@@ -324,3 +324,11 @@
 .cd-mini-kare { display: none; }
 :root[data-v15='on'] .cd-mini-kare { flex: none; width: 38px; height: 38px; border-radius: 10px; display: grid; place-items: center; background: var(--color-accent); color: var(--color-on-accent, #fff); }
 :root[data-v15='on'] .cd-mini-kare svg { width: 18px; height: 18px; }
+
+/* Ders seçenekleri: "Metni dışa aktar" alt listesi kendi tam satırında; satırlar içeriğe göre (H108) */
+:root[data-v15='on'] .cd15-mliste { align-items: start; }
+:root[data-v15='on'] .cd15-mliste :is(.cd-aktar-liste, .cd-aktar-duzen, .cd-aktar-hata) { grid-column: 1 / -1; min-width: 0; }
+:root[data-v15='on'] .cd15-mliste .cd-aktar-liste { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 6px; padding: 8px; border-radius: 14px; background: var(--color-field); }
+:root[data-v15='on'] .cd15-mliste .cd-aktar-liste :is(.cd-aktar-bicim, button) { min-height: 56px; flex-direction: row; justify-content: flex-start; text-align: left; padding: 8px 10px; }
+:root[data-v15='on'] .cd15-mliste .cd-aktar-duzen { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+:root[data-v15='on'] .cd15-mliste .cd-aktar-duzen :is(button, a) { width: auto; min-height: 40px; flex-direction: row; }

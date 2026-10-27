@@ -332,7 +332,7 @@ function HastalikKart({ h, i, acik }: { h: DiPaket['hastaliklar'][number]; i: nu
 function TabloKart({ t }: { t: DiTablo }) {
   const tur = tabloTuru(t);
   return (
-    <section className={`v15-card di15-tb is-${tur}`}>
+    <section className={`v15-card di15-tb is-${tur}${t.k ? ' is-kars' : ''}`}>
       <header className="di15-tb-u">
         <span className="di15-tb-ik" aria-hidden>{t.k ? <Scale aria-label="Karşılaştırma" /> : tur === 'sira' ? <ListChecks /> : tur === 'eslesme' ? <Layers /> : <Table2 />}</span>
         <div><h3>{t.t}</h3><small>{t.k ? 'Karşılaştırma' : tur === 'sira' ? 'Sıralama' : tur === 'eslesme' ? 'Eşleştirme' : 'Tablo'} · adım {t.n}</small></div>
@@ -367,11 +367,11 @@ function TabloKart({ t }: { t: DiTablo }) {
             <table className="di15-mat">
               <thead><tr>{t.h.map((h, k) => <th key={h} className={k ? `is-r${k % 5}` : ''}>{h}</th>)}</tr></thead>
               <tbody className="di15-anim">{t.r.map((r, j) => (
-                <tr key={j} style={{ '--i': j } as React.CSSProperties}>{r.map((c, k) => (k === 0 ? <th key={k} scope="row">{c}</th> : <td key={k}><Hucre v={c} /></td>))}</tr>
+                <tr key={j} style={{ '--i': j } as React.CSSProperties}>{r.map((c, k) => (k === 0 ? <th key={k} scope="row">{c}</th> : <td key={k} className={t.k && k === 1 && t.h.length >= 3 ? `is-taraf is-t${t.r.map((x) => x[1]).filter((v, i2, l) => l.indexOf(v) === i2).indexOf(r[1]) % 4}` : undefined}><Hucre v={c} /></td>))}</tr>
               ))}</tbody>
             </table>
           </div>
-          {/* telefonda satır kartları */}
+          {!t.k && (
           <ul className="di15-mat-kart di15-anim" role="list">
             {t.r.map((r, j) => (
               <li key={j} style={{ '--i': j } as React.CSSProperties}>
@@ -387,6 +387,7 @@ function TabloKart({ t }: { t: DiTablo }) {
               </li>
             ))}
           </ul>
+          )}
         </>
       )}
     </section>

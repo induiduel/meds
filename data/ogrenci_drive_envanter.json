@@ -1,5 +1,5 @@
 {
-  "taranma_zamani": "2026-10-27 02:22:08",
+  "taranma_zamani": "2026-10-27 17:18:38",
   "kok_id": "17K7doMGg0xupQekTD5_Vz9xMXc5gd7BA",
   "kurullar": {
     "2": {
@@ -13,6 +13,14 @@
         "Nöroloji": {
           "id": "1xSitE23YUDZppxpCKRRt8D821friTC1J",
           "dosyalar": [
+            {
+              "id": "17VnxQrjJzfSP0cEdYWykHp8T9vhwvSGa",
+              "name": "3 Nörolojik Muayene.pdf",
+              "mime": "application/pdf",
+              "uzanti": ".pdf",
+              "tur": "not",
+              "path": "Kurullar/Kurul 2/Nöroloji/3 Nörolojik Muayene.pdf"
+            },
             {
               "id": "13zAmHjeOCQJwgfxBQWxTgUMbs3eNF-de",
               "name": "Nöro 1 Nörolojik Hastaya Yaklaşım.m4a",
@@ -34,7 +42,7 @@
               "name": "Nöroloji 1 - Nörolojik Hastaya Yaklaşım",
               "mime": "application/pdf",
               "uzanti": "",
-              "tur": "diger",
+              "tur": "not",
               "path": "Kurullar/Kurul 2/Nöroloji/Nöroloji 1 - Nörolojik Hastaya Yaklaşım"
             },
             {
@@ -42,8 +50,29 @@
               "name": "Nöroloji 2 - Bilinç Bozukluklarına Yaklaşım",
               "mime": "application/pdf",
               "uzanti": "",
-              "tur": "diger",
+              "tur": "not",
               "path": "Kurullar/Kurul 2/Nöroloji/Nöroloji 2 - Bilinç Bozukluklarına Yaklaşım"
+            }
+          ]
+        },
+        "Tıbbi Genetik": {
+          "id": "117rJp6Q44wNI3ciNfEUnN5Fl_J3Zamtn",
+          "dosyalar": [
+            {
+              "id": "1QBv4Wwqe9qsWJQ4twryu-zzMDS1qFV_q",
+              "name": "BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ-1_261027_120429.pdf",
+              "mime": "application/pdf",
+              "uzanti": ".pdf",
+              "tur": "not",
+              "path": "Kurullar/Kurul 2/Tıbbi Genetik/BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ-1_261027_120429.pdf"
+            },
+            {
+              "id": "1TEqZN9M23cF-TJ-kSs7mSQidF60Du8Vm",
+              "name": "Genetik 1 - Beyin ve İskelet Sistemi Gelişimi Genetiği.m4a",
+              "mime": "audio/mp4",
+              "uzanti": ".m4a",
+              "tur": "ses",
+              "path": "Kurullar/Kurul 2/Tıbbi Genetik/Genetik 1 - Beyin ve İskelet Sistemi Gelişimi Genetiği.m4a"
             }
           ]
         },
@@ -60,11 +89,11 @@
             },
             {
               "id": "1DseZsQT8_XXGkcCFKWDqEEpO09qoHN2I",
-              "name": "Patoloji K2_1.m4a",
+              "name": "Patoloji K2_1 s34.m4a",
               "mime": "audio/mp4",
               "uzanti": ".m4a",
               "tur": "ses",
-              "path": "Kurullar/Kurul 2/Tıbbi Patoloji/Patoloji K2_1.m4a"
+              "path": "Kurullar/Kurul 2/Tıbbi Patoloji/Patoloji K2_1 s34.m4a"
             },
             {
               "id": "1V27owzf2A2y_zofBdmCbqA9exoGs0uYj",

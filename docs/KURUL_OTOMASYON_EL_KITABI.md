@@ -479,3 +479,5 @@ LLM otomasyonu kapalıdır (AGENTS kural 20). Yeni ders, kullanıcı hangi dosya
 
 ### PDF akışı için etiketleme (2026-10-27)
 `ders_icerik_uret.py` sonunda `ders_icerik_adim.py` çalışır: her kayda `adim` (slayt no) yazılır; `ders_icerik_dogrula.py` eksik/eşlenemeyen `adim`'de HATA verir. PDF: `npx tsx scripts/ders_pdf.mts <key>`; ekranda ders sayfası › Ders PDF'i. Ayrıntı: `DERS_ICERIK_BICIMI.md`.
+
+> **Karşılaştırma/tablo uyarısı (H118):** karşılaştırma ve tablo ögeleri doğal Türkçe ve tıbbi olarak anlamlı olmalı; "Anatomik basamak mı, muayene başlığı mı?" türü meta sınıflama yazılmaz (üretici de eler). Bkz. `KURUL2_YAPILMAYACAK_HATALAR.md` H118.

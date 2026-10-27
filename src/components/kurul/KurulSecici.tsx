@@ -79,17 +79,19 @@ export interface KurulSeciciProps {
 
 export const KurulSecici: React.FC<KurulSeciciProps> = ({ secili, yol, tumuYol, icerik, className }) => {
   const aktif = takvim();
+  // Her sayfada bir kurul her zaman seçili: adres → son seçim → takvim. Süzme (secili) ayrı, vurgu ayrı tutulur.
+  const vurgulu = secili ?? varsayilanKurul();
   const git = (url: string, k: number | null) => linkClick(() => { if (k) kurulKaydet(k); navigateTo(url); });
   // Dar ekranda şerit kayar: seçili kurul görünür kalsın (yalnız şeridin kendisi kayar, sayfa değil)
   const ref = useRef<HTMLElement>(null);
   useEffect(() => {
     const n = ref.current, on = n?.querySelector<HTMLElement>('.is-on');
     if (n && on && n.scrollWidth > n.clientWidth) n.scrollLeft = on.offsetLeft - (n.clientWidth - on.offsetWidth) / 2;
-  }, [secili]);
+  }, [vurgulu]);
   return (
     <nav ref={ref} className={`ks${className ? ` ${className}` : ''}`} aria-label="Kurul seç">
       {tumuYol && (
-        <a href={tumuYol} className={`ks-k${secili == null ? ' is-on' : ''}`} aria-current={secili == null ? 'true' : undefined} onClick={git(tumuYol, null)}>
+        <a href={tumuYol} className="ks-k" onClick={git(tumuYol, null)}>
           Tümü
         </a>
       )}
@@ -100,8 +102,8 @@ export const KurulSecici: React.FC<KurulSeciciProps> = ({ secili, yol, tumuYol, 
         return (
           <a
             key={k} href={url} onClick={git(url, k)}
-            className={`ks-k${k === secili ? ' is-on' : ''}${bos ? ' is-bos' : ''}`}
-            aria-current={k === secili ? 'true' : undefined}
+            className={`ks-k${k === vurgulu ? ' is-on' : ''}${bos ? ' is-bos' : ''}`}
+            aria-current={k === vurgulu ? 'true' : undefined}
             title={`${ad ? `Kurul ${k} · ${ad}` : `Kurul ${k}`}${bos ? ' · henüz içerik yok' : ''}`}
           >
             Kurul {k}

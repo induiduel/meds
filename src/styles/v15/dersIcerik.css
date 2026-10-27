@@ -141,7 +141,7 @@
 .di15-mat-kart dd { margin: 2px 0 0; color: var(--color-ink-2); line-height: 1.45; font-size: .92rem; }
 @container (max-width: 600px) { .di15-mat-kap { display: none; } .di15-mat-kart { display: flex; } }
 /* değer simgeleri */
-.di15-ik { display: inline-flex; align-items: center; gap: 4px; padding: 2px 8px; border-radius: 999px; font-weight: 600; font-size: .85rem; }
+.di15-ik { white-space: nowrap; flex: none; display: inline-flex; align-items: center; gap: 4px; padding: 2px 8px; border-radius: 999px; font-weight: 600; font-size: .85rem; }
 .di15-ik svg { width: 13px; height: 13px; }
 .di15-ik.is-var { background: var(--color-ok-soft); color: var(--color-ok); }
 .di15-ik.is-yok { background: var(--color-bad-soft); color: var(--color-bad); }
@@ -199,7 +199,7 @@
   .di15-anim > *, .di15-hast-g, .di15-ac { animation: none; }
   .di15-cevir-y { transition: none; }
 }
-.di15-ik{width:16px;height:16px;vertical-align:-2px;opacity:.8}
+svg.di15-ik{width:16px;height:16px;vertical-align:-2px;opacity:.8}
 .di15-sira{margin:6px 0 0 20px;line-height:1.55}
 .di15-sira li{padding:2px 0}
 .di15-sira ul{margin:2px 0 2px 18px}
@@ -228,3 +228,13 @@
 .di15-ser-ok.is-sag { right: 0; background: linear-gradient(270deg, var(--color-bg, var(--color-white)) 40%, transparent); justify-items: end; }
 .di15-filtre { max-width: 100%; overflow-x: auto; scrollbar-width: none; flex-wrap: nowrap; }
 .di15-filtre button { flex: none; white-space: nowrap; }
+
+/* Karşılaştırma = HER ZAMAN tablo (telefonda da); kart/liste yok */
+.di15-tb.is-kars .di15-mat-kap { display: block !important; overflow-x: visible; }
+.di15-tb.is-kars .di15-mat-kart { display: none !important; }
+.di15-tb.is-kars .di15-mat { width: 100%; table-layout: fixed; }
+.di15-tb.is-kars .di15-mat th, .di15-tb.is-kars .di15-mat td { padding: 8px 8px; font-size: .84rem; line-height: 1.35; overflow-wrap: anywhere; hyphens: auto; vertical-align: top; }
+.di15-tb.is-kars .di15-mat thead th { font-size: .72rem; letter-spacing: .04em; }
+.di15-tb.is-kars .di15-mat th:first-child { width: 28%; }
+.di15-tb.is-kars .di15-mat td.is-taraf { width: 26%; font-weight: 700; --t: var(--color-accent); color: var(--t); background: color-mix(in srgb, var(--t) 14%, transparent); }
+.di15-tb.is-kars .di15-mat td.is-t1 { --t: var(--color-ok); } .di15-tb.is-kars .di15-mat td.is-t2 { --t: var(--color-warn); } .di15-tb.is-kars .di15-mat td.is-t3 { --t: var(--color-ai, #af52de); }

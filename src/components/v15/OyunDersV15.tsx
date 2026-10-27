@@ -1,5 +1,6 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
-import { ArrowDown, ArrowUp, Check, RotateCcw, Trophy, X } from 'lucide-react';
+import { ArrowDown, ArrowUp, Check, X } from 'lucide-react';
+import { OyunUst, SonKart, useGecenSure } from './OyunKitV15';
 import type { DiPaket, DiTerim } from './dersIcerik';
 
 /**
@@ -51,44 +52,35 @@ export function oyunVeriVar(oyun: DersOyun, p: DiPaket[]): boolean {
   return uygunTerimler(p, 120).length >= (oyun === 'izgara' ? 6 : 8);
 }
 
+
 export default function OyunDersV15({ oyun, paketler, baslik, onCik }: { oyun: DersOyun; paketler: DiPaket[]; baslik: string; onCik: () => void }) {
   const [tur, setTur] = useState(0); // yeniden başlatma anahtarı
   const anahtar = `${oyun}:${paketler.length === 1 ? paketler[0].key : '*'}`;
-  const [sonuc, setSonuc] = useState<{ puan: number; toplam: number; rekor: boolean; enIyi: number } | null>(null);
-  const bitir = (puan: number, toplam: number) => {
+  const sure = useGecenSure();
+  const [sonuc, setSonuc] = useState<{ puan: number; toplam: number; yanlis: number; sn: number; rekor: boolean; enIyi: number } | null>(null);
+  const bitir = (puan: number, toplam: number, yanlis: number) => {
     const eski = rekorOku(anahtar);
     if (puan > eski) rekorYaz(anahtar, puan);
-    setSonuc({ puan, toplam, rekor: puan > eski, enIyi: Math.max(puan, eski) });
+    setSonuc({ puan, toplam, yanlis, sn: sure.sn(), rekor: puan > eski, enIyi: Math.max(puan, eski) });
   };
   const ad = oyun === 'kaydir' ? 'Kaydır: doğru mu?' : oyun === 'sirala' ? 'Sırala' : 'Eşleştirme ızgarası';
   if (sonuc) {
     return (
-      <section className="v15-card oy15-kart oy15-son">
-        <Trophy aria-hidden className="oy15-tac" />
-        <b className="oy15-kazanan">{sonuc.puan}/{sonuc.toplam}{oyun === 'sirala' ? ' adım yerinde' : ' doğru'}{sonuc.rekor ? ' · yeni rekor!' : ''}</b>
-        <p className="v15-cap">{ad} · {baslik} · en iyi {sonuc.enIyi}</p>
-        <div className="oy15-alt">
-          <button type="button" className="oy15-cik" onClick={onCik}>Oyunlar</button>
-          <button type="button" className="v15-btn oy15-ana" onClick={() => { setSonuc(null); setTur((t) => t + 1); }}><RotateCcw aria-hidden />Yeniden oyna</button>
-        </div>
-      </section>
+      <SonKart
+        baslik={`${sonuc.puan}/${sonuc.toplam}${oyun === 'sirala' ? ' adım yerinde' : ' doğru'}`}
+        alt={`${ad} · ${baslik}`}
+        dogru={sonuc.puan} yanlis={sonuc.yanlis} sureSn={sonuc.sn} enIyi={sonuc.enIyi} rekor={sonuc.rekor}
+        oran={sonuc.toplam ? sonuc.puan / sonuc.toplam : 0}
+        onCik={onCik} onYeniden={() => { setSonuc(null); sure.sifirla(); setTur((t) => t + 1); }}
+      />
     );
   }
   const ortak = { paketler, onCik, bitir, rekor: rekorOku(anahtar) };
-  return oyun === 'kaydir' ? <Kaydir key={tur} {...ortak} /> : oyun === 'sirala' ? <Sirala key={tur} {...ortak} /> : <Izgara key={tur} {...ortak} />;
+  return <div lang="tr" className="og15-oyun">{oyun === 'kaydir' ? <Kaydir key={tur} {...ortak} /> : oyun === 'sirala' ? <Sirala key={tur} {...ortak} /> : <Izgara key={tur} {...ortak} />}</div>;
 }
 
-interface OyunP { paketler: DiPaket[]; onCik: () => void; bitir: (puan: number, toplam: number) => void; rekor: number }
-
-function Ust({ sol, sag, onCik }: { sol: React.ReactNode; sag: React.ReactNode; onCik: () => void }) {
-  return (
-    <div className="oy15-ust">
-      <span className="v15-cap">{sol}</span>
-      <span className="v15-cap">{sag}</span>
-      <button type="button" className="oy15-x" onClick={onCik} aria-label="Oyundan çık"><X aria-hidden /></button>
-    </div>
-  );
-}
+interface OyunP { paketler: DiPaket[]; onCik: () => void; bitir: (puan: number, toplam: number, yanlis: number) => void; rekor: number }
+const Bos = ({ metin, onCik }: { metin: string; onCik: () => void }) => <section className="v15-card oy15-kart"><p>{metin}</p><button type="button" className="oy15-cik" onClick={onCik}>Geri</button></section>;
 
 /* ───────── N07 Kaydır: önerme kartları ───────── */
 const KART = 12;
@@ -103,6 +95,7 @@ function Kaydir({ paketler, onCik, bitir, rekor }: OyunP) {
   }, [paketler]);
   const [i, setI] = useState(0);
   const [dogru, setDogru] = useState(0);
+  const [seri, setSeri] = useState(0);
   const [cevap, setCevap] = useState<boolean | null>(null);
   const [dx, setDx] = useState(0);
   const bas = useRef<number | null>(null);
@@ -112,9 +105,9 @@ function Kaydir({ paketler, onCik, bitir, rekor }: OyunP) {
     setCevap(c); setDx(c ? 400 : -400);
     const ok = c === k.dogruMu;
     const yeni = dogru + (ok ? 1 : 0);
-    if (ok) setDogru(yeni);
+    if (ok) { setDogru(yeni); setSeri((s) => s + 1); } else setSeri(0);
     window.setTimeout(() => {
-      if (i + 1 >= kartlar.length) { bitir(yeni, kartlar.length); return; }
+      if (i + 1 >= kartlar.length) { bitir(yeni, kartlar.length, i + 1 - yeni); return; }
       setI(i + 1); setCevap(null); setDx(0);
     }, ok ? 550 : 1900);
   };
@@ -123,16 +116,21 @@ function Kaydir({ paketler, onCik, bitir, rekor }: OyunP) {
     window.addEventListener('keydown', t);
     return () => window.removeEventListener('keydown', t);
   });
-  if (!k) return <section className="v15-card oy15-kart"><p>Bu derste yeterli terim yok.</p><button type="button" className="oy15-cik" onClick={onCik}>Geri</button></section>;
+  if (!k) return <Bos metin="Bu derste yeterli terim yok." onCik={onCik} />;
   const ok = cevap !== null && cevap === k.dogruMu;
+  // yanlışta kart geri gelir ve titrer, açıklama okunur; doğruda uçup gider
+  const kx = cevap !== null && !ok ? 0 : dx;
   return (
     <section className="oy15-soru">
-      <Ust sol={`Kart ${i + 1}/${kartlar.length}`} sag={`${dogru} doğru · en iyi ${rekor}`} onCik={onCik} />
+      <OyunUst ilerleme={(i + (cevap !== null ? 1 : 0)) / kartlar.length} sol={`Kart ${i + 1}/${kartlar.length}`} puan={dogru} puanEtiket="doğru" seri={seri}
+        ek={<span className="og15-cip is-sonuk">En iyi {rekor}</span>} onCik={onCik} />
       <p className="v15-cap oy15-kd-ip">Tanım bu terime mi ait? Sağa kaydır: doğru · sola: yanlış</p>
       <div className="oy15-kd-alan">
+        <div className="oy15-kd-yigin" aria-hidden />
         <div
-          className={`oy15-kd-kart${cevap === null ? '' : ok ? ' is-dogru' : ' is-yanlis'}`}
-          style={{ transform: `translateX(${dx}px) rotate(${dx / 25}deg)`, transition: bas.current === null ? 'transform .3s ease' : 'none' }}
+          key={k.id}
+          className={`oy15-kd-kart og15-gir${cevap === null ? '' : ok ? ' is-dogru og15-parla' : ' is-yanlis og15-titre'}`}
+          style={{ transform: `translateX(${kx}px) rotate(${kx / 25}deg)`, transition: bas.current === null ? 'transform .3s ease' : 'none' }}
           onPointerDown={(e) => { if (cevap !== null) return; bas.current = e.clientX; (e.currentTarget as HTMLElement).setPointerCapture(e.pointerId); }}
           onPointerMove={(e) => { if (bas.current !== null) setDx(e.clientX - bas.current); }}
           onPointerUp={() => { const d = dx; bas.current = null; if (Math.abs(d) > 80) cevapla(d > 0); else setDx(0); }}
@@ -179,7 +177,9 @@ function Sirala({ paketler, onCik, bitir, rekor }: OyunP) {
   const [i, setI] = useState(0);
   const [toplam, setToplam] = useState(0);
   const [yerinde, setYerinde] = useState(0);
+  const [seri, setSeri] = useState(0);
   const [kontrol, setKontrol] = useState(false);
+  const [oynayan, setOynayan] = useState<number | null>(null);
   const t = turlar[i];
   const ilkDizi = (x: SiraTur) => {
     let d = karistir(x.adimlar.map((_, j) => j));
@@ -187,26 +187,30 @@ function Sirala({ paketler, onCik, bitir, rekor }: OyunP) {
     return d;
   };
   const [dizi, setDizi] = useState<number[]>(() => (turlar[0] ? ilkDizi(turlar[0]) : []));
-  if (!t) return <section className="v15-card oy15-kart"><p>Bu derste sıralanacak adım listesi yok.</p><button type="button" className="oy15-cik" onClick={onCik}>Geri</button></section>;
+  if (!t) return <Bos metin="Bu derste sıralanacak adım listesi yok." onCik={onCik} />;
   const tasi = (j: number, y: number) => {
     const k = j + y;
     if (kontrol || k < 0 || k >= dizi.length) return;
-    const d = [...dizi]; [d[j], d[k]] = [d[k], d[j]]; setDizi(d);
+    const d = [...dizi]; [d[j], d[k]] = [d[k], d[j]]; setDizi(d); setOynayan(d[k]);
   };
   const dogruSayi = dizi.filter((v, j) => v === j).length;
-  const kontrolEt = () => { setKontrol(true); setYerinde((y) => y + dogruSayi); setToplam((x) => x + dizi.length); };
+  const kontrolEt = () => {
+    setKontrol(true); setYerinde((y) => y + dogruSayi); setToplam((x) => x + dizi.length);
+    setSeri((s) => (dogruSayi === dizi.length ? s + 1 : 0));
+  };
   const sonraki = () => {
-    if (i + 1 >= turlar.length) { bitir(yerinde, toplam); return; }
-    setI(i + 1); setDizi(ilkDizi(turlar[i + 1])); setKontrol(false);
+    if (i + 1 >= turlar.length) { bitir(yerinde, toplam, toplam - yerinde); return; }
+    setI(i + 1); setDizi(ilkDizi(turlar[i + 1])); setKontrol(false); setOynayan(null);
   };
   return (
     <section className="oy15-soru">
-      <Ust sol={`Tur ${i + 1}/${turlar.length}`} sag={`${yerinde} adım yerinde · en iyi ${rekor}`} onCik={onCik} />
+      <OyunUst ilerleme={(i + (kontrol ? 1 : 0)) / turlar.length} sol={`Tur ${i + 1}/${turlar.length}`} puan={yerinde} puanEtiket="yerinde" seri={seri}
+        ek={<span className="og15-cip is-sonuk">En iyi {rekor}</span>} onCik={onCik} />
       <p className="oy15-kok">{t.baslik}</p>
       <p className="v15-cap">Adımları oklarla doğru sıraya diz.</p>
       <ol className="oy15-sr">
         {dizi.map((v, j) => (
-          <li key={v} className={kontrol ? (v === j ? 'is-dogru' : 'is-yanlis') : ''}>
+          <li key={v} className={`${kontrol ? (v === j ? 'is-dogru og15-parla' : 'is-yanlis og15-titre') : ''}${!kontrol && oynayan === v ? ' og15-zipla' : ''}`} style={{ '--i': j } as React.CSSProperties}>
             <span className="oy15-sr-no" aria-hidden>{j + 1}</span>
             <span className="oy15-sr-t">{t.adimlar[v]}{kontrol && v !== j && <small>Doğru yeri: {v + 1}.</small>}</span>
             {!kontrol && (
@@ -219,7 +223,7 @@ function Sirala({ paketler, onCik, bitir, rekor }: OyunP) {
         ))}
       </ol>
       {kontrol ? (
-        <div className="v15-card oy15-aciklama">
+        <div className={`v15-card oy15-aciklama og15-gir${dogruSayi === dizi.length ? ' is-tam' : ''}`}>
           <b>{dogruSayi === dizi.length ? 'Tam sıra! Hepsi yerinde.' : `${dogruSayi}/${dizi.length} adım yerinde.`}</b>
           <button type="button" className="v15-btn oy15-ana" onClick={sonraki}>{i + 1 >= turlar.length ? 'Sonucu gör' : 'Sonraki tur'}</button>
         </div>
@@ -228,20 +232,24 @@ function Sirala({ paketler, onCik, bitir, rekor }: OyunP) {
   );
 }
 
-/* ───────── F07 Eşleştirme ızgarası ───────── */
+/* ───────── F07 Eşleştirme ızgarası: solda terim çipleri, sağda (dar ekranda altta) tanım kartları ───────── */
 const IZ_TUR = 3;
 const IZ_CIFT = 6;
 function Izgara({ paketler, onCik, bitir, rekor }: OyunP) {
-  const havuz = useMemo(() => karistir(uygunTerimler(paketler, 90)).slice(0, IZ_TUR * IZ_CIFT), [paketler]);
+  const havuz = useMemo(() => karistir(uygunTerimler(paketler, 140)).slice(0, IZ_TUR * IZ_CIFT), [paketler]);
   const turSayi = Math.max(1, Math.floor(havuz.length / IZ_CIFT));
   const [tur, setTur] = useState(0);
   const [secili, setSecili] = useState<string | null>(null);
   const [tamam, setTamam] = useState<Set<string>>(new Set());
+  const [yeni, setYeni] = useState<string | null>(null);
   const [hatali, setHatali] = useState<string[]>([]);
   const [yanlis, setYanlis] = useState(0);
+  const [puan, setPuan] = useState(0);
+  const [seri, setSeri] = useState(0);
   const ciftler = useMemo(() => havuz.slice(tur * IZ_CIFT, tur * IZ_CIFT + IZ_CIFT), [havuz, tur]);
-  const kutular = useMemo(() => karistir(ciftler.flatMap((c) => [{ k: `t|${c.id}`, id: c.id, metin: c.terim, terim: true }, { k: `d|${c.id}`, id: c.id, metin: c.tanim, terim: false }])), [ciftler]);
-  if (havuz.length < IZ_CIFT) return <section className="v15-card oy15-kart"><p>Bu derste yeterli terim yok.</p><button type="button" className="oy15-cik" onClick={onCik}>Geri</button></section>;
+  const terimler = useMemo(() => karistir(ciftler), [ciftler]);
+  const tanimlar = useMemo(() => karistir(ciftler), [ciftler]);
+  if (havuz.length < IZ_CIFT) return <Bos metin="Bu derste yeterli terim yok." onCik={onCik} />;
   const sec = (k: string, id: string) => {
     if (tamam.has(id) || hatali.length) return;
     if (!secili) { setSecili(k); return; }
@@ -250,31 +258,44 @@ function Izgara({ paketler, onCik, bitir, rekor }: OyunP) {
     if (st === k.slice(0, 1)) { setSecili(k); return; } // aynı türden ikinci seçim: seçimi değiştir
     if (sid === id) {
       const n = new Set(tamam).add(id);
-      setTamam(n); setSecili(null);
+      setTamam(n); setSecili(null); setYeni(id);
+      const s = seri + 1; setSeri(s); setPuan((p) => p + 10 * Math.min(3, Math.ceil(s / 3)));
       if (ciftler.every((c) => n.has(c.id))) {
         const dogruToplam = (tur + 1) * IZ_CIFT;
-        if (tur + 1 >= turSayi) window.setTimeout(() => bitir(Math.max(0, dogruToplam - yanlis), dogruToplam), 400);
-        else window.setTimeout(() => { setTur((x) => x + 1); setTamam(new Set()); }, 450);
+        if (tur + 1 >= turSayi) window.setTimeout(() => bitir(Math.max(0, dogruToplam - yanlis), dogruToplam, yanlis), 650);
+        else window.setTimeout(() => { setTur((x) => x + 1); setTamam(new Set()); setYeni(null); }, 750);
       }
     } else {
-      setYanlis((y) => y + 1); setHatali([secili, k]);
+      setYanlis((y) => y + 1); setSeri(0); setHatali([secili, k]);
       window.setTimeout(() => { setHatali([]); setSecili(null); }, 600);
     }
   };
+  const kutu = (k: string, id: string, metin: string, terim: boolean) => {
+    const cls = tamam.has(id) ? ` is-tamam${yeni === id ? ' og15-onay' : ''}` : hatali.includes(k) ? ' is-hata og15-titre' : secili === k ? ' is-secili' : '';
+    return (
+      <li key={k}>
+        <button type="button" className={`oy15-iz-k${terim ? ' is-terim' : ''}${cls}`} disabled={tamam.has(id)} aria-pressed={secili === k} onClick={() => sec(k, id)}>
+          {tamam.has(id) && <Check aria-hidden className="oy15-iz-ok" />}<span>{metin}</span>
+        </button>
+      </li>
+    );
+  };
+  const carpan = Math.min(3, Math.ceil(Math.max(1, seri) / 3));
   return (
     <section className="oy15-soru">
-      <Ust sol={`Tur ${tur + 1}/${turSayi}`} sag={`${yanlis} yanlış · en iyi ${rekor}`} onCik={onCik} />
-      <p className="v15-cap">Bir terim ve onun tanımını art arda seç.</p>
-      <ul className="oy15-iz">
-        {kutular.map((x) => {
-          const cls = tamam.has(x.id) ? ' is-tamam' : hatali.includes(x.k) ? ' is-hata' : secili === x.k ? ' is-secili' : '';
-          return (
-            <li key={x.k}>
-              <button type="button" className={`oy15-iz-k${x.terim ? ' is-terim' : ''}${cls}`} disabled={tamam.has(x.id)} aria-pressed={secili === x.k} onClick={() => sec(x.k, x.id)}>{x.metin}</button>
-            </li>
-          );
-        })}
-      </ul>
+      <OyunUst ilerleme={(tur * IZ_CIFT + tamam.size) / (turSayi * IZ_CIFT)} sol={`Tur ${tur + 1}/${turSayi}`} puan={puan} seri={seri} carpan={seri >= 3 ? carpan : undefined}
+        ek={<span className="og15-cip is-sonuk">{yanlis} yanlış · en iyi {rekor}</span>} onCik={onCik} />
+      <p className="v15-cap">Bir terim seç, sonra onun tanımına dokun. Art arda doğrular çarpanı büyütür.</p>
+      <div className="oy15-iz">
+        <div className="oy15-iz-b">
+          <h3 className="oy15-iz-h">Terimler</h3>
+          <ul className="oy15-iz-terimler">{terimler.map((c) => kutu(`t|${c.id}`, c.id, c.terim, true))}</ul>
+        </div>
+        <div className="oy15-iz-b">
+          <h3 className="oy15-iz-h">Tanımlar</h3>
+          <ul className="oy15-iz-tanimlar">{tanimlar.map((c) => kutu(`d|${c.id}`, c.id, c.tanim, false))}</ul>
+        </div>
+      </div>
     </section>
   );
 }

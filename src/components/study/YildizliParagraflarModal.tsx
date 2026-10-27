@@ -12,6 +12,7 @@ import {
   yildizTemizle,
 } from '../../services/yildizliParagrafStore';
 import { navigateTo } from '../../router';
+import { yildizKonum } from '../../services/yildizliKonum';
 import '../../styles/yildizli-paragraflar.css';
 
 interface PanelProps {
@@ -104,6 +105,21 @@ export const YildizliParagraflarPanel: React.FC<PanelProps> = ({ onClose, onGeci
     }
     return sonuc;
   }, [filtrelenmis]);
+
+  /** Kurul → ders (branş) → konu sırası; konu = grubun başlığı. */
+  const agac = useMemo(() => {
+    const kurullar = new Map<number, Map<string, ParagrafGrubu[]>>();
+    for (const g of gruplar) {
+      const { kurul, ders } = yildizKonum(g.ogeler[0]);
+      const dm = kurullar.get(kurul) ?? new Map<string, ParagrafGrubu[]>();
+      dm.set(ders, [...(dm.get(ders) ?? []), g]);
+      kurullar.set(kurul, dm);
+    }
+    return [...kurullar].sort((a, b) => a[0] - b[0]).map(([k, dm]) => [
+      k,
+      new Map([...dm].sort((a, b) => a[0].localeCompare(b[0], 'tr'))),
+    ] as [number, Map<string, ParagrafGrubu[]>]);
+  }, [gruplar]);
 
   const sayilar = useMemo(() => {
     return {
@@ -260,7 +276,17 @@ export const YildizliParagraflarPanel: React.FC<PanelProps> = ({ onClose, onGeci
             <p>Arama kriterine uygun yıldızlı paragraf bulunamadı.</p>
           </div>
         ) : (
-          gruplar.map((grup) => {
+          agac.map(([kurul, dersler]) => (
+            <details key={kurul} className="yp-kurul" open>
+              <summary className="yp-kurul-baslik">
+                Kurul {kurul} <span>{[...dersler.values()].reduce((n, gs) => n + gs.reduce((a, g) => a + g.ogeler.length, 0), 0)}</span>
+              </summary>
+              {[...dersler].map(([ders, gs]) => (
+                <details key={ders} className="yp-ders" open>
+                  <summary className="yp-ders-baslik">
+                    {ders} <span>{gs.reduce((a, g) => a + g.ogeler.length, 0)}</span>
+                  </summary>
+                  {gs.map((grup) => {
             const ilkOge = grup.ogeler[0];
             const coklu = grup.ogeler.length > 1;
             return (
@@ -363,7 +389,11 @@ export const YildizliParagraflarPanel: React.FC<PanelProps> = ({ onClose, onGeci
                 </div>
               </article>
             );
-          })
+                  })}
+                </details>
+              ))}
+            </details>
+          ))
         )}
       </div>
     </div>
