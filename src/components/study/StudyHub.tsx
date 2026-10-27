@@ -11,6 +11,7 @@ import { NotesView } from './NotesView';
 import { Segmented as Seg } from '../ui/kit';
 import { useAppearance } from '../../utils/appearance';
 import { StudyHubV12 } from '../v12/StudyV12';
+import MasaGunV15 from '../v15/MasaGunV15';
 
 export type StudySection = 'solve' | 'test' | 'notes' | 'lists';
 
@@ -31,7 +32,8 @@ export const StudyHub: React.FC<StudyHubProps> = ({
   onStartQuickTest,
 }) => {
   // v12 "Net": başlık + sekmeler ayrı yapı (components/v12/StudyV12.tsx); bölüm içerikleri ortak
-  const v12 = useAppearance().design === 'v12';
+  const gor = useAppearance();
+  const v12 = gor.design === 'v12';
   const [section, setSection] = useState<StudySection>(() => {
     try {
       const s = localStorage.getItem(SECTION_KEY) as StudySection | null;
@@ -129,6 +131,8 @@ export const StudyHub: React.FC<StudyHubProps> = ({
 
   if (v12) {
     return (
+      <>
+      {gor.v15 && <MasaGunV15 />}
       <StudyHubV12
         loading={loading}
         bankSize={bank.length}
@@ -141,6 +145,7 @@ export const StudyHub: React.FC<StudyHubProps> = ({
       >
         {panel}
       </StudyHubV12>
+      </>
     );
   }
 

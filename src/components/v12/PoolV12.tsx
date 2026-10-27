@@ -6,6 +6,10 @@ import { QuestionCard } from '../QuestionCard';
 import { committeeShortLabel } from '../quickAddOrtak';
 import { ActionMenu, ActionItem } from '../ui/ActionMenu';
 import { useAppearance } from '../../utils/appearance';
+import { yanlisOku } from '../../services/yanlislarim';
+import { getFavorites } from '../../services/studyStore';
+import '../../styles/v15/ogren.css';
+import '../../styles/v15/liste2.css';
 import { topBarOffset } from '../../utils/uiZoom';
 import { PoolSegment, PoolSummary, fullTime, isMissing, relTime, summarize } from '../pool/poolModel';
 import { PoolOptFill } from '../pool/PoolRow';
@@ -206,13 +210,17 @@ export const PoolV12: React.FC<PoolViewProps> = (p) => {
     return c;
   }, [statusById]);
 
+  // tasarım L04 kişisel süzgeç (v15): Hepsi · Yanlışlarım · Kaydettiklerim · Yorumlu
+  const [kisi, setKisi] = useState<'hepsi' | 'yanlis' | 'kayit' | 'yorum'>('hepsi');
+  const kisiSet = useMemo(() => (kisi === 'yanlis' ? new Set(Object.keys(yanlisOku())) : kisi === 'kayit' ? getFavorites() : null), [kisi]);
   const list = useMemo(() => {
     if (p.focusQuestion) return [sumOf(p.focusQuestion)];
-    const base = stFilter ? poolSums.filter((s) => statusById.get(s.q.id) === stFilter) : poolSums;
+    const base0 = stFilter ? poolSums.filter((s) => statusById.get(s.q.id) === stFilter) : poolSums;
+    const base = kisi === 'hepsi' ? base0 : base0.filter((s) => (kisi === 'yorum' ? (s.q.comments?.length || 0) > 0 : !!kisiSet?.has(s.q.id)));
     if (sort === 'order') return [...base].sort(byNumber);
     if (sort === 'missing') return base.filter(isMissing).sort(byNumber);
     return [...base].sort(byRecent);
-  }, [poolSums, statusById, stFilter, sort, p.focusQuestion, sumOf]);
+  }, [poolSums, statusById, stFilter, sort, p.focusQuestion, sumOf, kisi, kisiSet]);
   const shown = list.slice(0, p.visibleCount);
   const hasMore = !p.focusQuestion && list.length > p.visibleCount;
   const inList = useCallback((id?: string) => !!id && list.some((s) => s.q.id === id), [list]);
@@ -424,6 +432,13 @@ export const PoolV12: React.FC<PoolViewProps> = (p) => {
         </div>
       </header>
 
+      {v15 && !p.focusQuestion && (
+        <div className="o15-cipler v15-hscroll q15-kisi" role="toolbar" aria-label="Kişisel süzgeç">
+          {([['hepsi', 'Hepsi'], ['yanlis', 'Yanlışlarım'], ['kayit', 'Kaydettiklerim'], ['yorum', 'Yorumlu']] as const).map(([id, t]) => (
+            <button key={id} type="button" className={`o15-cip${kisi === id ? ' is-on' : ''}`} aria-pressed={kisi === id} onClick={() => setKisi(id)}>{t}</button>
+          ))}
+        </div>
+      )}
       {p.focusQuestion && (
         <div className="q12-band" role="status">
           <Share2 aria-hidden />

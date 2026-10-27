@@ -1,4 +1,5 @@
 import React, { useEffect, useMemo, useState } from 'react';
+import '../styles/v15/liste2.css';
 import { pathFor } from '../router';
 import { copyQuestion } from '../utils/copyQuestion';
 import { getVoterId } from '../utils/voterId';
@@ -73,14 +74,15 @@ function writeSecim(v: string | null) {
 }
 
 /* Cevaplar (soru id → seçilen şık + doğru mu) tarayıcıda tutulur; ders listesindeki ilerleme buradan okunur. */
-type Cevap = { s: string; ok: boolean };
+/** t: cevap zamanı (ms) — "Bugün" sayacı için; eski kayıtlarda yok */
+type Cevap = { s: string; ok: boolean; t?: number };
 let CEVAPLAR: Record<string, Cevap> = (() => {
   try { return JSON.parse(window.localStorage.getItem(CEVAP_KEY) || '{}') || {}; } catch { return {}; }
 })();
 const dinleyiciler = new Set<() => void>();
 function setCevap(id: string, c: Cevap | null) {
   CEVAPLAR = { ...CEVAPLAR };
-  if (c) CEVAPLAR[id] = c; else delete CEVAPLAR[id];
+  if (c) CEVAPLAR[id] = { ...c, t: c.t ?? Date.now() }; else delete CEVAPLAR[id];
   try { window.localStorage.setItem(CEVAP_KEY, JSON.stringify(CEVAPLAR)); } catch { /* depolama kapalı */ }
   dinleyiciler.forEach((f) => f());
 }
@@ -803,6 +805,9 @@ export const KazanimSorulariView: React.FC<{
   const liste = INDEX.filter((x) => (!brans || x.ders === brans) && (!ara || norm(`${x.konu} ${x.ders} ${x.ogretim_uyesi}`).includes(norm(ara))));
   const toplamSoru = INDEX.reduce((a, x) => a + x.soru_sayisi, 0);
   const toplamCozulen = Object.keys(cevaplar).filter((k) => k.startsWith('k1-')).length;
+  const dogruSayi = Object.entries(cevaplar).filter(([k, c]) => k.startsWith('k1-') && c.ok).length;
+  const bugunBas = new Date().setHours(0, 0, 0, 0);
+  const bugunSayi = Object.entries(cevaplar).filter(([k, c]) => k.startsWith('k1-') && (c.t || 0) >= bugunBas).length;
 
   const sec = (id: string | null) => { setSecili(id); writeSecim(id); window.scrollTo({ top: 0 }); };
 
@@ -814,6 +819,12 @@ export const KazanimSorulariView: React.FC<{
 
   return (
     <div className="flex flex-col gap-3 o12-ks">
+      {/* tasarım B18: Toplam · Çözdüğün (% doğru) · Bugün */}
+      <div className="ks15-ozet" aria-label="Özet">
+        <div className="v15-card"><span className="v15-label">Toplam</span><b>{toplamSoru.toLocaleString('tr-TR')}</b><small>soru</small></div>
+        <div className="v15-card is-ok"><span className="v15-label">Çözdüğün</span><b>{toplamCozulen.toLocaleString('tr-TR')}</b><small>{toplamCozulen ? `%${Math.round((dogruSayi / toplamCozulen) * 100)} doğru` : 'henüz yok'}</small></div>
+        <div className="v15-card is-a"><span className="v15-label">Bugün</span><b>{bugunSayi.toLocaleString('tr-TR')}</b><small>soru</small></div>
+      </div>
       <div className="cx-dock">
         <label className="cx-search">
           <Search aria-hidden />
@@ -857,6 +868,7 @@ export const KazanimSorulariView: React.FC<{
                   {n ? <><b className="hk-num">{n}/{x.soru_sayisi}</b> çözüldü · {d} doğru</> : <>{x.soru_sayisi} soru · {x.kazanim} kazanım</>}
                   <ChevronRight aria-hidden />
                 </span>
+                <span className={`ks15-eylem${yuzde >= 100 ? '' : ' is-pri'}`}>{yuzde >= 100 ? 'Tekrar çöz' : n ? 'Devam et' : 'Başla'}</span>
               </button>
             </li>
           );

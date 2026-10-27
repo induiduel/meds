@@ -148,6 +148,7 @@ const MerkezView = React.lazy(() => wrapLazy(import('./components/merkez/MerkezV
 const SoruHaritasiV15 = React.lazy(() => wrapLazy(import('./components/v15/SoruHaritasiV15')));
 const YanlislarimV15 = React.lazy(() => wrapLazy(import('./components/v15/YanlislarimV15')));
 const BildirimlerV15 = React.lazy(() => wrapLazy(import('./components/v15/BildirimlerV15')));
+const MuzikV15 = React.lazy(() => wrapLazy(import('./components/v15/MuzikV15')));
 const ZihinHaritasiV15 = React.lazy(() => wrapLazy(import('./components/v15/ZihinHaritasiV15')));
 const HucremV15 = React.lazy(() => wrapLazy(import('./components/v15/HucremV15')));
 const ToplulukV15 = React.lazy(() => wrapLazy(import('./components/v15/ToplulukV15')));
@@ -2329,7 +2330,8 @@ export default function App() {
         {/* Topluluk: Müzik — admin paylaşımlı ses çalar (video yok) */}
         {activeTab === 'music' && (
           <Suspense fallback={<ViewFallback />}>
-            <MusicView isAdmin={isAdmin} />
+            <V15Icinde><MuzikV15 /></V15Icinde>
+            <V15Disinda><MusicView isAdmin={isAdmin} /></V15Disinda>
           </Suspense>
         )}
 

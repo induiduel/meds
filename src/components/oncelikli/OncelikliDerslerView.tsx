@@ -15,6 +15,7 @@ import {
 } from './oncelikliModel';
 import '../../styles/takip.css';
 import '../../styles/oncelikli.css';
+import '../../styles/v15/liste2.css';
 
 const BRANS_AD: Record<string, string> = {
   patoloji: 'Patoloji', enfeksiyon: 'Enfeksiyon', uroloji: 'Üroloji', genetik: 'Genetik',
@@ -100,6 +101,34 @@ export default function OncelikliDerslerView() {
 
       {veri && (
         <>
+          {/* tasarım B19 pano: görünen (süzgeçten geçen, bitmemiş) derslerin sayısı, dinleme süresi, beklenen soru;
+              branş başına puan/emek (beklenen soru ÷ saat) çubukları — veri oncelikliModel'den, uydurma yok */}
+          {(() => {
+            const kalan = gorunen.filter((x) => !x.bitti);
+            const sn = kalan.reduce((a, x) => a + (x.d.sureSn || 0), 0);
+            const soru = kalan.reduce((a, x) => a + x.d.beklenen, 0);
+            const br = branslar.map((b) => {
+              const l = satirlar.filter((x) => x.d.brans === b && !x.bitti);
+              const saat = l.reduce((a, x) => a + (x.d.sureSn || 0), 0) / 3600;
+              return { b, v: saat > 0 ? l.reduce((a, x) => a + x.d.beklenen, 0) / saat : 0 };
+            }).filter((x) => x.v > 0);
+            const enc = Math.max(...br.map((x) => x.v), 0.0001);
+            const en = br.slice().sort((x, y) => y.v - x.v)[0];
+            return (
+              <section className="od15-pano v15-card" aria-label="Kolay puan özeti">
+                <span className="v15-label">Bu süzgeçte kolay puan</span>
+                <div className="od15-buyuk"><b>{kalan.length}</b><span>ders · ~{sureYaz(sn)} dinleme<br /><em>≈ {sayi(soru, 0)} soru getirir</em></span></div>
+                {br.length > 1 && (
+                  <>
+                    <div className="od15-cubuk" role="img" aria-label={`Branşlara göre puan/emek oranı; en verimli ${BRANS_AD[en?.b] || en?.b}`}>
+                      {br.map((x) => <span key={x.b} className={x.b === en?.b ? 'is-on' : ''}><i style={{ height: `${Math.max(8, (x.v / enc) * 100)}%` }} /><small>{(BRANS_AD[x.b] || x.b).slice(0, 4)}</small></span>)}
+                    </div>
+                    <div className="od15-alt"><span>Puan / emek oranı (soru ÷ saat)</span><span>{BRANS_AD[en.b] || en.b} en verimli</span></div>
+                  </>
+                )}
+              </section>
+            );
+          })()}
           <div className="od-profil" role="radiogroup" aria-label="Öncelik profili">
             {PROFILLER.map((p) => (
               <button key={p.id} type="button" role="radio" aria-checked={ayar.profil === p.id}
