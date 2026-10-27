@@ -1,7 +1,7 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import {
   Activity, ArrowDown, ArrowRight, ArrowUp, Check, ChevronDown, CircleHelp, FlaskConical, Layers, ListChecks, Microscope,
-  Pill, Pin, RotateCw, Search, Sparkles, Stethoscope, Table2, X,
+  ListOrdered, Pill, Pin, RotateCw, Scale, Search, Sparkles, Stethoscope, Table2, X,
 } from 'lucide-react';
 import { linkClick, navigateTo, pathFor } from '../../router';
 import { DI_BOLUMLER, dersIcerikGetir, dersSorulariGetir, type DiBolum, type DiPaket, type DiSoru, type DiTablo } from './dersIcerik';
@@ -64,7 +64,7 @@ export default function DersIcerikV15({ dersKey, bolum }: { dersKey: string; bol
   const sorular = useMemo(() => kaz.flatMap((k) => k.sorular), [kaz]);
   if (!p) return <p className="di15-bos v15-card">Yükleniyor…</p>;
 
-  const sayi: Record<DiBolum, number> = { terimler: p.terimler.length + p.kisaltmalar.length, hastaliklar: p.hastaliklar.length, bilgiler: p.onemli.length + p.bilgiler.length + p.spotlar.length, tablolar: p.tablolar.length, sorular: sorular.length, kartlar: p.kartlar.length };
+  const sayi: Record<DiBolum, number> = { terimler: p.terimler.length + p.kisaltmalar.length, hastaliklar: p.hastaliklar.length, bilgiler: p.onemli.length + p.bilgiler.length + p.spotlar.length, listeler: p.listeler.length, quiz: p.quiz.length, tablolar: p.tablolar.length, sorular: sorular.length, kartlar: p.kartlar.length };
   const url = (b: DiBolum) => `${pathFor('ders_detay', dersKey)}?b=${b}`;
   const AltSekme = ({ l }: { l: [string, string, number][] }) => {
     const sec = alt || l.find((x) => x[2])?.[0] || l[0][0];
@@ -116,7 +116,7 @@ export default function DersIcerikV15({ dersKey, bolum }: { dersKey: string; bol
 
       {bolum === 'hastaliklar' && (
         <div className="di15-yigin di15-anim">
-          {p.hastaliklar.filter((h) => ok(h.ad, h.latin, ...h.bolumler.flatMap((b) => b.m))).map((h, i) => <HastalikKart key={h.id} h={h} i={i} acik={i === 0} />)}
+          {p.hastaliklar.filter((h) => ok(h.ad, h.latin, ...h.bolumler.flatMap((b) => b.m.map((x) => x.m)))).map((h, i) => <HastalikKart key={h.id} h={h} i={i} acik={i === 0} />)}
         </div>
       )}
 
@@ -162,6 +162,30 @@ export default function DersIcerikV15({ dersKey, bolum }: { dersKey: string; bol
         );
       })()}
 
+      {bolum === 'listeler' && (
+        <div className="di15-yigin">
+          {p.listeler.filter((l) => ok(l.t, ...l.m.map((x) => x.m))).map((l, i) => (
+            <section key={i} className="v15-card di15-tb is-sira">
+              <header className="di15-tb-u">
+                <span className="di15-tb-ik" aria-hidden><ListOrdered /></span>
+                <div><h3>{l.t}</h3><small>{{ numara: 'Sıralı (1, 2, 3)', alfa: 'Sıralı (a, b, c)', azalan: 'Büyükten küçüğe', madde: 'Sırasız liste' }[l.sira]} · adım {l.n}</small></div>
+              </header>
+              {React.createElement(l.sira === 'madde' ? 'ul' : 'ol', { className: `di15-maddeler${l.sira === 'madde' ? '' : ' di15-num is-' + l.sira}`, type: l.sira === 'alfa' ? 'a' : undefined },
+                l.m.map((x, j) => <Madde key={j} t={x.m} />))}
+              {l.a && <p className="di15-ac is-d">{l.a}</p>}
+            </section>
+          ))}
+        </div>
+      )}
+
+      {bolum === 'quiz' && (
+        <div className="di15-yigin">
+          {p.quiz.filter((x) => ok(x.q, ...x.o.map((o) => o.t))).map((x, i) => (
+            <Soru key={i} no={i + 1} s={{ id: `q${i}`, kazanim: 0, zorluk: '', soru: x.q, secenekler: Object.fromEntries(x.o.map((o) => [o.k, o.t])), dogru: x.o.find((o) => o.d)?.k || '', aciklama: x.o.find((o) => o.d)?.a || '' }} />
+          ))}
+        </div>
+      )}
+
       {bolum === 'tablolar' && (
         <div className="di15-yigin">
           {p.tablolar.filter((t) => ok(t.t, ...t.r.flat())).map((t, i) => <TabloKart key={i} t={t} />)}
@@ -203,7 +227,7 @@ function HastalikKart({ h, i, acik }: { h: DiPaket['hastaliklar'][number]; i: nu
             return (
               <section key={b.b} className={`di15-bol is-${ton}`}>
                 <h4><Ik aria-hidden />{b.b}</h4>
-                <ul className="di15-maddeler">{b.m.map((m, j) => <Madde key={j} t={m} />)}</ul>
+                <ul className="di15-maddeler">{b.m.map((m, j) => <Madde key={j} t={m.m} />)}</ul>
               </section>
             );
           })}
@@ -219,7 +243,7 @@ function TabloKart({ t }: { t: DiTablo }) {
   return (
     <section className={`v15-card di15-tb is-${tur}`}>
       <header className="di15-tb-u">
-        <span className="di15-tb-ik" aria-hidden>{tur === 'sira' ? <ListChecks /> : tur === 'eslesme' ? <Layers /> : <Table2 />}</span>
+        <span className="di15-tb-ik" aria-hidden>{t.k ? <Scale aria-label="Karşılaştırma" /> : tur === 'sira' ? <ListChecks /> : tur === 'eslesme' ? <Layers /> : <Table2 />}</span>
         <div><h3>{t.t}</h3><small>{t.k ? 'Karşılaştırma' : tur === 'sira' ? 'Sıralama' : tur === 'eslesme' ? 'Eşleştirme' : 'Tablo'} · adım {t.n}</small></div>
       </header>
       {tur === 'sira' && (

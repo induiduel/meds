@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
-import { BookA, Check, ChevronRight, CircleHelp, ClipboardList, Download, Headphones, Layers, Lightbulb, Play, RotateCcw, MessageCircle, Stethoscope, Table2, WalletCards } from 'lucide-react';
+import { BookA, Check, ChevronRight, CircleHelp, ClipboardList, Download, Headphones, Layers, Lightbulb, Play, RotateCcw, MessageCircle, Stethoscope, Table2, ListOrdered, HelpCircle, WalletCards } from 'lucide-react';
 import { linkClick, navigateTo, parseLocation, pathFor } from '../../router';
 import { useAppearance } from '../../utils/appearance';
 import { cdDetayGetir, cdKayitliKonum, cdSesUrl, cdTercihVaryant, fmtMb, type CdDetay } from '../canliDers/canliDersStore';
@@ -154,8 +154,10 @@ export default function DersDetayV15() {
   if (paket) {
     const say: Record<DiBolum, [number, string, React.ElementType, string]> = {
       terimler: [paket.terimler.length + paket.kisaltmalar.length, 'terim ve kısaltma · tanımlarıyla', BookA, 'is-ok'],
-      hastaliklar: [paket.hastaliklar.length, 'hastalık ve bulgu · kart kart', Stethoscope, 'is-c'],
-      bilgiler: [paket.onemli.length + paket.spotlar.length, 'önemli nokta ve sınav spotu', Lightbulb, ''],
+      hastaliklar: [paket.hastaliklar.length, 'hastalık ve kavram · başlık başlık', Stethoscope, 'is-c'],
+      bilgiler: [paket.onemli.length + paket.spotlar.length + paket.bilgiler.length, 'önemli nokta ve sınav spotu', Lightbulb, ''],
+      listeler: [paket.listeler.length, 'sıralama ve liste · sıra türüyle', ListOrdered, 'is-ok'],
+      quiz: [paket.quiz.length, 'mini soru · anında geri bildirim', HelpCircle, 'is-c'],
       tablolar: [paket.tablolar.length, 'tablo ve karşılaştırma', Table2, 'is-c'],
       sorular: [-1, 'müfredata sadık örnek soru · anında geri bildirim', ClipboardList, 'is-ok'],
       kartlar: [paket.kartlar.length, 'hatırlatma kartı', WalletCards, ''],

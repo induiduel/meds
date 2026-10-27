@@ -199,3 +199,16 @@
   .di15-anim > *, .di15-hast-g, .di15-ac { animation: none; }
   .di15-cevir-y { transition: none; }
 }
+.di15-ik{width:16px;height:16px;vertical-align:-2px;opacity:.8}
+.di15-sira{margin:6px 0 0 20px;line-height:1.55}
+.di15-sira li{padding:2px 0}
+.di15-sira ul{margin:2px 0 2px 18px}
+.di15-tur{font-size:12px;opacity:.7;margin-left:8px}
+.di15-kay-s{display:inline;opacity:.5}
+/* Sıralı listeler: numara (1,2,3) / alfa (a,b,c) / azalan (büyükten küçüğe) */
+.di15-num { counter-reset: dn; }
+.di15-num > li { counter-increment: dn; padding-left: 34px; }
+.di15-num > li::before { content: counter(dn); width: 22px; height: 22px; left: 0; top: .1em; border-radius: 50%; display: grid; place-items: center; font-size: .75rem; font-weight: 700; color: #1a1a1a; background: var(--t, var(--color-accent)); }
+.di15-num.is-alfa > li::before { content: counter(dn, lower-alpha); }
+.di15-num.is-azalan > li::before { content: counter(dn) "↓"; width: 30px; border-radius: 99px; }
+.di15-num.is-azalan > li { padding-left: 40px; }

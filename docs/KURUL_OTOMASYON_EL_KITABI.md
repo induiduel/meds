@@ -467,6 +467,11 @@ LLM otomasyonu kapalıdır (AGENTS kural 20). Yeni ders, kullanıcı hangi dosya
    API'den okur: yerelde yoksa `ssh -L 3310:127.0.0.1:3000 medsor-oracle` + `MEDS_API=http://127.0.0.1:3310`.
 10. **Çapa + çizim:** `capa_dok.py` → oturumda çapa (`TALIMAT_CAPA.md`) → `capa_dogrula.py` → çizim partileri oturumda
     (`TALIMAT_CIZIM.md`, 27–30: tasarım kataloğunun tamamı) → `cizim_uret.py` yerleşim → `panel_sinama.mjs` + `cizim_kapisi.py` 0 HATA.
+11a. **Ders içerik paketi (ZORUNLU, 2026-10-27):** `python3 scripts/ders_icerik_uret.py <key>` → `src/data/ders_icerik/<key>.json`, ardından
+    `python3 scripts/ders_icerik_dogrula.py <key>` 0 HATA. Biçim ve kaynak kuralı `docs/DERS_ICERIK_BICIMI.md`; eksik/boş bölüm gerekçeyle raporlanır.
+    Ders Öğren destesi ve bilgi havuzu olmadan paket boş kalır — önce deste + havuz üretilir.
+11b. **Sesli örnek soru çözücü (ZORUNLU, 2026-10-27):** her ders için kaynak gösteren, şık şık açıklamalı çözücü (`TALIMAT_COZUCU.md`,
+    `cozucu_dogrula.py` 0 HATA, bağımsız denetçi, EMA GPU sesi §19 adım 8). `ders_icerik_dogrula.py` çözücü yoksa HATA verir; çalıştığı canlıda denenir.
 11. **Kayıt + dağıtım:** veriler `data/sesli_anlatim/*/<key>` olarak commit, `guncelleme_notu.json` onem+1, `dagit.sh`; canlı API'de
     ders, ses, PDF (`/api/lecture-pdf/deck/<deckId>/0` 200), çıkmış, işaret, terim, kısaltma doğrulanır.
 
