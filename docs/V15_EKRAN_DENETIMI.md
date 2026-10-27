@@ -196,7 +196,7 @@ Not: YOK sayısının 6'sı tasarım belgesi ekranıdır (A09, K08, P01, W03, X0
 | I03 | intro2 | OnboardingV12 | KURULDU | tam sayfa tanıtım |
 | I04 | intro3 | OnboardingV12 | KURULDU | tam sayfa tanıtım |
 | I05 | girisSecenek | AuthV12 Giriş/Kayıt sekmesi | KURULDU | Hesabına gir |
-| I06 | otp | — | KISMİ | e-posta bağlantısıyla şifresiz giriş; Firebase konsolunda Email link açılmalı |
+| I06 | otp | — | VAR | e-posta bağlantısıyla şifresiz giriş (EpostaBaglantiGiris); Firebase Email link açık, canlıda denendi 2026-10-27 |
 | I07 | kayitUni | OnboardingV12? | VAR | v15/ProfilKurulumV15.tsx (üniversite adımı) |
 | I08 | kayitSinif | OnboardingV12? | VAR | v15/ProfilKurulumV15.tsx (sınıf adımı) |
 | I09 | kayitKurul | OnboardingV12? | VAR | v15/ProfilKurulumV15.tsx (kurul adımı, kurulKaydet) |
@@ -475,7 +475,7 @@ listesinden yürüdü, I07–I10 kayıt adımları gibi bütün bir akış hiç 
 | I01 splash | VAR | index.html açılış ekranı (kalp + EKG) |
 | I02–I04 intro1-3 | KURULDU (sonraki turlar) | Onboarding sahneleri eski metinle; tasarım metni (PDF takip, şık açıklaması, hücre) ile değiştirilecek |
 | I05 girisSecenek / A01 | KURULDU (sonraki turlar) | Google + e-posta var; Apple ve sınıf kodu altyapısı yok (sınıf kodu: sunucu gerektirir) |
-| I06 otp | YAPILMAYACAK (altyapı yok) | Firebase e-posta/şifre; tek kullanımlık kod sunucusu yok |
+| I06 otp | YAPILDI | Kod yerine Firebase e-posta bağlantısıyla şifresiz giriş (2026-10-27, canlıda doğrulandı) |
 | A05 arama | VAR | SearchPalette ⌘K |
 | B18 b2ornek, B19 b2oncelik, B21 b2masa, B22 b2muzik | KURULDU (sonraki turlar) | Sayfalar var, v15 yapısı denetlenecek |
 | S04 altyazı şeridi, S15 yatay telefon, S17 bağlantı koptu | KURULDU (sonraki turlar) | S17: oynatıcıda çevrimdışı kaydı varken uyarı kartı |
