@@ -15,6 +15,7 @@ import { CdDaha } from './CanliDersDaha';
 import { cdMotivasyonKur } from './canliDersMotivasyon';
 import { cdTvMi, cdTvTus, type TvEylem } from './CanliDersTv';
 import '../../styles/canli-ders.css';
+import { useAppearance } from '../../utils/appearance';
 
 const hizYaz = (r: number) => `${String(r).replace('.', ',')}×`;
 
@@ -210,7 +211,7 @@ function IndirBag() {
 
 /* ---------------- zaman çubuğu ---------------- */
 
-function ZamanCubugu() {
+function ZamanCubugu({ orta }: { orta?: React.ReactNode } = {}) {
   const t = useCd((s) => s.t);
   const dur = useCd((s) => s.dur);
   const zs = useCd((s) => s.zs);
@@ -278,8 +279,9 @@ function ZamanCubugu() {
   const etkinParca = bolumIndex(goster);
 
   return (
-    <div className="cd-zaman">
+    <div className={`cd-zaman${orta !== undefined ? ' cd15-zaman' : ''}`}>
       <span className="cd-sure">{fmtSure(goster)}</span>
+      {orta !== undefined && <span className="cd15-zaman-orta">{orta}</span>}
       <div
         ref={ref}
         className={`cd-cubuk${surukle != null ? ' is-surukle' : ''}${parcalar.length > 1 ? ' is-bolumlu' : ''}`}
@@ -442,7 +444,43 @@ function BaslaIpucu() {
   return <p className="cd-basla-satir">{t >= 5 ? `Oynat'a bas: ${fmtSure(t)} konumundan sürer.` : "Başlatmak için oynat'a bas ya da metinde bir paragrafa dokun."}</p>;
 }
 
+/** v15 (tasarım S19 · bölüm dilimli oynatıcı): üstte bölüm parçalı çubuk, altında süre · "k · bölüm" · toplam,
+ *  en altta hız hapı | önceki · −10 · büyük oynat · +10 · sonraki | ⋯ (bölümler, liste, ses, tekrar, MP3) */
+function TamOynaticiV15({ onKucult }: { onKucult: () => void }) {
+  const bolum = useCd((s) => s.bolum);
+  const ad = useCd((s) => (s.bolum >= 0 ? s.detay?.bolumler[s.bolum]?.baslik || '' : ''));
+  const rate = useCd((s) => s.rate);
+  return (
+    <div className="cd-tam cd15-oyn">
+      <button type="button" className="cd-ib cd-kucult" onClick={onKucult} aria-label="Oynatıcıyı küçült" title="Oynatıcıyı küçült"><ChevronDown aria-hidden /></button>
+      <ZamanCubugu orta={bolum >= 0 && ad ? `${bolum + 1} · ${ad}` : ''} />
+      <ListeDockDenetim dar />
+      <div className="cd15-den">
+        <button type="button" className="cd15-hiz" onClick={cdHizDongu} aria-label={`Oynatma hızı ${hizYaz(rate)} (değiştir)`} title="Hız (dokundukça değişir)">{hizYaz(rate)}</button>
+        <div className="cd15-den-orta">
+          <BolumAtla yon={-1} />
+          <button type="button" className="cd-ib cd-sar" onClick={() => cdSar(-10)} aria-label="10 saniye geri" title="10 sn geri (←)"><RotateCcw aria-hidden /></button>
+          <OynatDugme buyuk />
+          <button type="button" className="cd-ib cd-sar" onClick={() => cdSar(10)} aria-label="10 saniye ileri" title="10 sn ileri (→)"><RotateCw aria-hidden /></button>
+          <BolumAtla yon={1} />
+        </div>
+        <CdDaha etiket="Oynatıcı seçenekleri (hız, ses, tekrar, bölümler, MP3)" yukari className="cd-dock-daha cd15-daha">
+          <div className="cd-daha-satir"><span>Bölümler</span><BolumMenu /></div>
+          <div className="cd-daha-satir"><span>Hız</span><HizSecici /></div>
+          <div className="cd-daha-satir"><span>Ses</span><SesSecici /></div>
+          <div className="cd-daha-satir"><span>Tekrar</span><TekrarSecici /></div>
+          <div className="cd-daha-satir"><span>Listem</span><ListeDockDenetim /></div>
+          <div className="cd-daha-satir"><span>MP3 indir</span><IndirBag /></div>
+        </CdDaha>
+      </div>
+      <Hata />
+    </div>
+  );
+}
+
 function TamOynatici({ onKucult }: { onKucult: () => void }) {
+  const { v15 } = useAppearance();
+  if (v15) return <TamOynaticiV15 onKucult={onKucult} />;
   return (
     <div className="cd-tam">
       <button type="button" className="cd-ib cd-kucult" onClick={onKucult} aria-label="Oynatıcıyı küçült" title="Oynatıcıyı küçült"><ChevronDown aria-hidden /></button>

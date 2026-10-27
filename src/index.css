@@ -416,7 +416,7 @@ body {
 .ms-twinkle { transform-box: fill-box; transform-origin: center; animation: ms-twinkle 1.8s ease-in-out infinite; }
 .ms-twinkle-2 { animation-delay: .9s; }
 .ms-float { animation: ms-float 2.4s ease-in-out infinite; }
-.ms-shimmer { display: block; background: linear-gradient(90deg, rgba(30,79,216,.10) 25%, rgba(30,79,216,.22) 50%, rgba(30,79,216,.10) 75%); background-size: 200% 100%; animation: ms-shimmer 1.6s linear infinite; }
+.ms-shimmer { display: block; background: linear-gradient(90deg, color-mix(in srgb, var(--color-accent) 10%, transparent) 25%, color-mix(in srgb, var(--color-accent) 22%, transparent) 50%, color-mix(in srgb, var(--color-accent) 10%, transparent) 75%); background-size: 200% 100%; animation: ms-shimmer 1.6s linear infinite; }
 
 @keyframes ms-wobble { 0%, 100% { transform: rotate(0deg); } 20% { transform: rotate(-7deg); } 40% { transform: rotate(6deg); } 60% { transform: rotate(-3deg); } 80% { transform: rotate(2deg); } }
 @keyframes ms-drop { 0%, 40% { transform: translateY(0); opacity: 0; } 50% { opacity: 1; } 100% { transform: translateY(7px); opacity: 0; } }
@@ -3738,3 +3738,21 @@ html.ui-v3 .ms-tooltip { border-radius: 8px; font-size: 12px; }
   max-width: min(92vw, 420px); padding: 10px 14px; border-radius: 12px; background: var(--color-ink); color: var(--color-canvas);
   font-size: 13px; box-shadow: var(--shadow-lg);
 }
+
+/* Yerel açılır liste (select), kaydırma çubuğu ve form öğeleri temayı izler; aksi halde koyu temada
+   açık mavi/beyaz tarayıcı varsayılanı çıkar. Koyu: data-theme="dark" ya da sistem koyu + açık seçilmemiş. */
+:root { color-scheme: light; }
+:root[data-theme="dark"] { color-scheme: dark; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { color-scheme: dark; } }
+select, option, optgroup { color-scheme: inherit; }
+select option, select optgroup { background-color: var(--color-white, #fff); color: var(--color-ink); }
+select option:checked { background-color: var(--color-line-2); color: var(--color-ink); }
+
+/* text-white kök düzeltmesi (2026-10-27, H100): Tailwind `white` = --color-white = palet YÜZEYİ; koyu temada
+   `text-white` koyu lacivert çıkıp renkli düğmede/koyu katmanda yazıyı kaybettiriyordu. Katmansız kural Tailwind
+   utilities katmanını ezer: renkli zemin üstü yazı her temada on-solid. bg-white (kart yüzeyi) bilerek dokunulmadı.
+   Gerçekten koyu perde üstündeki yazı için `.on-perde` (her temada beyaz). */
+.text-white, .hover\:text-white:hover, .group:hover .group-hover\:text-white { color: var(--color-on-solid, #fff); }
+.on-perde, .on-perde .text-white { color: #fff; }
+/* ink-surface (koyu tost/başlık zemini) koyu temada açık renk olur: üstündeki yazı her temada zıt renk */
+.bg-ink-surface.text-white, .bg-ink-surface .text-white { color: var(--color-canvas); }

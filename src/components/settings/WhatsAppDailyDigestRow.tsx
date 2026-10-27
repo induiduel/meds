@@ -130,15 +130,15 @@ export const WhatsAppDailyDigestRow: React.FC = () => {
   const acik = prefs.enabled;
 
   return (
-    <div className="u12-wa-block" style={{ borderBottom: '1px solid var(--color-border)', paddingBottom: '16px', marginBottom: '16px' }}>
+    <div className="u12-wa-block" style={{ borderBottom: '1px solid var(--color-line)', paddingBottom: '16px', marginBottom: '16px' }}>
       {/* Üst Başlık Satırı */}
       <div className="ui-row has-icon" style={{ alignItems: 'flex-start' }}>
         <span
           className="ui-ico"
           style={
             {
-              '--ico-bg': acik ? '#25D366' : 'var(--color-neutral-subtle)',
-              '--ico-fg': acik ? '#ffffff' : 'var(--color-text-dim)',
+              '--ico-bg': acik ? '#25D366' : 'var(--color-field)',
+              '--ico-fg': acik ? '#ffffff' : 'var(--color-ink-3)',
               backgroundColor: acik ? '#25D366' : 'rgba(37, 211, 102, 0.12)',
               color: acik ? '#ffffff' : '#25D366',
               display: 'inline-flex',
@@ -175,7 +175,7 @@ export const WhatsAppDailyDigestRow: React.FC = () => {
               </span>
             )}
           </div>
-          <span style={{ fontSize: '13px', color: 'var(--color-text-dim)', display: 'block', marginTop: '3px' }}>
+          <span style={{ fontSize: '13px', color: 'var(--color-ink-3)', display: 'block', marginTop: '3px' }}>
             {acik
               ? `Açık — Her gün saat ${String(prefs.hour).padStart(2, '0')}:00'de beğendiğin paragraflar ve kartlar WhatsApp'ına gelir.`
               : `Yıldızladığın (beğendiğin) paragrafları ve favorilerini her gün seçtiğin saatte WhatsApp mesajı olarak al.`}
@@ -203,7 +203,7 @@ export const WhatsAppDailyDigestRow: React.FC = () => {
             padding: '16px',
             borderRadius: '12px',
             background: 'var(--color-bg-subtle, rgba(0,0,0,0.03))',
-            border: '1px solid var(--color-border)',
+            border: '1px solid var(--color-line)',
             display: 'flex',
             flexDirection: 'column',
             gap: '14px',
@@ -211,7 +211,7 @@ export const WhatsAppDailyDigestRow: React.FC = () => {
         >
           {/* Telefon Numarası Alanı */}
           <div>
-            <label style={{ display: 'block', fontSize: '12px', fontWeight: 600, marginBottom: '6px', color: 'var(--color-text)' }}>
+            <label style={{ display: 'block', fontSize: '12px', fontWeight: 600, marginBottom: '6px', color: 'var(--color-ink)' }}>
               WhatsApp Telefon Numarası
             </label>
             <div style={{ display: 'flex', gap: '8px', maxWidth: '360px' }}>
@@ -226,22 +226,22 @@ export const WhatsAppDailyDigestRow: React.FC = () => {
                     width: '100%',
                     padding: '8px 12px',
                     borderRadius: '8px',
-                    border: '1px solid var(--color-border)',
-                    background: 'var(--color-bg)',
+                    border: '1px solid var(--color-line)',
+                    background: 'var(--color-field)',
                     fontSize: '14px',
                     outline: 'none',
                   }}
                 />
               </div>
             </div>
-            <p style={{ margin: '4px 0 0', fontSize: '11px', color: 'var(--color-text-dim)' }}>
+            <p style={{ margin: '4px 0 0', fontSize: '11px', color: 'var(--color-ink-3)' }}>
               Türkiye için 05xx veya 905xx formatında girebilirsiniz.
             </p>
           </div>
 
           {/* Gönderim Saati */}
           <div>
-            <label style={{ display: 'block', fontSize: '12px', fontWeight: 600, marginBottom: '6px', color: 'var(--color-text)' }}>
+            <label style={{ display: 'block', fontSize: '12px', fontWeight: 600, marginBottom: '6px', color: 'var(--color-ink)' }}>
               <Clock size={13} style={{ display: 'inline', verticalAlign: '-2px', marginRight: '4px' }} />
               Günlük Gönderim Saati
             </label>
@@ -253,8 +253,8 @@ export const WhatsAppDailyDigestRow: React.FC = () => {
                 width: '100%',
                 padding: '8px 10px',
                 borderRadius: '8px',
-                border: '1px solid var(--color-border)',
-                background: 'var(--color-bg)',
+                border: '1px solid var(--color-line)',
+                background: 'var(--color-field)',
                 fontSize: '13px',
                 outline: 'none',
               }}
@@ -269,7 +269,7 @@ export const WhatsAppDailyDigestRow: React.FC = () => {
 
           {/* İçerik Seçenekleri (Öğrencinin Özelleştirebileceği Kutular) */}
           <div>
-            <label style={{ display: 'block', fontSize: '12px', fontWeight: 600, marginBottom: '8px', color: 'var(--color-text)' }}>
+            <label style={{ display: 'block', fontSize: '12px', fontWeight: 600, marginBottom: '8px', color: 'var(--color-ink)' }}>
               Mesajda Yer Alacak İçerikler
             </label>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
@@ -292,7 +292,7 @@ export const WhatsAppDailyDigestRow: React.FC = () => {
                 />
                 <span>
                   <b>Yıldızlı / Beğenilen Paragraflar</b>{' '}
-                  <span style={{ fontSize: '11px', color: 'var(--color-text-dim)' }}>
+                  <span style={{ fontSize: '11px', color: 'var(--color-ink-3)' }}>
                     ({yildizliSayisi} adet kayıtlı)
                   </span>
                 </span>
@@ -317,7 +317,7 @@ export const WhatsAppDailyDigestRow: React.FC = () => {
                 />
                 <span>
                   <b>Favori Bilgi Kartları (Flashcards)</b>{' '}
-                  <span style={{ fontSize: '11px', color: 'var(--color-text-dim)' }}>
+                  <span style={{ fontSize: '11px', color: 'var(--color-ink-3)' }}>
                     ({kartSayisi} adet kayıtlı)
                   </span>
                 </span>
@@ -342,7 +342,7 @@ export const WhatsAppDailyDigestRow: React.FC = () => {
                 />
                 <span>
                   <b>Favori Çıkmış Sorular</b>{' '}
-                  <span style={{ fontSize: '11px', color: 'var(--color-text-dim)' }}>
+                  <span style={{ fontSize: '11px', color: 'var(--color-ink-3)' }}>
                     ({soruSayisi} adet kayıtlı)
                   </span>
                 </span>
@@ -354,7 +354,7 @@ export const WhatsAppDailyDigestRow: React.FC = () => {
           <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
             {prefs.includeStarredParagraphs && (
               <div style={{ flex: '1 1 140px' }}>
-                <label style={{ display: 'block', fontSize: '11px', fontWeight: 600, marginBottom: '4px', color: 'var(--color-text-dim)' }}>
+                <label style={{ display: 'block', fontSize: '11px', fontWeight: 600, marginBottom: '4px', color: 'var(--color-ink-3)' }}>
                   Günde kaç paragraf?
                 </label>
                 <select
@@ -364,8 +364,8 @@ export const WhatsAppDailyDigestRow: React.FC = () => {
                     width: '100%',
                     padding: '6px 8px',
                     borderRadius: '6px',
-                    border: '1px solid var(--color-border)',
-                    background: 'var(--color-bg)',
+                    border: '1px solid var(--color-line)',
+                    background: 'var(--color-field)',
                     fontSize: '12px',
                   }}
                 >
@@ -378,7 +378,7 @@ export const WhatsAppDailyDigestRow: React.FC = () => {
 
             {prefs.includeFavoriteCards && (
               <div style={{ flex: '1 1 140px' }}>
-                <label style={{ display: 'block', fontSize: '11px', fontWeight: 600, marginBottom: '4px', color: 'var(--color-text-dim)' }}>
+                <label style={{ display: 'block', fontSize: '11px', fontWeight: 600, marginBottom: '4px', color: 'var(--color-ink-3)' }}>
                   Günde kaç bilgi kartı?
                 </label>
                 <select
@@ -388,8 +388,8 @@ export const WhatsAppDailyDigestRow: React.FC = () => {
                     width: '100%',
                     padding: '6px 8px',
                     borderRadius: '6px',
-                    border: '1px solid var(--color-border)',
-                    background: 'var(--color-bg)',
+                    border: '1px solid var(--color-line)',
+                    background: 'var(--color-field)',
                     fontSize: '12px',
                   }}
                 >
@@ -450,7 +450,7 @@ export const WhatsAppDailyDigestRow: React.FC = () => {
           </div>
 
           {/* Alt bilgilendirme */}
-          <div style={{ fontSize: '11px', color: 'var(--color-text-dim)', lineHeight: 1.4 }}>
+          <div style={{ fontSize: '11px', color: 'var(--color-ink-3)', lineHeight: 1.4 }}>
             {!serverStatus?.configured ? (
               <span style={{ color: '#d97706' }}>
                 ⚠️ Sunucuda Meta WhatsApp Cloud API anahtarları henüz girilmemiş (.env: <code>WHATSAPP_PHONE_NUMBER_ID</code> ve <code>WHATSAPP_ACCESS_TOKEN</code>). Tercihleriniz profilinize kaydedilir; API bağlandığında otomatik gönderilir.

@@ -48,7 +48,7 @@ Yeni bileşen önce buraya eklenir; sayfa CSS'i yalnız yerleşim yazar.
 | 4 | Öğren listesi/slayt/etkileşim | B05–B07 | Onaylandı (2026-10-27) — kitaplık `OgrenKutuphaneV15`, slayt ekranı v15 katmanı (`styles/v15/ogren.css`) |
 | 5 | Soru çöz merkezi + soru + yanlış çekmecesi + sonuç | C01–C10, Y01–Y06 süzgeç | Onaylandı (2026-10-27) — merkez `SorularMerkezV15` (+ Test oluştur → `/sorular/deneme?kurul=&ders=&n=&basla=1`), soru/yanlış çekmecesi/sonuç `PracticeV15` |
 | 6 | Sınava hazırlan: kamplar, Check Up, Son Prova, 60 planı, takvim, olası | D01–D07 | Onaylandı (2026-10-27) — merkez `KamplarMerkezV15`; kamp/Son Prova/60 planı iç sayfaları açık iş |
-| 7 | Başvuru: kaynaklar, Sağlık Bakanlığı, sözlük, spotlar, önem | G01–G02, B08–B10 | **Onay bekliyor** — merkez `KaynaklarMerkezV15`; iç sayfalar açık iş |
+| 7 | Başvuru: kaynaklar, Sağlık Bakanlığı, sözlük, spotlar, önem | G01–G02, B08–B10 | Onaylandı (2026-10-27) — merkez `KaynaklarMerkezV15`; iç sayfalar açık iş |
 | 8 | Profil, ayarlar, görünüm (tema/palet/yazı), başarımlar | G04–G06, V01–V04, W01–W02, AB01–AB08 | Kuruldu (2026-10-27): ProfileV12 v15 dalı — profil kartı + gruplu satırlar (Ben/Ayarlar/Diğer), her bölüm #hash ekranı, Geri listeye; paneller v12'den, `styles/v15/profil.css` |
 | 9 | Diyaloglar, çekmeceler, tostlar, durumlar | H01–H11, A06–A08, AB12–AB18 | Kuruldu (2026-10-27): `styles/v15/shell.css` › Katmanlar — bulanık perde, 22–24 px köşe, ortalı uyarı + tam genişlik düğmeler, hap bildirim |
 | 10 | Açılış + kayıt akışı | I01–I11 | Kuruldu (2026-10-27): AuthV12 v15 dalı (marka simgesi + Giriş yap/Kayıt ol sekmesi, alt değiştir bağlantısı yok), OnboardingV12 ilerleme çubuğu (n / toplam), GirisUyarisi `v15g-gu` (telefonda alttan sayfa, maddeler tek kartta); `styles/v15/giris.css` |
@@ -57,7 +57,7 @@ Yeni bileşen önce buraya eklenir; sayfa CSS'i yalnız yerleşim yazar.
 | Sayfa | v15 ekranları | Not |
 |---|---|---|
 | Oyunlar merkezi (boşluk, eşleştir, kartlar, sırala, blitz, ızgara, düello, sınıf yarışması) | F01–F11, N01–N08 | ✅ Canlı yarışma kuruldu (Soru çöz › Oyunlar); diğer oyun türleri (boşluk, eşleştir, sırala, blitz) yok |
-| Hücrem (DNA, glukoz, mitokondri, 28 evrim basamağı) | M01–M17 | ✅ /hucrem: 28 basamak = tanim.json kilitleri `tur: hucre` (onceki şartı sunucuda), ATP ile açılır, SVG hücre katman katman büyür; 3B yok |
+| Hücrem (DNA, glukoz, mitokondri, 28 evrim basamağı) | M01–M17 | ✅ /hucrem: 28 basamak = tanim.json kilitleri `tur: hucre` (onceki şartı sunucuda), ATP ile açılır, 3B sahne (`Hucre3D.tsx`, three.js, tembel yüklenir) katman katman büyür, WebGL yoksa SVG; glukoz + canlılık + hücre sıralaması (2026-10-27) |
 | Yüzen kronometre + çalışma kapsülü | T01–T15, U01–U12 | Sistem süresinden ayrı tutulur |
 | Ders programı (liste/hafta/gün/ay, içe aktar) | AA01–AA07 | ✅ gün/hafta/liste kuruldu (ay ve içe aktarma yok) |
 | İstatistik ve grafikler (14 grafik) | J01–J02, X01–X10 | |

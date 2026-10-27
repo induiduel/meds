@@ -129,3 +129,8 @@
   & .v15-btn.is-ghost { background: var(--color-white); color: var(--color-ink); border: 1px solid var(--color-line); }
   & .v15-btn.is-ghost:hover { background: var(--color-field); }
 }
+
+/* Okunan cümle vurgusu (tasarım tokens.json › hl / hl-ink): sesli derste o an okunan cümle */
+:root[data-v15='on'] { --color-hl: #FFE58A; --color-hl-ink: #1A1405; }
+:root[data-v15='on'][data-mode='sepia'] { --color-hl: #F5D27A; --color-hl-ink: #1A1405; }
+:root[data-v15='on'][data-mode='dark'] { --color-hl: #5A4A12; --color-hl-ink: #FFF6D6; }

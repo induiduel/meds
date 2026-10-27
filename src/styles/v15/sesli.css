@@ -119,7 +119,7 @@
    * Telefon: oynatıcının üstünde alt kart (hafif perde). Tablet/PC: sağda, metin sütununun üstünde yüzen kart; perde yok,
    * PDF ve sorunun dayandığı yer görünür kalır. */
   & .cd15-cq-kat { position: fixed; inset: 0; z-index: 1000; display: flex; align-items: flex-end; justify-content: center;
-    padding: 12px 12px var(--cd15-cq-alt, 12px); background: color-mix(in srgb, #0a1018 22%, transparent); }
+    padding: 12px 12px var(--cd15-cq-alt, 12px); background: color-mix(in srgb, var(--color-ink-surface, #0a1018) 22%, transparent); }
   & .cd15-cq { width: min(560px, 100%); max-height: min(100%, 64dvh, 620px); display: flex; flex-direction: column; overflow: hidden; border-radius: 18px;
     background: var(--color-white); border: 1px solid var(--color-line); box-shadow: var(--v15-sh-3); font-family: var(--font-sans); color: var(--color-ink);
     animation: cd15-yukari .22s ease-out; }
@@ -176,3 +176,44 @@
 .cd15-rozet { position: absolute; top: 2px; right: 0; min-width: 16px; padding: 0 4px; border-radius: 8px; font: 700 10px/16px var(--font-sans); font-style: normal; background: var(--color-accent); color: #fff; }
 @media (max-width: 900px) { .cd15-hizli .cd15-yazi { display: none; } }
 @media (max-width: 640px) { .cd15-hizli { display: none; } }
+
+/* ---------------------------------------------------------------------------
+ * Alt oynatıcı v15 (tasarım S19 · player2): bölüm dilimli çubuk, süre · bölüm · toplam, hız hapı + büyük oynat + ⋯
+ * ------------------------------------------------------------------------- */
+:root[data-v15='on'] .cd15-oyn { position: relative; display: flex; flex-direction: column; gap: 8px; padding: 12px 16px 12px; font-family: var(--font-sans); }
+:root[data-v15='on'] .cd15-oyn .cd-kucult { position: absolute; top: 2px; right: 6px; width: 28px; height: 22px; opacity: .6; }
+:root[data-v15='on'] .cd15-zaman { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; grid-template-areas: 'bar bar bar' 't1 orta t2'; row-gap: 6px; column-gap: 10px; align-items: center; }
+:root[data-v15='on'] .cd15-zaman .cd-cubuk { grid-area: bar; margin: 0; }
+:root[data-v15='on'] .cd15-zaman > .cd-sure:first-child { grid-area: t1; }
+:root[data-v15='on'] .cd15-zaman > .cd-sure:last-child { grid-area: t2; }
+:root[data-v15='on'] .cd15-zaman .cd-sure { font-family: var(--font-sans); font-size: .8rem; color: var(--color-ink-3); font-variant-numeric: tabular-nums; }
+:root[data-v15='on'] .cd15-zaman-orta { grid-area: orta; text-align: center; font-size: .82rem; font-weight: 600; color: var(--color-ink); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+:root[data-v15='on'] .cd15-oyn .cd-parcalar { gap: 4px; }
+:root[data-v15='on'] .cd15-oyn .cd-bparca { height: 6px; border-radius: 3px; background: var(--color-field); overflow: hidden; }
+:root[data-v15='on'] .cd15-oyn .cd-bparca > i { background: var(--color-accent); border-radius: 3px; }
+:root[data-v15='on'] .cd15-oyn .cd-bparca.is-etkin { height: 6px; }
+:root[data-v15='on'] .cd15-oyn .cd-tutamac { width: 14px; height: 14px; background: var(--color-accent); border: 2px solid var(--color-white); box-shadow: 0 1px 3px rgb(0 0 0 / .25); }
+:root[data-v15='on'] .cd15-den { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: 8px; }
+:root[data-v15='on'] .cd15-hiz { min-width: 58px; height: 38px; padding: 0 12px; border-radius: 999px; border: 1px solid var(--color-line); background: var(--color-white); color: var(--color-ink); font: 600 .88rem var(--font-sans); font-variant-numeric: tabular-nums; cursor: pointer; }
+:root[data-v15='on'] .cd15-den-orta { display: flex; align-items: center; justify-content: center; gap: 6px; }
+:root[data-v15='on'] .cd15-den-orta .cd-ib { width: 42px; height: 42px; border-radius: 50%; color: var(--color-ink); }
+:root[data-v15='on'] .cd15-den-orta .cd-ib svg { width: 22px; height: 22px; }
+:root[data-v15='on'] .cd15-den-orta .cd-sar > span { display: none; }
+:root[data-v15='on'] .cd15-oyn .cd-oynat.is-buyuk { width: 58px; height: 58px; border-radius: 50%; background: var(--color-ink); color: var(--color-canvas); box-shadow: none; }
+:root[data-v15='on'] .cd15-oyn .cd-oynat.is-buyuk svg { width: 26px; height: 26px; fill: currentColor; }
+:root[data-v15='on'] .cd15-daha .cd-ib { width: 40px; height: 40px; border-radius: 50%; }
+@media (max-width: 380px) { :root[data-v15='on'] .cd15-den-orta { gap: 2px; } :root[data-v15='on'] .cd15-den-orta .cd-ib { width: 38px; height: 38px; } }
+
+/* Akan metin v15 (tasarım S19 · kara()): okuma yazı tipi, etkin paragrafta soldan vurgu çizgisi (zemin boyanmaz),
+   okunan cümle sarı (hl), diğer paragraflar ikincil mürekkep */
+:root[data-v15='on'] .cd-metin .cd-p { font-family: var(--font-read); color: var(--color-ink-2); }
+:root[data-v15='on'] .cd-metin .cd-p.is-on { background: transparent; color: var(--color-ink); box-shadow: inset 3px 0 0 var(--color-accent); border-radius: 0; }
+:root[data-v15='on'] .cd-metin ::highlight(cd-cumle) { background-color: var(--color-hl); color: var(--color-hl-ink); }
+:root[data-v15='on'] .cd-metin mark.cd-cumle { background: var(--color-hl); color: var(--color-hl-ink); border-radius: 4px; padding: 0 2px; }
+/* PDF şeridi v15 (tasarım S19 · pbar): sayfa yazısı, hap düğmeler */
+:root[data-v15='on'] .cd-pdf-bar { gap: 8px; padding: 8px 10px; background: transparent; border-bottom: 0; font-family: var(--font-sans); }
+:root[data-v15='on'] .cd-pdf-bar > svg:first-child { display: none; }
+:root[data-v15='on'] .cd-pdf-bar .cd-pdf-sayfa { order: -1; font-weight: 700; color: var(--color-ink); font-size: .9rem; }
+:root[data-v15='on'] .cd-pdf-bar .cd-pdf-ad { color: var(--color-ink-2); font-size: .85rem; }
+:root[data-v15='on'] .cd-pdf-bar .cd-ib { width: 38px; height: 38px; border-radius: 999px; border: 1px solid var(--color-line); background: var(--color-white); }
+:root[data-v15='on'] .cd-pdf-bar .cd-pdf-zoom { font: 600 .8rem var(--font-sans); color: var(--color-ink-2); font-variant-numeric: tabular-nums; }

@@ -54,7 +54,6 @@ export function CdV15Bas(p: {
   };
 }) {
   const terim = useTerimYardimci();
-  const [appFs, toggleAppFs] = useAppFullscreen();
   const sirali: CdGorunum[] = ['metin', 'ikisi', 'pdf'];
   const sonraki = sirali[(sirali.indexOf(p.mod) + 1) % 3];
   return (
@@ -79,6 +78,7 @@ export function CdV15Bas(p: {
           <ArrowLeftRight aria-hidden />
         </button>
       )}
+      {p.ek}
       {p.hizli && (
         <span className="cd15-hizli">
           <span className="cd15-yazi" role="group" aria-label="Yazı boyutu">
@@ -101,17 +101,13 @@ export function CdV15Bas(p: {
           )}
         </span>
       )}
-      {p.ek}
       {p.terimVar && (
         <button type="button" className={`v15-ib${terim ? ' is-on' : ''}`} aria-pressed={terim} onClick={() => terimYardimciAyarla(!terim)}
           aria-label="Terim yardımcısı" title={terim ? 'Terim yardımcısı açık (kapat)' : 'Terimler: slayttaki terimlerin anlamını göster'}>
           <Info aria-hidden />
         </button>
       )}
-      <button type="button" className={`v15-ib${appFs ? ' is-on' : ''}`} aria-pressed={appFs} onClick={() => toggleAppFs()}
-        aria-label={appFs ? 'Tam ekrandan çık' : 'Tam ekran'} title={appFs ? 'Tam ekrandan çık' : 'Tam ekran'}>
-        {appFs ? <Minimize2 aria-hidden /> : <Maximize2 aria-hidden />}
-      </button>
+      {/* tam ekran üst barda değil: Görünüm › Düzen (tasarım S25) */}
       <button type="button" className="v15-ib" onClick={p.onGorunum} aria-haspopup="dialog" aria-label="Görünüm ayarları" title="Görünüm: düzen, PDF katmanları, okuma">
         <SlidersHorizontal aria-hidden />
       </button>

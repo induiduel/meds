@@ -74,7 +74,7 @@ export const SlideReaderModal: React.FC<SlideReaderModalProps> = ({
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header */}
-        <div className="bg-ink-surface text-white p-4 sm:p-5 flex items-start justify-between gap-3 shrink-0">
+        <div className="bg-ink-surface text-[color:var(--color-canvas)] p-4 sm:p-5 flex items-start justify-between gap-3 shrink-0">
           <div className="space-y-1.5 min-w-0">
             <div className="flex flex-wrap items-center gap-2">
               <span className="bg-ok/80 text-ok-soft text-2xs font-bold px-2.5 py-0.5 rounded-full uppercase tracking-wider border border-ok/30">
