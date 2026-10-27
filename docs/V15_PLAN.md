@@ -129,6 +129,9 @@ Yeni bileşen önce buraya eklenir; sayfa CSS'i yalnız yerleşim yazar.
 - Soru haritası (b2harita): `v15/SoruHaritasiV15.tsx` + `styles/v15/harita.css`; rota `soru_haritasi` (/soru-haritasi ↔ /sorular/soru-haritasi).
   Dizin `src/data/soru_haritasi.json` ← `scripts/v15/soru_haritasi.py` (pastQuestions.json sayımı; çıkmış verisi değişince yeniden çalıştır).
   Hücre → `/sorular/cikmis?kurul=&ders=&yil=` (PastExamsView `?ders=`/`?yil=` ile süzgeç başlatır).
+- Yüzen kronometre (T): `v15/KronometreV15.tsx` + `styles/v15/kronometre.css`; Menü › Araçlar ve kenar menüsünden (`kronometreAc`).
+  Başlat/duraklat, tur, bitir (geçmiş 50 oturum, localStorage), sistem süresinden ayrı. Odak ekranında (sesli ders) gizli.
+  Yapılmadı: çalışma kapsülü (U, ses oynatıcıyla birleşme), Profil › Kronometre geçmişi ekranı.
 
 ## Kalan iç sayfalar (kullanıcı kararı 2026-10-27: eski görünümün hepsi v15'e geçecek)
 Tasarımı olan: sesli ders listesi (B04), Öğren etkileşimleri (B07), spotlar (B08), önem (B09), sözlük (B10), notlar (B11),

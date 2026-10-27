@@ -192,3 +192,4 @@
 .v15-sheet-h { margin: 14px 4px 6px; }
 .v15-sheet-h:first-child { margin-top: 2px; }
 .v15-tabs > button.v15-tab { border: 0; background: none; font: inherit; color: inherit; cursor: pointer; }
+button.v15-nav-a { border: 0; background: none; font: inherit; color: inherit; width: 100%; text-align: left; cursor: pointer; }

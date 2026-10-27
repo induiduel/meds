@@ -1,11 +1,11 @@
 {
  "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
- "onem": 390,
- "baslik": "Yeni: Soru haritası",
+ "onem": 391,
+ "baslik": "Yeni: Kronometre",
  "maddeler": [
-  "Soru çöz › Soru haritası: hangi dersten hangi yıl kaç çıkmış soru geldiği, ısı tablosunda.",
-  "Hücreye dokununca o ders ve yılın çıkmış soruları süzülü açılır.",
-  "Yalın görünümde bazı kartların zemini ve okuma yazı tipi düzeltildi."
+  "Menü › Araçlar › Kronometre: istediğin zaman başlat, duraklat, tur al.",
+  "Küçültünce köşede küçük bir baloncuk olarak süre akmaya devam eder; sayfa değişse de kaldığı yerden sürer.",
+  "Kronometre süresi sistemin ölçtüğü çalışma süresinden ayrı tutulur."
  ],
  "eklenen": [],
  "degisen": [],

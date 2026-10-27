@@ -17,6 +17,7 @@ import {
   ShieldCheck,
   Smartphone,
   Stethoscope,
+  Timer,
   Trophy,
   UserRound,
 } from 'lucide-react';
@@ -44,6 +45,7 @@ import { usePhone, useSearchShortcut, useSideCollapse } from '../shell/shellHook
 import { TOP_SLOT_ID } from '../v12/ShellV12';
 import { V15_SECTIONS, sectionOf, type V15Section } from './navV15';
 import { useV15BaslikOku } from './baslik';
+import KronometreV15, { kronometreAc } from './KronometreV15';
 import { MENU_SAYFALARI, geriGit, kokMu, sekmeOf, sekmeyeGit, useGezinmeKaydi } from './gezinme';
 import '../../styles/v15/tokens.css';
 import '../../styles/v15/shell.css';
@@ -264,6 +266,7 @@ export const SideNavV15: React.FC<SideNavProps> = ({ active, onGo, isAdmin, user
       </div>
 
       <div className="v15-side-foot">
+        <button type="button" className="v15-nav-a" onClick={kronometreAc}><Timer aria-hidden="true" /><span className="v15-nav-t">Kronometre</span></button>
         {isAdmin && link('manage', <><ShieldCheck aria-hidden="true" /><span className="v15-nav-t">Yönetim</span></>, 'v15-nav-a')}
         {(['study', 'bitirdiklerim', 'stats', 'basarimlar'] as AppRoute[]).map((r) => {
           const it = NAV_ITEMS[r];
@@ -321,6 +324,8 @@ export const TopBarV15: React.FC<TopBarProps> = ({ active, onGo, user, isAdmin, 
   }
 
   return (
+    <>
+    <KronometreV15 />
     <header className="v15-top print:hidden">
       {geriVar && (
         <button type="button" className="v15-ib v15-back" onClick={() => (sayfa?.geri ? navigateTo(sayfa.geri) : geriGit(active))} aria-label="Geri" title="Geri">
@@ -408,6 +413,7 @@ export const TopBarV15: React.FC<TopBarProps> = ({ active, onGo, user, isAdmin, 
           document.body,
         )}
     </header>
+    </>
   );
 };
 
@@ -504,6 +510,7 @@ export const TabBarV15: React.FC<TabBarProps> = ({ active, onGo, isAdmin, onPdf,
           <h3 className="v15-label v15-sheet-h">Araçlar</h3>
           <div className="v15-sheet-tools" role="group" aria-label="Araçlar">
             <button type="button" onClick={() => { setMenu(false); openSearch(); }}><Search aria-hidden="true" />Ara</button>
+            <button type="button" onClick={() => { setMenu(false); kronometreAc(); }}><Timer aria-hidden="true" />Kronometre</button>
             <button type="button" onClick={() => { setMenu(false); onPdf(); }}><FileDown aria-hidden="true" />PDF</button>
             {onOffline && <button type="button" onClick={() => { setMenu(false); onOffline(); }}><Database aria-hidden="true" />Çevrimdışı</button>}
             <button type="button" onClick={() => { setMenu(false); window.dispatchEvent(new Event('medsoru:pending')); }}>
