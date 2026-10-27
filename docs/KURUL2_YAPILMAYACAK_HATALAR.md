@@ -719,3 +719,16 @@ Her maddede: belirti · kök neden · Kurul 2 kuralı · kapı durumu. Kanıtlar
 - **Önleme kuralı:** Çıkmış eşlemesi yalnız **ham sınav belgesinde bulunan** soruyla yapılır; banka etiketi ("verified",
   "altin_standart") kanıt değildir. `kaynak` alanı olmayan kayıt `degerlendirme_dogrula.py`'de HATA. Gizli kopya
   (sunulmayan id) eşlenmez; hatırlama listesinden gelen sorunun şıkları "sonradan tamamlandı" diye belirtilir.
+
+## H84 — Kaynağı olmayan 86 Kurul 2 "çıkmış"ı Check-Solve onayıyla görünür kalıyordu (2026-10-27)
+- **Belirti:** Ham sınav belgesi taramasında 574 Kurul 2 sorusundan 86'sının özgün kaynağı bulunamadı (91/92 `d3-` önekli);
+  76'sı 57 sesli dersin çıkmış listesindeydi. Rapor: `meds_database/derived/quarantine/kurul2_cikmis_kaynak_raporu.{md,csv}`.
+- **Kök neden:** (1) `d3-*` kayıtları kaynak dosyası olmayan türetilmiş JSON'lardan (`*_Kurul2_Cikmis_Sorular.json`) geldi;
+  "altin_standart/denetleyici_onayi" etiketleri özgünlüğü kanıtlamadı. (2) `applyQuarantine` Check-Solve ve Faz 14 onaylı
+  soruları karantinadan muaf tutuyordu; 86'nın 86'sı Check-Solve onaylı olduğundan karantinaya yazmak hiçbirini gizlemezdi.
+  (3) Sesli ders `cikmisKonum` listesi karantinayı hiç okumuyordu.
+- **Çözüm:** 86 soru `karantina.json`'a `neden: kaynak_bulunamadi` ile yazıldı (silme yok; yedek `meds_temp/karantina_yedek_oracle_20261027.json`).
+  `kaynakBulunamadi()` onay muafiyetinden ÖNCE uygulanır; `canliDers.ts` çıkmış listesini aynı kuralla süzer.
+- **Önleme kuralı:** Banka/çıkmış eklemeleri ham sınav belgesindeki yerle (belge + sayfa) gelir; kaynak gösterilemeyen soru
+  "çıkmış" olarak yayınlanmaz. Bir onay katmanı (Check-Solve, Faz 14) kaynağın yokluğunu gidermez. Geri alma: soruyu
+  `karantina.json`'dan çıkarmak.

@@ -152,6 +152,12 @@ function applyCurriculum<T extends Record<string, any>>(item: T): T {
   return out as T;
 }
 
+/** Özgün sınav belgesinde kaynağı bulunamadığı için karantinaya alınmış soru (H84). Sesli ders çıkmış listesi de bunu süzer. */
+export function kaynakBulunamadi(id: string): boolean {
+  const n = load()?.sorular?.[String(id)]?.neden;
+  return Array.isArray(n) && n.includes('kaynak_bulunamadi');
+}
+
 export function quarantineMtime(): number {
   load();
   loadKeys();
@@ -215,6 +221,16 @@ export function applyQuarantine<T extends { id?: string; stem?: string; options?
   const out: T[] = [];
   for (const item of list) {
     const id = String(item.id);
+    // H84 (2026-10-27): özgün sınav belgesinde bulunamayan soru Check-Solve / Faz 14 onayından ÖNCE gizlenir — onay
+    // içeriği düzeltir, kaynağın yokluğunu gidermez.
+    if (kaynakBulunamadi(id)) {
+      const tags = Array.isArray((item as any).tags) ? [...(item as any).tags] : [];
+      if (!tags.includes('karantina')) tags.push('karantina');
+      out.push({ ...item, isQuarantined: true, quarantineReasons: ['kaynak_bulunamadi'], quarantineSource: q.sorular[id]?.kaynak || null,
+        quarantineDetails: q.sorular[id] || null, tags,
+        updatedAt: new Date(Math.max(Date.parse((item as any).updatedAt || '') || 0, cacheMtime)).toISOString() });
+      continue;
+    }
     if (checkSolveStatus(item as any)) {
       out.push(checkSolveView(item as any));
       continue;

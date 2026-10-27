@@ -8,6 +8,7 @@ import fs from 'fs';
 import path from 'path';
 import crypto from 'crypto';
 import { metinParagraflari } from './sesliAnlatim';
+import { kaynakBulunamadi } from './questionQuarantine';
 
 const KOK = path.join(process.cwd(), 'data', 'sesli_anlatim');
 const ARSIV_KOK = path.join(process.cwd(), 'data', 'arsiv_25_26', 'sesli_anlatim');
@@ -393,7 +394,9 @@ export function registerCanliDersRoutes(app: Express) {
         const ck = oku<any>(P.cikmisKonum(key), null);
         if (!ck || !Array.isArray(ck.q) || !ck.q.length) return null;
         const h = crypto.createHash('sha1').update(pars.map((p) => p.t).join('\n')).digest('hex');
-        return ck.metinHash === h ? ck.q : null;
+        // H84: özgün kaynağı bulunamayan (karantinadaki) çıkmış soru listede gösterilmez
+        const q = ck.metinHash === h ? ck.q.filter((x: any) => !kaynakBulunamadi(String(x?.id))) : null;
+        return q && q.length ? q : null;
       })(),
       // öğrenci notunda işaretli (önemli) yerler, PDF dosyası başına (scripts/sesli_anlatim/ogrenci_not_isaret.py):
       // { "<dosya i>": { "<sayfa>": { l: [[x0,y0,x1,y1]], y: [x,y] } } } — kırmızı marker + sayfa başına bir yıldız

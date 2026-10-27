@@ -1,15 +1,15 @@
 {
  "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
- "onem": 382,
- "baslik": "Çıkmış Soru Etiketleri: Yalnız Özgün Sınav Belgesindeki Sorular",
+ "onem": 383,
+ "baslik": "Kurul 2 Çıkmışları: Kaynağı Doğrulanamayan Sorular Gizlendi",
  "maddeler": [
-  "Sesli derste 'Çıkmış' etiketi artık yalnız özgün sınav belgesinde bulunan soruları gösteriyor; kaynağı bulunamayan bir soru ve yinelenen bir kopya kaldırıldı.",
-  "Soru penceresinde sorunun hangi sınav belgesinden geldiği (yıl, kurul, sayfa) yazıyor.",
-  "'Soru yüklenemedi' hatası giderildi."
+  "Kurul 2 çıkmış soruları özgün sınav belgeleriyle tek tek karşılaştırıldı; 574 sorudan 435'i belgede bulundu.",
+  "Özgün sınav belgesinde bulunamayan 86 soru çıkmış havuzundan ve sesli ders çıkmış listelerinden gizlendi (silinmedi).",
+  "Böylece 'çıkmış' etiketi taşıyan her soru gerçek bir sınav belgesine dayanıyor."
  ],
  "eklenen": [
-  "CdCikmisChip kaynak satırı",
-  "degerlendirme_dogrula.py kaynak zorunluluğu (H83)"
+  "questionQuarantine.ts kaynakBulunamadi (H84)",
+  "canliDers.ts çıkmış süzgeci"
  ],
  "degisen": [
   "src/services/canliDers.ts",
