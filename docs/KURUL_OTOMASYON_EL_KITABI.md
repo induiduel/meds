@@ -443,3 +443,30 @@ Tasarım: `ICERIK_MOTORU_V3.md` §2, §12, §15, §16. Model yok; ortam `meds/.v
 - **Ekran:** izleme düzeni (anlatılmayan paragraflar soluk, slayt %60), telefonda görünüm döngü düğmesi, sayfa takibi
   kare kare kaydırma + ekran ölçümü (program kaydırması takibi durdurmaz), kelime takipçisi harfleri kapatmaz.
 
+## 19. Elle ders üretimi — işçisiz (kullanıcı kararı 2026-10-27; ilk uygulama k2-01 Nörolojik Hastaya Yaklaşım)
+
+LLM otomasyonu kapalıdır (AGENTS kural 20). Yeni ders, kullanıcı hangi dosyanın hangi ders olduğunu söyleyince bu oturumda
+üretilir. Arşiv (`y25-*`) içeriği kopyalanmaz. Anahtar ve kod ders kayıt defterinden (`src/data/dersler/kN.json`).
+
+1. **Kaynak:** okul PDF'i (`ogrenci_drive.py` lister ile okul Drive'ı `1ozu5KiLZjFd4YKNMZ0bSRvLVV6b7lv0W`), öğrenci notu ve hoca
+   kaydı (öğrenci Drive'ı) → `meds_temp/ogrenci_ders/<ders>/`. Eşleme sayfa başlıklarıyla doğrulanır.
+2. **Öğrenci notu:** `kroki/ogrenci_not.py` + sayfa görüntüleri elle okunur (hizalama reddettiği sayfa atlanmaz).
+3. **Hoca kaydı:** `ogrenci_drive/hoca_dokum.py` (CPU, `MemoryMax=4G`, döküm sürerken `tsc` çalıştırma — H81). Anlaşılmayan
+   döküm "hoca vurguladı" dayanağı olmaz.
+4. **Çıkmış:** bankada konu + slayt metniyle aday → her soru elle doğrulanır (`s`, `kanit`, `seviye`, `dogrulandi`) — H79.
+5. **Değerlendirme paketi:** `meds_database_v2/ders_bilgi/<ders>/degerlendirme/paket.json` → `degerlendirme_dogrula.py` 0 HATA.
+6. **Anlatım:** `# Başlık` + `@@ Bölüm` + paragraf; dolgu yok, "çıkmış sınavda sorulmuştur" yalnız `seviye=dogrudan`.
+   Kapılar: `metin_denetle.py`, `turkce_uslup.denetle`, bağımsız denetçi alt ajanı (GEÇER).
+7. **Yayın:** Oracle `POST /api/sesli-anlatim/ders-ekle` (`key`, `no`, `baslik`, `metin`, paragraf başına `sayfalar`, `dosya`
+   {path: drive_root göreli, name, pages, fileId}). Öğren destesi yoksa PDF `lecturePdfLocator.ts` `SANAL_DESTELER`
+   (`k<N>p-<key>`) ile bağlanır ve hizalamadaki `deckId` buna çevrilir (yoksa PDF ve işaret açılmaz).
+8. **Ses:** ders-ekle EMA işini kuyruğa koyar; bu PC'deki `meds-ema` alır. Ardından Oracle `sudo systemctl start
+   meds-cumle-zaman` (cümle zamanı + PDF işareti) ve yerelde `kelime_zaman.py --key <k> --oracle` (CPU, systemd-run).
+9. **Çıkmış/terim/kısaltma:** `cikmis_konum/<key>.json` (metinHash = sunucu paragraf hash'i, p/c yeni metinden),
+   `kisaltma_sozlugu.py otomatik`, `terim_sozlugu.py dok` → oturumda `terimler.json` → `dogrula --yaz`. Betikler ders bilgisini
+   API'den okur: yerelde yoksa `ssh -L 3310:127.0.0.1:3000 medsor-oracle` + `MEDS_API=http://127.0.0.1:3310`.
+10. **Çapa + çizim:** `capa_dok.py` → oturumda çapa (`TALIMAT_CAPA.md`) → `capa_dogrula.py` → çizim partileri oturumda
+    (`TALIMAT_CIZIM.md`, 27–30: tasarım kataloğunun tamamı) → `cizim_uret.py` yerleşim → `panel_sinama.mjs` + `cizim_kapisi.py` 0 HATA.
+11. **Kayıt + dağıtım:** veriler `data/sesli_anlatim/*/<key>` olarak commit, `guncelleme_notu.json` onem+1, `dagit.sh`; canlı API'de
+    ders, ses, PDF (`/api/lecture-pdf/deck/<deckId>/0` 200), çıkmış, işaret, terim, kısaltma doğrulanır.
+

@@ -119,3 +119,17 @@ Yalnız `cizim.json`'u yaz; başka dosyaya dokunma. Bitince tek satır: `BİTTİ
 25. **Resim anlatılırken panel yok:** lazeri resim olan cümleye `sema` yazılmaz (sayfa yazı ağırlıklı olsa bile).
 26. **Arka plan/süs resim değildir:** slayt şablonu, logo, kenar süsü, kapak deseni, yazının arkasındaki kart görseli
     için çizim yapılmaz; bunlar ★ olsa da atlanır.
+
+## Tasarım kataloğunun tamamı kullanılır (kullanıcı kararı 2026-10-27 — bundan sonraki HER ders)
+27. **Önce katalog:** her sayfa için `sablonlar.json`'daki **bütün** şablonlar (43+; zaman/seyir, bulgu→düşündürdüğü,
+    lezyon→bulgu, refleks→düzey, muayene, tetkik, karar, algoritma, sınıflama, karşılaştırma, ilaç etkisi, skor, yaş/tarama,
+    gen/kromozom …) gözden geçirilir; anlatılan ilişkinin **amacına en uygun** tasarım seçilir. Hep aynı 2–3 şablona
+    (ör. yalnız `neden_sonuc`/`siniflama`) yığılmak HATA sayılır; uygun şablon varken düz kontur/ok yetinmek de eksiktir.
+28. **Gerekli yerde mutlaka:** başlangıç şekli/seyir → `klinik_seyir` ya da `zaman_gorunum`; bulgu kümesi → `bulgu_dusundurur`;
+    lokalizasyon → `lezyon_bulgu` / `refleks_duzey`; ayırıcı tanı ya da sık karıştırılan iki kavram → `karsilastirma`;
+    tetkik seçimi → `tani_tetkik`; acil yaklaşım → `durum_yaklasim` / `algoritma`. Metin ağırlıklı slayt da bu panellerden
+    yararlanır (kural 25: resim anlatılırken panel yok).
+29. **Çıkmış ve öğrenci notu önceliği:** doğrulanmış çıkmış (`cikmis_konum` `dogrulandi`) ve öğrenci notunda işaretli
+    satırlar çizimde öncelik alır; panel ya da kontur bu satırları gösterir.
+30. Uygun şablon gerçekten yoksa `yeni_sablon` önerilir (CIZIM_KURALLARI §2b); kapı ve `panel_sinama.mjs` 0 hata zorunlu.
+
