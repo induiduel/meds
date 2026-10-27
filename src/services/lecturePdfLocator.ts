@@ -164,6 +164,12 @@ export const SANAL_DESTELER: Record<string, { title: string; decks: string[]; fi
     decks: [],
     files: [{ path: 'Kurul 1/Tıbbi Patoloji/35) Meme Kanseri ve Moleküler Tipleri.pdf', name: '35) Meme Kanseri ve Moleküler Tipleri.pdf', pages: 67, fileId: '1xtoC_Gck7KgK4YCeRMCSQqVZ8vB9Wl2g' } as SourceFile],
   },
+  // 2026-27 Kurul 2 (2026-10-27): işçisiz, elle üretilen sesli ders; Öğren destesi henüz yok, bu yılın okul PDF'i doğrudan bağlı.
+  'k2p-k2-01-norolojik-hastaya-yaklasim': {
+    title: 'Nörolojik Hastaya Yaklaşım',
+    decks: [],
+    files: [{ path: 'Kurul 2/Nöroloji/1)Nörolojik hastaya yaklaşım.pdf', name: '1)Nörolojik hastaya yaklaşım.pdf', pages: 9, fileId: '1W9hP005FeexiyGBlCyKGRGcIKKg9W-jm' } as SourceFile],
+  },
   'k1p-k1-70-tbg-sinav-kampi': {
     title: 'TBG Sınav Kampı',
     decks: [

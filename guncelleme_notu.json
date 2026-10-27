@@ -1,20 +1,16 @@
 {
  "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
- "onem": 379,
- "baslik": "Sesli Derste Çıkmış Soru Chip'i: Slayttan Çık, Çöz, Derse Dön",
+ "onem": 380,
+ "baslik": "Yeni Ders: Nöroloji 1 · Nörolojik Hastaya Yaklaşım (2026-2027)",
  "maddeler": [
-  "Çıkmışta sorulan bilginin geçtiği slaytın sağ üstünde yanıp sönen 'Çıkmış' etiketi çıkıyor; dokununca ders sesi duruyor.",
-  "Soru normal ya da tam ekran pencerede çözülüyor; şık açıklamaları ve slayttaki dayanak gösteriliyor.",
-  "'Derse dön' ile ders kaldığı saniyeden devam ediyor.",
-  "Etiket yalnız slayt metniyle tek tek doğrulanmış çıkmışlarda görünür; Nöroloji 1 (Nörolojik Hastaya Yaklaşım) için 7 soru doğrulandı, yanlış eşleşen 10 soru kaldırıldı.",
-  "Nöroloji 1 kısaltmaları tamamlandı: HT, DM, YKL, SVO ve EP sözlüğe eklendi."
+  "Kurul 2 Nöroloji 1. ders bu yılın slaytlarıyla sesli ders olarak eklendi (yaklaşık 7 dakika, EMA sesi).",
+  "Anlatım; okul slaytları, öğrenci notları ve doğrulanmış çıkmış sorulardan hazırlandı ve bağımsız denetimden geçti.",
+  "Çıkmışta sorulan bilgilerin olduğu slaytlarda 'Çıkmış' etiketi yanıp söner; dokununca soru çözülür, ders kaldığı yerden sürer.",
+  "Slaytlardaki 35 terim ve 15 kısaltma işareti dokununca açıklanıyor."
  ],
  "eklenen": [
-  "src/components/canliDers/CdCikmisChip.tsx",
-  "GET /api/past-exams/tek/:id",
-  "otomasyon/llm_kilit.py",
-  "scripts/ogrenci_drive/degerlendirme_dogrula.py",
-  "scripts/ogrenci_drive/hoca_dokum.py"
+  "data/sesli_anlatim/*/k2-01-norolojik-hastaya-yaklasim",
+  "src/services/lecturePdfLocator.ts (k2p-k2-01 PDF bağı)"
  ],
  "degisen": [
   "src/services/canliDers.ts",
