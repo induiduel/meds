@@ -1046,4 +1046,4 @@ Her maddede: belirti · kök neden · Kurul 2 kuralı · kapı durumu. Kanıtlar
 - **Belirti:** "Muayene başlıklarının sırası" tablosu 1, 2, 4, 5 diye gidiyordu; Motor sistem yoktu (Öğren tablosu + ders içerik sekmesi).
 - **Kök neden:** Yazar parçası (`uret/parca_A.json`) interactive_table'ı yazarken 3. satırı atlamış; slayt metni beş başlığı doğru sayıyordu, tabloyla metin kıyaslanmadı. `ders_icerik_uret.py` tabloyu aynen kopyaladığı için hata iki yüzeye taşındı.
 - **Çözüm:** 3. satır (Motor sistem) parça, taslak deste ve `interactive_learning_decks.json`'a eklendi; ders içerik paketi yeniden yazıldı.
-- **Kural:** Sıra/Adım sütunlu tablolarda numaralar 1'den kesintisiz olmalı ve slayt metnindeki sayımla eşleşmeli (`docs/DERS_ICERIK_BICIMI.md`).
+- **Kural:** Sıra/Adım sütunlu tablolarda numaralar 1'den kesintisiz olmalı ve slayt metnindeki sayımla eşleşmeli (`docs/DERS_ICERIK_BICIMI.md`). Kapı: `scripts/ders_icerik/sira_kapisi.py`.

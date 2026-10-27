@@ -17,6 +17,7 @@ Ekran: `src/components/v15/DersIcerikV15.tsx` + `src/styles/v15/dersIcerik.css`.
 - 3+ sütun karşılaştırma → `k: true`, ilk sütun ölçüt, diğerleri kıyaslanan kutuplar; hücreler kısa
   (`Var`/`Yok`/`+`/`−`/`artar`/`azalır` rozet olur). Hücreye cümle yazılmaz.
 - Tablolar asla metin içinde düz yazı olarak verilmez.
+- Kapı: `python3 scripts/ders_icerik/sira_kapisi.py` 0 HATA (üreteç sonunda kendiliğinden çalışır, H105).
 
 ## Önemli noktalar / spotlar
 - `b` başlık ≤ 8 kelime, `m` 1–2 cümlelik özet, `alt` 2–5 kısa madde, `n` "neden önemli" tek cümle, `p` 0–100 puan.

@@ -1,13 +1,12 @@
 {
-  "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 491,
-  "baslik": "Soru çözücüye derse girmeden ve ders bitince erişim",
-  "maddeler": [
-    "Ders ayrıntısında sesli soru çözücü satırı",
-    "Oynatıcıda başlamadan önce çözücü kısayolu, ders bitince \"Ders bitti\" kartı"
-  ],
-  "eklenen": [],
-  "degisen": [],
-  "duzeltilen": [],
-  "silinen": []
+ "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
+ "onem": 492,
+ "baslik": "İçerik kapısı eklendi",
+ "maddeler": [
+  "Sıralı tablolarda adım atlanmasını yakalayan otomatik denetim eklendi"
+ ],
+ "eklenen": [],
+ "degisen": [],
+ "duzeltilen": [],
+ "silinen": []
 }

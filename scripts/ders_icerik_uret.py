@@ -111,3 +111,7 @@ def uret(key):
     json.dump(out, open(p, 'w', encoding='utf-8'), ensure_ascii=False, separators=(',', ':'))
     print(key, {k: len(v) for k, v in out.items() if isinstance(v, list)})
 for k in sys.argv[1:]: uret(k)
+# H105 kapısı: sıralı tablolarda numara atlanmamalı (0 HATA değilse çıkış 1)
+import subprocess
+if sys.argv[1:]:
+    sys.exit(subprocess.call([sys.executable, os.path.join(R, 'scripts/ders_icerik/sira_kapisi.py')] + [os.path.join(R, 'src/data/ders_icerik', k + '.json') for k in sys.argv[1:]]))
