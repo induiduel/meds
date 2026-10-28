@@ -67,6 +67,37 @@ const indexModules = import.meta.glob('../data/ornek_sorular/k[1-6]/index.json',
 const loaders = import.meta.glob('../data/ornek_sorular/k[1-6]/k[1-6]-*.json', { import: 'default' }) as Record<string, () => Promise<Ders>>;
 const INDEX: IndexRow[] = Object.keys(indexModules).sort().flatMap((k) => indexModules[k] || []);
 
+/* Patoloji: hocanın soru üslubunda "çıkabilecek sorular" (docs/PATOLOJI_HOCA_SORU_MANTIGI.md, AGENTS.md kural 25).
+   Veri: src/data/hoca_uslubu_sorular/k<N>/<ders>.json; derse sentetik son kazanım (no 900) olarak eklenir. */
+type HocaDers = { sorular: { kok: string; siklar: string[]; cevap: string; aciklama: Record<string, string> }[] };
+const HOCA_KAZANIM_NO = 900;
+const hocaLoaders = import.meta.glob('../data/hoca_uslubu_sorular/k[1-6]/k[1-6]-*.json', { import: 'default' }) as Record<string, () => Promise<HocaDers>>;
+const hocaIndex = import.meta.glob('../data/hoca_uslubu_sorular/k[1-6]/index.json', { eager: true, import: 'default' }) as Record<string, { ders_id: string; soru: number }[]>;
+const HOCA_SAYI: Record<string, number> = {};
+for (const k in hocaIndex) for (const r of hocaIndex[k] || []) HOCA_SAYI[r.ders_id] = r.soru;
+for (const r of INDEX) r.soru_sayisi += HOCA_SAYI[r.id.split('-').slice(0, 2).join('-')] || 0;
+
+async function hocaEkle(d: Ders): Promise<Ders> {
+  if (d.kazanimlar.some((k) => k.no === HOCA_KAZANIM_NO)) return d;
+  const kisa = d.id.split('-').slice(0, 2).join('-');
+  const yol = Object.keys(hocaLoaders).find((k) => k.split('/').pop()!.startsWith(`${d.id}.`));
+  if (!yol) return d;
+  try {
+    const h = await hocaLoaders[yol]();
+    const sorular: Soru[] = h.sorular.map((q, i) => ({
+      id: `${kisa}-qh${String(i + 1).padStart(2, '0')}`,
+      kazanim: HOCA_KAZANIM_NO,
+      zorluk: 'zor' as Zorluk,
+      soru: q.kok,
+      secenekler: Object.fromEntries(q.siklar.map((t, j) => [LETTERS[j], t])),
+      dogru: q.cevap,
+      aciklama: q.aciklama[q.cevap] || '',
+      sik_aciklamalari: q.aciklama,
+    }));
+    return { ...d, soru_sayisi: d.soru_sayisi + sorular.length, kazanimlar: [...d.kazanimlar, { no: HOCA_KAZANIM_NO, metin: 'Hocanın üslubunda çıkabilecek sorular', sorular, ilgili_cikmis: [] }] };
+  } catch { return d; }
+}
+
 const LETTERS = ['A', 'B', 'C', 'D', 'E'];
 const SECIM_KEY = 'medsoru_ornek_k1_ders';
 const CEVAP_KEY = 'medsoru_ornek_k1_cevap';
@@ -114,7 +145,7 @@ function BildirButonu({ q, ders }: { q: Soru; ders: string }) {
           question={{ stem: q.soru, correctAnswer: q.dogru, discipline: ders, questionNumber: q.id }}
           onClose={() => setOpen(false)}
           onSubmit={async (reason, details) => {
-            await ApiService.reportOrnekQuestion(q.id, reason, [details, `Kaynak: Örnek sorular · ${ders} · K${q.kazanim}`].filter(Boolean).join('\n'));
+            await ApiService.reportOrnekQuestion(q.id, reason, [details, `Kaynak: Örnek sorular · ${ders} · ${q.kazanim === HOCA_KAZANIM_NO ? 'Hoca üslubu' : `K${q.kazanim}`}`].filter(Boolean).join('\n'));
           }}
         />
       )}
@@ -240,7 +271,7 @@ function SoruKarti({
 
   const handleShare = async () => {
     const url = `${window.location.origin}${pathFor('ornek_sorular', q.id)}`;
-    const title = `Örnek Soru · ${ders} · K${q.kazanim}`;
+    const title = `Örnek Soru · ${ders} · ${q.kazanim === HOCA_KAZANIM_NO ? 'Hoca üslubu' : `K${q.kazanim}`}`;
     if (navigator.share && window.matchMedia?.('(pointer: coarse)').matches) {
       try {
         await navigator.share({ title, url });
@@ -270,7 +301,7 @@ function SoruKarti({
   return (
     <article data-auto-reveal className={`qk is-ornek ${buyuk ? 'is-big' : ''}`}>
       <header className="qk-h">
-        <span className="qk-chip" title={`Kazanım ${q.kazanim}`}>K{q.kazanim}</span>
+        <span className="qk-chip" title={q.kazanim === HOCA_KAZANIM_NO ? 'Hocanın üslubunda soru' : `Kazanım ${q.kazanim}`}>{q.kazanim === HOCA_KAZANIM_NO ? 'Hoca' : `K${q.kazanim}`}</span>
         <span className="qk-kunye">{`#${n}`}</span>
         {konu && <span className="qk-ders" title={konu}>{konu}</span>}
         <span className="qk-flags">{(q as any).cikmis_ornek && <span className="cx-flag is-warn" title="Bu soru çıkmış sınav belgelerinde doğrulanamadı. Gerçekten çıkmış olabilir, ancak ders notundan türetilmiş bir örnek soru da olabilir. Hem Çıkmışlar hem Örnek sorular listesinde yer alır."><AlertTriangle aria-hidden />Çıkmış–Örnek · çıkmış olduğu doğrulanmadı</span>}<span className={`cx-flag ${ZORLUK_FLAG[q.zorluk]}`}>{q.zorluk}</span></span>
@@ -548,7 +579,7 @@ function DersGorunumu({ id, initialKazanimNo, initialQuestionId, onBack }: { id:
         if (r.ok && r.data?.kazanimlar) return r.data;
       }
       return load();
-    })().then((data) => {
+    })().then(hocaEkle).then((data) => {
       setDers(data);
       // Derin bağlantı (/ornek-sorular/<soruId>): sorunun kazanımı açılır, soruya kayılır ve vurgulanır.
       // Canlı tazelemede kaydırma tekrarlanmaz
@@ -643,7 +674,7 @@ function DersGorunumu({ id, initialKazanimNo, initialQuestionId, onBack }: { id:
                 <div className="os-gh">
                   <button type="button" className="os-gt" aria-expanded={open} onClick={() => toggleK(k.no)}>
                     <ChevronDown className={`os-chev ${open ? 'is-open' : ''}`} aria-hidden />
-                    <span className="os-gk">K{k.no}</span>
+                    <span className="os-gk">{k.no === HOCA_KAZANIM_NO ? 'Hoca' : `K${k.no}`}</span>
                     <span className="os-gm">
                       <b id={`kzb-${k.no}`}>{k.metin}</b>
                       <span>{qs.length} soru · {kc} çözüldü</span>
@@ -675,10 +706,10 @@ function DersGorunumu({ id, initialKazanimNo, initialQuestionId, onBack }: { id:
         </div>
 
         {panel && (
-          <aside className="os-panel" aria-label={`K${panel.no} · tüm sorular`}>
+          <aside className="os-panel" aria-label={`${panel.no === HOCA_KAZANIM_NO ? 'Hoca üslubu' : `K${panel.no}`} · tüm sorular`}>
             <div className="os-ph">
               <div className="min-w-0 flex-1">
-                <span className="os-eyebrow">{v12 ? `Tüm sorular · K${panel.no}` : `TÜM SORULAR · K${panel.no}`}</span>
+                <span className="os-eyebrow">{(() => { const e = panel.no === HOCA_KAZANIM_NO ? 'Hoca üslubu' : `K${panel.no}`; return v12 ? `Tüm sorular · ${e}` : `TÜM SORULAR · ${e}`; })()}</span>
                 <b>{panel.metin}</b>
                 <span className="os-meta">{panelSorular.length} soru{zorluk ? ` · ${zorluk}` : ''}</span>
               </div>
@@ -699,7 +730,7 @@ function DersGorunumu({ id, initialKazanimNo, initialQuestionId, onBack }: { id:
               })}
             </ol>
             <div className="os-pf">
-              <button type="button" className="os-btn is-primary" onClick={() => setTam({ sorular: panelSorular, baslik: `K${panel.no} · ${panel.metin}` })}>
+              <button type="button" className="os-btn is-primary" onClick={() => setTam({ sorular: panelSorular, baslik: panel.no === HOCA_KAZANIM_NO ? `Hoca üslubu · ${panel.metin}` : `K${panel.no} · ${panel.metin}` })}>
                 {panelSorular.length} soruyla çalış
               </button>
             </div>
@@ -728,7 +759,7 @@ function DersGorunumu({ id, initialKazanimNo, initialQuestionId, onBack }: { id:
             { label: 'Ders', value: aboutQuestion.ders },
             { label: 'Konu', value: aboutQuestion.konu, wide: true },
             { label: 'Soru ID', value: aboutQuestion.q.id, mono: true },
-            { label: 'Kazanım', value: `K${aboutQuestion.q.kazanim}`, mono: true },
+            { label: 'Kazanım', value: aboutQuestion.q.kazanim === HOCA_KAZANIM_NO ? 'Hoca üslubu' : `K${aboutQuestion.q.kazanim}`, mono: true },
             { label: 'Zorluk', value: aboutQuestion.q.zorluk.toUpperCase() },
             { label: 'Doğru Cevap', value: `${aboutQuestion.q.dogru} Şıkkı`, mono: true },
             {

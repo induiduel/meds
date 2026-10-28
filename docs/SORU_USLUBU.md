@@ -19,3 +19,10 @@ Amaç: çıkmış sorulara benzer üslupla yazıp sınavda soru yakalama şansı
 ## Kapı
 `python3 scripts/tam_hat/soru_uslup.py <ornek_sorular.json> --uslup <soru_uslubu.json>` → 0 HATA. HATA alan soru
 yalnız kendisi yeniden yazılır.
+
+## Tıbbi Patoloji dersleri (kullanıcı kararı 2026-10-29, ZORUNLU)
+Patoloji dersinin örnek soruları, vurgu/önem listesi ve "çıkabilecek soru" katmanı yukarıdaki genel kalıba EK olarak hocanın Kurul 1 2026-27 sınavından çıkarılan
+mantığa göre yazılır: **`docs/PATOLOJI_HOCA_SORU_MANTIGI.md` (v2) + `docs/PATOLOJI_SORU_ESLEME_TABLOSU.md`**, işçi `scripts/patoloji_soru_isci/` (TALIMAT.md).
+Özet: her önem noktasına ≥2 soru (farklı dönüşüm: birleştirme / kopya+çevirme / ters yön / ad), çıkmış varsa ters yön zorunlu, çeldirici aynı dersin komşu kavramı,
+sarı dolgu = yapı etiketi (altındaki satır), kalın/`***`/tekrar güçlü sinyal. Kapı: `python3 scripts/patoloji_soru_isci/dogrula.py sorular.json paket.json` → 0 HATA.
+Çıktı: `src/data/hoca_uslubu_sorular/k2/<ders-id>.json`. Yeni patoloji PDF'i eklenince `hazirla.py` + bu akış çalıştırılmadan örnek soru "tamam" sayılmaz.

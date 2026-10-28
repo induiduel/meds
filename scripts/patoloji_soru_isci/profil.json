@@ -1,0 +1,34 @@
+{
+  "kaynak": "docs/PATOLOJI_HOCA_SORU_MANTIGI.md v2 (30 soru, 4 ajan derin analiz)",
+  "hedef": {
+    "bilesik_sik_payi": [
+      0.3,
+      0.5
+    ],
+    "ustunluk_kok_payi": [
+      0.3,
+      0.55
+    ],
+    "olumsuz_kok_payi_max": 0.15,
+    "dogru_en_uzun_payi_max": 0.35,
+    "kok_kelime": [
+      7,
+      18
+    ],
+    "sik_uzunluk_orani_max": 2.0,
+    "cikarim_adimi_payi": [
+      0.1,
+      0.25
+    ]
+  },
+  "kalip": [
+    "dogrudan",
+    "bilesik",
+    "eslesme",
+    "sira",
+    "olumsuz",
+    "ters_ad",
+    "ters_yon",
+    "yanlis_bul"
+  ]
+}

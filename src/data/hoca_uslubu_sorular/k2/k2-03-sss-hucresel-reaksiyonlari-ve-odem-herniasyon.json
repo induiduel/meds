@@ -1,0 +1,899 @@
+{
+ "ders_id": "k2-03",
+ "ders": "k2-03-sss-hucresel-reaksiyonlari-ve-odem-herniasyon",
+ "brans": "Tıbbi Patoloji",
+ "konu": "SSS Hücresel Reaksiyonları ve Ödem / Herniasyon",
+ "ogretim_uyesi": "Prof. Dr. Hikmet Keleş",
+ "tarih": "2026-10-26",
+ "uretim": {
+  "tarih": "2026-10-29",
+  "profil": "docs/PATOLOJI_HOCA_SORU_MANTIGI.md v2",
+  "kapi": "patoloji_soru_isci/dogrula.py 0 HATA 0 UYARI",
+  "denetim": "2 tur bağımsız denetçi; ikinci tur sonrası düzeltilen sorular yeniden bağımsız denetlenmedi (yalnız kapılar)"
+ },
+ "vurgu": [
+  {
+   "id": "o01",
+   "puan": 84,
+   "baslik": "İletişimsel hidrosefali",
+   "sayfa": 37,
+   "alinti": "Temel sorun: BOS emiliminin azalması.",
+   "neden": "açık_işaret+tekrar",
+   "cikmis_var": "yok"
+  },
+  {
+   "id": "o02",
+   "puan": 80,
+   "baslik": "Hidrosefali ex vacuo",
+   "sayfa": 42,
+   "alinti": "BOS artışı primer süreç değildir.",
+   "neden": "kalın etiket altı, tek geçen ayırıcı",
+   "cikmis_var": "yok"
+  },
+  {
+   "id": "o03",
+   "puan": 78,
+   "baslik": "Nöral tüp defektlerinde iki mekanizma ve folat",
+   "sayfa": 55,
+   "alinti": "Primer kemik defekti → sekonder MSS anomalileri",
+   "neden": "etiket altı satır, iki dal",
+   "cikmis_var": "yok"
+  },
+  {
+   "id": "o04",
+   "puan": 76,
+   "baslik": "Transtentorial/subfalsin herniasyon ve Kernohan çentiği",
+   "sayfa": 49,
+   "alinti": "Karşı pedinkül tentoriuma sıkışır → Kernohan çentiği",
+   "neden": "kalın ad, birden fazla slaytta tekrar (48-49)",
+   "cikmis_var": "yok"
+  },
+  {
+   "id": "o05",
+   "puan": 74,
+   "baslik": "İletişim kurmayan hidrosefali",
+   "sayfa": 38,
+   "alinti": "Sadece proksimalindeki ventriküller genişler.",
+   "neden": "kalın etiket altı, kural+nedenler",
+   "cikmis_var": "var: non-komünikan tanım"
+  },
+  {
+   "id": "o06",
+   "puan": 72,
+   "baslik": "Hidrosefalinin yaşa göre sonuçları",
+   "sayfa": 40,
+   "alinti": "BOS artışı kafa çevresinde belirgin büyüme yapar.",
+   "neden": "iki ayrı dal (bebek/erişkin), şekil 21.3",
+   "cikmis_var": "var: hidrosefali doğru ifade"
+  },
+  {
+   "id": "o07",
+   "puan": 70,
+   "baslik": "Akut nöronal hasar: kırmızı nöron",
+   "sayfa": 13,
+   "alinti": "Sitoplazmada yoğun eozinofili → kırmızı nöron",
+   "neden": "kalın ad, şekil 21.1A'da tekrar (12,20,25)",
+   "cikmis_var": "yok"
+  },
+  {
+   "id": "o08",
+   "puan": 68,
+   "baslik": "Akson hasarı ve merkezi kromatoliz",
+   "sayfa": 14,
+   "alinti": "Bu tablo merkezi kromatoliz olarak adlandırılır.",
+   "neden": "kalın ad",
+   "cikmis_var": "yok"
+  },
+  {
+   "id": "o09",
+   "puan": 68,
+   "baslik": "Chiari tip I/II ve Dandy–Walker",
+   "sayfa": 62,
+   "alinti": "Sıklıkla hidrosefali ve lomber miyelomeningosel ile birliktelik.",
+   "neden": "kalın ad, iki kutuplu kıyas, 61-63'te tekrar",
+   "cikmis_var": "yok"
+  },
+  {
+   "id": "o10",
+   "puan": 66,
+   "baslik": "Kronik gliyoz ve Rosenthal lifleri",
+   "sayfa": 21,
+   "alinti": "Kronik gliyoz ve bazı düşük dereceli gliomalarda görülür.",
+   "neden": "kalın ad (18,21), eski çıkmış var",
+   "cikmis_var": "var: Rosenthal→astrosit, gliyoz→astrosit"
+  },
+  {
+   "id": "o11",
+   "puan": 64,
+   "baslik": "Mikroglia aktivasyonu",
+   "sayfa": 24,
+   "alinti": "Hasarlı nöronların fagositozu: nöronofaji.",
+   "neden": "kalın ad, şekil 21.1C'de tekrar, eski çıkmış var",
+   "cikmis_var": "var: SSS fagositik hücre→mikroglia"
+  },
+  {
+   "id": "o12",
+   "puan": 62,
+   "baslik": "Vazojenik ve sitotoksik serebral ödem",
+   "sayfa": 32,
+   "alinti": "Kan-beyin bariyeri bütünlüğünün bozulması sonucu gelişir.",
+   "neden": "iki tip karşıtlığı (32,33), ders başlığı",
+   "cikmis_var": "yok"
+  }
+ ],
+ "sorular": [
+  {
+   "onem_id": "o01",
+   "kalip": "dogrudan",
+   "kok": "İletişimsel hidrosefalide temel sorun en olası olarak hangisidir?",
+   "siklar": [
+    "BOS emiliminin azalması",
+    "Ventriküller arası BOS akışının kesilmesi",
+    "Serebral akuaduktusun tümörle sıkışması",
+    "Beyin hacmi kaybına bağlı BOS artışı",
+    "Monro deliğinin kitleyle tıkanması"
+   ],
+   "cevap": "A",
+   "aciklama": {
+    "A": "İletişimsel hidrosefalide ventriküller arası akış korunur; sıvı, araknoid villuslar yoluyla kana yeterince geçemez. Emilim azaldığı için tüm ventriküler sistem genişler ve bu tipin temel sorunu budur.",
+    "B": "Ventriküller arası akışın kesilmesi, ventrikül sistemi içinde yerleşik bir engel anlamına gelir. Bu durumda yalnızca engelin yukarısındaki ventriküller genişler ve iletişim kurmayan hidrosefali ortaya çıkar; iletişimsel tipte ise akış korunmuştur.",
+    "C": "Akuaduktusu sıkıştıran tümör, kanama veya enfeksiyon BOS yolunda yerel bir engel yapar. Sonuçta yalnız engelin proksimalindeki ventriküller genişler; bu tablo iletişim kurmayan hidrosefaliyi tanımlar, iletişimsel tipin mekanizmasını anlatmaz.",
+    "D": "Beyin hacmi kaybına sekonder BOS artışı hidrosefali ex vacuo adını alır ve enfarkt ya da nörodejeneratif hastalıklarda görülür. BOS burada kaybolan dokunun yerini doldurur; birincil bir akım veya emilim bozukluğu söz konusu olmadığından iletişimsel tipten ayrılır.",
+    "E": "Monro deliğini tıkayan kitle BOS'un lateral ventriküllerden çıkışını engeller ve iletişim kurmayan hidrosefaliye yol açar. Engelin yeri nedeniyle yalnız proksimal ventriküller genişler; iletişimsel hidrosefalide ise sıvı serbestçe dolaşır ve sorun emilimdedir."
+   },
+   "kaynak": {
+    "sayfa": 39,
+    "metin": "Temel sorun: BOS emiliminin azalması."
+   },
+   "celdirici_kaynak": [
+    38,
+    42,
+    36
+   ],
+   "kazanim": "Temel sorun: BOS emiliminin azalması",
+   "cikarim": false,
+   "id": "k2-03-sss-hucresel-reaksiyonlari-ve-odem-herniasyon-h01"
+  },
+  {
+   "onem_id": "o01",
+   "kalip": "bilesik",
+   "kok": "Tüm ventriküllerin genişlediği ve sorunun primer olarak BOS emilimi ya da akımında olduğu hidrosefalide tip ve mekanizma en doğru hangisidir?",
+   "siklar": [
+    "İletişim kurmayan; engel yüzünden yalnız proksimal ventriküller genişlemiş",
+    "İletişimsel; ventriküller arası akış korunmuş, emilim azalmış",
+    "Hidrosefali ex vacuo; beyin hacmi kaybına sekonder BOS artışı",
+    "İletişimsel; Monro deliğini tıkayan kitle akışı kesmiş",
+    "İletişim kurmayan; BOS subaraknoid boşluğa geçememiş"
+   ],
+   "cevap": "B",
+   "aciklama": {
+    "A": "İletişim kurmayan tipte akışı kesen yerel bir engel vardır ve genişleme yalnız engelin yukarısındaki ventriküllerle sınırlı kalır. Soruda tüm sistem genişlediği için bu seçenek açıklayamaz; ayrıca iletişimsel tipte akış korunur.",
+    "B": "Tüm ventriküler sistemin genişlemesi ve ventriküller arası akışın korunması iletişimsel hidrosefaliyi gösterir. Temel sorun BOS emiliminin azalmasıdır ve çoğu olguda etiyoloji belirsizdir.",
+    "C": "Hidrosefali ex vacuo, enfarkt veya nörodejeneratif hastalık sonrası beyin hacmi kaybını BOS'un doldurmasıdır. Birincil süreç BOS değil doku kaybıdır; bu yüzden emilim azalmasına dayanan iletişimsel tipin mekanizmasıyla karışmamalıdır.",
+    "D": "Monro deliğini tıkayan kitle yerel bir engel oluşturur ve iletişim kurmayan tipin klasik nedenidir. İletişimsel tiple birleştirilemez; çünkü iletişimsel hidrosefalide ventriküller arası akış korunmuştur.",
+    "E": "BOS'un ventriküllerden subaraknoid boşluğa serbestçe geçememesi iletişim kurmayan hidrosefalinin tanımıdır. Böyle bir engel yalnız proksimal ventrikülleri genişletir; soruda tüm sistemin genişlemesi ve akışın korunması ise iletişimsel tipe işaret eder."
+   },
+   "kaynak": {
+    "sayfa": 39,
+    "metin": "Ventriküller arası BOS akışı korunmuştur."
+   },
+   "celdirici_kaynak": [
+    38,
+    42,
+    36
+   ],
+   "kazanim": "Ventriküller arası BOS akışı korunmuştur",
+   "cikarim": false,
+   "id": "k2-03-sss-hucresel-reaksiyonlari-ve-odem-herniasyon-h02"
+  },
+  {
+   "onem_id": "o02",
+   "kalip": "ters_ad",
+   "kok": "Enfarkt sonrası beyin hacmi kaybını izleyen BOS artışı için en olası tanı hangisidir?",
+   "siklar": [
+    "İletişimsel hidrosefali",
+    "İletişim kurmayan hidrosefali",
+    "Hidrosefali ex vacuo",
+    "Vazojenik serebral ödem",
+    "Sitotoksik serebral ödem"
+   ],
+   "cevap": "C",
+   "aciklama": {
+    "A": "İletişimsel hidrosefalide tüm ventriküler sistem genişler ve ventriküller arası akış korunur; temel sorun emilim azalmasıdır. Beyin hacmi kaybı bu tipin mekanizması olmadığı için enfarkt sonrası tabloyu açıklamaz.",
+    "B": "İletişim kurmayan hidrosefali, ventrikül içindeki yerel bir engel nedeniyle yalnız proksimal ventriküllerin genişlemesidir. Nedeni Monro deliği veya akuaduktus tıkanıklığıdır; doku kaybına bağlı bir artış bu tanımın dışında kalır.",
+    "C": "Hidrosefali ex vacuo, BOS artışının birincil süreç olmadığı, beyin hacmi kaybına sekonder geliştiği durumdur. Enfarkt ve nörodejeneratif hastalıklarda kaybolan beyin dokusunun yerini BOS doldurur; soruda tarif edilen budur.",
+    "D": "Vazojenik ödem kan-beyin bariyerinin bozulmasıyla damar içindeki sıvının hücre dışı alana geçmesidir ve inflamasyon ya da tümörde görülür. Beyin parankiminde sıvı birikir; BOS hacmi artışı ise ödemin tanımı değildir, bu yüzden soruyla uyuşmaz.",
+    "E": "Sitotoksik ödem, nöron ve glia hasarına bağlı hücre içi sıvı artışıdır ve yaygın hipoksik-iskemik hasar ya da toksin sonrası ortaya çıkar. Sıvı parankimde toplanır; doku kaybını BOS'un doldurması ise farklı bir süreçtir."
+   },
+   "kaynak": {
+    "sayfa": 42,
+    "metin": "Beyin hacmi kaybına sekonder BOS artışıdır."
+   },
+   "celdirici_kaynak": [
+    38,
+    39,
+    31
+   ],
+   "kazanim": "Beyin hacmi kaybına sekonder BOS artışıdır",
+   "cikarim": false,
+   "id": "k2-03-sss-hucresel-reaksiyonlari-ve-odem-herniasyon-h03"
+  },
+  {
+   "onem_id": "o02",
+   "kalip": "dogrudan",
+   "kok": "Hidrosefali ex vacuo için en tipik özellik hangisidir?",
+   "siklar": [
+    "BOS emilimi azalmıştır ve tüm ventriküller serbest iletişim içinde genişlemiştir",
+    "Akuaduktus sıkışması yalnız proksimal ventriküllerin genişlemesine yol açmıştır",
+    "Kafa çevresi sütürler kapanmadan belirgin biçimde büyümüştür",
+    "BOS artışı primer süreç değildir; beyin hacmi kaybına ikincil gelişir",
+    "Kan-beyin bariyeri bozulmuş ve hücre dışı sıvı artmıştır"
+   ],
+   "cevap": "D",
+   "aciklama": {
+    "A": "BOS emilimi azalması ve ventriküller arası akışın korunması iletişimsel hidrosefalinin özellikleridir. Ex vacuo tabloda ise BOS artışı doku kaybının sonucudur ve emilim bozukluğu temel süreç sayılmaz.",
+    "B": "Akuaduktus sıkışması, ventrikül içinde yerel engel yapan iletişim kurmayan hidrosefalinin tipik nedenidir. Genişleme engelin proksimaliyle sınırlıdır; ex vacuo ise bir engel değil doku kaybı tablosudur.",
+    "C": "Sütürler kapanmadan önce BOS artışı kafa çevresinde belirgin büyümeye yol açar; bu bebeklik çağındaki hidrosefalinin sonucudur. Ex vacuo tabloda ise genişlemenin nedeni basınç değil beyin hacmi kaybıdır.",
+    "D": "Bu tabloda hastalığın birincil sorunu BOS değil, enfarkt ya da nörodejeneratif hastalıkla kaybolan beyin dokusudur. BOS yalnızca boşalan alanı doldurur; ex vacuo adı da bu telafiyi anlatır.",
+    "E": "Kan-beyin bariyerinin bozulması vazojenik ödemin mekanizmasıdır ve sıvı damar dışına geçer. Bu süreç beyin parankimini ilgilendirir; BOS artışının doku kaybına ikincil olduğu ex vacuo tabloyu anlatmaz."
+   },
+   "kaynak": {
+    "sayfa": 42,
+    "metin": "BOS artışı primer süreç değildir."
+   },
+   "celdirici_kaynak": [
+    38,
+    40,
+    33
+   ],
+   "kazanim": "BOS artışı primer süreç değildir",
+   "cikarim": false,
+   "id": "k2-03-sss-hucresel-reaksiyonlari-ve-odem-herniasyon-h04"
+  },
+  {
+   "onem_id": "o03",
+   "kalip": "eslesme",
+   "kok": "Aşağıdaki eşleşmelerden hangisi nöral tüp defektlerinin mekanizmasını doğru verir?",
+   "siklar": [
+    "Anensefali; primer kemik defekti, sekonder MSS anomalisi",
+    "Ensefalosel; nöral tüp kapanma kusuru, sekonder iskelet defekti",
+    "Meningosel; nöral tüp kapanma kusuru, sekonder iskelet defekti",
+    "Mikrosefali; primer kemik defekti, sekonder MSS anomalisi",
+    "Ensefalosel; primer kemik defekti, sekonder MSS anomalisi"
+   ],
+   "cevap": "E",
+   "aciklama": {
+    "A": "Anensefali ön uç malformasyonudur; ön beyin ve kafatasının üst kısmı yoktur. Nöral tüp kapanma kusuru birincildir ve iskelet defekti ikincil gelişir, bu yüzden kemik kaynaklı mekanizmayla eşleşmez.",
+    "B": "Ensefalosel için mekanizma yön olarak ters yazılmıştır. Kapanma kusuru birincil, iskelet defekti ikincil olan grupta anensefali ve miyelomeningosel örnek verilir; ensefalosel ise primer kemik defektiyle başlar.",
+    "C": "Meningosel, ensefalosel ve spina bifida ile birlikte primer kemik defekti grubundadır. Nöral tüp kapanma kusuruyla başlayan grup anensefaliyi içerdiği için bu eşleşme mekanizmayı yanlış gösterir.",
+    "D": "Mikrosefali nöral tüp defekti değil, beyin hacminin ve çoğu zaman kafa çevresinin küçük olmasıdır. Kortekse giden nöron sayısındaki azalma ve erken farklılaşma ile ilişkilidir; kemik defektiyle başlayan mekanizma ona uymaz.",
+    "E": "Ensefalosel, kafatası defekti nedeniyle deforme MSS dokusunun dışa uzandığı bir malformasyondur. Kemik defekti birincildir, MSS anomalisi ona ikincil gelişir; ensefalosel, meningosel ve spina bifida bu gruptadır."
+   },
+   "kaynak": {
+    "sayfa": 55,
+    "metin": "Primer kemik defekti → sekonder MSS anomalileri"
+   },
+   "celdirici_kaynak": [
+    56,
+    58,
+    59
+   ],
+   "kazanim": "Primer kemik defekti → sekonder MSS anomalileri",
+   "cikarim": false,
+   "id": "k2-03-sss-hucresel-reaksiyonlari-ve-odem-herniasyon-h05"
+  },
+  {
+   "onem_id": "o03",
+   "kalip": "bilesik",
+   "kok": "Nöral tüp defekti riski ve erken tanı için hangi ikili doğrudur?",
+   "siklar": [
+    "İlk trimester folat eksikliği riski artırır; maternal AFP taraması erken tanı sağlar",
+    "İlk trimester folat eksikliği riski artırır; Zika virüsü serolojisi erken tanı sağlar",
+    "İlk trimester folat desteği riski %70 artırır; AFP taraması erken tanı sağlar",
+    "Folat eksikliği yalnız üçüncü trimesterde riski artırır; AFP taraması erken tanı sağlar",
+    "İlk trimester HIV enfeksiyonu riski artırır; maternal AFP taraması erken tanı sağlar"
+   ],
+   "cevap": "A",
+   "aciklama": {
+    "A": "Folat eksikliği ilk trimesterde nöral tüp defekti riskini artırır; destek verildiğinde risk %70'e kadar azaltılabilir. Maternal serum alfa-fetoprotein taraması da hastalığın erken tanısını sağlar.",
+    "B": "Folat eksikliğinin ilk trimesterde riski artırdığı kısmı doğrudur. Zika virüsü ise doğuştan mikrosefali nedenleri arasında sayılan intrauterin bir enfeksiyondur ve nöral tüp defektlerinin taramasında kullanılmaz; erken tanıyı maternal serum alfa-fetoprotein sağlar.",
+    "C": "Folat desteği riski artırmaz, tersine yaklaşık %70'e varan oranda azaltır. Erken tanıda alfa-fetoprotein taramasının yeri doğrudur; hata folatın etkisinin yönündedir.",
+    "D": "Folat eksikliğinin riski artırdığı dönem ilk trimesterdir; sorun nöral tüpün gebeliğin erken evrelerinde kapanmasıyla ilgilidir. Alfa-fetoprotein taraması doğru yazılmış olsa da dönem yanlıştır.",
+    "E": "HIV, Zika ile birlikte mikrosefaliye yol açan intrauterin enfeksiyonlar arasında anılır. Nöral tüp defekti riskini artıran etken ise ilk trimesterdeki folat eksikliğidir; alfa-fetoprotein taramasının yeri bu şıkta doğru yazılmıştır, hata risk etkenindedir."
+   },
+   "kaynak": {
+    "sayfa": 55,
+    "metin": "İlk trimester folat eksikliği riski artırır."
+   },
+   "celdirici_kaynak": [
+    54,
+    59,
+    56
+   ],
+   "kazanim": "İlk trimester folat eksikliği riski artırır",
+   "cikarim": false,
+   "id": "k2-03-sss-hucresel-reaksiyonlari-ve-odem-herniasyon-h06"
+  },
+  {
+   "onem_id": "o04",
+   "kalip": "ters_ad",
+   "kok": "Karşı pedinkülün tentoriuma sıkışmasıyla ipsilateral hemiparezi yapan bulgunun adı nedir?",
+   "siklar": [
+    "Duret kanamaları",
+    "Kernohan çentiği",
+    "Subfalsin herniasyon",
+    "Tonsiller herniasyon",
+    "Merkezi kromatoliz"
+   ],
+   "cevap": "B",
+   "aciklama": {
+    "A": "Duret kanamaları ilerlemiş transtentorial herniasyonda orta beyin ve ponsta oluşan çoklu kanamalardır. Bir yapı sıkışması değil kanamadır; ipsilateral hemipareziyi açıklayan çentik ise Kernohan çentiğidir.",
+    "B": "Temporal lobun daha fazla yer değiştirmesi orta beyni bastırır ve karşı pedinkül tentoriuma sıkışır; oluşan çentiğe Kernohan çentiği denir. Bu nedenle hemiparezi herniasyon tarafında, yani ipsilateral görülür.",
+    "C": "Subfalsin herniasyonda singulat girus falks serebri kenarının altına itilir ve ön serebral arter sıkışabilir. Sonuçta karşı bacakta güçsüzlük, dominant hemisferde afazi görülür; pedinkül çentiği oluşmaz.",
+    "D": "Tonsiller herniasyonda serebellar tonsiller foramen magnumdan aşağı iner ve medulla oblongata ezilir. Solunum ve kardiyak merkezler tehlikeye girdiği için çoğu kez hızla ölümcüldür; tentoriuma sıkışan pedinkülle ilgisi yoktur.",
+    "E": "Merkezi kromatoliz akson hasarı sonrası nöron gövdesinin büyümesi ve Nissl maddesinin perifere dağılmasıdır. Bir hücre içi morfolojik yanıttır; herniasyon sırasında beyin sapında oluşan pedinkül çentiğiyle karışmamalıdır."
+   },
+   "kaynak": {
+    "sayfa": 49,
+    "metin": "Karşı pedinkül tentoriuma sıkışır → Kernohan çentiği"
+   },
+   "celdirici_kaynak": [
+    48,
+    47,
+    51
+   ],
+   "kazanim": "Karşı pedinkül tentoriuma sıkışır → Kernohan çentiği",
+   "cikarim": false,
+   "id": "k2-03-sss-hucresel-reaksiyonlari-ve-odem-herniasyon-h07"
+  },
+  {
+   "onem_id": "o04",
+   "kalip": "bilesik",
+   "kok": "Subfalsin ve transtentorial herniasyonun tipik etkileri hangi eşleşmede doğrudur?",
+   "siklar": [
+    "Subfalsin: üçüncü kraniyal sinir, pupil dilatasyonu; transtentorial: ön serebral arter, karşı bacak güçsüzlüğü",
+    "Subfalsin: ön serebral arter, karşı bacak güçsüzlüğü; transtentorial: posterior serebral arter, afazi",
+    "Subfalsin: ön serebral arter, karşı bacak güçsüzlüğü; transtentorial: üçüncü kraniyal sinir, pupil dilatasyonu",
+    "Subfalsin: posterior serebral arter, görsel korteks iskemisi; transtentorial: ön serebral arter, afazi",
+    "Subfalsin: ön serebral arter, pupil dilatasyonu; transtentorial: üçüncü kraniyal sinir, karşı bacak güçsüzlüğü"
+   ],
+   "cevap": "C",
+   "aciklama": {
+    "A": "Bu seçenekte iki herniasyonun bulguları yer değiştirmiştir. Pupil dilatasyonu temporal lobun tentoriuma sıkışmasındaki üçüncü sinir basısıdır; karşı bacak güçsüzlüğü ise subfalsin herniasyondaki ön serebral arter sıkışmasının sonucudur.",
+    "B": "Subfalsin kısmı doğrudur, ancak transtentorial herniasyonda posterior serebral arter sıkışması görsel korteks dahil bölgelerde iskemi yapar. Afazi ise dominant hemisferde ön serebral arter sıkışmasının bulgusudur.",
+    "C": "Singulat girus falks kenarının altına itildiğinde ön serebral arter sıkışabilir; karşı bacakta güçsüzlük, dominant hemisferde afazi görülür. Transtentorialde ise üçüncü kraniyal sinir basısı lezyon tarafında pupil dilatasyonu yapar.",
+    "D": "Posterior serebral arter sıkışması transtentorial herniasyonla ilişkilidir ve görsel korteks iskemisi yapar. Ön serebral arter sıkışması ve afazi ise subfalsin herniasyona aittir; seçenekte iki tip yer değiştirmiştir.",
+    "E": "Ön serebral arter sıkışması karşı bacak güçsüzlüğü yapar, pupil dilatasyonu yapmaz. Üçüncü kraniyal sinir basısı ise lezyon tarafında pupil dilatasyonu ve göz hareketi bozukluğu verir; bu şıkta bulgular birbirine karıştırılmıştır."
+   },
+   "kaynak": {
+    "sayfa": 48,
+    "metin": "Lezyon tarafında pupil dilatasyonu"
+   },
+   "celdirici_kaynak": [
+    47,
+    48,
+    49,
+    51
+   ],
+   "kazanim": "Lezyon tarafında pupil dilatasyonu",
+   "cikarim": true,
+   "id": "k2-03-sss-hucresel-reaksiyonlari-ve-odem-herniasyon-h08"
+  },
+  {
+   "onem_id": "o05",
+   "kalip": "dogrudan",
+   "kok": "Ventriküler sistem içinde lokal engel varsa en olası bulgu hangisidir?",
+   "siklar": [
+    "Engelin distalindeki ventriküller genişler, proksimaldekiler daralır",
+    "Tüm ventriküler sistem eşit biçimde genişler",
+    "Ventriküller değişmez, subaraknoid boşluk genişler",
+    "Yalnızca engelin proksimalindeki ventriküller genişler",
+    "BOS emilimi azalır ve ventriküller arası akış korunur"
+   ],
+   "cevap": "D",
+   "aciklama": {
+    "A": "BOS engelin arkasında, yani proksimalinde birikir; distal ventriküllere ise sıvı ulaşmakta zorlanır. Bu yüzden genişleme proksimalde olur ve distal genişleme beklenmez.",
+    "B": "Tüm ventriküler sistemin genişlemesi iletişimsel hidrosefalinin özelliğidir ve ventriküller arası akış korunur. Lokal engel varlığında ise genişleme yalnız engelin proksimalindeki bölümle sınırlıdır.",
+    "C": "Ventrikül içindeki engel BOS'un subaraknoid boşluğa geçişini bozar; subaraknoid boşluğun genişlemesi beklenmez. Birikim ventriküllerde olduğu için ventriküller değişmeden kalmaz.",
+    "D": "BOS ventriküllerden subaraknoid boşluğa serbestçe geçemediği için engelin gerisinde birikir. Bu yüzden yalnız proksimaldeki ventriküller genişler; bu tablo iletişim kurmayan hidrosefalidir.",
+    "E": "BOS emiliminin azalması ve akışın korunması iletişimsel hidrosefalinin tanımıdır. Soruda lokal bir engel bulunduğundan akış korunmaz ve tablo iletişim kurmayan tipe uyar."
+   },
+   "kaynak": {
+    "sayfa": 38,
+    "metin": "Sadece proksimalindeki ventriküller genişler."
+   },
+   "celdirici_kaynak": [
+    39,
+    42,
+    36
+   ],
+   "kazanim": "Sadece proksimalindeki ventriküller genişler",
+   "cikarim": false,
+   "id": "k2-03-sss-hucresel-reaksiyonlari-ve-odem-herniasyon-h09"
+  },
+  {
+   "onem_id": "o05",
+   "kalip": "bilesik",
+   "kok": "İletişim kurmayan hidrosefaliye yol açabilen nedenler hangi seçenekte doğru verilmiştir?",
+   "siklar": [
+    "BOS emiliminin azalması; etiyolojisi çoğu olguda net olmayan durum",
+    "Enfarkt ve nörodejeneratif hastalıkta beyin hacmi kaybı",
+    "Yaygın hipoksik-iskemik hasar ve toksin maruziyeti sonrası hücre içi sıvı artışı",
+    "Folat eksikliğine bağlı nöral tüp kapanma kusuru",
+    "Monro deliğini tıkayan kitle; akuaduktusu sıkıştıran tümör, kanama, enfeksiyon"
+   ],
+   "cevap": "E",
+   "aciklama": {
+    "A": "Emilim azalması ve nedeni net olmayan olgular iletişimsel hidrosefaliyi anlatır. Bu tipte ventriküller arası akış korunur ve ortada bir engel yoktur.",
+    "B": "Enfarkt ve nörodejeneratif hastalıklarda beyin hacmi kaybı hidrosefali ex vacuo nedenidir. BOS artışı doku kaybına sekonderdir; yerel bir akış engeli bulunmaz.",
+    "C": "Yaygın hipoksik-iskemik hasar ve toksin maruziyeti sitotoksik ödemin zeminidir. Ödem hücre içi sıvı artışıdır ve ventrikül içindeki bir engelle ilgisi yoktur.",
+    "D": "Folat eksikliği nöral tüp defekti riskini artırır ve kapanma kusuruyla ilgilidir. Bu bir gelişimsel malformasyon mekanizmasıdır; BOS yolunda engel oluşturan edinsel nedenleri anlatmaz.",
+    "E": "Monro deliğinin kitleyle tıkanması ve akuaduktusun tümör, kanama ya da enfeksiyonla sıkışması ventrikül içinde yerel engel yapar. BOS serbestçe dolaşamaz ve iletişim kurmayan hidrosefali gelişir."
+   },
+   "kaynak": {
+    "sayfa": 38,
+    "metin": "Serebral akuaduktusu sıkıştıran tümör, kanama, enfeksiyon."
+   },
+   "celdirici_kaynak": [
+    39,
+    42,
+    33
+   ],
+   "kazanim": "Serebral akuaduktusu sıkıştıran tümör, kanama, enfeksiyon",
+   "cikarim": false,
+   "id": "k2-03-sss-hucresel-reaksiyonlari-ve-odem-herniasyon-h10"
+  },
+  {
+   "onem_id": "o06",
+   "kalip": "dogrudan",
+   "kok": "Sütürler kapandıktan sonra gelişen hidrosefalide en tipik bulgu birleşimi hangisidir?",
+   "siklar": [
+    "Ventriküller genişler, basınç artar, kafa çevresi değişmez",
+    "Kafa çevresi belirgin büyür, ventrikül ve basınç değişmez",
+    "Ventriküller sıkışır, giruslar düzleşir, kafa çevresi değişmez",
+    "Kafa çevresi belirgin büyür ve intrakraniyal basınç artar",
+    "Ventriküller değişmez, kafa çevresi küçülür, basınç artar"
+   ],
+   "cevap": "A",
+   "aciklama": {
+    "A": "Kafatası sütürleri kapandığında kemik yapı genişleyemez. Bu yüzden ventriküller genişler ve intrakraniyal basınç artar, ancak kafa çevresi değişmez. Ayırıcı nokta, erişkinde kemiğin esnememesidir.",
+    "B": "Kafa çevresinin belirgin büyümesi yalnız sütürler kapanmadan önce, bebeklikte görülür; erişkinde kemik yapı genişlemez. Ayrıca ventrikül genişlemesi ve basınç artışı hidrosefalinin parçasıdır, bu şık ise ikisinin de değişmediğini söyler.",
+    "C": "Ventriküllerin sıkışması ve girusların düzleşmesi yaygın serebral ödemin makroskopik görünümüdür; beyin dokusu şişerek kafa içi boşluğu doldurur. Hidrosefalide ise BOS hacmi arttığı için ventriküller genişler.",
+    "D": "Belirgin kafa çevresi büyümesi sütürler kapanmadan önceki bebeklik çağına aittir. Erişkinde ise basınç artar ve ventriküller genişler, fakat kafa çevresi değişmez.",
+    "E": "Hidrosefalide ventriküller genişler, değişmeden kalmaz. Kafa çevresi de sütürler kapalıyken küçülmez; doğru birleşim ventrikül genişlemesi, basınç artışı ve çevrenin sabit kalmasıdır."
+   },
+   "kaynak": {
+    "sayfa": 40,
+    "metin": "Kafa çevresinde değişiklik olmaz"
+   },
+   "celdirici_kaynak": [
+    37,
+    38,
+    29
+   ],
+   "kazanim": "Kafa çevresinde değişiklik olmaz",
+   "cikarim": false,
+   "id": "k2-03-sss-hucresel-reaksiyonlari-ve-odem-herniasyon-h11"
+  },
+  {
+   "onem_id": "o06",
+   "kalip": "ters_yon",
+   "kok": "Sütürleri henüz kapanmamış bebekte BOS artışı en olası hangi bulguyu verir?",
+   "siklar": [
+    "Kafa çevresi değişmeden intrakraniyal basınç artışı",
+    "Kafa çevresinde belirgin büyüme",
+    "Giruslarda düzleşme ve sulkuslarda daralma",
+    "Ventriküllerde sıkışma ve BOS miktarında azalma",
+    "Tonsillerin foramen magnumdan aşağı sarkması"
+   ],
+   "cevap": "B",
+   "aciklama": {
+    "A": "Kafa çevresinin değişmemesi sütürleri kapanmış erişkinin bulgusudur. Kemik yapı genişleyemez; bu nedenle basınç artışı öne çıkar. Bebekte ise sütürler açık olduğundan çevre büyür.",
+    "B": "Sütürler kapanmadan önce kafatası genişleyebildiği için artan BOS hacmi kafa çevresinin belirgin büyümesine neden olur. Bu, erişkindeki tablodan ayıran temel bulgudur.",
+    "C": "Giruslarda düzleşme ve sulkuslarda daralma yaygın serebral ödemde görülen makroskopik bulgulardır. Ödemli beynin kafatasını doldurmasıyla ilgilidir; BOS artışına bağlı kafa çevresi büyümesini göstermez.",
+    "D": "Ventriküllerde sıkışma yaygın ödemde beliren bir bulgudur. Hidrosefalide ise ventriküler sistemde BOS hacmi artar; bu yüzden ventrikül sıkışması bebekteki BOS artışının sonucu olamaz.",
+    "E": "Tonsillerin foramen magnumdan aşağı yer değiştirmesi tonsiller herniasyondur ve artmış basıncın komplikasyonudur. Bebekte BOS artışının ilk sonucu olarak sütürlerin ayrılmasıyla kafa çevresi büyür."
+   },
+   "kaynak": {
+    "sayfa": 40,
+    "metin": "BOS artışı kafa çevresinde belirgin büyüme yapar."
+   },
+   "celdirici_kaynak": [
+    37,
+    29,
+    35
+   ],
+   "kazanim": "BOS artışı kafa çevresinde belirgin büyüme yapar",
+   "cikarim": true,
+   "id": "k2-03-sss-hucresel-reaksiyonlari-ve-odem-herniasyon-h12"
+  },
+  {
+   "onem_id": "o07",
+   "kalip": "bilesik",
+   "kok": "Hasar türü ile nöron gövdesindeki yanıtın eşleşmesi hangi seçenekte doğrudur?",
+   "siklar": [
+    "Akut hipoksik-iskemik hasar: gövde büyür, Nissl dağılır; akson hasarı: gövde küçülür, piknoz",
+    "Akut hipoksik-iskemik hasar: gövde küçülür, eozinofili; akson hasarı: çekirdek piknotik olur",
+    "Akut hipoksik-iskemik hasar: gövde küçülür, eozinofili; akson hasarı: gövde büyür, çekirdek perifere kayar",
+    "Akut hipoksik-iskemik hasar: veziküler çekirdek; akson hasarı: küçülmüş eozinofilik gövde",
+    "Akut hipoksik-iskemik hasar: çekirdek perifere kayar; akson hasarı: yoğun eozinofili"
+   ],
+   "cevap": "C",
+   "aciklama": {
+    "A": "Gövdenin büyümesi ve Nissl maddesinin dağılması akson hasarına özgüdür; küçülme ve piknoz ise akut hipoksik-iskemik hasarın bulgusudur. Bu şıkta iki hasarın bulguları yer değiştirmiştir.",
+    "B": "Akut hasar için verilen küçülme ve eozinofili doğrudur. Çekirdek piknozu ise akson hasarında değil akut hasarda görülür; akson hasarında çekirdek büyür ve perifere kayar.",
+    "C": "Akut hipoksik-iskemik hasarda gövde küçülür ve sitoplazma yoğun eozinofilik görünür; bu hücre kırmızı nöron adını alır. Akson hasarında gövde büyür ve yuvarlaklaşır, çekirdek perifere yer değiştirir; tablo merkezi kromatolizdir.",
+    "D": "Büyümüş veziküler çekirdek ve belirgin çekirdekçik, hasar sonrası büyüyen reaktif gemistositik astrositin özelliğidir. Küçülmüş eozinofilik gövde ise akson hasarında değil akut hasarda bulunur; bu yüzden eşleşme bozulmuştur.",
+    "E": "Çekirdeğin perifere kayması akson hasarının, yoğun eozinofili ise akut hipoksik-iskemik hasarın bulgusudur. Bu şıkta her bulgu karşı hasara atanmıştır."
+   },
+   "kaynak": {
+    "sayfa": 13,
+    "metin": "Sitoplazmada yoğun eozinofili → kırmızı nöron"
+   },
+   "celdirici_kaynak": [
+    11,
+    13,
+    14,
+    19
+   ],
+   "kazanim": "Hasar türüne göre nöron gövdesi yanıtı: kırmızı nöron ve merkezi kromatoliz",
+   "cikarim": false,
+   "id": "k2-03-sss-hucresel-reaksiyonlari-ve-odem-herniasyon-h13"
+  },
+  {
+   "onem_id": "o07",
+   "kalip": "ters_ad",
+   "kok": "Hücre gövdesi küçülmüş, çekirdeği piknotik, sitoplazması yoğun eozinofilik nöronların adı nedir?",
+   "siklar": [
+    "Gemistositik astrosit",
+    "Rosenthal lifi",
+    "Çubuk hücre",
+    "Kırmızı nöron",
+    "Distrofik nörit"
+   ],
+   "cevap": "D",
+   "aciklama": {
+    "A": "Gemistositik astrosit, hasar sonrası büyüyen, veziküler çekirdekli ve geniş pembe sitoplazmalı reaktif astrosittir. Bir glia yanıtıdır ve nöron gövdesindeki küçülmeyi anlatmaz.",
+    "B": "Rosenthal lifleri astrosit süreçlerindeki kalın, parlak eozinofilik protein agregatlarıdır. Kronik gliyozda ve bazı düşük dereceli gliomalarda görülür; nöronun kendisinin değil astrositin yapısıdır.",
+    "C": "Çubuk hücre, enfeksiyonlarda çekirdeği uzayan aktive mikrogliadır. Mikroglia yanıtına verilen bir addır; hasarlı nörona değil, gövdesi küçülmüş nöronla ilgisiz bir hücreye aittir.",
+    "D": "Hipoksik-iskemik hasardan yaklaşık on iki saat sonra H&E ile tanınan, küçülmüş, eozinofilik ve piknotik çekirdekli nöronlara kırmızı nöron denir. Geri dönüşümsüz nöronal hasarın göstergesidir.",
+    "E": "Distrofik nöritler, bazı dejeneratif hastalıklarda nöronal uzantıların kalın ve kıvrımlı hale gelmesidir. Hücre gövdesindeki değil, yalnız uzantılardaki değişimi anlatan bir bulgudur."
+   },
+   "kaynak": {
+    "sayfa": 13,
+    "metin": "Sitoplazmada yoğun eozinofili → kırmızı nöron"
+   },
+   "celdirici_kaynak": [
+    11,
+    19,
+    17
+   ],
+   "kazanim": "Sitoplazmada yoğun eozinofili → kırmızı nöron",
+   "cikarim": false,
+   "id": "k2-03-sss-hucresel-reaksiyonlari-ve-odem-herniasyon-h14"
+  },
+  {
+   "onem_id": "o08",
+   "kalip": "ters_yon",
+   "kok": "Nöron gövdesi büyüyüp yuvarlaklaşmış, çekirdek ve Nissl maddesi çevreye kaymışsa hangi hasar düşünülür?",
+   "siklar": [
+    "Akut hipoksik-iskemik hasar",
+    "Viral mikroglia aktivasyonu",
+    "Kronik astrosit yanıtı",
+    "Dejeneratif inklüzyon birikimi",
+    "Akson hasarı sonrası yanıt"
+   ],
+   "cevap": "E",
+   "aciklama": {
+    "A": "Akut hipoksik-iskemik hasar, 12 saat sonra H&E ile görülen küçülmüş, eozinofilik ve piknotik nöronlara yol açar. Gövde büyümez; bu görünüm sorudaki tablonun tersidir.",
+    "B": "Mikroglia aktivasyonunda hücreler çoğalır, makrofaj benzeri görünür ve enfeksiyonda çekirdekleri uzar. Değişen hücre nöron değil mikrogliadır; bu nedenle nöron gövdesi büyümez.",
+    "C": "Kronik astrosit yanıtı gliyozdur; astrositler onarım ve yara izi oluşturur. Bu yanıt glia hücrelerinin değişimidir ve nöron gövdesinin morfolojisini değiştirmez.",
+    "D": "Alzheimer'da amiloid plakları, Parkinson'da Lewy cisimcikleri gibi anormal protein birikimleri ve hücre içi inklüzyonlar görülür. Bu yanıtlar nöron gövdesinin büyümesine ya da çekirdeğin çevreye kaymasına neden olmaz.",
+    "E": "Akson hasarından sonra nöron gövdesi büyür ve yuvarlaklaşır, çekirdek ve çekirdekçik büyür, çekirdek perifere kayar, Nissl maddesi çevreye dağılır. Bu görünüme merkezi kromatoliz denir."
+   },
+   "kaynak": {
+    "sayfa": 14,
+    "metin": "Bu tablo merkezi kromatoliz olarak adlandırılır."
+   },
+   "celdirici_kaynak": [
+    13,
+    16,
+    18,
+    24
+   ],
+   "kazanim": "Bu tablo merkezi kromatoliz olarak adlandırılır",
+   "cikarim": false,
+   "id": "k2-03-sss-hucresel-reaksiyonlari-ve-odem-herniasyon-h15"
+  },
+  {
+   "onem_id": "o08",
+   "kalip": "bilesik",
+   "kok": "Akson hasarını izleyen nöron gövdesi değişikliklerinin en tipik birleşimi hangisidir?",
+   "siklar": [
+    "Gövde büyür, çekirdek perifere kayar, çekirdekçik büyür, Nissl maddesi perifere dağılır",
+    "Gövde küçülür, çekirdek piknotik olur, çekirdekçik kaybolur, Nissl boyanması silinir",
+    "Gövde büyür, çekirdek ortada kalır, çekirdekçik küçülür, Nissl maddesi merkezde toplanır",
+    "Gövde küçülür, çekirdek perifere kayar, çekirdekçik büyür, Nissl maddesi perifere dağılır",
+    "Gövde yuvarlaklaşır, çekirdek piknotik olur, çekirdekçik büyür, Nissl boyanması silinir"
+   ],
+   "cevap": "A",
+   "aciklama": {
+    "A": "Akson hasarında gövde büyür ve yuvarlaklaşır, çekirdek perifere yer değiştirir, çekirdekçik büyür ve Nissl maddesi perifere dağılır. Bu bütün tablo merkezi kromatolizdir.",
+    "B": "Gövdenin küçülmesi, piknotik çekirdek, çekirdekçik kaybı ve Nissl boyanma kaybı akut hipoksik-iskemik hasarda görülen kırmızı nöron özellikleridir. Akson hasarındaki değişim bunun tersidir.",
+    "C": "Çekirdeğin ortada kalması ve Nissl maddesinin merkezde toplanması yanlıştır. Akson hasarında çekirdek perifere kayar, Nissl maddesi de perifere dağılır. Bu seçenek çekirdeğin yönünü ve Nissl maddesinin dağılımını tersine çevirmiştir.",
+    "D": "Gövde küçülmesi akut hasara özgüdür; akson hasarında gövde büyür. Çekirdeğin perifere kayması ve Nissl dağılımı doğru olsa da gövde değişimi yönü yanlıştır.",
+    "E": "Piknotik çekirdek ve Nissl boyanmasının silinmesi, akut hipoksik-iskemik hasarın kırmızı nöron bulgularıdır. Gövdenin yuvarlaklaşması ve çekirdekçik büyümesi akson hasarıyla uyumludur; ancak akut hasara ait iki bulgu eklenince birleşim akson hasarını tarif etmez."
+   },
+   "kaynak": {
+    "sayfa": 14,
+    "metin": "Nissl maddesi perifere dağılır"
+   },
+   "celdirici_kaynak": [
+    13,
+    17,
+    24
+   ],
+   "kazanim": "Nissl maddesi perifere dağılır",
+   "cikarim": false,
+   "id": "k2-03-sss-hucresel-reaksiyonlari-ve-odem-herniasyon-h16"
+  },
+  {
+   "onem_id": "o09",
+   "kalip": "eslesme",
+   "kok": "Chiari tip I ve tip II malformasyonları için hangi eşleşme doğrudur?",
+   "siklar": [
+    "Tip I: lomber miyelomeningosel ve hidrosefali birlikteliği; tip II: erişkinde baş ağrısı",
+    "Tip II: lomber miyelomeningosel ve hidrosefali birlikteliği; tip I: erişkinde baş ağrısı",
+    "Tip II: serebellar tonsillerin foramen magnumdan sarkması; tip I: lomber miyelomeningosel",
+    "Tip II: genişlemiş posterior fossa, vermis yokluğu; tip I: büyük orta hat kisti",
+    "Tip I: küçük posterior fossa, şekilsiz serebellum; tip II: hafif form, cerrahi dekompresyonla gerileme"
+   ],
+   "cevap": "B",
+   "aciklama": {
+    "A": "Hidrosefali ve lomber miyelomeningosel birlikteliği tip II'ye aittir. Tip I tonsillerin sarktığı daha hafif formdur; bu eşleşmede iki tip yer değiştirmiştir.",
+    "B": "Arnold–Chiari tip II'de küçük posterior fossa, şekilsiz serebellum ve vermisin foramen magnumdan sarkması bulunur; sıklıkla hidrosefali ve lomber miyelomeningosel eşlik eder. Tip I ise hafif formdur ve çoğu kez erişkinde baş ağrısı verir.",
+    "C": "Tip II'de aşağı sarkan yapı vermistir; serebellar tonsillerin sarkması tip I'e özgüdür. Lomber miyelomeningosel birlikteliği de tip II ile ilişkilidir, bu yüzden eşleşme ters yazılmıştır.",
+    "D": "Genişlemiş posterior fossa, vermis yokluğu ve büyük orta hat kisti Dandy–Walker malformasyonunun özellikleridir. Chiari tip II'de ise posterior fossa küçüktür ve vermis aşağı sarkar. Bu birleşim iki ayrı malformasyonun bulgularını bir araya getirir.",
+    "E": "Küçük posterior fossa ve şekilsiz serebellum tip II'nin özelliğidir; tip I ise hafif formdur ve çoğu kez erişkinde baş ağrısı verir. Cerrahi dekompresyon semptomları azaltabilir, fakat bu birleşim iki tipin özelliklerini yer değiştirerek eşleştirmiştir."
+   },
+   "kaynak": {
+    "sayfa": 62,
+    "metin": "Sıklıkla hidrosefali ve lomber miyelomeningosel ile birliktelik."
+   },
+   "celdirici_kaynak": [
+    61,
+    63,
+    56
+   ],
+   "kazanim": "Sıklıkla hidrosefali ve lomber miyelomeningosel ile birliktelik",
+   "cikarim": false,
+   "id": "k2-03-sss-hucresel-reaksiyonlari-ve-odem-herniasyon-h17"
+  },
+  {
+   "onem_id": "o09",
+   "kalip": "ters_ad",
+   "kok": "Genişlemiş posterior fossa, vermis yokluğu ve orta hat kisti hangi malformasyonu gösterir?",
+   "siklar": [
+    "Arnold–Chiari malformasyonu",
+    "Chiari tip I malformasyonu",
+    "Dandy–Walker malformasyonu",
+    "Holoprosensefali malformasyonu",
+    "Lissensefali (kuş beyinli)"
+   ],
+   "cevap": "C",
+   "aciklama": {
+    "A": "Chiari tip II'de posterior fossa küçüktür ve orta hat serebellum şekilsizdir. Vermis foramen magnumdan sarkar; genişlemiş fossa ve kist bu tabloda bulunmaz.",
+    "B": "Chiari tip I daha hafif formdur ve serebellar tonsillerin foramen magnumdan sarkmasıyla BOS akımını kısmen tıkar. Vermis yokluğu ya da kist bu malformasyonun bulgusu sayılmaz.",
+    "C": "Dandy–Walker malformasyonunda posterior fossa genişlemiş, serebellar vermis yok ve orta hatta büyük bir kist vardır. Sıklıkla hidrosefali ve gelişim geriliği eşlik eder.",
+    "D": "Holoprosensefali, orta hat desen bozukluğu ile giden bir ön beyin malformasyonudur; ağır formda hemisfer ve lob ayrımı gerçekleşmez, yüzde siklopi gibi orta hat kusurları oluşur. Hedgehog sinyal yolundaki işlev kaybı mutasyonlarıyla ilişkilidir. Genişlemiş posterior fossa ve orta hat kisti ise Dandy–Walker tablosunu ayırt eder.",
+    "E": "Lissensefali gyrusların tam kaybıdır ve kortikal bir anomalidir. Posterior fossada kistle birlikte vermis yokluğunu anlatmaz. Soruda tarif edilen posterior fossa değişiklikleri ise Dandy–Walker malformasyonuna özgüdür."
+   },
+   "kaynak": {
+    "sayfa": 63,
+    "metin": "Orta hatta büyük bir kist varlığı"
+   },
+   "celdirici_kaynak": [
+    61,
+    62,
+    60
+   ],
+   "kazanim": "Orta hatta büyük bir kist varlığı",
+   "cikarim": false,
+   "id": "k2-03-sss-hucresel-reaksiyonlari-ve-odem-herniasyon-h18"
+  },
+  {
+   "onem_id": "o10",
+   "kalip": "ters_yon",
+   "kok": "Astrosit süreçlerinde kronik gliyozda izlenen en tipik protein agregatı hangisidir?",
+   "siklar": [
+    "Lewy cisimcikleri",
+    "Amiloid plakları",
+    "Mikroglia nodülleri",
+    "Rosenthal lifleri",
+    "Distrofik nöritler"
+   ],
+   "cevap": "D",
+   "aciklama": {
+    "A": "Lewy cisimcikleri Parkinson hastalığında nöron içinde oluşan inklüzyonlardır. Nörodejeneratif sürecin göstergesidir ve anormal protein birikimini yansıtır; astrosit süreçlerinde değil nöron gövdesinde yerleşir.",
+    "B": "Amiloid plakları Alzheimer hastalığında hücre dışında biriken anormal proteinlerdir. Nörodejeneratif tabloyu gösterir; astrosit süreçlerindeki kalın agregat ise başka bir yapıdır.",
+    "C": "Mikroglia nodülleri, hasar alanında biriken mikroglia kümeleridir ve viral enfeksiyonlarda sık görülür. Astrosit yanıtını değil mikroglia yanıtını yansıtan bir küme yapısıdır.",
+    "D": "Rosenthal lifleri astrosit süreçlerinde görülen kalın, parlak eozinofilik protein agregatlarıdır. Kronik gliyozda ve bazı düşük dereceli gliomalarda bulunur. Bu agregatlar kronik astrosit yanıtının tipik göstergesidir.",
+    "E": "Distrofik nöritler, bazı dejeneratif hastalıklarda nöronal uzantıların kalın ve kıvrımlı hale gelmesidir. Nöron uzantısındaki bu değişim astrosit süreçlerinin agregatı sayılmaz."
+   },
+   "kaynak": {
+    "sayfa": 21,
+    "metin": "Kronik gliyoz ve bazı düşük dereceli gliomalarda görülür."
+   },
+   "celdirici_kaynak": [
+    16,
+    18,
+    17
+   ],
+   "kazanim": "Kronik gliyoz ve bazı düşük dereceli gliomalarda görülür",
+   "cikarim": false,
+   "id": "k2-03-sss-hucresel-reaksiyonlari-ve-odem-herniasyon-h19"
+  },
+  {
+   "onem_id": "o10",
+   "kalip": "bilesik",
+   "kok": "Kronik gliyozdaki reaktif astrosit değişikliklerinin en tipik birleşimi hangisidir?",
+   "siklar": [
+    "Sitoplazma geniş ve parlak pembedir, çekirdek veziküler ve büyümüştür",
+    "Gövde büyür, çekirdek perifere kayar, Nissl maddesi dağılır",
+    "Fibroblastlar yoğun skar yapar ve astrositler kaybolur",
+    "Mikroglia çoğalır ve çubuk hücreler ile nodüller oluşur",
+    "Sitoplazma küçülür, prosesler iç içe geçer, Rosenthal lifleri oluşabilir"
+   ],
+   "cevap": "E",
+   "aciklama": {
+    "A": "Geniş parlak pembe sitoplazma ve büyümüş veziküler çekirdek gemistositik astrositin akut hasar sonrası özellikleridir. Kronik gliyozda sitoplazma küçülür. Bu görünüm gemistositik astrosite özgüdür ve akut hasarla ilişkilidir.",
+    "B": "Gövdenin büyümesi, çekirdeğin perifere kayması ve Nissl maddesinin dağılması akson hasarındaki nöronda merkezi kromatolizdir. Astrosit değişikliği sayılmaz. Kronik gliyozdaki astrosit ise küçülmüş sitoplazmalı ve iç içe geçmiş prosesli görünür.",
+    "C": "Beyin iyileşmesine fibroblast katkısı sınırlıdır; yalnız delici travma ve abse çevresi gibi alanlar istisnadır. Gliyozun temeli astrosit yanıtıdır, yoğun fibroblast skarı değil.",
+    "D": "Mikroglianın çoğalması, çubuk hücreler ve nodüller mikroglia aktivasyonudur. Astrosit değil mikroglia yanıtını anlatır. Kronik gliyozdaki astrositin küçülen sitoplazması ve iç içe geçen prosesleri ayırt edicidir.",
+    "E": "Uzun süreli gliyozda reaktif astrositin sitoplazması küçülür ve prosesler sıkı iç içe geçer; bunlar fibriler astrositlerdir. Rosenthal lifleri de bu zeminde görülebilir."
+   },
+   "kaynak": {
+    "sayfa": 21,
+    "metin": "Prosesler sıkı iç içe geçer"
+   },
+   "celdirici_kaynak": [
+    19,
+    18,
+    22
+   ],
+   "kazanim": "Prosesler sıkı iç içe geçer",
+   "cikarim": false,
+   "id": "k2-03-sss-hucresel-reaksiyonlari-ve-odem-herniasyon-h20"
+  },
+  {
+   "onem_id": "o11",
+   "kalip": "ters_yon",
+   "kok": "Mikroglia için aşağıdaki tanımlardan en doğru olanı hangisidir?",
+   "siklar": [
+    "Embriyonik sarı keseden köken alan, MSS'nin yerleşik fagositleridir",
+    "Miyelin üreten, JC virüsünde intranükleer inklüzyon gösterebilen hücredir",
+    "Ventrikülleri döşeyen, CMV'de yaygın hasar gösterebilen hücredir",
+    "Onarım ve yara izinden sorumlu, gliyoz yapan hücredir",
+    "BOS üretiminden sorumlu, ependimle devamlı yapıdır"
+   ],
+   "cevap": "A",
+   "aciklama": {
+    "A": "Mikroglia embriyonik sarı keseden köken alır ve MSS'nin yerleşik fagositidir. Hasar, enfeksiyon ya da travmada çoğalır ve makrofaj benzeri görünüm kazanır; hasarlı nöronları fagosite ederek temizler.",
+    "B": "Oligodendrosit MSS'de miyelin üretir ve JC virüsünün yol açtığı ilerleyici multifokal lökoensefalopatide intranükleer inklüzyon gösterebilir. Görevi miyelin sentezidir, fagositoz değil.",
+    "C": "Ependim ventrikülleri ve omuriliğin santral kanalını döşer; CMV'de yaygın ependimal hasar ve tipik viral inklüzyonlar görülebilir. Köken ve görev bakımından bir döşeyici epiteldir, fagosit sayılmaz.",
+    "D": "Astrositler beyinde onarım ve yara izi oluşumundan sorumludur ve bu yanıta gliyoz denir. Görevleri doku onarımıdır; hasarlı dokuyu temizleyen fagosit görevi mikrogliaya aittir.",
+    "E": "Koroid pleksus ependim ile devamlıdır ve BOS üretiminden sorumludur. Glia hücresi değil bir yapıdır; fagositoz görevi üstlenmez, yalnızca sıvı salgılar."
+   },
+   "kaynak": {
+    "sayfa": 23,
+    "metin": "Embriyonik sarı keseden köken alır."
+   },
+   "celdirici_kaynak": [
+    21,
+    26,
+    18
+   ],
+   "kazanim": "Embriyonik sarı keseden köken alır",
+   "cikarim": false,
+   "id": "k2-03-sss-hucresel-reaksiyonlari-ve-odem-herniasyon-h21"
+  },
+  {
+   "onem_id": "o11",
+   "kalip": "eslesme",
+   "kok": "Mikroglia aktivasyonuna ait adlandırmalardan hangisi doğru eşleşmiştir?",
+   "siklar": [
+    "Mikroglia kümesi: Duret kanaması; hasarlı nöron fagositozu: nöronofaji",
+    "Çekirdek uzaması: çubuk hücre; hasarlı nöron fagositozu: nöronofaji",
+    "Çekirdek uzaması: çubuk hücre; hasarlı nöron fagositozu: merkezi kromatoliz",
+    "Çekirdek uzaması: gemistositik astrosit; mikroglia kümesi: mikroglia nodülü",
+    "Mikroglia kümesi: Rosenthal lifi; hasarlı nöron fagositozu: kırmızı nöron"
+   ],
+   "cevap": "B",
+   "aciklama": {
+    "A": "Duret kanamaları, ilerlemiş transtentorial herniasyonda orta beyin ve ponsta görülen kanamalardır; mikroglia kümesiyle ilgisi yoktur. Hasar alanında toplanan mikroglia kümelerine mikroglia nodülü denir. Eşleşmenin ilk yarısı bu nedenle hatalıdır.",
+    "B": "Enfeksiyonda mikroglia çekirdeği uzar ve çubuk hücre görünümü alır. Hasarlı nöronları yutan mikroglia ve makrofajların bu işine nöronofaji denir. İki adlandırma da mikroglia aktivasyonunu doğru tanımlar.",
+    "C": "Merkezi kromatoliz, akson hasarından sonra nöron gövdesinin şişmesi ve Nissl maddesinin çevreye dağılmasıdır. Hücre yutma işini değil, nöron gövdesinde oluşan değişimi tarif eder; hasarlı nöronu fagosite eden mikroglia bu adla anılmaz.",
+    "D": "Gemistositik astrosit, lezyon kenarında büyüyen ve bölünen reaktif astrosittir; mikroglia değildir. Çekirdeği uzayan hücre mikrogliadır. Bu birleşimde mikroglia kümesi için verilen ad doğru olsa da çekirdek uzaması astrosite kaydırılmıştır.",
+    "E": "Rosenthal lifleri astrosit süreçlerinde biriken eozinofilik agregatlardır; mikrogliayla ilgisi yoktur. Kırmızı nöron ise akut hipoksik-iskemik hasara uğramış nöronun kendisidir, yutma yapan hücre değildir. Üç ad da yanlış yere yerleştirilmiştir."
+   },
+   "kaynak": {
+    "sayfa": 24,
+    "metin": "Hasarlı nöronların fagositozu: nöronofaji."
+   },
+   "celdirici_kaynak": [
+    23,
+    19,
+    14
+   ],
+   "kazanim": "Hasarlı nöronların fagositozu: nöronofaji",
+   "cikarim": false,
+   "id": "k2-03-sss-hucresel-reaksiyonlari-ve-odem-herniasyon-h22"
+  },
+  {
+   "onem_id": "o12",
+   "kalip": "ters_ad",
+   "kok": "Kan-beyin bariyeri bütünlüğü bozulup sıvı hücre dışı alana geçerse hangi tablo gelişir?",
+   "siklar": [
+    "Sitotoksik ödem",
+    "İletişimsel hidrosefali",
+    "Vazojenik ödem",
+    "Hidrosefali ex vacuo",
+    "İletişim kurmayan hidrosefali"
+   ],
+   "cevap": "C",
+   "aciklama": {
+    "A": "Sitotoksik ödem nöron ve glia hasarına bağlı hücre içi sıvı artışıdır. Yaygın hipoksik-iskemik hasar ve toksin maruziyeti sonrası görülür; sıvı hücre dışına geçmez.",
+    "B": "İletişimsel hidrosefalide ventriküller arası BOS akışı korunur ve temel sorun emilimin azalmasıdır. Ventrikül içindeki BOS hacmi artar; beyin parankimine sıvı sızması bu tabloda beklenmez.",
+    "C": "Vazojenik ödemde kan-beyin bariyerinin bütünlüğü bozulur ve sıvı damar içinden hücre dışı alana geçer. Lokal ya da yaygın olabilir; inflamasyon ve tümör örnektir.",
+    "D": "Hidrosefali ex vacuo beyin hacmi kaybına ikincil BOS artışıdır; enfarkt ve nörodejeneratif hastalıklarda görülür. BOS kaybolan dokunun yerini doldurur, bariyer yıkımıyla ilgisi yoktur.",
+    "E": "İletişim kurmayan hidrosefalide Monro deliği ya da akuaduktustaki yerel engel yalnız proksimal ventrikülleri genişletir. Sorun BOS dolaşımındadır, kan-beyin bariyerinde değil."
+   },
+   "kaynak": {
+    "sayfa": 32,
+    "metin": "Kan-beyin bariyeri bütünlüğünün bozulması sonucu gelişir."
+   },
+   "celdirici_kaynak": [
+    33,
+    31,
+    38,
+    39,
+    42
+   ],
+   "kazanim": "Kan-beyin bariyeri bütünlüğünün bozulması sonucu gelişir",
+   "cikarim": false,
+   "id": "k2-03-sss-hucresel-reaksiyonlari-ve-odem-herniasyon-h23"
+  },
+  {
+   "onem_id": "o12",
+   "kalip": "bilesik",
+   "kok": "Sitotoksik serebral ödem için en tipik koşul hangi birleşimdir?",
+   "siklar": [
+    "Kan-beyin bariyeri bozulması; inflamasyon ya da tümörde sıvının damar dışına geçmesi",
+    "BOS emiliminin azalması; tüm ventriküllerde genişleme",
+    "Hücre dışı alana sıvı geçişi; bariyer yıkımının lokal ya da yaygın olması",
+    "Nöron ve glia hasarına bağlı hücre içi sıvı artışı; yaygın hipoksik-iskemik hasar sonrası",
+    "Beyin hacmi kaybı; BOS'un boşalan alanı doldurması"
+   ],
+   "cevap": "D",
+   "aciklama": {
+    "A": "Kan-beyin bariyerinin bozulması ve sıvının damar dışına geçmesi vazojenik ödemin özelliğidir. İnflamasyon ve tümör bu tipin örnekleridir; hücre içi birikim söz konusu olmaz.",
+    "B": "BOS emiliminin azalması ve tüm ventriküllerin genişlemesi iletişimsel hidrosefaliyi tanımlar. Sıvı burada beyin dokusunda değil, ventrikül sisteminde birikir; bu yüzden parankimal ödemle karıştırılmamalıdır.",
+    "C": "Sıvının hücre dışı alana geçmesi ve bariyerin yıkılması, vazojenik ödemin mekanizmasıdır ve lokal ya da yaygın olabilir. Sıvı hücreler arasındaki aralığa dolar; nöron ve gliaların içine girmez.",
+    "D": "Nöron ve glia hasarına bağlı hücre içi sıvı artışı, yaygın hipoksik-iskemik hasar ya da toksin maruziyeti sonrasında ortaya çıkar. Sıvı hücrenin dışında değil içinde toplanır; bariyerin sağlam kalması bu tabloyu vazojenik ödemden ayırır.",
+    "E": "Beyin hacmi kaybı ve BOS'un boşalan alanı doldurması hidrosefali ex vacuo olarak anılır. Beyin dokusu azaldığı için BOS yer kaplar; sıvı hücrenin içine girmez ve ödem oluşmaz."
+   },
+   "kaynak": {
+    "sayfa": 33,
+    "metin": "Nöron ve glia hasarına bağlı hücre içi sıvı artışı."
+   },
+   "celdirici_kaynak": [
+    32,
+    31,
+    42
+   ],
+   "kazanim": "Nöron ve glia hasarına bağlı hücre içi sıvı artışı",
+   "cikarim": true,
+   "id": "k2-03-sss-hucresel-reaksiyonlari-ve-odem-herniasyon-h24"
+  }
+ ]
+}

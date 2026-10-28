@@ -1,0 +1,1026 @@
+{
+ "ders_id": "k2-04",
+ "ders": "k2-04-serebrovaskuler-hastaliklar-ve-inme",
+ "brans": "Tıbbi Patoloji",
+ "konu": "Serebrovasküler Hastalıklar ve İnme",
+ "ogretim_uyesi": "Prof. Dr. Hikmet Keleş",
+ "tarih": "2026-10-26",
+ "uretim": {
+  "tarih": "2026-10-29",
+  "profil": "docs/PATOLOJI_HOCA_SORU_MANTIGI.md v2",
+  "kapi": "patoloji_soru_isci/dogrula.py 0 HATA 0 UYARI",
+  "denetim": "2 tur bağımsız denetçi; ikinci tur sonrası düzeltilen sorular yeniden bağımsız denetlenmedi (yalnız kapılar)"
+ },
+ "vurgu": [
+  {
+   "id": "o01",
+   "puan": 90,
+   "baslik": "***Derin penetran damarların beslediği yapılar",
+   "sayfa": 19,
+   "alinti": "***Derin penetran damarların beslediği yapılar: Talamus, Bazal gangliyonlar, Derin beyaz madde — çok az kollateral akıma sahiptir; iskemiye duyarlıdır",
+   "neden": "***; kollateral akımı az derin yapılar",
+   "cikmis_var": false
+  },
+  {
+   "id": "o02",
+   "puan": 80,
+   "baslik": "Embolik enfarktlar, trombotik enfarktlardan daha sık.",
+   "sayfa": 20,
+   "alinti": "Embolik enfarktlar, trombotik enfarktlardan daha sık.",
+   "neden": "kalın 'embolik enfarktlar'; paradoksal emboli (ad)",
+   "cikmis_var": false
+  },
+  {
+   "id": "o03",
+   "puan": 82,
+   "baslik": "Ön ve orta serebral arter sınır bölgesi",
+   "sayfa": 32,
+   "alinti": "Ön ve orta serebral arter sınır bölgesi: konveksite üzerinde kama şeklinde nekroz bandı oluşur.",
+   "neden": "sarı etiket 'Bu bölgede:' altı; hipotansiyon sonrası",
+   "cikmis_var": false
+  },
+  {
+   "id": "o04",
+   "puan": 92,
+   "baslik": "Travmatik olmayan subaraknoid kanamanın en sık nedeni",
+   "sayfa": 44,
+   "alinti": "Travmatik olmayan subaraknoid kanamanın en sık nedeni: sakküler (berry) anevrizma rüptürü.",
+   "neden": "kalın+kırmızı+sarı birlikte; eski çıkmışta var",
+   "cikmis_var": true
+  },
+  {
+   "id": "o05",
+   "puan": 80,
+   "baslik": "Boynun ötesinde",
+   "sayfa": 49,
+   "alinti": "Boynun ötesinde: kas tabakası ve intimal elastik lamina yoktur.",
+   "neden": "'Boynun ötesinde' etiketi altı; ayrıca açıklama kutusu tekrarı",
+   "cikmis_var": false
+  },
+  {
+   "id": "o06",
+   "puan": 85,
+   "baslik": "Aterosklerotikler çoğunlukla fusiform, baziler arterde.",
+   "sayfa": 51,
+   "alinti": "Aterosklerotikler çoğunlukla fusiform, baziler arterde.",
+   "neden": "fusiform açıklaması; eski çıkmışta var",
+   "cikmis_var": true
+  },
+  {
+   "id": "o07",
+   "puan": 85,
+   "baslik": "Yenidoğanda büyük AVM",
+   "sayfa": 53,
+   "alinti": "Yenidoğanda büyük AVM: arter–ven şantı ile yüksek debili kalp yetmezliği; çoklu AVM kalıtsal hemorajik telanjiektazide.",
+   "neden": "AVM en sık/en tehlikeli; çıkmışta var",
+   "cikmis_var": true
+  },
+  {
+   "id": "o08",
+   "puan": 90,
+   "baslik": "Amiloid tipi Alzheimer hastalığındaki peptitlere benzer; dam",
+   "sayfa": 41,
+   "alinti": "Amiloid tipi Alzheimer hastalığındaki peptitlere benzer; damar duvarları sert ve kırılgan; lobar kanama.",
+   "neden": "3 sayfada tekrar; eski çıkmışta lober hemoraji sorusu",
+   "cikmis_var": true
+  },
+  {
+   "id": "o09",
+   "puan": 88,
+   "baslik": "Epidural",
+   "sayfa": 73,
+   "alinti": "Epidural: a. meningea media, kafa kırığı, açık dönem; subdural: köprü venler.",
+   "neden": "şekil altı yazısı 3 kez + 3 slayt; tablo",
+   "cikmis_var": false
+  },
+  {
+   "id": "o10",
+   "puan": 75,
+   "baslik": "Hipertansif kanama",
+   "sayfa": 37,
+   "alinti": "Hipertansif kanama: bazal gangliyonlar, talamus, pons, serebellum; laküner enfarkt.",
+   "neden": "yerleşim listesi; laküner enfarkt kalın",
+   "cikmis_var": false
+  },
+  {
+   "id": "o11",
+   "puan": 75,
+   "baslik": "Global iskemide en hassas bölgeler",
+   "sayfa": 13,
+   "alinti": "Global iskemide en hassas bölgeler: hipokampus, neokorteks piramidal hücreleri, serebellum Purkinje; 12–24 saatte kırmızı nöronlar.",
+   "neden": "duyarlı nöron listesi + zaman çizelgesi",
+   "cikmis_var": false
+  },
+  {
+   "id": "o12",
+   "puan": 65,
+   "baslik": "Prematürede periventriküler lökomalazi; germinal matriks kan",
+   "sayfa": 85,
+   "alinti": "Prematürede periventriküler lökomalazi; germinal matriks kanaması ventrikül ön boynuzu komşuluğunda.",
+   "neden": "kalın 'periventriküler lökomalazi'",
+   "cikmis_var": false
+  },
+  {
+   "id": "o13",
+   "puan": 70,
+   "baslik": "Hemorajik olmayan enfarkt makroskopisi",
+   "sayfa": 26,
+   "alinti": "Hemorajik olmayan enfarkt makroskopisi: ilk 6 saat yok; 48 saat soluk; 2–10 gün jelatinimsi; 10 gün–3 hafta sıvılaşma.",
+   "neden": "zaman çizelgesi (sıra sorusu)",
+   "cikmis_var": false
+  }
+ ],
+ "sorular": [
+  {
+   "onem_id": "o01",
+   "kalip": "dogrudan",
+   "kok": "Çok az kollateral akıma sahip, iskemiye en duyarlı yapılar hangileridir?",
+   "siklar": [
+    "Kortikal-leptomeningeal anastomozlarla beslenen konveksite korteksi",
+    "Derin penetran damarla beslenen talamus ve bazal gangliyonlar",
+    "Arter bifürkasyonlarına yakın orta serebral arter alanı",
+    "Ön ve orta serebral arter sınır bölgesi",
+    "Prematürede periventriküler lökomalazi gelişen beyaz madde"
+   ],
+   "cevap": "B",
+   "aciklama": {
+    "A": "Konveksite korteksi leptomeningeal damar ağından kan alır ve bu anastomozlar tıkanma sonrası akımı yeniden dağıtarak hasarı sınırlayabilir. Kollateral akımı çok az olan yapılar bu özelliği taşımaz; talamus ve bazal gangliyon bu gruptadır.",
+    "B": "Talamus, bazal gangliyonlar ve derin beyaz madde, derin penetran damarlarla beslenir. Bu damarların birbirine bağlandığı yedek yollar çok azdır, tıkanma olduğunda bölge kanı başka yerden alamaz. Soruda aranan duyarlı yapılar bunlardır.",
+    "C": "Damar çatallanma yerleri emboliler için tipik takılma noktasıdır ve en sık tutulan alan orta serebral arter bölgesidir. Buradaki risk emboli yerleşiminden kaynaklanır. Kollateral akımın azlığıyla açıklanan derin yapıları anlatmaz.",
+    "D": "Sınır bölgesi iki arterin en uzak dağılım sahalarının birleştiği yerdir ve sistemik hipotansiyonda enfarkt gelişir. Risk nedeni penetran damarların az kollateral akımı değil, bölgenin arterlerin en distal sahasında olmasıdır.",
+    "E": "Periventriküler lökomalazi, prematürelerde ventrikül çevresindeki beyaz maddede gelişen iskemik hasardır. Perinatal döneme özgü bir tablodur; erişkindeki derin penetran damar beslenmesiyle ve kollateral azlığıyla açıklanamaz."
+   },
+   "kaynak": {
+    "sayfa": 19,
+    "metin": "Çok az kollateral akıma sahiptir; iskemiye duyarlıdır."
+   },
+   "celdirici_kaynak": [
+    19,
+    21,
+    32,
+    85
+   ],
+   "kazanim": "Derin penetran damarla beslenen yapılar az kollateral akım nedeniyle iskemiye duyarlıdır.",
+   "cikarim": false,
+   "id": "k2-04-serebrovaskuler-hastaliklar-ve-inme-h01"
+  },
+  {
+   "onem_id": "o01",
+   "kalip": "ters_yon",
+   "kok": "Willis poligonu ve kortikal-leptomeningeal anastomozlar iskemik hasarın boyutunu nasıl etkiler?",
+   "siklar": [
+    "Tüm bölgelerde enfarkt gelişimini tamamen önler",
+    "Yalnız derin beyaz madde ve talamusta koruyucu olur",
+    "Bazı bölgelerde hasarı sınırlar",
+    "Talamus ve bazal gangliyonlarda iskemiyi ağırlaştırır",
+    "Embolinin bifürkasyona takılmasını sağlar"
+   ],
+   "cevap": "C",
+   "aciklama": {
+    "A": "Anastomozlar tıkanan damarın alanına komşu damarlardan kan getirebilir; ancak bu yedek yol her bölgede yeterli değildir. Kollateral akım hasarı azaltır, enfarktı tümüyle ortadan kaldırmaz.",
+    "B": "Derin beyaz madde ve talamus derin penetran damarlarla beslenir ve çok az kollateral akıma sahiptir. Koruyucu yedek yollar tam da bu bölgelerde bulunmaz; Willis poligonu ve anastomozlar bu yapıları korumaz.",
+    "C": "Willis poligonu ve kortikal-leptomeningeal anastomozlar damarlar arası yedek bağlantılardır. Bu bağlantılar bazı bölgelerde tıkanan damarın alanına kan taşıyarak hasarı sınırlandırabilir; kollateral akımın klinik etkiyi değiştirmesi böyle açıklanır.",
+    "D": "Derin yapılar penetran damarlarla beslendiği için kollateral akımları azdır ve iskemiye duyarlıdır. Duyarlılığın nedeni yedek yolların yokluğudur; anastomozların kendisi iskemiyi ağırlaştırmaz, aksine korur.",
+    "E": "Emboliler damar çatallanmalarına ve darlık bölgelerine takılır; bu yerleşim damarın anatomisine bağlıdır. Anastomozlar embolinin nereye gideceğini belirlemez, yalnız tıkanıklık sonrası kan akımının yeniden dağılmasına katkı verir."
+   },
+   "kaynak": {
+    "sayfa": 19,
+    "metin": "Bazı bölgelerde hasarı sınırlandırabilir."
+   },
+   "celdirici_kaynak": [
+    19,
+    20,
+    32,
+    21
+   ],
+   "kazanim": "Kortikal-leptomeningeal anastomozlar bazı bölgelerde hasarı sınırlandırır.",
+   "cikarim": false,
+   "id": "k2-04-serebrovaskuler-hastaliklar-ve-inme-h02"
+  },
+  {
+   "onem_id": "o02",
+   "kalip": "bilesik",
+   "kok": "Embolik ve trombotik serebral enfarktlarla ilgili hangi ifade doğrudur?",
+   "siklar": [
+    "Embolik enfarkt daha sıktır; kaynak kalp trombüsü ve karotis-aort plağıdır",
+    "Trombotik enfarkt daha sıktır; aterosklerotik plak üzerinde yerinde gelişir",
+    "Embolik enfarkt daha sıktır; kaynak yalnız venöz tromboz, kalp rol oynamaz",
+    "Trombotik enfarkt daha sıktır; kaynak çoğunlukla venöz trombozdur",
+    "Emboliler düz ve geniş damar segmentlerine yerleşmeye eğilimlidir"
+   ],
+   "cevap": "A",
+   "aciklama": {
+    "A": "Embolik enfarkt, trombotik olandan daha sık görülür. Kalp duvarı trombüsü, karotis ve aort kavsindeki aterom plaklarından kopan parçalar ve açık foramen ovaleden geçen venöz pıhtı başlıca emboli kaynaklarıdır.",
+    "B": "Trombotik tıkanma, aterosklerotik plak üzerinde yerinde gelişen pıhtıyla oluşur; karotis bifürkasyonu ve baziler arter uçları sık yerleşimidir. Sıklık sıralaması bu ifadede ters kurulmuştur.",
+    "C": "Venöz kaynaklı pıhtı, ancak açık foramen ovale varsa sistemik dolaşıma geçip beyne ulaşır (paradoksal emboli). Kalp duvarı trombüsü ise atriyal fibrilasyon, kapak hastalığı ve miyokard disfonksiyonunda oluşan önemli bir kaynaktır; bu yüzden yalnız venöz kaynak denemez.",
+    "D": "Trombotik tıkanmanın kaynağı venöz sistem değildir; damar içindeki aterosklerotik plak üzerinde yerinde pıhtı oluşur. Venöz pıhtı ancak açık foramen ovale yoluyla emboli olarak beyne gidebilir. Bu ifade iki mekanizmayı birbirine karıştırmaktadır.",
+    "E": "Emboliler damar bifürkasyonlarına ve darlık bölgelerine takılma eğilimindedir; en sık iç karotisin devamı olan orta serebral arter alanını tıkarlar. Tipik yerleşim, lümenin daraldığı ya da çatallandığı noktalardır."
+   },
+   "kaynak": {
+    "sayfa": 20,
+    "metin": "Embolik enfarktlar, trombotik enfarktlardan daha sık."
+   },
+   "celdirici_kaynak": [
+    20,
+    22,
+    21,
+    19
+   ],
+   "kazanim": "Embolik enfarktlar trombotik olanlardan daha sıktır; emboli kaynakları kalp ve arteriyel plaklardır.",
+   "cikarim": false,
+   "id": "k2-04-serebrovaskuler-hastaliklar-ve-inme-h03"
+  },
+  {
+   "onem_id": "o02",
+   "kalip": "ters_ad",
+   "kok": "Venöz trombozun açık foramen ovale ile sistemik dolaşıma geçişine ne ad verilir?",
+   "siklar": [
+    "Hemorajik dönüşüm",
+    "Reperfüzyon hasarı",
+    "Paradoksal emboli",
+    "Kalp duvar trombüsü embolisi",
+    "Karotis aterom embolisi"
+   ],
+   "cevap": "C",
+   "aciklama": {
+    "A": "Hemorajik dönüşüm, iskemik dokunun reperfüzyon sonrasında kanamalı enfarkta dönüşmesidir. Pıhtının geçiş yolunu değil, enfarkt sonrası dokuda ortaya çıkan değişimi anlatır; venöz kaynaklı pıhtıyla ilgisi yoktur.",
+    "B": "Reperfüzyon hasarı, tıkanmış damar yeniden açıldığında noktasal kanamalarla ortaya çıkan dokusal zarardır. Pıhtının kaynağıyla ilgili değil, akım dönüşünün sonucunu tanımlayan bir kavramdır.",
+    "C": "Venöz sistemdeki pıhtı açık foramen ovale aracılığıyla sağ kalpten sol kalbe geçer ve beyin arterini tıkayabilir. Normalde venöz pıhtı akciğere gideceğinden bu alışılmadık yol paradoksal emboli olarak adlandırılır.",
+    "D": "Bu ifade miyokard disfonksiyonu, kapak hastalığı ya da atriyal fibrilasyonda kalp içinde oluşan pıhtının kopmasını anlatır. Kaynak kalp duvarıdır; venöz pıhtının foramen ovaleden geçişini tanımlamaz.",
+    "E": "Karotis ve aort kavsindeki aterom plaklarından kopan arteriyel tromboemboliyi anlatır. Kaynak arteriyel sistemdir. Venöz kökenli pıhtının foramen ovaleden geçmesinden farklı bir yoldur."
+   },
+   "kaynak": {
+    "sayfa": 20,
+    "metin": "Venöz trombozun açık foramen ovale ile sistemik dolaşıma geçmesi (paradoksal emboli)."
+   },
+   "celdirici_kaynak": [
+    20,
+    23,
+    24,
+    19
+   ],
+   "kazanim": "Paradoksal emboli venöz trombüsün açık foramen ovale ile sistemik dolaşıma geçmesidir.",
+   "cikarim": false,
+   "id": "k2-04-serebrovaskuler-hastaliklar-ve-inme-h04"
+  },
+  {
+   "onem_id": "o03",
+   "kalip": "dogrudan",
+   "kok": "Sistemik hipotansiyondan sonra yarımkürelerde en riskli alan neresidir?",
+   "siklar": [
+    "Orta ve arka serebral arter sınırındaki talamus",
+    "Ön serebral arterin bacak motor alanının merkezi",
+    "Orta serebral arter başlangıcındaki bifürkasyon bölgesi",
+    "Ön ve orta serebral arter sınır bölgesi",
+    "Bazal gangliyonlardaki derin penetran damar alanı"
+   ],
+   "cevap": "D",
+   "aciklama": {
+    "A": "Talamus derin penetran damarlarla beslenir ve az kollateral akımı nedeniyle iskemiye duyarlıdır. Orta ve arka serebral arter sınırı ise yarımküre su havzası sayılmaz; hipotansiyon hasarı yarımkürelerde başka bir damar çifti arasında toplanır.",
+    "B": "Ön serebral arter tıkanması özellikle bacaklarda motor ve duyu kusuru yapar. Bu doğrudan tıkanma tablosudur. Hipotansiyonla gelişen sınır bölgesi enfarktının yerini göstermez.",
+    "C": "Orta serebral arter başlangıcı trombotik tıkanmanın sık yeridir ve emboliler de buraya yerleşir. Bu proksimal bölge, arterlerin en uzak sahası olan sınır bölgesinden farklıdır.",
+    "D": "Sınır bölgesi komşu iki arterin en uzak dağılım sahalarının buluştuğu yerdir. Sistemik hipotansiyonda akım bu uç sahalara yetersiz ulaştığından ön ve orta serebral arter sınırında enfarkt gelişir.",
+    "E": "Bazal gangliyonlar derin penetran damarlarla beslenir ve laküner enfarkt yeridir. Hipotansiyonla gelişen sınır bölgesi enfarktının yeri bu alan olmadığı için seçenek elenir."
+   },
+   "kaynak": {
+    "sayfa": 32,
+    "metin": "Ön ve orta serebral arter sınır bölgesi."
+   },
+   "celdirici_kaynak": [
+    33,
+    21,
+    22,
+    19
+   ],
+   "kazanim": "Su havzası enfarktı ön ve orta serebral arter sınırında görülür.",
+   "cikarim": false,
+   "id": "k2-04-serebrovaskuler-hastaliklar-ve-inme-h05"
+  },
+  {
+   "onem_id": "o03",
+   "kalip": "bilesik",
+   "kok": "Dominant hemisferde orta serebral arter tıkanmasının en tipik klinik birleşimi hangisidir?",
+   "siklar": [
+    "Bacaklarda motor ve duyu kusuru",
+    "Görme kusurları; motor bulgu yok",
+    "Yalnız duyu kusuru; afazi ve hemipleji yok",
+    "Afazi, hemipleji ve duyu kusuru",
+    "Bacakta hemipleji; görme kusuru"
+   ],
+   "cevap": "D",
+   "aciklama": {
+    "A": "Bacaklarda motor ve duyu kusuru ön serebral arter tıkanmasının tablosudur; bacak alanını bu damar besler. Orta serebral arter bu bölgeyi beslemez.",
+    "B": "Görme kusurları arka serebral arter tıkanmasının bulgusudur; oksipital korteksi bu damar besler. Dominant hemisferde orta serebral arter tıkanması ise konuşma ve hareket bulgularıyla ortaya çıkar.",
+    "C": "Orta serebral arter alanı geniştir; tıkanmada duyu kusuruna motor ve konuşma bozuklukları eşlik eder. Konuşma ve hareket bulgularının hiç görülmediği bir tablo bu damarın tıkanmasını yansıtmaz.",
+    "D": "Dominant hemisferde orta serebral arter tıkanması konuşma merkezini ve motor-duyu yollarını birlikte etkiler. Böylece afazi, hemipleji ve duyu kusuru aynı hastada birlikte görülür.",
+    "E": "Bacak tutulumu ön serebral arter alanına, görme kusuru ise arka serebral arter alanına aittir. İki ayrı damarın bulgusu tek tablo gibi birleştirilmiştir; orta serebral arterin tipik bulguları farklıdır."
+   },
+   "kaynak": {
+    "sayfa": 33,
+    "metin": "Afazi"
+   },
+   "celdirici_kaynak": [
+    33,
+    32,
+    19,
+    20
+   ],
+   "kazanim": "Dominant hemisferde orta serebral arter tıkanması afazi, hemipleji ve duyu kusuru yapar.",
+   "cikarim": false,
+   "id": "k2-04-serebrovaskuler-hastaliklar-ve-inme-h06"
+  },
+  {
+   "onem_id": "o04",
+   "kalip": "ters_yon",
+   "kok": "Sakküler anevrizma rüptürü en sık hangi kanama tipine yol açar?",
+   "siklar": [
+    "Epidural hematom",
+    "Subdural hematom",
+    "Subaraknoid kanama",
+    "Hipertansif bazal gangliyon kanaması",
+    "Prematürede germinal matriks kanaması"
+   ],
+   "cevap": "C",
+   "aciklama": {
+    "A": "Epidural hematom, kafa kırığıyla birlikte orta meningeal arterin yırtılması sonucu dura ile kafatası arasında arter basıncıyla birikir. Travmatik bir kanamadır ve anevrizma rüptürünün tipik sonucu olarak görülmez.",
+    "B": "Subdural hematom, beynin ani hareketiyle köprü venlerin yırtılması sonucu duranın iki tabakası arasında birikir. Çoğunlukla travmaya bağlıdır; kese yırtılmasından doğan kanama ise bundan başka bir kanama tipidir.",
+    "C": "Sakküler anevrizma rüptüründe arter basıncı altındaki kan beyin zarları arasındaki boşluğa fışkırır. Klinik olarak anlamlı, travmatik olmayan bu kanamanın en sık nedeni bu rüptürdür; tipik yakınma hayatın en kötü baş ağrısıdır.",
+    "D": "Hipertansif kanama, derin penetran damarlardaki duvar zayıflığı nedeniyle bazal gangliyon, talamus, pons ve serebellumda parankim içine olur. Kesesi olan bir anevrizmanın yırtılmasıyla değil, kronik hipertansiyonla ilgilidir.",
+    "E": "Germinal matriks kanaması prematür bebeklerde lateral ventrikül ön boynuzu komşuluğunda görülür ve ventriküle yayılarak hidrosefaliye yol açabilir. Erişkindeki anevrizma rüptürü bu prematüre kanamasından başka bir tabloya yol açar."
+   },
+   "kaynak": {
+    "sayfa": 44,
+    "metin": "Travmatik olmayan subaraknoid kanamanın en sık nedeni: Sakküler (berry) anevrizma rüptürü."
+   },
+   "celdirici_kaynak": [
+    36,
+    60,
+    37,
+    84
+   ],
+   "kazanim": "Travma dışı subaraknoid kanamanın en sık nedeni sakküler anevrizma rüptürüdür.",
+   "cikarim": false,
+   "id": "k2-04-serebrovaskuler-hastaliklar-ve-inme-h07"
+  },
+  {
+   "onem_id": "o04",
+   "kalip": "dogrudan",
+   "kok": "Valsalva sırasında şimşek gibi baş ağrısı ve bilinç kaybı gelişen hastada en olası neden hangisidir?",
+   "siklar": [
+    "Kavernöz malformasyon",
+    "Venöz anjiyom",
+    "Kapiller telanjiektazi",
+    "Aterosklerotik fusiform anevrizma",
+    "Sakküler anevrizma rüptürü"
+   ],
+   "cevap": "E",
+   "aciklama": {
+    "A": "Kavernöz malformasyon, ince kolajenli duvarlı geniş damar boşluklarından oluşur ve düşük akımlıdır. En sık serebellum, pons ve subkortikal alanda yerleşir; çevresinde eski kanama ve kalsifikasyon bırakır, ani şiddetli baş ağrısı ve bilinç kaybıyla seyretmez.",
+    "B": "Venöz anjiyom, genişlemiş venöz kanalların toplulukla bulunduğu bir malformasyondur. Genellikle belirti vermez, kanaması nadirdir ve çoğu olgu tesadüfen bulunur; ani şimşek çakması gibi baş ağrısı tablosunu başka bir lezyon açıklar.",
+    "C": "Kapiller telanjiektazi, ince duvarlı genişlemiş kapillerlerin çoğunlukla pons'ta görülen mikroskobik odaklarıdır. Genellikle asemptomatiktir; ani ve ağır baş ağrısına yol açacak büyüklükteki kanamalar başka lezyonlarda görülür.",
+    "D": "Aterosklerotik fusiform anevrizma, damarın iğ biçiminde genişlemesidir ve çoğunlukla baziler arterde bulunur. Daha çok damar tıkanmasına bağlı enfarktla ortaya çıkar; ani kanama bunda daha nadirdir.",
+    "E": "Sakküler anevrizma rüptüründe arter basıncındaki kan boşluğa fışkırır. Olguların yaklaşık üçte birinde Valsalva manevrası ya da orgazm gibi basınç artışı tetikler; hayatın en kötü baş ağrısı ve hızla bilinç kaybı tipiktir."
+   },
+   "kaynak": {
+    "sayfa": 45,
+    "metin": "Hayatımın en kötü baş ağrısı"
+   },
+   "celdirici_kaynak": [
+    53,
+    56,
+    43,
+    51
+   ],
+   "kazanim": "Valsalva ile tetiklenen şimşek çakması baş ağrısı sakküler anevrizma rüptürünü düşündürür.",
+   "cikarim": true,
+   "id": "k2-04-serebrovaskuler-hastaliklar-ve-inme-h08"
+  },
+  {
+   "onem_id": "o05",
+   "kalip": "dogrudan",
+   "kok": "Sakküler anevrizma kesesinin boynu ötesinde hangi yapılar bulunmaz?",
+   "siklar": [
+    "Hiyalinize intima ve adventisya",
+    "Adventisya ve kas tabakası",
+    "İntimal elastik lamina ve adventisya",
+    "Kas tabakası ve intimal elastik lamina",
+    "Hiyalinize intima ve kas tabakası"
+   ],
+   "cevap": "D",
+   "aciklama": {
+    "A": "Kese, kalınlaşmış hiyalinize intima ile kaplıdır ve adventisya ana arter adventisyasıyla devam eder. Bu iki yapı da mevcuttur; eksik olan yapılar kas tabakası ve intimal elastik laminadır.",
+    "B": "Kas tabakası kesede yoktur fakat adventisya ana arterle devamlılık gösterir ve mevcuttur. İki bileşenden yalnız biri doğru olduğundan seçenek eksik yapıları tam olarak vermez.",
+    "C": "İntimal elastik lamina keselerde yoktur fakat adventisya mevcuttur. Bu seçenekte biri doğru, biri yanlış iki bileşen birlikte verilmiştir; bu yüzden tam doğru olamaz.",
+    "D": "Boynun ötesinde kese duvarında düz kas tabakası ve intimal elastik lamina bulunmaz. Duvar kalınlaşmış hiyalinize intimadan ibarettir ve bu zayıflık anevrizmanın yırtılmasına zemin hazırlar.",
+    "E": "Hiyalinize intima kese duvarında bulunan yapıdır, eksik yapılar arasında sayılamaz. Kas tabakası gerçekten yoktur; ancak birleşimin diğer yarısı mevcut bir yapıyı eksik göstermektedir."
+   },
+   "kaynak": {
+    "sayfa": 49,
+    "metin": "Kas tabakası ve intimal elastik lamina yoktur."
+   },
+   "celdirici_kaynak": [
+    49,
+    38,
+    50,
+    19
+   ],
+   "kazanim": "Sakküler anevrizmada boyun ötesinde kas tabakası ve intimal elastik lamina yoktur.",
+   "cikarim": false,
+   "id": "k2-04-serebrovaskuler-hastaliklar-ve-inme-h09"
+  },
+  {
+   "onem_id": "o05",
+   "kalip": "yanlis_bul",
+   "kok": "Sakküler anevrizma rüptürüyle ilgili hangi ifade yanlıştır?",
+   "siklar": [
+    "Rüptür çoğunlukla kesenin boynunda olur",
+    "Kan subaraknoid boşluğa, parankime ya da her ikisine yayılabilir",
+    "Olguların yaklaşık üçte birinde Valsalva veya orgazmla tetiklenir",
+    "İlk kanamada ölüm oranı yüzde 25–50 arasındadır",
+    "Sağ kalanlarda tekrar kanama sıktır ve prognoz her epizotta kötüleşir"
+   ],
+   "cevap": "A",
+   "aciklama": {
+    "A": "Rüptür çoğunlukla kesenin boynunda değil tepesinde olur. Bu ifade yerleşimi yanlış verdiği için sorunun cevabıdır; kese duvarı en ince olduğu uçta yırtılır.",
+    "B": "Rüptürden sonra kan subaraknoid boşluğa, beyin parankimine ya da her ikisine yayılabilir. Bu yayılım kanamanın ulaştığı alanı belirler ve klinik tabloyu ağırlaştırır; ifade doğru aktarılmıştır.",
+    "C": "Olguların yaklaşık üçte birinde rüptür, Valsalva manevrası ya da orgazm gibi kafa içi basıncı ani artıran olaylarla tetiklenir. Basınç artışı ince kese duvarını zorlar; tetikleyiciler doğru sayılmıştır.",
+    "D": "İlk kanamada ölüm oranı yüzde 25 ile 50 arasındadır. Bu sayı sakküler anevrizma rüptürünün ağır seyrini yansıtır; verilen aralık doğrudur.",
+    "E": "Hayatta kalanlarda tekrar kanama sıktır ve her yeni kanama döneminde prognoz daha da kötüleşir. Zayıf kese duvarı iyileşmediği için risk sürer; ifade doğrudur."
+   },
+   "kaynak": {
+    "sayfa": 49,
+    "metin": "Rüptür çoğunlukla kesenin tepesinde olur:"
+   },
+   "celdirici_kaynak": [
+    45,
+    48,
+    49,
+    44
+   ],
+   "kazanim": "Boyun ötesinde kas ve elastik lamina eksiktir.",
+   "cikarim": false,
+   "id": "k2-04-serebrovaskuler-hastaliklar-ve-inme-h10"
+  },
+  {
+   "onem_id": "o06",
+   "kalip": "ters_yon",
+   "kok": "Aterosklerotik intrakraniyal anevrizmanın en tipik şekli ve yerleşimi hangisidir?",
+   "siklar": [
+    "Sakküler; arter bifürkasyonlarına yakın ön dolaşım",
+    "Fusiform; baziler arter",
+    "Sakküler; baziler arter",
+    "Travmatik; ön serebral arter",
+    "Mikotik; ön serebral arter"
+   ],
+   "cevap": "B",
+   "aciklama": {
+    "A": "Sakküler anevrizma, büyük arter bifürkasyonlarına yakın ön dolaşımda gelişen kese biçimli bir genişlemedir. Aterosklerotik anevrizma ise kese biçimli değildir ve yerleşimi de farklıdır.",
+    "B": "Aterosklerotik intrakraniyal anevrizma çoğunlukla fusiform biçimlidir ve baziler arterde yerleşir. Damar boyunca iğ gibi genişler; bu soruda şekil ve yerleşim birlikte karşılanır.",
+    "C": "Sakküler anevrizma damar duvarında kese biçiminde dışa doğru çıkıntı yapar ve en sık ön dolaşımda görülür. Aterosklerozla gelişen genişleme damarı çepeçevre tuttuğu için bu kese biçimine uymaz.",
+    "D": "Travmatik anevrizma, kese oluşturmayan intrakraniyal anevrizma tiplerinden biridir ve ateroskleroz zemininde gelişmez. Etiyolojisi ve sık yerleşimi bu soruda sorulan aterosklerotik tipten farklıdır.",
+    "E": "Mikotik anevrizma enfeksiyona bağlı damar duvarı hasarıyla gelişen, kese oluşturmayan bir tiptir. Nedeni ateroskleroz değildir; bu yüzden aterosklerotik anevrizmanın tipik şekli ve yeri olarak kabul edilemez."
+   },
+   "kaynak": {
+    "sayfa": 51,
+    "metin": "Aterosklerotikler çoğunlukla fusiform, baziler arterde."
+   },
+   "celdirici_kaynak": [
+    46,
+    51,
+    36,
+    48
+   ],
+   "kazanim": "Aterosklerotik anevrizma fusiform ve baziler arterdedir.",
+   "cikarim": false,
+   "id": "k2-04-serebrovaskuler-hastaliklar-ve-inme-h11"
+  },
+  {
+   "onem_id": "o06",
+   "kalip": "bilesik",
+   "kok": "Keseciksiz intrakraniyal anevrizmalar klinik olarak sıklıkla nasıl ortaya çıkar?",
+   "siklar": [
+    "Ani başlayan subaraknoid kanama ile",
+    "Yenidoğanda yüksek debili kalp yetmezliği ile",
+    "Tekrarlayan nöbet ve intraserebral kanama ile",
+    "Vasküler tıkanmaya bağlı serebral enfarkt ile",
+    "Meninks fibrozisi sonucu gelişen hidrosefali ile"
+   ],
+   "cevap": "D",
+   "aciklama": {
+    "A": "Ani başlayan subaraknoid kanama, kesesi olan sakküler anevrizmanın rüptüründe görülen tipik tablodur. Kesesiz anevrizmalarda subaraknoid kanama daha seyrek görülür ve ilk başvuru nedeni olmaz.",
+    "B": "Yenidoğanda yüksek debili kalp yetmezliği, büyük arteriyovenöz malformasyonun arter-ven şantından kaynaklanır. Anevrizma tiplerinin başvuru biçimi bundan başka bir klinik tablodur.",
+    "C": "Tekrarlayan nöbet ve intraserebral kanama, daha çok 10–30 yaşlarında arteriyovenöz malformasyonun başvuru biçimidir. Kesesiz anevrizmaların tipik sunumu bu tablo olmaz.",
+    "D": "Kesesiz anevrizmalar damar lümenini daraltıp tıkayabildiği için sıklıkla serebral enfarkt ile ortaya çıkar. Bu nedenle başvuru biçimi kanamadan çok damar tıkanıklığına bağlıdır.",
+    "E": "Meninks fibrozisi ve buna bağlı hidrosefali, sakküler anevrizma kanamasından sonra beyin omurilik sıvısı akımı bozulduğunda gelişen bir komplikasyondur. Kesesiz anevrizmanın başlangıç bulgusu ise damar tıkanıklığıdır."
+   },
+   "kaynak": {
+    "sayfa": 51,
+    "metin": "Vasküler tıkanıklığa bağlı serebral enfarkt ile ortaya çıkar."
+   },
+   "celdirici_kaynak": [
+    53,
+    44,
+    48,
+    59
+   ],
+   "kazanim": "Keseciksiz anevrizmalar sıklıkla enfarkt ile ortaya çıkar.",
+   "cikarim": true,
+   "id": "k2-04-serebrovaskuler-hastaliklar-ve-inme-h12"
+  },
+  {
+   "onem_id": "o07",
+   "kalip": "ters_yon",
+   "kok": "Yenidoğanda yüksek debili kalp yetmezliği yapabilen beyin damar lezyonu hangisidir?",
+   "siklar": [
+    "Kavernöz malformasyon",
+    "Kapiller telanjiektazi",
+    "Arteriyovenöz malformasyon",
+    "Venöz anjiyom (venöz varis)",
+    "Sakküler (berry) anevrizma"
+   ],
+   "cevap": "C",
+   "aciklama": {
+    "A": "Kavernöz malformasyon, ince duvarlı geniş ve gevşek organize damar boşluklarından oluşan düşük akımlı bir lezyondur. Belirgin arteriyovenöz şant içermez; yenidoğandaki yüksek debili kalp yetmezliği, şant içeren lezyonlara özgü bir sonuçtur.",
+    "B": "Kapiller telanjiektazi, ince duvarlı genişlemiş kapillerlerin çoğunlukla pons'ta görülen mikroskobik odaklarıdır. Genellikle belirtisizdir ve dolaşımı yüklemeyecek kadar küçük bir lezyondur.",
+    "C": "Arteriyovenöz malformasyon en sık görülen beyin damar malformasyonudur ve doğrudan arter-ven bağlantısı içerir. Yenidoğanda büyük bir lezyon bu şant nedeniyle kalbi yüksek debiyle çalıştırarak kalp yetmezliği yapabilir.",
+    "D": "Venöz anjiyom, genişlemiş venöz kanalların toplulukla bulunduğu bir lezyondur. Arter-ven şantı içermez; genellikle belirti vermez ve çoğu olgu tesadüfen saptanır.",
+    "E": "Sakküler anevrizma, arter duvarında kese biçiminde bir genişlemedir ve kanama riski taşır. Malformasyon sayılmaz, arter-ven şantı oluşturmaz; kalp yetmezliği yerine subaraknoid kanamayla ilişkilidir."
+   },
+   "kaynak": {
+    "sayfa": 53,
+    "metin": "Arter–ven şantı ile yüksek debili kalp yetmezliği yapabilir."
+   },
+   "celdirici_kaynak": [
+    52,
+    54,
+    56,
+    49
+   ],
+   "kazanim": "AVM şant nedeniyle yenidoğanda yüksek debili kalp yetmezliği yapabilir.",
+   "cikarim": false,
+   "id": "k2-04-serebrovaskuler-hastaliklar-ve-inme-h13"
+  },
+  {
+   "onem_id": "o07",
+   "kalip": "ters_ad",
+   "kok": "Çoklu AVM'lerin görülebildiği, TGF-β yolunu etkileyen mutasyonlarla ilişkili hastalık hangisidir?",
+   "siklar": [
+    "Otozomal dominant polikistik böbrek hastalığı",
+    "Ehlers–Danlos sendromu",
+    "Serebral amiloid anjiyopati",
+    "Poliarteritis nodosa",
+    "Kalıtsal hemorajik telanjiektazi"
+   ],
+   "cevap": "E",
+   "aciklama": {
+    "A": "Otozomal dominant polikistik böbrek hastalığı, anevrizma riskini artıran kalıtsal bir hastalıktır. Anevrizma gelişimi damar duvarındaki yapısal kusurla ilişkilidir; çoklu AVM tablosu bu hastalıkla değil, TGF-β yolunu etkileyen başka bir kalıtsal hastalıkla bağlantılıdır.",
+    "B": "Ehlers–Danlos sendromu, ekstraselüler matriks proteinlerinin bozukluğudur ve damar duvarını zayıflatır. Bu nedenle anevrizma riski artar; çoklu AVM tablosunun nedeni olarak bilinmez.",
+    "C": "Serebral amiloid anjiyopati, orta ve küçük meningeal ve kortikal damar duvarlarında amiloid birikmesiyle damarı kırılganlaştırır ve lobar kanama yapar. Çoklu AVM ise TGF-β yolunu etkileyen başka bir kalıtsal hastalıkta görülür.",
+    "D": "Poliarteritis nodosa, serebral damarları da tutabilen sistemik bir vaskülittir ve tek ya da çoklu enfarkta yol açar. Damar iltihabı mekanizmasıyla ilerler; TGF-β mutasyonu ve çoklu AVM ile ilgisi yoktur.",
+    "E": "Kalıtsal hemorajik telanjiektazi, TGF-β yolunu etkileyen mutasyonlarla ilişkili bir hastalıktır. Beyinde birden fazla arteriyovenöz malformasyon bulunabilir ve kanamaya yatkınlık yapar."
+   },
+   "kaynak": {
+    "sayfa": 53,
+    "metin": "TGF-β yolunu etkileyen mutasyonlarla ilişkili kalıtsal hemorajik telanjiektazide görülebilir."
+   },
+   "celdirici_kaynak": [
+    48,
+    41,
+    62,
+    53
+   ],
+   "kazanim": "Çoklu AVM kalıtsal hemorajik telanjiektazide görülebilir.",
+   "cikarim": false,
+   "id": "k2-04-serebrovaskuler-hastaliklar-ve-inme-h14"
+  },
+  {
+   "onem_id": "o08",
+   "kalip": "ters_yon",
+   "kok": "Serebral amiloid anjiyopatiye bağlı kanamanın en tipik yerleşimi hangisidir?",
+   "siklar": [
+    "Korteks loblarında lobar kanama",
+    "Bazal gangliyonlar ve talamus",
+    "Pons ve serebellum",
+    "İç kapsül ve derin beyaz madde",
+    "Lateral ventrikül ön boynuzu komşuluğu"
+   ],
+   "cevap": "A",
+   "aciklama": {
+    "A": "Serebral korteks loblarında yerleşen kanama lobar kanama biçimidir; bu hastalıkta damar duvarı kırılgan olduğundan kanama yüzeye yakın kortikal bölgede başlar. Ayrıca sessiz, 1 mm'den küçük kortikal mikrokanamalar da görülür.",
+    "B": "Bazal gangliyonlar ve talamus derin penetran damarlarla beslenir ve damar duvarı hiyalin arteriyoloskleroza uğrayabilir. Bu yapılar, sorulan hastalıkta kanamanın tipik yeri olarak öne çıkmaz.",
+    "C": "Pons ve serebellum arka çukur yapılarıdır ve derin penetran dallarla beslenir. Bu bölgeler, sorulan damar hastalığının kanama dağılımına uymayan, ayrı bir damar grubunun alanıdır.",
+    "D": "İç kapsül ve derin beyaz madde derin penetran damarlarla beslenir; bu damarlarda laküner enfarkt gelişebilir. Sorulan hastalıkta kanamanın merkezi bu bölge olmaz.",
+    "E": "Lateral ventrikül ön boynuzu komşuluğu prematür bebeklerde germinal matriks kanamasının yeridir. Doğum sonrası erken döneme ait bu tablo erişkindeki damar hastalığına bağlanmaz."
+   },
+   "kaynak": {
+    "sayfa": 42,
+    "metin": "En sık lobar kanamalar: Serebral korteks loblarında"
+   },
+   "celdirici_kaynak": [
+    37,
+    58,
+    84,
+    68
+   ],
+   "kazanim": "CAA lobar kanamalara yol açar.",
+   "cikarim": false,
+   "id": "k2-04-serebrovaskuler-hastaliklar-ve-inme-h15"
+  },
+  {
+   "onem_id": "o08",
+   "kalip": "bilesik",
+   "kok": "Lobar kanamalarla seyreden ve kortikal ile meningeal damarları tutan serebral damar hastalığında damar duvarında ne birikir ve sonuç nedir?",
+   "siklar": [
+    "Hiyalin birikimi; duvar kalınlaşıp lümen daralır",
+    "Alzheimer peptidine benzer amiloid; duvar sert, kırılgan",
+    "Fibrinoid birikim; duvar nekrozu ve çevrede peteşi",
+    "Duvarda fibrozis; küçük damarlarda minik anevrizma oluşumu",
+    "Hemosiderinli makrofajlar; girus tepelerinde çökük sarı alan"
+   ],
+   "cevap": "B",
+   "aciklama": {
+    "A": "Hiyalin birikimi, hipertansiyonda derin penetran arteriyol duvarında görülen hiyalin arteriyoloskleroz demektir ve duvarı kalınlaştırıp lümeni daraltır. Sorulan hastalıkta birikim farklı maddedir ve damarlar kırılgan hale gelir.",
+    "B": "Amiloid anjiyopatide damar duvarında biriken madde Alzheimer hastalığındaki peptitlere benzer amiloiddir. Duvar sertleşir ve kırılganlaşır; bu nedenle kanama eğilimi artar.",
+    "C": "Fibrinoid birikim ve peteşiler, malign hipertansiyonda görülen akut hipertansif ensefalopatinin arteriyol bulgularıdır. Sorulan kronik damar hastalığında birikim bu madde değildir ve süreç farklı ilerler.",
+    "D": "Duvarın fibroz kalınlaşması ve küçük damarlarda minik anevrizma oluşumu, kronik hipertansiyonun derin penetran damarlardaki sonucudur. Sorulan hastalıkta birikim bu madde değildir ve damar duvarı bu şekilde değişmez.",
+    "E": "Hemosiderin yüklü makrofajlar ve girus tepelerinde çökük sarı-kahverengi alanlar, eski kontüzyonun ürünüdür. Kronik damar hastalığı değil, travma sonucu oluşan doku hasarının izidir."
+   },
+   "kaynak": {
+    "sayfa": 41,
+    "metin": "Amiloid tipi, Alzheimer hastalığındaki peptitlere benzerdir."
+   },
+   "celdirici_kaynak": [
+    37,
+    57,
+    60,
+    68
+   ],
+   "kazanim": "CAA amiloidi Alzheimer peptitlerine benzerdir ve damarı kırılgan yapar.",
+   "cikarim": false,
+   "id": "k2-04-serebrovaskuler-hastaliklar-ve-inme-h16"
+  },
+  {
+   "onem_id": "o09",
+   "kalip": "eslesme",
+   "kok": "Epidural ve subdural hematomun kanama kaynakları sırasıyla hangisidir?",
+   "siklar": [
+    "Köprü venler; orta meningeal arter",
+    "Orta meningeal arter; kortikal arteriyoller",
+    "Orta meningeal arter; dural sinüsler",
+    "Orta meningeal arter; köprü venler",
+    "Anevrizma kesesi; köprü venler"
+   ],
+   "cevap": "D",
+   "aciklama": {
+    "A": "Epidural kanama arter basıncıyla, subdural kanama ise düşük basınçlı venöz kanla oluşur. Bu şıkta iki kanamanın kaynakları birbirinin yerine konmuş, sıralama ters kurulmuştur.",
+    "B": "Orta meningeal arter epidural hematomun kaynağıdır; ancak kortikal arteriyoller subdural kanamanın kaynağı değildir. Subdural kanama, korteks yüzeyinden dural sinüslere uzanan ince duvarlı venlerden olur.",
+    "C": "Orta meningeal arter, kafa kırığıyla yırtılarak epidural hematom yapar; bu kısım doğrudur. Dural sinüsler ise subdural kanamanın kaynağı değil, köprü venlerin boşaldığı yerlerdir.",
+    "D": "Orta meningeal arter epidural hematomun, köprü venler ise subdural hematomun kaynağıdır. Arter basıncıyla biriken kan duranın kafatasından ayrılmasına, venöz kan ise duranın iki tabakası arasına yayılmasına yol açar.",
+    "E": "Anevrizma kesesi, arter duvarında kese biçiminde bir çıkıntıdır ve yırtıldığında kanı travmadan bağımsız olarak subaraknoid boşluğa fışkırtır. Epidural kanamanın kaynağı bu kese değildir. İlk bileşen yanlış olduğu için eşleme bütünüyle geçerli olmaz."
+   },
+   "kaynak": {
+    "sayfa": 72,
+    "metin": "meninks arterinin travmatik yırtılması sonucu oluşur ve dura ile kafatası arasında arteriyel kan birikmesine yol açar. Subdural hematom, beyin ile superior sagittal sinüs arasındaki köprü damarlarının hasar görmesi sonucu oluşur"
+   },
+   "celdirici_kaynak": [
+    72,
+    73,
+    78,
+    44
+   ],
+   "kazanim": "Epidural hematom: a. meningea media; subdural hematom: köprü venler.",
+   "cikarim": false,
+   "id": "k2-04-serebrovaskuler-hastaliklar-ve-inme-h17"
+  },
+  {
+   "onem_id": "o09",
+   "kalip": "dogrudan",
+   "kok": "Kısa açık dönemden sonra saatler içinde hızla kötüleşen travmalı hastada en olası tanı nedir?",
+   "siklar": [
+    "Epidural hematom",
+    "Subdural hematom",
+    "Travmatik subaraknoid kanama",
+    "Girus tepelerinde kontüzyon",
+    "Geçici beyin fonksiyon bozukluğu (sarsıntı)"
+   ],
+   "cevap": "A",
+   "aciklama": {
+    "A": "Epidural hematom, orta meningeal arterden gelen arter basıncıyla dura ile kafatası arasında hızla büyür. Travma sonrası kısa süre açık dönemin ardından saatler içinde nörolojik bulgular hızla kötüleşir ve acil boşaltım gerekir.",
+    "B": "Subdural hematom, köprü venlerin yırtılmasıyla düşük basınçlı venöz kanın duranın iki tabakası arasında birikmesidir. Genellikle travmadan sonraki ilk 48 saatte baş ağrısı, konfüzyon ve yavaş ilerleyen kötüleşme verir; saatler içinde hızlı çöküş beklenmez.",
+    "C": "Travmatik subaraknoid kanama genellikle kontüzyon ya da laserasyon alanlarında ortaya çıkar. Açık dönemin ardından hızlı kötüleşme, başka bir kanama tipinin klinik örüntüsüdür.",
+    "D": "Girus tepelerinde kontüzyon, beynin kafatası iç yüzeyiyle çarpışması sonucu doku hasarı ve kanama yapar. Doku hasarı travma anında başlar; bunun açık dönemle ayrılan geç kötüleşme biçimi yoktur.",
+    "E": "Sarsıntı, kafa travması sonrası geçici ve geri dönüşlü beyin fonksiyon bozukluğudur. Tam nörolojik iyileşme beklenir; saatler içinde ilerleyen ve hayatı tehdit eden bir kitle etkisi oluşturmaz."
+   },
+   "kaynak": {
+    "sayfa": 75,
+    "metin": "Travma sonrası kısa süre “açık” dönem"
+   },
+   "celdirici_kaynak": [
+    79,
+    71,
+    67,
+    70
+   ],
+   "kazanim": "Epidural hematomda açık dönem ardından hızlı kötüleşme olur.",
+   "cikarim": false,
+   "id": "k2-04-serebrovaskuler-hastaliklar-ve-inme-h18"
+  },
+  {
+   "onem_id": "o09",
+   "kalip": "bilesik",
+   "kok": "Yaşlıda küçük travma sonrası subdural hematom gelişiminin mekanizması nedir?",
+   "siklar": [
+    "Kafa kırığı sonrası orta meningeal arterin kopması",
+    "Hipertansif hiyalinize arteriyolün yırtılması",
+    "Atrofide gerilen köprü venlerin yırtılması",
+    "Sakküler anevrizma kesesinin dura altına rüptürü",
+    "Kontüzyon alanındaki kapillerlerin kanaması"
+   ],
+   "cevap": "C",
+   "aciklama": {
+    "A": "Orta meningeal arterin kopması kafa kırığıyla birlikte olan epidural hematomun mekanizmasıdır. Arter basıncıyla kan duranın kafatasından ayrılmasına yol açar; yaşlıdaki atrofiyle ilgisi yoktur.",
+    "B": "Hiyalinize arteriyolün yırtılması hipertansif parankimal kanamanın mekanizmasıdır. Kan beyin dokusunun içine, bazal gangliyon ve talamus gibi derin yerlere yayılır; duranın altında toplanmaz.",
+    "C": "Atrofide beyin küçülür, köprü venler gerilir ve beyin daha fazla hareket edebilir. Küçük bir travma bile bu ince duvarlı damarları yırtarak duranın iki tabakası arasında kanama yapar.",
+    "D": "Sakküler anevrizmanın yırtılması kanı subaraknoid boşluğa fışkırtır ve travmayla ilişkili değildir. Yaşlıda küçük travmayla gelişen dura altı kanamasının mekanizmasını açıklamaz.",
+    "E": "Kontüzyonda hızlı doku yer değiştirmesi sonucu kapillerlerde bozulma, kanama ve ödem oluşur; girus tepeleri en duyarlı alandır. Dura altı kanama ise venlerin yırtılmasıyla başka bir mekanizmada oluşur."
+   },
+   "kaynak": {
+    "sayfa": 78,
+    "metin": "Beyin daha fazla hareket edebilir → küçük travmalarda bile risk artar."
+   },
+   "celdirici_kaynak": [
+    72,
+    38,
+    44,
+    68
+   ],
+   "kazanim": "Atrofide köprü venler gerilir ve küçük travma yeter.",
+   "cikarim": true,
+   "id": "k2-04-serebrovaskuler-hastaliklar-ve-inme-h19"
+  },
+  {
+   "onem_id": "o10",
+   "kalip": "dogrudan",
+   "kok": "Hipertansif primer parankimal kanamanın tipik yerleşimi hangisidir?",
+   "siklar": [
+    "Serebral korteks lobları ve subkortikal beyaz madde",
+    "Girus tepeleri ve orbitofrontal yüzey",
+    "Germinal matriks ve lateral ventrikül ön boynuzu",
+    "Konveksite yüzeyi ve dura altı alan",
+    "Bazal gangliyonlar, talamus, pons ve serebellum"
+   ],
+   "cevap": "E",
+   "aciklama": {
+    "A": "Serebral korteks lobları ve subkortikal beyaz madde lobar kanamanın yeridir; kanama yüzeye yakın kortikal damarların kırılganlığından kaynaklanır. Derin penetran damar hastalığına bağlı kanamanın dağılımı bundan ayrıdır.",
+    "B": "Girus tepeleri ve orbitofrontal yüzey, beynin kafatasının iç yüzeyine çarptığı travmatik kontüzyon alanlarıdır. Burada kanamanın nedeni damar hastalığı değil darbedir.",
+    "C": "Germinal matriks ve lateral ventrikül ön boynuzu komşuluğu prematür bebeklerde kanama yeridir. Doğum sonrası erken dönemin kanamasıdır; hipertansif kanama ise derin penetran damarların bulunduğu başka bölgelerde görülür.",
+    "D": "Konveksite yüzeyi ve dura altı alan, travma sonucu köprü venlerin yırtıldığı subdural kanamanın bölgesidir. Beyin dokusunun içindeki primer parankimal kanamayı tanımlamaz.",
+    "E": "Bazal gangliyonlar, talamus, pons ve serebellum, hipertansif primer parankimal kanamanın tipik yerleşimidir. Hiyalin arteriyoloskleroza uğrayan derin penetran damarlar bu bölgeleri besler ve kolay yırtılır."
+   },
+   "kaynak": {
+    "sayfa": 37,
+    "metin": "Tipik yerleşim: Bazal gangliyonlar Talamus Pons Serebellum"
+   },
+   "celdirici_kaynak": [
+    42,
+    67,
+    84,
+    78
+   ],
+   "kazanim": "Hipertansif kanama bazal gangliyon, talamus, pons ve serebellumdadır.",
+   "cikarim": false,
+   "id": "k2-04-serebrovaskuler-hastaliklar-ve-inme-h20"
+  },
+  {
+   "onem_id": "o10",
+   "kalip": "ters_ad",
+   "kok": "Uzun süreli hipertansiyonda küçük penetran arter tıkanmasıyla gelişen birkaç mm'lik kaviteli enfarkta ne ad verilir?",
+   "siklar": [
+    "Sınır bölgesi enfarktı",
+    "Hemorajik enfarkt",
+    "Laküner enfarkt",
+    "Periventriküler lökomalazi",
+    "Yarık kanama"
+   ],
+   "cevap": "C",
+   "aciklama": {
+    "A": "Sınır bölgesi enfarktı, arterlerin en uzak dağılım sahalarında ve sistemik hipotansiyondan sonra görülür. Konveksitede kama biçimli bir nekroz bandıdır; küçük kaviteli lezyon ise başka bir enfarkt tipine aittir.",
+    "B": "Hemorajik enfarkt, iskemik dokuya kan dönmesi veya koagülopati sonrası gelişen peteşiyal kanamalı enfarkttır. Kanama bulgusu öne çıkar; birkaç milimetrelik kaviteli küçük enfarkt ise başka bir enfarkt tipinin tanımıdır.",
+    "C": "Laküner enfarkt, uzun süreli hipertansiyonda tek bir penetran dalın tıkanmasıyla derin gri madde, iç kapsül, derin beyaz madde ve pons'ta oluşan birkaç milimetrelik kaviteli küçük enfarkttır. Sessiz kalabilir ya da belirgin defisit yapabilir.",
+    "D": "Periventriküler lökomalazi, özellikle prematürelerde supratentorial periventriküler beyaz maddede gelişen iskemik enfarkttır ve sekel olarak beyaz madde nekrozu bırakır. Hipertansiyonla değil, perinatal dönemdeki iskemiyle ilişkilidir.",
+    "E": "Yarık kanama, küçük penetran damarın yırtılmasıyla oluşan minik kanamanın zamanla rezorbe olup kahverengi kenarlı yarık benzeri boşluk bırakmasıdır. Damar tıkanmasına bağlı kaviteli enfarkt ise başka bir lezyondur."
+   },
+   "kaynak": {
+    "sayfa": 58,
+    "metin": "Birkaç mm çapında kaviteli küçük enfarktlar."
+   },
+   "celdirici_kaynak": [
+    32,
+    24,
+    85,
+    58
+   ],
+   "kazanim": "Laküner enfarkt tek penetran dal tıkanmasıyla oluşur.",
+   "cikarim": true,
+   "id": "k2-04-serebrovaskuler-hastaliklar-ve-inme-h21"
+  },
+  {
+   "onem_id": "o11",
+   "kalip": "dogrudan",
+   "kok": "Global iskemide hasara en duyarlı hücre grubu hangisidir?",
+   "siklar": [
+    "Hipokampus, neokorteks piramidal ve Purkinje hücreleri",
+    "Astrositler ve oligodendrositler arasındaki glial hücreler",
+    "Leptomeningeal ağla beslenen konveksite korteksi nöronları",
+    "Talamus ve bazal gangliyon nöronları",
+    "Ön–orta serebral arter sınır bölgesi nöronları"
+   ],
+   "cevap": "A",
+   "aciklama": {
+    "A": "Hipokampus ve neokorteks piramidal hücreleri ile serebellum Purkinje hücreleri, global iskemide hafif ya da geçici hasarda bile zedelenen en duyarlı nöronlardır. Nöronlar glialardan daha duyarlıdır.",
+    "B": "Astrositler ve oligodendrositler glial hücrelerdir ve nöronlara göre hipoksiye daha dayanıklıdır. Benzer değişiklikleri nöronlardan sonra, geç olarak gösterirler; bu yüzden en duyarlı grup sayılmazlar.",
+    "C": "Konveksite korteksi, leptomeningeal anastomoz ağıyla beslendiği için tıkanma durumunda akımı yeniden dağıtabilir. Bu koruyucu özellik, bu bölgeyi global iskemideki seçici duyarlılıktan farklı kılar.",
+    "D": "Talamus ve bazal gangliyonlar derin penetran damarlarla beslenir ve kollateral akımı azdır. Bu özellik fokal tıkanmalarda önemlidir; global iskemide en seçici hasar alanları olarak sayılan bölgeler başkadır.",
+    "E": "Ön ve orta serebral arter sınır bölgesi, sistemik hipotansiyonda enfarkt gelişen su havzası alanıdır. Hasarın nedeni bölgenin arterlerin en uzak sahasında olmasıdır; global iskemideki duyarlı hücre grupları ise hipokampus, neokorteks ve serebellumdaki nöronlardır."
+   },
+   "kaynak": {
+    "sayfa": 13,
+    "metin": "Hipokampus piramidal hücreleri"
+   },
+   "celdirici_kaynak": [
+    15,
+    19,
+    32,
+    58
+   ],
+   "kazanim": "Global iskemide en duyarlı hücreler hipokampus, neokorteks piramidal hücreleri ve Purkinje hücreleridir.",
+   "cikarim": false,
+   "id": "k2-04-serebrovaskuler-hastaliklar-ve-inme-h22"
+  },
+  {
+   "onem_id": "o11",
+   "kalip": "sira",
+   "kok": "Global iskemide 12 saatten sonraki histopatolojik değişiklikler hangi sırayla gelişir?",
+   "siklar": [
+    "Nekroz, makrofaj, damarlanma; kırmızı nöron ve nötrofil; gliyoz",
+    "Kırmızı nöron ve nötrofil; gliyoz; nekroz, makrofaj, damarlanma",
+    "Nekroz, makrofaj, damarlanma; gliyoz; kırmızı nöron ve nötrofil",
+    "Kırmızı nöron ve nötrofil; nekroz, makrofaj, damarlanma; gliyoz",
+    "Gliyoz; kırmızı nöron ve nötrofil; nekroz, makrofaj, damarlanma"
+   ],
+   "cevap": "D",
+   "aciklama": {
+    "A": "Önce doku nekrozu ve makrofaj gelişen evre, kırmızı nöron ve nötrofil evresinden önce konmuştur. Akut nöronal değişiklikler ilk 12–24 saatte başlar, makrofajlar sonra gelir.",
+    "B": "Gliyoz iki hafta sonrasında belirgin hale gelir; erken evrede reaktif gliyoz yalnız başlangıç düzeyindedir. Bu seçenekte nekroz-makrofaj evresiyle gliyoz yer değiştirmiştir.",
+    "C": "Bu sıralamada nekroz ve makrofaj ilk, kırmızı nöron en son konmuştur. Kırmızı nöronlar, nötrofillerle birlikte olayın başlangıcındaki 12–24 saatte görülen ilk evredir.",
+    "D": "İlk evre 12–24 saatte kırmızı nöronlar ve nötrofil infiltrasyonudur. 24 saatten 2 haftaya dek nekroz, makrofaj ve damarlanma sürer; 2 haftadan sonra nekrotik doku temizlenir ve gliyoz belirginleşir.",
+    "E": "Gliyozun en başa konması mantıksızdır; astrosit çoğalması yıkım ve temizlenme evrelerinden sonra yerleşir. Nöronal hasar, iltihap ve temizlenme basamakları önce gelmelidir."
+   },
+   "kaynak": {
+    "sayfa": 15,
+    "metin": "Akut nöronal değişiklikler → “kırmızı nöronlar”"
+   },
+   "celdirici_kaynak": [
+    15,
+    16,
+    28,
+    30
+   ],
+   "kazanim": "Global iskemide sıra: kırmızı nöron, nötrofil, makrofaj, gliyoz.",
+   "cikarim": false,
+   "id": "k2-04-serebrovaskuler-hastaliklar-ve-inme-h23"
+  },
+  {
+   "onem_id": "o12",
+   "kalip": "ters_ad",
+   "kok": "Prematürelerde supratentorial beyaz maddede gelişen iskemik enfarktlara ne ad verilir?",
+   "siklar": [
+    "Laküner enfarkt",
+    "Periventriküler lökomalazi",
+    "Kronik travmatik ensefalopati",
+    "Hemorajik enfarkt",
+    "Yarık kanama"
+   ],
+   "cevap": "B",
+   "aciklama": {
+    "A": "Laküner enfarkt, hipertansiyonda tek bir küçük penetran dalın tıkanmasıyla derin gri madde ve pons'ta oluşan birkaç milimetrelik kaviteli enfarkttır. Prematürelere özgü beyaz madde hasarını tanımlamaz.",
+    "B": "Periventriküler lökomalazi, özellikle prematürelerde supratentorial periventriküler beyaz maddede gelişen iskemik enfarkt tablosunun adıdır. Sekel olarak beyaz madde nekrozu ve tebeşir sarısı plaklar bırakır.",
+    "C": "Kronik travmatik ensefalopati, futbolcu ve boksör gibi tekrarlayan kafa travması geçirenlerde gelişen demans tablosudur. Beyinde atrofi ve tau pozitif yumaklar görülür; perinatal beyaz madde enfarktı ise farklı bir tablodur.",
+    "D": "Hemorajik enfarkt, iskemik dokuda peteşiyal kanamalarla giden enfarkttır ve reperfüzyon ya da koagülopati sonrası görülür. Prematür beyaz madde enfarktı ise başka bir özel adla anılır.",
+    "E": "Yarık kanama, hipertansiyonda küçük penetran damarın yırtılıp zamanla rezorbe olmasıyla kalan yarık benzeri boşluktur. Prematürlerde beyaz madde enfarktı değil, kanama izidir."
+   },
+   "kaynak": {
+    "sayfa": 85,
+    "metin": "Bu tablo periventriküler lökomalazi olarak adlandırılır"
+   },
+   "celdirici_kaynak": [
+    70,
+    24,
+    58,
+    22
+   ],
+   "kazanim": "Prematürede periventriküler beyaz madde enfarktı periventriküler lökomalazidir.",
+   "cikarim": false,
+   "id": "k2-04-serebrovaskuler-hastaliklar-ve-inme-h24"
+  },
+  {
+   "onem_id": "o12",
+   "kalip": "bilesik",
+   "kok": "Prematürede germinal matriks kanamasının yeri ve olası komplikasyonu hangisidir?",
+   "siklar": [
+    "Dura ile kafatası arası; mercek biçimli epidural hematom",
+    "Bazal gangliyonlar; hemipleji ve konfüzyon",
+    "Serebral korteks lobları; kortikal mikrokanamalar ve lobar hematom",
+    "Girus tepeleri; sarı-kahverengi çökük alanlar",
+    "Lateral ventrikül ön boynuzu; ventriküle yayılıp hidrosefali"
+   ],
+   "cevap": "E",
+   "aciklama": {
+    "A": "Dura ile kafatası arasındaki mercek biçimli hematom, orta meningeal arter yırtılmasıyla oluşan epidural kanamanın özelliğidir. Prematürlerdeki matriks kanaması ise başka bir yerleşim ve mekanizma gösterir.",
+    "B": "Bazal gangliyonlardaki kanama, hemipleji ve konfüzyon yapan hipertansif parankimal kanamanın tablosudur. Erişkinde ve derin penetran damarlarda görülür; prematür germinal bölgeyle ilişkisi yoktur.",
+    "C": "Serebral korteks loblarındaki kanama ve kortikal mikrokanamalar, damar duvarında amiloid biriken yaşlı hastalardaki amiloid anjiyopatinin bulgularıdır. Prematür bebeklerdeki kanama ise başka bir bölgede ortaya çıkar.",
+    "D": "Girus tepelerinde sarı-kahverengi çökük alanlar, eski kontüzyonun (plak sarı) izidir; gliyoz ve hemosiderin yüklü makrofajlar içerir. Travmayla ortaya çıkar ve prematürede kanama yeri tanımını karşılamaz.",
+    "E": "Prematürelerde germinal matriks kanaması sıklıkla lateral ventrikülün ön boynuzu komşuluğunda olur. Kan ventrikül sistemine ve subaraknoid boşluğa ilerleyerek hidrosefaliye neden olabilir."
+   },
+   "kaynak": {
+    "sayfa": 84,
+    "metin": "Sıklıkla lateral ventrikülün ön boynuzu komşuluğunda."
+   },
+   "celdirici_kaynak": [
+    73,
+    37,
+    42,
+    68
+   ],
+   "kazanim": "Germinal matriks kanaması ventrikül ön boynuzu komşuluğundadır ve hidrosefaliye yol açabilir.",
+   "cikarim": false,
+   "id": "k2-04-serebrovaskuler-hastaliklar-ve-inme-h25"
+  },
+  {
+   "onem_id": "o13",
+   "kalip": "sira",
+   "kok": "Hemorajik olmayan enfarktın makroskopik evrimi hangi sırayla gelişir?",
+   "siklar": [
+    "Değişiklik yok; jelatinimsi-kırılgan; soluk-yumuşak; sıvılaşma",
+    "Soluk-yumuşak; değişiklik yok; jelatinimsi-kırılgan; sıvılaşma",
+    "Değişiklik yok; soluk-yumuşak; jelatinimsi-kırılgan; sıvılaşma",
+    "Değişiklik yok; soluk-yumuşak; sıvılaşma; jelatinimsi-kırılgan",
+    "Jelatinimsi-kırılgan; soluk-yumuşak; değişiklik yok; sıvılaşma"
+   ],
+   "cevap": "C",
+   "aciklama": {
+    "A": "İlk 6 saatte makroskopik değişiklik yoktur; jelatinimsi ve kırılgan görünüm ancak 2. günden sonra belirir. Bu sıralamada soluk-yumuşak evre ile jelatinimsi evre yer değiştirmiştir.",
+    "B": "Doku değişmeden önce soluk ve yumuşak görünmez; ilk 6 saat makroskopik olarak normaldir. Bu sıralama, değişiklik yok evresini ikinci sıraya itmiştir.",
+    "C": "İlk 6 saatte değişiklik yoktur, 48. saatte doku soluk, yumuşak ve şiş olur. İkinci ile onuncu günler arasında jelatinimsi ve kırılgan hale gelir; sonra sıvılaşıp boşluk bırakır.",
+    "D": "Sıvılaşma son evredir ve sıvı dolu boşlukla sonlanır; jelatinimsi kırılgan görünümün ardından gelir. Bu sıralamada sıvılaşma jelatinimsi evreden önce konmuştur.",
+    "E": "Jelatinimsi ve kırılgan görünüm, ödem azaldıktan sonra 2.–10. günlerde ortaya çıkar. Bunun ilk evre olarak konması, 6 saat ve 48 saat evrelerini görmezden gelir."
+   },
+   "kaynak": {
+    "sayfa": 26,
+    "metin": "İlk 6 saat: Makroskopik değişiklik yok."
+   },
+   "celdirici_kaynak": [
+    22,
+    24,
+    28,
+    30
+   ],
+   "kazanim": "Enfarktın makroskopik evrimi: ilk 6 saat değişiklik yok, 48 saat soluk-şiş, 2–10 gün jelatinimsi, sonra sıvılaşma.",
+   "cikarim": false,
+   "id": "k2-04-serebrovaskuler-hastaliklar-ve-inme-h26"
+  },
+  {
+   "onem_id": "o13",
+   "kalip": "dogrudan",
+   "kok": "Enfarktta nötrofiller 2–3 hafta içinde yerini hangi hücreye bırakır?",
+   "siklar": [
+    "Gemistositik astrositler",
+    "Makrofajlar",
+    "Hipokampus piramidal hücreleri",
+    "Kırmızı nöronlar",
+    "Serebellum Purkinje hücreleri"
+   ],
+   "cevap": "B",
+   "aciklama": {
+    "A": "Gemistositik astrositler lezyon kenarında büyüyüp bölünen reaktif astrositlerdir ve glial skar oluşumuna katılır. Miyelin ve eritrosit yıkım ürünlerini yutan hücre görevini üstlenmezler.",
+    "B": "Makrofajlar miyelin ve eritrosit yıkım ürünlerini fagosite ederek nekrotik dokuyu temizler ve bu işi aylarca, yıllarca sürdürebilir. Nötrofillerin ardından enfarkt alanında baskın hücre grubu olurlar.",
+    "C": "Hipokampus piramidal hücreleri global iskemiye en duyarlı nöronlar arasındadır ve hafif iskemide bile hasar görür. Hasara uğrayan hücrenin kendisidir; nekrotik dokuyu temizleyen iltihap hücresi sayılmazlar.",
+    "D": "Kırmızı nöronlar, 12–24. saatte eozinofilik sitoplazma ve piknotik çekirdekle görülen akut hasarlı nöronlardır. Bunlar hasara uğrayan hücrenin kendisidir; temizlik yapan iltihap hücresi sayılmazlar.",
+    "E": "Serebellum Purkinje hücreleri hipoksiye en duyarlı nöron gruplarından biridir. Bu hücreler hasarı kendileri yaşar; ölen dokunun yıkım ürünlerini yutup temizleme işini üstlenmezler."
+   },
+   "kaynak": {
+    "sayfa": 30,
+    "metin": "Nötrofiller yerini makrofajlara bırakır."
+   },
+   "celdirici_kaynak": [
+    30,
+    24,
+    13,
+    22
+   ],
+   "kazanim": "2–3 hafta içinde nötrofiller yerini makrofajlara bırakır.",
+   "cikarim": false,
+   "id": "k2-04-serebrovaskuler-hastaliklar-ve-inme-h27"
+  }
+ ]
+}

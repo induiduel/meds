@@ -481,6 +481,7 @@ LLM otomasyonu kapalıdır (AGENTS kural 20). Yeni ders, kullanıcı hangi dosya
     `cozucu_dogrula.py` 0 HATA, bağımsız denetçi, EMA GPU sesi §19 adım 8). `ders_icerik_dogrula.py` çözücü yoksa HATA verir; çalıştığı canlıda denenir.
 11. **Kayıt + dağıtım:** veriler `data/sesli_anlatim/*/<key>` olarak commit, `guncelleme_notu.json` onem+1, `dagit.sh`; canlı API'de
     ders, ses, PDF (`/api/lecture-pdf/deck/<deckId>/0` 200), çıkmış, işaret, terim, kısaltma doğrulanır.
+11c. **Patoloji dersi ise hoca üslubu soru katmanı (ZORUNLU, 2026-10-29):** `scripts/patoloji_soru_isci/hazirla.py` + `TALIMAT.md` akışı; çıktı `src/data/hoca_uslubu_sorular/k2/<ders-id>.json`; kapı `dogrula.py` 0 HATA. Kurallar `docs/PATOLOJI_HOCA_SORU_MANTIGI.md` (AGENTS.md kural 25).
 
 
 

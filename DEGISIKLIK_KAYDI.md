@@ -1,3 +1,6 @@
+## 2026-10-28 — Sesli ders: adsız gönderme yasağı (H434)
+- `metin_denetle.py` BAGLAMSIZ kapısı (paragraf başında "bu hastalıkta/durumda…", "burada", "bunlarda" → HATA); kural KURUL2_DERS_STANDARDI §8.13, ANLATIM_KURGU_STANDARDI, hata defteri H434. Mevcut dersler toplu değiştirilmedi. Commit/dağıtım yapılmadı.
+
 ## 2026-10-28 — Öğrenci yerleşim bulguları (H230–H241)
 - H230 `dersler.css` d15-tools 4 sabit sütun → auto-fit (3 araçta sağ boşluk). H231 `v12/cards.css` kartlar başlığı telefonda tek satır + deste satırı soluk kenar.
 - H232 `rebuild.css` ≤420 px soru kartı başlığı: araç 30 px, ders hapı içerik kadar. H233/H234 `test-builder.css` "Testi oluştur" yapışkan alt bilgi, ders hapı kaydırma ipucu.
@@ -95,3 +98,20 @@
 
 ## 2026-10-28 — H431 Kişi Etkinlik sekmesi
 - `peopleInsights.ts` `/olaylar` uç noktası sayfa ziyaretlerini (`kv.medsoru_etkinlik_v1`) birleştirir; kök neden ve kural `KURUL2_YAPILMAYACAK_HATALAR.md` H431. onem +1, dağıtıldı.
+
+## 2026-10-29 — Patoloji hocası soru mantığı analizi + Patoloji Soru İşçisi (yerel; commit/dağıtım yok)
+- **İstek:** Kurul 1 2026-27 patoloji sınavı yeni/zor kalıpla geldi; hocanın seçim mantığı Kurul 2+ vurgu/örnek soru/çıkabilecek soru üretimine bağlansın.
+- **Analiz:** `docs/PATOLOJI_HOCA_SORU_MANTIGI.md` (34 soru; 4'ü toplanmadı, 9'u kısmi — küçük örneklem uyarısı). Ana bulgular: genişlik (26 derse ~1'er soru), bileşik şık %14→%40, "en tipik/en olası" kökü %12→%45, tek geçen ad/eponim ters sorma, çeldirici = aynı dersin komşu kavramları. Slayt biçimi zayıf sinyal: kırmızı satırların %42'si (cevap satırlarında %62), sarı dolgu cevap satırlarında seyrek (%5), başlıktan soru çıkmadı.
+- **İşçi:** `scripts/patoloji_soru_isci/` — `hazirla.py` (önem adayı + çeldirici havuzu, LLM yok), `dogrula.py` (≥2 soru/önem noktası, farklı kalıp, komşu-kavram çeldirici, ipucu sızıntısı kapısı), `profil.json`, `TALIMAT.md` (yazar+denetçi akışı). LLM adımı yalnız elle komutla (kural 20).
+- **Açık:** henüz hiçbir Kurul 2 patoloji dersi için soru üretilmedi (kullanıcı komutu bekliyor); Kurul 2 çıkmışı gelince profil yeniden hesaplanmalı; 58/62/65/66 numaralı soruların metni toplanırsa analiz güncellenmeli.
+
+## 2026-10-29 (2) — Patoloji hoca mantığı v2 + Kurul 2 ilk hoca-üslubu sorular (yerel; commit/dağıtım yok, UI'ya bağlanmadı)
+- **Derin analiz:** 35 PDF biçim işaretli döküm (`scripts/patoloji_soru_isci/dokum.py`), 30 sorunun her biri için 4 ajanla kaynak slayt/dönüşüm/eski çıkmış ilişkisi (`docs/PATOLOJI_SORU_ESLEME_TABLOSU.md`). v1 düzeltildi: sarı dolgu satırlarının %72'si kısa yapı etiketi ("Ancak:/İstisna:/Sonuç:/Not:"), soru etiketin ALTINDAKİ satırdan çıkıyor; kalın/`***`/tekrar güçlü sinyal; hoca 3 dönüşüm kullanıyor (kopya+çevirme, birleştirme, ters yön/ad); 5/30 soru slayt dışı çıkarım içeriyor; her derse ~1 soru.
+- **İşçi güncellendi:** `hazirla.py` (etiket altı, tekrar, `***`, üç biçim), `dogrula.py` (açıklama sonu kalıp tekrarı kapısı), `profil.json` (ters_yon, yanlis_bul), `TALIMAT.md`.
+- **Üretim:** `src/data/hoca_uslubu_sorular/k2/` — k2-03: 12 önem noktası/24 soru, k2-04: 13 nokta/27 soru. Yazar + 2 tur bağımsız denetçi; ikinci tur sonrası düzeltmeler yalnız kapılardan geçti (üçüncü denetim yok).
+- **Kurallar bağlandı:** AGENTS.md kural 25, `docs/SORU_USLUBU.md` Patoloji bölümü (kural_secici ornek_soru aşaması okur), el kitabı 11c.
+- **Açık:** bu sorular henüz sitede/Öğren'de gösterilmiyor (ekran bağlantısı yok); dagıtım yok. Kalan Kurul 2 patoloji dersleri PDF'i gelince aynı akış çalıştırılır. `soru_uslup.py` bu şemayla uyumsuz (107 HATA) — bu katman için çalıştırılmadı.
+
+## 2026-10-29 (3) — Hoca üslubu sorular Örnek sorular ekranına bağlandı (yerel; commit/dağıtım yok)
+- `KazanimSorulariView.tsx`: `src/data/hoca_uslubu_sorular/k<N>/<ders>.json` dosyaları derse sentetik son kazanım olarak ("Hoca", no 900, "Hocanın üslubunda çıkabilecek sorular") eklenir; soru kimliği `<k2-NN>-qhNN` (ilerleme sayacı `-q` önekiyle sayar); ders listesi soru sayısına eklenir; "K900" yerine "Hoca üslubu" gösterilir. `tsc` 0 hata, `vite build` tamam; yerel 3000'de k2-04 (12+27=39 soru) çözme kipinde doğrulandı. Yalnız ön yüz: sunucu yeniden başlatma gerekmedi.
+- **Açık:** dağıtım yok (onem artmadı); k2-03 aynı yolla görünür (ekranda ayrıca açılmadı); ders işçisinin canlı içerik yolu (`/api/content/ornek`) hoca katmanını bilmez, ders canlı içerikle değişirse katman istemcide yine eklenir.

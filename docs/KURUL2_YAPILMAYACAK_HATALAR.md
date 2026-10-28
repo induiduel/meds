@@ -1560,3 +1560,14 @@ Her maddede: belirti · kök neden · Kurul 2 kuralı · kapı durumu. Kanıtlar
 - **Belirti:** Sesli derste "Ders seçenekleri", "Oynatıcı" vb. paneller ve diyaloglar iPhone'da saat/pil çubuğunun altına giriyordu; açık temada saat yazısı beyaz başlıkta görünmüyordu.
 - **Kök neden:** (1) `v11.css` genel `[role=dialog]` max-height kuralı (özgüllük 0,3,0) `.sh-sheet`'i eziyor ve güvenli alanı düşmüyordu (panel 820 px, başlık y=43 < 47). (2) `appearance.ts syncPwaChrome` her temada `black-translucent` zorluyordu → beyaz durum yazısı.
 - **Çözüm/önleme:** genel kurala `.sh-sheet` istisnası + `env(safe-area-inset-top)` düşümü; `.cd-dlg-kart` aynı. Durum çubuğu stili açık temada `default`, koyuda `black-translucent` (index.html erken betik + syncPwaChrome). Yeni tam yükseklikli katman yazan her kural üst güvenli alanı düşer; SAFE öykünmesiyle (üst 47) başlık ≥47 sınanır.
+
+## H434 — Sesli derste "bu hastalıkta" gibi adsız göndermeler hangi hastalığın kastedildiğini karıştırıyordu (2026-10-28, kullanıcı bildirdi)
+- **Belirti:** Yeni parçaya geçildiğinde "bu hastalıkta…" diye başlayan cümlelerde öğrenci, derste birden çok hastalık anlatıldığı için hangisinden söz edildiğini kaçırıyordu.
+- **Kök neden:** Yazım yalnız yazıyı okuyan biri için akıcıydı; gönderme önceki cümleye bağlı. Sesli dinlemede parça sınırında bağlam kopuyor, kapılar bu kalıbı denetlemiyordu.
+- **Çözüm/kural:** Her yeni paragraf/bölüm hastalığı veya kavramı adıyla anar; adsız gönderme (bu hastalıkta/durumda/tümörde, burada, bunlarda…) parça başında yasak. `metin_denetle.py` BAGLAMSIZ kapısı HATA verir; KURUL2_DERS_STANDARDI §8.13 ve ANLATIM_KURGU_STANDARDI'na yazıldı. Denetçi her paragrafı tek başına okuyup konuyu çıkarabilmeli.
+
+## H435 — Örnek sorular hocanın yeni sınav kalıbını yansıtmıyordu (2026-10-29, kullanıcı bildirdi)
+- **Belirti:** Kurul 1 2026-27 patoloji sınavı kısa tek-kavram şıkları yerine bileşik/kombinasyon şıklı, "en tipik/en olası" köklü sorularla geldi; hazırlanan örnek sorular bunu karşılamıyordu.
+- **Kök neden:** Üslup yalnız eski çıkmışlardan (2018–25: bileşik şık %14, üstünlük kökü %12) örneklenmişti; yeni sınav ve slayt biçimi (kırmızı/sarı/kalın) hiç ölçülmemişti, önem puanı biçime ve tekrar edilen eski konulara dayanıyordu.
+- **Kural / Önleme:** Patoloji örnek soru ve önem noktası `docs/PATOLOJI_HOCA_SORU_MANTIGI.md` + `scripts/patoloji_soru_isci/` kapısına göre yazılır: her önem noktasına ≥2 farklı kalıpta soru, çeldirici yalnız aynı dersin komşu kavramları, doğru şık en uzun olmaz. Sarı dolgu ve başlık önem sinyali sayılmaz; kırmızı tek başına "önemli" değildir (slaytların ~%42'si kırmızı).
+- **Kapı:** `python3 scripts/patoloji_soru_isci/dogrula.py sorular.json paket.json` → 0 HATA.
