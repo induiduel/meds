@@ -49,9 +49,16 @@ function NotListesi({ notlar, suzgec }: { notlar: Not[]; suzgec: Tur | null }) {
   );
 }
 
+/** H150: öğrenci maddelerine sızan dosya yolu / kod parçası temizlenir; temizlenince anlamsız kalan madde gösterilmez */
+const YOL = /(`[^`]*`|\b(?:meds|src|scripts|data|docs|public)\/[\w./*<>-]+|\b[\w-]+\.(?:tsx?|py|json|css|mjs|sh|md)\b)/g;
+function ogrenciMaddeleri(l?: string[]): string[] {
+  return (l || []).map((m) => m.replace(/\s*\([^()]*(?:`|\/|\.(?:tsx?|py|json|css|sh))[^()]*\)/g, '').replace(YOL, '').replace(/\s{2,}/g, ' ').replace(/\s+([,.;:])/g, '$1').replace(/[,;:]\s*$/, '').trim())
+    .filter((m) => m.split(' ').length >= 3);
+}
+
 function SurumKarti({ s, suzgec, gelistirici, ilk }: { s: Surum; suzgec: Tur | null; gelistirici: boolean; ilk: boolean }) {
   const [acik, setAcik] = useState(false);
-  const bolumler = TURLER.filter((t) => (!suzgec || suzgec === t.id) && s.ogrenci[t.id]?.length);
+  const bolumler = TURLER.filter((t) => (!suzgec || suzgec === t.id) && ogrenciMaddeleri(s.ogrenci[t.id]).length);
   const f = s.dosyalar;
   return (
     <article className={`gg-kart${ilk ? ' is-son' : ''}`} id={`v${s.surum}`}>
@@ -68,7 +75,7 @@ function SurumKarti({ s, suzgec, gelistirici, ilk }: { s: Surum; suzgec: Tur | n
           {bolumler.map((t) => (
             <section key={t.id} className="gg-bolum" data-tur={t.id}>
               <h4><t.ikon /> {t.ad}</h4>
-              <ul>{s.ogrenci[t.id].map((m, i) => <li key={i}>{m}</li>)}</ul>
+              <ul>{ogrenciMaddeleri(s.ogrenci[t.id]).map((m, i) => <li key={i}>{m}</li>)}</ul>
             </section>
           ))}
         </div>

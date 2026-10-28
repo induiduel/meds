@@ -124,7 +124,12 @@ export default function DerslerMerkezV15() {
             ))}
           </div>
         ) : (
-          <p className="d15-bos v15-card">{hata ? `Ders listesi alınamadı: ${hata}` : `Kurul ${kurul} derslerinin hepsini bitirdin ya da henüz ders yok.`}</p>
+          // H148: "bitirdin ya da henüz yok" ikili mesajı yerine durum ayrı söylenir; boşsa geçmiş kurula geçiş verilir
+          <div className="d15-bos v15-card">
+            {hata ? <p>Ders listesi alınamadı: {hata}</p>
+              : kuruldakiler && kuruldakiler.length ? <p>Kurul {kurul} derslerinin hepsini bitirdin. Tekrar için <a href={pathFor('canli_ders')} onClick={git(pathFor('canli_ders'))}>tüm dersler</a>.</p>
+              : <p>Kurul {kurul} için sesli ders henüz eklenmedi. {kurul > 1 && <a href={`/dersler/canliders/kurul${kurul - 1}`} onClick={git(`/dersler/canliders/kurul${kurul - 1}`)}>Kurul {kurul - 1} derslerine geç</a>}</p>}
+          </div>
         )}
       </section>
 

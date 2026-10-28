@@ -2,7 +2,7 @@ import React from 'react';
 import { createPortal } from 'react-dom';
 import {
   HeartPulse,
-  ArrowLeft, ArrowRight, Check, ChevronLeft, ChevronRight, History, LayoutDashboard, LayoutGrid, List, ListTree, Presentation, Rows3, Rows4,
+  ArrowLeft, ArrowRight, ArrowUp, Check, ChevronLeft, ChevronRight, History, LayoutDashboard, LayoutGrid, List, ListTree, Presentation, Rows3, Rows4,
   SlidersHorizontal, Target, TriangleAlert,
 } from 'lucide-react';
 import { Dialog } from '../ui/Dialog';
@@ -246,5 +246,28 @@ export const BolumSonu: React.FC<{ bolum: BolumId; git: Git }> = ({ bolum, git }
         </a>
       )}
     </nav>
+  );
+};
+
+/**
+ * H151: Uzun bölümlerde (Aşı telefonda ~17.000 px) başa dönüş. 1200 px aşağıda görünür; kaydırılan kabı (pencere ya da
+ * kabuk içeriği) olayın hedefinden bulur.
+ */
+export const BasaDon: React.FC = () => {
+  const [kap, setKap] = React.useState<HTMLElement | Window | null>(null);
+  React.useEffect(() => {
+    const f = (e: Event) => {
+      const el = e.target === document ? window : (e.target as HTMLElement);
+      const y = el === window ? window.scrollY : (el as HTMLElement).scrollTop;
+      setKap(y > 1200 ? el : null);
+    };
+    document.addEventListener('scroll', f, { capture: true, passive: true });
+    return () => document.removeEventListener('scroll', f, { capture: true } as any);
+  }, []);
+  if (!kap) return null;
+  return (
+    <button type="button" className="sbk-basa" aria-label="Bölümün başına dön" onClick={() => kap.scrollTo({ top: 0, behavior: 'smooth' })}>
+      <ArrowUp aria-hidden /> Başa dön
+    </button>
   );
 };

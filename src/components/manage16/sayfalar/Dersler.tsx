@@ -123,10 +123,14 @@ function DersAyrinti({ id, git, branslar }: { id: string; git: SayfaProps['git']
           </div>
           <div className="m16-kart"><h2>Sorular</h2>
             <dl className="m16-satirlar">
-              <dt>Örnek soru</dt><dd>{k.ornek ? `${k.ornek.soru} (${k.ornek.dosya})` : '—'}</dd>
+              <dt>Örnek soru</dt><dd>{k.ornek ? baglanti(`sorular/ornek?q=${encodeURIComponent(d.konu)}`, `${k.ornek.soru} soru`) : '—'}</dd>
               <dt>Quiz</dt><dd>{k.quiz || '—'}</dd>
               <dt>Çıkmış eşlemesi</dt><dd>{k.cikmis.paket || k.cikmis.konular ? `${k.cikmis.paket} pakette · ${k.cikmis.konular} konu` : '—'}</dd>
             </dl>
+            {/* H152: dersten o dersin sorularına süzgeçli geçiş (eskiden yalnız sayı vardı) */}
+            <p className="m16-alan-ipucu">
+              {baglanti(`sorular/cikmis?q=${encodeURIComponent(d.konu)}`, 'Bu konunun çıkmış soruları')} · {baglanti(`sorular/havuz?q=${encodeURIComponent(d.konu)}`, 'Havuzdaki soruları')}
+            </p>
           </div>
         </div>
       )}

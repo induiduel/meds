@@ -51,8 +51,24 @@ function Ayrinti({ id, kapat }: { id: string; kapat: () => void }) {
 export default function SoruHavuzu({ id, git }: SayfaProps) {
   const birlestir = async (ids: string[], temizle: () => void) => {
     if (ids.length < 2) { bildir('En az iki soru seçin', 'bilgi'); return; }
-    const [capa, ...uydular] = ids;
-    if (!(await onayIste({ baslik: `${ids.length} soru birleştirilsin mi?`, aciklama: `İlk seçilen (${capa}) asıl kalır; diğer ${uydular.length} soru kaldırılır. Ham defter kaldırılanları saklar.`, tehlikeli: true, yazilacak: 'BIRLESTIR', onayMetni: 'Birleştir' }))) return;
+    // H153: asıl soru onay penceresinde açıkça seçilir (eskiden görünmeyen seçim sırası belirliyordu)
+    let capa = ids[0];
+    if (!(await onayIste({
+      baslik: `${ids.length} soru birleştirilsin mi?`,
+      aciklama: (
+        <>
+          <label className="m16-alan">
+            <span>Asıl kalacak soru</span>
+            <select className="m16-girdi" defaultValue={capa} onChange={(e) => { capa = e.target.value; }}>
+              {ids.map((x) => <option key={x} value={x}>{x}</option>)}
+            </select>
+          </label>
+          <p>Diğer {ids.length - 1} soru kaldırılır. Ham defter kaldırılanları saklar.</p>
+        </>
+      ),
+      tehlikeli: true, yazilacak: 'BIRLESTIR', onayMetni: 'Birleştir',
+    }))) return;
+    const uydular = ids.filter((x) => x !== capa);
     try {
       const { kayit } = await adminIstek<{ kayit: any }>(`/api/admin/sorular/havuz/${encodeURIComponent(capa)}`);
       await adminIstek('/api/admin/drafts/merge', { yontem: 'POST', govde: { consolidated: kayit, mergedIds: uydular } });

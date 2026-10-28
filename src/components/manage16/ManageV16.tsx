@@ -170,7 +170,7 @@ export const ManageV16: React.FC<{ adminEmail: string; onExit: () => void }> = (
   const s = cozum.sayfa;
   const bulunamadi = s.yol === '' && cozum.altYol.length > 0;
   const Sayfa = bulunamadi ? null : lazySayfa(s);
-  useEffect(() => { document.title = `${bulunamadi ? 'Bulunamadı' : s.etiket} · MeDSor Yönetim`; }, [s, bulunamadi]);
+  useEffect(() => { document.title = `${degistirebilir ? (kaynakCanli ? '[Canlı] ' : '[Yerel] ') : ''}${bulunamadi ? 'Bulunamadı' : s.etiket} · MeDSor Yönetim`; }, [s, bulunamadi, degistirebilir, kaynakCanli]);
 
   const grupDegistir = (id: string) => setKapaliGrup((x) => {
     const n = new Set(x); if (n.has(id)) n.delete(id); else n.add(id);
@@ -201,6 +201,8 @@ export const ManageV16: React.FC<{ adminEmail: string; onExit: () => void }> = (
         </div>
       </header>
       {kaynakCanli && degistirebilir && <div className="m16-canlibant" role="note">Canlı veriye bağlısınız: yaptığınız değişiklikler doğrudan siteye yazılır.</div>}
+      {/* H153: Yerel kipte de hangi veriye bakıldığı görünür (eskiden yalnız Canlı'da bant vardı) */}
+      {!kaynakCanli && degistirebilir && <div className="m16-canlibant is-yerel" role="note">Yerel sunucuya bağlısınız: gördüğünüz veri bu makinedeki kopya, değişiklikler canlı siteyi etkilemez.</div>}
       <div className="m16-govde">
         {menuAcik && <div className="m16-menu-perde" onClick={() => setMenuAcik(false)} aria-hidden="true" />}
         <nav className={`m16-menu ${menuAcik ? 'acik' : ''}`} aria-label="Yönetim menüsü">

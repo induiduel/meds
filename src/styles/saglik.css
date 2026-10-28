@@ -610,6 +610,12 @@ button.sbk-zaman-b > svg { margin-left: auto; width: 16px; height: 16px; color: 
 .sbk-kpi.is-acilir:hover { border-color: var(--color-accent); }
 .sbk-kpi.is-acilir:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; }
 .sbk-kpi-gecmis { position: absolute; right: 8px; top: 8px; display: inline-flex; align-items: center; gap: 3px; font: inherit; font-size: 11px; color: var(--color-ink-3); background: var(--color-field); border: 0; border-radius: 6px; padding: 1px 6px; cursor: pointer; }
+.sbk-kpi-gecmis::after { content: ''; position: absolute; inset: -8px -4px; } /* H151: 49×18 → ~57×34 dokunma alanı */
+.sbk-basa { position: fixed; z-index: 30; right: max(16px, env(safe-area-inset-right, 0px)); bottom: calc(16px + var(--v15-alt-h, 0px) + env(safe-area-inset-bottom, 0px));
+  display: inline-flex; align-items: center; gap: 6px; min-height: 40px; padding: 0 14px; border: 1px solid var(--color-line); border-radius: 999px;
+  background: var(--color-white); color: var(--color-ink); font: 600 13px var(--font-sans); box-shadow: 0 6px 20px rgb(0 0 0 / .12); cursor: pointer; }
+.sbk-basa svg { width: 16px; height: 16px; }
+@media (max-width: 767px) { .sbk-basa { bottom: calc(76px + env(safe-area-inset-bottom, 0px)); } }
 .sbk-kpi-gecmis:hover { color: var(--color-accent); }
 .sbk-kpi-gecmis:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 1px; }
 .sbk-kpi-gecmis::after { content: ''; position: absolute; inset: -8px -4px; }

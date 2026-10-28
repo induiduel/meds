@@ -8,7 +8,7 @@ import { GecmisCtx, GorunumCtx, type GecmisIstek, type GorunumModu } from './sag
 import { GecmisPencere } from './SaglikGecmis';
 import { DersCtx, dersDiziniYukle, type DersDizin } from './saglikDers';
 import { DersKatmani } from './SaglikDersKatmani';
-import { BolumSonu, SaglikBaslik, SaglikDizin } from './SaglikGezinti';
+import { BasaDon, BolumSonu, SaglikBaslik, SaglikDizin } from './SaglikGezinti';
 import '../../styles/saglik.css';
 import '../../styles/v15/saglik.css';
 
@@ -170,6 +170,7 @@ export const SaglikView: React.FC = () => {
               {bag && bag.havuz > 0 && bolum !== 'genel' && <KendiniSina bolum={bolum} baslik={tanim.ad} toplam={bag.soru_sayisi} />}
               <Kaynakca dogrulanamayan={dogrulanamayanlar(bolum, veri)} />
               <BolumSonu bolum={bolum} git={git} />
+              <BasaDon />
             </div>
             {bag && (
               <aside id="sbk-yan" className="sbk-yan" aria-label="Derste ve sınavda">

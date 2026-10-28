@@ -1,14 +1,15 @@
 {
  "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
- "onem": 545,
- "baslik": "Terim ve bilgi paketleri sesli okunuyor",
+ "onem": 546,
+ "baslik": "Arama, ders ve sağlık sayfası düzeltmeleri",
  "maddeler": [
-  "Terim, kısaltma ve bilgi kartlarında hoparlör düğmesi: dokununca tanımı hazır sesle okur",
-  "Sesli derste PDF terim yardımcısındaki kartlarda da var"
+  "Aramada sesli derste geçen yerler düzgün görünüyor",
+  "Ders çalış: kurulda ders yoksa ne yapabileceğin yazıyor",
+  "Güncelleme günlüğünde teknik dosya adları görünmüyor",
+  "Sağlık Bakanlığı sayfalarında Başa dön düğmesi",
+  "Yönetim: dersten sorulara geçiş, Yerel/Canlı her zaman görünür"
  ],
- "eklenen": [
-  "5.615 terim, kısaltma ve bilgi paketi için hazır ses"
- ],
+ "eklenen": [],
  "degisen": [],
  "duzeltilen": [],
  "silinen": []

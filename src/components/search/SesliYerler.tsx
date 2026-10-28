@@ -1,5 +1,4 @@
 /**
-import '../../styles/sesli-yer.css';
  * Sesli derste geçen yerler (tasarım A05): aranan terim sesli ders metinlerinde geçiyorsa ders + cümle parçası +
  * zaman damgası. Veri sunucudan (GET /api/canli-ders/ara, bellek içi dizin); tıklayınca ders o saniyede açılır (?p=&t=).
  */
@@ -9,6 +8,8 @@ import { safeJsonFetch } from '../../services/api';
 import { dkSn } from '../../services/dersKonum';
 import { navigateTo, pathFor } from '../../router';
 import { Highlight } from './searchShared';
+// H149: bu satır yorum bloğunun içine düşmüştü; stil hiç yüklenmiyor, ders adı + parça + zaman bitişik görünüyordu
+import '../../styles/sesli-yer.css';
 
 export interface SesliYer { k: string; b: string; p: number; c: number; t: number | null; parca: string }
 const onbellek = new Map<string, SesliYer[]>();

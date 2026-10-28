@@ -1372,3 +1372,28 @@ Her maddede: belirti · kök neden · Kurul 2 kuralı · kapı durumu. Kanıtlar
 ## H147 — Öğrenci menüsünde hesap ve ders sayfaları yanlış gruplardaydı (2026-10-28, sayfa denetimi)
 - **Belirti:** Başarımlar Oyunlar'da, Güncelleme günlüğü Başvuru'da aranıyordu; Öncelikli dersler ve Geçmiş kurullar Başvuru'daydı ve telefonda alt sekmede "Menü" yanıyordu.
 - **Çözüm/kural:** Öncelikli dersler + Geçmiş kurullar → Ders çalış (merkez, menü, alt sekme "Ders"); Başarımlar + Güncelleme günlüğü → Kişisel. Grup değişikliği `merkezModel.MERKEZ_HAM`, `navModel.NAV_TREE_HAM` ve `navV15` (OYUNLAR/KISISEL) birlikte yapılır; adresler değişmez.
+
+## H148 — Ders çalış merkezinde "hepsini bitirdin ya da henüz ders yok" ikili mesajı (2026-10-28, sayfa denetimi)
+- **Belirti:** Kurul 2'de hiç sesli ders yokken öğrenciye "hepsini bitirdin ya da henüz ders yok" deniyordu; yapılacak bir şey önerilmiyordu.
+- **Çözüm/kural:** Kurulda ders var ve hepsi bitti → "hepsini bitirdin" + tüm dersler bağlantısı; ders yok → "henüz eklenmedi" + önceki kurula geçiş. Boş durum metni iki ayrı durumu tek cümlede birleştirmez, bir eylem verir.
+
+## H149 — Aramada "Sesli derste geçen yerler" stilsiz görünüyordu (2026-10-28, sayfa denetimi)
+- **Belirti:** Ders adı ile cümle parçası bitişik ("Patolojiye GirişFormalin…"), zaman damgası metne yapışık.
+- **Kök neden:** `SesliYerler.tsx`'te `import '../../styles/sesli-yer.css'` satırı dosya başındaki `/** … */` yorum bloğunun içine düşmüştü; stil dosyası hiç yüklenmiyordu (derleme hata vermez).
+- **Çözüm/kural:** İçe aktarma yorumun dışına alındı; depoda aynı kalıp tarandı (başka yok). Belge yorumunun içine kod satırı eklenmez; stil "kural var ama uygulanmıyor" görünüyorsa önce içe aktarmanın gerçekten çalıştığına bakılır.
+
+## H150 — Güncelleme günlüğünde öğrenciye dosya yolları görünüyordu (2026-10-28, sayfa denetimi)
+- **Belirti:** "Geliştirme notları" kapalıyken bile öğrenci maddelerinde `meds/scripts/...`, `*.json` gibi yollar vardı.
+- **Kök neden:** Öğrenci maddeleri (`ogrenci`) sürüm notlarından üretilirken teknik ayrıntı temizlenmiyordu; ekran olduğu gibi basıyordu.
+- **Çözüm/kural:** Ekran öğrenci maddelerinden kod parçasını, dosya yolunu ve yollu parantezi siler; 3 kelimeden kısa kalan maddeyi göstermez. `guncelleme_notu.json` maddeleri öğrenci diliyle yazılır, dosya yolu içermez.
+
+## H151 — Sağlık Bakanlığı uzun bölümlerinde başa dönüş yoktu; geçmiş düğmesi küçüktü (2026-10-28, sayfa denetimi)
+- **Belirti:** Aşı bölümü telefonda ~17.000 px; yukarı dönmenin tek yolu kaydırmaktı. "N yılın geçmişini göster" düğmesi 49×18 px.
+- **Çözüm/kural:** 1200 px aşağıda "Başa dön" düğmesi (kaydırılan kabı olaydan bulur); geçmiş düğmesine `::after` ile ~57×34 dokunma alanı. Not: "Kaynak N" bağlantıları zaten `::after` ile büyütülmüştü, tarama aracı bunu göremez (yanlış bulgu).
+
+## H152 — Yönetimde ders ayrıntısından o dersin sorularına geçiş yoktu (2026-10-28, sayfa denetimi)
+- **Çözüm/kural:** Sorular kartında örnek sorular, çıkmış sorular ve havuz için ders konusuyla süzülmüş (`?q=<konu>`) bağlantılar. Sayı gösteren her özet, o kayıtların listesine bağlanır.
+
+## H153 — Yönetimde Yerel kipte hangi veriye bakıldığı belli değildi; birleştirmede asıl soru görünmüyordu (2026-10-28, sayfa denetimi)
+- **Belirti:** Yalnız Canlı kipte bant vardı; Yerel'de hiçbir işaret yoktu. Havuz birleştirmede asıl soru görünmeyen seçim sırasına bağlıydı. Ders ayrıntısında görünürlük seçicisi kartın dışına taşıyordu.
+- **Çözüm/kural:** Yerel bandı + sekme adında `[Canlı]`/`[Yerel]`; birleştirme onayında asıl soru açılır listeden seçilir; `.m16-liste` satırı sarar, seçici alt satıra iner.
