@@ -41,6 +41,7 @@ const YAZMA_EK_ONEKLER = ['/api/notebooklm/manage', '/api/sesli-anlatim/yerel', 
 /** Kişisel veri okuması sayılan GET uçları (yeni kişisel veri ucu eklerken buraya desen ekleyin) */
 const KISISEL_OKUMA: RegExp[] = [
   /^\/api\/admin\/people\/[^/]+$/,
+  /^\/api\/admin\/gizlilik/,
   /^\/api\/admin\/people\/[^/]+\/(etkinlik|events|cihaz|devices|calisma|study|veri)/,
   /^\/api\/admin\/user-data\//,
   // Kullanıcılar (v16): olay zaman çizelgesi, sosyal/erişim, tüm-kullanıcı etkinlik günlüğü, başarım kişisi, erişim listesi

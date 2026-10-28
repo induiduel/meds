@@ -2,6 +2,7 @@
  *  Branş klasörleri src/data/<brans>_asistan/; ders kodları branşlar arasında tekil (patoloji "07", enfeksiyon "e07", üroloji "u03"). */
 import type { Brans } from '../brans';
 import branslarVeri from '../../../data/dersler/branslar.json';
+import { icerikGizli } from '../../../services/siteAyar';
 
 const DOSYA = import.meta.glob('../../../data/*_asistan/[0-9eughkf]*.json');
 const DIZIN = import.meta.glob('../../../data/*_asistan/index.json');
@@ -19,8 +20,15 @@ export const kodBrans = (kod: string): Brans => {
   return ONEK_BRANS[kod[0]] || 'patoloji';
 };
 export const asistanYolu = (kod: string) => `../../../data/${kodBrans(kod)}_asistan/${kod}.json`;
-export const asistanDersVar = (kod: string) => !!DOSYA[asistanYolu(kod)];
-export const asistanDosyasi = (kod: string) => DOSYA[asistanYolu(kod)] as (() => Promise<{ default: unknown }>) | undefined;
+/** Panel görünürlüğü (asistan:<dizin>/<kod>, kurul:<n>) */
+const kapali = (kod: string) => icerikGizli('asistan', `${kodBrans(kod)}_asistan/${kod}`);
+export const asistanDersVar = (kod: string) => !kapali(kod) && !!DOSYA[asistanYolu(kod)];
+export const asistanDosyasi = (kod: string) => (kapali(kod) ? undefined : DOSYA[asistanYolu(kod)]) as (() => Promise<{ default: unknown }>) | undefined;
 export const asistanDersleri = (brans: Brans) =>
-  Object.keys(DOSYA).filter((k) => k.includes(`/${brans}_asistan/`)).map((k) => k.replace(/^.*\/(\w+)\.json$/, '$1'));
-export const asistanDizinDosyasi = (brans: Brans) => DIZIN[`../../../data/${brans}_asistan/index.json`] as (() => Promise<{ default: any }>) | undefined;
+  Object.keys(DOSYA).filter((k) => k.includes(`/${brans}_asistan/`)).map((k) => k.replace(/^.*\/(\w+)\.json$/, '$1')).filter((k) => !kapali(k));
+export const asistanDizinDosyasi = (brans: Brans) => {
+  const f = DIZIN[`../../../data/${brans}_asistan/index.json`] as (() => Promise<{ default: any }>) | undefined;
+  if (!f) return undefined;
+  // Panelde kapatılan dersler dizinden süzülür
+  return () => f().then((m) => ({ ...m, default: { ...m.default, dersler: (m.default?.dersler || []).filter((x: any) => !kapali(String(x.kod))) } }));
+};

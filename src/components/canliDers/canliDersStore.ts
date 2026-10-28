@@ -283,7 +283,8 @@ export function cdDetayGetir(key: string, yenile = false): Promise<CdDetay> {
   const p = safeJsonFetch<CdDetay>(`/api/canli-ders/${encodeURIComponent(key)}`, { cache: 'no-store' } as RequestInit).then((r) => {
     if (!r.ok || !r.data || !Array.isArray(r.data.bolumler)) {
       detayCache.delete(key);
-      if (r.status !== 404 && cdCevrimdisiKayitlari()[key]) {
+      // 403 = yönetici içeriği kapattı (icerikKapali): cihazdaki kopyaya düşülmez
+      if (r.status !== 404 && r.status !== 403 && cdCevrimdisiKayitlari()[key]) {
         return import('./canliDersCevrimdisi').then((m) => m.cdYerelDetay(key)).then((d) => {
           if (!d) throw new Error(r.error || `Ders alınamadı (${r.status})`);
           surumKaydet(key, d.varyantlar as any);

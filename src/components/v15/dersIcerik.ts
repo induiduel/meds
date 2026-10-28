@@ -16,13 +16,17 @@ export interface DiPaket {
 }
 export interface DiSoru { id: string; kazanim: number; zorluk: string; soru: string; secenekler: Record<string, string>; dogru: string; aciklama: string }
 
+import { icerikGizli } from '../../services/siteAyar';
+
 const PAKETLER = import.meta.glob('../../data/ders_icerik/*.json') as Record<string, () => Promise<{ default: DiPaket }>>;
 const SORULAR = import.meta.glob('../../data/ornek_sorular/*/*.json') as Record<string, () => Promise<{ default: { kazanimlar: { no: number; metin: string; sorular: DiSoru[] }[] } }>>;
 const anahtar = (key: string) => key.replace(/-v\d+$/, '');
 const bul = <T,>(m: Record<string, T>, key: string) => Object.entries(m).find(([p]) => p.endsWith(`/${anahtar(key)}.json`))?.[1];
 
-export const dersIcerikVar = (key: string) => !!bul(PAKETLER, key);
-export const dersIcerikGetir = async (key: string) => (await bul(PAKETLER, key)?.())?.default || null;
+// Panel görünürlüğü (paket:<key>; ders/kurul kalıtımı): kapalı paketin sekmeleri öğrenciye hiç çıkmaz
+const paketKapali = (key: string) => icerikGizli('paket', anahtar(key));
+export const dersIcerikVar = (key: string) => !paketKapali(key) && !!bul(PAKETLER, key);
+export const dersIcerikGetir = async (key: string) => (paketKapali(key) ? null : (await bul(PAKETLER, key)?.())?.default || null);
 export const dersSorulariGetir = async (key: string): Promise<{ no: number; metin: string; sorular: DiSoru[] }[]> =>
   (await bul(SORULAR, key)?.())?.default.kazanimlar || [];
 

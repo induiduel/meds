@@ -12,14 +12,11 @@ import {
   Moon,
   Sun,
   ArrowLeft,
-  Workflow,
   GitMerge,
   GitBranch,
-  Table2,
   FlaskConical,
   Menu,
   ChevronDown,
-  Database,
   Library,
   HardDrive,
   Search,
@@ -52,11 +49,9 @@ import { AdminPanelModal } from '../AdminPanelModal';
 import { ManagePoolV14 } from '../v14/sections/ManagePoolV14';
 import { writeLocation } from '../../router';
 import { AdminEditQuestionModal } from '../AdminEditQuestionModal';
-import { DraftStudio } from './DraftStudio';
 import { useTheme } from '../../utils/theme';
 import { toast } from '../ui/Toast';
 import { ManageDraftsSection } from './ManageDraftsSection';
-import { ManageDataSection } from './ManageDataSection';
 import { ManageCatalogSection } from './ManageCatalogSection';
 import { ManagePhasesSection } from './ManagePhasesSection';
 import { ManageMergesSection } from './ManageMergesSection';
@@ -68,8 +63,6 @@ import { ManageModerationSection } from './ManageModerationSection';
 import { ManageUsersSection } from './ManageUsersSection';
 import { ManagePeopleSection } from './ManagePeopleSection';
 import { ManageSystemSection } from './ManageSystemSection';
-import { ManageAutomationSection } from './ManageAutomationSection';
-import { ManageDataCoreSection } from './ManageDataCoreSection';
 import { ManageNotebookLMSection } from './ManageNotebookLMSection';
 import { ManagePendingOperationsSection } from './ManagePendingOperationsSection';
 import { ManageHatSection } from './ManageHatSection';
@@ -106,7 +99,13 @@ import {
   deleteDraftEverywhere,
 } from '../../services/manageConsoleService';
 
-export type ManageSection = 'overview' | 'pending' | 'inbox' | 'intake' | 'pool' | 'catalog' | 'data' | 'phases' | 'merges' | 'raw_pool' | 'ders_isci' | 'drafts' | 'studio' | 'moderation' | 'people' | 'users' | 'scripts' | 'system' | 'automation' | 'datacore' | 'notebooklm' | 'database' | 'sesli' | 'hat' | 'dbexplorer' | 'shortcuts' | 'kamp' | 'study' | 'basarim' | 'gorev';
+/** Soru kaydını v16 panelinde açar (havuz ya da çıkmış); eski "Tüm veriler" sıçramasının yerine */
+function openInV16(qId: string, ds?: string) {
+  const past = ds === 'past' || qId.startsWith('past-');
+  window.location.assign(`/manage/${past ? 'sorular/cikmis' : 'sorular/havuz'}/${encodeURIComponent(qId)}?kabuk=v16`);
+}
+
+export type ManageSection = 'overview' | 'pending' | 'inbox' | 'intake' | 'pool' | 'catalog' | 'phases' | 'merges' | 'raw_pool' | 'ders_isci' | 'drafts' | 'moderation' | 'people' | 'users' | 'scripts' | 'system' | 'automation' | 'notebooklm' | 'database' | 'sesli' | 'hat' | 'dbexplorer' | 'shortcuts' | 'kamp' | 'study' | 'basarim' | 'gorev';
 
 interface ManageConsoleProps {
   adminEmail: string;
@@ -132,18 +131,15 @@ const SECTIONS: { id: ManageSection; slug: string; label: string; hint: string; 
   { id: 'moderation', slug: 'moderasyon', label: 'Moderasyon', hint: 'Şikâyet edilen soruyu gör, düzelt ya da kaldır.', icon: Wrench, group: 'Genel', keywords: 'şikayet hata bildirimi' },
   { id: 'pool', slug: 'soru-havuzu', label: 'Soru havuzu', hint: 'Kurul sorularını düzenle, sil, içe aktar; taslakları kümele.', icon: Library, group: 'İçerik', keywords: 'kurul soru içe aktar yükle çıkmış' },
   { id: 'catalog', slug: 'veri-katalogu', label: 'Veri kataloğu', hint: 'Her veri türü tek yerde: ara, sınıflara göre süz, kaydı düzenle, değerlendir (onaylı / inceleme / sorunlu), etiketle ve ilişkileri gez.', icon: Boxes, group: 'İçerik', keywords: 'katalog sınıflandır etiket değerlendir ilişki deste kazanım sözlük kart hastalık özet geri bildirim müzik' },
-  { id: 'data', slug: 'tum-veriler', label: 'Tüm veriler', hint: 'Her veri kümesi tek tabloda: ara, sırala, seç, toplu işlem yap, CSV al.', icon: Table2, group: 'İçerik', keywords: 'tablo csv toplu' },
   { id: 'phases', slug: 'fazlar', label: 'Faz verileri', hint: 'Soru bazında faz çıktıları: gez, elle düzelt, arama testini çalıştır.', icon: FlaskConical, group: 'İçerik', keywords: 'faz 14 faz 15' },
   { id: 'sesli', slug: 'sesli-anlatim', label: 'Sesli anlatım', hint: 'Her dersin konuşma metni ve MP3 sesi: dinle, indir, sağlayıcıyı gör; alternatif ses (Gemini ücretsiz/ücretli) oluştur; seslendirme kuyruğunu yönet.', icon: AudioLines, group: 'İçerik', keywords: 'ses mp3 sesli anlatım dinle indir emel gemini aoede seslendirme podcast' },
-  { id: 'ders_isci', slug: 'yeni-dersler', label: 'Yeni dersler', hint: 'Drive\'a eklenen ders PDF\'lerinden ders işçisinin ürettiği paketler: incele, önizle, onayla; 2026-27 checklist durumu.', icon: BookOpenCheck, group: 'İçerik', keywords: 'ders işçisi drive pdf onay taslak deste checklist yeni ders' },
+  { id: 'ders_isci', slug: 'yeni-dersler', label: 'Ders işçisi (arşiv)', hint: 'Durdurulan ders işçisinin paketleri: salt okunur arşiv (kural 20).', icon: BookOpenCheck, group: 'İçerik', keywords: 'ders işçisi drive pdf onay taslak deste checklist yeni ders' },
   { id: 'kamp', slug: 'kamp-tuyolari', label: 'Kamp tüyoları', hint: 'Öğrencilerin önerdiği hoca tüyoları: onayla, düzenleyip onayla, reddet; onaylılar ve doğrudan ekleme. Onaylılar gece kurul kampına işlenir.', icon: Lightbulb, group: 'İçerik', keywords: 'kamp tüyo ipucu hoca öneri onay kurul kampı' },
   { id: 'raw_pool', slug: 'ham-havuz', label: 'Ham soru havuzu', hint: 'Kullanıcı soruları ve katkıları (ipucu, şık, itiraz, yorum, oy) soru başına tek kümede; silinmez. Görüntüle, sınıflandır, düzenle, JSON/CSV al.', icon: Archive, group: 'İçerik', keywords: 'ham veri defter küme kullanıcı katkı ipucu şık itiraz dışa aktar json' },
   { id: 'merges', slug: 'birlesenler', label: 'Birleştirilen sorular', hint: 'Kopya çıkmış sorular: yan yana karşılaştır, asıl soruyu seç ya da ayır.', icon: GitMerge, group: 'İçerik', keywords: 'kopya birleştir' },
-  { id: 'datacore', slug: 'veri-merkezi', label: 'Veri Merkezi (v2)', hint: 'Bağımsız Core v2 hattı: sorular, kazanım, ders notu bağları, kavram grafı, toplu tamamlama.', icon: Database, group: 'İçerik', keywords: 'core kazanım graf' },
   { id: 'notebooklm', slug: 'notebooklm', label: 'NotebookLM Stüdyosu', hint: 'NotebookLM JSON/MD çıktılarını yükle, alternatif olarak sakla, orijinalle karşılaştır ve tercihi seç.', icon: Brain, group: 'İçerik', keywords: 'notebooklm ai json alternatif rag soru deste spot' },
   { id: 'intake', slug: 'serbest-girdiler', label: 'Serbest girdiler', hint: 'Öğrencilerin tek kutuya yazdığı metinler ve ücretsiz Gemini ajanlarının ayrıştırması: kanıt, güven, olumsuz kök, yeniden ayrıştır.', icon: MessageSquareText, group: 'İçerik', keywords: 'serbest metin girdi ayrıştır ajan gemini hatırlanan şık kök kanıt' },
   { id: 'drafts', slug: 'taslaklar', label: 'Taslaklar', hint: 'Öğrenci taslaklarını kümele, birleştir, düzenle ya da AI ile tam soruya dönüştür.', icon: Layers, group: 'İçerik', keywords: 'parça taslak' },
-  { id: 'studio', slug: 'studyo', label: 'Taslak stüdyosu', hint: 'Parçaları elle eşle: ağaç, pano, akış ve terim görünümleri.', icon: Workflow, group: 'İçerik', keywords: 'eşle pano' },
   { id: 'basarim', slug: 'puan-atp', label: 'Puan ve ATP', hint: 'Kişi bazında puan, ATP, kilit ve gizli unvan: ekle, düş, geri al; ödül defteri ve kalıcı yönetim günlüğü.', icon: Coins, group: 'Topluluk', keywords: 'puan atp başarım hedef sıralama kilit unvan gizli muaf ödül kuyruk mağaza' },
   { id: 'people', slug: 'kisiler', label: 'Kişiler', hint: 'Her kullanıcının tüm izi: cihazlar, kullanım süresi, skorlar, etkinlik, yorumlar, notlar, sorular, şıklar, beğeniler ve bildirimler — canlı.', icon: UserSearch, group: 'Topluluk', keywords: 'kişi kullanıcı cihaz süre skor yorum not bildirim şikayet beğeni öneri etkinlik geçmiş çevrimiçi' },
   { id: 'gorev', slug: 'giris-gorev', label: 'Giriş ve görevler', hint: 'Ardışık giriş serileri; günlük ve haftalık çalışma ile soru çözme görevleri, kim hedefi tutturdu.', icon: BookOpenCheck, group: 'Topluluk', keywords: 'giriş seri ardışık görev günlük haftalık çalışma süre soru hedef' },
@@ -151,7 +147,7 @@ const SECTIONS: { id: ManageSection; slug: string; label: string; hint: string; 
   { id: 'users', slug: 'kullanicilar', label: 'Kullanıcılar', hint: 'Katkılar, hesaplar, roller ve e-posta.', icon: Users, group: 'Topluluk', keywords: 'öğrenci hesap rol smtp e-posta' },
   { id: 'scripts', slug: 'betikler', label: 'Betikler', hint: 'Veri hattı betiklerini ve zincirleri çalıştır, çıktıyı canlı izle.', icon: Terminal, group: 'Sistem', keywords: 'script görev zincir' },
   { id: 'system', slug: 'sistem', label: 'Sistem ve günlükler', hint: 'Veritabanı ve AI sağlığı, servisler, tarayıcı konsolu.', icon: Activity, group: 'Sistem', keywords: 'log sağlık servis' },
-  { id: 'automation', slug: 'otomasyon', label: 'Otomasyon', hint: 'Zamanlanmış işler, AI pencereleri, anahtarlar; Drive eşitlemesi ve masaüstü servisleri.', icon: Settings, group: 'Sistem', keywords: 'drive yedek anahtar zamanla' },
+  { id: 'automation', slug: 'otomasyon', label: 'Otomasyon', hint: 'Drive eşitlemesi ve masaüstü servisleri (zamanlayıcılar maskeli, elle çalışır).', icon: Settings, group: 'Sistem', keywords: 'drive servis eşitleme' },
   { id: 'hat', slug: 'hat', label: 'Hat panosu', hint: 'Tam otomatik içerik hattının aşamaları: otomatik/elle/plan durumu, bağımlılıklar, eksikler, son çalışma kodu ve günlük.', icon: GitBranch, group: 'Sistem', keywords: 'hat otomasyon aşama gece pipeline olası soru durum log' },
   { id: 'dbexplorer', slug: 'veritabani-gezgini', label: 'Veritabanı gezgini', hint: 'meds-pg\'nin tüm tabloları: satırları ara, sırala, düzenle, ekle, sil; salt okunur SQL ve CSV.', icon: DatabaseZap, group: 'Sistem', keywords: 'postgres pg sql tablo satır sorgu meds-pg veritabanı düzenle user_data cihaz' },
   { id: 'shortcuts', slug: 'kisayollar', label: 'Kısayollar', hint: 'Veri ekranları, sitenin tüm sayfaları, API/sağlık uçları, dış konsollar (Drive, GitHub, Firebase, Oracle, Cloudflare) ve veritabanı bağlantı komutları.', icon: Link2, group: 'Sistem', keywords: 'kısayol bağlantı link site sayfa github firebase oracle cloudflare drive psql tünel' },
@@ -160,9 +156,9 @@ const SECTIONS: { id: ManageSection; slug: string; label: string; hint: string; 
 /** v12 "Net": bölümler işe göre gruplanır (v10/v11 yukarıdaki sırayı ve grup adlarını korur). */
 const V12_GROUPS: { label: string; ids: ManageSection[] }[] = [
   { label: 'Gelen', ids: ['inbox', 'pending', 'moderation'] },
-  { label: 'Sorular', ids: ['pool', 'raw_pool', 'intake', 'drafts', 'studio', 'merges'] },
+  { label: 'Sorular', ids: ['pool', 'raw_pool', 'intake', 'drafts', 'merges'] },
   { label: 'Öğrenme içeriği', ids: ['ders_isci', 'sesli', 'kamp', 'catalog', 'notebooklm'] },
-  { label: 'Veri', ids: ['dbexplorer', 'data', 'phases', 'datacore', 'database', 'shortcuts'] },
+  { label: 'Veri', ids: ['dbexplorer', 'phases', 'database', 'shortcuts'] },
   { label: 'Kişiler ve denetim', ids: ['people', 'gorev', 'study', 'basarim', 'users'] },
   { label: 'Sistem', ids: ['system', 'automation', 'hat', 'scripts'] },
 ];
@@ -240,7 +236,6 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
   const [menuOpen, setMenuOpen] = useState(false);
   const [paletteOpen, setPaletteOpen] = useState(false);
   const [usersTab, setUsersTab] = useState<'activity' | 'accounts'>('activity');
-  const [autoTab, setAutoTab] = useState<'schedule' | 'services'>('schedule');
   const sectionAllowed = (s: ManageSection) => !moderatorOnly || (MODERATOR_SECTIONS as readonly string[]).includes(s);
   const setSection = (s: ManageSection, opts: { replace?: boolean } = {}) => {
     if (!sectionAllowed(s)) {
@@ -344,7 +339,6 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
   const [busyAction, setBusyAction] = useState<string | null>(null);
   const [focusReportId, setFocusReportId] = useState('');
   const [editingDraft, setEditingDraft] = useState<QuestionItem | null>(null);
-  const [dataJump, setDataJump] = useState<{ id: string; dsId: 'questions' | 'past' } | null>(null);
 
   useEffect(() => {
     consoleLogBuffer.install();
@@ -674,9 +668,8 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
           onPublishDraft={(d) => void handlePublishDraft(d)}
           onDeleteDraft={(d) => void handleDeleteDraft(d)}
           onNavigateToData={(qId, ds) => {
-            const resolvedDs = ds || (qId.startsWith('past-') ? 'past' : 'questions');
-            setDataJump({ id: qId, dsId: resolvedDs });
-            setSection('data');
+            // "Tüm veriler" kaldırıldı (2026-10-28): kayıt v16 havuz/çıkmış sayfasında açılır
+            openInV16(qId, ds);
           }}
         />
       )}
@@ -700,17 +693,6 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
       )}
 
       {section === 'catalog' && <ManageCatalogSection adminEmail={adminEmail} />}
-      {section === 'data' && (
-        <ManageDataSection
-          adminEmail={adminEmail}
-          questions={questions}
-          committees={committees}
-          onRefreshData={onRefreshData}
-          initialFocusId={dataJump?.id}
-          initialDsId={dataJump?.dsId}
-          onClearFocus={() => setDataJump(null)}
-        />
-      )}
       {section === 'phases' && <ManagePhasesSection adminEmail={adminEmail} />}
       {section === 'merges' && <ManageMergesSection adminEmail={adminEmail} />}
       {section === 'raw_pool' && <ManageRawPoolSection adminEmail={adminEmail} />}
@@ -727,17 +709,6 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
         <ManageDraftsSection
           adminEmail={adminEmail}
           adminName="Yönetici"
-          committeeId={selectedCommitteeId}
-          committeeName={committeeName}
-          questions={questions}
-          onRefreshData={refreshAll}
-          notify={notify}
-        />
-      )}
-
-      {section === 'studio' && (
-        <DraftStudio
-          adminEmail={adminEmail}
           committeeId={selectedCommitteeId}
           committeeName={committeeName}
           questions={questions}
@@ -803,7 +774,6 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
       {section === 'people' && <ManagePeopleSection adminEmail={adminEmail} notify={notify} />}
       {section === 'scripts' && <AdminScriptsTab adminEmail={adminEmail} onRefreshAllData={onRefreshData} />}
       {section === 'system' && <ManageSystemSection notify={notify} />}
-      {section === 'datacore' && <ManageDataCoreSection notify={notify} />}
       {section === 'notebooklm' && <ManageNotebookLMSection />}
       {section === 'hat' && <ManageHatSection adminEmail={adminEmail} />}
       {section === 'kamp' && <ManageKampSection adminEmail={adminEmail} />}
@@ -812,11 +782,8 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
       {section === 'gorev' && <ManageGorevTakip notify={notify} />}
       {section === 'study' && <ManageStudyProgress notify={notify} />}
       {section === 'shortcuts' && <ManageShortcuts notify={notify} />}
-      {section === 'automation' && <Tabs14 label="Otomasyon görünümü" value={autoTab} onChange={setAutoTab} options={[{ id: 'schedule', label: 'Zamanlama ve anahtarlar' }, { id: 'services', label: 'Drive ve servisler' }]} />}
-      {section === 'automation' && autoTab === 'schedule' && (
-        <ManageAutomationSection adminEmail={adminEmail} selectedCommitteeId={selectedCommitteeId} onRefreshData={onRefreshData} notify={notify} />
-      )}
-      {section === 'automation' && autoTab === 'services' && (
+      {/* "Zamanlama ve anahtarlar" kaldırıldı (2026-10-28): zamanlayıcılar maskeli (kural 20), tarayıcıda anahtar saklanmaz */}
+      {section === 'automation' && (
         <AdminPanelModal
           variant="embedded"
           tab="automations"
@@ -894,7 +861,7 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
           theme={theme}
           onToggleTheme={toggleTheme}
           bodyDensity={density}
-          wide={section === 'studio'}
+          wide={false}
           fullscreen={fullscreen}
         >
           {section === 'overview' ? (
@@ -913,8 +880,7 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
               }}
               onEditDraft={setEditingDraft}
               onOpenQuestion={(qId) => {
-                setDataJump({ id: qId, dsId: qId.startsWith('past-') ? 'past' : 'questions' });
-                setSection('data');
+                openInV16(qId);
               }}
             />
           ) : (
@@ -1026,7 +992,7 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
           data-density={density}
           aria-label={current.label}
         >
-          <div className={`ms-cinner ${section === 'studio' ? '!max-w-none' : ''}`}>
+          <div className="ms-cinner">
             {/* Telefon/tablet: başlık üst çubukta menü düğmesinde; kısa açıklama burada */}
             <div className="msv-mhead">
               <p>{current.hint}</p>

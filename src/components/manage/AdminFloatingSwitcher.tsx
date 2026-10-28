@@ -22,7 +22,7 @@ function getContextualAdminTarget(route: AppRoute): ContextualAdminLink {
       return { slug: 'soru-havuzu', label: 'Soru Havuzu Yönetimi' };
     case 'past_exams':
     case 'cikmis_cozucu':
-      return { slug: 'tum-veriler', label: 'Çıkmış Soru Verisi' };
+      return { slug: 'veri-katalogu', label: 'Çıkmış Soru Verisi' };
     case 'kamp':
     case 'hub_kamplar':
     case 'son_prova':

@@ -313,7 +313,12 @@ const OtomatikDersIsci: React.FC<{ adminEmail: string }> = ({ adminEmail }) => {
   const [not, setNot] = useState('');
   const [busy, setBusy] = useState(false);
 
-  const api = (yol: string, init?: RequestInit) => safeJsonFetch<any>(`/api/admin/ders-isci${yol}`, { headers, ...init });
+  // Salt okunur arşiv (2026-10-28): Oracle ders işçisi kural 20 ile durduruldu; yeni ders üretimi elle (el kitabı §19).
+  // Yazma istekleri (onay, kuyruk, tarama, ayar) sunucuya hiç gitmez.
+  const api = (yol: string, init?: RequestInit) =>
+    init?.method && init.method !== 'GET'
+      ? Promise.resolve({ ok: false, status: 423, data: null, error: 'Ders işçisi arşivde (salt okunur). Yeni ders elle üretilir: KURUL_OTOMASYON_EL_KITABI §19.' } as any)
+      : safeJsonFetch<any>(`/api/admin/ders-isci${yol}`, { headers, ...init });
 
   const [tazele, setTazele] = useState(0);
   const yukle = async () => {
@@ -524,6 +529,9 @@ const OtomatikDersIsci: React.FC<{ adminEmail: string }> = ({ adminEmail }) => {
 
   return (
     <div className="flex flex-col gap-3">
+      <div role="note" className="rounded-xl border border-line px-3 py-2 text-sm text-ink-2">
+        <b>Salt okunur arşiv.</b> Ders işçisi 2026-10-27'de durduruldu (kural 20); buradaki düğmeler işlem yapmaz. Yeni ders üretimi elle yapılır.
+      </div>
       {!hata ? (
         <IsciKontrol
           api={api}

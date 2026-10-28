@@ -13,6 +13,8 @@ import DersIcerikV15 from './DersIcerikV15';
 import DersIstatV15 from './DersIstatV15';
 import DersPdfEkranV15 from './DersPdfEkranV15';
 import { DI_BOLUMLER, dersIcerikGetir, type DiBolum, type DiPaket } from './dersIcerik';
+import IcerikKapaliV15 from './IcerikKapaliV15';
+import { icerikGizli, useSiteAyar } from '../../services/siteAyar';
 import '../../styles/v15/dersler.css';
 
 /**
@@ -56,6 +58,7 @@ export default function DersDetayV15() {
     setPaket(null);
     if (key) dersIcerikGetir(key).then(setPaket).catch(() => undefined);
   }, [key]);
+  useSiteAyar();
   const { dersler } = useDersListesi();
   const ozet = useMemo(() => dersler?.find((d) => d.key === key) || null, [dersler, key]);
   const [detay, setDetay] = useState<CdDetay | null>(null);
@@ -144,8 +147,10 @@ export default function DersDetayV15() {
   const [grupAcik, setGrupAcik] = useState<Record<string, boolean>>(() => { try { return JSON.parse(localStorage.getItem(GRUP_KEY) || '{}'); } catch { return {}; } });
   const grupYaz = (id: string, ac: boolean) => setGrupAcik((g) => { if (g[id] === ac) return g; const n = { ...g, [id]: ac }; try { localStorage.setItem(GRUP_KEY, JSON.stringify(n)); } catch { /* yok */ } return n; });
   if (!key) return <p className="dd15-bos v15-card">Ders bulunamadı.</p>;
+  if (icerikGizli('sesli', key)) return <IcerikKapaliV15 ne="Bu ders" geri={{ yol: '/dersler', etiket: 'Derslere dön' }} />;
   if (bolumAd === 'pdf') return <DersPdfEkranV15 dersKey={key} />;
   const altSayfa = DI_BOLUMLER.find((b) => b.id === bolumAd);
+  if (altSayfa && icerikGizli('paket', key.replace(/-v\d+$/, ''))) return <IcerikKapaliV15 ne="Bu içerik bölümü" geri={{ yol: pathFor('ders_detay', key), etiket: 'Derse dön' }} />;
   if (altSayfa) return <DersIcerikV15 dersKey={key} bolum={altSayfa.id} />;
   const dinle = pathFor('canli_ders', key);
   const cikmis = detay?.cikmisKonum || [];

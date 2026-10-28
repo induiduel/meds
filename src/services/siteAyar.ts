@@ -7,6 +7,8 @@
  */
 import { useSyncExternalStore } from 'react';
 import { GIZLI_SAYFALAR, KAPALI_SAYFALAR } from '../components/merkez/sayfaSabitleri';
+import { icerikDurumu, type IcerikTur } from './icerikGorunurlukKural';
+export type { IcerikTur } from './icerikGorunurlukKural';
 
 export type SayfaDurumu = 'acik' | 'gizli' | 'kapali' | 'yalniz-yonetici';
 export type Duyuru = { acik: boolean; metin: string; ton: 'bilgi' | 'uyari' | 'hata'; baglanti?: string; baslangic?: string; bitis?: string; kurul?: number[]; kapatilabilir?: boolean };
@@ -111,6 +113,18 @@ export function bayrak(ad: string, varsayilan = false): boolean {
 export function gorunurluk(anahtar: string): 'acik' | 'gizli' | 'yalniz-yonetici' {
   return ayar.gorunurluk[anahtar] || 'acik';
 }
+
+/**
+ * İçerik görünürlüğü (öğrenci): ders/kurul/deste/sesli/paket/onem/asistan/cozucu kapalı mı. Yönetici her şeyi görür.
+ * Kural (ders ve kurul kalıtımı) icerikGorunurlukKural.ts'de; sunucu kapısı aynı kuralı kullanır (yonetim16/siteAyar.ts icerikKapisi).
+ * Bileşen useSiteAyar() ile abone olmalı ki panel değişince liste yeniden süzülsün.
+ */
+export function icerikGizli(tur: IcerikTur, id: string | number | null | undefined, admin = yonetici): boolean {
+  if (admin || id == null || id === '') return false;
+  return icerikDurumu(ayar.gorunurluk, tur, String(id)) !== 'acik';
+}
+export const kurulGizli = (n: number, admin = yonetici) => icerikGizli('kurul', n, admin);
+export const yoneticiMi = () => yonetici;
 
 /**
  * Saf hesap (yönetim paneli önizlemesi): verilen ayarla bir öğrencinin bu sayfayı nasıl gördüğü.

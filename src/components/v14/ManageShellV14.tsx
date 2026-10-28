@@ -299,7 +299,7 @@ export const ManageShellV14: React.FC<{
           </button>
           <button
             type="button"
-            className={`m14-mobtab ${['dbexplorer', 'pool', 'raw_pool', 'data', 'datacore', 'database'].includes(p.section) ? 'on' : ''}`}
+            className={`m14-mobtab ${['dbexplorer', 'pool', 'raw_pool', 'database'].includes(p.section) ? 'on' : ''}`}
             onClick={() => p.onPick('dbexplorer')}
           >
             <DatabaseZap aria-hidden="true" />

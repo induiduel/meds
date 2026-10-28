@@ -170,8 +170,9 @@ import { registerDataCatalogRoutes } from './src/services/dataCatalogService.ts'
 import { registerRagRelatedRoutes } from './src/services/ragRelatedRoutes.ts';
 import { registerBakimHataRoutes } from './src/services/bakimHataRoutes.ts';
 import { denetimAraKatmani, registerDenetimRoutes } from './src/services/yonetim16/denetim.ts';
-import { registerSiteAyarRoutes, bayrakKapisi } from './src/services/yonetim16/siteAyar.ts';
+import { registerSiteAyarRoutes, bayrakKapisi, icerikKapisi } from './src/services/yonetim16/siteAyar.ts';
 import { registerOyunYonetimRoutes } from './src/services/yonetim16/oyunYonetim.ts';
+import { registerEkSayfa16Routes } from './src/services/yonetim16/ekSayfalar.ts';
 import { registerSiteSurumRoutes } from './src/services/yonetim16/siteSurum.ts';
 import { registerOzetRoutes } from './src/services/yonetim16/ozet.ts';
 import { registerYonetimTopluluk } from './src/services/yonetim16/topluluk.ts';
@@ -414,6 +415,8 @@ app.use(bayrakKapisi({
   isAdmin: (req) => isRequestAdmin(req),
   kullaniciVar: (uid, email) => loadUsers().some((u) => (uid && u.uid === uid) || (email && String(u.email || '').toLowerCase() === email)),
 }));
+// Yönetim v16 · içerik görünürlüğü sunucu kapısı (ders/kurul/deste/sesli kapalıysa öğrenciye verilmez)
+app.use(icerikKapisi({ isAdmin: (req) => isRequestAdmin(req) }));
 // AB17/AB18: bakım kipi (MEDS_BAKIM=1 ya da POST /api/admin/bakim; varsayılan kapalı) + istemci hata bildirimi
 const bakimCtl = registerBakimHataRoutes(app, { dataDir: path.resolve(__dirname, 'data'), requireAdmin });
 
@@ -6339,26 +6342,6 @@ app.post('/api/past-questions/similar', async (req, res) => {
   }
 });
 
-// Taslak stüdyosu · AI ile dönüştür: bulut + yerel Ollama modelleri (yönetici)
-app.get('/api/studio/ai-models', requireAdmin, async (_req, res) => {
-  try {
-    const { listStudioAiModels } = await import('./src/services/studioAiService.ts');
-    res.json(await listStudioAiModels());
-  } catch (err: any) {
-    res.status(500).json({ error: err.message });
-  }
-});
-app.post('/api/studio/ai-generate', requireAdmin, async (req, res) => {
-  const { target, input } = req.body || {};
-  if (!target || !input || !Array.isArray(input.fragments)) return res.status(400).json({ error: 'target ve input.fragments gerekli' });
-  try {
-    const { generateStudioQuestion } = await import('./src/services/studioAiService.ts');
-    res.json(await generateStudioQuestion(String(target), input));
-  } catch (err: any) {
-    res.status(500).json({ error: err.message });
-  }
-});
-
 // Soru eklerken sağ paneldeki "Bulunan kaynaklar": yalnızca arama, AI maliyeti yok
 app.post('/api/sources/for-fragment', async (req, res) => {
   const { text, committeeId, discipline } = req.body || {};
@@ -11754,6 +11737,9 @@ registerOzetRoutes(app, {
 registerSorularRoutes(app, { rootDir: __dirname, dataDir: DATA_DIR, requireAdmin, havuz: () => db.questions || [], havuzKaydet: (q) => saveQuestionLive(q), cikmisHam: () => getPastQuestionsDb(), cikmisSitede: () => getServedPastList().list, cikmisKaydet: (l) => savePastQuestionsDb(l), cikmisOnbellekSil: () => { pastListCache = null; }, kardeslereYaz: syncPastMergeSiblings, cikmisAynala: (q) => mirrorPastQuestionToDb(q), yayinla: (ev, d) => broadcastRealtimeEvent(ev, d), hamOzet: (id) => ledgerSummary(id), hamKimlikler: () => rawLedger.listLedgerIds(), faz14Liste: () => phase14Queue.read(), icerikDuzenleme: pastContentEdit, ayniGorunum: sameDisplayedContent, kimOf: (req) => verifiedEmail(req) || String((req as any).adminAuth?.via || 'yönetici') });
 
 registerIcerik16Routes(app, { rootDir: __dirname, dataDir: DATA_DIR, requireAdmin, broadcast: (ev, d) => broadcastRealtimeEvent(ev, d), getDecks: getDecksDb }); // Yönetim v16: Kurullar/dersler, Öğrenme, Kaynaklar
+
+// Yönetim v16 › Taslaklar, Gizlilik talepleri, Quiz havuzu, Ses kuyruğu (src/services/yonetim16/ekSayfalar.ts)
+registerEkSayfa16Routes(app, { rootDir: __dirname, dataDir: DATA_DIR, requireAdmin, havuz: () => db.questions || [], broadcastAdmin: (ev, d) => broadcastRealtimeEvent(ev, d, true), dogrulanmisKisi: (req) => { const uid = verifiedUid(req); return uid ? { uid, email: verifiedEmail(req) } : null; } });
 
 // Yönetim v16 › Topluluk + Sistem (src/services/yonetim16/{topluluk,sistem}.ts)
 registerYonetimTopluluk(app, { requireAdmin, isPgOnline: () => pgOnline, broadcast: (ev, d) => broadcastRealtimeEvent(ev, d), broadcastAdmin: (ev, d) => broadcastRealtimeEvent(ev, d, true), kimOf: (req) => verifiedEmail(req) || String((req as any).adminAuth?.via || 'yönetici') });

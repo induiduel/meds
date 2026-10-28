@@ -21,6 +21,8 @@ import {
   Bot,
 } from 'lucide-react';
 import { DECK_CATALOG, deckName, loadDeck, loadDeckCatalog } from '../../data/deckStore';
+import { icerikGizli, useSiteAyar } from '../../services/siteAyar';
+import IcerikKapaliV15 from '../v15/IcerikKapaliV15';
 import { OPEN_REVIEW_FLAG } from '../../services/learnReview';
 const LearnReview = React.lazy(() => import('./LearnReview').then((m) => ({ default: m.LearnReview })));
 import {
@@ -678,7 +680,10 @@ export const InteractiveDeckView: React.FC<InteractiveDeckViewProps> = ({ initia
   // Panelden deste değişince (canlı içerik): liste yeniden çizilir, açık deste yeniden yüklenir
   const [liveTick, setLiveTick] = useState(0);
   const [catalogTick, setCatalogTick] = useState(0);
-  const allDecks = useMemo(() => [...DECK_CATALOG], [catalogTick]);
+  // Panel görünürlüğü (deste:<id>, ders:<id>, kurul:<n>): kapalı desteler öğrencinin kitaplığından kalkar; yönetici hepsini görür
+  const siteAyar = useSiteAyar();
+  const allDecks = useMemo(() => DECK_CATALOG.filter((d) => !icerikGizli('deste', d.id)), [catalogTick, siteAyar]);
+  const desteKapali = !!deckId && icerikGizli('deste', deckId);
   // Sürümlü dersler (V1, V2…): listede grubun EN YENİ sürümü (V2) görünür — adı, slayt sayısı ve ilerlemesiyle;
   // açarken sürüm penceresinde en yeni sürüm seçili/vurgulu gelir, ders ekranında da sürüm anahtarı vardır.
   const versionGroups = useMemo(() => {
@@ -772,7 +777,7 @@ export const InteractiveDeckView: React.FC<InteractiveDeckViewProps> = ({ initia
     return () => window.removeEventListener('medsoru:decks-changed', onChange);
   }, []);
   useEffect(() => {
-    if (!deckId) { setActiveDeck(null); return; }
+    if (!deckId || desteKapali) { setActiveDeck(null); return; }
     let alive = true;
     if (!liveTick) setDeckLoading(true);
     loadDeck<InteractiveDeck>(deckId).then((d) => {
@@ -788,7 +793,7 @@ export const InteractiveDeckView: React.FC<InteractiveDeckViewProps> = ({ initia
       }
     });
     return () => { alive = false; };
-  }, [deckId, liveTick]); // eslint-disable-line react-hooks/exhaustive-deps
+  }, [deckId, liveTick, desteKapali]); // eslint-disable-line react-hooks/exhaustive-deps
 
   // PDF'i Drive'da olmayan ders: önce uyarı, onaydan sonra ders (kontrol sürerken iskelet)
   const [pdfGate, acceptNoPdf] = useNoPdfGate(deckId);
@@ -850,6 +855,7 @@ export const InteractiveDeckView: React.FC<InteractiveDeckViewProps> = ({ initia
     onDeckChange?.(id);
   };
 
+  if (desteKapali) return <IcerikKapaliV15 ne="Bu ders" geri={{ yol: '/ogren', etiket: 'Öğren kitaplığına dön' }} />;
   return (
     <div className="flex flex-col gap-3 sm:gap-4 min-w-0">
       <Library

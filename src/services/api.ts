@@ -437,39 +437,6 @@ export interface QuestionIntakeSummary {
   }[];
 }
 
-export interface StudioAiModels {
-  cloud: { target: string; label: string; available: boolean };
-  local: { target: string; label: string; available: boolean }[];
-  embed: { model: string; available: boolean; role: string };
-  ollamaReachable: boolean;
-}
-export interface StudioAiInputLite {
-  committeeId?: string;
-  discipline?: string;
-  topic?: string;
-  stem?: string;
-  options?: Partial<Record<'A' | 'B' | 'C' | 'D' | 'E', string>>;
-  answer?: string;
-  fragments: { kind: string; text: string }[];
-  terms?: string[];
-  notes?: string;
-}
-export interface StudioAiResultLite {
-  target: string;
-  label: string;
-  ok: boolean;
-  error?: string;
-  ms: number;
-  question?: {
-    stem: string;
-    options: { key: 'A' | 'B' | 'C' | 'D' | 'E'; text: string }[];
-    correctAnswer: 'A' | 'B' | 'C' | 'D' | 'E';
-    explanation: string;
-    confidence: number;
-  };
-  sources: SourceRefLite[];
-  reranked?: boolean;
-}
 
 export interface SourceRefLite {
   documentId: string;

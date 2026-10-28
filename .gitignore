@@ -116,6 +116,7 @@ data/servis_kontrol/
 # Kimlik doğrulama günlükleri (IP içerir)
 data/admin_auth_log.jsonl
 data/moderator_audit.jsonl
+data/gizlilik_talepleri.json
 data/ders_video/
 
 # Başarım kayıtları (kişi başına puan/ATP, ödemeler) — canlı veri

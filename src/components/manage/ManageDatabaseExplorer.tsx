@@ -22,7 +22,7 @@ const KAYNAK_BOLUM: Record<string, { slug: string; label: string }> = {
   past_questions: { slug: 'veri-katalogu', label: 'Veri kataloğu › Çıkmış sorular' },
   questions: { slug: 'soru-havuzu', label: 'Soru havuzu' },
   practice_questions: { slug: 'veri-katalogu', label: 'Veri kataloğu › Örnek sorular' },
-  lecture_notes: { slug: 'tum-veriler', label: 'Tüm veriler' },
+  lecture_notes: { slug: 'veri-katalogu', label: 'Veri kataloğu' },
   committees: { slug: 'soru-havuzu', label: 'Soru havuzu' },
   user_data: { slug: 'kisiler', label: 'Kişiler' },
   user_devices: { slug: 'kisiler', label: 'Kişiler' },

@@ -9,6 +9,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { linkClick, navigateTo, type AppRoute } from '../../router';
 import { KURULLAR, aktifKurul } from '../../services/kurulTakvimi';
+import { kurulGizli, useSiteAyar } from '../../services/siteAyar';
 import { kurulParam } from './KurulSuzgec';
 import '../../styles/kurul-suzgec.css';
 
@@ -28,7 +29,14 @@ export function kurulKaydet(k: number) {
   try { localStorage.setItem(ANAHTAR, JSON.stringify({ k, aktif: takvim() })); } catch { /* özel pencere */ }
 }
 /** Adreste kurul yoksa açılacak kurul */
-export const varsayilanKurul = () => kayitliKurul() ?? takvim();
+export const varsayilanKurul = () => {
+  const k = kayitliKurul();
+  if (k && !kurulGizli(k)) return k;
+  const t = takvim();
+  // Panelde kapatılan kurul (kurul:<n>) varsayılan olamaz: takvimdeki kurul kapalıysa açık olan en yakın önceki kurul
+  if (!kurulGizli(t)) return t;
+  return [...KURUL_NOLAR].sort((a, b) => Math.abs(a - t) - Math.abs(b - t) || a - b).find((x) => !kurulGizli(x)) ?? t;
+};
 
 /** Adresteki kurul ya da varsayılan; geri/ileri ve gezinmeyle güncellenir */
 export function useSeciliKurul(): number {
@@ -80,6 +88,7 @@ export interface KurulSeciciProps {
 export const KurulSecici: React.FC<KurulSeciciProps> = ({ secili, yol, tumuYol, icerik, className }) => {
   const aktif = takvim();
   // Her sayfada bir kurul her zaman seçili: adres → son seçim → takvim. Süzme (secili) ayrı, vurgu ayrı tutulur.
+  useSiteAyar();
   const vurgulu = secili ?? varsayilanKurul();
   const git = (url: string, k: number | null) => linkClick(() => { if (k) kurulKaydet(k); navigateTo(url); });
   // Dar ekranda şerit kayar: seçili kurul görünür kalsın (yalnız şeridin kendisi kayar, sayfa değil)
@@ -95,7 +104,7 @@ export const KurulSecici: React.FC<KurulSeciciProps> = ({ secili, yol, tumuYol, 
           Tümü
         </a>
       )}
-      {KURUL_NOLAR.map((k) => {
+      {KURUL_NOLAR.filter((k) => k === vurgulu || !kurulGizli(k)).map((k) => {
         const url = yol(k);
         const bos = icerik?.(k) === false;
         const ad = KURULLAR.find((x) => x.kurul === k)?.ad;

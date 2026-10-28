@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import {
-  Database, Globe, HardDrive, Link2, Users, Table2, Boxes, Activity, Github, Flame, Cloud, KeyRound, FolderOpen, Terminal, Copy, Server, Search, FileUp, NotebookPen, CloudUpload, FolderPlus, ShieldCheck,
+  Database, Globe, HardDrive, Link2, Users, Boxes, Activity, Github, Flame, Cloud, KeyRound, FolderOpen, Terminal, Copy, Server, Search, FileUp, NotebookPen, CloudUpload, FolderPlus, ShieldCheck,
 } from 'lucide-react';
 import { Panel } from './consoleUi';
 import { PageActions, Toolbar, SearchField, Pill, Card14 } from '../v14/pageKit';
@@ -29,7 +29,6 @@ const VERI: Card[] = [
   { label: 'Veritabanı gezgini', hint: 'meds-pg tüm tablolar: ara, düzenle, ekle, sil', icon: Database, section: 'veritabani-gezgini' },
   { label: 'Kişiler ve çalışma', hint: 'Kim ne çalıştı, kaç saat, neleri bitirdi', icon: Users, section: 'kisiler' },
   { label: 'Veri kataloğu', hint: 'Çıkmış, örnek soru, deste, sözlük, kart, hastalık', icon: Boxes, section: 'veri-katalogu' },
-  { label: 'Tüm veriler', hint: 'JSON veri kümeleri tablo halinde, CSV', icon: Table2, section: 'tum-veriler' },
   { label: 'Veritabanı ve yedek', hint: 'Etkin veritabanı, eşitleme, dışa/içe aktarım', icon: HardDrive, section: 'veritabani' },
   { label: 'Sistem ve günlükler', hint: 'Servis sağlığı, AI, tarayıcı konsolu', icon: Activity, section: 'sistem' },
 ];

@@ -9,6 +9,8 @@ import { Sheet } from '../ui/Sheet';
 import { useV15Baslik } from './baslik';
 import KurulSecV15 from './KurulSecV15';
 import { useHazirVideolar } from './VideoDersV15';
+import { icerikGizli, kurulGizli, useSiteAyar } from '../../services/siteAyar';
+import IcerikKapaliV15 from './IcerikKapaliV15';
 import { bransYolu, dersAdi, dersKurulu, dersSirala, dersYolu, kurulBranslari, merkezYolu, sureDk, useDersListesi, useIlerleme } from './dersVeri';
 import { cdBransKisa } from '../canliDers/canliDersKategori';
 import '../../styles/v15/dersler.css';
@@ -31,6 +33,7 @@ export default function DerslerMerkezV15() {
   const kurul = useSeciliKurul();
   const { dersler, hata } = useDersListesi();
   const ilerleme = useIlerleme();
+  useSiteAyar();
   const [diger, setDiger] = useState(false);
   // O01 giriş: yalnız sunucuda hazır ders videosu varken görünür
   const videolar = useHazirVideolar();
@@ -40,7 +43,7 @@ export default function DerslerMerkezV15() {
     let canli = true;
     import('../../data/deckStore')
       .then((m) => m.loadDeckCatalog())
-      .then((c) => canli && setDesteN(c.filter((d) => new RegExp(`Kurul ${kurul}\\b`).test(String(d.committee || ''))).length))
+      .then((c) => canli && setDesteN(c.filter((d) => !icerikGizli('deste', d.id) && new RegExp(`Kurul ${kurul}\\b`).test(String(d.committee || ''))).length))
       .catch(() => canli && setDesteN(null));
     return () => {
       canli = false;
@@ -68,6 +71,7 @@ export default function DerslerMerkezV15() {
   };
   const digerAraclar = MERKEZ_ARACLARI.dersler.filter((a) => !ANA.includes(a.id) && NAV_ITEMS[a.id]);
 
+  if (kurulGizli(kurul)) return <IcerikKapaliV15 ne={`Kurul ${kurul}`} />;
   return (
     <div className="d15">
       <h1 className="sr-only">Ders çalış</h1>

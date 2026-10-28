@@ -10,7 +10,7 @@ import fs from 'fs';
 import path from 'path';
 import crypto from 'crypto';
 import type { Express, Request, Response, NextFunction } from 'express';
-import { CONTENT_FILES } from './contentOverlay';
+import { CONTENT_FILES, katmandaVar } from './contentOverlay';
 
 function hatYetkisi(req: Request, res: Response, next: NextFunction) {
   const sir = process.env.MEDS_PANEL_SECRET || '';
@@ -29,7 +29,7 @@ export function registerIcerikYayinRoutes(app: Express, opts: {
     const entity = String(req.params.entity || '');
     const dosya = CONTENT_FILES[entity];
     if (!dosya) return res.status(400).json({ error: 'bilinmeyen içerik türü' });
-    if (!fs.existsSync(path.join(opts.dataDir, 'content', dosya))) {
+    if (!katmandaVar(dosya)) {
       return res.status(409).json({ error: `katmanda ${dosya} yok; önce dosyayı data/content altına koyun` });
     }
     const ids = (Array.isArray(req.body?.ids) ? req.body.ids : []).map(String).filter((x: string) => /^[\w.-]{1,120}$/.test(x)).slice(0, 2000);

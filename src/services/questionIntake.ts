@@ -17,6 +17,7 @@ import fs from 'fs';
 import path from 'path';
 import crypto from 'crypto';
 import type express from 'express';
+import { diziSayfala, listeSorgusu } from './yonetim16/sayfalama.ts';
 import { callFreeGeminiJson, AiRetryLaterError } from './aiProvider.ts';
 
 export const PROMPT_VERSION = 'soru-ayristir-v1';
@@ -987,6 +988,33 @@ export function createQuestionIntake(dataDir: string, rootDir: string, deps: Int
       const items = matched.slice(0, limit).map((r) => ({ raw: r, state: state[r.id] || null, parse: parses.get(r.id) || null }));
       const committees = [...new Set([...raws.values()].map((r) => r.committeeId))].sort();
       res.json({ promptVersion: PROMPT_VERSION, counts, outdated: outdatedCount, total: inCommittee.length, matched: matched.length, committees, items });
+    });
+
+    // Yönetim v16 › Sorular › Serbest girdiler: sunucu sayfalı hafif liste (ListeYaniti; ayrıntı GET /api/question-intake/:id ile değil, aşağıdaki uçla)
+    app.get('/api/admin/sorular/serbest', requireAdmin, (req, res) => {
+      const s = listeSorgusu(req, { varsayilanBoyut: 50 });
+      const statusOf = (id: string) => state[id]?.status || 'bekliyor';
+      const rows = [...raws.values()].map((r) => {
+        const p = parses.get(r.id);
+        return {
+          id: r.id, at: r.createdAt, kurul: (String(r.committeeId || '').match(/kurul(\d)/) || [])[1] || String(r.committeeId || ''),
+          ders: r.discipline || p?.units?.[0]?.ders_tahmini || '', metin: String(r.rawText || '').replace(/\s+/g, ' ').slice(0, 200),
+          durum: statusOf(r.id), birim: p?.units?.length || 0, eski: !!p && p.promptVersion !== PROMPT_VERSION, soru: r.questionId || '',
+          deneme: state[r.id]?.attempts || 0, hata: state[r.id]?.lastError || '',
+        };
+      });
+      res.setHeader('Cache-Control', 'no-store');
+      res.json(diziSayfala(rows, s, {
+        araMetni: (x) => `${x.id} ${x.metin} ${x.ders} ${x.soru}`,
+        siralayicilar: { at: (x) => x.at, birim: (x) => x.birim, deneme: (x) => x.deneme },
+        suzgecler: { durum: (x, v) => (v === 'eski' ? x.eski : x.durum === v), kurul: (x, v) => x.kurul === v },
+        yuzler: { durum: (x) => [x.durum, ...(x.eski ? ['eski'] : [])], kurul: (x) => x.kurul },
+      }));
+    });
+    app.get('/api/admin/sorular/serbest/:id', requireAdmin, (req, res) => {
+      const r = raws.get(req.params.id);
+      if (!r) return res.status(404).json({ error: 'Kayıt bulunamadı.' });
+      res.json({ raw: r, state: state[r.id] || null, parse: parses.get(r.id) || null, promptVersion: PROMPT_VERSION });
     });
 
     app.post('/api/admin/question-intake/:id/reparse', requireAdmin, (req, res) => {

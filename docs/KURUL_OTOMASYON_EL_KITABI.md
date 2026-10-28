@@ -503,3 +503,8 @@ LLM otomasyonu kapalıdır (AGENTS kural 20). Yeni ders, kullanıcı hangi dosya
   paragraflara taşır, özgünleri `.tasima_yedek/`'e alır, değişen/yeni paragraf dizinlerini listeler (çıkış 2),
   (3) yalnız o paragraflar için çapa, çizim (`cizim_kapisi.py` 0 HATA), çıkmış konumu, v2 yazılır, (4) `pdf_isaret.py`
   (tümü), (5) ses kuyruğu → yalnız yeni klipler, (6) `cumle_zaman.py` + `kelime_zaman.py` (yalnız yeni klipler Whisper).
+
+## 21. Canlı içerik katmanı denetimi (2026-10-28, H130)
+- Panel düzenlemeleri `data/content/<rel>.fark.json` (kayıt düzeyinde fark) olarak durur; okuma kaynak + fark birleşimidir.
+- Dağıtımdan önce: `python3 scripts/icerik_katman.py denetle` (yerelde) → 0 HATA. Oracle'da tam kopya kalırsa
+  `content-overlay-sync.sh` ([0b]) durur; `python3 scripts/icerik_katman.py goc --veri <data> --kaynak <src/data>` ile çevrilir.

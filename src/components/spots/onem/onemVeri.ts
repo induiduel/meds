@@ -1,5 +1,6 @@
 import { useSyncExternalStore } from 'react';
 import type { Brans } from '../brans';
+import { icerikGizli } from '../../../services/siteAyar';
 
 /**
  * Sınav için en önemliler — ortak tipler, sabitler, ders yükleyici ve "öğrendim" deposu (branş geneli).
@@ -31,7 +32,9 @@ export interface Dizin { surum: string; dersler: DizinDers[] }
 const DOSYALAR = import.meta.glob('../../../data/*_onem/*.json') as Record<string, () => Promise<{ default: Ders | Dizin }>>;
 const yol = (brans: Brans, kod: string) => `../../../data/${brans}_onem/${kod}.json`;
 const bellek = new Map<string, Promise<Ders>>();
-export const dersVar = (kod: string, brans: Brans = 'patoloji') => kod !== 'index' && !!DOSYALAR[yol(brans, kod)];
+/** Panel görünürlüğü (onem:<dizin>/<kod>, kurul:<n>): kapalı ders öğrenciye listelenmez ve açılmaz */
+const kapali = (brans: Brans, kod: string) => icerikGizli('onem', `${brans}_onem/${kod}`);
+export const dersVar = (kod: string, brans: Brans = 'patoloji') => kod !== 'index' && !kapali(brans, kod) && !!DOSYALAR[yol(brans, kod)];
 /** Ders dosyası (modül önbellekli; aynı ders ikinci kez indirilmez) */
 export const dersYukle = (kod: string, brans: Brans = 'patoloji'): Promise<Ders> => {
   const a = `${brans}/${kod}`;
@@ -39,6 +42,7 @@ export const dersYukle = (kod: string, brans: Brans = 'patoloji'): Promise<Ders>
   if (!p) {
     const f = DOSYALAR[yol(brans, kod)];
     if (!f || kod === 'index') return Promise.reject(new Error(`ders yok: ${kod}`));
+    if (kapali(brans, kod)) return Promise.reject(new Error('Bu içerik şu an kapalı'));
     p = f().then((m) => m.default as Ders);
     p.catch(() => bellek.delete(a));
     bellek.set(a, p);
@@ -47,7 +51,7 @@ export const dersYukle = (kod: string, brans: Brans = 'patoloji'): Promise<Ders>
 };
 export const dizinYukle = (brans: Brans = 'patoloji'): Promise<Dizin> => {
   const f = DOSYALAR[yol(brans, 'index')];
-  return f ? f().then((m) => m.default as Dizin) : Promise.resolve({ surum: '', dersler: [] });
+  return f ? f().then((m) => { const d = m.default as Dizin; return { ...d, dersler: (d.dersler || []).filter((x) => !kapali(brans, x.kod)) }; }) : Promise.resolve({ surum: '', dersler: [] });
 };
 
 export const TUR_AD: Record<Tur, string> = {

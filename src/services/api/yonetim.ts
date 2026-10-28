@@ -7,7 +7,6 @@ import {
   ApiService, safeJsonFetch, getLocalDb, saveLocalDb, getCustomApiUrl, STORAGE_KEY,
   type LocalDatabase, type AdminPipelineItem, type AdminScriptItem, type AdminScriptJob,
   type DriveCheckResult, type DriveSyncSettings, type Phase14Settings,
-  type StudioAiInputLite, type StudioAiModels, type StudioAiResultLite,
 } from '../api';
 import { QuestionItem, ReconstructedQuestion, PastQuestionReviewRecord } from '../../types';
 import { FirestoreDbService } from '../firestoreDb';
@@ -105,25 +104,6 @@ export const YonetimApi = {
       };
     }
     return data;
-  },
-
-  /** Taslak stüdyosu: kullanılabilir AI modelleri (bulut + yerel Ollama). */
-  async getStudioAiModels(adminEmail: string): Promise<StudioAiModels | null> {
-    const res = await safeJsonFetch<StudioAiModels>('/api/studio/ai-models', { headers: { 'x-admin-email': adminEmail || '' } });
-    return res.ok && res.data ? res.data : null;
-  },
-
-  /** Taslak stüdyosu: bir hedef modelle (cloud ya da yerel model adı) soru üretir. */
-  async studioAiGenerate(adminEmail: string, target: string, input: StudioAiInputLite): Promise<StudioAiResultLite> {
-    // Yerel modeller sunucuda sırayla çalışır; sıradaki model dakikalarca bekleyebilir
-    const res = await safeJsonFetch<StudioAiResultLite>('/api/studio/ai-generate', {
-      signal: AbortSignal.timeout(15 * 60_000),
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json', 'x-admin-email': adminEmail || '' },
-      body: JSON.stringify({ target, input }),
-    });
-    if (res.ok && res.data) return res.data;
-    return { target, label: target, ok: false, error: res.error || 'İstek başarısız', ms: 0, sources: [] };
   },
 
   /** Yönetici: yeni soru kaydı (AI alternatifleri için). */

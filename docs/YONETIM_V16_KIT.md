@@ -164,5 +164,33 @@ Yeni sayaç: `registerOzetRoutes` bağımlılıklarına işlev ekleyin (server.t
   üzerinden + `spot`, `kisaltma`, `terim`, `saglik` bağdaştırıcıları). Yazma yalnız tek kayıt; `data/content` + `atomikJsonGuncelle`, yedek `data/_yedek/<ad>`.
 - Kit: `KatalogSayfasi` (katalog varlığı için hazır liste + çekmece + form), `GorunurlukSecici`/`GorunurlukRozeti` (site-ayar `gorunurluk`
   anahtarları: `ders:<id>`, `kurul:<n>`, `deste:<id>`, `sesli:<key>`, `paket:<key>`, `onem|asistan|cozucu:<dizin>/<kod>`).
-- Açık iş: bu anahtarlar şimdilik yalnız kaydediliyor; öğrenci tarafında süzme (Site › Görünürlük işi) henüz yok. Kurul takvimi, ders defteri
+- **Öğrenci tarafında uygulanır (2026-10-28), bkz. §8.** Kurul takvimi, ders defteri
   ve sınav dağılımı ön yüzde derlemede okunur: panel düzenlemesi canlıya dağıtımdaki katman eşitlemesi + derlemeyle yansır.
+
+## 8. İçerik görünürlüğü (öğrenci tarafı, 2026-10-28)
+- Kural TEK yerde: `src/services/icerikGorunurlukKural.ts` (saf; istemci + sunucu). `icerikDurumu(g, tur, id)` en kısıtlayıcı durumu verir:
+  doğrudan anahtar + **kalıtım** — kimlikten ders (`k2-07`; sesli anahtarı, `k2p-k2-07-…` deste, paket) ve kurul (`k<N>`; önem/asistan/çözücü
+  dizini `k<N>…` değilse kurul 1). `gizli` ve `yalniz-yonetici` öğrenciye ikisi de kapalı.
+- İstemci: `icerikGizli(tur, id)`, `kurulGizli(n)` (`services/siteAyar.ts`; yönetici her şeyi görür). Bileşen `useSiteAyar()` ile abone olmalı.
+  Uygulanan yerler: `v15/dersVeri.ts::useDersListesi` (merkez, sesli liste, branş, ders detayı, video, program), `DersDetayV15`/`CanliDersView`
+  (adresle açılınca kapalı ekranı), `v15/dersIcerik.ts` (paket sekmeleri), `InteractiveDeckView` (kitaplık + deste açılışı), `KurulSecV15` ve
+  `kurul/KurulSecici` (gizli kurul seçilemez, `varsayilanKurul` atlar), `DerslerMerkezV15` (gizli kurul → kapalı ekranı),
+  `spots/{onem/onemVeri,cozucu/cozucuVeri,asistan/asistanVeri}.ts` (dizin süzülür, ders dosyası açılmaz).
+- Kapalı ekranı: `v15/IcerikKapaliV15.tsx` (`ne`, `geri`). Yeni öğrenci listesi yazan bileşen aynı yardımcıyla süzmelidir.
+- Sunucu: `yonetim16/siteAyar.ts::icerikKapisi` (server.ts'de bayrakKapisi'nın ardından). `GET /api/canli-ders/:key[/…]`, `/api/canli-ders/ses/:key/…`,
+  `/api/decks|ogren|interactive-decks/:id` → 403 `{ icerikKapali: true }`; `/api/canli-ders` ve `/api/decks` listeleri süzülür (ETag/304 kapalı,
+  `Cache-Control: private, no-cache`). Gerçek loopback / panel anahtarı / yönetici jetonu yönetici sayılır (süzme yok). Önem/asistan/çözücü ve
+  ders içerik paketi ön yüz paketinde olduğundan yalnız istemcide süzülür. `cdDetayGetir` 403'te cihazdaki çevrimdışı kopyaya düşmez.
+
+## 9. 2026-10-28 eklenen sayfalar ve temizlik
+- Yeni sayfalar: Sorular › Serbest girdiler (`/api/admin/sorular/serbest[/:id]`, questionIntake.ts; "Yeniden ayrıştır" elle + onay),
+  Sorular › Taslaklar (`/api/admin/sorular/taslak`, salt okunur; kümeleme aracı `?kabuk=v14`), Kullanıcılar › Gizlilik talepleri
+  (`/api/admin/gizlilik`, `PUT …/:id`; öğrenci `POST /api/gizlilik/talep`, doğrulanmış oturum; `data/gizlilik_talepleri.json` gitignore,
+  okuma KISISEL_OKUMA'da), Site › Kanallar (SMTP + yönetici push; mevcut uçlar), Oyunlar › Quiz havuzu (`/api/admin/quiz/havuz[/:id]`,
+  `meds_database_v2/ders_isci/yayinlanan/*/quiz_havuzu.json`), Öğrenme › Ses kuyruğu (`/api/admin/sesli-kuyruk[/:id]`; yalnız
+  yeniden dene/öne al/iptal — üretim BAŞLATMA yok, kural 20). Sunucu: `yonetim16/ekSayfalar.ts`.
+- v14'ten kaldırılanlar: Tüm veriler (ManageDataSection), Veri Merkezi v2 (ManageDataCoreSection; `/api/v2/*` herkese açık API'de kaldığı için
+  uçlar duruyor), Taslak stüdyosu (DraftStudio + draftStudioService + studioAiService + `/api/studio/ai-*`), Otomasyon › Zamanlama ve anahtarlar
+  (ManageAutomationSection; Otomasyon yalnız Drive ve servisler). "Tüm veriler"e sıçrayan bağlantılar v16 havuz/çıkmış sayfasını açar.
+  Ders işçisi bölümü salt okunur arşiv (yazma istekleri istemcide engellenir). FlatfileDataOnboarding KULLANILIYOR (AdminPastExamImporterModal,
+  NotebookLM) — kaldı.

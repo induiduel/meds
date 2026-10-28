@@ -21,6 +21,7 @@ import { resolveContent, writableContent } from '../contentOverlay.ts';
 import { atomikJsonGuncelle } from './atomikJson.ts';
 import { denetimFark, denetimHedef } from './denetim.ts';
 import type { BakimDenetleyici } from '../bakimHataRoutes.ts';
+import { icerikDurumu, kapaliAnahtarVar, type IcerikTur } from '../icerikGorunurlukKural.ts';
 
 export type SayfaDurumu = 'acik' | 'gizli' | 'kapali' | 'yalniz-yonetici';
 export type GorunurlukDurumu = 'acik' | 'gizli' | 'yalniz-yonetici';
@@ -233,6 +234,65 @@ export function bayrakKapisi(d: { isAdmin: (req: express.Request) => boolean; ku
       const email = String(req.body?.email || '').trim().toLowerCase();
       if (!d.kullaniciVar(uid, email) && !d.isAdmin(req)) return res.status(403).json({ error: 'Yeni kayıtlar şu an kapalı.', ozellikKapali: 'kayit_acik' });
     }
+    next();
+  };
+}
+
+/* ================= İçerik görünürlüğü sunucu kapısı (2026-10-28) ================= */
+
+/**
+ * Öğrenciye kapalı içeriği (site ayarı `gorunurluk`: ders/kurul/deste/sesli/paket) sunucuda da vermez. Kural istemciyle ortak:
+ * `icerikGorunurlukKural.ts`. Yönetici her şeyi alır. Erken (rotalardan önce) app.use ile takılır.
+ * - Tekil uç: `/api/canli-ders/:key[/…]`, `/api/canli-ders/ses/:key/…`, `/api/decks|ogren|interactive-decks/:id` → 403 { icerikKapali }.
+ * - Liste: `/api/canli-ders` (dersler[].key), `/api/decks` (dizi ya da {decks}) — yanıt süzülür, ETag/304 kapatılır, önbellek `private`.
+ * Önem/asistan/çözücü ve ders içerik paketi ön yüz paketindedir (sunucu ucu yok): süzme istemcide (services/siteAyar.ts::icerikGizli).
+ */
+export function icerikKapisi(d: { isAdmin: (req: express.Request) => boolean }): express.RequestHandler {
+  const TEK_CANLI = /^\/api\/canli-ders\/(?:ses\/)?([^/]+)(?:\/|$)/;
+  const TEK_DESTE = /^\/api\/(?:decks|ogren|interactive-decks)\/([^/]+)\/?$/;
+  const LISTE_CANLI = /^\/api\/canli-ders\/?$/;
+  const LISTE_DESTE = /^\/api\/(?:decks|ogren|interactive-decks)\/?$/;
+  const OZEL = new Set(['ara', 'cikmis-dizin', 'video-is']);
+  return (req, res, next) => {
+    if (req.method !== 'GET' || !req.path.startsWith('/api/')) return next();
+    const g = (siteAyarOku().gorunurluk || {}) as Record<string, string>;
+    if (!kapaliAnahtarVar(g)) return next();
+    let m = req.path.match(TEK_CANLI);
+    const tekil = (tur: IcerikTur, id: string) => {
+      if (icerikDurumu(g, tur, id) === 'acik' || d.isAdmin(req)) return next();
+      res.setHeader('Cache-Control', 'no-store');
+      return res.status(403).json({ error: 'Bu içerik şu an kapalı.', icerikKapali: true });
+    };
+    if (m && !OZEL.has(decodeURIComponent(m[1]))) return tekil('sesli', decodeURIComponent(m[1]));
+    m = req.path.match(TEK_DESTE);
+    if (m) return tekil('deste', decodeURIComponent(m[1]));
+    const canliListe = LISTE_CANLI.test(req.path);
+    if (!canliListe && !LISTE_DESTE.test(req.path)) return next();
+    if (d.isAdmin(req)) { res.setHeader('Vary', 'Authorization, x-panel-secret'); return next(); }
+    const tur: IcerikTur = canliListe ? 'sesli' : 'deste';
+    const acik = (x: any) => !x || typeof x !== 'object' || (() => { const id = String(x.key ?? x.id ?? ''); return !id || icerikDurumu(g, tur, id) === 'acik'; })();
+    const suz = (body: any) => {
+      if (Array.isArray(body)) return body.filter(acik);
+      if (body && typeof body === 'object') {
+        const out = { ...body };
+        for (const k of ['dersler', 'decks', 'items']) if (Array.isArray(out[k])) out[k] = out[k].filter(acik);
+        return out;
+      }
+      return body;
+    };
+    // Paylaşılan ETag (yönetici/öğrenci aynı) 304 ile süzülmemiş gövdeyi tarayıcıda bırakmasın
+    delete req.headers['if-none-match'];
+    const ozelOnbellek = () => { res.removeHeader('ETag'); res.setHeader('Cache-Control', 'private, no-cache'); };
+    const json0 = res.json.bind(res);
+    const send0 = res.send.bind(res);
+    let jsonIcinde = false;
+    res.json = ((body: any) => { ozelOnbellek(); jsonIcinde = true; try { return json0(suz(body)); } finally { jsonIcinde = false; } }) as any;
+    res.send = ((body: any) => {
+      if (!jsonIcinde && typeof body === 'string' && /json/.test(String(res.getHeader('Content-Type') || ''))) {
+        try { ozelOnbellek(); return send0(JSON.stringify(suz(JSON.parse(body)))); } catch { /* JSON değil */ }
+      }
+      return send0(body);
+    }) as any;
     next();
   };
 }

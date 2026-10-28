@@ -84,3 +84,8 @@ export function atomikJsonGuncelle<T>(file: string, fn: (eski: T | undefined) =>
 export function atomikJsonYazSenkron(file: string, veri: unknown, o: AtomikSecenek = {}) {
   yazSenkron(file, veri, o);
 }
+
+/** Dosyaya şu an kilitli bir yazım sürüyor mu (canlı katman dönüştürücüsü yazımın ortasına girmesin) */
+export function kilitliMi(file: string): boolean {
+  return kilitler.has(path.resolve(file));
+}

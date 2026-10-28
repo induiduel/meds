@@ -1,11 +1,12 @@
 {
  "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
- "onem": 537,
- "baslik": "Yeni yönetim paneli sayfaları",
+ "onem": 538,
+ "baslik": "İçerik görünürlüğü ve yönetim temizliği",
  "maddeler": [
-  "Yönetim paneline 50'yi aşkın ayrı sayfa eklendi: içerik, sorular, site, kullanıcılar, topluluk, oyunlar, sistem",
-  "Sayfa görünürlüğü, özellik bayrakları ve duyurular canlı değişiyor",
-  "Veritabanı konsolu güvenli salt okunur kipe alındı"
+  "Panelden kapatılan ders, kurul ve desteler öğrenciden gizleniyor",
+  "Yeni yönetim sayfaları: serbest girdiler, taslaklar, gizlilik talepleri, kanallar, quiz havuzu, ses kuyruğu",
+  "Eski işlevsiz yönetim bölümleri kaldırıldı",
+  "İçerik katmanı yalnız farkları tutuyor"
  ],
  "eklenen": [],
  "degisen": [],

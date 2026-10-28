@@ -72,7 +72,8 @@ export function registerIcerik16Routes(app: express.Express, d: Deps) {
   /** src/data dosyasını katmanda kilitli günceller; katmanda kopya yoksa paketteki dosyadan başlar */
   async function katmanGuncelle<T>(file: string, ad: string, fn: (eski: T) => T): Promise<T> {
     const hedef = writableContent(file);
-    if (!varMi(hedef) && varMi(file)) fs.copyFileSync(file, hedef);
+    // Katman kayıt düzeyinde farktır: başlangıç kaynak + fark birleşimi (yalnız kaynaktan başlamak önceki farkları silerdi)
+    if (!varMi(hedef)) { const birlesik = resolveContent(file); if (varMi(birlesik)) fs.copyFileSync(birlesik, hedef); }
     const sonuc = await atomikJsonGuncelle<T>(hedef, (eski) => fn(eski as T), { yedek: 5, yedekKlasoru: YEDEK(ad) });
     onbellek.delete(hedef);
     return sonuc;

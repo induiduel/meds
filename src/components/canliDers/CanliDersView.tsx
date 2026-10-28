@@ -4,6 +4,8 @@
  *  - Ders (/canliders/<key>): solda PDF (varsa), sağda konuşma metni; metin sesle akar. Oynatıcı alt sabit
  *    çubuktadır (CanliDersDock, App düzeyinde) — ses öğesi canliDersStore'da tek ve kalıcıdır.
  */
+import { icerikGizli, useSiteAyar } from '../../services/siteAyar';
+import IcerikKapaliV15 from '../v15/IcerikKapaliV15';
 import React, { useEffect, useMemo, useState } from 'react';
 import { AlertTriangle, Archive, AudioLines, BookOpen, Check, ChevronDown, Clock, Download, FileText, Headphones, History, Layers, LayoutList, ListMusic, MoreHorizontal, Package, Pause, Play, Search, Star, Video, X } from 'lucide-react';
 import { navigateTo, pathFor } from '../../router';
@@ -47,12 +49,14 @@ export function sonProvaYolu(key: string): string | null {
 export default function CanliDersView({ dersKey }: { dersKey?: string }) {
   const sp = dersKey ? sonProvaYolu(dersKey) : null;
   const { v15 } = useAppearance();
+  useSiteAyar();
   useEffect(() => { if (sp) navigateTo(sp); }, [sp]);
   if (sp) return null;
   // v15: branş adresi (/dersler/canliders/kurulN/<branş>) branş ders listesini açar (components/v15/BransV15)
   if (!dersKey && v15 && new URLSearchParams(icKonum().search).get('brans')) return <React.Suspense fallback={null}><BransV15 /></React.Suspense>;
   // v15: branşsız liste (arşiv dönemi ve #listem gibi özel görünümler eski listede kalır)
   if (!dersKey && v15 && !window.location.hash) return <React.Suspense fallback={null}><SesliListeV15 /></React.Suspense>;
+  if (dersKey && icerikGizli('sesli', dersKey)) return <IcerikKapaliV15 ne="Bu ders" geri={{ yol: '/dersler/canliders', etiket: 'Sesli derslere dön' }} />;
   return dersKey ? <CanliDersDers key={dersKey} dersKey={dersKey} /> : <CanliDersListe />;
 }
 
@@ -142,7 +146,7 @@ function CanliDersListe() {
   const yukle = (yenile = false, aktifDonem = donem) => {
     setHata(null);
     setDersler(null);
-    cdListeGetir(yenile, aktifDonem).then((ds) => { cdListeOzetleri(ds); setDersler(ds.filter((d) => !/-son-prova-|-blok-ozet-/.test(d.key))); setBlok(ds.filter((d) => /-blok-ozet-/.test(d.key))); /* Son Prova partları kendi sayfasında (/son-prova) */ }, (e) => setHata(e?.message || 'Liste alınamadı.'));
+    cdListeGetir(yenile, aktifDonem).then((ds) => { cdListeOzetleri(ds); setDersler(ds.filter((d) => !/-son-prova-|-blok-ozet-/.test(d.key) && !icerikGizli('sesli', d.key))); setBlok(ds.filter((d) => /-blok-ozet-/.test(d.key))); /* Son Prova partları kendi sayfasında (/son-prova) */ }, (e) => setHata(e?.message || 'Liste alınamadı.'));
   };
   useEffect(() => {
     document.title = donem === '2025-2026' ? '2025-2026 Arşiv Sesli Dersler · MeDSor' : donem === 'sinama' ? 'Sınama (test verisi) Sesli Dersler · MeDSor' : 'Sesli ders · MeDSor';

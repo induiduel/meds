@@ -4,6 +4,7 @@ import { CalendarDays, Check, ChevronDown } from 'lucide-react';
 import { navigateTo, pathFor } from '../../router';
 import { aktifKurul, bugun, KURULLAR } from '../../services/kurulTakvimi';
 import { kurulKaydet } from '../kurul/KurulSecici';
+import { kurulGizli, useSiteAyar } from '../../services/siteAyar';
 import '../../styles/v15/kurulsec.css';
 
 /**
@@ -22,6 +23,7 @@ export default function KurulSecV15({ kurul, onSec, className = '' }: { kurul: n
   const menu = useRef<HTMLDivElement>(null);
   const g = bugun();
   const aktif = aktifKurul().kurul;
+  useSiteAyar(); // panelde kapatılan kurul (kurul:<n>) öğrencinin listesinden kalkar
   useEffect(() => {
     if (!acik) return;
     const d = (e: MouseEvent) => { if (!kok.current?.contains(e.target as Node) && !menu.current?.contains(e.target as Node)) setAcik(false); };
@@ -42,7 +44,7 @@ export default function KurulSecV15({ kurul, onSec, className = '' }: { kurul: n
       </button>
       {acik && createPortal(
         <div ref={menu} className="ks15-menu" role="listbox" aria-label="Kurul seç" style={yer}>
-          {KURULLAR.map((k) => {
+          {KURULLAR.filter((k) => k.kurul === kurul || !kurulGizli(k.kurul)).map((k) => {
             const d = durum(k);
             return (
               <button key={k.kurul} type="button" role="option" aria-selected={k.kurul === kurul} className={k.kurul === kurul ? 'is-on' : ''}

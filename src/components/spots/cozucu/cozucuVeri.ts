@@ -1,5 +1,6 @@
 import { useSyncExternalStore } from 'react';
 import type { Brans } from '../brans';
+import { icerikGizli } from '../../../services/siteAyar';
 
 /**
  * Sesli soru çözücü — veri ve ilerleme deposu (branş geneli: patoloji, enfeksiyon, üroloji).
@@ -41,6 +42,8 @@ export const sesListesi = (d: CDizin | null): SesTanim[] => (d?.sesler?.length ?
 const DOSYA = import.meta.glob('../../../data/*_cozucu/*.json') as Record<string, () => Promise<{ default: CDers | CDizin }>>;
 const yol = (brans: Brans, kod: string) => `../../../data/${brans}_cozucu/${kod}.json`;
 const bellek = new Map<string, Promise<CDers>>();
+/** Panel görünürlüğü (cozucu:<dizin>/<kod>, kurul:<n>) */
+const kapali = (brans: Brans, kod: string) => icerikGizli('cozucu', `${brans}_cozucu/${kod}`);
 export const cozucuVar = (brans: Brans = 'patoloji') => !!DOSYA[yol(brans, 'index')];
 export const cozucuDersYukle = (kod: string, brans: Brans = 'patoloji'): Promise<CDers> => {
   const a = `${brans}/${kod}`;
@@ -48,6 +51,7 @@ export const cozucuDersYukle = (kod: string, brans: Brans = 'patoloji'): Promise
   if (!p) {
     const f = DOSYA[yol(brans, kod)];
     if (!f || kod === 'index') return Promise.reject(new Error(`ders yok: ${kod}`));
+    if (kapali(brans, kod)) return Promise.reject(new Error('Bu içerik şu an kapalı'));
     p = f().then((m) => m.default as CDers);
     p.catch(() => bellek.delete(a));
     bellek.set(a, p);
@@ -63,7 +67,8 @@ export const cozucuDizinYukle = (brans: Brans = 'patoloji'): Promise<CDizin> => 
     p.catch(() => dizinP.delete(brans));
     dizinP.set(brans, p);
   }
-  return p;
+  // Panel görünürlüğü her çağrıda uygulanır (önbellekteki dizin değişmez)
+  return p.then((d) => ({ ...d, dersler: (d.dersler || []).filter((x: any) => !kapali(brans, String(x.kod))) }));
 };
 /** Ses klibinin adresi (sunucu: src/services/cozucuSes.ts) */
 export const klipYolu = (brans: Brans, ses: string, klasor: string, klip: string) =>

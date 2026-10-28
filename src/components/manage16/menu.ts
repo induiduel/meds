@@ -60,8 +60,8 @@ export const MENU: GrupTanim[] = [
       { yol: 'sorular/birlesen', etiket: 'Birleşenler', ikon: GitMerge, oncelik: 'P1', v14Slug: 'birlesenler', yukle: () => import('./sayfalar/Birlesenler') },
       { yol: 'sorular/ornek', etiket: 'Örnek sorular', ikon: ListChecks, oncelik: 'P1', v14Slug: 'veri-katalogu', yukle: () => import('./sayfalar/OrnekSorular') },
       { yol: 'sorular/ham', etiket: 'Ham defter', ikon: Archive, oncelik: 'P1', v14Slug: 'ham-havuz', yukle: () => import('./sayfalar/HamDefter') },
-      { yol: 'sorular/serbest', etiket: 'Serbest girdiler', ikon: TextCursorInput, oncelik: 'P2', v14Slug: 'serbest-girdiler' },
-      { yol: 'sorular/taslak', etiket: 'Taslaklar', ikon: FilePen, oncelik: 'P2', v14Slug: 'taslaklar' },
+      { yol: 'sorular/serbest', etiket: 'Serbest girdiler', ikon: TextCursorInput, oncelik: 'P2', v14Slug: 'serbest-girdiler', yukle: () => import('./sayfalar/SerbestGirdiler') },
+      { yol: 'sorular/taslak', etiket: 'Taslaklar', ikon: FilePen, oncelik: 'P2', v14Slug: 'taslaklar', yukle: () => import('./sayfalar/Taslaklar') },
       { yol: 'sorular/dondurma', etiket: 'Havuz dondurma', ikon: Snowflake, oncelik: 'P2', yukle: () => import('./sayfalar/HavuzDondurma') },
       { yol: 'sorular/olasi', etiket: 'Olası sorular', ikon: Sparkles, oncelik: 'P2', yukle: () => import('./sayfalar/OlasiSorular') },
       { yol: 'sorular/sikayet', etiket: 'Soru şikâyetleri', ikon: AlertTriangle, oncelik: 'P0', anahtar: 'hata bildirimi rapor', yukle: () => import('./sayfalar/SoruSikayetleri') },
@@ -72,6 +72,7 @@ export const MENU: GrupTanim[] = [
     id: 'ogrenme', etiket: 'Öğrenme', sayfalar: [
       { yol: 'ogrenme/desteler', etiket: 'Öğren desteleri', ikon: GraduationCap, oncelik: 'P1', v14Slug: 'veri-katalogu', yukle: () => import('./sayfalar/Desteler') },
       { yol: 'ogrenme/sesli', etiket: 'Sesli ders', ikon: Mic, oncelik: 'P1', v14Slug: 'sesli-anlatim', yukle: () => import('./sayfalar/SesliDersler') },
+      { yol: 'ogrenme/ses-kuyrugu', etiket: 'Ses kuyruğu', ikon: ListChecks, oncelik: 'P2', anahtar: 'üretim ema xtts iş', yukle: () => import('./sayfalar/SesKuyrugu') },
       { yol: 'ogrenme/onem', etiket: 'Önem ve çözücü', ikon: Star, oncelik: 'P1', yukle: () => import('./sayfalar/OnemCozucu') },
       { yol: 'ogrenme/spot', etiket: 'Sınav spotları', ikon: Target, oncelik: 'P2', yukle: () => import('./sayfalar/Spotlar') },
       { yol: 'ogrenme/kazanim', etiket: 'Kazanımlar', ikon: Award, oncelik: 'P2', v14Slug: 'veri-katalogu', yukle: () => import('./sayfalar/Kazanimlar') },
@@ -98,7 +99,7 @@ export const MENU: GrupTanim[] = [
       { yol: 'site/bakim', etiket: 'Bakım', ikon: Construction, oncelik: 'P0', yukle: () => import('./sayfalar/SiteBakim') },
       { yol: 'site/bayraklar', etiket: 'Özellik bayrakları', ikon: Flag, oncelik: 'P1', yukle: () => import('./sayfalar/SiteBayraklar') },
       { yol: 'site/duyurular', etiket: 'Duyurular', ikon: Megaphone, oncelik: 'P1', anahtar: 'bildirim push', yukle: () => import('./sayfalar/SiteDuyurular') },
-      { yol: 'site/kanallar', etiket: 'Kanallar', ikon: Radio, oncelik: 'P2', anahtar: 'smtp whatsapp e-posta' },
+      { yol: 'site/kanallar', etiket: 'Kanallar', ikon: Radio, oncelik: 'P2', anahtar: 'smtp push e-posta', yukle: () => import('./sayfalar/SiteKanallar') },
       { yol: 'site/surum', etiket: 'Sürüm', ikon: Tag, oncelik: 'P1', anahtar: 'commit dağıtım', yukle: () => import('./sayfalar/SiteSurum') },
     ],
   },
@@ -110,7 +111,7 @@ export const MENU: GrupTanim[] = [
       { yol: 'kisi/ilerleme', etiket: 'Ders ilerlemesi', ikon: TrendingUp, oncelik: 'P1', v14Slug: 'ders-ilerlemesi', yukle: () => import('./sayfalar/KisiIlerleme') },
       { yol: 'kisi/gorev', etiket: 'Seri ve görevler', ikon: CalendarCheck, oncelik: 'P2', v14Slug: 'giris-gorev', yukle: () => import('./sayfalar/KisiGorev') },
       { yol: 'kisi/etkinlik', etiket: 'Etkinlik günlüğü', ikon: Activity, oncelik: 'P1', yukle: () => import('./sayfalar/KisiEtkinlik') },
-      { yol: 'kisi/gizlilik', etiket: 'Gizlilik talepleri', ikon: Lock, oncelik: 'P2' },
+      { yol: 'kisi/gizlilik', etiket: 'Gizlilik talepleri', ikon: Lock, oncelik: 'P2', anahtar: 'kvkk silme dışa aktarma', yukle: () => import('./sayfalar/GizlilikTalepleri') },
     ],
   },
   {
@@ -128,7 +129,7 @@ export const MENU: GrupTanim[] = [
     id: 'oyun', etiket: 'Oyunlar', sayfalar: [
       { yol: 'oyun/odalar', etiket: 'Canlı odalar', ikon: Gamepad2, oncelik: 'P1', yukle: () => import('./sayfalar/OyunOdalar') },
       { yol: 'oyun/kaynak', etiket: 'Soru kaynakları', ikon: Puzzle, oncelik: 'P1', yukle: () => import('./sayfalar/OyunKaynak') },
-      { yol: 'oyun/quiz-havuzu', etiket: 'Quiz havuzu', ikon: Database, oncelik: 'P2' },
+      { yol: 'oyun/quiz-havuzu', etiket: 'Quiz havuzu', ikon: Database, oncelik: 'P2', yukle: () => import('./sayfalar/QuizHavuzu') },
     ],
   },
   {

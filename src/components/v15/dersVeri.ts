@@ -4,6 +4,7 @@ import { cdKonumListesi, cdListeGetir, type CdListeDers } from '../canliDers/can
 import { cdBransKisa, cdBransSlug, cdTekSurum } from '../canliDers/canliDersKategori';
 import { bittiMi, sesliKonuId, useTakip } from '../../services/calismaTakip';
 import { kurulKimlikten } from '../kurul/KurulSuzgec';
+import { icerikGizli, useSiteAyar } from '../../services/siteAyar';
 
 /**
  * v15 Ders çalış sayfalarının (merkez, branş, ders ayrıntısı) ortak verisi: sesli ders listesi (sunucu ya da cihaz),
@@ -25,7 +26,9 @@ export function useDersListesi(donem: '2026-2027' | '2025-2026' = '2026-2027'): 
       canli = false;
     };
   }, [donem]);
-  return d;
+  // Panel görünürlüğü (sesli:<key>, ders:<id>, kurul:<n>): kapalı dersler öğrencinin listesinden kalkar; yönetici hepsini görür
+  const ayar = useSiteAyar();
+  return useMemo(() => (d.dersler ? { ...d, dersler: d.dersler.filter((x) => !icerikGizli('sesli', x.key)) } : d), [d, ayar]);
 }
 
 export const dersKurulu = (d: Pick<CdListeDers, 'kurul' | 'key'>) => d.kurul ?? kurulKimlikten(d.key) ?? 1;
