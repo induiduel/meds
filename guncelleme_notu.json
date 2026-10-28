@@ -1,10 +1,11 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 567,
-  "baslik": "iPhone durum çubuğu düzeltmesi",
+  "onem": 568,
+  "baslik": "Sohbet ve arkadaşlık bildirimleri ekranın üstünde",
   "maddeler": [
-    "Sesli derste açılan paneller ve pencereler artık iPhone'da saat/pil çubuğunun altına girmiyor.",
-    "Açık temada iPhone durum çubuğu yazısı koyu, içerik çubuğun altından başlıyor (Ana ekrandan yeniden açınca etkin olur)."
+    "Yeni sohbet mesajı ve arkadaşlık isteği artık ekranın üstünde kart olarak çıkıyor.",
+    "Arkadaşlık isteğini karttan Kabul edebilir ya da Reddedebilirsin.",
+    "Sohbet mesajına karttan hızlı yanıt yazabilirsin."
   ],
   "eklenen": [],
   "degisen": [],

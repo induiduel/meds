@@ -232,7 +232,7 @@ export function registerArkadaslik(app: express.Express, d: Deps) {
     const n = (await pgDb.query(`select count(*)::int n from arkadas_istek where gonderen = $1 and durum = 'bekliyor'`, [uid])).rows[0].n;
     if (n >= 100) return res.status(409).json({ error: 'Çok fazla bekleyen isteğin var; önce bazılarını geri çek.' });
     await pgDb.query(`insert into arkadas_istek (gonderen, alan) values ($1, $2) on conflict do nothing`, [uid, o]);
-    d.notifyStudent({ uid: o }, { type: 'arkadas', title: 'Yeni arkadaşlık isteği', message: `${benAdi(uid)} seni arkadaş olarak eklemek istiyor.`, deepLinkUrl: '/arkadaslar', dedupeKey: `arkadas_istek:${motor.kisiKimlik(uid)}:${motor.kisiKimlik(o)}:${new Date().toISOString().slice(0, 10)}` });
+    d.notifyStudent({ uid: o }, { type: 'arkadas', title: 'Yeni arkadaşlık isteği', message: `${benAdi(uid)} seni arkadaş olarak eklemek istiyor.`, deepLinkUrl: `/arkadaslar?kimlik=${motor.kisiKimlik(uid)}`, dedupeKey: `arkadas_istek:${motor.kisiKimlik(uid)}:${motor.kisiKimlik(o)}:${new Date().toISOString().slice(0, 10)}` });
     haber(uid, o);
     res.json({ iliski: 'giden' });
   });

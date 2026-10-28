@@ -12,7 +12,7 @@
  * odaklanan bir deepLinkUrl'i vardır.
  */
 import { hesapTuru, sessizSaatte, tercihOku, turAcik } from './bildirimTercih';
-import { setToastRecorder, toast, type ToastKind } from '../components/ui/Toast';
+import { richToast, setToastRecorder, toast, type ToastKind } from '../components/ui/Toast';
 
 import { openDeepLink } from './universalRedirectService';
 
@@ -81,9 +81,51 @@ class UserNotificationService {
     );
     this.notifyListeners();
     for (const n of fresh.slice(0, 3)) {
+      if (this.zenginToast(n)) { this.triggerSystemPush(n); continue; }
       toast.show(n.type === 'app_error' ? 'error' : 'info', n.title.replace(/^✓\s*/, ''), n.message);
       this.triggerSystemPush(n);
     }
+  }
+
+  /** Sohbet mesajı / arkadaşlık isteği-kabulü / davet: ekranın üstünde etkileşimli kart. Eşleşmezse false. */
+  private zenginToast(n: UserNotification): boolean {
+    const tur = String(n.type);
+    const git = (url: string) => {
+      this.markAsRead(n.id);
+      if (url) void import('./arkadasIstemci').then((m) => m.git(url));
+    };
+    if (tur === 'sohbet') {
+      const ad = n.title.replace(/ mesaj gönderdi$/, '').split(':').pop()!.trim() || 'Sohbet';
+      const oda = /sohbet=(\d+)/.exec(n.deepLinkUrl)?.[1];
+      richToast({
+        variant: 'mesaj', ad, title: n.title, message: n.message, onOpen: () => git(n.deepLinkUrl),
+        reply: oda ? async (metin) => {
+          const { safeJsonFetch } = await import('./api');
+          const r = await safeJsonFetch<any>(`/api/topluluk/sohbet/${oda}/mesaj`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ metin }) });
+          if (r.ok) { this.markAsRead(n.id); return ''; }
+          return r.data?.error || r.error || 'Gönderilemedi.';
+        } : undefined,
+      });
+      return true;
+    }
+    if (tur === 'arkadas' || tur === 'davet') {
+      const istek = /isteği$/.test(n.title) && /eklemek istiyor/.test(n.message);
+      const kimlik = /[?&]kimlik=([0-9a-f]+)/.exec(n.deepLinkUrl)?.[1];
+      const ad = (n.message.split(/ (?:seni|artık)/)[0] || 'Öğrenci').trim();
+      const islem = (t: 'kabul' | 'reddet') => async () => {
+        const { arkadasIslem } = await import('./arkadasIstemci');
+        const r = await arkadasIslem(t, kimlik!);
+        if (r.hata) return r.hata;
+        this.markAsRead(n.id);
+      };
+      richToast({
+        variant: tur === 'davet' ? 'davet' : 'arkadas', ad, title: n.title, message: n.message, onOpen: () => git(n.deepLinkUrl),
+        actions: istek && kimlik ? [{ label: 'Kabul et', primary: true, run: islem('kabul') }, { label: 'Reddet', run: islem('reddet') }]
+          : tur === 'davet' ? [{ label: 'Katıl', primary: true, run: () => git(n.deepLinkUrl) }] : undefined,
+      });
+      return true;
+    }
+    return false;
   }
 
   /** Uygulama içi toast'ı geçmişe yazar (görüldüğü için okunmuş; anlık tarayıcı bildirimi yok). */
