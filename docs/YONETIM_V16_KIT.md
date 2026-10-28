@@ -1,0 +1,153 @@
+# Yönetim v16 — kabuk, kit ve sunucu yardımcıları
+
+> Plan: `docs/YONETIM_V16_PLAN.md`. Bu belge sayfa ajanları içindir: **yeni sayfayı bu temelin üstüne kurun, kabuğa ve kite dokunmadan.**
+> Kit ya da kabukta değişiklik gerekiyorsa küçük, geriye uyumlu tutun ve bu belgeyi güncelleyin.
+
+## 0. Dosyalar
+
+| Ne | Yol |
+|---|---|
+| Kabuk | `src/components/manage16/ManageV16.tsx` |
+| Menü + rota + eski adres tablosu (TEK KAYNAK) | `src/components/manage16/menu.ts` |
+| Kit (tek giriş) | `src/components/manage16/kit/index.ts` (+ `kit.css`) |
+| Sayfalar | `src/components/manage16/sayfalar/<Ad>.tsx` (ör. `GenelBakis.tsx`, örnek liste sayfası `Denetim.tsx`) |
+| Sunucu | `src/services/yonetim16/{denetim,sayfalama,atomikJson,siteAyar,ozet}.ts` |
+| Şema | `deploy/pg/sql/yonetim16.sql` (açılışta kendiliğinden uygulanır) |
+| İstemci site ayarı | `src/services/siteAyar.ts` |
+
+App.tsx: yönetici `/manage` → `ManageV16`. `?kabuk=v14` eski konsolu açar (oturum boyunca hatırlanır; `?kabuk=v16` geri döndürür).
+Moderatör ve `/yonetim` girişi hâlâ eski `ManageConsole`'dadır.
+
+## 1. Adres şeması
+
+`/manage/<grup>/<sayfa>[/<id>...]`. Çözüm `menu.ts::adresCoz` ile en uzun yol eşleşmesidir; kalan parçalar sayfaya `altYol`, ilki `id` olarak gelir.
+Örnek: `/manage/kisi/abc123` → sayfa `kisi`, `id = 'abc123'`. `/manage/sistem` → grubun ilk sayfasına yönlenir.
+Eski v14 adresleri (`ESKI_ADRES`) `replaceState` ile yeni adrese geçer (`kisiler/<k>` → `kisi/<k>`).
+Bilinmeyen adres → "Sayfa bulunamadı".
+
+## 2. Sayfa ekleme (3 adım)
+
+1. `src/components/manage16/sayfalar/KisiListe.tsx` yazın; **varsayılan dışa aktarım** ve `SayfaProps` alır:
+   ```tsx
+   import type { SayfaProps } from '../menu';
+   import { SayfaBasligi, VeriTablosu } from '../kit';
+   export default function KisiListe({ id, altYol, git }: SayfaProps) { … }
+   ```
+2. `menu.ts`'de ilgili sayfa satırına `yukle: () => import('./sayfalar/KisiListe')` ekleyin. (Satır zaten var; yalnız `yukle` eklenir.
+   Yeni sayfa gerekiyorsa plandaki adresle yeni satır.) `yukle` olmayan sayfa menüde "yakında" görünür.
+3. `nice timeout 1500 npx tsc --noEmit` temiz + `npx vite build`. Sunucu kodu değiştiyse `systemctl --user restart meds-web` (kural 12).
+
+Kurallar:
+- Her sayfa kendi yığınıdır (`React.lazy`). **Sayfadan başka sayfayı statik import etmeyin**; ortak parça kite gider.
+- Panel içi gezinme yalnız `git('kisi/abc')` / `git('sistem/denetim?hedef=x')` ile (tam sayfa yenilemesi yok). Bağlantılarda `href={manageAdres(yol)}` + `onClick` ile `git`.
+- Sayfa durumu adreste: `VeriTablosu` `?q=&sayfa=&sirala=&yon=&s.<süzgeç>=` tutar. Ayrıntı için `/<id>` alt yolunu kullanın (paylaşılabilir bağlantı).
+- Global durum yok: veri `useAdminSorgu` ile sayfada. `questions` gibi büyük dizileri istemcide tutmayın; uç sayfalasın.
+- Türkçe metin; renk yalnız `--color-*` tokenları (kit sınıfları zaten öyle). Sınıf öneki `m16-`.
+- Adlandırma: dosya/bileşen Türkçe PascalCase (`SohbetOdalari.tsx`), uç `/api/admin/<grup>/<kaynak>`, SSE olayı `<konu>_changed`.
+
+## 3. Veri katmanı (`kit/api.ts`)
+
+- `adminIstek<T>(yol, { yontem, govde, sorgu, sinyal })` → JSON; 2xx dışı ya da HTML (uç hedefte yok) → `AdminHata` (`.durum`).
+  Ön eksiz `fetch('/api/...')` kullanır: yerel panelde Canlı seçiliyse istek Oracle vekiline gider, yönetici jetonu kendiliğinden eklenir.
+  **`safeJsonFetch` kullanmayın** (vekil başlığını atlar).
+- `useAdminSorgu<T>(yol | null, { sorgu, canliOlay: ['olay_changed'], aralikMs })` → `{ veri, yukleniyor, hata, yenile, setVeri }`.
+  Bellek önbelleği (SWR); `canliOlay` SSE gelince ve `resync`'te yeniden çeker.
+- Liste yanıtı tipi: `ListeYaniti<T> = { ogeler, toplam, sayfa, boyut, yuzler? }`.
+
+**Canlı/Yerel:** localhost'ta varsayılan Canlı (Oracle). Yeni uçlarınız Oracle'a dağıtılmadan "Canlı"da HTML döner → kit "Uç bulunamadı"
+gösterir. Geliştirirken üst bardan **Yerel**'e alın; işiniz bitince `localStorage.medsoru_panel_hedef='oracle'` olarak bırakın.
+Cihaza özel uçlar `config/deployment.ts::PANEL_DEVICE_ONLY` listesindedir.
+
+## 4. Kit bileşenleri (`import { … } from '../kit'`)
+
+| Bileşen | Öz API |
+|---|---|
+| `SayfaBasligi` | `baslik`, `aciklama?`, `eylemler?` (sağdaki düğmeler), `children?` (sekme/süzgeç alanı) |
+| `VeriTablosu<T>` | `kimlik` (sütun seçimi kaydı), `sutunlar: Sutun<T>[]`, `satirKimligi`, **`kaynak`** (sunucu kipi) **ya da** `ogeler` (yerel kip, küçük listeler), `ekSorgu?`, `suzgecler?: {anahtar, etiket, secenekler}[]` (çip; sunucuya `s.<anahtar>`), `secim?` + `topluEylemler?(seciliIdler, temizle)`, `satirTikla?`, `etkin?`, `canliOlay?`, `aramaYeri?`, `boyut?` (50), `aracEk?`, `adresteDurum?` (true). 120 satırı aşan sayfada sanal kaydırma. Klavye: satırda Enter aç, Boşluk seç, ↑/↓ gez. |
+| `Sutun<T>` | `anahtar`, `baslik`, `hucre?(t)`, `sirala?: true \| 'sunucuAnahtari'`, `genislik?` ('120px', 'minmax(200px,2fr)'), `gizli?`, `hizala?: 'sag'\|'orta'`, `deger?(t)` (yerel kip sıralama/arama) |
+| `AyrintiCekmecesi` | `acik`, `kapat`, `baslik`, `altBaslik?`, `children` (Alanlar sekmesi), `kayit?` (JSON sekmesi), `hedef?` (Geçmiş sekmesi = denetim kaydı), `ekSekmeler?`, `eylemler?` (alt çubuk), `kirli?` (kapatırken onay), `genis?`. Esc kapatır. |
+| `Form` | `alanlar: AlanTanim[]`, `deger`, `kaydet(yeni, degisen)` (fırlatılan hata formda gösterilir), `iptal?`, `kaydetMetni?`, `kirliDegisti?` (çekmeceye `kirli` vermek için). Alan türleri: `metin uzun sayi secim anahtar etiketler tarih json`; `zorunlu enAz enFazla desen dogrula ipucu salt`. Kirliyken sekme kapatma uyarısı (`useKirliUyari`). |
+| `onayIste(o)` | `Promise<boolean>`. Tehlikeli işlemde `{ baslik, aciklama, tehlikeli: true, yazilacak: 'SIFIRLA', onayMetni }` → kullanıcı sözcüğü yazmadan düğme açılmaz. Kabukta `OnayHost` takılı. |
+| `TopluIslem` | `secili`, `temizle`, `children` (düğmeler). VeriTablosu `topluEylemler` ile kendisi kullanır. |
+| `JsonGoruntuleyici` / `JsonDuzenleyici` | `veri`, `enYuksek?` / `deger`, `kaydet(yeni)`, `iptal?` (geçersiz JSON'da kaydet kapalı) |
+| `DegisiklikGecmisi` | `hedef?` ya da `uc?` (önek), `boyut?` — denetim kaydından; fark varsa önce/sonra gösterir |
+| `BosDurum`, `Yukleniyor` (`satir?` iskelet), `Hata` (`hata`, `yenile?`; 401/403 = "Yetki yok") | durum ekranları |
+| `Rozet` (`ton`), `Durum` (noktalı), `durumTonu(httpKodu)` | ton: `notr iyi uyari kotu vurgu bilgi` |
+| `IstatistikKart` (`etiket deger alt? ton? ikon? onClick? yukleniyor?`), `IstatistikIzgara` | sayı kartları |
+| `bildir(metin, 'iyi'\|'kotu'\|'bilgi')` | kısa bildirim (kabukta `BildirimHost`) |
+| `zamanMetni(iso)` | "3 dk önce" |
+
+CSS yardımcıları: `.m16-kart` (kutu, içinde `h2`), `.m16-btn` (+ `birincil`, `tehlike`, `hayalet`, `ikon`), `.m16-girdi`, `.m16-izgara-2`,
+`.m16-liste`, `.m16-satirlar` (dt/dd), `.m16-cip`.
+
+## 5. Sunucu yardımcıları
+
+### 5.1 Sayfalama (`yonetim16/sayfalama.ts`)
+```ts
+const s = listeSorgusu(req, { varsayilanBoyut: 50, enFazla: 500 }); // {sayfa, boyut, q, sirala, yon, suzgec}
+// JSON dosyası / bellekteki dizi:
+res.json(diziSayfala(liste, s, {
+  araMetni: (x) => `${x.id} ${x.ad}`,
+  siralayicilar: { ad: (x) => x.ad, at: (x) => x.at },
+  suzgecler: { durum: (x, v) => x.durum === v },
+  yuzler: { durum: (x) => x.durum },   // çip sayıları
+  eslestir: (x) => ({ id: x.id, ad: x.ad }), // listeye hafif satır
+}));
+// meds-pg tablosu (sütun adları izin listesinden; değerler parametreli):
+const q = pgSayfaSorgusu(s, { tablo: 'public.topluluk_mesajlar', araSutunlari: ['metin'], siralanabilir: ['at'], varsayilanSira: 'at', suzgecSutunlari: { oda: 'oda_id' } });
+const [{ rows }, c] = await Promise.all([pgDb.query(q.veri, q.degerler), pgDb.query(q.sayim, q.degerler)]);
+res.json({ ogeler: rows, toplam: c.rows[0].n, sayfa: s.sayfa, boyut: s.boyut });
+```
+
+### 5.2 Atomik JSON (`yonetim16/atomikJson.ts`)
+- `await atomikJsonYaz(dosya, veri, { yedek: 2, yedekKlasoru?, girinti?, bosYazma? })` — dosya başına kilit, geçici dosya + fsync + rename.
+- `await atomikJsonGuncelle<T>(dosya, (eski) => yeni)` — oku-değiştir-yaz kilit içinde (yarış yok).
+- Boş dizi/nesne yazımı varsayılan **reddedilir** (CLAUDE.md "boş sonuçla ezme").
+- `data/content/` altındaki dosyada `yedekKlasoru`'nu katman DIŞINA verin (`data/_yedek/<ad>`): eşitleme betiği katmandaki her `.json`'u yerele çeker.
+- Mevcut büyük yazma yollarına (pastQuestions, desteler) bağlamak ayrı iştir; o yolu değiştiren sayfa ajanı `fs.writeFileSync`'i bununla değiştirebilir.
+
+### 5.3 Denetim (`yonetim16/denetim.ts`)
+- Ara katman **otomatik**: tüm `POST/PUT/PATCH/DELETE /api/admin/*` (+ `/api/notebooklm/manage`, `/api/sesli-anlatim/yerel` yönetici uçları,
+  `/api/canli-ders/video-is`, `/api/system/services`) ve `KISISEL_OKUMA` desenlerine uyan GET'ler kaydedilir. Sizin bir şey yapmanız gerekmez.
+- Kişisel veri okuyan **yeni** GET ucu yazıyorsanız (`/api/admin/user-data/…`, `/api/admin/topluluk/mesajlar…`, `/api/admin/people/:key` zaten listede)
+  desen `KISISEL_OKUMA`'ya eklenmeli. Makine yoklaması yapan yazma uçlarını `ATLA`'ya ekleyin (gürültü).
+- Uç içinde: `denetimHedef(res, 'ders:k2-07')`, `denetimFark(res, onceki, sonraki)` (değişen alanlar önce/sonra), `denetimNot(res, {silinen: 12})`.
+  Elle satır: `denetimKaydet(req, { tur, uc, hedef, ozet })`. Gizli alan adları (`pass|token|secret|key…`) maskelenir, gövde ~4 KB'a kırpılır.
+- Hedef adlandırma: `<tür>:<kimlik>` — `kisi:<uid>`, `soru:<id>`, `ders:<id>`, `oda:<id>`, `site-ayar`.
+- Okuma: `GET /api/admin/denetim?sayfa&boyut&hedef&uc(önek)&kim&tur=yazma|okuma&durum=hata&yontem&q&sirala=at|uc|kim|durum|sure_ms&yon`.
+- SSE (yalnız yönetici): `denetim_eklendi`. pg kapalıyken satırlar `data/yonetici_denetim.jsonl`'a düşer.
+- Kayıt, isteği **alan** sunucuda tutulur: yerel panel Canlı'dayken kayıt Oracle'dadır (kim = `panel-anahtarı` görünebilir).
+
+### 5.4 Site ayarı (`yonetim16/siteAyar.ts` + istemci `services/siteAyar.ts`)
+Şema (`src/data/site_ayar.json` varsayılan; panel yazımı `data/content/site_ayar.json`):
+```json
+{ "surum": 3, "guncellendi": "…", "guncelleyen": "…",
+  "sayfalar":   { "sinav_calisma": "acik|gizli|kapali" },
+  "bayraklar":  { "quiz_cok_oyunculu": true },
+  "gorunurluk": { "ders:k2-07": "acik|gizli|yalniz-yonetici", "kurul:3": "gizli" },
+  "duyuru": { "acik": true, "metin": "…", "ton": "bilgi|uyari|hata", "baglanti": "/…", "bitis": "ISO" },
+  "bakim": { "acik": false, "sure": "15 dk" } }
+```
+- `GET /api/site-ayar` (herkese, bellek önbelleği + ETag, SW baypas), `GET /api/admin/site-ayar`, `PUT /api/admin/site-ayar` (kısmi; haritada
+  `null` = anahtarı sil → derleme varsayılanı). Geçersiz değer 400. Yazım denetime fark olarak düşer. SSE `site_ayar_changed` (herkese).
+- Bakım: `PUT {bakim:{acik,sure}}` ya da eski `POST /api/admin/bakim` — ikisi de kalıcı; sunucu açılışta kalıcı durumu uygular.
+- İstemci: `sayfaGizli(route)`, `sayfaKapali(route)`, `bayrak(ad, varsayilan)`, `gorunurluk('ders:k2-07')`, `useSiteAyar()` (yeniden çizim).
+  Açılışta localStorage'dan senkron okunur; derleme sabitleri (`GIZLI_SAYFALAR`/`KAPALI_SAYFALAR`) varsayılandır. App.tsx rota koruması buna bağlı.
+  **Açık iş (Site › Görünürlük ajanı):** menü listeleri (`shell/navModel.ts`, `merkez/merkezModel.ts` MERKEZ/CHECKUPLAR) modül sabitinde süzülüyor;
+  çalışma anı gizlemenin menüye de yansıması için onları `sayfaGizli` + `useSiteAyar` ile çizim anında süzün. Duyuru bandı da henüz çizilmiyor.
+- Dağıtım: `data/content/site_ayar.json` [0b] eşitlemesiyle (`deploy/oracle/content-overlay-sync.sh`, katmandaki her .json) yerel
+  `src/data/site_ayar.json`'a çekilir → commit'leyin. Yeni panel-yazılır içerik dosyası da aynı yolu izler: `src/data`'da varsayılan dosya
+  (yoksa eşitleme DURUR) + `resolveContent`/`writableContent`.
+
+### 5.5 Genel bakış ucu
+`GET /api/admin/ozet[?taze=1]` (30 sn önbellek): `saglik{pg,calismaSn,yiginMb,rssMb,yuk,sseIstemci,sunucu}`, `kullanici{simdi,bugun,hafta}`,
+`bekleyen{sikayet,geriBildirim,tuyo,onarim,faz14}`, `hata{istemci24s}`, `site{bakim,duyuru,gizliSayfa}`, `surum{onem,baslik,commit,dagitim}`, `sonDenetim[]`.
+Yeni sayaç: `registerOzetRoutes` bağımlılıklarına işlev ekleyin (server.ts "Yönetim v16 temeli" bloğu).
+
+## 6. Yeni uç yazarken kontrol listesi
+- `requireAdmin` (moderatöre açıksa `requireModeratorOrAdmin`), liste ucu `listeSorgusu` + `ListeYaniti` biçimi, varsayılan 50 satır.
+- İçerik yazımı `data/content` katmanına + `atomikJsonGuncelle` + SSE olayı; JSON tam dosya dökümü istemciye gönderilmez.
+- Tehlikeli işlem: istemcide `onayIste({ yazilacak })`; sunucuda da gövdede onay sözcüğü isteyin.
+- LLM tetikleyen uç (kural 20): zamanlayıcı yok, yalnız elle; `llm_kilit` kurallarına uyun.
+- Kişisel veri okuması → `KISISEL_OKUMA` deseni.
+- Sunucu değişince `systemctl --user restart meds-web`; commit/dağıtım kullanıcıda.

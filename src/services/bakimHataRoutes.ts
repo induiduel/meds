@@ -13,7 +13,15 @@ import path from 'path';
 
 type Mw = (req: express.Request, res: express.Response, next: express.NextFunction) => void;
 
-export function registerBakimHataRoutes(app: express.Express, opts: { dataDir: string; requireAdmin: Mw }) {
+export type BakimDenetleyici = {
+  durum: () => { bakim: boolean; sure?: string };
+  /** Bakımı aç/kapa (site-ayar kalıcılığı bunu açılışta çağırır) */
+  ayarla: (acik: boolean, sure?: string) => void;
+  /** POST /api/admin/bakim sonrası çağrılır (yonetim16/siteAyar kalıcı yazar) */
+  onDegisti?: (d: { bakim: boolean; sure?: string }) => void;
+};
+
+export function registerBakimHataRoutes(app: express.Express, opts: { dataDir: string; requireAdmin: Mw }): BakimDenetleyici {
   let bakim = process.env.MEDS_BAKIM === '1';
   let sure: string | undefined = process.env.MEDS_BAKIM_SURE || undefined;
   const durum = () => ({ bakim, ...(bakim && sure ? { sure } : {}) });
@@ -25,6 +33,11 @@ export function registerBakimHataRoutes(app: express.Express, opts: { dataDir: s
     res.status(503).set('Retry-After', '120').json(durum());
   });
 
+  const ctl: BakimDenetleyici = {
+    durum,
+    ayarla: (acik, s) => { bakim = acik; sure = acik && s ? String(s).slice(0, 40) : undefined; },
+  };
+
   app.get('/api/bakim', (_req, res) => {
     res.set('Cache-Control', 'no-store');
     res.status(bakim ? 503 : 200).json(durum());
@@ -34,6 +47,7 @@ export function registerBakimHataRoutes(app: express.Express, opts: { dataDir: s
     bakim = req.body?.acik === true;
     sure = typeof req.body?.sure === 'string' && req.body.sure.trim() ? String(req.body.sure).slice(0, 40) : undefined;
     console.log(`[bakim] ${bakim ? 'AÇIK' : 'kapalı'}${sure ? ` (${sure})` : ''}`);
+    try { ctl.onDegisti?.(durum()); } catch (e: any) { console.warn('[bakim] kalıcı yazılamadı:', e?.message); }
     res.json(durum());
   });
 
@@ -72,4 +86,5 @@ export function registerBakimHataRoutes(app: express.Express, opts: { dataDir: s
       res.json({ kayitlar: satir.slice(-n).reverse().map((l) => { try { return JSON.parse(l); } catch { return null; } }).filter(Boolean) });
     } catch (e: any) { res.status(500).json({ error: e?.message }); }
   });
+  return ctl;
 }

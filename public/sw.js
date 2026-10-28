@@ -515,6 +515,7 @@ self.addEventListener('fetch', (event) => {
       url.pathname.startsWith('/api/realtime/') ||
       url.pathname.startsWith('/api/live/') ||
       url.pathname.startsWith('/api/presence') ||
+      url.pathname === '/api/site-ayar' || // çalışma anı site ayarı: gizli sayfa bayatlamasın (yönetim v16)
       url.pathname === '/api/surum' || // sürüm denetimi her zaman ağdan (güncelleme diyaloğu)
       url.pathname.startsWith('/api/ai-test/') || // test erişimi çerezi: önbellekten asla
       url.pathname.startsWith('/api/canli-ders/ses/') || // ses akışı (Range/206): tarayıcı doğrudan alır, önbelleğe yazılmaz

@@ -169,6 +169,9 @@ import { censorProfanity } from './src/utils/profanityFilter.ts';
 import { registerDataCatalogRoutes } from './src/services/dataCatalogService.ts';
 import { registerRagRelatedRoutes } from './src/services/ragRelatedRoutes.ts';
 import { registerBakimHataRoutes } from './src/services/bakimHataRoutes.ts';
+import { denetimAraKatmani, registerDenetimRoutes } from './src/services/yonetim16/denetim.ts';
+import { registerSiteAyarRoutes } from './src/services/yonetim16/siteAyar.ts';
+import { registerOzetRoutes } from './src/services/yonetim16/ozet.ts';
 import { registerUserNotesRoutes, createNotesStore } from './src/services/userNotesService.ts';
 import { createQuestionIntake, formatUnitsForPrompt, applyIntakeToQuestion } from './src/services/questionIntake.ts';
 import { havuzDondurDosyasi, havuzDonduruldu } from './src/services/havuzDondur.ts';
@@ -397,9 +400,11 @@ app.use(express.json({ limit: '100mb' }));
 // Yönetici doğrulaması (/api/*): gizli anahtar | gerçek loopback | yöneticinin Firebase jetonu → req.adminAuth
 configureAdminAuthLog(path.resolve(__dirname, 'data'));
 app.use(adminAuthMiddleware('nofrostlife@gmail.com'));
+// Yönetim v16 denetim kaydı: tüm /api/admin/* yazmaları + kişisel veri okumaları → meds-pg yonetici_denetim
+app.use(denetimAraKatmani());
 app.use(express.urlencoded({ extended: true, limit: '100mb' }));
 // AB17/AB18: bakım kipi (MEDS_BAKIM=1 ya da POST /api/admin/bakim; varsayılan kapalı) + istemci hata bildirimi
-registerBakimHataRoutes(app, { dataDir: path.resolve(__dirname, 'data'), requireAdmin });
+const bakimCtl = registerBakimHataRoutes(app, { dataDir: path.resolve(__dirname, 'data'), requireAdmin });
 
 // Başarım: puan + ATP, hedefler, başarımlar, sıralama (src/services/basarim; kurallar src/data/basarim/tanim.json).
 // CORS'tan sonra (api. alt alanından okunur), diğer rotalardan önce kurulur (topluluk eylemi ara katmanı); profil yedeği kaydedilince kişi yeniden değerlendirilir.
@@ -11710,6 +11715,24 @@ async function ensurePastReportIds(pastList: any[]): Promise<number> {
   console.log(`[Gelen kutusu] ${changed.length} sorudaki kimliksiz bildirimlere kalıcı kimlik yazıldı.`);
   return changed.length;
 }
+
+// ---- Yönetim v16 temeli (src/services/yonetim16; belge docs/YONETIM_V16_KIT.md) ----
+registerDenetimRoutes(app, { rootDir: __dirname, dataDir: DATA_DIR, requireAdmin, isPgOnline: () => pgOnline, broadcastAdmin: (ev, d) => broadcastRealtimeEvent(ev, d, true) });
+registerSiteAyarRoutes(app, { rootDir: __dirname, requireAdmin, broadcast: (ev, d) => broadcastRealtimeEvent(ev, d), bakim: bakimCtl, kimOf: (req) => verifiedEmail(req) || String((req as any).adminAuth?.via || 'yönetici') });
+registerOzetRoutes(app, {
+  rootDir: __dirname,
+  dataDir: DATA_DIR,
+  requireAdmin,
+  isPgOnline: () => pgOnline,
+  bekleyenSikayet: () => {
+    let n = 0;
+    for (const q of getPastQuestionsDb()) if (Array.isArray(q?.reports)) for (const r of q.reports) if (!r?.status || r.status === 'pending') n++;
+    return n;
+  },
+  onarimBekleyen: () => autoRepairStore.getAll().filter((x) => x.status === 'pending').length,
+  faz14Bekleyen: () => phase14Queue.pendingCount(),
+  sseIstemci: () => realtimeClients.size,
+});
 
 app.get('/api/admin/inbox', requireModeratorOrAdmin, async (_req, res) => {
   try {

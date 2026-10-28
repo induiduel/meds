@@ -8,7 +8,7 @@ import { foldTurkish } from './utils/fuzzyMatching';
 import type { SearchHit } from './components/search/searchShared';
 import { AppRoute, parseLocation, writeLocation, pathFor, icPathFor, ROUTE_TITLES, deepLinkIdFor, navigateTo } from './router';
 import { icKonum, kanonik } from './siteHaritasi';
-import { GIZLI_SAYFALAR, KAPALI_SAYFALAR } from './components/merkez/merkezModel';
+import { sayfaGizli, sayfaKapali, useSiteAyar } from './services/siteAyar';
 import {
   Sparkles,
   Plus,
@@ -198,6 +198,15 @@ const InteractiveDeckView = React.lazy(() => wrapLazy(import('./components/learn
 const ExamSpotsView = React.lazy(() => wrapLazy(import('./components/spots/ExamSpotsView').then(m => ({ default: m.ExamSpotsView }))));
 const AlternatifCozucuView = React.lazy(() => wrapLazy(import('./components/altCozucu/AlternatifCozucuView').then(m => ({ default: m.default }))));
 const MedicalEncyclopediaView = React.lazy(() => wrapLazy(import('./components/encyclopedia/MedicalEncyclopediaView').then(m => ({ default: m.MedicalEncyclopediaView }))));
+// Yönetim v16 kabuğu (varsayılan); eski v14 konsolu ?kabuk=v14 ile (oturum boyunca hatırlanır, ?kabuk=v16 döndürür) ve moderatörde
+const ManageV16 = React.lazy(() => wrapLazy(import('./components/manage16/ManageV16')));
+const manageKabugu = (): 'v16' | 'v14' => {
+  try {
+    const k = new URLSearchParams(window.location.search).get('kabuk');
+    if (k === 'v14' || k === 'v16') sessionStorage.setItem('medsoru_manage_kabuk', k);
+    return sessionStorage.getItem('medsoru_manage_kabuk') === 'v14' ? 'v14' : 'v16';
+  } catch { return 'v16'; }
+};
 const ManageConsole = React.lazy(() => wrapLazy(import('./components/manage/ManageConsole').then(m => ({ default: m.ManageConsole }))));
 const OfflineDatabaseModal = React.lazy(() => wrapLazy(import('./components/pwa/OfflineDatabaseModal').then(m => ({ default: m.OfflineDatabaseModal }))));
 const PwaInstallWelcomeModal = React.lazy(() => wrapLazy(import('./components/pwa/PwaInstallWelcomeModal').then(m => ({ default: m.PwaInstallWelcomeModal }))));
@@ -893,11 +902,13 @@ export default function App() {
   const currentCommittee = (committees || []).find((c) => c.id === selectedCommitteeId);
   const targetCount = currentCommittee?.targetCount || 100;
   const isAdmin = isAdminUser(currentUser);
-  const sayfaKapali = KAPALI_SAYFALAR.has(activeTab) && !isAdmin;
-  // Gizlenen sayfalar (merkezModel.GIZLI_SAYFALAR): öğrenci adresle girse de Bugün'e döner
+  // Çalışma anı site ayarı (yönetim v16): derleme sabitleri varsayılan, panel ayarı üstüne yazar (services/siteAyar.ts)
+  const siteAyar = useSiteAyar();
+  const sayfaKapaliMi = sayfaKapali(activeTab) && !isAdmin;
+  // Gizlenen sayfalar (merkezModel.GIZLI_SAYFALAR + panel): öğrenci adresle girse de Bugün'e döner
   useEffect(() => {
-    if (!isAdmin && !isAdminAppMode() && GIZLI_SAYFALAR.has(activeTab)) setActiveTab('today');
-  }, [isAdmin, activeTab, setActiveTab]);
+    if (!isAdmin && !isAdminAppMode() && sayfaGizli(activeTab)) setActiveTab('today');
+  }, [isAdmin, activeTab, setActiveTab, siteAyar]);
   // Moderatör: rol sunucudan (GET /api/me/access, Firebase jetonu) öğrenilir; yalnız moderasyon bölümleri açılır
   const [isModerator, setIsModerator] = useState(false);
   useEffect(() => {
@@ -1615,7 +1626,11 @@ export default function App() {
         <V15Icinde><KronometreV15 /></V15Icinde>
         </>
       ) : activeTab === 'manage' || activeTab === 'admin' ? (
-        isAdmin || isModerator ? (
+        isAdmin && activeTab === 'manage' && manageKabugu() === 'v16' ? (
+          <Suspense fallback={<ViewFallback />}>
+            <ManageV16 adminEmail={ADMIN_EMAIL} onExit={() => setActiveTab('quick_add')} />
+          </Suspense>
+        ) : isAdmin || isModerator ? (
           <Suspense fallback={<ViewFallback />}>
             <ManageConsole
               moderatorOnly={!isAdmin}
@@ -1766,7 +1781,7 @@ export default function App() {
         )}
 
         {/* Öğrenciye kapatılan sayfalar (Sınav çalışması, Alternatif çözücü, Ders notları): yalnız yönetici açar */}
-        {sayfaKapali && (
+        {sayfaKapaliMi && (
           <div className="mz-kapali" role="status">
             <h1>Bu sayfa kullanımdan kaldırıldı</h1>
             <p>Aradığın içerik artık yeni bölümlerde. Ne yapmak istediğini seç:</p>
@@ -1903,7 +1918,7 @@ export default function App() {
         )}
 
         {/* TAB: Patoloji alternatif sesli çözücü (/alternatif-cozucu) */}
-        {activeTab === 'alternatif_cozucu' && !sayfaKapali && (
+        {activeTab === 'alternatif_cozucu' && !sayfaKapaliMi && (
           <Suspense fallback={<ViewFallback />}>
             <AlternatifCozucuView />
           </Suspense>
@@ -2063,7 +2078,7 @@ export default function App() {
         )}
 
         {/* TAB: /sinav-calisma — Tüm kazanımlar ve sesli sınav asistanı */}
-        {activeTab === 'sinav_calisma' && !sayfaKapali && (
+        {activeTab === 'sinav_calisma' && !sayfaKapaliMi && (
           <Suspense fallback={<ViewFallback />}>
             <SinavCalismaView />
           </Suspense>
@@ -2413,7 +2428,7 @@ export default function App() {
         )}
 
         {/* TAB 6: Ders Notları & Slaytlar */}
-        {activeTab === 'notes' && !sayfaKapali && (
+        {activeTab === 'notes' && !sayfaKapaliMi && (
           <Suspense fallback={<ViewFallback />}>
             <LectureNotesView
               key={deepLinkNonce}
