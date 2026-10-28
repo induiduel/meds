@@ -7,8 +7,8 @@
  *  - Kalem kutusu: çizim açıkken PDF'in sağında yüzen dikey araçlar
  * Davranışlar değişmez; yalnız yerleşim ve gruplama v15'e göredir. Stiller styles/v15/sesli.css.
  */
-import React, { useState } from 'react';
-import { ArrowLeftRight, Eraser, Highlighter, Info, Maximize2, Minimize2, MoreHorizontal, PenTool, SlidersHorizontal, Star, BookOpen, Undo2, X } from 'lucide-react';
+import React, { useEffect, useRef, useState } from 'react';
+import { ArrowLeftRight, Check, Eraser, Highlighter, Info, Maximize2, Minimize2, MoreHorizontal, PenTool, SlidersHorizontal, Star, BookOpen, Undo2, X } from 'lucide-react';
 import { Sheet } from '../ui/Sheet';
 import { penPalette, setDrawingGlobalState, undoLastDrawing, useCanUndoDrawing, useDrawingGlobalState } from '../learn/SlideDrawingCanvas';
 import { useAppearance } from '../../utils/appearance';
@@ -80,20 +80,11 @@ export function CdV15Bas(p: {
         </button>
       )}
       {p.ek}
-      {p.hizli && (
-        <span className="cd15-hizli">
-          <span className="cd15-yazi" role="group" aria-label="Yazı boyutu">
-            <button type="button" className="v15-ib" onClick={() => p.hizli!.setYazi(p.hizli!.yazi - 2)} disabled={p.hizli.yazi <= p.hizli.yaziEnaz} aria-label="Yazıyı küçült" title="Yazıyı küçült">A−</button>
-            <button type="button" className="v15-ib" onClick={() => p.hizli!.setYazi(p.hizli!.yazi + 2)} disabled={p.hizli.yazi >= p.hizli.yaziEncok} aria-label="Yazıyı büyüt" title="Yazıyı büyüt">A+</button>
-          </span>
-          <button type="button" className="v15-ib" onClick={p.hizli.onYildiz} aria-label={`Yıldızlı paragraflar (${p.hizli.yildiz})`} title={`Yıldızlı paragraflar (${p.hizli.yildiz})`}>
-            <Star aria-hidden />{p.hizli.yildiz > 0 && <i className="cd15-rozet">{p.hizli.yildiz}</i>}
-          </button>
-        </span>
-      )}
-      {p.terimVar && (
-        <button type="button" className={`v15-ib${terim ? ' is-on' : ''}`} aria-pressed={terim} onClick={() => terimYardimciAyarla(!terim)}
-          aria-label="Terim yardımcısı" title={terim ? 'Terim yardımcısı açık (kapat)' : 'Terimler: slayttaki terimlerin anlamını göster'}>
+      {/* H331: üst barda yalnız sık kullanılanlar (görünüm, tam ekran) + ⋯; yazı boyutu, yıldızlılar, terim yardımcısı, Görünüm
+          çekmecesi ve Ders seçenekleri menüde. Terim yardımcısı açıksa barda "etkin" göstergesi kalır (dokununca kapanır). */}
+      {p.terimVar && terim && (
+        <button type="button" className="v15-ib is-on cd15-etkin" aria-pressed onClick={() => terimYardimciAyarla(false)}
+          aria-label="Terim yardımcısı açık, kapat" title="Terim yardımcısı açık (kapat)">
           <Info aria-hidden />
         </button>
       )}
@@ -102,13 +93,89 @@ export function CdV15Bas(p: {
           <Maximize2 aria-hidden />
         </button>
       )}
-      <button type="button" className="v15-ib" onClick={p.onGorunum} aria-haspopup="dialog" aria-label="Görünüm ayarları" title="Görünüm: düzen, PDF katmanları, okuma">
-        <SlidersHorizontal aria-hidden />
-      </button>
-      <button type="button" className="v15-ib" onClick={p.onMenu} aria-haspopup="dialog" aria-label="Ders seçenekleri" title="Ders seçenekleri">
-        <MoreHorizontal aria-hidden />
-      </button>
+      <CdTasmaMenu etiket="Daha fazla" className="cd15-ust-tm" ogeler={[
+        ...(p.hizli ? [
+          { ad: 'Yazıyı büyüt', ikon: <b>A+</b>, ipucu: `${p.hizli.yazi}px`, kalAcik: true, disabled: p.hizli.yazi >= p.hizli.yaziEncok, onSec: () => p.hizli!.setYazi(p.hizli!.yazi + 2) },
+          { ad: 'Yazıyı küçült', ikon: <b>A−</b>, kalAcik: true, disabled: p.hizli.yazi <= p.hizli.yaziEnaz, onSec: () => p.hizli!.setYazi(p.hizli!.yazi - 2) },
+        ] : []),
+        ...(p.terimVar ? [{ ad: 'Terim yardımcısı', ikon: <Info />, secili: terim, onSec: () => terimYardimciAyarla(!terim), ayrac: true }] : []),
+        ...(p.hizli ? [{ ad: `Yıldızlı paragraflar (${p.hizli.yildiz})`, ikon: <Star />, onSec: p.hizli.onYildiz, ayrac: !p.terimVar }] : []),
+        ...(p.onTamEkran ? [{ ad: 'Tam ekran', ikon: <Maximize2 />, ipucu: 'Esc çıkar', onSec: p.onTamEkran }] : []),
+        { ad: 'Görünüm ayarları…', ikon: <SlidersHorizontal />, onSec: p.onGorunum, ayrac: true },
+        { ad: 'Tüm ders seçenekleri…', ikon: <MoreHorizontal />, onSec: p.onMenu },
+      ]} />
     </header>
+  );
+}
+
+
+/* =============================================================================
+ * H330: Taşma menüsü (⋯) — seyrek düğmeler tek açılır menüde. Erişilebilir: aria-haspopup="menu", Esc ve dışarı tıklama
+ * kapatır, ↑/↓/Home/End öğeler arasında gezer, açılınca ilk öğe odaklanır, kapanınca odak düğmeye döner.
+ * Durum taşıyan öğe menuitemcheckbox + ✓ ile gösterilir; kalAcik öğesi (yazı boyutu, yakınlaştırma) menüyü kapatmaz.
+ * ============================================================================= */
+export interface CdTasmaOge {
+  ad: string;
+  ikon?: React.ReactNode;
+  onSec: () => void;
+  ipucu?: string;
+  secili?: boolean;
+  disabled?: boolean;
+  kalAcik?: boolean;
+  ayrac?: boolean;
+}
+export function CdTasmaMenu({ ogeler, etiket, className, ikon }: { ogeler: CdTasmaOge[]; etiket: string; className?: string; ikon?: React.ReactNode }) {
+  const [acik, setAcik] = useState(false);
+  const kok = useRef<HTMLSpanElement>(null);
+  const btn = useRef<HTMLButtonElement>(null);
+  const liste = useRef<HTMLDivElement>(null);
+  const ogeEl = () => Array.from(liste.current?.querySelectorAll<HTMLButtonElement>('[role^="menuitem"]:not([disabled])') || []);
+  const kapat = (odak = true) => { setAcik(false); if (odak) btn.current?.focus(); };
+  useEffect(() => {
+    if (!acik) return;
+    ogeEl()[0]?.focus();
+    const dis = (e: PointerEvent) => { if (!kok.current?.contains(e.target as Node)) setAcik(false); };
+    const esc = (e: KeyboardEvent) => { if (e.key === 'Escape') { e.stopPropagation(); e.preventDefault(); kapat(); } };
+    document.addEventListener('pointerdown', dis, true);
+    document.addEventListener('keydown', esc, true);
+    return () => { document.removeEventListener('pointerdown', dis, true); document.removeEventListener('keydown', esc, true); };
+  }, [acik]);
+  const tus = (e: React.KeyboardEvent) => {
+    const el = ogeEl(); if (!el.length) return;
+    const i = el.indexOf(document.activeElement as HTMLButtonElement);
+    let j = -1;
+    if (e.key === 'ArrowDown') j = (i + 1) % el.length;
+    else if (e.key === 'ArrowUp') j = (i - 1 + el.length) % el.length;
+    else if (e.key === 'Home') j = 0;
+    else if (e.key === 'End') j = el.length - 1;
+    else if (e.key === 'Tab') { setAcik(false); return; }
+    if (j >= 0) { e.preventDefault(); el[j].focus(); }
+  };
+  return (
+    <span className={`cd15-tm${className ? ` ${className}` : ''}`} ref={kok}>
+      <button type="button" ref={btn} className="v15-ib cd15-tm-btn" aria-haspopup="menu" aria-expanded={acik} aria-label={etiket} title={etiket}
+        onClick={() => setAcik((a) => !a)}
+        onKeyDown={(e) => { if (e.key === 'ArrowDown' && !acik) { e.preventDefault(); setAcik(true); } }}>
+        {ikon || <MoreHorizontal aria-hidden />}
+      </button>
+      {acik && (
+        <div className="cd15-tm-liste" role="menu" aria-label={etiket} ref={liste} onKeyDown={tus}>
+          {ogeler.map((o, i) => (
+            <React.Fragment key={i}>
+              {o.ayrac && i > 0 && <div className="cd15-tm-ayrac" role="separator" />}
+              <button type="button" role={o.secili === undefined ? 'menuitem' : 'menuitemcheckbox'} aria-checked={o.secili === undefined ? undefined : o.secili}
+                className="cd15-tm-oge" disabled={o.disabled}
+                onClick={() => { o.onSec(); if (!o.kalAcik) kapat(); }}>
+                <span className="cd15-tm-ik" aria-hidden>{o.ikon}</span>
+                <span className="cd15-tm-ad">{o.ad}</span>
+                {o.ipucu && <kbd className="cd15-tm-kbd">{o.ipucu}</kbd>}
+                {o.secili !== undefined && <span className={`cd15-tm-ok${o.secili ? ' is-on' : ''}`} aria-hidden>{o.secili ? <Check /> : null}</span>}
+              </button>
+            </React.Fragment>
+          ))}
+        </div>
+      )}
+    </span>
   );
 }
 

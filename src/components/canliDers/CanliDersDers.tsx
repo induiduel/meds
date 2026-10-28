@@ -21,7 +21,7 @@ import {
 import { useDersEkranTercih, useYatayDokunmatik } from '../../services/dersEkranTercih';
 import { CdAiPanel, CdBolumSonu, CdMasa, CdSesliKitap, cdAiIste, cdBolumSonuDurAyarla, useCdBolumSonuDur, useMasaUygun } from './CdSesliEk';
 import { toggleFavoriteCard } from '../../services/studyStore';
-import { CdV15Bas, CdV15Gorunum, CdV15KalemDugme, CdV15KalemKutusu, CdV15Menu } from './CdV15';
+import { CdTasmaMenu, CdV15Bas, CdV15Gorunum, CdV15KalemDugme, CdV15KalemKutusu, CdV15Menu } from './CdV15'; // H332: CdTasmaMenu
 import { GunlukDiyalog } from './CanliDersView';
 import { CdCikmisChip, CdCikmisPencereKok, cikmisSayfada } from './CdCikmisChip';
 import { useCdTur } from './useCdTur';
@@ -2020,10 +2020,19 @@ function CdPdfBolme({ detay, canli }: { detay: CdDetay; canli: boolean }) {
             <button type="button" className="cd-ib" onClick={undoLastDrawing} disabled={!geriAlinir} aria-label="Son çizimi geri al" title="Son çizimi geri al"><Undo2 /></button>
           </>
         )}
-        <button type="button" className="cd-ib" onClick={sonrakiTema} aria-label="Sayfa temasını değiştir" title={`Sayfa teması: ${({ ozgun: 'Özgün', temiz: 'Temiz', sepya: 'Sepya', gece: 'Gece' })[sayfaTema]} (değiştirmek için tıkla)`}><Palette /></button>
-        <button type="button" className="cd-ib" onClick={() => setZoom((z) => Math.max(0.5, +(z - 0.25).toFixed(2)))} aria-label="Uzaklaştır"><Minus /></button>
+        {/* H332: v15'te sayfa teması (seyrek) PDF ⋯ menüsüne girdi; yakınlaştırma masaüstünde görünür, telefonda (≤600 px) menüde */}
+        {!v15 && <button type="button" className="cd-ib" onClick={sonrakiTema} aria-label="Sayfa temasını değiştir" title={`Sayfa teması: ${({ ozgun: 'Özgün', temiz: 'Temiz', sepya: 'Sepya', gece: 'Gece' })[sayfaTema]} (değiştirmek için tıkla)`}><Palette /></button>}
+        <button type="button" className="cd-ib cd-pdf-zb" onClick={() => setZoom((z) => Math.max(0.5, +(z - 0.25).toFixed(2)))} aria-label="Uzaklaştır" title="Uzaklaştır"><Minus /></button>
         <span className="cd-pdf-zoom">{Math.round(zoom * 100)}%</span>
-        <button type="button" className="cd-ib" onClick={() => setZoom((z) => Math.min(3, +(z + 0.25).toFixed(2)))} aria-label="Yakınlaştır"><Plus /></button>
+        <button type="button" className="cd-ib cd-pdf-zb" onClick={() => setZoom((z) => Math.min(3, +(z + 0.25).toFixed(2)))} aria-label="Yakınlaştır" title="Yakınlaştır"><Plus /></button>
+        {v15 && (
+          <CdTasmaMenu etiket="PDF seçenekleri" className="cd-pdf-tm" ogeler={[
+            { ad: `Sayfa teması: ${({ ozgun: 'Özgün', temiz: 'Temiz', sepya: 'Sepya', gece: 'Gece' })[sayfaTema]}`, ikon: <Palette />, ipucu: 'değiştir', kalAcik: true, onSec: sonrakiTema },
+            { ad: 'Yakınlaştır', ikon: <Plus />, ipucu: `%${Math.round(zoom * 100)}`, kalAcik: true, disabled: zoom >= 3, ayrac: true, onSec: () => setZoom((z) => Math.min(3, +(z + 0.25).toFixed(2))) },
+            { ad: 'Uzaklaştır', ikon: <Minus />, kalAcik: true, disabled: zoom <= 0.5, onSec: () => setZoom((z) => Math.max(0.5, +(z - 0.25).toFixed(2))) },
+            { ad: 'Sayfaya sığdır (%100)', ikon: <FileText />, kalAcik: true, disabled: zoom === 1, onSec: () => setZoom(1) },
+          ]} />
+        )}
       </div>
       {v15 && <CdV15KalemKutusu />}
       <div className={`cd-pdf-govde dpv-body tema-${sayfaTema}`} ref={wrapRef}>

@@ -116,7 +116,7 @@ const dock = '.cd-dock.is-tam';
 
 const DERS: Durak[] = [
   {
-    sel: '.cd-ders-ad',
+    sel: '.cd-ders-ad, .cd15-ad', // H334: v15 başlığı
     icon: Headphones,
     eyebrow: 'Ders ekranı',
     title: 'Dinle, oku, izle',
@@ -124,7 +124,7 @@ const DERS: Durak[] = [
     points: ['Oynatıcı altta sabittir', 'Sağ üstteki “Tanıtım” (?) düğmesi bu turu yeniden açar'],
   },
   {
-    sel: '.cd-sekmeler',
+    sel: '.cd-sekmeler, .cd15-gor, .cd15-dongu', // H334: v15 üst barı
     icon: MonitorSmartphone,
     eyebrow: 'Görünüm',
     title: 'Metin, Metin + PDF ya da yalnız PDF',
@@ -133,7 +133,7 @@ const DERS: Durak[] = [
     optional: true,
   },
   {
-    sel: '.cd-tam-btn',
+    sel: '.cd-tam-btn, .cd15-tam', // H334: v15 (telefonda ⋯ menüsünde, durak atlanır)
     icon: MonitorSmartphone,
     eyebrow: 'Odak',
     title: 'Tam ekran',
@@ -205,11 +205,11 @@ const DERS: Durak[] = [
     masaustu: true,
   },
   {
-    sel: '.cd-ders-daha .cd-daha-btn',
+    sel: '.cd-ders-daha .cd-daha-btn, .cd15-ust-tm .cd15-tm-btn', // H334: v15 ⋯ Daha fazla
     icon: SlidersHorizontal,
     eyebrow: 'Seçenekler',
     title: 'Çevrimdışı ve listem',
-    text: 'Başlıktaki “⋯” menüsü dersi cihaza indirir, listene ekler ve bu tanıtımı yeniden açar.',
+    text: 'Başlıktaki “⋯” menüsünde yazı boyutu, terim yardımcısı, yıldızlılar ve görünüm ayarları; “Tüm ders seçenekleri” dersi cihaza indirir, listene ekler ve bu tanıtımı yeniden açar.',
     points: ['Çevrimdışı: ses, metin ve slaytlar internetsiz açılır'],
     optional: true,
   },
