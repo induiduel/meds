@@ -1,5 +1,5 @@
 import React, { Suspense, lazy } from 'react';
-import { VeriTablosu, SayfaBasligi, Rozet, Durum, zamanMetni, adminIstek, bildir, onayIste, Yukleniyor, useAdminSorgu, IstatistikIzgara, IstatistikKart } from '../kit';
+import { VeriTablosu, SayfaBasligi, Rozet, Durum, zamanMetni, adminIstek, bildir, onayIste, gerekceIste, yazimHedefi, Yukleniyor, useAdminSorgu, IstatistikIzgara, IstatistikKart } from '../kit';
 import type { SayfaProps } from '../menu';
 import { RolRozeti, sureMetni, kisiYolu, ETKINLIK_ETIKET } from './kisiOrtak';
 
@@ -30,7 +30,7 @@ function Liste({ git }: { git: SayfaProps['git'] }) {
   const t = ozet.veri?.toplamlar;
   const rolDegistir = async (ids: string[], satirlar: string[], temizle: () => void, rol: string) => {
     if (!ids.length) return bildir('Seçimde giriş hesabı yok (misafir satırlarına rol verilemez).', 'kotu');
-    if (!(await onayIste({ baslik: `${ids.length} hesabın rolü “${rol}” yapılsın mı?`, onayMetni: 'Uygula' }))) return;
+    if (!(await onayIste({ baslik: `${ids.length} hesabın rolü “${rol}” yapılsın mı?`, aciklama: `Hedef: ${yazimHedefi()}.`, onayMetni: 'Uygula' }))) return; // H181
     try {
       const r = await adminIstek('/api/admin/people-access/role', { yontem: 'POST', govde: { uids: ids, role: rol } });
       bildir(`${r.changed?.length || 0} hesap güncellendi${r.skipped?.length ? `, ${r.skipped.length} atlandı` : ''}.`);
@@ -40,10 +40,11 @@ function Liste({ git }: { git: SayfaProps['git'] }) {
   };
   const askiya = async (ids: string[], temizle: () => void) => {
     if (!ids.length) return bildir('Seçimde giriş hesabı yok.', 'kotu');
-    const gerekce = window.prompt(`${ids.length} hesap askıya alınacak. Gerekçe:`);
-    if (!gerekce || gerekce.trim().length < 3) return;
+    // H179: window.prompt yerine kit onay penceresinde gerekçe alanı (≥3 karakter)
+    const gerekce = await gerekceIste({ baslik: `${ids.length} hesap askıya alınsın mı?`, aciklama: `Hedef: ${yazimHedefi()}.`, tehlikeli: true, onayMetni: 'Askıya al', gerekce: { etiket: 'Askı gerekçesi', enAz: 3 } });
+    if (!gerekce) return;
     try {
-      const r = await adminIstek('/api/admin/people-access/suspend', { yontem: 'POST', govde: { uids: ids, reason: gerekce.trim() } });
+      const r = await adminIstek('/api/admin/people-access/suspend', { yontem: 'POST', govde: { uids: ids, reason: gerekce } });
       bildir(`${r.changed?.length || 0} hesap askıya alındı.`);
       temizle();
     } catch (e: any) { bildir(e.message, 'kotu'); }

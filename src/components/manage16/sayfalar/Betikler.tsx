@@ -11,7 +11,13 @@ type Liste = { scripts: Betik[]; pipelines: Hat[]; jobs: { active: Is[]; history
 /** LLM/bulut API kullanabilecek betik (kural 20): ek onay ve uyarı */
 const llmMi = (b: { name: string; category?: string; description?: string }) =>
   b.category === 'AI & Doğrulama' || /\b(ai|llm|claude|gemini|groq|openrouter|opencode|deepseek|phase14|faz14)\b|_ai_|ai-|-ai/i.test(`${b.name} ${b.description || ''}`);
-const tehlikeMi = (b: Betik) => b.danger || /(sil|delete|reset|drop|restore|import|deploy|dagit|push|sync.*cloud|cloud|wipe|temizle)/i.test(b.name) || b.category === 'Veritabanı & Bulut';
+// H182: tehlike tespiti ad regex'ine dayanıyordu (adında "sil/reset" geçmeyen yazıcı betik onaysız çalışıyordu). Artık tersine:
+// yalnız salt okunur olduğu bilinen betikler güvenli; bilinmeyen/sınıflanmamış/özel her betik varsayılan TEHLİKELİ (yazılı onay).
+const GUVENLI_BETIK = new Set([
+  'detect-database-updates.mjs', 'detect-faulty-ocr.mjs', 'inspect-sources.mjs', 'check-online-status.ts',
+  'test-drive-folders.mjs', 'test-sample-pdfs.mjs', 'test-filter-donem3.mjs',
+]);
+const tehlikeMi = (b: Betik) => b.danger || b.isCustom || !GUVENLI_BETIK.has(b.name);
 
 /** Sistem › Betikler — betik ve zincir çalıştırma, iş geçmişi ve günlük. Tehlikeli ve LLM betikleri yazılı çift onay ister. */
 export default function Betikler(_p: SayfaProps) {
@@ -29,7 +35,7 @@ export default function Betikler(_p: SayfaProps) {
       aciklama: <>
         <code>{b.name} {arg}</code>
         {llm && <><br /><b>LLM/API kullanabilir.</b> Kural 20: yalnız elle başlatılır; betik llm_kilit ile korunuyorsa panel bayrağı olmadan çıkış 75 verir.</>}
-        {tehlike && <><br /><b>Tehlikeli:</b> veri silebilir, ezebilir ya da dışarı gönderebilir.</>}
+        {tehlike && <><br /><b>Tehlikeli{!b.danger && !b.isCustom ? ' (salt okunur olduğu doğrulanmadı)' : ''}:</b> veri silebilir, ezebilir ya da dışarı gönderebilir.</>}
       </>,
     });
     if (!ok) return;

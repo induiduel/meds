@@ -530,3 +530,10 @@
 .bd-konular > li:last-child { border-radius: 0 0 13px 13px; }
 .bd-menu.is-yukari { top: auto; bottom: calc(100% + 6px); }
 .bd-konu.is-menu { position: relative; z-index: 5; }
+
+/* H163: hız durakları kutusu 40x19 px ölçülüyordu (::before büyütmesi denetimde ve bazı tarayıcılarda dokunma kutusu
+   sayılmıyor); düğmenin kendisi ≥32 px yükseklikte, ray altı boşluğu buna göre */
+.ih-ray { padding-bottom: 40px; }
+.ih-duraklar { height: 34px; bottom: 2px; }
+.ih-duraklar button { display: inline-flex; align-items: center; justify-content: center; min-height: 32px; min-width: 40px; padding: 0 8px; }
+.ih-duraklar button::before { inset: -4px 0; }

@@ -373,14 +373,15 @@ const TodayViewV11: React.FC<TodayViewProps & { v12?: boolean; v13?: boolean; v1
           <h1 className="sr-only">Bugün</h1>
           <div className="t15-main">
             <section className="t15-hero v15-card" aria-label="Bugünün planı">
-              <div className="t15-ring" role="img" aria-label={ring ? `%${ring.pct} ${ring.label}` : 'Henüz veri yok'}>
+              <div className="t15-ring" role="img" aria-label={ring ? `%${ring.pct} ${ring.label}` : 'Bugün henüz çalışma kaydı yok'}>
                 <svg viewBox="0 0 100 100" aria-hidden="true">
                   <circle cx="50" cy="50" r={R} className="t15-ring-bg" />
                   {ring && <circle cx="50" cy="50" r={R} className="t15-ring-fg" strokeDasharray={`${(C * ring.pct) / 100} ${C}`} />}
                 </svg>
                 <span className="t15-ring-v">
                   <b>{ring ? `%${ring.pct}` : '—'}</b>
-                  <span>{ring ? ring.label : 'veri yok'}</span>
+                  {/* H156: "veri yok" alttaki okul programı kartıyla ("2 ders bitti") çelişiyor sanılıyordu; halka yalnız senin çalışmanı ölçer */}
+                  <span>{ring ? ring.label : 'bugün çalışma yok'}</span>
                 </span>
               </div>
               <div className="t15-plan">

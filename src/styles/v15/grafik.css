@@ -48,3 +48,6 @@
 .gf15-lej { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 8px; font-size: .785rem; color: var(--color-ink-3); }
 .gf15-lej span { display: inline-flex; align-items: center; gap: 4px; }
 .gf15-lej i { width: 10px; height: 10px; }
+
+/* H165: boş istatistik eylemleri */
+.gf15-bos-eylem { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }

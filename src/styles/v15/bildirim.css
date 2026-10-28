@@ -24,3 +24,7 @@
 .bd15-eylem .v15-btn { white-space: nowrap; }
 :root[data-v15='on'] .bd15-seg button { display: inline-flex; flex-direction: row; align-items: center; justify-content: center; gap: 5px; }
 :root[data-v15='on'] .bd15-eylem .v15-btn svg { width: 14px; height: 14px; flex: none; }
+
+/* H168: eylem satırı dar ekranda alt satıra geçer; devre dışı düğme soluk görünür */
+.bd15-eylem { flex-wrap: wrap; justify-content: flex-end; row-gap: 6px; }
+.bd15-eylem .v15-btn:disabled { opacity: .45; cursor: default; pointer-events: none; }

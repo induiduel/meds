@@ -101,6 +101,7 @@
 .m16-kart { background: var(--m16-yuzey); border: 1px solid var(--m16-cizgi); border-radius: 10px; padding: 12px 14px; }
 .m16-kart > h2 { margin: 0 0 8px; font-size: 13px; font-weight: 650; display: flex; align-items: center; gap: 8px; justify-content: space-between; }
 .m16-istat-izgara { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 8px; }
+.m16-istat-izgara.sik { grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); } /* H175 */
 .m16-istat { all: unset; box-sizing: border-box; display: flex; flex-direction: column; gap: 2px; padding: 10px 12px; background: var(--m16-yuzey); border: 1px solid var(--m16-cizgi); border-radius: 10px; min-width: 0; }
 button.m16-istat { cursor: pointer; }
 button.m16-istat:hover { border-color: var(--color-ink-3); }
@@ -137,6 +138,9 @@ button.m16-istat:hover { border-color: var(--color-ink-3); }
 .m16-cip-etiket { font-size: 11.5px; color: var(--color-ink-3); margin-right: 2px; }
 .m16-cip { font: inherit; font-size: 12px; padding: 2px 9px; white-space: nowrap; align-items: center; border-radius: 999px; border: 1px solid var(--m16-cizgi); background: var(--m16-yuzey); color: var(--color-ink-2); cursor: pointer; display: inline-flex; gap: 5px; }
 .m16-cip em { font-style: normal; color: var(--color-ink-3); font-variant-numeric: tabular-nums; }
+/* H170: sayı rozeti — etiketten küçük, soluk zeminli; "Kurul 2" ile "7" bitişik okunmaz */
+.m16-cip em.m16-cip-sayi { font-size: 10.5px; line-height: 1; padding: 2px 5px; border-radius: 999px; background: var(--m16-cizgi); margin-left: 1px; }
+.m16-cip.on em.m16-cip-sayi { background: rgba(255,255,255,.18); }
 .m16-cip.on { background: var(--color-ink); border-color: var(--color-ink); color: var(--color-white); }
 .m16-cip.on em { color: inherit; opacity: .75; }
 .m16-tablo-kap { background: var(--m16-yuzey); border: 1px solid var(--m16-cizgi); border-radius: 10px; overflow-x: auto; }
@@ -203,6 +207,7 @@ button.m16-istat:hover { border-color: var(--color-ink-3); }
 .m16-anahtar i { position: absolute; top: 2px; left: 2px; width: 16px; height: 16px; border-radius: 50%; background: var(--color-white); transition: transform .15s; box-shadow: 0 1px 2px rgb(0 0 0 / .2); }
 .m16-anahtar.on { background: var(--color-accent); }
 .m16-anahtar.on i { transform: translateX(16px); }
+.m16-anahtar:disabled { cursor: not-allowed; opacity: .45; } /* H185 */
 .m16-onay { width: min(440px, 100%); background: var(--m16-yuzey); border: 1px solid var(--m16-cizgi); border-radius: 12px; padding: 18px; display: flex; flex-direction: column; gap: 12px; box-shadow: 0 20px 60px rgb(0 0 0 / .25); }
 .m16-onay h2 { margin: 0; font-size: 16px; display: flex; gap: 8px; align-items: center; }
 .m16-onay h2 svg { color: var(--color-bad); width: 20px; height: 20px; }
@@ -256,3 +261,6 @@ button.m16-istat:hover { border-color: var(--color-ink-3); }
   .m16-girdi, .m16-ara input, .m16-palet input, .m16-kok select, .m16-kok textarea { font-size: 16px; }
   .m16-ara, .m16-girdi { min-height: 40px; }
 }
+/* H172: açıklamada teknik kaynak (dosya yolu) küçük, soluk, ikincil */
+.m16-kaynak { display: inline-block; font-size: 11px; color: var(--color-ink-3); opacity: .8; margin-left: 4px; }
+.m16-kaynak code { font-size: inherit; }

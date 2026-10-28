@@ -41,10 +41,16 @@ export function KatalogSayfasi(p: {
 
   const gorunurlukVar = p.varlik === 'decks';
   const suzgecler = useMemo(() => {
-    const s = (meta.veri?.suzgecler || []).map((f) => ({ anahtar: f.anahtar, etiket: f.etiket, secenekler: (meta.veri?.yuzler[f.anahtar] || []).slice(0, 12).map((y) => ({ deger: y.deger, etiket: y.deger })) })).filter((f) => f.secenekler.length > 1);
+    const s = (meta.veri?.suzgecler || []).map((f) => ({ anahtar: f.anahtar, etiket: f.etiket, secenekler: (meta.veri?.yuzler[f.anahtar] || []).slice(0, 12).map((y) => ({ deger: y.deger, etiket: y.deger })) }))
+      // H184: tek seçenekli süzgeç gizleniyordu → çöp kutusunda tek tür varken "Tür" hiç görünmüyordu. Çöpte tür/silinme her zaman görünür
+      .filter((f) => f.secenekler.length > (p.varlik === 'trash' ? 0 : 1));
+    if (p.varlik === 'trash') {
+      const SIRA = ['Bugün', 'Son 7 gün', 'Son 30 gün', 'Daha eski'];
+      for (const f of s) if (f.anahtar === 'silinme') f.secenekler.sort((x, y) => SIRA.indexOf(x.deger) - SIRA.indexOf(y.deger));
+    }
     if (gorunurlukVar) s.push({ anahtar: 'gorunurluk', etiket: 'Görünürlük', secenekler: [{ deger: 'gizli', etiket: 'Gizli' }, { deger: 'yalniz-yonetici', etiket: 'Yalnız yönetici' }] });
     return s;
-  }, [meta.veri, gorunurlukVar]);
+  }, [meta.veri, gorunurlukVar, p.varlik]);
 
   const sutunlar: Sutun<KatalogSatiri>[] = [
     { anahtar: 'baslik', baslik: 'Kayıt', sirala: true, genislik: 'minmax(220px,3fr)', hucre: (x) => <span className="m16-kisalt" title={x.baslik}>{x.baslik}</span> },
@@ -80,7 +86,7 @@ export function KatalogSayfasi(p: {
   const ek = a && p.ekSekme ? p.ekSekme(a) : null;
   return (
     <>
-      <SayfaBasligi baslik={p.baslik} aciklama={p.aciklama ?? (meta.veri ? `${meta.veri.toplam.toLocaleString('tr-TR')} kayıt · kaynak ${meta.veri.kaynak}` : undefined)}>{p.ust}</SayfaBasligi>
+      <SayfaBasligi baslik={p.baslik} aciklama={p.aciklama ?? (meta.veri ? <>{meta.veri.toplam.toLocaleString('tr-TR')} kayıt{/* H172: dosya yolu ikincil */}<span className="m16-kaynak" title="Kaynak dosya"><code>{meta.veri.kaynak}</code></span></> : undefined)}>{p.ust}</SayfaBasligi>
       {meta.hata ? <Hata hata={meta.hata} yenile={meta.yenile} /> : (
         <VeriTablosu<KatalogSatiri>
           key={yenileNo}

@@ -958,6 +958,12 @@ export default function App() {
     window.addEventListener('medsoru:tour', on);
     return () => window.removeEventListener('medsoru:tour', on);
   }, []);
+  // H167: ekranlar (ör. Arkadaşlar "Giriş gerekli") giriş penceresini `medsoru:giris-ac` olayıyla açar
+  useEffect(() => {
+    const on = () => { setAuthModalInitialMode('login'); setIsAuthModalOpen(true); };
+    window.addEventListener('medsoru:giris-ac', on);
+    return () => window.removeEventListener('medsoru:giris-ac', on);
+  }, []);
   // Tanıtım videoları: turdan sonra bir kez (`medsoru_tanitim_v1`); `medsoru:tanitim` ile yeniden
   const [showTanitim, setShowTanitim] = useState(false);
   useEffect(() => {

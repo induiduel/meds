@@ -297,6 +297,10 @@ export function icYol(adres: string): string {
   // yol parçasından gelen değer sorguda açıkça verilmiş olanı ezmez
   const koy = (k: string, v: string | number | null | undefined) => { if (v != null && v !== '' && !sp.has(k)) sp.set(k, String(v)); };
 
+  // H164: /profil ve /profile aynı ekranı (Profil ve ayarlar) iki ayrı adla açıyordu; adres çubuğu tek ada (/ayarlar) döner,
+  // eski bağlantılar kırılmaz
+  if ((ilk === 'profil' || ilk === 'profile') && s.length === 1) return birlestir('/ayarlar', sp, hash);
+
   if (ilk === 'dersler') {
     const arac = s[1];
     if (!arac || kurulSeg(arac)) { koy('kurul', kurulSeg(arac)); return birlestir('/ders-merkezi', sp, hash); }

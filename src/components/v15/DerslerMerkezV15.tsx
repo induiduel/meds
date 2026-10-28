@@ -41,9 +41,11 @@ export default function DerslerMerkezV15() {
 
   useEffect(() => {
     let canli = true;
-    import('../../data/deckStore')
-      .then((m) => m.loadDeckCatalog())
-      .then((c) => canli && setDesteN(c.filter((d) => !icerikGizli('deste', d.id) && new RegExp(`Kurul ${kurul}\\b`).test(String(d.committee || ''))).length))
+    // H157: merkez yayında olmayan (taslak/eski) desteleri de sayıyordu (7), kitaplık yalnız yayındakileri (5) — aynı
+    // yüklem (isPublished + kurulOf) iki yerde kullanılır
+    Promise.all([import('../../data/deckStore'), import('../learn/LearnLibrary')])
+      .then(([m, L]) => m.loadDeckCatalog().then((c) => ({ c, L })))
+      .then(({ c, L }) => canli && setDesteN(c.filter((d) => !icerikGizli('deste', d.id) && L.isPublished(d) && L.kurulOf(d) === `Kurul ${kurul}`).length))
       .catch(() => canli && setDesteN(null));
     return () => {
       canli = false;

@@ -120,7 +120,7 @@ export default function Hat({ id, git }: SayfaProps) {
   const hataliAsama = asamalar.filter((a) => v?.durum?.[a.id]?.kod && v.durum[a.id].kod !== 0).length;
   return (
     <>
-      <SayfaBasligi baslik="Hat" aciklama="Aşama defteri (otomasyon/hat.json) salt okunur. LLM kullanan adımlar yalnız elle ve onayla başlar (kural 20)."
+      <SayfaBasligi baslik="Hat" aciklama={<>İçerik üretim aşamaları burada yalnız görüntülenir. Yapay zekâ kullanan adımlar yalnız elle ve onayla başlar.{/* H172 */}<span className="m16-kaynak"><code>otomasyon/hat.json</code></span></>}
         eylemler={<button type="button" className="m16-btn" onClick={() => void s.yenile()}>Yenile</button>}>
         <nav className="m16-sekmeler">{SEKME.map(([k, ad]) => <button key={k} type="button" className={sekme === k ? 'on' : ''} onClick={() => git(`sistem/hat${k === 'asamalar' ? '' : `/${k}`}`, { degistir: true })}>{ad}</button>)}</nav>
       </SayfaBasligi>

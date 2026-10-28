@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { SayfaBasligi, Hata, Yukleniyor, Rozet, onayIste } from '../kit';
+import { SayfaBasligi, Hata, Yukleniyor, Rozet, onayIste, yazimHedefi } from '../kit';
 import type { SayfaProps } from '../menu';
 import { Anahtar, isoTarih, siteAyarYaz, useSiteAyarAdmin, yerelTarih, type Duyuru } from './ortak/siteAyarOrtak';
 
@@ -24,6 +24,8 @@ export default function SiteDuyurular(_p: SayfaProps) {
     if (acik && !f.metin.trim()) return;
     const d: Duyuru = { ...f, acik, metin: f.metin.trim(), ...(kurul.length ? { kurul } : { kurul: undefined }) };
     if (!d.baglanti) delete d.baglanti;
+    // H181: yayınlama onayı yazım hedefini (canlı site / yerel sunucu) söyler; önceden onaysız gidiyordu
+    if (acik && !(await onayIste({ baslik: 'Duyuru yayınlansın mı?', aciklama: <>Açık sekmelerdeki {kurul.length ? `Kurul ${kurul.join(', ')}` : 'tüm'} öğrencilere anında görünür. Hedef: <b>{yazimHedefi()}</b>.</>, onayMetni: 'Yayınla' }))) return;
     setMesgul(true);
     const r = await siteAyarYaz({ duyuru: d }, acik ? 'Duyuru yayında' : 'Duyuru kaydedildi (kapalı)');
     if (r) setVeri(r as any);
@@ -69,7 +71,7 @@ export default function SiteDuyurular(_p: SayfaProps) {
             <button type="button" className="m16-btn" disabled={mesgul} onClick={() => void kaydet(false)}>{yayinda ? 'Yayından kaldır' : 'Kapalı kaydet'}</button>
             {a.duyuru && (
               <button type="button" className="m16-btn hayalet" disabled={mesgul} onClick={async () => {
-                if (!(await onayIste({ baslik: 'Duyuru silinsin mi?', aciklama: 'Metin ve ayarlar temizlenir.', onayMetni: 'Sil' }))) return;
+                if (!(await onayIste({ baslik: 'Duyuru silinsin mi?', aciklama: `Metin ve ayarlar temizlenir. Hedef: ${yazimHedefi()}.`, onayMetni: 'Sil' }))) return;
                 setMesgul(true); const r = await siteAyarYaz({ duyuru: null }, 'Duyuru silindi'); if (r) setVeri(r as any); setMesgul(false);
               }}>Sil</button>
             )}

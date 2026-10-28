@@ -27,7 +27,7 @@ function Ayrinti({ id, kapat }: { id: string; kapat: () => void }) {
 export default function QuizHavuzu({ id, git }: SayfaProps) {
   return (
     <>
-      <SayfaBasligi baslik="Quiz havuzu" aciklama="Derslerin atomik bilgi envanterinden üretilmiş kısa quiz soruları. Kaynak: meds_database_v2/ders_isci/yayinlanan/<ders>/quiz_havuzu.json" />
+      <SayfaBasligi baslik="Quiz havuzu" aciklama={<>Derslerin bilgi envanterinden üretilmiş kısa quiz soruları.{/* H172 */}<span className="m16-kaynak"><code>quiz_havuzu.json</code></span></>} />
       <VeriTablosu<Satir>
         kimlik="oyun-quiz-havuzu" kaynak="/api/admin/quiz/havuz" aramaYeri="Soru metni ya da kimlik ara…" satirKimligi={(s) => s.id} etkin={id || null}
         satirTikla={(s) => git(`oyun/quiz-havuzu/${encodeURIComponent(s.id)}${window.location.search}`)}

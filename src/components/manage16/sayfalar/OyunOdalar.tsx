@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { RefreshCw } from 'lucide-react';
-import { SayfaBasligi, VeriTablosu, Rozet, Hata, AyrintiCekmecesi, adminIstek, bildir, onayIste, useAdminSorgu } from '../kit';
+import { SayfaBasligi, VeriTablosu, Rozet, Hata, AyrintiCekmecesi, adminIstek, bildir, onayIste, useAdminSorgu, yazimHedefi } from '../kit';
 import type { SayfaProps } from '../menu';
 
 /** Oyunlar › Canlı odalar: quizRealtimeServer RAM odaları (5 sn'de bir tazelenir), oyuncular, kapat. Uç: /api/admin/quiz/odalar */
@@ -13,7 +13,7 @@ export default function OyunOdalar({ git }: SayfaProps) {
   const [acik, setAcik] = useState<string | null>(null);
   const oda = veri?.ogeler.find((o) => o.roomId === acik) || null;
   const kapat = async (o: Oda) => {
-    if (!(await onayIste({ baslik: `${o.roomId} odası kapatılsın mı?`, aciklama: `${o.oyuncular.length} oyuncuya "oda kapatıldı" bildirilir.`, tehlikeli: true, onayMetni: 'Kapat' }))) return;
+    if (!(await onayIste({ baslik: `${o.roomId} odası kapatılsın mı?`, aciklama: `${o.oyuncular.length} oyuncuya "oda kapatıldı" bildirilir. Hedef: ${yazimHedefi()}.`, tehlikeli: true, onayMetni: 'Kapat' }))) return;
     try { await adminIstek(`/api/admin/quiz/odalar/${encodeURIComponent(o.roomId)}`, { yontem: 'DELETE' }); bildir('Oda kapatıldı', 'iyi'); setAcik(null); void yenile(); }
     catch (e: any) { bildir(e?.message || 'Kapatılamadı', 'kotu'); }
   };
@@ -39,7 +39,7 @@ export default function OyunOdalar({ git }: SayfaProps) {
           { anahtar: 'soru', baslik: 'Soru', genislik: '80px', hizala: 'sag', deger: (o) => o.sira, hucre: (o) => `${Math.min(o.sira + 1, o.soru)}/${o.soru}` },
           { anahtar: 'oyuncu', baslik: 'Oyuncu', genislik: '80px', hizala: 'sag', sirala: true, deger: (o) => o.oyuncular.length, hucre: (o) => o.oyuncular.length },
           { anahtar: 'mod', baslik: 'Mod', genislik: '80px', deger: (o) => (o.takimli ? 'takim' : 'canli'), hucre: (o) => (o.takimli ? 'Takım' : 'Canlı') },
-          { anahtar: 'eylem', baslik: '', genislik: '90px', hucre: (o) => <button type="button" className="m16-btn tehlike" onClick={(e) => { e.stopPropagation(); void kapat(o); }}>Kapat</button> },
+          // H180: her satırdaki kırmızı "Kapat" kaldırıldı; kapatma yalnız satır çekmecesinde ("Odayı kapat")
         ]}
       />
       <AyrintiCekmecesi acik={!!oda} kapat={() => setAcik(null)} baslik={oda ? `Oda ${oda.roomId}` : ''} altBaslik={oda?.baslik} kayit={oda || undefined} hedef={oda ? `quiz-oda:${oda.roomId}` : undefined}

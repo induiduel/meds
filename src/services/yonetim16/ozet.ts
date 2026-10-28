@@ -75,6 +75,8 @@ export function registerOzetRoutes(app: express.Express, d: OzetDeps) {
         calismaSn: Math.round(process.uptime()),
         yiginMb: Math.round(mem.heapUsed / 1048576),
         rssMb: Math.round(mem.rss / 1048576),
+        // H174: yığın toplamı ayrı alan; ekran "kullanılan / ayrılan yığın" ve RSS'i ayrı etiketle gösterir
+        yiginToplamMb: Math.round(mem.heapTotal / 1048576),
         yuk: os.loadavg()[0],
         sseIstemci: d.sseIstemci(),
         sunucu: os.hostname(),
@@ -90,7 +92,7 @@ export function registerOzetRoutes(app: express.Express, d: OzetDeps) {
       hata: { istemci24s: jsonlSay24s(path.join(d.dataDir, 'istemci_hatalari.jsonl')) },
       site: { bakim: ayar.bakim?.acik === true, duyuru: ayar.duyuru?.acik === true, gizliSayfa: Object.values(ayar.sayfalar || {}).filter((x) => x !== 'acik').length },
       surum: { onem: surum?.onem ?? null, baslik: surum?.baslik ?? null, commit: dagitim?.commit ?? null, dagitim: dagitim?.zaman ?? null },
-      sonDenetim: await sonDenetimler(8),
+      sonDenetim: await sonDenetimler(8, true), // H173: yalnız yazma
       sureMs: 0,
     };
     v.sureMs = Date.now() - t0;

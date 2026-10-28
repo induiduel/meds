@@ -76,7 +76,7 @@ export default function SorularMerkezV15() {
           <a className="v15-btn" href={karmaYolu} onClick={git(karmaYolu)}><span className="s15-uzun">Karma test başlat</span><span className="s15-kisa">Karma</span></a>
         </div>
         <div className="s15-oz v15-card">
-          <span className="s15-oz-h"><span className="v15-label">Tekrar zamanı</span><span className="v15-tile is-b"><RotateCcw aria-hidden /></span></span>
+          <span className="s15-oz-h">{/* H159: telefonda üç sütunlu kartta "TEKRAR ZAMANI" kesiliyordu; dar ekranda kısa ad */}<span className="v15-label"><span className="s15-uzun">Tekrar zamanı</span><span className="s15-kisa">Tekrar</span></span><span className="v15-tile is-b"><RotateCcw aria-hidden /></span></span>
           <b className="s15-say">{yanlis.hazir.length}</b>
           <span className="v15-cap">{yanlis.bekleyen.length ? `${yanlis.bekleyen.length} yanlış bekliyor` : 'Yanlış yaptığın sorular 48 saat sonra burada'}{review.total.due ? ` · Öğren'de ${review.total.due} kart` : ''}</span>
           <a className="v15-btn is-ghost" href="/sorular/yanlislarim" onClick={git('/sorular/yanlislarim')}><span className="s15-uzun">Yanlışlarımı çöz</span><span className="s15-kisa">Yanlışlar</span></a>

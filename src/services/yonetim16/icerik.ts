@@ -462,9 +462,19 @@ export function registerIcerik16Routes(app: express.Express, d: Deps) {
   const katalogBag = (id: string): Bagdastirici | null => {
     const e = katalogErisimi?.varliklar.find((x: Any) => x.id === id);
     if (!e) return null;
+    // H184: çöp kutusunda silinme tarihine göre süzgeç (deletedAt → Bugün / Son 7 gün / Son 30 gün / Daha eski)
+    const silinmeKovasi = (x: Any): string | undefined => {
+      const t = Date.parse(x?.deletedAt || '');
+      if (!Number.isFinite(t)) return undefined;
+      const gun = (Date.now() - t) / 86_400_000;
+      return gun < 1 ? 'Bugün' : gun < 7 ? 'Son 7 gün' : gun < 30 ? 'Son 30 gün' : 'Daha eski';
+    };
+    const copMu = id === 'trash';
     return {
-      etiket: e.label, kaynak: e.source, yuzler: e.facets.map((f: Any) => ({ anahtar: f.key, etiket: f.label })),
-      yukle: e.load, kimlik: e.key, baslik: e.title, alt: e.subtitle, yuz: (x, k) => { const v = e.facet(x, k); return Array.isArray(v) ? v[0] : v; }, metin: e.text,
+      etiket: e.label, kaynak: e.source,
+      yuzler: [...e.facets.map((f: Any) => ({ anahtar: f.key, etiket: f.label })), ...(copMu ? [{ anahtar: 'silinme', etiket: 'Silinme' }] : [])],
+      yukle: e.load, kimlik: e.key, baslik: e.title, alt: e.subtitle,
+      yuz: (x, k) => { if (copMu && k === 'silinme') return silinmeKovasi(x); const v = e.facet(x, k); return Array.isArray(v) ? v[0] : v; }, metin: e.text,
       duzenlenebilir: e.save ? e.editable : [],
       kaydet: e.save ? async (rid, yama) => {
         const once = e.load().find((r: Any) => e.key(r) === rid);

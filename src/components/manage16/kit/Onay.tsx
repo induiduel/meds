@@ -9,9 +9,11 @@ export type OnaySecenek = {
   onayMetni?: string;
   iptalMetni?: string;
   tehlikeli?: boolean;
+  /** H179: gerekçe alanı (window.prompt yerine); verilirse düğme metin en az enAz karakter olunca açılır */
+  gerekce?: { etiket: string; enAz?: number; yerTutucu?: string };
 };
 
-type Bekleyen = OnaySecenek & { coz: (v: boolean) => void };
+type Bekleyen = OnaySecenek & { coz: (v: boolean) => void; gerekceCoz?: (m: string) => void };
 let goster: ((b: Bekleyen) => void) | null = null;
 
 /** Onay penceresi açar; true = onaylandı. Kabukta <OnayHost/> takılıdır. */
@@ -22,26 +24,43 @@ export function onayIste(o: OnaySecenek): Promise<boolean> {
   });
 }
 
+/** H179: gerekçeli onay; onaylanırsa girilen gerekçe (kırpılmış), vazgeçilirse null döner */
+export function gerekceIste(o: OnaySecenek & { gerekce: NonNullable<OnaySecenek['gerekce']> }): Promise<string | null> {
+  return new Promise((coz) => {
+    if (!goster) { const m = window.prompt(o.baslik); coz(m && m.trim().length >= (o.gerekce.enAz ?? 3) ? m.trim() : null); return; }
+    let metin = '';
+    goster({ ...o, gerekceCoz: (m) => { metin = m; }, coz: (v) => coz(v ? metin : null) });
+  });
+}
+
 export const OnayHost: React.FC = () => {
   const [b, setB] = useState<Bekleyen | null>(null);
   const [yazi, setYazi] = useState('');
+  const [gerekce, setGerekce] = useState('');
   const ref = useRef<HTMLDivElement>(null);
-  useEffect(() => { goster = (x) => { setYazi(''); setB(x); }; return () => { goster = null; }; }, []);
+  useEffect(() => { goster = (x) => { setYazi(''); setGerekce(''); setB(x); }; return () => { goster = null; }; }, []);
   useEffect(() => {
     if (!b) return;
     const once = document.activeElement as HTMLElement | null;
-    setTimeout(() => ref.current?.querySelector<HTMLElement>('input, .m16-btn')?.focus(), 0);
+    setTimeout(() => ref.current?.querySelector<HTMLElement>('textarea, input, .m16-btn')?.focus(), 0);
     return () => once?.focus?.();
   }, [b]);
   if (!b) return null;
-  const kapat = (v: boolean) => { b.coz(v); setB(null); };
-  const hazir = !b.yazilacak || yazi.trim() === b.yazilacak;
+  const kapat = (v: boolean) => { if (v) b.gerekceCoz?.(gerekce.trim()); b.coz(v); setB(null); };
+  const enAz = b.gerekce?.enAz ?? 3;
+  const hazir = (!b.yazilacak || yazi.trim() === b.yazilacak) && (!b.gerekce || gerekce.trim().length >= enAz);
   return (
     <div className="m16-perde" onMouseDown={(e) => { if (e.target === e.currentTarget) kapat(false); }}>
       <div ref={ref} className="m16-onay" role="alertdialog" aria-modal="true" aria-labelledby="m16-onay-b"
         onKeyDown={(e) => { if (e.key === 'Escape') kapat(false); }}>
         <h2 id="m16-onay-b">{b.tehlikeli && <AlertTriangle aria-hidden="true" />}{b.baslik}</h2>
         {b.aciklama && <div className="m16-onay-aciklama">{b.aciklama}</div>}
+        {b.gerekce && (
+          <label className="m16-alan">
+            <span>{b.gerekce.etiket} <small>(en az {enAz} karakter)</small></span>
+            <textarea className="m16-girdi" rows={3} value={gerekce} placeholder={b.gerekce.yerTutucu} onChange={(e) => setGerekce(e.target.value)} />
+          </label>
+        )}
         {b.yazilacak && (
           <label className="m16-alan">
             <span>Onaylamak için <code>{b.yazilacak}</code> yazın</span>

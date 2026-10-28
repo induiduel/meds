@@ -21,13 +21,18 @@ export default function GelenKutusu({ git }: SayfaProps) {
   return (
     <>
       <SayfaBasligi baslik="Gelen" aciklama="Bekleyen her şey tek listede. Satıra tıklayınca ilgili sayfa açılır; çözüm orada yapılır." />
-      <IstatistikIzgara>
-        {Object.entries(KAYNAK_TUR).map(([anahtar, tur]) => (
+      {/* H175: sıfır kartlar gizlenir (okunamayan kaynak görünür kalır); hepsi sıfırsa tek satır bilgi */}
+      {ozet.veri && !Object.keys(KAYNAK_TUR).some((a) => k[a]?.hata || (k[a]?.toplam || 0) > 0) ? (
+        <p className="m16-istat-alt">Bekleyen iş yok.</p>
+      ) : (
+      <IstatistikIzgara sik>
+        {Object.entries(KAYNAK_TUR).filter(([anahtar]) => !ozet.veri || k[anahtar]?.hata || (k[anahtar]?.toplam || 0) > 0).map(([anahtar, tur]) => (
           <IstatistikKart key={anahtar} etiket={TUR[tur].ad} yukleniyor={!ozet.veri && ozet.yukleniyor}
             deger={k[anahtar]?.hata ? '—' : (k[anahtar]?.toplam ?? 0)} alt={k[anahtar]?.hata ? 'okunamadı' : undefined}
             ton={(k[anahtar]?.toplam || 0) > 0 ? TUR[tur].ton : 'notr'} onClick={() => suz(tur)} />
         ))}
       </IstatistikIzgara>
+      )}
       <VeriTablosu<Satir>
         kimlik="genel-gelen" kaynak="/api/admin/gelen" aramaYeri="Başlık, ayrıntı ya da kişi ara…" satirKimligi={(s) => s.id}
         satirTikla={(s) => git(s.hedef)}

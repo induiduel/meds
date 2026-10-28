@@ -411,6 +411,12 @@ export const TopBarV15: React.FC<TopBarProps> = ({ active, onGo, user, isAdmin, 
           Kurul {kurul.kurul}
           <ChevronRight aria-hidden="true" />
         </a>
+        {/* H169: telefonda üst çubukta kurul göstergesi/değiştirme yolu yoktu; kompakt "K2" çipi aynı yere (sınav planı ›
+            kurul seçici) götürür */}
+        <a className="v15-chip v15-chip-k v15-only-phone" href={pathFor('sinav_plani')} onClick={linkClick(() => onGo('sinav_plani'))}
+          aria-label={`Kurul ${kurul.kurul}, ${kalanYazi(kalan)} · kurul değiştir`} title={`${kurul.ad} · ${kalanYazi(kalan)}`}>
+          K{kurul.kurul}
+        </a>
         {canInstall && (
           <button type="button" className="v15-ib v15-not-phone" onClick={() => pwaService.promptInstall()} aria-label="Uygulamayı cihaza yükle" title="Uygulamayı cihaza yükle">
             <Smartphone aria-hidden="true" />

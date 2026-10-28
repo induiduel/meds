@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react';
-import { SayfaBasligi, Rozet, Hata, Yukleniyor, bildir, onayIste, useAdminSorgu, zamanMetni } from '../kit';
+import { SayfaBasligi, Rozet, Hata, Yukleniyor, bildir, onayIste, useAdminSorgu, yazimHedefi, zamanMetni } from '../kit';
 import type { SayfaProps } from '../menu';
 import './ortak/ts16.css';
 
@@ -14,17 +14,19 @@ export default function Yedek({ git }: SayfaProps) {
   const dosyaRef = useRef<HTMLInputElement>(null);
   const [mesgul, setMesgul] = useState(false);
 
-  const disaAktar = async () => {
+  // H183: true = yedek indirildi; içe aktarma bunu ezmeden hemen önce çağırır
+  const disaAktar = async (onEk = ''): Promise<boolean> => {
     setMesgul(true);
     try {
       const r = await fetch('/api/admin/db/export', { cache: 'no-store' });
       if (!r.ok) throw new Error(`${r.status} ${r.statusText}`);
       const a = document.createElement('a');
       a.href = URL.createObjectURL(await r.blob());
-      a.download = `medsor-havuz-${new Date().toISOString().slice(0, 10)}.json`;
+      a.download = `medsor-havuz-${onEk}${new Date().toISOString().replace(/[:.]/g, '-').slice(0, 19)}.json`;
       a.click();
       setTimeout(() => URL.revokeObjectURL(a.href), 2000);
-    } catch (e: any) { bildir(e?.message || String(e), 'kotu'); }
+      return true;
+    } catch (e: any) { bildir(e?.message || String(e), 'kotu'); return false; }
     finally { setMesgul(false); }
   };
 
@@ -36,9 +38,11 @@ export default function Yedek({ git }: SayfaProps) {
     if (!n) { bildir('Dosyada soru yok; boş havuzla ezme engellendi.', 'kotu'); return; }
     const ok = await onayIste({
       baslik: 'Soru havuzu bu dosyayla EZİLSİN mi?', tehlikeli: true, yazilacak: 'ICE-AKTAR', onayMetni: 'Havuzu ez',
-      aciklama: <><code>{f.name}</code>: {n} soru, {k} kurul. Mevcut havuz (data/db.json) tamamen değişir. Önce dışa aktarım alın. Ham soru defteri etkilenmez.</>,
+      aciklama: <><code>{f.name}</code>: {n} soru, {k} kurul. Hedef: <b>{yazimHedefi()}</b>. Mevcut soru havuzu tamamen değişir. Onaylayınca önce mevcut havuzun yedeği otomatik indirilir (<code>medsor-havuz-ice-aktarim-oncesi-….json</code>); yedek alınamazsa içe aktarma yapılmaz. Ham soru defteri etkilenmez.</>,
     });
     if (!ok) return;
+    // H183: ezmeden hemen önce mevcut durumun yedeği (sunucuda içe aktarım öncesi yedek ucu yok; dışa aktarım ucu indirilir). Başarısızsa durur.
+    if (!(await disaAktar('ice-aktarim-oncesi-'))) { bildir('Mevcut havuzun yedeği alınamadı; içe aktarma iptal edildi.', 'kotu'); return; }
     setMesgul(true);
     try {
       const r = await fetch('/api/admin/db/import', { method: 'POST', headers: { 'Content-Type': 'application/json', 'x-onay': 'ICE-AKTAR' }, body: JSON.stringify(veri) });
@@ -71,7 +75,7 @@ export default function Yedek({ git }: SayfaProps) {
         <section className="m16-kart">
           <h2>Soru havuzu (data/db.json)</h2>
           <div className="m16-ts-eylem">
-            <button type="button" className="m16-btn" disabled={mesgul} onClick={disaAktar}>Dışa aktar (JSON)</button>
+            <button type="button" className="m16-btn" disabled={mesgul} onClick={() => void disaAktar()}>Dışa aktar (JSON)</button>
             <button type="button" className="m16-btn tehlike" disabled={mesgul} onClick={() => dosyaRef.current?.click()}>İçe aktar…</button>
             <input ref={dosyaRef} type="file" accept="application/json,.json" hidden onChange={(e) => { const f = e.target.files?.[0]; if (f) void iceAktar(f); }} />
           </div>

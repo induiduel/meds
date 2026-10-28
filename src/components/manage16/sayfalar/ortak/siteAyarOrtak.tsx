@@ -28,8 +28,9 @@ export async function siteAyarYaz(parca: Partial<Record<keyof SiteAyarTam, unkno
   }
 }
 
-export const Anahtar: React.FC<{ acik: boolean; degistir: (v: boolean) => void; etiket: string; mesgul?: boolean }> = ({ acik, degistir, etiket, mesgul }) => (
-  <button type="button" role="switch" aria-checked={acik} aria-label={etiket} title={etiket} disabled={mesgul} className={`m16-anahtar${acik ? ' on' : ''}`} onClick={() => degistir(!acik)}><i /></button>
+// H185: devreDisi → anahtar kilitli (ör. sayfa erişimi kapalıyken menü anahtarı anlamsız); title açıklamayı taşır
+export const Anahtar: React.FC<{ acik: boolean; degistir: (v: boolean) => void; etiket: string; mesgul?: boolean; devreDisi?: boolean }> = ({ acik, degistir, etiket, mesgul, devreDisi }) => (
+  <button type="button" role="switch" aria-checked={acik} aria-label={etiket} title={etiket} disabled={mesgul || devreDisi} className={`m16-anahtar${acik ? ' on' : ''}`} onClick={() => degistir(!acik)}><i /></button>
 );
 
 /** ISO ↔ <input type="datetime-local"> */

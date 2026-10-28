@@ -186,10 +186,12 @@ function BildirimListesi() {
           ))}
         </div>
       </div>
+      {/* H168: telefonda "Okunmuşları temizle" taşıp "Ok" diye kesiliyordu (satır kırılmıyordu); türetilmiş (silinemeyen)
+          okunmuş satırlar temizle düğmesini boşuna etkin tutuyordu — yalnız silinebilen okunmuş varsa etkin */}
       <div className="bd15-eylem">
         <button type="button" className="v15-btn is-ghost" onClick={hepsiOkundu} disabled={!okunmamis}>Tümünü okundu say</button>
         <button type="button" className="v15-btn is-ghost" onClick={() => navigateTo('/bildirimler?gorunum=tercih')}><Settings2 aria-hidden /> Tercihler</button>
-        <button type="button" className="v15-btn is-ghost" onClick={temizle} disabled={!satirlar.some((s) => s.okundu)}><Trash2 aria-hidden /> Okunmuşları temizle</button>
+        <button type="button" className="v15-btn is-ghost" onClick={temizle} disabled={!satirlar.some((s) => s.okundu && s.sil)}><Trash2 aria-hidden /> Okunmuşları temizle</button>
       </div>
       {goster.length ? (
         <ul className="b15-list v15-card" role="list">

@@ -166,7 +166,8 @@
   .s15-say { font-size: 22px; line-height: 26px; }
   .s15-say-k { font-size: 17px; line-height: 26px; }
   .s15-oz .v15-cap { display: none; }
-  .s15-oz .v15-btn { margin-top: 6px; min-height: 34px; padding: 0 8px; font-size: 12.5px; }
+  /* H159: "Yanlışlar" düğmesi dar sütunda iki satıra bölünüyordu; tek satır, taşarsa üç nokta */
+  .s15-oz .v15-btn { margin-top: 6px; min-height: 34px; padding: 0 6px; font-size: 12.5px; white-space: nowrap; min-width: 0; overflow: hidden; text-overflow: ellipsis; }
   .s15-uzun { display: none; }
 }
 .s15-kurul select { height: 32px; font-size: 12.5px; }
@@ -360,3 +361,10 @@ a.k15-kart:hover { border-color: var(--color-accent); }
 .sl15-surum a:hover { opacity: 1; }
 .d15-bos p { margin: 0; }
 .d15-bos a { color: var(--color-accent); font-weight: 600; text-decoration: underline; text-underline-offset: 2px; } /* H148 */
+
+/* H160: Yanlışlarım sekmeleri tek satır kalır */
+:root[data-v15='on'] .yl15-seg button { white-space: nowrap; }
+
+/* H161: boş check-up sekmesi eylemleri */
+:root[data-v15='on'] .k15-bos p { margin: 0 0 10px; }
+:root[data-v15='on'] .k15-bos-eylem { display: flex; flex-wrap: wrap; gap: 8px; }

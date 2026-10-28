@@ -84,10 +84,11 @@ export default function SesliListeV15() {
         ) : (
           <div className="o15-cipler v15-hscroll" role="toolbar" aria-label="Süzgeç">
             <KurulSecV15 kurul={kurul} onSec={(k) => navigateTo(`/dersler/canliders/kurul${k}${arsiv ? '?donem=2025-2026' : ''}`)} />
-            {/* tasarım L06: dönem seçici (bu yıl · geçen yılın arşivi) */}
+            {/* tasarım L06: dönem seçici (bu yıl · geçen yılın arşivi)
+                H158: "2026–27 / 2025–26" telefonda süzgeç satırını taşırıp sıralama simgesinin altına kesiliyordu; kısa ad + yıl ipucu */}
             <div className="v15-seg sl15-donem" role="radiogroup" aria-label="Dönem">
-              <button type="button" role="radio" aria-checked={!arsiv} aria-current={!arsiv ? 'page' : undefined} onClick={() => setArsiv(false)}>2026–27</button>
-              <button type="button" role="radio" aria-checked={arsiv} aria-current={arsiv ? 'page' : undefined} onClick={() => setArsiv(true)} title="Geçen yılın (2025-2026) sesli dersleri"><Archive aria-hidden />2025–26</button>
+              <button type="button" role="radio" aria-checked={!arsiv} aria-current={!arsiv ? 'page' : undefined} onClick={() => setArsiv(false)} title="Bu yılın (2026-2027) sesli dersleri">Bu yıl</button>
+              <button type="button" role="radio" aria-checked={arsiv} aria-current={arsiv ? 'page' : undefined} onClick={() => setArsiv(true)} title="Geçen yılın (2025-2026) sesli dersleri"><Archive aria-hidden />Arşiv</button>
             </div>
             {DURUM.map(([id, t]) => (
               <button key={id} type="button" className={`o15-cip${durum === id ? ' is-on' : ''}`} aria-pressed={durum === id} onClick={() => setDurum(id)}>{t}</button>
@@ -148,7 +149,11 @@ export default function SesliListeV15() {
             </section>
           ))
         ) : (
-          <p className={`b15-bos v15-card${hata ? ' is-hata' : ''}`}>{hata ? <><b>Ders listesi alınamadı</b><span>{hata}</span><button type="button" className="v15-btn is-soft" onClick={() => location.reload()}>Yeniden dene</button></> : q || durum !== 'tum' ? 'Bu süzgeçte ders yok.' : arsiv ? `2025-2026 arşivinde Kurul ${kurul} dersi yok.` : `Kurul ${kurul} için sesli ders henüz yok.`}</p>
+          <p className={`b15-bos v15-card${hata ? ' is-hata' : ''}`}>{hata ? <><b>Ders listesi alınamadı</b><span>{hata}</span><button type="button" className="v15-btn is-soft" onClick={() => location.reload()}>Yeniden dene</button></> : q || durum !== 'tum' ? 'Bu süzgeçte ders yok.' : arsiv ? `2025-2026 arşivinde Kurul ${kurul} dersi yok.` : <>
+            {/* H158: boş listede geçen yılın kayıtlarına geçiren eylem */}
+            <span>Kurul {kurul} için bu yıl sesli ders henüz yok.</span>
+            <button type="button" className="v15-btn is-soft" onClick={() => setArsiv(true)}><Archive aria-hidden />Geçen yılın derslerini aç</button>
+          </>}</p>
         )}
       </div>
     </div>

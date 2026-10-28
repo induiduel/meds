@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { ArrowLeft, RefreshCw } from 'lucide-react';
 import {
   SayfaBasligi, useAdminSorgu, adminIstek, Yukleniyor, Hata, BosDurum, Rozet, Durum, IstatistikIzgara, IstatistikKart, VeriTablosu,
-  AyrintiCekmecesi, JsonDuzenleyici, JsonGoruntuleyici, DegisiklikGecmisi, onayIste, bildir, zamanMetni,
+  AyrintiCekmecesi, JsonDuzenleyici, JsonGoruntuleyici, DegisiklikGecmisi, onayIste, gerekceIste, bildir, yazimHedefi, zamanMetni,
 } from '../kit';
 import type { SayfaProps } from '../menu';
 import { RolRozeti, sureMetni, kisiYolu, tarihMetni, olayEtiket, KisiBag } from './kisiOrtak';
@@ -135,7 +135,7 @@ function Etkinlik({ anahtar }: { anahtar: string }) {
   };
   if (ilk.hata && !ilk.veri) return <Hata hata={ilk.hata} yenile={ilk.yenile} />;
   if (!ilk.veri) return <Yukleniyor satir={8} />;
-  if (ilk.veri.veritabani === false) return <BosDurum baslik="Veritabanı kapalı" aciklama="Olay günlüğü meds-pg'den okunur." />;
+  if (ilk.veri.veritabani === false) return <BosDurum baslik="Veritabanı kapalı" aciklama="Olay günlüğü veritabanından okunur; veritabanı şu an kapalı." />;
   const ogeler = [...ilk.veri.ogeler, ...ek];
   return (
     <section className="m16-kart">
@@ -262,8 +262,9 @@ function Sosyal({ anahtar, git }: { anahtar: string; git: Git }) {
   if (d.hata && !d.veri) return <Hata hata={d.hata} yenile={d.yenile} />;
   if (!d.veri) return <Yukleniyor satir={5} />;
   const v = d.veri, e = v.erisim;
-  const erisimIslem = async (yol: string, govde: any, baslik: string, tehlikeli = false) => {
-    if (!(await onayIste({ baslik, tehlikeli, onayMetni: 'Uygula' }))) return;
+  // H179: onaylanmış (gerekçeli) işlemler 'onayli' ile ikinci onay sormaz; H181: onay metni yazım hedefini söyler
+  const erisimIslem = async (yol: string, govde: any, baslik: string, tehlikeli = false, onayli = false) => {
+    if (!onayli && !(await onayIste({ baslik, tehlikeli, onayMetni: 'Uygula', aciklama: `Hedef: ${yazimHedefi()}.` }))) return;
     try {
       const r = await adminIstek<any>(`/api/admin/people-access/${yol}`, { yontem: 'POST', govde: { uids: [e.uid], ...govde } });
       if (r.skipped?.length) bildir(r.skipped[0].reason, 'kotu'); else bildir('Uygulandı.');
@@ -289,7 +290,11 @@ function Sosyal({ anahtar, git }: { anahtar: string; git: Git }) {
                 </select>
                 {e.suspension?.active
                   ? <button className="m16-btn" onClick={() => erisimIslem('unsuspend', {}, 'Askı kaldırılsın mı?')}>Askıyı kaldır</button>
-                  : <button className="m16-btn tehlike" onClick={() => { const r = window.prompt('Askı gerekçesi:'); if (r && r.trim().length >= 3) void erisimIslem('suspend', { reason: r.trim() }, 'Hesap askıya alınsın mı?', true); }}>Askıya al</button>}
+                  : <button className="m16-btn tehlike" onClick={async () => {
+                    // H179: window.prompt yerine kit onay penceresinde gerekçe alanı (≥3 karakter zorunlu)
+                    const r = await gerekceIste({ baslik: 'Hesap askıya alınsın mı?', aciklama: `Kişi giriş yapamaz; gerekçe erişim geçmişine yazılır. Hedef: ${yazimHedefi()}.`, tehlikeli: true, onayMetni: 'Askıya al', gerekce: { etiket: 'Askı gerekçesi', enAz: 3 } });
+                    if (r) void erisimIslem('suspend', { reason: r }, '', true, true);
+                  }}>Askıya al</button>}
                 <button className="m16-btn tehlike" onClick={() => erisimIslem('oturum-sonlandir', {}, 'Tüm oturumlar sonlandırılsın mı? Açık cihazlar yeniden giriş ister.', true)}>Oturumları sonlandır</button>
               </div>
             )}

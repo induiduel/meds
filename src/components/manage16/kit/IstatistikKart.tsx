@@ -15,4 +15,5 @@ export const IstatistikKart: React.FC<{ etiket: string; deger: React.ReactNode; 
     : <div className={`m16-istat t-${ton}`}>{ic}</div>;
 };
 
-export const IstatistikIzgara: React.FC<{ children: React.ReactNode }> = ({ children }) => <div className="m16-istat-izgara">{children}</div>;
+// H175: sik → kartlar daha dar (auto-fit 120px); 7 kart 6 sütunda biri yalnız alt satıra düşmesin
+export const IstatistikIzgara: React.FC<{ children: React.ReactNode; sik?: boolean }> = ({ children, sik }) => <div className={`m16-istat-izgara${sik ? ' sik' : ''}`}>{children}</div>;

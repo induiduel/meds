@@ -4,6 +4,7 @@ import { loadArchiveBank, type StudyQuestion } from '../../services/studyStore';
 import { getStatsAttempts, getStatsTests } from '../../services/progressReset';
 import { sureYaz, useTakip } from '../../services/calismaTakip';
 import { Halka } from './Halka';
+import { linkClick, navigateTo } from '../../router';
 import SoruSuzgecV15, { suzgecUyar, type SuzgecDegeri, type SuzgecYonu } from './SoruSuzgecV15';
 import '../../styles/v15/grafik.css';
 import '../../styles/v15/istat.css';
@@ -140,7 +141,14 @@ export default function IstatistikV15() {
   const suzulmus = donemSorulari.filter(([id, r]) => { const q = byId.get(id); return suzgecUyar(suz, 'sonuc', r.c ? 'Doğru' : 'Yanlış') && suzgecUyar(suz, 'ders', ders(q?.discipline)) && suzgecUyar(suz, 'kurul', kurulAd(q?.committeeId)) && suzgecUyar(suz, 'yil', q?.year || 'Bilinmiyor'); });
 
   const aralikAd = ayar.aralik ? `Son ${ayar.aralik} gün` : 'Tüm zamanlar';
-  const bosSoru = <p className="gf15-bos">{aralikAd} içinde çözülmüş soru yok. Soru çöz ya da deneme testlerinde cevapladığın sorular burada birikir.</p>;
+  // H165: boş istatistik çıkmazdı; ilk çalışmaya götüren eylemler
+  const bosEylem = (
+    <div className="gf15-bos-eylem">
+      <a className="v15-btn" href="/sorular" onClick={linkClick(() => navigateTo('/sorular'))}>Soru çözmeye başla</a>
+      <a className="v15-btn is-ghost" href="/dersler" onClick={linkClick(() => navigateTo('/dersler'))}>Ders çalış</a>
+    </div>
+  );
+  const bosSoru = <><p className="gf15-bos">{aralikAd} içinde çözülmüş soru yok. Soru çöz ya da deneme testlerinde cevapladığın sorular burada birikir.</p>{bosEylem}</>;
 
   if (detay) return <SoruDetay id={detay} q={byId.get(detay)} gecmis={soru.get(detay) || []} geri={() => setDetay(null)} />;
 

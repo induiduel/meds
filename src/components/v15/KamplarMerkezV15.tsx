@@ -115,7 +115,19 @@ export default function KamplarMerkezV15() {
           </section>
         )}
         {sekme === 'checkup' && !checkup.length && (
-          <p className="d15-bos v15-card">Kurul {kurul} için henüz check-up yok; içerik hazırlandıkça burada görünecek.</p>
+          // H161: boş check-up sekmesi çıkmazdı; var olan check-up'ların kuruluna ya da tüm hazırlık araçlarına götürür
+          <div className="d15-bos v15-card k15-bos">
+            <p>Kurul {kurul} için henüz check-up yok; içerik hazırlandıkça burada görünecek.</p>
+            <div className="k15-bos-eylem">
+              {(() => {
+                const baska = CHECKUPLAR.find((c) => c.kurul !== kurul);
+                return baska ? (
+                  <a className="v15-btn is-soft" href={yol(baska.kurul, 'checkup')} onClick={git(yol(baska.kurul, 'checkup'))}>Kurul {baska.kurul} check-up'larını aç</a>
+                ) : null;
+              })()}
+              <a className="v15-btn is-ghost" href={yol(kurul, 'hepsi')} onClick={git(yol(kurul, 'hepsi'))}>Tüm hazırlık araçları</a>
+            </div>
+          </div>
         )}
       </div>
     </div>

@@ -90,7 +90,7 @@ export default function CikmisSorular({ id, git }: SayfaProps) {
           { anahtar: 'kok', baslik: 'Soru', genislik: 'minmax(240px,3fr)', hucre: (s) => <span title={s.kok}>{s.kok || s.konu}</span> },
           { anahtar: 'ders', baslik: 'Ders', sirala: true, genislik: 'minmax(100px,1fr)' },
           { anahtar: 'yil', baslik: 'Yıl', sirala: true, genislik: '96px' },
-          { anahtar: 'cevap', baslik: 'Cevap', genislik: '56px', hizala: 'orta' },
+          { anahtar: 'cevap', baslik: 'Cevap', genislik: '72px', hizala: 'orta' }, // H176: 56px'te başlık "Cev…" kesiliyordu
           { anahtar: 'sitede', baslik: 'Sitede', genislik: '110px', hucre: (s) => <Rozet ton={SITEDE[s.sitede]?.[1]}>{SITEDE[s.sitede]?.[0]}</Rozet> },
           { anahtar: 'durumlar', baslik: 'Bayraklar', genislik: 'minmax(140px,1.2fr)', hucre: (s) => <>{s.durumlar.filter((d) => d !== 'onayli').map((d) => <Rozet key={d} ton={DURUM_TON[d]}>{DURUM_ETIKET[d] || d}</Rozet>)}</> },
           { anahtar: 'sikayet', baslik: 'Şikâyet', sirala: true, genislik: '64px', hizala: 'sag', gizli: true },

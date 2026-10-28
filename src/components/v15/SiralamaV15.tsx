@@ -4,6 +4,7 @@ import { safeJsonFetch } from '../../services/api';
 import { sayi, useBasarim, type SiraSatir } from '../../services/basarimIstemci';
 import { useProfil } from '../../services/profilKurulum';
 import { useV15Baslik } from './baslik';
+import { profilKurulumAc } from './ProfilKurulumV15';
 import { git, profilYolu, sure } from '../../services/arkadasIstemci';
 import { useLiveEvent } from '../../hooks/useLiveEvent';
 import '../../styles/v15/siralama.css';
@@ -95,7 +96,8 @@ export default function SiralamaV15() {
       </div>
     );
   } else if (yerli && !uni) {
-    govde = <Bos ikon={<Users aria-hidden />} baslik="Üniversiten belli değil" metin="Profil kurulumunda üniversiteni seçince sınıfının ve üniversitenin sıralaması burada görünür." />;
+    govde = <Bos ikon={<Users aria-hidden />} baslik="Üniversiten belli değil" metin="Profil kurulumunda üniversiteni seçince sınıfının ve üniversitenin sıralaması burada görünür."
+      /* H166: boş durumda profil kurulumunu açan eylem */ eylem={{ ad: 'Üniversiteni seç', f: profilKurulumAc }} />;
   } else if (hata) {
     govde = <Bos ikon={<Trophy aria-hidden />} baslik="Sıralama alınamadı" metin={hata} />;
   } else if (!veri || (yukleniyor && !satir.length)) {
@@ -165,12 +167,13 @@ export default function SiralamaV15() {
   );
 }
 
-function Bos({ ikon, baslik, metin }: { ikon: React.ReactNode; baslik: string; metin: string }) {
+function Bos({ ikon, baslik, metin, eylem }: { ikon: React.ReactNode; baslik: string; metin: string; eylem?: { ad: string; f: () => void } }) {
   return (
     <div className="v15-card sr15-bos">
       <span className="v15-tile">{ikon}</span>
       <b>{baslik}</b>
       <p>{metin}</p>
+      {eylem && <button type="button" className="v15-btn is-soft" onClick={eylem.f}>{eylem.ad}</button>}
     </div>
   );
 }

@@ -11,7 +11,7 @@ export default function IcerikPaketleri({ git }: SayfaProps) {
   const dersId = acik?.match(/^k\d-\d+/)?.[0];
   return (
     <>
-      <SayfaBasligi baslik="İçerik paketleri" aciklama="Ders içerik paketleri (src/data/ders_icerik). Üretim oturumda; burada sayılar, örnek ögeler ve görünürlük." />
+      <SayfaBasligi baslik="İçerik paketleri" aciklama={<>Ders sayfalarındaki içerik paketleri (terimler, kartlar, tablolar…). Burada sayılar, örnek ögeler ve görünürlük yönetilir.{/* H172 */}<span className="m16-kaynak"><code>ders_icerik</code></span></>} />
       <VeriTablosu<Satir>
         kimlik="ogrenme-paket" kaynak="/api/admin/ders-icerik" canliOlay={['site_ayar_changed']} satirKimligi={(x) => x.key} etkin={acik} satirTikla={(x) => setAcik(x.key)}
         suzgecler={[{ anahtar: 'kurul', etiket: 'Kurul', secenekler: [1, 2, 3, 4, 5, 6].map((k) => ({ deger: String(k), etiket: String(k) })) }]}

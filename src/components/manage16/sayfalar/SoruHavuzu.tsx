@@ -19,7 +19,7 @@ const ALANLAR: AlanTanim[] = [
   { ad: 'hidden', etiket: 'Öğrencilerden gizle', tur: 'anahtar' },
 ];
 
-function Ayrinti({ id, kapat }: { id: string; kapat: () => void }) {
+export function Ayrinti({ id, kapat }: { id: string; kapat: () => void }) {
   const { veri, hata, yukleniyor, yenile, setVeri } = useAdminSorgu<{ kayit: any }>(`/api/admin/sorular/havuz/${encodeURIComponent(id)}`);
   const [kirli, setKirli] = React.useState(false);
   const q = veri?.kayit;

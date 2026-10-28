@@ -1,5 +1,5 @@
 import React from 'react';
-import { VeriTablosu, SayfaBasligi, Rozet, AyrintiCekmecesi, Yukleniyor, Hata, adminIstek, useAdminSorgu, onayIste, bildir, zamanMetni } from '../kit';
+import { VeriTablosu, SayfaBasligi, Rozet, AyrintiCekmecesi, Yukleniyor, Hata, adminIstek, useAdminSorgu, onayIste, bildir, yazimHedefi, zamanMetni } from '../kit';
 import type { SayfaProps } from '../menu';
 
 /** Sorular › Birleşenler — kopya çıkmış soru grupları: asıl seç, onayla, ayır, geri al, seçili kopyayı tüm kardeşlere yaz. */
@@ -8,9 +8,14 @@ const DURUM: Record<string, string> = { otomatik: 'Otomatik', onayli: 'Onaylı',
 
 function Ayrinti({ id, kapat }: { id: string; kapat: () => void }) {
   const { veri, hata, yukleniyor, yenile } = useAdminSorgu<any>(`/api/admin/sorular/birlesen/${encodeURIComponent(id)}`);
-  const islem = async (govde: Record<string, unknown>, baslik: string, tehlikeli = false) => {
-    if (!(await onayIste({ baslik, tehlikeli, ...(tehlikeli ? { yazilacak: 'YAZ' } : {}) }))) return;
-    try { await adminIstek(`/api/admin/question-merges/${encodeURIComponent(id)}`, { yontem: 'POST', govde }); bildir('Uygulandı', 'iyi'); void yenile(); }
+  // H177: 'Ayır' tüm kopyaları sitede ayrı gösterir → tehlikeli + yazılı onay (AYIR) + Geri al (restore); yazılacak sözcük işleme göre
+  const islem = async (govde: Record<string, unknown>, baslik: string, tehlikeli = false, yazilacak = 'YAZ', aciklama?: string, geriAl?: Record<string, unknown>) => {
+    if (!(await onayIste({ baslik, tehlikeli, aciklama, ...(tehlikeli ? { yazilacak } : {}) }))) return;
+    try {
+      await adminIstek(`/api/admin/question-merges/${encodeURIComponent(id)}`, { yontem: 'POST', govde });
+      bildir('Uygulandı', 'iyi', geriAl ? { etiket: 'Geri al', yap: async () => { await adminIstek(`/api/admin/question-merges/${encodeURIComponent(id)}`, { yontem: 'POST', govde: geriAl }); void yenile(); } } : undefined);
+      void yenile();
+    }
     catch (e: any) { bildir(e.message, 'kotu'); }
   };
   const g = veri?.grup;
@@ -18,7 +23,7 @@ function Ayrinti({ id, kapat }: { id: string; kapat: () => void }) {
     <AyrintiCekmecesi acik genis kapat={kapat} baslik={`Grup ${id}`} altBaslik={g ? `${g.uyeler.length} kopya · ${DURUM[g.durum] || g.durum}${g.gorunen ? ` · sitede ${g.gorunen}` : ''}` : ''} kayit={veri} hedef={`grup:${id}`}
       eylemler={g && (<>
         {g.durum !== 'onayli' && g.durum !== 'ayrildi' && <button type="button" className="m16-btn birincil" onClick={() => islem({ action: 'confirm' }, 'Birleştirme onaylansın mı?')}>Onayla</button>}
-        {g.durum !== 'ayrildi' ? <button type="button" className="m16-btn" onClick={() => islem({ action: 'split' }, 'Grup ayrılsın mı? Tüm kopyalar sitede ayrı görünür.')}>Ayır</button>
+        {g.durum !== 'ayrildi' ? <button type="button" className="m16-btn" onClick={() => islem({ action: 'split' }, 'Grup ayrılsın mı?', true, 'AYIR', `${g.uyeler.length} kopyanın tümü sitede ayrı soru olarak görünür. Hedef: ${yazimHedefi()}.`, { action: 'restore' })}>Ayır</button>
           : <button type="button" className="m16-btn" onClick={() => islem({ action: 'restore' }, 'Birleştirme geri yüklensin mi?')}>Geri yükle</button>}
       </>)}>
       {hata ? <Hata hata={hata} yenile={yenile} /> : yukleniyor && !veri ? <Yukleniyor satir={8} /> : veri && (

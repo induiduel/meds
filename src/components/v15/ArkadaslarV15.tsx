@@ -3,7 +3,7 @@ import { Gamepad2, MessageCircle, Search, UserCheck, UserPlus, Users, X } from '
 import { safeJsonFetch } from '../../services/api';
 import { type KisiKart, arkadasIslem, basHarf, git, mesajAc, once, profilYolu, sure, useArkadasCanli } from '../../services/arkadasIstemci';
 import { useV15Baslik } from './baslik';
-import { Bos, DavetPencere } from './KisiProfilV15';
+import { DavetPencere } from './KisiProfilV15';
 import GizlilikAnahtari from './GizlilikAnahtari';
 import '../../styles/v15/kisi.css';
 
@@ -43,7 +43,16 @@ export default function ArkadaslarV15() {
     void yukle();
   };
 
-  if (l && !l.girisli) return <div className="ks15"><Bos baslik="Giriş gerekli" metin="Arkadaş eklemek ve mesajlaşmak için giriş yap." /></div>;
+  // H167: "Giriş gerekli" kartında giriş düğmesi yoktu; App'teki giriş penceresini olayla açar
+  if (l && !l.girisli) return (
+    <div className="ks15">
+      <div className="v15-card ks15-bos">
+        <b>Giriş gerekli</b>
+        <p>Arkadaş eklemek ve mesajlaşmak için giriş yap.</p>
+        <button type="button" className="v15-btn" onClick={() => window.dispatchEvent(new Event('medsoru:giris-ac'))}>Giriş yap</button>
+      </div>
+    </div>
+  );
 
   return (
     <div className="ks15">

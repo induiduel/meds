@@ -61,7 +61,7 @@ export default function Denetim(_p: SayfaProps) {
 
   return (
     <>
-      <SayfaBasligi baslik="Denetim kaydı" aciklama="Tüm yönetici yazma işlemleri ve kişisel veri okumaları (meds-pg yonetici_denetim)."
+      <SayfaBasligi baslik="Denetim kaydı" aciklama={<>Tüm yönetici yazma işlemleri ve kişisel veri okumaları.{/* H172 */}<span className="m16-kaynak"><code>yonetici_denetim</code></span></>}
         eylemler={<div className="m16-ts-eylem">
           <button type="button" className="m16-btn" disabled={aktariyor} onClick={() => disaAktar('csv')}>CSV</button>
           <button type="button" className="m16-btn" disabled={aktariyor} onClick={() => disaAktar('json')}>JSON</button>

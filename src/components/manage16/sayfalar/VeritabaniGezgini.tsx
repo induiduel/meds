@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo, useState } from 'react';
-import { SayfaBasligi, AyrintiCekmecesi, JsonDuzenleyici, Rozet, Hata, Yukleniyor, BosDurum, adminIstek, bildir, onayIste, useAdminSorgu } from '../kit';
+import { SayfaBasligi, AyrintiCekmecesi, JsonDuzenleyici, Rozet, Hata, Yukleniyor, BosDurum, adminIstek, bildir, onayIste, useAdminSorgu, yazimHedefi } from '../kit';
 import type { SayfaProps } from '../menu';
 import './ortak/ts16.css';
 
@@ -31,7 +31,7 @@ export default function VeritabaniGezgini({ id, git }: SayfaProps) {
   const tablolar = (t.veri?.tables || []).filter((x) => !suz || x.name.includes(suz.toLowerCase()));
   return (
     <>
-      <SayfaBasligi baslik="Veritabanı gezgini" aciklama={t.veri ? `${t.veri.version} · ${boyutMetni(t.veri.databaseBytes)} · ${t.veri.tables.length} tablo` : 'meds-pg tabloları'}>
+      <SayfaBasligi baslik="Veritabanı gezgini" aciklama={t.veri ? `${t.veri.version} · ${boyutMetni(t.veri.databaseBytes)} · ${t.veri.tables.length} tablo` : 'Veritabanı tabloları'}>
         <div className="m16-sekmeler" role="tablist">
           <button type="button" role="tab" aria-selected={sekme === 'tablo'} className={sekme === 'tablo' ? 'on' : ''} onClick={() => { setSekme('tablo'); if (id === '_sql') git('sistem/db', { degistir: true }); }}>Tablolar</button>
           <button type="button" role="tab" aria-selected={sekme === 'sql'} className={sekme === 'sql' ? 'on' : ''} onClick={() => { setSekme('sql'); git('sistem/db/_sql', { degistir: true }); }}>Salt okunur SQL</button>
@@ -88,13 +88,13 @@ function TabloGorunumu({ t }: { t: Tablo }) {
       if (JSON.stringify((yeni as any)[c.name]) !== JSON.stringify(tam[c.name])) set[c.name] = (yeni as any)[c.name];
     }
     if (!Object.keys(set).length) { bildir('Değişiklik yok.', 'bilgi'); return; }
-    if (!(await onayIste({ baslik: `${Object.keys(set).length} sütun güncellensin mi?`, aciklama: <>{Object.keys(set).join(', ')}{t.mirror ? <><br />Bu tablo <b>{t.mirror}</b> kaynağından yansır; düzeltme sonraki eşitlemede ezilebilir.</> : null}</>, onayMetni: 'Güncelle', tehlikeli: true }))) return;
+    if (!(await onayIste({ baslik: `${Object.keys(set).length} sütun güncellensin mi?`, aciklama: <>{/* H181 */}Hedef: <b>{yazimHedefi()}</b> · tablo <code>{t.name}</code><br />{Object.keys(set).join(', ')}{t.mirror ? <><br />Bu tablo <b>{t.mirror}</b> kaynağından yansır; düzeltme sonraki eşitlemede ezilebilir.</> : null}</>, onayMetni: 'Güncelle', tehlikeli: true }))) return;
     try { await adminIstek('/api/admin/pg/row', { yontem: 'PATCH', govde: { table: t.name, key: anahtar(tam), set } }); bildir('Satır güncellendi.', 'iyi'); setAcik(null); void s.yenile(); }
     catch (e: any) { bildir(e?.message || String(e), 'kotu'); }
   };
   const sil = async () => {
     if (!tam) return;
-    if (!(await onayIste({ baslik: 'Satır kalıcı silinsin mi?', tehlikeli: true, yazilacak: 'SIL', onayMetni: 'Kalıcı sil', aciklama: <>Tablo <code>{t.name}</code>, anahtar <code>{JSON.stringify(anahtar(tam))}</code>. Geri alınamaz; gece yedeğinden döner.</> }))) return;
+    if (!(await onayIste({ baslik: 'Satır kalıcı silinsin mi?', tehlikeli: true, yazilacak: 'SIL', onayMetni: 'Kalıcı sil', aciklama: <>Hedef: <b>{yazimHedefi()}</b>. Tablo <code>{t.name}</code>, anahtar <code>{JSON.stringify(anahtar(tam))}</code>. Geri alınamaz; gece yedeğinden döner.</> }))) return;
     try { await adminIstek('/api/admin/pg/row', { yontem: 'DELETE', govde: { table: t.name, key: anahtar(tam), onay: 'SIL' } }); bildir('Satır silindi.', 'iyi'); setAcik(null); void s.yenile(); }
     catch (e: any) { bildir(e?.message || String(e), 'kotu'); }
   };

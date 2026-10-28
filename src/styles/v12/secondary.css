@@ -105,7 +105,8 @@
     & .kz-lesson-no { font: 500 11.5px var(--font-mono); min-width: 20px; padding-top: 2px; }
     & .kz-lesson-t { font-size: 13.5px; font-weight: 500; line-height: 1.35; }
     & .kz-lesson-main { gap: 5px; }
-    & .kz-lesson-c { font: 500 11px var(--font-mono); }
+    /* H162: mono yazıtipinin çizgili sıfırı "0/2" sayacını "8/2" gibi okutuyordu (pay>payda sanılıyordu); sayaç sans + tabular */
+    & .kz-lesson-c { font: 600 11px var(--font-sans); font-variant-numeric: tabular-nums; }
 
     & .kz-detail { padding: 16px 20px 20px; gap: 14px; }
     & .kz-crumb { font-size: 12.5px; }

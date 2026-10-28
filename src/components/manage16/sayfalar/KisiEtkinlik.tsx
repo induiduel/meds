@@ -31,7 +31,7 @@ export default function KisiEtkinlik({ git }: SayfaProps) {
   }, [tur, kim, debQ]); // eslint-disable-line react-hooks/exhaustive-deps
   return (
     <>
-      <SayfaBasligi baslik="Etkinlik günlüğü" aciklama="Öğrenci eylemleri (yorum, bildirim, soru, not, oy…) — meds-pg user_events, en yeni üstte.">
+      <SayfaBasligi baslik="Etkinlik günlüğü" aciklama={<>Öğrenci eylemleri (yorum, bildirim, soru, not, oy…), en yeni üstte.{/* H172 */}<span className="m16-kaynak"><code>user_events</code></span></>}>
         <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap', padding: '8px 0' }}>
           <input className="m16-girdi" placeholder="Metin ara…" value={q} onChange={(e) => setQ(e.target.value)} aria-label="Metin ara" />
           <input className="m16-girdi" placeholder="uid / e-posta / cihaz" value={kim} onChange={(e) => setKim(e.target.value.trim())} aria-label="Kişi" />

@@ -5,7 +5,7 @@ import { TUM_SAYFALAR, manageAdres, type SayfaProps } from '../menu';
 
 type Ozet = {
   zaman: string;
-  saglik: { pg: boolean; calismaSn: number; yiginMb: number; rssMb: number; yuk: number; sseIstemci: number; sunucu: string };
+  saglik: { pg: boolean; calismaSn: number; yiginMb: number; rssMb: number; yiginToplamMb?: number; yuk: number; sseIstemci: number; sunucu: string };
   kullanici: { bugun: number; simdi: number; hafta: number };
   bekleyen: { sikayet: number; geriBildirim: number; tuyo: number; onarim: number; faz14: number };
   hata: { istemci24s: number };
@@ -43,11 +43,12 @@ export default function GenelBakis({ git }: SayfaProps) {
           <div className="m16-izgara-2">
             <section className="m16-kart" aria-labelledby="gb-denetim">
               <h2 id="gb-denetim">Son yönetici işlemleri <a className="m16-btn hayalet" href={manageAdres('sistem/denetim')} onClick={(e) => { e.preventDefault(); git('sistem/denetim'); }}>Tümü</a></h2>
-              {y ? <Yukleniyor satir={5} /> : !o?.sonDenetim.length ? <BosDurum baslik="Henüz kayıt yok" aciklama="Yönetici yazma işlemleri burada görünür." /> : (
+              {y ? <Yukleniyor satir={5} /> : !o?.sonDenetim.filter((d) => d.tur !== 'okuma').length ? <BosDurum baslik="Henüz kayıt yok" aciklama="Yönetici yazma işlemleri burada görünür." /> : (
                 <ul className="m16-liste">
-                  {o.sonDenetim.map((d) => (
+                  {/* H173: okuma kayıtları süzülür (sunucu da yalnız yazma döner; eski sunucuya karşı istemcide de süz) */}
+                  {o.sonDenetim.filter((d) => d.tur !== 'okuma').map((d) => (
                     <li key={d.id}>
-                      <Rozet ton={durumTonu(d.durum)}>{d.tur === 'okuma' ? 'OKUMA' : d.yontem}</Rozet>
+                      <Rozet ton={durumTonu(d.durum)}>{d.yontem}</Rozet>
                       <code className="m16-kisalt" title={d.uc}>{d.uc}{d.hedef ? ` · ${d.hedef}` : ''}</code>
                       <time dateTime={d.at}>{zamanMetni(d.at)}</time>
                     </li>
@@ -62,7 +63,9 @@ export default function GenelBakis({ git }: SayfaProps) {
                   <dl className="m16-satirlar">
                     <dt>Veritabanı</dt><dd><Durum ton={o.saglik.pg ? 'iyi' : 'kotu'}>{o.saglik.pg ? 'bağlı' : 'kopuk'}</Durum></dd>
                     <dt>Çalışma süresi</dt><dd>{sure(o.saglik.calismaSn)}</dd>
-                    <dt>Bellek</dt><dd>{o.saglik.yiginMb} / {o.saglik.rssMb} MB</dd>
+                    {/* H174: "1462 / 234 MB" belirsizdi; süreç belleği (RSS) ve JS yığını ayrı etiketli */}
+                    <dt>Süreç belleği</dt><dd>{o.saglik.rssMb.toLocaleString('tr-TR')} MB</dd>
+                    <dt>JS yığını</dt><dd>{o.saglik.yiginMb.toLocaleString('tr-TR')}{o.saglik.yiginToplamMb ? ` / ${o.saglik.yiginToplamMb.toLocaleString('tr-TR')}` : ''} MB</dd>
                     <dt>Yük (1 dk)</dt><dd>{o.saglik.yuk.toFixed(2)}</dd>
                     <dt>Canlı bağlantı</dt><dd>{o.saglik.sseIstemci}</dd>
                     <dt>Sürüm</dt><dd title={o.surum.baslik || ''}>{o.surum.onem ?? '–'}{o.surum.commit ? ` · ${o.surum.commit.slice(0, 7)}` : ''}</dd>

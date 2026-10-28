@@ -44,7 +44,8 @@ export default function ProgramSimdiKarti() {
     return (
       <a className="t15-pg v15-card" href={href} onClick={linkClick(() => navigateTo(href))}>
         <span className="v15-tile is-n"><CalendarClock aria-hidden /></span>
-        <span className="t15-pg-t"><span className="v15-cap">Ders programı</span><b>Bugünkü {satirlar.length} ders bitti</b></span>
+        <span className="t15-pg-t"><span className="v15-cap">Ders programı</span>{/* H156: okul ders programıdır, senin çalışma planın değil — Bugünün planı halkasıyla karışmasın */}
+        <b>Okuldaki bugünkü {satirlar.length} ders sona erdi</b></span>
       </a>
     );
   }

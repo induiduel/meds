@@ -1,5 +1,5 @@
 import React from 'react';
-import { SayfaBasligi, VeriTablosu, useAdminSorgu, adminIstek, Rozet, Hata, Yukleniyor, onayIste, bildir, zamanMetni } from '../kit';
+import { SayfaBasligi, VeriTablosu, useAdminSorgu, adminIstek, Rozet, Hata, Yukleniyor, onayIste, gerekceIste, bildir, yazimHedefi, zamanMetni } from '../kit';
 import type { SayfaProps } from '../menu';
 import { RolRozeti, KisiBag, tarihMetni } from './kisiOrtak';
 
@@ -12,9 +12,10 @@ type ESatir = { uid: string; email: string; displayName: string; role: string; i
  */
 export default function KisiErisim({ git }: SayfaProps) {
   const d = useAdminSorgu<{ users: ESatir[] }>('/api/admin/people-access', { canliOlay: ['people_changed'] });
-  const uygula = async (yol: string, uids: string[], govde: any, baslik: string, tehlikeli = false) => {
+  // H181: onay metni yazım hedefini söyler; H179: gerekçeli askı kendi penceresinde onaylandıysa (onayli) ikinci kez sorulmaz
+  const uygula = async (yol: string, uids: string[], govde: any, baslik: string, tehlikeli = false, onayli = false) => {
     if (!uids.length) return;
-    if (!(await onayIste({ baslik, tehlikeli, onayMetni: 'Uygula' }))) return false;
+    if (!onayli && !(await onayIste({ baslik, tehlikeli, onayMetni: 'Uygula', aciklama: <>Hedef: <b>{yazimHedefi()}</b>. İşlem erişim geçmişine ve denetim kaydına yazılır.</> }))) return false;
     try {
       const r = await adminIstek<any>(`/api/admin/people-access/${yol}`, { yontem: 'POST', govde: { uids, ...govde } });
       bildir(`${r.changed?.length || 0} hesap güncellendi${r.skipped?.length ? ` · ${r.skipped.length} atlandı (${r.skipped[0].reason})` : ''}.`, r.skipped?.length && !r.changed?.length ? 'kotu' : 'iyi');
@@ -23,10 +24,18 @@ export default function KisiErisim({ git }: SayfaProps) {
     } catch (e: any) { bildir(e.message, 'kotu'); return false; }
   };
   const askiya = async (uids: string[]) => {
-    const gerekce = window.prompt('Askı gerekçesi (en az 3 harf):');
-    if (!gerekce || gerekce.trim().length < 3) return false;
-    const bitis = window.prompt('Bitiş tarihi (YYYY-AA-GG, boş = süresiz):') || '';
-    return uygula('suspend', uids, { reason: gerekce.trim(), until: bitis.trim() || undefined }, `${uids.length} hesap askıya alınsın mı?`, true);
+    // H179: window.prompt yerine kit onay penceresi: gerekçe alanı (≥3 karakter) + isteğe bağlı bitiş tarihi
+    let bitis = '';
+    const gerekce = await gerekceIste({
+      baslik: `${uids.length} hesap askıya alınsın mı?`, tehlikeli: true, onayMetni: 'Askıya al', gerekce: { etiket: 'Askı gerekçesi', enAz: 3 },
+      aciklama: <>
+        Askıdaki hesap yazma işlemi yapamaz. Hedef: <b>{yazimHedefi()}</b>.
+        <label className="m16-alan" style={{ marginTop: 8 }}><span>Bitiş tarihi (boş = süresiz)</span>
+          <input type="date" className="m16-girdi" onChange={(e) => { bitis = e.target.value; }} /></label>
+      </>,
+    });
+    if (!gerekce) return false;
+    return uygula('suspend', uids, { reason: gerekce, until: bitis || undefined }, '', true, true);
   };
   if (d.hata && !d.veri) return <Hata hata={d.hata} yenile={d.yenile} />;
   return (

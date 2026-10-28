@@ -199,9 +199,10 @@ export function VeriTablosu<T>(p: VeriTablosuProps<T>) {
           {!yerel && <button type="button" className="m16-btn hayalet ikon" aria-label="Yenile" onClick={() => void sunucu.yenile()}><RefreshCw className={sunucu.yukleniyor ? 'm16-don' : ''} aria-hidden="true" /></button>}
         </div>
       </div>
-      {!!p.suzgecler?.length && (
+      {/* H171: seçeneği olmayan (meta henüz gelmemiş) süzgeç satırı gizlenir; boş etiket satırı durmaz */}
+      {!!p.suzgecler?.some((f) => f.secenekler.length) && (
         <div className="m16-cipler" role="group" aria-label="Süzgeçler">
-          {p.suzgecler.map((f) => (
+          {p.suzgecler.filter((f) => f.secenekler.length).map((f) => (
             <div key={f.anahtar} className="m16-cip-grup">
               <span className="m16-cip-etiket">{f.etiket}</span>
               {f.secenekler.map((o) => {
@@ -210,7 +211,8 @@ export function VeriTablosu<T>(p: VeriTablosuProps<T>) {
                 return (
                   <button key={o.deger} type="button" className={`m16-cip ${on ? 'on' : ''}`} aria-pressed={on}
                     onClick={() => setSuz((s) => { const x = { ...s }; if (on) delete x[f.anahtar]; else x[f.anahtar] = o.deger; return x; })}>
-                    {o.etiket}{n !== undefined && <em>{n}</em>}
+                    {/* H170: kurul çipinde yalın rakam "Kurul N" olur; sayı ayrı soluk rozet (em) — "1 66" → "Kurul 1 (66)" "27" diye okunmaz */}
+                    {f.anahtar === 'kurul' && /^\d$/.test(o.etiket) ? `Kurul ${o.etiket}` : o.etiket}{n !== undefined && <em className="m16-cip-sayi" aria-label={`${n} kayıt`}>{n.toLocaleString('tr-TR')}</em>}
                   </button>
                 );
               })}
@@ -276,7 +278,8 @@ export function VeriTablosu<T>(p: VeriTablosuProps<T>) {
       </div>
 
       <div className="m16-sayfala">
-        <span>{toplam.toLocaleString('tr-TR')} kayıt{secili.size ? ` · ${secili.size} seçili` : ''}</span>
+        {/* H171: ilk yüklemede "0 kayıt" yerine "Yükleniyor…" */}
+        <span>{ilkYukleme ? 'Yükleniyor…' : `${toplam.toLocaleString('tr-TR')} kayıt`}{secili.size ? ` · ${secili.size} seçili` : ''}</span>
         <div>
           <button type="button" className="m16-btn hayalet ikon" disabled={sayfa === 0} onClick={() => setSayfa((s) => s - 1)} aria-label="Önceki sayfa"><ChevronLeft aria-hidden="true" /></button>
           <span aria-live="polite">{sayfa + 1} / {sayfaSayisi}</span>

@@ -7,6 +7,15 @@ import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
 import { kutlamaKapat, kutlamalariAtla, sayi, useBasarim, type Odul } from '../../services/basarimIstemci';
 import { AtpIkon, Ikon } from './ortak';
+import { parseLocation } from '../../router';
+
+/** H154: soru çözerken/sesli ders oynarken tam ekran kutlama araya girmesin — bu ekranlarda kuyruk bekler, çıkınca gösterilir. */
+const etkinEkranda = () => {
+  try {
+    const { route, param } = parseLocation();
+    return route === 'practice' || route === 'test_cikmis' || route === 'soru_cozucu' || (route === 'canli_ders' && !!param);
+  } catch { return false; }
+};
 
 type Efekt = 'konfeti' | 'mitoz' | 'sentaz' | 'kalp' | 'asklepios';
 
@@ -165,7 +174,16 @@ const BASLIK: Record<Odul['t'], string> = { hedef: 'Hedef tamamlandı', basarim:
 
 export function KutlamaKatmani() {
   const { kutlama, tanim, durum } = useBasarim();
-  const o = kutlama[0];
+  // H154: etkin soru/ders ekranındayken ertele; adres pushState ile değiştiği için kuyruk varken saniyede bir bakılır
+  const [ertele, setErtele] = useState(etkinEkranda);
+  const kuyrukVar = kutlama.length > 0;
+  useEffect(() => {
+    if (!kuyrukVar) return;
+    setErtele(etkinEkranda());
+    const t = window.setInterval(() => setErtele(etkinEkranda()), 1000);
+    return () => window.clearInterval(t);
+  }, [kuyrukVar]);
+  const o = ertele ? undefined : kutlama[0];
   const dugme = useRef<HTMLButtonElement>(null);
   const bilgi = useMemo(() => {
     if (!o) return null;
@@ -198,7 +216,8 @@ export function KutlamaKatmani() {
           {o.ust && <span className="bs-k-isin" />}
           <span className="bs-k-halka" />
           <span className="bs-k-yuz"><Ikon ad={bilgi.ikon} /></span>
-          {bilgi.seviye > 0 && o.t !== 'siralama' && <span className="bs-k-seviye">{bilgi.seviye}</span>}
+          {/* H155: rozetteki sayı seviyedir (kuyruk sayısı değil) — ekran okuyucu ve ipucu bunu söyler */}
+          {bilgi.seviye > 0 && o.t !== 'siralama' && <span className="bs-k-seviye" title={`${bilgi.seviye}. seviye`}>{bilgi.seviye}</span>}
         </div>
         <p className="bs-k-ust-yazi">{o.ust ? `${BASLIK[o.t]} · en üst seviye` : BASLIK[o.t]}</p>
         <h2 id="bs-k-ad" className="bs-k-ad">{o.t === 'siralama' ? o.ad : bilgi.ad}</h2>
@@ -211,8 +230,9 @@ export function KutlamaKatmani() {
           <p className="bs-k-not">Günlük {durum.atp.tavan} mol sınırı dolduysa ATP kuyruğa alınır, sonraki günlerde hesabına geçer.</p>
         )}
         <div className="bs-k-eylem">
-          {kutlama.length > 1 && <button type="button" className="bs-k-atla" onClick={kutlamalariAtla}>Hepsini geç ({kutlama.length - 1})</button>}
-          <button ref={dugme} type="button" className="bs-k-devam" onClick={kutlamaKapat}>{kutlama.length > 1 ? 'Sıradaki' : 'Harika'}</button>
+          {kutlama.length > 1 && <button type="button" className="bs-k-atla" onClick={kutlamalariAtla}>Hepsini geç ({kutlama.length})</button>}
+          {/* H155: "Hepsini geç" bu ödül dahil tüm kuyruğu sayar; "Sıradaki" kaç ödül kaldığını açıkça söyler */}
+          <button ref={dugme} type="button" className="bs-k-devam" onClick={kutlamaKapat}>{kutlama.length > 1 ? `Sıradaki (${kutlama.length - 1} kaldı)` : 'Harika'}</button>
         </div>
       </div>
     </div>,

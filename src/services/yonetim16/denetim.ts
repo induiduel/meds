@@ -278,10 +278,11 @@ export function registerDenetimRoutes(app: express.Express, d: { rootDir: string
 }
 
 /** Son N denetim satırı (Genel bakış için) */
-export async function sonDenetimler(n = 8): Promise<DenetimSatiri[]> {
+export async function sonDenetimler(n = 8, yalnizYazma = false): Promise<DenetimSatiri[]> {
   if (!deps?.isPgOnline() || !semaHazir) return [];
   try {
-    const { rows } = await pgDb.query(`select id, at, tur, kim, yontem, uc, hedef, durum from public.yonetici_denetim order by at desc limit $1`, [n]);
+    // H173: Genel bakış yalnız yazma işlemlerini ister; kişisel veri OKUMA kayıtları listeyi doldurup işlemleri itiyordu
+    const { rows } = await pgDb.query(`select id, at, tur, kim, yontem, uc, hedef, durum from public.yonetici_denetim ${yalnizYazma ? "where tur is distinct from 'okuma'" : ''} order by at desc limit $1`, [n]);
     return rows as DenetimSatiri[];
   } catch { return []; }
 }

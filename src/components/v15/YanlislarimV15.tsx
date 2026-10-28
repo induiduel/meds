@@ -3,6 +3,7 @@ import { CheckCircle2, Clock, RotateCcw, Trash2 } from 'lucide-react';
 import { PracticeMode } from '../PracticeMode';
 import { OGRENILDI_KUTU, useYanlislar, yanlisGeriKoy, yanlisGruplari, yanlisSil, type YanlisKayit } from '../../services/yanlislarim';
 import { geriAlinabilir } from '../ui/Toast';
+import { navigateTo } from '../../router';
 import { useV15Baslik } from './baslik';
 import SoruSuzgecV15, { suzgecUyar, type SuzgecDegeri, type SuzgecYonu } from './SoruSuzgecV15';
 import '../../styles/v15/ogren.css';
@@ -44,8 +45,9 @@ export default function YanlislarimV15() {
   return (
     <div className="b15 yl15">
       <h1 className="sr-only">Yanlışlarım</h1>
-      <div className="v15-seg" role="tablist" aria-label="Yanlışlarım">
-        {([['hazir', `Tekrar zamanı (${g.hazir.length})`], ['bekleyen', `Bekleyen (${g.bekleyen.length})`], ['ogrenildi', `Öğrenildi (${g.ogrenildi.length})`]] as [Sekme, string][]).map(([id, t]) => (
+      {/* H160: "Tekrar zamanı (0)" telefonda iki satıra bölünüyordu; sekme adı kısa, satır kırılmaz */}
+      <div className="v15-seg yl15-seg" role="tablist" aria-label="Yanlışlarım">
+        {([['hazir', `Tekrar (${g.hazir.length})`], ['bekleyen', `Bekleyen (${g.bekleyen.length})`], ['ogrenildi', `Öğrenildi (${g.ogrenildi.length})`]] as [Sekme, string][]).map(([id, t]) => (
           <button key={id} type="button" role="tab" aria-selected={sekme === id} aria-current={sekme === id ? 'page' : undefined} onClick={() => setSekme(id)}>{t}</button>
         ))}
       </div>
@@ -74,6 +76,8 @@ export default function YanlislarimV15() {
       ) : (
         <p className="b15-bos v15-card">
           {ham.length && !liste.length ? 'Süzgece uyan soru yok; süzgeci gevşet ya da temizle.' : sekme === 'hazir' ? 'Şu an tekrar zamanı gelen soru yok.' : sekme === 'bekleyen' ? 'Yanlış yaptığın sorular burada birikir; 48 saat sonra tekrar zamanına geçer.' : 'Tekrarda dört kez doğru yaptığın sorular burada.'}
+          {/* H160: boş durumda soru çözmeye götüren eylem (süzgeç boşaltıyorsa gerekmez) */}
+          {!ham.length && <button type="button" className="v15-btn is-soft" onClick={() => navigateTo('/sorular')}>Soru çözmeye başla</button>}
         </p>
       )}
       </SoruSuzgecV15>
