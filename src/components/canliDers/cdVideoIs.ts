@@ -1,11 +1,13 @@
 /**
  * Canlı ders · video işi deposu: üretim pencereden bağımsız sürer (pencere kapanır, başka sayfaya geçilir, sekme
  * arka plana alınır). Tek seferde tek iş. Ağır motor (cdVideo.ts) yalnız iş başlarken yüklenir.
- * Arka plan: Web Lock tutulur (Chrome gizli sekmeyi dondurmaz/atmaz), sayfadan çıkışta uyarı, sekme başlığında yüzde.
+ * Arka plan: kodlama video işçisinde (Worker) yürür; Web Lock tutulur (Chrome gizli sekmeyi dondurmaz/atmaz), sayfadan
+ * çıkışta uyarı, sekme başlığında yüzde, bitince (sekme gizliyse) tarayıcı bildirimi. Tarayıcı kapanırsa iş durur.
  */
 import { toast } from '../ui/Toast';
 import type { CdDetay, CdVaryant } from './canliDersStore';
-import type { CdVideoCozunurluk, CdVideoIlerleme } from './cdVideo';
+import type { CdVideoIlerleme } from './cdVideo';
+import type { CdVideoAyar, CdVideoSoru } from './cdVideoCiz';
 
 export interface CdVideoIs {
   dersKey: string;
@@ -32,8 +34,26 @@ function baslikYaz() {
   document.title = on + document.title.replace(ON, '');
 }
 
+function indir(blob: Blob, ad: string) {
+  const u = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = u; a.download = ad; a.click();
+  setTimeout(() => URL.revokeObjectURL(u), 60_000);
+}
+/** Sekme gizliyken tarayıcı bildirimi (izin pencerede, kullanıcı "Bitince bildir"i seçince istenir) */
+function bildir(baslik: string, govde: string) {
+  try {
+    if (document.visibilityState === 'visible' || typeof Notification === 'undefined' || Notification.permission !== 'granted') return;
+    const n = new Notification(baslik, { body: govde, tag: 'medsor-video', icon: '/favicon.ico' });
+    n.onclick = () => { window.focus(); n.close(); };
+  } catch { /* desteklenmiyor */ }
+}
+export function cdVideoBildirimIzni() {
+  try { if (typeof Notification !== 'undefined' && Notification.permission === 'default') void Notification.requestPermission(); } catch { /* */ }
+}
+
 export async function cdVideoIsBaslat(o: {
-  detay: CdDetay; varyant: CdVaryant; cozunurluk: CdVideoCozunurluk; etiket: string; ad: string; dosya?: FileSystemWritableFileStream;
+  detay: CdDetay; varyant: CdVaryant; ayar: CdVideoAyar; sorular: CdVideoSoru[]; etiket: string; ad: string; dosya?: FileSystemFileHandle;
 }): Promise<'tamam' | 'iptal' | string> {
   if (is) return 'Zaten bir video oluşturuluyor.';
   const ac = new AbortController();
@@ -48,8 +68,8 @@ export async function cdVideoIsBaslat(o: {
   let sonBaslik = 0;
   try {
     const m = await import('./cdVideo');
-    const blob = await m.cdVideoOlustur({
-      detay: o.detay, varyant: o.varyant, cozunurluk: o.cozunurluk, etiket: o.etiket, dosya: o.dosya, sinyal: ac.signal,
+    const { blob, vtt } = await m.cdVideoOlustur({
+      detay: o.detay, varyant: o.varyant, ayar: o.ayar, sorular: o.sorular, etiket: o.etiket, dosya: o.dosya, sinyal: ac.signal,
       onIlerleme: (p) => {
         if (!is) return;
         is = { ...is, ilerleme: p };
@@ -58,19 +78,17 @@ export async function cdVideoIsBaslat(o: {
         if (simdi - sonBaslik > 1000) { sonBaslik = simdi; baslikYaz(); }
       },
     });
-    if (blob) {
-      const u = URL.createObjectURL(blob);
-      const a = document.createElement('a');
-      a.href = u; a.download = o.ad; a.click();
-      setTimeout(() => URL.revokeObjectURL(u), 60_000);
-    }
+    if (blob) indir(blob, o.ad);
+    if (vtt) indir(new Blob([vtt], { type: 'text/vtt' }), o.ad.replace(/\.(mp4|webm)$/i, '.vtt'));
     toast.success('Video hazır', o.ad);
+    if (o.ayar.bildirim) bildir('Video hazır', o.ad);
     return 'tamam';
   } catch (e: any) {
-    if (e?.name === 'AbortError') { try { await o.dosya?.abort(); } catch { /* */ } return 'iptal'; }
+    if (e?.name === 'AbortError') return 'iptal'; // işçi yazıcıyı iptal eder (yarım dosya kalmaz)
     console.error('video', e);
     const msg = e?.message || 'Video oluşturulamadı.';
     toast.error('Video oluşturulamadı', msg);
+    if (o.ayar.bildirim) bildir('Video oluşturulamadı', msg);
     return msg;
   } finally {
     bitir();

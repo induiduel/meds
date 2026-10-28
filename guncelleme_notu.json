@@ -1,14 +1,19 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 540,
-  "baslik": "Sesli derslerde V1/V2 seçimi",
+  "onem": 541,
+  "baslik": "Sesli derslerden ayarlı video",
   "maddeler": [
-    "Sürümü olan sesli derslerin satırında V1 ve V2 düğmeleri çıkar; Nörolojik Muayene V2 artık listeden açılabiliyor."
+    "\"Video oluştur\" artık biçim, kalite, fps, düzen ve altyazı seçtiren bir pencere açar; seçimler canlı önizlenir.",
+    "İstersen ders sonunda örnek sorular otomatik çözülür: soru, şıklar, doğru cevap ve açıklaması okunur.",
+    "Video arka planda ayrı bir işlemde üretilir; başka sayfaya geçebilir, sekmeyi arka plana alabilirsin."
   ],
-  "eklenen": [],
-  "degisen": [],
-  "duzeltilen": [
-    "Şekil ve deney anlatılmadan geçilen yerler için yeni kural ve otomatik denetim"
+  "eklenen": [
+    "Video için düzen (slayt + metin, altyazı, yalnız slayt, yalnız metin), altyazı görünümü ve .vtt dosyası",
+    "Videoda soru çözücü"
   ],
+  "degisen": [
+    "Video üretimi arka plan işçisine taşındı; bitince bildirim"
+  ],
+  "duzeltilen": [],
   "silinen": []
 }
