@@ -1,12 +1,11 @@
 {
  "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
- "onem": 550,
- "baslik": "Yerleşim düzeltmeleri",
+ "onem": 551,
+ "baslik": "Çıkmış sorularda sayfalar ve kaldığın yer",
  "maddeler": [
-  "Deneme sınavında Cevapla düğmesi sorunun hemen altında, Testi oluştur düğmesi hep görünür",
-  "Ders programından sesli derse tek tıkla geçiş; tarihi belli olmayan dersler ayrı",
-  "Ezber kartları ve Listelerim telefonda daha az kalabalık",
-  "Soru çözücü ve çevrimdışı sayfaları daha düzenli"
+  "Çıkmış sorular sayfa sayfa: kaçıncı soruda olduğun üstte yazıyor",
+  "Sayfa seçiciyle istediğin sayfaya atlayabilirsin",
+  "Başka sayfaya gidip dönünce aynı sayfa ve aynı soru açılıyor"
  ],
  "eklenen": [],
  "degisen": [],

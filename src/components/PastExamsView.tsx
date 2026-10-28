@@ -2,7 +2,8 @@ import React, { useCallback, useState, useMemo, useEffect, useDeferredValue, use
 import { KurulHapi, kurulParam, kurulSuzgeciniKaldir, useKurulParam } from './kurul/KurulSuzgec';
 import { useAnswerDoubtfulQuery, useAiReviewQueueQuery } from '../hooks/useMedicalQueries';
 import { CikmisCard } from '../screens/cikmis/CikmisCard';
-import { PastQuestionRichCard, PastQuestionRichCardProps, RichCardSkeleton, LoadMoreSentinel } from './cikmis/PastQuestionRichCard';
+import { PastQuestionRichCard, PastQuestionRichCardProps, RichCardSkeleton } from './cikmis/PastQuestionRichCard';
+import { CikmisSayfa } from './cikmis/CikmisSayfa';
 import { CikmisViewSwitch, useCikmisGorunum, useCikmisMod } from './cikmis/CikmisViewSwitch';
 import { PageToolbar, QuickOptions, type ToolbarChip, type ToolbarQuick } from './ui/PageToolbar';
 import { useAppearance } from '../utils/appearance';
@@ -341,7 +342,6 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
   const mod = v12 ? modSecim : 'liste';
   const etkinGor = mod === 'liste' || mod === 'panel' ? gorunum : 'kart';
   const RICH_STEP = 20;
-  const RICH_WINDOW = 60;
   const [richLimit, setRichLimit] = useState(RICH_STEP);
   // Çözüm durumu (studyStore: bu cihazdaki cevaplar) ve kaydedilen sorular
   const [attempts, setAttempts] = useState<Record<string, AttemptRecord>>(() => getProgress());
@@ -504,7 +504,8 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
 
   // Pagination
   const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 25;
+  // H242: Kart görünümü sonsuz kaydırmaydı (konum yok, geri dönünce baştan); artık her iki görünüm sayfalı
+  const itemsPerPage = gorunum === 'kart' ? 20 : 25;
 
   // Report Modal State
   const [reportingQuestion, setReportingQuestion] = useState<any | null>(null);
@@ -1351,16 +1352,62 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
   }, [mergedTarget]);
   const paginatedQuestions = useMemo(() => {
     if (sharedId) return questions.filter((q) => String(q.id) === sharedId);
-    // H111u: Kart görünümü kaydırdıkça sınırsız büyüyordu (300 kartta 34.000 DOM düğümü); yalnız son RICH_WINDOW kart
-    // çizilir, üstte kalanlar düşer (tarayıcının kaydırma çapası görünen kartı yerinde tutar), "Önceki soruları göster" geri getirir
-    if (etkinGor === 'kart') return filteredQuestions.slice(Math.max(0, richLimit - RICH_WINDOW), richLimit);
+    // H111u → H242: Kart görünümü de sayfalı (20); DOM sınırlı kalır, konum sayfa + sıra olarak hatırlanır
     const start = (currentPage - 1) * itemsPerPage;
     return filteredQuestions.slice(start, start + itemsPerPage);
   }, [filteredQuestions, currentPage, sharedId, questions, etkinGor, richLimit]);
   // Süzgeç sonucu değişince Kart görünümü yeniden ilk 20 kartla başlar
   useEffect(() => { setRichLimit(RICH_STEP); }, [filteredQuestions]);
+  // H242: süzgeç sonucu küçülünce mevcut sayfa sonda kalmasın
+  useEffect(() => { if (currentPage > totalPages) setCurrentPage(totalPages); }, [currentPage, totalPages]);
 
   const resetPage = () => setCurrentPage(1);
+  // H242: sayfaya git (listenin başına kaydırır) ve kaldığın yeri hatırla: süzgeç imzası + sayfa + sayfadaki sıra
+  // (sessionStorage). Bir soruya ya da başka sayfaya gidip geri dönünce aynı sayfa ve aynı soru açılır.
+  const listeRef = useRef<HTMLDivElement>(null);
+  const konumImza = `${filteredQuestions.length}|${filteredQuestions[0]?.id ?? ''}|${gorunum}|${mod}`;
+  const sayfayaGit = (n: number) => {
+    setCurrentPage(Math.min(Math.max(1, n), totalPages));
+    requestAnimationFrame(() => yerlestir(listeRef.current || undefined));
+  };
+  // Yapışkan üst çubuğun altı: konum bu çizgiye göre ölçülür ve oraya yerleştirilir
+  const ustCizgi = () => (document.querySelector('.v15-top')?.getBoundingClientRect().bottom ?? 0) + 8;
+  const yerlestir = (el?: HTMLElement) => { if (!el) return; const y = el.getBoundingClientRect().top - ustCizgi(); const sc = document.scrollingElement || document.documentElement; sc.scrollBy({ top: y }); };
+  const soruKartlari = () => Array.from(listeRef.current?.children || []).filter((el) => !(el as HTMLElement).matches('.cs15-sayfa, .ms-shared-band')) as HTMLElement[];
+  const geriYuklendi = useRef(false);
+  const yukleniyor = useRef(false);
+  useEffect(() => {
+    if (geriYuklendi.current || sharedId || isLoading || !filteredQuestions.length) return;
+    geriYuklendi.current = true;
+    try {
+      const k = JSON.parse(sessionStorage.getItem('cikmis_konum') || 'null');
+      if (!k || k.imza !== konumImza) return;
+      setCurrentPage(k.sayfa);
+      // Rota değişiminin "başa kaydır"ı ve geç gelen görseller konumu oynatır: birkaç kez yerleştir, bitene dek kaydetme
+      yukleniyor.current = true;
+      [120, 450, 900].forEach((ms) => setTimeout(() => yerlestir(soruKartlari()[k.sira]), ms));
+      setTimeout(() => { yukleniyor.current = false; }, 1100);
+    } catch { /* depolama kapalı */ }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [konumImza, isLoading, sharedId]);
+  useEffect(() => {
+    if (sharedId || !geriYuklendi.current) return;
+    let t = 0;
+    const kaydet = () => {
+      window.clearTimeout(t);
+      t = window.setTimeout(() => {
+        // rotadan çıkarken yapılan "başa kaydır" kaydı bozmasın
+        if (yukleniyor.current || !/cikmis/.test(window.location.pathname)) return;
+        const ust = ustCizgi();
+        const sira = Math.max(0, soruKartlari().findIndex((el) => el.getBoundingClientRect().bottom > ust + 24));
+        try { sessionStorage.setItem('cikmis_konum', JSON.stringify({ imza: konumImza, sayfa: currentPage, sira })); } catch { /* */ }
+      }, 200);
+    };
+    kaydet();
+    document.addEventListener('scroll', kaydet, { capture: true, passive: true });
+    return () => { window.clearTimeout(t); document.removeEventListener('scroll', kaydet, { capture: true } as any); };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [konumImza, currentPage, sharedId]);
   const LABELS = {
     pool: { valid: 'Tam metin', ambiguous: 'İncelemede', reported: 'Hata bildirilen', quarantined: 'Karantina', all: 'Tüm havuz' } as Record<string, string>,
     quarantine: {
@@ -1991,7 +2038,7 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
     };
     return {
       total: filteredQuestions.length,
-      shown: etkinGor === 'kart' && !sharedId ? Math.min(richLimit, filteredQuestions.length) : paginatedQuestions.length,
+      shown: (mod === 'tablo' || mod === 'odak') && !sharedId ? Math.min(richLimit, filteredQuestions.length) : paginatedQuestions.length,
       scope: selectedCommittee !== 'all' ? committeeShort(selectedCommittee) : undefined,
       search: { value: searchQuery, onChange: (v) => { setSearchQuery(v); resetPage(); } },
       suggest: {
@@ -2425,7 +2472,7 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
           <button type="button" onClick={clearAllFilters} className="ms-btn is-tonal">Filtreleri temizle</button>
         </div>
       ) : (
-        <div className={`cx-list ${etkinGor === 'kart' ? 'ck-list' : ''} ${mod === 'tablo' || mod === 'odak' ? 'is-tek' : ''}`} key={`${etkinGor}-${currentPage}-${filteredQuestions.length}-${sharedId || ''}`}>
+        <div ref={listeRef} className={`cx-list ${etkinGor === 'kart' ? 'ck-list' : ''} ${mod === 'tablo' || mod === 'odak' ? 'is-tek' : ''}`} key={`${etkinGor}-${currentPage}-${filteredQuestions.length}-${sharedId || ''}`}>
           {sharedId && (
             <div className="ms-shared-band" role="status">
               <Share2 className="w-4 h-4 shrink-0" aria-hidden />
@@ -2433,32 +2480,15 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
               <button type="button" onClick={showAllQuestions} className="ms-btn is-ghost is-sm">Tüm sorular <ChevronRight /></button>
             </div>
           )}
-          {etkinGor === 'kart' && !sharedId && (mod === 'liste' || mod === 'panel') && richLimit > RICH_WINDOW && (
-            <div className="cm15-daha">
-              <button type="button" className="c12-btn sm" onClick={() => setRichLimit((l) => Math.max(RICH_WINDOW, l - RICH_STEP))}>
-                Önceki soruları göster ({(richLimit - RICH_WINDOW).toLocaleString('tr-TR')})
-              </button>
-            </div>
+          {(mod === 'liste' || mod === 'panel') && !sharedId && filteredQuestions.length > itemsPerPage && (
+            <CikmisSayfa ust sayfa={currentPage} toplamSayfa={totalPages} boy={itemsPerPage} toplam={filteredQuestions.length} git={sayfayaGit} />
           )}
           {mod === 'liste' || mod === 'panel' || sharedId ? paginatedQuestions.map(renderQuestion) : (
             <CikmisModGorunum mod={mod === 'tablo' ? 'tablo' : 'odak'} sorular={filteredQuestions} attempts={attempts} savedIds={savedIds} onToggleSave={toggleSave} render={renderQuestion} limit={richLimit} onMore={() => setRichLimit((l) => l + RICH_STEP)} />
           )}
 
-          {etkinGor === 'kart' && !sharedId && (mod === 'liste' || mod === 'panel') && (
-            <LoadMoreSentinel remaining={Math.max(0, filteredQuestions.length - richLimit)} onMore={() => setRichLimit((l) => l + RICH_STEP)} shown={Math.min(richLimit, filteredQuestions.length)} total={filteredQuestions.length} />
-          )}
-          {etkinGor === 'kompakt' && totalPages > 1 && !sharedId && (
-            <nav aria-label="Sayfalar" className="cx-pager">
-              <button type="button" onClick={() => { setCurrentPage((prev) => Math.max(1, prev - 1)); window.scrollTo({ top: 0, behavior: 'smooth' }); }} disabled={currentPage === 1} className="ms-btn is-outline">
-                <ChevronLeft /> <span className="hidden sm:inline">Önceki</span>
-              </button>
-              <span className="text-ink-3">
-                <span className="font-semibold text-ink">{currentPage}</span> / {totalPages}
-              </span>
-              <button type="button" onClick={() => { setCurrentPage((prev) => Math.min(totalPages, prev + 1)); window.scrollTo({ top: 0, behavior: 'smooth' }); }} disabled={currentPage === totalPages} className="ms-btn is-outline">
-                <span className="hidden sm:inline">Sonraki</span> <ChevronRight />
-              </button>
-            </nav>
+          {(mod === 'liste' || mod === 'panel') && !sharedId && totalPages > 1 && (
+            <CikmisSayfa sayfa={currentPage} toplamSayfa={totalPages} boy={itemsPerPage} toplam={filteredQuestions.length} git={sayfayaGit} />
           )}
         </div>
       )}
