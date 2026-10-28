@@ -45,6 +45,16 @@ async function tekIslem(id: string, e: Eylem, not?: string) {
   } else throw new Error('Bu tür burada işlenmez.');
 }
 
+/** H296: tek işlemin tersi (Geri al). Topluluk şikâyetini yok saymanın tersi yok (şikâyet kayıtları silinir), hata "görüldü" zararsız. */
+async function tersIslem(id: string, e: Eylem): Promise<boolean> {
+  const tur = turu(id);
+  if (tur === 'soru') { await adminIstek('/api/admin/sorular/sikayet/coz', { yontem: 'POST', govde: { ...soruParca(id), durum: 'pending' } }); return true; }
+  if (tur === 'topluluk' && e === 'gizle') { await adminIstek(`/api/admin/topluluk/mesajlar/${encodeURIComponent(kimligi(id))}/gizle`, { yontem: 'POST', govde: { gizli: false } }); return true; }
+  if (tur === 'geri-bildirim') { await adminIstek(`/api/admin/topluluk/geri-bildirim/${encodeURIComponent(kimligi(id))}`, { yontem: 'PUT', govde: { durum: 'acik' } }); return true; }
+  return false;
+}
+const geriAlinamaz = (id: string, e: Eylem) => turu(id) === 'topluluk' && e !== 'gizle';
+
 export default function GelenKutusu({ id, git }: SayfaProps) {
   const ozet = useAdminSorgu<{ kaynaklar: Record<string, { toplam: number; hata?: boolean }> }>('/api/admin/gelen', { sorgu: { boyut: 1 } });
   const k = ozet.veri?.kaynaklar || {};
@@ -57,7 +67,8 @@ export default function GelenKutusu({ id, git }: SayfaProps) {
 
   const isle = async (ids: string[], e: Eylem, not?: string) => {
     if (!ids.length) return;
-    if (ids.length > 1 && !(await onayIste({ baslik: `${ids.length} satır için "${EYLEM_AD[e]}" uygulansın mı?`, aciklama: `Hedef: ${yazimHedefi()}.`, onayMetni: EYLEM_AD[e] }))) return;
+    // H296: toplu işlem ve geri alınamayan tek işlem (topluluk şikâyetini yok say) onay ister
+    if ((ids.length > 1 || geriAlinamaz(ids[0], e)) && !(await onayIste({ baslik: ids.length > 1 ? `${ids.length} satır için "${EYLEM_AD[e]}" uygulansın mı?` : `"${EYLEM_AD[e]}" uygulansın mı?`, aciklama: `Hedef: ${yazimHedefi()}.${geriAlinamaz(ids[0], e) ? ' Bu işlem geri alınamaz.' : ''}`, onayMetni: EYLEM_AD[e] }))) return;
     setMesgul(true);
     let tamam: string[] = [];
     let hata = 0; let sonHata = '';
@@ -74,7 +85,22 @@ export default function GelenKutusu({ id, git }: SayfaProps) {
     dusur(tamam);
     if (acik && tamam.includes(acik.id)) setAcik(null);
     if (hata) bildir(`${tamam.length} işlendi, ${hata} başarısız: ${sonHata}`, 'kotu');
-    else bildir(ids.length > 1 ? `${tamam.length} satır: ${EYLEM_AD[e]}` : EYLEM_AD[e], 'iyi');
+    else {
+      // H296: tek ya da toplu işlem 8 sn geri alınabilir (tersi olan türler); geri alınan satır listeye döner
+      const geri = tamam.filter((x) => !geriAlinamaz(x, e) && turu(x) !== 'hata');
+      bildir(ids.length > 1 ? `${tamam.length} satır: ${EYLEM_AD[e]}` : EYLEM_AD[e], 'iyi', geri.length ? {
+        etiket: 'Geri al',
+        yap: () => {
+          void (async () => {
+            let n = 0;
+            for (const x of geri) { try { if (await tersIslem(x, e)) n++; } catch { /* sayılır */ } }
+            setIslenen((st) => { const y = new Set(st); geri.forEach((x) => y.delete(x)); return y; });
+            bildir(n === geri.length ? 'Geri alındı' : `${n}/${geri.length} geri alındı`, n === geri.length ? 'iyi' : 'kotu');
+            void ozet.yenile();
+          })();
+        },
+      } : undefined);
+    }
     void ozet.yenile();
   };
   const notluKapat = async (s: Satir) => {

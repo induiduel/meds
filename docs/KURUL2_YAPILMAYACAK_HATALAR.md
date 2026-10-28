@@ -1468,3 +1468,9 @@ Her maddede: belirti · kök neden · Kurul 2 kuralı · kapı durumu. Kanıtlar
 - **Belirti:** Gelen'deki her iş için başka sayfaya gidip dönmek gerekiyordu (soru şikâyeti en az 4 tıklama); soru şikâyetleri ve çıkmışlarda toplu işlem yoktu; gizlenen topluluk mesajı Gelen'de kalıyordu; istemci hatası için hiç işlem yoktu.
 - **Kök neden:** Satır yalnız `git(hedef)` çağırıyordu; Gelen 15 sn önbelleği işlem uçlarınca temizlenmiyordu; Gelen sorgusu `silindi`'ye bakmıyordu.
 - **Çözüm/kural:** Gelen'de satır ve çekmece işlemleri (Çözüldü / Yok say / Mesajı gizle / Kapat + iç not / Görüldü), aynı türde toplu işlem; `gelenOnbellekSil()` işlem uçlarında; yeni uç `POST /api/admin/gelen/hata/goruldu` (işaret `data/istemci_hata_goruldu.json`, hata yinelenirse geri düşer); VeriTablosu `dusur(t)` ile işlenen satır süzgeç/sayfa korunarak düşer. Soru şikâyetlerinde çekmeceden Çözüldü + toplu; çıkmışlarda toplu Gizle/Göster (onay + hedef + 8 sn Geri al). Not: "Yok say" şikâyeti `resolved` yapar (ayrı red durumu yok).
+
+## H296 — Gelen'de tek satır işlemleri onaysız ve geri alınamazdı (2026-10-28, ajan sınaması)
+- **Belirti:** Gelen'de "Çözüldü"/"Yok say"/"Mesajı gizle"/"Kapat" tek tıkla canlıya yazılıyor, yanlış tık geri alınamıyordu; Soru şikâyetlerinde tek çözme de geri alınamıyordu.
+- **Kök neden:** H290'da onay yalnız toplu işleme konmuştu; işlemlerin tersi tanımlanmamıştı.
+- **Çözüm/kural:** Tersi olan işlemler (soru şikâyeti → yeniden aç, mesaj gizle → göster, geri bildirim kapat → aç) 8 sn "Geri al" verir, geri alınan satır listeye döner; tersi olmayan (topluluk şikâyetini yok say: şikâyet kayıtları silinir) tek işlem de "geri alınamaz" diyen onay ister. Yerelde tıklanarak sınandı (Çözüldü → Geri al, çıkmış toplu Gizle → Geri al; veri eski hâline döndü).
+- **Sınama notu:** Sınama betiği satır düğmesini sayfa genelinde ararsa yanlış satıra basar; düğme her zaman ilgili satırın/çekmecenin içinde aranır.

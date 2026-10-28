@@ -21,7 +21,8 @@ export default function SoruSikayetleri({ git }: SayfaProps) {
       await adminIstek('/api/admin/sorular/sikayet/coz', { yontem: 'POST', govde: { kaynak: s.kaynak, soruId: s.soruId, raporId: s.raporId, durum } });
       setYerelDurum((d) => ({ ...d, [s.id]: durum === 'resolved' ? 'cozuldu' : 'acik' }));
       if (acik?.id === s.id) setAcik(durum === 'resolved' && acikSuzgec() ? null : { ...s, durum: durum === 'resolved' ? 'cozuldu' : 'acik' });
-      bildir(durum === 'resolved' ? 'Çözüldü olarak işaretlendi' : 'Yeniden açıldı', 'iyi');
+      // H296: tek çözme 8 sn geri alınabilir
+      bildir(durum === 'resolved' ? 'Çözüldü olarak işaretlendi' : 'Yeniden açıldı', 'iyi', durum === 'resolved' ? { etiket: 'Geri al', yap: () => void coz(s, 'pending') } : undefined);
     } catch (e: any) { bildir(e.message, 'kotu'); }
   };
   // H294: toplu çöz / yok say (soru bildiriminde ayrı "reddedildi" durumu yok; ikisi de bildirimi kapatır, denetim kaydında eylem adı ayrılır)
