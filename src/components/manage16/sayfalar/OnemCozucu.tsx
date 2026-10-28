@@ -23,7 +23,7 @@ export default function OnemCozucu(_p: SayfaProps) {
           { anahtar: 'kod', baslik: 'Dizin / kod', sirala: true, genislik: 'minmax(150px,1fr)', hucre: (x) => <code>{x.onek}/{x.kod}</code> },
           { anahtar: 'baslik', baslik: 'Ders', sirala: true, genislik: 'minmax(200px,3fr)', hucre: (x) => <span className="m16-kisalt" title={x.baslik}>{x.baslik}</span> },
           { anahtar: 'madde', baslik: 'Sayı', sirala: true, genislik: '64px', hizala: 'sag' },
-          { anahtar: 'gorunurluk', baslik: 'Görünürlük', genislik: 'minmax(220px,1fr)', hucre: (x) => <span onClick={(e) => e.stopPropagation()}><GorunurlukSecici anahtar={`${x.tur}:${x.id}`} deger={x.gorunurluk} /></span> },
+          { anahtar: 'gorunurluk', baslik: 'Görünürlük', genislik: 'minmax(290px,1fr)', hucre: (x) => <span onClick={(e) => e.stopPropagation()}><GorunurlukSecici anahtar={`${x.tur}:${x.id}`} deger={x.gorunurluk} /></span> },
           { anahtar: 'g', baslik: 'Durum', genislik: '90px', gizli: true, hucre: (x) => <GorunurlukRozeti deger={x.gorunurluk} /> },
         ]}
       />

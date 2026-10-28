@@ -1,19 +1,15 @@
 {
-  "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 541,
-  "baslik": "Sesli derslerden ayarlı video",
-  "maddeler": [
-    "\"Video oluştur\" artık biçim, kalite, fps, düzen ve altyazı seçtiren bir pencere açar; seçimler canlı önizlenir.",
-    "İstersen ders sonunda örnek sorular otomatik çözülür: soru, şıklar, doğru cevap ve açıklaması okunur.",
-    "Video arka planda ayrı bir işlemde üretilir; başka sayfaya geçebilir, sekmeyi arka plana alabilirsin."
-  ],
-  "eklenen": [
-    "Video için düzen (slayt + metin, altyazı, yalnız slayt, yalnız metin), altyazı görünümü ve .vtt dosyası",
-    "Videoda soru çözücü"
-  ],
-  "degisen": [
-    "Video üretimi arka plan işçisine taşındı; bitince bildirim"
-  ],
-  "duzeltilen": [],
-  "silinen": []
+ "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
+ "onem": 542,
+ "baslik": "Gezinme ve yönetim düzeltmeleri",
+ "maddeler": [
+  "Kapalı bölümlere giden bağlantılar kaldırıldı; adresle açılınca nedenini söyleyen ekran çıkıyor",
+  "Kazanımlar, örnek sorular ve test oluştur aktif kurulla açılıyor",
+  "Uygulama önbelleği yanlış dosyayı sayfa diye saklamıyor",
+  "Yönetim: görünürlük değişikliği onay istiyor ve geri alınabiliyor; mesaj yazarından kişiye geçiş"
+ ],
+ "eklenen": [],
+ "degisen": [],
+ "duzeltilen": [],
+ "silinen": []
 }

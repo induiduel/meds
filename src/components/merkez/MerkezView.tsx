@@ -12,6 +12,7 @@ import { linkClick, navigateTo, pathFor, type AppRoute } from '../../router';
 import { KATEGORILER, icKonum, type KategoriId } from '../../siteHaritasi';
 import { NAV_ITEMS } from '../shell/navModel';
 import { KurulSecici, kurulIcerikVar, varsayilanKurul } from '../kurul/KurulSecici';
+import { menudeGorunur } from '../../services/siteAyar';
 import { CHECKUPLAR, MERKEZ_ARACLARI, MERKEZ_ROUTE, PDF_NOTLAR, kategoriOf } from './merkezModel';
 import '../../styles/merkez.css';
 import { useAppearance } from '../../utils/appearance';
@@ -103,6 +104,8 @@ export const BolumSeridi: React.FC<{ route: AppRoute }> = ({ route }) => {
 export type KampSekme = 'hepsi' | 'son-prova' | 'kamp' | 'checkup' | 'en-onemliler';
 export const KAMP_SEKMELER: [KampSekme, string][] = [['hepsi', 'Hepsi'], ['son-prova', 'Son Prova'], ['kamp', 'Kamplar'], ['checkup', 'Check Up'], ['en-onemliler', 'En önemliler']];
 export const SEKME_ROUTE: Partial<Record<KampSekme, AppRoute[]>> = { 'son-prova': ['son_prova', 'cikmis_cozucu'], kamp: ['kamp'], 'en-onemliler': ['en_onemliler', 'spots'] };
+/** H139: tüm sayfaları gizli (menudeGorunur) sekme gösterilmez — tıklayınca öğrenci açıklamasız Bugün'e atılıyordu */
+export const gorunenSekmeler = () => KAMP_SEKMELER.filter(([id]) => !SEKME_ROUTE[id] || SEKME_ROUTE[id]!.some((r) => menudeGorunur(r)));
 
 export const kampOku = () => {
   const sp = new URLSearchParams(icKonum().search);
@@ -161,7 +164,7 @@ function MerkezViewEski({ kategori }: { kategori: KategoriId }) {
         <div className="mz-kamp-ust">
           <KurulSecici secili={kurul} yol={(k) => kurulYol(k)} />
           {kampMi && <div className="mz-sekmeler" role="tablist" aria-label="Sınava hazırlık bölümleri">
-            {KAMP_SEKMELER.map(([id, ad]) => (
+            {gorunenSekmeler().map(([id, ad]) => (
               <Bag key={id} url={kurulYol(kurul, id)} className={`mz-sekme${id === sekme ? ' is-on' : ''}`} aria={{ role: 'tab', 'aria-selected': id === sekme }}>{ad}</Bag>
             ))}
           </div>}

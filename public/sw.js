@@ -1,7 +1,9 @@
 // MeDSor Service Worker - PWA v8: Yüksek Hızlı Açılış, Optimize Edilmiş Bellek & Modül Parçalama
 // v18 (2026-10-28, H131): eski SW /manage yanıtını (artık manage.html) '/' ve '/index.html' olarak önbelleğe yazabilir;
 // sürüm artışı etkinleşmede o önbelleği siler.
-const CACHE_VERSION = 'medsoru-pwa-v18';
+// v19 (2026-10-28, H138): sekmede doğrudan açılan görsel/JSON/dosya yanıtı da kabuk diye yazılıyordu; artık yalnız
+// text/html kabuğa yazılır, sürüm artışı kirlenmiş eski kabuğu siler.
+const CACHE_VERSION = 'medsoru-pwa-v19';
 const STATIC_CACHE = `medsoru-static-${CACHE_VERSION}`;
 const RUNTIME_CACHE = `medsoru-runtime-${CACHE_VERSION}`;
 const DATA_CACHE = `medsoru-data-${CACHE_VERSION}`;
@@ -323,7 +325,8 @@ self.addEventListener('fetch', (event) => {
         // Ağ isteği ile önbellek yedeklemesini yarıştır
         const fetchPromise = fetch(req)
           .then((networkRes) => {
-            if (networkRes && networkRes.status === 200) {
+            // H138: yalnız HTML kabuk olabilir (favicon/JSON/PDF sekmede açılınca '/' kirleniyordu)
+            if (networkRes && networkRes.status === 200 && (networkRes.headers.get('Content-Type') || '').includes('text/html')) {
               const clone = networkRes.clone();
               caches.open(STATIC_CACHE).then((cache) => {
                 cache.put(req, clone.clone());

@@ -12,6 +12,6 @@ export * from './Form';
 export * from './DegisiklikGecmisi';
 export * from './AyrintiCekmecesi';
 export * from './VeriTablosu';
-export { bildir, BildirimHost } from './Bildirim';
+export { bildir, BildirimHost, yazimHedefi } from './Bildirim';
 export * from './Gorunurluk';
 export * from './KatalogSayfasi';

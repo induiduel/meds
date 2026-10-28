@@ -121,6 +121,13 @@ export function VeriTablosu<T>(p: VeriTablosuProps<T>) {
   const sayfaSayisi = Math.max(1, Math.ceil(toplam / boyut));
   const gorunen = p.sutunlar.filter((s) => !gizliSutun.has(s.anahtar));
   const izgara = `${p.secim ? '36px ' : ''}${gorunen.map((s) => s.genislik || 'minmax(0,1fr)').join(' ')}`;
+  // H143: satırlar ayrı ızgara; her satır kendi içeriğine (max-content) genişleyince sütunlar kayıyordu.
+  // Tüm satırlar aynı en küçük genişliği paylaşır: her izin px alt sınırlarının toplamı (telefonda yatay kaydırma bununla).
+  const enAz = (p.secim ? 36 : 0) + gorunen.reduce((t, s) => {
+    const g = s.genislik || '';
+    const m = /^minmax\(\s*(\d+)px/.exec(g) || /^(\d+)px$/.exec(g.trim());
+    return t + (m ? Number(m[1]) : 80);
+  }, 0);
 
   const sirayaGec = (s: Sutun<T>) => {
     if (!s.sirala) return;
@@ -204,7 +211,7 @@ export function VeriTablosu<T>(p: VeriTablosuProps<T>) {
         </div>
       )}
 
-      <div className="m16-tablo-kap" role="table" aria-rowcount={toplam} aria-busy={sunucu.yukleniyor}>
+      <div className="m16-tablo-kap" role="table" style={{ ['--m16-tablo-en' as any]: `${enAz}px` }} aria-rowcount={toplam} aria-busy={sunucu.yukleniyor}>
         <div className="m16-satir m16-baslik-satir" role="row" style={{ gridTemplateColumns: izgara }}>
           {p.secim && (
             <span role="columnheader" className="m16-hucre-sec">

@@ -1,6 +1,6 @@
 import React, { useMemo, useState } from 'react';
 import { RotateCcw } from 'lucide-react';
-import { SayfaBasligi, VeriTablosu, Rozet, Hata, Yukleniyor, onayIste, type Ton } from '../kit';
+import { SayfaBasligi, VeriTablosu, Rozet, Hata, Yukleniyor, onayIste, bildir, yazimHedefi, type Ton } from '../kit';
 import type { SayfaProps } from '../menu';
 import { NAV_ITEMS } from '../../shell/navModel';
 import { ogrenciGorunumu } from '../../../services/siteAyar';
@@ -39,12 +39,19 @@ export default function SiteGorunurluk(_p: SayfaProps) {
     });
   }, []);
 
-  const yaz = async (anahtar: string, parca: Record<string, unknown>, metin: string) => {
+  // H141: yazım artık geri alınabilir (8 sn "Geri al"); öğrenciden sayfa kaldıran değişiklik hedef sunucuyu söyleyerek onay ister
+  const yaz = async (anahtar: string, parca: Record<string, unknown>, metin: string, geri?: Record<string, unknown>) => {
     setMesgul(anahtar);
-    const r = await siteAyarYaz(parca, metin);
-    if (r) setVeri(r as any);
+    const r = await siteAyarYaz(parca);
+    if (r) {
+      setVeri(r as any);
+      bildir(metin, 'iyi', geri ? { etiket: 'Geri al', yap: () => { void siteAyarYaz(geri, 'Geri alındı').then((g) => { if (g) setVeri(g as any); }); } } : undefined);
+    }
     setMesgul(null);
   };
+  const kisitlar = (d: string) => d === 'gizli' || d === 'kapali' || d === 'yalniz-yonetici';
+  const onayla = (ad: string, ne: string) =>
+    onayIste({ baslik: `${ad}: ${ne}?`, aciklama: `Değişiklik ${yazimHedefi()} üzerinde hemen uygulanır; öğrenciler bu sayfayı menüde görmez ya da açamaz. 8 saniye içinde geri alabilirsin.`, onayMetni: 'Uygula' });
 
   if (hata && !a) return <><SayfaBasligi baslik="Görünürlük" /><Hata hata={hata} yenile={yenile} /></>;
   if (!a) return <><SayfaBasligi baslik="Görünürlük" /><Yukleniyor satir={8} /></>;
@@ -54,7 +61,7 @@ export default function SiteGorunurluk(_p: SayfaProps) {
     <>
       <SayfaBasligi
         baslik="Görünürlük"
-        aciklama={`Öğrenci sayfalarının durumu canlı uygulanır (menü, merkez kartları, adres koruması). ${panelde} panel ayarı · sürüm ${a.surum}${a.guncelleyen ? ` · son: ${a.guncelleyen}` : ''}`}
+        aciklama={`Öğrenci sayfalarının durumu ${yazimHedefi()} üzerinde hemen uygulanır (menü, merkez kartları, adres koruması). ${panelde} panel ayarı · sürüm ${a.surum}${a.guncelleyen ? ` · son: ${a.guncelleyen}` : ''}`}
         eylemler={panelde ? (
           <button type="button" className="m16-btn hayalet" disabled={!!mesgul} onClick={async () => {
             if (!(await onayIste({ baslik: 'Tüm sayfa ayarları sıfırlansın mı?', aciklama: 'Sayfa durumları ve menü gizlemeleri kod varsayılanına döner.', tehlikeli: true, yazilacak: 'SIFIRLA', onayMetni: 'Sıfırla' }))) return;
@@ -83,7 +90,12 @@ export default function SiteGorunurluk(_p: SayfaProps) {
                   {DURUM.map((o) => (
                     <button key={o.d} type="button" role="radio" aria-checked={cur === o.d} title={o.d === 'varsayilan' ? `${o.ipucu} (şu an: ${ERISIM[s.varsayilan][0]})` : o.ipucu}
                       disabled={mesgul === s.id} className={`m16-cip ${cur === o.d ? 'on' : ''}`}
-                      onClick={() => cur !== o.d && void yaz(s.id, { sayfalar: { [s.id]: o.d === 'varsayilan' ? null : o.d } }, `${s.ad}: ${o.etiket}`)}>
+                      onClick={async () => {
+                        if (cur === o.d) return;
+                        const yeni = o.d === 'varsayilan' ? s.varsayilan : o.d;
+                        if (kisitlar(yeni) && !(await onayla(s.ad, o.etiket))) return;
+                        void yaz(s.id, { sayfalar: { [s.id]: o.d === 'varsayilan' ? null : o.d } }, `${s.ad}: ${o.etiket}`, { sayfalar: { [s.id]: (cur as string) === 'varsayilan' ? null : cur } });
+                      }}>
                       {o.etiket}
                     </button>
                   ))}
@@ -94,7 +106,11 @@ export default function SiteGorunurluk(_p: SayfaProps) {
             hucre: (s) => (
               <span onClick={(e) => e.stopPropagation()}>
                 <Anahtar acik={a.menu[s.id] !== false} mesgul={mesgul === s.id} etiket={`${s.ad} menüde görünsün`}
-                  degistir={(v) => void yaz(s.id, { menu: { [s.id]: v ? null : false } }, `${s.ad}: menüde ${v ? 'görünür' : 'gizli'}`)} />
+                  degistir={async (v) => {
+                    if (!v && !(await onayla(s.ad, 'menüden kaldırılsın'))) return;
+                    const once = a.menu[s.id] === false ? false : null;
+                    void yaz(s.id, { menu: { [s.id]: v ? null : false } }, `${s.ad}: menüde ${v ? 'görünür' : 'gizli'}`, { menu: { [s.id]: once } });
+                  }} />
               </span>
             ) },
         ]}

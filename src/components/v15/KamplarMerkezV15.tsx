@@ -6,7 +6,7 @@ import { NAV_ITEMS } from '../shell/navModel';
 import { KURUL_NOLAR, kurulIcerikVar, kurulKaydet, varsayilanKurul } from '../kurul/KurulSecici';
 import { CHECKUPLAR, MERKEZ_ARACLARI, PDF_NOTLAR } from '../merkez/merkezModel';
 import { menudeGorunur } from '../../services/siteAyar';
-import { KAMP_SEKMELER, SEKME_ROUTE, aracYolu, kampOku, type KampSekme } from '../merkez/MerkezView';
+import { gorunenSekmeler, SEKME_ROUTE, aracYolu, kampOku, type KampSekme } from '../merkez/MerkezView';
 import { useV15Baslik } from './baslik';
 import KurulSecV15 from './KurulSecV15';
 import '../../styles/v15/dersler.css';
@@ -40,7 +40,7 @@ export default function KamplarMerkezV15() {
       <h1 className="sr-only">Sınava hazırlan</h1>
       <div className="k15-ust">
         <nav className="v15-seg k15-sekme" aria-label="Sınava hazırlık bölümleri">
-          {KAMP_SEKMELER.map(([id, ad]) =>
+          {gorunenSekmeler().map(([id, ad]) =>
             id === sekme ? <span key={id} aria-current="page">{ad}</span> : <a key={id} href={yol(kurul, id)} onClick={git(yol(kurul, id))}>{ad}</a>,
           )}
         </nav>

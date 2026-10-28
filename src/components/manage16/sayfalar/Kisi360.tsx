@@ -26,7 +26,10 @@ export default function Kisi360({ anahtar, sekme = 'ozet', git }: { anahtar: str
           {p?.name || anahtar}
         </span>}
         aciklama={p ? <>{p.email || 'e-postasız'} · {p.kind === 'account' ? 'hesap' : 'misafir'} · <code>{p.key}</code></> : undefined}
-        eylemler={<button className="m16-btn hayalet" onClick={() => d.yenile()}><RefreshCw className="w-4 h-4" aria-hidden /> Yenile</button>}
+        eylemler={<>
+          {uid && <button className="m16-btn hayalet" onClick={() => git(`topluluk/mesaj?s.uid=${encodeURIComponent(uid)}`)}>Mesajları</button>}
+          <button className="m16-btn hayalet" onClick={() => d.yenile()}><RefreshCw className="w-4 h-4" aria-hidden /> Yenile</button>
+        </>}
       >
         <nav className="m16-sekmeler" aria-label="Kişi sekmeleri">
           {SEKMELER.map(([id, ad]) => (

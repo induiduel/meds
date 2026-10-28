@@ -5,6 +5,7 @@
  * basarsa bütün kaynaklardan rastgele kurulur. Soru havuzundaki kullanıcı soruları bu ekranda listelenmez.
  * Sınıf öneki `tb-` (styles/test-builder.css); v12 kuralları :root[data-design='v12'] altında.
  */
+import { varsayilanKurul } from '../kurul/KurulSecici';
 import { KilitKapisi } from '../basarim/KilitKapisi';
 import React, { useEffect, useMemo, useState } from 'react';
 import { ArrowLeft, Shuffle, Play, Archive, Target, HelpCircle, Stethoscope, SearchX, TextCursorInput, Check, RotateCcw } from 'lucide-react';
@@ -32,7 +33,8 @@ const fmt = (n: number) => n.toLocaleString('tr-TR');
 const readSaved = (): TestCriteria => {
   try {
     const raw = JSON.parse(localStorage.getItem(KEY) || 'null');
-    if (!raw || typeof raw !== 'object') return { ...DEFAULT_CRITERIA };
+    // H140: kayıtlı ölçüt yoksa test aktif kurulla açılır (eskiden "Tümü")
+    if (!raw || typeof raw !== 'object') return { ...DEFAULT_CRITERIA, committeeId: `donem3-kurul${varsayilanKurul()}` };
     return {
       sources: Array.isArray(raw.sources) ? raw.sources.filter((x: any) => SOURCE_ORDER.includes(x)) : [...SOURCE_ORDER],
       committeeId: typeof raw.committeeId === 'string' ? raw.committeeId : 'all',
@@ -41,7 +43,7 @@ const readSaved = (): TestCriteria => {
       count: COUNTS.includes(raw.count) ? raw.count : 20,
     };
   } catch {
-    return { ...DEFAULT_CRITERIA };
+    return { ...DEFAULT_CRITERIA, committeeId: `donem3-kurul${varsayilanKurul()}` };
   }
 };
 

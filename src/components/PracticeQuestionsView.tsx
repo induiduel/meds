@@ -364,7 +364,7 @@ export const PracticeQuestionsView: React.FC<{
     <div className="flex flex-col gap-4 pb-16 w-full min-w-0 o12-page o12-ornek">
       <PageHeader
         title="Örnek sorular"
-        description="Kurul 1 kazanımlarına göre kolay, orta ve zor sorular; cevaplayınca her şıkkın gerekçesi açılır."
+        description="Kurul kazanımlarına göre kolay, orta ve zor sorular; cevaplayınca her şıkkın gerekçesi açılır."
         stats={[
           { label: 'ders', value: String(KAZANIM_INDEX.length) },
           { label: 'kazanım', value: k1Kazanim.toLocaleString('tr-TR') },

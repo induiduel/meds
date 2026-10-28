@@ -1307,3 +1307,32 @@ Her maddede: belirti · kök neden · Kurul 2 kuralı · kapı durumu. Kanıtlar
 - **Belirti:** 375 px'te Çıkmış sayfasında süzgeçler (Ders ~40, Yıl ~20 seçenek) 1,5 ekran kaplıyordu; 1440 px'te Kişiler "7 gün/Çalışma" hücreleri "3 sa 14 …" diye kesiliyordu; dokunmatikte düğme/çip 22–30 px, iOS'ta 13,5 px girdiler odakta yakınlaştırıyordu.
 - **Kök neden:** `.m16-cip-grup` `flex-wrap: wrap`; sabit 80–96 px sütunlar "N sa M dk" biçimine dar; kit dokunmatik ölçüsü tanımlamıyordu.
 - **Çözüm/kural:** Her süzgeç grubu tek satır yatay kaydırılır (etiket sabit); süre sütunları ≥100 px, kesilen düz metin hücresi `title` taşır; `@media (pointer: coarse)` düğme/ara/girdi 40 px, çip 32 px, alan yazısı 16 px. Kısa değer (≤14 karakter) hücrede kesilmez — tarama betiği bunu denetler.
+
+## H138 — Sekmede açılan görsel/JSON yanıtı site kabuğu diye önbelleğe yazılıyordu (2026-10-28, sayfa denetimi)
+- **Belirti:** Önizleme tarayıcısında `/` ve `/bugun` site yerine yalnız favicon gösterdi; bir dosya adresini doğrudan açan öğrencide yavaş ağda sonraki açılışlar site yerine o dosyayı verir.
+- **Kök neden:** `sw.js` gezinme işleyicisi 200 dönen her `navigate` yanıtını içerik türüne bakmadan `/` ve `/index.html` olarak yazıyordu; 0,4 sn içinde ağ yanıtı gelmezse kabuk diye o kayıt veriliyordu.
+- **Çözüm/kural:** Yalnız `Content-Type: text/html` yanıt kabuğa yazılır; `CACHE_VERSION` v19 kirlenmiş eski kabuğu siler. Kabuk önbelleğine yazan her yol içerik türünü denetler.
+
+## H139 — Gizlenen sayfaya giden bağlantı öğrenciyi açıklamasız Bugün'e atıyordu (2026-10-28, sayfa denetimi)
+- **Belirti:** /kamplar'daki "Kamplar" sekmesi, takvimdeki T-5 adımı, Bugün'deki "Günün spotu", `/olasi-sorular` tıklanınca Bugün açılıyordu; öğrenci neden olduğunu anlamıyordu.
+- **Kök neden:** Merkez kartları `menudeGorunur` ile süzülüyordu ama sekmeler, takvim adımları ve Bugün bağlantıları süzülmüyordu; App.tsx gizli sayfayı sessizce `setActiveTab('today')` ile değiştiriyordu.
+- **Çözüm/kural:** Sekmeler (`gorunenSekmeler`), takvim hazırlık adımları ve Günün spotu bağlantısı `menudeGorunur` ile süzülür; adresle girilen gizli sayfa "Bu sayfa şu an kapalı" ekranı + Ne yapmak istiyorsun kartlarını gösterir. Bir sayfaya bağlantı veren her yer `menudeGorunur(route)` denetler.
+
+## H140 — Bazı sayfalar aktif kurul yerine Kurul 1 ya da "Tümü" ile açılıyordu (2026-10-28, sayfa denetimi)
+- **Belirti:** Aktif kurul 2 iken Kazanımlar Kurul 1, Örnek sorular tüm kurulları karışık (sayaçlar yalnız k1-), Test oluştur "Tümü" ile açılıyordu; Öncelikli dersler Kurul 1 olduğunu söylemiyordu.
+- **Kök neden:** Sayfalar varsayılanı sabit `1`/`'all'` yazmıştı; `varsayilanKurul()` (son seçim → takvim) kullanılmıyordu.
+- **Çözüm/kural:** Kazanımlar, Örnek sorular (kurul seçici + kurul önekli sayaçlar), Test oluştur (kayıtlı ölçüt yoksa) `varsayilanKurul()` ile açılır; yalnız Kurul 1 verisi olan Öncelikli dersler bunu başlıkta yazar. Yeni kurul bağımlı sayfa varsayılanını `varsayilanKurul()`dan alır.
+
+## H141 — Yönetimde görünürlük tek tıkla, onaysız ve geri alınamaz yazıyordu (2026-10-28, sayfa denetimi)
+- **Belirti:** Site › Görünürlük ve ders/deste/önem görünürlük çiplerinde yanlış tık sayfayı/dersi tüm öğrencilere anında kapatıyordu; hangi sunucuya yazıldığı da yazmıyordu.
+- **Kök neden:** Çip `onClick` doğrudan `siteAyarYaz`/PUT çağırıyordu; kit bildiriminde eylem yoktu.
+- **Çözüm/kural:** Öğrenciden kaldıran değişiklik (gizli/kapalı/yalnız yönetici, menüden kaldırma) hedef sunucuyu (`yazimHedefi()`: canlı site / yerel sunucu) yazan onay ister; her yazım 8 sn "Geri al" bildirimi verir (`bildir(metin, ton, {etiket, yap})`).
+
+## H142 — Mesaj/şikâyet yazarından kişiye geçilemiyordu (2026-10-28, sayfa denetimi)
+- **Belirti:** Topluluk mesaj çekmecesi yazarı yalnız uid kodu olarak gösteriyordu; kişinin diğer mesajlarını görmenin yolu yoktu.
+- **Çözüm/kural:** `MesajTablosu` `git` alır; Yazan sütunu ve çekmece Kişi 360'a, "Tüm mesajları" `topluluk/mesaj?s.uid=` süzgecine bağlanır; Kişi 360'ta "Mesajları" düğmesi. Kişiye ait her kayıt panelde kişiye bağlantı verir.
+
+## H143 — Yönetim tablolarında uzun içerikli satırın sütunları kayıyordu (2026-10-28)
+- **Belirti:** Mesajlar'da oda mesajı satırlarında Mesaj/Kanal/Şikâyet sütunları başlıktan sağa kaymış, Durum ekran dışındaydı.
+- **Kök neden:** Her satır ayrı ızgara ve `.m16-satir { min-width: max-content }`: uzun içerikli satır kendi genişliğine büyüyüp fr sütunlarını başlıktan farklı dağıtıyordu.
+- **Çözüm/kural:** VeriTablosu sütun px alt sınırlarının toplamını `--m16-tablo-en` olarak verir; tüm satırlar aynı en küçük genişliği paylaşır (telefonda yatay kaydırma korunur). Satır ızgarası içeriğe göre genişlemez.

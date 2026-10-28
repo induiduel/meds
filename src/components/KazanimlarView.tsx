@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useMemo, useRef, useCallback } from 'react';
+import { varsayilanKurul } from './kurul/KurulSecici';
 import {
   Archive,
   ArrowUpRight,
@@ -143,9 +144,10 @@ const readUrl = () => {
   try {
     const p = new URLSearchParams(window.location.search);
     const k = Number(p.get('kurul'));
-    return { kurul: k >= 1 && k <= 6 ? k : 1, konu: p.get('konu') };
+    // H140: adreste kurul yoksa aktif kurul (son seçim → takvim); eskiden sabit Kurul 1 açılıyordu
+    return { kurul: k >= 1 && k <= 6 ? k : varsayilanKurul(), konu: p.get('konu') };
   } catch {
-    return { kurul: 1, konu: null };
+    return { kurul: varsayilanKurul(), konu: null };
   }
 };
 
@@ -295,7 +297,7 @@ export const KazanimlarView: React.FC<Props> = ({ onNavigateToLearn, onNavigateT
     if (loading) return;
     try {
       const p = new URLSearchParams();
-      if (selectedKurul !== 1) p.set('kurul', String(selectedKurul));
+      p.set('kurul', String(selectedKurul));
       if (selectedKey && (phoneDetail || !isPhone)) p.set('konu', selectedKey);
       const qs = p.toString();
       const next = `${pathFor('kazanimlar')}${qs ? `?${qs}` : ''}`;

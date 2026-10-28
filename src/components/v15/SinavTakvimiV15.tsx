@@ -4,6 +4,7 @@ import { kisiselOku, kisiselYaz, hatirlatOku, hatirlatYaz, type KisiselSinav } f
 import { linkClick, navigateTo, pathFor, type AppRoute } from '../../router';
 import { BUTUNLEME_TARIHI, FINAL_TARIHI, KURULLAR, aktifKurul, bugun } from '../../services/kurulTakvimi';
 import { useV15Baslik } from './baslik';
+import { menudeGorunur } from '../../services/siteAyar';
 import { geriAlinabilir } from '../ui/Toast';
 import { Halka } from './Halka';
 import '../../styles/v15/takvim.css';
@@ -110,7 +111,7 @@ export default function SinavTakvimiV15() {
       <section aria-label="Hazırlık günleri">
         <h2 className="v15-h2 tk15-h">Hazırlık günleri</h2>
         <ul className="tk15-hz" role="list">
-          {HAZIRLIK.map((h) => {
+          {HAZIRLIK.filter((h) => menudeGorunur(h.hedef)).map((h) => {
             const gun = ekle(k.sinav, -h.t);
             const durum = gun < g ? 'gecti' : gun === g ? 'bugun' : 'gelecek';
             return (

@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { adminIstek } from './api';
 import { Rozet, type Ton } from './Rozet';
-import { bildir } from './Bildirim';
+import { bildir, yazimHedefi } from './Bildirim';
+import { onayIste } from './Onay';
 
 export type GorunurlukDegeri = 'acik' | 'gizli' | 'yalniz-yonetici';
 const ETIKET: Record<GorunurlukDegeri, string> = { acik: 'Açık', gizli: 'Gizli', 'yalniz-yonetici': 'Yalnız yönetici' };
@@ -20,14 +21,20 @@ export const GorunurlukSecici: React.FC<{ anahtar: string; deger?: string; degis
   const [v, setV] = useState(deger);
   const [mesgul, setMesgul] = useState(false);
   React.useEffect(() => setV(deger), [deger]);
+  // H141: gizleme onay ister (hedef sunucu yazılı), her değişiklik 8 sn geri alınabilir
+  const yazDeger = async (y: GorunurlukDegeri) => {
+    await adminIstek('/api/admin/site-ayar', { yontem: 'PUT', govde: { gorunurluk: { [anahtar]: y === 'acik' ? null : y } } });
+    setV(y);
+    degisti?.(y);
+  };
   const sec = async (y: GorunurlukDegeri) => {
     if (y === v) return;
+    if (y !== 'acik' && !(await onayIste({ baslik: `${ETIKET[y]} yapılsın mı?`, aciklama: `${anahtar} öğrencilerden ${yazimHedefi()} üzerinde hemen gizlenir. 8 saniye içinde geri alabilirsin.`, onayMetni: 'Uygula' }))) return;
+    const once = v as GorunurlukDegeri;
     setMesgul(true);
     try {
-      await adminIstek('/api/admin/site-ayar', { yontem: 'PUT', govde: { gorunurluk: { [anahtar]: y === 'acik' ? null : y } } });
-      setV(y);
-      degisti?.(y);
-      bildir(`Görünürlük: ${ETIKET[y]}`, 'iyi');
+      await yazDeger(y);
+      bildir(`Görünürlük: ${ETIKET[y]}`, 'iyi', { etiket: 'Geri al', yap: () => { yazDeger(once).then(() => bildir('Geri alındı', 'iyi'), (e) => bildir(e?.message || 'Geri alınamadı', 'kotu')); } });
     } catch (e: any) {
       bildir(e?.message || 'Kaydedilemedi', 'kotu');
     } finally {

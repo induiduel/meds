@@ -32,6 +32,8 @@ export async function mesajSil(m: MesajSatiri) {
 export function MesajTablosu(p: {
   kimlik: string; kaynak: string; suzgecler?: Suzgec[]; ekSorgu?: Record<string, unknown>; adresteDurum?: boolean;
   sikayetModu?: boolean; kanalGit?: (kanal: string) => void;
+  /** H142: panel içi gezinme — yazandan Kişi 360'a ve kişinin tüm mesajlarına geçiş */
+  git?: (yol: string) => void;
 }) {
   const [acik, setAcik] = useState<MesajSatiri | null>(null);
   const [surum, setSurum] = useState(0);
@@ -39,7 +41,8 @@ export function MesajTablosu(p: {
   const hata = (e: any) => bildir(e?.message || String(e), 'kotu');
   const sutunlar: Sutun<MesajSatiri>[] = [
     { anahtar: 'at', baslik: 'Zaman', sirala: true, genislik: '104px', hucre: (m) => <time dateTime={m.at} title={new Date(m.at).toLocaleString('tr-TR')}>{zamanMetni(m.at)}</time> },
-    { anahtar: 'ad', baslik: 'Yazan', sirala: true, genislik: 'minmax(110px,1fr)' },
+    { anahtar: 'ad', baslik: 'Yazan', sirala: true, genislik: 'minmax(110px,1fr)',
+      hucre: (m) => (p.git ? <a href={`/manage/kisi/${encodeURIComponent(m.uid)}`} title="Kişi 360" onClick={(e) => { e.preventDefault(); e.stopPropagation(); p.git!(`kisi/${encodeURIComponent(m.uid)}`); }}>{m.ad || m.uid.slice(0, 10)}</a> : m.ad) },
     { anahtar: 'metin', baslik: 'Mesaj', genislik: 'minmax(200px,3fr)', hucre: (m) => <span className="m16-kisalt" title={m.metin}>{m.metin}</span> },
     { anahtar: 'kanal', baslik: 'Kanal / oda', sirala: true, genislik: 'minmax(110px,1fr)', hucre: (m) => kanalEtiketi(m) },
     { anahtar: 'sikayet', baslik: 'Şikâyet', sirala: true, genislik: '76px', hizala: 'sag', hucre: (m) => (m.sikayet ? <Rozet ton={m.sikayet >= 3 ? 'kotu' : 'uyari'}>{m.sikayet}</Rozet> : '—') },
@@ -84,6 +87,13 @@ export function MesajTablosu(p: {
             <div className="m16-ts-metin">{acik.metin}</div>
             <dl className="m16-satirlar">
               <dt>Kanal</dt><dd>{p.kanalGit ? <a href="#" onClick={(e) => { e.preventDefault(); p.kanalGit!(acik.kanal); }}>{kanalEtiketi(acik)}</a> : kanalEtiketi(acik)}</dd>
+              <dt>Yazan</dt><dd>{p.git ? (
+                <>
+                  <a href={`/manage/kisi/${encodeURIComponent(acik.uid)}`} onClick={(e) => { e.preventDefault(); p.git!(`kisi/${encodeURIComponent(acik.uid)}`); }}>{acik.ad || acik.uid}</a>
+                  {' · '}
+                  <a href={`/manage/topluluk/mesaj?s.uid=${encodeURIComponent(acik.uid)}`} onClick={(e) => { e.preventDefault(); p.git!(`topluluk/mesaj?s.uid=${encodeURIComponent(acik.uid)}`); }}>Tüm mesajları</a>
+                </>
+              ) : (acik.ad || acik.uid)}</dd>
               <dt>Kullanıcı kimliği</dt><dd><code>{acik.uid}</code></dd>
               <dt>Şikâyet sayısı</dt><dd>{acik.sikayet}</dd>
               <dt>Durum</dt><dd>{acik.silindi ? `Gizli (${acik.silen || 'kullanıcı'})` : 'Görünür'}</dd>

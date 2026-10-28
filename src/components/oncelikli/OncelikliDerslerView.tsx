@@ -92,7 +92,7 @@ export default function OncelikliDerslerView() {
         <span className="bd-ic" aria-hidden><Gauge /></span>
         <div>
           <h1>Öncelikli dersler</h1>
-          <p>Sesli dersler ezber yüküne, mantıkla çözülebilmesine ve çıkmışlarına göre sıralandı. Az ezberli, kolay puan getiren derslerden başla.</p>
+          <p>Kurul 1 sesli dersleri ezber yüküne, mantıkla çözülebilmesine ve çıkmışlarına göre sıralandı. Az ezberli, kolay puan getiren derslerden başla. Diğer kurulların analizi henüz hazır değil.</p>
         </div>
       </header>
 

@@ -66,7 +66,7 @@ function OdaCekmecesi({ id, kapat, degisti, git }: { id: number | null; kapat: (
       baslik={o ? odaAdi({ ...o, uye_adlari: s.veri?.uyeler.map((u) => u.ad).join(', ') || null }) : `Oda #${id ?? ''}`}
       altBaslik={o ? `#${o.id} · kuruldu ${new Date(o.olusturma).toLocaleString('tr-TR')}` : ''}
       kayit={s.veri} hedef={id ? `oda:${id}` : undefined}
-      ekSekmeler={id ? [{ id: 'mesajlar', etiket: 'Mesajlar', icerik: <MesajTablosu kimlik="topluluk-oda-mesaj" kaynak={`/api/admin/topluluk/odalar/${id}/mesajlar`} adresteDurum={false} /> }] : []}
+      ekSekmeler={id ? [{ id: 'mesajlar', etiket: 'Mesajlar', icerik: <MesajTablosu git={git} kimlik="topluluk-oda-mesaj" kaynak={`/api/admin/topluluk/odalar/${id}/mesajlar`} adresteDurum={false} /> }] : []}
       eylemler={o && (
         <div className="m16-ts-eylem">
           {o.tur === 'grup' && <button type="button" className="m16-btn" onClick={kodSifirla}>Davet kodunu sıfırla</button>}

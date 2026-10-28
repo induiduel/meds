@@ -1,4 +1,5 @@
 import { useBasarim } from '../../services/basarimIstemci';
+import { menudeGorunur } from '../../services/siteAyar';
 import { kronometreAc } from '../v15/KronometreV15';
 import ProgramSimdiKarti from '../v15/ProgramSimdiKarti';
 import { IlkAdimlarKarti } from '../v15/IlkAdimlarV15';
@@ -339,7 +340,9 @@ const TodayViewV11: React.FC<TodayViewProps & { v12?: boolean; v13?: boolean; v1
       });
     }
     const spotHref = spotOfDay ? `${pathFor('spots')}?id=${encodeURIComponent(spotOfDay.s.id)}` : '';
-    if (spotOfDay) {
+    // H139: Sınav spotları gizliyken bağlantı öğrenciyi açıklamasız Bugün'e geri atıyordu
+    const spotAcik = menudeGorunur('spots');
+    if (spotOfDay && spotAcik) {
       rows.push({
         id: 'spot', tone: 'is-w', icon: Lightbulb, tag: 'Oku',
         title: 'Günün spotu',
@@ -458,10 +461,17 @@ const TodayViewV11: React.FC<TodayViewProps & { v12?: boolean; v13?: boolean; v1
               </div>
             )}
             {spotOfDay && (
-              <a className="t15-spot v15-card" href={spotHref} onClick={linkClick(() => navigateTo(spotHref))}>
-                <span className="v15-label">Günün spotu</span>
-                <p className="t15-spot-x"><Zengin metin={spotOfDay.s.spot} /></p>
-              </a>
+              menudeGorunur('spots') ? (
+                <a className="t15-spot v15-card" href={spotHref} onClick={linkClick(() => navigateTo(spotHref))}>
+                  <span className="v15-label">Günün spotu</span>
+                  <p className="t15-spot-x"><Zengin metin={spotOfDay.s.spot} /></p>
+                </a>
+              ) : (
+                <div className="t15-spot v15-card">
+                  <span className="v15-label">Günün spotu</span>
+                  <p className="t15-spot-x"><Zengin metin={spotOfDay.s.spot} /></p>
+                </div>
+              )
             )}
           </aside>
         </div>

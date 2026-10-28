@@ -139,7 +139,7 @@ button.m16-istat:hover { border-color: var(--color-ink-3); }
 .m16-cip.on { background: var(--color-ink); border-color: var(--color-ink); color: var(--color-white); }
 .m16-cip.on em { color: inherit; opacity: .75; }
 .m16-tablo-kap { background: var(--m16-yuzey); border: 1px solid var(--m16-cizgi); border-radius: 10px; overflow-x: auto; }
-.m16-satir { display: grid; align-items: center; min-height: 36px; border-bottom: 1px solid var(--m16-cizgi-y); min-width: max-content; width: 100%; }
+.m16-satir { display: grid; align-items: center; min-height: 36px; border-bottom: 1px solid var(--m16-cizgi-y); min-width: var(--m16-tablo-en, max-content); width: 100%; }
 .m16-tablo-govde .m16-satir:last-child { border-bottom: 0; }
 .m16-baslik-satir { position: sticky; top: 0; z-index: 1; background: var(--m16-yuzey); font-size: 12px; color: var(--color-ink-3); font-weight: 600; min-height: 32px; }
 .m16-hucre { padding: 4px 10px; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
@@ -208,6 +208,8 @@ button.m16-istat:hover { border-color: var(--color-ink-3); }
 .m16-fark ins { color: var(--color-ok); text-decoration: none; }
 .m16-bildirimler { position: fixed; z-index: 90; bottom: 16px; left: 50%; transform: translateX(-50%); display: flex; flex-direction: column; gap: 6px; align-items: center; pointer-events: none; }
 .m16-bildirim { padding: 8px 14px; border-radius: 8px; background: var(--color-ink); color: var(--color-white); box-shadow: 0 8px 24px rgb(0 0 0 / .2); font-size: 13px; }
+.m16-bildirim:has(.m16-bildirim-eylem) { pointer-events: auto; display: flex; align-items: center; gap: 12px; }
+.m16-bildirim-eylem { font: inherit; font-weight: 600; color: inherit; background: none; border: 0; padding: 6px 4px; min-height: 32px; text-decoration: underline; cursor: pointer; }
 .m16-bildirim.t-kotu { background: var(--color-bad); color: var(--color-on-solid, #fff); }
 
 /* ---------- genel bakış ---------- */

@@ -921,13 +921,11 @@ export default function App() {
   // Çalışma anı site ayarı (yönetim v16): derleme sabitleri varsayılan, panel ayarı üstüne yazar (services/siteAyar.ts)
   const siteAyar = useSiteAyar();
   useLayoutEffect(() => { yoneticiAyarla(isAdmin); }, [isAdmin]);
-  const sayfaKapaliMi = sayfaKapali(activeTab) && !isAdmin;
+  // H139: gizli / yalnız yönetici / bayrağı kapalı sayfa artık sessizce Bugün'e atmaz; nedenini söyleyen ekran gösterilir
+  const sayfaGizliMi = !isAdmin && !isAdminAppMode() && sayfaYonlendir(activeTab, false);
+  const sayfaKapaliMi = (sayfaKapali(activeTab) && !isAdmin) || sayfaGizliMi;
   // Kapalı sayfada içerik hiç kurulmaz: aşağıdaki sayfa blokları gorunenTab'a bakar (kapalı ekranı tek başına kalır)
   const gorunenTab = (sayfaKapaliMi ? '__kapali__' : activeTab) as typeof activeTab;
-  // Gizlenen / yalnız yönetici / bayrağı kapalı sayfalar (sayfaSabitleri + panel): öğrenci adresle girse de Bugün'e döner
-  useEffect(() => {
-    if (!isAdmin && !isAdminAppMode() && sayfaYonlendir(activeTab, false)) setActiveTab('today');
-  }, [isAdmin, activeTab, setActiveTab, siteAyar]);
   // Moderatör: rol sunucudan (GET /api/me/access, Firebase jetonu) öğrenilir; yalnız moderasyon bölümleri açılır
   const [isModerator, setIsModerator] = useState(false);
   useEffect(() => {
@@ -1806,8 +1804,8 @@ export default function App() {
         {/* Öğrenciye kapatılan sayfalar (Sınav çalışması, Alternatif çözücü, Ders notları): yalnız yönetici açar */}
         {sayfaKapaliMi && (
           <div className="mz-kapali" role="status">
-            <h1>Bu sayfa kullanımdan kaldırıldı</h1>
-            <p>Aradığın içerik artık yeni bölümlerde. Ne yapmak istediğini seç:</p>
+            <h1>{sayfaGizliMi ? 'Bu sayfa şu an kapalı' : 'Bu sayfa kullanımdan kaldırıldı'}</h1>
+            <p>{sayfaGizliMi ? 'Bu bölüm geçici olarak öğrencilere kapatıldı; açıldığında menüde görünecek. Şimdilik ne yapmak istediğini seç:' : 'Aradığın içerik artık yeni bölümlerde. Ne yapmak istediğini seç:'}</p>
             <Suspense fallback={null}><NeYapmak kart /></Suspense>
           </div>
         )}

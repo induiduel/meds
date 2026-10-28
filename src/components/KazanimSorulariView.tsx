@@ -1,4 +1,6 @@
 import React, { useEffect, useMemo, useState } from 'react';
+import { varsayilanKurul } from './kurul/KurulSecici';
+import KurulSecV15 from './v15/KurulSecV15';
 import '../styles/v15/liste2.css';
 import { pathFor } from '../router';
 import { copyQuestion } from '../utils/copyQuestion';
@@ -23,6 +25,7 @@ import {
   Share2,
   Info,
   Send,
+  AlertTriangle,
 } from 'lucide-react';
 import { ReportQuestionModal } from './ReportQuestionModal';
 import { QuestionAboutDialog } from './QuestionAboutDialog';
@@ -49,6 +52,7 @@ type Soru = {
   dogru: string;
   aciklama: string;
   sik_aciklamalari: Record<string, string>;
+  cikmis_ornek?: boolean;
 };
 type Cikmis = { id: string; soru: string; secenekler: Record<string, string>; cevap?: string | null };
 type Kazanim = { no: number; metin: string; sorular: Soru[]; ilgili_cikmis: Cikmis[] };
@@ -269,7 +273,7 @@ function SoruKarti({
         <span className="qk-chip" title={`Kazanım ${q.kazanim}`}>K{q.kazanim}</span>
         <span className="qk-kunye">{`#${n}`}</span>
         {konu && <span className="qk-ders" title={konu}>{konu}</span>}
-        <span className="qk-flags"><span className={`cx-flag ${ZORLUK_FLAG[q.zorluk]}`}>{q.zorluk}</span></span>
+        <span className="qk-flags">{(q as any).cikmis_ornek && <span className="cx-flag is-warn" title="Bu soru çıkmış sınav belgelerinde doğrulanamadı. Gerçekten çıkmış olabilir, ancak ders notundan türetilmiş bir örnek soru da olabilir. Hem Çıkmışlar hem Örnek sorular listesinde yer alır."><AlertTriangle aria-hidden />Çıkmış–Örnek · çıkmış olduğu doğrulanmadı</span>}<span className={`cx-flag ${ZORLUK_FLAG[q.zorluk]}`}>{q.zorluk}</span></span>
         {done && <span className="qk-flags"><span className={`cx-flag ${correct ? 'is-ok' : 'is-bad'}`}>{correct ? 'Doğru' : 'Yanlış'}</span></span>}
         <span className="qk-sp" />
         {onOpenAbout && (
@@ -797,18 +801,23 @@ export const KazanimSorulariView: React.FC<{
   const [brans, setBrans] = useState('');
   const [ara, setAra] = useState('');
   const cevaplar = useCevaplar();
+  // H140: liste aktif kurulla açılır (eskiden tüm kurullar karışık, sayaçlar yalnız k1-); içeriği olan kurullar seçilebilir
+  const kurullar = useMemo(() => [...new Set(INDEX.map((x) => Number(/^k(\d)-/.exec(x.id)?.[1] || 1)))].sort(), []);
+  const [kurul, setKurul] = useState(() => { const v = varsayilanKurul(); return kurullar.includes(v) ? v : (kurullar[0] ?? 1); });
+  const on = `k${kurul}-`;
+  const KINDEX = useMemo(() => INDEX.filter((x) => x.id.startsWith(on)), [on]);
   const branslar = useMemo(() => {
     const m = new Map<string, number>();
-    INDEX.forEach((x) => m.set(x.ders, (m.get(x.ders) || 0) + 1));
+    KINDEX.forEach((x) => m.set(x.ders, (m.get(x.ders) || 0) + 1));
     return Array.from(m.entries());
-  }, []);
+  }, [KINDEX]);
   const norm = (t: string) => t.toLocaleLowerCase('tr');
-  const liste = INDEX.filter((x) => (!brans || x.ders === brans) && (!ara || norm(`${x.konu} ${x.ders} ${x.ogretim_uyesi}`).includes(norm(ara))));
-  const toplamSoru = INDEX.reduce((a, x) => a + x.soru_sayisi, 0);
-  const toplamCozulen = Object.keys(cevaplar).filter((k) => k.startsWith('k1-')).length;
-  const dogruSayi = Object.entries(cevaplar).filter(([k, c]) => k.startsWith('k1-') && c.ok).length;
+  const liste = KINDEX.filter((x) => (!brans || x.ders === brans) && (!ara || norm(`${x.konu} ${x.ders} ${x.ogretim_uyesi}`).includes(norm(ara))));
+  const toplamSoru = KINDEX.reduce((a, x) => a + x.soru_sayisi, 0);
+  const toplamCozulen = Object.keys(cevaplar).filter((k) => k.startsWith(on)).length;
+  const dogruSayi = Object.entries(cevaplar).filter(([k, c]) => k.startsWith(on) && c.ok).length;
   const bugunBas = new Date().setHours(0, 0, 0, 0);
-  const bugunSayi = Object.entries(cevaplar).filter(([k, c]) => k.startsWith('k1-') && (c.t || 0) >= bugunBas).length;
+  const bugunSayi = Object.entries(cevaplar).filter(([k, c]) => k.startsWith(on) && (c.t || 0) >= bugunBas).length;
 
   const sec = (id: string | null) => { setSecili(id); writeSecim(id); window.scrollTo({ top: 0 }); };
 
@@ -827,6 +836,7 @@ export const KazanimSorulariView: React.FC<{
         <div className="v15-card is-a"><span className="v15-label">Bugün</span><b>{bugunSayi.toLocaleString('tr-TR')}</b><small>soru</small></div>
       </div>
       <div className="cx-dock">
+        {kurullar.length > 1 && <KurulSecV15 className="s15-kurul" kurul={kurul} onSec={(k) => { if (kurullar.includes(k)) { setKurul(k); setBrans(''); } }} />}
         <label className="cx-search">
           <Search aria-hidden />
           <span className="sr-only">Ders ara</span>
@@ -835,7 +845,7 @@ export const KazanimSorulariView: React.FC<{
         </label>
         <div className="cx-rail">
           <nav className="cx-tabs" aria-label="Branş">
-            {([['', INDEX.length], ...branslar] as [string, number][]).map(([b, c]) => (
+            {([['', KINDEX.length], ...branslar] as [string, number][]).map(([b, c]) => (
               <button key={b || 'tum'} type="button" onClick={() => setBrans(b)} aria-pressed={brans === b} className={`cx-tab ${brans === b ? 'is-on' : ''}`}>
                 {b || 'Tümü'}<small>{c}</small>
               </button>

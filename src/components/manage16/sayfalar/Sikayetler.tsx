@@ -15,7 +15,7 @@ export default function Sikayetler({ git }: SayfaProps) {
         <IstatistikKart etiket="Kapalı oda" deger={oz.veri?.kapali_oda ?? '—'} onClick={() => git('topluluk/sohbet?s.durum=kapali')} />
       </IstatistikIzgara>
       <MesajTablosu
-        kimlik="topluluk-sikayet" kaynak="/api/admin/topluluk/sikayetler" sikayetModu
+        kimlik="topluluk-sikayet" kaynak="/api/admin/topluluk/sikayetler" sikayetModu git={git}
         kanalGit={(k) => git(`topluluk/mesaj?s.kanal=${encodeURIComponent(k)}`)}
         suzgecler={[
           { anahtar: 'durum', etiket: 'Durum', secenekler: [{ deger: 'gorunur', etiket: 'Görünür' }, { deger: 'gizli', etiket: 'Gizli' }] },
