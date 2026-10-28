@@ -1,17 +1,40 @@
 import React, { useState } from 'react';
 import { SayfaBasligi, VeriTablosu, AyrintiCekmecesi, Rozet, Hata, Yukleniyor, GorunurlukBaglantisi, useAdminSorgu, zamanMetni } from '../kit';
 import { manageAdres, type SayfaProps } from '../menu';
+import SesKuyrugu from './SesKuyrugu';
 
 type Satir = { key: string; baslik: string; kurul: number | null; varyant: number; sureSn: number; saglayici: string; olusturuldu: string; dosya: Record<string, boolean>; eksik: number; kayitli: boolean; gorunurluk: string };
 const DOSYA_AD: Record<string, string> = { metin: 'Metin', cumle_zaman: 'Cümle zamanı', kelime_zaman: 'Kelime zamanı', isaret: 'PDF işareti', cizim: 'Çizim', terim: 'Terim', kisaltma: 'Kısaltma', cikmis_konum: 'Çıkmış chip', vurgu: 'Vurgu', v2: 'V2' };
 
 /** Öğrenme › Sesli ders: kayıtlar (data/sesli_anlatim), ses varyantları ve katman dosyaları; görünürlük sesli:<key>. Ses üretimi eski panelde/oturumda. */
-export default function SesliDersler({ git }: SayfaProps) {
+// H421: iki sekme — Dersler (varsayılan) ve Ses kuyruğu (?sekme=kuyruk; iş çekmecesi ogrenme/sesli/<iş>?sekme=kuyruk)
+type Sekme = 'dersler' | 'kuyruk';
+const sekmeOku = (): Sekme => (new URLSearchParams(window.location.search).get('sekme') === 'kuyruk' ? 'kuyruk' : 'dersler');
+
+export default function SesliDersler(p: SayfaProps) {
+  const { git } = p;
+  const [sekme, setSekme] = useState<Sekme>(() => (p.id ? 'kuyruk' : sekmeOku()));
+  React.useEffect(() => { setSekme(p.id ? 'kuyruk' : sekmeOku()); }, [p.id, p.altYol.join('/')]); // eslint-disable-line react-hooks/exhaustive-deps
+  React.useEffect(() => { const f = () => setSekme(sekmeOku()); window.addEventListener('popstate', f); return () => window.removeEventListener('popstate', f); }, []);
+  const sec = (s: Sekme) => { if (s === sekme) return; setSekme(s); git(s === 'kuyruk' ? 'ogrenme/sesli?sekme=kuyruk' : 'ogrenme/sesli', { degistir: true }); };
+  const baslik = (
+    <SayfaBasligi baslik="Sesli ders" aciklama={sekme === 'kuyruk' ? undefined : 'Sunucudaki sesli ders kayıtları. Eksik = metin, ses, zamanlama, işaret, çizim, terim, kısaltma ya da çıkmış chip dosyalarından biri yok.'}>
+      <div className="m16-sekmeler" role="tablist" aria-label="Sesli ders bölümü">
+        {([['dersler', 'Dersler'], ['kuyruk', 'Ses kuyruğu']] as const).map(([k, e]) => (
+          <button key={k} type="button" role="tab" aria-selected={sekme === k} className={sekme === k ? 'on' : ''} onClick={() => sec(k)}>{e}</button>
+        ))}
+      </div>
+    </SayfaBasligi>
+  );
+  if (sekme === 'kuyruk') return <>{baslik}<SesKuyrugu {...p} gomulu /></>;
+  return <>{baslik}<DerslerSekmesi git={git} /></>;
+}
+
+function DerslerSekmesi({ git }: { git: SayfaProps['git'] }) {
   const [acik, setAcik] = useState<string | null>(() => new URLSearchParams(location.search).get('ac'));
   const a = useAdminSorgu<Satir & { varyantlar: any[]; ders: any }>(acik ? `/api/admin/sesli-dersler/${encodeURIComponent(acik)}` : null);
   return (
     <>
-      <SayfaBasligi baslik="Sesli ders" aciklama="Sunucudaki sesli ders kayıtları. Eksik = metin, ses, zamanlama, işaret, çizim, terim, kısaltma ya da çıkmış chip dosyalarından biri yok." />
       <VeriTablosu<Satir>
         kimlik="ogrenme-sesli" kaynak="/api/admin/sesli-dersler" canliOlay={['site_ayar_changed']} aramaYeri="Anahtar ya da başlık…"
         satirKimligi={(x) => x.key} etkin={acik} satirTikla={(x) => setAcik(x.key)}

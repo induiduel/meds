@@ -1,19 +1,24 @@
 import React from 'react';
 import { SayfaBasligi, Hata, Yukleniyor, VeriTablosu, useAdminSorgu } from '../kit';
 import type { SayfaProps } from '../menu';
+import Dagitim from './Dagitim';
+import { bolumeKaydir } from './ortak/bolumKaydir';
 
 /** Site › Sürüm (salt okunur): guncelleme_notu.json, derlenen sürüm (dist/surum.json), dağıtım damgası, sürüm günlüğü. Uç: GET /api/admin/site/surum */
 type G = { surum: number; tarih: string; commit?: string; baslik: string; ogrenci?: { eklenen?: string[]; degisen?: string[]; duzeltilen?: string[] } };
 type Y = { not: any; derleme: any; dagitim: any; gecmis: G[]; gecmisUretildi: string | null };
 
+// H422: Sürüm notu + Dağıtım bilgisi tek sayfa (kanonik site/surum; sistem/dagitim → ?bolum=dagitim)
 export default function SiteSurum(_p: SayfaProps) {
   const { veri: v, hata, yenile } = useAdminSorgu<Y>('/api/admin/site/surum');
-  if (hata && !v) return <><SayfaBasligi baslik="Sürüm" /><Hata hata={hata} yenile={yenile} /></>;
-  if (!v) return <><SayfaBasligi baslik="Sürüm" /><Yukleniyor /></>;
+  React.useEffect(() => bolumeKaydir('dagitim', !!v), [v]);
+  if (hata && !v) return <><SayfaBasligi baslik="Sürüm ve dağıtım" /><Hata hata={hata} yenile={yenile} /></>;
+  if (!v) return <><SayfaBasligi baslik="Sürüm ve dağıtım" /><Yukleniyor /></>;
   const n = v.not || {};
   return (
     <>
-      <SayfaBasligi baslik="Sürüm" aciklama="Salt okunur. Güncelleme notu commit/dağıtımda elle güncellenir (kural 13: onem +1)." />
+      <SayfaBasligi baslik="Sürüm ve dağıtım" aciklama="Salt okunur. Üstte öğrenciye görünen sürüm notu, altta canlı dağıtım ve commit bilgisi. Güncelleme notu commit/dağıtımda elle güncellenir (kural 13: onem +1)." />
+      <h2 style={{ margin: '0 0 8px' }}>Öğrenciye görünen sürüm notu</h2>
       <div className="m16-izgara-2">
         <section className="m16-kart">
           <h2>Güncelleme notu · önem {n.onem ?? '–'}</h2>
@@ -48,6 +53,7 @@ export default function SiteSurum(_p: SayfaProps) {
             hucre: (g) => <span title={[...(g.ogrenci?.eklenen || []), ...(g.ogrenci?.duzeltilen || [])].join('\n')}>{g.baslik}</span> },
         ]}
       />
+      <section id="dagitim" style={{ marginTop: 24, scrollMarginTop: 72 }}><Dagitim gomulu /></section>
     </>
   );
 }

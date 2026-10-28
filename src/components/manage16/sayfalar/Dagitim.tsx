@@ -4,13 +4,22 @@ import type { SayfaProps } from '../menu';
 import './ortak/ts16.css';
 
 /** Sistem › Dağıtım bilgisi — canlı commit, dist/surum.json, dist/dagitim.json, guncelleme_notu.json (onem). Salt okunur; dağıtım dagit.sh ile yapılır. */
-export default function Dagitim(_p: SayfaProps) {
+// H422: Site › Sürüm ve dağıtım sayfasında bölüm olarak gömülür (gomulu: h2 başlık, güncelleme notu kartı yukarıda zaten var)
+export default function Dagitim({ gomulu }: Partial<SayfaProps> & { gomulu?: boolean }) {
   const s = useAdminSorgu<any>('/api/admin/sistem/dagitim');
   const v = s.veri;
   return (
     <>
+      {gomulu ? (
+        <div style={{ display: 'flex', alignItems: 'baseline', gap: 12, flexWrap: 'wrap', margin: '0 0 8px' }}>
+          <h2 style={{ margin: 0 }}>Canlı dağıtım ve commit</h2>
+          <span style={{ color: 'var(--color-ink-3)', flex: 1, minWidth: 200 }}>{v ? `Hedef sunucu: ${v.sunucu}. Dağıtımın tek yolu: bash meds/deploy/oracle/dagit.sh (kural 15).` : ''}</span>
+          <button type="button" className="m16-btn" onClick={() => void s.yenile()}>Yenile</button>
+        </div>
+      ) : (
       <SayfaBasligi baslik="Dağıtım bilgisi" aciklama={v ? `Hedef sunucu: ${v.sunucu}. Dağıtımın tek yolu: bash meds/deploy/oracle/dagit.sh (kural 15).` : 'Sürüm ve commit'}
         eylemler={<button type="button" className="m16-btn" onClick={() => void s.yenile()}>Yenile</button>} />
+      )}
       {s.hata && <Hata hata={s.hata} yenile={s.yenile} />}
       {!v && !s.hata && <Yukleniyor satir={3} />}
       {v && (
@@ -22,7 +31,7 @@ export default function Dagitim(_p: SayfaProps) {
             <IstatistikKart etiket="Çalışma ağacı" deger={v.git ? (v.git.commit || '').slice(0, 10) : 'git yok'} alt={v.git ? `${v.git.dal} · ${v.git.kirliDosya} değişmiş dosya` : 'Bu sunucuda depo yok'} ton={v.git?.kirliDosya ? 'uyari' : 'notr'} />
           </IstatistikIzgara>
           <div className="m16-ts-izgara">
-            {v.not && (
+            {v.not && !gomulu && (
               <section className="m16-kart">
                 <h2>Son güncelleme notu</h2>
                 <p><strong>{v.not.baslik}</strong></p>

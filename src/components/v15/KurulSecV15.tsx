@@ -9,7 +9,7 @@ import '../../styles/v15/kurulsec.css';
 
 /**
  * v15 · Kurul seçici (tasarım A04 kurul + L05 kurulListe): "Kurul N ▾" düğmesi; açılan listede her kurulun teması ve
- * durumu (Bitti · Aktif · başlangıç tarihi), altta "Takvimi aç". Durum ve temalar takvimden (kurulTakvimi); seçim
+ * durumu (Geçmiş · Aktif · başlangıç tarihi; H401), altta "Takvimi aç". Durum ve temalar takvimden (kurulTakvimi); seçim
  * sitenin kurul kaydına yazılır (kurulKaydet), sayfa kendi adresine gider (onSec).
  */
 /** "NÖROPSİKİYATRİ KURULU" → "Nöropsikiyatri" (Türkçe küçük harf; "ve" küçük, sondaki "kurulu" atılır) */
@@ -32,22 +32,23 @@ export default function KurulSecV15({ kurul, onSec, className = '' }: { kurul: n
     return () => { document.removeEventListener('mousedown', d); document.removeEventListener('keydown', k); };
   }, [acik]);
   const durum = (k: (typeof KURULLAR)[number]) => {
-    if (g > k.sinav) return { ad: 'Bitti', cls: 'is-ok' };
-    if (k.kurul === aktif) return { ad: 'Aktif', cls: 'is-a' };
+    // H401: sınavı geçmiş kurul "Geçmiş" (sınav tarihiyle) işaretli; ayrı Geçmiş kurullar sayfasının yerini alır
+    if (g > k.sinav) { const s = new Date(`${k.sinav}T12:00:00`); return { ad: 'Geçmiş', cls: 'is-ok is-gecmis', ipucu: Number.isNaN(s.getTime()) ? 'Sınav tarihi geçti' : `Sınav ${s.getDate()} ${AY[s.getMonth()]} · tarihi geçti` }; }
+    if (k.kurul === aktif) return { ad: 'Aktif', cls: 'is-a', ipucu: undefined as string | undefined };
     const d = new Date(`${k.baslangic}T12:00:00`);
-    return { ad: Number.isNaN(d.getTime()) ? 'Kapalı' : `${d.getDate()} ${AY[d.getMonth()]}`, cls: '' };
+    return { ad: Number.isNaN(d.getTime()) ? 'Kapalı' : `${d.getDate()} ${AY[d.getMonth()]}`, cls: '', ipucu: undefined as string | undefined };
   };
   return (
     <div className={`ks15 ${className}`} ref={kok}>
       <button type="button" className="ks15-dug" aria-haspopup="listbox" aria-expanded={acik} onClick={(e) => { const r = e.currentTarget.getBoundingClientRect(); setYer({ top: r.bottom, left: Math.max(16, Math.min(window.innerWidth - Math.min(300, window.innerWidth - 32) - 16, r.left)) }); setAcik((v) => !v); }}>
-        Kurul {kurul}<ChevronDown aria-hidden />
+        Kurul {kurul}{g > (KURULLAR.find((x) => x.kurul === kurul)?.sinav ?? '9999') && <small className="ks15-gecmis">geçmiş</small>}<ChevronDown aria-hidden />
       </button>
       {acik && createPortal(
         <div ref={menu} className="ks15-menu" role="listbox" aria-label="Kurul seç" style={yer}>
           {KURULLAR.filter((k) => k.kurul === kurul || !kurulGizli(k.kurul)).map((k) => {
             const d = durum(k);
             return (
-              <button key={k.kurul} type="button" role="option" aria-selected={k.kurul === kurul} className={k.kurul === kurul ? 'is-on' : ''}
+              <button key={k.kurul} type="button" role="option" aria-selected={k.kurul === kurul} className={k.kurul === kurul ? 'is-on' : ''} title={d.ipucu}
                 onClick={() => { setAcik(false); kurulKaydet(k.kurul); onSec(k.kurul); }}>
                 <span className={`ks15-nokta ${d.cls}`} aria-hidden />
                 <span className="ks15-t"><b>Kurul {k.kurul}</b><small>{temaAd(k.ad)}</small></span>

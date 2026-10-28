@@ -4,7 +4,7 @@
  * MedicalEncyclopediaView'dedir; bu bileşen yalnız görünümü kurar.
  *
  * Yapı:
- *  - Başlık: "Sözlük" · Sözlük | Hastalıklar geçişi · madde sayısı
+ *  - Başlık: "Sözlük" · madde sayısı · "Hastalıklar’a git" bağlantısı (H404)
  *  - Liste paneli: arama ("/" kısayolu) + Süzgeç (çekmece) · A–Z şeridi (Türkçe harfler; boş harf soluk) ·
  *    harf başlıklı satırlar (terim + tek satır tanım)
  *  - Ayrıntı paneli: terim başlığı · Kaydet/Paylaş · İng./Lat. ad, kısaltma, kurul/branş satırı · okuma yazısıyla tanım ·
@@ -337,11 +337,9 @@ export const GlossaryV12: React.FC<GlossaryV12Props> = (p) => {
   const header = (
     <header className="g12-head">
       <h1 className="g12-h1">Sözlük</h1>
-      <nav className="g12-seg" aria-label="Kaynak">
-        <a href={pathFor('glossary')} aria-current="page" className="is-on" onClick={linkClick(() => undefined)}>Sözlük</a>
-        <a href={pathFor('diseases')} onClick={linkClick(() => navigateTo(pathFor('diseases')))}>Hastalıklar</a>
-      </nav>
+      {/* H404: Sözlük | Hastalıklar sekme tekrarı kalktı (menüde ikisi ayrı); yerine tek küçük çapraz bağlantı */}
       <span className="g12-m g12-num" aria-live="polite">{count}</span>
+      <a className="g12-capraz" href={pathFor('diseases')} onClick={linkClick(() => navigateTo(pathFor('diseases')))}>Hastalıklar’a git →</a>
     </header>
   );
 

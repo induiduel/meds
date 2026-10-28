@@ -81,3 +81,9 @@ dört kategori kartını görür. Yönetici adresle açabilir. Geri açmak kulla
 - 2026-10-28 (Kişisel, düz adres): `/arka-plan` Arka plan işleri, `/dil-bolge` Dil ve bölge, `/ilk-adimlar` İlk adımlar, `/yardim` Yardım.
 
 - 2026-10-28 (H300): `/arka-plan`, `/arka-plan-isleri` → `/cevrimdisi#isler` (Çevrimdışı ve indirmeler sayfasının iş listesi bölümü).
+
+- 2026-10-28 (H400): `/gecmis-kurullar` (+ `/gecmis-kurul`, `/arsiv`, `/kurul-arsivi`) → `/dersler` (Ders çalış merkezi, kurul seçicili; `?kurul=N` → `/dersler/kurulN`). Ayrı sayfa menüden ve merkezden kalktı; sınavı geçmiş kurullar kurul seçicilerde (KurulSecV15, KurulSecici) "geçmiş" işaretli (H401/H402). Bileşen `GecmisKurullarView` silinmedi (route duruyor, geri dönüş kolay).
+- 2026-10-28 (KMB): kanonik `/dersler/kmb[/<beceri>[/<bölüm>]]`; eski `/kamplar/kmb/…` aynı iç adrese (`/kmb`) çevrilip `/dersler/kmb/…`'ye yazılır. Menüde yalnız Ders çalış altında.
+- 2026-10-28 (H404): Sözlük ve Hastalıklar başlığındaki "Sözlük | Hastalıklar" sekme çifti kalktı; yerine tek küçük çapraz bağlantı ("Hastalıklar’a git" / "Sözlük’e git").
+- 2026-10-28 (H405): Başvuru merkezindeki "Kurul takvimi" kartı (Sınav takvimi'nin ikinci adı, aynı `/kamplar/takvim`) kalktı; kanonik Sınava hazırlan › Sınav takvimi. Ayrı bir kurul takvimi sayfası/route'u yoktu.
+- 2026-10-28 (H406): adreste kurul biçimi kanonik `kurulN`; eski `kurul_N` (yol parçası) ve `?kurul=kurul_N|kurulN` okunur, `kurulN` / `?kurul=N`'ye çevrilir (siteHaritasi `ayir`, açılışta replaceState).

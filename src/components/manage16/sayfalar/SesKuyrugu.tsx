@@ -40,13 +40,18 @@ function Ayrinti({ id, kapat, git }: { id: string; kapat: () => void; git: Sayfa
   );
 }
 
-export default function SesKuyrugu({ id, git }: SayfaProps) {
+// H421: Sesli ders › Ses kuyruğu sekmesi olarak gömülür; iş çekmecesi ogrenme/sesli/<iş>?sekme=kuyruk adresinde.
+const TABAN = 'ogrenme/sesli';
+const sorgu = () => { const q = new URLSearchParams(window.location.search); q.set('sekme', 'kuyruk'); return `?${q.toString()}`; };
+
+export default function SesKuyrugu({ id, git, gomulu }: SayfaProps & { gomulu?: boolean }) {
+  const aciklama = 'Sesli ders üretim işleri. Yeni üretim bu panelden başlatılmaz; işçi yalnız elle komutla çalışır (kural 20).';
   return (
     <>
-      <SayfaBasligi baslik="Ses kuyruğu" aciklama="Sesli ders üretim işleri. Yeni üretim bu panelden başlatılmaz; işçi yalnız elle komutla çalışır (kural 20)." />
+      {gomulu ? <p className="m16-ac" style={{ color: 'var(--color-ink-3)', margin: '0 0 8px' }}>{aciklama}</p> : <SayfaBasligi baslik="Ses kuyruğu" aciklama={aciklama} />}
       <VeriTablosu<Satir>
         kimlik="ogrenme-ses-kuyruk" kaynak="/api/admin/sesli-kuyruk" aramaYeri="Ders anahtarı ya da iş ara…" satirKimligi={(s) => s.id} etkin={id || null}
-        satirTikla={(s) => git(`ogrenme/ses-kuyrugu/${encodeURIComponent(s.id)}${window.location.search}`)}
+        satirTikla={(s) => git(`${TABAN}/${encodeURIComponent(s.id)}${sorgu()}`)}
         canliOlay={['sesli_anlatim']}
         suzgecler={[{ anahtar: 'durum', etiket: 'Durum', secenekler: Object.keys(TON).map((k) => ({ deger: k, etiket: k })) }]}
         sutunlar={[
@@ -57,7 +62,7 @@ export default function SesKuyrugu({ id, git }: SayfaProps) {
           { anahtar: 'durum', baslik: 'Durum', sirala: true, genislik: '120px', hucre: (s) => <Rozet ton={TON[s.durum] || 'notr'}>{s.durum}</Rozet> },
         ]}
       />
-      {id && <Ayrinti id={id} git={git} kapat={() => git(`ogrenme/ses-kuyrugu${window.location.search}`)} />}
+      {id && <Ayrinti id={id} git={git} kapat={() => git(`${TABAN}${sorgu()}`)} />}
     </>
   );
 }

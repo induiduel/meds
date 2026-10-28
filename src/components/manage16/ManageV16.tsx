@@ -7,7 +7,7 @@
  */
 import React, { Suspense, useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { ArrowLeft, ChevronDown, ChevronRight, Menu, Moon, Search, Sun, Construction, ExternalLink, Pin, PinOff, X } from 'lucide-react';
-import { MENU, TUM_SAYFALAR, adresCoz, manageAdres, type SayfaProps, type SayfaTanim } from './menu';
+import { MENU, TUM_SAYFALAR, adresCoz, manageAdres, yolGuncelle, type SayfaProps, type SayfaTanim } from './menu';
 import { BildirimHost, BosDurum, Hata, OnayHost, SayfaBasligi, Yukleniyor } from './kit';
 import { useTheme } from '../../utils/theme';
 import { PANEL_ON_ORACLE_AT_BOOT, PANEL_TARGET_KEY, canSwitchPanelTarget, getPanelTarget, isLocalHost } from '../../config/deployment';
@@ -16,6 +16,17 @@ import { realtimeEventService, type RealtimeConnectionStatus } from '../../servi
 const fold = (s: string) => s.toLocaleLowerCase('tr-TR').normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/ı/g, 'i');
 
 const lazyOnbellek = new Map<string, React.LazyExoticComponent<React.ComponentType<SayfaProps>>>();
+/** H423: m16_sabit / m16_son okuması — birleştirilen eski yollar yeni yola çevrilir, tekrarlar süzülür, değişmişse geri yazılır */
+function yolListesiOku(anahtar: string): string[] {
+  try {
+    const ham: unknown = JSON.parse(localStorage.getItem(anahtar) || '[]');
+    if (!Array.isArray(ham)) return [];
+    const n = [...new Set(ham.filter((y): y is string => typeof y === 'string').map(yolGuncelle))];
+    if (JSON.stringify(n) !== JSON.stringify(ham)) localStorage.setItem(anahtar, JSON.stringify(n));
+    return n;
+  } catch { return []; }
+}
+
 function lazySayfa(s: SayfaTanim) {
   if (!s.yukle) return null;
   let c = lazyOnbellek.get(s.yol);
@@ -100,8 +111,8 @@ export const ManageV16: React.FC<{ adminEmail: string; onExit: () => void }> = (
     try { const v = localStorage.getItem('m16_kapali_grup'); return v === null ? null : new Set(JSON.parse(v)); } catch { return null; }
   });
   // H310: sabitlenen sayfalar (yol listesi), H311: son açılan sayfalar.
-  const [sabit, setSabit] = useState<string[]>(() => { try { return JSON.parse(localStorage.getItem('m16_sabit') || '[]'); } catch { return []; } });
-  const [son, setSon] = useState<string[]>(() => { try { return JSON.parse(localStorage.getItem('m16_son') || '[]'); } catch { return []; } });
+  const [sabit, setSabit] = useState<string[]>(() => yolListesiOku('m16_sabit'));
+  const [son, setSon] = useState<string[]>(() => yolListesiOku('m16_son'));
   // H313: menü içi süzgeç
   const [menuAra, setMenuAra] = useState('');
   const [canli, setCanli] = useState<RealtimeConnectionStatus>(() => realtimeEventService.getStatus());
@@ -131,7 +142,13 @@ export const ManageV16: React.FC<{ adminEmail: string; onExit: () => void }> = (
 
   // Eski adres yönlendirmesi
   useEffect(() => {
-    if (cozum.yonlendir !== undefined) git(`${cozum.yonlendir}${window.location.search.replace(/[?&]kabuk=v16/, '')}`, { degistir: true });
+    // H423: yönlendirme hedefi sorgu taşıyabilir (?sekme=kuyruk); mevcut sorguyla birleştir (hedefinki önce gelir)
+    if (cozum.yonlendir === undefined) return;
+    const [p, hq = ''] = cozum.yonlendir.split('?');
+    const q = new URLSearchParams(hq);
+    new URLSearchParams(window.location.search).forEach((v, k) => { if (k !== 'kabuk' && !q.has(k)) q.set(k, v); });
+    const qs = q.toString();
+    git(`${p}${qs ? `?${qs}` : ''}`, { degistir: true });
   }, [cozum.yonlendir, git]);
 
   useEffect(() => {

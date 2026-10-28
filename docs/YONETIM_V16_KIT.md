@@ -230,3 +230,15 @@ Yeni sayaç: `registerOzetRoutes` bağımlılıklarına işlev ekleyin (server.t
 - Gelen işlemleri satırda/çekmecede; işlem yapan uçlar `gelenOnbellekSil()` çağırır (yonetim16/sistemEk.ts).
 - `POST /api/admin/gelen/hata/goruldu {kimlikler[]}`: istemci hatası gruplarını görüldü işaretler.
 - Toplu yazımda kalıp: onay (sayı + `yazimHedefi()`), başarısız sayısını bildir, 8 sn `bildir(…, {etiket:'Geri al', yap})`.
+
+## Ek (2026-10-28, H420–H424) — birleştirilen sayfalar
+- **Birleştirme deseni:** sayfa bileşeni silinmez; `gomulu` prop'uyla (SayfaBasligi yerine h2) başka sayfanın sekmesi/bölümü olur.
+  Eski tam yol `menu.ts` → `ESKI_YOL` (önek → yeni yol + sorgu; kalan alt parçalar korunur); `adresCoz` yönlendirir,
+  `ManageV16` hedef sorguyu mevcut sorguyla birleştirir. `m16_sabit` / `m16_son` açılışta `yolGuncelle` ile çevrilir, tekrar süzülür.
+- `?bolum=<id>` → `sayfalar/ortak/bolumKaydir.ts` veri yüklenince o `<section id>`'ye kaydırır.
+
+| Eski yol | Yeni yer |
+|---|---|
+| `ogrenme/ses-kuyrugu[/<iş>]` | `ogrenme/sesli[/<iş>]?sekme=kuyruk` (Sesli ders › Ses kuyruğu sekmesi) |
+| `sistem/dagitim` | `site/surum?bolum=dagitim` (Site › Sürüm ve dağıtım; kanonik Site grubunda, çünkü sayfanın asıl içeriği öğrenciye görünen sürüm notu, dağıtım bilgisi onu destekler) |
+| `sorular/dondurma` | `site/bayraklar?bolum=dondurma` (Özellik bayrakları › Havuz dondurma bölümü; aynı uç `/api/admin/havuz-dondur`, aynı yazılacak-sözcük onayı) |

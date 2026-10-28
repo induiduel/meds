@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { SayfaBasligi, Hata, Yukleniyor, Rozet, useAdminSorgu } from '../kit';
 import type { SayfaProps } from '../menu';
 import { Anahtar, siteAyarYaz } from './ortak/siteAyarOrtak';
+import HavuzDondurma from './HavuzDondurma';
+import { bolumeKaydir } from './ortak/bolumKaydir';
 
 /**
  * Site › Özellik bayrakları: tek şema (sunucu yonetim16/siteAyar.ts BAYRAKLAR + BAYRAK_UC kapısı, istemci services/siteAyar BAYRAK_SAYFA).
@@ -13,6 +15,7 @@ type Bayrak = { ad: string; etiket: string; aciklama: string; acik: boolean; aya
 export default function SiteBayraklar({ git }: SayfaProps) {
   const { veri, hata, yenile, setVeri } = useAdminSorgu<{ ogeler: Bayrak[] }>('/api/admin/site-ayar/bayraklar', { canliOlay: ['site_ayar_changed'] });
   const [mesgul, setMesgul] = useState<string | null>(null);
+  React.useEffect(() => bolumeKaydir('dondurma', !!veri), [veri]); // H420
   if (hata && !veri) return <><SayfaBasligi baslik="Özellik bayrakları" /><Hata hata={hata} yenile={yenile} /></>;
   if (!veri) return <><SayfaBasligi baslik="Özellik bayrakları" /><Yukleniyor satir={6} /></>;
   return (
@@ -37,6 +40,8 @@ export default function SiteBayraklar({ git }: SayfaProps) {
           ))}
         </ul>
       </section>
+      {/* H420: Havuz dondurma bölümü (eski sorular/dondurma → site/bayraklar?bolum=dondurma) */}
+      <section id="dondurma" style={{ marginTop: 24, scrollMarginTop: 72 }}><HavuzDondurma gomulu /></section>
     </>
   );
 }

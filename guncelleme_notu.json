@@ -1,9 +1,13 @@
 {
  "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
- "onem": 562,
- "baslik": "Çıkmış sorularda konu adları güncellendi",
+ "onem": 563,
+ "baslik": "Daha sade gezinme",
  "maddeler": [
-  "Çıkmış sorularda konu adları kazanım başlıklarıyla aynı, hoca adları kaldırıldı"
+  "Geçmiş kurullar ayrı sayfa yerine kurul seçicide \"Geçmiş\" olarak işaretli",
+  "Sözlük ve Hastalıklar arasında tek bağlantı",
+  "KMB dersleri tek yerde",
+  "Eski adresler yeni yerlerine yönleniyor",
+  "Yönetim: ses kuyruğu, sürüm/dağıtım ve havuz dondurma ilgili sayfaların içinde"
  ],
  "eklenen": [],
  "degisen": [],

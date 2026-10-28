@@ -62,7 +62,7 @@ export const MENU: GrupTanim[] = [
       { yol: 'sorular/ham', etiket: 'Ham defter', ikon: Archive, oncelik: 'P1', v14Slug: 'ham-havuz', yukle: () => import('./sayfalar/HamDefter') },
       { yol: 'sorular/serbest', etiket: 'Serbest girdiler', ikon: TextCursorInput, oncelik: 'P2', v14Slug: 'serbest-girdiler', yukle: () => import('./sayfalar/SerbestGirdiler') },
       { yol: 'sorular/taslak', etiket: 'Taslaklar', ikon: FilePen, oncelik: 'P2', v14Slug: 'taslaklar', yukle: () => import('./sayfalar/Taslaklar') },
-      { yol: 'sorular/dondurma', etiket: 'Havuz dondurma', ikon: Snowflake, oncelik: 'P2', yukle: () => import('./sayfalar/HavuzDondurma') },
+      // H420: Havuz dondurma ayrı girdi değil → Site › Özellik bayrakları içinde bölüm (eski yol ESKI_YOL ile yönlenir)
       { yol: 'sorular/olasi', etiket: 'Olası sorular', ikon: Sparkles, oncelik: 'P2', yukle: () => import('./sayfalar/OlasiSorular') },
       { yol: 'sorular/sikayet', etiket: 'Soru şikâyetleri', ikon: AlertTriangle, oncelik: 'P0', anahtar: 'hata bildirimi rapor', yukle: () => import('./sayfalar/SoruSikayetleri') },
       { yol: 'sorular/faz14', etiket: 'Çıkmış inceleme (Faz 14)' /* H259: iç proje adı yerine ne olduğu */, ikon: FlaskConical, oncelik: 'P1', anahtar: 'inceleme llm', yukle: () => import('./sayfalar/Faz14Kuyrugu') },
@@ -71,8 +71,8 @@ export const MENU: GrupTanim[] = [
   {
     id: 'ogrenme', etiket: 'Öğrenme', sayfalar: [
       { yol: 'ogrenme/desteler', etiket: 'Öğren desteleri', ikon: GraduationCap, oncelik: 'P1', v14Slug: 'veri-katalogu', yukle: () => import('./sayfalar/Desteler') },
-      { yol: 'ogrenme/sesli', etiket: 'Sesli ders', ikon: Mic, oncelik: 'P1', v14Slug: 'sesli-anlatim', yukle: () => import('./sayfalar/SesliDersler') },
-      { yol: 'ogrenme/ses-kuyrugu', etiket: 'Ses kuyruğu', ikon: ListChecks, oncelik: 'P2', anahtar: 'üretim ema xtts iş', yukle: () => import('./sayfalar/SesKuyrugu') },
+      { yol: 'ogrenme/sesli', etiket: 'Sesli ders', ikon: Mic, oncelik: 'P1', v14Slug: 'sesli-anlatim', anahtar: 'ses kuyruğu üretim ema xtts iş' /* H421 */, yukle: () => import('./sayfalar/SesliDersler') },
+      // H421: Ses kuyruğu ayrı girdi değil → Sesli ders › Ses kuyruğu sekmesi (ogrenme/sesli?sekme=kuyruk)
       { yol: 'ogrenme/onem', etiket: 'Önem ve çözücü', ikon: Star, oncelik: 'P1', yukle: () => import('./sayfalar/OnemCozucu') },
       { yol: 'ogrenme/spot', etiket: 'Sınav spotları', ikon: Target, oncelik: 'P2', yukle: () => import('./sayfalar/Spotlar') },
       { yol: 'ogrenme/kazanim', etiket: 'Kazanımlar', ikon: Award, oncelik: 'P2', v14Slug: 'veri-katalogu', yukle: () => import('./sayfalar/Kazanimlar') },
@@ -97,10 +97,10 @@ export const MENU: GrupTanim[] = [
       { yol: 'site/gorunurluk', etiket: 'Görünürlük', ikon: Eye, oncelik: 'P0', anahtar: 'gizli kapalı sayfa', yukle: () => import('./sayfalar/SiteGorunurluk') },
       { yol: 'site/menu', etiket: 'Menü', ikon: MenuIcon, oncelik: 'P1', yukle: () => import('./sayfalar/SiteMenu') },
       { yol: 'site/bakim', etiket: 'Bakım', ikon: Construction, oncelik: 'P0', yukle: () => import('./sayfalar/SiteBakim') },
-      { yol: 'site/bayraklar', etiket: 'Özellik bayrakları', ikon: Flag, oncelik: 'P1', yukle: () => import('./sayfalar/SiteBayraklar') },
+      { yol: 'site/bayraklar', etiket: 'Özellik bayrakları', ikon: Flag, oncelik: 'P1', anahtar: 'havuz dondurma dondur sınav dönemi' /* H420 */, yukle: () => import('./sayfalar/SiteBayraklar') },
       { yol: 'site/duyurular', etiket: 'Duyurular', ikon: Megaphone, oncelik: 'P1', anahtar: 'bildirim push', yukle: () => import('./sayfalar/SiteDuyurular') },
       { yol: 'site/kanallar', etiket: 'Bildirim kanalları' /* H261: SMTP/push; topluluk kanallarıyla karışmasın */, ikon: Radio, oncelik: 'P2', anahtar: 'smtp push e-posta', yukle: () => import('./sayfalar/SiteKanallar') },
-      { yol: 'site/surum', etiket: 'Sürüm notu' /* H261 */, ikon: Tag, oncelik: 'P1', anahtar: 'commit dağıtım', yukle: () => import('./sayfalar/SiteSurum') },
+      { yol: 'site/surum', etiket: 'Sürüm ve dağıtım' /* H422: Sürüm notu + Dağıtım bilgisi tek sayfa */, ikon: Tag, oncelik: 'P1', anahtar: 'sürüm notu güncelleme notu commit dağıtım dagit onem derleme', yukle: () => import('./sayfalar/SiteSurum') },
     ],
   },
   {
@@ -142,7 +142,7 @@ export const MENU: GrupTanim[] = [
       { yol: 'sistem/yedek', etiket: 'Yedek', ikon: HardDriveDownload, oncelik: 'P1', v14Slug: 'veritabani', anahtar: 'içe aktar dışa aktar reset tehlikeli', yukle: () => import('./sayfalar/Yedek') },
       { yol: 'sistem/denetim', etiket: 'Denetim kaydı', ikon: ScrollText, oncelik: 'P0', yukle: () => import('./sayfalar/Denetim') },
       { yol: 'sistem/hata', etiket: 'İstemci hataları', ikon: AlertTriangle, oncelik: 'P0', anahtar: 'hata tarayıcı', yukle: () => import('./sayfalar/IstemciHatalari') },
-      { yol: 'sistem/dagitim', etiket: 'Dağıtım bilgisi', ikon: Tag, oncelik: 'P1', anahtar: 'commit sürüm onem', yukle: () => import('./sayfalar/Dagitim') },
+      // H422: Dağıtım bilgisi → Site › Sürüm ve dağıtım (site/surum?bolum=dagitim)
       { yol: 'sistem/drive', etiket: 'Drive', ikon: CloudCog, oncelik: 'P2', v14Slug: 'otomasyon', anahtar: 'tarama envanter pdf', yukle: () => import('./sayfalar/Drive') },
       { yol: 'sistem/rag', etiket: 'RAG indeksi', ikon: Network, oncelik: 'P2', anahtar: 'vektör bge embed denetle', yukle: () => import('./sayfalar/Rag') },
       { yol: 'sistem/fazlar', etiket: 'Fazlar', ikon: FlaskConical, oncelik: 'P2', v14Slug: 'fazlar', anahtar: 'faz kazanım slayt varlık', yukle: () => import('./sayfalar/Fazlar') },
@@ -187,6 +187,30 @@ export const ESKI_ADRES: Record<string, string> = {
   veritabani: 'sistem/yedek',
 };
 
+/**
+ * H423: Birleştirilen v16 yolları (tam yol öneki → yeni yol, sorgu dahil). Kalan alt parçalar yeni yolun yoluna eklenir
+ * (ogrenme/ses-kuyrugu/<iş> → ogrenme/sesli/<iş>?sekme=kuyruk). m16_sabit / m16_son da bununla çevrilir.
+ */
+export const ESKI_YOL: Record<string, string> = {
+  'ogrenme/ses-kuyrugu': 'ogrenme/sesli?sekme=kuyruk',
+  'sistem/dagitim': 'site/surum?bolum=dagitim',
+  'sorular/dondurma': 'site/bayraklar?bolum=dondurma',
+};
+
+/** H423: eski v16 yolunu yeni yola çevirir ({ yol, sorgu }); eşleşme yoksa null */
+export function eskiYolCevir(parcalar: string[]): { yol: string; sorgu: string } | null {
+  for (let n = parcalar.length; n >= 1; n--) {
+    const hedef = ESKI_YOL[parcalar.slice(0, n).join('/')];
+    if (hedef === undefined) continue;
+    const [yol, sorgu = ''] = hedef.split('?');
+    return { yol: [yol, ...parcalar.slice(n).map(encodeURIComponent)].filter(Boolean).join('/'), sorgu };
+  }
+  return null;
+}
+
+/** H423: sabit/son listesindeki yol → bugünkü sayfa yolu (sorgusuz) */
+export const yolGuncelle = (y: string) => eskiYolCevir(y.split('/').filter(Boolean))?.yol.split('/').slice(0, 2).join('/') ?? y;
+
 export type Cozum = { sayfa: SayfaTanim & { grup: GrupTanim }; altYol: string[]; yonlendir?: string };
 
 /** /manage sonrası yolu çözer. Eski adresse yonlendir doludur (history.replaceState ile yeni adrese geçin). */
@@ -194,6 +218,9 @@ export function adresCoz(pathname: string): Cozum {
   const parcalar = pathname.replace(/^\/(manage|yonetim)\/?/, '').split('/').filter(Boolean).map((p) => decodeURIComponent(p));
   // Eski adres: ilk parça bir grup adı ya da yeni sayfa yolu değilse (ör. 'sistem' artık grup) — tek adım, özyineleme yok
   const grupMu = (x: string) => MENU.some((g) => g.id === x) || TUM_SAYFALAR.some((s) => s.yol === x);
+  // H423: birleştirilen v16 sayfaları (yonlendir sorgu taşıyabilir: 'ogrenme/sesli?sekme=kuyruk')
+  const birlesik = eskiYolCevir(parcalar);
+  if (birlesik) return { ...adresCoz(`/manage/${birlesik.yol}`), yonlendir: birlesik.sorgu ? `${birlesik.yol}?${birlesik.sorgu}` : birlesik.yol };
   if (parcalar.length && Object.prototype.hasOwnProperty.call(ESKI_ADRES, parcalar[0]) && !grupMu(parcalar[0])) {
     const hedef = [ESKI_ADRES[parcalar[0]], ...parcalar.slice(1)].filter(Boolean).join('/');
     return { ...adresCoz(`/manage/${hedef}`), yonlendir: hedef };

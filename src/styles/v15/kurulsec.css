@@ -18,3 +18,7 @@
 .ks15-menu hr { margin: 4px 6px; border: 0; border-top: 1px solid var(--color-line-soft, var(--color-line)); }
 .ks15-takvim { color: var(--color-accent) !important; font-weight: 600; }
 .ks15-takvim svg { width: 16px; height: 16px; }
+/* H401: sınavı geçmiş kurul işareti (listede "Geçmiş", düğmede küçük "geçmiş") */
+.ks15-d.is-gecmis { color: var(--color-ink-3); font-weight: 500; }
+.ks15-nokta.is-gecmis { opacity: .5; }
+.ks15-gecmis { margin-left: 6px; font: 500 11px/1 var(--font-sans); color: var(--color-ink-3); }

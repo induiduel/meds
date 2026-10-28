@@ -3,7 +3,8 @@ import { SayfaBasligi, Rozet, Yukleniyor, Hata, adminIstek, useAdminSorgu, onayI
 import type { SayfaProps } from '../menu';
 
 /** Sorular › Havuz dondurma — data/havuz_dondur.json. Görüntü + kullanıcı onaylı aç/kapa (yazılacak sözcük). Silme yok. */
-export default function HavuzDondurma(_p: SayfaProps) {
+// H420: Site › Özellik bayrakları içinde bölüm olarak gömülür (gomulu: h2 başlık); uçlar ve onaylar aynı
+export default function HavuzDondurma({ gomulu }: Partial<SayfaProps> & { gomulu?: boolean }) {
   const { veri, hata, yukleniyor, yenile, setVeri } = useAdminSorgu<any>('/api/admin/havuz-dondur', { canliOlay: ['havuz_dondur_changed'] });
   const [neden, setNeden] = React.useState('');
   if (hata) return <Hata hata={hata} yenile={yenile} />;
@@ -24,7 +25,9 @@ export default function HavuzDondurma(_p: SayfaProps) {
   };
   return (
     <>
-      <SayfaBasligi baslik="Havuz dondurma" aciklama="Sınav dönemlerinde öğrenci soruları yalnız toplanır; otomatik işlem kullanıcı onayına kadar kapalı kalır." />
+      {gomulu ? (
+        <><h2 style={{ margin: '0 0 4px' }}>Havuz dondurma</h2><p style={{ color: 'var(--color-ink-3)', margin: '0 0 8px' }}>Sınav dönemlerinde öğrenci soruları yalnız toplanır; otomatik işlem kullanıcı onayına kadar kapalı kalır.</p></>
+      ) : <SayfaBasligi baslik="Havuz dondurma" aciklama="Sınav dönemlerinde öğrenci soruları yalnız toplanır; otomatik işlem kullanıcı onayına kadar kapalı kalır." />}
       <div className="m16-kart">
         <h2>Durum: {acik ? <Rozet ton="uyari">Donduruldu</Rozet> : <Rozet ton="iyi">Açık</Rozet>}</h2>
         <dl className="m16-satirlar">

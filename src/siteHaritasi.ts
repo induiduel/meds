@@ -24,6 +24,8 @@
  *   /kamplar[/kurulN]/en-onemliler[/<branş>] · /kamplar[/kurulN]/spotlar · /kamplar/sinav-plani · /kamplar/takvim
  *   Check-up'u olmayan kurulun check-up adresi (/kamplar/kurul2/checkup/patoloji) o kurulun Check Up sekmesine düşer.
  *   /dersler/kmb[/<beceri>[/<bölüm>]]        KMB görsel sesli asistan (iç /kmb?beceri=&b=; eski /kamplar/kmb/… yönlenir)
+ *   /gecmis-kurullar                         (kaldırıldı, H400) → /dersler[/kurulN]; geçmiş kurullar kurul seçicide işaretli
+ *   Eski `kurul_N` biçimi (yol ya da ?kurul=kurul_N) okunur ve `kurulN` / ?kurul=N'ye çevrilir (H406)
  *   /kaynaklar                               Başvuru merkezi (sözlük, hastalıklar … kendi düz adreslerinde kalır)
  *
  * Ekranlar ve eski bağlantılar hâlâ "iç adres" biçimini konuşur (/canliders/<key>, /soru-cozucu?brans=…,
@@ -93,7 +95,12 @@ function ayir(adres: string): Ayrik | null {
     const base = typeof location !== 'undefined' ? location.href : 'https://x.invalid/';
     const u = new URL(adres, base);
     if (typeof location !== 'undefined' && u.origin !== location.origin) return null;
-    return { yol: (u.pathname.replace(/^\/meds(?=\/|$)/, '').replace(/\/+$/, '') || '/'), sp: u.searchParams, hash: u.hash };
+    // H406: eski `kurul_N` biçimi (yol parçası ya da ?kurul=kurul_N / kurulN) kanonik `kurulN` / ?kurul=N'ye çevrilir;
+    // açılışta adresKatmaniniKur farkı görüp replaceState ile yeni biçimi yazar
+    const yol0 = u.pathname.replace(/^\/meds(?=\/|$)/, '').replace(/\/+$/, '').replace(/\/kurul[_-]([1-6])(?=\/|$)/g, '/kurul$1');
+    const kq = u.searchParams.get('kurul');
+    if (kq && /^kurul[_-]?[1-6]$/i.test(kq)) u.searchParams.set('kurul', kq.replace(/\D/g, ''));
+    return { yol: yol0 || '/', sp: u.searchParams, hash: u.hash };
   } catch {
     return null;
   }
@@ -141,6 +148,9 @@ export function disYol(adres: string): string {
   const s = parcala(yol);
   const ilk = s[0] || '';
 
+  // H400: Geçmiş kurullar ayrı sayfası kalktı; sınavı geçmiş kurullar kurul seçicide "geçmiş" işaretli. Eski adresler
+  // Ders çalış merkezine (kurul seçicili) döner; ?kurul=N varsa o kurulun merkezine
+  if (GECMIS_KURUL_ADLARI.has(ilk) && s.length === 1) { const k = sorguKurul(sp); sp.delete('kurul'); return birlestir(`/dersler${k ? `/kurul${k}` : ''}`, sp, hash); }
   // H300: Arka plan işleri Çevrimdışı ve indirmeler sayfasına katıldı; eski /arka-plan(-isleri) iş listesi bölümüne döner
   if ((ilk === 'arka-plan' || ilk === 'arka-plan-isleri') && s.length === 1) return birlestir('/cevrimdisi', sp, hash || '#isler');
 
@@ -285,6 +295,9 @@ export function disYol(adres: string): string {
   }
 }
 
+/** H400: kaldırılan Geçmiş kurullar sayfasının adres adları (router.ts takma adlarıyla aynı) */
+const GECMIS_KURUL_ADLARI = new Set(['gecmis-kurullar', 'gecmis_kurullar', 'gecmis-kurul', 'arsiv', 'kurul-arsivi']);
+
 /** /sorular/<x> altında araç olan adlar (gerisi eski havuz soru kimliğidir) */
 const SORU_ARACLARI = new Set(['soru-cozucu', 'cikmis', 'havuz', 'deneme', 'ornek', 'olasi', 'soru-haritasi']);
 
@@ -303,6 +316,8 @@ export function icYol(adres: string): string {
   // H164: /profil ve /profile aynı ekranı (Profil ve ayarlar) iki ayrı adla açıyordu; adres çubuğu tek ada (/ayarlar) döner,
   // eski bağlantılar kırılmaz
   if ((ilk === 'profil' || ilk === 'profile') && s.length === 1) return birlestir('/ayarlar', sp, hash);
+  // H400: eski /gecmis-kurullar (ve takma adları) → Ders çalış merkezi
+  if (GECMIS_KURUL_ADLARI.has(ilk) && s.length === 1) return birlestir('/ders-merkezi', sp, hash);
   // H301: eski /arka-plan(-isleri) → birleşik /cevrimdisi sayfasının iş listesi bölümü (#isler)
   if ((ilk === 'arka-plan' || ilk === 'arka-plan-isleri') && s.length === 1) return birlestir('/cevrimdisi', sp, hash || '#isler');
 

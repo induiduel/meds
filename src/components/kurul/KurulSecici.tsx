@@ -8,7 +8,7 @@
  */
 import React, { useEffect, useRef, useState } from 'react';
 import { linkClick, navigateTo, type AppRoute } from '../../router';
-import { KURULLAR, aktifKurul } from '../../services/kurulTakvimi';
+import { KURULLAR, aktifKurul, bugun } from '../../services/kurulTakvimi';
 import { kurulGizli, useSiteAyar } from '../../services/siteAyar';
 import { kurulParam } from './KurulSuzgec';
 import '../../styles/kurul-suzgec.css';
@@ -107,17 +107,21 @@ export const KurulSecici: React.FC<KurulSeciciProps> = ({ secili, yol, tumuYol, 
       {KURUL_NOLAR.filter((k) => k === vurgulu || !kurulGizli(k)).map((k) => {
         const url = yol(k);
         const bos = icerik?.(k) === false;
-        const ad = KURULLAR.find((x) => x.kurul === k)?.ad;
+        const kb = KURULLAR.find((x) => x.kurul === k);
+        const ad = kb?.ad;
+        // H402: sınavı geçmiş kurul "geçmiş" işaretli (eski /gecmis-kurullar sayfasının yerine)
+        const gecmis = !!kb && bugun() > kb.sinav;
         return (
           <a
             key={k} href={url} onClick={git(url, k)}
-            className={`ks-k${k === vurgulu ? ' is-on' : ''}${bos ? ' is-bos' : ''}`}
+            className={`ks-k${k === vurgulu ? ' is-on' : ''}${bos ? ' is-bos' : ''}${gecmis ? ' is-gecmis' : ''}`}
             aria-current={k === vurgulu ? 'true' : undefined}
             aria-label={bos ? `Kurul ${k}, henüz içerik yok` : undefined}
-            title={`${ad ? `Kurul ${k} · ${ad}` : `Kurul ${k}`}${bos ? ' · henüz içerik yok' : ''}`}
+            title={`${ad ? `Kurul ${k} · ${ad}` : `Kurul ${k}`}${gecmis ? ` · geçmiş (sınav ${kb!.sinav})` : ''}${bos ? ' · henüz içerik yok' : ''}`}
           >
             Kurul {k}
             {k === aktif && <small className="ks-simdi">şimdi</small>}
+            {gecmis && k !== aktif && <small className="ks-gecmis">geçmiş</small>}
             {/* H381: içeriksiz kurul yalnız soluk renkle ayırt edilmiyordu; seçilebilir kalır ama ne olacağı yazılı */}
             {bos && k !== vurgulu && <small className="ks-yok">henüz yok</small>}
           </a>

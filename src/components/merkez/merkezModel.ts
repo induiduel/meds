@@ -27,7 +27,7 @@ const MERKEZ_HAM: Record<KategoriId, MerkezArac[]> = {
     { id: 'kmb_asistan', ne: 'Klinik mesleki beceriyi (KMB) sesli videolarla aşama aşama öğrenip pratik sınava hazırlanmak istiyorsan' },
     // H147: ders seçme yardımcıları Ders çalış'ta (Başvuru'dayken alt sekmede "Menü" yanıyordu); Güncelleme günlüğü Kişisel'de
     { id: 'oncelikli_dersler', ne: 'Az ezberli, mantıkla çözülen ve kolay puan getiren sesli derslerden başlamak istiyorsan' },
-    { id: 'gecmis_kurullar', ne: 'Sınavı biten kurulların içeriğine dönmek istiyorsan' },
+    // H400: Geçmiş kurullar ayrı sayfası kalktı (/gecmis-kurullar → /dersler); sınavı biten kurul kurul seçicide "geçmiş" işaretli
   ],
   sorular: [
     { id: 'soru_cozucu', ne: 'Konu konu soru çözüp her şıkkın nedenini dinlemek istiyorsan', oner: true },

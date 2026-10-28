@@ -4,7 +4,7 @@
  * kademeli çizim, ekleme/düzenleme formu ve adres çubuğu eşlemesi DiseasesView'dedir; bu bileşen görünümü kurar.
  *
  * Yapı:
- *  - Başlık: "Hastalıklar" · Sözlük | Hastalıklar geçişi · profil sayısı · Profil ekle
+ *  - Başlık: "Hastalıklar" · profil sayısı · "Sözlük’e git" bağlantısı (H404) · Profil ekle
  *  - Liste paneli: arama ("/") + Süzgeç (çekmece: tür, uzmanlık, göster) · Kurul/Ders/Konu hızlı hapları ·
  *    A–Z şeridi (aramasız alfabetik sırada) · satırlar (ad + tek satır tanım ya da eşleşme nedeni)
  *  - Ayrıntı: başlık + tür/uzmanlık satırı + ICD/Latince rozetleri + eylemler; bölümler TANIM LİSTESİ (dt/dd) olarak
@@ -215,11 +215,9 @@ export const DiseasesV12: React.FC<DiseasesV12Props> = (p) => {
   const header = (
     <header className="g12-head">
       <h1 className="g12-h1">Hastalıklar</h1>
-      <nav className="g12-seg" aria-label="Kaynak">
-        <a href={pathFor('glossary')} onClick={linkClick(() => navigateTo(pathFor('glossary')))}>Sözlük</a>
-        <a href={pathFor('diseases')} aria-current="page" className="is-on" onClick={linkClick(() => undefined)}>Hastalıklar</a>
-      </nav>
+      {/* H404: Sözlük | Hastalıklar sekme tekrarı kalktı; yerine tek küçük çapraz bağlantı */}
       <span className="g12-m g12-num" aria-live="polite">{count}</span>
+      <a className="g12-capraz" href={pathFor('glossary')} onClick={linkClick(() => navigateTo(pathFor('glossary')))}>Sözlük’e git →</a>
       <span className="g12-grow" />
       <div className="g12-seg an15-mode" role="group" aria-label="Görünüm">
         <button type="button" className={mode === 'liste' ? 'is-on' : ''} aria-pressed={mode === 'liste'} onClick={() => setMode('liste')}>Liste</button>

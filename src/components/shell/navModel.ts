@@ -152,7 +152,7 @@ export const NAV_ITEMS = I;
  */
 export const NAV_TREE_HAM: NavGroup[] = [
   { label: null, items: [I.today] },
-  { label: 'Ders çalış', items: [I.canli_ders, I.kmb_asistan, I.learn, I.summaries, I.flashcards, I.ders_programi, I.oncelikli_dersler, I.gecmis_kurullar] },
+  { label: 'Ders çalış', items: [I.canli_ders, I.kmb_asistan, I.learn, I.summaries, I.flashcards, I.ders_programi, I.oncelikli_dersler /* H400: gecmis_kurullar çıktı; geçmiş kurullar kurul seçicide */] },
   { label: 'Soru çöz', items: [I.soru_cozucu, I.past_exams, I.practice, I.questions, I.ornek_sorular, I.olasi_sorular, I.yanlislarim, I.oyunlar, I.soru_haritasi] },
   { label: 'Sınava hazırlan', items: [I.sinav_takvimi, I.sinav_plani, I.son_prova, I.cikmis_cozucu, I.kamp, I.en_onemliler, I.spots] },
   { label: 'Check Up', items: [I.genetik_checkup, I.patoloji_checkup] },

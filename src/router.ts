@@ -16,7 +16,7 @@
  *   /soru-cozucu → sesli soru çözücü (branş başlangıç ekranı; eski /spotlar?gorunum=cozucu buraya yönlenir)
  *   /cevrimdisi → çevrimdışı merkezi (ders paketlerini indir, güncelle, sil)
  *   /olasi-sorular → sınav sonrası öğrenci hatıralarından kurulan olası sorular (?kurul=N)
- *   /gecmis-kurullar → sınavı geçmiş kurulların içeriğine bağlantılar
+ *   /gecmis-kurullar → (H400, kaldırıldı) Ders çalış merkezine yönlenir; geçmiş kurullar kurul seçicide işaretli
  *   /kamp        → kurul kampları (?kurul=N), /kamp/<kurul>/<brans> tek kamp: sesli anlatım, kalıp kartları, deneme
  *   /alternatif-cozucu → patoloji alternatif sesli çözücü (kısa anlatım, otomatik geçiş)
  *   /en-onemliler → sınav için en önemliler (100 puan; eski /spotlar?gorunum=onem buraya yönlenir)

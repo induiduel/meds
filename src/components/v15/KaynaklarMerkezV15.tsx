@@ -1,5 +1,5 @@
 import React from 'react';
-import { CalendarDays, ChevronRight, FileDown, MessagesSquare, NotebookPen, Search } from 'lucide-react';
+import { ChevronRight, FileDown, MessagesSquare, NotebookPen, Search } from 'lucide-react';
 import { linkClick, navigateTo, pathFor, type AppRoute } from '../../router';
 import { NAV_ITEMS, openSearch } from '../shell/navModel';
 import { MERKEZ_ARACLARI } from '../merkez/merkezModel';
@@ -24,9 +24,9 @@ export default function KaynaklarMerkezV15() {
     { url: '/topluluk?gorunum=sohbetler', ad: 'Sohbet', alt: 'Sınıf grupları ve birebir sohbetler', ic: MessagesSquare, ton: 'is-a' },
     { url: '/notlarim?gorunum=paylasilan', ad: 'Paylaşılan notlar', alt: 'Seninle paylaşılan ders notları', ic: NotebookPen, ton: 'is-w' },
     ...(nPdf > 0 ? [{ url: pathFor('pdf_olustur'), ad: 'Oluşturduğum PDF’ler', alt: `${nPdf} belge · bu cihazda`, ic: FileDown, ton: '' }] : []),
-    { url: pathFor('sinav_takvimi'), ad: 'Kurul takvimi', alt: 'Kurul sınavları, final ve bütünleme tarihleri', ic: CalendarDays, ton: 'is-c' },
+    // H405: "Kurul takvimi" kartı Sınav takvimi'nin (/kamplar/takvim) ikinci adıydı; kanonik giriş Sınava hazırlan › Sınav takvimi
   ];
-  useV15Baslik({ baslik: 'Başvuru', alt: 'Sözlük, hastalıklar, resmî veriler ve geçmiş kurullar' });
+  useV15Baslik({ baslik: 'Başvuru', alt: 'Sözlük, hastalıklar, resmî veriler ve kazanımlar' }); // H400: geçmiş kurullar kurul seçicide
   const araclar = MERKEZ_ARACLARI.kaynaklar.filter((a) => NAV_ITEMS[a.id]);
   return (
     <div className="d15 k15">
