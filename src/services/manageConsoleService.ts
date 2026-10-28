@@ -8,6 +8,7 @@ import { SupabaseDbService } from './supabaseDb';
 import { FirestoreDbService } from './firestoreDb';
 import { multiDbManager } from './multiDbManager';
 import { ApiService, safeJsonFetch } from './api';
+import { YonetimApi } from './api/yonetim';
 import { getLocalAdminSession, auth } from './auth';
 import type { QuestionItem, Committee } from '../types';
 
@@ -349,7 +350,7 @@ export const publishDraft = async (
   draft: QuestionItem
 ): Promise<{ ok: boolean; message: string }> => {
   try {
-    await ApiService.adminUpdateQuestion(adminEmail, draft.id, { status: 'completed' });
+    await YonetimApi.adminUpdateQuestion(adminEmail, draft.id, { status: 'completed' });
     return { ok: true, message: `Taslak yayınlandı (S.${draft.questionNumber || '?'}).` };
   } catch (e: unknown) {
     return { ok: false, message: `Yayınlanamadı: ${e instanceof Error ? e.message : 'bilinmeyen hata'}` };
@@ -381,7 +382,7 @@ export const deleteDraftEverywhere = async (
   const failures: string[] = [];
 
   try {
-    await ApiService.adminDeleteQuestion(adminEmail, draft.id);
+    await YonetimApi.adminDeleteQuestion(adminEmail, draft.id);
     channels.local = true;
   } catch (e: unknown) {
     failures.push(`yerel: ${e instanceof Error ? e.message : 'hata'}`);
@@ -519,7 +520,7 @@ export interface ManageUser {
 /** Kayıtlı kullanıcıları birleştir: sunucu JSON + Supabase (e-posta/uid'ye göre tekille). */
 export const loadManageUsers = async (adminEmail: string): Promise<ManageUser[]> => {
   const [serverUsers, supaUsers] = await Promise.all([
-    ApiService.adminGetUsers(adminEmail).catch(() => []),
+    YonetimApi.adminGetUsers(adminEmail).catch(() => []),
     SupabaseDbService.getRegisteredUsers().catch(() => []),
   ]);
   const map = new Map<string, ManageUser>();
@@ -615,7 +616,7 @@ export const deleteManageUser = async (
   uid: string
 ): Promise<{ ok: boolean; message: string }> => {
   try {
-    await ApiService.adminDeleteUser(adminEmail, uid);
+    await YonetimApi.adminDeleteUser(adminEmail, uid);
     return { ok: true, message: 'Kullanıcı silindi.' };
   } catch (e: unknown) {
     return { ok: false, message: e instanceof Error ? e.message : 'Kullanıcı silinemedi.' };

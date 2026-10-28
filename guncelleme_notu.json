@@ -1,15 +1,11 @@
 {
  "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
- "onem": 533,
- "baslik": "Sesli ders altyapısı: parça parça ses",
+ "onem": 534,
+ "baslik": "Daha hafif açılış",
  "maddeler": [
-  "Yeni eklenen sesli derslerde ses paragraf paragraf saklanıyor; düzeltmede yalnız değişen kısım yeniden seslendiriliyor",
-  "Ses tek parça olarak kodlanıyor: ek yerlerinde kesinti ya da tık yok",
-  "Metin, PDF işaretleri ve çizimler sesle eş zamanlı kalıyor"
+  "Yönetim ekranlarının kodu ve çıkmış soru stilleri artık yalnız gerektiğinde iniyor"
  ],
- "eklenen": [
-  "Klipli sesli ders altyapısı (yalnız yeni dersler)"
- ],
+ "eklenen": [],
  "degisen": [],
  "duzeltilen": [],
  "silinen": []

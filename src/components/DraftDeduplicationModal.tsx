@@ -6,6 +6,7 @@ import { CapsuleLoader, SuccessCheck } from './ui/Animations';
 import { sharedWordColors, Colored, WordLegend } from './draftHighlight';
 import { QuestionItem, Committee, ClusterAnalysisSummary, DraftCluster } from '../types';
 import { ApiService } from '../services/api';
+import { YonetimApi } from '../services/api/yonetim';
 import { AppUser, ADMIN_EMAIL, getLocalAdminSession } from '../services/auth';
 import { AiQuestionOptimizerModal } from './AiQuestionOptimizerModal';
 
@@ -55,7 +56,7 @@ export const DraftDeduplicationModal: React.FC<DraftDeduplicationModalProps> = (
     setLoading(true);
     setFeedback(null);
     try {
-      const summary = await ApiService.getCommitteeDraftClusters(committeeId);
+      const summary = await YonetimApi.getCommitteeDraftClusters(committeeId);
       setAnalysis(summary);
     } catch (e: any) {
       setFeedback({ type: 'err', message: e.message || 'Analiz sırasında hata oluştu.' });
@@ -107,7 +108,7 @@ export const DraftDeduplicationModal: React.FC<DraftDeduplicationModalProps> = (
     setIsBatchMerging(true);
     setFeedback(null);
     try {
-      const res = await ApiService.autoMergeHighConfidenceClusters(
+      const res = await YonetimApi.autoMergeHighConfidenceClusters(
         currentUser.email,
         committeeId,
         currentUser.displayName || 'Akıllı Konsolidasyon'
@@ -228,7 +229,7 @@ export const DraftDeduplicationModal: React.FC<DraftDeduplicationModalProps> = (
     }
     setUnmergingQuestionId(questionId);
     try {
-      const res = await ApiService.unmergeDraftCluster(
+      const res = await YonetimApi.unmergeDraftCluster(
         currentUser.email,
         questionId,
         currentUser.displayName || 'Yönetici'

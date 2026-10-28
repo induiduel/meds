@@ -1,4 +1,5 @@
 import React from 'react';
+import '../../styles/ayrik-cx.css';
 
 /**
  * Tüm sayfaların ortak başlığı — Çıkmış sorular dili: büyük başlık + yanında canlı mono sayaç,

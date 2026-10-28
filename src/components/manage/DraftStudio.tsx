@@ -34,6 +34,7 @@ import {
 } from 'lucide-react';
 import type { QuestionItem, ReconstructedQuestion } from '../../types';
 import { ApiService, StudioAiModels, StudioAiResultLite } from '../../services/api';
+import { YonetimApi } from '../../services/api/yonetim';
 import {
   StudioState,
   StudioFragment,
@@ -430,7 +431,7 @@ export const DraftStudio: React.FC<Props> = ({ adminEmail, committeeId, committe
     setBusy(c.id);
     try {
       if (others.length) await ApiService.mergeDraftCluster(adminEmail, anchor, others, 'Taslak stüdyosu');
-      await ApiService.adminUpdateQuestion(adminEmail, anchor, { ...candidateToQuestionPatch(c, discipline, groupPath(c.groupId)), ...extra });
+      await YonetimApi.adminUpdateQuestion(adminEmail, anchor, { ...candidateToQuestionPatch(c, discipline, groupPath(c.groupId)), ...extra });
       updateCand(c.id, { status: 'done', convertedQuestionId: anchor });
       if (!quiet) {
         notify(others.length ? `${draftIds.length} taslak tek soruda birleşti ve kaydedildi.` : 'Soru kaydedildi.');
@@ -507,7 +508,7 @@ export const DraftStudio: React.FC<Props> = ({ adminEmail, committeeId, committe
     setAiResults({});
     setAiPick([]);
     setAiPrimary(null);
-    const m = aiModels || (await ApiService.getStudioAiModels(adminEmail));
+    const m = aiModels || (await YonetimApi.getStudioAiModels(adminEmail));
     if (m) {
       setAiModels(m);
       setAiTargets((prev) => (prev.length ? prev : ['cloud', ...m.local.filter((x) => x.available).map((x) => x.target)]));
@@ -541,7 +542,7 @@ export const DraftStudio: React.FC<Props> = ({ adminEmail, committeeId, committe
     setAiPrimary(null);
     // Hepsi aynı anda istenir; sunucu yerel modelleri sıraya koyar, sonuçlar geldikçe görünür
     targets.forEach((t) =>
-      ApiService.studioAiGenerate(adminEmail, t, input).then((r) => {
+      YonetimApi.studioAiGenerate(adminEmail, t, input).then((r) => {
         setAiResults((prev) => ({ ...prev, [t]: r }));
         if (r.ok) {
           setAiPick((p) => (t === 'cloud' && !p.includes(t) ? [t, ...p] : p));
@@ -612,7 +613,7 @@ export const DraftStudio: React.FC<Props> = ({ adminEmail, committeeId, committe
           createdAt: new Date().toISOString(),
           updatedAt: new Date().toISOString(),
         };
-        await ApiService.adminCreateQuestion(adminEmail, q);
+        await YonetimApi.adminCreateQuestion(adminEmail, q);
         saved++;
       }
       notify(`${saved} soru kaydedildi (ana: ${(aiResults[primary] as StudioAiResultLite).label}). Hepsi “inceleniyor” durumunda.`);
@@ -697,7 +698,7 @@ export const DraftStudio: React.FC<Props> = ({ adminEmail, committeeId, committe
                       <div key={t} className="ms-pop-in rounded-2xl bg-bad-soft p-4 text-sm flex flex-col gap-1">
                         <b className="text-bad-text">{r.label} · başarısız</b>
                         <span className="text-ink-2">{r.error}</span>
-                        <button type="button" onClick={() => { setAiResults((p) => ({ ...p, [t]: 'loading' })); ApiService.studioAiGenerate(adminEmail, t, aiInputOf(c)).then((x) => setAiResults((p) => ({ ...p, [t]: x }))); }} className="self-start h-8 px-3 rounded-full bg-white text-sm font-semibold cursor-pointer mt-1">Tekrar dene</button>
+                        <button type="button" onClick={() => { setAiResults((p) => ({ ...p, [t]: 'loading' })); YonetimApi.studioAiGenerate(adminEmail, t, aiInputOf(c)).then((x) => setAiResults((p) => ({ ...p, [t]: x }))); }} className="self-start h-8 px-3 rounded-full bg-white text-sm font-semibold cursor-pointer mt-1">Tekrar dene</button>
                       </div>
                     );
                   const q = r.question!;

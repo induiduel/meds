@@ -17,11 +17,11 @@ import {
   FolderSync,
 } from 'lucide-react';
 import {
-  ApiService,
   DriveSyncSettings,
   DriveCheckResult,
   AdminScriptJob
 } from '../services/api';
+import { YonetimApi } from '../services/api/yonetim';
 import { Switch, logTone } from './manage/consoleUi';
 
 interface AdminDriveSyncSettingsProps {
@@ -88,7 +88,7 @@ export const AdminDriveSyncSettings: React.FC<AdminDriveSyncSettingsProps> = ({
 
   const loadSettings = async () => {
     try {
-      const res = await ApiService.getDriveSyncSettings(adminEmail);
+      const res = await YonetimApi.getDriveSyncSettings(adminEmail);
       if (res.success && res.settings) {
         setSettings(res.settings);
       }
@@ -97,7 +97,7 @@ export const AdminDriveSyncSettings: React.FC<AdminDriveSyncSettingsProps> = ({
 
   const loadLatestCheckResult = async () => {
     try {
-      const res = await ApiService.getDriveCheckResult(adminEmail);
+      const res = await YonetimApi.getDriveCheckResult(adminEmail);
       if (res.success && res.result) {
         setCheckResult(res.result);
       }
@@ -109,7 +109,7 @@ export const AdminDriveSyncSettings: React.FC<AdminDriveSyncSettingsProps> = ({
     setIsSavingSettings(true);
     setSettingsSavedMessage(null);
     try {
-      const res = await ApiService.saveDriveSyncSettings(settings, adminEmail);
+      const res = await YonetimApi.saveDriveSyncSettings(settings, adminEmail);
       if (res.success) {
         setSettingsSavedMessage('✓ Ayarlar başarıyla kaydedildi.');
         setTimeout(() => setSettingsSavedMessage(null), 4000);
@@ -128,7 +128,7 @@ export const AdminDriveSyncSettings: React.FC<AdminDriveSyncSettingsProps> = ({
     setIsChecking(true);
     setCheckFeedback('Google Drive klasörleri taranıyor ve yerel arşivle karşılaştırılıyor...');
     try {
-      const res = await ApiService.checkDriveUpdates({
+      const res = await YonetimApi.checkDriveUpdates({
         scope: settings.preferredScope,
         folderId: settings.preferredScope === 'custom' ? settings.customFolderId : undefined,
         adminEmail,
@@ -156,7 +156,7 @@ export const AdminDriveSyncSettings: React.FC<AdminDriveSyncSettingsProps> = ({
     setJobLogs(['[Başlatılıyor] Google Drive manuel senkronizasyon motoru devrede...']);
 
     try {
-      const res = await ApiService.triggerManualDriveSync({
+      const res = await YonetimApi.triggerManualDriveSync({
         scope: settings.preferredScope,
         folderId: settings.preferredScope === 'custom' ? settings.customFolderId : undefined,
         force,
@@ -183,7 +183,7 @@ export const AdminDriveSyncSettings: React.FC<AdminDriveSyncSettingsProps> = ({
 
     pollingRef.current = setInterval(async () => {
       try {
-        const res = await ApiService.getScriptJobStatus(jobId);
+        const res = await YonetimApi.getScriptJobStatus(jobId);
         if (res.success && res.job) {
           setActiveJob(res.job);
           if (res.job.logs && res.job.logs.length > 0) {
@@ -211,7 +211,7 @@ export const AdminDriveSyncSettings: React.FC<AdminDriveSyncSettingsProps> = ({
   const handleStopJob = async () => {
     if (!activeJobId) return;
     try {
-      await ApiService.stopScriptJob(activeJobId, adminEmail);
+      await YonetimApi.stopScriptJob(activeJobId, adminEmail);
       if (pollingRef.current) clearInterval(pollingRef.current);
       setIsSyncing(false);
       setSyncFeedback('İşlem durduruldu.');

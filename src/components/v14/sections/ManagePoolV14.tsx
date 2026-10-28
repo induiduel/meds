@@ -1,7 +1,7 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import { SlidersHorizontal, Download, Wrench } from 'lucide-react';
 import type { Committee, QuestionItem } from '../../../types';
-import { ApiService } from '../../../services/api';
+import { YonetimApi } from '../../../services/api/yonetim';
 import { Drawer } from '../../manage/consoleUi';
 import { AdminPanelModal } from '../../AdminPanelModal';
 import { AdminEditQuestionModal } from '../../AdminEditQuestionModal';
@@ -118,7 +118,7 @@ export const ManagePoolV14: React.FC<{
     setHidden((h) => new Set([...h, ...list.map((x) => x.id)]));
     let failed: string[] = [];
     await runBulk('Silme', list, async (x) => {
-      try { await ApiService.adminDeleteQuestion(adminEmail, x.id); } catch (e) { failed = [...failed, x.id]; throw e; }
+      try { await YonetimApi.adminDeleteQuestion(adminEmail, x.id); } catch (e) { failed = [...failed, x.id]; throw e; }
     });
     if (failed.length) setHidden((h) => { const n = new Set(h); failed.forEach((id) => n.delete(id)); return n; });
     sel.clear();
@@ -126,9 +126,9 @@ export const ManagePoolV14: React.FC<{
   const applyBulkForm = async () => {
     const v = bulkValue.trim();
     if (!bulkForm || !v) return;
-    if (bulkForm === 'tag') await runBulk('Etiketleme', picked, (x) => ApiService.adminUpdateQuestion(adminEmail, x.id, { tags: Array.from(new Set([...(x.tags || []), v])) }));
-    if (bulkForm === 'move') await runBulk('Konuya taşıma', picked, (x) => ApiService.adminUpdateQuestion(adminEmail, x.id, { topic: v }));
-    if (bulkForm === 'status') await runBulk('Durum değiştirme', picked, (x) => ApiService.adminUpdateQuestion(adminEmail, x.id, { status: v as Status }));
+    if (bulkForm === 'tag') await runBulk('Etiketleme', picked, (x) => YonetimApi.adminUpdateQuestion(adminEmail, x.id, { tags: Array.from(new Set([...(x.tags || []), v])) }));
+    if (bulkForm === 'move') await runBulk('Konuya taşıma', picked, (x) => YonetimApi.adminUpdateQuestion(adminEmail, x.id, { topic: v }));
+    if (bulkForm === 'status') await runBulk('Durum değiştirme', picked, (x) => YonetimApi.adminUpdateQuestion(adminEmail, x.id, { status: v as Status }));
     setBulkForm(null); setBulkValue('');
   };
   const exportRows = (list: QuestionItem[], kind: 'json' | 'csv') => {
@@ -139,7 +139,7 @@ export const ManagePoolV14: React.FC<{
   };
 
   const bulkActions: BulkAction[] = [
-    { label: 'Onayla', kind: 'main', run: () => runBulk('Onaylama', picked, (x) => ApiService.adminUpdateQuestion(adminEmail, x.id, { status: 'completed' })) },
+    { label: 'Onayla', kind: 'main', run: () => runBulk('Onaylama', picked, (x) => YonetimApi.adminUpdateQuestion(adminEmail, x.id, { status: 'completed' })) },
     { label: 'Durum değiştir', run: () => { setBulkForm('status'); setBulkValue('gathering'); } },
     { label: 'Etiketle', run: () => { setBulkForm('tag'); setBulkValue(''); } },
     { label: 'Konuya taşı', run: () => { setBulkForm('move'); setBulkValue(''); } },
@@ -162,7 +162,7 @@ export const ManagePoolV14: React.FC<{
   };
   const approveAndNext = async (x: QuestionItem) => {
     const nx = nextOf(x);
-    await runBulk('Onaylama', [x], (r) => ApiService.adminUpdateQuestion(adminEmail, r.id, { status: 'completed' }));
+    await runBulk('Onaylama', [x], (r) => YonetimApi.adminUpdateQuestion(adminEmail, r.id, { status: 'completed' }));
     setOpenId(nx ? nx.id : null);
   };
 
@@ -374,7 +374,7 @@ export const ManagePoolV14: React.FC<{
           adminEmail={adminEmail}
           onSaveQuestion={async (updated) => {
             try {
-              await ApiService.adminUpdateQuestion(adminEmail, editing.id, updated);
+              await YonetimApi.adminUpdateQuestion(adminEmail, editing.id, updated);
               setMsg(`Soru #${editing.questionNumber} güncellendi.`);
               await onRefreshData();
             } catch (e) {

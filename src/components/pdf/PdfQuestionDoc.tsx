@@ -16,6 +16,7 @@ import { committeeShort } from './pdfSources';
 import { Cover, Masthead, type CoverInfo } from './PdfParts';
 import { makeAnchorer, type ArrangedItem, type GroupBy, type GroupOrder, type SortBy, type SortDir } from './pdfOrder';
 import '../../styles/ogren-ders.css';
+import '../../styles/ayrik-cx.css';
 
 export type BookletMode = 'student' | 'solution' | 'key';
 export type OptionNotes = 'off' | 'inline' | 'analysis';

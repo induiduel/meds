@@ -31,6 +31,7 @@ import { ApiService, safeJsonFetch } from '../services/api';
 import { contentReady, isContentChanged, onContentChanged } from '../services/contentLive';
 import { useAppearance } from '../utils/appearance';
 import '../styles/v12/secondary.css';
+import '../styles/ayrik-cx.css';
 
 /**
  * Kurul 1 kazanım temelli örnek sorular (/ornek-sorular, varsayılan sekme).

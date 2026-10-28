@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { ChevronLeft, ChevronRight, Combine, RefreshCw, Send, ShieldCheck, Sparkles, TriangleAlert } from 'lucide-react';
 import { ApiService } from '../../services/api';
+import { YonetimApi } from '../../services/api/yonetim';
 import { toast } from '../ui/Toast';
 import { Sheet } from '../ui/Sheet';
 import { confirmDialog } from '../ui/ConfirmDialog';
@@ -124,7 +125,7 @@ export const QuestionClusterAutomationModal: React.FC<QuestionClusterAutomationM
   const handleRunPipeline = async () => {
     setRunningPipeline(true);
     try {
-      const res = await ApiService.runPoolQuestionClusterPipeline();
+      const res = await YonetimApi.runPoolQuestionClusterPipeline();
       toast.success('Otomasyon başlatıldı', res.message);
       window.setTimeout(fetchClusters, 3000);
     } catch (e: any) {
@@ -140,7 +141,7 @@ export const QuestionClusterAutomationModal: React.FC<QuestionClusterAutomationM
     setSubmittingId(clusterId);
     try {
       const studentName = currentUser?.displayName || currentUser?.email || 'Tıp Öğrencisi';
-      const res = await ApiService.contributeToPoolCluster(clusterId, studentName, text, currentUser?.uid);
+      const res = await YonetimApi.contributeToPoolCluster(clusterId, studentName, text, currentUser?.uid);
       toast.success('Katkın eklendi', 'Öneri taslağına eklemen kaydedildi.');
       setDraft((prev) => ({ ...prev, [clusterId]: '' }));
       setClusters((prev) =>
@@ -166,7 +167,7 @@ export const QuestionClusterAutomationModal: React.FC<QuestionClusterAutomationM
     if (!ok) return;
     setSplittingKey(key);
     try {
-      const all: QuestionClusterItem[] = await ApiService.splitPoolClusterMember(clusterId, key);
+      const all: QuestionClusterItem[] = await YonetimApi.splitPoolClusterMember(clusterId, key);
       const list = committeeId ? all.filter((c) => c.committeeId === committeeId) : all;
       setClusters(list);
       // Küme ikiye bölünüp tekile düştüyse ayrıntı kapanır

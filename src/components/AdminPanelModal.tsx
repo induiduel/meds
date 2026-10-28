@@ -47,6 +47,7 @@ import { AdminDriveSyncSettings } from './AdminDriveSyncSettings';
 import { AdminMobileNotificationCard } from './AdminMobileNotificationCard';
 import { StatusPill, questionStemText } from './quickAddOrtak';
 import { ApiService, safeJsonFetch } from '../services/api';
+import { YonetimApi } from '../services/api/yonetim';
 import { FirestoreDbService } from '../services/firestoreDb';
 import { SupabaseDbService } from '../services/supabaseDb';
 import { multiDbManager, DatabaseMode, DatabaseStatus } from '../services/multiDbManager';
@@ -420,7 +421,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
   const handleSaveQuestion = async (updated: Partial<QuestionItem>) => {
     if (!editingQuestion) return;
     try {
-      await ApiService.adminUpdateQuestion(adminEmail, editingQuestion.id, updated);
+      await YonetimApi.adminUpdateQuestion(adminEmail, editingQuestion.id, updated);
       setActionMessage(`Soru #${editingQuestion.questionNumber} başarıyla güncellendi.`);
       await onRefreshData();
     } catch (e: any) {
@@ -439,7 +440,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
         // Anında listeden kaldır; hata olursa geri getir.
         setHiddenQuestionIds((prev) => new Set([...prev, question.id]));
         try {
-          await ApiService.adminDeleteQuestion(adminEmail, question.id);
+          await YonetimApi.adminDeleteQuestion(adminEmail, question.id);
           setActionMessage(`Soru #${question.questionNumber} silindi (yerel + Supabase + sunucu).`);
           await onRefreshData();
         } catch (e: any) {
@@ -460,7 +461,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
   // Export JSON Backup
   const handleExportJson = async () => {
     try {
-      const data = await ApiService.adminExportDb();
+      const data = await YonetimApi.adminExportDb();
       const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
       const url = URL.createObjectURL(blob);
       const a = document.createElement('a');
@@ -489,7 +490,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
           onConfirm: async () => {
             setIsProcessing(true);
             try {
-              await ApiService.adminImportDb(adminEmail, json);
+              await YonetimApi.adminImportDb(adminEmail, json);
               setActionMessage('Veritabanı başarıyla içe aktarıldı.');
               await onRefreshData();
             } finally {
@@ -514,7 +515,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
       onConfirm: async () => {
         setIsProcessing(true);
         try {
-          await ApiService.adminResetDb(adminEmail);
+          await YonetimApi.adminResetDb(adminEmail);
           setActionMessage('Veritabanı sıfırlandı.');
           await onRefreshData();
         } finally {
@@ -550,7 +551,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
     setIsSyncingFullLocal(true);
     setFullLocalSyncFeedback('Yerel Drive indirme ve OCR çıkarma motoru başlatılıyor...');
     try {
-      const data = await ApiService.runFullLocalSync(adminEmail);
+      const data = await YonetimApi.runFullLocalSync(adminEmail);
       if (data.success) {
         setFullLocalSyncFeedback(`✓ ${data.message} - PDF'ler taranıp veritabanına aktarılıyor.`);
         await onRefreshData();
@@ -568,7 +569,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
   const loadUsersData = async () => {
     setIsLoadingUsers(true);
     try {
-      const serverUsers = await ApiService.adminGetUsers(adminEmail).catch(() => []);
+      const serverUsers = await YonetimApi.adminGetUsers(adminEmail).catch(() => []);
       const firestoreUsers = await multiDbManager.getRegisteredUsers().catch(() => []);
 
       const map = new Map<string, any>();
@@ -644,7 +645,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
   const loadSmtpConfig = async () => {
     setIsLoadingSmtp(true);
     try {
-      const cfg = await ApiService.getSmtpConfig();
+      const cfg = await YonetimApi.getSmtpConfig();
       setSmtpConfig(cfg);
       setSmtpUser(cfg.user || 'nofrostlife@gmail.com');
       setSmtpFrom(cfg.from || `MeDSor Tıp Fakültesi <${cfg.user || 'nofrostlife@gmail.com'}>`);
@@ -660,7 +661,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
     setIsSavingSmtp(true);
     setSmtpTestResult(null);
     try {
-      const res = await ApiService.saveSmtpConfig({
+      const res = await YonetimApi.saveSmtpConfig({
         user: smtpUser.trim(),
         pass: smtpPass.trim() ? smtpPass.trim() : undefined,
         from: smtpFrom.trim(),
@@ -685,7 +686,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
     setIsTestingSmtp(true);
     setSmtpTestResult(null);
     try {
-      const res = await ApiService.testSmtp(testEmailTarget.trim() || smtpUser.trim());
+      const res = await YonetimApi.testSmtp(testEmailTarget.trim() || smtpUser.trim());
       if (res.success) {
         setSmtpTestResult({
           success: true,
@@ -713,14 +714,14 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
     if (!newEmail.trim()) return;
     setIsProcessing(true);
     try {
-      const created = await ApiService.adminCreateUser(adminEmail, {
+      const created = await YonetimApi.adminCreateUser(adminEmail, {
         email: newEmail.trim(),
         displayName: newName.trim() || undefined,
         studentNumber: newStudentNumber.trim() || undefined,
         role: newRole,
       });
 
-      const welcomeRes = await ApiService.sendWelcomeEmail(created.email, created.displayName, created.studentNumber);
+      const welcomeRes = await YonetimApi.sendWelcomeEmail(created.email, created.displayName, created.studentNumber);
 
       if (welcomeRes.success) {
         setUserSyncMessage(`✓ Kullanıcı ${created.email} eklendi ve hoş geldiniz e-postası başarıyla iletildi.`);
@@ -752,7 +753,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
       onConfirm: async () => {
         setIsProcessing(true);
         try {
-          await ApiService.adminDeleteUser(adminEmail, u.uid);
+          await YonetimApi.adminDeleteUser(adminEmail, u.uid);
           setUserSyncMessage(`✓ ${u.email} kullanıcısı veritabanından silindi.`);
           await loadUsersData();
         } finally {
@@ -766,7 +767,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
   const handleSendWelcomeEmail = async (u: any) => {
     setSendingWelcomeForEmail(u.email);
     try {
-      const res = await ApiService.sendWelcomeEmail(u.email, u.displayName, u.studentNumber);
+      const res = await YonetimApi.sendWelcomeEmail(u.email, u.displayName, u.studentNumber);
       if (res.success) {
         setUserSyncMessage(`✓ Hoş geldiniz e-postası ${u.email} adresine iletildi.`);
         await loadUsersData();
@@ -866,7 +867,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
   const loadWindowsServiceStatus = async () => {
     setIsLoadingWindowsService(true);
     try {
-      const res = await ApiService.getWindowsServiceStatus();
+      const res = await YonetimApi.getWindowsServiceStatus();
       setWindowsServiceStatus(res);
     } catch (err) {
       console.warn('Windows service status error:', err);
@@ -879,7 +880,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
     setIsInstallingWindowsService(true);
     setWindowsServiceFeedback('Masaüstü kısayolu oluşturuluyor, Windows başlangıcına ekleniyor...');
     try {
-      const res = await ApiService.installWindowsService();
+      const res = await YonetimApi.installWindowsService();
       setWindowsServiceFeedback(`✓ ${res.message}`);
       await loadWindowsServiceStatus();
       await checkWorkerStatus();
@@ -893,7 +894,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
   const handleStopWindowsService = async () => {
     setIsInstallingWindowsService(true);
     try {
-      const res = await ApiService.stopWindowsService();
+      const res = await YonetimApi.stopWindowsService();
       setWindowsServiceFeedback(res.message);
       await loadWindowsServiceStatus();
       await checkWorkerStatus();
@@ -907,7 +908,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
   const handleSendWindowsTestNotification = async () => {
     setIsSendingWindowsNotify(true);
     try {
-      const res = await ApiService.sendWindowsTestNotification(
+      const res = await YonetimApi.sendWindowsTestNotification(
         'MeDSor Test Bildirimi ',
         'Yönetici panelinden Windows masaüstü bildirimi başarıyla iletildi! Sisteminiz hazır.'
       );

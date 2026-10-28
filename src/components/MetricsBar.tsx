@@ -1,6 +1,7 @@
 import React from 'react';
 import { Search, Check, CircleDashed, UserRound, X, CircleDot } from 'lucide-react';
 import { Segmented } from './ui/kit';
+import '../styles/ayrik-cx.css';
 
 interface MetricsBarProps {
   totalTarget: number;

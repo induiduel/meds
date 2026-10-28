@@ -14,11 +14,11 @@ import {
   ArrowRight,
 } from 'lucide-react';
 import {
-  ApiService,
   AdminScriptItem,
   AdminPipelineItem,
   AdminScriptJob
 } from '../services/api';
+import { YonetimApi } from '../services/api/yonetim';
 import { BUNDLED_SCRIPTS, BUNDLED_PIPELINES } from '../data/bundledScripts';
 import { toast } from './ui/Toast';
 import { Panel, EmptyState, Switch, Drawer, logTone } from './manage/consoleUi';
@@ -98,7 +98,7 @@ export const AdminScriptsTab: React.FC<AdminScriptsTabProps> = ({
 
     const fetchStatus = async () => {
       try {
-        const res = await ApiService.getScriptJobStatus(terminalJobId);
+        const res = await YonetimApi.getScriptJobStatus(terminalJobId);
         if (res.success && res.job) {
           setTerminalJob(res.job);
           if (res.job.logs) {
@@ -127,7 +127,7 @@ export const AdminScriptsTab: React.FC<AdminScriptsTabProps> = ({
   const loadScriptsData = async (silent: boolean = false) => {
     if (!silent) setIsLoading(true);
     try {
-      const res = await ApiService.getScriptsList();
+      const res = await YonetimApi.getScriptsList();
       if (res.success) {
         setScripts(res.scripts);
         setPipelines(res.pipelines);
@@ -164,7 +164,7 @@ export const AdminScriptsTab: React.FC<AdminScriptsTabProps> = ({
     setRunningJobName(scriptName);
 
     try {
-      const res = await ApiService.runScript(scriptName, args, adminEmail);
+      const res = await YonetimApi.runScript(scriptName, args, adminEmail);
       if (res.success) {
         setFeedback({ text: res.message || `${scriptName} başarıyla başlatıldı.`, type: 'success' });
         if (res.job?.id) {
@@ -187,7 +187,7 @@ export const AdminScriptsTab: React.FC<AdminScriptsTabProps> = ({
   const handleRunPipeline = async (pipelineId: string) => {
     setFeedback({ text: `Pipeline (${pipelineId}) başlatılıyor...`, type: 'info' });
     try {
-      const res = await ApiService.runScriptPipeline(pipelineId, adminEmail);
+      const res = await YonetimApi.runScriptPipeline(pipelineId, adminEmail);
       if (res.success) {
         setFeedback({ text: res.message || 'Pipeline başlatıldı.', type: 'success' });
         if (res.job?.id) {
@@ -207,7 +207,7 @@ export const AdminScriptsTab: React.FC<AdminScriptsTabProps> = ({
 
   const handleStopJob = async (jobId: string) => {
     try {
-      const res = await ApiService.stopScriptJob(jobId, adminEmail);
+      const res = await YonetimApi.stopScriptJob(jobId, adminEmail);
       if (res.success) {
         setFeedback({ text: 'İşlem sonlandırıldı.', type: 'info' });
         await loadScriptsData(true);
@@ -230,7 +230,7 @@ export const AdminScriptsTab: React.FC<AdminScriptsTabProps> = ({
       setSeq({ i: i + 1, n: names.length, name });
       setRunningJobName(name);
       try {
-        const res = await ApiService.runScript(name, customArgs[name] || '', adminEmail);
+        const res = await YonetimApi.runScript(name, customArgs[name] || '', adminEmail);
         if (!res.success || !res.job?.id) {
           bad++;
           setFeedback({ text: `${name} başlatılamadı: ${res.message}`, type: 'error' });
@@ -243,7 +243,7 @@ export const AdminScriptsTab: React.FC<AdminScriptsTabProps> = ({
         let status = res.job.status;
         while (status === 'running') {
           await new Promise((r) => setTimeout(r, 1500));
-          const st = await ApiService.getScriptJobStatus(res.job.id);
+          const st = await YonetimApi.getScriptJobStatus(res.job.id);
           if (st.success && st.job) status = st.job.status;
         }
         if (status === 'completed') ok++;

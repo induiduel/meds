@@ -12,7 +12,7 @@ import {
   Lock,
 } from 'lucide-react';
 import { QuestionItem, ReconstructedQuestion } from '../types';
-import { ApiService } from '../services/api';
+import { YonetimApi } from '../services/api/yonetim';
 import { ADMIN_EMAIL } from '../services/auth';
 
 interface AdminCustomRedactModalProps {
@@ -108,7 +108,7 @@ export const AdminCustomRedactModal: React.FC<AdminCustomRedactModalProps> = ({
       const groqApiKey = localStorage.getItem('medsoru_groq_api_key') || undefined;
       const isGroq = selectedModel.includes('llama') || selectedModel.includes('deepseek');
 
-      const res = await ApiService.adminCustomRedactQuestion({
+      const res = await YonetimApi.adminCustomRedactQuestion({
         question,
         customPrompt: customPrompt.trim(),
         groundingNote: groundingText,
@@ -167,7 +167,7 @@ export const AdminCustomRedactModal: React.FC<AdminCustomRedactModalProps> = ({
       };
 
       // Save approved question directly across all databases (Local Server + Supabase + Firebase Spark)
-      await ApiService.saveApprovedPastQuestion(updatedQuestion);
+      await YonetimApi.saveApprovedPastQuestion(updatedQuestion);
 
       onSaved(updatedQuestion);
       onClose();

@@ -5,6 +5,7 @@ import { disciplineClass, disciplineLabel } from '../../utils/discipline';
 import { RichTextArea } from '../ui/RichTextArea';
 import { TagInput } from '../ui/TagInput';
 import '../../styles/v15/notlar.css';
+import '../../styles/ayrik-cx.css';
 
 interface NotesViewProps {
   disciplines: string[];

@@ -5,6 +5,7 @@ import { clientCache } from '../../services/clientCache';
 import { CacheItem, CacheKind, deleteCacheItems, fmtBytes, listCacheItems, storageEstimate } from '../../services/deviceStorage';
 import { confirmDialog } from '../ui/ConfirmDialog';
 import { toast } from '../ui/Toast';
+import '../../styles/ayrik-of.css';
 
 const nf = (n: number) => n.toLocaleString('tr-TR');
 const sum = (xs: CacheItem[]) => xs.reduce((a, b) => a + b.bytes, 0);

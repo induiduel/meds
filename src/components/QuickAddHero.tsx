@@ -44,6 +44,7 @@ import '../styles/v12/quickadd.css';
 import { useAppearance } from '../utils/appearance';
 import { sinavPenceresi } from '../services/kurulPencere';
 import { getScoreTier, HIGHLIGHT_MIN_SCORE, currentAcademicYear, academicYears, committeeShortLabel, questionStemText, StatusPill, COMMITTEE_EXAM_DATES, isCommitteeLocked } from './quickAddOrtak';
+import '../styles/ayrik-qa.css';
 export { getScoreTier, HIGHLIGHT_MIN_SCORE, currentAcademicYear, academicYears, committeeShortLabel, questionStemText, StatusPill, COMMITTEE_EXAM_DATES, isCommitteeLocked } from './quickAddOrtak';
 
 const AiQuestionOptimizerModal = React.lazy(() =>

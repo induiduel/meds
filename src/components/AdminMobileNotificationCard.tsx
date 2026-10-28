@@ -15,7 +15,7 @@ import {
   Power,
   BellOff,
 } from 'lucide-react';
-import { ApiService } from '../services/api';
+import { YonetimApi } from '../services/api/yonetim';
 import { FirestoreDbService } from '../services/firestoreDb';
 import { getSupabaseClient } from '../services/supabaseDb';
 import { realtimeEventService } from '../services/realtimeEvents';
@@ -85,13 +85,13 @@ export const AdminMobileNotificationCard: React.FC<AdminMobileNotificationCardPr
           // Eğer tarayıcı bildirim izni verilmişse ama Web Push aboneliği henüz yoksa otomatik oluştur
           if (!activeSub && Notification.permission === 'granted') {
             try {
-              const publicKey = await ApiService.getAdminVapidPublicKey(ADMIN_EMAIL);
+              const publicKey = await YonetimApi.getAdminVapidPublicKey(ADMIN_EMAIL);
               const convertedKey = urlBase64ToUint8Array(publicKey);
               activeSub = await reg.pushManager.subscribe({
                 userVisibleOnly: true,
                 applicationServerKey: convertedKey.buffer as ArrayBuffer,
               });
-              await ApiService.subscribeAdminPush(activeSub.toJSON(), ADMIN_EMAIL);
+              await YonetimApi.subscribeAdminPush(activeSub.toJSON(), ADMIN_EMAIL);
             } catch (autoErr) {
               console.warn('[AdminNotifications] Otomatik abonelik kaydı uyarısı:', autoErr);
             }
@@ -122,7 +122,7 @@ export const AdminMobileNotificationCard: React.FC<AdminMobileNotificationCardPr
 
       // 3. Sunucu varsa sunucu durumunu çek
       try {
-        const status = await ApiService.getAdminPushStatus(ADMIN_EMAIL);
+        const status = await YonetimApi.getAdminPushStatus(ADMIN_EMAIL);
         if (status && status.success) {
           if (status.deviceCount !== undefined) setDeviceCount(status.deviceCount);
           setEmailEnabled(Boolean(status.emailEnabled));
@@ -196,14 +196,14 @@ export const AdminMobileNotificationCard: React.FC<AdminMobileNotificationCardPr
       // 3. VAPID public key al ve abone ol
       let vapidSuccess = false;
       try {
-        const publicKey = await ApiService.getAdminVapidPublicKey(ADMIN_EMAIL);
+        const publicKey = await YonetimApi.getAdminVapidPublicKey(ADMIN_EMAIL);
         if (publicKey && reg && 'PushManager' in window) {
           const convertedKey = urlBase64ToUint8Array(publicKey);
           const subscription = await reg.pushManager.subscribe({
             userVisibleOnly: true,
             applicationServerKey: convertedKey.buffer as ArrayBuffer,
           });
-          await ApiService.subscribeAdminPush(subscription.toJSON(), ADMIN_EMAIL);
+          await YonetimApi.subscribeAdminPush(subscription.toJSON(), ADMIN_EMAIL);
           vapidSuccess = true;
         }
       } catch (err: any) {
@@ -240,7 +240,7 @@ export const AdminMobileNotificationCard: React.FC<AdminMobileNotificationCardPr
         if (reg) {
           const sub = await reg.pushManager.getSubscription();
           if (sub) {
-            try { await ApiService.unsubscribeAdminPush(sub.endpoint, ADMIN_EMAIL); } catch (_) {}
+            try { await YonetimApi.unsubscribeAdminPush(sub.endpoint, ADMIN_EMAIL); } catch (_) {}
             await sub.unsubscribe();
           }
         }
@@ -284,7 +284,7 @@ export const AdminMobileNotificationCard: React.FC<AdminMobileNotificationCardPr
 
     // Sunucu / Bulut Web Push Fırlat
     try {
-      const res = await ApiService.sendAdminPushTest(ADMIN_EMAIL);
+      const res = await YonetimApi.sendAdminPushTest(ADMIN_EMAIL);
       if (res && res.success) {
         if (res.message?.includes('0 cihaza') || res.details?.sent === 0) {
           // Henüz kayıtlı cihaz yoksa bu cihazı hemen kaydet
@@ -319,7 +319,7 @@ export const AdminMobileNotificationCard: React.FC<AdminMobileNotificationCardPr
     setIsTestingEmail(true);
     setFeedback(null);
     try {
-      const res = await ApiService.sendAdminEmailTest(ADMIN_EMAIL);
+      const res = await YonetimApi.sendAdminEmailTest(ADMIN_EMAIL);
       if (res && res.success) {
         setFeedback({
           type: 'success',
@@ -344,7 +344,7 @@ export const AdminMobileNotificationCard: React.FC<AdminMobileNotificationCardPr
     setFeedback(null);
     try {
       const nextState = !emailEnabled;
-      const res = await ApiService.toggleAdminEmail(nextState, ADMIN_EMAIL);
+      const res = await YonetimApi.toggleAdminEmail(nextState, ADMIN_EMAIL);
       if (res && res.success) {
         setEmailEnabled(res.emailEnabled);
         setFeedback({

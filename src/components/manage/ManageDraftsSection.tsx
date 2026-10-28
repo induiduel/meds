@@ -15,6 +15,7 @@ import {
 } from 'lucide-react';
 import type { QuestionItem, ClusterAnalysisSummary, DraftCluster, ClusterTuning } from '../../types';
 import { ApiService } from '../../services/api';
+import { YonetimApi } from '../../services/api/yonetim';
 import {
   CLUSTER_PRESETS,
   blockPair,
@@ -95,7 +96,7 @@ export const ManageDraftsSection: React.FC<ManageDraftsSectionProps> = ({
     if (!committeeId) return;
     setLoading(true);
     try {
-      const summary = await ApiService.getCommitteeDraftClusters(committeeId, tuning);
+      const summary = await YonetimApi.getCommitteeDraftClusters(committeeId, tuning);
       setAnalysis(summary);
       setBlockedCount(loadBlockedPairs().size);
     } catch (e) {
@@ -247,7 +248,7 @@ export const ManageDraftsSection: React.FC<ManageDraftsSectionProps> = ({
   const handleBatchMergeReady = async () => {
     setIsBatchMerging(true);
     try {
-      const res = await ApiService.autoMergeHighConfidenceClusters(adminEmail, committeeId, adminName || 'Akıllı Konsolidasyon');
+      const res = await YonetimApi.autoMergeHighConfidenceClusters(adminEmail, committeeId, adminName || 'Akıllı Konsolidasyon');
       notify(`Toplu işlem tamamlandı: ${res.mergedClustersCount} küme birleştirildi, ${res.savedDuplicatesCount} mükerrer taslak entegre edildi.`);
       await onRefreshData();
       await runAnalysis();
@@ -355,7 +356,7 @@ export const ManageDraftsSection: React.FC<ManageDraftsSectionProps> = ({
   const handleUnmergeQuestion = async (questionId: string) => {
     setUnmergingQuestionId(questionId);
     try {
-      const res = await ApiService.unmergeDraftCluster(adminEmail, questionId, adminName || 'Yönetici');
+      const res = await YonetimApi.unmergeDraftCluster(adminEmail, questionId, adminName || 'Yönetici');
       setLocallyMergedSatelliteIds((prev) => {
         const next = new Set(prev);
         res.restoredSatellites.forEach((s) => next.delete(s.id));
@@ -477,7 +478,7 @@ export const ManageDraftsSection: React.FC<ManageDraftsSectionProps> = ({
   const topluAyir = async () => {
     const hedef = gorunenBirlesik.filter((q) => birlesikSecim.has(q.id));
     const { err } = await topluCalistir(hedef, async (q) => {
-      const res = await ApiService.unmergeDraftCluster(adminEmail, q.id, adminName || 'Yönetici');
+      const res = await YonetimApi.unmergeDraftCluster(adminEmail, q.id, adminName || 'Yönetici');
       setLocallyMergedSatelliteIds((prev) => {
         const next = new Set(prev);
         res.restoredSatellites.forEach((s) => next.delete(s.id));
@@ -897,7 +898,7 @@ export const ManageDraftsSection: React.FC<ManageDraftsSectionProps> = ({
           adminEmail={adminEmail}
           onClose={() => setEditingDraft(null)}
           onSaveQuestion={async (updated) => {
-            await ApiService.adminUpdateQuestion(adminEmail, editingDraft.id, updated);
+            await YonetimApi.adminUpdateQuestion(adminEmail, editingDraft.id, updated);
             setEditingDraft(null);
             notify('Taslak güncellendi.');
             await onRefreshData();

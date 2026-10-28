@@ -2,6 +2,7 @@ import React, { useEffect, useMemo, useState } from 'react';
 import { Search, ArrowUp, ArrowDown, Columns3, Download, X, Trash2, CheckCircle2, Copy, RefreshCw, ChevronDown, Save, RotateCcw, Sparkles, AlertTriangle, FileJson, User, History, FileText, ArrowRight } from 'lucide-react';
 import { Committee, QuestionItem } from '../../types';
 import { ApiService, safeJsonFetch } from '../../services/api';
+import { YonetimApi } from '../../services/api/yonetim';
 import { toast } from '../ui/Toast';
 import { Drawer, ConfirmButton } from './consoleUi';
 import { PageActions, Tabs14, SearchField, Toolbar, DataTable, DetailNav, type Col } from '../v14/pageKit';
@@ -139,7 +140,7 @@ export const ManageDataSection: React.FC<Props> = ({
       {
         id: 'users',
         label: 'Kullanıcılar',
-        load: async () => (await ApiService.adminGetUsers(adminEmail)) as Row[],
+        load: async () => (await YonetimApi.adminGetUsers(adminEmail)) as Row[],
         idOf: (r) => r.uid || r.email,
         canDelete: true,
         defaultSort: { key: 'lastLogin', dir: -1 },
@@ -567,16 +568,16 @@ export const ManageDataSection: React.FC<Props> = ({
       const id = ds.idOf(openRow);
 
       if (ds.id === 'questions') {
-        await ApiService.adminUpdateQuestion(adminEmail, id, payload as Partial<QuestionItem>);
+        await YonetimApi.adminUpdateQuestion(adminEmail, id, payload as Partial<QuestionItem>);
         await onRefreshData();
       } else if (ds.id === 'past') {
-        await ApiService.adminUpdatePastQuestion(adminEmail, id, payload);
+        await YonetimApi.adminUpdatePastQuestion(adminEmail, id, payload);
         await load();
       } else if (ds.id === 'users') {
-        await ApiService.adminUpdateUser(adminEmail, id, payload);
+        await YonetimApi.adminUpdateUser(adminEmail, id, payload);
         await load();
       } else if (ds.id === 'summaries') {
-        await ApiService.adminUpdateSummary(adminEmail, id, payload);
+        await YonetimApi.adminUpdateSummary(adminEmail, id, payload);
         await load();
       } else if (ds.id === 'decks' || ds.id === 'glossary') {
         // Gerçek kayıt: veri kataloğu ucu (izinli alanlar, yedekli atomik yazma). Eskiden yalnız ekrandaki
@@ -639,11 +640,11 @@ export const ManageDataSection: React.FC<Props> = ({
       for (const id of ids) {
         try {
           if (kind === 'delete') {
-            if (ds.id === 'questions') await ApiService.adminDeleteQuestion(adminEmail, id);
+            if (ds.id === 'questions') await YonetimApi.adminDeleteQuestion(adminEmail, id);
             else if (ds.id === 'past') await ApiService.adminDeletePastQuestion(adminEmail, id);
-            else if (ds.id === 'users') await ApiService.adminDeleteUser(adminEmail, id);
+            else if (ds.id === 'users') await YonetimApi.adminDeleteUser(adminEmail, id);
           } else if (ds.id === 'questions') {
-            await ApiService.adminUpdateQuestion(adminEmail, id, { status: 'completed' } as Partial<QuestionItem>);
+            await YonetimApi.adminUpdateQuestion(adminEmail, id, { status: 'completed' } as Partial<QuestionItem>);
           }
           ok++;
         } catch {
@@ -1371,7 +1372,7 @@ export const ManageDataSection: React.FC<Props> = ({
           onClose={() => setWizardQuestion(null)}
           onSaveQuestion={async (updated) => {
             const id = wizardQuestion.id;
-            await ApiService.adminUpdateQuestion(adminEmail, id, updated);
+            await YonetimApi.adminUpdateQuestion(adminEmail, id, updated);
             setWizardQuestion(null);
             toast.success('Soru güncellendi');
             await onRefreshData();

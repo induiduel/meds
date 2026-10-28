@@ -78,6 +78,7 @@ import {
   normalizeCommitteeId,
   isDonem3Question,
 } from '../data/curriculumData';
+import '../styles/ayrik-cx.css';
 
 /** Denetleyici Onayı almış (altın standart, doğrulanmış) soru */
 // Check-solve sırasında özgün sınavda olmayıp sonradan yazılan şıklar (checkSolve.eklenenSiklar) Hakkında'da açıkça belirtilir

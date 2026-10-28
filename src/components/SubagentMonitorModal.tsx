@@ -17,7 +17,8 @@ import {
   Globe,
 } from 'lucide-react';
 import { FirestoreDbService } from '../services/firestoreDb';
-import { ApiService, safeJsonFetch } from '../services/api';
+import { safeJsonFetch } from '../services/api';
+import { YonetimApi } from '../services/api/yonetim';
 import { ADMIN_EMAIL } from '../services/auth';
 
 interface SubagentMonitorModalProps {
@@ -119,7 +120,7 @@ export const SubagentMonitorModal: React.FC<SubagentMonitorModalProps> = ({
     setIsTriggeringRedaction(true);
     setActionFeedback('AI Redaksiyon görevi bulut köprüsüne iletiliyor...');
     try {
-      const res = await ApiService.triggerSubagentRedaction(ADMIN_EMAIL);
+      const res = await YonetimApi.triggerSubagentRedaction(ADMIN_EMAIL);
       setActionFeedback(`✓ ${res.message}`);
       setLogs(prev => [
         {
@@ -143,7 +144,7 @@ export const SubagentMonitorModal: React.FC<SubagentMonitorModalProps> = ({
     setIsTriggeringSync(true);
     setActionFeedback('Yerel klasör tarama ve eşitleme görevi iletiliyor...');
     try {
-      const res = await ApiService.runFullLocalSync(ADMIN_EMAIL);
+      const res = await YonetimApi.runFullLocalSync(ADMIN_EMAIL);
       setActionFeedback(`✓ ${res.message}`);
       setLogs(prev => [
         {

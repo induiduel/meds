@@ -1,6 +1,7 @@
 import React, { useEffect, useId, useLayoutEffect, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
 import { ChevronDown, Sparkles, X } from 'lucide-react';
+import '../../styles/ayrik-qa.css';
 
 /**
  * Künye seçicisi (kurul, ders, sene…): etiket + değer gösteren düğme; tıklayınca seçenek panelini açar.

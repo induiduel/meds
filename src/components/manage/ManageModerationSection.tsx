@@ -2,6 +2,7 @@ import React, { useEffect, useMemo, useState } from 'react';
 import { Flag, Save, Wand2, FilePlus2, Eye, EyeOff, Check, Trash2, Inbox, UserPlus, Tag, Ban, Reply, Clock } from 'lucide-react';
 import type { QuestionItem, QuestionOption } from '../../types';
 import { ApiService, safeJsonFetch } from '../../services/api';
+import { YonetimApi } from '../../services/api/yonetim';
 import type { InboxReport } from '../../services/manageConsoleService';
 import { EmptyState, ConfirmButton, Field, timeLabel, Drawer } from './consoleUi';
 import { StatRow, Tabs14, SearchField, Toolbar, DataTable, Pill, DetailNav, DetailLayout, FactList, Card14, type Col } from '../v14/pageKit';
@@ -124,10 +125,10 @@ export const ManageModerationSection: React.FC<Props> = ({
       };
       if (isPast) {
         const updated: QuestionItem = { ...question, reconstruction, claimedAnswer: answer, status: 'completed', updatedAt: new Date().toISOString() };
-        await ApiService.saveApprovedPastQuestion(updated, adminEmail);
+        await YonetimApi.saveApprovedPastQuestion(updated, adminEmail);
         setPastQuestions((prev) => prev.map((q) => (q.id === updated.id ? updated : q)));
       } else {
-        await ApiService.adminUpdateQuestion(adminEmail, question.id, { reconstruction, claimedAnswer: answer, status: 'completed' } as Partial<QuestionItem>);
+        await YonetimApi.adminUpdateQuestion(adminEmail, question.id, { reconstruction, claimedAnswer: answer, status: 'completed' } as Partial<QuestionItem>);
       }
       await onResolve(report);
       notify(`Soru düzeltildi ve "${report.reason}" bildirimi kapatıldı.`);
@@ -144,7 +145,7 @@ export const ManageModerationSection: React.FC<Props> = ({
     if (!question || !isPast) return;
     setBusy('hide');
     try {
-      const updated = await ApiService.adminPatchPastQuestion(adminEmail, question.id, { hidden: !hidden });
+      const updated = await YonetimApi.adminPatchPastQuestion(adminEmail, question.id, { hidden: !hidden });
       setPastQuestions((prev) => prev.map((q) => (q.id === updated.id ? updated : q)));
       notify(hidden ? 'Soru yeniden yayında.' : 'Soru gizlendi; öğrenciler artık görmüyor.');
     } catch (e) {
@@ -196,7 +197,7 @@ export const ManageModerationSection: React.FC<Props> = ({
         options: opts.length ? opts : undefined,
       });
       if (isPast && !hidden) {
-        const updated = await ApiService.adminPatchPastQuestion(adminEmail, question.id, { hidden: true });
+        const updated = await YonetimApi.adminPatchPastQuestion(adminEmail, question.id, { hidden: true });
         setPastQuestions((prev) => prev.map((q) => (q.id === updated.id ? updated : q)));
       }
       await onResolve(report);

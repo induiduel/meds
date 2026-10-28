@@ -1,0 +1,57 @@
+/* Çevrimdışı veritabanı penceresi (of-*) — index.css'ten ayrıldı (açılış CSS'ini küçültmek için).
+ * Yalnız sıra/özgüllük çakışması olmayan kurallar taşındı; ezmeli olanlar index.css'te kaldı.
+ * Kullanan bileşenler bu dosyayı kendisi içe aktarır. */
+
+.of { display: flex; flex-direction: column; gap: 14px; min-width: 0; }
+.of-lead { margin: 0; font-size: 14.5px; line-height: 1.55; color: var(--color-ink-2); text-wrap: pretty; }
+.of-state { display: flex; align-items: center; gap: 12px; min-width: 0; }
+.of-orb { flex-shrink: 0; width: 42px; height: 42px; border-radius: 14px; display: grid; place-items: center; background: var(--color-field); color: var(--color-ink-2); }
+.of-orb svg { width: 21px; height: 21px; }
+.of-state.is-ready .of-orb { background: var(--color-ok-soft); color: var(--color-ok); }
+.of-state.is-offline .of-orb { background: var(--color-warn-soft); color: var(--color-warn); }
+.of-state.is-busy .of-orb { background: var(--color-accent-soft); color: var(--color-accent); }
+.of-state.is-empty .of-orb { background: var(--color-accent-soft); color: var(--color-accent); }
+.of-state-t { min-width: 0; display: flex; flex-direction: column; gap: 1px; }
+.of-state-t b { font-size: 15px; font-weight: 650; color: var(--color-ink); }
+.of-state-t span { font-size: 12.5px; color: var(--color-ink-3); overflow-wrap: anywhere; }
+.of-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; border-radius: 14px; border: 1px solid var(--color-line); background: var(--color-white); }
+.of-list li { display: flex; align-items: center; gap: 10px; min-height: 42px; padding: 0 14px; font-size: 14px; color: var(--color-ink); }
+.of-list li + li { border-top: 1px solid var(--color-line-soft); }
+.of-list li > svg { width: 16px; height: 16px; color: var(--color-ink-3); flex-shrink: 0; }
+.of-list li > span { flex: 1; min-width: 0; }
+.of-list li > b { font-family: var(--font-mono); font-size: 13px; font-weight: 600; color: var(--color-ink-2); font-variant-numeric: tabular-nums; }
+.of-list li > em { font-style: normal; font-size: 12px; color: var(--color-ink-3); }
+.of-list li > i { width: 7px; height: 7px; border-radius: 99px; background: var(--color-line-2); }
+.of-main { width: 100%; height: 46px; font-size: 14.5px; }
+.of-progress { display: flex; flex-direction: column; gap: 7px; padding: 12px 14px; border-radius: 14px; background: var(--color-accent-soft); animation: ls-rise .25s var(--ease-out-soft); }
+.of-progress-top { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; font-size: 13px; color: var(--color-accent); font-weight: 600; }
+.of-progress-top b { font-family: var(--font-mono); font-variant-numeric: tabular-nums; }
+.of-progress .ms-progress { background: color-mix(in srgb, var(--color-accent) 18%, transparent); }
+.of-mono { font-family: var(--font-mono); font-size: 11.5px; color: var(--color-ink-3); font-variant-numeric: tabular-nums; }
+.of-install { display: flex; flex-direction: column; gap: 8px; padding-top: 12px; border-top: 1px solid var(--color-line-soft); }
+.of-install-t { display: flex; align-items: center; gap: 10px; min-width: 0; }
+.of-install-t > svg { width: 18px; height: 18px; color: var(--color-ink-3); flex-shrink: 0; }
+.of-install-t > span { flex: 1; min-width: 0; display: flex; flex-direction: column; }
+.of-install-t b { font-size: 14px; font-weight: 600; color: var(--color-ink); }
+.of-install-t small { font-size: 12.5px; color: var(--color-ink-3); }
+.of-note { margin: 0; display: flex; align-items: center; gap: 6px; font-size: 12.5px; color: var(--color-ink-3); }
+.of-note svg { width: 14px; height: 14px; }
+.of-note.is-ok { color: var(--color-ok); }
+.of-foot { display: flex; justify-content: center; margin-top: -4px; }
+.of-perks { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 12px; }
+.of-perks li > svg { flex-shrink: 0; width: 34px; height: 34px; padding: 8px; border-radius: 11px; background: var(--color-accent-soft); color: var(--color-accent); }
+.of-perks li > span { display: flex; flex-direction: column; gap: 1px; font-size: 13px; line-height: 1.45; color: var(--color-ink-3); }
+.of-perks b { font-size: 14px; font-weight: 600; color: var(--color-ink); }
+.of-sec { display: flex; flex-direction: column; gap: 8px; }
+.of-sec h3 { margin: 0; font-family: var(--font-mono); font-size: 11.5px; font-weight: 600; color: var(--color-ink-3); }
+.of-kv { margin: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); border-radius: 12px; border: 1px solid var(--color-line); overflow: hidden; }
+.of-kv > div { display: flex; flex-direction: column; gap: 1px; padding: 8px 12px; border-right: 1px solid var(--color-line-soft); border-bottom: 1px solid var(--color-line-soft); margin: 0 -1px -1px 0; min-width: 0; }
+.of-kv dt { font-size: 11.5px; color: var(--color-ink-3); }
+.of-kv dd { margin: 0; font-family: var(--font-mono); font-size: 13.5px; font-weight: 600; color: var(--color-ink); font-variant-numeric: tabular-nums; overflow-wrap: anywhere; }
+.of-sys { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px; }
+.of-sys li { display: inline-flex; align-items: center; gap: 6px; height: 28px; padding: 0 10px; border-radius: 99px; background: var(--color-field); font-size: 12.5px; color: var(--color-ink-2); }
+.of-sys li i { width: 7px; height: 7px; border-radius: 99px; background: var(--color-ink-3); }
+.of-sys li b { font-weight: 650; color: var(--color-ink); }
+.of-sys li.is-ok i { background: var(--color-ok); }
+.of-sys li.is-warn i { background: var(--color-warn); }
+.of-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; padding-top: 12px; border-top: 1px solid var(--color-line-soft); }

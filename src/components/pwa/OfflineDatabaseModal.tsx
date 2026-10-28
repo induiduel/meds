@@ -6,6 +6,7 @@ import { offlineDatabaseService, OfflineState } from '../../services/offlineData
 import { pwaService, PwaState } from '../../services/pwaService';
 import { Dialog } from '../ui/Dialog';
 import { DeviceStorageSection } from './DeviceStorageSection';
+import '../../styles/ayrik-of.css';
 
 interface OfflineDatabaseModalProps {
   isOpen: boolean;

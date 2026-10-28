@@ -5,6 +5,7 @@ import { offlineDatabaseService } from '../../services/offlineDatabaseService';
 import { Dialog } from '../ui/Dialog';
 import { useAppearance } from '../../utils/appearance';
 import { PwaWelcomeV12 } from '../v12/OnboardingV12';
+import '../../styles/ayrik-of.css';
 
 export { PWA_WELCOME_STORAGE_KEY };
 

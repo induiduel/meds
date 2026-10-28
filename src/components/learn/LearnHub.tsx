@@ -9,6 +9,7 @@ import { deckName, type DeckCatalogEntry } from '../../data/deckStore';
 import { useDeckPdfIds, useDeckPdfMissing } from '../../services/deckPdfService';
 import { disciplineClass } from '../../utils/discipline';
 import { Segmented } from '../ui/kit';
+import '../../styles/ayrik-cx.css';
 
 type Progress = Record<string, { last?: number; seen?: number[] } | undefined>;
 type Status = 'all' | 'active' | 'new' | 'done';

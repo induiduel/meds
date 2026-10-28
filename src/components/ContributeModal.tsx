@@ -14,6 +14,7 @@ import { validateNamePolicy } from '../utils/namePolicy';
 import { MetaPicker } from './ui/MetaPicker';
 import { academicYears, committeeShortLabel, currentAcademicYear, isCommitteeLocked } from './quickAddOrtak';
 import { getDefaultActiveCommitteeId } from '../services/firestoreDb';
+import '../styles/ayrik-qa.css';
 
 const SAVED_NAME_KEY = 'medsoru_saved_contributor_name';
 

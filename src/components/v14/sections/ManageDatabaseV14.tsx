@@ -2,7 +2,7 @@ import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { Download, RefreshCw, Upload, Wrench } from 'lucide-react';
 import { AdminPanelModal } from '../../AdminPanelModal';
 import { Drawer } from '../../manage/consoleUi';
-import { ApiService } from '../../../services/api';
+import { YonetimApi } from '../../../services/api/yonetim';
 import { triggerBackupNow } from '../../../services/manageConsoleService';
 import { adminCall } from '../../../services/peopleService';
 import { BulkBar, useSelection } from '../manageKit';
@@ -74,7 +74,7 @@ export const ManageDatabaseV14: React.FC<Props> = (props) => {
 
   const exportJson = async () => {
     try {
-      const data = await ApiService.adminExportDb();
+      const data = await YonetimApi.adminExportDb();
       const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
       const url = URL.createObjectURL(blob);
       const a = document.createElement('a');
@@ -109,7 +109,7 @@ export const ManageDatabaseV14: React.FC<Props> = (props) => {
     if (!pending || typed.trim().toLocaleUpperCase('tr-TR') !== CONFIRM_WORD) return;
     setImporting(true);
     try {
-      await ApiService.adminImportDb(adminEmail, pending.data);
+      await YonetimApi.adminImportDb(adminEmail, pending.data);
       setMsg({ tone: 'ok', text: `İçe aktarıldı: ${pending.questions.toLocaleString('tr-TR')} soru.` });
       setPending(null);
       await onRefreshData();

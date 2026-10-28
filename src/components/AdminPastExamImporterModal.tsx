@@ -12,7 +12,7 @@ import {
   Table,
 } from 'lucide-react';
 import { Committee } from '../types';
-import { ApiService } from '../services/api';
+import { YonetimApi } from '../services/api/yonetim';
 import { InfoPopover } from './InfoPopover';
 import { DONEM3_CURRICULUM_DISCIPLINES } from '../data/curriculumData';
 import mufredatPaketi from '../data/mufredat_paketi.json';
@@ -95,7 +95,7 @@ export const AdminPastExamImporterModal: React.FC<AdminPastExamImporterModalProp
     setIsImporting(true);
     setParseError(null);
     try {
-      const result = await ApiService.batchImportPastQuestions(
+      const result = await YonetimApi.batchImportPastQuestions(
         adminEmail,
         targetCommitteeId,
         examYear,
@@ -210,7 +210,7 @@ export const AdminPastExamImporterModal: React.FC<AdminPastExamImporterModalProp
     setImportSuccessMessage(null);
 
     try {
-      const res = await ApiService.parsePastExamQuestions({
+      const res = await YonetimApi.parsePastExamQuestions({
         rawText: rawText.trim() || undefined,
         fileBase64: uploadedFileBase64 || undefined,
         fileMimeType: uploadedFileMime || undefined,
@@ -239,7 +239,7 @@ export const AdminPastExamImporterModal: React.FC<AdminPastExamImporterModalProp
       if (autoSaveToFirebase) {
         setIsImporting(true);
         try {
-          const importResult = await ApiService.batchImportPastQuestions(
+          const importResult = await YonetimApi.batchImportPastQuestions(
             adminEmail,
             targetCommitteeId,
             examYear,
@@ -300,7 +300,7 @@ export const AdminPastExamImporterModal: React.FC<AdminPastExamImporterModalProp
 
     setIsImporting(true);
     try {
-      const result = await ApiService.batchImportPastQuestions(
+      const result = await YonetimApi.batchImportPastQuestions(
         adminEmail,
         targetCommitteeId,
         examYear,

@@ -27,7 +27,7 @@ import {
   Trash2,
 } from 'lucide-react';
 import { PastQuestionReviewRecord } from '../types';
-import { ApiService } from '../services/api';
+import { YonetimApi } from '../services/api/yonetim';
 import { AppUser, ADMIN_EMAIL } from '../services/auth';
 import { pathFor } from '../router';
 import { AnswerPoll } from './AnswerPoll';
@@ -390,7 +390,7 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
 
   const fetchLiveStatus = async () => {
     try {
-      const data = await ApiService.getPastQuestionReviewLogs();
+      const data = await YonetimApi.getPastQuestionReviewLogs();
       setLiveStatus(data);
     } catch (_) {}
   };
@@ -400,7 +400,7 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
     if (!silent) setIsLoading(true);
     setError(null);
     try {
-      const data = await ApiService.getPastQuestionReviews({ status: 'all' });
+      const data = await YonetimApi.getPastQuestionReviews({ status: 'all' });
       // Soru ID'sine göre tekilleştir (en son işlenen/güncellenen kaydı tut)
       // Aynı soru için birden çok kayıt olabilir (yeniden değerlendirme): en güncel kayıt gösterilir
       const stamp = (r: any) => Date.parse(r.last_edited_at || r.processed_at || '') || 0;
@@ -426,7 +426,7 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
   useEffect(() => {
     fetchReviews();
     if (!isAdmin) return;
-    ApiService.getPhase14Settings(ADMIN_EMAIL).then((s) => {
+    YonetimApi.getPhase14Settings(ADMIN_EMAIL).then((s) => {
       setLiteOn(s ? s.lite_kullan : null);
       setAutoOn(s ? s.otomatik_ucretsiz : null);
       if (s?.otomatik_limit) setAutoLimit(s.otomatik_limit);
@@ -443,7 +443,7 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
     setIsTriggering(true);
     setActionFeedback(null);
     try {
-      const res = await ApiService.triggerPastQuestionReview(ADMIN_EMAIL, mode, triggerLimit);
+      const res = await YonetimApi.triggerPastQuestionReview(ADMIN_EMAIL, mode, triggerLimit);
       setActionFeedback({ message: `✓ ${res.message || 'İşlem başlatıldı.'}`, type: 'ok' });
       await fetchLiveStatus();
       await fetchReviews(true);
@@ -457,7 +457,7 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
   const toggleLite = async () => {
     if (liteOn === null) return;
     try {
-      const s = await ApiService.setPhase14Settings(ADMIN_EMAIL, { lite_kullan: !liteOn });
+      const s = await YonetimApi.setPhase14Settings(ADMIN_EMAIL, { lite_kullan: !liteOn });
       setLiteOn(s.lite_kullan);
       setActionFeedback({
         message: s.lite_kullan
@@ -476,7 +476,7 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
     if (acilacak && !(await confirmText(`Otomatik ücretsiz inceleme açılsın mı?\n\nİncelenmemiş ${autoLimit} soru ücretsiz anahtarlara dağıtılır; her anahtar kendi sorularını tek tek çözer, kota bitince 1/10/30 dk bekleyip devam eder. Ücretli anahtar kullanılmaz. Kapatana ya da "Durdur"a basana kadar sürer.`))) return;
     setIsTriggering(true);
     try {
-      const s = await ApiService.setPhase14Settings(ADMIN_EMAIL, { otomatik_ucretsiz: acilacak, otomatik_limit: autoLimit });
+      const s = await YonetimApi.setPhase14Settings(ADMIN_EMAIL, { otomatik_ucretsiz: acilacak, otomatik_limit: autoLimit });
       setAutoOn(s.otomatik_ucretsiz);
       setActionFeedback({
         message: s.otomatik_ucretsiz
@@ -497,7 +497,7 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
   const handleStopReview = async () => {
     setIsTriggering(true);
     try {
-      await ApiService.stopPastQuestionReview(ADMIN_EMAIL);
+      await YonetimApi.stopPastQuestionReview(ADMIN_EMAIL);
       setAutoOn((v) => (v ? false : v));                 // Durdur otomatik kipi de kapatır
       setActionFeedback({ message: '✓ Faz 14 süreci durduruldu.', type: 'ok' });
       await fetchLiveStatus();
@@ -514,7 +514,7 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
     // İyimser güncelleme
     setAllReviews(prev => prev.map(r => String(r.question_id) === qId ? { ...r, status: 'approved' as any } : r));
     try {
-      await ApiService.approvePastQuestionReview(ADMIN_EMAIL, qId);
+      await YonetimApi.approvePastQuestionReview(ADMIN_EMAIL, qId);
       setActionFeedback({ message: `✓ Soru #${qId} başarıyla güncellendi ve ana soru havuzuna onaylandı.`, type: 'ok' });
       fetchReviews(true);
     } catch (err: any) {
@@ -532,8 +532,8 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
     setProcessingId(qId);
     try {
       // 1) Cevabı yaz, belirsiz işaretini kaldır  2) Öneriyi onayla: soru /cikmis'teki canlı soruya uygulanır
-      const res = await ApiService.completeAnswerDoubt(ADMIN_EMAIL, qId, choice);
-      await ApiService.approvePastQuestionReview(ADMIN_EMAIL, qId);
+      const res = await YonetimApi.completeAnswerDoubt(ADMIN_EMAIL, qId, choice);
+      await YonetimApi.approvePastQuestionReview(ADMIN_EMAIL, qId);
       setAllReviews((prev) => prev.map((r) => (String(r.question_id) === qId ? { ...r, status: 'approved' as any, answer_doubtful: false, answer_poll_open: true, answer_vote_result: { winner: res.winner, by: 'admin' } } : r)));
       setActionFeedback({ message: `Soru #${qId.slice(0, 8)}: cevap ${res.winner} olarak kaydedildi ve çıkmış sorulara gönderildi. Anket açık kalıyor; topluluk cevabı karşılaştırılacak.`, type: 'ok' });
       fetchReviews(true);
@@ -548,7 +548,7 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
     setProcessingId(qId);
     setAllReviews(prev => prev.map(r => String(r.question_id) === qId ? { ...r, answer_doubtful: value, ...(value ? {} : { answer_poll_open: false }) } : r));
     try {
-      await ApiService.setPastQuestionAnswerDoubt(ADMIN_EMAIL, qId, value);
+      await YonetimApi.setPastQuestionAnswerDoubt(ADMIN_EMAIL, qId, value);
       if (value) setStatusFilter('answer_doubtful');
       setActionFeedback({ message: value ? `✓ Soru #${qId} için cevap anketi açıldı.` : `✓ Soru #${qId} için cevap anketi kapatıldı.`, type: 'ok' });
     } catch (err: any) {
@@ -563,7 +563,7 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
     setProcessingId(qId);
     setAllReviews(prev => prev.map(r => String(r.question_id) === qId ? { ...r, suspicious: value } : r));
     try {
-      await ApiService.setPastQuestionReviewSuspicious(ADMIN_EMAIL, qId, value);
+      await YonetimApi.setPastQuestionReviewSuspicious(ADMIN_EMAIL, qId, value);
       setActionFeedback({ message: value ? `✓ Soru #${qId} şüpheli olarak işaretlendi.` : `✓ Soru #${qId} şüpheli işareti kaldırıldı.`, type: 'ok' });
     } catch (err: any) {
       setActionFeedback({ message: `Hata: ${err.message}`, type: 'err' });
@@ -580,7 +580,7 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
     // İyimser güncelleme
     setAllReviews(prev => prev.map(r => String(r.question_id) === qId ? { ...r, status: 'rejected' as any, suspicious: true } : r));
     try {
-      await ApiService.rejectPastQuestionReview(ADMIN_EMAIL, qId, reason);
+      await YonetimApi.rejectPastQuestionReview(ADMIN_EMAIL, qId, reason);
       setActionFeedback({ message: `✓ Soru #${qId} önerisi reddedildi (şüpheli işaretlendi).`, type: 'ok' });
       fetchReviews(true);
     } catch (err: any) {
@@ -600,7 +600,7 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
     // İyimser güncelleme
     setAllReviews(prev => prev.filter(r => String(r.question_id) !== qId));
     try {
-      await ApiService.deletePastQuestionReview(ADMIN_EMAIL, qId);
+      await YonetimApi.deletePastQuestionReview(ADMIN_EMAIL, qId);
       try {
         const { pastQuestionsCache } = await import('../services/pastQuestionsCache');
         await pastQuestionsCache.removeQuestions([qId]);
@@ -623,7 +623,7 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
     setIsTriggering(true);
     setActionFeedback(null);
     try {
-      const res = await ApiService.reEvaluateUnchangedPastQuestionReviews(ADMIN_EMAIL, questionId);
+      const res = await YonetimApi.reEvaluateUnchangedPastQuestionReviews(ADMIN_EMAIL, questionId);
       setActionFeedback({
         message: `✓ ${res.message || 'Değişiklik olmayan sorular tekrar değerlendirme kuyruğuna alındı.'}`,
         type: 'ok'
@@ -661,7 +661,7 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
     setIsSavingEdit(true);
     setActionFeedback(null);
     try {
-      const res = await ApiService.updatePastQuestionReviewProposal(ADMIN_EMAIL, qId, {
+      const res = await YonetimApi.updatePastQuestionReviewProposal(ADMIN_EMAIL, qId, {
         soru_koku: editStem,
         secenekler: editOptions,
         dogru_secenek: editCorrectAnswer,
@@ -669,7 +669,7 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
         degisiklik_ozeti: editSummary,
       });
       if (approveAfter) {
-        await ApiService.approvePastQuestionReview(ADMIN_EMAIL, qId);
+        await YonetimApi.approvePastQuestionReview(ADMIN_EMAIL, qId);
         setActionFeedback({ message: `✓ Soru #${qId} kaydedildi ve ana soru havuzuna onaylandı.`, type: 'ok' });
       } else {
         setActionFeedback({ message: `✓ Soru #${qId} önerisi başarıyla kaydedildi.`, type: 'ok' });

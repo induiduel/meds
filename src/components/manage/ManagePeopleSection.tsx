@@ -9,7 +9,7 @@ import {
   type PeopleList, type PersonRow, type PersonDetail, type PersonItem,
 } from '../../services/peopleService';
 import { deletePastComment, resolveInboxReport, sendUserEmail, deleteManageUser } from '../../services/manageConsoleService';
-import { ApiService } from '../../services/api';
+import { YonetimApi } from '../../services/api/yonetim';
 import { EmptyState, ConfirmButton } from './consoleUi';
 import '../../styles/manage-people.css';
 import { HesapBirlestir } from './HesapBirlestir';
@@ -893,7 +893,7 @@ const EditBox: React.FC<{ d: PersonDetail; adminEmail: string; notify: (m: strin
         e.preventDefault();
         setBusy(true);
         try {
-          await ApiService.adminUpdateUser(adminEmail, p.uid!, { displayName: name.trim(), studentNumber: num.trim() || null, phone: phone.trim() || null, role });
+          await YonetimApi.adminUpdateUser(adminEmail, p.uid!, { displayName: name.trim(), studentNumber: num.trim() || null, phone: phone.trim() || null, role });
           notify('Kullanıcı güncellendi.');
           onDone();
         } catch (err: any) {

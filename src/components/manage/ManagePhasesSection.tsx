@@ -1,12 +1,12 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import { Search, Save, RotateCcw, FlaskConical, Code2, ChevronLeft, ChevronRight, ArrowUpDown, Info } from 'lucide-react';
 import { safeJsonFetch } from '../../services/api';
+import { YonetimApi } from '../../services/api/yonetim';
 import { QuestionInsightsPanel, clearInsightsCache } from '../QuestionInsightsPanel';
 import { toast } from '../ui/Toast';
 import { EmptyState, Drawer } from './consoleUi';
 import { StatRow, Tabs14, SearchField, Toolbar, DataTable, Pill, DetailNav } from '../v14/pageKit';
 import { BulkBar, useSelection } from '../v14/manageKit';
-import { ApiService } from '../../services/api';
 
 /**
  * "Faz verileri": bir çıkmış sorunun tüm faz çıktılarını (Faz 5/6/6.5/8/11/13, Öğren, sınav başlığı müfredatı,
@@ -209,7 +209,7 @@ export const ManagePhasesSection: React.FC<{ adminEmail: string }> = ({ adminEma
     if (!selId) return;
     if (tur === 'faz14') {
       try {
-        const r = await ApiService.reEvaluateUnchangedPastQuestionReviews(adminEmail, selId);
+        const r = await YonetimApi.reEvaluateUnchangedPastQuestionReviews(adminEmail, selId);
         toast.success(r.message || 'Faz 14 kuyruğuna alındı');
       } catch (e: any) {
         toast.error(`Faz 14: ${e?.message || 'bu soru için Faz 14 kaydı yok'}`);
@@ -277,7 +277,7 @@ export const ManagePhasesSection: React.FC<{ adminEmail: string }> = ({ adminEma
     let bad = 0;
     for (const id of ids) {
       try {
-        if (tur === 'faz14') await ApiService.reEvaluateUnchangedPastQuestionReviews(adminEmail, id);
+        if (tur === 'faz14') await YonetimApi.reEvaluateUnchangedPastQuestionReviews(adminEmail, id);
         else {
           const r = await safeJsonFetch<any>(`/api/admin/phases/question/${encodeURIComponent(id)}/rereview`, { method: 'POST', headers, body: JSON.stringify({ tur }) });
           if (!r.ok) throw new Error('hata');

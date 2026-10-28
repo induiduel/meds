@@ -46,7 +46,7 @@ import { Tabs14 } from '../v14/pageKit';
 /** v14 kabuğu varsayılandır; eski v12 kabuğuna dönmek için localStorage medsoru_manage_kabuk = 'v12' */
 const v14ShellOn = () => { try { return localStorage.getItem('medsoru_manage_kabuk') !== 'v12'; } catch { return true; } };
 import type { QuestionItem, Committee, AdminNotification } from '../../types';
-import { ApiService } from '../../services/api';
+import { YonetimApi } from '../../services/api/yonetim';
 import { AdminScriptsTab } from '../AdminScriptsTab';
 import { AdminPanelModal } from '../AdminPanelModal';
 import { ManagePoolV14 } from '../v14/sections/ManagePoolV14';
@@ -841,7 +841,7 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
       adminEmail={adminEmail}
       onClose={() => setEditingDraft(null)}
       onSaveQuestion={async (updated) => {
-        await ApiService.adminUpdateQuestion(adminEmail, editingDraft.id, updated);
+        await YonetimApi.adminUpdateQuestion(adminEmail, editingDraft.id, updated);
         setEditingDraft(null);
         notify('Taslak güncellendi.');
         await refreshAll();
