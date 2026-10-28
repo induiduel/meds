@@ -1236,3 +1236,10 @@ a.cd-cikp-btn { display: inline-flex; align-items: center; text-decoration: none
 }
 /* H337: Kumanda düğmesi ders ekranında akışa değil köşeye sabit (yalnız TV'de çizilir) */
 .cd-tv .cd-tv-btn { position: fixed; z-index: 40; left: max(16px, env(safe-area-inset-left, 0px)); top: 72px; }
+
+/* Örnek soru chip'i (2026-10-29): çıkmış chip'inin altında, vurgu rengi accent, nabız yok */
+.cd-cikc.cd-ornc { top: 40px; border-color: var(--color-accent); color: var(--color-accent); animation: none; }
+.cd-cikc.cd-ornc > svg { fill: none; }
+.cd-orn-kapsam { display: flex; gap: 6px; padding: 0 12px 8px; }
+.cd-orn-kapsam > button { height: 28px; padding: 0 12px; border-radius: 999px; border: 1px solid var(--color-line); background: var(--color-white); color: var(--color-ink-2); font: 600 12.5px/1 var(--font-sans); cursor: pointer; }
+.cd-orn-kapsam > button.is-on { background: var(--color-accent-soft); border-color: transparent; color: var(--color-accent); }

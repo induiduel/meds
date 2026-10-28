@@ -1,10 +1,10 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 569,
-  "baslik": "Sesli derste bölüm arası durma kapandı, ayarlar tablette kolay",
+  "onem": 570,
+  "baslik": "Sesli derste bölüm sonunda örnek soru chip'i",
   "maddeler": [
-    "Sesli ders bölümler arasında artık kendiliğinden durmuyor (isteyen \"Bölüm sonlarında dur\"u açabilir).",
-    "Görünüm ve ayarlar düğmesi üst çubukta doğrudan görünüyor; tablette menüye girmeye gerek yok."
+    "Bir bölümün/parçanın son slaytında \"Örnek soru\" chip'i çıkıyor; dokununca ses durur, o parçaya ait örnek soruları çözersin.",
+    "\"Buraya kadar\" sekmesiyle baştan o noktaya kadarki tüm örnek sorular da çözülebilir; kapatınca ders kaldığı yerden sürer."
   ],
   "eklenen": [],
   "degisen": [],

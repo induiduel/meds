@@ -24,6 +24,7 @@ import { toggleFavoriteCard } from '../../services/studyStore';
 import { CdTasmaMenu, CdV15Bas, CdV15Gorunum, CdV15KalemDugme, CdV15KalemKutusu, CdV15Menu } from './CdV15'; // H332: CdTasmaMenu
 import { GunlukDiyalog } from './CanliDersView';
 import { CdCikmisChip, CdCikmisPencereKok, cikmisSayfada } from './CdCikmisChip';
+import { CdOrnekChip, CdOrnekPencereKok, ornekParcaSonunda, useOrnekSorular } from './CdOrnekChip';
 import { useCdTur } from './useCdTur';
 import { useUzunBasSecim } from './cdUzunBas';
 import { cdTurGoruldu } from './canliDersTurDurum';
@@ -1968,6 +1969,7 @@ function CdPdfBolme({ detay, canli }: { detay: CdDetay; canli: boolean }) {
   const cizimAcik = useDrawingGlobalState().activeMode !== 'none';
   // Çizim kapsamı: ders + dosya + sayfa (tarayıcıda kalır); ekrandan çıkınca araç kapanır
   const cizimKok = `cd:${detay.key}:${dosya?.fileId || dosya?.name || gor.dosya}`;
+  const ornekSorular = useOrnekSorular(detay.key);
   const pageOverlay = useCallback((n: number) => (
     <React.Fragment key={n}>
       {cikYer && cikSec && cikYer.dosya === gor.dosya && cikYer.sayfa === n && (
@@ -1977,11 +1979,12 @@ function CdPdfBolme({ detay, canli }: { detay: CdDetay; canli: boolean }) {
       )}
       <SlideDrawingCanvas scope={`${cizimKok}:${n}`} controls={false} />
       {gorunum.cikmis && <CdCikmisChip sorular={cikmisSayfada(detay.cikmisKonum, gor.dosya, n)} />}
+      <CdOrnekChip parca={ornekParcaSonunda(detay, ornekSorular, gor.dosya, n)} />
       {terimDosya?.[String(n)] && (
         <CdTerimKatman sayfa={terimDosya[String(n)]} gizle={cizimAcik} />
       )}
     </React.Fragment>
-  ), [cizimKok, cikYer, cikSec, gor.dosya, terimDosya, cizimAcik, detay.cikmisKonum, gorunum.cikmis]);
+  ), [cizimKok, cikYer, cikSec, gor.dosya, terimDosya, cizimAcik, detay.cikmisKonum, gorunum.cikmis, detay, ornekSorular]);
   const cikmisSec = useCallback((q: CdCikmisKonum | null) => {
     setCikSec(q);
     if (q) { setElle(null); durdur(); }
@@ -1992,6 +1995,7 @@ function CdPdfBolme({ detay, canli }: { detay: CdDetay; canli: boolean }) {
   return (
     <div className={`cd-bolme cd-pdf-bolme${barGizli ? ' is-bar-gizli' : ''}`}>
       <CdCikmisPencereKok />
+      <CdOrnekPencereKok />
       <button type="button" className="cd-ib cd-bar-tgl is-ac" onClick={barDegis} aria-label="PDF araç çubuğunu göster" title="Araç çubuğunu göster"><ChevronDown /></button>
       <div className="cd-pdf-bar">
         <button type="button" className="cd-ib cd-bar-tgl is-gizle" onClick={barDegis} aria-label="PDF araç çubuğunu gizle" title="Araç çubuğunu gizle"><ChevronUp /></button>
