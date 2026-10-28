@@ -361,6 +361,11 @@ export const TopBarV15: React.FC<TopBarProps> = ({ active, onGo, user, isAdmin, 
   const geriVar = !!sayfa?.geri || !kokMu(active);
   // Odak ekranı: sesli ders açıkken kendi üst barını kullanır (tasarım sistemi v15 › Kabuk)
   const odak = odakEkrani(active);
+  // H431: odak ekranı kök sınıfı (durum çubuğu payı shell.css'te .v15-odak .sh-main)
+  useEffect(() => {
+    document.documentElement.classList.toggle('v15-odak', odak);
+    return () => document.documentElement.classList.remove('v15-odak');
+  }, [odak]);
   const title = sayfa?.baslik || (active === 'today' ? greeting(user) : ROUTE_TITLES[active]);
   const sub =
     sayfa?.alt ??

@@ -1,5 +1,6 @@
 /* DersPdfEkranV15: araç çubuğu + yalıtılmış belge çerçevesi. Belgenin kendi stili dersPdf.css'te (iframe içinde). */
 .dpdf-ekran { max-width: 1010px; margin: 0 auto; width: 100%; }
 .dpdf-arac { position: sticky; top: 0; z-index: 5; display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 10px 14px; margin-bottom: 12px; border-radius: 14px; background: var(--color-white, #fff); border: 1px solid var(--color-line-soft, #e3e6ec); }
-.dpdf-cerceve { display: block; width: 100%; border: 0; border-radius: 8px; background: #d8dce3; }
-@media (max-width: 1040px) { .dpdf-ekran { overflow-x: auto; } .dpdf-cerceve { min-width: 1000px; } }
+.dpdf-cerceve { display: block; width: 100%; border: 0; border-radius: 8px; background: #d8dce3;
+  /* H432: ekran boyunda çerçeve, belge içinde kayar (dev katman yok); dar ekranda ölçek DersPdfEkranV15.sigdir */
+  height: calc(100dvh - var(--sh-top-h, 56px) - var(--sh-tabs-h, 0px) - env(safe-area-inset-bottom, 0px) - 96px); min-height: 420px; }

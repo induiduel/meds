@@ -179,6 +179,9 @@
    * Sayfa alanı
    * ========================================================================= */
   & .sh-main { max-width: none; gap: var(--v15-gap); padding: 4px var(--v15-pad) calc(var(--sh-tabs-h) + env(safe-area-inset-bottom, 0px) + 20px); overflow-x: clip; }
+  /* H431: odak ekranlarında (açık sesli ders, açık Öğren destesi) kabuk üst barı çizilmez, ekran kendi başlığını çizer;
+     o başlık durum çubuğu payını almadığı için iPhone'da (viewport-fit=cover + black-translucent) saatin altına giriyordu */
+  &.v15-odak:not(.is-app-fullscreen) .sh-main { padding-top: calc(env(safe-area-inset-top, 0px) + 4px); }
   @media (min-width: 600px) { & .sh-main { padding-bottom: var(--v15-pad); } }
   & .sh-main :is(img, video, canvas, iframe) { max-width: 100%; }
 

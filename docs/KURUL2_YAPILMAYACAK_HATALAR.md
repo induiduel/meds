@@ -1545,3 +1545,13 @@ Her maddede: belirti · kök neden · Kurul 2 kuralı · kapı durumu. Kanıtlar
 - **Belirti:** Yönetim › Kişiler › kişi › Etkinlik sekmesi her öğrencide boş.
 - **Kök neden:** `/api/admin/people/:key/olaylar` yalnız `user_events` okuyordu (38 kayıt, hepsi uid'siz "report"); sayfa ziyaretleri ise `user_data.data.kv.medsoru_etkinlik_v1.v` (JSON metni) içinde, sekme oraya bakmıyordu.
 - **Çözüm/kural:** Uç nokta ilk sayfada ziyaretleri `kind:'page'` olay olarak birleştirir (Tümü 100, Sayfa süzgeci 300). Yeni bir olay kaynağı eklenince yönetim ekranının o kaynağı gerçekten okuduğu canlı veriyle doğrulanır.
+
+## H431 — Odak ekranlarında durum çubuğu ve ana ekran çizgisi payı yoktu (2026-10-28, kullanıcı bildirdi: iPhone)
+- **Belirti:** iPhone'da (viewport-fit=cover + black-translucent) açık sesli ders ve açık Öğren destesi başlığı saatin altına giriyordu; sesli ders oynatıcısı ana ekran çizgisine biniyordu.
+- **Kök neden:** Kabuk odak ekranlarında kendi üst barını (güvenli alanlı) çizmiyor; ekranların kendi başlığı `.sh-main` 4 px dolgusundan başlıyordu. `.cd-dock` taban kuralındaki `env(safe-area-inset-bottom)` telefon/tablet kurallarında düz 6/10 px ile eziliyordu.
+- **Çözüm:** Kök sınıf `v15-odak` (ShellV15) + `.sh-main` üst dolgusu `env(safe-area-inset-top) + 4px`; `.cd-dock` alt dolgusu her kırılımda `+ env(safe-area-inset-bottom)`. Chrome'da `Emulation.setSafeAreaInsetsOverride` (üst 47 / alt 34) ile ölçüldü: başlık 51 px'te, oynatıcı tabandan 40 px yukarıda. **Gerçek iPhone'da sınanmadı**; kullanıcının gördüğü çakışma başka bir ekransa ayrıca bakılacak.
+- **Kural:** Kendi üst/alt çubuğunu çizen her ekran güvenli alan payını kendisi alır; medya sorgusunda dolgu yeniden yazılırken `env(safe-area-inset-*)` korunur.
+
+## H432 — Ders PDF ekranı kaydırırken "parçalanıp geri geliyordu" (2026-10-28, kullanıcı bildirdi)
+- **Kök neden:** Önizleme iframe'i içerik boyunda (~89.000 px) ve telefonda en az 1000 px genişti; tarayıcı bu dev katmanı karo karo çizip ekran dışını atıyor, kaydırırken karolar boş/kırık görünüp yeniden çiziliyordu (iPhone'da katman belleği düşük). Telefonda belge yana da taşıyordu.
+- **Çözüm/kural:** Çerçeve ekran boyunda, belge içinde kayar; dar ekranda belge çerçeve genişliğine `zoom` ile sığar, yazdırmadan önce ölçek kalkar (afterprint ile geri gelir). Ölçüm: telefonda çerçeve 358×642, ölçek 0,358, yatay taşma 0; masaüstünde 1010×694. Önizleme/gömülü belge iframe'i içerik boyuna büyütülmez.

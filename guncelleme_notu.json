@@ -1,9 +1,11 @@
 {
  "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
- "onem": 565,
- "baslik": "Yönetim: kişi etkinliği düzeldi",
+ "onem": 566,
+ "baslik": "iPhone ve PDF ekranı düzeltmeleri",
  "maddeler": [
-  "Kişi sayfasındaki Etkinlik sekmesi artık öğrencinin gezdiği sayfaları, süreyi ve kaydırmayı gösteriyor"
+  "Sesli derste ve Öğren destesinde başlık iPhone saatinin altına girmiyor",
+  "Oynatıcı iPhone ana ekran çizgisinin üstünde",
+  "Ders PDF ekranı kaydırırken bozulmuyor, telefonda ekrana sığıyor"
  ],
  "eklenen": [],
  "degisen": [],
