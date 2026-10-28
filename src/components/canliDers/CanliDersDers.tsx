@@ -975,8 +975,9 @@ export default function CanliDersDers({ dersKey, kamp }: { dersKey: string; kamp
           </>
         )}
       </div>
-      {tanitim.tur}
-      {secimTur.tur}
+      {/* Ayar çekmecesi/menü açıkken tanıtım kutusu üstüne binmesin (tablet sınamasında görüldü) */}
+      {!gor15 && !menu15 && tanitim.tur}
+      {!gor15 && !menu15 && secimTur.tur}
       {odak && <CdOdakModu onKapat={() => setOdak(false)} />}
       <CanliDersKimlikHedef detay={detay} kok={rootRef} />
       {gunlukAcik && <GunlukDiyalog dersKey={detay.key} onKapat={() => setGunlukAcik(false)} />}

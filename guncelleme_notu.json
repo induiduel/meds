@@ -1,10 +1,9 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 570,
-  "baslik": "Sesli derste bölüm sonunda örnek soru chip'i",
+  "onem": 571,
+  "baslik": "Sesli ders: tanıtım kutusu ayar çekmecesinin üstüne binmiyor",
   "maddeler": [
-    "Bir bölümün/parçanın son slaytında \"Örnek soru\" chip'i çıkıyor; dokununca ses durur, o parçaya ait örnek soruları çözersin.",
-    "\"Buraya kadar\" sekmesiyle baştan o noktaya kadarki tüm örnek sorular da çözülebilir; kapatınca ders kaldığı yerden sürer."
+    "Görünüm ve ses ayarları ya da ders menüsü açıkken ilk giriş tanıtım kutusu gizleniyor; çekmece tamamen görünüyor."
   ],
   "eklenen": [],
   "degisen": [],
