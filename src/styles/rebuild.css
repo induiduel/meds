@@ -1746,3 +1746,12 @@ html.theme-dark .deep-link-highlight-pulse, html[data-mode="dark"] .deep-link-hi
 }
 /* Günlük çözülen soru: sütun geniş olsa da çubuk en çok 24 px, ortalı (H107) */
 .st-col .ok, .st-col .bad { width: 100%; max-width: 24px; align-self: center; }
+/* H232: telefonda (≤420 px) soru kartı başlığında künye + ders hapı + sıra + 5 araç düğmesi 6 px aralıkla tek satıra sığmaya
+   çalışıyor, ders adı 72 px'e eziliyor ve simgeler birbirine yapışık görünüyordu. Aralık daralır, araç düğmesi 30 px'e iner,
+   kazanılan yer ders hapına kalır (dokunma alanı satır yüksekliği 44 px ile korunur). */
+@media (max-width: 420px) {
+  .qk-h { gap: 4px 2px; padding-left: 10px; }
+  .qk .qk-h .qk-ib, .qk.is-solve .qk-h > button.qk-ib { width: 30px !important; min-width: 30px !important; }
+  /* .qk-ders flex: 1 1 0 boş alanı .qk-sp ile yarı yarıya paylaşıyordu (ad 72 px'te kesik, yanında boşluk); içerik kadar al */
+  .qk-h > .qk-ders { flex: 0 1 auto; }
+}

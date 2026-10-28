@@ -1453,3 +1453,8 @@ Her maddede: belirti · kök neden · Kurul 2 kuralı · kapı durumu. Kanıtlar
   - **Listelerim ve notlar** (eski Çalışma masam, `/calis` aynı) = yalnız kişisel soru çalışma alanı (Soru çöz, Test, Listelerim, Notlar).
   - **Ders çalış merkezi** = ders araçları merkezi; "Devam et" yalnız sesli ders içindir.
   - Yeni "günlük özet" öğesi yalnız Bugün'e eklenir; diğer sayfalar kendi aracının durumunu gösterir.
+
+## H239–H241 — Ders programı: import.meta.glob anahtarı + numara eşleşmesi (2026-10-28)
+- **Belirti:** /dersler/program'da Kurul çipleri hiç yoktu; Kurul 1 açılınca "Invalid Date" başlığı.
+- **Kök neden:** `import.meta.glob` anahtarları globu çağıran dosyaya göredir (`services/programVeri.ts` → `../data/…`); bileşen `../../data/…` arıyordu. Sesli ders eşlemesi arşiv önekini atıp yalnız `kN-NN` numarasına bakıyordu (yıllar arası numara kesin değil). Tarihi boş kayıt `tarihYaz('')`'a gidiyordu.
+- **Kural:** glob kaydını başka dosyadan sorgulama, kaynağın yardımcısını (`programVar`) kullan; ders↔sesli bağlantısı yalnız `ders_id_tam` birebir başlangıcıyla; boş tarih ayrı etiketle.

@@ -5,7 +5,7 @@ import { fetchMyAccess } from '../../services/moderatorSession';
 import { linkClick, navigateTo, pathFor } from '../../router';
 import { KURULLAR, aktifKurul, bugun } from '../../services/kurulTakvimi';
 import { useDersListesi } from './dersVeri';
-import { OGLE, PROGRAM_KAYITLARI, SABAH, programYukle, saatBas, type ProgDers } from '../../services/programVeri';
+import { OGLE, SABAH, programVar, programYukle, saatBas, type ProgDers } from '../../services/programVeri';
 import { useKisiselProgram } from '../../services/kisiselProgram';
 import { saatYaz, tarihYaz, useBolge } from '../../services/bolgeTercih';
 import { useV15Baslik } from './baslik';
@@ -21,13 +21,13 @@ import '../../styles/v15/program.css';
  */
 type Gorunum = 'gun' | 'hafta' | 'ay' | 'liste';
 
-const KAYITLAR = PROGRAM_KAYITLARI;
 const tarih = (g: string) => new Date(`${g}T12:00:00`);
 const iso = (d: Date) => `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
 const ekle = (g: string, n: number) => { const d = tarih(g); d.setDate(d.getDate() + n); return iso(d); };
 const pazartesi = (g: string) => { const d = tarih(g); return ekle(g, -((d.getDay() + 6) % 7)); };
 /** Tarih yazımı dil ve bölge tercihine göre (uzun: 29 Ekim Perşembe, kısa: 29.10.2026 Perşembe) */
-const gunYaz = (g: string, uzun = true) => tarihYaz(g, undefined, { gunAdi: true, kisaAd: !uzun });
+// H241: Kurul 1 kaydında tarihi boş 5 ders var; tarihYaz('') "Invalid Date" başlığı basıyordu (Kurul çipleri H240 ile görünür olunca ortaya çıktı)
+const gunYaz = (g: string, uzun = true) => (g ? tarihYaz(g, undefined, { gunAdi: true, kisaAd: !uzun }) : 'Tarihi belirsiz');
 /** Kayıtta öğretim üyesi kimi yerde büyük harf: Türkçe kurallarıyla sözcük başı büyük */
 const adYaz = (s = '') => s.toLocaleLowerCase('tr-TR').replace(/(^|[\s.(/-])(\p{L})/gu, (_, a: string, b: string) => a + b.toLocaleUpperCase('tr-TR'));
 /** Branş başına sabit renk tonu (palet vurgusu üstünde açı); renk sözcüğü değil, ayırt etmek için */
@@ -69,7 +69,10 @@ export default function DersProgramiV15() {
   /** ders kimliği (k2-07) → yayındaki sesli dersin anahtarı */
   const sesliKey = useMemo(() => {
     const m = new Map<string, string>();
-    for (const d of sesli || []) { const x = /^(?:y\d+-)?(k\d+-\d+)/.exec(d.key); if (x && !m.has(x[1])) m.set(x[1], d.key); }
+    // H239: eski eşleme y25- gibi arşiv önekini atıp yalnız "kN-NN" numarasına bakıyordu; geçen yılın aynı numaralı dersi
+    // bu yılın farklı konulu dersine bağlanabilirdi (numara eşleşmesi kesin değil). Yalnız bu yılın anahtarı (önek yok) alınır;
+    // satırda ayrıca kayıt defterinin tam kimliği (ders_id_tam) ile anahtarın başı birebir tutmalı.
+    for (const d of sesli || []) { const x = /^(k\d+-\d+)(?:-|$)/.exec(d.key); if (x && !m.has(x[1])) m.set(x[1], d.key); }
     return m;
   }, [sesli]);
 
@@ -86,7 +89,7 @@ export default function DersProgramiV15() {
         m.set(e.tarih, a);
       }
     }
-    return new Map([...m].sort((x, y) => x[0].localeCompare(y[0])));
+    return new Map([...m].sort((x, y) => (!x[0] ? 1 : !y[0] ? -1 : x[0].localeCompare(y[0]))));
   }, [veri, kisisel, duzenle, kb.baslangic, kb.bitis]);
   const gunler = useMemo(() => [...gunluk.keys()], [gunluk]);
   const pzt = pazartesi(gun);
@@ -166,7 +169,8 @@ export default function DersProgramiV15() {
   };
 
   const satir = (d: ProgDers, tarihGoster = false) => {
-    const key = sesliKey.get(d.id);
+    const aday = sesliKey.get(d.id);
+    const key = aday && (!d.ders_id_tam || aday === d.ders_id_tam || aday.startsWith(`${d.ders_id_tam}-`)) ? aday : undefined;
     const gecti = d.tarih < g;
     const ic = (
       <>
@@ -192,7 +196,10 @@ export default function DersProgramiV15() {
     );
   };
 
-  const kurullar = KURULLAR.filter((k) => KAYITLAR[`../../data/dersler/k${k.kurul}.json`]);
+  // H240: import.meta.glob anahtarları globu yazan dosyaya göredir (services/programVeri.ts → '../data/dersler/kN.json');
+  // burada '../../data/…' arandığı için hiçbir kurul bulunmuyor, Kurul çipleri hiç çizilmiyor ve öğrenci geçmiş kurulun
+  // (sesli dersi olan Kurul 1) programına geçemiyordu. Var/yok denetimi kaynağın kendi yardımcısıyla yapılır.
+  const kurullar = KURULLAR.filter((k) => programVar(k.kurul));
 
   return (
     <div className="pg15">

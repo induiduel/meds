@@ -111,6 +111,13 @@
 }
 @media (min-width: 600px) { :root[data-v15='on'] main.contents > .q15 { padding-inline: 24px; } }
 @media (min-width: 1024px) { :root[data-v15='on'] main.contents > .q15 { padding-inline: 32px; } }
+/* H235: PC'de gövde flex: 1 1 auto ile tüm yüksekliği kaplıyor, alt eylem çubuğu ekranın dibine itiliyordu; kısa bir
+   soruda kök/şıklar ile "Cevapla" arasında ~400 px boşluk kalıyordu. ≥1024 px'te gövde içeriği kadar uzar (taşarsa yine
+   kendi içinde kayar), eylem çubuğu hemen altında durur; telefonda başparmak erişimi için alt çubuk dipte kalır. */
+@media (min-width: 1024px) {
+  .q15:not(.q15-son) > .q15-govde { flex: 0 1 auto; }
+  .q15:not(.q15-son) > .q15-alt { margin-top: 4px; }
+}
 /* C03/C04: seri rozeti, 48 saat notu */
 .q15-seri { align-self: center; }
 .q15-cek-not { margin: 0; font-size: .85rem; color: var(--color-ink-2); }

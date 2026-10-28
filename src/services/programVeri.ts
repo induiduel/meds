@@ -4,7 +4,7 @@
  */
 import { safeJsonFetch } from './api';
 
-export interface ProgDers { id: string; brans: string; konu: string; ogretim_uyesi?: string; tarih: string; saat?: string; saat_sayisi?: number; kisisel?: boolean }
+export interface ProgDers { id: string; brans: string; konu: string; ogretim_uyesi?: string; tarih: string; saat?: string; saat_sayisi?: number; kisisel?: boolean; /** H239: kayıt defterindeki tam ders kimliği (sesli ders anahtarı bununla başlar) */ ders_id_tam?: string }
 
 export const PROGRAM_KAYITLARI = import.meta.glob('../data/dersler/k[1-6].json');
 export const programVar = (kurul: number) => !!PROGRAM_KAYITLARI[`../data/dersler/k${kurul}.json`];

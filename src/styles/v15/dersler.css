@@ -80,7 +80,8 @@
   .d15-tool { min-height: 132px; }
 }
 @container d15 (min-width: 860px) {
-  .d15-tools { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  /* H230: sabit 4 sütun, menüde görünür araç 3'e düşünce sağda boş sütun bırakıyordu; auto-fit sütunu kart sayısına göre kurar */
+  .d15-tools { grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); }
   .d15-devam-l { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .d15-devam-l .d15-dk:nth-child(3), .d15-devam-l .d15-skel:nth-child(3) { display: flex; }
 }

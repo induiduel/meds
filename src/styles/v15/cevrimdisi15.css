@@ -175,3 +175,14 @@ button.cv15-satir-ad:hover { background: var(--color-field); }
 .cv15-tehlike { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; }
 .cv15-tehlike > span { display: flex; flex-direction: column; gap: 2px; min-width: 0; flex: 1 1 18ch; }
 .cv15-tehlike b { font-weight: 600; }
+
+/* H238: tablet/PC'de Kurul süzgeci .v15-hscroll ile tek satır yatay kaydırmaydı; 8 kurul + Tümü/Kurulsuz çipi kap
+   genişliğini aşınca sağdaki çipler görünmeden kırpılıyordu (kaydırma çubuğu gizli). ≥600 px'te satır sarar.
+   Toplu indir panelinde 16 branş + 8 içerik hapı 34 px yükseklik/12 px dolguyla ilk ekranı dolduruyordu; çipler
+   sıkılaşır (dokunma hedefi telefonda değişmez). */
+@media (min-width: 600px) {
+  :root[data-v15='on'] .cv15-kurul.v15-hscroll { flex-wrap: wrap; overflow: visible; -webkit-mask-image: none; mask-image: none; }
+  .cv15-toplu .cv15-cipler { gap: 5px; }
+  .cv15-toplu .cv15-cipler .cv15-cip { min-height: 30px; padding: 0 10px; font-size: 13px; }
+  .cv15-toplu { gap: 10px; }
+}

@@ -230,6 +230,14 @@
     & .f12-deck-sel { display: none; }
     & .f12-search { max-width: none; flex-basis: 100%; }
     & .f12-head .f12-grow { display: none; }
+    /* H231: telefonda .f12-head flex-wrap ile Kartlar|Spotlar ve Terimler|Ders kartları iki satıra kırılıyor, deste haplarıyla
+       üç satır kartı aşağı itiyordu; deste satırı da kaydırılabilir olduğu belli olmadan sağdan kesik görünüyordu.
+       Başlık tek satır (sıkı segment + yatay kaydırma), deste satırının sağ kenarı soluklaşarak devamı olduğunu gösterir. */
+    & .f12-head { flex-wrap: nowrap; gap: 6px; overflow-x: auto; scrollbar-width: none; }
+    & .f12-head::-webkit-scrollbar { display: none; }
+    & .f12-head .f12-seg > :is(a, button) { padding: 0 9px; }
+    & .f12-decks { -webkit-mask-image: linear-gradient(90deg, #000 calc(100% - 28px), transparent);
+      mask-image: linear-gradient(90deg, #000 calc(100% - 28px), transparent); padding-right: 24px; }
     & .f12-sp-row { flex-wrap: wrap; row-gap: 6px; }
     & .f12-sp-row > .f12-badge { order: 0; }
     & .f12-sp-act { order: 1; margin: -6px -6px 0 auto; }
