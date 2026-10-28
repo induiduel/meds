@@ -1,13 +1,14 @@
 {
  "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
- "onem": 532,
- "baslik": "Tanıtım videoları daha akıcı",
+ "onem": 533,
+ "baslik": "Sesli ders altyapısı: parça parça ses",
  "maddeler": [
-  "Tanıtım videolarında imleç artık tam tıkladığı düğmenin üstüne gidiyor",
-  "Videolar yaklaşık %20 daha kısa"
+  "Yeni eklenen sesli derslerde ses paragraf paragraf saklanıyor; düzeltmede yalnız değişen kısım yeniden seslendiriliyor",
+  "Ses tek parça olarak kodlanıyor: ek yerlerinde kesinti ya da tık yok",
+  "Metin, PDF işaretleri ve çizimler sesle eş zamanlı kalıyor"
  ],
  "eklenen": [
-  "Tanıtım videoları diyaloğu (4 video, İleri/Geç)"
+  "Klipli sesli ders altyapısı (yalnız yeni dersler)"
  ],
  "degisen": [],
  "duzeltilen": [],

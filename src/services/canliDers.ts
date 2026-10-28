@@ -65,6 +65,8 @@ interface KayitVaryant {
   sureSn: number;
   bayt: number;
   zamanlama?: [number, number][];
+  /** klipli derste paragraf klip özetleri (sesliAnlatim.ts klipKaydet); kelime_zaman.py klip önbelleği için */
+  klipler?: string[];
 }
 
 const oku = <T,>(p: string, bos: T): T => {
@@ -418,6 +420,7 @@ export function registerCanliDersRoutes(app: Express) {
         // cümle başına sesteki konuşma parçaları [a1,b1,a2,b2…] (duraklamalar çıkarılmış): kelime kelime takip
         cumleKonusma: Array.isArray(v.zamanlama) && v.zamanlama.length === pars.length && cumleZaman(v.id) ? cz.varyantlar[v.id].k || null : null,
         kelimeZaman: Array.isArray(v.zamanlama) && v.zamanlama.length === pars.length ? kelimeZaman(v.id) : null,
+        ...(Array.isArray(v.klipler) && v.klipler.length === pars.length ? { klipler: v.klipler } : {}),
       })),
       pdf,
       // önemli cümle/terim aralıkları (scripts/sesli_anlatim/vurgu_uret.py): { "<i>": [[bas, son, "c"|"t", onem]] }

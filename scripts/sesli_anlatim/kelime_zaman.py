@@ -215,6 +215,50 @@ def paragraf_hizala(metin: str, bas: float, son: float, th: str, tz: list[float]
     return sonuc
 
 
+KLIP_ZAMAN = KOK / "klip_zaman"  # klipli ders: {surum, w: {klip özeti: [paragraf başına göre kelime başlangıçları]}}
+
+
+def klipli_isle(key: str, paras: list[dict], z: list, mp3: Path, klipler: list[str], kuru: bool) -> tuple[dict[str, list[float]], str]:
+    """Klipli ders (2026-10-28): kelime zamanı klip başına GÖRELİ saklanır. Aynı klip (aynı paragraf sesi) yeni birleşik
+    seste başka saniyeye kaysa bile Whisper yeniden çalışmaz: mutlak zaman = paragraf başı + göreli. Yalnız yeni klipler
+    çözülür (çoğu yeniyse tüm dosya tek geçişte, azsa yalnız o paragrafların penceresi)."""
+    t0 = time.time()
+    f = KLIP_ZAMAN / f"{key}.json"
+    onb = json.loads(f.read_text()) if f.exists() else {}
+    w = dict(onb.get("w") or {}) if onb.get("surum") == 1 else {}
+    kel_say = {p["i"]: len(KELIME_RE.findall(p["metin"])) for p in paras}
+    eksik = [p for p in paras if p["i"] < len(z) and z[p["i"]] and len(w.get(klipler[p["i"]]) or []) != kel_say[p["i"]]]
+    pcm = coz(mp3) if eksik else None
+    if eksik and len(eksik) > len(paras) / 2:
+        th, tz = tani(pcm)
+        tza = np.array(tz)
+        for p in eksik:
+            bas, son = float(z[p["i"]][0]), float(z[p["i"]][1])
+            ts = paragraf_hizala(p["metin"], bas, son, th, tz, int(np.searchsorted(tza, bas - 0.4)), int(np.searchsorted(tza, son + 0.4)))
+            w[klipler[p["i"]]] = [round(t - bas, 3) for t in ts]
+    else:
+        for p in eksik:
+            bas, son = float(z[p["i"]][0]), float(z[p["i"]][1])
+            a = max(0, int((bas - 0.3) * SR))
+            th, tz = tani(pcm[a:int(son * SR)])
+            tz = [t + a / SR for t in tz]
+            ts = paragraf_hizala(p["metin"], bas, son, th, tz, 0, len(th))
+            w[klipler[p["i"]]] = [round(t - bas, 3) for t in ts]
+    if eksik and not kuru:
+        KLIP_ZAMAN.mkdir(parents=True, exist_ok=True)
+        tmp = f.with_suffix(".tmp")
+        tmp.write_text(json.dumps({"surum": 1, "w": w}, separators=(",", ":")))
+        tmp.replace(f)
+    p_out: dict[str, list[float]] = {}
+    for p in paras:
+        i = p["i"]
+        if i >= len(z) or not z[i]:
+            continue
+        bas, son = float(z[i][0]), float(z[i][1])
+        p_out[str(i)] = [round(min(bas + r, son - 0.05), 2) for r in w.get(klipler[i], [])]
+    return p_out, f"klipli: {len(eksik)} yeni klip çözüldü, {len(paras) - len(eksik)} yeniden kullanıldı, {time.time() - t0:.0f} sn"
+
+
 def varyant_isle(paras: list[dict], z: list, mp3: Path) -> tuple[dict[str, list[float]], str]:
     t0 = time.time()
     pcm = coz(mp3)
@@ -299,7 +343,11 @@ def ders_isle(key: str, vid_sec: str | None, zorla: bool, kuru: bool, saglayici:
             bayt = mp3.stat().st_size
             if not zorla and sonuc["varyantlar"].get(vid, {}).get("bayt") == bayt:
                 continue
-        p_out, not_ = varyant_isle(paras, z, mp3)
+        kl = v.get("klipler")
+        if isinstance(kl, list) and len(kl) == len(paras) == len(z):
+            p_out, not_ = klipli_isle(key, paras, z, mp3, kl, kuru)
+        else:
+            p_out, not_ = varyant_isle(paras, z, mp3)
         sonuc["varyantlar"][vid] = {"bayt": bayt, "p": p_out}
         rapor.append(f"{vid}: {not_}")
         if not kuru:  # her varyanttan sonra yaz: uzun işte kesinti olursa yapılan kaybolmasın

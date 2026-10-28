@@ -103,6 +103,10 @@ def istek(yol: str, govde: dict | bytes | None = None, yontem: str = "POST", bas
             return e.code, {"error": str(e)}
 
 
+def _basliklar() -> dict:
+    return {"x-panel-secret": SIR, "x-isci": ISCI, "x-saglayici": SAGLAYICI, "User-Agent": "meds-ema-isci"}
+
+
 # ---------------------------------------------------------------- sentez (ağır süreç)
 
 
@@ -157,10 +161,8 @@ def _ks():
     return kisaltma_ses
 
 
-def paragraf_seslendir(tts, metin: str):
-    """Bir paragraf → float32 dizi (24 kHz). Süre metne göre tutarsızsa farklı tohumla 3 kez dener."""
-    import numpy as np
-
+def tts_metni(metin: str) -> str:
+    """Modele giden okunuş metni (paragraf/zamanlama metni değişmez)."""
     # Kısaltma okunuşu — yalnız modele giden metin; paragraf/zamanlama değişmez.
     # Kurul 2+ (UZUN_KISALTMA): fonetik terimler + ünlüsü uzatılmış harf adları ("dee nee aa"); birleşik "denea" EMA'da
     # kelime gibi okunuyordu ("deneye", 2026-10-17 ölçümü, KURUL2_YAPILMAYACAK_HATALAR H3). Kurul 1 eski yolda.
@@ -178,6 +180,16 @@ def paragraf_seslendir(tts, metin: str):
         metin = _ks().uzat(metin)
     else:
         metin = okunus.duzelt(metin)
+    return metin
+
+
+def paragraf_seslendir(tts, metin: str, hazir: bool = False):
+    """Bir paragraf → float32 dizi (24 kHz). Süre metne göre tutarsızsa farklı tohumla 3 kez dener.
+    hazir: metin zaten tts_metni'nden geçmiş."""
+    import numpy as np
+
+    if not hazir:
+        metin = tts_metni(metin)
     beklenen = max(1.0, len(metin) / (KARAKTER_SN * HIZ))
     en_iyi = None
     for deneme in range(3):
@@ -283,6 +295,8 @@ def parca_uret(tts, parca: dict, ilk: bool):
 
 def sentezle(is_dosyasi: str) -> int:
     j = json.loads(Path(is_dosyasi).read_text(encoding="utf-8"))
+    if j.get("klip") and j.get("paragraflar"):
+        return sentezle_klip(j)
     is_ = j["is"]
     parcalar = j["parcalar"]
     mevcut = set(j.get("mevcut") or [])
@@ -320,6 +334,103 @@ def sentezle(is_dosyasi: str) -> int:
         log(f"birleştirme reddedildi ({kod}): {cevap}")
         return 2
     log(f"{is_['key']} bitti ✔")
+    return 0
+
+
+# ---------------------------------------------------------------- klipli ders (2026-10-28, yalnız yeni dersler)
+# Her paragraf ayrı klip: kayıpsız PCM (s16le 24 kHz), adı paragrafın özeti. Klip sunucuda (ses/<key>/.klip) ve burada
+# (VERI/klip/<key>) kalır; metin değişince yalnız özeti değişen paragraf seslendirilir. Tam ses kliplerden aynı
+# sessizliklerle (bölüm başı BOLUM_ONCE_SN, paragraf sonu ARA_SN) birleştirilip TEK seferde MP3'e kodlanır: parça ekleri
+# olmadığından ek yerinde tık/boşluk oluşmaz, paragraf başlangıçları örnek düzeyinde kesindir.
+KLIP_SURUM = 1  # ses_temizle/sessiz_kirp/model ayarı değişirse artır: eski klipler kendiliğinden yeniden üretilir
+
+
+def klip_ozeti(metin: str, okunan: str) -> str:
+    import hashlib
+    return hashlib.sha1(f"ema-lightning|v{KLIP_SURUM}|hiz{HIZ}|sr{SR}\n{metin}\n\0{okunan}".encode("utf-8")).hexdigest()
+
+
+def sentezle_klip(j: dict) -> int:
+    import numpy as np
+
+    is_ = j["is"]
+    key = is_["key"]
+    uzun_kisaltma_ayarla(key)
+    paras = j["paragraflar"]
+    sunucuda = set(j.get("klipler") or [])
+    yerel_dir = VERI / "klip" / key
+    yerel_dir.mkdir(parents=True, exist_ok=True)
+    ozetler = [klip_ozeti(p["t"], tts_metni(p["t"])) for p in paras]
+
+    def yukle(h: str, pcm: bytes) -> int:
+        for deneme in range(1, 6):
+            try:
+                kod, cevap = istek(f"/api/sesli-anlatim/yerel/is/{is_['id']}/klip/{h}", pcm, "PUT",
+                                   {"Content-Type": "application/octet-stream"}, 180)
+            except Exception as e:
+                kod, cevap = 0, {"error": str(e)}
+            if kod == 200:
+                return 0
+            if kod in (400, 404, 409, 422):
+                log(f"klip {h[:8]} reddedildi: {cevap}")
+                return 2 if kod != 409 else 3
+            log(f"klip {h[:8]} yüklenemedi ({kod}): {cevap}; {deneme}. deneme")
+            time.sleep(15 * deneme)
+        return 4
+
+    eksik = [i for i, h in enumerate(ozetler) if not (yerel_dir / f"{h}.pcm").exists() and h not in sunucuda]
+    tts = model_yukle() if eksik else None
+    yeni = 0
+    for n, i in enumerate(sorted(set(ozetler.index(h) for h in ozetler))):  # aynı paragraf iki kez geçerse bir kez
+        h = ozetler[i]
+        f = yerel_dir / f"{h}.pcm"
+        if not f.exists() and h in sunucuda:  # başka bilgisayarda üretilmiş: indir
+            req = urllib.request.Request(f"{SUNUCU}/api/sesli-anlatim/yerel/klip/{key}/{h}", headers=_basliklar())
+            with urllib.request.urlopen(req, timeout=120) as r:
+                f.write_bytes(r.read())
+            continue
+        if f.exists():
+            if h not in sunucuda and (rc := yukle(h, f.read_bytes())):
+                return rc
+            continue
+        t0 = time.time()
+        wav, not_ = paragraf_seslendir(tts, tts_metni(paras[i]["t"]), hazir=True)
+        if not_:
+            log(f"  paragraf {i + 1}: {not_}")
+        pcm = (np.clip(wav, -1, 1) * 32767).astype("<i2").tobytes()
+        tmp = f.with_suffix(".tmp")
+        tmp.write_bytes(pcm)
+        tmp.replace(f)
+        if rc := yukle(h, pcm):
+            return rc
+        yeni += 1
+        log(f"{key} klip {i + 1}/{len(paras)}: {len(wav) / SR:.0f} sn ses, {time.time() - t0:.0f} sn'de")
+    log(f"{key}: {yeni} yeni klip, {len(paras) - yeni} klip yeniden kullanıldı")
+
+    # birleştir: paragraf başlangıçları örnek sayısıyla kesin, tek kodlama
+    sessiz = lambda sn: np.zeros(int(round(sn * SR)), dtype="<i2")  # noqa: E731
+    parcalar, baslar, t = [], [], 0
+    for i, p in enumerate(paras):
+        if p.get("bolumBasi") and i > 0:
+            parcalar.append(sessiz(BOLUM_ONCE_SN))
+            t += len(parcalar[-1])
+        x = np.frombuffer((yerel_dir / f"{ozetler[i]}.pcm").read_bytes(), dtype="<i2")
+        baslar.append(t)
+        parcalar += [x, sessiz(ARA_SN)]
+        t += len(x) + len(parcalar[-1])
+    tum = np.concatenate(parcalar)
+    mp3 = mp3_kodla(tum.tobytes())
+    gercek = len(mp3) * 8 / (KBPS * 1000)
+    k = gercek / (len(tum) / SR)  # kodlayıcı dolgusu: zamanları gerçek MP3 süresine ölçekle (eski yolla aynı)
+    bas_sn = [b / SR * k for b in baslar]
+    zamanlama = [[round(b, 3), round(bas_sn[i + 1] if i + 1 < len(bas_sn) else gercek, 3)] for i, b in enumerate(bas_sn)]
+    meta = {"metinHash": j["metinHash"], "zamanlama": zamanlama, "klipler": ozetler}
+    kod, cevap = istek(f"/api/sesli-anlatim/yerel/is/{is_['id']}/tam", mp3, "PUT",
+                       {"x-tam-meta": base64.b64encode(json.dumps(meta).encode()).decode(), "Content-Type": "audio/mpeg"}, 600)
+    if kod != 200:
+        log(f"tam ses reddedildi ({kod}): {cevap}")
+        return 2
+    log(f"{key} bitti ✔ ({gercek / 60:.1f} dk, tek kodlama)")
     return 0
 
 

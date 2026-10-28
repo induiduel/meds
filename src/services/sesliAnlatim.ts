@@ -48,6 +48,8 @@ interface Varyant {
   zamanlama?: [number, number][];
   /** olcum: üretimde ölçüldü · tahmini: parça içi karakter oranı · sessizlik / karakter: zamanlama_cikar.py */
   zamanlamaKaynak?: string;
+  /** Klipli ders (yalnız yeni dersler): paragraf başına ses klibinin özeti; dizin = paragraf sırası. Bkz. klipKaydet. */
+  klipler?: string[];
 }
 interface Is {
   id: string;
@@ -69,7 +71,8 @@ interface Is {
   isci?: string;
   sinyal?: string;
 }
-interface Ders { key: string; no: number; baslik: string; sira: number; ses: 'emel' | 'aoede' }
+/** klip: paragraf klipleriyle üretilir (2026-10-28'den sonra eklenen dersler); eski dersler bayraksız, eski yolda kalır. */
+interface Ders { key: string; no: number; baslik: string; sira: number; ses: 'emel' | 'aoede'; klip?: boolean }
 
 const KOK = path.join(process.cwd(), 'data', 'sesli_anlatim');
 const P = {
@@ -84,7 +87,11 @@ const P = {
   sesDir: (k: string) => path.join(KOK, 'ses', k),
   ses: (k: string, v: string) => path.join(KOK, 'ses', k, `${v}.mp3`),
   parcaDir: (k: string, isId: string) => path.join(KOK, 'ses', k, '.parca', isId),
+  /** Klip deposu: <özet>.pcm (24 kHz mono s16le, kayıpsız). İş bitince silinmez; aynı paragraf yeniden üretilmez. */
+  klip: (k: string, h: string) => path.join(KOK, 'ses', k, '.klip', `${h}.pcm`),
 };
+const KLIP_OZET = /^[0-9a-f]{40}$/;
+const klipliMi = (k: string) => !!oku<Ders[]>(P.dersler, []).find((d) => d.key === k)?.klip;
 
 // Ücretli bütçe: Google'ın 2026 fiyatı 9 $/1M ses tokenı; defter temkinli olsun diye 2 katı ve yüksek kurla hesaplar.
 const BUTCE = { tavanTL: 900, kilitTL: 850, sesUsdMilyon: 18, metinUsdMilyon: 2, usdTry: 50 };
@@ -814,6 +821,57 @@ async function birlestirKaydet(is: Is, md: string, parcalar: Parca[], dir: strin
   degisti('bitti');
 }
 
+/** Klipli ders: işçi paragraf kliplerini (kayıpsız PCM) depoya yükler, TEK seferde MP3'e kodlayıp tam dosyayı ve ölçülü
+ *  paragraf zamanlamasını gönderir. Parça ekleri yok (tek kodlama → ek yerinde tık/boşluk olmaz); klipler silinmez, metin
+ *  değişince yalnız değişen paragraf seslendirilir. Eşleşme kapısı eski yolla aynıdır. */
+function klipKaydet(is: Is, md: string, mp3: Buffer, zamanlama: [number, number][], klipler: string[]) {
+  const paragrafSayisi = metinParagraflari(md).length;
+  const toplamSn = mp3Sure(mp3, 64);
+  const z = zamanlama;
+  const sorun =
+    klipler.length !== paragrafSayisi || !klipler.every((h) => KLIP_OZET.test(h) && fs.existsSync(P.klip(is.key, h)))
+      ? 'klip listesi metinle ya da depoyla uyuşmuyor'
+      : z.length !== paragrafSayisi
+        ? `paragraf sayısı ${z.length} ≠ metin ${paragrafSayisi}`
+        : Math.abs(z[z.length - 1][1] - toplamSn) > 1.5
+          ? `zamanlama sonu ${z[z.length - 1][1].toFixed(1)} sn ≠ ses ${toplamSn.toFixed(1)} sn`
+          : z.some(([a, b], i) => !(b > a) || (i > 0 && Math.abs(a - z[i - 1][1]) > 0.05))
+            ? 'paragraf aralıkları bozuk'
+            : '';
+  if (sorun) throw new Error(`Eşleşme denetimi geçmedi: ${sorun} — ses yayına alınmadı (klipler korunuyor)`);
+  const vid = `${is.saglayici}-${sesSlug(is.ses)}-${Date.now().toString(36)}`;
+  fs.mkdirSync(P.sesDir(is.key), { recursive: true });
+  fs.writeFileSync(P.ses(is.key, vid), mp3);
+  const s = SAGLAYICILAR[is.saglayici];
+  const v: Varyant = {
+    id: vid,
+    saglayici: is.saglayici,
+    ses: is.ses,
+    model: is.saglayici === 'xtts-yerel' ? 'xtts_v2' : 'ema-lightning',
+    etiket: `${s.etiket} · ${is.ses}`,
+    ucretli: s.ucretli,
+    sureSn: Math.round(toplamSn),
+    bayt: mp3.length,
+    parca: klipler.length,
+    metinHash: hash(md),
+    olusturuldu: simdi(),
+    zamanlama: z.map(([a, b]) => [yuvarla(a, 3), yuvarla(b, 3)] as [number, number]),
+    zamanlamaKaynak: 'olcum',
+    klipler,
+  };
+  const k = kayitlar();
+  const liste = (k[is.key] = k[is.key] || []);
+  if (is.varsayilanYap || !liste.length) liste.unshift(v);
+  else liste.push(v);
+  yaz(P.kayit, k);
+  isGuncelle(is.id, (x) => {
+    x.durum = 'bitti';
+    x.bitti = simdi();
+    x.hata = undefined;
+  });
+  degisti('bitti');
+}
+
 type Serit = 'edge' | 'gemini' | 'ucretli' | 'yerel';
 /** 'yerel' şeridini sunucu çalıştırmaz: işi yöneticinin bilgisayarındaki XTTS / EMA işçisi alır. */
 const seritSaglayici = (x: Is): Serit =>
@@ -1208,6 +1266,12 @@ export function registerSesliAnlatimRoutes(
       metinHash: hash(md),
       parcalar: parcalar.map((p) => ({ paragraflar: p.metin.split('\n'), bolumBasi: p.bolumBasi, ilkParagraf: p.ilkParagraf })),
       mevcut,
+      // Klipli ders: işçi (EMA) paragraf kliplerini kullanır; bu alanları tanımayan işçi eski parça yolunda kalır
+      ...(klipliMi(is.key) ? {
+        klip: true,
+        paragraflar: metinParagraflari(md).map((p) => ({ t: p.t, bolumBasi: p.bolumBasi })),
+        klipler: fs.existsSync(path.dirname(P.klip(is.key, 'x'))) ? fs.readdirSync(path.dirname(P.klip(is.key, 'x'))).filter((f) => f.endsWith('.pcm')).map((f) => f.slice(0, -4)) : [],
+      } : {}),
     });
   });
 
@@ -1248,6 +1312,62 @@ export function registerSesliAnlatimRoutes(
     sinyal(req, is.id, `${is.key} ${hazir}/${parcalar.length} parça`);
     degisti('ilerleme');
     res.json({ ok: true, hazir, toplam: parcalar.length });
+  });
+
+  // Klip yükleme (klipli ders): gövde ham PCM (24 kHz mono s16le); ad = işçinin hesapladığı paragraf özeti (sha1)
+  app.put('/api/sesli-anlatim/yerel/is/:id/klip/:h', guclu, express.raw({ type: '*/*', limit: '40mb' }), (req, res) => {
+    const is = yerelIs(String(req.params.id));
+    if (!is || is.durum !== 'calisiyor') return res.status(409).json({ error: 'iş çalışır durumda değil' });
+    const h = String(req.params.h);
+    const buf = req.body as Buffer;
+    if (!klipliMi(is.key) || !KLIP_OZET.test(h)) return res.status(400).json({ error: 'klip geçersiz' });
+    if (!Buffer.isBuffer(buf) || buf.length < 4800 || buf.length % 2) return res.status(400).json({ error: 'klip sesi geçersiz' });
+    const f = P.klip(is.key, h);
+    fs.mkdirSync(path.dirname(f), { recursive: true });
+    fs.writeFileSync(`${f}.tmp`, buf);
+    fs.renameSync(`${f}.tmp`, f);
+    isGuncelle(is.id, (x) => {
+      x.sinyal = simdi();
+    });
+    res.json({ ok: true });
+  });
+
+  // Klip indirme: işçinin yerel önbelleğinde olmayan (başka bilgisayarda üretilmiş) klip
+  app.get('/api/sesli-anlatim/yerel/klip/:key/:h', guclu, (req, res) => {
+    const k = guvenliAnahtar(String(req.params.key));
+    const h = String(req.params.h);
+    if (!k || !KLIP_OZET.test(h) || !fs.existsSync(P.klip(k, h))) return res.status(404).end();
+    res.setHeader('Content-Type', 'application/octet-stream');
+    fs.createReadStream(P.klip(k, h)).pipe(res);
+  });
+
+  // Klipli dersin tam sesi: gövde tek kodlamalı MP3; meta x-tam-meta (base64 JSON) {metinHash, zamanlama, klipler}
+  app.put('/api/sesli-anlatim/yerel/is/:id/tam', guclu, express.raw({ type: '*/*', limit: '95mb' }), (req, res) => {
+    const is = yerelIs(String(req.params.id));
+    if (!is || is.durum !== 'calisiyor') return res.status(409).json({ error: 'iş çalışır durumda değil' });
+    let meta: { metinHash?: string; zamanlama?: [number, number][]; klipler?: string[] };
+    try {
+      meta = JSON.parse(Buffer.from(String(req.headers['x-tam-meta'] || ''), 'base64').toString('utf8'));
+    } catch {
+      return res.status(400).json({ error: 'meta okunamadı' });
+    }
+    const md = fs.readFileSync(P.metin(is.key), 'utf8');
+    if (meta.metinHash !== hash(md)) return res.status(409).json({ error: 'Konuşma metni iş alındıktan sonra değişti; iş yeniden alınmalı' });
+    const buf = req.body as Buffer;
+    if (!Buffer.isBuffer(buf) || buf.length < 1000 || !Array.isArray(meta.zamanlama) || !Array.isArray(meta.klipler))
+      return res.status(400).json({ error: 'tam ses ya da meta eksik' });
+    try {
+      klipKaydet(is, md, buf, meta.zamanlama, meta.klipler.map(String));
+      sinyal(req, undefined, `${is.key} bitti`);
+      res.json({ ok: true });
+    } catch (e: any) {
+      isGuncelle(is.id, (x) => {
+        x.durum = 'hata';
+        x.hata = String(e?.message || e).slice(0, 400);
+      });
+      degisti('hata');
+      res.status(422).json({ error: String(e?.message || e) });
+    }
   });
 
   app.post('/api/sesli-anlatim/yerel/is/:id/bitir', guclu, async (req, res) => {
@@ -1364,7 +1484,8 @@ export function registerSesliAnlatimRoutes(
     const no = Number(req.body?.no) || Number((/^k\d+-(\d+)-/.exec(k) || [])[1]) || 0;
     const var_ = dersler.find((d) => d.key === k);
     if (var_) var_.baslik = baslik || var_.baslik;
-    else dersler.push({ key: k, no, baslik, sira: Math.max(0, ...dersler.map((d) => d.sira || 0)) + 1, ses: 'emel' });
+    // yeni ders klipli üretilir (paragraf klipleri, kısmi yeniden seslendirme); var olan derslerin bayrağına dokunulmaz
+    else dersler.push({ key: k, no, baslik, sira: Math.max(0, ...dersler.map((d) => d.sira || 0)) + 1, ses: 'emel', klip: true });
     yaz(P.dersler, dersler);
     // PDF hizalaması: paragraf başına sayfa (sayı tutmazsa yazılmaz — canlı ders yalnız metni gösterir)
     const sayfalar: unknown[] = Array.isArray(req.body?.sayfalar) ? req.body.sayfalar : [];

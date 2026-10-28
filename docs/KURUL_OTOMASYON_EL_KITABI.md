@@ -488,3 +488,18 @@ LLM otomasyonu kapalıdır (AGENTS kural 20). Yeni ders, kullanıcı hangi dosya
 `ders_icerik_uret.py` sonunda `ders_icerik_adim.py` çalışır: her kayda `adim` (slayt no) yazılır; `ders_icerik_dogrula.py` eksik/eşlenemeyen `adim`'de HATA verir. PDF: `npx tsx scripts/ders_pdf.mts <key>`; ekranda ders sayfası › Ders PDF'i. Ayrıntı: `DERS_ICERIK_BICIMI.md`.
 
 > **Karşılaştırma/tablo uyarısı (H118):** karşılaştırma ve tablo ögeleri doğal Türkçe ve tıbbi olarak anlamlı olmalı; "Anatomik basamak mı, muayene başlığı mı?" türü meta sınıflama yazılmaz (üretici de eler). Bkz. `KURUL2_YAPILMAYACAK_HATALAR.md` H118.
+
+## 20. Klipli sesli ders (2026-10-28; yalnız bu tarihten sonra eklenen dersler)
+
+- Bayrak: `data/sesli_anlatim/dersler.json` → `klip: true` (`ders-ekle` yeni derse kendisi koyar). Eski derslere bayrak konmaz.
+- Üretim: EMA işçisi paragraf başına kayıpsız PCM klip üretir (`ses/<key>/.klip/<özet>.pcm`); metin düzeltilip yeniden
+  kuyruğa alınınca yalnız özeti değişen paragraflar seslendirilir, tam MP3 kliplerden tek kodlamayla yeniden kurulur
+  (ek yerinde tık/boşluk yok). `KLIP_SURUM` (ema_isci.py) ses işleme değişince artırılır → tüm klipler yenilenir.
+- Zaman: `kelime_zaman.py` klip başına göreli kelime zamanını `klip_zaman/<key>.json`'da saklar; yalnız yeni klipleri
+  Whisper'dan geçirir. `cumle_zaman.py` her seferinde tüm sesi işler (saniyeler). Çizim/çapa/işaret paragraf/cümle
+  sırasına bağlıdır, saniyeye değil; ses yeniden kurulunca kayma olmaz.
+- Metin düzeltmesi sırası: (1) `metin/<key>.md` düzenlenir, (2) `python3 scripts/sesli_anlatim/klip_tasi.py <key>`
+  (eski metin git HEAD'den ya da `--eski`) hizalama/çapa/işaret/çizim/vurgu/çıkmış konumu/v2 kayıtlarını aynen kalan
+  paragraflara taşır, özgünleri `.tasima_yedek/`'e alır, değişen/yeni paragraf dizinlerini listeler (çıkış 2),
+  (3) yalnız o paragraflar için çapa, çizim (`cizim_kapisi.py` 0 HATA), çıkmış konumu, v2 yazılır, (4) `pdf_isaret.py`
+  (tümü), (5) ses kuyruğu → yalnız yeni klipler, (6) `cumle_zaman.py` + `kelime_zaman.py` (yalnız yeni klipler Whisper).
