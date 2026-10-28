@@ -77,6 +77,8 @@ const SheetPanel: React.FC<SheetProps & { closing: boolean }> = ({ onClose, titl
     const prev = document.activeElement as HTMLElement | null;
     panelRef.current?.focus({ preventScroll: true });
     const onKey = (e: KeyboardEvent) => {
+      // H430: panelden açılmış üst pencere (Dialog) varken Esc/Tab onundur; panel önce kapanırsa içindeki pencere de gider
+      if (!panelRef.current?.contains(document.activeElement) && document.querySelector('.ms-overlay')) return;
       if (e.key === 'Escape') {
         e.stopPropagation();
         closeRef.current();

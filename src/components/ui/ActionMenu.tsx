@@ -184,7 +184,7 @@ export const ActionMenu: React.FC<ActionMenuProps> = ({ items, label, title = 'Ä
       {open &&
         (isPhone ? (
           createPortal(
-            <div data-action-sheet className={`ms-am fixed inset-0 z-[70] ${closing ? 'is-closing' : ''}`} role="dialog" aria-modal="true" aria-label={title}>
+            <div data-action-sheet className={`ms-am fixed inset-0 z-[95] ${closing ? 'is-closing' : ''}`} role="dialog" aria-modal="true" aria-label={title}>
               <button type="button" aria-label="Kapat" onClick={() => setOpen(false)} className="ms-am-scrim absolute inset-0 bg-[var(--color-scrim,rgb(14_26_38/.4))] cursor-default" />
               <div
                 role="menu"
@@ -210,7 +210,7 @@ export const ActionMenu: React.FC<ActionMenuProps> = ({ items, label, title = 'Ä
               aria-label={title}
               data-action-sheet
               style={{ position: 'fixed', top: pos?.top, bottom: pos?.bottom, right: pos?.right ?? 8, maxHeight: pos?.maxH, visibility: pos ? 'visible' : 'hidden' }}
-              className={`ms-menu-pop ${closing ? 'is-closing' : ''} z-[75] w-[264px] overflow-y-auto overscroll-contain bg-white border border-line rounded-xl p-1.5 shadow-lg`}
+              className={`ms-menu-pop ${closing ? 'is-closing' : ''} z-[95] w-[264px] overflow-y-auto overscroll-contain bg-white border border-line rounded-xl p-1.5 shadow-lg`}
             >
               {list(false)}
             </div>,

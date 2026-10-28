@@ -50,8 +50,11 @@ export const Dialog: React.FC<DialogProps> = ({ title, subtitle, onClose, footer
     };
   }, []);
 
+  // H430: yan panelden (Sheet, z 80) açılan pencere (ör. Ders seçenekleri › Video oluştur) z 70 ile panelin altında kalıyordu;
+  // açılışta bir panel varsa onun üstüne çıkar (85). Açılır menüler (ActionMenu) her zaman 95'te, pencerenin de üstünde.
+  const [panelUstu] = useState(() => typeof document !== 'undefined' && !!document.querySelector('.sh-sheet-root'));
   return createPortal(
-    <div className={`ms-overlay fixed inset-0 z-[70] flex items-center justify-center p-4 ${closing ? 'is-closing' : ''}`} onMouseDown={(e) => e.target === e.currentTarget && requestClose()}>
+    <div className={`ms-overlay fixed inset-0 ${panelUstu ? 'z-[85]' : 'z-[70]'} flex items-center justify-center p-4 ${closing ? 'is-closing' : ''}`} onMouseDown={(e) => e.target === e.currentTarget && requestClose()}>
       <div
         ref={panelRef}
         tabIndex={-1}

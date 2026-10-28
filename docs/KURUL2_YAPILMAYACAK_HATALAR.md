@@ -1535,3 +1535,8 @@ Her maddede: belirti · kök neden · Kurul 2 kuralı · kapı durumu. Kanıtlar
 - **Yönetim:** Ses kuyruğu → Sesli ders sekmesi (`ogrenme/sesli?sekme=kuyruk`); Sürüm notu + Dağıtım bilgisi → tek sayfa `site/surum` (dağıtım bölümü `?bolum=dagitim`); Havuz dondurma → Özellik bayrakları bölümü (`site/bayraklar?bolum=dondurma`). Tam yol yönlendirme tablosu `ESKI_YOL` (menu.ts), sabit/son kullanılan listeleri açılışta yeni yola çevrilir, `?bolum=` ile bölüme kaydırma.
 - **Kural:** Aynı işi gören ikinci giriş/sayfa açılmaz; birleştirmede bileşen silinmez (yönlendirme + menüden kaldırma), eski adres yeni yere yönlenir ve SITE_HARITASI_KURALLARI.md'ye yazılır.
 - **Not:** Kazanımlar ve Kurul kampı artık Geçmiş kurullar sayfasından kurula süzülmüş açılmıyor; kendi kurul seçicileriyle açılıyor.
+
+## H430 — Video oluştur penceresi Ders seçenekleri panelinin altında kalıyordu (2026-10-28, kullanıcı bildirdi)
+- **Belirti:** Sesli ders › ⋯ › Tüm ders seçenekleri › "Video oluştur" açılınca pencere panelin arkasında kalıyordu; Esc paneli kapatıp pencereyi de götürüyordu.
+- **Kök neden:** Panel ortak `Sheet` (`.sh-sheet-root`, z-index 80), pencere ortak `Dialog` (`ms-overlay`, z-[70]); ikisi de body'ye portal, düşük z'li pencere sonra açılsa da altta kalır. Ayrıca iki bileşen Esc/Tab'ı belgede dinliyordu; önce açılan panel önce tepki verip kapanıyor, içinde çizilen pencere de gidiyordu.
+- **Çözüm/kural:** `Dialog` açılışta panel varsa z 85 (yoksa 70); `ActionMenu` açılır menü/eylem sayfası her zaman z 95 (geçici katmanlar en üstte); `Sheet`, odak panel dışında ve üstte bir `ms-overlay` varken Esc/Tab'ı bırakır. Katman kuralı: panel 80 < panel üstü pencere 85 < açılır menü 95; iç içe açılan katmanda klavye en üstteki katmanındır.
