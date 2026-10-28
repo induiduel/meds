@@ -93,6 +93,9 @@ export function CdV15Bas(p: {
           <Maximize2 aria-hidden />
         </button>
       )}
+      <button type="button" className="v15-ib cd15-ayar" onClick={p.onGorunum} aria-label="Görünüm ve ses ayarları" title="Görünüm ve ses ayarları">
+        <SlidersHorizontal aria-hidden />
+      </button>
       <CdTasmaMenu etiket="Daha fazla" className="cd15-ust-tm" ogeler={[
         ...(p.hizli ? [
           { ad: 'Yazıyı büyüt', ikon: <b>A+</b>, ipucu: `${p.hizli.yazi}px`, kalAcik: true, disabled: p.hizli.yazi >= p.hizli.yaziEncok, onSec: () => p.hizli!.setYazi(p.hizli!.yazi + 2) },

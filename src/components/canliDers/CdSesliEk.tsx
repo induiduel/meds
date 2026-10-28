@@ -230,10 +230,11 @@ export function CdBolumSonu({ detay }: { detay: CdDetay }) {
     const r0 = cdAralik(detay.bolumler[b]?.paragraflar[0]?.i ?? -1);
     if (!r0 || Math.abs(s.t - r0[0]) > 2) return;
     if (uyku.bolumSonu) { cdDuraklat(); uykuKur(null); return; }
+    if (!dur) return; // varsayılan: bölüm arasında otomatik durma yok
     cdDuraklat();
     setBiten(o.b);
     setSay(5);
-  }, [b, detay]);
+  }, [b, detay, dur]);
 
   useEffect(() => {
     if (biten === null || dur) return;

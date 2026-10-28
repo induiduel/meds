@@ -1,11 +1,10 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 568,
-  "baslik": "Sohbet ve arkadaşlık bildirimleri ekranın üstünde",
+  "onem": 569,
+  "baslik": "Sesli derste bölüm arası durma kapandı, ayarlar tablette kolay",
   "maddeler": [
-    "Yeni sohbet mesajı ve arkadaşlık isteği artık ekranın üstünde kart olarak çıkıyor.",
-    "Arkadaşlık isteğini karttan Kabul edebilir ya da Reddedebilirsin.",
-    "Sohbet mesajına karttan hızlı yanıt yazabilirsin."
+    "Sesli ders bölümler arasında artık kendiliğinden durmuyor (isteyen \"Bölüm sonlarında dur\"u açabilir).",
+    "Görünüm ve ayarlar düğmesi üst çubukta doğrudan görünüyor; tablette menüye girmeye gerek yok."
   ],
   "eklenen": [],
   "degisen": [],
