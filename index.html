@@ -49,6 +49,8 @@
           if (matchMedia('(display-mode: standalone)').matches || navigator.standalone) d.classList.add('is-standalone');
           var isIos = /iPhone|iPad|iPod/i.test(navigator.userAgent) || (/Macintosh/i.test(navigator.userAgent) && navigator.maxTouchPoints > 1);
           if (isIos) d.classList.add('is-ios');
+          // H433: açık temada beyaz saat yazısı açık başlıkta kayboluyordu → 'default'; koyu temada black-translucent
+          document.querySelector('meta[name="apple-mobile-web-app-status-bar-style"]').setAttribute('content', mode === 'dark' ? 'black-translucent' : 'default');
           // PWA kromu: son tema renkleri (utils/appearance.ts syncPwaChrome) — çubuk, manifesto, iOS durum çubuğu
           var pc = JSON.parse(localStorage.getItem('medsoru_pwa_chrome') || 'null'), hx = /^[0-9A-F]{6}$/;
           if (pc && hx.test(pc.tc) && hx.test(pc.bg)) {

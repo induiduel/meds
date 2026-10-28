@@ -1555,3 +1555,8 @@ Her maddede: belirti · kök neden · Kurul 2 kuralı · kapı durumu. Kanıtlar
 ## H432 — Ders PDF ekranı kaydırırken "parçalanıp geri geliyordu" (2026-10-28, kullanıcı bildirdi)
 - **Kök neden:** Önizleme iframe'i içerik boyunda (~89.000 px) ve telefonda en az 1000 px genişti; tarayıcı bu dev katmanı karo karo çizip ekran dışını atıyor, kaydırırken karolar boş/kırık görünüp yeniden çiziliyordu (iPhone'da katman belleği düşük). Telefonda belge yana da taşıyordu.
 - **Çözüm/kural:** Çerçeve ekran boyunda, belge içinde kayar; dar ekranda belge çerçeve genişliğine `zoom` ile sığar, yazdırmadan önce ölçek kalkar (afterprint ile geri gelir). Ölçüm: telefonda çerçeve 358×642, ölçek 0,358, yatay taşma 0; masaüstünde 1010×694. Önizleme/gömülü belge iframe'i içerik boyuna büyütülmez.
+
+## H433 — iPhone: panel başlıkları ve durum çubuğu çakışması (2026-10-28)
+- **Belirti:** Sesli derste "Ders seçenekleri", "Oynatıcı" vb. paneller ve diyaloglar iPhone'da saat/pil çubuğunun altına giriyordu; açık temada saat yazısı beyaz başlıkta görünmüyordu.
+- **Kök neden:** (1) `v11.css` genel `[role=dialog]` max-height kuralı (özgüllük 0,3,0) `.sh-sheet`'i eziyor ve güvenli alanı düşmüyordu (panel 820 px, başlık y=43 < 47). (2) `appearance.ts syncPwaChrome` her temada `black-translucent` zorluyordu → beyaz durum yazısı.
+- **Çözüm/önleme:** genel kurala `.sh-sheet` istisnası + `env(safe-area-inset-top)` düşümü; `.cd-dlg-kart` aynı. Durum çubuğu stili açık temada `default`, koyuda `black-translucent` (index.html erken betik + syncPwaChrome). Yeni tam yükseklikli katman yazan her kural üst güvenli alanı düşer; SAFE öykünmesiyle (üst 47) başlık ≥47 sınanır.

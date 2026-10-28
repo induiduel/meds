@@ -726,7 +726,7 @@
 .cd-bitti-hero-btn small { font-size: 12px; color: var(--color-ink-2); line-height: 1.4; }
 @media (max-width: 640px) {
   .cd-dlg { padding: 0; place-items: end stretch; }
-  .cd-dlg-kart { max-height: 92vh; border-radius: 16px 16px 0 0; }
+  .cd-dlg-kart { max-height: min(92vh, calc(100dvh - 16px - env(safe-area-inset-top, 0px))); border-radius: 16px 16px 0 0; } /* H433 */
   .cd-dlg-eylem .cd-btn { flex: 1; }
 }
 /* süreler diyalog içinde: daha küçük yazı */
@@ -1002,7 +1002,7 @@
 }
 @media (max-width: 640px) {
   .cd-dlg { padding: 0; }
-  .cd-dlg-kart, .cd-dlg-kart.is-genis { max-width: none; max-height: calc(var(--vvh, 100dvh) / var(--in-zoom, 1) - 24px); border-radius: 18px 18px 0 0; padding-bottom: env(safe-area-inset-bottom); }
+  .cd-dlg-kart, .cd-dlg-kart.is-genis { max-width: none; max-height: calc(var(--vvh, 100dvh) / var(--in-zoom, 1) - 24px - env(safe-area-inset-top, 0px)); border-radius: 18px 18px 0 0; padding-bottom: env(safe-area-inset-bottom); } /* H433: alttan açılan pencere saatin altına uzanıyordu */
   .cd-dlg .cd-sl-tablo tr { grid-template-columns: 1.6em minmax(0, 1fr) auto auto; column-gap: 8px; padding: 7px 12px; }
   .cd-dlg .cd-sl-tablo { font-size: 12.5px; }
   .cd-dlg .cd-sl-grup h2 small { display: none; }

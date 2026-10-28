@@ -376,10 +376,11 @@ function syncPwaChrome(a: Appearance) {
   const isIos =
     /iPhone|iPad|iPod/i.test(navigator.userAgent) ||
     (/Macintosh/i.test(navigator.userAgent) && navigator.maxTouchPoints > 1);
-  // iOS Ana Ekran PWA'da black-translucent + viewport-fit=cover tam ekran (edge-to-edge) görünüm sağlar;
-  // manifest href'in dinamik değiştirilmesi ise WebKit'in "Ana Ekrana Ekle" sırasında manifest okumasını kesebilir.
+  // H433: black-translucent saat/pil yazısını her temada BEYAZ yapar; açık temada beyaz başlığın üstünde görünmez,
+  // içerik de durum çubuğunun altına uzar. Açık temada 'default' (opak çubuk, koyu yazı, içerik çubuğun altından
+  // başlar), koyu temada black-translucent. iOS bunu açılışta okur; index.html erken betiği aynısını yapar.
   document.querySelector('meta[name="apple-mobile-web-app-status-bar-style"]')
-    ?.setAttribute('content', 'black-translucent');
+    ?.setAttribute('content', a.mode === 'dark' ? 'black-translucent' : 'default');
   if (!isIos) {
     const link = document.querySelector<HTMLLinkElement>('link[rel="manifest"]');
     const href = pwaManifestHref(tc, bg);

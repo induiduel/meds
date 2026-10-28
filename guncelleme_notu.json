@@ -1,14 +1,13 @@
 {
- "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
- "onem": 566,
- "baslik": "iPhone ve PDF ekranı düzeltmeleri",
- "maddeler": [
-  "Sesli derste ve Öğren destesinde başlık iPhone saatinin altına girmiyor",
-  "Oynatıcı iPhone ana ekran çizgisinin üstünde",
-  "Ders PDF ekranı kaydırırken bozulmuyor, telefonda ekrana sığıyor"
- ],
- "eklenen": [],
- "degisen": [],
- "duzeltilen": [],
- "silinen": []
+  "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
+  "onem": 567,
+  "baslik": "iPhone durum çubuğu düzeltmesi",
+  "maddeler": [
+    "Sesli derste açılan paneller ve pencereler artık iPhone'da saat/pil çubuğunun altına girmiyor.",
+    "Açık temada iPhone durum çubuğu yazısı koyu, içerik çubuğun altından başlıyor (Ana ekrandan yeniden açınca etkin olur)."
+  ],
+  "eklenen": [],
+  "degisen": [],
+  "duzeltilen": [],
+  "silinen": []
 }
