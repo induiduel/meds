@@ -1,12 +1,12 @@
 import React from 'react';
-import { SayfaBasligi, VeriTablosu, Rozet, GorunurlukRozeti, GorunurlukSecici } from '../kit';
+import { SayfaBasligi, VeriTablosu, Rozet, GorunurlukRozeti, GorunurlukBaglantisi } from '../kit';
 import type { SayfaProps } from '../menu';
 
 type Satir = { id: string; dizin: string; onek: string; tur: string; kod: string; no: number; baslik: string; madde: number; kurul: string; ses?: boolean; cikmis?: number; gorunurluk: string };
 const TUR: Record<string, string> = { onem: 'Önem', asistan: 'Asistan', cozucu: 'Çözücü' };
 
 /** Öğrenme › Önem ve çözücü: src/data/*_onem|_asistan|_cozucu index envanteri; satırda görünürlük (<tür>:<dizin>/<kod>). */
-export default function OnemCozucu(_p: SayfaProps) {
+export default function OnemCozucu({ git }: SayfaProps) {
   return (
     <>
       <SayfaBasligi baslik="Önem ve çözücü" aciklama="Branş × ders envanteri: önem listesi maddesi, sınav asistanı adımı, çözücü sorusu. İçerik üretimi oturumda yapılır; burada yalnız görünürlük." />
@@ -23,7 +23,7 @@ export default function OnemCozucu(_p: SayfaProps) {
           { anahtar: 'kod', baslik: 'Dizin / kod', sirala: true, genislik: 'minmax(150px,1fr)', hucre: (x) => <code>{x.onek}/{x.kod}</code> },
           { anahtar: 'baslik', baslik: 'Ders', sirala: true, genislik: 'minmax(200px,3fr)', hucre: (x) => <span className="m16-kisalt" title={x.baslik}>{x.baslik}</span> },
           { anahtar: 'madde', baslik: 'Sayı', sirala: true, genislik: '64px', hizala: 'sag' },
-          { anahtar: 'gorunurluk', baslik: 'Görünürlük', genislik: 'minmax(290px,1fr)', hucre: (x) => <span onClick={(e) => e.stopPropagation()}><GorunurlukSecici anahtar={`${x.tur}:${x.id}`} deger={x.gorunurluk} /></span> },
+          { anahtar: 'gorunurluk', baslik: 'Görünürlük', genislik: 'minmax(160px,1fr)', hucre: (x) => <span onClick={(e) => e.stopPropagation()}><GorunurlukBaglantisi anahtar={`${x.tur}:${x.id}`} deger={x.gorunurluk} git={git} />{/* H325 */}</span> },
           { anahtar: 'g', baslik: 'Durum', genislik: '90px', gizli: true, hucre: (x) => <GorunurlukRozeti deger={x.gorunurluk} /> },
         ]}
       />

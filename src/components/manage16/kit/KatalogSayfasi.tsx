@@ -6,7 +6,7 @@ import { AyrintiCekmecesi } from './AyrintiCekmecesi';
 import { Form, type AlanTanim } from './Form';
 import { Hata, Yukleniyor } from './Durumlar';
 import { Rozet } from './Rozet';
-import { GorunurlukRozeti, GorunurlukSecici } from './Gorunurluk';
+import { GorunurlukBaglantisi } from './Gorunurluk'; // H321: satır içi seçici kaldırıldı
 import { onayIste } from './Onay';
 import { bildir } from './Bildirim';
 
@@ -63,7 +63,7 @@ export function KatalogSayfasi(p: {
     { anahtar: 'baslik', baslik: 'Kayıt', sirala: true, genislik: 'minmax(220px,3fr)', hucre: (x) => <span className="m16-kisalt" title={x.baslik}>{x.baslik}</span> },
     { anahtar: 'alt', baslik: 'Ayrıntı', genislik: 'minmax(160px,2fr)', hucre: (x) => <span className="m16-kisalt" title={x.alt}>{x.alt}</span> },
     { anahtar: 'id', baslik: 'Kimlik', genislik: 'minmax(100px,1fr)', gizli: true, hucre: (x) => <code>{x.id}</code> },
-    ...(gorunurlukVar ? [{ anahtar: 'gorunurluk', baslik: 'Görünürlük', genislik: '120px', hucre: (x: KatalogSatiri) => <GorunurlukRozeti deger={x.gorunurluk} /> }] : []),
+    ...(gorunurlukVar ? [{ anahtar: 'gorunurluk', baslik: 'Görünürlük', genislik: '150px', hucre: (x: KatalogSatiri) => <GorunurlukBaglantisi anahtar={`deste:${x.id}`} deger={x.gorunurluk} /> } /* H321 */] : []),
     { anahtar: 'degerlendirme', baslik: 'Değerlendirme', genislik: '110px', gizli: true, hucre: (x) => x.degerlendirme ? <Rozet ton={x.degerlendirme === 'onayli' ? 'iyi' : x.degerlendirme === 'sorunlu' ? 'kotu' : 'uyari'}>{x.degerlendirme}</Rozet> : null },
   ];
 
@@ -115,7 +115,7 @@ export function KatalogSayfasi(p: {
         {ayr.hata ? <Hata hata={ayr.hata} yenile={ayr.yenile} /> : !a ? <Yukleniyor satir={4} /> : (
           <>
             {a.gorunurlukAnahtari && (
-              <div className="m16-kart"><h2>Görünürlük</h2><GorunurlukSecici anahtar={a.gorunurlukAnahtari} deger={a.gorunurluk} degisti={() => { void ayr.yenile(); setYenileNo((n) => n + 1); }} /></div>
+              <div className="m16-kart"><h2>Görünürlük</h2><GorunurlukBaglantisi anahtar={a.gorunurlukAnahtari} deger={a.gorunurluk} /></div>
             )}
             {alanlar.length ? (
               <Form alanlar={alanlar} deger={deger} kirliDegisti={setKirli} kaydet={async (_y, degisen) => {

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { SayfaBasligi, VeriTablosu, AyrintiCekmecesi, Form, Rozet, Hata, Yukleniyor, GorunurlukRozeti, GorunurlukSecici, useAdminSorgu, adminIstek, bildir, type AlanTanim } from '../kit';
+import { SayfaBasligi, VeriTablosu, AyrintiCekmecesi, Form, Rozet, Hata, Yukleniyor, GorunurlukBaglantisi, useAdminSorgu, adminIstek, bildir, type AlanTanim } from '../kit';
 import { manageAdres, type SayfaProps } from '../menu';
 
 type Kurul = { kurul: number; kod: string; ad: string; baslangic: string; sinav: string; bitis: string; dersSayisi: number; gorunurluk: string };
@@ -45,7 +45,7 @@ export default function Kurullar({ git }: SayfaProps) {
           { anahtar: 'sinav', baslik: 'Sınav', genislik: '110px', deger: (x) => x.sinav },
           { anahtar: 'dersSayisi', baslik: 'Ders', genislik: '70px', hizala: 'sag', deger: (x) => x.dersSayisi,
             hucre: (x) => <a href={manageAdres(`icerik/dersler?s.kurul=${x.kurul}`)} onClick={(e) => { e.preventDefault(); e.stopPropagation(); git(`icerik/dersler?s.kurul=${x.kurul}`); }}>{x.dersSayisi}</a> },
-          { anahtar: 'gorunurluk', baslik: 'Görünürlük', genislik: '120px', hucre: (x) => <GorunurlukRozeti deger={x.gorunurluk} /> },
+          { anahtar: 'gorunurluk', baslik: 'Görünürlük', genislik: '170px', hucre: (x) => <GorunurlukBaglantisi anahtar={`kurul:${x.kurul}`} deger={x.gorunurluk} git={git} /> } /* H324 */,
         ]}
       />
       <AyrintiCekmecesi acik={acik != null} kapat={() => setAcik(null)} kirli={kirli}
@@ -57,7 +57,7 @@ export default function Kurullar({ git }: SayfaProps) {
             deger={{ final: veri.final, butunleme: veri.butunleme }} kaydet={(_y, d) => kaydet(d)} />
         ) : k ? (
           <>
-            <div className="m16-kart"><h2>Görünürlük</h2><GorunurlukSecici anahtar={`kurul:${k.kurul}`} deger={k.gorunurluk} degisti={() => void yenile()} /></div>
+            <div className="m16-kart"><h2>Görünürlük</h2><GorunurlukBaglantisi anahtar={`kurul:${k.kurul}`} deger={k.gorunurluk} git={git} />{/* H324 */}</div>
             <Form kirliDegisti={setKirli} alanlar={ALANLAR} deger={{ ad: k.ad, kod: k.kod, baslangic: k.baslangic, sinav: k.sinav, bitis: k.bitis }} kaydet={(_y, d) => kaydet(d)} />
             <p className="m16-alan-ipucu">Ön yüz ve betikler takvimi derlemede okur: değişiklik canlıya dağıtımla (katman eşitlemesi + derleme) yansır.{yukleniyor ? ' …' : ''}</p>
           </>

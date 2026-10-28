@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { SayfaBasligi, VeriTablosu, AyrintiCekmecesi, Hata, Yukleniyor, GorunurlukRozeti, GorunurlukSecici, JsonGoruntuleyici, useAdminSorgu } from '../kit';
+import { SayfaBasligi, VeriTablosu, AyrintiCekmecesi, Hata, Yukleniyor, GorunurlukBaglantisi, JsonGoruntuleyici, useAdminSorgu } from '../kit';
 import { manageAdres, type SayfaProps } from '../menu';
 
 type Satir = { key: string; baslik: string; kurul: string; sayilar: Record<string, number>; gorunurluk: string };
@@ -22,13 +22,13 @@ export default function IcerikPaketleri({ git }: SayfaProps) {
           { anahtar: 'quiz', baslik: 'Quiz', sirala: true, genislik: '64px', hizala: 'sag', hucre: (x) => x.sayilar.quiz ?? 0 },
           { anahtar: 'kartlar', baslik: 'Kart', genislik: '64px', hizala: 'sag', hucre: (x) => x.sayilar.kartlar ?? 0 },
           { anahtar: 'cikmis', baslik: 'Çıkmış', genislik: '64px', hizala: 'sag', hucre: (x) => x.sayilar.cikmis ?? 0 },
-          { anahtar: 'gorunurluk', baslik: 'Görünürlük', genislik: '110px', hucre: (x) => <GorunurlukRozeti deger={x.gorunurluk} /> },
+          { anahtar: 'gorunurluk', baslik: 'Görünürlük', genislik: '170px', hucre: (x) => <GorunurlukBaglantisi anahtar={`paket:${x.key}`} deger={x.gorunurluk} git={git} /> } /* H323 */,
         ]}
       />
       <AyrintiCekmecesi acik={!!acik} kapat={() => setAcik(null)} baslik={a.veri?.baslik || acik || ''} altBaslik={<code>{acik}</code>} kayit={a.veri?.ornek} hedef={acik ? `paket:${acik}` : undefined} genis>
         {a.hata ? <Hata hata={a.hata} yenile={a.yenile} /> : !a.veri ? <Yukleniyor satir={4} /> : (
           <>
-            <div className="m16-kart"><h2>Görünürlük</h2><GorunurlukSecici anahtar={`paket:${a.veri.key}`} deger={a.veri.gorunurluk} degisti={() => void a.yenile()} /></div>
+            <div className="m16-kart"><h2>Görünürlük</h2><GorunurlukBaglantisi anahtar={`paket:${a.veri.key}`} deger={a.veri.gorunurluk} git={git} />{/* H323 */}</div>
             {dersId && <p>Ders: <a href={manageAdres(`icerik/dersler/${dersId}`)} onClick={(e) => { e.preventDefault(); git(`icerik/dersler/${dersId}`); }}>{dersId}</a></p>}
             <p>{a.veri.ozet}</p>
             <div className="m16-kart"><h2>Bölümler</h2><dl className="m16-satirlar">{Object.entries(a.veri.sayilar as Record<string, number>).map(([k, n]) => <React.Fragment key={k}><dt>{k}</dt><dd>{n}</dd></React.Fragment>)}</dl></div>

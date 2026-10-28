@@ -1,11 +1,10 @@
 {
  "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
- "onem": 554,
- "baslik": "Çevrimdışı ve indirmeler tek sayfada",
+ "onem": 555,
+ "baslik": "Yönetim: görünürlük tek sayfada",
  "maddeler": [
-  "Çevrimdışı ve arka plan işleri tek sayfada: durum, indirme kuyruğu, indirilenler ve ayarlar",
-  "Yalnız Wi-Fi ayarı tek yerde",
-  "Yönetim: menüde arama, sabitlenen ve son kullanılan sayfalar"
+  "Yönetim: kurul, ders, deste ve sayfa görünürlüğü tek sayfadan yönetiliyor",
+  "Diğer sayfalarda durum rozeti ve Değiştir bağlantısı"
  ],
  "eklenen": [],
  "degisen": [],

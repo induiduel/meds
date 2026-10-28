@@ -11,6 +11,7 @@
  *  GET  /api/admin/sesli-dersler[/:key]     sesli ders kayıtları + katman dosyaları
  *  GET  /api/admin/spot-cozucu              önem / asistan / çözücü envanteri (branş × ders)
  *  GET  /api/admin/ders-icerik[/:key]       ders içerik paketleri (src/data/ders_icerik)
+ *  GET  /api/admin/gorunurluk/icerik        H320: tüm içerik görünürlük kayıtları tek listede (Site › Görünürlük › İçerik)
  *  GET  /api/admin/sinav-dagilimi · PUT /api/admin/sinav-dagilimi/:kurul
  *  GET  /api/admin/k16/katalog/:varlik[/meta|/:id] · PUT /api/admin/k16/katalog/:varlik/:id
  *       dataCatalogService varlıkları + bu dosyadaki bağdaştırıcılar (spot, kisaltma, terim, saglik) v16 liste biçiminde
@@ -374,6 +375,47 @@ export function registerIcerik16Routes(app: express.Express, d: Deps) {
     // Tam paket istemciye gitmez: her bölümden ilk 5 öge örnek
     const ornek = Object.fromEntries(Object.entries(p).map(([k, v]) => [k, Array.isArray(v) ? (v as any[]).slice(0, 5) : v]));
     res.json({ key: p.key, baslik: p.baslik, ozet: p.ozet, sayilar: paketSayilari(p), ornek, gorunurluk: gor()[`paket:${p.key}`] || 'acik' });
+  });
+
+  /* ================= Görünürlük: tüm içerik kayıtları (H320) ================= */
+  // H320: görünürlük tek sayfada (Site › Görünürlük › İçerik). Kayıtlar yukarıdaki uçların kaynaklarından (takvim, dersler/kN,
+  // sesli ders listesi, deste kataloğu, ders_icerik, <önek>_<tür> dizinleri) + site_ayar.gorunurluk. Katalogda karşılığı olmayan
+  // ama ayarda duran anahtar "sahipsiz" olarak listelenir (silinebilsin diye; uydurma kayıt değildir, ayarın kendisidir).
+  const GOR_TUR: Record<string, string> = { kurul: 'Kurul', ders: 'Ders', sesli: 'Sesli ders', deste: 'Öğren destesi', paket: 'İçerik paketi', onem: 'Önem', asistan: 'Asistan', cozucu: 'Çözücü' };
+  app.get('/api/admin/gorunurluk/icerik', d.requireAdmin, (req, res) => {
+    const s = listeSorgusu(req, { varsayilanBoyut: 50, enFazla: 500 });
+    const g = gor() as Record<string, string>;
+    const K = katmanlar();
+    const kurulOf = (id: string) => (String(id).match(/(?:^|[^a-z])k(\d)(?=[-a-z_]|$)/i) || [])[1] || '';
+    const satirlar: Any[] = [];
+    const ekle = (tur: string, kimlik: string, ad: string, kurul: string | number, ek: Any = {}) => {
+      const anahtar = `${tur}:${kimlik}`;
+      satirlar.push({ anahtar, tur, turAd: GOR_TUR[tur] || tur, ad: ad || kimlik, kurul: String(kurul || ''), deger: g[anahtar] || 'acik', ayarli: anahtar in g, ...ek });
+    };
+    for (const k of oku<Any>(TAKVIM, {}).kurullar || []) ekle('kurul', String(k.kurul), k.ad || `Kurul ${k.kurul}`, k.kurul);
+    for (const x of tumDersler()) ekle('ders', x.id, `${x.kod ? `${x.kod} · ` : ''}${x.konu || x.id}`, x.kurul, { brans: x.brans || '' });
+    for (const key of K.sesliKeys) { const kd = K.sesliListe.find((y) => y.key === key); ekle('sesli', key, kd?.baslik || key, kurulOf(key)); }
+    for (const x of K.desteler) ekle('deste', x.id, x.title || x.id, kurulOf(x.id));
+    for (const p of K.paketler.values()) ekle('paket', p.key, p.baslik || p.key, kurulOf(p.key));
+    for (const x of K.envanter) ekle(x.tur, `${x.dizin}/${x.kod}`, `${x.baslik || x.kod} (${x.dizin})`, (x.onek.match(/^k(\d)/) || [, '1'])[1]);
+    const bilinen = new Set(satirlar.map((x) => x.anahtar));
+    for (const [anahtar, deger] of Object.entries(g)) {
+      if (bilinen.has(anahtar)) continue;
+      const i = anahtar.indexOf(':');
+      const tur = i > 0 ? anahtar.slice(0, i) : anahtar;
+      satirlar.push({ anahtar, tur, turAd: GOR_TUR[tur] || tur, ad: 'Katalogda bulunamadı', kurul: kurulOf(anahtar.slice(i + 1)), deger, ayarli: true, sahipsiz: true });
+    }
+    res.json(diziSayfala(satirlar, s, {
+      araMetni: (x) => `${x.anahtar} ${x.ad} ${x.turAd} ${x.brans || ''}`,
+      siralayicilar: { anahtar: (x) => x.anahtar, ad: (x) => katla(x.ad), tur: (x) => x.tur, kurul: (x) => x.kurul, deger: (x) => x.deger },
+      suzgecler: {
+        tur: (x, v) => x.tur === v,
+        kurul: (x, v) => x.kurul === v,
+        deger: (x, v) => (v === 'kisitli' ? x.deger !== 'acik' : x.deger === v),
+        anahtar: (x, v) => x.anahtar === v,
+      },
+      yuzler: { tur: (x) => x.tur, kurul: (x) => x.kurul || undefined, deger: (x) => x.deger },
+    }));
   });
 
   /* ================= Sınav dağılımı ================= */

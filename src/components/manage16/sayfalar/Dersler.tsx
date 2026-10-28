@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { SayfaBasligi, VeriTablosu, Form, Rozet, Hata, Yukleniyor, GorunurlukRozeti, GorunurlukSecici, DegisiklikGecmisi, JsonGoruntuleyici, useAdminSorgu, adminIstek, bildir, type AlanTanim } from '../kit';
+import { SayfaBasligi, VeriTablosu, Form, Rozet, Hata, Yukleniyor, GorunurlukBaglantisi, DegisiklikGecmisi, JsonGoruntuleyici, useAdminSorgu, adminIstek, bildir, type AlanTanim } from '../kit';
 import { manageAdres, type SayfaProps } from '../menu';
 
 type Katman = { paket: boolean; sesli: number; deste: number; onem: number; asistan: number; cozucu: number };
@@ -46,7 +46,7 @@ export default function Dersler({ id, git }: SayfaProps) {
           { anahtar: 'brans', baslik: 'Branş', sirala: true, genislik: 'minmax(110px,1fr)' },
           { anahtar: 'tarih', baslik: 'Tarih', sirala: true, genislik: '104px' },
           { anahtar: 'katman', baslik: 'Katmanlar', genislik: 'minmax(180px,2fr)', hucre: (x) => <KatmanCipleri k={x.katman} /> },
-          { anahtar: 'gorunurluk', baslik: 'Görünürlük', genislik: '110px', hucre: (x) => <GorunurlukRozeti deger={x.gorunurluk} /> },
+          { anahtar: 'gorunurluk', baslik: 'Görünürlük', genislik: '170px', hucre: (x) => <GorunurlukBaglantisi anahtar={`ders:${x.id}`} deger={x.gorunurluk} git={git} /> } /* H326 */,
           { anahtar: 'ogretim_uyesi', baslik: 'Hoca', genislik: 'minmax(140px,1fr)', gizli: true },
         ]}
       />
@@ -95,30 +95,30 @@ function DersAyrinti({ id, git, branslar }: { id: string; git: SayfaProps['git']
       </SayfaBasligi>
       {sekme === 'katman' && (
         <div className="m16-izgara-2">
-          <div className="m16-kart"><h2>Ders görünürlüğü</h2><GorunurlukSecici anahtar={`ders:${d.id}`} deger={veri.gorunurluk} degisti={() => void yenile()} /></div>
+          <div className="m16-kart"><h2>Ders görünürlüğü</h2><GorunurlukBaglantisi anahtar={`ders:${d.id}`} deger={veri.gorunurluk} git={git} />{/* H326: yalnız rozet + bağlantı */}</div>
           <div className="m16-kart"><h2>Sesli ders ({k.sesli.length})</h2>
             {k.sesli.length ? <ul className="m16-liste">{k.sesli.map((s) => (
               <li key={s.key}>{baglanti(`ogrenme/sesli?ac=${encodeURIComponent(s.key)}`, s.key)} · {s.varyant ? `${Math.round(s.sureSn / 60)} dk` : <Rozet ton="kotu">ses yok</Rozet>} {s.eksik ? <Rozet ton="uyari">{s.eksik} katman eksik</Rozet> : <Rozet ton="iyi">tam</Rozet>}
-                <div><GorunurlukSecici anahtar={`sesli:${s.key}`} deger={s.gorunurluk} /></div></li>
+                <div><GorunurlukBaglantisi anahtar={`sesli:${s.key}`} deger={s.gorunurluk} git={git} /></div></li>
             ))}</ul> : <p className="m16-alan-ipucu">Sesli ders yok.</p>}
           </div>
           <div className="m16-kart"><h2>Öğren destesi ({k.desteler.length})</h2>
             {k.desteler.length ? <ul className="m16-liste">{k.desteler.map((x) => (
               <li key={x.id}>{baglanti(`ogrenme/desteler?ac=${encodeURIComponent(x.id)}`, x.title || x.id)} · {x.slideCount} adım
-                <div><GorunurlukSecici anahtar={`deste:${x.id}`} deger={x.gorunurluk} /></div></li>
+                <div><GorunurlukBaglantisi anahtar={`deste:${x.id}`} deger={x.gorunurluk} git={git} /></div></li>
             ))}</ul> : <p className="m16-alan-ipucu">Deste yok.</p>}
           </div>
           <div className="m16-kart"><h2>İçerik paketi</h2>
             {k.paket ? <>
               <p>{baglanti(`ogrenme/paket?ac=${encodeURIComponent(k.paket.key)}`, k.paket.key)}</p>
               <dl className="m16-satirlar">{Object.entries(k.paket.sayilar).map(([a, n]) => <React.Fragment key={a}><dt>{a}</dt><dd>{n}</dd></React.Fragment>)}</dl>
-              <GorunurlukSecici anahtar={`paket:${k.paket.key}`} deger={k.paket.gorunurluk} />
+              <GorunurlukBaglantisi anahtar={`paket:${k.paket.key}`} deger={k.paket.gorunurluk} git={git} />
             </> : <p className="m16-alan-ipucu">Paket yok.</p>}
           </div>
           <div className="m16-kart"><h2>Önem, asistan, çözücü</h2>
             {k.envanter.length ? <ul className="m16-liste">{k.envanter.map((x) => (
               <li key={`${x.dizin}/${x.kod}`}>{TUR_AD[x.tur] || x.tur}: <code>{x.dizin}/{x.kod}</code> · {x.madde}
-                <div><GorunurlukSecici anahtar={`${x.tur}:${x.dizin}/${x.kod}`} deger={x.gorunurluk} /></div></li>
+                <div><GorunurlukBaglantisi anahtar={`${x.tur}:${x.dizin}/${x.kod}`} deger={x.gorunurluk} git={git} /></div></li>
             ))}</ul> : <p className="m16-alan-ipucu">Kayıt yok.</p>}
           </div>
           <div className="m16-kart"><h2>Sorular</h2>

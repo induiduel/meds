@@ -165,7 +165,7 @@ Yeni sayaç: `registerOzetRoutes` bağımlılıklarına işlev ekleyin (server.t
 - Sunucu: `src/services/yonetim16/icerik.ts` (`registerIcerik16Routes`): `/api/admin/kurullar`, `/dersler[/:id]`, `/branslar`, `/sesli-dersler`,
   `/spot-cozucu`, `/ders-icerik`, `/sinav-dagilimi`, `/k16/katalog/:varlik[/meta|/:id]` (katalog varlıkları `dataCatalogService.katalogErisimi`
   üzerinden + `spot`, `kisaltma`, `terim`, `saglik` bağdaştırıcıları). Yazma yalnız tek kayıt; `data/content` + `atomikJsonGuncelle`, yedek `data/_yedek/<ad>`.
-- Kit: `KatalogSayfasi` (katalog varlığı için hazır liste + çekmece + form), `GorunurlukSecici`/`GorunurlukRozeti` (site-ayar `gorunurluk`
+- Kit: `KatalogSayfasi` (katalog varlığı için hazır liste + çekmece + form), `GorunurlukRozeti`/`GorunurlukBaglantisi` (H320: seçici kaldırıldı, bkz. §8b; site-ayar `gorunurluk`
   anahtarları: `ders:<id>`, `kurul:<n>`, `deste:<id>`, `sesli:<key>`, `paket:<key>`, `onem|asistan|cozucu:<dizin>/<kod>`).
 - **Öğrenci tarafında uygulanır (2026-10-28), bkz. §8.** Kurul takvimi, ders defteri
   ve sınav dağılımı ön yüzde derlemede okunur: panel düzenlemesi canlıya dağıtımdaki katman eşitlemesi + derlemeyle yansır.
@@ -184,6 +184,12 @@ Yeni sayaç: `registerOzetRoutes` bağımlılıklarına işlev ekleyin (server.t
   `/api/decks|ogren|interactive-decks/:id` → 403 `{ icerikKapali: true }`; `/api/canli-ders`, `/api/canli-ders/ara` (`sonuc[].k`) ve `/api/decks` listeleri süzülür (ETag/304 kapalı,
   `Cache-Control: private, no-cache`). Gerçek loopback / panel anahtarı / yönetici jetonu yönetici sayılır (süzme yok). Önem/asistan/çözücü ve
   ders içerik paketi ön yüz paketinde olduğundan yalnız istemcide süzülür. `cdDetayGetir` 403'te cihazdaki çevrimdışı kopyaya düşmez.
+
+## 8b. Görünürlük tek yerde (H320, 2026-10-28)
+- Görünürlük YALNIZ **Site › Görünürlük** sayfasında yazılır: "Sayfalar" sekmesi (`site_ayar.sayfalar` + `menu`), "İçerik" sekmesi
+  (`site_ayar.gorunurluk`, liste `GET /api/admin/gorunurluk/icerik`, yazım `PUT /api/admin/site-ayar {gorunurluk}`; gizleme onaylı, 8 sn Geri al, toplu seçim).
+- Başka sayfa görünürlük YAZMAZ: yalnız `GorunurlukBaglantisi` (rozet + "Değiştir" → `site/gorunurluk?sekme=icerik&q=<anahtar>`, `gorunurlukYolu()`).
+- `site/menu` adresi Görünürlük › Sayfalar'a yönlenir. Yeni içerik türü eklenirse: anahtar öneki + `/gorunurluk/icerik` ucuna kaynak + `TUR_SECENEK`.
 
 ## 9. 2026-10-28 eklenen sayfalar ve temizlik
 - Yeni sayfalar: Sorular › Serbest girdiler (`/api/admin/sorular/serbest[/:id]`, questionIntake.ts; "Yeniden ayrıştır" elle + onay),

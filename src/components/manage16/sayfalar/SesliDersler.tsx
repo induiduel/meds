@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { SayfaBasligi, VeriTablosu, AyrintiCekmecesi, Rozet, Hata, Yukleniyor, GorunurlukRozeti, GorunurlukSecici, useAdminSorgu, zamanMetni } from '../kit';
+import { SayfaBasligi, VeriTablosu, AyrintiCekmecesi, Rozet, Hata, Yukleniyor, GorunurlukBaglantisi, useAdminSorgu, zamanMetni } from '../kit';
 import { manageAdres, type SayfaProps } from '../menu';
 
 type Satir = { key: string; baslik: string; kurul: number | null; varyant: number; sureSn: number; saglayici: string; olusturuldu: string; dosya: Record<string, boolean>; eksik: number; kayitli: boolean; gorunurluk: string };
@@ -25,14 +25,14 @@ export default function SesliDersler({ git }: SayfaProps) {
           { anahtar: 'baslik', baslik: 'Başlık', genislik: 'minmax(180px,2fr)', hucre: (x) => <span className="m16-kisalt" title={x.baslik}>{x.baslik}</span> },
           { anahtar: 'sureSn', baslik: 'Süre', sirala: true, genislik: '70px', hizala: 'sag', hucre: (x) => (x.varyant ? `${Math.round(x.sureSn / 60)} dk` : <Rozet ton="kotu">yok</Rozet>) },
           { anahtar: 'eksik', baslik: 'Katman', sirala: true, genislik: '96px', hucre: (x) => (x.eksik ? <Rozet ton="uyari">{x.eksik} eksik</Rozet> : <Rozet ton="iyi">tam</Rozet>) },
-          { anahtar: 'gorunurluk', baslik: 'Görünürlük', genislik: '110px', hucre: (x) => <GorunurlukRozeti deger={x.gorunurluk} /> },
+          { anahtar: 'gorunurluk', baslik: 'Görünürlük', genislik: '170px', hucre: (x) => <GorunurlukBaglantisi anahtar={`sesli:${x.key}`} deger={x.gorunurluk} git={git} /> } /* H322 */,
           { anahtar: 'olusturuldu', baslik: 'Üretildi', sirala: true, genislik: '100px', gizli: true, hucre: (x) => (x.olusturuldu ? zamanMetni(x.olusturuldu) : '—') },
         ]}
       />
       <AyrintiCekmecesi acik={!!acik} kapat={() => setAcik(null)} baslik={a.veri?.baslik || acik || ''} altBaslik={<code>{acik}</code>} kayit={a.veri} hedef={acik ? `sesli:${acik}` : undefined}>
         {a.hata ? <Hata hata={a.hata} yenile={a.yenile} /> : !a.veri ? <Yukleniyor satir={4} /> : (
           <>
-            <div className="m16-kart"><h2>Görünürlük</h2><GorunurlukSecici anahtar={`sesli:${a.veri.key}`} deger={a.veri.gorunurluk} degisti={() => void a.yenile()} /></div>
+            <div className="m16-kart"><h2>Görünürlük</h2><GorunurlukBaglantisi anahtar={`sesli:${a.veri.key}`} deger={a.veri.gorunurluk} git={git} />{/* H322 */}</div>
             {a.veri.ders && <p>Ders: <a href={manageAdres(`icerik/dersler/${a.veri.ders.id}`)} onClick={(e) => { e.preventDefault(); git(`icerik/dersler/${a.veri!.ders.id}`); }}>{a.veri.ders.id} · {a.veri.ders.konu}</a></p>}
             <div className="m16-kart"><h2>Katman dosyaları</h2>
               <span className="m16-cip-grup">{Object.entries(a.veri.dosya).map(([k, v]) => <Rozet key={k} ton={v ? 'iyi' : 'kotu'}>{DOSYA_AD[k] || k}</Rozet>)}</span>
