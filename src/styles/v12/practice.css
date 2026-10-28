@@ -332,3 +332,6 @@
   :root[data-design='v12'] :is(.p12-nav, .p12-scrim, .p12-prog > i) { animation: none; transition: none; }
 }
 :root[data-design='v12'][data-motion='reduced'] :is(.p12-nav, .p12-scrim, .p12-prog > i, .p12-btn, .p12-opt, .p12-cell, .p12-elim) { animation: none; transition: none; }
+
+/* H220: Listelerim ve notlar (StudyV12) başlığı da üst çubukla yineleniyordu */
+:root[data-v15='on'] .p12-hub-h > h1 { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }

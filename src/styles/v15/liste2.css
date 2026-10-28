@@ -93,3 +93,4 @@
 .kz15-halka span { width: 84px; height: 84px; border-radius: 50%; display: grid; place-items: center; align-content: center; text-align: center;
   background: radial-gradient(closest-side, var(--color-white) 78%, transparent 80% 100%), conic-gradient(var(--color-accent) calc(var(--p) * 1%), var(--color-field) 0); }
 .kz15-halka span b { font-size: 1.15rem; line-height: 1; }
+.ms15.is-gomulu .ms15-cols { grid-template-columns: minmax(0, 1fr); } /* H220: Bugün'e gömülüyken yan kartlar yok */

@@ -117,7 +117,7 @@ const I: Record<string, NavItem> = {
   matrix: { id: 'matrix', label: 'Havuz doluluğu', short: 'Doluluk', hint: 'Havuzda 1–100 soru doluluğu', icon: LayoutGrid, tint: '#64748B' },
   leaderboard: { id: 'leaderboard', label: 'Sıralama', hint: 'Dönemindeki haftalık ve kurul sıralaması', icon: Trophy, tint: '#FFB340' },
   // Kişisel
-  study: { id: 'study', label: 'Çalışma masam', short: 'Masam', tile: 'Çalışma masam', hint: 'Kendi listelerin, notların, hızlı test', icon: ListChecks, tint: '#34C759' },
+  study: { id: 'study', label: 'Listelerim ve notlar', short: 'Listelerim', tile: 'Listelerim', hint: 'Kaydettiğin sorular, notların, kendi testin (günün akışı Bugün sayfasında)', icon: ListChecks, tint: '#34C759' },
   cevrimdisi: { id: 'cevrimdisi', label: 'Çevrimdışı', short: 'Çevrimdışı', tile: 'Çevrimdışı', hint: 'Dersleri cihaza indir, internetsiz çalış; indirilenleri yönet', icon: CloudDownload, tint: '#0A84FF' },
   basarimlar: { id: 'basarimlar', label: 'Başarımlar', short: 'Başarım', tile: 'Başarımlar', hint: 'Günlük, haftalık, kurul hedefleri; başarımlar, puan ve ATP', icon: Medal, tint: '#FF9F0A' },
   zihin_haritasi: { id: 'zihin_haritasi', label: 'Zihin haritası', short: 'Harita', tile: 'Zihin haritası', hint: 'Dersin bölümleri ve anahtar terimleri tek bakışta', icon: Network, tint: '#FF2D55' },

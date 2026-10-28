@@ -22,7 +22,8 @@ const IKON: Record<ActivityKind, [React.ElementType, string, string]> = {
 const GUN = ['Pt', 'Sa', 'Ça', 'Pe', 'Cu', 'Ct', 'Pz'];
 const dk = (sn: number) => { const m = Math.round(sn / 60), h = Math.floor(m / 60); return h ? `${h} sa ${m % 60} dk` : `${m} dk`; };
 
-export default function MasaGunV15() {
+/** Bugün sayfasına gömülü (H220): yan kartlar (bugünkü süre, seri) Bugün'ün halkası ve şeridiyle aynı bilgi; gizlenir */
+export default function MasaGunV15({ gomulu = false }: { gomulu?: boolean } = {}) {
   const saniye = useMemo(() => getStudySeconds(), []);
   const olay = useMemo(() => getActivity(), []);
   const bugun = new Date();
@@ -50,7 +51,7 @@ export default function MasaGunV15() {
   const saat = (iso: string) => new Date(iso).toLocaleTimeString('tr-TR', { hour: '2-digit', minute: '2-digit' });
 
   return (
-    <section className="ms15" aria-label="Bugünün akışı">
+    <section className={`ms15${gomulu ? ' is-gomulu' : ''}`} aria-label="Yaptıkların">
       <div className="ms15-hafta" role="tablist" aria-label="Hafta">
         {hafta.map((d, i) => {
           const k = dayKey(d);
@@ -65,7 +66,7 @@ export default function MasaGunV15() {
       </div>
       <div className="ms15-cols">
         <div className="v15-card ms15-akis">
-          <div className="ms15-bas"><b>{sec === dayKey(bugun) ? 'Bugünün akışı' : new Date(`${sec}T12:00:00`).toLocaleDateString('tr-TR', { day: 'numeric', month: 'long', weekday: 'long' })}</b><span className="v15-cap">{akis.length ? `${gunOlay.length} etkinlik` : ''}</span></div>
+          <div className="ms15-bas"><b>{sec === dayKey(bugun) ? 'Bugün yaptıkların' : new Date(`${sec}T12:00:00`).toLocaleDateString('tr-TR', { day: 'numeric', month: 'long', weekday: 'long' })}</b><span className="v15-cap">{akis.length ? `${gunOlay.length} etkinlik` : ''}</span></div>
           {akis.length ? (
             <ol className="ms15-liste">
               {akis.slice(-12).map((e, i) => {
@@ -81,12 +82,12 @@ export default function MasaGunV15() {
             </ol>
           ) : <p className="ms15-bos">{sec === dayKey(bugun) ? 'Bugün henüz bir şey yapmadın. Soru çözdükçe, ders bitirdikçe akış burada oluşur.' : 'Bu gün kayıtlı etkinlik yok.'}</p>}
         </div>
-        <div className="ms15-yan">
+        {!gomulu && <div className="ms15-yan">
           <div className="v15-card ms15-mini"><span className="v15-label">Bugün</span><b>{dk(bugunSn)}</b>
             {hedefSn > 0 && <><span className="v15-bar"><span style={{ width: `${Math.min(100, (bugunSn / hedefSn) * 100)}%` }} /></span><small>hedef {dk(hedefSn)}</small></>}
           </div>
           <div className="v15-card ms15-mini"><span className="v15-label">Seri</span><b>{seri} gün</b><small>en uzun {Math.max(seri, enUzun)} gün</small></div>
-        </div>
+        </div>}
       </div>
     </section>
   );

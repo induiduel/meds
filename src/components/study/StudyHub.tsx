@@ -11,7 +11,6 @@ import { NotesView } from './NotesView';
 import { Segmented as Seg } from '../ui/kit';
 import { useAppearance } from '../../utils/appearance';
 import { StudyHubV12 } from '../v12/StudyV12';
-import MasaGunV15 from '../v15/MasaGunV15';
 
 export type StudySection = 'solve' | 'test' | 'notes' | 'lists';
 
@@ -132,7 +131,6 @@ export const StudyHub: React.FC<StudyHubProps> = ({
   if (v12) {
     return (
       <>
-      {gor.v15 && <MasaGunV15 />}
       <StudyHubV12
         loading={loading}
         bankSize={bank.length}
@@ -152,7 +150,7 @@ export const StudyHub: React.FC<StudyHubProps> = ({
   return (
     <div className="flex flex-col gap-3 sm:gap-4">
       <PageHeader
-        title="Çalışma masam"
+        title="Listelerim ve notlar"
         description={loading && bank.length === 0 ? 'Soru bankası yükleniyor…' : undefined}
         stats={loading && bank.length === 0 ? undefined : [
           { label: 'soru', value: bank.length.toLocaleString('tr-TR') },

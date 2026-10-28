@@ -4,7 +4,7 @@ import { kronometreAc } from '../v15/KronometreV15';
 import ProgramSimdiKarti from '../v15/ProgramSimdiKarti';
 import { IlkAdimlarKarti } from '../v15/IlkAdimlarV15';
 import { profilOku } from '../../services/profilKurulum';
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { Suspense, useEffect, useMemo, useState } from 'react';
 import { ArrowRight, CircleHelp, Flag, Gamepad2, Headphones, Layers, Lightbulb, RotateCcw, Search, Sparkles, Star } from 'lucide-react';
 import { type AppRoute, linkClick, navigateTo, pathFor } from '../../router';
 import { NAV_ITEMS, openSearch } from '../shell/navModel';
@@ -31,6 +31,8 @@ import { TodayViewV10 } from './TodayViewV10';
  *    (ezber kartları deposunda vadesi gelmiş kartlar).
  * Yerleşim: kap genişliği ≥ 880 px iken ana + 320 px yan sütun; daha darda (telefon, tablet, Akış) tek sütun.
  */
+
+const MasaGun = React.lazy(() => import('../v15/MasaGunV15'));
 
 export interface TodayViewProps {
   /** Seçili kurulun kısa adı (ör. "Kurul 1"); tarih satırında görünür */
@@ -407,7 +409,7 @@ const TodayViewV11: React.FC<TodayViewProps & { v12?: boolean; v13?: boolean; v1
 
             <section className="t15-flow" aria-labelledby="t15-flow-h">
               <div className="t15-sec-h">
-                <h2 id="t15-flow-h" className="v15-h2">Bugünkü akış</h2>
+                <h2 id="t15-flow-h" className="v15-h2">Kaldığın yerler</h2>
                 <a className="t15-more" href={pathFor('hub_dersler')} onClick={linkClick(() => onGo('hub_dersler'))}>Tümü</a>
               </div>
               {rows.length ? (
@@ -431,6 +433,10 @@ const TodayViewV11: React.FC<TodayViewProps & { v12?: boolean; v13?: boolean; v1
                 <p className="t15-empty v15-card">Henüz bir şey başlatmadın. Aşağıdan bir yol seç; kaldığın yer burada görünür.</p>
               )}
             </section>
+
+            {/* H220: Bugün, Çalışma masam ve Ders çalış merkezi aynı "bugün ne yapayım" işini bölüyordu; günün etkinlik akışı
+                (Çalışma masamdan) burada, tek sayfada: plan halkası → kaldığın yerler → bugün yaptıkların */}
+            <Suspense fallback={null}><MasaGun gomulu /></Suspense>
           </div>
 
           <aside className="t15-side" aria-label="Kısayollar ve özet">
@@ -448,19 +454,7 @@ const TodayViewV11: React.FC<TodayViewProps & { v12?: boolean; v13?: boolean; v1
               <a href={pathFor('hucrem')} onClick={linkClick(() => onGo('hucrem'))}><span className="v15-label">Hücre</span><b>{hucreBasamak}/28</b></a>
               <button type="button" onClick={kronometreAc}><span className="v15-label">Kronometre</span><b>{kronoYazi}</b></button>
             </div>
-            {hasAnyStudy && (
-              <div className="t15-week v15-card" aria-label="Bu haftanın çalışma süresi">
-                <span className="v15-label">Hafta</span>
-                <ol className="t15-week-bars" role="list">
-                  {week.days.map((d) => (
-                    <li key={d.key} className={d.isToday ? 'is-today' : d.future ? 'is-future' : ''} title={`${d.label}: ${fmtMin(d.sec)}`}>
-                      <span className="t15-wb"><i style={{ height: `${Math.max(4, Math.round((d.sec / week.max) * 100))}%` }} /></span>
-                      <span className="t15-wl">{d.label}</span>
-                    </li>
-                  ))}
-                </ol>
-              </div>
-            )}
+            {/* H220: hafta çubukları Çalışma masamdaki hafta şeridiyle aynı bilgiydi; tek hafta görünümü ana sütunda (MasaGunV15) */}
             {spotOfDay && (
               menudeGorunur('spots') ? (
                 <a className="t15-spot v15-card" href={spotHref} onClick={linkClick(() => navigateTo(spotHref))}>

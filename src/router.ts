@@ -200,7 +200,7 @@ export const ROUTE_TITLES: Record<AppRoute, string> = {
   flashcards: 'Ezber kartları',
   questions: 'Soru havuzu',
   past_exams: 'Çıkmış sorular',
-  study: 'Çalışma masam',
+  study: 'Listelerim ve notlar',
   practice: 'Deneme sınavı',
   test_cikmis: 'Test Edilen Çıkmış Sorular (Faz 14 İnceleme)',
   tester_ozet: '2026-2027 Ders Notları Test Laboratuvarı',
