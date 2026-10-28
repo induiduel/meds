@@ -17,6 +17,7 @@ import { Check, Coffee, Pause, Play, RotateCcw, Target, Timer, X } from 'lucide-
 import { Sheet } from '../../ui/Sheet';
 import type { LessonSection, LessonStep } from './lessonModel';
 import { medianMs, openEntries, saveSession } from '../../../services/learnReview';
+import '../../../styles/ogren-ders.css';
 import '../../../styles/learn-focus.css';
 
 export const IX_EVENT = 'medsoru:learn-ix';

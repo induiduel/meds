@@ -35,7 +35,7 @@
 .is15-konu li { display: grid; grid-template-columns: minmax(0, 1fr) minmax(60px, 30%) 3rem; align-items: center; gap: 10px; }
 .is15-k-ad { display: flex; flex-direction: column; min-width: 0; }
 .is15-k-ad b { font-size: .88rem; font-weight: 500; color: var(--color-ink); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.is15-k-ad small { font-size: .75rem; color: var(--color-ink-3); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.is15-k-ad small { font-size: .785rem; color: var(--color-ink-3); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .is15-konu .gf15-mod-n { text-align: right; }
 .is15-egri { height: 150px; }
 .is15-egri-l { fill: none; stroke: currentColor; stroke-width: 2; vector-effect: non-scaling-stroke; }
@@ -50,7 +50,7 @@
 .is15-egri-lej i { width: 14px; height: 3px; border-radius: 2px; background: currentColor; }
 .is15-egri-lej span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: var(--color-ink); }
 .is15-egri-lej b { font-variant-numeric: tabular-nums; color: var(--color-ink); }
-.is15-egri-lej small { grid-column: 2 / -1; color: var(--color-ink-3); font-size: .75rem; }
+.is15-egri-lej small { grid-column: 2 / -1; color: var(--color-ink-3); font-size: .785rem; }
 .is15-tur { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
 .is15-tur > button { padding: 10px; cursor: pointer; display: flex; flex-direction: column; gap: 6px; align-items: stretch; color: var(--color-ink); }
 .is15-tur > button .is15-svg { height: 50px; }

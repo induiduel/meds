@@ -14,6 +14,7 @@ import { loadDeck } from '../../data/deckStore';
 import { buildSteps, practiceOf, type PracticeItem } from './lesson/lessonModel';
 import { PracticeCard } from './lesson/LessonBlocks';
 import { dropEntry, dueEntries, itemSig, MASTER_BOX, openEntries, recordResult, type ReviewEntry } from '../../services/learnReview';
+import '../../styles/ogren-ders.css';
 import '../../styles/learn-focus.css';
 import '../../styles/learn-v10.css';
 import '../../styles/v12/learn-library.css';

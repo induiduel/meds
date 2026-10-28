@@ -57,7 +57,7 @@
   & .v15-kurul:hover { background: var(--color-accent-soft); }
   & .v15-kurul-t { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
   & .v15-kurul-t b { font: 700 13.5px/1.2 var(--font-sans); }
-  & .v15-kurul-t span { font: 500 12px/1.2 var(--font-sans); color: var(--color-ink-3); }
+  & .v15-kurul-t span { font: 500 12.5px/1.2 var(--font-sans); color: var(--color-ink-3); }
   & .v15-find { display: flex; align-items: center; gap: 10px; height: 40px; padding: 0 10px 0 12px; border: 1px solid var(--color-line); border-radius: var(--v15-r-md);
     background: var(--color-white); color: var(--color-ink-3); font: 500 13.5px/1 var(--font-sans); cursor: pointer; }
   & .v15-find svg { width: 17px; height: 17px; flex: none; }
@@ -80,7 +80,7 @@
   & .v15-me { display: flex; align-items: center; gap: 10px; padding: 10px; border-radius: var(--v15-r-md); background: var(--color-field); }
   & .v15-me-t { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
   & .v15-me-t b { font: 700 13px/1.2 var(--font-sans); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-  & .v15-me-t span { font: 500 11.5px/1.2 var(--font-sans); color: var(--color-ink-3); }
+  & .v15-me-t span { font: 500 12.5px/1.2 var(--font-sans); color: var(--color-ink-3); }
   & .v15-me .v15-ib { width: 34px; height: 34px; }
   @media (pointer: coarse) { & .v15-sub-a { min-height: 44px; } & .v15-nav-a { min-height: 46px; } }
 
@@ -98,9 +98,12 @@
   & .v15-top-t { flex: 1 1 auto; min-width: 0; display: flex; flex-direction: column; gap: 1px; }
   & .v15-top-h { margin: 0; font: var(--v15-t-title); letter-spacing: -.015em; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
   & .v15-top-sub { margin: 0; font: 500 12.5px/1.3 var(--font-sans); color: var(--color-ink-3); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-  & .v15-crumb { display: inline-flex; align-items: center; gap: 2px; align-self: flex-start; font: 600 12px/1.3 var(--font-sans); color: var(--color-ink-3); text-decoration: none; }
+  & .v15-crumb { display: inline-flex; align-items: center; gap: 2px; align-self: flex-start; font: 600 12.5px/1.3 var(--font-sans); color: var(--color-ink-3); text-decoration: none; }
   & .v15-crumb:hover { color: var(--color-accent); }
   & .v15-crumb svg { width: 13px; height: 13px; }
+  /* Dokunma alanı ≥40 px (görünür boyut 16 px satır): ::before üstte üst bar dolgusuna, altta başlığa hafif taşar */
+  & .v15-crumb { position: relative; }
+  & .v15-crumb::before { content: ''; position: absolute; left: -6px; right: -6px; top: -16px; bottom: -8px; }
   & .v15-top-slot { display: flex; align-items: center; gap: 6px; min-width: 0; }
   & .v15-top-slot:empty { display: none; }
   & .v15-top-tools { display: flex; align-items: center; gap: 2px; flex: none; }
@@ -119,6 +122,11 @@
     & .v15-not-phone { display: none !important; }
     & .v15-top-slot { display: none; }
     & .v15-crumb { display: none; }
+    /* Geri + 4 araç düğmesiyle başlığa ~120 px kalıyordu (ders ayrıntısı, sesli ders): uzun başlık iki satıra sarar,
+       üçüncü satırda kesilir; yazı 17 px'e iner ki iki satır üst bar yüksekliğini fazla büyütmesin */
+    & .v15-top { gap: 6px; }
+    & .v15-top-h { white-space: normal; font-size: 17px; line-height: 1.2; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; line-clamp: 2; overflow-wrap: break-word; }
+    & .v15-top-tools { gap: 0; }
   }
   @media (min-width: 600px) {
     & .v15-top-av { display: none; }
@@ -147,7 +155,7 @@
   & .v15-tab-pill { position: relative; width: 52px; height: 30px; border-radius: var(--v15-r-pill); display: grid; place-items: center; transition: background-color .2s; }
   & .v15-tab-pill svg { width: 21px; height: 21px; }
   & .v15-tab-pill .v15-dot { top: 2px; right: 10px; }
-  & .v15-tab-l { font: 600 11.5px/1.1 var(--font-sans); max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  & .v15-tab-l { font: 600 12.5px/1.1 var(--font-sans); max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
   & .v15-tab[aria-current='page'] { color: var(--color-ink); }
   & .v15-tab[aria-current='page'] .v15-tab-pill { background: var(--color-accent-soft); color: var(--color-accent); }
 
@@ -162,7 +170,7 @@
   & .v15-sheet-a[aria-current='page'] { color: var(--color-accent); }
   & .v15-sheet-tools { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
   & .v15-sheet-tools > * { min-height: 64px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; padding: 8px 4px; border: 0;
-    border-radius: var(--v15-r-md); background: var(--color-field); color: var(--color-ink-2); font: 600 12px/1.2 var(--font-sans); text-align: center; text-decoration: none; cursor: pointer; }
+    border-radius: var(--v15-r-md); background: var(--color-field); color: var(--color-ink-2); font: 600 12.5px/1.2 var(--font-sans); text-align: center; text-decoration: none; cursor: pointer; }
   & .v15-sheet-tools svg { width: 20px; height: 20px; color: var(--color-ink); }
 
   /* =========================================================================
@@ -208,7 +216,7 @@ button.v15-nav-a { border: 0; background: none; font: inherit; color: inherit; w
 :root[data-v15='on'] .ts15-kurul-n { flex: none; width: 54px; height: 54px; border-radius: 16px; display: flex; flex-direction: column; align-items: center; justify-content: center;
   background: color-mix(in oklab, var(--color-on-accent) 18%, transparent); line-height: 1; }
 :root[data-v15='on'] .ts15-kurul-n b { font-size: 1.35rem; font-variant-numeric: tabular-nums; }
-:root[data-v15='on'] .ts15-kurul-n small { font-size: .68rem; opacity: .85; margin-top: 2px; }
+:root[data-v15='on'] .ts15-kurul-n small { font-size: .785rem; opacity: .85; margin-top: 2px; }
 :root[data-v15='on'] .ts15-kurul-t { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
 :root[data-v15='on'] .ts15-kurul-t b { font-size: 1rem; }
 :root[data-v15='on'] .ts15-kurul-t span { font-size: .82rem; opacity: .85; }
@@ -219,9 +227,9 @@ button.v15-nav-a { border: 0; background: none; font: inherit; color: inherit; w
 :root[data-v15='on'] .ts15-arac > button { flex: 1 0 60px; display: flex; flex-direction: column; align-items: center; gap: 5px; border: 0; background: none; padding: 2px 0; cursor: pointer; color: var(--color-ink-2); font: inherit; border-radius: 12px; }
 :root[data-v15='on'] .ts15-arac-ic { position: relative; width: 38px; height: 38px; border-radius: 50%; display: grid; place-items: center; background: var(--color-field); }
 :root[data-v15='on'] .ts15-arac-ic svg { width: 18px; height: 18px; }
-:root[data-v15='on'] .ts15-arac-ic i { position: absolute; top: -3px; right: -5px; min-width: 18px; height: 18px; padding: 0 4px; border-radius: 9px; background: var(--color-bad); color: var(--color-white); font-style: normal; font-size: .66rem; font-weight: 700; display: grid; place-items: center; }
+:root[data-v15='on'] .ts15-arac-ic i { position: absolute; top: -3px; right: -5px; min-width: 18px; height: 18px; padding: 0 4px; border-radius: 9px; background: var(--color-bad); color: var(--color-white); font-style: normal; font-size: .785rem; font-weight: 700; display: grid; place-items: center; }
 :root[data-v15='on'] .ts15-arac > button.is-on .ts15-arac-ic { background: var(--color-accent); color: var(--color-on-accent); }
-:root[data-v15='on'] .ts15-arac-l { font-size: .68rem; line-height: 1.15; text-align: center; white-space: nowrap; }
+:root[data-v15='on'] .ts15-arac-l { font-size: .785rem; line-height: 1.15; text-align: center; white-space: nowrap; }
 :root[data-v15='on'] .ts15-h { margin: 0; font-size: .95rem; font-weight: 700; color: var(--color-ink); }
 /* son açtıkların: yatay kaydırma */
 :root[data-v15='on'] .ts15-son ul { list-style: none; margin: 8px -4px 0; padding: 0 4px; display: flex; gap: 4px; overflow-x: auto; scrollbar-width: none; }
@@ -245,7 +253,7 @@ button.v15-nav-a { border: 0; background: none; font: inherit; color: inherit; w
   background: color-mix(in oklab, var(--t) 15%, var(--color-white)); color: color-mix(in oklab, var(--t) 82%, var(--color-ink)); }
 :root[data-v15='on'] .ts15-ic svg { width: 23px; height: 23px; }
 :root[data-v15='on'] .ts15-oge[aria-current='page'] .ts15-ic { background: var(--t); color: var(--color-white); box-shadow: 0 4px 12px color-mix(in oklab, var(--t) 35%, transparent); }
-:root[data-v15='on'] .ts15-l { font-size: .72rem; line-height: 1.2; text-align: center; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; overflow-wrap: anywhere; color: var(--color-ink-2); }
+:root[data-v15='on'] .ts15-l { font-size: .785rem; line-height: 1.2; text-align: center; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; overflow-wrap: anywhere; color: var(--color-ink-2); }
 :root[data-v15='on'] .ts15-oge[aria-current='page'] .ts15-l { color: var(--color-ink); font-weight: 600; }
 :root[data-v15='on'] .ts15-bos { margin: 8px 2px; color: var(--color-ink-3); font-size: .88rem; }
 /* koyu temada ton zemini yüzeye göre */
@@ -302,10 +310,18 @@ button.v15-nav-a { border: 0; background: none; font: inherit; color: inherit; w
 
 /* Tam ekran: yan menü/ray ve üst bar gizlenir (gezinme TamEkranGezinme adasında, çıkış hapı sağ üstte).
    Kök neden: v12.css tam ekranda .sh-app dolgusunu sıfırlıyordu ama v15 ray/üst barı gizlenmiyordu; ray içeriğin üstüne biniyordu. */
+/* Kök neden (2026-10-28, fazla yükseklik): v12 tam ekranda --sh-top-h'yi 0 yapıp .sh-main'e 48 px üst dolgu (çıkış hapı
+   şeridi) veriyordu; v15 "ekrana sığan" sayfalar (o15, d15, spot, özet, soru: 100dvh - --sh-top-h - --sh-tabs-h - 48px) bu
+   48 px'i bilmediğinden ana alan 20–28 px taşıyor, boş sayfada bile kaydırma çıkıyordu. Tam ekranda üst şerit yüksekliği
+   (48 px şerit − normal 4 px üst dolgu + güvenli alan) --sh-top-h olarak verilir; yapışkan ofsetler de hapın altında durur. */
 :root[data-v15='on'].is-app-fullscreen {
   --sh-side-w: 0px;
-  --sh-top-h: 0px;
   & :is(.v15-side, .v15-top) { display: none !important; }
+}
+:root[data-v15='on'].is-app-fullscreen:not(.cd-ders-acik) {
+  /* içerik katmanı --sh-top-h'yi --sh-top-vis'ten yeniden hesaplar (v12.css › .sh-main > *); ikisi birlikte verilir */
+  --sh-top-h: calc(44px + env(safe-area-inset-top, 0px)) !important;
+  --sh-top-vis: calc(44px + env(safe-area-inset-top, 0px)) !important;
 }
 /* A03: bölüm başlığı + içerik açıklaması */
 :root[data-v15='on'] .ts15-gt { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 1px; }

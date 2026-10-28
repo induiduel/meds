@@ -13,6 +13,7 @@
 import React, { useMemo, useState } from 'react';
 import { ArrowDown, ArrowUp, Check, Equal, RotateCcw, X } from 'lucide-react';
 import type { IxDone } from './lessonModel';
+import '../../../styles/ogren-ders.css';
 import '../../../styles/learn-games.css';
 
 type Done = IxDone | undefined;

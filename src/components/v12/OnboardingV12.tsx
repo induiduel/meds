@@ -10,6 +10,7 @@ import type { AppRoute } from '../../router';
 import { useAppearance } from '../../utils/appearance';
 import '../../styles/v12/entry.css';
 import '../../styles/v15/giris.css';
+import { useTamKatman } from '../../utils/tamKatman';
 
 /* =============================================================================
  * v12 "Net" — giriş yüzeyleri (canvas: Entry.dc.html + Overlays.dc.html). Önek: e12-.
@@ -164,7 +165,7 @@ export const OnboardingV12: React.FC<OnboardingV12Props> = ({ steps, step, dir, 
   const v15 = useAppearance().v15;
   const last = steps.length - 1;
   // tam sayfa tanıtım açıkken alt sekme çubuğu gizlenir (kurulum.css › .tam-katman)
-  useEffect(() => { if (!v15) return; document.documentElement.classList.add('tam-katman'); return () => document.documentElement.classList.remove('tam-katman'); }, [v15]);
+  useTamKatman(!!v15);
   const isAuth = step === last;
   const s = steps[step];
 

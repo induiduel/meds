@@ -40,7 +40,7 @@
   --v15-t-title: 650 19px/1.2 var(--font-sans);
   --v15-t-heading: 650 17px/22px var(--font-sans);
   --v15-t-body: 400 15px/22px var(--font-sans);
-  --v15-t-caption: 400 13px/18px var(--font-sans);
+  --v15-t-caption: 400 13.5px/19px var(--font-sans);
   --v15-t-label: 600 11.5px/14px var(--font-sans);
   --v15-t-reading: 400 18px/30px var(--font-read);
 
@@ -86,7 +86,7 @@
   & .v15-btn:hover { background: var(--color-accent-hover); }
   & .v15-btn.is-soft { background: var(--color-accent-soft); color: var(--color-accent); }
   & .v15-btn svg { width: 17px; height: 17px; }
-  & .v15-tag { display: inline-flex; align-items: center; height: 24px; padding: 0 10px; border-radius: var(--v15-r-pill); font: 600 12px/1 var(--font-sans);
+  & .v15-tag { display: inline-flex; align-items: center; height: 24px; padding: 0 10px; border-radius: var(--v15-r-pill); font: 600 12.5px/1 var(--font-sans);
     background: var(--color-field); color: var(--color-ink-2); white-space: nowrap; }
   & .v15-tag.is-a { background: var(--color-accent-soft); color: var(--color-accent); }
   & .v15-tag.is-ok { background: var(--color-ok-soft); color: var(--color-ok); }

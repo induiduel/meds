@@ -4,6 +4,7 @@
  * üzerine gelince hazır oranlar görünür.
  */
 import React, { useCallback, useEffect, useRef, useState } from 'react';
+import '../../../styles/ogren-ders.css';
 
 const KEY = 'medsoru_learn_split';
 const MIN = 20;

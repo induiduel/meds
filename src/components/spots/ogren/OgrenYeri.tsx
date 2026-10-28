@@ -6,6 +6,7 @@ import { buildSteps, inline, mdToHtml, stripEmoji, type LessonStep } from '../..
 import { navigateTo } from '../../../router';
 import type { Brans } from '../brans';
 import { ogrenYerleri, type OgrenYer } from './ogrenEsle';
+import '../../../styles/ogren-ders.css';
 import '../../../styles/ogren-yeri.css';
 // Katalog tembel yüklenir; bu modül eşzamanlı okuduğundan yüklenirken hazır olmasını bekle.
 await loadDeckCatalog().catch(() => undefined);

@@ -3,6 +3,7 @@ import { Flag, MapPin, Send, ThumbsDown, ThumbsUp } from 'lucide-react';
 import { Dialog } from '../../ui/Dialog';
 import { toast } from '../../ui/Toast';
 import { FeedbackItem, FeedbackTarget, sendFeedback, voteFeedback } from './lessonFeedback';
+import '../../../styles/ogren-ders.css';
 
 /* ---------------------------------------------------------------------------
  * Bağlam: dersin tüm bildirimleri hedef anahtarına göre; bayraklar sayıyı buradan okur

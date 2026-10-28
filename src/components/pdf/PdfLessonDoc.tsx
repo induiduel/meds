@@ -9,6 +9,7 @@ import type { InteractiveDeck } from '../learn/InteractiveDeckView';
 import { buildSteps, buildSections, mdToHtml, inline, spotTone, stripEmoji, type LessonStep, type LessonSection } from '../learn/lesson/lessonModel';
 import { KeyPoints, Infographic, Formula, IX_META, cleanWhy, safeHint } from '../learn/lesson/LessonBlocks';
 import { Cover, Masthead, type CoverInfo } from './PdfParts';
+import '../../styles/ogren-ders.css';
 
 export type AnswerMode = 'shown' | 'end' | 'hidden';
 export const IX_TYPES = ['micro_quiz', 'cloze_masking', 'interactive_table', 'causal_chain', 'branching_logic', 'before_after_slider', 'active_recall'] as const;

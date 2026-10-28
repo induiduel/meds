@@ -31,7 +31,7 @@
 .sz15-kayit-b svg { width: 16px; height: 16px; flex: none; color: var(--color-accent); }
 .sz15-kayit-b > span { display: flex; flex-direction: column; min-width: 0; }
 .sz15-kayit-b b { font-size: 13.5px; }
-.sz15-kayit-b small { color: var(--color-ink-3); font-size: 12px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.sz15-kayit-b small { color: var(--color-ink-3); font-size: 12.5px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .sz15-kaydet { display: flex; gap: 6px; min-width: 0; }
 .sz15-kaydet input { flex: 1; min-width: 0; min-height: 36px; border: 1px solid var(--color-line); border-radius: 10px; padding: 0 10px; background: var(--color-white); color: var(--color-ink); font: 14px var(--font-sans); }
 .sz15-kaydet .v15-btn { min-height: 36px; padding: 0 12px; }

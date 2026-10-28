@@ -6,6 +6,7 @@ import { hucreSiralamaGetir, satinAl, sayi, sureYaz, useBasarim, yenile, type Hu
 import { useV15Baslik } from './baslik';
 import '../../styles/v15/ogren.css';
 import '../../styles/v15/hucrem.css';
+import { useTamKatman } from '../../utils/tamKatman';
 
 /**
  * v15 · Hücrem (tasarım sistemi v15 › M "Hücrem"). Yeni sayfa: /hucrem (Menü › Topluluk).
@@ -262,9 +263,10 @@ function EvrimDetay({ no, basamaklar, acik, onGit, onKapat, glukoz, canlilik }: 
   const ac = !!acik[b.id];
   useEffect(() => {
     const k = (e: KeyboardEvent) => { if (e.key === 'Escape') onKapat(); if (e.key === 'ArrowLeft' && no > 1) onGit(no - 1); if (e.key === 'ArrowRight' && no < basamaklar.length) onGit(no + 1); };
-    window.addEventListener('keydown', k); document.documentElement.classList.add('tam-katman');
-    return () => { window.removeEventListener('keydown', k); document.documentElement.classList.remove('tam-katman'); };
+    window.addEventListener('keydown', k);
+    return () => { window.removeEventListener('keydown', k); };
   }, [no, basamaklar.length, onGit, onKapat]);
+  useTamKatman();
   return createPortal(
     <div className="hc15-ev" role="dialog" aria-modal="true" aria-label={`Basamak ${no}: ${b.ad}`}>
       <header className="hc15-ev-ust">

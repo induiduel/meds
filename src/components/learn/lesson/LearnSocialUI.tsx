@@ -14,6 +14,7 @@ import { toast } from '../../ui/Toast';
 import type { LessonStep } from './lessonModel';
 import { whoAmI } from './lessonFeedback';
 import { useAppearance } from '../../../utils/appearance';
+import '../../../styles/ogren-ders.css';
 import {
   createNote, createThread, deleteMessage, deleteNote, findQuoteRange, flattenForSearch, loadThread, MESSAGE_MAX, NOTE_KINDS, NOTE_MAX,
   NoteKind, onSocialMessage, sendMessage, setThreadStatus, SocialMessage, SocialNote, SocialThread, useLearnSocial,

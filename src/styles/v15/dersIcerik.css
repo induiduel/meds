@@ -14,18 +14,18 @@
 .di15-ara input { flex: 1; min-width: 0; background: none; border: 0; outline: 0; color: var(--color-ink); font: inherit; font-size: 16px; }
 .di15-alts { align-self: flex-start; }
 .di15-alts button { display: inline-flex; align-items: center; gap: 6px; }
-.di15-alts small { font-size: .74rem; color: var(--color-ink-3); font-variant-numeric: tabular-nums; }
+.di15-alts small { font-size: .785rem; color: var(--color-ink-3); font-variant-numeric: tabular-nums; }
 .di15-bos { padding: 24px; text-align: center; color: var(--color-ink-2); }
 
 /* ortak düzenler */
 .di15-yigin { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px; }
 .di15-izgara { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; grid-template-columns: minmax(0, 1fr); }
 @container (min-width: 640px) { .di15-izgara { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-.di15-slayt { display: inline-flex; align-self: flex-start; margin-top: 4px; padding: 2px 8px; border-radius: 999px; background: var(--color-field); font-size: .72rem; color: var(--color-ink-3); font-variant-numeric: tabular-nums; }
+.di15-slayt { display: inline-flex; align-self: flex-start; margin-top: 4px; padding: 2px 8px; border-radius: 999px; background: var(--color-field); font-size: .785rem; color: var(--color-ink-3); font-variant-numeric: tabular-nums; }
 .di15-harf { flex: none; width: 34px; height: 34px; border-radius: 10px; display: grid; place-items: center; background: var(--color-accent-soft); color: var(--color-accent); font-weight: 800; font-size: .95rem; }
 .di15-harf.is-b { background: var(--color-bad-soft); color: var(--color-bad); }
 .di15-cipler { display: flex; flex-wrap: wrap; gap: 4px; }
-.di15-cipler span { padding: 2px 8px; border-radius: 999px; background: var(--color-field); font-size: .75rem; color: var(--color-ink-2); }
+.di15-cipler span { padding: 2px 8px; border-radius: 999px; background: var(--color-field); font-size: .785rem; color: var(--color-ink-2); }
 
 /* madde listeleri: renkli nokta + iç içe alt maddeler */
 .di15-maddeler, .di15-alt { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 6px; }
@@ -53,7 +53,7 @@
 .di15-hast-t { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
 .di15-hast-t b { font-size: 1.05rem; color: var(--color-ink); }
 .di15-hast-t em { font-style: italic; font-size: .85rem; color: var(--color-ink-3); }
-.di15-hast-t small { font-size: .75rem; color: var(--color-ink-3); }
+.di15-hast-t small { font-size: .785rem; color: var(--color-ink-3); }
 .di15-ok { width: 20px; height: 20px; color: var(--color-ink-3); transition: transform .2s; flex: none; }
 .di15-hast.is-acik .di15-ok { transform: rotate(180deg); }
 .di15-hast-g { display: grid; gap: 10px; padding: 0 14px 14px; grid-template-columns: minmax(0, 1fr); animation: di15Ac .25s ease-out; }
@@ -73,7 +73,7 @@
 .di15-onem h3 { margin: 0; font-size: 1.05rem; line-height: 1.3; color: var(--color-ink); }
 .di15-puan { flex: none; width: 50px; height: 50px; border-radius: 14px; display: flex; flex-direction: column; align-items: center; justify-content: center; line-height: 1; }
 .di15-puan b { font-size: 1.1rem; font-variant-numeric: tabular-nums; }
-.di15-puan small { font-size: .62rem; text-transform: uppercase; letter-spacing: .05em; margin-top: 2px; }
+.di15-puan small { font-size: .785rem; text-transform: uppercase; letter-spacing: .05em; margin-top: 2px; }
 .di15-puan.is-cok { background: var(--color-bad-soft); color: var(--color-bad); }
 .di15-puan.is-orta { background: var(--color-warn-soft); color: var(--color-warn); }
 .di15-puan.is-az { background: var(--color-accent-soft); color: var(--color-accent); }
@@ -84,7 +84,7 @@
 .di15-spot { display: flex; gap: 12px; align-items: flex-start; padding: 12px 14px; border-left: 4px solid var(--color-warn); }
 .di15-spot > svg { width: 18px; height: 18px; color: var(--color-warn); flex: none; margin-top: 2px; }
 .di15-spot p { margin: 0; line-height: 1.55; color: var(--color-ink); }
-.di15-spot small { font-size: .74rem; color: var(--color-ink-3); }
+.di15-spot small { font-size: .785rem; color: var(--color-ink-3); }
 .di15-bilgi { padding: 12px 14px; display: flex; flex-direction: column; gap: 6px; }
 .di15-bilgi b { color: var(--color-ink); }
 .di15-bilgi p { margin: 0; line-height: 1.5; color: var(--color-ink-2); font-size: .93rem; }
@@ -93,7 +93,7 @@
 .di15-tb { padding: 14px; display: flex; flex-direction: column; gap: 12px; overflow: hidden; }
 .di15-tb-u { display: flex; align-items: center; gap: 12px; }
 .di15-tb-u h3 { margin: 0; font-size: 1.02rem; color: var(--color-ink); }
-.di15-tb-u small { font-size: .74rem; color: var(--color-ink-3); }
+.di15-tb-u small { font-size: .785rem; color: var(--color-ink-3); }
 .di15-tb-ik { flex: none; width: 38px; height: 38px; border-radius: 12px; display: grid; place-items: center; background: var(--color-accent); color: var(--color-on-accent, #fff); }
 .di15-tb-ik svg { width: 19px; height: 19px; }
 .di15-tb.is-sira .di15-tb-ik { background: var(--color-ok); }
@@ -108,7 +108,7 @@
 .di15-adim small { font-size: .82rem; color: var(--color-ink-2); }
 .di15-adim small em { color: var(--color-ink-3); font-style: normal; }
 /* eşleşme: sol rozet → sağ değer */
-.di15-es-bas { display: flex; align-items: center; gap: 8px; font-size: .72rem; letter-spacing: .05em; text-transform: uppercase; color: var(--color-ink-3); padding: 0 4px; }
+.di15-es-bas { display: flex; align-items: center; gap: 8px; font-size: .785rem; letter-spacing: .05em; text-transform: uppercase; color: var(--color-ink-3); padding: 0 4px; }
 .di15-es-bas svg { width: 14px; height: 14px; }
 .di15-es { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; grid-template-columns: minmax(0, 1fr); }
 @container (min-width: 640px) { .di15-es { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
@@ -121,7 +121,7 @@
 /* matris: renkli sütun başlıkları; telefonda satır kartı */
 .di15-mat-kap { overflow-x: auto; border-radius: 14px; border: 1px solid var(--color-line-soft, var(--color-line)); }
 .di15-mat { width: 100%; border-collapse: separate; border-spacing: 0; font-size: .92rem; }
-.di15-mat thead th { position: sticky; top: 0; padding: 10px 12px; text-align: left; font-size: .76rem; letter-spacing: .04em; text-transform: uppercase; background: var(--color-ink); color: var(--color-white); }
+.di15-mat thead th { position: sticky; top: 0; padding: 10px 12px; text-align: left; font-size: .785rem; letter-spacing: .04em; text-transform: uppercase; background: var(--color-ink); color: var(--color-white); }
 .di15-mat thead th.is-r1 { background: var(--color-accent); color: var(--color-on-accent, #fff); }
 .di15-mat thead th.is-r2 { background: var(--color-ok); color: #fff; }
 .di15-mat thead th.is-r3 { background: var(--color-warn); color: var(--color-ink); }
@@ -155,7 +155,7 @@
 .di15-soru { padding: 14px 16px; display: flex; flex-direction: column; gap: 10px; }
 .di15-soru header { display: flex; align-items: center; gap: 8px; }
 .di15-soru-n { width: 26px; height: 26px; border-radius: 50%; display: grid; place-items: center; background: var(--color-field); font-size: .8rem; font-weight: 700; color: var(--color-ink-2); }
-.di15-zor { padding: 2px 8px; border-radius: 999px; font-size: .72rem; font-weight: 700; text-transform: capitalize; background: var(--color-field); color: var(--color-ink-3); }
+.di15-zor { padding: 2px 8px; border-radius: 999px; font-size: .785rem; font-weight: 700; text-transform: capitalize; background: var(--color-field); color: var(--color-ink-3); }
 .di15-zor.is-kolay { background: var(--color-ok-soft); color: var(--color-ok); }
 .di15-zor.is-orta { background: var(--color-warn-soft); color: var(--color-warn); }
 .di15-zor.is-zor { background: var(--color-bad-soft); color: var(--color-bad); }
@@ -203,7 +203,7 @@ svg.di15-ik{width:16px;height:16px;vertical-align:-2px;opacity:.8}
 .di15-sira{margin:6px 0 0 20px;line-height:1.55}
 .di15-sira li{padding:2px 0}
 .di15-sira ul{margin:2px 0 2px 18px}
-.di15-tur{font-size:12px;opacity:.7;margin-left:8px}
+.di15-tur{font-size:12.5px;opacity:.7;margin-left:8px}
 .di15-kay-s{display:inline;opacity:.5}
 /* Sıralı listeler: numara (1,2,3) / alfa (a,b,c) / azalan (büyükten küçüğe) */
 .di15-num { counter-reset: dn; }
@@ -234,7 +234,7 @@ svg.di15-ik{width:16px;height:16px;vertical-align:-2px;opacity:.8}
 .di15-tb.is-kars .di15-mat-kart { display: none !important; }
 .di15-tb.is-kars .di15-mat { width: 100%; table-layout: fixed; }
 .di15-tb.is-kars .di15-mat th, .di15-tb.is-kars .di15-mat td { padding: 8px 8px; font-size: .84rem; line-height: 1.35; overflow-wrap: anywhere; hyphens: auto; vertical-align: top; }
-.di15-tb.is-kars .di15-mat thead th { font-size: .72rem; letter-spacing: .04em; }
+.di15-tb.is-kars .di15-mat thead th { font-size: .785rem; letter-spacing: .04em; }
 .di15-tb.is-kars .di15-mat th:first-child { width: 28%; }
 .di15-tb.is-kars .di15-mat td.is-taraf { width: 26%; font-weight: 700; --t: var(--color-accent); color: var(--t); background: color-mix(in srgb, var(--t) 14%, transparent); }
 .di15-tb.is-kars .di15-mat td.is-t1 { --t: var(--color-ok); } .di15-tb.is-kars .di15-mat td.is-t2 { --t: var(--color-warn); } .di15-tb.is-kars .di15-mat td.is-t3 { --t: var(--color-ai, #af52de); }
@@ -248,7 +248,7 @@ svg.di15-ik{width:16px;height:16px;vertical-align:-2px;opacity:.8}
 :root[data-v15='on'] .di15 > .di15-sirala { flex: 0 0 auto; height: 40px; }
 :root[data-v15='on'] .di15 > .di15-alts { flex: 0 0 auto; align-self: center; height: 40px; padding: 3px; border-radius: 12px; display: inline-flex; gap: 2px; }
 :root[data-v15='on'] .di15 > .di15-alts button { flex-direction: row; height: 34px; padding: 0 12px; border-radius: 9px; gap: 6px; font-size: 13.5px; white-space: nowrap; }
-:root[data-v15='on'] .di15 > .di15-alts button small { font-size: 11.5px; opacity: .75; }
+:root[data-v15='on'] .di15 > .di15-alts button small { font-size: 12.5px; opacity: .75; }
 /* sekme şeridi: daha alçak, seçili sekme yumuşak vurgu (göz yormayan) */
 :root[data-v15='on'] .di15-tabs a { height: 34px; padding: 0 12px; font-size: 13.5px; background: transparent; border-color: var(--color-line-soft, var(--color-line)); color: var(--color-ink-2); }
 :root[data-v15='on'] .di15-tabs a:hover { background: var(--color-field); }
@@ -261,8 +261,8 @@ svg.di15-ik{width:16px;height:16px;vertical-align:-2px;opacity:.8}
 :root[data-v15='on'] .di15-terim-u b { font-size: 15px; font-weight: 650; }
 :root[data-v15='on'] .di15-harf { width: 28px; height: 28px; border-radius: 8px; font-size: 13px; background: var(--color-field); color: var(--color-ink-2); }
 :root[data-v15='on'] .di15-terim p { font-size: 14px; line-height: 1.5; color: var(--color-ink-2); }
-:root[data-v15='on'] .di15-cipler span { background: transparent; border: 1px solid var(--color-line-soft, var(--color-line)); color: var(--color-ink-3); font-size: 12px; padding: 1px 8px; }
-:root[data-v15='on'] .di15-terim .di15-slayt { margin-top: auto; font-size: 11.5px; }
+:root[data-v15='on'] .di15-cipler span { background: transparent; border: 1px solid var(--color-line-soft, var(--color-line)); color: var(--color-ink-3); font-size: 12.5px; padding: 1px 8px; }
+:root[data-v15='on'] .di15-terim .di15-slayt { margin-top: auto; font-size: 12.5px; }
 @container (min-width: 900px) { :root[data-v15='on'] .di15-izgara { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 @media (max-width: 520px) { :root[data-v15='on'] .di15 > .di15-ara { flex-basis: 100%; } :root[data-v15='on'] .di15 > .di15-alts { overflow-x: auto; max-width: 100%; } }
 :root[data-v15='on'] .di15 > .di15-alts.v15-seg > button { display: inline-flex; align-items: center; }
@@ -299,6 +299,6 @@ svg.di15-ik{width:16px;height:16px;vertical-align:-2px;opacity:.8}
 .fvb-l li { position: relative; border-radius: 12px; background: var(--color-field); }
 .fvb-l a { display: grid; gap: 3px; padding: 12px 40px 12px 12px; color: inherit; text-decoration: none; }
 .fvb-l b { display: flex; align-items: center; gap: 5px; } .fvb-l b svg { width: 14px; height: 14px; color: #e0a100; }
-.fvb-l small { color: var(--color-ink-3); font-size: .72rem; } .fvb-l span { font-size: .82rem; color: var(--color-ink-2, inherit); }
+.fvb-l small { color: var(--color-ink-3); font-size: .785rem; } .fvb-l span { font-size: .82rem; color: var(--color-ink-2, inherit); }
 .fvb-l li > button { position: absolute; top: 8px; right: 8px; border: 0; background: transparent; color: var(--color-ink-3); cursor: pointer; }
 .fvb-l li > button svg { width: 15px; height: 15px; }

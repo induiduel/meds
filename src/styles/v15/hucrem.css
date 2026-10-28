@@ -19,9 +19,9 @@
 .hc15-er, .hc15-golgi path { fill: none; stroke: color-mix(in oklab, var(--color-accent) 70%, var(--color-ink)); stroke-width: 2; stroke-linecap: round; }
 .hc15-iskelet line { stroke: color-mix(in oklab, var(--color-ink-3) 50%, transparent); stroke-width: 1; }
 .hc15-sinir { fill: none; stroke: var(--color-warn); stroke-width: 2; stroke-linejoin: round; }
-.hc15-insan { font: 600 11px var(--font-sans); fill: var(--color-ink-2); }
+.hc15-insan { font: 600 12.5px var(--font-sans); fill: var(--color-ink-2); }
 .hc15-durum { display: flex; flex-direction: column; gap: 6px; }
-.hc15-cag { font-size: .75rem; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; color: var(--color-accent); }
+.hc15-cag { font-size: .785rem; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; color: var(--color-accent); }
 .hc15-durum > b { font-size: 1.3rem; color: var(--color-ink); }
 .hc15-bar { margin: 4px 0; }
 .hc15-atp { display: inline-flex; align-items: center; gap: 6px; color: var(--color-ink-2); font-size: .9rem; font-variant-numeric: tabular-nums; }
@@ -55,7 +55,7 @@
 .hc15-3d { position: relative; width: 100%; max-width: 340px; aspect-ratio: 1; margin: 0 auto; border-radius: 20px; background: radial-gradient(circle at 50% 45%, color-mix(in oklab, var(--color-accent) 10%, var(--color-white)), color-mix(in oklab, var(--color-accent) 4%, var(--color-field)) 70%); overflow: hidden; touch-action: pan-y; }
 .hc15-3d-tuval { position: absolute; inset: 0; width: 100%; height: 100%; display: block; cursor: grab; transition: filter .6s; }
 .hc15-3d-tuval:active { cursor: grabbing; }
-.hc15-3d-ipucu { position: absolute; left: 0; right: 0; bottom: 8px; z-index: 1; text-align: center; font-size: .72rem; color: var(--color-ink-3); pointer-events: none; }
+.hc15-3d-ipucu { position: absolute; left: 0; right: 0; bottom: 8px; z-index: 1; text-align: center; font-size: .785rem; color: var(--color-ink-3); pointer-events: none; }
 .hc15-sahne.is-stres { background: color-mix(in oklab, var(--color-bad-soft) 70%, var(--color-white)); }
 @container (min-width: 600px) { .hc15-sahne { grid-template-columns: 340px minmax(0, 1fr); } }
 .hc15-glk svg { color: var(--color-warn); }
@@ -69,7 +69,7 @@
 .hc15-enerji li b { color: var(--color-ink); }
 .hc15-ist { margin: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 8px; }
 .hc15-ist div { background: var(--color-field); border-radius: 12px; padding: 8px 10px; }
-.hc15-ist dt { font-size: .72rem; color: var(--color-ink-3); }
+.hc15-ist dt { font-size: .785rem; color: var(--color-ink-3); }
 .hc15-ist dd { margin: 2px 0 0; font-weight: 700; color: var(--color-ink); font-variant-numeric: tabular-nums; }
 .hc15-odeme { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 8px; }
 .hc15-ac.is-glk { background: var(--color-warn-soft); color: var(--color-warn); box-shadow: inset 0 0 0 1px color-mix(in oklab, var(--color-warn) 30%, transparent); }
@@ -92,7 +92,7 @@
 .hc15-kart-t b { font-size: .85rem; line-height: 1.25; color: var(--color-ink); }
 .hc15-kart-t .v15-tag { flex: none; display: inline-flex; align-items: center; gap: 3px; }
 .hc15-kart-t .v15-tag svg { width: 11px; height: 11px; }
-.hc15-kart small { font-size: .75rem; color: var(--color-ink-2); line-height: 1.35; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+.hc15-kart small { font-size: .785rem; color: var(--color-ink-2); line-height: 1.35; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
 
 /* Evrim yolculuğu / ayrıntı (M03, M12) */
 /* tam ekran katman: genel [role=dialog] max-height (vvh − 24px) alttan şerit bırakıyordu */

@@ -10,8 +10,8 @@
 .ks15-nokta.is-a { background: var(--color-accent); }
 .ks15-t { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 1px; }
 .ks15-t b { font-size: .92rem; }
-.ks15-t small { font-size: .76rem; color: var(--color-ink-3); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.ks15-d { flex: none; font-size: .76rem; color: var(--color-ink-3); }
+.ks15-t small { font-size: .785rem; color: var(--color-ink-3); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.ks15-d { flex: none; font-size: .785rem; color: var(--color-ink-3); }
 .ks15-d.is-ok { color: var(--color-ok); font-weight: 600; }
 .ks15-d.is-a { color: var(--color-accent); font-weight: 600; }
 .ks15-ok { flex: none; width: 15px; height: 15px; color: var(--color-accent); }

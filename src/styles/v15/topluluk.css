@@ -60,7 +60,7 @@
 .tp15-sr-t { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 3px; align-self: stretch; justify-content: center; padding: 2px 0; }
 .tp15-sr-1, .tp15-sr-2 { display: flex; align-items: center; gap: 6px; min-width: 0; }
 .tp15-sr-1 b { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-weight: 600; font-size: .98rem; color: var(--color-ink); }
-.tp15-sr-1 time { margin-left: auto; flex: none; font-size: .74rem; color: var(--color-ink-3); font-variant-numeric: tabular-nums; }
+.tp15-sr-1 time { margin-left: auto; flex: none; font-size: .785rem; color: var(--color-ink-3); font-variant-numeric: tabular-nums; }
 .tp15-sr.is-yeni .tp15-sr-1 time { color: var(--color-accent); font-weight: 600; }
 .tp15-on-m { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: .87rem; color: var(--color-ink-3); }
 .tp15-sr.is-yeni .tp15-on-m { color: var(--color-ink-2); }
@@ -108,7 +108,7 @@
 .tp15-uyeler ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; }
 .tp15-uyeler li { display: flex; align-items: center; gap: 10px; padding: 7px 4px; font-size: .9rem; }
 .tp15-uyeler li b { flex: 1; min-width: 0; font-weight: 550; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.tp15-uyeler li span:last-child { font-size: .76rem; color: var(--color-ink-3); }
+.tp15-uyeler li span:last-child { font-size: .785rem; color: var(--color-ink-3); }
 .tp15-uyeler li span.is-on { color: oklch(0.55 0.15 150); }
 .tp15-uyeler .v15-btn { display: inline-flex; align-items: center; justify-content: center; gap: 7px; }
 .tp15-uyeler .v15-btn svg { width: 16px; height: 16px; }
@@ -122,7 +122,7 @@
 .tp15-bos b { color: var(--color-ink); font-size: 1.02rem; }
 .tp15-eski { align-self: center; border: 1px solid var(--color-line); background: var(--color-white); color: var(--color-accent); border-radius: 999px; padding: 6px 14px; font: inherit; font-size: .82rem; cursor: pointer; margin: 4px 0 8px; }
 .tp15-gun { position: sticky; top: 4px; z-index: 2; align-self: center; margin: 12px 0 6px; }
-.tp15-gun span { display: inline-block; padding: 4px 11px; border-radius: 999px; font-size: .74rem; font-weight: 600; color: var(--color-ink-2); background: color-mix(in oklab, var(--color-white) 88%, transparent); border: 1px solid var(--color-line-soft, var(--color-line)); backdrop-filter: blur(6px); }
+.tp15-gun span { display: inline-block; padding: 4px 11px; border-radius: 999px; font-size: .785rem; font-weight: 600; color: var(--color-ink-2); background: color-mix(in oklab, var(--color-white) 88%, transparent); border: 1px solid var(--color-line-soft, var(--color-line)); backdrop-filter: blur(6px); }
 /* balonlar */
 .tp15-m { --r: 18px; position: relative; display: flex; align-items: flex-end; gap: 4px; max-width: min(78%, 560px); margin-top: 2px; align-self: flex-start; }
 .tp15-m.is-ilk { margin-top: 10px; }
@@ -137,7 +137,7 @@
 .tp15-balon > p { margin: 0; white-space: pre-wrap; overflow-wrap: anywhere; line-height: 1.4; font-size: .95rem; }
 .tp15-yer { display: inline-block; width: 52px; }
 .tp15-m.is-ben .tp15-yer { width: 68px; }
-.tp15-saat { position: absolute; right: 10px; bottom: 5px; display: inline-flex; align-items: center; gap: 3px; font-size: .68rem; line-height: 1; color: var(--color-ink-3); font-variant-numeric: tabular-nums; }
+.tp15-saat { position: absolute; right: 10px; bottom: 5px; display: inline-flex; align-items: center; gap: 3px; font-size: .785rem; line-height: 1; color: var(--color-ink-3); font-variant-numeric: tabular-nums; }
 .tp15-m.is-ben .tp15-saat { color: color-mix(in oklab, var(--color-on-accent) 78%, transparent); }
 .tp15-m.is-ek .tp15-saat { position: static; float: right; margin: 2px 0 0 8px; }
 .tp15-tik { width: 15px; height: 15px; }
@@ -145,7 +145,7 @@
 .tp15-ad-ust { display: block; margin-bottom: 2px; font-size: .8rem; font-weight: 650; color: oklch(0.52 0.14 var(--t)); }
 .tp15-sk { color: var(--color-bad); font-weight: 600; }
 .tp15-alinti { margin: 1px 0 5px !important; padding: 5px 9px; border-left: 3px solid oklch(0.6 0.14 var(--t)); border-radius: 6px; background: color-mix(in oklab, var(--color-ink) 6%, transparent); font-size: .82rem !important; color: var(--color-ink-2); display: flex; flex-direction: column; overflow: hidden; }
-.tp15-alinti b { font-size: .76rem; color: oklch(0.5 0.14 var(--t)); }
+.tp15-alinti b { font-size: .785rem; color: oklch(0.5 0.14 var(--t)); }
 .tp15-m.is-ben .tp15-alinti { background: color-mix(in oklab, var(--color-on-accent) 16%, transparent); border-left-color: var(--color-on-accent); color: var(--color-on-accent); }
 .tp15-m.is-ben .tp15-alinti b { color: var(--color-on-accent); }
 .tp15-balon .sa-ek { min-width: min(240px, 60vw); margin-bottom: 4px; background: var(--color-white); color: var(--color-ink); border-radius: 12px; }

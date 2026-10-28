@@ -15,6 +15,7 @@ import type { PdfQuestion } from './pdfSources';
 import { committeeShort } from './pdfSources';
 import { Cover, Masthead, type CoverInfo } from './PdfParts';
 import { makeAnchorer, type ArrangedItem, type GroupBy, type GroupOrder, type SortBy, type SortDir } from './pdfOrder';
+import '../../styles/ogren-ders.css';
 
 export type BookletMode = 'student' | 'solution' | 'key';
 export type OptionNotes = 'off' | 'inline' | 'analysis';

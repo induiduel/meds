@@ -19,7 +19,7 @@
 /* Yıl / konu çip şeridi (A, C, D) */
 .cg15-serit { display: flex; align-items: center; gap: 8px; padding: 2px 0 8px; min-width: 0; }
 .cg15-kip { display: inline-flex; flex: none; padding: 2px; border-radius: 999px; background: var(--color-field); }
-.cg15-kip button { border: 0; background: none; font: 600 12px var(--font-sans, inherit); color: var(--color-ink-3); padding: 5px 10px; border-radius: 999px; cursor: pointer; }
+.cg15-kip button { border: 0; background: none; font: 600 12.5px var(--font-sans, inherit); color: var(--color-ink-3); padding: 5px 10px; border-radius: 999px; cursor: pointer; }
 .cg15-kip button.is-on { background: var(--color-white); color: var(--color-ink); box-shadow: 0 1px 2px rgb(0 0 0 / .12); }
 .cg15-cipler { display: flex; gap: 6px; overflow-x: auto; min-width: 0; flex: 1 1 auto; scrollbar-width: none; overscroll-behavior-x: contain; }
 .cg15-cipler::-webkit-scrollbar { display: none; }
@@ -43,7 +43,7 @@
 .cg15-po.is-on { background: var(--color-accent-soft); color: var(--color-ink); font-weight: 600; }
 .cg15-po-s { display: flex; justify-content: space-between; align-items: center; gap: 8px; font-size: 13px; }
 .cg15-po-a { display: inline-flex; align-items: center; gap: 6px; min-width: 0; }
-.cg15-po-s small { color: var(--color-ink-3); font-size: 11.5px; font-weight: 500; flex: none; }
+.cg15-po-s small { color: var(--color-ink-3); font-size: 12.5px; font-weight: 500; flex: none; }
 .cg15-po-bar { display: block; height: 3px; border-radius: 2px; background: var(--color-field); overflow: hidden; }
 .cg15-po-bar span { display: block; height: 100%; background: var(--color-accent); }
 
@@ -99,7 +99,7 @@
 .c15-etkin { display: flex; align-items: center; gap: 6px; height: 26px; margin-top: 4px; overflow-x: auto; scrollbar-width: none; overscroll-behavior-x: contain; }
 .c15-etkin::-webkit-scrollbar { display: none; }
 .c15-cip { flex: none; display: inline-flex; align-items: center; gap: 4px; height: 24px; padding: 0 8px 0 10px; border-radius: 999px; border: 1px solid var(--color-accent);
-  background: var(--color-accent-soft); color: var(--color-ink); font: 500 12px var(--font-sans, inherit); cursor: pointer; white-space: nowrap; }
+  background: var(--color-accent-soft); color: var(--color-ink); font: 500 12.5px var(--font-sans, inherit); cursor: pointer; white-space: nowrap; }
 .c15-cip svg { width: 13px; height: 13px; }
 .c15-say { flex: none; margin-left: auto; padding-left: 6px; font-size: 12px; color: var(--color-ink-3); white-space: nowrap; }
 .c15-sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
@@ -111,7 +111,7 @@
 .c15-bol > .c12-label { margin: 0; }
 .c15-seg { display: flex; flex-wrap: wrap; width: 100%; }
 .c15-seg > button { flex: 1 1 auto; }
-.c15-seg small { color: var(--color-ink-3); font-size: 11px; }
+.c15-seg small { color: var(--color-ink-3); font-size: 12.5px; }
 .c15-dlg .cg15-serit { flex-wrap: wrap; padding: 0; }
 .c15-dlg .cg15-cipler { flex-wrap: wrap; overflow: visible; flex-basis: 100%; }
 .c15-gor { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }

@@ -1,7 +1,7 @@
 /* v15 · Çıkmış sorular C (tablo) ve D (odak) yerleşimleri — components/cikmis/CikmisModGorunum.tsx */
 .cm15-tablo { display: flex; flex-direction: column; background: var(--color-white); border: 1px solid var(--color-line); border-radius: 14px; overflow: hidden; min-width: 0; }
 .cm15-th, .cm15-trb { display: grid; grid-template-columns: 44px 120px 150px minmax(0, 1fr); align-items: center; gap: 10px; }
-.cm15-th { padding: 8px 12px; padding-right: 52px; font-size: 11.5px; font-weight: 600; color: var(--color-ink-3); border-bottom: 1px solid var(--color-line); }
+.cm15-th { padding: 8px 12px; padding-right: 52px; font-size: 12.5px; font-weight: 600; color: var(--color-ink-3); border-bottom: 1px solid var(--color-line); }
 .cm15-satir { border-bottom: 1px solid var(--color-line-soft, var(--color-line)); }
 .cm15-satir:nth-child(odd) > .cm15-tr { background: var(--color-canvas); }
 .cm15-satir.is-acik > .cm15-tr { background: var(--color-accent-soft); }
@@ -23,7 +23,7 @@
   .cm15-trb { grid-template-columns: 22px minmax(0, 1fr); grid-template-areas: 'st kok' 'st meta'; row-gap: 2px; column-gap: 8px; }
   .cm15-st { grid-area: st; align-self: start; }
   .cm15-kok { grid-area: kok; white-space: normal !important; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; font-weight: 500; }
-  .cm15-yil { grid-area: meta; font-size: 12px; }
+  .cm15-yil { grid-area: meta; font-size: 12.5px; }
   .cm15-ders { display: none; }
 }
 

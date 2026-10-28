@@ -80,7 +80,7 @@
 .q15-son-g { gap: 14px; }
 .q15-son-hero { display: flex; align-items: center; gap: 18px; padding: 16px; }
 .q15-son-yuzde { display: flex; flex-direction: column; align-items: center; font: 700 26px/1 var(--font-sans); }
-.q15-son-yuzde small { margin-top: 4px; font: 500 12px/1 var(--font-sans); color: var(--color-ink-3); }
+.q15-son-yuzde small { margin-top: 4px; font: 500 12.5px/1 var(--font-sans); color: var(--color-ink-3); }
 .q15-son .v15-halka-v { font-size: inherit; }
 .q15-son-t { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 6px; }
 .q15-son-t > b { font: 650 18px/1.25 var(--font-sans); }

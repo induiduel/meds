@@ -6,6 +6,7 @@
 import React from 'react';
 import { mdToHtml } from '../learn/lesson/lessonModel';
 import { Cover, Masthead, type CoverInfo } from './PdfParts';
+import '../../styles/ogren-ders.css';
 
 export type SummaryQuestions = 'answered' | 'plain' | 'none';
 

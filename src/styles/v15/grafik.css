@@ -45,6 +45,6 @@
 .gf15-isi i.l2, .gf15-lej i.l2 { background: color-mix(in oklab, var(--color-accent) 50%, var(--color-white)); }
 .gf15-isi i.l3, .gf15-lej i.l3 { background: var(--color-accent); }
 .gf15-isi i.is-gelecek { background: transparent; }
-.gf15-lej { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 8px; font-size: .75rem; color: var(--color-ink-3); }
+.gf15-lej { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 8px; font-size: .785rem; color: var(--color-ink-3); }
 .gf15-lej span { display: inline-flex; align-items: center; gap: 4px; }
 .gf15-lej i { width: 10px; height: 10px; }

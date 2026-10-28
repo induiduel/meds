@@ -70,7 +70,7 @@
 .oy15-solo-b button { display: flex; flex-direction: column; align-items: flex-start; gap: 3px; padding: 12px; border-radius: 12px; border: 1px solid var(--color-line); background: var(--color-white); color: var(--color-ink); font: inherit; text-align: left; cursor: pointer; }
 .oy15-solo-b button:hover { border-color: var(--color-accent); }
 .oy15-solo-b svg { width: 20px; height: 20px; color: var(--color-accent); }
-.oy15-solo-b small { color: var(--color-ink-3); font-size: .76rem; line-height: 1.3; }
+.oy15-solo-b small { color: var(--color-ink-3); font-size: .785rem; line-height: 1.3; }
 .oy15-sayac { display: inline-flex; align-items: center; gap: 5px; font-weight: 700; color: var(--color-ink); font-variant-numeric: tabular-nums; }
 .oy15-sayac svg { width: 16px; height: 16px; color: var(--color-accent); }
 .oy15-canlar { display: inline-flex; gap: 3px; }
@@ -144,7 +144,7 @@
 /* F06 Blitz doğru/yanlış önerme + çarpan */
 .oy15-dy { display: flex; flex-direction: column; gap: 12px; }
 .oy15-oneri { display: flex; flex-direction: column; gap: 4px; padding: 16px; border-radius: 18px; background: var(--color-white); border: 2px solid var(--color-line); text-align: center; transition: border-color .15s, background .15s; }
-.oy15-oneri small { font-size: .72rem; letter-spacing: .06em; text-transform: uppercase; color: var(--color-ink-3); }
+.oy15-oneri small { font-size: .785rem; letter-spacing: .06em; text-transform: uppercase; color: var(--color-ink-3); }
 .oy15-oneri b { font-size: 1.1rem; line-height: 1.35; color: var(--color-ink); }
 .oy15-oneri span { font-size: .82rem; color: var(--color-ink-2); }
 .oy15-oneri.is-dogru { border-color: var(--color-ok); background: var(--color-ok-soft); }
@@ -288,7 +288,7 @@
 .oy15-iz { display: grid; grid-template-columns: minmax(0, 1fr); gap: 14px; }
 @container (min-width: 600px) { .oy15-iz { grid-template-columns: minmax(0, 2fr) minmax(0, 3fr); align-items: start; } }
 .oy15-iz-b { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
-.oy15-iz-h { margin: 0; font-size: .74rem; letter-spacing: .08em; text-transform: uppercase; color: var(--color-ink-3); }
+.oy15-iz-h { margin: 0; font-size: .785rem; letter-spacing: .08em; text-transform: uppercase; color: var(--color-ink-3); }
 .oy15-iz ul { list-style: none; margin: 0; padding: 0; }
 .oy15-iz-terimler { display: flex; flex-wrap: wrap; gap: 8px; }
 @container (min-width: 600px) { .oy15-iz-terimler { flex-direction: column; flex-wrap: nowrap; } }
@@ -321,7 +321,7 @@
 .og15-oz { margin: 4px 0; width: 100%; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
 @container (min-width: 520px) { .og15-oz { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
 .og15-oz > div { display: flex; flex-direction: column; gap: 2px; padding: 10px; border-radius: 14px; background: var(--color-field); }
-.og15-oz dt { font-size: .75rem; color: var(--color-ink-2); }
+.og15-oz dt { font-size: .785rem; color: var(--color-ink-2); }
 .og15-oz dd { margin: 0; font-size: 1.25rem; font-weight: 800; color: var(--color-ink); font-variant-numeric: tabular-nums; }
 .og15-oz .is-ok { background: var(--color-ok-soft); } .og15-oz .is-ok dd { color: var(--color-ok); }
 .og15-oz .is-bad { background: var(--color-bad-soft); } .og15-oz .is-bad dd { color: var(--color-bad); }

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { ChevronLeft } from 'lucide-react';
 import { takipOku } from '../../services/calismaTakip';
+import { useTamKatman } from '../../utils/tamKatman';
 
 /**
  * v15 · Kronometre ayarları ve geçmişi (tasarım T › kronoAyar, kronoGecmis). Kronometre panelinden açılan tam ekran
@@ -70,7 +71,7 @@ export default function KronometreEkranV15({ gorunum, ayar, setAyar, gecmis, onK
   gorunum: 'ayar' | 'gecmis'; ayar: KrAyar; setAyar: (a: KrAyar) => void; gecmis: KrKayit[]; onKapat: () => void;
 }) {
   const [aralik, setAralik] = useState<7 | 30>(7);
-  React.useEffect(() => { document.documentElement.classList.add('tam-katman'); return () => document.documentElement.classList.remove('tam-katman'); }, []);
+  useTamKatman();
   const ay = (k: Partial<KrAyar>) => setAyar({ ...ayar, ...k });
 
   let govde: React.ReactNode;

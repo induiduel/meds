@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState, useSyncExternalStore } from 'react'
 import { createRoot } from 'react-dom/client';
 import { Sparkles, RefreshCw } from 'lucide-react';
 import './system.css';
+import { cevrimdisiMi } from '../../services/net';
 
 declare const __MEDS_SURUM__: string;
 declare const __MEDS_ONEM__: number;
@@ -59,6 +60,7 @@ const sessizIndir = () => { navigator.serviceWorker?.getRegistration().then((r) 
 type Bilgi = { surum: string; onem: number; baslik?: string; maddeler?: string[] };
 
 async function sunucuSurumu(): Promise<Bilgi | null> {
+  if (cevrimdisiMi()) return null; // çevrimdışıyken sürüm sorulmaz; bağlantı gelince yeniden denetlenir
   try {
     const r = await fetch(`/api/surum?t=${Date.now()}`, { cache: 'no-store' });
     if (!r.ok) return null;

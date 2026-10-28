@@ -162,7 +162,7 @@
   .s15-ozet { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
   .s15-oz { padding: 10px; gap: 2px; }
   :root[data-v15='on'] .s15-oz-h .v15-tile { display: none; }
-  .s15-oz .v15-label { font-size: 10px; letter-spacing: .03em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .s15-oz .v15-label { font-size: 12.5px; letter-spacing: .03em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   .s15-say { font-size: 22px; line-height: 26px; }
   .s15-say-k { font-size: 17px; line-height: 26px; }
   .s15-oz .v15-cap { display: none; }
@@ -326,14 +326,14 @@ a.k15-kart:hover { border-color: var(--color-accent); }
 .s15-test { gap: 6px; padding: 10px 14px; }
 .s15-test .v15-h2 { margin: 0; font-size: 15px; }
 .s15-test .s15-test-sat > .v15-label { width: 64px; }
-.s15-test .s15-cip { height: 26px; padding: 0 10px; font-size: 12px; }
+.s15-test .s15-cip { height: 26px; padding: 0 10px; font-size: 12.5px; }
 .s15-test-alt { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 16px; }
 .s15-test-alt .s15-test-sat { flex: 0 1 auto; }
 .s15-test-alt .s15-test-sat > .v15-label { width: auto; }
 .s15-test-alt .v15-seg { display: inline-flex; }
 .s15-test-alt .v15-seg > button { min-height: 28px; padding: 0 10px; font-size: 12.5px; }
 .s15-test-alt .s15-basla { margin-left: auto; min-height: 34px; padding: 0 16px; grid-column: auto; grid-row: auto; }
-.s15-kip-ac { flex: 1 0 100%; order: 9; font-size: 11.5px; }
+.s15-kip-ac { flex: 1 0 100%; order: 9; font-size: 12.5px; }
 
 /* bitmiş derse yeniden başlandı: tekrar göstergesi */
 .sl15 .v15-tile.is-tekrar { background: color-mix(in srgb, var(--color-accent) 18%, transparent); color: var(--color-accent); }
@@ -347,7 +347,7 @@ a.k15-kart:hover { border-color: var(--color-accent); }
 .dd15-istat > summary .v15-cap { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; flex: 0 1 auto; min-width: 0; }
 .dd15-istat-g { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; padding: 0 12px 12px; }
 .dd15-istat-g section { background: var(--color-field); border-radius: 12px; padding: 10px 12px; min-width: 0; }
-.dd15-istat-g h3 { margin: 0 0 6px; font: 650 12px/1.2 var(--font-sans); letter-spacing: .04em; text-transform: uppercase; color: var(--color-accent); }
+.dd15-istat-g h3 { margin: 0 0 6px; font: 650 12.5px/1.2 var(--font-sans); letter-spacing: .04em; text-transform: uppercase; color: var(--color-accent); }
 .dd15-istat-g dl { margin: 0; display: grid; gap: 4px; }
 .dd15-istat-g dl > div { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; font-size: 13px; }
 .dd15-istat-g dt { opacity: .7; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }

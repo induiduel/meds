@@ -11,6 +11,7 @@ import { navigateTo, pathFor } from '../../router';
 import { AtpIkon, Basamaklar, Ikon, OdulCip } from './ortak';
 import { DonemKurulSecici } from './BasarimKatmani';
 import '../../styles/basarim.css';
+import { useTamKatman } from '../../utils/tamKatman';
 
 type Sekme = 'hedef' | 'basarim' | 'atp' | 'gecmis' | 'kural';
 const SEKMELER: { id: Sekme; ad: string; ikon: React.ComponentType<{ 'aria-hidden'?: boolean }> }[] = [
@@ -220,9 +221,10 @@ function RozetDetay({ b, seviye, deger, tarih, onKapat }: { b: BasarimT; seviye:
   const [kopya, setKopya] = useState(false);
   useEffect(() => {
     const k = (e: KeyboardEvent) => { if (e.key === 'Escape') onKapat(); };
-    window.addEventListener('keydown', k); document.documentElement.classList.add('tam-katman');
-    return () => { window.removeEventListener('keydown', k); document.documentElement.classList.remove('tam-katman'); };
+    window.addEventListener('keydown', k);
+    return () => { window.removeEventListener('keydown', k); };
   }, [onKapat]);
+  useTamKatman();
   const paylas = async () => {
     const metin = `MeDSor'da "${b.ad}" rozetinin ${seviye}. seviyesini kazandım.`;
     try { if (navigator.share) await navigator.share({ title: b.ad, text: metin }); else { await navigator.clipboard.writeText(metin); setKopya(true); } } catch { /* vazgeçti */ }

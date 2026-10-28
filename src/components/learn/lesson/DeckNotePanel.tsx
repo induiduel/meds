@@ -3,6 +3,7 @@ import { ListPlus, Quote, Sparkles, ListChecks, CornerDownRight } from 'lucide-r
 import { RichTextArea } from '../../ui/RichTextArea';
 import { getNotes, saveNotes, StudyNote } from '../../../services/studyStore';
 import { toast } from '../../ui/Toast';
+import '../../../styles/ogren-ders.css';
 
 /**
  * Öğren oynatıcısında "Notlarım": deste başına tek, biçimli not. Notlar sayfasındaki defterle aynı

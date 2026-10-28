@@ -6,6 +6,7 @@ import { aktifKurul, KURULLAR } from '../../services/kurulTakvimi';
 import { kurulKaydet } from '../kurul/KurulSecici';
 import { SAVED_STUDENT_NUMBER_KEY } from '../../services/auth';
 import '../../styles/v15/kurulum.css';
+import { useTamKatman } from '../../utils/tamKatman';
 
 /**
  * v15 · Kayıt adımları (tasarım I07 kayitUni · I08 kayitSinif · I09 kayitKurul · I10 kayitHedef · I11 kayitBitti).
@@ -39,7 +40,7 @@ export default function ProfilKurulumV15({ onKapat }: { onKapat: () => void }) {
   }, [ara]);
 
   // tam ekran akış açıkken alt sekme çubuğu gizlenir (telefonda görünür alanın altında kalıp üstte görünüyordu)
-  React.useEffect(() => { document.documentElement.classList.add('tam-katman'); return () => document.documentElement.classList.remove('tam-katman'); }, []);
+  useTamKatman();
   const gecerli = adim === 0 ? !!p.universite : adim === 1 ? !!p.sinif : true;
   const bitir = () => {
     const son: Profil = { ...p, numara: p.numara?.trim() || undefined, tamam: new Date().toISOString() };

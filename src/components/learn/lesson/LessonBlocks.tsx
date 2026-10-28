@@ -11,6 +11,7 @@ import { inline, mdToHtml, spotTone, stripEmoji } from './lessonModel';
 import type { FeedbackTarget } from './lessonFeedback';
 import { FeedbackFlag } from './LessonFeedbackUI';
 import { elementZoom } from '../../../utils/uiZoom';
+import '../../../styles/ogren-ders.css';
 
 /* ---------------------------------------------------------------------------
  * Anlatım: markdown + metindeki tıbbi terimler (ilk geçtiği yer altı noktalı; dokununca tanım)

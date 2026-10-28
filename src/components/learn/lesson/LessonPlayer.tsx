@@ -77,6 +77,7 @@ import { Sheet } from '../../ui/Sheet';
 import { registerSelectionActions } from '../../../utils/selectionShare';
 import { selectionContext, useLearnSocial } from './learnSocial';
 import { ComposerReq, ReportReq, ReportSheet, setSocialVisible, SocialProvider, StepSocial, ThreadSheet, useSocialVisible } from './LearnSocialUI';
+import '../../../styles/ogren-ders.css';
 import '../../../styles/learn-v10.css';
 import '../../../styles/v12/lesson.css';
 import '../../../styles/v15/ogren.css';

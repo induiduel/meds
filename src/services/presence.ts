@@ -12,6 +12,7 @@
 import { auth } from './auth';
 import { getCustomApiUrl } from './api';
 import { getDeviceToken } from '../utils/voterId';
+import { cevrimdisiMi } from './net';
 
 const PUB_KEY = 'medsoru_device_pub';
 const BEAT_MS = 60_000;
@@ -96,6 +97,7 @@ export function installPresence() {
   const send = async (beacon = false) => {
     if (!pubId) return;
     accrue();
+    if (cevrimdisiMi()) return; // çevrimdışı: etkin süre birikir, bağlantı gelince tek seferde gider
     const activeSec = Math.min(120, Math.round(pending / 1000));
     const body = payload(activeSec);
     const url = `${(getCustomApiUrl() || '').replace(/\/$/, '')}/api/presence`;

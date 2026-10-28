@@ -1,13 +1,12 @@
 {
  "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
- "onem": 528,
- "baslik": "Site geneli düzeltmeler",
+ "onem": 529,
+ "baslik": "Daha hızlı açılış, daha okunaklı yazılar",
  "maddeler": [
-  "Esc ile tam ekrandan çıkış her durumda çalışıyor",
-  "Çıkmış sorular uzun listelerde akıcı, odak modu hızlı",
-  "Okunabilirlik: kontrast, satır uzunluğu ve dokunma alanları düzeltildi",
-  "Gereksiz büyük veri indirmeleri ve konsol uyarısı giderildi",
-  "Sesli derste telefon başlığı ve hatalı adres mesajı düzeltildi"
+  "Açılışta inen stil dosyası küçüldü (Öğren stilleri yalnız gerektiğinde)",
+  "Tam ekranda gereksiz kaydırma ve üst üste katmanlarda alt menü sorunu giderildi",
+  "Küçük yazılar büyütüldü, telefonda ders başlıkları tam görünüyor",
+  "Çevrimdışıyken boşuna istek atılmıyor"
  ],
  "eklenen": [],
  "degisen": [],

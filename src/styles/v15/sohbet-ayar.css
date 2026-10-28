@@ -25,7 +25,7 @@
 .sa-ek-ik { flex: none; width: 34px; height: 34px; border-radius: 10px; display: grid; place-items: center; background: var(--color-accent-soft); color: var(--color-accent); }
 .sa-ek-ik svg { width: 18px; height: 18px; }
 .sa-ek-t { display: flex; flex-direction: column; min-width: 0; gap: 1px; }
-.sa-ek-t small { color: var(--color-ink-3); font-size: .72rem; text-transform: uppercase; letter-spacing: .04em; }
+.sa-ek-t small { color: var(--color-ink-3); font-size: .785rem; text-transform: uppercase; letter-spacing: .04em; }
 .sa-ek-t b { font-size: .92rem; overflow-wrap: anywhere; }
 .sa-ek-t span { color: var(--color-ink-2); font-size: .8rem; overflow-wrap: anywhere; }
 
@@ -51,7 +51,7 @@
 .sa-temalar { display: grid; grid-template-columns: repeat(auto-fill, minmax(132px, 1fr)); gap: 8px; }
 .sa-tema { display: flex; flex-direction: column; gap: 3px; text-align: left; padding: 8px; font: inherit; color: var(--color-ink); cursor: pointer; border: 2px solid var(--color-line); border-radius: 14px; background: var(--color-white); }
 .sa-tema.is-on { border-color: var(--color-accent); }
-.sa-tema small { color: var(--color-ink-3); font-size: .74rem; line-height: 1.25; }
+.sa-tema small { color: var(--color-ink-3); font-size: .785rem; line-height: 1.25; }
 .sa-onizle { position: relative; height: 68px; border-radius: 10px; overflow: hidden; background: var(--color-field); isolation: isolate; }
 .sa-oz-kalp { background: color-mix(in oklab, var(--color-accent-soft) 70%, var(--color-white)); }
 .sa-oz-papatya { background: color-mix(in oklab, oklch(0.93 0.07 135) 45%, var(--color-white)); }
@@ -59,7 +59,7 @@
 .sa-kilit svg { width: 20px; height: 20px; }
 
 /* Durum satırı, okundu, ayar anahtarları */
-.sa-durum { display: flex; align-items: center; gap: 6px; font-size: .76rem; color: var(--color-ink-3); }
+.sa-durum { display: flex; align-items: center; gap: 6px; font-size: .785rem; color: var(--color-ink-3); }
 .sa-nokta { width: 8px; height: 8px; border-radius: 50%; background: var(--color-ink-3); opacity: .5; flex: none; }
 .sa-nokta.is-on { background: oklch(0.7 0.17 150); opacity: 1; }
 .sa-okundu { margin: 2px 6px 0; font-size: .7rem; color: var(--color-ink-3); display: inline-flex; align-items: center; gap: 3px; }

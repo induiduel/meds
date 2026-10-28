@@ -98,7 +98,7 @@ export function CdV15Bas(p: {
         </button>
       )}
       {p.onTamEkran && (
-        <button type="button" className="v15-ib" onClick={p.onTamEkran} aria-label="Tam ekran" title="Tam ekran (Esc ile çıkılır)">
+        <button type="button" className="v15-ib cd15-tam" onClick={p.onTamEkran} aria-label="Tam ekran" title="Tam ekran (Esc ile çıkılır)">
           <Maximize2 aria-hidden />
         </button>
       )}

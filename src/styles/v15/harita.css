@@ -4,7 +4,7 @@
 .hr15-ac { margin: 0 2px; }
 .hr15-kap { padding: 0; overflow-x: auto; overscroll-behavior-x: contain; }
 .hr15-t { border-collapse: separate; border-spacing: 3px; font-variant-numeric: tabular-nums; font-size: .86rem; min-width: 100%; }
-.hr15-t th { font-weight: 600; color: var(--color-ink-3); font-size: .76rem; padding: 8px 4px; text-align: center; white-space: nowrap; }
+.hr15-t th { font-weight: 600; color: var(--color-ink-3); font-size: .785rem; padding: 8px 4px; text-align: center; white-space: nowrap; }
 .hr15-t th.hr15-d { position: sticky; left: 0; z-index: 1; background: var(--color-surface); text-align: left; color: var(--color-ink); font-size: .84rem;
   font-weight: 600; padding: 6px 10px; min-width: 132px; max-width: 170px; white-space: normal; line-height: 1.25; }
 .hr15-t td { padding: 0; text-align: center; }

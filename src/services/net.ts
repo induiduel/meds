@@ -31,6 +31,10 @@ function setState(next: NetState) {
 }
 
 export const getNetState = () => state;
+/** Tarayıcı ya da sunucu yoklaması çevrimdışı diyorsa doğru (arka plan istekleri atlansın) */
+export const cevrimdisiMi = () => state === 'offline' || (typeof navigator !== 'undefined' && navigator.onLine === false);
+/** Çevrimdışıyken hiç atılmayan arka plan uçları (varlık, profil yedeği, müzik listesi eşitlemesi) */
+const BG_RE = /\/api\/(presence|user-data\/backup|music\/playlist)(?:[/?#]|$)/;
 export function onNetChange(cb: () => void) {
   listeners.add(cb);
   return () => listeners.delete(cb);
@@ -134,6 +138,10 @@ export function installFetchGuard() {
     const url = typeof input === 'string' ? input : input instanceof URL ? input.href : req!.url;
     if (!/^(https?:|\/)/i.test(url) || url.includes('/@vite') || url.includes('/node_modules/')) return nativeFetch(input, init);
     const method = String(init?.method || req?.method || 'GET').toUpperCase();
+    // Çevrimdışıyken arka plan istekleri ağa hiç çıkmaz (2026-10-28): bunlar yalnız durum/eşitleme içindir, başarısızlıkları
+    // yeniden denenir; boşuna atılınca SW 503'ü + zaman aşımı + reportFail gürültüsü üretiyordu. /api/surum burada değil:
+    // bağlantı yoklaması (baglanti.ts) onu kullanır; sürüm denetimi UpdatePrompt'ta ayrıca atlanır.
+    if (BG_RE.test(url) && cevrimdisiMi()) throw new TypeError('Çevrimdışı: arka plan isteği atlandı');
     const headers = new Headers(init?.headers || req?.headers || undefined);
     // Yazma isteklerinde herkese açık cihaz kimliği (yönetim › Kişiler eylem günlüğü). GET'e eklenmez: çapraz kökende
     // her GET'e ön-kontrol binmesin. Kimlik presence.ts'te türetilir; henüz yoksa eklenmez.

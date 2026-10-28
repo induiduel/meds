@@ -35,7 +35,7 @@ a.pg15-r:hover { background: var(--color-field); }
 .pg15-ok svg { width: 18px; height: 18px; }
 /* ay görünümü */
 .pg15-ay { max-width: 640px; width: 100%; display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 2px; padding: 8px; }
-.pg15-ay-b { text-align: center; font-size: .72rem; font-weight: 600; color: var(--color-ink-3); padding: 4px 0 6px; }
+.pg15-ay-b { text-align: center; font-size: .785rem; font-weight: 600; color: var(--color-ink-3); padding: 4px 0 6px; }
 .pg15-ay-g { aspect-ratio: 1 / 1; min-height: 44px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; border: 0; border-radius: 10px; background: none; color: var(--color-ink); font: inherit; cursor: pointer; }
 .pg15-ay-g:not(:disabled):hover { background: var(--color-field); }
 .pg15-ay-g:disabled { cursor: default; color: var(--color-ink-3); }
@@ -43,7 +43,7 @@ a.pg15-r:hover { background: var(--color-field); }
 .pg15-ay-g b { font-weight: 600; font-size: .9rem; font-variant-numeric: tabular-nums; }
 .pg15-ay-g.is-bugun b { width: 26px; height: 26px; border-radius: 50%; display: grid; place-items: center; background: var(--color-accent); color: var(--color-on-accent); }
 .pg15-ay-g.is-sinav { background: var(--color-bad-soft); }
-.pg15-ay-g.is-sinav small { font-size: .62rem; font-weight: 700; color: var(--color-bad); }
+.pg15-ay-g.is-sinav small { font-size: .785rem; font-weight: 700; color: var(--color-bad); }
 .pg15-ay-n { display: flex; gap: 2px; }
 .pg15-ay-n i { width: 5px; height: 5px; border-radius: 50%; background: var(--color-accent); }
 /* yönetici/moderatör: ders yerlerini değiştirme */
