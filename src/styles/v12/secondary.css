@@ -466,7 +466,7 @@
     & .o12-srtypes .ms-chip-count { font: 500 11px var(--font-mono); opacity: 1; color: inherit; }
     & .rb-search-bar { gap: 8px; }
     & .rb-search-bar > p { font-size: 12.5px; }
-    & .rb-search-sort { height: 30px; border-radius: 7px; }
+    & .rb-search-sort { height: 36px; border-radius: 7px; } /* H344 */
     & .rb-search-sort select { font-weight: 500; }
     & .rb-viewseg { padding: 3px; border-radius: 9px; }
     & .rb-viewseg button { height: 26px; border-radius: 7px; }

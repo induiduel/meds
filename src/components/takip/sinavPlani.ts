@@ -38,7 +38,8 @@ const bransAdi = (b: Brans): string => {
   if (t) return t.ad;
   const m = /^k(\d+)(.+)$/.exec(b);
   const k = m && (bransKaydi as { branslar: { slug: string; kisa?: string; ad: string }[] }).branslar.find((x) => x.slug === m[2]);
-  return k ? `${k.kisa || k.ad} · K${m![1]}` : b;
+  // H345: plan zaten tek kurula ait; her çubukta tekrar eden "· K2" eki gürültüydü
+  return k ? (k.kisa || k.ad) : b;
 };
 
 export type AdimTur = 'onem' | 'cozucu' | 'sesli';

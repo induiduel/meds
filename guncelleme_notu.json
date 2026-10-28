@@ -1,11 +1,11 @@
 {
  "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
- "onem": 557,
- "baslik": "TV kumandası ve dokunma iyileştirmesi",
+ "onem": 558,
+ "baslik": "Küçük kullanım düzeltmeleri",
  "maddeler": [
-  "TV kumandası sesli ders ekranında yeniden çalışıyor",
-  "TV kumandasıyla menülerde gezinme ve Geri tuşu düzeldi",
-  "Telefonda Kalem ve Çıkmış düğmelerine dokunmak kolaylaştı"
+  "Boş sayfalarda gereksiz düğmeler gizlendi",
+  "Müzik, arama ve ilk adımlarda daha kolay dokunulan denetimler",
+  "Yönetim: kayıtlar arasında daha çok bağlantı, açık pencere adreste korunuyor"
  ],
  "eklenen": [],
  "degisen": [],

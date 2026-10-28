@@ -11,7 +11,8 @@
 .mz15-kapak { width: min(200px, 60%); aspect-ratio: 1; border-radius: 26px; display: grid; place-items: center; background: radial-gradient(circle at 40% 35%, color-mix(in oklab, var(--color-accent) 20%, var(--color-white)), var(--color-accent-soft)); color: var(--color-accent); margin-bottom: 6px; }
 .mz15-kapak svg { width: 44%; height: 44%; }
 .mz15-ad { font-size: 1.15rem; color: var(--color-ink); }
-.mz15-ilerleme { width: 100%; accent-color: var(--color-accent); margin-top: 6px; }
+/* H342: parça konumu kaydırıcısı 16px idi; dokunma alanı 28px */
+.mz15-ilerleme { width: 100%; height: 28px; accent-color: var(--color-accent); margin-top: 2px; cursor: pointer; }
 .mz15-zaman { width: 100%; display: flex; justify-content: space-between; font-size: .78rem; color: var(--color-ink-3); font-variant-numeric: tabular-nums; }
 .mz15-dug { display: flex; align-items: center; gap: 16px; }
 .mz15-dug .mz15-pl { width: 56px; height: 56px; border-radius: 50%; background: var(--color-accent); color: var(--color-on-accent, #fff); }

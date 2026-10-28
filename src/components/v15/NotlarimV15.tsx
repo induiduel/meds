@@ -133,7 +133,8 @@ export default function NotlarimV15() {
     <div className="nt15">
       <h1 className="sr-only">Notlarım</h1>
       <div className="nt15-ust">
-        <label className="o15-ara nt15-ara"><Search aria-hidden /><input type="search" value={ara} onChange={(e) => setAra(e.target.value)} placeholder="Notlarda ara" aria-label="Notlarda ara" /></label>
+        {/* H340: 0 notken arama kutusu boşuna gösteriliyordu; yalnız not varken çıkar */}
+        {notlar.length > 0 ? <label className="o15-ara nt15-ara"><Search aria-hidden /><input type="search" value={ara} onChange={(e) => setAra(e.target.value)} placeholder="Notlarda ara" aria-label="Notlarda ara" /></label> : <span className="nt15-ara" />}
         <button type="button" className="v15-btn is-soft" onClick={() => setPaylasilan(true)} aria-label="Benimle paylaşılanlar" title="Benimle paylaşılanlar"><Inbox aria-hidden /><span className="nt15-pl">Paylaşılanlar</span></button>
         <button type="button" className="v15-btn" onClick={yeni}><Plus aria-hidden />Yeni not</button>
       </div>

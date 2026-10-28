@@ -48,10 +48,10 @@ export default function SiteGorunurluk(p: SayfaProps) {
       ))}
     </div>
   );
-  return sekme === 'icerik' ? <IcerikSekmesi cubuk={cubuk} git={p.git} /> : <SayfalarSekmesi cubuk={cubuk} />;
+  return sekme === 'icerik' ? <IcerikSekmesi cubuk={cubuk} git={p.git} /> : <SayfalarSekmesi cubuk={cubuk} git={p.git} />;
 }
 
-function SayfalarSekmesi({ cubuk }: { cubuk: React.ReactNode }) {
+function SayfalarSekmesi({ cubuk, git }: { cubuk: React.ReactNode; git: SayfaProps['git'] }) {
   const { veri: a, hata, yukleniyor, yenile, setVeri } = useSiteAyarAdmin();
   const [mesgul, setMesgul] = useState<string | null>(null);
   const satirlar = useMemo<Satir[]>(() => {
@@ -107,7 +107,7 @@ function SayfalarSekmesi({ cubuk }: { cubuk: React.ReactNode }) {
           { anahtar: 'ad', baslik: 'Sayfa', genislik: 'minmax(180px,1.4fr)', deger: (s) => `${s.ad} ${s.id} ${s.adres}`, sirala: true,
             hucre: (s) => <span><b>{s.ad}</b><br /><code style={{ fontSize: 11 }}>{s.adres || s.id}</code></span> },
           { anahtar: 'etkin', baslik: 'Öğrenci görür', genislik: '150px', deger: (s) => ogrenciGorunumu(s.id, a).erisim,
-            hucre: (s) => { const g = ogrenciGorunumu(s.id, a); const [e, t] = ERISIM[g.erisim]; return <span><Rozet ton={t}>{e}</Rozet>{g.erisim === 'acik' && !g.menude ? <> <Rozet ton="notr">menüde yok</Rozet></> : null}</span>; } },
+            hucre: (s) => { const g = ogrenciGorunumu(s.id, a); const [e, t] = ERISIM[g.erisim]; return <span><Rozet ton={t}>{e}</Rozet>{/* H371: bayrağın kapattığı sayfadan bayrak sayfasına bağlantı */}{g.erisim === 'bayrak' && <> <a href="/manage/site/bayraklar" onClick={(ev) => { ev.preventDefault(); ev.stopPropagation(); git('site/bayraklar'); }}>bayrağa git</a></>}{g.erisim === 'acik' && !g.menude ? <> <Rozet ton="notr">menüde yok</Rozet></> : null}</span>; } },
           { anahtar: 'durum', baslik: 'Durum', genislik: 'minmax(360px,3fr)', deger: (s) => a.sayfalar[s.id] || 'varsayilan',
             hucre: (s) => {
               const cur = a.sayfalar[s.id] || 'varsayilan';

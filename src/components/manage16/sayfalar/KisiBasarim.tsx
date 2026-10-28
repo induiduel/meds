@@ -62,6 +62,9 @@ function Defter() {
   );
 }
 
+// H372: tehlike regex'le (/sil|geri|al$/) seçiliyordu, ozel_kaldir kaçıyordu; açık liste
+const TEHLIKELI = new Set(['kuyruk_sil', 'odul_geri', 'kilit_al', 'ozel_kaldir']);
+
 function KisiCekmece({ uid, tanim, kapat, git, degisti }: { uid: string; tanim: any; kapat: () => void; git: SayfaProps['git']; degisti: () => void }) {
   const d = useAdminSorgu<any>(`/api/admin/basarim/kisi/${encodeURIComponent(uid)}`);
   const [tur, setTur] = useState('puan');
@@ -71,7 +74,7 @@ function KisiCekmece({ uid, tanim, kapat, git, degisti }: { uid: string; tanim: 
   const [gerekce, setGerekce] = useState('');
   const islem = async (t: string, veri: any, baslik: string) => {
     if (gerekce.trim().length < 3) return bildir('Önce gerekçe yazın.', 'kotu');
-    if (!(await onayIste({ baslik, onayMetni: 'Uygula', tehlikeli: /sil|geri|al$/.test(t) }))) return;
+    if (!(await onayIste({ baslik, onayMetni: 'Uygula', tehlikeli: TEHLIKELI.has(t) }))) return;
     try {
       const r = await adminIstek(`/api/admin/basarim/kisi/${encodeURIComponent(uid)}/islem`, { yontem: 'POST', govde: { tur: t, veri, gerekce: gerekce.trim() } });
       d.setVeri(r); degisti(); bildir('Uygulandı.');

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { RefreshCw } from 'lucide-react';
 import { SayfaBasligi, VeriTablosu, Rozet, Hata, AyrintiCekmecesi, adminIstek, bildir, onayIste, useAdminSorgu, yazimHedefi } from '../kit';
 import type { SayfaProps } from '../menu';
+import { KisiBag } from './kisiOrtak';
 
 /** Oyunlar › Canlı odalar: quizRealtimeServer RAM odaları (5 sn'de bir tazelenir), oyuncular, kapat. Uç: /api/admin/quiz/odalar */
 type Oyuncu = { userId: string; ad: string; puan: number; hazir: boolean; takim: string | null; bagli: boolean };
@@ -48,7 +49,7 @@ export default function OyunOdalar({ git }: SayfaProps) {
           <table style={{ width: '100%', borderCollapse: 'collapse' }}>
             <thead><tr><th align="left">Oyuncu</th><th align="right">Puan</th><th>Takım</th><th>Hazır</th><th>Bağlı</th></tr></thead>
             <tbody>{[...oda.oyuncular].sort((a, b) => b.puan - a.puan).map((p) => (
-              <tr key={p.userId}><td>{p.ad}</td><td align="right">{p.puan}</td><td align="center">{p.takim || '–'}</td><td align="center">{p.hazir ? '✓' : ''}</td><td align="center">{p.bagli ? '✓' : '×'}</td></tr>
+              <tr key={p.userId}><td>{/* H365: oyuncudan kişiye bağlantı */}<KisiBag anahtar={p.userId ? `u:${p.userId}` : null} git={git}>{p.ad}</KisiBag></td><td align="right">{p.puan}</td><td align="center">{p.takim || '–'}</td><td align="center">{p.hazir ? '✓' : ''}</td><td align="center">{p.bagli ? '✓' : '×'}</td></tr>
             ))}</tbody>
           </table>
         )}

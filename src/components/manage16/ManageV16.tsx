@@ -291,7 +291,8 @@ export const ManageV16: React.FC<{ adminEmail: string; onExit: () => void }> = (
           {s.yol !== '' && !bulunamadi && (
             <nav className="m16-kirinti" aria-label="Konum">
               <a href="/manage" onClick={(e) => { e.preventDefault(); git(''); }}>Yönetim</a><ChevronRight aria-hidden="true" />
-              <a href={manageAdres(s.grup.sayfalar[0].yol)} onClick={(e) => { e.preventDefault(); git(s.grup.sayfalar[0].yol); }}>{s.grup.etiket}</a><ChevronRight aria-hidden="true" />
+              {/* H366: Genel bakış grubunun ilk sayfası "Yönetim" ile aynı yer; Gelen gibi kardeş sayfalar onun alt sayfası gibi görünmesin */}
+              {s.grup.sayfalar[0].yol !== '' && <><a href={manageAdres(s.grup.sayfalar[0].yol)} onClick={(e) => { e.preventDefault(); git(s.grup.sayfalar[0].yol); }}>{s.grup.etiket}</a><ChevronRight aria-hidden="true" /></>}
               {cozum.altYol.length ? <a href={manageAdres(s.yol)} onClick={(e) => { e.preventDefault(); git(s.yol); }}>{s.etiket}</a> : <span aria-current="page">{s.etiket}</span>}
               {cozum.altYol.length > 0 && <><ChevronRight aria-hidden="true" /><span aria-current="page">{cozum.altYol.join(' / ')}</span></>}
             </nav>

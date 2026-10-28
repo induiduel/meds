@@ -17,14 +17,21 @@ const ALANLAR: AlanTanim[] = [
 /** Kurullar ve dersler › Kurullar: takvim (kurul_takvimi_ozet.json), aktif kurul, tarih düzenleme, kurul görünürlüğü. */
 export default function Kurullar({ git }: SayfaProps) {
   const { veri, hata, yenile, yukleniyor } = useAdminSorgu<Yanit>('/api/admin/kurullar', { canliOlay: ['content_changed', 'site_ayar_changed'] });
-  const [acik, setAcik] = useState<number | 'genel' | null>(null);
+  // H368: açık çekmece adreste (?ac=) tutulur; yenileme/paylaşımda kaybolmaz (tabloda süzgeç yok, adresteDurum kapalı kalır)
+  const [acik, setAcikDurum] = useState<number | 'genel' | null>(() => { const v = new URLSearchParams(location.search).get('ac'); return v == null ? null : v === 'genel' ? 'genel' : Number(v) || null; });
+  const setAcik = (v: number | 'genel' | null) => {
+    setAcikDurum(v);
+    const u = new URL(location.href);
+    if (v != null) u.searchParams.set('ac', String(v)); else u.searchParams.delete('ac');
+    history.replaceState(history.state, '', u);
+  };
   const [kirli, setKirli] = useState(false);
   if (hata) return <Hata hata={hata} yenile={yenile} />;
   if (!veri) return <Yukleniyor satir={6} />;
   const k = typeof acik === 'number' ? veri.kurullar.find((x) => x.kurul === acik) : null;
   const kaydet = async (degisen: Record<string, unknown>) => {
     await adminIstek(`/api/admin/kurullar/${acik}`, { yontem: 'PUT', govde: degisen });
-    bildir('Kaydedildi');
+    bildir('Kaydedildi · öğrenci sitesine dağıtımda yansır', 'bilgi'); // H369: "Kaydedildi" canlıya yansıdı sanılıyordu
     await yenile();
   };
   return (

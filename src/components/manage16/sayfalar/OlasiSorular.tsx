@@ -1,11 +1,13 @@
-import React from 'react';
-import { VeriTablosu, SayfaBasligi, useAdminSorgu, IstatistikIzgara, IstatistikKart, zamanMetni } from '../kit';
+import React, { useState } from 'react';
+import { VeriTablosu, SayfaBasligi, useAdminSorgu, IstatistikIzgara, IstatistikKart, AyrintiCekmecesi, zamanMetni } from '../kit';
 import type { SayfaProps } from '../menu';
 
 /** Sorular › Olası sorular — data/olasi_sorular/k<N>.json setleri + öğrenci geri bildirimi. Salt okunur; üretim yalnız elle (kural 20). */
 type Satir = { id: string; kurul: string; ders: string; soru: string; olasilik: number | null; boyleydi: number; degildi: number; duzeltme: number };
 
 export default function OlasiSorular(_p: SayfaProps) {
+  // H361: satır tıklanınca soru ve geri bildirim dökümü açılır (önce satır tıklaması yoktu; ayrıntı ucu olmadığından satır verisi gösterilir)
+  const [secili, setSecili] = useState<Satir | null>(null);
   const { veri } = useAdminSorgu<{ setler: { kurul: number; soru: number; uretildi: string | null }[] }>('/api/admin/sorular/olasi', { sorgu: { boyut: 1 } });
   return (
     <>
@@ -14,7 +16,7 @@ export default function OlasiSorular(_p: SayfaProps) {
         <IstatistikIzgara>{veri.setler.map((s) => <IstatistikKart key={s.kurul} etiket={`Kurul ${s.kurul}`} deger={s.soru} alt={s.uretildi ? `üretildi ${zamanMetni(s.uretildi)}` : ''} />)}</IstatistikIzgara>
       ) : <p className="m16-kart">Bu sunucuda yayımlanmış olası soru seti yok (data/olasi_sorular).</p>)}
       <VeriTablosu<Satir>
-        kimlik="sorular-olasi" kaynak="/api/admin/sorular/olasi" aramaYeri="Soru ya da ders ara…" satirKimligi={(s) => `${s.kurul}-${s.id}`}
+        kimlik="sorular-olasi" kaynak="/api/admin/sorular/olasi" aramaYeri="Soru ya da ders ara…" satirKimligi={(s) => `${s.kurul}-${s.id}`} etkin={secili ? `${secili.kurul}-${secili.id}` : null} satirTikla={setSecili}
         suzgecler={[{ anahtar: 'kurul', etiket: 'Kurul', secenekler: ['1', '2', '3', '4', '5', '6'].map((k) => ({ deger: k, etiket: `Kurul ${k}` })) }]}
         sutunlar={[
           { anahtar: 'kurul', baslik: 'Kurul', genislik: '64px' },
@@ -26,6 +28,15 @@ export default function OlasiSorular(_p: SayfaProps) {
           { anahtar: 'duzeltme', baslik: 'Düzeltme', genislik: '76px', hizala: 'sag' },
         ]}
       />
+      {secili && (
+        <AyrintiCekmecesi acik kapat={() => setSecili(null)} baslik={`Kurul ${secili.kurul} · ${secili.id}`} altBaslik={secili.ders} kayit={secili}>
+          <div className="m16-kart"><h2>Soru</h2><p style={{ whiteSpace: 'pre-wrap' }}>{secili.soru}</p></div>
+          <dl className="m16-satirlar m16-kart">
+            <dt>Olasılık</dt><dd>{secili.olasilik ?? '—'}</dd>
+            <dt>Böyleydi</dt><dd>{secili.boyleydi}</dd><dt>Değildi</dt><dd>{secili.degildi}</dd><dt>Düzeltme</dt><dd>{secili.duzeltme}</dd>
+          </dl>
+        </AyrintiCekmecesi>
+      )}
     </>
   );
 }

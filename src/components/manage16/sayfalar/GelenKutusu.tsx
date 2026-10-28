@@ -162,7 +162,7 @@ export default function GelenKutusu({ id, git }: SayfaProps) {
           { anahtar: 'baslik', baslik: 'Konu', genislik: 'minmax(180px,2fr)', hucre: (s) => <a href={manageAdres(s.hedef)} onClick={(e) => { e.preventDefault(); e.stopPropagation(); git(s.hedef); }}>{s.baslik || '—'}</a> },
           { anahtar: 'ayrinti', baslik: 'Ayrıntı', genislik: 'minmax(200px,3fr)' },
           { anahtar: 'kim', baslik: 'Kim', genislik: '140px', gizli: true },
-          { anahtar: 'ek', baslik: 'Ek', genislik: '160px' },
+          { anahtar: 'ek', baslik: 'Ek', genislik: '160px', gizli: true }, // H374: iç kimlik (ornek · k1-02-q01) çoğu satırda boş/anlamsız; varsayılan gizli, ayrıntıda görünür
           { anahtar: 'islem', baslik: 'İşlem', genislik: 'minmax(200px,1.4fr)', hucre: (s) => <span style={{ display: 'flex', gap: 4, flexWrap: 'wrap' }}>{eylemDugmeleri(s, true)}</span> },
         ]}
       />

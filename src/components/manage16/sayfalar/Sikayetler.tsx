@@ -12,6 +12,8 @@ export default function Sikayetler({ git }: SayfaProps) {
       <IstatistikIzgara>
         <IstatistikKart etiket="Bekleyen şikâyet" deger={oz.veri?.sikayet ?? '—'} ton={oz.veri?.sikayet ? 'uyari' : 'iyi'} yukleniyor={oz.yukleniyor && !oz.veri} />
         <IstatistikKart etiket="Son 24 saatte mesaj" deger={oz.veri?.mesaj24 ?? '—'} onClick={() => git('topluluk/mesaj')} />
+        {/* H373: bekleyen yokken de sonuçlanmış (gizlenmiş) mesajlara geçiş */}
+        <IstatistikKart etiket="Gizlenen mesajlar" deger="Aç" alt="Mesajlar › Durum: Gizli" onClick={() => git('topluluk/mesaj?s.durum=gizli')} />
         <IstatistikKart etiket="Kapalı oda" deger={oz.veri?.kapali_oda ?? '—'} onClick={() => git('topluluk/sohbet?s.durum=kapali')} />
       </IstatistikIzgara>
       <MesajTablosu

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { VeriTablosu, SayfaBasligi, Rozet, AyrintiCekmecesi, Yukleniyor, Hata, useAdminSorgu, JsonGoruntuleyici, adminIstek, bildir, onayIste, zamanMetni, type Ton } from '../kit';
-import type { SayfaProps } from '../menu';
+import { manageAdres, type SayfaProps } from '../menu';
 
 /** Sorular › Serbest girdiler — öğrencilerin tek kutuya yazdığı metinler ve ayrıştırma sonucu (sunucu sayfalı). */
 type Satir = { id: string; at: string; kurul: string; ders: string; metin: string; durum: string; birim: number; eski: boolean; soru: string; deneme: number; hata: string };
@@ -48,6 +48,8 @@ export default function SerbestGirdiler({ id, git }: SayfaProps) {
           { anahtar: 'at', baslik: 'Zaman', sirala: true, genislik: '110px', hucre: (s) => <time title={s.at}>{zamanMetni(s.at)}</time> },
           { anahtar: 'metin', baslik: 'Metin', genislik: 'minmax(260px,3fr)' },
           { anahtar: 'ders', baslik: 'Ders', genislik: 'minmax(100px,1fr)' },
+          // H360: girdinin ait olduğu havuz sorusuna panel içi bağlantı (önce görünmüyordu)
+          { anahtar: 'soru', baslik: 'Soru', genislik: '120px', hucre: (s) => (s.soru ? <a href={manageAdres(`sorular/havuz/${encodeURIComponent(s.soru)}`)} onClick={(e) => { e.preventDefault(); e.stopPropagation(); git(`sorular/havuz/${encodeURIComponent(s.soru)}`); }}>{s.soru}</a> : '—') },
           { anahtar: 'birim', baslik: 'Birim', sirala: true, genislik: '64px', hizala: 'sag' },
           { anahtar: 'durum', baslik: 'Durum', genislik: '130px', hucre: (s) => <><Rozet ton={TON[s.durum] || 'notr'}>{s.durum}</Rozet>{s.eski && <Rozet ton="uyari">eski</Rozet>}</> },
         ]}

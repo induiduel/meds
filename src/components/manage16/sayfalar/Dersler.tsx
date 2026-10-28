@@ -70,7 +70,15 @@ const TUR_AD: Record<string, string> = { onem: 'Önem listesi', asistan: 'Sınav
 
 function DersAyrinti({ id, git, branslar }: { id: string; git: SayfaProps['git']; branslar: string[] }) {
   const { veri, hata, yenile } = useAdminSorgu<Ayrinti>(`/api/admin/dersler/${encodeURIComponent(id)}`, { canliOlay: ['content_changed', 'site_ayar_changed'] });
-  const [sekme, setSekme] = useState<'katman' | 'alan' | 'gecmis' | 'json'>('katman');
+  // H367: açık sekme adreste (?sekme=) tutulur; geri dönüşte hep Katmanlar açılmaz
+  type Sekme = 'katman' | 'alan' | 'gecmis' | 'json';
+  const [sekme, setSekmeDurum] = useState<Sekme>(() => { const v = new URLSearchParams(location.search).get('sekme'); return (['katman', 'alan', 'gecmis', 'json'] as const).find((x) => x === v) || 'katman'; });
+  const setSekme = (v: Sekme) => {
+    setSekmeDurum(v);
+    const u = new URL(location.href);
+    if (v !== 'katman') u.searchParams.set('sekme', v); else u.searchParams.delete('sekme');
+    history.replaceState(history.state, '', u);
+  };
   if (hata) return <Hata hata={hata} yenile={yenile} />;
   if (!veri) return <Yukleniyor satir={8} />;
   const d = veri.ders, k = veri.katmanlar;

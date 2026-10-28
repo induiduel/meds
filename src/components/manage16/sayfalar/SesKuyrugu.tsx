@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { VeriTablosu, SayfaBasligi, Rozet, AyrintiCekmecesi, Yukleniyor, Hata, useAdminSorgu, JsonGoruntuleyici, adminIstek, bildir, onayIste, zamanMetni, type Ton } from '../kit';
-import type { SayfaProps } from '../menu';
+import { manageAdres, type SayfaProps } from '../menu';
 
 /**
  * Öğrenme › Ses kuyruğu — sesli ders üretim işleri (data/sesli_anlatim/kuyruk.json). Görünüm + iş başına elle eylem
@@ -10,7 +10,7 @@ import type { SayfaProps } from '../menu';
 type Satir = { id: string; sira: number; key: string; saglayici: string; ses: string; durum: string; isci: string; ilerleme: string; yuzde: number; olusturuldu: string; bitti: string; hata: string };
 const TON: Record<string, Ton> = { bekliyor: 'notr', calisiyor: 'bilgi', bitti: 'iyi', hata: 'kotu', iptal: 'notr', 'kota-bekliyor': 'uyari', 'butce-durdu': 'uyari' };
 
-function Ayrinti({ id, kapat }: { id: string; kapat: () => void }) {
+function Ayrinti({ id, kapat, git }: { id: string; kapat: () => void; git: SayfaProps['git'] }) {
   const { veri, hata, yukleniyor, yenile } = useAdminSorgu<any>(`/api/admin/sesli-kuyruk/${encodeURIComponent(id)}`);
   const [mesgul, setMesgul] = useState(false);
   const eylem = async (e: 'yeniden' | 'one-al' | 'iptal') => {
@@ -23,6 +23,8 @@ function Ayrinti({ id, kapat }: { id: string; kapat: () => void }) {
   return (
     <AyrintiCekmecesi acik genis kapat={kapat} baslik={veri?.key || id} altBaslik={id} kayit={veri} hedef={`sesli:${veri?.key || ''}`}
       eylemler={veri && <>
+        {/* H362: işin ait olduğu sesli derse panel içi bağlantı */}
+        {veri.key && <a className="m16-btn hayalet" href={`${manageAdres('ogrenme/sesli')}?ac=${encodeURIComponent(veri.key)}`} onClick={(e) => { e.preventDefault(); git(`ogrenme/sesli?ac=${encodeURIComponent(veri.key)}`); }}>Sesli derse git</a>}
         {['hata', 'iptal', 'butce-durdu', 'kota-bekliyor'].includes(d) && <button type="button" className="m16-btn" disabled={mesgul} onClick={() => eylem('yeniden')}>Yeniden dene</button>}
         {['bekliyor', 'kota-bekliyor'].includes(d) && <button type="button" className="m16-btn" disabled={mesgul} onClick={() => eylem('one-al')}>Öne al</button>}
         {d !== 'bitti' && d !== 'iptal' && <button type="button" className="m16-btn tehlike" disabled={mesgul} onClick={() => eylem('iptal')}>İptal</button>}
@@ -55,7 +57,7 @@ export default function SesKuyrugu({ id, git }: SayfaProps) {
           { anahtar: 'durum', baslik: 'Durum', sirala: true, genislik: '120px', hucre: (s) => <Rozet ton={TON[s.durum] || 'notr'}>{s.durum}</Rozet> },
         ]}
       />
-      {id && <Ayrinti id={id} kapat={() => git(`ogrenme/ses-kuyrugu${window.location.search}`)} />}
+      {id && <Ayrinti id={id} git={git} kapat={() => git(`ogrenme/ses-kuyrugu${window.location.search}`)} />}
     </>
   );
 }

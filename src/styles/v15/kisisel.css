@@ -74,6 +74,9 @@
 
   /* İlk adımlar */
   & .ia15-kart { display: flex; flex-direction: column; gap: 10px; padding: 16px 16px 4px; }
+  /* H347: 0/7 ilerleme çubuğu ince ve soluktu; daha kalın, iz rengi belirgin */
+  & .ia15-kart > .v15-bar { height: 8px; border-radius: 99px; background: var(--color-line); }
+  & .ia15-kart > .v15-bar > span { border-radius: inherit; }
   & .ia15-l { list-style: none; margin: 0 -16px; padding: 0; }
   & .ia15-l li + li { border-top: 1px solid var(--color-line-soft); }
   & .ia15-r { width: 100%; display: flex; align-items: center; gap: 12px; min-height: 56px; padding: 8px 16px; border: 0; background: none; color: inherit; text-decoration: none; font: inherit; text-align: left; cursor: pointer; }

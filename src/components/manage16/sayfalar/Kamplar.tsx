@@ -17,7 +17,14 @@ const YENI: AlanTanim[] = [
 /** Öğrenme › Kamplar: hoca tüyoları (data/kamp/tuyolar.jsonl, olay defteri) — öneriyi onayla/reddet, düzeltilmiş metinle onayla, yeni ekle. */
 export default function Kamplar(_p: SayfaProps) {
   const { veri, hata, yenile } = useAdminSorgu<{ tuyolar: Tuyo[] }>('/api/admin/kamp/tuyolar');
-  const [acik, setAcik] = useState<string | 'yeni' | null>(null);
+  // H364: açık çekmece adreste (?ac=) tutulur; yenileme/paylaşımda kaybolmaz
+  const [acik, setAcikDurum] = useState<string | 'yeni' | null>(() => new URLSearchParams(location.search).get('ac'));
+  const setAcik = (v: string | 'yeni' | null) => {
+    setAcikDurum(v);
+    const u = new URL(location.href);
+    if (v && v !== 'yeni') u.searchParams.set('ac', v); else u.searchParams.delete('ac');
+    history.replaceState(history.state, '', u);
+  };
   if (hata) return <Hata hata={hata} yenile={yenile} />;
   if (!veri) return <Yukleniyor satir={6} />;
   const t = veri.tuyolar.find((x) => x.id === acik);

@@ -349,7 +349,9 @@ function Kanallar({ ac }: { ac: (k: string) => void }) {
       <ul className="b15-list v15-card">{sabit.map(satir)}</ul>
       <h2 className="v15-cap tp15-h">Ders yorumları</h2>
       {dersler.length ? <ul className="b15-list v15-card">{dersler.map((k) => satir(k.kanal))}</ul>
-        : <p className="b15-bos v15-card">Henüz ders yorumu yok. Bir dersin sayfasındaki "Yorumlar" ile o derse yorum yazabilirsin.</p>}
+        : <p className="b15-bos v15-card">Henüz ders yorumu yok. Bir dersin sayfasındaki "Yorumlar" ile o derse yorum yazabilirsin.{' '}
+            {/* H346: boş durum ders sayfasına yönlendiriyordu ama bağlantı yoktu */}
+            <a href="/dersler" onClick={(e) => { e.preventDefault(); navigateTo('/dersler'); }}>Derslere git</a></p>}
       <p className="v15-cap tp15-kural">Saygılı ol; kişisel bilgi, sınav sorusu fotoğrafı ya da reklam paylaşma. Uygunsuz mesajı bayrakla bildir; üç bildirimde mesaj gizlenir.</p>
     </div>
   );

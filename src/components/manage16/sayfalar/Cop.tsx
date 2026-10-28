@@ -1,5 +1,5 @@
 import React from 'react';
-import { KatalogSayfasi, adminIstek, bildir, onayIste } from '../kit';
+import { KatalogSayfasi, adminIstek, bildir, onayIste, yazimHedefi } from '../kit';
 import type { SayfaProps } from '../menu';
 
 /** Kaynaklar › Çöp kutusu: katalogdan silinenler; geri yükle ya da kalıcı sil. */
@@ -12,7 +12,7 @@ export default function Cop(_p: SayfaProps) {
     } catch (e: any) { bildir(e?.message || 'Geri yüklenemedi', 'kotu'); }
   };
   const sil = async (ids: string[], temizle: () => void) => {
-    if (!(await onayIste({ baslik: `${ids.length} kayıt kalıcı olarak silinsin mi?`, aciklama: 'Bu işlem geri alınamaz.', tehlikeli: true, yazilacak: 'SIL', onayMetni: 'Kalıcı sil' }))) return;
+    if (!(await onayIste({ baslik: `${ids.length} kayıt kalıcı olarak silinsin mi?`, aciklama: `Bu işlem geri alınamaz. Hedef: ${yazimHedefi()}.` /* H370: onay hedef sunucuyu söyler */, tehlikeli: true, yazilacak: 'SIL', onayMetni: 'Kalıcı sil' }))) return;
     try {
       const r = await adminIstek<{ deleted: number }>('/api/admin/catalog/trash/delete', { yontem: 'POST', govde: { ids } });
       bildir(`${r.deleted} kayıt kalıcı silindi`);
