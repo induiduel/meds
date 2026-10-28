@@ -146,3 +146,14 @@ Yalnız `cizim.json`'u yaz; başka dosyaya dokunma. Bitince tek satır: `BİTTİ
     tek yapıyı çiz.
 35. Okumayı bozacak hiçbir şey (yazının üstüne panel, büyük dolgu, gereksiz hareket) yapılmaz.
 
+36. **Çok renk + marker boyama (2026-10-28, H128):** çizim yalnız kırmızı değildir. Aynı sayfada ayrı yapılara ayrı `renk`
+    (`kirmizi|mavi|yesil|turuncu|mor|camgobegi|pembe|sari`; verilmezse betik `renk_ata` ile sayfa içinde sırayla atar).
+    Hattı net izlenemeyen bölge (ödem/kanama/enfarkt alanı, doku zemini, lezyon yüzeyi) konturla değil `boya: true` ile
+    fosforlu marker gibi boyanır (kenar şartı %40).
+37. **Hangi resim (2026-10-28, H128):** birden çok resimli sayfada her çizime `resim: "R#"` yazılır; noktalar o kutunun
+    dışındaysa doğrulayıcı reddeder. İki resim karşılaştırılıyorsa her resme ayrı renk ayrı çizim; resimden resme hızlı
+    geçişte her cümle yalnız kendi resmini işaretler (önceki resmin çizimi taşınmaz, kural 18 / H60).
+38. **Kısa anlatımda zoom yok (2026-10-28, H128):** çizimin başından cümle sonuna 70 karakterden (~4 sn) az kalıyorsa betik
+    `yakin` yazmaz; ön yüz de 55 karakterden kısa çizim aralığına yakınlaşmaz.
+39. **Panel anlatım başında açılır (2026-10-28, H128):** `sema` paneli (liste/sıralama/şema) cümle başında kurulmaya başlar,
+    `son` kelimesinde tamamlanır; `son`'u listenin son maddesinin söylendiği kelimeye koy.

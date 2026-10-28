@@ -164,6 +164,11 @@ def paragraf_seslendir(tts, metin: str):
     # Kısaltma okunuşu — yalnız modele giden metin; paragraf/zamanlama değişmez.
     # Kurul 2+ (UZUN_KISALTMA): fonetik terimler + ünlüsü uzatılmış harf adları ("dee nee aa"); birleşik "denea" EMA'da
     # kelime gibi okunuyordu ("deneye", 2026-10-17 ölçümü, KURUL2_YAPILMAYACAK_HATALAR H3). Kurul 1 eski yolda.
+    # Yabancı tıbbi terim okunuşu (Wernicke → Vernike, Staphylococcus → stafilokokus; terim_okunus.py, 2026-10-28):
+    # Kurul 2+ ve modül yollarında, kısaltma katmanından ÖNCE (kısaltmalara dokunmaz).
+    if MODUL_OKUNUS or UZUN_KISALTMA:
+        import terim_okunus
+        metin = terim_okunus.donustur(metin)
     if MODUL_OKUNUS:
         import modul_okunus
         metin = modul_okunus.donustur(metin)
@@ -177,7 +182,7 @@ def paragraf_seslendir(tts, metin: str):
     en_iyi = None
     for deneme in range(3):
         s = tts.say(metin, speed=HIZ, seed=deneme, sample_rate=SR)
-        wav = sessiz_kirp(np.asarray(s.audio, dtype=np.float32))
+        wav = ses_temizle(sessiz_kirp(np.asarray(s.audio, dtype=np.float32)))
         sure = len(wav) / SR
         oran = sure / beklenen
         if 0.55 <= oran <= 1.8:
@@ -186,6 +191,35 @@ def paragraf_seslendir(tts, metin: str):
         if en_iyi is None or abs(np.log(oran)) < abs(np.log(en_iyi[1])):
             en_iyi = (wav, oran)
     return en_iyi[0], f"süre oranı {en_iyi[1]:.2f} (3 denemede düzelmedi)"
+
+
+HEDEF_RMS = 0.075  # ≈ -22,5 dBFS konuşma düzeyi: paragraflar arası ses yüksekliği farkı (tohum/uzunluk) eşitlenir
+TEPE = 0.94
+
+
+def ses_temizle(x):
+    """Ses kalitesi (2026-10-28): DC kayması sıfırlanır, konuşan bölümlerin RMS'i hedefe çekilir (en çok ±6 dB),
+    tepe 0,94'te yumuşak sınırlanır, baş/sonda 12 ms geçiş: paragraf eklerinde tık ve düzey sıçraması olmaz."""
+    import numpy as np
+
+    if not len(x):
+        return x
+    x = x - float(np.mean(x))
+    a = np.abs(x)
+    konusma = x[a > 0.02]
+    if len(konusma) > SR // 4:
+        rms = float(np.sqrt(np.mean(konusma ** 2)))
+        if rms > 1e-4:
+            x = x * float(np.clip(HEDEF_RMS / rms, 0.5, 2.0))
+    t = np.abs(x).max()
+    if t > TEPE:
+        x = np.tanh(x / TEPE) * TEPE
+    n = min(int(0.012 * SR), len(x) // 2)
+    if n > 0:
+        r = np.linspace(0.0, 1.0, n, dtype=np.float32)
+        x[:n] *= r
+        x[-n:] *= r[::-1]
+    return x.astype(np.float32)
 
 
 def mp3_kodla(pcm16: bytes) -> bytes:

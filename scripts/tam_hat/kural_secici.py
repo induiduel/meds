@@ -30,7 +30,7 @@ ASAMALAR: dict[str, tuple[tuple[str, ...], tuple[str, ...]]] = {
                ("docs/KURUL2_DERS_STANDARDI.md",)),
     "anlatim": (("anlatım", "metin_denetle", "dolgu", "türkçe", "uslup", "üslup", "okunuş", "kısaltma", "anlatım metni",
                  "denetçi", "taslak", "tanımsız"),
-                ("docs/TURKCE_USLUP_STANDARDI.md", "docs/KURUL2_DERS_STANDARDI.md")),
+                ("docs/ANLATIM_KURGU_STANDARDI.md", "docs/TURKCE_USLUP_STANDARDI.md", "docs/KURUL2_DERS_STANDARDI.md")),
     "ses": (("ema", "xtts", "seslendir", "cümle zaman", "kelime zaman", "cumle_zaman", "okunuş"), ()),
     "capa_cizim": (("çapa", "capa", "çizim", "cizim", "lazer", "kontur", "panel_sinama", "pdf işareti", "imleç"),
                    ("docs/CIZIM_KURALLARI.md", "scripts/cizim/TALIMAT_CIZIM.md")),

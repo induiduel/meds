@@ -38,6 +38,8 @@
 - Yeni hatalar: H114, H115.
 
 ## 2026-10-27 · Ders içerik sayfaları (k2-05 ilk ders) — yerel; commit/dağıtım yok
+- **EMA terim okunuşu + ses temizliği + anlatım kurgusu + çizim renk/zoom/panel (2026-10-28, H128):** `terim_okunus.py` + `okunus/terim_okunus.json` (~600 terim + Latince kural motoru, `--denetle`/`--tara`), `ema_isci.py` Kurul 2+/modül yoluna bağlı + `ses_temizle`; `docs/ANLATIM_KURGU_STANDARDI.md` (TALIMAT_SESLI, TAM_HAT_HIZLI_AKIS, kural_secici anlatim aşamasına bağlı); `CizimLayer.tsx`/`pdfDoc.css` çok renk + marker boyama + panel erken açılış + kısa zoom yok; `cizim_uret.py`/`cizim_dogrula.py` renk/boya/resim, ZOOM_EN_AZ. Var olan derslerin sesi/çizimi yeniden üretilmedi (yeni derslerde geçerli). Commit/dağıtım yok.
+
 - **Sesli ders ekranında okunuş sızıntısı (2026-10-28, H126):** `yazim_sozlugu.py` v2 `ses`↔`ekran` çiftlerinden gen sembolü yazımlarını çıkarır (hoks→HOX, paks altı→PAX6); sözlük yeniden üretildi, onem 520, dağıtıldı.
 
 - **Belirti:** Ders ayrıntısında yalnız sesli ders/Öğren/çıkmış/yorum vardı; dersin terim, hastalık, spot, tablo, soru, kart içeriği ayrı sayfalarda yoktu.

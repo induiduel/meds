@@ -61,6 +61,11 @@ metin bloğu bir paragraftır), `kaynak.md`'deki `=== SAYFA n ===` numaralarıyl
 - Üslup: deneyimli, sıcak bir kadın klinik hocası; öğretici, akıcı. "Arkadaşlar" en fazla ~5 kez. Mekanizmaları
   neden-sonuç zinciriyle anlat; karıştırılan kavramları açıkça karşılaştır.
 
+- **Kurgu (ZORUNLU, 2026-10-28): `docs/ANLATIM_KURGU_STANDARDI.md`.** Yazmadan önce `anlatim_plani.md` (amaç,
+  giriş–gelişme–sonuç hiyerarşisi, bölüm geçişlerinin ilişki türü, örnek yerleri). Her bölüm ilk cümlesinde neden geldiğini ve
+  öncekiyle ilişkisini söyler; başlıksız slaytta konu değişiyorsa "burada konu değişiyor" açıkça denir. Listelerde önce madde
+  sayısı, sonra sırayla anlatım; kaynağa dayalı kısa örnekler (derste ~3–8). Ders bir hikâye/kitap gibi neden-sonuçla ilerler.
+
 ## "Burası önemli" (zorunlu)
 - `cikmis_baglantilari.json`'da `ilgili: true` olan **her** çıkmış sorunun ölçtüğü bilgi (doğru şık + kökün test ettiği
   kavram) anlatımda geçmeli; v2'de o cümlenin `cikmis` listesine soru kimliği ve `vurgu`suna `tur: "cikmis"` yazılır.
@@ -93,6 +98,7 @@ metin bloğu bir paragraftır), `kaynak.md`'deki `=== SAYFA n ===` numaralarıyl
 - **Sayılar/simgeler** yazıyla: "%30" → "yüzde otuz", "5 mg/dL" → "beş miligram bölü desilitre", "2018" → "iki bin on
   sekiz", "≥" → "eşit ya da büyük". Rakam ve simge kullanma.
 - **Yunan harfleri:** alfa, beta, gama, kappa, lambda. **Yabancı adlar** Türkçe okunuşla ("Helikobakter pilori", "Vilms").
+  Kurul 2+: standart yazım kalırsa EMA'ya giderken `terim_okunus.py` çevirir; seslendirmeden önce `--denetle` ile kontrol.
 - Parantez kullanma; parantez içini cümleye yedir. Büyük harfli kısaltma bırakma.
 
 ## Bitirmeden önce (zorunlu)

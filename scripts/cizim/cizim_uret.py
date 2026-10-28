@@ -63,6 +63,29 @@ def kutular(txt: Path) -> list[list[float]]:
     return out
 
 
+ZOOM_EN_AZ = 70  # karakter (~4 sn EMA): bundan kısa kalan anlatımda yakınlaşma yapılmaz
+RENKLER = ("kirmizi", "mavi", "yesil", "turuncu", "mor", "camgobegi", "pembe", "sari")
+
+
+def renk_ata(out: dict) -> None:
+    """Aynı sayfada ayrı yapılar ayrı renk (2026-10-28): yazarın renk vermediği kontur/marker çizimlerine sayfa içinde
+    sırayla palet rengi atanır; aynı resim kutusu + aynı etiket aynı rengi korur. Tek çizimli sayfada kırmızı kalır."""
+    sayfa: dict[int, dict] = {}
+    for cs in out.values():
+        for v in cs.values():
+            for m in v:
+                if m.get("tur") != "kontur":
+                    continue
+                d = sayfa.setdefault(m.get("s"), {"kul": {m["renk"] for _ in [0] if m.get("renk")}, "esle": {}})
+                if m.get("renk"):
+                    continue
+                anahtar = (m.get("resim"), str(m.get("etiket") or "").lower())
+                if anahtar not in d["esle"]:
+                    d["esle"][anahtar] = next((r for r in RENKLER if r not in d["kul"]), RENKLER[len(d["esle"]) % len(RENKLER)])
+                    d["kul"].add(d["esle"][anahtar])
+                m["renk"] = d["esle"][anahtar]
+
+
 def yakinlasma(k: dict, kutu_listesi: list, resim: bool) -> list | None:
     """Resim üstündeki çizim için yakınlaşma bölgesi (kullanıcı 2026-10-24: "çizim asıl mevzunun önünü kapatıyor; o bölgeye
     zoom yapılsın, çizilsin, geri dönülsün"). Çizimin (boyalı bölge / ok yolu / odak çerçevesi + etiket) sınır kutusu,
@@ -837,12 +860,17 @@ def cizim_aday_uret(taslak_dir: Path, pdf_yol: Path | None = None, paralel: int 
             "1. GÖRSEL/TABLO/ŞEMA SAYFALARI:\n"
             "   - Anlatılan anatomik yapılar, lezyonlar, organlar, dokular, herniasyonlar, kanama odakları, anevrizmalar, "
             "hücreler veya tablo bölgeleri için mutlaka `tur: 'kontur'` kullan. Yapının sınırını 5-20 nokta ile KENARI boyunca "
-            "sırayla dolan (nokta: [[x,y],...]). Bu alanlar oynatıcıda yarı saydam fosforlu sarı marker ile boyanacak ve kırmızı kontur hattıyla çevrilecektir!\n"
+            "sırayla dolan (nokta: [[x,y],...]). Hattı net çizilemeyen bölge (doku alanı, kanama, ödem, enfarkt alanı, lezyon zemini) için "
+            "`boya: true` ekle: oynatıcı bölgeyi fosforlu marker gibi boyar. Aynı sayfada ayrı yapılara `renk` ver "
+            "(kirmizi|mavi|yesil|turuncu|mor|camgobegi|pembe|sari; vermezsen betik ayrı renk atar).\n"
+            "   - BİRDEN ÇOK RESİMLİ SAYFA: her çizime hangi resmi anlattığını `resim: 'R2'` ile yaz; noktalar o kutunun içinde "
+            "olmalı. Cümle iki resmi karşılaştırıyorsa her resme ayrı çizim (ayrı renk) koy; resimden resme geçişte önceki "
+            "resmin çizimini sonraki cümleye taşıma.\n"
             "   - Yapılar arası yön, etki, yolak veya neden-sonuç için `tur: 'akis'` ile ok rotası çiz (a: [x,y], b: [x,y], iliski: 'aktive'|'inhibe'|'donusur', etiket: '...'). "
             "Eğer PDF'te zaten çizili bir ok varsa, onu kopyalamak yerine aday oktan seç veya odak çerçevesi çiz.\n"
             "   - Bir kaynaktan birden çok yere giden dallanmalar için `dallar` kullan.\n"
             "   - Grafik ve eğriler için `tur: 'egri_faz'` kullan.\n"
-            "   - Görsel üzerindeki tüm bu çizimler için konuşma anında anlatılan bölgeye oynatıcı tarafından otomatik ZOOM yapılacaktır!\n"
+            "   - Oynatıcı yalnız küçük bölgeye ve yeterince uzun (≥ ~4 sn) anlatılan çizime ZOOM yapar; kısa değinmede zoom yok.\n"
             "2. YAZI AĞIRLIKLI SLAYTLAR:\n"
             "   - sablonlar.json kütüphanesinden tıbbi anlama tam uyan şablonu seçerek `tur: 'sema'` paneli kur "
             "(tani_tetkik, zehir_antidot, bulgu_dusundurur, lezyon_bulgu, neden_sonuc, siniflama, karsilastirma vb.).\n"
@@ -1122,7 +1150,7 @@ def main() -> int:
                                        "kaynak_metin", "hedef_metin", "dal", "sablon", "sablon_ad", "duzen", "basliklar",
                                        "bag", "satirlar", "ogeler", "kaynaklar", "sonuc", "soru", "dallar", "gorunen", "altta",
                                        "kutuplar", "baslik", "numarali", "deger", "birim", "aciklama", "cikmis",
-                                       "pdf_oku") if x in k}
+                                       "pdf_oku", "renk", "boya", "resim") if x in k}
             komut.update(s=s, k=[ka[k["bas"]][0], ka[k["son"]][1]])
             if s not in satir_onbellek and belge is not None and 1 <= s <= belge.page_count:
                 satir_onbellek[s] = sayfa_satirlari(belge[s - 1])
@@ -1132,6 +1160,11 @@ def main() -> int:
                 continue
             kb = kutular(dok / f"s{s:02d}.txt")
             yk = yakinlasma(yer, kb, resim_sayfasi(kb, satir_onbellek.get(s), raster.get(s)))
+            # kısa anlatımda zoom yok (2026-10-28): çizimin başından cümle sonuna ZOOM_EN_AZ karakterden az kaldıysa
+            # yakınlaşma tamamlanmadan slayt/cümle değişiyordu (ön yüz de 55 karakter altını yakınlaştırmaz)
+            if yk and len(C[cid]) - komut["k"][0] < ZOOM_EN_AZ:
+                yk = None
+                say["zoom_kisa"] = say.get("zoom_kisa", 0) + 1
             if yk:
                 yer["yakin"] = yk
             mevcut.append(yer)
@@ -1159,6 +1192,7 @@ def main() -> int:
                         m["yol"] = [ilk_cikis[g]] + m["yol"]; m["rota"] = "kavis"; m["a"] = ilk_cikis[g]
     out = {p: {c: v for c, v in cs.items() if v} for p, cs in out.items()}
     out = {p: cs for p, cs in out.items() if cs}
+    renk_ata(out)
     turler: dict[str, int] = {}
     for cs in out.values():
         for v in cs.values():

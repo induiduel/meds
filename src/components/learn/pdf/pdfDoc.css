@@ -200,6 +200,13 @@
 .pdv-cz path { fill: none; stroke-linecap: round; stroke-linejoin: round; }
 /* H40: her çizginin altında beyaz hale — resim/renkli zemin üstünde de okunur; çizgi ince ama tam opak */
 .pdv-cz-kontur path { stroke: rgb(244 63 94 / .9); stroke-width: 1.6; filter: drop-shadow(0 0 1.5px rgba(244, 63, 94, 0.55)); } /* H85: yumuşak, ince; kalınlık satır içinde bölgeye göre */
+/* çok renk (2026-10-28): kontur/marker rengi --cz-r; aynı sayfadaki ayrı yapılar ayrı renk */
+.pdv-cz-kontur, .pdv-cz-marker { --cz-r: 244 63 94; }
+.is-r-kirmizi { --cz-r: 244 63 94; } .is-r-sari { --cz-r: 234 179 8; } .is-r-yesil { --cz-r: 22 163 74; } .is-r-mavi { --cz-r: 37 99 235; }
+.is-r-pembe { --cz-r: 219 39 119; } .is-r-turuncu { --cz-r: 234 88 12; } .is-r-mor { --cz-r: 124 58 237; } .is-r-camgobegi { --cz-r: 8 145 178; }
+.pdv-cz .pdv-cz-kontur path { stroke: rgb(var(--cz-r) / .9); filter: drop-shadow(0 0 1.5px rgb(var(--cz-r) / .55)); }
+/* marker boyama: fosforlu kalem — yarı saydam dolgu, yumuşak kenar; koyu zeminde de görünsün diye multiply yok */
+.pdv-cz .pdv-cz-marker path { fill: rgb(var(--cz-r) / .3); stroke: rgb(var(--cz-r) / .45); stroke-width: 6; filter: blur(1.2px); transition: opacity .25s; }
 .pdv-cz-akis path { stroke: #2563eb; stroke-width: 3; filter: drop-shadow(0 0 3px rgba(37, 99, 235, 0.6)); }
 .pdv-cz g path.pdv-cz-hale { stroke: #fff; stroke-width: 6.8; opacity: .95; }
 .pdv-cz-akis.is-inhibe path { stroke: #dc2626; }

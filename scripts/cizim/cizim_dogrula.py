@@ -85,6 +85,9 @@ def _ic(p, kutu, tol=0.02) -> bool:
     return kutu[0] - tol <= p[0] <= kutu[2] + tol and kutu[1] - tol <= p[1] <= kutu[3] + tol
 
 
+RENKLER = {"kirmizi", "sari", "yesil", "mavi", "pembe", "turuncu", "mor", "camgobegi"}
+
+
 def _gecerli_nokta(n) -> bool:
     return isinstance(n, (list, tuple)) and len(n) == 2 and all(isinstance(v, (int, float)) and 0 <= v <= 1 for v in n)
 
@@ -107,11 +110,20 @@ def denetle(k: dict, kelime_sayisi: int, kutular: list, raster: SayfaRaster | No
             return "sayfada resim kutusu yok (kontur/eğri yalnız resim üstünde)"
         if not any(all(_ic(n, b) for n in nk) for b in kutular):
             return "noktalar tek bir resim kutusunun içinde değil"
+        if k.get("renk") is not None and k.get("renk") not in RENKLER:
+            return f"renk geçersiz ({k.get('renk')})"
+        if k.get("resim") is not None:  # birden çok resimli sayfa: çizim yazarın söylediği resmin içinde olmalı (2026-10-28)
+            m = re.fullmatch(r"R(\d+)", str(k["resim"]))
+            if not m or not 1 <= int(m.group(1)) <= len(kutular):
+                return f"resim kimliği geçersiz ({k['resim']})"
+            if not all(_ic(n, kutular[int(m.group(1)) - 1]) for n in nk):
+                return f"noktalar {k['resim']} kutusunun dışında (başka resmi işaretliyor)"
         if raster is None:
             return "sayfa görüntüsü yok"
         oran = raster.kenar_orani(nk)
-        if oran < 0.7:
-            return f"noktaların %{round(oran * 100)}'i çizgi üstünde (en az %70)"
+        alt = 0.4 if k.get("boya") else 0.7  # marker boyama: hattı belirsiz bölge (ödem, kanama alanı) — kenar şartı gevşek
+        if oran < alt:
+            return f"noktaların %{round(oran * 100)}'i çizgi üstünde (en az %{round(alt * 100)})"
         if tur == "egri_faz":
             xs = [n[0] for n in nk]
             if xs != sorted(xs):

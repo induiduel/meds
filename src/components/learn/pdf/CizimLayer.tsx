@@ -61,6 +61,12 @@ export interface CizimKomut {
   etiket_konum?: number[];
   /** resim üstündeki çizimde yakınlaşma bölgesi (cizim_uret.yakinlasma): çizim boyunca sayfa buraya büyür, sonra döner */
   yakin?: number[];
+  /** çizim rengi (cizim_uret RENKLER; 2026-10-28): aynı sayfada ayrı yapılar ayrı renkte, kırmızı zorunlu değil */
+  renk?: 'kirmizi' | 'sari' | 'yesil' | 'mavi' | 'pembe' | 'turuncu' | 'mor' | 'camgobegi';
+  /** marker boyama: kontur çizgisi yerine bölge fosforlu kalemle boyanır (hat net çizilemeyen yapılar) */
+  boya?: boolean;
+  /** çizimin bağlı olduğu resim kutusu (R1, R2…): birden çok resimli sayfada hangi resmin anlatıldığı */
+  resim?: string;
   /** etiket hedefinden uzaksa bağlantı çizgisinin hedef ucu ve etiketin yüksekliği (sayfa oranı) */
   etiket_hedef?: number[];
   etiket_boy?: number;
@@ -163,8 +169,17 @@ function Komut({ z, t }: { z: CizimKomut; t: number }) {
     const nk = konturGenis(z.nokta);
     const d = egri(nk, true);
     const sw = konturKalinlik(nk);
+    const rk = z.renk ? ` is-r-${z.renk}` : '';
+    if (z.boya) {
+      // marker boyama (2026-10-28): bölge yarı saydam renkle boyanır, kenar yumuşak; çizgiyle hat izlenmez
+      return (
+        <g className={`pdv-cz-marker${rk}`}>
+          <path d={d} style={{ opacity: Math.min(1, t * 1.6) }} />
+        </g>
+      );
+    }
     return (
-      <g className="pdv-cz-kontur">
+      <g className={`pdv-cz-kontur${rk}`}>
         {t > 0 && <path d={`M0 0H${V}V${V}H0Z ${d}`} fillRule="evenodd" className="pdv-cz-mercek" style={{ opacity: Math.min(1, t * 2) }} />}
         {t > 0 && <path d={d} className="pdv-cz-boya" style={{ opacity: Math.min(1, t * 1.5) }} />}
         <path d={d} {...ciz} style={{ strokeWidth: sw }} vectorEffect="non-scaling-stroke" />
@@ -533,6 +548,9 @@ function yakinUygula(pg: HTMLElement, b: number[] | null) {
   pg.style.setProperty('--yakin-t', `scale(${s.toFixed(3)}) translate(${(tx * 100).toFixed(2)}%, ${(ty * 100).toFixed(2)}%)`);
 }
 
+/** zoom için çizimin konuşulduğu en kısa aralık (karakter; EMA ~18 karakter/sn → ~3 sn) */
+const ZOOM_EN_AZ_KARAKTER = 55;
+
 export const CizimLayer = memo(function CizimLayer({ z, useChar }: { z: CizimKomut[]; useChar: () => number }) {
   const c = useChar();
   // yakınlaşma hedefi: çizimi süren (0 ≤ t < 1) ya da bitişinin üstünden BEKLE ms geçmemiş yakınlaşmalı komut
@@ -554,7 +572,8 @@ export const CizimLayer = memo(function CizimLayer({ z, useChar }: { z: CizimKom
   let hedef: number[] | null = null;
   let kalan = 0;
   if (!AZ_HAREKET_Y) {
-    const yk = z.filter((x) => x.yakin);
+    // kısa anlatımda zoom yok (2026-10-28): çizim ~3 sn'den kısa sürüyorsa yakınlaşma bitmeden slayt değişiyordu
+    const yk = z.filter((x) => x.yakin && (x.k?.[1] ?? 0) - (x.k?.[0] ?? 0) >= ZOOM_EN_AZ_KARAKTER);
     const tler = yk.map((x) => ilerleme(x, c));
     if (yk.length && tler.some((t) => t >= 0)) {
       const anahtar = yk.map((x) => `${x.s}:${x.k.join('-')}`).join('|');
@@ -596,7 +615,9 @@ export const CizimLayer = memo(function CizimLayer({ z, useChar }: { z: CizimKom
   // şema yalnız betiğin boş bulduğu yerde (konum); boş yer yoksa (konum null) sayfanın önü kapanmasın diye gösterilmez
   const sema = z.find((x) => x.tur === 'sema' && (x.konum || x.konum === undefined));
   const semaAnahtar = sema ? `sema:${sema.s}:${sema.k?.[0]}-${sema.k?.[1]}:${sema.sablon || sema.duzen || ''}` : '';
-  let semaT = sema ? (tamamlananRef.current.has(semaAnahtar) ? 1 : ilerleme(sema, c)) : -1;
+  // Panel (liste/sıralama/şema) anlatım başlar başlamaz açılır (2026-10-28): cümle başından (k0 = 0) kurulmaya başlar,
+  // betiğin yazdığı bitişte (k1) tamamlanır; önceden terimin söylendiği kelimeyi bekleyip geç açılıyordu.
+  let semaT = sema ? (tamamlananRef.current.has(semaAnahtar) ? 1 : ilerleme({ ...sema, k: [0, Math.max(1, sema.k?.[1] ?? 1)] }, c)) : -1;
   if (sema && semaT >= 1) {
     tamamlananRef.current.add(semaAnahtar);
     semaT = 1;

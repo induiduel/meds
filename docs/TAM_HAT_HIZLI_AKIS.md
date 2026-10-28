@@ -33,15 +33,18 @@ python3 scripts/tam_hat/kural_secici.py --oku <kaynak|anlatim|ses|capa_cizim|der
 - Hat başında `kural_secici.py --denetle`; defter değiştiyse özet yeniden üretilir (`kural_secici.py`). Özet elle yazılmaz.
 - Defterin tamamı yalnız yeni hata maddesi yazılırken ya da özet bir kuralı belirsiz bıraktığında açılır.
 
-## 3. Kısmi düzeltme ve ±%10 tolerans
+## 3. Kısmi düzeltme ve ±%10–20 tolerans
 
 - Kapı ya da denetçi bir **bölüm/kayıt/soru** kimliği verir; yalnız o parça yeniden yazılır, geri kalan dokunulmaz.
   Alt ajana bütün taslak değil, hatalı parça + kapı mesajı + o parçanın kaynak sayfaları verilir.
-- **Sayısal hedeflerde** (kelime aralığı, öge sayısı, soru sayısı, kalıp payı, kök uzunluğu, süre) hedeften ±%10 sapma
+- **Sayısal hedeflerde** (kelime aralığı, öge sayısı, soru sayısı, kalıp payı, kök uzunluğu, süre) hedeften ±%10 sapma — sesli ders anlatımında kelime/süre/örnek sayısı için ±%20 (kullanıcı, 2026-10-28) —
   kabul edilir; dışındaysa yalnız sapan bölüm düzenlenir (ör. soru kalıp payı: rapor "3 soru olumsuz köke çevrilmeli" der,
   yalnız 3 soru yeniden yazılır).
 - **Tolerans yalnız sayısaldır.** Tıbbi yanlış, kaynakta olmayan bilgi, ileri sızıntı, ders çağrıştıran kök, şık
   standardı ve Türkçe üslup ihlalinde tolerans yoktur: kapı 0 HATA olmalıdır.
+
+- **Önce plan:** anlatım yazarı metinden önce `anlatim_plani.md` kurar (`ANLATIM_KURGU_STANDARDI.md` §2); doğru plan
+  tek geçişte kabul edilir, LLM yeniden çağrısı ve limit tüketimi azalır.
 
 ## 4. Metin ve veri çıkarma
 
