@@ -6,6 +6,7 @@ import {
 import { linkClick, navigateTo, pathFor } from '../../router';
 import { DI_BOLUMLER, dersIcerikGetir, dersSorulariGetir, type DiBolum, type DiPaket, type DiSoru, type DiTablo } from './dersIcerik';
 import { FavBaglam, FavDugme } from './FavDugme';
+import { TerimSesDugme } from '../ui/TerimSesDugme';
 import { dersSoruKaydet } from '../../services/calismaTakip';
 import '../../styles/v15/dersIcerik.css';
 
@@ -195,7 +196,7 @@ export default function DersIcerikV15({ dersKey, bolum }: { dersKey: string; bol
                     <div className="di15-terim-u"><span className="di15-harf" aria-hidden>{x.t.charAt(0)}</span><b>{x.t}</b></div>
                     {x.e.length > 0 && <div className="di15-cipler">{x.e.map((e) => <span key={e}>{e}</span>)}</div>}
                     <p>{x.a}</p>
-                    <FavDugme k={{ tur: 'terim', baslik: x.t, metin: x.a, slayt: SL(x.s), adim: x.adim }} />
+                    <FavDugme k={{ tur: 'terim', baslik: x.t, metin: x.a, slayt: SL(x.s), adim: x.adim }} /><TerimSesDugme baslik={x.t} govde={x.a} />
                     {x.s && <small className="di15-slayt">Slayt s.{x.s}</small>}
                   </li>
                 ))}
@@ -203,7 +204,7 @@ export default function DersIcerikV15({ dersKey, bolum }: { dersKey: string; bol
             ) : (
               <ul className="di15-kisa di15-anim" role="list">
                 {sirala(p.kisaltmalar.filter((x) => ok(x.k, x.acilim)), sira, (x) => x.k).map((x, i) => (
-                  <li key={x.k} className="v15-card" style={{ '--i': i } as React.CSSProperties}><span className="di15-kisa-k">{x.k}</span><span>{x.acilim}</span></li>
+                  <li key={x.k} className="v15-card" style={{ '--i': i } as React.CSSProperties}><span className="di15-kisa-k">{x.k}</span><span>{x.acilim}</span><TerimSesDugme baslik={x.k} govde={x.acilim} /></li>
                 ))}
               </ul>
             )}
@@ -253,7 +254,7 @@ export default function DersIcerikV15({ dersKey, bolum }: { dersKey: string; bol
             {sec === 'slayt' && (
               <ul className="di15-izgara di15-anim" role="list">
                 {sirala(p.bilgiler.filter((x) => ok(x.b, x.m)), sira, (x) => x.b, (x) => x.s).map((x, i) => (
-                  <li key={i} className="v15-card di15-bilgi" style={{ '--i': i } as React.CSSProperties}><b>{x.b}</b><p><Zengin t={x.m} /></p><FavDugme k={{ tur: 'bilgi', baslik: x.b, metin: x.m, slayt: SL(x.s), adim: x.adim }} />{x.s && <small className="di15-slayt">Slayt s.{x.s}</small>}</li>
+                  <li key={i} className="v15-card di15-bilgi" style={{ '--i': i } as React.CSSProperties}><b>{x.b}</b><p><Zengin t={x.m} /></p><FavDugme k={{ tur: 'bilgi', baslik: x.b, metin: x.m, slayt: SL(x.s), adim: x.adim }} /><TerimSesDugme baslik={x.b} govde={x.m} />{x.s && <small className="di15-slayt">Slayt s.{x.s}</small>}</li>
                 ))}
               </ul>
             )}

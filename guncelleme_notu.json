@@ -1,17 +1,15 @@
 {
  "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
- "onem": 544,
- "baslik": "Kullanım kolaylığı düzeltmeleri",
+ "onem": 545,
+ "baslik": "Terim ve bilgi paketleri sesli okunuyor",
  "maddeler": [
-  "Deneme sınavında soru numaralarına telefonda dokunulabiliyor, süre telefonda da görünüyor",
-  "Örnek sorulardaki Başla düğmesi düzgün görünüyor",
-  "Öncelikli dersler ve Geçmiş kurullar Ders çalış altında; Başarımlar ve Güncelleme günlüğü Kişisel altında",
-  "Yönetim: tablolar telefonda kart olarak okunuyor"
+  "Terim, kısaltma ve bilgi kartlarında hoparlör düğmesi: dokununca tanımı hazır sesle okur",
+  "Sesli derste PDF terim yardımcısındaki kartlarda da var"
  ],
- "eklenen": [],
+ "eklenen": [
+  "5.615 terim, kısaltma ve bilgi paketi için hazır ses"
+ ],
  "degisen": [],
- "duzeltilen": [
-  "Karantinada kalan 15 gerçek çıkmış sorusu serbest bırakıldı"
- ],
+ "duzeltilen": [],
  "silinen": []
 }

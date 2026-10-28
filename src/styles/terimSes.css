@@ -1,0 +1,7 @@
+/* Hazır terim sesi düğmesi (TerimSesDugme) */
+.terim-ses { display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; padding: 0; border: 0; border-radius: 8px; background: transparent; color: var(--ink-3, currentColor); cursor: pointer; vertical-align: middle; }
+.terim-ses svg { width: 16px; height: 16px; }
+.terim-ses:hover, .terim-ses:focus-visible { background: color-mix(in srgb, currentColor 12%, transparent); color: var(--accent, currentColor); }
+.terim-ses.is-on { color: var(--accent, currentColor); animation: terim-ses-nabiz 1s ease-in-out infinite; }
+@keyframes terim-ses-nabiz { 50% { opacity: .45; } }
+@media (prefers-reduced-motion: reduce) { .terim-ses.is-on { animation: none; } }

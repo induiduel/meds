@@ -34,6 +34,7 @@ import { registerPatolojiCozucuRoutes } from './src/services/patolojiCozucu';
 import { registerPatolojiCozucuAltRoutes } from './src/services/patolojiCozucuAlt';
 import { registerCozucuSesRoutes } from './src/services/cozucuSes';
 import { registerOgrenSesRoutes } from './src/services/ogrenSes';
+import { registerTerimSesRoutes } from './src/services/terimSes';
 import { registerCevrimdisiKatalogRoutes } from './src/services/cevrimdisiKatalog';
 import { registerWhatsAppRoutes, runScheduledWhatsAppDigests } from './src/services/whatsappService';
 import { quizRealtimeServer } from './src/services/quiz/quizRealtimeServer';
@@ -2972,6 +2973,7 @@ registerPatolojiCozucuAltRoutes(app);
 registerCozucuSesRoutes(app);
 registerCevrimdisiKatalogRoutes(app);
 registerOgrenSesRoutes(app);
+registerTerimSesRoutes(app);
 
 // Gidiş-dönüş testi: NOTIFY → LISTEN → SSE zincirinin tamamını ölçer (Sistem Tanılama ekranı).
 app.post('/api/live/ping', async (req, res) => {

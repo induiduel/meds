@@ -6,6 +6,7 @@ import { navigateTo } from '../../router';
 import { isFavoriteCard, toggleFavoriteCard } from '../../services/studyStore';
 import React, { useMemo, useSyncExternalStore } from 'react';
 import { Eye, Info } from 'lucide-react';
+import { TerimSesDugme } from '../ui/TerimSesDugme';
 import { Popover, PopoverContent, PopoverTrigger } from '../ui/radix';
 import type { CdDetay, CdTerim, CdTerimSayfa } from './canliDersStore';
 
@@ -93,6 +94,7 @@ function Kart({ x }: { x: CdTerim }) {
     <>
       <div className="cd-trm-kart-bas">
         <b>{x.t}</b>
+        <TerimSesDugme baslik={x.t} govde={x.a || x.acilim || ''} />
         <span className={`cd-trm-tur is-${x.k}`}>{TERIM_TUR[x.k]}</span>
       </div>
       {x.acilim && <p className="cd-trm-acilim"><b>{x.acilim}</b></p>}

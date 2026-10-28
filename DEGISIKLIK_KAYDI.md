@@ -1,3 +1,8 @@
+## 2026-10-28 — Terim / kısaltma / bilgi paketi hazır sesleri (EMA GPU)
+- `scripts/sesli_anlatim/terim_ses_uret.py` (başlatıcı `patoloji_cozucu/cozucu_ses_gpu.sh`, kural 10 ikinci istisna yolu): PDF terim yardımcısı (`sesli_anlatim/terim|kisaltma`), `ders_icerik` (terim/kısaltma/bilgi) ve iki genel sözlükten **5.615 benzersiz** "başlık + 1-2 cümle" klibi → `data/terim_ses/<h2>/<h>.mp3` (226 MB, ~10,3 sa, 0 hata) + `kayit.json`. Anahtar `h = sha1("terim-1|"+başlık+"|"+tanım)[:12]` (ekrandaki metinle; `anahtar()`); yeniden çalıştırma yalnız eksik/değişeni üretir.
+- Kök neden/ders: Unicode simgeler (α, β, ⁺, ₂, ≥, µ, ²) EMA'da "unikod U artı 207A" diye okunuyordu; `konus()` okunuşu Türkçeleştirir (alfa, artı, büyük eşit, mikro, kare, yüzde, bölü, CYP 2 D 6). Başlık tek başına sentezlenince süre denetimi şaşıyordu → başlık+tanım tek paragraf. Yeni terim/bilgi kaynağı eklenirse simge içeriyorsa `konus()`'a kural eklenir.
+- Henüz arayüze bağlanmadı ve Oracle'a taşınmadı (rsync + `anahtar()` ile arama gerekir). Commit/dağıtım yapılmadı.
+
 ## 2026-10-28 — Soru çözücü / En önemliler başlangıcı: kurul süzgeci hatası + sade tasarım (H124)
 - `spots/BransBaslangic.tsx`: liste seçili kurula göre (`useSeciliKurul`), "Tümü" yok, "Kurul N" öneki atılır, başlanmışlar önde; başlık "Kurul N dersleri".
 - `ui/Baslangic.tsx` v15 dalı + `styles/baslangic.css`: kurul şeridi ile özet tek satır, vurgulu devam kartı, halka yerine alt ilerleme çubuğu + yüzde, üzerine gelince yükselen kart/kayan ok/"Başla", basınca küçülme; alt bağlantılar ayraçlı tek satır.
