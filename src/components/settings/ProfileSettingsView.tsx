@@ -346,6 +346,7 @@ const ProfileSettingsClassic: React.FC<Props> = ({ currentUser, isAdmin, questio
             <NotesSyncRow />
             <ProgressResetRow />
             <Row icon={Compass} iconBg="var(--color-accent)" title="Tanıtım turu" sub="Sayfaları ve özellikleri yeniden gez" onClick={startWelcomeTour} />
+            <Row icon={Compass} iconBg="var(--color-accent)" title="Tanıtım videoları" sub="Sesli ders, soru çözücü, oyunlar ve daha fazlası" onClick={() => window.dispatchEvent(new CustomEvent('medsoru:tanitim'))} />
             <Row icon={Compass} iconBg="var(--color-accent)" title="Öğren turu" sub="Ders kitaplığı ve etkileşim türleri" onClick={onLearnTour} />
             {isAdmin && <Row icon={ShieldCheck} iconBg="var(--color-warn)" title="Yönetim konsolu" sub="Taslaklar, moderasyon, sistem" onClick={onOpenAdmin} />}
             {currentUser ? (

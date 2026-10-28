@@ -50,6 +50,7 @@ import { LearnFab } from './components/learn/LearnFab';
 import { Onboarding } from './components/onboarding/Onboarding';
 import { tourSeen } from './components/onboarding/tourState';
 const WelcomeTour = React.lazy(() => import('./components/onboarding/WelcomeTour'));
+const TanitimVideo = React.lazy(() => import('./components/onboarding/TanitimVideo'));
 const V13Invite = React.lazy(() => import('./components/v13/V13Invite'));
 import { girisUyarisiKabulEdildi } from './components/onboarding/girisUyarisiDurum';
 const GirisUyarisi = React.lazy(() => import('./components/onboarding/GirisUyarisi'));
@@ -929,6 +930,22 @@ export default function App() {
     window.addEventListener('medsoru:tour', on);
     return () => window.removeEventListener('medsoru:tour', on);
   }, []);
+  // Tanıtım videoları: turdan sonra bir kez (`medsoru_tanitim_v1`); `medsoru:tanitim` ile yeniden
+  const [showTanitim, setShowTanitim] = useState(false);
+  useEffect(() => {
+    const on = () => setShowTanitim(true);
+    window.addEventListener('medsoru:tanitim', on);
+    return () => window.removeEventListener('medsoru:tanitim', on);
+  }, []);
+  const tanitimGoruldu = () => { try { return localStorage.getItem('medsoru_tanitim_v1') === '1'; } catch { return true; } };
+  useEffect(() => {
+    // Turu önceden görmüş öğrenciye de bir kez
+    if (!currentUser || isAdmin || girisUyarisi || !tourSeen() || tanitimGoruldu()) return;
+    const t = window.setTimeout(() => {
+      if (!document.querySelector('[role="dialog"][aria-modal="true"]') && !['manage', 'practice', 'admin'].includes(activeTabRef.current)) setShowTanitim(true);
+    }, 5000);
+    return () => window.clearTimeout(t);
+  }, [currentUser?.uid, isAdmin, girisUyarisi]);
   useEffect(() => {
     if (!currentUser || isAdmin || showOnboarding || girisUyarisi || tourSeen()) return;
     // Başka cihazda turu görmüş öğrencinin profili gelsin diye kısa bekle (eşitleme `medsoru_tour_v1`'i getirir)
@@ -1565,7 +1582,12 @@ export default function App() {
       )}
       {showTour && !isManageRoute && (
         <Suspense fallback={null}>
-          <WelcomeTour name={currentUser?.displayName} onGo={setActiveTab} onClose={() => setShowTour(false)} />
+          <WelcomeTour name={currentUser?.displayName} onGo={setActiveTab} onClose={() => { setShowTour(false); if (!tanitimGoruldu()) setShowTanitim(true); }} />
+        </Suspense>
+      )}
+      {showTanitim && !showTour && !isManageRoute && (
+        <Suspense fallback={null}>
+          <TanitimVideo onClose={() => setShowTanitim(false)} />
         </Suspense>
       )}
       {/* v13 "Ada" daveti: açılışta bir kez sorulur (başka pencere açıkken beklenir) */}

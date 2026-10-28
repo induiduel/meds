@@ -1,14 +1,15 @@
 {
  "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
- "onem": 529,
- "baslik": "Daha hızlı açılış, daha okunaklı yazılar",
+ "onem": 530,
+ "baslik": "Yeni: MeDSor tanıtım videoları",
  "maddeler": [
-  "Açılışta inen stil dosyası küçüldü (Öğren stilleri yalnız gerektiğinde)",
-  "Tam ekranda gereksiz kaydırma ve üst üste katmanlarda alt menü sorunu giderildi",
-  "Küçük yazılar büyütüldü, telefonda ders başlıkları tam görünüyor",
-  "Çevrimdışıyken boşuna istek atılmıyor"
+  "Sesli ders, metin takibi, canlı çizim ve çıkmış soru çipini gösteren animasyonlu tanıtım",
+  "Soru çözücü, Öğren ve oyunlar, istatistik, sıralama, başarımlar ve KMB tanıtımları",
+  "Profil › Tanıtım videoları ile istediğin zaman yeniden izle"
  ],
- "eklenen": [],
+ "eklenen": [
+  "Tanıtım videoları diyaloğu (4 video, İleri/Geç)"
+ ],
  "degisen": [],
  "duzeltilen": [],
  "silinen": []

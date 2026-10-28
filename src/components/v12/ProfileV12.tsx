@@ -545,6 +545,7 @@ export const ProfileV12: React.FC<ProfileV12Props> = ({ currentUser, isAdmin, qu
             <h2 className="pf15-h">Diğer</h2>
             <ul className="pf15-liste v15-card">
               {satir('tur', Compass, 'Tanıtım turu', 'Sayfaları ve özellikleri yeniden gez', startWelcomeTour, '#32ADE6')}
+              {satir('tanitim', Compass, 'Tanıtım videoları', 'Sesli ders, soru çözücü, oyunlar ve daha fazlası', () => window.dispatchEvent(new CustomEvent('medsoru:tanitim')), '#1f6f62')}
               {isAdmin && satir('yonetim', ShieldCheck, 'Yönetim konsolu', 'Taslaklar, moderasyon, sistem', onOpenAdmin, '#64748B')}
               {currentUser && satir('cikis', LogOut, 'Çıkış yap', 'Eşitlenmiş ilerlemen hesabında kalır', onLogout, '#FF3B30')}
             </ul>
@@ -1190,6 +1191,7 @@ const AccountPanel: React.FC<{
           <NavRow icon={Smartphone} title="Uygulamayı cihaza yükle (Tam Ekran PWA)" sub="iOS Safari, iOS Chrome, Android ve bilgisayarda ana ekrana ekle" onClick={() => pwaService.promptInstall()} />
         )}
         <NavRow icon={Compass} title="Tanıtım turu" sub="Sayfaları ve özellikleri yeniden gez" onClick={startWelcomeTour} />
+        <NavRow icon={Compass} title="Tanıtım videoları" sub="Sesli ders, soru çözücü, oyunlar ve daha fazlası" onClick={() => window.dispatchEvent(new CustomEvent('medsoru:tanitim'))} />
         <NavRow icon={Compass} title="Öğren turu" sub="Ders kitaplığı ve etkileşim türleri" onClick={onLearnTour} />
         {isAdmin && <NavRow icon={ShieldCheck} title="Yönetim konsolu" sub="Taslaklar, moderasyon, sistem" onClick={onOpenAdmin} />}
         {currentUser && (
