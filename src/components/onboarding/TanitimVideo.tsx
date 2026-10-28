@@ -16,20 +16,45 @@ const GORULDU = 'medsoru_tanitim_v1';
 export const tanitimGoruldu = () => { try { return localStorage.getItem(GORULDU) === '1'; } catch { return false; } };
 const isaretle = () => { try { localStorage.setItem(GORULDU, '1'); } catch { /* yok */ } };
 
-type Imlec = [number, number, number, boolean?]; // t, x%, y%, tıklama
+/** t, x%, y%, tıklama — ya da t, hedef (data-tv), tıklama: hedef öğenin o anki gerçek merkezine gider (sabit yüzde ekran
+ *  boyutuyla kayıyor, imleç düğmenin yanına tıklıyordu) */
+type Imlec = [number, number, number, boolean?] | [number, string, boolean?];
+/** oynatma hızı: sahneler 1,25× hızlı akar (kullanıcı 2026-10-28: ~%20 daha kısa) */
+const HIZ = 1.25;
 type Video = { baslik: string; etiket: string; sure: number; imlec: Imlec[]; altyazi: [number, string][]; Sahne: React.FC<{ t: number }> };
 
 /** a→b arasında 0..1 ilerleme */
 const ar = (t: number, a: number, b: number) => Math.min(1, Math.max(0, (t - a) / (b - a)));
 const yumusak = (p: number) => p * p * (3 - 2 * p);
 
-function imlecKonumu(k: Imlec[], t: number) {
+type Nokta = { x: number; y: number; tik: boolean };
+/** Hedefli noktayı sahnedeki öğenin merkezine çözer; öğe henüz yoksa son ölçülen yer (ya da önceki nokta) kullanılır. */
+function coz(k: Imlec, sahne: HTMLElement | null, bellek: Map<string, [number, number]>, onceki: [number, number]): [number, number] {
+  if (typeof k[1] === 'number') return [k[1], k[2] as number];
+  const ad = k[1];
+  const el = sahne?.querySelector(`[data-tv="${ad}"]`) as HTMLElement | null;
+  if (el && sahne) {
+    const r = el.getBoundingClientRect(), S = sahne.getBoundingClientRect();
+    if (S.width > 0 && r.width > 0) {
+      const xy: [number, number] = [((r.left + r.width / 2 - S.left) / S.width) * 100, ((r.top + r.height / 2 - S.top) / S.height) * 100];
+      bellek.set(ad, xy);
+    }
+  }
+  return bellek.get(ad) ?? onceki;
+}
+const tikMi = (k: Imlec) => (typeof k[1] === 'number' ? !!k[3] : !!k[2]);
+
+function imlecKonumu(k: Imlec[], t: number, sahne: HTMLElement | null, bellek: Map<string, [number, number]>): Nokta {
   let i = 0;
   while (i < k.length - 1 && k[i + 1][0] <= t) i++;
-  const a = k[i], b = k[Math.min(i + 1, k.length - 1)];
-  const p = b[0] === a[0] ? 0 : yumusak(ar(t, a[0], b[0]));
-  const tik = k.some(x => x[3] && t >= x[0] && t < x[0] + 0.35);
-  return { x: a[1] + (b[1] - a[1]) * p, y: a[2] + (b[2] - a[2]) * p, tik };
+  let onceki: [number, number] = [50, 50];
+  for (let n = 0; n < i; n++) onceki = coz(k[n], null, bellek, onceki);
+  const A = coz(k[i], sahne, bellek, onceki);
+  const B = coz(k[Math.min(i + 1, k.length - 1)], sahne, bellek, A);
+  const a = k[i][0], b = k[Math.min(i + 1, k.length - 1)][0];
+  const p = b === a ? 0 : yumusak(ar(t, a, b));
+  const tik = k.some(x => tikMi(x) && t >= x[0] && t < x[0] + 0.35);
+  return { x: A[0] + (B[0] - A[0]) * p, y: A[1] + (B[1] - A[1]) * p, tik };
 }
 
 /* ---------------- 1) Sesli ders ---------------- */
@@ -57,7 +82,7 @@ const SesliDers: React.FC<{ t: number }> = ({ t }) => {
             <li className={aktif === 1 ? 'on' : ''}>Proteinüri &gt; 3,5 g/gün</li>
             <li className={aktif === 3 ? 'on' : ''}>Ödem · hiperlipidemi</li>
           </ul>
-          <div className="tv-resim">
+          <div className="tv-resim" data-tv="resim">
             <svg viewBox="0 0 120 70" aria-hidden>
               <rect width="120" height="70" rx="6" fill="#efe7da" />
               {[0, 1, 2, 3, 4, 5].map(n => <ellipse key={n} cx={18 + n * 17} cy={44} rx={7} ry={4 + (n % 2) * 2} fill="#d9b8a8" />)}
@@ -69,7 +94,7 @@ const SesliDers: React.FC<{ t: number }> = ({ t }) => {
             </svg>
             {aktif === 2 && <span className="tv-lazer" style={{ left: `${30 + cizim * 22}%`, top: `${52 + Math.sin(t * 3) * 4}%` }} />}
           </div>
-          {cipGorunur && <span className="tv-cip">★ Çıkmışta soruldu</span>}
+          {cipGorunur && <span className="tv-cip" data-tv="cip">★ Çıkmışta soruldu</span>}
         </div>
         <div className="tv-metin">
           <div className="tv-k">Metin takibi</div>
@@ -85,7 +110,7 @@ const SesliDers: React.FC<{ t: number }> = ({ t }) => {
           <div className="tv-k">2024 · Kurul 2 çıkmış soru</div>
           <p className="tv-kok">Nefrotik sendromda ödemin temel nedeni hangisidir?</p>
           {['Hipertansiyon', 'Hipoalbüminemi', 'Hiperlipidemi', 'Hematüri'].map((s, i) => (
-            <div key={s} className={`tv-sik ${secti && i === 1 ? 'dogru' : ''}`}><b>{'ABCD'[i]}</b>{s}</div>
+            <div key={s} data-tv={`m-sik-${i}`} className={`tv-sik ${secti && i === 1 ? 'dogru' : ''}`}><b>{'ABCD'[i]}</b>{s}</div>
           ))}
           {secti && <div className="tv-aciklama tv-in">Doğru! Ders kaldığı yerden sürüyor…</div>}
         </div>
@@ -105,23 +130,23 @@ const SoruCozucu: React.FC<{ t: number }> = ({ t }) => {
     <div className="tv-app">
       <div className="tv-top"><b>Soru çöz</b><span>Örnek sorular · Çıkmışlar · Sesli çözücü</span></div>
       <div className="tv-sekmeler">
-        {['Örnek sorular', 'Çıkmış sorular', 'Sesli çözücü'].map((s, i) => <span key={s} className={(i === 0 && sekme === 0) || (i === 1 && sekme === 1 && !sesli) || (i === 2 && sesli) ? 'on' : ''}>{s}</span>)}
+        {['Örnek sorular', 'Çıkmış sorular', 'Sesli çözücü'].map((s, i) => <span key={s} data-tv={`sekme-${i}`} className={(i === 0 && sekme === 0) || (i === 1 && sekme === 1 && !sesli) || (i === 2 && sesli) ? 'on' : ''}>{s}</span>)}
       </div>
       <div className="tv-soru tv-in" key={sekme}>
         <div className="tv-k">{sekme ? '2023 · Kurul 2 · Soru 14' : 'Örnek soru · Böbrek patolojisi'}</div>
         <p className="tv-kok">Elektron mikroskobide podosit ayaksı çıkıntılarının yaygın silinmesi, ışık mikroskobisi normal olan çocukta en olası tanı?</p>
         {SIKLAR.map((s, i) => (
-          <div key={s} className={`tv-sik ${secim === i ? 'dogru' : ''}`}><b>{'ABCDE'[i]}</b>{s}
+          <div key={s} data-tv={`sik-${i}`} className={`tv-sik ${secim === i ? 'dogru' : ''}`}><b>{'ABCDE'[i]}</b>{s}
             {yardim && i < 2 && <small className="tv-in" style={{ animationDelay: `${i * 0.5}s` }}>
               {i === 0 ? 'Çocukluk çağının en sık nefrotik nedeni; ışıkta normal, EM\'de yalnız ayaksı çıkıntı silinmesi — bu tablo tam olarak bu.' : 'Erişkinde görülür; GBM\'de subepitelyal birikim ve "spike" yapar, ışıkta normal değildir. (Slayt 12)'}
             </small>}
           </div>
         ))}
-        <div className="tv-yardim">{yardim ? 'Her şık: ne olduğu · ne işe yaradığı · neden doğru/yanlış' : 'Yardım al'}</div>
+        <div className="tv-yardim" data-tv="yardim">{yardim ? 'Her şık: ne olduğu · ne işe yaradığı · neden doğru/yanlış' : 'Yardım al'}</div>
       </div>
       {sesli && (
         <div className="tv-oynatici tv-in">
-          <span className="tv-oynat">▶</span>
+          <span className="tv-oynat" data-tv="oynat">▶</span>
           <div><b>Sesli çözücü</b><small>Şık şık, slayt kaynağıyla anlatır</small></div>
           <i className="tv-ses">{[0, 1, 2, 3, 4, 5, 6].map(n => <em key={n} style={{ animationDelay: `${n * 0.1}s` }} />)}</i>
         </div>
@@ -145,9 +170,9 @@ const Ogren: React.FC<{ t: number }> = ({ t }) => {
           <p>Proteinüri ile kaybedilen albümin plazma onkotik basıncını düşürür; sıvı interstisyuma geçer.</p>
           <div className="tv-kart">
             <div className="tv-k">Boşluk doldurma</div>
-            <p>Ödemin temel nedeni plazmadaki <span className={`tv-bosluk ${dolu ? 'dolu' : ''}`}>{dolu ? 'albümin' : '______'}</span> düzeyinin düşmesidir.</p>
+            <p>Ödemin temel nedeni plazmadaki <span data-tv="bosluk" className={`tv-bosluk ${dolu ? 'dolu' : ''}`}>{dolu ? 'albümin' : '______'}</span> düzeyinin düşmesidir.</p>
           </div>
-          <div className="tv-ciftler">
+          <div className="tv-ciftler" data-tv="ciftler">
             {['Mini soru', 'Gizli tablo', 'Mekanizma zinciri', 'Tuzak avı'].map((x, i) => <span key={x} className={t > 6.5 + i * 0.6 ? 'on' : ''}>{x}</span>)}
           </div>
         </div>
@@ -155,7 +180,7 @@ const Ogren: React.FC<{ t: number }> = ({ t }) => {
         <div className="tv-oyun tv-in">
           <div className="tv-k">Sıralama oyunu · Olayları doğru sıraya diz</div>
           <div className="tv-sira">
-            {SIRA.map((s, i) => <div key={s} className={i < yerlesen ? 'yer' : ''} style={{ order: i < yerlesen ? i : 10 - i }}><b>{i < yerlesen ? i + 1 : '?'}</b>{s}</div>)}
+            {SIRA.map((s, i) => <div key={s} data-tv={`sira-${i}`} className={i < yerlesen ? 'yer' : ''} style={{ order: i < yerlesen ? i : 10 - i }}><b>{i < yerlesen ? i + 1 : '?'}</b>{s}</div>)}
           </div>
           {yerlesen >= 5 && <div className="tv-tebrik tv-in">Kusursuz! +40 ATP</div>}
         </div>
@@ -183,7 +208,7 @@ const Ilerleme: React.FC<{ t: number }> = ({ t }) => {
       {ekran === 1 && (
         <div className="tv-liste tv-in">
           {(ustte ? [SIRALAMA[1], SIRALAMA[0], ...SIRALAMA.slice(2)] : SIRALAMA).map(([ad, p], i) => (
-            <div key={ad} className={`tv-satir ${ad === 'Sen' ? 'sen' : ''}`}><b>{i + 1}</b>{ad}<span>{ad === 'Sen' && ustte ? 1835 : p} puan</span></div>
+            <div key={ad} data-tv={ad === 'Sen' ? 'sen' : undefined} className={`tv-satir ${ad === 'Sen' ? 'sen' : ''}`}><b>{i + 1}</b>{ad}<span>{ad === 'Sen' && ustte ? 1835 : p} puan</span></div>
           ))}
           <small className="tv-not">Puan: doğru cevap, seri ve tamamlanan ders — ATP günde 100 ile sınırlı</small>
         </div>
@@ -191,7 +216,7 @@ const Ilerleme: React.FC<{ t: number }> = ({ t }) => {
       {ekran === 2 && (
         <div className="tv-rozet tv-in">
           {['İlk ders', '7 gün seri', 'Çıkmış avcısı', '100 soru', 'Kusursuz oyun', 'Kurul ustası'].map((r, i) => (
-            <div key={r} className={i < 4 || t > 13.6 ? 'acik' : ''}><span>{['🎧', '🔥', '🎯', '💯', '🧩', '🏆'][i]}</span>{r}</div>
+            <div key={r} data-tv={`rozet-${i}`} className={i < 4 || t > 13.6 ? 'acik' : ''}><span>{['🎧', '🔥', '🎯', '💯', '🧩', '🏆'][i]}</span>{r}</div>
           ))}
           {t > 13.6 && <div className="tv-tebrik tv-in">Yeni başarım: Kusursuz oyun!</div>}
         </div>
@@ -199,7 +224,7 @@ const Ilerleme: React.FC<{ t: number }> = ({ t }) => {
       {ekran === 3 && (
         <div className="tv-kmb tv-in">
           <div className="tv-k">Klinik mesleki beceri · Görsel asistan</div>
-          {['Kan basıncı ölçümü', 'IM enjeksiyon', 'Nazogastrik sonda'].map((s, i) => <div key={s} className={`tv-satir ${t > 17.4 && i === 0 ? 'sen' : ''}`}><b>{i + 1}</b>{s}<span>{i === 0 ? 'Öğret + vaka' : 'Sesli'}</span></div>)}
+          {['Kan basıncı ölçümü', 'IM enjeksiyon', 'Nazogastrik sonda'].map((s, i) => <div key={s} data-tv={`kmb-${i}`} className={`tv-satir ${t > 17.4 && i === 0 ? 'sen' : ''}`}><b>{i + 1}</b>{s}<span>{i === 0 ? 'Öğret + vaka' : 'Sesli'}</span></div>)}
           {t > 18 && <div className="tv-aciklama tv-in">Adım 3: Manşonu dirsek çukurunun 2–3 cm üstüne sar…</div>}
         </div>
       )}
@@ -210,22 +235,22 @@ const Ilerleme: React.FC<{ t: number }> = ({ t }) => {
 const VIDEOLAR: Video[] = [
   {
     baslik: 'Sesli dersler ve çıkmış sorular', etiket: 'SESLİ DERS', sure: 24, Sahne: SesliDers,
-    imlec: [[0, 80, 80], [2, 62, 40], [8.5, 30, 62], [11, 34, 64], [12.2, 38, 30], [14.4, 44, 25, true], [16.5, 50, 58], [18, 46, 52, true], [21, 60, 75], [24, 60, 75]],
+    imlec: [[0, 80, 80], [2, 62, 40], [8.5, 'resim'], [11, 'resim'], [13.4, 'cip'], [14.4, 'cip', true], [16.5, 'm-sik-0'], [17.7, 'm-sik-1'], [18, 'm-sik-1', true], [21, 60, 75], [24, 60, 75]],
     altyazi: [[0, 'Hoca anlatırken metin kelime kelime takip edilir.'], [8.6, 'Şekil anlatılırken lazer ve canlı çizim tam o yapıyı gösterir.'], [12.4, 'Çıkmışta sorulan yerde çip yanıp söner — tıkla, soruyu çöz.'], [18.4, 'Cevapladığın an ders kaldığı yerden sürer.']],
   },
   {
     baslik: 'Soru çözücü ve örnek sorular', etiket: 'SORU ÇÖZ', sure: 20, Sahne: SoruCozucu,
-    imlec: [[0, 70, 70], [2.6, 28, 21], [3, 28, 21, true], [5.8, 22, 36], [6.2, 22, 36, true], [8.6, 18, 64], [9.2, 18, 64, true], [13.4, 37, 21], [13.8, 37, 21, true], [17, 60, 86], [20, 60, 86]],
+    imlec: [[0, 70, 70], [2.6, 'sekme-1'], [3, 'sekme-1', true], [5.8, 'sik-0'], [6.2, 'sik-0', true], [8.6, 'yardim'], [9.2, 'yardim', true], [13.4, 'sekme-2'], [13.8, 'sekme-2', true], [16.2, 'oynat'], [16.6, 'oynat', true], [20, 'oynat']],
     altyazi: [[0, 'Ders notuna sadık örnek sorular ve yıl yıl çıkmışlar.'], [5.8, 'Şıkkını seç; anında geri bildirim.'], [9, '"Yardım al": her şık ne, ne işe yarar, neden doğru ya da yanlış.'], [14, 'Sesli çözücü soruyu slayt kaynağıyla anlatır.']],
   },
   {
     baslik: 'Etkileşimli Öğren ve oyunlar', etiket: 'ÖĞREN', sure: 21, Sahne: Ogren,
-    imlec: [[0, 70, 30], [4.6, 66, 56], [5, 66, 56, true], [7, 40, 78], [9.5, 85, 90], [12, 50, 72], [13, 50, 34], [14, 50, 80], [15, 50, 45], [16.5, 50, 85], [18.5, 50, 55], [21, 70, 85]],
+    imlec: [[0, 70, 30], [4.6, 'bosluk'], [5, 'bosluk', true], [7, 'ciftler'], [9.5, 85, 90], [11.6, 'sira-0'], [12.1, 'sira-0', true], [13.3, 'sira-1', true], [14.6, 'sira-2', true], [15.9, 'sira-3', true], [17.2, 'sira-4', true], [18.5, 'sira-4'], [21, 70, 85]],
     altyazi: [[0, 'Her adım kısa anlatım + 4–6 etkileşim: boşluk doldurma, mini soru, tablo…'], [6.5, 'Yalnızca öğrendiklerinden sorulur — ileri sızıntı yok.'], [10.2, 'Ders sonunda oyunlar: sırala, tahmin et, metni düzelt.'], [18.6, 'Kazandıkça ATP toplanır.']],
   },
   {
     baslik: 'İstatistik, sıralama, başarımlar, KMB', etiket: 'İLERLEME', sure: 22, Sahne: Ilerleme,
-    imlec: [[0, 80, 85], [3, 50, 55], [5.8, 40, 70], [8.5, 30, 40], [11, 70, 60], [13.2, 72, 52, true], [15.6, 60, 80], [17, 40, 44, true], [22, 70, 85]],
+    imlec: [[0, 80, 85], [3, 50, 55], [5.8, 40, 70], [8.5, 'sen'], [11, 70, 60], [12.8, 'rozet-4'], [13.2, 'rozet-4', true], [16.4, 'kmb-0'], [17, 'kmb-0', true], [22, 70, 85]],
     altyazi: [[0, 'Ne kadar çalıştığını ve zayıf konularını gör.'], [6, 'Sıralama mantığı: doğru cevap, seri ve tamamlanan ders puanı.'], [11.6, 'Başarımlar açıldıkça rozetler toplanır.'], [16, 'KMB kampı: her beceri sesli öğretim + vaka sınavı.']],
   },
 ];
@@ -237,13 +262,15 @@ export default function TanitimVideo({ onClose }: { onClose: () => void }) {
   const [ilkBitti, setIlkBitti] = useState(tanitimGoruldu());
   const v = VIDEOLAR[i];
   const son = useRef(0);
+  const sahneRef = useRef<HTMLDivElement>(null);
+  const bellek = useRef(new Map<string, [number, number]>());
 
   useEffect(() => {
     if (!oynuyor) return;
     let id = 0;
     son.current = performance.now();
     const adim = (now: number) => {
-      const dt = (now - son.current) / 1000;
+      const dt = ((now - son.current) / 1000) * HIZ;
       son.current = now;
       setT(x => {
         const y = Math.min(v.sure, x + dt);
@@ -259,7 +286,7 @@ export default function TanitimVideo({ onClose }: { onClose: () => void }) {
   useEffect(() => { if (t >= v.sure && i === 0) { setIlkBitti(true); isaretle(); } }, [t, v.sure, i]);
 
   const kapat = useCallback(() => { if (ilkBitti) isaretle(); onClose(); }, [ilkBitti, onClose]);
-  const git = (n: number) => { setI(n); setT(0); setOynuyor(true); };
+  const git = (n: number) => { bellek.current.clear(); setI(n); setT(0); setOynuyor(true); };
   const ileri = () => (i < VIDEOLAR.length - 1 ? git(i + 1) : kapat());
 
   useEffect(() => {
@@ -271,10 +298,10 @@ export default function TanitimVideo({ onClose }: { onClose: () => void }) {
     return () => window.removeEventListener('keydown', tus);
   }, [kapat]);
 
-  const im = imlecKonumu(v.imlec, t);
+  const im = imlecKonumu(v.imlec, t, sahneRef.current, bellek.current);
   const altyazi = [...v.altyazi].reverse().find(a => t >= a[0])?.[1] ?? '';
   const bitti = t >= v.sure;
-  const sn = (x: number) => `0:${String(Math.floor(x)).padStart(2, '0')}`;
+  const sn = (x: number) => `0:${String(Math.floor(x / HIZ)).padStart(2, '0')}`; // gerçek (hızlandırılmış) süre
 
   return (
     <div className="tv-ort" role="dialog" aria-modal="true" aria-label="MeDSor tanıtımı" onClick={e => e.target === e.currentTarget && kapat()}>
@@ -285,7 +312,7 @@ export default function TanitimVideo({ onClose }: { onClose: () => void }) {
           <div className="tv-noktalar">{VIDEOLAR.map((x, n) => <button key={n} type="button" aria-label={x.baslik} className={n === i ? 'on' : ''} disabled={n > 0 && !ilkBitti} onClick={() => git(n)} />)}</div>
           <button type="button" className="tv-x" aria-label="Kapat" onClick={kapat}><X size={18} /></button>
         </header>
-        <div className="tv-sahne" onClick={() => (bitti ? git(i) : setOynuyor(o => !o))}>
+        <div className="tv-sahne" ref={sahneRef} onClick={() => (bitti ? git(i) : setOynuyor(o => !o))}>
           <div className="tv-ic" key={i}><v.Sahne t={t} /></div>
           <div className={`tv-imlec ${im.tik ? 'tik' : ''}`} style={{ left: `${im.x}%`, top: `${im.y}%` }}>
             <svg width="22" height="22" viewBox="0 0 24 24"><path d="M4 2l16 10-7 1.5L9.5 21z" fill="#fff" stroke="#1d2a28" strokeWidth="1.6" strokeLinejoin="round" /></svg>

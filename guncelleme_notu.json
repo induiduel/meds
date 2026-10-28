@@ -1,12 +1,10 @@
 {
  "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
- "onem": 531,
- "baslik": "Sesli derste daha doğru okunuş ve daha net çizimler",
+ "onem": 532,
+ "baslik": "Tanıtım videoları daha akıcı",
  "maddeler": [
-  "Yabancı tıbbi terimler (özel adlar, Latince, İngilizce, ilaç adları) Türkçedeki yaygın okunuşla seslendiriliyor",
-  "Sesli derste çizimler farklı renklerde; sınırı belirsiz bölgeler fosforlu kalemle boyanıyor",
-  "Liste ve sıralama panelleri anlatım başlar başlamaz açılıyor",
-  "Kısa anlatımlarda gereksiz yakınlaştırma yapılmıyor"
+  "Tanıtım videolarında imleç artık tam tıkladığı düğmenin üstüne gidiyor",
+  "Videolar yaklaşık %20 daha kısa"
  ],
  "eklenen": [
   "Tanıtım videoları diyaloğu (4 video, İleri/Geç)"
