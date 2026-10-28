@@ -1,16 +1,17 @@
 {
  "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
- "onem": 542,
- "baslik": "Gezinme ve yönetim düzeltmeleri",
+ "onem": 543,
+ "baslik": "Çıkmış–Örnek soruları",
  "maddeler": [
-  "Kapalı bölümlere giden bağlantılar kaldırıldı; adresle açılınca nedenini söyleyen ekran çıkıyor",
-  "Kazanımlar, örnek sorular ve test oluştur aktif kurulla açılıyor",
-  "Uygulama önbelleği yanlış dosyayı sayfa diye saklamıyor",
-  "Yönetim: görünürlük değişikliği onay istiyor ve geri alınabiliyor; mesaj yazarından kişiye geçiş",
-  "Çıkmış–Örnek sınıfı: çıkmış olduğu doğrulanamayan 72 soru hem Çıkmışlar'da hem Örnek sorular'da, uyarı rozetiyle gösterilir"
+  "Çıkmış olduğu doğrulanamayan sorular artık gizlenmiyor: hem Çıkmışlar'da hem Örnek sorular'da, \"çıkmış olduğu doğrulanmadı\" uyarısıyla görünür",
+  "Karantinadaki tekrar ve bozuk kopya sorular temizlendi; sağlam kopyaları tek soru olarak kaldı"
  ],
- "eklenen": [],
+ "eklenen": [
+  "Çıkmış–Örnek sorular dersi (Örnek sorular, Kurul 2)"
+ ],
  "degisen": [],
- "duzeltilen": [],
+ "duzeltilen": [
+  "Karantinada kalan 15 gerçek çıkmış sorusu serbest bırakıldı"
+ ],
  "silinen": []
 }
