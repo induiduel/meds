@@ -141,6 +141,19 @@ button.m16-istat:hover { border-color: var(--color-ink-3); }
 .m16-tablo-kap { background: var(--m16-yuzey); border: 1px solid var(--m16-cizgi); border-radius: 10px; overflow-x: auto; }
 .m16-satir { display: grid; align-items: center; min-height: 36px; border-bottom: 1px solid var(--m16-cizgi-y); min-width: var(--m16-tablo-en, max-content); width: 100%; }
 .m16-tablo-govde .m16-satir:last-child { border-bottom: 0; }
+/* H146: telefonda kart görünümü — başlık satırı gizli, her hücre "Sütun: değer"; ilk hücre kart başlığı */
+.m16-tablo-kap.is-kart { overflow-x: visible; background: none; border: 0; border-radius: 0; }
+.m16-tablo-kap.is-kart .m16-satir.m16-baslik-satir { display: none; }
+.m16-tablo-kap.is-kart .m16-tablo-govde { display: flex; flex-direction: column; gap: 8px; }
+.m16-tablo-kap.is-kart .m16-satir { position: relative; display: flex; flex-direction: column; align-items: stretch; gap: 2px; min-width: 0 !important; height: auto !important;
+  padding: 10px 12px; border: 1px solid var(--m16-cizgi); border-radius: 10px; background: var(--m16-yuzey); }
+.m16-tablo-kap.is-kart .m16-tablo-govde .m16-satir:last-child { border-bottom: 1px solid var(--m16-cizgi); }
+.m16-tablo-kap.is-kart .m16-hucre { display: flex; align-items: baseline; gap: 8px; padding: 2px 0; white-space: normal; overflow: visible; text-align: left; min-height: 0; }
+.m16-tablo-kap.is-kart .m16-hucre[data-baslik]::before { content: attr(data-baslik); flex: 0 0 38%; max-width: 140px; font-size: 12px; color: var(--color-ink-3); font-weight: 500; }
+.m16-tablo-kap.is-kart .m16-hucre:empty { display: none; }
+.m16-tablo-kap.is-kart :is(.m16-satir > .m16-hucre:first-child, .m16-hucre-sec + .m16-hucre) { font-weight: 600; font-size: 14px; padding-right: 32px; }
+.m16-tablo-kap.is-kart :is(.m16-satir > .m16-hucre:first-child, .m16-hucre-sec + .m16-hucre)::before { display: none; }
+.m16-tablo-kap.is-kart .m16-hucre-sec { position: absolute; top: 8px; right: 8px; }
 .m16-baslik-satir { position: sticky; top: 0; z-index: 1; background: var(--m16-yuzey); font-size: 12px; color: var(--color-ink-3); font-weight: 600; min-height: 32px; }
 .m16-hucre { padding: 4px 10px; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .m16-hucre.h-sag { text-align: right; justify-self: stretch; font-variant-numeric: tabular-nums; }

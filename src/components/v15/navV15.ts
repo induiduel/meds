@@ -68,8 +68,9 @@ export const sectionOf = (r: AppRoute): V15Section | undefined =>
  * ------------------------------------------------------------------------- */
 export interface MenuGrubu { id: string; label: string; icon: React.ElementType; hub?: AppRoute; items: NavItem[]; alt?: string }
 /** Tasarım A03: Oyunlar dört işin yanında ayrı bölüm (yarışma, Hücrem, başarımlar) */
-const OYUNLAR: AppRoute[] = ['oyunlar', 'hucrem', 'basarimlar'];
-const KISISEL: AppRoute[] = ['bitirdiklerim', 'study', 'notlarim', 'bildirimler', 'stats', 'pdf_olustur', 'cevrimdisi', 'arka_plan', 'music', 'ilk_adimlar', 'settings', 'dil_bolge', 'yardim'];
+// H147: Başarımlar ve Güncelleme günlüğü hesap sayfalarıyla birlikte Kişisel'de (Oyunlar/Başvuru altında aranmıyordu)
+const OYUNLAR: AppRoute[] = ['oyunlar', 'hucrem'];
+const KISISEL: AppRoute[] = ['bitirdiklerim', 'basarimlar', 'guncellemeler', 'study', 'notlarim', 'bildirimler', 'stats', 'pdf_olustur', 'cevrimdisi', 'arka_plan', 'music', 'ilk_adimlar', 'settings', 'dil_bolge', 'yardim'];
 
 const YONETIM = { id: 'manage', label: 'Yönetim', short: 'Yönetim', hint: 'Yönetim konsolu', icon: ShieldCheck, tint: '#64748B' } as NavItem;
 

@@ -12,18 +12,22 @@
 .q15-bas-s { display: flex; align-items: baseline; gap: 10px; }
 .q15-ad { flex: 1; min-width: 0; font: 600 13px/1.25 var(--font-sans); color: var(--color-ink-3); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .q15-no { font: 700 13px/1 var(--font-sans); font-variant-numeric: tabular-nums; }
-.q15-ilerleme { list-style: none; margin: 0; padding: 0; display: flex; gap: 3px; height: 6px; }
+/* H144: düğme 24 px dokunma alanı, görünen çizgi ::before (eskiden 6 px yüksek, telefonda 7×6 px dokunulamıyordu) */
+.q15-ilerleme { list-style: none; margin: -9px 0; padding: 0; display: flex; gap: 3px; height: 24px; }
 .q15-ilerleme li { flex: 1; min-width: 2px; }
-.q15-ilerleme button { display: block; width: 100%; height: 6px; padding: 0; border: 0; border-radius: 3px; background: var(--color-field); cursor: pointer; }
-.q15-ilerleme li.is-ok button { background: var(--color-accent); }
-.q15-ilerleme li.is-yok button { background: var(--color-bad); }
-.q15-ilerleme li.is-su button { background: var(--color-ink-3); }
+.q15-ilerleme button { position: relative; display: block; width: 100%; height: 24px; padding: 0; border: 0; background: none; cursor: pointer; }
+.q15-ilerleme button::before { content: ""; position: absolute; inset: 9px 0; border-radius: 3px; background: var(--color-field); }
+.q15-ilerleme button:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 1px; border-radius: 3px; }
+.q15-ilerleme li.is-ok button::before { background: var(--color-accent); }
+.q15-ilerleme li.is-yok button::before { background: var(--color-bad); }
+.q15-ilerleme li.is-su button::before { background: var(--color-ink-3); inset: 7px 0; }
 .q15-say { gap: 4px; height: 28px; }
 .q15-say svg { width: 13px; height: 13px; }
 .q15-sure { display: inline-flex; align-items: center; gap: 5px; height: 30px; padding: 0 10px; border: 1px solid var(--color-line); border-radius: 999px;
   background: var(--color-white); color: var(--color-ink-2); font: 600 12.5px/1 var(--font-sans); font-variant-numeric: tabular-nums; cursor: pointer; }
 .q15-sure svg { width: 13px; height: 13px; }
-@media (max-width: 420px) { .q15-sure { display: none; } }
+/* H144: telefonda süre görünür kalır (eskiden gizleniyordu); yer için doğru/yanlış sayaçları kalkar (soru numarası çubukta) */
+@media (max-width: 420px) { .q15-say { display: none; } .q15-sure { padding: 0 8px; } }
 .q15-govde { flex: 1 1 auto; min-height: 0; overflow-y: auto; overscroll-behavior: contain; display: flex; flex-direction: column; gap: 12px; width: 100%; max-width: 760px;
   margin: 0 auto; padding-bottom: 12px; }
 .q15-ust { display: flex; align-items: center; gap: 6px; }

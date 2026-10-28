@@ -152,13 +152,13 @@ export const NAV_ITEMS = I;
  */
 export const NAV_TREE_HAM: NavGroup[] = [
   { label: null, items: [I.today] },
-  { label: 'Ders çalış', items: [I.canli_ders, I.kmb_asistan, I.learn, I.summaries, I.flashcards, I.ders_programi] },
+  { label: 'Ders çalış', items: [I.canli_ders, I.kmb_asistan, I.learn, I.summaries, I.flashcards, I.ders_programi, I.oncelikli_dersler, I.gecmis_kurullar] },
   { label: 'Soru çöz', items: [I.soru_cozucu, I.past_exams, I.practice, I.questions, I.ornek_sorular, I.olasi_sorular, I.yanlislarim, I.oyunlar, I.soru_haritasi] },
   { label: 'Sınava hazırlan', items: [I.sinav_takvimi, I.sinav_plani, I.son_prova, I.cikmis_cozucu, I.kamp, I.en_onemliler, I.spots] },
   { label: 'Check Up', items: [I.genetik_checkup, I.patoloji_checkup] },
-  { label: 'Başvuru', items: [I.oncelikli_dersler, I.glossary, I.diseases, I.health_ministry, I.kazanimlar, I.gecmis_kurullar, I.guncellemeler] },
-  { label: 'Topluluk', items: [I.topluluk, I.arkadaslar, I.basarimlar, I.hucrem, I.leaderboard, I.matrix] },
-  { label: 'Kişisel', items: [I.bitirdiklerim, I.cevrimdisi, I.study, I.stats, I.music, I.ilk_adimlar, I.arka_plan, I.dil_bolge, I.yardim] },
+  { label: 'Başvuru', items: [I.glossary, I.diseases, I.health_ministry, I.kazanimlar] },
+  { label: 'Topluluk', items: [I.topluluk, I.arkadaslar, I.hucrem, I.leaderboard, I.matrix] },
+  { label: 'Kişisel', items: [I.bitirdiklerim, I.basarimlar, I.guncellemeler, I.cevrimdisi, I.study, I.stats, I.music, I.ilk_adimlar, I.arka_plan, I.dil_bolge, I.yardim] },
 ];
 
 /** Çalışma anında süzülür (services/siteAyar menudeGorunur; panel › Site › Görünürlük). Dizi yerinde güncellenir. */

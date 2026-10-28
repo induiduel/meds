@@ -1,14 +1,14 @@
 {
  "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
- "onem": 543,
- "baslik": "Çıkmış–Örnek soruları",
+ "onem": 544,
+ "baslik": "Kullanım kolaylığı düzeltmeleri",
  "maddeler": [
-  "Çıkmış olduğu doğrulanamayan sorular artık gizlenmiyor: hem Çıkmışlar'da hem Örnek sorular'da, \"çıkmış olduğu doğrulanmadı\" uyarısıyla görünür",
-  "Karantinadaki tekrar ve bozuk kopya sorular temizlendi; sağlam kopyaları tek soru olarak kaldı"
+  "Deneme sınavında soru numaralarına telefonda dokunulabiliyor, süre telefonda da görünüyor",
+  "Örnek sorulardaki Başla düğmesi düzgün görünüyor",
+  "Öncelikli dersler ve Geçmiş kurullar Ders çalış altında; Başarımlar ve Güncelleme günlüğü Kişisel altında",
+  "Yönetim: tablolar telefonda kart olarak okunuyor"
  ],
- "eklenen": [
-  "Çıkmış–Örnek sorular dersi (Örnek sorular, Kurul 2)"
- ],
+ "eklenen": [],
  "degisen": [],
  "duzeltilen": [
   "Karantinada kalan 15 gerçek çıkmış sorusu serbest bırakıldı"

@@ -1354,3 +1354,21 @@ Her maddede: belirti · kök neden · Kurul 2 kuralı · kapı durumu. Kanıtlar
 - **Belirti:** Mesajlar'da oda mesajı satırlarında Mesaj/Kanal/Şikâyet sütunları başlıktan sağa kaymış, Durum ekran dışındaydı.
 - **Kök neden:** Her satır ayrı ızgara ve `.m16-satir { min-width: max-content }`: uzun içerikli satır kendi genişliğine büyüyüp fr sütunlarını başlıktan farklı dağıtıyordu.
 - **Çözüm/kural:** VeriTablosu sütun px alt sınırlarının toplamını `--m16-tablo-en` olarak verir; tüm satırlar aynı en küçük genişliği paylaşır (telefonda yatay kaydırma korunur). Satır ızgarası içeriğe göre genişlemez.
+
+## H144 — Deneme ekranında soru numarası çubuğuna dokunulamıyordu; telefonda süre gizliydi (2026-10-28, sayfa denetimi)
+- **Belirti:** 20 soruluk denemede soru düğmeleri 6 px yüksekliğindeydi (telefonda 7×6 px); 420 px altında süre göstergesi tamamen kayboluyordu.
+- **Kök neden:** Görünen çizgi ile dokunma alanı aynı öğeydi (`button { height: 6px }`); dar ekranda yer açmak için süre gizlenmişti.
+- **Çözüm/kural:** Düğme 24 px dokunma alanı, görünen çizgi `::before`; telefonda süre kalır, doğru/yanlış sayaçları kalkar (soru numarası çubukta). İnce göstergelerde dokunma alanı görsel çizgiden ayrı tutulur.
+
+## H145 — Örnek sorularda "Başla" düğmesi harf harf dikey yazılıyordu (2026-10-28, sayfa denetimi)
+- **Belirti:** Masaüstü ders listesinde her satırda B-a-ş-l-a alt alta, satır ~160 px uzuyordu.
+- **Kök neden:** v15 kart eylemi (`.ks15-eylem`) v12 satır ızgarasında alan (`grid-area`) almadığı için kendiliğinden 30 px'lik numara sütununa yerleşiyordu.
+- **Çözüm/kural:** Izgaraya `ey` alanı eklendi (masaüstü sağ sütun, telefonda ayrı satır). Izgara satırına yeni öğe ekleyen her katman ona alan tanımlar.
+
+## H146 — Yönetim tabloları telefonda okunmuyordu (2026-10-28, sayfa denetimi)
+- **Belirti:** 375 px'te tablolar yatay kayıyor, ilk ekranda 2-3 sütun görünüyor, durum/görünürlük/eylem sütunları ekran dışında kalıyordu.
+- **Çözüm/kural:** VeriTablosu ≤640 px'te kart görünümüne geçer: başlık satırı gizli, ilk hücre kart başlığı, diğerleri "Sütun adı · değer" (`data-baslik`), seçim kutusu sağ üstte; kart yüksekliği değiştiği için sanal kaydırma kapanır. Yeni tablo sütunlarına düz metin `baslik` verilir (kart etiketi buradan gelir).
+
+## H147 — Öğrenci menüsünde hesap ve ders sayfaları yanlış gruplardaydı (2026-10-28, sayfa denetimi)
+- **Belirti:** Başarımlar Oyunlar'da, Güncelleme günlüğü Başvuru'da aranıyordu; Öncelikli dersler ve Geçmiş kurullar Başvuru'daydı ve telefonda alt sekmede "Menü" yanıyordu.
+- **Çözüm/kural:** Öncelikli dersler + Geçmiş kurullar → Ders çalış (merkez, menü, alt sekme "Ders"); Başarımlar + Güncelleme günlüğü → Kişisel. Grup değişikliği `merkezModel.MERKEZ_HAM`, `navModel.NAV_TREE_HAM` ve `navV15` (OYUNLAR/KISISEL) birlikte yapılır; adresler değişmez.

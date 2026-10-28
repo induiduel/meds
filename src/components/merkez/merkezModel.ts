@@ -25,6 +25,9 @@ const MERKEZ_HAM: Record<KategoriId, MerkezArac[]> = {
     { id: 'flashcards', ne: 'Öğrendiklerini aralıklı tekrarla ezberlemek istiyorsan' },
     { id: 'ders_programi', ne: 'Bugün ve bu hafta hangi derslerin olduğunu görmek istiyorsan' },
     { id: 'kmb_asistan', ne: 'Klinik mesleki beceriyi (KMB) sesli videolarla aşama aşama öğrenip pratik sınava hazırlanmak istiyorsan' },
+    // H147: ders seçme yardımcıları Ders çalış'ta (Başvuru'dayken alt sekmede "Menü" yanıyordu); Güncelleme günlüğü Kişisel'de
+    { id: 'oncelikli_dersler', ne: 'Az ezberli, mantıkla çözülen ve kolay puan getiren sesli derslerden başlamak istiyorsan' },
+    { id: 'gecmis_kurullar', ne: 'Sınavı biten kurulların içeriğine dönmek istiyorsan' },
   ],
   sorular: [
     { id: 'soru_cozucu', ne: 'Konu konu soru çözüp her şıkkın nedenini dinlemek istiyorsan', oner: true },
@@ -47,13 +50,10 @@ const MERKEZ_HAM: Record<KategoriId, MerkezArac[]> = {
     { id: 'spots', ne: 'Sık sorulan bulguları ve tuzakları taramak istiyorsan' },
   ],
   kaynaklar: [
-    { id: 'oncelikli_dersler', ne: 'Az ezberli, mantıkla çözülen ve kolay puan getiren sesli derslerden başlamak istiyorsan', oner: true },
     { id: 'glossary', ne: 'Bir terimin, ilacın ya da kavramın anlamına bakmak istiyorsan' },
     { id: 'diseases', ne: 'Bir hastalığın kliniğini, tanısını ve tedavisini görmek istiyorsan' },
     { id: 'health_ministry', ne: 'Aşı takvimi, tarama programları gibi resmî verilere bakmak istiyorsan' },
     { id: 'kazanimlar', ne: 'Müfredatta hangi kazanımın olduğunu görmek istiyorsan' },
-    { id: 'gecmis_kurullar', ne: 'Sınavı biten kurulların içeriğine dönmek istiyorsan' },
-    { id: 'guncellemeler', ne: 'Sitede nelerin değiştiğini görmek istiyorsan' },
   ],
 };
 

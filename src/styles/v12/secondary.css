@@ -201,8 +201,9 @@
     & .o12-ks .ui-card { border-radius: 10px; box-shadow: none; border: 1px solid var(--color-line); }
     & .o12-ks-list.o12-ks-list { display: flex; flex-direction: column; gap: 0; background: var(--color-white); border: 1px solid var(--color-line); border-radius: 10px; overflow: clip; }
     & .o12-ks-list > li + li { border-top: 1px solid var(--color-line-soft); }
-    & .o12-ks-list .ks-lesson { display: grid; grid-template-columns: 30px minmax(0, 1fr) minmax(110px, 168px) auto;
-      grid-template-areas: "no t disc foot" "no who bar foot"; align-items: center; column-gap: 14px; row-gap: 3px; min-height: 58px; padding: 9px 14px;
+    /* H145: v15 kart eylemi (Başla/Devam et) alan almadığı için 30 px'lik ilk sütuna düşüp harf harf yazılıyordu */
+    & .o12-ks-list .ks-lesson { display: grid; grid-template-columns: 30px minmax(0, 1fr) minmax(110px, 168px) auto auto;
+      grid-template-areas: "no t disc foot ey" "no who bar foot ey"; align-items: center; column-gap: 14px; row-gap: 3px; min-height: 58px; padding: 9px 14px;
       border: 0; border-radius: 0; background: transparent; box-shadow: none; }
     & .o12-ks-list .ks-lesson:hover { background: var(--color-canvas); box-shadow: none; }
     & .o12-ks-list .ks-lesson:active { transform: none; }
@@ -217,8 +218,9 @@
     & .o12-ks-list .ks-lesson-foot { grid-area: foot; justify-content: flex-end; white-space: nowrap; font-size: 12.5px; }
     & .o12-ks-list .ks-lesson-foot b { font: 500 12.5px var(--font-mono); color: var(--color-ink); }
     & .o12-ks-list .ks-lesson-foot svg { width: 16px; height: 16px; color: var(--color-ink-3); }
+    & .o12-ks-list .ks15-eylem { grid-area: ey; align-self: center; margin-top: 0; white-space: nowrap; }
     @media (max-width: 719px) {
-      & .o12-ks-list .ks-lesson { grid-template-columns: 26px minmax(0, 1fr) auto; grid-template-areas: "no t t" "no who who" "no disc foot" "no bar bar"; padding: 10px 12px; }
+      & .o12-ks-list .ks-lesson { grid-template-columns: 26px minmax(0, 1fr) auto; grid-template-areas: "no t t" "no who who" "no disc foot" "no bar bar" "no ey ey"; padding: 10px 12px; }
       & .o12-ks-list .ks-lesson-t { -webkit-line-clamp: 2; }
       & .o12-ks-list .ks-lesson-bar { margin-top: 4px; }
     }

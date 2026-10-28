@@ -142,7 +142,15 @@ export function VeriTablosu<T>(p: VeriTablosuProps<T>) {
   // Sanal kaydırma (büyük sayfa boyutlarında)
   const govdeRef = useRef<HTMLDivElement>(null);
   const [kaydir, setKaydir] = useState(0);
-  const sanal = ogeler.length > SANAL_ESIK;
+  // H146: telefonda (≤640 px) satırlar kart olur (sütun adı + değer alt alta); kart yüksekliği değiştiğinden sanal kaydırma kapanır
+  const [kart, setKart] = useState(() => typeof window !== 'undefined' && window.matchMedia('(max-width: 640px)').matches);
+  useEffect(() => {
+    const m = window.matchMedia('(max-width: 640px)');
+    const f = () => setKart(m.matches);
+    m.addEventListener('change', f);
+    return () => m.removeEventListener('change', f);
+  }, []);
+  const sanal = ogeler.length > SANAL_ESIK && !kart;
   const yukseklik = 560;
   const bas = sanal ? Math.max(0, Math.floor(kaydir / SATIR_Y) - 10) : 0;
   const son = sanal ? Math.min(ogeler.length, bas + Math.ceil(yukseklik / SATIR_Y) + 20) : ogeler.length;
@@ -211,7 +219,7 @@ export function VeriTablosu<T>(p: VeriTablosuProps<T>) {
         </div>
       )}
 
-      <div className="m16-tablo-kap" role="table" style={{ ['--m16-tablo-en' as any]: `${enAz}px` }} aria-rowcount={toplam} aria-busy={sunucu.yukleniyor}>
+      <div className={`m16-tablo-kap${kart ? ' is-kart' : ''}`} role="table" style={{ ['--m16-tablo-en' as any]: `${enAz}px` }} aria-rowcount={toplam} aria-busy={sunucu.yukleniyor}>
         <div className="m16-satir m16-baslik-satir" role="row" style={{ gridTemplateColumns: izgara }}>
           {p.secim && (
             <span role="columnheader" className="m16-hucre-sec">
@@ -254,7 +262,7 @@ export function VeriTablosu<T>(p: VeriTablosuProps<T>) {
                     // Düz metin hücre kesilirse (…) tamamı imleçle okunabilsin
                     const baslik = typeof icerik === 'string' || typeof icerik === 'number' ? String(icerik) : undefined;
                     return (
-                      <span key={s.anahtar} role="cell" title={baslik && baslik.length > 8 ? baslik : undefined} className={`m16-hucre ${s.hizala ? `h-${s.hizala}` : ''}`}>
+                      <span key={s.anahtar} role="cell" data-baslik={typeof s.baslik === 'string' ? s.baslik : undefined} title={baslik && baslik.length > 8 ? baslik : undefined} className={`m16-hucre ${s.hizala ? `h-${s.hizala}` : ''}`}>
                         {icerik}
                       </span>
                     );
