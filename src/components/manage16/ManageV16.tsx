@@ -6,7 +6,7 @@
  * - v14 kabuğu geçiş süresince ?kabuk=v14 ile açılır (App.tsx; oturum boyunca hatırlanır, ?kabuk=v16 döndürür).
  */
 import React, { Suspense, useCallback, useEffect, useMemo, useRef, useState } from 'react';
-import { ArrowLeft, ChevronDown, ChevronRight, Menu, Moon, Search, Sun, Construction, ExternalLink } from 'lucide-react';
+import { ArrowLeft, ChevronDown, ChevronRight, Menu, Moon, Search, Sun, Construction, ExternalLink, Pin, PinOff, X } from 'lucide-react';
 import { MENU, TUM_SAYFALAR, adresCoz, manageAdres, type SayfaProps, type SayfaTanim } from './menu';
 import { BildirimHost, BosDurum, Hata, OnayHost, SayfaBasligi, Yukleniyor } from './kit';
 import { useTheme } from '../../utils/theme';
@@ -95,9 +95,15 @@ export const ManageV16: React.FC<{ adminEmail: string; onExit: () => void }> = (
   const [gezinti, setGezinti] = useState(0);
   const [menuAcik, setMenuAcik] = useState(false);
   const [paletAcik, setPaletAcik] = useState(false);
-  const [kapaliGrup, setKapaliGrup] = useState<Set<string>>(() => {
-    try { return new Set(JSON.parse(localStorage.getItem('m16_kapali_grup') || '[]')); } catch { return new Set(); }
+  // H312: kayıt yoksa (null) varsayılan = yalnız Genel + aktif sayfanın grubu açık; dokunulunca kayıt başlar.
+  const [kapaliKayit, setKapaliKayit] = useState<Set<string> | null>(() => {
+    try { const v = localStorage.getItem('m16_kapali_grup'); return v === null ? null : new Set(JSON.parse(v)); } catch { return null; }
   });
+  // H310: sabitlenen sayfalar (yol listesi), H311: son açılan sayfalar.
+  const [sabit, setSabit] = useState<string[]>(() => { try { return JSON.parse(localStorage.getItem('m16_sabit') || '[]'); } catch { return []; } });
+  const [son, setSon] = useState<string[]>(() => { try { return JSON.parse(localStorage.getItem('m16_son') || '[]'); } catch { return []; } });
+  // H313: menü içi süzgeç
+  const [menuAra, setMenuAra] = useState('');
   const [canli, setCanli] = useState<RealtimeConnectionStatus>(() => realtimeEventService.getStatus());
   const { theme, toggle } = useTheme();
   const icerikRef = useRef<HTMLElement>(null);
@@ -170,10 +176,48 @@ export const ManageV16: React.FC<{ adminEmail: string; onExit: () => void }> = (
   const s = cozum.sayfa;
   const bulunamadi = s.yol === '' && cozum.altYol.length > 0;
   const Sayfa = bulunamadi ? null : lazySayfa(s);
+  // H311: son kullanılanlar (en çok 5, aktif sayfa başa)
+  useEffect(() => {
+    if (bulunamadi) return;
+    setSon((x) => {
+      const n = [s.yol, ...x.filter((y) => y !== s.yol)].slice(0, 8);
+      try { localStorage.setItem('m16_son', JSON.stringify(n)); } catch { /* */ }
+      return n;
+    });
+  }, [s.yol, bulunamadi]);
+  const sabitDegistir = (yol: string) => setSabit((x) => {
+    const n = x.includes(yol) ? x.filter((y) => y !== yol) : [...x, yol];
+    try { localStorage.setItem('m16_sabit', JSON.stringify(n)); } catch { /* */ }
+    return n;
+  });
+  const yoldan = (y: string) => TUM_SAYFALAR.find((x) => x.yol === y);
+  const sabitSayfalar = sabit.map(yoldan).filter(Boolean) as typeof TUM_SAYFALAR;
+  // Son: aktif sayfanın kendisi hariç değil — sabitlenmişler hariç, ilk 5
+  const sonSayfalar = (son.map(yoldan).filter((x) => x && !sabit.includes(x.yol)) as typeof TUM_SAYFALAR).slice(0, 5);
+  const araF = fold(menuAra.trim());
+  const eslesir = (x: SayfaTanim) => !araF || fold(`${x.etiket} ${x.anahtar || ''}`).includes(araF);
+  // H310: menü ögesi + raptiye düğmesi (üzerine gelince/odakta görünür; sabitliyse hep görünür)
+  const oge = (x: SayfaTanim) => {
+    const sabitMi = sabit.includes(x.yol);
+    return (
+      <div key={x.yol} className={`m16-menu-oge ${sabitMi ? 'sabit' : ''}`}>
+        <a href={manageAdres(x.yol)} aria-current={x.yol === s.yol && !bulunamadi ? 'page' : undefined} className={x.yukle ? '' : 'bos'}
+          onClick={(e) => { if (e.metaKey || e.ctrlKey || e.shiftKey) return; e.preventDefault(); setMenuAra(''); git(x.yol); }}>
+          <x.ikon aria-hidden="true" />{x.etiket}{!x.yukle && <span className="m16-yakinda">yakında</span>}
+        </a>
+        <button type="button" className="m16-raptiye" aria-pressed={sabitMi} aria-label={sabitMi ? `${x.etiket}: sabitlemeyi kaldır` : `${x.etiket}: sabitle`}
+          title={sabitMi ? 'Sabitlemeyi kaldır' : 'Sabitle'} onClick={() => sabitDegistir(x.yol)}>
+          {sabitMi ? <PinOff aria-hidden="true" /> : <Pin aria-hidden="true" />}
+        </button>
+      </div>
+    );
+  };
   useEffect(() => { document.title = `${degistirebilir ? (kaynakCanli ? '[Canlı] ' : '[Yerel] ') : ''}${bulunamadi ? 'Bulunamadı' : s.etiket} · MeDSor Yönetim`; }, [s, bulunamadi, degistirebilir, kaynakCanli]);
 
-  const grupDegistir = (id: string) => setKapaliGrup((x) => {
-    const n = new Set(x); if (n.has(id)) n.delete(id); else n.add(id);
+  // H312: etkin kapalı küme = kayıt ya da varsayılan
+  const kapaliGrup = useMemo(() => kapaliKayit ?? new Set(MENU.map((g) => g.id).filter((id) => id !== 'genel' && id !== s.grup.id)), [kapaliKayit, s.grup.id]);
+  const grupDegistir = (id: string) => setKapaliKayit(() => {
+    const n = new Set(kapaliGrup); if (n.has(id)) n.delete(id); else n.add(id);
     try { localStorage.setItem('m16_kapali_grup', JSON.stringify([...n])); } catch { /* */ }
     return n;
   });
@@ -206,21 +250,42 @@ export const ManageV16: React.FC<{ adminEmail: string; onExit: () => void }> = (
       <div className="m16-govde">
         {menuAcik && <div className="m16-menu-perde" onClick={() => setMenuAcik(false)} aria-hidden="true" />}
         <nav className={`m16-menu ${menuAcik ? 'acik' : ''}`} aria-label="Yönetim menüsü">
-          {MENU.map((g) => (
-            <div key={g.id} className="m16-menu-grup">
-              {g.id !== 'genel' && (
-                <button type="button" aria-expanded={!kapaliGrup.has(g.id)} onClick={() => grupDegistir(g.id)}>
-                  {g.etiket}{kapaliGrup.has(g.id) ? <ChevronRight aria-hidden="true" /> : <ChevronDown aria-hidden="true" />}
-                </button>
-              )}
-              {!kapaliGrup.has(g.id) || g.id === 'genel' ? g.sayfalar.map((x) => (
-                <a key={x.yol} href={manageAdres(x.yol)} aria-current={x.yol === s.yol && !bulunamadi ? 'page' : undefined} className={x.yukle ? '' : 'bos'}
-                  onClick={(e) => { if (e.metaKey || e.ctrlKey || e.shiftKey) return; e.preventDefault(); git(x.yol); }}>
-                  <x.ikon aria-hidden="true" />{x.etiket}{!x.yukle && <span className="m16-yakinda">yakında</span>}
-                </a>
-              )) : null}
+          {/* H313: menü içi süzgeç (etiket + anahtar); Esc temizler */}
+          <div className="m16-menu-ara">
+            <Search aria-hidden="true" />
+            <input type="search" value={menuAra} placeholder="Menüde ara" aria-label="Menüde ara"
+              onChange={(e) => setMenuAra(e.target.value)}
+              onKeyDown={(e) => { if (e.key === 'Escape' && menuAra) { e.preventDefault(); e.stopPropagation(); setMenuAra(''); } }} />
+            {menuAra && <button type="button" aria-label="Süzgeci temizle" onClick={() => setMenuAra('')}><X aria-hidden="true" /></button>}
+          </div>
+          {!araF && sabitSayfalar.length > 0 && (
+            <div className="m16-menu-grup m16-menu-ozel" data-grup="sabit">
+              <div className="m16-menu-baslik">Sabitlenenler</div>
+              {sabitSayfalar.map((x) => oge(x))}
             </div>
-          ))}
+          )}
+          {!araF && sonSayfalar.length > 0 && (
+            <div className="m16-menu-grup m16-menu-ozel" data-grup="son">
+              <div className="m16-menu-baslik">Son kullanılanlar</div>
+              {sonSayfalar.map((x) => oge(x))}
+            </div>
+          )}
+          {MENU.map((g) => {
+            const liste = g.sayfalar.filter(eslesir);
+            if (araF && liste.length === 0) return null;
+            const acik = !!araF || g.id === 'genel' || !kapaliGrup.has(g.id);
+            return (
+              <div key={g.id} className="m16-menu-grup" data-grup={g.id}>
+                {g.id !== 'genel' && (
+                  <button type="button" aria-expanded={acik} disabled={!!araF} onClick={() => grupDegistir(g.id)}>
+                    {g.etiket}{acik ? <ChevronDown aria-hidden="true" /> : <ChevronRight aria-hidden="true" />}
+                  </button>
+                )}
+                {acik ? liste.map((x) => oge(x)) : null}
+              </div>
+            );
+          })}
+          {araF && !TUM_SAYFALAR.some(eslesir) && <p className="m16-menu-bos">Eşleşen sayfa yok.</p>}
         </nav>
         <main ref={icerikRef} className="m16-icerik" tabIndex={-1} style={{ outline: 'none' }}>
           {s.yol !== '' && !bulunamadi && (

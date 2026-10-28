@@ -1,26 +1,29 @@
 /**
- * v15 · Çevrimdışı (/cevrimdisi). Yapı: üstte tek durum kartı (bağlantı, çevrimdışı mod, cihaz alanı, eşitleme, süren indirme +
+ * H311: v15 · Çevrimdışı ve indirmeler (/cevrimdisi; eski /arka-plan → #isler). Tek sütun, sırayla: durum (bağlantı, mod,
+ * alan, son eşitleme) → İndirme kuyruğu (ArkaPlanV15: süren/sıradaki/yarıda kalan, video) → Toplu indir (#cv15-indirilebilir)
+ * → İndirilenler + cihazdaki yer → Ayarlar (Yalnız Wi-Fi tek denetim, ayar.wifi) + Eşitleme + .medspak + tümünü sil.
+ * Eski yapı notu: (/cevrimdisi). Yapı: üstte tek durum kartı (bağlantı, çevrimdışı mod, cihaz alanı, eşitleme, süren indirme +
  * sıra) → İndirilenler (kurul → ders, boyut, sil, test/onar) → İndirilebilir (kurul seçici, ders kartları, toplu indir) ;
  * yan sütun: Ayarlar, Cihazdaki yer, Eşitleme, .medspak okuyucu, tümünü sil. Motor: services/cevrimdisi/paketMotoru.ts;
  * arka plan işleri: services/arkaPlanIsleri.ts (/arka-plan). Stil: styles/v15/cevrimdisi15.css (.cv15-*).
  */
 import React, { useEffect, useMemo, useState } from 'react';
 import {
-  Activity, AlertTriangle, ChevronDown, CloudOff, Loader2, Pause, Play, RefreshCw, Signal, Sparkles, VolumeX, Wifi, X, CloudDownload,
+  AlertTriangle, CloudOff, Loader2, RefreshCw, Signal, Sparkles, VolumeX, Wifi, CloudDownload, Download,
 } from 'lucide-react';
 import {
-  agTuru, ayarYaz, cevrimdisiBaslat, cevrimdisiModuAc, cevrimdisiModuKapat, dosyaTuru, duraklat, guncellemeler, katalogYenile, kuyrugaEkle,
-  kuyruktanCikar, modulDokumu, paketDurumu, secimAl, secimDegistir, secimliBayt, useCevrimdisi, useDepolama, yerAc, type Modul, type Paket,
+  agTuru, ayarYaz, cevrimdisiBaslat, cevrimdisiModuAc, cevrimdisiModuKapat, dosyaTuru, guncellemeler, katalogYenile, kuyrugaEkle,
+  modulDokumu, paketDurumu, secimAl, secimDegistir, secimliBayt, useCevrimdisi, useDepolama, yerAc, type Modul, type Paket,
 } from '../../services/cevrimdisi/paketMotoru';
 import { boyutYaz } from '../../services/cevrimdisi/dersBirimleri';
 import { sayfaPaketleri } from '../../services/cevrimdisi/sayfaPaketleri';
 import { useArkaPlanOzet } from '../../services/arkaPlanIsleri';
-import { linkClick, navigateTo, pathFor } from '../../router';
 import { useV15Baslik } from '../v15/baslik';
-import EsitlemeKarti from './EsitlemeKarti';
+import EsitlemeKarti, { zamanYaz } from './EsitlemeKarti';
+import ArkaPlanIsleri from '../v15/ArkaPlanV15'; // H311
 import Indirilenler from './Indirilenler';
 import Indirilebilir from './Indirilebilir';
-import { OnayliSil, sureYaz } from './cvOrtak';
+import { OnayliSil } from './cvOrtak';
 import '../../styles/cevrimdisi.css';
 import '../../styles/v15/cevrimdisi15.css';
 
@@ -37,13 +40,15 @@ const MODUL_AD: Record<Modul, string> = {
 export default function CevrimdisiView() {
   const S = useCevrimdisi();
   const [topluAcik, setTopluAcik] = useState(false);
-  useEffect(() => { document.title = 'Çevrimdışı · MeDSor'; }, []);
+  useEffect(() => { document.title = 'Çevrimdışı ve indirmeler · MeDSor'; }, []);
+  // H311: eski /arka-plan bağlantısı #isler ile gelir → iş listesine kaydır
+  useEffect(() => { const h = location.hash.slice(1); if (!h) return; const t = setTimeout(() => document.getElementById(h === 'isler' ? 'isler' : h)?.scrollIntoView({ block: 'start' }), 300); return () => clearTimeout(t); }, []);
   useEffect(() => { void cevrimdisiBaslat().then(() => katalogYenile(true)); }, []);
 
   const cihaz = Object.values(S.kayitlar).filter((k) => !k.yarim);
   const cihazBayt = cihaz.reduce((a, k) => a + k.bayt, 0);
   const guncel = useMemo(() => guncellemeler(S), [S]);
-  useV15Baslik({ baslik: 'Çevrimdışı', alt: cihaz.length ? `${cihaz.length} paket · ${boyutYaz(cihazBayt)} cihazda` : 'Dersleri internetsiz kullanmak için indir' });
+  useV15Baslik({ baslik: 'Çevrimdışı ve indirmeler', alt: cihaz.length ? `${cihaz.length} paket · ${boyutYaz(cihazBayt)} cihazda` : 'Dersleri internetsiz kullanmak için indir' });
 
   // İlk açılışta (cihazda hiçbir şey yokken) toplu indirme açık gelir
   const hicYok = cihaz.length === 0 && !S.kuyruk.length;
@@ -53,7 +58,7 @@ export default function CevrimdisiView() {
 
   return (
     <div className="cv15">
-      <h1 className="sr-only">Çevrimdışı</h1>
+      <h1 className="sr-only">Çevrimdışı ve indirmeler</h1>
       <SayfaKarti />
       <DurumKarti cihazSay={cihaz.length} cihazBayt={cihazBayt} toplu={() => { setTopluAcik(true); indirilebilirGit(); }} />
 
@@ -65,42 +70,33 @@ export default function CevrimdisiView() {
       )}
       {S.katalogHata && <div className="cv15-serit is-b" role="alert"><AlertTriangle aria-hidden /><span>{S.katalogHata}</span></div>}
 
-      <div className="cv15-izgara">
-        <div className="cv15-ana">
-          <section aria-labelledby="cv15-indirilenler" className="cv15-bolum">
-            <h2 id="cv15-indirilenler" className="cv15-bb">İndirilenler</h2>
-            <Indirilenler gotur={indirilebilirGit} />
-          </section>
-          <section aria-labelledby="cv15-indirilebilir" className="cv15-bolum">
-            <h2 id="cv15-indirilebilir" className="cv15-bb">İndirilebilir</h2>
-            <Indirilebilir topluAcik={topluAcik} setTopluAcik={setTopluAcik} />
-          </section>
-        </div>
-        <aside className="cv15-yan">
-          <section aria-labelledby="cv15-ayarlar" className="cv15-bolum">
-            <h2 id="cv15-ayarlar" className="cv15-bb">Ayarlar</h2>
-            <Ayarlar />
-          </section>
-          {cihaz.length > 0 && (
-            <section aria-labelledby="cv15-yer" className="cv15-bolum">
-              <h2 id="cv15-yer" className="cv15-bb">Cihazdaki yer</h2>
-              <AlanKarti />
-            </section>
-          )}
-          <section aria-labelledby="cv15-esit" className="cv15-bolum">
-            <h2 id="cv15-esit" className="cv15-bb">Eşitleme</h2>
-            <div className="cv cv15-gomulu"><EsitlemeKarti /></div>
-          </section>
-          <section aria-label="Ders paketi aç" className="cv15-bolum">
-            <div className="cv cv15-gomulu"><React.Suspense fallback={null}><MedspakOkuyucu /></React.Suspense></div>
-          </section>
+      {/* H311: tek sütun; her bölüm bir kez (Wi-Fi, eşitleme, indirilenler tekrarı kaldırıldı) */}
+      <div className="cv15-ana">
+        <section id="isler" aria-labelledby="cv15-isler" className="cv15-bolum">
+          <h2 id="cv15-isler" className="cv15-bb">İndirme kuyruğu ve arka plan işleri</h2>
+          <ArkaPlanIsleri />
+        </section>
+        <section aria-labelledby="cv15-indirilebilir" className="cv15-bolum">
+          <h2 id="cv15-indirilebilir" className="cv15-bb">Toplu indir</h2>
+          <Indirilebilir topluAcik={topluAcik} setTopluAcik={setTopluAcik} />
+        </section>
+        <section aria-labelledby="cv15-indirilenler" className="cv15-bolum">
+          <h2 id="cv15-indirilenler" className="cv15-bb">İndirilenler ve depolama</h2>
+          <Indirilenler gotur={indirilebilirGit} />
+          {cihaz.length > 0 && <AlanKarti />}
           {cihaz.length > 0 && (
             <div className="cv15-tehlike v15-card">
               <span><b>Cihazdaki tüm içerik</b><span className="v15-cap">{cihaz.length} paket · {boyutYaz(cihazBayt)}. Çözdüğün sorular ve ilerlemen silinmez.</span></span>
               <OnayliSil ids={Object.keys(S.kayitlar)} etiket="Tümünü sil" />
             </div>
           )}
-        </aside>
+        </section>
+        <section id="ayarlar" aria-labelledby="cv15-ayarlar" className="cv15-bolum">
+          <h2 id="cv15-ayarlar" className="cv15-bb">Ayarlar ve eşitleme</h2>
+          <Ayarlar />
+          <div className="cv cv15-gomulu"><EsitlemeKarti /></div>
+          <div className="cv cv15-gomulu" aria-label="Ders paketi aç"><React.Suspense fallback={null}><MedspakOkuyucu /></React.Suspense></div>
+        </section>
       </div>
     </div>
   );
@@ -108,16 +104,13 @@ export default function CevrimdisiView() {
 
 /* ---------------------------------------------------------------- durum kartı ---------------------------------------------------------------- */
 function DurumKarti({ cihazSay, cihazBayt, toplu }: { cihazSay: number; cihazBayt: number; toplu: () => void }) {
-  const { s: S, ag, kv, kuyruk, toplam: isSay } = useArkaPlanOzet();
+  const { s: S, ag, kv, kuyruk } = useArkaPlanOzet();
+  // H311: durum kartında son eşitleme zamanı (EsitlemeKarti ile aynı kaynak)
+  const [son, setSon] = useState('');
+  useEffect(() => { let c = true; void import('../../services/userDataSyncService').then((m) => { if (c) setSon(m.getLastBackupTime()); }); return () => { c = false; }; }, [kv, kuyruk]);
   const dep = useDepolama();
   const a = agTuru();
   const [kapatSor, setKapatSor] = useState(false);
-  const [siraAcik, setSiraAcik] = useState(false);
-  const arkaHref = pathFor('arka_plan');
-  const aktif = S.aktif;
-  const aktifP = aktif ? S.katalog.find((p) => p.id === aktif.id) : null;
-  const oran = aktif && aktif.toplam ? Math.min(1, aktif.alinan / aktif.toplam) : 0;
-  const kalanBayt = S.kuyruk.reduce((t, id) => t + (S.katalog.find((p) => p.id === id)?.bayt || 0), 0) - (aktif?.alinan || 0);
   const bekleyen = kv + kuyruk;
   const dolu = dep && dep.kota > 0 ? Math.min(100, (dep.kullanilan / dep.kota) * 100) : 0;
   const AgIk = ag === 'offline' ? CloudOff : a.hucresel ? Signal : Wifi;
@@ -171,48 +164,12 @@ function DurumKarti({ cihazSay, cihazBayt, toplu }: { cihazSay: number; cihazBay
         </div>
         <div>
           <dt className="v15-label">Eşitleme</dt>
-          <dd><b>{bekleyen ? `${bekleyen} bekliyor` : 'Güncel'}</b><span className="v15-cap">{bekleyen ? (ag === 'offline' ? 'Bağlantı gelince gönderilir' : 'Gönderiliyor') : 'Gönderilmemiş değişiklik yok'}</span></dd>
+          <dd><b>{bekleyen ? `${bekleyen} bekliyor` : 'Güncel'}</b><span className="v15-cap">{bekleyen ? (ag === 'offline' ? 'Bağlantı gelince gönderilir' : 'Gönderiliyor') : 'Gönderilmemiş değişiklik yok'} · son {zamanYaz(son)}</span></dd>
         </div>
       </dl>
 
-      {(aktif || S.kuyruk.length > 0) && (
-        <div className="cv15-aktif" aria-live="polite">
-          <div className="cv15-aktif-ust">
-            <span className="cv15-durum-t">
-              <b>{S.duraklat ? 'Duraklatıldı' : aktif?.bekliyor || (aktifP ? aktifP.baslik : 'Hazırlanıyor…')}</b>
-              <span className="v15-cap">
-                {aktif && !aktif.bekliyor ? `${boyutYaz(aktif.alinan)} / ${boyutYaz(aktif.toplam)}` : ''}
-                {aktif && !aktif.bekliyor && aktif.hiz > 0 ? ` · ${boyutYaz(aktif.hiz)}/sn` : ''}
-                {aktif && !aktif.bekliyor && aktif.hiz > 0 && kalanBayt > 0 ? ` · kalan ≈ ${sureYaz(kalanBayt / aktif.hiz)}` : ''}
-                {` · sırada ${S.kuyruk.length}`}
-              </span>
-            </span>
-            {aktif?.bekliyor?.startsWith('Wi-Fi')
-              ? <button type="button" className="cv15-b" onClick={() => ayarYaz({ wifi: false })}>Şimdi indir</button>
-              : <button type="button" className="cv15-b is-ikon" onClick={() => duraklat(!S.duraklat)} aria-label={S.duraklat ? 'Sürdür' : 'Duraklat'} title={S.duraklat ? 'Sürdür' : 'Duraklat'}>{S.duraklat ? <Play aria-hidden /> : <Pause aria-hidden />}</button>}
-            <button type="button" className="cv15-b" aria-expanded={siraAcik} onClick={() => setSiraAcik(!siraAcik)}>Sıra <ChevronDown aria-hidden className={siraAcik ? 'is-ac' : ''} /></button>
-          </div>
-          <span className="v15-bar" role="progressbar" aria-label="İndirme" aria-valuemin={0} aria-valuemax={100} aria-valuenow={Math.round(oran * 100)}><span style={{ width: `${Math.round(oran * 100)}%` }} /></span>
-          {siraAcik && (
-            <ul className="cv15-sira">
-              {S.kuyruk.map((id) => {
-                const p = S.katalog.find((x) => x.id === id);
-                return (
-                  <li key={id}>
-                    <span className="cv15-durum-t"><b>{p?.baslik || id}</b><span className="v15-cap">{p ? `${p.grup} · ${boyutYaz(p.bayt)}` : ''}</span></span>
-                    <button type="button" className="cv15-b is-ikon" onClick={() => kuyruktanCikar([id])} aria-label="Sıradan çıkar"><X aria-hidden /></button>
-                  </li>
-                );
-              })}
-              {S.kuyruk.length > 1 && <li><button type="button" className="cv15-b is-sade" onClick={() => kuyruktanCikar([...S.kuyruk])}>Hepsini iptal et</button></li>}
-            </ul>
-          )}
-        </div>
-      )}
-
-      <a className="cv15-arka" href={arkaHref} onClick={linkClick(() => navigateTo(arkaHref))}>
-        <Activity aria-hidden /><span>Arka plan işleri</span><span className="v15-cap">{isSay ? `${isSay} iş` : 'İş yok'}</span>
-      </a>
+      {/* H311: süren indirme + sıra ve "Arka plan işleri" bağlantısı → aşağıdaki İndirme kuyruğu bölümü (tekrar kaldırıldı) */}
+      {S.kuyruk.length > 0 && <a className="cv15-arka" href="#isler" onClick={(e) => { e.preventDefault(); document.getElementById('isler')?.scrollIntoView({ behavior: 'smooth', block: 'start' }); }}><Download aria-hidden /><span>İndirme kuyruğu</span><span className="v15-cap">{S.kuyruk.length} paket</span></a>}
     </section>
   );
 }

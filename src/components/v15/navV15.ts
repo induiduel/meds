@@ -70,7 +70,8 @@ export interface MenuGrubu { id: string; label: string; icon: React.ElementType;
 /** Tasarım A03: Oyunlar dört işin yanında ayrı bölüm (yarışma, Hücrem, başarımlar) */
 // H147: Başarımlar ve Güncelleme günlüğü hesap sayfalarıyla birlikte Kişisel'de (Oyunlar/Başvuru altında aranmıyordu)
 const OYUNLAR: AppRoute[] = ['oyunlar', 'hucrem'];
-const KISISEL: AppRoute[] = ['bitirdiklerim', 'basarimlar', 'guncellemeler', 'study', 'notlarim', 'bildirimler', 'stats', 'pdf_olustur', 'cevrimdisi', 'arka_plan', 'music', 'ilk_adimlar', 'settings', 'dil_bolge', 'yardim'];
+// H305: Arka plan işleri Çevrimdışı ve indirmeler'e katıldı; menüde tek giriş
+const KISISEL: AppRoute[] = ['bitirdiklerim', 'basarimlar', 'guncellemeler', 'study', 'notlarim', 'bildirimler', 'stats', 'pdf_olustur', 'cevrimdisi', 'music', 'ilk_adimlar', 'settings', 'dil_bolge', 'yardim'];
 
 const YONETIM = { id: 'manage', label: 'Yönetim', short: 'Yönetim', hint: 'Yönetim konsolu', icon: ShieldCheck, tint: '#64748B' } as NavItem;
 

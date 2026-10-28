@@ -141,6 +141,9 @@ export function disYol(adres: string): string {
   const s = parcala(yol);
   const ilk = s[0] || '';
 
+  // H300: Arka plan işleri Çevrimdışı ve indirmeler sayfasına katıldı; eski /arka-plan(-isleri) iş listesi bölümüne döner
+  if ((ilk === 'arka-plan' || ilk === 'arka-plan-isleri') && s.length === 1) return birlestir('/cevrimdisi', sp, hash || '#isler');
+
   switch (ilk) {
     case 'ogren':
       return birlestir(`/dersler/interaktif${s[1] ? `/${enc(s[1])}` : ''}`, sp, hash);
@@ -300,6 +303,8 @@ export function icYol(adres: string): string {
   // H164: /profil ve /profile aynı ekranı (Profil ve ayarlar) iki ayrı adla açıyordu; adres çubuğu tek ada (/ayarlar) döner,
   // eski bağlantılar kırılmaz
   if ((ilk === 'profil' || ilk === 'profile') && s.length === 1) return birlestir('/ayarlar', sp, hash);
+  // H301: eski /arka-plan(-isleri) → birleşik /cevrimdisi sayfasının iş listesi bölümü (#isler)
+  if ((ilk === 'arka-plan' || ilk === 'arka-plan-isleri') && s.length === 1) return birlestir('/cevrimdisi', sp, hash || '#isler');
 
   if (ilk === 'dersler') {
     const arac = s[1];

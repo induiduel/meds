@@ -162,7 +162,6 @@ const VideoDersV15 = React.lazy(() => wrapLazy(import('./components/v15/VideoDer
 const OyunlarV15 = React.lazy(() => wrapLazy(import('./components/v15/OyunlarV15')));
 const DersProgramiV15 = React.lazy(() => wrapLazy(import('./components/v15/DersProgramiV15')));
 const ProgramEkleV15 = React.lazy(() => wrapLazy(import('./components/v15/ProgramEkleV15')));
-const ArkaPlanV15 = React.lazy(() => wrapLazy(import('./components/v15/ArkaPlanV15')));
 const DilBolgeV15 = React.lazy(() => wrapLazy(import('./components/v15/DilBolgeV15')));
 const IlkAdimlarV15 = React.lazy(() => wrapLazy(import('./components/v15/IlkAdimlarV15')));
 const YardimV15 = React.lazy(() => wrapLazy(import('./components/v15/YardimV15')));
@@ -2231,7 +2230,8 @@ export default function App() {
         {/* TAB: /program-ekle (görünen /dersler/program/ekle) — kişisel etkinlik ekleme + hazır sınıf programı */}
         {gorunenTab === 'program_ekle' && (<Suspense fallback={<ViewFallback />}><ProgramEkleV15 /></Suspense>)}
         {/* TAB: /arka-plan — süren indirmeler, video dışa aktarımı, eşitleme */}
-        {gorunenTab === 'arka_plan' && (<Suspense fallback={<ViewFallback />}><ArkaPlanV15 /></Suspense>)}
+        {/* H307: eski rota da birleşik sayfayı açar (adres siteHaritasi'nda /cevrimdisi#isler'e döner) */}
+        {gorunenTab === 'arka_plan' && (<Suspense fallback={<ViewFallback />}><CevrimdisiView /></Suspense>)}
         {/* TAB: /dil-bolge — tarih/saat biçimi, haftanın ilk günü (cihaz tercihi) */}
         {gorunenTab === 'dil_bolge' && (<Suspense fallback={<ViewFallback />}><DilBolgeV15 /></Suspense>)}
         {/* TAB: /ilk-adimlar — başlangıç görevleri */}

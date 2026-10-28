@@ -264,3 +264,24 @@ button.m16-istat:hover { border-color: var(--color-ink-3); }
 /* H172: açıklamada teknik kaynak (dosya yolu) küçük, soluk, ikincil */
 .m16-kaynak { display: inline-block; font-size: 11px; color: var(--color-ink-3); opacity: .8; margin-left: 4px; }
 .m16-kaynak code { font-size: inherit; }
+
+/* H310–H314: menü bulunurluğu — süzgeç, sabitlenenler/son kullanılanlar, raptiye düğmesi */
+.m16-menu-ara { position: sticky; top: -8px; z-index: 1; display: flex; align-items: center; gap: 6px; margin: -8px -8px 0; padding: 8px 10px; background: var(--m16-yuzey); border-bottom: 1px solid var(--m16-cizgi); }
+.m16-menu-ara > svg { width: 14px; height: 14px; color: var(--color-ink-3); flex-shrink: 0; }
+.m16-menu-ara input { flex: 1; min-width: 0; min-height: 32px; border: 1px solid var(--m16-cizgi); border-radius: 6px; background: var(--color-field, var(--m16-zemin)); color: var(--color-ink); padding: 0 8px; font: inherit; font-size: 13px; }
+.m16-menu-ara input::-webkit-search-cancel-button { display: none; }
+.m16-menu-ara button { all: unset; display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; border-radius: 6px; cursor: pointer; color: var(--color-ink-3); }
+.m16-menu-ara button svg { width: 14px; height: 14px; }
+.m16-menu-baslik { padding: 4px 8px; font-size: 11px; font-weight: 600; letter-spacing: .02em; text-transform: uppercase; color: var(--color-ink-3); }
+.m16-menu-ozel { padding-bottom: 6px; border-bottom: 1px solid var(--m16-cizgi); }
+.m16-menu-grup > button:disabled { cursor: default; }
+.m16-menu-oge { position: relative; display: flex; align-items: center; }
+.m16-menu-oge > a { flex: 1; min-width: 0; padding-right: 34px; }
+.m16-raptiye { all: unset; position: absolute; right: 2px; top: 50%; transform: translateY(-50%); display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; border-radius: 6px; cursor: pointer; color: var(--color-ink-3); opacity: 0; }
+.m16-raptiye svg { width: 14px; height: 14px; }
+.m16-raptiye:hover { color: var(--color-ink); background: var(--m16-zemin); }
+.m16-menu-oge:hover .m16-raptiye, .m16-menu-oge:focus-within .m16-raptiye, .m16-menu-oge.sabit .m16-raptiye { opacity: 1; }
+.m16-raptiye:focus-visible { opacity: 1; outline: 2px solid var(--color-accent, currentColor); }
+.m16-menu-bos { padding: 12px 8px; font-size: 13px; color: var(--color-ink-3); }
+@media (hover: none) and (pointer: coarse) { .m16-raptiye { opacity: .55; } }
+@media (max-width: 900px) { .m16-menu-oge > a { min-height: 32px; box-sizing: border-box; } .m16-menu-grup > button { min-height: 32px; } }

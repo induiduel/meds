@@ -1,3 +1,4 @@
+// H303: "Tümünü gör" birleşik Çevrimdışı ve indirmeler sayfasının iş listesine gider
 import { useEffect, useRef, useState } from 'react';
 import { Clapperboard, Download, Loader2, RefreshCw } from 'lucide-react';
 import { useArkaPlanOzet } from '../../services/arkaPlanIsleri';
@@ -32,14 +33,14 @@ export default function ArkaPlanGosterge() {
         <div className="ap15g-m v15-card" role="menu">
           <p className="v15-label">Arka planda {toplam} iş</p>
           {a && (
-            <button type="button" role="menuitem" onClick={() => { setAcik(false); navigateTo(pathFor('arka_plan')); }}>
+            <button type="button" role="menuitem" onClick={() => { setAcik(false); navigateTo(`${pathFor('cevrimdisi')}#isler`); }}>
               <Download aria-hidden /><span>{ad(a.id)} {a.bekliyor ? '· bekliyor' : a.toplam ? `%${Math.round((a.alinan / a.toplam) * 100)}` : ''}</span>
             </button>
           )}
-          {sira > 0 && <button type="button" role="menuitem" onClick={() => { setAcik(false); navigateTo(pathFor('arka_plan')); }}><Download aria-hidden /><span>{sira} paket sırada</span></button>}
-          {video && <button type="button" role="menuitem" onClick={() => { setAcik(false); navigateTo(pathFor('arka_plan')); }}><Clapperboard aria-hidden /><span>Video %{Math.floor(video.ilerleme.oran * 100)}</span></button>}
-          {esitleme && <button type="button" role="menuitem" onClick={() => { setAcik(false); navigateTo(pathFor('arka_plan')); }}><RefreshCw aria-hidden /><span>Eşitleme bekliyor · {kv + kuyruk} kayıt</span></button>}
-          <button type="button" role="menuitem" className="ap15g-all" onClick={() => { setAcik(false); navigateTo(pathFor('arka_plan')); }}>Tümünü gör</button>
+          {sira > 0 && <button type="button" role="menuitem" onClick={() => { setAcik(false); navigateTo(`${pathFor('cevrimdisi')}#isler`); }}><Download aria-hidden /><span>{sira} paket sırada</span></button>}
+          {video && <button type="button" role="menuitem" onClick={() => { setAcik(false); navigateTo(`${pathFor('cevrimdisi')}#isler`); }}><Clapperboard aria-hidden /><span>Video %{Math.floor(video.ilerleme.oran * 100)}</span></button>}
+          {esitleme && <button type="button" role="menuitem" onClick={() => { setAcik(false); navigateTo(`${pathFor('cevrimdisi')}#isler`); }}><RefreshCw aria-hidden /><span>Eşitleme bekliyor · {kv + kuyruk} kayıt</span></button>}
+          <button type="button" role="menuitem" className="ap15g-all" onClick={() => { setAcik(false); navigateTo(`${pathFor('cevrimdisi')}#isler`); }}>Tümünü gör</button>
         </div>
       )}
     </div>

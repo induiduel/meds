@@ -79,3 +79,5 @@ dört kategori kartını görür. Yönetici adresle açabilir. Geri açmak kulla
 - 2026-10-27: `/dersler/zihin-haritasi?ders=<key>` (iç `/zihin-haritasi`) — Zihin haritası.
 - 2026-10-28: `/dersler/program/ekle` (iç `/program-ekle`) — Programa ekle (kişisel etkinlik + hazır sınıf programı).
 - 2026-10-28 (Kişisel, düz adres): `/arka-plan` Arka plan işleri, `/dil-bolge` Dil ve bölge, `/ilk-adimlar` İlk adımlar, `/yardim` Yardım.
+
+- 2026-10-28 (H300): `/arka-plan`, `/arka-plan-isleri` → `/cevrimdisi#isler` (Çevrimdışı ve indirmeler sayfasının iş listesi bölümü).

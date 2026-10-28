@@ -8,7 +8,8 @@ import { Check, CloudOff, Loader2, RefreshCw } from 'lucide-react';
 import { useNetState } from '../../services/net';
 import { dirtyKvCount, onProfileDataChange } from '../../services/userKvSync';
 
-const zamanYaz = (iso: string) => {
+// H309: durum kartı da son eşitleme zamanını aynı biçimde yazar
+export const zamanYaz = (iso: string) => {
   if (!iso) return 'henüz yok';
   const fark = (Date.now() - Date.parse(iso)) / 1000;
   if (!isFinite(fark)) return 'henüz yok';

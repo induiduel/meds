@@ -118,7 +118,7 @@ const I: Record<string, NavItem> = {
   leaderboard: { id: 'leaderboard', label: 'Sıralama', hint: 'Dönemindeki haftalık ve kurul sıralaması', icon: Trophy, tint: '#FFB340' },
   // Kişisel
   study: { id: 'study', label: 'Listelerim ve notlar', short: 'Listelerim', tile: 'Listelerim', hint: 'Kaydettiğin sorular, notların, kendi testin (günün akışı Bugün sayfasında)', icon: ListChecks, tint: '#34C759' },
-  cevrimdisi: { id: 'cevrimdisi', label: 'Çevrimdışı', short: 'Çevrimdışı', tile: 'Çevrimdışı', hint: 'Dersleri cihaza indir, internetsiz çalış; indirilenleri yönet', icon: CloudDownload, tint: '#0A84FF' },
+  cevrimdisi: { id: 'cevrimdisi', label: 'Çevrimdışı ve indirmeler', short: 'Çevrimdışı', tile: 'Çevrimdışı ve indirmeler', hint: 'İndirme kuyruğu, arka plan işleri, indirilenler ve eşitleme' /* H306 */, icon: CloudDownload, tint: '#0A84FF' },
   basarimlar: { id: 'basarimlar', label: 'Başarımlar', short: 'Başarım', tile: 'Başarımlar', hint: 'Günlük, haftalık, kurul hedefleri; başarımlar, puan ve ATP', icon: Medal, tint: '#FF9F0A' },
   zihin_haritasi: { id: 'zihin_haritasi', label: 'Zihin haritası', short: 'Harita', tile: 'Zihin haritası', hint: 'Dersin bölümleri ve anahtar terimleri tek bakışta', icon: Network, tint: '#FF2D55' },
   ders_programi: { id: 'ders_programi', label: 'Ders programı', short: 'Program', tile: 'Ders programı', hint: 'Kurulun günlük ve haftalık ders saatleri', icon: CalendarClock, tint: '#30B0C7' },
@@ -158,7 +158,7 @@ export const NAV_TREE_HAM: NavGroup[] = [
   { label: 'Check Up', items: [I.genetik_checkup, I.patoloji_checkup] },
   { label: 'Başvuru', items: [I.glossary, I.diseases, I.health_ministry, I.kazanimlar] },
   { label: 'Topluluk', items: [I.topluluk, I.arkadaslar, I.hucrem, I.leaderboard, I.matrix] },
-  { label: 'Kişisel', items: [I.bitirdiklerim, I.basarimlar, I.guncellemeler, I.cevrimdisi, I.study, I.stats, I.music, I.ilk_adimlar, I.arka_plan, I.dil_bolge, I.yardim] },
+  { label: 'Kişisel', items: [I.bitirdiklerim, I.basarimlar, I.guncellemeler, I.cevrimdisi, I.study, I.stats, I.music, I.ilk_adimlar, I.dil_bolge /* H306: arka_plan çıktı, cevrimdisi tek giriş */, I.yardim] },
 ];
 
 /** Çalışma anında süzülür (services/siteAyar menudeGorunur; panel › Site › Görünürlük). Dizi yerinde güncellenir. */

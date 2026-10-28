@@ -181,7 +181,7 @@ export const ROUTE_PATHS: Record<AppRoute, string> = {
   arkadaslar: '/arkadaslar',
   // görünen /dersler/program/ekle (siteHaritasi çevirir)
   program_ekle: '/program-ekle',
-  arka_plan: '/arka-plan',
+  arka_plan: '/arka-plan', // H302: yalnız eski adres; siteHaritasi /cevrimdisi#isler'e yönlendirir, BY_SEGMENT'te tekil kalsın
   dil_bolge: '/dil-bolge',
   ilk_adimlar: '/ilk-adimlar',
   yardim: '/yardim',
@@ -406,7 +406,7 @@ export const ALIASES: Record<string, AppRoute> = {
   kisi: 'kisi',
   arkadaslar: 'arkadaslar',
   arkadas: 'arkadaslar',
-  'arka-plan-isleri': 'arka_plan',
+  'arka-plan-isleri': 'cevrimdisi', // H302: arka plan işleri /cevrimdisi'ye katıldı
   'dil-ve-bolge': 'dil_bolge',
   'ilk-adim': 'ilk_adimlar',
   yardim: 'yardim',

@@ -1,10 +1,11 @@
 {
  "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
- "onem": 553,
- "baslik": "Yönetim: işlemler geri alınabilir",
+ "onem": 554,
+ "baslik": "Çevrimdışı ve indirmeler tek sayfada",
  "maddeler": [
-  "Gelen kutusunda ve soru şikâyetlerinde yapılan işlem 8 saniye içinde geri alınabiliyor",
-  "Geri alınamayan işlem önce onay istiyor"
+  "Çevrimdışı ve arka plan işleri tek sayfada: durum, indirme kuyruğu, indirilenler ve ayarlar",
+  "Yalnız Wi-Fi ayarı tek yerde",
+  "Yönetim: menüde arama, sabitlenen ve son kullanılan sayfalar"
  ],
  "eklenen": [],
  "degisen": [],
