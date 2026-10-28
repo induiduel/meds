@@ -37,3 +37,6 @@ create table if not exists sohbet_durum (
   son timestamptz not null default now(),
   gizli boolean not null default false
 );
+-- Yönetim v16 (2026-10-28): oda kapatma/arşiv — kapalı odaya katılım ve mesaj yazımı kapalı (toplulukSohbet.ts)
+alter table sohbet_odalari add column if not exists kapali timestamptz;
+alter table sohbet_odalari add column if not exists kapatan text;

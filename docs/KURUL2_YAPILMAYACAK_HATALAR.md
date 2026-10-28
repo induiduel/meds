@@ -1269,3 +1269,9 @@ Her maddede: belirti · kök neden · Kurul 2 kuralı · kapı durumu. Kanıtlar
   8. **Denetçi şekle bakar:** bağımsız denetçi metni okuduktan sonra şekilli/tablolu her sayfanın görüntüsüne bakıp "şekildeki her panel/işaret anlatıldı mı" listesini işaretler; eksik varsa GEÇMEZ.
 - **Otomatik kapı:** `metin_denetle.py` kaçamak meta cümleyi HATA sayar (`KACAMAK` kalıpları); yalnız betimleme cümlelerinden oluşan kısa şekil paragrafını UYARI olarak gösterir.
 - **Uygulama:** k2-05 v1 korunur; `k2-05-norolojik-muayene-v2` klipli ses + taşınan katmanlarla yeniden kuruldu, 31–32. paragraflar bu kurala göre yeniden yazıldı.
+
+## H129 — "Salt okunur" SQL konsolu süper kullanıcıyla çalışıyordu (2026-10-28, Yönetim v16)
+- **Belirti:** Yönetim › Veritabanı gezgini SQL konsolu "salt okunur" diye sunuluyordu; READ ONLY işlem içinde `COPY … TO PROGRAM`, `pg_read_file`, `pg_authid` (parola özetleri) okunabilir durumdaydı.
+- **Kök neden:** `DATABASE_URL` kullanıcısı `meds` süper kullanıcı; `begin read only` yalnız tablo yazımını engeller, COPY TO / dosya ve süreç işlevleri READ ONLY işlemde serbesttir.
+- **Kalıcı çözüm:** `pgAdminRoutes.ts` `/api/admin/pg/sql`: ilk sözcük izin listesi (SELECT/WITH/EXPLAIN/VALUES/TABLE/SHOW), tehlikeli işlev/katalog yasak listesi, işlem içinde `set local role meds_salt_okur` (NOLOGIN, yalnız `pg_read_all_data`). Rol kurulamazsa konsol kapalı (503). `DELETE /api/admin/pg/row` ve `POST /api/admin/db/import` sunucuda onay sözcüğü ister.
+- **Önleme:** "salt okunur" iddia eden her uç bağlantı rolünün yetkisiyle sınanır (COPY TO PROGRAM, pg_read_file, pg_authid, CTE içinde DELETE); tehlikeli uçlar istemci onayına ek olarak sunucuda onay sözcüğü ister.

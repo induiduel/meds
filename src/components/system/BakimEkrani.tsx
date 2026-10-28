@@ -10,14 +10,14 @@ import '../../styles/v15/ek15.css';
  * Denetim: açılışta, 60 sn'de bir, sekmeye dönünce, bağlantı gelince. "Çalışman kaydedildi" yalnız eşitleme kuyruğu
  * (gönderilmemiş profil anahtarı + çevrimdışı gönderim kuyruğu) boşsa yazılır. Yönetim konsolunda gösterilmez.
  */
-interface Durum { bakim: boolean; sure?: string }
+interface Durum { bakim: boolean; sure?: string; mesaj?: string }
 
 async function denetle(): Promise<Durum> {
   try {
     const r = await fetch(`/api/bakim?t=${Date.now()}`, { cache: 'no-store' });
     if (r.status === 503) {
       const j = await r.json().catch(() => null);
-      if (j?.bakim) return { bakim: true, sure: typeof j.sure === 'string' ? j.sure : undefined };
+      if (j?.bakim) return { bakim: true, sure: typeof j.sure === 'string' ? j.sure : undefined, mesaj: typeof j.mesaj === 'string' ? j.mesaj : undefined };
     }
   } catch { /* ağ yok: bakım sayılmaz */ }
   try {
@@ -45,10 +45,10 @@ function BakimEkrani() {
     return () => { canli = false; window.clearInterval(t); document.removeEventListener('visibilitychange', gor); window.removeEventListener('online', bak); };
   }, []);
   if (!d.bakim) return null;
-  return <Ekran sure={d.sure} />;
+  return <Ekran sure={d.sure} mesaj={d.mesaj} />;
 }
 
-function Ekran({ sure }: { sure?: string }) {
+function Ekran({ sure, mesaj }: { sure?: string; mesaj?: string }) {
   const { kv, kuyruk } = useEsitlemeBekleyen();
   const bos = kv + kuyruk === 0;
   return (
@@ -56,7 +56,7 @@ function Ekran({ sure }: { sure?: string }) {
       <div className="bk15-k v15-card">
         <Settings className="bk15-ik" aria-hidden />
         <h1 id="bk15-b">Kısa bakım</h1>
-        <p>Siteyi iyileştiriyoruz. Birazdan kendiliğinden geri döneceğiz.</p>
+        <p>{mesaj || 'Siteyi iyileştiriyoruz. Birazdan kendiliğinden geri döneceğiz.'}</p>
         {sure && <p className="bk15-sure">Tahmini süre: <b>{sure}</b></p>}
         <p className="v15-cap">{bos ? 'Çalışman kaydedildi.' : 'Gönderilmeyi bekleyen değişikliklerin bu cihazda duruyor; bakım bitince kendiliğinden gönderilecek.'}</p>
         <a className="v15-btn is-ghost" href="/cevrimdisi">İndirilen derslerim</a>

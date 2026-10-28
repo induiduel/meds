@@ -5,6 +5,7 @@ import SinavAgirligiV15, { sinavAgirligiVar } from './SinavAgirligiV15';
 import { NAV_ITEMS } from '../shell/navModel';
 import { KURUL_NOLAR, kurulIcerikVar, kurulKaydet, varsayilanKurul } from '../kurul/KurulSecici';
 import { CHECKUPLAR, MERKEZ_ARACLARI, PDF_NOTLAR } from '../merkez/merkezModel';
+import { menudeGorunur } from '../../services/siteAyar';
 import { KAMP_SEKMELER, SEKME_ROUTE, aracYolu, kampOku, type KampSekme } from '../merkez/MerkezView';
 import { useV15Baslik } from './baslik';
 import KurulSecV15 from './KurulSecV15';
@@ -91,7 +92,7 @@ export default function KamplarMerkezV15() {
           <section className="k15-plan" aria-labelledby="k15-plan-b">
             <h2 id="k15-plan-b" className="v15-cap">Planlama</h2>
             <ul className="k15-izgara" role="list">
-              {NAV_ITEMS.olasi_sorular && (() => {
+              {NAV_ITEMS.olasi_sorular && menudeGorunur('olasi_sorular') && (() => {
                 const url = `${pathFor('olasi_sorular')}?kurul=${kurul}`;
                 const it = NAV_ITEMS.olasi_sorular;
                 return (

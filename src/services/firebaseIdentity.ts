@@ -60,11 +60,33 @@ export function bearerToken(req: express.Request): string {
 /**
  * Jeton yoksa { user: null }; jeton var ama geçersizse { invalid: true } (istemci yeniden giriş yapmalı).
  */
-export async function requestUser(req: express.Request): Promise<{ user: VerifiedUser | null; invalid?: boolean }> {
+export async function requestUser(req: express.Request): Promise<{ user: VerifiedUser | null; invalid?: boolean; revoked?: boolean }> {
   const token = bearerToken(req);
   if (!token) return { user: null };
   const user = await verifyFirebaseIdToken(token);
-  return user ? { user } : { user: null, invalid: true };
+  if (!user) return { user: null, invalid: true };
+  // Yönetici "oturumları sonlandır" dediyse: o andan önce açılmış girişin jetonları (yenilense de auth_time aynı kalır) reddedilir
+  if (oturumIptali) {
+    const iptal = oturumIptali(user.uid);
+    if (iptal && jetonGirisZamani(token) * 1000 < iptal) return { user: null, invalid: true, revoked: true };
+  }
+  return { user };
+}
+
+/** Jetonun giriş zamanı (auth_time, sn). Jeton zaten Google'da doğrulandı; burada yalnız yük okunur. */
+export function jetonGirisZamani(token: string): number {
+  try {
+    const yuk = JSON.parse(Buffer.from(token.split('.')[1] || '', 'base64url').toString('utf8'));
+    return Number(yuk.auth_time || yuk.iat) || 0;
+  } catch {
+    return 0;
+  }
+}
+
+/** uid → oturum sonlandırma zamanı (ms) ya da null. userAdminRoutes kurar (users.json `sessionsRevokedAt`). */
+let oturumIptali: ((uid: string) => number | null) | null = null;
+export function oturumIptaliKur(fn: (uid: string) => number | null) {
+  oturumIptali = fn;
 }
 
 /** Hesaba bağlı not defterinin sunucu tarafı kodu (istemci bilmez; yalnız doğrulanmış jetondan türetilir). */

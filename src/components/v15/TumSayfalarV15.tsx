@@ -1,4 +1,5 @@
 import React, { useMemo, useState } from 'react';
+import { useSiteAyar } from '../../services/siteAyar';
 import { ChevronRight, Search, X } from 'lucide-react';
 import { linkClick, pathFor, type AppRoute } from '../../router';
 import { aktifKurul, sinavaKalanGun } from '../../services/kurulTakvimi';
@@ -20,7 +21,9 @@ const ad = (it: NavItem) => (it.short && it.label.length > 16 ? it.short : it.la
 
 export function TumSayfalarV15({ active, onGo, isAdmin, araclar }: { active: AppRoute; onGo: (r: AppRoute) => void; isAdmin: boolean; araclar: Arac[] }) {
   const [q, setQ] = useState('');
-  const gruplar = useMemo(() => menuGruplari(isAdmin), [isAdmin]);
+  // Site ayarı değişince menü yeniden süzülür (services/siteAyar)
+  const siteAyarSurum = useSiteAyar();
+  const gruplar = useMemo(() => menuGruplari(isAdmin), [isAdmin, siteAyarSurum]);
   const son = useMemo(() => sonSayfalar().map((r) => NAV_ITEMS[r]).filter((x): x is NavItem => !!x).slice(0, 6), []);
   const k = aktifKurul();
   const kalan = sinavaKalanGun();

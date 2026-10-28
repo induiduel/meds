@@ -3,7 +3,7 @@
  * Firebase kimlik jetonu (Authorization: Bearer) eklenir; sunucu moderatörü yalnız bu jetondan tanır.
  * Bu modül yetki vermez; yalnız gösterim ve jeton ekleme içindir. Asıl denetim sunucudadır (moderatorAccess.ts).
  */
-import { auth } from './auth';
+import { auth, logout } from './auth';
 
 export type AccessRole = 'student' | 'moderator' | 'admin';
 export interface MyAccess {
@@ -28,6 +28,12 @@ export async function fetchMyAccess(): Promise<MyAccess | null> {
     const res = await fetch('/api/me/access', { headers: { Authorization: `Bearer ${token}`, Accept: 'application/json' }, cache: 'no-store' });
     if (!res.ok) return null;
     const d = await res.json();
+    // Yönetici bu cihazdaki oturumu sonlandırdı (Kullanıcılar › Erişim): çıkış yap, giriş ekranına dön
+    if (d?.oturumSonlandirildi) {
+      try { await logout(); } catch { /* */ }
+      window.location.reload();
+      return null;
+    }
     const role: AccessRole = d?.role === 'admin' || d?.role === 'moderator' ? d.role : 'student';
     return { role, suspended: !!d?.suspended };
   } catch {

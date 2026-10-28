@@ -7,6 +7,10 @@
 import fs from 'fs';
 import path from 'path';
 import type { QuizQuestion } from '../../types/quiz';
+import { bayrakAcik } from '../yonetim16/siteAyar';
+
+/** Kaynak (branş) panelden kapatılabilir: bayrak `oyun_kaynak_<brans>` = false (Yönetim › Oyunlar › Soru kaynakları) */
+export const kaynakAcik = (brans: string) => bayrakAcik(`oyun_kaynak_${brans}`);
 
 interface CSoru { no: number; soru: string; secenekler: Record<string, string>; dogru: string; siklar?: Record<string, string>; ipucu?: string; zorluk?: string; gorsel?: string }
 interface CDers { kod: string; no?: number; baslik: string; sorular: CSoru[] }
@@ -49,9 +53,9 @@ function yukle(): Map<string, CDers[]> {
   return v;
 }
 
-export function oyunKaynaklari(): OyunKaynak[] {
+export function oyunKaynaklari(tumu = false): (OyunKaynak & { acik: boolean })[] {
   const adlar = bransAdlari();
-  return [...yukle()].map(([brans, dersler]) => {
+  return [...yukle()].filter(([brans]) => tumu || kaynakAcik(brans)).map(([brans, dersler]) => {
     const k = /^k(\d+)(.+)$/.exec(brans);
     const slug = k ? k[2] : brans;
     return {
@@ -61,6 +65,7 @@ export function oyunKaynaklari(): OyunKaynak[] {
       ders: dersler.map((d) => ({ kod: String(d.kod), baslik: d.baslik, n: d.sorular.length })),
       n: dersler.reduce((a, d) => a + d.sorular.length, 0),
       gorselN: dersler.reduce((a, d) => a + d.sorular.filter(gorselli).length, 0),
+      acik: kaynakAcik(brans),
     };
   }).sort((a, b) => b.kurul - a.kurul || b.n - a.n);
 }
@@ -73,6 +78,7 @@ const karistir = <T,>(a: T[]): T[] => {
 
 /** brans (zorunlu), ders kodu (isteğe bağlı), n soru (3–20) → QuizQuestion listesi; kaynak yoksa boş */
 export function oyunSorulari(brans: string, ders: string | undefined, n: number, yalnizGorselli = false): QuizQuestion[] {
+  if (!kaynakAcik(brans)) return [];
   const dersler = (yukle().get(brans) || []).filter((d) => !ders || String(d.kod) === ders);
   const havuz = dersler.flatMap((d) => d.sorular.filter((s) => !yalnizGorselli || gorselli(s)).map((s) => ({ d, s })));
   const adet = Math.max(3, Math.min(20, Math.round(n) || 10));

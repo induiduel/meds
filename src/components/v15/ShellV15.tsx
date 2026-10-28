@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { useSiteAyar } from '../../services/siteAyar';
 import { createPortal } from 'react-dom';
 import { CdYanKapsul } from '../canliDers/CdSesliEk';
 import {
@@ -178,7 +179,9 @@ export const SideNavV15: React.FC<SideNavProps> = ({ active, onGo, isAdmin, user
   const [railMenu, setRailMenu] = useState(false);
   useEffect(() => setRailMenu(false), [active]);
   const railAraclar = useAraclar(() => setRailMenu(false));
-  const gruplar = React.useMemo(() => menuGruplari(isAdmin), [isAdmin]);
+  // Site ayarı değişince menü yeniden süzülür (services/siteAyar)
+  const siteAyarSurum = useSiteAyar();
+  const gruplar = React.useMemo(() => menuGruplari(isAdmin), [isAdmin, siteAyarSurum]);
   const aktifGrup = menuGrubuOf(active, gruplar);
   const [acik, setAcik] = useState<string[]>(() => acikOku() || []);
   const [appFs, toggleAppFs] = useAppFullscreen();

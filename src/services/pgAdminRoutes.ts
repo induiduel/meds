@@ -260,6 +260,8 @@ export function registerPgAdminRoutes(app: express.Express, deps: { adminEmail: 
   app.delete('/api/admin/pg/row', async (req, res) => {
     if (!(await guard(req, res))) return;
     try {
+      // Tehlikeli: çift onay (istemci yazılı onay + gövdede sözcük)
+      if (req.body?.onay !== 'SIL') return res.status(400).json({ error: 'Satır silmek için onay sözcüğü (SIL) gerekli.' });
       const t = await tableOf(req.body?.table);
       const w = whereOf(t, req.body?.key || {}, 0);
       const r = await pgDb.query(`delete from ${qi(t.name)} where ${w.sql}`, w.values);
@@ -271,18 +273,41 @@ export function registerPgAdminRoutes(app: express.Express, deps: { adminEmail: 
     }
   });
 
+  // Salt okunur rol (idempotent): NOLOGIN + pg_read_all_data; yazma/süper kullanıcı işlevi yok
+  let rolHazir = false;
+  const saltOkurRol = async () => {
+    if (rolHazir) return true;
+    try {
+      await pgDb.query(`do $$ begin
+        if not exists (select 1 from pg_roles where rolname = 'meds_salt_okur') then create role meds_salt_okur nologin nosuperuser inherit; end if;
+        grant pg_read_all_data to meds_salt_okur;
+        grant usage on schema public to meds_salt_okur;
+      end $$`);
+      rolHazir = true;
+    } catch (e: any) { console.warn('[DB gezgini] salt okunur rol:', e?.message); }
+    return rolHazir;
+  };
+
   // Salt okunur SQL: READ ONLY işlem + 10 sn zaman aşımı + en çok 1000 satır
   app.post('/api/admin/pg/sql', async (req, res) => {
     if (!(await guard(req, res))) return;
     const sql = String(req.body?.sql || '').trim().replace(/;\s*$/, '');
     if (!sql) return res.status(400).json({ error: 'Sorgu boş.' });
     if (sql.includes(';')) return res.status(400).json({ error: 'Tek sorgu çalıştırılabilir (noktalı virgül yok).' });
+    // Yalnız okuma deyimleri: COPY … TO PROGRAM, DO, SET/RESET ROLE, CALL vb. READ ONLY işlemde bile tehlikelidir (bağlantı süper kullanıcı)
+    const ilk = sql.replace(/^(\s|--[^\n]*\n|\/\*[\s\S]*?\*\/)+/, '').split(/[\s(]/)[0].toLowerCase();
+    if (!['select', 'with', 'explain', 'values', 'table', 'show'].includes(ilk)) return res.status(400).json({ error: 'Yalnız okuma sorgusu çalıştırılabilir (SELECT, WITH, EXPLAIN, VALUES, TABLE, SHOW).' });
+    if (/\b(copy|pg_read_file|pg_read_binary_file|pg_ls_dir|lo_import|lo_export|lo_get|dblink\w*|pg_terminate_backend|pg_cancel_backend|pg_reload_conf|pg_rotate_logfile|set_config|pg_sleep\w*|pg_advisory\w*|pg_promote|pg_stat_file|pg_authid|pg_shadow|pg_user_mappings?|pg_hba_file_rules|pg_file_settings)\b/i.test(sql))
+      return res.status(400).json({ error: 'Bu sorguda izin verilmeyen bir işlev var (dosya, süreç, oturum ayarı ya da kilit işlevi).' });
+    if (!(await saltOkurRol())) return res.status(503).json({ error: 'Salt okunur veritabanı rolü kurulamadı; SQL konsolu kapalı.' });
     const { pgPool } = await import('./pgDb');
     const client = await pgPool.connect();
     const t0 = Date.now();
     try {
       await client.query('begin read only');
       await client.query(`set local statement_timeout = 10000`);
+      // Süper kullanıcı yetkisi düşürülür: yalnız pg_read_all_data üyesi, giriş yapamayan rol (işlem sonunda geri döner)
+      await client.query(`set local role meds_salt_okur`);
       const r = await client.query({ text: sql, rowMode: 'array' });
       await client.query('rollback');
       const fields = (r.fields || []).map((f: any) => f.name);

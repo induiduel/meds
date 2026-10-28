@@ -232,6 +232,9 @@ function parseYouTubeUrl(input: string): { videoId?: string; listId?: string } |
 export type ReviewStatus = '' | 'onayli' | 'inceleme' | 'sorunlu';
 export interface Annotation { status: ReviewStatus; tags: string[]; note: string; updatedAt: string; by?: string }
 
+/** Yönetim v16 bağdaştırıcısı (src/services/yonetim16/icerik.ts) için varlık tanımlarına salt erişim; kayıt yolları aynı kalır. */
+export let katalogErisimi: { varliklar: any[]; annAll: () => Record<string, Record<string, Annotation>>; onChange?: (entity: string, ids?: string[]) => void } | null = null;
+
 export function registerDataCatalogRoutes(app: express.Express, requireAdmin: express.RequestHandler, deps: CatalogDeps) {
   const SRC = path.join(deps.rootDir, 'src', 'data');
   const BACKUP = path.join(deps.dataDir, 'backups', 'catalog');
@@ -661,6 +664,7 @@ export function registerDataCatalogRoutes(app: express.Express, requireAdmin: ex
     },
   });
   const byId = (id: string) => ENTITIES.find((e) => e.id === id);
+  katalogErisimi = { varliklar: ENTITIES, annAll, onChange: deps.onChange };
 
   /* ---------- şablonlar: yeni kayıt + çoğaltma (yalnız düzenlenebilir kaynaklar) ---------- */
   const facetValues = (entity: string, k: string) => () => {

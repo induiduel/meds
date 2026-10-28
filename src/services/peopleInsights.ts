@@ -22,6 +22,9 @@ import path from 'path';
 import { pgDb } from './pgDb';
 import { requestUser } from './firebaseIdentity';
 import { notificationLinkFor } from './notificationLinks';
+import { listeSorgusu, diziSayfala } from './yonetim16/sayfalama';
+import { denetimHedef, denetimFark } from './yonetim16/denetim';
+import { isProtectedProgressKey } from './userKvSync';
 
 type Any = Record<string, any>;
 
@@ -41,6 +44,8 @@ export interface PeopleDeps {
   /** Sıralama hesap bağı (başarım motoru): kaynak → asıl hesap uid'i, null bağı kaldırır */
   hesapBagi?: (uid: string) => string | null;
   hesapBirlestir?: (kaynakUid: string, hedefUid: string | null) => void;
+  /** Yönetim v16 süzgeçleri: başarım motorundaki profil (dönem/kurul/üniversite/gizlilik) */
+  basarimProfil?: (uid: string) => { donem: number | null; kurul: number | null; universite: string; gizli: boolean } | null;
 }
 
 const clip = (v: unknown, n: number) => String(v ?? '').replace(/\s+/g, ' ').trim().slice(0, n);
@@ -1025,6 +1030,8 @@ export function registerPeopleInsights(app: express.Express, deps: PeopleDeps) {
     if (!(await guard(req, res))) return;
     try {
       res.setHeader('Cache-Control', 'no-store');
+      // Yönetim v16: ?sayfa / ?boyut verilirse sunucu sayfalı ListeYaniti (eski v14 biçimi parametresiz kalır)
+      if (req.query.sayfa !== undefined || req.query.boyut !== undefined) return res.json(await sayfaliListe(req));
       res.json(await buildList());
     } catch (e: any) {
       res.status(500).json({ error: e?.message || String(e) });
@@ -1045,6 +1052,22 @@ export function registerPeopleInsights(app: express.Express, deps: PeopleDeps) {
         })
         .filter((x) => Object.keys(x.konular).length);
       res.setHeader('Cache-Control', 'no-store');
+      if (req.query.sayfa !== undefined || req.query.boyut !== undefined) {
+        // Sayfalı (v16): satır başına özet; konular yalnız ?konular=1 ile (?modul= ile süzülür)
+        const s = listeSorgusu(req, { varsayilanBoyut: 50, enFazla: 200 });
+        const tumKonular = req.query.konular === '1';
+        const modulSuz = String(req.query.modul || '');
+        return res.json({
+          at: new Date().toISOString(),
+          ...diziSayfala(kisiler, s, {
+            araMetni: (x) => `${x.ad} ${x.email || ''} ${x.key}`,
+            siralayicilar: { ad: (x) => x.ad || '', sn: (x) => x.ozet.sn, haftaSn: (x) => x.ozet.haftaSn, konu: (x) => x.ozet.konu, bitti: (x) => x.ozet.bitti, son: (x) => x.ozet.son || '' },
+            suzgecler: { tur: (x, v) => x.kind === v, modul: (x, v) => Object.keys(x.konular).some((id) => id.startsWith(`${v}:`)) },
+            yuzler: { tur: (x) => x.kind },
+            eslestir: (x) => ({ ...x, konuSay: Object.keys(x.konular).length, konular: tumKonular ? (modulSuz ? Object.fromEntries(Object.entries(x.konular).filter(([id]) => id.startsWith(`${modulSuz}:`))) : x.konular) : undefined }),
+          }),
+        });
+      }
       res.json({ at: new Date().toISOString(), kisiler });
     } catch (e: any) {
       res.status(500).json({ error: e?.message || String(e) });
@@ -1274,6 +1297,290 @@ export function registerPeopleInsights(app: express.Express, deps: PeopleDeps) {
       deps.hesapBirlestir(p.uid, h.uid);
       invalidate();
       res.json({ success: true, aktarim });
+    } catch (e: any) {
+      res.status(500).json({ error: e?.message || String(e) });
+    }
+  });
+
+  /* ================= Yönetim v16 › Kullanıcılar ================= */
+  // Liste: hesaplama pahalı (katkılar tüm soruları tarar). Bayat-iken-tazele: son liste 2 dk içinde ise hemen döner,
+  // arkada tek uçuşta yeniden hesaplanır → sayfa/süzgeç/arama istekleri <300 ms. (2 dk yerine 15 dk pencere: arka tazeleme her istekte)
+  let sonListe: { at: number; data: Any } | null = null;
+  let hesaplaniyor: Promise<Any> | null = null;
+  const listeTaze = async (): Promise<Any> => {
+    if (listCache && Date.now() - listCache.at < 4000) return listCache.data;
+    const hesapla = () => (hesaplaniyor ||= buildList().then((d) => { sonListe = { at: Date.now(), data: d }; return d; }).finally(() => { hesaplaniyor = null; }));
+    if (sonListe && Date.now() - sonListe.at < 15 * 60_000) { void hesapla().catch(() => 0); return sonListe.data; }
+    return hesapla();
+  };
+  // Açılışta ısıt: ilk liste isteği de soğuk hesaplamayı beklemesin
+  setTimeout(() => { void listeTaze().catch(() => 0); }, 20_000).unref?.();
+  const GUN = 86400_000;
+  const etkinlikOf = (r: Any): string => {
+    if (r.online) return 'cevrimici';
+    const t = r.lastSeen ? Date.now() - Date.parse(r.lastSeen) : Infinity;
+    return t < GUN ? 'bugun' : t < 7 * GUN ? 'hafta' : t < 30 * GUN ? 'ay' : 'pasif';
+  };
+  const sayfaliListe = async (req: express.Request) => {
+    const data = await listeTaze();
+    const s = listeSorgusu(req, { varsayilanBoyut: 50, enFazla: 500 });
+    const kullanicilar = new Map<string, Any>();
+    try { for (const u of deps.loadUsers() || []) if (u?.uid) kullanicilar.set(String(u.uid), u); } catch { /* */ }
+    const zengin = (data.people as Any[]).map((r) => {
+      const pr = r.uid ? deps.basarimProfil?.(r.uid) || null : null;
+      const u = r.uid ? kullanicilar.get(r.uid) : null;
+      const sus = u?.suspension;
+      const askida = !!(sus?.active && (!sus.until || Date.parse(sus.until) > Date.now()));
+      return {
+        key: r.key, kind: r.kind, agent: r.agent, agentNote: r.agentNote, uid: r.uid, email: r.email, name: r.name, studentNumber: r.studentNumber,
+        role: r.kind === 'account' ? (lc(r.email) === lc(deps.adminEmail) ? 'admin' : u?.role || r.role || 'student') : 'guest',
+        photoURL: r.photoURL, createdAt: r.createdAt, lastSeen: r.lastSeen, online: r.online, deviceCount: r.deviceCount, deviceNames: r.deviceNames,
+        totalSeconds: r.totalSeconds, weekSeconds: r.weekSeconds, accuracy: r.accuracy, testCount: r.testCount, counts: r.counts,
+        study: r.study ? { sn: r.study.sn, haftaSn: r.study.haftaSn, konu: r.study.konu, bitti: r.study.bitti, soru: r.study.soru } : null,
+        donem: pr?.donem ?? null, kurul: pr?.kurul ?? null, universite: pr?.universite || '', gizli: !!pr?.gizli, askida,
+        etkinlik: etkinlikOf(r),
+      };
+    });
+    const turOf = (r: Any) => (r.agent !== 'insan' ? 'makine' : r.kind === 'account' ? 'hesap' : 'misafir');
+    // Süzgeç verilmediyse makine/boş kayıtlar gizli (v14 ile aynı)
+    const liste = s.suzgec.tur ? zengin : zengin.filter((r) => r.agent === 'insan');
+    const out = diziSayfala(liste, s, {
+      araMetni: (r) => `${r.name} ${r.email || ''} ${r.studentNumber || ''} ${r.uid || ''} ${r.key} ${r.universite} ${(r.deviceNames || []).join(' ')}`,
+      siralayicilar: {
+        son: (r) => r.lastSeen || '', ad: (r) => lc(r.name), hafta: (r) => r.weekSeconds || 0, toplam: (r) => r.totalSeconds || 0,
+        calisma: (r) => r.study?.sn || 0, katki: (r) => r.counts?.events || 0, kurul: (r) => r.kurul ?? -1, dogruluk: (r) => r.accuracy ?? -1,
+      },
+      suzgecler: {
+        tur: (r, v) => turOf(r) === v,
+        etkinlik: (r, v) => r.etkinlik === v || (v === 'hafta' && ['cevrimici', 'bugun'].includes(r.etkinlik)),
+        rol: (r, v) => r.role === v,
+        kurul: (r, v) => String(r.kurul ?? '') === v,
+        donem: (r, v) => String(r.donem ?? '') === v,
+        universite: (r, v) => r.universite === v,
+        askida: (r, v) => (v === '1') === r.askida,
+      },
+      yuzler: { tur: turOf, rol: (r) => r.role, etkinlik: (r) => r.etkinlik, kurul: (r) => (r.kurul == null ? undefined : String(r.kurul)), universite: (r) => r.universite || undefined },
+    });
+    return { ...out, toplamlar: data.totals, veritabani: data.database, at: data.at };
+  };
+
+  /** Kişi anahtarından eşleşme kimlikleri (u:/g:/d:/x: ya da çıplak uid/e-posta) */
+  const kimlikleri = async (key: string): Promise<{ p: Person | null; ids: string[]; emails: string[]; devIds: string[] }> => {
+    let p = kisiBul(key) || null;
+    let devIds: string[] = [];
+    let ids: string[] = [];
+    if (p) { ids = [...p.ids]; devIds = [...p.devs]; }
+    else if (key.startsWith('d:')) devIds = [key.slice(2)];
+    else if (key.startsWith('x:')) { const w = key.slice(2); if (w.startsWith('d:')) devIds = [w.slice(2)]; else ids = [w]; }
+    else return { p: null, ids: [], emails: [], devIds: [] };
+    const emails = ids.filter((x) => x.includes('@'));
+    if (deps.isPgOnline() && schemaReady && (ids.length || emails.length)) {
+      try {
+        const { rows } = await pgDb.query(`select device_id from user_devices where uid = any($1) or lower(email) = any($2) limit 100`, [ids, emails]);
+        devIds = [...new Set([...devIds, ...rows.map((r: Any) => r.device_id)])];
+      } catch { /* */ }
+    }
+    return { p, ids, emails, devIds };
+  };
+
+  // 360° › Etkinlik: imleçli zaman çizelgesi (id azalan). ?imlec=<son id>&boyut=&tur=
+  app.get('/api/admin/people/:key/olaylar', async (req, res) => {
+    if (!(await guard(req, res))) return;
+    try {
+      res.setHeader('Cache-Control', 'no-store');
+      if (!deps.isPgOnline() || !schemaReady) return res.json({ ogeler: [], sonraki: null, turler: [], veritabani: false });
+      const k = await kimlikleri(String(req.params.key));
+      if (!k.ids.length && !k.devIds.length) return res.status(404).json({ error: 'Kişi bulunamadı.' });
+      const boyut = Math.min(200, Math.max(1, Number(req.query.boyut) || 50));
+      const imlec = Number(req.query.imlec) || null;
+      const tur = req.query.tur ? String(req.query.tur).slice(0, 40) : null;
+      const kosul = `(uid = any($1) or lower(email) = any($2) or device_id = any($3))`;
+      const [{ rows }, t] = await Promise.all([
+        pgDb.query(`select id, kind, action, ref, label, body, link, device_id, at from user_events where ${kosul} and ($4::bigint is null or id < $4) and ($5::text is null or kind = $5) order by id desc limit $6`, [k.ids, k.emails, k.devIds, imlec, tur, boyut]),
+        imlec ? Promise.resolve({ rows: [] as Any[] }) : pgDb.query(`select kind, count(*)::int as n from user_events where ${kosul} group by kind order by 2 desc`, [k.ids, k.emails, k.devIds]),
+      ]);
+      res.json({ ogeler: rows, sonraki: rows.length === boyut ? rows[rows.length - 1].id : null, turler: t.rows, veritabani: true });
+    } catch (e: any) {
+      res.status(500).json({ error: e?.message || String(e) });
+    }
+  });
+
+  // Etkinlik günlüğü (tüm kullanıcılar): ?imlec=&boyut=&tur=&uid=&q=
+  let turSayimi: { at: number; rows: Any[] } | null = null;
+  app.get('/api/admin/events', async (req, res) => {
+    if (!(await guard(req, res))) return;
+    try {
+      res.setHeader('Cache-Control', 'no-store');
+      if (!deps.isPgOnline() || !schemaReady) return res.json({ ogeler: [], sonraki: null, turler: [], veritabani: false });
+      const boyut = Math.min(200, Math.max(1, Number(req.query.boyut) || 50));
+      const imlec = Number(req.query.imlec) || null;
+      const tur = req.query.tur ? String(req.query.tur).slice(0, 40) : null;
+      const kim = req.query.uid ? String(req.query.uid).slice(0, 200) : null;
+      const q = req.query.q ? `%${String(req.query.q).slice(0, 100).replace(/[%_\\]/g, (m) => `\\${m}`)}%` : null;
+      const { rows } = await pgDb.query(
+        `select id, uid, email, display_name, device_id, kind, action, ref, label, body, link, at from user_events
+          where ($1::bigint is null or id < $1) and ($2::text is null or kind = $2)
+            and ($3::text is null or uid = $3 or lower(email) = lower($3) or device_id = $3)
+            and ($4::text is null or label ilike $4 or body ilike $4 or display_name ilike $4 or email ilike $4)
+          order by id desc limit $5`,
+        [imlec, tur, kim, q, boyut],
+      );
+      if (!turSayimi || Date.now() - turSayimi.at > 60_000) {
+        turSayimi = { at: Date.now(), rows: (await pgDb.query(`select kind, count(*)::int as n from user_events group by kind order by 2 desc`)).rows };
+      }
+      // Satıra kişi anahtarı: panel 360° bağlantısı
+      const ps = people();
+      const ogeler = rows.map((r: Any) => {
+        const p = (r.uid && ps.find((x) => x.ids.has(r.uid))) || (r.email && ps.find((x) => x.ids.has(lc(r.email)))) || null;
+        return { ...r, kisi: p ? p.key : r.device_id ? `d:${r.device_id}` : null, ad: p?.name || r.display_name || null };
+      });
+      res.json({ ogeler, sonraki: rows.length === boyut ? rows[rows.length - 1].id : null, turler: turSayimi.rows, veritabani: true });
+    } catch (e: any) {
+      res.status(500).json({ error: e?.message || String(e) });
+    }
+  });
+
+  // 360° › Sosyal + erişim: arkadaşlar, sohbet üyelikleri, gizlilik, rol/askı/oturum, hesap bağı
+  app.get('/api/admin/people/:key/sosyal', async (req, res) => {
+    if (!(await guard(req, res))) return;
+    try {
+      res.setHeader('Cache-Control', 'no-store');
+      const k = await kimlikleri(String(req.params.key));
+      if (!k.p) return res.status(404).json({ error: 'Kişi bulunamadı.' });
+      const uids = k.ids.filter((x) => !x.includes('@'));
+      const ps = people();
+      const adOf = (uid: string) => ps.find((x) => x.ids.has(uid)) || null;
+      const q = async (sql: string, v: any[]) => { try { return (await pgDb.query(sql, v)).rows; } catch { return [] as Any[]; } };
+      const pg = deps.isPgOnline();
+      const [arkadas, odalar, durum] = pg ? await Promise.all([
+        q(`select gonderen, alan, durum, olusturma, guncelleme from arkadas_istek where gonderen = any($1) or alan = any($1) order by guncelleme desc limit 300`, [uids]),
+        q(`select o.id, o.tur, o.ad, o.son, o.olusturma, u.katilma, u.sessiz, u.okundu_zaman,
+                  (select count(*)::int from sohbet_uyeleri x where x.oda_id = o.id) as uye
+             from sohbet_uyeleri u join sohbet_odalari o on o.id = u.oda_id where u.uid = any($1) order by o.son desc limit 200`, [uids]),
+        q(`select uid, son, gizli from sohbet_durum where uid = any($1)`, [uids]),
+      ]) : [[], [], []];
+      const kendi = new Set(uids);
+      const u = (deps.loadUsers() || []).find((x) => kendi.has(String(x.uid)));
+      const pr = k.p.uid ? deps.basarimProfil?.(k.p.uid) || null : null;
+      const bag = k.p.uid && deps.hesapBagi ? deps.hesapBagi(k.p.uid) : null;
+      res.json({
+        arkadaslar: arkadas.map((r: Any) => {
+          const diger = kendi.has(r.gonderen) ? r.alan : r.gonderen;
+          const o = adOf(diger);
+          return { uid: diger, key: o?.key || null, ad: o?.name || diger, yon: kendi.has(r.gonderen) ? 'giden' : 'gelen', durum: r.durum, at: r.guncelleme };
+        }),
+        odalar,
+        gizlilik: {
+          profilGizli: !!pr?.gizli,
+          sonGorulmeGizli: durum.some((d: Any) => d.gizli),
+          sohbetSon: durum.reduce((m: string, d: Any) => (String(d.son || '') > m ? String(new Date(d.son).toISOString()) : m), '') || null,
+        },
+        profil: pr,
+        erisim: u ? {
+          uid: u.uid, role: lc(u.email) === lc(deps.adminEmail) ? 'admin' : u.role || 'student', isOwner: lc(u.email) === lc(deps.adminEmail),
+          suspension: u.suspension || null, oturumSonlandirAt: u.sessionsRevokedAt || null, accessHistory: Array.isArray(u.accessHistory) ? u.accessHistory.slice(-20).reverse() : [],
+        } : null,
+        bag: bag ? { uid: bag, key: adOf(bag)?.key || null, ad: adOf(bag)?.name || bag } : null,
+        veritabani: pg,
+      });
+    } catch (e: any) {
+      res.status(500).json({ error: e?.message || String(e) });
+    }
+  });
+
+  /* ---------- Profil verisi (kv) — anahtar bazında gör/düzenle/sil. Her okuma/yazma denetime düşer (KISISEL_OKUMA). ---------- */
+  const KV_ANAHTAR = /^[A-Za-z0-9_.:\-]{1,160}$/;
+  const KV_EN_FAZLA = 2_000_000;
+  const yedekBul = (key: string) => {
+    const p = kisiBul(key);
+    const file: string | undefined = p?.backup?.__file;
+    return p && file ? { p, file } : null;
+  };
+  /** Yedek dosyasını kilitsiz ama atomik günceller (geçici dosya + rename), sonra cihazlara user_data_changed */
+  const yedekGuncelle = (file: string, uid: string, fn: (b: Any) => void) => {
+    const fresh = JSON.parse(fs.readFileSync(file, 'utf8'));
+    fresh.kv = fresh.kv && typeof fresh.kv === 'object' ? fresh.kv : {};
+    fn(fresh);
+    fresh.serverSavedAt = new Date().toISOString();
+    const tmp = `${file}.${process.pid}.${Date.now()}.tmp`;
+    fs.writeFileSync(tmp, JSON.stringify(fresh), 'utf8');
+    fs.renameSync(tmp, file);
+    invalidate();
+    deps.onBackupEdited?.(String(fresh.uid || uid || ''), fresh);
+    return fresh;
+  };
+  app.get('/api/admin/user-data/:kisi', async (req, res) => {
+    if (!(await guard(req, res))) return;
+    try {
+      res.setHeader('Cache-Control', 'no-store');
+      const y = yedekBul(String(req.params.kisi));
+      if (!y) return res.status(404).json({ error: 'Bu kişinin profil yedeği yok.' });
+      const b = JSON.parse(fs.readFileSync(y.file, 'utf8'));
+      denetimHedef(res, `kisi:${y.p.uid || y.p.key}`);
+      const kv = b.kv && typeof b.kv === 'object' ? b.kv : {};
+      const ogeler = Object.entries<Any>(kv).map(([anahtar, r]) => {
+        const v = r?.v;
+        return { anahtar, at: r?.at || null, boyut: typeof v === 'string' ? v.length : 0, silindi: v === null, korumali: isProtectedProgressKey(anahtar), onizleme: typeof v === 'string' ? v.slice(0, 140) : null };
+      }).sort((a, c) => String(c.at || '').localeCompare(String(a.at || '')));
+      const ust = Object.entries<any>(b).filter(([k]) => k !== 'kv').map(([alan, v]) => ({ alan, boyut: JSON.stringify(v ?? null).length, tur: Array.isArray(v) ? `dizi (${v.length})` : typeof v }));
+      res.json({ uid: b.uid, email: b.email || null, verified: !!b.verified, serverSavedAt: b.serverSavedAt || null, ogeler, toplam: ogeler.length, ust });
+    } catch (e: any) {
+      res.status(500).json({ error: e?.message || String(e) });
+    }
+  });
+  app.get('/api/admin/user-data/:kisi/:anahtar', async (req, res) => {
+    if (!(await guard(req, res))) return;
+    try {
+      res.setHeader('Cache-Control', 'no-store');
+      const y = yedekBul(String(req.params.kisi));
+      if (!y) return res.status(404).json({ error: 'Bu kişinin profil yedeği yok.' });
+      const anahtar = String(req.params.anahtar);
+      denetimHedef(res, `kisi:${y.p.uid || y.p.key}:${anahtar}`);
+      const b = JSON.parse(fs.readFileSync(y.file, 'utf8'));
+      const r = b.kv?.[anahtar];
+      if (!r) return res.status(404).json({ error: 'Anahtar yok.' });
+      let json: unknown = undefined;
+      if (typeof r.v === 'string') { try { json = JSON.parse(r.v); } catch { /* düz metin */ } }
+      res.json({ anahtar, v: r.v ?? null, at: r.at || null, korumali: isProtectedProgressKey(anahtar), jsonMu: json !== undefined, json });
+    } catch (e: any) {
+      res.status(500).json({ error: e?.message || String(e) });
+    }
+  });
+  app.put('/api/admin/user-data/:kisi/:anahtar', async (req, res) => {
+    if (!(await guard(req, res))) return;
+    try {
+      const y = yedekBul(String(req.params.kisi));
+      if (!y) return res.status(404).json({ error: 'Bu kişinin profil yedeği yok.' });
+      const anahtar = String(req.params.anahtar);
+      if (!KV_ANAHTAR.test(anahtar)) return res.status(400).json({ error: 'Anahtar adı geçersiz (harf, rakam, _ . : - ; en çok 160).' });
+      const body: Any = req.body || {};
+      const deger = body.json !== undefined ? JSON.stringify(body.json) : body.deger;
+      if (typeof deger !== 'string') return res.status(400).json({ error: 'deger (metin) ya da json gönderin.' });
+      if (deger.length > KV_EN_FAZLA) return res.status(400).json({ error: 'Değer 2 MB sınırını aşıyor.' });
+      denetimHedef(res, `kisi:${y.p.uid || y.p.key}:${anahtar}`);
+      let once: string | null = null;
+      const at = new Date().toISOString();
+      yedekGuncelle(y.file, y.p.uid || '', (b) => { once = b.kv[anahtar]?.v ?? null; b.kv[anahtar] = { v: deger, at }; });
+      denetimFark(res, { v: once === null ? null : String(once).slice(0, 400) }, { v: deger.slice(0, 400) });
+      res.json({ success: true, anahtar, at });
+    } catch (e: any) {
+      res.status(500).json({ error: e?.message || String(e) });
+    }
+  });
+  app.delete('/api/admin/user-data/:kisi/:anahtar', async (req, res) => {
+    if (!(await guard(req, res))) return;
+    try {
+      const y = yedekBul(String(req.params.kisi));
+      if (!y) return res.status(404).json({ error: 'Bu kişinin profil yedeği yok.' });
+      const anahtar = String(req.params.anahtar);
+      if (isProtectedProgressKey(anahtar)) return res.status(400).json({ error: 'Birikimli ilerleme anahtarı silinemez (cihazlar geri yazar). Değeri düzenleyin.' });
+      denetimHedef(res, `kisi:${y.p.uid || y.p.key}:${anahtar}`);
+      const mevcut = JSON.parse(fs.readFileSync(y.file, 'utf8'))?.kv?.[anahtar];
+      if (!mevcut || mevcut.v === null) return res.status(404).json({ error: 'Anahtar yok.' });
+      // Mezar taşı (v:null): cihazlardaki kopya da LWW ile silinir
+      yedekGuncelle(y.file, y.p.uid || '', (b) => { b.kv[anahtar] = { v: null, at: new Date().toISOString() }; });
+      denetimFark(res, { v: String(mevcut.v).slice(0, 400) }, { v: null });
+      res.json({ success: true });
     } catch (e: any) {
       res.status(500).json({ error: e?.message || String(e) });
     }

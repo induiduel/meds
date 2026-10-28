@@ -14,17 +14,18 @@ import path from 'path';
 type Mw = (req: express.Request, res: express.Response, next: express.NextFunction) => void;
 
 export type BakimDenetleyici = {
-  durum: () => { bakim: boolean; sure?: string };
+  durum: () => { bakim: boolean; sure?: string; mesaj?: string };
   /** Bakımı aç/kapa (site-ayar kalıcılığı bunu açılışta çağırır) */
-  ayarla: (acik: boolean, sure?: string) => void;
+  ayarla: (acik: boolean, sure?: string, mesaj?: string) => void;
   /** POST /api/admin/bakim sonrası çağrılır (yonetim16/siteAyar kalıcı yazar) */
-  onDegisti?: (d: { bakim: boolean; sure?: string }) => void;
+  onDegisti?: (d: { bakim: boolean; sure?: string; mesaj?: string }) => void;
 };
 
 export function registerBakimHataRoutes(app: express.Express, opts: { dataDir: string; requireAdmin: Mw }): BakimDenetleyici {
   let bakim = process.env.MEDS_BAKIM === '1';
   let sure: string | undefined = process.env.MEDS_BAKIM_SURE || undefined;
-  const durum = () => ({ bakim, ...(bakim && sure ? { sure } : {}) });
+  let mesaj: string | undefined;
+  const durum = () => ({ bakim, ...(bakim && sure ? { sure } : {}), ...(bakim && mesaj ? { mesaj } : {}) });
 
   app.use((req, res, next) => {
     if (!bakim || !req.path.startsWith('/api/')) return next();
@@ -35,7 +36,7 @@ export function registerBakimHataRoutes(app: express.Express, opts: { dataDir: s
 
   const ctl: BakimDenetleyici = {
     durum,
-    ayarla: (acik, s) => { bakim = acik; sure = acik && s ? String(s).slice(0, 40) : undefined; },
+    ayarla: (acik, s, m) => { bakim = acik; sure = acik && s ? String(s).slice(0, 40) : undefined; mesaj = acik && m ? String(m).slice(0, 300) : undefined; },
   };
 
   app.get('/api/bakim', (_req, res) => {
@@ -46,6 +47,7 @@ export function registerBakimHataRoutes(app: express.Express, opts: { dataDir: s
   app.post('/api/admin/bakim', opts.requireAdmin, (req, res) => {
     bakim = req.body?.acik === true;
     sure = typeof req.body?.sure === 'string' && req.body.sure.trim() ? String(req.body.sure).slice(0, 40) : undefined;
+    mesaj = typeof req.body?.mesaj === 'string' && req.body.mesaj.trim() ? String(req.body.mesaj).slice(0, 300) : undefined;
     console.log(`[bakim] ${bakim ? 'AÇIK' : 'kapalı'}${sure ? ` (${sure})` : ''}`);
     try { ctl.onDegisti?.(durum()); } catch (e: any) { console.warn('[bakim] kalıcı yazılamadı:', e?.message); }
     res.json(durum());

@@ -54,7 +54,7 @@ import {
 } from 'lucide-react';
 import type React from 'react';
 import type { AppRoute } from '../../router';
-import { GIZLI_SAYFALAR } from '../merkez/merkezModel';
+import { menudeGorunur, siteAyarAbone } from '../../services/siteAyar';
 
 /**
  * v8 kabuğunun tek gezinme modeli: kenar menüsü, alt gezinme ve "Daha" sayfası buradan beslenir.
@@ -150,7 +150,7 @@ export const NAV_ITEMS = I;
  * Öğrenciye kapatılan sayfalar (Sınav çalışması, Alternatif çözücü, Ders notları) menüde yoktur (merkezModel.KAPALI_SAYFALAR).
  * "Soru ekle" menünün tepesinde tek başına duran birincil düğmedir; telefonda alt gezinmenin ortasındadır.
  */
-const NAV_TREE_HAM: NavGroup[] = [
+export const NAV_TREE_HAM: NavGroup[] = [
   { label: null, items: [I.today] },
   { label: 'Ders çalış', items: [I.canli_ders, I.kmb_asistan, I.learn, I.summaries, I.flashcards, I.ders_programi] },
   { label: 'Soru çöz', items: [I.soru_cozucu, I.past_exams, I.practice, I.questions, I.ornek_sorular, I.olasi_sorular, I.yanlislarim, I.oyunlar, I.soru_haritasi] },
@@ -161,15 +161,14 @@ const NAV_TREE_HAM: NavGroup[] = [
   { label: 'Kişisel', items: [I.bitirdiklerim, I.cevrimdisi, I.study, I.stats, I.music, I.ilk_adimlar, I.arka_plan, I.dil_bolge, I.yardim] },
 ];
 
-export const NAV_TREE: NavGroup[] = NAV_TREE_HAM
-  .map((g) => ({ ...g, items: g.items.filter((it) => !GIZLI_SAYFALAR.has(it.id)) }))
-  .filter((g) => g.items.length > 0);
+/** Çalışma anında süzülür (services/siteAyar menudeGorunur; panel › Site › Görünürlük). Dizi yerinde güncellenir. */
+export const NAV_TREE: NavGroup[] = [];
 
 /** Telefonda alt gezinmede doğrudan duran sayfalar (v10 sıra: Ekle · Öğren · Havuz · Çıkmış); gerisi "Daha" sayfasında */
 export const TAB_ITEMS: NavItem[] = [I.quick_add, I.learn, I.questions, I.past_exams];
 
 /** "Daha" sayfası: alt gezinmede olmayanlar, aynı gruplar ve sırayla */
-export const MORE_TREE: NavGroup[] = NAV_TREE.map((g) => ({ ...g, items: g.items.filter((it) => !TAB_ITEMS.includes(it)) })).filter((g) => g.items.length > 0);
+export const MORE_TREE: NavGroup[] = [];
 
 /**
  * v12 "Net" gezinmesi (components/v12/ShellV12). Kenar menüsü NAV_TREE gruplarını aynı adlarla gösterir; her grupta
@@ -187,11 +186,22 @@ const V12_RAIL_IDS = new Set<AppRoute>([
 ]);
 const grupSuz = (keep: (it: NavItem) => boolean): NavGroup[] =>
   NAV_TREE.map((g) => ({ ...g, items: g.items.filter(keep) })).filter((g) => g.items.length > 0);
-export const V12_RAIL: NavGroup[] = grupSuz((it) => V12_RAIL_IDS.has(it.id));
-export const V12_RAIL_MORE: NavGroup[] = grupSuz((it) => !V12_RAIL_IDS.has(it.id));
+export const V12_RAIL: NavGroup[] = [];
+export const V12_RAIL_MORE: NavGroup[] = [];
 export const V12_TABS: NavItem[] = [I.today, I.learn, I.quick_add, I.past_exams];
 /** Telefonda alt çubuğa konabilen / ızgarada duran her sayfa (Soru ekle ve Ayarlar hariç) */
-export const V12_PHONE_PAGES: NavItem[] = NAV_TREE.flatMap((g) => g.items);
+export const V12_PHONE_PAGES: NavItem[] = [];
+
+const yerine = <T,>(a: T[], b: T[]) => { a.splice(0, a.length, ...b); };
+function menuSuz() {
+  yerine(NAV_TREE, NAV_TREE_HAM.map((g) => ({ ...g, items: g.items.filter((it) => menudeGorunur(it.id)) })).filter((g) => g.items.length > 0));
+  yerine(MORE_TREE, NAV_TREE.map((g) => ({ ...g, items: g.items.filter((it) => !TAB_ITEMS.includes(it)) })).filter((g) => g.items.length > 0));
+  yerine(V12_RAIL, grupSuz((it) => V12_RAIL_IDS.has(it.id)));
+  yerine(V12_RAIL_MORE, grupSuz((it) => !V12_RAIL_IDS.has(it.id)));
+  yerine(V12_PHONE_PAGES, NAV_TREE.flatMap((g) => g.items));
+}
+menuSuz();
+siteAyarAbone(menuSuz);
 /**
  * Telefon "Tüm sayfalar" ızgarası: kenar menüsüyle aynı gruplar. Alt çubuk kişiselleştirilebildiği için (shell/phoneNav)
  * o an alt çubukta duranlar `exclude` ile çıkarılır; grupsuz "Bugün" ilk gruba katılır.

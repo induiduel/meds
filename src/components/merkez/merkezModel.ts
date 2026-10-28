@@ -6,12 +6,8 @@
 import type { AppRoute } from '../../router';
 import type { KategoriId } from '../../siteHaritasi';
 
-/** Gizlenenler (2026-10-27, kullanıcı kararı): menüden/merkezden kalkar, öğrenci adresle girse Bugün'e yönlenir; yönetici açabilir.
- *  Soru ekle (ana ekran) sınav günü açılır; Kurul 1 check-up/kamp, olası sorular, soru havuzu, kurul kampı, son prova, sınav spotları, ders özetleri. */
-export const GIZLI_SAYFALAR = new Set<AppRoute>([
-  'quick_add', 'genetik_checkup', 'patoloji_checkup', 'olasi_sorular', 'questions', 'matrix',
-  'kamp', 'son_prova', 'spots', 'summaries',
-]);
+import { menudeGorunur, siteAyarAbone } from '../../services/siteAyar';
+export { GIZLI_SAYFALAR, KAPALI_SAYFALAR } from './sayfaSabitleri';
 
 export interface MerkezArac {
   id: AppRoute;
@@ -61,8 +57,10 @@ const MERKEZ_HAM: Record<KategoriId, MerkezArac[]> = {
   ],
 };
 
+/** Çalışma anında süzülür (services/siteAyar menudeGorunur): panelde gizlenen sayfa merkezden de kalkar.
+ *  Diziler yerinde güncellenir; tüketen bileşenler useSiteAyar ile yeniden çizilir. */
 export const MERKEZ_ARACLARI = Object.fromEntries(
-  Object.entries(MERKEZ_HAM).map(([k, l]) => [k, l.filter((a) => !GIZLI_SAYFALAR.has(a.id))]),
+  Object.keys(MERKEZ_HAM).map((k) => [k, [] as MerkezArac[]]),
 ) as Record<KategoriId, MerkezArac[]>;
 
 /** Check Up sınamaları: kamplar merkezinde ayrı sekme; her biri kendi adresinde */
@@ -78,7 +76,16 @@ const CHECKUP_HAM: CheckUpTanim[] = [
   },
 ];
 
-export const CHECKUPLAR: CheckUpTanim[] = CHECKUP_HAM.filter((c) => !GIZLI_SAYFALAR.has(c.route));
+export const CHECKUPLAR: CheckUpTanim[] = [];
+
+function merkezSuz() {
+  for (const [k, l] of Object.entries(MERKEZ_HAM) as [KategoriId, MerkezArac[]][]) {
+    MERKEZ_ARACLARI[k].splice(0, MERKEZ_ARACLARI[k].length, ...l.filter((a) => menudeGorunur(a.id)));
+  }
+  CHECKUPLAR.splice(0, CHECKUPLAR.length, ...CHECKUP_HAM.filter((c) => menudeGorunur(c.route)));
+}
+merkezSuz();
+siteAyarAbone(merkezSuz);
 
 /** PDF notlar: kamplar merkezinde (Hepsi + En önemliler) indirilebilir tek dosyalık özetler; dosya public/pdf/ */
 export interface PdfNotTanim { id: string; ad: string; alt: string; dosya: string; kurul: number; sayfa: number }
@@ -101,6 +108,4 @@ export const MERKEZ_ROUTE: Record<KategoriId, AppRoute> = {
   dersler: 'hub_dersler', sorular: 'hub_sorular', kamplar: 'hub_kamplar', kaynaklar: 'hub_kaynaklar',
 };
 
-/** Öğrenciye kapatılan sayfalar (2026-10-21, kullanıcı kararı): yalnız yönetici adresle açabilir */
-export const KAPALI_SAYFALAR = new Set<AppRoute>(['sinav_calisma', 'alternatif_cozucu', 'notes']);
 

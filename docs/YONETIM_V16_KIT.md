@@ -133,8 +133,14 @@ res.json({ ogeler: rows, toplam: c.rows[0].n, sayfa: s.sayfa, boyut: s.boyut });
 - Bakım: `PUT {bakim:{acik,sure}}` ya da eski `POST /api/admin/bakim` — ikisi de kalıcı; sunucu açılışta kalıcı durumu uygular.
 - İstemci: `sayfaGizli(route)`, `sayfaKapali(route)`, `bayrak(ad, varsayilan)`, `gorunurluk('ders:k2-07')`, `useSiteAyar()` (yeniden çizim).
   Açılışta localStorage'dan senkron okunur; derleme sabitleri (`GIZLI_SAYFALAR`/`KAPALI_SAYFALAR`) varsayılandır. App.tsx rota koruması buna bağlı.
-  **Açık iş (Site › Görünürlük ajanı):** menü listeleri (`shell/navModel.ts`, `merkez/merkezModel.ts` MERKEZ/CHECKUPLAR) modül sabitinde süzülüyor;
-  çalışma anı gizlemenin menüye de yansıması için onları `sayfaGizli` + `useSiteAyar` ile çizim anında süzün. Duyuru bandı da henüz çizilmiyor.
+  **Menü çalışma anında süzülür (2026-10-28):** `menudeGorunur(route)` — navModel (NAV_TREE/MORE_TREE/V12_*), merkezModel
+  (MERKEZ_ARACLARI/CHECKUPLAR) ve navV15 (V15_SECTIONS) dizileri `siteAyarAbone` ile YERİNDE yeniden hesaplanır; bileşen `useSiteAyar` ile çizilir.
+  Yeni sabit sayfa listesi yazan bileşen `menudeGorunur` ile süzmelidir (DerslerMerkezV15 ANA gibi). Derleme varsayılanları `merkez/sayfaSabitleri.ts`.
+  Sayfa durumları: `acik | gizli | kapali | yalniz-yonetici` (+ `menu[route]=false` yalnız menüden kaldırır). App.tsx: `sayfaYonlendir` → Bugün,
+  kapalıda içerik `gorunenTab` ile hiç kurulmaz. Duyuru bandı `components/system/DuyuruBandi.tsx` (baslangic/bitis/kurul/kapatilabilir).
+  **Bayraklar** (yoksa açık): sunucu kapısı `bayrakKapisi` (BAYRAKLAR + BAYRAK_UC: oyunlar, topluluk_sohbet, topluluk_mesaj, arkadaslik,
+  siralama_herkese, kayit_acik, not_paylas), istemci `BAYRAK_SAYFA` (sayfa gizleme), oyun: `oyun_mod_<id>`, `oyun_kaynak_<brans>`.
+  Uçlar: `GET /api/admin/site-ayar/bayraklar`, `GET /api/admin/site/surum`, `GET|DELETE /api/admin/quiz/odalar[/:id]`, `GET /api/admin/quiz/{kaynaklar,modlar}`.
 - Dağıtım: `data/content/site_ayar.json` [0b] eşitlemesiyle (`deploy/oracle/content-overlay-sync.sh`, katmandaki her .json) yerel
   `src/data/site_ayar.json`'a çekilir → commit'leyin. Yeni panel-yazılır içerik dosyası da aynı yolu izler: `src/data`'da varsayılan dosya
   (yoksa eşitleme DURUR) + `resolveContent`/`writableContent`.
@@ -151,3 +157,12 @@ Yeni sayaç: `registerOzetRoutes` bağımlılıklarına işlev ekleyin (server.t
 - LLM tetikleyen uç (kural 20): zamanlayıcı yok, yalnız elle; `llm_kilit` kurallarına uyun.
 - Kişisel veri okuması → `KISISEL_OKUMA` deseni.
 - Sunucu değişince `systemctl --user restart meds-web`; commit/dağıtım kullanıcıda.
+
+## 7. İçerik grupları (Kurullar ve dersler, Öğrenme, Kaynaklar — 2026-10-28)
+- Sunucu: `src/services/yonetim16/icerik.ts` (`registerIcerik16Routes`): `/api/admin/kurullar`, `/dersler[/:id]`, `/branslar`, `/sesli-dersler`,
+  `/spot-cozucu`, `/ders-icerik`, `/sinav-dagilimi`, `/k16/katalog/:varlik[/meta|/:id]` (katalog varlıkları `dataCatalogService.katalogErisimi`
+  üzerinden + `spot`, `kisaltma`, `terim`, `saglik` bağdaştırıcıları). Yazma yalnız tek kayıt; `data/content` + `atomikJsonGuncelle`, yedek `data/_yedek/<ad>`.
+- Kit: `KatalogSayfasi` (katalog varlığı için hazır liste + çekmece + form), `GorunurlukSecici`/`GorunurlukRozeti` (site-ayar `gorunurluk`
+  anahtarları: `ders:<id>`, `kurul:<n>`, `deste:<id>`, `sesli:<key>`, `paket:<key>`, `onem|asistan|cozucu:<dizin>/<kod>`).
+- Açık iş: bu anahtarlar şimdilik yalnız kaydediliyor; öğrenci tarafında süzme (Site › Görünürlük işi) henüz yok. Kurul takvimi, ders defteri
+  ve sınav dağılımı ön yüzde derlemede okunur: panel düzenlemesi canlıya dağıtımdaki katman eşitlemesi + derlemeyle yansır.

@@ -43,8 +43,15 @@ const KISISEL_OKUMA: RegExp[] = [
   /^\/api\/admin\/people\/[^/]+$/,
   /^\/api\/admin\/people\/[^/]+\/(etkinlik|events|cihaz|devices|calisma|study|veri)/,
   /^\/api\/admin\/user-data\//,
+  // Kullanıcılar (v16): olay zaman çizelgesi, sosyal/erişim, tüm-kullanıcı etkinlik günlüğü, başarım kişisi, erişim listesi
+  /^\/api\/admin\/people\/[^/]+\/(olaylar|sosyal|birlestir)$/,
+  /^\/api\/admin\/events$/,
+  /^\/api\/admin\/basarim\/kisi\/[^/]+$/,
+  /^\/api\/admin\/people-access$/,
   /^\/api\/admin\/topluluk\/(mesajlar|odalar\/[^/]+\/mesajlar)/,
   /^\/api\/admin\/sohbet\//,
+  /^\/api\/admin\/topluluk\/(sikayetler|odalar\/[^/]+$|arkadaslik|notlar)/,
+  /^\/api\/admin\/pg\/(rows|row)$/,
 ];
 /** Gürültü: kaydı gereksiz yazma uçları */
 const ATLA: RegExp[] = [
@@ -235,7 +242,10 @@ export function registerDenetimRoutes(app: express.Express, d: { rootDir: string
     const where: string[] = [];
     const vals: unknown[] = [];
     const add = (sql: string, v: unknown) => { vals.push(v); where.push(sql.replace('?', `$${vals.length}`)); };
-    const qv = (k: string) => String((req.query as any)[k] || '').trim();
+    // Süzgeç hem düz (?tur=) hem çip biçiminde (?s.tur=, VeriTablosu) gelebilir
+    const qv = (k: string) => String((req.query as any)[k] || s.suzgec[k] || '').trim();
+    if (qv('baslangic')) add('at >= ?', qv('baslangic'));
+    if (qv('bitis')) add('at <= ?', qv('bitis'));
     if (qv('hedef')) add('hedef = ?', qv('hedef'));
     if (qv('uc')) add('uc like ?', `${qv('uc')}%`);
     if (qv('kim')) add('kim ilike ?', `%${qv('kim')}%`);

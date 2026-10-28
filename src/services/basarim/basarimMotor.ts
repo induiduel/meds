@@ -604,6 +604,12 @@ export function createBasarimMotor(deps: MotorDeps) {
       return this.ozet(k);
     },
     bag(uid: string) { return onbellek.get(uid)?.birlesti || kisi(uid).birlesti || null; },
+    /** Yönetim v16 kişi listesi süzgeci: yalnız var olan kaydı okur (yeni kişi oluşturmaz). */
+    profilOku(uid: string): { donem: number | null; kurul: number | null; universite: string; gizli: boolean } | null {
+      hepsiniYukle();
+      const k = onbellek.get(uid);
+      return k ? { donem: k.donem ?? null, kurul: efektifKurul(k.donem, k.kurul), universite: k.universite || '', gizli: !!k.gizli } : null;
+    },
     /** İkinci hesabı asıl hesaba bağlar (geri almak için hedef null). */
     birlestir(kaynak: string, hedef: string | null) {
       const k = kisi(kaynak);

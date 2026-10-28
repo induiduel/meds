@@ -1,6 +1,6 @@
 import { fetchMyAccess, setModeratorMode } from './services/moderatorSession';
 import { getAppearance } from './utils/appearance';
-import React, { useState, useEffect, useMemo, useCallback, useRef, Suspense } from 'react';
+import React, { useState, useEffect, useMemo, useCallback, useRef, useLayoutEffect, Suspense } from 'react';
 import { startLiveDataSync } from './services/liveDataSync';
 import { logActivity } from './services/activityLog';
 import { getVoterId, toggledVote } from './utils/voterId';
@@ -8,7 +8,7 @@ import { foldTurkish } from './utils/fuzzyMatching';
 import type { SearchHit } from './components/search/searchShared';
 import { AppRoute, parseLocation, writeLocation, pathFor, icPathFor, ROUTE_TITLES, deepLinkIdFor, navigateTo } from './router';
 import { icKonum, kanonik } from './siteHaritasi';
-import { sayfaGizli, sayfaKapali, useSiteAyar } from './services/siteAyar';
+import { sayfaKapali, sayfaYonlendir, useSiteAyar, yoneticiAyarla } from './services/siteAyar';
 import {
   Sparkles,
   Plus,
@@ -169,6 +169,7 @@ const YardimV15 = React.lazy(() => wrapLazy(import('./components/v15/YardimV15')
 const SinavTakvimiV15 = React.lazy(() => wrapLazy(import('./components/v15/SinavTakvimiV15')));
 const SiralamaV15 = React.lazy(() => wrapLazy(import('./components/v15/SiralamaV15')));
 const DersDetayV15 = React.lazy(() => wrapLazy(import('./components/v15/DersDetayV15')));
+const DuyuruBandi = React.lazy(() => wrapLazy(import('./components/system/DuyuruBandi')));
 const NeYapmak = React.lazy(() => wrapLazy(import('./components/merkez/MerkezView').then((m) => ({ default: m.NeYapmak }))));
 const BulunamadiV15 = React.lazy(() => wrapLazy(import('./components/v15/BulunamadiV15')));
 const GuncellemeGunluguView = React.lazy(() => wrapLazy(import('./components/guncellemeler/GuncellemeGunluguView')));
@@ -904,10 +905,13 @@ export default function App() {
   const isAdmin = isAdminUser(currentUser);
   // Çalışma anı site ayarı (yönetim v16): derleme sabitleri varsayılan, panel ayarı üstüne yazar (services/siteAyar.ts)
   const siteAyar = useSiteAyar();
+  useLayoutEffect(() => { yoneticiAyarla(isAdmin); }, [isAdmin]);
   const sayfaKapaliMi = sayfaKapali(activeTab) && !isAdmin;
-  // Gizlenen sayfalar (merkezModel.GIZLI_SAYFALAR + panel): öğrenci adresle girse de Bugün'e döner
+  // Kapalı sayfada içerik hiç kurulmaz: aşağıdaki sayfa blokları gorunenTab'a bakar (kapalı ekranı tek başına kalır)
+  const gorunenTab = (sayfaKapaliMi ? '__kapali__' : activeTab) as typeof activeTab;
+  // Gizlenen / yalnız yönetici / bayrağı kapalı sayfalar (sayfaSabitleri + panel): öğrenci adresle girse de Bugün'e döner
   useEffect(() => {
-    if (!isAdmin && !isAdminAppMode() && sayfaGizli(activeTab)) setActiveTab('today');
+    if (!isAdmin && !isAdminAppMode() && sayfaYonlendir(activeTab, false)) setActiveTab('today');
   }, [isAdmin, activeTab, setActiveTab, siteAyar]);
   // Moderatör: rol sunucudan (GET /api/me/access, Firebase jetonu) öğrenilir; yalnız moderasyon bölümleri açılır
   const [isModerator, setIsModerator] = useState(false);
@@ -1769,14 +1773,16 @@ export default function App() {
           <button type="button" onClick={() => setIsOfflineModalOpen(true)}>Veritabanı</button>
         </div>
       )}
+      {/* Site duyurusu (Yönetim › Site › Duyurular; çalışma anı site ayarı) */}
+      {siteAyar.duyuru?.acik && <Suspense fallback={null}><DuyuruBandi git={(y) => navigateTo(y)} /></Suspense>}
       {/* Main Container */}
       <main ref={mainRef} className={`sh-main ${activeTab === 'ai_chat' ? 'ms-chat-main' : ''}`}>
 
         {/* Bölüm adı üst çubukta görünür (kabuğun grup etiketi); sayfa içinde ayrıca şerit yok (kullanıcı kararı 2026-10-21) */}
         {/* Merkez sayfaları: /dersler · /sorular · /kamplar[/kurulN] · /kaynaklar */}
-        {(activeTab === 'hub_dersler' || activeTab === 'hub_sorular' || activeTab === 'hub_kamplar' || activeTab === 'hub_kaynaklar') && (
+        {(gorunenTab === 'hub_dersler' || gorunenTab === 'hub_sorular' || gorunenTab === 'hub_kamplar' || gorunenTab === 'hub_kaynaklar') && (
           <Suspense fallback={<ViewFallback />}>
-            <MerkezView key={activeTab} kategori={activeTab === 'hub_dersler' ? 'dersler' : activeTab === 'hub_sorular' ? 'sorular' : activeTab === 'hub_kamplar' ? 'kamplar' : 'kaynaklar'} />
+            <MerkezView key={activeTab} kategori={gorunenTab === 'hub_dersler' ? 'dersler' : gorunenTab === 'hub_sorular' ? 'sorular' : gorunenTab === 'hub_kamplar' ? 'kamplar' : 'kaynaklar'} />
           </Suspense>
         )}
 
@@ -1845,8 +1851,8 @@ export default function App() {
         )}
 
         {/* TAB 0: Home — quick add, pool status, committees */}
-        {activeTab === 'quick_add' && <KurulSeridi soruEkleGoster={false} sola />}
-        {activeTab === 'quick_add' && (
+        {gorunenTab === 'quick_add' && <KurulSeridi soruEkleGoster={false} sola />}
+        {gorunenTab === 'quick_add' && (
           <Suspense fallback={<QuickAddYerTutucu />}>
           <QuickAddHero
             committee={currentCommittee}
@@ -1867,7 +1873,7 @@ export default function App() {
         )}
 
         {/* TAB: Learn / İnteraktif Ses & Slayt Hub'ı */}
-        {activeTab === 'learn' && (
+        {gorunenTab === 'learn' && (
           <Suspense fallback={<ViewFallback />}>
             <LearnFab
               onOpenGlossary={() => setActiveTab('glossary')}
@@ -1898,7 +1904,7 @@ export default function App() {
           </Suspense>
         )}
 
-        {activeTab === 'search' && (
+        {gorunenTab === 'search' && (
           <Suspense fallback={<ViewFallback />}>
             <SearchView
               initialQuery={searchPageQuery}
@@ -1911,21 +1917,21 @@ export default function App() {
         )}
 
         {/* TAB: Sınav spotları · Soru çözücü (/soru-cozucu) · En önemliler (/en-onemliler) — aynı bileşen, ayrı sayfa */}
-        {(activeTab === 'spots' || activeTab === 'soru_cozucu' || activeTab === 'en_onemliler') && (
+        {(gorunenTab === 'spots' || gorunenTab === 'soru_cozucu' || gorunenTab === 'en_onemliler') && (
           <Suspense fallback={<ViewFallback />}>
-            <ExamSpotsView key={activeTab} gorunum={activeTab === 'soru_cozucu' ? 'cozucu' : activeTab === 'en_onemliler' ? 'onem' : 'spot'} />
+            <ExamSpotsView key={activeTab} gorunum={gorunenTab === 'soru_cozucu' ? 'cozucu' : gorunenTab === 'en_onemliler' ? 'onem' : 'spot'} />
           </Suspense>
         )}
 
         {/* TAB: Patoloji alternatif sesli çözücü (/alternatif-cozucu) */}
-        {activeTab === 'alternatif_cozucu' && !sayfaKapaliMi && (
+        {gorunenTab === 'alternatif_cozucu' && !sayfaKapaliMi && (
           <Suspense fallback={<ViewFallback />}>
             <AlternatifCozucuView />
           </Suspense>
         )}
 
         {/* TAB: Glossary & Encyclopedia / Tıbbi Sözlük & Ansiklopedi */}
-        {activeTab === 'glossary' && (
+        {gorunenTab === 'glossary' && (
           <Suspense fallback={<ViewFallback />}>
             <MedicalEncyclopediaView
               initialTermId={selectedGlossaryTermId}
@@ -1938,28 +1944,28 @@ export default function App() {
         )}
 
         {/* TAB: Sesli ders (eski Canlı ders) — sesli dersler, metin + PDF eşzamanlı (/canliders/<key>); oynatıcı aşağıda (CanliDersDockGate) */}
-        {activeTab === 'canli_ders' && (
+        {gorunenTab === 'canli_ders' && (
           <Suspense fallback={<ViewFallback />}>
             <CanliDersView dersKey={canliDersKey} />
           </Suspense>
         )}
 
         {/* v15 ders ayrıntısı (/dersler/ders/kurulN/<key>): içerikler + bölümler; v15 dışında sesli derse yönlenir */}
-        {activeTab === 'ders_detay' && (
+        {gorunenTab === 'ders_detay' && (
           <Suspense fallback={<ViewFallback />}>
             <DersDetayV15 />
           </Suspense>
         )}
 
         {/* TAB: Sağlık Bakanlığı — resmî halk sağlığı verileri + ders/sınav bağları (/saglik/<bölüm>) */}
-        {activeTab === 'health_ministry' && (
+        {gorunenTab === 'health_ministry' && (
           <Suspense fallback={<ViewFallback />}>
             <SaglikView />
           </Suspense>
         )}
 
         {/* TAB: Diseases Atlas / Tıbbi Hastalıklar & Klinik Atlas */}
-        {activeTab === 'diseases' && (
+        {gorunenTab === 'diseases' && (
           <Suspense fallback={<ViewFallback />}>
             <DiseasesView
               currentUser={currentUser}
@@ -1972,7 +1978,7 @@ export default function App() {
         )}
 
         {/* TAB 1: Soru havuzu (v11: components/pool/PoolView) */}
-        {activeTab === 'questions' && (
+        {gorunenTab === 'questions' && (
           <PoolView
             loading={loading}
             allQuestions={standaloneQuestions}
@@ -2033,7 +2039,7 @@ export default function App() {
         )}
 
         {/* Study workspace: solve, self-test, notes */}
-        {activeTab === 'study' && (
+        {gorunenTab === 'study' && (
           <Suspense fallback={<ViewFallback />}>
             <StudyHub
               questions={questions}
@@ -2046,7 +2052,7 @@ export default function App() {
         )}
 
         {/* TAB: Çıkmış Sorular & AI Redaksiyon Arşivi */}
-        {activeTab === 'past_exams' && (
+        {gorunenTab === 'past_exams' && (
           <Suspense fallback={<ViewFallback />}>
             <PastExamsView
               currentUser={currentUser}
@@ -2067,7 +2073,7 @@ export default function App() {
         )}
 
         {/* TAB: /ornek-sorular — müfredata dayalı örnek çalışma soruları */}
-        {activeTab === 'ornek_sorular' && (
+        {gorunenTab === 'ornek_sorular' && (
           <Suspense fallback={<ViewFallback />}>
             <PracticeQuestionsView
               initialLessonId={selectedOrnekLessonId}
@@ -2078,226 +2084,226 @@ export default function App() {
         )}
 
         {/* TAB: /sinav-calisma — Tüm kazanımlar ve sesli sınav asistanı */}
-        {activeTab === 'sinav_calisma' && !sayfaKapaliMi && (
+        {gorunenTab === 'sinav_calisma' && !sayfaKapaliMi && (
           <Suspense fallback={<ViewFallback />}>
             <SinavCalismaView />
           </Suspense>
         )}
 
         {/* TAB: /patoloji-check-up — patoloji karşılaştırma tabloları ve kısa notlar */}
-        {activeTab === 'patoloji_checkup' && (
+        {gorunenTab === 'patoloji_checkup' && (
           <Suspense fallback={<ViewFallback />}>
             <PatolojiCheckUp />
           </Suspense>
         )}
 
         {/* TAB: /genetik-check-up — TBG sınav kalıbı, tablolar, tek satırlık spotlar, soru-cevap ve çıkmış/örnek sorular */}
-        {activeTab === 'genetik_checkup' && (
+        {gorunenTab === 'genetik_checkup' && (
           <Suspense fallback={<ViewFallback />}>
             <GenetikCheckUp />
           </Suspense>
         )}
 
         {/* TAB: /kmb (görünen /kamplar/kmb/…) — KMB görsel sesli asistan: önce öğret, sonra vaka sınavı */}
-        {activeTab === 'kmb_asistan' && (
+        {gorunenTab === 'kmb_asistan' && (
           <Suspense fallback={<ViewFallback />}>
             <KmbAsistan />
           </Suspense>
         )}
 
         {/* TAB: /basarimlar — hedefler, başarımlar, ATP ve kilitler */}
-        {activeTab === 'basarimlar' && (
+        {gorunenTab === 'basarimlar' && (
           <Suspense fallback={<ViewFallback />}>
             <BasarimView />
           </Suspense>
         )}
 
         {/* TAB: /yanlislarim (görünen /sorular/yanlislarim) — soru tekrar defteri (services/yanlislarim) */}
-        {activeTab === 'yanlislarim' && (
+        {gorunenTab === 'yanlislarim' && (
           <Suspense fallback={<ViewFallback />}>
             <YanlislarimV15 />
           </Suspense>
         )}
 
         {/* TAB: /bildirimler — bildirim merkezi (tasarım A06): hesap bildirimleri + gerçek veriden türeyen hatırlatmalar */}
-        {activeTab === 'bildirimler' && (
+        {gorunenTab === 'bildirimler' && (
           <Suspense fallback={<ViewFallback />}>
             <BildirimlerV15 />
           </Suspense>
         )}
 
         {/* TAB: /zihin-haritasi (görünen /dersler/zihin-haritasi) — ders bölümleri + anahtar terimler */}
-        {activeTab === 'zihin_haritasi' && (
+        {gorunenTab === 'zihin_haritasi' && (
           <Suspense fallback={<ViewFallback />}>
             <ZihinHaritasiV15 />
           </Suspense>
         )}
 
         {/* TAB: /hucrem — ATP ile 28 evrim basamağı (başarım kilitleri tur: hucre) */}
-        {activeTab === 'hucrem' && (
+        {gorunenTab === 'hucrem' && (
           <Suspense fallback={<ViewFallback />}>
             <HucremV15 />
           </Suspense>
         )}
 
         {/* TAB: /topluluk — sohbet kanalları ve ders yorumları (services/topluluk.ts, SSE topluluk) */}
-        {activeTab === 'topluluk' && (
+        {gorunenTab === 'topluluk' && (
           <Suspense fallback={<ViewFallback />}>
             <ToplulukV15 />
           </Suspense>
         )}
 
         {/* TAB: /kisi/<kimlik> açık profil, /arkadaslar arkadaş listesi (services/arkadaslik.ts) */}
-        {activeTab === 'kisi' && (
+        {gorunenTab === 'kisi' && (
           <Suspense fallback={<ViewFallback />}>
             <KisiProfilV15 />
           </Suspense>
         )}
-        {activeTab === 'arkadaslar' && (
+        {gorunenTab === 'arkadaslar' && (
           <Suspense fallback={<ViewFallback />}>
             <ArkadaslarV15 />
           </Suspense>
         )}
 
         {/* TAB: /pdf-olustur — PDF oluştur sihirbazı (kaynak → kurul → dersler; ortak TopluPdf penceresi) */}
-        {activeTab === 'pdf_olustur' && (
+        {gorunenTab === 'pdf_olustur' && (
           <Suspense fallback={<ViewFallback />}>
             <PdfSihirbaziV15 />
           </Suspense>
         )}
 
         {/* TAB: /notlarim — kişisel notlar + kalem/fosforlu çizim (userKvSync ile hesaba eşitlenir) */}
-        {activeTab === 'notlarim' && (
+        {gorunenTab === 'notlarim' && (
           <Suspense fallback={<ViewFallback />}>
             <NotlarimV15 />
           </Suspense>
         )}
 
         {/* TAB: /video-ders — hazır ders videoları (yönetici GPU kuyruğundan; oynat, tam ekran, resim içinde resim) */}
-        {activeTab === 'video_ders' && (
+        {gorunenTab === 'video_ders' && (
           <Suspense fallback={<ViewFallback />}>
             <VideoDersV15 />
           </Suspense>
         )}
 
         {/* TAB: /oyunlar (görünen /sorular/oyunlar) — canlı soru yarışması (/api/quiz/ws) */}
-        {activeTab === 'oyunlar' && (
+        {gorunenTab === 'oyunlar' && (
           <Suspense fallback={<ViewFallback />}>
             <OyunlarV15 />
           </Suspense>
         )}
 
         {/* TAB: /soru-haritasi (görünen /sorular/soru-haritasi) — kurul × ders × yıl çıkmış soru sayıları */}
-        {activeTab === 'soru_haritasi' && (
+        {gorunenTab === 'soru_haritasi' && (
           <Suspense fallback={<ViewFallback />}>
             <SoruHaritasiV15 />
           </Suspense>
         )}
 
         {/* TAB: /program (görünen /dersler/program) — kurulun ders programı: gün / hafta / liste */}
-        {activeTab === 'ders_programi' && (
+        {gorunenTab === 'ders_programi' && (
           <Suspense fallback={<ViewFallback />}>
             <DersProgramiV15 />
           </Suspense>
         )}
 
         {/* TAB: /program-ekle (görünen /dersler/program/ekle) — kişisel etkinlik ekleme + hazır sınıf programı */}
-        {activeTab === 'program_ekle' && (<Suspense fallback={<ViewFallback />}><ProgramEkleV15 /></Suspense>)}
+        {gorunenTab === 'program_ekle' && (<Suspense fallback={<ViewFallback />}><ProgramEkleV15 /></Suspense>)}
         {/* TAB: /arka-plan — süren indirmeler, video dışa aktarımı, eşitleme */}
-        {activeTab === 'arka_plan' && (<Suspense fallback={<ViewFallback />}><ArkaPlanV15 /></Suspense>)}
+        {gorunenTab === 'arka_plan' && (<Suspense fallback={<ViewFallback />}><ArkaPlanV15 /></Suspense>)}
         {/* TAB: /dil-bolge — tarih/saat biçimi, haftanın ilk günü (cihaz tercihi) */}
-        {activeTab === 'dil_bolge' && (<Suspense fallback={<ViewFallback />}><DilBolgeV15 /></Suspense>)}
+        {gorunenTab === 'dil_bolge' && (<Suspense fallback={<ViewFallback />}><DilBolgeV15 /></Suspense>)}
         {/* TAB: /ilk-adimlar — başlangıç görevleri */}
-        {activeTab === 'ilk_adimlar' && (<Suspense fallback={<ViewFallback />}><IlkAdimlarV15 /></Suspense>)}
+        {gorunenTab === 'ilk_adimlar' && (<Suspense fallback={<ViewFallback />}><IlkAdimlarV15 /></Suspense>)}
         {/* TAB: /yardim — yardım merkezi */}
-        {activeTab === 'yardim' && (<Suspense fallback={<ViewFallback />}><YardimV15 /></Suspense>)}
+        {gorunenTab === 'yardim' && (<Suspense fallback={<ViewFallback />}><YardimV15 /></Suspense>)}
 
         {/* TAB: /takvim (görünen /kamplar/takvim) — kurul sınavları, final, bütünleme ve kalan gün */}
-        {activeTab === 'sinav_takvimi' && (
+        {gorunenTab === 'sinav_takvimi' && (
           <Suspense fallback={<ViewFallback />}>
             <SinavTakvimiV15 />
           </Suspense>
         )}
 
         {/* TAB: /sinav-plani (görünen /kamplar/sinav-plani) — en az 60 için kişiye özel yol haritası */}
-        {activeTab === 'sinav_plani' && (
+        {gorunenTab === 'sinav_plani' && (
           <Suspense fallback={<ViewFallback />}>
             <SinavPlaniView />
           </Suspense>
         )}
 
         {/* TAB: /bitirdiklerim — konu konu kontrol listesi, süre, soru ve kalan tahmini */}
-        {activeTab === 'bitirdiklerim' && (
+        {gorunenTab === 'bitirdiklerim' && (
           <Suspense fallback={<ViewFallback />}>
             <BitirdiklerimView />
           </Suspense>
         )}
 
         {/* TAB: /olasi-sorular — sınav sonrası hatıralardan kurulan olası sorular (?kurul=N) */}
-        {activeTab === 'olasi_sorular' && (
+        {gorunenTab === 'olasi_sorular' && (
           <Suspense fallback={<ViewFallback />}>
             <OlasiSorularView uid={currentUser?.uid} />
           </Suspense>
         )}
 
         {/* TAB: /gecmis-kurullar — sınavı geçmiş kurulların içeriğine bağlantılar */}
-        {activeTab === 'gecmis_kurullar' && (
+        {gorunenTab === 'gecmis_kurullar' && (
           <Suspense fallback={<ViewFallback />}>
             <GecmisKurullarView />
           </Suspense>
         )}
 
         {/* TAB: /son-prova — Son Prova: kurulun tüm dersleri sesli özet partları, aşama soruları, check-up, 3 deneme (yolu kendisi okur) */}
-        {activeTab === 'son_prova' && (
+        {gorunenTab === 'son_prova' && (
           <Suspense fallback={<ViewFallback />}>
             <SonProvaView />
           </Suspense>
         )}
 
         {/* TAB: /cikmis-cozucu — Sınava hazırlan › Çıkmış çözücü: branş başına sınav soru sayısı kadar çıkmış paketi, sesli çözücüyle */}
-        {activeTab === 'cikmis_cozucu' && (
+        {gorunenTab === 'cikmis_cozucu' && (
           <Suspense fallback={<ViewFallback />}>
             <CikmisCozucuView />
           </Suspense>
         )}
 
         {/* TAB: /kamp — kurul kampları; /kamp/<kurul>/<brans> tek kamp (yolu kendisi okur) */}
-        {activeTab === 'kamp' && (
+        {gorunenTab === 'kamp' && (
           <Suspense fallback={<ViewFallback />}>
             <KampView />
           </Suspense>
         )}
 
         {/* AB16: bilinmeyen adres — gerçek 404 ekranı */}
-        {activeTab === 'bulunamadi' && (
+        {gorunenTab === 'bulunamadi' && (
           <Suspense fallback={<ViewFallback />}>
             <BulunamadiV15 />
           </Suspense>
         )}
 
         {/* TAB: /guncellemeler — sürüm sürüm eklenen / değişen / düzeltilen / kaldırılanlar + geliştirme notları */}
-        {activeTab === 'guncellemeler' && (
+        {gorunenTab === 'guncellemeler' && (
           <Suspense fallback={<ViewFallback />}>
             <GuncellemeGunluguView />
           </Suspense>
         )}
 
         {/* TAB: /cevrimdisi — çevrimdışı merkezi: ders paketlerini indir, güncelle, sil */}
-        {activeTab === 'cevrimdisi' && (
+        {gorunenTab === 'cevrimdisi' && (
           <Suspense fallback={<ViewFallback />}>
             <CevrimdisiView />
           </Suspense>
         )}
 
         {/* TAB: /oncelikli-dersler — az ezber / mantık / çıkmış analizine göre sesli ders önceliği */}
-        {activeTab === 'oncelikli_dersler' && (
+        {gorunenTab === 'oncelikli_dersler' && (
           <Suspense fallback={<ViewFallback />}>
             <OncelikliDerslerView />
           </Suspense>
         )}
 
         {/* TAB: /kazanimlar — müfredat ve kazanımlar haritası */}
-        {activeTab === 'kazanimlar' && (
+        {gorunenTab === 'kazanimlar' && (
           <Suspense fallback={<ViewFallback />}>
             <KazanimlarView
               onNavigateToLearn={(deckId, slideNumber) => {
@@ -2319,7 +2325,7 @@ export default function App() {
         )}
 
         {/* TAB: /test/cikmis — Faz 14 Çıkmış Soru İnceleme & Canlı Test Katmanı */}
-        {activeTab === 'test_cikmis' && (
+        {gorunenTab === 'test_cikmis' && (
           <Suspense fallback={<ViewFallback />}>
             <TestCikmisView
               currentUser={currentUser}
@@ -2330,14 +2336,14 @@ export default function App() {
         )}
 
         {/* TAB: /tester/ozet — 2026-2027 Ders Notları Test Laboratuvarı */}
-        {activeTab === 'tester_ozet' && (
+        {gorunenTab === 'tester_ozet' && (
           <Suspense fallback={<ViewFallback />}>
             <TesterOzetView />
           </Suspense>
         )}
 
         {/* TAB 2: 1-100 Question Matrix */}
-        {activeTab === 'matrix' && (
+        {gorunenTab === 'matrix' && (
           <Suspense fallback={<ViewFallback />}>
             <QuestionMatrix
               questions={questions}
@@ -2356,7 +2362,7 @@ export default function App() {
         )}
 
         {/* TAB 4: A4 Booklet / Print Mode */}
-        {activeTab === 'booklet' && (
+        {gorunenTab === 'booklet' && (
           <Suspense fallback={<ViewFallback />}>
             <BookletView
               committee={currentCommittee}
@@ -2368,7 +2374,7 @@ export default function App() {
 
         {/* TAB 5: Leaderboard / Katkı Sıralaması */}
         {/* /bugun — günlük giriş: kaldığın yer, hızlı erişim, günün spotu, haftalık çalışma */}
-        {activeTab === 'today' && (
+        {gorunenTab === 'today' && (
           <Suspense fallback={<ViewFallback />}>
             <V15Disinda>
               <KurulSeridi />
@@ -2378,12 +2384,12 @@ export default function App() {
             <FavorilerBugun />
           </Suspense>
         )}
-        {activeTab === 'stats' && (
+        {gorunenTab === 'stats' && (
           <Suspense fallback={<ViewFallback />}>
             <StatsView questions={questions} currentUser={currentUser} onGo={(r) => setActiveTab(r)} />
           </Suspense>
         )}
-        {activeTab === 'leaderboard' && (
+        {gorunenTab === 'leaderboard' && (
           <Suspense fallback={<ViewFallback />}>
             <V15Icinde><SiralamaV15 /></V15Icinde>
             <V15Disinda><LeaderboardView
@@ -2401,7 +2407,7 @@ export default function App() {
         )}
 
         {/* Profil ve ayarlar: kimlik, tema × palet, yoğunluk, klasik tasarım */}
-        {activeTab === 'settings' && (
+        {gorunenTab === 'settings' && (
           <Suspense fallback={<ViewFallback />}>
             <ProfileSettingsView
               currentUser={currentUser}
@@ -2420,7 +2426,7 @@ export default function App() {
         )}
 
         {/* Topluluk: Müzik — admin paylaşımlı ses çalar (video yok) */}
-        {activeTab === 'music' && (
+        {gorunenTab === 'music' && (
           <Suspense fallback={<ViewFallback />}>
             <V15Icinde><MuzikV15 /></V15Icinde>
             <V15Disinda><MusicView isAdmin={isAdmin} /></V15Disinda>
@@ -2428,7 +2434,7 @@ export default function App() {
         )}
 
         {/* TAB 6: Ders Notları & Slaytlar */}
-        {activeTab === 'notes' && !sayfaKapaliMi && (
+        {gorunenTab === 'notes' && !sayfaKapaliMi && (
           <Suspense fallback={<ViewFallback />}>
             <LectureNotesView
               key={deepLinkNonce}
@@ -2443,35 +2449,35 @@ export default function App() {
         )}
 
         {/* TAB 7: Amfi Ders Özetleri & Spot Bilgiler */}
-        {activeTab === 'summaries' && (
+        {gorunenTab === 'summaries' && (
           <Suspense fallback={<ViewFallback />}>
             <LectureSummariesView onOpenPdfModal={() => setIsPdfModalOpen(true)} initialSummaryId={openSummaryId} />
           </Suspense>
         )}
 
         {/* TAB 8: Amfi Ses Kaydı Transkriptleri */}
-        {activeTab === 'transcripts' && (
+        {gorunenTab === 'transcripts' && (
           <Suspense fallback={<ViewFallback />}>
             <TranscriptionsView />
           </Suspense>
         )}
 
         {/* /veri — MeDSor Core v2 Veri Merkezi (salt okunur) */}
-        {activeTab === 'datacore' && (
+        {gorunenTab === 'datacore' && (
           <Suspense fallback={<ViewFallback />}>
             <DataCoreView />
           </Suspense>
         )}
 
         {/* /kartlar — spaced-repetition flashcards (medical terms + lesson cards) */}
-        {activeTab === 'flashcards' && (
+        {gorunenTab === 'flashcards' && (
           <Suspense fallback={<ViewFallback />}>
             <FlashcardsView key={deepLinkNonce} />
           </Suspense>
         )}
 
         {/* /asistan — Local AI & Cloud Medical Assistant / Question Detective */}
-        {activeTab === 'ai_chat' && (
+        {gorunenTab === 'ai_chat' && (
           <Suspense fallback={<ViewFallback />}>
             <LocalAiChatView
               currentUser={currentUser}

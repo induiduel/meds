@@ -4,6 +4,7 @@ import { safeJsonFetch } from '../../services/api';
 import { auth, getRememberedStudentInfo } from '../../services/auth';
 import { quizSocketClient, type PreFetchedQuestion } from '../../services/quiz/quizSocketClient';
 import { icKonum } from '../../siteHaritasi';
+import { bayrak, useSiteAyar } from '../../services/siteAyar';
 import { useV15Baslik } from './baslik';
 import OyunSoloV15, { type SoloMod } from './OyunSoloV15';
 import OyunEslestirV15, { ESLESTIR_KATEGORI } from './OyunEslestirV15';
@@ -82,6 +83,13 @@ export default function OyunlarV15() {
   const [dersOyun, setDersOyun] = useState<DersOyun | null>(null);
   const [dersKey, setDersKey] = useState('');
   const [mod, setMod] = useState<'canli' | 'takim' | 'katil' | 'blitz' | 'hayatta' | 'gorsel' | 'kaydir' | 'sirala' | 'izgara' | 'eslestir' | 'bosluk'>(() => (new URLSearchParams(icKonum().search).get('oda') ? 'katil' : 'canli'));
+  // Panelde kapatılan oyun modu (Yönetim › Oyunlar; bayrak oyun_mod_<id>) seçili kalmasın
+  const siteAyarS = useSiteAyar();
+  useEffect(() => {
+    if (bayrak(`oyun_mod_${mod}`, true)) return;
+    const ilk = (['canli', 'takim', 'katil', 'blitz', 'hayatta', 'gorsel', 'kaydir', 'sirala', 'izgara', 'eslestir', 'bosluk'] as const).find((m) => bayrak(`oyun_mod_${m}`, true));
+    if (ilk) setMod(ilk);
+  }, [mod, siteAyarS]);
 
   useV15Baslik({ baslik: 'Oyunlar', alt: oda ? `Oda ${oda}${baslik ? ` · ${baslik}` : ''}` : 'Canlı soru yarışması' });
 
@@ -210,7 +218,7 @@ export default function OyunlarV15() {
           { id: 'izgara', ad: 'Eşleştirme ızgarası', alt: 'Terim ve tanımı ızgarada bul', ic: Grid3x3, ton: 'a' },
           { id: 'eslestir', ad: 'Eşleştir', alt: 'Terim ↔ tanım, en kısa sürede', ic: Gamepad2, ton: 'ai' },
           { id: 'bosluk', ad: 'Terimi bul', alt: 'Tanımı oku, terimi yaz', ic: Crown, ton: 'ok' },
-        ] as ModT[]).filter((m) => (m.id !== 'gorsel' || !!kaynaklar?.some((k) => (k.gorselN || 0) > 0))
+        ] as ModT[]).filter((m) => bayrak(`oyun_mod_${m.id}`, true) && (m.id !== 'gorsel' || !!kaynaklar?.some((k) => (k.gorselN || 0) > 0))
           && (!['kaydir', 'sirala', 'izgara'].includes(m.id) || !paketler || oyunVeriVar(m.id as DersOyun, paketler)));
         const sozluk = mod === 'eslestir' || mod === 'bosluk';
         const dersMod = mod === 'kaydir' || mod === 'sirala' || mod === 'izgara';

@@ -4,6 +4,7 @@ import { linkClick, navigateTo, pathFor, type AppRoute } from '../../router';
 import { NAV_ITEMS } from '../shell/navModel';
 import { KURUL_NOLAR, kurulKaydet, useSeciliKurul } from '../kurul/KurulSecici';
 import { MERKEZ_ARACLARI } from '../merkez/merkezModel';
+import { menudeGorunur } from '../../services/siteAyar';
 import { Sheet } from '../ui/Sheet';
 import { useV15Baslik } from './baslik';
 import KurulSecV15 from './KurulSecV15';
@@ -82,7 +83,7 @@ export default function DerslerMerkezV15() {
       </div>
 
       <nav className="d15-tools" aria-label="Ders çalış araçları">
-        {ANA.map((id) => {
+        {ANA.filter((id) => menudeGorunur(id)).map((id) => {
           const it = NAV_ITEMS[id];
           const a = MERKEZ_ARACLARI.dersler.find((x) => x.id === id);
           return (

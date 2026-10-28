@@ -22,25 +22,27 @@ import { atomikJsonGuncelle } from './atomikJson.ts';
 import { denetimFark, denetimHedef } from './denetim.ts';
 import type { BakimDenetleyici } from '../bakimHataRoutes.ts';
 
-export type SayfaDurumu = 'acik' | 'gizli' | 'kapali';
+export type SayfaDurumu = 'acik' | 'gizli' | 'kapali' | 'yalniz-yonetici';
 export type GorunurlukDurumu = 'acik' | 'gizli' | 'yalniz-yonetici';
-export type Duyuru = { acik: boolean; metin: string; ton: 'bilgi' | 'uyari' | 'hata'; baglanti?: string; bitis?: string };
+export type Duyuru = { acik: boolean; metin: string; ton: 'bilgi' | 'uyari' | 'hata'; baglanti?: string; baslangic?: string; bitis?: string; kurul?: number[]; kapatilabilir?: boolean };
 export type SiteAyar = {
   surum: number;
   guncellendi: string;
   guncelleyen?: string;
   /** Rota kimliği (AppRoute) → durum. Yoksa derleme sabitleri (GIZLI_SAYFALAR/KAPALI_SAYFALAR) geçerli */
   sayfalar: Record<string, SayfaDurumu>;
+  /** Rota → menüde görünsün mü (false: menü ve merkez kartlarından kalkar, adresle açılır). Yapı/sıra kodda (kural 16) */
+  menu: Record<string, boolean>;
   /** Özellik bayrakları (ad → açık/kapalı). İstemci: bayrak('ad', varsayilan) */
   bayraklar: Record<string, boolean>;
   /** İçerik görünürlüğü: '<tür>:<kimlik>' (ör. 'kurul:2', 'ders:k2-07', 'varlik:spot:k1-03') → durum */
   gorunurluk: Record<string, GorunurlukDurumu>;
   duyuru: Duyuru | null;
-  bakim: { acik: boolean; sure?: string };
+  bakim: { acik: boolean; sure?: string; mesaj?: string };
 };
 
-const BOS: SiteAyar = { surum: 0, guncellendi: '', sayfalar: {}, bayraklar: {}, gorunurluk: {}, duyuru: null, bakim: { acik: false } };
-const SAYFA_D = new Set(['acik', 'gizli', 'kapali']);
+const BOS: SiteAyar = { surum: 0, guncellendi: '', sayfalar: {}, menu: {}, bayraklar: {}, gorunurluk: {}, duyuru: null, bakim: { acik: false } };
+const SAYFA_D = new Set(['acik', 'gizli', 'kapali', 'yalniz-yonetici']);
 const GOR_D = new Set(['acik', 'gizli', 'yalniz-yonetici']);
 
 let dosya = '';
@@ -49,7 +51,7 @@ let onbellek: { ayar: SiteAyar; genel: string; etag: string } | null = null;
 function oku(): SiteAyar {
   try {
     const d = JSON.parse(fs.readFileSync(resolveContent(dosya), 'utf8'));
-    return { ...BOS, ...d, sayfalar: d.sayfalar || {}, bayraklar: d.bayraklar || {}, gorunurluk: d.gorunurluk || {}, bakim: d.bakim || { acik: false } };
+    return { ...BOS, ...d, sayfalar: d.sayfalar || {}, menu: d.menu || {}, bayraklar: d.bayraklar || {}, gorunurluk: d.gorunurluk || {}, bakim: d.bakim || { acik: false } };
   } catch {
     return { ...BOS };
   }
@@ -95,7 +97,10 @@ function duyuruDogrula(v: unknown): Duyuru | null {
     metin: String(d.metin || '').slice(0, 500),
     ton: d.ton === 'uyari' || d.ton === 'hata' ? d.ton : 'bilgi',
     ...(d.baglanti ? { baglanti: String(d.baglanti).slice(0, 300) } : {}),
+    ...(d.baslangic ? { baslangic: String(d.baslangic).slice(0, 40) } : {}),
     ...(d.bitis ? { bitis: String(d.bitis).slice(0, 40) } : {}),
+    ...(Array.isArray(d.kurul) && d.kurul.length ? { kurul: d.kurul.map(Number).filter((n: number) => Number.isInteger(n) && n >= 1 && n <= 12).slice(0, 12) } : {}),
+    ...(d.kapatilabilir === false ? { kapatilabilir: false } : {}),
   };
 }
 
@@ -112,9 +117,9 @@ export function registerSiteAyarRoutes(app: express.Express, d: {
 
   // Bakım kalıcılığı: açılışta kalıcı durum uygulanır (ortam MEDS_BAKIM=1 açıkken kalıcı "kapalı" onu kapatmaz)
   if (d.bakim) {
-    if (ilk.ayar.bakim?.acik) d.bakim.ayarla(true, ilk.ayar.bakim.sure);
+    if (ilk.ayar.bakim?.acik) d.bakim.ayarla(true, ilk.ayar.bakim.sure, ilk.ayar.bakim.mesaj);
     d.bakim.onDegisti = (b) => {
-      void yaz({ bakim: { acik: b.bakim, ...(b.sure ? { sure: b.sure } : {}) } }, 'bakim-ucu').catch((e) => console.warn('[site-ayar] bakım yazılamadı:', e?.message));
+      void yaz({ bakim: { acik: b.bakim, ...(b.sure ? { sure: b.sure } : {}), ...(b.mesaj ? { mesaj: b.mesaj } : {}) } }, 'bakim-ucu').catch((e) => console.warn('[site-ayar] bakım yazılamadı:', e?.message));
     };
   }
 
@@ -129,11 +134,12 @@ export function registerSiteAyarRoutes(app: express.Express, d: {
       const y: SiteAyar = {
         ...eski,
         sayfalar: haritaBirlestir(eski.sayfalar || {}, parca.sayfalar, (v) => SAYFA_D.has(String(v))),
+        menu: haritaBirlestir(eski.menu || {}, parca.menu, (v) => typeof v === 'boolean'),
         bayraklar: haritaBirlestir(eski.bayraklar || {}, parca.bayraklar, (v) => typeof v === 'boolean'),
         gorunurluk: haritaBirlestir(eski.gorunurluk || {}, parca.gorunurluk, (v) => GOR_D.has(String(v))),
         duyuru: 'duyuru' in parca ? duyuruDogrula(parca.duyuru) : eski.duyuru ?? null,
         bakim: parca.bakim && typeof parca.bakim === 'object'
-          ? { acik: parca.bakim.acik === true, ...(parca.bakim.sure ? { sure: String(parca.bakim.sure).slice(0, 40) } : {}) }
+          ? { acik: parca.bakim.acik === true, ...(parca.bakim.sure ? { sure: String(parca.bakim.sure).slice(0, 40) } : {}), ...(parca.bakim.mesaj ? { mesaj: String(parca.bakim.mesaj).slice(0, 300) } : {}) }
           : eski.bakim || { acik: false },
         surum: (eski.surum || 0) + 1,
         guncellendi: new Date().toISOString(),
@@ -147,11 +153,17 @@ export function registerSiteAyarRoutes(app: express.Express, d: {
   }
 
   app.get('/api/site-ayar', (req, res) => {
-    const c = onbellek || yenile();
+    // Bitiş saati olan duyuru: süresi dolunca genel ayar yeniden üretilsin (önbellek yazım anında kurulur)
+    const c = onbellek && !onbellek.ayar.duyuru?.bitis ? onbellek : yenile(onbellek?.ayar);
     res.set('Cache-Control', 'no-cache');
     res.set('ETag', c.etag);
     if (req.headers['if-none-match'] === c.etag) return res.status(304).end();
     res.type('application/json').send(c.genel);
+  });
+
+  app.get('/api/admin/site-ayar/bayraklar', d.requireAdmin, (_req, res) => {
+    const b = siteAyarOku().bayraklar || {};
+    res.json({ ogeler: BAYRAKLAR.map((x) => ({ ...x, acik: b[x.ad] !== false, ayarli: x.ad in b })) });
   });
 
   app.get('/api/admin/site-ayar', d.requireAdmin, (_req, res) => {
@@ -163,7 +175,7 @@ export function registerSiteAyarRoutes(app: express.Express, d: {
     try {
       const kim = d.kimOf?.(req) || 'yönetici';
       const { once, sonra } = await yaz(parca, kim);
-      if (d.bakim && parca.bakim && typeof parca.bakim === 'object') d.bakim.ayarla(sonra.bakim.acik, sonra.bakim.sure);
+      if (d.bakim && parca.bakim && typeof parca.bakim === 'object') d.bakim.ayarla(sonra.bakim.acik, sonra.bakim.sure, sonra.bakim.mesaj);
       denetimHedef(res, 'site-ayar');
       const { surum: _a, guncellendi: _b, guncelleyen: _c, ...o } = once;
       const { surum: _d, guncellendi: _e, guncelleyen: _f, ...s } = sonra;
@@ -173,4 +185,54 @@ export function registerSiteAyarRoutes(app: express.Express, d: {
       res.status(400).json({ error: e?.message || 'site ayarı yazılamadı' });
     }
   });
+}
+
+/**
+ * Özellik bayrakları — sunucu kapısı. Bayrak yoksa AÇIK sayılır (varsayılan davranış korunur).
+ * Panel: Yönetim › Site › Özellik bayrakları. İstemci karşılığı services/siteAyar.ts BAYRAK_SAYFA (menü/rota gizleme).
+ */
+export const BAYRAKLAR: { ad: string; etiket: string; aciklama: string }[] = [
+  { ad: 'oyunlar', etiket: 'Oyunlar', aciklama: 'Kapalıyken Oyunlar sayfası öğrenciye gizlenir, /api/oyun/* ve canlı oda (WebSocket) katılımı reddedilir.' },
+  { ad: 'topluluk_sohbet', etiket: 'Topluluk sohbet odaları', aciklama: 'Kapalıyken sohbet odası listesi, katılma ve mesaj gönderme uçları 403 döner (kanal mesajları etkilenmez).' },
+  { ad: 'topluluk_mesaj', etiket: 'Topluluk kanal mesajları', aciklama: 'Kapalıyken topluluk kanallarına yeni mesaj yazılamaz (okuma sürer).' },
+  { ad: 'arkadaslik', etiket: 'Arkadaşlık', aciklama: 'Kapalıyken Arkadaşlar sayfası gizlenir, /api/arkadas/* uçları 403 döner.' },
+  { ad: 'siralama_herkese', etiket: 'Sıralama herkese açık', aciklama: 'Kapalıyken Sıralama sayfası öğrenciye gizlenir; sıralama uçlarını yalnız yönetici okur.' },
+  { ad: 'kayit_acik', etiket: 'Yeni kayıt açık', aciklama: 'Kapalıyken daha önce hiç girmemiş hesap profil oluşturamaz (mevcut kullanıcılar girer).' },
+  { ad: 'not_paylas', etiket: 'Not paylaşımı', aciklama: 'Kapalıyken öğrenciler yeni not paylaşamaz.' },
+];
+
+/** bayrak → [yöntem desen, yol deseni]; eşleşen istek bayrak kapalıyken (yönetici değilse) 403 alır */
+const BAYRAK_UC: Record<string, [RegExp, RegExp][]> = {
+  oyunlar: [[/./, /^\/api\/oyun\//]],
+  topluluk_sohbet: [[/./, /^\/api\/topluluk\/sohbet(ler)?(\/|$)/]],
+  topluluk_mesaj: [[/^POST$/, /^\/api\/topluluk\/mesaj$/]],
+  arkadaslik: [[/./, /^\/api\/arkadas(\/|$)/]],
+  siralama_herkese: [[/^GET$/, /^\/api\/(kisi\/siralama|basarim\/(hucre-)?siralama)$/]],
+  not_paylas: [[/^POST$/, /^\/api\/not-paylas$/]],
+};
+
+export function bayrakAcik(ad: string): boolean {
+  return siteAyarOku().bayraklar?.[ad] !== false;
+}
+
+/** Erken (rotalardan önce) app.use ile takılır. kayit_acik: yeni kullanıcı denetimi için kullaniciVar verilir. */
+export function bayrakKapisi(d: { isAdmin: (req: express.Request) => boolean; kullaniciVar?: (uid: string, email: string) => boolean }): express.RequestHandler {
+  return (req, res, next) => {
+    if (!req.path.startsWith('/api/') || req.path.startsWith('/api/admin/')) return next();
+    const b = siteAyarOku().bayraklar || {};
+    if (!Object.values(b).some((v) => v === false)) return next();
+    for (const [ad, desenler] of Object.entries(BAYRAK_UC)) {
+      if (b[ad] !== false) continue;
+      if (desenler.some(([y, p]) => y.test(req.method) && p.test(req.path))) {
+        if (d.isAdmin(req)) return next();
+        return res.status(403).json({ error: 'Bu özellik şu an kapalı.', ozellikKapali: ad });
+      }
+    }
+    if (b.kayit_acik === false && req.method === 'POST' && req.path === '/api/users/sync' && d.kullaniciVar) {
+      const uid = String(req.body?.uid || '');
+      const email = String(req.body?.email || '').trim().toLowerCase();
+      if (!d.kullaniciVar(uid, email) && !d.isAdmin(req)) return res.status(403).json({ error: 'Yeni kayıtlar şu an kapalı.', ozellikKapali: 'kayit_acik' });
+    }
+    next();
+  };
 }

@@ -160,7 +160,7 @@ export function registerToplulukSohbet(app: express.Express, d: Deps) {
     if (!(await hazir(res))) return;
     const kod = String(req.body?.kod || '');
     if (!/^[A-Za-z0-9_-]{6,16}$/.test(kod)) return res.status(400).json({ error: 'Geçersiz davet.' });
-    const o = (await pgDb.query(`select id from sohbet_odalari where kod = $1 and tur = 'grup'`, [kod])).rows[0];
+    const o = (await pgDb.query(`select id from sohbet_odalari where kod = $1 and tur = 'grup' and kapali is null`, [kod])).rows[0];
     if (!o) return res.status(404).json({ error: 'Davet bulunamadı.' });
     const n = (await pgDb.query(`select count(*)::int n from sohbet_uyeleri where oda_id = $1`, [o.id])).rows[0].n;
     if (n >= ODA_UYE_MAX && !(await uye(Number(o.id), uid))) return res.status(409).json({ error: 'Grup dolu.' });
@@ -217,6 +217,7 @@ export function registerToplulukSohbet(app: express.Express, d: Deps) {
     if (!metin) return res.status(400).json({ error: 'Mesaj boş olamaz.' });
     const u = (await pgDb.query(`select ad from sohbet_uyeleri where oda_id = $1 and uid = $2`, [oda, uid])).rows[0];
     if (!u) return res.status(404).json({ error: 'Sohbet bulunamadı.' });
+    if ((await pgDb.query(`select 1 from sohbet_odalari where id = $1 and kapali is not null`, [oda])).rowCount) return res.status(423).json({ error: 'Bu sohbet yönetici tarafından kapatıldı.' });
     const h = hizli(uid, 1500, 300); if (h) return res.status(429).json({ error: h });
     const { rows } = await pgDb.query(
       `insert into topluluk_mesajlar (kanal, uid, ad, metin, yanit_id, ek) values ($1, $2, $3, $4, $5, $6) returning *`,

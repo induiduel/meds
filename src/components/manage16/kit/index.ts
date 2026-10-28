@@ -13,3 +13,5 @@ export * from './DegisiklikGecmisi';
 export * from './AyrintiCekmecesi';
 export * from './VeriTablosu';
 export { bildir, BildirimHost } from './Bildirim';
+export * from './Gorunurluk';
+export * from './KatalogSayfasi';

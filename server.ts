@@ -170,8 +170,14 @@ import { registerDataCatalogRoutes } from './src/services/dataCatalogService.ts'
 import { registerRagRelatedRoutes } from './src/services/ragRelatedRoutes.ts';
 import { registerBakimHataRoutes } from './src/services/bakimHataRoutes.ts';
 import { denetimAraKatmani, registerDenetimRoutes } from './src/services/yonetim16/denetim.ts';
-import { registerSiteAyarRoutes } from './src/services/yonetim16/siteAyar.ts';
+import { registerSiteAyarRoutes, bayrakKapisi } from './src/services/yonetim16/siteAyar.ts';
+import { registerOyunYonetimRoutes } from './src/services/yonetim16/oyunYonetim.ts';
+import { registerSiteSurumRoutes } from './src/services/yonetim16/siteSurum.ts';
 import { registerOzetRoutes } from './src/services/yonetim16/ozet.ts';
+import { registerYonetimTopluluk } from './src/services/yonetim16/topluluk.ts';
+import { registerYonetimSistem } from './src/services/yonetim16/sistem.ts';
+import { registerIcerik16Routes } from './src/services/yonetim16/icerik.ts';
+import { registerSorularRoutes } from './src/services/yonetim16/sorular.ts';
 import { registerUserNotesRoutes, createNotesStore } from './src/services/userNotesService.ts';
 import { createQuestionIntake, formatUnitsForPrompt, applyIntakeToQuestion } from './src/services/questionIntake.ts';
 import { havuzDondurDosyasi, havuzDonduruldu } from './src/services/havuzDondur.ts';
@@ -403,6 +409,11 @@ app.use(adminAuthMiddleware('nofrostlife@gmail.com'));
 // Yönetim v16 denetim kaydı: tüm /api/admin/* yazmaları + kişisel veri okumaları → meds-pg yonetici_denetim
 app.use(denetimAraKatmani());
 app.use(express.urlencoded({ extended: true, limit: '100mb' }));
+// Yönetim v16 · özellik bayrakları sunucu kapısı (yonetim16/siteAyar.ts BAYRAK_UC; bayrak yoksa açık)
+app.use(bayrakKapisi({
+  isAdmin: (req) => isRequestAdmin(req),
+  kullaniciVar: (uid, email) => loadUsers().some((u) => (uid && u.uid === uid) || (email && String(u.email || '').toLowerCase() === email)),
+}));
 // AB17/AB18: bakım kipi (MEDS_BAKIM=1 ya da POST /api/admin/bakim; varsayılan kapalı) + istemci hata bildirimi
 const bakimCtl = registerBakimHataRoutes(app, { dataDir: path.resolve(__dirname, 'data'), requireAdmin });
 
@@ -601,6 +612,7 @@ const peopleInsights = registerPeopleInsights(app, {
   oracleApiUrl: process.env.MEDS_ORACLE_API_URL || 'https://api.nofrostlife.com.tr',
   hesapBagi: (uid) => basarimMotor.bag(uid),
   hesapBirlestir: (kaynak, hedef) => { basarimMotor.birlestir(kaynak, hedef); basarimHaber(kaynak); },
+  basarimProfil: (uid) => basarimMotor.profilOku(uid),
   // Yönetici düzeltmesi öğrencinin açık cihazlarına hemen insin (profil kaydıyla aynı yol)
   onBackupEdited: (uid, bundle) => {
     if (!uid) return;
@@ -1576,7 +1588,7 @@ app.post('/api/committees', requireAdmin, (req, res) => {
 app.get('/api/questions', (req, res) => {
   const { committeeId, discipline, status, search, fields } = req.query;
   // Sadece sınavı tamamlanmış güncel 2026-2027 soruları döner, çıkmış sorular kesinlikle güncel havuza karışamaz
-  let result = (db.questions || []).filter(q => !q.isPastExam && q.examYear === '2026-2027');
+  let result = (db.questions || []).filter(q => !q.isPastExam && q.examYear === '2026-2027' && !(q as any).hidden);
 
   if (committeeId) {
     result = result.filter((q) => q.committeeId === committeeId);
@@ -9344,7 +9356,10 @@ app.get('/api/admin/db/export', requireAdmin, (req, res) => {
 
 // Admin: Import complete database JSON
 app.post('/api/admin/db/import', requireAdmin, (req, res) => {
+  // Tehlikeli: havuzu toptan ezer — çift onay (Yönetim v16 Sistem › Yedek) + boş havuzla ezme yasağı
+  if (req.headers['x-onay'] !== 'ICE-AKTAR') return res.status(400).json({ error: 'İçe aktarma için onay başlığı (x-onay: ICE-AKTAR) gerekli.' });
   const importedData = req.body;
+  if (Array.isArray(importedData?.questions) && importedData.questions.length === 0) return res.status(400).json({ error: 'Boş soru listesiyle havuz ezilemez.' });
   if (!importedData || !Array.isArray(importedData.questions) || !Array.isArray(importedData.committees)) {
     return res.status(400).json({ error: 'Geçersiz veritabanı JSON formatı. "committees" ve "questions" dizileri gereklidir.' });
   }
@@ -11719,6 +11734,8 @@ async function ensurePastReportIds(pastList: any[]): Promise<number> {
 // ---- Yönetim v16 temeli (src/services/yonetim16; belge docs/YONETIM_V16_KIT.md) ----
 registerDenetimRoutes(app, { rootDir: __dirname, dataDir: DATA_DIR, requireAdmin, isPgOnline: () => pgOnline, broadcastAdmin: (ev, d) => broadcastRealtimeEvent(ev, d, true) });
 registerSiteAyarRoutes(app, { rootDir: __dirname, requireAdmin, broadcast: (ev, d) => broadcastRealtimeEvent(ev, d), bakim: bakimCtl, kimOf: (req) => verifiedEmail(req) || String((req as any).adminAuth?.via || 'yönetici') });
+registerOyunYonetimRoutes(app, { requireAdmin, quiz: quizRealtimeServer });
+registerSiteSurumRoutes(app, { rootDir: __dirname, requireAdmin });
 registerOzetRoutes(app, {
   rootDir: __dirname,
   dataDir: DATA_DIR,
@@ -11732,6 +11749,18 @@ registerOzetRoutes(app, {
   onarimBekleyen: () => autoRepairStore.getAll().filter((x) => x.status === 'pending').length,
   faz14Bekleyen: () => phase14Queue.pendingCount(),
   sseIstemci: () => realtimeClients.size,
+});
+// Yönetim v16 › Sorular (havuz, çıkmış, birleşen, ham, şikâyet, Faz 14 görünümü, örnek, olası, dondurma)
+registerSorularRoutes(app, { rootDir: __dirname, dataDir: DATA_DIR, requireAdmin, havuz: () => db.questions || [], havuzKaydet: (q) => saveQuestionLive(q), cikmisHam: () => getPastQuestionsDb(), cikmisSitede: () => getServedPastList().list, cikmisKaydet: (l) => savePastQuestionsDb(l), cikmisOnbellekSil: () => { pastListCache = null; }, kardeslereYaz: syncPastMergeSiblings, cikmisAynala: (q) => mirrorPastQuestionToDb(q), yayinla: (ev, d) => broadcastRealtimeEvent(ev, d), hamOzet: (id) => ledgerSummary(id), hamKimlikler: () => rawLedger.listLedgerIds(), faz14Liste: () => phase14Queue.read(), icerikDuzenleme: pastContentEdit, ayniGorunum: sameDisplayedContent, kimOf: (req) => verifiedEmail(req) || String((req as any).adminAuth?.via || 'yönetici') });
+
+registerIcerik16Routes(app, { rootDir: __dirname, dataDir: DATA_DIR, requireAdmin, broadcast: (ev, d) => broadcastRealtimeEvent(ev, d), getDecks: getDecksDb }); // Yönetim v16: Kurullar/dersler, Öğrenme, Kaynaklar
+
+// Yönetim v16 › Topluluk + Sistem (src/services/yonetim16/{topluluk,sistem}.ts)
+registerYonetimTopluluk(app, { requireAdmin, isPgOnline: () => pgOnline, broadcast: (ev, d) => broadcastRealtimeEvent(ev, d), broadcastAdmin: (ev, d) => broadcastRealtimeEvent(ev, d, true), kimOf: (req) => verifiedEmail(req) || String((req as any).adminAuth?.via || 'yönetici') });
+registerYonetimSistem(app, {
+  rootDir: __dirname, dataDir: DATA_DIR, requireAdmin, isPgOnline: () => pgOnline, sseIstemci: () => realtimeClients.size,
+  faz14: () => ({ bekleyen: phase14Queue.pendingCount(), calisiyor: phase14UserWorkerRunning() }),
+  onarim: () => { const all = autoRepairStore.getAll(); return { aktif: isAutoRepairWorkerActive(), bekleyen: all.filter((x) => x.status === 'pending').length, isleniyor: all.filter((x) => x.status === 'processing').length, hata: all.filter((x) => x.status === 'error').length }; },
 });
 
 app.get('/api/admin/inbox', requireModeratorOrAdmin, async (_req, res) => {

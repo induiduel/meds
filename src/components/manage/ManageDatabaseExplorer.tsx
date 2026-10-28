@@ -174,7 +174,7 @@ export const ManageDatabaseExplorer: React.FC<{ notify: (m: string) => void }> =
     if (!table || !edit?.row) return;
     setBusy(true);
     try {
-      await adminCall('/api/admin/pg/row', { method: 'DELETE', body: JSON.stringify({ table: table.name, key: keyOf(edit.row) }) });
+      await adminCall('/api/admin/pg/row', { method: 'DELETE', body: JSON.stringify({ table: table.name, key: keyOf(edit.row), onay: 'SIL' }) });
       notify('Satır silindi.');
       setEdit(null);
       void loadRows();
@@ -194,7 +194,7 @@ export const ManageDatabaseExplorer: React.FC<{ notify: (m: string) => void }> =
     let ok = 0;
     const fails: string[] = [];
     for (const r of list) {
-      try { await adminCall('/api/admin/pg/row', { method: 'DELETE', body: JSON.stringify({ table: table.name, key: keyOf(r) }) }); ok++; }
+      try { await adminCall('/api/admin/pg/row', { method: 'DELETE', body: JSON.stringify({ table: table.name, key: keyOf(r), onay: 'SIL' }) }); ok++; }
       catch (e: any) { fails.push(e?.message || 'hata'); }
     }
     setBulkBusy(false);

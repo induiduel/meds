@@ -15,7 +15,7 @@
  */
 import express from 'express';
 import { isLoopback, isStrongAdmin } from './peopleInsights';
-import { requestUser } from './firebaseIdentity';
+import { requestUser, oturumIptaliKur } from './firebaseIdentity';
 
 type Any = Record<string, any>;
 export type UserRole = 'student' | 'moderator' | 'admin';
@@ -54,11 +54,16 @@ export function registerUserAdminRoutes(app: express.Express, deps: UserAdminDep
 
   /* ---------- Askı önbelleği (users.json her istekte okunmasın) ---------- */
   let cache: { at: number; byUid: Map<string, Any>; byEmail: Map<string, Any> } | null = null;
+  /** uid → oturum sonlandırma zamanı (ms); askı önbelleğiyle birlikte tazelenir */
+  let iptaller = new Map<string, number>();
   const refresh = () => {
     const byUid = new Map<string, Any>();
     const byEmail = new Map<string, Any>();
+    const yeniIptal = new Map<string, number>();
     try {
       for (const u of deps.loadUsers() || []) {
+        const t = u?.sessionsRevokedAt ? Date.parse(u.sessionsRevokedAt) : NaN;
+        if (u?.uid && Number.isFinite(t) && lc(u.email) !== owner) yeniIptal.set(String(u.uid), t);
         if (!suspensionActive(u?.suspension) || lc(u.email) === owner) continue;
         if (u.uid) byUid.set(String(u.uid), u);
         if (u.email) byEmail.set(lc(u.email), u);
@@ -67,9 +72,11 @@ export function registerUserAdminRoutes(app: express.Express, deps: UserAdminDep
       console.warn('[Kullanıcı erişimi] kullanıcılar okunamadı:', e?.message);
     }
     cache = { at: Date.now(), byUid, byEmail };
+    iptaller = yeniIptal;
     return cache;
   };
   const suspended = () => (cache && Date.now() - cache.at < 15_000 ? cache : refresh());
+  oturumIptaliKur((uid) => { suspended(); return iptaller.get(uid) ?? null; });
   const invalidate = () => {
     cache = null;
   };
@@ -129,6 +136,8 @@ export function registerUserAdminRoutes(app: express.Express, deps: UserAdminDep
     res.setHeader('Cache-Control', 'no-store');
     try {
       const who = await requestUser(req);
+      // Yönetici oturumları sonlandırdı: istemci (moderatorSession.fetchMyAccess) çıkış yapar
+      if (who.revoked) return res.json({ role: 'student', suspended: false, oturumSonlandirildi: true });
       if (!who.user) return res.json({ role: 'student', suspended: false });
       const u = (deps.loadUsers() || []).find((x) => x.uid === who.user!.uid || (who.user!.email && lc(x.email) === lc(who.user!.email)));
       const active = !!u && lc(u.email) !== owner && suspensionActive(u.suspension);
@@ -179,6 +188,9 @@ export function registerUserAdminRoutes(app: express.Express, deps: UserAdminDep
     suspended: lc(u.email) !== owner && suspensionActive(u.suspension),
     suspension: u.suspension || null,
     accessHistory: Array.isArray(u.accessHistory) ? u.accessHistory.slice(-20) : [],
+    sessionsRevokedAt: u.sessionsRevokedAt || null,
+    lastLoginAt: u.lastLoginAt || null,
+    createdAt: u.createdAt || null,
   });
   const targetUids = (body: Any): string[] =>
     Array.from(new Set((Array.isArray(body?.uids) ? body.uids : [body?.uid]).map((x: unknown) => clip(x, 128)).filter(Boolean))) as string[];
@@ -279,6 +291,18 @@ export function registerUserAdminRoutes(app: express.Express, deps: UserAdminDep
       if (!u.suspension?.active) return 'Hesap zaten askıda değil.';
       u.suspension = { ...u.suspension, active: false, liftedAt: now, liftedBy: by };
       pushHistory(u, { at: now, by, kind: 'unsuspend' });
+      return null;
+    });
+  });
+
+  // Oturumları sonlandır: bu andan önce açılmış girişlerin jetonları sunucuda reddedilir (requestUser), istemci
+  // açılışta /api/me/access ile öğrenip çıkış yapar. Firebase yenileme jetonu iptal edilmez (firebase-admin yok).
+  app.post('/api/admin/people-access/oturum-sonlandir', async (req, res) => {
+    if (!(await guard(req, res))) return;
+    const by = actorEmail(req);
+    apply(req, res, (u, now) => {
+      u.sessionsRevokedAt = now;
+      pushHistory(u, { at: now, by, kind: 'sessions_revoked' });
       return null;
     });
   });

@@ -12,6 +12,7 @@
 import { createRequire } from 'module';
 import type { QuizQuestion } from '../../types/quiz';
 import { oyunSorulari } from './oyunSoruKaynagi';
+import { bayrakAcik } from '../yonetim16/siteAyar';
 
 const require = createRequire(import.meta.url);
 const wsModule = require('ws');
@@ -122,6 +123,11 @@ class QuizRealtimeManager {
             if (!roomId || !userId) break;
             // Oyunlar: oda yalnız kaynak (branş + isteğe bağlı ders + soru sayısı) verilerek kurulur; kodla katılan
             // kaynaksız gelir — oda yoksa hata döner (sorusuz oda kurulup oyun hiç başlamıyordu)
+            // Panel bayrakları (Yönetim › Site/Oyunlar): oyunlar kapalı ya da canlı/takım modu kapalıysa oda kurulmaz/katılınmaz
+            if (!bayrakAcik('oyunlar') || (kaynak && !bayrakAcik(kaynak.takim ? 'oyun_mod_takim' : 'oyun_mod_canli'))) {
+              ws.send(JSON.stringify({ type: 'room_error', mesaj: 'Bu oyun şu an kapalı.' }));
+              return;
+            }
             if (!this.rooms.has(roomId)) {
               const sorular = kaynak?.brans ? oyunSorulari(String(kaynak.brans), kaynak.ders ? String(kaynak.ders) : undefined, Number(kaynak.n) || 10) : [];
               if (!sorular.length) {
@@ -191,6 +197,28 @@ class QuizRealtimeManager {
   /**
    * Odaya oyuncu ekleme veya yeni oda oluşturma.
    */
+  /** Yönetim › Oyunlar › Canlı odalar: RAM'deki odaların özeti */
+  public odaListesi() {
+    return [...this.rooms.values()].map((r) => ({
+      roomId: r.roomId, baslik: r.baslik || '', kaynak: r.courseId, ders: r.topicId, durum: r.status, takimli: !!r.takimli,
+      soru: r.questions.length, sira: r.currentQuestionIndex, kurucu: r.kurucu || '',
+      oyuncular: [...r.players.values()].map((p) => ({ userId: p.userId, ad: p.displayName, puan: p.score, hazir: p.isReady, takim: p.takim || null, bagli: p.socket?.readyState === 1 })),
+    }));
+  }
+
+  /** Odayı kapat: oyunculara bildirilir, soketler kapanır, oda RAM'den silinir */
+  public odaKapat(roomId: string, neden = 'Oda yönetici tarafından kapatıldı.'): boolean {
+    const r = this.rooms.get(roomId);
+    if (!r) return false;
+    if (r.revealTimeoutId) clearTimeout(r.revealTimeoutId);
+    for (const p of r.players.values()) {
+      try { p.socket?.send(JSON.stringify({ type: 'room_error', mesaj: neden })); } catch { /* */ }
+      try { p.socket?.close(4000, 'oda kapatildi'); } catch { /* */ }
+    }
+    this.rooms.delete(roomId);
+    return true;
+  }
+
   public createOrJoinRoom(roomId: string, courseId: string, topicId: string, questions: QuizQuestion[]): QuizRoom {
     let room = this.rooms.get(roomId);
     if (!room) {
@@ -320,6 +348,7 @@ class QuizRealtimeManager {
    * İstemci zaten soruyu belleğe aldığı için sadece round index ve deadline yollanır!
    */
   private startRound(room: QuizRoom, questionIndex: number) {
+    if (this.rooms.get(room.roomId) !== room) return; // oda kapatıldı (yönetici)
     if (questionIndex >= room.questions.length) {
       this.finishGame(room);
       return;

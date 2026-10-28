@@ -3,6 +3,7 @@ import type React from 'react';
 import type { AppRoute } from '../../router';
 import { MERKEZ_ARACLARI } from '../merkez/merkezModel';
 import { NAV_ITEMS, NAV_TREE, type NavItem } from '../shell/navModel';
+import { menudeGorunur, siteAyarAbone } from '../../services/siteAyar';
 
 /**
  * v15 gezinmesi (tasarım sistemi v15 › Kabuk): "ne yapmak istiyorum?" sorusunun dört işi + önde Bugün.
@@ -42,11 +43,17 @@ const itemsOf = (id: Exclude<V15Section['id'], 'bugun'>): NavItem[] => {
 
 export const V15_SECTIONS: V15Section[] = [
   { id: 'bugun', label: 'Bugün', short: 'Bugün', icon: House, hub: 'today', items: [] },
-  { id: 'dersler', label: 'Ders çalış', short: 'Ders', icon: BookOpen, hub: 'hub_dersler', items: itemsOf('dersler') },
-  { id: 'sorular', label: 'Soru çöz', short: 'Soru', icon: CircleHelp, hub: 'hub_sorular', items: itemsOf('sorular') },
-  { id: 'kamplar', label: 'Sınava hazırlan', short: 'Sınav', icon: Flag, hub: 'hub_kamplar', items: itemsOf('kamplar') },
-  { id: 'kaynaklar', label: 'Başvuru', short: 'Başvuru', icon: Library, hub: 'hub_kaynaklar', items: itemsOf('kaynaklar') },
+  { id: 'dersler', label: 'Ders çalış', short: 'Ders', icon: BookOpen, hub: 'hub_dersler', items: [] },
+  { id: 'sorular', label: 'Soru çöz', short: 'Soru', icon: CircleHelp, hub: 'hub_sorular', items: [] },
+  { id: 'kamplar', label: 'Sınava hazırlan', short: 'Sınav', icon: Flag, hub: 'hub_kamplar', items: [] },
+  { id: 'kaynaklar', label: 'Başvuru', short: 'Başvuru', icon: Library, hub: 'hub_kaynaklar', items: [] },
 ];
+/** Bölüm listeleri çalışma anında (site ayarı değişince) yerinde yenilenir; merkezModel/navModel aboneleri önce çalışır */
+function bolumSuz() {
+  for (const s of V15_SECTIONS) if (s.id !== 'bugun') s.items.splice(0, s.items.length, ...itemsOf(s.id));
+}
+bolumSuz();
+siteAyarAbone(bolumSuz);
 
 /** Menüde ayrı satırı olmayan alt sayfalar (ders ayrıntısı Ders çalış bölümündedir) */
 const ALT_SAYFA: Partial<Record<AppRoute, V15Section['id']>> = { ders_detay: 'dersler', program_ekle: 'dersler' };
@@ -71,7 +78,7 @@ export function menuGruplari(isAdmin: boolean): MenuGrubu[] {
   const al = (ids: (NavItem | undefined)[]) => ids.filter((it): it is NavItem => !!it && !seen.has(it.id) && (seen.add(it.id), true));
   const grup = (label: string) => NAV_TREE.find((g) => g.label === label)?.items || [];
   const sec = (id: V15Section['id']) => V15_SECTIONS.find((s) => s.id === id)!;
-  const oyun = al(OYUNLAR.map((r) => NAV_ITEMS[r]));
+  const oyun = al(OYUNLAR.filter((r) => menudeGorunur(r)).map((r) => NAV_ITEMS[r]));
   const out: MenuGrubu[] = [
     { id: 'dersler', label: 'Ders çalış', icon: BookOpen, hub: 'hub_dersler', items: al(sec('dersler').items) },
     { id: 'sorular', label: 'Soru çöz', icon: CircleHelp, hub: 'hub_sorular', items: al(sec('sorular').items) },
@@ -80,7 +87,7 @@ export function menuGruplari(isAdmin: boolean): MenuGrubu[] {
     { id: 'kaynaklar', label: 'Başvuru', icon: Library, hub: 'hub_kaynaklar', items: al(sec('kaynaklar').items) },
     { id: 'oyunlar', label: 'Oyunlar', icon: Gamepad2, items: oyun },
     { id: 'topluluk', label: 'Topluluk', icon: MessagesSquare, items: al(grup('Topluluk')) },
-    { id: 'kisisel', label: 'Kişisel', icon: UserRound, items: al([...KISISEL.map((r) => NAV_ITEMS[r]), ...(isAdmin ? [YONETIM] : [])]) },
+    { id: 'kisisel', label: 'Kişisel', icon: UserRound, items: al([...KISISEL.filter((r) => menudeGorunur(r)).map((r) => NAV_ITEMS[r]), ...(isAdmin ? [YONETIM] : [])]) },
   ];
   // Bölüm başlığının altındaki açıklama: ilk birkaç sayfanın kısa adı (tasarım: "Sesli dersler, Öğren, Spotlar…")
   return out.filter((g) => g.items.length).map((g) => ({ ...g, alt: g.items.slice(0, 4).map((it) => it.short || it.label).join(', ') + (g.items.length > 4 ? '…' : '') }));
