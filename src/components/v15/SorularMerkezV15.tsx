@@ -73,7 +73,9 @@ export default function SorularMerkezV15() {
           <span className="s15-oz-h"><span className="v15-label">Çözdüğün</span><span className="v15-tile is-ok"><CircleHelp aria-hidden /></span></span>
           <b className="s15-say">{cozum.n.toLocaleString('tr-TR')}</b>
           <span className="v15-cap">{cozum.n ? `%${cozum.pct} doğru · ${cozum.yanlis} yanlış` : 'Henüz soru çözmedin'}</span>
-          <a className="v15-btn" href={karmaYolu} onClick={git(karmaYolu)}><span className="s15-uzun">Karma test başlat</span><span className="s15-kisa">Karma</span></a>
+          {/* H385: Karma doğrudan teste atıyordu, ne başlayacağı yazmıyordu; düğme ve ipucu içeriği söyler */}
+          <a className="v15-btn" href={karmaYolu} onClick={git(karmaYolu)} title={`Kurul ${kurul} · tüm derslerden karışık 20 soru, hemen başlar`}
+            aria-label={`Karma test: Kurul ${kurul}, tüm derslerden 20 soru, hemen başlar`}><span className="s15-uzun">Karma test · 20 soru</span><span className="s15-kisa">Karma · 20</span></a>
         </div>
         <div className="s15-oz v15-card">
           <span className="s15-oz-h">{/* H159: telefonda üç sütunlu kartta "TEKRAR ZAMANI" kesiliyordu; dar ekranda kısa ad */}<span className="v15-label"><span className="s15-uzun">Tekrar zamanı</span><span className="s15-kisa">Tekrar</span></span><span className="v15-tile is-b"><RotateCcw aria-hidden /></span></span>

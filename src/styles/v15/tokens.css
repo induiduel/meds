@@ -134,3 +134,8 @@
 :root[data-v15='on'] { --color-hl: #FFE58A; --color-hl-ink: #1A1405; }
 :root[data-v15='on'][data-mode='sepia'] { --color-hl: #F5D27A; --color-hl-ink: #1A1405; }
 :root[data-v15='on'][data-mode='dark'] { --color-hl: #5A4A12; --color-hl-ink: #FFF6D6; }
+
+/* H384: öğrenciye görünen sayaç/özetlerde mono yazıtipi (çizgili sıfır "8" gibi okunuyordu, H162) — bu sayfalarda
+   mono yerine metin yazıtipi + eş genişlikli rakam. Gerçek kod/kimlik alanları (kbd, code) etkilenmez. */
+:root[data-v15='on'] :is(.od, .gk-liste, .kz-page, .stv) { --font-mono: var(--font-sans); font-variant-numeric: tabular-nums; }
+:root[data-v15='on'] :is(.od, .gk-liste, .kz-page, .stv) :is(kbd, code) { font-family: ui-monospace, "SF Mono", Menlo, monospace; }

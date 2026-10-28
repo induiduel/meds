@@ -1,11 +1,12 @@
 {
  "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
- "onem": 558,
- "baslik": "Küçük kullanım düzeltmeleri",
+ "onem": 559,
+ "baslik": "Ders çalış çip şeridi düzeldi",
  "maddeler": [
-  "Boş sayfalarda gereksiz düğmeler gizlendi",
-  "Müzik, arama ve ilk adımlarda daha kolay dokunulan denetimler",
-  "Yönetim: kayıtlar arasında daha çok bağlantı, açık pencere adreste korunuyor"
+  "Ders çalış sayfasında kurul düğmesi ve branş çipleri yeniden yan yana",
+  "Menüdeki adlar sayfa başlıklarıyla aynı",
+  "İçeriği olmayan kurullar \"henüz yok\" diye işaretli",
+  "Testten çıkarken cevapların kaybolacaksa sorulur"
  ],
  "eklenen": [],
  "degisen": [],

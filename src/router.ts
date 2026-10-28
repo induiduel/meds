@@ -196,7 +196,7 @@ export const ROUTE_TITLES: Record<AppRoute, string> = {
   glossary: 'Sözlük',
   diseases: 'Hastalıklar',
   health_ministry: 'Sağlık Bakanlığı',
-  canli_ders: 'Sesli ders',
+  canli_ders: 'Sesli dersler', // H380
   flashcards: 'Ezber kartları',
   questions: 'Soru havuzu',
   past_exams: 'Çıkmış sorular',
@@ -218,7 +218,7 @@ export const ROUTE_TITLES: Record<AppRoute, string> = {
   ders_programi: 'Ders programı',
   transcripts: 'Ses kayıtları',
   ai_chat: 'Asistan',
-  matrix: 'Soru haritası',
+  matrix: 'Havuz doluluğu', // H380: menü adıyla eşit
   booklet: 'A4 kitapçık',
   admin: 'Yönetim',
   manage: 'Yönetim Konsolu',
@@ -229,14 +229,14 @@ export const ROUTE_TITLES: Record<AppRoute, string> = {
   soru_cozucu: 'Soru çözücü',
   alternatif_cozucu: 'Alternatif çözücü',
   en_onemliler: 'En önemliler',
-  patoloji_checkup: 'Patoloji Hızlı Check Up',
-  genetik_checkup: 'TBG Sınav Kampı',
-  kmb_asistan: 'KMB görsel asistan',
+  patoloji_checkup: 'Patoloji Check Up', // H380
+  genetik_checkup: 'TBG Check Up', // H380
+  kmb_asistan: 'KMB dersleri', // H380
   son_prova: 'Son Prova',
   cikmis_cozucu: 'Çıkmış çözücü',
   bitirdiklerim: 'Bitirdiklerim',
   basarimlar: 'Başarımlar',
-  cevrimdisi: 'Çevrimdışı',
+  cevrimdisi: 'Çevrimdışı ve indirmeler', // H380
   olasi_sorular: 'Olası sorular',
   soru_haritasi: 'Soru haritası',
   oyunlar: 'Oyunlar',

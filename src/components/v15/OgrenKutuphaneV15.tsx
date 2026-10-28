@@ -63,11 +63,12 @@ export const OgrenKutuphaneV15: React.FC<LearnLibraryV12Props> = ({ decks: all, 
     return c;
   }, [kapsam, dal, progress]);
 
-  useV15Baslik({ baslik: 'Öğren desteleri', alt: `${kurul === 'all' ? 'Tüm kurullar' : kurul} · ${kapsam.length} deste` });
+  // H380: menüdeki adla aynı (Etkileşimli dersler)
+  useV15Baslik({ baslik: 'Etkileşimli dersler', alt: `${kurul === 'all' ? 'Tüm kurullar' : kurul} · ${kapsam.length} deste` });
 
   return (
     <div className="o15">
-      <h1 className="sr-only">Öğren desteleri</h1>
+      <h1 className="sr-only">Etkileşimli dersler</h1>
       <div className="o15-ust">
         {araAcik ? (
           <label className="o15-ara">

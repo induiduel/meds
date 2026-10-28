@@ -19,12 +19,12 @@ export default function GizlilikAnahtari() {
     if (!r.ok) { setAcik(!yeni); setHata((r.data as any)?.error || 'Kaydedilemedi.'); }
   };
   return (
-    <div className="v15-card ks15-gizlilik">
+    <div className="v15-card apr15-gizlilik">
       <label>
         <span><b>Profilim herkese açık</b><small>{acik ? 'Adın, çalışma süren, çözdüğün sorular ve çalıştığın dersler herkese görünür.' : 'Sıralamada "Gizli kullanıcı" olarak görünürsün; profilin ve aramada adın gizli.'}</small></span>
         <input type="checkbox" role="switch" checked={acik} onChange={() => void degistir()} aria-checked={acik} />
       </label>
-      {hata && <small className="ks15-hata">{hata}</small>}
+      {hata && <small className="apr15-hata">{hata}</small>}
     </div>
   );
 }

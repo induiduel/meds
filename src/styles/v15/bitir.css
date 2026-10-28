@@ -1,22 +1,23 @@
-/* v15 · Bitirdiklerim katmanı (.bd15): başlık üst barda, modüller yatay çip şeridi, düz kartlar, tek vurgu */
-.bd15 { max-width: 1100px; padding-top: 0; gap: 12px; }
-.bd15-plan { display: flex; align-items: center; gap: 12px; padding: 12px 14px; color: inherit; text-decoration: none; }
-.bd15-plan-t { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 1px; }
-.bd15-plan-t b { color: var(--color-ink); font-weight: 650; }
-.bd15 .bd-modul { display: flex; gap: 8px; padding: 0; border: 0; background: none; overflow-x: auto; scrollbar-width: none; }
-.bd15 .bd-modul button { flex: none; justify-content: flex-start; border-radius: 999px; padding: 6px 14px; min-height: 40px;
+/* H389: kök sınıf bd15 → btr15 (Bildirimler de .bd15 kullanıyordu; hangisi önce yüklenirse ötekinin genişliğini değiştiriyordu) */
+/* v15 · Bitirdiklerim katmanı (.btr15): başlık üst barda, modüller yatay çip şeridi, düz kartlar, tek vurgu */
+.btr15 { max-width: 1100px; padding-top: 0; gap: 12px; }
+.btr15-plan { display: flex; align-items: center; gap: 12px; padding: 12px 14px; color: inherit; text-decoration: none; }
+.btr15-plan-t { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 1px; }
+.btr15-plan-t b { color: var(--color-ink); font-weight: 650; }
+.btr15 .bd-modul { display: flex; gap: 8px; padding: 0; border: 0; background: none; overflow-x: auto; scrollbar-width: none; }
+.btr15 .bd-modul button { flex: none; justify-content: flex-start; border-radius: 999px; padding: 6px 14px; min-height: 40px;
   background: var(--color-surface); box-shadow: inset 0 0 0 1px var(--color-line-soft, var(--color-line)); }
-.bd15 .bd-modul button.is-on { background: var(--color-ink); color: var(--color-canvas, var(--color-white)); box-shadow: none; }
-.bd15 .bd-modul button.is-on .bd-modul-n { color: inherit; opacity: .8; }
-.bd15 .bd-modul-n { font-family: inherit; }
-.bd15 :is(.bd-ozet, .bd-kart, .bd-ders, .bd-sirada) { background: var(--color-surface); border-color: var(--color-line-soft, var(--color-line)); border-radius: var(--v15-r-lg, 16px); box-shadow: none; }
-.bd15 .bd-cubuk { height: 4px; border-radius: 999px; }
-.bd15 .bd-ara { border-radius: 999px; }
-.bd15 .bd-suz button { border-radius: 999px; }
+.btr15 .bd-modul button.is-on { background: var(--color-ink); color: var(--color-canvas, var(--color-white)); box-shadow: none; }
+.btr15 .bd-modul button.is-on .bd-modul-n { color: inherit; opacity: .8; }
+.btr15 .bd-modul-n { font-family: inherit; }
+.btr15 :is(.bd-ozet, .bd-kart, .bd-ders, .bd-sirada) { background: var(--color-surface); border-color: var(--color-line-soft, var(--color-line)); border-radius: var(--v15-r-lg, 16px); box-shadow: none; }
+.btr15 .bd-cubuk { height: 4px; border-radius: 999px; }
+.btr15 .bd-ara { border-radius: 999px; }
+.btr15 .bd-suz button { border-radius: 999px; }
 
 /* B12: üst istatistik şeridi (Ders · Soru · Doğru oranı · Süre) */
-.bd15-stat { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; margin-bottom: 12px; }
-.bd15-stat .v15-card { padding: 12px 14px; display: flex; flex-direction: column; gap: 2px; min-width: 0; }
-.bd15-stat b { font-size: 22px; font-weight: 700; color: var(--color-ink); font-variant-numeric: tabular-nums; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.bd15-stat small { font-size: 12.5px; color: var(--color-ink-3); }
-@media (max-width: 560px) { .bd15-stat { grid-template-columns: repeat(2, minmax(0, 1fr)); } .bd15-stat b { font-size: 19px; } }
+.btr15-stat { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; margin-bottom: 12px; }
+.btr15-stat .v15-card { padding: 12px 14px; display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.btr15-stat b { font-size: 22px; font-weight: 700; color: var(--color-ink); font-variant-numeric: tabular-nums; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.btr15-stat small { font-size: 12.5px; color: var(--color-ink-3); }
+@media (max-width: 560px) { .btr15-stat { grid-template-columns: repeat(2, minmax(0, 1fr)); } .btr15-stat b { font-size: 19px; } }

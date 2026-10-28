@@ -80,7 +80,7 @@ const I: Record<string, NavItem> = {
   quick_add: { id: 'quick_add', label: 'Soru ekle', short: 'Ekle', hint: 'Hatırladığın parçayı gir', icon: SquarePen, tint: '#FF2D55' },
   // Ders çalış
   learn: { id: 'learn', label: 'Etkileşimli dersler', short: 'Öğren', tile: 'Etkileşimli ders', hint: 'Adım adım ders desteleri, mini sorular', icon: GraduationCap, tint: '#AF52DE' },
-  canli_ders: { id: 'canli_ders', label: 'Sesli ders', short: 'Sesli', hint: 'Dersi dinle; metin ve slayt sesle akar, MP3 indir', icon: AudioLines, tint: '#30B0C7' },
+  canli_ders: { id: 'canli_ders', label: 'Sesli dersler', /* H380: sayfa başlığıyla aynı ad */ short: 'Sesli', hint: 'Dersi dinle; metin ve slayt sesle akar, MP3 indir', icon: AudioLines, tint: '#30B0C7' },
   notes: { id: 'notes', label: 'Ders notları', short: 'Notlar', hint: 'Amfi slaytları ve ders notları', icon: NotebookPen, tint: '#FF9F0A' },
   summaries: { id: 'summaries', label: 'Ders özetleri', short: 'Özetler', hint: 'Konu konu kısa özet, uzun okuma', icon: BookOpen, tint: '#FF6B3D' },
   flashcards: { id: 'flashcards', label: 'Ezber kartları', short: 'Kartlar', hint: 'Aralıklı tekrar', icon: Layers, tint: '#32ADE6' },
@@ -90,7 +90,7 @@ const I: Record<string, NavItem> = {
   alternatif_cozucu: { id: 'alternatif_cozucu', label: 'Alternatif çözücü', short: 'Alternatif', hint: 'Her soru baştan sona sesli anlatılır, otomatik geçer', icon: Headphones, tint: '#6366F1' },
   en_onemliler: { id: 'en_onemliler', label: 'En önemliler', short: 'Önemli', hint: 'Konu başına en önemli bilgiler, 100 puan', icon: Star, tint: '#F59E0B' },
   patoloji_checkup: { id: 'patoloji_checkup', label: 'Patoloji Check Up', short: 'Check Up', tile: 'Patoloji Check Up', hint: 'Mediyatör, sitokin, hücre ve hastalık tabloları; kendini sına', icon: Table2, tint: '#14B8A6' },
-  kmb_asistan: { id: 'kmb_asistan', label: 'KMB sesli dersler', short: 'KMB', tile: 'KMB dersleri', hint: 'Klinik mesleki beceri: sesli ve videolu öğren, hedeflerle çalış, OSCE ve vaka sınavı', icon: Stethoscope, tint: '#0E7490' },
+  kmb_asistan: { id: 'kmb_asistan', label: 'KMB dersleri', /* H380 */ short: 'KMB', tile: 'KMB dersleri', hint: 'Klinik mesleki beceri: sesli ve videolu öğren, hedeflerle çalış, OSCE ve vaka sınavı', icon: Stethoscope, tint: '#0E7490' },
   son_prova: { id: 'son_prova', label: 'Son Prova', short: 'Prova', tile: 'Son Prova', hint: 'Kurulun tüm dersleri sesli özetle, aşama soruları, check-up ve 100 soruluk 3 deneme', icon: Flag, tint: '#E11D48' },
   genetik_checkup: { id: 'genetik_checkup', label: 'TBG Check Up', short: 'TBG', tile: 'TBG Check Up', hint: 'TBG Sınav Kampı v1: sesli ders, soru çözerek tekrar, kalıp kartları, deneme — her biri ayrı sayfa', icon: Dna, tint: '#10B981' },
   cikmis_cozucu: { id: 'cikmis_cozucu', label: 'Çıkmış çözücü', short: 'Çıkmış', tile: 'Çıkmış çözücü', hint: 'Sınav soru sayısı kadar çıkmış paketleri, sesli asistanla birlikte çöz', icon: History, tint: '#7C3AED' },

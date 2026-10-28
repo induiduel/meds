@@ -42,11 +42,11 @@ export default function KisiProfilV15() {
     if (r.hata) setMesaj(r.hata); else { setP({ ...p, iliski: r.iliski || p.iliski }); if (tur === 'istek' && r.iliski === 'giden') setMesaj('Arkadaşlık isteği gönderildi.'); }
   };
 
-  if (hata) return <div className="ks15"><Bos baslik="Profil açılamadı" metin={hata} /></div>;
-  if (!p) return <div className="ks15"><p className="ks15-not">Yükleniyor…</p></div>;
+  if (hata) return <div className="apr15"><Bos baslik="Profil açılamadı" metin={hata} /></div>;
+  if (!p) return <div className="apr15"><p className="apr15-not">Yükleniyor…</p></div>;
 
   const dugmeler = !p.ben && (
-    <div className="ks15-dugmeler">
+    <div className="apr15-dugmeler">
       {p.iliski === 'yok' && <button type="button" className="v15-btn" disabled={mesgul} onClick={() => void islem('istek')}><UserPlus aria-hidden /> Arkadaş ekle</button>}
       {p.iliski === 'giden' && <button type="button" className="v15-btn is-soft" disabled={mesgul} onClick={() => void islem('cikar')}><X aria-hidden /> İsteği geri çek</button>}
       {p.iliski === 'gelen' && <>
@@ -61,13 +61,13 @@ export default function KisiProfilV15() {
 
   if (p.gizli) {
     return (
-      <div className="ks15">
-        <div className="v15-card ks15-bas">
-          <span className="ks15-av is-b" aria-hidden><Lock /></span>
-          <div className="ks15-kim"><b>Gizli kullanıcı</b><small>Bu kişi profilini herkese kapattı.</small></div>
+      <div className="apr15">
+        <div className="v15-card apr15-bas">
+          <span className="apr15-av is-b" aria-hidden><Lock /></span>
+          <div className="apr15-kim"><b>Gizli kullanıcı</b><small>Bu kişi profilini herkese kapattı.</small></div>
         </div>
         {dugmeler}
-        {mesaj && <p className="ks15-not" role="status">{mesaj}</p>}
+        {mesaj && <p className="apr15-not" role="status">{mesaj}</p>}
       </div>
     );
   }
@@ -75,19 +75,19 @@ export default function KisiProfilV15() {
   const cozulen = (p.dogru || 0) + (p.yanlis || 0);
   const oran = cozulen ? Math.round(((p.dogru || 0) / cozulen) * 100) : null;
   return (
-    <div className="ks15">
-      <div className="v15-card ks15-bas">
-        <span className="ks15-av is-b" aria-hidden>{p.foto ? <img src={p.foto} alt="" /> : basHarf(p.ad)}</span>
-        <div className="ks15-kim">
+    <div className="apr15">
+      <div className="v15-card apr15-bas">
+        <span className="apr15-av is-b" aria-hidden>{p.foto ? <img src={p.foto} alt="" /> : basHarf(p.ad)}</span>
+        <div className="apr15-kim">
           <b>{p.ad}</b>
           <small>{[p.universite, p.donem ? `${p.donem}. dönem` : '', p.unvan || p.kidem].filter(Boolean).join(' · ') || 'Üniversite belirtilmemiş'}</small>
           <small>{p.arkadasN || 0} arkadaş{p.ben ? '' : p.iliski === 'arkadas' ? ' · arkadaşın' : ''}</small>
         </div>
       </div>
       {dugmeler}
-      {mesaj && <p className="ks15-not" role="status">{mesaj}</p>}
+      {mesaj && <p className="apr15-not" role="status">{mesaj}</p>}
 
-      <div className="v15-card ks15-son">
+      <div className="v15-card apr15-son">
         <span className="v15-tile"><BookOpen aria-hidden /></span>
         <div>
           <small>En son çalıştığı</small>
@@ -96,7 +96,7 @@ export default function KisiProfilV15() {
         </div>
       </div>
 
-      <div className="ks15-olcu">
+      <div className="apr15-olcu">
         <Olcu ikon={<Clock aria-hidden />} ad="Bugün" deger={sure(p.calisma?.bugun)} />
         <Olcu ikon={<Clock aria-hidden />} ad="Bu hafta" deger={sure(p.calisma?.hafta)} />
         <Olcu ikon={<Clock aria-hidden />} ad="Toplam çalışma" deger={sure(p.calisma?.toplam)} />
@@ -106,12 +106,12 @@ export default function KisiProfilV15() {
       </div>
 
       {!!p.haftaDersler?.length && (
-        <section className="v15-card ks15-kutu">
+        <section className="v15-card apr15-kutu">
           <h3>Bu hafta en çok çalıştığı</h3>
           <ul>{p.haftaDersler.map((d, i) => <li key={i}><span><b>{d.ad}</b><small>{d.modul}</small></span><em>{sure(d.sn)}</em></li>)}</ul>
         </section>
       )}
-      <section className="v15-card ks15-kutu">
+      <section className="v15-card apr15-kutu">
         <h3>Çalıştığı dersler</h3>
         {p.dersler?.length ? (
           <ul>{p.dersler.map((d, i) => (
@@ -120,7 +120,7 @@ export default function KisiProfilV15() {
               <em>{sure(d.sn)}{d.soru ? ` · ${d.soru} soru` : ''}</em>
             </li>
           ))}</ul>
-        ) : <p className="ks15-not">Henüz ders çalışma kaydı yok. Sesli ders, Öğren ya da soru çözücüde çalışınca burada görünür.</p>}
+        ) : <p className="apr15-not">Henüz ders çalışma kaydı yok. Sesli ders, Öğren ya da soru çözücüde çalışınca burada görünür.</p>}
       </section>
 
       {p.ben && <GizlilikAnahtari />}
@@ -130,7 +130,7 @@ export default function KisiProfilV15() {
 }
 
 function Olcu({ ikon, ad, deger, alt }: { ikon: React.ReactNode; ad: string; deger: string; alt?: string }) {
-  return <div className="v15-card ks15-o"><span className="ks15-o-ik">{ikon}</span><small>{ad}</small><b>{deger}</b>{alt && <small>{alt}</small>}</div>;
+  return <div className="v15-card apr15-o"><span className="apr15-o-ik">{ikon}</span><small>{ad}</small><b>{deger}</b>{alt && <small>{alt}</small>}</div>;
 }
 
 /** Davet: Oyunlar'da kurulan odanın kodu arkadaşa bildirim + sohbet mesajı olarak gider; tıklayınca odaya katılır. */
@@ -146,15 +146,15 @@ export function DavetPencere({ kimlik, ad, kapat }: { kimlik: string; ad: string
     setDurum(h || `${ad} davet edildi. Bildirim ve sohbet mesajı gönderildi.`);
   };
   return (
-    <div className="ks15-perde" role="dialog" aria-modal="true" aria-label="Soru çözmeye davet et" onClick={kapat}>
-      <div className="v15-card ks15-pencere" onClick={(e) => e.stopPropagation()}>
-        <div className="ks15-pencere-bas"><b>{ad} kişisini davet et</b><button type="button" className="v15-btn is-ghost" aria-label="Kapat" onClick={kapat}><X aria-hidden /></button></div>
-        <p className="ks15-not">Önce Oyunlar'da bir oda kur, ekrandaki oda kodunu buraya yaz. Arkadaşın davete dokununca aynı odaya katılır.</p>
-        <label className="ks15-alan"><span>Oda kodu</span>
+    <div className="apr15-perde" role="dialog" aria-modal="true" aria-label="Soru çözmeye davet et" onClick={kapat}>
+      <div className="v15-card apr15-pencere" onClick={(e) => e.stopPropagation()}>
+        <div className="apr15-pencere-bas"><b>{ad} kişisini davet et</b><button type="button" className="v15-btn is-ghost" aria-label="Kapat" onClick={kapat}><X aria-hidden /></button></div>
+        <p className="apr15-not">Önce Oyunlar'da bir oda kur, ekrandaki oda kodunu buraya yaz. Arkadaşın davete dokununca aynı odaya katılır.</p>
+        <label className="apr15-alan"><span>Oda kodu</span>
           <input value={oda} onChange={(e) => setOda(e.target.value.toUpperCase().replace(/[^A-Z0-9]/g, '').slice(0, 6))} placeholder="Örn. K7MPA" autoCapitalize="characters" onKeyDown={(e) => { if (e.key === 'Enter') void gonder(); }} />
         </label>
-        {durum && <p className="ks15-not" role="status">{durum}</p>}
-        <div className="ks15-dugmeler">
+        {durum && <p className="apr15-not" role="status">{durum}</p>}
+        <div className="apr15-dugmeler">
           <button type="button" className="v15-btn" disabled={mesgul} onClick={() => void gonder()}>Davet gönder</button>
           <button type="button" className="v15-btn is-soft" onClick={() => git('/sorular/oyunlar')}>Oyunlar'da oda kur</button>
         </div>
@@ -164,5 +164,5 @@ export function DavetPencere({ kimlik, ad, kapat }: { kimlik: string; ad: string
 }
 
 export function Bos({ baslik, metin }: { baslik: string; metin: string }) {
-  return <div className="v15-card ks15-bos"><b>{baslik}</b><p>{metin}</p></div>;
+  return <div className="v15-card apr15-bos"><b>{baslik}</b><p>{metin}</p></div>;
 }

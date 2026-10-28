@@ -18,3 +18,6 @@
 /* H203: kaydırma ipucu yalnız dar ekranda */
 .hr15-kaydir { display: none; }
 @media (max-width: 700px) { .hr15-kaydir { display: block; } }
+/* H382: içeriksiz kurul çipi (KurulSecici .ks-k.is-bos ile aynı dil) */
+.hr15-k .o15-cip.is-bos:not(.is-on) { background: transparent; color: var(--color-ink-3); box-shadow: inset 0 0 0 1px var(--color-line); gap: 6px; }
+.hr15-k .o15-cip .ks-yok { margin-left: 6px; font: 500 11px/1 var(--font-sans); color: var(--color-ink-3); }

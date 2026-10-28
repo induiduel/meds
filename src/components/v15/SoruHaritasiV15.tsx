@@ -45,10 +45,14 @@ export default function SoruHaritasiV15() {
     <div className="hr15">
       <h1 className="sr-only">Soru haritası</h1>
       <div className="o15-cipler v15-hscroll hr15-k" role="toolbar" aria-label="Kurul">
-        {KURUL_NOLAR.map((k) => (
-          <button key={k} type="button" className={`o15-cip${k === kurul ? ' is-on' : ''}`} aria-pressed={k === kurul}
-            onClick={() => { kurulKaydet(k); setKurul(k); }}>Kurul {k}</button>
-        ))}
+        {KURUL_NOLAR.map((k) => {
+          // H382: çıkmış sorusu olmayan kurul dolu kurullarla aynı görünüyordu; KurulSecici ile aynı soluk + "henüz yok"
+          const bos = !!veri && !Object.keys(veri.kurullar[String(k)] || {}).length;
+          return (
+            <button key={k} type="button" className={`o15-cip${k === kurul ? ' is-on' : ''}${bos ? ' is-bos' : ''}`} aria-pressed={k === kurul}
+              onClick={() => { kurulKaydet(k); setKurul(k); }}>Kurul {k}{bos && k !== kurul && <small className="ks-yok">henüz yok</small>}</button>
+          );
+        })}
       </div>
       <p className="v15-cap hr15-ac">Her hücre o yılın sınavında o dersten çıkan soru sayısı; koyulaştıkça çok. Hücreye dokun, o soruları aç.</p>
       {/* H203: telefonda tablo sığmıyor, yatay kaydırılabildiği söylenmiyordu */}

@@ -45,8 +45,8 @@ export default function ArkadaslarV15() {
 
   // H167: "Giriş gerekli" kartında giriş düğmesi yoktu; App'teki giriş penceresini olayla açar
   if (l && !l.girisli) return (
-    <div className="ks15">
-      <div className="v15-card ks15-bos">
+    <div className="apr15">
+      <div className="v15-card apr15-bos">
         <b>Giriş gerekli</b>
         <p>Arkadaş eklemek ve mesajlaşmak için giriş yap.</p>
         <button type="button" className="v15-btn" onClick={() => window.dispatchEvent(new Event('medsoru:giris-ac'))}>Giriş yap</button>
@@ -55,16 +55,16 @@ export default function ArkadaslarV15() {
   );
 
   return (
-    <div className="ks15">
-      <label className="v15-card ks15-ara">
+    <div className="apr15">
+      <label className="v15-card apr15-ara">
         <Search aria-hidden />
         <input value={q} onChange={(e) => setQ(e.target.value)} placeholder="Ad ile kişi ara" aria-label="Ad ile kişi ara" />
         {q && <button type="button" className="v15-btn is-ghost" aria-label="Aramayı temizle" onClick={() => setQ('')}><X aria-hidden /></button>}
       </label>
-      {hata && <p className="ks15-not ks15-hata" role="alert">{hata}</p>}
+      {hata && <p className="apr15-not apr15-hata" role="alert">{hata}</p>}
 
       {sonuc && (
-        <section className="v15-card ks15-kutu">
+        <section className="v15-card apr15-kutu">
           <h3>Arama sonuçları</h3>
           {sonuc.length ? <ul>{sonuc.map((k) => (
             <Satir key={k.kimlik} k={k} alt={[k.universite, k.donem ? `${k.donem}. dönem` : ''].filter(Boolean).join(' · ')}>
@@ -73,12 +73,12 @@ export default function ArkadaslarV15() {
               {k.iliski === 'gelen' && <button type="button" className="v15-btn" onClick={() => void islem('kabul', k)}><UserCheck aria-hidden /> Kabul et</button>}
               {k.iliski === 'arkadas' && <span className="v15-tag">Arkadaşın</span>}
             </Satir>
-          ))}</ul> : <p className="ks15-not">Bu adla herkese açık profil bulunamadı. Sıralamada ya da Topluluk sohbetinde kişinin adına dokunarak da profilini açabilirsin.</p>}
+          ))}</ul> : <p className="apr15-not">Bu adla herkese açık profil bulunamadı. Sıralamada ya da Topluluk sohbetinde kişinin adına dokunarak da profilini açabilirsin.</p>}
         </section>
       )}
 
       {!!l?.gelen.length && (
-        <section className="v15-card ks15-kutu">
+        <section className="v15-card apr15-kutu">
           <h3>Gelen istekler</h3>
           <ul>{l.gelen.map((k) => (
             <Satir key={k.kimlik} k={k} alt={once(k.at)}>
@@ -89,9 +89,9 @@ export default function ArkadaslarV15() {
         </section>
       )}
 
-      <section className="v15-card ks15-kutu">
+      <section className="v15-card apr15-kutu">
         <h3>Arkadaşlarım{l ? ` (${l.arkadaslar.length})` : ''}</h3>
-        {!l ? <p className="ks15-not">Yükleniyor…</p> : l.arkadaslar.length ? (
+        {!l ? <p className="apr15-not">Yükleniyor…</p> : l.arkadaslar.length ? (
           <ul>{l.arkadaslar.map((k) => (
             <Satir key={k.kimlik} k={k} alt={k.gizli ? 'Profili gizli' : k.son ? `En son: ${k.son.ad} · ${once(k.son.at)}` : 'Henüz çalışma kaydı yok'} sag={k.haftaSn ? `bu hafta ${sure(k.haftaSn)}` : undefined}>
               <button type="button" className="v15-btn is-ghost" aria-label={`${k.ad} ile mesajlaş`} onClick={() => void mesajAc(k.kimlik).then((h) => h && setHata(h))}><MessageCircle aria-hidden /></button>
@@ -99,12 +99,12 @@ export default function ArkadaslarV15() {
             </Satir>
           ))}</ul>
         ) : (
-          <div className="ks15-bos-ic"><Users aria-hidden /><p>Henüz arkadaşın yok. Yukarıdan adıyla ara ya da Sıralama'da bir kişiye dokunup profilinden "Arkadaş ekle"ye bas.</p></div>
+          <div className="apr15-bos-ic"><Users aria-hidden /><p>Henüz arkadaşın yok. Yukarıdan adıyla ara ya da Sıralama'da bir kişiye dokunup profilinden "Arkadaş ekle"ye bas.</p></div>
         )}
       </section>
 
       {!!l?.giden.length && (
-        <section className="v15-card ks15-kutu">
+        <section className="v15-card apr15-kutu">
           <h3>Gönderdiğin istekler</h3>
           <ul>{l.giden.map((k) => (
             <Satir key={k.kimlik} k={k} alt={`Gönderildi · ${once(k.at)}`}>
@@ -114,7 +114,7 @@ export default function ArkadaslarV15() {
         </section>
       )}
 
-      <div className="ks15-dugmeler">
+      <div className="apr15-dugmeler">
         <button type="button" className="v15-btn is-soft" onClick={() => git('/siralama')}>Sıralamayı aç</button>
         {l?.kimlik && <button type="button" className="v15-btn is-soft" onClick={() => git(profilYolu(l.kimlik!))}>Profilimi gör</button>}
       </div>
@@ -126,12 +126,12 @@ export default function ArkadaslarV15() {
 
 function Satir({ k, alt, sag, children }: { k: KisiKart; alt?: string; sag?: string; children?: React.ReactNode }) {
   return (
-    <li className="ks15-sat">
-      <button type="button" className="ks15-sat-ac" onClick={() => git(profilYolu(k.kimlik))} aria-label={`${k.ad} profilini aç`}>
-        <span className="ks15-av" aria-hidden>{k.foto ? <img src={k.foto} alt="" loading="lazy" /> : basHarf(k.ad)}</span>
-        <span className="ks15-sat-ad"><b>{k.ad}</b>{alt && <small>{alt}</small>}{sag && <small>{sag}</small>}</span>
+    <li className="apr15-sat">
+      <button type="button" className="apr15-sat-ac" onClick={() => git(profilYolu(k.kimlik))} aria-label={`${k.ad} profilini aç`}>
+        <span className="apr15-av" aria-hidden>{k.foto ? <img src={k.foto} alt="" loading="lazy" /> : basHarf(k.ad)}</span>
+        <span className="apr15-sat-ad"><b>{k.ad}</b>{alt && <small>{alt}</small>}{sag && <small>{sag}</small>}</span>
       </button>
-      <span className="ks15-sat-eylem">{children}</span>
+      <span className="apr15-sat-eylem">{children}</span>
     </li>
   );
 }

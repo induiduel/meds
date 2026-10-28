@@ -173,14 +173,28 @@ export const PracticeMode: React.FC<PracticeModeProps> = ({
     return () => document.removeEventListener('keydown', onKey);
   });
 
+  // H386: X tek dokunuşta testi kapatıyordu; cevaplanmış soru varken ilerleme kaybolacağı sorulur (sonuç ekranında sorulmaz)
+  const cikis = onExit && (async () => {
+    if (!finished && answeredCount > 0) {
+      const ok = await confirmDialog({
+        title: 'Testten çıkılsın mı?',
+        message: `${answeredCount} / ${total} soruyu cevapladın. Çıkarsan bu testteki cevapların ve süren kaybolur.`,
+        confirmLabel: 'Çık',
+        cancelLabel: 'Teste dön',
+      });
+      if (!ok) return;
+    }
+    onExit();
+  });
+
   const exitButton = onExit && (
-    <button type="button" onClick={onExit} aria-label="Testten çık" className="tx-ib">
+    <button type="button" onClick={cikis} aria-label="Testten çık" className="tx-ib">
       <X aria-hidden />
     </button>
   );
 
   if (!currentQ || !rec) {
-    if (v12) return <PracticeEmptyV12 title={title} onExit={onExit} onContribute={onOpenContributeModal} />;
+    if (v12) return <PracticeEmptyV12 title={title} onExit={cikis} onContribute={onOpenContributeModal} />;
     return (
       <div className="tx tx-empty-page">
         <header className="tx-head">
@@ -257,7 +271,7 @@ export const PracticeMode: React.FC<PracticeModeProps> = ({
           onTogglePause={() => setPaused((v) => !v)}
           onOpenAi={() => setAiChatOpen(true)}
           onOpenQuestion={onOpenQuestion}
-          onExit={onExit}
+          onExit={cikis}
           sinav={sinav}
         />
         {aiDrawer}
@@ -289,7 +303,7 @@ export const PracticeMode: React.FC<PracticeModeProps> = ({
           onTogglePause={() => setPaused((v) => !v)}
           onOpenAi={() => setAiChatOpen(true)}
           onOpenQuestion={onOpenQuestion}
-          onExit={onExit}
+          onExit={cikis}
         />
         {aiDrawer}
       </>
@@ -372,7 +386,7 @@ export const PracticeMode: React.FC<PracticeModeProps> = ({
           onGo={go}
           onReview={() => setFinished(false)}
           onRestart={restart}
-          onExit={onExit}
+          onExit={cikis}
         />
       ) : (
         <div className="tx-body">

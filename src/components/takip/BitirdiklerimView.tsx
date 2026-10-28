@@ -131,7 +131,7 @@ export default function BitirdiklerimView() {
     (o.biten > 0 && o.biten < o.toplam) || o.tekrarda > 0 || (i === 0 && !(oz?.dersler.some((x) => x.o.biten > 0 && x.o.biten < x.o.toplam)));
 
   return (
-    <div className={`bd${v15 ? ' bd15' : ''}`}>
+    <div className={`bd${v15 ? ' btr15' : ''}`}>
       {v15 && <V15Bas modul={modul} kurul={kurul} oz={oz} />}
       {!v15 && <>
       <header className="bd-bas">
@@ -261,16 +261,16 @@ function V15Bas({ modul, kurul, oz }: { modul: TakipModul; kurul: number; oz?: {
     <>
       <h1 className="sr-only">Bitirdiklerim</h1>
       {oz && (
-        <div className="bd15-stat" aria-label="Genel durum">
+        <div className="btr15-stat" aria-label="Genel durum">
           <div className="v15-card"><b>{biten}/{oz.dersler.length}</b><small>Ders</small></div>
           <div className="v15-card"><b>{sayi(oz.genel.soru)}</b><small>Soru</small></div>
           <div className="v15-card"><b>{oran == null ? '—' : `%${oran}`}</b><small>Doğru oranı</small></div>
           <div className="v15-card"><b>{oz.genel.sn ? sureYaz(oz.genel.sn) : '0 dk'}</b><small>Süre</small></div>
         </div>
       )}
-      <a className="bd15-plan v15-card" href={`${pathFor('sinav_plani')}?kurul=${kurul}`} onClick={(e) => { if (e.button || e.metaKey || e.ctrlKey) return; e.preventDefault(); navigateTo(`${pathFor('sinav_plani')}?kurul=${kurul}`); }}>
+      <a className="btr15-plan v15-card" href={`${pathFor('sinav_plani')}?kurul=${kurul}`} onClick={(e) => { if (e.button || e.metaKey || e.ctrlKey) return; e.preventDefault(); navigateTo(`${pathFor('sinav_plani')}?kurul=${kurul}`); }}>
         <span className="v15-tile is-a" aria-hidden><Target /></span>
-        <span className="bd15-plan-t"><b>Sınav planı</b><span className="v15-cap">En az 60 için gün gün yol haritası</span></span>
+        <span className="btr15-plan-t"><b>Sınav planı</b><span className="v15-cap">En az 60 için gün gün yol haritası</span></span>
         <ChevronRight className="v15-chev" aria-hidden />
       </a>
     </>

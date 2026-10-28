@@ -24,7 +24,8 @@ export default function MuzikV15() {
   const [hata, setHata] = useState('');
   const [sure, setSure0] = useState<Sure>(bitis.sure);
   const [, tik] = useState(0);
-  useV15Baslik({ baslik: 'Çalışma müziği', alt: 'Odak için sözsüz listeler' });
+  // H380: menüdeki adla aynı
+  useV15Baslik({ baslik: 'Müzik', alt: 'Odak için sözsüz listeler' });
 
   const setSure = (s: Sure) => { bitis = { sure: s, t: typeof s === 'number' ? Date.now() + s * 60000 : 0 }; setSure0(s); };
   // süre dolunca müzik durur; "Ders bitene kadar": sesli ders sesi bitince (ended) durur
@@ -54,7 +55,7 @@ export default function MuzikV15() {
 
   return (
     <div className="b15 l2-cols">
-      <h1 className="sr-only">Çalışma müziği</h1>
+      <h1 className="sr-only">Müzik</h1>
       <section className="v15-card mz15-calar">
         <span className="mz15-kapak" aria-hidden><Headphones /></span>
         <b className="mz15-ad">{m.current?.title || 'Parça seçilmedi'}</b>

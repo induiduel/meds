@@ -751,7 +751,7 @@ export default function KmbAsistan() {
       <div className="kmb-kok">
         <header className="kmb-baslik">
           <p className="ust">{INDEX.ders}</p>
-          <h1>KMB görsel asistan</h1>
+          <h1>KMB dersleri</h1>{/* H380: menü adıyla aynı */}
           <p>Her beceriyi videoyla izle, adım adım öğren, hedeflerle pekiştir, vaka ve OSCE ile sına.</p>
         </header>
         <div className="kmb-kartlar">

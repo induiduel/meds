@@ -113,10 +113,13 @@ export const KurulSecici: React.FC<KurulSeciciProps> = ({ secili, yol, tumuYol, 
             key={k} href={url} onClick={git(url, k)}
             className={`ks-k${k === vurgulu ? ' is-on' : ''}${bos ? ' is-bos' : ''}`}
             aria-current={k === vurgulu ? 'true' : undefined}
+            aria-label={bos ? `Kurul ${k}, henüz içerik yok` : undefined}
             title={`${ad ? `Kurul ${k} · ${ad}` : `Kurul ${k}`}${bos ? ' · henüz içerik yok' : ''}`}
           >
             Kurul {k}
             {k === aktif && <small className="ks-simdi">şimdi</small>}
+            {/* H381: içeriksiz kurul yalnız soluk renkle ayırt edilmiyordu; seçilebilir kalır ama ne olacağı yazılı */}
+            {bos && k !== vurgulu && <small className="ks-yok">henüz yok</small>}
           </a>
         );
       })}
