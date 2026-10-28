@@ -9,6 +9,7 @@ import type express from 'express';
 import { pgDb } from '../pgDb';
 import { denetimFark, denetimHedef, denetimNot } from './denetim.ts';
 import { listeSorgusu } from './sayfalama.ts';
+import { gelenOnbellekSil } from './sistemEk.ts';
 
 type Deps = {
   requireAdmin: express.RequestHandler;
@@ -88,6 +89,7 @@ export function registerYonetimTopluluk(app: express.Express, d: Deps) {
           where id = $1 returning kanal, cardinality(sikayet_uid) n`, [id]);
       if (!r.rows[0]) return res.status(404).json({ error: 'Mesaj bulunamadı.' });
       denetimHedef(res, `mesaj:${id}`);
+      gelenOnbellekSil(); // H290
       haber(r.rows[0].kanal, id);
       res.json({ ok: true });
     } catch (e) { fail(res, e); }
@@ -109,6 +111,7 @@ export function registerYonetimTopluluk(app: express.Express, d: Deps) {
       await pgDb.query(`update topluluk_mesajlar set silindi = $2, silen = $3 where id = $1`, [id, gizli, silen]);
       denetimHedef(res, `mesaj:${id}`);
       denetimFark(res, { silindi: once.silindi, silen: once.silen }, { silindi: gizli, silen });
+      gelenOnbellekSil(); // H290
       haber(once.kanal, id);
       res.json({ ok: true, gizli });
     } catch (e) { fail(res, e); }

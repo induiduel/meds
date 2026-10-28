@@ -217,3 +217,10 @@ Yeni sayaç: `registerOzetRoutes` bağımlılıklarına işlev ekleyin (server.t
 - **Sistem › Bağlantılar** (`Baglantilar.tsx`): `GET /api/admin/sistem/baglanti` (ders başına çıkmış soru / slaytlı / Öğren bağlı / terimli)
   ve `/baglanti/:ders` (`s.var=slayt|-slayt|ogren|-ogren|terim`). Faz verisi + çıkmış `discipline`'dan; 5 dk önbellek. Soru → `sorular/cikmis/<id>`.
 - İçerik kapısı: `/api/canli-ders/ara` sonuçları (`sonuc[].k`) öğrenciye kapalı sesli dersleri içermez (`icerikKapisi`, §8).
+
+
+## Ek (2026-10-28, H290–H295)
+- `VeriTablosu` `dusur?(t)`: sunucu kipinde işlenen satırı istemcide düşürür (toplam azalır, süzgeç/sayfa korunur).
+- Gelen işlemleri satırda/çekmecede; işlem yapan uçlar `gelenOnbellekSil()` çağırır (yonetim16/sistemEk.ts).
+- `POST /api/admin/gelen/hata/goruldu {kimlikler[]}`: istemci hatası gruplarını görüldü işaretler.
+- Toplu yazımda kalıp: onay (sayı + `yazimHedefi()`), başarısız sayısını bildir, 8 sn `bildir(…, {etiket:'Geri al', yap})`.

@@ -47,6 +47,8 @@ export type VeriTablosuProps<T> = {
   aracEk?: React.ReactNode;
   /** Adreste ?q=&s=&sayfa= tut (varsayılan true; aynı sayfada iki tablo varsa birinde false) */
   adresteDurum?: boolean;
+  /** H293: istemcide düşürülecek satırlar (işlenen satır sunucu yenilemesini beklemeden kaybolur; süzgeç/konum korunur) */
+  dusur?: (t: T) => boolean;
 };
 
 const SATIR_Y = 36;
@@ -117,8 +119,9 @@ export function VeriTablosu<T>(p: VeriTablosuProps<T>) {
   }, [p.ogeler, p.sutunlar, suz, debQ, sirala, yon, sayfa, boyut]);
 
   const veri = yerel || sunucu.veri;
-  const ogeler = veri?.ogeler || [];
-  const toplam = veri?.toplam || 0;
+  const hamOgeler = veri?.ogeler || [];
+  const ogeler = p.dusur ? hamOgeler.filter((t) => !p.dusur!(t)) : hamOgeler; // H293
+  const toplam = Math.max(0, (veri?.toplam || 0) - (hamOgeler.length - ogeler.length));
   const sayfaSayisi = Math.max(1, Math.ceil(toplam / boyut));
   const gorunen = p.sutunlar.filter((s) => !gizliSutun.has(s.anahtar));
   const izgara = `${p.secim ? '36px ' : ''}${gorunen.map((s) => s.genislik || 'minmax(0,1fr)').join(' ')}`;

@@ -1,11 +1,10 @@
 {
  "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
- "onem": 551,
- "baslik": "Çıkmış sorularda sayfalar ve kaldığın yer",
+ "onem": 552,
+ "baslik": "Yönetim: işler tek yerden",
  "maddeler": [
-  "Çıkmış sorular sayfa sayfa: kaçıncı soruda olduğun üstte yazıyor",
-  "Sayfa seçiciyle istediğin sayfaya atlayabilirsin",
-  "Başka sayfaya gidip dönünce aynı sayfa ve aynı soru açılıyor"
+  "Yönetim Gelen kutusunda şikâyet, geri bildirim ve hatalar satırdan işleniyor",
+  "Soru şikâyetleri ve çıkmış sorularda toplu işlem"
  ],
  "eklenen": [],
  "degisen": [],

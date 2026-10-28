@@ -1,5 +1,5 @@
 import React from 'react';
-import { VeriTablosu, SayfaBasligi, Rozet, AyrintiCekmecesi, Form, Yukleniyor, Hata, adminIstek, useAdminSorgu, onayIste, bildir, zamanMetni, type AlanTanim, type Ton } from '../kit';
+import { VeriTablosu, SayfaBasligi, Rozet, AyrintiCekmecesi, Form, Yukleniyor, Hata, adminIstek, useAdminSorgu, onayIste, bildir, yazimHedefi, zamanMetni, type AlanTanim, type Ton } from '../kit';
 import type { SayfaProps } from '../menu';
 import { manageAdres } from '../menu';
 
@@ -71,6 +71,31 @@ function Ayrinti({ id, kapat, git }: { id: string; kapat: () => void; git: Sayfa
 
 export default function CikmisSorular({ id, git }: SayfaProps) {
   const { veri: meta } = useAdminSorgu<Meta>('/api/admin/sorular/cikmis/meta');
+  // H295: toplu Gizle/Göster — görünen satırların önceki gizlilik durumu (Geri al yalnız gerçekten değişenleri eski hâline döndürür)
+  const satirlar = React.useRef(new Map<string, Satir>());
+  const gizlilikYaz = async (ids: string[], gizli: boolean) => {
+    let hata = 0; let son = '';
+    const tamam: string[] = [];
+    for (const x of ids) {
+      try { await adminIstek(`/api/admin/sorular/cikmis/${encodeURIComponent(x)}`, { yontem: 'PATCH', govde: { yama: { hidden: gizli }, kardeslereYaz: false } }); tamam.push(x); }
+      catch (e: any) { hata++; son = e.message; }
+    }
+    return { tamam, hata, son };
+  };
+  const topluGizle = async (ids: string[], gizli: boolean, temizle: () => void) => {
+    const ad = gizli ? 'Gizle' : 'Göster';
+    const degisecek = ids.filter((x) => satirlar.current.get(x)?.gizli !== gizli);
+    if (!degisecek.length) { bildir(`Seçili soruların hepsi zaten ${gizli ? 'gizli' : 'görünür'}`, 'bilgi'); return; }
+    if (!(await onayIste({ baslik: `${degisecek.length} soru öğrencilerden ${gizli ? 'gizlensin' : 'yeniden gösterilsin'} mi?`, aciklama: `Hedef: ${yazimHedefi()}. Kopya kardeşlere yazılmaz.${degisecek.length < ids.length ? ` ${ids.length - degisecek.length} soru zaten bu durumda, atlanır.` : ''}`, onayMetni: ad }))) return;
+    const r = await gizlilikYaz(degisecek, gizli);
+    temizle();
+    const metin = `${r.tamam.length} soru ${gizli ? 'gizlendi' : 'gösteriliyor'}${r.hata ? `, ${r.hata} başarısız: ${r.son}` : ''}`;
+    if (!r.tamam.length) { bildir(metin, 'kotu'); return; }
+    bildir(metin, r.hata ? 'kotu' : 'iyi', {
+      etiket: 'Geri al',
+      yap: () => { void gizlilikYaz(r.tamam, !gizli).then((g) => bildir(g.hata ? `Geri alma: ${g.hata} başarısız (${g.son})` : `${g.tamam.length} soru eski hâline döndü`, g.hata ? 'kotu' : 'iyi')); },
+    });
+  };
   const sec = (l?: { deger: string; n: number }[], f: (x: string) => string = (x) => x) => (l || []).map((x) => ({ deger: x.deger, etiket: f(x.deger) }));
   return (
     <>
@@ -78,6 +103,10 @@ export default function CikmisSorular({ id, git }: SayfaProps) {
       <VeriTablosu<Satir>
         kimlik="sorular-cikmis" kaynak="/api/admin/sorular/cikmis" canliOlay={['past_questions_changed', 'past_question_updated']}
         aramaYeri="Kimlik, kök, konu, ders ya da sınav ara…" satirKimligi={(s) => s.id} etkin={id || null}
+        secim topluEylemler={(ids, temizle) => (<>
+          <button type="button" className="m16-btn" onClick={() => void topluGizle(ids, true, temizle)}>Gizle</button>
+          <button type="button" className="m16-btn" onClick={() => void topluGizle(ids, false, temizle)}>Göster</button>
+        </>)}
         satirTikla={(s) => git(`sorular/cikmis/${encodeURIComponent(s.id)}${window.location.search}`)}
         suzgecler={[
           { anahtar: 'kurul', etiket: 'Kurul', secenekler: sec(meta?.kurul, (k) => (/^\d$/.test(k) ? `Kurul ${k}` : k)) },
@@ -88,7 +117,7 @@ export default function CikmisSorular({ id, git }: SayfaProps) {
         ]}
         sutunlar={[
           { anahtar: 'no', baslik: 'No', sirala: true, genislik: '56px', hizala: 'sag' },
-          { anahtar: 'kok', baslik: 'Soru', genislik: 'minmax(240px,3fr)', hucre: (s) => <span title={s.kok}>{s.kok || s.konu}</span> },
+          { anahtar: 'kok', baslik: 'Soru', genislik: 'minmax(240px,3fr)', hucre: (s) => { satirlar.current.set(s.id, s); /* H295 */ return <span title={s.kok}>{s.kok || s.konu}</span>; } },
           { anahtar: 'ders', baslik: 'Ders', sirala: true, genislik: 'minmax(100px,1fr)' },
           { anahtar: 'yil', baslik: 'Yıl', sirala: true, genislik: '96px' },
           { anahtar: 'cevap', baslik: 'Cevap', genislik: '72px', hizala: 'orta' }, // H176: 56px'te başlık "Cev…" kesiliyordu

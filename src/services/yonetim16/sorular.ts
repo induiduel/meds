@@ -25,6 +25,7 @@ import fs from 'fs';
 import path from 'path';
 import crypto from 'crypto';
 import type express from 'express';
+import { gelenOnbellekSil } from './sistemEk.ts';
 import { listeSorgusu, katla, type ListeSorgusu, type ListeYaniti } from './sayfalama';
 import { atomikJsonGuncelle, atomikJsonYaz } from './atomikJson';
 import { denetimFark, denetimHedef, denetimNot } from './denetim';
@@ -382,6 +383,7 @@ export function registerSorularRoutes(app: express.Express, d: SorularDeps) {
         // Bildirim defteri (jsonl) yalnız eklenir; durum ayrı dosyada tutulur
         await atomikJsonGuncelle<Any>(ORNEK_DURUM, (eski) => ({ ...(eski || {}), [String(raporId)]: { status: durum, at: new Date().toISOString(), by: kim } }));
       } else return res.status(400).json({ error: 'Geçersiz kaynak.' });
+      gelenOnbellekSil(); // H290: Gelen listesi işlenen şikâyeti hemen düşürsün
       d.yayinla('reports_changed', { kaynak, soruId, raporId, durum, time: Date.now() });
       res.json({ success: true });
     } catch (e: any) { res.status(500).json({ error: e?.message || String(e) }); }

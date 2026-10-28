@@ -1,6 +1,7 @@
 /**
  * Yönetim v16 — menüde "yakında" kalan son sayfaların uçları (2026-10-28):
- *  - Gelen kutusu             GET /api/admin/gelen                      (bekleyen her şey tek listede; satır ilgili sayfaya gider)
+ *  - Gelen kutusu             GET /api/admin/gelen                      (bekleyen her şey tek listede; satırda doğrudan işlem, H290)
+ *                             POST /api/admin/gelen/hata/goruldu {kimlikler[]}  (istemci hatası grubu "görüldü"; yeni tekrar yeniden düşer)
  *  - Topluluk › Geri bildirim GET /api/admin/topluluk/geri-bildirim, PUT …/:id {durum, yanit}  (data/learn_feedback.json)
  *  - Sistem › Drive           GET /api/admin/sistem/drive, GET /api/admin/sistem/drive/dosyalar (tarama: mevcut POST /api/admin/drive/check-updates, elle)
  *  - Sistem › RAG             GET /api/admin/sistem/rag, POST /api/admin/sistem/rag/denetle {onay:'DENETLE', kuru?}  (yalnız cihaz, elle)
@@ -47,6 +48,11 @@ export type SistemEkDeps = {
   cikmisListe?: () => Any[];
   broadcast: (olay: string, veri: Any) => void;
 };
+
+// H290: Gelen önbelleği modül düzeyinde; işlem uçları (soru şikâyeti çöz, topluluk yok say/gizle, geri bildirim, hata görüldü)
+// yazınca siler — yoksa 15 sn boyunca işlenen satır listeye geri dönüyordu.
+let gelenOnbellek: { at: number; satirlar: Any[]; kaynaklar: Any } | null = null;
+export const gelenOnbellekSil = () => { gelenOnbellek = null; };
 
 export function registerYonetimSistemEk(app: express.Express, d: SistemEkDeps) {
   const A = d.requireAdmin;
@@ -101,6 +107,7 @@ export function registerYonetimSistemEk(app: express.Express, d: SistemEkDeps) {
       }, { yedek: 1 } as any).catch(() => undefined);
     }
     denetimFark(res, once, { durum: d.geriBildirim.get(id)?.status, yanit: typeof yanit === 'string' ? yanit : once.yanit });
+    gelenOnbellekSil(); // H290
     d.broadcast('learn_feedback_changed', { id, deckId: f.deckId, time: Date.now() });
     const y = oku<Any>(YANIT, {});
     res.json({ success: true, oge: gbSatir(d.geriBildirim.get(id)!, y[id]) });
@@ -116,7 +123,8 @@ export function registerYonetimSistemEk(app: express.Express, d: SistemEkDeps) {
       return r.ok ? await r.json() : null;
     } catch { return null; }
   };
-  let gelenOnbellek: { at: number; satirlar: Any[]; kaynaklar: Any } | null = null;
+  // H292: "görüldü" işaretli istemci hatası grupları (kimlik → işaret zamanı); grup ancak işaretten SONRA yeniden olursa listeye döner
+  const GORULDU = path.join(d.dataDir, 'istemci_hata_goruldu.json');
   const gelenTopla = async () => {
     if (gelenOnbellek && Date.now() - gelenOnbellek.at < 15_000) return gelenOnbellek;
     const satirlar: Any[] = [];
@@ -133,8 +141,9 @@ export function registerYonetimSistemEk(app: express.Express, d: SistemEkDeps) {
       try {
         const [{ rows }, c] = await Promise.all([
           pgDb.query(`select m.id, m.kanal, m.ad, m.metin, m.olusturma at, cardinality(m.sikayet_uid)::int sikayet from topluluk_mesajlar m
-                       where cardinality(m.sikayet_uid) > 0 order by m.olusturma desc nulls last limit 200`),
-          pgDb.query(`select count(*)::int n from topluluk_mesajlar where cardinality(sikayet_uid) > 0`),
+                       where cardinality(m.sikayet_uid) > 0 and not m.silindi order by m.olusturma desc nulls last limit 200`),
+          // H291: gizlenen mesajın şikâyeti işlenmiş sayılır (ozet.ts sayacıyla aynı koşul); yoksa "Mesajı gizle" satırı listede kalıyordu
+          pgDb.query(`select count(*)::int n from topluluk_mesajlar where cardinality(sikayet_uid) > 0 and not silindi`),
         ]);
         kaynaklar.topluluk = { toplam: c.rows[0]?.n || 0 };
         for (const m of rows as Any[]) ekle({ tur: 'topluluk', kimlik: String(m.id), at: m.at ? new Date(m.at).toISOString() : '', baslik: `${m.sikayet} şikâyet · ${m.kanal}`, ayrinti: kirp(m.metin, 300), kim: m.ad || '', ek: m.kanal, hedef: `topluluk/sikayet?q=${encodeURIComponent(kirp(m.metin, 40))}` });
@@ -159,6 +168,8 @@ export function registerYonetimSistemEk(app: express.Express, d: SistemEkDeps) {
         grup.set(k, g);
       } catch { /* bozuk satır */ }
     }
+    const gorulen = oku<Record<string, string>>(GORULDU, {}); // H292
+    for (const [k, g] of [...grup]) { const gk = katla(g.mesaj).slice(0, 80); if (gorulen[gk] && String(g.at) <= gorulen[gk]) grup.delete(k); }
     kaynaklar.hata = { toplam: grup.size };
     for (const g of grup.values()) ekle({ tur: 'hata', kimlik: katla(g.mesaj).slice(0, 80), at: g.at, baslik: g.mesaj, ayrinti: g.yer ? String(g.yer).slice(0, 200) : '', kim: '', ek: `${g.n} kez / 24 sa`, hedef: `sistem/hata?q=${encodeURIComponent(g.mesaj.slice(0, 40))}` });
 
@@ -204,6 +215,24 @@ export function registerYonetimSistemEk(app: express.Express, d: SistemEkDeps) {
       }),
       kaynaklar: g.kaynaklar,
     });
+  });
+  // H292: istemci hatası grubunu "görüldü" işaretle (yalnız Gelen'den düşer; günlük dosyasına dokunulmaz). 2 günden eski işaretler budanır.
+  app.post('/api/admin/gelen/hata/goruldu', A, async (req, res) => {
+    const kimlikler = (Array.isArray(req.body?.kimlikler) ? req.body.kimlikler : []).map((x: unknown) => String(x).slice(0, 80)).filter(Boolean).slice(0, 500);
+    if (!kimlikler.length) return res.status(400).json({ error: 'kimlikler gerekli.' });
+    const simdi = new Date().toISOString();
+    const sinir = new Date(Date.now() - 2 * 86_400_000).toISOString();
+    try {
+      await atomikJsonGuncelle<Record<string, string>>(GORULDU, (eski) => {
+        const v: Record<string, string> = {};
+        for (const [k, at] of Object.entries(eski || {})) if (at >= sinir) v[k] = at;
+        for (const k of kimlikler) v[k] = simdi;
+        return v;
+      });
+      denetimHedef(res, `istemci-hata:${kimlikler.length === 1 ? kimlikler[0] : `${kimlikler.length} grup`}`);
+      gelenOnbellekSil();
+      res.json({ ok: true, n: kimlikler.length });
+    } catch (e: any) { res.status(500).json({ error: e?.message || String(e) }); }
   });
 
   /* ================= Drive ================= */
