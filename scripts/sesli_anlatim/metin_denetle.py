@@ -18,6 +18,15 @@ DOLGU = (
     r'daha\s+önce\s+de\s+söylediğimiz\s+gibi', r'özetlemek\s+gerekirse', r'sözü\s+uzatmadan',
 )
 
+# Kaçamak meta cümle (H127, 2026-10-28): şekil/kavram anlatılmadan "ders yorumuna girmez" diye geçmek
+KACAMAK = (
+    r'\bders(?:te|in)?\b[^.]{0,60}\b(girmez|vermez|anlatmaz|değinmez|açıklamaz|ayrıntılandırmaz|belirtmez)\b',
+    r'\byalnız(?:ca)?\s+ad(?:ı|ını|larını)\s+(?:verir|sayar|geçer)',
+    r'\b(?:slayt|şekil|çizim|resim|fotoğraf|görsel)(?:ta|te|da|de)?\b[^.]{0,40}\b(?:ayrıntı|yorum)[^.]{0,20}\b(?:yok|verilmez|yer\s+almaz)',
+)
+SEKIL_RE = r'\b(çizim|şekil|resim|fotoğraf|görsel|panel)'
+BETIM_RE = r'(gösterilir|görülür|yer alır|gösterir)[.!?]?$'
+
 YAZIM = False
 
 
@@ -64,9 +73,16 @@ def denetle(p: Path):
     if onemli_n > max(3, len(bolum) // 2):
         hatalar.append(f'önem vurgusu {onemli_n} kez — yalnız çıkmış/öğrenci notu dayanaklı kritik noktalarda kullan')
     paras = [x for x in re.split(r'\n\s*\n', text) if x.strip()]
+    # H127: kaçamak meta cümle (HATA) ve yalnız betimlenmiş kısa şekil paragrafı (UYARI)
+    for kalip in KACAMAK:
+        for m in re.finditer(kalip, low):
+            hatalar.append(f'kaçamak meta cümle (H127 — şekli/kavramı anlat): "{low[max(0, m.start() - 20):m.end() + 20].strip()}"')
     for x in paras:
         n = len(x.split())
         if n > 200: uyarilar.append(f'uzun paragraf ({n} kelime): {x[:50]}…')
+        cs = [c for c in re.split(r'(?<=[.!?])\s+', x.strip()) if c.strip()]
+        if n < 45 and re.search(SEKIL_RE, x, re.I) and cs and all(re.search(BETIM_RE, c.strip()) for c in cs):
+            uyarilar.append(f'şekil yalnız betimlenmiş (H127 — ne sınar, sonuçlar, paneller): {x[:70]}…')
     onemli = len(re.findall(r'[Bb]urası önemli', text))
     print(f'{p.name}: {words} kelime ≈ {words / WPM:.0f} dk, {len(bolum)} bölüm, {len(paras)} paragraf, "Burası önemli" {onemli}')
     for h in hatalar[:60]: print('  HATA', h)

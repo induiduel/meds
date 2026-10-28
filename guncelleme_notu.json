@@ -1,12 +1,18 @@
 {
  "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
- "onem": 534,
- "baslik": "Daha hafif açılış",
+ "onem": 535,
+ "baslik": "Nörolojik Muayene V2: işitme testleri ayrıntılı",
  "maddeler": [
-  "Yönetim ekranlarının kodu ve çıkmış soru stilleri artık yalnız gerektiğinde iniyor"
+  "Nörolojik Muayene dersinin V2 sürümü eklendi; V1 olduğu gibi duruyor",
+  "Rinne ve Weber testleri çizim üstünde panel panel anlatılıyor: neden yapılır, normal ve hasta sonuçlar ne demek",
+  "Ses parça parça üretildi; metin, PDF işaretleri ve çizimler sesle eş zamanlı"
  ],
- "eklenen": [],
+ "eklenen": [
+  "Nörolojik Muayene · V2"
+ ],
  "degisen": [],
- "duzeltilen": [],
+ "duzeltilen": [
+  "Şekil ve deney anlatılmadan geçilen yerler için yeni kural ve otomatik denetim"
+ ],
  "silinen": []
 }

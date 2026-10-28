@@ -106,6 +106,12 @@ Metinler slaytı özetlemekle kalmaz, **öğretir**. Kapılar biçimi ölçer; a
     Metin satırlarını/akış şemasındaki küçük yazıyı saran ve anlamlı yapı göstermeyen kontur çizilmez.
 11. **Öğrenci notu katmanı (`ogrenci_not/<fileId>.json`, canlı derste `ogrenciNot`) yalnız kullanıcı isterse eklenir** (kullanıcı kararı 2026-10-27).
     Öğrenci notları değerlendirme paketine, metne ve vurgulara girer; ayrı ekran katmanı kendiliğinden üretilmez.
+12. **Şekil ve deney anlatımı (H127, kullanıcı kararı 2026-10-28):** slayttaki görsel (çizim, fotoğraf, şema, tablo, grafik,
+    mikroskopi, görüntüleme; oklar, X, kesik/kalın çizgi, panel farkları) kaynaktır ve anlatılır. Deney/test/muayene görseli:
+    ne sınanır ve neden → nasıl uygulanır → normal sonuç → her patolojik panel ne demek ve hangi lezyonu gösterir → sonuçlar nasıl
+    ayrılır. Çok panelde her panel ayrı adlandırılır; adı geçen her test/kavram en az 1–2 cümleyle tanımlanır. "Ders bunun
+    yorumuna girmez", "yalnız adını verir", "… gösterilir" diye geçmek YASAK (`metin_denetle.py` HATA). Denetçi şekilli her sayfanın
+    görüntüsüne bakıp panel panel kontrol eder.
 
 
 ## 9. Yeni PDF eklendiğinde standart akış (kullanıcı kararı 2026-10-27 — sormadan uygulanır)
