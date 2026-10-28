@@ -75,7 +75,8 @@ const hocaLoaders = import.meta.glob('../data/hoca_uslubu_sorular/k[1-6]/k[1-6]-
 const hocaIndex = import.meta.glob('../data/hoca_uslubu_sorular/k[1-6]/index.json', { eager: true, import: 'default' }) as Record<string, { ders_id: string; soru: number }[]>;
 const HOCA_SAYI: Record<string, number> = {};
 for (const k in hocaIndex) for (const r of hocaIndex[k] || []) HOCA_SAYI[r.ders_id] = r.soru;
-for (const r of INDEX) r.soru_sayisi += HOCA_SAYI[r.id.split('-').slice(0, 2).join('-')] || 0;
+for (const r of INDEX) { const h = HOCA_SAYI[r.id.split('-').slice(0, 2).join('-')] || 0; r.soru_sayisi += h; if (h) r.kazanim += 1; }
+const hocaSayi = (id: string) => HOCA_SAYI[id.split('-').slice(0, 2).join('-')] || 0;
 
 async function hocaEkle(d: Ders): Promise<Ders> {
   if (d.kazanimlar.some((k) => k.no === HOCA_KAZANIM_NO)) return d;
@@ -94,7 +95,7 @@ async function hocaEkle(d: Ders): Promise<Ders> {
       aciklama: q.aciklama[q.cevap] || '',
       sik_aciklamalari: q.aciklama,
     }));
-    return { ...d, soru_sayisi: d.soru_sayisi + sorular.length, kazanimlar: [...d.kazanimlar, { no: HOCA_KAZANIM_NO, metin: 'Hocanın üslubunda çıkabilecek sorular', sorular, ilgili_cikmis: [] }] };
+    return { ...d, soru_sayisi: d.soru_sayisi + sorular.length, kazanimlar: [{ no: HOCA_KAZANIM_NO, metin: 'Hocanın üslubunda çıkabilecek sorular', sorular, ilgili_cikmis: [] }, ...d.kazanimlar] };
   } catch { return d; }
 }
 
@@ -904,6 +905,7 @@ export const KazanimSorulariView: React.FC<{
                   <span className="ks-lesson-no hk-num">{String(x.sira).padStart(2, '0')}</span>
                 </span>
                 <span className="ks-lesson-t">{x.konu}</span>
+                {hocaSayi(x.id) > 0 && <span className="ks-lesson-who" style={{ color: 'var(--color-accent, currentColor)', fontWeight: 600 }}>Hoca üslubu · {hocaSayi(x.id)} yeni soru</span>}
                 <span className="ks-lesson-who">{x.ogretim_uyesi}</span>
                 <span className="ks-lesson-bar" aria-hidden><span style={{ width: `${yuzde}%` }} /></span>
                 <span className="ks-lesson-foot">

@@ -115,3 +115,6 @@
 ## 2026-10-29 (3) — Hoca üslubu sorular Örnek sorular ekranına bağlandı (yerel; commit/dağıtım yok)
 - `KazanimSorulariView.tsx`: `src/data/hoca_uslubu_sorular/k<N>/<ders>.json` dosyaları derse sentetik son kazanım olarak ("Hoca", no 900, "Hocanın üslubunda çıkabilecek sorular") eklenir; soru kimliği `<k2-NN>-qhNN` (ilerleme sayacı `-q` önekiyle sayar); ders listesi soru sayısına eklenir; "K900" yerine "Hoca üslubu" gösterilir. `tsc` 0 hata, `vite build` tamam; yerel 3000'de k2-04 (12+27=39 soru) çözme kipinde doğrulandı. Yalnız ön yüz: sunucu yeniden başlatma gerekmedi.
 - **Açık:** dağıtım yok (onem artmadı); k2-03 aynı yolla görünür (ekranda ayrıca açılmadı); ders işçisinin canlı içerik yolu (`/api/content/ornek`) hoca katmanını bilmez, ders canlı içerikle değişirse katman istemcide yine eklenir.
+
+## 2026-10-29 (4) — Hoca üslubu soruları görünür yapıldı (kullanıcı "göremedim" dedi)
+- **Belirti:** canlıda "Hoca" etiketli sorular fark edilmedi. **Kök neden:** grup dersin en sonuna (K1–K3'ten sonra) eklenmişti ve ders kartında hiçbir ipucu yoktu; sayılar doğruydu (k2-04 39 soru) ama etiket yalnız ders içinde küçük rozetti. **Çözüm:** `KazanimSorulariView.tsx` — grup en üste, kartta "Hoca üslubu · N yeni soru", kazanım sayısına +1. **Önleme:** yeni içerik katmanı eklenince ders kartında ve ders içinde ilk görünümde işaretlenir.
