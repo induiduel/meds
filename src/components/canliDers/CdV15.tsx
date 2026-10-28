@@ -135,7 +135,8 @@ export function CdTasmaMenu({ ogeler, etiket, className, ikon }: { ogeler: CdTas
     if (!acik) return;
     ogeEl()[0]?.focus();
     const dis = (e: PointerEvent) => { if (!kok.current?.contains(e.target as Node)) setAcik(false); };
-    const esc = (e: KeyboardEvent) => { if (e.key === 'Escape') { e.stopPropagation(); e.preventDefault(); kapat(); } };
+    // H335: TV kumandasının Geri tuşu (GoBack/BrowserBack, 461, 10009) da menüyü kapatır
+    const esc = (e: KeyboardEvent) => { if (e.key === 'Escape' || e.key === 'GoBack' || e.key === 'BrowserBack' || e.keyCode === 461 || e.keyCode === 10009) { e.stopPropagation(); e.preventDefault(); kapat(); } };
     document.addEventListener('pointerdown', dis, true);
     document.addEventListener('keydown', esc, true);
     return () => { document.removeEventListener('pointerdown', dis, true); document.removeEventListener('keydown', esc, true); };

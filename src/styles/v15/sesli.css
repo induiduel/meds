@@ -363,3 +363,10 @@
 @media (pointer: coarse) { .cd15-tm-oge { min-height: 44px; } }
 .cd-pdf-bar .cd15-tm-btn { height: 32px; width: 32px; min-width: 32px; border-radius: var(--v15-r-pill, 999px); }
 @media (max-width: 600px) { :root[data-v15='on'] .cd-ders .cd-pdf-bar .cd-pdf-zb { display: none; } .cd-pdf-bar .cd15-tm-btn { width: 40px; height: 40px; } }
+
+/* H336: PDF şeridindeki Kalem ve Çıkmış düğmeleri 32 px yüksekliğindeydi; dokunmatik ekranda görünüm aynı kalır,
+   dokunma alanı ::after ile ~44 px'e büyür (komşu düğmelerle çakışmasın diye yatayda büyütülmez) */
+@media (pointer: coarse) {
+  :root[data-v15='on'] :is(.cd15-pb, .cd-ders .cd-pdf-bar .cd-cik-btn) { position: relative; }
+  :root[data-v15='on'] :is(.cd15-pb, .cd-ders .cd-pdf-bar .cd-cik-btn)::after { content: ''; position: absolute; inset: -6px 0; }
+}

@@ -2035,6 +2035,9 @@ function CdPdfBolme({ detay, canli }: { detay: CdDetay; canli: boolean }) {
         )}
       </div>
       {v15 && <CdV15KalemKutusu />}
+      {/* H337: TV kumanda gezinmesi + tanıtımı cbff0844'te başlık yeniden yazılırken yanlışlıkla kaldırılmıştı (import kalmıştı);
+          TV olmayan cihazda hiçbir şey çizmez */}
+      <CdTvKumanda />
       <div className={`cd-pdf-govde dpv-body tema-${sayfaTema}`} ref={wrapRef}>
         {!info ? (
           <div className="cd-bos" role="status"><span className="cd-spin" aria-hidden /> PDF aranıyor…</div>

@@ -151,6 +151,9 @@ export function useCdTvGezinme(mod: 'liste' | 'ders') {
     const on = (e: KeyboardEvent) => {
       if (e.defaultPrevented || e.metaKey || e.ctrlKey || e.altKey) return;
       const t = e.target as HTMLElement | null;
+      // H335: açık bir menünün (⋯ CdTasmaMenu, role="menu") içindeyken yön tuşları, Home/End ve Esc/Geri menünündür;
+      // pencere düzeyindeki yakalayıcı onları önce alıp odak gezinmesine/sarmaya çeviriyordu
+      if (t?.closest?.('[role="menu"]')) return;
       if (GERI_TUS(e) || e.key === 'Escape') {
         const x = document.querySelector<HTMLElement>('.cd-dlg .cd-dlg-x, .cd-dlg [aria-label="Kapat"]');
         if (x) { e.preventDefault(); e.stopPropagation(); x.click(); return; }
