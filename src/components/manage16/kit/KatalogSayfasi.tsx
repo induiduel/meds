@@ -14,6 +14,13 @@ export type KatalogSatiri = { id: string; baslik: string; alt: string; degerlend
 type Meta = { etiket: string; kaynak: string; toplam: number; suzgecler: { anahtar: string; etiket: string }[]; yuzler: Record<string, { deger: string; n: number }[]>; duzenlenebilir: string[] };
 type Ayrinti = { id: string; baslik: string; kayit: Record<string, any>; duzenlenebilir: string[]; gorunurlukAnahtari?: string; gorunurluk?: string };
 
+// H268: form alanları ham alan adı yerine Türkçe etiketle gösterilir (bilinmeyen ad olduğu gibi kalır)
+const ALAN_ETIKET: Record<string, string> = {
+  term: 'Terim', title: 'Başlık', definition: 'Tanım', description: 'Açıklama', explanation: 'Açıklama', stem: 'Soru kökü', spot: 'Spot', clinicalPearl: 'Klinik inci',
+  note: 'Not', front: 'Ön yüz', back: 'Arka yüz', tags: 'Etiketler', aliases: 'Eş anlamlılar', category: 'Kategori', committee: 'Kurul', discipline: 'Branş',
+  options: 'Şıklar', correctAnswer: 'Doğru cevap', name: 'Ad', metin: 'Metin', aciklama: 'Açıklama', baslik: 'Başlık', ders: 'Ders', kurul: 'Kurul',
+};
+const alanEtiketi = (a: string) => ALAN_ETIKET[a] || a;
 const UZUN = /definition|description|explanation|stem|spot|clinicalPearl|note|back|front|metin|aciklama/i;
 const DIZI = /^(tags|aliases)$/;
 
@@ -61,7 +68,7 @@ export function KatalogSayfasi(p: {
   ];
 
   const alanlar: AlanTanim[] = (ayr.veri?.duzenlenebilir || []).map((a) => ({
-    ad: a, etiket: a, tur: DIZI.test(a) ? 'etiketler' : UZUN.test(a) ? 'uzun' : 'metin',
+    ad: a, etiket: alanEtiketi(a), tur: DIZI.test(a) ? 'etiketler' : UZUN.test(a) ? 'uzun' : 'metin',
   }));
   const deger = useMemo(() => Object.fromEntries((ayr.veri?.duzenlenebilir || []).map((a) => [a, ayr.veri?.kayit?.[a] ?? (DIZI.test(a) ? [] : '')])), [ayr.veri]);
 

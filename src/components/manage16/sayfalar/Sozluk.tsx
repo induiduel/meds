@@ -21,6 +21,8 @@ export default function Sozluk(_p: SayfaProps) {
   const t = TURLER.find((x) => x.id === tur) || TURLER[0];
   return (
     <KatalogSayfasi key={t.id} varlik={t.id} kimlik={`kaynak-sozluk-${t.id}`} baslik={t.etiket} silinebilir={t.id === 'glossary'}
+      /* H267: silinemeyen sekmede nedeni söylenir */
+      aciklama={t.id === 'glossary' ? undefined : 'Bu sekmedeki kayıtlar yalnız düzenlenir; silme ve çöp kutusu yalnız Sözlük sekmesinde açıktır.'}
       ust={<div className="m16-sekmeler" role="tablist">{TURLER.map((x) => <button key={x.id} type="button" role="tab" aria-selected={x.id === t.id} className={x.id === t.id ? 'on' : ''} onClick={() => sec(x.id)}>{x.etiket}</button>)}</div>} />
   );
 }

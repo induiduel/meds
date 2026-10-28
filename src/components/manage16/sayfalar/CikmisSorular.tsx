@@ -23,7 +23,8 @@ const ALANLAR: AlanTanim[] = [
   { ad: 'adminNote', etiket: 'Yönetici notu', tur: 'uzun' },
 ];
 
-function Ayrinti({ id, kapat }: { id: string; kapat: () => void }) {
+// H256: ayrıntı bağlantıları panel içi git() ile (tam sayfa yenileme yok)
+function Ayrinti({ id, kapat, git }: { id: string; kapat: () => void; git: SayfaProps['git'] }) {
   const yol = `/api/admin/sorular/cikmis/${encodeURIComponent(id)}`;
   const { veri, hata, yukleniyor, yenile, setVeri } = useAdminSorgu<any>(yol);
   const [kirli, setKirli] = React.useState(false);
@@ -52,11 +53,11 @@ function Ayrinti({ id, kapat }: { id: string; kapat: () => void }) {
           <div className="m16-kart">
             <h2>Sitedeki durum</h2>
             <dl className="m16-satirlar">
-              <dt>Görünüm</dt><dd><Rozet ton={SITEDE[s?.durum]?.[1] || 'notr'}>{SITEDE[s?.durum]?.[0] || s?.durum}</Rozet>{s?.gosteren && <> · gösterilen kopya <a href={manageAdres(`sorular/cikmis/${s.gosteren}`)}>{s.gosteren}</a></>}</dd>
+              <dt>Görünüm</dt><dd><Rozet ton={SITEDE[s?.durum]?.[1] || 'notr'}>{SITEDE[s?.durum]?.[0] || s?.durum}</Rozet>{s?.gosteren && <> · gösterilen kopya <a href={manageAdres(`sorular/cikmis/${s.gosteren}`)} onClick={(e) => { e.preventDefault(); git(`sorular/cikmis/${s.gosteren}`); }}>{s.gosteren}</a></>}</dd>
               {s?.karantinaNedeni?.length > 0 && (<><dt>Karantina nedeni</dt><dd>{s.karantinaNedeni.join(', ')}</dd></>)}
               <dt>Cevap anahtarı</dt><dd>{s?.cevap || q.correctAnswer || '—'} {s?.cevapDurumu && <Rozet ton="bilgi">{s.cevapDurumu}</Rozet>} {s?.cevapSupheli && <Rozet ton="uyari">Şüpheli</Rozet>} {s?.cevapNotu && <small>{s.cevapNotu}</small>}</dd>
               <dt>Check-solve</dt><dd>{veri.checkSolve ? `${veri.checkSolve.durum}${veri.checkSolve.gerekce ? ` — ${veri.checkSolve.gerekce}` : ''}` : '—'}</dd>
-              <dt>Birleşme grubu</dt><dd>{veri.grup ? <><a href={manageAdres(`sorular/birlesen/${veri.grup.id}`)}>{veri.grup.id}</a> · {veri.grup.uyeler.length} kopya · asıl {veri.grup.asil === id ? 'bu soru' : veri.grup.asil}</> : '—'}</dd>
+              <dt>Birleşme grubu</dt><dd>{veri.grup ? <><a href={manageAdres(`sorular/birlesen/${veri.grup.id}`)} onClick={(e) => { e.preventDefault(); git(`sorular/birlesen/${veri.grup.id}`); }}>{veri.grup.id}</a> · {veri.grup.uyeler.length} kopya · asıl {veri.grup.asil === id ? 'bu soru' : veri.grup.asil}</> : '—'}</dd>
               <dt>Şikâyet</dt><dd>{(q.reports || []).length} ({(q.reports || []).filter((r: any) => !r.status || r.status === 'pending').length} açık)</dd>
             </dl>
           </div>
@@ -97,7 +98,7 @@ export default function CikmisSorular({ id, git }: SayfaProps) {
           { anahtar: 'guncellendi', baslik: 'Güncellendi', sirala: true, genislik: '104px', hucre: (s) => (s.guncellendi ? zamanMetni(s.guncellendi) : '—') },
         ]}
       />
-      {id && <Ayrinti id={id} kapat={() => git(`sorular/cikmis${window.location.search}`)} />}
+      {id && <Ayrinti id={id} git={git} kapat={() => git(`sorular/cikmis${window.location.search}`)} />}
     </>
   );
 }

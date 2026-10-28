@@ -65,7 +65,7 @@ export const MENU: GrupTanim[] = [
       { yol: 'sorular/dondurma', etiket: 'Havuz dondurma', ikon: Snowflake, oncelik: 'P2', yukle: () => import('./sayfalar/HavuzDondurma') },
       { yol: 'sorular/olasi', etiket: 'Olası sorular', ikon: Sparkles, oncelik: 'P2', yukle: () => import('./sayfalar/OlasiSorular') },
       { yol: 'sorular/sikayet', etiket: 'Soru şikâyetleri', ikon: AlertTriangle, oncelik: 'P0', anahtar: 'hata bildirimi rapor', yukle: () => import('./sayfalar/SoruSikayetleri') },
-      { yol: 'sorular/faz14', etiket: 'Faz 14 kuyruğu', ikon: FlaskConical, oncelik: 'P1', anahtar: 'inceleme llm', yukle: () => import('./sayfalar/Faz14Kuyrugu') },
+      { yol: 'sorular/faz14', etiket: 'Çıkmış inceleme (Faz 14)' /* H259: iç proje adı yerine ne olduğu */, ikon: FlaskConical, oncelik: 'P1', anahtar: 'inceleme llm', yukle: () => import('./sayfalar/Faz14Kuyrugu') },
     ],
   },
   {
@@ -78,7 +78,7 @@ export const MENU: GrupTanim[] = [
       { yol: 'ogrenme/kazanim', etiket: 'Kazanımlar', ikon: Award, oncelik: 'P2', v14Slug: 'veri-katalogu', yukle: () => import('./sayfalar/Kazanimlar') },
       { yol: 'ogrenme/kart', etiket: 'Ezber kartları', ikon: CreditCard, oncelik: 'P2', v14Slug: 'veri-katalogu', yukle: () => import('./sayfalar/Kartlar') },
       { yol: 'ogrenme/paket', etiket: 'İçerik paketleri', ikon: Package, oncelik: 'P1', anahtar: 'ders_icerik quiz terim', yukle: () => import('./sayfalar/IcerikPaketleri') },
-      { yol: 'ogrenme/kamp', etiket: 'Kamplar', ikon: Tent, oncelik: 'P1', v14Slug: 'kamp-tuyolari', yukle: () => import('./sayfalar/Kamplar') },
+      { yol: 'ogrenme/kamp', etiket: 'Kamp tüyoları' /* H260: sayfa yalnız tüyo defteri */, ikon: Tent, oncelik: 'P1', v14Slug: 'kamp-tuyolari', yukle: () => import('./sayfalar/Kamplar') },
     ],
   },
   {
@@ -99,8 +99,8 @@ export const MENU: GrupTanim[] = [
       { yol: 'site/bakim', etiket: 'Bakım', ikon: Construction, oncelik: 'P0', yukle: () => import('./sayfalar/SiteBakim') },
       { yol: 'site/bayraklar', etiket: 'Özellik bayrakları', ikon: Flag, oncelik: 'P1', yukle: () => import('./sayfalar/SiteBayraklar') },
       { yol: 'site/duyurular', etiket: 'Duyurular', ikon: Megaphone, oncelik: 'P1', anahtar: 'bildirim push', yukle: () => import('./sayfalar/SiteDuyurular') },
-      { yol: 'site/kanallar', etiket: 'Kanallar', ikon: Radio, oncelik: 'P2', anahtar: 'smtp push e-posta', yukle: () => import('./sayfalar/SiteKanallar') },
-      { yol: 'site/surum', etiket: 'Sürüm', ikon: Tag, oncelik: 'P1', anahtar: 'commit dağıtım', yukle: () => import('./sayfalar/SiteSurum') },
+      { yol: 'site/kanallar', etiket: 'Bildirim kanalları' /* H261: SMTP/push; topluluk kanallarıyla karışmasın */, ikon: Radio, oncelik: 'P2', anahtar: 'smtp push e-posta', yukle: () => import('./sayfalar/SiteKanallar') },
+      { yol: 'site/surum', etiket: 'Sürüm notu' /* H261 */, ikon: Tag, oncelik: 'P1', anahtar: 'commit dağıtım', yukle: () => import('./sayfalar/SiteSurum') },
     ],
   },
   {
@@ -116,7 +116,7 @@ export const MENU: GrupTanim[] = [
   },
   {
     id: 'topluluk', etiket: 'Topluluk', sayfalar: [
-      { yol: 'topluluk/sikayet', etiket: 'Şikâyetler', ikon: AlertTriangle, oncelik: 'P0', v14Slug: 'moderasyon', yukle: () => import('./sayfalar/Sikayetler') },
+      { yol: 'topluluk/sikayet', etiket: 'Topluluk şikâyetleri' /* H261 */, ikon: AlertTriangle, oncelik: 'P0', v14Slug: 'moderasyon', yukle: () => import('./sayfalar/Sikayetler') },
       { yol: 'topluluk/sohbet', etiket: 'Sohbet odaları', ikon: MessagesSquare, oncelik: 'P0', anahtar: 'oda grup davet kodu', yukle: () => import('./sayfalar/SohbetOdalari') },
       { yol: 'topluluk/mesaj', etiket: 'Mesajlar', ikon: MessageSquare, oncelik: 'P0', yukle: () => import('./sayfalar/Mesajlar') },
       { yol: 'topluluk/kanal', etiket: 'Yorumlar ve kanallar', ikon: Radio, oncelik: 'P1', anahtar: 'yorum kanal moderasyon', yukle: () => import('./sayfalar/Kanallar') },
@@ -146,7 +146,7 @@ export const MENU: GrupTanim[] = [
       { yol: 'sistem/drive', etiket: 'Drive', ikon: CloudCog, oncelik: 'P2', v14Slug: 'otomasyon', anahtar: 'tarama envanter pdf', yukle: () => import('./sayfalar/Drive') },
       { yol: 'sistem/rag', etiket: 'RAG indeksi', ikon: Network, oncelik: 'P2', anahtar: 'vektör bge embed denetle', yukle: () => import('./sayfalar/Rag') },
       { yol: 'sistem/fazlar', etiket: 'Fazlar', ikon: FlaskConical, oncelik: 'P2', v14Slug: 'fazlar', anahtar: 'faz kazanım slayt varlık', yukle: () => import('./sayfalar/Fazlar') },
-      { yol: 'sistem/baglanti', etiket: 'Bağlantılar', ikon: Link2, oncelik: 'P2', v14Slug: 'kisayollar', anahtar: 'ders çıkmış terim slayt öğren bağ', yukle: () => import('./sayfalar/Baglantilar') },
+      { yol: 'sistem/baglanti', etiket: 'İçerik bağlantıları' /* H261 */, ikon: Link2, oncelik: 'P2', v14Slug: 'kisayollar', anahtar: 'ders çıkmış terim slayt öğren bağ', yukle: () => import('./sayfalar/Baglantilar') },
     ],
   },
 ];

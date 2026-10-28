@@ -344,7 +344,7 @@ export const CikmisV12: React.FC<CikmisV12Props> = (p) => {
               onFocus={() => { window.clearTimeout(blurT.current); setFocus(true); }}
               onBlur={() => { blurT.current = window.setTimeout(() => setFocus(false), 120); }}
               onKeyDown={(e) => { if (e.key === 'Escape') setFocus(false); }}
-              placeholder="Kökte, şıkta ya da konuda ara"
+              placeholder="Soruda ara (kök, şık, konu)" /* H204: dar ekranda yer tutucu "konuda a…" diye kesiliyordu; anahtar kelime başa alındı */
               aria-label="Çıkmış sorularda ara"
               enterKeyHint="search"
             />

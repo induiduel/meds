@@ -1,5 +1,5 @@
 import React from 'react';
-import { SayfaBasligi, IstatistikIzgara, IstatistikKart, Rozet, Hata, Yukleniyor, adminIstek, bildir, onayIste, useAdminSorgu } from '../kit';
+import { SayfaBasligi, IstatistikIzgara, IstatistikKart, Rozet, Hata, Yukleniyor, adminIstek, bildir, onayIste, useAdminSorgu, yazimHedefi } from '../kit';
 import type { SayfaProps } from '../menu';
 import './ortak/ts16.css';
 
@@ -16,7 +16,7 @@ export default function LlmIsleri({ git }: SayfaProps) {
   const faz14 = async () => {
     if (!(await onayIste({
       baslik: 'Faz 14 kullanıcı kuyruğu başlatılsın mı?', tehlikeli: true, yazilacak: 'BASLAT', onayMetni: 'Elle başlat',
-      aciklama: <>Bekleyen {v?.faz14.bekleyen ?? 0} istek ücretsiz LLM anahtarlarıyla işlenir. Bu bir kerelik elle başlatmadır; kuyruk boşalınca işleyici durur, kendiliğinden yeniden başlamaz.</>,
+      aciklama: <>{/* H263: onay hedef sunucuyu söyler */}Hedef: {yazimHedefi()}. Bekleyen {v?.faz14.bekleyen ?? 0} istek ücretsiz LLM anahtarlarıyla işlenir. Bu bir kerelik elle başlatmadır; kuyruk boşalınca işleyici durur, kendiliğinden yeniden başlamaz.</>,
     }))) return;
     await calistir(async () => {
       const r = await adminIstek<any>('/api/admin/faz14-kuyruk/baslat', { yontem: 'POST', govde: {} });
@@ -26,7 +26,7 @@ export default function LlmIsleri({ git }: SayfaProps) {
   const onarim = async (ac: boolean) => {
     if (ac && !(await onayIste({
       baslik: 'Gemini onarım işçisi açılsın mı?', tehlikeli: true, yazilacak: 'BASLAT', onayMetni: 'Elle aç',
-      aciklama: <>Bekleyen {v?.onarim.bekleyen ?? 0} hata bildirimi Gemini ile işlenir. İşçi siz durdurana ya da sunucu yeniden başlayana dek açık kalır (açılışta duraklatılmış başlar).</>,
+      aciklama: <>Hedef: {yazimHedefi()}. Bekleyen {v?.onarim.bekleyen ?? 0} hata bildirimi Gemini ile işlenir. İşçi siz durdurana ya da sunucu yeniden başlayana dek açık kalır (açılışta duraklatılmış başlar).</>,
     }))) return;
     if (!ac && !(await onayIste({ baslik: 'Onarım işçisi duraklatılsın mı?', onayMetni: 'Duraklat' }))) return;
     await calistir(() => adminIstek('/api/admin/auto-repair/toggle-worker', { yontem: 'POST', govde: { paused: !ac } }), ac ? 'Onarım işçisi açıldı.' : 'Onarım işçisi duraklatıldı.');

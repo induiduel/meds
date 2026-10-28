@@ -88,27 +88,28 @@ export default function KamplarMerkezV15() {
             </li>
           ))}
         </ul>
-        {sekme === 'hepsi' && (
+        {/* H200: olası sorular gizliyken "Planlama" başlığı altında boş liste kalıyordu; başlık ve liste yalnız içerik varken çizilir */}
+        {sekme === 'hepsi' && ((NAV_ITEMS.olasi_sorular && menudeGorunur('olasi_sorular')) || sinavAgirligiVar(kurul)) && (
           <section className="k15-plan" aria-labelledby="k15-plan-b">
             <h2 id="k15-plan-b" className="v15-cap">Planlama</h2>
-            <ul className="k15-izgara" role="list">
-              {NAV_ITEMS.olasi_sorular && menudeGorunur('olasi_sorular') && (() => {
+            {NAV_ITEMS.olasi_sorular && menudeGorunur('olasi_sorular') && <ul className="k15-izgara" role="list">
+              {(() => {
                 const url = `${pathFor('olasi_sorular')}?kurul=${kurul}`;
                 const it = NAV_ITEMS.olasi_sorular;
                 return (
                   <li>
                     <a className="k15-kart v15-card" href={url} onClick={git(url)}>
                       <span className="v15-tile is-b"><it.icon aria-hidden /></span>
-                      <span className="k15-kart-t"><b>{it.label}</b><span>Sınavdan sonra öğrenci hatıralarından kurulan soruları çöz</span></span>
+                      <span className="k15-kart-t"><b>{it.label}</b><span>Sınavdan sonra öğrenci hatıralarından kurulan soruları çöz · ATP ile açılır</span>{/* H205: ATP kilidi ancak sayfa açılınca öğreniliyordu */}</span>
                       <ChevronRight className="v15-chev" aria-hidden />
                     </a>
                   </li>
                 );
               })()}
-            </ul>
+            </ul>}
             {sinavAgirligiVar(kurul) && (
               <a className="k15-agirlik v15-card" href={pathFor('sinav_plani')} onClick={git(pathFor('sinav_plani'))}>
-                <span className="k15-kart-t"><b>Sınav ağırlığı</b><span>Kurul {kurul} teorik sınavında branş başına soru sayısı; kabarcık büyüdükçe soru artar</span></span>
+                <span className="k15-kart-t"><b>Sınav ağırlığı</b><span>Kurul {kurul} teorik sınavında branş başına soru sayısı; kabarcık büyüdükçe soru artar. Ayrıntı için sınav planını aç.</span>{/* H201: kartın Sınav planı'na gittiği önceden söylenmiyordu */}</span>
                 <SinavAgirligiV15 kurul={kurul} />
               </a>
             )}

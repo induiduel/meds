@@ -12,7 +12,9 @@ import '../../styles/v15/harita.css';
  * Tablo kendi kartında yatay kayar; ders sütunu yapışkan.
  */
 interface Harita { uretildi: string; yillar: string[]; kurullar: Record<string, Record<string, Record<string, number>>> }
-const kisaYil = (y: string) => (/^\d{4}-\d{4}$/.test(y) ? `${y.slice(2, 4)}-${y.slice(7)}` : '?');
+// H202: yılı belirsiz sütun "?" başlığıyla en koyu hücreleri taşıyıp gözü çekiyordu; başlık "Yılsız", sütun sona alınır ve renk ölçeğine katılmaz
+const yilli = (y: string) => /^\d{4}-\d{4}$/.test(y);
+const kisaYil = (y: string) => (yilli(y) ? `${y.slice(2, 4)}-${y.slice(7)}` : 'Yılsız');
 const tr = (n: number) => n.toLocaleString('tr-TR');
 
 export default function SoruHaritasiV15() {
@@ -27,9 +29,9 @@ export default function SoruHaritasiV15() {
   }, []);
 
   const tablo = veri?.kurullar[String(kurul)] || {};
-  const yillar = useMemo(() => (veri ? veri.yillar.filter((y) => Object.values(tablo).some((r) => r[y])) : []), [veri, tablo]);
+  const yillar = useMemo(() => (veri ? veri.yillar.filter((y) => Object.values(tablo).some((r) => r[y])).sort((a, b) => Number(!yilli(a)) - Number(!yilli(b))) : []), [veri, tablo]);
   const satirlar = Object.entries(tablo).map(([d, r]) => ({ d, r, top: Object.values(r).reduce((a, b) => a + b, 0) }));
-  const enCok = Math.max(1, ...satirlar.flatMap((s) => yillar.map((y) => s.r[y] || 0)));
+  const enCok = Math.max(1, ...satirlar.flatMap((s) => yillar.filter(yilli).map((y) => s.r[y] || 0)));
   const toplam = satirlar.reduce((a, s) => a + s.top, 0);
   useV15Baslik({ baslik: 'Soru haritası', alt: veri ? `Kurul ${kurul} · ${tr(toplam)} çıkmış soru` : `Kurul ${kurul}` });
 
@@ -49,6 +51,8 @@ export default function SoruHaritasiV15() {
         ))}
       </div>
       <p className="v15-cap hr15-ac">Her hücre o yılın sınavında o dersten çıkan soru sayısı; koyulaştıkça çok. Hücreye dokun, o soruları aç.</p>
+      {/* H203: telefonda tablo sığmıyor, yatay kaydırılabildiği söylenmiyordu */}
+      <p className="v15-cap hr15-ac hr15-kaydir">Tabloyu yana kaydırarak tüm yılları gör.</p>
       {!veri ? (
         <span className="v15-skel b15-skel" aria-hidden />
       ) : !satirlar.length ? (
@@ -71,7 +75,7 @@ export default function SoruHaritasiV15() {
                     const n = s.r[y] || 0;
                     // H111r: 12–90 doğrusal ölçekte %40–65 arası hücrelerde ne koyu ne açık yazı AA geçiyordu (2.6–4.0);
                     // ölçek iki banda ayrılır: açık bant %10–40 (koyu yazı), koyu bant %90–100 (açık yazı; vurgu %85 altında beyaz yazı 4.5 altına düşer), ara ton kullanılmaz
-                    const t = (n / enCok) ** 0.6;
+                    const t = yilli(y) ? Math.min(1, n / enCok) ** 0.6 : 0;
                     const yog = Math.round(t < 0.5 ? 10 + t * 60 : 90 + (t - 0.5) * 20);
                     return (
                       <td key={y}>
@@ -90,7 +94,7 @@ export default function SoruHaritasiV15() {
           </table>
         </div>
       )}
-      {veri && <p className="v15-cap hr15-ac">Güncelleme: {new Date(`${veri.uretildi}T12:00:00`).toLocaleDateString('tr-TR', { day: 'numeric', month: 'long' })}. "?" sütunu yılı belli olmayan sorular.</p>}
+      {veri && <p className="v15-cap hr15-ac">Güncelleme: {new Date(`${veri.uretildi}T12:00:00`).toLocaleDateString('tr-TR', { day: 'numeric', month: 'long' })}. "Yılsız" sütunu sınav yılı belli olmayan sorulardır; renk ölçeğine katılmaz.</p>}
     </div>
   );
 }

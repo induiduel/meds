@@ -43,7 +43,8 @@ export const Atif: React.FC<{ id?: string; konum?: string }> = ({ id, konum }) =
   const baslik = `${k.kurum} — ${k.belge}${k.yil ? ` (${k.yil})` : ''}${konum ? ` · ${konum}` : ''}`;
   return (
     <a className="sbk-atif" href={`#sbk-kaynak-${n}`} title={baslik} aria-label={`Kaynak ${n}: ${baslik}`} onClick={kaynakcayiAc}>
-      {n}
+      {/* H211: köşeli ayraçsız "14", "+8" rozetleri açıklamasız sayı gibi okunuyordu; dipnot biçimine alındı */}
+      [{n}]
     </a>
   );
 };
@@ -55,7 +56,7 @@ export const EkAtif: React.FC<{ ids: string[] }> = ({ ids }) => {
   if (!gecerli.length) return null;
   if (gecerli.length === 1) return <Atif id={gecerli[0]} />;
   const baslik = gecerli.map((id) => `[${sira.get(id)}] ${kaynaklar[id].belge}${kaynaklar[id].yil ? ` (${kaynaklar[id].yil})` : ''}`).join('\n');
-  return <a className="sbk-atif" href={`#sbk-kaynak-${sira.get(gecerli[0])}`} title={baslik} aria-label={`${gecerli.length} ek kaynak daha`} onClick={kaynakcayiAc}>+{gecerli.length}</a>;
+  return <a className="sbk-atif" href={`#sbk-kaynak-${sira.get(gecerli[0])}`} title={baslik} aria-label={`${gecerli.length} ek kaynak daha`} onClick={kaynakcayiAc}>[+{gecerli.length}]</a>;
 };
 
 export const Kaynakca: React.FC<{ dogrulanamayan?: string[] }> = ({ dogrulanamayan }) => {
@@ -321,7 +322,7 @@ export const Kpi: React.FC<{
         {acilir && (
           <button type="button" className="sbk-kpi-gecmis" title="Geçmiş yılları göster" aria-label={`${ad}: ${yilSay} yılın geçmişini göster`}
             onClick={(e) => { e.stopPropagation(); acGecmis(); }}>
-            <History aria-hidden /> {yilSay} yıl
+            <History aria-hidden /> {yilSay} yıllık geçmiş{/* H212: saat simgeli "15 yıl" süre gibi okunuyordu */}
           </button>
         )}
       </span>

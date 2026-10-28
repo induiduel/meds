@@ -1,4 +1,5 @@
 import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { yazimHedefi } from './Bildirim';
 import { ArrowDown, ArrowUp, ChevronLeft, ChevronRight, Columns3, RefreshCw, Search, X } from 'lucide-react';
 import { useAdminSorgu, type ListeYaniti } from './api';
 import { BosDurum, Hata, Yukleniyor } from './Durumlar';
@@ -244,7 +245,9 @@ export function VeriTablosu<T>(p: VeriTablosuProps<T>) {
           })}
         </div>
         {hata ? <Hata hata={hata} yenile={() => void sunucu.yenile()} /> : ilkYukleme ? <Yukleniyor satir={8} /> : ogeler.length === 0 ? (
-          <BosDurum baslik={debQ || Object.keys(suz).length ? 'Eşleşen kayıt yok' : p.bosMetin || 'Kayıt yok'} />
+          <>{/* H264: boş durum nedenini ve yapılacağı söyler */}
+          <BosDurum baslik={debQ || Object.keys(suz).length ? 'Eşleşen kayıt yok' : p.bosMetin || 'Kayıt yok'}
+            aciklama={debQ || Object.keys(suz).length ? 'Arama ya da süzgeç sonucu boş; süzgeçleri temizleyip yeniden deneyin.' : `Bu listede henüz kayıt yok (kaynak: ${yazimHedefi()}).${yazimHedefi() === 'yerel sunucu' ? ' Yerel veri eksik olabilir; üst çubuktan Canlı’ya geçerek bakın.' : ''}`} /></>
         ) : (
           <div ref={govdeRef} className="m16-tablo-govde" role="rowgroup" style={sanal ? { maxHeight: yukseklik, overflowY: 'auto' } : undefined}
             onScroll={sanal ? (e) => setKaydir((e.target as HTMLDivElement).scrollTop) : undefined}>

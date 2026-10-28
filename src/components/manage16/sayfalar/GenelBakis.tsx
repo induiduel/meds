@@ -33,11 +33,11 @@ export default function GenelBakis({ git }: SayfaProps) {
         <>
           <IstatistikIzgara>
             <IstatistikKart etiket="Şu an çevrimiçi" ikon={<Users aria-hidden="true" />} deger={o?.kullanici.simdi ?? '–'} alt={o ? `bugün ${o.kullanici.bugun} · 7 gün ${o.kullanici.hafta}` : undefined} yukleniyor={y} onClick={() => git('kisi')} />
-            <IstatistikKart etiket="Bekleyen şikâyet" ikon={<AlertTriangle aria-hidden="true" />} deger={o?.bekleyen.sikayet ?? '–'} ton={ton(o?.bekleyen.sikayet)} yukleniyor={y} onClick={() => git('topluluk/sikayet')} />
+            <IstatistikKart etiket="Topluluk şikâyeti" ikon={<AlertTriangle aria-hidden="true" />} deger={o?.bekleyen.sikayet ?? '–'} ton={ton(o?.bekleyen.sikayet)} yukleniyor={y} onClick={() => git('topluluk/sikayet')} /> {/* H250: kart adı hangi şikâyet kuyruğuna gittiğini söyler */}
             <IstatistikKart etiket="Açık geri bildirim" ikon={<MessageCircleHeart aria-hidden="true" />} deger={o?.bekleyen.geriBildirim ?? '–'} ton={ton(o?.bekleyen.geriBildirim)} yukleniyor={y} onClick={() => git('topluluk/geri-bildirim')} />
             <IstatistikKart etiket="Tüyo önerisi" ikon={<Tent aria-hidden="true" />} deger={o?.bekleyen.tuyo ?? '–'} ton={ton(o?.bekleyen.tuyo)} yukleniyor={y} onClick={() => git('ogrenme/kamp')} />
             <IstatistikKart etiket="Onarım kuyruğu" ikon={<Bot aria-hidden="true" />} deger={o?.bekleyen.onarim ?? '–'} alt={o ? `Faz 14: ${o.bekleyen.faz14}` : undefined} yukleniyor={y} onClick={() => git('sistem/llm')} />
-            <IstatistikKart etiket="İstemci hatası (24 sa)" ikon={<Bug aria-hidden="true" />} deger={o?.hata.istemci24s ?? '–'} ton={o?.hata.istemci24s ? 'kotu' : 'notr'} yukleniyor={y} onClick={() => git('sistem/saglik')} />
+            <IstatistikKart etiket="İstemci hatası (24 sa)" ikon={<Bug aria-hidden="true" />} deger={o?.hata.istemci24s ?? '–'} ton={o?.hata.istemci24s ? 'kotu' : 'notr'} yukleniyor={y} onClick={() => git('gelen?s.tur=hata')} /> {/* H251: kart Gelen'in süzülmüş görünümüne gider */}
           </IstatistikIzgara>
 
           <div className="m16-izgara-2">
@@ -66,9 +66,9 @@ export default function GenelBakis({ git }: SayfaProps) {
                     {/* H174: "1462 / 234 MB" belirsizdi; süreç belleği (RSS) ve JS yığını ayrı etiketli */}
                     <dt>Süreç belleği</dt><dd>{o.saglik.rssMb.toLocaleString('tr-TR')} MB</dd>
                     <dt>JS yığını</dt><dd>{o.saglik.yiginMb.toLocaleString('tr-TR')}{o.saglik.yiginToplamMb ? ` / ${o.saglik.yiginToplamMb.toLocaleString('tr-TR')}` : ''} MB</dd>
-                    <dt>Yük (1 dk)</dt><dd>{o.saglik.yuk.toFixed(2)}</dd>
+                    {/* H252: yük eşiği (çekirdek sayısının ~yarısı) aşınca vurgulanır */}<dt>Yük (1 dk)</dt><dd><Durum ton={o.saglik.yuk > 4 ? 'kotu' : o.saglik.yuk > 2 ? 'uyari' : 'iyi'}>{o.saglik.yuk.toFixed(2)}</Durum></dd>
                     <dt>Canlı bağlantı</dt><dd>{o.saglik.sseIstemci}</dd>
-                    <dt>Sürüm</dt><dd title={o.surum.baslik || ''}>{o.surum.onem ?? '–'}{o.surum.commit ? ` · ${o.surum.commit.slice(0, 7)}` : ''}</dd>
+                    {/* H253: sayının sürüm sayacı (onem) olduğu yazılır */}<dt>Sürüm</dt><dd title={o.surum.baslik || ''}>{o.surum.onem != null ? `sürüm no ${o.surum.onem}` : '–'}{o.surum.commit ? ` · ${o.surum.commit.slice(0, 7)}` : ''}</dd>
                   </dl>
                 )}
               </section>

@@ -1,5 +1,6 @@
 import React from 'react';
 import { VeriTablosu, SayfaBasligi, Rozet, adminIstek, bildir, zamanMetni } from '../kit';
+import { manageAdres } from '../menu';
 import type { SayfaProps } from '../menu';
 
 /** Sorular › Şikâyetler — soru hata bildirimleri (çıkmış + havuz + örnek). Sohbet/mesaj şikâyetleri Topluluk › Şikâyetler'de. */
@@ -26,7 +27,7 @@ export default function SoruSikayetleri({ git }: SayfaProps) {
           { anahtar: 'at', baslik: 'Zaman', sirala: true, genislik: '100px', hucre: (s) => (s.at ? zamanMetni(s.at) : '—') },
           { anahtar: 'kaynak', baslik: 'Kaynak', genislik: '96px', hucre: (s) => <Rozet ton="bilgi">{KAYNAK[s.kaynak]}</Rozet> },
           { anahtar: 'neden', baslik: 'Bildirim', genislik: 'minmax(220px,2fr)', hucre: (s) => <span title={s.ayrinti}><b>{s.neden}</b>{s.ayrinti && ` — ${s.ayrinti}`}</span> },
-          { anahtar: 'kok', baslik: 'Soru', genislik: 'minmax(160px,1.5fr)', hucre: (s) => <a href={`/manage/${SAYFA[s.kaynak]}/${encodeURIComponent(s.soruId)}`} onClick={(e) => { e.preventDefault(); git(`${SAYFA[s.kaynak]}/${encodeURIComponent(s.soruId)}`); }}>{s.kok || s.soruId}</a> },
+          { anahtar: 'kok', baslik: 'Soru', genislik: 'minmax(160px,1.5fr)', hucre: (s) => <a href={manageAdres(`${SAYFA[s.kaynak]}/${encodeURIComponent(s.soruId)}`)} /* H255: adres manageAdres ile */ onClick={(e) => { e.preventDefault(); git(`${SAYFA[s.kaynak]}/${encodeURIComponent(s.soruId)}`); }}>{s.kok || s.soruId}</a> },
           { anahtar: 'kim', baslik: 'Kim', genislik: 'minmax(90px,0.8fr)', gizli: true },
           { anahtar: 'durum', baslik: 'İşlem', genislik: '130px', hucre: (s) => (s.durum === 'acik'
             ? <button type="button" className="m16-btn" onClick={(e) => { e.stopPropagation(); void coz(s, 'resolved'); }}>Çözüldü</button>

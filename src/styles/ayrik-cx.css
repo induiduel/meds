@@ -158,3 +158,7 @@ html.ui-v3 .cx-opt { padding-right: 0; }
 html.ui-v3 .cx-q .ms-poll-key svg { width: 12px; height: 12px; }
 html.ui-v3 .cx-q-flags { align-self: center; }
 .ds-filters > .cx-tabs { margin-top: 0; }
+
+/* H209: v15 kabuğunda sayfa adı üst çubukta zaten yazıyor; PageHeader başlığı ikinci kez görünüyordu (Örnek sorular, Arama).
+   Başlık ekran okuyucu için h1 olarak kalır, görsel olarak gizlenir; sayaç ve araçlar yerinde durur. */
+:root[data-v15='on'] .cx-page .cx-title { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }

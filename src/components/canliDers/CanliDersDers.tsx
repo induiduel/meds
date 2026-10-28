@@ -1091,9 +1091,9 @@ function CdBolmeAyrac({
         {birinciAd} %{birinciYuzde} · {ikinciAd} %{ikinciYuzde}
       </span>
       <div className="cd-ayrac-hizli" onPointerDown={(e) => e.stopPropagation()}>
-        <button type="button" onClick={() => onOran(35)} className={Math.abs(oran - 35) <= 4 ? 'is-on' : ''} title={`${birinciAd} %35 · ${ikinciAd} %65`}>35</button>
-        <button type="button" onClick={() => onOran(50)} className={Math.abs(oran - 50) <= 4 ? 'is-on' : ''} title="Eşitle (%50 / %50)">50</button>
-        <button type="button" onClick={() => onOran(65)} className={Math.abs(oran - 65) <= 4 ? 'is-on' : ''} title={`${birinciAd} %65 · ${ikinciAd} %35`}>65</button>
+        <button type="button" onClick={() => onOran(35)} className={Math.abs(oran - 35) <= 4 ? 'is-on' : ''} title={`${birinciAd} %35 · ${ikinciAd} %65`} aria-label={`${birinciAd} yüzde 35`}>35</button>
+        <button type="button" onClick={() => onOran(50)} className={Math.abs(oran - 50) <= 4 ? 'is-on' : ''} title="Eşitle (%50 / %50)" aria-label="Bölmeyi eşitle">50</button>{/* H207: sayı düğmeleri ekran okuyucuda yalnız "35" diye okunuyordu */}
+        <button type="button" onClick={() => onOran(65)} className={Math.abs(oran - 65) <= 4 ? 'is-on' : ''} title={`${birinciAd} %65 · ${ikinciAd} %35`} aria-label={`${birinciAd} yüzde 65`}>65</button>
         <button type="button" onClick={onTers} title="PDF ve Metin yerini değiştir" aria-label="PDF ve Metin yerini değiştir">
           {yon === 'yan-yana' ? <ArrowLeftRight aria-hidden /> : <ArrowUpDown aria-hidden />}
         </button>

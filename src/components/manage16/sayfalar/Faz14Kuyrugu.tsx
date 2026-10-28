@@ -15,11 +15,11 @@ export default function Faz14Kuyrugu({ git }: SayfaProps) {
   };
   return (
     <>
-      <SayfaBasligi baslik="Faz 14 kuyruğu" aciklama="Öğrencilerin incelemeye gönderdiği çıkmış sorular ve hata bildirimleri. İşleme yalnız elle başlatılır."
+      <SayfaBasligi baslik="Çıkmış inceleme kuyruğu (Faz 14)" aciklama="Öğrencilerin incelemeye gönderdiği çıkmış sorular ve hata bildirimleri. İşleme yalnız elle başlatılır."
         eylemler={<button type="button" className="m16-btn" onClick={baslat}>Elle başlat…</button>} />
       <VeriTablosu<Satir>
         kimlik="sorular-faz14" kaynak="/api/admin/sorular/faz14" aramaYeri="Soru kimliği, not ya da kişi ara…" satirKimligi={(s) => s.id}
-        satirTikla={(s) => s.soruId && git(`sorular/cikmis/${encodeURIComponent(s.soruId)}`)}
+        satirTikla={(s) => (s.soruId ? git(`sorular/cikmis/${encodeURIComponent(s.soruId)}`) : bildir('Bu kaydın bağlı bir soru kimliği yok.', 'bilgi'))} /* H258: soru kimliği yoksa geri bildirim */
         suzgecler={[{ anahtar: 'durum', etiket: 'Durum', secenekler: Object.entries(DURUM).map(([deger, [etiket]]) => ({ deger, etiket })) }]}
         sutunlar={[
           { anahtar: 'son', baslik: 'Son', sirala: true, genislik: '100px', hucre: (s) => (s.son ? zamanMetni(s.son) : '—') },

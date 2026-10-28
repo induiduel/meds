@@ -1069,6 +1069,9 @@ html[data-dock="hidden"] [data-autohide] { transform: translateY(calc(-100% - 14
 .dz-sublist li::marker { color: var(--color-ink-3); }
 .dz-ref { margin-left: 3px; font-size: 11px; font-weight: 650; color: var(--color-accent); text-decoration: none; vertical-align: 1px; }
 .dz-ref:hover { text-decoration: underline; }
+/* H208: kaynak dipnotları 20x14 px dokunma hedefiydi; görünüm aynı kalır, ::after ile alan genişler */
+.dz-ref { position: relative; display: inline-block; padding: 2px 3px; }
+.dz-ref::after { content: ""; position: absolute; inset: -8px -6px; }
 .dz-verif { display: flex; align-items: flex-start; gap: 8px; margin: 0; padding: 8px 12px; border-radius: 10px; background: var(--color-ok-soft); color: var(--color-ink-2); font-size: 12.5px; line-height: 1.5; }
 .dz-verif svg { width: 15px; height: 15px; flex-shrink: 0; margin-top: 2px; color: var(--color-ok); }
 .dz-verif b { color: var(--color-ok); font-weight: 650; }

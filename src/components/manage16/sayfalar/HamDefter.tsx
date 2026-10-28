@@ -1,5 +1,5 @@
 import React from 'react';
-import { VeriTablosu, SayfaBasligi, Rozet, AyrintiCekmecesi, Yukleniyor, Hata, useAdminSorgu, JsonGoruntuleyici, zamanMetni } from '../kit';
+import { VeriTablosu, SayfaBasligi, Rozet, AyrintiCekmecesi, Yukleniyor, Hata, useAdminSorgu, JsonGoruntuleyici, zamanMetni , bildir } from '../kit';
 import type { SayfaProps } from '../menu';
 
 /** Sorular › Ham defter — append-only soru defteri. SALT OKUNUR: bu sayfada silme/değiştirme yoktur (YZ silemez, ezemez). */
@@ -27,9 +27,10 @@ function Ayrinti({ id, kapat }: { id: string; kapat: () => void }) {
   );
 }
 
+// H257: açıklama düğmeyle çelişiyordu; indirme hatası sessiz kalmaz
 async function indir() {
   const r = await fetch('/api/admin/raw-pool/export?format=jsonl', { cache: 'no-store' });
-  if (!r.ok) return;
+  if (!r.ok) { bildir(`Dışa aktarım başarısız (${r.status})`, 'kotu'); return; }
   const url = URL.createObjectURL(await r.blob());
   const a = document.createElement('a'); a.href = url; a.download = `ham_defter_${new Date().toISOString().slice(0, 10)}.jsonl`; a.click();
   setTimeout(() => URL.revokeObjectURL(url), 2000);
@@ -38,7 +39,7 @@ async function indir() {
 export default function HamDefter({ id, git }: SayfaProps) {
   return (
     <>
-      <SayfaBasligi baslik="Ham soru defteri" aciklama="Öğrenci katkılarının değiştirilemez kaydı. Yalnız görüntülenir; dışa aktarım eski paneldeki Ham havuz bölümünde."
+      <SayfaBasligi baslik="Ham soru defteri" aciklama="Öğrenci katkılarının değiştirilemez kaydı. Yalnız görüntülenir; tamamı “JSONL indir” ile dışa aktarılır."
         eylemler={<button type="button" className="m16-btn" onClick={indir}>JSONL indir</button>} />
       <VeriTablosu<Satir>
         kimlik="sorular-ham" kaynak="/api/admin/sorular/ham" aramaYeri="Kimlik, başlık ya da ders ara…" satirKimligi={(s) => s.id} etkin={id || null}

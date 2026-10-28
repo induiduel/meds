@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Construction } from 'lucide-react';
-import { SayfaBasligi, Hata, Yukleniyor, Rozet, onayIste, zamanMetni } from '../kit';
+import { SayfaBasligi, Hata, Yukleniyor, Rozet, onayIste, zamanMetni, yazimHedefi } from '../kit';
 import type { SayfaProps } from '../menu';
 import { siteAyarYaz, useSiteAyarAdmin } from './ortak/siteAyarOrtak';
 
@@ -18,7 +18,7 @@ export default function SiteBakim(_p: SayfaProps) {
   if (!a) return <><SayfaBasligi baslik="Bakım" /><Yukleniyor /></>;
   const acik = !!a.bakim?.acik;
   const yaz = async (yeniAcik: boolean) => {
-    if (yeniAcik && !(await onayIste({ baslik: 'Bakım kipi açılsın mı?', aciklama: 'Öğrenciler siteyi kullanamaz, bakım ekranı görür. Yönetim paneli çalışmaya devam eder.', tehlikeli: true, yazilacak: 'BAKIM', onayMetni: 'Bakımı aç' }))) return;
+    if (yeniAcik && !(await onayIste({ baslik: 'Bakım kipi açılsın mı?', aciklama: `Hedef: ${yazimHedefi()}. Öğrenciler siteyi kullanamaz, bakım ekranı görür. Yönetim paneli çalışmaya devam eder.` /* H262: onay hedefi söyler */, tehlikeli: true, yazilacak: 'BAKIM', onayMetni: 'Bakımı aç' }))) return;
     setMesgul(true);
     const r = await siteAyarYaz({ bakim: { acik: yeniAcik, ...(sure.trim() ? { sure: sure.trim() } : {}), ...(mesaj.trim() ? { mesaj: mesaj.trim() } : {}) } }, yeniAcik ? 'Bakım açıldı' : 'Bakım kapatıldı');
     if (r) setVeri(r as any);

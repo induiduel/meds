@@ -1306,7 +1306,7 @@ const FactItem = memo(function FactItem({ f, d }: { f: DiseaseFact; d: DiseasePr
       {f.text && <FactText text={f.text} />}
       {f.key && <span className="dz-keytag" title="Sınavda sorulan kritik bilgi">Sınav</span>}
       {(f.refs || []).map((r) => (
-        <a key={r} className="dz-ref" href={`#disease-${d.id}-ref-${r}`} title={d.references?.[r]?.label}
+        <a key={r} className="dz-ref" href={`#disease-${d.id}-ref-${r}`} title={d.references?.[r]?.label} aria-label={`Kaynak ${r + 1}`}
           onClick={(e) => { e.preventDefault(); document.getElementById(`disease-${d.id}-ref-${r}`)?.scrollIntoView({ behavior: 'smooth', block: 'center' }); }}>[{r + 1}]</a>
       ))}
       {f.items && f.items.length > 0 && <ul className="dz-sublist">{f.items.map((it, k) => <li key={k}><FactText text={it} /></li>)}</ul>}

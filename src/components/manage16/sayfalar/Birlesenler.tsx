@@ -1,12 +1,12 @@
 import React from 'react';
 import { VeriTablosu, SayfaBasligi, Rozet, AyrintiCekmecesi, Yukleniyor, Hata, adminIstek, useAdminSorgu, onayIste, bildir, yazimHedefi, zamanMetni } from '../kit';
-import type { SayfaProps } from '../menu';
+import { manageAdres, type SayfaProps } from '../menu';
 
 /** Sorular › Birleşenler — kopya çıkmış soru grupları: asıl seç, onayla, ayır, geri al, seçili kopyayı tüm kardeşlere yaz. */
 type Satir = { id: string; asil: string; uye: number; durum: string; birebir: boolean; benzerlik: number; olusturma: string; kok: string; ders: string; kurul: string };
 const DURUM: Record<string, string> = { otomatik: 'Otomatik', onayli: 'Onaylı', ayrildi: 'Ayrıldı' };
 
-function Ayrinti({ id, kapat }: { id: string; kapat: () => void }) {
+function Ayrinti({ id, kapat, git }: { id: string; kapat: () => void; git: SayfaProps['git'] }) {
   const { veri, hata, yukleniyor, yenile } = useAdminSorgu<any>(`/api/admin/sorular/birlesen/${encodeURIComponent(id)}`);
   // H177: 'Ayır' tüm kopyaları sitede ayrı gösterir → tehlikeli + yazılı onay (AYIR) + Geri al (restore); yazılacak sözcük işleme göre
   const islem = async (govde: Record<string, unknown>, baslik: string, tehlikeli = false, yazilacak = 'YAZ', aciklama?: string, geriAl?: Record<string, unknown>) => {
@@ -31,7 +31,7 @@ function Ayrinti({ id, kapat }: { id: string; kapat: () => void }) {
           {g.ayrisik && <div className="m16-kart"><Rozet ton="uyari">Ayrışık</Rozet> Gizli bir kopya, sitede görünenden sonra düzeltilmiş; düzeltme sitede görünmüyor. O kopyada “Tüm kopyalara yaz”ı kullanın.</div>}
           {veri.sorular.map((s: any) => (
             <div key={s.id} className="m16-kart">
-              <h2>{s.id} {s.id === g.asil && <Rozet ton="vurgu">Asıl</Rozet>} {s.id === g.gorunen && <Rozet ton="iyi">Sitede</Rozet>} {s.ayrisik && <Rozet ton="uyari">Ayrışık</Rozet>} {!s.var && <Rozet ton="kotu">Kayıt yok</Rozet>}</h2>
+              {/* H266: kimlik Çıkmış ayrıntısına bağlantı */}<h2><a href={manageAdres(`sorular/cikmis/${encodeURIComponent(s.id)}`)} onClick={(e) => { e.preventDefault(); git(`sorular/cikmis/${encodeURIComponent(s.id)}`); }}>{s.id}</a> {s.id === g.asil && <Rozet ton="vurgu">Asıl</Rozet>} {s.id === g.gorunen && <Rozet ton="iyi">Sitede</Rozet>} {s.ayrisik && <Rozet ton="uyari">Ayrışık</Rozet>} {!s.var && <Rozet ton="kotu">Kayıt yok</Rozet>}</h2>
               <p>{s.stem || '—'}</p>
               <ol className="m16-liste" type="A">{s.options.map((o: string, i: number) => <li key={i}>{o}</li>)}</ol>
               <p>Cevap: <b>{s.correctAnswer || '—'}</b> · {s.discipline} · {s.year} {s.duzenleme && <small>· son düzeltme {zamanMetni(s.duzenleme.at)} ({s.duzenleme.kind})</small>}</p>
@@ -69,7 +69,7 @@ export default function Birlesenler({ id, git }: SayfaProps) {
           { anahtar: 'olusturma', baslik: 'Oluşturma', sirala: true, genislik: '104px', hucre: (s) => (s.olusturma ? zamanMetni(s.olusturma) : '—') },
         ]}
       />
-      {id && <Ayrinti id={id} kapat={() => git(`sorular/birlesen${window.location.search}`)} />}
+      {id && <Ayrinti id={id} git={git} kapat={() => git(`sorular/birlesen${window.location.search}`)} />}
     </>
   );
 }

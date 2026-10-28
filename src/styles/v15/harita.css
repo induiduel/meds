@@ -14,3 +14,7 @@
 .hr15-top { color: var(--color-ink); font-weight: 700; background: var(--color-field, transparent); }
 .hr15-bos { color: var(--color-ink-3); }
 .hr15-h.is-koyu { color: var(--color-on-accent, #fff); }
+
+/* H203: kaydırma ipucu yalnız dar ekranda */
+.hr15-kaydir { display: none; }
+@media (max-width: 700px) { .hr15-kaydir { display: block; } }

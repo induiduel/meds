@@ -338,3 +338,5 @@
 :root[data-v15='on'] .cd15-mliste .cd-aktar-liste :is(.cd-aktar-bicim, button) { min-height: 56px; flex-direction: row; justify-content: flex-start; text-align: left; padding: 8px 10px; }
 :root[data-v15='on'] .cd15-mliste .cd-aktar-duzen { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
 :root[data-v15='on'] .cd15-mliste .cd-aktar-duzen :is(button, a) { width: auto; min-height: 40px; flex-direction: row; }
+/* H206: "Oynatıcıyı küçült" 28x22 px görsel kalır, dokunma alanı ::after ile 44x44'e büyütülür */
+:root[data-v15='on'] .cd15-oyn .cd-kucult::after { content: ''; position: absolute; inset: -11px -8px; }

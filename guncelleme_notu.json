@@ -1,13 +1,12 @@
 {
  "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
- "onem": 547,
- "baslik": "Boş ekranlar ve küçük aksaklıklar düzeltildi",
+ "onem": 548,
+ "baslik": "Okunabilirlik ve küçük düzeltmeler",
  "maddeler": [
-  "Ödül kutlaması soru çözerken araya girmiyor",
-  "Boş sayfalarda ne yapabileceğin yazıyor (istatistik, sıralama, yanlışlarım, check-up)",
-  "Telefonda kurul seçimi üst çubukta",
-  "Sayaçlar ve deste sayıları tutarlı",
-  "Yönetim: daha güvenli onaylar, geri al ve temiz özet ekranı"
+  "Soru haritasında yılı belli olmayan sorular ayrı sütunda, renkleri yanıltmıyor",
+  "Sayfa başlıkları iki kez görünmüyor",
+  "Sesli derste ve hastalıklarda küçük düğmelere dokunmak kolaylaştı",
+  "Sağlık Bakanlığı kartlarında kaynak işaretleri anlaşılır"
  ],
  "eklenen": [],
  "degisen": [],

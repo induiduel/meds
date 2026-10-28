@@ -40,7 +40,7 @@ export default function Dersler({ id, git }: SayfaProps) {
           { anahtar: 'gorunurluk', etiket: 'Görünürlük', secenekler: [{ deger: 'gizli', etiket: 'Gizli' }, { deger: 'yalniz-yonetici', etiket: 'Yalnız yönetici' }] },
         ]}
         sutunlar={[
-          { anahtar: 'id', baslik: 'Kimlik', sirala: true, genislik: '76px', hucre: (x) => <a href={manageAdres(`icerik/dersler/${x.id}`)} onClick={(e) => e.preventDefault()}><code>{x.id}</code></a> },
+          { anahtar: 'id', baslik: 'Kimlik', sirala: true, genislik: '76px', hucre: (x) => <a href={manageAdres(`icerik/dersler/${x.id}`)} onClick={(e) => { /* H254: Ctrl/⌘/orta tık yeni sekmede açar, satır tıklamasına düşmez */ if (e.ctrlKey || e.metaKey || e.shiftKey || e.button === 1) { e.stopPropagation(); return; } e.preventDefault(); }}><code>{x.id}</code></a> },
           { anahtar: 'kod', baslik: 'Kod', genislik: '60px', hucre: (x) => <code>{x.kod}</code> },
           { anahtar: 'konu', baslik: 'Konu', sirala: true, genislik: 'minmax(220px,3fr)', hucre: (x) => <span className="m16-kisalt" title={x.konu}>{x.konu}</span> },
           { anahtar: 'brans', baslik: 'Branş', sirala: true, genislik: 'minmax(110px,1fr)' },
