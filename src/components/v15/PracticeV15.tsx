@@ -8,6 +8,12 @@ import { Sheet } from '../ui/Sheet';
 import { Halka } from './Halka';
 import '../../styles/v15/soru.css';
 
+/** H390: soru/şık metnindeki **vurgu** işaretleri (çıkmışta "**değildir**", Öğren klinik karar vakalarında "**Soru:**")
+ *  ham yazılıyordu; kalın yazıya çevrilir (veri değişmez) */
+const Vurgulu: React.FC<{ t?: string }> = ({ t = '' }) => (
+  <>{t.split(/(\*\*[^*]+\*\*)/g).map((p, i) => (p.length > 4 && p.startsWith('**') && p.endsWith('**') ? <strong key={i}>{p.slice(2, -2)}</strong> : <React.Fragment key={i}>{p}</React.Fragment>))}</>
+);
+
 /**
  * v15 · Soru çöz (tasarım sistemi v15 › C02 soru, C03 doğru, C04 yanlış çekmecesi, C08 sonuç). Durum PracticeMode'da;
  * bu bileşen yalnız düzendir (v12'deki PracticeV12 ile aynı sözleşme).
@@ -132,7 +138,7 @@ export const PracticeV15: React.FC<PracticeV15Props> = (p) => {
             {p.marked.has(q.id) ? <BookmarkCheck aria-hidden /> : <Bookmark aria-hidden />}
           </button>
         </div>
-        <p className="q15-kok">{rec.stem}</p>
+        <p className="q15-kok"><Vurgulu t={rec.stem} /></p>
         <div className="q15-siklar" role="radiogroup" aria-label="Şıklar">
           {rec.options.map((o, i) => {
             const k = (o.key || 'ABCDE'[i]) as string;

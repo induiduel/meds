@@ -9,7 +9,9 @@ qs = json.load(open(kok / 'src/data/pastQuestions.json'))
 say = collections.defaultdict(lambda: collections.defaultdict(collections.Counter))
 yillar = set()
 for q in qs:
-    if str(q.get('isPastExam')) not in ('True', 'true', '1') and q.get('isPastExam') is not True:
+    # H391: isPastExam alanı hiç olmayan çıkmışlar (178 soru, kaynakları çıkmış sınav PDF'leri) atlanıyordu; çıkmış sayfası
+    # onları gösteriyor. Yalnız açıkça false olan ve gizli sorular dışarıda kalır (çıkmış sayfasıyla aynı ölçüt)
+    if q.get('isPastExam') in (False, 'false', 'False', 0, '0') or q.get('hidden'):
         continue
     y = q.get('examYear') or ''
     if not y or y in ('Kategorisiz', 'Çıkmış Soru'):
