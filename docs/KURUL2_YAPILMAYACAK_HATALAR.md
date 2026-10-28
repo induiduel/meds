@@ -1540,3 +1540,8 @@ Her maddede: belirti · kök neden · Kurul 2 kuralı · kapı durumu. Kanıtlar
 - **Belirti:** Sesli ders › ⋯ › Tüm ders seçenekleri › "Video oluştur" açılınca pencere panelin arkasında kalıyordu; Esc paneli kapatıp pencereyi de götürüyordu.
 - **Kök neden:** Panel ortak `Sheet` (`.sh-sheet-root`, z-index 80), pencere ortak `Dialog` (`ms-overlay`, z-[70]); ikisi de body'ye portal, düşük z'li pencere sonra açılsa da altta kalır. Ayrıca iki bileşen Esc/Tab'ı belgede dinliyordu; önce açılan panel önce tepki verip kapanıyor, içinde çizilen pencere de gidiyordu.
 - **Çözüm/kural:** `Dialog` açılışta panel varsa z 85 (yoksa 70); `ActionMenu` açılır menü/eylem sayfası her zaman z 95 (geçici katmanlar en üstte); `Sheet`, odak panel dışında ve üstte bir `ms-overlay` varken Esc/Tab'ı bırakır. Katman kuralı: panel 80 < panel üstü pencere 85 < açılır menü 95; iç içe açılan katmanda klavye en üstteki katmanındır.
+
+## H431 — Kişi 360° › Etkinlik sekmesi hep "Olay yok" gösteriyordu (2026-10-28, kullanıcı bildirdi)
+- **Belirti:** Yönetim › Kişiler › kişi › Etkinlik sekmesi her öğrencide boş.
+- **Kök neden:** `/api/admin/people/:key/olaylar` yalnız `user_events` okuyordu (38 kayıt, hepsi uid'siz "report"); sayfa ziyaretleri ise `user_data.data.kv.medsoru_etkinlik_v1.v` (JSON metni) içinde, sekme oraya bakmıyordu.
+- **Çözüm/kural:** Uç nokta ilk sayfada ziyaretleri `kind:'page'` olay olarak birleştirir (Tümü 100, Sayfa süzgeci 300). Yeni bir olay kaynağı eklenince yönetim ekranının o kaynağı gerçekten okuduğu canlı veriyle doğrulanır.

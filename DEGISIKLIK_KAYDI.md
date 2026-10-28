@@ -1,3 +1,10 @@
+## 2026-10-28 — Öğrenci yerleşim bulguları (H230–H241)
+- H230 `dersler.css` d15-tools 4 sabit sütun → auto-fit (3 araçta sağ boşluk). H231 `v12/cards.css` kartlar başlığı telefonda tek satır + deste satırı soluk kenar.
+- H232 `rebuild.css` ≤420 px soru kartı başlığı: araç 30 px, ders hapı içerik kadar. H233/H234 `test-builder.css` "Testi oluştur" yapışkan alt bilgi, ders hapı kaydırma ipucu.
+- H235 `v15/soru.css` PC'de eylem çubuğu soru içeriğinin hemen altında. H236/H237 `baslangic.css` 4 ders kartı 4 sütun, "Nasıl çalışır?" hapı satırda.
+- H238 `cevrimdisi15.css` ≥600 px kurul çipleri sarar, toplu indir çipleri sıkı. H239–H241 `DersProgramiV15.tsx`: sesli ders bağlantısı yalnız bu yılın anahtarı + `ders_id_tam` birebir; glob anahtarı yanlış olduğu için Kurul çipleri hiç çizilmiyordu (programVar); tarihsiz dersler "Invalid Date" yerine "Tarihi belirsiz".
+- Commit/dağıtım yapılmadı.
+
 ## 2026-10-28 — Terim / kısaltma / bilgi paketi hazır sesleri (EMA GPU)
 - `scripts/sesli_anlatim/terim_ses_uret.py` (başlatıcı `patoloji_cozucu/cozucu_ses_gpu.sh`, kural 10 ikinci istisna yolu): PDF terim yardımcısı (`sesli_anlatim/terim|kisaltma`), `ders_icerik` (terim/kısaltma/bilgi) ve iki genel sözlükten **5.615 benzersiz** "başlık + 1-2 cümle" klibi → `data/terim_ses/<h2>/<h>.mp3` (226 MB, ~10,3 sa, 0 hata) + `kayit.json`. Anahtar `h = sha1("terim-1|"+başlık+"|"+tanım)[:12]` (ekrandaki metinle; `anahtar()`); yeniden çalıştırma yalnız eksik/değişeni üretir.
 - Kök neden/ders: Unicode simgeler (α, β, ⁺, ₂, ≥, µ, ²) EMA'da "unikod U artı 207A" diye okunuyordu; `konus()` okunuşu Türkçeleştirir (alfa, artı, büyük eşit, mikro, kare, yüzde, bölü, CYP 2 D 6). Başlık tek başına sentezlenince süre denetimi şaşıyordu → başlık+tanım tek paragraf. Yeni terim/bilgi kaynağı eklenirse simge içeriyorsa `konus()`'a kural eklenir.
@@ -85,3 +92,6 @@
 
 ## 2026-10-28 — Yıldızlı paragraflar (H127)
 - Bugün sayfasına gruplu yıldızlı paragraflar bölümü; sesli derste "Bu ders" kapsamı; silme mezar taşı + en yeni kazanır birleştirmesi (userKvSync, whatsappService süzgeci).
+
+## 2026-10-28 — H431 Kişi Etkinlik sekmesi
+- `peopleInsights.ts` `/olaylar` uç noktası sayfa ziyaretlerini (`kv.medsoru_etkinlik_v1`) birleştirir; kök neden ve kural `KURUL2_YAPILMAYACAK_HATALAR.md` H431. onem +1, dağıtıldı.

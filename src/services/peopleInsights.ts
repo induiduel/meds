@@ -1458,7 +1458,28 @@ export function registerPeopleInsights(app: express.Express, deps: PeopleDeps) {
         pgDb.query(`select id, kind, action, ref, label, body, link, device_id, at from user_events where ${kosul} and ($4::bigint is null or id < $4) and ($5::text is null or kind = $5) order by id desc limit $6`, [k.ids, k.emails, k.devIds, imlec, tur, boyut]),
         imlec ? Promise.resolve({ rows: [] as Any[] }) : pgDb.query(`select kind, count(*)::int as n from user_events where ${kosul} group by kind order by 2 desc`, [k.ids, k.emails, k.devIds]),
       ]);
-      res.json({ ogeler: rows, sonraki: rows.length === boyut ? rows[rows.length - 1].id : null, turler: t.rows, veritabani: true });
+      // Sayfa ziyaretleri user_events'te değil, öğrenci profilinde (kv.medsoru_etkinlik_v1) tutulur
+      let ziyaret: Any[] = [];
+      if (!imlec && (!tur || tur === 'page') && k.ids.length) {
+        try {
+          const { rows: ur } = await pgDb.query(`select data->'kv'->'medsoru_etkinlik_v1'->>'v' as v from user_data where uid = any($1) or lower(email) = any($2)`, [k.ids, k.emails]);
+          for (const u of ur) {
+            let l: any = null;
+            try { l = JSON.parse(u.v || 'null'); } catch { /* */ }
+            if (!Array.isArray(l)) continue;
+            for (const z of l) {
+              if (!z || typeof z.g !== 'number') continue;
+              ziyaret.push({ id: `z${z.g}`, kind: 'page', action: 'visit', ref: z.p, label: String(z.t || z.p || '').slice(0, 160), body: `${z.p} · ${Math.round(z.s || 0)} sn${typeof z.k === 'number' ? ` · kaydırma %${Math.round(Math.min(1, z.k) * 100)}` : ''}`, link: z.p, device_id: null, at: new Date(z.g).toISOString() });
+            }
+          }
+        } catch { /* */ }
+        ziyaret.sort((a, b) => (a.at < b.at ? 1 : -1));
+        ziyaret = ziyaret.slice(0, tur === 'page' ? 300 : 100);
+      }
+      const turler = imlec ? t.rows : [...t.rows];
+      if (!imlec && ziyaret.length) turler.push({ kind: 'page', n: ziyaret.length });
+      const ogeler = tur === 'page' ? ziyaret : [...rows, ...ziyaret].sort((a, b) => (new Date(a.at).getTime() < new Date(b.at).getTime() ? 1 : -1));
+      res.json({ ogeler, sonraki: tur !== 'page' && rows.length === boyut ? rows[rows.length - 1].id : null, turler, veritabani: true });
     } catch (e: any) {
       res.status(500).json({ error: e?.message || String(e) });
     }
