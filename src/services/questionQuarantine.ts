@@ -7,7 +7,7 @@ import fs from 'fs';
 import path from 'path';
 
 type QOpt = { key: string; text: string };
-type QFile = { sorular: Record<string, { neden: string[]; kaynak?: string; dosya?: string }>; onarim: Record<string, { stem: string; options: QOpt[] }> };
+type QFile = { sorular: Record<string, { neden: string[]; kaynak?: string; dosya?: string }>; onarim: Record<string, { stem: string; options: QOpt[] }>; cikmis_ornek?: Record<string, { gerekce?: string; kanit?: string }> };
 let cache: QFile | null = null;
 let cacheMtime = 0;
 
@@ -155,7 +155,19 @@ function applyCurriculum<T extends Record<string, any>>(item: T): T {
 /** Özgün sınav belgesinde kaynağı bulunamadığı için karantinaya alınmış soru (H84). Sesli ders çıkmış listesi de bunu süzer. */
 export function kaynakBulunamadi(id: string): boolean {
   const n = load()?.sorular?.[String(id)]?.neden;
-  return Array.isArray(n) && n.includes('kaynak_bulunamadi');
+  return Array.isArray(n) && (n.includes('kaynak_bulunamadi') || n.includes('kurul2_disi'));
+}
+
+/**
+ * Çıkmış-örnek sınıfı (2026-10-28): özgün sınav belgesinde yeri doğrulanamayan ama tıbben doğru, müfredata uygun soru.
+ * Çıkmış listesinde de örnek soru listesinde de görünür, öğrenciye "gerçekten çıkmış olmayabilir" uyarısıyla gösterilir.
+ * Sesli ders "çıkmışta soruldu" vurgusu yalnız doğrulanmış kaynağa dayandığından bu sorular oraya girmez.
+ */
+export function cikmisOrnek(id: string): boolean {
+  return Boolean(load()?.cikmis_ornek?.[String(id)]);
+}
+export function cikmisOrnekMi(id: string): boolean {
+  return kaynakBulunamadi(id) || cikmisOrnek(id);
 }
 
 export function quarantineMtime(): number {
@@ -216,6 +228,10 @@ function phase14View<T extends Record<string, any>>(item: T): T {
 }
 
 export function applyQuarantine<T extends { id?: string; stem?: string; options?: any[]; correctAnswer?: string }>(list: T[]): T[] {
+  return applyQuarantineCore(list).map((x) => (cikmisOrnek(String((x as any).id)) ? ({ ...x, kaynakSinifi: 'cikmis_ornek', updatedAt: new Date(Math.max(Date.parse((x as any).updatedAt || '') || 0, cacheMtime)).toISOString() } as T) : x));
+}
+
+function applyQuarantineCore<T extends { id?: string; stem?: string; options?: any[]; correctAnswer?: string }>(list: T[]): T[] {
   const q = load();
   if (!q) return list.map((x) => (checkSolveStatus(x as any) ? checkSolveView(x as any) : isPhase14Approved(x as any) ? phase14View(x as any) : x));
   const out: T[] = [];

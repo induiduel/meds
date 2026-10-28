@@ -1308,6 +1308,24 @@ Her maddede: belirti · kök neden · Kurul 2 kuralı · kapı durumu. Kanıtlar
 - **Kök neden:** `.m16-cip-grup` `flex-wrap: wrap`; sabit 80–96 px sütunlar "N sa M dk" biçimine dar; kit dokunmatik ölçüsü tanımlamıyordu.
 - **Çözüm/kural:** Her süzgeç grubu tek satır yatay kaydırılır (etiket sabit); süre sütunları ≥100 px, kesilen düz metin hücresi `title` taşır; `@media (pointer: coarse)` düğme/ara/girdi 40 px, çip 32 px, alan yazısı 16 px. Kısa değer (≤14 karakter) hücrede kesilmez — tarama betiği bunu denetler.
 
+## H131 — Kurul 2 çıkmışlarında başka kurul soruları ve yanlış konu etiketleri (2026-10-28, kullanıcı bildirdi)
+- **Belirti:** Kurul 2 çıkmışları arasında Kurul 1/3/5 konusu sorular (genel farmakoloji, tetanoz, Negri, halk sağlığı, pediatrik kabızlık, C8 kökü) ve komşu derse etiketlenmiş Kurul 2 soruları vardı.
+- **Kök neden:** Soru kurulu sınav belgesinin kurul etiketinden geldi, ders/konu etiketi ise içerikle doğrulanmadı; Check-Solve/Faz 14 onayı da konu uygunluğunu kanıtlamaz.
+- **Çözüm:** 574 soru ders programı + kazanım + 25-26 ders metni ile tarandı (`meds_temp/kurul2_soru_tespit/`, rapor `meds_database/derived/quarantine/kurul2_konu_tespit.csv`). 19 soru `karantina.json`'a `neden: kurul2_disi` ile yazıldı (`kaynakBulunamadi` bu nedeni de onay muafiyetinden önce uygular); 52 soruda konu/ders etiketi düzeltildi (`eskiKonu`/`eskiDers` saklı). 9 Primer Myelin önerisi 2026 programında ders olmadığı için uygulanmadı. Yedekler aynı klasörde.
+- **Önleme kuralı:** Yeni çıkmış eşlemesinde konu etiketi içerik ile doğrulanır; geri alma: karantina kaydını silmek / eskiKonu'yu geri yazmak. Açık: 86 "elle bakılmalı" soru.
+
+## H132 — Karantina listesi eskimişti; OCR ikizleri ve parça kayıtlar karantinada duruyordu (2026-10-28)
+- **Belirti:** Karantinada 513 (eski `karantina.json`) + 47 `status=quarantined` + 86 `kaynak_bulunamadi` kayıt görünüyordu; çoğu aslında düzelmişti.
+- **Kök neden:** (1) `karantina.json` 2026-10-07'den kalmaydı; 314+109 kayıt sonradan Check-Solve/Faz 14 ile onaylanmıştı, 43'ü Faz 17'de çöpe alınmıştı, 29'u kayıttan düşmüştü. (2) 53 karantina kaydı temiz bir ikizi olan OCR/site-kalıntısı kopyaydı (örn. `past-q-22_final_…-117` ↔ `q-22_final_…-117`; `ff640ee5472c` CYBE sorusunun parçası) — yanlış kümeleme/OCR bunları "bozuk soru" yaptı; bazılarında cevap bile yanlıştı (PBS sorusunda A işaretli, temiz ikizde D). (3) 84 `d3-k2-*`/türev kayıt çıkmış değil, ders notundan üretilmiş geçerli sorular; "Çıkmış Sınav / 2021-2026" etiketi yanlıştı.
+- **Çözüm:** 53 kopya `birlestirmeler.json` grubuna (tekrar arşivi) alındı, `tekrarArsivi{asil,eslesen,onceki}` ile geri alınabilir; `karantina` etiketi ve `karantina.json` girdisi kaldırıldı. Yedek: `yedek/karantina_20261028/`.
+- **Önleme:** Karantinaya almadan önce aynı soru/şık kümesine sahip sağlam kayıt aranır (stem+şık Jaccard); varsa karantina değil tekrar arşivi. Üretilmiş soru "çıkmış" etiketi taşımaz.
+
+## H133 — Kaynağı doğrulanamayan sorular gizlenerek kaybedilmişti; "Çıkmış–Örnek" sınıfı (2026-10-28)
+- **Belirti:** 104 soru (85 `kaynak_bulunamadi` + 19 `kurul2_disi`) karantinada duruyordu; çoğu tıbben doğru, müfredata uygun veya gerçek sınav sorusuydu.
+- **Kök neden:** "Özgün belgede bulunamadı" ile "yanlış/bozuk" aynı kovaya konmuştu; gerçek çıkmış olma ihtimali olan sorular da gizlendi. Kurul 2 dışı tespiti Santral Sinir Sistemi Enfeksiyonları gibi Kurul 2 derslerini kaçırdı.
+- **Çözüm:** 4 bağımsız denetçi 104 soruyu müfredat + ders notu + tekrar taramasıyla değerlendirdi: 72 `cikmis_ornek` (hem Çıkmışlar'da hem `k2-cikmis-ornek` Örnek sorular dersinde, öğrenciye "çıkmış olduğu doğrulanmadı" rozetiyle; sesli ders çıkmış chip'inden hariç), 15 serbest çıkmış, 9 tekrar arşivi, 7 karantinada (`siniflama` alanıyla gerekçeli). 5 soru ders notuna göre düzeltildi (`duzeltmeOnceki` saklı).
+- **Önleme:** Kaynağı doğrulanamayan ama doğru soru gizlenmez, `kaynakSinifi=cikmis_ornek` ile etiketlenip öğrenciye belirtilir; çıkmış vurgusu yalnız doğrulanmış kaynağa dayanır.
+
 ## H138 — Sekmede açılan görsel/JSON yanıtı site kabuğu diye önbelleğe yazılıyordu (2026-10-28, sayfa denetimi)
 - **Belirti:** Önizleme tarayıcısında `/` ve `/bugun` site yerine yalnız favicon gösterdi; bir dosya adresini doğrudan açan öğrencide yavaş ağda sonraki açılışlar site yerine o dosyayı verir.
 - **Kök neden:** `sw.js` gezinme işleyicisi 200 dönen her `navigate` yanıtını içerik türüne bakmadan `/` ve `/index.html` olarak yazıyordu; 0,4 sn içinde ağ yanıtı gelmezse kabuk diye o kayıt veriliyordu.

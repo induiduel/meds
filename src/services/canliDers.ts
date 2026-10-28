@@ -8,7 +8,7 @@ import fs from 'fs';
 import path from 'path';
 import crypto from 'crypto';
 import { metinParagraflari } from './sesliAnlatim';
-import { kaynakBulunamadi } from './questionQuarantine';
+import { cikmisOrnekMi as kaynakBulunamadi } from './questionQuarantine';
 import { registerCanliDersAra } from './canliDersAra';
 
 const KOK = path.join(process.cwd(), 'data', 'sesli_anlatim');

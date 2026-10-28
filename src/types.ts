@@ -144,6 +144,8 @@ export interface UserLeaderboardEntry {
 }
 
 export interface QuestionItem {
+  /** 'cikmis_ornek': gerçekten çıkmış olduğu doğrulanamayan, çıkmış ve örnek soru listelerinde birlikte gösterilen soru */
+  kaynakSinifi?: 'cikmis_ornek';
   id: string;
   committeeId: string;
   questionNumber: number;

@@ -397,6 +397,7 @@ const QuestionCardComponent: React.FC<QuestionCardProps> = ({
             const reps = question.reports || [];
             const solved = reps.filter((r) => r.status === 'resolved' || r.status === 'verified_correct').length;
             const flagNodes: React.ReactNode[] = [<StatusPill key="st" status={question.status} hasFragments={question.fragments.length > 0} />];
+            if ((question as any).kaynakSinifi === 'cikmis_ornek') flagNodes.unshift(<span key="co" className="cx-flag is-warn" title="Bu soru çıkmış sınav belgelerinde doğrulanamadı. Gerçekten çıkmış olabilir, ancak ders notundan türetilmiş bir örnek soru da olabilir. Hem Çıkmışlar hem Örnek sorular listesinde yer alır."><AlertTriangle aria-hidden />Çıkmış–Örnek · çıkmış olduğu doğrulanmadı</span>);
             if (isMyQuestion) flagNodes.push(<span key="me" className="cx-flag is-new">Senin katkın</span>);
             // Yalnız açık bildirim gösterilir; çözülmüş bildirim ve düzenleme tarihçesi ⋯ menüsünde.
             if (reps.length > solved) flagNodes.push(
