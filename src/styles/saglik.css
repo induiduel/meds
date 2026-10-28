@@ -310,7 +310,7 @@
 .sbk-kaynakca { padding: 14px 4px 0; border-top: 1px solid var(--color-line); margin-top: 4px; }
 .sbk-kaynakca h2 { margin: 0 0 2px; font-size: 15px; font-weight: 620; }
 .sbk-kaynakca-d > p { margin: 0 0 10px; font-size: 12.5px; }
-.sbk-kaynakca-d > ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; font-size: 13px; }
+.sbk-kaynakca-d > ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; font-size: 13px; max-width: 90ch; }
 .sbk-kaynakca-d > ol > li { display: grid; grid-template-columns: 26px minmax(0, 1fr); gap: 6px; scroll-margin-top: calc(var(--sh-top-h, 52px) + 16px); overflow-wrap: anywhere; }
 .sbk-kaynakca-d > ol > li:target { background: var(--color-warn-soft); border-radius: 6px; }
 .sbk-kaynakca-n { font-weight: 600; color: var(--color-ink-3); text-align: right; }

@@ -27,6 +27,8 @@
 .zh15-dal-b > b { flex: 1; min-width: 0; font-weight: 600; line-height: 1.3; }
 .zh15-dal-b > svg { flex: none; width: 17px; height: 17px; color: var(--color-ink-3); }
 .zh15-no { flex: none; width: 24px; height: 24px; border-radius: 50%; display: grid; place-items: center; font-size: .75rem; font-weight: 700; background: color-mix(in oklab, oklch(0.66 0.13 var(--t)) 18%, var(--color-white)); color: oklch(0.45 0.12 var(--t)); }
+/* H111s: sabit oklch(0.45) yazı koyu temada koyu zemin üstünde 1.7–2.0 kontrast veriyordu; koyu temada açık ton */
+:root.theme-dark .zh15-no { color: oklch(0.84 0.09 var(--t)); }
 .zh15-cikmis { display: inline-flex; align-items: center; gap: 2px; font-size: .75rem; font-weight: 700; color: var(--color-warn); }
 .zh15-cikmis svg { width: 14px; height: 14px; }
 .zh15-yaprak { margin: 6px 0 4px 18px; padding: 10px 12px; border-left: 2px dashed oklch(0.7 0.11 var(--t)); display: flex; flex-direction: column; gap: 8px; }

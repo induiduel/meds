@@ -11,7 +11,6 @@ import { ADMIN_EMAIL, getLocalAdminSession } from './auth';
 import { attachModeratorToken, isModeratorMode } from './moderatorSession';
 import { defaultApiBaseForThisHost, panelApiBase, PANEL_ON_ORACLE_AT_BOOT } from '../config/deployment';
 import { clientCache } from './clientCache';
-import { BUNDLED_SCRIPTS, BUNDLED_PIPELINES } from '../data/bundledScripts';
 import {
   clusterDraftsForCommittee,
   mergeDrafts,
@@ -4177,6 +4176,8 @@ export const ApiService = {
   }> {
     try {
       const res = await safeJsonFetch<any>('/api/admin/scripts/list');
+      // Yedek katalog yalnız yönetim betikleri ekranında gerekir: ana pakete gömülmesin (H111d).
+      const { BUNDLED_PIPELINES } = await import('../data/bundledScripts');
       if (res.ok && Array.isArray(res.data?.scripts) && res.data.scripts.length > 0) {
         return {
           success: true,
@@ -4188,6 +4189,7 @@ export const ApiService = {
     } catch (_) {}
 
     // Fallback: Always return guaranteed bundled catalog
+    const { BUNDLED_SCRIPTS, BUNDLED_PIPELINES } = await import('../data/bundledScripts');
     return {
       success: true,
       scripts: BUNDLED_SCRIPTS,

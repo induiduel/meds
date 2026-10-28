@@ -1,11 +1,13 @@
 {
  "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
- "onem": 527,
- "baslik": "Çevrimdışı, Hücrem ve Sohbet yenilendi",
+ "onem": 528,
+ "baslik": "Site geneli düzeltmeler",
  "maddeler": [
-  "Çevrimdışı sayfası baştan: durum kartı, İndirilenler, İndirilebilir, ayarlar",
-  "Sohbetler: bilgisayarda yan yana liste ve sohbet, gruplu balonlar, gün ayırıcıları",
-  "Hücrem: tam boy evrim ekranı, düzenli kartlar, 3B sahne görünmezken durur"
+  "Esc ile tam ekrandan çıkış her durumda çalışıyor",
+  "Çıkmış sorular uzun listelerde akıcı, odak modu hızlı",
+  "Okunabilirlik: kontrast, satır uzunluğu ve dokunma alanları düzeltildi",
+  "Gereksiz büyük veri indirmeleri ve konsol uyarısı giderildi",
+  "Sesli derste telefon başlığı ve hatalı adres mesajı düzeltildi"
  ],
  "eklenen": [],
  "degisen": [],

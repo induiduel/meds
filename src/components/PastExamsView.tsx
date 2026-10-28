@@ -340,6 +340,7 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
   const mod = v12 ? modSecim : 'liste';
   const etkinGor = mod === 'liste' || mod === 'panel' ? gorunum : 'kart';
   const RICH_STEP = 20;
+  const RICH_WINDOW = 60;
   const [richLimit, setRichLimit] = useState(RICH_STEP);
   // Çözüm durumu (studyStore: bu cihazdaki cevaplar) ve kaydedilen sorular
   const [attempts, setAttempts] = useState<Record<string, AttemptRecord>>(() => getProgress());
@@ -1349,7 +1350,9 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
   }, [mergedTarget]);
   const paginatedQuestions = useMemo(() => {
     if (sharedId) return questions.filter((q) => String(q.id) === sharedId);
-    if (etkinGor === 'kart') return filteredQuestions.slice(0, richLimit);
+    // H111u: Kart görünümü kaydırdıkça sınırsız büyüyordu (300 kartta 34.000 DOM düğümü); yalnız son RICH_WINDOW kart
+    // çizilir, üstte kalanlar düşer (tarayıcının kaydırma çapası görünen kartı yerinde tutar), "Önceki soruları göster" geri getirir
+    if (etkinGor === 'kart') return filteredQuestions.slice(Math.max(0, richLimit - RICH_WINDOW), richLimit);
     const start = (currentPage - 1) * itemsPerPage;
     return filteredQuestions.slice(start, start + itemsPerPage);
   }, [filteredQuestions, currentPage, sharedId, questions, etkinGor, richLimit]);
@@ -1987,7 +1990,7 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
     };
     return {
       total: filteredQuestions.length,
-      shown: paginatedQuestions.length,
+      shown: etkinGor === 'kart' && !sharedId ? Math.min(richLimit, filteredQuestions.length) : paginatedQuestions.length,
       scope: selectedCommittee !== 'all' ? committeeShort(selectedCommittee) : undefined,
       search: { value: searchQuery, onChange: (v) => { setSearchQuery(v); resetPage(); } },
       suggest: {
@@ -2429,12 +2432,19 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
               <button type="button" onClick={showAllQuestions} className="ms-btn is-ghost is-sm">Tüm sorular <ChevronRight /></button>
             </div>
           )}
+          {etkinGor === 'kart' && !sharedId && (mod === 'liste' || mod === 'panel') && richLimit > RICH_WINDOW && (
+            <div className="cm15-daha">
+              <button type="button" className="c12-btn sm" onClick={() => setRichLimit((l) => Math.max(RICH_WINDOW, l - RICH_STEP))}>
+                Önceki soruları göster ({(richLimit - RICH_WINDOW).toLocaleString('tr-TR')})
+              </button>
+            </div>
+          )}
           {mod === 'liste' || mod === 'panel' || sharedId ? paginatedQuestions.map(renderQuestion) : (
             <CikmisModGorunum mod={mod === 'tablo' ? 'tablo' : 'odak'} sorular={filteredQuestions} attempts={attempts} savedIds={savedIds} onToggleSave={toggleSave} render={renderQuestion} limit={richLimit} onMore={() => setRichLimit((l) => l + RICH_STEP)} />
           )}
 
           {etkinGor === 'kart' && !sharedId && (mod === 'liste' || mod === 'panel') && (
-            <LoadMoreSentinel remaining={filteredQuestions.length - paginatedQuestions.length} onMore={() => setRichLimit((l) => l + RICH_STEP)} shown={paginatedQuestions.length} total={filteredQuestions.length} />
+            <LoadMoreSentinel remaining={Math.max(0, filteredQuestions.length - richLimit)} onMore={() => setRichLimit((l) => l + RICH_STEP)} shown={Math.min(richLimit, filteredQuestions.length)} total={filteredQuestions.length} />
           )}
           {etkinGor === 'kompakt' && totalPages > 1 && !sharedId && (
             <nav aria-label="Sayfalar" className="cx-pager">

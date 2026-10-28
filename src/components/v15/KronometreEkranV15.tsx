@@ -21,7 +21,7 @@ function Anahtar({ acik, onDegis, etiket }: { acik: boolean; onDegis: (v: boolea
   return (
     <label className="kre-sat">
       <span>{etiket}</span>
-      <button type="button" role="switch" aria-checked={acik} className={`kre-tgl${acik ? ' is-on' : ''}`} onClick={() => onDegis(!acik)}><i /></button>
+      <button type="button" role="switch" aria-checked={acik} aria-label={etiket} className={`kre-tgl${acik ? ' is-on' : ''}`} onClick={() => onDegis(!acik)}><i /></button>
     </label>
   );
 }

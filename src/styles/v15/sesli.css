@@ -28,7 +28,8 @@
   @media (max-width: 767px) {
     & .cd15-gor { display: none; }
     & .cd15-dongu { display: grid; }
-    & .cd15-ad { font-size: 17px; line-height: 1.25; }
+    /* H111q: telefonda 4 simge düğmesi başlığa ~75 px bırakıyordu ("Tümör …"); başlık iki satıra sarılır */
+    & .cd15-ad { font-size: 16px; line-height: 1.2; white-space: normal; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow-wrap: anywhere; }
   }
   & .cd-ders:not(.is-tam) .cd-p { font-size: clamp(14px, calc(var(--cd-tam-yazi, 20px) - 2px), 38px); }
 
@@ -43,7 +44,10 @@
   & .cd15-pb > svg, & .cd-ders .cd-pdf-bar .cd-cik-btn > svg { width: 15px; height: 15px; }
   & .cd-ders .cd-pdf-bar .cd-ib { height: 32px; min-width: 32px; border-radius: var(--v15-r-pill); }
   & .cd-ders .cd-pdf-zoom { font: 600 12px/1 var(--font-sans); font-variant-numeric: tabular-nums; color: var(--color-ink-2); }
-  @media (max-width: 599px) { & .cd15-pb-l { display: none; } }
+  /* H111q: Kalem düğmesi dar şeritte flex-shrink ile 25 px'e eziliyor, simgesi boş daire görünüyordu; dosya adı 18 px'e inip "1…" kalıyordu */
+  & .cd15-pb { flex: none; min-width: 32px; justify-content: center; }
+  @media (max-width: 599px) { & .cd15-pb-l { display: none; } & .cd15-pb { padding: 0 8px; } }
+  @container (max-width: 460px) { & .cd-ders .cd-pdf-bar .cd-pdf-ad { display: none; } }
 
   /* ── Çıkmış çipi: gelişte iki nabız, sonra sabit kırmızı nokta ── */
   & .cd-cikc { border: 1.5px solid var(--color-warn); color: var(--color-warn); background: var(--color-white); font: 700 11.5px/1 var(--font-sans);

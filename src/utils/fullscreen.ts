@@ -61,6 +61,30 @@ function installRouteChangeTracker(): void {
 }
 installRouteChangeTracker();
 
+/**
+ * Esc ile uygulama tam ekranından çıkış (H111c). Native tam ekran açıkken Esc'i tarayıcı karşılar ve
+ * `fullscreenchange` sınıfı kaldırır; ama dokunmatik/klavyeli cihazlarda (iPad + klavye, dokunmatik dizüstü)
+ * ya da tarayıcı isteği reddettiğinde yalnız `html.is-app-fullscreen` açık kalıyordu ve Esc hiçbir şey yapmıyordu.
+ * Pencere, menü ya da sayfa içi tam ekran katmanı açıksa Esc önce onlarındır; dokunulmaz.
+ */
+let escInstalled = false;
+function installEscExit(): void {
+  if (typeof window === 'undefined' || escInstalled) return;
+  escInstalled = true;
+  window.addEventListener('keydown', (e) => {
+    if (e.key !== 'Escape' || e.defaultPrevented || e.repeat) return;
+    const root = document.documentElement;
+    if (!root.classList.contains(APP_FS_CLASS) || isNativeFullscreen()) return;
+    const t = e.target as HTMLElement | null;
+    if (t && (t.isContentEditable || /^(INPUT|TEXTAREA|SELECT)$/.test(t.tagName))) return;
+    if (root.classList.contains('cd-tam-ekran') || root.classList.contains('tam-katman')) return;
+    if (document.querySelector('[role="dialog"], [aria-modal="true"], .ms-overlay, .pa.is-tam, .sc.is-tam, .dpv.is-max, .ls-root, .r12-root.is-immersive')) return;
+    root.classList.remove(APP_FS_CLASS);
+    notifyFullscreenChange();
+  });
+}
+installEscExit();
+
 export function isRouteChanging(thresholdMs = 1500): boolean {
   return Date.now() - lastRouteChangeAt < thresholdMs;
 }

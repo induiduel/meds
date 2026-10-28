@@ -23,7 +23,7 @@
 }
 .cv-kart-bas { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
 .cv-kart h2 { font: 650 16px/1.25 var(--font-sans); letter-spacing: -.01em; }
-.cv-not { font-size: 13.5px; line-height: 1.5; color: var(--color-ink-2); }
+.cv-not { font-size: 14px; line-height: 1.55; color: var(--color-ink-2); max-width: 72ch; }
 
 /* düğmeler */
 .cv-btn {

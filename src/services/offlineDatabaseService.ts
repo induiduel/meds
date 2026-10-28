@@ -12,7 +12,7 @@
 
 import { QuestionItem, Committee } from '../types';
 import { pastQuestionsCache } from './pastQuestionsCache';
-import { loadDeck, DECK_CATALOG, loadDeckCatalog } from '../data/deckStore';
+import { loadDeck, DECK_CATALOG, loadDeckCatalog, isDeckCatalogLoaded } from '../data/deckStore';
 import { pwaService } from './pwaService';
 import { toast } from '../components/ui/Toast';
 import { defaultApiBaseForThisHost } from '../config/deployment';
@@ -332,7 +332,9 @@ class OfflineDatabaseService {
       pastQuestionsCount: pqCount,
       poolQuestionsCount: poolCount,
       committeesCount: commCount,
-      decksCount: decksCount || (await loadDeckCatalog().catch(() => DECK_CATALOG)).length,
+      // Açılışta her sayfada çağrılır: yalnız sayı için ~600 KB deste kataloğunu indirip ayrıştırmak yok (H111f).
+      // Katalog zaten yüklüyse onun uzunluğu, değilse son kayıtlı istatistik.
+      decksCount: decksCount || (isDeckCatalogLoaded() ? DECK_CATALOG.length : savedStats?.decksCount || 0),
       summariesCount: savedStats?.summariesCount || 66,
       glossaryCount: glossaryCount || (savedStats?.glossaryCount || 0),
       flashcardsCount: flashcardsCount || (savedStats?.flashcardsCount || 0),

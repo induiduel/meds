@@ -76,7 +76,7 @@ export default function SinavTakvimiV15() {
       <section className="tk15-hat v15-card">
         <Bell aria-hidden />
         <div><b>Sınav öncesi pratik soruları gönder</b><span className="v15-cap">5, 3 ve 1 gün önce Bildirimler'e soru çözme hatırlatması düşer</span></div>
-        <button type="button" role="switch" aria-checked={hatirlat} className={`kre-tgl${hatirlat ? ' is-on' : ''}`} onClick={() => { setHatirlat0(!hatirlat); hatirlatYaz(!hatirlat); }}><i /></button>
+        <button type="button" role="switch" aria-checked={hatirlat} aria-label="Sınav öncesi pratik soruları gönder" className={`kre-tgl${hatirlat ? ' is-on' : ''}`} onClick={() => { setHatirlat0(!hatirlat); hatirlatYaz(!hatirlat); }}><i /></button>
       </section>
 
       <section aria-label="Sınavlarım">

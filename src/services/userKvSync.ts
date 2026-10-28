@@ -191,16 +191,22 @@ function stamp(key: string) {
   writeObj(DIRTY_KEY, dirty);
 }
 
+/** Dinleyicileri mikro görevde çağır: localStorage yazımı bir bileşenin render'ı sırasında (useState başlatıcısı vb.)
+ *  olabilir; dinleyici setState yaparsa React "Cannot update a component while rendering a different component" verir (H111e). */
+function bildir(immediate: boolean) {
+  queueMicrotask(() => changeListeners.forEach((fn) => fn(immediate)));
+}
+
 function onWrite(key: string) {
   if (applying) return;
   if (isProfileKey(key)) {
     stamp(key);
     const immediate = !QUIET_PROFILE.test(key);
-    changeListeners.forEach((fn) => fn(immediate));
+    bildir(immediate);
   } else if (BUNDLE_KEYS.has(key)) {
-    changeListeners.forEach((fn) => fn(true));
+    bildir(true);
   } else if (QUIET_KEYS.has(key)) {
-    changeListeners.forEach((fn) => fn(false));
+    bildir(false);
   }
 }
 

@@ -45,22 +45,22 @@ export default function TamEkranAyarV15() {
       <section className="v15-card kre-kart">
         <label className="kre-sat">
           <span>Uygulamayı tam ekran aç</span>
-          <button type="button" role="switch" aria-checked={tam} className={`kre-tgl${tam ? ' is-on' : ''}`} onClick={() => tamDegis()}><i /></button>
+          <button type="button" role="switch" aria-checked={tam} aria-label="Uygulamayı tam ekran aç" className={`kre-tgl${tam ? ' is-on' : ''}`} onClick={() => tamDegis()}><i /></button>
         </label>
         <p className="kre-not">Tarayıcı çubuğu ve sistem çubukları gizlenir. Ana ekrana eklediğin uygulamada zaten tam ekran açılır.</p>
         <label className="kre-sat">
           <span>Sesli derste ekran kararmasın</span>
-          <button type="button" role="switch" aria-checked={uyanik} disabled={!destek} className={`kre-tgl${uyanik ? ' is-on' : ''}`} onClick={() => { setUyanik(!uyanik); ekranUyanikYaz(!uyanik); }}><i /></button>
+          <button type="button" role="switch" aria-checked={uyanik} aria-label="Sesli derste ekran kararmasın" disabled={!destek} className={`kre-tgl${uyanik ? ' is-on' : ''}`} onClick={() => { setUyanik(!uyanik); ekranUyanikYaz(!uyanik); }}><i /></button>
         </label>
         {!destek && <p className="kre-not">Bu tarayıcı ekranı açık tutmayı desteklemiyor.</p>}
         <label className="kre-sat">
           <span>Ders açılınca kendiliğinden tam ekran</span>
-          <button type="button" role="switch" aria-checked={otoTam} className={`kre-tgl${otoTam ? ' is-on' : ''}`} onClick={() => setOtoTam(!otoTam)}><i /></button>
+          <button type="button" role="switch" aria-checked={otoTam} aria-label="Ders açılınca kendiliğinden tam ekran" className={`kre-tgl${otoTam ? ' is-on' : ''}`} onClick={() => setOtoTam(!otoTam)}><i /></button>
         </label>
         <p className="kre-not">Tarayıcılar tam ekranı yalnız bir dokunuşla izin verir: sesli ders açıldıktan sonraki ilk dokunuşunda tam ekrana geçer.</p>
         <label className="kre-sat">
           <span>Yatayda yan yana</span>
-          <button type="button" role="switch" aria-checked={yatayYan} className={`kre-tgl${yatayYan ? ' is-on' : ''}`} onClick={() => setYatayYan(!yatayYan)}><i /></button>
+          <button type="button" role="switch" aria-checked={yatayYan} aria-label="Yatayda yan yana" className={`kre-tgl${yatayYan ? ' is-on' : ''}`} onClick={() => setYatayYan(!yatayYan)}><i /></button>
         </label>
         <p className="kre-not">Telefonu ya da tableti yatay tuttuğunda sesli derste slayt ve metin yan yana görünür.</p>
       </section>

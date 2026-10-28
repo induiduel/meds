@@ -518,7 +518,10 @@ export default function CanliDersDers({ dersKey, kamp }: { dersKey: string; kamp
       <div className="cd-root">
         {kamp ? kamp.geri : <GeriBag />}
         <div className="cd-bos">
-          <p>{kamp && /sesi henüz yok|bulunamadı/.test(hata) ? 'Sesli ders hazırlanıyor; birazdan burada olacak. Bu sırada diğer bölümleri kullanabilirsin.' : hata}</p>
+          <p>{kamp && /sesi henüz yok|bulunamadı/.test(hata)
+            ? 'Sesli ders hazırlanıyor; birazdan burada olacak. Bu sırada diğer bölümleri kullanabilirsin.'
+            // sunucunun iç hata kodu ("geçersiz ders", "bulunamadı") öğrenciye ham gösterilmez (H111p)
+            : /geçersiz ders|bulunamadı|404|400/i.test(hata) ? 'Bu adreste bir sesli ders yok. Bağlantı eski ya da hatalı olabilir; listeden dersi seçebilirsin.' : hata}</p>
           {!kamp && <button type="button" className="cd-btn is-ana" onClick={() => navigateTo(pathFor('canli_ders'))}>Tüm sesli derslere dön</button>}
         </div>
       </div>

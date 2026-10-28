@@ -228,7 +228,7 @@ const ListenButton: React.FC<{ step: LessonStep; deckId?: string }> = ({ step, d
   return (
     <button
       type="button"
-      className={`ls-tag ${on ? 'is-accent' : 'is-plain'}`}
+      className={`ls-tag ls-dinle ${on ? 'is-accent' : 'is-plain'}`}
       onClick={() => (on ? stopSpeaking() : deckId ? speakOgrenStep(deckId, step.number, text()) : speak(text()))}
       aria-pressed={on}
       title={on ? 'Okumayı durdur' : 'Bu adımı sesli dinle (EMA)'}

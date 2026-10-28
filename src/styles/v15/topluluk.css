@@ -1,7 +1,7 @@
 /* v15 · Topluluk (ToplulukV15) — kanal listesi + sohbet; renkler palet tokenından */
 .tp15 { container-type: inline-size; display: flex; flex-direction: column; gap: 10px; max-width: 760px; width: 100%; margin-inline: auto; }
 .tp15-h { margin: 6px 2px 0; }
-.tp15-kural { margin: 6px 2px; line-height: 1.45; }
+.tp15-kural { margin: 6px 2px; line-height: 1.45; max-width: 75ch; }
 .tp15-uyari { margin: 0; padding: 10px 14px; background: var(--color-warn-soft); color: var(--color-ink); font-size: .88rem; }
 /* ── Ortak denetimler ── */
 .tp15 button.b15-row { width: 100%; text-align: left; border: 0; background: none; font: inherit; color: inherit; cursor: pointer; }

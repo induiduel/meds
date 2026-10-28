@@ -69,11 +69,14 @@ export default function SoruHaritasiV15() {
                   <th scope="row" className="hr15-d">{s.d}</th>
                   {yillar.map((y) => {
                     const n = s.r[y] || 0;
-                    const yog = Math.round(12 + (n / enCok) ** 0.6 * 78);
+                    // H111r: 12–90 doğrusal ölçekte %40–65 arası hücrelerde ne koyu ne açık yazı AA geçiyordu (2.6–4.0);
+                    // ölçek iki banda ayrılır: açık bant %10–40 (koyu yazı), koyu bant %90–100 (açık yazı; vurgu %85 altında beyaz yazı 4.5 altına düşer), ara ton kullanılmaz
+                    const t = (n / enCok) ** 0.6;
+                    const yog = Math.round(t < 0.5 ? 10 + t * 60 : 90 + (t - 0.5) * 20);
                     return (
                       <td key={y}>
                         {n ? (
-                          <a href={hucreYol(s.d, y)} onClick={linkClick(() => navigateTo(hucreYol(s.d, y)))} className={`hr15-h${yog > 55 ? ' is-koyu' : ''}`}
+                          <a href={hucreYol(s.d, y)} onClick={linkClick(() => navigateTo(hucreYol(s.d, y)))} className={`hr15-h${yog >= 90 ? ' is-koyu' : ''}`}
                             style={{ '--y': `${yog}%` } as React.CSSProperties}
                             aria-label={`${s.d}, ${y}: ${n} soru`}>{n}</a>
                         ) : <span className="hr15-bos" aria-hidden>·</span>}

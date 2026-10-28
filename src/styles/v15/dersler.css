@@ -32,7 +32,9 @@
 .d15-tool:hover { border-color: var(--color-accent); }
 
 .d15-sec-h, .dd15-h { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 10px; }
-.d15-more { font: 650 13.5px/1 var(--font-sans); color: var(--color-accent); text-decoration: none; }
+.d15-more { font: 650 13.5px/1 var(--font-sans); color: var(--color-accent); text-decoration: none;
+  /* H111t: 75×14 px dokunma hedefiydi; başlık satırını büyütmeden ≥40 px dolgu + negatif kenar boşluğu */
+  display: inline-flex; align-items: center; min-height: 40px; padding: 0 8px; margin: -13px -8px; }
 .d15-devam-l { display: grid; grid-template-columns: minmax(0, 1fr); gap: 12px; }
 .d15-dk { display: flex; flex-direction: column; gap: 8px; padding: 14px 16px; color: inherit; text-decoration: none; }
 .d15-dk:hover { border-color: var(--color-accent); }

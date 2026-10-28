@@ -13,7 +13,8 @@ const konum = (v: number) => ((v - MIN) / (MAX - MIN)) * 100;
 
 export default function IzlemeHizi({ kisa }: { kisa?: boolean }) {
   const secili = useIzlemeHizi();
-  const v = secili ?? 1.5;
+  // Seçim yokken kalan süre 1× hesaplanır; imleç de 1×'te durur (metinle tutarlı, H111g)
+  const v = secili ?? 1;
   const yuzde = konum(v);
   return (
     <div className={`ih${secili == null ? ' is-bos' : ''}`}>

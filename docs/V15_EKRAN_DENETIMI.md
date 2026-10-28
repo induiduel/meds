@@ -37,7 +37,7 @@ Not: YOK sayısının 6'sı tasarım belgesi ekranıdır (A09, K08, P01, W03, X0
 | A02 | ana (Bugün) | today → today/TodayView.tsx (v15 dalı), today.css | KURULDU | Seri·Hücre·Kronometre şeridi, Oyna |
 | A03 | menu | ShellV15 › TabBarV15 Menü | KURULDU | Oyunlar bölümü + bölüm açıklamaları |
 | A04 | kurul | Merkezlerdeki "Kurul seç" (DerslerMerkezV15 vb.) | KURULDU | KurulSecV15: Bitti/Aktif/tarih + Takvimi aç (4 merkez) |
-| A05 | arama | search → SearchView (⌘K) | KISMİ | SearchPalette (⌘K) komut paleti + SearchView; "Sesli derste geçen yerler" (zaman damgalı) bölümü bulunamadı |
+| A05 | arama | search → SearchView (⌘K) | VAR | SesliYerler: ⌘K ve arama sayfasında sesli derste geçen yerler (zaman damgalı, /api/canli-ders/ara) |
 | A06 | bildirim | — | VAR | v15/BildirimlerV15.tsx (/bildirimler): Tümü/Ders/Soru/Sistem sekmeleri; düello daveti türü yok |
 | A07 | guncelle | UpdatePrompt + shell.css hap bildirim | VAR |  |
 | A08 | durumlar | v15-skel, sayfa içi boş/hata metinleri | KURULDU | .b15-bos ortak durum kartı (simge + metin, hata + Yeniden dene) |
@@ -139,7 +139,7 @@ Not: YOK sayısının 6'sı tasarım belgesi ekranıdır (A09, K08, P01, W03, X0
 | E01 | kmbListe | kmb_asistan → kmb/KmbAsistan.tsx | VAR | kmb.css 2026-10-27 token tabanlı yeniden yazıldı (başka oturum); kart ızgarası + durum |
 | E02 | kmbOgret | KmbAsistan öğret adımı | VAR | aynı stil katmanı; öğret adımı sahne + ses |
 | E03 | kmbVaka | KmbAsistan vaka sınavı | VAR | aynı; vaka sınavı + yeni Etiketleri yerleştir/Değerlendirme |
-| E04 | kmbCizim | — | KISMİ | KmbAsistan Yerlestir: etiket seçip sahnede yerine dokunma; sürükle-bırak yok |
+| E04 | kmbCizim | — | VAR | KmbAsistan: sürükle-bırak + seç-dokun |
 | E05 | kmbKontrol | — | VAR | KmbAsistan: kontrol listesi Yaptım/Atladım, n/N ve %80 Geçti/Tekrar çalış |
 
 ## F · Oyunlar
@@ -164,7 +164,7 @@ Not: YOK sayısının 6'sı tasarım belgesi ekranıdır (A09, K08, P01, W03, X0
 |---|---|---|---|---|
 | G01 | kaynaklar | hub_kaynaklar → v15/KaynaklarMerkezV15.tsx | VAR | KaynaklarMerkezV15 arama + önerilen + satırlar |
 | G02 | saglik | health_ministry → SaglikView + saglik.css | VAR | bölüm seçici (aşı, tarama, yenidoğan, Karabük…) + ders bağları |
-| G03 | asistan | ai_chat → LocalAiChatView | KISMİ | Sohbet sayfası var (v15 dışı); eksik: v15 kabuğu, "Kaynaklı yanıt · ders notlarından" alt başlığı, yanıt altında kaynak chip'i (ders · dakika · PDF sayfası); sayfa hâlâ "Yerel GPU (RTX 4060)/gemma3" sağlayıcısı gösteriyor (kural 10/20) |
+| G03 | asistan | ai_chat → LocalAiChatView | VAR | v15 başlık, kaynak çipleri (toRefSource), yerel GPU seçeneği kaldırıldı |
 | G04 | profil | settings → ProfileV12 (v15 dalı) + profil.css | KURULDU | Seri/Soru/Biten konu/Rozet + haftalık etkinlik çubukları (ProfilOzetV15) |
 | G05 | basarim | basarimlar | VAR | BasarimView: hedefler, rozet seviyeleri, ATP, rozet ayrıntısı (M11) |
 | G06 | ayarlar | ProfileV12 #hash bölümleri | VAR | Profil bölümleri ayrı ekran; paneller v15 renkleriyle (v12 yapısı) |
@@ -179,8 +179,8 @@ Not: YOK sayısının 6'sı tasarım belgesi ekranıdır (A09, K08, P01, W03, X0
 | H02 | dlgSil | shell.css › Katmanlar | VAR |  |
 | H03 | dlgBilgi | shell.css › Katmanlar | VAR |  |
 | H04 | dlgForm | shell.css › Katmanlar | VAR | DOĞRULANMADI: form alanları |
-| H05 | tur1 | canliDers/CanliDersTur.tsx, onboarding/LearnTour.tsx | KISMİ | Koç kartı mekaniği var (n/toplam, kapat, önceki/sonraki) ama yalnız sesli derste/Öğren'de; eksik: Bugün ekranında halkayı anlatan tur (Tur 1/4, Atla, Sonraki) |
-| H06 | tur2 | canliDers/CanliDersTur.tsx | KISMİ | Eksik: "cümleye uzun bas → spot/not/kart yap, PDF yeri işaretlenir" turu ve arkasındaki uzun basma eylemi (kodda yok) |
+| H05 | tur1 | canliDers/CanliDersTur.tsx, onboarding/LearnTour.tsx | VAR | Bugün 4 adımlı koç turu |
+| H06 | tur2 | canliDers/CanliDersTur.tsx | VAR | cdUzunBas: uzun basma → seçim çubuğu + 2 adımlı tur |
 | H07 | acilir | shell.css | VAR |  |
 | H08 | cekmece | shell.css (bulanık perde, 22–24 px köşe) | VAR |  |
 | H09 | altCekmece | shell.css | VAR |  |
@@ -224,7 +224,7 @@ Not: YOK sayısının 6'sı tasarım belgesi ekranıdır (A09, K08, P01, W03, X0
 | K04 | notEditor | NotlarimV15 | KURULDU | madde listesi düğmesi + Enter ile yeni madde; ses damgası (B11) var |
 | K05 | notPaylas | — | VAR | NotPaylasV15 + notPaylas.ts |
 | K06 | paylasilan | — | VAR | /notlarim?gorunum=paylasilan |
-| K07 | yaziAyar | Profil › Görünüm/Erişilebilirlik (v12/ProfileV12.tsx), sesli ders okuma (canliDers/CdV15.tsx) | KISMİ | Okuma yazısı, arayüz ölçeği, geniş satır/harf aralığı anahtarı, sesli derste boyut/satır aralığı/zemin var; eksik: canlı önizleme metni, kalınlık (400/500/600), hizalama (Sola/İki yana), harf aralığı kaydırıcısı, vurgu (işaretleyici) rengi seçimi tek ekranda |
+| K07 | yaziAyar | Profil › Görünüm/Erişilebilirlik (v12/ProfileV12.tsx), sesli ders okuma (canliDers/CdV15.tsx) | VAR | YaziAyarV15 (/ayarlar#yazi): önizleme, kalınlık, hizalama, aralıklar, vurgu rengi |
 | K08 | yaziOrnek | — (tasarım belgesi) | YOK | Kod karşılığı gerekmez |
 
 ## L · Topluluk ve listeler
@@ -283,10 +283,10 @@ Not: YOK sayısının 6'sı tasarım belgesi ekranıdır (A09, K08, P01, W03, X0
 | O04 | pdfOkuyucu | Öğren ders PDF'i (PDF.js) | VAR | DeckPdfViewer/PdfDocView: sayfa gezinme, yakınlaştırma, tema, tam ekran |
 | O05 | pdfIzgara | — | VAR | DeckPdfViewer: sayfa ızgarası, Tümü/İşaretli, sayfa işaretleme |
 | O06 | pdfArama | — | VAR | DeckPdfViewer: arama, eşleşme listesi + parça metin |
-| O07 | pdfIkili | — | KISMİ | DeckPdfViewer: aynı PDF'te iki sayfa yan yana; başka dersle karşılaştırma yok |
+| O07 | pdfIkili | — | VAR | DeckPdfViewer: ikinci bölmeye başka dersin PDF'i |
 | O08 | tamEkranOgren | ShellV15 Tam ekran | KURULDU | tam ekran + tam-katman |
 | O09 | tamEkranSoru | ShellV15 Tam ekran | KURULDU | tam ekran + tam-katman |
-| O10 | tamEkranAyar | — | KISMİ | v15/TamEkranAyarV15.tsx: uygulama tam ekranı, Wake Lock, kısayollar; "kendiliğinden tam ekran" ve "yatayda yan yana" yok |
+| O10 | tamEkranAyar | — | VAR | kendiliğinden tam ekran + yatayda yan yana (dersEkranTercih) |
 
 ## P · İkonlar
 
@@ -399,8 +399,8 @@ Not: YOK sayısının 6'sı tasarım belgesi ekranıdır (A09, K08, P01, W03, X0
 | Z01 | ekranHaritasi | — (tasarım belgesi) | YOK | Kod karşılığı gerekmez |
 | Z02 | arac_dersler | DerslerMerkezV15 Diğer araçlar çekmecesi | VAR |  |
 | Z03 | arac_soruMerkez | SorularMerkezV15 "Araçlar" | KURULDU | Soru çöz araçlar ızgarası |
-| Z04 | arac_kamplar | KamplarMerkezV15 | KISMİ | Tasarımdaki "Planlama" listesi: Sınav takvimi ve Sınav planı (yol haritası) var; eksik: Olası sorular satırı (rota var, merkezde yok), Sınav ağırlığı kabarcık haritası (yok) |
-| Z05 | arac_kaynaklar | KaynaklarMerkezV15 | KISMİ | Tasarımdaki "Topluluk ve belgeler" listesinin hiçbir satırı merkezde yok: Sohbet (topluluk), Paylaşılan notlar, Oluşturduğum PDF'ler, Kurul takvimi; sayfada yalnız başvuru kartları |
+| Z04 | arac_kamplar | KamplarMerkezV15 | VAR | Planlama: Olası sorular + Sınav ağırlığı kabarcık haritası |
+| Z05 | arac_kaynaklar | KaynaklarMerkezV15 | VAR | Topluluk ve belgeler: Sohbet, Paylaşılan notlar, Oluşturduğum PDF'ler, Kurul takvimi |
 | Z06 | arac_oyunMerkez | OyunlarV15 | KURULDU | Oyunlar mod kartları |
 | Z07 | arac_profil2 | v15/TumSayfalarV15.tsx | VAR | Menü (TumSayfalarV15) grupları |
 
@@ -413,31 +413,31 @@ Not: YOK sayısının 6'sı tasarım belgesi ekranıdır (A09, K08, P01, W03, X0
 | AA03 | dpGun | DersProgramiV15 | VAR |  |
 | AA04 | dpAy | DersProgramiV15 (Ay ızgarası) | VAR | Plan "ay yok" diyor; kodda ay görünümü var (plan güncel değil) |
 | AA05 | dpDetay | DersProgramiV15 → ders ayrıntısı | VAR | ders programındaki ders → ders ayrıntısı (sesli ders, Öğren, çıkmış sorular) |
-| AA06 | dpEkle | — | YOK | Ekle/içe aktar yok |
-| AA07 | dpWidget | — | YOK |  |
+| AA06 | dpEkle | — | VAR | ProgramEkleV15 (/dersler/program/ekle) |
+| AA07 | dpWidget | — | VAR | ProgramSimdiKarti (Bugün) |
 
 ## AB · Hesap, arka plan, uygulama temelleri
 
 | Kod | Ad | Site karşılığı | Durum | Not |
 |---|---|---|---|---|
-| AB01 | arkaPlan | — | YOK | Arka plan işleri ekranı yok |
-| AB02 | arkaPlanUst | — | YOK |  |
+| AB01 | arkaPlan | — | VAR | ArkaPlanV15 (/arka-plan) |
+| AB02 | arkaPlanUst | — | VAR | ArkaPlanGosterge (üst bar) |
 | AB03 | kisisel | ProfileV12 | VAR | Profil › Hesap |
 | AB04 | hesapGuvenlik | ProfileV12 hesap | VAR | Profil › Hesap (şifre, oturum) |
 | AB05 | veriGizlilik | ProfileV12 verilerim | VAR | Profil › Veriler ve gizlilik |
-| AB06 | bildirimTercih | — | YOK | Bildirim türü başına anahtarlar (sınav öncesi pratik, yeni ders, düello/sınıf, hücre, sohbet, yenilikler) ve Sessiz saatler yok |
+| AB06 | bildirimTercih | — | VAR | BildirimTercihV15 + sessiz saatler |
 | AB07 | erisilebilirlik | ProfileV12 Erişilebilirlik | VAR |  |
-| AB08 | dilBolge | — | YOK |  |
+| AB08 | dilBolge | — | VAR | DilBolgeV15 (/dil-bolge) |
 | AB09 | komutPaleti | ⌘K arama | KURULDU | ⌘K: karma test, yanlışlar, kronometre, odak, yeni not, tam ekran, tema komutları |
-| AB10 | kisayollar | v15/TamEkranAyarV15.tsx (Profil › Tam ekran ve kısayollar) | KISMİ | 8 kısayolluk düz liste var; eksik: Genel/Sesli ders/Soru/Kronometre grupları ve ?, G sonra B, [ ] hız, M işaretle, H yardım al, T/L/R kronometre kısayolları |
-| AB11 | baslangicGorev | — | YOK |  |
+| AB10 | kisayollar | v15/TamEkranAyarV15.tsx (Profil › Tam ekran ve kısayollar) | VAR | gruplu kısayollar; ? ve [ ] bağlandı |
+| AB11 | baslangicGorev | — | VAR | IlkAdimlarV15 (/ilk-adimlar + Bugün kartı) |
 | AB12 | geriAl | NotlarimV15 "Geri al" | KURULDU | geriAlinabilir(): not, yanlış, kişisel sınav silmede 6 sn "Geri al" bildirimi (onay penceresi yerine) |
 | AB13 | cevrimdisiBanner | system/NetworkBanner.tsx | VAR | "Çevrimdışısın" + "n sırada" hapı, bağlanınca gönderim; metin tasarımdaki "cevapların bağlanınca eşitlenecek" değil |
-| AB14 | yardimMerkezi | — | YOK |  |
+| AB14 | yardimMerkezi | — | VAR | YardimV15 (/yardim) |
 | AB15 | yenilikler | guncellemeler | VAR | GuncellemeGunluguView: sürüm kartları (sürüm, gün/saat, başlık, eklenen/değişen/düzeltilen maddeler) |
-| AB16 | hata404 | — | YOK | Bilinmeyen adres sessizce ana sayfaya (Soru ekle) düşüyor (router.ts parseLocation → quick_add); eksik: "Bu sayfa bulunamadı" ekranı + Ara + Bugün'e dön |
-| AB17 | hataSunucu | main.tsx RootErrorBoundary | KISMİ | Hata ekranı (Geri dön / Sayfayı yenile) var; eksik: tasarım metni ("Bir şeyler ters gitti", "Sorun bize iletildi"), İndirilenler düğmesi; ham hata metnini öğrenciye gösteriyor; v15 görünümü değil |
-| AB18 | bakim | — | YOK | Bakım ekranı (dişli, "Kısa bakım", tahmini süre, çalışman kaydedildi) yok; yalnız UpdatePrompt "Site güncellendi" |
+| AB16 | hata404 | — | VAR | BulunamadiV15; rota-404.mts 325 adres 0 hata |
+| AB17 | hataSunucu | main.tsx RootErrorBoundary | VAR | RootErrorBoundary v15 + /api/istemci-hata |
+| AB18 | bakim | — | VAR | BakimEkrani + MEDS_BAKIM / /api/admin/bakim |
 
 - S08: KURULDU (2026-10-27): satır aralığı, yazı tipi (Okuma/Sade/Kolay okunur), zemin, okunan cümleyi ortala
 - S09: KURULDU: oynatıcı çekmecesinde Bölümler / Yıldızlılarım sekmeleri

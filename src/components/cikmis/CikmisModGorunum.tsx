@@ -76,6 +76,8 @@ const Tablo: React.FC<Props> = ({ sorular, attempts, savedIds, onToggleSave, ren
   );
 };
 
+const IZGARA_BLOK = 100;
+
 const Odak: React.FC<Props> = ({ sorular, attempts, savedIds, onToggleSave, render }) => {
   const [i, setI] = useState(0);
   const ust = useRef<HTMLDivElement>(null);
@@ -102,6 +104,9 @@ const Odak: React.FC<Props> = ({ sorular, attempts, savedIds, onToggleSave, rend
   const pct = n ? Math.round((cozulen / n) * 100) : 0;
   const id = String(q.id);
   const kayitli = savedIds.has(id);
+  // H111u: numara ızgarası tüm süzgeç sonucunu (4.000+ düğme) çiziyor, her Önceki/Sonraki'de hepsi yeniden render oluyordu;
+  // yalnız geçerli sorunun 100'lük bloğu çizilir, blok okla değişir
+  const b0 = Math.floor(idx / IZGARA_BLOK) * IZGARA_BLOK;
   return (
     <div className="cm15-odak" ref={ust}>
       <div className="cm15-o-ana">
@@ -121,8 +126,16 @@ const Odak: React.FC<Props> = ({ sorular, attempts, savedIds, onToggleSave, rend
           <span>%{pct}</span>
         </div>
         <p className="cm15-o-ozet"><b>{cozulen.toLocaleString('tr-TR')}</b> / {n.toLocaleString('tr-TR')} çözüldü</p>
+        {n > IZGARA_BLOK && (
+          <div className="cm15-blok" role="group" aria-label="Numara aralığı">
+            <button type="button" className="c12-btn sm" onClick={() => git(b0 - IZGARA_BLOK)} disabled={b0 === 0} aria-label="Önceki 100 soru"><ChevronLeft aria-hidden /></button>
+            <span>{(b0 + 1).toLocaleString('tr-TR')}–{Math.min(n, b0 + IZGARA_BLOK).toLocaleString('tr-TR')}</span>
+            <button type="button" className="c12-btn sm" onClick={() => git(b0 + IZGARA_BLOK)} disabled={b0 + IZGARA_BLOK >= n} aria-label="Sonraki 100 soru"><ChevronRight aria-hidden /></button>
+          </div>
+        )}
         <div className="cm15-izgara">
-          {sorular.map((x, k) => {
+          {sorular.slice(b0, b0 + IZGARA_BLOK).map((x, j) => {
+            const k = b0 + j;
             const d = durumOf(attempts[String(x.id)]);
             return (
               <button key={String(x.id)} type="button" className={`cm15-num is-${d} ${k === idx ? 'is-on' : ''}`} onClick={() => git(k)}

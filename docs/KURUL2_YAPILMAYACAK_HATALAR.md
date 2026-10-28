@@ -1156,3 +1156,95 @@ Her maddede: belirti · kök neden · Kurul 2 kuralı · kapı durumu. Kanıtlar
 - **Belirti:** Öğrenci yıldızladığı paragrafları Bugün sayfasında göremedi ("internete kaydedilmiyor" sandı); sesli ders içindeki panel 108 kaydın tamamını (başka kurul/derslerin asistan kayıtları dahil) gösterdi.
 - **Kök neden:** (1) Bugün sayfası (`FavorilerBugun`) yalnız `favoriStore`'u okuyordu; `medsoru_yildizli_paragraflar_v1` hiç bağlanmamıştı — kayıt eşitleniyordu ama erişim yolu yoktu. (2) `userKvSync` birleştirmesi iki cihazın listesini birleşim (union) ile kuruyordu; silme iz bırakmadığı için çıkarılan yıldız öbür cihazdan geri diriliyordu. (3) `CanliDersDers` paneli ders süzgeci olmadan açılıyordu.
 - **Çözüm/kural:** Bugün'e kurul→ders→konu gruplu yıldızlı paragraflar bölümü eklendi; silme artık `silindi` mezar taşıyla yazılır ve birleştirmede aynı kimlikte en yeni `tarih` kazanır; sesli ders paneli `dersKey` ile varsayılan "Bu ders" kapsamında açılır ("Tüm dersler" seçilebilir). Yeni bir kişisel liste deposu eklenirken: (a) Bugün/Listeler erişimi, (b) silme mezar taşı + en yeni kazanır birleştirmesi, (c) bağlam içinden açılan panelde bağlam süzgeci zorunludur.
+
+## H128 · EMA yabancı terimleri yanlış okuyor; anlatım konu geçişini söylemiyor; panel geç, zoom kısa anlatımda, çizim tek renk (2026-10-28)
+
+- **Belirti:** EMA "Wernicke", "Staphylococcus", "locked-in", "Xanax" gibi yazımları Türkçe harf kuralıyla okuyordu. Başlıksız
+  slaytta yeni konuya geçilince anlatım söylemediği için öğrenci önceki konuyla ilişkili sanıyordu. Liste/sıralama paneli
+  anlatım başladıktan sonra açılıyordu; kısa değinmede zoom bitmeden slayt değişiyordu; resimden resme hızlı geçişte işaretler
+  karışıyor, çizimler hep kırmızı ve hat tam izlenemiyordu.
+- **Kök neden:** (1) EMA yolunda yalnız kısaltma katmanı vardı (okunus/kisaltma_ses); eponim/Latince/İngilizce terim
+  sözlüğü yoktu. (2) Sesli ders talimatında kurgu (amaç, hiyerarşi, bölüm geçişinin ilişki türü, örnek) kuralı ve ön plan adımı
+  yoktu. (3) Panel ilerlemesi `k0` = terimin söylendiği kelimeden başlıyordu. (4) Zoom yalnız bölge boyutuna bakıyordu,
+  anlatım süresine bakmıyordu. (5) Kontur rengi CSS'te sabit kırmızıydı, boyama yalnız %13 sarı ışıltıydı, çizim hangi
+  resim kutusuna ait olduğunu taşımıyordu.
+- **Kalıcı çözüm:** `scripts/sesli_anlatim/terim_okunus.py` + `data/sesli_anlatim/okunus/terim_okunus.json` (eponim, Latince,
+  İngilizce, ticari ad + Latince kural motoru) EMA'ya giden Kurul 2+/modül metnine uygulanır (`ema_isci.paragraf_seslendir`);
+  `ses_temizle` (DC, RMS eşitleme, yumuşak tepe sınırı, 12 ms geçiş). `docs/ANLATIM_KURGU_STANDARDI.md` (plan → metin,
+  ±%20 sayısal tolerans). `CizimLayer.tsx` panel cümle başından, zoom ≥55 karakter; `cizim_uret.py` ZOOM_EN_AZ=70, `renk_ata`,
+  `renk/boya/resim` alanları; `cizim_dogrula.py` renk/resim kutusu denetimi.
+- **Kural:** yeni ders seslendirmesinden önce `terim_okunus.py --denetle <anahtar>`; yanlış `KURAL` satırı sözlüğe eklenir.
+  Anlatım yazarı önce `anlatim_plani.md` kurar; başlıksız konu geçişinde "burada konu değişiyor" cümlesi zorunlu.
+  Çizimde birden çok resim varsa `resim: "R#"`, ayrı yapılar ayrı renk, hattı belirsiz bölge `boya: true`.
+
+## H111c · Esc uygulama tam ekranından çıkarmıyordu (2026-10-28, ortak kabuk)
+- **Belirti:** Kabuktaki "Tam ekran" düğmesine basılınca üst çubuk gizleniyor; native tam ekranın açılmadığı durumlarda (dokunmatik/klavyeli cihaz — iPad + klavye, dokunmatik dizüstü — ya da tarayıcı isteği reddettiğinde) Esc'e basmak hiçbir şey yapmıyordu, kullanıcı çıkışı yalnız küçük "Tam ekrandan çık" hapında arıyordu.
+- **Kök neden:** Uygulama tam ekranı = `html.is-app-fullscreen`. Kaldırılması yalnız düğmeye ya da native `fullscreenchange` olayına bağlıydı; native katman yoksa Esc'i dinleyen hiçbir kod yoktu.
+- **Çözüm:** `src/utils/fullscreen.ts` › `installEscExit` — tek genel `keydown` (bubble, `defaultPrevented`/yazı alanı/açık pencere-menü/sayfa içi tam ekran katmanı/`tam-katman`/`cd-tam-ekran` varken dokunmaz) sınıfı kaldırır ve `medsor:fullscreenchange` yayar. Tarayıcıda sınandı: aç → Esc → kapandı, düğme "Tam ekran"a döndü.
+- **Kural:** Native tam ekranın yedeği olan her CSS kipi kendi Esc çıkışını taşır; Esc önce açık pencereye/katmana aittir.
+
+## H111d · Yönetim betik kataloğu her açılışta ana pakete iniyordu (2026-10-28, başarım)
+- **Belirti:** İlk açılışta inen ortak parça (`chunk-contentLive`) ~210 KB; içinde yalnız yönetim "Betikler" sekmesinin kullandığı yedek betik kataloğu (`bundledScripts.ts`, ~20 KB kaynak) vardı.
+- **Kök neden:** `services/api.ts` (her ekranın kullandığı istemci) kataloğu statik içe aktarıyordu; rolldown onu api ile aynı ilk yükleme parçasına koydu.
+- **Çözüm:** `getScriptsList` kataloğu `await import('../data/bundledScripts')` ile yalnız çağrıldığında yükler. Ölçüm: index.html'in indirdiği JS+CSS 2.747 KB → 2.719 KB (102 → 91 dosya). (`manualChunks` ile `deckStore`'u ayırma denendi: rolldown ortak bağımlılıkları o parçaya çekip 443 KB'lık yeni bir ilk yük parçası üretti → geri alındı; `manualChunks` ile paylaşılan modül ayırmak YASAK, statik içe aktarmayı kaldır.)
+- **Kural:** Ortak istemci/servis dosyaları (api.ts, auth, realtimeEvents) yalnız tek ekranın kullandığı büyük veri/katalog modüllerini statik içe aktarmaz; dinamik `import()` kullanılır.
+
+## H111e · Profil verisi dinleyicileri render sırasında setState yapıyordu (2026-10-28, Bugün/Arka plan)
+- **Belirti:** Her sayfa açılışında konsolda React uyarısı: "Cannot update a component (`ArkaPlanGosterge` / `EsitlemeKarti`) while rendering a different component (`MusicPlayerProvider`)".
+- **Kök neden:** `userKvSync.onWrite` profil anahtarı yazılınca `onProfileDataChange` dinleyicilerini **eşzamanlı** çağırıyordu. `MusicPlayerProvider`'ın `useState` başlatıcısı (`getVoterId` → `getDeviceToken`) ilk açılışta localStorage'a yazıyor; bu yazım render içinde olduğundan dinleyicideki `setKv`/`setBekleyen` başka bileşenin render'ında setState oldu.
+- **Çözüm:** `userKvSync.ts` `bildir()` dinleyicileri `queueMicrotask` ile çağırır (tüm dinleyiciler zaten zamanlayıcı/setState yapıyor; eşzamanlılık gerekmiyordu). Sınama: sayfa_tarama /bugun, /arka-plan konsol hatası 1 → 0.
+- **Kural:** localStorage/depo yazımına bağlı olay yayıcıları dinleyicileri eşzamanlı çağırmaz (mikro görev); render içinde (useState başlatıcısı, useMemo) yan etkili yazım yapılmaz.
+
+## H111f · Deste kataloğu (~600 KB) her sayfada yalnız sayı için iniyordu (2026-10-28, başarım)
+- **Belirti:** /kaynaklar, /topluluk, /saglik, /sozluk, /basarimlar gibi desteyle ilgisi olmayan sayfalarda `decks/catalog.json` (dev 3,4 MB, prod ~600 KB) indirilip ayrıştırılıyordu.
+- **Kök neden:** (1) `offlineDatabaseService.loadStats` IndexedDB'de deste yoksa `decksCount` için `loadDeckCatalog()` çağırıyordu (açılışta her sayfada çalışır). (2) `deckStore.patchCatalog` açılıştaki içerik yeniden eşitlemesinde (değişen deste kimliği varsa) önce tüm kataloğu yüklüyordu.
+- **Çözüm:** `loadStats` katalog yüklüyse uzunluğunu, değilse son kayıtlı istatistiği kullanır (`isDeckCatalogLoaded`); `patchCatalog` kataloğu yüklemez, değişen girdileri ekler — `loadDeckCatalog` sonradan bunları korur (mevcut "early" birleştirmesi). /kamplar, /istatistik ölçümde katalog artık inmiyor.
+- **Kural:** Yalnız sayı/özet için büyük veri modülü tembel yüklenmez; özet meta veride tutulur. Canlı yama işlevleri ana veriyi zorla yüklemez, yüklemeyi bekleyen birleştirmeye bırakır.
+
+## H111g · İzleme hızı kaydırıcısı: dokunma hedefleri 10–19 px, boş durumda imleç metinle çelişiyordu (2026-10-28, Sınav planı/Bitirdiklerim)
+- **Belirti:** Telefonda hız durakları (1×…2,5×) 19 px, kaydırıcı rayı 10 px yüksekti; seçim yokken metin "kalan süre 1× gösteriliyor" derken imleç 1,5×'te duruyordu.
+- **Kök neden:** `IzlemeHizi.tsx` boş değer için `?? 1.5` kullanıyordu; `takip.css` rayın ve durakların görünür boyutu dokunma alanı olarak bırakılmıştı.
+- **Çözüm:** boş durumda imleç 1×; ray `padding: 9px 0` + `background-clip: content-box` (görünüş aynı, 28 px dokunma), duraklara `::before` ile 40 px dikey alan + `min-width: 40px`. Bugün akışındaki "Tümü" bağlantısı (14 px) negatif kenar boşluklu 40 px alana alındı (`today.css .t15-more`). Takvim, kronometre ve tam ekran ayarlarındaki `kre-tgl` anahtarlarına `aria-label` eklendi (adsız düğme).
+- **Kural:** Görünür öğe küçük olabilir ama dokunma alanı ≥40 px (dolgu/`::before`); yer tutucu değer ile açıklama metni aynı varsayımı göstermeli; her `role="switch"` düğmesinin erişilebilir adı olur (label içi olmak yetmez).
+
+## H111h · PC'de açıklama metinleri 120–160 karakter satır uzunluğunda (2026-10-28, okunabilirlik)
+- **Belirti:** 1440 px'te Sınav planı açıklamaları (`sp-acikla`, `ss-acik`, "Bu sayılar nasıl hesaplanıyor?" listesi) ~130, Sağlık kaynakçası ~160, Topluluk kuralı ~116, Arka plan notu ~108 karakter satır.
+- **Kök neden:** metin blokları kart genişliğini dolduruyor, ölçü (`max-width: ..ch`) yoktu; bir kısmı 12,5–13,5 px idi.
+- **Çözüm:** `takip.css` `.sp-acikla/.ss-acik` 14 px + 72ch, `.sp-nasil ul` 75ch (özet 40 px), `cevrimdisi.css .cv-not` 14 px + 72ch, `saglik.css` kaynakça 90ch, `topluluk.css .tp15-kural` 75ch.
+- **Kural:** Gövde/açıklama metni ≥14 px ve satır ≤ ~75ch; geniş kartın içindeki paragraf `max-width` ile sınırlanır.
+
+## H111p · Sesli derste hatalı adreste sunucu hata kodu ham gösteriliyordu (2026-10-28, Ders çalış)
+- **Belirti:** `/dersler/canliders/kurul1/<eski/hatalı anahtar>` açılınca ekranın ortasında yalnız küçük harfle "geçersiz ders" yazıyordu.
+- **Kök neden:** `CanliDersDers.tsx` hata durumunda `fetch` hatasının `message` alanını (sunucunun iç kodu `{error:'geçersiz ders'}`) olduğu gibi basıyordu.
+- **Çözüm:** "geçersiz ders / bulunamadı / 400 / 404" öğrenciye "Bu adreste bir sesli ders yok. Bağlantı eski ya da hatalı olabilir; listeden dersi seçebilirsin." olarak çevrilir; liste düğmesi kalır.
+- **Kural:** Sunucu hata kodu (`error` alanı) öğrenci metni değildir; ekranda bilinen hatalar Türkçe açıklamaya çevrilir, bilinmeyen hata için genel cümle kullanılır.
+
+## H111q · Sesli ders telefonda: başlık 75 px'e sıkışıyor, Kalem düğmesi eziliyor, bölme hızlı düğmeleri 23×21 px (2026-10-28, Ders çalış)
+- **Belirti:** 375 px'te üst bar başlığı "Tümör …" (75 px), PDF şeridinde Kalem düğmesi 25 px'e ezilip boş daire görünüyor, dosya adı 18 px'e inip "1…" kalıyordu; Metin/PDF ayracının hızlı düğmeleri (35/50/65, yön, sıfırla) dokunmatikte 23×21 px.
+- **Kök neden:** `.cd15-ad` tek satır `nowrap` + yanında 4–5 sabit simge düğmesi; `.cd15-pb` `flex: none` almadığı için `flex-shrink` ile küçülüyordu; `.cd-pdf-ad` dar kapta gizlenmiyordu; `.cd-ayrac-hizli button` için dokunmatik boyutu yoktu.
+- **Çözüm:** `styles/v15/sesli.css` telefonda başlık iki satıra sarılır (16 px, line-clamp 2); `.cd15-pb { flex: none; min-width: 32px }`; `@container (max-width: 460px)` dosya adı gizli. `canli-ders.css` `(pointer: coarse)` hızlı düğmeler 36×36.
+- **Kural:** Esnek şeritteki simge/düğmeler `flex: none` alır, yalnız metin öğesi küçülür; metin öğesi 40 px altına inecekse gizlenir ya da sarılır.
+
+## H111r · Soru haritası hücrelerinde yazı kontrastı 2.6–4.0 (2026-10-28, Soru çöz)
+- **Belirti:** `/sorular/soru-haritasi` ısı tablosunda orta yoğunluktaki hücrelerin sayıları zor okunuyordu (WCAG AA altında, açık ve koyu temada).
+- **Kök neden:** renk yoğunluğu %12–90 arası sürekli ölçekti; %40–85 aralığında zemin orta mavi olduğundan ne koyu (`ink`) ne açık (`on-accent`, eşik %55) yazı 4.5'i geçebiliyordu.
+- **Çözüm:** `SoruHaritasiV15.tsx` ölçeği iki banda ayırır: açık bant %10–40 (koyu yazı), koyu bant %90–100 (açık yazı); ara ton kullanılmaz. DOM kontrast ölçümü: 7 ihlal → 0.
+- **Kural:** Yoğunluğa göre boyanan hücrede yazı rengi tek eşikle seçiliyorsa, eşiğin iki yanındaki zemin tonları her iki yazı rengiyle de 4.5'i geçmelidir; geçmiyorsa ara tonlar atlanır.
+
+## H111s · Zihin haritası numaraları koyu temada okunmuyordu (2026-10-28, Ders çalış)
+- **Belirti:** Koyu temada `/dersler/zihin-haritasi` liste numaraları (1, 2, 3…) koyu zemin üstünde 1.7–2.0 kontrastla neredeyse görünmüyordu.
+- **Kök neden:** `.zh15-no` yazı rengi tema bağımsız sabit `oklch(0.45 …)`; zemin `--color-white` ile karıştığı için koyu temada koyulaşıyor, yazı koyu kalıyordu.
+- **Çözüm:** `zihin.css` `:root.theme-dark .zh15-no { color: oklch(0.84 0.09 var(--t)) }`.
+- **Kural:** Sabit `oklch()/hex` yazı rengi yalnız token zeminiyle birlikte koyu tema karşılığı yazılarak kullanılır.
+
+## H111t · Ders çalış dokunma hedefleri: "Tüm dersler" 75×14, Öğren "▶ Dinle" 52×20 px (2026-10-28, Ders çalış)
+- **Belirti:** Dersler merkezinde "Tüm dersler" bağlantısı ve Öğren adımındaki "▶ Dinle" düğmesi telefonda parmakla zor seçiliyordu.
+- **Kök neden:** `.d15-more` yalnız metin yüksekliğindeydi (line-height 1); `.ls-tag` 20 px rozet stili düğmeye de uygulanıyordu.
+- **Çözüm:** `dersler.css .d15-more` 40 px dolgu + negatif kenar (H111g ile aynı desen); `LessonPlayer.tsx` düğmeye `ls-dinle` sınıfı, `v12/lesson.css` dokunmatikte `::before` ile 40 px alan.
+- **Kural:** H111g kuralı: görünür öğe küçük kalabilir, dokunma alanı ≥40 px.
+
+## H111u · Çıkmış sorular kart görünümü sınırsız büyüyor, Odak ızgarası 4.372 düğme çiziyordu (2026-10-28, Soru çöz, başarım)
+- **Belirti:** `/sorular/cikmis` Kart görünümünde aşağı kaydırdıkça DOM 2.700 → 34.000 düğüme (300 kart) çıkıyor, uzun oturumda sayfa ağırlaşıyordu; Odak modunda sağdaki numara ızgarası süzgeç sonucunun tamamını (4.372 düğme) çiziyor, her Önceki/Sonraki'de hepsi yeniden render oluyordu.
+- **Kök neden:** `PastExamsView` `filteredQuestions.slice(0, richLimit)` ile her "daha fazla"da baştan sona tüm kartları tutuyordu; `CikmisModGorunum.Odak` `sorular.map` ile tüm numaraları çiziyordu.
+- **Çözüm:** Kart görünümü kayan pencere: yalnız son 60 kart (`RICH_WINDOW`) çizilir, üstte düşenler tarayıcının kaydırma çapasıyla görünen kartı oynatmaz, üstte "Önceki soruları göster (n)" düğmesi; sayaçlar `richLimit` ile gösterilir. Odak ızgarası geçerli sorunun 100'lük bloğunu çizer, ‹ › ile blok değişir. Ölçüm: 8 kaydırmada DOM 34.226 → ~7.100 (sabit); Odak açılışı ~650 düğüm.
+- **Kural:** Kaydırdıkça yüklenen listeler sınırsız büyümez (pencere ya da sanal liste); yüzlerce öğelik gezinme ızgarası bloklara bölünür.

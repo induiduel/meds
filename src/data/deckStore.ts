@@ -220,7 +220,8 @@ export const deckName = (d: { title?: string; shortTitle?: string }, short = tru
 async function patchCatalog(ids: string[]) {
   if (!ids.length) return;
   try {
-    await loadDeckCatalog();
+    // Katalog henüz yüklenmediyse yalnız değişenler eklenir; loadDeckCatalog sonradan bunları korur.
+    // (Açılıştaki SSE yeniden eşitlemesi her sayfada ~600 KB kataloğu boşuna indiriyordu, H111f.)
     const res = await fetch(`${apiBase()}/api/content/deck-catalog?ids=${encodeURIComponent(ids.join(','))}`, { cache: 'no-store' });
     if (!res.ok) return;
     const { decks } = (await res.json()) as { decks: DeckCatalogEntry[] };
