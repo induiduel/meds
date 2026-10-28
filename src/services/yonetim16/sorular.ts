@@ -248,6 +248,78 @@ export function registerSorularRoutes(app: express.Express, d: SorularDeps) {
     res.json({ success: true, kayit: yeni, kardesler: kardes.map((x) => String(x.id)) });
   });
 
+  // ---------------------------------------------------------------- H393: çıkmışlarda toplu değer eşlemesi
+  // Kazanım birleştirmesinden (H392) kalan eski konu adları / atılan kazanım kimlikleri sunucunun kendi listesinde
+  // değiştirilir (dosyayı dışarıdan düzenlemek bellekteki kopyayla çakışır). Yalnız birebir eşleşen metin değerleri;
+  // geçmiş kayıtlar (denetim öncesi asıl, eski sürüm, revizyonlar) atlanır. Varsayılan önizleme; uygulamada tam yedek +
+  // değişim dosyası (data/_yedek/) yazılır, geri alma o dosyadaki önceki değerlerle yapılır. Elle çağrılır (kural 20).
+  const ESLEME_GECMIS = new Set(['checkSolveOriginal', 'eskiSurum', 'phase14Original', 'revisions', 'surumGecmisi', 'history']);
+  type EslemeDegisim = { id: string; yol: (string | number)[]; once: string; sonra: string };
+  const eslemeBul = (q: Any, harita: Record<string, string>): EslemeDegisim[] => {
+    const out: EslemeDegisim[] = []; const id = String(q.id);
+    const gez = (x: Any, yol: (string | number)[]) => {
+      if (Array.isArray(x)) x.forEach((v, i) => gez(v, [...yol, i]));
+      else if (x && typeof x === 'object') { for (const [k, v] of Object.entries(x)) if (!ESLEME_GECMIS.has(k)) gez(v, [...yol, k]); }
+      else if (typeof x === 'string' && Object.prototype.hasOwnProperty.call(harita, x) && harita[x] !== x) out.push({ id, yol, once: x, sonra: harita[x] });
+    };
+    gez(q, []);
+    return out;
+  };
+  const yolaYaz = (q: Any, yol: (string | number)[], deger: string) => {
+    let o = q; for (const k of yol.slice(0, -1)) { o = o?.[k as any]; if (o == null) return false; }
+    o[yol[yol.length - 1] as any] = deger; return true;
+  };
+  const yolOku = (q: Any, yol: (string | number)[]): unknown => yol.reduce((o: any, k) => (o == null ? o : o[k as any]), q as any);
+  const eslemeKaydet = (list: Any[], ids: Set<string>, kim: string) => {
+    d.cikmisKaydet(list); d.cikmisOnbellekSil(); cikIdx = null;
+    for (const q of list) if (ids.has(String(q.id))) { q.updatedAt = new Date().toISOString(); d.cikmisAynala(q).catch(() => {}); d.yayinla('past_question_updated', { question: q, id: String(q.id), time: Date.now() }); }
+    void kim;
+  };
+  app.post('/api/admin/sorular/cikmis/esleme-uygula', A, (req, res) => {
+    const harita: Record<string, string> = { ...(req.body?.kimlik || {}), ...(req.body?.baslik || {}) };
+    if (!Object.keys(harita).length) return res.status(400).json({ error: 'Eşleme boş.' });
+    const list = d.cikmisHam();
+    const degisim = list.flatMap((q) => eslemeBul(q, harita));
+    const ids = new Set(degisim.map((x) => x.id));
+    const alanlar: Record<string, number> = {};
+    for (const x of degisim) { const k = x.yol.filter((p) => typeof p === 'string').join('.'); alanlar[k] = (alanlar[k] || 0) + 1; }
+    const ozet = { soru: ids.size, deger: degisim.length, alanlar, toplamSoru: list.length };
+    if (req.body?.uygula !== true) return res.json({ onizleme: true, ...ozet, ornek: degisim.slice(0, 10) });
+    if (req.body?.onay !== 'ESLE') return res.status(400).json({ error: 'Uygulamak için onay: "ESLE" gerekir.' });
+    const damga = new Date().toISOString().replace(/[:.]/g, '-');
+    const yedekDir = path.join(d.dataDir, '_yedek'); fs.mkdirSync(yedekDir, { recursive: true });
+    const kaynak = path.join(d.dataDir, 'pastQuestions.json');
+    const tamYedek = path.join(yedekDir, `pastQuestions.esleme-oncesi.${damga}.json`);
+    if (fs.existsSync(kaynak)) fs.copyFileSync(kaynak, tamYedek);
+    const degisimDosya = `cikmis_esleme_${damga}.json`;
+    atomikJsonYaz(path.join(yedekDir, degisimDosya), { zaman: new Date().toISOString(), kim: d.kimOf(req), degisim });
+    const byId = new Map(list.map((q) => [String(q.id), q]));
+    let yazilan = 0;
+    for (const x of degisim) { const q = byId.get(x.id); if (q && yolOku(q, x.yol) === x.once && yolaYaz(q, x.yol, x.sonra)) yazilan++; }
+    eslemeKaydet(list, ids, d.kimOf(req));
+    denetimHedef(res, 'cikmis:esleme');
+    denetimNot(res, { ...ozet, yazilan, degisimDosya, tamYedek: path.basename(tamYedek) });
+    res.json({ uygulandi: true, ...ozet, yazilan, degisimDosya, tamYedek: path.basename(tamYedek) });
+  });
+  app.post('/api/admin/sorular/cikmis/esleme-geri', A, (req, res) => {
+    const ad = String(req.body?.dosya || '');
+    if (!/^cikmis_esleme_[\w-]+\.json$/.test(ad)) return res.status(400).json({ error: 'Geçersiz dosya adı.' });
+    if (req.body?.onay !== 'GERI') return res.status(400).json({ error: 'Geri almak için onay: "GERI" gerekir.' });
+    const dosya = path.join(d.dataDir, '_yedek', ad);
+    if (!fs.existsSync(dosya)) return res.status(404).json({ error: 'Değişim dosyası yok.' });
+    const { degisim } = JSON.parse(fs.readFileSync(dosya, 'utf-8')) as { degisim: EslemeDegisim[] };
+    const list = d.cikmisHam(); const byId = new Map(list.map((q) => [String(q.id), q]));
+    let geri = 0, atlanan = 0; const ids = new Set<string>();
+    for (const x of degisim) {
+      const q = byId.get(x.id);
+      if (q && yolOku(q, x.yol) === x.sonra && yolaYaz(q, x.yol, x.once)) { geri++; ids.add(x.id); } else atlanan++;
+    }
+    eslemeKaydet(list, ids, d.kimOf(req));
+    denetimHedef(res, 'cikmis:esleme-geri');
+    denetimNot(res, { dosya: ad, geri, atlanan });
+    res.json({ geriAlindi: geri, atlanan });
+  });
+
   // ---------------------------------------------------------------- Birleşenler
   const grupSatiri = (g: MergeGroup) => ({ id: g.id, asil: g.asil, uye: g.uyeler.length, durum: g.durum, birebir: !!g.birebir_ayni, benzerlik: g.benzerlik, olusturma: g.olusturma || '', karar: g.karar_zamani || '' });
   app.get('/api/admin/sorular/birlesen', A, (req, res) => {

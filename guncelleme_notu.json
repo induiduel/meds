@@ -1,12 +1,9 @@
 {
  "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
- "onem": 560,
- "baslik": "Kazanım ve deste düzeltmeleri",
+ "onem": 561,
+ "baslik": "Yönetim: çıkmış sorularda toplu düzeltme aracı",
  "maddeler": [
-  "Kazanımlarda yinelenen konular birleşti, başlıklardaki hoca adları kaldırıldı",
-  "Soru haritası tüm çıkmış soruları sayıyor",
-  "Bazı Kurul 1 desteleri \"Diğer\" yerine Kurul 1 altında görünüyor",
-  "Deneme sorularında vurgulu kelimeler kalın görünüyor"
+  "Yönetim: çıkmış sorulardaki eski konu adlarını önizlemeli ve geri alınabilir biçimde düzeltme aracı"
  ],
  "eklenen": [],
  "degisen": [],
