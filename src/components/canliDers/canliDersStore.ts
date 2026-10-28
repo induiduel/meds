@@ -35,6 +35,8 @@ export interface CdVaryant {
 }
 export interface CdListeDers {
   key: string;
+  /** V1 satırında: aynı dersin sonraki sürümleri (…-v2, …-v3); listede ayrı satır olmaz, satırdaki seçiciden açılır */
+  surumlar?: string[];
   donem?: '2025-2026' | '2026-2027';
   arsiv?: boolean;
   /** Sınama (test) verisi: güncel derslerle aynı listede gösterilmez (data/sinama.json) */

@@ -10,7 +10,7 @@ import { icerikGizli, useSiteAyar } from '../../services/siteAyar';
  * v15 Ders çalış sayfalarının (merkez, branş, ders ayrıntısı) ortak verisi: sesli ders listesi (sunucu ya da cihaz),
  * kaldığın yer kayıtları ve "bitti" işaretleri. Uydurma sayı yok: veri yoksa alan boş kalır.
  */
-export type DersListeDurum = { dersler: CdListeDers[] | null; hata: string | null };
+export type DersListeDurum = { dersler: CdListeDers[] | null; hata: string | null; /** sürümler dahil (V2 ayrıntı sayfası için) */ hepsi?: CdListeDers[] };
 
 /** Son Prova partları ve blok özetleri ders değildir; V2/V3 ayrı ders sayılmaz */
 export function useDersListesi(donem: '2026-2027' | '2025-2026' = '2026-2027'): DersListeDurum {
@@ -19,7 +19,13 @@ export function useDersListesi(donem: '2026-2027' | '2025-2026' = '2026-2027'): 
     let canli = true;
     setD({ dersler: null, hata: null });
     cdListeGetir(false, donem).then(
-      (ds) => canli && setD({ dersler: cdTekSurum(ds.filter((x) => !/-son-prova-|-blok-ozet-/.test(x.key))), hata: null }),
+      (ds) => {
+        if (!canli) return;
+        const temiz = ds.filter((x) => !/-son-prova-|-blok-ozet-/.test(x.key));
+        const ek = new Map<string, string[]>();
+        for (const x of temiz) if (/-v[23]$/.test(x.key)) ek.set(x.key.slice(0, -3), [...(ek.get(x.key.slice(0, -3)) || []), x.key].sort());
+        setD({ dersler: cdTekSurum(temiz).map((x) => (ek.has(x.key) ? { ...x, surumlar: ek.get(x.key) } : x)), hata: null, hepsi: temiz });
+      },
       (e) => canli && setD({ dersler: [], hata: e?.message || 'Ders listesi alınamadı.' }),
     );
     return () => {
@@ -28,7 +34,7 @@ export function useDersListesi(donem: '2026-2027' | '2025-2026' = '2026-2027'): 
   }, [donem]);
   // Panel görünürlüğü (sesli:<key>, ders:<id>, kurul:<n>): kapalı dersler öğrencinin listesinden kalkar; yönetici hepsini görür
   const ayar = useSiteAyar();
-  return useMemo(() => (d.dersler ? { ...d, dersler: d.dersler.filter((x) => !icerikGizli('sesli', x.key)) } : d), [d, ayar]);
+  return useMemo(() => (d.dersler ? { ...d, dersler: d.dersler.filter((x) => !icerikGizli('sesli', x.key)), hepsi: d.hepsi?.filter((x) => !icerikGizli('sesli', x.key)) } : d), [d, ayar]);
 }
 
 export const dersKurulu = (d: Pick<CdListeDers, 'kurul' | 'key'>) => d.kurul ?? kurulKimlikten(d.key) ?? 1;

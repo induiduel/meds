@@ -1,16 +1,14 @@
 {
- "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
- "onem": 539,
- "baslik": "Yönetim paneli tamamlandı",
- "maddeler": [
-  "Yönetim paneli ayrı ve hafif açılıyor (ilk yük 3 kat küçük)",
-  "Gelen kutusu, geri bildirim, hat, Drive, RAG, fazlar ve bağlantılar sayfaları eklendi",
-  "Kişi listesi anında açılıyor, öğrenci sitesi de daha hafif"
- ],
- "eklenen": [],
- "degisen": [],
- "duzeltilen": [
-  "Şekil ve deney anlatılmadan geçilen yerler için yeni kural ve otomatik denetim"
- ],
- "silinen": []
+  "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
+  "onem": 540,
+  "baslik": "Sesli derslerde V1/V2 seçimi",
+  "maddeler": [
+    "Sürümü olan sesli derslerin satırında V1 ve V2 düğmeleri çıkar; Nörolojik Muayene V2 artık listeden açılabiliyor."
+  ],
+  "eklenen": [],
+  "degisen": [],
+  "duzeltilen": [
+    "Şekil ve deney anlatılmadan geçilen yerler için yeni kural ve otomatik denetim"
+  ],
+  "silinen": []
 }

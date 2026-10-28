@@ -59,8 +59,8 @@ export default function DersDetayV15() {
     if (key) dersIcerikGetir(key).then(setPaket).catch(() => undefined);
   }, [key]);
   useSiteAyar();
-  const { dersler } = useDersListesi();
-  const ozet = useMemo(() => dersler?.find((d) => d.key === key) || null, [dersler, key]);
+  const { dersler, hepsi } = useDersListesi();
+  const ozet = useMemo(() => (hepsi || dersler)?.find((d) => d.key === key) || null, [dersler, hepsi, key]);
   const [detay, setDetay] = useState<CdDetay | null>(null);
   const [hata, setHata] = useState<string | null>(null);
   useEffect(() => {

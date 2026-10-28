@@ -134,6 +134,13 @@ export default function SesliListeV15() {
                         </span>
                         <Halka pct={i.pct} etiket={i.tekrar ? `Tekrar: %${i.pct} dinlendi` : i.bitti ? 'Bitti' : `%${i.pct} dinlendi`} />
                       </a>
+                      {!!d.surumlar?.length && (
+                        <span className="sl15-surum" role="group" aria-label="Sürüm">
+                          {[d.key, ...d.surumlar].map((k, n) => (
+                            <a key={k} href={satirYolu(k)} onClick={linkClick(() => navigateTo(satirYolu(k)))}>V{n + 1}</a>
+                          ))}
+                        </span>
+                      )}
                     </li>
                   );
                 })}
