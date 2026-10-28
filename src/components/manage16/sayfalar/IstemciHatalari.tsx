@@ -23,7 +23,7 @@ export default function IstemciHatalari(_p: SayfaProps) {
           { anahtar: 'at', baslik: 'Zaman', sirala: true, genislik: '110px', deger: (k) => k.at, hucre: (k) => <time dateTime={k.at} title={new Date(k.at).toLocaleString('tr-TR')}>{zamanMetni(k.at)}</time> },
           { anahtar: 'mesaj', baslik: 'Hata', genislik: 'minmax(220px,3fr)', hucre: (k) => <span className="m16-kisalt" title={k.mesaj}>{k.mesaj}</span> },
           { anahtar: 'adres', baslik: 'Sayfa', genislik: 'minmax(140px,1fr)', hucre: (k) => <code className="m16-kisalt">{k.adres}</code> },
-          { anahtar: 'surum', baslik: 'Sürüm', sirala: true, genislik: '110px' },
+          { anahtar: 'surum', baslik: 'Sürüm', sirala: true, genislik: '132px' },
           { anahtar: 'ua', baslik: 'Tarayıcı', genislik: 'minmax(140px,1fr)', gizli: true },
         ]}
       />

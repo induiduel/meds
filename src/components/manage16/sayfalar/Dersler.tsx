@@ -44,7 +44,7 @@ export default function Dersler({ id, git }: SayfaProps) {
           { anahtar: 'kod', baslik: 'Kod', genislik: '60px', hucre: (x) => <code>{x.kod}</code> },
           { anahtar: 'konu', baslik: 'Konu', sirala: true, genislik: 'minmax(220px,3fr)', hucre: (x) => <span className="m16-kisalt" title={x.konu}>{x.konu}</span> },
           { anahtar: 'brans', baslik: 'Branş', sirala: true, genislik: 'minmax(110px,1fr)' },
-          { anahtar: 'tarih', baslik: 'Tarih', sirala: true, genislik: '96px' },
+          { anahtar: 'tarih', baslik: 'Tarih', sirala: true, genislik: '104px' },
           { anahtar: 'katman', baslik: 'Katmanlar', genislik: 'minmax(180px,2fr)', hucre: (x) => <KatmanCipleri k={x.katman} /> },
           { anahtar: 'gorunurluk', baslik: 'Görünürlük', genislik: '110px', hucre: (x) => <GorunurlukRozeti deger={x.gorunurluk} /> },
           { anahtar: 'ogretim_uyesi', baslik: 'Hoca', genislik: 'minmax(140px,1fr)', gizli: true },

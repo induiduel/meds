@@ -15,7 +15,10 @@
 | Şema | `deploy/pg/sql/yonetim16.sql` (açılışta kendiliğinden uygulanır) |
 | İstemci site ayarı | `src/services/siteAyar.ts` |
 
-App.tsx: yönetici `/manage` → `ManageV16`. `?kabuk=v14` eski konsolu açar (oturum boyunca hatırlanır; `?kabuk=v16` geri döndürür).
+Giriş (2026-10-28, H131): `/manage*` ayrı Vite girişi `manage.html` → `src/manage-main.tsx` (öğrenci App.tsx/index.css YÜKLENMEZ;
+ilk yük ≤ 200 KB gzip). Sayfalar öğrenci uygulamasının ağır modüllerini (index.css sınıfları, Toast, api.ts) statik içe aktarmaz;
+yalnız kit + `services/*` hafif yardımcılar. Temel CSS: `src/styles/yonetim-temel.css` (Tailwind yardımcı sınıfı yok).
+App.tsx: uygulama içinden `/manage`'e geçiş tam sayfa gezinmesidir. Moderatörde ya da `?kabuk=v14` ile manage-main tam uygulamayı yükler ve eski konsol açılır (oturum boyunca hatırlanır; `?kabuk=v16` geri döndürür).
 Moderatör ve `/yonetim` girişi hâlâ eski `ManageConsole`'dadır.
 
 ## 1. Adres şeması
@@ -178,7 +181,7 @@ Yeni sayaç: `registerOzetRoutes` bağımlılıklarına işlev ekleyin (server.t
   `spots/{onem/onemVeri,cozucu/cozucuVeri,asistan/asistanVeri}.ts` (dizin süzülür, ders dosyası açılmaz).
 - Kapalı ekranı: `v15/IcerikKapaliV15.tsx` (`ne`, `geri`). Yeni öğrenci listesi yazan bileşen aynı yardımcıyla süzmelidir.
 - Sunucu: `yonetim16/siteAyar.ts::icerikKapisi` (server.ts'de bayrakKapisi'nın ardından). `GET /api/canli-ders/:key[/…]`, `/api/canli-ders/ses/:key/…`,
-  `/api/decks|ogren|interactive-decks/:id` → 403 `{ icerikKapali: true }`; `/api/canli-ders` ve `/api/decks` listeleri süzülür (ETag/304 kapalı,
+  `/api/decks|ogren|interactive-decks/:id` → 403 `{ icerikKapali: true }`; `/api/canli-ders`, `/api/canli-ders/ara` (`sonuc[].k`) ve `/api/decks` listeleri süzülür (ETag/304 kapalı,
   `Cache-Control: private, no-cache`). Gerçek loopback / panel anahtarı / yönetici jetonu yönetici sayılır (süzme yok). Önem/asistan/çözücü ve
   ders içerik paketi ön yüz paketinde olduğundan yalnız istemcide süzülür. `cdDetayGetir` 403'te cihazdaki çevrimdışı kopyaya düşmez.
 
@@ -194,3 +197,23 @@ Yeni sayaç: `registerOzetRoutes` bağımlılıklarına işlev ekleyin (server.t
   (ManageAutomationSection; Otomasyon yalnız Drive ve servisler). "Tüm veriler"e sıçrayan bağlantılar v16 havuz/çıkmış sayfasını açar.
   Ders işçisi bölümü salt okunur arşiv (yazma istekleri istemcide engellenir). FlatfileDataOnboarding KULLANILIYOR (AdminPastExamImporterModal,
   NotebookLM) — kaldı.
+
+## 10. Son "yakında" sayfalar (2026-10-28) — menüde yakında kalmadı
+- Sunucu: `src/services/yonetim16/sistemEk.ts` (`registerYonetimSistemEk`, server.ts'de Topluluk+Sistem bloğunun önünde).
+- **Gelen** (`gelen`, `GelenKutusu.tsx`): `GET /api/admin/gelen` — soru şikâyetleri (iç loopback isteğiyle `/api/admin/sorular/sikayet`),
+  topluluk mesaj şikâyetleri (meds-pg), açık Öğren geri bildirimleri, son 24 sa istemci hataları (mesaja göre gruplu), bekleyen gizlilik
+  talepleri, Faz 14 `bekliyor`, kamp tüyo önerileri. 15 sn önbellek (`?taze=1`), yanıtta `kaynaklar{<tür>:{toplam,hata?}}`; satır `hedef` sayfaya gider.
+- **Topluluk › Geri bildirim** (`GeriBildirim.tsx`): `GET /api/admin/topluluk/geri-bildirim` (varsayılan `s.durum=acik`, `hepsi`),
+  `PUT …/:id {durum: acik|cozuldu, yanit}`. Durum server.ts'deki `learnFeedback` deposundan yazılır (önbellek tutarlı); yanıt iç nottur
+  (`data/learn_feedback_yanit.json`), öğrenciye gönderilmez. SSE `learn_feedback_changed`. `/topluluk/geri-bildirim/<id>` çekmeceyi açar.
+- **Sistem › Hat** (`Hat.tsx`, sekmeler `/asamalar|dersler|eylemler|gunluk`): mevcut `/api/admin/hat`, `/hat/dersler`, `/hat/eylemler`, `/hat/gece`.
+  hat.json salt okunur. Ders eylemleri ve gece hattı Claude kullanır → `onayIste({yazilacak:'BASLAT'})` + sunucu `onay:true` (kural 20).
+- **Sistem › Drive** (`Drive.tsx`): `GET /api/admin/sistem/drive` (ayar, son tarama, öğrenci envanteri, okul kataloğu) ve `/drive/dosyalar`
+  (`s.kaynak=okul|ogrenci|tarama`, `s.kurul`). "Elle tara" = mevcut `POST /api/admin/drive/check-updates` (yalnız karşılaştırma, onaylı).
+- **Sistem › RAG indeksi** (`Rag.tsx`): `/api/rag/vectors/health` + `GET /api/admin/sistem/rag` (hat raporu, cron günlüğü, son elle iş).
+  `POST /api/admin/sistem/rag/denetle {onay:'DENETLE', kuru}` yalnız cihazda, `nice`, `CUDA_VISIBLE_DEVICES=""`; varsayılan `--kuru`.
+- **Sistem › Fazlar** (`Fazlar.tsx`, `/sistem/fazlar/<kategori>`): `GET /api/admin/sistem/fazlar/:kategori` (phaseDataExplorer → ListeYaniti;
+  `q` = explore `deger`), ayrıntı `GET /api/admin/phases/question/:id`. Salt okunur; elle düzeltme eski konsolda.
+- **Sistem › Bağlantılar** (`Baglantilar.tsx`): `GET /api/admin/sistem/baglanti` (ders başına çıkmış soru / slaytlı / Öğren bağlı / terimli)
+  ve `/baglanti/:ders` (`s.var=slayt|-slayt|ogren|-ogren|terim`). Faz verisi + çıkmış `discipline`'dan; 5 dk önbellek. Soru → `sorular/cikmis/<id>`.
+- İçerik kapısı: `/api/canli-ders/ara` sonuçları (`sonuc[].k`) öğrenciye kapalı sesli dersleri içermez (`icerikKapisi`, §8).

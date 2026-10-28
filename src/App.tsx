@@ -208,6 +208,21 @@ const manageKabugu = (): 'v16' | 'v14' => {
     return sessionStorage.getItem('medsoru_manage_kabuk') === 'v14' ? 'v14' : 'v16';
   } catch { return 'v16'; }
 };
+// Yönetim ayrı girişi (manage.html, 2026-10-28): uygulama içinden /manage'e geçince tam sayfa gezinmesi yapılır ki yönetim
+// kendi hafif girişiyle açılsın. Sunucu manage.html vermiyorsa (eski sunucu) döngüye girmemek için 10 sn içinde ikinci deneme yok.
+let yonetimGecisBasladi = false;
+const yonetimGirisineGec = (): boolean => {
+  if (yonetimGecisBasladi) return true;
+  try {
+    const k = 'medsoru_yonetim_gecis';
+    if (Date.now() - Number(sessionStorage.getItem(k) || 0) < 10_000) return false;
+    sessionStorage.setItem(k, String(Date.now()));
+    const p = window.location.pathname;
+    yonetimGecisBasladi = true;
+    window.location.assign(/^\/manage(\/|$)/.test(p) ? p + window.location.search : '/manage');
+    return true;
+  } catch { return false; }
+};
 const ManageConsole = React.lazy(() => wrapLazy(import('./components/manage/ManageConsole').then(m => ({ default: m.ManageConsole }))));
 const OfflineDatabaseModal = React.lazy(() => wrapLazy(import('./components/pwa/OfflineDatabaseModal').then(m => ({ default: m.OfflineDatabaseModal }))));
 const PwaInstallWelcomeModal = React.lazy(() => wrapLazy(import('./components/pwa/PwaInstallWelcomeModal').then(m => ({ default: m.PwaInstallWelcomeModal }))));
@@ -1631,9 +1646,11 @@ export default function App() {
         </>
       ) : activeTab === 'manage' || activeTab === 'admin' ? (
         isAdmin && activeTab === 'manage' && manageKabugu() === 'v16' ? (
-          <Suspense fallback={<ViewFallback />}>
-            <ManageV16 adminEmail={ADMIN_EMAIL} onExit={() => setActiveTab('quick_add')} />
-          </Suspense>
+          yonetimGirisineGec() ? <ViewFallback /> : (
+            <Suspense fallback={<ViewFallback />}>
+              <ManageV16 adminEmail={ADMIN_EMAIL} onExit={() => setActiveTab('quick_add')} />
+            </Suspense>
+          )
         ) : isAdmin || isModerator ? (
           <Suspense fallback={<ViewFallback />}>
             <ManageConsole

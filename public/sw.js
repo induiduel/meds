@@ -1,5 +1,7 @@
 // MeDSor Service Worker - PWA v8: Yüksek Hızlı Açılış, Optimize Edilmiş Bellek & Modül Parçalama
-const CACHE_VERSION = 'medsoru-pwa-v17';
+// v18 (2026-10-28, H131): eski SW /manage yanıtını (artık manage.html) '/' ve '/index.html' olarak önbelleğe yazabilir;
+// sürüm artışı etkinleşmede o önbelleği siler.
+const CACHE_VERSION = 'medsoru-pwa-v18';
 const STATIC_CACHE = `medsoru-static-${CACHE_VERSION}`;
 const RUNTIME_CACHE = `medsoru-runtime-${CACHE_VERSION}`;
 const DATA_CACHE = `medsoru-data-${CACHE_VERSION}`;
@@ -310,6 +312,10 @@ self.addEventListener('fetch', (event) => {
   if (req.mode === 'navigate' && url.pathname.startsWith('/k/')) return;
   // İndirilebilir PDF notlar (/pdf/*.pdf): kabuk verilmez ve yanıt '/index.html' olarak önbelleğe yazılmaz.
   if (req.mode === 'navigate' && url.pathname.startsWith('/pdf/')) return;
+
+  // Yönetim ayrı girişi (/manage → manage.html): yanıtı '/index.html' olarak önbelleğe yazmak öğrenci kabuğunu
+  // yönetim kabuğuyla ezerdi (H131). Yönetim çevrimiçi araçtır: ağdan gelir, önbelleğe yazılmaz.
+  if (req.mode === 'navigate' && /^\/(meds\/)?manage(\/|$)/.test(url.pathname)) return;
 
   if (req.mode === 'navigate') {
     event.respondWith(

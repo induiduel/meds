@@ -1281,3 +1281,29 @@ Her maddede: belirti · kök neden · Kurul 2 kuralı · kapı durumu. Kanıtlar
 - **Kök neden:** `contentOverlay.ts` panel yazımında dosyanın TAMAMINI `data/content/<rel>`'e kopyalıyor, `resolveContent` katman dosyası varsa kaynağa hiç bakmıyordu. 20.10'daki tek alanlık panel düzenlemeleri (yalnız `updatedAt`) 81 MB'lık deste kopyası bıraktı; sonraki tüm kaynak güncellemeleri (yeni desteler, sözlük terimleri, 44 güncellenen terim) gölgede kaldı. Dağıtım eşitlemesi de tam kopya varsayıyordu.
 - **Kalıcı çözüm:** Katman kayıt düzeyinde farktır: `data/content/<rel>.fark.json` (`kayitlar`, `silinen`, kaynaktaki kaydın sha'sı `taban`). Okuma = kaynak + fark (`_birlesik/<rel>` önbelleği). Yazıcılar tam dosyayı yine `writableContent` yoluna yazar; kilit bırakılınca birleşik tabana göre farka çevrilir. Eski kopyalar `scripts/icerik_katman.py goc` ile `_ids.json` izine göre farka çevrildi (yedek `data/_yedek/content_goc_*`). `content-overlay-sync.sh` farkı kayıt kayıt uygular, `taban` tutmazsa durur, tam kopya görürse durur.
 - **Önleme:** `python3 scripts/icerik_katman.py denetle` 0 HATA (tam kopya = HATA, birleşimde kaynak kaydı eksik = HATA). Katmana bütün dosya kopyalayan yeni yazıcı yazılmaz; başlangıç kopyası gerekiyorsa `resolveContent(file)` (birleşik) kopyalanır, ham kaynak değil.
+
+## H131 — Yönetim öğrenci uygulamasının ortak girişiyle açılıyordu; ayrı giriş + SW önbellek zehirlenmesi riski (2026-10-28, Yönetim v16)
+- **Belirti:** /manage ilk yükü 544 KB gzip JS + 152 KB gzip CSS (öğrenci App.tsx girişi, Tailwind index.css, splash, tüm kabuk yardımcıları); yönetim yavaş açılıyordu.
+- **Kök neden:** v16 kabuğu `App.tsx` içinde `React.lazy` ile açılıyordu; yönetim için ayrı Vite girişi yoktu, bu yüzden öğrenci girişinin statik içe aktardığı her şey önce iniyordu.
+- **Kalıcı çözüm:** `manage.html` + `src/manage-main.tsx` (yalnız adminFetchAuth, Firebase kimlik, palettes.ts tokenları, `styles/yonetim-temel.css`, kit, kabuk). `vite.config.ts` çoklu giriş; `server.ts` SPA geri dönüşü `/manage*` için `dist/manage.html`; geliştirmede `scripts/vite/yonetimGirisi.ts`. Yönetici değilse (moderatör) ya da `?kabuk=v14` ise `manage-main` tam uygulamayı (`import('./main')`) yükler. Uygulama içinden /manage'e geçiş (`App.tsx yonetimGirisineGec`) tam sayfa gezinmesi yapar (10 sn döngü koruması). Ölçüm: /manage 544+152 KB → 179+5 KB gzip; tarayıcıda 191 KB aktarım, FCP 164 ms.
+- **SW kuralı:** `public/sw.js` gezinme yanıtını `/` ve `/index.html` olarak da önbelleğe yazar; /manage artık farklı HTML döndürdüğünden yönetim gezinmesi SW'de atlanır (ağdan gelir) ve `CACHE_VERSION` v18'e çıktı (eski SW'nin bir kez zehirleyebileceği önbellek etkinleşmede silinir). **Önleme:** Sunucu bir yol için farklı HTML kabuğu döndürmeye başlarsa sw.js gezinme önbelleğinden o yol çıkarılır ve sürüm artırılır.
+
+## H131a — `/react-dom/` eşleşmesi react-dom/server'ı her sayfanın açılış parçasına sokuyordu (2026-10-28)
+- **Belirti:** `vendor-react` parçası 137 KB gzip (react + react-dom istemci ~60 KB olmalı); öğrenci ve yönetim açılışı gereksiz 70 KB taşıyordu.
+- **Kök neden:** `manualChunks` `includes('/react-dom/')` ile eşleşiyordu: yalnız PDF dışa aktarımında (`v15/dersPdfHtml.ts`) dinamik kullanılan `react-dom/server` ve `@floating-ui/react-dom` aynı açılış parçasına zorlanıyordu.
+- **Çözüm/kural:** Paket kökü düzenli ifadesi (`/node_modules/(react|react-dom|scheduler)/`) ve `react-dom/server|static` hariç. `vendor-react` 65,9 KB gzip; öğrenci açılışı 544 → 475 KB gzip. Elle parça gruplarken paket adı alt dize ile değil kök yolla eşlenir.
+
+## H131b — Kişiler listesi arka tazelemesi 2,5 sn olay döngüsünü kilitliyordu (2026-10-28)
+- **Belirti:** Panelde sayfa geçişlerinde ilgisiz istekler (people-access, basarim/kisiler, calisma-matris) aynı anda ~2 sn bekliyordu; tek başına çağrıldıklarında 5 ms.
+- **Kök neden:** `peopleInsights.buildList` kişi başına `contributions(p)` çağırıyordu: her kişi için bütün çıkmış/havuz soruları taranıyor ve `learn_feedback.json` + `ornek_soru_bildirimleri.jsonl` yeniden okunuyordu (≈900 kişi × 6.000 soru). SWR liste her istekte arka planda yeniden hesaplandığından eşzamanlı her yönetim isteği bekliyordu.
+- **Çözüm:** `contributionCountsAll(ps)` tek geçişte kimlik/ad dizinleriyle sayar (eşleşme kuralları birebir; 895 kişide sayılar önce/sonra aynı). `/api/admin/people` 2,5 sn → 0,05–0,15 sn. **Kural:** kişi × veri kümesi döngüsü yazılmaz; ters dizin bir kez kurulur.
+
+## H131c — v16 kabuğu her alt yol değişiminde sayfayı yeniden kuruyordu (2026-10-28)
+- **Belirti:** Satır çekmecesi açıp kapatınca liste baştan çekiliyor, kaydırma/sayfa kayboluyor, odak satıra değil `<main>`'e dönüyordu.
+- **Kök neden:** `ManageV16.git()` her çağrıda `gezinti` sayacını artırıyordu; sayfa `key`'i buna bağlı olduğundan alt yol (`/sorular/cikmis/<id>`) değişimi de yeniden bağlama demekti; ardından `<main>` odaklanıyordu.
+- **Çözüm/kural:** Aynı sayfa içinde yalnız alt yol değişirse sayfa yeniden kurulmaz, odak/kaydırma korunur (aynı adrese yeniden tıklama sıfırlar). Çekmece açma 1 istek (önce liste + ayrıntı).
+
+## H131d — Dar ekranda süzgeç çipleri tabloyu ekran dışına itiyordu; kesik süre hücreleri (2026-10-28)
+- **Belirti:** 375 px'te Çıkmış sayfasında süzgeçler (Ders ~40, Yıl ~20 seçenek) 1,5 ekran kaplıyordu; 1440 px'te Kişiler "7 gün/Çalışma" hücreleri "3 sa 14 …" diye kesiliyordu; dokunmatikte düğme/çip 22–30 px, iOS'ta 13,5 px girdiler odakta yakınlaştırıyordu.
+- **Kök neden:** `.m16-cip-grup` `flex-wrap: wrap`; sabit 80–96 px sütunlar "N sa M dk" biçimine dar; kit dokunmatik ölçüsü tanımlamıyordu.
+- **Çözüm/kural:** Her süzgeç grubu tek satır yatay kaydırılır (etiket sabit); süre sütunları ≥100 px, kesilen düz metin hücresi `title` taşır; `@media (pointer: coarse)` düğme/ara/girdi 40 px, çip 32 px, alan yazısı 16 px. Kısa değer (≤14 karakter) hücrede kesilmez — tarama betiği bunu denetler.

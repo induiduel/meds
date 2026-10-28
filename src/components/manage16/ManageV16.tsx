@@ -61,6 +61,8 @@ const Palet: React.FC<{ kapat: () => void; git: (yol: string) => void }> = ({ ka
     return [...sayfalar.slice(0, 40), ...kayit];
   }, [q, git]);
   useEffect(() => setI(0), [q]);
+  // Kapanınca odak paleti açan ögeye döner (gezinme olduysa içerik zaten odak alır)
+  useEffect(() => { const once = document.activeElement as HTMLElement | null; return () => { if (once?.isConnected && document.activeElement === document.body) once.focus(); }; }, []);
   const sec = (o?: PaletOge) => { if (!o) return; o.git(); kapat(); };
   return (
     <div className="m16-perde" onMouseDown={(e) => { if (e.target === e.currentTarget) kapat(); }}>
@@ -105,12 +107,20 @@ export const ManageV16: React.FC<{ adminEmail: string; onExit: () => void }> = (
   const git = useCallback((yol: string, o?: { degistir?: boolean }) => {
     const [p, qs] = yol.split('?');
     const url = `${manageAdres(p)}${qs ? `?${qs}` : ''}`;
+    const onceYol = window.location.pathname;
+    const onceSayfa = adresCoz(onceYol).sayfa.yol;
     if (o?.degistir) window.history.replaceState(window.history.state, '', url); else window.history.pushState(window.history.state, '', url);
     setKonum(window.location.pathname);
-    setGezinti((n) => n + 1);
     setMenuAcik(false);
-    icerikRef.current?.focus({ preventScroll: true });
-    window.scrollTo({ top: 0 });
+    // Aynı sayfa içinde alt yol değişimi (satır çekmecesi aç/kapa, sekme): sayfa yeniden kurulmaz, odak/kaydırma
+    // korunur. Eskiden her git() sayfayı yeniden bağlayıp listeyi baştan çekiyor, çekmece kapanınca odak satıra
+    // dönmeyip <main>'e gidiyordu (H131c). Farklı sayfa ya da aynı menü ögesine yeniden tıklama: sıfırla.
+    const ayniSayfa = adresCoz(window.location.pathname).sayfa.yol === onceSayfa;
+    if (!ayniSayfa || window.location.pathname === onceYol) {
+      setGezinti((n) => n + 1);
+      icerikRef.current?.focus({ preventScroll: true });
+      window.scrollTo({ top: 0 });
+    }
   }, []);
 
   // Eski adres yönlendirmesi

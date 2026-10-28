@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="tr" class="ui-v3 ui-v4 ui-v7" data-mode="light" data-palette="a">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>MeDSor Yönetim</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=9" />
+    <link rel="icon" type="image/png" sizes="64x64" href="/favicon.png?v=9" />
+    <meta name="theme-color" content="#F4F6F9" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" media="print" onload="this.media='all'" />
+    <script>
+      // Yönetim ayrı girişi (src/manage-main.tsx). Görünüm tercihi boyamadan önce (utils/appearance.ts ile aynı anahtar).
+      (function () {
+        try {
+          var d = document.documentElement, a = JSON.parse(localStorage.getItem('medsoru_appearance') || 'null');
+          var mode = a && (a.mode === 'light' || a.mode === 'sepia' || a.mode === 'dark') ? a.mode : (localStorage.getItem('medsoru_theme') === 'dark' ? 'dark' : 'light');
+          d.dataset.mode = mode;
+          d.dataset.palette = (a && a.palettes && a.palettes[mode]) || 'a';
+          if (mode === 'dark') d.classList.add('theme-dark');
+        } catch (e) {}
+      })();
+    </script>
+    <style>
+      html, body { margin: 0; }
+      body { background: #F4F6F9; }
+      html[data-mode="dark"] body { background: #0D1420; }
+      html[data-mode="sepia"] body { background: #F3ECDD; }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/manage-main.tsx"></script>
+  </body>
+</html>

@@ -20,8 +20,8 @@ export default function KisiIlerleme({ git }: SayfaProps) {
         ]}
         sutunlar={[
           { anahtar: 'ad', baslik: 'Kişi', sirala: true, genislik: 'minmax(180px,2fr)', hucre: (x) => <span className="m16-kisalt"><strong>{x.ad}</strong> <small style={{ color: 'var(--color-ink-3)' }}>{x.email}</small></span> },
-          { anahtar: 'sn', baslik: 'Toplam', sirala: true, genislik: '90px', hizala: 'sag', hucre: (x) => sureMetni(x.ozet.sn) },
-          { anahtar: 'haftaSn', baslik: '7 gün', sirala: true, genislik: '80px', hizala: 'sag', hucre: (x) => sureMetni(x.ozet.haftaSn) },
+          { anahtar: 'sn', baslik: 'Toplam', sirala: true, genislik: '100px', hizala: 'sag', hucre: (x) => sureMetni(x.ozet.sn) },
+          { anahtar: 'haftaSn', baslik: '7 gün', sirala: true, genislik: '100px', hizala: 'sag', hucre: (x) => sureMetni(x.ozet.haftaSn) },
           { anahtar: 'bitti', baslik: 'Bitti', sirala: true, genislik: '70px', hizala: 'sag', hucre: (x) => x.ozet.bitti },
           { anahtar: 'konu', baslik: 'Konu', sirala: true, genislik: '70px', hizala: 'sag', hucre: (x) => x.ozet.konu },
           { anahtar: 'modul', baslik: 'Modüller', genislik: 'minmax(160px,1fr)', hucre: (x) => <span style={{ display: 'flex', gap: 4, flexWrap: 'wrap' }}>{Object.entries(x.ozet.modul || {}).map(([m, s]) => <Rozet key={m}>{m} {sureMetni(s)}</Rozet>)}</span> },

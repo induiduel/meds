@@ -606,6 +606,64 @@ export function registerPeopleInsights(app: express.Express, deps: PeopleDeps) {
     return items;
   };
 
+  /**
+   * Liste için katkı SAYILARI, tek geçişte (H131b). `contributions(p)` kişi başına bütün çıkmış/havuz sorularını ve
+   * learn_feedback/jsonl dosyalarını yeniden tarıyordu: kişi × soru (≈ yüzlerce × 6.000) + kişi başı dosya okuma →
+   * buildList ~2,5 sn olay döngüsünü kilitliyor, liste her arka tazelemede bütün panel isteklerini bekletiyordu.
+   * Eşleşme kuralları contributions() ile birebir: güçlü kimlik (uid/e-posta) ya da kimliksizse ad; beğeni kimlikle.
+   */
+  const contributionCountsAll = (ps: Person[]): Map<Person, Record<string, number>> => {
+    const byId = new Map<string, Set<Person>>();
+    const byName = new Map<string, Set<Person>>();
+    const ekle = (m: Map<string, Set<Person>>, k: string, p: Person) => { let x = m.get(k); if (!x) m.set(k, (x = new Set())); x.add(p); };
+    for (const p of ps) { for (const id of p.ids) ekle(byId, id, p); for (const n of p.names) ekle(byName, n, p); }
+    const out = new Map<Person, Record<string, number>>();
+    const say = (set: Iterable<Person>, kind: string) => { for (const p of set) { let r = out.get(p); if (!r) out.set(p, (r = {})); r[kind] = (r[kind] || 0) + 1; } };
+    const kimlikle = (...ids: unknown[]) => {
+      const r = new Set<Person>();
+      for (const x of ids) { if (!x) continue; for (const k of [String(x), lc(x)]) byId.get(k)?.forEach((p) => r.add(p)); }
+      return r;
+    };
+    const adla = (n: unknown) => (n ? byName.get(lc(n)) || new Set<Person>() : new Set<Person>());
+    /** güçlü eşleşme; yoksa (kimliksiz kayıt için) ad eşleşmesi — contributions() ile aynı öncelik */
+    const sahip = (ids: unknown[], kimliksiz: boolean, ad: unknown) => {
+      const g = kimlikle(...ids);
+      if (!kimliksiz) return g;
+      const r = new Set(g); adla(ad).forEach((p) => r.add(p)); return r;
+    };
+    const begenen = (arr: unknown) => { const r = new Set<Person>(); for (const v of (Array.isArray(arr) ? arr : [])) byId.get(String(v))?.forEach((p) => r.add(p)); return r; };
+    for (const q of deps.getPastQuestions()) {
+      for (const c of q.comments || []) say(sahip([c.authorUid, c.authorEmail], !c.authorUid && !c.authorEmail, c.author), 'comment');
+      for (const r of q.reports || []) say(sahip([r.reporterUid, r.reporterEmail], !r.reporterUid && !r.reporterEmail, r.reportedBy), 'report');
+      say(begenen(q.likedBy), 'like');
+      say(begenen(q.dislikedBy), 'like');
+    }
+    for (const q of deps.getPoolQuestions()) {
+      say(sahip([q.contributedByUid, q.contributedByEmail], !q.contributedByUid, q.contributedByName), 'question');
+      for (const f of q.fragments || []) {
+        say(sahip([f.authorUid, f.authorEmail], !f.authorUid, f.author), 'fragment');
+        say(begenen(f.likedBy), 'like');
+      }
+      for (const o of q.options || []) {
+        say(sahip([o.suggestedByUid], !o.suggestedByUid, o.suggestedBy), 'option');
+        say(begenen(o.likedBy), 'like');
+      }
+      for (const r of q.reports || []) say(sahip([r.reporterUid, r.reporterEmail], !r.reporterUid && !r.reporterEmail, r.reportedBy), 'report');
+      say(begenen(q.likedBy), 'like');
+    }
+    for (const f of readJson<Any[]>(path.join(deps.dataDir, 'learn_feedback.json'), [])) {
+      say(sahip([f.author?.id], !f.author?.id, f.author?.name), 'report');
+      say(begenen(Object.keys(f.votes || {})), 'like');
+    }
+    try {
+      for (const l of fs.readFileSync(path.join(deps.dataDir, 'ornek_soru_bildirimleri.jsonl'), 'utf8').split('\n')) {
+        if (!l.trim()) continue;
+        try { const r = JSON.parse(l); say(sahip([r.reporterUid, r.reporterEmail], !r.reporterUid, r.reportedBy), 'report'); } catch { /* bozuk satır */ }
+      }
+    } catch { /* dosya yok */ }
+    return out;
+  };
+
   /** Öğren ortak katmanı + veritabanındaki oylar/cihazlar/olaylar */
   const dbFacts = async (p: Person, deviceIds: string[] = []) => {
     const ids = [...p.ids];
@@ -775,6 +833,7 @@ export function registerPeopleInsights(app: express.Express, deps: PeopleDeps) {
     }
     const now = Date.now();
     const claimed = new Set<string>();
+    const katkiSayilari = contributionCountsAll(ps);
     const rows = ps.map((p) => {
       const devs = devices.filter((d) => (d.uid && p.ids.has(d.uid)) || (d.email && p.ids.has(d.email)) || p.devs.has(d.device_id));
       devs.forEach((d) => claimed.add(d.device_id));
@@ -788,8 +847,8 @@ export function registerPeopleInsights(app: express.Express, deps: PeopleDeps) {
         const l = new Date(e.last).toISOString();
         if (l > lastEvent) lastEvent = l;
       }
-      const c = contributions(p);
-      const cnt = (k: string) => c.filter((x) => x.kind === k).length;
+      const sayilar = katkiSayilari.get(p) || {};
+      const cnt = (k: string) => sayilar[k] || 0;
       const lastSeen = [devs[0]?.last_seen ? new Date(devs[0].last_seen).toISOString() : '', sinceIso(p.backup), p.lastLoginAt || '', lastEvent].sort().pop() || null;
       const score = scoreSummary(p.backup);
       // Girişsiz yedek: bağlı cihazların hepsi bot/otomasyonsa o; hiç cihazı ve etkinliği yoksa boş kayıt

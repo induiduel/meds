@@ -173,6 +173,7 @@ import { denetimAraKatmani, registerDenetimRoutes } from './src/services/yonetim
 import { registerSiteAyarRoutes, bayrakKapisi, icerikKapisi } from './src/services/yonetim16/siteAyar.ts';
 import { registerOyunYonetimRoutes } from './src/services/yonetim16/oyunYonetim.ts';
 import { registerEkSayfa16Routes } from './src/services/yonetim16/ekSayfalar.ts';
+import { registerYonetimSistemEk } from './src/services/yonetim16/sistemEk.ts';
 import { registerSiteSurumRoutes } from './src/services/yonetim16/siteSurum.ts';
 import { registerOzetRoutes } from './src/services/yonetim16/ozet.ts';
 import { registerYonetimTopluluk } from './src/services/yonetim16/topluluk.ts';
@@ -11741,6 +11742,9 @@ registerIcerik16Routes(app, { rootDir: __dirname, dataDir: DATA_DIR, requireAdmi
 // Yönetim v16 › Taslaklar, Gizlilik talepleri, Quiz havuzu, Ses kuyruğu (src/services/yonetim16/ekSayfalar.ts)
 registerEkSayfa16Routes(app, { rootDir: __dirname, dataDir: DATA_DIR, requireAdmin, havuz: () => db.questions || [], broadcastAdmin: (ev, d) => broadcastRealtimeEvent(ev, d, true), dogrulanmisKisi: (req) => { const uid = verifiedUid(req); return uid ? { uid, email: verifiedEmail(req) } : null; } });
 
+// Yönetim v16 › Gelen, Geri bildirim, Drive, RAG, Fazlar, Bağlantılar (src/services/yonetim16/sistemEk.ts)
+registerYonetimSistemEk(app, { rootDir: __dirname, dataDir: DATA_DIR, port: PORT, requireAdmin, isPgOnline: () => pgOnline, faz14Liste: () => phase14Queue.read(), geriBildirim: learnFeedback as any, fazKok: stemOf, cikmisListe: () => getPastQuestionsDb(), broadcast: (ev, d) => broadcastRealtimeEvent(ev, d) });
+
 // Yönetim v16 › Topluluk + Sistem (src/services/yonetim16/{topluluk,sistem}.ts)
 registerYonetimTopluluk(app, { requireAdmin, isPgOnline: () => pgOnline, broadcast: (ev, d) => broadcastRealtimeEvent(ev, d), broadcastAdmin: (ev, d) => broadcastRealtimeEvent(ev, d, true), kimOf: (req) => verifiedEmail(req) || String((req as any).adminAuth?.via || 'yönetici') });
 registerYonetimSistem(app, {
@@ -12111,6 +12115,10 @@ async function startServer() {
         return res.status(404).send('Asset not found');
       }
       res.setHeader('Cache-Control', 'no-cache');
+      // Yönetim ayrı girişi (2026-10-28): /manage* öğrenci uygulamasının ortak girişini yüklemez (src/manage-main.tsx).
+      // ?kabuk=v14 (eski konsol) manage-main içinde tam uygulamaya düşer. manage.html yoksa (eski dist) index.html.
+      const yonetimHtml = path.resolve(__dirname, 'dist', 'manage.html');
+      if (/^\/(meds\/)?manage(\/|$)/.test(req.path) && fs.existsSync(yonetimHtml)) return res.sendFile(yonetimHtml);
       res.sendFile(path.resolve(__dirname, 'dist', 'index.html'));
     });
   }

@@ -242,11 +242,16 @@ export function VeriTablosu<T>(p: VeriTablosuProps<T>) {
                   {p.secim && (
                     <span role="cell" className="m16-hucre-sec"><input type="checkbox" aria-label="Satırı seç" checked={secili.has(id)} onChange={() => secimDegistir(id)} /></span>
                   )}
-                  {gorunen.map((s) => (
-                    <span key={s.anahtar} role="cell" className={`m16-hucre ${s.hizala ? `h-${s.hizala}` : ''}`}>
-                      {s.hucre ? s.hucre(t) : String((t as any)[s.anahtar] ?? '')}
-                    </span>
-                  ))}
+                  {gorunen.map((s) => {
+                    const icerik = s.hucre ? s.hucre(t) : String((t as any)[s.anahtar] ?? '');
+                    // Düz metin hücre kesilirse (…) tamamı imleçle okunabilsin
+                    const baslik = typeof icerik === 'string' || typeof icerik === 'number' ? String(icerik) : undefined;
+                    return (
+                      <span key={s.anahtar} role="cell" title={baslik && baslik.length > 8 ? baslik : undefined} className={`m16-hucre ${s.hizala ? `h-${s.hizala}` : ''}`}>
+                        {icerik}
+                      </span>
+                    );
+                  })}
                 </div>
               );
             })}

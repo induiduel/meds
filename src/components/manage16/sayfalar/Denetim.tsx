@@ -90,7 +90,7 @@ export default function Denetim(_p: SayfaProps) {
         ekSorgu={ekSorgu}
         sutunlar={[
           { anahtar: 'at', baslik: 'Zaman', sirala: true, genislik: '120px', hucre: (s) => <time dateTime={s.at} title={new Date(s.at).toLocaleString('tr-TR')}>{zamanMetni(s.at)}</time> },
-          { anahtar: 'yontem', baslik: 'İşlem', genislik: '96px', hucre: (s) => <Rozet ton={durumTonu(s.durum)}>{s.tur === 'okuma' ? 'OKUMA' : s.yontem} {s.durum}</Rozet> },
+          { anahtar: 'yontem', baslik: 'İşlem', genislik: '112px', hucre: (s) => <Rozet ton={durumTonu(s.durum)}>{s.tur === 'okuma' ? 'OKUMA' : s.yontem} {s.durum}</Rozet> },
           { anahtar: 'uc', baslik: 'Uç', sirala: true, genislik: 'minmax(220px,2fr)', hucre: (s) => <code>{s.uc}</code> },
           { anahtar: 'hedef', baslik: 'Hedef', genislik: 'minmax(120px,1fr)' },
           { anahtar: 'kim', baslik: 'Kim', sirala: true, genislik: 'minmax(140px,1fr)' },

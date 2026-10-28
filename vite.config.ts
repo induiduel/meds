@@ -8,6 +8,7 @@ import dotenv from 'dotenv';
 import { splitLearningDecks } from './scripts/vite/splitLearningDecks';
 import { surumDosyasi } from './scripts/vite/surumDosyasi';
 import { cevrimdisiManifest } from './scripts/vite/cevrimdisiManifest';
+import { yonetimGirisi } from './scripts/vite/yonetimGirisi';
 
 dotenv.config();
 
@@ -22,7 +23,7 @@ const firestoreAcik = /FIREBASE_DB_ENABLED\s*=\s*true/.test(
 export default defineConfig(({ mode }) => {
   return {
     base: process.env.VITE_BASE || '/',
-    plugins: [splitLearningDecks(__dirname), surumDosyasi(__dirname), cevrimdisiManifest(__dirname), react(), tailwindcss()],
+    plugins: [splitLearningDecks(__dirname), surumDosyasi(__dirname), cevrimdisiManifest(__dirname), yonetimGirisi(), react(), tailwindcss()],
     resolve: {
       alias: [
         ...(firestoreAcik ? [] : [{ find: /^firebase\/firestore$/, replacement: path.resolve(__dirname, 'src/services/firestoreKapali.ts') }]),
@@ -38,6 +39,8 @@ export default defineConfig(({ mode }) => {
       emptyOutDir: false,
       chunkSizeWarningLimit: 2500,
       rollupOptions: {
+        // Yönetim ayrı girişi (2026-10-28): /manage öğrenci uygulamasının ortak girişini yüklemez (src/manage-main.tsx)
+        input: { index: path.resolve(__dirname, 'index.html'), manage: path.resolve(__dirname, 'manage.html') },
         output: {
           chunkFileNames: 'assets/chunk-[name]-[hash].js',
           entryFileNames: 'assets/entry-[name]-[hash].js',
@@ -47,10 +50,11 @@ export default defineConfig(({ mode }) => {
 
             // 1. External Vendor Code Splitting
             if (normalized.includes('node_modules')) {
+              // Yalnız paket kökleri: '/react-dom/' eşleşmesi @floating-ui/react-dom'u ve react-dom/server'ı (yalnız PDF
+              // dışa aktarımında gereken ~75 KB gzip) her sayfanın açılış parçasına sokuyordu (H131a).
               if (
-                normalized.includes('/react/') ||
-                normalized.includes('/react-dom/') ||
-                normalized.includes('/scheduler/')
+                (/\/node_modules\/(react|react-dom|scheduler)\//.test(normalized)) &&
+                !/\/react-dom\/(server|cjs\/react-dom-server|static)/.test(normalized)
               ) {
                 return 'vendor-react';
               }
@@ -77,6 +81,7 @@ export default defineConfig(({ mode }) => {
             }
 
             // 2. Local Application Code Splitting (Local Chunklama)
+            if (normalized.endsWith('/src/data/bundledScripts.ts')) return 'admin-bundled-scripts';
             if (normalized.includes('/src/data/summaries/')) {
               const match = normalized.match(/kurul\d+/);
               if (match) {

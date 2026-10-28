@@ -49,7 +49,7 @@ export default function KisiErisim({ git }: SayfaProps) {
           )}
           sutunlar={[
             { anahtar: 'displayName', baslik: 'Hesap', genislik: 'minmax(200px,2fr)', sirala: true, deger: (x) => `${x.displayName} ${x.email} ${x.uid}`, hucre: (x) => <span className="m16-kisalt"><KisiBag anahtar={`u:${x.uid}`} git={git}><strong>{x.displayName || x.email}</strong></KisiBag> <small style={{ color: 'var(--color-ink-3)' }}>{x.email}</small></span> },
-            { anahtar: 'role', baslik: 'Rol', genislik: '110px', deger: (x) => x.role, hucre: (x) => <span><RolRozeti rol={x.role} />{x.isOwner && <Rozet ton="vurgu">sahip</Rozet>}</span> },
+            { anahtar: 'role', baslik: 'Rol', genislik: '150px', deger: (x) => x.role, hucre: (x) => <span style={{ display: 'inline-flex', gap: 4 }}><RolRozeti rol={x.role} />{x.isOwner && <Rozet ton="vurgu">sahip</Rozet>}</span> },
             { anahtar: 'suspended', baslik: 'Askı', genislik: 'minmax(140px,1fr)', deger: (x) => (x.suspended ? 1 : 0), sirala: true, hucre: (x) => (x.suspended ? <Rozet ton="kotu" title={x.suspension?.reason}>Askıda{x.suspension?.until ? ` · ${tarihMetni(x.suspension.until)}` : ''}</Rozet> : '—') },
             { anahtar: 'sessionsRevokedAt', baslik: 'Oturum kesildi', genislik: '120px', deger: (x) => x.sessionsRevokedAt || '', hucre: (x) => (x.sessionsRevokedAt ? zamanMetni(x.sessionsRevokedAt) : '—'), gizli: true },
             { anahtar: 'lastLoginAt', baslik: 'Son giriş', genislik: '110px', sirala: true, deger: (x) => x.lastLoginAt || '', hucre: (x) => (x.lastLoginAt ? zamanMetni(x.lastLoginAt) : '—') },

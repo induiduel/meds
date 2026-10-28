@@ -127,10 +127,14 @@ button.m16-istat:hover { border-color: var(--color-ink-3); }
 .m16-ara { flex: 1; min-width: 180px; max-width: 420px; display: flex; align-items: center; gap: 6px; height: 32px; padding: 0 8px; border: 1px solid var(--m16-cizgi); border-radius: 7px; background: var(--color-field, var(--m16-yuzey)); color: var(--color-ink-3); }
 .m16-ara input { flex: 1; min-width: 0; border: 0; background: transparent; font: inherit; color: var(--color-ink); outline: none; }
 .m16-ara button { all: unset; cursor: pointer; display: flex; }
-.m16-cipler { display: flex; flex-wrap: wrap; gap: 10px; }
-.m16-cip-grup { display: flex; flex-wrap: wrap; gap: 4px; align-items: center; }
+/* Her süzgeç grubu tek satır, yatay kaydırılır: çok seçenekli gruplar (Ders ~40, Yıl ~20) dar ekranda tabloyu
+   ekranın altına itiyordu (375 px'te süzgeçler 1,5 ekran). Etiket satır başında sabit. */
+.m16-cipler { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+.m16-cip-grup { display: flex; flex-wrap: nowrap; gap: 4px; align-items: center; overflow-x: auto; scrollbar-width: thin; min-width: 0; padding-bottom: 2px; overscroll-behavior-x: contain; }
+.m16-cip-grup > * { flex-shrink: 0; }
+.m16-cip-etiket { position: sticky; left: 0; z-index: 1; background: var(--m16-zemin); padding-right: 4px; }
 .m16-cip-etiket { font-size: 11.5px; color: var(--color-ink-3); margin-right: 2px; }
-.m16-cip { font: inherit; font-size: 12px; padding: 2px 9px; border-radius: 999px; border: 1px solid var(--m16-cizgi); background: var(--m16-yuzey); color: var(--color-ink-2); cursor: pointer; display: inline-flex; gap: 5px; }
+.m16-cip { font: inherit; font-size: 12px; padding: 2px 9px; white-space: nowrap; align-items: center; border-radius: 999px; border: 1px solid var(--m16-cizgi); background: var(--m16-yuzey); color: var(--color-ink-2); cursor: pointer; display: inline-flex; gap: 5px; }
 .m16-cip em { font-style: normal; color: var(--color-ink-3); font-variant-numeric: tabular-nums; }
 .m16-cip.on { background: var(--color-ink); border-color: var(--color-ink); color: var(--color-white); }
 .m16-cip.on em { color: inherit; opacity: .75; }
@@ -220,3 +224,16 @@ button.m16-istat:hover { border-color: var(--color-ink-3); }
 .m16-satirlar { display: grid; grid-template-columns: auto 1fr; gap: 6px 12px; margin: 0; }
 .m16-satirlar dt { color: var(--color-ink-3); }
 .m16-satirlar dd { margin: 0; text-align: right; font-variant-numeric: tabular-nums; }
+
+/* Dokunmatik: süzgeç çipleri ve küçük düğmeler parmakla vurulabilir boyda (≥32 px) */
+@media (pointer: coarse) {
+  .m16-cip { min-height: 32px; padding: 4px 11px; }
+  .m16-cip-grup { scrollbar-width: none; }
+  .m16-btn { height: 40px; }
+  .m16-btn.ikon { width: 40px; }
+  .m16-menu a { padding: 9px 8px; }
+  .m16-ust-ara { flex-basis: 40px; height: 40px; }
+  /* iOS Safari 16 px altındaki alana odaklanınca sayfayı yakınlaştırır */
+  .m16-girdi, .m16-ara input, .m16-palet input, .m16-kok select, .m16-kok textarea { font-size: 16px; }
+  .m16-ara, .m16-girdi { min-height: 40px; }
+}

@@ -244,7 +244,7 @@ export function bayrakKapisi(d: { isAdmin: (req: express.Request) => boolean; ku
  * Öğrenciye kapalı içeriği (site ayarı `gorunurluk`: ders/kurul/deste/sesli/paket) sunucuda da vermez. Kural istemciyle ortak:
  * `icerikGorunurlukKural.ts`. Yönetici her şeyi alır. Erken (rotalardan önce) app.use ile takılır.
  * - Tekil uç: `/api/canli-ders/:key[/…]`, `/api/canli-ders/ses/:key/…`, `/api/decks|ogren|interactive-decks/:id` → 403 { icerikKapali }.
- * - Liste: `/api/canli-ders` (dersler[].key), `/api/decks` (dizi ya da {decks}) — yanıt süzülür, ETag/304 kapatılır, önbellek `private`.
+ * - Liste: `/api/canli-ders` (dersler[].key), `/api/canli-ders/ara` (sonuc[].k), `/api/decks` (dizi ya da {decks}) — yanıt süzülür, ETag/304 kapatılır, önbellek `private`.
  * Önem/asistan/çözücü ve ders içerik paketi ön yüz paketindedir (sunucu ucu yok): süzme istemcide (services/siteAyar.ts::icerikGizli).
  */
 export function icerikKapisi(d: { isAdmin: (req: express.Request) => boolean }): express.RequestHandler {
@@ -252,6 +252,7 @@ export function icerikKapisi(d: { isAdmin: (req: express.Request) => boolean }):
   const TEK_DESTE = /^\/api\/(?:decks|ogren|interactive-decks)\/([^/]+)\/?$/;
   const LISTE_CANLI = /^\/api\/canli-ders\/?$/;
   const LISTE_DESTE = /^\/api\/(?:decks|ogren|interactive-decks)\/?$/;
+  const ARA_CANLI = /^\/api\/canli-ders\/ara\/?$/; // sesli ders arama sonuçları (sonuc[].k = sesli anahtarı)
   const OZEL = new Set(['ara', 'cikmis-dizin', 'video-is']);
   return (req, res, next) => {
     if (req.method !== 'GET' || !req.path.startsWith('/api/')) return next();
@@ -266,16 +267,16 @@ export function icerikKapisi(d: { isAdmin: (req: express.Request) => boolean }):
     if (m && !OZEL.has(decodeURIComponent(m[1]))) return tekil('sesli', decodeURIComponent(m[1]));
     m = req.path.match(TEK_DESTE);
     if (m) return tekil('deste', decodeURIComponent(m[1]));
-    const canliListe = LISTE_CANLI.test(req.path);
+    const canliListe = LISTE_CANLI.test(req.path) || ARA_CANLI.test(req.path);
     if (!canliListe && !LISTE_DESTE.test(req.path)) return next();
     if (d.isAdmin(req)) { res.setHeader('Vary', 'Authorization, x-panel-secret'); return next(); }
     const tur: IcerikTur = canliListe ? 'sesli' : 'deste';
-    const acik = (x: any) => !x || typeof x !== 'object' || (() => { const id = String(x.key ?? x.id ?? ''); return !id || icerikDurumu(g, tur, id) === 'acik'; })();
+    const acik = (x: any) => !x || typeof x !== 'object' || (() => { const id = String(x.key ?? x.id ?? x.k ?? ''); return !id || icerikDurumu(g, tur, id) === 'acik'; })();
     const suz = (body: any) => {
       if (Array.isArray(body)) return body.filter(acik);
       if (body && typeof body === 'object') {
         const out = { ...body };
-        for (const k of ['dersler', 'decks', 'items']) if (Array.isArray(out[k])) out[k] = out[k].filter(acik);
+        for (const k of ['dersler', 'decks', 'items', 'sonuc']) if (Array.isArray(out[k])) out[k] = out[k].filter(acik);
         return out;
       }
       return body;

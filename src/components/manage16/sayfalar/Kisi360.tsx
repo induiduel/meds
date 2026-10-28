@@ -103,7 +103,7 @@ function Cihazlar({ d, yenile }: { d: any; yenile: () => void }) {
         { anahtar: 'platform', baslik: 'Platform', genislik: '120px', deger: (x) => `${x.platform} ${x.browser}`, hucre: (x) => `${x.platform || ''} ${x.browser || ''}` },
         { anahtar: 'first_seen', baslik: 'İlk', genislik: '110px', sirala: true, deger: (x) => x.first_seen, hucre: (x) => tarihMetni(x.first_seen) },
         { anahtar: 'last_seen', baslik: 'Son', genislik: '110px', sirala: true, deger: (x) => x.last_seen, hucre: (x) => zamanMetni(x.last_seen) },
-        { anahtar: 'active_seconds', baslik: 'Süre', genislik: '80px', hizala: 'sag', sirala: true, deger: (x) => x.active_seconds, hucre: (x) => sureMetni(x.active_seconds) },
+        { anahtar: 'active_seconds', baslik: 'Süre', genislik: '100px', hizala: 'sag', sirala: true, deger: (x) => x.active_seconds, hucre: (x) => sureMetni(x.active_seconds) },
         { anahtar: 'sessions', baslik: 'Oturum', genislik: '70px', hizala: 'sag', deger: (x) => x.sessions },
         { anahtar: 'last_path', baslik: 'Son sayfa', genislik: 'minmax(120px,1fr)', gizli: true },
         { anahtar: 'eylem', baslik: '', genislik: '70px', hucre: (x) => <button className="m16-btn hayalet" onClick={(e) => { e.stopPropagation(); void unut(x.device_id); }}>Unut</button> },
@@ -189,7 +189,7 @@ function Calisma({ anahtar, d, yenile }: { anahtar: string; d: any; yenile: () =
           { anahtar: 'modul', baslik: 'Modül', genislik: '80px', deger: (k) => k.modul, hucre: (k) => <Rozet>{k.modul}</Rozet> },
           { anahtar: 'konu', baslik: 'Konu', genislik: 'minmax(200px,2fr)', deger: (k) => k.konu },
           { anahtar: 'durum', baslik: 'Durum', genislik: '90px', deger: (k) => k.durum || '', hucre: (k) => (k.durum ? <Rozet ton={k.durum === 'bitti' ? 'iyi' : k.durum === 'tekrar' ? 'bilgi' : 'notr'}>{k.durum}{k.adm ? ' ·y' : ''}</Rozet> : '—') },
-          { anahtar: 'sn', baslik: 'Süre', genislik: '80px', hizala: 'sag', sirala: true, deger: (k) => k.sn, hucre: (k) => sureMetni(k.sn) },
+          { anahtar: 'sn', baslik: 'Süre', genislik: '100px', hizala: 'sag', sirala: true, deger: (k) => k.sn, hucre: (k) => sureMetni(k.sn) },
           { anahtar: 'soru', baslik: 'Soru', genislik: '60px', hizala: 'sag', sirala: true, deger: (k) => k.soru },
           { anahtar: 'sonAt', baslik: 'Son', genislik: '110px', sirala: true, deger: (k) => k.sonAt || '', hucre: (k) => (k.sonAt ? zamanMetni(k.sonAt) : '—') },
         ]}

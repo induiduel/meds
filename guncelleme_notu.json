@@ -1,12 +1,11 @@
 {
  "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
- "onem": 538,
- "baslik": "İçerik görünürlüğü ve yönetim temizliği",
+ "onem": 539,
+ "baslik": "Yönetim paneli tamamlandı",
  "maddeler": [
-  "Panelden kapatılan ders, kurul ve desteler öğrenciden gizleniyor",
-  "Yeni yönetim sayfaları: serbest girdiler, taslaklar, gizlilik talepleri, kanallar, quiz havuzu, ses kuyruğu",
-  "Eski işlevsiz yönetim bölümleri kaldırıldı",
-  "İçerik katmanı yalnız farkları tutuyor"
+  "Yönetim paneli ayrı ve hafif açılıyor (ilk yük 3 kat küçük)",
+  "Gelen kutusu, geri bildirim, hat, Drive, RAG, fazlar ve bağlantılar sayfaları eklendi",
+  "Kişi listesi anında açılıyor, öğrenci sitesi de daha hafif"
  ],
  "eklenen": [],
  "degisen": [],

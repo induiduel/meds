@@ -43,7 +43,7 @@ export const MENU: GrupTanim[] = [
   {
     id: 'genel', etiket: 'Genel bakış', sayfalar: [
       { yol: '', etiket: 'Genel bakış', ikon: LayoutDashboard, oncelik: 'P0', aciklama: 'Sağlık, etkin kullanıcı, bekleyen işler, son denetim kayıtları.', yukle: () => import('./sayfalar/GenelBakis') },
-      { yol: 'gelen', etiket: 'Gelen', ikon: Inbox, oncelik: 'P0', aciklama: 'Şikâyet, geri bildirim, tüyo, taslak: tek bekleyen kuyruğu.', v14Slug: 'gelen-kutusu' },
+      { yol: 'gelen', etiket: 'Gelen', ikon: Inbox, oncelik: 'P0', aciklama: 'Şikâyet, geri bildirim, tüyo, taslak: tek bekleyen kuyruğu.', v14Slug: 'gelen-kutusu', anahtar: 'bekleyen şikâyet geri bildirim hata gizlilik faz14 tüyo', yukle: () => import('./sayfalar/GelenKutusu') },
     ],
   },
   {
@@ -122,7 +122,7 @@ export const MENU: GrupTanim[] = [
       { yol: 'topluluk/kanal', etiket: 'Yorumlar ve kanallar', ikon: Radio, oncelik: 'P1', anahtar: 'yorum kanal moderasyon', yukle: () => import('./sayfalar/Kanallar') },
       { yol: 'topluluk/arkadaslik', etiket: 'Arkadaşlık', ikon: UserPlus, oncelik: 'P2', yukle: () => import('./sayfalar/Arkadaslik') },
       { yol: 'topluluk/not', etiket: 'Paylaşılan notlar', ikon: StickyNote, oncelik: 'P2', yukle: () => import('./sayfalar/PaylasilanNotlar') },
-      { yol: 'topluluk/geri-bildirim', etiket: 'Geri bildirim', ikon: MessageCircleHeart, oncelik: 'P1', v14Slug: 'veri-katalogu' },
+      { yol: 'topluluk/geri-bildirim', etiket: 'Geri bildirim', ikon: MessageCircleHeart, oncelik: 'P1', v14Slug: 'veri-katalogu', anahtar: 'öğren hata bildirimi learn feedback', yukle: () => import('./sayfalar/GeriBildirim') },
     ],
   },
   {
@@ -137,16 +137,16 @@ export const MENU: GrupTanim[] = [
       { yol: 'sistem/saglik', etiket: 'Sağlık', ikon: HeartPulse, oncelik: 'P0', v14Slug: 'sistem', anahtar: 'servis bellek embed sse', yukle: () => import('./sayfalar/Saglik') },
       { yol: 'sistem/llm', etiket: 'LLM işleri', ikon: Bot, oncelik: 'P0', v14Slug: 'bekleyen-islemler', anahtar: 'faz14 onarım kilit', yukle: () => import('./sayfalar/LlmIsleri') },
       { yol: 'sistem/isler', etiket: 'Betikler', ikon: Terminal, oncelik: 'P1', v14Slug: 'betikler', yukle: () => import('./sayfalar/Betikler') },
-      { yol: 'sistem/hat', etiket: 'Hat', ikon: GitBranch, oncelik: 'P1', v14Slug: 'hat' },
+      { yol: 'sistem/hat', etiket: 'Hat', ikon: GitBranch, oncelik: 'P1', v14Slug: 'hat', anahtar: 'hat.json aşama ders zinciri gece', yukle: () => import('./sayfalar/Hat') },
       { yol: 'sistem/db', etiket: 'Veritabanı gezgini', ikon: Database, oncelik: 'P0', v14Slug: 'veritabani-gezgini', anahtar: 'pg sql tablo', yukle: () => import('./sayfalar/VeritabaniGezgini') },
       { yol: 'sistem/yedek', etiket: 'Yedek', ikon: HardDriveDownload, oncelik: 'P1', v14Slug: 'veritabani', anahtar: 'içe aktar dışa aktar reset tehlikeli', yukle: () => import('./sayfalar/Yedek') },
       { yol: 'sistem/denetim', etiket: 'Denetim kaydı', ikon: ScrollText, oncelik: 'P0', yukle: () => import('./sayfalar/Denetim') },
       { yol: 'sistem/hata', etiket: 'İstemci hataları', ikon: AlertTriangle, oncelik: 'P0', anahtar: 'hata tarayıcı', yukle: () => import('./sayfalar/IstemciHatalari') },
       { yol: 'sistem/dagitim', etiket: 'Dağıtım bilgisi', ikon: Tag, oncelik: 'P1', anahtar: 'commit sürüm onem', yukle: () => import('./sayfalar/Dagitim') },
-      { yol: 'sistem/drive', etiket: 'Drive', ikon: CloudCog, oncelik: 'P2', v14Slug: 'otomasyon' },
-      { yol: 'sistem/rag', etiket: 'RAG indeksi', ikon: Network, oncelik: 'P2' },
-      { yol: 'sistem/fazlar', etiket: 'Fazlar', ikon: FlaskConical, oncelik: 'P2', v14Slug: 'fazlar' },
-      { yol: 'sistem/baglanti', etiket: 'Bağlantılar', ikon: Link2, oncelik: 'P2', v14Slug: 'kisayollar' },
+      { yol: 'sistem/drive', etiket: 'Drive', ikon: CloudCog, oncelik: 'P2', v14Slug: 'otomasyon', anahtar: 'tarama envanter pdf', yukle: () => import('./sayfalar/Drive') },
+      { yol: 'sistem/rag', etiket: 'RAG indeksi', ikon: Network, oncelik: 'P2', anahtar: 'vektör bge embed denetle', yukle: () => import('./sayfalar/Rag') },
+      { yol: 'sistem/fazlar', etiket: 'Fazlar', ikon: FlaskConical, oncelik: 'P2', v14Slug: 'fazlar', anahtar: 'faz kazanım slayt varlık', yukle: () => import('./sayfalar/Fazlar') },
+      { yol: 'sistem/baglanti', etiket: 'Bağlantılar', ikon: Link2, oncelik: 'P2', v14Slug: 'kisayollar', anahtar: 'ders çıkmış terim slayt öğren bağ', yukle: () => import('./sayfalar/Baglantilar') },
     ],
   },
 ];
