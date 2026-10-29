@@ -1,11 +1,9 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 592,
-  "baslik": "Daha hızlı ve hafif site",
+  "onem": 593,
+  "baslik": "Sesli ders listesi daha hızlı açılıyor",
   "maddeler": [
-    "Site açıkken arka planda çalışan gereksiz işler azaltıldı; telefon ve bilgisayarda pil, işlemci ve internet daha az harcanıyor.",
-    "Sesli dersin zamanlayıcısı yalnız ses çalarken çalışıyor; sekme arka plandayken bakım denetimi yapılmıyor.",
-    "Sayfa açılışındaki tekrar eden istekler kaldırıldı; hata bildirimleri yönetici incelemesine sırayla düşüyor."
+    "Sesli ders listesi ve ana sayfa artık bekletmeden açılıyor (sunucudaki liste hesabı 1 saniyeden birkaç milisaniyeye indi)."
   ],
   "eklenen": [],
   "degisen": [],

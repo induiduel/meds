@@ -76,6 +76,22 @@ const oku = <T,>(p: string, bos: T): T => {
     return bos;
   }
 };
+/**
+ * Salt okunur kayıt defterleri (dersler.json, kayit.json, sinama.json, dersler/kN.json) için boyut+mtime önbelleği.
+ * `/api/canli-ders` eskiden her derste 810 KB'lık kayit.json'u baştan ayrıştırıyordu (153 ders → istek başına ~1,2 sn,
+ * her açılışta). Dönen nesne paylaşılır: DEĞİŞTİRİLMEZ; yazacak kod `oku` ile taze kopya alır.
+ */
+const sabitOnbellek = new Map<string, { imza: string; v: unknown }>();
+const okuSabit = <T,>(p: string, bos: T): T => {
+  let imza = '';
+  try { const st = fs.statSync(p); imza = `${st.size}:${st.mtimeMs}`; } catch { return bos; }
+  const o = sabitOnbellek.get(p);
+  if (o && o.imza === imza) return o.v as T;
+  const v = oku<T | undefined>(p, undefined);
+  if (v === undefined) return bos;
+  sabitOnbellek.set(p, { imza, v });
+  return v;
+};
 const anahtarGecerli = (k: unknown): k is string => typeof k === 'string' && /^(?:y25-)?k\d+-\d+-[a-z0-9-]+$/.test(k);
 const vidGecerli = (v: unknown): v is string => typeof v === 'string' && /^[a-z0-9-]+$/.test(v);
 
@@ -85,7 +101,7 @@ const vidGecerli = (v: unknown): v is string => typeof v === 'string' && /^[a-z0
  * `?sinama=1` ile (güncel + sınama) okur. Kural: { etiket, brans: [...], kurulMin, anahtarlar: [...] }.
  */
 type SinamaKonfig = { etiket?: string; brans?: string[]; kurulMin?: number; anahtarlar?: string[] };
-const sinamaKonfig = (): SinamaKonfig => oku<SinamaKonfig>(path.join(process.cwd(), 'data', 'sinama.json'), {});
+const sinamaKonfig = (): SinamaKonfig => okuSabit<SinamaKonfig>(path.join(process.cwd(), 'data', 'sinama.json'), {});
 const sinamaEtiketi = (): string => sinamaKonfig().etiket || 'SINAMA — test verisi';
 const sinamaMi = (d: Ders): boolean => {
   if (arsivMi(d.key) || d.donem === '2025-2026') return false;
@@ -96,14 +112,14 @@ const sinamaMi = (d: Ders): boolean => {
   return c.brans.includes(b.brans) && b.kurul >= (c.kurulMin ?? 1);
 };
 const dersler = (donem?: string, sinamaDahil = false): Ders[] => {
-  if (donem === '2025-2026') return oku<Ders[]>(P.arsivDersler, []);
-  if (donem === 'hepsi') return [...oku<Ders[]>(P.dersler, []), ...oku<Ders[]>(P.arsivDersler, [])];
-  const guncel = oku<Ders[]>(P.dersler, []);
+  if (donem === '2025-2026') return [...okuSabit<Ders[]>(P.arsivDersler, [])];
+  if (donem === 'hepsi') return [...okuSabit<Ders[]>(P.dersler, []), ...okuSabit<Ders[]>(P.arsivDersler, [])];
+  const guncel = okuSabit<Ders[]>(P.dersler, []);
   if (donem === 'sinama') return guncel.filter(sinamaMi);
-  return sinamaDahil ? guncel : guncel.filter((d) => !sinamaMi(d));
+  return sinamaDahil ? [...guncel] : guncel.filter((d) => !sinamaMi(d));
 };
 const dersBul = (key: string): Ders | undefined =>
-  (arsivMi(key) ? oku<Ders[]>(P.arsivDersler, []) : oku<Ders[]>(P.dersler, [])).find((x) => x.key === key);
+  (arsivMi(key) ? okuSabit<Ders[]>(P.arsivDersler, []) : okuSabit<Ders[]>(P.dersler, [])).find((x) => x.key === key);
 
 /*
  * Ders (branş) ve branş içi numara. Kaynak: dersin slayt PDF'inin Drive yolu (hizalama › dosyalar[0].path,
@@ -159,7 +175,7 @@ function bransBilgisi(d: Ders): { brans: string; bransNo: number | string; kurul
   // numarası çakışabiliyor (Kurul 1: Meme Kanseri ile Memenin Benign ikisi de 33) — KURUL2_YAPILMAYACAK_HATALAR H16.
   const dk = /^(?:y25-)?k([2-6])-(\d{2})/.exec(d.key);
   if (dk) {
-    const kd = oku<{ dersler?: { id: string; kod: string; brans: string }[] }>(path.join(process.cwd(), 'src', 'data', 'dersler', `k${dk[1]}.json`), {});
+    const kd = okuSabit<{ dersler?: { id: string; kod: string; brans: string }[] }>(path.join(process.cwd(), 'src', 'data', 'dersler', `k${dk[1]}.json`), {});
     const r = kd.dersler?.find((x) => x.id === `k${dk[1]}-${dk[2]}`);
     const no = Number(/(\d+)$/.exec(r?.kod || '')?.[1]);
     if (r && no) return { brans: r.brans, bransNo: no, kurul };
@@ -182,7 +198,7 @@ function bransBilgisi(d: Ders): { brans: string; bransNo: number | string; kurul
 }
 /** Kayıtlı ve dosyası diskte olan varyantlar (ilki varsayılan). */
 function varyantlar(key: string): KayitVaryant[] {
-  const k = oku<Record<string, KayitVaryant[]>>(P.kayit(arsivMi(key)), {});
+  const k = okuSabit<Record<string, KayitVaryant[]>>(P.kayit(arsivMi(key)), {});
   return (k[key] || []).filter((v) => vidGecerli(v.id) && fs.existsSync(P.ses(key, v.id)));
 }
 /** surum: dosyanın değiştirilme zamanı — ses onarılınca/yeniden üretilince adres değişsin (aynı bayt boyutu olsa bile). */
