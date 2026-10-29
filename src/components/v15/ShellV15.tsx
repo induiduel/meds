@@ -38,6 +38,7 @@ import { useReviewCounts } from '../../hooks/useReviewCounts';
 import { useAppFullscreen } from '../../utils/fullscreen';
 import { OfflineStatusBadge } from '../pwa/OfflineStatusBadge';
 import ArkaPlanGosterge from './ArkaPlanGosterge';
+import AsistanPanel from '../asistan/AsistanPanel';
 import { GuncellemeSimgesi } from '../system/UpdatePrompt';
 import { SearchPalette } from '../search/SearchPalette';
 import { Sheet } from '../ui/Sheet';
@@ -129,9 +130,9 @@ const Avatar: React.FC<{ user: AppUser | null; size?: number }> = ({ user, size 
   </span>
 );
 
-const Badge: React.FC<{ n?: number; label: string }> = ({ n, label }) =>
+const Badge: React.FC<{ n?: number; label: string; title?: string }> = ({ n, label, title }) =>
   n ? (
-    <span className="v15-badge">
+    <span className="v15-badge" title={title}>
       <span aria-hidden="true">{n > 99 ? '99+' : n}</span>
       <span className="sr-only">, {n} {label}</span>
     </span>
@@ -299,7 +300,7 @@ export const SideNavV15: React.FC<SideNavProps> = ({ active, onGo, isAdmin, user
                 <button type="button" className="v15-nav-a v15-grp-b" aria-expanded={ac} aria-current={on ? 'true' : undefined} onClick={() => grupDegis(g.id)}>
                   <Icon strokeWidth={on ? 2.1 : 1.8} aria-hidden="true" />
                   <span className="v15-nav-t">{g.label}</span>
-                  <Badge n={rozet} label="bekleyen iş" />
+                  <Badge n={rozet} label="tekrarı gelen hata" title={`Öğren hata defterinde bugün tekrarı gelen ${rozet} soru var — Öğren > Tekrar`} />
                   <ChevronRight className="v15-grp-ok" aria-hidden="true" />
                 </button>
                 {ac && (
@@ -406,6 +407,7 @@ export const TopBarV15: React.FC<TopBarProps> = ({ active, onGo, user, isAdmin, 
       <div className="v15-top-tools">
         <OfflineStatusBadge onClick={() => onOpenOffline?.()} isAdmin={isAdmin} className="v15-ofb" />
         <ArkaPlanGosterge />
+        <AsistanPanel />
         <GuncellemeSimgesi className="v15-ib" />
         <button type="button" className="v15-search" onClick={() => setSearch(true)} aria-label="Ara ( / ya da Ctrl+K )">
           <Search aria-hidden="true" />

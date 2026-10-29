@@ -1,9 +1,10 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 577,
-  "baslik": "Dış ajan dersleri: sesli metin yazımı",
+  "onem": 578,
+  "baslik": "Güncelleme bildirimi artık başlıkta",
   "maddeler": [
-    "Dış ajan derslerinde kısaltmalar yazımla tutulur, okunuşu ses katmanı üretir."
+    "Yeni sürüm olunca açılır pencere çıkmaz; üst çubuktaki ✦ simgesi görünür, dokununca notlar ve güncelle düğmesi açılır.",
+    "Menüdeki kırmızı sayı, Öğren hata defterinde bugün tekrarı gelen soruları gösterir; üzerine gelince açıklaması çıkar."
   ],
   "eklenen": [],
   "degisen": [],

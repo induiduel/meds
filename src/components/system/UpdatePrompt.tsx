@@ -11,8 +11,8 @@ declare const __MEDS_ONEM__: number;
  * Önemli güncelleme diyaloğu: /api/surum (dist/surum.json) açık sekmeninkinden büyük bir önem sayısı bildirince
  * "Siteyi güncelle" diyaloğu açılır; Güncelle → bekleyen SW etkinleşir, sayfa yeni sürümle yenilenir.
  * Önem sayısı guncelleme_notu.json'dan gelir (yalnız önemli güncellemede artırılır); küçük derlemeler diyalog açmaz.
- * Biriken güncelleme sayısı = sunucu önemi − sekmenin önemi. 2+ birikmişse diyalog kendiliğinden açılır; yalnız 1 ise
- * diyalog açılmaz, üst çubukta GuncellemeSimgesi görünür (dokununca aynı diyalog). Durum modül deposundadır: diyalog
+ * Biriken güncelleme sayısı = sunucu önemi − sekmenin önemi. Diyalog HİÇBİR durumda kendiliğinden açılmaz (2026-10-29 kararı);
+ * üst çubukta GuncellemeSimgesi görünür, yalnız dokununca diyalog açılır. Durum modül deposundadır: diyalog
  * ayrı React kökünde, simge kabukta olsa da aynı bilgiyi okur.
  * Kendiliğinden açılan diyalog her önem sayısı için bu cihazda YALNIZ BİR KEZ sorulur (GORULDU_KEY, cihaza özel, profil eşitlemesine girmez):
  * "Sonra" ya da "Güncelle" sonrası aynı sürüm için diyalog bir daha açılmaz — yenileme önbellekten eski paketi
@@ -102,12 +102,8 @@ const UpdatePrompt: React.FC = () => {
       const b = await sunucuSurumu();
       if (iptal || !b || b.onem <= ONEM || b.surum === SURUM) return;
       yay({ bilgi: b }); // üst çubuk simgesi her durumda görünür
-      if (birikmis(b) < 2 || b.onem <= goruldu()) {
-        // Tek güncelleme ya da daha önce sorulmuş: diyalog açma, yalnız arka planda hazırla
-        if (!indirildi) { indirildi = true; sessizIndir(); }
-        return;
-      }
-      yay({ acik: true });
+      // Diyalog kendiliğinden AÇILMAZ (kullanıcıyı bölmez): yalnız üst çubuk ✦ simgesi görünür, yeni sürüm arka planda iner
+      if (!indirildi) { indirildi = true; sessizIndir(); }
     };
     const ilk = window.setTimeout(denetle, 20_000);
     const aralik = window.setInterval(denetle, ARALIK_MS);
