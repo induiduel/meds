@@ -44,7 +44,7 @@ def main() -> int:
     with tempfile.NamedTemporaryFile("w", suffix=".md", delete=False, encoding="utf8") as t:
         t.write(md)
     print("--- METİN (metin_denetle, sitenin gerçek ses denetimi) ---")
-    r = subprocess.run([sys.executable, "-I", str(D.parents[1] / "sesli_anlatim" / "metin_denetle.py"), t.name], capture_output=True, text=True)
+    r = subprocess.run([sys.executable, "-I", str(D.parents[1] / "sesli_anlatim" / "metin_denetle.py"), "--yazim", t.name], capture_output=True, text=True)
     print("\n".join(l for l in (r.stdout + r.stderr).splitlines() if "HATA" in l or "Traceback" in l or "Error" in l) or "GEÇTİ: 0 HATA")
     if r.returncode:
         kod = 1

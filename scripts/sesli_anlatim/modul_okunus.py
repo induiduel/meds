@@ -16,8 +16,11 @@ MODUL_ANAHTARLAR = {"k1-70-tbg-sinav-kampi", "k1-59-immunofarmakoloji-v2"}  # V2
 SON_PROVA = re.compile(r"^k\d+-\d+-(son-prova|blok-ozet)-")  # Son Prova partları da modül yazımıyla (BRCA1, IL-6) yazılır
 
 
+AJANLI = re.compile(r"^k\d+-\d+-ag-[a-z0-9]{2,12}$")  # dış ajan dersleri (AGENTS kural 24): metin yazımla, okunuşu EMA katmanı yapar (H23)
+
+
 def modul_mu(anahtar: str) -> bool:
-    return anahtar in MODUL_ANAHTARLAR or bool(SON_PROVA.match(anahtar))
+    return anahtar in MODUL_ANAHTARLAR or bool(SON_PROVA.match(anahtar)) or bool(AJANLI.match(anahtar))
 
 UZUN = {"A": "aa", "B": "bee", "C": "cee", "Ç": "çee", "D": "dee", "E": "ee", "F": "fee", "G": "gee", "H": "haa", "I": "ıı",
         "İ": "ii", "J": "jee", "K": "kaa", "L": "lee", "M": "mee", "N": "nee", "O": "oo", "Ö": "öö", "P": "pee", "R": "ree",

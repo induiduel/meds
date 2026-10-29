@@ -143,8 +143,7 @@ def main() -> int:
         mk_set = kokler(metin)
         if mk_set and len(ortak_k) / len(mk_set) < 0.30:
             hata.append(f"[URETIM-08] {kim}: cümle bağlı kanıtla konu bakımından örtüşmüyor (%{100*len(ortak_k)//max(1,len(mk_set))}). Yapılacak: doğru kanıtı bağla ya da cümleyi kanıtın söylediğine indir.")
-        # Kısaltma/gen sembolü: sitenin gerçek hattı (metin_denetle, --yazim YOK) büyük harfli kısaltmayı HATA sayar; okunuşla yazılır.
-        # Okunuş UYDURULMAZ: okunus_oner.py çıktısı AYNEN yazılır ("hoks de on üç", "o te iks iki"). Benzer ama farklı yazım = uydurma.
+        # Kısaltma/gen sembolü (H23): metin PDF yazımıyla tutulur (HOXD13); okunuşu EMA katmanı yapar. Okunuşla yazmak HATA.
         def iskelet(x: str) -> str:
             return re.sub(r"[aeıioöuü0-9]", "", katla(x).replace("x", "ks"))
         kn_kelime = set(re.findall(r"[a-z0-9]+", katla(kn)))
@@ -156,13 +155,10 @@ def main() -> int:
             sk = iskelet(tok)
             if len(sk) < 3:
                 continue
-            if re.search(r"\b" + re.escape(tok) + r"\b", metin, re.I):  # Hox/hOX gibi karma yazım da (sese yanlış gider)
-                hata.append(f"[URETIM-15] {kim}: '{tok}' büyük harfle yazılmış; sitenin ses denetimi bunu reddeder. Yapılacak: okunuşla yaz → «{beklenen}» (okunus_oner.py).")
-                continue
             ilk = katla(beklenen).split(" ")[0]
             anmis = ilk in mk_cumle.split() or any(iskelet(w) and (iskelet(w) == sk or sk.startswith(iskelet(w))) and len(iskelet(w)) >= 3 and katla(w) not in kn_kelime for w in re.findall(r"[a-zçğıöşü]{3,}", metin.lower()))
-            if anmis and (" " + katla(beklenen) + " ") not in mk_cumle:
-                hata.append(f"[URETIM-15] {kim}: «{tok}» için okunuş uydurulmuş ya da eksik. Yapılacak: AYNEN «{beklenen}» yaz (python3 scripts/tam_hat/dis_ajan/okunus_oner.py {tok}).")
+            if anmis or (" " + katla(beklenen) + " ") in mk_cumle:
+                hata.append(f"[URETIM-15] {kim}: «{tok}» okunuşla yazılmış. Yapılacak: PDF yazımıyla yaz ({tok}); okunuşu EMA katmanı (modul_okunus.py) üretir (H23).")
         if turkce_uslup:
             for h in turkce_uslup.denetle(metin, kim):
                 hata.append(f"[URETIM-09] {h}. Yapılacak: doğal, düz Türkçeyle yeniden yaz.")

@@ -1,9 +1,9 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 576,
-  "baslik": "Yönetici onaylı dış ajan dersleri",
+  "onem": 577,
+  "baslik": "Dış ajan dersleri: sesli metin yazımı",
   "maddeler": [
-    "Dış ajanların ürettiği dersler ayrı anahtarla saklanır ve yönetici onaylayana dek öğrenciye görünmez."
+    "Dış ajan derslerinde kısaltmalar yazımla tutulur, okunuşu ses katmanı üretir."
   ],
   "eklenen": [],
   "degisen": [],

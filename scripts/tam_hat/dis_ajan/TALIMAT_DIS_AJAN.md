@@ -102,7 +102,7 @@ Bölüm dosyalarından **ders metni** `metin.md`'de birleştirilir: `# Başlık`
 | URETIM-09 | Çeviri mecaz / iç etiket | Doğal, düz Türkçeyle yaz |
 | URETIM-10 | Dolgu / kaçamak cümle | Cümleyi sil ya da yeni bilgi taşıyan cümleyle değiştir |
 | URETIM-14 | (uyarı) ardışık cümleler aynı sözcüklerle başlıyor | Cümleleri çeşitlendir ya da birleştir |
-| URETIM-15 | Kısaltma büyük harfle ya da uydurma okunuşla yazılmış | `okunus_oner.py` çıktısını AYNEN yaz (§4b) |
+| URETIM-15 | Kısaltma okunuşla yazılmış (yazım kalmalı) | PDF yazımıyla yaz, okunuş yazma (§4b, H23) |
 | TANIM-01…08 | Tanım cümlesi kuralı ihlali | §4c |
 | URETIM-12 | Cümlede paragraf numarası (`p`) yok | Her cümleye `p` ver |
 | URETIM-13 | Paragraf bağlamsız zamirle başlıyor | Konuyu adıyla anarak başlat |
@@ -191,15 +191,13 @@ Bölüm dosyalarından **ders metni** `metin.md`'de birleştirilir: `# Başlık`
 
 ### E6 — Yayın ve rapor (§8–§10)
 
-## 4b. Sesli okunuş — YALNIZ sesli anlatım metni (`metin.md`); soru/çözücü/deste ekran metninde PDF yazımı kalır — sitenin gerçek hattı (yayınlanmış k2-08 dersi ve `metin_denetle.py` ile doğrulandı)
-Metin EMA ile seslendirilir ve sitenin ses denetimi (`metin_denetle.py`, `--yazim` YOK) **büyük harfli kısaltmayı HATA sayar**: kısaltma ve gen/protein sembolleri
-**doğal Türkçe okunuşla** yazılır, sayılar yazıyla: `HOXD13` → «hoks de on üç», `OTX2` → «o te iks iki», `MSX1` → «me se iks bir», `HOX` → «hoks».
-- **Okunuşu UYDURMA.** Her kısaltma için `python3 -I scripts/tam_hat/dis_ajan/okunus_oner.py <KISALTMA>` çalıştır, çıktıyı AYNEN yaz. Kapı URETIM-15, kanıttaki kısaltmanın okunuşu araç çıktısından farklıysa (ör. «otiks», «dê on üç») ya da kısaltma büyük harfle yazılmışsa durdurur.
-- **Karma yazım da kısaltmadır:** kaynakta «Hox», «Otx», «Pax» gibi küçük harfli yazılmış gen adı da sese gider; bunlar da `okunus_oner.py` çıktısıyla yazılır, aynı metinde «Hox» ile «hoks» karışmaz (kapı bunu yakalamaz, sen tutarlı ol).
-- Araç çıktısı sana yanlış geliyorsa (ör. tanınmış bir kelime gibi okunan bir gen) kendin değiştirme; kullanıcıya sor.
-- Yunan harfi ve simge (%, →, ↑) yazıyla (alfa, yüzde…). Yalın sayılar yazıyla (`sekiz`, `beş`); sayı kapısı yazıyla yazılmış sayıyı da kanıttaki rakamla karşılaştırır.
-- Bölüm kapısı (`bolum_kontrol.py`) bu denetimi kendisi çalıştırır; tüm metin için: `python3 scripts/sesli_anlatim/metin_denetle.py $W/metin.md` (`--yazim` kullanma).
-- Not (kullanıcıya açık soru): H23 defteri «kısaltmayı yazımla tut» diyor, yayınlanmış k2-08 ve gerçek hat okunuşla yazıyor; burada gerçek hat uygulanır.
+## 4b. Sesli metin yazımı (H23, kullanıcı kararı) — metin.md PDF yazımıyla yazılır, okunuşu EMA katmanı üretir
+`metin.md` kısaltma ve gen/protein sembollerini **PDF'teki yazımıyla** tutar: `HOXD13`, `OTX2`, `IL-2`. **Okunuşla yazma** («hoks de on üç», «o te iks iki» YASAK): ajanlı ders anahtarı (`<ders>-ag-<etiket>`) `modul_okunus.py` yoluna bağlıdır, EMA'ya giden metinde okunuşu o katman üretir.
+- Kapı URETIM-15: kanıttaki kısaltma metinde okunuşla (ya da okunuşa benzer uydurma yazımla) geçerse durdurur; PDF yazımıyla yaz.
+- Sayı, Yunan harfi ve simge (%, →, ↑) kısaltma DEĞİLDİR: yine yazıyla yazılır (`sekiz`, `alfa`, `yüzde`). Kısaltmanın içindeki rakam (HOXD13) yazım olarak kalır.
+- Aynı gen aynı yazımla: «Hox» ile «HOX» karışmaz (kapı yakalamaz, tutarlı ol). Küçük harfli karma yazım (`Hox`) EMA katmanında dönüşmeyebilir; sese yanlış gidiyorsa kullanıcıya bildir, okunuşla yazarak çözme.
+- Denetim `metin_denetle.py --yazim` ile yapılır (`bolum_kontrol.py` kendisi çalıştırır); tüm metin için: `python3 scripts/sesli_anlatim/metin_denetle.py --yazim $W/metin.md`.
+- Soru/çözücü/deste ekran metninde de PDF yazımı kalır (değişmez).
 
 ## 4c. Tanım cümlesi — anlatımı öğretici kılmak, ama müfredatın içinde kalarak
 Kanıt zinciri yalnız slaytta yazanı söyler; slaytın kullandığı ama açıklamadığı terim için dinleyiciye kısa bir tanım verebilirsin. Bu **sınırlı** bir istisnadır:
@@ -285,4 +283,4 @@ kaynak dışı bilgi eklemek zorunda kalıyorsun • kapı eşiğini değiştirm
 kendi kapılarının hiçbiri hatayı göstermiyor ama içeriğin doğruluğundan emin değilsin.
 
 ## Hoca profili (2026-10-29, AGENTS.md madde 26)
-Önem/anlatım/örnek soru yazmadan önce `docs/HOCA_USLUBU_YONTEMI.md` oku ve `python3 scripts/hoca_profili/profil_oku.py --ders "<ders>" --konu "<konu>"` çalıştır; örnek soruları `profil_kapisi.py` kapısından geçir. Kanıtsız satıra "önemli" deme.
+Önem/anlatım/örnek soru yazmadan önce `docs/HOCA_USLUBU_YONTEMI.md` oku ve `python3 scripts/hoca_profili/profil_oku.py --ders "<ders>" --konu "<konu>"` çalıştır; örnek soruları `profil_kapisi.py` kapısından geçir. Kanıtsız satıra "önemli" deme. Önem/çıkabilecek yer listesi için ayrıca `meds/.venv-ocr/bin/python scripts/hoca_profili/tahmin_girdisi.py <ders.md> --ders "<ders adı>" --konu "<konu>" --cikti $W/hoca_tahmin` çalıştırılır (not.md + profil.md + adaylar.md üretir; ilk satırdaki K kadar tahmin `docs/HOCA_TAHMIN_REHBERI.md` v6 ile yazılır, `kanit: profil` + gerekçe).
