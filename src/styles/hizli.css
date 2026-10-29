@@ -1,0 +1,19 @@
+/* TV / performans modu (services/hizliMod.ts → :root.hm-hizli, TV'de ek .hm-tv).
+   Pahalı boyamalar kapanır: bulanık cam, büyük gölgeler, geçişler. Sonsuz döngülü canlandırmalar (yükleniyor
+   dönmesi) korunur; tek seferlik giriş canlandırmaları anında biter. */
+:root.hm-hizli *,
+:root.hm-hizli *::before,
+:root.hm-hizli *::after {
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
+  transition-duration: 0s !important;
+  transition-delay: 0s !important;
+  scroll-behavior: auto !important;
+}
+:root.hm-hizli { scroll-behavior: auto !important; }
+
+/* TV: kumandayla odak her zaman görünür, dokunma hedefleri ve yazı büyük */
+:root.hm-tv :focus-visible { outline: 3px solid var(--accent, #3b82f6) !important; outline-offset: 2px; }
+:root.hm-tv { font-size: 112.5%; }

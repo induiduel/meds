@@ -1,11 +1,11 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 579,
-  "baslik": "Sıralama ekranı yenilendi",
+  "onem": 580,
+  "baslik": "TV modu ve Performans modu",
   "maddeler": [
-    "Sıralama artık yedi ölçüyle: puan, çalışma, soru, bitirilen konu, oyun, hücre ve başarım.",
-    "Üstte ölçü kartları, altında tek kartta kimlerle ve zaman aralığı; sıranı ve bir üst sıraya kalan farkı gösteren kart eklendi.",
-    "Oyun rekorların hesabına eşitleniyor; oyun sıralamasında oyun türüne göre süzebilirsin."
+    "Site bir TV'de açılınca TV modu kendiliğinden açılır: doğrudan sesli dersler gelir, PDF hızlı çizilir, kumanda odağı belirgin olur.",
+    "Ayarlar › Görünüm'de yeni Performans modu: yan özellikler ve ağır efektler kapanır, sesli ders ve soru çözücü daha hızlı açılır.",
+    "İki modda da ders PDF'leri bir kez iner ve cihazda kalır; sonraki açılış beklemeden olur."
   ],
   "eklenen": [],
   "degisen": [],

@@ -52,6 +52,7 @@ import {
 import { findPalette, palettesFor } from '../../utils/palettes';
 import { AvatarCropper } from '../ui/AvatarCropper';
 import { Row, Section, Segmented, Switch } from '../ui/kit';
+import { performansModu, performansModuAyarla, tvModu, tvModuAyarla } from '../../services/hizliMod';
 import { toast } from '../ui/Toast';
 import { NotesSyncRow } from './NotesSyncRow';
 import { UserDataSyncRow } from './UserDataSyncRow';
@@ -332,6 +333,20 @@ const ProfileSettingsClassic: React.FC<Props> = ({ currentUser, isAdmin, questio
                 <span>Açılan içerik (açıklama, kart, menü bölümü) ekran dışında kalırsa görünür alana getirir.</span>
               </span>
               <Switch label="Açılan öğeye otomatik kaydır" checked={autoReveal} onChange={(on) => { setAutoReveal(on); setAutoRevealEnabled(on); }} />
+            </div>
+            <div className="ayr-row">
+              <span className="ayr-row-t">
+                <b>Performans modu</b>
+                <span>Sesli ders, soru çözücü ve PDF'e odaklanır: yan özellikler ve ağır efektler kapanır, PDF'ler cihazda tutulur, açılış hızlanır. Sayfa yeniden yüklenir.</span>
+              </span>
+              <Switch label="Performans modu" checked={performansModu()} onChange={performansModuAyarla} />
+            </div>
+            <div className="ayr-row">
+              <span className="ayr-row-t">
+                <b>TV modu</b>
+                <span>TV'de kendiliğinden açılır. Sesli dersler listesiyle başlar, kumanda tuşları çalışır, PDF düşük çözünürlükte hızlı çizilir.</span>
+              </span>
+              <Switch label="TV modu" checked={tvModu()} onChange={tvModuAyarla} />
             </div>
           </div>
         </section>

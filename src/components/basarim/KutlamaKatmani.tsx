@@ -3,6 +3,7 @@
  * Efekt seçilebilir (kilitle açılır): konfeti (varsayılan), mitoz (hücreler bölünerek dağılır), ATP sentaz (dönen rotordan
  * fırlayan ATP molekülleri). En üst seviye ödüllerde altın halka + ışın. Hareket azaltma tercihinde parçacık yok.
  */
+import { hizliMod } from '../../services/hizliMod';
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
 import { kutlamaKapat, kutlamalariAtla, sayi, useBasarim, type Odul } from '../../services/basarimIstemci';
@@ -183,7 +184,8 @@ export function KutlamaKatmani() {
     const t = window.setInterval(() => setErtele(etkinEkranda()), 1000);
     return () => window.clearInterval(t);
   }, [kuyrukVar]);
-  const o = ertele ? undefined : kutlama[0];
+  // TV / performans modunda kutlama katmanı (konfeti, odak çalma) gösterilmez; puan yine yazılır
+  const o = ertele || hizliMod() ? undefined : kutlama[0];
   const dugme = useRef<HTMLButtonElement>(null);
   const bilgi = useMemo(() => {
     if (!o) return null;

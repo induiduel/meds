@@ -10,6 +10,7 @@
  *    tuvaller bırakılır (telefon belleği). Yakınlaştırmada eski tuval yeni çizim bitene kadar ölçeklenerek kalır.
  *  - Metin katmanı (seçme/kopyalama) yalnız görünür sayfalarda kurulur.
  */
+import { hizliMod, hizliPdfVerisi, performansModu, tvModu } from '../../../services/hizliMod';
 import React, { memo, useCallback, useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { CizimLayer, type CizimKomut } from './CizimLayer';
 import * as pdfjs from 'pdfjs-dist';
@@ -188,11 +189,13 @@ function kaydir(el: HTMLElement, hedef: number, yumusak: boolean) {
   kaydirAnim.set(el, requestAnimationFrame(adim));
 }
 const PAD = 12;
+// TV: büyük ekran ama zayıf işlemci/GPU → tuval 1×; performans modu 1,5×
+const DPR_TAVAN = tvModu() ? 1 : performansModu() ? 1.5 : 2;
 // Telefon/az bellekli cihaz: her tuval GPU belleğinde piksel × 4 bayt tutar; yakınlaştırmada 12 MP × 10 tuval
 // (~500 MB) telefonda GPU sürecini düşürüp ekranı simsiyah bırakıyordu. Orada tuval tavanı ve tutulan sayfa az.
 const LOW_END =
   typeof window !== 'undefined' &&
-  (window.matchMedia?.('(pointer: coarse)').matches || ((navigator as any).deviceMemory ?? 8) <= 4);
+  (tvModu() || window.matchMedia?.('(pointer: coarse)').matches || ((navigator as any).deviceMemory ?? 8) <= 4);
 const MAX_CANVAS_PX = LOW_END ? 3_000_000 : 12_000_000; // iOS tuval sınırının altında
 const KEEP = LOW_END ? 1 : 4; // görünür aralığın dışında tutulacak çizili sayfa
 const MAX_PRELOAD = LOW_END ? 2 : Infinity; // ön çizim (preload) tavanı
@@ -246,8 +249,13 @@ export default function PdfDocView({ src, page, highlight, highlightLabel = 'Bu 
     // Range chunk boyutu: 256 KB. İlk sayfa ve xref tablosu anında gelir.
     // disableAutoFetch: true — PDF.js arka planda tüm 10-50 MB'lık dosyayı indirmeye çalışıp
     // ağ hattını ve ilk sayfa çizimini kilitlemesin; yalnızca görünen/istenen sayfaların chunk'larını çeksin.
-    const task = pdfjs.getDocument({
-      url: src,
+    // Hızlı mod (TV/performans): PDF tek istekle iner ve cihazda kalır; sonraki açılış ağsız (hizliMod.ts)
+    const kaynak = hizliMod() ? hizliPdfVerisi(src).then((data) => (data ? { data } : { url: src })) : Promise.resolve({ url: src });
+    let task: ReturnType<typeof pdfjs.getDocument> | null = null;
+    void kaynak.then((k) => { if (!dead) baslat(k); });
+    const baslat = (k: { url: string } | { data: Uint8Array }) => {
+    const t = pdfjs.getDocument({
+      ...k,
       rangeChunkSize: 256 * 1024,
       disableAutoFetch: true,
       disableStream: true,
@@ -259,10 +267,11 @@ export default function PdfDocView({ src, page, highlight, highlightLabel = 'Bu 
       cMapPacked: true,
     });
     let opened = false; // açıldıktan sonraki parça indirmeleri yükleme katmanını geri getirmesin
-    task.onProgress = ({ loaded, total }: { loaded: number; total: number }) => {
+    task = t;
+    t.onProgress = ({ loaded, total }: { loaded: number; total: number }) => {
       if (!dead && !opened && total) setProgress(Math.min(99, Math.round((loaded / total) * 100)));
     };
-    task.promise.then(
+    t.promise.then(
       async (d) => {
         if (dead) return void d.destroy();
         const first = await d.getPage(1);
@@ -281,10 +290,11 @@ export default function PdfDocView({ src, page, highlight, highlightLabel = 'Bu 
         cb.current.onError?.(err?.name === 'PasswordException' ? 'PDF parolalı.' : err?.message || 'PDF açılamadı.');
       },
     );
+    };
     return () => {
       dead = true;
       for (const s of slots.current.values()) s.task?.cancel();
-      task.destroy();
+      task?.destroy();
     };
   }, [src]);
 
@@ -358,7 +368,7 @@ export default function PdfDocView({ src, page, highlight, highlightLabel = 'Bu 
           return next;
         });
         const vp = pg.getViewport({ scale, rotation: (pg.rotate + r) % 360 });
-        const dpr = Math.min(window.devicePixelRatio || 1, 2);
+        const dpr = Math.min(window.devicePixelRatio || 1, DPR_TAVAN);
         const out = Math.min(dpr, Math.sqrt(MAX_CANVAS_PX / (vp.width * vp.height)));
         const canvas = document.createElement('canvas');
         canvas.width = Math.floor(vp.width * out);
@@ -713,7 +723,7 @@ function PdfThumbs({ doc, getPage, dims, rot, current, onPick, izgara = null }: 
           drawn.current.set(n, rot);
           getPage(n).then(async (pg) => {
             const vp1 = pg.getViewport({ scale: 1, rotation: (pg.rotate + rot) % 360 });
-            const dpr = Math.min(window.devicePixelRatio || 1, 2);
+            const dpr = Math.min(window.devicePixelRatio || 1, DPR_TAVAN);
             const vp = pg.getViewport({ scale: (THUMB_W / vp1.width) * dpr, rotation: (pg.rotate + rot) % 360 });
             const c = document.createElement('canvas');
             c.width = Math.floor(vp.width);

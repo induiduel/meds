@@ -51,10 +51,15 @@ import { pwaService } from './services/pwaService';
 import { offlineDatabaseService } from './services/offlineDatabaseService';
 import { arkaPlanPushKur } from './services/arkaPlanPush';
 import { cevrimdisiGibi, sunucuyaUlasilir } from './services/cevrimdisi/baglanti';
+import { hizliMod, hizliModuKur } from './services/hizliMod';
+import { prefetchRoute } from './routePrefetch';
+import './styles/hizli.css';
 
 // Yönetici oturumundaki API isteklerine Firebase jetonu (sunucu x-admin-email'e güvenmez; src/services/adminAuth.ts)
 installAdminFetchAuth();
 // Görünen adres katmanı (siteHaritasi): eski biçimli adresler ve history yazımları iç içe adrese çevrilir
+// TV / performans modu: <html> sınıfları, TV'de ana sayfa → sesli dersler (adres katmanından önce)
+hizliModuKur();
 adresKatmaniniKur();
 applyTheme(readTheme());
 applyUiVersion();
@@ -71,7 +76,7 @@ if (typeof window !== 'undefined') {
     void caches.has('medsoru-cd-bekleyen').then((v) => { if (v) return import('./components/canliDers/canliDersCevrimdisi').then((m) => m.cdBekleyenleriTamamla()); }).catch(() => {});
   }
   // Çevrimdışı merkezi: yarım kalan indirmeler sürer, çevrimdışı moddaysa uygulama ve ders güncellemeleri iner (services/cevrimdisi)
-  window.setTimeout(() => { void import('./services/cevrimdisi/paketMotoru').then((m) => m.cevrimdisiBaslat()).catch(() => {}); }, 2500);
+  if (!hizliMod()) window.setTimeout(() => { void import('./services/cevrimdisi/paketMotoru').then((m) => m.cevrimdisiBaslat()).catch(() => {}); }, 2500);
 }
 
 // Klavye açılıp kapanırken görsel alanı izle: katmanlar --vvh ile kısalır,
@@ -112,16 +117,22 @@ installToastBridge();
 installNetworkBanner();
 installUpdatePrompt();
 installBakimEkrani();
-installPullToRefresh();
 installNotesSync();
 // Günlük önce kurulur: sekme gizlenince önce son ziyaret yazılır, sonra eşitleme gönderir
 installEtkinlikGunlugu();
 installUserDataAutoBackup();
-installPresence();
-prefetchIdle();
-installAutoReveal();
-installSelectionShare();
 installStudyTimer();
+if (hizliMod()) {
+  // TV / performans modu: yan kurulumlar yok; yalnız sesli ders ve çözücü kodu önden iner
+  prefetchRoute('canli_ders');
+  window.setTimeout(() => { prefetchRoute('soru_cozucu'); prefetchRoute('cikmis_cozucu'); }, 1500);
+} else {
+  installPullToRefresh();
+  installPresence();
+  prefetchIdle();
+  installAutoReveal();
+  installSelectionShare();
+}
 installKabukBayraklari();
 
 // Auto reload on stale Vite chunk after a new deployment
