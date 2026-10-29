@@ -1,10 +1,9 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 575,
-  "baslik": "Ders sayfası: \"Hoca soruları\" kartı ve sesli hoca çözücü",
+  "onem": 576,
+  "baslik": "Yönetici onaylı dış ajan dersleri",
   "maddeler": [
-    "Soru çöz bölümünde ayrı \"Hoca soruları\" kartı: hocanın üslubunda 51 soru, şık şık açıklamalı (Örnek sorulardan ayrı).",
-    "\"Sesli hoca çözücü\": sorular EMA sesiyle okunur; ipucu, yanlışı ele ve çözümü dinle düğmeleri çalışır."
+    "Dış ajanların ürettiği dersler ayrı anahtarla saklanır ve yönetici onaylayana dek öğrenciye görünmez."
   ],
   "eklenen": [],
   "degisen": [],

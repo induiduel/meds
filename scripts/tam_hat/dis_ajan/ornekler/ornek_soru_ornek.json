@@ -1,0 +1,76 @@
+{
+ "id": "k2-01-norolojik-hastaya-yaklasim",
+ "sira": 1,
+ "kurul": 1,
+ "ders": "Nöroloji",
+ "konu": "Nörolojik Hastaya Yaklaşım",
+ "kazanimlar": [
+  {
+   "no": 1,
+   "metin": "Anamnezin tanıdaki yerini, hastanın kullandığı sözcüklerin (uyuşma, ağrı, sıkıntı) anlamını sorgulamayı ve öykünün kaynağını açıklar.",
+   "sorular": [
+    {
+     "id": "k2-01-norolojik-hastaya-yaklasim-q01",
+     "kazanim": 1,
+     "zorluk": "kolay",
+     "soru": "Merritt'in sözüne göre hastayı dinledikten sonra nesi olduğunu anlamayan hekim, muayene ettikten sonra ne yaşar?",
+     "secenekler": {
+      "A": "Muayene bulgularıyla tanıyı kolayca koyar",
+      "B": "EEG ile tanıyı doğrular",
+      "C": "Yine de anlayamaz",
+      "D": "BT ve MR ile öykünün eksiğini tamamlar",
+      "E": "Sevk yazısı yazarak sorunu çözer"
+     },
+     "dogru": "C",
+     "aciklama": "Merritt'in sözü, anamnezin muayenenin yerine geçemeyeceğini anlatır: öykü anlaşılmadıysa muayeneden sonra da anlaşılmaz (sayfa 2).",
+     "sik_aciklamalari": {
+      "A": "Muayene, öykü alındıktan sonra yapılan değerlendirmedir. Merritt'in sözü, öyküde anlaşılmayan tablonun muayeneyle de anlaşılmayacağını söyler; bu yüzden muayeneden kolay tanı beklenmez (sayfa 2).",
+      "B": "EEG, epilepsi bağlamında anılan bir laboratuvar incelemesidir ve normal olması epilepsiyi dışlamaz. Merritt'in sözü öykünün anlaşılmasıyla ilgilidir; EEG öykünün eksikliğini kapatmaz (sayfa 4).",
+      "C": "Merritt'e göre öykü anlaşılmadıysa muayene bu eksikliği kapatmaz. Hekim muayene ettikten sonra da hastanın nesi olduğunu anlayamaz; bu söz anamnezin tanıdaki öncelikli yerini vurgular (sayfa 2).",
+      "D": "BT ve MR, migren ve trigeminal nevraljide tanının doğru olduğunu göstermek için çekilir. Öykünün eksikliğini kapatmak için değil, öyküyle konan tanıyı doğrulamak için kullanılırlar (sayfa 4).",
+      "E": "Tanı konulamayan hasta nöroloji kliniğine gönderilir ve sevk yazısı bu aşamada hazırlanır (sayfa 9). Öykü anlaşılmadığında önerilen ilk adım ise Holmes'a göre hastayı yeniden dinlemektir (sayfa 4); yazı bu anlaşılmazlığı gidermez."
+     },
+     "bilgi": [
+      2
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 2,
+      "alinti": "Hastayı dinledikten sonra nesi olduğunu anlamadıysanız muayene ettikten sonra da anlamayacaksınız"
+     }
+    },
+    {
+     "id": "k2-01-norolojik-hastaya-yaklasim-q07",
+     "kazanim": 1,
+     "zorluk": "kolay",
+     "soru": "Hastanın kullandığı «uyuşma» sözcüğü hangi iki yakınmayı anlatıyor olabilir?",
+     "secenekler": {
+      "A": "Duyu kusurunu ya da kuvvet kaybını",
+      "B": "Diplopiyi ya da vertigoyu",
+      "C": "Afaziyi ya da dizartriyi",
+      "D": "Paraplejiyi ya da sfinkter bozukluğunu",
+      "E": "Akut başlangıcı ya da sinsi başlangıcı"
+     },
+     "dogru": "A",
+     "aciklama": "Uyuşma duyu kusurunu da kuvvet kaybını da anlatabilir (sayfa 2).",
+     "sik_aciklamalari": {
+      "A": "Uyuşma sözcüğü hasta tarafından hem duyu kusuru hem kuvvet kaybı için kullanılabilir. Hekim hangisi olduğunu sorularla ayırır (sayfa 2). Hekimin ilk işi, hastanın bu sözcükle neyi anlattığını sorarak yakınmayı netleştirmektir.",
+      "B": "Diplopi çift görme, vertigo baş dönmesidir. Bunlar uyuşma sözcüğüyle anlatılmaz ve beyin sapı lezyonunun bulgularındandır (sayfa 6). Diplopi, çift görmedir ve vertigo, piramidal bulgu ve serebellar bulguyla birlikte beyin sapı lezyonunu düşündürür.",
+      "C": "Afazi ve dizartri konuşma bozukluklarıdır. Hasta yakınmasını anlatırken değil, konuşurken fark edilirler (sayfa 5). Afazi, dil kullanımının bozulmasıdır ve konuşmadan hemen fark edilir.",
+      "D": "Parapleji bacak felci, sfinkter bozukluğu idrar ve dışkı kontrolünün bozulmasıdır. İkisi de uyuşma sözcüğünün karşıladığı iki yakınma değildir (sayfa 6).",
+      "E": "Akut ve sinsi başlangıç yakınma değil, belirtilerin yerleşme hızını anlatan başlangıç şekilleridir (sayfa 3). Akut başlangıç, belirtilerin dakika veya saat içinde ortaya çıkmasıdır."
+     },
+     "bilgi": [
+      5
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 2,
+      "alinti": "Uyuşma duyu kusuru olabilir ya da kuvvet kaybını anlatıyor olabilir"
+     }
+    }
+   ],
+   "ilgili_cikmis": []
+  }
+ ]
+}

@@ -105,6 +105,23 @@ function duyuruDogrula(v: unknown): Duyuru | null {
   };
 }
 
+/**
+ * Dış ajan içeriği (AGENTS kural 24): yeni anahtarları `yalniz-yonetici` yapar. Yalnız KAPATIR, açmaz; yönetici onayı
+ * (panel › Site › Görünürlük) `acik`'a çevirir. Açılmış bir anahtara dokunmaz.
+ */
+export async function gorunurlukKilitle(anahtarlar: string[], kim: string): Promise<void> {
+  if (!dosya || !anahtarlar.length) return;
+  const hedef = writableContent(dosya);
+  if (!fs.existsSync(hedef)) fs.writeFileSync(hedef, JSON.stringify(siteAyarOku(), null, 2));
+  const sonra = await atomikJsonGuncelle<SiteAyar>(hedef, (eskiHam) => {
+    const eski = { ...BOS, ...(eskiHam || {}) } as SiteAyar;
+    const g = { ...(eski.gorunurluk || {}) };
+    for (const a of anahtarlar) if (!g[a]) g[a] = 'yalniz-yonetici';
+    return { ...eski, gorunurluk: g, surum: (eski.surum || 0) + 1, guncellendi: new Date().toISOString(), guncelleyen: kim };
+  }, { yedek: 5, yedekKlasoru: path.join(path.dirname(path.dirname(dosya)), '..', 'data', '_yedek', 'site_ayar') });
+  yenile(sonra);
+}
+
 export function registerSiteAyarRoutes(app: express.Express, d: {
   rootDir: string;
   requireAdmin: express.RequestHandler;

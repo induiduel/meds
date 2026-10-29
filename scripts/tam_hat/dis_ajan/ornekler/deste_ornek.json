@@ -1,0 +1,315 @@
+{
+ "id": "k2p-k2-01-norolojik-hastaya-yaklasim",
+ "title": "Nörolojik Hastaya Yaklaşım",
+ "shortTitle": "Nörolojik Hastaya Yaklaşım",
+ "discipline": "Nöroloji",
+ "committee": "Kurul 2 - Nöropsikiyatri Kurulu",
+ "instructor": "Dr. Öğr. Üyesi İrfan Yavaş",
+ "matchedNoteId": "k2-01-norolojik-hastaya-yaklasim",
+ "overview": "Bu ders nörolojik hastaya yaklaşımın sırasını anlatır: önce anamnez, hastanın kullandığı sözcüklerin anlamı ve ağrının niteliği, ardından hastalığın başlangıç şekli (akut, sinsi, dalgalı) ve doğal gidişi işlenir. Migren, trigeminal nevralji ve epilepsi gibi tanısı öyküye dayanan hastalıklar ayrılır. Muayenede ilk izlenim (hemiplejik, Parkinsonlu ve kas distrofili hastanın görünümü) tanınır; bulgu birliktelikleri sol hemisfer, beyin sapı, medulla spinalis ve birinci sakral radiks lokalizasyonunu gösterir. Lezyonun natürü hemipleji, beyin sapı tablosu ve parapleji için hasta özellikleri ve gidişe göre ayrılır. Ders laboratuvar incelemeleriyle, acil hastaya yaklaşımın ilkeleriyle ve nöroloji kliniğine sevk yazısının nasıl yazılacağıyla tamamlanır.",
+ "highYieldPearls": [
+  "Merritt'e göre hastayı dinledikten sonra nesi olduğunu anlamayan hekim, muayene ettikten sonra da anlayamaz; öykünün üç unsuru yakınma, başlangıç şekli ve kronolojik gidiştir ve lezyonun yerini ve nedenini aydınlatır.",
+  "Akut başlangıç dakika veya saat içindedir (hemipleji); sinsi başlangıç haftalar, aylar, yıllar içindedir (beyin tümörü, dejeneratif hastalıklar); dalgalı gidiş relapsing-remitting MS'tir.",
+  "Epilepsi klinik tanıdır ve normal EEG tanıdan uzaklaştırmaz; migren ve trigeminal nevraljide tanıyı öykü koydurur, BT ve MR tanıyı doğrulamak için çekilir.",
+  "Lokalizasyon: afazi ve sağ hemipleji sol hemisferi; diplopi, vertigo, piramidal ve serebellar bulgu beyin sapını; parapleji, seviye veren duyu kaybı ve sfinkter bozukluğu medulla spinalisi; bel ve bacak arkası ağrısı ile aşil refleksi kaybı S1 radiksi gösterir.",
+  "Natür: genç hastada düzelen farklı bölge epizodları MS, yaşlı hastada ateroskleroz SVO'dur; sinsi ilerleyici parapleji medulla spinalis basısı, aşı ya da viral enfeksiyon sonrası parapleji post-infeksiyöz miyelittir.",
+  "Acil hastada zaman beyindir: bilgi toplarken tedaviye başlanır, vital bulgular stabil hale getirilir; sevk yazısında kısaltma ve deyim yerine görülen bulgu, bilinç düzeyi, saat ve pupil büyüklükleri yazılır."
+ ],
+ "slides": [
+  {
+   "title": "Anamnez: Muayeneden Önce Dinlemek",
+   "subtitle": "İyi bir anamnez doğru yönelim sağlar; öykü muayenenin yerini tutmaz.",
+   "badge": "Anamnez",
+   "synthesisNarrative": "Nörolojik hastaya yaklaşımın ilk basamağı anamnezdir; iyi bir anamnez doğru bir yönelim ve yaklaşım sağlar.\n\n- **Merritt'in uyarısı:** Hastayı dinledikten sonra nesi olduğunu anlamadıysanız, muayene ettikten sonra da anlamayacaksınız.\n- **Öykünün unsurları:** Hastanın yakınması, belirtilerin başlangıç şekli ve kronolojik gidişi.\n- **Öykünün katkısı:** Bu üç unsur problemi anatomik lokalizasyon ve etyoloji yönünden büyük ölçüde aydınlatır, yani lezyonun nerede ve neden olduğunu gösterir.\n\n> [!IMPORTANT]\n> Muayene öykünün yerine geçmez: öyküden anlaşılmayan tablo muayeneyle de anlaşılmaz.",
+   "content": "Nörolojik hastaya yaklaşımın ilk basamağı anamnezdir; iyi bir anamnez doğru bir yönelim ve yaklaşım sağlar.\n\n- **Merritt'in uyarısı:** Hastayı dinledikten sonra nesi olduğunu anlamadıysanız, muayene ettikten sonra da anlamayacaksınız.\n- **Öykünün unsurları:** Hastanın yakınması, belirtilerin başlangıç şekli ve kronolojik gidişi.\n- **Öykünün katkısı:** Bu üç unsur problemi anatomik lokalizasyon ve etyoloji yönünden büyük ölçüde aydınlatır, yani lezyonun nerede ve neden olduğunu gösterir.\n\n> [!IMPORTANT]\n> Muayene öykünün yerine geçmez: öyküden anlaşılmayan tablo muayeneyle de anlaşılmaz.",
+   "spotPearls": [
+    "📌 [SINAV SPOTU] İyi bir anamnez doğru bir yönelim ve yaklaşım sağlar.",
+    "📌 [SINAV SPOTU] Yakınma, başlangıç şekli ve kronolojik gidiş problemi anatomik lokalizasyon ve etyoloji yönünden aydınlatır."
+   ],
+   "medicalTerms": [
+    {
+     "term": "Anamnez",
+     "explanation": "Hastanın yakınmalarının, belirtilerin başlangıcının ve gidişinin öyküsünün alınmasıdır."
+    },
+    {
+     "term": "Etyoloji",
+     "explanation": "Hastalığın nedenidir; öykü ve gidiş etyolojiye ipucu verir."
+    },
+    {
+     "term": "Anatomik lokalizasyon",
+     "explanation": "Sorunun sinir sisteminin hangi bölgesinde olduğunun belirlenmesidir."
+    }
+   ],
+   "flashcards": [
+    {
+     "id": "fc-1-1",
+     "front": "Merritt'e göre hastayı dinleyince anlaşılmayan tablo muayeneyle anlaşılır mı?",
+     "back": "Anlaşılmaz; muayene öykünün yerini tutmaz.",
+     "category": "Anamnez"
+    },
+    {
+     "id": "fc-1-2",
+     "front": "Öykü problemi hangi iki yönden aydınlatır?",
+     "back": "Anatomik lokalizasyon ve etyoloji.",
+     "category": "Anamnez"
+    }
+   ],
+   "interactiveElements": [
+    {
+     "type": "micro_quiz",
+     "question": "Aşağıdakilerden hangisi öykünün unsurlarından biridir; öykünün aydınlattığı sonuçlardan biri değildir?",
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": "Anatomik lokalizasyon",
+       "isCorrect": false,
+       "explanation": "Yanlış. Anatomik lokalizasyon, öykünün aydınlattığı sonuçtur: lezyonun nerede olduğunu gösterir. Öykünün unsurları ise yakınma, başlangıç şekli ve kronolojik gidiştir."
+      },
+      {
+       "key": "B",
+       "text": "Etyoloji",
+       "isCorrect": false,
+       "explanation": "Yanlış. Etyoloji hastalığın nedenidir ve öykünün unsurlarından değil, öykünün aydınlattığı sonuçlardan biridir. Başlangıç şekli ve gidiş etyolojiyi aydınlatır."
+      },
+      {
+       "key": "C",
+       "text": "Hastanın yakınması",
+       "isCorrect": true,
+       "explanation": "Doğru. Yakınma, başlangıç şekli ve kronolojik gidişle birlikte öykünün üç unsurundan biridir. Bu üç unsur lezyonun yeri ve nedeni konusunda yol gösterir."
+      },
+      {
+       "key": "D",
+       "text": "Muayene bulgusu",
+       "isCorrect": false,
+       "explanation": "Yanlış. Muayene bulgusu öykünün parçası değildir; muayene anamnezden sonra yapılır. Öykünün eksikliğini kapatmaz, öykü anlaşılmadıysa muayeneden sonra da anlaşılamaz."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "İyi bir anamnez doğru bir yönelim ve yaklaşım sağlar.",
+     "maskedTerm": "anamnez",
+     "hint": "Muayeneden önce gelen basamak"
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Anamnez ve muayene",
+     "items": [
+      {
+       "text": "İyi bir anamnez doğru bir yönelim ve yaklaşım sağlar.",
+       "isLie": false,
+       "explanation": "Doğru. Öykü, hastaya nasıl yaklaşılacağını belirler."
+      },
+      {
+       "text": "Hastanın yakınması, belirtilerin başlangıç şekli ve kronolojik gidişi anatomik lokalizasyon ve etyoloji yönünden problemi büyük ölçüde aydınlatır.",
+       "isLie": false,
+       "explanation": "Doğru. Öykünün üç unsuru lezyonun yerini ve nedenini gösterir."
+      },
+      {
+       "text": "Hastayı dinledikten sonra nesi olduğu anlaşılmadıysa muayene bu belirsizliği ortadan kaldırır.",
+       "isLie": true,
+       "explanation": "Tuzak. Merritt'e göre dinledikten sonra anlaşılmayan tablo muayene ettikten sonra da anlaşılmaz."
+      },
+      {
+       "text": "Başlangıç şekli öykünün unsurlarından biridir.",
+       "isLie": false,
+       "explanation": "Doğru. Yakınma ve kronolojik gidişle birlikte öykünün parçasıdır."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "Öykünün üç unsuru nedir ve bunlar problemi hangi iki yönden aydınlatır?",
+     "answer": "Hastanın yakınması, belirtilerin başlangıç şekli ve kronolojik gidişi; anatomik lokalizasyon ve etyoloji yönünden aydınlatır."
+    },
+    {
+     "type": "branching_logic",
+     "scenario": "Hastanın öyküsünü dinlediniz ama nesi olduğunu anlayamadınız. Ne yaparsınız?",
+     "options": [
+      {
+       "text": "Muayeneye geçip tablonun muayeneyle aydınlanmasını beklerim",
+       "isCorrect": false,
+       "feedback": "Yanlış. Merritt'e göre dinledikten sonra anlaşılmayan tablo muayene ettikten sonra da anlaşılmaz. Muayene öykünün eksikliğini kapatan bir yöntem olarak görülemez."
+      },
+      {
+       "text": "Öyküyü yakınma, başlangıç şekli ve kronolojik gidiş açısından yeniden netleştiririm",
+       "isCorrect": true,
+       "feedback": "Doğru. Yakınma, başlangıç şekli ve kronolojik gidiş problemi lokalizasyon ve etyoloji yönünden aydınlatan öykü unsurlarıdır. Anlaşılmayan yer bu unsurlar üzerinden netleştirilir."
+      },
+      {
+       "text": "Lokalizasyonu ve etyolojiyi öykü olmadan belirlemeye çalışırım",
+       "isCorrect": false,
+       "feedback": "Yanlış. Anatomik lokalizasyon ve etyoloji öykünün büyük ölçüde aydınlattığı yönlerdir. Öykü olmadan bu iki soruya ulaşmak, doğru yönelimden yoksun kalmak demektir."
+      }
+     ]
+    }
+   ],
+   "isCheckpoint": false,
+   "slideNumber": 1,
+   "bolum": "1",
+   "pdfSayfalari": [
+    2,
+    2
+   ],
+   "sourcePdf": {
+    "fileName": "Nörolojik Hastaya Yaklaşım.pdf",
+    "startPage": 2,
+    "endPage": 2,
+    "primaryPage": 2,
+    "citation": "Sayfa 2 · Nörolojik Hastaya Yaklaşım"
+   }
+  },
+  {
+   "title": "Hastanın Sözcükleri: Uyuşma, Ağrı ve Sıkıntı",
+   "subtitle": "Hastanın kullandığı sözcük ile kastettiği yakınma aynı olmayabilir.",
+   "badge": "Anamnez",
+   "synthesisNarrative": "Öyküde hastanın söylediği sözcük ile anlatmak istediği yakınma aynı olmayabilir; hekim önce neyin kastedildiğini çözer.\n\n- **Uyuşma:** Hasta bu sözcükle duyu kusurunu da kuvvet kaybını da anlatıyor olabilir; hangisi olduğu sorularla ayrılır.\n- **Ağrı:** Ağrı sübjektiftir; zonklayıcı, yanıcı ya da sabit gibi nitelikleri sorularla ortaya konur.\n- **Sıkıntı:** Hekim hastanın sıkıntısının ne olduğunu ve ne söylemek istediğini anlamadan muayeneye geçmemelidir.\n- **Öykünün kaynağı:** Hasta bilinçsizse ya da konuşma bozukluğu varsa öykü yakınından veya getiren kişiden alınır.\n\n> [!NOTE]\n> Uyuşma sözcüğü tek başına yeterli değildir; önce duyu kusuru mu kuvvet kaybı mı olduğu netleştirilir.",
+   "content": "Öyküde hastanın söylediği sözcük ile anlatmak istediği yakınma aynı olmayabilir; hekim önce neyin kastedildiğini çözer.\n\n- **Uyuşma:** Hasta bu sözcükle duyu kusurunu da kuvvet kaybını da anlatıyor olabilir; hangisi olduğu sorularla ayrılır.\n- **Ağrı:** Ağrı sübjektiftir; zonklayıcı, yanıcı ya da sabit gibi nitelikleri sorularla ortaya konur.\n- **Sıkıntı:** Hekim hastanın sıkıntısının ne olduğunu ve ne söylemek istediğini anlamadan muayeneye geçmemelidir.\n- **Öykünün kaynağı:** Hasta bilinçsizse ya da konuşma bozukluğu varsa öykü yakınından veya getiren kişiden alınır.\n\n> [!NOTE]\n> Uyuşma sözcüğü tek başına yeterli değildir; önce duyu kusuru mu kuvvet kaybı mı olduğu netleştirilir.",
+   "spotPearls": [
+    "📌 [SINAV SPOTU] «Uyuşma» duyu kusuru da olabilir, kuvvet kaybı da.",
+    "📌 [SINAV SPOTU] Ağrı sübjektiftir; nitelikleri sorularla ortaya konur."
+   ],
+   "medicalTerms": [
+    {
+     "term": "Duyu kusuru",
+     "explanation": "Dokunma, ağrı gibi duyuların algılanmasındaki bozukluktur."
+    },
+    {
+     "term": "Kuvvet kaybı",
+     "explanation": "Hastanın bir uzvu istediği güçte hareket ettirememesidir."
+    },
+    {
+     "term": "Sübjektif",
+     "explanation": "Ölçülemeyen, yalnız hastanın kendi anlatımına dayanan yakınmayı anlatır."
+    }
+   ],
+   "flashcards": [
+    {
+     "id": "fc-2-1",
+     "front": "«Uyuşma» sözcüğü neleri anlatıyor olabilir?",
+     "back": "Duyu kusurunu ya da kuvvet kaybını.",
+     "category": "Anamnez"
+    },
+    {
+     "id": "fc-2-2",
+     "front": "Bilinçsiz hastanın öyküsü kimden alınır?",
+     "back": "Yakınından ya da getiren kişiden.",
+     "category": "Anamnez"
+    }
+   ],
+   "interactiveElements": [
+    {
+     "type": "branching_logic",
+     "scenario": "Hasta «kolum uyuştu» diyor. Ne yapmanız gerekir?",
+     "options": [
+      {
+       "text": "Hastanın uyuşma ile duyu kusurunu mu kuvvet kaybını mı kastettiğini sorularla netleştirmek",
+       "isCorrect": true,
+       "feedback": "Doğru. Uyuşma sözcüğü duyu kusurunu da kuvvet kaybını da anlatabilir. Hekim hastanın neyi kastettiğini anlamadan muayeneye geçmemelidir."
+      },
+      {
+       "text": "Uyuşmayı doğrudan duyu kusuru kabul edip muayeneye geçmek",
+       "isCorrect": false,
+       "feedback": "Yanlış. Hasta aynı sözcükle kuvvet kaybını da anlatıyor olabilir. Uyuşmayı doğrudan duyu kusuru saymak yakınmayı yanlış yönlendirebilir; önce sorularla netleştirilir."
+      },
+      {
+       "text": "Yakınmayı anlamadan hemen muayeneye başlamak",
+       "isCorrect": false,
+       "feedback": "Yanlış. Hekim hastanın sıkıntısının ne olduğunu ve ne söylemek istediğini anlamadan muayeneye geçmemelidir; önce yakınma açıklığa kavuşturulur."
+      }
+     ]
+    },
+    {
+     "type": "micro_quiz",
+     "question": "Aşağıdakilerden hangisi ağrı için doğrudur?",
+     "microQuizOptions": [
+      {
+       "key": "A",
+       "text": "Ağrı nesneldir, niteliği ölçülerek belirlenir",
+       "isCorrect": false,
+       "explanation": "Yanlış. Ağrının ölçülebilir bir nesnel göstergesi yoktur. Ağrı sübjektiftir ve niteliği hastanın anlatımıyla ortaya konur."
+      },
+      {
+       "key": "B",
+       "text": "Ağrı sübjektiftir; nitelikleri sorularla ortaya konur",
+       "isCorrect": true,
+       "explanation": "Doğru. Zonklayıcı, yanıcı, sabit gibi nitelikler tek tek sorulur. Hasta ağrısını kendi anlatır, hekim sorularla niteliği netleştirir."
+      },
+      {
+       "key": "C",
+       "text": "Ağrının niteliği sorulmaz, yalnız yeri sorulur",
+       "isCorrect": false,
+       "explanation": "Yanlış. Ağrının niteliği öykünün önemli bir parçasıdır. Hekim ağrının yeri kadar zonklayıcı mı yanıcı mı sabit mi olduğunu da sorar."
+      },
+      {
+       "key": "D",
+       "text": "Ağrıyı hasta anlatamıyorsa öykü hiçbir zaman alınamaz",
+       "isCorrect": false,
+       "explanation": "Yanlış. Bilinçsiz ya da konuşma bozukluğu olan hastada öykü yakınından veya getiren kişiden alınır; böylece öykü yine tamamlanabilir."
+      }
+     ]
+    },
+    {
+     "type": "cloze_masking",
+     "sentence": "Hasta uyuşma dediğinde bu, duyu kusurunu da kuvvet kaybını da anlatıyor olabilir.",
+     "maskedTerm": "kuvvet kaybını",
+     "hint": "Duyu kusurundan ayrı olan yakınma"
+    },
+    {
+     "type": "spot_the_lie",
+     "topic": "Hastanın kullandığı sözcükler",
+     "items": [
+      {
+       "text": "Ağrı sübjektiftir ve nitelikleri sorularla ortaya konmalıdır.",
+       "isLie": false,
+       "explanation": "Doğru. Zonklayıcı, yanıcı, sabit gibi nitelikler tek tek sorulur."
+      },
+      {
+       "text": "Hasta bilinçsizse öykü yakınından ya da getiren kişiden alınabilir.",
+       "isLie": false,
+       "explanation": "Doğru. Hastadan öykü alınamıyorsa başka bir kaynak aranır."
+      },
+      {
+       "text": "«Uyuşma» sözcüğü duyu kusurunu da kuvvet kaybını da anlatıyor olabilir.",
+       "isLie": false,
+       "explanation": "Doğru. Aynı sözcük iki ayrı yakınmayı karşılar."
+      },
+      {
+       "text": "Hekim hastanın sıkıntısını anlamadan da muayeneye geçebilir; muayene sıkıntıyı kendiliğinden açıklar.",
+       "isLie": true,
+       "explanation": "Tuzak. Hekim, hastanın sıkıntısının ne olduğunu anlamadan muayeneye geçmemelidir."
+      }
+     ]
+    },
+    {
+     "type": "active_recall",
+     "question": "«Uyuşma» yakınması neden tek başına yeterli bir öykü değildir?",
+     "answer": "Hasta bu sözcükle duyu kusurunu da kuvvet kaybını da kastedebilir; hekim neyi anlatmak istediğini anlamadan muayeneye geçmemelidir."
+    }
+   ],
+   "isCheckpoint": false,
+   "slideNumber": 2,
+   "bolum": "1",
+   "pdfSayfalari": [
+    2,
+    2
+   ],
+   "sourcePdf": {
+    "fileName": "Nörolojik Hastaya Yaklaşım.pdf",
+    "startPage": 2,
+    "endPage": 2,
+    "primaryPage": 2,
+    "citation": "Sayfa 2 · Nörolojik Hastaya Yaklaşım"
+   }
+  }
+ ],
+ "totalSlides": 2,
+ "sayfaHaritasi": "teyitli",
+ "themeColor": "slate",
+ "confidence": "high",
+ "audioFile": "",
+ "audioDuration": "",
+ "programDate": "2026-10-27",
+ "matchedPastQuestionsCount": 5,
+ "deckId": "k2p-k2-01-norolojik-hastaya-yaklasim"
+}

@@ -23,6 +23,7 @@ import { MsEdgeTTS, OUTPUT_FORMAT } from 'msedge-tts';
 import { Mp3Encoder } from '@breezystack/lamejs';
 import { freeGeminiKeyNames } from './aiProvider';
 import { isStrongAdmin } from './peopleInsights';
+import { gorunurlukKilitle } from './yonetim16/siteAyar.ts';
 
 type Saglayici = 'edge-emel' | 'gemini-ucretsiz' | 'gemini-ucretli' | 'xtts-yerel' | 'ema-yerel';
 /** Sunucunun sentezlemediği, işi yöneticinin bilgisayarındaki işçinin aldığı sağlayıcılar */
@@ -1464,13 +1465,25 @@ export function registerSesliAnlatimRoutes(
   // metni, PDF hizalaması (paragraf → sayfa, metni yazan Claude'un sayfa listesinden) ve varsayılan iki ses: Emel (varsayılan)
   // + EMA (Oracle'daki meds-ema konteyneri). Güncellenen derste metin değişirse yeni sesler varsayılan olur, eskiler kalır.
   // Gövde: { key, no, baslik, metin, sayfalar?: number[], deckId?, dosya?: {path,name,pages,fileId}, capalar?: [[{ses,sayfa,satir,sekil}]] }
-  app.post('/api/sesli-anlatim/ders-ekle', guclu, (req, res) => {
+  app.post('/api/sesli-anlatim/ders-ekle', guclu, async (req, res) => {
     const k = guvenliAnahtar(String(req.body?.key || ''));
     const metin = String(req.body?.metin || '');
     if (!k) return res.status(400).json({ error: 'ders anahtarı geçersiz' });
+    // Dış ajan kapısı (AGENTS kural 24): `ajan` etiketi gelen istek yalnız `<ders>-ag-<etiket>` anahtarına yazar, mevcut
+    // anahtarın üstüne ASLA yazmaz (v2/v3 artırımı da yok: çakışmada 409) ve içerik yönetici onayına kadar öğrenciye kapalı doğar.
+    const ajan = String(req.body?.ajan || '').trim().toLowerCase();
+    const AJANLI = /^k\d+-\d+-ag-[a-z0-9]{2,12}$/.test(k);
+    if (ajan || AJANLI) {
+      if (!/^[a-z0-9]{2,12}$/.test(ajan) || !AJANLI || !k.endsWith(`-ag-${ajan}`))
+        return res.status(400).json({ error: 'dış ajan anahtarı <ders>-ag-<etiket> olmalı ve ajan alanı etiketle eşleşmeli (örn. k2-07-ag-gemini)' });
+      if (ajan === 'claude') return res.status(400).json({ error: 'claude etiketi dış ajan için ayrılamaz' });
+      if (fs.existsSync(P.metin(k)) || oku<Ders[]>(P.dersler, []).some((d) => d.key === k))
+        return res.status(409).json({ error: 'bu ajan anahtarı zaten var; üstüne yazılmaz, yeni etiket/yeni ders kullanın' });
+    }
     if (!metin.startsWith('# ') || !/^@@ /m.test(metin)) return res.status(400).json({ error: 'konuşma metni biçimi geçersiz (# başlık, @@ bölüm)' });
     const pars = metinParagraflari(metin);
     if (pars.length < 5) return res.status(400).json({ error: `konuşma metni çok kısa (${pars.length} paragraf)` });
+    if (ajan) { try { await gorunurlukKilitle([`sesli:${k}`, `deste:k${k.split('-')[0].slice(1)}p-${k}`, `paket:${k}`], `ajan:${ajan}`); } catch (e: any) { return res.status(500).json({ error: `görünürlük kilidi yazılamadı, ders eklenmedi: ${e?.message}` }); } }
     const eskiMetin = fs.existsSync(P.metin(k)) ? fs.readFileSync(P.metin(k), 'utf8') : null;
     const degisti = eskiMetin !== metin;
     if (degisti) {

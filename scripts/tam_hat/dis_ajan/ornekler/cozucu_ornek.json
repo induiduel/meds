@@ -1,0 +1,62 @@
+{
+ "kod": "2f01",
+ "no": 7,
+ "baslik": "Genel Anestezik İlaçlar",
+ "klasor": "2f01",
+ "sorular": [
+  {
+   "no": 4,
+   "tur": "ornek",
+   "zorluk": "kolay",
+   "soru": "Nörolept anestezide birlikte kullanılan ilaç ikilisi hangisidir?",
+   "secenekler": {
+    "A": "Propofol + fentanil",
+    "B": "Ketamin + midazolam",
+    "C": "Fentanil + droperidol",
+    "D": "Tiyopental + midazolam",
+    "E": "Etomidat + remifentanil"
+   },
+   "dogru": "C",
+   "ipucu": "Bir opioidin bir nöroleptikle birlikte verildiği intravenöz anestezi biçimini hatırla.",
+   "siklar": {
+    "A": "Propofol ile bir opioidin birlikte verilmesi, azot protoksit ya da uçucuyla tamamlanan dengeli anestezinin parçasıdır. Nörolept anestezide ise opioid fentanil, propofolle değil droperidolle birleştirilir.",
+    "B": "Ketamin disosiyatif anestezi yapan bir ajandır; psikomimetik reaksiyonlarını azaltmak ve amneziyi artırmak için benzodiazepin eklenir. Bu birleşim ketaminin yan etkisini hafifletme yoludur.",
+    "C": "Nörolept anestezi, intravenöz anestezinin bir alt türüdür ve opioid **fentanil** ile droperidolün birlikte verilmesiyle yapılır. Bu yüzden bu ikili doğrudur.",
+    "D": "Tiyopental hızlı indüksiyon sağlayan bir barbitürat, midazolam ise premedikasyonda kullanılan bir benzodiazepindir. Bu ikilide nörolept anestezinin temel ögeleri olan opioid ve droperidol bulunmaz.",
+    "E": "Etomidat hemodinamik etkisi minimal, analjezik olmayan bir hipnotik; remifentanil ise anestezide kullanılan bir opioiddir. Nörolept anestezide opioidin eşi etomidat değil droperidoldür."
+   },
+   "cozum": "**Nörolept anestezi** fentanil ile droperidolün birlikte verilmesidir; propofol, opioid ve uçucu ya da azot protoksitle yapılan uygulama ise dengeli anestezidir.",
+   "sayfa": [
+    5,
+    14
+   ]
+  },
+  {
+   "no": 26,
+   "tur": "cikmis",
+   "sinav": "Yılı belirsiz",
+   "soru": "Genel anesteziklerle ilgili olarak\nI. İzofluran\nII. Sevofluran\nIII. Desfluran\nIV. Siklopropan\najanlarından hangisi/hangileri kalp debisini belirgin etkilemeden vazodilatasyon yaptığı için miyokard fonksiyonu bozuk hastaların anestezisinde bugün için iyi bir seçenek olabilir?",
+   "secenekler": {
+    "A": "I, II ve III",
+    "B": "I ve III",
+    "C": "II ve IV",
+    "D": "Yalnız IV",
+    "E": "I, II, III ve IV"
+   },
+   "dogru": "A",
+   "ipucu": "Ön ve art yükü azaltarak debiyi koruyan halojenli uçucuları, listedeki artık kullanılmayan ajandan ayırarak düşün.",
+   "siklar": {
+    "A": "İzofluran, sevofluran ve desfluran ön ve art yükü azaltan vazodilatasyonla kalp debisini korur. Bu nedenle miyokard fonksiyonu bozuk hastada iyi seçenektirler; üçünü birlikte veren bu yanıt doğrudur.",
+    "B": "Bu yanıt izofluran ile desfluranı alıp sevofluranı dışarıda bırakır. Oysa sevofluran da vazodilatasyonla ön ve art yükü azaltıp kalp debisini koruyan üç uçucudan biridir; yanıt eksik kalır.",
+    "C": "Sevofluran debiyi koruyan uçuculardandır, fakat siklopropan bugün kullanılmayan eski bir inhalasyon anesteziğidir. Bu yanıt izofluran ve desfluranı dışarıda bırakıp kullanılmayan ajanı eklediği için hatalıdır.",
+    "D": "Siklopropan, inhalasyon anestezikleri listesinde artık kullanılmıyor diye belirtilen eski bir ajandır. Kalp yetmezliğinde bugün tercih edilen ajanlar debiyi koruyan izofluran, sevofluran ve desflurandır.",
+    "E": "Dört ajanı birden kabul eden bu yanıt, kullanılmayan siklopropanı da debiyi koruyan uçuculara katar. Bu korumayı sağlayan grup yalnız izofluran, sevofluran ve desflurandan oluşur."
+   },
+   "cozum": "**İzofluran, sevofluran ve desfluran** vazodilatasyonla ön ve art yükü azaltıp kalp debisini korur; bu yüzden miyokard fonksiyonu bozuk hastada iyi seçenektir.",
+   "sayfa": [
+    6,
+    22
+   ]
+  }
+ ]
+}
