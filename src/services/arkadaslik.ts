@@ -11,7 +11,7 @@
  *   GET  /api/kisi/ben                       kendi kimliğim + gizlilik
  *   POST /api/kisi/gizlilik {acik}           profilim herkese açık mı
  *   GET  /api/kisi/ara?q=                    ad ile kişi bulma (gizliler çıkmaz)
- *   GET  /api/kisi/siralama?olcu=puan|calisma&kapsam=hafta|kurul|tum|gun&yer=sinif|uni|tr|arkadas
+ *   GET  /api/kisi/siralama?olcu=puan|calisma|soru|bitir|basarim|hucre|oyun[&oyun=<tür>]&kapsam=hafta|kurul|tum|gun&yer=sinif|uni|tr|arkadas
  *   GET  /api/kisi/:kimlik                   açık profil
  *   GET  /api/arkadas                        arkadaşlar + gelen/giden istekler
  *   POST /api/arkadas/istek|kabul|reddet|cikar {kimlik}
@@ -27,7 +27,8 @@ import type express from 'express';
 import { pgDb } from './pgDb';
 import { verifiedUid } from './adminAuth';
 import { temizle } from './topluluk';
-import type { BasarimMotor } from './basarim/basarimMotor';
+import type { BasarimMotor, SiraOlcu } from './basarim/basarimMotor';
+const SIRA_OLCU = ['puan', 'calisma', 'soru', 'bitir', 'basarim', 'hucre', 'oyun'] as const;
 
 interface Bildirim { type: string; title: string; message: string; deepLinkUrl?: string; targetType?: string; targetId?: string; dedupeKey?: string }
 interface Deps {
@@ -160,11 +161,37 @@ export function registerArkadaslik(app: express.Express, d: Deps) {
     res.json({ kisiler });
   });
 
+  // ───── Oyun rekorları: profil yedeğindeki medsoru_oyun_rekor_v1 (`<oyun>:<ders|*>` → en iyi skor), 60 sn önbellek ─────
+  let rekorOnb: { t: number; m: Map<string, Record<string, number>> } = { t: 0, m: new Map() };
+  const rekorlar = () => {
+    if (Date.now() - rekorOnb.t < 60_000) return rekorOnb.m;
+    const m = new Map<string, Record<string, number>>();
+    for (const k of motor.hepsi()) {
+      const r = kvJson(d.okuYedek(k.uid), 'medsoru_oyun_rekor_v1');
+      if (r && typeof r === 'object') m.set(k.uid, r);
+    }
+    rekorOnb = { t: Date.now(), m };
+    return m;
+  };
+  // Eşleştir rekoru süredir (küçük iyi), puan toplamına girmez
+  const SUREli = new Set(['eslestir']);
+  /** Seçili oyun türünün (yoksa tüm puanlı oyunların) ders başına en iyi skorlarının toplamı */
+  const oyunPuani = (uid: string, oyun: string) => Object.entries(rekorlar().get(uid) || {})
+    .reduce((a, [anahtar, v]) => { const t = anahtar.split(':')[0]; return !SUREli.has(t) && (!oyun || t === oyun) ? a + Math.max(0, Math.round(Number(v) || 0)) : a; }, 0);
+  const oyunTurleri = () => [...new Set([...rekorlar().values()].flatMap((r) => Object.keys(r).map((a) => a.split(':')[0])))].filter((t) => !SUREli.has(t)).sort();
+
   // ───── Sıralama: puan | çalışma × sınıf | üni | Türkiye | arkadaşlar ─────
   app.get('/api/kisi/siralama', async (req, res) => {
     const uid = verifiedUid(req) || null;
-    const olcu = req.query.olcu === 'calisma' ? 'calisma' : 'puan';
-    const kapsam = olcu === 'calisma' ? (req.query.kapsam === 'gun' ? 'gun' : 'hafta') : (['hafta', 'kurul', 'tum'].includes(String(req.query.kapsam)) ? String(req.query.kapsam) : 'hafta');
+    const olcu = (SIRA_OLCU as readonly string[]).includes(String(req.query.olcu)) ? String(req.query.olcu) as SiraOlcu : 'puan';
+    const kq = String(req.query.kapsam);
+    const kapsam = olcu === 'calisma' ? (kq === 'gun' ? 'gun' : 'hafta')
+      : olcu === 'soru' || olcu === 'bitir' ? (['gun', 'hafta', 'tum'].includes(kq) ? kq : 'hafta')
+      : olcu === 'puan' ? (['hafta', 'kurul', 'tum'].includes(kq) ? kq : 'hafta') : 'tum';
+    const oyunSec = String(req.query.oyun || '').replace(/[^a-z0-9_-]/gi, '').slice(0, 24);
+    const ek = olcu === 'oyun' ? { disDeger: (u: string) => oyunPuani(u, oyunSec), oyunlar: oyunTurleri() } : {};
+    const disDeger = (ek as any).disDeger as ((u: string) => number) | undefined;
+    const oyunlar = (ek as any).oyunlar as string[] | undefined;
     const yer = ['sinif', 'uni', 'arkadas'].includes(String(req.query.yer)) ? String(req.query.yer) : 'tr';
     res.set('Cache-Control', 'no-store');
     const benimDonem = uid && motor.varMi(uid) ? motor.kisi(uid).donem : null;
@@ -173,14 +200,14 @@ export function registerArkadaslik(app: express.Express, d: Deps) {
       if (!uid) return res.json({ olcu, kapsam, yer, girisli: false, satir: [] });
       const ark = await arkadasUidleri(uid);
       if (!ark.length) return res.json({ olcu, kapsam, yer, arkadasN: 0, satir: [] });
-      return res.json({ olcu, kapsam, yer, arkadasN: ark.length, ...motor.kisiSiralama({ uid, olcu, kapsam, donem: null, uidler: new Set([...ark, uid]) }) });
+      return res.json({ olcu, kapsam, yer, oyunlar, arkadasN: ark.length, ...motor.kisiSiralama({ uid, olcu, kapsam, donem: null, uidler: new Set([...ark, uid]), disDeger }) });
     }
     if (yer === 'sinif' || yer === 'uni') {
       const uni = uid ? motor.universiteOf(uid) : '';
       if (!uni) return res.json({ olcu, kapsam, yer, universite: '', satir: [] });
-      return res.json({ olcu, kapsam, yer, universite: uni, donem: yer === 'sinif' ? donem : undefined, ...motor.kisiSiralama({ uid, olcu, kapsam, donem: yer === 'sinif' ? donem : null, universite: uni }) });
+      return res.json({ olcu, kapsam, yer, oyunlar, universite: uni, donem: yer === 'sinif' ? donem : undefined, ...motor.kisiSiralama({ uid, olcu, kapsam, donem: yer === 'sinif' ? donem : null, universite: uni, disDeger }) });
     }
-    res.json({ olcu, kapsam, yer, donem, ...motor.kisiSiralama({ uid, olcu, kapsam, donem }) });
+    res.json({ olcu, kapsam, yer, oyunlar, donem, ...motor.kisiSiralama({ uid, olcu, kapsam, donem, disDeger }) });
   });
 
   // ───── Arkadaş listesi ─────

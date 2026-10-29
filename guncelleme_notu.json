@@ -1,11 +1,11 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 578,
-  "baslik": "Güncelleme bildirimi artık başlıkta",
+  "onem": 579,
+  "baslik": "Sıralama ekranı yenilendi",
   "maddeler": [
-    "Yeni sürüm olunca açılır pencere çıkmaz; üst çubuktaki ✦ simgesi görünür, dokununca notlar ve güncelle düğmesi açılır.",
-    "Menüdeki kırmızı sayı, Öğren hata defterinde bugün tekrarı gelen soruları gösterir; üzerine gelince açıklaması çıkar.",
-    "Öncelikli dersler ekranı artık güncel kurula göre açılır; Kurul 2 dersleri de sıralanır, Kurul 1/2 arasında geçiş yapılır."
+    "Sıralama artık yedi ölçüyle: puan, çalışma, soru, bitirilen konu, oyun, hücre ve başarım.",
+    "Üstte ölçü kartları, altında tek kartta kimlerle ve zaman aralığı; sıranı ve bir üst sıraya kalan farkı gösteren kart eklendi.",
+    "Oyun rekorların hesabına eşitleniyor; oyun sıralamasında oyun türüne göre süzebilirsin."
   ],
   "eklenen": [],
   "degisen": [],

@@ -39,6 +39,8 @@ const SYNC_PATTERNS: RegExp[] = [
   // Bildirim tercihleri: tür başına aç/kapa + sessiz saatler (services/bildirimTercih.ts)
   /^medsoru_bildirim_tercih_v1$/,
   /^medsoru_favoriler_v1$/,
+  // Oyun rekorları (Sıralama › Oyun; sunucu profil yedeğinden okur)
+  /^medsoru_oyun_rekor_v1$/,
   /^medsoru_slide_drawings_v2(:.*)?$/,
   /^medsoru_annotations:.+$/,
   /^medsoru_highlights_v1$/,
