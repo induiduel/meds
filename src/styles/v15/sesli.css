@@ -212,6 +212,35 @@
 :root[data-v15='on'] .cd15-daha .cd-ib { width: 40px; height: 40px; border-radius: 50%; }
 @media (max-width: 380px) { :root[data-v15='on'] .cd15-den-orta { gap: 2px; } :root[data-v15='on'] .cd15-den-orta .cd-ib { width: 38px; height: 38px; } }
 
+/* Minimal alt çubuk (2026-10-29): süre + ince bölüm çubuğu tek satır; altında küçük düğmeler · bölüm adı · çıkmış çipi · ⋯ */
+:root[data-v15='on'] .cd15-oyn { gap: 4px; padding: 6px 12px 6px; }
+:root[data-v15='on'] .cd15-oyn .cd-kucult { top: -2px; right: 4px; height: 18px; }
+:root[data-v15='on'] .cd15-zaman { grid-template-columns: auto minmax(0, 1fr) auto; grid-template-areas: 't1 bar t2'; row-gap: 0; column-gap: 8px; padding-right: 22px; }
+:root[data-v15='on'] .cd15-zaman .cd-sure { font-size: .72rem; }
+:root[data-v15='on'] .cd15-oyn .cd-parcalar { gap: 2px; }
+:root[data-v15='on'] .cd15-oyn .cd-bparca, :root[data-v15='on'] .cd15-oyn .cd-bparca.is-etkin { height: 4px; border-radius: 2px; }
+:root[data-v15='on'] .cd15-oyn .cd-tutamac { width: 11px; height: 11px; }
+:root[data-v15='on'] .cd15-den { display: flex; align-items: center; gap: 6px; min-width: 0; }
+:root[data-v15='on'] .cd15-den-orta { flex: none; gap: 2px; order: -1; }
+:root[data-v15='on'] .cd15-den-orta .cd-ib { width: 34px; height: 34px; color: var(--color-ink-2); }
+:root[data-v15='on'] .cd15-den-orta .cd-ib svg { width: 18px; height: 18px; }
+:root[data-v15='on'] .cd15-oyn .cd-oynat.is-buyuk { width: 40px; height: 40px; }
+:root[data-v15='on'] .cd15-oyn .cd-oynat.is-buyuk svg { width: 18px; height: 18px; }
+:root[data-v15='on'] .cd15-den-ad { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: .8rem; font-weight: 600; color: var(--color-ink-2); }
+:root[data-v15='on'] .cd15-hiz { order: 1; flex: none; min-width: 0; height: 28px; padding: 0 8px; border: 0; background: transparent; color: var(--color-ink-2); font-size: .8rem; }
+:root[data-v15='on'] .cd15-hiz:hover, :root[data-v15='on'] .cd15-daha-b:hover { background: var(--color-field); }
+:root[data-v15='on'] .cd15-daha-b { order: 2; flex: none; width: 30px; height: 30px; }
+:root[data-v15='on'] .cd15-daha-b svg { width: 18px; height: 18px; }
+:root[data-v15='on'] .cd15-cip { flex: none; display: inline-flex; align-items: center; gap: 5px; height: 28px; padding: 0 4px 0 9px; border-radius: 999px; border: 1px solid color-mix(in srgb, var(--color-warn) 45%, transparent); background: var(--color-warn-soft); color: var(--color-ink); font: 600 .76rem var(--font-sans); cursor: pointer; white-space: nowrap; }
+:root[data-v15='on'] .cd15-cip > svg { width: 13px; height: 13px; color: var(--color-warn); fill: currentColor; }
+:root[data-v15='on'] .cd15-cip > b { height: 20px; padding: 0 8px; display: inline-grid; place-items: center; border-radius: 999px; background: var(--color-warn); color: var(--color-canvas); font-size: .72rem; }
+@media (max-width: 520px) {
+  :root[data-v15='on'] .cd15-den-ad { display: none; }
+  :root[data-v15='on'] .cd15-den { justify-content: space-between; }
+  :root[data-v15='on'] .cd15-cip > span { display: none; }
+}
+@media (max-width: 380px) { :root[data-v15='on'] .cd15-den-orta .cd-ib { width: 30px; height: 30px; } :root[data-v15='on'] .cd15-den { gap: 2px; } }
+
 /* Akan metin v15 (tasarım S19 · kara()): okuma yazı tipi, etkin paragrafta soldan vurgu çizgisi (zemin boyanmaz),
    okunan cümle sarı (hl), diğer paragraflar ikincil mürekkep */
 :root[data-v15='on'] .cd-metin .cd-p { font-family: var(--font-read); color: var(--color-ink-2); }

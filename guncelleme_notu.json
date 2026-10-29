@@ -1,9 +1,10 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 590,
-  "baslik": "Üst çubuk: arka plan iş göstergesi düzeltildi",
+  "onem": 591,
+  "baslik": "Sesli ders: daha ince oynatıcı çubuğu",
   "maddeler": [
-    "Üst çubuktaki arka plan iş göstergesi artık her sayfada tek, düzgün bir simge; işler yalnız dokununca açılan kartta listelenir."
+    "Sesli dersteki alt oynatıcı çubuğu iki ince satıra indi; slaytı çok daha az örtüyor.",
+    "Çıkmış soru uyarısı artık çubukta küçük bir \"Çıkmış · Çöz\" çipi; hız ve seçenekler sade düğmeler."
   ],
   "eklenen": [],
   "degisen": [],

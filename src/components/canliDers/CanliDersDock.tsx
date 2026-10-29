@@ -298,7 +298,7 @@ function ZamanCubugu({ orta }: { orta?: React.ReactNode } = {}) {
   return (
     <div className={`cd-zaman${orta !== undefined ? ' cd15-zaman' : ''}`}>
       <span className="cd-sure">{fmtSure(goster)}</span>
-      {orta !== undefined && <span className="cd15-zaman-orta">{orta}</span>}
+      {orta ? <span className="cd15-zaman-orta">{orta}</span> : null}
       <div
         ref={ref}
         className={`cd-cubuk${surukle != null ? ' is-surukle' : ''}${parcalar.length > 1 ? ' is-bolumlu' : ''}`}
@@ -477,11 +477,12 @@ function CikmisSerit() {
   const sorular = e ? cikmisSayfada(detay?.cikmisKonum, e.dosya ?? 0, e.sayfa) : [];
   if (!sorular.length) return null;
   return (
-    <div className="cd15-serit" role="status">
+    <button type="button" className="cd15-cip" onClick={() => cdCikmisAc(sorular)}
+      aria-label={`Bu slayttaki bilgi ${sorular.length} kez çıkmışta soruldu, çöz`} title={`Bu slayttaki bilgi ${sorular.length} kez çıkmışta soruldu`}>
       <Star aria-hidden />
-      <span>Bu slayttaki bilgi {sorular.length} kez çıkmışta soruldu</span>
-      <button type="button" onClick={() => cdCikmisAc(sorular)}>Çöz</button>
-    </div>
+      <span>Çıkmış {sorular.length}</span>
+      <b>Çöz</b>
+    </button>
   );
 }
 
@@ -606,8 +607,7 @@ function TamOynaticiV15({ onKucult }: { onKucult: () => void }) {
   return (
     <div className="cd-tam cd15-oyn">
       <button type="button" className="cd-ib cd-kucult" onClick={onKucult} aria-label="Oynatıcıyı küçült" title="Oynatıcıyı küçült"><ChevronDown aria-hidden /></button>
-      <CikmisSerit />
-      <ZamanCubugu orta={bolum >= 0 && ad ? `${bolum + 1} · ${ad}` : ''} />
+      <ZamanCubugu orta="" />
       <ListeDockDenetim dar />
       <div className="cd15-den">
         <button type="button" className="cd15-hiz" onClick={cdHizDongu} aria-label={`Oynatma hızı ${hizYaz(rate)} (değiştir)`} title="Hız (dokundukça değişir)">{hizYaz(rate)}</button>
@@ -618,6 +618,8 @@ function TamOynaticiV15({ onKucult }: { onKucult: () => void }) {
           <button type="button" className="cd-ib cd-sar" onClick={() => cdSar(10)} aria-label="10 saniye ileri" title="10 sn ileri (→)"><RotateCw aria-hidden /></button>
           <BolumAtla yon={1} />
         </div>
+        <span className="cd15-den-ad" title={ad || undefined}>{bolum >= 0 && ad ? `${bolum + 1} · ${ad}` : ''}</span>
+        <CikmisSerit />
         <button type="button" className="cd-ib cd15-daha-b" onClick={() => setSecenek(true)} aria-haspopup="dialog" aria-label="Oynatıcı seçenekleri: hız, ses, tekrar, bölümler" title="Oynatıcı seçenekleri"><MoreHorizontal aria-hidden /></button>
       </div>
       <Hata />
