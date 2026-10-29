@@ -1,9 +1,10 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 593,
-  "baslik": "Sesli ders listesi daha hızlı açılıyor",
+  "onem": 594,
+  "baslik": "Tek tasarım: Yalın (v15)",
   "maddeler": [
-    "Sesli ders listesi ve ana sayfa artık bekletmeden açılıyor (sunucudaki liste hesabı 1 saniyeden birkaç milisaniyeye indi)."
+    "Site artık yalnız Yalın (v15) tasarımıyla açılıyor; eski tasarımlar kaldırıldı, ayarlardaki tasarım seçimi yok.",
+    "Açılışta indirilen dosyalar küçüldü ve tekrar eden istekler azaldı; sayfalar daha çabuk hazır oluyor."
   ],
   "eklenen": [],
   "degisen": [],

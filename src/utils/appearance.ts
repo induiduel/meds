@@ -51,7 +51,8 @@ export const isSadeFamily = (d: DesignVersion) => d !== 'v10';
  * styles/v15/*.css; sayfalar aşama aşama v15 düzenine taşınır (docs/V15_PLAN.md). v13 ile birlikte açık olamaz.
  */
 export type DesignChoice = 'v15' | 'v13' | DesignVersion;
-export const DESIGN_CHOICES: DesignChoice[] = ['v15', 'v13', 'v12', 'v11', 'v10'];
+/** Seçilebilir tasarımlar: yalnız v15 (tek tasarım, 2026-10-29); öteki seçimler arşivde. */
+export const DESIGN_CHOICES: DesignChoice[] = ['v15'];
 export const DESIGN_CHOICE_LABELS: Record<DesignChoice, string> = { v15: 'Yalın (v15)', v13: 'Ada (v13)', v12: 'Net (v12)', v11: 'Sade (v11)', v10: 'Klasik (v10)' };
 export const designChoiceOf = (a: Pick<Appearance, 'design' | 'v13' | 'v15'>): DesignChoice =>
   a.design === 'v12' && a.v15 ? 'v15' : a.design === 'v12' && a.v13 ? 'v13' : a.design;
@@ -216,6 +217,19 @@ function migrateDesign(p: Partial<Appearance>): DesignVersion {
   return 'v12';
 }
 
+/**
+ * Tek tasarım (kullanıcı kararı 2026-10-29): site yalnız v15 "Yalın" ile çalışır. Eski seçimler (v10 Klasik, v11 Sade,
+ * v12 Net, v13 Ada) arşivdedir (`src/_arsiv/`) ve yüklenmez; kayıtta, profil eşitlemesinde ya da ayardan gelen eski
+ * seçim v15'e çevrilir. v15 v12 sayfa yapısı üstünde çalıştığı için `design` 'v12' kalır.
+ */
+function tekTasarim<T extends Partial<Appearance>>(a: T): T {
+  a.design = 'v12';
+  a.v13 = false;
+  a.v15 = true;
+  a.v13Asked = true;
+  return a;
+}
+
 function read(): Appearance {
   // İlk açılış her zaman açık temadır (sistem koyu olsa bile); kullanıcı Ayarlar'dan değiştirir.
   const fallback: Appearance = { mode: 'light', palettes: { light: 'a', sepia: 'a', dark: 'a' }, density: 'normal', layout: 'pano', ...V11_DEFAULTS };
@@ -256,8 +270,9 @@ function read(): Appearance {
         fontRead: findFont(p.fontRead, 'read')?.id,
         okuma: okumaNormal(p.okuma),
       };
+      tekTasarim(out);
       // Taşınan tasarım seçimi kalıcı olsun (aksi halde sonraki açılışta v11'e döner)
-      if (out.design !== p.design) { try { localStorage.setItem(KEY, JSON.stringify(out)); } catch { /* ignore */ } }
+      if (out.design !== p.design || p.v15 !== true) { try { localStorage.setItem(KEY, JSON.stringify(out)); } catch { /* ignore */ } }
       return out;
     }
     // Eski açık/koyu tercihi bir kez taşınır
@@ -502,6 +517,7 @@ export function setAppearance(patch: Partial<Omit<Appearance, 'palettes' | 'acce
   if (typeof patch.v13 === 'boolean') { next.v13 = patch.v13; if (patch.v13) next.v15 = false; }
   if (typeof patch.v15 === 'boolean') { next.v15 = patch.v15; if (patch.v15) next.v13 = false; }
   if (typeof patch.v13Asked === 'boolean') next.v13Asked = patch.v13Asked;
+  tekTasarim(next);
   if (patch.palette) next.palettes[next.mode] = patch.palette;
   // Vurgu rengi: örtüsüz, anında (yalnız 4 token değişir). Hazır vurgu seçilince o paletin özel rengi kalkar.
   // customAccent: '#RRGGBB' özel renk, null = sıfırla

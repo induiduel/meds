@@ -51,7 +51,6 @@ import { Onboarding } from './components/onboarding/Onboarding';
 import { tourSeen } from './components/onboarding/tourState';
 const WelcomeTour = React.lazy(() => import('./components/onboarding/WelcomeTour'));
 const TanitimVideo = React.lazy(() => import('./components/onboarding/TanitimVideo'));
-const V13Invite = React.lazy(() => import('./components/v13/V13Invite'));
 import { girisUyarisiKabulEdildi } from './components/onboarding/girisUyarisiDurum';
 const GirisUyarisi = React.lazy(() => import('./components/onboarding/GirisUyarisi'));
 import { PageLoader } from './components/ui/Animations';
@@ -1621,12 +1620,6 @@ export default function App() {
       {showTanitim && !showTour && !isManageRoute && (
         <Suspense fallback={null}>
           <TanitimVideo onClose={() => setShowTanitim(false)} />
-        </Suspense>
-      )}
-      {/* v13 "Ada" daveti: açılışta bir kez sorulur (başka pencere açıkken beklenir) */}
-      {!girisUyarisi && !showTour && !girisKapisi && !isManageRoute && !getAppearance().v13Asked && (
-        <Suspense fallback={null}>
-          <V13Invite />
         </Suspense>
       )}
       <div className="min-h-dvh bg-canvas text-ink flex flex-col font-sans antialiased">

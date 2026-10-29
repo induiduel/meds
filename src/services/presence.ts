@@ -94,6 +94,7 @@ export function installPresence() {
     displayName: auth.currentUser?.displayName || undefined,
   });
 
+  let sonUid: string | null | undefined; // son gönderimdeki oturum (undefined: henüz gönderilmedi)
   const send = async (beacon = false) => {
     if (!pubId) return;
     accrue();
@@ -108,6 +109,7 @@ export function installPresence() {
       }
       const headers: Record<string, string> = { 'Content-Type': 'application/json', 'x-device-id': pubId };
       const user = auth.currentUser;
+      sonUid = user?.uid || null;
       if (user) {
         try {
           headers.Authorization = `Bearer ${await user.getIdToken()}`;
@@ -145,5 +147,11 @@ export function installPresence() {
   });
   window.addEventListener('pagehide', () => void send(true));
   // Giriş/çıkış: cihazın hesabı hemen güncellensin
-  auth.onAuthStateChanged?.(() => void send());
+  // Oturum gerçekten değiştiyse gönder: abone olunca gelen ilk geri çağrı, açılış atışı aynı kullanıcıyla zaten
+  // gittiyse atlanır (eskiden açılışta aynı anda iki /api/presence). Açılış atışı oturum geri yüklenmeden gittiyse
+  // (sonUid boş, kullanıcı şimdi var) yine gönderilir.
+  auth.onAuthStateChanged?.((u: { uid?: string } | null) => {
+    if (sonUid !== undefined && (u?.uid || null) === sonUid) return;
+    void send();
+  });
 }

@@ -31,7 +31,6 @@ import {
   LAYOUT_LABELS,
   READING_LABELS,
   READING_ORDER,
-  DESIGN_CHOICES, DESIGN_CHOICE_LABELS, designChoiceOf, type DesignChoice,
   type DesignVersion,
   TEXT_SIZE_ORDER,
   TEXT_SIZE_PX,
@@ -251,14 +250,6 @@ const ProfileSettingsClassic: React.FC<Props> = ({ currentUser, isAdmin, questio
           </div>
 
           <div className="ayr-list">
-            <div className="ayr-row">
-              <span className="ayr-row-t">
-                <b>Tasarım</b>
-                <span>Ada (v13): yüzen menü adaları, şeritsiz, en kompakt. Net (v12), Sade (v11) ve Klasik (v10) önceki tasarımlardır; istediğin an geçebilirsin.</span>
-              </span>
-              <Segmented<DesignChoice> label="Tasarım" value={designChoiceOf(look)} onChange={(v) => look.set({ choice: v })}
-                options={DESIGN_CHOICES.map((v) => ({ value: v, label: DESIGN_CHOICE_LABELS[v] }))} />
-            </div>
             <div className="ayr-row">
               <span className="ayr-row-t">
                 <b id="ayr-yog-h">Yoğunluk</b>

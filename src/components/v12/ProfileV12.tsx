@@ -37,9 +37,6 @@ import { QuestionItem } from '../../types';
 import { validateNamePolicy } from '../../utils/namePolicy';
 import {
   DENSITY_LABELS,
-  DESIGN_CHOICES,
-  designChoiceOf,
-  type DesignChoice,
   FILTER_MODE_LABELS,
   LAYOUT_LABELS,
   MODE_LABELS,
@@ -1305,13 +1302,6 @@ const ErisimPanel: React.FC = () => {
  * Görünüm ve tasarım (canvas Settings.dc.html)
  * ---------------------------------------------------------------------------------------------- */
 
-const DESIGN_INFO: Record<DesignChoice, { name: string; hint: string }> = {
-  v15: { name: 'Yalın', hint: 'Yeni tasarım: tek vurgu rengi, her iş tek ekranda; telefon, tablet ve bilgisayara ayrı düzen.' },
-  v13: { name: 'Ada', hint: 'Yüzen menü adaları, şeritsiz, en kompakt. Telefon ve tablete göre kuruldu.' },
-  v12: { name: 'Net', hint: 'Sade, kompakt, tek ekranda bilgi.' },
-  v11: { name: 'Sade', hint: 'Geniş boşluklar, okuma odaklı.' },
-  v10: { name: 'Klasik', hint: 'Kart ızgaraları, renkli bölümler.' },
-};
 
 const LAYOUT_HINTS: Record<LayoutMode, string> = {
   akis: 'Sade: tek sütun, okumaya uygun dar genişlik; yan sütunlar ve açıklamalar gizlenir, menü ince şerit.',
@@ -1333,28 +1323,7 @@ const AppearancePanel: React.FC = () => {
   return (
     <div role="region" aria-labelledby="u12-gorunum-h" className="u12-stack">
       <h2 id="u12-gorunum-h" className="u12-vh">Görünüm ve tasarım</h2>
-      <section className="u12-stack is-tight" aria-labelledby="u12-tasarim-h">
-        <div className="u12-sechead">
-          <h3 id="u12-tasarim-h" className="u12-h2 u12-grow">Tasarım</h3>
-          <span className="u12-meta">Eski sürümler kalır; istediğin an geç.</span>
-        </div>
-        <div className="u12-designs" role="radiogroup" aria-labelledby="u12-tasarim-h">
-          {DESIGN_CHOICES.map((v) => {
-            const on = designChoiceOf(look) === v;
-            return (
-              <button key={v} type="button" role="radio" aria-checked={on} className={`u12-design is-${v} ${on ? 'is-on' : ''}`} onClick={() => look.set({ choice: v })}>
-                <span className="u12-mini" aria-hidden="true"><i /><i /><i /><i /></span>
-                <span className="u12-design-t">
-                  <span className="u12-h3">{DESIGN_INFO[v].name}</span>
-                  <span className={`u12-badge ${v === 'v13' ? 'is-acc' : ''}`}>{v}</span>
-                  {on && <Check className="u12-design-ok" aria-hidden />}
-                </span>
-                <span className="u12-meta">{DESIGN_INFO[v].hint}</span>
-              </button>
-            );
-          })}
-        </div>
-      </section>
+      {/* Tasarım seçimi kaldırıldı (2026-10-29): tek tasarım v15; eski tasarımlar src/_arsiv/ */}
 
       <section className="u12-panel" aria-label="Renk ve yazı">
         <SetRow id="u12-s-tema" title="Tema" sub={look.mode === 'sepia' ? 'Sarı tema uzun okuma için: kâğıt tonu, düşük mavi ışık.' : 'Ortam ışığına göre seç; her temanın paleti ayrı hatırlanır.'}>

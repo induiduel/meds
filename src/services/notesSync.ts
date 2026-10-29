@@ -110,6 +110,9 @@ export function syncNotes(): Promise<boolean> {
  * Delta / Incremental Sync: Sunucudan yalnızca son senkronizasyondan sonraki değişiklikleri çeker.
  * Megabaytlarca veriyi boş yere tekrar indirmeyi engeller.
  */
+/** Son fark çekiminin zamanı: açılışta ağ durumu olayı + açılış zamanlayıcısı + SSE telafisi birkaç saniye içinde
+ *  aynı çekimi yineliyordu (açılışta iki-dört /api/notes). Aynı defter için 8 sn içinde ikinci çekim yapılmaz. */
+let sonFarkCekim = { ident: '', zaman: 0 };
 export async function pullDeltaNotes(): Promise<boolean> {
   if (getNetState() === 'offline') return false;
   const since = lastSyncedAt();
@@ -118,6 +121,8 @@ export async function pullDeltaNotes(): Promise<boolean> {
   try { lastIdent = localStorage.getItem(IDENT_KEY) || ''; } catch { /* yok */ }
   // İlk kez ya da defter değiştiyse (giriş/çıkış, kod girme) tam eşitleme: cihazdaki notlar yeni deftere birleşir
   if (!since || lastIdent !== who.ident) return syncNotes();
+  if (sonFarkCekim.ident === who.ident && Date.now() - sonFarkCekim.zaman < 8000) return false;
+  sonFarkCekim = { ident: who.ident, zaman: Date.now() };
 
   const base = (getCustomApiUrl() || '').replace(/\/$/, '');
   try {
