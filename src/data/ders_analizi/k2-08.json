@@ -1,0 +1,1178 @@
+{
+ "surum": 1,
+ "key": "k2-08",
+ "kod": "2g01",
+ "kurul": 2,
+ "brans": "Genetik",
+ "konu": "Beyin ve İskelet Sistemi Gelişimi Genetiği",
+ "ogretim_uyesi": "Dr. Öğr. Üyesi Serap Arslan",
+ "profil": "Tıbbi Genetik",
+ "sesKlasor": {
+  "brans": "k2dersanaliz",
+  "kod": "2g01"
+ },
+ "analiz": [
+  {
+   "id": "anlatim",
+   "baslik": "Bu derste ne anlatılacak",
+   "giris": "Ders, beyin ve iskelet sisteminin gelişimini yöneten morfogenleri ve HOX, OTX, MSX, PAX6 gibi gelişim genlerini; nöral tüp, nöral krista, holoprozensefali, lizensefali, somit ve kraniyofasiyal gelişim anomalilerini işler. Ardından kraniyosinostozlar, FGFR3 grubu ve kollajenle ilişkili iskelet displazileri, osteogenezis imperfekta ve Marfan sendromu anlatılır; ders Duchenne ve Becker musküler distrofileriyle biter.",
+   "maddeler": [
+    {
+     "metin": "Gelişimde genler, model organizmalar ve morfogenez"
+    },
+    {
+     "metin": "Homeobox ve HOX genleri"
+    },
+    {
+     "metin": "Kafa ve göz gelişimini etkileyen transkripsiyon faktörleri"
+    },
+    {
+     "metin": "Nörülasyon, nöral tüp defektleri ve nöral krista"
+    },
+    {
+     "metin": "Holoprozensefali"
+    },
+    {
+     "metin": "Lizensefali ve primer mikrosefali"
+    },
+    {
+     "metin": "Somitler"
+    },
+    {
+     "metin": "Kraniyofasiyal gelişim"
+    },
+    {
+     "metin": "Kraniyosinostozlar"
+    },
+    {
+     "metin": "İskelet gelişimi ve iskelet displazilerine giriş"
+    },
+    {
+     "metin": "FGFR3 grubu displaziler"
+    },
+    {
+     "metin": "Tip iki kollajenopatiler ve diğer displaziler"
+    },
+    {
+     "metin": "Osteogenezis imperfekta"
+    },
+    {
+     "metin": "Marfan sendromu"
+    },
+    {
+     "metin": "Duchenne ve Becker müsküler distrofileri"
+    },
+    {
+     "metin": "Hocanın dersin sonunda saydığı sınav yerleri"
+    }
+   ],
+   "klip": "a-anlatim",
+   "ses": [
+    "Bu derste ne anlatılacak.",
+    "Ders, beyin ve iskelet sisteminin gelişimini yöneten morfogenleri ve HOX, OTX, MSX, PAX6 gibi gelişim genlerini; nöral tüp, nöral krista, holoprozensefali, lizensefali, somit ve kraniyofasiyal gelişim anomalilerini işler. Ardından kraniyosinostozlar, FGFR3 grubu ve kollajenle ilişkili iskelet displazileri, osteogenezis imperfekta ve Marfan sendromu anlatılır; ders Duchenne ve Becker musküler distrofileriyle biter.",
+    "Gelişimde genler, model organizmalar ve morfogenez.",
+    "Homeobox ve HOX genleri.",
+    "Kafa ve göz gelişimini etkileyen transkripsiyon faktörleri.",
+    "Nörülasyon, nöral tüp defektleri ve nöral krista.",
+    "Holoprozensefali.",
+    "Lizensefali ve primer mikrosefali.",
+    "Somitler.",
+    "Kraniyofasiyal gelişim.",
+    "Kraniyosinostozlar.",
+    "İskelet gelişimi ve iskelet displazilerine giriş.",
+    "FGFR3 grubu displaziler.",
+    "Tip iki kollajenopatiler ve diğer displaziler.",
+    "Osteogenezis imperfekta.",
+    "Marfan sendromu.",
+    "Duchenne ve Becker müsküler distrofileri.",
+    "Hocanın dersin sonunda saydığı sınav yerleri."
+   ],
+   "v": "f8298d6d39"
+  },
+  {
+   "id": "kazanim",
+   "baslik": "Dersin sonunda bilmen gerekenler",
+   "giris": "Bu ders bittiğinde aşağıdaki başlıkları açıklayabilmelisin.",
+   "maddeler": [
+    {
+     "baslik": "Morfogenler",
+     "metin": "Morfogenler — öğrenci notu: Sinyal molekülleri nedir? isim bil (başlık yanında kırmızı/pembe el yazısı; 'moleküller' kısmı kısmen okunaksız)",
+     "s": [
+      6
+     ]
+    },
+    {
+     "baslik": "Hox Genleri",
+     "metin": "Hox Genleri — öğrenci notu: başlık büyük daire içine alınmış, 'Genleri' sonunda karalama",
+     "s": [
+      10
+     ]
+    },
+    {
+     "baslik": "Transkripsiyon faktörleri aynı zamanda kafa gelişiminde de görev almaktadır.",
+     "metin": "OTX genidir — öğrenci notu: 'OTX genidir' çevrelenmiş, yanında çizgi/karalama",
+     "s": [
+      12
+     ]
+    },
+    {
+     "baslik": "MSX ailesi bir diğer homeobox üyesidir.",
+     "metin": "Hoca: MSX ailesi bir diğer homeobox üyesidir",
+     "s": [
+      13
+     ]
+    },
+    {
+     "baslik": "Gelişimde etkili olan fenotipi etkileyen transkripsiyon faktörlerini",
+     "metin": "PAX6 →Aniridi — öğrenci notu: PAX6→Aniridi satırı daire içine alınmış",
+     "s": [
+      14
+     ]
+    },
+    {
+     "baslik": "PAX6 geni",
+     "metin": "PAX6 geni — öğrenci notu: başlık daire içine alınmış, yanında çizgi/karalama",
+     "s": [
+      15
+     ]
+    },
+    {
+     "baslik": "Santral Sinir Sistemi(SSS) Gelişimi",
+     "metin": "Santral Sinir Sistemi(SSS) Gelişimi — öğrenci notu: hangi hastalıklar → isim bil (başlık üstü el yazısı)",
+     "s": [
+      16
+     ]
+    },
+    {
+     "baslik": "Santral Sinir Sistemi(SSS) Gelişimi",
+     "metin": "Çıkmış (ilgili): En sık görülen nöral tüp defektlerinden; Spina bfida",
+     "s": [
+      17
+     ]
+    },
+    {
+     "baslik": "oNöral krista hücreleri embriyo gelişimi sırasında; kafa kemikleri,",
+     "metin": "Çıkmış (ilgili): Waardenburg sendromu; tipik yüz görünümü (telekantus, heterokromi),",
+     "s": [
+      20
+     ]
+    },
+    {
+     "baslik": "Holoprozensefali(HPE)",
+     "metin": "Holoprozensefali(HPE) — öğrenci notu: başlık daire içine alınmış",
+     "s": [
+      23
+     ]
+    },
+    {
+     "baslik": "Holoprozensefali",
+     "metin": "Holoprozensefali — öğrenci notu: başlık daire içine alınmış",
+     "s": [
+      24
+     ]
+    },
+    {
+     "baslik": "Holoprozensefali(HPE)",
+     "metin": "Holoprozensefali(HPE) — öğrenci notu: başlık daire içine alınmış",
+     "s": [
+      25
+     ]
+    },
+    {
+     "baslik": "Lisensefali",
+     "metin": "Lisensefali — öğrenci notu: Oluşum ve hasar nasıl bil (başlık yanı el yazısı)",
+     "s": [
+      26
+     ]
+    },
+    {
+     "baslik": "Somitler",
+     "metin": "Hoca: spondilokostal dizostozis (SCD)",
+     "s": [
+      31
+     ]
+    },
+    {
+     "baslik": "Kraniyofasiyal Gelişim",
+     "metin": "Kraniyofasiyal Gelişim — öğrenci notu: Sorulabilecek hastalıklar (başlığın sağında, pembe el yazısı; slayttaki sendrom bilgisini kastediyor olabilir)",
+     "s": [
+      34
+     ]
+    },
+    {
+     "baslik": "Kraniyofasiyal Gelişim",
+     "metin": "Hoca: Goldenhar sendromu",
+     "s": [
+      35
+     ]
+    },
+    {
+     "baslik": "Kraniyofasiyal Gelişim",
+     "metin": "Hoca: frontonazal displazilerdir(FND)",
+     "s": [
+      37
+     ]
+    },
+    {
+     "baslik": "Kraniyofasiyal Gelişim",
+     "metin": "Hoca: Treacher Collins-Franceschetti 1 sendromu",
+     "s": [
+      39
+     ]
+    },
+    {
+     "baslik": "Kraniyosinostozlar",
+     "metin": "Kraniyosinostozlar — öğrenci notu: 3 Tipi var bil (başlığın sağında, pembe el yazısı)",
+     "s": [
+      40
+     ]
+    },
+    {
+     "baslik": "Kraniyosinostozlar",
+     "metin": "Kapanan sütüra göre kraniyosinostoz türleri; — öğrenci notu: Pembe büyük daire/ayraç sol kenarda 'Kapanan sütüra göre türler' ile Sagital, Koronal, Trigonosefali maddelerini kapsıyor; altında ünlem/karalama işareti",
+     "s": [
+      41
+     ]
+    },
+    {
+     "baslik": "Büyük çoğunluğu genetik kökenlidir.",
+     "metin": "Genelde yeni mutasyonlar söz konusudur.(de novo) — öğrenci notu: Pembe alt çizgi",
+     "s": [
+      48
+     ]
+    },
+    {
+     "baslik": "Ayrıca: - Hemen daima simetrik olan eklem",
+     "metin": "Hemen daima simetrik olan eklem hareketlerinde anormallik ve şişlik. — öğrenci notu: Madde başındaki tire pembe daire içine alınmış",
+     "s": [
+      49
+     ]
+    },
+    {
+     "baslik": "FGFR3 Grubu",
+     "metin": "Akondroplazi, — öğrenci notu: Üç hastalık adı tek pembe büyük daire içinde",
+     "s": [
+      50
+     ]
+    },
+    {
+     "baslik": "Akondroplazi:",
+     "metin": "en sık görülenidir — öğrenci notu: Sarı/turuncu fosforlu, 'en sık gö' kısmı",
+     "s": [
+      51
+     ]
+    },
+    {
+     "baslik": "Normal bir zekaya sahip, normal bir yaşam süresi beklenir.",
+     "metin": "Normal bir zekaya sahip — öğrenci notu: Sarı fosforlu",
+     "s": [
+      52
+     ]
+    },
+    {
+     "baslik": "Hastalarda motor gelişim gecikir,18-24 aylıkken",
+     "metin": "dorso-lomber kifoz vardır. — öğrenci notu: Sarı fosforlu",
+     "s": [
+      53
+     ]
+    },
+    {
+     "baslik": "Komplikasyonları:",
+     "metin": "kuadriparezi — öğrenci notu: Sarı fosforlu",
+     "s": [
+      54
+     ]
+    },
+    {
+     "baslik": "Hipokondroplazi",
+     "metin": "N540K mutasyonu sık görülür, — öğrenci notu: ok ve el yazısı: 'hotspot mutasyon'",
+     "s": [
+      55
+     ]
+    },
+    {
+     "baslik": "Tanatoforik Displazi",
+     "metin": "Tanatoforik Displazi — öğrenci notu: başlığın yanında ok ve el yazısı: 'Nadir ve letal'",
+     "s": [
+      56
+     ]
+    },
+    {
+     "baslik": "Tip 2 Kollajenopatiler",
+     "metin": "Stickler sendromu, — öğrenci notu: ok ve el yazısı: 'Yışamla bağlıdır' (tam okunamadı)",
+     "s": [
+      57
+     ]
+    },
+    {
+     "baslik": "Akondrogenezis tip 2",
+     "metin": "Akondrogenezis tip 2 — öğrenci notu: başlık yanında el yazısı: 'Letal form'",
+     "s": [
+      58
+     ]
+    },
+    {
+     "baslik": "Hipokondrogenezis",
+     "metin": "Olguların çoğu solunum yetmezliği nedeniyle yenidoğan — öğrenci notu: madde imi çevrelenmiş, çizgi ile",
+     "s": [
+      59
+     ]
+    },
+    {
+     "baslik": "Spondiloepifizyal displazicongenita",
+     "metin": "Odontoid hipoplazi bu hastalarda sık görülen bir anomali, — öğrenci notu: madde imi çevrelenmiş, solunda küçük işaret (okunamadı)",
+     "s": [
+      60
+     ]
+    },
+    {
+     "baslik": "Fibrokondrogenezis",
+     "metin": "OR kalıtılır, — öğrenci notu: madde imi çevrelenmiş, solunda karalama/çarpı benzeri işaret",
+     "s": [
+      61
+     ]
+    },
+    {
+     "baslik": "Atelostenogenezis",
+     "metin": "humerus ve femur distalinde hipoplazi — öğrenci notu: sarı fosforlu",
+     "s": [
+      62
+     ]
+    },
+    {
+     "baslik": "Osteogenezis İmperfekta(Oİ)",
+     "metin": "Osteogenezis İmperfekta(Oİ) — öğrenci notu: başlık üstünde el yazısı: 'Cam kemik kırığı hastalığı'",
+     "s": [
+      64
+     ]
+    },
+    {
+     "baslik": "Osteogenezis İmperfekta(Oİ)",
+     "metin": "Osteogenezis İmperfekta(Oİ) — öğrenci notu: sağ kenarda el yazısı: 'Bu sayfada çok durmadı'",
+     "s": [
+      65
+     ]
+    },
+    {
+     "baslik": "Osteogenezis İmperfekta(Oİ)",
+     "metin": "Skleranın maviliği ayırıcı tanıda önemlidir. — öğrenci notu: madde imi çevrelenmiş, solunda küçük işaret (okunamadı)",
+     "s": [
+      66
+     ]
+    },
+    {
+     "baslik": "Bağ Dokusunun Kalıtsal Bozukluklarıyla İlgili",
+     "metin": "Osteogenezis İmperfekta; — öğrenci notu: başlık yanında el yazısı: 'COL1A1 COL1A2'",
+     "s": [
+      67
+     ]
+    },
+    {
+     "baslik": "•Marfan Sendromu:",
+     "metin": "fibrillin 1 glikoprotein",
+     "s": [
+      71
+     ]
+    },
+    {
+     "baslik": "İskelet anomalileri ,aort dilatasyonu,mitral valv prolapsusu ve",
+     "metin": "aort dilatasyonu,mitral valv prolapsusu ve — öğrenci notu: sarı fosforlu; ikinci satırın 'göz bozuklukları ile seyreden bir sendromdur.' kısmı da fosforlu",
+     "s": [
+      72
+     ]
+    },
+    {
+     "baslik": "-Boy uzun, aort dilatasyonu, pektus",
+     "metin": "Boy uzun, aort dilatasyonu, pektus excavatum",
+     "s": [
+      73
+     ]
+    },
+    {
+     "baslik": "Marfan sendromu tanısının FBN1 mutasyonlarının saptanması ile",
+     "metin": "FBN1 mutasyonlarının",
+     "s": [
+      74
+     ]
+    },
+    {
+     "baslik": "Kas hastalıkları muskuler distrofiler",
+     "metin": "Duchenne/Becker",
+     "s": [
+      75
+     ]
+    },
+    {
+     "baslik": "DMD/BMD kadın taşıyıcılar tarafından X’e bağlı resesif olarak",
+     "metin": "DMD/BMD kadın taşıyıcılar tarafından X’e bağlı resesif olarak aktarılır ve hastalık erkek çocuklarda görülür. — öğrenci notu: iki satır sarı fosforlu",
+     "s": [
+      76
+     ]
+    },
+    {
+     "baslik": "DMD ve BMD arasındaki klinik ayrılık, farklı mutasyonların",
+     "metin": "DMD ve BMD arasındaki klinik ayrılık, farklı mutasyonların protein sentezine olan etkilerinden kaynaklanır. — öğrenci notu: madde imi daire içine alınmış",
+     "s": [
+      77
+     ]
+    },
+    {
+     "baslik": "Kız çocuklarda DMD",
+     "metin": "Turner Sendromu (X0) — öğrenci notu: satır başında pembe onay/ok işareti",
+     "s": [
+      79
+     ]
+    },
+    {
+     "baslik": "En sık görülen MD",
+     "metin": "En sık görülen MD — öğrenci notu: sağ altta daire içinde 'S' harfi (anlamı yazılmamış)",
+     "s": [
+      80
+     ]
+    },
+    {
+     "baslik": "En erken patolojik değişiklikler intrauterin 20. haftada kas",
+     "metin": "En erken patolojik değişiklikler intrauterin 20. haftada kas — öğrenci notu: sağ altta şekil yanında daire içinde 'S' harfi (anlamı yazılmamış)",
+     "s": [
+      81
+     ]
+    },
+    {
+     "baslik": "Yürüme gecikmiştir.",
+     "metin": "Yürüme gecikmiştir. — öğrenci notu: madde imi daire içine alınmış, üstünde işaret",
+     "s": [
+      82
+     ]
+    },
+    {
+     "baslik": "Referanslar",
+     "metin": "Referanslar — öğrenci notu: 'Sınav' (altı çizili) 'genler': 'gelişim geni NSX ve ...', 'söz geni FAX6' (kısmen okunabildi, belirsiz); 'Gelişim sıralı bil'; 'HPE -> trizomi 13 ...' (sonu okunamadı)",
+     "s": [
+      86
+     ]
+    }
+   ],
+   "klip": "a-kazanim",
+   "ses": [
+    "Dersin sonunda bilmen gerekenler.",
+    "Bu ders bittiğinde aşağıdaki başlıkları açıklayabilmelisin.",
+    "Morfogenler: Morfogenler — öğrenci notu: Sinyal molekülleri nedir? isim bil (başlık yanında kırmızı/pembe el yazısı; 'moleküller' kısmı kısmen okunaksız).",
+    "Hox Genleri: Hox Genleri — öğrenci notu: başlık büyük daire içine alınmış, 'Genleri' sonunda karalama.",
+    "Transkripsiyon faktörleri aynı zamanda kafa gelişiminde de görev almaktadır.: OTX genidir — öğrenci notu: 'OTX genidir' çevrelenmiş, yanında çizgi/karalama.",
+    "MSX ailesi bir diğer homeobox üyesidir.: Hoca: MSX ailesi bir diğer homeobox üyesidir.",
+    "Gelişimde etkili olan fenotipi etkileyen transkripsiyon faktörlerini: PAX6 →Aniridi — öğrenci notu: PAX6→Aniridi satırı daire içine alınmış.",
+    "PAX6 geni: PAX6 geni — öğrenci notu: başlık daire içine alınmış, yanında çizgi/karalama.",
+    "Santral Sinir Sistemi(SSS) Gelişimi: Santral Sinir Sistemi(SSS) Gelişimi — öğrenci notu: hangi hastalıklar → isim bil (başlık üstü el yazısı).",
+    "Santral Sinir Sistemi(SSS) Gelişimi: Çıkmış (ilgili): En sık görülen nöral tüp defektlerinden; Spina bfida.",
+    "oNöral krista hücreleri embriyo gelişimi sırasında; kafa kemikleri,: Çıkmış (ilgili): Waardenburg sendromu; tipik yüz görünümü (telekantus, heterokromi),.",
+    "Holoprozensefali(HPE): Holoprozensefali(HPE) — öğrenci notu: başlık daire içine alınmış.",
+    "Holoprozensefali: Holoprozensefali — öğrenci notu: başlık daire içine alınmış.",
+    "Holoprozensefali(HPE): Holoprozensefali(HPE) — öğrenci notu: başlık daire içine alınmış.",
+    "Lisensefali: Lisensefali — öğrenci notu: Oluşum ve hasar nasıl bil (başlık yanı el yazısı).",
+    "Somitler: Hoca: spondilokostal dizostozis (SCD).",
+    "Kraniyofasiyal Gelişim: Kraniyofasiyal Gelişim — öğrenci notu: Sorulabilecek hastalıklar (başlığın sağında, pembe el yazısı; slayttaki sendrom bilgisini kastediyor olabilir).",
+    "Kraniyofasiyal Gelişim: Hoca: Goldenhar sendromu.",
+    "Kraniyofasiyal Gelişim: Hoca: frontonazal displazilerdir(FND).",
+    "Kraniyofasiyal Gelişim: Hoca: Treacher Collins-Franceschetti 1 sendromu.",
+    "Kraniyosinostozlar: Kraniyosinostozlar — öğrenci notu: 3 Tipi var bil (başlığın sağında, pembe el yazısı).",
+    "Kraniyosinostozlar: Kapanan sütüra göre kraniyosinostoz türleri; — öğrenci notu: Pembe büyük daire/ayraç sol kenarda 'Kapanan sütüra göre türler' ile Sagital, Koronal, Trigonosefali maddelerini kapsıyor; altında ünlem/karalama işareti.",
+    "Büyük çoğunluğu genetik kökenlidir.: Genelde yeni mutasyonlar söz konusudur.(de novo) — öğrenci notu: Pembe alt çizgi.",
+    "Ayrıca: - Hemen daima simetrik olan eklem: Hemen daima simetrik olan eklem hareketlerinde anormallik ve şişlik. — öğrenci notu: Madde başındaki tire pembe daire içine alınmış.",
+    "FGFR3 Grubu: Akondroplazi, — öğrenci notu: Üç hastalık adı tek pembe büyük daire içinde.",
+    "Akondroplazi:: en sık görülenidir — öğrenci notu: Sarı/turuncu fosforlu, 'en sık gö' kısmı.",
+    "Normal bir zekaya sahip, normal bir yaşam süresi beklenir.: Normal bir zekaya sahip — öğrenci notu: Sarı fosforlu.",
+    "Hastalarda motor gelişim gecikir,18-24 aylıkken: dorso-lomber kifoz vardır. — öğrenci notu: Sarı fosforlu.",
+    "Komplikasyonları:: kuadriparezi — öğrenci notu: Sarı fosforlu.",
+    "Hipokondroplazi: N540K mutasyonu sık görülür, — öğrenci notu: ok ve el yazısı: 'hotspot mutasyon'.",
+    "Tanatoforik Displazi: Tanatoforik Displazi — öğrenci notu: başlığın yanında ok ve el yazısı: 'Nadir ve letal'.",
+    "Tip 2 Kollajenopatiler: Stickler sendromu, — öğrenci notu: ok ve el yazısı: 'Yışamla bağlıdır' (tam okunamadı).",
+    "Akondrogenezis tip 2: Akondrogenezis tip 2 — öğrenci notu: başlık yanında el yazısı: 'Letal form'.",
+    "Hipokondrogenezis: Olguların çoğu solunum yetmezliği nedeniyle yenidoğan — öğrenci notu: madde imi çevrelenmiş, çizgi ile.",
+    "Spondiloepifizyal displazicongenita: Odontoid hipoplazi bu hastalarda sık görülen bir anomali, — öğrenci notu: madde imi çevrelenmiş, solunda küçük işaret (okunamadı).",
+    "Fibrokondrogenezis: OR kalıtılır, — öğrenci notu: madde imi çevrelenmiş, solunda karalama/çarpı benzeri işaret.",
+    "Atelostenogenezis: humerus ve femur distalinde hipoplazi — öğrenci notu: sarı fosforlu.",
+    "Osteogenezis İmperfekta(Oİ): Osteogenezis İmperfekta(Oİ) — öğrenci notu: başlık üstünde el yazısı: 'Cam kemik kırığı hastalığı'.",
+    "Osteogenezis İmperfekta(Oİ): Osteogenezis İmperfekta(Oİ) — öğrenci notu: sağ kenarda el yazısı: 'Bu sayfada çok durmadı'.",
+    "Osteogenezis İmperfekta(Oİ): Skleranın maviliği ayırıcı tanıda önemlidir. — öğrenci notu: madde imi çevrelenmiş, solunda küçük işaret (okunamadı).",
+    "Bağ Dokusunun Kalıtsal Bozukluklarıyla İlgili: Osteogenezis İmperfekta; — öğrenci notu: başlık yanında el yazısı: 'COL1A1 COL1A2'.",
+    "•Marfan Sendromu:: fibrillin 1 glikoprotein.",
+    "İskelet anomalileri ,aort dilatasyonu,mitral valv prolapsusu ve: aort dilatasyonu,mitral valv prolapsusu ve — öğrenci notu: sarı fosforlu; ikinci satırın 'göz bozuklukları ile seyreden bir sendromdur.' kısmı da fosforlu.",
+    "-Boy uzun, aort dilatasyonu, pektus: Boy uzun, aort dilatasyonu, pektus excavatum.",
+    "Marfan sendromu tanısının FBN1 mutasyonlarının saptanması ile: FBN1 mutasyonlarının.",
+    "Kas hastalıkları muskuler distrofiler: Duchenne/Becker.",
+    "DMD/BMD kadın taşıyıcılar tarafından X’e bağlı resesif olarak: DMD/BMD kadın taşıyıcılar tarafından X’e bağlı resesif olarak aktarılır ve hastalık erkek çocuklarda görülür. — öğrenci notu: iki satır sarı fosforlu.",
+    "DMD ve BMD arasındaki klinik ayrılık, farklı mutasyonların: DMD ve BMD arasındaki klinik ayrılık, farklı mutasyonların protein sentezine olan etkilerinden kaynaklanır. — öğrenci notu: madde imi daire içine alınmış.",
+    "Kız çocuklarda DMD: Turner Sendromu (X0) — öğrenci notu: satır başında pembe onay/ok işareti.",
+    "En sık görülen MD: En sık görülen MD — öğrenci notu: sağ altta daire içinde 'S' harfi (anlamı yazılmamış).",
+    "En erken patolojik değişiklikler intrauterin 20. haftada kas: En erken patolojik değişiklikler intrauterin 20. haftada kas — öğrenci notu: sağ altta şekil yanında daire içinde 'S' harfi (anlamı yazılmamış).",
+    "Yürüme gecikmiştir.: Yürüme gecikmiştir. — öğrenci notu: madde imi daire içine alınmış, üstünde işaret.",
+    "Referanslar: Referanslar — öğrenci notu: 'Sınav' (altı çizili) 'genler': 'gelişim geni NSX ve ...', 'söz geni FAX6' (kısmen okunabildi, belirsiz); 'Gelişim sıralı bil'; 'HPE -> trizomi 13 ...' (sonu okunamadı)."
+   ],
+   "v": "5feed5ff68"
+  },
+  {
+   "id": "onemli",
+   "baslik": "En önemli yerler",
+   "giris": "Bu dersten sorulmuş sekiz çıkmış soru bulunur; ikisi doğrudan holoprozensefali ve siklopi (2021-2022 etiketli çıkmış) ile Duchenne'in en sık musküler distrofi olması (2020-2021 Kurul 2) üzerinedir, diğerleri Duchenne ve Becker genetiğini ölçer. Hoca dersin sonunda HOX, OTX, MSX ve PAX6 genlerini, holoprozensefali ile trizomi 13 ve 18'i, lizensefaliyi, somit ve kraniyofasiyal hastalık adlarını, kraniyosinostozun üç tipini ve iskelet displazisi tip adlarını (FGFR3 grubu) sınav için bilinecekler olarak saydı.",
+   "maddeler": [
+    {
+     "baslik": "Holoprozensefali: oluşum mekanizması ve siklops",
+     "metin": "Holoprozensefali (HPE), ön beynin serebral yarım kürelere bölündüğü orta hat çizgisinin yetersiz ya da eksik kalmasıyla gelişir; en ileri biçiminde orta hatta tek göz bulunur (siklops).",
+     "neden": "Kurul 2 çıkmış sorularında (2021-2022 etiketli) beynin hemisferlere bölünememesi ve siklopi sorulmuştur; hoca 'nasıl bir oluşum var, neyin yetersizliği var, bunu bilin' diyerek holoprozensefaliyi sınav yeri olarak saydı; öğrenci notunda başlık çevrelenmiş, yanına 'neden olur, nasıl görünür' yazılmıştır.",
+     "s": [
+      23,
+      24
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "Duchenne musküler distrofi: en sık ve en ağır distrofi",
+     "metin": "Duchenne musküler distrofi (DMD) çocukluk çağında en sık rastlanan ve en ağır seyirli musküler distrofidir; ölümle sonuçlanır ve yaklaşık 3500 erkek doğumda 1 görülür.",
+     "neden": "2020-2021 Kurul 2 sınavında 'musküler distrofilerle ilgili doğru ifade: Duchenne en sık rastlanan formudur' sorulmuştur; slayt sayfa 80'de bu satırları büyük başlıkla verir; öğrenci notunda 'Duchenne/Becker' fosforlu işaretlidir.",
+     "s": [
+      75,
+      80
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "Holoprozensefalinin üç tipi: lobar, semilobar, alobar",
+     "metin": "HPE klinik şiddete göre üçe ayrılır: lobar, semilobar ve en ağır form alobar; üç tip aynı ailede görülebilir.",
+     "neden": "Hoca 'lobar, semilobar, alobar, bunu bilseniz yeterli' diyerek tipleri sınav yeri olarak saydı (dökümde adlar bozuk anlaşılıyor, slayttaki üç tiple örtüşüyor); öğrenci notunda başlık çevrelenmiştir.",
+     "s": [
+      25
+     ],
+     "cikmis": false
+    },
+    {
+     "baslik": "Holoprozensefalinin nedenleri: trizomi 13 ve SHH",
+     "metin": "Trizomi 13 holoprozensefalinin en sık nedenidir; trizomi 18 ve triploidiyle birlikte olguların %25'ini oluşturur, tek gen nedenlerinden biri SHH mutasyonudur.",
+     "neden": "Hoca 'trizomi 13, trizomi 18 bunları bilin, gerisine gerek yok' diyerek sınav yeri olarak saydı; öğrenci notunda 'Tri 13' satırı daire içinde, sayfa 86'da 'HPE, trizomi 13' yazılıdır.",
+     "s": [
+      23,
+      25
+     ],
+     "cikmis": false
+    },
+    {
+     "baslik": "FGFR3 grubu: akondroplazi, hipokondroplazi, tanatoforik displazi",
+     "metin": "FGFR3 grubu üç hastalıktan oluşur: akondroplazi, hipokondroplazi ve tanatoforik displazi.",
+     "neden": "Hoca FGFR3 grubunu 'biraz ayrıntılı' anlatacağını söyledi ve dersin sonunda iskelet displazilerinde tip adlarını (akondroplazi, FGFR3 grubu) ve ekstremitede ne olduğunu isim isim bilmeyi yeterli saydı; öğrenci notunda üç hastalık adı tek büyük daire içinde, 'isim olarak' ve 'ekstremitede ne oluşur, bil' yazılıdır.",
+     "s": [
+      51,
+      55,
+      56
+     ],
+     "cikmis": false
+    },
+    {
+     "baslik": "HOX genleri ve homeobox: konumsal kimlik",
+     "metin": "HOX (homeotik) genleri hücrelerin konumsal kimliğini belirler; mutasyonları homeotik transformasyona, insanda ekstremite ve genital organ malformasyonlarına yol açar.",
+     "neden": "Hoca dersin sonunda HOX genlerini sınavda bilinecek gelişim genleri arasında saydı; öğrenci notunda başlık ve 'HOX A' satırı daire içine alınmıştır.",
+     "s": [
+      8,
+      10
+     ],
+     "cikmis": false
+    },
+    {
+     "baslik": "Lizensefali: oluşum ve hasar mekanizması",
+     "metin": "Lizensefali, beyinde kıvrımların azalması (pakigri) ya da yokluğu (agri) ile karakterizedir; düz yüzey, anormal kalın korteks ve kortikal laminasyon kaybı oluşur, LIS1 kaybı mikrotübül işlevini bozar.",
+     "neden": "Hoca 'nasıl bir oluşum var, beyinde nasıl bir hasar yapıyor, bunu bilin; gen adlarına gerek yok' dedi; öğrenci notunda 'oluşum ve hasar nasıl, bil' yazılıdır.",
+     "s": [
+      26
+     ],
+     "cikmis": false
+    },
+    {
+     "baslik": "Kraniyosinostoz: tanım ve üç tip",
+     "metin": "Kraniyosinostoz bir ya da daha fazla kafatası sütürünün erken kapanmasıdır; kapanan sütüra göre üç tip ayrılır: sagital, koronal ve metopik sütürün kapandığı trigonosefali.",
+     "neden": "Hoca 'kraniyosinostozun üç tipi var' diyerek sınav yeri olarak saydı; öğrenci notunda sayfa 40'ta '3 tipi var, bil' yazılı, sayfa 41'de tür listesi daire içine alınmıştır.",
+     "s": [
+      40,
+      41
+     ],
+     "cikmis": false
+    }
+   ],
+   "klip": "a-onemli",
+   "ses": [
+    "En önemli yerler.",
+    "Bu dersten sorulmuş sekiz çıkmış soru bulunur; ikisi doğrudan holoprozensefali ve siklopi (2021-2022 etiketli çıkmış) ile Duchenne'in en sık musküler distrofi olması (2020-2021 Kurul 2) üzerinedir, diğerleri Duchenne ve Becker genetiğini ölçer. Hoca dersin sonunda HOX, OTX, MSX ve PAX6 genlerini, holoprozensefali ile trizomi 13 ve 18'i, lizensefaliyi, somit ve kraniyofasiyal hastalık adlarını, kraniyosinostozun üç tipini ve iskelet displazisi tip adlarını (FGFR3 grubu) sınav için bilinecekler olarak saydı.",
+    "Holoprozensefali: oluşum mekanizması ve siklops: Holoprozensefali (HPE), ön beynin serebral yarım kürelere bölündüğü orta hat çizgisinin yetersiz ya da eksik kalmasıyla gelişir; en ileri biçiminde orta hatta tek göz bulunur (siklops).",
+    "Duchenne musküler distrofi: en sık ve en ağır distrofi: Duchenne musküler distrofi (DMD) çocukluk çağında en sık rastlanan ve en ağır seyirli musküler distrofidir; ölümle sonuçlanır ve yaklaşık 3500 erkek doğumda 1 görülür.",
+    "Holoprozensefalinin üç tipi: lobar, semilobar, alobar: HPE klinik şiddete göre üçe ayrılır: lobar, semilobar ve en ağır form alobar; üç tip aynı ailede görülebilir.",
+    "Holoprozensefalinin nedenleri: trizomi 13 ve SHH: Trizomi 13 holoprozensefalinin en sık nedenidir; trizomi 18 ve triploidiyle birlikte olguların %25'ini oluşturur, tek gen nedenlerinden biri SHH mutasyonudur.",
+    "FGFR3 grubu: akondroplazi, hipokondroplazi, tanatoforik displazi: FGFR3 grubu üç hastalıktan oluşur: akondroplazi, hipokondroplazi ve tanatoforik displazi.",
+    "HOX genleri ve homeobox: konumsal kimlik: HOX (homeotik) genleri hücrelerin konumsal kimliğini belirler; mutasyonları homeotik transformasyona, insanda ekstremite ve genital organ malformasyonlarına yol açar.",
+    "Lizensefali: oluşum ve hasar mekanizması: Lizensefali, beyinde kıvrımların azalması (pakigri) ya da yokluğu (agri) ile karakterizedir; düz yüzey, anormal kalın korteks ve kortikal laminasyon kaybı oluşur, LIS1 kaybı mikrotübül işlevini bozar.",
+    "Kraniyosinostoz: tanım ve üç tip: Kraniyosinostoz bir ya da daha fazla kafatası sütürünün erken kapanmasıdır; kapanan sütüra göre üç tip ayrılır: sagital, koronal ve metopik sütürün kapandığı trigonosefali."
+   ],
+   "v": "78dad19cdd"
+  },
+  {
+   "id": "cikmis",
+   "baslik": "Çıkmış sorularda ne soruldu",
+   "giris": "Bu dersin konusundan doğrulanmış 8 çıkmış soru var.",
+   "maddeler": [
+    {
+     "baslik": "2021-2022",
+     "metin": "Beynin hemisferlere veya loblara bölünemediği ve siklopi gibi yüze ait orta hat kusurları ile birlikte olabilen anomali hangisidir?",
+     "cevap": "Holoprosensefali",
+     "s": [
+      24
+     ]
+    },
+    {
+     "baslik": "2020-2021",
+     "metin": "Musküler distrofiler ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "cevap": "Duchenne musküler distrofi en sık rastlanan formudur",
+     "s": [
+      80
+     ]
+    },
+    {
+     "baslik": "2020-2021",
+     "metin": "Distrofin-glikoprotein kompleksindeki hücre sinyalizasyonunun bozulmasına yol açan ve zamanla onarım kapasitesini aşan miyofibril dejenerasyonları ile ortaya çıkan iskelet kası hastalığı aşağıdakilerden hangisidir?",
+     "cevap": "Duchenne ve Becker musküler distrofi",
+     "s": [
+      77
+     ]
+    },
+    {
+     "baslik": "2020-2021",
+     "metin": "Sıklıkla yeni mutasyonlar sonucu ortaya çıkan, allelik heterojenite ve fenotipik değişkenlik gösteren ve taşıyıcılarda da fenotipik bulgu veren kas distrofisi hastalık grubu hangisidir?",
+     "cevap": "Duchenne müsküler distrofi (DMD)",
+     "s": [
+      75
+     ]
+    },
+    {
+     "baslik": "Geçmiş Yıllar Çıkmışı (Arşiv)",
+     "metin": "Duchenne müsküler distrofi (DMD) hastalığı ile ilgili ifadelerden hangisi yanlıştır?",
+     "cevap": "Taşıyıcılar klinik fenotip sergilemez.",
+     "s": [
+      76
+     ]
+    },
+    {
+     "baslik": "2020-2021",
+     "metin": "Spina bifida ile ilgili aşağıdaki ifadeler verilmiştir: I. Nöral tüpte kapanma defektidir. II. En sık görülen pediatrik nörolojik hastalıktır. III. İlk çocukta spina bifida varsa risk diğer çocuklar için artmaktadır. IV. Gebelik dönemi taramalarında saptanması mümkün değildir. Yukarıdaki ifadelerden hangisi/hangileri doğrudur?",
+     "cevap": "I ve III",
+     "s": [
+      17
+     ]
+    },
+    {
+     "baslik": "2023",
+     "metin": "Aşağıdakilerden hangisi sendromik işitme kayıplarından değildir?",
+     "cevap": "GJB2 (konneksin 26) mutasyonuna bağlı işitme kaybı",
+     "s": [
+      20
+     ]
+    },
+    {
+     "baslik": "2018-2019",
+     "metin": "Aşağıdakilerden hangisi otozomal dominant hastalıklara örnek olarak verilemez?",
+     "cevap": "Duchenne musküler distrofi",
+     "s": [
+      51
+     ]
+    }
+   ],
+   "klip": "a-cikmis",
+   "ses": [
+    "Çıkmış sorularda ne soruldu.",
+    "Bu dersin konusundan doğrulanmış 8 çıkmış soru var.",
+    "2021-2022: Beynin hemisferlere veya loblara bölünemediği ve siklopi gibi yüze ait orta hat kusurları ile birlikte olabilen anomali hangisidir?",
+    "Cevap: Holoprosensefali.",
+    "2020-2021: Musküler distrofiler ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "Cevap: Duchenne musküler distrofi en sık rastlanan formudur.",
+    "2020-2021: Distrofin-glikoprotein kompleksindeki hücre sinyalizasyonunun bozulmasına yol açan ve zamanla onarım kapasitesini aşan miyofibril dejenerasyonları ile ortaya çıkan iskelet kası hastalığı aşağıdakilerden hangisidir?",
+    "Cevap: Duchenne ve Becker musküler distrofi.",
+    "2020-2021: Sıklıkla yeni mutasyonlar sonucu ortaya çıkan, allelik heterojenite ve fenotipik değişkenlik gösteren ve taşıyıcılarda da fenotipik bulgu veren kas distrofisi hastalık grubu hangisidir?",
+    "Cevap: Duchenne müsküler distrofi (DMD).",
+    "Geçmiş Yıllar Çıkmışı (Arşiv): Duchenne müsküler distrofi (DMD) hastalığı ile ilgili ifadelerden hangisi yanlıştır?",
+    "Cevap: Taşıyıcılar klinik fenotip sergilemez.",
+    "2020-2021: Spina bifida ile ilgili aşağıdaki ifadeler verilmiştir: I. Nöral tüpte kapanma defektidir. II. En sık görülen pediatrik nörolojik hastalıktır. III. İlk çocukta spina bifida varsa risk diğer çocuklar için artmaktadır. IV. Gebelik dönemi taramalarında saptanması mümkün değildir. Yukarıdaki ifadelerden hangisi/hangileri doğrudur?",
+    "Cevap: I ve III.",
+    "2023: Aşağıdakilerden hangisi sendromik işitme kayıplarından değildir?",
+    "Cevap: GJB2 (konneksin 26) mutasyonuna bağlı işitme kaybı.",
+    "2018-2019: Aşağıdakilerden hangisi otozomal dominant hastalıklara örnek olarak verilemez?",
+    "Cevap: Duchenne musküler distrofi."
+   ],
+   "v": "69cb08737f"
+  },
+  {
+   "id": "uslup",
+   "baslik": "Hoca nasıl soru sorar",
+   "giris": "Bu konuda çıkmış soru az; profil yalnız genel bir eğilim gösterir.",
+   "guven": "dusuk",
+   "maddeler": [
+    {
+     "baslik": "Soru kökü",
+     "metin": "Sorular çoğunlukla doğrudan bilgi sorusu (%60) ve yanlış ifadeyi bulma (%9) biçimindedir."
+    },
+    {
+     "baslik": "Sorulan bilgi",
+     "metin": "En çok tanım ve kavram (%60) ve mekanizma (%40) sorulur."
+    },
+    {
+     "baslik": "Tanım ve kavram",
+     "metin": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    },
+    {
+     "baslik": "Mekanizma",
+     "metin": "Neden-sonuç zinciri klinik muhakemenin temelidir; ezberlenen sonuç değil, zincirin bir halkası sorulur."
+    },
+    {
+     "baslik": "Düzey",
+     "metin": "Soruların düzeyi hatırlama (%60) ve anlama ve ilişki kurma (%40) ağırlıklıdır."
+    },
+    {
+     "baslik": "Çeldiriciler",
+     "metin": "Yanlış şıklar genellikle aynı türden başka bir kavram olarak kurulur."
+    },
+    {
+     "baslik": "Zorluk",
+     "metin": "Bu konunun sorularının zorluğu kolay-orta, tekrar eden."
+    }
+   ],
+   "klip": "a-uslup",
+   "ses": [
+    "Hoca nasıl soru sorar.",
+    "Bu konuda çıkmış soru az; profil yalnız genel bir eğilim gösterir.",
+    "Soru kökü: Sorular çoğunlukla doğrudan bilgi sorusu (%60) ve yanlış ifadeyi bulma (%9) biçimindedir.",
+    "Sorulan bilgi: En çok tanım ve kavram (%60) ve mekanizma (%40) sorulur.",
+    "Tanım ve kavram: Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür.",
+    "Mekanizma: Neden-sonuç zinciri klinik muhakemenin temelidir; ezberlenen sonuç değil, zincirin bir halkası sorulur.",
+    "Düzey: Soruların düzeyi hatırlama (%60) ve anlama ve ilişki kurma (%40) ağırlıklıdır.",
+    "Çeldiriciler: Yanlış şıklar genellikle aynı türden başka bir kavram olarak kurulur.",
+    "Zorluk: Bu konunun sorularının zorluğu kolay-orta, tekrar eden."
+   ],
+   "v": "ec0853d996"
+  },
+  {
+   "id": "odak",
+   "baslik": "Nelere odaklanmalısın",
+   "giris": "",
+   "maddeler": [
+    {
+     "baslik": "Arnold-Chiari malformasyonu",
+     "metin": "Çıkmışlarda 2 kez soruldu. Örnek kök: Konjenital malformasyonlar arasında tipik olarak hidrosefali ve lomber miyelomeningoselin eşlik ettiği anomali hangisidir?"
+    },
+    {
+     "baslik": "Holoprozensefali: oluşum mekanizması ve siklops",
+     "metin": "Kurul 2 çıkmış sorularında (2021-2022 etiketli) beynin hemisferlere bölünememesi ve siklopi sorulmuştur; hoca 'nasıl bir oluşum var, neyin yetersizliği var, bunu bilin' diyerek holoprozensefaliyi sınav yeri olarak saydı; öğrenci notunda başlık çevrelenmiş, yanına 'neden olur, nasıl görünür' yazılmıştır."
+    },
+    {
+     "baslik": "Duchenne musküler distrofi: en sık ve en ağır distrofi",
+     "metin": "2020-2021 Kurul 2 sınavında 'musküler distrofilerle ilgili doğru ifade: Duchenne en sık rastlanan formudur' sorulmuştur; slayt sayfa 80'de bu satırları büyük başlıkla verir; öğrenci notunda 'Duchenne/Becker' fosforlu işaretlidir."
+    },
+    {
+     "baslik": "DMD/BMD kalıtımı, Xp21 distrofin geni ve de novo mutasyon",
+     "metin": "Üç çıkmış soru DMD'nin kalıtımını ve genetik özelliklerini ölçmüştür: de novo mutasyon ve allelik heterojenite (2022-2023 Kurul 5), taşıyıcıların fenotipi ve X'e bağlı resesif kalıtım (yılı belirsiz arşiv) ve otozomal dominant olmayan örnek olarak DMD (yıl ve kurul etiketi kesin olmayan arşiv sorusu); öğrenci notunda kalıtım satırı fosforlu, 'kadınlarda da belirti verebilir' yazılıdır."
+    },
+    {
+     "baslik": "DMD ile BMD farkı: distrofin ve okuma çerçevesi",
+     "metin": "2020-2021 Kurul 5 sınavında distrofin-glikoprotein kompleksi ve miyofibril dejenerasyonuyla giden iskelet kası hastası olarak Duchenne ve Becker sorulmuştur; hoca DMD'yi BMD benzeri hafif forma çevirme yaklaşımını ve ekzonların birbirine bağlanıp bir miktar protein üretilmesinin tabloyu hafiflettiğini anlattı (orta güven); öğrenci notunda sayfa 77'de üç satır daire içinde, 'CRISPR' notu vardır."
+    },
+    {
+     "baslik": "Çalışma yolu",
+     "metin": "Okurken her başlıkta tanım ve kavram bilgisini ayrı not et; hoca en çok bunu soruyor."
+    }
+   ],
+   "klip": "a-odak",
+   "ses": [
+    "Nelere odaklanmalısın.",
+    "Arnold-Chiari malformasyonu: Çıkmışlarda 2 kez soruldu. Örnek kök: Konjenital malformasyonlar arasında tipik olarak hidrosefali ve lomber miyelomeningoselin eşlik ettiği anomali hangisidir?",
+    "Holoprozensefali: oluşum mekanizması ve siklops: Kurul 2 çıkmış sorularında (2021-2022 etiketli) beynin hemisferlere bölünememesi ve siklopi sorulmuştur; hoca 'nasıl bir oluşum var, neyin yetersizliği var, bunu bilin' diyerek holoprozensefaliyi sınav yeri olarak saydı; öğrenci notunda başlık çevrelenmiş, yanına 'neden olur, nasıl görünür' yazılmıştır.",
+    "Duchenne musküler distrofi: en sık ve en ağır distrofi: 2020-2021 Kurul 2 sınavında 'musküler distrofilerle ilgili doğru ifade: Duchenne en sık rastlanan formudur' sorulmuştur; slayt sayfa 80'de bu satırları büyük başlıkla verir; öğrenci notunda 'Duchenne/Becker' fosforlu işaretlidir.",
+    "DMD/BMD kalıtımı, Xp21 distrofin geni ve de novo mutasyon: Üç çıkmış soru DMD'nin kalıtımını ve genetik özelliklerini ölçmüştür: de novo mutasyon ve allelik heterojenite (2022-2023 Kurul 5), taşıyıcıların fenotipi ve X'e bağlı resesif kalıtım (yılı belirsiz arşiv) ve otozomal dominant olmayan örnek olarak DMD (yıl ve kurul etiketi kesin olmayan arşiv sorusu); öğrenci notunda kalıtım satırı fosforlu, 'kadınlarda da belirti verebilir' yazılıdır.",
+    "DMD ile BMD farkı: distrofin ve okuma çerçevesi: 2020-2021 Kurul 5 sınavında distrofin-glikoprotein kompleksi ve miyofibril dejenerasyonuyla giden iskelet kası hastası olarak Duchenne ve Becker sorulmuştur; hoca DMD'yi BMD benzeri hafif forma çevirme yaklaşımını ve ekzonların birbirine bağlanıp bir miktar protein üretilmesinin tabloyu hafiflettiğini anlattı (orta güven); öğrenci notunda sayfa 77'de üç satır daire içinde, 'CRISPR' notu vardır.",
+    "Çalışma yolu: Okurken her başlıkta tanım ve kavram bilgisini ayrı not et; hoca en çok bunu soruyor."
+   ],
+   "v": "26e1081484"
+  }
+ ],
+ "ozet": [
+  {
+   "id": "giris",
+   "baslik": "Dersin özü",
+   "giris": "Ders, beyin ve iskelet sisteminin gelişimini yöneten morfogenleri ve HOX, OTX, MSX, PAX6 gibi gelişim genlerini; nöral tüp, nöral krista, holoprozensefali, lizensefali, somit ve kraniyofasiyal gelişim anomalilerini işler. Ardından kraniyosinostozlar, FGFR3 grubu ve kollajenle ilişkili iskelet displazileri, osteogenezis imperfekta ve Marfan sendromu anlatılır; ders Duchenne ve Becker musküler distrofileriyle biter.",
+   "maddeler": [],
+   "klip": "o-giris",
+   "ses": [
+    "Dersin özü.",
+    "Ders, beyin ve iskelet sisteminin gelişimini yöneten morfogenleri ve HOX, OTX, MSX, PAX6 gibi gelişim genlerini; nöral tüp, nöral krista, holoprozensefali, lizensefali, somit ve kraniyofasiyal gelişim anomalilerini işler. Ardından kraniyosinostozlar, FGFR3 grubu ve kollajenle ilişkili iskelet displazileri, osteogenezis imperfekta ve Marfan sendromu anlatılır; ders Duchenne ve Becker musküler distrofileriyle biter."
+   ],
+   "v": "249a6570c6"
+  },
+  {
+   "id": "2g01-02",
+   "baslik": "HOX genleri ve homeobox: konumsal kimlik",
+   "giris": "HOX (homeotik) genleri hücrelerin konumsal kimliğini belirler; mutasyonları homeotik transformasyona, insanda ekstremite ve genital organ malformasyonlarına yol açar.",
+   "s": [
+    8,
+    10
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "Hox genleri Drosophila'da tanımlandı; sineklerde antenin yerine bacak oluşması homeotik genlerdeki mutasyonun sonucudur."
+    },
+    {
+     "metin": "embriyoda her hücreye nerede olduğunu ve bölgesine uygun yapıyı oluşturmak için nasıl davranması gerektiğini bildirir. Mutasyonda bir vücut bölümü başka bir bölümün yapısına dönüşür; buna homeotik transformasyon denir."
+    },
+    {
+     "metin": "homeobox, proteinin DNA'ya bağlanan bölümünü şifreler; bu proteinlere homeodomain proteinleri denir ve embriyonik gelişimde gen ifadesini düzenler. Bütün homeotik genler başka genleri devreye sokan ya da devre dışı bırakan genlerdir."
+    },
+    {
+     "metin": "HOXA, B, C ve D genleri vardır; mutasyonlar ekstremite ve genital organ malformasyonlarına yol açar. HOXD13 mutasyonunda sinpolidaktili beş ailede bildirilmiştir."
+    },
+    {
+     "metin": "omurgalılarda HOX genleri sinir sistemi, aksiyel iskelet, sindirim ve ürogenital yol, dış genital bölge ve ekstremite gelişiminde rol oynar."
+    }
+   ],
+   "klip": "o-2g01-02",
+   "ses": [
+    "HOX genleri ve homeobox: konumsal kimlik.",
+    "HOX (homeotik) genleri hücrelerin konumsal kimliğini belirler; mutasyonları homeotik transformasyona, insanda ekstremite ve genital organ malformasyonlarına yol açar.",
+    "Hox genleri Drosophila'da tanımlandı; sineklerde antenin yerine bacak oluşması homeotik genlerdeki mutasyonun sonucudur.",
+    "embriyoda her hücreye nerede olduğunu ve bölgesine uygun yapıyı oluşturmak için nasıl davranması gerektiğini bildirir. Mutasyonda bir vücut bölümü başka bir bölümün yapısına dönüşür; buna homeotik transformasyon denir.",
+    "homeobox, proteinin DNA'ya bağlanan bölümünü şifreler; bu proteinlere homeodomain proteinleri denir ve embriyonik gelişimde gen ifadesini düzenler. Bütün homeotik genler başka genleri devreye sokan ya da devre dışı bırakan genlerdir.",
+    "HOXA, B, C ve D genleri vardır; mutasyonlar ekstremite ve genital organ malformasyonlarına yol açar. HOXD13 mutasyonunda sinpolidaktili beş ailede bildirilmiştir.",
+    "omurgalılarda HOX genleri sinir sistemi, aksiyel iskelet, sindirim ve ürogenital yol, dış genital bölge ve ekstremite gelişiminde rol oynar."
+   ],
+   "v": "47a582bd9e"
+  },
+  {
+   "id": "2g01-05",
+   "baslik": "PAX6 geni: göz gelişimi ve aniridi",
+   "giris": "PAX6 göz gelişimini düzenleyen korunmuş bir transkripsiyon faktörü genidir; heterozigot işlev kaybı aniridiye, homozigot işlev kaybı göz yapılarının tamamen yokluğuna yol açar.",
+   "s": [
+    15
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "PAX6, göz gelişimini düzenleyen, türler arasında korunmuş bir gendir; iki tip DNA bağlayıcı bölgesi olan bir transkripsiyon faktörünü kodlar."
+    },
+    {
+     "metin": "işlev kaybıyla giden mutasyon heterozigot (tek kopya) olduğunda aniridi, yani iris yokluğu gibi bazı göz anomalileri görülür; homozigot (iki kopya) olduğunda göz yapılarının tamamen yokluğu söz konusudur."
+    },
+    {
+     "metin": "gelişimde fenotipi etkileyen transkripsiyon faktörü genlerinde PAX6, aniridi ile eşleşir; PAX3 ise Waardenburg sendromu tip 1 ile eşleşir."
+    },
+    {
+     "metin": "heterozigot ve homozigot sonuçların yer değiştirildiği şıklar kurulur; hafif tablo tek kopya, ağır tablo iki kopya kaybıyla ilişkilidir."
+    },
+    {
+     "metin": "PAX3 Waardenburg sendromu tip 1; PAX6 aniridi; PITX2 Rieger sendromu; PITX3 konjenital katarakt; POU3F4 sağırlık ve distoni; SOX9 kamptomelik displazi ve erkek cinsiyet gelişim kusuru; SRY erkek cinsiyet gelişim bozukluğu; TBX3 Schinzel (ulna-mammary) sendromu; TBX5 Holt-Oram sendromu; GLI3 Greig sendromu; HOXA13 el-ayak-genital sendromu; HOXD13 polisindaktili; LMX1B nail-patella sendromu; MITF Waardenburg sendromu tip 2; PAX2 renal-kolobom sendromu; TWIST Saethre-Chotzen sendromu; WT1 ürogenital anomaliler; TCOF Treacher Collins sendromu."
+    }
+   ],
+   "klip": "o-2g01-05",
+   "ses": [
+    "PAX6 geni: göz gelişimi ve aniridi.",
+    "PAX6 göz gelişimini düzenleyen korunmuş bir transkripsiyon faktörü genidir; heterozigot işlev kaybı aniridiye, homozigot işlev kaybı göz yapılarının tamamen yokluğuna yol açar.",
+    "PAX6, göz gelişimini düzenleyen, türler arasında korunmuş bir gendir; iki tip DNA bağlayıcı bölgesi olan bir transkripsiyon faktörünü kodlar.",
+    "işlev kaybıyla giden mutasyon heterozigot (tek kopya) olduğunda aniridi, yani iris yokluğu gibi bazı göz anomalileri görülür; homozigot (iki kopya) olduğunda göz yapılarının tamamen yokluğu söz konusudur.",
+    "gelişimde fenotipi etkileyen transkripsiyon faktörü genlerinde PAX6, aniridi ile eşleşir; PAX3 ise Waardenburg sendromu tip 1 ile eşleşir.",
+    "heterozigot ve homozigot sonuçların yer değiştirildiği şıklar kurulur; hafif tablo tek kopya, ağır tablo iki kopya kaybıyla ilişkilidir.",
+    "PAX3 Waardenburg sendromu tip 1; PAX6 aniridi; PITX2 Rieger sendromu; PITX3 konjenital katarakt; POU3F4 sağırlık ve distoni; SOX9 kamptomelik displazi ve erkek cinsiyet gelişim kusuru; SRY erkek cinsiyet gelişim bozukluğu; TBX3 Schinzel (ulna-mammary) sendromu; TBX5 Holt-Oram sendromu; GLI3 Greig sendromu; HOXA13 el-ayak-genital sendromu; HOXD13 polisindaktili; LMX1B nail-patella sendromu; MITF Waardenburg sendromu tip 2; PAX2 renal-kolobom sendromu; TWIST Saethre-Chotzen sendromu; WT1 ürogenital anomaliler; TCOF Treacher Collins sendromu."
+   ],
+   "v": "7acb789b95"
+  },
+  {
+   "id": "2g01-09",
+   "baslik": "Holoprozensefali: oluşum mekanizması ve siklops",
+   "giris": "Holoprozensefali (HPE), ön beynin serebral yarım kürelere bölündüğü orta hat çizgisinin yetersiz ya da eksik kalmasıyla gelişir; en ileri biçiminde orta hatta tek göz bulunur (siklops).",
+   "s": [
+    23,
+    24
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "ön beyin (prozensefalon) iki serebral yarım küreye bölünürken bölünmeyi sağlayan orta hat çizgisi yetersiz ya da eksik kalır; yarım küreler birbirinden ayrılamaz."
+    },
+    {
+     "metin": "beynin ön kısmının ve orta hat yüz yapılarının gelişimi bozulur. Olguların %80'inde yüz orta hat çizgisi kusurları eşlik eder; en ileri biçimde orta hatta yalnız bir göz bulunur, buna siklops (siklopi) denir."
+    },
+    {
+     "metin": "ön beyindeki en sık gelişim kusurudur; her 250 gebelikte birinde görülür, ancak etkilenen fetüslerin büyük kısmı düşükle sonlandığı için canlı doğumda sıklık 1/10.000'e düşer."
+    },
+    {
+     "metin": "holoprozensefali ön beynin bölünme kusurudur; lizensefali kıvrım kusuru (düz beyin), primer mikrosefali ise malformasyonsuz küçük beyindir."
+    },
+    {
+     "metin": "kromozomal bozukluklar ve tek gen mutasyonları (SHH) holoprozensefaliye yol açar."
+    }
+   ],
+   "klip": "o-2g01-09",
+   "ses": [
+    "Holoprozensefali: oluşum mekanizması ve siklops.",
+    "Holoprozensefali (HPE), ön beynin serebral yarım kürelere bölündüğü orta hat çizgisinin yetersiz ya da eksik kalmasıyla gelişir; en ileri biçiminde orta hatta tek göz bulunur (siklops).",
+    "ön beyin (prozensefalon) iki serebral yarım küreye bölünürken bölünmeyi sağlayan orta hat çizgisi yetersiz ya da eksik kalır; yarım küreler birbirinden ayrılamaz.",
+    "beynin ön kısmının ve orta hat yüz yapılarının gelişimi bozulur. Olguların %80'inde yüz orta hat çizgisi kusurları eşlik eder; en ileri biçimde orta hatta yalnız bir göz bulunur, buna siklops (siklopi) denir.",
+    "ön beyindeki en sık gelişim kusurudur; her 250 gebelikte birinde görülür, ancak etkilenen fetüslerin büyük kısmı düşükle sonlandığı için canlı doğumda sıklık 1/10.000'e düşer.",
+    "holoprozensefali ön beynin bölünme kusurudur; lizensefali kıvrım kusuru (düz beyin), primer mikrosefali ise malformasyonsuz küçük beyindir.",
+    "kromozomal bozukluklar ve tek gen mutasyonları (SHH) holoprozensefaliye yol açar."
+   ],
+   "v": "73692eadd8"
+  },
+  {
+   "id": "2g01-10",
+   "baslik": "Holoprozensefalinin nedenleri: trizomi 13 ve SHH",
+   "giris": "Trizomi 13 holoprozensefalinin en sık nedenidir; trizomi 18 ve triploidiyle birlikte olguların %25'ini oluşturur, tek gen nedenlerinden biri SHH mutasyonudur.",
+   "s": [
+    23,
+    25
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "kromozomal nedenler arasında en sık trizomi 13'tür; trizomi 18 ve triploidi de nedenler arasındadır. Bu üç kromozom anomalisi birlikte holoprozensefali olgularının %25'ini oluşturur."
+    },
+    {
+     "metin": "SHH (Sonic hedgehog) genindeki heterozigot mutasyonlar holoprozensefali başta olmak üzere yüz ve beynin çeşitli derecelerde orta hat defektlerine neden olur. Shh, erken embriyonik dönemde önemli bir morfogendir ve işlev görmesi için kolesterole gereksinim duyar."
+    },
+    {
+     "metin": "hoca yalnız trizomi 13 ve 18'in bilinmesini istedi; öteki ayrıntılara gerek olmadığını söyledi."
+    },
+    {
+     "metin": "trizomi 13 ve 18'in ikisi de neden olarak sayılır, soru \"en sık\" dediğinde cevap trizomi 13'tür."
+    }
+   ],
+   "klip": "o-2g01-10",
+   "ses": [
+    "Holoprozensefalinin nedenleri: trizomi 13 ve SHH.",
+    "Trizomi 13 holoprozensefalinin en sık nedenidir; trizomi 18 ve triploidiyle birlikte olguların %25'ini oluşturur, tek gen nedenlerinden biri SHH mutasyonudur.",
+    "kromozomal nedenler arasında en sık trizomi 13'tür; trizomi 18 ve triploidi de nedenler arasındadır. Bu üç kromozom anomalisi birlikte holoprozensefali olgularının %25'ini oluşturur.",
+    "SHH (Sonic hedgehog) genindeki heterozigot mutasyonlar holoprozensefali başta olmak üzere yüz ve beynin çeşitli derecelerde orta hat defektlerine neden olur. Shh, erken embriyonik dönemde önemli bir morfogendir ve işlev görmesi için kolesterole gereksinim duyar.",
+    "hoca yalnız trizomi 13 ve 18'in bilinmesini istedi; öteki ayrıntılara gerek olmadığını söyledi.",
+    "trizomi 13 ve 18'in ikisi de neden olarak sayılır, soru \"en sık\" dediğinde cevap trizomi 13'tür."
+   ],
+   "v": "5e2ea4c1ce"
+  },
+  {
+   "id": "2g01-11",
+   "baslik": "Holoprozensefalinin üç tipi: lobar, semilobar, alobar",
+   "giris": "HPE klinik şiddete göre üçe ayrılır: lobar, semilobar ve en ağır form alobar; üç tip aynı ailede görülebilir.",
+   "s": [
+    25
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "iki hemisfer ayrılmıştır; ancak genellikle mikrosefali vardır. En hafif tiptir."
+    },
+    {
+     "metin": "hemisferler arasındaki fissür kısmen vardır, yani ayrılma yarım kalmıştır."
+    },
+    {
+     "metin": "en ciddi formdur. Ön beyin sağ ve sol hemisfere tamamen ayrılamaz; tek ventrikül, yüzde siklopia, orta hat yarığı ve tek burun deliği ile karakterizedir."
+    },
+    {
+     "metin": "üç tipin hepsi tek bir ailede görülebilir, yani aynı ailede farklı şiddette tablolar görülebilir."
+    },
+    {
+     "metin": "tek ventrikül ve siklopia alobar tipe, kısmen var olan hemisferler arası fissür semilobar tipe aittir; tipleri birbirine kaydıran şıklar kurulur."
+    }
+   ],
+   "klip": "o-2g01-11",
+   "ses": [
+    "Holoprozensefalinin üç tipi: lobar, semilobar, alobar.",
+    "HPE klinik şiddete göre üçe ayrılır: lobar, semilobar ve en ağır form alobar; üç tip aynı ailede görülebilir.",
+    "iki hemisfer ayrılmıştır; ancak genellikle mikrosefali vardır. En hafif tiptir.",
+    "hemisferler arasındaki fissür kısmen vardır, yani ayrılma yarım kalmıştır.",
+    "en ciddi formdur. Ön beyin sağ ve sol hemisfere tamamen ayrılamaz; tek ventrikül, yüzde siklopia, orta hat yarığı ve tek burun deliği ile karakterizedir.",
+    "üç tipin hepsi tek bir ailede görülebilir, yani aynı ailede farklı şiddette tablolar görülebilir.",
+    "tek ventrikül ve siklopia alobar tipe, kısmen var olan hemisferler arası fissür semilobar tipe aittir; tipleri birbirine kaydıran şıklar kurulur."
+   ],
+   "v": "68fd9a0f8d"
+  },
+  {
+   "id": "2g01-12",
+   "baslik": "Lizensefali: oluşum ve hasar mekanizması",
+   "giris": "Lizensefali, beyinde kıvrımların azalması (pakigri) ya da yokluğu (agri) ile karakterizedir; düz yüzey, anormal kalın korteks ve kortikal laminasyon kaybı oluşur, LIS1 kaybı mikrotübül işlevini bozar.",
+   "s": [
+    26
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "nöral progenitör hücrelerin çoğalması ve göçü bozulur. LIS1 bu işlemde görevlidir; kaybı mikrotübül işlev bozukluğuna yol açar. X'e bağlı lizensefalide sorumlu gen DCX'tir ve mikrotübül polimerizasyonu nedeniyle nöronal göçü etkiler."
+    },
+    {
+     "metin": "nöronların göçü bozulunca beyin kıvrımları azalır (pakigri) ya da hiç oluşmaz (agri); beyin yüzeyi düz kalır, korteks anormal kalın olur ve kortikal laminasyon kaybolur."
+    },
+    {
+     "metin": "beyin malformasyonlarının eşlik ettiği gelişimsel hastalıklar gelişme geriliği, MR (ID) ve epilepsinin en önemli nedenlerindendir; lizensefali bunların en önemlilerindendir."
+    },
+    {
+     "metin": "HPE bölünme kusurudur ve SHH ile ilişkilidir; primer mikrosefalide beyin malformasyonsuz küçüktür ve mitotik iğ kutuplarıyla ilişkili genler sorumludur."
+    }
+   ],
+   "klip": "o-2g01-12",
+   "ses": [
+    "Lizensefali: oluşum ve hasar mekanizması.",
+    "Lizensefali, beyinde kıvrımların azalması (pakigri) ya da yokluğu (agri) ile karakterizedir; düz yüzey, anormal kalın korteks ve kortikal laminasyon kaybı oluşur, LIS1 kaybı mikrotübül işlevini bozar.",
+    "nöral progenitör hücrelerin çoğalması ve göçü bozulur. LIS1 bu işlemde görevlidir; kaybı mikrotübül işlev bozukluğuna yol açar. X'e bağlı lizensefalide sorumlu gen DCX'tir ve mikrotübül polimerizasyonu nedeniyle nöronal göçü etkiler.",
+    "nöronların göçü bozulunca beyin kıvrımları azalır (pakigri) ya da hiç oluşmaz (agri); beyin yüzeyi düz kalır, korteks anormal kalın olur ve kortikal laminasyon kaybolur.",
+    "beyin malformasyonlarının eşlik ettiği gelişimsel hastalıklar gelişme geriliği, MR (ID) ve epilepsinin en önemli nedenlerindendir; lizensefali bunların en önemlilerindendir.",
+    "HPE bölünme kusurudur ve SHH ile ilişkilidir; primer mikrosefalide beyin malformasyonsuz küçüktür ve mitotik iğ kutuplarıyla ilişkili genler sorumludur."
+   ],
+   "v": "894fdaad45"
+  },
+  {
+   "id": "2g01-20",
+   "baslik": "Kraniyosinostoz: tanım ve üç tip",
+   "giris": "Kraniyosinostoz bir ya da daha fazla kafatası sütürünün erken kapanmasıdır; kapanan sütüra göre üç tip ayrılır: sagital, koronal ve metopik sütürün kapandığı trigonosefali.",
+   "s": [
+    40,
+    41
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "bir veya daha fazla kafatası sütürünün erken kapanmasıdır; genellikle yenidoğan ya da erken bebeklik döneminde anormal kafatası yapısıyla dikkat çeker. Majör bir konjenital kusur grubudur."
+    },
+    {
+     "metin": "primer tipte (en sık) kraniyal sütürler genetik etkenlerle erken kapanır; sekonder tipte erken kapanma metabolik hastalıklar, hematolojik hastalıklar, MSS kusurları ve teratojenik kaynaklı hastalıklar sonucu gelişir."
+    },
+    {
+     "metin": "izole olgularda erken sütür kapanması dışında anomali yoktur; 100'den fazla sendromda kraniyosinostoz fenotipi tanımlanmıştır. Sıklığı 343/1.000.000 doğumdur."
+    },
+    {
+     "metin": "kapanan sütüra göre sagital kraniyosinostoz (en sık izole tip), koronal kraniyosinostoz (ikinci en sık) ve trigonosefali (metopik sütür, üçüncü en sık)."
+    }
+   ],
+   "klip": "o-2g01-20",
+   "ses": [
+    "Kraniyosinostoz: tanım ve üç tip.",
+    "Kraniyosinostoz bir ya da daha fazla kafatası sütürünün erken kapanmasıdır; kapanan sütüra göre üç tip ayrılır: sagital, koronal ve metopik sütürün kapandığı trigonosefali.",
+    "bir veya daha fazla kafatası sütürünün erken kapanmasıdır; genellikle yenidoğan ya da erken bebeklik döneminde anormal kafatası yapısıyla dikkat çeker. Majör bir konjenital kusur grubudur.",
+    "primer tipte (en sık) kraniyal sütürler genetik etkenlerle erken kapanır; sekonder tipte erken kapanma metabolik hastalıklar, hematolojik hastalıklar, MSS kusurları ve teratojenik kaynaklı hastalıklar sonucu gelişir.",
+    "izole olgularda erken sütür kapanması dışında anomali yoktur; 100'den fazla sendromda kraniyosinostoz fenotipi tanımlanmıştır. Sıklığı 343/1.000.000 doğumdur.",
+    "kapanan sütüra göre sagital kraniyosinostoz (en sık izole tip), koronal kraniyosinostoz (ikinci en sık) ve trigonosefali (metopik sütür, üçüncü en sık)."
+   ],
+   "v": "45dca2de85"
+  },
+  {
+   "id": "2g01-26",
+   "baslik": "FGFR3 grubu: akondroplazi, hipokondroplazi, tanatoforik displazi",
+   "giris": "FGFR3 grubu üç hastalıktan oluşur: akondroplazi, hipokondroplazi ve tanatoforik displazi.",
+   "s": [
+    51,
+    55,
+    56
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "akondroplazi, hipokondroplazi ve tanatoforik displazi aynı gen olan FGFR3'teki mutasyonlarla ilişkilidir."
+    },
+    {
+     "metin": "kalıtsal iskelet displazilerinin en sık görülenidir; ekstremitelerin proksimal kesimleri kısadır, zeka ve yaşam süresi normaldir."
+    },
+    {
+     "metin": "akondroplazinin hafif şeklidir; orantısız alt ve üst ekstremite kısalığı ile giden boy kısalığı vardır, bulgular 2-4 yaş arasında belirginleşir."
+    },
+    {
+     "metin": "genellikle letaldir; çok kısa ekstremiteler ve çok dar toraks vardır, ölüm erken bebeklik döneminde olur."
+    },
+    {
+     "metin": "hastalık adları, hangisinin hafif hangisinin letal olduğu ve ekstremitede kısalık olması; mutasyonun ayrıntısına (kodon, amino asit değişimi) gerek yoktur."
+    }
+   ],
+   "klip": "o-2g01-26",
+   "ses": [
+    "FGFR3 grubu: akondroplazi, hipokondroplazi, tanatoforik displazi.",
+    "FGFR3 grubu üç hastalıktan oluşur: akondroplazi, hipokondroplazi ve tanatoforik displazi.",
+    "akondroplazi, hipokondroplazi ve tanatoforik displazi aynı gen olan FGFR3'teki mutasyonlarla ilişkilidir.",
+    "kalıtsal iskelet displazilerinin en sık görülenidir; ekstremitelerin proksimal kesimleri kısadır, zeka ve yaşam süresi normaldir.",
+    "akondroplazinin hafif şeklidir; orantısız alt ve üst ekstremite kısalığı ile giden boy kısalığı vardır, bulgular 2-4 yaş arasında belirginleşir.",
+    "genellikle letaldir; çok kısa ekstremiteler ve çok dar toraks vardır, ölüm erken bebeklik döneminde olur.",
+    "hastalık adları, hangisinin hafif hangisinin letal olduğu ve ekstremitede kısalık olması; mutasyonun ayrıntısına (kodon, amino asit değişimi) gerek yoktur."
+   ],
+   "v": "eed3f6b7d9"
+  },
+  {
+   "id": "2g01-40",
+   "baslik": "Duchenne musküler distrofi: en sık ve en ağır distrofi",
+   "giris": "Duchenne musküler distrofi (DMD) çocukluk çağında en sık rastlanan ve en ağır seyirli musküler distrofidir; ölümle sonuçlanır ve yaklaşık 3500 erkek doğumda 1 görülür.",
+   "s": [
+    75,
+    80
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "Duchenne musküler distrofi en sık görülen musküler distrofidir; aynı zamanda en ağır seyirli formdur ve ölümle sonuçlanan genetik hastalıklardandır."
+    },
+    {
+     "metin": "yaklaşık 3500 erkek doğumda 1 (100.000 canlı erkek doğumda 13-33)."
+    },
+    {
+     "metin": "çocukluk çağında en sık form Duchenne/Becker distrofisidir; erişkinlerde miyotonik distrofi daha sıktır."
+    },
+    {
+     "metin": "psödohipertrofi, yani kasın gerçek hipertrofiyle değil yalancı büyümeyle görünmesi, ders sunusunda klinik bulgular arasında sayılır (liste Becker sayfasında verilir); kasta gerçek hipertrofi yoktur."
+    },
+    {
+     "metin": "hastalığın nedeni distrofin proteininin eksikliğidir, fazlalığı değil; bu yüzden \"distrofin fazlalığı\" ve \"en ağır tip başka bir distrofidir\" ifadeleri yanlıştır."
+    }
+   ],
+   "klip": "o-2g01-40",
+   "ses": [
+    "Duchenne musküler distrofi: en sık ve en ağır distrofi.",
+    "Duchenne musküler distrofi (DMD) çocukluk çağında en sık rastlanan ve en ağır seyirli musküler distrofidir; ölümle sonuçlanır ve yaklaşık 3500 erkek doğumda 1 görülür.",
+    "Duchenne musküler distrofi en sık görülen musküler distrofidir; aynı zamanda en ağır seyirli formdur ve ölümle sonuçlanan genetik hastalıklardandır.",
+    "yaklaşık 3500 erkek doğumda 1 (100.000 canlı erkek doğumda 13-33).",
+    "çocukluk çağında en sık form Duchenne/Becker distrofisidir; erişkinlerde miyotonik distrofi daha sıktır.",
+    "psödohipertrofi, yani kasın gerçek hipertrofiyle değil yalancı büyümeyle görünmesi, ders sunusunda klinik bulgular arasında sayılır (liste Becker sayfasında verilir); kasta gerçek hipertrofi yoktur.",
+    "hastalığın nedeni distrofin proteininin eksikliğidir, fazlalığı değil; bu yüzden \"distrofin fazlalığı\" ve \"en ağır tip başka bir distrofidir\" ifadeleri yanlıştır."
+   ],
+   "v": "02173500c7"
+  },
+  {
+   "id": "2g01-41",
+   "baslik": "DMD/BMD kalıtımı, Xp21 distrofin geni ve de novo mutasyon",
+   "giris": "DMD ve BMD kadın taşıyıcılardan X'e bağlı resesif aktarılır ve erkek çocuklarda görülür; gen Xp21'dedir, ürünü 79 ekzonlu distrofindir ve olguların 1/3'ünün nedeni de novo mutasyondur.",
+   "s": [
+    75,
+    76
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "DMD/BMD, kadın taşıyıcılar tarafından X'e bağlı resesif olarak aktarılır ve hastalık erkek çocuklarda görülür. Bu yüzden DMD otozomal dominant hastalık örneği olarak verilemez; otozomal dominant örnekler akondroplazi, osteogenezis imperfekta (çoğunlukla) ve Marfan sendromudur."
+    },
+    {
+     "metin": "X kromozomunun kısa kolunun 21. bandının (Xp21) mutasyona uğraması DMD/BMD fenotipini ortaya çıkarır; bu genin ürünü 79 ekzonlu distrofindir. Gen oldukça büyüktür; bu gendeki delesyonlar DMD'ye yol açar."
+    },
+    {
+     "metin": "olguların 1/3'ünün nedeni de novo (yeni) mutasyondur."
+    },
+    {
+     "metin": "aynı lokus içindeki değişik mutasyonlar farklı tablolar verir; distrofin genindeki farklı mutasyonlar DMD ya da BMD ile sonuçlanır."
+    },
+    {
+     "metin": "kadın taşıyıcılar çoğunlukla sağlamdır ancak kadınlarda da bazen klinik belirti görülebilir; bu nedenle \"taşıyıcılar hiçbir klinik fenotip sergilemez\" ifadesi doğru değildir."
+    }
+   ],
+   "klip": "o-2g01-41",
+   "ses": [
+    "DMD/BMD kalıtımı, Xp21 distrofin geni ve de novo mutasyon.",
+    "DMD ve BMD kadın taşıyıcılardan X'e bağlı resesif aktarılır ve erkek çocuklarda görülür; gen Xp21'dedir, ürünü 79 ekzonlu distrofindir ve olguların 1/3'ünün nedeni de novo mutasyondur.",
+    "DMD/BMD, kadın taşıyıcılar tarafından X'e bağlı resesif olarak aktarılır ve hastalık erkek çocuklarda görülür. Bu yüzden DMD otozomal dominant hastalık örneği olarak verilemez; otozomal dominant örnekler akondroplazi, osteogenezis imperfekta (çoğunlukla) ve Marfan sendromudur.",
+    "X kromozomunun kısa kolunun 21. bandının (Xp21) mutasyona uğraması DMD/BMD fenotipini ortaya çıkarır; bu genin ürünü 79 ekzonlu distrofindir. Gen oldukça büyüktür; bu gendeki delesyonlar DMD'ye yol açar.",
+    "olguların 1/3'ünün nedeni de novo (yeni) mutasyondur.",
+    "aynı lokus içindeki değişik mutasyonlar farklı tablolar verir; distrofin genindeki farklı mutasyonlar DMD ya da BMD ile sonuçlanır.",
+    "kadın taşıyıcılar çoğunlukla sağlamdır ancak kadınlarda da bazen klinik belirti görülebilir; bu nedenle \"taşıyıcılar hiçbir klinik fenotip sergilemez\" ifadesi doğru değildir."
+   ],
+   "v": "96c64064dd"
+  }
+ ]
+}

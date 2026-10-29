@@ -4,13 +4,14 @@
  * dokunulan bölümden başlar). "Ders ekranına geç" ya da Esc paneli kapatır; ses başlatılınca da kapanır.
  */
 import React, { useEffect, useMemo, useRef, useState } from 'react';
-import { BookOpen, Check, CircleHelp, Columns2, FileText, Play, RotateCcw, ScrollText, X } from 'lucide-react';
+import { BookOpen, Check, CircleHelp, ClipboardList, Columns2, FileText, Play, RotateCcw, ScrollText, X } from 'lucide-react';
 import {
   CD_HIZLAR, cdDetayBagla, cdHiz, cdKayitliKonum, cdOynat, cdParagrafa, cdSesKisa, cdTercihVaryant, fmtSure, useCd,
   type CdDetay,
 } from './canliDersStore';
 import { cdDersEtiketi } from './canliDersKategori';
 import { bittiMi, useKonuKaydi } from '../../services/calismaTakip';
+import { CdDersAnaliz, dersAnalizVar } from './CdDersAnaliz';
 import '../../styles/canli-ders-liste.css';
 
 export type CdGorunum = 'metin' | 'ikisi' | 'pdf' | 'altyazi';
@@ -32,6 +33,8 @@ export function CanliDersBaslangic({ detay, gorunum, setGorunum, pdfVar, onKapat
   const bitti = bittiMi(useKonuKaydi('sesli', detay.key));
   const devamT = kayit && kayit.vid === v?.id ? kayit.t : 0;
   const ilkRef = useRef<HTMLButtonElement>(null);
+  const [analizAcik, setAnalizAcik] = useState(false);
+  const analizVar = dersAnalizVar(detay.key);
   const cikmisN = detay.cikmisKonum?.length || 0;
   const paragrafN = detay.bolumler.reduce((n, b) => n + b.paragraflar.length, 0);
 
@@ -58,6 +61,7 @@ export function CanliDersBaslangic({ detay, gorunum, setGorunum, pdfVar, onKapat
 
   return (
     <div className="cdb" role="region" aria-label="Ders açılışı">
+      {analizAcik && <CdDersAnaliz dersKey={detay.key} onKapat={() => setAnalizAcik(false)} />}
       <div className="cdb-kart">
         <button type="button" className="cd-btn is-ikon cdb-x" onClick={onKapat} aria-label="Ders ekranına geç" title="Ders ekranına geç (Esc)"><X aria-hidden /></button>
         <header className="cdb-bas">
@@ -88,6 +92,12 @@ export function CanliDersBaslangic({ detay, gorunum, setGorunum, pdfVar, onKapat
             <button ref={ilkRef} type="button" className="cdb-buyuk is-ana" onClick={() => basla({ t: 0 })}>
               <Play aria-hidden />
               <span><b>{bitti ? 'Tekrar dinle' : 'Dersi başlat'}</b><small>Ses çalar, metin ve slayt kendiliğinden akar</small></span>
+            </button>
+          )}
+          {analizVar && (
+            <button type="button" className="cdb-buyuk" onClick={() => setAnalizAcik(true)}>
+              <ClipboardList aria-hidden />
+              <span><b>Ders analizi</b><small>Başlamadan önce: ne anlatılacak, ne önemli, çıkmışlar, hocanın üslubu · ders özeti</small></span>
             </button>
           )}
           <button type="button" className="cdb-buyuk is-sade" onClick={onKapat}>

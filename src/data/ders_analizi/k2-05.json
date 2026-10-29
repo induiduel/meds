@@ -1,0 +1,1323 @@
+{
+ "surum": 1,
+ "key": "k2-05",
+ "kod": "2n03",
+ "kurul": 2,
+ "brans": "Nöroloji",
+ "konu": "Nörolojik Muayene",
+ "ogretim_uyesi": "Dr. Öğr. Üyesi İrfan Yavaş",
+ "profil": "Nöroloji",
+ "sesKlasor": {
+  "brans": "k2dersanaliz",
+  "kod": "2n03"
+ },
+ "analiz": [
+  {
+   "id": "anlatim",
+   "baslik": "Bu derste ne anlatılacak",
+   "giris": "Ders nörolojik muayeneyi beş işlev başlığı altında anlatır: mental durum, kraniyal sinirler, motor sistem, duyu sistemi ve serebellar sistem. Kraniyal sinirlerin işlevleri ve lezyon bulguları, kas kuvveti ve refleks dereceleri, birinci ve ikinci motor nöron ayrımı, santral ve periferik fasiyal paralizi, duyu terimleri ve serebellar bulgular dersin ana konularıdır.",
+   "maddeler": [
+    {
+     "metin": "Sinir sistemi ve muayenenin düzeni"
+    },
+    {
+     "metin": "Mental durum muayenesi"
+    },
+    {
+     "metin": "Kraniyal sinirlere genel bakış"
+    },
+    {
+     "metin": "Birinci sinir: olfaktor"
+    },
+    {
+     "metin": "İkinci sinir: optik ve görme yolu"
+    },
+    {
+     "metin": "Üçüncü, dördüncü ve altıncı sinirler: göz hareketleri"
+    },
+    {
+     "metin": "Beşinci sinir: trigeminal"
+    },
+    {
+     "metin": "Yedinci sinir: fasiyal ve yüz felçleri"
+    },
+    {
+     "metin": "Sekizinci sinir: vestibülokoklear"
+    },
+    {
+     "metin": "Dokuzuncu ve onuncu sinirler: glossofaringeal ve vagus"
+    },
+    {
+     "metin": "On birinci ve on ikinci sinirler: aksesuar ve hipoglossus"
+    },
+    {
+     "metin": "Motor sistem muayenesi: yürüyüş, kas kuvveti ve trofik kusur"
+    },
+    {
+     "metin": "Motor bulgular ve kas zaafının dört düzeyi"
+    },
+    {
+     "metin": "Refleks muayenesi"
+    },
+    {
+     "metin": "Duyu sistemi: terminoloji"
+    },
+    {
+     "metin": "Duyu muayenesi: yüzeyel, derin ve kortikal duyu"
+    },
+    {
+     "metin": "Serebellar sistem muayenesi"
+    }
+   ],
+   "klip": "a-anlatim",
+   "ses": [
+    "Bu derste ne anlatılacak.",
+    "Ders nörolojik muayeneyi beş işlev başlığı altında anlatır: mental durum, kraniyal sinirler, motor sistem, duyu sistemi ve serebellar sistem. Kraniyal sinirlerin işlevleri ve lezyon bulguları, kas kuvveti ve refleks dereceleri, birinci ve ikinci motor nöron ayrımı, santral ve periferik fasiyal paralizi, duyu terimleri ve serebellar bulgular dersin ana konularıdır.",
+    "Sinir sistemi ve muayenenin düzeni.",
+    "Mental durum muayenesi.",
+    "Kraniyal sinirlere genel bakış.",
+    "Birinci sinir: olfaktor.",
+    "İkinci sinir: optik ve görme yolu.",
+    "Üçüncü, dördüncü ve altıncı sinirler: göz hareketleri.",
+    "Beşinci sinir: trigeminal.",
+    "Yedinci sinir: fasiyal ve yüz felçleri.",
+    "Sekizinci sinir: vestibülokoklear.",
+    "Dokuzuncu ve onuncu sinirler: glossofaringeal ve vagus.",
+    "On birinci ve on ikinci sinirler: aksesuar ve hipoglossus.",
+    "Motor sistem muayenesi: yürüyüş, kas kuvveti ve trofik kusur.",
+    "Motor bulgular ve kas zaafının dört düzeyi.",
+    "Refleks muayenesi.",
+    "Duyu sistemi: terminoloji.",
+    "Duyu muayenesi: yüzeyel, derin ve kortikal duyu.",
+    "Serebellar sistem muayenesi."
+   ],
+   "v": "4c1b4215ac"
+  },
+  {
+   "id": "kazanim",
+   "baslik": "Dersin sonunda bilmen gerekenler",
+   "giris": "Bu ders bittiğinde aşağıdaki başlıkları açıklayabilmelisin.",
+   "maddeler": [
+    {
+     "baslik": "Sinir sistemi basamakları",
+     "metin": "Sinir sistemi merkezi sinir sistemi (supratentoryal bölge, infratentoriyal bölge, medulla spinalis), periferik sinir sistemi, kas-sinir bileşkesi ve kas olarak sıralanır.",
+     "s": [
+      2
+     ]
+    },
+    {
+     "baslik": "Beş fonksiyon başlığı",
+     "metin": "Nörolojik muayene mental durum, kraniyal sinirler, motor sistem, duyu sistemi ve serebellar sistem başlıkları altında yapılır.",
+     "s": [
+      3
+     ]
+    },
+    {
+     "baslik": "Mental durum bölümüne geçiş",
+     "metin": "Ders akışı slaytı beş fonksiyon başlığını yeniden listeler ve mental durum bölümünün başladığını vurgular.",
+     "s": [
+      4
+     ]
+    },
+    {
+     "baslik": "Uyanıklık düzeyi ve ilgili bilgiler",
+     "metin": "Mental durumda uyanıklık düzeyi uyanık, uykuya meyilli, uykulu ve koma basamaklarıyla değerlendirilir.",
+     "s": [
+      5
+     ]
+    },
+    {
+     "baslik": "Konuşma muayenesi ve ilgili bilgiler",
+     "metin": "Konuşma muayenesinde akıcılık, anlama, tekrarlama, isimlendirme, okuma ve yazma değerlendirilir.",
+     "s": [
+      6
+     ]
+    },
+    {
+     "baslik": "Kraniyal sinirler bölümüne geçiş",
+     "metin": "Ders akışı slaytı beş fonksiyon başlığını yeniden listeler ve kraniyal sinirler bölümünün başladığını vurgular.",
+     "s": [
+      7
+     ]
+    },
+    {
+     "baslik": "On iki kraniyal sinir",
+     "metin": "On iki kraniyal sinir olfaktor, optik, okülomotor, troklear, trigeminal, abdusens, fasiyal, vestibülokoklear, glossofaringeal, vagus, aksesuar ve hipoglossus sinirleridir.",
+     "s": [
+      8
+     ]
+    },
+    {
+     "baslik": "Kraniyal sinir şeması",
+     "metin": "Kraniyal sinirlerin beyin sapından çıkış yerleri ve hedef organları, Roma rakamlı bir şemayla gösterilir.",
+     "s": [
+      9
+     ]
+    },
+    {
+     "baslik": "Beyin tabanı çizimi",
+     "metin": "Beyin tabanı çiziminde on iki kraniyal sinirin adı renkli kutularla işaretlenir.",
+     "s": [
+      10
+     ]
+    },
+    {
+     "baslik": "Kraniyal sinirlerin tekrar listesi",
+     "metin": "Beyin tabanı çiziminin yanına on iki kraniyal sinirin adı sırayla yazılmıştır.",
+     "s": [
+      11
+     ]
+    },
+    {
+     "baslik": "Koku ve görme muayenesi ve ilgili bilgiler",
+     "metin": "Koku KS I ile; görme alanı, görme keskinliği ve fundoskopik muayene KS II ile değerlendirilir.",
+     "s": [
+      12
+     ]
+    },
+    {
+     "baslik": "I. kraniyal sinir muayene fotoğrafı",
+     "metin": "Koku muayenesi fotoğrafında hekim, hastanın burun deliğine bir uyaran yaklaştırır.",
+     "s": [
+      13
+     ]
+    },
+    {
+     "baslik": "Olfaktor sinir yapısı ve ilgili bilgiler",
+     "metin": "N. olfaktorius, olfaktor mukozadaki bipolar nöronların santral aksonlarından oluşur ve koku duyusunu taşır.",
+     "s": [
+      14
+     ]
+    },
+    {
+     "baslik": "II. kraniyal sinir muayene fotoğrafları",
+     "metin": "II. kraniyal sinir fotoğrafları görme keskinliği kartını, görme alanı muayenesini ve ışık kaynağı yaklaştırılan bir göz muayenesini gösterir.",
+     "s": [
+      15
+     ]
+    },
+    {
+     "baslik": "Fundoskopi ve göz dibi fotoğrafları",
+     "metin": "Göz dibi muayenesi oftalmoskopla yapılır; slayttaki fotoğraflar arasında optik disk, damarlar ve makula etiketli bir göz dibi görüntüsü bulunur.",
+     "s": [
+      16
+     ]
+    },
+    {
+     "baslik": "N. optikus görevi ve ilgili bilgiler",
+     "metin": "N. optikus görme uyarılarını iletir ve ışık refleksinin afferent koludur.",
+     "s": [
+      17
+     ]
+    },
+    {
+     "baslik": "Görme alanı şeması",
+     "metin": "Görme alanı şeması optik sinir, kiazma, traktus, radyasyo optika ve kalkarin korteks boyunca A–F harfleriyle işaretli yerleri ve her yerdeki görme alanı kaybı çizimlerini gösterir.",
+     "s": [
+      18
+     ]
+    },
+    {
+     "baslik": "Amorozis fugax ve ilgili bilgiler",
+     "metin": "Amorozis fugax tek gözde ani ve geçici görme kaybıdır.",
+     "s": [
+      19
+     ]
+    },
+    {
+     "baslik": "Göz hareketi muayene fotoğrafı",
+     "metin": "III-IV-VI. kraniyal sinir muayene fotoğrafında hekim hastanın çenesini sabit tutarken hastanın gözleri yukarı bakar.",
+     "s": [
+      20
+     ]
+    },
+    {
+     "baslik": "Göz hareketi muayenesi ve ilgili bilgiler",
+     "metin": "Göz hareketi muayenesinde hastadan başını sabit tutması istenir ve gözlerin tüm kadranlardaki hareketine bakılır.",
+     "s": [
+      21
+     ]
+    },
+    {
+     "baslik": "Okülomotor muayene ve ilgili bilgiler",
+     "metin": "Okülomotor sinirlerin (III, IV, VI) muayenesinde göz küresi hareketleri, göz kapağı ve pupilla değerlendirilir; varsa nistagmus not edilir.",
+     "s": [
+      22
+     ]
+    },
+    {
+     "baslik": "N. okülomotor kasları ve ilgili bilgiler",
+     "metin": "N. okülomotorius geri kalan oküler kasları ve üst göz kapağını kaldıran m. levator palpebrayı innerve eder.",
+     "s": [
+      23
+     ]
+    },
+    {
+     "baslik": "V. kraniyal sinir muayene fotoğrafları",
+     "metin": "V. kraniyal sinir fotoğrafları yüz duyusunun, çiğneme kaslarının kuvvetinin ve kornea refleksinin muayene edilişini gösterir.",
+     "s": [
+      24
+     ]
+    },
+    {
+     "baslik": "Trigeminal duyu ve ilgili bilgiler",
+     "metin": "N. trigeminus yüzün dokunma, ağrı ve ısı duyusundan sorumludur.",
+     "s": [
+      25
+     ]
+    },
+    {
+     "baslik": "Trigeminal sinir bulguları",
+     "metin": "N. trigeminus patolojisinde yüzde hipoestezi, kornea refleksi kaybı, trigeminal motor bozukluk ve trigeminal nevralji görülür.",
+     "s": [
+      26
+     ]
+    },
+    {
+     "baslik": "VII. kraniyal sinir fotoğrafları",
+     "metin": "VII. kraniyal sinir fotoğrafları yüz kaslarını muayenede hastanın gülerken dişlerini göstermesini ve yanaklarını şişirmesini gösterir.",
+     "s": [
+      27
+     ]
+    },
+    {
+     "baslik": "Fasiyal motor ve ilgili bilgiler",
+     "metin": "N. fasialis yüzün mimik kaslarını innerve eder.",
+     "s": [
+      28
+     ]
+    },
+    {
+     "baslik": "Santral fasial paralizi kapsamı ve ilgili bilgiler",
+     "metin": "Santral fasial paralizide yüzün bir yarısının yalnız alt kısmında kuvvet azlığı vardır.",
+     "s": [
+      29
+     ]
+    },
+    {
+     "baslik": "Periferik fasial paralizi (üst yüz) ve ilgili bilgiler",
+     "metin": "Periferik fasial paralizide yüzün bir yarısının tamamında kuvvet azlığı vardır; kaş kaldırılamaz, alın çizgileri silinmiştir, göz kapatılamaz.",
+     "s": [
+      30
+     ]
+    },
+    {
+     "baslik": "VIII. kraniyal sinir fotoğrafları",
+     "metin": "VIII. kraniyal sinir fotoğrafları kulak yanında işitme muayenesini ve başın üstüne yerleştirilen bir diyapazonu gösterir.",
+     "s": [
+      31
+     ]
+    },
+    {
+     "baslik": "VIII. sinir işitme muayenesi ve ilgili bilgiler",
+     "metin": "N. vestibulokoklearis işitme ve dengeden sorumludur; işitme muayenesi için Rinne ve Weber testleri kullanılır, Schwabach da sayılır.",
+     "s": [
+      32
+     ]
+    },
+    {
+     "baslik": "Akustik sinir şeması",
+     "metin": "Akustik sinir slaytında diyapazonla yapılan testlerin başın üstünde ve kulak çevresinde uygulanışı çizimle gösterilir; sinir işitme ve dengeden sorumludur.",
+     "s": [
+      33
+     ]
+    },
+    {
+     "baslik": "IX. kraniyal sinir fotoğrafı",
+     "metin": "IX. kraniyal sinir fotoğrafında hasta ağzını açar ve hekim bir aletle dilini bastırarak ağız içine bakar.",
+     "s": [
+      34
+     ]
+    },
+    {
+     "baslik": "Glossofarengial duyu ve ilgili bilgiler",
+     "metin": "N. glossofaringeus farenks, tonsilla ve yumuşak damağın duyusunu sağlar ve dilin arka 1/3'ünün duyusundan sorumludur.",
+     "s": [
+      35
+     ]
+    },
+    {
+     "baslik": "Vagus duyu ve ilgili bilgiler",
+     "metin": "N. vagus dış kulak yolunda küçük bir alanın duyusunu sağlar.",
+     "s": [
+      36
+     ]
+    },
+    {
+     "baslik": "XI. kraniyal sinir fotoğrafları",
+     "metin": "XI. kraniyal sinir fotoğrafları baş çevirme ve omuz kaldırma hareketlerinin hekimin eliyle direnç verilerek sınanışını gösterir.",
+     "s": [
+      37
+     ]
+    },
+    {
+     "baslik": "Aksesuar sinir kasları ve ilgili bilgiler",
+     "metin": "N. aksesorius m. SCM'yi ve trapezius kasının üst kısmını innerve eder.",
+     "s": [
+      38
+     ]
+    },
+    {
+     "baslik": "XII. kraniyal sinir fotoğrafı",
+     "metin": "XII. kraniyal sinir fotoğrafında hasta dilini dışarı çıkarmıştır.",
+     "s": [
+      39
+     ]
+    },
+    {
+     "baslik": "Hipoglossus lezyonu (tek taraflı) ve ilgili bilgiler",
+     "metin": "N. hipoglossus dil kaslarını hareket ettiren motor sinirdir; tek taraflı lezyonda dilde atrofi olur ve dil lezyon tarafına kayar.",
+     "s": [
+      40
+     ]
+    },
+    {
+     "baslik": "Motor sistem bölümüne geçiş",
+     "metin": "Ders akışı slaytı beş fonksiyon başlığını yeniden listeler ve motor sistem bölümünün başladığını vurgular.",
+     "s": [
+      41
+     ]
+    },
+    {
+     "baslik": "Motor sistem muayenesi başlıkları",
+     "metin": "Motor sistem muayenesi yürüyüş, kas kuvveti (0-5 arasında değerlendirilir), tonus ve trofik kusuru kapsar.",
+     "s": [
+      42
+     ]
+    },
+    {
+     "baslik": "Yürüme fotoğrafları",
+     "metin": "Yürüme muayenesi fotoğrafları ayak parmak ucu ve topukla yürüme duruşlarını gösterir.",
+     "s": [
+      43
+     ]
+    },
+    {
+     "baslik": "Kas kuvveti 5/5 ve 4/5 ve ilgili bilgiler",
+     "metin": "Kas kuvveti 5/5'te uygulanan kuvvete maksimum direnç gösterilir; 4/5'te uygulanan kuvvete direnç gösterebilir.",
+     "s": [
+      44
+     ]
+    },
+    {
+     "baslik": "Kas kuvveti muayene fotoğrafları: üst ekstremite",
+     "metin": "Kas kuvveti fotoğraflarında omuz, dirsek, el bileği ve parmak hareketleri hekimin verdiği dirençle sınanır.",
+     "s": [
+      45
+     ]
+    },
+    {
+     "baslik": "Kas kuvveti muayene fotoğrafları: el ve el bileği",
+     "metin": "Kas kuvveti fotoğraflarında el bileği ve parmak hareketlerine hekim dirençle karşılık verir.",
+     "s": [
+      46
+     ]
+    },
+    {
+     "baslik": "Kas kuvveti muayene fotoğrafları: kalça ve diz",
+     "metin": "Kas kuvveti fotoğraflarında alt ekstremitenin kalça ve diz hareketleri hekimin dirençle karşılığıyla sınanır.",
+     "s": [
+      47
+     ]
+    },
+    {
+     "baslik": "Kas kuvveti muayene fotoğrafları: ayak bileği ve ayak parmakları",
+     "metin": "Kas kuvveti fotoğraflarında ayak bileği ve ayak parmakları hekimin dirençle karşılığıyla sınanır.",
+     "s": [
+      48
+     ]
+    },
+    {
+     "baslik": "Trofik kusur: atrofi fotoğrafları",
+     "metin": "Trofik kusur atrofi başlığında el fotoğrafları kas kitlesindeki azalmayı gösterir.",
+     "s": [
+      49
+     ]
+    },
+    {
+     "baslik": "Parazi türleri ve ilgili bilgiler",
+     "metin": "Motor sistem bulguları arasında parazi, pleji, monoparazi, hemiparazi, paraparazi ve kuadriparazi sayılır.",
+     "s": [
+      50
+     ]
+    },
+    {
+     "baslik": "Kas zaafının dört düzeyi",
+     "metin": "Kas zaafı birinci motor nöron, ikinci motor nöron, sinir-kas bileşkesi (nöromusküler kavşak) ve doğrudan çizgili kas düzeylerinden kaynaklanır.",
+     "s": [
+      51
+     ]
+    },
+    {
+     "baslik": "1. motor nöron bulguları ve ilgili bilgiler",
+     "metin": "Birinci motor nöron lezyonunda tonus artar, refleksler canlıdır, patolojik refleks pozitiftir; atrofi ve duyu kusuru yoktur.",
+     "s": [
+      52
+     ]
+    },
+    {
+     "baslik": "Derin ve yüzeysel refleksler ve ilgili bilgiler",
+     "metin": "Refleks muayenesi derin tendon reflekslerini ve yüzeysel refleksleri (karın cildi refleksi, kremaster refleksi) kapsar.",
+     "s": [
+      53
+     ]
+    },
+    {
+     "baslik": "Refleks dereceleri",
+     "metin": "Refleks 0 yok, 1 azalmış (hipoaktif), 2 normal, 3 artmış (hiperaktif), 4 aşırı artmış, 5 klonus olarak derecelendirilir.",
+     "s": [
+      54
+     ]
+    },
+    {
+     "baslik": "Üst ekstremite refleks fotoğrafları",
+     "metin": "Üst ekstremite refleks fotoğraflarında hekim, dirsek bölgesinde bir refleks çekiciyle tendona vurur.",
+     "s": [
+      55
+     ]
+    },
+    {
+     "baslik": "Alt ekstremite refleks fotoğrafları",
+     "metin": "Alt ekstremite refleks fotoğraflarında hekim diz ve ayak bileği bölgelerinde refleks çekiciyle tendona vurur.",
+     "s": [
+      56
+     ]
+    },
+    {
+     "baslik": "Patolojik refleks fotoğrafları",
+     "metin": "Patolojik refleks fotoğrafları ayak tabanına çizilen uyarıyı ve el parmağına yapılan uyarıyı gösterir.",
+     "s": [
+      57
+     ]
+    },
+    {
+     "baslik": "Duyu sistemi bölümüne geçiş",
+     "metin": "Ders akışı slaytı beş fonksiyon başlığını yeniden listeler ve duyu sistemi bölümünün başladığını vurgular.",
+     "s": [
+      58
+     ]
+    },
+    {
+     "baslik": "Parestezi ve ilgili bilgiler",
+     "metin": "Parestezi, görünür bir dış uyarım olmadan hissedilen uyuşma, keçeleşme, karıncalanma ve sızlama duyumudur.",
+     "s": [
+      59
+     ]
+    },
+    {
+     "baslik": "Yüzeyel duyu ve ilgili bilgiler",
+     "metin": "Yüzeyel duyu muayenesi dokunma, ağrı ve sıcaklık duyusunu kapsar.",
+     "s": [
+      60
+     ]
+    },
+    {
+     "baslik": "Duyu yolları şeması",
+     "metin": "Duyu yolları şemasında dorsal kolon ve medial lemniskus ayırt edici duyuyu, spinotalamik traktus ağrı ve ısı duyusunu taşır.",
+     "s": [
+      61
+     ]
+    },
+    {
+     "baslik": "Yüzeyel duyu muayene fotoğrafları",
+     "metin": "Yüzeyel duyu fotoğraflarında parmakta ve bacakta iğne ile, bacakta pamuk benzeri bir uçla duyu sınanır.",
+     "s": [
+      62
+     ]
+    },
+    {
+     "baslik": "Derin duyu muayene fotoğrafları",
+     "metin": "Derin duyu fotoğrafları ayak bileğine yaklaştırılan diyapazonu ve el ile ayak parmaklarının pozisyon muayenesini gösterir.",
+     "s": [
+      63
+     ]
+    },
+    {
+     "baslik": "Kortikal duyu muayene fotoğrafları",
+     "metin": "Kortikal duyu fotoğraflarında hastanın avucuna konan cisim, gözleri kapalı hastanın elinde tuttuğu kalem ve avuca yazılan işaret gösterilir.",
+     "s": [
+      64
+     ]
+    },
+    {
+     "baslik": "Duyu muayenesi bulguları",
+     "metin": "Duyu muayenesi bulguları hipoestezi, anestezi, parestezi, dizestezi, agrafestezi ve astereognozidir.",
+     "s": [
+      65
+     ]
+    },
+    {
+     "baslik": "Serebellar sistem başlığına geçiş",
+     "metin": "Slayt serebellar sistemi ders akışının son fonksiyon başlığı olarak vurgular.",
+     "s": [
+      66
+     ]
+    },
+    {
+     "baslik": "Serebellar muayene başlıkları",
+     "metin": "Serebellar sistem muayenesi denge, tonus ve koordinasyonu kapsar; koordinasyon metrik muayene (parmak-burun, diz-topuk testi) ve ardışık hareketlerle değerlendirilir.",
+     "s": [
+      67
+     ]
+    },
+    {
+     "baslik": "Denge muayenesi fotoğrafları",
+     "metin": "Denge muayenesi fotoğraflarında hasta ayakları birleşik ve gözleri kapalı dururken hekim arkasında koruma yapar.",
+     "s": [
+      68
+     ]
+    },
+    {
+     "baslik": "Metrik muayene fotoğrafları",
+     "metin": "Metrik muayene fotoğraflarında hasta işaret parmağıyla hekimin parmağına dokunur ve alt ekstremitede topuk karşı bacağın üstünde gezdirilir.",
+     "s": [
+      69
+     ]
+    },
+    {
+     "baslik": "Ardışık hareketler (diadokinezi) fotoğrafları",
+     "metin": "Ardışık hareketler başlığında iki fotoğrafta hastanın elleri dizlerinde avuç yukarı ve avuç aşağı konumdadır.",
+     "s": [
+      70
+     ]
+    },
+    {
+     "baslik": "Serebellar bulgular",
+     "metin": "Serebellar sistem muayenesi bulguları ataksi, disartri, hipotoni, dismetri ve disdiadokinezidir.",
+     "s": [
+      71
+     ]
+    }
+   ],
+   "klip": "a-kazanim",
+   "ses": [
+    "Dersin sonunda bilmen gerekenler.",
+    "Bu ders bittiğinde aşağıdaki başlıkları açıklayabilmelisin.",
+    "Sinir sistemi basamakları: Sinir sistemi merkezi sinir sistemi (supratentoryal bölge, infratentoriyal bölge, medulla spinalis), periferik sinir sistemi, kas-sinir bileşkesi ve kas olarak sıralanır.",
+    "Beş fonksiyon başlığı: Nörolojik muayene mental durum, kraniyal sinirler, motor sistem, duyu sistemi ve serebellar sistem başlıkları altında yapılır.",
+    "Mental durum bölümüne geçiş: Ders akışı slaytı beş fonksiyon başlığını yeniden listeler ve mental durum bölümünün başladığını vurgular.",
+    "Uyanıklık düzeyi ve ilgili bilgiler: Mental durumda uyanıklık düzeyi uyanık, uykuya meyilli, uykulu ve koma basamaklarıyla değerlendirilir.",
+    "Konuşma muayenesi ve ilgili bilgiler: Konuşma muayenesinde akıcılık, anlama, tekrarlama, isimlendirme, okuma ve yazma değerlendirilir.",
+    "Kraniyal sinirler bölümüne geçiş: Ders akışı slaytı beş fonksiyon başlığını yeniden listeler ve kraniyal sinirler bölümünün başladığını vurgular.",
+    "On iki kraniyal sinir: On iki kraniyal sinir olfaktor, optik, okülomotor, troklear, trigeminal, abdusens, fasiyal, vestibülokoklear, glossofaringeal, vagus, aksesuar ve hipoglossus sinirleridir.",
+    "Kraniyal sinir şeması: Kraniyal sinirlerin beyin sapından çıkış yerleri ve hedef organları, Roma rakamlı bir şemayla gösterilir.",
+    "Beyin tabanı çizimi: Beyin tabanı çiziminde on iki kraniyal sinirin adı renkli kutularla işaretlenir.",
+    "Kraniyal sinirlerin tekrar listesi: Beyin tabanı çiziminin yanına on iki kraniyal sinirin adı sırayla yazılmıştır.",
+    "Koku ve görme muayenesi ve ilgili bilgiler: Koku KS I ile; görme alanı, görme keskinliği ve fundoskopik muayene KS II ile değerlendirilir.",
+    "I. kraniyal sinir muayene fotoğrafı: Koku muayenesi fotoğrafında hekim, hastanın burun deliğine bir uyaran yaklaştırır.",
+    "Olfaktor sinir yapısı ve ilgili bilgiler: N. olfaktorius, olfaktor mukozadaki bipolar nöronların santral aksonlarından oluşur ve koku duyusunu taşır.",
+    "II. kraniyal sinir muayene fotoğrafları: II. kraniyal sinir fotoğrafları görme keskinliği kartını, görme alanı muayenesini ve ışık kaynağı yaklaştırılan bir göz muayenesini gösterir.",
+    "Fundoskopi ve göz dibi fotoğrafları: Göz dibi muayenesi oftalmoskopla yapılır; slayttaki fotoğraflar arasında optik disk, damarlar ve makula etiketli bir göz dibi görüntüsü bulunur.",
+    "N. optikus görevi ve ilgili bilgiler: N. optikus görme uyarılarını iletir ve ışık refleksinin afferent koludur.",
+    "Görme alanı şeması: Görme alanı şeması optik sinir, kiazma, traktus, radyasyo optika ve kalkarin korteks boyunca A–F harfleriyle işaretli yerleri ve her yerdeki görme alanı kaybı çizimlerini gösterir.",
+    "Amorozis fugax ve ilgili bilgiler: Amorozis fugax tek gözde ani ve geçici görme kaybıdır.",
+    "Göz hareketi muayene fotoğrafı: III-IV-VI. kraniyal sinir muayene fotoğrafında hekim hastanın çenesini sabit tutarken hastanın gözleri yukarı bakar.",
+    "Göz hareketi muayenesi ve ilgili bilgiler: Göz hareketi muayenesinde hastadan başını sabit tutması istenir ve gözlerin tüm kadranlardaki hareketine bakılır.",
+    "Okülomotor muayene ve ilgili bilgiler: Okülomotor sinirlerin (III, IV, VI) muayenesinde göz küresi hareketleri, göz kapağı ve pupilla değerlendirilir; varsa nistagmus not edilir.",
+    "N. okülomotor kasları ve ilgili bilgiler: N. okülomotorius geri kalan oküler kasları ve üst göz kapağını kaldıran m. levator palpebrayı innerve eder.",
+    "V. kraniyal sinir muayene fotoğrafları: V. kraniyal sinir fotoğrafları yüz duyusunun, çiğneme kaslarının kuvvetinin ve kornea refleksinin muayene edilişini gösterir.",
+    "Trigeminal duyu ve ilgili bilgiler: N. trigeminus yüzün dokunma, ağrı ve ısı duyusundan sorumludur.",
+    "Trigeminal sinir bulguları: N. trigeminus patolojisinde yüzde hipoestezi, kornea refleksi kaybı, trigeminal motor bozukluk ve trigeminal nevralji görülür.",
+    "VII. kraniyal sinir fotoğrafları: VII. kraniyal sinir fotoğrafları yüz kaslarını muayenede hastanın gülerken dişlerini göstermesini ve yanaklarını şişirmesini gösterir.",
+    "Fasiyal motor ve ilgili bilgiler: N. fasialis yüzün mimik kaslarını innerve eder.",
+    "Santral fasial paralizi kapsamı ve ilgili bilgiler: Santral fasial paralizide yüzün bir yarısının yalnız alt kısmında kuvvet azlığı vardır.",
+    "Periferik fasial paralizi (üst yüz) ve ilgili bilgiler: Periferik fasial paralizide yüzün bir yarısının tamamında kuvvet azlığı vardır; kaş kaldırılamaz, alın çizgileri silinmiştir, göz kapatılamaz.",
+    "VIII. kraniyal sinir fotoğrafları: VIII. kraniyal sinir fotoğrafları kulak yanında işitme muayenesini ve başın üstüne yerleştirilen bir diyapazonu gösterir.",
+    "VIII. sinir işitme muayenesi ve ilgili bilgiler: N. vestibulokoklearis işitme ve dengeden sorumludur; işitme muayenesi için Rinne ve Weber testleri kullanılır, Schwabach da sayılır.",
+    "Akustik sinir şeması: Akustik sinir slaytında diyapazonla yapılan testlerin başın üstünde ve kulak çevresinde uygulanışı çizimle gösterilir; sinir işitme ve dengeden sorumludur.",
+    "IX. kraniyal sinir fotoğrafı: IX. kraniyal sinir fotoğrafında hasta ağzını açar ve hekim bir aletle dilini bastırarak ağız içine bakar.",
+    "Glossofarengial duyu ve ilgili bilgiler: N. glossofaringeus farenks, tonsilla ve yumuşak damağın duyusunu sağlar ve dilin arka 1/3'ünün duyusundan sorumludur.",
+    "Vagus duyu ve ilgili bilgiler: N. vagus dış kulak yolunda küçük bir alanın duyusunu sağlar.",
+    "XI. kraniyal sinir fotoğrafları: XI. kraniyal sinir fotoğrafları baş çevirme ve omuz kaldırma hareketlerinin hekimin eliyle direnç verilerek sınanışını gösterir.",
+    "Aksesuar sinir kasları ve ilgili bilgiler: N. aksesorius m. SCM'yi ve trapezius kasının üst kısmını innerve eder.",
+    "XII. kraniyal sinir fotoğrafı: XII. kraniyal sinir fotoğrafında hasta dilini dışarı çıkarmıştır.",
+    "Hipoglossus lezyonu (tek taraflı) ve ilgili bilgiler: N. hipoglossus dil kaslarını hareket ettiren motor sinirdir; tek taraflı lezyonda dilde atrofi olur ve dil lezyon tarafına kayar.",
+    "Motor sistem bölümüne geçiş: Ders akışı slaytı beş fonksiyon başlığını yeniden listeler ve motor sistem bölümünün başladığını vurgular.",
+    "Motor sistem muayenesi başlıkları: Motor sistem muayenesi yürüyüş, kas kuvveti (0-5 arasında değerlendirilir), tonus ve trofik kusuru kapsar.",
+    "Yürüme fotoğrafları: Yürüme muayenesi fotoğrafları ayak parmak ucu ve topukla yürüme duruşlarını gösterir.",
+    "Kas kuvveti 5/5 ve 4/5 ve ilgili bilgiler: Kas kuvveti 5/5'te uygulanan kuvvete maksimum direnç gösterilir; 4/5'te uygulanan kuvvete direnç gösterebilir.",
+    "Kas kuvveti muayene fotoğrafları: üst ekstremite: Kas kuvveti fotoğraflarında omuz, dirsek, el bileği ve parmak hareketleri hekimin verdiği dirençle sınanır.",
+    "Kas kuvveti muayene fotoğrafları: el ve el bileği: Kas kuvveti fotoğraflarında el bileği ve parmak hareketlerine hekim dirençle karşılık verir.",
+    "Kas kuvveti muayene fotoğrafları: kalça ve diz: Kas kuvveti fotoğraflarında alt ekstremitenin kalça ve diz hareketleri hekimin dirençle karşılığıyla sınanır.",
+    "Kas kuvveti muayene fotoğrafları: ayak bileği ve ayak parmakları: Kas kuvveti fotoğraflarında ayak bileği ve ayak parmakları hekimin dirençle karşılığıyla sınanır.",
+    "Trofik kusur: atrofi fotoğrafları: Trofik kusur atrofi başlığında el fotoğrafları kas kitlesindeki azalmayı gösterir.",
+    "Parazi türleri ve ilgili bilgiler: Motor sistem bulguları arasında parazi, pleji, monoparazi, hemiparazi, paraparazi ve kuadriparazi sayılır.",
+    "Kas zaafının dört düzeyi: Kas zaafı birinci motor nöron, ikinci motor nöron, sinir-kas bileşkesi (nöromusküler kavşak) ve doğrudan çizgili kas düzeylerinden kaynaklanır.",
+    "1. motor nöron bulguları ve ilgili bilgiler: Birinci motor nöron lezyonunda tonus artar, refleksler canlıdır, patolojik refleks pozitiftir; atrofi ve duyu kusuru yoktur.",
+    "Derin ve yüzeysel refleksler ve ilgili bilgiler: Refleks muayenesi derin tendon reflekslerini ve yüzeysel refleksleri (karın cildi refleksi, kremaster refleksi) kapsar.",
+    "Refleks dereceleri: Refleks 0 yok, 1 azalmış (hipoaktif), 2 normal, 3 artmış (hiperaktif), 4 aşırı artmış, 5 klonus olarak derecelendirilir.",
+    "Üst ekstremite refleks fotoğrafları: Üst ekstremite refleks fotoğraflarında hekim, dirsek bölgesinde bir refleks çekiciyle tendona vurur.",
+    "Alt ekstremite refleks fotoğrafları: Alt ekstremite refleks fotoğraflarında hekim diz ve ayak bileği bölgelerinde refleks çekiciyle tendona vurur.",
+    "Patolojik refleks fotoğrafları: Patolojik refleks fotoğrafları ayak tabanına çizilen uyarıyı ve el parmağına yapılan uyarıyı gösterir.",
+    "Duyu sistemi bölümüne geçiş: Ders akışı slaytı beş fonksiyon başlığını yeniden listeler ve duyu sistemi bölümünün başladığını vurgular.",
+    "Parestezi ve ilgili bilgiler: Parestezi, görünür bir dış uyarım olmadan hissedilen uyuşma, keçeleşme, karıncalanma ve sızlama duyumudur.",
+    "Yüzeyel duyu ve ilgili bilgiler: Yüzeyel duyu muayenesi dokunma, ağrı ve sıcaklık duyusunu kapsar.",
+    "Duyu yolları şeması: Duyu yolları şemasında dorsal kolon ve medial lemniskus ayırt edici duyuyu, spinotalamik traktus ağrı ve ısı duyusunu taşır.",
+    "Yüzeyel duyu muayene fotoğrafları: Yüzeyel duyu fotoğraflarında parmakta ve bacakta iğne ile, bacakta pamuk benzeri bir uçla duyu sınanır.",
+    "Derin duyu muayene fotoğrafları: Derin duyu fotoğrafları ayak bileğine yaklaştırılan diyapazonu ve el ile ayak parmaklarının pozisyon muayenesini gösterir.",
+    "Kortikal duyu muayene fotoğrafları: Kortikal duyu fotoğraflarında hastanın avucuna konan cisim, gözleri kapalı hastanın elinde tuttuğu kalem ve avuca yazılan işaret gösterilir.",
+    "Duyu muayenesi bulguları: Duyu muayenesi bulguları hipoestezi, anestezi, parestezi, dizestezi, agrafestezi ve astereognozidir.",
+    "Serebellar sistem başlığına geçiş: Slayt serebellar sistemi ders akışının son fonksiyon başlığı olarak vurgular.",
+    "Serebellar muayene başlıkları: Serebellar sistem muayenesi denge, tonus ve koordinasyonu kapsar; koordinasyon metrik muayene (parmak-burun, diz-topuk testi) ve ardışık hareketlerle değerlendirilir.",
+    "Denge muayenesi fotoğrafları: Denge muayenesi fotoğraflarında hasta ayakları birleşik ve gözleri kapalı dururken hekim arkasında koruma yapar.",
+    "Metrik muayene fotoğrafları: Metrik muayene fotoğraflarında hasta işaret parmağıyla hekimin parmağına dokunur ve alt ekstremitede topuk karşı bacağın üstünde gezdirilir.",
+    "Ardışık hareketler (diadokinezi) fotoğrafları: Ardışık hareketler başlığında iki fotoğrafta hastanın elleri dizlerinde avuç yukarı ve avuç aşağı konumdadır.",
+    "Serebellar bulgular: Serebellar sistem muayenesi bulguları ataksi, disartri, hipotoni, dismetri ve disdiadokinezidir."
+   ],
+   "v": "30a25e5b8f"
+  },
+  {
+   "id": "onemli",
+   "baslik": "En önemli yerler",
+   "giris": "Bu derse ilişkin çıkmış sorulardan yalnız biri slayttaki bilgiyle çözülebilir: ikinci motor nöron tutulumunun bulguları. Birinci ve ikinci motor nöron ayırıcı tablosu (tonus, refleks, atrofi, patolojik refleks) dersin en yüksek öncelikli bilgisidir; kas kuvveti ve refleks dereceleri ile kraniyal sinir–muayene eşleşmeleri sınav için ikinci sırada gelir.",
+   "maddeler": [
+    {
+     "baslik": "Birinci motor nöron (UMN) tutulumu",
+     "metin": "Birinci motor nöron tutulumunda tonus artar, refleksler canlıdır, patolojik refleks (+) bulunur; atrofi ve duyu kusuru yoktur.",
+     "neden": "Birinci motor nöron bulguları slayttaki karşılaştırmalı tablonun ilk sütunudur; ikinci motor nöron, nöromusküler kavşak ve çizgili kas ile ayrımı en yüksek öncelikli bilgidir.",
+     "s": [
+      51,
+      52
+     ],
+     "cikmis": false
+    },
+    {
+     "baslik": "İkinci motor nöron (LMN) tutulumu",
+     "metin": "İkinci motor nöron tutulumunda tonus azalır, refleksler kaybolur, atrofi gelişir, patolojik refleks görülmez; duyu kusuru +/− olabilir.",
+     "neden": "Çıkmışta ikinci motor nöron tutulumunun bulguları (tonus, refleks, atrofi, patolojik refleks) soruldu; tablo en yüksek öncelikli.",
+     "s": [
+      52
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "Kas kuvveti derecelendirmesi (0/5–5/5)",
+     "metin": "Kas kuvveti 5/5 (maksimum direnç) ile 0/5 (hiç hareket yok) arasında derecelendirilir; 3/5 yer çekimine direnç gösterilen en düşük derecedir.",
+     "neden": "Derecelerin tanımları sayı–tanım eşleştirmesi olarak en sık sorulabilecek bilgidir.",
+     "s": [
+      44
+     ],
+     "cikmis": false
+    },
+    {
+     "baslik": "Kraniyal sinir işlevleri ve muayene eşleşmeleri",
+     "metin": "Koku KS I, görme KS II, göz hareketleri KS III, IV, VI, yüz duyusu KS V, duyma KS VIII, palatal hareketler KS IX, X, dil KS XII ile sınanır.",
+     "neden": "Muayene–sinir eşleştirmesi slaytta on madde olarak listelenir; bu dersin en doğrudan sınav konusudur.",
+     "s": [
+      12
+     ],
+     "cikmis": false
+    },
+    {
+     "baslik": "Periferik fasiyal paralizi",
+     "metin": "Periferik fasiyal paralizide yüzün bir yarısının tamamında kuvvet azlığı olur; hasta kaş kaldıramaz, alın çizgileri silinir, göz kapatılamaz.",
+     "neden": "Periferik fasiyal paralizinin bulguları (alın çizgilerinin silinmesi, kaş kaldıramama, göz kapatamama) slaytta tek tek sayılır; santral paralizi ile ayrımı sorulabilir.",
+     "s": [
+      30
+     ],
+     "cikmis": false
+    },
+    {
+     "baslik": "Nöromusküler kavşak ve çizgili kas ayrımı",
+     "metin": "Nöromusküler kavşak zaafında tonus ve refleksler değişmez, atrofi ve duyu kusuru yoktur; çizgili kas zaafında tonus değişmez ya da az azalır, refleksler değişmez, atrofi VAR.",
+     "neden": "Nöromusküler kavşak ve çizgili kas sütunlarını birbirinden ayıran tek satır atrofidir.",
+     "s": [
+      51
+     ],
+     "cikmis": false
+    },
+    {
+     "baslik": "Refleks dereceleri (0–5)",
+     "metin": "Refleks 0: yok, 1: azalmış (hipoaktif), 2: normal, 3: artmış (hiperaktif), 4: aşırı artmış, 5: klonus olarak derecelendirilir.",
+     "neden": "Refleks dereceleri (0'dan 5'e) slaytta tek tek tanımlanır; derece–tanım eşleştirmesi sorulabilir. Normal derece 2'dir.",
+     "s": [
+      54
+     ],
+     "cikmis": false
+    },
+    {
+     "baslik": "Santral fasiyal paralizi",
+     "metin": "Santral fasiyal paralizide yüzün bir yarısının alt kısmında kuvvet azlığı olur; hasta gözünü kapatır ve sıkar; her zaman aynı tarafta hemiparezi ile birliktedir.",
+     "neden": "Santral ve periferik fasiyal paralizi slaytlarda ayrı ayrı verilir; iki tablonun karşılaştırılması klasik ayırıcı tanı konusudur.",
+     "s": [
+      29
+     ],
+     "cikmis": false
+    }
+   ],
+   "klip": "a-onemli",
+   "ses": [
+    "En önemli yerler.",
+    "Bu derse ilişkin çıkmış sorulardan yalnız biri slayttaki bilgiyle çözülebilir: ikinci motor nöron tutulumunun bulguları. Birinci ve ikinci motor nöron ayırıcı tablosu (tonus, refleks, atrofi, patolojik refleks) dersin en yüksek öncelikli bilgisidir; kas kuvveti ve refleks dereceleri ile kraniyal sinir–muayene eşleşmeleri sınav için ikinci sırada gelir.",
+    "Birinci motor nöron (UMN) tutulumu: Birinci motor nöron tutulumunda tonus artar, refleksler canlıdır, patolojik refleks (+) bulunur; atrofi ve duyu kusuru yoktur.",
+    "İkinci motor nöron (LMN) tutulumu: İkinci motor nöron tutulumunda tonus azalır, refleksler kaybolur, atrofi gelişir, patolojik refleks görülmez; duyu kusuru +/− olabilir.",
+    "Kas kuvveti derecelendirmesi (0/5–5/5): Kas kuvveti 5/5 (maksimum direnç) ile 0/5 (hiç hareket yok) arasında derecelendirilir; 3/5 yer çekimine direnç gösterilen en düşük derecedir.",
+    "Kraniyal sinir işlevleri ve muayene eşleşmeleri: Koku KS I, görme KS II, göz hareketleri KS III, IV, VI, yüz duyusu KS V, duyma KS VIII, palatal hareketler KS IX, X, dil KS XII ile sınanır.",
+    "Periferik fasiyal paralizi: Periferik fasiyal paralizide yüzün bir yarısının tamamında kuvvet azlığı olur; hasta kaş kaldıramaz, alın çizgileri silinir, göz kapatılamaz.",
+    "Nöromusküler kavşak ve çizgili kas ayrımı: Nöromusküler kavşak zaafında tonus ve refleksler değişmez, atrofi ve duyu kusuru yoktur; çizgili kas zaafında tonus değişmez ya da az azalır, refleksler değişmez, atrofi VAR.",
+    "Refleks dereceleri (0–5): Refleks 0: yok, 1: azalmış (hipoaktif), 2: normal, 3: artmış (hiperaktif), 4: aşırı artmış, 5: klonus olarak derecelendirilir.",
+    "Santral fasiyal paralizi: Santral fasiyal paralizide yüzün bir yarısının alt kısmında kuvvet azlığı olur; hasta gözünü kapatır ve sıkar; her zaman aynı tarafta hemiparezi ile birliktedir."
+   ],
+   "v": "22c1980c5a"
+  },
+  {
+   "id": "cikmis",
+   "baslik": "Çıkmış sorularda ne soruldu",
+   "giris": "Bu dersin konusundan doğrulanmış 3 çıkmış soru var.",
+   "maddeler": [
+    {
+     "baslik": "arşiv (yıl belgede yok)",
+     "metin": "İkinci motor nöron (alt motor nöron) tutulumu ile ilgili aşağıdaki bulgular veriliyor: I. Kas tonusu azalır. II. Derin tendon refleksleri azalır. III. Kas atrofisi olur. IV. Patolojik refleksler görülür. Bu bulgulardan hangileri görülür?",
+     "cevap": "I, II ve III",
+     "s": [
+      52
+     ]
+    },
+    {
+     "baslik": "2021-2022",
+     "metin": "Aşağıdakilerden hangisinin ikinci motor nöron hasarında saptanması beklenir?",
+     "cevap": "Fasikülasyon",
+     "s": [
+      52
+     ]
+    },
+    {
+     "baslik": "2023-2024",
+     "metin": "Kafa içi basınç artışı sendromunun (KİBAS) klasik ana bulguları aşağıdakilerin hangisinde birlikte verilmiştir?",
+     "cevap": "Baş ağrısı, bulantı-kusma, papil ödem",
+     "s": [
+      19
+     ]
+    }
+   ],
+   "klip": "a-cikmis",
+   "ses": [
+    "Çıkmış sorularda ne soruldu.",
+    "Bu dersin konusundan doğrulanmış 3 çıkmış soru var.",
+    "arşiv (yıl belgede yok): İkinci motor nöron (alt motor nöron) tutulumu ile ilgili aşağıdaki bulgular veriliyor: I. Kas tonusu azalır. II. Derin tendon refleksleri azalır. III. Kas atrofisi olur. IV. Patolojik refleksler görülür. Bu bulgulardan hangileri görülür?",
+    "Cevap: I, II ve III.",
+    "2021-2022: Aşağıdakilerden hangisinin ikinci motor nöron hasarında saptanması beklenir?",
+    "Cevap: Fasikülasyon.",
+    "2023-2024: Kafa içi basınç artışı sendromunun (KİBAS) klasik ana bulguları aşağıdakilerin hangisinde birlikte verilmiştir?",
+    "Cevap: Baş ağrısı, bulantı-kusma, papil ödem."
+   ],
+   "v": "88c861feb6"
+  },
+  {
+   "id": "uslup",
+   "baslik": "Hoca nasıl soru sorar",
+   "giris": "Bu konuda çıkmış soru az; profil yalnız genel bir eğilim gösterir.",
+   "guven": "dusuk",
+   "maddeler": [
+    {
+     "baslik": "Soru kökü",
+     "metin": "Sorular çoğunlukla doğrudan bilgi sorusu (%68) ve vaka sorusu (%10) biçimindedir."
+    },
+    {
+     "baslik": "Sorulan bilgi",
+     "metin": "En çok tanım ve kavram (%62) sorulur."
+    },
+    {
+     "baslik": "Tanım ve kavram",
+     "metin": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    },
+    {
+     "baslik": "Düzey",
+     "metin": "Soruların düzeyi hatırlama (%81) ve anlama ve ilişki kurma (%19) ağırlıklıdır."
+    },
+    {
+     "baslik": "Çeldiriciler",
+     "metin": "Yanlış şıklar genellikle aynı türden başka bir kavram ya da aynı ailedeki komşu kavram olarak kurulur."
+    },
+    {
+     "baslik": "Zorluk",
+     "metin": "Bu konunun sorularının zorluğu kolay-orta, tekrar eden."
+    }
+   ],
+   "klip": "a-uslup",
+   "ses": [
+    "Hoca nasıl soru sorar.",
+    "Bu konuda çıkmış soru az; profil yalnız genel bir eğilim gösterir.",
+    "Soru kökü: Sorular çoğunlukla doğrudan bilgi sorusu (%68) ve vaka sorusu (%10) biçimindedir.",
+    "Sorulan bilgi: En çok tanım ve kavram (%62) sorulur.",
+    "Tanım ve kavram: Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür.",
+    "Düzey: Soruların düzeyi hatırlama (%81) ve anlama ve ilişki kurma (%19) ağırlıklıdır.",
+    "Çeldiriciler: Yanlış şıklar genellikle aynı türden başka bir kavram ya da aynı ailedeki komşu kavram olarak kurulur.",
+    "Zorluk: Bu konunun sorularının zorluğu kolay-orta, tekrar eden."
+   ],
+   "v": "b28b4aa95b"
+  },
+  {
+   "id": "odak",
+   "baslik": "Nelere odaklanmalısın",
+   "giris": "",
+   "maddeler": [
+    {
+     "baslik": "Fasikülasyon",
+     "metin": "Çıkmışlarda 2 kez soruldu. Örnek kök: Aşağıdakilerden hangisinin ikinci motor nöron hasarında saptanması beklenir?"
+    },
+    {
+     "baslik": "İkinci motor nöron (LMN) tutulumu",
+     "metin": "Çıkmışta ikinci motor nöron tutulumunun bulguları (tonus, refleks, atrofi, patolojik refleks) soruldu; tablo en yüksek öncelikli."
+    },
+    {
+     "baslik": "Çalışma yolu",
+     "metin": "Okurken her başlıkta tanım ve kavram bilgisini ayrı not et; hoca en çok bunu soruyor."
+    }
+   ],
+   "klip": "a-odak",
+   "ses": [
+    "Nelere odaklanmalısın.",
+    "Fasikülasyon: Çıkmışlarda 2 kez soruldu. Örnek kök: Aşağıdakilerden hangisinin ikinci motor nöron hasarında saptanması beklenir?",
+    "İkinci motor nöron (LMN) tutulumu: Çıkmışta ikinci motor nöron tutulumunun bulguları (tonus, refleks, atrofi, patolojik refleks) soruldu; tablo en yüksek öncelikli.",
+    "Çalışma yolu: Okurken her başlıkta tanım ve kavram bilgisini ayrı not et; hoca en çok bunu soruyor."
+   ],
+   "v": "0bc2b41978"
+  }
+ ],
+ "ozet": [
+  {
+   "id": "giris",
+   "baslik": "Dersin özü",
+   "giris": "Ders nörolojik muayeneyi beş işlev başlığı altında anlatır: mental durum, kraniyal sinirler, motor sistem, duyu sistemi ve serebellar sistem. Kraniyal sinirlerin işlevleri ve lezyon bulguları, kas kuvveti ve refleks dereceleri, birinci ve ikinci motor nöron ayrımı, santral ve periferik fasiyal paralizi, duyu terimleri ve serebellar bulgular dersin ana konularıdır.",
+   "maddeler": [],
+   "klip": "o-giris",
+   "ses": [
+    "Dersin özü.",
+    "Ders nörolojik muayeneyi beş işlev başlığı altında anlatır: mental durum, kraniyal sinirler, motor sistem, duyu sistemi ve serebellar sistem. Kraniyal sinirlerin işlevleri ve lezyon bulguları, kas kuvveti ve refleks dereceleri, birinci ve ikinci motor nöron ayrımı, santral ve periferik fasiyal paralizi, duyu terimleri ve serebellar bulgular dersin ana konularıdır."
+   ],
+   "v": "d415d52aba"
+  },
+  {
+   "id": "2n03-05",
+   "baslik": "Kraniyal sinir işlevleri ve muayene eşleşmeleri",
+   "giris": "Koku KS I, görme KS II, göz hareketleri KS III, IV, VI, yüz duyusu KS V, duyma KS VIII, palatal hareketler KS IX, X, dil KS XII ile sınanır.",
+   "s": [
+    12
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "KS I."
+    },
+    {
+     "metin": "Görme alanı, görme keskinliği ve fundoskopik muayene KS II ile yapılır."
+    },
+    {
+     "metin": "KS II ve KS III birlikte görev alır."
+    },
+    {
+     "metin": "KS III, KS IV ve KS VI."
+    },
+    {
+     "metin": "KS V."
+    },
+    {
+     "metin": "Çiğneme kasları KS V, mimik kaslar KS VII."
+    },
+    {
+     "metin": "KS VIII."
+    },
+    {
+     "metin": "KS IX ve KS X."
+    },
+    {
+     "metin": "KS XI."
+    },
+    {
+     "metin": "KS XII."
+    },
+    {
+     "metin": "Yüz duyusu V, mimik kasları VII'ye aittir; yüz duyusu ile mimik kasları ayrı sinirlerdedir."
+    }
+   ],
+   "klip": "o-2n03-05",
+   "ses": [
+    "Kraniyal sinir işlevleri ve muayene eşleşmeleri.",
+    "Koku KS I, görme KS II, göz hareketleri KS III, IV, VI, yüz duyusu KS V, duyma KS VIII, palatal hareketler KS IX, X, dil KS XII ile sınanır.",
+    "KS I.",
+    "Görme alanı, görme keskinliği ve fundoskopik muayene KS II ile yapılır.",
+    "KS II ve KS III birlikte görev alır.",
+    "KS III, KS IV ve KS VI.",
+    "KS V.",
+    "Çiğneme kasları KS V, mimik kaslar KS VII.",
+    "KS VIII.",
+    "KS IX ve KS X.",
+    "KS XI.",
+    "KS XII.",
+    "Yüz duyusu V, mimik kasları VII'ye aittir; yüz duyusu ile mimik kasları ayrı sinirlerdedir."
+   ],
+   "v": "c969ce1b37"
+  },
+  {
+   "id": "2n03-08",
+   "baslik": "Amorozis fugax",
+   "giris": "Amorozis fugax, tek gözde ani ve geçici görme kaybıdır; genelde karotid arterden kopan embolinin retinal arterleri tıkamasına bağlıdır.",
+   "s": [
+    19
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "Tek gözde ani başlayan ve geçici olan görme kaybıdır."
+    },
+    {
+     "metin": "Genelde karotid arterden kopan bir emboli retinal arterleri tıkar."
+    },
+    {
+     "metin": "Slayt, baş-boyun oskültasyonunu ünlemle vurgular; karotis kaynaklı emboli düşünüldüğü için bu bölge dinlenir."
+    },
+    {
+     "metin": "Görme kaybı tek gözdedir ve geçicidir; papil ödemi ise fundoskopide görülen ayrı bir tablodur ve en sık KİBAS ile ilişkilidir."
+    }
+   ],
+   "klip": "o-2n03-08",
+   "ses": [
+    "Amorozis fugax.",
+    "Amorozis fugax, tek gözde ani ve geçici görme kaybıdır; genelde karotid arterden kopan embolinin retinal arterleri tıkamasına bağlıdır.",
+    "Tek gözde ani başlayan ve geçici olan görme kaybıdır.",
+    "Genelde karotid arterden kopan bir emboli retinal arterleri tıkar.",
+    "Slayt, baş-boyun oskültasyonunu ünlemle vurgular; karotis kaynaklı emboli düşünüldüğü için bu bölge dinlenir.",
+    "Görme kaybı tek gözdedir ve geçicidir; papil ödemi ise fundoskopide görülen ayrı bir tablodur ve en sık KİBAS ile ilişkilidir."
+   ],
+   "v": "bd954e1929"
+  },
+  {
+   "id": "2n03-18",
+   "baslik": "Santral fasiyal paralizi",
+   "giris": "Santral fasiyal paralizide yüzün bir yarısının alt kısmında kuvvet azlığı olur; hasta gözünü kapatır ve sıkar; her zaman aynı tarafta hemiparezi ile birliktedir.",
+   "s": [
+    29
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "Yüzün bir yarısının yalnız alt kısmında kuvvet azlığı görülür."
+    },
+    {
+     "metin": "Aynı taraf nazolabial oluk siliktir; ağız sağlam tarafa kaymıştır."
+    },
+    {
+     "metin": "Hasta gözünü kapatır ve sıkar."
+    },
+    {
+     "metin": "Her zaman aynı tarafta hemiparezi vardır."
+    },
+    {
+     "metin": "Periferik fasiyal paralizide yüzün yarısının tamamında kuvvet azlığı vardır; alın çizgileri silinir, kaş kaldırılamaz ve göz kapatılamaz."
+    }
+   ],
+   "klip": "o-2n03-18",
+   "ses": [
+    "Santral fasiyal paralizi.",
+    "Santral fasiyal paralizide yüzün bir yarısının alt kısmında kuvvet azlığı olur; hasta gözünü kapatır ve sıkar; her zaman aynı tarafta hemiparezi ile birliktedir.",
+    "Yüzün bir yarısının yalnız alt kısmında kuvvet azlığı görülür.",
+    "Aynı taraf nazolabial oluk siliktir; ağız sağlam tarafa kaymıştır.",
+    "Hasta gözünü kapatır ve sıkar.",
+    "Her zaman aynı tarafta hemiparezi vardır.",
+    "Periferik fasiyal paralizide yüzün yarısının tamamında kuvvet azlığı vardır; alın çizgileri silinir, kaş kaldırılamaz ve göz kapatılamaz."
+   ],
+   "v": "94f8e5b38c"
+  },
+  {
+   "id": "2n03-19",
+   "baslik": "Periferik fasiyal paralizi",
+   "giris": "Periferik fasiyal paralizide yüzün bir yarısının tamamında kuvvet azlığı olur; hasta kaş kaldıramaz, alın çizgileri silinir, göz kapatılamaz.",
+   "s": [
+    30
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "Yüzün bir yarısının tamamı etkilenir."
+    },
+    {
+     "metin": "Kaş kaldıramaz, alın çizgileri silinmiş, göz kapatılamaz, nazolabial oluk silik, ağız sağlam tarafa kaymış, ıslık çalamaz."
+    },
+    {
+     "metin": "Paralitik tarafta gözyaşı salgısı ve dilin tat duyusu azalabilir."
+    },
+    {
+     "metin": "Santral fasiyal paralizide yalnız alt yüz etkilenir, göz kapatılır ve hemiparezi eşlik eder."
+    }
+   ],
+   "klip": "o-2n03-19",
+   "ses": [
+    "Periferik fasiyal paralizi.",
+    "Periferik fasiyal paralizide yüzün bir yarısının tamamında kuvvet azlığı olur; hasta kaş kaldıramaz, alın çizgileri silinir, göz kapatılamaz.",
+    "Yüzün bir yarısının tamamı etkilenir.",
+    "Kaş kaldıramaz, alın çizgileri silinmiş, göz kapatılamaz, nazolabial oluk silik, ağız sağlam tarafa kaymış, ıslık çalamaz.",
+    "Paralitik tarafta gözyaşı salgısı ve dilin tat duyusu azalabilir.",
+    "Santral fasiyal paralizide yalnız alt yüz etkilenir, göz kapatılır ve hemiparezi eşlik eder."
+   ],
+   "v": "bbf55f37b6"
+  },
+  {
+   "id": "2n03-27",
+   "baslik": "Kas kuvveti derecelendirmesi (0/5–5/5)",
+   "giris": "Kas kuvveti 5/5 (maksimum direnç) ile 0/5 (hiç hareket yok) arasında derecelendirilir; 3/5 yer çekimine direnç gösterilen en düşük derecedir.",
+   "s": [
+    44
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "Uygulanan kuvvete maksimum direnç gösterilir."
+    },
+    {
+     "metin": "Uygulanan kuvvete direnç gösterebilir."
+    },
+    {
+     "metin": "Uygulanan kuvvete direnç gösterilemez, ancak yer çekimine direnç gösterilir."
+    },
+    {
+     "metin": "Yer çekimine direnç gösterilemez."
+    },
+    {
+     "metin": "Kasta gözle görülür bir hareket olmaz, dokunmayla kasılma hissedilebilir."
+    },
+    {
+     "metin": "Kasta gözle ve dokunma ile hiç hareket gözlenmez."
+    },
+    {
+     "metin": "3/5 yer çekimini yenebilen en düşük derecedir; 2/5 yer çekimini yenemez; 1/5 ile 0/5'i ayıran şey dokunmayla kasılmanın hissedilmesidir."
+    }
+   ],
+   "klip": "o-2n03-27",
+   "ses": [
+    "Kas kuvveti derecelendirmesi (0/5–5/5).",
+    "Kas kuvveti 5/5 (maksimum direnç) ile 0/5 (hiç hareket yok) arasında derecelendirilir; 3/5 yer çekimine direnç gösterilen en düşük derecedir.",
+    "Uygulanan kuvvete maksimum direnç gösterilir.",
+    "Uygulanan kuvvete direnç gösterebilir.",
+    "Uygulanan kuvvete direnç gösterilemez, ancak yer çekimine direnç gösterilir.",
+    "Yer çekimine direnç gösterilemez.",
+    "Kasta gözle görülür bir hareket olmaz, dokunmayla kasılma hissedilebilir.",
+    "Kasta gözle ve dokunma ile hiç hareket gözlenmez.",
+    "3/5 yer çekimini yenebilen en düşük derecedir; 2/5 yer çekimini yenemez; 1/5 ile 0/5'i ayıran şey dokunmayla kasılmanın hissedilmesidir."
+   ],
+   "v": "beaf831d99"
+  },
+  {
+   "id": "2n03-31",
+   "baslik": "Birinci motor nöron (UMN) tutulumu",
+   "giris": "Birinci motor nöron tutulumunda tonus artar, refleksler canlıdır, patolojik refleks (+) bulunur; atrofi ve duyu kusuru yoktur.",
+   "s": [
+    51,
+    52
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "Artar."
+    },
+    {
+     "metin": "Canlıdır."
+    },
+    {
+     "metin": "Vardır (+); tipik örnek taban cildi refleksi (Babinski) ve Hoffman refleksidir."
+    },
+    {
+     "metin": "Yoktur."
+    },
+    {
+     "metin": "Yoktur."
+    },
+    {
+     "metin": "İkinci motor nöron tutulumunda tonus azalır, refleksler kaybolur, atrofi gelişir, patolojik refleks görülmez (−); duyu kusuru +/−'dir."
+    },
+    {
+     "metin": "Patolojik refleksler taban cildi refleksi (Babinski) ve Hoffman refleksidir."
+    },
+    {
+     "metin": "Tonus artışı, canlı refleksler ve patolojik refleks (+) birlikte birinci motor nöron tutulumunu gösterir; atrofi ve duyu kusuru yoktur."
+    }
+   ],
+   "klip": "o-2n03-31",
+   "ses": [
+    "Birinci motor nöron (UMN) tutulumu.",
+    "Birinci motor nöron tutulumunda tonus artar, refleksler canlıdır, patolojik refleks (+) bulunur; atrofi ve duyu kusuru yoktur.",
+    "Artar.",
+    "Canlıdır.",
+    "Vardır (+); tipik örnek taban cildi refleksi (Babinski) ve Hoffman refleksidir.",
+    "Yoktur.",
+    "Yoktur.",
+    "İkinci motor nöron tutulumunda tonus azalır, refleksler kaybolur, atrofi gelişir, patolojik refleks görülmez (−); duyu kusuru +/−'dir.",
+    "Patolojik refleksler taban cildi refleksi (Babinski) ve Hoffman refleksidir.",
+    "Tonus artışı, canlı refleksler ve patolojik refleks (+) birlikte birinci motor nöron tutulumunu gösterir; atrofi ve duyu kusuru yoktur."
+   ],
+   "v": "c8410a6599"
+  },
+  {
+   "id": "2n03-33",
+   "baslik": "Nöromusküler kavşak ve çizgili kas ayrımı",
+   "giris": "Nöromusküler kavşak zaafında tonus ve refleksler değişmez, atrofi ve duyu kusuru yoktur; çizgili kas zaafında tonus değişmez ya da az azalır, refleksler değişmez, atrofi VAR.",
+   "s": [
+    51
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "Tonus değişmez, refleksler değişmez, patolojik refleks yok, atrofi yok, duyu kusuru yok."
+    },
+    {
+     "metin": "Tonus değişmez (az), refleksler değişmez, atrofi VAR, patolojik refleks yok, duyu kusuru yok."
+    },
+    {
+     "metin": "İki kolon arasındaki tek fark atrofidir; kavşakta yoktur, çizgili kasta vardır."
+    },
+    {
+     "metin": "Kavşak ve çizgili kas düzeyinde refleksler değişmez ve patolojik refleks yoktur."
+    }
+   ],
+   "klip": "o-2n03-33",
+   "ses": [
+    "Nöromusküler kavşak ve çizgili kas ayrımı.",
+    "Nöromusküler kavşak zaafında tonus ve refleksler değişmez, atrofi ve duyu kusuru yoktur; çizgili kas zaafında tonus değişmez ya da az azalır, refleksler değişmez, atrofi VAR.",
+    "Tonus değişmez, refleksler değişmez, patolojik refleks yok, atrofi yok, duyu kusuru yok.",
+    "Tonus değişmez (az), refleksler değişmez, atrofi VAR, patolojik refleks yok, duyu kusuru yok.",
+    "İki kolon arasındaki tek fark atrofidir; kavşakta yoktur, çizgili kasta vardır.",
+    "Kavşak ve çizgili kas düzeyinde refleksler değişmez ve patolojik refleks yoktur."
+   ],
+   "v": "ae8fc900bd"
+  },
+  {
+   "id": "2n03-32",
+   "baslik": "İkinci motor nöron (LMN) tutulumu",
+   "giris": "İkinci motor nöron tutulumunda tonus azalır, refleksler kaybolur, atrofi gelişir, patolojik refleks görülmez; duyu kusuru +/− olabilir.",
+   "s": [
+    52
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "Azalır."
+    },
+    {
+     "metin": "Kaybolur."
+    },
+    {
+     "metin": "Gelişir."
+    },
+    {
+     "metin": "+/- olabilir."
+    },
+    {
+     "metin": "Görülmez (−)."
+    },
+    {
+     "metin": "Birinci motor nöron tutulumunda tonus artar, refleksler canlıdır, patolojik refleks (+) bulunur, atrofi yoktur."
+    },
+    {
+     "metin": "Tonus azalır, refleksler kaybolur, atrofi gelişir; patolojik refleks bu düzeyde görülmez."
+    },
+    {
+     "metin": "Slayt ikinci motor nöronu birinci motor nöron, nöromusküler kavşak ve çizgili kas sütunlarıyla yan yana verir."
+    },
+    {
+     "metin": "Çizgili kasta da atrofi vardır, ancak tonus ve refleksler değişmez; ikinci motor nöronda ise tonus azalır ve refleksler kaybolur."
+    },
+    {
+     "metin": "Kavşakta atrofi yoktur; ikinci motor nöronda atrofi gelişir."
+    }
+   ],
+   "klip": "o-2n03-32",
+   "ses": [
+    "İkinci motor nöron (LMN) tutulumu.",
+    "İkinci motor nöron tutulumunda tonus azalır, refleksler kaybolur, atrofi gelişir, patolojik refleks görülmez; duyu kusuru +/− olabilir.",
+    "Azalır.",
+    "Kaybolur.",
+    "Gelişir.",
+    "+/- olabilir.",
+    "Görülmez (−).",
+    "Birinci motor nöron tutulumunda tonus artar, refleksler canlıdır, patolojik refleks (+) bulunur, atrofi yoktur.",
+    "Tonus azalır, refleksler kaybolur, atrofi gelişir; patolojik refleks bu düzeyde görülmez.",
+    "Slayt ikinci motor nöronu birinci motor nöron, nöromusküler kavşak ve çizgili kas sütunlarıyla yan yana verir.",
+    "Çizgili kasta da atrofi vardır, ancak tonus ve refleksler değişmez; ikinci motor nöronda ise tonus azalır ve refleksler kaybolur.",
+    "Kavşakta atrofi yoktur; ikinci motor nöronda atrofi gelişir."
+   ],
+   "v": "cdd554b454"
+  },
+  {
+   "id": "2n03-36",
+   "baslik": "Refleks dereceleri (0–5)",
+   "giris": "Refleks 0: yok, 1: azalmış (hipoaktif), 2: normal, 3: artmış (hiperaktif), 4: aşırı artmış, 5: klonus olarak derecelendirilir.",
+   "s": [
+    54
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "Yok."
+    },
+    {
+     "metin": "Azalmış (hipoaktif)."
+    },
+    {
+     "metin": "Normal."
+    },
+    {
+     "metin": "Artmış (hiperaktif)."
+    },
+    {
+     "metin": "Aşırı artmış."
+    },
+    {
+     "metin": "Klonus."
+    },
+    {
+     "metin": "Normal derece 2'dir, 0 değil; klonus en uçtaki, 5. derecedir."
+    },
+    {
+     "metin": "Birinci motor nöron tutulumunda refleksler canlı, ikinci motor nöron tutulumunda kaybolmuş olur."
+    }
+   ],
+   "klip": "o-2n03-36",
+   "ses": [
+    "Refleks dereceleri (0–5).",
+    "Refleks 0: yok, 1: azalmış (hipoaktif), 2: normal, 3: artmış (hiperaktif), 4: aşırı artmış, 5: klonus olarak derecelendirilir.",
+    "Yok.",
+    "Azalmış (hipoaktif).",
+    "Normal.",
+    "Artmış (hiperaktif).",
+    "Aşırı artmış.",
+    "Klonus.",
+    "Normal derece 2'dir, 0 değil; klonus en uçtaki, 5. derecedir.",
+    "Birinci motor nöron tutulumunda refleksler canlı, ikinci motor nöron tutulumunda kaybolmuş olur."
+   ],
+   "v": "a7647f6caf"
+  },
+  {
+   "id": "2n03-37",
+   "baslik": "Duyu terminolojisi: parestezi, dizestezi, allodini",
+   "giris": "Parestezi dış uyarım olmadan hissedilen uyuşma ve karıncalanmadır; dizestezi ağrısız uyarıyla hoş olmayan ağrılı duyum algılanmasıdır; allodini ağrı oluşturmayacak uyaranla ağrı hissedilmesidir.",
+   "s": [
+    59
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "Uyuşma, keçeleşme, karıncalanma, sızlama gibi, görünür dış uyarım olmadan hissedilen duyum."
+    },
+    {
+     "metin": "Ağrısız bir uyarıyla hoş olmayan ağrılı duyum algılanması."
+    },
+    {
+     "metin": "Ağrı oluşturmayacak bir uyaran ile ağrı hissedilmesi."
+    },
+    {
+     "metin": "Parestezide görünür dış uyarım yoktur; dizestezi ve allodinide bir uyarı ya da uyaran vardır. Slayt dizestezi ile allodiniyi ayrıca karşılaştırmaz, ikisinin tanımını birebir öğrenmek gerekir."
+    }
+   ],
+   "klip": "o-2n03-37",
+   "ses": [
+    "Duyu terminolojisi: parestezi, dizestezi, allodini.",
+    "Parestezi dış uyarım olmadan hissedilen uyuşma ve karıncalanmadır; dizestezi ağrısız uyarıyla hoş olmayan ağrılı duyum algılanmasıdır; allodini ağrı oluşturmayacak uyaranla ağrı hissedilmesidir.",
+    "Uyuşma, keçeleşme, karıncalanma, sızlama gibi, görünür dış uyarım olmadan hissedilen duyum.",
+    "Ağrısız bir uyarıyla hoş olmayan ağrılı duyum algılanması.",
+    "Ağrı oluşturmayacak bir uyaran ile ağrı hissedilmesi.",
+    "Parestezide görünür dış uyarım yoktur; dizestezi ve allodinide bir uyarı ya da uyaran vardır. Slayt dizestezi ile allodiniyi ayrıca karşılaştırmaz, ikisinin tanımını birebir öğrenmek gerekir."
+   ],
+   "v": "d354a359a0"
+  }
+ ]
+}

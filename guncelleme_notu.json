@@ -1,12 +1,12 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 585,
-  "baslik": "Kurul 2 derslerinde \"Hocanın sorabileceği sorular\"",
+  "onem": 586,
+  "baslik": "Sesli derslerde \"Ders analizi\" ve \"Ders özeti\"",
   "maddeler": [
-    "Kurul 2'nin 7 sesli dersinde (Nöroloji, Patoloji, Farmakoloji, Genetik) hocanın sorabileceği yerlerde 77 ara soru eklendi.",
-    "Slaytın anlatımı bitince ders durur, soru sayfası açılır; EMA soruyu okur, çözer ve çözümü önceki slaytlardan anlatır. İstersen atlayabilirsin.",
-    "PDF üst çubuğundaki ünlem simgesi dersin bütün ara sorularını sırayla çözer.",
-    "Aynı sorular ders sayfasında \"Hocanın sorabileceği sorular\" kartından sesli çözücüyle de çözülebilir."
+    "Sesli ders başlamadan önce \"Ders analizi\" açılır: derste ne anlatılacak, bilmen gerekenler, en önemli yerler, çıkmışlarda ne soruldu, hocanın soru üslubu ve nelere odaklanmalısın.",
+    "\"Ders özeti\" sekmesi dersin en önemli yerlerini slayt sırasıyla anlatır.",
+    "Her bölümü EMA sesiyle dinleyebilir ya da \"Tümünü dinle\" ile baştan sona dinleyebilirsin.",
+    "Ders çalarken de PDF üst çubuğundaki pano simgesiyle açılır."
   ],
   "eklenen": [],
   "degisen": [],

@@ -1,0 +1,1007 @@
+{
+ "surum": 1,
+ "key": "k2-02",
+ "kod": "2n02",
+ "kurul": 2,
+ "brans": "Nöroloji",
+ "konu": "Bilinç Bozukluğu Olan Hastaya Yaklaşım",
+ "ogretim_uyesi": "Dr. Dursun Ceylan (PDF kapağı; kayıt defterinde İrfan Yavaş)",
+ "profil": "Nöroloji",
+ "sesKlasor": {
+  "brans": "k2dersanaliz",
+  "kod": "2n02"
+ },
+ "analiz": [
+  {
+   "id": "anlatim",
+   "baslik": "Bu derste ne anlatılacak",
+   "giris": "Bilinç değişiklikleri acil serviste ve yoğun bakımda en sık nöroloji konsültasyonu nedenidir; yüzde seksen beşi metabolik ve sistemik, yüzde on beşi SSS'e ait nedenlerle oluşur. Ders; uyanıklığı sağlayan ARAS ağını, bilinç düzeylerinin tanımlarını, Glasgow Koma Skalasını, pupil, göz hareketi, motor yanıt ve solunumla lezyon lokalizasyonunu anlatır. Son bölümde laboratuvar incelemesi ve bilinci kapalı hastaya basamaklı yaklaşım algoritması verilir.",
+   "maddeler": [
+    {
+     "metin": "Bilinç değişikliğinin önemi"
+    },
+    {
+     "metin": "Bilincin anatomik temeli"
+    },
+    {
+     "metin": "Bilinç düzeyleri ve tanımlar"
+    },
+    {
+     "metin": "İlk aşamada yaklaşım"
+    },
+    {
+     "metin": "Sistemik nedenler"
+    },
+    {
+     "metin": "Santral sinir sistemine ait nedenler ve herniasyon"
+    },
+    {
+     "metin": "Fizik muayene ve anahtar noktalar"
+    },
+    {
+     "metin": "Koma skorları ve Glasgow koma skalası"
+    },
+    {
+     "metin": "Beyin sapı refleksleri ve pupiller"
+    },
+    {
+     "metin": "Göz hareketleri: okülosefalik ve kalorik test"
+    },
+    {
+     "metin": "Komada solunum"
+    },
+    {
+     "metin": "Laboratuvar testleri"
+    },
+    {
+     "metin": "Bilinci kapalı hastaya yaklaşım algoritması"
+    },
+    {
+     "metin": "Komalı hastada kan gazı ve osmolar açık"
+    },
+    {
+     "metin": "Sonuç"
+    }
+   ],
+   "klip": "a-anlatim",
+   "ses": [
+    "Bu derste ne anlatılacak.",
+    "Bilinç değişiklikleri acil serviste ve yoğun bakımda en sık nöroloji konsültasyonu nedenidir; yüzde seksen beşi metabolik ve sistemik, yüzde on beşi SSS'e ait nedenlerle oluşur. Ders; uyanıklığı sağlayan ARAS ağını, bilinç düzeylerinin tanımlarını, Glasgow Koma Skalasını, pupil, göz hareketi, motor yanıt ve solunumla lezyon lokalizasyonunu anlatır. Son bölümde laboratuvar incelemesi ve bilinci kapalı hastaya basamaklı yaklaşım algoritması verilir.",
+    "Bilinç değişikliğinin önemi.",
+    "Bilincin anatomik temeli.",
+    "Bilinç düzeyleri ve tanımlar.",
+    "İlk aşamada yaklaşım.",
+    "Sistemik nedenler.",
+    "Santral sinir sistemine ait nedenler ve herniasyon.",
+    "Fizik muayene ve anahtar noktalar.",
+    "Koma skorları ve Glasgow koma skalası.",
+    "Beyin sapı refleksleri ve pupiller.",
+    "Göz hareketleri: okülosefalik ve kalorik test.",
+    "Komada solunum.",
+    "Laboratuvar testleri.",
+    "Bilinci kapalı hastaya yaklaşım algoritması.",
+    "Komalı hastada kan gazı ve osmolar açık.",
+    "Sonuç."
+   ],
+   "v": "5c938e114d"
+  },
+  {
+   "id": "kazanim",
+   "baslik": "Dersin sonunda bilmen gerekenler",
+   "giris": "Bu ders bittiğinde aşağıdaki başlıkları açıklayabilmelisin.",
+   "maddeler": [
+    {
+     "baslik": "Bilinç Değişikliği",
+     "metin": "en sık nöroloji",
+     "s": [
+      2
+     ]
+    },
+    {
+     "baslik": "Bilinç",
+     "metin": "Bilinç — öğrenci notu: bilincin açık olmasını sağlayan sistem",
+     "s": [
+      4
+     ]
+    },
+    {
+     "baslik": "Uyanıklık ve Uyarılabilirlik",
+     "metin": "eksitatör aktivitenin (ARAS); — öğrenci notu: ok ile işaretlenmiş",
+     "s": [
+      5
+     ]
+    },
+    {
+     "baslik": "İstanbul, Kasım 2011",
+     "metin": "Bilinç açık: uyanık ve farkında — öğrenci notu: maddeler 1-5 numaralandırılmış",
+     "s": [
+      6
+     ]
+    },
+    {
+     "baslik": "Bilinç Bozuklukları: Tanımlar",
+     "metin": "Konfüzyon — öğrenci notu: Soru sorunca yanlış cevap veriyor; farkındalık bozukluğu; adları karıştırıyor, saatleri karıştırıyor",
+     "s": [
+      7
+     ]
+    },
+    {
+     "baslik": "İlk Aşamada:",
+     "metin": "Muayene ile birlikte stabilizasyon, laboratuar, — öğrenci notu: yıldızlı",
+     "s": [
+      9
+     ]
+    },
+    {
+     "baslik": "İlk Aşamada:",
+     "metin": "Hızlı nörolojik değerlendirme",
+     "s": [
+      10
+     ]
+    },
+    {
+     "baslik": "Etiyoloji: Sistemik Neden – SSS Difüz",
+     "metin": "Hipoksi — öğrenci notu: KOAH, astım krizi; kan gazında çıkar",
+     "s": [
+      11
+     ]
+    },
+    {
+     "baslik": "Etiyoloji: Sistemik Neden – SSS",
+     "metin": "Yaygın hipoperfüzyon — öğrenci notu: daireli; aort anevrizması → hızla fark edilmelidir; yeterli dolaşım; kan kaybı",
+     "s": [
+      12
+     ]
+    },
+    {
+     "baslik": "Etiyoloji: SSS Ait Nedenler",
+     "metin": "SSS travması — öğrenci notu: Trafik kazaları",
+     "s": [
+      13
+     ]
+    },
+    {
+     "baslik": "İstanbul, Kasım 2011",
+     "metin": "İstanbul, Kasım 2011 — öğrenci notu: resim üstünde: Santral herniasyon yanındaki kırmızı alan → subdural hematom; SEREBRAL HERNİASYON → bilinç kaybı en kolay yapan (okunuşu belirsiz)",
+     "s": [
+      14
+     ]
+    },
+    {
+     "baslik": "Fizik Muayene",
+     "metin": "Vital bulgular: — öğrenci notu: solunumun geçici süre durması; Apne var mı",
+     "s": [
+      16
+     ]
+    },
+    {
+     "baslik": "Fizik Muayene",
+     "metin": "Pupilleri ? — öğrenci notu: miyozis ... gibi refleksler",
+     "s": [
+      17
+     ]
+    },
+    {
+     "baslik": "Koma – Fizik Muayene",
+     "metin": "Koma nedeni alkol ? — öğrenci notu: yıldızlı; kokusundan da teşhis edilebilir",
+     "s": [
+      18
+     ]
+    },
+    {
+     "baslik": "Lokalizan değeri olan klinik",
+     "metin": "Göz hareketleri ve okülovestibüler yanıtlar — öğrenci notu: refleksler bakılır; kafası çevrilince gözlerin diğer tarafa kalması gerekir; bozuksa kafa çevrilen tarafa gözlerin hareket etmesi",
+     "s": [
+      19
+     ]
+    },
+    {
+     "baslik": "Koma skorları",
+     "metin": "Glasgow koma skoru — öğrenci notu: neye bakılır → 1) göz - eye, 2) hareket - motion, 3) sözel cevap - verbal; max 15 puan (yazılan '4' okunuşu belirsiz), min 1 puan",
+     "s": [
+      20
+     ]
+    },
+    {
+     "baslik": "GLASGOW KOMA SKALASI",
+     "metin": "Eye — öğrenci notu: Göz",
+     "s": [
+      22
+     ]
+    },
+    {
+     "baslik": "GLASGOW KOMA SKALASI",
+     "metin": "6-Emre uyma — öğrenci notu: emir alıyor (okunuşu belirsiz: 'almıyor' olabilir)",
+     "s": [
+      27
+     ]
+    },
+    {
+     "baslik": "GLASGOW KOMA SKALASI",
+     "metin": "Verbal — öğrenci notu: Sözel cevap",
+     "s": [
+      29
+     ]
+    },
+    {
+     "baslik": "GLASGOW KOMA SKALASI",
+     "metin": "GLASGOW KOMA SKALASI — öğrenci notu: Doğru hesaplamalı; en düşük 3 puan, en yüksek 15 puan; muayene 1 dk sürer (okunuşu belirsiz)",
+     "s": [
+      30
+     ]
+    },
+    {
+     "baslik": "Komada Kullanılan Başlıca Beyin sapı",
+     "metin": "Komada Kullanılan Başlıca Beyin sapı — öğrenci notu: Beyin ölümünde hiçbiri olmamalı (6 şart!); pupiller refleks, okülosefalik refleks, kornea refleksi",
+     "s": [
+      31
+     ]
+    },
+    {
+     "baslik": "İstanbul, Kasım 2011",
+     "metin": "Pupiller — öğrenci notu: normalde izokorik; ışığa farklı ise anizokorik → herni sebebiyle olabilir (uncus da temporal bölgede)",
+     "s": [
+      32
+     ]
+    },
+    {
+     "baslik": "Pupiller",
+     "metin": "Midriyatik, ışığa yanıtsız pupil",
+     "s": [
+      33
+     ]
+    },
+    {
+     "baslik": "Kalorik testler",
+     "metin": "Kalorik testler — öğrenci notu: resim üstünde: genelde 50cc, 30°C su; suyu verilen tarafa kafa dönerse kalorik test pozitif (okunuşu belirsiz)",
+     "s": [
+      36
+     ]
+    },
+    {
+     "baslik": "Vestibülo-oküler refleksler",
+     "metin": "Beyin sapı HASARLI — öğrenci notu: göz cevap yok (okunuşu belirsiz)",
+     "s": [
+      38
+     ]
+    },
+    {
+     "baslik": "İstanbul, Kasım 2011",
+     "metin": "Komada solunum — öğrenci notu: resim üstünde: A trasesi yanında 'hızlanıyor yavaşlıyor duruyor tekrar'; B trasesi yanında 'hiperventilasyon dk 40-50?'; beyin kesit çiziminde 'yukarıdan aşağıya doğru kesit seviyeleri' (okunuşu belirsiz)",
+     "s": [
+      39
+     ]
+    },
+    {
+     "baslik": "Algoritma",
+     "metin": "Algoritma — öğrenci notu: ezberlenmeli",
+     "s": [
+      44
+     ]
+    },
+    {
+     "baslik": "ABC ve",
+     "metin": "ABC ve oksijenasyon — öğrenci notu: hayati destek, vücudu sağlamalı (okunuşu belirsiz)",
+     "s": [
+      45
+     ]
+    },
+    {
+     "baslik": "ABC ve",
+     "metin": "Psikojen, — öğrenci notu: bilinci kapalı olmayan hastalar",
+     "s": [
+      48
+     ]
+    },
+    {
+     "baslik": "ABC ve",
+     "metin": "Kan gazları, glu, — öğrenci notu: bunlara bakılır (okunuşu belirsiz)",
+     "s": [
+      51
+     ]
+    },
+    {
+     "baslik": "ABC ve",
+     "metin": "Beyinsapı bulguları? — öğrenci notu: pupiller, kornea, okülosefalik refleks bakılır",
+     "s": [
+      52
+     ]
+    },
+    {
+     "baslik": "ABC ve",
+     "metin": "Lateral şift yapan tek serebral lezyon, — öğrenci notu: en tehlikeli tablo bunlar (okunuşu belirsiz)",
+     "s": [
+      54
+     ]
+    },
+    {
+     "baslik": "ABC ve",
+     "metin": "BOS — öğrenci notu: her dış travmada BOS bakılır (okunuşu belirsiz)",
+     "s": [
+      56
+     ]
+    },
+    {
+     "baslik": "ABC ve",
+     "metin": "fossada yapısal — öğrenci notu: unkal herniasyon korkulur",
+     "s": [
+      58
+     ]
+    },
+    {
+     "baslik": "ABC ve",
+     "metin": "BBT/",
+     "s": [
+      59
+     ]
+    },
+    {
+     "baslik": "Sayfa 60",
+     "metin": "— öğrenci notu: resim üstünde (sayfanın basılı metni yok, algoritma görseli): AKG yanına 'Arteryal kan gazı'; Metabolik asidoz yanına 'Diyabet koması'; Laktat, Metanol, Üremi, Diabet daire içine alınmış; Dehidratasyon daireli ve yıldızlı",
+     "s": [
+      60
+     ]
+    },
+    {
+     "baslik": "İstanbul, Kasım 2011",
+     "metin": "İstanbul, Kasım 2011 — öğrenci notu: resim üstünde (Sonuç slaytı): başlık altında 'vakit kaybı → hastanın hayatı...'; 'Hızlı' daireli + 'önemli', 'ekip' daireli + yıldız; 'Etiyolojiye yönelik tetkik ve erken tedavi' altı çizili + yıldız; altta 'ne kadar hızlı prognoz o kadar iyi', 'aksi halde bitkisel hayata girebilir'",
+     "s": [
+      61
+     ]
+    }
+   ],
+   "klip": "a-kazanim",
+   "ses": [
+    "Dersin sonunda bilmen gerekenler.",
+    "Bu ders bittiğinde aşağıdaki başlıkları açıklayabilmelisin.",
+    "Bilinç Değişikliği: en sık nöroloji.",
+    "Bilinç: Bilinç — öğrenci notu: bilincin açık olmasını sağlayan sistem.",
+    "Uyanıklık ve Uyarılabilirlik: eksitatör aktivitenin (ARAS); — öğrenci notu: ok ile işaretlenmiş.",
+    "İstanbul, Kasım 2011: Bilinç açık: uyanık ve farkında — öğrenci notu: maddeler 1-5 numaralandırılmış.",
+    "Bilinç Bozuklukları: Tanımlar: Konfüzyon — öğrenci notu: Soru sorunca yanlış cevap veriyor; farkındalık bozukluğu; adları karıştırıyor, saatleri karıştırıyor.",
+    "İlk Aşamada:: Muayene ile birlikte stabilizasyon, laboratuar, — öğrenci notu: yıldızlı.",
+    "İlk Aşamada:: Hızlı nörolojik değerlendirme.",
+    "Etiyoloji: Sistemik Neden – SSS Difüz: Hipoksi — öğrenci notu: KOAH, astım krizi; kan gazında çıkar.",
+    "Etiyoloji: Sistemik Neden – SSS: Yaygın hipoperfüzyon — öğrenci notu: daireli; aort anevrizması → hızla fark edilmelidir; yeterli dolaşım; kan kaybı.",
+    "Etiyoloji: SSS Ait Nedenler: SSS travması — öğrenci notu: Trafik kazaları.",
+    "İstanbul, Kasım 2011: İstanbul, Kasım 2011 — öğrenci notu: resim üstünde: Santral herniasyon yanındaki kırmızı alan → subdural hematom; SEREBRAL HERNİASYON → bilinç kaybı en kolay yapan (okunuşu belirsiz).",
+    "Fizik Muayene: Vital bulgular: — öğrenci notu: solunumun geçici süre durması; Apne var mı.",
+    "Fizik Muayene: Pupilleri ? — öğrenci notu: miyozis ... gibi refleksler.",
+    "Koma – Fizik Muayene: Koma nedeni alkol ? — öğrenci notu: yıldızlı; kokusundan da teşhis edilebilir.",
+    "Lokalizan değeri olan klinik: Göz hareketleri ve okülovestibüler yanıtlar — öğrenci notu: refleksler bakılır; kafası çevrilince gözlerin diğer tarafa kalması gerekir; bozuksa kafa çevrilen tarafa gözlerin hareket etmesi.",
+    "Koma skorları: Glasgow koma skoru — öğrenci notu: neye bakılır → 1) göz - eye, 2) hareket - motion, 3) sözel cevap - verbal; max 15 puan (yazılan '4' okunuşu belirsiz), min 1 puan.",
+    "GLASGOW KOMA SKALASI: Eye — öğrenci notu: Göz.",
+    "GLASGOW KOMA SKALASI: 6-Emre uyma — öğrenci notu: emir alıyor (okunuşu belirsiz: 'almıyor' olabilir).",
+    "GLASGOW KOMA SKALASI: Verbal — öğrenci notu: Sözel cevap.",
+    "GLASGOW KOMA SKALASI: GLASGOW KOMA SKALASI — öğrenci notu: Doğru hesaplamalı; en düşük 3 puan, en yüksek 15 puan; muayene 1 dk sürer (okunuşu belirsiz).",
+    "Komada Kullanılan Başlıca Beyin sapı: Komada Kullanılan Başlıca Beyin sapı — öğrenci notu: Beyin ölümünde hiçbiri olmamalı (6 şart!); pupiller refleks, okülosefalik refleks, kornea refleksi.",
+    "İstanbul, Kasım 2011: Pupiller — öğrenci notu: normalde izokorik; ışığa farklı ise anizokorik → herni sebebiyle olabilir (uncus da temporal bölgede).",
+    "Pupiller: Midriyatik, ışığa yanıtsız pupil.",
+    "Kalorik testler: Kalorik testler — öğrenci notu: resim üstünde: genelde 50cc, 30°C su; suyu verilen tarafa kafa dönerse kalorik test pozitif (okunuşu belirsiz).",
+    "Vestibülo-oküler refleksler: Beyin sapı HASARLI — öğrenci notu: göz cevap yok (okunuşu belirsiz).",
+    "İstanbul, Kasım 2011: Komada solunum — öğrenci notu: resim üstünde: A trasesi yanında 'hızlanıyor yavaşlıyor duruyor tekrar'; B trasesi yanında 'hiperventilasyon dk 40-50?'; beyin kesit çiziminde 'yukarıdan aşağıya doğru kesit seviyeleri' (okunuşu belirsiz).",
+    "Algoritma: Algoritma — öğrenci notu: ezberlenmeli.",
+    "ABC ve: ABC ve oksijenasyon — öğrenci notu: hayati destek, vücudu sağlamalı (okunuşu belirsiz).",
+    "ABC ve: Psikojen, — öğrenci notu: bilinci kapalı olmayan hastalar.",
+    "ABC ve: Kan gazları, glu, — öğrenci notu: bunlara bakılır (okunuşu belirsiz).",
+    "ABC ve: Beyinsapı bulguları? — öğrenci notu: pupiller, kornea, okülosefalik refleks bakılır.",
+    "ABC ve: Lateral şift yapan tek serebral lezyon, — öğrenci notu: en tehlikeli tablo bunlar (okunuşu belirsiz).",
+    "ABC ve: BOS — öğrenci notu: her dış travmada BOS bakılır (okunuşu belirsiz).",
+    "ABC ve: fossada yapısal — öğrenci notu: unkal herniasyon korkulur.",
+    "ABC ve: BBT/.",
+    "Sayfa 60: — öğrenci notu: resim üstünde (sayfanın basılı metni yok, algoritma görseli): AKG yanına 'Arteryal kan gazı'; Metabolik asidoz yanına 'Diyabet koması'; Laktat, Metanol, Üremi, Diabet daire içine alınmış; Dehidratasyon daireli ve yıldızlı.",
+    "İstanbul, Kasım 2011: İstanbul, Kasım 2011 — öğrenci notu: resim üstünde (Sonuç slaytı): başlık altında 'vakit kaybı → hastanın hayatı...'; 'Hızlı' daireli + 'önemli', 'ekip' daireli + yıldız; 'Etiyolojiye yönelik tetkik ve erken tedavi' altı çizili + yıldız; altta 'ne kadar hızlı prognoz o kadar iyi', 'aksi halde bitkisel hayata girebilir'."
+   ],
+   "v": "0a4292d31e"
+  },
+  {
+   "id": "onemli",
+   "baslik": "En önemli yerler",
+   "giris": "Bu dersin konularından 6 farklı çıkmış soru vardır; en çok Glasgow Koma Skalası (puan aralığı ve vaka üzerinden hesap; 2020-21, 2022-23, 2023-24) ve bilinç düzeylerinin tanımları (letarji-somnolans; 2021-22, 2025-26) soruluyor. Beyin sapı refleksleri iki yıl (2021-22, 2022-23) aynı biçimde sorulmuş; hipoglisemi, ayırıcı tanıda mutlaka düşünülecek durum olarak çıkmıştır.",
+   "maddeler": [
+    {
+     "baslik": "Glasgow Koma Skalası: bileşenler ve puan aralığı",
+     "metin": "GKS göz (4), motor (6) ve sözel (5) yanıttan oluşur; en düşük puan 3, en yüksek puan 15tir.",
+     "neden": "2020-21, 2022-23 ve 2023-24'te soruldu; hem puan aralığı hem vaka üzerinden hesaplama istenir.",
+     "s": [
+      29,
+      30
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "Bilinç düzeyleri: somnolans, stupor, koma",
+     "metin": "Somnolan hasta çabuk uyandırılır ve farkındadır; stuporda zorlukla uyandırılır ve farkındalık azalmıştır; komada uyandırılamaz.",
+     "neden": "Bu konudan 2021-22 ve 2025-26'da soruldu; sözel uyaranla uyanıp uyaran kesilince uykuya dönen hasta tanımı sorulur.",
+     "s": [
+      6
+     ],
+     "cikmis": false
+    },
+    {
+     "baslik": "Stick kan şekeri: hipoglisemi gerçek acildir",
+     "metin": "İlk aşamada stick kan şekerine bakılır; çünkü hipoglisemi gerçek bir acildir ve bilinç bozukluğunda mutlaka düşünülür.",
+     "neden": "Slaytta iki kez vurgulanır (\"hipoglisemiyi atlama\"); ayırıcı tanıda mutlaka düşünülecek durum olarak sorulmuştur.",
+     "s": [
+      10,
+      42
+     ],
+     "cikmis": false
+    },
+    {
+     "baslik": "Komada kullanılan beyin sapı refleksleri",
+     "metin": "Komada başlıca beyin sapı refleksleri pupiller ışık refleksi, kornea-göz kırpma refleksi ve refleks konjuge göz hareketleri (okülosefalik, okülovestibüler) dır.",
+     "neden": "2021-22 ve 2022-23'te \"hangisi beyin sapı refleksi değildir\" diye soruldu.",
+     "s": [
+      31,
+      34
+     ],
+     "cikmis": false
+    },
+    {
+     "baslik": "Pupil bulgusuyla lezyon düzeyi",
+     "metin": "Metabolik ensefalopatide ve diensefalik lezyonda pupil küçük-reaktif, pretektalde büyük-fikse-hippus, unkalde dilate-fikse, mezensefalikte orta-fikse, ponsta pinpointtir.",
+     "neden": "Lezyon düzeyi–pupil eşleşmesi slaytta şemayla vurgulanmış; sınavda en sık eşleştirme bilgisidir.",
+     "s": [
+      32
+     ],
+     "cikmis": false
+    },
+    {
+     "baslik": "Bilinç değişikliğinin nedenleri: %85 ve %15",
+     "metin": "Bilinç değişikliklerinin %85'i metabolik ve sistemik, yalnız %15'i santral sinir sistemine (SSS) ait nedenlerden kaynaklanır.",
+     "neden": "Slaytta büyük ve renkli yazılan oran; nedenlerin çoğunun sistemik olduğu sınavda sayı olarak sorulur.",
+     "s": [
+      2
+     ],
+     "cikmis": false
+    },
+    {
+     "baslik": "GKS göz ve sözel yanıt basamakları",
+     "metin": "GKS'de göz açma 4 spontan, 3 sözel uyaranla, 2 ağrıyla, 1 açmıyor; sözel yanıt 5 oryante, 4 dezoryante, 3 uygunsuz, 2 homurtu, 1 yok olarak puanlanır.",
+     "neden": "2023-24'te konfüze konuşan hemiplejik hastada puan hesaplatıldı; ara basamaklar sık karıştırılır.",
+     "s": [
+      22,
+      30
+     ],
+     "cikmis": false
+    },
+    {
+     "baslik": "GKS motor yanıt basamakları ve postürler",
+     "metin": "GKS motor yanıtı 6 emre uyma, 5 ağrıyı lokalize, 4 fleksör yanıt, 3 dekortike, 2 deserebre, 1 yanıt yok şeklinde puanlanır.",
+     "neden": "2022-23'te dekortike postürden puan hesaplatıldı; motor yanıt aynı zamanda lezyon düzeyini gösterir.",
+     "s": [
+      24,
+      28
+     ],
+     "cikmis": false
+    }
+   ],
+   "klip": "a-onemli",
+   "ses": [
+    "En önemli yerler.",
+    "Bu dersin konularından 6 farklı çıkmış soru vardır; en çok Glasgow Koma Skalası (puan aralığı ve vaka üzerinden hesap; 2020-21, 2022-23, 2023-24) ve bilinç düzeylerinin tanımları (letarji-somnolans; 2021-22, 2025-26) soruluyor. Beyin sapı refleksleri iki yıl (2021-22, 2022-23) aynı biçimde sorulmuş; hipoglisemi, ayırıcı tanıda mutlaka düşünülecek durum olarak çıkmıştır.",
+    "Glasgow Koma Skalası: bileşenler ve puan aralığı: GKS göz (4), motor (6) ve sözel (5) yanıttan oluşur; en düşük puan 3, en yüksek puan 15tir.",
+    "Bilinç düzeyleri: somnolans, stupor, koma: Somnolan hasta çabuk uyandırılır ve farkındadır; stuporda zorlukla uyandırılır ve farkındalık azalmıştır; komada uyandırılamaz.",
+    "Stick kan şekeri: hipoglisemi gerçek acildir: İlk aşamada stick kan şekerine bakılır; çünkü hipoglisemi gerçek bir acildir ve bilinç bozukluğunda mutlaka düşünülür.",
+    "Komada kullanılan beyin sapı refleksleri: Komada başlıca beyin sapı refleksleri pupiller ışık refleksi, kornea-göz kırpma refleksi ve refleks konjuge göz hareketleri (okülosefalik, okülovestibüler) dır.",
+    "Pupil bulgusuyla lezyon düzeyi: Metabolik ensefalopatide ve diensefalik lezyonda pupil küçük-reaktif, pretektalde büyük-fikse-hippus, unkalde dilate-fikse, mezensefalikte orta-fikse, ponsta pinpointtir.",
+    "Bilinç değişikliğinin nedenleri: %85 ve %15: Bilinç değişikliklerinin %85'i metabolik ve sistemik, yalnız %15'i santral sinir sistemine (SSS) ait nedenlerden kaynaklanır.",
+    "GKS göz ve sözel yanıt basamakları: GKS'de göz açma 4 spontan, 3 sözel uyaranla, 2 ağrıyla, 1 açmıyor; sözel yanıt 5 oryante, 4 dezoryante, 3 uygunsuz, 2 homurtu, 1 yok olarak puanlanır.",
+    "GKS motor yanıt basamakları ve postürler: GKS motor yanıtı 6 emre uyma, 5 ağrıyı lokalize, 4 fleksör yanıt, 3 dekortike, 2 deserebre, 1 yanıt yok şeklinde puanlanır."
+   ],
+   "v": "1460b4c6d4"
+  },
+  {
+   "id": "cikmis",
+   "baslik": "Çıkmış sorularda ne soruldu",
+   "giris": "Bu dersin konusundan doğrulanmış 2 çıkmış soru var.",
+   "maddeler": [
+    {
+     "baslik": "2020-2021",
+     "metin": "Glasgow Koma Skalasında bir hastanın alabileceği minimum ve maksimum puanlar aşağıdaki seçeneklerin hangisinde doğru olarak verilmiştir?",
+     "cevap": "3 ve 15",
+     "s": [
+      30
+     ]
+    },
+    {
+     "baslik": "Geçmiş Yıllar Çıkmışı (Arşiv)",
+     "metin": "34 yaşında erkek hasta iş yerinde başına malzeme düştüğü için acil servise getirildi. Hasta emirlere uymuyor, ağrılı uyaranı lokalize edebiliyor, kendi haline bırakıldığında uyuyor; ismiyle seslenildiğinde anlamsız sözcüklerle sayıklıyor. Hastanın bilinç düzeyi hangisi ile tanımlanır?",
+     "cevap": "Somnolans",
+     "s": [
+      6
+     ]
+    }
+   ],
+   "klip": "a-cikmis",
+   "ses": [
+    "Çıkmış sorularda ne soruldu.",
+    "Bu dersin konusundan doğrulanmış 2 çıkmış soru var.",
+    "2020-2021: Glasgow Koma Skalasında bir hastanın alabileceği minimum ve maksimum puanlar aşağıdaki seçeneklerin hangisinde doğru olarak verilmiştir?",
+    "Cevap: 3 ve 15.",
+    "Geçmiş Yıllar Çıkmışı (Arşiv): 34 yaşında erkek hasta iş yerinde başına malzeme düştüğü için acil servise getirildi. Hasta emirlere uymuyor, ağrılı uyaranı lokalize edebiliyor, kendi haline bırakıldığında uyuyor; ismiyle seslenildiğinde anlamsız sözcüklerle sayıklıyor. Hastanın bilinç düzeyi hangisi ile tanımlanır?",
+    "Cevap: Somnolans."
+   ],
+   "v": "f5bf08c8c7"
+  },
+  {
+   "id": "uslup",
+   "baslik": "Hoca nasıl soru sorar",
+   "giris": "Bu konuda çıkmış soru az; profil yalnız genel bir eğilim gösterir.",
+   "guven": "dusuk",
+   "maddeler": [
+    {
+     "baslik": "Soru kökü",
+     "metin": "Sorular çoğunlukla doğrudan bilgi sorusu (%68) ve vaka sorusu (%10) biçimindedir."
+    },
+    {
+     "baslik": "Sorulan bilgi",
+     "metin": "En çok tanı ve ayırıcı tanı (%42) ve tanım ve kavram (%42) sorulur."
+    },
+    {
+     "baslik": "Tanı ve ayırıcı tanı",
+     "metin": "Doğru tanı/tetkik seçimi hekimin ilk kararıdır; benzer tabloları ayırt eden TEK bulgu sorulur."
+    },
+    {
+     "baslik": "Tanım ve kavram",
+     "metin": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    },
+    {
+     "baslik": "Düzey",
+     "metin": "Soruların düzeyi hatırlama (%58) ve anlama ve ilişki kurma (%33) ağırlıklıdır."
+    },
+    {
+     "baslik": "Çeldiriciler",
+     "metin": "Yanlış şıklar genellikle birbirine yakın sayısal değer ya da aynı ailedeki komşu kavram olarak kurulur."
+    },
+    {
+     "baslik": "Zorluk",
+     "metin": "Bu konunun sorularının zorluğu kolay-orta, tekrar eden."
+    }
+   ],
+   "klip": "a-uslup",
+   "ses": [
+    "Hoca nasıl soru sorar.",
+    "Bu konuda çıkmış soru az; profil yalnız genel bir eğilim gösterir.",
+    "Soru kökü: Sorular çoğunlukla doğrudan bilgi sorusu (%68) ve vaka sorusu (%10) biçimindedir.",
+    "Sorulan bilgi: En çok tanı ve ayırıcı tanı (%42) ve tanım ve kavram (%42) sorulur.",
+    "Tanı ve ayırıcı tanı: Doğru tanı/tetkik seçimi hekimin ilk kararıdır; benzer tabloları ayırt eden TEK bulgu sorulur.",
+    "Tanım ve kavram: Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür.",
+    "Düzey: Soruların düzeyi hatırlama (%58) ve anlama ve ilişki kurma (%33) ağırlıklıdır.",
+    "Çeldiriciler: Yanlış şıklar genellikle birbirine yakın sayısal değer ya da aynı ailedeki komşu kavram olarak kurulur.",
+    "Zorluk: Bu konunun sorularının zorluğu kolay-orta, tekrar eden."
+   ],
+   "v": "0b421db502"
+  },
+  {
+   "id": "odak",
+   "baslik": "Nelere odaklanmalısın",
+   "giris": "",
+   "maddeler": [
+    {
+     "baslik": "Letarji",
+     "metin": "Çıkmışlarda 5 kez soruldu. Örnek kök: Aşağıdakilerden hangisi, hastanın sözel uyaranla uyandırılabilip uyaran kesildiğinde tekrar uyku hâline geçtiği tabloyu tanımlar?"
+    },
+    {
+     "baslik": "Kremaster refleksi",
+     "metin": "Çıkmışlarda 3 kez soruldu. Örnek kök: Aşağıdakilerden hangisi komadaki bir hastada nörolojik muayenede kullanılan beyin sapı reflekslerinden biri değildir?"
+    },
+    {
+     "baslik": "Glasgow Koma Skalası: bileşenler ve puan aralığı",
+     "metin": "2020-21, 2022-23 ve 2023-24'te soruldu; hem puan aralığı hem vaka üzerinden hesaplama istenir."
+    },
+    {
+     "baslik": "Çalışma yolu",
+     "metin": "Okurken her başlıkta tanı ve ayırıcı tanı bilgisini ayrı not et; hoca en çok bunu soruyor."
+    }
+   ],
+   "klip": "a-odak",
+   "ses": [
+    "Nelere odaklanmalısın.",
+    "Letarji: Çıkmışlarda 5 kez soruldu. Örnek kök: Aşağıdakilerden hangisi, hastanın sözel uyaranla uyandırılabilip uyaran kesildiğinde tekrar uyku hâline geçtiği tabloyu tanımlar?",
+    "Kremaster refleksi: Çıkmışlarda 3 kez soruldu. Örnek kök: Aşağıdakilerden hangisi komadaki bir hastada nörolojik muayenede kullanılan beyin sapı reflekslerinden biri değildir?",
+    "Glasgow Koma Skalası: bileşenler ve puan aralığı: 2020-21, 2022-23 ve 2023-24'te soruldu; hem puan aralığı hem vaka üzerinden hesaplama istenir.",
+    "Çalışma yolu: Okurken her başlıkta tanı ve ayırıcı tanı bilgisini ayrı not et; hoca en çok bunu soruyor."
+   ],
+   "v": "7bd1bd651d"
+  }
+ ],
+ "ozet": [
+  {
+   "id": "giris",
+   "baslik": "Dersin özü",
+   "giris": "Bilinç değişiklikleri acil serviste ve yoğun bakımda en sık nöroloji konsültasyonu nedenidir; yüzde seksen beşi metabolik ve sistemik, yüzde on beşi SSS'e ait nedenlerle oluşur. Ders; uyanıklığı sağlayan ARAS ağını, bilinç düzeylerinin tanımlarını, Glasgow Koma Skalasını, pupil, göz hareketi, motor yanıt ve solunumla lezyon lokalizasyonunu anlatır. Son bölümde laboratuvar incelemesi ve bilinci kapalı hastaya basamaklı yaklaşım algoritması verilir.",
+   "maddeler": [],
+   "klip": "o-giris",
+   "ses": [
+    "Dersin özü.",
+    "Bilinç değişiklikleri acil serviste ve yoğun bakımda en sık nöroloji konsültasyonu nedenidir; yüzde seksen beşi metabolik ve sistemik, yüzde on beşi SSS'e ait nedenlerle oluşur. Ders; uyanıklığı sağlayan ARAS ağını, bilinç düzeylerinin tanımlarını, Glasgow Koma Skalasını, pupil, göz hareketi, motor yanıt ve solunumla lezyon lokalizasyonunu anlatır. Son bölümde laboratuvar incelemesi ve bilinci kapalı hastaya basamaklı yaklaşım algoritması verilir."
+   ],
+   "v": "c8283f40d4"
+  },
+  {
+   "id": "2n02-01",
+   "baslik": "Bilinç değişikliğinin nedenleri: %85 ve %15",
+   "giris": "Bilinç değişikliklerinin %85'i metabolik ve sistemik, yalnız %15'i santral sinir sistemine (SSS) ait nedenlerden kaynaklanır.",
+   "s": [
+    2
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "Bilinç değişikliğinin yüzde seksen beşi metabolik ve sistemik, yüzde on beşi SSS'e ait nedenlerle ortaya çıkar."
+    },
+    {
+     "metin": "Bilinci bozuk her hastada sistemik nedenler (hipoglisemi, hipoksi, elektrolit bozukluğu, toksik madde) mutlaka gözden geçirilir; SSS'e ait nedenler daha küçük bir gruptur."
+    },
+    {
+     "metin": "Bu nedenle ilk aşamanın temel amacı, fokal yapısal SSS lezyonunu global metabolik sorundan ayırmaktır."
+    },
+    {
+     "metin": "Bilinç değişiklikleri acil serviste ve yoğun bakımda en sık nöroloji konsültasyonu nedenidir."
+    }
+   ],
+   "klip": "o-2n02-01",
+   "ses": [
+    "Bilinç değişikliğinin nedenleri: %85 ve %15.",
+    "Bilinç değişikliklerinin %85'i metabolik ve sistemik, yalnız %15'i santral sinir sistemine (SSS) ait nedenlerden kaynaklanır.",
+    "Bilinç değişikliğinin yüzde seksen beşi metabolik ve sistemik, yüzde on beşi SSS'e ait nedenlerle ortaya çıkar.",
+    "Bilinci bozuk her hastada sistemik nedenler (hipoglisemi, hipoksi, elektrolit bozukluğu, toksik madde) mutlaka gözden geçirilir; SSS'e ait nedenler daha küçük bir gruptur.",
+    "Bu nedenle ilk aşamanın temel amacı, fokal yapısal SSS lezyonunu global metabolik sorundan ayırmaktır.",
+    "Bilinç değişiklikleri acil serviste ve yoğun bakımda en sık nöroloji konsültasyonu nedenidir."
+   ],
+   "v": "d8e03c3e72"
+  },
+  {
+   "id": "2n02-05",
+   "baslik": "Bilinç düzeyleri: somnolans, stupor, koma",
+   "giris": "Somnolan hasta çabuk uyandırılır ve farkındadır; stuporda zorlukla uyandırılır ve farkındalık azalmıştır; komada uyandırılamaz.",
+   "s": [
+    6
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "Hasta uyanık ve çevresinin farkındadır."
+    },
+    {
+     "metin": "Hasta sesle, adıyla seslenince çabuk uyandırılabilir ve farkındadır; uyaran kesilince yeniden uykuya dalar. Ders listesinde letarji ve somnolans aynı başlıkta verilir."
+    },
+    {
+     "metin": "Hasta ancak zorlukla, güçlü uyaranla uyandırılabilir ve farkındalığı azalmıştır."
+    },
+    {
+     "metin": "Hasta hiçbir uyaranla uyandırılamaz ve farkında değildir."
+    },
+    {
+     "metin": "Uyandırılabilir ama farkında değildir."
+    },
+    {
+     "metin": "Kendi hâline bırakılınca uyuyan, adıyla seslenince uyanıp sayıklayan, ağrıyı lokalize eden hasta sesle uyandırılabildiği için somnolandır; stuporda sesli uyaran yetmez, komada ise hiç uyanma olmaz."
+    }
+   ],
+   "klip": "o-2n02-05",
+   "ses": [
+    "Bilinç düzeyleri: somnolans, stupor, koma.",
+    "Somnolan hasta çabuk uyandırılır ve farkındadır; stuporda zorlukla uyandırılır ve farkındalık azalmıştır; komada uyandırılamaz.",
+    "Hasta uyanık ve çevresinin farkındadır.",
+    "Hasta sesle, adıyla seslenince çabuk uyandırılabilir ve farkındadır; uyaran kesilince yeniden uykuya dalar. Ders listesinde letarji ve somnolans aynı başlıkta verilir.",
+    "Hasta ancak zorlukla, güçlü uyaranla uyandırılabilir ve farkındalığı azalmıştır.",
+    "Hasta hiçbir uyaranla uyandırılamaz ve farkında değildir.",
+    "Uyandırılabilir ama farkında değildir.",
+    "Kendi hâline bırakılınca uyuyan, adıyla seslenince uyanıp sayıklayan, ağrıyı lokalize eden hasta sesle uyandırılabildiği için somnolandır; stuporda sesli uyaran yetmez, komada ise hiç uyanma olmaz."
+   ],
+   "v": "a380658952"
+  },
+  {
+   "id": "2n02-10",
+   "baslik": "Stick kan şekeri: hipoglisemi gerçek acildir",
+   "giris": "İlk aşamada stick kan şekerine bakılır; çünkü hipoglisemi gerçek bir acildir ve bilinç bozukluğunda mutlaka düşünülür.",
+   "s": [
+    10,
+    42
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "İlk aşamada hızlı nörolojik muayene, fokal defisit araştırması ve stick kan şekeri yapılır; opioid aşırı dozu da sorgulanır."
+    },
+    {
+     "metin": "Gerçek bir acildir; laboratuvarda da \"hipoglisemiyi atlama\" uyarısıyla ilk sırada yer alır."
+    },
+    {
+     "metin": "Özellikle diyabetli ve kronik alkolik hastada etiyoloji hipoglisemi olabilir."
+    },
+    {
+     "metin": "Hipoglisemi, SSS'i difüz etkileyen sistemik nedenler listesindedir."
+    },
+    {
+     "metin": "Bilinci kapalı hastada tetkiklerle birlikte IV glukoz verilir."
+    },
+    {
+     "metin": "Sistemik nedenler (hipoksi, hipoglisemi, hiponatremi, ensefalopatiler) ve SSS'e ait nedenler (travma, kanama, inme, kitle, enfeksiyon, nöbet) bilinci doğrudan bozan durumlardır; periferik sinir ve kas hastalıkları bu listede yer almaz."
+    }
+   ],
+   "klip": "o-2n02-10",
+   "ses": [
+    "Stick kan şekeri: hipoglisemi gerçek acildir.",
+    "İlk aşamada stick kan şekerine bakılır; çünkü hipoglisemi gerçek bir acildir ve bilinç bozukluğunda mutlaka düşünülür.",
+    "İlk aşamada hızlı nörolojik muayene, fokal defisit araştırması ve stick kan şekeri yapılır; opioid aşırı dozu da sorgulanır.",
+    "Gerçek bir acildir; laboratuvarda da \"hipoglisemiyi atlama\" uyarısıyla ilk sırada yer alır.",
+    "Özellikle diyabetli ve kronik alkolik hastada etiyoloji hipoglisemi olabilir.",
+    "Hipoglisemi, SSS'i difüz etkileyen sistemik nedenler listesindedir.",
+    "Bilinci kapalı hastada tetkiklerle birlikte IV glukoz verilir.",
+    "Sistemik nedenler (hipoksi, hipoglisemi, hiponatremi, ensefalopatiler) ve SSS'e ait nedenler (travma, kanama, inme, kitle, enfeksiyon, nöbet) bilinci doğrudan bozan durumlardır; periferik sinir ve kas hastalıkları bu listede yer almaz."
+   ],
+   "v": "9c3a33f36b"
+  },
+  {
+   "id": "2n02-20",
+   "baslik": "GKS göz ve sözel yanıt basamakları",
+   "giris": "GKS'de göz açma 4 spontan, 3 sözel uyaranla, 2 ağrıyla, 1 açmıyor; sözel yanıt 5 oryante, 4 dezoryante, 3 uygunsuz, 2 homurtu, 1 yok olarak puanlanır.",
+   "s": [
+    22,
+    30
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "Kendiliğinden açık 4, sözel uyaranla açıyor 3, ağrılı uyaranla açıyor 2, hiç açmıyor 1."
+    },
+    {
+     "metin": "Oryante 5; oryantasyonu bozuk ama konuşabilen (konfüze, dezoryante) 4; uygunsuz kelimeler 3; anlaşılmaz sesler (homurtu) 2; yanıt yok 1."
+    },
+    {
+     "metin": "Konfüze konuşma 4 puandır, uygunsuz cevap 3 puandır; ikisi en sık karıştırılan basamaklardır."
+    },
+    {
+     "metin": "Ağrıyla göz açan (2), konfüze konuşan (4) ve sağlam eliyle ağrıyı lokalize eden (5) hastanın GKS'si 11'dir."
+    }
+   ],
+   "klip": "o-2n02-20",
+   "ses": [
+    "GKS göz ve sözel yanıt basamakları.",
+    "GKS'de göz açma 4 spontan, 3 sözel uyaranla, 2 ağrıyla, 1 açmıyor; sözel yanıt 5 oryante, 4 dezoryante, 3 uygunsuz, 2 homurtu, 1 yok olarak puanlanır.",
+    "Kendiliğinden açık 4, sözel uyaranla açıyor 3, ağrılı uyaranla açıyor 2, hiç açmıyor 1.",
+    "Oryante 5; oryantasyonu bozuk ama konuşabilen (konfüze, dezoryante) 4; uygunsuz kelimeler 3; anlaşılmaz sesler (homurtu) 2; yanıt yok 1.",
+    "Konfüze konuşma 4 puandır, uygunsuz cevap 3 puandır; ikisi en sık karıştırılan basamaklardır.",
+    "Ağrıyla göz açan (2), konfüze konuşan (4) ve sağlam eliyle ağrıyı lokalize eden (5) hastanın GKS'si 11'dir."
+   ],
+   "v": "207391c68c"
+  },
+  {
+   "id": "2n02-19",
+   "baslik": "GKS motor yanıt basamakları ve postürler",
+   "giris": "GKS motor yanıtı 6 emre uyma, 5 ağrıyı lokalize, 4 fleksör yanıt, 3 dekortike, 2 deserebre, 1 yanıt yok şeklinde puanlanır.",
+   "s": [
+    24,
+    28
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "Emre uyma 6, ağrıyı lokalize etme 5, fleksör yanıt (ağrıdan çekme) 4, dekortike 3, deserebre 2, yanıt yok 1."
+    },
+    {
+     "metin": "Ağrıda kollar dirsekten bükülür (fleksiyon), bacaklar gerilir ve ayaklar plantar fleksiyona gelir; 3 puandır."
+    },
+    {
+     "metin": "Kollar ve bacaklar ekstansiyondadır; 2 puandır."
+    },
+    {
+     "metin": "Hemisferik lezyonda hasta ağrıya yönelik anlamlı hareket yapabilir; üst mezensefalon hasarında kollar fleksiyonda, bacaklar ekstansiyonda (dekortike) kalır; üst pontin hasarda kollar ve bacaklar ekstansiyondadır (deserebre)."
+    },
+    {
+     "metin": "Lezyon aşağı (beyin sapına doğru) indikçe motor yanıt bozulur ve GKS motor puanı düşer."
+    }
+   ],
+   "klip": "o-2n02-19",
+   "ses": [
+    "GKS motor yanıt basamakları ve postürler.",
+    "GKS motor yanıtı 6 emre uyma, 5 ağrıyı lokalize, 4 fleksör yanıt, 3 dekortike, 2 deserebre, 1 yanıt yok şeklinde puanlanır.",
+    "Emre uyma 6, ağrıyı lokalize etme 5, fleksör yanıt (ağrıdan çekme) 4, dekortike 3, deserebre 2, yanıt yok 1.",
+    "Ağrıda kollar dirsekten bükülür (fleksiyon), bacaklar gerilir ve ayaklar plantar fleksiyona gelir; 3 puandır.",
+    "Kollar ve bacaklar ekstansiyondadır; 2 puandır.",
+    "Hemisferik lezyonda hasta ağrıya yönelik anlamlı hareket yapabilir; üst mezensefalon hasarında kollar fleksiyonda, bacaklar ekstansiyonda (dekortike) kalır; üst pontin hasarda kollar ve bacaklar ekstansiyondadır (deserebre).",
+    "Lezyon aşağı (beyin sapına doğru) indikçe motor yanıt bozulur ve GKS motor puanı düşer."
+   ],
+   "v": "9293229d74"
+  },
+  {
+   "id": "2n02-18",
+   "baslik": "Glasgow Koma Skalası: bileşenler ve puan aralığı",
+   "giris": "GKS göz (4), motor (6) ve sözel (5) yanıttan oluşur; en düşük puan 3, en yüksek puan 15tir.",
+   "s": [
+    29,
+    30
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "4 spontan açık, 3 sözel uyaranla, 2 ağrılı uyaranla, 1 açmıyor."
+    },
+    {
+     "metin": "6 emre uyma, 5 ağrıyı lokalize etme, 4 fleksör yanıt (çekme), 3 dekortike, 2 deserebre, 1 yanıt yok."
+    },
+    {
+     "metin": "5 oryante, 4 dezoryante (konfüze konuşma), 3 uygunsuz cevap, 2 homurtu, 1 yanıt yok."
+    },
+    {
+     "metin": "Her bölümün en düşük puanı 1 olduğundan toplam en az 3, en çok 4+6+5 = 15 olur; sıfır puan yoktur."
+    },
+    {
+     "metin": "Ağrıyla göz açan (2), ağrıda dirsekleri büküp ayakları plantar fleksiyona alan (dekortike, 3), hiç konuşmayan (1) hasta 6 puan alır."
+    },
+    {
+     "metin": "Hemiplejik hastada sağlam koluyla ağrıyı lokalize ediyorsa motor puan 5'tir; ağrıyla göz açan (2) ve konfüze konuşan (4) bu hasta 11 puan alır."
+    }
+   ],
+   "klip": "o-2n02-18",
+   "ses": [
+    "Glasgow Koma Skalası: bileşenler ve puan aralığı.",
+    "GKS göz (4), motor (6) ve sözel (5) yanıttan oluşur; en düşük puan 3, en yüksek puan 15tir.",
+    "4 spontan açık, 3 sözel uyaranla, 2 ağrılı uyaranla, 1 açmıyor.",
+    "6 emre uyma, 5 ağrıyı lokalize etme, 4 fleksör yanıt (çekme), 3 dekortike, 2 deserebre, 1 yanıt yok.",
+    "5 oryante, 4 dezoryante (konfüze konuşma), 3 uygunsuz cevap, 2 homurtu, 1 yanıt yok.",
+    "Her bölümün en düşük puanı 1 olduğundan toplam en az 3, en çok 4+6+5 = 15 olur; sıfır puan yoktur.",
+    "Ağrıyla göz açan (2), ağrıda dirsekleri büküp ayakları plantar fleksiyona alan (dekortike, 3), hiç konuşmayan (1) hasta 6 puan alır.",
+    "Hemiplejik hastada sağlam koluyla ağrıyı lokalize ediyorsa motor puan 5'tir; ağrıyla göz açan (2) ve konfüze konuşan (4) bu hasta 11 puan alır."
+   ],
+   "v": "0db25959a1"
+  },
+  {
+   "id": "2n02-21",
+   "baslik": "Komada kullanılan beyin sapı refleksleri",
+   "giris": "Komada başlıca beyin sapı refleksleri pupiller ışık refleksi, kornea-göz kırpma refleksi ve refleks konjuge göz hareketleri (okülosefalik, okülovestibüler) dır.",
+   "s": [
+    31,
+    34
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "Işık gözden mezensefalona ulaşır, yanıt III. kranial sinirle pupillaya döner."
+    },
+    {
+     "metin": "Duyusal yol V. kranial sinir, göz kırpma yanıtı VII. kranial sinirle oluşur; ponsta düzenlenir."
+    },
+    {
+     "metin": "VIII. kranial sinirden gelen uyarı MLF aracılığıyla III. ve VI. kranial sinir çekirdeklerine ulaşır; okülosefalik refleks ve okülovestibüler (kalorik) refleks bu yolu sınar."
+    },
+    {
+     "metin": "Medulladadır; solunum şekli de beyin sapı düzeyini gösterir."
+    },
+    {
+     "metin": "Kremasterik refleks beyin sapı refleksleri arasında sayılmaz; komadaki hastanın beyin sapı muayenesinde kullanılmaz."
+    }
+   ],
+   "klip": "o-2n02-21",
+   "ses": [
+    "Komada kullanılan beyin sapı refleksleri.",
+    "Komada başlıca beyin sapı refleksleri pupiller ışık refleksi, kornea-göz kırpma refleksi ve refleks konjuge göz hareketleri (okülosefalik, okülovestibüler) dır.",
+    "Işık gözden mezensefalona ulaşır, yanıt III. kranial sinirle pupillaya döner.",
+    "Duyusal yol V. kranial sinir, göz kırpma yanıtı VII. kranial sinirle oluşur; ponsta düzenlenir.",
+    "VIII. kranial sinirden gelen uyarı MLF aracılığıyla III. ve VI. kranial sinir çekirdeklerine ulaşır; okülosefalik refleks ve okülovestibüler (kalorik) refleks bu yolu sınar.",
+    "Medulladadır; solunum şekli de beyin sapı düzeyini gösterir.",
+    "Kremasterik refleks beyin sapı refleksleri arasında sayılmaz; komadaki hastanın beyin sapı muayenesinde kullanılmaz."
+   ],
+   "v": "2145e97a94"
+  },
+  {
+   "id": "2n02-22",
+   "baslik": "Pupil bulgusuyla lezyon düzeyi",
+   "giris": "Metabolik ensefalopatide ve diensefalik lezyonda pupil küçük-reaktif, pretektalde büyük-fikse-hippus, unkalde dilate-fikse, mezensefalikte orta-fikse, ponsta pinpointtir.",
+   "s": [
+    32
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "Pupiller küçük ve ışığa reaktiftir; ışık yanıtının korunması metabolik nedeni düşündürür."
+    },
+    {
+     "metin": "Küçük ve reaktif pupil."
+    },
+    {
+     "metin": "Büyük, fikse pupil; hippus görülebilir."
+    },
+    {
+     "metin": "O taraftaki pupil dilate ve fiksedir."
+    },
+    {
+     "metin": "Orta büyüklükte, fikse pupil."
+    },
+    {
+     "metin": "İğne ucu (pinpoint) pupil."
+    },
+    {
+     "metin": "Işık yanıtı korunmuş küçük pupil metabolik nedeni, fikse pupil yapısal beyin sapı ya da sinir tutulumunu düşündürür."
+    }
+   ],
+   "klip": "o-2n02-22",
+   "ses": [
+    "Pupil bulgusuyla lezyon düzeyi.",
+    "Metabolik ensefalopatide ve diensefalik lezyonda pupil küçük-reaktif, pretektalde büyük-fikse-hippus, unkalde dilate-fikse, mezensefalikte orta-fikse, ponsta pinpointtir.",
+    "Pupiller küçük ve ışığa reaktiftir; ışık yanıtının korunması metabolik nedeni düşündürür.",
+    "Küçük ve reaktif pupil.",
+    "Büyük, fikse pupil; hippus görülebilir.",
+    "O taraftaki pupil dilate ve fiksedir.",
+    "Orta büyüklükte, fikse pupil.",
+    "İğne ucu (pinpoint) pupil.",
+    "Işık yanıtı korunmuş küçük pupil metabolik nedeni, fikse pupil yapısal beyin sapı ya da sinir tutulumunu düşündürür."
+   ],
+   "v": "6ebe976d83"
+  },
+  {
+   "id": "2n02-23",
+   "baslik": "Midriyatik ve miyotik pupil nedenleri",
+   "giris": "Midriyatik, ışığa yanıtsız pupil atropin, skopolamin, glutetimid, barbiturat, hipoksi ve hipotermide; ileri miyotik pupil opiat intoksikasyonunda görülür.",
+   "s": [
+    33
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "Atropin, skopolamin, glutetimid, barbiturat zehirlenmesi; ayrıca hipoksi ve hipotermi."
+    },
+    {
+     "metin": "Opiat intoksikasyonu."
+    },
+    {
+     "metin": "Opiat zehirlenmesinde pupil daralır; bu nedenle midriyazis nedenleri arasında sayılmaz."
+    },
+    {
+     "metin": "Bilinci kapalı hastada opioid aşırı dozu ilk aşamada sorgulanır ve algoritmada naloksan uygulanır."
+    },
+    {
+     "metin": "Pons lezyonunda da iğne ucu pupil görülür; öykü ve diğer beyin sapı bulguları ayırımı sağlar."
+    }
+   ],
+   "klip": "o-2n02-23",
+   "ses": [
+    "Midriyatik ve miyotik pupil nedenleri.",
+    "Midriyatik, ışığa yanıtsız pupil atropin, skopolamin, glutetimid, barbiturat, hipoksi ve hipotermide; ileri miyotik pupil opiat intoksikasyonunda görülür.",
+    "Atropin, skopolamin, glutetimid, barbiturat zehirlenmesi; ayrıca hipoksi ve hipotermi.",
+    "Opiat intoksikasyonu.",
+    "Opiat zehirlenmesinde pupil daralır; bu nedenle midriyazis nedenleri arasında sayılmaz.",
+    "Bilinci kapalı hastada opioid aşırı dozu ilk aşamada sorgulanır ve algoritmada naloksan uygulanır.",
+    "Pons lezyonunda da iğne ucu pupil görülür; öykü ve diğer beyin sapı bulguları ayırımı sağlar."
+   ],
+   "v": "bdda796e5d"
+  },
+  {
+   "id": "2n02-27",
+   "baslik": "Laboratuvar: kan şekeri ve elektrolitler",
+   "giris": "Laboratuvarda kan şekeri (hipoglisemiyi atlama) ve elektrolitler bakılır; en sık sodyum bozulur, tümörlü hastada kalsiyum bozukluğu sıktır.",
+   "s": [
+    42
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "İlk bakılacak testtir; hipoglisemi atlanmamalıdır. Diyabetli ve kronik alkolik hastada etiyoloji hipoglisemi olabilir."
+    },
+    {
+     "metin": "En sık sodyum etkilenir; hiponatremi bilinç bozukluğunun sık nedenidir."
+    },
+    {
+     "metin": "Kalsiyum metabolizması bozukluğu sıktır; bilinci kapalı hastanın ilk tetkiklerinde kalsiyum da yer alır."
+    },
+    {
+     "metin": "Bilinci kapalı hastada kan gazları, glukoz, elektrolitler, kalsiyum, magnezyum, üre, kreatinin, amonyak, AST ve toksikolojik tarama istenir."
+    }
+   ],
+   "klip": "o-2n02-27",
+   "ses": [
+    "Laboratuvar: kan şekeri ve elektrolitler.",
+    "Laboratuvarda kan şekeri (hipoglisemiyi atlama) ve elektrolitler bakılır; en sık sodyum bozulur, tümörlü hastada kalsiyum bozukluğu sıktır.",
+    "İlk bakılacak testtir; hipoglisemi atlanmamalıdır. Diyabetli ve kronik alkolik hastada etiyoloji hipoglisemi olabilir.",
+    "En sık sodyum etkilenir; hiponatremi bilinç bozukluğunun sık nedenidir.",
+    "Kalsiyum metabolizması bozukluğu sıktır; bilinci kapalı hastanın ilk tetkiklerinde kalsiyum da yer alır.",
+    "Bilinci kapalı hastada kan gazları, glukoz, elektrolitler, kalsiyum, magnezyum, üre, kreatinin, amonyak, AST ve toksikolojik tarama istenir."
+   ],
+   "v": "0cd227c920"
+  }
+ ]
+}

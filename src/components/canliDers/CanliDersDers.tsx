@@ -26,6 +26,7 @@ import { GunlukDiyalog } from './CanliDersView';
 import { CdCikmisChip, CdCikmisPencereKok, cikmisSayfada } from './CdCikmisChip';
 import { CdOrnekChip, CdOrnekPencereKok, ornekParcaSonunda, useOrnekSorular } from './CdOrnekChip';
 import { CdHocaAraDugme, CdHocaAraKok } from './CdHocaAra';
+import { CdDersAnalizDugme } from './CdDersAnaliz';
 import { useCdTur } from './useCdTur';
 import { useUzunBasSecim } from './cdUzunBas';
 import { cdTurGoruldu } from './canliDersTurDurum';
@@ -2015,6 +2016,7 @@ function CdPdfBolme({ detay, canli }: { detay: CdDetay; canli: boolean }) {
           <span className="cd-pdf-dosya">{(gor.dosya || 0) + 1}/{pdf.dosyalar.length}</span>
         )}
         <span className="cd-grow" />
+        <CdDersAnalizDugme dersKey={detay.key} />
         <CdHocaAraDugme dersKey={detay.key} />
         {!!detay.cikmisKonum?.length && <CikmisKonumDugme liste={detay.cikmisKonum} secili={cikSec} onSec={cikmisSec} />}
         {/* v15: terim ve görünüm üst bara/Görünüm çekmecesine taşındı; çizim araçları PDF'in yanında yüzer */}

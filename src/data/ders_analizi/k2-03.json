@@ -1,0 +1,1061 @@
+{
+ "surum": 1,
+ "key": "k2-03",
+ "kod": "2p01",
+ "kurul": 2,
+ "brans": "Patoloji",
+ "konu": "SSS Hücresel Reaksiyonları ve Ödem / Herniasyon",
+ "ogretim_uyesi": "Prof. Dr. Hikmet Keleş",
+ "profil": "Tıbbi Patoloji",
+ "sesKlasor": {
+  "brans": "k2dersanaliz",
+  "kod": "2p01"
+ },
+ "analiz": [
+  {
+   "id": "anlatim",
+   "baslik": "Bu derste ne anlatılacak",
+   "giris": "Ders, nöron ve glial hücrelerin hasara verdiği morfolojik yanıtları (kırmızı nöron, merkezi kromatoliz, gliyoz, Rosenthal lifleri, mikroglia aktivasyonu) anlatır. Ardından intrakraniyal basıncı artıran serebral ödem, hidrosefali ve herniasyon tipleri işlenir. Son bölümde nöral tüp defektleri, ön beyin ve posterior fossa malformasyonları ile genetik metabolik hastalıklar özetlenir.",
+   "maddeler": [
+    {
+     "metin": "Merkezi sinir sisteminin özellikleri ve nöron"
+    },
+    {
+     "metin": "Nöron hasarı: kırmızı nöron ve merkezi kromatoliz"
+    },
+    {
+     "metin": "Astrosit yanıtı ve gliyoz"
+    },
+    {
+     "metin": "Oligodendrosit, mikroglia ve ependim"
+    },
+    {
+     "metin": "Nörolojik değerlendirme ve kafa içi basınç"
+    },
+    {
+     "metin": "Serebral ödem"
+    },
+    {
+     "metin": "Beyin omurilik sıvısı dolaşımı ve hidrosefali"
+    },
+    {
+     "metin": "Herniasyon"
+    },
+    {
+     "metin": "Doğuştan malformasyonlar ve nöral tüp defektleri"
+    },
+    {
+     "metin": "Mikrosefali, göç bozuklukları ve ön beyin malformasyonları"
+    },
+    {
+     "metin": "Arka fossa malformasyonları"
+    },
+    {
+     "metin": "Genetik metabolik hastalıklar ve özet"
+    }
+   ],
+   "klip": "a-anlatim",
+   "ses": [
+    "Bu derste ne anlatılacak.",
+    "Ders, nöron ve glial hücrelerin hasara verdiği morfolojik yanıtları (kırmızı nöron, merkezi kromatoliz, gliyoz, Rosenthal lifleri, mikroglia aktivasyonu) anlatır. Ardından intrakraniyal basıncı artıran serebral ödem, hidrosefali ve herniasyon tipleri işlenir. Son bölümde nöral tüp defektleri, ön beyin ve posterior fossa malformasyonları ile genetik metabolik hastalıklar özetlenir.",
+    "Merkezi sinir sisteminin özellikleri ve nöron.",
+    "Nöron hasarı: kırmızı nöron ve merkezi kromatoliz.",
+    "Astrosit yanıtı ve gliyoz.",
+    "Oligodendrosit, mikroglia ve ependim.",
+    "Nörolojik değerlendirme ve kafa içi basınç.",
+    "Serebral ödem.",
+    "Beyin omurilik sıvısı dolaşımı ve hidrosefali.",
+    "Herniasyon.",
+    "Doğuştan malformasyonlar ve nöral tüp defektleri.",
+    "Mikrosefali, göç bozuklukları ve ön beyin malformasyonları.",
+    "Arka fossa malformasyonları.",
+    "Genetik metabolik hastalıklar ve özet."
+   ],
+   "v": "bd194a0c97"
+  },
+  {
+   "id": "kazanim",
+   "baslik": "Dersin sonunda bilmen gerekenler",
+   "giris": "Bu ders bittiğinde aşağıdaki başlıkları açıklayabilmelisin.",
+   "maddeler": [
+    {
+     "baslik": "Nöron Kaybı ve Rejenerasyon",
+     "metin": "Olgun nöronlar bölünemez.",
+     "s": [
+      8
+     ]
+    },
+    {
+     "baslik": "Nöron Hasarı: Genel İlkeler",
+     "metin": "Geri dönüşümsüz hipoksik-iskemik hasardan 12 saat sonra",
+     "s": [
+      11
+     ]
+    },
+    {
+     "baslik": "Akut Yaralanmada Ödem",
+     "metin": "Kan-beyin bariyeri bozulur.",
+     "s": [
+      15
+     ]
+    },
+    {
+     "baslik": "Dejeneratif Hastalık ve İnklüzyonlar",
+     "metin": "Hücre içi inklüzyonlar ile seyreder. — öğrenci notu: → gerçek ve psödo; gerçek → viral; (intrasitoplazmik veya intranükleer) (kısmen okunuşu belirsiz)",
+     "s": [
+      16
+     ]
+    },
+    {
+     "baslik": "Astrositlerin Rolü ve Gliyoz",
+     "metin": "Bu yanıta gliyoz denir.",
+     "s": [
+      18
+     ]
+    },
+    {
+     "baslik": "Reaktif (Gemistositik) Astrosit",
+     "metin": "Hoca: Gemistositik astrosit (Şekil 21.1B)",
+     "s": [
+      19
+     ]
+    },
+    {
+     "baslik": "Kronik Gliyoz, Rosenthal Lifleri",
+     "metin": "Rosenthal lifleri:",
+     "s": [
+      21
+     ]
+    },
+    {
+     "baslik": "Fibroblastların Sınırlı Rolü",
+     "metin": "Beyin iyileşmesine fibroblast katkısı sınırlıdır.",
+     "s": [
+      22
+     ]
+    },
+    {
+     "baslik": "Oligodendrosit ve Mikroglia",
+     "metin": "JC virüs kaynaklı ilerleyici multifokal lökoensefalopatide",
+     "s": [
+      23
+     ]
+    },
+    {
+     "baslik": "Mikroglia Aktivasyonu ve Nodüller",
+     "metin": "Çekirdek uzar (çubuk hücreler).",
+     "s": [
+      24
+     ]
+    },
+    {
+     "baslik": "Ependim ve Koroid Pleksus",
+     "metin": "Örneğin sitomegalovirüs (CMV):",
+     "s": [
+      26
+     ]
+    },
+    {
+     "baslik": "Kafa İçi İçerik ve Basınç",
+     "metin": "Beyin veya BOS hacminde artış için alan sınırlıdır.",
+     "s": [
+      28
+     ]
+    },
+    {
+     "baslik": "İntrakraniyal Basınç Artışının Önemi",
+     "metin": "Önemli basınç artışı: — öğrenci notu: BOS dönüşü bozulur",
+     "s": [
+      29
+     ]
+    },
+    {
+     "baslik": "Kitle Etkisi Yapan Durumlar",
+     "metin": "Genel serebral ödem",
+     "s": [
+      30
+     ]
+    },
+    {
+     "baslik": "Serebral Ödem: Tanım ve Tipler",
+     "metin": "Vazojenik ödem",
+     "s": [
+      31
+     ]
+    },
+    {
+     "baslik": "Vazojenik Ödem",
+     "metin": "Kan-beyin bariyeri bütünlüğünün bozulması sonucu gelişir.",
+     "s": [
+      32
+     ]
+    },
+    {
+     "baslik": "Sitotoksik Ödem",
+     "metin": "Nöron ve glia hasarına bağlı hücre içi sıvı artışı. — öğrenci notu: ok: başlıktan (Sitotoksik Ödem) hücre içi sıvı artışına",
+     "s": [
+      33
+     ]
+    },
+    {
+     "baslik": "Ödemli Beynin Makroskopik Görünümü",
+     "metin": "Yaygın ödemde (Şekil 21.2):",
+     "s": [
+      34
+     ]
+    },
+    {
+     "baslik": "ŞEKİL 21.2 Serebral ödem. Genişleyen beynin dura mater ve kafatasının iç",
+     "metin": "girusların yüzeyleri incelmiştir. — öğrenci notu: → düzleşmiş",
+     "s": [
+      35
+     ]
+    },
+    {
+     "baslik": "BOS Fizyolojisine Giriş",
+     "metin": "Luschka ve Magendie deliklerinden subaraknoid boşluğa geçer.",
+     "s": [
+      36
+     ]
+    },
+    {
+     "baslik": "Hidrosefali Tanımı",
+     "metin": "Ventriküler sistem içindeki BOS hacminin artmasıdır.",
+     "s": [
+      37
+     ]
+    },
+    {
+     "baslik": "İletişim Kurmayan Hidrosefali",
+     "metin": "Çıkmış (dogrudan): Nedenler: Monro deliği tıkayan kitle Serebral akuaduktusu sıkıştıran tümör, kanama, enfeksiyon.",
+     "s": [
+      38
+     ]
+    },
+    {
+     "baslik": "Hidrosefalinin Yaşa Göre Sonuçları",
+     "metin": "BOS artışı kafa çevresinde belirgin büyüme yapar.",
+     "s": [
+      40
+     ]
+    },
+    {
+     "baslik": "Hidrosefali ex vacuo",
+     "metin": "Enfarkt",
+     "s": [
+      42
+     ]
+    },
+    {
+     "baslik": "Herniasyon: Tanım",
+     "metin": "Herniasyon: — öğrenci notu: fıtık",
+     "s": [
+      43
+     ]
+    },
+    {
+     "baslik": "Herniasyonun Nedenleri ve Sonuçları",
+     "metin": "Yaygın beyin ödemi — öğrenci notu: yanında '2' işareti",
+     "s": [
+      44
+     ]
+    },
+    {
+     "baslik": "Subfalcine",
+     "metin": "Tonsillar herniation — öğrenci notu: resim üstünde: → omuriliğe bası yapar",
+     "s": [
+      46
+     ]
+    },
+    {
+     "baslik": "Subfalsin (Singulat) Herniasyon",
+     "metin": "Singulat girus, falks serebri kenarının altına itilir.",
+     "s": [
+      47
+     ]
+    },
+    {
+     "baslik": "Transtentorial (Uncinate) Herniasyon",
+     "metin": "Temporal lob medial kısmı tentorium serbest kenarına sıkışır.",
+     "s": [
+      48
+     ]
+    },
+    {
+     "baslik": "Kernohan Çentiği, Duret Kanamaları,",
+     "metin": "Orta beyin kompresyonuna yol açar. — öğrenci notu: köşeli parantez + 'okumadı' (okunuşu belirsiz)",
+     "s": [
+      49
+     ]
+    },
+    {
+     "baslik": "Tonsiller Herniasyon",
+     "metin": "Beyin sapı ve medulla oblongata basısı gelişir.",
+     "s": [
+      51
+     ]
+    },
+    {
+     "baslik": "Genetik ve Çevresel Etkenler",
+     "metin": "Enfeksiyöz ajanlar. — öğrenci notu: → genellikle virüs",
+     "s": [
+      53
+     ]
+    },
+    {
+     "baslik": "Nöral Tüp Defektleri: Genel",
+     "metin": "En sık görülen MSS malformasyon grubudur.",
+     "s": [
+      54
+     ]
+    },
+    {
+     "baslik": "Nöral Tüp Defektlerinde Mekanizmalar ve",
+     "metin": "Folat desteği ile risk %70’e kadar azaltılabilir.",
+     "s": [
+      55
+     ]
+    },
+    {
+     "baslik": "Spina Bifida ve Miyelomeningosel",
+     "metin": "Nöral tüpün arka ucunu tutan defektler en yaygın olanlardır.",
+     "s": [
+      56
+     ]
+    },
+    {
+     "baslik": "Anensefali ve Ensefalosel",
+     "metin": "Nöral tüp ön ucunun malformasyonu.",
+     "s": [
+      58
+     ]
+    },
+    {
+     "baslik": "Mikrosefali ve Nöronal Göç Bozukluğu",
+     "metin": "insan immün yetmezlik virüsü (HIV), Zika virüsü. — öğrenci notu: → özellikle",
+     "s": [
+      59
+     ]
+    },
+    {
+     "baslik": "Holoprosensefali ve Diğer Ön Beyin",
+     "metin": "yüz orta hat kusurları (siklopi). — öğrenci notu: Tepe göz",
+     "s": [
+      60
+     ]
+    },
+    {
+     "baslik": "Posterior Fossa Anomalileri",
+     "metin": "Temel örnekler: — öğrenci notu: sıralı tarzda; maddeler 1-2-3 numaralanmış",
+     "s": [
+      61
+     ]
+    },
+    {
+     "baslik": "Chiari Malformasyonları",
+     "metin": "Vermisin foramen magnumdan aşağı uzanması",
+     "s": [
+      62
+     ]
+    },
+    {
+     "baslik": "Dandy–Walker Malformasyonu",
+     "metin": "Serebellar vermisin yokluğu",
+     "s": [
+      63
+     ]
+    },
+    {
+     "baslik": "Nöronal Depolama Hastalıkları",
+     "metin": "depolama materyali birikimi",
+     "s": [
+      65
+     ]
+    }
+   ],
+   "klip": "a-kazanim",
+   "ses": [
+    "Dersin sonunda bilmen gerekenler.",
+    "Bu ders bittiğinde aşağıdaki başlıkları açıklayabilmelisin.",
+    "Nöron Kaybı ve Rejenerasyon: Olgun nöronlar bölünemez.",
+    "Nöron Hasarı: Genel İlkeler: Geri dönüşümsüz hipoksik-iskemik hasardan 12 saat sonra.",
+    "Akut Yaralanmada Ödem: Kan-beyin bariyeri bozulur.",
+    "Dejeneratif Hastalık ve İnklüzyonlar: Hücre içi inklüzyonlar ile seyreder. — öğrenci notu: → gerçek ve psödo; gerçek → viral; (intrasitoplazmik veya intranükleer) (kısmen okunuşu belirsiz).",
+    "Astrositlerin Rolü ve Gliyoz: Bu yanıta gliyoz denir.",
+    "Reaktif (Gemistositik) Astrosit: Hoca: Gemistositik astrosit (Şekil 21.1B).",
+    "Kronik Gliyoz, Rosenthal Lifleri: Rosenthal lifleri:.",
+    "Fibroblastların Sınırlı Rolü: Beyin iyileşmesine fibroblast katkısı sınırlıdır.",
+    "Oligodendrosit ve Mikroglia: JC virüs kaynaklı ilerleyici multifokal lökoensefalopatide.",
+    "Mikroglia Aktivasyonu ve Nodüller: Çekirdek uzar (çubuk hücreler).",
+    "Ependim ve Koroid Pleksus: Örneğin sitomegalovirüs (CMV):.",
+    "Kafa İçi İçerik ve Basınç: Beyin veya BOS hacminde artış için alan sınırlıdır.",
+    "İntrakraniyal Basınç Artışının Önemi: Önemli basınç artışı: — öğrenci notu: BOS dönüşü bozulur.",
+    "Kitle Etkisi Yapan Durumlar: Genel serebral ödem.",
+    "Serebral Ödem: Tanım ve Tipler: Vazojenik ödem.",
+    "Vazojenik Ödem: Kan-beyin bariyeri bütünlüğünün bozulması sonucu gelişir.",
+    "Sitotoksik Ödem: Nöron ve glia hasarına bağlı hücre içi sıvı artışı. — öğrenci notu: ok: başlıktan (Sitotoksik Ödem) hücre içi sıvı artışına.",
+    "Ödemli Beynin Makroskopik Görünümü: Yaygın ödemde (Şekil 21.2):.",
+    "ŞEKİL 21.2 Serebral ödem. Genişleyen beynin dura mater ve kafatasının iç: girusların yüzeyleri incelmiştir. — öğrenci notu: → düzleşmiş.",
+    "BOS Fizyolojisine Giriş: Luschka ve Magendie deliklerinden subaraknoid boşluğa geçer.",
+    "Hidrosefali Tanımı: Ventriküler sistem içindeki BOS hacminin artmasıdır.",
+    "İletişim Kurmayan Hidrosefali: Çıkmış (dogrudan): Nedenler: Monro deliği tıkayan kitle Serebral akuaduktusu sıkıştıran tümör, kanama, enfeksiyon.",
+    "Hidrosefalinin Yaşa Göre Sonuçları: BOS artışı kafa çevresinde belirgin büyüme yapar.",
+    "Hidrosefali ex vacuo: Enfarkt.",
+    "Herniasyon: Tanım: Herniasyon: — öğrenci notu: fıtık.",
+    "Herniasyonun Nedenleri ve Sonuçları: Yaygın beyin ödemi — öğrenci notu: yanında '2' işareti.",
+    "Subfalcine: Tonsillar herniation — öğrenci notu: resim üstünde: → omuriliğe bası yapar.",
+    "Subfalsin (Singulat) Herniasyon: Singulat girus, falks serebri kenarının altına itilir.",
+    "Transtentorial (Uncinate) Herniasyon: Temporal lob medial kısmı tentorium serbest kenarına sıkışır.",
+    "Kernohan Çentiği, Duret Kanamaları,: Orta beyin kompresyonuna yol açar. — öğrenci notu: köşeli parantez + 'okumadı' (okunuşu belirsiz).",
+    "Tonsiller Herniasyon: Beyin sapı ve medulla oblongata basısı gelişir.",
+    "Genetik ve Çevresel Etkenler: Enfeksiyöz ajanlar. — öğrenci notu: → genellikle virüs.",
+    "Nöral Tüp Defektleri: Genel: En sık görülen MSS malformasyon grubudur.",
+    "Nöral Tüp Defektlerinde Mekanizmalar ve: Folat desteği ile risk %70’e kadar azaltılabilir.",
+    "Spina Bifida ve Miyelomeningosel: Nöral tüpün arka ucunu tutan defektler en yaygın olanlardır.",
+    "Anensefali ve Ensefalosel: Nöral tüp ön ucunun malformasyonu.",
+    "Mikrosefali ve Nöronal Göç Bozukluğu: insan immün yetmezlik virüsü (HIV), Zika virüsü. — öğrenci notu: → özellikle.",
+    "Holoprosensefali ve Diğer Ön Beyin: yüz orta hat kusurları (siklopi). — öğrenci notu: Tepe göz.",
+    "Posterior Fossa Anomalileri: Temel örnekler: — öğrenci notu: sıralı tarzda; maddeler 1-2-3 numaralanmış.",
+    "Chiari Malformasyonları: Vermisin foramen magnumdan aşağı uzanması.",
+    "Dandy–Walker Malformasyonu: Serebellar vermisin yokluğu.",
+    "Nöronal Depolama Hastalıkları: depolama materyali birikimi."
+   ],
+   "v": "587ddcbc02"
+  },
+  {
+   "id": "onemli",
+   "baslik": "En önemli yerler",
+   "giris": "Bu dersten altı farklı çıkmış soru kullanılır; iletişim kurmayan hidrosefalinin nedenleri, Rosenthal lifleri, gliyozu oluşturan astrosit, mikroglianın fagositik işlevi ve kırmızı nöron bulguları 2020-21, 2021-22 ve 2023-24 sınavlarında soruldu. Herniasyon tipleri ve ödem mekanizmaları slaytlarda ayrıntılı işlenen, soru potansiyeli yüksek konulardır.",
+   "maddeler": [
+    {
+     "baslik": "İletişim kurmayan (non-komünikan) hidrosefali",
+     "metin": "Ventriküler sistemde lokal engel varsa yalnız proksimaldeki ventriküller genişler; bu iletişim kurmayan hidrosefalidir.",
+     "neden": "2021-22'de soruldu; akuaduktus tıkanmasının yol açtığı hidrosefali tipi başka bir soruda da tekrar soruldu.",
+     "s": [
+      38
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "Rosenthal lifleri",
+     "metin": "Rosenthal lifleri, astrosit süreçlerindeki kalın, parlak eozinofilik protein agregatlarıdır; kronik gliyozda ve bazı düşük dereceli gliomalarda görülür.",
+     "neden": "2021-22'de tanımıyla, 2023-24'te astrositle ilişkisiyle soruldu; nöron hasarı sorusunda da çeldirici olarak çıktı.",
+     "s": [
+      21
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "Gliyoz: astrositlerin onarım yanıtı",
+     "metin": "Beyinde onarım ve yara izi oluşumundan astrositler sorumludur; bu yanıta gliyoz denir ve MSS'nin en temel kronik hasar yanıtıdır.",
+     "neden": "2020-21 Kurul 2 sınavında gliyozu oluşturan hücre olarak soruldu; astrosit özellikleri de aynı yıl ayrı bir soruda çıktı.",
+     "s": [
+      18
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "Akut nöronal hasar: kırmızı nöron",
+     "metin": "Akut nöronal hasarda gövde küçülür, çekirdek piknotik olur, çekirdekçik kaybolur ve sitoplazma yoğun eozinofilik hâle gelir: kırmızı nöron.",
+     "neden": "2020-21 Final sınavında 'nöronal hasarın morfolojik özelliği değildir' kalıbıyla soruldu; çeldirici Rosenthal lifiydi.",
+     "s": [
+      11,
+      13
+     ],
+     "cikmis": false
+    },
+    {
+     "baslik": "Mikroglia: MSS'nin yerleşik fagositi",
+     "metin": "Mikroglia embriyonik sarı keseden köken alır ve MSS'nin yerleşik fagositleridir.",
+     "neden": "2020-21 Kurul 2 sınavında SSS'nin fagositik hücresi olarak, aynı yıl astrositlerle karşılaştırmalı olarak soruldu.",
+     "s": [
+      23
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "İletişimsel (komünikan) hidrosefali",
+     "metin": "İletişimsel hidrosefalide tüm ventriküler sistem genişler, ventriküller arası akım korunur ve temel sorun BOS emiliminin azalmasıdır.",
+     "neden": "İletişim kurmayan tiple karşılaştırma hâlinde çıkmış hidrosefali sorularının şıklarında yer aldı; derste kalın yazıyla vurgulandı.",
+     "s": [
+      39
+     ],
+     "cikmis": false
+    },
+    {
+     "baslik": "Hidrosefali tanımı ve gelişme mekanizması",
+     "metin": "Hidrosefali, ventriküler sistem içindeki BOS hacminin artmasıdır; genellikle BOS akımının bozulması ya da emiliminin azalmasıyla gelişir.",
+     "neden": "Çıkmış hidrosefali sorusunda ödem tanımı çeldirici olarak verildi; iki tanımın ayrılması klasik tuzaktır.",
+     "s": [
+      31,
+      37
+     ],
+     "cikmis": false
+    },
+    {
+     "baslik": "Transtentorial (unkal) herniasyon ve üçüncü sinir",
+     "metin": "Transtentorial herniasyonda temporal lobun medial kısmı tentorium serbest kenarına sıkışır; üçüncü kraniyal sinir basısı lezyon tarafında pupil dilatasyonu yapar.",
+     "neden": "Pupil dilatasyonunun lezyonla aynı tarafta olması ve posterior serebral arter basısı slaytta ayrı ayrı vurgulanan ayırt edici bulgulardır.",
+     "s": [
+      48
+     ],
+     "cikmis": false
+    }
+   ],
+   "klip": "a-onemli",
+   "ses": [
+    "En önemli yerler.",
+    "Bu dersten altı farklı çıkmış soru kullanılır; iletişim kurmayan hidrosefalinin nedenleri, Rosenthal lifleri, gliyozu oluşturan astrosit, mikroglianın fagositik işlevi ve kırmızı nöron bulguları 2020-21, 2021-22 ve 2023-24 sınavlarında soruldu. Herniasyon tipleri ve ödem mekanizmaları slaytlarda ayrıntılı işlenen, soru potansiyeli yüksek konulardır.",
+    "İletişim kurmayan (non-komünikan) hidrosefali: Ventriküler sistemde lokal engel varsa yalnız proksimaldeki ventriküller genişler; bu iletişim kurmayan hidrosefalidir.",
+    "Rosenthal lifleri: Rosenthal lifleri, astrosit süreçlerindeki kalın, parlak eozinofilik protein agregatlarıdır; kronik gliyozda ve bazı düşük dereceli gliomalarda görülür.",
+    "Gliyoz: astrositlerin onarım yanıtı: Beyinde onarım ve yara izi oluşumundan astrositler sorumludur; bu yanıta gliyoz denir ve MSS'nin en temel kronik hasar yanıtıdır.",
+    "Akut nöronal hasar: kırmızı nöron: Akut nöronal hasarda gövde küçülür, çekirdek piknotik olur, çekirdekçik kaybolur ve sitoplazma yoğun eozinofilik hâle gelir: kırmızı nöron.",
+    "Mikroglia: MSS'nin yerleşik fagositi: Mikroglia embriyonik sarı keseden köken alır ve MSS'nin yerleşik fagositleridir.",
+    "İletişimsel (komünikan) hidrosefali: İletişimsel hidrosefalide tüm ventriküler sistem genişler, ventriküller arası akım korunur ve temel sorun BOS emiliminin azalmasıdır.",
+    "Hidrosefali tanımı ve gelişme mekanizması: Hidrosefali, ventriküler sistem içindeki BOS hacminin artmasıdır; genellikle BOS akımının bozulması ya da emiliminin azalmasıyla gelişir.",
+    "Transtentorial (unkal) herniasyon ve üçüncü sinir: Transtentorial herniasyonda temporal lobun medial kısmı tentorium serbest kenarına sıkışır; üçüncü kraniyal sinir basısı lezyon tarafında pupil dilatasyonu yapar."
+   ],
+   "v": "f230219ef0"
+  },
+  {
+   "id": "cikmis",
+   "baslik": "Çıkmış sorularda ne soruldu",
+   "giris": "Bu dersin konusundan doğrulanmış 5 çıkmış soru var.",
+   "maddeler": [
+    {
+     "baslik": "2023-2024",
+     "metin": "Rosenthal lifleri aşağıdakilerden hangisi ile ilişkilidir?",
+     "cevap": "Astrosit",
+     "s": [
+      21
+     ]
+    },
+    {
+     "baslik": "2021-2022",
+     "metin": "Kronik glioziste ve bazı düşük dereceli gliomlardaki astrositik uzantılarda izlenen kalın, uzun, parlak eozinofilik protein agregatları aşağıdakilerden hangisiyle tanımlanır?",
+     "cevap": "Rosenthal lifleri",
+     "s": [
+      21
+     ]
+    },
+    {
+     "baslik": "2020-2021",
+     "metin": "İnirme sisteminde doku zedelenmesine sekonder gelişen gliozis, aşağıdakilerden hangisi tarafından oluşturulur?",
+     "cevap": "Astrosit",
+     "s": [
+      18
+     ]
+    },
+    {
+     "baslik": "2020-2021",
+     "metin": "Aşağıdaki hücrelerden hangisi santral sinir sistemi enfeksiyonlarında rol oynayan ve SSS'nin birincil fagositik (makrofajik) hücre işlevini üstlenen glial elemandır?",
+     "cevap": "Mikroglia",
+     "s": [
+      23
+     ]
+    },
+    {
+     "baslik": "2021-2022",
+     "metin": "Hidrosefali ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "cevap": "Non-komünikan hidrosefali en çok foramen Monro'yu tıkayan ya da serebral akuaduktusa bası yapan kitleler nedeniyle ortaya çıkar",
+     "s": [
+      38
+     ]
+    }
+   ],
+   "klip": "a-cikmis",
+   "ses": [
+    "Çıkmış sorularda ne soruldu.",
+    "Bu dersin konusundan doğrulanmış 5 çıkmış soru var.",
+    "2023-2024: Rosenthal lifleri aşağıdakilerden hangisi ile ilişkilidir?",
+    "Cevap: Astrosit.",
+    "2021-2022: Kronik glioziste ve bazı düşük dereceli gliomlardaki astrositik uzantılarda izlenen kalın, uzun, parlak eozinofilik protein agregatları aşağıdakilerden hangisiyle tanımlanır?",
+    "Cevap: Rosenthal lifleri.",
+    "2020-2021: İnirme sisteminde doku zedelenmesine sekonder gelişen gliozis, aşağıdakilerden hangisi tarafından oluşturulur?",
+    "Cevap: Astrosit.",
+    "2020-2021: Aşağıdaki hücrelerden hangisi santral sinir sistemi enfeksiyonlarında rol oynayan ve SSS'nin birincil fagositik (makrofajik) hücre işlevini üstlenen glial elemandır?",
+    "Cevap: Mikroglia.",
+    "2021-2022: Hidrosefali ile ilgili aşağıdakilerden hangisi doğrudur?",
+    "Cevap: Non-komünikan hidrosefali en çok foramen Monro'yu tıkayan ya da serebral akuaduktusa bası yapan kitleler nedeniyle ortaya çıkar."
+   ],
+   "v": "be452a3bb5"
+  },
+  {
+   "id": "uslup",
+   "baslik": "Hoca nasıl soru sorar",
+   "giris": "Bu konuda çıkmış soru az; profil yalnız genel bir eğilim gösterir.",
+   "guven": "dusuk",
+   "maddeler": [
+    {
+     "baslik": "Soru kökü",
+     "metin": "Sorular çoğunlukla doğrudan bilgi sorusu (%42) ve olumsuz kök (hangisi değildir) (%15) biçimindedir."
+    },
+    {
+     "baslik": "Sorulan bilgi",
+     "metin": "En çok mekanizma (%33) ve tanım ve kavram (%33) sorulur."
+    },
+    {
+     "baslik": "Mekanizma",
+     "metin": "Neden-sonuç zinciri klinik muhakemenin temelidir; ezberlenen sonuç değil, zincirin bir halkası sorulur."
+    },
+    {
+     "baslik": "Tanım ve kavram",
+     "metin": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    },
+    {
+     "baslik": "Düzey",
+     "metin": "Soruların düzeyi hatırlama (%56) ve anlama ve ilişki kurma (%44) ağırlıklıdır."
+    },
+    {
+     "baslik": "Çeldiriciler",
+     "metin": "Yanlış şıklar genellikle aynı türden başka bir kavram ya da yer değiştirilmiş eşleştirme olarak kurulur."
+    },
+    {
+     "baslik": "Zorluk",
+     "metin": "Bu konunun sorularının zorluğu kolay-orta, tekrar eden."
+    }
+   ],
+   "klip": "a-uslup",
+   "ses": [
+    "Hoca nasıl soru sorar.",
+    "Bu konuda çıkmış soru az; profil yalnız genel bir eğilim gösterir.",
+    "Soru kökü: Sorular çoğunlukla doğrudan bilgi sorusu (%42) ve olumsuz kök (hangisi değildir) (%15) biçimindedir.",
+    "Sorulan bilgi: En çok mekanizma (%33) ve tanım ve kavram (%33) sorulur.",
+    "Mekanizma: Neden-sonuç zinciri klinik muhakemenin temelidir; ezberlenen sonuç değil, zincirin bir halkası sorulur.",
+    "Tanım ve kavram: Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür.",
+    "Düzey: Soruların düzeyi hatırlama (%56) ve anlama ve ilişki kurma (%44) ağırlıklıdır.",
+    "Çeldiriciler: Yanlış şıklar genellikle aynı türden başka bir kavram ya da yer değiştirilmiş eşleştirme olarak kurulur.",
+    "Zorluk: Bu konunun sorularının zorluğu kolay-orta, tekrar eden."
+   ],
+   "v": "e31f088f8a"
+  },
+  {
+   "id": "odak",
+   "baslik": "Nelere odaklanmalısın",
+   "giris": "",
+   "maddeler": [
+    {
+     "baslik": "Astrosit",
+     "metin": "Çıkmışlarda 2 kez soruldu. Örnek kök: İnirme sisteminde doku zedelenmesine sekonder gelişen gliozis, aşağıdakilerden hangisi tarafından oluşturulur?"
+    },
+    {
+     "baslik": "İletişim kurmayan (non-komünikan) hidrosefali",
+     "metin": "2021-22'de soruldu; akuaduktus tıkanmasının yol açtığı hidrosefali tipi başka bir soruda da tekrar soruldu."
+    },
+    {
+     "baslik": "Rosenthal lifleri",
+     "metin": "2021-22'de tanımıyla, 2023-24'te astrositle ilişkisiyle soruldu; nöron hasarı sorusunda da çeldirici olarak çıktı."
+    },
+    {
+     "baslik": "Gliyoz: astrositlerin onarım yanıtı",
+     "metin": "2020-21 Kurul 2 sınavında gliyozu oluşturan hücre olarak soruldu; astrosit özellikleri de aynı yıl ayrı bir soruda çıktı."
+    },
+    {
+     "baslik": "Mikroglia: MSS'nin yerleşik fagositi",
+     "metin": "2020-21 Kurul 2 sınavında SSS'nin fagositik hücresi olarak, aynı yıl astrositlerle karşılaştırmalı olarak soruldu."
+    },
+    {
+     "baslik": "Çalışma yolu",
+     "metin": "Okurken her başlıkta mekanizma bilgisini ayrı not et; hoca en çok bunu soruyor."
+    }
+   ],
+   "klip": "a-odak",
+   "ses": [
+    "Nelere odaklanmalısın.",
+    "Astrosit: Çıkmışlarda 2 kez soruldu. Örnek kök: İnirme sisteminde doku zedelenmesine sekonder gelişen gliozis, aşağıdakilerden hangisi tarafından oluşturulur?",
+    "İletişim kurmayan (non-komünikan) hidrosefali: 2021-22'de soruldu; akuaduktus tıkanmasının yol açtığı hidrosefali tipi başka bir soruda da tekrar soruldu.",
+    "Rosenthal lifleri: 2021-22'de tanımıyla, 2023-24'te astrositle ilişkisiyle soruldu; nöron hasarı sorusunda da çeldirici olarak çıktı.",
+    "Gliyoz: astrositlerin onarım yanıtı: 2020-21 Kurul 2 sınavında gliyozu oluşturan hücre olarak soruldu; astrosit özellikleri de aynı yıl ayrı bir soruda çıktı.",
+    "Mikroglia: MSS'nin yerleşik fagositi: 2020-21 Kurul 2 sınavında SSS'nin fagositik hücresi olarak, aynı yıl astrositlerle karşılaştırmalı olarak soruldu.",
+    "Çalışma yolu: Okurken her başlıkta mekanizma bilgisini ayrı not et; hoca en çok bunu soruyor."
+   ],
+   "v": "2af2f15f39"
+  }
+ ],
+ "ozet": [
+  {
+   "id": "giris",
+   "baslik": "Dersin özü",
+   "giris": "Ders, nöron ve glial hücrelerin hasara verdiği morfolojik yanıtları (kırmızı nöron, merkezi kromatoliz, gliyoz, Rosenthal lifleri, mikroglia aktivasyonu) anlatır. Ardından intrakraniyal basıncı artıran serebral ödem, hidrosefali ve herniasyon tipleri işlenir. Son bölümde nöral tüp defektleri, ön beyin ve posterior fossa malformasyonları ile genetik metabolik hastalıklar özetlenir.",
+   "maddeler": [],
+   "klip": "o-giris",
+   "ses": [
+    "Dersin özü.",
+    "Ders, nöron ve glial hücrelerin hasara verdiği morfolojik yanıtları (kırmızı nöron, merkezi kromatoliz, gliyoz, Rosenthal lifleri, mikroglia aktivasyonu) anlatır. Ardından intrakraniyal basıncı artıran serebral ödem, hidrosefali ve herniasyon tipleri işlenir. Son bölümde nöral tüp defektleri, ön beyin ve posterior fossa malformasyonları ile genetik metabolik hastalıklar özetlenir."
+   ],
+   "v": "baf40e240e"
+  },
+  {
+   "id": "2p01-04",
+   "baslik": "Akut nöronal hasar: kırmızı nöron",
+   "giris": "Akut nöronal hasarda gövde küçülür, çekirdek piknotik olur, çekirdekçik kaybolur ve sitoplazma yoğun eozinofilik hâle gelir: kırmızı nöron.",
+   "s": [
+    11,
+    13
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "Hücre gövdesinde küçülme, çekirdekte piknoz, çekirdekçiğin kaybolması, Nissl maddesi boyanmasının kaybı ve sitoplazmada yoğun eozinofili."
+    },
+    {
+     "metin": "Geri dönüşümsüz hipoksik-iskemik hasardan 12 saat sonra H&E boyamasıyla tanınabilir; serebral kortekste hücre gövdeleri büzülmüş ve eozinofiliktir, çekirdekler piknotiktir."
+    },
+    {
+     "metin": "Nöron hasarındaki değişiklik hücre gövdesi, akson ve dendrit düzeyinde görülür."
+    },
+    {
+     "metin": "Rosenthal lifleri astrosit süreçlerindeki protein agregatlarıdır; kronik gliyozda görülür, akut nöronal hasarın bulgusu değildir."
+    },
+    {
+     "metin": "Akson hasarından sonra gövde küçülmez, tersine büyür ve yuvarlaklaşır (merkezi kromatoliz)."
+    }
+   ],
+   "klip": "o-2p01-04",
+   "ses": [
+    "Akut nöronal hasar: kırmızı nöron.",
+    "Akut nöronal hasarda gövde küçülür, çekirdek piknotik olur, çekirdekçik kaybolur ve sitoplazma yoğun eozinofilik hâle gelir: kırmızı nöron.",
+    "Hücre gövdesinde küçülme, çekirdekte piknoz, çekirdekçiğin kaybolması, Nissl maddesi boyanmasının kaybı ve sitoplazmada yoğun eozinofili.",
+    "Geri dönüşümsüz hipoksik-iskemik hasardan 12 saat sonra H&E boyamasıyla tanınabilir; serebral kortekste hücre gövdeleri büzülmüş ve eozinofiliktir, çekirdekler piknotiktir.",
+    "Nöron hasarındaki değişiklik hücre gövdesi, akson ve dendrit düzeyinde görülür.",
+    "Rosenthal lifleri astrosit süreçlerindeki protein agregatlarıdır; kronik gliyozda görülür, akut nöronal hasarın bulgusu değildir.",
+    "Akson hasarından sonra gövde küçülmez, tersine büyür ve yuvarlaklaşır (merkezi kromatoliz)."
+   ],
+   "v": "fa1806c6dd"
+  },
+  {
+   "id": "2p01-03",
+   "baslik": "Gliyoz: astrositlerin onarım yanıtı",
+   "giris": "Beyinde onarım ve yara izi oluşumundan astrositler sorumludur; bu yanıta gliyoz denir ve MSS'nin en temel kronik hasar yanıtıdır.",
+   "s": [
+    18
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "Doku zedelenmesinden sonra astrositlerin üstlendiği onarım ve yara izi (glial skar) oluşumudur; MSS'de en temel kronik hasar yanıtıdır."
+    },
+    {
+     "metin": "Reaktif astrositler eozinofilik sitoplazmalıdır ve çok sayıda ışınsal uzantıya sahiptir; gemistositik astrositte kalın, dallanan uzantılar görülür."
+    },
+    {
+     "metin": "MSS'nin yerleşik fagositleri mikrogliadır; bu yüzden astrosit makrofaj grubu hücresi sayılmaz."
+    },
+    {
+     "metin": "Oligodendrositler miyelin üretir, ependimal hücreler ventrikülleri ve santral kanalı döşer; ikisi de skar oluşturmaz."
+    },
+    {
+     "metin": "Vücudun diğer bölgelerinden farklı olarak beyin iyileşmesinde fibroblast katkısı sınırlıdır; istisnalar delici beyin travması ve abse çevresidir."
+    }
+   ],
+   "klip": "o-2p01-03",
+   "ses": [
+    "Gliyoz: astrositlerin onarım yanıtı.",
+    "Beyinde onarım ve yara izi oluşumundan astrositler sorumludur; bu yanıta gliyoz denir ve MSS'nin en temel kronik hasar yanıtıdır.",
+    "Doku zedelenmesinden sonra astrositlerin üstlendiği onarım ve yara izi (glial skar) oluşumudur; MSS'de en temel kronik hasar yanıtıdır.",
+    "Reaktif astrositler eozinofilik sitoplazmalıdır ve çok sayıda ışınsal uzantıya sahiptir; gemistositik astrositte kalın, dallanan uzantılar görülür.",
+    "MSS'nin yerleşik fagositleri mikrogliadır; bu yüzden astrosit makrofaj grubu hücresi sayılmaz.",
+    "Oligodendrositler miyelin üretir, ependimal hücreler ventrikülleri ve santral kanalı döşer; ikisi de skar oluşturmaz.",
+    "Vücudun diğer bölgelerinden farklı olarak beyin iyileşmesinde fibroblast katkısı sınırlıdır; istisnalar delici beyin travması ve abse çevresidir."
+   ],
+   "v": "190ededcce"
+  },
+  {
+   "id": "2p01-02",
+   "baslik": "Rosenthal lifleri",
+   "giris": "Rosenthal lifleri, astrosit süreçlerindeki kalın, parlak eozinofilik protein agregatlarıdır; kronik gliyozda ve bazı düşük dereceli gliomalarda görülür.",
+   "s": [
+    21
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "Astrosit süreçlerinde görülen kalın, parlak eozinofilik protein agregatlarıdır; nörona değil astrosite ait bir bulgudur."
+    },
+    {
+     "metin": "Kronik gliyoz ve bazı düşük dereceli gliomalar."
+    },
+    {
+     "metin": "Uzun süreli gliyozda reaktif astrositin sitoplazması küçülür ve prosesleri sıkı biçimde iç içe geçer; bu hücrelere fibriler astrosit denir."
+    },
+    {
+     "metin": "Hasardan sonra hipertrofi ve hiperplazi gösteren reaktif astrosittir; büyümüş veziküler çekirdek, belirgin çekirdekçik ve geniş parlak pembe sitoplazmasıyla tanınır, bir protein agregatı değildir."
+    },
+    {
+     "metin": "Akson hasarından sonra nöron gövdesinin büyüyüp yuvarlaklaşması, çekirdeğin ve Nissl maddesinin perifere kaymasıdır; astrositle ilgisi yoktur."
+    }
+   ],
+   "klip": "o-2p01-02",
+   "ses": [
+    "Rosenthal lifleri.",
+    "Rosenthal lifleri, astrosit süreçlerindeki kalın, parlak eozinofilik protein agregatlarıdır; kronik gliyozda ve bazı düşük dereceli gliomalarda görülür.",
+    "Astrosit süreçlerinde görülen kalın, parlak eozinofilik protein agregatlarıdır; nörona değil astrosite ait bir bulgudur.",
+    "Kronik gliyoz ve bazı düşük dereceli gliomalar.",
+    "Uzun süreli gliyozda reaktif astrositin sitoplazması küçülür ve prosesleri sıkı biçimde iç içe geçer; bu hücrelere fibriler astrosit denir.",
+    "Hasardan sonra hipertrofi ve hiperplazi gösteren reaktif astrosittir; büyümüş veziküler çekirdek, belirgin çekirdekçik ve geniş parlak pembe sitoplazmasıyla tanınır, bir protein agregatı değildir.",
+    "Akson hasarından sonra nöron gövdesinin büyüyüp yuvarlaklaşması, çekirdeğin ve Nissl maddesinin perifere kaymasıdır; astrositle ilgisi yoktur."
+   ],
+   "v": "b7ed61497f"
+  },
+  {
+   "id": "2p01-05",
+   "baslik": "Mikroglia: MSS'nin yerleşik fagositi",
+   "giris": "Mikroglia embriyonik sarı keseden köken alır ve MSS'nin yerleşik fagositleridir.",
+   "s": [
+    23
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "Mikroglia embriyonik sarı keseden köken alır."
+    },
+    {
+     "metin": "MSS'nin yerleşik fagositleridir; hasar, enfeksiyon veya travmayla aktive olur, çoğalır ve makrofaj benzeri görünüm alır."
+    },
+    {
+     "metin": "Astrositler onarım ve yara izi (gliyoz) oluşturur, çok sayıda uzantıya sahiptir; fagositik işlev mikroglianındır."
+    },
+    {
+     "metin": "Oligodendrositler MSS'de miyelin üretir; özgün morfolojik yanıtları sınırlıdır."
+    },
+    {
+     "metin": "Ependimal hücreler ventrikülleri ve omuriliğin santral kanalını döşer; koroid pleksus BOS üretir."
+    },
+    {
+     "metin": "Mikroglial hücreler belirsiz bir nodül oluşturan kümeler yapar (mikroglia nodülü)."
+    }
+   ],
+   "klip": "o-2p01-05",
+   "ses": [
+    "Mikroglia: MSS'nin yerleşik fagositi.",
+    "Mikroglia embriyonik sarı keseden köken alır ve MSS'nin yerleşik fagositleridir.",
+    "Mikroglia embriyonik sarı keseden köken alır.",
+    "MSS'nin yerleşik fagositleridir; hasar, enfeksiyon veya travmayla aktive olur, çoğalır ve makrofaj benzeri görünüm alır.",
+    "Astrositler onarım ve yara izi (gliyoz) oluşturur, çok sayıda uzantıya sahiptir; fagositik işlev mikroglianındır.",
+    "Oligodendrositler MSS'de miyelin üretir; özgün morfolojik yanıtları sınırlıdır.",
+    "Ependimal hücreler ventrikülleri ve omuriliğin santral kanalını döşer; koroid pleksus BOS üretir.",
+    "Mikroglial hücreler belirsiz bir nodül oluşturan kümeler yapar (mikroglia nodülü)."
+   ],
+   "v": "ecc7fcd436"
+  },
+  {
+   "id": "2p01-07",
+   "baslik": "Hidrosefali tanımı ve gelişme mekanizması",
+   "giris": "Hidrosefali, ventriküler sistem içindeki BOS hacminin artmasıdır; genellikle BOS akımının bozulması ya da emiliminin azalmasıyla gelişir.",
+   "s": [
+    31,
+    37
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "Ventriküler sistem içindeki BOS hacminin artmasıdır."
+    },
+    {
+     "metin": "BOS akımının bozulması (iletişim kurmayan tip) ya da BOS emiliminin azalması (iletişimsel tip)."
+    },
+    {
+     "metin": "Ödem beyin parankiminde aşırı sıvı birikimidir; sıvı ventrikülde değil dokudadır ve ödemli beyinde ventriküller genişlemez, sıkışır."
+    },
+    {
+     "metin": "Hidrosefali genel serebral ödem, kanamalar, iskemi alanları ve tümörlerle birlikte kafa içi hacim artışına yol açan başlıca durumlardandır."
+    },
+    {
+     "metin": "Hidrosefali ex vacuo'da BOS artışı primer süreç değildir, beyin hacmi kaybına ikincildir."
+    }
+   ],
+   "klip": "o-2p01-07",
+   "ses": [
+    "Hidrosefali tanımı ve gelişme mekanizması.",
+    "Hidrosefali, ventriküler sistem içindeki BOS hacminin artmasıdır; genellikle BOS akımının bozulması ya da emiliminin azalmasıyla gelişir.",
+    "Ventriküler sistem içindeki BOS hacminin artmasıdır.",
+    "BOS akımının bozulması (iletişim kurmayan tip) ya da BOS emiliminin azalması (iletişimsel tip).",
+    "Ödem beyin parankiminde aşırı sıvı birikimidir; sıvı ventrikülde değil dokudadır ve ödemli beyinde ventriküller genişlemez, sıkışır.",
+    "Hidrosefali genel serebral ödem, kanamalar, iskemi alanları ve tümörlerle birlikte kafa içi hacim artışına yol açan başlıca durumlardandır.",
+    "Hidrosefali ex vacuo'da BOS artışı primer süreç değildir, beyin hacmi kaybına ikincildir."
+   ],
+   "v": "7fb7267ce0"
+  },
+  {
+   "id": "2p01-01",
+   "baslik": "İletişim kurmayan (non-komünikan) hidrosefali",
+   "giris": "Ventriküler sistemde lokal engel varsa yalnız proksimaldeki ventriküller genişler; bu iletişim kurmayan hidrosefalidir.",
+   "s": [
+    38
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "Hidrosefali, ventriküler sistem içindeki BOS hacminin artmasıdır; beyin parankiminde aşırı sıvı birikimi ise serebral ödemin tanımıdır, iki kavram karıştırılmamalıdır."
+    },
+    {
+     "metin": "Ventriküler sistem içinde lokal bir engel vardır; BOS ventriküllerle subaraknoid boşluk arasında serbestçe dolaşamaz ve yalnız engelin proksimalindeki ventriküller genişler."
+    },
+    {
+     "metin": "Monro deliğini tıkayan bir kitle ya da serebral akuaduktusu sıkıştıran tümör, kanama veya enfeksiyon."
+    },
+    {
+     "metin": "İletişimsel hidrosefalide tüm ventriküler sistem genişler, ventriküller arası akım korunur ve temel sorun BOS emiliminin azalmasıdır."
+    },
+    {
+     "metin": "Sütürler kapanmadan önce (bebeklik) BOS artışı kafa çevresinde belirgin büyüme yapar; sütürler kapandıktan sonra kafa çevresi değişmez, intrakraniyal basınç artar."
+    }
+   ],
+   "klip": "o-2p01-01",
+   "ses": [
+    "İletişim kurmayan (non-komünikan) hidrosefali.",
+    "Ventriküler sistemde lokal engel varsa yalnız proksimaldeki ventriküller genişler; bu iletişim kurmayan hidrosefalidir.",
+    "Hidrosefali, ventriküler sistem içindeki BOS hacminin artmasıdır; beyin parankiminde aşırı sıvı birikimi ise serebral ödemin tanımıdır, iki kavram karıştırılmamalıdır.",
+    "Ventriküler sistem içinde lokal bir engel vardır; BOS ventriküllerle subaraknoid boşluk arasında serbestçe dolaşamaz ve yalnız engelin proksimalindeki ventriküller genişler.",
+    "Monro deliğini tıkayan bir kitle ya da serebral akuaduktusu sıkıştıran tümör, kanama veya enfeksiyon.",
+    "İletişimsel hidrosefalide tüm ventriküler sistem genişler, ventriküller arası akım korunur ve temel sorun BOS emiliminin azalmasıdır.",
+    "Sütürler kapanmadan önce (bebeklik) BOS artışı kafa çevresinde belirgin büyüme yapar; sütürler kapandıktan sonra kafa çevresi değişmez, intrakraniyal basınç artar."
+   ],
+   "v": "cb6f529be3"
+  },
+  {
+   "id": "2p01-06",
+   "baslik": "İletişimsel (komünikan) hidrosefali",
+   "giris": "İletişimsel hidrosefalide tüm ventriküler sistem genişler, ventriküller arası akım korunur ve temel sorun BOS emiliminin azalmasıdır.",
+   "s": [
+    39
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "Engel ventriküler sistemin içinde olmadığı için tüm ventriküler sistem genişler."
+    },
+    {
+     "metin": "Ventriküller arası BOS akışı korunmuştur."
+    },
+    {
+     "metin": "BOS emiliminin azalmasıdır; BOS normalde araknoid villuslar (granülasyonlar) tarafından emilerek kana karışır."
+    },
+    {
+     "metin": "Çoğu olguda net değildir."
+    },
+    {
+     "metin": "İletişim kurmayan hidrosefalide lokal engel vardır ve yalnız proksimaldeki ventriküller genişler (Monro deliği ya da akuaduktus düzeyinde kitle, tümör, kanama, enfeksiyon)."
+    }
+   ],
+   "klip": "o-2p01-06",
+   "ses": [
+    "İletişimsel (komünikan) hidrosefali.",
+    "İletişimsel hidrosefalide tüm ventriküler sistem genişler, ventriküller arası akım korunur ve temel sorun BOS emiliminin azalmasıdır.",
+    "Engel ventriküler sistemin içinde olmadığı için tüm ventriküler sistem genişler.",
+    "Ventriküller arası BOS akışı korunmuştur.",
+    "BOS emiliminin azalmasıdır; BOS normalde araknoid villuslar (granülasyonlar) tarafından emilerek kana karışır.",
+    "Çoğu olguda net değildir.",
+    "İletişim kurmayan hidrosefalide lokal engel vardır ve yalnız proksimaldeki ventriküller genişler (Monro deliği ya da akuaduktus düzeyinde kitle, tümör, kanama, enfeksiyon)."
+   ],
+   "v": "de963807bb"
+  },
+  {
+   "id": "2p01-09",
+   "baslik": "Subfalsin (singulat) herniasyon",
+   "giris": "Subfalsin herniasyonda singulat girus falks serebri kenarının altına itilir; ön serebral arter sıkışırsa karşı bacakta güçsüzlük olur.",
+   "s": [
+    47
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "Tek taraflı ya da asimetrik hemisfer genişlemesi."
+    },
+    {
+     "metin": "Singulat girus, falks serebri kenarının altına itilir."
+    },
+    {
+     "metin": "Ön serebral arter sıkışabilir; bunun sonucu karşı bacakta güçsüzlük gelişir."
+    },
+    {
+     "metin": "Dominant hemisfer etkilenirse afazi görülür; afazi dili anlama, konuşma, okuma ve yazma işlevlerini kontrol eden bölgelerin hasarıyla oluşan iletişim bozukluğudur."
+    },
+    {
+     "metin": "Subfalsin (singulat), transtentorial (uncinate) ve tonsiller herniasyon; aynı hastada birden fazla tip birlikte olabilir."
+    }
+   ],
+   "klip": "o-2p01-09",
+   "ses": [
+    "Subfalsin (singulat) herniasyon.",
+    "Subfalsin herniasyonda singulat girus falks serebri kenarının altına itilir; ön serebral arter sıkışırsa karşı bacakta güçsüzlük olur.",
+    "Tek taraflı ya da asimetrik hemisfer genişlemesi.",
+    "Singulat girus, falks serebri kenarının altına itilir.",
+    "Ön serebral arter sıkışabilir; bunun sonucu karşı bacakta güçsüzlük gelişir.",
+    "Dominant hemisfer etkilenirse afazi görülür; afazi dili anlama, konuşma, okuma ve yazma işlevlerini kontrol eden bölgelerin hasarıyla oluşan iletişim bozukluğudur.",
+    "Subfalsin (singulat), transtentorial (uncinate) ve tonsiller herniasyon; aynı hastada birden fazla tip birlikte olabilir."
+   ],
+   "v": "28de9ac6bf"
+  },
+  {
+   "id": "2p01-08",
+   "baslik": "Transtentorial (unkal) herniasyon ve üçüncü sinir",
+   "giris": "Transtentorial herniasyonda temporal lobun medial kısmı tentorium serbest kenarına sıkışır; üçüncü kraniyal sinir basısı lezyon tarafında pupil dilatasyonu yapar.",
+   "s": [
+    48
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "Temporal lobun medial kısmı, tentoriumun serbest kenarına sıkışır."
+    },
+    {
+     "metin": "Lezyon tarafında pupil dilatasyonu ve göz hareketlerinde bozulma olur; bu tablo \"şişmiş pupilla\" diye anılır."
+    },
+    {
+     "metin": "Primer görsel korteks dahil, bu arterin beslediği bölgelerde iskemi gelişir."
+    },
+    {
+     "metin": "Subfalsin herniasyonda singulat girus falks altına itilir ve sıkışan damar ön serebral arterdir."
+    },
+    {
+     "metin": "Temporal lob daha fazla yer değiştirirse orta beyin sıkışır; Kernohan çentiği, bilinç kaybı ve Duret kanamaları gelişebilir."
+    }
+   ],
+   "klip": "o-2p01-08",
+   "ses": [
+    "Transtentorial (unkal) herniasyon ve üçüncü sinir.",
+    "Transtentorial herniasyonda temporal lobun medial kısmı tentorium serbest kenarına sıkışır; üçüncü kraniyal sinir basısı lezyon tarafında pupil dilatasyonu yapar.",
+    "Temporal lobun medial kısmı, tentoriumun serbest kenarına sıkışır.",
+    "Lezyon tarafında pupil dilatasyonu ve göz hareketlerinde bozulma olur; bu tablo \"şişmiş pupilla\" diye anılır.",
+    "Primer görsel korteks dahil, bu arterin beslediği bölgelerde iskemi gelişir.",
+    "Subfalsin herniasyonda singulat girus falks altına itilir ve sıkışan damar ön serebral arterdir.",
+    "Temporal lob daha fazla yer değiştirirse orta beyin sıkışır; Kernohan çentiği, bilinç kaybı ve Duret kanamaları gelişebilir."
+   ],
+   "v": "406dd2e1c6"
+  },
+  {
+   "id": "2p01-10",
+   "baslik": "Kernohan çentiği, bilinç kaybı ve Duret kanaması",
+   "giris": "Temporal lob daha fazla yer değiştirince karşı pedinkül tentoriuma sıkışır (Kernohan çentiği) ve herniasyon tarafında ipsilateral hemiparezi gelişir.",
+   "s": [
+    49
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "Temporal lobun daha fazla yer değiştirmesi orta beyni sıkıştırır; karşı taraftaki serebral pedinkül tentoriuma sıkışır ve çentik oluşur."
+    },
+    {
+     "metin": "Sıkışan pedinkül karşı tarafta olduğu için güçsüzlük herniasyonla aynı tarafta görülür."
+    },
+    {
+     "metin": "Orta beyin ve yükselen retiküler aktive edici sistem (ARAS) basısı bilinç kaybı yapar; ARAS uyanıklığı ve bilinci düzenleyen beyin sapı nöron ağıdır."
+    },
+    {
+     "metin": "İlerlemiş transtentorial herniasyonda kitle etkisi beyin sapını aşağı iter, orta hat boyunca ponsa giren damarlar bozulur ve orta beyin ile ponsta küçük, genellikle çoklu kanamalar oluşur."
+    }
+   ],
+   "klip": "o-2p01-10",
+   "ses": [
+    "Kernohan çentiği, bilinç kaybı ve Duret kanaması.",
+    "Temporal lob daha fazla yer değiştirince karşı pedinkül tentoriuma sıkışır (Kernohan çentiği) ve herniasyon tarafında ipsilateral hemiparezi gelişir.",
+    "Temporal lobun daha fazla yer değiştirmesi orta beyni sıkıştırır; karşı taraftaki serebral pedinkül tentoriuma sıkışır ve çentik oluşur.",
+    "Sıkışan pedinkül karşı tarafta olduğu için güçsüzlük herniasyonla aynı tarafta görülür.",
+    "Orta beyin ve yükselen retiküler aktive edici sistem (ARAS) basısı bilinç kaybı yapar; ARAS uyanıklığı ve bilinci düzenleyen beyin sapı nöron ağıdır.",
+    "İlerlemiş transtentorial herniasyonda kitle etkisi beyin sapını aşağı iter, orta hat boyunca ponsa giren damarlar bozulur ve orta beyin ile ponsta küçük, genellikle çoklu kanamalar oluşur."
+   ],
+   "v": "64f5a1b00e"
+  }
+ ]
+}

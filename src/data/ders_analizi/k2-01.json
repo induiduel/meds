@@ -1,0 +1,745 @@
+{
+ "surum": 1,
+ "key": "k2-01",
+ "kod": "2n01",
+ "kurul": 2,
+ "brans": "Nöroloji",
+ "konu": "Nörolojik Hastaya Yaklaşım",
+ "ogretim_uyesi": "Dr. İrfan Yavaş",
+ "profil": "Nöroloji",
+ "sesKlasor": {
+  "brans": "k2dersanaliz",
+  "kod": "2n01"
+ },
+ "analiz": [
+  {
+   "id": "anlatim",
+   "baslik": "Bu derste ne anlatılacak",
+   "giris": "Ders, nörolojik hastaya yaklaşımın sırasını anlatır: önce öykü (yakınma, başlangıç şekli, doğal gidiş), sonra ilk izlenim ve muayene, ardından bulguların birleştirilip lokalizasyon ve etyolojinin bulunması, son olarak laboratuvar incelemeleri ve acil hastaya yaklaşım.",
+   "maddeler": [
+    {
+     "metin": "Nöroloji muayenesinin mantığı"
+    },
+    {
+     "metin": "Anamnez tanının temelidir"
+    },
+    {
+     "metin": "Başlangıç şekli ve doğal gidiş"
+    },
+    {
+     "metin": "Tanısı öyküye dayanan hastalıklar"
+    },
+    {
+     "metin": "İlk izlenim ve gözlem"
+    },
+    {
+     "metin": "Nörolojik lokalizasyon"
+    },
+    {
+     "metin": "Lezyonun natürü"
+    },
+    {
+     "metin": "Laboratuvar incelemeleri"
+    },
+    {
+     "metin": "Acil gelen hasta"
+    },
+    {
+     "metin": "İlk gören hekim ve sevk"
+    }
+   ],
+   "klip": "a-anlatim",
+   "ses": [
+    "Bu derste ne anlatılacak.",
+    "Ders, nörolojik hastaya yaklaşımın sırasını anlatır: önce öykü (yakınma, başlangıç şekli, doğal gidiş), sonra ilk izlenim ve muayene, ardından bulguların birleştirilip lokalizasyon ve etyolojinin bulunması, son olarak laboratuvar incelemeleri ve acil hastaya yaklaşım.",
+    "Nöroloji muayenesinin mantığı.",
+    "Anamnez tanının temelidir.",
+    "Başlangıç şekli ve doğal gidiş.",
+    "Tanısı öyküye dayanan hastalıklar.",
+    "İlk izlenim ve gözlem.",
+    "Nörolojik lokalizasyon.",
+    "Lezyonun natürü.",
+    "Laboratuvar incelemeleri.",
+    "Acil gelen hasta.",
+    "İlk gören hekim ve sevk."
+   ],
+   "v": "0d392d8fd7"
+  },
+  {
+   "id": "kazanim",
+   "baslik": "Dersin sonunda bilmen gerekenler",
+   "giris": "Bu ders bittiğinde aşağıdaki başlıkları açıklayabilmelisin.",
+   "maddeler": [
+    {
+     "baslik": "Anamnez tanının temelidir",
+     "metin": "Hastayı dinledikten sonra anlamadıysanız muayeneden sonra da anlamazsınız (Merritt).",
+     "s": [
+      2
+     ]
+    },
+    {
+     "baslik": "Başlangıç şekli ve doğal gidiş",
+     "metin": "Akut (dakika–saat): hemipleji.",
+     "s": [
+      3
+     ]
+    },
+    {
+     "baslik": "Tanısı öyküye dayanan hastalıklar",
+     "metin": "Migren, trigeminal nevralji: nörolojik belirti ve laboratuvar bulgusu yoktur; BT/MR tanıyı doğrulamak için çekilir.",
+     "s": [
+      4
+     ]
+    },
+    {
+     "baslik": "İlk izlenim: yürüyüş ve yüz",
+     "metin": "Hemiplejik: kol gövdeye yapışık, bacak oraklanır.",
+     "s": [
+      5
+     ]
+    },
+    {
+     "baslik": "Bulgulardan lokalizasyon",
+     "metin": "Afazi + sağ hemipleji → sol hemisfer.",
+     "s": [
+      6
+     ]
+    },
+    {
+     "baslik": "Lezyonun natürü",
+     "metin": "Hemipleji + HT + DM → önce damarsal; yavaş yerleşip ağırlaşıyorsa YKL; malignite öyküsü → metastaz.",
+     "s": [
+      7
+     ]
+    },
+    {
+     "baslik": "Laboratuvar ve görüntüleme",
+     "metin": "Spesifik inceleme: BOS.",
+     "s": [
+      8
+     ]
+    },
+    {
+     "baslik": "Acil hasta ve sevk",
+     "metin": "Zaman = beyin: geri dönüşü olmayan noktadan önce müdahale.",
+     "s": [
+      9
+     ]
+    }
+   ],
+   "klip": "a-kazanim",
+   "ses": [
+    "Dersin sonunda bilmen gerekenler.",
+    "Bu ders bittiğinde aşağıdaki başlıkları açıklayabilmelisin.",
+    "Anamnez tanının temelidir: Hastayı dinledikten sonra anlamadıysanız muayeneden sonra da anlamazsınız (Merritt).",
+    "Başlangıç şekli ve doğal gidiş: Akut (dakika–saat): hemipleji.",
+    "Tanısı öyküye dayanan hastalıklar: Migren, trigeminal nevralji: nörolojik belirti ve laboratuvar bulgusu yoktur; BT/MR tanıyı doğrulamak için çekilir.",
+    "İlk izlenim: yürüyüş ve yüz: Hemiplejik: kol gövdeye yapışık, bacak oraklanır.",
+    "Bulgulardan lokalizasyon: Afazi + sağ hemipleji → sol hemisfer.",
+    "Lezyonun natürü: Hemipleji + HT + DM → önce damarsal; yavaş yerleşip ağırlaşıyorsa YKL; malignite öyküsü → metastaz.",
+    "Laboratuvar ve görüntüleme: Spesifik inceleme: BOS.",
+    "Acil hasta ve sevk: Zaman = beyin: geri dönüşü olmayan noktadan önce müdahale."
+   ],
+   "v": "52aa7e3191"
+  },
+  {
+   "id": "onemli",
+   "baslik": "En önemli yerler",
+   "giris": "Bu derse ilişkin çıkmış sorular üç başlıkta toplanır: akut başlangıçlı tablo olarak hemipleji, Parkinson hastalığının ilk izlenim bulguları ve düzelen epizodlarda multipl skleroz. Başlangıç şekli, ilk izlenim ve lokalizasyon eşleştirmeleri dersin en yüksek öncelikli bilgileridir.",
+   "maddeler": [
+    {
+     "baslik": "Parkinson hastalığının ilk izlenimi",
+     "metin": "Parkinson hastalığında maske yüz, monoton konuşma, salya akması, yürürken kolları sallamama ve vücudun fleksör postürü ilk bakışta görülür.",
+     "neden": "2020-21 Kurul 2 çıkmışında iki ayrı kayıtla sorulmuştur.",
+     "s": [
+      5
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "Nörolojik hastalıklarda başlangıç şekli",
+     "metin": "Başlangıç akut (dakika veya saat, örneğin hemipleji), sinsi (hafta, ay, yıl; beyin tümörü, dejeneratif hastalıklar) ya da dalgalı (relapsing-remitting MS) olabilir.",
+     "neden": "Başlangıç şekli sorusu çıkmışta hemipleji üzerinden sorulmuştur; her başlangıç türünün örnek hastalığı klasik eşleştirmedir.",
+     "s": [
+      3
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "Beyin sapı tablosunda MS ve SVO ayrımı",
+     "metin": "Genç hastada farklı bölgeleri tutan, düzelen epizodlar MS hastalığını; yaşlı hastada ateroskleroz SVO hastalığını düşündürür.",
+     "neden": "2020-21 Kurul 2 çıkmışında düzelen, tekrarlayan epizodların MS ile ilişkisi sorulmuştur.",
+     "s": [
+      7
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "Bel ve bacak arkası ağrısı, aşil refleksi: birinci sakral radiks",
+     "metin": "Bel ve bacak arkasına vuran ağrı ile aşil refleksinin alınamaması 1. sakral radiks tutulumunu gösterir.",
+     "neden": "Lokalizasyon bölümünün tek kök seviyesi örneğidir; aşil refleksi ile birinci sakral kök ilişkisini verir.",
+     "s": [
+      6
+     ],
+     "cikmis": false
+    },
+    {
+     "baslik": "Tanısı öyküye dayanan hastalıklar",
+     "metin": "Migren ve trigeminal nevralji gibi hastalıkların tanısı öyküye dayanır; nörolojik belirti ve laboratuvar bulgusu yoktur, BT ve MR tanının doğru olduğunu göstermek için çekilir.",
+     "neden": "Tanının öyküyle konduğu, görüntülemenin ise tanıyı doğrulamak için çekildiği bilgisi dersin vurgusudur.",
+     "s": [
+      4
+     ],
+     "cikmis": false
+    },
+    {
+     "baslik": "Afazi ve sağ hemipleji: sol hemisfer",
+     "metin": "Afazi ile sağ hemipleji birlikteliği piramidal yol ve konuşma alanını tutar; lezyon sol hemisferdedir.",
+     "neden": "Afazi ile sağ hemipleji, lokalizasyon bölümünün ilk örneğidir.",
+     "s": [
+      6
+     ],
+     "cikmis": false
+    },
+    {
+     "baslik": "Parapleji ve seviyeli duyu kaybı: medulla spinalis",
+     "metin": "Parapleji, gövdede seviye veren duyu kaybı ve sfinkter bozukluğu birlikteliği medulla spinalis lezyonunu gösterir.",
+     "neden": "Seviye veren duyu kaybı, lokalizasyon bölümünde omurilik tablosunu belirten ifadedir.",
+     "s": [
+      6
+     ],
+     "cikmis": false
+    },
+    {
+     "baslik": "Diplopi, vertigo ve serebellar bulgu: beyin sapı",
+     "metin": "Diplopi, vertigo, piramidal bulgu ve serebellar bulgu birlikteliği lezyonun beyin sapında olduğunu gösterir.",
+     "neden": "Diplopi, vertigo, piramidal ve serebellar bulgu dörtlüsü lokalizasyon bölümünün ikinci örneğidir.",
+     "s": [
+      6
+     ],
+     "cikmis": false
+    }
+   ],
+   "klip": "a-onemli",
+   "ses": [
+    "En önemli yerler.",
+    "Bu derse ilişkin çıkmış sorular üç başlıkta toplanır: akut başlangıçlı tablo olarak hemipleji, Parkinson hastalığının ilk izlenim bulguları ve düzelen epizodlarda multipl skleroz. Başlangıç şekli, ilk izlenim ve lokalizasyon eşleştirmeleri dersin en yüksek öncelikli bilgileridir.",
+    "Parkinson hastalığının ilk izlenimi: Parkinson hastalığında maske yüz, monoton konuşma, salya akması, yürürken kolları sallamama ve vücudun fleksör postürü ilk bakışta görülür.",
+    "Nörolojik hastalıklarda başlangıç şekli: Başlangıç akut (dakika veya saat, örneğin hemipleji), sinsi (hafta, ay, yıl; beyin tümörü, dejeneratif hastalıklar) ya da dalgalı (relapsing-remitting MS) olabilir.",
+    "Beyin sapı tablosunda MS ve SVO ayrımı: Genç hastada farklı bölgeleri tutan, düzelen epizodlar MS hastalığını; yaşlı hastada ateroskleroz SVO hastalığını düşündürür.",
+    "Bel ve bacak arkası ağrısı, aşil refleksi: birinci sakral radiks: Bel ve bacak arkasına vuran ağrı ile aşil refleksinin alınamaması 1. sakral radiks tutulumunu gösterir.",
+    "Tanısı öyküye dayanan hastalıklar: Migren ve trigeminal nevralji gibi hastalıkların tanısı öyküye dayanır; nörolojik belirti ve laboratuvar bulgusu yoktur, BT ve MR tanının doğru olduğunu göstermek için çekilir.",
+    "Afazi ve sağ hemipleji: sol hemisfer: Afazi ile sağ hemipleji birlikteliği piramidal yol ve konuşma alanını tutar; lezyon sol hemisferdedir.",
+    "Parapleji ve seviyeli duyu kaybı: medulla spinalis: Parapleji, gövdede seviye veren duyu kaybı ve sfinkter bozukluğu birlikteliği medulla spinalis lezyonunu gösterir.",
+    "Diplopi, vertigo ve serebellar bulgu: beyin sapı: Diplopi, vertigo, piramidal bulgu ve serebellar bulgu birlikteliği lezyonun beyin sapında olduğunu gösterir."
+   ],
+   "v": "e971d63c51"
+  },
+  {
+   "id": "cikmis",
+   "baslik": "Çıkmış sorularda ne soruldu",
+   "giris": "Bu dersin konusundan doğrulanmış 5 çıkmış soru var.",
+   "maddeler": [
+    {
+     "baslik": "Öğrenci hatırlaması",
+     "metin": "Nörolojik hastalıkların başlangıç şekli değerlendirildiğinde, aşağıdakilerden hangisi tipik olarak akut başlangıçlı (dakikalar-saatler içinde yerleşen) bir tablodur?",
+     "cevap": "Hemipleji",
+     "s": [
+      3
+     ]
+    },
+    {
+     "baslik": "2020-2021",
+     "metin": "Hastanın muayene odasına girerken yürümesinin yavaş olması, yürürken kollarını sallamaması, maske yüz ve monoton konuşması hangi nörolojik hastalığı düşündürür?",
+     "cevap": "Parkinson hastalığı",
+     "s": [
+      5
+     ]
+    },
+    {
+     "baslik": "2021-2022 K5",
+     "metin": "Aşil refleksi ile hangi kök seviyesi incelenebilir?",
+     "cevap": "S1",
+     "s": [
+      6
+     ]
+    },
+    {
+     "baslik": "2020-2021",
+     "metin": "Muayenede sağ vücut yarımında güçsüzlük ve derin tendon reflekslerinde artış saptadığınız hastada lezyon hangisinde olamaz?",
+     "cevap": "Dorsal spinal kord",
+     "s": [
+      6
+     ]
+    },
+    {
+     "baslik": "2020-2021",
+     "metin": "Nörolojik öyküsünde sinir sisteminin farklı bölgelerinin etkilendiği, zamanla düzelen ve tekrarlayan epizodlar geçirdiği anlaşılan bir hastada en olası tanı aşağıdakilerden hangisidir?",
+     "cevap": "Multipl skleroz (MS)",
+     "s": [
+      7
+     ]
+    }
+   ],
+   "klip": "a-cikmis",
+   "ses": [
+    "Çıkmış sorularda ne soruldu.",
+    "Bu dersin konusundan doğrulanmış 5 çıkmış soru var.",
+    "Öğrenci hatırlaması: Nörolojik hastalıkların başlangıç şekli değerlendirildiğinde, aşağıdakilerden hangisi tipik olarak akut başlangıçlı (dakikalar-saatler içinde yerleşen) bir tablodur?",
+    "Cevap: Hemipleji.",
+    "2020-2021: Hastanın muayene odasına girerken yürümesinin yavaş olması, yürürken kollarını sallamaması, maske yüz ve monoton konuşması hangi nörolojik hastalığı düşündürür?",
+    "Cevap: Parkinson hastalığı.",
+    "2021-2022 K5: Aşil refleksi ile hangi kök seviyesi incelenebilir?",
+    "Cevap: S1.",
+    "2020-2021: Muayenede sağ vücut yarımında güçsüzlük ve derin tendon reflekslerinde artış saptadığınız hastada lezyon hangisinde olamaz?",
+    "Cevap: Dorsal spinal kord.",
+    "2020-2021: Nörolojik öyküsünde sinir sisteminin farklı bölgelerinin etkilendiği, zamanla düzelen ve tekrarlayan epizodlar geçirdiği anlaşılan bir hastada en olası tanı aşağıdakilerden hangisidir?",
+    "Cevap: Multipl skleroz (MS)."
+   ],
+   "v": "391370478d"
+  },
+  {
+   "id": "uslup",
+   "baslik": "Hoca nasıl soru sorar",
+   "giris": "Bu konuda çıkmış soru az; profil yalnız genel bir eğilim gösterir.",
+   "guven": "dusuk",
+   "maddeler": [
+    {
+     "baslik": "Soru kökü",
+     "metin": "Sorular çoğunlukla doğrudan bilgi sorusu (%68) ve vaka sorusu (%10) biçimindedir."
+    },
+    {
+     "baslik": "Sorulan bilgi",
+     "metin": "En çok sınıflama ve adlandırma (%29) ve tanı ve ayırıcı tanı (%29) sorulur."
+    },
+    {
+     "baslik": "Sınıflama ve adlandırma",
+     "metin": "Ortak dil: sınıflama, evre ve ad/eponim iletişim ve prognoz için gerekir."
+    },
+    {
+     "baslik": "Tanı ve ayırıcı tanı",
+     "metin": "Doğru tanı/tetkik seçimi hekimin ilk kararıdır; benzer tabloları ayırt eden TEK bulgu sorulur."
+    },
+    {
+     "baslik": "Düzey",
+     "metin": "Soruların düzeyi hatırlama (%71) ve uygulama (%29) ağırlıklıdır."
+    },
+    {
+     "baslik": "Çeldiriciler",
+     "metin": "Yanlış şıklar genellikle aynı türden başka bir kavram olarak kurulur."
+    },
+    {
+     "baslik": "Zorluk",
+     "metin": "Bu konunun sorularının zorluğu kolay-orta, tekrar eden."
+    }
+   ],
+   "klip": "a-uslup",
+   "ses": [
+    "Hoca nasıl soru sorar.",
+    "Bu konuda çıkmış soru az; profil yalnız genel bir eğilim gösterir.",
+    "Soru kökü: Sorular çoğunlukla doğrudan bilgi sorusu (%68) ve vaka sorusu (%10) biçimindedir.",
+    "Sorulan bilgi: En çok sınıflama ve adlandırma (%29) ve tanı ve ayırıcı tanı (%29) sorulur.",
+    "Sınıflama ve adlandırma: Ortak dil: sınıflama, evre ve ad/eponim iletişim ve prognoz için gerekir.",
+    "Tanı ve ayırıcı tanı: Doğru tanı/tetkik seçimi hekimin ilk kararıdır; benzer tabloları ayırt eden TEK bulgu sorulur.",
+    "Düzey: Soruların düzeyi hatırlama (%71) ve uygulama (%29) ağırlıklıdır.",
+    "Çeldiriciler: Yanlış şıklar genellikle aynı türden başka bir kavram olarak kurulur.",
+    "Zorluk: Bu konunun sorularının zorluğu kolay-orta, tekrar eden."
+   ],
+   "v": "6786bf4cc6"
+  },
+  {
+   "id": "odak",
+   "baslik": "Nelere odaklanmalısın",
+   "giris": "",
+   "maddeler": [
+    {
+     "baslik": "Parkinson hastalığı",
+     "metin": "Çıkmışlarda 2 kez soruldu. Örnek kök: Hastanın muayene odasına girerken yürümesinin yavaş olması, yürürken kollarını sallamaması, maske yüz ve monoton konuşması hangi nörolojik hastalığı düşündürür?"
+    },
+    {
+     "baslik": "Multipl skleroz (MS)",
+     "metin": "Çıkmışlarda 2 kez soruldu. Örnek kök: Nörolojik öyküsünde sinir sisteminin farklı bölgelerinin etkilendiği, zamanla düzelen ve tekrarlayan epizodlar geçirdiği anlaşılan bir hastada en olası tanı aşağıdakilerden hangisidir?"
+    },
+    {
+     "baslik": "Parkinson hastalığının ilk izlenimi",
+     "metin": "2020-21 Kurul 2 çıkmışında iki ayrı kayıtla sorulmuştur."
+    },
+    {
+     "baslik": "Nörolojik hastalıklarda başlangıç şekli",
+     "metin": "Başlangıç şekli sorusu çıkmışta hemipleji üzerinden sorulmuştur; her başlangıç türünün örnek hastalığı klasik eşleştirmedir."
+    },
+    {
+     "baslik": "Beyin sapı tablosunda MS ve SVO ayrımı",
+     "metin": "2020-21 Kurul 2 çıkmışında düzelen, tekrarlayan epizodların MS ile ilişkisi sorulmuştur."
+    },
+    {
+     "baslik": "Çalışma yolu",
+     "metin": "Okurken her başlıkta sınıflama ve adlandırma bilgisini ayrı not et; hoca en çok bunu soruyor."
+    }
+   ],
+   "klip": "a-odak",
+   "ses": [
+    "Nelere odaklanmalısın.",
+    "Parkinson hastalığı: Çıkmışlarda 2 kez soruldu. Örnek kök: Hastanın muayene odasına girerken yürümesinin yavaş olması, yürürken kollarını sallamaması, maske yüz ve monoton konuşması hangi nörolojik hastalığı düşündürür?",
+    "Multipl skleroz (MS): Çıkmışlarda 2 kez soruldu. Örnek kök: Nörolojik öyküsünde sinir sisteminin farklı bölgelerinin etkilendiği, zamanla düzelen ve tekrarlayan epizodlar geçirdiği anlaşılan bir hastada en olası tanı aşağıdakilerden hangisidir?",
+    "Parkinson hastalığının ilk izlenimi: 2020-21 Kurul 2 çıkmışında iki ayrı kayıtla sorulmuştur.",
+    "Nörolojik hastalıklarda başlangıç şekli: Başlangıç şekli sorusu çıkmışta hemipleji üzerinden sorulmuştur; her başlangıç türünün örnek hastalığı klasik eşleştirmedir.",
+    "Beyin sapı tablosunda MS ve SVO ayrımı: 2020-21 Kurul 2 çıkmışında düzelen, tekrarlayan epizodların MS ile ilişkisi sorulmuştur.",
+    "Çalışma yolu: Okurken her başlıkta sınıflama ve adlandırma bilgisini ayrı not et; hoca en çok bunu soruyor."
+   ],
+   "v": "4648da11ff"
+  }
+ ],
+ "ozet": [
+  {
+   "id": "giris",
+   "baslik": "Dersin özü",
+   "giris": "Ders, nörolojik hastaya yaklaşımın sırasını anlatır: önce öykü (yakınma, başlangıç şekli, doğal gidiş), sonra ilk izlenim ve muayene, ardından bulguların birleştirilip lokalizasyon ve etyolojinin bulunması, son olarak laboratuvar incelemeleri ve acil hastaya yaklaşım.",
+   "maddeler": [],
+   "klip": "o-giris",
+   "ses": [
+    "Dersin özü.",
+    "Ders, nörolojik hastaya yaklaşımın sırasını anlatır: önce öykü (yakınma, başlangıç şekli, doğal gidiş), sonra ilk izlenim ve muayene, ardından bulguların birleştirilip lokalizasyon ve etyolojinin bulunması, son olarak laboratuvar incelemeleri ve acil hastaya yaklaşım."
+   ],
+   "v": "90cd4afe8f"
+  },
+  {
+   "id": "2n01-03",
+   "baslik": "Nörolojik hastalıklarda başlangıç şekli",
+   "giris": "Başlangıç akut (dakika veya saat, örneğin hemipleji), sinsi (hafta, ay, yıl; beyin tümörü, dejeneratif hastalıklar) ya da dalgalı (relapsing-remitting MS) olabilir.",
+   "s": [
+    3
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "Belirtiler dakika veya saat içinde yerleşir; dersin verdiği örnek hemiplejidir."
+    },
+    {
+     "metin": "Belirtiler haftalar, aylar, yıllar içinde yerleşir; beyin tümörü ve dejeneratif hastalıklar bu gruptadır."
+    },
+    {
+     "metin": "Kötüleşme ve iyileşme dönemleri vardır; örnek relapsing-remitting MS hastalığıdır."
+    },
+    {
+     "metin": "Aynı yakınma başlangıç hızına göre farklı hastalık gruplarını düşündürür; ani gelişen hemipleji ile yavaş ilerleyen beyin tümörü ve dejeneratif hastalıklar bu özellikle ayrılır."
+    }
+   ],
+   "klip": "o-2n01-03",
+   "ses": [
+    "Nörolojik hastalıklarda başlangıç şekli.",
+    "Başlangıç akut (dakika veya saat, örneğin hemipleji), sinsi (hafta, ay, yıl; beyin tümörü, dejeneratif hastalıklar) ya da dalgalı (relapsing-remitting MS) olabilir.",
+    "Belirtiler dakika veya saat içinde yerleşir; dersin verdiği örnek hemiplejidir.",
+    "Belirtiler haftalar, aylar, yıllar içinde yerleşir; beyin tümörü ve dejeneratif hastalıklar bu gruptadır.",
+    "Kötüleşme ve iyileşme dönemleri vardır; örnek relapsing-remitting MS hastalığıdır.",
+    "Aynı yakınma başlangıç hızına göre farklı hastalık gruplarını düşündürür; ani gelişen hemipleji ile yavaş ilerleyen beyin tümörü ve dejeneratif hastalıklar bu özellikle ayrılır."
+   ],
+   "v": "0868e8370f"
+  },
+  {
+   "id": "2n01-05",
+   "baslik": "Tanısı öyküye dayanan hastalıklar",
+   "giris": "Migren ve trigeminal nevralji gibi hastalıkların tanısı öyküye dayanır; nörolojik belirti ve laboratuvar bulgusu yoktur, BT ve MR tanının doğru olduğunu göstermek için çekilir.",
+   "s": [
+    4
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "Tanısı öyküye dayanır; nörolojik belirti ve laboratuvar bulgusu yoktur."
+    },
+    {
+     "metin": "Migren gibi tanısı öyküye dayanan hastalıklardandır."
+    },
+    {
+     "metin": "BT ve MR tanıyı koydurmak için değil, tanının doğru olduğunu göstermek için çekilir."
+    },
+    {
+     "metin": "Görüntülemenin amacı sorulduğunda cevap tanıyı doğrulamaktır; tanıyı koymak ya da dışlamak değildir."
+    }
+   ],
+   "klip": "o-2n01-05",
+   "ses": [
+    "Tanısı öyküye dayanan hastalıklar.",
+    "Migren ve trigeminal nevralji gibi hastalıkların tanısı öyküye dayanır; nörolojik belirti ve laboratuvar bulgusu yoktur, BT ve MR tanının doğru olduğunu göstermek için çekilir.",
+    "Tanısı öyküye dayanır; nörolojik belirti ve laboratuvar bulgusu yoktur.",
+    "Migren gibi tanısı öyküye dayanan hastalıklardandır.",
+    "BT ve MR tanıyı koydurmak için değil, tanının doğru olduğunu göstermek için çekilir.",
+    "Görüntülemenin amacı sorulduğunda cevap tanıyı doğrulamaktır; tanıyı koymak ya da dışlamak değildir."
+   ],
+   "v": "66f7bc13a2"
+  },
+  {
+   "id": "2n01-06",
+   "baslik": "Epilepsi klinik tanıdır",
+   "giris": "Epilepsi de klinik tanıdır; EEG normalliği hastayı tanıdan uzaklaştırmaz.",
+   "s": [
+    4
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "Epilepsi tanısı klinik bulgulara, yani öyküye dayanır."
+    },
+    {
+     "metin": "EEG normal olsa da hasta epilepsiden uzaklaşmaz; normal EEG tanıyı dışlatmaz."
+    },
+    {
+     "metin": "Migren ve trigeminal nevralji gibi epilepsi de öykü ile tanınan hastalıklar arasında sayılır."
+    },
+    {
+     "metin": "Normal EEG ile epilepsi dışlanır ifadesi yanlıştır, epilepsi klinik tanıdır ifadesi doğrudur."
+    }
+   ],
+   "klip": "o-2n01-06",
+   "ses": [
+    "Epilepsi klinik tanıdır.",
+    "Epilepsi de klinik tanıdır; EEG normalliği hastayı tanıdan uzaklaştırmaz.",
+    "Epilepsi tanısı klinik bulgulara, yani öyküye dayanır.",
+    "EEG normal olsa da hasta epilepsiden uzaklaşmaz; normal EEG tanıyı dışlatmaz.",
+    "Migren ve trigeminal nevralji gibi epilepsi de öykü ile tanınan hastalıklar arasında sayılır.",
+    "Normal EEG ile epilepsi dışlanır ifadesi yanlıştır, epilepsi klinik tanıdır ifadesi doğrudur."
+   ],
+   "v": "e18e980845"
+  },
+  {
+   "id": "2n01-10",
+   "baslik": "Parkinson hastalığının ilk izlenimi",
+   "giris": "Parkinson hastalığında maske yüz, monoton konuşma, salya akması, yürürken kolları sallamama ve vücudun fleksör postürü ilk bakışta görülür.",
+   "s": [
+    5
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "Maske yüz ve monoton konuşma Parkinson hastalığının ilk bakışta görülen bulgularıdır."
+    },
+    {
+     "metin": "Salya akması da bu tabloya eşlik eder."
+    },
+    {
+     "metin": "Hasta yürürken kollarını sallamaz."
+    },
+    {
+     "metin": "Vücut fleksör postürdedir."
+    }
+   ],
+   "klip": "o-2n01-10",
+   "ses": [
+    "Parkinson hastalığının ilk izlenimi.",
+    "Parkinson hastalığında maske yüz, monoton konuşma, salya akması, yürürken kolları sallamama ve vücudun fleksör postürü ilk bakışta görülür.",
+    "Maske yüz ve monoton konuşma Parkinson hastalığının ilk bakışta görülen bulgularıdır.",
+    "Salya akması da bu tabloya eşlik eder.",
+    "Hasta yürürken kollarını sallamaz.",
+    "Vücut fleksör postürdedir."
+   ],
+   "v": "d5c96f2adb"
+  },
+  {
+   "id": "2n01-14",
+   "baslik": "Afazi ve sağ hemipleji: sol hemisfer",
+   "giris": "Afazi ile sağ hemipleji birlikteliği piramidal yol ve konuşma alanını tutar; lezyon sol hemisferdedir.",
+   "s": [
+    6
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "Afazi ve sağ hemipleji birlikte bulunur."
+    },
+    {
+     "metin": "Hemipleji piramidal yolun, afazi konuşma alanının tutulduğunu gösterir."
+    },
+    {
+     "metin": "İki bulgu birlikte tek bir bölgeye, sol hemisferdeki lezyona uyar."
+    },
+    {
+     "metin": "Diplopi, vertigo ve serebellar bulgu beyin sapını; parapleji ve seviyeli duyu kaybı medulla spinalisi gösterir."
+    }
+   ],
+   "klip": "o-2n01-14",
+   "ses": [
+    "Afazi ve sağ hemipleji: sol hemisfer.",
+    "Afazi ile sağ hemipleji birlikteliği piramidal yol ve konuşma alanını tutar; lezyon sol hemisferdedir.",
+    "Afazi ve sağ hemipleji birlikte bulunur.",
+    "Hemipleji piramidal yolun, afazi konuşma alanının tutulduğunu gösterir.",
+    "İki bulgu birlikte tek bir bölgeye, sol hemisferdeki lezyona uyar.",
+    "Diplopi, vertigo ve serebellar bulgu beyin sapını; parapleji ve seviyeli duyu kaybı medulla spinalisi gösterir."
+   ],
+   "v": "f1df531c54"
+  },
+  {
+   "id": "2n01-15",
+   "baslik": "Diplopi, vertigo ve serebellar bulgu: beyin sapı",
+   "giris": "Diplopi, vertigo, piramidal bulgu ve serebellar bulgu birlikteliği lezyonun beyin sapında olduğunu gösterir.",
+   "s": [
+    6
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "Diplopi, vertigo, piramidal bulgu ve serebellar bulgu birlikte bulunur."
+    },
+    {
+     "metin": "Bu dörtlü beyin sapı lezyonuna işaret eder."
+    },
+    {
+     "metin": "Bulgular birbirini o derece tamamlar ki sadece bir bölgeye karşılık gelir."
+    },
+    {
+     "metin": "Afazi ve sağ hemipleji sol hemisferi, parapleji ve seviyeli duyu kaybı medulla spinalisi, bel ve bacak arkası ağrısı ile aşil refleksi kaybı birinci sakral radiksi gösterir."
+    },
+    {
+     "metin": "Genç hastada kısa sürede gelişen, düzelen epizodlar öyküsü MS düşündürür."
+    }
+   ],
+   "klip": "o-2n01-15",
+   "ses": [
+    "Diplopi, vertigo ve serebellar bulgu: beyin sapı.",
+    "Diplopi, vertigo, piramidal bulgu ve serebellar bulgu birlikteliği lezyonun beyin sapında olduğunu gösterir.",
+    "Diplopi, vertigo, piramidal bulgu ve serebellar bulgu birlikte bulunur.",
+    "Bu dörtlü beyin sapı lezyonuna işaret eder.",
+    "Bulgular birbirini o derece tamamlar ki sadece bir bölgeye karşılık gelir.",
+    "Afazi ve sağ hemipleji sol hemisferi, parapleji ve seviyeli duyu kaybı medulla spinalisi, bel ve bacak arkası ağrısı ile aşil refleksi kaybı birinci sakral radiksi gösterir.",
+    "Genç hastada kısa sürede gelişen, düzelen epizodlar öyküsü MS düşündürür."
+   ],
+   "v": "0b26cf89b7"
+  },
+  {
+   "id": "2n01-16",
+   "baslik": "Parapleji ve seviyeli duyu kaybı: medulla spinalis",
+   "giris": "Parapleji, gövdede seviye veren duyu kaybı ve sfinkter bozukluğu birlikteliği medulla spinalis lezyonunu gösterir.",
+   "s": [
+    6
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "Parapleji, gövdede seviye veren duyu kaybı ve sfinkter bozukluğu birlikte bulunur."
+    },
+    {
+     "metin": "Bu üçlü medulla spinalis lezyonunu gösterir."
+    },
+    {
+     "metin": "Sinsi başlangıç ve ilerleyici seyirde medulla spinalis basısı, aşı ya da viral enfeksiyon sonrasında post-infeksiyöz miyelit düşünülür."
+    },
+    {
+     "metin": "Afazi ve sağ hemipleji sol hemisferi, diplopi ve vertigo ile serebellar bulgu beyin sapını gösterir."
+    },
+    {
+     "metin": "Seviye veren duyu kaybı denince omurilik, yani medulla spinalis akla gelir."
+    }
+   ],
+   "klip": "o-2n01-16",
+   "ses": [
+    "Parapleji ve seviyeli duyu kaybı: medulla spinalis.",
+    "Parapleji, gövdede seviye veren duyu kaybı ve sfinkter bozukluğu birlikteliği medulla spinalis lezyonunu gösterir.",
+    "Parapleji, gövdede seviye veren duyu kaybı ve sfinkter bozukluğu birlikte bulunur.",
+    "Bu üçlü medulla spinalis lezyonunu gösterir.",
+    "Sinsi başlangıç ve ilerleyici seyirde medulla spinalis basısı, aşı ya da viral enfeksiyon sonrasında post-infeksiyöz miyelit düşünülür.",
+    "Afazi ve sağ hemipleji sol hemisferi, diplopi ve vertigo ile serebellar bulgu beyin sapını gösterir.",
+    "Seviye veren duyu kaybı denince omurilik, yani medulla spinalis akla gelir."
+   ],
+   "v": "2e83eca2d2"
+  },
+  {
+   "id": "2n01-17",
+   "baslik": "Bel ve bacak arkası ağrısı, aşil refleksi: birinci sakral radiks",
+   "giris": "Bel ve bacak arkasına vuran ağrı ile aşil refleksinin alınamaması 1. sakral radiks tutulumunu gösterir.",
+   "s": [
+    6
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "Bel ve bacak arkasına vuran ağrı vardır ve aşil refleksi alınamaz."
+    },
+    {
+     "metin": "Bu ikili birinci sakral radiksi, yani S1 kökünü gösterir."
+    },
+    {
+     "metin": "Aşil refleksi birinci sakral kök seviyesinde incelenir."
+    },
+    {
+     "metin": "Afazi ve sağ hemipleji sol hemisferi, diplopi ve vertigo ile serebellar bulgu beyin sapını, parapleji ve seviyeli duyu kaybı medulla spinalisi gösterir; birinci sakral radiks bunların arasında tek bir kök seviyesi örneğidir."
+    },
+    {
+     "metin": "Bel ve bacak arkası ağrısı ile aşil refleksi kaybı birlikte S1 radiksini düşündürür."
+    }
+   ],
+   "klip": "o-2n01-17",
+   "ses": [
+    "Bel ve bacak arkası ağrısı, aşil refleksi: birinci sakral radiks.",
+    "Bel ve bacak arkasına vuran ağrı ile aşil refleksinin alınamaması 1. sakral radiks tutulumunu gösterir.",
+    "Bel ve bacak arkasına vuran ağrı vardır ve aşil refleksi alınamaz.",
+    "Bu ikili birinci sakral radiksi, yani S1 kökünü gösterir.",
+    "Aşil refleksi birinci sakral kök seviyesinde incelenir.",
+    "Afazi ve sağ hemipleji sol hemisferi, diplopi ve vertigo ile serebellar bulgu beyin sapını, parapleji ve seviyeli duyu kaybı medulla spinalisi gösterir; birinci sakral radiks bunların arasında tek bir kök seviyesi örneğidir.",
+    "Bel ve bacak arkası ağrısı ile aşil refleksi kaybı birlikte S1 radiksini düşündürür."
+   ],
+   "v": "a9c578696c"
+  },
+  {
+   "id": "2n01-18",
+   "baslik": "Hemipleji ve lezyonun natürü",
+   "giris": "Hemiplejide HT ve DM varsa ilk sırada damarsal etyoloji düşünülür; yavaş yerleşip giderek ağırlaşıyorsa YKL, malignite öyküsü varsa metastaz akla gelir.",
+   "s": [
+    7
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "Hemiplejide hipertansiyon ve diyabet birlikteliği varsa ilk sırada damarsal etyoloji düşünülür."
+    },
+    {
+     "metin": "Hemipleji yavaş yerleşmişse ve giderek ağırlaşıyorsa YKL düşünülür."
+    },
+    {
+     "metin": "Malignite öyküsü varsa metastaz akla gelir."
+    },
+    {
+     "metin": "Ani gelişen hemiplejide damarsal neden öne çıkar; yavaş ve ilerleyici seyirde yer kaplayan lezyon düşünülür."
+    }
+   ],
+   "klip": "o-2n01-18",
+   "ses": [
+    "Hemipleji ve lezyonun natürü.",
+    "Hemiplejide HT ve DM varsa ilk sırada damarsal etyoloji düşünülür; yavaş yerleşip giderek ağırlaşıyorsa YKL, malignite öyküsü varsa metastaz akla gelir.",
+    "Hemiplejide hipertansiyon ve diyabet birlikteliği varsa ilk sırada damarsal etyoloji düşünülür.",
+    "Hemipleji yavaş yerleşmişse ve giderek ağırlaşıyorsa YKL düşünülür.",
+    "Malignite öyküsü varsa metastaz akla gelir.",
+    "Ani gelişen hemiplejide damarsal neden öne çıkar; yavaş ve ilerleyici seyirde yer kaplayan lezyon düşünülür."
+   ],
+   "v": "fa0b8cd0e0"
+  },
+  {
+   "id": "2n01-19",
+   "baslik": "Beyin sapı tablosunda MS ve SVO ayrımı",
+   "giris": "Genç hastada farklı bölgeleri tutan, düzelen epizodlar MS hastalığını; yaşlı hastada ateroskleroz SVO hastalığını düşündürür.",
+   "s": [
+    7
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "Genç hastada, kısa zamanda gelişmiş beyin sapı lokalizasyonunda, öyküsünde sinir sisteminin farklı bölgelerinin etkilendiği epizodlar geçirip düzelmişse MS düşünülür."
+    },
+    {
+     "metin": "Yaşlı hastada ateroskleroz varsa SVO düşünülür."
+    },
+    {
+     "metin": "Hemiplejide yavaş yerleşip giderek ağırlaşan seyir YKL, HT ve DM zemini damarsal etyoloji içindir."
+    }
+   ],
+   "klip": "o-2n01-19",
+   "ses": [
+    "Beyin sapı tablosunda MS ve SVO ayrımı.",
+    "Genç hastada farklı bölgeleri tutan, düzelen epizodlar MS hastalığını; yaşlı hastada ateroskleroz SVO hastalığını düşündürür.",
+    "Genç hastada, kısa zamanda gelişmiş beyin sapı lokalizasyonunda, öyküsünde sinir sisteminin farklı bölgelerinin etkilendiği epizodlar geçirip düzelmişse MS düşünülür.",
+    "Yaşlı hastada ateroskleroz varsa SVO düşünülür.",
+    "Hemiplejide yavaş yerleşip giderek ağırlaşan seyir YKL, HT ve DM zemini damarsal etyoloji içindir."
+   ],
+   "v": "d511134ce0"
+  }
+ ]
+}

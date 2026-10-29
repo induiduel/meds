@@ -1,0 +1,1157 @@
+{
+ "surum": 1,
+ "key": "k2-04",
+ "kod": "2p02",
+ "kurul": 2,
+ "brans": "Patoloji",
+ "konu": "Serebrovasküler Hastalıklar ve İnme",
+ "ogretim_uyesi": "Prof. Dr. Hikmet Keleş",
+ "profil": "Tıbbi Patoloji",
+ "sesKlasor": {
+  "brans": "k2dersanaliz",
+  "kod": "2p02"
+ },
+ "analiz": [
+  {
+   "id": "anlatim",
+   "baslik": "Bu derste ne anlatılacak",
+   "giris": "Ders, serebrovasküler hastalıkların tromboz, emboli ve vasküler yırtılma mekanizmalarını; global ve fokal iskeminin morfolojik zaman çizelgesini anlatır. Ardından hipertansif kanama, serebral amiloid anjiyopati, sakküler ve keseciksiz anevrizmalar, vasküler malformasyonlar, vaskülit ve vasküler demans işlenir. Son bölümde travmatik beyin hasarı (kontüzyon, epidural ve subdural hematom) ile perinatal beyin hasarı özetlenir.",
+   "maddeler": [
+    {
+     "metin": "Kapsam, tanım ve temel mekanizmalar"
+    },
+    {
+     "metin": "Beynin metabolizması, hipoksi ve iskemi"
+    },
+    {
+     "metin": "Global serebral iskemi"
+    },
+    {
+     "metin": "Fokal serebral iskemi ve kollateral dolaşım"
+    },
+    {
+     "metin": "Enfarkt tipleri ve makroskopik evreler"
+    },
+    {
+     "metin": "Enfarktın mikroskobik gelişimi ve sınır bölgesi enfarktları"
+    },
+    {
+     "metin": "Kafa içi kanamalar ve kanama paternleri"
+    },
+    {
+     "metin": "Primer beyin parankim kanaması"
+    },
+    {
+     "metin": "Serebral amiloid anjiyopati"
+    },
+    {
+     "metin": "Sakküler anevrizma ve subaraknoid kanama"
+    },
+    {
+     "metin": "Vasküler malformasyonlar"
+    },
+    {
+     "metin": "Hipertansif serebrovasküler hastalık"
+    },
+    {
+     "metin": "Vaskülit ve vasküler demans"
+    },
+    {
+     "metin": "Merkezi sinir sistemi travması ve kontüzyon"
+    },
+    {
+     "metin": "Travmatik vasküler yaralanma ve epidural hematom"
+    },
+    {
+     "metin": "Subdural hematom"
+    },
+    {
+     "metin": "Perinatal beyin hasarı"
+    },
+    {
+     "metin": "Merkezi sinir sistemi enfeksiyonları tablosu ve özet"
+    }
+   ],
+   "klip": "a-anlatim",
+   "ses": [
+    "Bu derste ne anlatılacak.",
+    "Ders, serebrovasküler hastalıkların tromboz, emboli ve vasküler yırtılma mekanizmalarını; global ve fokal iskeminin morfolojik zaman çizelgesini anlatır. Ardından hipertansif kanama, serebral amiloid anjiyopati, sakküler ve keseciksiz anevrizmalar, vasküler malformasyonlar, vaskülit ve vasküler demans işlenir. Son bölümde travmatik beyin hasarı (kontüzyon, epidural ve subdural hematom) ile perinatal beyin hasarı özetlenir.",
+    "Kapsam, tanım ve temel mekanizmalar.",
+    "Beynin metabolizması, hipoksi ve iskemi.",
+    "Global serebral iskemi.",
+    "Fokal serebral iskemi ve kollateral dolaşım.",
+    "Enfarkt tipleri ve makroskopik evreler.",
+    "Enfarktın mikroskobik gelişimi ve sınır bölgesi enfarktları.",
+    "Kafa içi kanamalar ve kanama paternleri.",
+    "Primer beyin parankim kanaması.",
+    "Serebral amiloid anjiyopati.",
+    "Sakküler anevrizma ve subaraknoid kanama.",
+    "Vasküler malformasyonlar.",
+    "Hipertansif serebrovasküler hastalık.",
+    "Vaskülit ve vasküler demans.",
+    "Merkezi sinir sistemi travması ve kontüzyon.",
+    "Travmatik vasküler yaralanma ve epidural hematom.",
+    "Subdural hematom.",
+    "Perinatal beyin hasarı.",
+    "Merkezi sinir sistemi enfeksiyonları tablosu ve özet."
+   ],
+   "v": "72b5a27e89"
+  },
+  {
+   "id": "kazanim",
+   "baslik": "Dersin sonunda bilmen gerekenler",
+   "giris": "Bu ders bittiğinde aşağıdaki başlıkları açıklayabilmelisin.",
+   "maddeler": [
+    {
+     "baslik": "Tromboz, Emboli ve Kanama",
+     "metin": "Tromboz ve emboli sonucu:",
+     "s": [
+      6
+     ]
+    },
+    {
+     "baslik": "Beynin Metabolik Özellikleri",
+     "metin": "Sürekli glikoz ve oksijen gereksinimi vardır.",
+     "s": [
+      7
+     ]
+    },
+    {
+     "baslik": "Hipoksi ve İskemi Tipleri",
+     "metin": "şiddetli anemi, karbonmonoksit",
+     "s": [
+      9
+     ]
+    },
+    {
+     "baslik": "Global Serebral İskemi: Nedenler",
+     "metin": "Kalp durması",
+     "s": [
+      10
+     ]
+    },
+    {
+     "baslik": "Global İskemi: Klinik Şiddet Spektrumu",
+     "metin": "Geçici konfüzyon — öğrenci notu: → kafa karışıklığı",
+     "s": [
+      11
+     ]
+    },
+    {
+     "baslik": "Global İskemi ve Beyin Ölümü",
+     "metin": "Tüm istemli ve refleks beyin fonksiyonları kaybolur.",
+     "s": [
+      12
+     ]
+    },
+    {
+     "baslik": "Global İskemide En Duyarlı Nöronlar",
+     "metin": "Hipokampus piramidal hücreleri",
+     "s": [
+      13
+     ]
+    },
+    {
+     "baslik": "Global İskemi: Makroskopi",
+     "metin": "Beyin şişmiş görünür.",
+     "s": [
+      14
+     ]
+    },
+    {
+     "baslik": "Global İskemi: Histopatoloji Zaman",
+     "metin": "Nötrofil infiltrasyonu başlar.",
+     "s": [
+      15
+     ]
+    },
+    {
+     "baslik": "Global İskemi: Subakut ve Geç Dönem",
+     "metin": "Doku nekrozu",
+     "s": [
+      16
+     ]
+    },
+    {
+     "baslik": "A",
+     "metin": "ŞEKİL 21.1 Nöronal hasar modelleri — öğrenci notu: resim üstünde: C panelinde 'Fokal'",
+     "s": [
+      17
+     ]
+    },
+    {
+     "baslik": "Kollateral Dolaşım ve Riskli Bölgeler",
+     "metin": "Willis poligonu ve kortikal-leptomeningeal anastomozlar:",
+     "s": [
+      19
+     ]
+    },
+    {
+     "baslik": "Emboli Yerleşimi",
+     "metin": "İç karotis arterin devamı olan orta serebral arter bölgesi.",
+     "s": [
+      21
+     ]
+    },
+    {
+     "baslik": "Trombotik Tıkanma ve Laküner Enfarkt",
+     "metin": "aterosklerotik plaklar üzerine gelişir.",
+     "s": [
+      22
+     ]
+    },
+    {
+     "baslik": "A",
+     "metin": "çevresindeki gliyozis",
+     "s": [
+      25
+     ]
+    },
+    {
+     "baslik": "Sınır Bölgesi (Su Havzası) Enfarktları",
+     "metin": "Konveksite üzerinde kama şeklinde nekroz bandı oluşur.",
+     "s": [
+      32
+     ]
+    },
+    {
+     "baslik": "Fokal Enfarktların Klinik Özellikleri",
+     "metin": "ani",
+     "s": [
+      33
+     ]
+    },
+    {
+     "baslik": "İntrakraniyal Kanamalar: Genel Bakış",
+     "metin": "Yapısal lezyonlar (arteriyovenöz, kavernöz malformasyonlar)",
+     "s": [
+      34
+     ]
+    },
+    {
+     "baslik": "Parankim ve Subaraknoid Kanama",
+     "metin": "Tipik olarak travmaya bağlı; ayrı ele alınır.",
+     "s": [
+      36
+     ]
+    },
+    {
+     "baslik": "Parankimal Kanama: Morfoloji",
+     "metin": "Ekstravaze kan, komşu parankimi komprese eder",
+     "s": [
+      38
+     ]
+    },
+    {
+     "baslik": "A",
+     "metin": "Serebral kanama — öğrenci notu: resim üstünde: C panelinde ventrikül çevresi daire içine alınmış, ok → 'kan var (ilk kelime okunuşu belirsiz), BOS döngüsü bozulur'",
+     "s": [
+      39
+     ]
+    },
+    {
+     "baslik": "Parankimal Kanama: Klinik Özellikler",
+     "metin": "Hemipleji",
+     "s": [
+      40
+     ]
+    },
+    {
+     "baslik": "Serebral Amiloid Anjiyopati (CAA)",
+     "metin": "Damar duvarları sert ve kırılgan olur.",
+     "s": [
+      41
+     ]
+    },
+    {
+     "baslik": "CAA’ye Bağlı Kanamalar",
+     "metin": "En sık lobar kanamalar:",
+     "s": [
+      42
+     ]
+    },
+    {
+     "baslik": "Sakküler (Çilek) Anevrizma ve",
+     "metin": "Klinik olarak anlamlı, travmatik olmayan subaraknoid kanamanın en sık nedeni:",
+     "s": [
+      44
+     ]
+    },
+    {
+     "baslik": "Sakküler Anevrizma: Klinik",
+     "metin": "Olguların ~1/3’ünde rüptür: — öğrenci notu: rüptür → yırtılma",
+     "s": [
+      45
+     ]
+    },
+    {
+     "baslik": "Anterior cerebral",
+     "metin": "Sakküler anevrizmaların yaygın yerleri — öğrenci notu: resim üstünde: sağ kenarda X işareti ve daire içinde 'Geç'",
+     "s": [
+      47
+     ]
+    },
+    {
+     "baslik": "Anevrizma ve Genetik İlişki",
+     "metin": "Çap >1 cm ise yıllık rüptür riski ≈ %50.",
+     "s": [
+      48
+     ]
+    },
+    {
+     "baslik": "Sakküler Anevrizma: Morfoloji",
+     "metin": "Rüptür çoğunlukla kesenin tepesinde olur:",
+     "s": [
+      49
+     ]
+    },
+    {
+     "baslik": "Keseciksiz Anevrizmalar",
+     "metin": "Çıkmış (dogrudan): Aterosklerotikler çoğunlukla fusiform, baziler arterde.",
+     "s": [
+      51
+     ]
+    },
+    {
+     "baslik": "Vasküler Malformasyonlar: Sınıflama",
+     "metin": "Arteriyovenöz malformasyonlar (AVM’ler)",
+     "s": [
+      52
+     ]
+    },
+    {
+     "baslik": "Arteriyovenöz Malformasyon (AVM)",
+     "metin": "En tehlikeli vasküler malformasyon tipidir.",
+     "s": [
+      53
+     ]
+    },
+    {
+     "baslik": "AVM ve Diğer Malformasyonların",
+     "metin": "En sık serebellum, pons, subkortikal alanlarda.",
+     "s": [
+      54
+     ]
+    },
+    {
+     "baslik": "ŞEKİL 21.12 Arteriovenöz malformasyon.",
+     "metin": "ŞEKİL 21.12 Arteriovenöz malformasyon. — öğrenci notu: resim üstünde: lezyon alanı çevrelenmiş; 'Fokal hücre birikimi ?' ve 'gliozis ?'",
+     "s": [
+      55
+     ]
+    },
+    {
+     "baslik": "Telanjiektazi ve Venöz Anjiyom",
+     "metin": "Venöz anjiyom (venöz varis): — öğrenci notu: → genişlemesidir",
+     "s": [
+      56
+     ]
+    },
+    {
+     "baslik": "Laküner Enfarkt ve Yarık Kanama",
+     "metin": "Küçük penetran damar yırtılması ile minik kanamalar.",
+     "s": [
+      58
+     ]
+    },
+    {
+     "baslik": "Akut Hipertansif Ensefalopati",
+     "metin": "Diyastolik kan basıncı >130 mmHg. — öğrenci notu: 150",
+     "s": [
+      59
+     ]
+    },
+    {
+     "baslik": "MSS Vasküliti",
+     "metin": "Günümüzde daha çok immün yetmezlikte fırsatçı enfeksiyonlar:",
+     "s": [
+      61
+     ]
+    },
+    {
+     "baslik": "Sistemik Vaskülitler ve Serebral Tutulum",
+     "metin": "Poliarteritis nodosa gibi sistemik vaskülitler:",
+     "s": [
+      62
+     ]
+    },
+    {
+     "baslik": "Travma Tipleri ve Klinik Etki",
+     "metin": "Frontal lobda sessiz",
+     "s": [
+      66
+     ]
+    },
+    {
+     "baslik": "Travmatik Parankimal Yaralanma:",
+     "metin": "Darbe yerinde hasar (coup)",
+     "s": [
+      67
+     ]
+    },
+    {
+     "baslik": "Kontüzyon: Morfoloji ve Yaygın Akson",
+     "metin": "Kontüzyonlar kama şeklindedir",
+     "s": [
+      68
+     ]
+    },
+    {
+     "baslik": "A",
+     "metin": "ŞEKİL 21.13 Kontüzyonlar. — öğrenci notu: resim üstünde: A panelindeki oka 'Taze kan'",
+     "s": [
+      69
+     ]
+    },
+    {
+     "baslik": "Sarsıntı ve Kronik Travmatik Ensefalopati",
+     "metin": "futbol oyuncuları",
+     "s": [
+      70
+     ]
+    },
+    {
+     "baslik": "A",
+     "metin": "ŞEKİL 21.14 Travmatik intrakraniyal kanamalar. — öğrenci notu: resim üstünde: 'EPIDURAL HEMATOMA' ve 'SUBDURAL HEMATOMA' başlıkları çevrelenmiş",
+     "s": [
+      72
+     ]
+    },
+    {
+     "baslik": "Epidural Hematom",
+     "metin": "En sık kaynak:",
+     "s": [
+      73
+     ]
+    },
+    {
+     "baslik": "Epidural Hematom: Klinik",
+     "metin": "Travma sonrası kısa süre “açık” dönem",
+     "s": [
+      75
+     ]
+    },
+    {
+     "baslik": "Prematüre Bebeklerde Kanama",
+     "metin": "Ventrikül sistemine ve subaraknoid boşluğa ilerleyebilir.",
+     "s": [
+      84
+     ]
+    },
+    {
+     "baslik": "Periventriküler Lökomalazi ve Multikistik",
+     "metin": "tebeşir sarısı plaklar.",
+     "s": [
+      85
+     ]
+    }
+   ],
+   "klip": "a-kazanim",
+   "ses": [
+    "Dersin sonunda bilmen gerekenler.",
+    "Bu ders bittiğinde aşağıdaki başlıkları açıklayabilmelisin.",
+    "Tromboz, Emboli ve Kanama: Tromboz ve emboli sonucu:.",
+    "Beynin Metabolik Özellikleri: Sürekli glikoz ve oksijen gereksinimi vardır.",
+    "Hipoksi ve İskemi Tipleri: şiddetli anemi, karbonmonoksit.",
+    "Global Serebral İskemi: Nedenler: Kalp durması.",
+    "Global İskemi: Klinik Şiddet Spektrumu: Geçici konfüzyon — öğrenci notu: → kafa karışıklığı.",
+    "Global İskemi ve Beyin Ölümü: Tüm istemli ve refleks beyin fonksiyonları kaybolur.",
+    "Global İskemide En Duyarlı Nöronlar: Hipokampus piramidal hücreleri.",
+    "Global İskemi: Makroskopi: Beyin şişmiş görünür.",
+    "Global İskemi: Histopatoloji Zaman: Nötrofil infiltrasyonu başlar.",
+    "Global İskemi: Subakut ve Geç Dönem: Doku nekrozu.",
+    "A: ŞEKİL 21.1 Nöronal hasar modelleri — öğrenci notu: resim üstünde: C panelinde 'Fokal'.",
+    "Kollateral Dolaşım ve Riskli Bölgeler: Willis poligonu ve kortikal-leptomeningeal anastomozlar:.",
+    "Emboli Yerleşimi: İç karotis arterin devamı olan orta serebral arter bölgesi.",
+    "Trombotik Tıkanma ve Laküner Enfarkt: aterosklerotik plaklar üzerine gelişir.",
+    "A: çevresindeki gliyozis.",
+    "Sınır Bölgesi (Su Havzası) Enfarktları: Konveksite üzerinde kama şeklinde nekroz bandı oluşur.",
+    "Fokal Enfarktların Klinik Özellikleri: ani.",
+    "İntrakraniyal Kanamalar: Genel Bakış: Yapısal lezyonlar (arteriyovenöz, kavernöz malformasyonlar).",
+    "Parankim ve Subaraknoid Kanama: Tipik olarak travmaya bağlı; ayrı ele alınır.",
+    "Parankimal Kanama: Morfoloji: Ekstravaze kan, komşu parankimi komprese eder.",
+    "A: Serebral kanama — öğrenci notu: resim üstünde: C panelinde ventrikül çevresi daire içine alınmış, ok → 'kan var (ilk kelime okunuşu belirsiz), BOS döngüsü bozulur'.",
+    "Parankimal Kanama: Klinik Özellikler: Hemipleji.",
+    "Serebral Amiloid Anjiyopati (CAA): Damar duvarları sert ve kırılgan olur.",
+    "CAA’ye Bağlı Kanamalar: En sık lobar kanamalar:.",
+    "Sakküler (Çilek) Anevrizma ve: Klinik olarak anlamlı, travmatik olmayan subaraknoid kanamanın en sık nedeni:.",
+    "Sakküler Anevrizma: Klinik: Olguların ~1/3’ünde rüptür: — öğrenci notu: rüptür → yırtılma.",
+    "Anterior cerebral: Sakküler anevrizmaların yaygın yerleri — öğrenci notu: resim üstünde: sağ kenarda X işareti ve daire içinde 'Geç'.",
+    "Anevrizma ve Genetik İlişki: Çap >1 cm ise yıllık rüptür riski ≈ %50.",
+    "Sakküler Anevrizma: Morfoloji: Rüptür çoğunlukla kesenin tepesinde olur:.",
+    "Keseciksiz Anevrizmalar: Çıkmış (dogrudan): Aterosklerotikler çoğunlukla fusiform, baziler arterde.",
+    "Vasküler Malformasyonlar: Sınıflama: Arteriyovenöz malformasyonlar (AVM’ler).",
+    "Arteriyovenöz Malformasyon (AVM): En tehlikeli vasküler malformasyon tipidir.",
+    "AVM ve Diğer Malformasyonların: En sık serebellum, pons, subkortikal alanlarda.",
+    "ŞEKİL 21.12 Arteriovenöz malformasyon.: ŞEKİL 21.12 Arteriovenöz malformasyon. — öğrenci notu: resim üstünde: lezyon alanı çevrelenmiş; 'Fokal hücre birikimi ?' ve 'gliozis ?'.",
+    "Telanjiektazi ve Venöz Anjiyom: Venöz anjiyom (venöz varis): — öğrenci notu: → genişlemesidir.",
+    "Laküner Enfarkt ve Yarık Kanama: Küçük penetran damar yırtılması ile minik kanamalar.",
+    "Akut Hipertansif Ensefalopati: Diyastolik kan basıncı >130 mmHg. — öğrenci notu: 150.",
+    "MSS Vasküliti: Günümüzde daha çok immün yetmezlikte fırsatçı enfeksiyonlar:.",
+    "Sistemik Vaskülitler ve Serebral Tutulum: Poliarteritis nodosa gibi sistemik vaskülitler:.",
+    "Travma Tipleri ve Klinik Etki: Frontal lobda sessiz.",
+    "Travmatik Parankimal Yaralanma:: Darbe yerinde hasar (coup).",
+    "Kontüzyon: Morfoloji ve Yaygın Akson: Kontüzyonlar kama şeklindedir.",
+    "A: ŞEKİL 21.13 Kontüzyonlar. — öğrenci notu: resim üstünde: A panelindeki oka 'Taze kan'.",
+    "Sarsıntı ve Kronik Travmatik Ensefalopati: futbol oyuncuları.",
+    "A: ŞEKİL 21.14 Travmatik intrakraniyal kanamalar. — öğrenci notu: resim üstünde: 'EPIDURAL HEMATOMA' ve 'SUBDURAL HEMATOMA' başlıkları çevrelenmiş.",
+    "Epidural Hematom: En sık kaynak:.",
+    "Epidural Hematom: Klinik: Travma sonrası kısa süre “açık” dönem.",
+    "Prematüre Bebeklerde Kanama: Ventrikül sistemine ve subaraknoid boşluğa ilerleyebilir.",
+    "Periventriküler Lökomalazi ve Multikistik: tebeşir sarısı plaklar."
+   ],
+   "v": "edeb5d15f7"
+  },
+  {
+   "id": "onemli",
+   "baslik": "En önemli yerler",
+   "giris": "Bu dersin beş farklı çıkmış sorusu var: travmatik olmayan subaraknoid kanamanın en sık nedeni olarak sakküler anevrizma rüptürü 2020-21 ve 2025-26'da soruldu. Serebral amiloid anjiyopatinin lobar kanaması (2021-22), en sık vasküler malformasyon olarak AVM (2023-24) ve hipertansiyonun değiştirilebilir risk faktörü olması (2020-21) da sorulmuştur; baziler arteri tutan aterosklerotik fusiform anevrizma ise iki farklı biçimde sorulmuş bir konudur.",
+   "maddeler": [
+    {
+     "baslik": "Travmatik olmayan subaraknoid kanamanın en sık nedeni",
+     "metin": "Klinik olarak anlamlı, travmatik olmayan subaraknoid kanamanın en sık nedeni sakküler (berry) anevrizma rüptürüdür.",
+     "neden": "2020-21 ve 2025-26 sınavlarında soruldu; aynı bilgi 2025-26 Kurul 2'de bir kez daha farklı şıklarla soruldu.",
+     "s": [
+      44
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "Serebral amiloid anjiyopati ve lobar kanama",
+     "metin": "Serebral amiloid anjiyopati (CAA) en sık serebral korteks loblarında lobar kanama yapar.",
+     "neden": "2021-22'de soruldu; hipertansif kanamanın derin yerleşimiyle karıştırılması klasik çeldiricidir.",
+     "s": [
+      35,
+      41,
+      42
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "Arteriyovenöz malformasyon (AVM)",
+     "metin": "Arteriyovenöz malformasyon, beyinde en sık görülen ve kanama riski nedeniyle en tehlikeli vasküler malformasyon tipidir.",
+     "neden": "2023-24'te soruldu; slaytta hem 'en sık' hem 'en tehlikeli' malformasyon olarak vurgulanır.",
+     "s": [
+      53
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "Hipertansiyon: parankimal kanamanın en sık risk faktörü",
+     "metin": "Primer beyin parankimal kanamasının en sık risk faktörü hipertansiyondur; kanama tipik olarak bazal gangliyonlar, talamus, pons ve serebellumda yerleşir.",
+     "neden": "2020-21'de serebrovasküler olayların değiştirilebilir risk faktörü olarak soruldu; hipertansiyon dersin hemen her bölümünde tekrar eder.",
+     "s": [
+      37
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "Keseciksiz (fusiform) anevrizmalar",
+     "metin": "Keseciksiz anevrizmalardan aterosklerotik olanlar çoğunlukla fusiform biçimlidir ve baziler arterde yerleşir.",
+     "neden": "Çıkmış sorularda iki farklı biçimde soruldu: baziler arteri tutan anevrizma tipi ve fusiform anevrizmanın nedeni.",
+     "s": [
+      51
+     ],
+     "cikmis": true
+    },
+    {
+     "baslik": "Epidural hematom",
+     "metin": "Epidural hematomun en sık kaynağı a. meningea mediadır; tipik seyir kısa bir açık (lucid) dönem sonrası saatler içinde hızlı kötüleşmedir.",
+     "neden": "Tablo 21.1 ve iki ayrı slaytta işlenir; köprü ven kaynaklı subdural hematomla karıştırılması klasik tuzaktır.",
+     "s": [
+      73,
+      75
+     ],
+     "cikmis": false
+    },
+    {
+     "baslik": "Sakküler anevrizmanın yerleşimi",
+     "metin": "Sakküler anevrizmaların ~%90'ı ön dolaşımda, büyük arter bifürkasyonlarına yakın yerleşir; olguların %20–30'unda birden fazla anevrizma vardır.",
+     "neden": "Slaytta sayı olarak verilir; 'anevrizmalar doğuştandır' ifadesi klasik yanlış önermedir.",
+     "s": [
+      46
+     ],
+     "cikmis": false
+    },
+    {
+     "baslik": "Subdural hematomun mekanizması",
+     "metin": "Subdural hematom, beynin ani hareketiyle köprü venlerin yırtılması sonucu duranın iki tabakası arasında biriken venöz kanamadır.",
+     "neden": "Tablo 21.1'de 'küçük travmalardan sonra bile, gecikmeli başlangıç' olarak vurgulanır; epidural hematomla karşılaştırılarak sorulur.",
+     "s": [
+      78
+     ],
+     "cikmis": false
+    }
+   ],
+   "klip": "a-onemli",
+   "ses": [
+    "En önemli yerler.",
+    "Bu dersin beş farklı çıkmış sorusu var: travmatik olmayan subaraknoid kanamanın en sık nedeni olarak sakküler anevrizma rüptürü 2020-21 ve 2025-26'da soruldu. Serebral amiloid anjiyopatinin lobar kanaması (2021-22), en sık vasküler malformasyon olarak AVM (2023-24) ve hipertansiyonun değiştirilebilir risk faktörü olması (2020-21) da sorulmuştur; baziler arteri tutan aterosklerotik fusiform anevrizma ise iki farklı biçimde sorulmuş bir konudur.",
+    "Travmatik olmayan subaraknoid kanamanın en sık nedeni: Klinik olarak anlamlı, travmatik olmayan subaraknoid kanamanın en sık nedeni sakküler (berry) anevrizma rüptürüdür.",
+    "Serebral amiloid anjiyopati ve lobar kanama: Serebral amiloid anjiyopati (CAA) en sık serebral korteks loblarında lobar kanama yapar.",
+    "Arteriyovenöz malformasyon (AVM): Arteriyovenöz malformasyon, beyinde en sık görülen ve kanama riski nedeniyle en tehlikeli vasküler malformasyon tipidir.",
+    "Hipertansiyon: parankimal kanamanın en sık risk faktörü: Primer beyin parankimal kanamasının en sık risk faktörü hipertansiyondur; kanama tipik olarak bazal gangliyonlar, talamus, pons ve serebellumda yerleşir.",
+    "Keseciksiz (fusiform) anevrizmalar: Keseciksiz anevrizmalardan aterosklerotik olanlar çoğunlukla fusiform biçimlidir ve baziler arterde yerleşir.",
+    "Epidural hematom: Epidural hematomun en sık kaynağı a. meningea mediadır; tipik seyir kısa bir açık (lucid) dönem sonrası saatler içinde hızlı kötüleşmedir.",
+    "Sakküler anevrizmanın yerleşimi: Sakküler anevrizmaların ~%90'ı ön dolaşımda, büyük arter bifürkasyonlarına yakın yerleşir; olguların %20–30'unda birden fazla anevrizma vardır.",
+    "Subdural hematomun mekanizması: Subdural hematom, beynin ani hareketiyle köprü venlerin yırtılması sonucu duranın iki tabakası arasında biriken venöz kanamadır."
+   ],
+   "v": "331ef4a6a7"
+  },
+  {
+   "id": "cikmis",
+   "baslik": "Çıkmış sorularda ne soruldu",
+   "giris": "Bu dersin konusundan doğrulanmış 4 çıkmış soru var.",
+   "maddeler": [
+    {
+     "baslik": "2023-2024",
+     "metin": "Beyinde en sık görülen vasküler malformasyon hangisidir?",
+     "cevap": "Arteriyovenöz malformasyon (AVM)",
+     "s": [
+      53
+     ]
+    },
+    {
+     "baslik": "2020-2021",
+     "metin": "Klinik belirti veren nontravmatik subaraknoid kanamanın (SAK) en sık nedeni aşağıdakilerden hangisidir?",
+     "cevap": "Anevrizma rüptürü",
+     "s": [
+      44
+     ]
+    },
+    {
+     "baslik": "2021-2022",
+     "metin": "Sıklıkla serebral korteks loblarında kanamaya (lober hemoraji) neden olan durum hangisidir?",
+     "cevap": "Serebral amiloid anjiyopati",
+     "s": [
+      42
+     ]
+    },
+    {
+     "baslik": "Geçmiş Yıllar Çıkmışı (Arşiv)",
+     "metin": "Aşağıdaki anevrizma tiplerinden hangisi sıklıkla baziller arteri tutar?",
+     "cevap": "Aterosklerotik anevrizma",
+     "s": [
+      51
+     ]
+    }
+   ],
+   "klip": "a-cikmis",
+   "ses": [
+    "Çıkmış sorularda ne soruldu.",
+    "Bu dersin konusundan doğrulanmış 4 çıkmış soru var.",
+    "2023-2024: Beyinde en sık görülen vasküler malformasyon hangisidir?",
+    "Cevap: Arteriyovenöz malformasyon (AVM).",
+    "2020-2021: Klinik belirti veren nontravmatik subaraknoid kanamanın (SAK) en sık nedeni aşağıdakilerden hangisidir?",
+    "Cevap: Anevrizma rüptürü.",
+    "2021-2022: Sıklıkla serebral korteks loblarında kanamaya (lober hemoraji) neden olan durum hangisidir?",
+    "Cevap: Serebral amiloid anjiyopati.",
+    "Geçmiş Yıllar Çıkmışı (Arşiv): Aşağıdaki anevrizma tiplerinden hangisi sıklıkla baziller arteri tutar?",
+    "Cevap: Aterosklerotik anevrizma."
+   ],
+   "v": "b41fbd9f6a"
+  },
+  {
+   "id": "uslup",
+   "baslik": "Hoca nasıl soru sorar",
+   "giris": "Bu konuda çıkmış soru az; profil yalnız genel bir eğilim gösterir.",
+   "guven": "dusuk",
+   "maddeler": [
+    {
+     "baslik": "Soru kökü",
+     "metin": "Sorular çoğunlukla doğrudan bilgi sorusu (%42) ve olumsuz kök (hangisi değildir) (%15) biçimindedir."
+    },
+    {
+     "baslik": "Sorulan bilgi",
+     "metin": "En çok neden ve risk etkeni (%50) ve tanım ve kavram (%25) sorulur."
+    },
+    {
+     "baslik": "Neden ve risk etkeni",
+     "metin": "Neden ve risk faktörü önleme/tanıyı yönlendirir."
+    },
+    {
+     "baslik": "Tanım ve kavram",
+     "metin": "Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür."
+    },
+    {
+     "baslik": "Düzey",
+     "metin": "Soruların düzeyi hatırlama (%62) ve anlama ve ilişki kurma (%38) ağırlıklıdır."
+    },
+    {
+     "baslik": "Çeldiriciler",
+     "metin": "Yanlış şıklar genellikle aynı türden başka bir kavram ya da aynı ailedeki komşu kavram olarak kurulur."
+    },
+    {
+     "baslik": "Zorluk",
+     "metin": "Bu konunun sorularının zorluğu kolay-orta, tekrar eden."
+    }
+   ],
+   "klip": "a-uslup",
+   "ses": [
+    "Hoca nasıl soru sorar.",
+    "Bu konuda çıkmış soru az; profil yalnız genel bir eğilim gösterir.",
+    "Soru kökü: Sorular çoğunlukla doğrudan bilgi sorusu (%42) ve olumsuz kök (hangisi değildir) (%15) biçimindedir.",
+    "Sorulan bilgi: En çok neden ve risk etkeni (%50) ve tanım ve kavram (%25) sorulur.",
+    "Neden ve risk etkeni: Neden ve risk faktörü önleme/tanıyı yönlendirir.",
+    "Tanım ve kavram: Temel kavram/tanım sonraki bilgilerin dayanağıdır; terimin sınırı ölçülür.",
+    "Düzey: Soruların düzeyi hatırlama (%62) ve anlama ve ilişki kurma (%38) ağırlıklıdır.",
+    "Çeldiriciler: Yanlış şıklar genellikle aynı türden başka bir kavram ya da aynı ailedeki komşu kavram olarak kurulur.",
+    "Zorluk: Bu konunun sorularının zorluğu kolay-orta, tekrar eden."
+   ],
+   "v": "584c8983f8"
+  },
+  {
+   "id": "odak",
+   "baslik": "Nelere odaklanmalısın",
+   "giris": "",
+   "maddeler": [
+    {
+     "baslik": "Sakküler (berry) anevrizma rüptürü",
+     "metin": "Çıkmışlarda 2 kez soruldu. Örnek kök: Subaraknoid kanamanın en sık travmatik olmayan (spontan) sebebi aşağıdakilerden hangisidir?"
+    },
+    {
+     "baslik": "Travmatik olmayan subaraknoid kanamanın en sık nedeni",
+     "metin": "2020-21 ve 2025-26 sınavlarında soruldu; aynı bilgi 2025-26 Kurul 2'de bir kez daha farklı şıklarla soruldu."
+    },
+    {
+     "baslik": "Serebral amiloid anjiyopati ve lobar kanama",
+     "metin": "2021-22'de soruldu; hipertansif kanamanın derin yerleşimiyle karıştırılması klasik çeldiricidir."
+    },
+    {
+     "baslik": "Arteriyovenöz malformasyon (AVM)",
+     "metin": "2023-24'te soruldu; slaytta hem 'en sık' hem 'en tehlikeli' malformasyon olarak vurgulanır."
+    },
+    {
+     "baslik": "Hipertansiyon: parankimal kanamanın en sık risk faktörü",
+     "metin": "2020-21'de serebrovasküler olayların değiştirilebilir risk faktörü olarak soruldu; hipertansiyon dersin hemen her bölümünde tekrar eder."
+    },
+    {
+     "baslik": "Çalışma yolu",
+     "metin": "Okurken her başlıkta neden ve risk etkeni bilgisini ayrı not et; hoca en çok bunu soruyor."
+    }
+   ],
+   "klip": "a-odak",
+   "ses": [
+    "Nelere odaklanmalısın.",
+    "Sakküler (berry) anevrizma rüptürü: Çıkmışlarda 2 kez soruldu. Örnek kök: Subaraknoid kanamanın en sık travmatik olmayan (spontan) sebebi aşağıdakilerden hangisidir?",
+    "Travmatik olmayan subaraknoid kanamanın en sık nedeni: 2020-21 ve 2025-26 sınavlarında soruldu; aynı bilgi 2025-26 Kurul 2'de bir kez daha farklı şıklarla soruldu.",
+    "Serebral amiloid anjiyopati ve lobar kanama: 2021-22'de soruldu; hipertansif kanamanın derin yerleşimiyle karıştırılması klasik çeldiricidir.",
+    "Arteriyovenöz malformasyon (AVM): 2023-24'te soruldu; slaytta hem 'en sık' hem 'en tehlikeli' malformasyon olarak vurgulanır.",
+    "Hipertansiyon: parankimal kanamanın en sık risk faktörü: 2020-21'de serebrovasküler olayların değiştirilebilir risk faktörü olarak soruldu; hipertansiyon dersin hemen her bölümünde tekrar eder.",
+    "Çalışma yolu: Okurken her başlıkta neden ve risk etkeni bilgisini ayrı not et; hoca en çok bunu soruyor."
+   ],
+   "v": "15ad1900f6"
+  }
+ ],
+ "ozet": [
+  {
+   "id": "giris",
+   "baslik": "Dersin özü",
+   "giris": "Ders, serebrovasküler hastalıkların tromboz, emboli ve vasküler yırtılma mekanizmalarını; global ve fokal iskeminin morfolojik zaman çizelgesini anlatır. Ardından hipertansif kanama, serebral amiloid anjiyopati, sakküler ve keseciksiz anevrizmalar, vasküler malformasyonlar, vaskülit ve vasküler demans işlenir. Son bölümde travmatik beyin hasarı (kontüzyon, epidural ve subdural hematom) ile perinatal beyin hasarı özetlenir.",
+   "maddeler": [],
+   "klip": "o-giris",
+   "ses": [
+    "Dersin özü.",
+    "Ders, serebrovasküler hastalıkların tromboz, emboli ve vasküler yırtılma mekanizmalarını; global ve fokal iskeminin morfolojik zaman çizelgesini anlatır. Ardından hipertansif kanama, serebral amiloid anjiyopati, sakküler ve keseciksiz anevrizmalar, vasküler malformasyonlar, vaskülit ve vasküler demans işlenir. Son bölümde travmatik beyin hasarı (kontüzyon, epidural ve subdural hematom) ile perinatal beyin hasarı özetlenir."
+   ],
+   "v": "5d3e875860"
+  },
+  {
+   "id": "2p02-10",
+   "baslik": "Global iskemiye en duyarlı nöronlar",
+   "giris": "Global iskemiye en duyarlı hücreler hipokampus ve neokorteks piramidal hücreleri ile serebellum Purkinje hücreleridir.",
+   "s": [
+    13
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "Nöronlar hipoksiye glia hücrelerinden (astrosit, oligodendrosit) daha duyarlıdır; benzer iskemik değişiklikler astrosit ve oligodendrositlerde daha sonra ortaya çıkar."
+    },
+    {
+     "metin": "Hipokampus piramidal hücreleri, neokorteks piramidal hücreleri ve serebellum Purkinje hücreleri."
+    },
+    {
+     "metin": "Hafif veya geçici iskemi bile bu alanlarda hasar bırakabilir. Orta–ağır global iskemide hasar bu bölgesel duyarlı alanlarda yoğunlaşır."
+    },
+    {
+     "metin": "Yaygın nöronal ölüm, kalıcı ağır nörolojik defisit ya da kalıcı vejetatif durum gelişir."
+    },
+    {
+     "metin": "Kalp durması, şok, şiddetli hipotansiyon ve kanın oksijen taşıma kapasitesinin azalması (ör. karbonmonoksit zehirlenmesi) global iskemi yapar."
+    }
+   ],
+   "klip": "o-2p02-10",
+   "ses": [
+    "Global iskemiye en duyarlı nöronlar.",
+    "Global iskemiye en duyarlı hücreler hipokampus ve neokorteks piramidal hücreleri ile serebellum Purkinje hücreleridir.",
+    "Nöronlar hipoksiye glia hücrelerinden (astrosit, oligodendrosit) daha duyarlıdır; benzer iskemik değişiklikler astrosit ve oligodendrositlerde daha sonra ortaya çıkar.",
+    "Hipokampus piramidal hücreleri, neokorteks piramidal hücreleri ve serebellum Purkinje hücreleri.",
+    "Hafif veya geçici iskemi bile bu alanlarda hasar bırakabilir. Orta–ağır global iskemide hasar bu bölgesel duyarlı alanlarda yoğunlaşır.",
+    "Yaygın nöronal ölüm, kalıcı ağır nörolojik defisit ya da kalıcı vejetatif durum gelişir.",
+    "Kalp durması, şok, şiddetli hipotansiyon ve kanın oksijen taşıma kapasitesinin azalması (ör. karbonmonoksit zehirlenmesi) global iskemi yapar."
+   ],
+   "v": "4b4dd4f925"
+  },
+  {
+   "id": "2p02-02",
+   "baslik": "Serebral amiloid anjiyopati ve lobar kanama",
+   "giris": "Serebral amiloid anjiyopati (CAA) en sık serebral korteks loblarında lobar kanama yapar.",
+   "s": [
+    35,
+    41,
+    42
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "Serebral amiloid anjiyopatide orta ve küçük boyutlu meningeal ve kortikal damarların duvarında amiloid birikir. Biriken amiloid, Alzheimer hastalığındaki peptitlere benzer (immünohistokimyada amiloid Aβ proteini gösterilir)."
+    },
+    {
+     "metin": "Damar duvarları sert ve kırılgan hale gelir, bu da kanamaya zemin hazırlar."
+    },
+    {
+     "metin": "En sık serebral korteks loblarında lobar kanama görülür; kanama sıklıkla subkortikal beyaz cevheri tutar ve çoğunlukla subaraknoid aralığa doğru uzanır. Ayrıca genellikle sessiz, 1 mm'den küçük kortikal mikrokanamalar oluşur."
+    },
+    {
+     "metin": "Hipertansif kanama derin beyaz cevherde, talamusta, bazal gangliyonlarda veya beyin sapında merkezlenir ve ventrikül sistemine yayılabilir; CAA ise bundan farklı, lobar bir dağılım gösterir."
+    },
+    {
+     "metin": "Kavernöz malformasyon en sık serebellum, pons ve subkortikal alanlarda; sakküler anevrizma ise subaraknoid kanama ile; travmatik kontüzyon kanaması girus tepelerinde, frontal ve temporal uçlarda görülür."
+    },
+    {
+     "metin": "Görüntüleme ve patoloji bulguları önemlidir."
+    }
+   ],
+   "klip": "o-2p02-02",
+   "ses": [
+    "Serebral amiloid anjiyopati ve lobar kanama.",
+    "Serebral amiloid anjiyopati (CAA) en sık serebral korteks loblarında lobar kanama yapar.",
+    "Serebral amiloid anjiyopatide orta ve küçük boyutlu meningeal ve kortikal damarların duvarında amiloid birikir. Biriken amiloid, Alzheimer hastalığındaki peptitlere benzer (immünohistokimyada amiloid Aβ proteini gösterilir).",
+    "Damar duvarları sert ve kırılgan hale gelir, bu da kanamaya zemin hazırlar.",
+    "En sık serebral korteks loblarında lobar kanama görülür; kanama sıklıkla subkortikal beyaz cevheri tutar ve çoğunlukla subaraknoid aralığa doğru uzanır. Ayrıca genellikle sessiz, 1 mm'den küçük kortikal mikrokanamalar oluşur.",
+    "Hipertansif kanama derin beyaz cevherde, talamusta, bazal gangliyonlarda veya beyin sapında merkezlenir ve ventrikül sistemine yayılabilir; CAA ise bundan farklı, lobar bir dağılım gösterir.",
+    "Kavernöz malformasyon en sık serebellum, pons ve subkortikal alanlarda; sakküler anevrizma ise subaraknoid kanama ile; travmatik kontüzyon kanaması girus tepelerinde, frontal ve temporal uçlarda görülür.",
+    "Görüntüleme ve patoloji bulguları önemlidir."
+   ],
+   "v": "8b6854fdb1"
+  },
+  {
+   "id": "2p02-04",
+   "baslik": "Hipertansiyon: parankimal kanamanın en sık risk faktörü",
+   "giris": "Primer beyin parankimal kanamasının en sık risk faktörü hipertansiyondur; kanama tipik olarak bazal gangliyonlar, talamus, pons ve serebellumda yerleşir.",
+   "s": [
+    37
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "Primer beyin parankimal kanamasında en sık risk faktörü hipertansiyondur; klinik olarak önemli parankimal kanamaların %50'den fazlası ve kronik hipertansiyonlu bireylerdeki ölümlerin yaklaşık %15'i buna bağlıdır."
+    },
+    {
+     "metin": "Orta–ileri erişkinlikte görülür, en sık 60 yaş civarındadır."
+    },
+    {
+     "metin": "Bazal gangliyonlar, talamus, pons ve serebellum; kanama ventrikül sistemine doğru yayılabilir."
+    },
+    {
+     "metin": "Hipertansiyon derin penetran arter ve arteriyollerde hiyalin arteriyoloskleroz yapar; damar duvarı zayıflar, yırtılmaya eğilim ve 300 µm'den küçük damarlarda minik anevrizmalar oluşur. Aynı zemin laküner enfarkt ve yarık kanamaya da yol açar."
+    },
+    {
+     "metin": "Hipertansiyonda kan basıncı düşürülebilir; akut hipertansif ensefalopatide kan basıncının hızla düşürülmesi yaşamsaldır."
+    }
+   ],
+   "klip": "o-2p02-04",
+   "ses": [
+    "Hipertansiyon: parankimal kanamanın en sık risk faktörü.",
+    "Primer beyin parankimal kanamasının en sık risk faktörü hipertansiyondur; kanama tipik olarak bazal gangliyonlar, talamus, pons ve serebellumda yerleşir.",
+    "Primer beyin parankimal kanamasında en sık risk faktörü hipertansiyondur; klinik olarak önemli parankimal kanamaların %50'den fazlası ve kronik hipertansiyonlu bireylerdeki ölümlerin yaklaşık %15'i buna bağlıdır.",
+    "Orta–ileri erişkinlikte görülür, en sık 60 yaş civarındadır.",
+    "Bazal gangliyonlar, talamus, pons ve serebellum; kanama ventrikül sistemine doğru yayılabilir.",
+    "Hipertansiyon derin penetran arter ve arteriyollerde hiyalin arteriyoloskleroz yapar; damar duvarı zayıflar, yırtılmaya eğilim ve 300 µm'den küçük damarlarda minik anevrizmalar oluşur. Aynı zemin laküner enfarkt ve yarık kanamaya da yol açar.",
+    "Hipertansiyonda kan basıncı düşürülebilir; akut hipertansif ensefalopatide kan basıncının hızla düşürülmesi yaşamsaldır."
+   ],
+   "v": "6b7ecee5e3"
+  },
+  {
+   "id": "2p02-01",
+   "baslik": "Travmatik olmayan subaraknoid kanamanın en sık nedeni",
+   "giris": "Klinik olarak anlamlı, travmatik olmayan subaraknoid kanamanın en sık nedeni sakküler (berry) anevrizma rüptürüdür.",
+   "s": [
+    44
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "Travmatik olmayan, klinik olarak anlamlı subaraknoid kanamanın en sık nedeni sakküler (berry, çilek) anevrizmanın yırtılmasıdır."
+    },
+    {
+     "metin": "Vasküler malformasyon (ör. arteriyovenöz malformasyon), travma, intraserebral kanamanın ventriküle yırtılması, koagülopati ve tümörler de subaraknoid kanama yapabilir; ancak hiçbiri anevrizma rüptürü kadar sık değildir."
+    },
+    {
+     "metin": "Serebral amiloid anjiyopati tipik olarak korteks loblarında lobar kanama yapar; hipertansiyon ise derin beyaz cevher, talamus, bazal gangliyonlar ve beyin sapında kanamaya yol açar."
+    },
+    {
+     "metin": "Düşük akımlıdır, belirgin arteriyovenöz şant göstermez; çevresinde eski kanama odakları bulunur."
+    },
+    {
+     "metin": "Arter basıncı altındaki kan subaraknoid boşluğa fışkırır; hasta 'hayatımın en kötü baş ağrısı' diye tarif eder, sıklıkla hızla bilinç kaybı gelişir."
+    }
+   ],
+   "klip": "o-2p02-01",
+   "ses": [
+    "Travmatik olmayan subaraknoid kanamanın en sık nedeni.",
+    "Klinik olarak anlamlı, travmatik olmayan subaraknoid kanamanın en sık nedeni sakküler (berry) anevrizma rüptürüdür.",
+    "Travmatik olmayan, klinik olarak anlamlı subaraknoid kanamanın en sık nedeni sakküler (berry, çilek) anevrizmanın yırtılmasıdır.",
+    "Vasküler malformasyon (ör. arteriyovenöz malformasyon), travma, intraserebral kanamanın ventriküle yırtılması, koagülopati ve tümörler de subaraknoid kanama yapabilir; ancak hiçbiri anevrizma rüptürü kadar sık değildir.",
+    "Serebral amiloid anjiyopati tipik olarak korteks loblarında lobar kanama yapar; hipertansiyon ise derin beyaz cevher, talamus, bazal gangliyonlar ve beyin sapında kanamaya yol açar.",
+    "Düşük akımlıdır, belirgin arteriyovenöz şant göstermez; çevresinde eski kanama odakları bulunur.",
+    "Arter basıncı altındaki kan subaraknoid boşluğa fışkırır; hasta 'hayatımın en kötü baş ağrısı' diye tarif eder, sıklıkla hızla bilinç kaybı gelişir."
+   ],
+   "v": "f0d913be7c"
+  },
+  {
+   "id": "2p02-09",
+   "baslik": "Anevrizma rüptürünün kliniği",
+   "giris": "Anevrizma rüptüründe hasta 'hayatımın en kötü baş ağrısı' tarif eder; ilk kanamada mortalite %25–50'dir.",
+   "s": [
+    45
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "Olguların yaklaşık üçte birinde rüptür, Valsalva manevrası (ağız ve burun kapalıyken nefes vermeye çalışma) veya cinsel orgazm gibi intrakraniyal basıncı artıran durumlarla ilişkilidir."
+    },
+    {
+     "metin": "Arter basıncı altındaki kan subaraknoid boşluğa fışkırır."
+    },
+    {
+     "metin": "'Hayatımın en kötü baş ağrısı', 'şimşek çakması gibi baş ağrısı'; sıklıkla hızla bilinç kaybı gelişir."
+    },
+    {
+     "metin": "İlk kanamada %25–50'dir. Sağ kalanlarda tekrar kanama sıktır ve her epizotta prognoz kötüleşir."
+    },
+    {
+     "metin": "Erken dönemde vazospazma bağlı iskemik hasar riski vardır; meninks fibrozisi de BOS akımını ve emilimini bozarak hidrosefaliye yol açar."
+    },
+    {
+     "metin": "Sakküler anevrizma doğuştan değildir; damar medyasındaki yapısal kusur zemininde zamanla gelişir."
+    }
+   ],
+   "klip": "o-2p02-09",
+   "ses": [
+    "Anevrizma rüptürünün kliniği.",
+    "Anevrizma rüptüründe hasta 'hayatımın en kötü baş ağrısı' tarif eder; ilk kanamada mortalite %25–50'dir.",
+    "Olguların yaklaşık üçte birinde rüptür, Valsalva manevrası (ağız ve burun kapalıyken nefes vermeye çalışma) veya cinsel orgazm gibi intrakraniyal basıncı artıran durumlarla ilişkilidir.",
+    "Arter basıncı altındaki kan subaraknoid boşluğa fışkırır.",
+    "'Hayatımın en kötü baş ağrısı', 'şimşek çakması gibi baş ağrısı'; sıklıkla hızla bilinç kaybı gelişir.",
+    "İlk kanamada %25–50'dir. Sağ kalanlarda tekrar kanama sıktır ve her epizotta prognoz kötüleşir.",
+    "Erken dönemde vazospazma bağlı iskemik hasar riski vardır; meninks fibrozisi de BOS akımını ve emilimini bozarak hidrosefaliye yol açar.",
+    "Sakküler anevrizma doğuştan değildir; damar medyasındaki yapısal kusur zemininde zamanla gelişir."
+   ],
+   "v": "1197c11acb"
+  },
+  {
+   "id": "2p02-07",
+   "baslik": "Sakküler anevrizmanın yerleşimi",
+   "giris": "Sakküler anevrizmaların ~%90'ı ön dolaşımda, büyük arter bifürkasyonlarına yakın yerleşir; olguların %20–30'unda birden fazla anevrizma vardır.",
+   "s": [
+    46
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "Sakküler anevrizmaların yaklaşık %90'ı ön dolaşımda ve büyük arter bifürkasyonlarına yakın bölgelerde bulunur (Willis poligonu çevresi)."
+    },
+    {
+     "metin": "Olguların %20–30'unda birden fazla anevrizma vardır."
+    },
+    {
+     "metin": "Anevrizma doğuştan değildir; damar medyasındaki yapısal bir kusur zemininde zamanla gelişir."
+    },
+    {
+     "metin": "Baziler arterde daha çok aterosklerotik, fusiform keseciksiz anevrizmalar görülür; sakküler anevrizma arka dolaşımda seyrektir."
+    },
+    {
+     "metin": "Olguların yaklaşık üçte birinde rüptür, Valsalva manevrası veya cinsel orgazm gibi intrakraniyal basıncı artıran durumlarla ilişkilidir."
+    }
+   ],
+   "klip": "o-2p02-07",
+   "ses": [
+    "Sakküler anevrizmanın yerleşimi.",
+    "Sakküler anevrizmaların ~%90'ı ön dolaşımda, büyük arter bifürkasyonlarına yakın yerleşir; olguların %20–30'unda birden fazla anevrizma vardır.",
+    "Sakküler anevrizmaların yaklaşık %90'ı ön dolaşımda ve büyük arter bifürkasyonlarına yakın bölgelerde bulunur (Willis poligonu çevresi).",
+    "Olguların %20–30'unda birden fazla anevrizma vardır.",
+    "Anevrizma doğuştan değildir; damar medyasındaki yapısal bir kusur zemininde zamanla gelişir.",
+    "Baziler arterde daha çok aterosklerotik, fusiform keseciksiz anevrizmalar görülür; sakküler anevrizma arka dolaşımda seyrektir.",
+    "Olguların yaklaşık üçte birinde rüptür, Valsalva manevrası veya cinsel orgazm gibi intrakraniyal basıncı artıran durumlarla ilişkilidir."
+   ],
+   "v": "9f57d9ef8e"
+  },
+  {
+   "id": "2p02-05",
+   "baslik": "Keseciksiz (fusiform) anevrizmalar",
+   "giris": "Keseciksiz anevrizmalardan aterosklerotik olanlar çoğunlukla fusiform biçimlidir ve baziler arterde yerleşir.",
+   "s": [
+    51
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "Keseciksiz intrakraniyal anevrizmalar aterosklerotik, mikotik, travmatik ve diseksiyonel olmak üzere dört tiptir."
+    },
+    {
+     "metin": "Keseciksiz anevrizmalar genellikle ön dolaşımdadır; ancak aterosklerotik anevrizmalar çoğunlukla fusiform biçimlidir ve baziler arterde yerleşir. Dolayısıyla baziler arterdeki fusiform anevrizmanın altta yatan nedeni ateroskleroz olarak düşünülür."
+    },
+    {
+     "metin": "İğ biçiminde, ortası geniş, uçlara doğru incelen genişlemedir."
+    },
+    {
+     "metin": "Bu anevrizmalar sıklıkla vasküler tıkanıklığa bağlı serebral enfarkt ile ortaya çıkar; subaraknoid kanama daha nadirdir."
+    },
+    {
+     "metin": "Sakküler anevrizmaların yaklaşık %90'ı ön dolaşımda, büyük arter bifürkasyonlarına yakın yerleşir ve damar medyasındaki yapısal kusur zemininde zamanla gelişir; keseciksiz tipler ise kese yapısı göstermez."
+    }
+   ],
+   "klip": "o-2p02-05",
+   "ses": [
+    "Keseciksiz (fusiform) anevrizmalar.",
+    "Keseciksiz anevrizmalardan aterosklerotik olanlar çoğunlukla fusiform biçimlidir ve baziler arterde yerleşir.",
+    "Keseciksiz intrakraniyal anevrizmalar aterosklerotik, mikotik, travmatik ve diseksiyonel olmak üzere dört tiptir.",
+    "Keseciksiz anevrizmalar genellikle ön dolaşımdadır; ancak aterosklerotik anevrizmalar çoğunlukla fusiform biçimlidir ve baziler arterde yerleşir. Dolayısıyla baziler arterdeki fusiform anevrizmanın altta yatan nedeni ateroskleroz olarak düşünülür.",
+    "İğ biçiminde, ortası geniş, uçlara doğru incelen genişlemedir.",
+    "Bu anevrizmalar sıklıkla vasküler tıkanıklığa bağlı serebral enfarkt ile ortaya çıkar; subaraknoid kanama daha nadirdir.",
+    "Sakküler anevrizmaların yaklaşık %90'ı ön dolaşımda, büyük arter bifürkasyonlarına yakın yerleşir ve damar medyasındaki yapısal kusur zemininde zamanla gelişir; keseciksiz tipler ise kese yapısı göstermez."
+   ],
+   "v": "9755b14fc0"
+  },
+  {
+   "id": "2p02-03",
+   "baslik": "Arteriyovenöz malformasyon (AVM)",
+   "giris": "Arteriyovenöz malformasyon, beyinde en sık görülen ve kanama riski nedeniyle en tehlikeli vasküler malformasyon tipidir.",
+   "s": [
+    53
+   ],
+   "cikmis": true,
+   "maddeler": [
+    {
+     "metin": "Beyin damar malformasyonları dört ana tiptir: arteriyovenöz malformasyon, kavernöz malformasyon, kapiller telanjiektazi ve venöz anjiyom. Sakküler (berry) anevrizma bu sınıflamada yer almaz."
+    },
+    {
+     "metin": "AVM en sık görülen malformasyon tipidir; erkeklerde kadınlara göre yaklaşık 2 kat daha sıktır."
+    },
+    {
+     "metin": "Genellikle 10–30 yaş arasında nöbet, intraserebral kanama veya subaraknoid kanama ile belirti verir. Yenidoğandaki büyük AVM, arter–ven şantı nedeniyle yüksek debili kalp yetmezliği yapabilir."
+    },
+    {
+     "metin": "Kanama riski nedeniyle en tehlikeli vasküler malformasyon tipidir."
+    },
+    {
+     "metin": "Çoklu AVM'ler, TGF-β yolunu etkileyen mutasyonlarla ilişkili kalıtsal hemorajik telanjiektazide görülebilir."
+    },
+    {
+     "metin": "Makroskopide solucan benzeri, kıvrımlı vasküler kanal ağı; mikroskopide gliotik dokuyla ayrılmış genişlemiş damarlar ve sıklıkla eski kanama bulguları vardır."
+    },
+    {
+     "metin": "Kapiller telanjiektazi ve venöz anjiyom genellikle asemptomatiktir ve tesadüfen saptanır."
+    }
+   ],
+   "klip": "o-2p02-03",
+   "ses": [
+    "Arteriyovenöz malformasyon (AVM).",
+    "Arteriyovenöz malformasyon, beyinde en sık görülen ve kanama riski nedeniyle en tehlikeli vasküler malformasyon tipidir.",
+    "Beyin damar malformasyonları dört ana tiptir: arteriyovenöz malformasyon, kavernöz malformasyon, kapiller telanjiektazi ve venöz anjiyom. Sakküler (berry) anevrizma bu sınıflamada yer almaz.",
+    "AVM en sık görülen malformasyon tipidir; erkeklerde kadınlara göre yaklaşık 2 kat daha sıktır.",
+    "Genellikle 10–30 yaş arasında nöbet, intraserebral kanama veya subaraknoid kanama ile belirti verir. Yenidoğandaki büyük AVM, arter–ven şantı nedeniyle yüksek debili kalp yetmezliği yapabilir.",
+    "Kanama riski nedeniyle en tehlikeli vasküler malformasyon tipidir.",
+    "Çoklu AVM'ler, TGF-β yolunu etkileyen mutasyonlarla ilişkili kalıtsal hemorajik telanjiektazide görülebilir.",
+    "Makroskopide solucan benzeri, kıvrımlı vasküler kanal ağı; mikroskopide gliotik dokuyla ayrılmış genişlemiş damarlar ve sıklıkla eski kanama bulguları vardır.",
+    "Kapiller telanjiektazi ve venöz anjiyom genellikle asemptomatiktir ve tesadüfen saptanır."
+   ],
+   "v": "4eab44dc34"
+  },
+  {
+   "id": "2p02-06",
+   "baslik": "Epidural hematom",
+   "giris": "Epidural hematomun en sık kaynağı a. meningea mediadır; tipik seyir kısa bir açık (lucid) dönem sonrası saatler içinde hızlı kötüleşmedir.",
+   "s": [
+    73,
+    75
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "En sık dural damarlar, özellikle a. meningea media (orta meningeal arter) yırtılır."
+    },
+    {
+     "metin": "Çocuk ve erişkinlerde genellikle kafa kırığı ile birliktedir; bebeklerde kafatası kolay deforme olduğu için kırık olmadan da damar yırtılabilir."
+    },
+    {
+     "metin": "Arter basıncıyla gelen kan durayı kafatasının iç yüzeyinden ayırır ve beyin yüzeyini komprese eden hematom oluşturur; kan dura ile kafatası arasında birikir."
+    },
+    {
+     "metin": "BT'de mercek şeklinde, duranın sıkıca yapıştığı kranial sütürlerle sınırlı parlak bir kitledir; ventriküllerin silinmesi ve orta hat kayması görülebilir."
+    },
+    {
+     "metin": "Travma sonrası kısa bir 'açık' dönem, ardından saatler içinde hızla kötüleşen nörolojik bulgular gelişir. Hızla genişleyerek hayatı tehdit eder; nöroşirürjik acil durumdur, acil boşaltım ve damar tamiri gerekir."
+    },
+    {
+     "metin": "Subdural hematom köprü venlerin yırtılmasıyla oluşan venöz kanamadır ve belirtileri daha yavaş ilerler."
+    }
+   ],
+   "klip": "o-2p02-06",
+   "ses": [
+    "Epidural hematom.",
+    "Epidural hematomun en sık kaynağı a. meningea mediadır; tipik seyir kısa bir açık (lucid) dönem sonrası saatler içinde hızlı kötüleşmedir.",
+    "En sık dural damarlar, özellikle a. meningea media (orta meningeal arter) yırtılır.",
+    "Çocuk ve erişkinlerde genellikle kafa kırığı ile birliktedir; bebeklerde kafatası kolay deforme olduğu için kırık olmadan da damar yırtılabilir.",
+    "Arter basıncıyla gelen kan durayı kafatasının iç yüzeyinden ayırır ve beyin yüzeyini komprese eden hematom oluşturur; kan dura ile kafatası arasında birikir.",
+    "BT'de mercek şeklinde, duranın sıkıca yapıştığı kranial sütürlerle sınırlı parlak bir kitledir; ventriküllerin silinmesi ve orta hat kayması görülebilir.",
+    "Travma sonrası kısa bir 'açık' dönem, ardından saatler içinde hızla kötüleşen nörolojik bulgular gelişir. Hızla genişleyerek hayatı tehdit eder; nöroşirürjik acil durumdur, acil boşaltım ve damar tamiri gerekir.",
+    "Subdural hematom köprü venlerin yırtılmasıyla oluşan venöz kanamadır ve belirtileri daha yavaş ilerler."
+   ],
+   "v": "3a5fb29604"
+  },
+  {
+   "id": "2p02-08",
+   "baslik": "Subdural hematomun mekanizması",
+   "giris": "Subdural hematom, beynin ani hareketiyle köprü venlerin yırtılması sonucu duranın iki tabakası arasında biriken venöz kanamadır.",
+   "s": [
+    78
+   ],
+   "cikmis": false,
+   "maddeler": [
+    {
+     "metin": "Beynin ani hareketiyle köprü venler yırtılır; bu venler korteks yüzeyinden dural sinüslere (superior sagittal sinüs) uzanır."
+    },
+    {
+     "metin": "Kan duranın iki tabakası arasına birikir, dura ile araknoid arasında gibi görünür."
+    },
+    {
+     "metin": "Beyin atrofisinde köprü venler gerilmiştir ve beyin kafatası içinde daha fazla hareket edebilir; bu yüzden küçük travmalarda bile subdural hematom riski artar."
+    },
+    {
+     "metin": "İnce duvarlı köprü venler nedeniyle risk altındadır."
+    },
+    {
+     "metin": "Küçük travmalardan sonra bile gelişebilir; nörolojik belirtiler yavaş ve ilerleyicidir, travmadan belirli bir süre sonra ortaya çıkar."
+    },
+    {
+     "metin": "Epidural hematom arteriyel kanamadır (a. meningea media), genellikle kafa kırığıyla birliktedir ve saatler içinde hızla kötüleşir."
+    }
+   ],
+   "klip": "o-2p02-08",
+   "ses": [
+    "Subdural hematomun mekanizması.",
+    "Subdural hematom, beynin ani hareketiyle köprü venlerin yırtılması sonucu duranın iki tabakası arasında biriken venöz kanamadır.",
+    "Beynin ani hareketiyle köprü venler yırtılır; bu venler korteks yüzeyinden dural sinüslere (superior sagittal sinüs) uzanır.",
+    "Kan duranın iki tabakası arasına birikir, dura ile araknoid arasında gibi görünür.",
+    "Beyin atrofisinde köprü venler gerilmiştir ve beyin kafatası içinde daha fazla hareket edebilir; bu yüzden küçük travmalarda bile subdural hematom riski artar.",
+    "İnce duvarlı köprü venler nedeniyle risk altındadır.",
+    "Küçük travmalardan sonra bile gelişebilir; nörolojik belirtiler yavaş ve ilerleyicidir, travmadan belirli bir süre sonra ortaya çıkar.",
+    "Epidural hematom arteriyel kanamadır (a. meningea media), genellikle kafa kırığıyla birliktedir ve saatler içinde hızla kötüleşir."
+   ],
+   "v": "1a87ba5009"
+  }
+ ]
+}
