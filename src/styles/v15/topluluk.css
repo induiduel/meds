@@ -210,3 +210,40 @@
 :root[data-mode="dark"] .tp15-av { background: oklch(0.36 0.07 var(--t, 250)); color: oklch(0.9 0.07 var(--t, 250)); }
 :root[data-mode="dark"] .tp15-ad-ust, :root[data-mode="dark"] .tp15-alinti b { color: oklch(0.78 0.12 var(--t)); }
 :root[data-mode="dark"] .tp15-m:not(.is-ben) .tp15-balon { background: var(--color-surface-2, var(--color-white)); }
+
+/* ── WhatsApp düzeni (2026-10-29): kuyruklu balonlar, varsayılan desenli zemin, yazıyor göstergesi ── */
+.tp15-zemin:not([data-tema])::before { content: ''; position: absolute; inset: 0; z-index: 0; pointer-events: none; background: var(--color-ink); opacity: .05;
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M18 14h6v6h6v6h-6v6h-6v-6h-6v-6h6z'/%3E%3Crect x='72' y='18' width='28' height='12' rx='6' transform='rotate(35 86 24)'/%3E%3Cpath d='M8 92h18l5-12 7 22 6-16 4 6h14'/%3E%3Ccircle cx='92' cy='84' r='9'/%3E%3Cpath d='M88 84h8M92 80v8'/%3E%3Ccircle cx='56' cy='54' r='2.5'/%3E%3Cpath d='M44 6c4 4 4 8 0 12M104 110c-4-4-4-8 0-12'/%3E%3C/svg%3E") 0 0 / 120px 120px;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M18 14h6v6h6v6h-6v6h-6v-6h-6v-6h6z'/%3E%3Crect x='72' y='18' width='28' height='12' rx='6' transform='rotate(35 86 24)'/%3E%3Cpath d='M8 92h18l5-12 7 22 6-16 4 6h14'/%3E%3Ccircle cx='92' cy='84' r='9'/%3E%3Cpath d='M88 84h8M92 80v8'/%3E%3Ccircle cx='56' cy='54' r='2.5'/%3E%3Cpath d='M44 6c4 4 4 8 0 12M104 110c-4-4-4-8 0-12'/%3E%3C/svg%3E") 0 0 / 120px 120px; }
+.tp15-s .tp15-m { --ben: color-mix(in oklab, var(--color-accent) 20%, var(--color-white)); --o: var(--color-white); }
+.tp15-s .tp15-balon { --r: 10px; border-radius: 10px; background: var(--o); padding: 6px 9px 7px; box-shadow: 0 1px .5px rgb(0 0 0 / .13); }
+.tp15-s .tp15-m.is-ben .tp15-balon { background: var(--ben); color: var(--color-ink); }
+.tp15-s .tp15-m.is-ilk { margin-top: 8px; }
+.tp15-s .tp15-m.is-ilk:not(.is-ben) .tp15-balon { border-top-left-radius: 0; margin-left: 8px; }
+.tp15-s .tp15-m.is-ilk.is-ben .tp15-balon { border-top-right-radius: 0; margin-right: 8px; }
+.tp15-s .tp15-m:not(.is-ilk):not(.is-ben) .tp15-balon { margin-left: 8px; }
+.tp15-s .tp15-m:not(.is-ilk).is-ben .tp15-balon { margin-right: 8px; }
+.tp15-s .tp15-m.is-ilk .tp15-balon::before { content: ''; position: absolute; top: 0; width: 8px; height: 13px; background: inherit; }
+.tp15-s .tp15-m.is-ilk:not(.is-ben) .tp15-balon::before { left: -8px; clip-path: polygon(0 0, 100% 0, 100% 100%); }
+.tp15-s .tp15-m.is-ilk.is-ben .tp15-balon::before { right: -8px; clip-path: polygon(0 0, 100% 0, 0 100%); }
+.tp15-s .tp15-m.is-ben .tp15-saat { color: var(--color-ink-3); }
+.tp15-s .tp15-saat { font-size: .7rem; right: 8px; bottom: 4px; }
+.tp15-s .tp15-tik.is-ok { color: oklch(0.62 0.15 235); }
+.tp15-s .tp15-m.is-ben .tp15-alinti { background: color-mix(in oklab, var(--color-ink) 7%, transparent); border-left-color: var(--color-accent); color: var(--color-ink-2); }
+.tp15-s .tp15-m.is-ben .tp15-alinti b { color: var(--color-accent); }
+.tp15-s .tp15-gun span { background: var(--o, var(--color-white)); box-shadow: 0 1px .5px rgb(0 0 0 / .1); border: 0; font-weight: 500; text-transform: uppercase; font-size: .72rem; letter-spacing: .02em; }
+.tp15-sb-t > span.is-yaz { color: var(--color-accent); font-style: italic; }
+.tp15-yaziyor { position: relative; z-index: 2; align-self: flex-start; display: flex; gap: 4px; margin: 0 0 8px 20px; padding: 11px 13px; border-radius: 0 10px 10px 10px; background: var(--color-white); box-shadow: 0 1px .5px rgb(0 0 0 / .13); }
+.tp15-yaziyor i { width: 7px; height: 7px; border-radius: 50%; background: var(--color-ink-3); animation: tp15-nokta 1.2s infinite ease-in-out; }
+.tp15-yaziyor i:nth-child(2) { animation-delay: .15s; }
+.tp15-yaziyor i:nth-child(3) { animation-delay: .3s; }
+@keyframes tp15-nokta { 0%, 60%, 100% { transform: translateY(0); opacity: .45; } 30% { transform: translateY(-4px); opacity: 1; } }
+@media (prefers-reduced-motion: reduce) { .tp15-yaziyor i { animation: none; } }
+/* yuvarlak giriş çubuğu: alan ve düğmeler tek hap içinde, gönder ayrı yuvarlak */
+.tp15-s .tp15-yaz { background: color-mix(in oklab, var(--color-field) 70%, var(--color-white)); }
+.tp15-s .tp15-giris { gap: 6px; }
+.tp15-s .tp15-giris textarea { border-radius: 22px; background: var(--color-white); box-shadow: 0 1px .5px rgb(0 0 0 / .1); }
+.tp15-s .tp15-gonder { width: 44px; height: 44px; }
+:root[data-mode="dark"] .tp15-s .tp15-m { --ben: color-mix(in oklab, var(--color-accent) 34%, var(--color-surface-2, var(--color-white))); --o: var(--color-surface-2, var(--color-white)); }
+:root[data-mode="dark"] .tp15-zemin:not([data-tema])::before { background: var(--color-ink); opacity: .06; }
+:root[data-mode="dark"] .tp15-yaziyor { background: var(--color-surface-2, var(--color-white)); }

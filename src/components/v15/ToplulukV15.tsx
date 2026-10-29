@@ -422,6 +422,17 @@ function Sohbet({ kanal, oda, gomulu = false }: { kanal: string; oda?: number; g
     document.addEventListener('visibilitychange', f);
     return () => { clearInterval(t); document.removeEventListener('visibilitychange', f); };
   }, [oda, yukle]);
+  // "yazıyor…": karşı tarafın SSE nabzı 5 sn geçerli; kendi nabzımız 3 sn'de bir
+  const [yaziyor, setYaziyor] = useState(0);
+  const benKim = useRef('');
+  const sonNabiz = useRef(0);
+  useLiveEvent('topluluk_yaziyor', (p) => { if (oda && p?.oda === oda && p.kim && p.kim !== benKim.current) setYaziyor(Date.now() + 5000); }, { enabled: !!oda, debounceMs: 50 });
+  useEffect(() => { if (!yaziyor) return; const t = setTimeout(() => setYaziyor(0), Math.max(0, yaziyor - Date.now())); return () => clearTimeout(t); }, [yaziyor]);
+  const yaziyorBildir = () => {
+    if (!oda || Date.now() - sonNabiz.current < 3000) return;
+    sonNabiz.current = Date.now();
+    void post<{ kim: string }>(`/api/topluluk/sohbet/${oda}/yaziyor`).then((r) => { if (r.ok && r.data?.kim) benKim.current = r.data.kim; });
+  };
   useLiveEvent(oda ? 'topluluk_sohbet' : 'topluluk', (p) => { if (!p || p.resync || (oda ? p.oda === oda : p.kanal === kanal)) void yukle(); }, { debounceMs: 200 });
   // Menü: dışarı tıklayınca / Escape ile kapanır
   useEffect(() => {
@@ -451,6 +462,8 @@ function Sohbet({ kanal, oda, gomulu = false }: { kanal: string; oda?: number; g
     if (altta.current) { el.scrollTop = el.scrollHeight; setYeniVar(0); }
     else if (yeniGeldi && !son.benim) setYeniVar((n) => n + mesajlar.filter((m) => m.id > sonId.current).length);
     if (son) sonId.current = Math.max(sonId.current, son.id);
+    if (son && !son.benim) setYaziyor(0);
+    const ben = mesajlar.find((m) => m.benim); if (ben) benKim.current = ben.yazar;
   }, [mesajlar]);
   const enAlta = (yumusak = true) => { const el = liste.current; if (el) el.scrollTo({ top: el.scrollHeight, behavior: yumusak ? 'smooth' : 'auto' }); altta.current = true; setYeniVar(0); };
   const kaydir = () => {
@@ -519,12 +532,11 @@ function Sohbet({ kanal, oda, gomulu = false }: { kanal: string; oda?: number; g
   const grupMu = !dm; // kanal ya da grup: adlar gösterilir
   const diger = dm ? odaBilgi?.digerler[0] : undefined;
   const cevrimiciN = odaBilgi?.digerler.filter((d) => d.cevrimici).length || 0;
-  const sonBenimId = useMemo(() => { const l = (mesajlar || []).filter((m) => m.benim); return l.length ? l[l.length - 1].id : 0; }, [mesajlar]);
   const byId = useMemo(() => new Map((mesajlar || []).map((x) => [x.id, x])), [mesajlar]);
   const durumYazi = !odaBilgi ? '' : dm ? (diger?.cevrimici ? 'Çevrimiçi' : sonGorulme(diger?.son ?? null))
     : `${odaBilgi.uyeler.length} üye${cevrimiciN ? ` · ${cevrimiciN} çevrimiçi` : ''}`;
   const okundu = (x: Mesaj) => {
-    if (!oda || !x.benim || x.id !== sonBenimId || !odaBilgi) return null;
+    if (!oda || !x.benim || !odaBilgi) return null;
     const okuyan = odaBilgi.digerler.filter((d) => d.okunduId >= x.id);
     if (!okuyan.length) return <Check className="tp15-tik" aria-label="İletildi" />;
     return <CheckCheck className="tp15-tik is-ok" aria-label={dm ? `Okundu${okuyan[0].okunduAt ? ' ' + saatKisa(okuyan[0].okunduAt) : ''}` : `${okuyan.length} kişi okudu`} />;
@@ -540,7 +552,7 @@ function Sohbet({ kanal, oda, gomulu = false }: { kanal: string; oda?: number; g
           </span>
           <button type="button" className="tp15-sb-t" onClick={() => panelAc(dm ? 'ayar' : 'uyeler')} aria-label={`${odaBilgi?.ad || 'Sohbet'} bilgileri`}>
             <h1>{odaBilgi?.ad || 'Sohbet'}{odaBilgi?.ayar.sessiz && <BellOff className="tp15-sessiz" aria-label="Sessizde" />}</h1>
-            <span className={dm && diger?.cevrimici ? 'is-on' : ''}>{durumYazi || ' '}</span>
+            <span className={yaziyor ? 'is-yaz' : dm && diger?.cevrimici ? 'is-on' : ''}>{yaziyor ? (dm ? 'yazıyor…' : 'biri yazıyor…') : durumYazi || ' '}</span>
           </button>
           <div className="tp15-menu-k" ref={menuRef}>
             <button type="button" className="tp15-ib is-sade" onClick={() => setMenu((v) => !v)} aria-label="Sohbet menüsü" aria-haspopup="menu" aria-expanded={menu}><MoreVertical aria-hidden /></button>
@@ -631,6 +643,7 @@ function Sohbet({ kanal, oda, gomulu = false }: { kanal: string; oda?: number; g
             );
           })}
         </div>
+        {yaziyor > 0 && <div className="tp15-yaziyor" aria-hidden><i /><i /><i /></div>}
         {yeniVar > 0 && <button type="button" className="tp15-yenicip" onClick={() => enAlta()}>{yeniVar > 1 ? `${yeniVar} yeni mesaj` : 'Yeni mesaj'}<ArrowDown aria-hidden /></button>}
       </div>
       <div className="tp15-yaz">
@@ -643,7 +656,7 @@ function Sohbet({ kanal, oda, gomulu = false }: { kanal: string; oda?: number; g
             {ek && <div className="tp15-yanit"><Share2 aria-hidden /><span><b>{ek.baslik}</b>{ek.alt ? ek.alt.slice(0, 50) : ''}</span><button type="button" onClick={() => setEk(null)} aria-label="Paylaşımı kaldır"><X aria-hidden /></button></div>}
             <div className="tp15-giris">
               {oda && <button type="button" className={`tp15-ib is-sade${panel === 'paylas' ? ' is-on' : ''}`} onClick={() => setPanel(panel === 'paylas' ? '' : 'paylas')} aria-label="Paylaş: sayfa, soru, favori, terim" aria-expanded={panel === 'paylas'}><Plus aria-hidden /></button>}
-              <textarea ref={yazi} value={metin} onChange={(e) => setMetin(e.target.value.slice(0, 800))} placeholder={ek ? 'İstersen not ekle…' : 'Mesaj yaz'} rows={1} aria-label="Mesaj" enterKeyHint="send"
+              <textarea ref={yazi} value={metin} onChange={(e) => { setMetin(e.target.value.slice(0, 800)); if (e.target.value) yaziyorBildir(); }} placeholder={ek ? 'İstersen not ekle…' : 'Mesaj yaz'} rows={1} aria-label="Mesaj" enterKeyHint="send"
                 onKeyDown={(e) => { if (e.key === 'Enter' && !e.shiftKey && !e.nativeEvent.isComposing) { e.preventDefault(); void gonder(); } }} />
               <button type="button" className="tp15-gonder" onClick={gonder} disabled={(!metin.trim() && !ek) || gonderiyor} aria-label="Gönder"><Send aria-hidden /></button>
             </div>

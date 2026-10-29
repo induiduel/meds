@@ -1,11 +1,12 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 583,
-  "baslik": "Sesli derste \"Hocanın sorabileceği soru\" sayfası",
+  "onem": 584,
+  "baslik": "Sohbet ekranı WhatsApp düzeninde",
   "maddeler": [
-    "Yeni derslerde, hocanın soru çıkarabileceği slayttan sonra kısa bir soru sayfası açılır; asistan soruyu okur, çözer ve önceki slaytlardan anlatır.",
-    "PDF çubuğundaki ünlem düğmesi dersin bu sorularını sırayla çözer.",
-    "Aynı sorular ders sayfasındaki \"Hocanın sorabileceği sorular\" kartından ders dışında da çözülebilir."
+    "Özel sohbetlerde balonlar kuyruklu; kendi mesajların sağda, karşı tarafınki solda, art arda mesajlar gruplanır.",
+    "Her mesajında saat ve iletildi/okundu tikleri balonun içinde görünür.",
+    "Karşı taraf yazarken üstte \"yazıyor…\" ve listede üç nokta çıkar.",
+    "Tema seçilmemiş sohbetlerde hafif tıbbi desenli arka plan; açık ve koyu temada çalışır."
   ],
   "eklenen": [],
   "degisen": [],

@@ -267,6 +267,23 @@ export function registerToplulukSohbet(app: express.Express, d: Deps) {
     res.json({ ok: true });
   });
 
+  // "Yazıyor…" göstergesi: kaydedilmez, yalnız SSE `topluluk_yaziyor` {oda, kim:<yazar özeti>}; kişi başı 3 sn'de bir
+  const sonYazma = new Map<string, number>();
+  app.post('/api/topluluk/sohbet/:id/yaziyor', async (req, res) => {
+    const uid = verifiedUid(req);
+    if (!uid) return res.status(401).json({ error: 'Giriş gerekli.' });
+    if (!(await hazir(res))) return;
+    const oda = Number(req.params.id);
+    const kim = ozet(uid);
+    const t = Date.now();
+    if (t - (sonYazma.get(uid) || 0) < 3000) return res.json({ ok: true, kim });
+    if (!(await uye(oda, uid))) return res.status(403).json({ error: 'Bu sohbetin üyesi değilsin.' });
+    sonYazma.set(uid, t); if (sonYazma.size > 20000) sonYazma.clear();
+    dokun(uid);
+    d.broadcast('topluluk_yaziyor', { oda, kim });
+    res.json({ ok: true, kim });
+  });
+
   // Kişisel sohbet ayarı: durumGizli (son görülme/çevrimiçi karşılıklı gizlenir)
   app.post('/api/topluluk/sohbet/ayar', async (req, res) => {
     const uid = verifiedUid(req);
