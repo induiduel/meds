@@ -37,7 +37,22 @@ const OLCULER: { id: Olcu; ad: string; ic: React.ComponentType<{ size?: number; 
 ];
 const OYUN_AD: Record<string, string> = { blitz: 'Blitz', hayatta: 'Hayatta kal', gorsel: 'Görselli soru', kaydir: 'Kaydır', sirala: 'Sırala', izgara: 'Eşleştirme ızgarası', bosluk: 'Terimi bul', solo: 'Tek kişilik' };
 type Satir = SiraSatir & { kimlik?: string; sn?: number; deger?: number; gizli?: boolean; dersler?: { ad: string }[] };
-interface Yanit { donem?: number; universite?: string; arkadasN?: number; benim?: number | null; kisi?: number; oyunlar?: string[]; satir: Satir[] }
+interface Yanit { anahtar: string; donem?: number; universite?: string; arkadasN?: number; benim?: number | null; kisi?: number; oyunlar?: string[]; satir: Satir[] }
+
+/** Yanıt önbelleği (sayfa ömrü): anahtar → yanıt; aynı anahtara eşzamanlı istek tek kez gider */
+const SIRA_ONB = new Map<string, { t: number; v: Yanit }>();
+const SIRA_UCUS = new Map<string, Promise<Yanit | { hata: string }>>();
+function siraGetir(anahtar: string): Promise<Yanit | { hata: string }> {
+  const u = SIRA_UCUS.get(anahtar); if (u) return u;
+  const p = safeJsonFetch<any>(`/api/kisi/siralama?${anahtar}`).then((r) => {
+    if (!r.ok) return { hata: r.data?.error || r.error || 'Sıralama alınamadı.' };
+    const v = { ...(r.data as Yanit), anahtar };
+    SIRA_ONB.set(anahtar, { t: Date.now(), v });
+    return v;
+  }).finally(() => SIRA_UCUS.delete(anahtar));
+  SIRA_UCUS.set(anahtar, p);
+  return p;
+}
 
 const SECIM_KEY = 'medsoru_siralama_secim_v1';
 interface Secim { sekme: Sekme; olcu: Olcu; kapsam: Kapsam; oyun: string }
@@ -68,8 +83,8 @@ export default function SiralamaV15() {
     return y;
   });
   const [tazele, setTazele] = useState(0);
-  useLiveEvent('siralama_changed', () => setTazele((n) => n + 1), { debounceMs: 2000 });
-  useLiveEvent('arkadas_changed', () => { if (sekme === 'arkadas') setTazele((n) => n + 1); }, { debounceMs: 800 });
+  useLiveEvent('siralama_changed', () => { SIRA_ONB.clear(); setTazele((n) => n + 1); }, { debounceMs: 2000 });
+  useLiveEvent('arkadas_changed', () => { for (const k of [...SIRA_ONB.keys()]) if (k.includes('yer=arkadas')) SIRA_ONB.delete(k); if (sekme === 'arkadas') setTazele((n) => n + 1); }, { debounceMs: 800 });
   const [veri, setVeri] = useState<Yanit | null>(null);
   const [hata, setHata] = useState('');
   const [yukleniyor, setYukleniyor] = useState(false);
@@ -88,21 +103,37 @@ export default function SiralamaV15() {
   }, [uni]);
 
   const yerli = sekme === 'sinif' || sekme === 'uni';
+  const yer = sekme === 'tr' ? 'tr' : sekme;
+  const anahtar = `olcu=${olcu}&kapsam=${kapsam}&yer=${yer}${olcu === 'oyun' && oyun ? `&oyun=${encodeURIComponent(oyun)}` : ''}`;
   useEffect(() => {
     if (yerli && (!uni || !uniGonderildi)) { setVeri(null); return; }
     let vazgec = false;
-    setYukleniyor(true); setHata('');
-    const yer = sekme === 'tr' ? 'tr' : sekme;
-    const ek = olcu === 'oyun' && oyun ? `&oyun=${encodeURIComponent(oyun)}` : '';
-    void safeJsonFetch<any>(`/api/kisi/siralama?olcu=${olcu}&kapsam=${kapsam}&yer=${yer}${ek}`).then((r) => {
+    setHata('');
+    // H435: önbellekte varsa anında göster (yanıt kendi anahtarını taşır; başka ölçünün verisi asla bu ölçüyle yazılmaz)
+    const onb = SIRA_ONB.get(anahtar);
+    setVeri((onceki) => (onb && Date.now() - onb.t < 120_000 ? onb.v : onceki?.anahtar === anahtar ? onceki : null));
+    setYukleniyor(true);
+    void siraGetir(anahtar).then((r) => {
       if (vazgec) return;
-      if (!r.ok) setHata(r.data?.error || r.error || 'Sıralama alınamadı.');
-      else setVeri(r.data as Yanit);
+      if ('hata' in r) setHata(r.hata); else setVeri(r);
     }).finally(() => { if (!vazgec) setYukleniyor(false); });
     return () => { vazgec = true; };
-  }, [sekme, olcu, kapsam, oyun, uni, uniGonderildi, yerli, tazele]);
+  }, [anahtar, uni, uniGonderildi, yerli, tazele]);
+  // Diğer ölçüleri arka planda önceden yükle: ölçü değiştirmek beklemesiz olsun
+  useEffect(() => {
+    if (!veri || (yerli && !uni)) return;
+    const z = window.setTimeout(() => {
+      for (const o of OLCULER) {
+        const k = o.kapsam.some(([x]) => x === kapsam) ? kapsam : (o.kapsam[0]?.[0] || 'tum');
+        const a = `olcu=${o.id}&kapsam=${k}&yer=${yer}`;
+        if (!SIRA_ONB.has(a)) void siraGetir(a);
+      }
+    }, 300);
+    return () => window.clearTimeout(z);
+  }, [veri, yer, kapsam, yerli, uni]);
+  const gorunen = veri && veri.anahtar === anahtar ? veri : null;
 
-  const satir = veri?.satir || [];
+  const satir = gorunen?.satir || [];
   const podyum = satir.slice(0, 3);
   const kalan = satir.slice(3);
   const ham = (s: Satir) => (olcu === 'calisma' ? s.sn || 0 : olcu === 'puan' ? s.puan : s.deger ?? s.puan ?? 0);
@@ -115,15 +146,15 @@ export default function SiralamaV15() {
   const benGoster = () => document.querySelector('.sr15 [aria-current="true"], .sr15-pd.is-ben')?.scrollIntoView({ behavior: 'smooth', block: 'center' });
 
   let govde: React.ReactNode;
-  if (sekme === 'arkadas' && veri && !veri.arkadasN) {
+  if (sekme === 'arkadas' && gorunen && !gorunen.arkadasN) {
     govde = <Bos ikon={<Users aria-hidden />} baslik="Henüz arkadaş yok" metin="Diğer sekmelerde bir kişiye dokunup profilinden arkadaş ekle ya da Arkadaşlar sayfasında adıyla ara." eylem={{ ad: 'Arkadaş bul', f: () => git('/arkadaslar') }} />;
   } else if (yerli && !uni) {
     govde = <Bos ikon={<Users aria-hidden />} baslik="Üniversiten belli değil" metin="Profil kurulumunda üniversiteni seçince sınıfının ve üniversitenin sıralaması burada görünür."
       /* H166: boş durumda profil kurulumunu açan eylem */ eylem={{ ad: 'Üniversiteni seç', f: profilKurulumAc }} />;
   } else if (hata) {
     govde = <Bos ikon={<Trophy aria-hidden />} baslik="Sıralama alınamadı" metin={hata} />;
-  } else if (!veri || (yukleniyor && !satir.length)) {
-    govde = <p className="sr15-not">Yükleniyor…</p>;
+  } else if (!gorunen) {
+    govde = <Iskelet />;
   } else if (!satir.length) {
     const ne = olcu === 'oyun' ? 'oyun skoru' : olcu === 'hucre' ? 'hücre basamağı' : olcu === 'calisma' ? 'çalışma kaydı' : tanim.birim || 'kayıt';
     govde = <Bos ikon={<tanim.ic aria-hidden />} baslik={`Burada henüz ${ne} yok`}
@@ -167,7 +198,7 @@ export default function SiralamaV15() {
     );
   }
 
-  const oyunlar = veri?.oyunlar || [];
+  const oyunlar = gorunen?.oyunlar || [];
   return (
     <div className="sr15">
       <div className="sr15-olcu" role="tablist" aria-label="Neye göre sıralansın">
@@ -205,12 +236,12 @@ export default function SiralamaV15() {
             )}
           </div>
         )}
-        <p className="sr15-acik"><Info size={14} aria-hidden /> {tanim.aciklama}{yerli && uni ? ` · ${uni}${sekme === 'sinif' && veri?.donem && veri.donem > 0 ? `, ${veri.donem}. dönem` : ''}` : ''}</p>
+        <p className="sr15-acik"><Info size={14} aria-hidden /> {tanim.aciklama}{yerli && uni ? ` · ${uni}${sekme === 'sinif' && gorunen?.donem && gorunen.donem > 0 ? `, ${gorunen.donem}. dönem` : ''}` : ''}</p>
       </div>
 
       {ben && satir.length > 0 && (
-        <button type="button" className="v15-card sr15-ben" onClick={benGoster} aria-label={`Sıran ${ben.sira}${veri?.kisi ? ` / ${veri.kisi}` : ''}, listede göster`}>
-          <span className="sr15-ben-sira"><small>Sıran</small><b>{ben.sira}</b>{veri?.kisi ? <small>/ {sayi(veri.kisi)}</small> : null}</span>
+        <button type="button" className="v15-card sr15-ben" onClick={benGoster} aria-label={`Sıran ${ben.sira}${gorunen?.kisi ? ` / ${gorunen!.kisi!}` : ''}, listede göster`}>
+          <span className="sr15-ben-sira"><small>Sıran</small><b>{ben.sira}</b>{gorunen?.kisi ? <small>/ {sayi(gorunen!.kisi!)}</small> : null}</span>
           <span className="sr15-ben-orta">
             <b>{deger(ben)}</b>
             <small>{ben.sira === 1 ? 'Zirvedesin, farkı koru.' : onumdeki ? `${ben.sira - 1}. sıraya ${olcu === 'calisma' ? sure(fark || 60) : yaz(Math.max(1, fark))} kaldı` : ''}</small>
@@ -221,6 +252,14 @@ export default function SiralamaV15() {
 
       {govde}
       <p className="sr15-not">Bir kişiye dokununca profilini açarsın. Profilini gizleyenler “Gizli kullanıcı” olarak görünür.</p>
+    </div>
+  );
+}
+
+function Iskelet() {
+  return (
+    <div className="v15-card sr15-iskelet" aria-busy="true" aria-label="Yükleniyor">
+      {[0, 1, 2, 3, 4].map((i) => <span key={i} />)}
     </div>
   );
 }

@@ -1571,3 +1571,8 @@ Her maddede: belirti · kök neden · Kurul 2 kuralı · kapı durumu. Kanıtlar
 - **Kök neden:** Üslup yalnız eski çıkmışlardan (2018–25: bileşik şık %14, üstünlük kökü %12) örneklenmişti; yeni sınav ve slayt biçimi (kırmızı/sarı/kalın) hiç ölçülmemişti, önem puanı biçime ve tekrar edilen eski konulara dayanıyordu.
 - **Kural / Önleme:** Patoloji örnek soru ve önem noktası `docs/PATOLOJI_HOCA_SORU_MANTIGI.md` + `scripts/patoloji_soru_isci/` kapısına göre yazılır: her önem noktasına ≥2 farklı kalıpta soru, çeldirici yalnız aynı dersin komşu kavramları, doğru şık en uzun olmaz. Sarı dolgu ve başlık önem sinyali sayılmaz; kırmızı tek başına "önemli" değildir (slaytların ~%42'si kırmızı).
 - **Kapı:** `python3 scripts/patoloji_soru_isci/dogrula.py sorular.json paket.json` → 0 HATA.
+
+## H435 — Sıralama: ölçü değişince eski veri yanlış birimle görünüyor, tepki geç (2026-10-29)
+- **Belirti:** Sıralamada ölçü/süzgeç değiştirince başka sütunun verileri görünüyor, tepki geç geliyordu.
+- **Kök neden:** yeni istek giderken önceki yanıt (`veri`) ekranda kalıyor ve YENİ ölçünün biçimleyicisiyle yazılıyordu (puan sayıları "soru"/"basamak" diye); "Yükleniyor" yalnız liste boşken çıkıyordu. Her geçiş ağ gidiş-dönüşü bekliyordu (sunucu 2–11 ms, gecikme ağ). 
+- **Çözüm/önleme:** yanıt istek anahtarını taşır (`anahtar`), yalnız güncel anahtarla eşleşen yanıt çizilir, yoksa iskelet; sayfa ömürlü önbellek + eşzamanlı istek birleştirme + diğer ölçülerin arka planda önden yüklenmesi; SSE değişiminde önbellek temizlenir. Kural: süzgeçli listede yanıt, isteğin anahtarıyla etiketlenmeden ekrana basılmaz.
