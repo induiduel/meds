@@ -71,11 +71,20 @@ export class CloudNotificationBridge {
     // 2. Supabase Realtime (WebSocket postgres_changes) Dinleyicisi
     this.setupSupabaseRealtime();
 
-    // 3. İlk Kontrol & Güvenlik Yedek Döngüsü (Polling)
+    // 3. İlk Kontrol & Güvenlik Yedek Döngüsü (Polling). onSnapshot canlıyken yedek sorgu 10 dk'da bir yeter:
+    //    eskiden 10 sn'de bir getDocs koşuyordu (günde ~8.600 sorgu / ~130 bin belge okuması, Firestore ücretsiz
+    //    kotası 50 bin). Canlı dinleyici hata verirse kısa aralığa dönülür (setupFirebaseRealtime hata geri çağrısı).
     this.check();
-    if (!this.timer) {
-      this.timer = setInterval(() => this.check(), intervalMs);
-    }
+    this.yedekAraligiKur(this.firestoreUnsub ? Math.max(intervalMs, 10 * 60_000) : intervalMs);
+    this.kisaAralikMs = intervalMs;
+  }
+
+  private kisaAralikMs = 10000;
+
+  private yedekAraligiKur(ms: number) {
+    if (this.timer) clearInterval(this.timer);
+    this.timer = setInterval(() => this.check(), ms);
+    this.timer.unref?.();
   }
 
   public stop() {
@@ -129,6 +138,7 @@ export class CloudNotificationBridge {
         },
         (err) => {
           console.warn('[CloudBridge] Firebase Realtime dinleme uyarısı (polling devrede):', err.message);
+          this.yedekAraligiKur(this.kisaAralikMs);
         }
       );
       console.log('[CloudBridge] 🔥 Firebase Realtime (Firestore onSnapshot) aktif.');

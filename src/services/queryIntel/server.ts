@@ -12,12 +12,23 @@ import fs from 'fs';
 import path from 'path';
 import { spawn } from 'child_process';
 import { QueryIntelEngine, decodeBins, type QueryUnderstanding, type Suggestion, type SpellResult } from './engine';
+import { lexiconSources } from './build';
 
 const ROOT = path.resolve(process.env.MEDS_APP_DIR || process.cwd());
 const OUT_DIR = path.join(ROOT, 'data', 'search');
 const JSON_PATH = path.join(OUT_DIR, 'query-intel.json');
 const BIN_PATH = path.join(OUT_DIR, 'query-intel.bin');
 const LOCK_PATH = path.join(OUT_DIR, '.build.lock');
+const PRE_SIG_PATH = path.join(OUT_DIR, 'query-intel.onimza');
+
+/**
+ * Ucuz ön imza: derlem + sözlük dosyalarının boyut/mtime'ı. Aynıysa alt süreç hiç açılmaz. Eskiden her 6 saatte
+ * `--max-old-space-size=3072` alt süreci 122 MB derlemi ayrıştırıp (~450 MB) ancak sonra "imza aynı" diyordu.
+ */
+function preSignature(): string {
+  const st = (p: string) => { try { const s = fs.statSync(p); return `${s.size}:${Math.round(s.mtimeMs)}`; } catch { return '0'; } };
+  return [st(path.join(ROOT, 'data', 'local_rag_chunks.json')), ...Object.values(lexiconSources(ROOT)).map(st)].join('|');
+}
 
 let engine: QueryIntelEngine | null = null;
 let loadedMtime = 0;
@@ -102,6 +113,12 @@ function memoryHeadroomMb(): number | null {
 /** Derleyiciyi düşük öncelikli alt süreç olarak çalıştırır (imza aynıysa hemen çıkar). */
 export function runQueryIntelBuild(opts: { force?: boolean; graph?: boolean } = {}): Promise<{ ok: boolean; out: string }> {
   if (building) return Promise.resolve({ ok: false, out: 'zaten derleniyor' });
+  const preSig = preSignature();
+  if (!opts.force && fs.existsSync(BIN_PATH)) {
+    try {
+      if (fs.readFileSync(PRE_SIG_PATH, 'utf-8') === preSig) return Promise.resolve({ ok: true, out: 'girdiler değişmedi, atlandı' });
+    } catch { /* ön imza yok: derleyici kendi imzasını denetler */ }
+  }
   const headroom = memoryHeadroomMb();
   if (headroom !== null && headroom < Number(process.env.MEDS_QUERY_INTEL_MIN_HEADROOM_MB || 1700)) {
     const out = `bellek payı yetersiz (${Math.round(headroom)} MB) — derleme bu konteynerde atlandı; ayrı konteynerde çalıştırın (deploy/oracle/build-search.sh)`;
@@ -136,7 +153,10 @@ export function runQueryIntelBuild(opts: { force?: boolean; graph?: boolean } = 
       building = false;
       try { fs.unlinkSync(LOCK_PATH); } catch { /* yok */ }
       lastBuild = { at: new Date().toISOString(), ok, ms: Date.now() - t0, out: out.slice(-1500) };
-      if (ok) { lastStat = 0; maybeReload(); }
+      if (ok) {
+        lastStat = 0; maybeReload();
+        if (opts.graph !== false) { try { fs.writeFileSync(PRE_SIG_PATH, preSig); } catch { /* yazılamazsa bir dahaki turda yine derler */ } }
+      }
       if (!ok) console.warn('[query-intel] derleme başarısız:', out.slice(-600));
       resolve({ ok, out });
     };

@@ -630,7 +630,18 @@ function loop() {
 const loopBaslat = () => { if (!raf && st.playing) raf = requestAnimationFrame(loop); };
 // Yedek saat: kare döngüsü kısılırsa (gömülü pencere, güç tasarrufu, düşük kare hızı) timeupdate ~250 ms–1 sn'de bir gelir;
 // kelime kelime işaret sesten geri kalmasın diye çalarken 70 ms'den eski konum 50 ms'de bir tazelenir.
-if (typeof window !== 'undefined') window.setInterval(() => { if (st.playing && performance.now() - sonTik > 70) tick(); }, 50);
+// Yalnız çalarken kurulur: eskiden modül yüklenince her öğrencide (ders açılmasa da) saniyede 20 kez uyanıyordu.
+let yedekSaat = 0;
+function yedekSaatBaslat() {
+  if (yedekSaat || typeof window === 'undefined') return;
+  yedekSaat = window.setInterval(() => {
+    if (!st.playing) { yedekSaatDurdur(); return; }
+    if (performance.now() - sonTik > 70) tick();
+  }, 50);
+}
+function yedekSaatDurdur() {
+  if (yedekSaat) { window.clearInterval(yedekSaat); yedekSaat = 0; }
+}
 
 function pitch(a: HTMLAudioElement) {
   const x = a as HTMLAudioElement & { mozPreservesPitch?: boolean; webkitPreservesPitch?: boolean };
@@ -655,15 +666,15 @@ function ses(): HTMLAudioElement {
   pitch(a);
   a.addEventListener('play', () => {
     kullaniciDurdurdu = false;
-    set({ playing: true, hata: null }); loopBaslat(); ekranUyanik(true);
+    set({ playing: true, hata: null }); loopBaslat(); yedekSaatBaslat(); ekranUyanik(true);
     // Medya oturumunu müzik çalardan geri al (yoksa arka planda bildirim/kulaklık "oynat" müziği başlatır)
     (window as any).__medsorMsSahip = 'canli';
     window.dispatchEvent(new Event('medsor:canli-ders-oynuyor'));
     msKur(); msMeta(); msDurum();
   });
-  a.addEventListener('pause', () => { ekranUyanik(false); set({ playing: false }); tick(); konumKaydet(); msDurum(); });
+  a.addEventListener('pause', () => { yedekSaatDurdur(); ekranUyanik(false); set({ playing: false }); tick(); konumKaydet(); msDurum(); });
   // Bitirdiklerim: dersin sonuna kadar dinlenince konu "bitti" olur
-  a.addEventListener('ended', () => { ekranUyanik(false); if (st.key) konuBitir('sesli', st.key); set({ playing: false }); konumKaydet(true); msDurum(); bitinceFn?.(); try { window.dispatchEvent(new CustomEvent('cd:bitti', { detail: { key: st.key } })); } catch { /* yok */ } });
+  a.addEventListener('ended', () => { yedekSaatDurdur(); ekranUyanik(false); if (st.key) konuBitir('sesli', st.key); set({ playing: false }); konumKaydet(true); msDurum(); bitinceFn?.(); try { window.dispatchEvent(new CustomEvent('cd:bitti', { detail: { key: st.key } })); } catch { /* yok */ } });
   // Bitirdiklerim: ses çalarken (sekme arka planda da) konunun dinleme süresi
   window.setInterval(() => { if (st.playing && st.key && !st.bekliyor) sureEkle('sesli', st.key, 5); }, 5000);
   a.addEventListener('timeupdate', () => { if (!raf) tick(); });

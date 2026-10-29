@@ -1,10 +1,11 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 591,
-  "baslik": "Sesli ders: daha ince oynatıcı çubuğu",
+  "onem": 592,
+  "baslik": "Daha hızlı ve hafif site",
   "maddeler": [
-    "Sesli dersteki alt oynatıcı çubuğu iki ince satıra indi; slaytı çok daha az örtüyor.",
-    "Çıkmış soru uyarısı artık çubukta küçük bir \"Çıkmış · Çöz\" çipi; hız ve seçenekler sade düğmeler."
+    "Site açıkken arka planda çalışan gereksiz işler azaltıldı; telefon ve bilgisayarda pil, işlemci ve internet daha az harcanıyor.",
+    "Sesli dersin zamanlayıcısı yalnız ses çalarken çalışıyor; sekme arka plandayken bakım denetimi yapılmıyor.",
+    "Sayfa açılışındaki tekrar eden istekler kaldırıldı; hata bildirimleri yönetici incelemesine sırayla düşüyor."
   ],
   "eklenen": [],
   "degisen": [],

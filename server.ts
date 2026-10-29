@@ -96,6 +96,7 @@ import {
   autoRepairStore,
   rollbackRepair,
   processQueueItem,
+  processQueueItemOtomatik,
   startAutoRepairWorker,
   isAutoRepairWorkerActive,
   setAutoRepairWorkerPaused,
@@ -3421,7 +3422,7 @@ app.post('/api/past-exams/:id/report', async (req, res) => {
         fullContext: q,
       });
       if (enq) {
-        processQueueItem(enq.id).catch((e) => console.warn('[AutoRepairEngine] Anlık inceleme hatası:', e.message));
+        processQueueItemOtomatik(enq.id).catch((e) => console.warn('[AutoRepairEngine] Anlık inceleme hatası:', e.message));
       }
     } catch (arErr: any) {
       console.warn('[AutoRepairEngine] Kuyruğa eklenemedi:', arErr.message);
@@ -5681,7 +5682,7 @@ app.post('/api/learn/feedback', (req, res) => {
       fullContext: enrichAndFetchContext('interactive_deck', r.item.deckId, { slideNumber: r.item.slideNumber, targetKey: r.item.targetKey }),
     });
       if (enq) {
-        processQueueItem(enq.id).catch((e) => console.warn('[AutoRepairEngine] Anlık öğrenme inceleme hatası:', e.message));
+        processQueueItemOtomatik(enq.id).catch((e) => console.warn('[AutoRepairEngine] Anlık öğrenme inceleme hatası:', e.message));
       }
   } catch (arErr: any) {
     console.warn('[AutoRepairEngine] Öğrenme bildirimi kuyruğa eklenemedi:', arErr.message);
@@ -5799,7 +5800,7 @@ app.post('/api/questions/:id/report', (req, res) => {
       fullContext: question,
     });
     if (enq) {
-      processQueueItem(enq.id).catch((e) => console.warn('[AutoRepairEngine] Anlık soru inceleme hatası:', e.message));
+      processQueueItemOtomatik(enq.id).catch((e) => console.warn('[AutoRepairEngine] Anlık soru inceleme hatası:', e.message));
     }
   } catch (arErr: any) {
     console.warn('[AutoRepairEngine] Örnek soru bildirimi kuyruğa eklenemedi:', arErr.message);
@@ -5850,7 +5851,7 @@ app.post('/api/terms/:id/report', (req, res) => {
       fullContext: { term: termId, details } as any,
     });
     if (enq) {
-      processQueueItem(enq.id).catch((e) => console.warn('[AutoRepairEngine] Anlık terim inceleme hatası:', e.message));
+      processQueueItemOtomatik(enq.id).catch((e) => console.warn('[AutoRepairEngine] Anlık terim inceleme hatası:', e.message));
     }
   } catch (arErr: any) {
     console.warn('[AutoRepairEngine] Terim bildirimi kuyruğa eklenemedi:', arErr.message);
@@ -5901,7 +5902,7 @@ app.post('/api/cards/:id/report', (req, res) => {
       fullContext: { cardId, details } as any,
     });
     if (enq) {
-      processQueueItem(enq.id).catch((e) => console.warn('[AutoRepairEngine] Anlık kart inceleme hatası:', e.message));
+      processQueueItemOtomatik(enq.id).catch((e) => console.warn('[AutoRepairEngine] Anlık kart inceleme hatası:', e.message));
     }
   } catch (arErr: any) {
     console.warn('[AutoRepairEngine] Kart bildirimi kuyruğa eklenemedi:', arErr.message);
@@ -8426,7 +8427,7 @@ const cloudNotificationBridge = new CloudNotificationBridge({
 
             if (enqueued) {
               console.log(`[AutoRepairEngine] ⚡ Realtime Bildirim Kuyruğa Alındı (#${qid}). Anında AI denetimi başlatılıyor...`);
-              processQueueItem(enqueued.id).then(() => {
+              processQueueItemOtomatik(enqueued.id).then(() => {
                 console.log(`[AutoRepairEngine] ✅ Realtime bildirim başarıyla incelendi (#${qid})`);
               }).catch((err) => {
                 console.warn(`[AutoRepairEngine] ⚠️ Realtime inceleme hatası (#${qid}):`, err.message);

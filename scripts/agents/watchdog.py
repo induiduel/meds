@@ -115,7 +115,8 @@ def check_dashboard_alive():
     """Dashboard izleme sunucusunun (8085) çökmesini veya asılı kalmasını engeller"""
     dash_alive = False
     try:
-        r = requests.get("http://127.0.0.1:8085", timeout=3)
+        r = requests.get("http://127.0.0.1:8085", timeout=3, stream=True)  # yalnız başlık; gövde (panel HTML) indirilmez
+        r.close()
         if r.status_code in [200, 301, 302, 404]:
             dash_alive = True
     except Exception:
@@ -180,15 +181,20 @@ def check_system_resources():
         import psutil
         mem = psutil.virtual_memory()
         # Eğer kullanılabilir RAM %15'in altına düşerse (Erken OOM-Killer Koruması)
-        if mem.available < (0.15 * mem.total):
-            log(f"DİKKAT: Sistem belleği kritik seviyede (%{mem.percent} dolu, kullanılabilir: {round(mem.available / (1024**3), 2)} GB)! Önbellek tazeleme tetikleniyor...")
-            import gc
-            gc.collect()
+        global _last_mem_warn
+        if mem.available < (0.15 * mem.total) and time.time() - _last_mem_warn > 1800:
+            _last_mem_warn = time.time()
+            # Yalnız uyarı (30 dk'da bir): eskiden her 10 sn yazılıyor (günde ~840 satır) ve yalnız kendi gc'sini çalıştırıyordu.
+            log(f"DİKKAT: Sistem belleği kritik seviyede (%{mem.percent} dolu, kullanılabilir: {round(mem.available / (1024**3), 2)} GB)!")
     except Exception:
         pass
 
 
+_last_mem_warn = 0.0
+
+
 def main():
+    _last_http_check = 0.0
     log("MeDSor Gelişmiş Otonom Sistem & Docker Watchdog Başlatıldı.")
     last_known_code_mtime = get_code_mtime()
 
@@ -206,11 +212,12 @@ def main():
             # 4. Pipeline koşucusunun canlılığını sağla
             check_pipeline_runner_alive()
 
-            # 5. Dashboard kokpitinin canlılığını sağla
-            check_dashboard_alive()
-
-            # 5b. Web sunucusunun (Port 3000 / server.ts) canlılığını sağla
-            check_web_server_alive()
+            # 5. Dashboard kokpiti ve web sunucusu (Port 3000) canlılığı: 60 sn'de bir yeter (eskiden 10 sn'de bir
+            #    panelin tüm HTML'ini çekiyordu; günde ~8.600 istek). İkisi de zaten systemd Restart= ile korunuyor.
+            if time.time() - _last_http_check >= 60:
+                _last_http_check = time.time()
+                check_dashboard_alive()
+                check_web_server_alive()
 
             # 6. Sistem RAM/VRAM kaynak baskısını denetle
             check_system_resources()

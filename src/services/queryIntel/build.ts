@@ -97,7 +97,7 @@ export interface BuildResult {
   binPath: string;
 }
 
-function lexiconSources(root: string) {
+export function lexiconSources(root: string) {
   return {
     diseases: path.join(root, 'src', 'data', 'diseases.json'),
     encyclopedia: path.join(root, 'src', 'data', 'medical_encyclopedia.json'),

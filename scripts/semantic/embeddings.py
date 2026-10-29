@@ -26,5 +26,9 @@ def embed_passages(texts: list[str], batch: int = 64):
 
 
 def embed_query(text: str):
+    from v2.core.embed import remote_query_vector
+    vec = remote_query_vector(text or "", config.EMBED_MODEL)
+    if vec is not None:
+        return vec
     return model().encode(["query: " + (text or "")], normalize_embeddings=True,
                           show_progress_bar=False)[0]

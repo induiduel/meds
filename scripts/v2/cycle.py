@@ -8,11 +8,14 @@ from __future__ import annotations
 
 import argparse
 import hashlib
+import subprocess
+import sys
 import time
 from pathlib import Path
 
 from . import config, pipeline
 from .core import store
+from .core.llm import _llm_serbest as pipeline_llm_serbest
 
 LOCK_NAME = "cycle.lock"
 STATE_NAME = "cycle"
@@ -42,6 +45,20 @@ def _pending_files(roots: list[str | Path]) -> list[Path]:
     for root in roots:
         files.extend(pipeline._supported_files(Path(root)))
     return sorted(set(files))
+
+
+def _file_sha1(f: Path, cache: dict) -> str:
+    """Dosya özeti; ad+boyut+mtime değişmediyse önceki turun özeti kullanılır (her turda 700 MB okunmuyordu)."""
+    try:
+        st = f.stat()
+    except OSError:
+        return store.sha1_file(f)
+    key = f"{f}:{st.st_size}:{st.st_mtime_ns}"
+    sha = cache.get(key)
+    if not sha:
+        sha = store.sha1_file(f)
+        cache[key] = sha
+    return sha
 
 
 def _input_fingerprint() -> str:
@@ -102,10 +119,25 @@ def run_once(roots: list[str | Path], *, dataset: str = "archive", limit: int | 
     logger = _Logger(config.STATE_DIR / LOG_NAME)
     state = store.State(STATE_NAME)
     files = _pending_files(roots)
-    pending = [f for f in files if not state.is_done(store.sha1_file(f))]
+    sha_cache = state.data.get("sha_onbellek") or {}
+    new_cache: dict = {}
+    sha_of = {f: _file_sha1(f, sha_cache) for f in files}
+    for f, sha in sha_of.items():
+        try:
+            st = f.stat()
+            new_cache[f"{f}:{st.st_size}:{st.st_mtime_ns}"] = sha
+        except OSError:
+            pass
+    if new_cache != sha_cache:
+        state.data["sha_onbellek"] = new_cache
+        state.save()
+    done = set(state.data.get("tamamlanan", []))
+    pending = [f for f in files if sha_of[f] not in done]
     if limit is not None:
         pending = pending[:limit]
 
+    if answers_limit > 0 and not pipeline_llm_serbest():
+        answers_limit = 0  # LLM kilidi (kural 20): cevap tamamlama elle komutla; boş turda arşiv belleğe yüklenmez
     counts = {"toplam": len(files), "bekleyen": len(pending), "islenen": 0, "hata": 0, "kuru": dry_run}
     if dry_run:
         logger(f"KURU TUR: {len(pending)} dosya işlenecek (toplam {len(files)})")
@@ -115,7 +147,7 @@ def run_once(roots: list[str | Path], *, dataset: str = "archive", limit: int | 
         for f in pending:
             try:
                 summary = pipeline.run_ingest(f, dataset=dataset, ocr=ocr, publish=True, log=lambda *_: None)
-                state.mark_done(store.sha1_file(f))
+                state.mark_done(sha_of[f])
                 counts["islenen"] += 1
                 added = (summary.get("soru_yayin") or {}).get("added", 0)
                 logger(f"işlendi: {f.name} (soru+{added})")
@@ -149,11 +181,21 @@ def run_once(roots: list[str | Path], *, dataset: str = "archive", limit: int | 
 
 def watch(roots: list[str | Path], *, interval: int, dataset: str = "archive", limit: int | None = None,
           ocr: bool = False, answers_limit: int = 0) -> None:
+    """Her tur ayrı alt süreçte koşar: tam son işlemin yüklediği arşiv (~1 GB) tur bitince işletim sistemine döner;
+    eskiden bekleme süresince de bellekte (takasta) kalıyordu."""
     logger = _Logger(config.STATE_DIR / LOG_NAME)
     logger(f"cycle --watch başladı (interval={interval}s, roots={roots}, answers_limit={answers_limit})")
+    cmd = [sys.executable, "-m", "v2", "cycle", "--post", "--dataset", dataset,
+           "--answers-limit", str(answers_limit), "--roots", *[str(r) for r in roots]]
+    if limit is not None:
+        cmd += ["--limit", str(limit)]
+    if ocr:
+        cmd.append("--ocr")
     while True:
         try:
-            run_once(roots, dataset=dataset, limit=limit, ocr=ocr, post=True, answers_limit=answers_limit)
+            rc = subprocess.run(cmd, cwd=str(Path(__file__).resolve().parents[1])).returncode
+            if rc:
+                logger(f"tur hatası: alt süreç çıkış {rc}")
         except Exception as exc:  # noqa: BLE001
             logger(f"tur hatası: {exc}")
         time.sleep(max(30, interval))

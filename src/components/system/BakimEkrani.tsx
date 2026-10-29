@@ -38,7 +38,8 @@ function BakimEkrani() {
     let canli = true;
     const bak = () => { void denetle().then((x) => { if (canli) setD(x); }); };
     bak();
-    const t = window.setInterval(bak, 60_000);
+    // Gizli sekmede yoklama yok (görünür olunca `gor` hemen denetler); eskiden arka planda da dakikada iki istek.
+    const t = window.setInterval(() => { if (document.visibilityState === 'visible') bak(); }, 60_000);
     const gor = () => { if (document.visibilityState === 'visible') bak(); };
     document.addEventListener('visibilitychange', gor);
     window.addEventListener('online', bak);

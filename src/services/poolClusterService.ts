@@ -607,8 +607,11 @@ export function createPoolClusterService(opts: {
     fullTimer.unref?.();
   }
 
-  const retryTimer = setInterval(() => { if (aiQueue.length) runAi().catch(() => {}); }, 10 * 60_000);
-  retryTimer.unref?.();
+  // Zamanlayıcıyla LLM birleştirme denemesi yalnız MEDS_LLM_OTOMATIK=1 iken (AGENTS.md kural 20).
+  if (process.env.MEDS_LLM_OTOMATIK === '1') {
+    const retryTimer = setInterval(() => { if (aiQueue.length) runAi().catch(() => {}); }, 10 * 60_000);
+    retryTimer.unref?.();
+  }
 
   /**
    * "Soru ekle" sırasında: yazılan metni analiz eder ve havuzda aynı soruyu anlatan kayıtları olasılıkla döndürür.

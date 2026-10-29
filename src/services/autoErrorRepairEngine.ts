@@ -1508,6 +1508,16 @@ export function setAutoRepairWorkerPaused(paused: boolean) {
   isWorkerPaused = paused;
 }
 
+/**
+ * Bildirim anında (öğrenci raporu, Firestore köprüsü) çağrılan otomatik inceleme. LLM kilidi (AGENTS.md kural 20):
+ * işçi panelden açılmadıysa (duraklatılmış başlar) LLM çağrılmaz, kayıt kuyrukta `pending` kalır ve yönetici
+ * panelden çalıştırır. Eskiden bu yol duraklatmayı atlayıp her bildirimde Gemini/Groq/OpenRouter'a gidiyordu.
+ */
+export async function processQueueItemOtomatik(itemId: string): Promise<AutoRepairItem | null> {
+  if (!isAutoRepairWorkerActive() && process.env.MEDS_LLM_OTOMATIK !== '1') return null;
+  return processQueueItem(itemId);
+}
+
 export function startAutoRepairWorker() {
   if (workerInterval) return;
 

@@ -107,7 +107,8 @@ export function basarimBaslat(uid: string | null) {
   void yenile(true);
   if (!kurulu) {
     kurulu = true;
-    window.setInterval(() => { if (document.visibilityState === 'visible') void yenile(); }, 90_000);
+    // SSE basarim_changed anlık geliyor; yoklama yalnız yedek (eskiden 90 sn).
+    window.setInterval(() => { if (document.visibilityState === 'visible') void yenile(); }, 10 * 60_000);
     document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'visible') void yenile(); });
   }
   if (!sseKurulu) {

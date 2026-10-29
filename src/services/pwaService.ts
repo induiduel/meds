@@ -325,8 +325,18 @@ class PwaService {
    * Service Worker'a önbelleğe alınacak URL'leri ilet
    */
   public precacheUrls(urls: string[]) {
-    if (navigator.serviceWorker.controller) {
-      navigator.serviceWorker.controller.postMessage({
+    const ctl = navigator.serviceWorker.controller;
+    if (ctl) {
+      // Aynı Service Worker sürümü için günde bir kez: eskiden her sayfa açılışında 15 rota + /api/committees
+      // yeniden indiriliyordu (hepsi aynı index.html). Yeni sw.js gelince adres değişir, hemen yeniden mühürlenir.
+      const anahtar = 'medsoru_sw_onbellek_v1';
+      const imza = `${ctl.scriptURL}|${urls.join(',')}`;
+      try {
+        const onceki = JSON.parse(localStorage.getItem(anahtar) || 'null');
+        if (onceki?.imza === imza && Date.now() - Number(onceki.zaman || 0) < 24 * 3600_000) return;
+        localStorage.setItem(anahtar, JSON.stringify({ imza, zaman: Date.now() }));
+      } catch { /* depolama yoksa eskisi gibi gönder */ }
+      ctl.postMessage({
         type: 'CACHE_URLS',
         urls,
       });

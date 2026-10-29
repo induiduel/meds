@@ -194,8 +194,14 @@ export const MusicPlayerProvider: React.FC<{ children: React.ReactNode }> = ({ c
     };
     void pull();
     const offChange = realtimeEventService.on('content_changed', (d: any) => { if (d?.entity === 'music') void pull(); });
-    // Bağlantı koptuğu sırada kaçan değişiklik olabilir
-    const offStatus = realtimeEventService.onStatusChange((st) => { if (st === 'connected') void pull(); });
+    // Bağlantı koptuğu sırada kaçan değişiklik olabilir. İlk bağlanma atlanır: liste az önce çekildi
+    // (eskiden açılışta /api/music/shared üç kez isteniyordu).
+    let ilkBag = true;
+    const offStatus = realtimeEventService.onStatusChange((st) => {
+      if (st !== 'connected') return;
+      if (ilkBag) { ilkBag = false; return; }
+      void pull();
+    });
     return () => { alive = false; offChange(); offStatus(); };
   }, []);
 

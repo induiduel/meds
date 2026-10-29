@@ -840,9 +840,12 @@ export function createQuestionIntake(dataDir: string, rootDir: string, deps: Int
     }
   }
 
-  const timer = setInterval(() => { drain().catch(() => {}); retryWritebacks(); }, 5 * 60_000);
+  // Zamanlayıcıyla LLM (Gemini parseIntake) yalnız MEDS_LLM_OTOMATIK=1 iken (AGENTS.md kural 20); gönderim anındaki
+  // işleme ve geri yazım denemeleri sürer.
+  const llmOtomatik = process.env.MEDS_LLM_OTOMATIK === '1';
+  const timer = setInterval(() => { if (llmOtomatik) drain().catch(() => {}); retryWritebacks(); }, 5 * 60_000);
   timer.unref?.();
-  setTimeout(() => { drain().catch(() => {}); }, 15_000).unref?.();
+  if (llmOtomatik) setTimeout(() => { drain().catch(() => {}); }, 15_000).unref?.();
 
   function submit(input: Omit<IntakeRaw, 'id' | 'createdAt'>): IntakeRaw {
     const raw: IntakeRaw = { ...input, id: `gi-${Date.now().toString(36)}-${crypto.randomBytes(6).toString('hex')}`, createdAt: new Date().toISOString() };

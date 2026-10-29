@@ -1579,9 +1579,13 @@ export async function runAutoChunking(options: { limit?: number; syncToCloud?: b
     }
     if (pruned) console.log(`🧹 Artık gösterilmeyen ${pruned} çıkmış soru parçası dizinden çıkarıldı`);
 
-    await rebuildInvertedIndex();
-    void warmSurfaceForms(); // yeni terimler öneri sözlüğüne de girsin (eskisi hazır olana dek kullanılır)
-    saveLocalChunksToFile();
+    // Hiçbir parça değişmediyse (ör. yalnız görünürlük/etiket düzenlemesi) dizin ve 122 MB dosya yeniden kurulmaz:
+    // eskiden her yönetici kaydında BM25 baştan kuruluyor, dosya yeniden yazılıyor, query-intel de yeniden derleniyordu.
+    if (newlyIndexed > 0 || pruned > 0) {
+      await rebuildInvertedIndex();
+      void warmSurfaceForms(); // yeni terimler öneri sözlüğüne de girsin (eskisi hazır olana dek kullanılır)
+      saveLocalChunksToFile();
+    }
 
     console.log(`\n🎉 Toplam Yerel Parça Sayısı: ${memoryChunks.size} (${newlyIndexed} yeni/güncellenen)`);
 
@@ -1925,7 +1929,7 @@ export function initLocalRagEngine(): void {
         changeDebounce = setTimeout(() => {
           console.log(`[LocalRagEngine] 📂 Çekirdek müfredat dosyasında değişiklik tespit edildi (${filename}), yerel indeks güncelleniyor...`);
           runAutoChunking({ syncToCloud: false }).catch(() => {});
-        }, 15000); // 15s debounce to prevent rebuild storms
+        }, 120000); // 2 dk: art arda yönetici kayıtları tek yeniden parçalamada birleşir (eskiden 15 sn)
         changeDebounce.unref();
       });
       watcher.unref(); // Allows node process to exit naturally when tasks complete

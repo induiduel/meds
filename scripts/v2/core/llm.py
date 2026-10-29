@@ -21,6 +21,8 @@ from typing import Any, Callable
 from .. import config
 from . import store
 
+import sys as _llm_sys, pathlib as _llm_pl; _llm_sys.path[:0] = [str(q / "otomasyon") for q in _llm_pl.Path(__file__).resolve().parents]; from llm_kilit import serbest as _llm_serbest  # noqa: E402  LLM kilidi 2026-10-27
+
 UA = "MeDSorCoreV2/1.0"
 DEFAULT_CHAIN = [
     "groq:openai/gpt-oss-120b",
@@ -218,7 +220,10 @@ def chat(prompt: str, system: str | None = None, *, as_json: bool = False, max_t
          temperature: float = 0.1, timeout: int = 90, models: list[str] | None = None,
          log: Callable[[str], None] | None = None) -> Any:
     """Zincirdeki ilk çalışan ücretsiz modelden yanıt. `as_json=True` ise dict, aksi halde str.
-    Hiçbir model yanıt vermezse None (çağıran 'atla, sonra dene' uygular; boş sonuç yazılmaz)."""
+    Hiçbir model yanıt vermezse None (çağıran 'atla, sonra dene' uygular; boş sonuç yazılmaz).
+    LLM kilidi (AGENTS.md kural 20) kapalıyken ağa çıkmadan None döner."""
+    if not _llm_serbest():
+        return None
     pool = keys()
     exhausted = set(_load_usage()["kota_dolu"])
     for spec in models or chain():
@@ -291,7 +296,9 @@ VISION_PROMPT = (
 def vision_ocr(png_bytes: bytes, prompt: str = VISION_PROMPT, timeout: int = 120,
                log: Callable[[str], None] | None = None) -> str | None:
     """Görüntüdeki metni ücretsiz Gemini ile çıkarır (web OCR/GPU vision yerine).
-    Yanıt yoksa None döner (çağıran CPU Tesseract'a düşer)."""
+    Yanıt yoksa None döner (çağıran CPU Tesseract'a düşer). LLM kilidi kapalıyken ağa çıkılmaz."""
+    if not _llm_serbest():
+        return None
     pool = keys()
     exhausted = set(_load_usage()["kota_dolu"])
     data = base64.b64encode(png_bytes).decode()

@@ -15,6 +15,7 @@ Yük ayarları (ortam):
 """
 from __future__ import annotations
 
+import ctypes
 import gc
 import json
 import os
@@ -62,6 +63,12 @@ def idle_reaper():
             if _model is not None and time.monotonic() - _last_use > IDLE_SEC:
                 _model = None
                 gc.collect()
+                # Serbest kalan torch belleğini işletim sistemine geri ver: yoksa model bırakılsa da ~1–2 GB süreçte
+                # kalıp takasa iniyordu (meds-embed-bge 1,3 GB, meds-embed 0,8 GB takas).
+                try:
+                    ctypes.CDLL("libc.so.6").malloc_trim(0)
+                except Exception:  # noqa: BLE001
+                    pass
 
 
 def cache_put(k: str, v: list[float]):

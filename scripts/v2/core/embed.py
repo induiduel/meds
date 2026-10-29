@@ -18,6 +18,30 @@ from . import store
 DEFAULT_MODEL = os.environ.get("MEDS_V2_EMBED_MODEL", "intfloat/multilingual-e5-small")
 
 
+E5_SMALL = "intfloat/multilingual-e5-small"
+
+
+def remote_query_vector(text: str, model_name: str):
+    """Sorgu vektörünü ortak meds-embed servisinden (aynı e5-small, :8091) alır; başarısızsa None.
+    Böylece arama servisleri modelin kendi kopyasını (~1 GB torch) bellekte tutmaz."""
+    url = os.environ.get("MEDS_E5_EMBED_URL", "http://127.0.0.1:8091/embed")  # MEDS_EMBED_URL bge-m3'e (:8094) gider
+    if model_name != E5_SMALL or not url:
+        return None
+    import json as _json
+    import urllib.request
+    try:
+        req = urllib.request.Request(url, data=_json.dumps({"texts": [text], "kind": "query"}).encode("utf-8"),
+                                     headers={"Content-Type": "application/json"})
+        with urllib.request.urlopen(req, timeout=30) as resp:
+            vec = (_json.loads(resp.read()).get("vectors") or [None])[0]
+        if not vec or len(vec) != 384:  # e5-small boyutu; başka model yanıtlarsa yerel modele düşülür
+            return None
+        import numpy as np
+        return np.asarray(vec, dtype="float32")
+    except Exception:  # noqa: BLE001
+        return None
+
+
 def build(chunks: list[dict], *, batch_size: int = 64, log=print) -> dict:
     """Parçaları CPU e5 ile vektörleştirir ve diske yazar. Model yoksa yapılmaz (rapor döner).
     Aynı anda yalnız bir vektörleştirme çalışır (kilit); ikinci çağrı atlanır."""
@@ -82,14 +106,27 @@ def _load_cache():
         return _CACHE
     try:
         import numpy as np
-        from sentence_transformers import SentenceTransformer
     except Exception:  # noqa: BLE001
         return None
-    _CACHE["model"] = SentenceTransformer((store.read_json(man, {}) or {}).get("model", DEFAULT_MODEL), device="cpu")
+    _CACHE["model"] = None  # yerel model yalnız ortak servis yanıt vermezse yüklenir (_query_vector)
+    _CACHE["model_ad"] = (store.read_json(man, {}) or {}).get("model", DEFAULT_MODEL)
     _CACHE["mat"] = np.load(npy)
     _CACHE["rows"] = list(store.iter_jsonl(ids))
     _CACHE["key"] = key
     return _CACHE
+
+
+def _query_vector(query: str, cache: dict):
+    q = remote_query_vector(query, cache.get("model_ad") or DEFAULT_MODEL)
+    if q is not None:
+        return q
+    if cache.get("model") is None:
+        try:
+            from sentence_transformers import SentenceTransformer
+        except Exception:  # noqa: BLE001
+            return None
+        cache["model"] = SentenceTransformer(cache.get("model_ad") or DEFAULT_MODEL, device="cpu")
+    return cache["model"].encode(["query: " + query], normalize_embeddings=True)[0]
 
 
 def search(query: str, k: int = 5) -> list[dict]:
@@ -97,8 +134,10 @@ def search(query: str, k: int = 5) -> list[dict]:
     cache = _load_cache()
     if not cache or not query.strip():
         return []
-    model, mat, rows = cache["model"], cache["mat"], cache["rows"]
-    q = model.encode(["query: " + query], normalize_embeddings=True)[0]
+    mat, rows = cache["mat"], cache["rows"]
+    q = _query_vector(query, cache)
+    if q is None:
+        return []
     sims = mat @ q
     order = sims.argsort()[::-1][:k]
     out = []

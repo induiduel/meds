@@ -2939,8 +2939,16 @@ def panel_settings() -> dict:
         return dict(PANEL_DEFAULTS)
 
 
+# Panele kimse bakmıyorken hesaplama yapılmaz: get_stats ~1,5 sn sürüyor, klasörleri tarıyor ve süreç çağırıyordu;
+# eskiden açık sekme olmasa da günde ~17.000 kez koşuyordu. Son /api/stats isteğinden 60 sn sonra durur.
+_STATS_BOSTA_SN = 60
+
+
 def _stats_worker():
     while True:
+        if time.time() - _STATS.get("son_istek", 0.0) > _STATS_BOSTA_SN:
+            time.sleep(2)
+            continue
         t0 = time.time()
         try:
             data = apply_real_status(get_stats())
@@ -2951,7 +2959,9 @@ def _stats_worker():
 
 
 def cached_stats() -> dict:
-    if _STATS["veri"] is None:                       # ilk istek: arka plan henüz bitmediyse bir kez hesapla
+    stale = time.time() - _STATS.get("son_istek", 0.0) > _STATS_BOSTA_SN
+    _STATS["son_istek"] = time.time()
+    if _STATS["veri"] is None or stale:                       # ilk istek: arka plan henüz bitmediyse bir kez hesapla
         t0 = time.time()
         _STATS.update(veri=apply_real_status(get_stats()), zaman=time.time(), sure_ms=int((time.time() - t0) * 1000))
     return {**_STATS["veri"], "_panel": {"olusturma": _STATS["zaman"], "sure_ms": _STATS["sure_ms"], "hata": _STATS["hata"],
@@ -3381,45 +3391,11 @@ def get_stats():
     except Exception:
         pass
 
-    # Docker meds-ollama Tüketimi (CPU %, RAM, BlockIO)
+    # meds-ollama ve yerel Ollama 2026-10-11'de kaldırıldı (AGENTS.md kural 10). Eskiden her turda iki `sudo docker`
+    # çağrısı ve iki 11434 isteği yapılıyordu; alanlar panel uyumluluğu için boş döner.
     ollama_docker_stats = {"cpu": "-%", "mem": "- MB", "blockio": "-"}
-    try:
-        r = subprocess.run(["sudo", "-n", "docker", "stats", "--no-stream", "meds-ollama",
-                            "--format", "{{.CPUPerc}}|{{.MemUsage}}|{{.BlockIO}}"],
-                           capture_output=True, text=True, timeout=2)
-        if r.returncode == 0 and r.stdout.strip():
-            c_cpu, c_mem, c_bio = [x.strip() for x in r.stdout.strip().split("|")]
-            ollama_docker_stats = {
-                "cpu": c_cpu,
-                "mem": c_mem.split("/")[0].strip(),
-                "blockio": c_bio
-            }
-    except Exception:
-        pass
-
-    # 2. Ollama Modelleri
     models = []
     active_model = None
-    try:
-        import urllib.request
-        req = urllib.request.urlopen("http://127.0.0.1:11434/api/tags", timeout=3)
-        data = json.loads(req.read().decode())
-        models = data.get("models", [])
-
-        req_ps = urllib.request.urlopen("http://127.0.0.1:11434/api/ps", timeout=3)
-        data_ps = json.loads(req_ps.read().decode())
-        running_models = data_ps.get("models", [])
-        if running_models:
-            m = running_models[0]
-            active_model = {
-                "name": m.get("name"),
-                "size_gb": round(m.get("size", 0) / (1024**3), 2),
-                "parameter_size": m.get("details", {}).get("parameter_size", "-"),
-                "format": m.get("details", {}).get("format", "gguf"),
-                "quantization_level": m.get("details", {}).get("quantization_level", "-")
-            }
-    except Exception:
-        pass
 
     # 3. Dosya Sayaçları
     def c(p, ext=None):
@@ -3456,13 +3432,6 @@ def get_stats():
         try:
             r = subprocess.run(["systemctl", "--user", "is-active", name], capture_output=True, text=True, timeout=2)
             return r.stdout.strip()
-        except Exception:
-            return "kapalı"
-
-    def dock(name):
-        try:
-            r = subprocess.run(["sudo", "-n", "docker", "inspect", "-f", "{{.State.Status}}", name], capture_output=True, text=True, timeout=2)
-            return r.stdout.strip() if r.returncode == 0 else "kapalı"
         except Exception:
             return "kapalı"
 
@@ -3884,7 +3853,7 @@ def get_stats():
         "stages_progress": stages_progress,
         "services": {
             "pipeline": srv("meds-pipeline") if srv("meds-pipeline") != "inactive" else ("active" if subprocess.run(["pgrep", "-f", "pipeline_runner.py"], capture_output=True).stdout.strip() else "inactive"),
-            "ollama": dock("meds-ollama"),
+            "ollama": "kapalı",  # kaldırıldı (kural 10)
             "watchdog": "active" if subprocess.run(["pgrep", "-f", "watchdog.py"], capture_output=True).stdout.strip() else "inactive"
         },
         "file_queue": file_queue,
