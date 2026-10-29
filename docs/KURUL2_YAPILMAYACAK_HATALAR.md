@@ -1586,3 +1586,8 @@ Her maddede: belirti · kök neden · Kurul 2 kuralı · kapı durumu. Kanıtlar
 - **Belirti:** Öğren › Tekrar ekranında geri düğmesi ve başlık ("Hata defteri · …", "Tekrar") soldan kesik; seçili sekme koyu temada görünmüyor.
 - **Kök neden:** `LearnReview` `.ls-root` sabit katmanı `.sh-main` içinde çiziliyordu; `.sh-main`'in zoom/yığınlama bağlamı sabit katmanı v15 yan rayının (z 40, uygulama düzeyi) altına itti. Seçili segment `--color-white` zemini koyu temada alan rengiyle aynıydı.
 - **Çözüm/önleme:** tam ekran katman `createPortal(..., document.body)` ile gövdeye taşındı; v15'te seçili segment vurgu karışımlı. Yeni tam ekran katman `.sh-main` içine değil gövdeye portal edilir.
+
+## H438 — Anlatım slaytın söylediğini tersine çevirdi (k2-01, 2026-10-29)
+- **Belirti:** s.4 slaytı "BT, MR tanının doğru olduğunu göstermek için çekilir" derken anlatım "BT ve MR bu hastalıkları doğrulamak için çekilmez" dedi; öğrenci çelişki gördü.
+- **Kök neden:** yazar "yapısal nedeni dışlamak" yorumunu öne çıkarırken slayt cümlesini olumsuza çevirdi; denetçi slayt satırıyla anlatım cümlesinin yönünü (olumlu/olumsuz) kıyaslamadı.
+- **Çözüm/önleme:** cümle slayt ifadesine döndürüldü ("tanının doğru olduğunu göstermek için çekilir"), açıklama sonraki cümlede ("başka yapısal nedeni dışlamak"). Anlatım slayttaki hükmü yorumlayabilir ama **yönünü tersine çeviremez**; denetçi her sayfada slayt cümlesi ↔ anlatım cümlesi olumsuzluk kıyası yapar. Değişen cümlenin EMA klibi yeniden üretilmelidir.

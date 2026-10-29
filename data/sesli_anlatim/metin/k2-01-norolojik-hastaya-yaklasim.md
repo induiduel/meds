@@ -28,7 +28,7 @@ Doğal gidiş, hastalığa hiç müdahale edilmezse seyridir. Bunu bilmek tanı 
 @@ Tanısı öyküye dayanan hastalıklar
 Migren ve trigeminal nevralji gibi hastalıklarda nörolojik muayene bulgusu ve laboratuvar bulgusu yoktur. Tanı doğru bir anamnezle konur.
 
-Bilgisayarlı tomografi ve manyetik rezonans bu hastalıkları doğrulamak için çekilmez. Amaç, benzer yakınma yapabilecek başka bir yapısal nedeni dışlamaktır. Görüntünün normal çıkması tanıyı bozmaz, çünkü tanı klinik olarak konur.
+Bilgisayarlı tomografi ve manyetik rezonans, tanının doğru olduğunu göstermek için çekilir. Amaç, benzer yakınma yapabilecek başka bir yapısal nedeni dışlamaktır. Görüntünün normal çıkması tanıyı bozmaz, çünkü tanı klinik olarak konur.
 
 Epilepsi de klinik bir tanıdır ve öyküyle konur. Elektroensefalografinin normal olması hastayı epilepsiden uzaklaştırmaz.
 
