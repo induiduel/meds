@@ -1591,3 +1591,8 @@ Her maddede: belirti · kök neden · Kurul 2 kuralı · kapı durumu. Kanıtlar
 - **Belirti:** s.4 slaytı "BT, MR tanının doğru olduğunu göstermek için çekilir" derken anlatım "BT ve MR bu hastalıkları doğrulamak için çekilmez" dedi; öğrenci çelişki gördü.
 - **Kök neden:** yazar "yapısal nedeni dışlamak" yorumunu öne çıkarırken slayt cümlesini olumsuza çevirdi; denetçi slayt satırıyla anlatım cümlesinin yönünü (olumlu/olumsuz) kıyaslamadı.
 - **Çözüm/önleme:** cümle slayt ifadesine döndürüldü ("tanının doğru olduğunu göstermek için çekilir"), açıklama sonraki cümlede ("başka yapısal nedeni dışlamak"). Anlatım slayttaki hükmü yorumlayabilir ama **yönünü tersine çeviremez**; denetçi her sayfada slayt cümlesi ↔ anlatım cümlesi olumsuzluk kıyası yapar. Değişen cümlenin EMA klibi yeniden üretilmelidir.
+
+## H439 — Üst çubuk arka plan göstergesi stilsiz çiziliyordu (v15, 2026-10-29)
+- **Belirti:** /dersler üst çubuğunda çevrimdışı hapının yanında dönen simge ile "1" alt alta taşıyor, "ARKA PLANDA 1 İŞ" ve "1 paket sıradaTümünü gör" çerçevesiz, bitişik yığılıyordu.
+- **Kök neden:** `ArkaPlanGosterge` her sayfada `ShellV15` içinde çizilir, ama `ap15g-*` kuralları yalnız tembel yüklenen sayfa bileşenlerinin (ArkaPlanV15, Yardım, Dil…) içe aktardığı `kisisel.css`'teydi. O sayfalardan biri açılmadan gelinen her rotada CSS hiç yüklenmiyor, açılır kart ve rozet tarayıcı varsayılanıyla çiziliyordu.
+- **Çözüm/önleme:** `ap15g` kuralları (+ kendi `@keyframes ap15g-don`, kart çerçevesi/zemini, `v15-label`) kabukla birlikte yüklenen `styles/v15/shell.css`'e taşındı. Kural: kabukta (ShellV15) her sayfada çizilen bileşenin stili sayfa CSS'ine değil `shell.css`/`tokens.css`'e yazılır; bir bileşenin sınıfları yalnız onu içe aktaran (ya da kabuğun) CSS dosyasında yaşar.

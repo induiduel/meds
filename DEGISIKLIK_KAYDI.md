@@ -1,3 +1,6 @@
+## 2026-10-29 — v15 üst çubuk arka plan göstergesi stilsizdi (H439)
+- `ap15g` kuralları tembel yüklenen `kisisel.css`'ten kabuğun `shell.css`'ine taşındı; kart çerçeve/zemin ve etiket stili kendine yeterli. Yerel tarayıcı ekran görüntüsü alınamadı (yerel sekme açılışta takıldı); derlenmiş ana CSS'te kuralların varlığı doğrulandı.
+
 ## 2026-10-29 — Kurul 2 (2026-27) ara soruları üretildi: 7 ders, 77 soru (kural 27)
 - k2-01 (5), k2-02 (9), k2-03 (13), k2-04 (12), k2-05-v2 (12), k2-07 (12), k2-08 (14); k2-06'nın sesli dersi yok. Branş `k2hocaara`, kodlar 2a01…2a08; veri `src/data/k2hocaara_cozucu/`, ses `data/k2hocaara_cozucu/ses/` (EMA, GPU).
 - Tıbbi kaynak yalnız PDF sayfa metni (pymupdf); ders akış metni yalnız slayt eşlemesi için (Whisper hatası riski). Yazar alt ajan + bağımsız denetçi; 6 derste denetçi düzeltmesi, düzeltilen 21 soru ikinci denetimden GEÇER (H436). `kur.py dogrula --ses` 7/7 0 HATA.

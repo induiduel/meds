@@ -47,19 +47,7 @@
   & .ap15-cv { padding: 0; margin: 0; max-width: none; }
   & .ap15-cv .cv-kart { border-color: var(--color-line-soft); }
 
-  /* üst bar göstergesi */
-  & .ap15g { position: relative; }
-  & .ap15g-b { color: var(--color-accent); }
-  & .ap15g-spin { animation: ap15-don 1.1s linear infinite; }
-  & .ap15g-b b { position: absolute; right: 2px; bottom: 3px; min-width: 16px; padding: 2px 4px; border-radius: 999px; background: var(--color-accent); color: var(--color-on-accent); font: 700 9.5px/1 var(--font-sans); text-align: center; }
-  & .ap15g-m { position: absolute; right: 0; top: calc(100% + 6px); z-index: 60; width: min(290px, calc(100vw - 24px)); padding: 6px; display: flex; flex-direction: column; box-shadow: var(--v15-sh-2, 0 8px 28px rgb(0 0 0 / .16)); }
-  & .ap15g-m .v15-label { padding: 6px 10px; }
-  & .ap15g-m button { display: flex; align-items: center; gap: 10px; min-height: 44px; padding: 0 10px; border: 0; border-radius: 10px; background: none; color: var(--color-ink); font: 500 14px/1.25 var(--font-sans); text-align: left; cursor: pointer; }
-  & .ap15g-m button:hover { background: var(--color-field); }
-  & .ap15g-m button span { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-  & .ap15g-m button svg { width: 17px; height: 17px; flex: none; color: var(--color-ink-2); }
-  & .ap15g-m .ap15g-all { border-top: 1px solid var(--color-line-soft); border-radius: 0 0 10px 10px; color: var(--color-accent); font-weight: 600; }
-  @media (prefers-reduced-motion: reduce) { & .ap15g-spin { animation: none; } }
+  /* üst bar göstergesi (ap15g) shell.css'te: kabuk her sayfada çizer, bu dosya tembel yüklenir (H437) */
 
   /* Dil ve bölge */
   & .db15-dil { display: flex; align-items: center; gap: 12px; padding: 14px 16px; }
