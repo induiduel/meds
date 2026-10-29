@@ -284,6 +284,25 @@ def yuzdelik(degerler: list[float], v: float) -> float:
     return round(100 * (alt + (esit - 1) / 2) / (len(s) - 1), 1)
 
 
+def kurul_listesi(kurul: int) -> list[dict]:
+    """Kurul 2+: ders listesi ders kayıt defterinden (src/data/dersler/kN.json) + sesli metin dosyasından; branş kimliği
+    k<kurul><slug> (branslar.json). Aynı dersin v2 metni varsa o alınır."""
+    kayit = json.loads((VERI / 'dersler' / f'k{kurul}.json').read_text())['dersler']
+    br = {x['ad']: x['slug'] for x in json.loads((VERI / 'dersler' / 'branslar.json').read_text())['branslar']}
+    out = []
+    for d in kayit:
+        dosyalar = sorted(METIN.glob(f"{d['id']}-*.md"), key=lambda p: (p.stem.endswith('-v2'), p.stem))
+        if not dosyalar:
+            continue
+        ad = d.get('brans', '')
+        slug = br.get(ad) or br.get(next((k for k in br if k.split()[-1] == ad.split()[-1]), ''), '')
+        if not slug:
+            continue
+        out.append({'key': dosyalar[-1].stem, 'kurul': kurul, 'brans': f'k{kurul}{slug}', 'no': int(d['id'].split('-')[1]),
+                    'baslik': d.get('konu', '')})
+    return out
+
+
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument('--kurul', type=int, default=1)
@@ -291,13 +310,15 @@ def main() -> None:
     ap.add_argument('--dok', help='her dersin tüm terim listesini bu klasöre yaz (YZ denetimi için)')
     a = ap.parse_args()
 
-    if a.liste:
+    if a.kurul >= 2 and not a.liste:
+        liste = kurul_listesi(a.kurul)
+    elif a.liste:
         liste = json.loads(Path(a.liste).read_text())['dersler']
     else:
         with urllib.request.urlopen('http://localhost:3000/api/canli-ders', timeout=30) as r:
             liste = json.loads(r.read())['dersler']
     dersler = [d for d in liste if d.get('kurul') == a.kurul and isinstance(d.get('no'), int)
-               and d.get('brans') in BRANS and d['key'] not in GIZLI and (METIN / f"{d['key']}.md").exists()]
+               and (d.get('brans') in BRANS or a.kurul >= 2) and d['key'] not in GIZLI and (METIN / f"{d['key']}.md").exists()]
     metinler = {d['key']: (METIN / f"{d['key']}.md").read_text() for d in dersler}
     tum = {p.stem: p.read_text() for p in METIN.glob(f'k{a.kurul}-*.md')}
     vocab_kur(tum.values())
@@ -307,7 +328,7 @@ def main() -> None:
 
     satirlar = []
     for d in dersler:
-        b = BRANS[d['brans']]
+        b = BRANS.get(d['brans']) or d['brans']
         m = metin_olc(metinler[d['key']], genel, ifade, sozluk_kok)
         cq = cikmislar(b, d['no'], d['baslik'])
         c = cikmis_olc(cq, genel, sozluk_kok)

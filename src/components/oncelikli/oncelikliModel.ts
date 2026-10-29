@@ -96,7 +96,11 @@ export function oncelikPuani(d: OncelikliDers, a: Agirlik): number {
 export const ESIK = 60;
 export const esikGecer = (d: OncelikliDers, secili: Boyut[]) => secili.every((b) => (d.boyut[b] ?? 0) >= ESIK);
 
-export const veriYukle = (kurul = 1): Promise<OncelikliVeri> =>
-  kurul === 1
-    ? import('../../data/oncelikli_dersler/k1.json').then((m) => m.default as unknown as OncelikliVeri)
-    : Promise.reject(new Error('kurul analizi yok'));
+const VERILER = import.meta.glob('../../data/oncelikli_dersler/k*.json') as Record<string, () => Promise<{ default: unknown }>>;
+/** Analizi hazır kurullar (dosya adından: k1.json, k2.json …) */
+export const HAZIR_KURULLAR: number[] = Object.keys(VERILER)
+  .map((y) => Number(/k(\d+)\.json$/.exec(y)?.[1])).filter(Boolean).sort((a, b) => a - b);
+export const veriYukle = (kurul = 1): Promise<OncelikliVeri> => {
+  const f = VERILER[`../../data/oncelikli_dersler/k${kurul}.json`];
+  return f ? f().then((m) => m.default as OncelikliVeri) : Promise.reject(new Error('kurul analizi yok'));
+};

@@ -9,18 +9,24 @@ import { ChevronDown, Gauge, Headphones, SlidersHorizontal } from 'lucide-react'
 import { bittiMi, sesliKonuId, useTakip, sureYaz } from '../../services/calismaTakip';
 import { KonuIsaret } from '../takip/KonuTakip';
 import { navigateTo, pathFor } from '../../router';
+import { aktifKurul } from '../../services/kurulTakvimi';
 import {
-  BOYUTLAR, ESIK, PROFILLER, TUR_AD, esikGecer, oncelikPuani, veriYukle,
+  BOYUTLAR, ESIK, HAZIR_KURULLAR, PROFILLER, TUR_AD, esikGecer, oncelikPuani, veriYukle,
   type Agirlik, type Boyut, type DersTuru, type OncelikliDers, type OncelikliVeri,
 } from './oncelikliModel';
 import '../../styles/takip.css';
 import '../../styles/oncelikli.css';
 import '../../styles/v15/liste2.css';
 
-const BRANS_AD: Record<string, string> = {
+const BRANS_ADLARI: Record<string, string> = {
   patoloji: 'Patoloji', enfeksiyon: 'Enfeksiyon', uroloji: 'Üroloji', genetik: 'Genetik',
   halksagligi: 'Halk Sağlığı', kadindogum: 'Kadın Doğum', farmakoloji: 'Farmakoloji',
+  noroloji: 'Nöroloji', anestezi: 'Anestezi', psikiyatri: 'Psikiyatri', beyincerrahi: 'Beyin Cerrahisi', ftr: 'FTR', aile: 'Aile Hekimliği',
 };
+/** Branş kimliği "k2noroloji" ya da "patoloji" olabilir; kurul önekini atıp ada çevirir */
+const BRANS_AD = new Proxy({} as Record<string, string>, {
+  get: (_, k: string) => { const s = String(k).replace(/^k\d+/, ''); return BRANS_ADLARI[s] || (s ? s[0].toUpperCase() + s.slice(1) : s); },
+});
 type Durum = 'kalan' | 'tum' | 'biten';
 const DURUM_AD: Record<Durum, string> = { kalan: 'Çalışabileceklerim', tum: 'Tümü', biten: 'Bitirdiklerim' };
 const KONU_SIRA: Record<DersTuru, number> = { mantik: 0, karma: 1, ezber: 2 };
@@ -37,6 +43,10 @@ const sayi = (n: number, k = 0) => n.toLocaleString('tr-TR', { maximumFractionDi
 const ac = (key: string) => navigateTo(pathFor('canli_ders', key));
 
 export default function OncelikliDerslerView() {
+  const [kurul, setKurul] = useState<number>(() => {
+    const a = aktifKurul().kurul;
+    return HAZIR_KURULLAR.includes(a) ? a : HAZIR_KURULLAR[HAZIR_KURULLAR.length - 1] || 1;
+  });
   const [veri, setVeri] = useState<OncelikliVeri | null>(null);
   const [hata, setHata] = useState(false);
   const [ayar, setAyar0] = useState<Ayar>(ayarOku);
@@ -46,7 +56,7 @@ export default function OncelikliDerslerView() {
   const takip = useTakip();
 
   useEffect(() => { document.title = 'Öncelikli dersler · MeDSor'; }, []);
-  useEffect(() => { veriYukle(1).then(setVeri, () => setHata(true)); }, []);
+  useEffect(() => { setVeri(null); setHata(false); veriYukle(kurul).then(setVeri, () => setHata(true)); }, [kurul]);
   const setAyar = (f: (a: Ayar) => Ayar) => setAyar0((a) => {
     const y = f(a);
     try { localStorage.setItem(AYAR_KEY, JSON.stringify(y)); } catch { /* özel pencere */ }
@@ -92,7 +102,14 @@ export default function OncelikliDerslerView() {
         <span className="bd-ic" aria-hidden><Gauge /></span>
         <div>
           <h1>Öncelikli dersler</h1>
-          <p>Kurul 1 sesli dersleri ezber yüküne, mantıkla çözülebilmesine ve çıkmışlarına göre sıralandı. Az ezberli, kolay puan getiren derslerden başla. Diğer kurulların analizi henüz hazır değil.</p>
+          <p>Kurul {kurul} sesli dersleri ezber yüküne, mantıkla çözülebilmesine ve çıkmışlarına göre sıralandı. Az ezberli, kolay puan getiren derslerden başla.{kurul > 1 ? ' Bu kurulda ders sayısı az olduğundan sıralama göreli; yeni ders eklendikçe yenilenir.' : ''}</p>
+          {HAZIR_KURULLAR.length > 1 && (
+            <div className="od15-kurul" role="group" aria-label="Kurul seç" style={{ display: 'flex', gap: 6, marginTop: 8, flexWrap: 'wrap' }}>
+              {HAZIR_KURULLAR.map((k) => (
+                <button key={k} type="button" className={`od-cip${k === kurul ? ' is-on' : ''}`} aria-pressed={k === kurul} onClick={() => { setKurul(k); setAcik(null); }}>Kurul {k}</button>
+              ))}
+            </div>
+          )}
         </div>
       </header>
 
