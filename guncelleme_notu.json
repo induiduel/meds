@@ -1,10 +1,10 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 573,
-  "baslik": "Örnek sorular: \"Hoca üslubu\" soruları artık ders kartında ve en üstte",
+  "onem": 574,
+  "baslik": "Ders sayfası: \"Örnek sorular\" içeriğinde hoca üslubu soruları",
   "maddeler": [
-    "Serebrovasküler ve SSS Hücresel Reaksiyonları derslerinin kartında \"Hoca üslubu · N yeni soru\" yazısı görünür.",
-    "Ders açılınca hocanın üslubunda çıkabilecek sorular grubu en üstte yer alır."
+    "Ders sayfasında Soru çöz › Örnek sorular kartı hoca üslubu soru sayısını gösterir.",
+    "Örnek sorular sayfasında \"Hoca\" grubu en üstte; her soru için şık şık açıklama gösterilir."
   ],
   "eklenen": [],
   "degisen": [],

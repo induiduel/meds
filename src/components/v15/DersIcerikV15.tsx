@@ -4,7 +4,7 @@ import {
   ListOrdered, Pill, Pin, RotateCw, Scale, Search, Sparkles, Stethoscope, Table2, X,
 } from 'lucide-react';
 import { linkClick, navigateTo, pathFor } from '../../router';
-import { DI_BOLUMLER, dersIcerikGetir, dersSorulariGetir, type DiBolum, type DiPaket, type DiSoru, type DiTablo } from './dersIcerik';
+import { DI_BOLUMLER, HOCA_KAZANIM_NO, dersIcerikGetir, dersSorulariGetir, type DiBolum, type DiPaket, type DiSoru, type DiTablo } from './dersIcerik';
 import { FavBaglam, FavDugme } from './FavDugme';
 import { TerimSesDugme } from '../ui/TerimSesDugme';
 import { dersSoruKaydet } from '../../services/calismaTakip';
@@ -297,7 +297,7 @@ export default function DersIcerikV15({ dersKey, bolum }: { dersKey: string; bol
         const l = k.sorular.filter((s) => ok(s.soru, ...Object.values(s.secenekler)));
         return l.length > 0 && (
           <section key={k.no} className="di15-kaz">
-            <h2 className="di15-kaz-h"><span>K{k.no}</span>{k.metin}</h2>
+            <h2 className="di15-kaz-h"><span>{k.no === HOCA_KAZANIM_NO ? 'Hoca' : `K${k.no}`}</span>{k.metin}</h2>
             <div className="di15-yigin">{l.map((s, j) => <Soru key={s.id} s={s} no={j + 1} />)}</div>
           </section>
         );
@@ -433,7 +433,7 @@ function Soru({ s, no, tur = 'ornek' }: { s: DiSoru; no: number; tur?: 'ornek' |
           </button>
         ))}
       </div>
-      {sec && <p className={`di15-ac ${sec === s.dogru ? 'is-d' : 'is-y'}`}><b>{sec === s.dogru ? 'Doğru.' : `Doğru cevap ${s.dogru}.`}</b> {s.aciklama}</p>}
+      {sec && <p className={`di15-ac ${sec === s.dogru ? 'is-d' : 'is-y'}`}><b>{sec === s.dogru ? 'Doğru.' : `Doğru cevap ${s.dogru}.`}</b> {s.sik ? (sec === s.dogru ? s.sik[s.dogru] : `${s.sik[sec] || ''} Doğru şık ${s.dogru}: ${s.sik[s.dogru] || ''}`) : s.aciklama}</p>}
       {!sec && <p className="di15-ipucu"><CircleHelp aria-hidden /> Bir şık seç; açıklama altta açılır.</p>}
     </article>
   );

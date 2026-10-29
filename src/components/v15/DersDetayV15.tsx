@@ -12,7 +12,7 @@ import { dersCozucu } from '../canliDers/dersCozucu';
 import DersIcerikV15 from './DersIcerikV15';
 import DersIstatV15 from './DersIstatV15';
 import DersPdfEkranV15 from './DersPdfEkranV15';
-import { DI_BOLUMLER, dersIcerikGetir, type DiBolum, type DiPaket } from './dersIcerik';
+import { DI_BOLUMLER, dersIcerikGetir, hocaSoruSayisi, type DiBolum, type DiPaket } from './dersIcerik';
 import IcerikKapaliV15 from './IcerikKapaliV15';
 import { icerikGizli, useSiteAyar } from '../../services/siteAyar';
 import '../../styles/v15/dersler.css';
@@ -186,7 +186,8 @@ export default function DersDetayV15() {
     for (const b of DI_BOLUMLER) {
       const [n, a, ic, tone] = say[b.id];
       if (n === 0) continue;
-      icerik.push({ id: b.id, tone, icon: ic, t: b.ad, s: n > 0 ? `${n} ${a}` : a, url: `${pathFor('ders_detay', key)}?b=${b.id}`, k: n > 0 ? `${n} ${a.split(' · ')[0].split(' ve ')[0]}` : 'örnek soru' });
+      const hocaN = b.id === 'sorular' ? hocaSoruSayisi(key) : 0;
+      icerik.push({ id: b.id, tone, icon: ic, t: b.ad, s: hocaN ? `${hocaN} hoca üslubu soru + müfredata sadık örnek sorular` : n > 0 ? `${n} ${a}` : a, url: `${pathFor('ders_detay', key)}?b=${b.id}`, k: hocaN ? `${hocaN} hoca üslubu` : n > 0 ? `${n} ${a.split(' · ')[0].split(' ve ')[0]}` : 'örnek soru' });
     }
     if (paket.spotlar.some((x) => x.adim)) icerik.push({ id: 'pdf', tone: 'is-c', icon: Download, t: 'Ders PDF\'i', s: 'slayt sırasıyla anlatım + her adımın özeti · slayt boyutunda', url: `${pathFor('ders_detay', key)}?b=pdf`, k: 'anlatım + özet' });
   }

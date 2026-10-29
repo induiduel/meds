@@ -14,7 +14,9 @@ export interface DiPaket {
   bilgiler: (DiAdim & { b: string; m: string; s?: number })[]; onemli: DiOnemli[]; spotlar: (DiAdim & { m: string; n: number; bolum: string })[];
   tablolar: DiTablo[]; listeler: DiListe[]; quiz: DiQuiz[]; cikmis?: number; kartlar: (DiAdim & { o: string; a: string; c: string; n: number })[];
 }
-export interface DiSoru { id: string; kazanim: number; zorluk: string; soru: string; secenekler: Record<string, string>; dogru: string; aciklama: string }
+export interface DiSoru { id: string; kazanim: number; zorluk: string; soru: string; secenekler: Record<string, string>; dogru: string; aciklama: string; sik?: Record<string, string> }
+/** Patoloji: hocanın üslubunda çıkabilecek sorular (AGENTS.md kural 25) — sentetik kazanım no */
+export const HOCA_KAZANIM_NO = 900;
 
 import { icerikGizli } from '../../services/siteAyar';
 
@@ -27,8 +29,24 @@ const bul = <T,>(m: Record<string, T>, key: string) => Object.entries(m).find(([
 const paketKapali = (key: string) => icerikGizli('paket', anahtar(key));
 export const dersIcerikVar = (key: string) => !paketKapali(key) && !!bul(PAKETLER, key);
 export const dersIcerikGetir = async (key: string) => (paketKapali(key) ? null : (await bul(PAKETLER, key)?.())?.default || null);
-export const dersSorulariGetir = async (key: string): Promise<{ no: number; metin: string; sorular: DiSoru[] }[]> =>
-  (await bul(SORULAR, key)?.())?.default.kazanimlar || [];
+const HOCA = import.meta.glob('../../data/hoca_uslubu_sorular/*/k*.json', { import: 'default' }) as Record<string, () => Promise<{ sorular: { kok: string; siklar: string[]; cevap: string; aciklama: Record<string, string> }[] }>>;
+const HOCA_INDEX = import.meta.glob('../../data/hoca_uslubu_sorular/*/index.json', { eager: true, import: 'default' }) as Record<string, { ders_id: string; soru: number }[]>;
+/** Dersin hoca üslubu soru sayısı (ders anahtarı k2-04-… ya da k2-04) */
+export const hocaSoruSayisi = (key: string) => {
+  const kisa = anahtar(key).split('-').slice(0, 2).join('-');
+  return Object.values(HOCA_INDEX).flat().find((r) => r.ders_id === kisa)?.soru || 0;
+};
+export const dersSorulariGetir = async (key: string): Promise<{ no: number; metin: string; sorular: DiSoru[] }[]> => {
+  const kaz = (await bul(SORULAR, key)?.())?.default.kazanimlar || [];
+  const h = await bul(HOCA, key)?.();
+  if (!h) return kaz;
+  const kisa = anahtar(key).split('-').slice(0, 2).join('-');
+  const sorular: DiSoru[] = h.sorular.map((q, i) => ({
+    id: `${kisa}-qh${String(i + 1).padStart(2, '0')}`, kazanim: HOCA_KAZANIM_NO, zorluk: 'zor', soru: q.kok,
+    secenekler: Object.fromEntries(q.siklar.map((t, j) => ['ABCDE'[j], t])), dogru: q.cevap, aciklama: q.aciklama[q.cevap] || '', sik: q.aciklama,
+  }));
+  return [{ no: HOCA_KAZANIM_NO, metin: 'Hocanın üslubunda çıkabilecek sorular', sorular }, ...kaz];
+};
 
 export type DiBolum = 'terimler' | 'hastaliklar' | 'bilgiler' | 'listeler' | 'tablolar' | 'sorular' | 'quiz' | 'kartlar';
 export const DI_BOLUMLER: { id: DiBolum; ad: string }[] = [

@@ -118,3 +118,6 @@
 
 ## 2026-10-29 (4) — Hoca üslubu soruları görünür yapıldı (kullanıcı "göremedim" dedi)
 - **Belirti:** canlıda "Hoca" etiketli sorular fark edilmedi. **Kök neden:** grup dersin en sonuna (K1–K3'ten sonra) eklenmişti ve ders kartında hiçbir ipucu yoktu; sayılar doğruydu (k2-04 39 soru) ama etiket yalnız ders içinde küçük rozetti. **Çözüm:** `KazanimSorulariView.tsx` — grup en üste, kartta "Hoca üslubu · N yeni soru", kazanım sayısına +1. **Önleme:** yeni içerik katmanı eklenince ders kartında ve ders içinde ilk görünümde işaretlenir.
+
+## 2026-10-29 (5) — Hoca üslubu sorular ders sayfasının "içerikler" bölümüne (kullanıcı bildirdi)
+- **Belirti:** sesli ders/ders sayfasında "Bu dersin içerikleri › Soru çöz › Örnek sorular" içinde hoca soruları yoktu; kart sayı bile göstermiyordu. **Kök neden:** hoca katmanını yalnız `KazanimSorulariView` (Örnek sorular ekranı) okuyordu; ders sayfası ayrı yoldan (`dersIcerik.ts › dersSorulariGetir`, `DersIcerikV15`, `DersDetayV15`) örnek soru okur. **Çözüm:** `dersSorulariGetir` hoca kazanımını (no 900, "Hoca") en üste ekler, `Soru` şık şık açıklama gösterir, içerik kartı "N hoca üslubu" yazar (`hocaSoruSayisi`). **Önleme:** yeni soru katmanı eklenince örnek sorunun TÜM okuma yolları (Örnek sorular ekranı + ders sayfası içerikleri + çözücü) kontrol edilir.
