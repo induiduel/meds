@@ -1,12 +1,10 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 586,
-  "baslik": "Sesli derslerde \"Ders analizi\" ve \"Ders özeti\"",
+  "onem": 587,
+  "baslik": "Hata defteri tekrar ekranı düzeltildi",
   "maddeler": [
-    "Sesli ders başlamadan önce \"Ders analizi\" açılır: derste ne anlatılacak, bilmen gerekenler, en önemli yerler, çıkmışlarda ne soruldu, hocanın soru üslubu ve nelere odaklanmalısın.",
-    "\"Ders özeti\" sekmesi dersin en önemli yerlerini slayt sırasıyla anlatır.",
-    "Her bölümü EMA sesiyle dinleyebilir ya da \"Tümünü dinle\" ile baştan sona dinleyebilirsin.",
-    "Ders çalarken de PDF üst çubuğundaki pano simgesiyle açılır."
+    "Tekrar ekranı artık tam ekran açılıyor; geri düğmesi ve başlık yan menünün altında kalmıyor",
+    "Seçili sekme (Bugün / Tüm hatalarım) koyu temada belirgin"
   ],
   "eklenen": [],
   "degisen": [],

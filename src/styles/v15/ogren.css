@@ -66,3 +66,10 @@
 :root[data-v15='on'][data-design] .ls-btn { border-radius: 999px; }
 :root[data-v15='on'][data-design] :is(.ls-optcard, .ls-chain > *, .ls-flip-face) { border-radius: var(--v15-r-md, 12px); }
 :root[data-v15='on'][data-design] .ls-table { border-radius: var(--v15-r-md, 12px); overflow: hidden; }
+
+/* Hata defteri tekrar ekranı (H436): seçili segment koyu temada zeminle aynı tonda kalıyordu; kaynak satırı ayırıcısı */
+:root[data-v15='on'] {
+  & .lr-rv-seg .ls-seg button[aria-checked='true'] { background: color-mix(in srgb, var(--color-accent) 22%, var(--color-white)); color: var(--color-ink); font-weight: 600; }
+  & .lr-rv-src .sp { flex: 1; height: auto; background: none; border: 0; }
+  & .lr-rv-top { padding-left: max(8px, env(safe-area-inset-left, 0px)); }
+}

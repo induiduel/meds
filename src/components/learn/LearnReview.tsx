@@ -9,6 +9,7 @@
  * Stil: styles/learn-focus.css (.lr-rv-*) + ders ekranının .ls-* sınıfları (ls-root kabuğu); v12 görünümü styles/v12/learn-library.css.
  */
 import React, { useEffect, useMemo, useState } from 'react';
+import { createPortal } from 'react-dom';
 import { BookOpenText, Check, ChevronLeft, ChevronRight, PartyPopper, RotateCcw } from 'lucide-react';
 import { loadDeck } from '../../data/deckStore';
 import { buildSteps, practiceOf, type PracticeItem } from './lesson/lessonModel';
@@ -105,7 +106,9 @@ export const LearnReview: React.FC<{
   const counts = useMemo(() => ({ due: dueEntries(Date.now(), scope).length, all: openEntries(scope).length }), [scope, queue]); // eslint-disable-line react-hooks/exhaustive-deps
   const title = deckId && scope ? queue?.[0]?.e.deckTitle || 'Bu ders' : 'Tüm dersler';
 
-  return (
+  // Kök neden (H436): .sh-main içinde çizilince sabit katman v15 yan rayının altında kalıyordu (başlık/kapat kesik);
+  // tam ekran katman belge gövdesine taşınır.
+  return createPortal(
     <div className="ls-root is-A" role="dialog" aria-modal="true" aria-label="Tekrar: hata defteri">
       <header className="ls-top lv-top lr-rv-top">
         <button type="button" className="ls-btn is-icon is-ghost" onClick={onClose} aria-label="Kapat" title="Kapat (Esc)"><ChevronLeft aria-hidden /></button>
@@ -179,6 +182,7 @@ export const LearnReview: React.FC<{
           ) : null}
         </div>
       </main>
-    </div>
+    </div>,
+    document.body,
   );
 };
