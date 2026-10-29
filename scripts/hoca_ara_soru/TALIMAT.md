@@ -56,3 +56,9 @@ parçasıdır; mevcut derslere toplu uygulanmaz. LLM adımları yalnız kullanı
 10. `npx vite build`; yerelde sesli derste soru sayfasını ve ünlem modunu dinleyerek sına; ders sayfasındaki kartı aç.
 11. Yayın: git'e işle, `guncelleme_notu.json` `onem`+1, `bash meds/deploy/oracle/dagit.sh`; ses klasörü
     `data/k<N>hocaara_cozucu/ses/` Oracle'a rsync (diğer çözücü sesleriyle aynı yol).
+
+## Uygulamada öğrenilenler (Kurul 2, 2026-10-29)
+- Çözücü kapısı `meds_temp/spot_cozucu/k<N>hocaara/pdf_metin/<kod>.md` (PDF sayfa metni, `=== SAYFA n ===`) ister; yazımdan önce oluştur.
+- Öğrenciye dönük şık açıklaması ve ipucunda "slayt"/"şık" sözcüğü kapıda HATA; slayt numarası yalnız `anlatim`'da.
+- İleriye sızıntı şık açıklamalarında betikle yakalanmaz: denetçi her açıklamayı slayt slayt arar (H436). Ders akış metninden terim/sayı alınmaz (Whisper).
+- `ses.py` her `d-N` klibinde "Doğru!" için "süre tutarsız" notu yazar; bilinen ve zararsızdır (öteki çözücülerde de var).

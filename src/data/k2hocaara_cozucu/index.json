@@ -1,0 +1,145 @@
+{
+ "surum": "k2hocaara-v1",
+ "ses": "EMA",
+ "sesler": [
+  {
+   "id": "ema",
+   "ad": "EMA",
+   "varsayilan": true
+  }
+ ],
+ "ortak": {
+  "yanlis": {
+   "v": "1e0f04980772",
+   "sure": 1.2
+  },
+  "dene": {
+   "v": "542e22f41067",
+   "sure": 1.464
+  },
+  "oc-bas": {
+   "v": "d4294f978922",
+   "sure": 4.056
+  },
+  "oc-yol": {
+   "v": "78ce651ad1c9",
+   "sure": 2.736
+  },
+  "oc-ele": {
+   "v": "82d7cc9f8aaf",
+   "sure": 3.888
+  },
+  "oc-elendi": {
+   "v": "7262be77f830",
+   "sure": 2.424
+  },
+  "oc-kalan": {
+   "v": "fa784d764914",
+   "sure": 4.656
+  },
+  "oc-son": {
+   "v": "86b08b507f99",
+   "sure": 3.84
+  }
+ },
+ "dersler": [
+  {
+   "kod": "2a01",
+   "key": "k2-01-norolojik-hastaya-yaklasim",
+   "no": 1,
+   "baslik": "Nörolojik Hastaya Yaklaşım",
+   "soru": 5,
+   "ornek": 5,
+   "cikmis": 0,
+   "ses": true,
+   "sayfa": [
+    3,
+    9
+   ]
+  },
+  {
+   "kod": "2a02",
+   "key": "k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim",
+   "no": 2,
+   "baslik": "Bilinç Bozukluğu Olan Hastaya Yaklaşım",
+   "soru": 9,
+   "ornek": 9,
+   "cikmis": 0,
+   "ses": true,
+   "sayfa": [
+    2,
+    48
+   ]
+  },
+  {
+   "kod": "2a03",
+   "key": "k2-03-sss-hucresel-reaksiyonlari-ve-odem-herniasyon",
+   "no": 3,
+   "baslik": "SSS Hücresel Reaksiyonları ve Ödem / Herniasyon",
+   "soru": 13,
+   "ornek": 13,
+   "cikmis": 0,
+   "ses": true,
+   "sayfa": [
+    7,
+    65
+   ]
+  },
+  {
+   "kod": "2a04",
+   "key": "k2-04-serebrovaskuler-hastaliklar-ve-inme",
+   "no": 4,
+   "baslik": "Serebrovasküler Hastalıklar ve İnme",
+   "soru": 12,
+   "ornek": 12,
+   "cikmis": 0,
+   "ses": true,
+   "sayfa": [
+    13,
+    85
+   ]
+  },
+  {
+   "kod": "2a05",
+   "key": "k2-05-norolojik-muayene-v2",
+   "no": 5,
+   "baslik": "Nörolojik Muayene",
+   "soru": 12,
+   "ornek": 12,
+   "cikmis": 0,
+   "ses": true,
+   "sayfa": [
+    2,
+    71
+   ]
+  },
+  {
+   "kod": "2a07",
+   "key": "k2-07-genel-anestezik-ilaclar",
+   "no": 7,
+   "baslik": "Genel Anestezik İlaçlar",
+   "soru": 12,
+   "ornek": 12,
+   "cikmis": 0,
+   "ses": true,
+   "sayfa": [
+    4,
+    51
+   ]
+  },
+  {
+   "kod": "2a08",
+   "key": "k2-08-beyin-ve-iskelet-sistemi-gelisimi-genetigi",
+   "no": 8,
+   "baslik": "Beyin ve İskelet Sistemi Gelişimi Genetiği",
+   "soru": 14,
+   "ornek": 14,
+   "cikmis": 0,
+   "ses": true,
+   "sayfa": [
+    5,
+    83
+   ]
+  }
+ ]
+}

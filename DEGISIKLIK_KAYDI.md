@@ -1,3 +1,8 @@
+## 2026-10-29 — Kurul 2 (2026-27) ara soruları üretildi: 7 ders, 77 soru (kural 27)
+- k2-01 (5), k2-02 (9), k2-03 (13), k2-04 (12), k2-05-v2 (12), k2-07 (12), k2-08 (14); k2-06'nın sesli dersi yok. Branş `k2hocaara`, kodlar 2a01…2a08; veri `src/data/k2hocaara_cozucu/`, ses `data/k2hocaara_cozucu/ses/` (EMA, GPU).
+- Tıbbi kaynak yalnız PDF sayfa metni (pymupdf); ders akış metni yalnız slayt eşlemesi için (Whisper hatası riski). Yazar alt ajan + bağımsız denetçi; 6 derste denetçi düzeltmesi, düzeltilen 21 soru ikinci denetimden GEÇER (H436). `kur.py dogrula --ses` 7/7 0 HATA.
+- k2-05 için yalnız `k2-05-norolojik-muayene-v2` anahtarına bağlandı (eski anahtarda ara sayfa çıkmaz).
+
 ## 2026-10-29 — Sesli derste "Hocanın sorabileceği soru" ara sayfası + ünlem modu (AGENTS kural 27)
 - Ön yüz: `canliDers/CdHocaAra.tsx` (slaytın son paragrafı bitince ders durur → yapay soru sayfası; EMA oku → 5 sn düşün → çöz `c/d` → slayttan anlat `a-N` → derse dön; PDF çubuğunda ünlem = tümü ardışık), `styles/v15/hoca_ara.css`; ders sayfasında "Hocanın sorabileceği sorular" kartı (`dersAraCozucu`), çözücü branşı `k<N>hocaara` (`brans.ts`), `CSoru.ara/anlatim`, `DersSoruTur 'hoca'`.
 - Hat: `scripts/hoca_ara_soru/kur.py` (iskele/dogrula/birlestir; kapılar: ileriye sızıntı, dayanak, slayt atfı, şık/üslup, profil, `--ses` klip eksiksizliği), `TALIMAT.md`; `spot_cozucu/ses.py` `anlatim` → `a-N` klibi; `hat.json` `hoca_ara_soru`, el kitabı §19 11d, standart §2 13b.
