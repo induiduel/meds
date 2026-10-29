@@ -25,4 +25,9 @@ Patoloji dersinin örnek soruları, vurgu/önem listesi ve "çıkabilecek soru" 
 mantığa göre yazılır: **`docs/PATOLOJI_HOCA_SORU_MANTIGI.md` (v2) + `docs/PATOLOJI_SORU_ESLEME_TABLOSU.md`**, işçi `scripts/patoloji_soru_isci/` (TALIMAT.md).
 Özet: her önem noktasına ≥2 soru (farklı dönüşüm: birleştirme / kopya+çevirme / ters yön / ad), çıkmış varsa ters yön zorunlu, çeldirici aynı dersin komşu kavramı,
 sarı dolgu = yapı etiketi (altındaki satır), kalın/`***`/tekrar güçlü sinyal. Kapı: `python3 scripts/patoloji_soru_isci/dogrula.py sorular.json paket.json` → 0 HATA.
-Çıktı: `src/data/hoca_uslubu_sorular/k2/<ders-id>.json`. Yeni patoloji PDF'i eklenince `hazirla.py` + bu akış çalıştırılmadan örnek soru "tamam" sayılmaz.
+Çıktı: `src/data/hoca_uslubu_sorular/k2/<ders-id>.json`; derste **ayrı "Hoca soruları" kartı** (Örnek sorulara karışmaz) + **"Sesli hoca çözücü"** (branş `k2patolojihoca`, EMA sesi GPU'da; `scripts/patoloji_soru_isci/cozucu_kur.py`). Yeni patoloji PDF'i eklenince `hazirla.py` + bu akış çalıştırılmadan örnek soru "tamam" sayılmaz.
+
+## Hoca profili (kullanıcı kararı 2026-10-29, ZORUNLU — AGENTS.md madde 26)
+Yukarıdaki kalıp payları artık ders ve konu bazlı **profil** dosyalarından gelir: `python3 scripts/hoca_profili/profil_oku.py --ders "<ders>" --konu "<konu>"`
+(kök kalıbı, bilgi türü = neden sorulur, bilişsel düzey, çeldirici stratejisi, zorluk, tekrar eden çekirdek kavramlar). Ek kapı:
+`python3 scripts/hoca_profili/profil_kapisi.py <ornek_sorular.json> --ders "<ders>"`. Tam yöntem, sınama sonuçları ve sınırlar: `docs/HOCA_USLUBU_YONTEMI.md`.

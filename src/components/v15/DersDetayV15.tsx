@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
-import { BookA, Check, ChevronDown, ChevronRight, CircleHelp, ClipboardList, Download, Headphones, Layers, Lightbulb, Play, RotateCcw, MessageCircle, Stethoscope, Table2, ListOrdered, HelpCircle, WalletCards } from 'lucide-react';
+import { BookA, Check, ChevronDown, ChevronRight, CircleHelp, ClipboardList, Download, Headphones, Layers, Lightbulb, Play, RotateCcw, MessageCircle, Stethoscope, Table2, ListOrdered, HelpCircle, WalletCards, Award } from 'lucide-react';
 import { linkClick, navigateTo, parseLocation, pathFor } from '../../router';
 import { useAppearance } from '../../utils/appearance';
 import { cdDetayGetir, cdKayitliKonum, cdSesUrl, cdTercihVaryant, fmtMb, type CdDetay } from '../canliDers/canliDersStore';
@@ -8,7 +8,7 @@ import { bittiMi, sesliKonuId, useTakip } from '../../services/calismaTakip';
 import { useV15Baslik } from './baslik';
 import { bransYolu, dersBransi, dersKurulu, hocaYaz, merkezYolu, saatYaz, sureDk, useDersListesi } from './dersVeri';
 import { Halka } from './Halka';
-import { dersCozucu } from '../canliDers/dersCozucu';
+import { dersCozucu, dersHocaCozucu } from '../canliDers/dersCozucu';
 import DersIcerikV15 from './DersIcerikV15';
 import DersIstatV15 from './DersIstatV15';
 import DersPdfEkranV15 from './DersPdfEkranV15';
@@ -31,7 +31,7 @@ const anahtarOku = () => {
 const GRUP_KEY = 'medsoru_dd15_grup_v2'; // v2: varsayılan kapalı (eski açık tercihleri sayılmaz)
 const ICERIK_GRUP: { id: string; ad: string; idler: string[]; varsayilan: boolean }[] = [
   { id: 'calis', ad: 'Dinle ve çalış', idler: ['sesli', 'deste', 'pdf'], varsayilan: false },
-  { id: 'soru', ad: 'Soru çöz', idler: ['cikmis', 'cozucu', 'sorular', 'quiz'], varsayilan: false },
+  { id: 'soru', ad: 'Soru çöz', idler: ['cikmis', 'cozucu', 'sorular', 'hoca', 'hocacozucu', 'quiz'], varsayilan: false },
   { id: 'bilgi', ad: 'Bilgi kartları', idler: ['terimler', 'hastaliklar', 'bilgiler', 'listeler', 'tablolar', 'kartlar'], varsayilan: false },
 ];
 
@@ -172,6 +172,9 @@ export default function DersDetayV15() {
   const coz = dersCozucu(paket?.baslik) || dersCozucu(baslik);
   if (coz)
     icerik.push({ id: 'cozucu', tone: 'is-ok', icon: HelpCircle, t: 'Sesli soru çözücü', s: `${coz.soru ? coz.soru + ' soru · ' : ''}kaynak gösteren sesli çözüm · derse girmeden önce de, sonra da`, url: coz.url, k: coz.soru ? `${coz.soru} soru` : 'sesli çözüm' });
+  const hocaCoz = dersHocaCozucu(paket?.baslik) || dersHocaCozucu(baslik);
+  if (hocaCoz)
+    icerik.push({ id: 'hocacozucu', tone: 'is-c', icon: Award, t: 'Sesli hoca çözücü', s: `${hocaCoz.soru} soru · hocanın üslubunda, sesli çözüm`, url: hocaCoz.url, k: `${hocaCoz.soru} soru` });
   if (paket) {
     const say: Record<DiBolum, [number, string, React.ElementType, string]> = {
       terimler: [paket.terimler.length + paket.kisaltmalar.length, 'terim ve kısaltma · tanımlarıyla', BookA, 'is-ok'],
@@ -181,13 +184,13 @@ export default function DersDetayV15() {
       quiz: [paket.quiz.length, 'mini soru · anında geri bildirim', HelpCircle, 'is-c'],
       tablolar: [paket.tablolar.length, 'tablo ve karşılaştırma', Table2, 'is-c'],
       sorular: [-1, 'müfredata sadık örnek soru · anında geri bildirim', ClipboardList, 'is-ok'],
+      hoca: [hocaSoruSayisi(key), 'hoca üslubu soru · şık şık açıklama', Award, 'is-c'],
       kartlar: [paket.kartlar.length, 'hatırlatma kartı', WalletCards, ''],
     };
     for (const b of DI_BOLUMLER) {
       const [n, a, ic, tone] = say[b.id];
       if (n === 0) continue;
-      const hocaN = b.id === 'sorular' ? hocaSoruSayisi(key) : 0;
-      icerik.push({ id: b.id, tone, icon: ic, t: b.ad, s: hocaN ? `${hocaN} hoca üslubu soru + müfredata sadık örnek sorular` : n > 0 ? `${n} ${a}` : a, url: `${pathFor('ders_detay', key)}?b=${b.id}`, k: hocaN ? `${hocaN} hoca üslubu` : n > 0 ? `${n} ${a.split(' · ')[0].split(' ve ')[0]}` : 'örnek soru' });
+      icerik.push({ id: b.id, tone, icon: ic, t: b.ad, s: n > 0 ? `${n} ${a}` : a, url: `${pathFor('ders_detay', key)}?b=${b.id}`, k: n > 0 ? `${n} ${a.split(' · ')[0].split(' ve ')[0]}` : 'örnek soru' });
     }
     if (paket.spotlar.some((x) => x.adim)) icerik.push({ id: 'pdf', tone: 'is-c', icon: Download, t: 'Ders PDF\'i', s: 'slayt sırasıyla anlatım + her adımın özeti · slayt boyutunda', url: `${pathFor('ders_detay', key)}?b=pdf`, k: 'anlatım + özet' });
   }

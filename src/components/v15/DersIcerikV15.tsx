@@ -4,7 +4,7 @@ import {
   ListOrdered, Pill, Pin, RotateCw, Scale, Search, Sparkles, Stethoscope, Table2, X,
 } from 'lucide-react';
 import { linkClick, navigateTo, pathFor } from '../../router';
-import { DI_BOLUMLER, HOCA_KAZANIM_NO, dersIcerikGetir, dersSorulariGetir, type DiBolum, type DiPaket, type DiSoru, type DiTablo } from './dersIcerik';
+import { DI_BOLUMLER, HOCA_KAZANIM_NO, dersIcerikGetir, dersSorulariGetir, hocaSorulariGetir, hocaSoruSayisi, type DiBolum, type DiPaket, type DiSoru, type DiTablo } from './dersIcerik';
 import { FavBaglam, FavDugme } from './FavDugme';
 import { TerimSesDugme } from '../ui/TerimSesDugme';
 import { dersSoruKaydet } from '../../services/calismaTakip';
@@ -112,6 +112,7 @@ const tabloKategori = (t: DiTablo) => (t.k ? 'karsilastirma' : tabloTuru(t));
 export default function DersIcerikV15({ dersKey, bolum }: { dersKey: string; bolum: DiBolum }) {
   const [p, setP] = useState<DiPaket | null>(null);
   const [kaz, setKaz] = useState<{ no: number; metin: string; sorular: DiSoru[] }[]>([]);
+  const [hocaKaz, setHocaKaz] = useState<{ no: number; metin: string; sorular: DiSoru[] }[]>([]);
   const [ara, setAra] = useState('');
   const [alt, setAlt] = useState<string>('');
   const [sira, setSira] = useState<Sira>('varsayilan');
@@ -120,6 +121,7 @@ export default function DersIcerikV15({ dersKey, bolum }: { dersKey: string; bol
   useEffect(() => {
     dersIcerikGetir(dersKey).then(setP);
     dersSorulariGetir(dersKey).then(setKaz);
+    hocaSorulariGetir(dersKey).then(setHocaKaz);
   }, [dersKey]);
   useEffect(() => { setAra(''); setAlt(''); setSira('varsayilan'); setTur(''); }, [bolum]);
   useEffect(() => { setSira('varsayilan'); }, [alt]);
@@ -128,7 +130,7 @@ export default function DersIcerikV15({ dersKey, bolum }: { dersKey: string; bol
   const sorular = useMemo(() => kaz.flatMap((k) => k.sorular), [kaz]);
   if (!p) return <p className="di15-bos v15-card">Yükleniyor…</p>;
 
-  const sayi: Record<DiBolum, number> = { terimler: p.terimler.length + p.kisaltmalar.length, hastaliklar: p.hastaliklar.length, bilgiler: p.onemli.length + p.bilgiler.length + p.spotlar.length, listeler: p.listeler.length, quiz: p.quiz.length, tablolar: p.tablolar.length, sorular: sorular.length, kartlar: p.kartlar.length };
+  const sayi: Record<DiBolum, number> = { terimler: p.terimler.length + p.kisaltmalar.length, hastaliklar: p.hastaliklar.length, bilgiler: p.onemli.length + p.bilgiler.length + p.spotlar.length, listeler: p.listeler.length, quiz: p.quiz.length, tablolar: p.tablolar.length, sorular: sorular.length, hoca: hocaSoruSayisi(dersKey), kartlar: p.kartlar.length };
   const url = (b: DiBolum) => `${pathFor('ders_detay', dersKey)}?b=${b}`;
   const AltSekme = ({ l }: { l: [string, string, number][] }) => {
     const sec = alt || l.find((x) => x[2])?.[0] || l[0][0];
@@ -293,7 +295,7 @@ export default function DersIcerikV15({ dersKey, bolum }: { dersKey: string; bol
         </div>
       )}
 
-      {bolum === 'sorular' && kaz.map((k) => {
+      {(bolum === 'sorular' || bolum === 'hoca') && (bolum === 'hoca' ? hocaKaz : kaz).map((k) => {
         const l = k.sorular.filter((s) => ok(s.soru, ...Object.values(s.secenekler)));
         return l.length > 0 && (
           <section key={k.no} className="di15-kaz">

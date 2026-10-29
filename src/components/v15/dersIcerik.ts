@@ -36,23 +36,25 @@ export const hocaSoruSayisi = (key: string) => {
   const kisa = anahtar(key).split('-').slice(0, 2).join('-');
   return Object.values(HOCA_INDEX).flat().find((r) => r.ders_id === kisa)?.soru || 0;
 };
-export const dersSorulariGetir = async (key: string): Promise<{ no: number; metin: string; sorular: DiSoru[] }[]> => {
-  const kaz = (await bul(SORULAR, key)?.())?.default.kazanimlar || [];
+export const dersSorulariGetir = async (key: string): Promise<{ no: number; metin: string; sorular: DiSoru[] }[]> =>
+  (await bul(SORULAR, key)?.())?.default.kazanimlar || [];
+/** Hoca soruları (ayrı bölüm): tek sentetik kazanım */
+export const hocaSorulariGetir = async (key: string): Promise<{ no: number; metin: string; sorular: DiSoru[] }[]> => {
   const h = await bul(HOCA, key)?.();
-  if (!h) return kaz;
+  if (!h) return [];
   const kisa = anahtar(key).split('-').slice(0, 2).join('-');
   const sorular: DiSoru[] = h.sorular.map((q, i) => ({
     id: `${kisa}-qh${String(i + 1).padStart(2, '0')}`, kazanim: HOCA_KAZANIM_NO, zorluk: 'zor', soru: q.kok,
     secenekler: Object.fromEntries(q.siklar.map((t, j) => ['ABCDE'[j], t])), dogru: q.cevap, aciklama: q.aciklama[q.cevap] || '', sik: q.aciklama,
   }));
-  return [{ no: HOCA_KAZANIM_NO, metin: 'Hocanın üslubunda çıkabilecek sorular', sorular }, ...kaz];
+  return [{ no: HOCA_KAZANIM_NO, metin: 'Hocanın üslubunda çıkabilecek sorular', sorular }];
 };
 
-export type DiBolum = 'terimler' | 'hastaliklar' | 'bilgiler' | 'listeler' | 'tablolar' | 'sorular' | 'quiz' | 'kartlar';
+export type DiBolum = 'terimler' | 'hastaliklar' | 'bilgiler' | 'listeler' | 'tablolar' | 'sorular' | 'hoca' | 'quiz' | 'kartlar';
 export const DI_BOLUMLER: { id: DiBolum; ad: string }[] = [
   { id: 'terimler', ad: 'Terimler ve kısaltmalar' }, { id: 'hastaliklar', ad: 'Hastalıklar ve kavramlar' },
   { id: 'bilgiler', ad: 'Bilgi spotları' }, { id: 'listeler', ad: 'Sıralamalar ve listeler' }, { id: 'tablolar', ad: 'Tablolar ve karşılaştırmalar' },
-  { id: 'sorular', ad: 'Örnek sorular' }, { id: 'quiz', ad: 'Mini sorular' }, { id: 'kartlar', ad: 'Hatırlatma kartları' },
+  { id: 'sorular', ad: 'Örnek sorular' }, { id: 'hoca', ad: 'Hoca soruları' }, { id: 'quiz', ad: 'Mini sorular' }, { id: 'kartlar', ad: 'Hatırlatma kartları' },
 ];
 
 /** PDF için ders slaytları (Öğren destesi; anlatım metni + sırası). */

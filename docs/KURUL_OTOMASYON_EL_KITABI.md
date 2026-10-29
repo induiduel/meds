@@ -481,7 +481,7 @@ LLM otomasyonu kapalıdır (AGENTS kural 20). Yeni ders, kullanıcı hangi dosya
     `cozucu_dogrula.py` 0 HATA, bağımsız denetçi, EMA GPU sesi §19 adım 8). `ders_icerik_dogrula.py` çözücü yoksa HATA verir; çalıştığı canlıda denenir.
 11. **Kayıt + dağıtım:** veriler `data/sesli_anlatim/*/<key>` olarak commit, `guncelleme_notu.json` onem+1, `dagit.sh`; canlı API'de
     ders, ses, PDF (`/api/lecture-pdf/deck/<deckId>/0` 200), çıkmış, işaret, terim, kısaltma doğrulanır.
-11c. **Patoloji dersi ise hoca üslubu soru katmanı (ZORUNLU, 2026-10-29):** `scripts/patoloji_soru_isci/hazirla.py` + `TALIMAT.md` akışı; çıktı `src/data/hoca_uslubu_sorular/k2/<ders-id>.json`; kapı `dogrula.py` 0 HATA. Kurallar `docs/PATOLOJI_HOCA_SORU_MANTIGI.md` (AGENTS.md kural 25).
+11c. **Patoloji dersi ise hoca üslubu soru katmanı (ZORUNLU, 2026-10-29):** `scripts/patoloji_soru_isci/hazirla.py` + `TALIMAT.md` akışı; çıktı `src/data/hoca_uslubu_sorular/k2/<ders-id>.json` (derste ayrı "Hoca soruları" kartı); sesli hoca çözücü `cozucu_kur.py` (iskele → TALIMAT_COZUCU yazımı → dogrula → birlestir → EMA GPU `cozucu_ses_gpu.sh … ses.py --brans k2patolojihoca <kod>`); kapı `dogrula.py` 0 HATA. Kurallar `docs/PATOLOJI_HOCA_SORU_MANTIGI.md` (AGENTS.md kural 25).
 
 
 
@@ -509,3 +509,6 @@ LLM otomasyonu kapalıdır (AGENTS kural 20). Yeni ders, kullanıcı hangi dosya
 - Panel düzenlemeleri `data/content/<rel>.fark.json` (kayıt düzeyinde fark) olarak durur; okuma kaynak + fark birleşimidir.
 - Dağıtımdan önce: `python3 scripts/icerik_katman.py denetle` (yerelde) → 0 HATA. Oracle'da tam kopya kalırsa
   `content-overlay-sync.sh` ([0b]) durur; `python3 scripts/icerik_katman.py goc --veri <data> --kaynak <src/data>` ile çevrilir.
+
+## 20. Hoca üslubu profili (2026-10-29)
+Her yeni ders için önem listesi + anlatım + örnek soru `docs/HOCA_USLUBU_YONTEMI.md` §4.1'e göre yazılır: `scripts/hoca_profili/profil_oku.py` → önem (çıkmış eşleme + `onem_puanla.py` adayları, gerekçeli) → anlatım (ilk 2 bilgi türü + çekirdek kavramlar) → örnek sorular (`profil_kapisi.py` kapısı). Yeni çıkmış/sınav gelince `uslup_analiz.py` ile profil yenilenir.

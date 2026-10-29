@@ -24,9 +24,18 @@
    `scripts/tam_hat/soru_uslup.py`, `scripts/sik_aciklama.py`, `scripts/turkce_uslup.py`.
 5. **Bağımsız denetçi (ayrı ajan, yazarın çıktısını görmeden PDF'ten):** her soruda tek doğru olduğunu, kaynağı ve çeldirici adilliğini doğrular → GEÇER/KALIR.
    Yalnız hatalı soru yeniden yazılır (tıbbi/kaynak hatasında tolerans yok).
-6. Yayın: kullanıcı onayıyla ders `ornek_sorular`/`cikabilecek_sorular` katmanına eklenir (önce git, `onem`+1, `dagit.sh`).
+6. **Yayın katmanı (ayrı kartlar, ZORUNLU):** sorular `src/data/hoca_uslubu_sorular/k2/<ders>.json` (index.json'a satır) olarak yayımlanır; dersin içerikler bölümünde
+   **"Hoca soruları"** kartı olarak görünür — "Örnek sorular"a KARIŞTIRILMAZ.
+7. **Sesli hoca çözücü (ZORUNLU):** `cozucu_kur.py` içindeki `KODLAR`'a ders eklenir (`k2-05: 2h03`); `cozucu_kur.py iskele <ders-id>` → yazar `scripts/spot_cozucu/TALIMAT_COZUCU.md`'ye göre
+   `meds_temp/spot_cozucu/k2patolojihoca/cozucu/<kod>.json` yazar (ses alanları: rakam/kısaltma yok) → `cozucu_kur.py dogrula <ders-id>` 0 HATA + bağımsız denetçi →
+   `cozucu_kur.py birlestir` → **EMA sesi GPU'da:** `bash meds/scripts/patoloji_cozucu/cozucu_ses_gpu.sh meds/scripts/spot_cozucu/ses.py --brans k2patolojihoca <kod>` → tekrar `birlestir` → `vite build`.
+   Kart: "Sesli hoca çözücü" (`dersHocaCozucu`). Ses klibi olmayan ders tamamlanmış sayılmaz.
+8. Yayın: kullanıcı onayıyla (önce git, `onem`+1, `dagit.sh`; ses klasörü Oracle'a rsync).
 
 ## Yapma
 - Sarı vurguya/başlığa bakarak önem verme. Kırmızıyı "önemli" sayma (slaytların ~%42'si kırmızı).
 - Kaynak dışı bilgi, slayt/ders/hoca göndermeli kök, "hepsi/hiçbiri" şıkkı.
 - Kurul 1 verisine toplu müdahale. Kurul 2 patoloji için ilk çıkmış gelince profili yeniden hesapla (`PATOLOJI_HOCA_SORU_MANTIGI.md` §5).
+
+## Hoca profili (2026-10-29)
+Bu talimata ek olarak `docs/HOCA_USLUBU_YONTEMI.md` ve `python3 scripts/hoca_profili/profil_oku.py --ders "Tıbbi Patoloji" --konu "<konu>"` okunur; sorular `profil_kapisi.py --ders "Tıbbi Patoloji"` kapısından da geçer (UYARI/HATA kuralı belgede). Patoloji için bu dosyadaki 2026-27 mantığı (v2) ile 1.526 soruluk geniş profil çelişirse **2026-27 mantığı esas**, fark `neden` alanına yazılır.

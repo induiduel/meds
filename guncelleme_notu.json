@@ -1,10 +1,10 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 574,
-  "baslik": "Ders sayfası: \"Örnek sorular\" içeriğinde hoca üslubu soruları",
+  "onem": 575,
+  "baslik": "Ders sayfası: \"Hoca soruları\" kartı ve sesli hoca çözücü",
   "maddeler": [
-    "Ders sayfasında Soru çöz › Örnek sorular kartı hoca üslubu soru sayısını gösterir.",
-    "Örnek sorular sayfasında \"Hoca\" grubu en üstte; her soru için şık şık açıklama gösterilir."
+    "Soru çöz bölümünde ayrı \"Hoca soruları\" kartı: hocanın üslubunda 51 soru, şık şık açıklamalı (Örnek sorulardan ayrı).",
+    "\"Sesli hoca çözücü\": sorular EMA sesiyle okunur; ipucu, yanlışı ele ve çözümü dinle düğmeleri çalışır."
   ],
   "eklenen": [],
   "degisen": [],

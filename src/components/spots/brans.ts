@@ -70,9 +70,11 @@ const VERI_KLASORLERI = Object.keys({
   ...import.meta.glob('../../data/k[2-6]*_onem/index.json'),
   ...import.meta.glob('../../data/k[2-6]*_cozucu/index.json'),
 });
-const SLUG_AD: Record<string, { ad: string; kisa: string }> = Object.fromEntries(
-  (branslarVeri as any).branslar.map((b: any) => [b.slug, { ad: b.ad, kisa: b.kisa }]),
-);
+const SLUG_AD: Record<string, { ad: string; kisa: string }> = {
+  ...Object.fromEntries((branslarVeri as any).branslar.map((b: any) => [b.slug, { ad: b.ad, kisa: b.kisa }])),
+  // Hocanın üslubunda sorular (scripts/patoloji_soru_isci): ayrı çözücü branşı, branslar.json'da yok
+  patolojihoca: { ad: 'Tıbbi Patoloji · Hoca soruları', kisa: 'Patoloji Hoca' },
+};
 const sonrakiKurullar: BransTanim[] = [...new Set(VERI_KLASORLERI.map((p) => /\/(k[2-6][a-z]+)_(onem|cozucu)\//.exec(p)?.[1]).filter(Boolean) as string[])]
   .sort()
   .map((id) => {
