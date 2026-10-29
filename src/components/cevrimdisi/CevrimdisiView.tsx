@@ -124,7 +124,7 @@ function DurumKarti({ cihazSay, cihazBayt, toplu }: { cihazSay: number; cihazBay
           <b>{ag === 'offline' ? 'İnternet yok' : ag === 'slow' ? 'Bağlantı zayıf' : 'Çevrimiçi'}{a.hucresel ? ' · mobil veri' : ''}</b>
           <span className="v15-cap">
             {S.ayar.acik
-              ? paketDurumu('uygulama', S) === 'tamam' ? 'Çevrimdışı mod açık · uygulama internetsiz açılır' : 'Çevrimdışı mod açık · uygulama dosyaları iniyor'
+              ? ['tamam', 'guncelleme'].includes(paketDurumu('uygulama', S)) ? 'Çevrimdışı mod açık · uygulama internetsiz açılır' : 'Çevrimdışı mod açık · uygulama dosyaları iniyor'
               : 'Çevrimdışı mod kapalı · yalnız indirdiğin dersler cihazda'}
           </span>
         </span>

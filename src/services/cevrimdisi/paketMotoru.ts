@@ -336,8 +336,8 @@ export function kuyrugaEkle(ids: string[], basa = false, secim?: Secim) {
   }
   ids = [...tum];
   // İçerik inerken uygulama kodu da cihazda olmalı (yoksa ekranlar internetsiz açılmaz; PDF görüntüleyici, çizim işçisi vb.)
-  // Güncel olmalı da: içerik parçalarının adları yeni derlemeye aittir, eski kabuk onları bulamaz
-  if (ids.some((x) => x !== 'uygulama') && !ids.includes('uygulama') && ['yok', 'guncelleme', 'hata'].includes(paketDurumu('uygulama'))) ids = ['uygulama', ...ids];
+  // Yalnız cihazda hiç yoksa eklenir; sürüm güncellemesi içeriğin önüne geçmez (her dağıtımda içerik onun arkasında bekliyordu)
+  if (ids.some((x) => x !== 'uygulama') && !ids.includes('uygulama') && ['yok', 'hata'].includes(paketDurumu('uygulama'))) ids = ['uygulama', ...ids];
   if (secim) {
     const sm = { ...S.secimler };
     ids.forEach((id) => { sm[id] = secim; });
@@ -826,11 +826,9 @@ export function bildir(metin: string, ms = 4500) {
 async function otomatikTur() {
   if (!navigator.onLine) return;
   if (!S.katalog.length) await katalogYenile().catch(() => {});
-  // Cihazda herhangi bir paket varsa uygulama paketi de güncel tutulur (çevrimdışı mod kapalı olsa bile)
-  if (S.ayar.acik || Object.keys(S.kayitlar).some((id) => id !== 'uygulama')) {
-    const u = paketDurumu('uygulama');
-    if (u === 'yok' || u === 'guncelleme') kuyrugaEkle(['uygulama'], true);
-  }
+  // Uygulama paketi açılışta yalnız çevrimdışı mod açık + otomatik güncelleme açıkken ve kuyruğun SONUNA girer
+  // (her açılışta "uygulama dosyaları iniyor" olmasın; ağdan açılan sayfa zaten güncel kodu kullanır)
+  if (S.ayar.acik && S.ayar.otoGuncelle && paketDurumu('uygulama') === 'guncelleme') kuyrugaEkle(['uygulama']);
   if (S.ayar.otoGuncelle) {
     const g = guncellemeler().filter((id) => id !== 'uygulama');
     if (g.length) kuyrugaEkle(g);

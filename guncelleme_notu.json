@@ -1,10 +1,10 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 587,
-  "baslik": "Hata defteri tekrar ekranı düzeltildi",
+  "onem": 588,
+  "baslik": "Çevrimdışı indirme hızlandı",
   "maddeler": [
-    "Tekrar ekranı artık tam ekran açılıyor; geri düğmesi ve başlık yan menünün altında kalmıyor",
-    "Seçili sekme (Bugün / Tüm hatalarım) koyu temada belirgin"
+    "Çevrimdışı paketler artık \"sırada\" takılı kalmadan iniyor.",
+    "Uygulama dosyaları her açılışta yeniden indirilmiyor; içerik indirmesi öne geçiyor."
   ],
   "eklenen": [],
   "degisen": [],
