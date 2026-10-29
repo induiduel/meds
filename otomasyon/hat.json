@@ -326,6 +326,19 @@
    "not": "Kurul 2+: ders_zinciri.py içinde otomatik (2026-10-20). Kurul 1: elle."
   },
   {
+   "id": "hoca_ara_soru",
+   "kapsam": "ders",
+   "durum": "hazir",
+   "gerekir": [
+    "yayin"
+   ],
+   "tetik": "elle (kural 20/22: tam hat komutu)",
+   "komut": "scripts/hoca_ara_soru/kur.py iskele|dogrula|birlestir · TALIMAT.md · ses: cozucu_ses_gpu.sh spot_cozucu/ses.py --brans k<N>hocaara",
+   "kapi": "scripts/hoca_ara_soru/kur.py dogrula <key> --ses",
+   "cikti": "src/data/k<N>hocaara_cozucu/ + data/k<N>hocaara_cozucu/ses/",
+   "not": "2026-10-29: sesli derste slayt arası hoca sorusu + ünlem modu (CdHocaAra.tsx); ders dışında çözücü. Yalnız yeni dersler."
+  },
+  {
    "id": "sinav_asistani",
    "kapsam": "ders",
    "durum": "hazir",

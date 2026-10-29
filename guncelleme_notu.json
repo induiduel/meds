@@ -1,10 +1,11 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 582,
-  "baslik": "Sıralama hızlandı",
+  "onem": 583,
+  "baslik": "Sesli derste \"Hocanın sorabileceği soru\" sayfası",
   "maddeler": [
-    "Sıralamada ölçü ya da süzgeç değiştirince eski liste artık yanlış birimle görünmüyor; yüklenirken iskelet gösteriliyor.",
-    "Diğer ölçüler arka planda önceden yükleniyor, geçişler beklemesiz."
+    "Yeni derslerde, hocanın soru çıkarabileceği slayttan sonra kısa bir soru sayfası açılır; asistan soruyu okur, çözer ve önceki slaytlardan anlatır.",
+    "PDF çubuğundaki ünlem düğmesi dersin bu sorularını sırayla çözer.",
+    "Aynı sorular ders sayfasındaki \"Hocanın sorabileceği sorular\" kartından ders dışında da çözülebilir."
   ],
   "eklenen": [],
   "degisen": [],

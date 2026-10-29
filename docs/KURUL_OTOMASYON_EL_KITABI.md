@@ -482,6 +482,7 @@ LLM otomasyonu kapalıdır (AGENTS kural 20). Yeni ders, kullanıcı hangi dosya
 11. **Kayıt + dağıtım:** veriler `data/sesli_anlatim/*/<key>` olarak commit, `guncelleme_notu.json` onem+1, `dagit.sh`; canlı API'de
     ders, ses, PDF (`/api/lecture-pdf/deck/<deckId>/0` 200), çıkmış, işaret, terim, kısaltma doğrulanır.
 11c. **Patoloji dersi ise hoca üslubu soru katmanı (ZORUNLU, 2026-10-29):** `scripts/patoloji_soru_isci/hazirla.py` + `TALIMAT.md` akışı; çıktı `src/data/hoca_uslubu_sorular/k2/<ders-id>.json` (derste ayrı "Hoca soruları" kartı); sesli hoca çözücü `cozucu_kur.py` (iskele → TALIMAT_COZUCU yazımı → dogrula → birlestir → EMA GPU `cozucu_ses_gpu.sh … ses.py --brans k2patolojihoca <kod>`); kapı `dogrula.py` 0 HATA. Kurallar `docs/PATOLOJI_HOCA_SORU_MANTIGI.md` (AGENTS.md kural 25).
+11d. **Hocanın sorabileceği ara sorular (ZORUNLU, her ders, 2026-10-29):** hoca üslubuna göre soru çıkabilecek slayttan hemen sonra sesli derste yapay soru sayfası; EMA soruyu okur, çözer, çözümü önceki slaytlara numarasıyla dayanarak anlatır (`a-N`); PDF araç çubuğundaki ünlem tümünü ardışık oynatır; ders dışında `k<N>hocaara` çözücüsü. Akış `scripts/hoca_ara_soru/TALIMAT.md`: `kur.py iskele` → yazım → `kur.py dogrula` 0 HATA + bağımsız denetçi → `birlestir` → EMA GPU (`cozucu_ses_gpu.sh … ses.py --brans k<N>hocaara <kod>`) → `dogrula --ses` 0 HATA. Sesi eksikse ders tamamlanmaz (AGENTS.md kural 27).
 
 
 

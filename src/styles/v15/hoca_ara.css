@@ -1,0 +1,59 @@
+/* Sesli ders › "Hocanın sorabileceği soru" ara sayfası (CdHocaAra.tsx). Yapay PDF sayfası: kâğıt tonu, sakin tipografi,
+ * tüm içerik sayfaya sığar (gövde kendi içinde kayar), okunan parça yumuşak vurgulanır. Renkler palet tokenlarından. */
+.ha-dugme { position: relative; color: var(--color-warn, #b26a00); }
+.ha-dugme-n { position: absolute; top: 1px; right: 0; min-width: 15px; height: 15px; padding: 0 3px; border-radius: 8px;
+  font: 700 10px/15px var(--font-sans); background: var(--color-warn, #b26a00); color: var(--color-white, #fff); }
+
+.ha-kat { position: fixed; inset: 0; z-index: 1001; display: flex; align-items: center; justify-content: center; padding: 16px;
+  background: color-mix(in srgb, var(--color-ink-surface, #0a1018) 38%, transparent); }
+.ha-sayfa { width: min(720px, 100%); max-height: min(100%, 94dvh); aspect-ratio: auto; display: flex; flex-direction: column; overflow: hidden;
+  border-radius: 6px; background: color-mix(in srgb, var(--color-white, #fff) 94%, #f3e9d2); color: var(--color-ink);
+  border: 1px solid var(--color-line); box-shadow: 0 18px 50px rgb(0 0 0 / .28); font-family: var(--font-sans); animation: ha-gir .22s ease-out; }
+@keyframes ha-gir { from { opacity: 0; transform: translateY(10px) scale(.985); } }
+@media (prefers-reduced-motion: reduce) { .ha-sayfa { animation: none; } }
+
+.ha-bas { display: flex; align-items: center; gap: 4px; padding: 10px 10px 10px 18px; border-bottom: 1px solid var(--color-line-soft, var(--color-line)); }
+.ha-et { flex: 1; min-width: 0; display: flex; align-items: center; gap: 7px; font: 700 14px/1.2 var(--font-sans); color: var(--color-warn, #b26a00); }
+.ha-et svg { width: 18px; height: 18px; flex: none; }
+.ha-no { font: 500 12.5px/1.2 var(--font-sans); color: var(--color-ink-3); white-space: nowrap; margin-right: 4px; }
+.ha-ib { display: inline-grid; place-items: center; width: 34px; height: 34px; border: 0; border-radius: 8px; background: transparent; color: var(--color-ink-2); cursor: pointer; }
+.ha-ib:hover:not(:disabled) { background: var(--color-line-soft, rgb(0 0 0 / .06)); }
+.ha-ib:disabled { opacity: .35; cursor: default; }
+.ha-ib svg { width: 18px; height: 18px; }
+
+.ha-govde { flex: 1; min-height: 0; overflow: auto; padding: 22px clamp(16px, 4vw, 40px) 18px; }
+.ha-kok { margin: 0 0 16px; font: 600 clamp(16px, 1.9vw, 18.5px)/1.55 var(--font-serif, var(--font-sans)); border-radius: 6px; padding: 2px 4px;
+  transition: background-color .2s; }
+.ha-siklar { display: grid; gap: 8px; }
+.ha-sik { display: flex; gap: 12px; align-items: flex-start; width: 100%; text-align: left; padding: 10px 12px; border-radius: 8px; cursor: pointer;
+  border: 1px solid var(--color-line); background: color-mix(in srgb, var(--color-white, #fff) 70%, transparent); color: inherit;
+  font: 400 15px/1.5 var(--font-sans); transition: background-color .2s, border-color .2s, opacity .2s; }
+.ha-sik b { flex: none; width: 24px; height: 24px; display: grid; place-items: center; border-radius: 50%; font-size: 13px;
+  border: 1px solid var(--color-line); }
+.ha-sik span { min-width: 0; }
+.ha-sik small { display: block; margin-top: 6px; font-size: 13.5px; line-height: 1.5; color: var(--color-ink-2); }
+.ha-sik.is-dogru { border-color: var(--color-ok, #1f8a4c); background: color-mix(in srgb, var(--color-ok, #1f8a4c) 10%, transparent); }
+.ha-sik.is-dogru b { background: var(--color-ok, #1f8a4c); border-color: transparent; color: var(--color-white, #fff); }
+.ha-sik.is-yanlis { border-color: var(--color-err, #c23b3b); background: color-mix(in srgb, var(--color-err, #c23b3b) 9%, transparent); }
+.ha-sik.is-soluk { opacity: .62; }
+.ha-kok.is-okunan, .ha-sik.is-okunan, .ha-anlat.is-okunan { background-color: color-mix(in srgb, var(--color-warn, #b26a00) 13%, transparent); }
+
+.ha-dusun { margin: 14px 0 0; font: 500 13.5px/1.4 var(--font-sans); color: var(--color-ink-3); }
+.ha-dusun button { border: 0; background: none; padding: 0; color: var(--color-accent, var(--color-warn)); font: inherit; font-weight: 700; cursor: pointer; text-decoration: underline; }
+.ha-anlat { margin-top: 16px; padding: 12px 14px; border-left: 3px solid var(--color-warn, #b26a00); border-radius: 4px; transition: background-color .2s; }
+.ha-anlat h3 { margin: 0 0 6px; font: 700 13px/1.3 var(--font-sans); color: var(--color-ink-2); }
+.ha-anlat h3 span { font-weight: 500; color: var(--color-ink-3); margin-left: 6px; }
+.ha-anlat p { margin: 0; font: 400 15px/1.6 var(--font-sans); }
+
+.ha-alt { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; padding: 10px 14px; border-top: 1px solid var(--color-line-soft, var(--color-line)); }
+.ha-oto { display: inline-flex; align-items: center; gap: 6px; font: 500 12.5px/1.2 var(--font-sans); color: var(--color-ink-3); cursor: pointer; }
+.ha-bosluk { flex: 1; }
+.ha-btn { display: inline-flex; align-items: center; gap: 6px; min-height: 38px; padding: 0 14px; border-radius: 9px; border: 1px solid transparent; cursor: pointer;
+  font: 600 14px/1 var(--font-sans); background: var(--color-ink); color: var(--color-white, #fff); }
+.ha-btn.is-soft { background: transparent; color: var(--color-ink); border-color: var(--color-line); }
+.ha-btn svg { width: 16px; height: 16px; }
+@media (max-width: 599px) {
+  .ha-kat { padding: 8px; }
+  .ha-sayfa { max-height: 100%; }
+  .ha-no { display: none; }
+}

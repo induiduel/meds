@@ -32,7 +32,7 @@ export interface KonuKaydi {
 }
 
 /** Ders sayfası istatistiği için çözülen soru türleri: örnek soru, mini soru, sesli dersteki çıkmış soru */
-export type DersSoruTur = 'ornek' | 'mini' | 'cikmis';
+export type DersSoruTur = 'ornek' | 'mini' | 'cikmis' | 'hoca';
 
 interface TakipVeri {
   k: Record<string, KonuKaydi>;

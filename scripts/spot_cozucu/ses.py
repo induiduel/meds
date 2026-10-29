@@ -134,6 +134,8 @@ def klipler(o: dict, S: Saglayici) -> dict[str, list[str]]:
         d = q["dogru"]
         k[f"c-{n}"] = [f"Doğru cevap {HARF_AD[d]}, {nokta(q['secenek_ses'][d])}"] + cz
         k[f"d-{n}"] = ["Doğru!"] + cz
+        if q.get("anlatim"):  # ders içi ara soru (scripts/hoca_ara_soru): çözümü önceki slaytlardan anlatan klip
+            k[f"a-{n}"] = cumlele(q["anlatim"]["ses"])
         for ad in list(k)[k0:]:
             k[ad] = [S.ses_metni(c, ekk) for c in k[ad]]
     return k

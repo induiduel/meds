@@ -42,6 +42,7 @@ Kullanıcı eşlemeyi söylediyse o esastır; yine de sayfa başlıkları içeri
 | 11 | Anlamsal çapa → Oracle'a yükle → `pdf_isaret.py --key <key> --zorla` (H93) | `capa/`, `isaret/` | `capa_dogrula.py` (≥%70, hedef %100) |
 | 12 | Çizim (tasarım kataloğunun tamamı, §4) + bağımsız anlam denetimi | `cizim/` | `cizim_kapisi.py`, `panel_sinama.mjs` (3 genişlik) |
 | 13 | Spot / önem, sınav asistanı, soru çözücü (branşta varsa) | `src/data/k2<brans>_*` | `onem/asistan/cozucu_dogrula.py`, `sik_aciklama.py` |
+| 13b | Hocanın sorabileceği ara sorular (her ders): slayt arası soru sayfası + ünlem modu + ders dışı çözücü, EMA GPU | `src/data/k<N>hocaara_cozucu/` | `scripts/hoca_ara_soru/kur.py dogrula <key> --ses` + bağımsız denetçi (kural 27, `scripts/hoca_ara_soru/TALIMAT.md`) |
 | 14 | Quiz envanteri (her ders); quiz soruları yalnız Farmakoloji (kural 19) | `atomik_bilgi_envanteri.json` (+ `quiz_havuzu.json`) | `quiz_dogrula.py` |
 | 15 | Hastalık birleştirme, RAG vektörü (elle komut) | `diseases`, `rag_chunks` | ilgili denetleyici |
 | 16 | Kayıt + `guncelleme_notu.json` onem+1 + commit + `dagit.sh` | canlı | canlıda §6 doğrulaması |

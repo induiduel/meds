@@ -1,3 +1,8 @@
+## 2026-10-29 — Sesli derste "Hocanın sorabileceği soru" ara sayfası + ünlem modu (AGENTS kural 27)
+- Ön yüz: `canliDers/CdHocaAra.tsx` (slaytın son paragrafı bitince ders durur → yapay soru sayfası; EMA oku → 5 sn düşün → çöz `c/d` → slayttan anlat `a-N` → derse dön; PDF çubuğunda ünlem = tümü ardışık), `styles/v15/hoca_ara.css`; ders sayfasında "Hocanın sorabileceği sorular" kartı (`dersAraCozucu`), çözücü branşı `k<N>hocaara` (`brans.ts`), `CSoru.ara/anlatim`, `DersSoruTur 'hoca'`.
+- Hat: `scripts/hoca_ara_soru/kur.py` (iskele/dogrula/birlestir; kapılar: ileriye sızıntı, dayanak, slayt atfı, şık/üslup, profil, `--ses` klip eksiksizliği), `TALIMAT.md`; `spot_cozucu/ses.py` `anlatim` → `a-N` klibi; `hat.json` `hoca_ara_soru`, el kitabı §19 11d, standart §2 13b.
+- Yerelde deneme verisiyle sınandı (ünlem modu, ders içi otomatik açılış + sürdürme, ders dışı çözücü); deneme verisi silindi. Henüz hiçbir derste ara soru verisi yok (yeni derslerle üretilecek).
+
 ## 2026-10-28 — Sesli ders: adsız gönderme yasağı (H434)
 - `metin_denetle.py` BAGLAMSIZ kapısı (paragraf başında "bu hastalıkta/durumda…", "burada", "bunlarda" → HATA); kural KURUL2_DERS_STANDARDI §8.13, ANLATIM_KURGU_STANDARDI, hata defteri H434. Mevcut dersler toplu değiştirilmedi. Commit/dağıtım yapılmadı.
 

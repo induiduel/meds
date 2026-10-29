@@ -21,6 +21,8 @@ export interface CSoru { no: number; tur?: SoruTur; sinav?: string; zorluk?: Zor
   klasor?: string; kn?: number; kaynak?: { kod: string; no: number; baslik: string; dersNo: number };
   /** kısa not (spot bilgisi, slayttan): klasor "@a/<asistan kodu>" + klip ise EMA ile okunur */
   not?: { baslik: string; cumleler: string[]; kaynak: string; klasor?: string; klip?: string };
+  /** ders içi ara soru (k<N>hocaara): açıldığı slayt + çözümü önceki slaytlardan anlatan metin (klip a-n) */
+  ara?: { dosya: number; sayfa: number; paragraf: number | null }; anlatim?: string;
 }
 export interface CDers {
   kod: string; no: number; baslik: string; sorular: CSoru[]; klip: Record<string, Klip>;
@@ -29,7 +31,7 @@ export interface CDers {
   /** varsayılan dışındaki seslerin klipleri */
   klipSes?: Record<string, Record<string, Klip>>;
 }
-export interface CDizinDers { kod: string; no: number; baslik: string; soru: number; ornek?: number; benzer?: number; cikmis?: number; ses: boolean; set?: number; setSay?: number; sayfa?: [number, number]; sure?: number }
+export interface CDizinDers { kod: string; key?: string; no: number; baslik: string; soru: number; ornek?: number; benzer?: number; cikmis?: number; ses: boolean; set?: number; setSay?: number; sayfa?: [number, number]; sure?: number }
 export interface SesTanim { id: string; ad: string; varsayilan?: boolean }
 export interface CDizin {
   surum: string; ortak: Record<string, { v: string; sure: number }>; dersler: CDizinDers[];

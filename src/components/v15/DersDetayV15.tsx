@@ -8,7 +8,7 @@ import { bittiMi, sesliKonuId, useTakip } from '../../services/calismaTakip';
 import { useV15Baslik } from './baslik';
 import { bransYolu, dersBransi, dersKurulu, hocaYaz, merkezYolu, saatYaz, sureDk, useDersListesi } from './dersVeri';
 import { Halka } from './Halka';
-import { dersCozucu, dersHocaCozucu } from '../canliDers/dersCozucu';
+import { dersAraCozucu, dersCozucu, dersHocaCozucu } from '../canliDers/dersCozucu';
 import DersIcerikV15 from './DersIcerikV15';
 import DersIstatV15 from './DersIstatV15';
 import DersPdfEkranV15 from './DersPdfEkranV15';
@@ -31,7 +31,7 @@ const anahtarOku = () => {
 const GRUP_KEY = 'medsoru_dd15_grup_v2'; // v2: varsayılan kapalı (eski açık tercihleri sayılmaz)
 const ICERIK_GRUP: { id: string; ad: string; idler: string[]; varsayilan: boolean }[] = [
   { id: 'calis', ad: 'Dinle ve çalış', idler: ['sesli', 'deste', 'pdf'], varsayilan: false },
-  { id: 'soru', ad: 'Soru çöz', idler: ['cikmis', 'cozucu', 'sorular', 'hoca', 'hocacozucu', 'quiz'], varsayilan: false },
+  { id: 'soru', ad: 'Soru çöz', idler: ['cikmis', 'cozucu', 'sorular', 'hoca', 'hocacozucu', 'hocaara', 'quiz'], varsayilan: false },
   { id: 'bilgi', ad: 'Bilgi kartları', idler: ['terimler', 'hastaliklar', 'bilgiler', 'listeler', 'tablolar', 'kartlar'], varsayilan: false },
 ];
 
@@ -175,6 +175,9 @@ export default function DersDetayV15() {
   const hocaCoz = dersHocaCozucu(paket?.baslik) || dersHocaCozucu(baslik);
   if (hocaCoz)
     icerik.push({ id: 'hocacozucu', tone: 'is-c', icon: Award, t: 'Sesli hoca çözücü', s: `${hocaCoz.soru} soru · hocanın üslubunda, sesli çözüm`, url: hocaCoz.url, k: `${hocaCoz.soru} soru` });
+  const araCoz = dersAraCozucu(paket?.baslik) || dersAraCozucu(baslik);
+  if (araCoz)
+    icerik.push({ id: 'hocaara', tone: 'is-c', icon: Award, t: 'Hocanın sorabileceği sorular', s: `${araCoz.soru} soru · sesli derste slayt aralarında çözülenler, ders dışında da`, url: araCoz.url, k: `${araCoz.soru} soru` });
   if (paket) {
     const say: Record<DiBolum, [number, string, React.ElementType, string]> = {
       terimler: [paket.terimler.length + paket.kisaltmalar.length, 'terim ve kısaltma · tanımlarıyla', BookA, 'is-ok'],

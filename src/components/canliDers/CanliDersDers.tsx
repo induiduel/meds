@@ -25,6 +25,7 @@ import { CdTasmaMenu, CdV15Bas, CdV15Gorunum, CdV15KalemDugme, CdV15KalemKutusu,
 import { GunlukDiyalog } from './CanliDersView';
 import { CdCikmisChip, CdCikmisPencereKok, cikmisSayfada } from './CdCikmisChip';
 import { CdOrnekChip, CdOrnekPencereKok, ornekParcaSonunda, useOrnekSorular } from './CdOrnekChip';
+import { CdHocaAraDugme, CdHocaAraKok } from './CdHocaAra';
 import { useCdTur } from './useCdTur';
 import { useUzunBasSecim } from './cdUzunBas';
 import { cdTurGoruldu } from './canliDersTurDurum';
@@ -1997,6 +1998,7 @@ function CdPdfBolme({ detay, canli }: { detay: CdDetay; canli: boolean }) {
     <div className={`cd-bolme cd-pdf-bolme${barGizli ? ' is-bar-gizli' : ''}`}>
       <CdCikmisPencereKok />
       <CdOrnekPencereKok />
+      <CdHocaAraKok dersKey={detay.key} />
       <button type="button" className="cd-ib cd-bar-tgl is-ac" onClick={barDegis} aria-label="PDF araç çubuğunu göster" title="Araç çubuğunu göster"><ChevronDown /></button>
       <div className="cd-pdf-bar">
         <button type="button" className="cd-ib cd-bar-tgl is-gizle" onClick={barDegis} aria-label="PDF araç çubuğunu gizle" title="Araç çubuğunu gizle"><ChevronUp /></button>
@@ -2013,6 +2015,7 @@ function CdPdfBolme({ detay, canli }: { detay: CdDetay; canli: boolean }) {
           <span className="cd-pdf-dosya">{(gor.dosya || 0) + 1}/{pdf.dosyalar.length}</span>
         )}
         <span className="cd-grow" />
+        <CdHocaAraDugme dersKey={detay.key} />
         {!!detay.cikmisKonum?.length && <CikmisKonumDugme liste={detay.cikmisKonum} secili={cikSec} onSec={cikmisSec} />}
         {/* v15: terim ve görünüm üst bara/Görünüm çekmecesine taşındı; çizim araçları PDF'in yanında yüzer */}
         {v15 ? (
