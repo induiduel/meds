@@ -23,7 +23,7 @@ Bilinç bir ağ olarak çalıştığı için iki taraflı talamik hasar ya da ya
 @@ Bilinç düzeyleri ve tanımlar
 Bilinç düzeyini iki soruyla tanımlarız: hasta uyandırılabiliyor mu ve farkında mı. Bu iki özellik birbirinden ayrılabildiği için tabloyu anlamak kolaylaşır.
 
-Bilinç açık hasta uyanıktır ve farkındadır. Somnolan hasta çabuk uyandırılabilir ve farkındadır; seslenmekle bile uyanır.
+Bilinç açık hasta uyanıktır ve farkındadır. Somnolan hasta çabuk uyandırılabilir ve farkındadır; seslenmekle bile uyanır. Ancak uyaran kesilince yeniden uykuya dalmaya meyillidir; sözel uyaranla uyanıp uyaran bitince tekrar uyuyan hasta somnolandır. Geçen yılın öğrencileri somnolansın bu tanımını en önemli yerler arasına almıştı.
 
 Stuporda hasta zorlukla uyandırılır ve farkındalığı azalmıştır. Bağırınca uyanmaz; ancak ağrılı uyaranla uyanır, örneğin gözün üst kemik kenarına ya da tırnak etine bastırmakla.
 
@@ -35,7 +35,7 @@ Bunların yanında birkaç terim daha vardır: konfüzyon, deliryum, demans ve b
 
 Konfüzyonda yön bulma ve düşünme bozulur: hasta sorulara yanlış cevap verir, isimleri ve saatleri karıştırır.
 
-Deliryumda ise tablo dalgalanır; hasta çoğu kez ajite olur, bağırır, kontrolsüz ve uygunsuz hareketler yapar, bazen de durgunlaşır. Halk dilindeki "delirme" ajite biçimdir.
+Deliryumda ise tablo dalgalanır; hasta çoğu kez ajite olur, bağırır, kontrolsüz ve uygunsuz hareketler yapar, bazen de durgunlaşır. Yani deliryum, gelip geçici bir dikkat ve bilinç bozukluğudur ve tabloya davranış bozukluğu eşlik eder. Halk dilindeki "delirme" ajite biçimdir.
 
 Demansta bilinç açıktır; bozulan şey bellek ve diğer bilişsel işlevlerdir. Konfüzyon ve deliryumdan farkı, tablonun ani değil yavaş gelişmesidir.
 
@@ -140,7 +140,7 @@ Sözel yanıt beş puan üzerindendir. Oryante hasta beş, dezoryante hasta dör
 
 Uygunsuz cevap, bağırma ya da küfür gibi sözcüklerdir ve üç puandır. Homurtu, yani kelime içermeyen inleme ya da anlaşılmaz ses iki, hiç ses çıkmaması bir puandır; entübe hastada sözel bileşen değerlendirilemez.
 
-Toplam puan göz, motor ve sözel bileşenlerin toplamıdır. En düşük puan üç, en yüksek puan on beştir; toplam doğru hesaplanmalıdır.
+Toplam puan göz, motor ve sözel bileşenlerin toplamıdır. En düşük puan üç, en yüksek puan on beştir; toplam doğru hesaplanmalıdır. Felçli hastada motor puan, sağlam taraftaki en iyi yanıttan verilir. Örneğin sağ hemiplejili, ağrıyla gözünü açan, konfüze konuşan ve sol eliyle ağrıyı lokalize eden hasta iki, dört ve beş puanla toplam on bir alır. Ağrıyla gözünü açan, ağrıda dekortike yanıt veren ve hiç ses çıkarmayan hasta ise iki, üç ve bir puanla toplam altı alır. Geçen yılın öğrencileri Glasgow koma skalasının bu hesabını en önemli yerler arasına almıştı.
 
 Sekiz ve altındaki puan genellikle koma ile hava yolu koruma gereği olarak kabul edilir. Muayene yaklaşık bir dakika sürer, bu yüzden her bakışta tekrarlanabilir.
 
@@ -249,6 +249,6 @@ Osmolar açık pozitifse metanol, izopropil alkol, etil eter, etilen glikol, ase
 Geri kalan nedenler tanıyı koydurdukları testle gruplanır. Manyetik rezonans, demiyelinizan hastalığı ve akut baziler arter tıkanmasını gösterir. Akut baziler migren anamnezle, nonkonvülzif status epileptikus elektroensefalografiyle tanınır. Miksödem koması ve tiroid fırtınası tiroid işlev testleriyle, Hashimoto ensefaliti ise tiroid antikorlarıyla ve diğer nedenler dışlanarak düşünülür. Son olarak psikojenik koma düşünülür.
 
 @@ Sonuç
-Bilinç bozukluğunda ayırıcı tanı önemlidir ve hızlı, ekip hâlinde yaklaşım gerekir. Zaman kaybı hastanın hayatına mal olabilir.
+Bilinç bozukluğunda ayırıcı tanı önemlidir ve hızlı, ekip hâlinde yaklaşım gerekir. Ayırıcı tanıda hipoglisemi her hastada mutlaka düşünülmelidir, çünkü gerçek bir acildir ve hızla düzeltilebilir. Zaman kaybı hastanın hayatına mal olabilir.
 
 Etiyolojiye yönelik tetkik ve erken tedavi prognozu iyi yönde etkiler ve kalıcı hasarı azaltır.

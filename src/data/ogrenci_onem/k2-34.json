@@ -1,0 +1,938 @@
+{
+ "ders": "k2-34",
+ "kod": "2s07",
+ "brans": "Psikiyatri",
+ "konu": "Unipolar Depresyon",
+ "kaynak": "Geçmiş yıl (2025-26) öğrenci derleme notu: psk3.2",
+ "y25": {
+  "key": "y25-k2-34-unipolar-depresyon",
+  "sayfalar": [
+   8,
+   15,
+   17,
+   19,
+   23,
+   24,
+   26,
+   31,
+   33,
+   39
+  ]
+ },
+ "sayac": {
+  "birim": 10,
+  "A": 5,
+  "B": 0,
+  "C": 5,
+  "ogrenci_sorusu": 9,
+  "banka": 3,
+  "banka_kapsandi": 1
+ },
+ "birimler": [
+  {
+   "id": "psk-s10-b01",
+   "pdf": "psk",
+   "sayfa": 10,
+   "bolge": "r1c1",
+   "tur": "slayt",
+   "baslik": "Depresyon belirti alanları: Affektif, Kognitif, Sosyal, Nörovejetatif",
+   "metin": "DEPRESYON\ni. Affektif; üzüntü, keder, ümitsizlik, suçluluk, değersizlik, çaresizlik, hüzün, anksiyete, huzursuzluk, hiçbir şeyden zevk alamama (anhedoni) ya da ağır hastalarda affektif anestezi.\nii. Kognitif; bellekte zayıflama, dikkati toplamakta güçlük, bilgi işleme süreci ve yürütücü işlevlerde bozukluklar, düşünce içeriğinde suçluluk-değersizlik fikirleri - dünyayı, çevreyi, kendini ve geleceği olumsuz görme, umutsuzluk, obsesif ruminasyonlar ve fobiler, intihar düşünceleri, düşünce akışında yavaşlama, kararsızlık,\niii. Sosyal; Sosyal-mesleki işlevlerde bozulma, sosyal çekilme\niv. Nörovejetatif; isteksizlik, iştahsızlık, enerji kaybı, libidoda azalma, psikomotor ajitasyon (ajite depresyon) ve/veya retardasyon (stupore depresyon), iştahta bozulma, insomnia-hipersomnia, adet düzensizlikleri, konstipasyon ve diurnal değişim bulgularını içermektedir. (y25 s20)",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "sarı alt çizgi: belirti sözcüklerinin çoğu (üzüntü, keder, ümitsizlik, suçluluk, değersizlik, çaresizlik, hüzün, anksiyete, huzursuzluk, anhedoni; bellekte zayıflama, dikkati toplamakta güçlük, yürütücü işlevler, suçluluk-değersizlik fikirleri, düşünce akışında yavaşlama; sosyal-mesleki işlevlerde bozulma, sosyal çekilme; libidoda azalma, psikomotor ajitasyon, retardasyon, iştahta bozulma, insomnia-hipersomnia, adet düzensizlikleri, konstipasyon ve diurnal değişim)"
+    },
+    {
+     "tur": "daire",
+     "hedef": "i. Affektif, ii. Kognitif, iii. Sosyal, iv. Nörovejetatif başlıkları (sarı daire)"
+    },
+    {
+     "tur": "ok",
+     "hedef": "DEPRESYON → dört alan (kırmızı oklar)"
+    }
+   ],
+   "sinyal": [
+    "cikmis",
+    "el_onemli",
+    "sari"
+   ],
+   "y25": {
+    "key": "y25-k2-34-unipolar-depresyon",
+    "sayfa": 19
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "ogrenci_sorulari": [
+    "psk-s10-b06"
+   ],
+   "banka_cikmis": [
+    "past-q-2025-2026_DO_NEM_3_FI_NAL_SINAVI-56"
+   ],
+   "puan": 88,
+   "oncelik": "A",
+   "vurgulu": [
+    "i. Affektif, ii. Kognitif, iii. Sosyal, iv. Nörovejetatif başlıkları (sarı daire)",
+    "sarı alt çizgi: belirti sözcüklerinin çoğu (üzüntü, keder, ümitsizlik, suçluluk, değersizlik, çaresizlik, hüzün, anksiyete, huzursuzluk, anhedoni; bellekte zayıflama, dikkati toplamakta güçlük, yürütücü işlevler, suçluluk-değersizlik fikirleri, düşünce akışında yavaşlama; sosyal-mesleki işlevlerde bozulma, sosyal çekilme; libidoda azalma, psikomotor ajitasyon, retardasyon, iştahta bozulma, insomnia-hipersomnia, adet düzensizlikleri, konstipasyon ve diurnal değişim)"
+   ]
+  },
+  {
+   "id": "psk-s10-b05",
+   "pdf": "psk",
+   "sayfa": 10,
+   "bolge": "r1c2",
+   "tur": "slayt",
+   "baslik": "DSM-5 MDB Tanı Kriterleri",
+   "metin": "Dsm- 5 MDB Tanı Kriterleri\nA. Aşağıdakilerden DSM-5: en az 5 belirtinin en az 2 hafta (14 gün) süreyle gün boyu bulunması (1.ve ya 2. kriter mutlaka bulunmalı)\n1. Depresif duygudurum\n2. Anhedoni, ilgi-istek azalması\n3. İştah azalması ya da artması\n4. Uyku azalması ya da artması\n5. Psikomotor yavaşlama ya da ajitasyon\n6. Enerji azalması, yorgunluk\n7. Suçluluk, değersizlik hissi\n8. Konsantrasyon güçlüğü\n9. İntihar düşüncesi",
+   "el_yazisi": [
+    {
+     "metin": "çökkün DD",
+     "hedef": "1. Depresif duygudurum (DD = duygudurum)",
+     "guven": "yuksek",
+     "alternatif": ""
+    },
+    {
+     "metin": "★ mutlaka ikisinden biri olmalı",
+     "hedef": "1. Depresif duygudurum ve 2. Anhedoni (ayraçla)",
+     "guven": "yuksek",
+     "alternatif": ""
+    }
+   ],
+   "isaretler": [
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "sarı alt çizgi: en az 5'inin en az 15 gün süre; 1. Depresif duygudurum; 2. Anhedoni, ilgi-istek azalması"
+    },
+    {
+     "tur": "kutu",
+     "hedef": "1. ve 2. kriteri birleştiren sarı ayraç"
+    },
+    {
+     "tur": "yildiz",
+     "hedef": "★ mutlaka ikisinden biri olmalı"
+    }
+   ],
+   "sinyal": [
+    "cikmis",
+    "el_onemli",
+    "sari",
+    "yildiz"
+   ],
+   "y25": {
+    "key": "y25-k2-34-unipolar-depresyon",
+    "sayfa": 17
+   },
+   "y26": null,
+   "duzeltme": [
+    {
+     "ham": "en az 5'inin en az 15 gün süre ile",
+     "dogru": "DSM-5: en az 5 belirtinin en az 2 hafta (14 gün) süreyle",
+     "gerekce": "Slayt (y25 s17) '15 gün' yazıyor; DSM-5 ölçütü 2 haftadır. Aynı sayfadaki çıkmış 56 b şıkkı da 'en az iki hafta' diyor. Slayt yazımı korunmalı ama tıbbi ifade 2 hafta."
+    }
+   ],
+   "not_": null,
+   "ogrenci_sorulari": [
+    "psk-s10-b08"
+   ],
+   "puan": 73,
+   "oncelik": "A",
+   "vurgulu": [
+    "1. ve 2. kriteri birleştiren sarı ayraç",
+    "sarı alt çizgi: en az 5'inin en az 15 gün süre; 1. Depresif duygudurum; 2. Anhedoni, ilgi-istek azalması",
+    "★ mutlaka ikisinden biri olmalı"
+   ]
+  },
+  {
+   "id": "psk-s10-b19",
+   "pdf": "psk",
+   "sayfa": 10,
+   "bolge": "r2c3",
+   "tur": "slayt",
+   "baslik": "Distimik Bozukluk – major depresyondan farkları",
+   "metin": "Distimik Bozukluk\n1- M. Depresyonda psikotik belirtiler (hezeyan, halüsinasyon) bulunabilir, distimide yoktur.\n2- M. Depresif epizod, distimiye göre daha şiddetlidir ve hastada çaresizlik daha belirgindir.\n3- M. Depresif epizod tedavi edilmese bile en çok 9 ayda kendiliğinden sonlanır, distimik bozukluk ise en az 2 yıl süren kronik bir bozukluktur.\n4- Distimik bozuklukta, intihar düşünce ve arzularına, MD'a göre daha az rastlanır.",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "dört maddenin tamamı"
+    },
+    {
+     "tur": "yildiz",
+     "hedef": "başlık solunda daire içinde yıldız"
+    }
+   ],
+   "sinyal": [
+    "cikmis",
+    "el_onemli",
+    "yildiz"
+   ],
+   "y25": {
+    "key": "y25-k2-34-unipolar-depresyon",
+    "sayfa": 39
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "ogrenci_sorulari": [
+    "psk-s10-b07"
+   ],
+   "puan": 63,
+   "oncelik": "A",
+   "vurgulu": [
+    "başlık solunda daire içinde yıldız",
+    "dört maddenin tamamı"
+   ]
+  },
+  {
+   "id": "psk-s10-b12",
+   "pdf": "psk",
+   "sayfa": 10,
+   "bolge": "r1c3",
+   "tur": "slayt",
+   "baslik": "Yaşlılarda Depresyonun Özellikleri; psödodemans",
+   "metin": "Yaşlılarda Depresyonun Özellikleri\nİştahsızlık ve kilo kaybı sık görülür.\nUyku bozuklukları önde gelen belirti olabilir.\nYersiz suçluluk ve değersizlik duyguları yaşlı kişilerde önde gelen belirtiler değildir.\nHastalık (özellikle kanser), yoksulluk ve kayıp hezeyanları sık görülür.\nBazen stupor derecesine varacak derece psikomotor retardasyon ve toplumsal geri çekilme sık görülür.\nBellek kaybı ve gündelik işleri yapamama önde gelen belirtiler olabilir ve yanlış bir biçimde hastanın demansa girdiğini düşündürür. (Psödo demans)",
+   "el_yazisi": [
+    {
+     "metin": "bilinç açık gözükür ama tepki yoktur",
+     "hedef": "stupor",
+     "guven": "orta",
+     "alternatif": "'gözükür' / 'görülür'"
+    },
+    {
+     "metin": "genelde bilmiyorum gibi cevaplar verir ve tamamen unutmuş gibi davranır ama demansta yakın bellek kaybı görülür. tedavisi farklı olduğu için ayrım önemli.",
+     "hedef": "(Psödo demans)",
+     "guven": "orta",
+     "alternatif": "son kelime 'önemli' küçük ve silik"
+    }
+   ],
+   "isaretler": [
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "sarı alt çizgi: İştahsızlık ve kilo kaybı; Uyku bozuklukları; Yersiz suçluluk ve değersizlik duyguları … önde gelen belirtiler değildir; stupor; toplumsal geri çekilme; Bellek kaybı … demansa girdiğini düşündürür; Psödo demans"
+    },
+    {
+     "tur": "daire",
+     "hedef": "değildir"
+    }
+   ],
+   "sinyal": [
+    "cikmis",
+    "el_onemli",
+    "sari"
+   ],
+   "y25": {
+    "key": "y25-k2-34-unipolar-depresyon",
+    "sayfa": 26
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "ogrenci_sorulari": [
+    "psk-s10-b13",
+    "psk-s10-b14",
+    "psk-s10-b15",
+    "psk-s10-b16"
+   ],
+   "puan": 58,
+   "oncelik": "A",
+   "vurgulu": [
+    "değildir",
+    "sarı alt çizgi: İştahsızlık ve kilo kaybı; Uyku bozuklukları; Yersiz suçluluk ve değersizlik duyguları … önde gelen belirtiler değildir; stupor; toplumsal geri çekilme; Bellek kaybı … demansa girdiğini düşündürür; Psödo demans"
+   ]
+  },
+  {
+   "id": "psk-s10-b11",
+   "pdf": "psk",
+   "sayfa": 10,
+   "bolge": "r2c1",
+   "tur": "slayt",
+   "baslik": "Unipolar ve Bipolar Depresyon karşılaştırması",
+   "metin": "Unipolar depresyon: Geç başlangıç; Daha az epizod; Daha yavaş başlangıç; kadın> erkek; PM ajitasyon; Tipik semptomlar; İnsomni; Özkıyım riski düşük; Gençlerde psikotik semptom nadir; Antidepresanlar daha etkili; Lityum daha az etkili; Soygeçmişte depresyon\nBipolar depresyon: Erken başlangıç; Daha çok epizod; Akut başlangıç; Kadın=erkek; PM retardasyon ve letarji; Atipik semptomlar; Hipersomni; Özkıyım riski yüksek; Gençlerde psikotik semptom fazla; Antidepresanlar daha az etkili; Lityum çok etkili; Soygeçmişte mani-depresyon",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "sarı alt çizgi: Geç/Erken başlangıç; Daha az/çok epizod; Akut başlangıç; kadın>erkek / Kadın=erkek; Atipik semptomlar; İnsomni / Hipersomni; Özkıyım riski düşük/yüksek; Gençlerde psikotik semptom nadir/fazla; Antidepresanlar daha etkili/daha az etkili; Lityum daha az etkili / çok etkili. Çizilmeyenler: Daha yavaş başlangıç, PM ajitasyon, PM retardasyon, Tipik semptomlar, soygeçmiş satırları."
+    }
+   ],
+   "sinyal": [
+    "cikmis",
+    "sari"
+   ],
+   "y25": {
+    "key": "y25-k2-34-unipolar-depresyon",
+    "sayfa": 23
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "ogrenci_sorulari": [
+    "psk-s10-b09",
+    "psk-s10-b10"
+   ],
+   "puan": 50,
+   "oncelik": "A",
+   "vurgulu": [
+    "sarı alt çizgi: Geç/Erken başlangıç; Daha az/çok epizod; Akut başlangıç; kadın>erkek / Kadın=erkek; Atipik semptomlar; İnsomni / Hipersomni; Özkıyım riski düşük/yüksek; Gençlerde psikotik semptom nadir/fazla; Antidepresanlar daha etkili/daha az etkili; Lityum daha az etkili / çok etkili. Çizilmeyenler: Daha yavaş başlangıç, PM ajitasyon, PM retardasyon, Tipik semptomlar, soygeçmiş satırları."
+   ]
+  },
+  {
+   "id": "psk-s10-b04",
+   "pdf": "psk",
+   "sayfa": 10,
+   "bolge": "r1c1",
+   "tur": "slayt",
+   "baslik": "MDB – Risk Faktörleri",
+   "metin": "MDB-Risk Faktörleri\nA) Cinsiyet: K/E: 2-3 Kat fazla. Kadınların erkeklere göre daha fazla semptom bildirmeleri, daha fazla tedavi arayışlarına girmeleri, depresif semptomları daha az unutmaları, hastalığın X kromozomuna bağlı kalıtsal geçiş gösterme olasılığı, kadınlara verilen toplumsal rol\nB) Yaş: 20-45 yaşta daha sıktır.\nC) Medeni Durum: Eşlerinden ayrılmış, boşanmış ya da evlilik uyumu bozulmuş bireyler, kadın ya da erkek olsun major depresyona daha fazla yatkındır.\nD) Aile Öyküleri: Unipolar hastaların ailelerinde daha fazla bipolar genetik özellikler görülmüştür.",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "sarı alt çizgi: Kadınların erkeklere göre daha fazla semptom bildirmeleri, daha fazla tedavi arayışlarına girmeleri, depresif semptomları daha az unutmaları, X kromozomuna bağlı kalıtsal geçiş gösterme olasılığı"
+    }
+   ],
+   "sinyal": [
+    "sari"
+   ],
+   "y25": {
+    "key": "y25-k2-34-unipolar-depresyon",
+    "sayfa": 15
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "puan": 10,
+   "oncelik": "C",
+   "vurgulu": [
+    "sarı alt çizgi: Kadınların erkeklere göre daha fazla semptom bildirmeleri, daha fazla tedavi arayışlarına girmeleri, depresif semptomları daha az unutmaları, X kromozomuna bağlı kalıtsal geçiş gösterme olasılığı"
+   ]
+  },
+  {
+   "id": "psk-s10-b17",
+   "pdf": "psk",
+   "sayfa": 10,
+   "bolge": "r2c2",
+   "tur": "slayt",
+   "baslik": "Ayırıcı Tanı",
+   "metin": "Ayırıcı Tanı\nAnksiyete bozuklukları\nDepresif duygudurum ile giden uyum bozukluğu\nOrganik mizaç bozukluklarına sekonder gelişen depresyon\nŞizofreni ve şizoaffektif bozukluklar\nKronik alkol ve madde kötüye kullanımları\nDemansiyel süreçteki depresif bulgular\nYas reaksiyonu yaşayan bireylerde sekonder depresyon gelişmesi",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "sarı alt çizgi: tüm maddeler"
+    }
+   ],
+   "sinyal": [
+    "sari"
+   ],
+   "y25": {
+    "key": "y25-k2-34-unipolar-depresyon",
+    "sayfa": 31
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "puan": 10,
+   "oncelik": "C",
+   "vurgulu": [
+    "sarı alt çizgi: tüm maddeler"
+   ]
+  },
+  {
+   "id": "psk-s10-b18",
+   "pdf": "psk",
+   "sayfa": 10,
+   "bolge": "r2c2",
+   "tur": "slayt",
+   "baslik": "MDB – Kötü Prognoz",
+   "metin": "MDB-Kötü Prognoz\nKronik psikososyal sorun, Kişilik bozukluğu, Alkol ve madde kullanım bozukluğu, İleri yaş, Şiddetli epizod ve kısa ara, sık ataklar, Hipokondriak ve histrionik belirtiler",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "daire",
+     "hedef": "Kötü Prognoz (sarı daire)"
+    }
+   ],
+   "sinyal": [
+    "el_onemli"
+   ],
+   "y25": {
+    "key": "y25-k2-34-unipolar-depresyon",
+    "sayfa": 33
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "puan": 8,
+   "oncelik": "C",
+   "vurgulu": [
+    "Kötü Prognoz (sarı daire)"
+   ]
+  },
+  {
+   "id": "psk-s10-b02",
+   "pdf": "psk",
+   "sayfa": 10,
+   "bolge": "r1c3",
+   "tur": "slayt",
+   "baslik": "Epidemiyoloji",
+   "metin": "Her yaş ve cinsiyette ve her kesimden insanda;\nKadın / erkek=2 ;\nOrtalama başlangıç yaşı: 29",
+   "el_yazisi": [],
+   "isaretler": [],
+   "sinyal": [],
+   "y25": {
+    "key": "y25-k2-34-unipolar-depresyon",
+    "sayfa": 8
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "puan": 0,
+   "oncelik": "C",
+   "vurgulu": []
+  },
+  {
+   "id": "psk-s10-b03",
+   "pdf": "psk",
+   "sayfa": 10,
+   "bolge": "r1c3",
+   "tur": "slayt",
+   "baslik": "Çocuklarda ve Ergenlerde Depresyonun Özellikleri",
+   "metin": "Çocuklarda Depresyonun Özellikleri: Bedensel yakınmalar; Sinirlilik; İşitsel varsanılar; Kaygı bozukluğu ve fobiler\nErgenlerde Depresyonun Özellikleri (y25 s25): Aşırı tedirginlik ve huzursuzluk, öfke patlamaları; Çabuk sıkılma, dikkat dağınıklığı, antisosyal davranış; Madde kötüye kullanımı; Okuldan kaçma, okul başarısızlığı; Gelişigüzel cinsel ilişkiler; Azalmış hijyen",
+   "el_yazisi": [],
+   "isaretler": [],
+   "sinyal": [],
+   "y25": {
+    "key": "y25-k2-34-unipolar-depresyon",
+    "sayfa": 24
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "puan": 0,
+   "oncelik": "C",
+   "vurgulu": []
+  }
+ ],
+ "ogrenci_sorulari": [
+  {
+   "id": "psk-s10-b06",
+   "pdf": "psk",
+   "sayfa": 10,
+   "bolge": "r1c2",
+   "tur": "cikmis_soru",
+   "baslik": "Depresyon nöbeti için yanlış: uykusuzluk/aşırı uyuma yakınması olmaz",
+   "metin": "56. Aşağıdakilerden hangisi depresyon nöbeti için yanlıştır?\na. Önceki işlev düzeyinde belirgin kayıp vardır\nb. Belirtilerin en az iki hafta devamı gereklidir\nc. Belirtilerinde çökkün duygu durum ya da ilgi/haz azalması kesinlikle olmalıdır\nd. Belirgin kilo değişimi söz konusu olabilir\ne. Uykusuzluk veya aşırı uyumadan yakınma olmaz",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "daire",
+     "hedef": "e"
+    },
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "a–d kırmızı tik (doğru önermeler); e kırmızı yazılı"
+    }
+   ],
+   "sinyal": [
+    "cikmis"
+   ],
+   "y25": {
+    "key": "y25-k2-34-unipolar-depresyon",
+    "sayfa": 17
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "cikmis": {
+    "kok": "Aşağıdakilerden hangisi depresyon nöbeti için yanlıştır?",
+    "siklar": [
+     "A) Önceki işlev düzeyinde belirgin kayıp vardır",
+     "B) Belirtilerin en az iki hafta devamı gereklidir",
+     "C) Belirtilerinde çökkün duygu durum ya da ilgi/haz azalması kesinlikle olmalıdır",
+     "D) Belirgin kilo değişimi söz konusu olabilir",
+     "E) Uykusuzluk veya aşırı uyumadan yakınma olmaz"
+    ],
+    "ogrenci_cevap": "E",
+    "banka_id": "past-q-2025-2026_DO_NEM_3_FI_NAL_SINAVI-56",
+    "banka_yil": "Geçmiş Yıllar Çıkmışı (Arşiv); kaynak adı 2025-2026 Dönem 3 Final, Kurul 2",
+    "banka_dogru": "E",
+    "tutarli": true,
+    "not": "Slayt kriter 4: uyku azalması ya da artması."
+   },
+   "bagli_birim": "psk-s10-b01",
+   "benzerlik": 0.683
+  },
+  {
+   "id": "psk-s10-b07",
+   "pdf": "psk",
+   "sayfa": 10,
+   "bolge": "r1c2",
+   "tur": "cikmis_soru",
+   "baslik": "Major depresyonda beklenmeyen bulgu: düşünce akışında hızlanma",
+   "metin": "Major depresyonda aşağıdaki bulgulardan hangisinin görülmesi beklenmez?\n1 Düşünce akışında hızlanma ☑\n2 Uyku miktarında artma\n3 Psikomotor yavaşlama\n4 Yürütücü işlevlerde bozulma\n5 Adet düzensizliği",
+   "el_yazisi": [
+    {
+     "metin": "yavaşlama olur",
+     "hedef": "1 Düşünce akışında hızlanma (depresyonda düşünce akışında yavaşlama olur)",
+     "guven": "yuksek",
+     "alternatif": ""
+    }
+   ],
+   "isaretler": [
+    {
+     "tur": "daire",
+     "hedef": "1 Düşünce akışında hızlanma"
+    },
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "2–5 kırmızı tik"
+    }
+   ],
+   "sinyal": [
+    "cikmis",
+    "el_onemli"
+   ],
+   "y25": {
+    "key": "y25-k2-34-unipolar-depresyon",
+    "sayfa": 19
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "cikmis": {
+    "kok": "Major depresyonda aşağıdaki bulgulardan hangisinin görülmesi beklenmez?",
+    "siklar": [
+     "1) Düşünce akışında hızlanma",
+     "2) Uyku miktarında artma",
+     "3) Psikomotor yavaşlama",
+     "4) Yürütücü işlevlerde bozulma",
+     "5) Adet düzensizliği"
+    ],
+    "ogrenci_cevap": "1",
+    "banka_id": "4394513a1c85",
+    "banka_yil": "2020-2021 Kurul 2",
+    "banka_dogru": "A",
+    "tutarli": true,
+    "not": "Kognitif alan: düşünce akışında yavaşlama (y25 s19)."
+   },
+   "bagli_birim": "psk-s10-b19",
+   "benzerlik": 0.649
+  },
+  {
+   "id": "psk-s10-b08",
+   "pdf": "psk",
+   "sayfa": 10,
+   "bolge": "r2c2",
+   "tur": "cikmis_soru",
+   "baslik": "DSM-5 MDB kriterinde yer almaz: kas gerginliği",
+   "metin": "82- Aşağıdakilerden hangisi DSM-5 kriterlerine göre Majör Depresif Bozukluk tanı kriterleri içerisinde yer almaz?\nA) Konsantrasyon kaybı\nB) Uykuda azalma\nC) İştahta artma\nD) Ölüm düşünceleri\nE) Kas gerginliği",
+   "el_yazisi": [
+    {
+     "metin": "– artış da olabilir",
+     "hedef": "B) Uykuda azalma",
+     "guven": "yuksek",
+     "alternatif": ""
+    },
+    {
+     "metin": "– artış da olabilir",
+     "hedef": "C) İştahta artma",
+     "guven": "yuksek",
+     "alternatif": "anlamca 'azalma da olabilir' olmalı"
+    }
+   ],
+   "isaretler": [
+    {
+     "tur": "daire",
+     "hedef": "E) Kas gerginliği"
+    },
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "A–D kırmızı tik"
+    }
+   ],
+   "sinyal": [
+    "cikmis",
+    "el_onemli",
+    "tekrar"
+   ],
+   "y25": {
+    "key": "y25-k2-34-unipolar-depresyon",
+    "sayfa": 17
+   },
+   "y26": null,
+   "duzeltme": [
+    {
+     "ham": "İştahta artma – artış da olabilir",
+     "dogru": "İştahta artma – azalma da olabilir (DSM-5: iştah azalması ya da artması)",
+     "gerekce": "Öğrenci iki satıra aynı notu yazmış; iştah satırı için anlamlı olan 'azalma da olabilir' (y25 s17 kriter 3)"
+    }
+   ],
+   "not_": null,
+   "cikmis": {
+    "kok": "Aşağıdakilerden hangisi DSM-5 kriterlerine göre majör depresif bozukluk tanı kriterleri içerisinde yer almaz?",
+    "siklar": [
+     "A) Konsantrasyon kaybı",
+     "B) Uykuda azalma",
+     "C) İştahta artma",
+     "D) Ölüm düşünceleri",
+     "E) Kas gerginliği"
+    ],
+    "ogrenci_cevap": "E",
+    "banka_id": "d3-f-061",
+    "banka_yil": "2021-2022 final",
+    "banka_dogru": "E",
+    "tutarli": true,
+    "not": "Kopyaları: d3-f-110, d3-f-213, past-q-22_final_230619_145249-82, q-22_final_230619_145249-82. Kas gerginliği yaygın anksiyete bozukluğu ölçütüdür."
+   },
+   "bagli_birim": "psk-s10-b05",
+   "benzerlik": 0.706
+  },
+  {
+   "id": "psk-s10-b09",
+   "pdf": "psk",
+   "sayfa": 10,
+   "bolge": "r2c1",
+   "tur": "cikmis_soru",
+   "baslik": "Unipolara göre bipolar depresyonda ön plana çıkmayan: antidepresanlar daha etkili",
+   "metin": "Aşağıdakilerden hangisi, unipolar depresyona göre, bipolar depresyonda ön plana çıkmaz?\n1 Psikomotor retardasyon ve letarji daha sıktır. (bi)\n2 Atipik semptomlar daha sıktır. (bi)\n3 Hipersomni daha sıktır. (bi)\n4 Antidepresanlar daha etkilidir. (uni) ☑\n5 Özkıyım riski yüksektir. (bi)",
+   "el_yazisi": [
+    {
+     "metin": "bi / bi / bi / uni / bi",
+     "hedef": "her şıkkın yanına hangi depresyon tipine ait olduğu",
+     "guven": "yuksek",
+     "alternatif": ""
+    }
+   ],
+   "isaretler": [
+    {
+     "tur": "daire",
+     "hedef": "4 yanında onay kutusu"
+    }
+   ],
+   "sinyal": [
+    "cikmis",
+    "el_onemli"
+   ],
+   "y25": {
+    "key": "y25-k2-34-unipolar-depresyon",
+    "sayfa": 23
+   },
+   "y26": null,
+   "duzeltme": [
+    {
+     "ham": "bipolar depresyonda ön plana çıkar?",
+     "dogru": "bipolar depresyonda ön plana çıkmaz?",
+     "gerekce": "Dört şık bipolar özelliği; işaretli cevap unipolar özelliği. Banka kökü 'çıkmaz'."
+    }
+   ],
+   "not_": null,
+   "cikmis": {
+    "kok": "Aşağıdakilerden hangisi, unipolar depresyona göre bipolar depresyonda ön plana çıkmaz?",
+    "siklar": [
+     "1) Psikomotor retardasyon ve letarji daha sıktır.",
+     "2) Atipik semptomlar daha sıktır.",
+     "3) Hipersomni daha sıktır.",
+     "4) Antidepresanlar daha etkilidir.",
+     "5) Özkıyım riski yüksektir."
+    ],
+    "ogrenci_cevap": "4",
+    "banka_id": "q-2021final_230619_142600-3",
+    "banka_yil": "2020-2021 final",
+    "banka_dogru": "D",
+    "tutarli": true,
+    "not": "Öğrencinin yapıştırdığı kökte olumsuzluk eki yok ('ön plana çıkar?'); banka kökü 'çıkmaz'. Cevap 4/D her iki okumada da işaretli; slayt: antidepresanlar unipolarda daha etkili (y25 s23)."
+   },
+   "bagli_birim": "psk-s10-b11",
+   "benzerlik": 0.796
+  },
+  {
+   "id": "psk-s10-b10",
+   "pdf": "psk",
+   "sayfa": 10,
+   "bolge": "r2c1",
+   "tur": "cikmis_soru",
+   "baslik": "Unipolara göre bipolar depresyonda ön plana çıkmayan: psikomotor ajitasyon",
+   "metin": "Aşağıdakilerden hangisi, unipolar depresyona göre, bipolar depresyonda ön plana çıkmaz?\n1 Daha çok epizod görülür. (bi)\n2 Akut başlangıçlar vardır. (bi)\n3 Kadın erkek oranları eşittir. (bi)\n4 Psikomotor ajitasyon sık görülür. (uni)\n5 Atipik semptomlar ön plandadır. (bi)",
+   "el_yazisi": [
+    {
+     "metin": "bi / bi / bi / uni / bi",
+     "hedef": "her şıkkın yanına hangi depresyon tipine ait olduğu",
+     "guven": "yuksek",
+     "alternatif": ""
+    }
+   ],
+   "isaretler": [
+    {
+     "tur": "daire",
+     "hedef": "4 Psikomotor ajitasyon sık görülür"
+    }
+   ],
+   "sinyal": [
+    "cikmis",
+    "el_onemli"
+   ],
+   "y25": {
+    "key": "y25-k2-34-unipolar-depresyon",
+    "sayfa": 23
+   },
+   "y26": null,
+   "duzeltme": [
+    {
+     "ham": "ön plana çıkar??",
+     "dogru": "ön plana çıkmaz?",
+     "gerekce": "İşaretli cevap unipolar özelliği"
+    }
+   ],
+   "not_": null,
+   "cikmis": {
+    "kok": "Aşağıdakilerden hangisi, unipolar depresyona göre bipolar depresyonda ön plana çıkmaz?",
+    "siklar": [
+     "1) Daha çok epizod görülür.",
+     "2) Akut başlangıçlar vardır.",
+     "3) Kadın erkek oranları eşittir.",
+     "4) Psikomotor ajitasyon sık görülür.",
+     "5) Atipik semptomlar ön plandadır."
+    ],
+    "ogrenci_cevap": "4",
+    "banka_id": "",
+    "banka_yil": "",
+    "banka_dogru": "",
+    "tutarli": true,
+    "not": "Bankada bu şık kümesiyle bulunamadı (yalnız antidepresan sürümü var). Kök yine 'çıkar??' yazılmış; cevap slayta göre doğru: PM ajitasyon unipolarda, bipolarda PM retardasyon (y25 s23)."
+   },
+   "bagli_birim": "psk-s10-b11",
+   "benzerlik": 0.792
+  },
+  {
+   "id": "psk-s10-b13",
+   "pdf": "psk",
+   "sayfa": 10,
+   "bolge": "r1c3",
+   "tur": "cikmis_soru",
+   "baslik": "Psödodemansta görülmez: yavaş ilerler, ilk semptomlar gözden kaçar",
+   "metin": "1) Depresyona bağlı bilişsel bozulmada (Psödodemans) aşağıdakilerden hangisi görülmez?\nA) Duygudurum çökkündür.\nB) Kişi görüşmede efor sarf etmez, bilmiyorum yanıtı çok sıktır.\nC) Kısa süreli öykü mevcuttur.\nD) Yavaş ilerler, ilk semptomlar gözden kaçar.\nE) Başlangıç zamanı bellidir.",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "daire",
+     "hedef": "D"
+    },
+    {
+     "tur": "sari",
+     "hedef": "Yavaş ilerler, ilk semptomlar gözden kaçar (kaynağın sarı vurgusu)"
+    }
+   ],
+   "sinyal": [
+    "cikmis"
+   ],
+   "y25": {
+    "key": "y25-k2-34-unipolar-depresyon",
+    "sayfa": 26
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "cikmis": {
+    "kok": "Depresyona bağlı bilişsel bozulmada (psödodemans) aşağıdakilerden hangisi görülmez?",
+    "siklar": [
+     "A) Duygudurum çökkündür.",
+     "B) Kişi görüşmede efor sarf etmez, bilmiyorum yanıtı çok sıktır.",
+     "C) Kısa süreli öykü mevcuttur.",
+     "D) Yavaş ilerler, ilk semptomlar gözden kaçar.",
+     "E) Başlangıç zamanı bellidir."
+    ],
+    "ogrenci_cevap": "D",
+    "banka_id": "past-1790877042004-879090",
+    "banka_yil": "2020-2021 Kurul 6 (Yaşlılığa Özgü Ruhsal Sorunlar)",
+    "banka_dogru": "D",
+    "tutarli": true,
+    "not": "Banka konusu Kurul 6; öğrenci k2-34 yaşlı depresyonu slaytına bağlamış. Yavaş ilerleme demansın özelliğidir."
+   },
+   "bagli_birim": "psk-s10-b12",
+   "benzerlik": 0.758
+  },
+  {
+   "id": "psk-s10-b14",
+   "pdf": "psk",
+   "sayfa": 10,
+   "bolge": "r1c3",
+   "tur": "cikmis_soru",
+   "baslik": "Yaşlılarda fizyolojik uyku değişiklikleri – söylenemez: yatakta kalma uzun, fazla uyurlar",
+   "metin": "2. Yaşlılarda görülen fizyolojik uyku değişiklikleri için aşağıdakilerden hangisi söylenemez?\na) Geceleri sık uyanırlar\nb) Yatakta kalma süreleri uzundur ve fazla uyurlar.\nc) Daha erken uyanırlar.\nd) Uykuları daha yüzeyseldir.\ne) Yaşlılar daha erken uyurlar.",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "b şıkkı mavi renkli (kaynakta cevap işareti)"
+    }
+   ],
+   "sinyal": [
+    "cikmis"
+   ],
+   "y25": {
+    "key": "y25-k2-34-unipolar-depresyon",
+    "sayfa": 26
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "cikmis": {
+    "kok": "Yaşlılarda görülen fizyolojik uyku değişiklikleri için aşağıdakilerden hangisi söylenemez?",
+    "siklar": [
+     "A) Geceleri sık uyanırlar",
+     "B) Yatakta kalma süreleri uzundur ve fazla uyurlar.",
+     "C) Daha erken uyanırlar.",
+     "D) Uykuları daha yüzeyseldir.",
+     "E) Yaşlılar daha erken uyurlar."
+    ],
+    "ogrenci_cevap": "B",
+    "banka_id": "past-1790877038509-367734",
+    "banka_yil": "2020-2021 Kurul 6 (Yaşlılığa Özgü Ruhsal Sorunlar)",
+    "banka_dogru": "B",
+    "tutarli": true,
+    "not": "Öğrenci kendi işareti koymamış; mavi vurgulu b yapıştırılan kaynağın cevabı. Konu k2-34 slaytında yok; Kurul 6 konusu."
+   },
+   "bagli_birim": "psk-s10-b12",
+   "benzerlik": 0.599
+  },
+  {
+   "id": "psk-s10-b15",
+   "pdf": "psk",
+   "sayfa": 10,
+   "bolge": "r1c3",
+   "tur": "cikmis_soru",
+   "baslik": "Yaşlılık dönemi depresyonu – söylenemez: değersizlik/suçluluk daha fazla dile getirilir",
+   "metin": "1. Yaşlılık dönemi depresyonu hakkında, aşağıdakilerden hangisi söylenemez?\na) Yaşlılarda görme azlığı, depresyon için risk faktörüdür.\nb) Major depresyon yaşlılarda daha nadirdir.\nc) Kronikleşme ihtimali daha fazladır.\nd) [üstü kapalı; bankaya göre: Vasküler depresyonda tedaviye yanıt daha düşüktür.]\ne) Değersizlik düşünceleri ve suçluluk gibi belirtiler daha fazla dile getirilir.",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "daire",
+     "hedef": "e şıkkı (kırmızı elips)"
+    },
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "c şıkkı mavi vurgulu (kaynağın işareti)"
+    }
+   ],
+   "sinyal": [
+    "cikmis",
+    "tekrar"
+   ],
+   "y25": {
+    "key": "y25-k2-34-unipolar-depresyon",
+    "sayfa": 26
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "cikmis": {
+    "kok": "Yaşlılık dönemi depresyonu hakkında aşağıdakilerden hangisi söylenemez?",
+    "siklar": [
+     "A) Yaşlılarda görme azlığı depresyon için risk faktörüdür.",
+     "B) Majör depresyon yaşlılarda daha nadirdir.",
+     "C) Kronikleşme ihtimali daha fazladır.",
+     "D) Vasküler depresyonda tedaviye yanıt daha düşüktür.",
+     "E) Değersizlik düşünceleri ve suçluluk gibi belirtiler daha fazla dile getirilir."
+    ],
+    "ogrenci_cevap": "E",
+    "banka_id": "past-1790877038506-887414",
+    "banka_yil": "2020-2021 Kurul 6 (Yaşlılığa Özgü Ruhsal Sorunlar)",
+    "banka_dogru": "E",
+    "tutarli": true,
+    "not": "Yapıştırılan kaynakta c (kronikleşme) mavi vurgulu, ama öğrenci e'yi daire içine almış; banka ve slayt (y25 s26: yersiz suçluluk/değersizlik yaşlılarda önde gelen belirti değildir) e'yi doğruluyor. D şıkkı görüntüde başka bir parçanın altında kalmış, bankadan tamamlandı."
+   },
+   "bagli_birim": "psk-s10-b12",
+   "benzerlik": 0.737
+  },
+  {
+   "id": "psk-s10-b16",
+   "pdf": "psk",
+   "sayfa": 10,
+   "bolge": "r1c3",
+   "tur": "cikmis_soru",
+   "baslik": "Depresyonlu yaşlıda sık görülen şikâyet değil: toplam uyku zamanında artma",
+   "metin": "Aşağıdakilerden hangisi, depresyon tanılı yaşlı bireylerde sık görülen şikayetlerden biri değildir?\n1 Dikkat menzilinde azalma\n2 Toplam uyku zamanında artma ☑\n3 Uyku etkinliğinde azalma\n4 GİS semptomlarında artma\n5 Ağrı algısında artma",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "daire",
+     "hedef": "2 yanında onay kutusu"
+    }
+   ],
+   "sinyal": [
+    "cikmis"
+   ],
+   "y25": {
+    "key": "y25-k2-34-unipolar-depresyon",
+    "sayfa": 26
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "cikmis": {
+    "kok": "Aşağıdakilerden hangisi, depresyon tanılı yaşlı bireylerde sık görülen şikâyetlerden biri değildir?",
+    "siklar": [
+     "1) Dikkat menzilinde azalma",
+     "2) Toplam uyku zamanında artma",
+     "3) Uyku etkinliğinde azalma",
+     "4) GİS semptomlarında artma",
+     "5) Ağrı algısında artma"
+    ],
+    "ogrenci_cevap": "2",
+    "banka_id": "529922020423",
+    "banka_yil": "2020-2021 Kurul 6 (Yaşlılığa Özgü Ruhsal Sorunlar)",
+    "banka_dogru": "B",
+    "tutarli": true,
+    "not": "Çok küçük yapıştırılmış tablo; 4× büyütmeyle okundu."
+   },
+   "bagli_birim": "psk-s10-b12",
+   "benzerlik": 0.713
+  }
+ ],
+ "banka": [
+  {
+   "id": "4394513a1c85",
+   "ders": "k2-34",
+   "yillar": [
+    "2020-2021"
+   ],
+   "kok": "Major depresyonda aşağıdaki bulgulardan hangisinin görülmesi beklenmez?",
+   "dogru": "Düşünce akışında hızlanma",
+   "kopyalar": [],
+   "birim": "psk-s10-b12",
+   "benzerlik": 0.58,
+   "kapsandi": false,
+   "notta_yapistirilmis": true
+  },
+  {
+   "id": "past-q-2025-2026_DO_NEM_3_FI_NAL_SINAVI-56",
+   "ders": "k2-34",
+   "yillar": [
+    "Geçmiş Yıllar Çıkmışı (Arşiv)"
+   ],
+   "kok": "Aşağıdakilerden hangisi depresyon nöbeti için yanlıştır?",
+   "dogru": "Uykusuzluk veya aşırı uyumadan yakınma olmaz.",
+   "kopyalar": [],
+   "birim": "psk-s10-b01",
+   "benzerlik": 0.609,
+   "kapsandi": true,
+   "notta_yapistirilmis": true
+  },
+  {
+   "id": "q-KURUL_2_C_IKMIS__3-56",
+   "ders": "k2-34",
+   "yillar": [
+    "Geçmiş Yıllar Çıkmışı (Arşiv)"
+   ],
+   "kok": "Aşağıdakilerden hangisi depresyon nöbeti (majör depresif epizot) için yanlıştır?",
+   "dogru": "Uykusuzluk ya da aşırı uyuma yakınması olmaz",
+   "kopyalar": [],
+   "birim": "psk-s10-b01",
+   "benzerlik": 0.566,
+   "kapsandi": false,
+   "notta_yapistirilmis": false
+  }
+ ]
+}

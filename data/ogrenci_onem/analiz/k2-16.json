@@ -1,0 +1,60 @@
+{
+ "ders": "k2-16",
+ "ozet": "Dersin sınav çekirdeği DSÖ'nün bozukluk–özürlülük–engellilik ayrımı; futbolcu/piyanist vakası 2024-25'te birebir sorulmuş, 2021-2026 bankasında da tanım sorusu var. Öğrenciler bu örneğin üç cümlesini sarıyla işaretlemiş. Rehabilitasyonun amaçları ve değerlendirme başlıkları çıkmış sinyalli; notta olmayan uzamış yatak istirahatinin dolaşım etkisi bankada sorulmuş.",
+ "temalar": [
+  {"tema": "DSÖ sınıflaması: bozukluk / özürlülük / engellilik ve futbolcu–piyanist vakası", "oncelik": "A",
+   "birimler": ["ftr-s01-b01"],
+   "kanit": "2 çıkmış: past-1790877042516-138078-cs2 (2024-25 K2: piyanistin düğme ilikleyememesi → özürlülük) ve d3-k2-ftr-002 (2021-2026 K2: sosyal ve mesleki rolleri yerine getirememe → engellilik/katılım kısıtlılığı). Öğrenci 'yanlış olan' biçimindeki kopyasını yapıştırıp 'doğrusu özürlülük' diye açıklamış; vaka cümleleri sarı.",
+   "anlatim": "Üç terim tanım + vaka üzerinden verilmeli: bozukluk yapı-fonksiyon kaybı (iki kişide de iskelet sisteminde), özürlülük bozukluktan doğan kısıtlılık (düğme ilikleyememe, iki kişide ortak), engellilik sosyal ve mesleki fonksiyonu yerine getirememe (yalnız piyanist). Aynı vakayı üç düzeyde ayrı ayrı sınıflandıran bir tablo eklenmeli.",
+   "soru_payi": 50,
+   "soru_tipleri": ["vaka uygulama: piyanistin düğme ilikleyememesi → özürlülük", "yanlış bul: 'düğme ilikleyememe engelliliktir'", "tanımdan terime: sosyal/mesleki rol kaybı → engellilik"]},
+  {"tema": "Rehabilitasyonun amaçları ve inme rehabilitasyonunun ana ilkeleri", "oncelik": "A",
+   "birimler": ["ftr-s01-b03"],
+   "kanit": "Slayt çıkmış sinyalli (notta 'çıkmış 94' altında); öğrenci 2021-22 K2 öncüllü sorusunu (SVO rehabilitasyonu ana ilkeleri I–IV → hepsi) bu derse koymuş. Aynı amaç listesi k2-28'de de var.",
+   "anlatim": "Yedi amaç madde madde: eşlik eden hastalıkları önlemek-tanımak-tedavi etmek, hasta ve aile eğitimi, duruma uyum, fonksiyonel bağımsızlığı en üst düzeye çıkarmak, özürlülüğü en aza indirmek, ev-aile-topluma entegrasyon, anlamlı ve tatmin edici hayat. k2-28 ile tekrarı önlemek için burada genel ilke, orada inmeye özgü uygulama anlatılmalı.",
+   "soru_payi": 20,
+   "soru_tipleri": ["öncüllü: rehabilitasyon ilkeleri (hepsi)", "olumsuz: rehabilitasyonun amaçlarından olmayan"]},
+  {"tema": "Rehabilitasyonda değerlendirme: genel ve hastalığa özel başlıklar", "oncelik": "A",
+   "birimler": ["ftr-s01-b06"],
+   "kanit": "Slayt çıkmış sinyalli; öğrenci SVO ilkeleri sorusunu bu slayta bağlamış. Ayrıca işaret yok.",
+   "anlatim": "Genel değerlendirme (motor, duyu, mental fonksiyon, konuşma, kranial sinirler, denge-koordinasyon, yürüme, GYA, yaşam kalitesi) ile hastalığa özel değerlendirme (motor fonksiyon, yorgunluk, tonus, koordinasyon) iki liste olarak ayrılmalı.",
+   "soru_payi": 12,
+   "soru_tipleri": ["liste: hastalığa özel değerlendirmede yer alan (yorgunluk, tonus)"]},
+  {"tema": "Notta yok, sorulmuş: uzamış yatak istirahatinin dolaşım sistemine erken etkisi", "oncelik": "B",
+   "birimler": [],
+   "kanit": "Bankada notta karşılığı olmayan soru: d3-k2-ftr-006 (2021-2026 K2: uzamış yatak istirahatinin kardiyovasküler sistemdeki en erken etkisi → plazma hacminde azalma ve ortostatik intolerans).",
+   "anlatim": "2026-27 slaytında immobilizasyon bölümü varsa plazma hacmi azalması ve ortostatik intolerans en erken etki olarak verilmeli; yoksa yalnız örnek soru olarak kullanılmalı.",
+   "soru_payi": 12,
+   "soru_tipleri": ["en erken etki: plazma hacminde azalma + ortostatik intolerans"]},
+  {"tema": "Diğer seçilen yerler: nörolojik rehabilitasyonun hasta grupları", "oncelik": "C",
+   "birimler": ["ftr-s01-b05"],
+   "kanit": "İşaretsiz slayt yapıştırması; çıkmış yok.",
+   "anlatim": "İnme, omurilik yaralanması, travmatik beyin hasarı, Parkinson, MS, ALS ve miyopatiler, serebral palsi, spina bifida, kranial ve periferik sinir hasarları tek liste olarak; ayrıntı k2-28'e bırakılmalı.",
+   "soru_payi": 6,
+   "soru_tipleri": ["liste: nörolojik rehabilitasyon kapsamındaki hasta grubu"]}
+ ],
+ "hoca_kaliplari": [
+  "Bu konunun 3 çıkmışı anlama-ilişki düzeyinde; doğrudan %67, en tipik %33",
+  "Vaka uygulama: somut olay (piyanist, distal falanks) verilip DSÖ terimi soruluyor",
+  "Uzun tanım kökü: üç terimin ikisi tanımlanıp üçüncüsü soruluyor (d3-k2-ftr-002)",
+  "Çeldirici: aynı türden ayrı kavram %67, mutlak ifade tuzağı %33",
+  "FTR geneli öncüllü %12; hoca 'Hepsi' şıkkını kullanmış (%4), örnek sorularda bu şık profil kapısında HATA olduğundan 'I, II, III ve IV' biçimi tercih edilmeli"
+ ],
+ "tuzaklar": [
+  {"tuzak": "Düğme ilikleyememe özürlülüktür, engellilik değil", "neden": "2024-25 sorusunun 'yanlış olan' sürümünde engellilik çeldirici olarak kullanılmış"},
+  {"tuzak": "Futbolcu engelli sayılmaz; aynı bozukluk yalnız piyanistte engelliliğe yol açar", "neden": "iki kişinin bozukluk ve özürlülüğü ortak, engelliliği farklı"},
+  {"tuzak": "Bozukluk iki kişide de iskelet sistemindedir", "neden": "bozukluğun düzeyi (sinir/kas) değiştirilerek çeldirici kurulabilir"},
+  {"tuzak": "Yorgunluk ve tonus hastalığa özel değerlendirme başlıklarıdır", "neden": "genel değerlendirme listesiyle karıştırılabilir"}
+ ],
+ "sayilar": [
+  "Rehabilitasyonun 7 amacı",
+  "Genel değerlendirmede 9, hastalığa özel değerlendirmede 4 başlık"
+ ],
+ "duzeltmeler": [],
+ "ara_soru_adaylari": [
+  {"birim": "ftr-s01-b01", "fikir": "distal falanksı kopan piyanistin düğme ilikleyememesi DSÖ'ye göre hangisi (özürlülük); çeldiriciler bozukluk, engellilik"},
+  {"birim": "ftr-s01-b01", "fikir": "aynı yaralanmada futbolcu ile piyanist arasında farklı olan düzey (engellilik)"},
+  {"birim": "ftr-s01-b03", "fikir": "öncüllü: rehabilitasyonun amaçları (I–IV hepsi)"}
+ ],
+ "kurul2627_notu": "Bu dersin hiçbir birimi 2026-27 PDF'iyle eşlenmedi (y26 yok). Yeni PDF'te futbolcu/piyanist örneğinin korunup korunmadığı ve immobilizasyon/yatak istirahati bölümü olup olmadığı kontrol edilmeli."
+}

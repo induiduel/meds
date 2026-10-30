@@ -1,0 +1,339 @@
+{
+ "ders": "k2-44",
+ "kod": "2s13",
+ "brans": "Psikiyatri",
+ "konu": "Damgalama",
+ "kaynak": "Geçmiş yıl (2025-26) öğrenci derleme notu: psk3.2",
+ "y25": {
+  "key": "y25-k2-44-damgalama",
+  "sayfalar": [
+   5,
+   10,
+   11,
+   12,
+   13,
+   18
+  ]
+ },
+ "sayac": {
+  "birim": 6,
+  "A": 2,
+  "B": 0,
+  "C": 4,
+  "ogrenci_sorusu": 1,
+  "banka": 3,
+  "banka_kapsandi": 2
+ },
+ "birimler": [
+  {
+   "id": "psk-s15-b01",
+   "pdf": "psk",
+   "sayfa": 15,
+   "bolge": "r1c1",
+   "tur": "slayt",
+   "baslik": "Damgalamada şu etkenler tanımlanmıştır",
+   "metin": "Damgalamada şu etkenler tanımlanmıştır\n- 1.) Korku ve dışarıda bırakma; ruhsal hastalıklı bireylerden korkulmalıdır ve bu nedenle toplumun dışında tutulmalıdırlar.\n- 2.) Otoriterlik; ruhsal hastalıklı bireyler sorumsuzdur, bu nedenle kararlar diğerleri tarafından verilmelidir.\n- 3.) Yardımseverlik; şiddetli ruhsal hastalığı olan bireyler çocuk gibidir ve bakıma ihtiyaçları vardır.\n- Ruhsal hastalıklı bireyler hastalıklarının nedeni için sorumlu olarak görülmektedirler. Bu tutumlar ayırımcı davranışlara öncülük etmektedir.",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "sari",
+     "hedef": "1.) Korku ve dışarıda bırakma"
+    },
+    {
+     "tur": "sari",
+     "hedef": "2.) Otoriterlik"
+    },
+    {
+     "tur": "sari",
+     "hedef": "3.) Yardımseverlik"
+    }
+   ],
+   "sinyal": [
+    "sari"
+   ],
+   "y25": {
+    "key": "y25-k2-44-damgalama",
+    "sayfa": 5
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "banka_cikmis": [
+    "d3-k2-psi-017",
+    "q-25-26_d_nem_3_kurul_2-82-cs8"
+   ],
+   "puan": 45,
+   "oncelik": "A",
+   "vurgulu": [
+    "1.) Korku ve dışarıda bırakma",
+    "2.) Otoriterlik",
+    "3.) Yardımseverlik"
+   ]
+  },
+  {
+   "id": "psk-s15-b03",
+   "pdf": "psk",
+   "sayfa": 15,
+   "bolge": "r1c1+r2c1",
+   "tur": "slayt",
+   "baslik": "Önyargılar",
+   "metin": "Önyargılar: Önyargılar, stereotipileri destekler ve ikisinin sonucunda farklı duygusal reaksiyonlar gelişebilir.",
+   "el_yazisi": [],
+   "isaretler": [],
+   "sinyal": [
+    "cikmis"
+   ],
+   "y25": {
+    "key": "y25-k2-44-damgalama",
+    "sayfa": 11
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "ogrenci_sorulari": [
+    "psk-s15-b06"
+   ],
+   "puan": 40,
+   "oncelik": "A",
+   "vurgulu": []
+  },
+  {
+   "id": "psk-s15-b02",
+   "pdf": "psk",
+   "sayfa": 15,
+   "bolge": "r1c1",
+   "tur": "slayt",
+   "baslik": "Streotipiler",
+   "metin": "Stereotipiler: (Bu kavram) toplumların ortak görüşünü (temsil eder) ... Stereotipiler pozitif ve negatif şeklinde (gruplanır).",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "sari",
+     "hedef": "toplumların ortak görüşünü"
+    }
+   ],
+   "sinyal": [
+    "sari"
+   ],
+   "y25": {
+    "key": "y25-k2-44-damgalama",
+    "sayfa": 10
+   },
+   "y26": null,
+   "duzeltme": [
+    {
+     "ham": "Streotipiler",
+     "dogru": "Stereotipiler",
+     "gerekce": "Slayt başlığında yazım hatası; aynı slaytın metninde 'Stereotipiler' geçiyor."
+    },
+    {
+     "ham": "görüsünü",
+     "dogru": "görüşünü",
+     "gerekce": "Arşiv metninde ş→s bozulması; yapıştırılan parçada doğru."
+    }
+   ],
+   "not_": null,
+   "puan": 10,
+   "oncelik": "C",
+   "vurgulu": [
+    "toplumların ortak görüşünü"
+   ]
+  },
+  {
+   "id": "psk-s15-b05",
+   "pdf": "psk",
+   "sayfa": 15,
+   "bolge": "r2c1",
+   "tur": "slayt",
+   "baslik": "Tutum",
+   "metin": "Tutum: (…) dünya görüşünün bütünleşmesi ile oluşan bakış açısına \"tutum\" denir.",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "sari",
+     "hedef": "dünya görüşünün bütünleşmesi ile oluşan bakış açısına \"tutum\" denir"
+    }
+   ],
+   "sinyal": [
+    "sari"
+   ],
+   "y25": {
+    "key": "y25-k2-44-damgalama",
+    "sayfa": 13
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "puan": 10,
+   "oncelik": "C",
+   "vurgulu": [
+    "dünya görüşünün bütünleşmesi ile oluşan bakış açısına \"tutum\" denir"
+   ]
+  },
+  {
+   "id": "psk-s15-b07",
+   "pdf": "psk",
+   "sayfa": 15,
+   "bolge": "r2c2",
+   "tur": "slayt",
+   "baslik": "Damgalanmaya maruz kalan en yaygın tanı grupları",
+   "metin": "Damgalanmaya maruz kalan en yaygın tanı grupları psikotik bozukluklar, bipolar bozukluklar, depresif bozukluklar, anksiyete bozuklukları ve madde kullanım bozukluklarıdır.",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "sari",
+     "hedef": "tüm cümle"
+    }
+   ],
+   "sinyal": [
+    "sari"
+   ],
+   "y25": {
+    "key": "y25-k2-44-damgalama",
+    "sayfa": 18
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "puan": 10,
+   "oncelik": "C",
+   "vurgulu": [
+    "tüm cümle"
+   ]
+  },
+  {
+   "id": "psk-s15-b04",
+   "pdf": "psk",
+   "sayfa": 15,
+   "bolge": "r2c1+r2c2",
+   "tur": "slayt",
+   "baslik": "Ayrımcılık",
+   "metin": "Ayrımcılık: Değerlendirilen bir durum sonucu ortaya çıkan bilişsel ve duygusal yanıtlar olup, davranışa yansırlar.",
+   "el_yazisi": [
+    {
+     "metin": "bireysel / toplumsal / yapısal / kendini damgalama",
+     "hedef": "Ayrımcılık (ayrımcılığın üç düzeyi)",
+     "guven": "yuksek",
+     "alternatif": "slayt s14: 'Çalışmalarda ayrımcılığın üç düzeyi: Bireysel, Toplumsal/yapısal, Kendini damgalama'"
+    }
+   ],
+   "isaretler": [
+    {
+     "tur": "ok",
+     "hedef": "Ayrımcılık başlığından üç düzeye üç kırmızı çizgi"
+    }
+   ],
+   "sinyal": [
+    "el_onemli"
+   ],
+   "y25": {
+    "key": "y25-k2-44-damgalama",
+    "sayfa": 12
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "puan": 8,
+   "oncelik": "C",
+   "vurgulu": []
+  }
+ ],
+ "ogrenci_sorulari": [
+  {
+   "id": "psk-s15-b06",
+   "pdf": "psk",
+   "sayfa": 15,
+   "bolge": "r1c2",
+   "tur": "cikmis_soru",
+   "baslik": "Damgalama içinde olmayan kavram",
+   "metin": "4) Hangisi damgalama içinde yoktur\n-stereotipiler -önyargı -empati",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "pembe",
+     "hedef": "tüm soru bloğu"
+    },
+    {
+     "tur": "daire",
+     "hedef": "empati (kırmızı çember)"
+    }
+   ],
+   "sinyal": [
+    "cikmis"
+   ],
+   "y25": {
+    "key": "y25-k2-44-damgalama",
+    "sayfa": 7
+   },
+   "y26": null,
+   "duzeltme": [
+    {
+     "ham": "sterotipler",
+     "dogru": "stereotipiler",
+     "gerekce": "Yazım hatası."
+    }
+   ],
+   "not_": null,
+   "cikmis": {
+    "kok": "4) Hangisi damgalama içinde yoktur?",
+    "siklar": [
+     "stereotipiler",
+     "önyargı",
+     "empati"
+    ],
+    "ogrenci_cevap": "empati",
+    "banka_id": "",
+    "banka_yil": "",
+    "banka_dogru": "",
+    "tutarli": true,
+    "not": "Öğrenci tarafından kısaltılmış 'Soru – şıklar' biçiminde yazılmış (tam şık listesi yok; büyük olasılıkla ayrımcılık/tutum diğer şıklar). Bankada karşılığı bulunamadı. Tıbben uyumlu: damgalamanın sosyal biliş bileşenleri stereotipi, önyargı, ayrımcılıktır; empati değildir."
+   },
+   "bagli_birim": "psk-s15-b03",
+   "benzerlik": 0.625
+  }
+ ],
+ "banka": [
+  {
+   "id": "d3-k2-psi-017",
+   "ders": "k2-44",
+   "yillar": [
+    "2021-2026"
+   ],
+   "kok": "Ruhsal bozukluğu olan bireyin toplumdaki önyargı ve olumsuz tutumları benimseyerek kendisini değersiz, yetersiz ve tehlikeli görmesi tablosuna ne ad verilir?",
+   "dogru": "İçselleştirilmiş (öz) damgalama",
+   "kopyalar": [],
+   "birim": "psk-s15-b01",
+   "benzerlik": 0.706,
+   "kapsandi": true,
+   "notta_yapistirilmis": false
+  },
+  {
+   "id": "q-2__kurul_-4",
+   "ders": "k2-44",
+   "yillar": [
+    "Geçmiş Yıllar Çıkmışı (Arşiv)"
+   ],
+   "kok": "Hangisi damgalama sürecinin bileşenlerinden biri değildir?",
+   "dogru": "Empati",
+   "kopyalar": [],
+   "birim": "psk-s15-b01",
+   "benzerlik": 0.506,
+   "kapsandi": false,
+   "notta_yapistirilmis": false
+  },
+  {
+   "id": "q-25-26_d_nem_3_kurul_2-82-cs8",
+   "ders": "k2-44",
+   "yillar": [
+    "2025-2026"
+   ],
+   "kok": "Aşağıdakilerden hangisi içselleştirilmiş damgalamayı tanımlar?",
+   "dogru": "Ruhsal hastalığı olan kişinin olumsuz kalıp yargıları benimseyerek kendisini yetersiz ve tehlikeli görmesi",
+   "kopyalar": [],
+   "birim": "psk-s15-b01",
+   "benzerlik": 0.74,
+   "kapsandi": true,
+   "notta_yapistirilmis": false
+  }
+ ]
+}

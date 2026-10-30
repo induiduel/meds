@@ -1,0 +1,531 @@
+{
+ "ders": "k2-01",
+ "kod": "2n01",
+ "brans": "Nöroloji",
+ "konu": "Nörolojik Hastaya Yaklaşım",
+ "kaynak": "Geçmiş yıl (2025-26) öğrenci derleme notu: noro3.2",
+ "y25": {
+  "key": "y25-k2-01-norolojik-hastaya-yaklasim",
+  "sayfalar": [
+   3,
+   4,
+   5,
+   6,
+   7
+  ]
+ },
+ "sayac": {
+  "birim": 5,
+  "A": 4,
+  "B": 0,
+  "C": 1,
+  "ogrenci_sorusu": 3,
+  "banka": 7,
+  "banka_kapsandi": 4
+ },
+ "birimler": [
+  {
+   "id": "noro-s07-b03",
+   "pdf": "noro",
+   "sayfa": 7,
+   "bolge": "r1c1+r2c1",
+   "tur": "slayt",
+   "baslik": "Nörolojik muayene: gözlemle tanınan tablolar",
+   "metin": "Nörolojik Muayene\nHemiplejik kolun gövdeye yapışık olması, yürürken bacağını oraklaması\nParkinson H. maske yüz, monoton konuşma, salya akması, yürürken kollarını sallamaması, vücudun fleksör postürü\nKas distrofisinde karın önde «badi-badi» yürüyüşü ördeğe",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "yesil",
+     "hedef": "üç satırın tamamı"
+    },
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "Hemiplejik kolun gövdeye yapışık olması, yürürken bacağını oraklaması; Parkinson H.; maske yüz; monoton konuşma; salya akması; yürürken kollarını sallamaması; vücudun fleksör postürü; Kas distrofisinde karın önde «badi-badi» yürüyüşü ördeğe"
+    },
+    {
+     "tur": "yildiz",
+     "hedef": "Parkinson H. satırı (parantez + iki yıldız **)"
+    }
+   ],
+   "sinyal": [
+    "cikmis",
+    "sari",
+    "yildiz"
+   ],
+   "y25": {
+    "key": "y25-k2-01-norolojik-hastaya-yaklasim",
+    "sayfa": 5
+   },
+   "y26": {
+    "key": "k2-01",
+    "sayfa": 5
+   },
+   "duzeltme": [],
+   "not_": null,
+   "ogrenci_sorulari": [
+    "noro-s07-b08"
+   ],
+   "banka_cikmis": [
+    "804e82ac79db"
+   ],
+   "puan": 95,
+   "oncelik": "A",
+   "vurgulu": [
+    "Hemiplejik kolun gövdeye yapışık olması, yürürken bacağını oraklaması; Parkinson H.; maske yüz; monoton konuşma; salya akması; yürürken kollarını sallamaması; vücudun fleksör postürü; Kas distrofisinde karın önde «badi-badi» yürüyüşü ördeğe",
+    "Parkinson H. satırı (parantez + iki yıldız **)",
+    "üç satırın tamamı"
+   ]
+  },
+  {
+   "id": "noro-s07-b01",
+   "pdf": "noro",
+   "sayfa": 7,
+   "bolge": "r1c1",
+   "tur": "slayt",
+   "baslik": "Hastalığın başlangıç şekli ve gidişi",
+   "metin": "Akut başlangıç. Dakika veya saat içinde. Örneğin hemipleji.\nBazı hastalıklar sinsi başlar. Haftalar, aylar, yıllar içinde yerleşir. Beyin tümörü, dejeneratif hastalıklar gibi\nDalgalı gidiş. Kötüleşme ve iyileşme dönemleri vardır. Relapsing-remitting MS\nHastalığın doğal gidişi tanı yönünden olduğu kadar tedavi sonuçlarının değerlendirilmesi bakımından da önemlidir",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "yesil",
+     "hedef": "Akut başlangıç. Dakika veya saat içinde. Örneğin hemipleji; sinsi başlar; Beyin tümörü, dejeneratif hastalıklar; Dalgalı gidiş. Kötüleşme ve iyileşme dönemleri vardır. Relapsing-remitting MS"
+    },
+    {
+     "tur": "daire",
+     "hedef": "Akut başlangıç"
+    },
+    {
+     "tur": "daire",
+     "hedef": "hemipleji"
+    },
+    {
+     "tur": "daire",
+     "hedef": "Dalgalı gidiş"
+    },
+    {
+     "tur": "daire",
+     "hedef": "Relapsing-remitting MS"
+    }
+   ],
+   "sinyal": [
+    "cikmis",
+    "daire",
+    "sari"
+   ],
+   "y25": {
+    "key": "y25-k2-01-norolojik-hastaya-yaklasim",
+    "sayfa": 3
+   },
+   "y26": {
+    "key": "k2-01",
+    "sayfa": 3
+   },
+   "duzeltme": [],
+   "not_": null,
+   "ogrenci_sorulari": [
+    "noro-s07-b07"
+   ],
+   "banka_cikmis": [
+    "4ba07c308e35",
+    "q-2__kurul_-1"
+   ],
+   "puan": 90,
+   "oncelik": "A",
+   "vurgulu": [
+    "Akut başlangıç",
+    "Akut başlangıç. Dakika veya saat içinde. Örneğin hemipleji; sinsi başlar; Beyin tümörü, dejeneratif hastalıklar; Dalgalı gidiş. Kötüleşme ve iyileşme dönemleri vardır. Relapsing-remitting MS",
+    "Dalgalı gidiş",
+    "Relapsing-remitting MS",
+    "hemipleji"
+   ]
+  },
+  {
+   "id": "noro-s07-b02",
+   "pdf": "noro",
+   "sayfa": 7,
+   "bolge": "r1c1",
+   "tur": "slayt",
+   "baslik": "Tanısı öyküye dayanan nörolojik hastalıklar",
+   "metin": "Tanısı Öyküye Dayanan Nörolojik Hastalıklar\nMigren\nTrigeminal nevralji\nNörolojik belirti, lab. bulgusu yoktur\nBT, MR tanının doğru olduğunu göstermek için çekilir\n• Epilepsi de klinik tanıdır. EEG normal olması tanıdan uzaklaştırmaz",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "yesil",
+     "hedef": "Migren; Trigeminal nevralji; Epilepsi de klinik tanıdır. EEG normal olması tanıdan uzaklaştırmaz"
+    },
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "Epilepsi de klinik tanıdır. EEG normal olması tanıdan uzaklaştırmaz"
+    }
+   ],
+   "sinyal": [
+    "cikmis",
+    "sari"
+   ],
+   "y25": {
+    "key": "y25-k2-01-norolojik-hastaya-yaklasim",
+    "sayfa": 4
+   },
+   "y26": {
+    "key": "k2-01",
+    "sayfa": 4
+   },
+   "duzeltme": [],
+   "not_": null,
+   "ogrenci_sorulari": [
+    "noro-s07-b06"
+   ],
+   "banka_cikmis": [
+    "4c4eb178b88b"
+   ],
+   "puan": 80,
+   "oncelik": "A",
+   "vurgulu": [
+    "Epilepsi de klinik tanıdır. EEG normal olması tanıdan uzaklaştırmaz",
+    "Migren; Trigeminal nevralji; Epilepsi de klinik tanıdır. EEG normal olması tanıdan uzaklaştırmaz"
+   ]
+  },
+  {
+   "id": "noro-s07-b05",
+   "pdf": "noro",
+   "sayfa": 7,
+   "bolge": "r1c2+r1c3",
+   "tur": "slayt",
+   "baslik": "Lezyonun natürü",
+   "metin": "Lezyonun Natürü\nHemipleji → HT+DM ilk sırada damarsal etyoloji → yavaş yerleşmişse, giderek ağırlaşıyorsa YKL → malignite öyküsü + metastaz\nBeyin sapı lokalizasyonu → genç hasta, kısa zamanda gelişmiş, öyküsünde sinir sisteminin farklı bölgelerinin etkilendiği epizodlar geçirip düzelmişse → MS\n↓ Yaşlı hasta+ ateroskleroz → SVO\nParapleji → sinsi başlangıç, ilerleyici seyir → medulla spinalis basısı; aşı ya da viral enf + → post-infeksiyöz miyelit",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "ok",
+     "hedef": "slayttaki oklar (basılı)"
+    }
+   ],
+   "sinyal": [
+    "cikmis"
+   ],
+   "y25": {
+    "key": "y25-k2-01-norolojik-hastaya-yaklasim",
+    "sayfa": 7
+   },
+   "y26": {
+    "key": "k2-01",
+    "sayfa": 7
+   },
+   "duzeltme": [],
+   "not_": null,
+   "puan": 40,
+   "oncelik": "A",
+   "vurgulu": []
+  },
+  {
+   "id": "noro-s07-b04",
+   "pdf": "noro",
+   "sayfa": 7,
+   "bolge": "r2c1+r2c2",
+   "tur": "slayt",
+   "baslik": "Nörolojik lokalizasyon",
+   "metin": "Nörolojik Lokalizasyon\n1. Afazi+ sağ hemipleji → piramidal yolu+ konuşma alanı. Sol hemisferde lezyon\n2. Diplopi+ vertigo+ piramidal bulgu+serebellar bulgu → lezyon beyin sapında\n3. Parapleji+ gövdede seviye veren duyu kaybı+ sfinkter boz. → Medulla spinalis\n4. Bel ve bacak arkasına vuran ağrı+ aşil refleksi alınamıyorsa → 1. sakral radiks",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "yesil",
+     "hedef": "dört lokalizasyon satırının tamamı"
+    }
+   ],
+   "sinyal": [
+    "sari"
+   ],
+   "y25": {
+    "key": "y25-k2-01-norolojik-hastaya-yaklasim",
+    "sayfa": 6
+   },
+   "y26": {
+    "key": "k2-01",
+    "sayfa": 6
+   },
+   "duzeltme": [],
+   "not_": null,
+   "puan": 10,
+   "oncelik": "C",
+   "vurgulu": [
+    "dört lokalizasyon satırının tamamı"
+   ]
+  }
+ ],
+ "ogrenci_sorulari": [
+  {
+   "id": "noro-s07-b06",
+   "pdf": "noro",
+   "sayfa": 7,
+   "bolge": "r2c3",
+   "tur": "cikmis_soru",
+   "baslik": "Farklı bölgeleri etkileyen, düzelen epizodlar: MS",
+   "metin": "Öyküsünde sinir sisteminin farklı bölgelerinin etkilendiği epizodlar geçirip düzeldiği anlaşılan hastada olası tanınız nedir?",
+   "el_yazisi": [
+    {
+     "metin": "→ MS",
+     "hedef": "soru (cevap)",
+     "guven": "yuksek",
+     "alternatif": ""
+    }
+   ],
+   "isaretler": [
+    {
+     "tur": "pembe",
+     "hedef": "soru kökü"
+    },
+    {
+     "tur": "daire",
+     "hedef": "→ MS"
+    }
+   ],
+   "sinyal": [
+    "cikmis",
+    "el_cikmis"
+   ],
+   "y25": {
+    "key": "y25-k2-01-norolojik-hastaya-yaklasim",
+    "sayfa": 7
+   },
+   "y26": {
+    "key": "k2-01",
+    "sayfa": 7
+   },
+   "duzeltme": [],
+   "not_": null,
+   "cikmis": {
+    "kok": "Öyküsünde sinir sisteminin farklı bölgelerinin etkilendiği, zaman içinde atak ve düzelmelerle seyreden epizodlar geçirdiği anlaşılan hastada olası tanı nedir?",
+    "siklar": [
+     "A) Serebrovasküler hastalık",
+     "B) Guillain-Barré sendromu",
+     "C) Multipl skleroz (MS)",
+     "D) Parkinson hastalığı",
+     "E) Myasthenia gravis"
+    ],
+    "ogrenci_cevap": "MS",
+    "banka_id": "4ba07c308e35",
+    "banka_yil": "2020-2021",
+    "banka_dogru": "C",
+    "tutarli": true,
+    "not": "Sayfada şık yok, öğrenci cevabı el yazısıyla. Benzer ikinci kayıt: 4c4eb178b88b (2020-2021, doğru D=MS, şıklarda 'Kafa içi yer kaplayan lezyon')."
+   },
+   "bagli_birim": "noro-s07-b02",
+   "benzerlik": 0.635
+  },
+  {
+   "id": "noro-s07-b07",
+   "pdf": "noro",
+   "sayfa": 7,
+   "bolge": "r2c3",
+   "tur": "cikmis_soru",
+   "baslik": "Akut nörolojik hastalık örneği: hemipleji",
+   "metin": "1) Akut nörolojik hastalıklardan biri? -Hemipleji",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "pembe",
+     "hedef": "soru-cevap satırı"
+    },
+    {
+     "tur": "daire",
+     "hedef": "-Hemipleji"
+    },
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "Akut"
+    }
+   ],
+   "sinyal": [
+    "cikmis"
+   ],
+   "y25": {
+    "key": "y25-k2-01-norolojik-hastaya-yaklasim",
+    "sayfa": 3
+   },
+   "y26": {
+    "key": "k2-01",
+    "sayfa": 3
+   },
+   "duzeltme": [],
+   "not_": null,
+   "cikmis": {
+    "kok": "Nörolojik hastalıkların başlangıç şekli değerlendirildiğinde, aşağıdakilerden hangisi tipik olarak akut başlangıçlı (dakikalar-saatler içinde yerleşen) bir tablodur?",
+    "siklar": [
+     "A) Beyin tümörü",
+     "B) Alzheimer hastalığı",
+     "C) Hemipleji",
+     "D) Parkinson hastalığı",
+     "E) Amiyotrofik lateral skleroz"
+    ],
+    "ogrenci_cevap": "Hemipleji",
+    "banka_id": "q-2__kurul_-1",
+    "banka_yil": "Geçmiş Yıllar Çıkmışı (Arşiv)",
+    "banka_dogru": "C",
+    "tutarli": true,
+    "not": "Banka kaydı isPastExam işaretsiz (doğrudan JSON aramasıyla bulundu); kök bankada yeniden yazılmış biçimde. Slayt s03: 'Akut başlangıç ... Örneğin hemipleji'."
+   },
+   "bagli_birim": "noro-s07-b01",
+   "benzerlik": 0.724
+  },
+  {
+   "id": "noro-s07-b08",
+   "pdf": "noro",
+   "sayfa": 7,
+   "bolge": "r2c3",
+   "tur": "cikmis_soru",
+   "baslik": "Yavaş yürüme, kol sallamama, maske yüz, monoton konuşma: Parkinson",
+   "metin": "Hastanın muayene odasına girerken yürümesinin yavaş olması, yürürken kollarını sallamaması, maske yüz olması, monoton konuşması hangi nörolojik hastalığı düşündürür?\n1 MS / 2 Primer başağrısı / 3 Polinöropati / 4 Parkinson hastalığı / 5 Epilepsi",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "pembe",
+     "hedef": "soru kökü"
+    },
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "yavaş; yürürken kollarını sallamaması; maske yüz"
+    },
+    {
+     "tur": "daire",
+     "hedef": "4 Parkinson hastalığı"
+    }
+   ],
+   "sinyal": [
+    "cikmis",
+    "daire",
+    "tekrar"
+   ],
+   "y25": {
+    "key": "y25-k2-01-norolojik-hastaya-yaklasim",
+    "sayfa": 5
+   },
+   "y26": {
+    "key": "k2-01",
+    "sayfa": 5
+   },
+   "duzeltme": [],
+   "not_": null,
+   "cikmis": {
+    "kok": "Hastanın muayene odasına girerken yürümesinin yavaş olması, yürürken kollarını sallamaması, maske yüz ve monoton konuşması hangi nörolojik hastalığı düşündürür?",
+    "siklar": [
+     "A) Multipl skleroz (MS)",
+     "B) Primer baş ağrısı",
+     "C) Polinöropati",
+     "D) Parkinson hastalığı",
+     "E) Epilepsi"
+    ],
+    "ogrenci_cevap": "4) Parkinson hastalığı",
+    "banka_id": "804e82ac79db",
+    "banka_yil": "2020-2021",
+    "banka_dogru": "D",
+    "tutarli": true,
+    "not": "İkinci kopya: 5e72fc758888 (2020-2021, doğru D)."
+   },
+   "bagli_birim": "noro-s07-b03",
+   "benzerlik": 0.737
+  }
+ ],
+ "banka": [
+  {
+   "id": "804e82ac79db",
+   "ders": "k2-01",
+   "yillar": [
+    "2020-2021",
+    "2020-2021"
+   ],
+   "kok": "Hastanın muayene odasına girerken yürümesinin yavaş olması, yürürken kollarını sallamaması, maske yüz ve monoton konuşması hangi nörolojik hastalığı düşündürür?",
+   "dogru": "Parkinson hastalığı",
+   "kopyalar": [
+    "5e72fc758888"
+   ],
+   "birim": "noro-s07-b03",
+   "benzerlik": 0.737,
+   "kapsandi": true,
+   "notta_yapistirilmis": true
+  },
+  {
+   "id": "4c4eb178b88b",
+   "ders": "k2-01",
+   "yillar": [
+    "2020-2021"
+   ],
+   "kok": "Nörolojik öyküsünde sinir sisteminin farklı bölgelerinin etkilendiği, zamanla düzelen ve tekrarlayan epizodlar geçirdiği anlaşılan bir hastada en olası tanı aşağıdakilerden hangisidir?",
+   "dogru": "Multipl skleroz (MS)",
+   "kopyalar": [],
+   "birim": "noro-s07-b02",
+   "benzerlik": 0.666,
+   "kapsandi": true,
+   "notta_yapistirilmis": false
+  },
+  {
+   "id": "4ba07c308e35",
+   "ders": "k2-01",
+   "yillar": [
+    "2020-2021"
+   ],
+   "kok": "Öyküsünde sinir sisteminin farklı bölgelerinin etkilendiği, zaman içinde atak ve düzelmelerle seyreden epizodlar geçirdiği anlaşılan hastada olası tanı nedir?",
+   "dogru": "Multipl skleroz (MS)",
+   "kopyalar": [],
+   "birim": "noro-s07-b01",
+   "benzerlik": 0.659,
+   "kapsandi": true,
+   "notta_yapistirilmis": true
+  },
+  {
+   "id": "d5112fdf89eb",
+   "ders": "k2-01",
+   "yillar": [
+    "2020-2021"
+   ],
+   "kok": "Aşağıdaki lokalizasyonların hangisinde saf duyusal inme (pure sensory stroke) tablosuna neden olan bir lezyon görülemez?",
+   "dogru": "Servikal spinal kord",
+   "kopyalar": [],
+   "birim": "noro-s07-b04",
+   "benzerlik": 0.508,
+   "kapsandi": false,
+   "notta_yapistirilmis": false
+  },
+  {
+   "id": "past-q-KURUL_2_C_IKMIS__3-65",
+   "ders": "k2-01",
+   "yillar": [
+    "Geçmiş Yıllar Çıkmışı (Arşiv)"
+   ],
+   "kok": "Aşağıdaki durumlardan hangisinin olması lomber ponksiyon için kontrendikasyon oluşturmaz?",
+   "dogru": "Yüksek ateş olması",
+   "kopyalar": [],
+   "birim": "noro-s07-b02",
+   "benzerlik": 0.43,
+   "kapsandi": false,
+   "notta_yapistirilmis": false
+  },
+  {
+   "id": "q-2__kurul_-1",
+   "ders": "k2-01",
+   "yillar": [
+    "Geçmiş Yıllar Çıkmışı (Arşiv)"
+   ],
+   "kok": "Nörolojik hastalıkların başlangıç şekli değerlendirildiğinde, aşağıdakilerden hangisi tipik olarak akut başlangıçlı (dakikalar-saatler içinde yerleşen) bir tablodur?",
+   "dogru": "Hemipleji",
+   "kopyalar": [],
+   "birim": "noro-s07-b01",
+   "benzerlik": 0.729,
+   "kapsandi": true,
+   "notta_yapistirilmis": true
+  },
+  {
+   "id": "past-1790877491342-886075",
+   "ders": "k2-01",
+   "yillar": [
+    "2020-2021"
+   ],
+   "kok": "Korkusuz, sakin, hiperseksüel ve her şeyi yalayıp ağzına almaya çalışan bir kişide sinir sisteminin hangi bölgesinde lezyon vardır?",
+   "dogru": "Bilateral amigdal nükleus",
+   "kopyalar": [],
+   "birim": "noro-s07-b05",
+   "benzerlik": 0.53,
+   "kapsandi": false,
+   "notta_yapistirilmis": false
+  }
+ ]
+}

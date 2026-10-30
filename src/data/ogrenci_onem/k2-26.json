@@ -1,0 +1,797 @@
+{
+ "ders": "k2-26",
+ "kod": "2g02",
+ "brans": "Tıbbi Genetik",
+ "konu": "Nörolojik Hastalıklar",
+ "kaynak": "Geçmiş yıl (2025-26) öğrenci derleme notu: tbg3.2",
+ "y25": {
+  "key": "y25-k2-26-norolojik-hastaliklar-genetigi",
+  "sayfalar": [
+   4,
+   22,
+   25,
+   28,
+   39,
+   56,
+   59,
+   60,
+   76,
+   77,
+   88,
+   92,
+   95
+  ]
+ },
+ "sayac": {
+  "birim": 13,
+  "A": 4,
+  "B": 0,
+  "C": 9,
+  "ogrenci_sorusu": 2,
+  "banka": 15,
+  "banka_kapsandi": 4
+ },
+ "birimler": [
+  {
+   "id": "tbg-s02-b05",
+   "pdf": "tbg",
+   "sayfa": 2,
+   "bolge": "r1c2",
+   "tur": "slayt",
+   "baslik": "Spinoserebellar Ataksiler (SCA)",
+   "metin": "Spinoserebellar Ataksiler (SCA)\nSCA tip 8'de CTG tekrar artışı söz konusu,\nEn sık gözlenen tipleri;\nSCA tip 1,2,3,6,7 ve 10,",
+   "el_yazisi": [
+    {
+     "metin": "CAG tekrarı",
+     "hedef": "SCA tip 1,2,3,6,7 (altında kırmızı süslü parantez)",
+     "guven": "yuksek",
+     "alternatif": ""
+    },
+    {
+     "metin": "ATXN 10",
+     "hedef": "SCA tip 10",
+     "guven": "yuksek",
+     "alternatif": ""
+    }
+   ],
+   "isaretler": [
+    {
+     "tur": "yesil",
+     "hedef": "SCA tip 8'de CTG tekrar artışı söz konusu"
+    },
+    {
+     "tur": "yesil",
+     "hedef": "SCA tip 1,2,3,6,7 ve 10"
+    },
+    {
+     "tur": "daire",
+     "hedef": "10 (kırmızı daire, diğerlerinden kavisle ayrılmış)"
+    },
+    {
+     "tur": "ok",
+     "hedef": "10 → ATXN10"
+    }
+   ],
+   "sinyal": [
+    "cikmis",
+    "el_onemli",
+    "yesil"
+   ],
+   "y25": {
+    "key": "y25-k2-26-norolojik-hastaliklar-genetigi",
+    "sayfa": 28
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": "El notu tıbben doğru: SCA1,2,3,6,7 CAG (poliglutamin) tekrarı; SCA10 ATXN10 geninde ATTCT beşli tekrar artışı olduğundan CAG grubundan ayrı tutulmuş. Bu slaytın CTG satırı aynı sayfadaki çıkmışın konusu.",
+   "ogrenci_sorulari": [
+    "tbg-s02-b04"
+   ],
+   "banka_cikmis": [
+    "q-No_ropsikiyatri_gis_kardiyo_-2023-2024-C__km_s_lar__240625_053302__2_-13"
+   ],
+   "puan": 88,
+   "oncelik": "A",
+   "vurgulu": [
+    "10 (kırmızı daire, diğerlerinden kavisle ayrılmış)",
+    "SCA tip 1,2,3,6,7 ve 10",
+    "SCA tip 8'de CTG tekrar artışı söz konusu"
+   ]
+  },
+  {
+   "id": "tbg-s02-b14",
+   "pdf": "tbg",
+   "sayfa": 2,
+   "bolge": "r2c3",
+   "tur": "slayt",
+   "baslik": "Nonsendromik İşitme Kayıpları (OD, OR GJB2, X'e bağlı)",
+   "metin": "OD nonsendromik işitme bozuklukları;\nOR nonsendromik işitme bozuklukları,\n13q11-12 lokalize, GJB2/Cx26 geni mutasyonları,\nX'e bağlı nonsendromik işitme bozuklukları,",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "daire",
+     "hedef": "GJB2/Cx26 geni mutasyonları (kırmızı oval)"
+    }
+   ],
+   "sinyal": [
+    "cikmis",
+    "daire"
+   ],
+   "y25": {
+    "key": "y25-k2-26-norolojik-hastaliklar-genetigi",
+    "sayfa": 92
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": "OD satırı y25 s91, X'e bağlı satır s93.",
+   "banka_cikmis": [
+    "d3-k2-tbg-003",
+    "q-No_ropsikiyatri_gis_kardiyo_-2023-2024-C__km_s_lar__240625_053302__2_-18"
+   ],
+   "puan": 80,
+   "oncelik": "A",
+   "vurgulu": [
+    "GJB2/Cx26 geni mutasyonları (kırmızı oval)"
+   ]
+  },
+  {
+   "id": "tbg-s02-b10",
+   "pdf": "tbg",
+   "sayfa": 2,
+   "bolge": "r1c3",
+   "tur": "slayt",
+   "baslik": "Sendromik İşitme Kayıpları – en sık görülenler",
+   "metin": "Waardenburg, Usher, Pendred ve Alport sendromları [en sık görülenler]",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "yesil",
+     "hedef": "Wardenburg, Usher, Pendred, Alport (her ad ayrı yeşil)"
+    }
+   ],
+   "sinyal": [
+    "cikmis",
+    "yesil"
+   ],
+   "y25": {
+    "key": "y25-k2-26-norolojik-hastaliklar-genetigi",
+    "sayfa": 76
+   },
+   "y26": null,
+   "duzeltme": [
+    {
+     "ham": "Wardenburg",
+     "dogru": "Waardenburg",
+     "gerekce": "özel ad"
+    }
+   ],
+   "not_": null,
+   "ogrenci_sorulari": [
+    "tbg-s02-b11"
+   ],
+   "puan": 50,
+   "oncelik": "A",
+   "vurgulu": [
+    "Wardenburg, Usher, Pendred, Alport (her ad ayrı yeşil)"
+   ]
+  },
+  {
+   "id": "tbg-s02-b01",
+   "pdf": "tbg",
+   "sayfa": 2,
+   "bolge": "r1c1",
+   "tur": "slayt",
+   "baslik": "1) Epilepsiler – genetik etiyoloji ve kromozom yeniden düzenlemeleri",
+   "metin": "NÖROLOJİK HASTALIKLAR VE GENETİĞİ (öğrencinin başlığı)\n1) Epilepsiler\nÖzellikle, iyon kanalları, nörotransmiterler ve nöronal proseste görev alan birçok gende mutasyon tanımlanmış,\nBeyin serebral korteksinin aşırı ve anormal eş zamanlı nöronal aktivitesi sonucunda beyin dokusundaki uyarılmış hücresel veya moleküler bozukluklar sonucu ortaya çıkan, tekrarlayan kasılma atakları,\nBazı yeniden düzenlemelerin spesifik semptomları vardır;\nRing 20 krom taşıyıcılarında, uzamış yüksek voltajlı yavaş dalga ve dirençli epilepsi görülür,\nRing 14'te de dirençli epilepsi gözlenir,\n6q del ve 22q dup hastalarda dismorfik fasiyal anomaliler, MR ve epilepsi ile ilişkili bir klinik tablo söz konusudur,",
+   "el_yazisi": [],
+   "isaretler": [],
+   "sinyal": [],
+   "y25": {
+    "key": "y25-k2-26-norolojik-hastaliklar-genetigi",
+    "sayfa": 4
+   },
+   "y26": null,
+   "duzeltme": [
+    {
+     "ham": "Ozellikle",
+     "dogru": "Özellikle",
+     "gerekce": "yazım"
+    }
+   ],
+   "not_": "Ring 20/14 ve 6q/22q satırları y25 s11'den.",
+   "banka_cikmis": [
+    "d3-k2-tbg-005"
+   ],
+   "puan": 30,
+   "oncelik": "A",
+   "vurgulu": []
+  },
+  {
+   "id": "tbg-s02-b08",
+   "pdf": "tbg",
+   "sayfa": 2,
+   "bolge": "r2c2",
+   "tur": "slayt",
+   "baslik": "Herediter Ataksilerde Genetik Tanı ve Ayırıcı Tanı",
+   "metin": "Tıbbi anemnez ve aile öyküsü alınırken;\n3 kuşak içeren pedigri çizilmeli,\nAilede benzer olgular, etnik köken sorgulanmalı,\nAkrabalık varsa ilk olarak OR ataksi tipleri akla gelmeli,\nKlinik başlangıç yaşı ve semptomlar detaylı sorgulanmalı,\nGebelik öyküsü ve perinatal hikaye alınmalı,\nGelişim ve motor basamakları detaylı sorgulanmalı,\nİşitme ve görme kayıpları araştırılmalı,\nKognitif etkilenme durumu belirlenmeli,",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "karalama",
+     "hedef": "başlığın sağında kırmızı balık/döngü biçimli çizim (sayfa 1'deki imle aynı)"
+    }
+   ],
+   "sinyal": [
+    "el_onemli"
+   ],
+   "y25": {
+    "key": "y25-k2-26-norolojik-hastaliklar-genetigi",
+    "sayfa": 59
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "puan": 8,
+   "oncelik": "C",
+   "vurgulu": []
+  },
+  {
+   "id": "tbg-s02-b03",
+   "pdf": "tbg",
+   "sayfa": 2,
+   "bolge": "r2c1",
+   "tur": "slayt",
+   "baslik": "Ataksi Sınıflandırma",
+   "metin": "1. Herediter,\n2. Non herediter,\n3. Konjenital,\n4. Sporadik ataksiler",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "dört maddenin sağında kırmızı kavisli parantez (liste bütün olarak işaretli)"
+    }
+   ],
+   "sinyal": [
+    "kirmizi_cizgi"
+   ],
+   "y25": {
+    "key": "y25-k2-26-norolojik-hastaliklar-genetigi",
+    "sayfa": 25
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "puan": 5,
+   "oncelik": "C",
+   "vurgulu": [
+    "dört maddenin sağında kırmızı kavisli parantez (liste bütün olarak işaretli)"
+   ]
+  },
+  {
+   "id": "tbg-s02-b02",
+   "pdf": "tbg",
+   "sayfa": 2,
+   "bolge": "r1c1+r2c1",
+   "tur": "slayt",
+   "baslik": "Epilepside Genetik Yaklaşım",
+   "metin": "Özellikle dismorfik yüz veya somatik dismorfizm, MR, otizm gibi komorbiditelerin olduğu sendromik epilepsi vakalarında,\nYapılacak ilk genetik test; a-CGH olmalıdır,\nBu yapılamıyorsa karyotip analizi yapılmalı,\nBu sayede mikro del ve dup saptanabilir,\nCNV kopya sayısı değişiklikleri saptanabilir,\nWES analizi aday genler tanımlanabilir,\nBu analizler sayesinde özellikle ensefalopatik epilepsilerin moleküler mekanizmaları büyük ölçüde aydınlatılmıştır,\nBeyin anomalileri veya metabolik hastalıklara sebep olan tek gen bozukluklarının bazılarında primer semptom epilepsidir.\nBunların arasında tüberoz skleroz, mukopolisakkaridoz ve lökodistrofiler sayılabilir.\nSadece epilepsiye neden olan genetik bozukluklar olduğu gibi başka semptomlar ile birlikte nöbetlerin görüldüğü galaktozemi, Tay-Sachs hastalığı ve peroksizomal bozukluklar da vardır.",
+   "el_yazisi": [],
+   "isaretler": [],
+   "sinyal": [],
+   "y25": {
+    "key": "y25-k2-26-norolojik-hastaliklar-genetigi",
+    "sayfa": 22
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": "Son üç madde y25 s23'ten.",
+   "puan": 0,
+   "oncelik": "C",
+   "vurgulu": []
+  },
+  {
+   "id": "tbg-s02-b06",
+   "pdf": "tbg",
+   "sayfa": 2,
+   "bolge": "r1c2",
+   "tur": "slayt",
+   "baslik": "OR Kalıtılan Ataksiler",
+   "metin": "OR Kalıtılan Ataksiler: Friedreich ataksi; Ataksi telenjiektazi; Spinoserebellar ataksi, OR 8; Spinoserebellar ataksi, OR 9; Marinesco-Sjögren Sendromu; Ataksi okulomotor apraksi 2; Ataksi okulomotor apraksi 1; Vitamin E eksikliği ile giden ataksi; Charlevoix-Saguenay OR Spastik Ataksisi",
+   "el_yazisi": [],
+   "isaretler": [],
+   "sinyal": [],
+   "y25": {
+    "key": "y25-k2-26-norolojik-hastaliklar-genetigi",
+    "sayfa": 39
+   },
+   "y26": null,
+   "duzeltme": [
+    {
+     "ham": "Fredreich",
+     "dogru": "Friedreich",
+     "gerekce": "özel ad"
+    },
+    {
+     "ham": "Maninesco-Sjögren",
+     "dogru": "Marinesco-Sjögren",
+     "gerekce": "özel ad"
+    },
+    {
+     "ham": "Ataksi telenjektazi",
+     "dogru": "Ataksi telenjiektazi",
+     "gerekce": "terim"
+    }
+   ],
+   "not_": null,
+   "puan": 0,
+   "oncelik": "C",
+   "vurgulu": []
+  },
+  {
+   "id": "tbg-s02-b07",
+   "pdf": "tbg",
+   "sayfa": 2,
+   "bolge": "r1c2+r2c2",
+   "tur": "slayt",
+   "baslik": "Mitokondriyal Kalıtılan Ataksiler",
+   "metin": "Düzensiz kırmızı lifli myoklonik epilepsi (MERRF (Myoclonic Epilepsy with Ragged Red Fibers)),\nNöropati, ataksi, retinitis pigmentoza (NARP),",
+   "el_yazisi": [],
+   "isaretler": [],
+   "sinyal": [],
+   "y25": {
+    "key": "y25-k2-26-norolojik-hastaliklar-genetigi",
+    "sayfa": 56
+   },
+   "y26": null,
+   "duzeltme": [
+    {
+     "ham": "MERFF",
+     "dogru": "MERRF (Myoclonic Epilepsy with Ragged Red Fibers)",
+     "gerekce": "kısaltma; aynı sayfadaki mitokondriyal işitme slaytında doğru yazılmış"
+    }
+   ],
+   "not_": null,
+   "puan": 0,
+   "oncelik": "C",
+   "vurgulu": []
+  },
+  {
+   "id": "tbg-s02-b09",
+   "pdf": "tbg",
+   "sayfa": 2,
+   "bolge": "r2c2",
+   "tur": "slayt",
+   "baslik": "3) Fakomatozlar",
+   "metin": "SSS, oküler ve kutanöz lezyonları ol[an …] (kesik)\nFakomatozis → Yunanca doğum lekesi\nİlk kez 1920'de Jan van der Hoeve t[anımlamıştır] (kesik)\n1) Nörofibromatozis, 2) Tuberosklerozis, 3) Ataksi telenjiektazi, 4) Sturge-Weber sendromu, 5) Von Hippel-Lindau sendromu, 6) İnkontinensiya pigmenti, 7) Peutz-Jeghers sendromu, 8) Gorlin sendromu",
+   "el_yazisi": [],
+   "isaretler": [],
+   "sinyal": [],
+   "y25": {
+    "key": "y25-k2-26-norolojik-hastaliklar-genetigi",
+    "sayfa": 60
+   },
+   "y26": null,
+   "duzeltme": [
+    {
+     "ham": "Incontinentia sendromu",
+     "dogru": "İnkontinensiya pigmenti",
+     "gerekce": "hastalığın tam adı incontinentia pigmenti"
+    }
+   ],
+   "not_": null,
+   "puan": 0,
+   "oncelik": "C",
+   "vurgulu": []
+  },
+  {
+   "id": "tbg-s02-b12",
+   "pdf": "tbg",
+   "sayfa": 2,
+   "bolge": "r1c3+r2c3",
+   "tur": "slayt",
+   "baslik": "OD (ve OR) Sendromik İşitme Kayıpları – liste",
+   "metin": "OD Sendromik İşitme Kayıpları\nBrankio-Oto-Renal Sendrom, BOR;\nWaardenburg Sendromu; WS\nTreacher-Collins Sendromu,\nNörofibromatozis 2; NF2,\nStickler Sendromu (David-Stickler veya Stickler-Wagner sendromu),\nCHARGE sendromu,\nPendred sendromu;\nJervell ve Lange-Nielsen sendromu; JLNS\nUsher sendromu; US,\nPerrault sendromu;",
+   "el_yazisi": [],
+   "isaretler": [],
+   "sinyal": [],
+   "y25": {
+    "key": "y25-k2-26-norolojik-hastaliklar-genetigi",
+    "sayfa": 77
+   },
+   "y26": null,
+   "duzeltme": [
+    {
+     "ham": "Pendred, Jervell-Lange-Nielsen, Usher, Perrault 'OD Sendromik' başlığı altında",
+     "dogru": "Bu dördü OR Sendromik İşitme Kayıplarıdır",
+     "gerekce": "Arşiv slaytları y25 s83-87 başlığı 'OR Sendromik İşitme Kayıpları'; öğrenci başlığı yapıştırmamış. OD olanlar: BOR, Waardenburg, Treacher-Collins, NF2, Stickler, CHARGE (y25 s77-82)."
+    },
+    {
+     "ham": "Stickler-Wanger",
+     "dogru": "Stickler-Wagner",
+     "gerekce": "özel ad"
+    }
+   ],
+   "not_": "Satırlar y25 s77-s87 başlık satırlarından derlenmiş.",
+   "puan": 0,
+   "oncelik": "C",
+   "vurgulu": []
+  },
+  {
+   "id": "tbg-s02-b13",
+   "pdf": "tbg",
+   "sayfa": 2,
+   "bolge": "r2c3",
+   "tur": "slayt",
+   "baslik": "X'e Bağlı Sendromik İşitme Kayıpları",
+   "metin": "Alport sendromu;\nNorrie Sendromu;",
+   "el_yazisi": [],
+   "isaretler": [],
+   "sinyal": [],
+   "y25": {
+    "key": "y25-k2-26-norolojik-hastaliklar-genetigi",
+    "sayfa": 88
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": "Norrie y25 s89.",
+   "puan": 0,
+   "oncelik": "C",
+   "vurgulu": []
+  },
+  {
+   "id": "tbg-s02-b15",
+   "pdf": "tbg",
+   "sayfa": 2,
+   "bolge": "r2c3",
+   "tur": "slayt",
+   "baslik": "Mitokondriyal İşitme Kayıpları",
+   "metin": "Kearns-Sayre sendromu (KSS),\nMyoklonik epilepsi, düzensiz kırmızı lifler (MERRF),\nMiyopati, epilepsi, laktik asidoz, inme (MELAS),\nMaternal kalıtılmış diabet ve sağırlık (MIDD),",
+   "el_yazisi": [],
+   "isaretler": [],
+   "sinyal": [],
+   "y25": {
+    "key": "y25-k2-26-norolojik-hastaliklar-genetigi",
+    "sayfa": 95
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "puan": 0,
+   "oncelik": "C",
+   "vurgulu": []
+  }
+ ],
+ "ogrenci_sorulari": [
+  {
+   "id": "tbg-s02-b04",
+   "pdf": "tbg",
+   "sayfa": 2,
+   "bolge": "r1c2",
+   "tur": "cikmis_soru",
+   "baslik": "Çıkmış: CTG tekrarlı SCA tipi",
+   "metin": "CTG 3'lü tekrar artışının görüldüğü SCA tipi?\nA) SCA2\nB) SCA6\nC) SCA8\nD) SCA1\nE) SCA7",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "pembe",
+     "hedef": "soru bloğu"
+    },
+    {
+     "tur": "daire",
+     "hedef": "C) SCA8 (kırmızı daire)"
+    }
+   ],
+   "sinyal": [
+    "cikmis"
+   ],
+   "y25": {
+    "key": "y25-k2-26-norolojik-hastaliklar-genetigi",
+    "sayfa": 28
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "cikmis": {
+    "kok": "CTG 3'lü tekrar artışının görüldüğü SCA tipi?",
+    "siklar": [
+     "A) SCA2",
+     "B) SCA6",
+     "C) SCA8",
+     "D) SCA1",
+     "E) SCA7"
+    ],
+    "ogrenci_cevap": "C",
+    "banka_id": "q-No_ropsikiyatri_gis_kardiyo_-2023-2024-C__km_s_lar__240625_053302__2_-13",
+    "banka_yil": "2023-2024 (Kurul 2)",
+    "banka_dogru": "C) SCA8",
+    "tutarli": true,
+    "not": "Bankadaki kayıtta isPastExam alanı boş olduğu için ara.py banka bulamadı; doğrudan pastQuestions.json taramasıyla bulundu. Tıbben doğru: SCA8 ATXN8OS'ta CTG tekrarı; SCA1/2/3/6/7 CAG (poliglutamin)."
+   },
+   "bagli_birim": "tbg-s02-b05",
+   "benzerlik": 0.751
+  },
+  {
+   "id": "tbg-s02-b11",
+   "pdf": "tbg",
+   "sayfa": 2,
+   "bolge": "r1c3",
+   "tur": "cikmis_soru",
+   "baslik": "Çıkmış: sendromik işitme kaybı olmayan",
+   "metin": "Sendromik işitme kayıplarından değildir?\nWaardenburg\nUsher\nPendred\nAlport\nGJB2",
+   "el_yazisi": [
+    {
+     "metin": "nonsendromik",
+     "hedef": "GJB2",
+     "guven": "yuksek",
+     "alternatif": ""
+    }
+   ],
+   "isaretler": [
+    {
+     "tur": "pembe",
+     "hedef": "soru bloğu"
+    },
+    {
+     "tur": "daire",
+     "hedef": "GJB2 (kırmızı daire)"
+    },
+    {
+     "tur": "ok",
+     "hedef": "GJB2 → nonsendromik"
+    }
+   ],
+   "sinyal": [
+    "cikmis",
+    "el_cikmis"
+   ],
+   "y25": {
+    "key": "y25-k2-26-norolojik-hastaliklar-genetigi",
+    "sayfa": 76
+   },
+   "y26": null,
+   "duzeltme": [
+    {
+     "ham": "Wordenburg",
+     "dogru": "Waardenburg",
+     "gerekce": "özel ad"
+    }
+   ],
+   "not_": null,
+   "cikmis": {
+    "kok": "Sendromik işitme kayıplarından değildir?",
+    "siklar": [
+     "A) Wordenburg",
+     "B) Usher",
+     "C) Pendred",
+     "D) Alport",
+     "E) GJB2"
+    ],
+    "ogrenci_cevap": "E",
+    "banka_id": "q-No_ropsikiyatri_gis_kardiyo_-2023-2024-C__km_s_lar__240625_053302__2_-18",
+    "banka_yil": "2023-2024 (Kurul 2)",
+    "banka_dogru": "E) GJB2 (konneksin 26) mutasyonuna bağlı işitme kaybı",
+    "tutarli": true,
+    "not": "Öğrenci kopyasında şık harfleri yok; sıra bankayla aynı (A Waardenburg … E GJB2). Bankadaki kayıtta isPastExam boş, ara.py bulamadı; doğrudan tarama ile bulundu."
+   },
+   "bagli_birim": "tbg-s02-b10",
+   "benzerlik": 0.704
+  }
+ ],
+ "banka": [
+  {
+   "id": "c16cd2f68ab0",
+   "ders": "k2-26",
+   "yillar": [
+    "2020-2021"
+   ],
+   "kok": "Aşağıdakilerden hangisi trinükleotid tekrar artışının yol açtığı bir iskelet kası hastalığıdır?",
+   "dogru": "Miyotonik distrofi",
+   "kopyalar": [],
+   "birim": "tbg-s02-b15",
+   "benzerlik": 0.573,
+   "kapsandi": false,
+   "notta_yapistirilmis": false
+  },
+  {
+   "id": "c626438ebbc3",
+   "ders": "k2-26",
+   "yillar": [
+    "2020-2021",
+    "2020-2021"
+   ],
+   "kok": "Distro-glikoprotein kompleksindeki hücre sinyalizasyonunun bozulmasına yol açan zamanla onarım kapasitesini aşan miyo-bril dejenerasyonları ile ortaya çıkan iskelet kası hastalığı hangisidir?",
+   "dogru": "Duchenne ve Becker musküler distro-",
+   "kopyalar": [
+    "8dd2f0beac7a"
+   ],
+   "birim": "tbg-s02-b12",
+   "benzerlik": 0.55,
+   "kapsandi": false,
+   "notta_yapistirilmis": false
+  },
+  {
+   "id": "6ae0aab3c534",
+   "ders": "k2-26",
+   "yillar": [
+    "2020-2021",
+    "2020-2021"
+   ],
+   "kok": "Distrofin-glikoprotein kompleksindeki hücre sinyalizasyonunun bozulmasına yol açan zamanla onarım kapasitesini aşan miyojenik dejenerasyonları ile ortaya çıkan iskelet kası hastalığı hangisidir?",
+   "dogru": "Duchenne ve Becker musküler distrofin",
+   "kopyalar": [
+    "447c07f50aed"
+   ],
+   "birim": "tbg-s02-b15",
+   "benzerlik": 0.546,
+   "kapsandi": false,
+   "notta_yapistirilmis": false
+  },
+  {
+   "id": "def811f06978",
+   "ders": "k2-26",
+   "yillar": [
+    "2020-2021"
+   ],
+   "kok": "Distroin-glikoprotein kompleksindeki hücre sinyalizasyonunun bozulmasına yol açan zamanla onarım kapasitesini aşan miyofil izasyonları ile ortaya çıkan iskelet kası hastalığı hangisidir?",
+   "dogru": "Duchenne ve Becker musküler distroin",
+   "kopyalar": [],
+   "birim": "tbg-s02-b15",
+   "benzerlik": 0.541,
+   "kapsandi": false,
+   "notta_yapistirilmis": false
+  },
+  {
+   "id": "d700decc9b5b",
+   "ders": "k2-26",
+   "yillar": [
+    "2020-2021"
+   ],
+   "kok": "Musküler distrofiler ile ilgili aşağıdakilerden hangisi doğrudur?",
+   "dogru": "Duchenne musküler distrofi en sık rastlanan formudur",
+   "kopyalar": [],
+   "birim": "tbg-s02-b10",
+   "benzerlik": 0.518,
+   "kapsandi": false,
+   "notta_yapistirilmis": true
+  },
+  {
+   "id": "past-q-I_SKENDERUN_TI_Mu_du_rlu_g_u_ne0__1__230709_230251-103",
+   "ders": "k2-26",
+   "yillar": [
+    "Geçmiş Yıllar Çıkmışı (Arşiv)"
+   ],
+   "kok": "Duchenne müsküler distrofi (DMD) hastalığı ile ilgili ifadelerden hangisi **yanlıştır**?",
+   "dogru": "Taşıyıcılar klinik fenotip sergilemez.",
+   "kopyalar": [],
+   "birim": "tbg-s02-b15",
+   "benzerlik": 0.464,
+   "kapsandi": false,
+   "notta_yapistirilmis": false
+  },
+  {
+   "id": "d3-k2-tbg-003",
+   "ders": "k2-26",
+   "yillar": [
+    "2021-2026"
+   ],
+   "kok": "Otozomal resesif geçiş gösteren nonsendromik konjenital sensörinöral işitme kayıplarının dünyada ve Türkiye'de en sık rastlanan moleküler nedeni olan gen mutasyonu hangisidir?",
+   "dogru": "GJB2 (Gap junction beta-2 / Konneksin 26)",
+   "kopyalar": [],
+   "birim": "tbg-s02-b14",
+   "benzerlik": 0.656,
+   "kapsandi": true,
+   "notta_yapistirilmis": false
+  },
+  {
+   "id": "d3-k2-tbg-005",
+   "ders": "k2-26",
+   "yillar": [
+    "2021-2026"
+   ],
+   "kok": "Kromozomal yeniden düzenlemelerle birlikte seyreden epilepsilerde, uzamış yüksek voltajlı yavaş dalga ve tedaviye dirençli nöbetlerle karakterize olan yapısal kromozom anomalisi aşağıdakilerden hangisidir?",
+   "dogru": "Ring (halka) kromozom 14 ve ring kromozom 20",
+   "kopyalar": [],
+   "birim": "tbg-s02-b01",
+   "benzerlik": 0.77,
+   "kapsandi": true,
+   "notta_yapistirilmis": false
+  },
+  {
+   "id": "d3-k5-pat-023",
+   "ders": "k2-26",
+   "yillar": [
+    "2021-2026"
+   ],
+   "kok": "X'e bağlı resesif kalıtılan, çocukluk çağında Gowers belirtisi ve psödohipertrofi ile başlayan ilerleyici kas güçsüzlüğü tablosunda, sarkolemmanın hücre içi aktin iskeleti ile hücre dışı laminin matriksi arasındaki mekan",
+   "dogru": "Distrofin (dystrophin)",
+   "kopyalar": [],
+   "birim": "tbg-s02-b01",
+   "benzerlik": 0.536,
+   "kapsandi": false,
+   "notta_yapistirilmis": false
+  },
+  {
+   "id": "past-1790877040082-187454",
+   "ders": "k2-26",
+   "yillar": [
+    "2020-2021"
+   ],
+   "kok": "Spinal müsküler atrofi (SMA) tedavisinde kullanılan ve ülkemizde Sağlık Bakanlığı tarafından geri ödemesi yapılan ilaç hangisidir?",
+   "dogru": "Spinraza (nusinersen)",
+   "kopyalar": [],
+   "birim": "tbg-s02-b05",
+   "benzerlik": 0.442,
+   "kapsandi": false,
+   "notta_yapistirilmis": false
+  },
+  {
+   "id": "past-1790877040110-917236",
+   "ders": "k2-26",
+   "yillar": [
+    "2020-2021"
+   ],
+   "kok": "Sıklıkla yeni mutasyonlar sonucu ortaya çıkan, allelik heterojenite ve fenotipik değişkenlik gösteren ve taşıyıcılarda da fenotipik bulgu veren kas distrofisi hastalık grubu hangisidir?",
+   "dogru": "Duchenne müsküler distrofi (DMD)",
+   "kopyalar": [],
+   "birim": "tbg-s02-b09",
+   "benzerlik": 0.512,
+   "kapsandi": false,
+   "notta_yapistirilmis": false
+  },
+  {
+   "id": "past-1790877040118-827574",
+   "ders": "k2-26",
+   "yillar": [
+    "2020-2021"
+   ],
+   "kok": "Spinal müsküler atrofi (SMA) hastalığının patogenezinde rol oynayan ve hastalığın tanısında ve tipinin belirlenmesinde kullanılan genetik biyobelirteçler hangisinde doğru verilmiştir?",
+   "dogru": "SMN1 ekzon 7 ve 8 delesyon ve duplikasyonları, SMN2 ekzon 7 ve 8 delesyon ve duplikasyonları",
+   "kopyalar": [],
+   "birim": "tbg-s02-b05",
+   "benzerlik": 0.534,
+   "kapsandi": false,
+   "notta_yapistirilmis": false
+  },
+  {
+   "id": "past-1790877041988-964226",
+   "ders": "k2-26",
+   "yillar": [
+    "2020-2021"
+   ],
+   "kok": "Spinal müsküler atrofi (SMA) hastalığı için aşağıdakilerden hangisi doğrudur?",
+   "dogru": "Tarama için öncelikle erkek eşten/eş adayından örnek alınır; erkek eşin/eş adayının sonucunda şüpheli pozitiflik yoksa ç",
+   "kopyalar": [],
+   "birim": "tbg-s02-b08",
+   "benzerlik": 0.561,
+   "kapsandi": false,
+   "notta_yapistirilmis": false
+  },
+  {
+   "id": "q-No_ropsikiyatri_gis_kardiyo_-2023-2024-C__km_s_lar__240625_053302__2_-13",
+   "ders": "k2-26",
+   "yillar": [
+    "2023"
+   ],
+   "kok": "CTG üçlü tekrar artışının görüldüğü spinoserebellar ataksi (SCA) tipi aşağıdakilerden hangisidir?",
+   "dogru": "SCA8",
+   "kopyalar": [],
+   "birim": "tbg-s02-b05",
+   "benzerlik": 0.829,
+   "kapsandi": true,
+   "notta_yapistirilmis": true
+  },
+  {
+   "id": "q-No_ropsikiyatri_gis_kardiyo_-2023-2024-C__km_s_lar__240625_053302__2_-18",
+   "ders": "k2-26",
+   "yillar": [
+    "2023"
+   ],
+   "kok": "Aşağıdakilerden hangisi sendromik işitme kayıplarından değildir?",
+   "dogru": "GJB2 (konneksin 26) mutasyonuna bağlı işitme kaybı",
+   "kopyalar": [],
+   "birim": "tbg-s02-b14",
+   "benzerlik": 0.768,
+   "kapsandi": true,
+   "notta_yapistirilmis": true
+  }
+ ]
+}

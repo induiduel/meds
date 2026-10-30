@@ -1,0 +1,683 @@
+{
+ "ders": "k2-53",
+ "kod": "2g04",
+ "brans": "Tıbbi Genetik",
+ "konu": "Nörodejeneratif Hastalıklar Genetiği",
+ "kaynak": "Geçmiş yıl (2025-26) öğrenci derleme notu: tbg3.2",
+ "y25": {
+  "key": "y25-k2-53-norodejeneratif-hastaliklar-genetigi",
+  "sayfalar": [
+   4,
+   9,
+   10,
+   14,
+   18,
+   21,
+   22,
+   28,
+   35,
+   36,
+   46,
+   54,
+   62,
+   77,
+   83
+  ]
+ },
+ "sayac": {
+  "birim": 15,
+  "A": 5,
+  "B": 0,
+  "C": 10,
+  "ogrenci_sorusu": 2,
+  "banka": 5,
+  "banka_kapsandi": 2
+ },
+ "birimler": [
+  {
+   "id": "tbg-s04-b05",
+   "pdf": "tbg",
+   "sayfa": 4,
+   "bolge": "r2c1",
+   "tur": "slayt",
+   "baslik": "Amiyotrofik lateral skleroz (ALS)",
+   "metin": "Beyin ve omurilikteki sinir hücrelerini etkileyen ve istemli kas hareketinin kontrolünün kaybına neden olan ilerleyici bir nörodejeneratif hastalıktır.\nMotor nöronlarda dejenerasyon ve ölüm ile karakterize olup, kortikal motor hücreler (piramidal ve Betz hücreleri), kortikospinal trakt ve ön boynuz hücrelerinde belirgin aksonal kayıp görülür.",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "her iki maddenin solunda kırmızı parantez"
+    }
+   ],
+   "sinyal": [
+    "cikmis",
+    "kirmizi_cizgi"
+   ],
+   "y25": {
+    "key": "y25-k2-53-norodejeneratif-hastaliklar-genetigi",
+    "sayfa": 28
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": "Aynı sayfadaki ALS çıkmışının kökü bu slaytın ikinci maddesinden ('motor nöronlarda dejenerasyon ve ölüm').",
+   "ogrenci_sorulari": [
+    "tbg-s04-b17"
+   ],
+   "puan": 45,
+   "oncelik": "A",
+   "vurgulu": [
+    "her iki maddenin solunda kırmızı parantez"
+   ]
+  },
+  {
+   "id": "tbg-s04-b06",
+   "pdf": "tbg",
+   "sayfa": 4,
+   "bolge": "r2c1",
+   "tur": "slayt",
+   "baslik": "Multiple Skleroz (MS)",
+   "metin": "Multipl Skleroz (MS), genelde genç erişkinlerde SSS etkileyen, kronik, otoimmün ve demiyelinizan bir hastalıktır.",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "karalama",
+     "hedef": "başlığın solunda kırmızı ✗/∝ imi"
+    },
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "tanım maddesinin solunda kırmızı parantez"
+    }
+   ],
+   "sinyal": [
+    "cikmis",
+    "kirmizi_cizgi"
+   ],
+   "y25": {
+    "key": "y25-k2-53-norodejeneratif-hastaliklar-genetigi",
+    "sayfa": 36
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": "Sayfadaki pembe önerme 'ALS otoimmün ve demiyelinizandır' bu tanımla çeldirici kuruyor (otoimmün-demiyelinizan olan MS'tir).",
+   "puan": 45,
+   "oncelik": "A",
+   "vurgulu": [
+    "tanım maddesinin solunda kırmızı parantez"
+   ]
+  },
+  {
+   "id": "tbg-s04-b02",
+   "pdf": "tbg",
+   "sayfa": 4,
+   "bolge": "r1c1+r2c1",
+   "tur": "slayt",
+   "baslik": "En Sık Gözlenen Nörodejeneratif Hastalıklar",
+   "metin": "Alzheimer hastalığı (AH) ve diğer demanslar\nParkinson hastalığı (PH) ve PH ile ilişkili bozukluklar\nAmiyotrofik lateral skleroz (ALS)\nHuntington hastalığı (HH)\nMultiple Skleroz (MS)\nPrion hastalığı\nSpinoserebellar ataksi (SCA)\nSpinal müsküler atrofi (SMA)",
+   "el_yazisi": [],
+   "isaretler": [],
+   "sinyal": [
+    "cikmis"
+   ],
+   "y25": {
+    "key": "y25-k2-53-norodejeneratif-hastaliklar-genetigi",
+    "sayfa": 10
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "ogrenci_sorulari": [
+    "tbg-s04-b16"
+   ],
+   "puan": 40,
+   "oncelik": "A",
+   "vurgulu": []
+  },
+  {
+   "id": "tbg-s04-b07",
+   "pdf": "tbg",
+   "sayfa": 4,
+   "bolge": "r1c2",
+   "tur": "slayt",
+   "baslik": "Alzheimer Genetik Faktörler",
+   "metin": "APOE4, AH için başlıca genetik risk faktörüdür.\nAPP, PSEN1 ve PSEN2 mutasyonları erken başlangıçlı OD AH ile ilişkili,",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "daire",
+     "hedef": "APOE4, AH (kırmızı yayla çevrelenmiş/altı çizili)"
+    },
+    {
+     "tur": "karalama",
+     "hedef": "'ile ilişkili' sonrasında ve altındaki 'Alzheimer' yazısının yanında iki kırmızı ∝ döngüsü"
+    }
+   ],
+   "sinyal": [
+    "daire"
+   ],
+   "y25": {
+    "key": "y25-k2-53-norodejeneratif-hastaliklar-genetigi",
+    "sayfa": 14
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "banka_cikmis": [
+    "d3-k2-tbg-002"
+   ],
+   "puan": 35,
+   "oncelik": "A",
+   "vurgulu": [
+    "APOE4, AH (kırmızı yayla çevrelenmiş/altı çizili)"
+   ]
+  },
+  {
+   "id": "tbg-s04-b01",
+   "pdf": "tbg",
+   "sayfa": 4,
+   "bolge": "r1c1",
+   "tur": "slayt",
+   "baslik": "Nörodejenerasyon mekanizması: oksidatif hasar, CAG tekrarı, protein birikimi",
+   "metin": "NÖRODEJENERATİF HASTALIKLAR VE GENETİĞİ (öğrencinin başlığı)\nBu hastalıklarda, MSS makromoleküllerde artmış oksidatif hasar ile ilgili bulgular gözlemlenmiştir.\nReaktif oksijen türleri (ROS), MSS kortikal nöron ve sinir hücrelerinde kolinesteraz ve TYR enzimlerinin artışına sebep olup; kolinerjik iletimi engeller,\nBunun sonucunda ise nöronlarda oksidatif stres ve apoptozu artırarak nörodejenerasyona neden olur.\nSinir hücrelerinin rejenerasyon yeteneklerinin olmaması bu olayın en önemli nedenlerinden birisidir.\nNörodejenerasyon büyük bir kısmı mutasyonlara bağlı olarak ortaya çıkmaktadır.\nNörodejenerasyon kaynaklı birçok hastalığın ortak özelliği mutasyona uğrayan genlerde CAG trinükleotid tekrarlarının artmasıdır,\nBu tekrarlamanın sonucunda, hücrede fazla sayıda Glutamin oluşur;\nBunun sonucunda, yanlış protein katlanmalarına, hücre içi lokalizasyon bozukluklarına ve diğer proteinler ile anormal interaksiyonlar ile meydana gelen toksik formdaki kaskadlara neden olur.\nAlzheimer hastalığının sebeplerinden olan beta amiloid (β-amiloid) kalıntıları ile nörofibriler yumakların oluşumu bu durumun en iyi örnekleridir.\nDegradasyon süreci doğru işlemezse, hastalıkların oluşumundaki temel etken olarak kabul edilen ve hücre veya dokularda anormal olarak biriken protein kalıntıları meydana gelmektedir.",
+   "el_yazisi": [],
+   "isaretler": [],
+   "sinyal": [],
+   "y25": {
+    "key": "y25-k2-53-norodejeneratif-hastaliklar-genetigi",
+    "sayfa": 4
+   },
+   "y26": null,
+   "duzeltme": [
+    {
+     "ham": "Degredasyon",
+     "dogru": "Degradasyon",
+     "gerekce": "yazım"
+    }
+   ],
+   "not_": "Satırlar y25 s04-s07'den derlenmiş.",
+   "banka_cikmis": [
+    "past-1790877488856-908119"
+   ],
+   "puan": 30,
+   "oncelik": "A",
+   "vurgulu": []
+  },
+  {
+   "id": "tbg-s04-b14",
+   "pdf": "tbg",
+   "sayfa": 4,
+   "bolge": "r1c3",
+   "tur": "slayt",
+   "baslik": "SMA – Ayırıcı Tanı (yetişkin başlangıçlı)",
+   "metin": "Yetişkin başlangıçlı olgularda, göz önünde bulundurulması gereken diğer hususlar arasında daha sonra başlayan nöromüsküler bozukluklar, özellikle Amiyotrofik Lateral Skleroz (ALS) ve Spinobulber kas atrofisi yer alır.",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "daire",
+     "hedef": "Yetişkin"
+    },
+    {
+     "tur": "daire",
+     "hedef": "(ALS) (kırmızı daire + pembe fosfor)"
+    },
+    {
+     "tur": "daire",
+     "hedef": "Spinobulber kas atrofisi"
+    },
+    {
+     "tur": "pembe",
+     "hedef": "(ALS) ve"
+    }
+   ],
+   "sinyal": [
+    "daire",
+    "pembe"
+   ],
+   "y25": {
+    "key": "y25-k2-53-norodejeneratif-hastaliklar-genetigi",
+    "sayfa": 77
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "puan": 15,
+   "oncelik": "C",
+   "vurgulu": [
+    "(ALS) (kırmızı daire + pembe fosfor)",
+    "(ALS) ve",
+    "Spinobulber kas atrofisi",
+    "Yetişkin"
+   ]
+  },
+  {
+   "id": "tbg-s04-b04",
+   "pdf": "tbg",
+   "sayfa": 4,
+   "bolge": "r2c1",
+   "tur": "slayt",
+   "baslik": "Parkinson Hastalığı",
+   "metin": "Substansia nigra başta olmak üzere, beyin sapındaki pigmentli dopaminerjik nöronlarda kayıp ve sağ kalan nöronlarda Lewy cisimciği denen birikintilerle karakterizedir.",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "daire",
+     "hedef": "Substansia nigra"
+    },
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "Lewy cisimciği (altı çizili)"
+    }
+   ],
+   "sinyal": [
+    "daire",
+    "kirmizi_cizgi"
+   ],
+   "y25": {
+    "key": "y25-k2-53-norodejeneratif-hastaliklar-genetigi",
+    "sayfa": 22
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "puan": 10,
+   "oncelik": "C",
+   "vurgulu": [
+    "Lewy cisimciği (altı çizili)",
+    "Substansia nigra"
+   ]
+  },
+  {
+   "id": "tbg-s04-b10",
+   "pdf": "tbg",
+   "sayfa": 4,
+   "bolge": "r2c2",
+   "tur": "slayt",
+   "baslik": "Huntington Hastalığı ve Juvenil HD",
+   "metin": "Huntington Hastalığı\nKore ve distoni, koordinasyon bozukluğu, bilişsel performansta bozulmalar ve davranışsal sorunlar gibi farklı fenotipler ile ortaya çıkabilen,\nJuvenil Huntington hastalığı;\nHD 20 yaşından önce ortaya çıktığında klinik özellikler arasında miyoklonus, nöbetler, davranış sorunları ve parkinsonizm yer alabilir.\nHD ile başvuran çocukların hastalığın başlangıcında belirgin psikiyatrik ve/veya bilişsel özelliklere sahip olma olasılığı yetişkinlere göre daha yüksektir.\nKore belirgin şekilde yok\nKlinik belirtileri: Distoni, ataksi ve nöbetler",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "ilk maddenin solunda kırmızı parantez"
+    },
+    {
+     "tur": "daire",
+     "hedef": "Juvenil Huntington hastalığı"
+    }
+   ],
+   "sinyal": [
+    "daire",
+    "kirmizi_cizgi"
+   ],
+   "y25": {
+    "key": "y25-k2-53-norodejeneratif-hastaliklar-genetigi",
+    "sayfa": 35
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": "İlk madde y25 s33.",
+   "puan": 10,
+   "oncelik": "C",
+   "vurgulu": [
+    "Juvenil Huntington hastalığı",
+    "ilk maddenin solunda kırmızı parantez"
+   ]
+  },
+  {
+   "id": "tbg-s04-b11",
+   "pdf": "tbg",
+   "sayfa": 4,
+   "bolge": "r2c2",
+   "tur": "slayt",
+   "baslik": "Prion hastalığı",
+   "metin": "Prion Hastalıkları, insan ve hayvanlarda görülebilen sadece SSS etkileyip daima ölüme neden olan bir hastalık grubudur.\nPRNP, STX6 ve GAL3ST1 genleri,",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "karalama",
+     "hedef": "ilk maddenin solunda kırmızı ✗ imi + parantez"
+    },
+    {
+     "tur": "kutu",
+     "hedef": "PRNP (kırmızı kutu)"
+    }
+   ],
+   "sinyal": [
+    "kirmizi_cizgi",
+    "kutu"
+   ],
+   "y25": {
+    "key": "y25-k2-53-norodejeneratif-hastaliklar-genetigi",
+    "sayfa": 46
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": "İlk madde y25 s45.",
+   "puan": 10,
+   "oncelik": "C",
+   "vurgulu": [
+    "PRNP (kırmızı kutu)"
+   ]
+  },
+  {
+   "id": "tbg-s04-b12",
+   "pdf": "tbg",
+   "sayfa": 4,
+   "bolge": "r2c2",
+   "tur": "slayt",
+   "baslik": "Spinoserebellar ataksiler – en yaygın 4 tip",
+   "metin": "En yaygın 4 SCA tipi var: SCA1, SCA2, SCA3 ve SCA6,",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "maddenin solunda kırmızı parantez/tik"
+    }
+   ],
+   "sinyal": [
+    "kirmizi_cizgi"
+   ],
+   "y25": {
+    "key": "y25-k2-53-norodejeneratif-hastaliklar-genetigi",
+    "sayfa": 54
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": "k2-26 slaytı (tbg s02) 'en sık 1,2,3,6,7 ve 10' der; bu slayt (k2-53) en yaygın 4 tip olarak 1,2,3,6 verir.",
+   "puan": 5,
+   "oncelik": "C",
+   "vurgulu": [
+    "maddenin solunda kırmızı parantez/tik"
+   ]
+  },
+  {
+   "id": "tbg-s04-b03",
+   "pdf": "tbg",
+   "sayfa": 4,
+   "bolge": "r2c1",
+   "tur": "slayt",
+   "baslik": "AH ve PH'de etkilenen bölge farkı",
+   "metin": "Örneğin; Alzheimer hastalığında nöronların yaygın hasarı hipokampus ve nörokortekste çok ciddi düzeyde iken;\nBunun tam tersi olarak Parkinson hastalığında beyin ve korteks bölgesindeki nöronlar hasardan etkilenmezken, substantia nigradaki dopaminerjik nöronlarda yaygın hasar söz konusudur.",
+   "el_yazisi": [],
+   "isaretler": [],
+   "sinyal": [],
+   "y25": {
+    "key": "y25-k2-53-norodejeneratif-hastaliklar-genetigi",
+    "sayfa": 9
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "puan": 0,
+   "oncelik": "C",
+   "vurgulu": []
+  },
+  {
+   "id": "tbg-s04-b08",
+   "pdf": "tbg",
+   "sayfa": 4,
+   "bolge": "r1c2",
+   "tur": "slayt",
+   "baslik": "Alzheimer akış şemaları: erken/geç başlangıç, test öncesi genetik danışma, BOS Tau/Aβ42",
+   "metin": "Şema 1 (Alzheimer): Erken başlayan → APP, PSEN1, PSEN2 → Aβ üretim değişiklikleri → Nörodejenerasyon; Geç başlayan → 9., 10., APOE (19. kr), 12. kr, ???? → Aβ üretim değişiklikleri, Aβ agregasyonunda artış, inflamasyon, Aβ degradasyonu, Aβ klerensi ↓ → Nörodejenerasyon; Tau YOLAĞI: 17. kromozom değişiklikleri, Tau polimorfizmi → Anormal Tau sentezi; Genetik dışı etkenler.\nŞema 2: Asemptomatik birey (aile öyküsü nedeni ile başvuran) → Test Öncesi Genetik Danışma → Geç (>55) başlangıç: APOE-E4, E4(+)/E4(-) → Genetik Danışma; Erken başlangıç: PS1 dizi (%30-70), TAU dizi (%15-20), APP ekzon 17 (%5) → mutasyon (-)/(+) → Genetik Danışma.\nŞema 3: Ilımlı Kognitif Bozukluk → Plazma Aβ42/Aβ40 oranı → Alzheimer? → BOS Tau/Aβ42 oranı, ↑Tau/↓Aβ42 → Geç (>55) başlangıç sporadik (%95-98): APOE-E4; Erken başlangıç otozomal dominant (%2-5): PS1 dizi (%30-70), TAU dizi (%15-20), APP ekzon 17 (%5), PS2 dizi (%1); Stabil kognitif bozukluk / Diğer demans.",
+   "el_yazisi": [],
+   "isaretler": [],
+   "sinyal": [],
+   "y25": {
+    "key": "y25-k2-53-norodejeneratif-hastaliklar-genetigi",
+    "sayfa": 18
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": "Görsel slaytlar; y25 s18-s20 (metni boş görsel sayfalar) — hangi şemanın hangi sayfa olduğu metinden doğrulanamadı, guven orta.",
+   "puan": 0,
+   "oncelik": "C",
+   "vurgulu": []
+  },
+  {
+   "id": "tbg-s04-b09",
+   "pdf": "tbg",
+   "sayfa": 4,
+   "bolge": "r1c2",
+   "tur": "slayt",
+   "baslik": "BOS'ta AH biyobelirteçleri",
+   "metin": "BOS'da AH ELISA ile teşhis etmek için onaylanmış üç biyolojik belirteç vardır:\nβ-amiloid (1-42) [Aβ (1-42)] → BOS seviyesinde azalma\nTotal tau → BOS seviyesinde artış\nFosforile-tau-181 → BOS'da artış",
+   "el_yazisi": [],
+   "isaretler": [],
+   "sinyal": [],
+   "y25": {
+    "key": "y25-k2-53-norodejeneratif-hastaliklar-genetigi",
+    "sayfa": 21
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "puan": 0,
+   "oncelik": "C",
+   "vurgulu": []
+  },
+  {
+   "id": "tbg-s04-b13",
+   "pdf": "tbg",
+   "sayfa": 4,
+   "bolge": "r1c3",
+   "tur": "slayt",
+   "baslik": "SMA – tanım, tipler, tedavi",
+   "metin": "SMA\nYenidoğan döneminde hipotoni ve güçsüzlükle ortaya çıkan nöromüsküler bozukluklar, MSS (beyin veya omurilik), PSS veya iskelet kasını etkileyen çeşitli durumlardan kaynaklanabilir.\nSMA tip 0 (doğum öncesi başlangıçlı) ve SMA tip 1 (infantil başlangıçlı) en yaygın ve şiddetli tiplerdir.\nSMA tip 2 ve SMA tip 3 daha geç başlar ve daha az şiddetli seyreder.\nSMA tip 4 (erişkin başlangıçlı) en az şiddetli olan tiptir.\nNusinersen → SMN2 pre-mRNA'sının kırpılmasını (ekzon 7 katılımını) değiştiren antisens oligonükleotid; kopya sayısını değiştirmez,\nOnasemnogene abeparvovec → mutasyona uğramış AAV9 vektörüyle işlevsel SMN1 kopyası eklenmesi (gen ekleme)ni içerir.\nOnasemnogene abeparvovec → SMN1'de bialel mutasyonları olan 2 yaşından küçük SMA'lı çocukların tedavisi için 2019 yılında FDA onay aldı\nRisdiplam → SMN2 değiştirir. Pediatrik ve yetişkin hastalarda SMA tedavisi için FDA tarafından onaylanmıştır.",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "ilk maddenin solunda küçük kırmızı tik"
+    }
+   ],
+   "sinyal": [],
+   "y25": {
+    "key": "y25-k2-53-norodejeneratif-hastaliklar-genetigi",
+    "sayfa": 62
+   },
+   "y26": null,
+   "duzeltme": [
+    {
+     "ham": "Nusinersen → SMN2 kopya sayısını değiştirir",
+     "dogru": "Nusinersen → SMN2 pre-mRNA'sının kırpılmasını (ekzon 7 katılımını) değiştiren antisens oligonükleotid; kopya sayısını değiştirmez",
+     "gerekce": "Tıbbi bilgi: nusinersen ve risdiplam SMN2 splays düzenleyicisidir; SMN2 kopya sayısı hastalık şiddetini belirler ama ilaçla değişmez. Slayt ifadesi aynen böyle (y25 s80), sınavda slayt ifadesi esas alınabilir."
+    },
+    {
+     "ham": "SMN1'in geninin normal SMN1 ile değiştirilmesi",
+     "dogru": "AAV9 vektörüyle işlevsel SMN1 kopyası eklenmesi (gen ekleme)",
+     "gerekce": "Onasemnogene mutant geni çıkarmaz, işlevsel kopya ekler; slayt ifadesi y25 s80"
+    }
+   ],
+   "not_": "Tip satırları y25 s67, tedavi satırları y25 s80.",
+   "puan": 0,
+   "oncelik": "C",
+   "vurgulu": [
+    "ilk maddenin solunda küçük kırmızı tik"
+   ]
+  },
+  {
+   "id": "tbg-s04-b15",
+   "pdf": "tbg",
+   "sayfa": 4,
+   "bolge": "r2c3",
+   "tur": "slayt",
+   "baslik": "Özet",
+   "metin": "Alzheimer hastalığı - Aβ plak - tau proteini - nörofibril yumak\nParkinson - Lewy cisimciği, substantia nigra\nALS - motor nöron dejenerasyonu\nHuntington - kore, distoni - CAG trinükleotid artışı\nMS - otoimmün, demiyelinizan - akson dejenerasyonu\nPrion hastalığı - Creutzfeldt-Jakob - nöronal kayıp, prion protein birikimi\nSCA - ataksi ve serebellar disfonksiyon, SCA1, SCA2, SCA3 ve SCA6\nSMA - Nöromüsküler bozukluk, tipleri, tedavi ve prognoz",
+   "el_yazisi": [],
+   "isaretler": [],
+   "sinyal": [],
+   "y25": {
+    "key": "y25-k2-53-norodejeneratif-hastaliklar-genetigi",
+    "sayfa": 83
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "puan": 0,
+   "oncelik": "C",
+   "vurgulu": []
+  }
+ ],
+ "ogrenci_sorulari": [
+  {
+   "id": "tbg-s04-b16",
+   "pdf": "tbg",
+   "sayfa": 4,
+   "bolge": "r2c3",
+   "tur": "cikmis_soru",
+   "baslik": "Çıkmış: alt ve üst motor nöronu etkileyen en yaygın motor nöron hastalığı",
+   "metin": "Motor nöronlarda dejenerasyon ve ölüm ile karakterize alt ve üst motor nöronları etkileyen, motor nöron hastalıklarının en yaygını hangisidir?\nA) SCA\nB) ALS\nC) SMA\nD) Parkinson\nE) MS",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "pembe",
+     "hedef": "soru bloğu"
+    }
+   ],
+   "sinyal": [
+    "cikmis"
+   ],
+   "y25": {
+    "key": "y25-k2-53-norodejeneratif-hastaliklar-genetigi",
+    "sayfa": 28
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "cikmis": {
+    "kok": "Motor nöronlarda dejenerasyon ve ölüm ile karakterize alt ve üst motor nöronları etkileyen, motor nöron hastalıklarının en yaygını hangisidir?",
+    "siklar": [
+     "A) SCA",
+     "B) ALS",
+     "C) SMA",
+     "D) Parkinson",
+     "E) MS"
+    ],
+    "ogrenci_cevap": "",
+    "banka_id": "q-No_ropsikiyatri_gis_kardiyo_-2023-2024-C__km_s_lar__240625_053302__2_-14",
+    "banka_yil": "2023-2024 (Kurul 2)",
+    "banka_dogru": "B) Amiyotrofik lateral skleroz (ALS)",
+    "tutarli": true,
+    "not": "Öğrenci bu soruda şık işaretlememiş (daire/kırmızı yok). Banka kaydı discipline=Tıbbi Patoloji etiketli ama aynı 2023-2024 K2 dosyasında genetik soruları arasında (-13 SCA8, -15 MR, -16 Tourette, -18 GJB2); içerik k2-53 ALS slaytı. isPastExam boş olduğundan ara.py bulamadı."
+   },
+   "bagli_birim": "tbg-s04-b02",
+   "benzerlik": 0.751
+  },
+  {
+   "id": "tbg-s04-b17",
+   "pdf": "tbg",
+   "sayfa": 4,
+   "bolge": "r2c3",
+   "tur": "cikmis_soru",
+   "baslik": "Pembe önerme: 'ALS otoimmün ve demiyelinizandır'",
+   "metin": "als otoimmün ve demiyelinizandır",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "pembe",
+     "hedef": "önerme satırı"
+    }
+   ],
+   "sinyal": [
+    "cikmis"
+   ],
+   "y25": {
+    "key": "y25-k2-53-norodejeneratif-hastaliklar-genetigi",
+    "sayfa": 36
+   },
+   "y26": null,
+   "duzeltme": [
+    {
+     "ham": "demiyelizandır",
+     "dogru": "demiyelinizandır",
+     "gerekce": "yazım; ayrıca önerme tıbben yanlış (MS için doğru)"
+    }
+   ],
+   "not_": null,
+   "cikmis": {
+    "kok": "ALS otoimmün ve demiyelinizandır (önerme)",
+    "siklar": [],
+    "ogrenci_cevap": "",
+    "banka_id": "",
+    "banka_yil": "",
+    "banka_dogru": "",
+    "tutarli": true,
+    "not": "Tek satırlık pembe önerme; muhtemelen bir 'yanlış olan hangisi' sorusunun yanlış şıkkı. İfade YANLIŞTIR: otoimmün ve demiyelinizan olan MS'tir (y25 s36, özet s83); ALS motor nöron dejenerasyonudur. Bankada birebir karşılığı bulunamadı (benzer: d3-k2-nor-010 demiyelinizan → MS)."
+   },
+   "bagli_birim": "tbg-s04-b05",
+   "benzerlik": 0.591
+  }
+ ],
+ "banka": [
+  {
+   "id": "past-q-I_SKENDERUN_TI_Mu_du_rlu_g_u_ne0__1__230709_230251-101",
+   "ders": "k2-53",
+   "yillar": [
+    "Geçmiş Yıllar Çıkmışı (Arşiv)"
+   ],
+   "kok": "Aşağıdaki hastalıklardan hangisinin oluşum mekanizmasında \"proteinlerin yanlış katlanması\" rol almaz?",
+   "dogru": "Ailevi Akdeniz ateşi",
+   "kopyalar": [],
+   "birim": "tbg-s04-b01",
+   "benzerlik": 0.508,
+   "kapsandi": false,
+   "notta_yapistirilmis": false
+  },
+  {
+   "id": "d3-k2-tbg-002",
+   "ders": "k2-53",
+   "yillar": [
+    "2021-2026"
+   ],
+   "kok": "Aşağıdakilerden hangisi geç başlangıçlı Alzheimer hastalığı ile ilişkili genetik risk belirteçlerinden biri DEĞİLDİR?",
+   "dogru": "Presenilin 1 (PSEN1) ve Presenilin 2 (PSEN2) mutasyonları",
+   "kopyalar": [],
+   "birim": "tbg-s04-b07",
+   "benzerlik": 0.687,
+   "kapsandi": true,
+   "notta_yapistirilmis": false
+  },
+  {
+   "id": "d3-k2-tbg-006",
+   "ders": "k2-53",
+   "yillar": [
+    "2021-2026"
+   ],
+   "kok": "Huntington hastalığının moleküler genetiği ve klinik özellikleri ile ilgili aşağıdakilerden hangisi doğrudur?",
+   "dogru": "HTT geninde CAG trinükleotid tekrar artışı ile karakterizedir; babadan aktarılırken antisipasyon gösterir",
+   "kopyalar": [],
+   "birim": "tbg-s04-b10",
+   "benzerlik": 0.56,
+   "kapsandi": false,
+   "notta_yapistirilmis": false
+  },
+  {
+   "id": "past-1790877488856-908119",
+   "ders": "k2-53",
+   "yillar": [
+    "2020-2021"
+   ],
+   "kok": "Xq11-q12 bölgesinde androjen reseptörü (AR) geninin ekson 1'inde CAG trinükleotid tekrar artışı ile ortaya çıkan hastalık aşağıdakilerden hangisidir?",
+   "dogru": "Spinobulber müsküler atrofi (Kennedy hastalığı)",
+   "kopyalar": [],
+   "birim": "tbg-s04-b01",
+   "benzerlik": 0.609,
+   "kapsandi": true,
+   "notta_yapistirilmis": false
+  },
+  {
+   "id": "past-1790877497218-639789",
+   "ders": "k2-53",
+   "yillar": [
+    "2020-2021"
+   ],
+   "kok": "FXN geninin 1. intronundaki GAA segmenti tekrarları sonucunda aşağıdaki model hastalıklardan hangisi oluşur?",
+   "dogru": "Friedreich ataksisi",
+   "kopyalar": [],
+   "birim": "tbg-s04-b01",
+   "benzerlik": 0.539,
+   "kapsandi": false,
+   "notta_yapistirilmis": false
+  }
+ ]
+}

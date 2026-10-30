@@ -1,0 +1,129 @@
+{
+ "ders": "k2-19",
+ "ozet": "Bipolar bozukluk sorularının çekirdeği alt tiplerin süre ölçütleri (mani en az 1 hafta, hipomani en az 4 gün, siklotimi en az 2 yıl) ve 'hangisi manik nöbetin belirtisi değildir' kalıbıdır; ikisi birlikte notta yapıştırılmış 9 çıkmışın 6'sını oluşturur. Öğrenciler manide bilişsel yetilere (bellek artar, yönelim korunur, spontan dikkat artar, içgörü azalır) ve epidemiyolojiye (kadın = erkek, ortalama başlangıç 21) el notu ve yıldızla yığılmış. Tedavi ve prognoz soruları daha çok öncüllü ya da 'yanlış bul' listesinin doğru önermeleri olarak gelmiş.",
+ "temalar": [
+  {
+   "tema": "Alt tipler ve süre ölçütleri: Bipolar I, Bipolar II, siklotimi; mani / hipomani süresi",
+   "oncelik": "A",
+   "birimler": ["psk-s01-b01"],
+   "kanit": "En yüksek puanlı birim (p100; çıkmış + kırmızı çizgi + yıldız). 2020-21 'manik atakta en az 2 hafta süren duygudurum değişikliği şartı vardır' yanlış şık (2 kopya; hoca profilinde tekrar eden çekirdek); arşiv + 2021-22 'siklotimik bozukluğu olanlarda bipolar I gelişmez' yanlış şık; arşiv öncüllü hipomani sorusu (doğru: en az 4 gün + amaca yönelik etkinlik artışı; psikotik belirti ve ciddi işlev kaybı yok); 2018-19 benzer kökte 'Bipolar I için mutlaka hem depresyon hem mani gözlenmeli' yanlış. El notu: 'Sadece 1 mani olması bipolar-I tanısı koydurur, depresyon atağına gerek YOK!', 'hipomani en az 4 gün', 'siklotimi en az 2 yıl, en fazla 2 ay iyi kalınabilmiş'.",
+   "anlatim": "Üç alt tip tek tabloda epizod türü ve süre değerleriyle verilmeli: Bipolar I için tek manik epizod yeterli; Bipolar II = majör depresyon (≥2 hafta) + hipomani (≥4 gün), mani hiç yok; siklotimi ≥2 yıl eşik altı belirtiler. Hipomani–mani ayrımı psikotik belirti, işlev kaybı ve hastaneye yatış ölçütleriyle kurulmalı; madde/ilaç kaynaklı tablonun ayrı kategori olduğu söylenmeli.",
+   "soru_payi": 24,
+   "soru_tipleri": ["yanlış bul: mani için 2 hafta şartı", "öncüllü: hipomaniye ait olanlar (4 gün, amaca yönelik etkinlik artışı)", "yanlış bul: siklotimiden bipolar I gelişmez / Bipolar I için depresyon şart"]
+  },
+  {
+   "tema": "Manik epizod tanı ölçütü ve manik nöbete ait olmayan belirtiler",
+   "oncelik": "A",
+   "birimler": ["psk-s01-b15", "psk-s01-b07"],
+   "kanit": "'Hangisi manik nöbetin belirtisi değildir?' kalıbı 4 kez: 2018-19 final → hipersomni (yapıştırılmış, el notu 'insomnia görülür'), 2021-22 → mikromanik hezeyan (yapıştırılmış), 2023-24 → psikomotor yavaşlama (notta yok; profilde 2× tekrar eden çekirdek, 2018 ve 2023), 2021-2026 d3 → psikomotor retardasyon ve hipersomni. Tanı ölçütü slaytında el yazısıyla 'ÇIKMIŞ', 'en az bir hafta' kırmızı yıldızlı; mani/karma mani tablosunda 'sanrılar' kırmızı halka, 'içgörü azalması' mavi yıldız.",
+   "anlatim": "Ölçüt: en az 1 hafta duygudurum yükselmesi/irritabilite + 7 belirtiden en az 3'ü (irritabl ise 4'ü), işlev kaybı/yatış/psikotik belirti. Belirtiler tek tek, karşıt depresif belirtiyle eşleştirilerek anlatılmalı (uyku ihtiyacı azalır ↔ hipersomni; psikomotor ajitasyon ↔ yavaşlama; büyüklük ↔ mikromanik/küçüklük hezeyanı).",
+   "soru_payi": 19,
+   "soru_tipleri": ["olumsuz: hangisi manik nöbet belirtisi değildir → hipersomni / mikromanik hezeyan / psikomotor yavaşlama", "sayı: kaç belirti, irritabl duygudurumda kaç belirti"]
+  },
+  {
+   "tema": "Manide klinik bulgular: görünüm, konuşma, bilişsel yetiler (bellek, yönelim, dikkat, içgörü), davranış ve fizyolojik özellikler",
+   "oncelik": "A",
+   "birimler": ["psk-s01-b09", "psk-s01-b11"],
+   "kanit": "2020-21 'mani tablosu için söylenemez → bellekte genellikle azalma' (yapıştırılmış; doğru önermeler: öforik mizaç, spontan dikkatte artma, yönelim bozukluğu olmaz, fikir uçuşması); arşiv 'manide görülen bilişsel bozukluk → içgörüde azalma' (yapıştırılmış); 2023 'manik dönem için yanlış → sosyabiliteleri azalmıştır' (öğrencinin pembe kısa notu). El notu: 'Manik delirium dışında yönelim bozukluğu YOK. Bellekte artış. İstemli dikkat ↓, spontan dikkat ↑', 'kısa süreli işitme-görme halüsinasyonları olabilir ⇒ psikotik mani'.",
+   "anlatim": "Bilişsel bulgular yönleriyle (bellek artar, yönelim korunur, spontan dikkat artar–istemli dikkat azalır, içgörü azalır) ayrı madde olarak verilmeli; davranışta sosyabilite artışı, aşırı harcama, hiperseksüalite, rasyonalizasyon; fizyolojide yorgunluğa direnç, az uyku, libido artışı sayılmalı.",
+   "soru_payi": 14,
+   "soru_tipleri": ["söylenemez: bellek azalır / sosyabilite azalır", "doğrudan: hangisi bilişsel bulgudur → içgörüde azalma (çeldiriciler davranış/fizyolojik belirtiler)"]
+  },
+  {
+   "tema": "Epidemiyoloji ve tanı gecikmesi",
+   "oncelik": "A",
+   "birimler": ["psk-s01-b02", "psk-s01-b20"],
+   "kanit": "Arşiv çıkmışı 'bipolar bozukluk kadınlarda yaklaşık üç kat fazla' yanlış şık (yapıştırılmış, el notu 'kadın = erkek'); 2021-22 sorusunda 'risk tüm cinsiyetlerde aynı', 'ortalama başlangıç yaşı 21', 'ilk nöbetler sıklıkla depresyon' doğru önermeler. Yaygınlık slaytı p93; '15–24 yaş', 'doğru tanı 5–10 yıl sürer', 'depresif ataklar manik ataklardan fazladır' vurgulu; '3 hastanın biri yanlış tanı alır' yeşil.",
+   "anlatim": "Yaygınlık (%1–5; BP-I %0,4–1,6; BP-II ~%0,5), cinsiyet eşitliği, başlangıç yaşı (15–24, ortalama 21), depresif atakların baskınlığı ve tanı gecikmesi (5–10 yıl, üç hastadan biri yanlış tanı, hastanın inkârı) kısa sayı listesiyle verilmeli.",
+   "soru_payi": 10,
+   "soru_tipleri": ["yanlış bul: kadınlarda 3 kat fazla", "sayı: ortalama başlangıç yaşı"]
+  },
+  {
+   "tema": "Gidiş, uzun süreli izlem ve prognoz",
+   "oncelik": "B",
+   "birimler": ["psk-s01-b27", "psk-s01-b28", "psk-s01-b31", "psk-s01-b22", "psk-s01-b26", "psk-s01-b23"],
+   "kanit": "'Epizodlar atlatıldıktan sonra genellikle hastalık öncesi işlevselliğe dönülür' iki çıkmışta doğru önerme (2020-21 tablo, arşiv); arşivde 'depresyon atağının uzun olması kötü prognoz göstergesidir' doğru önerme. 2020-21 tablo sorusunda 'depresyon ve mani atakları aynı anda olabilir' doğru önerme (karma atak). Prognoz paragrafı tamamen vurgulu; el notu 'atak sonrası iyileşildiğinde bile dikkatte azalma görülür'; %90 tekrar ve 'ilk 3 ay' kırmızı çizgili.",
+   "anlatim": "Ataklar arası işlevselliğe dönüş ve %20–35 kronik gidiş, tek manik ataktan sonra %90'dan fazla tekrar, ilk 3 ayın kritikliği ve tedaviye yanıtın 3.–4. haftada gelmesi; iyi prognoz göstergeleri liste hâlinde verilmeli.",
+   "soru_payi": 9,
+   "soru_tipleri": ["doğru/yanlış önerme: ataklar arası tam iyileşme", "hangisi iyi prognoz göstergesi değildir: uzun depresyon atağı"]
+  },
+  {
+   "tema": "Tedavi: duygudurum düzenleyiciler, antipsikotik, antidepresan, benzodiazepin",
+   "oncelik": "A",
+   "birimler": ["psk-s01-b29", "psk-s01-b30"],
+   "kanit": "Arşiv öncüllü sorusu: ilaç gruplarından hangileri duygudurum dengeleyici içerir → I (lityum, bupropion, venlafaksin) ve IV (fluoksetin, paroksetin, lamotrijin). 2020-21 tablo sorusunda 'valproik asit tedavide kullanılır' doğru önerme. Dört ilaç grubu kırmızı süslü ayraç + yıldız; el notu '*mani dönemde antidepresan kullanılmaz*', 'benzodiazepin hastayı yatıştırmak için'.",
+   "anlatim": "Duygudurum düzenleyicilerin adları (lityum, valproat, karbamazepin) ve tedavinin kısa/uzun süreli amaçları verilmeli; antidepresanın yalnız çökkün dönemde ve mani döneminde verilmediği vurgulanmalı.",
+   "soru_payi": 8,
+   "soru_tipleri": ["öncüllü: hangi ilaç grubunda duygudurum düzenleyici var", "yanlış bul: manide antidepresan"]
+  },
+  {
+   "tema": "Ayırıcı tanı ve ileri yaşta mani",
+   "oncelik": "B",
+   "birimler": ["psk-s01-b21", "psk-s01-b24"],
+   "kanit": "Arşiv 'antisosyal kişilik bozukluğu ile tanı açısından karışabilir' ve 2020-21 'ayırıcı tanıda madde kullanımı akla gelmelidir' doğru önermeler. Başlık kırmızı daire içinde yıldızlı, tüm maddeler vurgulu; öğrenci özeti '60+ yaşta mani tablosu → önce organik nedenler, SVH düşün'.",
+   "anlatim": "Ayırıcı tanı listesi (kokain/amfetamin, akut paranoid şizofreni, şizoaffektif, kısa psikotik, antisosyal kişilik, katatonik eksitasyon, organik nedenler) verilmeli; ileri yaşta ilk mani için organik neden araştırması ve organik etkenler (hipertiroidi, Cushing, frontal lob, steroid) eklenmeli.",
+   "soru_payi": 6,
+   "soru_tipleri": ["doğru önerme: madde kullanımı / antisosyal kişilik ayırıcı tanıda"]
+  },
+  {
+   "tema": "Notta yok, sorulmuş: maniye ait olmayan depresif belirtiler ve slaytta olmayan duygudurum düzenleyici",
+   "oncelik": "B",
+   "birimler": [],
+   "kanit": "2023-24 'manik nöbetin belirtisi değildir → psikomotor yavaşlama' (d6c208b25527) notta yapıştırılmamış, bankada kapsandı:false; aynı çekirdek 2021-2026 d3 sorusunda 'psikomotor retardasyon ve aşırı hipersomni'. Arşiv ilaç sorusunun doğru öncüllerinden biri lamotrijine dayanıyor; slaytta duygudurum düzenleyici olarak yalnız lityum, valproat, karbamazepin var.",
+   "anlatim": "Manik ve depresif belirtiler karşıt çiftler hâlinde yan yana gösterilmeli ki 'belirti değildir' sorusundaki depresif çeldirici tanınsın. Lamotrijin 2026-27 slaytında geçiyorsa duygudurum düzenleyiciler arasında sayılmalı; geçmiyorsa yalnız çıkmış dayanağıyla kısa not düşülmeli.",
+   "soru_payi": 5,
+   "soru_tipleri": ["olumsuz: manik nöbet belirtisi değildir → psikomotor yavaşlama"]
+  },
+  {
+   "tema": "Diğer seçilen yerler: majör depresif epizod ölçütü, prodrom, etiyoloji (biyolojik, psikososyal), duygudurum değişiklikleri grafiği",
+   "oncelik": "C",
+   "birimler": ["psk-s01-b17", "psk-s01-b13", "psk-s01-b04", "psk-s01-b05", "psk-s01-b18"],
+   "kanit": "MDE ölçütünde 'en az 5'i, en az 15 gün' ve yas dışlaması kırmızı çizgili; prodromda 'aktivite artışı, uyku ihtiyacında azalma' yeşil; etiyolojide el notları (monoamin fazlalığı, hücre içine lityum taşıyan mekanizmada bozukluk, mani yapan organik etkenler). Çıkmış eşlenmemiş.",
+   "anlatim": "Kısa tutulmalı: MDE için 9 belirtiden 5'i ve 2 hafta; prodrom bulguları; monoamin hipotezi ve membran kuramı tek cümleyle.",
+   "soru_payi": 5,
+   "soru_tipleri": ["sayı: MDE için kaç belirti, kaç gün"]
+  }
+ ],
+ "hoca_kaliplari": [
+  "'… hangisi yanlıştır / söylenemez?' (bu konuda %42; notta yapıştırılan 9 çıkmışın 5'i)",
+  "Olumsuz kök: 'Aşağıdakilerden hangisi manik nöbetin bir belirtisi değildir?' (4 farklı yıl)",
+  "Öncüllü (I–IV): hipomani özellikleri, ilaç grupları",
+  "Yanlış önerme genellikle sayı ya da yön değiştirilerek kurulur (1 hafta → 2 hafta; kadın = erkek → 3 kat; bellek artar → azalır; sosyabilite artar → azalır)",
+  "Çeldirici %67 aynı türden ayrı kavram: depresif belirti manik listeye konur"
+ ],
+ "tuzaklar": [
+  {"tuzak": "Manik epizod için en az 2 hafta", "neden": "mani için en az 1 hafta; 2 hafta majör depresif epizodun süresidir"},
+  {"tuzak": "Hipomani psikotik belirti ve ciddi işlev kaybı içerir", "neden": "bunlar varsa tablo manidir"},
+  {"tuzak": "Bipolar I tanısı için depresyon atağı da gerekir", "neden": "tek manik epizod yeterlidir"},
+  {"tuzak": "Siklotimiden bipolar I gelişmez", "neden": "gelişebilir; arşiv ve 2021-22 çıkmışının yanlış şıkkı"},
+  {"tuzak": "Manide bellek azalır, yönelim bozulur", "neden": "bellek artar, manik delirium dışında yönelim korunur"},
+  {"tuzak": "Manide sosyabilite azalır", "neden": "sosyabilite artar"},
+  {"tuzak": "Bipolar bozukluk kadınlarda 3 kat sık", "neden": "kadın = erkek; 3 kat değil"},
+  {"tuzak": "Mikromanik hezeyan manide görülür", "neden": "manide büyüklük hezeyanı olur; küçüklük hezeyanı depresyona aittir"},
+  {"tuzak": "Hipersomni / psikomotor yavaşlama manik belirti sanılır", "neden": "manide uyku ihtiyacı azalır ve psikomotor ajitasyon olur"}
+ ],
+ "sayilar": [
+  "Mani ≥1 hafta; hipomani ≥4 gün; majör depresif epizod ≥2 hafta (slayt: en az 15 gün)",
+  "Siklotimi ≥2 yıl, belirtisiz dönem en fazla 2 ay",
+  "Manik epizod: 7 belirtiden ≥3'ü, duygudurum irritabl ise ≥4'ü",
+  "MDE: 9 belirtiden ≥5'i; yas kaybı takiben 2 aydan kısa sürer",
+  "Yaygınlık %1–5; Bipolar I %0,4–1,6; Bipolar II ~%0,5; kadın = erkek",
+  "Başlangıç 15–24 yaş, ortalama 21; doğru tanı 5–10 yıl gecikir; 3 hastadan 1'i yanlış tanı alır",
+  "Tek manik ataktan sonra hastaların %90'dan fazlasında yeni epizod",
+  "Olguların %20–35'inde kronik gidiş",
+  "Belirtiler kalktıktan sonraki ilk 3 ay tekrarlama için en kritik dönem",
+  "Tedaviye yanıt genellikle 3.–4. haftada"
+ ],
+ "duzeltmeler": [
+  {"yanlis": "Antidepresan ya da diğer tedavi sonrası oluşan duygudurum değişiklikleri sayılmaz! (el notu, kesin genelleme)", "dogru": "İlacın fizyolojik etkisi süresince kalan duygudurum yükselmesi madde/ilaç kaynaklı bozukluk sayılır; ilacın etkisinin ötesinde tam sendrom düzeyinde süren manik epizod DSM-5'te bipolar I tanısı için yeterlidir", "kaynak": "slayt s8 kategori adı + girdideki DSM-5 düzeltme notu"},
+  {"yanlis": "Manik atakta en az 2 hafta duygudurum değişikliği gerekir (hoca profilinde 'tekrar eden çekirdek' olarak kayıtlı önerme)", "dogru": "Bu önerme çıkmışta yanlış şıktır; mani için en az 1 hafta gerekir. Profil satırı doğru bilgi gibi okunmamalı", "kaynak": "slayt s29 + banka 5745fea7afd3 doğru cevabı"}
+ ],
+ "ara_soru_adaylari": [
+  {"birim": "psk-s01-b01", "fikir": "hipomani öncüllü: 4 gün, psikotik belirti yok, ciddi işlev kaybı yok"},
+  {"birim": "psk-s01-b15", "fikir": "hangisi manik nöbet belirtisi değildir: hipersomni / psikomotor yavaşlama"},
+  {"birim": "psk-s01-b09", "fikir": "mani için söylenemez: bellek azalır; yönelim, dikkat, içgörü yönleri"},
+  {"birim": "psk-s01-b02", "fikir": "epidemiyoloji yanlış bul: kadınlarda 3 kat"},
+  {"birim": "psk-s01-b29", "fikir": "manik dönemde antidepresan verilmez; duygudurum düzenleyici adları"}
+ ],
+ "kurul2627_notu": "2026-27 slaytı gelince bakılacak: duygudurum düzenleyiciler arasına lamotrijin eklenmiş mi; 'mikst epizod' ifadesi DSM-5 'karma özellik' olarak güncellenmiş mi; MDE süresi 15 gün mü 2 hafta mı yazılmış. Psikomotor yavaşlama çeldiricisi 2023-24'te notta olmadan sorulduğu için yeni slaytta manik–depresif karşıt belirti tablosu aranmalı."
+}

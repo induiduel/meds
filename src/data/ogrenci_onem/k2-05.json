@@ -1,0 +1,1013 @@
+{
+ "ders": "k2-05",
+ "kod": "2n03",
+ "brans": "Nöroloji",
+ "konu": "Nörolojik Muayene",
+ "kaynak": "Geçmiş yıl (2025-26) öğrenci derleme notu: noro3.2",
+ "y25": {
+  "key": "y25-k2-05-norolojik-muayene",
+  "sayfalar": [
+   3,
+   19,
+   26,
+   44,
+   50,
+   52,
+   54,
+   59,
+   65,
+   71
+  ]
+ },
+ "sayac": {
+  "birim": 10,
+  "A": 4,
+  "B": 2,
+  "C": 4,
+  "ogrenci_sorusu": 4,
+  "banka": 15,
+  "banka_kapsandi": 0
+ },
+ "birimler": [
+  {
+   "id": "noro-s11-b03",
+   "pdf": "noro",
+   "sayfa": 11,
+   "bolge": "r1c1",
+   "tur": "slayt",
+   "baslik": "1. motor nöron / 2. motor nöron / nöromüsküler kavşak / çizgili kas bulguları",
+   "metin": "1. motor nöron: Tonus artar; Refleksler canlı; Patolojik refleks (+); Atrofi yok; Duyu kusuru yok\n2. motor nöron: Tonus azalır; Refleksler kaybolur; Atrofi gelişir; Duyu kusuru +/-; Patolojik refleks -\nNöromusküler Kavşak: Tonus değişmez; Refleksler değişmez; Patolojik refleks yok; Atrofi yok; Duyu kusuru yok\nÇizgili Kas: Tonus değişmez, az; Refleksler değişmez; Atrofi VAR; Patolojik refleks yok; Duyu kusuru yok",
+   "el_yazisi": [
+    {
+     "metin": "= DTR",
+     "hedef": "Refleksler canlı",
+     "guven": "yuksek"
+    },
+    {
+     "metin": "Babinski bulgusu +",
+     "hedef": "Patolojik refleks (+)",
+     "guven": "yuksek"
+    },
+    {
+     "metin": "DTR ↑",
+     "hedef": "1. motor nöron (altında)",
+     "guven": "yuksek"
+    },
+    {
+     "metin": "= DTR ↓",
+     "hedef": "Refleksler kaybolur (2. MN)",
+     "guven": "yuksek"
+    },
+    {
+     "metin": "fasikülasyon vardır.",
+     "hedef": "2. motor nöron (Atrofi gelişir'den ok)",
+     "guven": "yuksek"
+    },
+    {
+     "metin": "Babinski işareti yok",
+     "hedef": "Patolojik refleks - (2. MN)",
+     "guven": "yuksek"
+    },
+    {
+     "metin": "atrofi görünce ilk akla gelecek = 2. motor nöron.",
+     "hedef": "Atrofi gelişir",
+     "guven": "yuksek"
+    },
+    {
+     "metin": "Muayenede bulguyla karşılaşabilmek zor, bulgularını ortaya çıkarmak için kasları yormak gerekir. (özellikle göz kapağı kasarak)",
+     "hedef": "Nöromusküler Kavşak",
+     "guven": "yuksek",
+     "alternatif": "son kelime 'kasarak' / 'kırparak' olabilir"
+    }
+   ],
+   "isaretler": [
+    {
+     "tur": "sari",
+     "hedef": "1. motor nöron, Tonus artar, Patolojik refleks (+), Duyu kusuru yok; 2. motor nöron, Tonus azalır, Refleksler kaybolur, Patolojik refleks -; Nöromusküler Kavşak, Tonus değişmez; Çizgili Kas, Tonus değişmez, az"
+    },
+    {
+     "tur": "yesil",
+     "hedef": "Atrofi gelişir; Atrofi VAR"
+    },
+    {
+     "tur": "kutu",
+     "hedef": "Atrofi gelişir (kırmızı çerçeve)"
+    },
+    {
+     "tur": "yildiz",
+     "hedef": "Patolojik refleks (+) (iki kırmızı yıldız)"
+    }
+   ],
+   "sinyal": [
+    "cikmis",
+    "el_onemli",
+    "sari",
+    "yildiz"
+   ],
+   "y25": {
+    "key": "y25-k2-05-norolojik-muayene",
+    "sayfa": 52
+   },
+   "y26": {
+    "key": "k2-05",
+    "sayfa": 52
+   },
+   "duzeltme": [],
+   "not_": null,
+   "ogrenci_sorulari": [
+    "noro-s11-b11"
+   ],
+   "puan": 73,
+   "oncelik": "A",
+   "vurgulu": [
+    "1. motor nöron, Tonus artar, Patolojik refleks (+), Duyu kusuru yok; 2. motor nöron, Tonus azalır, Refleksler kaybolur, Patolojik refleks -; Nöromusküler Kavşak, Tonus değişmez; Çizgili Kas, Tonus değişmez, az",
+    "Atrofi gelişir (kırmızı çerçeve)",
+    "Atrofi gelişir; Atrofi VAR",
+    "Patolojik refleks (+) (iki kırmızı yıldız)"
+   ]
+  },
+  {
+   "id": "noro-s11-b02",
+   "pdf": "noro",
+   "sayfa": 11,
+   "bolge": "r1c2",
+   "tur": "slayt",
+   "baslik": "Motor sistem muayenesi bulguları",
+   "metin": "Parazi\nPleji\nMonoparazi\nHemiparazi\nParaparazi\nKuadriparazi\nSpastisite\nRijidite\nAtrofi",
+   "el_yazisi": [
+    {
+     "metin": "* güçsüzlük (2/5, 3/5 gibi daha ağır olmayan)",
+     "hedef": "Parazi",
+     "guven": "yuksek"
+    },
+    {
+     "metin": "0/5",
+     "hedef": "Pleji",
+     "guven": "yuksek"
+    },
+    {
+     "metin": "* tek ekstremitede güçsüzlük",
+     "hedef": "Monoparazi",
+     "guven": "yuksek"
+    },
+    {
+     "metin": "* bir yarımda güçsüzlük",
+     "hedef": "Hemiparazi",
+     "guven": "yuksek"
+    },
+    {
+     "metin": "* bacaklarda güçsüzlük",
+     "hedef": "Paraparazi",
+     "guven": "yuksek"
+    },
+    {
+     "metin": "* 4 ekstremitede güçsüzlük",
+     "hedef": "Kuadriparazi",
+     "guven": "yuksek"
+    },
+    {
+     "metin": "* 1. motor nöronda hasar",
+     "hedef": "Spastisite",
+     "guven": "yuksek"
+    },
+    {
+     "metin": "* Agonist ve antagonist kasların kasılı kalması",
+     "hedef": "Rijidite",
+     "guven": "yuksek"
+    }
+   ],
+   "isaretler": [
+    {
+     "tur": "pembe",
+     "hedef": "Rijidite satırı (açık pembe vurgu)"
+    },
+    {
+     "tur": "yildiz",
+     "hedef": "Rijidite (pembe yıldız)"
+    }
+   ],
+   "sinyal": [
+    "cikmis",
+    "el_onemli",
+    "yildiz"
+   ],
+   "y25": {
+    "key": "y25-k2-05-norolojik-muayene",
+    "sayfa": 50
+   },
+   "y26": {
+    "key": "k2-05",
+    "sayfa": 50
+   },
+   "duzeltme": [],
+   "not_": null,
+   "ogrenci_sorulari": [
+    "noro-s11-b09"
+   ],
+   "puan": 63,
+   "oncelik": "A",
+   "vurgulu": [
+    "Rijidite (pembe yıldız)",
+    "Rijidite satırı (açık pembe vurgu)"
+   ]
+  },
+  {
+   "id": "noro-s11-b04",
+   "pdf": "noro",
+   "sayfa": 11,
+   "bolge": "r2c1",
+   "tur": "slayt",
+   "baslik": "Refleks muayenesi (0-5)",
+   "metin": "Refleks:\n0: yok\n1: azalmış (hipoaktif)\n2: normal\n3: artmış (hiperaktif)\n4: aşırı artmış\n5: klonus",
+   "el_yazisi": [
+    {
+     "metin": "(motor sistem)",
+     "hedef": "Refleks Muayenesi başlığı",
+     "guven": "yuksek"
+    },
+    {
+     "metin": "+1 … +5 (her derecenin önüne + eklenmiş)",
+     "hedef": "1-5 dereceleri",
+     "guven": "yuksek"
+    },
+    {
+     "metin": "} spastisitede ortaya çıkar",
+     "hedef": "4: aşırı artmış, 5: klonus",
+     "guven": "yuksek"
+    }
+   ],
+   "isaretler": [],
+   "sinyal": [
+    "cikmis",
+    "el_onemli"
+   ],
+   "y25": {
+    "key": "y25-k2-05-norolojik-muayene",
+    "sayfa": 54
+   },
+   "y26": {
+    "key": "k2-05",
+    "sayfa": 54
+   },
+   "duzeltme": [],
+   "not_": null,
+   "ogrenci_sorulari": [
+    "noro-s11-b08",
+    "noro-s11-b10"
+   ],
+   "puan": 48,
+   "oncelik": "A",
+   "vurgulu": []
+  },
+  {
+   "id": "noro-s11-b07",
+   "pdf": "noro",
+   "sayfa": 11,
+   "bolge": "r1c3",
+   "tur": "slayt",
+   "baslik": "Serebellar sistem muayenesi bulguları",
+   "metin": "Ataksi\nDisartri\nHipotoni\nDismetri\nDisdiadokinezi",
+   "el_yazisi": [
+    {
+     "metin": "→ yaya yaya konuşma",
+     "hedef": "Disartri",
+     "guven": "orta",
+     "alternatif": "yazı net 'yaya yaya'; kastedilen muhtemelen 'yayvan, heceleri uzatarak (skandi) konuşma'"
+    },
+    {
+     "metin": "→ mesafenin, hızın veya hareket gücünün saptanamaması",
+     "hedef": "Dismetri",
+     "guven": "yuksek"
+    },
+    {
+     "metin": "→ ritmik hareketleri yapamaması",
+     "hedef": "Disdiadokinezi",
+     "guven": "yuksek"
+    }
+   ],
+   "isaretler": [],
+   "sinyal": [
+    "cikmis",
+    "el_onemli"
+   ],
+   "y25": {
+    "key": "y25-k2-05-norolojik-muayene",
+    "sayfa": 71
+   },
+   "y26": {
+    "key": "k2-05",
+    "sayfa": 71
+   },
+   "duzeltme": [],
+   "not_": null,
+   "puan": 48,
+   "oncelik": "A",
+   "vurgulu": []
+  },
+  {
+   "id": "noro-s11-b05",
+   "pdf": "noro",
+   "sayfa": 11,
+   "bolge": "r1c3",
+   "tur": "slayt",
+   "baslik": "Duyu muayenesinde terminoloji",
+   "metin": "Parestezi: Uyuşma, keçeleşme, karıncalanma, sızlama gibi görünür dış uyarım olmadan hissettiği duyum\nDizestezi: Ağrısız bir uyarıyla hoş olmayan ağrılı duyum algılanması\nHiperestezi: Uyarının normalden daha şiddetliymiş gibi hissedilmesi\nHipoestezi: Duyu azlığı\nAnestezi: Duyu yokluğu\nAllodini: Ağrı oluşturmayacak bir uyaran ile ağrı hissedilmesi",
+   "el_yazisi": [
+    {
+     "metin": "= pamukla dokunulduğunda acıması, uyurken nevresim değdiğinde aşırı ağrı hissetmek.",
+     "hedef": "Allodini",
+     "guven": "yuksek"
+    }
+   ],
+   "isaretler": [
+    {
+     "tur": "sari",
+     "hedef": "Parestezi, Dizestezi, Hiperestezi, Hipoestezi, Anestezi, Allodini terimleri"
+    },
+    {
+     "tur": "yildiz",
+     "hedef": "Allodini (iki kırmızı yıldız)"
+    }
+   ],
+   "sinyal": [
+    "el_onemli",
+    "sari",
+    "yildiz"
+   ],
+   "y25": {
+    "key": "y25-k2-05-norolojik-muayene",
+    "sayfa": 59
+   },
+   "y26": {
+    "key": "k2-05",
+    "sayfa": 59
+   },
+   "duzeltme": [],
+   "not_": null,
+   "puan": 33,
+   "oncelik": "B",
+   "vurgulu": [
+    "Allodini (iki kırmızı yıldız)",
+    "Parestezi, Dizestezi, Hiperestezi, Hipoestezi, Anestezi, Allodini terimleri"
+   ]
+  },
+  {
+   "id": "noro-s11-b01",
+   "pdf": "noro",
+   "sayfa": 11,
+   "bolge": "r1c1",
+   "tur": "slayt",
+   "baslik": "Kas kuvveti muayenesi (0-5)",
+   "metin": "5/5: Uygulanan kuvvete maksimum direnç gösterilir.\n4/5: Uygulanan kuvvete direnç gösterebilir.\n3/5: Uygulanan kuvvete direnç gösterilemez ancak yer çekimine direnç gösterilir.\n2/5: Yer çekimine direnç gösterilemez.\n1/5: Kasda gözle görülür bir hareket olmaz, dokunmayla kasılma hissedilebilir.\n0/5: Kasda gözle ve dokunma ile hiç hareket gözlenmez.",
+   "el_yazisi": [
+    {
+     "metin": "→ eklem hareketi yok",
+     "hedef": "1/5: Kasda gözle görülür bir hareket olmaz",
+     "guven": "yuksek"
+    },
+    {
+     "metin": "plejik",
+     "hedef": "0/5",
+     "guven": "yuksek"
+    }
+   ],
+   "isaretler": [
+    {
+     "tur": "yesil",
+     "hedef": "tüm tanımlar (soluk yeşil)"
+    }
+   ],
+   "sinyal": [
+    "el_onemli",
+    "sari"
+   ],
+   "y25": {
+    "key": "y25-k2-05-norolojik-muayene",
+    "sayfa": 44
+   },
+   "y26": {
+    "key": "k2-05",
+    "sayfa": 44
+   },
+   "duzeltme": [],
+   "not_": null,
+   "puan": 18,
+   "oncelik": "B",
+   "vurgulu": [
+    "tüm tanımlar (soluk yeşil)"
+   ]
+  },
+  {
+   "id": "noro-s12-b03",
+   "pdf": "noro",
+   "sayfa": 12,
+   "bolge": "r1c1",
+   "tur": "slayt",
+   "baslik": "N. Optikus hastalıkları: amorozis fugax, papil ödemi",
+   "metin": "Amorozis fugax\n–Tek gözde ani, geçici görme kaybı\n–Genelde karotid arterden kopan embolinin retinal arterleri tıkamasına bağlı (baş-boyun oskültasyonu!)\nPapil ödemi\n–Papilla kenarlarının ve damarın silikleşmesi, optik çukurun kaybolması, retinal venlerin kalınlaşması ve pulsasyonların kaybolması\n–KİBAS en sık rastlanan nedenidir",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "yesil",
+     "hedef": "Tek gözde ani, geçici görme kaybı; karotid arterden kopan embolinin retinal arterleri tıkamasına bağlı; papil ödemi bulguları; KİBAS en sık rastlanan"
+    }
+   ],
+   "sinyal": [
+    "sari"
+   ],
+   "y25": {
+    "key": "y25-k2-05-norolojik-muayene",
+    "sayfa": 19
+   },
+   "y26": {
+    "key": "k2-05",
+    "sayfa": 19
+   },
+   "duzeltme": [],
+   "not_": null,
+   "puan": 10,
+   "oncelik": "C",
+   "vurgulu": [
+    "Tek gözde ani, geçici görme kaybı; karotid arterden kopan embolinin retinal arterleri tıkamasına bağlı; papil ödemi bulguları; KİBAS en sık rastlanan"
+   ]
+  },
+  {
+   "id": "noro-s10-b01",
+   "pdf": "noro",
+   "sayfa": 10,
+   "bolge": "r1c1",
+   "tur": "slayt",
+   "baslik": "Sinir Sistemi: Fonksiyon (nörolojik muayene bileşenleri)",
+   "metin": "NÖROLOJİK MUAYENE (sayfa başlığı)\nSinir Sistemi: Fonksiyon\n- Mental Durum\n- Kraniyal Sinirler\n- Motor Sistem\n- Duyu Sistemi\n- Serebellar Sistem",
+   "el_yazisi": [
+    {
+     "metin": "uyanıklık düzeyi (konfüzyon, somnolans-letarji, stupor, koma)",
+     "hedef": "Mental Durum",
+     "guven": "yuksek"
+    },
+    {
+     "metin": "bellek (amnezi); deliryum aslında dikkat/bilinç içeriği bozukluğudur",
+     "hedef": "Mental Durum",
+     "guven": "yuksek"
+    },
+    {
+     "metin": "konuşma (disfazi, afazi, Broca, Wernicke)",
+     "hedef": "Mental Durum",
+     "guven": "yuksek"
+    },
+    {
+     "metin": "yürüyüş",
+     "hedef": "Motor Sistem",
+     "guven": "yuksek"
+    },
+    {
+     "metin": "kas kuvveti (0-5 arası puanlanır) lokalize etmek için muayene yapılır (1. motor nöron vb.) refleks muayenesi yapılır (0-5) → klonus",
+     "hedef": "Motor Sistem",
+     "guven": "yuksek",
+     "alternatif": "Refleks 0-5 ölçeği ders slaytıyla uyumlu: y26 k2-05 s54 'Refleks: 0 yok, 1 azalmış, 2 normal, 3 artmış, 4 aşırı artmış, 5 klonus' (klonus = 5)."
+    },
+    {
+     "metin": "tonus",
+     "hedef": "Motor Sistem",
+     "guven": "yuksek"
+    },
+    {
+     "metin": "trofik kusur",
+     "hedef": "Motor Sistem",
+     "guven": "yuksek"
+    },
+    {
+     "metin": "yüzeyel duyu muayenesi = dokunma, ağrı, sıcaklık",
+     "hedef": "Duyu Sistemi",
+     "guven": "yuksek"
+    },
+    {
+     "metin": "derin duyu muayenesi = pozisyon, pasif hareket, vibrasyon, Romberg (göz kapalı yapılır)",
+     "hedef": "Duyu Sistemi",
+     "guven": "yuksek"
+    },
+    {
+     "metin": "kortikal duyu muayenesi = stereognozi, iki nokta ayrımı, grafestezi, taktil lokalizasyon (beyin korteksinin algılanmasına bakılır)",
+     "hedef": "Duyu Sistemi",
+     "guven": "yuksek"
+    },
+    {
+     "metin": "koordinasyon = metrik muayene",
+     "hedef": "Serebellar Sistem",
+     "guven": "yuksek"
+    },
+    {
+     "metin": "denge",
+     "hedef": "Serebellar Sistem",
+     "guven": "yuksek"
+    },
+    {
+     "metin": "tonus",
+     "hedef": "Serebellar Sistem",
+     "guven": "yuksek"
+    }
+   ],
+   "isaretler": [
+    {
+     "tur": "ok",
+     "hedef": "her başlıktan el notlarına çatallanan oklar"
+    }
+   ],
+   "sinyal": [
+    "el_onemli"
+   ],
+   "y25": {
+    "key": "y25-k2-05-norolojik-muayene",
+    "sayfa": 3
+   },
+   "y26": {
+    "key": "k2-05",
+    "sayfa": 3
+   },
+   "duzeltme": [
+    {
+     "ham": "bellek (amnezi, deliryum)",
+     "dogru": "bellek (amnezi); deliryum aslında dikkat/bilinç içeriği bozukluğudur",
+     "gerekce": "Deliryum bellek bozukluğu değil akut dikkat-bilinç bozukluğudur; öğrenci notunda bellek altında sayılmış. Ders slaytının bu kısmı yalnız başlık; içeriğe aktarılırken 'mental durum' altında ayrı tutulmalı."
+    },
+    {
+     "ham": "sterognozi",
+     "dogru": "stereognozi",
+     "gerekce": "Yazım."
+    },
+    {
+     "ham": "metrik muayne",
+     "dogru": "metrik muayene (dismetri: parmak-burun, diz-topuk testi)",
+     "gerekce": "Yazım; serebellar koordinasyon testleri."
+    }
+   ],
+   "not_": null,
+   "puan": 8,
+   "oncelik": "C",
+   "vurgulu": []
+  },
+  {
+   "id": "noro-s11-b06",
+   "pdf": "noro",
+   "sayfa": 11,
+   "bolge": "r1c3",
+   "tur": "slayt",
+   "baslik": "Duyu muayenesi bulguları: agrafestezi, astereognozi",
+   "metin": "Agrafestezi\nAstereognozi",
+   "el_yazisi": [
+    {
+     "metin": "→ Eline yazılan yazıyı bilememesi",
+     "hedef": "Agrafestezi",
+     "guven": "yuksek"
+    },
+    {
+     "metin": "→ Eline verilen nesneyi bilememesi",
+     "hedef": "Astereognozi",
+     "guven": "yuksek"
+    }
+   ],
+   "isaretler": [],
+   "sinyal": [
+    "el_onemli"
+   ],
+   "y25": {
+    "key": "y25-k2-05-norolojik-muayene",
+    "sayfa": 65
+   },
+   "y26": {
+    "key": "k2-05",
+    "sayfa": 65
+   },
+   "duzeltme": [],
+   "not_": null,
+   "puan": 8,
+   "oncelik": "C",
+   "vurgulu": []
+  },
+  {
+   "id": "noro-s12-b07",
+   "pdf": "noro",
+   "sayfa": 12,
+   "bolge": "r1c2",
+   "tur": "slayt",
+   "baslik": "Trigeminal patolojik belirti ve bulgular",
+   "metin": "Patolojik belirti ve bulgular\n–Yüzde hipoestezi\n–Kornea refleksi kaybı\n–Trigeminal motor bozukluk\n–Trigeminal nevralji",
+   "el_yazisi": [],
+   "isaretler": [],
+   "sinyal": [],
+   "y25": {
+    "key": "y25-k2-05-norolojik-muayene",
+    "sayfa": 26
+   },
+   "y26": {
+    "key": "k2-05",
+    "sayfa": 26
+   },
+   "duzeltme": [],
+   "not_": null,
+   "puan": 0,
+   "oncelik": "C",
+   "vurgulu": []
+  }
+ ],
+ "ogrenci_sorulari": [
+  {
+   "id": "noro-s11-b08",
+   "pdf": "noro",
+   "sayfa": 11,
+   "bolge": "r2c3",
+   "tur": "cikmis_soru",
+   "baslik": "İntensiyonel tremor",
+   "metin": "Nörolojik muayenede hedefe yaklaşırken üst ekstremitede ortaya çıkan tremor aşağıdakilerden hangisidir? 1 statik tremor 2 aksiyon tremor 3 intensiyonel tremor ✓ 4 postural tremor 5 fasikülasyon",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "pembe",
+     "hedef": "soru bloğu; 3 intensiyonel tremor ayrıca pembe vurgulu"
+    }
+   ],
+   "sinyal": [
+    "cikmis"
+   ],
+   "y25": {
+    "key": "y25-k2-05-norolojik-muayene",
+    "sayfa": 71
+   },
+   "y26": {
+    "key": "k2-05",
+    "sayfa": 71
+   },
+   "duzeltme": [],
+   "not_": null,
+   "cikmis": {
+    "kok": "Nörolojik muayenede hedefe yaklaşırken üst ekstremitede ortaya çıkan tremor aşağıdakilerden hangisidir?",
+    "siklar": [
+     "1) statik tremor",
+     "2) aksiyon tremor",
+     "3) intensiyonel tremor",
+     "4) postural tremor",
+     "5) fasikülasyon"
+    ],
+    "ogrenci_cevap": "3",
+    "banka_id": "6b9bfe744edf",
+    "banka_yil": "2020-2021",
+    "banka_dogru": "C) İntensiyonel tremor",
+    "tutarli": true,
+    "not": "Serebellar bulgu; serebellar slayt s71'de tremor maddesi yok, öğrenci serebellar bloğun altına koymuş."
+   },
+   "bagli_birim": "noro-s11-b04",
+   "benzerlik": 0.588
+  },
+  {
+   "id": "noro-s11-b09",
+   "pdf": "noro",
+   "sayfa": 11,
+   "bolge": "r2c3",
+   "tur": "cikmis_soru",
+   "baslik": "Kas kuvveti dağılımından hemiparezi",
+   "metin": "Sağ omuz abduksiyonunda 3/5, adduksiyonunda 4/5, dirsek fleksiyonunda 3/5, ekstansiyonunda 2/5, el bileği ve parmak hareketleri 0/5, sağ bacak 4/5, sol vücut yarısı kas gücü normal olan hastada düşünceniz aşağıdakilerden hangisi olur? 1 sol hemiparezi 2 sağ hemiparezi 3 sağ pleksopati 4 beyin sapı felci 5 sol serebellar enfarkt",
+   "el_yazisi": [
+    {
+     "metin": "→ vücudun sadece sağ yarımı güçsüz",
+     "hedef": "2 sağ hemiparezi",
+     "guven": "yuksek"
+    }
+   ],
+   "isaretler": [
+    {
+     "tur": "pembe",
+     "hedef": "soru bloğu; 2 sağ hemiparezi pembe vurgulu"
+    },
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "sol vücut yarısı kas gücü normal"
+    }
+   ],
+   "sinyal": [
+    "cikmis"
+   ],
+   "y25": {
+    "key": "y25-k2-05-norolojik-muayene",
+    "sayfa": 44
+   },
+   "y26": {
+    "key": "k2-05",
+    "sayfa": 44
+   },
+   "duzeltme": [],
+   "not_": null,
+   "cikmis": {
+    "kok": "Sağ omuz abduksiyonunda 3/5, adduksiyonunda 4/5, dirsek fleksiyonunda 3/5, ekstansiyonunda 2/5, el bileği ve parmak hareketleri 0/5, sağ bacak 4/5, sol vücut yarısı kas gücü normal olan hastada düşünceniz aşağıdakilerden hangisi olur?",
+    "siklar": [
+     "1) sol hemiparezi",
+     "2) sağ hemiparezi",
+     "3) sağ pleksopati",
+     "4) beyin sapı felci",
+     "5) sol serebellar enfarkt"
+    ],
+    "ogrenci_cevap": "2",
+    "banka_id": "",
+    "banka_yil": "",
+    "banka_dogru": "",
+    "tutarli": true,
+    "not": "Bankada bulunamadı. Cevap tıbben uygun (sağ kol + sağ bacak zaafı = sağ hemiparezi)."
+   },
+   "bagli_birim": "noro-s11-b02",
+   "benzerlik": 0.641
+  },
+  {
+   "id": "noro-s11-b10",
+   "pdf": "noro",
+   "sayfa": 11,
+   "bolge": "r2c3",
+   "tur": "cikmis_soru",
+   "baslik": "Patolojik refleks – 1. motor nöron",
+   "metin": "26) Patolojik reflekslerin oluşumu - 1.motor nöron",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "pembe",
+     "hedef": "satır"
+    }
+   ],
+   "sinyal": [
+    "cikmis"
+   ],
+   "y25": {
+    "key": "y25-k2-05-norolojik-muayene",
+    "sayfa": 52
+   },
+   "y26": {
+    "key": "k2-05",
+    "sayfa": 52
+   },
+   "duzeltme": [],
+   "not_": null,
+   "cikmis": {
+    "kok": "Patolojik reflekslerin oluşumu hangi lezyonda görülür?",
+    "siklar": [],
+    "ogrenci_cevap": "1. motor nöron",
+    "banka_id": "",
+    "banka_yil": "",
+    "banka_dogru": "",
+    "tutarli": true,
+    "not": "Yalnız 'soru - cevap' biçiminde. Birebir bulunamadı; en yakın d3-k2-nor-008 (2021-2026, Babinski/klonus/spastisite → A Birinci motor nöron)."
+   },
+   "bagli_birim": "noro-s11-b04",
+   "benzerlik": 0.537
+  },
+  {
+   "id": "noro-s11-b11",
+   "pdf": "noro",
+   "sayfa": 11,
+   "bolge": "r2c3",
+   "tur": "cikmis_soru",
+   "baslik": "Rijidite",
+   "metin": "Agonist ve antagonist kasların ikisinde de oluşan tonusa ne denir? Rijidite",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "pembe",
+     "hedef": "soru-cevap satırı"
+    }
+   ],
+   "sinyal": [
+    "cikmis"
+   ],
+   "y25": {
+    "key": "y25-k2-05-norolojik-muayene",
+    "sayfa": 50
+   },
+   "y26": {
+    "key": "k2-05",
+    "sayfa": 50
+   },
+   "duzeltme": [],
+   "not_": null,
+   "cikmis": {
+    "kok": "Agonist ve antagonist kasların ikisinde de oluşan tonusa ne denir?",
+    "siklar": [],
+    "ogrenci_cevap": "Rijidite",
+    "banka_id": "q-No_ropsikiyatri_gis_kardiyo_-2023-2024-C__km_s_lar__240625_053302__2_-31",
+    "banka_yil": "2023",
+    "banka_dogru": "B) Rijidite",
+    "tutarli": true,
+    "not": "Bankada şıklı (Spastisite/Rijidite/Hipotoni/Klonus/Miyotoni), isPastExam işaretsiz; ara.py banka bulamadı, doğrudan aramayla bulundu."
+   },
+   "bagli_birim": "noro-s11-b03",
+   "benzerlik": 0.543
+  }
+ ],
+ "banka": [
+  {
+   "id": "74bf290256d5",
+   "ders": "k2-05",
+   "yillar": [
+    "2020-2021"
+   ],
+   "kok": "FTR\nFTR\nALT MOTOR NORON\nHASTALIKLARI VE\nEGZERSİZ\nSol hemisfer 44.\nalan lezyonunda\nşağıdakilerden\nhangisi görülür?",
+   "dogru": "Wernicke afazisi",
+   "kopyalar": [],
+   "birim": "noro-s11-b02",
+   "benzerlik": 0.553,
+   "kapsandi": false,
+   "notta_yapistirilmis": false
+  },
+  {
+   "id": "30b371334ad5",
+   "ders": "k2-05",
+   "yillar": [
+    "2020-2021"
+   ],
+   "kok": "Sol hemisferde Brodmann 44. alan lezyonunda aşağıdakilerden hangisi görülür?",
+   "dogru": "Broca afazisi",
+   "kopyalar": [],
+   "birim": "noro-s12-b03",
+   "benzerlik": 0.441,
+   "kapsandi": false,
+   "notta_yapistirilmis": false
+  },
+  {
+   "id": "6b9bfe744edf",
+   "ders": "k2-05",
+   "yillar": [
+    "2020-2021"
+   ],
+   "kok": "Muayenede hedefe yaklaşırken üst ekstremitede ortaya çıkan tremor aşağıdakilerden hangisidir?",
+   "dogru": "İntensiyonel tremor",
+   "kopyalar": [],
+   "birim": "noro-s11-b02",
+   "benzerlik": 0.492,
+   "kapsandi": false,
+   "notta_yapistirilmis": true
+  },
+  {
+   "id": "0f22135ceaf2",
+   "ders": "k2-05",
+   "yillar": [
+    "2020-2021"
+   ],
+   "kok": "Dominant parietal lob lezyonlarında agrafi, akalküli, sağ-sol ayrımı bozukluğu ve parmak agnozisi ile karakterize tablo aşağıdakilerden hangisidir?",
+   "dogru": "Gerstmann sendromu",
+   "kopyalar": [],
+   "birim": "noro-s11-b02",
+   "benzerlik": 0.521,
+   "kapsandi": false,
+   "notta_yapistirilmis": false
+  },
+  {
+   "id": "9d2e0b3d81c4",
+   "ders": "k2-05",
+   "yillar": [
+    "2020-2021"
+   ],
+   "kok": "Muayenede sağ vücut yarımında güçsüzlük ve derin tendon reflekslerinde artış saptadığınız hastada lezyon hangisinde olamaz?",
+   "dogru": "Dorsal spinal kord",
+   "kopyalar": [],
+   "birim": "noro-s11-b03",
+   "benzerlik": 0.573,
+   "kapsandi": false,
+   "notta_yapistirilmis": true
+  },
+  {
+   "id": "past-1790877481395-897652",
+   "ders": "k2-05",
+   "yillar": [
+    "2020-2021"
+   ],
+   "kok": "Serebellumdaki bir lezyonda nistagmus belirgin bir bulgu ise bu lezyon nerededir?",
+   "dogru": "Flokkülonodüler lob",
+   "kopyalar": [],
+   "birim": "noro-s11-b03",
+   "benzerlik": 0.523,
+   "kapsandi": false,
+   "notta_yapistirilmis": false
+  },
+  {
+   "id": "past-1790877481517-691074",
+   "ders": "k2-05",
+   "yillar": [
+    "2020-2021"
+   ],
+   "kok": "Okuduklarını anlayamama ile karakterize beyin lezyonu hangi durumda görülür?",
+   "dogru": "Angular gyrus lezyonu",
+   "kopyalar": [],
+   "birim": "noro-s11-b06",
+   "benzerlik": 0.587,
+   "kapsandi": false,
+   "notta_yapistirilmis": false
+  },
+  {
+   "id": "past-1790877037327-292692",
+   "ders": "k2-05",
+   "yillar": [
+    "2020-2021"
+   ],
+   "kok": "Aşil refleksi ile hangi kök seviyesi incelenebilir?",
+   "dogru": "S1",
+   "kopyalar": [],
+   "birim": "noro-s11-b04",
+   "benzerlik": 0.536,
+   "kapsandi": false,
+   "notta_yapistirilmis": false
+  },
+  {
+   "id": "q-No_ropsikiyatri_gis_kardiyo_-2023-2024-C__km_s_lar__240625_053302__2_-31",
+   "ders": "k2-05",
+   "yillar": [
+    "2023"
+   ],
+   "kok": "Agonist ve antagonist kasların ikisinde de tonusun arttığı duruma ne ad verilir?",
+   "dogru": "Rijidite",
+   "kopyalar": [],
+   "birim": "noro-s11-b02",
+   "benzerlik": 0.554,
+   "kapsandi": false,
+   "notta_yapistirilmis": true
+  },
+  {
+   "id": "past-1790877501958-29341",
+   "ders": "k2-05",
+   "yillar": [
+    "2020-2021"
+   ],
+   "kok": "Hangi serebellar nükleustan motor kortekse ve beyin sapı medial sistemine proksimal kasları kontrol edici lifler gider?",
+   "dogru": "Nucleus fastigii",
+   "kopyalar": [],
+   "birim": "noro-s10-b01",
+   "benzerlik": 0.528,
+   "kapsandi": false,
+   "notta_yapistirilmis": false
+  },
+  {
+   "id": "past-1790877479725-612842",
+   "ders": "k2-05",
+   "yillar": [
+    "2020-2021"
+   ],
+   "kok": "Cerebellum çekirdeklerinden hangisi neocerebellum ile ilgili fonksiyona sahiptir?",
+   "dogru": "Nucleus dentatus",
+   "kopyalar": [],
+   "birim": "noro-s10-b01",
+   "benzerlik": 0.475,
+   "kapsandi": false,
+   "notta_yapistirilmis": false
+  },
+  {
+   "id": "past-1790877482213-726807",
+   "ders": "k2-05",
+   "yillar": [
+    "2020-2021"
+   ],
+   "kok": "Gözler kapalıyken eline aldığı cismi tanıyamama (astereognozi) hangi kortikal alanın lezyonunda görülür?",
+   "dogru": "Postsentral girus",
+   "kopyalar": [],
+   "birim": "noro-s11-b06",
+   "benzerlik": 0.586,
+   "kapsandi": false,
+   "notta_yapistirilmis": false
+  },
+  {
+   "id": "past-1790877482441-659030",
+   "ders": "k2-05",
+   "yillar": [
+    "2020-2021"
+   ],
+   "kok": "İletim tipi afazi hangi bölgenin lezyonunda görülür?",
+   "dogru": "Fasciculus arcuatus",
+   "kopyalar": [],
+   "birim": "noro-s12-b03",
+   "benzerlik": 0.54,
+   "kapsandi": false,
+   "notta_yapistirilmis": false
+  },
+  {
+   "id": "past-1790877482783-460598",
+   "ders": "k2-05",
+   "yillar": [
+    "2020-2021"
+   ],
+   "kok": "Cerebellumun derin çekirdeklerinden hangisi beyin sapındaki vestibüler çekirdeklerle doğrudan bağlantılıdır?",
+   "dogru": "Nucleus fastigii",
+   "kopyalar": [],
+   "birim": "noro-s10-b01",
+   "benzerlik": 0.446,
+   "kapsandi": false,
+   "notta_yapistirilmis": false
+  },
+  {
+   "id": "past-1790877495334-731931",
+   "ders": "k2-05",
+   "yillar": [
+    "2020-2021"
+   ],
+   "kok": "Brodmann'ın hangi alanının lezyonunda baş ve gözler istenen yöne çevrilemez?",
+   "dogru": "Alan 8",
+   "kopyalar": [],
+   "birim": "noro-s12-b03",
+   "benzerlik": 0.476,
+   "kapsandi": false,
+   "notta_yapistirilmis": false
+  }
+ ]
+}

@@ -1,0 +1,355 @@
+{
+ "ders": "k2-49",
+ "kod": "2s15",
+ "brans": "Psikiyatri",
+ "konu": "Dikkat Eksikliği Hiperaktivite Bozukluğu",
+ "kaynak": "Geçmiş yıl (2025-26) öğrenci derleme notu: psk3.2",
+ "y25": {
+  "key": "y25-k2-49-dikkat-eksikligi-hiperaktivite-bozuklugu",
+  "sayfalar": [
+   3,
+   16,
+   26
+  ]
+ },
+ "sayac": {
+  "birim": 3,
+  "A": 2,
+  "B": 1,
+  "C": 0,
+  "ogrenci_sorusu": 2,
+  "banka": 4,
+  "banka_kapsandi": 4
+ },
+ "birimler": [
+  {
+   "id": "psk-s19-b04",
+   "pdf": "psk",
+   "sayfa": 19,
+   "bolge": "r2c1",
+   "tur": "slayt",
+   "baslik": "DEHB – okul öncesi, okul çağı, ergenlik, erişkinlik",
+   "metin": "Okul öncesi dönemde DEHB'li çocuklar için sıklıkla aşırı hareketlilik, dürtüsellik ve dikkat sorunları ile ilişkili olan agresif davranışlar, öfke nöbetleri, karşıt gelme davranışları, zayıf akran ilişkileri, konuşma gecikmesi ya da konuşma bozuklukları gibi sorunlar nedeniyle çocuk psikiyatrisi kliniklerine başvurulur.\n[s18] Çocuklarda DEHB'nın fark edilmesi ve tanınması daha çok okul döneminde olmaktadır. Bunun en önemli nedeni DEHB'nın büyük ölçüde okul ortamında akademik başarı ve sosyal uyum için gerekli olan alanları etkilemesidir.\nDikkat eksikliği hiperaktivite bozukluğu tanısı için en az iki ortamda (belirtiler olmalıdır).\n[s19] Okul çağında DEHB tanılı çocukların akademik işlevselliklerinin daha fazla bozulduğu, okul başarılarının daha düşük olduğu ve daha fazla olasılıkla sınıf (tekrarı…).\nErgenlik döneminde dürtüsel davranışlarda artış gözlenmektedir.\n[s24] Dünya sağlık örgütü tarafından 10 ülkede yapılan ve 18-44 yaş arası çalışan kesimi kapsayan bir çalışma, çocuklukta DEHB tanılı bireylerin en az %50'sinin yetişkinlikte de bu tanıyı aldığını bildirmiştir.",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "DEHB'li çocuklar için sıklıkla aşırı hareketlilik, dürtüsellik ve dikkat sorunları"
+    },
+    {
+     "tur": "sari",
+     "hedef": "Çocuklarda DEHB'nın fark edilmesi ve tanınması daha çok okul döneminde olmaktadır… en önemli nedeni DEHB'nın büyük ölçüde okul ortamında akademik başarı ve sosyal uyum için gerekli olan alanları etkilemesidir"
+    },
+    {
+     "tur": "sari",
+     "hedef": "tanısı için en az iki ortamda"
+    },
+    {
+     "tur": "sari",
+     "hedef": "Okul çağında DEHB tanılı çocukların akademik işlevselliklerinin daha fazla bozulduğu"
+    },
+    {
+     "tur": "sari",
+     "hedef": "Ergenlik döneminde dürtüsel davranışlarda artış gözlenmektedir"
+    },
+    {
+     "tur": "sari",
+     "hedef": "çocuklukta DEHB tanılı bireylerin en az %50'sinin yetişkinlikte de bu tanıyı aldığı"
+    }
+   ],
+   "sinyal": [
+    "cikmis",
+    "sari"
+   ],
+   "y25": {
+    "key": "y25-k2-49-dikkat-eksikligi-hiperaktivite-bozuklugu",
+    "sayfa": 16
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "ogrenci_sorulari": [
+    "psk-s19-b01",
+    "psk-s19-b02"
+   ],
+   "banka_cikmis": [
+    "d3-k2-psi-009",
+    "past-1790877044917-805273",
+    "q-25-26_d_nem_3_kurul_2-91"
+   ],
+   "puan": 90,
+   "oncelik": "A",
+   "vurgulu": [
+    "DEHB'li çocuklar için sıklıkla aşırı hareketlilik, dürtüsellik ve dikkat sorunları",
+    "Ergenlik döneminde dürtüsel davranışlarda artış gözlenmektedir",
+    "Okul çağında DEHB tanılı çocukların akademik işlevselliklerinin daha fazla bozulduğu",
+    "tanısı için en az iki ortamda",
+    "Çocuklarda DEHB'nın fark edilmesi ve tanınması daha çok okul döneminde olmaktadır… en önemli nedeni DEHB'nın büyük ölçüde okul ortamında akademik başarı ve sosyal uyum için gerekli olan alanları etkilemesidir",
+    "çocuklukta DEHB tanılı bireylerin en az %50'sinin yetişkinlikte de bu tanıyı aldığı"
+   ]
+  },
+  {
+   "id": "psk-s19-b05",
+   "pdf": "psk",
+   "sayfa": 19,
+   "bolge": "r2c1",
+   "tur": "slayt",
+   "baslik": "DEHB tedavisi – stimülanlar",
+   "metin": "Dikkat eksikliği hiperaktivite bozukluğunun tedavisinde en sık kullanılan ilaç grubu stimulanlardır.\nBu grupta yer alan ilaçlar metilfenidat ve amfetaminler olmak üzere iki grupta yer alır.\nStimülanlar arasında çok araştırılmış olanı ve ilk tedavi seçeneği olarak tercih edileni metilfenidattır (Ritalin®, Concerta® ve Medikinet Retard®).",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "sari",
+     "hedef": "Bu grupta yer alan ilaçlar metilfenidat ve amfetaminler olmak üzere"
+    },
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "metilfenidat / amfetaminler"
+    },
+    {
+     "tur": "sari",
+     "hedef": "Stimülanlar arasında çok araştırılmış olanı ve ilk tedavi seçeneği olarak tercih edileni metilfenidattır"
+    }
+   ],
+   "sinyal": [
+    "sari"
+   ],
+   "y25": {
+    "key": "y25-k2-49-dikkat-eksikligi-hiperaktivite-bozuklugu",
+    "sayfa": 26
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "banka_cikmis": [
+    "past-1790877035993-404325"
+   ],
+   "puan": 40,
+   "oncelik": "A",
+   "vurgulu": [
+    "Bu grupta yer alan ilaçlar metilfenidat ve amfetaminler olmak üzere",
+    "Stimülanlar arasında çok araştırılmış olanı ve ilk tedavi seçeneği olarak tercih edileni metilfenidattır",
+    "metilfenidat / amfetaminler"
+   ]
+  },
+  {
+   "id": "psk-s19-b03",
+   "pdf": "psk",
+   "sayfa": 19,
+   "bolge": "r1c1+r2c1",
+   "tur": "slayt",
+   "baslik": "DEHB – görünümler, alt tip sıklığı, genetik",
+   "metin": "Kişide hem dikkat eksikliği hem hiperaktivite varsa bu duruma dikkat eksikliği hiperaktivite bozukluğu - bileşik görünüm,\nKişide sadece dikkat eksikliği var ama hiperaktivite yoksa dikkat eksikliği alt görünümü\nKişide sadece aşırı hareketlilik var ama dikkat eksikliği yoksa hiperaktivite alt görünüm\n[s05] Yapılan araştırmaların çoğunda DEHB dikkat eksikliği baskın tipin diğer alt tiplere oranla daha sık görüldüğü; dikkat eksikliği baskın tipi sırasıyla DEHB kombine tip ve hiperaktivite-impulsivite baskın tipin izlediği saptanmıştır.\n[s07] DEHB tıpta en yüksek genetik geçişe sahip olan bozukluklardandır.\n[s06] Etiyolojisinde en temel rolü genetik etkenlerin oynadığı (ve DEHB'nın güçlü genetik geçişe sahip bir bozukluk olduğunu göstermektedir).",
+   "el_yazisi": [
+    {
+     "metin": "en az 6 ay!!",
+     "hedef": "DEHB görünümleri / tanı süresi (alt tip cümlesinin üstünde)",
+     "guven": "yuksek",
+     "alternatif": "'en az b ay' gibi görünüyor; DSM-5 DEHB ölçütü en az 6 ay"
+    }
+   ],
+   "isaretler": [
+    {
+     "tur": "sari",
+     "hedef": "DEHB dikkat eksikliği baskın tipin diğer alt tiplere oranla daha sık görüldüğü; dikkat eksikliği baskın tipi sırasıyla DEHB kombine tip ve hiperaktivite-impulsivite baskın tipin izlediği saptanmıştır"
+    },
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "aynı cümle (alt sıralama)"
+    },
+    {
+     "tur": "sari",
+     "hedef": "DEHB tıpta en yüksek genetik geçişe sahip olan bozukluklardandır"
+    },
+    {
+     "tur": "sari",
+     "hedef": "Etiyolojisinde en temel rolü genetik etkenlerin oynadığı"
+    }
+   ],
+   "sinyal": [
+    "el_onemli",
+    "sari"
+   ],
+   "y25": {
+    "key": "y25-k2-49-dikkat-eksikligi-hiperaktivite-bozuklugu",
+    "sayfa": 3
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "puan": 18,
+   "oncelik": "B",
+   "vurgulu": [
+    "DEHB dikkat eksikliği baskın tipin diğer alt tiplere oranla daha sık görüldüğü; dikkat eksikliği baskın tipi sırasıyla DEHB kombine tip ve hiperaktivite-impulsivite baskın tipin izlediği saptanmıştır",
+    "DEHB tıpta en yüksek genetik geçişe sahip olan bozukluklardandır",
+    "Etiyolojisinde en temel rolü genetik etkenlerin oynadığı",
+    "aynı cümle (alt sıralama)"
+   ]
+  }
+ ],
+ "ogrenci_sorulari": [
+  {
+   "id": "psk-s19-b01",
+   "pdf": "psk",
+   "sayfa": 19,
+   "bolge": "r1c1",
+   "tur": "cikmis_soru",
+   "baslik": "DEHB için söylenemeyen",
+   "metin": "58. Dikkat eksikliği ve hiperaktivite bozukluğu (DEHB) için aşağıdakilerden hangisi söylenemez?",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "pembe",
+     "hedef": "tüm soru bloğu"
+    },
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "c şıkkı kırmızı yazıyla (cevap)"
+    }
+   ],
+   "sinyal": [
+    "cikmis",
+    "tekrar"
+   ],
+   "y25": {
+    "key": "y25-k2-49-dikkat-eksikligi-hiperaktivite-bozuklugu",
+    "sayfa": 18
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "cikmis": {
+    "kok": "58. Dikkat eksikliği ve hiperaktivite bozukluğu (DEHB) için aşağıdakilerden hangisi söylenemez?",
+    "siklar": [
+     "a. Çocukken tanı alan kişilerde erişkin döneminde de devam edebilir",
+     "b. Sık sık eşyalarını kaybetme",
+     "c. Okul yaşamını etkilemez",
+     "d. Kendi öz saygısında düşüklük",
+     "e. Sigara ve madde kullanımı normallerden daha fazla olması"
+    ],
+    "ogrenci_cevap": "C",
+    "banka_id": "past-1790877044917-805273",
+    "banka_yil": "2021-2022",
+    "banka_dogru": "C",
+    "tutarli": true,
+    "not": "Slayt s18: DEHB'nin fark edilmesi daha çok okul döneminde, çünkü büyük ölçüde okul ortamında akademik başarıyı etkiler."
+   },
+   "bagli_birim": "psk-s19-b04",
+   "benzerlik": 0.766
+  },
+  {
+   "id": "psk-s19-b02",
+   "pdf": "psk",
+   "sayfa": 19,
+   "bolge": "r1c1",
+   "tur": "cikmis_soru",
+   "baslik": "DEHB için yanlış olan",
+   "metin": "80. DEHB için aşağıdakilerden hangisi yanlıştır?",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "pembe",
+     "hedef": "gri fotoğraflı sorunun üstü pembe"
+    },
+    {
+     "tur": "daire",
+     "hedef": "c şıkkı harfi (kırmızı çember)"
+    }
+   ],
+   "sinyal": [
+    "cikmis",
+    "tekrar"
+   ],
+   "y25": {
+    "key": "y25-k2-49-dikkat-eksikligi-hiperaktivite-bozuklugu",
+    "sayfa": 24
+   },
+   "y26": null,
+   "duzeltme": [
+    {
+     "ham": "DEHB için hangisi aşağıdakilerden hangisi yanlıştır?",
+     "dogru": "DEHB için aşağıdakilerden hangisi yanlıştır?",
+     "gerekce": "Basılı soruda tekrar eden sözcük."
+    }
+   ],
+   "not_": null,
+   "cikmis": {
+    "kok": "80. DEHB için aşağıdakilerden hangisi yanlıştır?",
+    "siklar": [
+     "a. Akademik başarısızlık",
+     "b. Sık sık eşyalarını kaybetme",
+     "c. Çocukken tanı alan kişilerde büyük olasılıkla erişkin döneminde düzelir",
+     "d. Kendi öz saygısında düşüklük",
+     "e. Sigara ve madde kullanımı normallerden daha fazla olması"
+    ],
+    "ogrenci_cevap": "C",
+    "banka_id": "final-2018-2019-q080",
+    "banka_yil": "2018-2019 (final)",
+    "banka_dogru": "C",
+    "tutarli": true,
+    "not": "Slayt s24: çocuklukta DEHB tanılı bireylerin en az %50'si yetişkinlikte de tanı alır. Kökte basım hatası: 'hangisi aşağıdakilerden hangisi'."
+   },
+   "bagli_birim": "psk-s19-b04",
+   "benzerlik": 0.712
+  }
+ ],
+ "banka": [
+  {
+   "id": "d3-k2-psi-009",
+   "ders": "k2-49",
+   "yillar": [
+    "2021-2026"
+   ],
+   "kok": "Dikkat Eksikliği Hiperaktivite Bozukluğu (DEHB) tanısı için DSM-5 ölçütlerine göre dikkatsizlik veya hiperaktivite/dürtüsellik belirtileri hangi ortam koşulunu karşılamalıdır?",
+   "dogru": "En az 2 ortamda",
+   "kopyalar": [],
+   "birim": "psk-s19-b04",
+   "benzerlik": 0.762,
+   "kapsandi": true,
+   "notta_yapistirilmis": false
+  },
+  {
+   "id": "past-1790877035993-404325",
+   "ders": "k2-49",
+   "yillar": [
+    "Geçmiş Yıllar Çıkmışı (Arşiv)",
+    "2024-2025"
+   ],
+   "kok": "Aşağıdakilerden hangisi dikkat eksikliği ve hiperaktivite bozukluğu (DEHB) tedavisinde kullanılan ilaçlardan biri değildir?",
+   "dogru": "Naltrekson",
+   "kopyalar": [],
+   "birim": "psk-s19-b05",
+   "benzerlik": 0.642,
+   "kapsandi": true,
+   "notta_yapistirilmis": false
+  },
+  {
+   "id": "past-1790877044917-805273",
+   "ders": "k2-49",
+   "yillar": [
+    "2021-2022"
+   ],
+   "kok": "Dikkat eksikliği ve hiperaktivite bozukluğu (DEHB) için aşağıdakilerden hangisi söylenemez?",
+   "dogru": "Okul yaşamını etkilemez",
+   "kopyalar": [],
+   "birim": "psk-s19-b04",
+   "benzerlik": 0.659,
+   "kapsandi": true,
+   "notta_yapistirilmis": true
+  },
+  {
+   "id": "q-25-26_d_nem_3_kurul_2-91",
+   "ders": "k2-49",
+   "yillar": [
+    "2025-2026"
+   ],
+   "kok": "Dikkat eksikliği ve hiperaktivite bozukluğu (DEHB) tanısı için aşağıdakilerden hangisi doğrudur?",
+   "dogru": "Belirtilerin bir kısmının 12 yaşından önce başlaması ve en az iki farklı ortamda (ör. ev ve okul) görülmesi gerekir",
+   "kopyalar": [],
+   "birim": "psk-s19-b04",
+   "benzerlik": 0.8,
+   "kapsandi": true,
+   "notta_yapistirilmis": false
+  }
+ ]
+}

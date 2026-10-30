@@ -1,0 +1,1219 @@
+{
+ "ders": "k2-11",
+ "kod": "2s01",
+ "brans": "Psikiyatri",
+ "konu": "Psikiyatrik Semiyoloji",
+ "kaynak": "Geçmiş yıl (2025-26) öğrenci derleme notu: psk3.2",
+ "y25": {
+  "key": "y25-k2-11-psikiyatrik-semiyoloji",
+  "sayfalar": [
+   3,
+   7,
+   8,
+   10,
+   13,
+   16,
+   18,
+   20,
+   21,
+   24,
+   27,
+   30,
+   32,
+   35,
+   37,
+   38,
+   39,
+   40
+  ]
+ },
+ "sayac": {
+  "birim": 19,
+  "A": 7,
+  "B": 6,
+  "C": 6,
+  "ogrenci_sorusu": 4,
+  "banka": 6,
+  "banka_kapsandi": 4
+ },
+ "birimler": [
+  {
+   "id": "psk-s08-b05",
+   "pdf": "psk",
+   "sayfa": 8,
+   "bolge": "r2c1",
+   "tur": "el_yazisi",
+   "baslik": "Algı – halüsinasyon (elementer, hipnagojik/hipnopompik), illüzyon",
+   "metin": "",
+   "el_yazisi": [
+    {
+     "metin": "→ halüsinasyon - tek duyuya ait olanlar = elementer / basit. normal popülasyonda rastlanabilir.",
+     "hedef": "5) Algı – elementer/basit halüsinasyon normal popülasyonda rastlanabilir (y25 s18)",
+     "guven": "yuksek",
+     "alternatif": ""
+    },
+    {
+     "metin": "uykuya dalarken (hipnagojik) / uyanırken (hipnopompik) ise birden çok duyuylaysa (bile) psikotik kabul edilmez.",
+     "hedef": "Hipnagojik/hipnopompik halüsinasyonlar uzun ve birden fazla duyuyla ilgili olsalar da psikotik kabul edilmez (y25 s18)",
+     "guven": "yuksek",
+     "alternatif": "'duyuylaysa' = 'duyuyla ilgili olsa da'"
+    },
+    {
+     "metin": "ilüzyon = uyarıların yanlış yorumlanması.",
+     "hedef": "İlüzyonlar (y25 s20)",
+     "guven": "yuksek",
+     "alternatif": ""
+    }
+   ],
+   "isaretler": [
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "kabul edilmez"
+    },
+    {
+     "tur": "pembe",
+     "hedef": "ilüzyon = uyaranların yanlış yorumlanması."
+    }
+   ],
+   "sinyal": [
+    "cikmis",
+    "el_onemli",
+    "sari",
+    "tekrar"
+   ],
+   "y25": {
+    "key": "y25-k2-11-psikiyatrik-semiyoloji",
+    "sayfa": 18
+   },
+   "y26": null,
+   "duzeltme": [
+    {
+     "ham": "hipnogojik",
+     "dogru": "hipnagojik",
+     "gerekce": "Tıbbi yazım 'hipnagojik' (slayt da 'hipnogojik' yazmış)"
+    },
+    {
+     "ham": "toplumda sık ve normal",
+     "dogru": "normal popülasyonda rastlanabilir",
+     "gerekce": "y25 s18 'sık' demiyor, 'rastlanabilir' diyor; aşırı genelleme"
+    },
+    {
+     "ham": "birden çok duyuylaysa psikotik kabul edilmez",
+     "dogru": "uzun ve birden fazla duyu ile ilgili (kompleks) olsalar da psikotik kabul edilmez",
+     "gerekce": "y25 s18; el yazısındaki 'ise' koşul gibi okunuyor, anlamı 'olsa bile'"
+    }
+   ],
+   "not_": null,
+   "ogrenci_sorulari": [
+    "psk-s07-b11"
+   ],
+   "puan": 68,
+   "oncelik": "A",
+   "vurgulu": [
+    "ilüzyon = uyaranların yanlış yorumlanması.",
+    "kabul edilmez"
+   ]
+  },
+  {
+   "id": "psk-s07-b06",
+   "pdf": "psk",
+   "sayfa": 7,
+   "bolge": "r1c2",
+   "tur": "slayt",
+   "baslik": "Düşünce Akışındaki Değişiklikler – Çağrışım artması, azalması, sapmaları",
+   "metin": "Psikiyatrik Semiyoloji\nDüşünce\n1. Düşünce Akışındaki Değişiklikler\nÇağrışım\na) Çağrışım Artması\nb) Çağrışım Azalması\nc) Çağrışım Sapmaları",
+   "el_yazisi": [
+    {
+     "metin": "Çağrışım artması → basınçlı konuşma, → ayrıntıcı konuşma, → lögore = konuşma miktarı ↑",
+     "hedef": "a) Çağrışım Artması (y25 s23)",
+     "guven": "yuksek",
+     "alternatif": ""
+    },
+    {
+     "metin": "Çağrışım azalması → çağrışım yavaşlaması, → blokaj",
+     "hedef": "b) Çağrışım Azalması (y25 s24)",
+     "guven": "yuksek",
+     "alternatif": ""
+    },
+    {
+     "metin": "Çağrışım sapmaları → neolojizm = yeni kelime uydurmak, → perseverasyon = aynı şeyin ısrarlı söylenmesi, → klang çağrışım; ↓ kelime salatası",
+     "hedef": "c) Çağrışım Sapmaları (y25 s24)",
+     "guven": "yuksek",
+     "alternatif": "'neolojzm' biçiminde yazılmış"
+    },
+    {
+     "metin": "→ yandan konuşma, → disprosodi, → çelinebilir konuşma, → ekolali = SCH",
+     "hedef": "c) Çağrışım Sapmaları devamı (y25 s25); ekolali şizofrenlerde görülebilir",
+     "guven": "yuksek",
+     "alternatif": ""
+    },
+    {
+     "metin": "→ konuşmanın fakirleşmesi = miktar ↓, → konuşma içeriğinde fakirleşme = ileri SCH, → enkoherans, → koprolali",
+     "hedef": "c) Çağrışım Sapmaları devamı (y25 s26); içerikte fakirleşme sıklıkla şizofreninin ileri dönemlerinde",
+     "guven": "yuksek",
+     "alternatif": ""
+    }
+   ],
+   "isaretler": [
+    {
+     "tur": "pembe",
+     "hedef": "neolojizm = yeni kelime uydurmak / perseverasyon = aynı şeyin ısrarlı söylenmesi / klang çağrışım (pembe zeminli el yazısı)"
+    },
+    {
+     "tur": "pembe",
+     "hedef": "kelime salatası (pembe zemin)"
+    }
+   ],
+   "sinyal": [
+    "cikmis",
+    "el_onemli"
+   ],
+   "y25": {
+    "key": "y25-k2-11-psikiyatrik-semiyoloji",
+    "sayfa": 24
+   },
+   "y26": null,
+   "duzeltme": [
+    {
+     "ham": "gelinebilir konuşma",
+     "dogru": "çelinebilir konuşma",
+     "gerekce": "El yazısında 'ç' 'g' gibi okunuyor; slayt 'Çelinebilir Konuşma' (y25 s25)"
+    },
+    {
+     "ham": "neolojzm",
+     "dogru": "neolojizm",
+     "gerekce": "Harf eksik; slayt 'Neolojizm'"
+    }
+   ],
+   "not_": null,
+   "ogrenci_sorulari": [
+    "psk-s07-b07"
+   ],
+   "puan": 48,
+   "oncelik": "A",
+   "vurgulu": [
+    "kelime salatası (pembe zemin)",
+    "neolojizm = yeni kelime uydurmak / perseverasyon = aynı şeyin ısrarlı söylenmesi / klang çağrışım (pembe zeminli el yazısı)"
+   ]
+  },
+  {
+   "id": "psk-s07-b12",
+   "pdf": "psk",
+   "sayfa": 7,
+   "bolge": "r1c3",
+   "tur": "slayt",
+   "baslik": "Duygudurum (Mood)",
+   "metin": "Duygulanım\nDuygudurum (Mood)\nÖtimi: Duygudurumda çökme ya da yükselmenin olmadığını ifade eder.\nYükselmiş Duygudurum: Alışılmışın dışında bir neşe haliyle birlikte, kişinin kendine güveni de artmıştır.\nÇökkün Duygudurum: Ümitsizlik, keder, elemlilik duygusu ön plandadır ve kişinin kendisine verdiği değer ve güveni azalmıştır.\n\"İrritabl\" Duygudurum: Çabuk sinirlenme, engellenmeye karşı öfkelenmeye hazır bir duygudurum söz konusudur.",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "dört tanımın tamamı"
+    },
+    {
+     "tur": "daire",
+     "hedef": "Ötimi: … olmadığını"
+    }
+   ],
+   "sinyal": [
+    "cikmis",
+    "el_onemli"
+   ],
+   "y25": {
+    "key": "y25-k2-11-psikiyatrik-semiyoloji",
+    "sayfa": 35
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "ogrenci_sorulari": [
+    "psk-s07-b10"
+   ],
+   "puan": 48,
+   "oncelik": "A",
+   "vurgulu": [
+    "dört tanımın tamamı",
+    "Ötimi: … olmadığını"
+   ]
+  },
+  {
+   "id": "psk-s07-b01",
+   "pdf": "psk",
+   "sayfa": 7,
+   "bolge": "r1c1",
+   "tur": "slayt",
+   "baslik": "Bellek Bozuklukları – Amnezi; Anterograd ve Retrograd Amnezi",
+   "metin": "Bellek Bozuklukları\nAmnezi: Geçmişe ait yaşantıları anımsama kusurudur.\nAnterograd Amnezi\nRetrograd Amnezi",
+   "el_yazisi": [
+    {
+     "metin": "Anterograd Amnezi = kısa bellek ✗→ uzun bellek",
+     "hedef": "Anterograd amnezi kısa süreli bellekten uzun süreli belleğe bilgi aktarılamamasına bağlıdır (y25 s11)",
+     "guven": "yuksek",
+     "alternatif": ""
+    },
+    {
+     "metin": "→ bellek bozukluğunun nedeninden sonra kişinin yeni bilgileri öğrenme ve hatırlamada zorlanması",
+     "hedef": "Anterograd amnezi tanımı (y25 s11)",
+     "guven": "yuksek",
+     "alternatif": ""
+    },
+    {
+     "metin": "bellek birkaç saatle sınırlı.",
+     "hedef": "Yani kişinin belleği birkaç saat ile sınırlıdır (y25 s11)",
+     "guven": "yuksek",
+     "alternatif": ""
+    },
+    {
+     "metin": "Wernicke-Korsakoff'un kronikte tipik.",
+     "hedef": "Anterograd amnezi Wernicke-Korsakoff sendromunun kronik döneminin tipik bulgusudur (y25 s11)",
+     "guven": "yuksek",
+     "alternatif": ""
+    },
+    {
+     "metin": "→ bellek bozukluğunun nedeninden önceki bilgiler anımsanamaz.",
+     "hedef": "Retrograd Amnezi tanımı (y25 s12)",
+     "guven": "yuksek",
+     "alternatif": ""
+    },
+    {
+     "metin": "en sık demansta. tipik olarak geriye doğru bellek yıkılır.",
+     "hedef": "Retrograd amnezi en sık demansta görülür; bellek geriye doğru yıkılır (y25 s12)",
+     "guven": "yuksek",
+     "alternatif": ""
+    }
+   ],
+   "isaretler": [
+    {
+     "tur": "pembe",
+     "hedef": "Anterograd Amnezi = kısa bellek ✗→ uzun bellek (el yazısı pembe zemin)"
+    },
+    {
+     "tur": "karalama",
+     "hedef": "kısa bellek → uzun bellek oku üstünde çarpı (aktarım olmaz)"
+    }
+   ],
+   "sinyal": [
+    "el_onemli"
+   ],
+   "y25": {
+    "key": "y25-k2-11-psikiyatrik-semiyoloji",
+    "sayfa": 10
+   },
+   "y26": null,
+   "duzeltme": [
+    {
+     "ham": "Wemicke-Korsakoff",
+     "dogru": "Wernicke-Korsakoff",
+     "gerekce": "El yazısında 'rn' 'm' gibi okunuyor; slayt metni 'Wernicke- Korsakoff Sendromu'"
+    }
+   ],
+   "not_": null,
+   "banka_cikmis": [
+    "d3-k2-psi-006",
+    "q-25-26_d_nem_3_kurul_2-82-cs2"
+   ],
+   "puan": 43,
+   "oncelik": "A",
+   "vurgulu": [
+    "Anterograd Amnezi = kısa bellek ✗→ uzun bellek (el yazısı pembe zemin)"
+   ]
+  },
+  {
+   "id": "psk-s08-b01",
+   "pdf": "psk",
+   "sayfa": 8,
+   "bolge": "r1c1",
+   "tur": "slayt",
+   "baslik": "Psikiyatrik Muayene Şeması",
+   "metin": "PSİKİYATRİK MUAYENE ŞEMASI\nI- BİLİŞSEL İŞLEVLER: 1) Bilinç 2) Yönelim 3) Bellek 4) Dikkat 5) Algı 6) Düşünce 7) Yargılama 8) Soyut Düşünce 9) Gerçeği Değerlendirme 10) İçgörü\nII- DUYGULANIM\nIII- MOTOR AKTİVİTE VE HAREKET\nIV- BEDENSEL İŞLEVLER: 1) Uyku 2) İştah 3) Libido 4) Defekasyon, miksiyon\nV- SOSYAL VE MESLEKİ İŞLEVSELLİK",
+   "el_yazisi": [],
+   "isaretler": [],
+   "sinyal": [
+    "cikmis"
+   ],
+   "y25": {
+    "key": "y25-k2-11-psikiyatrik-semiyoloji",
+    "sayfa": 3
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "ogrenci_sorulari": [
+    "psk-s18-b03"
+   ],
+   "puan": 40,
+   "oncelik": "A",
+   "vurgulu": []
+  },
+  {
+   "id": "psk-s07-b16",
+   "pdf": "psk",
+   "sayfa": 7,
+   "bolge": "r2c3",
+   "tur": "slayt",
+   "baslik": "Diskinezi, Distoni, Manyerizm, Ekopraksi, Akatizi",
+   "metin": "Diskinezi: İstemsiz hareketlerdir.\nDistoni: Belli bir kas grubunun istemsiz olarak kasılmasıdır.\nManyerizm: Kişide alışkanlık halini almış, istemsiz hareketlerdir.\nEkopraksi: Kişinin başkalarının hareketini taklit etmesidir.\nAkatizi: Genellikle antipsikotiklerin kullanımına bağlı olarak ortaya çıkan; huzursuzluk, gerginlik hissi ile birlikte hastanın yerinde duramaması ve hareket etme zorunluluğu hissetmesidir.",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "İstemsiz hareketlerdir; Belli bir kas grubunun istemsiz olarak kasılmasıdır; Kişide alışkanlık halini almış, istemsiz hareketler; Kişinin başkalarının hareketini taklit"
+    }
+   ],
+   "sinyal": [
+    "el_onemli"
+   ],
+   "y25": {
+    "key": "y25-k2-11-psikiyatrik-semiyoloji",
+    "sayfa": 40
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "banka_cikmis": [
+    "64b435be39be"
+   ],
+   "puan": 38,
+   "oncelik": "A",
+   "vurgulu": [
+    "İstemsiz hareketlerdir; Belli bir kas grubunun istemsiz olarak kasılmasıdır; Kişide alışkanlık halini almış, istemsiz hareketler; Kişinin başkalarının hareketini taklit"
+   ]
+  },
+  {
+   "id": "psk-s08-b06",
+   "pdf": "psk",
+   "sayfa": 8,
+   "bolge": "r2c2",
+   "tur": "el_yazisi",
+   "baslik": "Soyut düşünce, gerçeği değerlendirme",
+   "metin": "",
+   "el_yazisi": [
+    {
+     "metin": "= psikozda bozulur.",
+     "hedef": "8) Soyut Düşünce (y25 s32: soyutlama yeteneği psikozlarda, özellikle kronik/yıkımlı olanlarda bozulur)",
+     "guven": "yuksek",
+     "alternatif": ""
+    },
+    {
+     "metin": "= içsel ve dışsal uyaranları ayırt etmek.",
+     "hedef": "9) Gerçeği Değerlendirme (y25 s33)",
+     "guven": "yuksek",
+     "alternatif": ""
+    }
+   ],
+   "isaretler": [],
+   "sinyal": [
+    "el_onemli"
+   ],
+   "y25": {
+    "key": "y25-k2-11-psikiyatrik-semiyoloji",
+    "sayfa": 32
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "banka_cikmis": [
+    "past-1790877044847-878300"
+   ],
+   "puan": 38,
+   "oncelik": "A",
+   "vurgulu": []
+  },
+  {
+   "id": "psk-s08-b04",
+   "pdf": "psk",
+   "sayfa": 8,
+   "bolge": "r1c1",
+   "tur": "el_yazisi",
+   "baslik": "Dikkat – distraktibilite, hipervijilans",
+   "metin": "",
+   "el_yazisi": [
+    {
+     "metin": "→ distraktibilite",
+     "hedef": "4) Dikkat (y25 s15)",
+     "guven": "yuksek",
+     "alternatif": ""
+    },
+    {
+     "metin": "→ hipervijilans = tehlike beklentisine karşı dikkat kesilmek. (TSSB ve sanrısal bozuklukta)",
+     "hedef": "4) Dikkat – Hipervijilans (y25 s16)",
+     "guven": "yuksek",
+     "alternatif": ""
+    }
+   ],
+   "isaretler": [
+    {
+     "tur": "pembe",
+     "hedef": "distraktibilite / hipervijilans satırları"
+    }
+   ],
+   "sinyal": [
+    "el_onemli",
+    "sari",
+    "tekrar"
+   ],
+   "y25": {
+    "key": "y25-k2-11-psikiyatrik-semiyoloji",
+    "sayfa": 16
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "puan": 28,
+   "oncelik": "B",
+   "vurgulu": [
+    "distraktibilite / hipervijilans satırları"
+   ]
+  },
+  {
+   "id": "psk-s07-b04",
+   "pdf": "psk",
+   "sayfa": 7,
+   "bolge": "r2c1",
+   "tur": "slayt",
+   "baslik": "Algı – İllüzyonlar",
+   "metin": "Algı\nİlüzyonlar: Uyaranların yanlış yorumlanmasıdır.",
+   "el_yazisi": [
+    {
+     "metin": "→ psikozların prodrom döneminde artar.",
+     "hedef": "İlüzyonlar psikozların prodromal döneminde artış gösterir (y25 s20)",
+     "guven": "yuksek",
+     "alternatif": ""
+    }
+   ],
+   "isaretler": [
+    {
+     "tur": "yesil",
+     "hedef": "Uyaranların yanlış yorumlanmasıdır."
+    }
+   ],
+   "sinyal": [
+    "el_onemli",
+    "sari"
+   ],
+   "y25": {
+    "key": "y25-k2-11-psikiyatrik-semiyoloji",
+    "sayfa": 20
+   },
+   "y26": null,
+   "duzeltme": [
+    {
+     "ham": "piskozların",
+     "dogru": "psikozların",
+     "gerekce": "El yazısı harf yer değiştirmesi; slayt 'psikozların prodromal döneminde'"
+    }
+   ],
+   "not_": null,
+   "puan": 18,
+   "oncelik": "B",
+   "vurgulu": [
+    "Uyaranların yanlış yorumlanmasıdır."
+   ]
+  },
+  {
+   "id": "psk-s07-b14",
+   "pdf": "psk",
+   "sayfa": 7,
+   "bolge": "r1c3",
+   "tur": "slayt",
+   "baslik": "Motor Aktivite – Retardasyon, Eksitasyon",
+   "metin": "Motor Aktivite ve Hareket\nRetardasyon: Motor aktivitelerin azalmasıdır. Temel olarak depresyonda görülür.\nEksitasyon: Motor aktivitenin çoğunlukla saldırganlığı da içeren bir biçimde aşırı artmasıdır.",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "pembe",
+     "hedef": "Motor aktivitelerin azalmasıdır"
+    },
+    {
+     "tur": "pembe",
+     "hedef": "Motor aktivitenin çoğunlukla saldırganlığı da içeren bir biçimde aşırı artmasıdır"
+    },
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "aynı satırlar"
+    }
+   ],
+   "sinyal": [
+    "el_onemli",
+    "sari"
+   ],
+   "y25": {
+    "key": "y25-k2-11-psikiyatrik-semiyoloji",
+    "sayfa": 38
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "puan": 18,
+   "oncelik": "B",
+   "vurgulu": [
+    "Motor aktivitelerin azalmasıdır",
+    "Motor aktivitenin çoğunlukla saldırganlığı da içeren bir biçimde aşırı artmasıdır",
+    "aynı satırlar"
+   ]
+  },
+  {
+   "id": "psk-s07-b15",
+   "pdf": "psk",
+   "sayfa": 7,
+   "bolge": "r2c3",
+   "tur": "slayt",
+   "baslik": "Katalepsi, Katatonik Stupor, Mutizm, Katapleksi",
+   "metin": "Katalepsi: Kişinin uzun süre hareketsiz olarak kalmasıdır (sertleşmiş bir gövde ve uzuvlar).\nKatatonik Stupor: Hareketlerde neredeyse durma noktasına varan bir yavaşlama vardır. Çevresinin farkında olmadığı izlenimini verir.\nMutizm: Hastanın istemli olarak konuşmamasıdır. Katatonik şizofreni, ağır depresyonlar ve stupor tablolarında görülebilir.\nKatapleksi: Heyecan, ani korku gibi durumlarca tetiklenen, kas tonusunun geçici olarak kaybolması durumudur. Hasta cansız bir şekilde yere yığılabilir ya da sadece belli bir kas grubunda ortaya çıkar ve mesela kişinin başı düşer, çenesi aşağı sarkar.",
+   "el_yazisi": [
+    {
+     "metin": "felç yok",
+     "hedef": "Katapleksi (ayraçla bağlı): kas tonusu geçici kaybolur, kalıcı felç değildir",
+     "guven": "orta",
+     "alternatif": "'felg yok' biçiminde yazılmış; 'felç yok' bağlamla uyumlu"
+    }
+   ],
+   "isaretler": [
+    {
+     "tur": "pembe",
+     "hedef": "Kişinin uzun süre hareketsiz olarak kalmasıdır; Hareketlerde neredeyse durma noktasına varan bir yavaşlama; Hastanın istemli olarak konuşmamasıdır; Heyecan, ani korku gibi durumlarca tetiklenen, kas tonusunun geçici olarak kaybolması"
+    },
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "aynı satırlar"
+    },
+    {
+     "tur": "kutu",
+     "hedef": "Katapleksi paragrafı solunda kırmızı köşeli ayraç"
+    }
+   ],
+   "sinyal": [
+    "el_onemli",
+    "sari"
+   ],
+   "y25": {
+    "key": "y25-k2-11-psikiyatrik-semiyoloji",
+    "sayfa": 39
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "puan": 18,
+   "oncelik": "B",
+   "vurgulu": [
+    "Katapleksi paragrafı solunda kırmızı köşeli ayraç",
+    "Kişinin uzun süre hareketsiz olarak kalmasıdır; Hareketlerde neredeyse durma noktasına varan bir yavaşlama; Hastanın istemli olarak konuşmamasıdır; Heyecan, ani korku gibi durumlarca tetiklenen, kas tonusunun geçici olarak kaybolması",
+    "aynı satırlar"
+   ]
+  },
+  {
+   "id": "psk-s08-b02",
+   "pdf": "psk",
+   "sayfa": 8,
+   "bolge": "r1c1",
+   "tur": "el_yazisi",
+   "baslik": "Yönelim – bileşenler, kayıp sırası, organik etken",
+   "metin": "",
+   "el_yazisi": [
+    {
+     "metin": "3 bileşeni var: zaman, yer, kişi.",
+     "hedef": "2) Yönelim (y25 s06: yönelimin üç bileşeni zaman, yer, kişi)",
+     "guven": "yuksek",
+     "alternatif": ""
+    },
+    {
+     "metin": "= önce zaman, sonra yer, en son kişi oryantasyonu kaybolur.",
+     "hedef": "2) Yönelim (y25 s07: önce zaman, sonra yer, en son kişi oryantasyonu kaybedilir)",
+     "guven": "yuksek",
+     "alternatif": ""
+    },
+    {
+     "metin": "yönelim bozukluğu çoğunlukla organik etkenin varlığı. en sık deliryumda.",
+     "hedef": "Yönelim bozukluğu çoğunlukla organik bir etkenin varlığını gösterir; en sık deliryumda (y25 s07)",
+     "guven": "yuksek",
+     "alternatif": ""
+    }
+   ],
+   "isaretler": [
+    {
+     "tur": "pembe",
+     "hedef": "yönelim bozukluğu çoğunlukla organik etkenin varlığı. en sık deliryumda."
+    }
+   ],
+   "sinyal": [
+    "el_onemli",
+    "sari"
+   ],
+   "y25": {
+    "key": "y25-k2-11-psikiyatrik-semiyoloji",
+    "sayfa": 7
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "puan": 18,
+   "oncelik": "B",
+   "vurgulu": [
+    "yönelim bozukluğu çoğunlukla organik etkenin varlığı. en sık deliryumda."
+   ]
+  },
+  {
+   "id": "psk-s08-b03",
+   "pdf": "psk",
+   "sayfa": 8,
+   "bolge": "r1c1",
+   "tur": "el_yazisi",
+   "baslik": "Bellek – tespit, kısa süreli, uzun süreli",
+   "metin": "",
+   "el_yazisi": [
+    {
+     "metin": "→ tespit (kayıt) = öğrenilenin anında tekrarlanması. 3-5 nesne saydır.",
+     "hedef": "3) Bellek – Tespit (kayıt) belleği (y25 s08)",
+     "guven": "yuksek",
+     "alternatif": ""
+    },
+    {
+     "metin": "→ kısa süreli (recall) = 5 dk – 1 saat.",
+     "hedef": "Kısa süreli (recall) bellek (y25 s08)",
+     "guven": "yuksek",
+     "alternatif": ""
+    },
+    {
+     "metin": "→ uzun süreli = birkaç gün – ay. eski olayları sor (doğrulatabilmelisin)",
+     "hedef": "Uzun süreli bellek (y25 s09)",
+     "guven": "yuksek",
+     "alternatif": ""
+    }
+   ],
+   "isaretler": [
+    {
+     "tur": "pembe",
+     "hedef": "tespit (kayıt) = öğrenilenin anında tekrarlanması. 3-5 nesne saydır."
+    }
+   ],
+   "sinyal": [
+    "el_onemli",
+    "sari"
+   ],
+   "y25": {
+    "key": "y25-k2-11-psikiyatrik-semiyoloji",
+    "sayfa": 8
+   },
+   "y26": null,
+   "duzeltme": [
+    {
+     "ham": "kısa süreli (recall) = 5 dk - 1 saat",
+     "dogru": "kısa süreli (recall) bellek = 5 dakika ile birkaç saate kadar",
+     "gerekce": "y25 s08: '5 dakika ile birkaç saate kadar olan bellektir'"
+    },
+    {
+     "ham": "uzun süreli = birkaç gün - ay",
+     "dogru": "uzun süreli bellek: birkaç gün–birkaç ay = yakın bellek; birkaç ay–yıllar = uzak bellek",
+     "gerekce": "y25 s09; öğrenci notu yalnız yakın bellek aralığını yazmış"
+    }
+   ],
+   "not_": null,
+   "puan": 18,
+   "oncelik": "B",
+   "vurgulu": [
+    "tespit (kayıt) = öğrenilenin anında tekrarlanması. 3-5 nesne saydır."
+   ]
+  },
+  {
+   "id": "psk-s07-b02",
+   "pdf": "psk",
+   "sayfa": 7,
+   "bolge": "r1c1",
+   "tur": "slayt",
+   "baslik": "Füg, Hiperemnezi, Déjà fenomenleri, Jamais Vu",
+   "metin": "Füg: Kişinin kendisini nasıl gittiğini bilmeksizin bir yerde bulması durumudur. Dissosiyatif bozukluklarda görülür. Temporal parsiyel epilepsiye bağlı olarak da gelişebilir.\nHiperemnezi: Bazı olayları hatırlanması güç ayrıntılarıyla anımsamak.\nDeja Entandu: Bir şeyi daha önce işittiğini sanmak\nDeja Fait: Bir şeyi daha önce de yaptığını sanmak\nDeja Pense: Bir şeyi daha önce de düşünmüş olduğunu sanmak\nDeja Vu: Bir şeyi ya da kimseyi daha önce görmüş olduğunu sanmak\nJamais Vu: Bildiği ve gördüğü bir şeyi ya da kimseyi hiç görmemiş olduğunu sanmak",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "yesil",
+     "hedef": "Kişinin kendisini nasıl gittiğini bilmeksizin bir yerde bulması durumudur. Dissosiyatif bozukluklarda; Temporal parsiyel epilepsiye bağlı olarak da gelişebilir"
+    },
+    {
+     "tur": "yesil",
+     "hedef": "Bazı olayları hatırlanması güç ayrıntılarıyla anımsamak"
+    },
+    {
+     "tur": "yesil",
+     "hedef": "Entandu/Fait/Pense/Vu tanımları ve Jamais Vu satırı"
+    }
+   ],
+   "sinyal": [
+    "sari"
+   ],
+   "y25": {
+    "key": "y25-k2-11-psikiyatrik-semiyoloji",
+    "sayfa": 13
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "puan": 10,
+   "oncelik": "C",
+   "vurgulu": [
+    "Bazı olayları hatırlanması güç ayrıntılarıyla anımsamak",
+    "Entandu/Fait/Pense/Vu tanımları ve Jamais Vu satırı",
+    "Kişinin kendisini nasıl gittiğini bilmeksizin bir yerde bulması durumudur. Dissosiyatif bozukluklarda; Temporal parsiyel epilepsiye bağlı olarak da gelişebilir"
+   ]
+  },
+  {
+   "id": "psk-s07-b03",
+   "pdf": "psk",
+   "sayfa": 7,
+   "bolge": "r2c1",
+   "tur": "slayt",
+   "baslik": "Konfabülasyon",
+   "metin": "Konfabülasyon: Anımsanamayan olaylar yerine hikayeler uydurmak. Daha çok demanslılarda görülür.",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "yesil",
+     "hedef": "Anımsanamayan olaylar yerine hikayeler uydurmak. Daha çok demanslılarda (görülür)"
+    }
+   ],
+   "sinyal": [
+    "sari"
+   ],
+   "y25": {
+    "key": "y25-k2-11-psikiyatrik-semiyoloji",
+    "sayfa": 13
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "puan": 10,
+   "oncelik": "C",
+   "vurgulu": [
+    "Anımsanamayan olaylar yerine hikayeler uydurmak. Daha çok demanslılarda (görülür)"
+   ]
+  },
+  {
+   "id": "psk-s07-b13",
+   "pdf": "psk",
+   "sayfa": 7,
+   "bolge": "r1c3",
+   "tur": "slayt",
+   "baslik": "Aleksitimi, Anksiyete, Ajitasyon, Ambivalans",
+   "metin": "Aleksitimi: Kişinin kendi duygularının farkına varmasında ve tanımlamasında güçlük çekmesidir.\nAnksiyete: Genellikle içsel nitelikli bir tehlike beklentisinden kaynaklanan sıkıntılı olma halidir. Belirli bir düşünce ya da endişe ile bağlantısız olarak yaşandığında serbest dalgalanan anksiyete denir.\nAjitasyon: Motor huzursuzluğun eşlik ettiği anksiyete halidir. Bacaklarını sallamak, saçlarıyla oynamak, parmaklarını masaya vurmak gibi.\nAmbivalans: Kişinin aynı anda aynı konuyla ilgili zıt yönelimli iki duygulanımı birlikte hissetmesidir. Bir şeyi hem isteyip hem istememek gibi.",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "Motor huzursuzluğun eşlik ettiği anksiyete halidir"
+    },
+    {
+     "tur": "daire",
+     "hedef": "Bacaklarını sallamak; saçlarıyla oynamak; parmaklarını masaya vurmak gibi"
+    }
+   ],
+   "sinyal": [
+    "el_onemli"
+   ],
+   "y25": {
+    "key": "y25-k2-11-psikiyatrik-semiyoloji",
+    "sayfa": 37
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "puan": 8,
+   "oncelik": "C",
+   "vurgulu": [
+    "Bacaklarını sallamak; saçlarıyla oynamak; parmaklarını masaya vurmak gibi",
+    "Motor huzursuzluğun eşlik ettiği anksiyete halidir"
+   ]
+  },
+  {
+   "id": "psk-s07-b05",
+   "pdf": "psk",
+   "sayfa": 7,
+   "bolge": "r2c1",
+   "tur": "slayt",
+   "baslik": "Derealizasyon, Sinestezi, Diğer Algı Bozuklukları",
+   "metin": "Derealizasyon: Dış dünyaya ilişkin yabancılık duygusudur. En sık olarak travmatik stres durumlarında ortaya çıkar. Ayrıca, ağır kişilik bozukluklarında, psikozların prodromal dönemlerinde, temporal epilepsilerde, psikozlarda görülebilir.\nSinestezi: Bir duyusal uyaranın başka bir duyu biçiminde algılanmasıdır. Işığın sesini duymak ya da sesi görmek gibi. Daha çok LSD (Liserjik asit dietilamid) gibi uyarıcı entoksikasyonlarında görülür. (y25 s22)\nDiğer Bazı Algı Bozuklukları: Makropsi: Nesneleri olduğundan büyük görmek. Mikropsi: Nesneleri olduğundan küçük görmek. Negatif Halüsinasyon: Bir halüsinasyon değildir, var olan şeyleri görmemeye denir. Negatif Otoskopi: Kişinin kendisini görememesidir. (y25 s22)",
+   "el_yazisi": [],
+   "isaretler": [],
+   "sinyal": [],
+   "y25": {
+    "key": "y25-k2-11-psikiyatrik-semiyoloji",
+    "sayfa": 21
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "puan": 0,
+   "oncelik": "C",
+   "vurgulu": []
+  },
+  {
+   "id": "psk-s07-b08",
+   "pdf": "psk",
+   "sayfa": 7,
+   "bolge": "r1c2",
+   "tur": "slayt",
+   "baslik": "Düşünce İçeriği – Hezeyanlar (Sanrı)",
+   "metin": "2. Düşünce İçeriği\na) Hezeyanlar (Sanrı)\nBizar Hezeyan: Gerçekleşmesi mümkün olmayan hezeyanlardır.\nDuyguduruma Uygun Hezeyan: Hezeyanın, kişinin duygudurumuyla uyumlu olmasıdır. Sözgelimi depresyondaki bir kişinin, suçluluk hezeyanları duyması gibi.\nDuyguduruma Uygun Olmayan Hezeyan: Kişinin duygudurumuyla uyumsuzdurlar: Sözgelimi depresyondaki bir kişinin kendisinin çok önemli bir kişi olduğunu iddia etmesi gibi.\nErotomanik Hezeyan: Genellikle sosyoekonomik açıdan üst düzeydeki birinin kendisine aşık olduğuna inanma\nGrandiyöz Hezeyan: Büyüklük hezeyanları, önemli biri olduğuna, dünyayı kurtaracağına vs. inanma.\nMignon Hezeyan: Anne babasının başka biri olduğuna inanma.\nNihilistik Hezeyan: Ölmüş, yok olmuş olduğuna inanma.\nPersekusyon Hezeyanı: Başkalarından kötülük göreceğine inanma.\nPaylaşılmış Hezeyan: Bir kişinin hezeyanlarının başka biri veya birileri tarafından da paylaşılması.\nReferans Hezeyanları: Kişinin kendisiyle ilgisiz olaylardan anlam çıkarması ve bunlara inanma.\nKıskançlık Hezeyanı: Eşinin ya da cinsel partnerinin kendisini aldattığına inanma.\nSomatik Hezeyan: Bedensel bir hastalığı ya da bir anormalliği olduğuna inanma.\nSuçluluk veya Günahkârlık Hezeyanı\nSchneider Hezeyanları: Aşağıdaki hezeyanlar bu gruptandır ve daha çok şizofrenide görülürler. Düşüncelerin Çekilmesi; Düşüncelerin Okunması; Düşünce Sokulması; Düşüncelerin Yayılması/Yayınlanması. (y25 s28-29)",
+   "el_yazisi": [],
+   "isaretler": [],
+   "sinyal": [],
+   "y25": {
+    "key": "y25-k2-11-psikiyatrik-semiyoloji",
+    "sayfa": 27
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "puan": 0,
+   "oncelik": "C",
+   "vurgulu": []
+  },
+  {
+   "id": "psk-s07-b09",
+   "pdf": "psk",
+   "sayfa": 7,
+   "bolge": "r2c2",
+   "tur": "slayt",
+   "baslik": "Obsesyonlar ve Fobiler",
+   "metin": "b) Obsesyonlar: Kirlilik Obsesyonları; Zarar Verme Obsesyonları; Sayı Sayma Obsesyonları; Cinsel Obsesyonlar\nc) Fobiler (y25 s31): Özgül Fobiler: Belirli bir nesne ya da durumla sınırlı fobilerdir. Sosyal Fobi: Başka insanların yanında yapacağı kimi etkinliklerin küçümsenmesine ya da beğenilmemesine yol açabileceğini düşündüğü için, …",
+   "el_yazisi": [],
+   "isaretler": [],
+   "sinyal": [],
+   "y25": {
+    "key": "y25-k2-11-psikiyatrik-semiyoloji",
+    "sayfa": 30
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "puan": 0,
+   "oncelik": "C",
+   "vurgulu": []
+  }
+ ],
+ "ogrenci_sorulari": [
+  {
+   "id": "psk-s07-b07",
+   "pdf": "psk",
+   "sayfa": 7,
+   "bolge": "r1c2",
+   "tur": "cikmis_soru",
+   "baslik": "Çağrışımda sapma olmayan: Blokaj",
+   "metin": "8) Hangisi çağrışımda sapma olarak değerlendirilemez?\nA) Klang çağrışım B) Neolojizm C) Kelime salatası D) Perseverasyon E) Blokaj✓",
+   "el_yazisi": [
+    {
+     "metin": "çağrışım azalması",
+     "hedef": "E) Blokaj",
+     "guven": "yuksek",
+     "alternatif": ""
+    }
+   ],
+   "isaretler": [
+    {
+     "tur": "pembe",
+     "hedef": "soru bloğu"
+    },
+    {
+     "tur": "daire",
+     "hedef": "E) Blokaj"
+    },
+    {
+     "tur": "ok",
+     "hedef": "E) Blokaj → çağrışım azalması"
+    }
+   ],
+   "sinyal": [
+    "cikmis",
+    "el_onemli"
+   ],
+   "y25": {
+    "key": "y25-k2-11-psikiyatrik-semiyoloji",
+    "sayfa": 24
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "cikmis": {
+    "kok": "Hangisi çağrışımda sapma olarak değerlendirilemez?",
+    "siklar": [
+     "A) Klang çağrışım",
+     "B) Neolojizm",
+     "C) Kelime salatası",
+     "D) Perseverasyon",
+     "E) Blokaj"
+    ],
+    "ogrenci_cevap": "E",
+    "banka_id": "q-2__kurul_-8",
+    "banka_yil": "Geçmiş Yıllar Çıkmışı (Arşiv), Kurul 2",
+    "banka_dogru": "E",
+    "tutarli": true,
+    "not": "Bankada isPastExam işaretsiz arşiv kaydı (src '2. kurul .pdf'); ara.py banka varsayılan süzgecinde çıkmıyor. Slayt: blokaj çağrışım azalması altında."
+   },
+   "bagli_birim": "psk-s07-b06",
+   "benzerlik": 0.655
+  },
+  {
+   "id": "psk-s07-b10",
+   "pdf": "psk",
+   "sayfa": 7,
+   "bolge": "r2c2",
+   "tur": "cikmis_soru",
+   "baslik": "Semiyolojik kavramlar tablosu – yanlış olan: anterograd amnezi tanımı ters",
+   "metin": "Semiyolojik kavramlar konusunda, aşağıdakilerden hangisi yanlıştır?\n1 Ötimi duygudurumda çökme ya da yükselmenin olmadığını ifade eder.\n2 Katapleksi, heyecan, ani korku gibi durumlarca tetiklenen, kas tonusunun geçici olarak kaybolması durumudur.\n3 İllüzyonlar, uyaranların yanlış yorumlanmasıdır.\n4 Yönelim bozukluğu çoğunlukla organik bir etkenin varlığını gösterir.\n5 Anterograd amnezi uzun süreli bellekten, kısa süreli belleğe bilgi aktarılamamasına bağlıdır. ☑",
+   "el_yazisi": [
+    {
+     "metin": "kısa ✗ uzun",
+     "hedef": "5. satır: doğrusu kısa süreli bellekten uzun süreli belleğe aktarılamaz",
+     "guven": "yuksek",
+     "alternatif": ""
+    }
+   ],
+   "isaretler": [
+    {
+     "tur": "pembe",
+     "hedef": "soru kökü"
+    },
+    {
+     "tur": "daire",
+     "hedef": "5. satır (Anterograd amnezi …)"
+    },
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "Katapleksi"
+    },
+    {
+     "tur": "ok",
+     "hedef": "5. satır → 'kısa ✗ uzun'"
+    }
+   ],
+   "sinyal": [
+    "cikmis",
+    "el_onemli"
+   ],
+   "y25": {
+    "key": "y25-k2-11-psikiyatrik-semiyoloji",
+    "sayfa": 11
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "cikmis": {
+    "kok": "Semiyolojik kavramlar konusunda, aşağıdakilerden hangisi yanlıştır?",
+    "siklar": [
+     "1) Ötimi duygudurumda çökme ya da yükselmenin olmadığını ifade eder.",
+     "2) Katapleksi, heyecan, ani korku gibi durumlarca tetiklenen, kas tonusunun geçici olarak kaybolması durumudur.",
+     "3) İlüzyonlar, uyaranların yanlış yorumlanmasıdır.",
+     "4) Yönelim bozukluğu çoğunlukla organik bir etkenin varlığını gösterir.",
+     "5) Anterograd amnezi uzun süreli bellekten, kısa süreli belleğe bilgi aktarılamamasına bağlıdır."
+    ],
+    "ogrenci_cevap": "5",
+    "banka_id": "",
+    "banka_yil": "",
+    "banka_dogru": "",
+    "tutarli": true,
+    "not": "Tablo biçimli (Sıra No/Cevap) çıkmış; bankada birebir bulunamadı. En yakın: 64b435be39be (2020-2021 Kurul 2) aynı 1–4 önermeler, ama yanlış şık 'Katatoni … her zaman organiktir' (E). Öğrencinin cevabı slayt s11 ile tutarlı (doğrusu kısa→uzun)."
+   },
+   "bagli_birim": "psk-s07-b12",
+   "benzerlik": 0.711
+  },
+  {
+   "id": "psk-s07-b11",
+   "pdf": "psk",
+   "sayfa": 7,
+   "bolge": "r2c2",
+   "tur": "cikmis_soru",
+   "baslik": "Psikiyatrik muayene – yanlış olan: hipervijilans tanımı (distraktibilite)",
+   "metin": "81-Psikiyatrik muayene hakkında aşağıdakilerden hangisi yanlıştır?\nA) Yönelim bozukluğu çoğunlukla organik bir etkenin varlığını gösterir.\nB) Hipervijilans, dikkatin kolaylıkla dış uyaranlara kayması ve dağılmasıdır.\nC) İllüzyonlar uyaranların yanlış yorumlanmasıdır.\nD) Cümleler arasındaki bağlantının ses çağrışımları ile kurulmasına Klang Çağrışım denir.\nE) Öğretilen bir şeyin anında tekrarlanabilmesi, tespit belleğinin muayenesinde kullanılır.",
+   "el_yazisi": [
+    {
+     "metin": "distraktibilite",
+     "hedef": "B şıkkındaki tanım (dikkatin kolaylıkla dış uyaranlara kayması) aslında distraktibilitedir",
+     "guven": "yuksek",
+     "alternatif": ""
+    },
+    {
+     "metin": "hipervijilans = tehlike ihtimaline karşı dikkat kesilmek.",
+     "hedef": "B) Hipervijilans",
+     "guven": "yuksek",
+     "alternatif": ""
+    }
+   ],
+   "isaretler": [
+    {
+     "tur": "pembe",
+     "hedef": "soru bloğu"
+    },
+    {
+     "tur": "daire",
+     "hedef": "B"
+    },
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "dikkatin kolaylıkla dış uyaranlara kayması ve dağılmasıdır"
+    },
+    {
+     "tur": "ok",
+     "hedef": "B → distraktibilite; B → hipervijilans tanımı"
+    }
+   ],
+   "sinyal": [
+    "cikmis",
+    "el_onemli"
+   ],
+   "y25": {
+    "key": "y25-k2-11-psikiyatrik-semiyoloji",
+    "sayfa": 16
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "cikmis": {
+    "kok": "Psikiyatrik muayene hakkında aşağıdakilerden hangisi yanlıştır?",
+    "siklar": [
+     "A) Yönelim bozukluğu çoğunlukla organik bir etkenin varlığını gösterir.",
+     "B) Hipervijilans, dikkatin kolaylıkla dış uyaranlara kayması ve dağılmasıdır.",
+     "C) İllüzyonlar uyaranların yanlış yorumlanmasıdır.",
+     "D) Cümleler arasındaki bağlantının ses çağrışımları ile kurulmasına Klang Çağrışım denir.",
+     "E) Öğretilen bir şeyin anında tekrarlanabilmesi, tespit belleğinin muayenesinde kullanılır."
+    ],
+    "ogrenci_cevap": "B",
+    "banka_id": "d3-f-060",
+    "banka_yil": "2021-2022 final",
+    "banka_dogru": "B",
+    "tutarli": true,
+    "not": "Kopyaları: d3-f-109 (2021-2022 final), q-22_final_230619_145249-81. Slayt dayanağı: y25 s15 Distraktibilite (dikkatin kolaylıkla dış uyaranlara kayması, en sık manide), s16 Hipervijilans (dışarıdan tehlike beklentisine karşı dikkat kesilme; TSSB, sanrısal bozukluk). Öğrencinin el yazısı slaytla tutarlı."
+   },
+   "bagli_birim": "psk-s08-b05",
+   "benzerlik": 0.687
+  },
+  {
+   "id": "psk-s18-b03",
+   "pdf": "psk",
+   "sayfa": 18,
+   "bolge": "r1c1+r1c2",
+   "tur": "cikmis_soru",
+   "baslik": "Psikiyatrik görüşme ile ilgili yanlış ifade",
+   "metin": "53. Psikiyatrik görüşme ile ilgili aşağıdaki verilenlerden hangisi yanlıştır?",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "sari",
+     "hedef": "konfüze (açık turuncu vurgu)"
+    },
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "d şıkkı kırmızı yazıyla (cevap)"
+    }
+   ],
+   "sinyal": [
+    "cikmis"
+   ],
+   "y25": null,
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "cikmis": {
+    "kok": "53. Psikiyatrik görüşme ile ilgili aşağıdaki verilenlerden hangisi yanlıştır?",
+    "siklar": [
+     "a. Psikiyatrik görüşme, ruhsal hastalıklarla başvurulan hastaların değerlendirilmesinde en önemli unsurdur",
+     "b. İlk görüşmenin amacı tanı koyabilmek için bilgi toplamaktır",
+     "c. İlk görüşme, 45-60 dakika gibi bir zaman yeterli olabilir",
+     "d. Psikotik ya da konfüze hastalar görüşmeyi tolere edemezler, böyle hastalarda yalnızca getirenlerle görüşme yapmak yeterli olur",
+     "e. Hastanın gönüllü olarak mı yoksa kendi isteği olmadan mı geldiği görüşmeye başlanmadan öğrenilmelidir"
+    ],
+    "ogrenci_cevap": "D",
+    "banka_id": "past-1790877044895-368611",
+    "banka_yil": "2021-2022",
+    "banka_dogru": "D",
+    "tutarli": true,
+    "not": "Pembe değil beyaz kesik; cevap kırmızı renkli yazıyla. Bankada konu 'Psikiyatrik Semiyoloji' (k2-11) ama öğrenci KLP sayfasına yapıştırmış (konfüze/deliryum hastası bağlantısı). y25 sayfası saptanmadı."
+   },
+   "bagli_birim": "psk-s08-b01",
+   "benzerlik": 0.632
+  }
+ ],
+ "banka": [
+  {
+   "id": "64b435be39be",
+   "ders": "k2-11",
+   "yillar": [
+    "2020-2021"
+   ],
+   "kok": "Psikiyatrik semiyoloji ve kavramlar göz önüne alındığında, aşağıdakilerden hangisi yanlıştır?",
+   "dogru": "Katatoni, istemli hareketlerin tamamen durması olup asla psikojenik nedenlerle ortaya çıkmaz, her zaman organik kökenlid",
+   "kopyalar": [],
+   "birim": "psk-s07-b16",
+   "benzerlik": 0.614,
+   "kapsandi": true,
+   "notta_yapistirilmis": false
+  },
+  {
+   "id": "past-1790877044895-368611",
+   "ders": "k2-11",
+   "yillar": [
+    "2021-2022"
+   ],
+   "kok": "Psikiyatrik görüşme ile ilgili aşağıda verilenlerden hangisi yanlıştır?",
+   "dogru": "Psikotik ya da konfüze hastalar görüşmeyi tolere edemezler, böyle hastalarda yalnızca getirenlerle görüşme yapmak yeterl",
+   "kopyalar": [],
+   "birim": "psk-s08-b06",
+   "benzerlik": 0.566,
+   "kapsandi": false,
+   "notta_yapistirilmis": true
+  },
+  {
+   "id": "d3-k2-psi-006",
+   "ders": "k2-11",
+   "yillar": [
+    "2021-2026"
+   ],
+   "kok": "Kafa travması veya hipoksik beyin hasarı sonrasında, olayın gerçekleştiği andan itibaren yeni bilgilerin öğrenilememesi ve kısa süreli bellekten uzun süreli belleğe aktarılamaması ile karakterize tablo aşağıdakilerden ha",
+   "dogru": "Anterograd amnezi",
+   "kopyalar": [],
+   "birim": "psk-s07-b01",
+   "benzerlik": 0.672,
+   "kapsandi": true,
+   "notta_yapistirilmis": false
+  },
+  {
+   "id": "past-1790877044847-878300",
+   "ders": "k2-11",
+   "yillar": [
+    "2021-2022"
+   ],
+   "kok": "Psikiyatride içgörü için aşağıdakilerden hangisi yanlıştır?",
+   "dogru": "İçgörünün korunmuş olması psikotik bir bozukluğun varlığını kesin olarak dışlar.",
+   "kopyalar": [],
+   "birim": "psk-s08-b06",
+   "benzerlik": 0.609,
+   "kapsandi": true,
+   "notta_yapistirilmis": false
+  },
+  {
+   "id": "q-2__kurul_-8",
+   "ders": "k2-11",
+   "yillar": [
+    "Geçmiş Yıllar Çıkmışı (Arşiv)"
+   ],
+   "kok": "Hangisi çağrışımda sapma olarak değerlendirilemez?",
+   "dogru": "Blokaj",
+   "kopyalar": [],
+   "birim": "psk-s07-b06",
+   "benzerlik": 0.503,
+   "kapsandi": false,
+   "notta_yapistirilmis": true
+  },
+  {
+   "id": "q-25-26_d_nem_3_kurul_2-82-cs2",
+   "ders": "k2-11",
+   "yillar": [
+    "2025-2026"
+   ],
+   "kok": "Kısa süreli bellekteki bilgilerin uzun süreli belleğe aktarılamaması sonucu, olaydan sonra yeni bilgilerin öğrenilememesi ve hatırlanamaması aşağıdakilerden hangisi ile tanımlanır?",
+   "dogru": "Anterograd amnezi",
+   "kopyalar": [],
+   "birim": "psk-s07-b01",
+   "benzerlik": 0.783,
+   "kapsandi": true,
+   "notta_yapistirilmis": false
+  }
+ ]
+}

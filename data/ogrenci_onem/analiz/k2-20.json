@@ -1,0 +1,111 @@
+{
+ "ders": "k2-20",
+ "ozet": "2025-26 notu bu dersi yalnız biyolojik (ilaç dışı) tedaviler olarak işlemiş: EKT yan etkileri ve kontrendikasyonu, TMS, tDCS, derin beyin uyarımı. Yakın yıl çıkmışları (2025-26, 2021-2026) TMS tanımına düşmüş; öğrencinin yapıştırdığı tek çıkmış EKT'de beklenmeyen yan etki (ataksi). Buna karşın bankadaki 2021-22 sorularının çoğu antipsikotik yan etkileri, klozapin/atipikler ve uyku hijyeni üzerine; bunlar notta hiç yok ve hoca profili bu konuda ilaç yan etkisini (%43) ilk bilgi türü olarak gösteriyor.",
+ "temalar": [
+  {
+   "tema": "TMS, rTMS ve derin TMS: tanım, endikasyon, etkinlik",
+   "oncelik": "A",
+   "birimler": ["psk-s06-b07"],
+   "kanit": "İki yakın yıl çıkmışı: 2025-26 'non-invaziv yolla depolarizasyon dalgası oluşturan, depresyonda FDA onaylı yöntem → TMS' ve 2021-2026 d3 'sol dorsolateral prefrontal kortekste manyetik bobinle depolarizasyon → rTMS'. Slayttaki tüm satırlar sarı; 'derin TMS kısa süreli sigara bırakmada FDA onayı' ve 'psikoz için etkisiz' ayrıca vurgulu. Genel bakış slaytında el notu: 'non-invaziv, yaşlıda sınırlı etki, pahalı, ulaşılabilirlik az'.",
+   "anlatim": "TMS'nin ilkesi (kafa derisine manyetik bobin, sol DLPFC'de depolarizasyon), non-invaziv oluşu ve endikasyon–etkinlik profili (depresyonda sınırlı, panik bozuklukta orta, psikozda etkisiz; derin TMS sigara bırakmada FDA onaylı) ayrı maddelerle verilmeli; tDCS ve derin beyin uyarımıyla karşılaştırma tablosu eklenmeli.",
+   "soru_payi": 20,
+   "soru_tipleri": ["tanımdan yöntem: manyetik bobin + non-invaziv + FDA onaylı depresyon tedavisi → TMS", "yanlış bul: TMS psikozda etkilidir", "eşleştirme: TMS / tDCS / DBS ↔ invazivlik ve FDA onayı"]
+  },
+  {
+   "tema": "EKT yan etkileri",
+   "oncelik": "A",
+   "birimler": ["psk-s06-b04"],
+   "kanit": "Notta yapıştırılmış tablo çıkmışı 'EKT'de hangi yan etki beklenmez? → ataksi' (bankada bulunamadı; büyük pembe kök + tablo kopyası, iki kez yapıştırılmış). SSS yan etkileri (konfüzyon, sersemlik, baş ağrısı, ajitasyon, amnezi) sarı; el notu 'beyne zarar vermez'.",
+   "anlatim": "Yan etkiler sistemlere göre üç liste hâlinde verilmeli: SSS (konfüzyon, sersemlik, baş ağrısı, ajitasyon, anterograd/retrograd amnezi), kardiyovasküler (hipertansiyon, taşikardi, aritmi, bradikardi), kas-iskelet (miyoklonik-tonik kasılma, kırık-çıkık, kas-eklem ağrısı). Ataksinin listede olmadığı ve EKT'nin beyne zarar vermediği açıkça söylenmeli.",
+   "soru_payi": 18,
+   "soru_tipleri": ["olumsuz: hangisi EKT yan etkisi değildir → ataksi", "sınıflama: yan etki ↔ sistem"]
+  },
+  {
+   "tema": "EKT kontrendikasyonu ve ilaç etkileşimi",
+   "oncelik": "A",
+   "birimler": ["psk-s06-b06"],
+   "kanit": "'EKT için mutlak kontrendikasyon yoktur' ve 'benzodiazepinler ve antiepileptikler nöbet eşiğini artırdığından uygulamadan önce kesilmelidir' kırmızı çizgi + sarı; 'eşiğini arttırdığından' ayrıca işaretli. Bankada bu birime eşlenen iki 2021-22 sorusu aslında antipsikotik konusunda (bkz. 'Notta yok' teması); doğrudan EKT kontrendikasyon çıkmışı yok.",
+   "anlatim": "İki bilgi net cümlelerle verilmeli: mutlak kontrendikasyon yoktur; benzodiazepin ve antiepileptikler nöbet eşiğini yükselttiği için EKT öncesi kesilir. Gerekçe (nöbet oluşturmanın zorlaşması) mekanizma olarak bağlanmalı.",
+   "soru_payi": 10,
+   "soru_tipleri": ["yanlış bul: EKT'nin mutlak kontrendikasyonu vardır", "mekanizma: EKT öncesi hangi ilaçlar kesilir ve neden"]
+  },
+  {
+   "tema": "EKT endikasyonları ve etki mekanizması",
+   "oncelik": "B",
+   "birimler": ["psk-s06-b03", "psk-s06-b02"],
+   "kanit": "Endikasyon listesi sarı; el notları: majör depresyonda 'işlevsellik aşırı bozuksa', manide 'aşırı şiddetliyse / gebelik', şizofrenide 'kronik şizofrenide işe yaramaz; EPS, gebelik'; genel bakışta 'hızlı yanıt sağladığı için gebede kullanılır, %85 MD tedavisinde'. Mekanizma maddelerinin tamamı sarı, 'nöroplastisite' vurgulu.",
+   "anlatim": "Endikasyonlar (unipolar/bipolar majör depresyon, mani, şizofreni-şizoaffektif, Parkinson, nöroleptik malign sendrom) hangi durumda tercih edildiği (ağır işlev kaybı, gebelik, ilaç kullanılamaması, hızlı yanıt gereği) ile birlikte verilmeli. Mekanizma biyokimyasal (β-reseptör azalması, DA artışı, 5HT2A artışı, HPA uyarımı, BDNF artışı) ve nörofizyolojik (kan-beyin bariyeri, nöroplastisite) olarak iki listede kısa geçilmeli.",
+   "soru_payi": 8,
+   "soru_tipleri": ["hangisi EKT endikasyonu değildir", "gebede şiddetli mani → EKT"]
+  },
+  {
+   "tema": "Derin beyin uyarımı",
+   "oncelik": "B",
+   "birimler": ["psk-s06-b09"],
+   "kanit": "Slayttaki tüm metin sarı; 'FDA tarafından dirençli OKB tedavisinde onay' ayrıca işaretli; el notu '+ Parkinson, epilepsi, distoni'; genel bakışta 'invaziv, FDA depresyon için onay vermemiş'.",
+   "anlatim": "Uygulama ölçütleri (en az 5 yıl hastalık, en az 3 antidepresan ve yeterli psikoterapi etkisiz), invaziv oluşu ve FDA onayının depresyon için değil dirençli OKB için olduğu net verilmeli.",
+   "soru_payi": 6,
+   "soru_tipleri": ["FDA onayı: DBS → dirençli OKB (depresyon değil)", "sayı: kaç yıl / kaç antidepresan"]
+  },
+  {
+   "tema": "Diğer seçilen yerler: biyolojik tedavilere genel bakış, tDCS, fototerapi, uyku yoksunluğu, psikoşirürji",
+   "oncelik": "C",
+   "birimler": ["psk-s06-b01", "psk-s06-b08"],
+   "kanit": "Genel bakış slaytında her yönteme el notu (fototerapi: 'mevsimsel affektif bozukluk, yanıt hızlı, melatonin salınımı azalır'; psikoşirürji: 'spesifik beyin alanlarında lezyon'); tDCS tanımı ve hafif yan etkileri sarı. Çıkmış eşlenmemiş.",
+   "anlatim": "Her yöntem bir cümleyle: tDCS 0,5–2 mA doğru akım, tuzlu suyla ıslatılmış elektrot, hafif cilt tahrişi; fototerapi mevsimsel affektif bozuklukta; psikoşirürji lezyon oluşturur.",
+   "soru_payi": 5,
+   "soru_tipleri": ["eşleştirme: yöntem ↔ endikasyon (fototerapi → mevsimsel affektif bozukluk)"]
+  },
+  {
+   "tema": "Notta yok, sorulmuş: antipsikotik yan etkileri (ekstrapiramidal), klozapin ve atipik antipsikotikler",
+   "oncelik": "A",
+   "birimler": [],
+   "kanit": "2021-22'de üç öncüllü soru: 'hangileri antipsikotiklerle ilişkili ekstrapiramidal yan etkidir → I akut distonik reaksiyon, II akatizi ve parkinsonizm, III perioral tremor ve tardif diskinezi' (IV miyelosupresyon ve retinopati değil); EPS'yi azaltma yolları (atipik ajan seçimi, antikolinerjik kombinasyonu yerine doz ayarı) → I, II ve III; klozapinin keşfi (1959) ve tipik–atipik ayrımı → I ve III. Bankada EKT birimlerine eşlenmiş görünseler de notta antipsikotik konusu hiç yok. Hoca profili bu konu için 'ilaç yan etkisi %43, öncüllü %43' veriyor; tipik kökler arasında lityum 'hangisi yanlıştır' sorusu da var.",
+   "anlatim": "2026-27 slaytında psikofarmakoloji varsa ayrı bölüm olarak yazılmalı: EPS türleri ortaya çıkış zamanıyla (akut distoni, akatizi, parkinsonizm, tardif diskinezi), EPS olmayan yan etkilerle (miyelosupresyon, retinopati) karşılaştırmalı; klozapinin EPS'siz ilk antipsikotik oluşu ve atipiklerin adları. Slaytta yoksa bu çıkmışlar yalnız kısa hatırlatma olarak kalmalı, ayrıntı uydurulmamalı.",
+   "soru_payi": 25,
+   "soru_tipleri": ["öncüllü: hangileri ekstrapiramidal yan etkidir", "öncüllü: EPS'yi azaltma stratejileri", "öncüllü: klozapin ve atipik antipsikotikler hakkında doğrular"]
+  },
+  {
+   "tema": "Notta yok, sorulmuş: uyku hijyeni",
+   "oncelik": "B",
+   "birimler": [],
+   "kanit": "2021-22 ve arşiv Kurul 2 çıkmışı (2 kopya, past-1790877044925-370286 / q-KURUL_2_C_IKMIS__3-60): 'Uyku hijyenine yönelik hangisi yanlıştır? → akşam saatlerinde heyecan verici aktivitelerden kaçınılmamalıdır'. Doğru şıklar: uyku saatine yakın yemek yenmemeli, uyanınca yataktan çıkılmalı, gündüz uyunmamalı, uyumak için uğraşılmamalı. Notta karşılığı yok (bankada kapsandı:false).",
+   "anlatim": "Uyku hijyeni kuralları slaytta yer alıyorsa madde listesi olarak verilmeli; yanlış şık olumsuzlama ile kurulduğu için kuralların yönü ('kaçınılmalı', 'uğraşılmamalı') açık yazılmalı.",
+   "soru_payi": 8,
+   "soru_tipleri": ["yanlış bul: olumsuzlanmış uyku hijyeni kuralı"]
+  }
+ ],
+ "hoca_kaliplari": [
+  "Öncüllü (I–IV) + 'hangisi ya da hangileri' (bu konuda %43)",
+  "'… hangisi yanlıştır' (%43); yanlış şık olumsuzlama ile kurulur ('kaçınılmamalıdır')",
+  "Uzun tanımlayıcı kök → yöntem adı (TMS sorusu)",
+  "Olumsuz kök: 'hangisi beklenmez' (EKT yan etkisi)",
+  "Çeldirici: aynı sınıfın başka üyesi ya da başka sisteme ait yan etki"
+ ],
+ "tuzaklar": [
+  {"tuzak": "EKT ataksi yapar", "neden": "slayttaki SSS yan etkileri arasında ataksi yok; notta yapıştırılmış çıkmışın cevabı"},
+  {"tuzak": "EKT'nin mutlak kontrendikasyonu vardır", "neden": "slayt: mutlak kontrendikasyon yoktur"},
+  {"tuzak": "EKT öncesi benzodiazepin sürdürülür", "neden": "nöbet eşiğini artırdığı için kesilir"},
+  {"tuzak": "Derin beyin uyarımı depresyonda FDA onaylıdır", "neden": "FDA onayı dirençli OKB içindir; depresyonda onay yok"},
+  {"tuzak": "TMS psikozda etkilidir", "neden": "slayt: psikoz için etkisiz"},
+  {"tuzak": "Miyelosupresyon/retinopati ekstrapiramidal yan etki sayılır", "neden": "antipsikotik yan etkisidir ama ekstrapiramidal değildir (2021-22 öncüllü)"},
+  {"tuzak": "EKT beyne zarar verir", "neden": "slayt s13: çalışmalar zarar vermediğini göstermiştir"}
+ ],
+ "sayilar": [
+  "tDCS akımı 0,5–2 mA",
+  "Derin beyin uyarımı: en az 5 yıl hastalık, en az 3 farklı antidepresan etkisiz",
+  "EKT majör depresyon tedavisinde yaklaşık %85 yanıt (öğrenci el notu; slayt sayfası belirtilmemiş)",
+  "Klozapinin keşfi 1959 (2021-22 öncüllü sorusunun doğru önermesi)"
+ ],
+ "duzeltmeler": [
+  {"yanlis": "EKT invaziv olduğu için sık kullanılmaz (el notu)", "dogru": "EKT cerrahi anlamda invaziv değildir; genel anestezi ve kas gevşetici gerektirmesi, bilişsel yan etkileri ve damgalanma nedeniyle ilk seçenek değildir. Slaytta 'invaziv' ifadesi yok", "kaynak": "slayt s13 + girdideki düzeltme notu"},
+  {"yanlis": "Bankada antipsikotik yan etkisi ve klozapin soruları EKT birimlerine eşlenmiş (kapsandı:true)", "dogru": "Bu sorular EKT ile ilgili değildir; içerikleri notta yok, 'notta yok' olarak ele alınmalı", "kaynak": "banka past-1790877044403-707646, past-1790877044441-624411, past-1790877044385-678651 doğru şıkları"}
+ ],
+ "ara_soru_adaylari": [
+  {"birim": "psk-s06-b04", "fikir": "EKT'de beklenmeyen yan etki: ataksi; çeldiriciler listeden konfüzyon, amnezi, baş ağrısı"},
+  {"birim": "psk-s06-b06", "fikir": "EKT öncesi kesilecek ilaçlar ve nöbet eşiği"},
+  {"birim": "psk-s06-b07", "fikir": "tanım → yöntem: manyetik bobin, sol DLPFC, non-invaziv → TMS"},
+  {"birim": "psk-s06-b09", "fikir": "FDA onayı eşleştirmesi: DBS → dirençli OKB, derin TMS → sigara bırakma"}
+ ],
+ "kurul2627_notu": "2026-27 slaytı gelince bakılacak: ders psikofarmakolojiyi (antipsikotik, lityum, antidepresan) içeriyor mu? 2021-22 çıkmışlarının çoğu bu konuda; yeni slaytta varsa 'notta yok' teması A önceliğe ve en yüksek paya çıkar, yoksa yalnız TMS ve EKT çekirdeği kalır. Uyku hijyeni hangi derste anlatılıyor, kontrol edilmeli."
+}

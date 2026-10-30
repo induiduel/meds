@@ -457,6 +457,10 @@ LLM otomasyonu kapalıdır (AGENTS kural 20). Yeni ders, kullanıcı hangi dosya
 3. **Hoca kaydı:** `ogrenci_drive/hoca_dokum.py` (CPU, `MemoryMax=4G`, döküm sürerken `tsc` çalıştırma — H81). Anlaşılmayan
    döküm "hoca vurguladı" dayanağı olmaz.
 4. **Çıkmış:** bankada konu + slayt metniyle aday → her soru elle doğrulanır (`s`, `kanit`, `seviye`, `dogrulandi`) — H79.
+4b. **Geçmiş yıl öğrenci önem notu (AGENTS 28, 2026-10-30):** `hazirlik.py` → `ogrenci_onem.json` (elle `scripts/ogrenci_onem/oku.py --ders
+    <k2-xx> --sayfalar sayfalar.json`); belge `docs/OGRENCI_ONEM/<ders>.md`. Önem listesi, anlatım, örnek soru, ara soru bu belgenin öncelik
+    haritasına uyar; v2 cümlesi ve önem maddesi `ogrenci` alanını alır (rozet). Kapı `scripts/ogrenci_onem/kapi.py <ders>` 0 HATA.
+    Yöntem ve isabet: `docs/OGRENCI_ONEM_YONTEMI.md`.
 5. **Değerlendirme paketi:** `meds_database_v2/ders_bilgi/<ders>/degerlendirme/paket.json` → `degerlendirme_dogrula.py` 0 HATA.
 6. **Anlatım:** `# Başlık` + `@@ Bölüm` + paragraf; dolgu yok, "çıkmış sınavda sorulmuştur" yalnız `seviye=dogrudan`.
    Kapılar: `metin_denetle.py`, `turkce_uslup.denetle`, bağımsız denetçi alt ajanı (GEÇER).

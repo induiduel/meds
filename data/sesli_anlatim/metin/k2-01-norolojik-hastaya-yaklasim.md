@@ -41,9 +41,9 @@ Nörolojik muayene anamnezden sonra gelir, ama ilk izlenim bile tanıya yardımc
 
 Hemiplejik hastada kol gövdeye yapışık durur ve hasta yürürken bacağını oraklar; yani bacak yana doğru yarım daire çizerek ileri atılır. Bunun nedeni spastisitedir, yani kasların istemsiz sertleşmesidir. Spastik bacak dizden bükülemez ve uzamış kalır. Ayak ucu yere takılacağı için hasta bacağı yana savurarak ilerletir.
 
-Parkinson hastalığında maske yüz, yani mimiksiz yüz, görülür. Monoton konuşma, salya akması, kolların sallanmaması ve fleksör postür eşlik eder. Fleksör postür, vücudun öne eğik, kasılmış bir duruşta olmasıdır. Hasta yavaş ve küçük adımlarla yürür. Bu bilgi çıkmış sınavda sorulmuştur.
+Parkinson hastalığında maske yüz, yani mimiksiz yüz, görülür. Monoton konuşma, salya akması, kolların sallanmaması ve fleksör postür eşlik eder. Fleksör postür, vücudun öne eğik, kasılmış bir duruşta olmasıdır. Hasta yavaş ve küçük adımlarla yürür. Bu bilgi çıkmış sınavda sorulmuştur. Bu iki tabloyu kol bulgusu ayırır: Parkinson hastası maske yüzlüdür, monoton konuşur ve yürürken kollarını sallamaz; hemiplejik hastada ise kol gövdeye yapışıktır ve bacak oraklanır.
 
-Kas distrofisinde hasta karnı önde, iki yana sallanarak yürür; buna ördek yürüyüşü denir. Kalça çevresindeki kaslar güçsüz olduğu için gövde her adımda yana devrilir. Hemiplejideki oraklama tek taraflıdır; distrofideki ördek yürüyüşü ise iki yanlıdır.
+Kas distrofisinde hasta karnı önde, iki yana sallanarak yürür; buna ördek yürüyüşü denir. Kalça çevresindeki kaslar güçsüz olduğu için gövde her adımda yana devrilir. Hemiplejideki oraklama tek taraflıdır; distrofideki ördek yürüyüşü ise iki yanlıdır. Geçen yılın öğrencileri hemipleji, Parkinson hastalığı ve kas distrofisindeki bu gözlem bulgularını en önemli yerler arasına almıştı.
 
 Dizartri, konuşma kaslarının bozulmasından doğan telaffuz bozukluğudur. Afazi ise dil işlevinin kaybıdır. İkisi de hastanın konuşmasından hemen fark edilir.
 

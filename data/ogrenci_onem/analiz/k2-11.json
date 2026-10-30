@@ -1,0 +1,136 @@
+{
+ "ders": "k2-11",
+ "ozet": "Semiyoloji sınavda tanım sınırı üzerinden sorulur: hoca bir terimin tanımını komşu terimin tanımıyla değiştirip 'hangisi yanlıştır' diye sorar. Çıkmışlar en çok bellek (anterograd amnezi, 2021-2026 ve 2025-26), dikkat (hipervijilans–distraktibilite karışıklığı, 2021-22 finalinde 3 kopya) ve düşünce akışı (blokaj) üzerine düşmüş. Öğrenciler algı (halüsinasyon türleri, illüzyon), çağrışım bozuklukları ve motor bulgular tanım listelerine yığılmış; yönelim ve illüzyon tanımları yapıştırılmış iki çıkmışta doğru önerme olarak tekrar ediyor.",
+ "temalar": [
+  {
+   "tema": "Bellek bozuklukları: anterograd ve retrograd amnezi, tespit / kısa süreli / uzun süreli bellek",
+   "oncelik": "A",
+   "birimler": ["psk-s07-b01", "psk-s08-b03"],
+   "kanit": "Bankada 2 çıkmış doğrudan anterograd amnezi tanımı (d3-k2-psi-006, 2021-2026; q-25-26 Kurul 2, 2025-26); notta yapıştırılmış tablo sorusunda yanlış önerme 'anterograd amnezi uzun süreli bellekten kısa süreliye aktarılamamasına bağlıdır' (el notu: 'kısa ✗ uzun'). El notu pembe zeminle: 'Anterograd Amnezi = kısa bellek ✗→ uzun bellek', 'Wernicke-Korsakoff'un kronikte tipik', retrograd 'en sık demansta, geriye doğru yıkılır'. Tespit belleği satırı sarı: '3-5 nesne say'.",
+   "anlatim": "Anterograd ve retrograd amnezi yan yana, yön (kısa süreliden uzun süreliye aktarım) ve zaman ekseni (nedenden sonra / önce) üzerinden anlatılmalı; Wernicke-Korsakoff kronik dönem ve demans örnekleri eklenmeli. Bellek muayenesi üç basamakla (tespit: anında tekrar, 3–5 nesne; kısa süreli: 5 dk–birkaç saat; uzun süreli: yakın ve uzak) süre değerleriyle verilmeli.",
+   "soru_payi": 22,
+   "soru_tipleri": ["tanımdan terim: kısa süreliden uzun süreliye aktarılamama → anterograd amnezi", "yanlış bul: aktarım yönü ters çevrilmiş önerme", "vaka: kafa travması/hipoksi sonrası yeni bilgi öğrenememe", "eşleştirme: tespit / kısa / uzun süreli bellek ve muayene yöntemi"]
+  },
+  {
+   "tema": "Dikkat: distraktibilite ve hipervijilans ayrımı",
+   "oncelik": "B",
+   "birimler": ["psk-s08-b04"],
+   "kanit": "2021-22 finalinde sorulmuş, bankada 3 kopya (d3-f-060, d3-f-109, q-22_final…-81); hoca profilinde bu derste tekrar eden tek çekirdek önerme 'Hipervijilans, dikkatin kolaylıkla dış uyaranlara kayması ve dağılmasıdır' (yanlış şık, 3×). Öğrenci soruyu notta yapıştırmış, el notu: 'distraktibilite' ve 'hipervijilans = tehlike ihtimaline karşı dikkat kesilmek'; slayt bölümünde el notu sarı: '(TSSB ve sanrısal bozuklukta)'.",
+   "anlatim": "İki terim karşılaştırmalı tabloyla verilmeli: distraktibilite dikkatin dış uyaranlara kolayca kayması (en sık manide), hipervijilans dışarıdan tehlike beklentisiyle dikkat kesilme (TSSB, sanrısal bozukluk). Her birinin hangi tabloda görüldüğü mutlaka eklenmeli.",
+   "soru_payi": 14,
+   "soru_tipleri": ["yanlış bul: hipervijilansa distraktibilite tanımı verilmiş", "hangi tabloda görülür: hipervijilans → TSSB / sanrısal bozukluk, distraktibilite → mani"]
+  },
+  {
+   "tema": "Algı bozuklukları: halüsinasyon türleri (elementer, hipnagojik/hipnopompik) ve illüzyon",
+   "oncelik": "A",
+   "birimler": ["psk-s08-b05", "psk-s07-b04"],
+   "kanit": "En yüksek puanlı birim (p68; çıkmış + el önemli + sarı + tekrar). 'İllüzyonlar uyaranların yanlış yorumlanmasıdır' notta yapıştırılmış iki çıkmışta (2021-22 final ve tablo sorusu) doğru önerme olarak geçiyor. El notu: 'tek duyuya ait olanlar = elementer/basit, normal popülasyonda rastlanabilir', 'hipnagojik/hipnopompik… psikotik kabul edilmez' (kırmızı çizgi), 'ilüzyon psikozların prodrom döneminde artar'.",
+   "anlatim": "Halüsinasyon (uyaran yokken algı) ile illüzyon (var olan uyaranın yanlış yorumu) karşıtlığı üzerine kurulmalı; elementer halüsinasyonun ve uykuya dalarken/uyanırken görülen halüsinasyonların psikotik sayılmadığı, illüzyonun psikoz prodromunda arttığı açıkça söylenmeli.",
+   "soru_payi": 15,
+   "soru_tipleri": ["tanım: illüzyon = uyaranın yanlış yorumu", "yanlış bul: hipnagojik halüsinasyon her zaman psikotiktir (mutlak ifade)", "ayırıcı: halüsinasyon / illüzyon / negatif halüsinasyon"]
+  },
+  {
+   "tema": "Düşünce akışı: çağrışım artması, azalması ve sapmaları",
+   "oncelik": "A",
+   "birimler": ["psk-s07-b06"],
+   "kanit": "Arşiv Kurul 2 çıkmışı 'Hangisi çağrışımda sapma olarak değerlendirilemez? → Blokaj' notta yapıştırılmış, el notu 'çağrışım azalması'. Klang çağrışım tanımı 2021-22 final sorusunda doğru önerme. El yazısıyla üç başlığın alt maddeleri tek tek listelenmiş; 'kelime salatası' ve 'neolojizm = yeni kelime uydurmak / perseverasyon = aynı şeyin ısrarlı söylenmesi' pembe zeminli.",
+   "anlatim": "Üç alt başlık ayrı listeler hâlinde verilmeli: artma (basınçlı konuşma, ayrıntıcı konuşma, lögore), azalma (yavaşlama, blokaj), sapmalar (neolojizm, perseverasyon, klang, kelime salatası, yandan konuşma, ekolali, enkoherans vb.). Hangi bulgunun hangi başlıkta olduğu sınavın ölçtüğü şeydir; ekolali ve içerikte fakirleşmenin şizofreniyle bağı eklenmeli.",
+   "soru_payi": 12,
+   "soru_tipleri": ["olumsuz: hangisi çağrışım sapması değildir → blokaj", "tanım → terim: klang çağrışım, neolojizm, perseverasyon"]
+  },
+  {
+   "tema": "Motor aktivite ve hareket: katatoni, katalepsi, katapleksi, mutizm, diskinezi–distoni–manyerizm–ekopraksi–akatizi, retardasyon–eksitasyon",
+   "oncelik": "A",
+   "birimler": ["psk-s07-b16", "psk-s07-b15", "psk-s07-b14"],
+   "kanit": "2020-21 Kurul 2 çıkmışında yanlış şık 'Katatoni… asla psikojenik nedenlerle ortaya çıkmaz, her zaman organik kökenlidir' (bankada birim psk-s07-b16). Katapleksi tanımı notta yapıştırılmış tablo sorusunda doğru önerme. Slaytlarda tanımların tamamı sarıyla, katapleksi paragrafı kırmızı köşeli ayraçla işaretli; el notu 'felç yok'.",
+   "anlatim": "Birbirine karışan terimler çiftler hâlinde ayrılmalı: katalepsi (uzun süre hareketsizlik) – katatonik stupor – katapleksi (duygu tetikli geçici tonus kaybı, felç yok); diskinezi – distoni – manyerizm – ekopraksi – akatizi (antipsikotik ilişkisi). Katatoninin hem psikojenik hem organik nedenli olabileceği vurgulanmalı.",
+   "soru_payi": 10,
+   "soru_tipleri": ["yanlış bul: mutlak ifade ('asla', 'her zaman') içeren katatoni önermesi", "tanım → terim: katapleksi / katalepsi / akatizi"]
+  },
+  {
+   "tema": "Yönelim: üç bileşen, kayıp sırası, organik etkenle ilişki",
+   "oncelik": "B",
+   "birimler": ["psk-s08-b02"],
+   "kanit": "'Yönelim bozukluğu çoğunlukla organik bir etkenin varlığını gösterir' notta yapıştırılmış iki çıkmışta (2021-22 final A şıkkı ve tablo sorusu 4. önerme) doğru önerme. El notu sarıyla: 'en sık deliryumda', 'önce zaman, sonra yer, en son kişi oryantasyonu kaybolur'.",
+   "anlatim": "Zaman–yer–kişi bileşenleri, kayıp sırası ve deliryumla ilişki kısa ama eksiksiz verilmeli; sıranın ters çevrildiği önerme tipik çeldiricidir.",
+   "soru_payi": 7,
+   "soru_tipleri": ["doğru/yanlış önerme: yönelim bozukluğu organik etkeni düşündürür", "sıralama: zaman → yer → kişi"]
+  },
+  {
+   "tema": "Duygudurum: ötimi, yükselmiş, çökkün, irritabl",
+   "oncelik": "A",
+   "birimler": ["psk-s07-b12"],
+   "kanit": "'Ötimi duygudurumda çökme ya da yükselmenin olmadığını ifade eder' notta yapıştırılmış tablo sorusunda 1. önerme; aynı önermeler 2020-21 sorusunda (64b435be39be) da var. Dört tanımın tamamı vurgulu.",
+   "anlatim": "Dört duygudurum tanımı kısa tanım listesiyle verilmeli; ötimi tanımı birebir aktarılmalı, irritabl duygudurumun öfke/engellenme bileşeni eklenmeli.",
+   "soru_payi": 6,
+   "soru_tipleri": ["tanım: ötimi", "yanlış bul önermelerinden biri olarak duygudurum tanımı"]
+  },
+  {
+   "tema": "Psikiyatrik muayene şeması ve psikiyatrik görüşme",
+   "oncelik": "A",
+   "birimler": ["psk-s08-b01"],
+   "kanit": "2021-22 çıkmışı 'Psikiyatrik görüşme ile ilgili hangisi yanlıştır? → Psikotik ya da konfüze hastalarda yalnızca getirenlerle görüşme yapmak yeterli olur' öğrenci tarafından yapıştırılmış (bankada kapsandi:false; öğrenci bu soruyu semiyoloji yerine klinik sayfasına koymuş). Muayene şeması slaytı çıkmış sinyalli.",
+   "anlatim": "Muayene şemasının beş ana başlığı ve bilişsel işlevlerin on alt maddesi sırasıyla verilmeli; görüşmede hastanın kendisinin de görülmesi gerektiği, ilk görüşmenin amacı (tanı için bilgi toplama) ve süresi (45–60 dk) çıkmışın doğru önermelerinden eklenmeli.",
+   "soru_payi": 6,
+   "soru_tipleri": ["yanlış bul: konfüze hastada yalnız getirenlerle görüşmek yeterlidir", "sınıflama: bilişsel işlevler başlığına hangisi girmez"]
+  },
+  {
+   "tema": "Soyut düşünce, gerçeği değerlendirme ve içgörü",
+   "oncelik": "A",
+   "birimler": ["psk-s08-b06"],
+   "kanit": "2021-22 çıkmışı 'İçgörü için hangisi yanlıştır? → İçgörünün korunmuş olması psikotik bir bozukluğun varlığını kesin olarak dışlar' (bankada bu birime eşlenmiş). El notu: 'soyut düşünce = psikozda bozulur', 'gerçeği değerlendirme = içsel ve dışsal uyaranları ayırt etmek'. İçgörü için ayrı el notu yok; öğrenci içgörüyü işaretlememiş.",
+   "anlatim": "Üç kavram ayrı tanımlarla verilmeli; içgörünün korunmasının psikozu dışlamadığı ve soyutlamanın özellikle kronik psikozlarda bozulduğu açıkça yazılmalı.",
+   "soru_payi": 5,
+   "soru_tipleri": ["yanlış bul: mutlak ifade ('kesin olarak dışlar')", "tanım: gerçeği değerlendirme"]
+  },
+  {
+   "tema": "Diğer seçilen yerler: füg, hiperemnezi, déjà/jamais fenomenleri, konfabülasyon, aleksitimi–anksiyete–ajitasyon–ambivalans, derealizasyon–sinestezi, hezeyanlar, obsesyon ve fobiler",
+   "oncelik": "C",
+   "birimler": ["psk-s07-b02", "psk-s07-b03", "psk-s07-b13", "psk-s07-b05", "psk-s07-b08", "psk-s07-b09"],
+   "kanit": "Yalnız sarı vurgu ya da hiç işaret yok (b05, b08, b09 sinyalsiz); ajitasyon örnekleri ('bacaklarını sallamak…') vurgulu; hiçbiri için çıkmış eşlenmemiş.",
+   "anlatim": "Tanım listesi düzeyinde kısa geçilmeli; konfabülasyon (demans), füg (dissosiyatif, temporal epilepsi), sinestezi (LSD), Schneider hezeyanları (şizofreni) gibi terim–tablo bağları korunmalı.",
+   "soru_payi": 3,
+   "soru_tipleri": ["eşleştirme: terim → tanım"]
+  }
+ ],
+ "hoca_kaliplari": [
+  "'… hangisi yanlıştır?' en sık kalıp (bu konuda %56; notta yapıştırılan 4 çıkmışın 3'ü)",
+  "Tanımlar listesi: dört doğru tanım + komşu terimin tanımıyla değiştirilmiş bir yanlış (çeldirici %67 aynı türden ayrı kavram)",
+  "Olumsuz kök: 'hangisi … olarak değerlendirilemez?' (blokaj sorusu)",
+  "Mutlak ifade tuzağı: 'asla', 'her zaman', 'kesin olarak dışlar' (katatoni, içgörü)",
+  "Tablo biçimli önerme listesi (Sıra No / Cevap) kullanılmış"
+ ],
+ "tuzaklar": [
+  {"tuzak": "Hipervijilansa distraktibilitenin tanımı verilir", "neden": "2021-22 finalinde 3 kopya; dikkatin dış uyaranlara kolayca kayması distraktibilitedir, hipervijilans tehlike beklentisiyle dikkat kesilmedir"},
+  {"tuzak": "Anterograd amnezide aktarım yönü ters yazılır (uzun → kısa)", "neden": "doğrusu kısa süreli bellekten uzun süreli belleğe aktarılamamadır; tablo sorusunun yanlış önermesi buydu"},
+  {"tuzak": "Blokaj çağrışım sapması sayılır", "neden": "blokaj çağrışım azalması başlığındadır; neolojizm, klang, perseverasyon, kelime salatası sapmadır"},
+  {"tuzak": "Katatoni yalnız organik kökenlidir", "neden": "mutlak ifade; 2020-21 çıkmışının yanlış şıkkı"},
+  {"tuzak": "İçgörü korunmuşsa psikoz dışlanır", "neden": "mutlak ifade; 2021-22 çıkmışının yanlış şıkkı"},
+  {"tuzak": "Konfüze/psikotik hastada yalnız getirenlerle görüşmek yeterlidir", "neden": "2021-22 çıkmışının yanlış şıkkı"},
+  {"tuzak": "Hipnagojik/hipnopompik halüsinasyon psikotik belirti sayılır", "neden": "uzun ve birden çok duyuya ait olsa da psikotik kabul edilmez (y25 s18)"},
+  {"tuzak": "Negatif halüsinasyon bir halüsinasyon türü sanılır", "neden": "slayt: halüsinasyon değildir, var olan şeyi görmemektir"}
+ ],
+ "sayilar": [
+  "Tespit (kayıt) belleği: öğrenilenin anında tekrarı, 3–5 nesne",
+  "Kısa süreli (recall) bellek: 5 dakika – birkaç saat",
+  "Uzun süreli bellek: yakın (birkaç gün – birkaç ay), uzak (aylar – yıllar)",
+  "Yönelimin 3 bileşeni: zaman, yer, kişi (kayıp sırası bu yönde)",
+  "İlk psikiyatrik görüşme için 45–60 dakika yeterli olabilir (2021-22 çıkmışının doğru önermesi)",
+  "Muayene şeması: 5 ana başlık, bilişsel işlevler 10 alt madde"
+ ],
+ "duzeltmeler": [
+  {"yanlis": "Kısa süreli (recall) bellek 5 dk – 1 saat", "dogru": "Kısa süreli bellek 5 dakika ile birkaç saat arasıdır", "kaynak": "slayt y25 s08"},
+  {"yanlis": "Uzun süreli bellek birkaç gün – ay", "dogru": "Birkaç gün–birkaç ay yakın bellek, birkaç ay–yıllar uzak bellektir; öğrenci notu yalnız yakın belleği yazmış", "kaynak": "slayt y25 s09"},
+  {"yanlis": "Elementer halüsinasyon toplumda sık ve normaldir", "dogru": "Elementer (basit) halüsinasyon normal popülasyonda rastlanabilir; 'sık' denmiyor", "kaynak": "slayt y25 s18"},
+  {"yanlis": "Hipnagojik/hipnopompik halüsinasyon birden çok duyuyla ise psikotik kabul edilmez (koşul gibi)", "dogru": "Uzun ve birden fazla duyuya ait (kompleks) olsalar bile psikotik kabul edilmez", "kaynak": "slayt y25 s18"},
+  {"yanlis": "Notta yapıştırılmış tablo sorusunun yanlış önermesi anterograd amnezi", "dogru": "Bu tablo sorusu bankada birebir yok; aynı 1–4 önermelerini taşıyan 2020-21 sorusunda (64b435be39be) yanlış şık katatoni önermesidir. İki sürüm de geçerli soru kalıbı olarak ele alınmalı", "kaynak": "banka 64b435be39be + öğrenci notu"}
+ ],
+ "ara_soru_adaylari": [
+  {"birim": "psk-s08-b04", "fikir": "hipervijilans ile distraktibilite tanımlarının yer değiştirdiği yanlış bul sorusu"},
+  {"birim": "psk-s07-b01", "fikir": "kafa travması sonrası yeni bilgi öğrenememe vakası → anterograd amnezi; aktarım yönü çeldiricisi"},
+  {"birim": "psk-s07-b06", "fikir": "hangisi çağrışım sapması değildir: blokaj"},
+  {"birim": "psk-s07-b15", "fikir": "duygu tetikli geçici tonus kaybı: katapleksi / katalepsi / katatonik stupor ayrımı"},
+  {"birim": "psk-s08-b06", "fikir": "içgörü korunması psikozu dışlamaz (mutlak ifade tuzağı)"}
+ ],
+ "kurul2627_notu": "2026-27 slaytı gelince bakılacak: psikiyatrik görüşme bölümü (2021-22 çıkmışı) bu yılın semiyoloji slaytında mı yoksa ayrı derste mi; içgörü maddesi slaytta ayrıntılı mı; tablo biçimli soru kaynağı. Bellek ve dikkat bölümleri değişmediyse en yüksek soru payını korur."
+}

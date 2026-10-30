@@ -532,7 +532,53 @@
         ],
         "sekil": null
        },
-       "id": "k2-02-c0021"
+       "id": "k2-02-c0021",
+       "ogrenci": {
+        "oncelik": "A",
+        "birim": "noro-s04-b01"
+       }
+      },
+      {
+       "ses": "Ancak uyaran kesilince yeniden uykuya dalmaya meyillidir; sözel uyaranla uyanıp uyaran bitince tekrar uyuyan hasta somnolandır.",
+       "ekran": "Uyaran kesilince **tekrar uykuya meyilli**: somnolans",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "tekrar uykuya meyilli",
+         "tur": "tanim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 6,
+        "satir": [
+         "Somnolan: çabuk uyandırılabilir ve farkında"
+        ],
+        "sekil": null
+       },
+       "id": "k2-02-c0255",
+       "ogrenci": {
+        "oncelik": "A",
+        "birim": "noro-s04-b03"
+       }
+      },
+      {
+       "ses": "Geçen yılın öğrencileri somnolansın bu tanımını en önemli yerler arasına almıştı.",
+       "ekran": "Öğrencilerin en önemli bulduğu yer: **somnolans tanımı**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "somnolans tanımı",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": null,
+       "id": "k2-02-c0256"
       }
      ]
     },
@@ -786,6 +832,36 @@
         "sekil": null
        },
        "id": "k2-02-c0031"
+      },
+      {
+       "ses": "Yani deliryum, gelip geçici bir dikkat ve bilinç bozukluğudur ve tabloya davranış bozukluğu eşlik eder.",
+       "ekran": "**Deliryum**: gelip geçici dikkat ve bilinç bozukluğu + **davranış bozukluğu**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Deliryum",
+         "tur": "tanim"
+        },
+        {
+         "metin": "davranış bozukluğu",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 7,
+        "satir": [
+         "Deliryum"
+        ],
+        "sekil": null
+       },
+       "id": "k2-02-c0257",
+       "ogrenci": {
+        "oncelik": "A",
+        "birim": "noro-s04-b03"
+       }
       },
       {
        "ses": "Halk dilindeki \"delirme\" ajite biçimdir.",
@@ -3413,7 +3489,117 @@
         ],
         "sekil": null
        },
-       "id": "k2-02-c0133"
+       "id": "k2-02-c0133",
+       "ogrenci": {
+        "oncelik": "A",
+        "birim": "noro-s04-b11"
+       }
+      },
+      {
+       "ses": "Felçli hastada motor puan, sağlam taraftaki en iyi yanıttan verilir.",
+       "ekran": "Felçli hastada motor puan: **sağlam taraftaki en iyi yanıt**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "sağlam taraftaki en iyi yanıt",
+         "tur": "tuzak"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 30,
+        "satir": [
+         "Movement"
+        ],
+        "sekil": null
+       },
+       "id": "k2-02-c0258"
+      },
+      {
+       "ses": "Örneğin sağ hemiplejili, ağrıyla gözünü açan, konfüze konuşan ve sol eliyle ağrıyı lokalize eden hasta iki, dört ve beş puanla toplam on bir alır.",
+       "ekran": "Sağ hemipleji: göz **2** + sözel **4** + sol el lokalize **5** = **11**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "2",
+         "tur": "sayi"
+        },
+        {
+         "metin": "4",
+         "tur": "sayi"
+        },
+        {
+         "metin": "5",
+         "tur": "sayi"
+        },
+        {
+         "metin": "11",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 30,
+        "satir": [
+         "2- Ağrılı uyaranla",
+         "4-Dezoriente",
+         "5-Ağrıyı lokalize"
+        ],
+        "sekil": null
+       },
+       "id": "k2-02-c0259",
+       "ogrenci": {
+        "oncelik": "A",
+        "birim": "noro-s04-b11"
+       }
+      },
+      {
+       "ses": "Ağrıyla gözünü açan, ağrıda dekortike yanıt veren ve hiç ses çıkarmayan hasta ise iki, üç ve bir puanla toplam altı alır.",
+       "ekran": "Göz **2** + dekortike **3** + sözel yok **1** = **6**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "dekortike",
+         "tur": "terim"
+        },
+        {
+         "metin": "6",
+         "tur": "sayi"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 30,
+        "satir": [
+         "2- Ağrılı uyaranla",
+         "3-Dekortike",
+         "1-Yanıt yok"
+        ],
+        "sekil": null
+       },
+       "id": "k2-02-c0260"
+      },
+      {
+       "ses": "Geçen yılın öğrencileri Glasgow koma skalasının bu hesabını en önemli yerler arasına almıştı.",
+       "ekran": "Öğrencilerin en önemli bulduğu yer: **Glasgow hesabı**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Glasgow hesabı",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": null,
+       "id": "k2-02-c0261"
       }
      ]
     },
@@ -6362,6 +6548,32 @@
         "sekil": null
        },
        "id": "k2-02-c0252"
+      },
+      {
+       "ses": "Ayırıcı tanıda hipoglisemi her hastada mutlaka düşünülmelidir, çünkü gerçek bir acildir ve hızla düzeltilebilir.",
+       "ekran": "Ayırıcı tanıda **hipoglisemi** mutlaka düşünülür: gerçek acil, hızla düzeltilir",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "hipoglisemi",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 61,
+        "satir": [
+         "Bilinç bozukluğunda ayırıcı tanısı önemli"
+        ],
+        "sekil": null
+       },
+       "id": "k2-02-c0262",
+       "ogrenci": {
+        "oncelik": "A",
+        "birim": "noro-s04-b18"
+       }
       },
       {
        "ses": "Zaman kaybı hastanın hayatına mal olabilir.",

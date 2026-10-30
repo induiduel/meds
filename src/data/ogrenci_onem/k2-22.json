@@ -1,0 +1,597 @@
+{
+ "ders": "k2-22",
+ "kod": "2s05",
+ "brans": "Psikiyatri",
+ "konu": "Psikosomatik Bozukluklar",
+ "kaynak": "Geçmiş yıl (2025-26) öğrenci derleme notu: psk3.2",
+ "y25": {
+  "key": "y25-k2-22-psikosomatik-bozukluklar",
+  "sayfalar": [
+   7,
+   30,
+   35,
+   36,
+   39
+  ]
+ },
+ "sayac": {
+  "birim": 5,
+  "A": 4,
+  "B": 0,
+  "C": 1,
+  "ogrenci_sorusu": 4,
+  "banka": 8,
+  "banka_kapsandi": 5
+ },
+ "birimler": [
+  {
+   "id": "psk-s13-b01",
+   "pdf": "psk",
+   "sayfa": 13,
+   "bolge": "r1c1+r1c2+r2c1+r2c2",
+   "tur": "slayt",
+   "baslik": "Sınıflandırma DSM-V",
+   "metin": "Somatik Belirti ve İlişkili Bozukluklar\n- Somatik Belirti Bozukluğu\n- Hastalık Kaygısı Bozukluğu\n- Konversiyon Bozukluğu: Güçsüzlük ya da Paralizi ile Giden; Olağan Dışı Devinim ile Giden; Yutma Belirtileri ile Giden; Konuşma Belirtisi ile Giden; Ataklarla ya da Katılmalarla Giden; Anestezi ya da Duyu Kaybıyla Giden; Özel Duyusal Belirti ile Giden; Karma Belirtilerle Giden\n- Diğer Tıbbi Durumları Etkileyen Psikolojik Etkenler\n- Yapay Bozukluk (Factitious Disorder)\n- Belirlenmiş Diğer Bir Somatik Belirti ve İlişkili Bozukluk\n- Belirlenmemiş Diğer Bir Somatik Belirti ve İlişkili Bozukluk",
+   "el_yazisi": [
+    {
+     "metin": "6+ ay",
+     "hedef": "Somatik Belirti Bozukluğu (madde başında daire içinde)",
+     "guven": "orta",
+     "alternatif": "'b+ay' gibi görünüyor; slayt s08'deki '6 ay ya da daha uzun süre' ölçütüne göre 6+ ay"
+    },
+    {
+     "metin": "= belirti var ama yanlış yorumlanır. 6 ay+. Kişi ikincil kazancı önemsemez. (3. sınıf) tıp öğrencilerinde. İkna edilemezler. Ciddi hastalığı olduğuna inanır.",
+     "hedef": "Somatik Belirti Bozukluğu",
+     "guven": "yuksek",
+     "alternatif": "'6 ay+' el yazısında 'bay+' gibi; '3. sınıf' sözcüğü 'tıp öğrencilerinde' üstüne eklenmiş"
+    },
+    {
+     "metin": "= hipokondriasis. Belirti olmamasına rağmen hasta olduğuna / olacağına dair büyük korku duyar. İkna edilemez. İnternetten hastalık araştırır.",
+     "hedef": "Hastalık Kaygısı Bozukluğu",
+     "guven": "yuksek",
+     "alternatif": ""
+    },
+    {
+     "metin": "belirti yok, endişe var.",
+     "hedef": "Hastalık Kaygısı Bozukluğu (sağ kenar özeti)",
+     "guven": "yuksek",
+     "alternatif": ""
+    },
+    {
+     "metin": "= ego şalteri indirir. Altta fiziksel patoloji yok. İstemli değil. Madde kullanımına bağlı değil. Birincil kazanç = içsel çatışma son bulur. İkincil kazanç = hasta olarak görülür, ilgi destek alır. Güzel aldırmazlık görülür!! Bu hastalıkta nörolojik hastalıklar topluma oranla daha sık görülür.",
+     "hedef": "Konversiyon Bozukluğu",
+     "guven": "yuksek",
+     "alternatif": ""
+    },
+    {
+     "metin": "Çatışmalara maruz kalan asker. Özdeşim sonucu görülebilir!",
+     "hedef": "Konversiyon Bozukluğu (epidemiyoloji/etiyoloji)",
+     "guven": "yuksek",
+     "alternatif": ""
+    },
+    {
+     "metin": "ani başlangıçlı. → ciddi belirtilere rağmen buna uygunsuz davranır.",
+     "hedef": "Konversiyon Bozukluğu – güzel aldırmazlık tanımı",
+     "guven": "yuksek",
+     "alternatif": "ok 'ani başlangıçlı'dan çıkıyor; ikinci satır güzel aldırmazlığın tanımı (slayt s27)"
+    },
+    {
+     "metin": "ani başlangıçlı; akut olguların %95'i kendiliğinden geriler",
+     "hedef": "Konversiyon Bozukluğu (sol kenar, okla)",
+     "guven": "yuksek",
+     "alternatif": "'kendiliğinden geriler' kastedilmiş olabilir (slayt s32: akut olguların %95'i kendiliğinden geriler)"
+    },
+    {
+     "metin": "= tıbbi ilgi görmek için hastalığı taklit eder, başlatır, alevlendirir. Mortalite yaygın. Amaç hasta rolü yapmak. Birincil amaç görevlerden kaçma değil!",
+     "hedef": "Yapay Bozukluk (Factitious Disorder)",
+     "guven": "yuksek",
+     "alternatif": ""
+    }
+   ],
+   "isaretler": [
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "Somatik Belirti ve İlişkili Bozukluklar (basılı alt çizgi)"
+    },
+    {
+     "tur": "daire",
+     "hedef": "Somatik Belirti Bozukluğu başındaki '6+ay' notu"
+    },
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "Konversiyon Bozukluğu"
+    },
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "Yapay Bozukluk (Factitious Disorder)"
+    },
+    {
+     "tur": "ok",
+     "hedef": "Yapay Bozukluk → Tanı ve Klinik Özellikler slaytı"
+    },
+    {
+     "tur": "ok",
+     "hedef": "'ani başlangıç, kendiliğinden gelişir' → Konversiyon Bozukluğu"
+    }
+   ],
+   "sinyal": [
+    "cikmis",
+    "el_onemli",
+    "tekrar"
+   ],
+   "y25": {
+    "key": "y25-k2-22-psikosomatik-bozukluklar",
+    "sayfa": 7
+   },
+   "y26": null,
+   "duzeltme": [
+    {
+     "ham": "Paralazi",
+     "dogru": "Paralizi",
+     "gerekce": "Slayttaki yazım hatası (paralysis = paralizi)."
+    },
+    {
+     "ham": "ani başlangıç, kendiliğinden gelişir",
+     "dogru": "ani başlangıçlı; akut olguların %95'i kendiliğinden geriler",
+     "gerekce": "Slayt s32: 'Ani başlangıçlıdır. Akut olguların %95'i kendiliğinden geriler.' Not muhtemelen bunu kısaltıyor."
+    }
+   ],
+   "not_": null,
+   "ogrenci_sorulari": [
+    "psk-s13-b02",
+    "psk-s13-b03",
+    "psk-s13-b04"
+   ],
+   "banka_cikmis": [
+    "past-1790877044852-954374"
+   ],
+   "puan": 88,
+   "oncelik": "A",
+   "vurgulu": [
+    "Konversiyon Bozukluğu",
+    "Somatik Belirti Bozukluğu başındaki '6+ay' notu",
+    "Somatik Belirti ve İlişkili Bozukluklar (basılı alt çizgi)",
+    "Yapay Bozukluk (Factitious Disorder)"
+   ]
+  },
+  {
+   "id": "psk-s13-b05",
+   "pdf": "psk",
+   "sayfa": 13,
+   "bolge": "r2c1",
+   "tur": "slayt",
+   "baslik": "Yapay Bozukluk – Tanı ve Klinik Özellikler",
+   "metin": "Tanı ve Klinik Özellikler:\n- Geleneksel tıbbi veya psikiyatrik anlayışı aşan, belirtilerin olağan dışı ve dramatik sunumu\n- Alışılmış tedavi ve ilaçlara uygun cevap vermeyen belirtiler\n- Diğer belirtiler çözülürken yeni olağan dışı belirtilerin ortaya çıkması\n- İşlemlere, testlere girmeye ve belirtileri tekrar anlatmaya istek duyma\n- Alternatif bilgi kaynaklarını reddetme (Bilgi içeren belgeleri imzalamama, aile üyelerinden yardımı reddetme)\n- Geniş bir tıbbi öykü ve çoklu cerrahi girişim kanıtları\n- Çoklu ilaç allerjileri\n- Tıbbi meslek\n- Az ziyaretçi\n- Olağan dışı belirtilerinin gelişimi ya da tedavinin olağandışı cevaplarını tahmin etme yeteneği",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "pembe",
+     "hedef": "Geleneksel tıbbi veya psikiyatrik anlayışı aşan, belirtilerin olağan dışı ve dramatik sunumu"
+    },
+    {
+     "tur": "ok",
+     "hedef": "Yapay Bozukluk satırından bu slayta kırmızı ok"
+    }
+   ],
+   "sinyal": [
+    "cikmis",
+    "tekrar"
+   ],
+   "y25": {
+    "key": "y25-k2-22-psikosomatik-bozukluklar",
+    "sayfa": 39
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "ogrenci_sorulari": [
+    "psk-s13-b06"
+   ],
+   "banka_cikmis": [
+    "dd00370e9106",
+    "past-q-I_SKENDERUN_TI_Mu_du_rlu_g_u_ne0__1__230709_230251-76"
+   ],
+   "puan": 85,
+   "oncelik": "A",
+   "vurgulu": [
+    "Geleneksel tıbbi veya psikiyatrik anlayışı aşan, belirtilerin olağan dışı ve dramatik sunumu"
+   ]
+  },
+  {
+   "id": "psk-s13-b07",
+   "pdf": "psk",
+   "sayfa": 13,
+   "bolge": "r1c3",
+   "tur": "slayt",
+   "baslik": "İşlevsel Nörolojik Belirti Bozukluğu – Konversiyonda ayırıcı fizik muayene bulguları (Tablo 13.4-2)",
+   "metin": "Tablo 13.4-2 Konversiyon Bozukluğunda Ayırıcı Fizik Muayene Bulguları (Durum / Test / Konversiyon Bulguları):\nAnestezi – Dermatom haritalama – Duyu kaybı bilinen dağılım kalıplarına uymaz\nHemianestezi – Orta hat kontrolü – Vücudu net ve keskin bir sınırla ayrılması\nAstazi-abazi – Yürüme, dans etme – Yürüyemeyen kişiler telkinle dans edebilir; telkinle duyu ve motor bulgularda değişiklik\nParalizi, parezi – Paralize eli yüze düşürme; Hoover testi – El yüzün üstüne değil, yanına düşer; sağlam bacak yukarı doğru kaldırılmaya çalışılırken elini paralize bacağın üzerine koyan kişi tarafından elinin altında basınç hissedilir\nMotor gücün değerlendirilmesi – Muayenede ele geçen şey güçsüzlüktür\nKoma – Muayene eden gözleri açmaya çalışır; Oküler sefalik manevra – Açmaya direnç gösterme, hekimden uzağa gözünü dikme; gözler tam karşıya bakılı kalır\nAfoni – Öksürmesini isteme – Normal öksürme sesi vokal kordların kapandığına işaret eder\nİnatçı hapşırma, Senkop (Tilt testi), Tünel şeklinde görme, Şiddetli tek/çift taraflı körlük satırları (işaretsiz)",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "Anestezi'den Afoni'ye kadar satırları kapsayan kırmızı köşeli ayraç"
+    },
+    {
+     "tur": "yildiz",
+     "hedef": "Paralizi, parezi (Hoover testi, eli yüze düşürme)"
+    }
+   ],
+   "sinyal": [
+    "yildiz"
+   ],
+   "y25": {
+    "key": "y25-k2-22-psikosomatik-bozukluklar",
+    "sayfa": 30
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "banka_cikmis": [
+    "d3-k2-psi-016"
+   ],
+   "puan": 45,
+   "oncelik": "A",
+   "vurgulu": [
+    "Anestezi'den Afoni'ye kadar satırları kapsayan kırmızı köşeli ayraç",
+    "Paralizi, parezi (Hoover testi, eli yüze düşürme)"
+   ]
+  },
+  {
+   "id": "psk-s13-b08",
+   "pdf": "psk",
+   "sayfa": 13,
+   "bolge": "r1c3+r2c3",
+   "tur": "slayt",
+   "baslik": "Nöbet & Pseudonöbet Ayırımı",
+   "metin": "Nöbet / Pseudonöbet:\nBaşlatıcı: Nöbet eşiğini düşüren uyaranlar (alkol, ilaç kesilmesi) / Stressör\nSüre: 1-2 dk / 10-20 dk, saatler\nDüşme biçimi: Ani, tehlikeli, çığlık eşliğinde / Genelde yer ve zaman seçilir, tehlikeli değildir, sıkıntılı görünüm ve hiperventilasyon eşlik eder\nDüşme yeri: Her hangi bir yer, korunmasız / Genelde insanların olduğu yerlerde, korunmalı\nAltına kaçırma: Olabilir / Genelde olmaz\nYaralanma, dil ısırması: Olabilir / Dil ısırması olmaz, dudaklarını, ellerini, çevredekileri ısırabilir\nZaman: Günün her saatinde, uykuda olabilir / Stressörden sonra, uykuda olmaz\nNöbet sırasında: Ani bilinç kaybı / Genelde bilinç kaybı yok, konuşulanları duyar\nAğrılı uyaranlara yanıt yok / Genelde var\nKornea refleksi alınmaz / alınır\nPatolojik refleksler olabilir / yoktur\nNöbet sonrası uyku ve uyanırken konfüzyon / Nöbet ağıtlar, sıkıntılı görünümle sonlanır\nEEG genelde bozuk / genelde normal",
+   "el_yazisi": [],
+   "isaretler": [],
+   "sinyal": [
+    "tekrar"
+   ],
+   "y25": {
+    "key": "y25-k2-22-psikosomatik-bozukluklar",
+    "sayfa": 35
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "banka_cikmis": [
+    "q-25-26_d_nem_3_kurul_2-86"
+   ],
+   "puan": 40,
+   "oncelik": "A",
+   "vurgulu": []
+  },
+  {
+   "id": "psk-s13-b09",
+   "pdf": "psk",
+   "sayfa": 13,
+   "bolge": "r2c3",
+   "tur": "slayt",
+   "baslik": "SVO & Konversiyon Ayırımı",
+   "metin": "I. Motor Nöron / II. Motor Nöron / Konversiyon\nBeyin veya omurilik lezyonu / Omurilikten çıkan sinir lifleri / Psikojenik\nDTR artmış, patolojik refleks var / DTR azalmış veya kaybolmuş, patolojik refleks yok / Patoloji yok\nSfinkter bozukluğu var / olabilir / Yok\nKaslarda spastik paralizi / Flask paralizi / Kas tonusu normal\nKaslarda atrofi yok / Atrofi var / Genelde yok, kronik vakalarda olabilir\nFasikülasyon yok / Fasikülasyon var / Yok\nGüzel aldırmazlık yok / yok / Genelde var",
+   "el_yazisi": [],
+   "isaretler": [],
+   "sinyal": [
+    "tekrar"
+   ],
+   "y25": {
+    "key": "y25-k2-22-psikosomatik-bozukluklar",
+    "sayfa": 36
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "puan": 10,
+   "oncelik": "C",
+   "vurgulu": []
+  }
+ ],
+ "ogrenci_sorulari": [
+  {
+   "id": "psk-s13-b02",
+   "pdf": "psk",
+   "sayfa": 13,
+   "bolge": "r1c2",
+   "tur": "cikmis_soru",
+   "baslik": "Güzel aldırmazlık hangi bozuklukta?",
+   "metin": "45. Hangi bozuklukta hastada güzel aldırmazlık vardır?",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "daire",
+     "hedef": "d. Konversiyon bozukluğu (kırmızı çember, kırmızı yazı)"
+    },
+    {
+     "tur": "sari",
+     "hedef": "güzel aldırmazlık (açık turuncu vurgu)"
+    }
+   ],
+   "sinyal": [
+    "cikmis",
+    "tekrar"
+   ],
+   "y25": {
+    "key": "y25-k2-22-psikosomatik-bozukluklar",
+    "sayfa": 27
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "cikmis": {
+    "kok": "45. Hangi bozuklukta hastada güzel aldırmazlık vardır?",
+    "siklar": [
+     "a. Vücut dismorfik bozukluğu",
+     "b. Anoreksiya nervoza",
+     "c. Somatizasyon bozukluğu",
+     "d. Konversiyon bozukluğu",
+     "e. Hipokondriyazis"
+    ],
+    "ogrenci_cevap": "D",
+    "banka_id": "past-1790877044852-954374",
+    "banka_yil": "2021-2022",
+    "banka_dogru": "D",
+    "tutarli": true,
+    "not": "Pembe blokta değil, beyaz kesik; cevap kırmızı çemberle işaretli. Aynı soru f185a2d97387 (2023-2024, D) olarak da var."
+   },
+   "bagli_birim": "psk-s13-b01",
+   "benzerlik": 0.674
+  },
+  {
+   "id": "psk-s13-b03",
+   "pdf": "psk",
+   "sayfa": 13,
+   "bolge": "r1c2",
+   "tur": "cikmis_soru",
+   "baslik": "Kanser korkusu + internet araştırması: öntanı",
+   "metin": "Psikiyatri polikliniğine başvuran, tıbbi bir sorunu ve şikayeti olmadığını, ancak kanser olmaktan aşırı korktuğunu, bununla ilgili internet okumaları yaptığını, bunu düşünmekten kendini işlerine veremediğini ifade eden hastada öntanı ne olabilir?",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "pembe",
+     "hedef": "tüm soru bloğu"
+    },
+    {
+     "tur": "kutu",
+     "hedef": "2 Hastalık Kaygısı Bozukluğu (onay kutusu)"
+    }
+   ],
+   "sinyal": [
+    "cikmis",
+    "tekrar"
+   ],
+   "y25": {
+    "key": "y25-k2-22-psikosomatik-bozukluklar",
+    "sayfa": 17
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "cikmis": {
+    "kok": "Psikiyatri polikliniğine başvuran, tıbbi bir sorunu ve şikayeti olmadığını, ancak kanser olmaktan aşırı korktuğunu, bununla ilgili internet okumaları yaptığını, bunu düşünmekten kendini işlerine veremediğini ifade eden hastada öntanı ne olabilir?",
+    "siklar": [
+     "1) Somatik Belirti Bozukluğu",
+     "2) Hastalık Kaygısı Bozukluğu",
+     "3) Konversiyon Bozukluğu",
+     "4) Yapay Bozukluk",
+     "5) Yaygın Kaygı Bozukluğu"
+    ],
+    "ogrenci_cevap": "B (2)",
+    "banka_id": "dd00370e9106",
+    "banka_yil": "2020-2021",
+    "banka_dogru": "B",
+    "tutarli": true,
+    "not": "Tablo biçiminde (Sıra No / Cevap) yapıştırılmış; işaretli satır onay kutusuyla. Bankada 6630634703c0 ve 41dfe004f570 kopyaları da var."
+   },
+   "bagli_birim": "psk-s13-b01",
+   "benzerlik": 0.694
+  },
+  {
+   "id": "psk-s13-b04",
+   "pdf": "psk",
+   "sayfa": 13,
+   "bolge": "r1c2",
+   "tur": "cikmis_soru",
+   "baslik": "DSM-5'te Somatik Belirti ve İlişkili Bozukluklar arasında sayılmayan",
+   "metin": "77- Aşağıdakilerden hangisi, DSM-5 kriterlerine göre, Somatik Belirti ve İlişkili Bozukluklar arasında sayılmaz?",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "pembe",
+     "hedef": "tüm soru bloğu"
+    }
+   ],
+   "sinyal": [
+    "cikmis",
+    "tekrar"
+   ],
+   "y25": {
+    "key": "y25-k2-22-psikosomatik-bozukluklar",
+    "sayfa": 7
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "cikmis": {
+    "kok": "77- Aşağıdakilerden hangisi, DSM-5 kriterlerine göre, Somatik Belirti ve İlişkili Bozukluklar arasında sayılmaz?",
+    "siklar": [
+     "A) Yapay Bozukluk",
+     "B) Konversiyon Bozukluğu",
+     "C) Beden Algısı Bozukluğu",
+     "D) Hastalık Kaygısı Bozukluğu",
+     "E) Bedensel Belirti Bozukluğu"
+    ],
+    "ogrenci_cevap": "C (kalın)",
+    "banka_id": "past-q-22_final_230619_145249-77",
+    "banka_yil": "2021-2022",
+    "banka_dogru": "C",
+    "tutarli": true,
+    "not": "Cevap kalın yazıyla belirtilmiş. Kopyaları: d3-f-210 (arşiv final), q-22_final_230619_145249-77. Beden algısı (dismorfik) bozukluğu DSM-5'te OKB ve ilişkili bozukluklar altındadır."
+   },
+   "bagli_birim": "psk-s13-b01",
+   "benzerlik": 0.749
+  },
+  {
+   "id": "psk-s13-b06",
+   "pdf": "psk",
+   "sayfa": 13,
+   "bolge": "r2c2",
+   "tur": "cikmis_soru",
+   "baslik": "Dramatik, olağandışı belirti sunumu: yapay bozukluk",
+   "metin": "76) Geleneksel tıbbi veya psikiyatrik anlayışı aşan, belirtilerin olağan dışı ve dramatik sunumu, alışılmış tedavi ve ilaçlara uygun cevap vermeyen belirtiler, diğer belirtiler çözülürken yeni olağan dışı belirtilerin ortaya çıkması, işlemlere, testlere girmeye ve belirtileri tekrar anlatmaya istek duyma, olağan dışı belirtilerinin gelişimi' şeklinde ortaya çıkan bir tabloda, aşağıdakilerden hangisi düşünülmelidir?",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "sari",
+     "hedef": "C) Yapay Bozukluk"
+    }
+   ],
+   "sinyal": [
+    "cikmis",
+    "sari"
+   ],
+   "y25": {
+    "key": "y25-k2-22-psikosomatik-bozukluklar",
+    "sayfa": 39
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "cikmis": {
+    "kok": "76) Geleneksel tıbbi veya psikiyatrik anlayışı aşan, belirtilerin olağan dışı ve dramatik sunumu, alışılmış tedavi ve ilaçlara uygun cevap vermeyen belirtiler, diğer belirtiler çözülürken yeni olağan dışı belirtilerin ortaya çıkması, işlemlere, testlere girmeye ve belirtileri tekrar anlatmaya istek duyma, olağan dışı belirtilerinin gelişimi şeklinde ortaya çıkan bir tabloda, aşağıdakilerden hangisi düşünülmelidir?",
+    "siklar": [
+     "A) Konversiyon Bozukluğu",
+     "B) Hastalık Kaygısı Bozukluğu",
+     "C) Yapay Bozukluk",
+     "D) Simülasyon",
+     "E) Somatik Belirti Bozukluğu"
+    ],
+    "ogrenci_cevap": "C",
+    "banka_id": "past-q-I_SKENDERUN_TI_Mu_du_rlu_g_u_ne0__1__230709_230251-76",
+    "banka_yil": "Geçmiş Yıllar Çıkmışı (Arşiv), Kurul 2",
+    "banka_dogru": "C",
+    "tutarli": true,
+    "not": "Pembe değil beyaz kesik; cevap sarı vurgulu. Kök doğrudan slayt s39 maddelerinden."
+   },
+   "bagli_birim": "psk-s13-b05",
+   "benzerlik": 0.81
+  }
+ ],
+ "banka": [
+  {
+   "id": "f185a2d97387",
+   "ders": "k2-22",
+   "yillar": [
+    "2023-2024"
+   ],
+   "kok": "Aşağıdaki bozuklukların hangisinde hasta belirtilerine karşı aldırmazlık (la belle indifférence) tutumu sergiler?",
+   "dogru": "Konversiyon bozukluğu",
+   "kopyalar": [],
+   "birim": "psk-s13-b07",
+   "benzerlik": 0.586,
+   "kapsandi": false,
+   "notta_yapistirilmis": false
+  },
+  {
+   "id": "dd00370e9106",
+   "ders": "k2-22",
+   "yillar": [
+    "2020-2021",
+    "2020-2021",
+    "2020-2021"
+   ],
+   "kok": "Psikiyatri Psikiyatri Psikosomatik Hastalıklar Psikiyatri polikliniğine başvuran, tıbbi bir sorunu ve şikayeti olmadığını, ancak kanser olmaktan aşırı korktuğunu, bununla ilgili internet okumaları yaptığını, bunu düşünme",
+   "dogru": "Hastalık Kaygısı Bozukluğu",
+   "kopyalar": [],
+   "birim": "psk-s13-b05",
+   "benzerlik": 0.626,
+   "kapsandi": true,
+   "notta_yapistirilmis": true
+  },
+  {
+   "id": "past-1790877044849-897865",
+   "ders": "k2-22",
+   "yillar": [
+    "2021-2022"
+   ],
+   "kok": "Aşağıdakilerden hangisi somatizasyon bozukluğu için yanlıştır?",
+   "dogru": "Hastalar yakınmalarının psikolojik kökenli olduğunu kolaylıkla kabul eder ve tıbbi tetkik istemezler.",
+   "kopyalar": [],
+   "birim": "psk-s13-b01",
+   "benzerlik": 0.593,
+   "kapsandi": false,
+   "notta_yapistirilmis": false
+  },
+  {
+   "id": "past-q-I_SKENDERUN_TI_Mu_du_rlu_g_u_ne0__1__230709_230251-76",
+   "ders": "k2-22",
+   "yillar": [
+    "Geçmiş Yıllar Çıkmışı (Arşiv)"
+   ],
+   "kok": "Geleneksel tıbbi veya psikiyatrik anlayışı aşan, belirtilerin olağan dışı ve dramatik sunumu, alışılmış tedavi ve ilaçlara uygun cevap vermeyen belirtiler, diğer belirtiler çözülürken yeni olağan dışı belirtilerin ortaya",
+   "dogru": "Yapay bozukluk",
+   "kopyalar": [],
+   "birim": "psk-s13-b05",
+   "benzerlik": 0.87,
+   "kapsandi": true,
+   "notta_yapistirilmis": true
+  },
+  {
+   "id": "d3-k2-psi-016",
+   "ders": "k2-22",
+   "yillar": [
+    "2021-2026"
+   ],
+   "kok": "Herhangi bir nörolojik veya organik patoloji ile açıklanamayan, sıklıkla psikolojik bir stresör sonrasında aniden ortaya çıkan motor veya duyusal defisitler (örn. psödofelç, afoni, psikojenik körlük) hangi bozukluğu tanı",
+   "dogru": "Konversiyon Bozukluğu (Fonksiyonel Nörolojik Belirti Bozukluğu)",
+   "kopyalar": [],
+   "birim": "psk-s13-b07",
+   "benzerlik": 0.714,
+   "kapsandi": true,
+   "notta_yapistirilmis": false
+  },
+  {
+   "id": "past-1790877044852-954374",
+   "ders": "k2-22",
+   "yillar": [
+    "2021-2022"
+   ],
+   "kok": "Aşağıdaki psikiyatrik bozuklukların hangisinde hastanın yaşadığı semptomlara karşı belirgin bir umursamazlık ve kayıtsızlık durumu olarak tanımlanan 'güzel aldırmazlık' (la belle indifférence) görülür?",
+   "dogru": "Konversiyon bozukluğu",
+   "kopyalar": [],
+   "birim": "psk-s13-b01",
+   "benzerlik": 0.62,
+   "kapsandi": true,
+   "notta_yapistirilmis": true
+  },
+  {
+   "id": "past-1790877044922-94945",
+   "ders": "k2-22",
+   "yillar": [
+    "2021-2022"
+   ],
+   "kok": "Aşağıdaki belirtilerden hangisi yeme bozukluklarına bağlı tıbbi komplikasyonlardan değildir?",
+   "dogru": "Melena",
+   "kopyalar": [],
+   "birim": "psk-s13-b05",
+   "benzerlik": 0.463,
+   "kapsandi": false,
+   "notta_yapistirilmis": false
+  },
+  {
+   "id": "q-25-26_d_nem_3_kurul_2-86",
+   "ders": "k2-22",
+   "yillar": [
+    "2025-2026"
+   ],
+   "kok": "Epileptik nöbet ile psödonöbet (psikojenik non-epileptik nöbet) ayrımı ile ilgili aşağıdakilerden hangisi yanlıştır?",
+   "dogru": "Epileptik nöbet tipik olarak 10 dakika kadar sürer, psödonöbet ise daha kısadır",
+   "kopyalar": [],
+   "birim": "psk-s13-b08",
+   "benzerlik": 0.77,
+   "kapsandi": true,
+   "notta_yapistirilmis": false
+  }
+ ]
+}

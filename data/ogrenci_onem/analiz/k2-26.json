@@ -1,0 +1,74 @@
+{
+ "ders": "k2-26",
+ "ozet": "Son yılların çıkmışları (2023-24) iki noktaya düşmüş: CTG tekrarlı SCA tipi (SCA8) ve sendromik olmayan işitme kaybı nedeni olarak GJB2 (konneksin 26). Öğrenciler SCA tekrar tiplerine (el notu 'CAG tekrarı', 'ATXN 10'), GJB2'ye ve sendromik işitme kayıplarına yığılmış. 2020-21 çıkmışlarının çoğu ise notta hiç olmayan kas hastalıklarından (DMD/BMD, miyotonik distrofi, SMA) gelmiş; epilepside halka kromozom 20/14 de 2021-2026 bankasında var.",
+ "temalar": [
+  {"tema": "Spinoserebellar ataksilerde tekrar türü: SCA8 CTG, SCA1/2/3/6/7 CAG, SCA10 ATXN10", "oncelik": "A",
+   "birimler": ["tbg-s02-b05"],
+   "kanit": "Notta yapıştırılmış çıkmış (2023-24 K2, 'CTG üçlü tekrar artışının görüldüğü SCA tipi → SCA8'); el notu 'CAG tekrarı' (SCA 1,2,3,6,7 altında süslü parantez) ve 'ATXN 10' (SCA tip 10 kırmızı daire içinde); satırlar yeşil vurgulu.",
+   "anlatim": "Tablo halinde verilmeli: SCA8 CTG tekrar artışı; en sık görülen tipler SCA1, 2, 3, 6, 7 ve 10; bunlardan 1, 2, 3, 6, 7 CAG (poliglutamin) tekrarı, SCA10 ATXN10 geninde ayrı tutulur. k2-53'teki 'en yaygın 4 tip: SCA1, 2, 3, 6' bilgisiyle çakışma anlatımda açıkça ayrılmalı.",
+   "soru_payi": 24,
+   "soru_tipleri": ["tekrar türünden tipe: CTG → SCA8", "olumsuz: CAG tekrarlı olmayan SCA tipi", "en sık görülen SCA tipleri"]},
+  {"tema": "Sendromik olmayan işitme kayıpları: OR form ve GJB2/Cx26", "oncelik": "A",
+   "birimler": ["tbg-s02-b14"],
+   "kanit": "2 çıkmış: d3-k2-tbg-003 (2021-2026 K2, OR nonsendromik konjenital işitme kaybının dünyada ve Türkiye'de en sık nedeni → GJB2) ve 2023-24 K2 ('sendromik işitme kayıplarından değildir → GJB2'); 'GJB2/Cx26 geni mutasyonları' kırmızı ovalle işaretli.",
+   "anlatim": "OD, OR ve X'e bağlı nonsendromik gruplar sıralanmalı; OR grubunda 13q11-12'de yerleşen GJB2 (konneksin 26) mutasyonlarının en sık neden olduğu vurgulanmalı. GJB2'nin sendromik listeye girmediği ayrıca belirtilmeli.",
+   "soru_payi": 20,
+   "soru_tipleri": ["en sık neden: OR nonsendromik → GJB2", "olumsuz: sendromik olmayan şık → GJB2", "lokus: 13q11-12"]},
+  {"tema": "Sendromik işitme kayıpları: en sık dört sendrom ve kalıtım gruplaması", "oncelik": "A",
+   "birimler": ["tbg-s02-b10", "tbg-s02-b12", "tbg-s02-b13", "tbg-s02-b15"],
+   "kanit": "Notta yapıştırılmış çıkmış (2023-24 K2, 'sendromik değildir'; şıklar Waardenburg, Usher, Pendred, Alport, GJB2); 'Waardenburg, Usher, Pendred ve Alport' her biri ayrı yeşille vurgulu. Liste slaytları işaretsiz.",
+   "anlatim": "En sık dört sendrom (Waardenburg, Usher, Pendred, Alport) önce verilmeli; ardından kalıtıma göre grup tablosu: OD (BOR, Waardenburg, Treacher-Collins, NF2, Stickler, CHARGE), OR (Pendred, Jervell ve Lange-Nielsen, Usher, Perrault), X'e bağlı (Alport, Norrie), mitokondriyal (KSS, MERRF, MELAS, MIDD).",
+   "soru_payi": 14,
+   "soru_tipleri": ["olumsuz: sendromik olmayan seçenek", "kalıtım grubu: OR sendromik olan / X'e bağlı olan"]},
+  {"tema": "Epilepsi: kromozom yeniden düzenlemeleri ve genetik test sırası", "oncelik": "A",
+   "birimler": ["tbg-s02-b01", "tbg-s02-b02"],
+   "kanit": "1 çıkmış (d3-k2-tbg-005, 2021-2026 K2: uzamış yüksek voltajlı yavaş dalga + dirençli nöbet → halka kromozom 14 ve halka kromozom 20). Notta işaret yok, A önceliği çıkmıştan.",
+   "anlatim": "Halka 20'de uzamış yüksek voltajlı yavaş dalga ve dirençli epilepsi, halka 14'te dirençli epilepsi; 6q delesyonu ve 22q duplikasyonunda dismorfik yüz + MR + epilepsi. Sendromik epilepside ilk test a-CGH, yapılamazsa karyotip; WES ile aday gen. Epilepsinin birincil bulgu olduğu tek gen bozuklukları (tüberoz skleroz, mukopolisakkaridoz, lökodistrofiler) kısa liste olarak verilmeli.",
+   "soru_payi": 12,
+   "soru_tipleri": ["bulgudan anomaliye: dirençli epilepsi + yavaş dalga → halka 20 (ve 14)", "sıra: sendromik epilepside ilk genetik test a-CGH"]},
+  {"tema": "Notta yok, sorulmuş: kas hastalıkları (DMD/BMD, miyotonik distrofi, SMA)", "oncelik": "A",
+   "birimler": [],
+   "kanit": "Bankada notta karşılığı olmayan 2020-21 soruları: distrofin-glikoprotein kompleksi bozukluğu → Duchenne ve Becker (3 kopya; hoca profilinde bu konunun tekrar eden çekirdeği, 5×), d700decc9b5b (DMD en sık form), yeni mutasyon + taşıyıcıda fenotip → DMD, trinükleotid tekrarlı iskelet kası hastalığı → miyotonik distrofi, SMA tedavisinde nusinersen (Spinraza), SMN1/SMN2 ekzon 7-8 delesyon/duplikasyonları, SMA taşıyıcı taramasında önce erkek eş; arşivde 'DMD'de taşıyıcılar fenotip sergilemez' yanlış ifadesi; d3-k5-pat-023 (2021-2026) distrofin.",
+   "anlatim": "2026-27 slaytında kas hastalıkları bu derste yoksa içerik k2-08 (DMD slaytı) ve k2-53 (SMA slaytı) ile paylaşılmalı; bu derste yalnız sorular üzerinden pekiştirilmeli. Varsa: distrofin-glikoprotein kompleksi, DMD'de taşıyıcıların da bulgu gösterebileceği, miyotonik distrofinin trinükleotid tekrar hastalığı olduğu, SMA'da SMN1/SMN2 ekzon 7-8 ve nusinersen.",
+   "soru_payi": 20,
+   "soru_tipleri": ["mekanizmadan ada: distrofin-glikoprotein kompleksi → DMD/BMD", "yanlış bul: 'taşıyıcılar fenotip sergilemez'", "tekrar hastalığı olan kas hastalığı: miyotonik distrofi", "SMA: SMN1/SMN2 ekzon 7-8, nusinersen"]},
+  {"tema": "Diğer seçilen yerler: ataksi sınıflaması, ailede ataksi öyküsü, OR ve mitokondriyal ataksiler, fakomatozlar", "oncelik": "C",
+   "birimler": ["tbg-s02-b03", "tbg-s02-b08", "tbg-s02-b06", "tbg-s02-b07", "tbg-s02-b09"],
+   "kanit": "Ataksi sınıflaması kırmızı parantezle işaretli; diğerleri işaretsiz. Bu birimlerden çıkmış yok.",
+   "anlatim": "Ataksiler herediter, non-herediter, konjenital, sporadik; öyküde 3 kuşak pedigri ve akrabalıkta önce OR tipler. OR ataksiler (Friedreich, ataksi telenjiektazi, Marinesco-Sjögren …) ve mitokondriyal ataksiler (MERRF, NARP) liste olarak; fakomatozlarda 8 hastalığın adı.",
+   "soru_payi": 10,
+   "soru_tipleri": ["akrabalıkta ilk düşünülecek kalıtım: OR", "liste: fakomatoz olmayan hastalık"]}
+ ],
+ "hoca_kaliplari": [
+  "Bu konunun bankası: doğrudan kök %80, doğru ifade %13, en tipik %7; düzey çoğunlukla hatırlama",
+  "Olumsuz kök: 'Aşağıdakilerden hangisi sendromik işitme kayıplarından değildir?' (2023-24)",
+  "Sayı/tip çeldiricisi: 'CTG üçlü tekrar artışının görüldüğü SCA tipi' şıkları SCA2, SCA6, SCA8, SCA1, SCA7 (aynı türden ayrı kavram)",
+  "2020-21'de aynı kök birkaç kez tekrar etmiş (distrofin-glikoprotein kompleksi → Duchenne ve Becker)"
+ ],
+ "tuzaklar": [
+  {"tuzak": "SCA8 CTG tekrarıdır; SCA1, 2, 3, 6, 7 CAG tekrarı", "neden": "çeldiricilerin hepsi CAG tekrarlı SCA tipleri"},
+  {"tuzak": "Bu derste en sık SCA tipleri 1, 2, 3, 6, 7 ve 10; k2-53 slaytında en yaygın 4 tip 1, 2, 3, 6", "neden": "iki derste farklı listeler var, soru hangi listeye göre sorulursa ona uyulmalı"},
+  {"tuzak": "Pendred, Jervell ve Lange-Nielsen, Usher ve Perrault OR sendromik işitme kaybıdır, OD değil", "neden": "öğrenci notunda bu dördü OD başlığı altına girmiş"},
+  {"tuzak": "GJB2 sendromik değil, nonsendromik işitme kaybının nedenidir", "neden": "2023-24 sorusunda sendromik listeye çeldirici olarak eklenmiş"},
+  {"tuzak": "Alport sendromu X'e bağlı sendromik işitme kaybı grubundadır", "neden": "en sık dört sendrom listesinde de geçtiği için kalıtım grubu karıştırılabilir"},
+  {"tuzak": "DMD'de taşıyıcılar da fenotipik bulgu gösterebilir", "neden": "arşiv sorusunda 'taşıyıcılar klinik fenotip sergilemez' yanlış ifade olarak cevap"}
+ ],
+ "sayilar": [
+  "GJB2/Cx26 lokusu 13q11-12",
+  "Ataksi öyküsünde 3 kuşak pedigri",
+  "Fakomatozlar ilk kez 1920'de Jan van der Hoeve tarafından tanımlanmış; 8 hastalık",
+  "Halka kromozom 20 ve 14; 6q delesyonu, 22q duplikasyonu"
+ ],
+ "duzeltmeler": [
+  {"yanlis": "Pendred, Jervell-Lange-Nielsen, Usher ve Perrault 'OD Sendromik İşitme Kayıpları' başlığı altında", "dogru": "Bu dördü OR sendromik işitme kaybıdır; OD olanlar BOR, Waardenburg, Treacher-Collins, NF2, Stickler, CHARGE", "kaynak": "slayt y25 s77-82 (OD) ve s83-87 (OR) başlıkları"},
+  {"yanlis": "Halka kromozom 20: uzamış yüksek voltajlı yavaş dalga + dirençli epilepsi; halka 14 yalnız dirençli epilepsi (slayt)", "dogru": "Bankadaki doğru şık (d3-k2-tbg-005) bu tabloyu 'halka kromozom 14 ve halka kromozom 20' olarak birlikte veriyor", "kaynak": "slayt y25 s11 ile bankadaki doğru şık; ikisi çelişmiyor ama slayt EEG bulgusunu yalnız halka 20'ye bağlıyor. Soru tek şık isterse halka 20, birleşik şık varsa 14 ve 20."},
+  {"yanlis": "Incontinentia sendromu (fakomatoz listesi)", "dogru": "İnkontinensiya pigmenti", "kaynak": "slayt y25 s60, hastalığın tam adı"}
+ ],
+ "ara_soru_adaylari": [
+  {"birim": "tbg-s02-b05", "fikir": "CTG tekrar artışı olan SCA tipi; çeldiriciler CAG tekrarlı SCA1/2/3/6/7"},
+  {"birim": "tbg-s02-b14", "fikir": "OR nonsendromik işitme kaybının en sık nedeni olan gen ve ürünü (GJB2, konneksin 26)"},
+  {"birim": "tbg-s02-b10", "fikir": "en sık sendromik işitme kayıplarının arasında olmayanı bul (GJB2 çeldiricisi)"},
+  {"birim": "tbg-s02-b01", "fikir": "dirençli epilepsi + uzamış yüksek voltajlı yavaş dalga → halka kromozom 20"}
+ ],
+ "kurul2627_notu": "Bu dersin hiçbir birimi 2026-27 PDF'iyle eşlenmedi (y26 yok); yeni PDF gelince SCA, GJB2, sendromik işitme ve epilepsi slaytlarının yeri doğrulanmalı. 2020-21'de çok soru çıkan kas hastalıkları (DMD/BMD, miyotonik distrofi, SMA) yeni slaytta bu derste mi yoksa k2-08 / k2-53'te mi olduğu kontrol edilmeli."
+}

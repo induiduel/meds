@@ -1,0 +1,1544 @@
+{
+ "surum": 1,
+ "yontem": "docs/OGRENCI_ONEM_YONTEMI.md §4",
+ "genel": {
+  "soru": 237,
+  "n": 237,
+  "yapistirilan": 63,
+  "isabet_tam": 0.489,
+  "isabet_genis": 0.7,
+  "yapistirilmamis_n": 174,
+  "yapistirilmamis_tam": 0.374,
+  "yapistirilmamis_genis": 0.615,
+  "slaytta": {
+   "n": 156,
+   "yapistirilan": 54,
+   "isabet_tam": 0.737,
+   "isabet_genis": 0.936,
+   "yapistirilmamis_n": 102,
+   "yapistirilmamis_tam": 0.637,
+   "yapistirilmamis_genis": 0.912
+  },
+  "secicilik": 0.307,
+  "kaldirac": 1.22,
+  "kaldirac_slaytta": 2.07
+ },
+ "son_sinav_2025_26": {
+  "soru": 17,
+  "n": 17,
+  "yapistirilan": 1,
+  "isabet_tam": 0.706,
+  "isabet_genis": 1.0,
+  "yapistirilmamis_n": 16,
+  "yapistirilmamis_tam": 0.688,
+  "yapistirilmamis_genis": 1.0,
+  "slaytta": {
+   "n": 17,
+   "yapistirilan": 1,
+   "isabet_tam": 0.706,
+   "isabet_genis": 1.0,
+   "yapistirilmamis_n": 16,
+   "yapistirilmamis_tam": 0.688,
+   "yapistirilmamis_genis": 1.0
+  },
+  "secicilik": 0.304,
+  "kaldirac": 2.26,
+  "kaldirac_slaytta": 2.26
+ },
+ "brans": {
+  "FTR": {
+   "soru": 21,
+   "n": 21,
+   "yapistirilan": 6,
+   "isabet_tam": 0.381,
+   "isabet_genis": 0.524,
+   "yapistirilmamis_n": 15,
+   "yapistirilmamis_tam": 0.267,
+   "yapistirilmamis_genis": 0.333,
+   "slaytta": {
+    "n": 13,
+    "yapistirilan": 4,
+    "isabet_tam": 0.615,
+    "isabet_genis": 0.692,
+    "yapistirilmamis_n": 9,
+    "yapistirilmamis_tam": 0.444,
+    "yapistirilmamis_genis": 0.556
+   },
+   "secicilik": 0.313,
+   "kaldirac": 0.85,
+   "kaldirac_slaytta": 1.42
+  },
+  "Nöroloji": {
+   "soru": 85,
+   "n": 85,
+   "yapistirilan": 17,
+   "isabet_tam": 0.424,
+   "isabet_genis": 0.659,
+   "yapistirilmamis_n": 68,
+   "yapistirilmamis_tam": 0.324,
+   "yapistirilmamis_genis": 0.588,
+   "slaytta": {
+    "n": 46,
+    "yapistirilan": 14,
+    "isabet_tam": 0.761,
+    "isabet_genis": 1.0,
+    "yapistirilmamis_n": 32,
+    "yapistirilmamis_tam": 0.688,
+    "yapistirilmamis_genis": 1.0
+   },
+   "secicilik": 0.379,
+   "kaldirac": 0.85,
+   "kaldirac_slaytta": 1.82
+  },
+  "Psikiyatri": {
+   "soru": 102,
+   "n": 102,
+   "yapistirilan": 34,
+   "isabet_tam": 0.598,
+   "isabet_genis": 0.833,
+   "yapistirilmamis_n": 68,
+   "yapistirilmamis_tam": 0.471,
+   "yapistirilmamis_genis": 0.779,
+   "slaytta": {
+    "n": 83,
+    "yapistirilan": 31,
+    "isabet_tam": 0.735,
+    "isabet_genis": 0.94,
+    "yapistirilmamis_n": 52,
+    "yapistirilmamis_tam": 0.615,
+    "yapistirilmamis_genis": 0.923
+   },
+   "secicilik": 0.294,
+   "kaldirac": 1.6,
+   "kaldirac_slaytta": 2.09
+  },
+  "Tıbbi Genetik": {
+   "soru": 29,
+   "n": 29,
+   "yapistirilan": 6,
+   "isabet_tam": 0.379,
+   "isabet_genis": 0.483,
+   "yapistirilmamis_n": 23,
+   "yapistirilmamis_tam": 0.304,
+   "yapistirilmamis_genis": 0.391,
+   "slaytta": {
+    "n": 14,
+    "yapistirilan": 5,
+    "isabet_tam": 0.786,
+    "isabet_genis": 0.929,
+    "yapistirilmamis_n": 9,
+    "yapistirilmamis_tam": 0.778,
+    "yapistirilmamis_genis": 0.889
+   },
+   "secicilik": 0.138,
+   "kaldirac": 2.2,
+   "kaldirac_slaytta": 5.64
+  }
+ },
+ "ders": {
+  "k2-01": {
+   "konu": "Nörolojik Hastaya Yaklaşım",
+   "soru": 7,
+   "n": 7,
+   "yapistirilan": 3,
+   "isabet_tam": 0.571,
+   "isabet_genis": 0.571,
+   "yapistirilmamis_n": 4,
+   "yapistirilmamis_tam": 0.25,
+   "yapistirilmamis_genis": 0.25,
+   "slaytta": {
+    "n": 4,
+    "yapistirilan": 3,
+    "isabet_tam": 1.0,
+    "isabet_genis": 1.0,
+    "yapistirilmamis_n": 1,
+    "yapistirilmamis_tam": 1.0,
+    "yapistirilmamis_genis": 1.0
+   },
+   "secicilik": 0.556,
+   "kaldirac": 0.45,
+   "kaldirac_slaytta": 1.8
+  },
+  "k2-02": {
+   "konu": "Bilinç Bozukluğu Olan Hastaya Yaklaşım",
+   "soru": 11,
+   "n": 11,
+   "yapistirilan": 3,
+   "isabet_tam": 0.636,
+   "isabet_genis": 0.636,
+   "yapistirilmamis_n": 8,
+   "yapistirilmamis_tam": 0.5,
+   "yapistirilmamis_genis": 0.5,
+   "slaytta": {
+    "n": 7,
+    "yapistirilan": 3,
+    "isabet_tam": 1.0,
+    "isabet_genis": 1.0,
+    "yapistirilmamis_n": 4,
+    "yapistirilmamis_tam": 1.0,
+    "yapistirilmamis_genis": 1.0
+   },
+   "secicilik": 0.226,
+   "kaldirac": 2.21,
+   "kaldirac_slaytta": 4.42
+  },
+  "k2-05": {
+   "konu": "Nörolojik Muayene",
+   "soru": 15,
+   "n": 15,
+   "yapistirilan": 3,
+   "isabet_tam": 0.067,
+   "isabet_genis": 0.333,
+   "yapistirilmamis_n": 12,
+   "yapistirilmamis_tam": 0.0,
+   "yapistirilmamis_genis": 0.25,
+   "slaytta": {
+    "n": 0,
+    "yapistirilan": 0,
+    "isabet_tam": null,
+    "isabet_genis": null,
+    "yapistirilmamis_n": 0,
+    "yapistirilmamis_tam": null,
+    "yapistirilmamis_genis": null
+   },
+   "secicilik": 0.139,
+   "kaldirac": 0.0,
+   "kaldirac_slaytta": null
+  },
+  "k2-08": {
+   "konu": "Beyin ve İskelet Sistemi Gelişimi Genetiği",
+   "soru": 5,
+   "n": 5,
+   "yapistirilan": 0,
+   "isabet_tam": 0.6,
+   "isabet_genis": 0.6,
+   "yapistirilmamis_n": 5,
+   "yapistirilmamis_tam": 0.6,
+   "yapistirilmamis_genis": 0.6,
+   "slaytta": {
+    "n": 3,
+    "yapistirilan": 0,
+    "isabet_tam": 1.0,
+    "isabet_genis": 1.0,
+    "yapistirilmamis_n": 3,
+    "yapistirilmamis_tam": 1.0,
+    "yapistirilmamis_genis": 1.0
+   },
+   "secicilik": 0.151,
+   "kaldirac": 3.97,
+   "kaldirac_slaytta": 6.62
+  },
+  "k2-10": {
+   "konu": "Baş ağrısına Yaklaşım",
+   "soru": 9,
+   "n": 9,
+   "yapistirilan": 2,
+   "isabet_tam": 0.444,
+   "isabet_genis": 0.889,
+   "yapistirilmamis_n": 7,
+   "yapistirilmamis_tam": 0.286,
+   "yapistirilmamis_genis": 0.857,
+   "slaytta": {
+    "n": 7,
+    "yapistirilan": 2,
+    "isabet_tam": 0.571,
+    "isabet_genis": 1.0,
+    "yapistirilmamis_n": 5,
+    "yapistirilmamis_tam": 0.4,
+    "yapistirilmamis_genis": 1.0
+   },
+   "secicilik": 0.6,
+   "kaldirac": 0.48,
+   "kaldirac_slaytta": 0.67
+  },
+  "k2-11": {
+   "konu": "Psikiyatrik Semiyoloji",
+   "soru": 6,
+   "n": 6,
+   "yapistirilan": 2,
+   "isabet_tam": 0.667,
+   "isabet_genis": 0.667,
+   "yapistirilmamis_n": 4,
+   "yapistirilmamis_tam": 0.75,
+   "yapistirilmamis_genis": 0.75,
+   "slaytta": {
+    "n": 5,
+    "yapistirilan": 1,
+    "isabet_tam": 0.8,
+    "isabet_genis": 0.8,
+    "yapistirilmamis_n": 4,
+    "yapistirilmamis_tam": 0.75,
+    "yapistirilmamis_genis": 0.75
+   },
+   "secicilik": 0.409,
+   "kaldirac": 1.83,
+   "kaldirac_slaytta": 1.83
+  },
+  "k2-15": {
+   "konu": "Şizofrenik Bozukluklar",
+   "soru": 12,
+   "n": 12,
+   "yapistirilan": 4,
+   "isabet_tam": 0.75,
+   "isabet_genis": 0.833,
+   "yapistirilmamis_n": 8,
+   "yapistirilmamis_tam": 0.625,
+   "yapistirilmamis_genis": 0.75,
+   "slaytta": {
+    "n": 10,
+    "yapistirilan": 4,
+    "isabet_tam": 0.9,
+    "isabet_genis": 1.0,
+    "yapistirilmamis_n": 6,
+    "yapistirilmamis_tam": 0.833,
+    "yapistirilmamis_genis": 1.0
+   },
+   "secicilik": 0.531,
+   "kaldirac": 1.18,
+   "kaldirac_slaytta": 1.57
+  },
+  "k2-16": {
+   "konu": "Nörolojik Rehabilitasyona Giriş ve Genel İlkeler",
+   "soru": 3,
+   "n": 3,
+   "yapistirilan": 1,
+   "isabet_tam": 0.667,
+   "isabet_genis": 0.667,
+   "yapistirilmamis_n": 2,
+   "yapistirilmamis_tam": 0.5,
+   "yapistirilmamis_genis": 0.5,
+   "slaytta": {
+    "n": 2,
+    "yapistirilan": 1,
+    "isabet_tam": 1.0,
+    "isabet_genis": 1.0,
+    "yapistirilmamis_n": 1,
+    "yapistirilmamis_tam": 1.0,
+    "yapistirilmamis_genis": 1.0
+   },
+   "secicilik": 0.093,
+   "kaldirac": 5.38,
+   "kaldirac_slaytta": 10.75
+  },
+  "k2-17": {
+   "konu": "Periferik Nöropati",
+   "soru": 13,
+   "n": 13,
+   "yapistirilan": 2,
+   "isabet_tam": 0.462,
+   "isabet_genis": 0.692,
+   "yapistirilmamis_n": 11,
+   "yapistirilmamis_tam": 0.364,
+   "yapistirilmamis_genis": 0.636,
+   "slaytta": {
+    "n": 7,
+    "yapistirilan": 2,
+    "isabet_tam": 0.857,
+    "isabet_genis": 1.0,
+    "yapistirilmamis_n": 5,
+    "yapistirilmamis_tam": 0.8,
+    "yapistirilmamis_genis": 1.0
+   },
+   "secicilik": 0.478,
+   "kaldirac": 0.76,
+   "kaldirac_slaytta": 1.67
+  },
+  "k2-18": {
+   "konu": "Bazal Gangliyonlar ve Ekstrapiramidal Sistem",
+   "soru": 7,
+   "n": 7,
+   "yapistirilan": 1,
+   "isabet_tam": 0.571,
+   "isabet_genis": 1.0,
+   "yapistirilmamis_n": 6,
+   "yapistirilmamis_tam": 0.5,
+   "yapistirilmamis_genis": 1.0,
+   "slaytta": {
+    "n": 6,
+    "yapistirilan": 1,
+    "isabet_tam": 0.667,
+    "isabet_genis": 1.0,
+    "yapistirilmamis_n": 5,
+    "yapistirilmamis_tam": 0.6,
+    "yapistirilmamis_genis": 1.0
+   },
+   "secicilik": 0.3,
+   "kaldirac": 1.67,
+   "kaldirac_slaytta": 2.0
+  },
+  "k2-19": {
+   "konu": "Bipolar Bozukluk",
+   "soru": 11,
+   "n": 11,
+   "yapistirilan": 5,
+   "isabet_tam": 0.727,
+   "isabet_genis": 1.0,
+   "yapistirilmamis_n": 6,
+   "yapistirilmamis_tam": 0.5,
+   "yapistirilmamis_genis": 1.0,
+   "slaytta": {
+    "n": 11,
+    "yapistirilan": 5,
+    "isabet_tam": 0.727,
+    "isabet_genis": 1.0,
+    "yapistirilmamis_n": 6,
+    "yapistirilmamis_tam": 0.5,
+    "yapistirilmamis_genis": 1.0
+   },
+   "secicilik": 0.455,
+   "kaldirac": 1.1,
+   "kaldirac_slaytta": 1.1
+  },
+  "k2-20": {
+   "konu": "Psikiyatrik Bozukluklarda Uygulanan Tedaviler",
+   "soru": 6,
+   "n": 6,
+   "yapistirilan": 0,
+   "isabet_tam": 0.167,
+   "isabet_genis": 0.333,
+   "yapistirilmamis_n": 6,
+   "yapistirilmamis_tam": 0.167,
+   "yapistirilmamis_genis": 0.333,
+   "slaytta": {
+    "n": 2,
+    "yapistirilan": 0,
+    "isabet_tam": 0.5,
+    "isabet_genis": 1.0,
+    "yapistirilmamis_n": 2,
+    "yapistirilmamis_tam": 0.5,
+    "yapistirilmamis_genis": 1.0
+   },
+   "secicilik": 0.25,
+   "kaldirac": 0.67,
+   "kaldirac_slaytta": 2.0
+  },
+  "k2-22": {
+   "konu": "Psikosomatik Bozukluklar",
+   "soru": 8,
+   "n": 8,
+   "yapistirilan": 3,
+   "isabet_tam": 0.625,
+   "isabet_genis": 0.75,
+   "yapistirilmamis_n": 5,
+   "yapistirilmamis_tam": 0.6,
+   "yapistirilmamis_genis": 0.6,
+   "slaytta": {
+    "n": 7,
+    "yapistirilan": 3,
+    "isabet_tam": 0.714,
+    "isabet_genis": 0.857,
+    "yapistirilmamis_n": 4,
+    "yapistirilmamis_tam": 0.75,
+    "yapistirilmamis_genis": 0.75
+   },
+   "secicilik": 0.116,
+   "kaldirac": 5.17,
+   "kaldirac_slaytta": 6.47
+  },
+  "k2-23": {
+   "konu": "Cinsel Kimlik Bozuklukları",
+   "soru": 6,
+   "n": 6,
+   "yapistirilan": 2,
+   "isabet_tam": 0.5,
+   "isabet_genis": 0.833,
+   "yapistirilmamis_n": 4,
+   "yapistirilmamis_tam": 0.25,
+   "yapistirilmamis_genis": 0.75,
+   "slaytta": {
+    "n": 4,
+    "yapistirilan": 2,
+    "isabet_tam": 0.75,
+    "isabet_genis": 1.0,
+    "yapistirilmamis_n": 2,
+    "yapistirilmamis_tam": 0.5,
+    "yapistirilmamis_genis": 1.0
+   },
+   "secicilik": 0.385,
+   "kaldirac": 0.65,
+   "kaldirac_slaytta": 1.3
+  },
+  "k2-24": {
+   "konu": "Epilepsi",
+   "soru": 4,
+   "n": 4,
+   "yapistirilan": 1,
+   "isabet_tam": 0.75,
+   "isabet_genis": 1.0,
+   "yapistirilmamis_n": 3,
+   "yapistirilmamis_tam": 1.0,
+   "yapistirilmamis_genis": 1.0,
+   "slaytta": {
+    "n": 4,
+    "yapistirilan": 1,
+    "isabet_tam": 0.75,
+    "isabet_genis": 1.0,
+    "yapistirilmamis_n": 3,
+    "yapistirilmamis_tam": 1.0,
+    "yapistirilmamis_genis": 1.0
+   },
+   "secicilik": 0.373,
+   "kaldirac": 2.68,
+   "kaldirac_slaytta": 2.68
+  },
+  "k2-26": {
+   "konu": "Nörolojik Hastalıklar",
+   "soru": 15,
+   "n": 15,
+   "yapistirilan": 3,
+   "isabet_tam": 0.267,
+   "isabet_genis": 0.267,
+   "yapistirilmamis_n": 12,
+   "yapistirilmamis_tam": 0.167,
+   "yapistirilmamis_genis": 0.167,
+   "slaytta": {
+    "n": 4,
+    "yapistirilan": 2,
+    "isabet_tam": 1.0,
+    "isabet_genis": 1.0,
+    "yapistirilmamis_n": 2,
+    "yapistirilmamis_tam": 1.0,
+    "yapistirilmamis_genis": 1.0
+   },
+   "secicilik": 0.127,
+   "kaldirac": 1.31,
+   "kaldirac_slaytta": 7.87
+  },
+  "k2-28": {
+   "konu": "Sık görülen nörolojik Hastalıklar ve Rehabilitasyonu",
+   "soru": 18,
+   "n": 18,
+   "yapistirilan": 5,
+   "isabet_tam": 0.333,
+   "isabet_genis": 0.5,
+   "yapistirilmamis_n": 13,
+   "yapistirilmamis_tam": 0.231,
+   "yapistirilmamis_genis": 0.308,
+   "slaytta": {
+    "n": 11,
+    "yapistirilan": 3,
+    "isabet_tam": 0.545,
+    "isabet_genis": 0.636,
+    "yapistirilmamis_n": 8,
+    "yapistirilmamis_tam": 0.375,
+    "yapistirilmamis_genis": 0.5
+   },
+   "secicilik": 0.35,
+   "kaldirac": 0.66,
+   "kaldirac_slaytta": 1.07
+  },
+  "k2-31": {
+   "konu": "Medulla Spinalis Hastalıkları",
+   "soru": 6,
+   "n": 6,
+   "yapistirilan": 1,
+   "isabet_tam": 0.667,
+   "isabet_genis": 0.667,
+   "yapistirilmamis_n": 5,
+   "yapistirilmamis_tam": 0.6,
+   "yapistirilmamis_genis": 0.6,
+   "slaytta": {
+    "n": 4,
+    "yapistirilan": 1,
+    "isabet_tam": 1.0,
+    "isabet_genis": 1.0,
+    "yapistirilmamis_n": 3,
+    "yapistirilmamis_tam": 1.0,
+    "yapistirilmamis_genis": 1.0
+   },
+   "secicilik": 0.543,
+   "kaldirac": 1.1,
+   "kaldirac_slaytta": 1.84
+  },
+  "k2-32": {
+   "konu": "Felçler",
+   "soru": 7,
+   "n": 7,
+   "yapistirilan": 1,
+   "isabet_tam": 0.429,
+   "isabet_genis": 0.571,
+   "yapistirilmamis_n": 6,
+   "yapistirilmamis_tam": 0.333,
+   "yapistirilmamis_genis": 0.5,
+   "slaytta": {
+    "n": 3,
+    "yapistirilan": 1,
+    "isabet_tam": 1.0,
+    "isabet_genis": 1.0,
+    "yapistirilmamis_n": 2,
+    "yapistirilmamis_tam": 1.0,
+    "yapistirilmamis_genis": 1.0
+   },
+   "secicilik": 0.515,
+   "kaldirac": 0.65,
+   "kaldirac_slaytta": 1.94
+  },
+  "k2-34": {
+   "konu": "Unipolar Depresyon",
+   "soru": 3,
+   "n": 3,
+   "yapistirilan": 2,
+   "isabet_tam": 1.0,
+   "isabet_genis": 1.0,
+   "yapistirilmamis_n": 1,
+   "yapistirilmamis_tam": 1.0,
+   "yapistirilmamis_genis": 1.0,
+   "slaytta": {
+    "n": 3,
+    "yapistirilan": 2,
+    "isabet_tam": 1.0,
+    "isabet_genis": 1.0,
+    "yapistirilmamis_n": 1,
+    "yapistirilmamis_tam": 1.0,
+    "yapistirilmamis_genis": 1.0
+   },
+   "secicilik": 0.25,
+   "kaldirac": 4.0,
+   "kaldirac_slaytta": 4.0
+  },
+  "k2-35": {
+   "konu": "Kişilik Bozuklukları",
+   "soru": 4,
+   "n": 4,
+   "yapistirilan": 3,
+   "isabet_tam": 1.0,
+   "isabet_genis": 1.0,
+   "yapistirilmamis_n": 1,
+   "yapistirilmamis_tam": 1.0,
+   "yapistirilmamis_genis": 1.0,
+   "slaytta": {
+    "n": 4,
+    "yapistirilan": 3,
+    "isabet_tam": 1.0,
+    "isabet_genis": 1.0,
+    "yapistirilmamis_n": 1,
+    "yapistirilmamis_tam": 1.0,
+    "yapistirilmamis_genis": 1.0
+   },
+   "secicilik": 0.268,
+   "kaldirac": 3.73,
+   "kaldirac_slaytta": 3.73
+  },
+  "k2-37": {
+   "konu": "OKB ve İlişkili Bozukluklar",
+   "soru": 2,
+   "n": 2,
+   "yapistirilan": 0,
+   "isabet_tam": 0.5,
+   "isabet_genis": 1.0,
+   "yapistirilmamis_n": 2,
+   "yapistirilmamis_tam": 0.5,
+   "yapistirilmamis_genis": 1.0,
+   "slaytta": {
+    "n": 1,
+    "yapistirilan": 0,
+    "isabet_tam": 1.0,
+    "isabet_genis": 1.0,
+    "yapistirilmamis_n": 1,
+    "yapistirilmamis_tam": 1.0,
+    "yapistirilmamis_genis": 1.0
+   },
+   "secicilik": 0.478,
+   "kaldirac": 1.05,
+   "kaldirac_slaytta": 2.09
+  },
+  "k2-38": {
+   "konu": "Travma ve Stres Bağlantılı Bozukluklar",
+   "soru": 4,
+   "n": 4,
+   "yapistirilan": 1,
+   "isabet_tam": 0.5,
+   "isabet_genis": 1.0,
+   "yapistirilmamis_n": 3,
+   "yapistirilmamis_tam": 0.333,
+   "yapistirilmamis_genis": 1.0,
+   "slaytta": {
+    "n": 4,
+    "yapistirilan": 1,
+    "isabet_tam": 0.5,
+    "isabet_genis": 1.0,
+    "yapistirilmamis_n": 3,
+    "yapistirilmamis_tam": 0.333,
+    "yapistirilmamis_genis": 1.0
+   },
+   "secicilik": 0.429,
+   "kaldirac": 0.78,
+   "kaldirac_slaytta": 0.78
+  },
+  "k2-42": {
+   "konu": "Nörogelişimsel Bozukluklar",
+   "soru": 12,
+   "n": 12,
+   "yapistirilan": 4,
+   "isabet_tam": 0.417,
+   "isabet_genis": 0.667,
+   "yapistirilmamis_n": 8,
+   "yapistirilmamis_tam": 0.25,
+   "yapistirilmamis_genis": 0.625,
+   "slaytta": {
+    "n": 10,
+    "yapistirilan": 4,
+    "isabet_tam": 0.5,
+    "isabet_genis": 0.7,
+    "yapistirilmamis_n": 6,
+    "yapistirilmamis_tam": 0.333,
+    "yapistirilmamis_genis": 0.667
+   },
+   "secicilik": 0.125,
+   "kaldirac": 2.0,
+   "kaldirac_slaytta": 2.66
+  },
+  "k2-43": {
+   "konu": "Konsültasyon Liyezon Psikiyatrisi",
+   "soru": 3,
+   "n": 3,
+   "yapistirilan": 1,
+   "isabet_tam": 0.333,
+   "isabet_genis": 1.0,
+   "yapistirilmamis_n": 2,
+   "yapistirilmamis_tam": 0.5,
+   "yapistirilmamis_genis": 1.0,
+   "slaytta": {
+    "n": 1,
+    "yapistirilan": 0,
+    "isabet_tam": 1.0,
+    "isabet_genis": 1.0,
+    "yapistirilmamis_n": 1,
+    "yapistirilmamis_tam": 1.0,
+    "yapistirilmamis_genis": 1.0
+   },
+   "secicilik": 0.207,
+   "kaldirac": 2.42,
+   "kaldirac_slaytta": 4.83
+  },
+  "k2-44": {
+   "konu": "Damgalama",
+   "soru": 3,
+   "n": 3,
+   "yapistirilan": 0,
+   "isabet_tam": 0.333,
+   "isabet_genis": 1.0,
+   "yapistirilmamis_n": 3,
+   "yapistirilmamis_tam": 0.333,
+   "yapistirilmamis_genis": 1.0,
+   "slaytta": {
+    "n": 3,
+    "yapistirilan": 0,
+    "isabet_tam": 0.333,
+    "isabet_genis": 1.0,
+    "yapistirilmamis_n": 3,
+    "yapistirilmamis_tam": 0.333,
+    "yapistirilmamis_genis": 1.0
+   },
+   "secicilik": 0.24,
+   "kaldirac": 1.39,
+   "kaldirac_slaytta": 1.39
+  },
+  "k2-45": {
+   "konu": "İntihar ve Kendine Zarar Verme",
+   "soru": 3,
+   "n": 3,
+   "yapistirilan": 1,
+   "isabet_tam": 0.0,
+   "isabet_genis": 1.0,
+   "yapistirilmamis_n": 2,
+   "yapistirilmamis_tam": 0.0,
+   "yapistirilmamis_genis": 1.0,
+   "slaytta": {
+    "n": 2,
+    "yapistirilan": 0,
+    "isabet_tam": 0.0,
+    "isabet_genis": 1.0,
+    "yapistirilmamis_n": 2,
+    "yapistirilmamis_tam": 0.0,
+    "yapistirilmamis_genis": 1.0
+   },
+   "secicilik": 0.25,
+   "kaldirac": 0.0,
+   "kaldirac_slaytta": 0.0
+  },
+  "k2-49": {
+   "konu": "Dikkat Eksikliği Hiperaktivite Bozukluğu",
+   "soru": 4,
+   "n": 4,
+   "yapistirilan": 1,
+   "isabet_tam": 0.75,
+   "isabet_genis": 1.0,
+   "yapistirilmamis_n": 3,
+   "yapistirilmamis_tam": 0.667,
+   "yapistirilmamis_genis": 1.0,
+   "slaytta": {
+    "n": 4,
+    "yapistirilan": 1,
+    "isabet_tam": 0.75,
+    "isabet_genis": 1.0,
+    "yapistirilmamis_n": 3,
+    "yapistirilmamis_tam": 0.667,
+    "yapistirilmamis_genis": 1.0
+   },
+   "secicilik": 0.103,
+   "kaldirac": 6.48,
+   "kaldirac_slaytta": 6.48
+  },
+  "k2-50": {
+   "konu": "Dışa Atım Bozuklukları",
+   "soru": 5,
+   "n": 5,
+   "yapistirilan": 1,
+   "isabet_tam": 0.4,
+   "isabet_genis": 0.8,
+   "yapistirilmamis_n": 4,
+   "yapistirilmamis_tam": 0.25,
+   "yapistirilmamis_genis": 0.75,
+   "slaytta": {
+    "n": 3,
+    "yapistirilan": 1,
+    "isabet_tam": 0.667,
+    "isabet_genis": 1.0,
+    "yapistirilmamis_n": 2,
+    "yapistirilmamis_tam": 0.5,
+    "yapistirilmamis_genis": 1.0
+   },
+   "secicilik": 0.174,
+   "kaldirac": 1.44,
+   "kaldirac_slaytta": 2.87
+  },
+  "k2-52": {
+   "konu": "Davranış Genetiği",
+   "soru": 2,
+   "n": 2,
+   "yapistirilan": 2,
+   "isabet_tam": 0.5,
+   "isabet_genis": 1.0,
+   "yapistirilmamis_n": 0,
+   "yapistirilmamis_tam": null,
+   "yapistirilmamis_genis": null,
+   "slaytta": {
+    "n": 2,
+    "yapistirilan": 2,
+    "isabet_tam": 0.5,
+    "isabet_genis": 1.0,
+    "yapistirilmamis_n": 0,
+    "yapistirilmamis_tam": null,
+    "yapistirilmamis_genis": null
+   },
+   "secicilik": 0.094,
+   "kaldirac": null,
+   "kaldirac_slaytta": null
+  },
+  "k2-53": {
+   "konu": "Nörodejeneratif Hastalıklar Genetiği",
+   "soru": 5,
+   "n": 5,
+   "yapistirilan": 0,
+   "isabet_tam": 0.4,
+   "isabet_genis": 0.8,
+   "yapistirilmamis_n": 5,
+   "yapistirilmamis_tam": 0.4,
+   "yapistirilmamis_genis": 0.8,
+   "slaytta": {
+    "n": 3,
+    "yapistirilan": 0,
+    "isabet_tam": 0.667,
+    "isabet_genis": 1.0,
+    "yapistirilmamis_n": 3,
+    "yapistirilmamis_tam": 0.667,
+    "yapistirilmamis_genis": 1.0
+   },
+   "secicilik": 0.181,
+   "kaldirac": 2.21,
+   "kaldirac_slaytta": 3.69
+  },
+  "k2-54": {
+   "konu": "Yaygın Anksiyete Bozukluğu",
+   "soru": 5,
+   "n": 5,
+   "yapistirilan": 2,
+   "isabet_tam": 0.8,
+   "isabet_genis": 0.8,
+   "yapistirilmamis_n": 3,
+   "yapistirilmamis_tam": 0.667,
+   "yapistirilmamis_genis": 0.667,
+   "slaytta": {
+    "n": 4,
+    "yapistirilan": 2,
+    "isabet_tam": 1.0,
+    "isabet_genis": 1.0,
+    "yapistirilmamis_n": 2,
+    "yapistirilmamis_tam": 1.0,
+    "yapistirilmamis_genis": 1.0
+   },
+   "secicilik": 0.25,
+   "kaldirac": 2.67,
+   "kaldirac_slaytta": 4.0
+  },
+  "k2-55": {
+   "konu": "Panik Bozukluk",
+   "soru": 3,
+   "n": 3,
+   "yapistirilan": 1,
+   "isabet_tam": 1.0,
+   "isabet_genis": 1.0,
+   "yapistirilmamis_n": 2,
+   "yapistirilmamis_tam": 1.0,
+   "yapistirilmamis_genis": 1.0,
+   "slaytta": {
+    "n": 3,
+    "yapistirilan": 1,
+    "isabet_tam": 1.0,
+    "isabet_genis": 1.0,
+    "yapistirilmamis_n": 2,
+    "yapistirilmamis_tam": 1.0,
+    "yapistirilmamis_genis": 1.0
+   },
+   "secicilik": 0.211,
+   "kaldirac": 4.74,
+   "kaldirac_slaytta": 4.74
+  },
+  "k2-56": {
+   "konu": "Fobik Bozukluk",
+   "soru": 2,
+   "n": 2,
+   "yapistirilan": 1,
+   "isabet_tam": 1.0,
+   "isabet_genis": 1.0,
+   "yapistirilmamis_n": 1,
+   "yapistirilmamis_tam": 1.0,
+   "yapistirilmamis_genis": 1.0,
+   "slaytta": {
+    "n": 2,
+    "yapistirilan": 1,
+    "isabet_tam": 1.0,
+    "isabet_genis": 1.0,
+    "yapistirilmamis_n": 1,
+    "yapistirilmamis_tam": 1.0,
+    "yapistirilmamis_genis": 1.0
+   },
+   "secicilik": 0.105,
+   "kaldirac": 9.52,
+   "kaldirac_slaytta": 9.52
+  },
+  "k2-59": {
+   "konu": "Psikiyatrik Hastalıklar ve Genetik Analizi",
+   "soru": 2,
+   "n": 2,
+   "yapistirilan": 1,
+   "isabet_tam": 0.5,
+   "isabet_genis": 0.5,
+   "yapistirilmamis_n": 1,
+   "yapistirilmamis_tam": 0.0,
+   "yapistirilmamis_genis": 0.0,
+   "slaytta": {
+    "n": 2,
+    "yapistirilan": 1,
+    "isabet_tam": 0.5,
+    "isabet_genis": 0.5,
+    "yapistirilmamis_n": 1,
+    "yapistirilmamis_tam": 0.0,
+    "yapistirilmamis_genis": 0.0
+   },
+   "secicilik": 0.122,
+   "kaldirac": 0.0,
+   "kaldirac_slaytta": 0.0
+  },
+  "k2-62": {
+   "konu": "Kraniyal Sinir Muayenesi",
+   "soru": 6,
+   "n": 6,
+   "yapistirilan": 0,
+   "isabet_tam": 0.0,
+   "isabet_genis": 0.667,
+   "yapistirilmamis_n": 6,
+   "yapistirilmamis_tam": 0.0,
+   "yapistirilmamis_genis": 0.667,
+   "slaytta": {
+    "n": 4,
+    "yapistirilan": 0,
+    "isabet_tam": 0.0,
+    "isabet_genis": 1.0,
+    "yapistirilmamis_n": 4,
+    "yapistirilmamis_tam": 0.0,
+    "yapistirilmamis_genis": 1.0
+   },
+   "secicilik": 0.278,
+   "kaldirac": 0.0,
+   "kaldirac_slaytta": 0.0
+  }
+ },
+ "kacan": [
+  {
+   "id": "d5112fdf89eb",
+   "ders": "k2-01",
+   "yillar": [
+    "2020-2021"
+   ],
+   "slaytta": false
+  },
+  {
+   "id": "past-q-KURUL_2_C_IKMIS__3-65",
+   "ders": "k2-01",
+   "yillar": [
+    "Geçmiş Yıllar Çıkmışı (Arşiv)"
+   ],
+   "slaytta": false
+  },
+  {
+   "id": "past-1790877491342-886075",
+   "ders": "k2-01",
+   "yillar": [
+    "2020-2021"
+   ],
+   "slaytta": false
+  },
+  {
+   "id": "b43bb0cacca5",
+   "ders": "k2-02",
+   "yillar": [
+    "2020-2021"
+   ],
+   "slaytta": false
+  },
+  {
+   "id": "past-1790877044926-209828",
+   "ders": "k2-02",
+   "yillar": [
+    "2021-2022"
+   ],
+   "slaytta": false
+  },
+  {
+   "id": "past-q-I_SKENDERUN_TI_Mu_du_rlu_g_u_ne0__1__230709_230251-60",
+   "ders": "k2-02",
+   "yillar": [
+    "Geçmiş Yıllar Çıkmışı (Arşiv)"
+   ],
+   "slaytta": false
+  },
+  {
+   "id": "q-KURUL_2_C_IKMIS__3-61",
+   "ders": "k2-02",
+   "yillar": [
+    "Geçmiş Yıllar Çıkmışı (Arşiv)"
+   ],
+   "slaytta": false
+  },
+  {
+   "id": "6b9bfe744edf",
+   "ders": "k2-05",
+   "yillar": [
+    "2020-2021"
+   ],
+   "slaytta": false
+  },
+  {
+   "id": "0f22135ceaf2",
+   "ders": "k2-05",
+   "yillar": [
+    "2020-2021"
+   ],
+   "slaytta": false
+  },
+  {
+   "id": "past-1790877481395-897652",
+   "ders": "k2-05",
+   "yillar": [
+    "2020-2021"
+   ],
+   "slaytta": false
+  },
+  {
+   "id": "past-1790877481517-691074",
+   "ders": "k2-05",
+   "yillar": [
+    "2020-2021"
+   ],
+   "slaytta": false
+  },
+  {
+   "id": "past-1790877037327-292692",
+   "ders": "k2-05",
+   "yillar": [
+    "2020-2021"
+   ],
+   "slaytta": false
+  },
+  {
+   "id": "past-1790877501958-29341",
+   "ders": "k2-05",
+   "yillar": [
+    "2020-2021"
+   ],
+   "slaytta": false
+  },
+  {
+   "id": "past-1790877479725-612842",
+   "ders": "k2-05",
+   "yillar": [
+    "2020-2021"
+   ],
+   "slaytta": false
+  },
+  {
+   "id": "past-1790877482441-659030",
+   "ders": "k2-05",
+   "yillar": [
+    "2020-2021"
+   ],
+   "slaytta": false
+  },
+  {
+   "id": "past-1790877482783-460598",
+   "ders": "k2-05",
+   "yillar": [
+    "2020-2021"
+   ],
+   "slaytta": false
+  },
+  {
+   "id": "past-1790877495334-731931",
+   "ders": "k2-05",
+   "yillar": [
+    "2020-2021"
+   ],
+   "slaytta": false
+  },
+  {
+   "id": "060f46f50beb",
+   "ders": "k2-08",
+   "yillar": [
+    "2020-2021",
+    "2020-2021"
+   ],
+   "slaytta": false
+  },
+  {
+   "id": "d3-k2-bey-008",
+   "ders": "k2-08",
+   "yillar": [
+    "2021-2026"
+   ],
+   "slaytta": false
+  },
+  {
+   "id": "past-1790877038133-633883",
+   "ders": "k2-10",
+   "yillar": [
+    "2020-2021"
+   ],
+   "slaytta": false
+  },
+  {
+   "id": "past-1790877044895-368611",
+   "ders": "k2-11",
+   "yillar": [
+    "2021-2022"
+   ],
+   "slaytta": false
+  },
+  {
+   "id": "past-1790877044847-878300",
+   "ders": "k2-11",
+   "yillar": [
+    "2021-2022"
+   ],
+   "slaytta": true
+  },
+  {
+   "id": "past-1790877044394-242744",
+   "ders": "k2-15",
+   "yillar": [
+    "2021-2022"
+   ],
+   "slaytta": false
+  },
+  {
+   "id": "past-1790877044942-54229",
+   "ders": "k2-15",
+   "yillar": [
+    "2021-2022"
+   ],
+   "slaytta": false
+  },
+  {
+   "id": "d3-k2-ftr-006",
+   "ders": "k2-16",
+   "yillar": [
+    "2021-2026"
+   ],
+   "slaytta": false
+  },
+  {
+   "id": "fa71ee5c2610",
+   "ders": "k2-17",
+   "yillar": [
+    "2020-2021"
+   ],
+   "slaytta": false
+  },
+  {
+   "id": "82a5ceefd218",
+   "ders": "k2-17",
+   "yillar": [
+    "2020-2021"
+   ],
+   "slaytta": false
+  },
+  {
+   "id": "d3-k2-nor-015",
+   "ders": "k2-17",
+   "yillar": [
+    "2021-2026"
+   ],
+   "slaytta": false
+  },
+  {
+   "id": "d3-k5-pat-011",
+   "ders": "k2-17",
+   "yillar": [
+    "2021-2026"
+   ],
+   "slaytta": false
+  },
+  {
+   "id": "past-1790877044403-707646",
+   "ders": "k2-20",
+   "yillar": [
+    "2021-2022"
+   ],
+   "slaytta": false
+  },
+  {
+   "id": "past-1790877044441-624411",
+   "ders": "k2-20",
+   "yillar": [
+    "2021-2022"
+   ],
+   "slaytta": false
+  },
+  {
+   "id": "past-1790877044925-370286",
+   "ders": "k2-20",
+   "yillar": [
+    "2021-2022",
+    "Geçmiş Yıllar Çıkmışı (Arşiv)"
+   ],
+   "slaytta": false
+  },
+  {
+   "id": "past-1790877044385-678651",
+   "ders": "k2-20",
+   "yillar": [
+    "2021-2022"
+   ],
+   "slaytta": false
+  },
+  {
+   "id": "past-1790877044849-897865",
+   "ders": "k2-22",
+   "yillar": [
+    "2021-2022"
+   ],
+   "slaytta": true
+  },
+  {
+   "id": "past-1790877044922-94945",
+   "ders": "k2-22",
+   "yillar": [
+    "2021-2022"
+   ],
+   "slaytta": false
+  },
+  {
+   "id": "ef485805d76d",
+   "ders": "k2-23",
+   "yillar": [
+    "2020-2021",
+    "2020-2021",
+    "2020-2021"
+   ],
+   "slaytta": false
+  },
+  {
+   "id": "c16cd2f68ab0",
+   "ders": "k2-26",
+   "yillar": [
+    "2020-2021"
+   ],
+   "slaytta": false
+  },
+  {
+   "id": "c626438ebbc3",
+   "ders": "k2-26",
+   "yillar": [
+    "2020-2021",
+    "2020-2021"
+   ],
+   "slaytta": false
+  },
+  {
+   "id": "6ae0aab3c534",
+   "ders": "k2-26",
+   "yillar": [
+    "2020-2021",
+    "2020-2021"
+   ],
+   "slaytta": false
+  },
+  {
+   "id": "def811f06978",
+   "ders": "k2-26",
+   "yillar": [
+    "2020-2021"
+   ],
+   "slaytta": false
+  },
+  {
+   "id": "d700decc9b5b",
+   "ders": "k2-26",
+   "yillar": [
+    "2020-2021"
+   ],
+   "slaytta": false
+  },
+  {
+   "id": "past-q-I_SKENDERUN_TI_Mu_du_rlu_g_u_ne0__1__230709_230251-103",
+   "ders": "k2-26",
+   "yillar": [
+    "Geçmiş Yıllar Çıkmışı (Arşiv)"
+   ],
+   "slaytta": false
+  },
+  {
+   "id": "d3-k5-pat-023",
+   "ders": "k2-26",
+   "yillar": [
+    "2021-2026"
+   ],
+   "slaytta": false
+  },
+  {
+   "id": "past-1790877040082-187454",
+   "ders": "k2-26",
+   "yillar": [
+    "2020-2021"
+   ],
+   "slaytta": false
+  },
+  {
+   "id": "past-1790877040110-917236",
+   "ders": "k2-26",
+   "yillar": [
+    "2020-2021"
+   ],
+   "slaytta": false
+  },
+  {
+   "id": "past-1790877040118-827574",
+   "ders": "k2-26",
+   "yillar": [
+    "2020-2021"
+   ],
+   "slaytta": false
+  },
+  {
+   "id": "past-1790877041988-964226",
+   "ders": "k2-26",
+   "yillar": [
+    "2020-2021"
+   ],
+   "slaytta": false
+  },
+  {
+   "id": "6ce68f4f5593",
+   "ders": "k2-28",
+   "yillar": [
+    "2020-2021"
+   ],
+   "slaytta": false
+  },
+  {
+   "id": "ed41695f77aa",
+   "ders": "k2-28",
+   "yillar": [
+    "2020-2021"
+   ],
+   "slaytta": false
+  },
+  {
+   "id": "e07675f936c7",
+   "ders": "k2-28",
+   "yillar": [
+    "2020-2021"
+   ],
+   "slaytta": false
+  },
+  {
+   "id": "966e1cde012c",
+   "ders": "k2-28",
+   "yillar": [
+    "2020-2021"
+   ],
+   "slaytta": false
+  },
+  {
+   "id": "d3-k2-ftr-004",
+   "ders": "k2-28",
+   "yillar": [
+    "2021-2026"
+   ],
+   "slaytta": false
+  },
+  {
+   "id": "d3-k2-ftr-003",
+   "ders": "k2-28",
+   "yillar": [
+    "2021-2026"
+   ],
+   "slaytta": true
+  },
+  {
+   "id": "d3-k2-ftr-005",
+   "ders": "k2-28",
+   "yillar": [
+    "2021-2026"
+   ],
+   "slaytta": true
+  },
+  {
+   "id": "q-No_ropsikiyatri_gis_kardiyo_-2023-2024-C__km_s_lar__240625_053302__2_-30",
+   "ders": "k2-28",
+   "yillar": [
+    "2023"
+   ],
+   "slaytta": true
+  },
+  {
+   "id": "past-1790877045073-786870",
+   "ders": "k2-28",
+   "yillar": [
+    "2021-2022"
+   ],
+   "slaytta": true
+  },
+  {
+   "id": "fccec81b0770",
+   "ders": "k2-31",
+   "yillar": [
+    "2020-2021"
+   ],
+   "slaytta": false
+  },
+  {
+   "id": "past-1790877482971-276482",
+   "ders": "k2-31",
+   "yillar": [
+    "2020-2021"
+   ],
+   "slaytta": false
+  },
+  {
+   "id": "940551369cab",
+   "ders": "k2-32",
+   "yillar": [
+    "2020-2021"
+   ],
+   "slaytta": false
+  },
+  {
+   "id": "3807e9b207c5",
+   "ders": "k2-32",
+   "yillar": [
+    "2020-2021"
+   ],
+   "slaytta": false
+  },
+  {
+   "id": "d3-k2-nor-014",
+   "ders": "k2-32",
+   "yillar": [
+    "2021-2026"
+   ],
+   "slaytta": false
+  },
+  {
+   "id": "d3-k2-tbg-004",
+   "ders": "k2-42",
+   "yillar": [
+    "2021-2026"
+   ],
+   "slaytta": true
+  },
+  {
+   "id": "q-No_ropsikiyatri_gis_kardiyo_-2023-2024-C__km_s_lar__240625_053302__2_-16",
+   "ders": "k2-42",
+   "yillar": [
+    "2023"
+   ],
+   "slaytta": true
+  },
+  {
+   "id": "q-No_ropsikiyatri_gis_kardiyo_-2023-2024-C__km_s_lar__240625_053302__2_-38",
+   "ders": "k2-42",
+   "yillar": [
+    "2023"
+   ],
+   "slaytta": false
+  },
+  {
+   "id": "past-1790877039267-989167-cs2",
+   "ders": "k2-42",
+   "yillar": [
+    "2022-2023"
+   ],
+   "slaytta": true
+  },
+  {
+   "id": "past-q-KURUL_2_C_IKMIS__3-62",
+   "ders": "k2-50",
+   "yillar": [
+    "Geçmiş Yıllar Çıkmışı (Arşiv)"
+   ],
+   "slaytta": false
+  },
+  {
+   "id": "past-1790877497218-639789",
+   "ders": "k2-53",
+   "yillar": [
+    "2020-2021"
+   ],
+   "slaytta": false
+  },
+  {
+   "id": "dbae14101597",
+   "ders": "k2-54",
+   "yillar": [
+    "2020-2021"
+   ],
+   "slaytta": false
+  },
+  {
+   "id": "past-1790877040078-830959",
+   "ders": "k2-59",
+   "yillar": [
+    "2020-2021"
+   ],
+   "slaytta": true
+  },
+  {
+   "id": "7a901e64695e",
+   "ders": "k2-62",
+   "yillar": [
+    "2020-2021"
+   ],
+   "slaytta": false
+  },
+  {
+   "id": "d3-k2-nor-005",
+   "ders": "k2-62",
+   "yillar": [
+    "2021-2026"
+   ],
+   "slaytta": false
+  }
+ ]
+}

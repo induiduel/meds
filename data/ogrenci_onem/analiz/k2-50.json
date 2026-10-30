@@ -1,0 +1,131 @@
+{
+ "ders": "k2-50",
+ "ozet": "Çekirdek enürezisin primer/sekonder ayrımı ve tanı ölçütleridir: 2020-21'de 'söylenemez' sorusu (ek psikiyatrik sorun primerde daha sık değil, sekonderde daha sık), 2025-26'da primer enürezisin tanımı, arşivde sekonder enürezis nokturnanın uyku dönemi soruldu. Öğrenciler yaşa göre sıklık tablosunu, tanı ölçütlerini ve diürnal/mikst tipte organik patoloji riskini işaretlemiş; enkoprezis ve kabızlık ise notta işaretsiz kalmış ama 2020-21 ve 2023-24'te sorulmuş.",
+ "temalar": [
+  {
+   "tema": "Primer ve sekonder enürezis; ek psikiyatrik sorun ve tipler (nokturna, diürna, mikst)",
+   "oncelik": "A",
+   "birimler": [
+    "psk-s19-b08"
+   ],
+   "kanit": "2020-21 (195a76703179): 'söylenemez' → 'Ek psikiyatrik sorunlar primer enüreziste daha sık görülür'; 2025-26 (q-25-26_d_nem_3_kurul_2-82-cs4): primer = en az 6 ay süren kesintisiz kuru dönem hiç olmamış; arşiv (past-q-KURUL_2_C_IKMIS__3-62): sekonder enürezis nokturnada kaçırma → REM dönemi. Slaytta '%80'i primer', 'sekonderde ek psikiyatrik sorun olasılığı daha fazla' sarı; diürnal ve mikst için kırmızı ayraç + el notu 'patoloji görülme riski ↑'.",
+   "anlatim": "Primer (hiç 6 aylık kuru dönem yok, vakaların %80'i) ile sekonderi (en az 6 aylık kontinans sonrası başlar, ek psikiyatrik sorun daha olası) tabloyla karşılaştır. Nokturna, diürna ve mikst tipleri ayır; diürnal ve mikst tipte organik patoloji riskinin arttığını ayrıca vurgula.",
+   "soru_payi": 40,
+   "soru_tipleri": [
+    "olumsuz: ek psikiyatrik sorun primerde daha sık (söylenemez)",
+    "tanım: primer enürezis → 6 aylık kuru dönem hiç olmamış",
+    "doğrudan: sekonder enürezis nokturnada uyku dönemi → REM",
+    "doğru bul: organik patoloji riski yüksek tip → diürnal/mikst"
+   ]
+  },
+  {
+   "tema": "Enürezis tanı ölçütleri ve yaşa göre sıklık",
+   "oncelik": "A",
+   "birimler": [
+    "psk-s19-b06"
+   ],
+   "kanit": "2020-21 sorusunun (195a76703179, notta psk-s19-b07) doğru şıkları bu slayttan: haftada en az iki kez, ardışık üç ay, erkekte iki kat, vakaların çoğu primer. Slaytta '%82', 'Erkek/kız 2/1', 'en az 5 yaş', 'haftada en az 2 kez', '3 ay' sarı.",
+   "anlatim": "Ölçütleri numaralı ver: takvim ya da mental yaş en az 5, haftada en az 2 kez ya da sıklıktan bağımsız belirgin sosyal/psikolojik sıkıntı, birbirini izleyen 3 ay. Yaşa göre sıklığı (2 yaş %82 → 5 yaş %7 → 12 yaş %2) ve erkek/kız 2/1 oranını sayı listesi olarak ekle.",
+   "soru_payi": 25,
+   "soru_tipleri": [
+    "yanlış bul: tanı için haftada 1 kez / 1 ay yeterli",
+    "sayı: tanı için en küçük yaş → 5",
+    "sayı: 5 yaşında enüretik oran → %7"
+   ]
+  },
+  {
+   "tema": "Notta yok, sorulmuş: enkoprezis ve çocukta kabızlık",
+   "oncelik": "A",
+   "birimler": [
+    "psk-s19-b10"
+   ],
+   "kanit": "2023-24 (ba419ca750d8): 'çocuklarda kabızlığa neden olmaz' → erken yaşta tuvalet eğitimi (profilde 2× tekrar); 2020-21 (k1-2020-2021-a-q093, iki kopya): fonksiyonel retansif olmayan fekal inkontinans → dışkı tutma kanıtı olmadan uygun olmayan yere dışkılama. İkisi de bankada kapsandi:false; enkoprezis birimi notta işaretsiz (C/0).",
+   "anlatim": "Enkoprezisi tanımla (ayda en az 1 kez, 3 ay, kronolojik ya da mental yaş en az 4, tıbbi nedene bağlı değil) ve iki tipi (konstipasyonla giden ve gitmeyen) ayır. Retansif olmayan tipte dışkı tutma kanıtı olmadığını, konstipasyonlu tipte pediatriden yardım ve Hirschsprung, anal fissür, sfinkter tonusu gibi nedenlerin dışlanmasını vurgula. 'Erken tuvalet eğitimi kabızlık yapar' bilgisi slaytta yok, yalnız çıkmış dayanaklı ve kısa verilmeli.",
+   "soru_payi": 25,
+   "soru_tipleri": [
+    "doğru bul: retansif olmayan fekal inkontinans",
+    "olumsuz: çocukta kabızlığa neden olmayan",
+    "sayı: enkoprezis için en küçük yaş → 4"
+   ]
+  },
+  {
+   "tema": "Diğer seçilen yerler: enürezis tedavisi",
+   "oncelik": "C",
+   "birimler": [
+    "psk-s19-b09"
+   ],
+   "kanit": "İşaret ve çıkmış yok (C/0); konu profilinde de tedavi sorusu yok.",
+   "anlatim": "Önce ilaç dışı yaklaşımları (mesane egzersizi, akşam sıvı kısıtlaması, gece en fazla 2 kez kaldırma, tablo-ödül, aile ve öğretmene rehberlik, alarm) sonra slayttaki ilaç sırasını (imipramin 6 yaştan itibaren ve EKG takibiyle; desmopressin ikinci, nöbet bozukluğunda ilk) ver.",
+   "soru_payi": 10,
+   "soru_tipleri": [
+    "doğrudan: nöbet bozukluğu olan enüretik çocukta ilaç → desmopressin",
+    "doğrudan: imipramin kullanılırken gereken izlem → EKG"
+   ]
+  }
+ ],
+ "hoca_kaliplari": [
+  "'Enürezis hakkında aşağıda verilen bilgilerden hangisi söylenemez?'",
+  "tanım sorusu: 'Primer enürezis için en doğru tanım hangisidir?'",
+  "doğrudan tek bilgi: 'uykunun hangi döneminde görülür?'",
+  "konu profili: doğrudan %29, yanlış bul %29, doğru ifade %29, sayı %14"
+ ],
+ "tuzaklar": [
+  {
+   "tuzak": "Ek psikiyatrik sorunlar sekonder enüreziste daha sıktır, primerde değil",
+   "neden": "2020-21 sorusunun cevabı bu yer değiştirmedir; öğrencinin notundaki sürümde ifade ters çevrilmiş (bkz. düzeltme)."
+  },
+  {
+   "tuzak": "Primer enürezis 6 aylık kuru dönemin hiç olmamasıdır",
+   "neden": "Sekonder için 'en az 6 aylık kontinans sonrası' ile karıştırılır."
+  },
+  {
+   "tuzak": "Enürezis için yaş sınırı 5, enkoprezis için 4",
+   "neden": "Sayısal yakın değer çeldiricisi olarak yer değiştirebilir."
+  },
+  {
+   "tuzak": "Organik patoloji riski diürnal ve mikst tipte artar, nokturnada değil",
+   "neden": "Slaytta iki ünlemle vurgulanmış; çeldiricide nokturna verilebilir."
+  },
+  {
+   "tuzak": "Retansif olmayan fekal inkontinansta dışkı tutma kanıtı yoktur",
+   "neden": "Psikojenik megakolon (dışkıyı tutma) ile karıştırılır."
+  }
+ ],
+ "sayilar": [
+  "2 yaş %82, 3 yaş %49, 4 yaş %26, 5 yaş %7, 12 yaş %2 enüretik",
+  "Vakaların %80'i primer",
+  "Erkek/kız 2/1",
+  "Sekonder: en az 6 aylık kontinans sonrası",
+  "Enürezis: yaş en az 5, haftada en az 2 kez, ardışık 3 ay",
+  "Enkoprezis: yaş en az 4, ayda en az 1 kez, 3 ay",
+  "Gece en fazla 2 kez tuvalete kaldırma",
+  "İmipramin 6 yaştan itibaren"
+ ],
+ "duzeltmeler": [
+  {
+   "yanlis": "Öğrencinin yapıştırdığı 2020-21 sorusunda 4. şık: 'Psikiyatrik vakalar genelde sekonder enürezis şeklinde başvururlar' (cevap olarak işaretli).",
+   "dogru": "Bu ifade slayta göre doğrudur, bu yüzden 'söylenemez' cevabı olamaz. Bankadaki asıl yanlış şık: 'Ek psikiyatrik sorunlar primer enüreziste, sekonder enürezise göre daha sık görülür.' Slayt s04: sekonder enüreziste ek psikiyatrik sorun olasılığı daha fazladır.",
+   "kaynak": "banka 195a76703179 doğru şıkkı + slayt s04"
+  },
+  {
+   "yanlis": "Slayt s10: imipramin enüreziste ilk sırada tercih edilecek ilaç, desmopressin ikinci sırada.",
+   "dogru": "Sınavda slayttaki sıra beklenir. Güncel kılavuzlarda ise alarm tedavisi ve desmopressin birinci basamaktır, imipramin kalp yan etkileri nedeniyle (slayttaki EKG takibi şartı da bundandır) sonraki basamaktadır. Anlatımda slayt sırası verilip bu fark kısa bir notla belirtilebilir.",
+   "kaynak": "slayt s10 + genel tıbbi bilgi"
+  }
+ ],
+ "ara_soru_adaylari": [
+  {
+   "birim": "psk-s19-b08",
+   "fikir": "Bir yıl kuru kaldıktan sonra kardeşi doğunca yeniden altını ıslatan 7 yaşındaki çocuk: tip ve ek psikiyatrik sorun olasılığı."
+  },
+  {
+   "birim": "psk-s19-b08",
+   "fikir": "Gündüz de kaçıran çocukta neden organik nedenler araştırılmalı (diürnal/mikst tipte risk artar)."
+  },
+  {
+   "birim": "psk-s19-b06",
+   "fikir": "4 yaşında haftada 3 gece ıslatan çocuk: tanı konur mu (yaş en az 5)."
+  }
+ ],
+ "kurul2627_notu": "Enkoprezis ve kabızlık iki ayrı yılda sorulmuş ama notta işaretsiz; 2026-27 slaytında enkoprezis bölümü varsa pay korunmalı, 'erken tuvalet eğitimi' ve fonksiyonel retansif olmayan tip slaytta geçiyor mu bakılmalı. Sekonder enürezisin REM döneminde olması slayt metninde yok, yalnız arşiv çıkmışında; 2026-27'de geçmiyorsa kısa tutulmalı. Tedavi sırası güncellenmiş mi kontrol edilmeli."
+}

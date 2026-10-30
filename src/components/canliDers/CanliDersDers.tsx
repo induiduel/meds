@@ -7,7 +7,7 @@
 import CanliDersKimlikHedef from './CanliDersKimlikHedef';
 import { CanliDersBaslangic } from './CanliDersBaslangic';
 import React, { Suspense, lazy, memo, useCallback, useMemo, useEffect, useLayoutEffect, useRef, useState } from 'react';
-import { AlertTriangle, ArrowLeftRight, ArrowUpDown, BookOpen, Captions, MapPin, Download, ChevronDown, ChevronLeft, ChevronRight, ChevronUp, Check, Columns2, Copy, Crosshair, FileText, Maximize2, Minimize2, Minus, Package, Pause, Play, Palette, Plus, RotateCcw, Rows2, ScrollText, SkipBack, SkipForward } from 'lucide-react';
+import { AlertTriangle, ArrowLeftRight, GraduationCap, ArrowUpDown, BookOpen, Captions, MapPin, Download, ChevronDown, ChevronLeft, ChevronRight, ChevronUp, Check, Columns2, Copy, Crosshair, FileText, Maximize2, Minimize2, Minus, Package, Pause, Play, Palette, Plus, RotateCcw, Rows2, ScrollText, SkipBack, SkipForward } from 'lucide-react';
 import { navigateTo, pathFor } from '../../router';
 import { driveViewUrl, useDeckPdf } from '../../services/deckPdfService';
 import { releasePageFullscreen, wasRecentlyScrollingOrTouching } from '../../utils/fullscreen';
@@ -1417,9 +1417,13 @@ const CdV2Maddeler = memo(function CdV2Maddeler({ i, cs, deste }: { i: number; c
               return x.tur ? <mark key={k} className={`cd-v2-v is-${x.tur}`} title={V2_TUR[x.tur] || x.tur}>{ic}</mark> : <React.Fragment key={k}>{ic}</React.Fragment>;
             })}
           </span>
-          {(c.c.length > 0 || c.a != null) && (
+          {(c.c.length > 0 || c.a != null || c.o) && (
             <span className="cd-v2-rozetler">
               {c.c.length > 0 && <span className="cd-v2-cik" title={`Çıkmışta sorulmuş: ${c.c.join(', ')}`}><Star aria-hidden /> Çıkmış{c.c.length > 1 ? ` ×${c.c.length}` : ''}</span>}
+              {c.o && <span className={`cd-v2-ogr is-${c.o}`} title={c.o === 'A'
+                ? 'Geçen yılın öğrencileri bu bilgiyi en önemli yerler arasına aldı; çıkmış sorularda karşılığı var'
+                : 'Geçen yılın öğrencileri bu bilgiyi notlarında vurgulayıp açıklama yazdı'}>
+                <GraduationCap aria-hidden /> {c.o === 'A' ? 'Öğrenciler buraya çalıştı' : 'Öğrenci notunda'}</span>}
               {c.a != null && (
                 <a className="cd-v2-adim" href={`/ogren/${encodeURIComponent(deste)}?adim=${c.a}`}
                   onClick={(e) => { e.preventDefault(); navigateTo(`/ogren/${encodeURIComponent(deste)}?adim=${c.a}`); }}

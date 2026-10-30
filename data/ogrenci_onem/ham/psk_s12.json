@@ -1,0 +1,670 @@
+{
+ "pdf": "psk",
+ "sayfa": 12,
+ "sayfa_ozeti": "Panik Bozukluk (k2-55) ve Fobik Bozukluk (k2-56). Arşivde ikisi tek derste: y25-k2-55-panik-bozukluk (s22–38 fobik bozukluk). Panik: tanım, beklenti anksiyetesi, epidemiyoloji, biyolojik kuramlar, panik atak belirtileri (≥4), klinik özellikler, ayırıcı tanı, gidiş, agorafobi ölçütleri. Fobi: özgül/sosyal ayrımı, epidemiyoloji, özgül fobi kliniği (kan-enjeksiyon-yaralanma bifazik tepki), gidiş (sabit/kronik), ayırıcı tanı, sosyal fobi etiyolojisi/ayırıcı tanı/kötü prognoz. 5 çıkmış (panik yanlış bilgi: kulak çınlaması; anksiyetenin bilişsel belirtisi; panik bilişsel belirtisi olmayan: beklenti anksiyetesi; özgül fobi yanlış: dalgalı gidiş; özgül fobi ayırıcı tanısında yer almaz: şizofreni). Bu sayfada sarı fosforlu = önemli; pembe fosfor hem çıkmış blokları hem slayt satırlarını vurgulamak için kullanılmış; kırmızı alt çizgi ek vurgu.",
+ "bloklar": [
+  {
+   "id": "psk-s12-b01",
+   "bolge": "r1c1",
+   "tur": "slayt",
+   "baslik": "Panik Bozukluğu – tanım, beklenti anksiyetesi",
+   "ders": "k2-55",
+   "y25": {
+    "key": "y25-k2-55-panik-bozukluk",
+    "sayfa": 3
+   },
+   "basili_metin": "Panik atak tek başına psikiyatrik hastalık veya tanı değildir! (y25 s02)\nPANİK BOZUKLUK: Beklenmeden gelen, yineleyici panik ataklarla karakterize bir bozukluktur.\nHasta \"Kontrolünü kaybedeceği\", \"kalp krizi geçireceği\" ya da \"çıldıracağı\" gibi korkulara kapılır.\nPanik atak ya da ataklardan sonra başka atakların olacağına ilişkin sürekli endişe yaşanır.\nKişi, panik atak geçirebileceğini düşündüğü ortamlardan kaçınma şeklinde davranış değişiklikleri de gösterir.\nPanik nöbetleri bütün anksiyete bozukluklarında ya da başka ruhsal bozukluklarda ortaya çıkabilirken; panik bozukluk kendiliğinden ve beklenmedik panik nöbetleri ile giden bir anksiyete bozukluğudur.",
+   "isaretler": [
+    {
+     "tur": "sari",
+     "hedef": "Beklenmeden gelen, yineleyici panik ataklarla karakterize bir bozukluktur"
+    },
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "aynı satır"
+    },
+    {
+     "tur": "sari",
+     "hedef": "Kontrolünü kaybedeceği; kalp krizi geçireceği; ya da çıldıracağı gibi korkulara"
+    },
+    {
+     "tur": "sari",
+     "hedef": "Panik atak ya da ataklardan sonra başka atakların olacağına ilişkin sürekli endişe"
+    },
+    {
+     "tur": "sari",
+     "hedef": "Panik nöbetleri bütün anksiyete bozukluklarında … panik bozukluk kendiliğinden ve beklenmedik panik nöbetleri ile giden bir anksiyete bozukluğudur"
+    }
+   ],
+   "el_yazisi": [
+    {
+     "metin": "beklenti anksiyetesi",
+     "hedef": "Panik atak ya da ataklardan sonra başka atakların olacağına ilişkin sürekli endişe yaşanır (oklu)",
+     "guven": "yuksek",
+     "alternatif": ""
+    }
+   ],
+   "onem": [
+    "sari",
+    "el_onemli",
+    "cikmis"
+   ],
+   "duzeltme": []
+  },
+  {
+   "id": "psk-s12-b02",
+   "bolge": "r1c1",
+   "tur": "slayt",
+   "baslik": "Panik bozukluk – Epidemiyoloji",
+   "ders": "k2-55",
+   "y25": {
+    "key": "y25-k2-55-panik-bozukluk",
+    "sayfa": 4
+   },
+   "basili_metin": "EPİDEMİYOLOJİ\nPanik atak görülme sıklığı yılda %10 iken panik bozukluk yaşam boyu prevelansı %1,5-5 arasında değişir.\nKadınlarda bozukluğun görülme oranı erkeklere göre 2-3 kat fazladır.\nHastalık her hangi bir yaşta gelişebilmekle birlikte daha çok 20'li yaşlarda başlar.",
+   "isaretler": [
+    {
+     "tur": "sari",
+     "hedef": "üç cümlenin tamamı"
+    },
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "Kadınlarda … 2-3 kat fazladır; Hastalık … daha çok 20'li yaşlarda başlar"
+    }
+   ],
+   "el_yazisi": [],
+   "onem": [
+    "sari",
+    "cikmis"
+   ],
+   "duzeltme": []
+  },
+  {
+   "id": "psk-s12-b03",
+   "bolge": "r1c1",
+   "tur": "slayt",
+   "baslik": "Panik bozukluk – Etyoloji (biyolojik ve psikososyal kuramlar)",
+   "ders": "k2-55",
+   "y25": {
+    "key": "y25-k2-55-panik-bozukluk",
+    "sayfa": 5
+   },
+   "basili_metin": "Biyolojik kuramlar\nSSS'DE katekolamin düzeylerinde artış,\nLocus seruleusta artmış noradrenerjik aktivite,\nBeyin sapı kemoreseptörlerinin duyarlılığında artış\nGABA nörotransmitter sisteminde düzensizliklerdir.\nGenetik kuramlar (Birinci derece yakınlarında 4-8 kat artış)\nPsikososyal kuramlar\nBilişsel davranışçı kuram\nPsikodinamik kuram (kaygı uyarıcı dürtülere karşı başarısız savunma mekanizmaları mevcuttur.)",
+   "isaretler": [
+    {
+     "tur": "pembe",
+     "hedef": "SSS'DE katekolamin düzeylerinde artış; Locus seruleusta artmış noradrenerjik aktivite; Beyin sapı kemoreseptörlerinin duyarlılığında artış"
+    }
+   ],
+   "el_yazisi": [
+    {
+     "metin": "→ aşırı uyarılmışlık.",
+     "hedef": "Biyolojik kuramlar",
+     "guven": "yuksek",
+     "alternatif": ""
+    }
+   ],
+   "onem": [
+    "sari",
+    "el_onemli",
+    "cikmis"
+   ],
+   "duzeltme": []
+  },
+  {
+   "id": "psk-s12-b04",
+   "bolge": "r1c1",
+   "tur": "slayt",
+   "baslik": "Panik Atağı belirtileri (≥4)",
+   "ders": "k2-55",
+   "y25": {
+    "key": "y25-k2-55-panik-bozukluk",
+    "sayfa": 7
+   },
+   "basili_metin": "Panik Atağı\n(1) çarpıntı, kalp atımlarını duyumsama veya kalp hızında artma olması\n(2) terleme\n(3) titreme veya sarsılma\n(4) nefes darlığı veya boğuluyor gibi olma duyumları\n(5) soluğun kesilmesi\n(6) göğüs ağrısı veya göğüste sıkıntı hissi\n(7) bulantı veya karın ağrısı\n(8) baş dönmesi, sersemlik hissi, düşecekmiş veya bayılacakmış gibi olma\n(9) derealizasyon ya da depersonalizasyon (Çevredeki şeyler size sanki gerçek değilmiş gibi geldi mi? Çevreden kopuyormuş gibi hissettiniz mi? Vücudunuz değişiyor gibi geldi mi?) (y25 s08)\n(10) kontrolünü kaybedeceği ya da çıldıracağı korkusu\n(11) ölüm korkusu\n(12) paresteziler-uyuşma\n(13) üşüme, ürperme ya da ateş basmaları",
+   "isaretler": [
+    {
+     "tur": "sari",
+     "hedef": "13 belirtinin hemen tamamı"
+    }
+   ],
+   "el_yazisi": [
+    {
+     "metin": "≥4",
+     "hedef": "Panik Atağı başlığı (tanı için en az 4 belirti)",
+     "guven": "yuksek",
+     "alternatif": ""
+    },
+    {
+     "metin": "↱ kişinin vücuduna yabancılaşması",
+     "hedef": "(9) depersonalizasyon",
+     "guven": "orta",
+     "alternatif": "yazı çok küçük; 'kişinin vücuduna yabancılaşması' bağlamla uyumlu"
+    }
+   ],
+   "onem": [
+    "sari",
+    "el_onemli",
+    "cikmis"
+   ],
+   "duzeltme": []
+  },
+  {
+   "id": "psk-s12-b05",
+   "bolge": "r2c1",
+   "tur": "cikmis_soru",
+   "baslik": "Panik bozuklukla ilgili yanlış: çarpıntıdan sonra en sık baş dönmesi ve kulak çınlaması",
+   "ders": "k2-55",
+   "y25": {
+    "key": "y25-k2-55-panik-bozukluk",
+    "sayfa": 7
+   },
+   "basili_metin": "79- Aşağıdakilerden hangisi Panik Bozukluk ile ilgili yanlış bir bilgidir?\nA) Hastalık herhangi bir yaşta gelişebilmekle birlikte daha çok 20'li yaşlarda başlar\nB) Etiyolojisinde SSS'de katekolamin düzeylerinde artış, Locus seruleusta artmış noradrenerjik aktivite, Beyin sapı kemoreseptörlerinin duyarlılığında artış gibi biyolojik kuramlardan bahsedilir\nC) Çarpıntıdan sonra en sık görülen bedensel belirtiler sırasıyla baş dönmesi ve kulak çınlamasıdır.\nD) Kadınlarda bozukluğun görülme oranı erkeklere göre 2-3 kat fazladır.\nE) Beklenmeden gelen, yineleyici panik ataklarla karakterize bir bozukluktur.",
+   "isaretler": [
+    {
+     "tur": "pembe",
+     "hedef": "soru bloğu"
+    },
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "A, B, D, E kırmızı tik; C kalın (cevap)"
+    }
+   ],
+   "el_yazisi": [],
+   "cikmis": {
+    "kok": "Aşağıdakilerden hangisi panik bozukluk ile ilgili yanlış bir bilgidir?",
+    "siklar": [
+     "A) Hastalık herhangi bir yaşta gelişebilmekle birlikte daha çok 20'li yaşlarda başlar.",
+     "B) Etiyolojisinde SSS'de katekolamin düzeylerinde artış, locus seruleusta artmış noradrenerjik aktivite, beyin sapı kemoreseptörlerinin duyarlılığında artış gibi biyolojik kuramlardan bahsedilir.",
+     "C) Çarpıntıdan sonra en sık görülen bedensel belirtiler sırasıyla baş dönmesi ve kulak çınlamasıdır.",
+     "D) Kadınlarda bozukluğun görülme oranı erkeklere göre 2-3 kat fazladır.",
+     "E) Beklenmeden gelen, yineleyici panik ataklarla karakterize bir bozukluktur."
+    ],
+    "ogrenci_cevap": "C",
+    "banka_id": "d3-f-108",
+    "banka_yil": "2021-2022 final",
+    "banka_dogru": "C",
+    "tutarli": true,
+    "not": "Kopyaları: past-q-2025-2026_DO_NEM_3_FI_NAL_SINAVI-79, q-22_final_230619_145249-79. Kulak çınlaması panik atak belirti listesinde yok (y25 s07–08). Yapıştırılan metin Türkçe karaktersiz (OCR) — şıklar düzeltilerek yazıldı."
+   },
+   "onem": [
+    "cikmis"
+   ],
+   "duzeltme": [
+    {
+     "ham": "Asagidakilerden … yanlis … biyolo/ik … duyariliginda arts",
+     "dogru": "Aşağıdakilerden … yanlış … biyolojik … duyarlılığında artış",
+     "gerekce": "Yapıştırılan kaynak Türkçe karakterleri kaybetmiş"
+    }
+   ]
+  },
+  {
+   "id": "psk-s12-b06",
+   "bolge": "r1c2",
+   "tur": "slayt",
+   "baslik": "Panik bozukluk – Klinik özellikler (görünüm, konuşma, duygulanım, bilişsel yetiler)",
+   "ders": "k2-55",
+   "y25": {
+    "key": "y25-k2-55-panik-bozukluk",
+    "sayfa": 9
+   },
+   "basili_metin": "Genel görünüm ve davranış: panik nöbetleri olmadığı zaman hastanın genel görünümünde bir fark olmaz. Ancak nöbetler esnasında ileri derecede endişeli ve telaşlıdır.\nKonuşma ve ilişki kurma: panik nöbeti esnasında rahat konuşamaz, sesi titrer. Hasta ile ilişki kurmak güç olabilir.\nDuygulanım: nöbetler sırasında ileri derecede korku ve uyarılmışlık hali vardır. Panik nöbeti yaşadıktan sonra en büyük korkusu nöbetleri tekrar yaşamaktır (beklenti anksiyetesi). Nöbet esnasında fizyolojik belirtilerin yanı sıra ölüm/delirme korkusu, özdenetimini yitirme korkusu belirgindir.\nBilişsel yetiler: panik nöbetler dışında genellikle hastanın algılama, yönelim, diğer bilişsel yetileri normaldir. Nöbetler esnasında çevresini tanımama, algı bozukluğu varmış gibi durumlar ortaya çıkabilir. Öze yabancılaşma (depersonalizasyon), gerçekdışılaşma (derealizasyon) görülebilir. (y25 s10)\nDüşünce süreci ve içeriği: çoğu hasta nöbet tekrar gelirse kendisine ne olacağı ile ilgili düşünceler içindedir.\nBedensel ve fizyolojik belirtiler: otonom sinir sistemi kamçılanışına bağlı belirtiler olur.",
+   "isaretler": [
+    {
+     "tur": "pembe",
+     "hedef": "Duygulanım; nöbetler sırasında ileri derecede korku ve uyarılmışlık hali; en büyük korkusu nöbetleri tekrar yaşamaktır (beklenti anksiyetesi); ölüm/delirme korkusu, özdenetimini yitirme korkusu belirgindir"
+    },
+    {
+     "tur": "pembe",
+     "hedef": "Bilişsel yetiler; çevresini tanımama, algı bozukluğu; Öze yabancılaşma (depersonalizasyon), gerçekdışılaşma (derealizasyon)"
+    },
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "aynı pembe satırlar"
+    }
+   ],
+   "el_yazisi": [],
+   "onem": [
+    "sari",
+    "cikmis"
+   ],
+   "duzeltme": []
+  },
+  {
+   "id": "psk-s12-b07",
+   "bolge": "r1c2",
+   "tur": "cikmis_soru",
+   "baslik": "Anksiyetenin bilişsel belirtisi: dikkat eksikliği, konsantre olamama, unutkanlık",
+   "ders": "k2-54",
+   "y25": {
+    "key": "y25-k2-54-yaygin-anksiyete-bozuklugu",
+    "sayfa": 7
+   },
+   "basili_metin": "77. Aşağıdakilerden hangisi anksiyetenin bilişsel belirtileri arasında yer alır?\na. Korku, endişe ve kaygı\nb. Yerinde duramama ve hareketsizlik\nc. Dikkat eksikliği, konsantre olamama ve unutkanlık\nd. Kalp çarpıntısı, terleme ve nefes alamama\ne. Uyku düzensizliği ve iştah kaybı",
+   "isaretler": [
+    {
+     "tur": "daire",
+     "hedef": "c şıkkı (kırmızı daire)"
+    }
+   ],
+   "el_yazisi": [],
+   "cikmis": {
+    "kok": "Aşağıdakilerden hangisi anksiyetenin bilişsel belirtileri arasında yer alır?",
+    "siklar": [
+     "A) Korku, endişe ve kaygı",
+     "B) Yerinde duramama ve hareketsizlik",
+     "C) Dikkat eksikliği, konsantre olamama ve unutkanlık",
+     "D) Kalp çarpıntısı, terleme ve nefes alamama",
+     "E) Uyku düzensizliği ve iştah kaybı"
+    ],
+    "ogrenci_cevap": "C",
+    "banka_id": "final-2018-2019-q077",
+    "banka_yil": "2018-2019 final",
+    "banka_dogru": "C",
+    "tutarli": true,
+    "not": "Kitapçık fotoğrafı (pembe zemin yok). Banka konusu Yaygın Anksiyete Bozukluğu (k2-54); öğrenci panik bölümüne koymuş. Dayanak y25 k2-54 s07: 'Bilişsel yetiler: … dikkati çabuk dağılır, geçici unutkanlıklar olabilir'."
+   },
+   "onem": [
+    "cikmis"
+   ],
+   "duzeltme": []
+  },
+  {
+   "id": "psk-s12-b08",
+   "bolge": "r1c2",
+   "tur": "cikmis_soru",
+   "baslik": "Panik bilişsel belirtileri arasında yer almaz: beklenti anksiyetesi (duygulanım)",
+   "ders": "k2-55",
+   "y25": {
+    "key": "y25-k2-55-panik-bozukluk",
+    "sayfa": 9
+   },
+   "basili_metin": "46. Hangisi panik bilişsel belirtileri arasında yer almaz?\na. Konsantre olamama, konfüzyon, dikkatin çelinebilmesi\nb. Dikkatte azalma, hipervijilans\nc. Gerçek dışı algılama\nd. Anlamlandırmada bozulma\ne. Beklenti anksiyetesi",
+   "isaretler": [
+    {
+     "tur": "pembe",
+     "hedef": "soru bloğu"
+    },
+    {
+     "tur": "kutu",
+     "hedef": "a–d şıklarını saran kırmızı ayraç → bilişsel"
+    },
+    {
+     "tur": "ok",
+     "hedef": "e → duygulanım"
+    }
+   ],
+   "el_yazisi": [
+    {
+     "metin": "bilişsel",
+     "hedef": "a–d şıkları (ayraçla)",
+     "guven": "yuksek",
+     "alternatif": ""
+    },
+    {
+     "metin": "→ duygulanım",
+     "hedef": "e. Beklenti anksiyetesi",
+     "guven": "yuksek",
+     "alternatif": ""
+    }
+   ],
+   "cikmis": {
+    "kok": "Aşağıdakilerden hangisi panik bozukluğun bilişsel (kognitif) belirtileri arasında yer almaz?",
+    "siklar": [
+     "A) Konsantre olamama, konfüzyon, dikkatin çelinebilmesi",
+     "B) Dikkatte azalma, hipervijilans",
+     "C) Gerçek dışı algılama",
+     "D) Anlamlandırmada bozulma",
+     "E) Beklenti anksiyetesi"
+    ],
+    "ogrenci_cevap": "E",
+    "banka_id": "past-1790877044855-217832",
+    "banka_yil": "2021-2022 Kurul 2",
+    "banka_dogru": "E",
+    "tutarli": true,
+    "not": "Kopya: q-KURUL_2_C_IKMIS__3-46 (soru no 46 ile birebir). Slayt: beklenti anksiyetesi 'Duygulanım' başlığı altında (y25 s09)."
+   },
+   "onem": [
+    "cikmis",
+    "el_onemli"
+   ],
+   "duzeltme": [
+    {
+     "ham": "konfiizyon, dikkatin çu:linebilmesi",
+     "dogru": "konfüzyon, dikkatin çelinebilmesi",
+     "gerekce": "Yapıştırılan metindeki karakter bozulması; banka metni"
+    }
+   ]
+  },
+  {
+   "id": "psk-s12-b09",
+   "bolge": "r2c2",
+   "tur": "slayt",
+   "baslik": "PB – Ayırıcı Tanı",
+   "ders": "k2-55",
+   "y25": {
+    "key": "y25-k2-55-panik-bozukluk",
+    "sayfa": 12
+   },
+   "basili_metin": "Panik bozukluğu ile ayırıcı tanıları yapılması gereken bedensel hastalıklar:\nHipertiroidizm, Hipotiroidizm, Hiperparatiroidizm, Hipoglisemi, Feokromositoma\nKardiyak aritmiler, Koroner yetersizlik, Mitral kapak prolapsusu\nMultipl skleroz, Méniére hastalığı\nAlkol, ilaç yoksunluk send., İlaç zehirlenmesi\nPanik bozukluğu ile ayırıcı tanıları yapılması gereken ruhsal hastalıklar:\nsosyal ve özgül fobi, travma sonrası stres bozukluğu, obsesif kompulsif bozukluk, yaygın anksiyete bozukluğu, duygudurum bozuklukları, Psikotik bozukluklar, Erişkin ayrılma anksiyetesi bozukluğu",
+   "isaretler": [
+    {
+     "tur": "sari",
+     "hedef": "tüm bedensel ve ruhsal hastalık maddeleri"
+    }
+   ],
+   "el_yazisi": [],
+   "onem": [
+    "sari"
+   ],
+   "duzeltme": []
+  },
+  {
+   "id": "psk-s12-b10",
+   "bolge": "r2c2",
+   "tur": "slayt",
+   "baslik": "PB – Gidiş ve Sonlanış",
+   "ders": "k2-55",
+   "y25": {
+    "key": "y25-k2-55-panik-bozukluk",
+    "sayfa": 13
+   },
+   "basili_metin": "PB- Gidiş ve Sonlanış\ndalgalı gidişli kronik",
+   "isaretler": [],
+   "el_yazisi": [
+    {
+     "metin": "depresyon, alkol-madde bağımlılığı sık.",
+     "hedef": "PB gidiş ve sonlanış (eşlik eden durumlar)",
+     "guven": "yuksek",
+     "alternatif": ""
+    }
+   ],
+   "onem": [
+    "el_onemli"
+   ],
+   "duzeltme": []
+  },
+  {
+   "id": "psk-s12-b11",
+   "bolge": "r2c2",
+   "tur": "slayt",
+   "baslik": "Agorafobi – tanım ve DSM-5 ölçütleri",
+   "ders": "k2-55",
+   "y25": {
+    "key": "y25-k2-55-panik-bozukluk",
+    "sayfa": 17
+   },
+   "basili_metin": "AGORAFOBİ: Toplumsal yerlere yalnız başına girmeye korkan hastaların durumlarını tanımlamak için kullanılmıştır. (y25 s16)\nDSM-5 Agorafobi Tanı Ölçütleri\nA. Aşağıdaki beş durumdan ikisi (ya da daha fazlası) ile ilgili olarak belirgin korku ya da kaygı duyma\n1. Toplu taşıma araçlarını kullanma (otobüs, tren vs.)\n2. Açık yerlerde bulunma (otopark, köprüler, alışveriş merkezleri)\n3. Kapalı yerlerde bulunma (mağazalar, tiyatrolar, sinemalar)\n4. Sırada bekleme ya da kalabalık bir yerde bulunma\n5. Tek başına evin dışında bulunma",
+   "isaretler": [],
+   "el_yazisi": [
+    {
+     "metin": "6 ay+",
+     "hedef": "DSM-5 Agorafobi Tanı Ölçütleri (süre ölçütü: korku/kaçınma 6 ay ya da daha uzun; y25 s18 F ölçütü)",
+     "guven": "orta",
+     "alternatif": "ilk karakter 'b' gibi de okunabilir ('bay+'); bağlam (y25 s18 'altı ay ya da daha uzun sürer') '6 ay+' okumasını destekliyor"
+    }
+   ],
+   "onem": [
+    "el_onemli"
+   ],
+   "duzeltme": []
+  },
+  {
+   "id": "psk-s12-b12",
+   "bolge": "r1c3",
+   "tur": "slayt",
+   "baslik": "Fobik Bozukluk – özgül/sosyal ayrımı ve epidemiyoloji",
+   "ders": "k2-56",
+   "y25": {
+    "key": "y25-k2-55-panik-bozukluk",
+    "sayfa": 23
+   },
+   "basili_metin": "Fobik Bozukluk\nFobik Bozukluk- Epidemiyoloji\nÖzgül fobinin yaşam boyu görülme olasılığının %11, sosyal fobinin ise %3-13 olduğu bildirilmiştir.\nÖzgül fobiler sıklıkla çocukluk yaşlarında başlar. Kadınlarda görülme sıklığı erkeklerden 2 kat fazladır.\nSosyal fobi ise çoğunlukla ergenlik yıllarında başlar. Kadın ve erkeklerde eşit oranda görülür.",
+   "isaretler": [
+    {
+     "tur": "yesil",
+     "hedef": "Özgül fobinin yaşam boyu görülme olasılığının %11"
+    },
+    {
+     "tur": "pembe",
+     "hedef": "Özgül fobiler sıklıkla çocukluk yaşlarında başlar. Kadınlarda görülme sıklığı erkeklerden 2 kat fazladır."
+    },
+    {
+     "tur": "pembe",
+     "hedef": "Sosyal fobi ise çoğunlukla ergenlik yıllarında başlar. Kadın ve erkeklerde eşit oranda görülür."
+    },
+    {
+     "tur": "ok",
+     "hedef": "Fobik Bozukluk → özgül / sosyal"
+    }
+   ],
+   "el_yazisi": [
+    {
+     "metin": "özgül: nesne, K ×2 > E, çocukluk",
+     "hedef": "Fobik Bozukluk → özgül fobi",
+     "guven": "yuksek",
+     "alternatif": ""
+    },
+    {
+     "metin": "sosyal: sosyal ortam korkusu, K = E, ergenlik",
+     "hedef": "Fobik Bozukluk → sosyal fobi",
+     "guven": "yuksek",
+     "alternatif": ""
+    }
+   ],
+   "onem": [
+    "sari",
+    "el_onemli",
+    "cikmis"
+   ],
+   "duzeltme": []
+  },
+  {
+   "id": "psk-s12-b13",
+   "bolge": "r1c3",
+   "tur": "slayt",
+   "baslik": "Özgül Fobi – klinik özellikler, gidiş",
+   "ders": "k2-56",
+   "y25": {
+    "key": "y25-k2-55-panik-bozukluk",
+    "sayfa": 26
+   },
+   "basili_metin": "Özgül Fobi\nFobik uyaranla karşılaşan bireylerde sempatik aktivitede artış olur. En sık gözlenen bulgular; taşikardi, kas gerginliği, hiperventilasyon, titreme, nefes daralması, ellerde soğukluk ve göğüste sıkışma hissidir.\nKan-enjeksiyon-yaralanma tipinde farklı olarak bifazik tepki gelişir. Sempatik aktivite artışını baygınlık hissi ve senkop ile sonuçlanan bradikardi takip eder (vazovagal bayılma).\nÖzgül fobinin başkaca ruhsal hastalıkla birlikte görülme oranı %50-80 arasında değişmektedir. Eşlik eden ruhsal bozukluklar; anksiyete, duygudurum ve alkol-madde kullanım bozukluklarıdır.\nKronik seyirli bir bozukluktur. (y25 s27)\nDiğer anksiyete bozukluklarının dalgalı gidişinden farklı olarak daha sabit bir klinik gidiş söz konusudur. (y25 s27)",
+   "isaretler": [
+    {
+     "tur": "pembe",
+     "hedef": "taşikardi, kas gerginliği, hiperventilasyon, titreme, nefes daralması, ellerde soğukluk ve göğüste sıkışma hissi"
+    },
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "aynı belirtiler"
+    },
+    {
+     "tur": "yesil",
+     "hedef": "Kan-enjeksiyon-yaralanma tipinde farklı olarak bifazik tepki"
+    },
+    {
+     "tur": "daire",
+     "hedef": "Kan-enjeksiyon-yaralanma tipinde farklı olarak bifazik tepki"
+    },
+    {
+     "tur": "sari",
+     "hedef": "Sempatik aktivite artışını baygınlık hissi ve senkop ile sonuçlanan bradikardi takip eder"
+    },
+    {
+     "tur": "daire",
+     "hedef": "Kronik seyirli bir"
+    },
+    {
+     "tur": "yesil",
+     "hedef": "Diğer anksiyete bozukluklarının dalgalı gidişinden farklı olarak daha sabit bir klinik gidiş söz konusudur"
+    },
+    {
+     "tur": "daire",
+     "hedef": "sabit bir klinik gidiş söz konusudur"
+    }
+   ],
+   "el_yazisi": [],
+   "onem": [
+    "sari",
+    "el_onemli",
+    "cikmis"
+   ],
+   "duzeltme": []
+  },
+  {
+   "id": "psk-s12-b14",
+   "bolge": "r2c3",
+   "tur": "cikmis_soru",
+   "baslik": "Özgül fobiyle ilgili yanlış: dalgalı klinik gidişat",
+   "ders": "k2-56",
+   "y25": {
+    "key": "y25-k2-55-panik-bozukluk",
+    "sayfa": 27
+   },
+   "basili_metin": "19) Özgül fobiyle ilgili hangisi yanlıştır\nA-) yaşam boyu görülme sıklığı %11 ✓\nB-) Kadınlarda erkeklerden iki kat fazladır ✓\nC-) Kan enjeksiyon yaralanma tipinde farklı olarak bifazik tepki vardır ✓\nD-) Dalgalı klinik gidişat gözlenir ✗",
+   "isaretler": [
+    {
+     "tur": "pembe",
+     "hedef": "soru bloğu"
+    },
+    {
+     "tur": "daire",
+     "hedef": "D-) Dalgalı klinik gidişat gözlenir"
+    },
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "A–C kırmızı tik, D çarpı"
+    }
+   ],
+   "el_yazisi": [],
+   "cikmis": {
+    "kok": "Özgül fobi ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+    "siklar": [
+     "A) Yaşam boyu görülme sıklığı %11'dir.",
+     "B) Kadınlarda erkeklerden iki kat fazladır.",
+     "C) Kan-enjeksiyon-yaralanma tipinde farklı olarak bifazik tepki vardır.",
+     "D) Dalgalı klinik gidişat gözlenir.",
+     "E) (öğrenci yazmamış; bankada: Tedavide etkinliği kanıtlanmış psikotrop ilaç yoktur.)"
+    ],
+    "ogrenci_cevap": "D",
+    "banka_id": "past-1790877042516-138078-cs3",
+    "banka_yil": "2024-2025 Kurul 2",
+    "banka_dogru": "D",
+    "tutarli": true,
+    "not": "Aynı yanlış önerme 2025-26 Kurul 2'de tekrar soruldu: q-25-26_d_nem_3_kurul_2-82-cs7 (doğru C 'Diğer anksiyete bozukluklarına benzer şekilde dalgalı bir gidiş izler'). Öğrenci yalnız 4 şık yazmış."
+   },
+   "onem": [
+    "cikmis",
+    "tekrar"
+   ],
+   "duzeltme": []
+  },
+  {
+   "id": "psk-s12-b15",
+   "bolge": "r2c3",
+   "tur": "slayt",
+   "baslik": "Özgül Fobi – Ayırıcı Tanı",
+   "ders": "k2-56",
+   "y25": {
+    "key": "y25-k2-55-panik-bozukluk",
+    "sayfa": 28
+   },
+   "basili_metin": "Ayırıcı Tanı\npanik bozukluğu,\ntravma sonrası stres bozukluğu,\nobsesif kompulsif bozukluk\nhipokondriyazisten",
+   "isaretler": [
+    {
+     "tur": "sari",
+     "hedef": "dört madde"
+    }
+   ],
+   "el_yazisi": [],
+   "onem": [
+    "sari",
+    "cikmis"
+   ],
+   "duzeltme": []
+  },
+  {
+   "id": "psk-s12-b16",
+   "bolge": "r2c3",
+   "tur": "cikmis_soru",
+   "baslik": "Özgül fobik bozukluğun ayırıcı tanısında yer almaz: şizofreni",
+   "ders": "k2-56",
+   "y25": {
+    "key": "y25-k2-55-panik-bozukluk",
+    "sayfa": 28
+   },
+   "basili_metin": "Aşağıdakilerden hangisi özgül fobik bozukluğun ayırıcı tanısında yer almaz?\nAnksiyete ✓\nTravma sonrası stres bozukluğu ✓\nPanik bozukluk ✓\nHipokondriyazis ✓\nŞizofreni",
+   "isaretler": [
+    {
+     "tur": "pembe",
+     "hedef": "soru bloğu"
+    },
+    {
+     "tur": "daire",
+     "hedef": "yer almaz; Şizofreni"
+    },
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "diğer dört şık kırmızı tik"
+    }
+   ],
+   "el_yazisi": [],
+   "cikmis": {
+    "kok": "Aşağıdakilerden hangisi özgül fobik bozukluğun ayırıcı tanısında yer almaz?",
+    "siklar": [
+     "A) Anksiyete",
+     "B) Travma sonrası stres bozukluğu",
+     "C) Panik bozukluk",
+     "D) Hipokondriyazis",
+     "E) Şizofreni"
+    ],
+    "ogrenci_cevap": "E",
+    "banka_id": "",
+    "banka_yil": "",
+    "banka_dogru": "",
+    "tutarli": true,
+    "not": "Bankada bulunamadı (öğrenci notu; şık harfleri yok, sıra öğrencinin yazdığı gibi). Slayt ayırıcı tanı listesinde şizofreni yok (y25 s28). 'Anksiyete' şıkkı slaytta açık madde olarak yok (OKB yazıyor); öğrencinin kaynağı muhtemelen farklı."
+   },
+   "onem": [
+    "cikmis"
+   ],
+   "duzeltme": []
+  },
+  {
+   "id": "psk-s12-b17",
+   "bolge": "r2c3",
+   "tur": "slayt",
+   "baslik": "Sosyal Fobi – Etiyoloji, Ayırıcı Tanı, Kötü prognoz",
+   "ders": "k2-56",
+   "y25": {
+    "key": "y25-k2-55-panik-bozukluk",
+    "sayfa": 31
+   },
+   "basili_metin": "Sosyal Fobi- Etiyoloji\nNörokimyasal Etkenler: Performans fobisi olan kişiler fobik olmayan kişilere kıyasla daha fazla NE/E salgılayabilirler ya da bu hastalar normal düzeydeki adrenerjik uyarıya daha duyarlı olabilirler. Ayrıca dopaminerjik işlev bozukluğu mevcuttur.\nGenetik Etkenler: Birinci derece akrabalarda 3 kat fazla risk mevcuttur.\nAyırıcı Tanı (y25 s35): Agorafobi; Panik Bozukluk; Çekingen KB; Majör Depresif Bozukluk; Şizoid KB\nKötü prognoz ölçütleri; bozukluğun 11 yaşından önce başlaması, eşlik eden başkaca psikiyatrik hastalığın bulunması ve düşük eğitim düzeyi olarak saptanmıştır. (y25 s36)",
+   "isaretler": [
+    {
+     "tur": "sari",
+     "hedef": "Agorafobi; Panik Bozukluk; Çekingen KB; Majör Depresif Bozukluk; Şizoid KB"
+    },
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "aynı ayırıcı tanı maddeleri"
+    },
+    {
+     "tur": "sari",
+     "hedef": "Kötü prognoz ölçütleri; bozukluğun 11 yaşından önce başlaması, eşlik eden başkaca psikiyatrik hastalığın bulunması … düşük eğitim düzeyi"
+    },
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "11 yaşından önce başlaması; eşlik eden başkaca psikiyatrik hastalığın bulunması; düşük eğitim düzeyi"
+    }
+   ],
+   "el_yazisi": [],
+   "onem": [
+    "sari"
+   ],
+   "duzeltme": []
+  }
+ ]
+}

@@ -1,0 +1,379 @@
+{
+ "ders": "k2-56",
+ "kod": "2s19",
+ "brans": "Psikiyatri",
+ "konu": "Fobik Bozukluk",
+ "kaynak": "Geçmiş yıl (2025-26) öğrenci derleme notu: psk3.2",
+ "y25": {
+  "key": "y25-k2-55-panik-bozukluk",
+  "sayfalar": [
+   23,
+   26,
+   28,
+   31
+  ]
+ },
+ "sayac": {
+  "birim": 4,
+  "A": 3,
+  "B": 0,
+  "C": 1,
+  "ogrenci_sorusu": 2,
+  "banka": 2,
+  "banka_kapsandi": 2
+ },
+ "birimler": [
+  {
+   "id": "psk-s12-b13",
+   "pdf": "psk",
+   "sayfa": 12,
+   "bolge": "r1c3",
+   "tur": "slayt",
+   "baslik": "Özgül Fobi – klinik özellikler, gidiş",
+   "metin": "Özgül Fobi\nFobik uyaranla karşılaşan bireylerde sempatik aktivitede artış olur. En sık gözlenen bulgular; taşikardi, kas gerginliği, hiperventilasyon, titreme, nefes daralması, ellerde soğukluk ve göğüste sıkışma hissidir.\nKan-enjeksiyon-yaralanma tipinde farklı olarak bifazik tepki gelişir. Sempatik aktivite artışını baygınlık hissi ve senkop ile sonuçlanan bradikardi takip eder (vazovagal bayılma).\nÖzgül fobinin başkaca ruhsal hastalıkla birlikte görülme oranı %50-80 arasında değişmektedir. Eşlik eden ruhsal bozukluklar; anksiyete, duygudurum ve alkol-madde kullanım bozukluklarıdır.\nKronik seyirli bir bozukluktur. (y25 s27)\nDiğer anksiyete bozukluklarının dalgalı gidişinden farklı olarak daha sabit bir klinik gidiş söz konusudur. (y25 s27)",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "pembe",
+     "hedef": "taşikardi, kas gerginliği, hiperventilasyon, titreme, nefes daralması, ellerde soğukluk ve göğüste sıkışma hissi"
+    },
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "aynı belirtiler"
+    },
+    {
+     "tur": "yesil",
+     "hedef": "Kan-enjeksiyon-yaralanma tipinde farklı olarak bifazik tepki"
+    },
+    {
+     "tur": "daire",
+     "hedef": "Kan-enjeksiyon-yaralanma tipinde farklı olarak bifazik tepki"
+    },
+    {
+     "tur": "sari",
+     "hedef": "Sempatik aktivite artışını baygınlık hissi ve senkop ile sonuçlanan bradikardi takip eder"
+    },
+    {
+     "tur": "daire",
+     "hedef": "Kronik seyirli bir"
+    },
+    {
+     "tur": "yesil",
+     "hedef": "Diğer anksiyete bozukluklarının dalgalı gidişinden farklı olarak daha sabit bir klinik gidiş söz konusudur"
+    },
+    {
+     "tur": "daire",
+     "hedef": "sabit bir klinik gidiş söz konusudur"
+    }
+   ],
+   "sinyal": [
+    "cikmis",
+    "el_onemli",
+    "sari"
+   ],
+   "y25": {
+    "key": "y25-k2-55-panik-bozukluk",
+    "sayfa": 26
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "banka_cikmis": [
+    "q-25-26_d_nem_3_kurul_2-82-cs7",
+    "past-1790877042516-138078-cs3"
+   ],
+   "puan": 93,
+   "oncelik": "A",
+   "vurgulu": [
+    "Diğer anksiyete bozukluklarının dalgalı gidişinden farklı olarak daha sabit bir klinik gidiş söz konusudur",
+    "Kan-enjeksiyon-yaralanma tipinde farklı olarak bifazik tepki",
+    "Kronik seyirli bir",
+    "Sempatik aktivite artışını baygınlık hissi ve senkop ile sonuçlanan bradikardi takip eder",
+    "aynı belirtiler",
+    "sabit bir klinik gidiş söz konusudur",
+    "taşikardi, kas gerginliği, hiperventilasyon, titreme, nefes daralması, ellerde soğukluk ve göğüste sıkışma hissi"
+   ]
+  },
+  {
+   "id": "psk-s12-b12",
+   "pdf": "psk",
+   "sayfa": 12,
+   "bolge": "r1c3",
+   "tur": "slayt",
+   "baslik": "Fobik Bozukluk – özgül/sosyal ayrımı ve epidemiyoloji",
+   "metin": "Fobik Bozukluk\nFobik Bozukluk- Epidemiyoloji\nÖzgül fobinin yaşam boyu görülme olasılığının %11, sosyal fobinin ise %3-13 olduğu bildirilmiştir.\nÖzgül fobiler sıklıkla çocukluk yaşlarında başlar. Kadınlarda görülme sıklığı erkeklerden 2 kat fazladır.\nSosyal fobi ise çoğunlukla ergenlik yıllarında başlar. Kadın ve erkeklerde eşit oranda görülür.",
+   "el_yazisi": [
+    {
+     "metin": "özgül: nesne, K ×2 > E, çocukluk",
+     "hedef": "Fobik Bozukluk → özgül fobi",
+     "guven": "yuksek",
+     "alternatif": ""
+    },
+    {
+     "metin": "sosyal: sosyal ortam korkusu, K = E, ergenlik",
+     "hedef": "Fobik Bozukluk → sosyal fobi",
+     "guven": "yuksek",
+     "alternatif": ""
+    }
+   ],
+   "isaretler": [
+    {
+     "tur": "yesil",
+     "hedef": "Özgül fobinin yaşam boyu görülme olasılığının %11"
+    },
+    {
+     "tur": "pembe",
+     "hedef": "Özgül fobiler sıklıkla çocukluk yaşlarında başlar. Kadınlarda görülme sıklığı erkeklerden 2 kat fazladır."
+    },
+    {
+     "tur": "pembe",
+     "hedef": "Sosyal fobi ise çoğunlukla ergenlik yıllarında başlar. Kadın ve erkeklerde eşit oranda görülür."
+    },
+    {
+     "tur": "ok",
+     "hedef": "Fobik Bozukluk → özgül / sosyal"
+    }
+   ],
+   "sinyal": [
+    "cikmis",
+    "el_onemli",
+    "sari"
+   ],
+   "y25": {
+    "key": "y25-k2-55-panik-bozukluk",
+    "sayfa": 23
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "ogrenci_sorulari": [
+    "psk-s12-b14"
+   ],
+   "puan": 58,
+   "oncelik": "A",
+   "vurgulu": [
+    "Sosyal fobi ise çoğunlukla ergenlik yıllarında başlar. Kadın ve erkeklerde eşit oranda görülür.",
+    "Özgül fobiler sıklıkla çocukluk yaşlarında başlar. Kadınlarda görülme sıklığı erkeklerden 2 kat fazladır.",
+    "Özgül fobinin yaşam boyu görülme olasılığının %11"
+   ]
+  },
+  {
+   "id": "psk-s12-b15",
+   "pdf": "psk",
+   "sayfa": 12,
+   "bolge": "r2c3",
+   "tur": "slayt",
+   "baslik": "Özgül Fobi – Ayırıcı Tanı",
+   "metin": "Ayırıcı Tanı\npanik bozukluğu,\ntravma sonrası stres bozukluğu,\nobsesif kompulsif bozukluk\nhipokondriyazisten",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "sari",
+     "hedef": "dört madde"
+    }
+   ],
+   "sinyal": [
+    "cikmis",
+    "sari"
+   ],
+   "y25": {
+    "key": "y25-k2-55-panik-bozukluk",
+    "sayfa": 28
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "ogrenci_sorulari": [
+    "psk-s12-b16"
+   ],
+   "puan": 50,
+   "oncelik": "A",
+   "vurgulu": [
+    "dört madde"
+   ]
+  },
+  {
+   "id": "psk-s12-b17",
+   "pdf": "psk",
+   "sayfa": 12,
+   "bolge": "r2c3",
+   "tur": "slayt",
+   "baslik": "Sosyal Fobi – Etiyoloji, Ayırıcı Tanı, Kötü prognoz",
+   "metin": "Sosyal Fobi- Etiyoloji\nNörokimyasal Etkenler: Performans fobisi olan kişiler fobik olmayan kişilere kıyasla daha fazla NE/E salgılayabilirler ya da bu hastalar normal düzeydeki adrenerjik uyarıya daha duyarlı olabilirler. Ayrıca dopaminerjik işlev bozukluğu mevcuttur.\nGenetik Etkenler: Birinci derece akrabalarda 3 kat fazla risk mevcuttur.\nAyırıcı Tanı (y25 s35): Agorafobi; Panik Bozukluk; Çekingen KB; Majör Depresif Bozukluk; Şizoid KB\nKötü prognoz ölçütleri; bozukluğun 11 yaşından önce başlaması, eşlik eden başkaca psikiyatrik hastalığın bulunması ve düşük eğitim düzeyi olarak saptanmıştır. (y25 s36)",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "sari",
+     "hedef": "Agorafobi; Panik Bozukluk; Çekingen KB; Majör Depresif Bozukluk; Şizoid KB"
+    },
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "aynı ayırıcı tanı maddeleri"
+    },
+    {
+     "tur": "sari",
+     "hedef": "Kötü prognoz ölçütleri; bozukluğun 11 yaşından önce başlaması, eşlik eden başkaca psikiyatrik hastalığın bulunması … düşük eğitim düzeyi"
+    },
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "11 yaşından önce başlaması; eşlik eden başkaca psikiyatrik hastalığın bulunması; düşük eğitim düzeyi"
+    }
+   ],
+   "sinyal": [
+    "sari"
+   ],
+   "y25": {
+    "key": "y25-k2-55-panik-bozukluk",
+    "sayfa": 31
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "puan": 10,
+   "oncelik": "C",
+   "vurgulu": [
+    "11 yaşından önce başlaması; eşlik eden başkaca psikiyatrik hastalığın bulunması; düşük eğitim düzeyi",
+    "Agorafobi; Panik Bozukluk; Çekingen KB; Majör Depresif Bozukluk; Şizoid KB",
+    "Kötü prognoz ölçütleri; bozukluğun 11 yaşından önce başlaması, eşlik eden başkaca psikiyatrik hastalığın bulunması … düşük eğitim düzeyi",
+    "aynı ayırıcı tanı maddeleri"
+   ]
+  }
+ ],
+ "ogrenci_sorulari": [
+  {
+   "id": "psk-s12-b14",
+   "pdf": "psk",
+   "sayfa": 12,
+   "bolge": "r2c3",
+   "tur": "cikmis_soru",
+   "baslik": "Özgül fobiyle ilgili yanlış: dalgalı klinik gidişat",
+   "metin": "19) Özgül fobiyle ilgili hangisi yanlıştır\nA-) yaşam boyu görülme sıklığı %11 ✓\nB-) Kadınlarda erkeklerden iki kat fazladır ✓\nC-) Kan enjeksiyon yaralanma tipinde farklı olarak bifazik tepki vardır ✓\nD-) Dalgalı klinik gidişat gözlenir ✗",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "pembe",
+     "hedef": "soru bloğu"
+    },
+    {
+     "tur": "daire",
+     "hedef": "D-) Dalgalı klinik gidişat gözlenir"
+    },
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "A–C kırmızı tik, D çarpı"
+    }
+   ],
+   "sinyal": [
+    "cikmis",
+    "tekrar"
+   ],
+   "y25": {
+    "key": "y25-k2-55-panik-bozukluk",
+    "sayfa": 27
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "cikmis": {
+    "kok": "Özgül fobi ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+    "siklar": [
+     "A) Yaşam boyu görülme sıklığı %11'dir.",
+     "B) Kadınlarda erkeklerden iki kat fazladır.",
+     "C) Kan-enjeksiyon-yaralanma tipinde farklı olarak bifazik tepki vardır.",
+     "D) Dalgalı klinik gidişat gözlenir.",
+     "E) (öğrenci yazmamış; bankada: Tedavide etkinliği kanıtlanmış psikotrop ilaç yoktur.)"
+    ],
+    "ogrenci_cevap": "D",
+    "banka_id": "past-1790877042516-138078-cs3",
+    "banka_yil": "2024-2025 Kurul 2",
+    "banka_dogru": "D",
+    "tutarli": true,
+    "not": "Aynı yanlış önerme 2025-26 Kurul 2'de tekrar soruldu: q-25-26_d_nem_3_kurul_2-82-cs7 (doğru C 'Diğer anksiyete bozukluklarına benzer şekilde dalgalı bir gidiş izler'). Öğrenci yalnız 4 şık yazmış."
+   },
+   "bagli_birim": "psk-s12-b12",
+   "benzerlik": 0.727
+  },
+  {
+   "id": "psk-s12-b16",
+   "pdf": "psk",
+   "sayfa": 12,
+   "bolge": "r2c3",
+   "tur": "cikmis_soru",
+   "baslik": "Özgül fobik bozukluğun ayırıcı tanısında yer almaz: şizofreni",
+   "metin": "Aşağıdakilerden hangisi özgül fobik bozukluğun ayırıcı tanısında yer almaz?\nAnksiyete ✓\nTravma sonrası stres bozukluğu ✓\nPanik bozukluk ✓\nHipokondriyazis ✓\nŞizofreni",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "pembe",
+     "hedef": "soru bloğu"
+    },
+    {
+     "tur": "daire",
+     "hedef": "yer almaz; Şizofreni"
+    },
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "diğer dört şık kırmızı tik"
+    }
+   ],
+   "sinyal": [
+    "cikmis"
+   ],
+   "y25": {
+    "key": "y25-k2-55-panik-bozukluk",
+    "sayfa": 28
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "cikmis": {
+    "kok": "Aşağıdakilerden hangisi özgül fobik bozukluğun ayırıcı tanısında yer almaz?",
+    "siklar": [
+     "A) Anksiyete",
+     "B) Travma sonrası stres bozukluğu",
+     "C) Panik bozukluk",
+     "D) Hipokondriyazis",
+     "E) Şizofreni"
+    ],
+    "ogrenci_cevap": "E",
+    "banka_id": "",
+    "banka_yil": "",
+    "banka_dogru": "",
+    "tutarli": true,
+    "not": "Bankada bulunamadı (öğrenci notu; şık harfleri yok, sıra öğrencinin yazdığı gibi). Slayt ayırıcı tanı listesinde şizofreni yok (y25 s28). 'Anksiyete' şıkkı slaytta açık madde olarak yok (OKB yazıyor); öğrencinin kaynağı muhtemelen farklı."
+   },
+   "bagli_birim": "psk-s12-b15",
+   "benzerlik": 0.714
+  }
+ ],
+ "banka": [
+  {
+   "id": "q-25-26_d_nem_3_kurul_2-82-cs7",
+   "ders": "k2-56",
+   "yillar": [
+    "2025-2026"
+   ],
+   "kok": "Özgül fobi ile ilgili aşağıdakilerden hangisi yanlıştır?",
+   "dogru": "Diğer anksiyete bozukluklarına benzer şekilde dalgalı bir gidiş izler",
+   "kopyalar": [],
+   "birim": "psk-s12-b13",
+   "benzerlik": 0.679,
+   "kapsandi": true,
+   "notta_yapistirilmis": false
+  },
+  {
+   "id": "past-1790877042516-138078-cs3",
+   "ders": "k2-56",
+   "yillar": [
+    "2024-2025"
+   ],
+   "kok": "Özgül fobi ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+   "dogru": "Dalgalı klinik gidişat gözlenir.",
+   "kopyalar": [],
+   "birim": "psk-s12-b13",
+   "benzerlik": 0.677,
+   "kapsandi": true,
+   "notta_yapistirilmis": true
+  }
+ ]
+}

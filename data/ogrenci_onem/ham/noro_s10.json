@@ -1,0 +1,25 @@
+{"pdf":"noro","sayfa":10,"sayfa_ozeti":"Nörolojik muayene (k2-05) giriş sayfası: 'Sinir Sistemi: Fonksiyon' özet slaytı (mental durum, kraniyal sinirler, motor, duyu, serebellar sistem) üstüne öğrencinin her başlığa yazdığı el notları. Slayt arşivde ve 2026-27 PDF'inde s03, s04, s07, s41'de aynen tekrar ediyor; ilk geçtiği s03 seçildi. Çıkmış soru yok.",
+ "bloklar":[
+  {"id":"noro-s10-b01","bolge":"r1c1","tur":"slayt","baslik":"Sinir Sistemi: Fonksiyon (nörolojik muayene bileşenleri)","ders":"k2-05","y25":{"key":"y25-k2-05-norolojik-muayene","sayfa":3},"y26":{"key":"k2-05","sayfa":3},
+   "basili_metin":"NÖROLOJİK MUAYENE (sayfa başlığı)\nSinir Sistemi: Fonksiyon\n- Mental Durum\n- Kraniyal Sinirler\n- Motor Sistem\n- Duyu Sistemi\n- Serebellar Sistem",
+   "isaretler":[{"tur":"ok","hedef":"her başlıktan el notlarına çatallanan oklar"}],
+   "el_yazisi":[
+    {"metin":"uyanıklık düzeyi (konfüzyon, somnolans-letarji, stupor, koma)","hedef":"Mental Durum","guven":"yuksek"},
+    {"metin":"bellek (amnezi, deliryum)","hedef":"Mental Durum","guven":"yuksek"},
+    {"metin":"konuşma (disfazi, afazi, Broca, Wernicke)","hedef":"Mental Durum","guven":"yuksek"},
+    {"metin":"yürüyüş","hedef":"Motor Sistem","guven":"yuksek"},
+    {"metin":"kas kuvveti (0-5 arası puanlanır) lokalize etmek için muayene yapılır (1. motor nöron vb.) refleks muayenesi yapılır (0-5) → klonus","hedef":"Motor Sistem","guven":"yuksek","alternatif":"Refleks 0-5 ölçeği ders slaytıyla uyumlu: y26 k2-05 s54 'Refleks: 0 yok, 1 azalmış, 2 normal, 3 artmış, 4 aşırı artmış, 5 klonus' (klonus = 5)."},
+    {"metin":"tonus","hedef":"Motor Sistem","guven":"yuksek"},
+    {"metin":"trofik kusur","hedef":"Motor Sistem","guven":"yuksek"},
+    {"metin":"yüzeyel duyu muayenesi = dokunma, ağrı, sıcaklık","hedef":"Duyu Sistemi","guven":"yuksek"},
+    {"metin":"derin duyu muayenesi = pozisyon, pasif hareket, vibrasyon, Romberg (göz kapalı yapılır)","hedef":"Duyu Sistemi","guven":"yuksek"},
+    {"metin":"kortikal duyu muayenesi = sterognozi, iki nokta ayrımı, grafestezi, taktil lokalizasyon (beyin korteksinin algılanmasına bakılır)","hedef":"Duyu Sistemi","guven":"yuksek"},
+    {"metin":"koordinasyon = metrik muayene","hedef":"Serebellar Sistem","guven":"yuksek"},
+    {"metin":"denge","hedef":"Serebellar Sistem","guven":"yuksek"},
+    {"metin":"tonus","hedef":"Serebellar Sistem","guven":"yuksek"}],
+   "onem":["el_onemli"],
+   "duzeltme":[
+    {"ham":"bellek (amnezi, deliryum)","dogru":"bellek (amnezi); deliryum aslında dikkat/bilinç içeriği bozukluğudur","gerekce":"Deliryum bellek bozukluğu değil akut dikkat-bilinç bozukluğudur; öğrenci notunda bellek altında sayılmış. Ders slaytının bu kısmı yalnız başlık; içeriğe aktarılırken 'mental durum' altında ayrı tutulmalı."},
+    {"ham":"sterognozi","dogru":"stereognozi","gerekce":"Yazım."},
+    {"ham":"metrik muayne","dogru":"metrik muayene (dismetri: parmak-burun, diz-topuk testi)","gerekce":"Yazım; serebellar koordinasyon testleri."}]}
+ ]}

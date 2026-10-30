@@ -1,0 +1,101 @@
+{
+ "ders": "k2-35",
+ "ozet": "Kişilik bozuklukları sorularının hemen hepsi 'tanımdan tanı' biçimindedir: kısa vaka ya da bir bozukluğun DSM ölçütleri sıralanır, beş kişilik bozukluğu arasından seçim istenir. Çıkmışlar B kümesine yığılmış: histriyonik (2025-26 vaka, 2021-2026 tanım, 2020-21 'söylenemez'), borderline (2020-21 tanım + bankada olmayan 'söylenemez' sorusu), narsistik (2021-22) ve antisosyal (2018-19 final vaka). Öğrenci her bozukluğun ölçütlerinin altını çizmiş ve tanı için gereken ölçüt sayısını (≥3, ≥4, ≥5) her slayta yazmış; A ve C kümeleri işaretli ama çıkmışsız.",
+ "temalar": [
+  {
+   "tema": "Histriyonik kişilik bozukluğu",
+   "oncelik": "A",
+   "birimler": ["psk-s11-b12"],
+   "kanit": "Üç çıkmış: 2025-26 Kurul 2 vaka 'çevresi ilgilenmediğinden yakınırken ağlamaklı, yersiz kahkahalar → histriyonik' (öğrenci kısa notu, '35 yaş, yönlendirmeye müsait'); 2021-2026 d3 'ilgi odağı olma arzusu, baştan çıkarıcı giyim, teatral ama sığ duygular → histriyonik'; 2020-21 final 'histriyonik için söylenemez → çoğu zaman başkalarını kıskanır' (el notu '→ narsistik'). Slaytta '5≥' ve 1–7. ölçütler mavi alt çizgili.",
+   "anlatim": "Sekiz ölçüt madde madde, tanı için en az 5 şartıyla verilmeli; ilgi odağı olma gereksinimi, cinsel ayartıcılık, hızlı değişen yüzeysel duygular, telkine yatkınlık ve ilişkileri olduğundan yakın sanma ayrı vurgulanmalı. Narsistik ölçütlerle (kıskançlık, empati yokluğu) karşılaştırmalı tablo eklenmeli; çıkmışta çeldirici bu ölçütlerden kuruluyor.",
+   "soru_payi": 25,
+   "soru_tipleri": ["vaka: ağlayıp gülen, ilgi bekleyen, telkine açık kadın → histriyonik", "tanımdan tanı: teatral, sığ, ilgi odağı", "söylenemez: narsistik ölçütü (kıskanma) histriyonik listesine konmuş"]
+  },
+  {
+   "tema": "Borderline kişilik bozukluğu",
+   "oncelik": "A",
+   "birimler": ["psk-s11-b09"],
+   "kanit": "2020-21 Kurul 2 'idealize etme–değersizleştirme arası gidip gelme, kimlik karmaşası, yineleyen özkıyım, tepkisel duygudurum instabilitesi → borderline' (notta yapıştırılmış; profilde tipik kök). Bankada olmayan tablo çıkmışı 'borderline kliniği için söylenemez → duygudurumda belirgin donukluk' (yapıştırılmış). Slaytta 'K/E: 2/1', '5≥', 'kimlik karmaşası' vurgulu; el notu 'antisosyal kişilerde 45+ azalma olabilirken borderline genellikle kararlı seyir izler'.",
+   "anlatim": "Dokuz ölçüt, en az 5 şartıyla; terk edilme korkusu, idealize–değersizleştirme, kimlik karmaşası, iki alanda dürtüsellik, yineleyen özkıyım, tepkisel duygudurum instabilitesi, boşluk duygusu, öfke ve stresle geçici paranoid düşünce/dissosiyasyon. Yaygınlık (%1–2), K/E 2/1 ve kararlı seyir eklenmeli; 'donukluk' gibi zıt anlamlı çeldiricilere karşı instabilite vurgulanmalı.",
+   "soru_payi": 22,
+   "soru_tipleri": ["tanımdan tanı: ölçütler sıralanmış → borderline", "söylenemez: duygudurumda donukluk", "sayı: K/E oranı, yaygınlık"]
+  },
+  {
+   "tema": "Narsistik kişilik bozukluğu",
+   "oncelik": "A",
+   "birimler": ["psk-s11-b05"],
+   "kanit": "2021-22 Kurul 2 '\"Devamlı kendisinden bahsedilmesini ister, başkalarının duygularını anlamaz, empati yapamaz\" → narsistik' (notta yapıştırılmış; profilde tipik kök). 2020-21 final histriyonik sorusunda narsistik ölçütü (kıskanma) çeldirici olarak kullanılmış. Slaytta '5≥', 5–8. ölçütler, 'omnipotans … çocuklarında da görülme ihtimali yüksek' ve 'eleştirildiğinde öfkelenebilir ya da duyarsız görünebilir' altı çizili.",
+   "anlatim": "Üstünlük duygusu, beğenilme gereksinimi ve empati yokluğu üçlüsü tanımın çekirdeği olarak verilmeli; sekiz ölçüt (en az 5), çıkarcılık ve eleştiriye tepki eklenmeli.",
+   "soru_payi": 15,
+   "soru_tipleri": ["kısa tanımdan tanı: empati yapamaz, kendinden bahsedilmesini ister → narsistik", "eşleştirme: kıskanma ölçütü hangi bozuklukta"]
+  },
+  {
+   "tema": "Antisosyal kişilik bozukluğu",
+   "oncelik": "A",
+   "birimler": ["psk-s11-b03"],
+   "kanit": "2018-19 final vaka '19 yaşında, küçüklükten beri kurallara uymayan, uyarılara rağmen değişmeyen, halüsinasyon-hezeyanı olmayan genç → antisosyal' (kitapçık fotoğrafı olarak yapıştırılmış; çeldiriciler depresif, borderline, narsist kişilik bozukluğu, şizoaffektif). Slaytta '3≥', 'B. en az 18 yaş', 'C. 15 yaşından önce davranım bozukluğu', 'suç işleyenlerin %75'inden fazlası' vurgulu; el notu 'hatalarından ders almaz, yapmaya devam eder'.",
+   "anlatim": "Tanının üç ayağı ayrı yazılmalı: 15 yaşından beri süren hak ihlali örüntüsü (7 ölçütten en az 3), kişinin en az 18 yaşında olması ve 15 yaş öncesi davranım bozukluğu kanıtı. Suçlularda %75'ten fazla oranı ve birinci derece akrabalarda 5 kat artış eklenmeli; vaka kökündeki yaş ve 'küçüklükten beri' ipucu vurgulanmalı.",
+   "soru_payi": 15,
+   "soru_tipleri": ["vaka: 18 yaş üstü + çocukluktan beri kural ihlali → antisosyal", "sayı: kaç yaş, kaç ölçüt"]
+  },
+  {
+   "tema": "Küme sınıflaması ve tanı için gereken ölçüt sayıları",
+   "oncelik": "A",
+   "birimler": ["psk-s11-b01"],
+   "kanit": "Çıkmış sinyalli sayfa (2021-22 narsistik sorusu bu sayfaya yapıştırılmış). El notu: 'antisosyal ≥3', 'borderline, histriyonik ve narsistik ≥5 tanı'; 'heyecanlı, duygusal ve kararsız' altı çizili. Diğer slaytlarda öğrenci her bozukluğun eşiğini (4≥ / 5≥) ayrıca işaretlemiş.",
+   "anlatim": "A kümesi (paranoid, şizoid, şizotipal: garip-tuhaf), B kümesi (antisosyal, borderline, histriyonik, narsistik: heyecanlı-duygusal-kararsız), C kümesi (çekingen, bağımlı, obsesif kompulsif) tabloyla verilmeli; her bozukluğun ölçüt eşiği aynı tabloda yer almalı.",
+   "soru_payi": 8,
+   "soru_tipleri": ["sınıflama: hangisi B kümesinde değildir", "sayı: tanı için en az kaç ölçüt"]
+  },
+  {
+   "tema": "A kümesi: paranoid, şizoid, şizotipal kişilik bozukluğu",
+   "oncelik": "C",
+   "birimler": ["psk-s11-b02", "psk-s11-b07", "psk-s11-b08"],
+   "kanit": "Çıkmış yok; ölçütler mavi alt çizgili, eşikler (4≥) işaretli. El notları: paranoid 'şizofreniden farkı… kanıt gösterildiğinde inanır ama başka şeyler hakkında yine kuşkucu', şizoid 'iletişimsizlik, duygusuzluk', şizotipal 'yalnız ve acayip'; 'Frajil X sendromu olan kadınlarda sık' mavi çerçeveli. Paranoid ve antisosyal vaka sorularında çeldirici olarak geçiyor.",
+   "anlatim": "Üç bozukluk ayırt edici özelliğiyle kısa verilmeli: paranoid (kuşku, kin, eş sadakatine yersiz kuşku; şizofreni akrabalarında sık, erkekte fazla), şizoid (ilişki isteği yok, duygusal soğukluk), şizotipal (büyüsel düşünce, referans fikirleri, acayip davranış; Frajil X'li kadınlarda sık).",
+   "soru_payi": 8,
+   "soru_tipleri": ["ayırıcı: ilişki istemez (şizoid) / acayip inanış (şizotipal) / kuşkuculuk (paranoid)"]
+  },
+  {
+   "tema": "C kümesi: çekingen, bağımlı, obsesif kompulsif kişilik bozukluğu",
+   "oncelik": "C",
+   "birimler": ["psk-s11-b15", "psk-s11-b16", "psk-s11-b17"],
+   "kanit": "Çıkmış yok; eşikler (çekingen 5≥, bağımlı 4≥, OKKB 4≥) ve tanım cümleleri altı çizili; el notu çekingen için 'aşağılık kompleksi'. OKKB borderline sorusunda çeldirici.",
+   "anlatim": "Her biri tanım cümlesi ve iki-üç ayırt edici ölçütle verilmeli: çekingende eleştirilme korkusu ve yetersizlik duygusu, bağımlıda bakılma gereksinimi ve ilişki bitince hemen yeni ilişki arayışı, OKKB'de mükemmeliyetçilik, katılık ve cimrilik.",
+   "soru_payi": 7,
+   "soru_tipleri": ["tanımdan tanı: eleştirilme korkusuyla ilişkiden kaçınma → çekingen"]
+  }
+ ],
+ "hoca_kaliplari": [
+  "Tanımdan tanı: ölçütler ya da kısa vaka sıralanır, 'en doğru/en olası tanı hangisidir?' (yapıştırılan 6 sorunun 4'ü)",
+  "Şıklar hep kişilik bozukluklarıdır; çeldiriciler aynı ya da komşu kümeden (profil: aynı ailede komşu kavram %80)",
+  "'… kliniği hakkında söylenemez' kalıbı: başka bozukluğun ölçütü ya da zıt anlamlı ifade araya konur",
+  "Profil bu konuda bilgi türünü 'önleme/halk sağlığı' olarak etiketliyor; çıkmışların gerçek yapısı tanı ayırımıdır, soru yazarken bu etiket esas alınmamalı"
+ ],
+ "tuzaklar": [
+  {"tuzak": "'Başkalarını kıskanır' histriyonik ölçütü sanılır", "neden": "narsistik kişilik bozukluğu ölçütüdür (2020-21 final)"},
+  {"tuzak": "Borderline'da duygudurum donukluğu", "neden": "borderline'da tepkisel duygudurum instabilitesi vardır; donukluk zıt anlamlıdır"},
+  {"tuzak": "18 yaş altında antisosyal kişilik bozukluğu tanısı konur", "neden": "kişi en az 18 yaşında olmalı; 15 yaş öncesi davranım bozukluğu kanıtı gerekir"},
+  {"tuzak": "Antisosyal için de 5 ölçüt aranır", "neden": "antisosyal için ≥3; borderline, histriyonik, narsistik, çekingen için ≥5; A kümesi, bağımlı ve OKKB için ≥4"},
+  {"tuzak": "Empati yokluğu borderline'a verilir", "neden": "narsistik kişilik bozukluğunun çekirdek özelliğidir"},
+  {"tuzak": "Paranoid kişilik bozukluğu kadınlarda sık", "neden": "erkeklerde daha yaygındır"}
+ ],
+ "sayilar": [
+  "Tanı eşiği: antisosyal ≥3; paranoid, şizoid, şizotipal, bağımlı, OKKB ≥4; borderline, histriyonik, narsistik, çekingen ≥5",
+  "Antisosyal: kişi ≥18 yaş, örüntü 15 yaşından beri, 15 yaş öncesi davranım bozukluğu",
+  "Suç işleyenlerin %75'inden fazlasında antisosyal kişilik bozukluğu",
+  "Antisosyal erkeğin birinci derece akrabalarında 5 kat fazla",
+  "Borderline: toplumun %1–2'si, K/E 2/1"
+ ],
+ "duzeltmeler": [
+  {"yanlis": "Borderline'da tablo ölene kadar aynıdır (el notu)", "dogru": "Borderline genellikle kararlı bir seyir izler ama zamanla ufak değişiklikler olur", "kaynak": "slayt y25 s25"},
+  {"yanlis": "Antisosyal kişilik bozukluğunda 45 yaşından sonra azalma olur (el notu)", "dogru": "Bu bilgi 2025-26 slaytlarında yok; hocanın sözlü notu olabilir. Doğrulanmadan anlatıma ve soruya konmamalı", "kaynak": "girdideki düzeltme notu; slayt y25 s22–25"}
+ ],
+ "ara_soru_adaylari": [
+  {"birim": "psk-s11-b12", "fikir": "ağlayıp gülen, ilgi bekleyen, telkine açık kadın → histriyonik; çeldirici borderline ve narsistik"},
+  {"birim": "psk-s11-b09", "fikir": "borderline için söylenemez: duygudurumda donukluk"},
+  {"birim": "psk-s11-b05", "fikir": "empati yokluğu + beğenilme isteği → narsistik"},
+  {"birim": "psk-s11-b03", "fikir": "19 yaş, çocukluktan beri kural ihlali → antisosyal; yaş ve davranım bozukluğu şartı"}
+ ],
+ "kurul2627_notu": "2026-27 slaytı gelince bakılacak: B kümesi ölçüt listeleri korunmuş mu; antisosyal kişilik bozukluğunda yaşla azalma bilgisi slayta eklenmiş mi; A ve C kümeleri ayrıntılı anlatılıyorsa (çıkmışı yok) paylar ayrıca değerlendirilmeli."
+}

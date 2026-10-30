@@ -1,0 +1,119 @@
+{
+ "ders": "k2-38",
+ "ozet": "Bu dersin çıkmışlarının çoğu uyum bozukluğuna düşmüş: alt tiplerin belirtileri yer değiştirilerek 'hangisi yanlıştır' diye sorulmuş (anksiyete alt tipine davranım belirtileri, 2020-21'de 2 kopya), intihar eğiliminin arttığı ve kısa süreli stres sonrası vaka (2021-2026) sorulmuş. TSSB tarafında 2025-26 'hipervijilans en çok hangisinde → TSSB' ve öğrencinin kısa notunda 'ani başlangıç iyi prognoz göstergesidir' var. Öğrenci TSSB slaytlarının tamamını sarıyla işaretlemiş; süreler (akut stres bozukluğu 3 gün–4 hafta, TSSB >1 ay, kronik >3 ay) el notuyla pekiştirilmiş.",
+ "temalar": [
+  {
+   "tema": "Uyum bozukluğu: alt tipler ve klinik özellikler",
+   "oncelik": "A",
+   "birimler": ["psk-s03-b11"],
+   "kanit": "2020-21 'uyum bozukluğu ile ilgili yanlış → anksiyete belirtilerinin olduğu alt tipte saldırganlık, topluma aykırı davranış, kavga etme' bankada 2 kopya (1e5ac6eef6a7, 967684a10028); hoca profilinde bu konunun tekrar eden çekirdeği (2×). Öğrenci soruyu tablo olarak yapıştırmış, el notu: 'çarpıntı, kaygı, sinirlilik, hiperventilasyon' (anksiyete) ve '→ davranım bozuklukları' (saldırganlık). Slaytta üç alt tip ve '3 ay içinde başlar' vurgulu; el notu 'depresif ve anksiyete alt tipleri daha çok yetişkinde, davranım alt tipi daha çok ergende', 'TSSB gibi uzun sürelerde ortaya çıkmaz'.",
+   "anlatim": "Üç alt tip belirtileriyle tabloda verilmeli: depresif (çökkün duygudurum, ağlama, umutsuzluk), anksiyete (aşırı kaygı, sinirlilik, çarpıntı, hiperventilasyon), davranım (saldırganlık, topluma aykırı davranış, kavga, okuldan kaçma); hangi yaşta hangisinin öne çıktığı eklenmeli. Başlangıcın stres etkeninden sonra genellikle 3 ay içinde olduğu söylenmeli.",
+   "soru_payi": 22,
+   "soru_tipleri": ["yanlış bul: alt tiplerin belirtileri yer değiştirilmiş", "eşleştirme: belirti ↔ alt tip"]
+  },
+  {
+   "tema": "Uyum bozukluğu: tanım, epidemiyoloji, intihar riski, seyir ve tedavi",
+   "oncelik": "A",
+   "birimler": ["psk-s03-b10", "psk-s03-b13"],
+   "kanit": "2020-21 'uyum bozukluğu hakkında yanlış → intihar eğilimi artmamaktadır' (630ec96d2e21); aynı bilgi tablo sorusunda doğru önerme olarak 'intihar eğilimi artmaktadır'. 2021-2026 d3 vaka 'ağır maddi kayıp sonrası 20 gündür huzursuzluk, sıkıntı, bunalım → uyum bozukluğu'. Tablo sorusunun diğer doğru önermeleri: her yaşta gelişebilir, depresif belirtilerle ortaya çıkabilir, kadınlarda 2 kat sık. Tanım slaytı p88 (çıkmış + el notu: 'psikososyal stres temel etken'); seyir slaytında 'yetişkinlerde seyir ergenlere göre daha iyi' ve 'kısa süreli benzodiazepin' vurgulu.",
+   "anlatim": "Tanım (stresli yaşam olayına uyum döneminde sıkıntı ve davranış belirtileri), epidemiyoloji (her yaşta, K 2 kat), intihar eğiliminin arttığı, yetişkinde seyrin ergenden iyi olduğu ve anksiyete belirtisi olan hastada kısa süreli benzodiazepin kullanılabileceği madde madde verilmeli. Kısa süreli stresör sonrası tablo vakası TSSB ve majör depresyonla ayırt ettirilmeli.",
+   "soru_payi": 20,
+   "soru_tipleri": ["yanlış bul: intihar eğilimi artmaz", "vaka: maddi kayıp sonrası birkaç haftalık sıkıntı → uyum bozukluğu", "doğru/yanlış: K/E oranı, her yaşta görülme"]
+  },
+  {
+   "tema": "TSSB epidemiyolojisi ve hipervijilans",
+   "oncelik": "A",
+   "birimler": ["psk-s03-b02"],
+   "kanit": "2025-26 Kurul 2 'hipervijilans en çok hangisinde görülür? → TSSB' (bankada bu birime eşlenmiş; aynı terim semiyoloji dersinde 2021-22 finalinde 3 kopya sorulmuş). Slaytta 'kadınlarda 2 kat fazla' ve 'her yaşta' vurgulu; el notu 'k ×2 > e'.",
+   "anlatim": "TSSB'de kadınlarda 2 kat sıklık ve her yaşta görülme verilmeli; aşırı uyarılmışlık belirtileri içinde hipervijilansın tanımı (tehlike beklentisiyle dikkat kesilme) ve en çok TSSB'de görüldüğü açıkça yazılmalı.",
+   "soru_payi": 12,
+   "soru_tipleri": ["doğrudan: hipervijilans en çok hangi bozuklukta → TSSB", "sayı: K/E oranı"]
+  },
+  {
+   "tema": "Uyum bozukluğunda süre sınırı, yas ve ayırıcı tanı",
+   "oncelik": "B",
+   "birimler": ["psk-s03-b12"],
+   "kanit": "'Belirtiler olağan yası göstermez' ve 'tetikleyici etken ortadan kalkınca belirtiler altı aydan uzun sürmez' kırmızı çizgi + sarı; el notu 'stres etkeni ortadan kalkınca sorun çözülür (TSSB genelde kronikleşir)'; ayırıcı tanı listesinin tamamı vurgulu.",
+   "anlatim": "Uyum bozukluğunun iki zaman sınırı (stresörden sonra 3 ay içinde başlar; stresör kalktıktan sonra 6 aydan uzun sürmez) yan yana verilmeli; olağan yasın tanıyı dışladığı ve ayırıcı tanı listesi (majör depresyon, yaygın anksiyete, panik, davranım bozukluğu, akut stres–TSSB, psikotik bozukluk, yas, kişilik bozuklukları) eklenmeli.",
+   "soru_payi": 10,
+   "soru_tipleri": ["sayı: stresör kalktıktan sonra en fazla kaç ay", "ayırıcı: olağan yas / uyum bozukluğu"]
+  },
+  {
+   "tema": "TSSB seyir ve prognoz",
+   "oncelik": "B",
+   "birimler": ["psk-s03-b06"],
+   "kanit": "Öğrencinin pembe kısa notu: 'TSSB ile ilgili doğrudur → semptomların ani başlaması iyi prognoz göstergesidir (?)' (bankada bulunamadı; öğrenci emin değil ama slaytla uyumlu). İyi prognoz paragrafı kırmızı ayraç + yıldızlı; 'kronik seyir' ve 'yıldönümlerinde artış' vurgulu.",
+   "anlatim": "Kronik seyir, stresli dönemlerde ve yıldönümlerinde alevlenme, iyi prognoz göstergeleri (ani başlangıç, iyi premorbid uyum, güçlü sosyal destek, eşlik eden hastalık olmaması) liste hâlinde verilmeli; 'ani başlangıç iyi' bilgisinin sezgiye ters olduğu belirtilmeli.",
+   "soru_payi": 10,
+   "soru_tipleri": ["doğru ifade: ani başlangıç iyi prognoz göstergesi", "hangisi iyi prognoz göstergesi değildir"]
+  },
+  {
+   "tema": "TSSB ve akut stres bozukluğu: süre ölçütleri",
+   "oncelik": "B",
+   "birimler": ["psk-s03-b01"],
+   "kanit": "'TSSB semptomları bir aydan uzun sürer (3 aydan fazlası kronik)' ve 'akut stres bozukluğu ilk 4 hafta içinde başlayıp 3 günle 4 hafta arasında sürer' iki kez vurgulu; el notu 'ilk 3 gün tanı konmaz (travma sonrası davranış bozukluğu görülmesi normal)'.",
+   "anlatim": "Süreler tek tabloda verilmeli: ilk 3 gün normal tepki, 3 gün–4 hafta akut stres bozukluğu, 1 aydan uzun TSSB, 3 aydan uzun kronik TSSB. Bilişsel davranışçı modeldeki 'gerçek alarm' aşamasıyla ilk 3 günün ilişkisi bir cümleyle bağlanmalı.",
+   "soru_payi": 8,
+   "soru_tipleri": ["vaka: travmadan 2 hafta sonra belirti → akut stres bozukluğu", "sayı: kronik TSSB eşiği"]
+  },
+  {
+   "tema": "TSSB etiyoloji, ayırıcı tanı ve tedavi",
+   "oncelik": "B",
+   "birimler": ["psk-s03-b03", "psk-s03-b08", "psk-s03-b09"],
+   "kanit": "Üç slayt sarı; el notları: bilişsel-davranışçı kuram 'terapi bu kurama göre şekillendirilir', organik mental bozukluk 'kafa travması, beyin ödemi', karbamazepin–valproat 'duygudurum dengeleyici, antiepileptik', EMDR 'travma öyküsü olan hastada işe yarar'. Çıkmış eşlenmemiş.",
+   "anlatim": "Biyolojik etkenler (noradrenerjik-serotonerjik, endojen opioid, HPA ekseni), ayırıcı tanı listesi ve tedavi (SSRI, SNRI-venlafaksin, diğer ilaçlar; psikodinamik terapi, BDT, EMDR) kısa listelerle verilmeli.",
+   "soru_payi": 9,
+   "soru_tipleri": ["eşleştirme: EMDR → TSSB", "hangisi TSSB tedavisinde ilk seçenektir → SSRI"]
+  },
+  {
+   "tema": "TSSB klinik özellikleri",
+   "oncelik": "B",
+   "birimler": ["psk-s03-b05"],
+   "kanit": "Yeniden yaşama, kaçınma, aşırı uyarılmışlık, duygusal kısıtlılık, uyku güçlüğü, irritabilite satırları sarı; el notu 'irritabilite → kolay uyarılabilirlik'. Hipervijilans sorusu (2025-26) bu belirti grubuna dayanır.",
+   "anlatim": "Belirtiler dört kümede verilmeli: yeniden yaşama (anılar, kâbuslar), kaçınma, olumsuz biliş ve duygudurum (ilgi azalması, yabancılaşma, duygusal kısıtlılık, suçluluk), aşırı uyarılmışlık (uyku güçlüğü, irritabilite, öfke, hipervijilans).",
+   "soru_payi": 6,
+   "soru_tipleri": ["hangisi TSSB belirtisi değildir", "sınıflama: belirti ↔ küme"]
+  },
+  {
+   "tema": "Diğer seçilen yerler: TSSB bilişsel davranışçı modeli",
+   "oncelik": "C",
+   "birimler": ["psk-s03-b04"],
+   "kanit": "Akış şemasına el notları: 'gerçek alarm → ilk 3 gün tanı konmama sebebi', 'öğrenilmiş alarm → travmayı hatırlatan durumda yoğun sempatik alarm', 'kaçınma/duygusal donukluk → duyguyla baş edilemediği için'. Çıkmış yok.",
+   "anlatim": "Model zinciri (yatkınlık → travma → gerçek alarm → öğrenilmiş alarm → anksiyete → kaçınma/duygusal donukluk → zayıf destek → TSSB) tek şema olarak verilmeli.",
+   "soru_payi": 3,
+   "soru_tipleri": ["mekanizma: öğrenilmiş alarm nedir"]
+  }
+ ],
+ "hoca_kaliplari": [
+  "'Uyum bozukluğu hakkında verilen bilgilerden hangisi yanlıştır?' (profilde 3 tipik kökün üçü de bu kalıp)",
+  "Yanlış önerme alt tiplerin belirtilerini yer değiştirerek ya da olumsuzlayarak kurulur ('intihar eğilimi artmamaktadır')",
+  "Kısa vaka: stres etkeni + süre → tanı",
+  "Doğrudan kök: 'hipervijilans en çok hangisinde görülür?'",
+  "Tablo biçimli (sıra no/cevap) önerme listesi"
+ ],
+ "tuzaklar": [
+  {"tuzak": "Anksiyete alt tipinde saldırganlık, kavga, topluma aykırı davranış", "neden": "bunlar davranım bozukluğu alt tipine aittir; 2020-21'de 2 kopya"},
+  {"tuzak": "Uyum bozukluğunda intihar eğilimi artmaz", "neden": "artar; 2020-21 çıkmışının yanlış şıkkı"},
+  {"tuzak": "Uyum bozukluğu belirtileri stresör kalktıktan sonra da uzun yıllar sürer", "neden": "6 aydan uzun sürmez; uzun süren kronik tablo TSSB'ye özgüdür"},
+  {"tuzak": "Travmadan sonraki ilk günlerde TSSB ya da akut stres bozukluğu tanısı konur", "neden": "ilk 3 gün normal tepki; akut stres bozukluğu 3 gün–4 hafta, TSSB 1 aydan uzun"},
+  {"tuzak": "TSSB'de belirtilerin yavaş başlaması iyi prognoz", "neden": "ani başlangıç iyi prognoz göstergesidir"},
+  {"tuzak": "Uyum bozukluğunda seyir ergenlerde daha iyi", "neden": "yetişkinlerde ergenlere göre daha iyidir"}
+ ],
+ "sayilar": [
+  "Akut stres bozukluğu: travmadan sonraki 4 hafta içinde başlar, 3 gün–4 hafta sürer",
+  "TSSB: belirtiler 1 aydan uzun; 3 aydan uzunsa kronik TSSB",
+  "TSSB ve uyum bozukluğu kadınlarda 2 kat sık; ikisi de her yaşta görülebilir",
+  "Uyum bozukluğu stresörden sonra genellikle 3 ay içinde başlar; stresör kalktıktan sonra 6 aydan uzun sürmez"
+ ],
+ "duzeltmeler": [
+  {"yanlis": "Hoca profilinde bu konunun 'tekrar eden çekirdeği' olarak 'anksiyete belirtilerinin olduğu alt tipte saldırganlık, topluma aykırı davranışlar, kavga' kayıtlı", "dogru": "Bu önerme çıkmışın yanlış şıkkıdır; saldırganlık ve kavga davranım bozukluğu alt tipine aittir. Profil satırı doğru bilgi gibi okunmamalı", "kaynak": "slayt y25 s21 + banka 1e5ac6eef6a7 doğru cevabı"}
+ ],
+ "ara_soru_adaylari": [
+  {"birim": "psk-s03-b11", "fikir": "uyum bozukluğu alt tiplerinde belirtilerin yer değiştirdiği yanlış bul sorusu"},
+  {"birim": "psk-s03-b10", "fikir": "maddi kayıp sonrası 20 günlük sıkıntı vakası → uyum bozukluğu; çeldirici TSSB, majör depresyon"},
+  {"birim": "psk-s03-b02", "fikir": "hipervijilans en çok hangisinde: TSSB"},
+  {"birim": "psk-s03-b01", "fikir": "travmadan 2 hafta sonra başvuran hasta: akut stres bozukluğu; süre sınırları"},
+  {"birim": "psk-s03-b06", "fikir": "TSSB'de iyi prognoz göstergesi: ani başlangıç"}
+ ],
+ "kurul2627_notu": "2026-27 slaytı gelince bakılacak: uyum bozukluğu ile intihar ilişkisi slayta yazılmış mı (öğrenci notunda yok, çıkmışta var); TSSB tanı ölçütü kümeleri DSM-5'e göre ayrıntılı veriliyor mu; reaktif bağlanma, sosyal ketlenmemiş bağlanma gibi diğer travma ilişkili bozukluklar anlatılıyorsa yeni tema açılmalı."
+}

@@ -1,0 +1,1095 @@
+{
+ "ders": "k2-24",
+ "kod": "2n07",
+ "brans": "Nöroloji",
+ "konu": "Epilepsi",
+ "kaynak": "Geçmiş yıl (2025-26) öğrenci derleme notu: noro3.2",
+ "y25": {
+  "key": "y25-k2-24-epilepsi",
+  "sayfalar": [
+   4,
+   5,
+   6,
+   7,
+   8,
+   10,
+   11,
+   15,
+   16,
+   22,
+   25,
+   28,
+   33,
+   34,
+   38,
+   43,
+   44,
+   45,
+   50
+  ]
+ },
+ "sayac": {
+  "birim": 22,
+  "A": 2,
+  "B": 4,
+  "C": 16,
+  "ogrenci_sorusu": 1,
+  "banka": 4,
+  "banka_kapsandi": 2
+ },
+ "birimler": [
+  {
+   "id": "noro-s02-b06",
+   "pdf": "noro",
+   "sayfa": 2,
+   "bolge": "r2c1",
+   "tur": "slayt",
+   "baslik": "Epilepsi nöbetlerinin tekrarlama riskinin yüksek olduğu bilinen bulgular",
+   "metin": "Nörogörüntüleme bulguları: Hipokampal skleroz; Kortikal gelişim anomalileri (Fokal kortikal displazi, Tuberoskleroz, Lizensefali, Heterotopi, Polimikrogiri, Hemimegalensefali, Şizensefali, Hipotalamik hamartom); Tümörler (Düşük \"grade\"li glial tümörler, Disembriyoblastik nöroepitelyal tümörler (DNET), Gangliogliomlar); Kortikal yerleşimli serebrovasküler hastalıklar; Kavernom ve arteriovenöz malformasyonlar*; Nörosistiserkozis; Porensefalik kist; Travmatik beyin hasarı\nEEG bulguları: Epileptiform deşarjlar (jeneralize veya fokal diken ve keskin-yavaş dalga kompleksleri); Temporal aralıklı ritmik delta aktivitesi (TIRDA) (Temporal lob epilepsisi varlığında)",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "sari",
+     "hedef": "Tümörler; Düşük grade'li glial tümörler; DNET; Gangliogliomlar; Kavernom ve AVM; Nörosistiserkozis; Porensefalik kist; Travmatik beyin hasarı"
+    }
+   ],
+   "sinyal": [
+    "cikmis",
+    "sari"
+   ],
+   "y25": {
+    "key": "y25-k2-24-epilepsi",
+    "sayfa": 8
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "ogrenci_sorulari": [
+    "noro-s02-b08"
+   ],
+   "banka_cikmis": [
+    "b3d289432ab3"
+   ],
+   "puan": 80,
+   "oncelik": "A",
+   "vurgulu": [
+    "Tümörler; Düşük grade'li glial tümörler; DNET; Gangliogliomlar; Kavernom ve AVM; Nörosistiserkozis; Porensefalik kist; Travmatik beyin hasarı"
+   ]
+  },
+  {
+   "id": "noro-s02-b09",
+   "pdf": "noro",
+   "sayfa": 2,
+   "bolge": "r1c2",
+   "tur": "slayt",
+   "baslik": "Basit ve komplike febril nöbet",
+   "metin": "| | Basit febril nöbet | Komplike febril nöbet |\nSüresi | 15 dakikadan kısa | 15 dakikadan uzun olabilir\nNöbet tipi | Jeneralize | Fokal veya jeneralize\n24 saat içerisinde tekrarlama | Hayır | Olabilir\nFokal nörolojik defisit | Yok | Olabilir\nPostiktal Todd parezisi | Yok | Olabilir",
+   "el_yazisi": [
+    {
+     "metin": "febril nöbet = çocuklukta en sık görülen.",
+     "hedef": "Febril nöbet (tablonun üstü)",
+     "guven": "yuksek",
+     "alternatif": ""
+    },
+    {
+     "metin": "Ateş nöbet öncesi olmayabilir ama sonra erken dönemde mutlaka!!",
+     "hedef": "Febril nöbet tanımı (y25 s21)",
+     "guven": "yuksek",
+     "alternatif": ""
+    },
+    {
+     "metin": "→ bilateral tonik-klonik",
+     "hedef": "Basit febril nöbet: nöbet tipi Jeneralize",
+     "guven": "yuksek",
+     "alternatif": ""
+    },
+    {
+     "metin": "febril nöbet geçiren çocukta epilepsi geçirme riski ↑. komplike febrilde risk daha yüksek.",
+     "hedef": "Febril nöbet sonrası epilepsi riski (y25 s23)",
+     "guven": "yuksek",
+     "alternatif": ""
+    }
+   ],
+   "isaretler": [
+    {
+     "tur": "ok",
+     "hedef": "bilateral tonik-klonik → Basit febril nöbet (Jeneralize)"
+    }
+   ],
+   "sinyal": [
+    "el_onemli"
+   ],
+   "y25": {
+    "key": "y25-k2-24-epilepsi",
+    "sayfa": 22
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "banka_cikmis": [
+    "q-2__kurul_-11"
+   ],
+   "puan": 38,
+   "oncelik": "A",
+   "vurgulu": []
+  },
+  {
+   "id": "noro-s02-b16",
+   "pdf": "noro",
+   "sayfa": 2,
+   "bolge": "r1c3+r2c3",
+   "tur": "slayt",
+   "baslik": "Epilepsi, senkop ve nonepileptik psikojen atak ayrımında ipuçları",
+   "metin": "Satır | Senkop | Epilepsi | Nonepileptik Psikojen Atak\nPostür | Ayakta (hemen daima) | Her postür | Her postür\nTerleme | Sık | Seyrek | Değişken\nRenk | Beyaz | Morarma | Değişken\nBaşlangıç | Yavaş (presenkop) | Ani/aura | Değişken\nUykuda olma | Çok seyrek | Sık | Yok (uyanınca)\nYaralanma | Sık | Sıkça (yanma) | Çok seyrek\nYalnızken olma | Olası | Olası | Çok nadir\nKasılma | Seyrek | Tipik | Atipik değişken\nİdrar inkontinansı | Seyrek | Sık | Çok seyrek\nBilinçsiz süre | Saniyeler | Dakikalar | Genelde yok veya tersine çok uzun\nDüzelme | Hızlı | Yavaşça | Değişken\nPostiktal konfüzyon | Çok seyrek | Sık | Yok/seyrek\nAğlama | Yok | Yok | Sık\nSıklık | Seyrek | Değişken | Genelde sık\nArttıran faktörler | Açlık, heyecan, sıkıntı, sıcak, ayakta uzun kalma | Uykusuzluk, stres, tipik refleks uyaranlar | Stresli olay, kalabalık, kötüye kullanılma\nPelvik hareket | Yok | Seyrek | Sık\nAsenkron hareket | Yok | Seyrek | Sık\nYuvarlanma | Yok | Seyrek | Sık\nStereotipik atak | Seyrek | Sık ve tipik | Seyrek\nGöz açmaya direnç | Yok | Seyrek | Sık\nİndüklenebilme | Yok | Yok | Sık\nDil ısırma | Yok | Sık (yan taraf) | Seyrek (ucu)\nEşlik eden öykü, durum | Kalp hastalığı, hızlı boy uzaması, presenkoplar | Psikiyatrik tablolar, migren | Fibromiyalji ve somatoform tablolar\nEEG iktal bulgu | Yok | Çoğunlukla | Yok\nİnteriktal bulgu | Yok veya yavaş aktivite | Sık | Yok/seyrek",
+   "el_yazisi": [
+    {
+     "metin": "→ psödo nöbet (tipik = pelvik hareket)",
+     "hedef": "Nonepileptik Psikojen Atak sütun başlığı",
+     "guven": "yuksek",
+     "alternatif": "'psödo' = psödonöbet"
+    },
+    {
+     "metin": "→ çocuk - ergenlik döneminde cinsel istismar yaşamış olabilir.",
+     "hedef": "Eşlik eden öykü, durum (Nonepileptik psikojen atak)",
+     "guven": "yuksek",
+     "alternatif": ""
+    }
+   ],
+   "isaretler": [
+    {
+     "tur": "sari",
+     "hedef": "Uykuda olma: Sık / Yok (uyanınca); Pelvik hareket, Yuvarlanma, Göz açmaya direnç, İndüklenebilme: Sık (PNES); Dil ısırma: Sık (yan taraf) / Seyrek (ucu); EEG iktal: Çoğunlukla / Yok; İnteriktal: Sık / Yok-seyrek"
+    },
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "Uykuda olma satırı; Pelvik hareket satırı; Dil ısırma satırı"
+    },
+    {
+     "tur": "yildiz",
+     "hedef": "Pelvik hareket"
+    }
+   ],
+   "sinyal": [
+    "el_onemli",
+    "sari",
+    "yildiz"
+   ],
+   "y25": {
+    "key": "y25-k2-24-epilepsi",
+    "sayfa": 45
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "puan": 33,
+   "oncelik": "B",
+   "vurgulu": [
+    "Pelvik hareket",
+    "Uykuda olma satırı; Pelvik hareket satırı; Dil ısırma satırı",
+    "Uykuda olma: Sık / Yok (uyanınca); Pelvik hareket, Yuvarlanma, Göz açmaya direnç, İndüklenebilme: Sık (PNES); Dil ısırma: Sık (yan taraf) / Seyrek (ucu); EEG iktal: Çoğunlukla / Yok; İnteriktal: Sık / Yok-seyrek"
+   ]
+  },
+  {
+   "id": "noro-s02-b12",
+   "pdf": "noro",
+   "sayfa": 2,
+   "bolge": "r2c2",
+   "tur": "slayt",
+   "baslik": "Epilepsi sendromları: EEG örnekleri (West, Rolandik, progresif miyoklonik/Lafora)",
+   "metin": "West sendromlu bir olguda hipsaritmi örneği. EEG aktivitesinin yüksek amplitüdlü, multifokal ve kaotik özellikte olduğu dikkat çekmektedir.\nRolandik epilepsi tanısıyla izlenen bir olguda uyanıklık sırasında sol santrotemporal bölgede faz dönmesi gösteren az sayıda keskin ve keskin-yavaş dalgalar görülmektedir. (y25 s35)\nProgresif miyoklonik epilepsi için tipik EEG bulguları olan temel aktivitede yaygın yavaşlama, ışığa duyarlılık ve jeneralize düzensiz çok dikenli dalga deşarjları görülmektedir. Lafora olgusu olan bu hastada ayrıca oksipital bölgede dikenler de dikkati çekmektedir. (y25 s36)",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "sari",
+     "hedef": "üç açıklamanın tamamı"
+    },
+    {
+     "tur": "yildiz",
+     "hedef": "West sendromu / hipsaritmi (iki kırmızı yıldız + parantez)"
+    },
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "EEG aktivitesinin yüksek amplitüdlü; multifokal; kaotik"
+    }
+   ],
+   "sinyal": [
+    "sari",
+    "yildiz"
+   ],
+   "y25": {
+    "key": "y25-k2-24-epilepsi",
+    "sayfa": 34
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "puan": 25,
+   "oncelik": "B",
+   "vurgulu": [
+    "EEG aktivitesinin yüksek amplitüdlü; multifokal; kaotik",
+    "West sendromu / hipsaritmi (iki kırmızı yıldız + parantez)",
+    "üç açıklamanın tamamı"
+   ]
+  },
+  {
+   "id": "noro-s02-b02",
+   "pdf": "noro",
+   "sayfa": 2,
+   "bolge": "r1c1",
+   "tur": "slayt",
+   "baslik": "Tetiklenmiş (akut semptomatik) nöbetler",
+   "metin": "Tetiklenmiş nöbetler, diğer adı ile akut semptomatik",
+   "el_yazisi": [
+    {
+     "metin": "↳ metabolik / toksik neden ↳ kafa travması ↳ SVH } epilepsi eşiğini düşürdükleri için bu akut dönemde geçirilenler epilepsi olarak sayılmaz!",
+     "hedef": "Tetiklenmiş nöbetler, diğer adı ile akut semptomatik",
+     "guven": "yuksek",
+     "alternatif": "SVH = serebrovasküler hastalık"
+    }
+   ],
+   "isaretler": [
+    {
+     "tur": "sari",
+     "hedef": "Tetiklenmiş nöbetler, diğer adı ile akut semptomatik"
+    },
+    {
+     "tur": "ok",
+     "hedef": "metabolik/toksik neden, kafa travması, SVH"
+    }
+   ],
+   "sinyal": [
+    "el_onemli",
+    "sari"
+   ],
+   "y25": {
+    "key": "y25-k2-24-epilepsi",
+    "sayfa": 5
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "puan": 18,
+   "oncelik": "B",
+   "vurgulu": [
+    "Tetiklenmiş nöbetler, diğer adı ile akut semptomatik"
+   ]
+  },
+  {
+   "id": "noro-s02-b15",
+   "pdf": "noro",
+   "sayfa": 2,
+   "bolge": "r1c3",
+   "tur": "slayt",
+   "baslik": "Epilepside ayırıcı tanı – B) Erişkin dönem",
+   "metin": "B) Erişkin dönem\nSenkop\n-refleks: postüral, valsalvaya bağlı, miksiyona bağlı vb\n-kardiyak: disritmi (kalp bloğu, taşikardi vb); valvüler (en sık aort stenozu); kardiyomiyopati; şantlı hastalıklar vb\n-perfüzyon yetmezliği: hipovolemi, otonom yetmezlik\nNon epileptik ataklar: -psikojenik (yalancı) nöbet; -panik atak; -hiperventilasyona bağlı\nGeçici iskemik atak (düşme atakları, \"limb-shaking\" ataklar başta olmak üzere)\nMigren (baziler ve diğer auralı tipler)\nMeniére hastalığı\nNarkolepsi/katapleksi\nREM uyku davranış bozukluğu\nHuzursuz bacak sendromu\nGeçici global amnezi\nAkut konfüzyonel durumlar\nHipoglisemi başta olmak üzere metabolik nedenler\nFizyolojik miyoklonus\nParoksizmal hareket bozuklukları (egzersizle tetiklenen ve diğer)",
+   "el_yazisi": [
+    {
+     "metin": "→ erkekte özellikle miksiyon sonrası",
+     "hedef": "miksiyona bağlı (refleks senkop)",
+     "guven": "orta",
+     "alternatif": "çok küçük yazı; 'özellikle' kelimesi bağlamdan tamamlandı"
+    }
+   ],
+   "isaretler": [
+    {
+     "tur": "sari",
+     "hedef": "Senkop (refleks, kardiyak, perfüzyon yetmezliği); Geçici iskemik atak; Migren; Meniére; REM uyku davranış bozukluğu; Huzursuz bacak sendromu"
+    },
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "miksiyona bağlı"
+    }
+   ],
+   "sinyal": [
+    "el_onemli",
+    "sari"
+   ],
+   "y25": {
+    "key": "y25-k2-24-epilepsi",
+    "sayfa": 44
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "puan": 18,
+   "oncelik": "B",
+   "vurgulu": [
+    "Senkop (refleks, kardiyak, perfüzyon yetmezliği); Geçici iskemik atak; Migren; Meniére; REM uyku davranış bozukluğu; Huzursuz bacak sendromu",
+    "miksiyona bağlı"
+   ]
+  },
+  {
+   "id": "noro-s02-b04",
+   "pdf": "noro",
+   "sayfa": 2,
+   "bolge": "r1c1+r2c1",
+   "tur": "slayt",
+   "baslik": "Tek tetiklenmemiş nöbette epilepsi tanısı",
+   "metin": "Sadece bir tetiklenmemiş nöbet varlığında epilepsi hastalığından bahsedebilmek için 10 yıl içerisindeki nöbet tekrarlama riskinin yüksek olarak belirlenmesi gerekmektedir. Bu",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "sari",
+     "hedef": "cümlenin tamamı"
+    },
+    {
+     "tur": "daire",
+     "hedef": "10"
+    },
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "yıl içerisindeki nöbet tekrarlama riskinin yüksek olarak belirlenmesi gerekmektedir"
+    }
+   ],
+   "sinyal": [
+    "daire",
+    "sari"
+   ],
+   "y25": {
+    "key": "y25-k2-24-epilepsi",
+    "sayfa": 6
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "puan": 15,
+   "oncelik": "C",
+   "vurgulu": [
+    "10",
+    "cümlenin tamamı",
+    "yıl içerisindeki nöbet tekrarlama riskinin yüksek olarak belirlenmesi gerekmektedir"
+   ]
+  },
+  {
+   "id": "noro-s02-b01",
+   "pdf": "noro",
+   "sayfa": 2,
+   "bolge": "r1c1",
+   "tur": "slayt",
+   "baslik": "Epilepsinin yeni klinik pratik tanımı (3 durum)",
+   "metin": "Yeni klinik pratik amaçlı tanımlamada aşağıdaki üç durumdan biri varlığında epilepsi hastalığından bahsedilir:\n1) Yirmi dört saat ara ile en az iki tetiklenmemiş (spontan) veya refleks özellikli nöbet olması\n2) En az bir tetiklenmemiş veya refleks özellikli nöbet ve 10 yıl içerisindeki nöbet tekrarlama riskinin en az iki tetiklenmemiş nöbet varlığındaki riske benzer olması (en az %60)\n3) Epilepsi sendromlarından birinin varlığı",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "sari",
+     "hedef": "üç durumdan biri varlığında epilepsi; 1), 2) ve 3) maddelerinin tamamı"
+    }
+   ],
+   "sinyal": [
+    "sari"
+   ],
+   "y25": {
+    "key": "y25-k2-24-epilepsi",
+    "sayfa": 4
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "puan": 10,
+   "oncelik": "C",
+   "vurgulu": [
+    "üç durumdan biri varlığında epilepsi; 1), 2) ve 3) maddelerinin tamamı"
+   ]
+  },
+  {
+   "id": "noro-s02-b05",
+   "pdf": "noro",
+   "sayfa": 2,
+   "bolge": "r2c1",
+   "tur": "slayt",
+   "baslik": "İlk nöbetle gelen erişkinde tekrarlama riskini artıran durumlar",
+   "metin": "İlk nöbet ile gelen erişkin hastalarda nöbet tekrarlama riskinin arttığı durumlar\n1) Akut bir beyin hasarı ile gerçekleşen nöbetler (1-5 yıl içerisinde nöbet tekrarlama riski 2,55 kat artmıştır)\n2) EEG'de epileptiform anomali varlığı (1-5 yıl içerisinde nöbet tekrarlama riski 2,16 kat artmıştır)\n3) Nörogörüntüleme ile epileptojenik bir lezyonun gösterilmesi (1-4 yıl içerisinde nöbet tekrarlama riski 2,44 kat artmıştır)\n4) Noktürnal nöbet varlığı (1-4 yıl içerisinde nöbet tekrarlama riski 2,1 kat artmıştır)",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "sari",
+     "hedef": "Akut bir beyin hasarı; EEG'de epileptiform anomali varlığı; Nörogörüntüleme ile epileptojenik lezyonun gösterilmesi; Noktürnal nöbet varlığı"
+    }
+   ],
+   "sinyal": [
+    "sari"
+   ],
+   "y25": {
+    "key": "y25-k2-24-epilepsi",
+    "sayfa": 7
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "puan": 10,
+   "oncelik": "C",
+   "vurgulu": [
+    "Akut bir beyin hasarı; EEG'de epileptiform anomali varlığı; Nörogörüntüleme ile epileptojenik lezyonun gösterilmesi; Noktürnal nöbet varlığı"
+   ]
+  },
+  {
+   "id": "noro-s02-b07",
+   "pdf": "noro",
+   "sayfa": 2,
+   "bolge": "r2c1",
+   "tur": "slayt",
+   "baslik": "Epilepsi ile birlikte görülen kromozom anomalileri",
+   "metin": "Kromozom anomalileri: 15q13.3 mikrodelesyonu; 18q- sendromu; 15. kromozomun proksimal bölgesinin ters duplikasyonu; 1p36 delesyonu; Angelman sendromu; Down sendromu (Trizomi 21); Klinefelter sendromu (XXY); Miller Dieker sendromu (17p delesyonu); Pallister Killian sendromu (Tetrazomi 12p); Ring 14 sendromu; Ring 20 sendromu; Trizomi 12p; Wolf-Hirschhorn sendromu (4p delesyonu)",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "sari",
+     "hedef": "15q13.3 mikrodelesyonu; Angelman sendromu; Down sendromu (Trizomi 21); Kleinfelter sendromu (XXY)"
+    }
+   ],
+   "sinyal": [
+    "sari"
+   ],
+   "y25": {
+    "key": "y25-k2-24-epilepsi",
+    "sayfa": 33
+   },
+   "y26": null,
+   "duzeltme": [
+    {
+     "ham": "Kleinfelter sendromu",
+     "dogru": "Klinefelter sendromu",
+     "gerekce": "Sendromun doğru yazımı Klinefelter'dir (slayttaki yazım hatası)."
+    }
+   ],
+   "not_": null,
+   "puan": 10,
+   "oncelik": "C",
+   "vurgulu": [
+    "15q13.3 mikrodelesyonu; Angelman sendromu; Down sendromu (Trizomi 21); Kleinfelter sendromu (XXY)"
+   ]
+  },
+  {
+   "id": "noro-s02-b14",
+   "pdf": "noro",
+   "sayfa": 2,
+   "bolge": "r1c3",
+   "tur": "slayt",
+   "baslik": "Epilepside ayırıcı tanı – A) Çocukluk çağı",
+   "metin": "Epilepside ayırıcı tanı\nA) Çocukluk Çağı\nSenkoplar\nSiyanotik nefes tutma atakları (şiddetli ağlamaya bağlı veya istemli nefes tutma)\nKalıtsal ve edinsel metabolik nedenlere bağlı bilinç kaybı ve/veya kasılma, titreme\nMigren (konfüzyonel durum, baziler migren, auralı migren)\nKardiyak ritim bozuklukları (özellikle supraventriküler taşikardi)\nTikler\nTitreme atakları (yenidoğan döneminde)\nÇocukluğun benign miyoklonisi\nNonepileptik psikojen ataklar\nPsikiyatrik kökenli diğer durumlar ve Münchausen sendromu (ebeveynlerin katkısı)\nBenign paroksizmal koreatetoz\nDiğer paroksizmal hareket bozuklukları\nGece korkuları (pavor nocturnus)\nHipnagojik miyokloniler\nUykuda çeşitli hareket bozuklukları, konfüzyonel uyanma, parasomniler\nEnürezis\nMastürbasyon\nGastroözofageal reflü\nHiperekpleksi (hyperekplexia), artmış irkilme reaksiyonu\nStereotipiler",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "sari",
+     "hedef": "Siyanotik nefes tutma; Kalıtsal ve edinsel metabolik; Migren; Kardiyak ritim bozuklukları; Tikler; Titreme atakları; Çocukluğun benign miyoklonisi; Nonepileptik psikojen ataklar; Münchausen; Benign paroksizmal koreatetoz; Gece korkuları; Enürezis; Mastürbasyon; Gastroözofageal reflü; Hipereksplesia; Stereotipiler"
+    }
+   ],
+   "sinyal": [
+    "sari"
+   ],
+   "y25": {
+    "key": "y25-k2-24-epilepsi",
+    "sayfa": 43
+   },
+   "y26": null,
+   "duzeltme": [
+    {
+     "ham": "Hipereksplesia",
+     "dogru": "Hiperekpleksi (hyperekplexia)",
+     "gerekce": "Artmış irkilme reaksiyonu hastalığının doğru adı hiperekpleksidir."
+    }
+   ],
+   "not_": null,
+   "puan": 10,
+   "oncelik": "C",
+   "vurgulu": [
+    "Siyanotik nefes tutma; Kalıtsal ve edinsel metabolik; Migren; Kardiyak ritim bozuklukları; Tikler; Titreme atakları; Çocukluğun benign miyoklonisi; Nonepileptik psikojen ataklar; Münchausen; Benign paroksizmal koreatetoz; Gece korkuları; Enürezis; Mastürbasyon; Gastroözofageal reflü; Hipereksplesia; Stereotipiler"
+   ]
+  },
+  {
+   "id": "noro-s02-b03",
+   "pdf": "noro",
+   "sayfa": 2,
+   "bolge": "r1c1",
+   "tur": "slayt",
+   "baslik": "Refleks nöbetler",
+   "metin": "Refleks nöbetler",
+   "el_yazisi": [
+    {
+     "metin": "aralıklı ışık/sıcak su gibi uyaranlarla tetiklenir ama bu grupta sayılmazlar.",
+     "hedef": "Refleks nöbetler (tetiklenmiş nöbet grubunda sayılmaz, refleks özellikli nitelenir)",
+     "guven": "yuksek",
+     "alternatif": ""
+    }
+   ],
+   "isaretler": [
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "uyaranlarla; sayılmazlar (el yazısı altı çizili)"
+    }
+   ],
+   "sinyal": [
+    "el_onemli"
+   ],
+   "y25": {
+    "key": "y25-k2-24-epilepsi",
+    "sayfa": 5
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "puan": 8,
+   "oncelik": "C",
+   "vurgulu": [
+    "uyaranlarla; sayılmazlar (el yazısı altı çizili)"
+   ]
+  },
+  {
+   "id": "noro-s02-b11",
+   "pdf": "noro",
+   "sayfa": 2,
+   "bolge": "r1c2+r2c2",
+   "tur": "slayt",
+   "baslik": "Yeni epilepsi sınıflaması 5 aşama + epidemiyoloji",
+   "metin": "Yeni epilepsi hastalığı sınıflaması 5 aşamadan oluşur:\n1) Epilepsi nöbeti tipi\n2) Epilepsi tipi\n3) Epilepsi sendromu\n4) Etyolojinin değerlendirilmesi\n5) Komorbiditelerin değerlendirilmesi",
+   "el_yazisi": [
+    {
+     "metin": "→ fokal, jeneralize, kombine fokal ve jeneralize, bilinmeyen",
+     "hedef": "2) Epilepsi tipi (y25 s29)",
+     "guven": "yuksek",
+     "alternatif": ""
+    },
+    {
+     "metin": "yapısal, genetik, enfeksiyon, metabolik, immünite, bilinmeyen",
+     "hedef": "4) Etyolojinin değerlendirilmesi",
+     "guven": "orta",
+     "alternatif": "'immünite' = immün etyoloji"
+    },
+    {
+     "metin": "çocukluk - ergenlik çağında en sık. erişkinde beyin-damar hastalıklarından sonra 2. en sık. erkeklerde ve düşük sosyoekonomik sınıfta insidans ve prevalans daha yüksek.",
+     "hedef": "Epidemiyoloji (y25 s27)",
+     "guven": "yuksek",
+     "alternatif": ""
+    }
+   ],
+   "isaretler": [],
+   "sinyal": [
+    "el_onemli"
+   ],
+   "y25": {
+    "key": "y25-k2-24-epilepsi",
+    "sayfa": 28
+   },
+   "y26": null,
+   "duzeltme": [
+    {
+     "ham": "erkekte ve düşük sosyoekonomik sınıfta en sık",
+     "dogru": "erkeklerde ve düşük sosyoekonomik sınıfta insidans ve prevalans daha yüksek",
+     "gerekce": "Slayt s27: 'Erkeklerde ve düşük sosyoekonomik sınıfta insidens ve prevalans daha yüksektir' (karşılaştırma, 'en sık' değil)."
+    }
+   ],
+   "not_": null,
+   "puan": 8,
+   "oncelik": "C",
+   "vurgulu": []
+  },
+  {
+   "id": "noro-s02-b17",
+   "pdf": "noro",
+   "sayfa": 2,
+   "bolge": "r2c2+r2c3",
+   "tur": "slayt",
+   "baslik": "Epilepsi tedavisi / Status epileptikus tedavi algoritması",
+   "metin": "EPİLEPSİ TEDAVİSİ\nErken SE (5 dk, hastane öncesi ve acil): Damaryolu açıksa IV diazepam 5-10 mg IV bolus, gereğinde doz tekrarlanarak maksimum 20 mg; Damaryolu yoksa IM midazolam 10 mg IM (yaşlı ve <50 kg ise 5 mg), gereğinde 10 dk sonra doz tekrarlanabilir YA DA Bukkal midazolam 10 mg bukkal (yaşlı ve <50 kg ise 5 mg) YA DA Diazepam rektal 10 mg rektal\nDirençli SE (30 dk, hastane): IV fenitoin 15-20 mg/kg yükleme, 50 mg/dk YA DA Valproat 15-30 mg/kg IV, 3-6 mg/kg/dk; Levetirasetam 30-60 mg/kg IV (maksimum 10 dk) YA DA Fenobarbital 10-20 mg/kg IV (100 mg/dk maksimum) YA DA Lakozamid 200-400 mg IV (5 dk içinde)\nSüper dirençli SE (60 dk, yoğun bakım ünitesi): Midazolam 0.1-0.3 mg/kg IV bolus maks 4 mg/dk, 0.05-4 mg/kg/saat infüzyon YA DA Propofol 2 mg/kg IV bolus, 5-10 mg/kg/saat (genellikle 1-3 mg/kg/saat) infüzyon YA DA Pentotal 5-15 mg/kg IV bolus, 0.5-3 mg/kg/saat infüzyon; Ketamin 1-3 mg/kg IV bolus, 1-5 mg/kg/saat infüzyon; EEG monitorizasyonu\nHava yolu, kan basıncı, damar yolu, EKG, tam kan sayımı, şeker, elektrolit, AEİ düzeyi, arter kan gazı, toksin tarama",
+   "el_yazisi": [
+    {
+     "metin": "lakozamid",
+     "hedef": "Epilepsi tedavisi başlığı / dirençli SE basamağındaki Lakozamid 200-400 mg IV",
+     "guven": "yuksek",
+     "alternatif": "Bankada ilgili çıkmış: past-q-I_SKENDERUN_TI_Mu_du_rlu_g_u_ne0__1__230709_230251-58 (Arşiv; dirençli SE'de kullanılmayan IV antiepileptik = Pregabalin, Lakozamid kullanılır). y25 eşlemesi s50: metni çıkarılamamış görsel sayfa, s49 'Status epileptikus ve tedavisi' başlığından sonra geldiği için seçildi (orta güven)."
+    }
+   ],
+   "isaretler": [
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "lakozamid (el yazısının altı)"
+    }
+   ],
+   "sinyal": [
+    "el_onemli"
+   ],
+   "y25": {
+    "key": "y25-k2-24-epilepsi",
+    "sayfa": 50
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "puan": 8,
+   "oncelik": "C",
+   "vurgulu": [
+    "lakozamid (el yazısının altı)"
+   ]
+  },
+  {
+   "id": "noro-s03-b01",
+   "pdf": "noro",
+   "sayfa": 3,
+   "bolge": "r1c1",
+   "tur": "el_yazisi",
+   "baslik": "Fokal başlangıçlı nöbet tanımı",
+   "metin": "",
+   "el_yazisi": [
+    {
+     "metin": "tek hemisferde. 3 aşamada değerlendirilir.",
+     "hedef": "Fokal başlangıçlı nöbetler (tek bir hemisferde kaynaklanır, üç aşamada değerlendirilir)",
+     "guven": "yuksek",
+     "alternatif": "sayfanın üst kenarı kesik; cümlenin başı ('Fokal başlangıçlı nöbetler') önceki sayfada/kesik olabilir"
+    }
+   ],
+   "isaretler": [],
+   "sinyal": [
+    "el_onemli"
+   ],
+   "y25": {
+    "key": "y25-k2-24-epilepsi",
+    "sayfa": 11
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "puan": 8,
+   "oncelik": "C",
+   "vurgulu": []
+  },
+  {
+   "id": "noro-s03-b02",
+   "pdf": "noro",
+   "sayfa": 3,
+   "bolge": "r1c1",
+   "tur": "el_yazisi",
+   "baslik": "Frontal lob kökenli fokal nöbet özellikleri",
+   "metin": "",
+   "el_yazisi": [
+    {
+     "metin": "frontal kökenli: Figür 4 pozisyonu; farkındalık korunmuşken tonik baş dönmesi (başın kontralaterale zorlu dönüşü; vertigo anlamında değil); bir kol ekstansörde diğeri fleksör; kompleks hareketli otomatizma; sıklıkla uykuda",
+     "hedef": "Frontal Lob Kökenli Fokal Epilepsi Nöbetleri (s15 maddeleri 1, 3, 4, 5, 9)",
+     "guven": "yuksek",
+     "alternatif": "'baş dönmesi' = başın bir yana zorlu dönmesi (versiyon), vertigo değil"
+    }
+   ],
+   "isaretler": [
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "frontal kökenli (başlık)"
+    }
+   ],
+   "sinyal": [
+    "el_onemli"
+   ],
+   "y25": {
+    "key": "y25-k2-24-epilepsi",
+    "sayfa": 15
+   },
+   "y26": null,
+   "duzeltme": [
+    {
+     "ham": "farkındalık korunmuşken baş dönmesi",
+     "dogru": "farkındalık korunmuşken tonik baş dönmesi (başın kontralaterale zorlu dönüşü; vertigo anlamında değil)",
+     "gerekce": "Slayt s15: 'farkındalık korunmuşken tonik baş dönmesi frontal lob nöbeti için tipik'."
+    }
+   ],
+   "not_": null,
+   "puan": 8,
+   "oncelik": "C",
+   "vurgulu": [
+    "frontal kökenli (başlık)"
+   ]
+  },
+  {
+   "id": "noro-s03-b03",
+   "pdf": "noro",
+   "sayfa": 3,
+   "bolge": "r1c1",
+   "tur": "el_yazisi",
+   "baslik": "Temporal lob kökenli fokal nöbet özellikleri",
+   "metin": "",
+   "el_yazisi": [
+    {
+     "metin": "temporal kökenli: özgeçmişte febril nöbet, + aile öyküsü; otonom duysal fenomenler (koku illüzyonu)",
+     "hedef": "Temporal Lob Kökenli Fokal Epilepsi Nöbetleri (s16 öykü; s17 madde 1 koku ve işitsel illüzyon)",
+     "guven": "yuksek",
+     "alternatif": "'otonom, duysal fenomenler' (virgülsüz yazılmış)"
+    }
+   ],
+   "isaretler": [
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "temporal kökenli (başlık)"
+    }
+   ],
+   "sinyal": [
+    "el_onemli"
+   ],
+   "y25": {
+    "key": "y25-k2-24-epilepsi",
+    "sayfa": 16
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "puan": 8,
+   "oncelik": "C",
+   "vurgulu": [
+    "temporal kökenli (başlık)"
+   ]
+  },
+  {
+   "id": "noro-s03-b04",
+   "pdf": "noro",
+   "sayfa": 3,
+   "bolge": "r1c1+r2c1",
+   "tur": "slayt",
+   "baslik": "ILAE 2017 nöbet sınıflaması – Fokal başlangıç",
+   "metin": "Fokal Başlangıç\nFarkındalık korunmuş / Farkındalık bozulmuş\nMotor semptom: Otomatizmalar, Atonik, Klonik, Epileptik spazmlar, Hiperkinetik, Miyoklonik, Tonik\nNonmotor semptom: Otonom, Duraklama, Kognitif, Emosyonel, Duysal\nFokal başlayan bilateral tonik-klonik nöbet",
+   "el_yazisi": [
+    {
+     "metin": "① farkındalık",
+     "hedef": "Farkındalık korunmuş / Farkındalık bozulmuş",
+     "guven": "yuksek",
+     "alternatif": ""
+    }
+   ],
+   "isaretler": [
+    {
+     "tur": "daire",
+     "hedef": "① farkındalık (Farkındalık korunmuş/bozulmuş yanında)"
+    },
+    {
+     "tur": "daire",
+     "hedef": "② → Motor semptom"
+    },
+    {
+     "tur": "daire",
+     "hedef": "③ → Nonmotor semptom"
+    }
+   ],
+   "sinyal": [
+    "el_onemli"
+   ],
+   "y25": {
+    "key": "y25-k2-24-epilepsi",
+    "sayfa": 10
+   },
+   "y26": null,
+   "duzeltme": [
+    {
+     "ham": "③ Nonmotor semptom (ayrı aşama gibi numaralanmış)",
+     "dogru": "Slayta göre motor ve nonmotor semptomlar birlikte ikinci aşamadır",
+     "gerekce": "Slayt s12: 'ikinci aşama ... iki ana grupta değerlendirilir: motor semptomlar ve motor olmayan (nonmotor) semptomlar'. Öğrencinin ①②③ numaralaması bununla tam örtüşmüyor; üçüncü aşama slayt metninde açıkça adlandırılmamış (şemada 'fokal başlayan bilateral tonik-klonik' kutusu)."
+    }
+   ],
+   "not_": null,
+   "puan": 8,
+   "oncelik": "C",
+   "vurgulu": [
+    "① farkındalık (Farkındalık korunmuş/bozulmuş yanında)",
+    "② → Motor semptom",
+    "③ → Nonmotor semptom"
+   ]
+  },
+  {
+   "id": "noro-s03-b05",
+   "pdf": "noro",
+   "sayfa": 3,
+   "bolge": "r1c2+r2c2",
+   "tur": "slayt",
+   "baslik": "ILAE 2017 – Jeneralize başlangıç: motor ve nonmotor (absans)",
+   "metin": "Jeneralize Başlangıç\nMotor semptom: Tonik-klonik, Klonik, Tonik, Miyoklonik, Miyoklonik-tonik-klonik, Miyoklonik-atonik, Atonik, Epileptik spazmlar\nNonmotor semptom (Absans): Tipik, Atipik, Miyoklonik, Göz kapağı miyoklonisi",
+   "el_yazisi": [
+    {
+     "metin": "çoğunda farkındalık bozuk. her iki hemisferdeki yaygın ağlardan",
+     "hedef": "Jeneralize Başlangıç (s18)",
+     "guven": "yuksek",
+     "alternatif": ""
+    },
+    {
+     "metin": "Tonik-klonik → devamlı kasılma ve kloni",
+     "hedef": "Tonik-klonik",
+     "guven": "yuksek",
+     "alternatif": ""
+    },
+    {
+     "metin": "Klonik → tüm vücutta ritmik sıçrama",
+     "hedef": "Klonik",
+     "guven": "yuksek",
+     "alternatif": ""
+    },
+    {
+     "metin": "Tonik → devamlı kasılma ve katılık.",
+     "hedef": "Tonik",
+     "guven": "yuksek",
+     "alternatif": ""
+    },
+    {
+     "metin": "Miyoklonik → ritmik olmayan ani sıçrama",
+     "hedef": "Miyoklonik",
+     "guven": "yuksek",
+     "alternatif": ""
+    },
+    {
+     "metin": "Miyoklonik-tonik-klonik: miyoklonik ile başlar, tonik-klonik'e dönüşür.",
+     "hedef": "Miyoklonik-tonik-klonik",
+     "guven": "yuksek",
+     "alternatif": ""
+    },
+    {
+     "metin": "Miyoklonik-atonik → miyoklonik sıçramayı takiben kas tonusunun azalması, düşme atakları (Lennox-Gastaut)",
+     "hedef": "Miyoklonik-atonik",
+     "guven": "yuksek",
+     "alternatif": ""
+    },
+    {
+     "metin": "Atonik → kas tonusu kaybolur.",
+     "hedef": "Atonik",
+     "guven": "yuksek",
+     "alternatif": ""
+    },
+    {
+     "metin": "ayrımında EEG !!!",
+     "hedef": "Tipik ve Atipik absans (parantezle)",
+     "guven": "yuksek",
+     "alternatif": ""
+    },
+    {
+     "metin": "Tipik → ani başlayan ve biten bilinç kaybı.",
+     "hedef": "Tipik absans",
+     "guven": "yuksek",
+     "alternatif": ""
+    },
+    {
+     "metin": "Atipik → tam bilinç kaybı olmayabilir, başlama bitiş net ayrılmaz.",
+     "hedef": "Atipik absans",
+     "guven": "yuksek",
+     "alternatif": ""
+    },
+    {
+     "metin": "Miyoklonik → 10-60 sn. miyoklonik sıçrama eşlikli",
+     "hedef": "Miyoklonik absans",
+     "guven": "orta",
+     "alternatif": "son kelime 'ettili' gibi görünüyor; bağlamla 'eşlikli' (slayt s20: miyoklonik sıçramaların eşlik ettiği)"
+    }
+   ],
+   "isaretler": [
+    {
+     "tur": "ok",
+     "hedef": "Jeneralize Başlangıç (el yazısından ok)"
+    },
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "'olmayan' (miyoklonik notunda)"
+    },
+    {
+     "tur": "kutu",
+     "hedef": "Tipik/Atipik parantezle gruplanmış"
+    },
+    {
+     "tur": "unlem",
+     "hedef": "ayrımında EEG !!!"
+    }
+   ],
+   "sinyal": [
+    "el_onemli"
+   ],
+   "y25": {
+    "key": "y25-k2-24-epilepsi",
+    "sayfa": 10
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "puan": 8,
+   "oncelik": "C",
+   "vurgulu": [
+    "'olmayan' (miyoklonik notunda)",
+    "Tipik/Atipik parantezle gruplanmış"
+   ]
+  },
+  {
+   "id": "noro-s02-b10",
+   "pdf": "noro",
+   "sayfa": 2,
+   "bolge": "r1c2",
+   "tur": "slayt",
+   "baslik": "Epileptogenez şeması",
+   "metin": "EPİLEPTOGENEZ: Başlangıç hasarı → 1. nöbet → Yapısal ve fonksiyonel değişiklikler → epilepsi (her aşamada Genetik ve Yaş-cins etkisi)",
+   "el_yazisi": [],
+   "isaretler": [],
+   "sinyal": [],
+   "y25": {
+    "key": "y25-k2-24-epilepsi",
+    "sayfa": 25
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "puan": 0,
+   "oncelik": "C",
+   "vurgulu": []
+  },
+  {
+   "id": "noro-s02-b13",
+   "pdf": "noro",
+   "sayfa": 2,
+   "bolge": "r2c2",
+   "tur": "slayt",
+   "baslik": "Epilepsili hastanın değerlendirilmesi",
+   "metin": "EPİLEPSİLİ HASTANIN DEĞERLENDİRİLMESİ\n• Anamnez ve muayene\n• Laboratuvar incelemeleri\n• Elektroensefalografi (EEG)\n• Uzun süreli video-EEG monitorizasyon\n• Nöropsikolojik Değerlendirme\n• Bilgisayarlı Tomografi (BT) ve Magnetik Rezonans Görüntüleme (MRG)",
+   "el_yazisi": [],
+   "isaretler": [],
+   "sinyal": [],
+   "y25": {
+    "key": "y25-k2-24-epilepsi",
+    "sayfa": 38
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "puan": 0,
+   "oncelik": "C",
+   "vurgulu": []
+  },
+  {
+   "id": "noro-s03-b06",
+   "pdf": "noro",
+   "sayfa": 3,
+   "bolge": "r1c3",
+   "tur": "slayt",
+   "baslik": "ILAE 2017 – Başlangıcı belirlenemeyen / sınıflandırılamayan",
+   "metin": "Belirlenemeyen\nMotor semptom: Tonik-klonik, Epileptik spazmlar\nNonmotor semptom (Absans): Duraklama\nSınıflandırılamayan",
+   "el_yazisi": [],
+   "isaretler": [],
+   "sinyal": [],
+   "y25": {
+    "key": "y25-k2-24-epilepsi",
+    "sayfa": 10
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "puan": 0,
+   "oncelik": "C",
+   "vurgulu": []
+  }
+ ],
+ "ogrenci_sorulari": [
+  {
+   "id": "noro-s02-b08",
+   "pdf": "noro",
+   "sayfa": 2,
+   "bolge": "r2c1",
+   "tur": "cikmis_soru",
+   "baslik": "Epilepsi nöbet tetikleyicileri",
+   "metin": "Nöbet tetikleyicileri için aşağıdakilerden hangisi ve ya hangileri doğrudur?\n1 Hipoglisemi / 2 Alkol kullanımı / 3 Kafa travması / 4 Merkezi sinir sistemi enfeksiyonları / 5 Hepsi",
+   "el_yazisi": [
+    {
+     "metin": "(Hipoglisemi) ✓ = açlık",
+     "hedef": "Hipoglisemi şıkkı",
+     "guven": "yuksek",
+     "alternatif": ""
+    }
+   ],
+   "isaretler": [
+    {
+     "tur": "pembe",
+     "hedef": "sorunun tamamı"
+    },
+    {
+     "tur": "daire",
+     "hedef": "5 Hepsi"
+    },
+    {
+     "tur": "karalama",
+     "hedef": "1–4 şıklarının yanında kırmızı onay işaretleri"
+    }
+   ],
+   "sinyal": [
+    "cikmis",
+    "daire"
+   ],
+   "y25": {
+    "key": "y25-k2-24-epilepsi",
+    "sayfa": 5
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "cikmis": {
+    "kok": "Epilepsi nöbet tetikleyicileri için aşağıdakilerden hangisi ya da hangileri doğrudur?",
+    "siklar": [
+     "A) Hipoglisemi",
+     "B) Alkol kullanımı",
+     "C) Kafa travması",
+     "D) Merkezi sinir sistemi enfeksiyonları",
+     "E) Hepsi"
+    ],
+    "ogrenci_cevap": "E) Hepsi",
+    "banka_id": "b3d289432ab3",
+    "banka_yil": "2020-2021",
+    "banka_dogru": "E",
+    "tutarli": true,
+    "not": "Banka 'hepsi' şıklı; slayt s05 metabolik/toksik neden, kafa travması, serebrovasküler hastalığı tetikleyici sayar."
+   },
+   "bagli_birim": "noro-s02-b06",
+   "benzerlik": 0.713
+  }
+ ],
+ "banka": [
+  {
+   "id": "b3d289432ab3",
+   "ders": "k2-24",
+   "yillar": [
+    "2020-2021"
+   ],
+   "kok": "Epilepsi nöbet tetikleyicileri için aşağıdakilerden hangisi ya da hangileri doğrudur?",
+   "dogru": "Hepsi",
+   "kopyalar": [],
+   "birim": "noro-s02-b06",
+   "benzerlik": 0.61,
+   "kapsandi": true,
+   "notta_yapistirilmis": true
+  },
+  {
+   "id": "d3-k2-nor-009",
+   "ders": "k2-24",
+   "yillar": [
+    "2021-2026"
+   ],
+   "kok": "Fokal başlangıçlı motor bir epileptik nöbetin hemen sonrasında, nöbetin gerçekleştiği ekstremitelerde geçici süreyle ortaya çıkan parezi veya pleji tablosuna ne ad verilir?",
+   "dogru": "Todd paralizisi",
+   "kopyalar": [],
+   "birim": "noro-s02-b09",
+   "benzerlik": 0.595,
+   "kapsandi": false,
+   "notta_yapistirilmis": false
+  },
+  {
+   "id": "past-q-I_SKENDERUN_TI_Mu_du_rlu_g_u_ne0__1__230709_230251-58",
+   "ders": "k2-24",
+   "yillar": [
+    "Geçmiş Yıllar Çıkmışı (Arşiv)"
+   ],
+   "kok": "Aşağıdakilerden hangisi dirençli status epileptikus tedavisinde uygulanabilecek intravenöz antiepileptiklerden biri değildir?",
+   "dogru": "Pregabalin",
+   "kopyalar": [],
+   "birim": "noro-s02-b17",
+   "benzerlik": 0.596,
+   "kapsandi": false,
+   "notta_yapistirilmis": false
+  },
+  {
+   "id": "q-2__kurul_-11",
+   "ders": "k2-24",
+   "yillar": [
+    "Geçmiş Yıllar Çıkmışı (Arşiv)"
+   ],
+   "kok": "Fokal motor bir epileptik nöbetin hemen ardından, nöbetin görüldüğü ekstremitelerde dakikalar-saatler içinde tamamen düzelen geçici güçsüzlük tablosuna ne ad verilir?",
+   "dogru": "Todd paralizisi",
+   "kopyalar": [],
+   "birim": "noro-s02-b09",
+   "benzerlik": 0.617,
+   "kapsandi": true,
+   "notta_yapistirilmis": false
+  }
+ ]
+}

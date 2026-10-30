@@ -1,0 +1,552 @@
+{
+ "ders": "k2-23",
+ "kod": "2s06",
+ "brans": "Psikiyatri",
+ "konu": "Cinsel Kimlik Bozuklukları",
+ "kaynak": "Geçmiş yıl (2025-26) öğrenci derleme notu: psk3.2",
+ "y25": {
+  "key": "y25-k2-23-cinsel-kimlik-bozukluklari",
+  "sayfalar": [
+   3,
+   4,
+   5,
+   10,
+   11,
+   15,
+   17,
+   18,
+   21,
+   24
+  ]
+ },
+ "sayac": {
+  "birim": 10,
+  "A": 4,
+  "B": 0,
+  "C": 6,
+  "ogrenci_sorusu": 2,
+  "banka": 6,
+  "banka_kapsandi": 4
+ },
+ "birimler": [
+  {
+   "id": "psk-s09-b03",
+   "pdf": "psk",
+   "sayfa": 9,
+   "bolge": "r1c1",
+   "tur": "slayt",
+   "baslik": "Cinsel Yönelim – her üç durum da bozukluk değil; Transseksüellik",
+   "metin": "Cinsel Yönelim\nHer üç durum da bozukluk değildir.\nTransseksüellik, kişinin cinsiyetini değiştirmesi gerektiğine, ruhsal ve bedensel olarak diğer cinsiyete sahip olması gerektiğine inanma şeklinde tanımlanmaktadır. (y25 s08)\nCinsel kimlik bozukluğu şeklinde adlandırılan bu durumdaki kişiler, sahip oldukları biyolojik cinsiyetten sürekli bir biçimde ve yoğun sıkıntı duyarlar. Karşı … (y25 s08)",
+   "el_yazisi": [
+    {
+     "metin": "hetero, bi, homo",
+     "hedef": "Cinsel Yönelim başlığı: üç durum = heteroseksüel, biseksüel, homoseksüel (hiçbiri bozukluk değil)",
+     "guven": "yuksek",
+     "alternatif": ""
+    }
+   ],
+   "isaretler": [
+    {
+     "tur": "pembe",
+     "hedef": "Her üç durum da bozukluk değildir."
+    },
+    {
+     "tur": "yildiz",
+     "hedef": "Her üç durum da bozukluk değildir. (kırmızı daire içinde yıldız)"
+    },
+    {
+     "tur": "daire",
+     "hedef": "yıldız çevresi"
+    },
+    {
+     "tur": "yesil",
+     "hedef": "Transseksüellik, kişinin cinsiyetini değiştirmesi gerektiğine, ruhsal ve bedensel olarak diğer cinsiyete sahip olması gerektiğine inanma şeklinde"
+    }
+   ],
+   "sinyal": [
+    "cikmis",
+    "el_onemli",
+    "sari",
+    "yildiz"
+   ],
+   "y25": {
+    "key": "y25-k2-23-cinsel-kimlik-bozukluklari",
+    "sayfa": 5
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "ogrenci_sorulari": [
+    "psk-s09-b05"
+   ],
+   "banka_cikmis": [
+    "past-q-I_SKENDERUN_TI_Mu_du_rlu_g_u_ne0__1__230709_230251-73",
+    "q-25-26_d_nem_3_kurul_2-82-cs6"
+   ],
+   "puan": 100,
+   "oncelik": "A",
+   "vurgulu": [
+    "Her üç durum da bozukluk değildir.",
+    "Her üç durum da bozukluk değildir. (kırmızı daire içinde yıldız)",
+    "Transseksüellik, kişinin cinsiyetini değiştirmesi gerektiğine, ruhsal ve bedensel olarak diğer cinsiyete sahip olması gerektiğine inanma şeklinde",
+    "yıldız çevresi"
+   ]
+  },
+  {
+   "id": "psk-s09-b02",
+   "pdf": "psk",
+   "sayfa": 9,
+   "bolge": "r1c1",
+   "tur": "slayt",
+   "baslik": "Cinsiyet Kimliği (Gender Identity)",
+   "metin": "Cinsiyet Kimliği (Gender Identity): Bireyin kendi bedenini ve benliğini belirli bir cinsiyet içinde algılayışı, kabullenişidir.\nKişinin içinde hissettiği kadın veya erkek olma duygusunun davranışlar aracılığıyla dışa vuran şeklidir.\n2-3 yaşlarında tamamlanan cinsiyet kimliği süreci, genellikle biyolojik cinsiyetle uyumluluk gösterir.",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "yesil",
+     "hedef": "Bireyin kendi bedenini ve benliğini belirli bir cinsiyet içinde algılayışı, kabullenişidir"
+    },
+    {
+     "tur": "yesil",
+     "hedef": "2-3 yaşlarında tamamlanan cinsiyet kimliği süreci, genellikle biyolojik cinsiyetle uyumluluk"
+    }
+   ],
+   "sinyal": [
+    "cikmis",
+    "sari"
+   ],
+   "y25": {
+    "key": "y25-k2-23-cinsel-kimlik-bozukluklari",
+    "sayfa": 4
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "ogrenci_sorulari": [
+    "psk-s09-b04"
+   ],
+   "banka_cikmis": [
+    "780248287650",
+    "k1-2020-2021-b-q003"
+   ],
+   "puan": 85,
+   "oncelik": "A",
+   "vurgulu": [
+    "2-3 yaşlarında tamamlanan cinsiyet kimliği süreci, genellikle biyolojik cinsiyetle uyumluluk",
+    "Bireyin kendi bedenini ve benliğini belirli bir cinsiyet içinde algılayışı, kabullenişidir"
+   ]
+  },
+  {
+   "id": "psk-s09-b01",
+   "pdf": "psk",
+   "sayfa": 9,
+   "bolge": "r1c1",
+   "tur": "slayt",
+   "baslik": "Cinsel Uyum Sorunları – Cinsiyet",
+   "metin": "Cinsel Uyum Sorunları\nCinsiyet: Bizi kadın ya da erkek yapan biyolojik özellikleri ifade eder. Cinsiyetlerin üreme organları, üremede rolleri farklı olmakla birlikte işlevleri birbirini tamamlayıcıdır.",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "yesil",
+     "hedef": "Bizi kadın ya da erkek yapan biyolojik özellikleri ifade eder"
+    }
+   ],
+   "sinyal": [
+    "cikmis",
+    "sari"
+   ],
+   "y25": {
+    "key": "y25-k2-23-cinsel-kimlik-bozukluklari",
+    "sayfa": 3
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "puan": 50,
+   "oncelik": "A",
+   "vurgulu": [
+    "Bizi kadın ya da erkek yapan biyolojik özellikleri ifade eder"
+   ]
+  },
+  {
+   "id": "psk-s09-b07",
+   "pdf": "psk",
+   "sayfa": 9,
+   "bolge": "r2c1",
+   "tur": "slayt",
+   "baslik": "Cerrahi Cinsiyet Değiştirme",
+   "metin": "CERRAHİ CİNSİYET DEĞİŞTİRME\nEn az 2 yıl kendi cinsiyetinden rahatsız olmalı ve karşı cinste yaşama isteği duymalıdır.\nEn az 1 yıldır karşı cins rolünde yaşıyor olmalıdır.\nCinsiyet değiştirme ameliyatı, hastayı en az 6 aydır tanıyan bir hekim tarafından önerilmelidir.",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "üç satırın tamamı (2 yıl; 1 yıldır karşı cins rolünde; en az 6 aydır tanıyan hekim)"
+    }
+   ],
+   "sinyal": [
+    "cikmis",
+    "el_onemli"
+   ],
+   "y25": {
+    "key": "y25-k2-23-cinsel-kimlik-bozukluklari",
+    "sayfa": 11
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "puan": 48,
+   "oncelik": "A",
+   "vurgulu": [
+    "üç satırın tamamı (2 yıl; 1 yıldır karşı cins rolünde; en az 6 aydır tanıyan hekim)"
+   ]
+  },
+  {
+   "id": "psk-s09-b12",
+   "pdf": "psk",
+   "sayfa": 9,
+   "bolge": "r2c2",
+   "tur": "slayt",
+   "baslik": "Parafililer – tanım ve tedavi",
+   "metin": "PARAFİLİLER\nCinsel uyarılma ve orgazm için, alışılmadık nesneler, eylemler veya durumları içeren tekrarlayıcı ve yoğun cinsel dürtü, fantezi veya davranışların zorunlu olması ile karakterize bozukluklardır.\nParafilileri tedavi etmek zordur çünkü parafilik davranışlar haz verici niteliktedir.\nParafililer tamamen ortadan kaldırılması değil kontrol altına alınması gereken kronik durumlar olarak algılanmalıdır.",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "pembe",
+     "hedef": "Parafilileri tedavi etmek zordur çünkü parafilik davranışlar haz verici niteliktedir."
+    },
+    {
+     "tur": "pembe",
+     "hedef": "Parafililer tamamen ortadan kaldırılması değil kontrol altına alınması gereken kronik durumlar olarak algılanmalıdır."
+    }
+   ],
+   "sinyal": [
+    "sari"
+   ],
+   "y25": {
+    "key": "y25-k2-23-cinsel-kimlik-bozukluklari",
+    "sayfa": 24
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "puan": 10,
+   "oncelik": "C",
+   "vurgulu": [
+    "Parafililer tamamen ortadan kaldırılması değil kontrol altına alınması gereken kronik durumlar olarak algılanmalıdır.",
+    "Parafilileri tedavi etmek zordur çünkü parafilik davranışlar haz verici niteliktedir."
+   ]
+  },
+  {
+   "id": "psk-s09-b06",
+   "pdf": "psk",
+   "sayfa": 9,
+   "bolge": "r2c1",
+   "tur": "slayt",
+   "baslik": "Hormonal Cinsiyet Değiştirme",
+   "metin": "HORMONAL CİNSİYET DEĞİŞTİRME\nEn az 2 yıl kendi cinsiyetinden rahatsız olmalı ve karşı cinste yaşama isteği duymalıdır.\nHormon tedavisi hastayı en az 3 aydır tanıyan bir hekim tarafından önerilmelidir.",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "En az 2 yıl"
+    },
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "en az 3 aydır tanıyan bir hekim tarafından önerilmelidir"
+    }
+   ],
+   "sinyal": [
+    "el_onemli"
+   ],
+   "y25": {
+    "key": "y25-k2-23-cinsel-kimlik-bozukluklari",
+    "sayfa": 10
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "puan": 8,
+   "oncelik": "C",
+   "vurgulu": [
+    "En az 2 yıl",
+    "en az 3 aydır tanıyan bir hekim tarafından önerilmelidir"
+   ]
+  },
+  {
+   "id": "psk-s09-b08",
+   "pdf": "psk",
+   "sayfa": 9,
+   "bolge": "r2c1",
+   "tur": "slayt",
+   "baslik": "Cinsel Yanıt Döngüsü (Kaplan)",
+   "metin": "CİNSEL YANIT DÖNGÜSÜ\nA) GENİTAL VAZOKONJESYON (vaginal lubrikasyon, penil ereksiyon) M&J uyarılma ve plato evrelerine denk, parasempatik inervasyon\nB) KONTRAKSİYON AŞAMASI; orgazm sağlayan refleks, klonik kas kontraksiyonları Sempatik inervasyon",
+   "el_yazisi": [],
+   "isaretler": [],
+   "sinyal": [],
+   "y25": {
+    "key": "y25-k2-23-cinsel-kimlik-bozukluklari",
+    "sayfa": 15
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "puan": 0,
+   "oncelik": "C",
+   "vurgulu": []
+  },
+  {
+   "id": "psk-s09-b09",
+   "pdf": "psk",
+   "sayfa": 9,
+   "bolge": "r1c3",
+   "tur": "slayt",
+   "baslik": "DSM-5 Cinsel İşlev Bozuklukları",
+   "metin": "DSM-5 Cinsel İşlev Bozuklukları\n1. Erkekte Düşük Cinsel İstek Bozukluğu\n2. Kadında Cinsel İlgi/Uyarılma Bozukluğu\n3. Erkekte Sertleşme Bozukluğu\n4. Kadında Orgazm Bozukluğu\n5. Erken Boşalma\n6. Geç Boşalma\n7. Cinsel Organlarda-Pelviste Ağrı/İçe Girme Bozukluğu (Disparoni-Vajinismus)\n8. Genel Tıbbi Duruma Bağlı CİB\n9. Maddenin/İlacın Yol Açtığı CİB",
+   "el_yazisi": [],
+   "isaretler": [],
+   "sinyal": [],
+   "y25": {
+    "key": "y25-k2-23-cinsel-kimlik-bozukluklari",
+    "sayfa": 17
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "puan": 0,
+   "oncelik": "C",
+   "vurgulu": []
+  },
+  {
+   "id": "psk-s09-b10",
+   "pdf": "psk",
+   "sayfa": 9,
+   "bolge": "r1c3",
+   "tur": "slayt",
+   "baslik": "Etyoloji – Yatkınlık Yaratıcı Etkenler",
+   "metin": "Etyoloji-Yatkınlık Yaratıcı Etkenler\nYetiştirilme tarzı\nBozuk aile ilişkileri\nYetersiz ya da yanlış cinsel bilgiler\nTravmatik cinsel deneyim\nPsikoseksüel roldeki güvensizlik\nİntrapsişik dinamik nedenler",
+   "el_yazisi": [],
+   "isaretler": [],
+   "sinyal": [],
+   "y25": {
+    "key": "y25-k2-23-cinsel-kimlik-bozukluklari",
+    "sayfa": 18
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "puan": 0,
+   "oncelik": "C",
+   "vurgulu": []
+  },
+  {
+   "id": "psk-s09-b11",
+   "pdf": "psk",
+   "sayfa": 9,
+   "bolge": "r2c2",
+   "tur": "slayt",
+   "baslik": "Erektil bozuklukta organik – psikojenik ayrımı",
+   "metin": "KARAKTERİSTİĞİ / ORGANİK / PSİKOJENİK\nBaşlangıç: Yavaş seyir / Akut\nKoşulları: Yaygın / Durumsal\nGelişimi: Sabit / Değişken\nKoit dışında ereksiyon: Yetersiz / Yeterli\nPsikoseksüel Sorunlar: Sekonder / Primer\nPartner Sorunları: Sekonder / Primer\nAnksiyete ya da korku: Sekonder / Primer",
+   "el_yazisi": [],
+   "isaretler": [],
+   "sinyal": [],
+   "y25": {
+    "key": "y25-k2-23-cinsel-kimlik-bozukluklari",
+    "sayfa": 21
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "puan": 0,
+   "oncelik": "C",
+   "vurgulu": []
+  }
+ ],
+ "ogrenci_sorulari": [
+  {
+   "id": "psk-s09-b04",
+   "pdf": "psk",
+   "sayfa": 9,
+   "bolge": "r1c2",
+   "tur": "cikmis_soru",
+   "baslik": "Cinsellikte temel kavramlar – yanlış: cinsel kimlik = biyolojik özellikler",
+   "metin": "Cinsellikte temel kavramlarla ilgili verilen aşağıdaki bilgilerden hangisi yanlıştır?\n1 Cinsel kimlik, kişiyi kadın ya da erkek yapan biyolojik özellikleri ifade eder. ☑\n2 Cinsiyet kimliği süreci, 2-3 yaşlarında tamamlanır.\n3 Heteroseksüel cinsel yönelim, kişinin karşı cinsiyetten kişilere karşı cinsel ilgi duymasıdır.\n4 Transseksüellik, kişinin ruhsal ve bedensel olarak diğer cinsiyete sahip olması gerektiğine dair inancıdır.\n5 Homoseksüel cinsel yönelim, bozukluk olarak tanımlanmamaktadır.",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "pembe",
+     "hedef": "soru kökü ve 1. satır"
+    },
+    {
+     "tur": "daire",
+     "hedef": "1. satır yanında onay kutusu ☑; 2–5 satırlar mavi tik (doğru)"
+    }
+   ],
+   "sinyal": [
+    "cikmis"
+   ],
+   "y25": {
+    "key": "y25-k2-23-cinsel-kimlik-bozukluklari",
+    "sayfa": 3
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "cikmis": {
+    "kok": "Cinsellikte temel kavramlarla ilgili verilen aşağıdaki bilgilerden hangisi yanlıştır?",
+    "siklar": [
+     "1) Cinsel kimlik, kişiyi kadın ya da erkek yapan biyolojik özellikleri ifade eder.",
+     "2) Cinsiyet kimliği süreci, 2-3 yaşlarında tamamlanır.",
+     "3) Heteroseksüel cinsel yönelim, kişinin karşı cinsiyetten kişilere karşı cinsel ilgi duymasıdır.",
+     "4) Transseksüellik, kişinin ruhsal ve bedensel olarak diğer cinsiyete sahip olması gerektiğine dair inancıdır.",
+     "5) Homoseksüel cinsel yönelim, bozukluk olarak tanımlanmamaktadır."
+    ],
+    "ogrenci_cevap": "1",
+    "banka_id": "780248287650",
+    "banka_yil": "2020-2021 Kurul 2",
+    "banka_dogru": "A",
+    "tutarli": true,
+    "not": "Bankadaki sürümde A–D aynı, E şıkkı farklı ('Cinsel rol, toplumun kadın ve erkeklere yüklediği rol…'); öğrencinin kopyasında 5. satır 'Homoseksüel cinsel yönelim bozukluk olarak tanımlanmamaktadır'. Doğru cevap her ikisinde 1/A: biyolojik özellikler 'cinsiyet' tanımıdır (y25 s03)."
+   },
+   "bagli_birim": "psk-s09-b02",
+   "benzerlik": 0.86
+  },
+  {
+   "id": "psk-s09-b05",
+   "pdf": "psk",
+   "sayfa": 9,
+   "bolge": "r1c2",
+   "tur": "cikmis_soru",
+   "baslik": "Cinsellikle ilgili yanlış: transeksüel = kendi cinsine ilgi",
+   "metin": "18) Hangisi cinsellikle ilgili yanlıştır\nCevap: Transseksüel kişilerin kendi cinsiyetinden kişilere ilgi duyması",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "pembe",
+     "hedef": "soru ve cevap satırı"
+    }
+   ],
+   "sinyal": [
+    "cikmis",
+    "tekrar"
+   ],
+   "y25": {
+    "key": "y25-k2-23-cinsel-kimlik-bozukluklari",
+    "sayfa": 8
+   },
+   "y26": null,
+   "duzeltme": [
+    {
+     "ham": "Transeksüel",
+     "dogru": "Transseksüel",
+     "gerekce": "Slayt yazımı 'Transseksüellik'"
+    }
+   ],
+   "not_": null,
+   "cikmis": {
+    "kok": "Hangisi cinsellikle ilgili yanlıştır? (öğrencinin kısa yazımı; şıklar yazılmamış)",
+    "siklar": [
+     "Cevap: Transeksüel kişilerin kendi cinsiyetinden kişilere ilgi duyması"
+    ],
+    "ogrenci_cevap": "Transeksüel kişilerin kendi cinsiyetinden kişilere ilgi duyması",
+    "banka_id": "past-q-I_SKENDERUN_TI_Mu_du_rlu_g_u_ne0__1__230709_230251-73",
+    "banka_yil": "Geçmiş Yıllar Çıkmışı (Arşiv), Kurul 2",
+    "banka_dogru": "E) Transseksüellik kişinin kendi cinsiyetinden olan kişilere karşı cinsel ilgi duymasıdır.",
+    "tutarli": true,
+    "not": "Aynı yanlış önerme 2025-26 Kurul 2'de de soruldu: q-25-26_d_nem_3_kurul_2-82-cs6 (doğru B 'Transseksüalite, kişinin kendi cinsinden bireylere cinsel ilgi duymasıdır'). Kendi cinsine ilgi = homoseksüel yönelim (y25 s05); transseksüellik = diğer cinsiyete sahip olma inancı (y25 s08). Soru numarası 18 hangi sınava ait belirlenemedi."
+   },
+   "bagli_birim": "psk-s09-b03",
+   "benzerlik": 0.67
+  }
+ ],
+ "banka": [
+  {
+   "id": "ef485805d76d",
+   "ders": "k2-23",
+   "yillar": [
+    "2020-2021",
+    "2020-2021",
+    "2020-2021"
+   ],
+   "kok": "Aşağıdakilerden hangisi LGBT (lezbiyen, gey, biseksüel, transseksüel) bireylerde sağlıkla ilgili risk faktörlerindendir?",
+   "dogru": "Alkol-madde kötüye kullanımı",
+   "kopyalar": [],
+   "birim": "psk-s09-b03",
+   "benzerlik": 0.588,
+   "kapsandi": false,
+   "notta_yapistirilmis": false
+  },
+  {
+   "id": "780248287650",
+   "ders": "k2-23",
+   "yillar": [
+    "2020-2021"
+   ],
+   "kok": "Cinsellikte temel kavramlarla ilgili verilen aşağıdaki bilgilerden hangisi yanlıştır?",
+   "dogru": "Cinsel kimlik, kişiyi kadın ya da erkek yapan biyolojik özellikleri ifade eder.",
+   "kopyalar": [],
+   "birim": "psk-s09-b02",
+   "benzerlik": 0.783,
+   "kapsandi": true,
+   "notta_yapistirilmis": true
+  },
+  {
+   "id": "past-q-I_SKENDERUN_TI_Mu_du_rlu_g_u_ne0__1__230709_230251-73",
+   "ders": "k2-23",
+   "yillar": [
+    "Geçmiş Yıllar Çıkmışı (Arşiv)"
+   ],
+   "kok": "Aşağıda cinsellikle ilgili verilen bilgilerden hangisi doğru değildir?",
+   "dogru": "Transseksüellik kişinin kendi cinsiyetinden olan kişilere karşı cinsel ilgi duymasıdır.",
+   "kopyalar": [],
+   "birim": "psk-s09-b03",
+   "benzerlik": 0.755,
+   "kapsandi": true,
+   "notta_yapistirilmis": true
+  },
+  {
+   "id": "past-1790877044889-561345",
+   "ders": "k2-23",
+   "yillar": [
+    "2021-2022",
+    "Geçmiş Yıllar Çıkmışı (Arşiv)"
+   ],
+   "kok": "Transseksüalite ile ilgili aşağıdaki ifadelerden hangisi doğrudur?",
+   "dogru": "Transseksüalitenin temelleri 3-5 yaşlarında atılır",
+   "kopyalar": [
+    "q-KURUL_2_C_IKMIS__3-51"
+   ],
+   "birim": "psk-s09-b03",
+   "benzerlik": 0.585,
+   "kapsandi": false,
+   "notta_yapistirilmis": false
+  },
+  {
+   "id": "k1-2020-2021-b-q003",
+   "ders": "k2-23",
+   "yillar": [
+    "2020-2021"
+   ],
+   "kok": "İnsanın biyolojik olarak dişi ya da erkek olmasını belirleyen kromozomları, iç ve dış genital organları, hormonal yapıyı ve ikincil seks özelliklerini içeren, kişinin biyolojik cinsel özellikleri ne olarak tanımlanır?",
+   "dogru": "Cinsel kimlik",
+   "kopyalar": [],
+   "birim": "psk-s09-b02",
+   "benzerlik": 0.763,
+   "kapsandi": true,
+   "notta_yapistirilmis": false
+  },
+  {
+   "id": "q-25-26_d_nem_3_kurul_2-82-cs6",
+   "ders": "k2-23",
+   "yillar": [
+    "2025-2026"
+   ],
+   "kok": "Cinsel kimlik ve cinsel uyum sorunları ile ilgili aşağıdakilerden hangisi yanlıştır?",
+   "dogru": "Transseksüalite, kişinin kendi cinsinden bireylere cinsel ilgi duymasıdır",
+   "kopyalar": [],
+   "birim": "psk-s09-b03",
+   "benzerlik": 0.754,
+   "kapsandi": true,
+   "notta_yapistirilmis": false
+  }
+ ]
+}

@@ -1,20 +1,23 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 595,
-  "baslik": "Yeni: Soru dışa aktarıcı (PDF · Word · PowerPoint)",
+  "onem": 596,
+  "baslik": "Yeni: \"Öğrenciler buraya çalıştı\" — geçen yılın öğrenci notlarıyla Kurul 2 dersleri güçlendirildi",
   "maddeler": [
-    "Soru çöz › Soru dışa aktarıcı: çıkmış, örnek, sesli çözücü, hoca üslubu, hocanın sorabileceği ve Öğren sorularını tek belgede birleştir.",
-    "Kurul, ders, konu, yıl, tür ve zorlukla süz; soruları tek tek seç ya da rastgele N soru çek.",
-    "Sayfa başına 1-2-4-8 soru ya da iki sütun akış; 6 tasarım modu (sınav kitapçığı, modern renkli, kart, çalışma kâğıdı…).",
-    "Kenar boşluğu, sayfa kenarlığı, yazı tipi, punto, satır aralığı ve ders/konu/yıla göre renklendirme ayarlanabilir.",
-    "Çözümler gizlenebilir, doğru şık işaretli gelebilir, sorunun altına, sayfa altına, her sayfanın ardına ya da belgenin sonuna eklenebilir; cevap anahtarı ve cevap kâğıdı da var."
+    "Geçen yılın Kurul 2 öğrenci derleme notları (Psikiyatri, Nöroloji, Tıbbi Genetik, FTR) sayfa sayfa okundu; en çok çalışılan ve çıkmışta sorulan yerler her ders için belirlendi.",
+    "Sınav için en önemliler listesinde ve sesli derste bu yerler \"Öğrenciler buraya çalıştı\" rozetiyle işaretlendi; maddeyi açınca geçen yılın öğrenci notu görünür.",
+    "Nörolojik Muayene: rijidite ve spastisite tanımı, derin tendon refleksi, fasikülasyon, klonus, intensiyonel tremor ve allodini anlatıma eklendi.",
+    "Bilinç Bozukluğu Olan Hastaya Yaklaşım: Glasgow koma skalası hesap örnekleri, somnolans ve deliryum tanımı eklendi; örnek sorular 15'ten 54'e çıktı.",
+    "Nörolojik Hastaya Yaklaşım ve Beyin-İskelet Sistemi Gelişimi Genetiği: gözlem bulguları ve HOX soruları eklendi."
   ],
   "eklenen": [
-    "Soru dışa aktarıcı sayfası (/sorular/disa-aktar)"
+    "Öğrenci önem rozeti (sesli ders + en önemliler)",
+    "Ders başına geçmiş yıl öğrenci önem belgeleri (içerik hattı için)"
   ],
   "degisen": [
-    "PDF oluştur sayfasında soru indirme bağlantısı"
+    "k2-01, k2-02, k2-05 sesli ders metni ve sesi; k2-01/02/05/08 örnek soruları ve önem listeleri"
   ],
-  "duzeltilen": [],
+  "duzeltilen": [
+    "Örnek sorularda doğru şıkkı ele veren uzunluk ipuçları ve kökte \"derste\" ifadeleri"
+  ],
   "silinen": []
 }

@@ -1,0 +1,60 @@
+{
+ "ders": "k2-18",
+ "ozet": "Dersin sınav çekirdeği bazal ganglion devresinin çıkış çekirdeği (GPi/SNr; 4 kayıt), modülatör nörotransmiter asetilkolin (3 kayıt, 2022-23, 2023, arşiv) ve Parkinson istirahat tremoru (2 kayıt) üzerinedir. Öğrenciler hareket bozukluklarını (tremor, kore, atetoz, distoni, hemiballismus) ayrıntılı el notlarıyla işlemiş, hemiballismusun yanına 'çıkmış' yazmış. Profil bu konuda mekanizma sorusu ağırlıklı (%71): devrede bir halkanın adı ya da etkisi sorulur.",
+ "temalar": [
+  {"tema": "Çıkış çekirdeği GPi/SNr ve direkt-indirekt yol",
+   "oncelik": "A", "birimler": ["noro-s13-b04", "noro-s13-b01"],
+   "kanit": "4 kayıt: 3b0feecd9a0d (2020-21, 'eferent çıkış çekirdeği → GPi/SNr', notta yapıştırılmış noro-s13-b05), q-2__kurul_-13 (arşiv, 'başlıca efferent çekirdek → GPi'), d3-k2-nor-003 (2021-26, 'striatumdan gelen bilgiyi talamusa (VA/VL) projekte eden inhibitör efferent merkez → GPi'). Devre şemasına el notları: 'striatum → afferent (girdi)', 'Gpi/SNr ↳ çıkış/efferent', 'Gpe → kendi inhibe edici etkisi inhibe!', talamus → korteks oku indirekt yolda çarpılı.",
+   "anlatim": "Girdi (striatum), ara (GPe, STN) ve çıkış (GPi/SNr) çekirdekleri adlandırılmalı; direkt yolda striatumun GPi'yi inhibe etmesiyle talamusun serbest kalıp korteksi uyardığı, indirekt yolda GPe → STN → GPi üzerinden talamusun daha çok baskılandığı adım adım anlatılmalı. Yapı listesi (striatum: putamen, kaudat, ventral striatum; GP eksternus-internus; SN pars kompakta-retikülata; STN = korpus Luysii) bu temaya bağlanmalı.",
+   "soru_payi": 30,
+   "soru_tipleri": ["bazal ganglionların çıkış çekirdeği → GPi/SNr (çeldirici kaudat, putamen, talamus, GPe)", "mekanizma: direkt yol etkinleşince talamus ve korteks ne olur", "girdi çekirdeği → striatum; ara çekirdek → STN/GPe"]},
+  {"tema": "Hareket bozuklukları: tremor, kore, atetoz, distoni, hemiballismus; Parkinson istirahat tremoru",
+   "oncelik": "A", "birimler": ["noro-s13-b09"],
+   "kanit": "2 kayıt: past-1790877039271-371364 (2022-23, 'Parkinson'daki tipik tremor → istirahat tremoru') ve d3-k2-nor-012 (2021-26, 'istirahatte en belirgin, istemli hareketle ve uykuda kaybolur'). Hemiballismus yanında el yazısıyla 'çıkmış'; notta hemiballismus sorusu (bankada bulunamadı). Her hareket için el notu (tremor 'hap yapma/para sayma', kore 'Sydenham → ARA majör belirtisi, Huntington → OD', atetoz 'kernikterus', distoni 'spazmodik tortikolis, en çok SCM'). Yıldız.",
+   "anlatim": "Beş hareket tanımı ve birer örnek hastalıkla verilmeli; hemiballismusun vücut yarısında, proksimalden başlayan, ani, fırlatıcı ve geniş amplitüdlü olduğu ayrı vurgulanmalı. Parkinson tremorunun istirahat tremoru olduğu, istemli hareket ve uykuda kaybolduğu, dudak-çene-dilde olabileceği ama başı genellikle tutmadığı eklenmeli.",
+   "soru_payi": 30,
+   "soru_tipleri": ["tanım → ad: vücut yarısında proksimalden başlayan fırlatıcı istemsiz hareket → hemiballismus (çeldirici kore, atetoz, distoni, tremor)", "Parkinson tremoru → istirahat tremoru; doğru ifade: istemli harekette ve uykuda kaybolur", "örnek → hareket: Sydenham → kore; kernikterus → atetoz; spazmodik tortikolis → distoni"]},
+  {"tema": "Bazal ganglion nörotransmiterleri ve motor işlevleri: ACh modülatör, GABA inhibitör, glutamat eksitatör, D1 uyarıcı / D2 bastırıcı",
+   "oncelik": "A", "birimler": ["noro-s13-b02"],
+   "kanit": "'Modülatör nörotransmiter → asetilkolin' 3 kayıtta (past-1790877043386-198521: 2022-23, 2023, arşiv; q-2__kurul_-13-cs2 arşiv), notta yapıştırılmış (noro-s13-b03). Beş nörotransmiter satırı açık pembe vurgulu; el notu 'ACh = uyarmaz, baskılamaz'. Profilde asetilkolin tekrar eden çekirdek (2×).",
+   "anlatim": "Beş nörotransmiter etkisiyle (GABA inhibitör, glutamat eksitatör, dopamin D1 uyarıcı/D2 bastırıcı, ACh modülatör, nöropeptitler: substance P, enkefalin) tablo olarak verilmeli; motor işlevler (hareketi başlatma, planlama, hız-büyüklük ayarı, öğrenilmiş programlar, tonus, odaklama-ölçekleme) kısa maddelerle eklenmeli.",
+   "soru_payi": 22,
+   "soru_tipleri": ["modülatör nörotransmiter → asetilkolin (çeldirici GABA, glutamat, enkefalin, dopamin)", "reseptör → etki: D1 uyarıcı, D2 bastırıcı"]},
+  {"tema": "İskeletomotor dışı devreler ve talamus üzerindeki istirahat inhibisyonu (odaklama)",
+   "oncelik": "B", "birimler": ["noro-s13-b07", "noro-s13-b06"],
+   "kanit": "Okülomotor, asosiyatif ve limbik devre satırları sarı; odaklama cümlesi açık pembe vurgulu; doğrudan çıkmış yok.",
+   "anlatim": "Bazal ganglionun istirahatte talamusu inhibe ederek korteks uyarılabilirliğini kontrol ettiği, hareketin istenen bileşenlerini direkt yolla güçlendirip istenmeyenleri indirekt yolla baskıladığı (odaklama) tek paragrafta verilmeli; iskeletomotor dışında okülomotor, asosiyatif ve limbik devreler sayılmalı.",
+   "soru_payi": 8,
+   "soru_tipleri": ["iskeletomotor dışı bazal ganglion devresi örneği → limbik / okülomotor / asosiyatif"]},
+  {"tema": "Diğer seçilen yerler: bazal ganglion hastalıklarının etiyolojisi (ilaçlar)",
+   "oncelik": "C", "birimler": ["noro-s13-b08"],
+   "kanit": "El notu 'psk ilaçlar önemli → tipik antipsikotikler genellikle kalıcı olur; L-dopa tedavisindeki diskineziler'; doğrudan çıkmış yok.",
+   "anlatim": "Etiyoloji başlıkları (dejeneratif, kalıtsal, vasküler, enfeksiyon, doğum travması, ilaçlar) sayılmalı; ilaçlardan tipik antipsikotik ve L-dopa diskinezisi örnek olarak verilmeli.",
+   "soru_payi": 4,
+   "soru_tipleri": ["ilaca bağlı hareket bozukluğu örneği → tipik antipsikotik / L-dopa diskinezisi"]},
+  {"tema": "Notta yok, sorulmuş: hedefe yaklaştıkça artan tremor (intensiyonel tremor)",
+   "oncelik": "B", "birimler": [],
+   "kanit": "q-…-2023-…-4 (2023, 'hareket sırasında hedefe yaklaştıkça belirginleşen tremor → intansiyonel tremor') bu dersin bankasında kapsanmamış; aynı soru Nörolojik Muayene dersinde 2020-21'de sorulmuş ve oradaki notta yapıştırılmış.",
+   "anlatim": "Tremor maddesinde istirahat tremoru (Parkinson) ile intensiyonel tremorun (serebellar) karşılaştırması tek cümleyle verilmeli; bu ayrım iki dersin sorusunu birden karşılar.",
+   "soru_payi": 6,
+   "soru_tipleri": ["ayırıcı: istirahatte artan / hedefe yaklaştıkça artan tremor → Parkinson / serebellar (intensiyonel)"]}
+ ],
+ "hoca_kaliplari": ["Bu konuda doğrudan kök %86, doğru ifade %14 (7 soru, güven düşük); bilişsel düzey anlama-ilişki %71, orta-zor", "Bilgi türü mekanizma %71: devrede bir çekirdeğin rolü sorulur, çeldirici devrenin komşu halkasıdır (GPe, STN, striatum, talamus)", "Aynı soru farklı şık sırasıyla yıllar içinde tekrar (ACh modülatör)", "'Aşağıdakilerden hangisi doğrudur' kalıbında mutlak ifade tuzağı (%14)"],
+ "tuzaklar": [
+  {"tuzak": "Çıkış çekirdeği GPi/SNr'dir; GPe ara çekirdektir", "neden": "İki globus pallidus bölümü yan yana şık olarak verilir; talamus da 'çıkış' sanılabilir."},
+  {"tuzak": "Asetilkolin bazal ganglionda modülatördür (uyarmaz, baskılamaz)", "neden": "GABA ve dopamin en bilinen bazal ganglion nörotransmiterleri olduğu için çeldirici olur."},
+  {"tuzak": "Parkinson tremoru istirahat tremorudur, istemli hareketle ve uykuda kaybolur", "neden": "Çeldiricide 'hareketle artar' ya da 'uykuda sürer' verilir; hedefe yaklaştıkça artan tremor serebellardır."},
+  {"tuzak": "Hemiballismus vücut yarısında, proksimalden başlar ve fırlatıcıdır; kore daha çok elde, düzensiz ve amaçsızdır", "neden": "Tanım sorusunda kore, atetoz, distoni birlikte çeldirici olur."},
+  {"tuzak": "Dopamin D1 uyarıcı, D2 bastırıcıdır", "neden": "Reseptörlerin etkisi yer değiştirerek sorulabilir."}
+ ],
+ "sayilar": [],
+ "duzeltmeler": [
+  {"yanlis": "Parkinson'da kafa sallama yok", "dogru": "Parkinson tremoru genellikle başı tutmaz (baş tremoru esansiyel tremorda tipiktir); istirahat tremoru dudak, çene ve dilde olabilir", "kaynak": "Arşiv slayt s14 (istirahat tremoru dudak, çene, dilde olabilir); noro-s13-b09 düzeltmesi"}
+ ],
+ "ara_soru_adaylari": [
+  {"birim": "noro-s13-b04", "fikir": "Striatumdan bilgi alıp talamusa projekte eden inhibitör çıkış çekirdeği → GPi/SNr; çeldirici GPe ve STN"},
+  {"birim": "noro-s13-b02", "fikir": "Bazal ganglionda ne uyaran ne baskılayan modülatör nörotransmiter → asetilkolin"},
+  {"birim": "noro-s13-b09", "fikir": "Vücut yarısında ani, fırlatıcı, proksimalden başlayan hareket → hemiballismus; Parkinson tremorunun uykuda kaybolması"}
+ ],
+ "kurul2627_notu": "2026-27 slaytı henüz eşleşmedi (7 birimin hiçbirinde y26 yok; ders 2026-11-05, ders kaydında öğretim üyesi boş). Gelince bakılacak: devre şeması ve nörotransmiter listesi aynı mı; hareket bozukluklarının tanımları slaytta yazılı mı (2025-26'da çoğu yalnız el notuydu); yapı listesinin bulunduğu metinsiz s03–s06 slaytları metinli hale gelmiş mi."
+}

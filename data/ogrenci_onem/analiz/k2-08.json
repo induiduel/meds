@@ -1,0 +1,80 @@
+{
+ "ders": "k2-08",
+ "ozet": "Dersin sınav çekirdeği tanımdan ada giden malformasyon soruları: holoprozensefali iki ayrı yıl sorulmuş, notta hiç yer almayan Arnold-Chiari malformasyonu ve miyelomeningosel de bankada var. Öğrenciler holoprozensefali tanımına, musküler distrofilere (2020-21 çıkmışı yapıştırılmış) ve HOX/homeobox tarihçesine yığılmış. Gen → sendrom listesi ve iskelet displazileri yalnız vurgu düzeyinde işaretli, bu konulardan çıkmış yok.",
+ "temalar": [
+  {"tema": "Holoprozensefali: ön beynin hemisferlere bölünememesi ve orta hat yüz kusurları", "oncelik": "A",
+   "birimler": ["tbg-s01-b09"],
+   "kanit": "2 çıkmış (past-1790877045052-543953 2021-22 K2; d3-k2-pat-008 2021-2026 K2), tanım cümlesi kırmızı kalemle kutu içine alınmış.",
+   "anlatim": "Tanım tam verilmeli: beynin ön kısmı ve orta hat yüz yapılarının gelişim bozukluğu; prozensefalonun iki hemisfere bölünememesi, tek telensefalik ventrikül ve siklopi, hipotelorizm, yarık damak gibi orta hat yüz bulgularıyla bağlanmalı. Lizensefali (kıvrım kaybı) ve primer mikrosefaliyle (malformasyonsuz küçük beyin) kısa karşılaştırma yapılmalı.",
+   "soru_payi": 22,
+   "soru_tipleri": ["tanım → ad: hemisferlere bölünemeyen beyin + siklopi", "ayırıcı: holoprozensefali / lizensefali / primer mikrosefali"]},
+  {"tema": "Notta yok, sorulmuş: Arnold-Chiari malformasyonu ve miyelomeningosel", "oncelik": "A",
+   "birimler": ["tbg-s01-b10"],
+   "kanit": "Bankada notta karşılığı olmayan 2 soru: 060f46f50beb (2020-21 K2, iki kopya; hoca profilinde bu konunun tek tekrar eden çekirdeği) 'hidrosefali + lomber miyelomeningosel → Arnold-Chiari'; d3-k2-bey-008 (2021-2026 K2) 'arka nöropor kapanmaması, meninks + medulla spinalis + sinir kökleri fıtıklaşması → miyelomeningosel'. Öğrenci notunda ikisi de yok.",
+   "anlatim": "2026-27 slaytında karşılığı varsa ayrı bir başlık olarak işlenmeli: Arnold-Chiari'nin hidrosefali ve lomber miyelomeningoselle birlikteliği; miyelomeningoselde kesenin içeriği (meninksler + medulla spinalis + sinir kökleri) ve arka nöroporun kapanmaması. Slaytta yoksa yalnız örnek soru ve ara soru olarak kullanılmalı.",
+   "soru_payi": 18,
+   "soru_tipleri": ["tanım → ad: hidrosefali + lomber miyelomeningosel", "kese içeriğinden ada: miyelomeningosel / meningosel çeldiricisi"]},
+  {"tema": "Musküler distrofiler: DMD/BMD ayrımı, distrofin miktarı, sıklık", "oncelik": "A",
+   "birimler": ["tbg-s01-b14"],
+   "kanit": "Notta yapıştırılmış çıkmış (d700decc9b5b, 2020-21 K2, 'doğru olan: DMD en sık rastlanan formudur'), doğru şık kırmızı yazıyla işaretli. Ayrıca k2-26 bankasına eşlenmiş 2020-21 DMD/BMD soruları (distrofin-glikoprotein kompleksi, 3 kopya; taşıyıcılarda fenotip) bu slaytın (y25 s79-81) konusuna düşüyor.",
+   "anlatim": "Çocuklukta en sık form DMD/BMD (yaklaşık 3500 erkek doğumda 1), erişkinde miyotonik distrofi daha sık; DMD'de tam ya da tama yakın distrofin eksikliği, BMD'de anormal molekül ağırlıklı distrofin. Klinik farkın mutasyonun protein sentezine etkisinden doğduğu açıkça anlatılmalı; DMD'de baldırdaki büyümenin psödohipertrofi olduğu vurgulanmalı.",
+   "soru_payi": 24,
+   "soru_tipleri": ["doğru olan: en sık form DMD", "ayırıcı: DMD tam distrofin eksikliği / BMD anormal molekül ağırlıklı distrofin", "yanlış bul: 'distrofin fazlalığı', 'gerçek hipertrofi', 'en ağır tip fasioskapulohumeral'"]},
+  {"tema": "Homeotik genler, HOX ve homeobox tarihçesi", "oncelik": "A",
+   "birimler": ["tbg-s01-b01", "tbg-s01-b02"],
+   "kanit": "1 çıkmış (d3-k2-tbg-008, 2021-2026 K2: pozisyonel kimliği belirleyen homeobox gen grubu → HOX gen ailesi); 'İnsanda HOX A, B, C ve D genleri' kırmızı kalemle çevrelenmiş.",
+   "anlatim": "Müller'in X ışını çalışmasından sineklerde anten yerine bacak oluşumuna, 1970'lerin sonunda 9 homeotik gen grubunun bulunmasına ve 1983'te Basel'de tüm HOX genlerinde 180 bp'lik ortak dizinin (homeobox) tanımlanmasına uzanan sıra korunmalı. HOX genlerinin vücut ekseni boyunca bölgesel yapıların oluşumunu düzenlediği ve insanda HOX A, B, C, D kümeleri olduğu bir kez net söylenmeli.",
+   "soru_payi": 14,
+   "soru_tipleri": ["işlevden ada: pozisyonel kimlik → HOX", "sayı: homeobox 180 bp", "küme: HOX A–D"]},
+  {"tema": "Gelişim genleri → sendromlar ve Waardenburg tipleri", "oncelik": "C",
+   "birimler": ["tbg-s01-b06", "tbg-s01-b07", "tbg-s01-b08"],
+   "kanit": "Liste pembe fosforla işaretli, yalnız 'PAX6 → Aniridi' satırı boyalı; bankada bu listeden çıkmış bulunamadı. Hoca profilinde Tıbbi Genetik sorularının %24'ü sınıflama/ad türünde, gen–sendrom eşleşmesi bu kalıba uyar.",
+   "anlatim": "Liste tablo olarak verilmeli, gen simgeleri düzeltilmiş yazımla (PAX3, PAX6, PITX2, PITX3, POU3F4, SOX9, GLI3, HOXA13, HOXD13, LMX1B, MITF, PAX2, SRY, TBX3, TBX5, TCOF1, TWIST1, WT1). Waardenburg tip 1 (PAX3) ile tip 2 (MITF; saçta hipopigmentasyon, heterokromi, işitme kaybı) ayrımı ve tip III'te belirgin telekantus + üst ekstremite anomalisi ayrıca vurgulanmalı; Waardenburg-anoftalmi sendromu SMOC1 ile.",
+   "soru_payi": 8,
+   "soru_tipleri": ["eşleştirme: gen → sendrom (PAX6 → aniridi, TBX5 → Holt-Oram, TCOF1 → Treacher-Collins)", "ayırıcı: Waardenburg tip 1 PAX3 / tip 2 MITF"]},
+  {"tema": "İskelet displazileri: en sık tipler ve FGFR3 grubu", "oncelik": "C",
+   "birimler": ["tbg-s01-b12", "tbg-s01-b13"],
+   "kanit": "El notu 'en sık' akondroplazi satırının yanında; FGFR3 grubu kırmızı kavisle displazi listesine bağlanmış. Bankada çıkmış yok.",
+   "anlatim": "En sık displazi akondroplazi (0,13-0,64/10.000), ardından osteogenezis imperfekta (1/15.000); FGFR3 grubunda akondroplazi, hipokondroplazi ve tanatoforik displazi birlikte verilmeli.",
+   "soru_payi": 8,
+   "soru_tipleri": ["en sık: akondroplazi", "grup: FGFR3 grubunda olmayan displazi"]},
+  {"tema": "Diğer seçilen yerler: lizensefali, primer mikrosefali, OTX ve MSX genleri", "oncelik": "C",
+   "birimler": ["tbg-s01-b10", "tbg-s01-b11", "tbg-s01-b03", "tbg-s01-b04", "tbg-s01-b05"],
+   "kanit": "Lizensefali tanımı kırmızı çizgiyle çerçevelenmiş; diğerleri işaretsiz slayt yapıştırması. Çıkmış yok.",
+   "anlatim": "Lizensefalide pakigri (kıvrım azalması) ve agri (kıvrım yokluğu), kalın korteks ve laminasyon kaybı; OTX2 anterior kafa oluşumu, OTX1 korteks, mezensefalon, serebellum ve duyu organı anomalileri; MSX1 familyal diş agenezisi. Kısa tutulmalı.",
+   "soru_payi": 6,
+   "soru_tipleri": ["tanım: pakigri / agri", "gen → bulgu: MSX1 → diş agenezisi"]}
+ ],
+ "hoca_kaliplari": [
+  "Bu konunun 5 çıkmışının tamamı doğrudan kök: uzun tanım cümlesi → hastalık adı (holoprozensefali, Arnold-Chiari, miyelomeningosel, HOX)",
+  "Çeldiriciler aynı türden ayrı kavram (komşu malformasyonlar, komşu gen aileleri)",
+  "Tıbbi Genetik geneli: doğrudan %60, yanlış bul %9, olumsuz kök %9; 'hepsi/hiçbiri' şıkkı hiç kullanılmamış",
+  "Musküler distrofi sorusu 'doğru olanı işaretleyiniz' biçiminde, çeldiriciler tersine çevrilmiş ifadeler (distrofin fazlalığı, gerçek hipertrofi)"
+ ],
+ "tuzaklar": [
+  {"tuzak": "DMD'de baldırdaki büyüme gerçek hipertrofi değil psödohipertrofidir", "neden": "2020-21 çıkmışında 'Kaslarda gerçek hipertrofi mevcuttur' yanlış şık olarak verilmiş"},
+  {"tuzak": "DMD distrofin eksikliğidir, fazlalığı değil; BMD'de distrofin vardır ama molekül ağırlığı anormaldir", "neden": "çıkmışta 'Distrofin proteininin fazla olması sorumludur' çeldiricisi"},
+  {"tuzak": "Çocuklukta en sık musküler distrofi DMD/BMD, erişkinde miyotonik distrofi", "neden": "yaş grubu değiştirilerek çeldirici kurulabilir"},
+  {"tuzak": "Holoprozensefali bölünememe kusurudur; kıvrım kaybı lizensefalidir", "neden": "iki malformasyon aynı derste art arda anlatılıyor, tanım kökünde yer değiştirilebilir"},
+  {"tuzak": "Waardenburg tip 1 PAX3, tip 2 MITF", "neden": "aynı sendromun iki geni listede ayrı satırlarda"},
+  {"tuzak": "Akondroplazi hem 'en sık displazi' listesinde hem FGFR3 grubunda; tanatoforik displazi de iki listede birden", "neden": "öğrenci iki listeyi kavisle bağlamış; grup sorusunda çeldirici olarak osteogenezis imperfekta gelebilir"}
+ ],
+ "sayilar": [
+  "DMD/BMD: yaklaşık 3500 erkek doğumda 1",
+  "Akondroplazi 0,13-0,64/10.000; osteogenezis imperfekta 1/15.000",
+  "1970'lerin sonu: 9 homeotik gen grubu (HOX)",
+  "1983, Basel: tüm HOX genlerinde 180 bp ortak dizi (homeobox)",
+  "İnsanda 4 HOX kümesi: HOX A, B, C, D"
+ ],
+ "duzeltmeler": [
+  {"yanlis": "PTX2 → Reiger sendromu; Gl13 → Grieg sendromu; LMXIB; WTI; TCOF; TWIST → Seathre-Chotzen; TBX3 → ulna-mammary", "dogru": "PITX2 → Rieger sendromu; GLI3 → Greig sefalopolisindaktili sendromu; LMX1B → Nail-patella; WT1 → ürogenital anomaliler; TCOF1 → Treacher-Collins; TWIST1 → Saethre-Chotzen; TBX3 → ulnar-mammary (Schinzel) sendromu", "kaynak": "slayt y25 s16-17 / y26 s14; gen simgeleri öğrenci kopyasında bozulmuş, içerik ve anlatımda düzeltilmiş simgeler kullanılmalı"},
+  {"yanlis": "Kaslarda hipertrofi mevcuttur (DMD)", "dogru": "DMD'de gerçek hipertrofi yoktur, baldırda psödohipertrofi vardır", "kaynak": "bankadaki 2020-21 çıkmışı (d700decc9b5b) D şıkkı 'gerçek hipertrofi' yanlış şık; doğru şık A"}
+ ],
+ "ara_soru_adaylari": [
+  {"birim": "tbg-s01-b09", "fikir": "hemisferlere bölünemeyen beyin + siklopi/hipotelorizm → holoprozensefali; çeldiriciler lizensefali, primer mikrosefali"},
+  {"birim": "tbg-s01-b14", "fikir": "DMD ile BMD arasındaki klinik farkın nedeni: tam distrofin eksikliği / anormal molekül ağırlıklı distrofin"},
+  {"birim": "tbg-s01-b01", "fikir": "HOX genlerinin ortak 180 bp dizisinin adı (homeobox) ve keşfi"},
+  {"birim": "tbg-s01-b07", "fikir": "saçta hipopigmente alan + heterokromi + işitme kaybı olan Waardenburg tipinde mutant gen: MITF"}
+ ],
+ "kurul2627_notu": "2026-27 PDF'i eşlenmiş (y26 s7–s75): birimlerin hepsi yeni slaytta karşılık buluyor, yalnız HOX lokuslarında fare–insan homolojisi cümlesi (y25 s12) çıkarılmış. Arnold-Chiari ve miyelomeningosel slaytı yeni PDF'te aranmalı; varsa ayrı başlık olarak işlenmeli. DMD bölümünün (y26 s75-77) k2-26'ya eşlenmiş 2020-21 DMD sorularını da karşıladığı unutulmamalı."
+}

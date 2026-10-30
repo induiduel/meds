@@ -1,0 +1,837 @@
+{
+ "ders": "k2-42",
+ "kod": "2s11",
+ "brans": "Psikiyatri",
+ "konu": "Nörogelişimsel Bozukluklar",
+ "kaynak": "Geçmiş yıl (2025-26) öğrenci derleme notu: psk3.2",
+ "y25": {
+  "key": "y25-k2-42-norogelisimsel-bozukluklar",
+  "sayfalar": [
+   5,
+   12,
+   18,
+   24,
+   30
+  ]
+ },
+ "sayac": {
+  "birim": 5,
+  "A": 3,
+  "B": 2,
+  "C": 0,
+  "ogrenci_sorusu": 4,
+  "banka": 12,
+  "banka_kapsandi": 9
+ },
+ "birimler": [
+  {
+   "id": "psk-s16-b01",
+   "pdf": "psk",
+   "sayfa": 16,
+   "bolge": "r1c1",
+   "tur": "slayt",
+   "baslik": "Nörogelişimsel bozukluklar – Sınıflama",
+   "metin": "1. Zihinsel yetersizlikler\n2. Otizm spektrum bozukluğu (OSB)\n3. Dikkat eksikliği hiperaktivite bozukluğu (DEHB)\n4. Özgül öğrenme güçlüğü\n5. Motor bozukluklar\n6. İletişim bozuklukları",
+   "el_yazisi": [
+    {
+     "metin": "yetişkinlikte de tanı konabilir.",
+     "hedef": "Nörogelişimsel bozukluklar (başlık)",
+     "guven": "yuksek",
+     "alternatif": ""
+    },
+    {
+     "metin": "→ konuşmada gecikme (en sık), tuvalet kontrolünü sağlayamamak, yaşıtlarıyla uyumsuzluk",
+     "hedef": "1. Zihinsel yetersizlikler",
+     "guven": "yuksek",
+     "alternatif": "'gecikme' yazıda 'geciklik' biçiminde; '(en sık)' konuşmadaki gecikmenin altında"
+    }
+   ],
+   "isaretler": [
+    {
+     "tur": "sari",
+     "hedef": "altı başlığın tümü"
+    },
+    {
+     "tur": "ok",
+     "hedef": "Nörogelişimsel bozukluklar başlığı → 'yetişkinlikte de tanı konabilir'"
+    }
+   ],
+   "sinyal": [
+    "cikmis",
+    "el_onemli",
+    "sari"
+   ],
+   "y25": {
+    "key": "y25-k2-42-norogelisimsel-bozukluklar",
+    "sayfa": 5
+   },
+   "y26": null,
+   "duzeltme": [
+    {
+     "ham": "geciklik",
+     "dogru": "gecikme",
+     "gerekce": "El yazısındaki yazım; anlam konuşma gecikmesi."
+    }
+   ],
+   "not_": null,
+   "ogrenci_sorulari": [
+    "psk-s16-b05",
+    "psk-s16-b06"
+   ],
+   "banka_cikmis": [
+    "1b0796213c00",
+    "daafa2b8d14f",
+    "past-q-I_SKENDERUN_TI_Mu_du_rlu_g_u_ne0__1__230709_230251-75",
+    "d3-k2-tbg-004",
+    "past-1790877044860-729418",
+    "past-1790877035999-122905"
+   ],
+   "puan": 100,
+   "oncelik": "A",
+   "vurgulu": [
+    "altı başlığın tümü"
+   ]
+  },
+  {
+   "id": "psk-s16-b04",
+   "pdf": "psk",
+   "sayfa": 16,
+   "bolge": "r1c2+r1c3",
+   "tur": "slayt",
+   "baslik": "Otizm – Belirti ve Bulgular",
+   "metin": "- Belirtiler genellikle 12-24 aylar arasında başlar,\n- Bazen de aileler tarafından daha önce kazanılan becerilerin yitirildiği anlatırlar (regresif otizm) ve bu da genellikle 12-24 aylar arasında olmaktadır. Bu türlü gerilemeler diğer bozukluklarda çok nadirdir ve şiddetle otizmi düşündürmelidir.\n- Erken bebeklik döneminden başlayarak göz teması kurmadığı, kucağa alınmak, rahatlatılmak, sakinleştirilmek gibi isteklerinin bulunmadığı, taklit yapmadığı, adına bakmadığı ve ortak dikkatin olmadığı görülür.\n- [s19] Tekdüze bir tarzda hep aynı oyunları oynar (arabalar sıraya dizmek gibi...), araba tekerleği döndürmek ya da eline aldığı bir nesneyi sallamaktan hoşlanır. Sallanmayı ya da kendi etraflarında dönmeyi sever. Dönen cisimlere özel ilgileri vardır (çamaşır makinesini çalışırken uzun uzun izlemek gibi...). Değişiklikten hoşlanmaz, takıntılı ya da törensel davranışlar vardır (hep aynı yoldan gitmek, sabah kalkınca aynı işleri yapmak gibi..). Diğer çocuklara ilgi göstermez, onlarla birlikte olmaktansa, kendi köşesinde yalnız oturmayı yeğler.\n- Konuşan çocuklarda konuşma tekdüzedir, vurgulama yoktur, ses tonlarını çoğunlukla ayarlayamazlar, çok yüksek sesle ya da fısıltıyla konuşurlar.\n- [s20] Küçük yaş grubunda (özellikle 36 ay öncesi) tanı koyabilmek için dikkat edilmesi gereken belirtiler: karşılıklı konuşma sesleri ile ritmik etkileşimin olmaması; sosyal ilişki için gerekli karşılıklı gülümsemenin olmaması; göz göze gelmekten ya da yüz yüze gelmekten kaçma; uyku ve yeme sorunları; seslere, özellikle adına tutarlı olarak bakmama; selamlaşma için el sallamanın gelişmemesi; ciddi yüz ifadesi; anne ya da baba eve gelince sevinçle karşılamama; ana babayı tanıdığını belli etmeme; tanımadığı kişileri yabancılamama; sert nesnelerle oynama, yumuşak nesneleri tercih etmeme; hayali oyun yokluğu; isteklerini parmaklarıyla göstermeme, işaret etmeme, yetişkinin elini tutup işaret ettirme ya da yetişkinin elini istenen şeyin üstüne koyma, işaret edilen yere bakmama",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "sari",
+     "hedef": "Belirtiler genellikle 12-24 aylar arasında"
+    },
+    {
+     "tur": "yildiz",
+     "hedef": "regresif otizm maddesi"
+    },
+    {
+     "tur": "sari",
+     "hedef": "regresif otizm maddesinin tamamı"
+    },
+    {
+     "tur": "sari",
+     "hedef": "göz teması kurmadığı, kucağa alınmak, rahatlatılmak, sakinleştirilmek gibi isteklerinin bulunmadığı, taklit yapmadığı, adına bakmadığı, ortak dikkatin olmadığı"
+    },
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "göz teması kurmadığı / kucağa alınmak… / taklit yapmadığı / adına bakmadığı / ortak dikkatin olmadığı"
+    },
+    {
+     "tur": "sari",
+     "hedef": "tekdüze oyun, araba tekerleği döndürme, sallanma/dönme, dönen cisimlere ilgi, değişiklikten hoşlanmama, takıntılı/törensel davranış, diğer çocuklara ilgisizlik"
+    },
+    {
+     "tur": "sari",
+     "hedef": "konuşma tekdüze, vurgulama yok, ses tonunu ayarlayamama, çok yüksek sesle ya da fısıltıyla konuşma"
+    }
+   ],
+   "sinyal": [
+    "cikmis",
+    "sari",
+    "yildiz"
+   ],
+   "y25": {
+    "key": "y25-k2-42-norogelisimsel-bozukluklar",
+    "sayfa": 18
+   },
+   "y26": null,
+   "duzeltme": [
+    {
+     "ham": "tan koyabilmek",
+     "dogru": "tanı koyabilmek",
+     "gerekce": "Slayttaki yazım hatası."
+    },
+    {
+     "ham": "gelmene",
+     "dogru": "gelmekten",
+     "gerekce": "Slayttaki yazım hatası."
+    }
+   ],
+   "not_": null,
+   "banka_cikmis": [
+    "d3-k2-psi-010",
+    "q-25-26_d_nem_3_kurul_2-91-cs2"
+   ],
+   "puan": 100,
+   "oncelik": "A",
+   "vurgulu": [
+    "Belirtiler genellikle 12-24 aylar arasında",
+    "göz teması kurmadığı / kucağa alınmak… / taklit yapmadığı / adına bakmadığı / ortak dikkatin olmadığı",
+    "göz teması kurmadığı, kucağa alınmak, rahatlatılmak, sakinleştirilmek gibi isteklerinin bulunmadığı, taklit yapmadığı, adına bakmadığı, ortak dikkatin olmadığı",
+    "konuşma tekdüze, vurgulama yok, ses tonunu ayarlayamama, çok yüksek sesle ya da fısıltıyla konuşma",
+    "regresif otizm maddesi",
+    "regresif otizm maddesinin tamamı",
+    "tekdüze oyun, araba tekerleği döndürme, sallanma/dönme, dönen cisimlere ilgi, değişiklikten hoşlanmama, takıntılı/törensel davranış, diğer çocuklara ilgisizlik"
+   ]
+  },
+  {
+   "id": "psk-s16-b07",
+   "pdf": "psk",
+   "sayfa": 16,
+   "bolge": "r1c2+r2c2",
+   "tur": "slayt",
+   "baslik": "Özgül Öğrenme Güçlüğü",
+   "metin": "Bu tanım genel bilişsel işlevlerde bir sorun olmadığı halde çocuğun akademik başarısı ile ilgili ciddi düşüklük meydana getiren özgün durumlar için kullanılır. Tanı konabilmesi için okula başlaması ve temel akademik yeterliliklerinin denenebileceği bir ortamın oluşması gereklidir.\nDSM-5'te özgül öğrenme bozukluğu başlığı altında birleştirilmiştir. Okuma, yazılı anlatım ve matematik alanlarındaki öğrenme sorunları tanının alt tanımlayıcıları olarak kodlanmaktadır.\n[s31] Dil gelişiminde gecikme olması, sesleri doğru çıkarmada güçlük, sesleri ve heceleri doğru sıralayamama, yerlerini değiştirme gibi dil alanına ait belirtiler vardır. İfade etmenin yanında dinleme ve anlamada da sorunlar olabilir. Renk, sayı ve geometrik şekilleri ve zaman ve yön kavramlarını öğrenmede zorluk yaşarlar. Sıralama ve eşleştirme becerileri (zayıftır). Tüm bu sorunlardan dolayı duygularını ifade edememe, yaşından daha çocuksu davranma ve yalnızlaşma gibi sosyal ilişki sorunları ortaya çıkar.\n[s32] Okul çağına gelindiğinde akademik sorunlar belirgin hale gelir ve en çok başvuru da bu dönemde olur. Sesleri karıştırırlar ve doğru okuyamaz, yeni sözcükleri öğrenmede güçlük yaşarlar. Okuma yazmayı öğrenmede yaşıtlarına göre gecikme gösterirler. Okurken yanlış ve yavaş okuma, harf, hece ve satır atlama sıktır ve okuduğunu anlamakta zorlanma dikkati (çeker). … olayları doğru sırada anlatma ve kendini uygun ifade etmeyle ilgili belirgin sorunları olabilir. Alfabe, günler, aylar, sayılar, çarpım tablosunu ve saati öğrenmede çok zorluk yaşayabilirler.\n[s33] Kavramlarla ilgili güçlükler sürebilir, yer, yön ve zaman saptamada sorun yaşayabilirler.\nSoyut düşünce sorunları vardır, mecazi anlatımları anlamakta zorlanırlar.\n[s35] Günümüzde ÖÖB'nin sağaltımında etkililiği kanıtlanmış bir ilaç tedavisi yoktur.",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "daire",
+     "hedef": "genel bilişsel işlevlerde bir sorun olmadığı halde"
+    },
+    {
+     "tur": "sari",
+     "hedef": "çocuğun akademik başarısı ile ilgili ciddi düşüklük meydana getiren özgün durumlar… Tanı konabilmesi için okula başlaması ve temel akademik yeterliliklerinin denenebileceği bir ortamın oluşması gereklidir"
+    },
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "Tanı konabilmesi için okula başlaması"
+    },
+    {
+     "tur": "sari",
+     "hedef": "Okuma, yazılı anlatım ve matematik alanlarındaki öğrenme sorunları tanının alt tanımlayıcıları olarak kodlanmaktadır"
+    },
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "Okuma, yazılı anlatım ve matematik alanlarındaki öğrenme sorunları"
+    },
+    {
+     "tur": "sari",
+     "hedef": "Renk, sayı ve geometrik şekilleri ve zaman ve yön kavramlarını öğrenmede zorluk yaşarlar"
+    },
+    {
+     "tur": "sari",
+     "hedef": "Okul çağına gelindiğinde akademik sorunlar belirgin hale gelir ve en çok başvuru da bu dönemde olur"
+    },
+    {
+     "tur": "sari",
+     "hedef": "Okuma yazmayı öğrenmede yaşıtlarından göre gecikme gösterirler"
+    },
+    {
+     "tur": "sari",
+     "hedef": "Alfabe, günler, aylar, sayılar, çarpım tablosunu ve saati öğrenmede çok zorluk yaşayabilirler"
+    },
+    {
+     "tur": "sari",
+     "hedef": "Soyut düşünce sorunları vardır, mecazi anlatımları anlamakta zorlanırlar"
+    }
+   ],
+   "sinyal": [
+    "cikmis",
+    "sari"
+   ],
+   "y25": {
+    "key": "y25-k2-42-norogelisimsel-bozukluklar",
+    "sayfa": 30
+   },
+   "y26": null,
+   "duzeltme": [
+    {
+     "ham": "gelşiminde",
+     "dogru": "gelişiminde",
+     "gerekce": "Slayttaki yazım hatası."
+    },
+    {
+     "ham": "yaşıtlarından göre",
+     "dogru": "yaşıtlarına göre",
+     "gerekce": "Dil bilgisi hatası."
+    },
+    {
+     "ham": "yasayabilirler",
+     "dogru": "yaşayabilirler",
+     "gerekce": "Karakter bozulması."
+    }
+   ],
+   "not_": null,
+   "ogrenci_sorulari": [
+    "psk-s16-b08",
+    "psk-s16-b09"
+   ],
+   "banka_cikmis": [
+    "4b92269c6553"
+   ],
+   "puan": 80,
+   "oncelik": "A",
+   "vurgulu": [
+    "Alfabe, günler, aylar, sayılar, çarpım tablosunu ve saati öğrenmede çok zorluk yaşayabilirler",
+    "Okul çağına gelindiğinde akademik sorunlar belirgin hale gelir ve en çok başvuru da bu dönemde olur",
+    "Okuma yazmayı öğrenmede yaşıtlarından göre gecikme gösterirler",
+    "Okuma, yazılı anlatım ve matematik alanlarındaki öğrenme sorunları",
+    "Okuma, yazılı anlatım ve matematik alanlarındaki öğrenme sorunları tanının alt tanımlayıcıları olarak kodlanmaktadır",
+    "Renk, sayı ve geometrik şekilleri ve zaman ve yön kavramlarını öğrenmede zorluk yaşarlar",
+    "Soyut düşünce sorunları vardır, mecazi anlatımları anlamakta zorlanırlar",
+    "Tanı konabilmesi için okula başlaması",
+    "genel bilişsel işlevlerde bir sorun olmadığı halde",
+    "çocuğun akademik başarısı ile ilgili ciddi düşüklük meydana getiren özgün durumlar… Tanı konabilmesi için okula başlaması ve temel akademik yeterliliklerinin denenebileceği bir ortamın oluşması gereklidir"
+   ]
+  },
+  {
+   "id": "psk-s16-b02",
+   "pdf": "psk",
+   "sayfa": 16,
+   "bolge": "r1c1+r2c1",
+   "tur": "slayt",
+   "baslik": "Zihinsel Yetersizlikler – risk etmenleri",
+   "metin": "Maternal faktörler:\n*16 yaşından küçük 40 yaşından büyük olmak (ilk doğum için 35 yaştan büyük olması)\n*Akrabalık\n*Serviks anomalileri (yetersizlik, tümör)\n*Kontrakte pelvis\n*İstatistiksel olarak yüksek riskli anneler (kısa boy, malnütrisyon, eğitimsizlik ve düşük gelir gibi)\n*Çeşitli hastalıklar (bakteriüri, diabetes mellitus, ilaç alışkanlığı, nefrit, proteinüri, hipertansiyon..)\n*Önceden düşük hikayesi, ölü doğum, 1500 gramdan düşük ağırlıklı doğum, ablasio plasenta\n*Endojen ve ekzojen toksinler (ilaç, sigara, alkol gibi)\n[s13] Gebelik komplikasyonları (hemorajik şok, polihidroamnios)\nNeonatal faktörler (anomali, hipotoni, travma, konvülsiyon, kusma ve ateş, malnütrisyon, hiperbilirubinemi..)\nPostnatal nedenler (kızamık, kabakulak, tüberküloz ensefalit, menenjit, konjenital hipotiroidi, anoksi, ileri düzey beslenme yetersizliği)",
+   "el_yazisi": [
+    {
+     "metin": "kontrol edildiği için zekâ geriliğini önleyebiliriz. Aşı önemli!",
+     "hedef": "konjenital hipotiroidi (ve kızamık/kabakulak – aşı)",
+     "guven": "yuksek",
+     "alternatif": ""
+    }
+   ],
+   "isaretler": [
+    {
+     "tur": "sari",
+     "hedef": "maternal faktörlerin her birinin başlık kısmı (16 yaşından küçük 40 yaşından büyük olmak, Akrabalık, Serviks anomalileri, Kontrakte pelvis, İstatistiksel olarak yüksek riskli anneler, Çeşitli hastalıklar, Önceden düşük hikayesi… ablasio plasenta, Endojen ve ekzojen toksinler)"
+    },
+    {
+     "tur": "yildiz",
+     "hedef": "Gebelik komplikasyonları"
+    },
+    {
+     "tur": "yildiz",
+     "hedef": "Neonatal faktörler"
+    },
+    {
+     "tur": "yildiz",
+     "hedef": "Postnatal nedenler"
+    },
+    {
+     "tur": "sari",
+     "hedef": "konjenital hipotiroidi"
+    },
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "konjenital hipotiroidi"
+    }
+   ],
+   "sinyal": [
+    "el_onemli",
+    "sari",
+    "yildiz"
+   ],
+   "y25": {
+    "key": "y25-k2-42-norogelisimsel-bozukluklar",
+    "sayfa": 12
+   },
+   "y26": null,
+   "duzeltme": [
+    {
+     "ham": "hipotroidi",
+     "dogru": "hipotiroidi",
+     "gerekce": "Slayttaki yazım hatası."
+    },
+    {
+     "ham": "hiperbilirunemi",
+     "dogru": "hiperbilirubinemi",
+     "gerekce": "Slayttaki yazım hatası."
+    },
+    {
+     "ham": "vaşından / yastan",
+     "dogru": "yaşından / yaştan",
+     "gerekce": "Arşiv metninde karakter bozulması."
+    }
+   ],
+   "not_": null,
+   "puan": 33,
+   "oncelik": "B",
+   "vurgulu": [
+    "Gebelik komplikasyonları",
+    "Neonatal faktörler",
+    "Postnatal nedenler",
+    "konjenital hipotiroidi",
+    "maternal faktörlerin her birinin başlık kısmı (16 yaşından küçük 40 yaşından büyük olmak, Akrabalık, Serviks anomalileri, Kontrakte pelvis, İstatistiksel olarak yüksek riskli anneler, Çeşitli hastalıklar, Önceden düşük hikayesi… ablasio plasenta, Endojen ve ekzojen toksinler)"
+   ]
+  },
+  {
+   "id": "psk-s16-b03",
+   "pdf": "psk",
+   "sayfa": 16,
+   "bolge": "r2c1",
+   "tur": "slayt",
+   "baslik": "DEAHB – alt türler, belirtiler, sağaltım",
+   "metin": "Dikkat eksikliği ve dürtüsellik/aşırı hareketlilik olmak üzere iki boyut üzerinde 3 alttür (tanımlanmıştır).\n[s26] Dikkat eksikliği belirtisi, verilen ödevlerden çabuk sıkılma, bir görevi gelişimsel düzeyine uygun süre ve yoğunlukta sürdürememe, çevresel uyaranlarla dikkatin kolayca çelinmesi, hayallere dalma, dinlemiyormuş gibi görünme ve eşyalar kaybetme, okuma yaparken satır atlama gibi belirtilerle ortaya çıkabilir.\nAşırı hareketlilik, yaş ve gelişim düzeyiyle uyumsuz olarak amaçsız, görevle bağlantısız bir hareketliliği tanımlar.\nDürtüsellik belirtisi ise düşünmeden hareket etme, kuralları umursamama, başkalarının etkinliklerine müdahale etme ve sırasını bekleyememe biçiminde ortaya çıkabilir.\n[s29] İlaç sağaltımın yanı sıra psikososyal girişimler ve destekleyici tutumları içerir.\nİlk seçenek: psikostimülanlardır. Atomoksetin; guanfazin ve klonidin; TCA; venlafaksin; bupropion, modafinil",
+   "el_yazisi": [
+    {
+     "metin": "genelde tüm hayatı boyunca kalır.",
+     "hedef": "Dikkat eksikliği belirtisi (okla)",
+     "guven": "yuksek",
+     "alternatif": ""
+    },
+    {
+     "metin": "tedaviyle düzelebilir",
+     "hedef": "Aşırı hareketlilik ve Dürtüsellik belirtisi (ayraçla)",
+     "guven": "yuksek",
+     "alternatif": ""
+    },
+    {
+     "metin": "en önemli.",
+     "hedef": "İlaç sağaltımı",
+     "guven": "yuksek",
+     "alternatif": ""
+    }
+   ],
+   "isaretler": [
+    {
+     "tur": "sari",
+     "hedef": "Dikkat eksikliği ve dürtüsellik/aşırı hareketlilik olmak üzere iki boyut üzerinde 3 alttür"
+    },
+    {
+     "tur": "sari",
+     "hedef": "Dikkat eksikliği belirtisi"
+    },
+    {
+     "tur": "sari",
+     "hedef": "Aşırı hareketlilik"
+    },
+    {
+     "tur": "sari",
+     "hedef": "Dürtüsellik belirtisi"
+    },
+    {
+     "tur": "kutu",
+     "hedef": "Aşırı hareketlilik + Dürtüsellik maddelerini kapsayan kırmızı süslü ayraç"
+    },
+    {
+     "tur": "sari",
+     "hedef": "İlaç sağaltımın"
+    },
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "İlaç sağaltımın"
+    },
+    {
+     "tur": "sari",
+     "hedef": "İlk seçenek: psikostimülanlardır"
+    },
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "İlk seçenek: psikostimülanlardır"
+    }
+   ],
+   "sinyal": [
+    "el_onemli",
+    "sari"
+   ],
+   "y25": {
+    "key": "y25-k2-42-norogelisimsel-bozukluklar",
+    "sayfa": 24
+   },
+   "y26": null,
+   "duzeltme": [
+    {
+     "ham": "Atomeksetin",
+     "dogru": "Atomoksetin",
+     "gerekce": "İlaç adı yazım hatası (atomoxetine)."
+    },
+    {
+     "ham": "sağlatım",
+     "dogru": "sağaltım",
+     "gerekce": "Slayttaki yazım hatası."
+    },
+    {
+     "ham": "DEAHB",
+     "dogru": "DEHB",
+     "gerekce": "Aynı kavram; listede DEHB, başlıkta DEAHB kısaltması kullanılmış."
+    }
+   ],
+   "not_": null,
+   "puan": 18,
+   "oncelik": "B",
+   "vurgulu": [
+    "Aşırı hareketlilik",
+    "Aşırı hareketlilik + Dürtüsellik maddelerini kapsayan kırmızı süslü ayraç",
+    "Dikkat eksikliği belirtisi",
+    "Dikkat eksikliği ve dürtüsellik/aşırı hareketlilik olmak üzere iki boyut üzerinde 3 alttür",
+    "Dürtüsellik belirtisi",
+    "İlaç sağaltımın",
+    "İlk seçenek: psikostimülanlardır"
+   ]
+  }
+ ],
+ "ogrenci_sorulari": [
+  {
+   "id": "psk-s16-b05",
+   "pdf": "psk",
+   "sayfa": 16,
+   "bolge": "r1c3",
+   "tur": "cikmis_soru",
+   "baslik": "OSB – toplumsal-duygusal karşılıkta yetersizliğe örnek olmayan",
+   "metin": "Otizm Spektrum Bozuklukları konusunda, aşağıdakilerden hangisi 'Toplumsal-Duygusal karşılıkta yetersizlik' konusuna örnek değildir?",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "pembe",
+     "hedef": "tüm soru bloğu"
+    },
+    {
+     "tur": "daire",
+     "hedef": "4 Oyuncakları dizme, çevirme hareketleri (kırmızı çember + onay kutusu)"
+    },
+    {
+     "tur": "ok",
+     "hedef": "1, 2, 3, 5 şıklarına kırmızı tik"
+    }
+   ],
+   "sinyal": [
+    "cikmis",
+    "tekrar"
+   ],
+   "y25": {
+    "key": "y25-k2-42-norogelisimsel-bozukluklar",
+    "sayfa": 19
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "cikmis": {
+    "kok": "Otizm Spektrum Bozuklukları konusunda, aşağıdakilerden hangisi 'Toplumsal-Duygusal karşılıkta yetersizlik' konusuna örnek değildir?",
+    "siklar": [
+     "1) Anne, babaya veya diğer kişilere ilgi göstermelerinde bozukluk",
+     "2) Sosyal gülümseme olmaması",
+     "3) Genellikle bağlanma davranışı ve ayrılık anksiyetesi geliştirmeme",
+     "4) Oyuncakları dizme, çevirme hareketleri",
+     "5) Taklide dayalı becerilerde (bay-bay yapma) gelişmede gerilik"
+    ],
+    "ogrenci_cevap": "D (4)",
+    "banka_id": "c77bafb04f86",
+    "banka_yil": "2020-2021",
+    "banka_dogru": "D",
+    "tutarli": true,
+    "not": "Şık kümesi bankadaki iki sürümün karışımı: c77bafb04f86 (A–D aynı, E 'karşılıklı konuşmada yetersizlik') ve 1b0796213c00 (bay-bay şıkkı var, cevap C). Her ikisinde de cevap 'Oyuncakları dizme, çevirme hareketleri' (kısıtlı/tekrarlayıcı davranış kümesi)."
+   },
+   "bagli_birim": "psk-s16-b01",
+   "benzerlik": 0.704
+  },
+  {
+   "id": "psk-s16-b06",
+   "pdf": "psk",
+   "sayfa": 16,
+   "bolge": "r1c3",
+   "tur": "cikmis_soru",
+   "baslik": "OSB'de tanıda yol gösterici olmayan bulgu",
+   "metin": "75) Otizm spektrum bozukluğunda (OSB) aşağıdaki klinik bulgulardan hangisi tanı koymada yol gösterici olarak değerlendirilmez?",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "sari",
+     "hedef": "D) Tıkınırcasına yemek yeme isteğinin olması"
+    }
+   ],
+   "sinyal": [
+    "cikmis",
+    "sari"
+   ],
+   "y25": {
+    "key": "y25-k2-42-norogelisimsel-bozukluklar",
+    "sayfa": 18
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "cikmis": {
+    "kok": "75) Otizm spektrum bozukluğunda (OSB) aşağıdaki klinik bulgulardan hangisi tanı koymada yol gösterici olarak değerlendirilmez?",
+    "siklar": [
+     "A) Göz teması kısıtlılığı",
+     "B) Çocuğun ismine dönüp bakmaması",
+     "C) Kısıtlı ilgi alanları",
+     "D) Tıkınırcasına yemek yeme isteğinin olması",
+     "E) Tekrarlayıcı bedensel hareketler"
+    ],
+    "ogrenci_cevap": "D",
+    "banka_id": "past-q-I_SKENDERUN_TI_Mu_du_rlu_g_u_ne0__1__230709_230251-75",
+    "banka_yil": "Geçmiş Yıllar Çıkmışı (Arşiv), Kurul 2",
+    "banka_dogru": "D",
+    "tutarli": true,
+    "not": "Pembe değil beyaz kesik; cevap sarı vurgulu."
+   },
+   "bagli_birim": "psk-s16-b01",
+   "benzerlik": 0.691
+  },
+  {
+   "id": "psk-s16-b08",
+   "pdf": "psk",
+   "sayfa": 16,
+   "bolge": "r1c3+r2c3",
+   "tur": "cikmis_soru",
+   "baslik": "Özgül öğrenme bozukluğu için söylenemeyen",
+   "metin": "Özgül öğrenme bozukluğu için aşağıdaki bilgilerden hangisi söylenemez?",
+   "el_yazisi": [
+    {
+     "metin": "zekâ normal",
+     "hedef": "4) Zeka düzeyi 85 altındadır",
+     "guven": "yuksek",
+     "alternatif": ""
+    }
+   ],
+   "isaretler": [
+    {
+     "tur": "pembe",
+     "hedef": "tüm soru bloğu"
+    },
+    {
+     "tur": "daire",
+     "hedef": "4 Zeka düzeyi 85 altındadır (kırmızı çember)"
+    },
+    {
+     "tur": "ok",
+     "hedef": "1, 2, 3, 5 şıklarına kırmızı tik; çemberden 'zeka normal' notuna ok"
+    }
+   ],
+   "sinyal": [
+    "cikmis",
+    "el_onemli",
+    "tekrar"
+   ],
+   "y25": {
+    "key": "y25-k2-42-norogelisimsel-bozukluklar",
+    "sayfa": 30
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "cikmis": {
+    "kok": "Özgül öğrenme bozukluğu için aşağıdaki bilgilerden hangisi söylenemez?",
+    "siklar": [
+     "1) Sayı kavramını anlamakta güçlük çeker.",
+     "2) Saati öğrenmekte zorlanır.",
+     "3) Okul başarısında, bazı derslerde iyi, bazılarında kötüdür.",
+     "4) Zeka düzeyi 85 altındadır.",
+     "5) Okuduğunu anlamakta-anlatmakta zorlanır. Okumayı sökemez veya yavaştır."
+    ],
+    "ogrenci_cevap": "D (4)",
+    "banka_id": "4b92269c6553",
+    "banka_yil": "2020-2021",
+    "banka_dogru": "D",
+    "tutarli": true,
+    "not": ""
+   },
+   "bagli_birim": "psk-s16-b07",
+   "benzerlik": 0.788
+  },
+  {
+   "id": "psk-s16-b09",
+   "pdf": "psk",
+   "sayfa": 16,
+   "bolge": "r2c3",
+   "tur": "cikmis_soru",
+   "baslik": "Özgül öğrenme güçlüğü tanılı 11 yaşında Sena: yanlış ifade",
+   "metin": "78. Annesi tarafından psikiyatriste getirilen 11 yaşındaki Sena'ya özgül öğrenme güçlüğü tanısı konulmuştur. Sena ile ilgili aşağıdakilerden hangisi yanlıştır?",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "daire",
+     "hedef": "e. şıkkının harfi (kırmızı çember)"
+    }
+   ],
+   "sinyal": [
+    "cikmis"
+   ],
+   "y25": {
+    "key": "y25-k2-42-norogelisimsel-bozukluklar",
+    "sayfa": 35
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "cikmis": {
+    "kok": "78. Annesi tarafından psikiyatriste getirilen 11 yaşındaki Sena'ya özgül öğrenme güçlüğü tanısı konulmuştur. Sena ile ilgili aşağıdakilerden hangisi yanlıştır?",
+    "siklar": [
+     "a. Anksiyete bozuklukları görülmesi muhtemeldir",
+     "b. Bu durum genetik etken, konjenital faktörler, beyin hasarı gibi sebeplerle ortaya çıkmış olabilir",
+     "c. Yer, yön, saat ve zaman kavramlarını anlamakta güçlük yaşıyor olabilir",
+     "d. Zeka geriliği yoktur",
+     "e. İlaç tedavisi veya özel bir diyetle düzeltilebilir"
+    ],
+    "ogrenci_cevap": "E",
+    "banka_id": "final-2018-2019-q078",
+    "banka_yil": "2018-2019 (final)",
+    "banka_dogru": "E",
+    "tutarli": true,
+    "not": "Gri, fotoğraflanmış basılı soru (pembe değil); slayt s35 'Günümüzde ÖÖB'nin sağaltımında etkililiği kanıtlanmış bir ilaç tedavisi yoktur' cümlesine dayanır."
+   },
+   "bagli_birim": "psk-s16-b07",
+   "benzerlik": 0.647
+  }
+ ],
+ "banka": [
+  {
+   "id": "1b0796213c00",
+   "ders": "k2-42",
+   "yillar": [
+    "2020-2021",
+    "2020-2021"
+   ],
+   "kok": "Otizm spektrum bozukluğunda, aşağıdakilerden hangisi 'toplumsal-duygusal karşılık vermede yetersizlik' ölçütüne örnek değildir?",
+   "dogru": "Oyuncakları dizme, çevirme hareketleri",
+   "kopyalar": [
+    "c77bafb04f86"
+   ],
+   "birim": "psk-s16-b01",
+   "benzerlik": 0.607,
+   "kapsandi": true,
+   "notta_yapistirilmis": true
+  },
+  {
+   "id": "4b92269c6553",
+   "ders": "k2-42",
+   "yillar": [
+    "2020-2021"
+   ],
+   "kok": "Özgül öğrenme bozukluğu için aşağıdaki bilgilerden hangisi söylenemez?",
+   "dogru": "Zekâ düzeyi 85'in altındadır.",
+   "kopyalar": [],
+   "birim": "psk-s16-b07",
+   "benzerlik": 0.617,
+   "kapsandi": true,
+   "notta_yapistirilmis": true
+  },
+  {
+   "id": "daafa2b8d14f",
+   "ders": "k2-42",
+   "yillar": [
+    "2020-2021"
+   ],
+   "kok": "Otizm spektrum bozukluğunda, aşağıdakilerden hangisi 'toplumsal-duygusal karşılık vermede yetersizlik' ölçütüne örnektir?",
+   "dogru": "Anne, babaya veya diğer kişilere ilgi göstermelerinde bozukluk",
+   "kopyalar": [],
+   "birim": "psk-s16-b01",
+   "benzerlik": 0.645,
+   "kapsandi": true,
+   "notta_yapistirilmis": false
+  },
+  {
+   "id": "past-q-I_SKENDERUN_TI_Mu_du_rlu_g_u_ne0__1__230709_230251-75",
+   "ders": "k2-42",
+   "yillar": [
+    "Geçmiş Yıllar Çıkmışı (Arşiv)"
+   ],
+   "kok": "Otizm spektrum bozukluğunda (OSB) aşağıdaki klinik bulgulardan hangisi tanı koymada yol gösterici olarak değerlendirilmez?",
+   "dogru": "Tıkınırcasına yemek yeme isteğinin olması",
+   "kopyalar": [],
+   "birim": "psk-s16-b01",
+   "benzerlik": 0.635,
+   "kapsandi": true,
+   "notta_yapistirilmis": true
+  },
+  {
+   "id": "d3-k2-psi-010",
+   "ders": "k2-42",
+   "yillar": [
+    "2021-2026"
+   ],
+   "kok": "Dört yaşında erkek çocuk; ismine tepki vermeme, annesiyle göz teması kurmaktan kaçınma, akranlarıyla iletişim kurmama ve kendi etrafında dönme gibi stereotipik tekrarlayıcı hareketler nedeniyle getiriliyor. Bu hastada en",
+   "dogru": "Otizm spektrum bozukluğu",
+   "kopyalar": [],
+   "birim": "psk-s16-b04",
+   "benzerlik": 0.683,
+   "kapsandi": true,
+   "notta_yapistirilmis": false
+  },
+  {
+   "id": "d3-k2-tbg-004",
+   "ders": "k2-42",
+   "yillar": [
+    "2021-2026"
+   ],
+   "kok": "En az 1 yıldır devam eden birden fazla motor tik ile en az bir vokal tikin birlikte bulunduğu, sıklıkla OKB ve DEHB ile birliktelik gösteren nörogelişimsel tik bozukluğu hangisidir?",
+   "dogru": "Tourette sendromu",
+   "kopyalar": [],
+   "birim": "psk-s16-b01",
+   "benzerlik": 0.682,
+   "kapsandi": true,
+   "notta_yapistirilmis": false
+  },
+  {
+   "id": "past-1790877044860-729418",
+   "ders": "k2-42",
+   "yillar": [
+    "2021-2022"
+   ],
+   "kok": "Yaygın gelişimsel bozukluğu (otizm spektrum bozukluğu) olan bireylerle ilgili aşağıda verilen ifadelerden hangisi uyuşmaz?",
+   "dogru": "Erişkinlikte otizm belirtileri ve davranış sorunlarında artış olur",
+   "kopyalar": [],
+   "birim": "psk-s16-b01",
+   "benzerlik": 0.683,
+   "kapsandi": true,
+   "notta_yapistirilmis": false
+  },
+  {
+   "id": "q-No_ropsikiyatri_gis_kardiyo_-2023-2024-C__km_s_lar__240625_053302__2_-16",
+   "ders": "k2-42",
+   "yillar": [
+    "2023"
+   ],
+   "kok": "Bir yıldan uzun süredir tekrarlayan basit motor ve vokal (ses) tikleri bir arada bulunan çocukta en olası tanı hangisidir?",
+   "dogru": "Tourette bozukluğu",
+   "kopyalar": [],
+   "birim": "psk-s16-b04",
+   "benzerlik": 0.57,
+   "kapsandi": false,
+   "notta_yapistirilmis": true
+  },
+  {
+   "id": "q-No_ropsikiyatri_gis_kardiyo_-2023-2024-C__km_s_lar__240625_053302__2_-38",
+   "ders": "k2-42",
+   "yillar": [
+    "2023"
+   ],
+   "kok": "Otizm spektrum bozukluğunda (OSB) nöropatolojik ve görüntüleme çalışmalarında etkilendiği tutarlı biçimde gösterilen beyin bölgesi hangisidir?",
+   "dogru": "Serebellum",
+   "kopyalar": [],
+   "birim": "psk-s16-b01",
+   "benzerlik": 0.572,
+   "kapsandi": false,
+   "notta_yapistirilmis": false
+  },
+  {
+   "id": "past-1790877035999-122905",
+   "ders": "k2-42",
+   "yillar": [
+    "Geçmiş Yıllar Çıkmışı (Arşiv)"
+   ],
+   "kok": "Aşağıdakilerden hangisi Yaygın Gelişimsel Bozukluklar (YGB) ile ilgili doğru bir bilgi değildir?",
+   "dogru": "Nörofeedback, YGB tedavisinde yaygın ve kanıtlanmış bir yöntemdir.",
+   "kopyalar": [],
+   "birim": "psk-s16-b01",
+   "benzerlik": 0.607,
+   "kapsandi": true,
+   "notta_yapistirilmis": false
+  },
+  {
+   "id": "q-25-26_d_nem_3_kurul_2-91-cs2",
+   "ders": "k2-42",
+   "yillar": [
+    "2025-2026"
+   ],
+   "kok": "Dört yaşındaki bir çocuğun adı söylendiğinde dönüp bakmadığı ve göz teması kurmadığı fark ediliyor. Bu çocuk için en olası tanı aşağıdakilerden hangisidir?",
+   "dogru": "Otizm spektrum bozukluğu",
+   "kopyalar": [],
+   "birim": "psk-s16-b04",
+   "benzerlik": 0.68,
+   "kapsandi": true,
+   "notta_yapistirilmis": false
+  },
+  {
+   "id": "past-1790877039267-989167-cs2",
+   "ders": "k2-42",
+   "yillar": [
+    "2022-2023"
+   ],
+   "kok": "İstemsiz motor hareketler ile istemsiz ses çıkarmanın (vokal tik) birlikte bulunduğu, bir yıldan uzun süren ve çocuklukta başlayan bozukluk hangisidir?",
+   "dogru": "Tourette bozukluğu",
+   "kopyalar": [],
+   "birim": "psk-s16-b01",
+   "benzerlik": 0.574,
+   "kapsandi": false,
+   "notta_yapistirilmis": false
+  }
+ ]
+}

@@ -191,6 +191,12 @@ Bölüm dosyalarından **ders metni** `metin.md`'de birleştirilir: `# Başlık`
 
 ### E6 — Yayın ve rapor (§8–§10)
 
+## 4f. Geçmiş yıl öğrenci önem notu (AGENTS 28, zorunlu)
+`python3 scripts/ogrenci_onem/oku.py --ders <k2-xx> --sayfalar <klasör>/sayfalar.json` çıktısını ve `docs/OGRENCI_ONEM/<k2-xx>.md` belgesini oku.
+A birimleri anlatımda ayrıntılı (tanım → ayırt edici nokta → sayı/ölçüt → komşu kavram), önem listesinde `ogrenci` etiketli, ≥2 örnek soru;
+B birimleri anlatımda + ≥1 soru. Bu yıl slaytta karşılığı olmayan birim anlatıma girmez; §9 yanlışları kullanılmaz.
+BİTTİ ÖLÇÜTÜ: `python3 scripts/ogrenci_onem/kapi.py <k2-xx>` 0 HATA.
+
 ## 4b. Sesli metin yazımı (H23, kullanıcı kararı) — metin.md PDF yazımıyla yazılır, okunuşu EMA katmanı üretir
 `metin.md` kısaltma ve gen/protein sembollerini **PDF'teki yazımıyla** tutar: `HOXD13`, `OTX2`, `IL-2`. **Okunuşla yazma** («hoks de on üç», «o te iks iki» YASAK): ajanlı ders anahtarı (`<ders>-ag-<etiket>`) `modul_okunus.py` yoluna bağlıdır, EMA'ya giden metinde okunuşu o katman üretir.
 - Kapı URETIM-15: kanıttaki kısaltma metinde okunuşla (ya da okunuşa benzer uydurma yazımla) geçerse durdurur; PDF yazımıyla yaz.

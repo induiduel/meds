@@ -1,0 +1,324 @@
+{
+ "pdf": "noro",
+ "sayfa": 6,
+ "sayfa_ozeti": "Medulla spinalis hastalıkları devamı (k2-31): konus medüllaris ve kauda equina lezyonları ve ayırımı (iki slayt + karşılaştırma tablosu), herediter dejeneratif hastalıklar (Friedreich ataksisi, HSP), medulla spinalis tümörleri, subakut kombine dejenerasyon (B12) ve posterolateral kolon hastalığı. Pembe çıkmış soru yok; vurgu ağırlıkla yeşil fosforlu + kırmızı daire/çizgi.",
+ "bloklar": [
+  {
+   "id": "noro-s06-b01",
+   "bolge": "r1c1",
+   "tur": "slayt",
+   "baslik": "Konus medüllaris lezyonu",
+   "ders": "k2-31",
+   "y25": {
+    "key": "y25-k2-31-medulla-spinalis-hastaliklari",
+    "sayfa": 41
+   },
+   "basili_metin": "Konus medüllaris lezyonu\nPelvik taban kaslarında güçsüzlüğe neden olur ve akut inkontinans nedenidir.\nNörojenik mesaneye neden olur. [Volanter işeme yapılamaz / Artmış idrar rezidüsü / Vesikal doluluk duyumu yoktur]\nErektil disfonksiyon ve ejakülasyon bozukluğu\nSimetrik süvari yaması duyu kusuru\nAğrı nadirdir.\nTethered kord sendromu sık nedenlerden biridir.",
+   "isaretler": [
+    {
+     "tur": "yesil",
+     "hedef": "Pelvik taban kaslarında güçsüzlüğe; Volanter işeme yapılamaz; Artmış idrar rezidüsü; Vesikal doluluk duyumu yoktur; Simetrik süvari yaması duyu kusuru; Ağrı nadirdir"
+    },
+    {
+     "tur": "daire",
+     "hedef": "Nörojenik mesaneye neden olur"
+    },
+    {
+     "tur": "daire",
+     "hedef": "Simetrik süvari yaması duyu kusuru"
+    },
+    {
+     "tur": "daire",
+     "hedef": "Ağrı nadirdir"
+    },
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "Volanter işeme yapılamaz; Artmış idrar rezidüsü; Vesikal doluluk duyumu yoktur"
+    },
+    {
+     "tur": "daire",
+     "hedef": "akut; tam (el yazısında)"
+    },
+    {
+     "tur": "ok",
+     "hedef": "'Ağrı nadirdir' ile kauda equina 'ağrı ile ortaya çıkar' arasında çizgi"
+    }
+   ],
+   "el_yazisi": [
+    {
+     "metin": "Sfinkter tutulumu (akut) ve (tam)",
+     "hedef": "Konus medüllaris lezyonu başlığı",
+     "guven": "yuksek",
+     "alternatif": ""
+    },
+    {
+     "metin": "ikisini ayıran en önemli fark = (ağrı)",
+     "hedef": "Konus 'Ağrı nadirdir' ↔ Kauda 'akut radiküler ağrı ile ortaya çıkar' (çizgiyle bağlı)",
+     "guven": "yuksek",
+     "alternatif": ""
+    }
+   ],
+   "onem": [
+    "sari",
+    "el_onemli"
+   ],
+   "duzeltme": []
+  },
+  {
+   "id": "noro-s06-b02",
+   "bolge": "r1c1+r1c2",
+   "tur": "slayt",
+   "baslik": "Kauda equina lezyonu",
+   "ders": "k2-31",
+   "y25": {
+    "key": "y25-k2-31-medulla-spinalis-hastaliklari",
+    "sayfa": 41
+   },
+   "basili_metin": "Kauda equina lezyonu\nL3 vertebra düzeyinin altındaki lezyonlarda akut radiküler ağrı ile ortaya çıkar.\nAğrı unilateral olabilir. Eğer neden ekstramedüller tümör ise yakınmalar ayakta iken daha azdır, yatınca artar.\nGluteal bölgede asimetrik duyu bozukluğu\nAşil refleksi kayıptır. Patella refleksi elde edilebilir. Sfinkter bozukluğu konus medüllaris lezyonuna göre daha geç gelişir.",
+   "isaretler": [
+    {
+     "tur": "yesil",
+     "hedef": "L3 vertebra düzeyinin altındaki lezyonlarda akut radiküler ağrı ile ortaya çıkar; Ağrı unilateral olabilir; Eğer neden ekstramedüller tümör ise yakınmalar ayakta iken daha azdır, yatınca artar; asimetrik; Sfinkter bozukluğu konus medüllaris lezyonuna göre daha geç gelişir"
+    },
+    {
+     "tur": "daire",
+     "hedef": "ağrı ile ortaya çıkar"
+    },
+    {
+     "tur": "daire",
+     "hedef": "Gluteal bölgede asimetrik duyu bozukluğu"
+    },
+    {
+     "tur": "daire",
+     "hedef": "Aşil refleksi kayıptır"
+    },
+    {
+     "tur": "daire",
+     "hedef": "Patella refleksi elde edilebilir"
+    },
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "Ağrı unilateral; ekstramedüller tümör ise yakınmalar ayakta iken daha azdır, yatınca artar; Sfinkter bozukluğu ... daha geç gelişir"
+    }
+   ],
+   "el_yazisi": [],
+   "onem": [
+    "sari",
+    "daire"
+   ],
+   "duzeltme": []
+  },
+  {
+   "id": "noro-s06-b03",
+   "bolge": "r1c1+r2c1",
+   "tur": "slayt",
+   "baslik": "Kauda equina – konus medüllaris ayırımı (özet slayt)",
+   "ders": "k2-31",
+   "y25": {
+    "key": "y25-k2-31-medulla-spinalis-hastaliklari",
+    "sayfa": 42
+   },
+   "basili_metin": "Kauda equina lezyonu – Konus medüllaris lezyonu ile ayırımı\nKonus medüllaris sendromunda sfinkter tutulumu tam ve akuttur. Duysal bulgular simetriktir. Ağrı geri plandadır.\nKauda equina sendromunda sfinkter daha geç tutulur. Ağrı ön plandadır. Duysal bulgular asimetriktir.",
+   "isaretler": [
+    {
+     "tur": "yildiz",
+     "hedef": "Kauda equina lezyonu başlığı (büyük kırmızı yıldız)"
+    },
+    {
+     "tur": "daire",
+     "hedef": "sfinkter tutulumu tam ve akuttur; Duysal bulgular simetriktir; Ağrı geri plandadır; sfinkter daha geç tutulur; Ağrı ön plandadır; Duysal bulgular asimetriktir"
+    }
+   ],
+   "el_yazisi": [],
+   "onem": [
+    "yildiz",
+    "daire"
+   ],
+   "duzeltme": []
+  },
+  {
+   "id": "noro-s06-b04",
+   "bolge": "r2c1",
+   "tur": "slayt",
+   "baslik": "Konus medüllaris – kauda ekuina karşılaştırma tablosu",
+   "ders": "k2-31",
+   "y25": {
+    "key": "y25-k2-31-medulla-spinalis-hastaliklari",
+    "sayfa": 43
+   },
+   "basili_metin": "Özellik | Konus medüllaris sendromu | Kauda Ekuina sendromu\nBaşlangıç | Ani ve bilateral | Yavaş ve tek yanlı\nRefleksler | Patella (+), Aşil (-) | Patella ve aşil (-)\nAğrı | Hafif | Çok şiddetli\nGluteal ağrı | Çok | Az\nDuysal bulgu | Perianal duyu kusuru | Radiküler dağılım, asimetrik\nParezi | Alt ekstremite distallerinde simetrik, hafif güçsüzlük, DTR artar, fasikülasyon olabilir | Arefleksik, atrofinin eşlik ettiği, asimetrik güçsüzlük\nİmpotans | Sık | Nadir\nSfinkter kusuru | Üriner retansiyon, anal ve üriner sfinkterler atonik, taşma inkontinansı | Nadiren hastalığın ileri formlarında",
+   "isaretler": [],
+   "el_yazisi": [
+    {
+     "metin": "en belirgin",
+     "hedef": "Ağrı satırı (ayırımdaki en belirgin fark)",
+     "guven": "yuksek",
+     "alternatif": ""
+    },
+    {
+     "metin": "simetrik",
+     "hedef": "Gluteal ağrı – Konus: Çok",
+     "guven": "yuksek",
+     "alternatif": ""
+    },
+    {
+     "metin": "asimetrik",
+     "hedef": "Gluteal ağrı – Kauda: Az",
+     "guven": "yuksek",
+     "alternatif": ""
+    }
+   ],
+   "onem": [
+    "el_onemli"
+   ],
+   "duzeltme": [
+    {
+     "ham": "Gluteal ağrı: Konus 'Çok', Kauda 'Az'",
+     "dogru": "(değiştirilmedi) slayt tablosu böyle; ancak aynı dersin s42 özetinde konusta 'ağrı geri planda', kaudada 'ağrı ön planda' deniyor",
+     "gerekce": "Slayt içi çelişki olası; s41'de kaudada 'gluteal bölgede asimetrik duyu bozukluğu' geçiyor. Sınavda ayırımın ana ekseni ağrı (kauda > konus) ve sfinkter (konus erken/tam)."
+    }
+   ]
+  },
+  {
+   "id": "noro-s06-b05",
+   "bolge": "r1c2+r1c3",
+   "tur": "slayt",
+   "baslik": "Herediter dejeneratif medulla spinalis hastalıkları – Friedreich ataksisi",
+   "ders": "k2-31",
+   "y25": {
+    "key": "y25-k2-31-medulla-spinalis-hastaliklari",
+    "sayfa": 44
+   },
+   "basili_metin": "HEREDİTER DEJENERATİF MEDULLA SPİNALİS HASTALIKLARI\nEn bilinen tipler spinoserebellar ataksiler ve herediter spastik paraparezidir.\nFriedreich ataksisi: OR geçişli trinükleotid tekrar hastalığıdır. Periferik nöropati. Ataksi, derin duyu ve yüzeyel duyu bozukluğu. DTR'leri kayıp, Babinski (+). Kardiyak iletim bozuklukları",
+   "isaretler": [
+    {
+     "tur": "yesil",
+     "hedef": "En bilinen tipler spinoserebellar ataksiler ve herediter spastik paraparezidir; OR geçişli trinükleotid tekrar hastalığıdır; Periferik nöropati; Ataksi, derin duyu ve yüzeyel duyu bozukluğu; DTR'leri kayıp"
+    },
+    {
+     "tur": "daire",
+     "hedef": "Babinski (+)"
+    },
+    {
+     "tur": "ok",
+     "hedef": "OR geçişli trinükleotid tekrar → kalıtsal"
+    },
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "DTR'leri kayıp"
+    }
+   ],
+   "el_yazisi": [
+    {
+     "metin": "örn = Friedrich ataksisi",
+     "hedef": "spinoserebellar ataksiler",
+     "guven": "yuksek",
+     "alternatif": ""
+    },
+    {
+     "metin": "→ kalıtsal (daire içinde)",
+     "hedef": "OR geçişli trinükleotid tekrar hastalığıdır",
+     "guven": "yuksek",
+     "alternatif": ""
+    }
+   ],
+   "onem": [
+    "sari",
+    "daire",
+    "el_onemli"
+   ],
+   "duzeltme": [
+    {
+     "ham": "Friedrich ataksisi",
+     "dogru": "Friedreich ataksisi",
+     "gerekce": "yazım (slayt başlığı doğru yazım)"
+    }
+   ]
+  },
+  {
+   "id": "noro-s06-b06",
+   "bolge": "r1c2+r1c3",
+   "tur": "slayt",
+   "baslik": "Herediter spastik parapleji (HSP)",
+   "ders": "k2-31",
+   "y25": {
+    "key": "y25-k2-31-medulla-spinalis-hastaliklari",
+    "sayfa": 44
+   },
+   "basili_metin": "Herediter spastik parapleji (HSP)\nAlt ekstremitelerde yavaş progresif spastisite, parezi, DTR artışı, babinski yanıtı ile karekterize bir hastalıktır.\nSıklıkla OD geçişlidir.",
+   "isaretler": [],
+   "el_yazisi": [],
+   "onem": [],
+   "duzeltme": []
+  },
+  {
+   "id": "noro-s06-b07",
+   "bolge": "r1c2+r1c3",
+   "tur": "slayt",
+   "baslik": "Medulla spinalis tümörleri",
+   "ders": "k2-31",
+   "y25": {
+    "key": "y25-k2-31-medulla-spinalis-hastaliklari",
+    "sayfa": 38
+   },
+   "basili_metin": "İntramedüller tümörler: medülla spinalis yapılarından kaynaklanan tümörlerdir. Ependimom ve astrositomlar bunlara örnektir.\nEkstramedüller tümörler medulla spinalis komşuluğundaki yapılardan kaynaklanır. Meninjiom ve nörofibromalar\nEkstradural ekstramedüller tümörler invazyon sonucu gelişen tümörlerdir. Lenfoma, prostat CA, myelom, meme CA vb.",
+   "isaretler": [],
+   "el_yazisi": [],
+   "onem": [],
+   "duzeltme": []
+  },
+  {
+   "id": "noro-s06-b08",
+   "bolge": "r1c2+r2c2+r2c3",
+   "tur": "slayt",
+   "baslik": "Subakut kombine dejenerasyon (nöro-anemik sendrom) ve B12 eksiklik nedenleri",
+   "ders": "k2-31",
+   "y25": {
+    "key": "y25-k2-31-medulla-spinalis-hastaliklari",
+    "sayfa": 33
+   },
+   "basili_metin": "SUBAKUT KOMBİNE DEJENERASYON (NÖRO-ANEMİK SENDROM)\nB12 yetersizliğinden beyin, omurilik, optik sinirler ve periferik sinir sistemi etkilenir. En ağır hasar omurilikte, özellikle servikal ve üst dorsal bölgenin arka ve lateral kordonlarında ortaya çıkar.\nB12 vitamin eksiklik nedenleri: Diyetle yetersiz alım (sıkı vejeteryen diyet, malnutrisyon); İntrensek faktör yetersizliği (pernisiyöz anemi, gastrektomi, gastrik atrofi); Emilim bozukluğu (Crohn, Çölyak, geniş ileum rezeksiyonu); Konjenital hastalık (transkobalamin yetersizliği); Kronik ilaç kullanımı (H-2 antagonistleri, proton pompa inhibitörleri, antidiabetik (metformin)); Diğer nadir hastalıklar (kronik pankreatit, tiroid hastalığı, diphyllobothrium latum infestasyonu)",
+   "isaretler": [
+    {
+     "tur": "yesil",
+     "hedef": "B12 yetersizliğinden beyin, omurilik, optik sinirler ve periferik sinir sistemi etkilenir"
+    }
+   ],
+   "el_yazisi": [
+    {
+     "metin": "nörolojik belirti ve bulguları olan bazı hastalarda megaloblastik anemi görülmez!",
+     "hedef": "Subakut kombine dejenerasyon (nöro-anemik sendrom)",
+     "guven": "yuksek",
+     "alternatif": ""
+    }
+   ],
+   "onem": [
+    "sari",
+    "el_onemli"
+   ],
+   "duzeltme": []
+  },
+  {
+   "id": "noro-s06-b09",
+   "bolge": "r2c2+r2c3",
+   "tur": "slayt",
+   "baslik": "Posterolateral kolon hastalığı ve B12 eksikliği bulguları",
+   "ders": "k2-31",
+   "y25": {
+    "key": "y25-k2-31-medulla-spinalis-hastaliklari",
+    "sayfa": 34
+   },
+   "basili_metin": "POSTEROLATERAL KOLON HASTALIĞI\nVitamin B12 eksikliğinde arka kolon ve lateral kolon birlikte etkilenir. HIV vakouler miyelopati; Ekstrensek kord kompresyonu (spondilozis); HTLV ilişkili miyelopati (tropikal spastik paraparezi)\nVitamin B12 eksikliği-Subakut kombine dejenerasyon – Bulgular: Ayaklarda ve ellerde parestezi; Duysal ataksi; Romberg (+); Mesane atonisi; Spastisite ve hiperrefleksi (periferik nöropati varsa refleksler zayıflar); Ağrı ve ısı duyumu normaldir. (şema: arka ve lateral kolon tutulumu)",
+   "isaretler": [],
+   "el_yazisi": [],
+   "onem": [],
+   "duzeltme": [
+    {
+     "ham": "HIV vakouler miyelopati",
+     "dogru": "HIV vakuoler miyelopatisi",
+     "gerekce": "yazım"
+    }
+   ]
+  }
+ ]
+}

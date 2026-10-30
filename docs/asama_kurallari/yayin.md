@@ -1,6 +1,6 @@
 # Aşama kuralları — yayin
 
-> ÜRETİLMİŞ DOSYA: elle yazma. Kaynak `docs/KURUL2_YAPILMAYACAK_HATALAR.md`, üreteç `scripts/tam_hat/kural_secici.py`. 36 madde. Ayrıntı gerekirse madde başlığıyla defterde aç.
+> ÜRETİLMİŞ DOSYA: elle yazma. Kaynak `docs/KURUL2_YAPILMAYACAK_HATALAR.md`, üreteç `scripts/tam_hat/kural_secici.py`. 51 madde. Ayrıntı gerekirse madde başlığıyla defterde aç.
 
 ### Kurul 2 hattı için genel kural
 - Her içerik türünde yazar + bağımsız denetçi geçişi; doğrulayıcı 0 HATA vermeden EMA seslendirmesine ve yayına geçilmez.
@@ -343,3 +343,101 @@
 - **Çözüm:** `loadStats` katalog yüklüyse uzunluğunu, değilse son kayıtlı istatistiği kullanır (`isDeckCatalogLoaded`); `patchCatalog` kataloğu yüklemez, değişen girdileri ekler — `loadDeckCatalog` sonradan bunları korur (mevcut "early" birleştirmesi). /kamplar, /istatistik ölçümde katalog artık inmiyor.
 - **Kural:** Yalnız sayı/özet için büyük veri modülü tembel yüklenmez; özet meta veride tutulur. Canlı yama işlevleri ana veriyi zorla yüklemez, yüklemeyi bekleyen birleştirmeye bırakır.
 
+
+### H148 — Ders çalış merkezinde "hepsini bitirdin ya da henüz ders yok" ikili mesajı (2026-10-28, sayfa denetimi)
+- **Çözüm/kural:** Kurulda ders var ve hepsi bitti → "hepsini bitirdin" + tüm dersler bağlantısı; ders yok → "henüz eklenmedi" + önceki kurula geçiş. Boş durum metni iki ayrı durumu tek cümlede birleştirmez, bir eylem verir.
+
+
+### H153 — Yönetimde Yerel kipte hangi veriye bakıldığı belli değildi; birleştirmede asıl soru görünmüyordu (2026-10-28, sayfa denetimi)
+- **Çözüm/kural:** Yerel bandı + sekme adında `[Canlı]`/`[Yerel]`; birleştirme onayında asıl soru açılır listeden seçilir; `.m16-liste` satırı sarar, seçici alt satıra iner.
+
+
+### H154–H169 — Sayfa denetimi dördüncü tur, öğrenci sitesi orta bulguları (2026-10-28)
+- **H154/H155 Kutlama:** kuyruk hangi ekranda olursa olsun hemen açılıyordu → deneme, çıkmış testi, soru çözücü ve sesli ders ayrıntısında ertelenir. Rozetteki "3" ödül seviyesiydi, "Hepsini geç" sayısı bu ödülü saymıyordu → "3. seviye" ipucu, sayaç tüm kuyruk.
+- **H156 Bugün:** halka öğrencinin çalışmasını, alt kart okul programını gösteriyordu (farklı veri, aynı dil) → "bugün çalışma yok" / "Okuldaki bugünkü 2 ders sona erdi".
+- **H157 Deste sayısı:** merkez yayında olmayan desteleri de sayıyordu → kitaplıkla aynı ölçüt (`isPublished`, `kurulOf`).
+- **H158 Sesli ders süzgeci:** "2026–27/2025–26" etiketleri telefonda satırı taşırıyordu → "Bu yıl/Arşiv"; boş listede "Geçen yılın derslerini aç".
+- **H159/H160 Soru çöz kartları, Yanlışlarım:** uzun etiket/kırılan düğme → kısa ad, tek satır; boş Yanlışlarım'da "Soru çözmeye başla".
+- **H161 Boş Check Up:** düz metin → başka kurulun check-up'ı ve hazırlık araçlarına düğme.
+- **H162 Kazanım "8/2":** veri doğruydu ("0/2"); sabit genişlikli yazı tipinin çizgili sıfırı 8 okunuyordu → normal yazı tipi + tabular rakam. Sayaçta mono yazı tipi kullanılmaz.
+- **H163 Sınav planı hız çipleri:** 40×19 px → ≥32 px.
+- **H164 /profil:** /ayarlar ile aynı ekran → adres /ayarlar'a döner (eski bağlantı çalışır).
+- **H165–H167 Boş durumlar:** İstatistik (çalışmaya başla), Sıralama (Üniversiteni seç), Arkadaşlar (Giriş yap: App.tsx `medsoru:giris-ac` olayı).
+- **H168 Bildirimler:** eylem satırı kırılmıyordu ("Ok" kesik); silinemeyen okunmuşlar "temizle"yi etkin tutuyordu → satır sarar, düğme yalnız silinebilir varken etkin.
+- **H169 Telefonda kurul:** üst çubukta kurul yolu yoktu → kompakt "K2" çipi.
+- Masaüstü 24 px alt şerit uygulamada yeniden üretilemedi (tarama aracının boyut geçişi kalıntısı); değiştirilmedi.
+
+### H170–H185 — Sayfa denetimi dördüncü tur, yönetim paneli orta bulguları (2026-10-28)
+- **H170 Kurul çipi "1 66":** etiket yalın rakam + aynı boyutta sayı → "Kurul N" + soluk sayı rozeti.
+- **H171 Yüklenirken "0 kayıt":** sayaç yükleme durumuna bakmıyordu → "Yükleniyor…", seçeneksiz süzgeç satırı gizli.
+- **H172 Açıklamalarda dosya yolu/jargon:** yönetici diline çevrildi; yol küçük ikincil etiket.
+- **H173 Son yönetici işlemleri:** okuma kayıtlarıyla doluyordu → yalnız yazma (`sonDenetimler(8, true)` + istemci süzgeci).
+- **H174 Bellek "1462 / 234 MB":** RSS ve yığın etiketsiz yan yanaydı → ayrı satırlar, `yiginToplamMb` eklendi.
+- **H175 Gelen kartları:** sıfır kartlar gizli, hepsi sıfırsa "Bekleyen iş yok".
+- **H176** Çıkmış "Cevap" başlığı 56→72 px. **H177** Birleşenler "Ayır" yazılı onay + Geri al. **H178** Taslaklar kendi çekmecesini açar, dönüşte süzgeç korunur.
+- **H179 Askı gerekçesi `window.prompt`:** kit onay penceresine gerekçe alanı (`gerekceIste`, ≥3 karakter); Kişi 360, Erişim, Kişiler.
+- **H180** Oyun odası "Kapat" satır çekmecesinde. **H181** Erişim, DB satır yazımı, duyuru onaylarında hedef sunucu (`yazimHedefi()`); duyuru yayınlama artık onaylı.
+- **H182 Betik tehlikesi:** ad regex'i yerine izin listesi: yalnız bilinen salt okunur betikler onaysız, gerisi yazılı onay.
+- **H183 Yedek içe aktarma:** ezmeden önce `/api/admin/db/export` ile mevcut havuz indirilir, başarısızsa iptal (kalıcı çözüm: sunucu import ucu kendi yedeğini almalı — açık).
+- **H184 Çöp kutusu:** tek seçenekli "Tür" süzgeci gizleniyordu → gösterilir; Silinme süzgeci (bugün/7/30 gün/eski).
+- **H185 Site › Menü:** erişimi kapalı sayfada anahtar kilitli + açıklamalı; menüden gizleme onaylı, her yazım Geri al.
+
+### H340–H347, H360–H374 — Sayfa denetimi düşük önemli bulgular (2026-10-28)
+- **Kural:** Tehlikeli işlem ad kalıbıyla değil açık listeyle belirlenir (H182, H372). Açık çekmece/sekme adreste tutulur ki yenileme ve paylaşım aynı görünümü açsın.
+- Açık öneriler (yapı): menü/başlık ad eşleşmeleri, `kurul_2` adres biçimi, yinelenen girişler (KMB, Sözlük/Hastalıklar, takvim), havuz dondurmanın Bayraklar'a taşınması, ses kuyruğunun sesli ders sekmesi olması, sürüm notu + dağıtım bilgisinin birleşmesi. Veri: kazanımlarda yinelenen konu 31, soru haritası 498 / çıkmış 502 farkı.
+
+
+### H390–H392 — Veri tutarlılığı: yıldız işaretleri, soru haritası sayımı, deste kurul adları, yinelenen kazanım konuları (2026-10-28, kullanıcı onayıyla)
+- **H390 Belirti:** Deneme ekranında soru/şık metninde `**değildir**`, `**Soru:**` ham görünüyordu. **Kök neden:** veri doğru (kasıtlı vurgu; çıkmışta 49 soru, Öğren klinik karar vakalarında 414 öge), `PracticeV15` metni işlemeden yazıyordu. **Çözüm:** `**…**` kalın yazıya çevrilir; veri değişmedi.
+- **H391 Belirti:** Soru haritası Kurul 2'de 498, çıkmış sayfası 571+ gösteriyordu. **Kök neden:** 178 çıkmış soruda `isPastExam` alanı yok (kaynakları çıkmış PDF'leri); harita betiği yalnız `true` olanları sayıyordu. **Çözüm:** `scripts/v15/soru_haritasi.py` yalnız açıkça false ve gizli soruları dışlar; harita yeniden üretildi (K2 574).
+- **H392a Deste kurul adları:** Kurul 1 için 12 yazım vardı; boş/"Ürogenital Sistem Komitesi" yazılı 4 deste öğrenci tarafında "Diğer"e düşüyordu. 74 destenin `committee` alanı "Kurul 1 - Ürogenital ve Obstetrik Kurulu" yapıldı (kaynak `interactive_learning_decks.json`, biçim birebir korundu; doğrulayıcı 0 HATA, paketler yeniden üretildi).
+- **H392b Kazanım konu çiftleri:** Aynı dersin kesik/tam başlıklı iki kazanım kümesi (7 çift: K1 Genetik, K1 Üroloji ÜSE, K5 Demir, K5 Spondilodiskit, K6 Histamin, K6 Yaşlılıkta beslenme, K6 Biyokimya) tam başlıkta birleştirildi; yalnız birebir aynı 13 kazanım atıldı, kimlikleri taşındı (kazanım soruları, sınav çalışması, müfredat paketi, eşleme dizini byDeck yeniden üretildi; artık başvuru 0), slayt kanıtları birleşti. 25 konu başlığından hoca adı / "UZM." eki temizlendi. Ders kayıt defterine (`dersler/kN.json`) dokunulmadı: K5/K6 çiftleri orada iki ayrı ders kimliğidir (kural: kimlikler kalıcı). Betik: oturum yedeğiyle `kz/birlestir.py`.
+- **Tuzaklar:** (1) `lite/`, `questions/`, `pastQuestions.json`, `sinav_calisma_k*.json` git dışıdır; dağıtım temiz `meds-dagitim` ağacından derler, bu dosyaların güncel kopyası oraya elle konmazsa canlı derleme eski veriyi gömer. (2) Çıkmışların canlı asıl kopyası Oracle `data/pastQuestions.json`'dır (sunucu bellekte tutup üzerine yazar); yerel `src/data/pastQuestions.json` yalnız yansıdır. Canlı çıkmış konu/kimlik güncellemesi ayrı, sunucu uçlarıyla yapılmalı (yapılmadı, açık).
+
+### H393 — Canlı çıkmışlarda kazanım birleştirmesinden kalan eski konu adları / kimlikler (2026-10-28, kullanıcı onayıyla)
+- **Çözüm:** Yeni yönetim ucu `POST /api/admin/sorular/cikmis/esleme-uygula` (varsayılan önizleme; `uygula:true, onay:"ESLE"` ile tam yedek `data/_yedek/pastQuestions.esleme-oncesi.<zaman>.json` + değişim dosyası `data/_yedek/cikmis_esleme_<zaman>.json`, sunucunun kendi kaydetme/yansıtma/canlı olay yolu, denetim kaydı) ve `POST …/esleme-geri {dosya, onay:"GERI"}`. Geçmiş kayıtlar (`checkSolveOriginal`, `eskiSurum`, `phase14Original`, revizyonlar) atlanır. Yerelde önizle→uygula→geri al denendi, yerel dosya birebir geri yüklendi; canlıda önizleme 56 soru/57 değer (plan ile aynı) → uygulandı, diskte kalan 0, geçmiş kayıtlardaki 82 değer dokunulmadan. Canlı değişim dosyası: `cikmis_esleme_2026-10-28T17-37-02-423Z.json`.
+- **Kural:** Canlı çıkmış verisinde toplu değişiklik yalnız sunucu içinden, önizlemeli ve geri alınabilir yolla yapılır; geçmiş kayıt alanlarına toplu değiştirmede dokunulmaz.
+
+
+### H400–H406, H420–H424 — Yapı sadeleştirme: yinelenen sayfa ve girişler (2026-10-28, kullanıcı kararı)
+- **Kural:** Aynı işi gören ikinci giriş/sayfa açılmaz; birleştirmede bileşen silinmez (yönlendirme + menüden kaldırma), eski adres yeni yere yönlenir ve SITE_HARITASI_KURALLARI.md'ye yazılır.
+
+### H431 — Kişi 360° › Etkinlik sekmesi hep "Olay yok" gösteriyordu (2026-10-28, kullanıcı bildirdi)
+- **Çözüm/kural:** Uç nokta ilk sayfada ziyaretleri `kind:'page'` olay olarak birleştirir (Tümü 100, Sayfa süzgeci 300). Yeni bir olay kaynağı eklenince yönetim ekranının o kaynağı gerçekten okuduğu canlı veriyle doğrulanır.
+
+
+### H435 — Sıralama: ölçü değişince eski veri yanlış birimle görünüyor, tepki geç (2026-10-29)
+- **Çözüm/önleme:** yanıt istek anahtarını taşır (`anahtar`), yalnız güncel anahtarla eşleşen yanıt çizilir, yoksa iskelet; sayfa ömürlü önbellek + eşzamanlı istek birleştirme + diğer ölçülerin arka planda önden yüklenmesi; SSE değişiminde önbellek temizlenir. Kural: süzgeçli listede yanıt, isteğin anahtarıyla etiketlenmeden ekrana basılmaz.
+
+
+### H437 — Çevrimdışı indirme "sırada" takılıyor, her açılışta uygulama dosyası iniyor (2026-10-29)
+- **Çözüm:** bekleme yalnız uçuşan ön plan isteğine ve en çok 2 sn; uygulama paketi yalnız cihazda yokken içerikle birlikte başa, güncellemesi yalnız çevrimdışı mod + otomatik güncelleme açıkken kuyruğun sonuna.
+- **Önleme:** arka plan indirmesinde dosya başına bekleme süresi toplam süreyi paket boyuyla çarpar — bekleme paket başına değil dosya başınaysa üst sınır saniyeler düzeyinde tutulur; sürüm değişimi her dağıtımda olan bir paket kuyruğun önüne zorla alınmaz.
+
+
+### H441 — Sesli ders listesi (`/api/canli-ders`) canlıda her açılışta 1,2 sn (2026-10-29)
+- **Çözüm:** salt okunur kayıt defterleri için boyut+mtime önbellekli `okuSabit` (dersler, dersBul, varyantlar, sinamaKonfig, branş kaydı). Dört sorgu biçiminde çıktı önce/sonra bayt bayt aynı; yerelde 270–380 ms → 4 ms.
+- **Önleme:** İstek başına döngü içinde dosya okuyup ayrıştırma yapılmaz; değişmeyen kayıt defteri bir kez okunur, imza (boyut+mtime) değişince tazelenir. Önbellekten dönen nesne değiştirilmez (yazan kod taze `oku` kullanır). Yeni liste ucu eklerken Oracle içinden `curl -w %{time_total}` ile ölçülür (hedef < 50 ms).
+
+
+### H446 — Öğrencinin en çok çalıştığı ve çıkmışta sorulan bilgi anlatımda "ders yalnız adıyla sayar" diye geçiştirildi (2026-10-30)
+- **Kural:** AGENTS 28 — geçmiş yıl öğrenci önem notu (`src/data/ogrenci_onem/`, `docs/OGRENCI_ONEM/<ders>.md`) her 2026-27 dersinde zorunlu
+  malzemedir: A birimi anlatımda ayrıntılı (tanım → ayırt edici nokta → sayı/ölçüt → komşu kavram), önem listesinde `ogrenci` etiketli
+  madde, ≥2 örnek soru; B birimi anlatımda açık + ≥1 soru. Slaytta yalnız adı geçen kavram, notta/çıkmışta tanımı soruluyorsa tanımıyla anlatılır.
+- **Önleme:** "ders yalnız adını verir / yalnız adlarıyla sayar" türü geçiştirme, kavram öğrenci notunda ya da çıkmışta tanımıyla geçiyorsa yasaktır.
+- **Kapı:** `python3 scripts/ogrenci_onem/kapi.py <ders>` 0 HATA — bilgi düzeyinde (el notu, vurgulu satır, çıkmış önermesi) anlatım ve önem
+  listesi cümlelerinde arar (vektör + kelime kökü örtüşmesi; yalnız vektör "spastisite ve rijidite" cümlesini rijidite tanımı sanıyordu).
+
+### H447 — Metni değişen paragrafların v2 cümleleri boş kaldı, ders ekranı ve çapası o paragraflarda eksik yayında (2026-10-30)
+- **Çözüm:** 9 paragraf metin değişmeden dolduruldu (eski v2'de birebir aynı kalan 17 cümle kimliğiyle geri alındı, kalanlar yeni
+  kimlikle yazıldı; paragraf kimlikleri `k2-05-pNNN` biçimine döndü); `konusma_v2.py --dogrula` 0 HATA.
+- **Önleme:** `klip_tasi.py` "v2: N paragraf boş" raporu verdiyse o ders, boş paragraflar `konusma_v2` biçiminde yazılıp
+  `konusma_v2.py --dogrula <dizin>` (kaynak.md ile) 0 HATA verene dek dağıtılmaz; açık iş olarak not düşmek yerine aynı oturumda kapatılır.
+
+
+### H448 — `klip_tasi.py` metinle birlikte düzenlenmiş v2'yi eski metne göre yeniden kurup değişen paragrafları boşaltıyordu; `ders-ekle` elle iyileştirilmiş çapayı ezdi (2026-10-30)
+- **Çözüm:** `klip_tasi` cümle seslerinin birleşimi yeni paragraf metniyle aynıysa v2'ye dokunmaz. Çapa: yereldeki taşınmış çapa esas alındı,
+  değişen paragraflarda değişmeyen cümleler eski çapayı (git HEAD) geri aldı, yeni cümleler satırdan `pdf_isaret.capa_maddeleri` ile madde
+  dizinine çevrildi; `capa_dogrula` %98, 0 HATA; çapa Oracle'a yeniden yazıldı.
+- **Önleme:** yayımlanmış dersin metni düzeltildiğinde `sesli_yayinla.py`'den SONRA yerel çapa (klip_tasi ile taşınmış + değişen paragraflar
+  yazılmış) Oracle'a geri kopyalanır ve `pdf_isaret.py --key <key> --zorla` çalıştırılır (H93); `ders-ekle`'nin yazdığı kaba çapaya güvenilmez.

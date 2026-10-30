@@ -214,7 +214,14 @@ def main() -> int:
     j = oku(f)
     if j and isinstance(j.get("bolumler"), list):
         duz = [(b, p) for b in j["bolumler"] for p in (b.get("paragraflar") or [])]
-        if len(duz) == len(E):
+        sade = lambda t: re.sub(r"\s+", " ", t or "").strip()  # noqa: E731
+        # v2 metinle birlikte düzenlendiyse (cümle sesleri yeni paragraflarla aynı) dokunulmaz — paragraf sayısı değişmediğinde
+        # eski kontrol bunu eski metinle tutarlı sanıp değişen paragrafları boşaltıyordu (2026-10-30, k2-05-v2).
+        yeni_tutarli = len(duz) == len(Y) and all(
+            sade(" ".join(c.get("ses", "") for c in (pp.get("cumleler") or []))) == sade(Y[i]["t"]) for i, (_, pp) in enumerate(duz))
+        if yeni_tutarli:
+            rapor.append("  v2: zaten yeni metinle tutarlı")
+        elif len(duz) == len(E):
             yeni_b: list[dict] = []
             for i, p in enumerate(Y):
                 if p["bolumBasi"] or not yeni_b:

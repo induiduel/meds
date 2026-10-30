@@ -23,6 +23,7 @@
 | Öğrenci notu (işaret, çizim, el yazısı PDF) | Öğrenci Drive'ı (`17K7doMGg0xupQekTD5_Vz9xMXc5gd7BA`) | **sayfa başlıklarıyla** (dosya adı farklı olabilir) |
 | Hoca ses kaydı | Öğrenci Drive'ı | kullanıcının söylediği ders; döküm slaytlarla hizalanır |
 | Çıkmışlar | Banka → ham belge doğrulaması | §3 |
+| Geçmiş yıl öğrenci önem notu | `src/data/ogrenci_onem/<ders>.json` + `docs/OGRENCI_ONEM/<ders>.md` | `oku.py --sayfalar` ile bu yılın sayfasına (AGENTS 28, `OGRENCI_ONEM_YONTEMI.md`) |
 
 Kullanıcı eşlemeyi söylediyse o esastır; yine de sayfa başlıkları içerikle doğrulanır, uyuşmazsa sorulur.
 
@@ -150,7 +151,7 @@ kaynağa sadık, çıkmışa ve hocanın vurguladığı yere ağırlık veren de
    (sayfa kayması en sık hata); slayttakiyle çelişen not kullanılmaz. Her sayfa GÖRÜNTÜSÜ okunur (metin çıkarımı el yazısını/işareti vermez).
 3. **Hoca sesi:** CPU'da (`hoca_dokum.py`, mutlak yol, systemd-run `MemoryMax=4G`); dersin SON dakikalarında hoca çoğu zaman sınav yerlerini sayar —
    o bölüm ayrıca dinlenir/gerekirse yeniden dökülür, her vurgu zaman damgalı alıntı + slayt sayfası ile kaydedilir; anlaşılmayan yer vurgu olmaz.
-4. **Çıkmışla birleştirme:** hoca vurgusu + doğrulanmış çıkmış + öğrenci işareti kesişen yerler en önemli sayılır, anlatımda en ayrıntılı ve en vurgulu yerlerdir.
+4. **Çıkmışla birleştirme:** hoca vurgusu + doğrulanmış çıkmış + öğrenci işareti + **geçmiş yıl öğrenci önem notunun A/B birimleri** (AGENTS 28; `docs/OGRENCI_ONEM/<ders>.md`, kapı `scripts/ogrenci_onem/kapi.py`) kesişen yerler en önemli sayılır, anlatımda en ayrıntılı ve en vurgulu yerlerdir.
    Yalnız hoca/çıkmış dayanaklı vurgu cümlesi kurulur; ikisi yoksa vurgu cümlesi yok. Çıkmış eşleme ham belgede yer göstermeden yapılmaz.
 5. **Her şey kaynak sağlamalı:** kritik tıbbi iddia (eşik, sayı, gen–hastalık, dereceleme) slayt sayfasıyla `kanit`ta eşlenir; emin olunmayan atlanır.
 6. **Fazlı iş + alt ajan:** A (aşama 1–6 içerik) → B (7–11 anlatım/yayın/ses/çapa) → C (12–16 çizim, önem/çözücü/asistan, quiz, dağıtım). Her faz sonunda

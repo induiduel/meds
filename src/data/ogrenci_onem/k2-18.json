@@ -1,0 +1,674 @@
+{
+ "ders": "k2-18",
+ "kod": "2n06",
+ "brans": "Nöroloji",
+ "konu": "Bazal Gangliyonlar ve Ekstrapiramidal Sistem",
+ "kaynak": "Geçmiş yıl (2025-26) öğrenci derleme notu: noro3.2",
+ "y25": {
+  "key": "y25-k2-18-bazal-gangliyonlar",
+  "sayfalar": [
+   7,
+   8,
+   9,
+   11,
+   12,
+   13
+  ]
+ },
+ "sayac": {
+  "birim": 7,
+  "A": 4,
+  "B": 1,
+  "C": 2,
+  "ogrenci_sorusu": 3,
+  "banka": 7,
+  "banka_kapsandi": 5
+ },
+ "birimler": [
+  {
+   "id": "noro-s13-b09",
+   "pdf": "noro",
+   "sayfa": 13,
+   "bolge": "r2c1",
+   "tur": "slayt",
+   "baslik": "Klinik: tremor, kore, atetoz, distoni, hemiballismus",
+   "metin": "KLİNİK\nTremor\nKore\nAtetoz\nDistoni\nHemiballismus",
+   "el_yazisi": [
+    {
+     "metin": "istemdışı, kontrolsüz hareket",
+     "hedef": "KLİNİK",
+     "guven": "yuksek"
+    },
+    {
+     "metin": "= en sık görülen. birbirine antagonist kaslar kasılır. ellerde hap yapma/para sayma hareketi. ayakta = pedal.",
+     "hedef": "Tremor",
+     "guven": "yuksek"
+    },
+    {
+     "metin": "= amaçsız, düzensiz, ani hareket. elde daha sık. günlük akt.leri engeller. Sydenham → akut eklem romatizmasının majör belirtisi. Huntington → OD.",
+     "hedef": "Kore",
+     "guven": "yuksek"
+    },
+    {
+     "metin": "= eldeki birbirini takip eden kıvrılma hareketi. dansöz kol ve el hareketlerine benzer. kernikterus, doğustan beyin hasarlı çocukta, dejeneratif bazal ggl.",
+     "hedef": "Atetoz",
+     "guven": "yuksek"
+    },
+    {
+     "metin": "= boyunda istemsiz spazm, lokalizeyse → spazmodik tortikolis. en çok SCM'de.",
+     "hedef": "Distoni",
+     "guven": "yuksek"
+    },
+    {
+     "metin": "= vücudun yarısını tutan, kol ve bacakta proksimalden başlayan ani, fırlatıcı, geniş amplitüdlü, istemsiz hareket. (kendisi de zarar görebilir)",
+     "hedef": "Hemiballismus",
+     "guven": "yuksek"
+    },
+    {
+     "metin": "çıkmış",
+     "hedef": "Hemiballismus (daire içinde, sol kenar)",
+     "guven": "orta",
+     "alternatif": "harfler 'Gıkuş' gibi; 'çıkış' da okunabilir, ancak yanındaki çıkmış soruyla 'çıkmış' anlamı tutarlı"
+    },
+    {
+     "metin": "Parkinson tremoru genellikle başı tutmaz (baş tremoru esansiyel tremorda tipiktir); dudak, çene, dilde olabilir ★ tremor olabilir.",
+     "hedef": "Tremor / klinik altı",
+     "guven": "yuksek"
+    }
+   ],
+   "isaretler": [
+    {
+     "tur": "daire",
+     "hedef": "Hemiballismus yanındaki 'çıkmış' yazısı"
+    },
+    {
+     "tur": "yildiz",
+     "hedef": "Parkinsonda kafa sallama yok notu"
+    }
+   ],
+   "sinyal": [
+    "cikmis",
+    "el_cikmis",
+    "el_onemli",
+    "yildiz"
+   ],
+   "y25": {
+    "key": "y25-k2-18-bazal-gangliyonlar",
+    "sayfa": 13
+   },
+   "y26": null,
+   "duzeltme": [
+    {
+     "ham": "spazmotik tortikolis",
+     "dogru": "spazmodik tortikolis",
+     "gerekce": "Terim 'spazmodik tortikolis' (servikal distoni)."
+    },
+    {
+     "ham": "Parkinsonda kafa sallama yok",
+     "dogru": "Parkinson tremoru genellikle başı tutmaz (baş tremoru esansiyel tremorda tipiktir); dudak, çene, dilde olabilir",
+     "gerekce": "Arşiv s14: istirahat tremoru 'dudak, çene, dilde de olabilir'; öğrenci notu bu ayrımı veriyor, tıbben uyumlu."
+    }
+   ],
+   "not_": null,
+   "ogrenci_sorulari": [
+    "noro-s13-b10"
+   ],
+   "banka_cikmis": [
+    "d3-k2-nor-012",
+    "past-1790877039271-371364"
+   ],
+   "puan": 100,
+   "oncelik": "A",
+   "vurgulu": [
+    "Hemiballismus yanındaki 'çıkmış' yazısı",
+    "Parkinsonda kafa sallama yok notu"
+   ]
+  },
+  {
+   "id": "noro-s13-b02",
+   "pdf": "noro",
+   "sayfa": 13,
+   "bolge": "r1c1",
+   "tur": "slayt",
+   "baslik": "BG nörotransmiterler ve motor işlev",
+   "metin": "BG nörotransmiterler\nGABA (inh)\nGlutamat (uyarıcı, eksitatör)\nDopamin D1 (uyarıcı) D2 (bastırıcı)\nAsetilkolin (modulatör)\nnöropeptitler (substance p, enkefalin)\nBG motor işlevi, hareketin başlatılması, planlanması, hareket hız ve büyüklüğünün ayarlanması, öğrenilmiş motor programların otomatik yürütülmesi (bisiklete binme), kas tonusunun ayarlanması",
+   "el_yazisi": [
+    {
+     "metin": "= uyarmaz, baskılamaz.",
+     "hedef": "Asetilkolin (modulatör)",
+     "guven": "yuksek"
+    },
+    {
+     "metin": "+ odaklama ve ölçekleme",
+     "hedef": "BG motor işlevi (kas tonusunun ayarlanması sonrasına ek)",
+     "guven": "yuksek"
+    }
+   ],
+   "isaretler": [
+    {
+     "tur": "pembe",
+     "hedef": "5 nörotransmiter satırı (açık pembe vurgu)"
+    },
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "5 nörotransmiter satırı"
+    }
+   ],
+   "sinyal": [
+    "cikmis",
+    "el_onemli"
+   ],
+   "y25": {
+    "key": "y25-k2-18-bazal-gangliyonlar",
+    "sayfa": 7
+   },
+   "y26": null,
+   "duzeltme": [
+    {
+     "ham": "sunstance p",
+     "dogru": "substance P",
+     "gerekce": "Slayt yazım hatası."
+    }
+   ],
+   "not_": null,
+   "ogrenci_sorulari": [
+    "noro-s13-b03"
+   ],
+   "banka_cikmis": [
+    "past-1790877043386-198521"
+   ],
+   "puan": 78,
+   "oncelik": "A",
+   "vurgulu": [
+    "5 nörotransmiter satırı",
+    "5 nörotransmiter satırı (açık pembe vurgu)"
+   ]
+  },
+  {
+   "id": "noro-s13-b04",
+   "pdf": "noro",
+   "sayfa": 13,
+   "bolge": "r1c2",
+   "tur": "slayt",
+   "baslik": "BG devreleri: direkt ve indirekt yol",
+   "metin": "BG'ı oluşturan bu yapılar arasında oluşmuş devreler\na1 direk yol: korteks (frontal, parietal) → striatum → Gpi/SNr → Talamus (→ korteks)\na2 indirek yol: korteks → putamen → Gpe → STN → Gpi/SNr → Talamus → korteks",
+   "el_yazisi": [
+    {
+     "metin": "striatum → afferent (girdi çekirdekleri)",
+     "hedef": "striatum",
+     "guven": "yuksek"
+    },
+    {
+     "metin": "inhibitör",
+     "hedef": "striatum → Gpi/SNr oku",
+     "guven": "yuksek"
+    },
+    {
+     "metin": "inhibe etkisi inhibe edildi.",
+     "hedef": "Gpi/SNr (direkt yol)",
+     "guven": "yuksek"
+    },
+    {
+     "metin": "↳ çıkış / efferent",
+     "hedef": "Gpi/SNr",
+     "guven": "yuksek"
+    },
+    {
+     "metin": "uyardı",
+     "hedef": "Talamus → korteks (direkt yol)",
+     "guven": "yuksek"
+    },
+    {
+     "metin": "inhibitör",
+     "hedef": "putamen → Gpe",
+     "guven": "yuksek"
+    },
+    {
+     "metin": "ara çekirdekler",
+     "hedef": "Gpe → STN",
+     "guven": "yuksek"
+    },
+    {
+     "metin": "→ kendi inhibe edici etkisi inhibe!",
+     "hedef": "Gpe (indirekt yol)",
+     "guven": "yuksek"
+    },
+    {
+     "metin": "→ Subtalamik nukleus",
+     "hedef": "STN",
+     "guven": "yuksek"
+    },
+    {
+     "metin": "inhibitör",
+     "hedef": "Gpi/SNr → Talamus (indirekt yol)",
+     "guven": "yuksek"
+    },
+    {
+     "metin": "X (çarpı)",
+     "hedef": "Talamus → korteks (indirekt yolda korteks uyarılmaz)",
+     "guven": "yuksek"
+    }
+   ],
+   "isaretler": [
+    {
+     "tur": "ok",
+     "hedef": "Talamus → korteks dönüşü (mavi ok, 'uyardı')"
+    },
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "Gpi/SNr"
+    },
+    {
+     "tur": "daire",
+     "hedef": "Gpe → STN"
+    },
+    {
+     "tur": "karalama",
+     "hedef": "indirekt yolda Talamus → korteks oku X ile çizilmiş"
+    }
+   ],
+   "sinyal": [
+    "cikmis",
+    "el_onemli"
+   ],
+   "y25": {
+    "key": "y25-k2-18-bazal-gangliyonlar",
+    "sayfa": 8
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "ogrenci_sorulari": [
+    "noro-s13-b05"
+   ],
+   "banka_cikmis": [
+    "d3-k2-nor-003"
+   ],
+   "puan": 78,
+   "oncelik": "A",
+   "vurgulu": [
+    "Gpe → STN",
+    "Gpi/SNr"
+   ]
+  },
+  {
+   "id": "noro-s13-b01",
+   "pdf": "noro",
+   "sayfa": 13,
+   "bolge": "r1c1",
+   "tur": "slayt",
+   "baslik": "Bazal gangliyonu oluşturan yapılar",
+   "metin": "Striatum\n-Putamen\n-Nukleus kaudatus\n-Ventral striatum\nGlobus pallidus (eksternus ve internus)\nSubstantia nigra (pars kompakta ve pars retikulata)\nSubtalamik nukleus (Korpus Luysii)",
+   "el_yazisi": [
+    {
+     "metin": "↳ Parkinson",
+     "hedef": "Substantia nigra (pars kompakta)",
+     "guven": "yuksek"
+    }
+   ],
+   "isaretler": [],
+   "sinyal": [
+    "el_onemli"
+   ],
+   "y25": null,
+   "y26": null,
+   "duzeltme": [],
+   "not_": "Arşiv metin dökümünde bulunamadı; dersin s03–s06 slaytları metinsiz (görsel) olduğundan liste muhtemelen bunlardan birinde.",
+   "banka_cikmis": [
+    "q-2__kurul_-13"
+   ],
+   "puan": 38,
+   "oncelik": "A",
+   "vurgulu": []
+  },
+  {
+   "id": "noro-s13-b07",
+   "pdf": "noro",
+   "sayfa": 13,
+   "bolge": "r1c3",
+   "tur": "slayt",
+   "baslik": "İskeletomotor dışı devreler",
+   "metin": "bazal ganliada iskeletomotor devre dışında\nOculomotor\nAsosiyatif\nLimbik devreler de var.",
+   "el_yazisi": [
+    {
+     "metin": "→ beyin geliştikçe korteks kullanımı limbik sistem ön plana çıkar.",
+     "hedef": "Limbik devreler de var",
+     "guven": "orta",
+     "alternatif": "'beyin geliştikçe korteks kullanımı, limbik sistem yerine ön plana çıkar' (satır sırası belirsiz: 'yerine' ve 'ön plana' iki satıra bölünmüş)"
+    }
+   ],
+   "isaretler": [
+    {
+     "tur": "yesil",
+     "hedef": "Oculomotor; Asosiyatif; Limbik devreler de var"
+    }
+   ],
+   "sinyal": [
+    "el_onemli",
+    "sari"
+   ],
+   "y25": {
+    "key": "y25-k2-18-bazal-gangliyonlar",
+    "sayfa": 9
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "puan": 18,
+   "oncelik": "B",
+   "vurgulu": [
+    "Oculomotor; Asosiyatif; Limbik devreler de var"
+   ]
+  },
+  {
+   "id": "noro-s13-b06",
+   "pdf": "noro",
+   "sayfa": 13,
+   "bolge": "r1c3",
+   "tur": "slayt",
+   "baslik": "BG'nin talamus üzerindeki istirahat inhibisyonu ve odaklama",
+   "metin": "bazal ganglia istirahat halinde talamus üzerinde inh. korteksin uyarılabilirliğini kontrol altında tutuyor.\nbaşlatılan hareketlerin motor komponentlerini direk yolla kuvvetlendirip, istenmeyen komponentlerini indirek yolla inh ederek «odaklar»",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "pembe",
+     "hedef": "başlatılan hareketlerin ... «odaklar» (açık pembe vurgu)"
+    }
+   ],
+   "sinyal": [
+    "sari"
+   ],
+   "y25": {
+    "key": "y25-k2-18-bazal-gangliyonlar",
+    "sayfa": 11
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "puan": 10,
+   "oncelik": "C",
+   "vurgulu": [
+    "başlatılan hareketlerin ... «odaklar» (açık pembe vurgu)"
+   ]
+  },
+  {
+   "id": "noro-s13-b08",
+   "pdf": "noro",
+   "sayfa": 13,
+   "bolge": "r2c3",
+   "tur": "slayt",
+   "baslik": "Bazal ganglion hastalıklarının etyolojisi",
+   "metin": "Etyoloji: Dejeneratif, Kalıtsal, Vaskuler, Enfeksiyon, Doğum travması, İlaçlar",
+   "el_yazisi": [
+    {
+     "metin": "→ psk ilaçlar önemli → tipik antipsikotikler genellikle kalıcı olur. L-dopa tedavisindeki diskineziler.",
+     "hedef": "İlaçlar",
+     "guven": "orta",
+     "alternatif": "'tipik' önündeki işaret 'Li' gibi; 'L-dopa'daki L ile aynı biçimde yazılmış, '1.' madde numarası olabilir. Lityum okuması bağlama uymuyor."
+    }
+   ],
+   "isaretler": [],
+   "sinyal": [
+    "el_onemli"
+   ],
+   "y25": {
+    "key": "y25-k2-18-bazal-gangliyonlar",
+    "sayfa": 12
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "puan": 8,
+   "oncelik": "C",
+   "vurgulu": []
+  }
+ ],
+ "ogrenci_sorulari": [
+  {
+   "id": "noro-s13-b03",
+   "pdf": "noro",
+   "sayfa": 13,
+   "bolge": "r1c1",
+   "tur": "cikmis_soru",
+   "baslik": "BG'de modülatör nörotransmiter",
+   "metin": "Bazal gangliyonlarda modülatör? Ach / GABA / Glutamat / Enkefalin / Dopamin",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "pembe",
+     "hedef": "soru bloğu"
+    },
+    {
+     "tur": "daire",
+     "hedef": "Ach"
+    }
+   ],
+   "sinyal": [
+    "cikmis"
+   ],
+   "y25": {
+    "key": "y25-k2-18-bazal-gangliyonlar",
+    "sayfa": 7
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "cikmis": {
+    "kok": "Bazal gangliyonlarda modülatör olan nörotransmiter hangisidir?",
+    "siklar": [
+     "A) Ach",
+     "B) GABA",
+     "C) Glutamat",
+     "D) Enkefalin",
+     "E) Dopamin"
+    ],
+    "ogrenci_cevap": "A",
+    "banka_id": "q-2__kurul_-13-cs2",
+    "banka_yil": "Geçmiş Yıllar Çıkmışı (Arşiv)",
+    "banka_dogru": "A) Asetilkolin",
+    "tutarli": true,
+    "not": "Şık sırası bu kayıtla birebir. Aynı soru farklı sırayla past-1790877043386-198521 (2022-2023, doğru B Asetilkolin)."
+   },
+   "bagli_birim": "noro-s13-b02",
+   "benzerlik": 0.718
+  },
+  {
+   "id": "noro-s13-b05",
+   "pdf": "noro",
+   "sayfa": 13,
+   "bolge": "r1c2",
+   "tur": "cikmis_soru",
+   "baslik": "BG eferent çıkış kapısı",
+   "metin": "Bazal ganglionların eferentlerini çıkış kapısı hangisidir? 1 Nükleus caudatus 2 Putamen 3 Gpi/SNr 4 Talamus 5 Gpe",
+   "el_yazisi": [
+    {
+     "metin": "globus pallidus interna, substantia nigra",
+     "hedef": "3 Gpi/SNr",
+     "guven": "yuksek"
+    }
+   ],
+   "isaretler": [
+    {
+     "tur": "pembe",
+     "hedef": "soru bloğu; 3 Gpi/SNr pembe vurgulu"
+    }
+   ],
+   "sinyal": [
+    "cikmis"
+   ],
+   "y25": {
+    "key": "y25-k2-18-bazal-gangliyonlar",
+    "sayfa": 8
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "cikmis": {
+    "kok": "Bazal ganglionların eferentlerinin çıkış kapısı hangisidir?",
+    "siklar": [
+     "1) Nükleus caudatus",
+     "2) Putamen",
+     "3) Gpi/SNr",
+     "4) Talamus",
+     "5) Gpe"
+    ],
+    "ogrenci_cevap": "3",
+    "banka_id": "3b0feecd9a0d",
+    "banka_yil": "2020-2021",
+    "banka_dogru": "C) GPi/SNr",
+    "tutarli": true,
+    "not": "Benzeri d3-k2-nor-003 (2021-2026, GPi)."
+   },
+   "bagli_birim": "noro-s13-b04",
+   "benzerlik": 0.621
+  },
+  {
+   "id": "noro-s13-b10",
+   "pdf": "noro",
+   "sayfa": 13,
+   "bolge": "r2c3",
+   "tur": "cikmis_soru",
+   "baslik": "Hemiballismus",
+   "metin": "Vücudun bir yarısını tutan, ani, proksimalden başlayan, fırlatıcı istemsiz hareket aşağıdakilerden hangisidir? 1 kore 2 atetoz 3 hemiballismus ✓ 4 distoni 5 tremor",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "pembe",
+     "hedef": "soru bloğu; 3 hemiballismus pembe vurgulu"
+    }
+   ],
+   "sinyal": [
+    "cikmis"
+   ],
+   "y25": {
+    "key": "y25-k2-18-bazal-gangliyonlar",
+    "sayfa": 17
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "cikmis": {
+    "kok": "Vücudun bir yarısını tutan, ani, proksimalden başlayan, fırlatıcı istemsiz hareket aşağıdakilerden hangisidir?",
+    "siklar": [
+     "1) kore",
+     "2) atetoz",
+     "3) hemiballismus",
+     "4) distoni",
+     "5) tremor"
+    ],
+    "ogrenci_cevap": "3",
+    "banka_id": "",
+    "banka_yil": "",
+    "banka_dogru": "",
+    "tutarli": true,
+    "not": "Bankada bulunamadı (hemiballismus/fırlatıcı içeren soru yok). Cevap arşiv s17 tanımıyla birebir."
+   },
+   "bagli_birim": "noro-s13-b09",
+   "benzerlik": 0.753
+  }
+ ],
+ "banka": [
+  {
+   "id": "3b0feecd9a0d",
+   "ders": "k2-18",
+   "yillar": [
+    "2020-2021"
+   ],
+   "kok": "Bazal ganglionların eferentlerini (çıkış çekirdeklerini) oluşturan yapı aşağıdakilerden hangisidir?",
+   "dogru": "GPi/SNr",
+   "kopyalar": [],
+   "birim": "noro-s13-b01",
+   "benzerlik": 0.598,
+   "kapsandi": false,
+   "notta_yapistirilmis": true
+  },
+  {
+   "id": "d3-k2-nor-003",
+   "ders": "k2-18",
+   "yillar": [
+    "2021-2026"
+   ],
+   "kok": "Bazal ganglion motor döngüsünde striatumdan gelen bilgileri işleyerek talamusa (ventral anterior/ventral lateral çekirdeklere) projekte eden temel inhibitör efferent merkez aşağıdakilerden hangisidir?",
+   "dogru": "Globus pallidus internus (GPi)",
+   "kopyalar": [],
+   "birim": "noro-s13-b04",
+   "benzerlik": 0.668,
+   "kapsandi": true,
+   "notta_yapistirilmis": false
+  },
+  {
+   "id": "d3-k2-nor-012",
+   "ders": "k2-18",
+   "yillar": [
+    "2021-2026"
+   ],
+   "kok": "Parkinson hastalığında görülen istirahat (statik) tremoru ile ilgili aşağıdakilerden hangisi doğrudur?",
+   "dogru": "İstirahat hâlinde en belirgindir; amaçlı istemli hareketle veya uykuda kaybolur",
+   "kopyalar": [],
+   "birim": "noro-s13-b09",
+   "benzerlik": 0.635,
+   "kapsandi": true,
+   "notta_yapistirilmis": false
+  },
+  {
+   "id": "past-1790877043386-198521",
+   "ders": "k2-18",
+   "yillar": [
+    "2022-2023",
+    "2023",
+    "Geçmiş Yıllar Çıkmışı (Arşiv)"
+   ],
+   "kok": "Bazal gangliyonlardaki nörotransmiterlerden hangisi modülatör olarak görev yapar?",
+   "dogru": "Asetilkolin",
+   "kopyalar": [
+    "q-No_ropsikiyatri_gis_kardiyo_-2023-2024-C__km_s_lar__240625_053302__2_-22"
+   ],
+   "birim": "noro-s13-b02",
+   "benzerlik": 0.641,
+   "kapsandi": true,
+   "notta_yapistirilmis": false
+  },
+  {
+   "id": "past-1790877039271-371364",
+   "ders": "k2-18",
+   "yillar": [
+    "2022-2023"
+   ],
+   "kok": "Parkinson hastalığındaki tipik tremor aşağıdakilerden hangisidir?",
+   "dogru": "İstirahat tremoru",
+   "kopyalar": [],
+   "birim": "noro-s13-b09",
+   "benzerlik": 0.621,
+   "kapsandi": true,
+   "notta_yapistirilmis": false
+  },
+  {
+   "id": "q-2__kurul_-13",
+   "ders": "k2-18",
+   "yillar": [
+    "Geçmiş Yıllar Çıkmışı (Arşiv)"
+   ],
+   "kok": "Bazal gangliyonların başlıca efferent (çıkış) çekirdeği aşağıdakilerden hangisidir?",
+   "dogru": "Globus pallidus internus",
+   "kopyalar": [],
+   "birim": "noro-s13-b01",
+   "benzerlik": 0.613,
+   "kapsandi": true,
+   "notta_yapistirilmis": false
+  },
+  {
+   "id": "q-No_ropsikiyatri_gis_kardiyo_-2023-2024-C__km_s_lar__240625_053302__2_-4",
+   "ders": "k2-18",
+   "yillar": [
+    "2023"
+   ],
+   "kok": "Nörolojik muayenede hareket sırasında hedefe yaklaştıkça belirginleşen tremor hangisidir?",
+   "dogru": "İntansiyonel tremor",
+   "kopyalar": [],
+   "birim": "noro-s13-b09",
+   "benzerlik": 0.579,
+   "kapsandi": false,
+   "notta_yapistirilmis": false
+  }
+ ]
+}

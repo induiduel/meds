@@ -1,0 +1,386 @@
+{
+ "ders": "k2-43",
+ "kod": "2s12",
+ "brans": "Psikiyatri",
+ "konu": "Konsültasyon Liyezon Psikiyatrisi",
+ "kaynak": "Geçmiş yıl (2025-26) öğrenci derleme notu: psk3.2",
+ "y25": {
+  "key": "y25-k2-43-konsultasyon-liyezon-psikiyatrisi",
+  "sayfalar": [
+   2,
+   5,
+   15,
+   16,
+   17,
+   21
+  ]
+ },
+ "sayac": {
+  "birim": 7,
+  "A": 3,
+  "B": 0,
+  "C": 4,
+  "ogrenci_sorusu": 1,
+  "banka": 3,
+  "banka_kapsandi": 3
+ },
+ "birimler": [
+  {
+   "id": "psk-s18-b02",
+   "pdf": "psk",
+   "sayfa": 18,
+   "bolge": "r1c1",
+   "tur": "ogrenci_ozet",
+   "baslik": "KLP'de en sık görülen şizofreni değil deliryum",
+   "metin": "KLP'de en sık görülen şizofreni değil deliryum",
+   "el_yazisi": [
+    {
+     "metin": "konsültasyon liyezon psikiyatrisi",
+     "hedef": "KLP (kısaltma açılımı)",
+     "guven": "yuksek",
+     "alternatif": ""
+    }
+   ],
+   "isaretler": [
+    {
+     "tur": "daire",
+     "hedef": "KLP"
+    },
+    {
+     "tur": "ok",
+     "hedef": "KLP → 'konsültasyon liyezon psikiyatrisi' açılımı"
+    }
+   ],
+   "sinyal": [
+    "cikmis",
+    "el_onemli"
+   ],
+   "y25": null,
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "ogrenci_sorulari": [
+    "psk-s18-b04"
+   ],
+   "banka_cikmis": [
+    "q-No_ropsikiyatri_gis_kardiyo_-2023-2024-C__km_s_lar__240625_053302__2_-27"
+   ],
+   "puan": 78,
+   "oncelik": "A",
+   "vurgulu": [
+    "KLP"
+   ]
+  },
+  {
+   "id": "psk-s18-b07",
+   "pdf": "psk",
+   "sayfa": 18,
+   "bolge": "r2c1",
+   "tur": "slayt",
+   "baslik": "Acil, aynı gün ve rutin konsültasyon",
+   "metin": "Psikiyatrik konsultasyonlar hastanın durumuna ve servisin ihtiyaçlarına göre acil, aynı günde ve rutin olarak sınıflandırılabilir.\nAcil konsultasyon, psikiyatri hekiminin hemen yardımını gerektiren deliryum, psikotik ajitasyon, intihar girişimi gibi durumlardır. İkinci grupta acil olmayan ancak aynı gün içinde görülmesi gereken hastalar vardır.\nRutin konsultasyonlar ise çoğunlukla ayırıcı tanıya dönük ya da izlem amaçlıdır.",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "sari",
+     "hedef": "acil, aynı günde ve rutin"
+    },
+    {
+     "tur": "sari",
+     "hedef": "Acil konsultasyon, psikiyatri hekiminin hemen yardımını gerektiren deliryum, psikotik ajitasyon, intihar girişimi gibi durumlardır. İkinci grupta acil olmayan ancak aynı gün içinde görülmesi gereken"
+    },
+    {
+     "tur": "sari",
+     "hedef": "Rutin konsultasyonlar ise çoğunlukla ayırıcı tanıya dönük ya da izlem"
+    }
+   ],
+   "sinyal": [
+    "sari"
+   ],
+   "y25": {
+    "key": "y25-k2-43-konsultasyon-liyezon-psikiyatrisi",
+    "sayfa": 16
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "banka_cikmis": [
+    "d3-k2-psi-014"
+   ],
+   "puan": 40,
+   "oncelik": "A",
+   "vurgulu": [
+    "Acil konsultasyon, psikiyatri hekiminin hemen yardımını gerektiren deliryum, psikotik ajitasyon, intihar girişimi gibi durumlardır. İkinci grupta acil olmayan ancak aynı gün içinde görülmesi gereken",
+    "Rutin konsultasyonlar ise çoğunlukla ayırıcı tanıya dönük ya da izlem",
+    "acil, aynı günde ve rutin"
+   ]
+  },
+  {
+   "id": "psk-s18-b01",
+   "pdf": "psk",
+   "sayfa": 18,
+   "bolge": "r1c1",
+   "tur": "slayt",
+   "baslik": "Konsültasyon ve Liyezon tanımları",
+   "metin": "Konsültasyon, tıp hizmetlerinin ilk basamağıdır. İlgili dal hekiminin tanı ya da baş etme güçlüğü çektiği bir hasta ile ilgili görüş alma talebidir. Bu noktada esas amaç hastanın değerlendirilmesi ve hastaya farklı branş uzmanlarınca yardım sunulmasıdır.\nLiyezon ise, bir klinik ile sürekli ve düzenli işbirliğini içerir. Liyezon kavramı sadece tanı ve tedavi hizmetlerini içermez; aynı zamanda eğitim, acil müdahale ve koruyucu sağlık görevlerini de kapsar.",
+   "el_yazisi": [],
+   "isaretler": [],
+   "sinyal": [],
+   "y25": {
+    "key": "y25-k2-43-konsultasyon-liyezon-psikiyatrisi",
+    "sayfa": 2
+   },
+   "y26": null,
+   "duzeltme": [
+    {
+     "ham": "Liyezonise",
+     "dogru": "Liyezon ise",
+     "gerekce": "Slayttaki bitişik yazım hatası."
+    }
+   ],
+   "not_": null,
+   "banka_cikmis": [
+    "19301ed8f053"
+   ],
+   "puan": 30,
+   "oncelik": "A",
+   "vurgulu": []
+  },
+  {
+   "id": "psk-s18-b05",
+   "pdf": "psk",
+   "sayfa": 18,
+   "bolge": "r1c1+r2c1",
+   "tur": "slayt",
+   "baslik": "KLP çalışma alanı ve işlevleri",
+   "metin": "Fiziksel hastalığı olan kişilerde ortaya çıkan ruhsal sorunlar, tedavi uyumundaki sorunlar, hastalığa reaksiyonların anlaşılması ve uyum güçlüklerinin değerlendirilmesi, uygun tedaviye rağmen devam eden yakınmalar, herhangi bir bedensel hastalık tespit edilmemesine rağmen görülen fiziksel yakınmalar KLP çalışma alanına girer.\n[s10] Konsultasyon-Liyezon psikiyatrisinin işlevlerini üç ana başlık altında toplayabiliriz;\n1.) psikiyatri dışı kliniklerdeki hastalara ruh sağlığı hizmetlerinin sağlanması,\n2.) psikososyal tıp alanında eğitim ve\n3.) psikososyal araştırmalar.",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "sari",
+     "hedef": "KLP çalışma alanı maddelerinin tümü (ruhsal sorunlar, tedavi uyumu, hastalığa reaksiyonlar/uyum güçlükleri, uygun tedaviye rağmen devam eden yakınmalar, bedensel hastalık tespit edilmemesine rağmen fiziksel yakınmalar)"
+    },
+    {
+     "tur": "sari",
+     "hedef": "1.) psikiyatri dışı kliniklerdeki hastalara ruh sağlığı hizmetlerinin sağlanması"
+    },
+    {
+     "tur": "sari",
+     "hedef": "2.) psikososyal tıp alanında eğitim"
+    },
+    {
+     "tur": "sari",
+     "hedef": "3.) psikososyal araştırmalar"
+    }
+   ],
+   "sinyal": [
+    "sari"
+   ],
+   "y25": {
+    "key": "y25-k2-43-konsultasyon-liyezon-psikiyatrisi",
+    "sayfa": 5
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "puan": 10,
+   "oncelik": "C",
+   "vurgulu": [
+    "1.) psikiyatri dışı kliniklerdeki hastalara ruh sağlığı hizmetlerinin sağlanması",
+    "2.) psikososyal tıp alanında eğitim",
+    "3.) psikososyal araştırmalar",
+    "KLP çalışma alanı maddelerinin tümü (ruhsal sorunlar, tedavi uyumu, hastalığa reaksiyonlar/uyum güçlükleri, uygun tedaviye rağmen devam eden yakınmalar, bedensel hastalık tespit edilmemesine rağmen fiziksel yakınmalar)"
+   ]
+  },
+  {
+   "id": "psk-s18-b06",
+   "pdf": "psk",
+   "sayfa": 18,
+   "bolge": "r2c1",
+   "tur": "slayt",
+   "baslik": "Lipowski'nin beş konsültasyon türü",
+   "metin": "Lipowski, psikiyatrik konsultasyonları esas sorun ya da amacın ne olduğuna göre beş alt grupta tanımlamıştır.\nHasta merkezli konsültasyon: Hastanın tanısındaki zorluk ya da izleme güçlüğünden dolayı konsultasyon istenmiştir. Ayırıcı tanıya ilişkin görüş bildirilmesi amaçlanır.\nKriz merkezli konsültasyon: Uyum ve baş etme güçlüğünün nedeninin anlaşılması ve uygun medikal müdahalenin yapılması amaçlanır.\nHekim merkezli konsültasyon: Hekimin hasta ile iletişim ve etkileşiminde bir güçlük vardır ve kendisi bunun aşılmasına dönük yardım istemektedir.\nDurum merkezli konsültasyon: Hasta ile tedavi ekibi arasındaki çatışma ve güçlüklere dönük yardım istenmesidir.\nGeniş merkezli konsültasyon: Hasta, tedavi ekibi ve aile arasında bir sorun vardır ve öncelikli olarak bu sorunun çözümlenmesine dönük yardım istenmektedir.",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "sari",
+     "hedef": "beş alt grupta"
+    },
+    {
+     "tur": "sari",
+     "hedef": "her türün adı ve tanımının ana kısmı (Hasta merkezli: tanısındaki zorluk ya da izleme güçlüğü; Kriz merkezli: uyum ve baş etme güçlüğünün nedeninin anlaşılması ve uygun medikal müdahale; Hekim merkezli: hekimin hasta ile iletişim ve etkileşiminde güçlük; Durum merkezli: hasta ile tedavi ekibi arasındaki çatışma; Geniş merkezli: hasta, tedavi ekibi ve aile arasında sorun)"
+    }
+   ],
+   "sinyal": [
+    "sari"
+   ],
+   "y25": {
+    "key": "y25-k2-43-konsultasyon-liyezon-psikiyatrisi",
+    "sayfa": 15
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "puan": 10,
+   "oncelik": "C",
+   "vurgulu": [
+    "beş alt grupta",
+    "her türün adı ve tanımının ana kısmı (Hasta merkezli: tanısındaki zorluk ya da izleme güçlüğü; Kriz merkezli: uyum ve baş etme güçlüğünün nedeninin anlaşılması ve uygun medikal müdahale; Hekim merkezli: hekimin hasta ile iletişim ve etkileşiminde güçlük; Durum merkezli: hasta ile tedavi ekibi arasındaki çatışma; Geniş merkezli: hasta, tedavi ekibi ve aile arasında sorun)"
+   ]
+  },
+  {
+   "id": "psk-s18-b08",
+   "pdf": "psk",
+   "sayfa": 18,
+   "bolge": "r1c2+r2c2",
+   "tur": "slayt",
+   "baslik": "Konsültasyon süreci – beş alt başlık",
+   "metin": "Konsultasyon ile ilgili işlevler belirli bir izlem süreci içerir. Bu süreç beş alt başlık altında sınıflandırılabilir:\n1. Hastaya yönelik verilerin toplanması.\n2. Ruhsal durum muayenesi.\n3. Tanı ve tedavi planının hazırlanması.\n4. Hastaya ve ilgili hekime tanı-tedavi planının aktarılması.\n5. Takip ve izleme.\n[s19] Kliniklerde yatan hastalarda dikkat edilmesi gereken bir nokta da hastaya hastalığı ile ilgili bilgi verilip verilmediğidir. Hastaya bilgi verilmemiş olması; hastadaki olası ajitasyonu, uyum sorununu ya da depresyonu anlayabilmemize ışık tutar.",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "sari",
+     "hedef": "beş adımın tümü"
+    }
+   ],
+   "sinyal": [
+    "sari"
+   ],
+   "y25": {
+    "key": "y25-k2-43-konsultasyon-liyezon-psikiyatrisi",
+    "sayfa": 17
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "puan": 10,
+   "oncelik": "C",
+   "vurgulu": [
+    "beş adımın tümü"
+   ]
+  },
+  {
+   "id": "psk-s18-b09",
+   "pdf": "psk",
+   "sayfa": 18,
+   "bolge": "r2c2",
+   "tur": "slayt",
+   "baslik": "Konsültasyon istenen hasta ve değerlendirme; tıbbi hastalık–anksiyete/depresyon",
+   "metin": "Konsultasyon istenen hastaların büyük çoğunluğu fiziksel olarak güçsüzdürler. Hastalar yatak bağımlı, düşük kilolu, letarjik, çökkün duygudurum içerisinde olabilirler. Konsultasyon-liyezon hekimi, muayeneden önce hastayı tanımalı, kendisini hastaya tanıtmalı, görüşmenin amacını hasta ve yakınlarına belirtmelidir.\n[s23] Hasta; dış görünüş, yönelim durumu, bilinç düzeyi, içgörü, davranış ve duygulanım, düşünce içeriği, bellek, psikotik özellikler ve intihar potansiyeli açısından bütün olarak değerlendirilmelidir.\n[s27] Yapılan çeşitli çalışmalarda; metabolik sendrom, iskemik kardiyak hastalık, hipotiroidi, endokrin hastalıklar ve porfiri de anksiyete bozukluğu daha sık bildirilmiştir. Öte yandan akut hastalıklara kıyasla kronik hastalıklarda yapı, işlev, yetenek ve işlevsellikte önemli kayıplara yol açan hastalıklarda daha sıklıkla depresyon gelişmektedir.",
+   "el_yazisi": [],
+   "isaretler": [],
+   "sinyal": [],
+   "y25": {
+    "key": "y25-k2-43-konsultasyon-liyezon-psikiyatrisi",
+    "sayfa": 21
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "puan": 0,
+   "oncelik": "C",
+   "vurgulu": []
+  }
+ ],
+ "ogrenci_sorulari": [
+  {
+   "id": "psk-s18-b04",
+   "pdf": "psk",
+   "sayfa": 18,
+   "bolge": "r1c2",
+   "tur": "cikmis_soru",
+   "baslik": "KLP hakkında yanlış bilgi",
+   "metin": "Konsültasyon-Liyezon Psikiyatrisi konusunda, aşağıdaki bilgilerden hangisi yanlıştır?",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "pembe",
+     "hedef": "tüm soru bloğu"
+    },
+    {
+     "tur": "kutu",
+     "hedef": "3 Ajitasyonda, ilk yapılacak uygulama fiziksel kısıtlamadır (onay kutusu)"
+    }
+   ],
+   "sinyal": [
+    "cikmis",
+    "tekrar"
+   ],
+   "y25": null,
+   "y26": null,
+   "duzeltme": [
+    {
+     "ham": "Delirium",
+     "dogru": "Deliryum",
+     "gerekce": "Türkçe yazım."
+    }
+   ],
+   "not_": null,
+   "cikmis": {
+    "kok": "Konsültasyon-Liyezon Psikiyatrisi konusunda, aşağıdaki bilgilerden hangisi yanlıştır?",
+    "siklar": [
+     "1) Delirium yatan hastaların %15 – 30'unda görülür.",
+     "2) Şiddetli ağrı, intihar girişimine neden olabilir.",
+     "3) Ajitasyonda, ilk yapılacak uygulama fiziksel kısıtlamadır.",
+     "4) KLP'de varsanıların en sık nedeni deliryumdur.",
+     "5) KLP'de ağrı sorununun çözülmesi sıklıkla uyku sorununu da çözer."
+    ],
+    "ogrenci_cevap": "C (3)",
+    "banka_id": "bccf4df0f069",
+    "banka_yil": "2020-2021",
+    "banka_dogru": "C",
+    "tutarli": true,
+    "not": "Benzer sürüm 19301ed8f053 (aynı yıl, cevap C). Ajitasyonda ilk adım sözel yatıştırma; fiziksel kısıtlama son seçenektir. Şıklar (deliryum oranı, ajitasyon yönetimi, varsanı nedeni) 2025-26 arşiv slayt metninde bulunamadı; y25 eşlemesi yok."
+   },
+   "bagli_birim": "psk-s18-b02",
+   "benzerlik": 0.677
+  }
+ ],
+ "banka": [
+  {
+   "id": "19301ed8f053",
+   "ders": "k2-43",
+   "yillar": [
+    "2020-2021",
+    "2020-2021"
+   ],
+   "kok": "Konsültasyon liyezon psikiyatrisi ve acil psikiyatri durumları ile ilgili aşağıdaki bilgilerden hangisi yanlıştır?",
+   "dogru": "Ajitasyonda ilk yapılacak uygulama fiziksel kısıtlamadır.",
+   "kopyalar": [
+    "bccf4df0f069"
+   ],
+   "birim": "psk-s18-b01",
+   "benzerlik": 0.65,
+   "kapsandi": true,
+   "notta_yapistirilmis": true
+  },
+  {
+   "id": "d3-k2-psi-014",
+   "ders": "k2-43",
+   "yillar": [
+    "2021-2026"
+   ],
+   "kok": "Yaşlı bir hastada akut başlangıçlı, gün içinde dalgalı seyreden, dikkat ve bilinç düzeyinde bozulma ile karakterize organik mental sendrom aşağıdakilerden hangisidir?",
+   "dogru": "Deliryum",
+   "kopyalar": [],
+   "birim": "psk-s18-b07",
+   "benzerlik": 0.614,
+   "kapsandi": true,
+   "notta_yapistirilmis": false
+  },
+  {
+   "id": "q-No_ropsikiyatri_gis_kardiyo_-2023-2024-C__km_s_lar__240625_053302__2_-27",
+   "ders": "k2-43",
+   "yillar": [
+    "2023"
+   ],
+   "kok": "Konsültasyon-liyezon psikiyatrisinde (genel hastanede yatan hastalarda) en sık karşılaşılan psikiyatrik tablo aşağıdakilerden hangisidir?",
+   "dogru": "Deliryum",
+   "kopyalar": [],
+   "birim": "psk-s18-b02",
+   "benzerlik": 0.717,
+   "kapsandi": true,
+   "notta_yapistirilmis": false
+  }
+ ]
+}

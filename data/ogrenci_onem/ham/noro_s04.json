@@ -1,0 +1,669 @@
+{
+ "pdf": "noro",
+ "sayfa": 4,
+ "sayfa_ozeti": "Bilinç bozukluklarına yaklaşım (k2-02): bilinç düzeyi tanımları, etiyoloji (sistemik/SSS), koma fizik muayenesi, koma skorları ve GKS, pupiller, okülosefalik ve vestibülo-oküler refleksler, komada solunum, beyin sapı bulguları özeti, koma laboratuvar tanısı, algoritma, sonuç; 3 pembe çıkmış soru. Not: bu dersin slaytlarının zemini açık sarıdır (vurgu değil); yalnız parlak sarı çizimler 'sari' sayıldı. 2026-27 PDF'i (y26 k2-02) sayfa numaraları 2025-26 ile birebir aynı.",
+ "bloklar": [
+  {
+   "id": "noro-s04-b01",
+   "bolge": "r1c1",
+   "tur": "slayt",
+   "baslik": "Bilinç değişikliği: tanımlar",
+   "ders": "k2-02",
+   "y25": {
+    "key": "y25-k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim",
+    "sayfa": 6
+   },
+   "y26": {
+    "key": "k2-02",
+    "sayfa": 6
+   },
+   "basili_metin": "Bilinç açık: uyanık ve farkında\nSomnolan: çabuk uyandırılabilir ve farkında\nStupor: zorlukla uyandırılabiliyor ve farkındalık azalmış\nKoma: uyandırılamıyor ve farkında değil\nVejetatif durum: uyandırılıyor ancak farkında değil",
+   "isaretler": [
+    {
+     "tur": "pembe",
+     "hedef": "Somnolan: çabuk uyandırılabilir ve farkında"
+    },
+    {
+     "tur": "ok",
+     "hedef": "uyandırılabilir → tekrar uykuya meyilli"
+    }
+   ],
+   "el_yazisi": [
+    {
+     "metin": "→ tekrar uykuya meyilli.",
+     "hedef": "Somnolan: çabuk uyandırılabilir",
+     "guven": "yuksek",
+     "alternatif": ""
+    }
+   ],
+   "onem": [
+    "el_onemli",
+    "cikmis"
+   ],
+   "duzeltme": []
+  },
+  {
+   "id": "noro-s04-b02",
+   "bolge": "r1c1",
+   "tur": "cikmis_soru",
+   "baslik": "Sözel uyaranla uyanıp tekrar uykuya meyilli hasta",
+   "ders": "k2-02",
+   "y25": {
+    "key": "y25-k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim",
+    "sayfa": 6
+   },
+   "y26": {
+    "key": "k2-02",
+    "sayfa": 6
+   },
+   "basili_metin": "Sözel uyaranla uyandırılan fakat tekrar uykuya meyilli hasta? Somnolans",
+   "isaretler": [
+    {
+     "tur": "pembe",
+     "hedef": "soru ve cevap satırı"
+    }
+   ],
+   "el_yazisi": [],
+   "cikmis": {
+    "kok": "Sözel uyaranla uyandırılabilen ancak uyaran kesilince tekrar uykuya meyilli olan hastadaki bilinç durumu hangisidir?",
+    "siklar": [
+     "A) Konfüzyon",
+     "B) Stupor",
+     "C) Koma",
+     "D) Somnolans",
+     "E) Deliryum"
+    ],
+    "ogrenci_cevap": "Somnolans",
+    "banka_id": "q-No_ropsikiyatri_gis_kardiyo_-2023-2024-C__km_s_lar__240625_053302__2_-5",
+    "banka_yil": "2023",
+    "banka_dogru": "D",
+    "tutarli": true,
+    "not": "Bu kayıt bankada isPastExam işaretsiz (ara.py bulamadı, doğrudan JSON aramasıyla bulundu). Aynı içerikli başka çıkmış: d3-f-206 / d3-f-016 / past-q-2025-2026_DO_NEM_3_FI_NAL_SINAVI-64 (2021-2022 final; şıklar Stupor/Abuli/Letarji/Koma/Konfüzyon, doğru C Letarji). Slayt s07'de 'Letarji- Somnolans' tek madde olduğundan iki cevap aynı kavram."
+   },
+   "onem": [
+    "cikmis",
+    "tekrar"
+   ],
+   "duzeltme": []
+  },
+  {
+   "id": "noro-s04-b03",
+   "bolge": "r1c1",
+   "tur": "slayt",
+   "baslik": "Bilinç bozuklukları: tanımlar listesi",
+   "ders": "k2-02",
+   "y25": {
+    "key": "y25-k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim",
+    "sayfa": 7
+   },
+   "y26": {
+    "key": "k2-02",
+    "sayfa": 7
+   },
+   "basili_metin": "Konfüzyon / Letarji- Somnolans / Stupor / Koma / Deliryum / Demans / Beyin ölümü",
+   "isaretler": [
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "Deliryum"
+    }
+   ],
+   "el_yazisi": [
+    {
+     "metin": "Deliryum = davranış bozukluğu (gelip geçici)",
+     "hedef": "Deliryum",
+     "guven": "orta",
+     "alternatif": "küçük yazı; 'davranış bozukluğu' okunuşu bağlamla doğrulandı"
+    }
+   ],
+   "onem": [
+    "el_onemli"
+   ],
+   "duzeltme": []
+  },
+  {
+   "id": "noro-s04-b04",
+   "bolge": "r1c1+r2c1",
+   "tur": "slayt",
+   "baslik": "Etiyoloji: Sistemik neden – SSS difüz etkilenimi (1)",
+   "ders": "k2-02",
+   "y25": {
+    "key": "y25-k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim",
+    "sayfa": 11
+   },
+   "y26": {
+    "key": "k2-02",
+    "sayfa": 11
+   },
+   "basili_metin": "Hipoksi; Hiperkapni; Hipoglisemi; Hiperglisemi; Elektrolit anormallikler; Hiponatremi; Wernicke ensefalopatisi; Üremik ensefalopati; Sepsis; Hepatik ensefalopati; Hipertansif ensefalopati",
+   "isaretler": [
+    {
+     "tur": "pembe",
+     "hedef": "Hipoglisemi"
+    },
+    {
+     "tur": "pembe",
+     "hedef": "Hiponatremi"
+    }
+   ],
+   "el_yazisi": [
+    {
+     "metin": "= astım, KOAH",
+     "hedef": "Hiperkapni",
+     "guven": "yuksek",
+     "alternatif": ""
+    },
+    {
+     "metin": "= gerçek acil!!",
+     "hedef": "Hipoglisemi",
+     "guven": "yuksek",
+     "alternatif": ""
+    },
+    {
+     "metin": "↳ diyaliz hastaları",
+     "hedef": "Üremik ensefalopati",
+     "guven": "yuksek",
+     "alternatif": ""
+    }
+   ],
+   "onem": [
+    "el_onemli"
+   ],
+   "duzeltme": []
+  },
+  {
+   "id": "noro-s04-b05",
+   "bolge": "r2c1",
+   "tur": "slayt",
+   "baslik": "Etiyoloji: Sistemik neden – SSS difüz etkilenimi (2)",
+   "ders": "k2-02",
+   "y25": {
+    "key": "y25-k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim",
+    "sayfa": 12
+   },
+   "y26": {
+    "key": "k2-02",
+    "sayfa": 12
+   },
+   "basili_metin": "Endokrin hipo/hiperfonksiyonu; Düşük kardiyak debi; Yaygın hipoperfüzyon; Hipovolemi; Anemi; Toksik madde maruziyeti; İlaç veya alkol geri çekilmesi; İlaç etkileşimi; Serotonin sendromu; Nöroleptik malign sendromu",
+   "isaretler": [],
+   "el_yazisi": [
+    {
+     "metin": "→ organik fosfor (tarım, böcek ilacı)",
+     "hedef": "Toksik madde maruziyeti",
+     "guven": "yuksek",
+     "alternatif": "organik fosfor = organofosfat"
+    }
+   ],
+   "onem": [
+    "el_onemli"
+   ],
+   "duzeltme": [
+    {
+     "ham": "organik fosfor",
+     "dogru": "organofosfat (organik fosforlu insektisit)",
+     "gerekce": "Tarım/böcek ilacı zehirlenmesi organofosfat bileşikleriyle olur."
+    }
+   ]
+  },
+  {
+   "id": "noro-s04-b06",
+   "bolge": "r2c1",
+   "tur": "cikmis_soru",
+   "baslik": "Bilinç bozukluğunda ayırıcı tanı: hipoglisemi",
+   "ders": "k2-02",
+   "y25": {
+    "key": "y25-k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim",
+    "sayfa": 10
+   },
+   "y26": {
+    "key": "k2-02",
+    "sayfa": 10
+   },
+   "basili_metin": "Bilinç bozukluğunda ayırıcı tanı? Hipoglisemi",
+   "isaretler": [
+    {
+     "tur": "pembe",
+     "hedef": "soru ve cevap"
+    }
+   ],
+   "el_yazisi": [],
+   "cikmis": {
+    "kok": "Bilinç bozukluğu olan hastanın ayırıcı tanısında aşağıdakilerden hangisi mutlaka düşünülmelidir?",
+    "siklar": [
+     "A) Miyastenia gravis",
+     "B) Guillain-Barré sendromu",
+     "C) Hipoglisemi",
+     "D) Periferik fasiyal paralizi",
+     "E) Amyotrofik lateral skleroz"
+    ],
+    "ogrenci_cevap": "Hipoglisemi",
+    "banka_id": "q-No_ropsikiyatri_gis_kardiyo_-2023-2024-C__km_s_lar__240625_053302__2_-19",
+    "banka_yil": "2023",
+    "banka_dogru": "C",
+    "tutarli": true,
+    "not": "Bankada isPastExam işaretsiz kayıt (doğrudan JSON aramasıyla bulundu). Slayt s10: 'Stick kan şekeri (hipoglisemi gerçek bir acildir)'; s42: 'Hipoglisemiyi atlama'."
+   },
+   "onem": [
+    "cikmis",
+    "tekrar"
+   ],
+   "duzeltme": []
+  },
+  {
+   "id": "noro-s04-b07",
+   "bolge": "r2c1",
+   "tur": "slayt",
+   "baslik": "Etiyoloji: SSS'ye ait nedenler",
+   "ders": "k2-02",
+   "y25": {
+    "key": "y25-k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim",
+    "sayfa": 13
+   },
+   "y26": {
+    "key": "k2-02",
+    "sayfa": 13
+   },
+   "basili_metin": "SSS Ait Nedenler: SSS travması; İntrakranial kanama - SAK; İskemik inme; Yer-kaplayan oluşum; SSS enfeksiyonu; Nöbetler (status epileptikus / postiktal periyod); Demans",
+   "isaretler": [],
+   "el_yazisi": [],
+   "onem": [],
+   "duzeltme": []
+  },
+  {
+   "id": "noro-s04-b08",
+   "bolge": "r1c2",
+   "tur": "slayt",
+   "baslik": "Koma – Fizik muayene anahtar noktalar",
+   "ders": "k2-02",
+   "y25": {
+    "key": "y25-k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim",
+    "sayfa": 18
+   },
+   "y26": {
+    "key": "k2-02",
+    "sayfa": 18
+   },
+   "basili_metin": "Konfüze hastada postiktal durumdan şüpheleniliyorsa: Dilde ısırık ? NÖBET !!!\nSkalp ayrıntılı muayene edilmeli !!!\n▪ Sıklıkla küçük-gizli travmalar atlanır (posttravma!)\nKoma nedeni alkol ?\n▪ (altta başka etyoloji varmı ?) SAK – SUBDURAL ?",
+   "isaretler": [],
+   "el_yazisi": [],
+   "onem": [],
+   "duzeltme": []
+  },
+  {
+   "id": "noro-s04-b09",
+   "bolge": "r1c2",
+   "tur": "slayt",
+   "baslik": "Koma skorları",
+   "ders": "k2-02",
+   "y25": {
+    "key": "y25-k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim",
+    "sayfa": 20
+   },
+   "y26": {
+    "key": "k2-02",
+    "sayfa": 20
+   },
+   "basili_metin": "Koma skorları: Glasgow koma skoru; Dörtlü test; Hepatik koma skalası",
+   "isaretler": [],
+   "el_yazisi": [],
+   "onem": [],
+   "duzeltme": []
+  },
+  {
+   "id": "noro-s04-b10",
+   "bolge": "r1c2",
+   "tur": "cikmis_soru",
+   "baslik": "GKS'de minimum ve maksimum puan",
+   "ders": "k2-02",
+   "y25": {
+    "key": "y25-k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim",
+    "sayfa": 30
+   },
+   "y26": {
+    "key": "k2-02",
+    "sayfa": 30
+   },
+   "basili_metin": "Glaskow Koma Skalasında bir hastanın alabileceği minimum ve maksimum puanlar aşağıdaki seçeneklerin hangisinde doğru olarak verilmiştir?\n1) 1 ve 3 / 2) 3 ve 10 / 3) 3 ve 15 / 4) 0 ve 15 / 5) 0 ve 10",
+   "isaretler": [
+    {
+     "tur": "pembe",
+     "hedef": "soru bloğu"
+    },
+    {
+     "tur": "pembe",
+     "hedef": "3 ve 15"
+    }
+   ],
+   "el_yazisi": [
+    {
+     "metin": "en düşük = 3 (hepsi 1), en yüksek = 15 (hepsi 5)",
+     "hedef": "GKS minimum/maksimum",
+     "guven": "yuksek",
+     "alternatif": ""
+    }
+   ],
+   "cikmis": {
+    "kok": "Glasgow Koma Skalasında bir hastanın alabileceği minimum ve maksimum puanlar aşağıdaki seçeneklerin hangisinde doğru olarak verilmiştir?",
+    "siklar": [
+     "A) 1 ve 3",
+     "B) 3 ve 10",
+     "C) 3 ve 15",
+     "D) 0 ve 15",
+     "E) 0 ve 10"
+    ],
+    "ogrenci_cevap": "C) 3 ve 15",
+    "banka_id": "04c8b92b1242",
+    "banka_yil": "2020-2021",
+    "banka_dogru": "C",
+    "tutarli": true,
+    "not": "Benzer ikinci kayıt: 0adcc53186e5 (2020-2021, doğru C)."
+   },
+   "onem": [
+    "cikmis",
+    "el_onemli"
+   ],
+   "duzeltme": [
+    {
+     "ham": "en yüksek = 15 (hepsi 5)",
+     "dogru": "en yüksek = 15 (göz 4 + motor 6 + sözel 5)",
+     "gerekce": "GKS alt puanlarının üst sınırı farklıdır (E4, M6, V5; slayt s30); 'hepsi 5' toplamı 15 vermez."
+    },
+    {
+     "ham": "Glaskow",
+     "dogru": "Glasgow",
+     "gerekce": "yazım"
+    }
+   ]
+  },
+  {
+   "id": "noro-s04-b11",
+   "bolge": "r1c2+r2c2",
+   "tur": "slayt",
+   "baslik": "Glasgow koma skalası",
+   "ders": "k2-02",
+   "y25": {
+    "key": "y25-k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim",
+    "sayfa": 30
+   },
+   "y26": {
+    "key": "k2-02",
+    "sayfa": 30
+   },
+   "basili_metin": "Eye 4: 4-Spontan açık, 3-Verbal uyaranla, 2-Ağrılı uyaranla, 1-Açmıyor\nMovement 6: 6-Emre uyma, 5-Ağrıyı lokalize, 4-Fleksör yanıt, 3-Dekortike, 2-Deserebe, 1-Yanıt yok\nVerbal 5: 5-Oriente, 4-Dezoriente, 3-Uygunsuz cevap, 2-Homurtu, 1-Yanıt yok",
+   "isaretler": [
+    {
+     "tur": "kutu",
+     "hedef": "üç alt skala sarı çerçeveli"
+    }
+   ],
+   "el_yazisi": [
+    {
+     "metin": "(çok küçük, okunamadı)",
+     "hedef": "4-Dezoriente",
+     "guven": "dusuk",
+     "alternatif": "iki satırlık minik not; 'sorulana ... cevap ...' benzeri bir açıklama olabilir, 200 dpi'da kelimeler seçilemiyor"
+    }
+   ],
+   "onem": [],
+   "duzeltme": []
+  },
+  {
+   "id": "noro-s04-b12",
+   "bolge": "r2c2",
+   "tur": "slayt",
+   "baslik": "Komada beyin sapı refleksleri şeması ve pupiller",
+   "ders": "k2-02",
+   "y25": {
+    "key": "y25-k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim",
+    "sayfa": 33
+   },
+   "y26": {
+    "key": "k2-02",
+    "sayfa": 33
+   },
+   "basili_metin": "(Şema: Pupillary light reflex, Corneal-blink reflex, Reflex conjugate eye movement, Respiratory neurons; y25 s31)\nMidriyatik, ışığa yanıtsız pupil: ✓Atropin, skopolamin, glutetimid, barbiturat ✓Hipoksi ✓Hipotermi\nİleri miyotik pupil: ✓Opiate intoksikasyonu",
+   "isaretler": [
+    {
+     "tur": "daire",
+     "hedef": "Atropin"
+    },
+    {
+     "tur": "daire",
+     "hedef": "Hipoksi"
+    },
+    {
+     "tur": "daire",
+     "hedef": "Hipotermi"
+    },
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "miyotik pupil"
+    },
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "Opiate intoksikasyonu"
+    }
+   ],
+   "el_yazisi": [],
+   "onem": [
+    "el_onemli"
+   ],
+   "duzeltme": []
+  },
+  {
+   "id": "noro-s04-b13",
+   "bolge": "r1c2+r1c3",
+   "tur": "slayt",
+   "baslik": "Göz hareketleri: okülosefalik refleks ve soğuk su (VOR) – beyin sapı sağlam/hasarlı",
+   "ders": "k2-02",
+   "y25": {
+    "key": "y25-k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim",
+    "sayfa": 38
+   },
+   "y26": {
+    "key": "k2-02",
+    "sayfa": 38
+   },
+   "basili_metin": "Göz Hareketleri: Okülosefalik R\nBaş 30 derecede: her iki tarafa çevrilir ve göz hareketleri gözlenir\nBrainstem intact – Bilinç kapalı, Beyin sapı sağlam (Cold H2O)\nLow brainstem lesion – Bilinç kapalı, Beyin sapı HASARLI",
+   "isaretler": [
+    {
+     "tur": "daire",
+     "hedef": "HASARLI"
+    },
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "yok"
+    }
+   ],
+   "el_yazisi": [
+    {
+     "metin": "- gözler çevrilen yöne dönüyor (oyuncak bebek kafası)",
+     "hedef": "Beyin sapı HASARLI (okülosefalik refleks yok)",
+     "guven": "yuksek",
+     "alternatif": ""
+    },
+    {
+     "metin": "- soğuk su enjekte edilen tarafa doğru göz kayması yok",
+     "hedef": "Beyin sapı HASARLI (vestibülo-oküler refleks)",
+     "guven": "yuksek",
+     "alternatif": ""
+    }
+   ],
+   "onem": [
+    "el_onemli"
+   ],
+   "duzeltme": [
+    {
+     "ham": "gözler çevrilen yöne dönüyor (oyuncak bebek kafası)",
+     "dogru": "Beyin sapı hasarında gözler başla birlikte çevrilen yöne gider, oyuncak bebek göz fenomeni (okülosefalik refleks) kaybolmuştur",
+     "gerekce": "'Oyuncak bebek gözü' normalde gözlerin başın ters yönüne kayması (refleks var, beyin sapı sağlam) için kullanılır; nottaki parantez refleks yokluğu durumunu anlatıyor, ifade karışıklığa açık. Slayt s34-35 şemaları."
+    }
+   ]
+  },
+  {
+   "id": "noro-s04-b14",
+   "bolge": "r1c3+r2c3",
+   "tur": "slayt",
+   "baslik": "Komada solunum paternleri",
+   "ders": "k2-02",
+   "y25": {
+    "key": "y25-k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim",
+    "sayfa": 39
+   },
+   "y26": {
+    "key": "k2-02",
+    "sayfa": 39
+   },
+   "basili_metin": "Komada solunum (şema: A diensefalon, B mezensefalon, C pons, D bulbus üst, E bulbus; solunum trasesi)",
+   "isaretler": [],
+   "el_yazisi": [
+    {
+     "metin": "Cheyne Stokes (en sık)",
+     "hedef": "A (diensefalik/bihemisferik) trasesi",
+     "guven": "yuksek",
+     "alternatif": ""
+    },
+    {
+     "metin": "santral nörojenik hipoventilasyon",
+     "hedef": "B (mezensefalon) trasesi",
+     "guven": "yuksek",
+     "alternatif": ""
+    },
+    {
+     "metin": "apnestik solunum",
+     "hedef": "C (pons) trasesi",
+     "guven": "yuksek",
+     "alternatif": ""
+    },
+    {
+     "metin": "ataksik solunum",
+     "hedef": "D (bulbus) trasesi",
+     "guven": "yuksek",
+     "alternatif": ""
+    }
+   ],
+   "onem": [
+    "el_onemli"
+   ],
+   "duzeltme": [
+    {
+     "ham": "santral nörojenik hipoventilasyon",
+     "dogru": "santral nörojenik hiperventilasyon",
+     "gerekce": "Mezensefalon/üst pons lezyonundaki B trasesi hızlı-derin düzenli solunumdur (hiperventilasyon); el yazısında 'hipo' yazılmış, tıbben 'hiper' olmalı."
+    }
+   ]
+  },
+  {
+   "id": "noro-s04-b15",
+   "bolge": "r2c2+r2c3",
+   "tur": "slayt",
+   "baslik": "Beyin sapı bulgularının özeti",
+   "ders": "k2-02",
+   "y25": {
+    "key": "y25-k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim",
+    "sayfa": 41
+   },
+   "y26": {
+    "key": "k2-02",
+    "sayfa": 41
+   },
+   "basili_metin": "Beyin Sapı Bulgularının Özeti (şema: Early diencephalic, Late diencephalic, Midbrain, Pons or upper medulla; pupillary light response, reflex eye movement, motor response to pain)",
+   "isaretler": [],
+   "el_yazisi": [
+    {
+     "metin": "dekortike",
+     "hedef": "Late diencephalic motor yanıt",
+     "guven": "yuksek",
+     "alternatif": ""
+    },
+    {
+     "metin": "deserebre",
+     "hedef": "Midbrain motor yanıt",
+     "guven": "yuksek",
+     "alternatif": ""
+    }
+   ],
+   "onem": [
+    "el_onemli"
+   ],
+   "duzeltme": []
+  },
+  {
+   "id": "noro-s04-b16",
+   "bolge": "r1c3",
+   "tur": "slayt",
+   "baslik": "Koma – Tanı (laboratuvar)",
+   "ders": "k2-02",
+   "y25": {
+    "key": "y25-k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim",
+    "sayfa": 42
+   },
+   "y26": {
+    "key": "k2-02",
+    "sayfa": 42
+   },
+   "basili_metin": "Kan Şekeri (Hipoglisemiyi atlama)\n▪ Özellikle DM ve Kr. Alkolizmde etiyoloji hipoglisemi\nElektrolitler (en sık Na)\n▪ Hiponatremi sık neden, tümör olanlarda kalsiyum metabolizma bozukluğu sık\nArteryal Kan Gazı (asidoz önemli) (s43)\n▪ pH: (salisilat zehirlenmesi, methanol)\n▪ COHbg: (CO, Duman zehirlenmesi)\nTam Kan Sayımı (uzamış kanama zamanı önemli)\n▪ Trombositopeni; Kanama, sepsis",
+   "isaretler": [
+    {
+     "tur": "daire",
+     "hedef": "(Hipoglisemiyi atlama)"
+    },
+    {
+     "tur": "sari",
+     "hedef": "Özellikle DM ve Kr. Alkolizmde etiyoloji hipoglisemi; Hiponatremi sık neden; tümör olanlarda kalsiyum metabolizma bozukluğu sık; pH:; COHbg:"
+    },
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "pH:; COHbg:"
+    }
+   ],
+   "el_yazisi": [],
+   "onem": [
+    "sari",
+    "daire"
+   ],
+   "duzeltme": []
+  },
+  {
+   "id": "noro-s04-b17",
+   "bolge": "r1c3+r2c3",
+   "tur": "slayt",
+   "baslik": "Bilinci kapalı hastaya yaklaşım algoritması",
+   "ders": "k2-02",
+   "y25": {
+    "key": "y25-k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim",
+    "sayfa": 59
+   },
+   "y26": {
+    "key": "k2-02",
+    "sayfa": 59
+   },
+   "basili_metin": "Yanıt alınamayan hasta → ABC ve oksijenasyon → Bilinç kapalı? hayır → Psikojen, locked-in synd, N-M paralizi, rigidite → Uygun yaklaşım; evet → Kan gazları, glu, elektrolitler, Ca, Mg, üre, Cre, NH3, AST, tox tarama, IV glu, naloksan, flumazenil → Beyinsapı bulguları? hayır → Lateral şift yapan tek serebral lezyon, biserebral yapısal, talamik, metabolik, toksik, enfeksiyöz? → Acil incelemeler → BBT, metabolik ve ilaç tarama, BOS inceleme, enfeksiyöz; evet → Posterior fossada yapısal lezyon, transtentorial herniasyon, toksik ve metabolik nedenler → BBT/MRI, glu, tiamin, metabolik ve toksik tarama",
+   "isaretler": [],
+   "el_yazisi": [],
+   "onem": [],
+   "duzeltme": []
+  },
+  {
+   "id": "noro-s04-b18",
+   "bolge": "r2c3",
+   "tur": "slayt",
+   "baslik": "Sonuç (y25/y26 metninde yok; büyük olasılıkla metinsiz s60 görsel sayfası)",
+   "ders": "k2-02",
+   "y25": null,
+   "y26": null,
+   "basili_metin": "Sonuç:\n▪ Bilinç bozukluğunda ayırıcı tanısı önemli\n▪ Hızlı ve ekip yaklaşımı önemli\n▪ Etiyolojiye yönelik tetkik ve erken tedavi prognozu iyi yönde etkiler",
+   "isaretler": [
+    {
+     "tur": "sari",
+     "hedef": "üç maddenin tamamı"
+    }
+   ],
+   "el_yazisi": [],
+   "onem": [
+    "sari"
+   ],
+   "duzeltme": []
+  }
+ ]
+}

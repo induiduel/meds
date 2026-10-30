@@ -1,0 +1,645 @@
+{
+ "pdf": "psk",
+ "sayfa": 11,
+ "sayfa_ozeti": "Kişilik Bozuklukları (k2-35): A kümesi (paranoid, şizoid, şizotipal), B kümesi (antisosyal, borderline, histriyonik, narsistik), C kümesi (çekingen, bağımlı, obsesif kompulsif) DSM ölçütleri ve epidemiyoloji. İşaret dili bu sayfada MAVİ: mavi alt çizgi/daire = önemli, mavi el yazısı = hoca notu; ölçüt eşikleri (3≥, 4≥, 5≥) her slaytta daire içinde. 6 çıkmış (antisosyal vaka, narsistik vaka, borderline tanısı, borderline klinik söylenemez, histriyonik klinik söylenemez, histriyonik vaka — sonuncusu kısa pembe satır).",
+ "bloklar": [
+  {
+   "id": "psk-s11-b01",
+   "bolge": "r1c1",
+   "tur": "slayt",
+   "baslik": "A kümesi ve B kümesi tanımı",
+   "ders": "k2-35",
+   "y25": {
+    "key": "y25-k2-35-kisilik-bozukluklari",
+    "sayfa": 15
+   },
+   "basili_metin": "A kümesi: paranoid, şizoid ve şizotipal kişilik bozukluğu; bu bozukluğu olan kişiler sıklıkla garip ve tuhaf kişilerdir.\nB kümesi: antisosyal, borderline, histrionik ve narsistik kişilik bozukluğu; bu bozukluğu olan kişiler sıklıkla heyecanlı, duygusal ve kararsız olarak görünürler.",
+   "isaretler": [
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "mavi alt çizgi: A kümesi"
+    },
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "heyecanlı, duygusal ve kararsız (slaytta altı çizili)"
+    },
+    {
+     "tur": "ok",
+     "hedef": "antisosyal üstünde '≥3'; borderline-histrionik-narsistik üstünde ayraçla '≥5 tanı'"
+    }
+   ],
+   "el_yazisi": [
+    {
+     "metin": "≥3",
+     "hedef": "antisosyal (tanı için ≥3 ölçüt)",
+     "guven": "yuksek",
+     "alternatif": ""
+    },
+    {
+     "metin": "≥5 tanı",
+     "hedef": "borderline, histrionik ve narsistik (tanı için ≥5 ölçüt)",
+     "guven": "yuksek",
+     "alternatif": ""
+    }
+   ],
+   "onem": [
+    "el_onemli"
+   ],
+   "duzeltme": []
+  },
+  {
+   "id": "psk-s11-b02",
+   "bolge": "r1c1",
+   "tur": "slayt",
+   "baslik": "(A) Paranoid Kişilik Bozukluğu",
+   "ders": "k2-35",
+   "y25": {
+    "key": "y25-k2-35-kisilik-bozukluklari",
+    "sayfa": 16
+   },
+   "basili_metin": "Başkalarının davranışlarını kötü niyetli olarak yorumlayıp sürekli bir güvensizlik ve kuşkuculuk gösterme. Erken erişkinlik döneminde başlar. Aşağıdakilerden 4 ya da daha fazlası vardır:\n1. Yeterli bir temele dayanmadan başkalarının kendisini sömürdüğünden, aldattığından veya kendine zarar verdiğinden kuşkulanır.\n2. Dostlarının veya iş arkadaşlarının kendine olan bağlılığı veya güvenirliği üzerine yersiz kuşkuları vardır.\n3. Söylediklerinin kendisine karşı kötü niyetle kullanılacağından yersiz korkuları olduğundan başkalarına sır vermek istemez.\n4. Sıradan sözlerden, olaylardan aşağılandığı veya kendisine gözdağı verildiği şeklinde anlamlar çıkarır.\n5. Sürekli kin besler.\n6. Karakterine ve itibarına saldırıldığı yargısını taşır ve öfke ile karşı saldırıda bulunur.\n7. Haksız yere eşinin sadakatsizliği ile ilgili kuşkulara kapılır.\nParanoid KB; şizofreni hastalarının akrabalarında sık görülür. Erkeklerde kadınlara göre daha yaygındır. (y25 s17)",
+   "isaretler": [
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "mavi alt çizgi: Erken erişkinlik döneminde başlar; Sürekli kin besler; Haksız yere eşinin sadakatsizliği ile ilgili kuşkulara kapılır; Paranoid KB şizofreni hastalarının akrabalarında sık görülür; Erkeklerde kadınlara göre daha yaygındır"
+    },
+    {
+     "tur": "daire",
+     "hedef": "4 ya da daha fazlası vardır"
+    }
+   ],
+   "el_yazisi": [
+    {
+     "metin": "şizofreniden farkı uzun süre devam eder ve kanıt gösterildiğinde inanır ama başka şeyler hakkında yine kuşkucu yaklaşır.",
+     "hedef": "(A) Paranoid Kişilik Bozukluğu başlığı",
+     "guven": "yuksek",
+     "alternatif": ""
+    }
+   ],
+   "onem": [
+    "el_onemli"
+   ],
+   "duzeltme": []
+  },
+  {
+   "id": "psk-s11-b03",
+   "bolge": "r1c2",
+   "tur": "slayt",
+   "baslik": "(B) Antisosyal Kişilik Bozukluğu",
+   "ders": "k2-35",
+   "y25": {
+    "key": "y25-k2-35-kisilik-bozukluklari",
+    "sayfa": 22
+   },
+   "basili_metin": "A. 15 yaşından beri süregelen, başkalarının haklarını saymama, başkalarının haklarına saldırma örüntüsü. 3≥\n1. Tutuklanması için zemin hazırlayan tekrarlayıcı eylemlerde bulunma, yasalara ve toplumsal kurallara ayak uyduramama.\n2. Sürekli yalan söyleme, takma isim kullanma, kişisel çıkar ve zevki için başkalarını atlatma.\n3. Dürtüsellik ve gelecek için tasarılar yapamama.\n4. Yineleyen kavgalar veya saldırılarla belirli sinirlilik ve saldırganlık.\n5. Kendi ve başkalarının güvenliği konusunda umursamazlık\n6. Bir işi sürekli götürememe, mali yükümlülüklerini yerine getirememe ile belirli sürekli sorumsuzluk.\n7. Başkalarına zarar verme, kötü davranma veya bir şey çalma durumuna karşı ilgisizlik veya bunlara kendine göre mantıklı açıklamalar getirme, vicdan azabı çekmeme.\nB. Kişi en az 18 yaşındadır.\nC. 15 yaşından önce başlayan davranım bozukluğunun kanıtları vardır.\nSuç işleyenlerin %75'inden fazlasında antisosyal kişilik bozukluğu vardır. (y25 s23)\nAilesel yüklülük vardır. Antisosyal bir erkeğin birinci derece akrabalarında 5 kat daha fazla görülebilmektedir. (y25 s23)",
+   "isaretler": [
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "mavi alt çizgi: 15 yaşından beri süregelen, başkalarının haklarını saymama, haklarına saldırma; tekrarlayıcı eylemlerde bulunma, yasalara ve toplumsal kurallara ayak uyduramama; Yineleyen kavgalar … saldırganlık; mantıklı açıklamalar getirme, vicdan azabı çekmeme; ailesel yüklülük 5 kat"
+    },
+    {
+     "tur": "daire",
+     "hedef": "3≥; B. Kişi en az 18 yaşındadır; C. 15 yaşından önce başlayan davranım bozukluğunun kanıtları vardır"
+    },
+    {
+     "tur": "kutu",
+     "hedef": "Suç işleyenlerin %75'inden fazlasında antisosyal kişilik bozukluğu vardır (mavi çerçeve)"
+    }
+   ],
+   "el_yazisi": [
+    {
+     "metin": "↳ hatalarından ders almaz, yapmaya devam eder.",
+     "hedef": "(B) Antisosyal Kişilik Bozukluğu başlığı",
+     "guven": "yuksek",
+     "alternatif": ""
+    }
+   ],
+   "onem": [
+    "el_onemli",
+    "cikmis"
+   ],
+   "duzeltme": []
+  },
+  {
+   "id": "psk-s11-b04",
+   "bolge": "r1c2",
+   "tur": "cikmis_soru",
+   "baslik": "19 yaşında, küçüklükten beri kurallara uymayan çocuk: antisosyal KB",
+   "ders": "k2-35",
+   "y25": {
+    "key": "y25-k2-35-kisilik-bozukluklari",
+    "sayfa": 22
+   },
+   "basili_metin": "82. On dokuz yaşında bir çocuk anne ve babası tarafından küçüklükten bu yana aykırı tutum ve davranışlarının olması ve arkadaş çevresi ile geçinmede ve toplumsal kurallara uymada sıkıntı yaşadığı gerekçesiyle psikiyatriste getirilir. Halüsinasyon ve hezeyanı olmadığı, öğretmenlerinin ve ailesinin uyarılarına rağmen tutum ve davranışlarında bir değişim göstermediği anlaşılmaktadır.\nYukarıdaki hasta için aşağıdakilerden hangisi en doğru tanıyı düşündürür?\na. Depressif kişilik bozukluğu\nb. Borderline kişilik bozukluğu\nc. Antisosyal kişilik bozukluğu\nd. Narsist kişilik bozukluğu\ne. Şizoaffektif bozukluk",
+   "isaretler": [
+    {
+     "tur": "daire",
+     "hedef": "c şıkkı (kırmızı nokta)"
+    }
+   ],
+   "el_yazisi": [],
+   "cikmis": {
+    "kok": "On dokuz yaşında bir çocuk anne ve babası tarafından küçüklükten bu yana aykırı tutum ve davranışlarının olması ve arkadaş çevresi ile geçinmede ve toplumsal kurallara uymada sıkıntı yaşadığı gerekçesiyle psikiyatriste getirilir. Halüsinasyon ve hezeyanı olmadığı, öğretmenlerinin ve ailesinin uyarılarına rağmen tutum ve davranışlarında bir değişim göstermediği anlaşılmaktadır. Yukarıdaki hasta için aşağıdakilerden hangisi en doğru tanıyı düşündürür?",
+    "siklar": [
+     "A) Depressif kişilik bozukluğu",
+     "B) Borderline kişilik bozukluğu",
+     "C) Antisosyal kişilik bozukluğu",
+     "D) Narsist kişilik bozukluğu",
+     "E) Şizoaffektif bozukluk"
+    ],
+    "ogrenci_cevap": "C",
+    "banka_id": "final-2018-2019-q082",
+    "banka_yil": "2018-2019 final",
+    "banka_dogru": "C",
+    "tutarli": true,
+    "not": "Kitapçık fotoğrafı olarak yapıştırılmış (pembe zemin yok, kırmızı nokta ile işaretli). Yaş ≥18 + 15 yaş öncesi davranım bozukluğu (y25 s22)."
+   },
+   "onem": [
+    "cikmis"
+   ],
+   "duzeltme": []
+  },
+  {
+   "id": "psk-s11-b05",
+   "bolge": "r1c3",
+   "tur": "slayt",
+   "baslik": "(B) Narsistik Kişilik Bozukluğu",
+   "ders": "k2-35",
+   "y25": {
+    "key": "y25-k2-35-kisilik-bozukluklari",
+    "sayfa": 28
+   },
+   "basili_metin": "A. Erken erişkinlikte ortaya çıkan, birçok bağlamda kendisini gösteren üstünlük duygusu, beğenilme gereksinimi ve empati yapamamanın olduğu sürekli bir örüntüdür. 5≥\n1. Kendisinin çok önemli olduğu duygusunu taşır.\n2. Sınırsız başarı, güç, zeka, güzellik veya kusursuz sevgi düşlemleri üzerine kafa yorar.\n3. Özel ve eşi bulunmaz birisi olduğuna ve ancak başka özel veya toplumsal durumu üstün kişilerin kendisini anlayabileceğine ya da ancak onlarla arkadaşlık edebileceğine inanır.\n4. Çok beğenilmek ister.\n5. Birşeyleri hak ettiği duygusu vardır.\n6. Kişilerarası ilişkileri kendi çıkarı için kullanır, bencildir, amaçlarına ulaşmak için başkalarının zayıf taraflarını kullanır.\n7. Empati yapamaz.\n8. Çoğu zaman başkalarını kıskanır ya da başkalarının kendisini kıskandığını sanır.\nÇocuklarına gerçekçi olmayan bir omnipotans, üstünlük, güzellik ve yeteneklilik hissi aktardıklarından çocuklarında da görülme ihtimali yüksektir. (y25 s30)\nÇıkarcı davranışları sık görülür. Birileri kendisini eleştirdiğinde öfkelenebilir ya da eleştiriye tamamen duyarsız görünebilir. (y25 s30)",
+   "isaretler": [
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "mavi alt çizgi: Üstünlük duygusu, beğenilme gereksinimi, empati yapamama; 5, 6, 7, 8. ölçütler; omnipotans … çocuklarında da görülme ihtimali yüksektir; Çıkarcı davranışları sık görülür; eleştirildiğinde öfkelenebilir ya da duyarsız görünebilir"
+    },
+    {
+     "tur": "daire",
+     "hedef": "5≥"
+    }
+   ],
+   "el_yazisi": [],
+   "onem": [
+    "el_onemli",
+    "cikmis"
+   ],
+   "duzeltme": []
+  },
+  {
+   "id": "psk-s11-b06",
+   "bolge": "r1c3",
+   "tur": "cikmis_soru",
+   "baslik": "Kendinden bahsedilmesini ister, empati yapamaz: narsistik KB",
+   "ders": "k2-35",
+   "y25": {
+    "key": "y25-k2-35-kisilik-bozukluklari",
+    "sayfa": 28
+   },
+   "basili_metin": "48. \"Devamlı kendisinden bahsedilmesini ister, başkalarının duygularını anlamaz, empati yapamaz.\"\nYukarıdaki hasta için aşağıdakilerden hangisi en doğru tanıyı düşündürür?\na. Antisosyal kişilik bozukluğu\nb. Borderline kişilik bozukluğu\nc. Obsessif kompulsif kişilik bozukluğu\nd. Narsist kişilik bozukluğu\ne. Paranoid kişilik bozukluğu",
+   "isaretler": [
+    {
+     "tur": "pembe",
+     "hedef": "soru bloğu"
+    },
+    {
+     "tur": "daire",
+     "hedef": "d. Narsist kişilik bozukluğu"
+    }
+   ],
+   "el_yazisi": [],
+   "cikmis": {
+    "kok": "\"Devamlı kendisinden bahsedilmesini ister, başkalarının duygularını anlamaz, empati yapamaz.\" Yukarıdaki hasta için aşağıdakilerden hangisi en doğru tanıyı düşündürür?",
+    "siklar": [
+     "A) Antisosyal kişilik bozukluğu",
+     "B) Borderline kişilik bozukluğu",
+     "C) Obsesif kompulsif kişilik bozukluğu",
+     "D) Narsist kişilik bozukluğu",
+     "E) Paranoid kişilik bozukluğu"
+    ],
+    "ogrenci_cevap": "D",
+    "banka_id": "past-1790877044869-84754",
+    "banka_yil": "2021-2022 Kurul 2",
+    "banka_dogru": "D",
+    "tutarli": true,
+    "not": ""
+   },
+   "onem": [
+    "cikmis"
+   ],
+   "duzeltme": []
+  },
+  {
+   "id": "psk-s11-b07",
+   "bolge": "r2c1",
+   "tur": "slayt",
+   "baslik": "(A) Şizoid Kişilik Bozukluğu",
+   "ders": "k2-35",
+   "y25": {
+    "key": "y25-k2-35-kisilik-bozukluklari",
+    "sayfa": 18
+   },
+   "basili_metin": "Sürekli toplumsal ilişkilerden kopma ve duyguların anlatımında kısıtlı olma örüntüsü, erken erişkinlik döneminde başlar: 4≥\n1. Ailenin bir parçası değilmiş gibi davranır; yakın ilişkiye girmez ve yakın ilişkilerden zevk almaz.\n2. Daima tek başına yapılan aktiviteleri seçer.\n3. Başka biri ile cinsel deneyim yaşamaya ilgi duymaz ya da çok az ilgi duyar.\n4. Çok az etkinlikten zevk alır.\n5. Yakın arkadaşı ve sırdaşı yoktur.\n6. Övgü ve eleştirilere karşı ilgisiz kalır.\n7. Duygusal soğukluk, kopukluk veya tekdüze bir duygulanım gösterir.",
+   "isaretler": [
+    {
+     "tur": "daire",
+     "hedef": "toplumsal ilişkilerden kopma; duyguların anlatımında kısıtlı olma; erken erişkinlik döneminde; 4≥; Duygusal soğukluk; kopukluk; tekdüze bir duygulanım gösterir"
+    },
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "mavi alt çizgi: 1, 2, 4, 5, 6, 7. ölçütler (3. ölçüt çizilmemiş)"
+    }
+   ],
+   "el_yazisi": [
+    {
+     "metin": "iletişimsizlik, duygusuzluk",
+     "hedef": "(A) Şizoid Kişilik Bozukluğu başlığı",
+     "guven": "yuksek",
+     "alternatif": ""
+    }
+   ],
+   "onem": [
+    "el_onemli"
+   ],
+   "duzeltme": []
+  },
+  {
+   "id": "psk-s11-b08",
+   "bolge": "r2c1",
+   "tur": "slayt",
+   "baslik": "(A) Şizotipal Kişilik Bozukluğu",
+   "ders": "k2-35",
+   "y25": {
+    "key": "y25-k2-35-kisilik-bozukluklari",
+    "sayfa": 20
+   },
+   "basili_metin": "Bilişsel veya algısal çarpıklıkların ve alışılmışın dışında davranışların yanı sıra yakın ilişkilerden rahatsızlık duyma ve yakın ilişkilere girebilme becerisinde yetersizlikle kendini gösteren, toplumsal ve kişilerarası yetersizliklerin olduğu sürekli bir örüntüdür. Erken erişkinlik döneminde başlar. 4≥\n1. Referans fikirler.\n2. Davranışı etkileyen, kültürü ile uyumlu olmayan acayip inanışlar, büyüsel düşünceler.\n3. Olağandışı algısal yaşantılar, bedensel yanılsamalar.\n4. Acayip düşünüş ve konuşma biçimi.\n5. Kuşkuculuk ya da paranoid düşünce.\n6. Uygunsuz ya da kısıtlı duygulanım.\n7. Acayip, kendine özgü davranış veya görünüm.\n8. Yakın arkadaş ve sırdaşların olmaması.\n9. Azalmayan aşırı toplumsal anksiyete, paranoid korkular.\nFrajil x sendromu olan kadınlarda sıktır. (y25 s21)",
+   "isaretler": [
+    {
+     "tur": "daire",
+     "hedef": "yakın ilişkilerden rahatsızlık duyma; yakın ilişkilere girebilme becerisinde yetersizlik; 4≥; acayip inanışlar; büyüsel düşünceler"
+    },
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "mavi alt çizgi: Erken erişkinlik; 3–9. ölçütler"
+    },
+    {
+     "tur": "kutu",
+     "hedef": "Frajil x sendromu olan kadınlarda sıktır (mavi çerçeve)"
+    }
+   ],
+   "el_yazisi": [
+    {
+     "metin": "→ yalnız ve acayip",
+     "hedef": "(A) Şizotipal Kişilik Bozukluğu başlığı",
+     "guven": "yuksek",
+     "alternatif": ""
+    }
+   ],
+   "onem": [
+    "el_onemli"
+   ],
+   "duzeltme": []
+  },
+  {
+   "id": "psk-s11-b09",
+   "bolge": "r2c2",
+   "tur": "slayt",
+   "baslik": "(B) Borderline Kişilik Bozukluğu",
+   "ders": "k2-35",
+   "y25": {
+    "key": "y25-k2-35-kisilik-bozukluklari",
+    "sayfa": 24
+   },
+   "basili_metin": "Toplumun %1-2'sinde bulunmakta ve K/E:2/1 (y25 s25)\nA. Erken erişkinlikte başlayan değişik durumlarda ortaya çıkan kişiler arası ilişkilerde, benlik algısında ve duygulanımda tutarsızlık ve belirgin dürtüselliğin olduğu sürekli bir örüntüdür. 5≥\n1. Gerçek veya hayali bir terkedilmeden kaçınmak için çılgınca çabalar gösterme.\n2. Gözünde aşırı büyütme ve yerin dibine sokma uçları arasında gidip gelme, gergin ve tutarsız kişilerarası ilişkilerin olması.\n3. Kimlik karmaşası: belirgin olarak ve sürekli bir biçimde tutarsız benlik algısı veya kimlik duyumu.\n4. Kendine zarar verme olasılığı yüksek en az iki alanda dürtüsellik.\n5. Yineleyen özkıyımla ilgili davranışlar, girişimler, göz korkutmalar.\n6. Duygudurumda belirgin tepkiselliğe bağlı instabilite.\n7. Kendini sürekli boşlukta hissetme.\n8. Uygunsuz, yoğun öfke ya da öfkesini kontrol edememe.\n9. Stresle ilişkili geçici paranoid düşünce veya ağır dissosiyatif semptomlar.\nBu bozukluk, zamanla ufak değişiklikler olsa da genellikle kararlı bir seyir izler. (y25 s25)",
+   "isaretler": [
+    {
+     "tur": "daire",
+     "hedef": "K/E:2/1; 5≥; Kimlik karmaşası"
+    },
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "mavi alt çizgi: Erken erişkinlikte başlayan; 1, 2, 4 (kısmen), 5, 6, 7, 9. ölçütler"
+    }
+   ],
+   "el_yazisi": [
+    {
+     "metin": "↳ antisosyal kişilerde 45+ azalma olabilirken borderline'da ölene kadar aynıdır.",
+     "hedef": "Bu bozukluk, zamanla ufak değişiklikler olsa da genellikle kararlı bir seyir izler.",
+     "guven": "orta",
+     "alternatif": "'45+' yaş eşiği; '40+' de okunabilir değil, 45 net"
+    }
+   ],
+   "onem": [
+    "el_onemli",
+    "cikmis"
+   ],
+   "duzeltme": [
+    {
+     "ham": "borderline'da ölene kadar aynıdır",
+     "dogru": "borderline genellikle kararlı bir seyir izler (zamanla ufak değişiklikler olabilir)",
+     "gerekce": "Slayt (y25 s25) 'zamanla ufak değişiklikler olsa da genellikle kararlı' diyor; 'ölene kadar aynı' aşırı genelleme. Antisosyalde 45 yaş sonrası azalma bilgisi y25 slaytlarında yok (hoca notu olabilir)."
+    }
+   ]
+  },
+  {
+   "id": "psk-s11-b10",
+   "bolge": "r2c2",
+   "tur": "cikmis_soru",
+   "baslik": "Borderline KB kliniği hakkında söylenemez: duygudurumda belirgin donukluk",
+   "ders": "k2-35",
+   "y25": {
+    "key": "y25-k2-35-kisilik-bozukluklari",
+    "sayfa": 24
+   },
+   "basili_metin": "Aşağıdakilerden hangisi, borderline kişilik bozukluğu kliniği hakkında söylenemez?\n1 Kimlik karmaşası vardır.\n2 Kendine zarar verme olasılıkları yüksektir.\n3 Stresle ilişkili geçici paranoid düşünceler görülebilir.\n4 Duygudurumda belirgin donukluk mevcuttur.\n5 Kendini sürekli boşlukta hisseder.",
+   "isaretler": [
+    {
+     "tur": "pembe",
+     "hedef": "tablo bloğu"
+    },
+    {
+     "tur": "daire",
+     "hedef": "4 Duygudurumda belirgin donukluk mevcuttur"
+    }
+   ],
+   "el_yazisi": [],
+   "cikmis": {
+    "kok": "Aşağıdakilerden hangisi, borderline kişilik bozukluğu kliniği hakkında söylenemez?",
+    "siklar": [
+     "1) Kimlik karmaşası vardır.",
+     "2) Kendine zarar verme olasılıkları yüksektir.",
+     "3) Stresle ilişkili geçici paranoid düşünceler görülebilir.",
+     "4) Duygudurumda belirgin donukluk mevcuttur.",
+     "5) Kendini sürekli boşlukta hisseder."
+    ],
+    "ogrenci_cevap": "4",
+    "banka_id": "",
+    "banka_yil": "",
+    "banka_dogru": "",
+    "tutarli": true,
+    "not": "Bankada bulunamadı. Borderline'da duygudurumda tepkiselliğe bağlı instabilite vardır, donukluk değil (ölçüt 6)."
+   },
+   "onem": [
+    "cikmis"
+   ],
+   "duzeltme": []
+  },
+  {
+   "id": "psk-s11-b11",
+   "bolge": "r2c2",
+   "tur": "cikmis_soru",
+   "baslik": "Kimlik karmaşası, özkıyım, duygudurum instabilitesi: borderline KB",
+   "ders": "k2-35",
+   "y25": {
+    "key": "y25-k2-35-kisilik-bozukluklari",
+    "sayfa": 24
+   },
+   "basili_metin": "Gözünde aşırı büyütme ve yerin dibine sokma uçları arasında gidip gelme, gergin ve tutarsız kişilerarası ilişkilerin olması, kimlik karmaşası, yineleyen özkıyımla ilgili davranışlar, girişimler olan, duygudurumda belirgin tepkiselliğe bağlı instabilite gözlenen kişilik bozukluğu hangisidir?\n1 Antisosyal kişilik bozukluğu\n2 Narsistik kişilik bozukluğu\n3 Borderline kişilik bozukluğu ☑\n4 Obsesif-kompulsif kişilik bozukluğu\n5 Histrionik kişilik bozukluğu",
+   "isaretler": [
+    {
+     "tur": "pembe",
+     "hedef": "tablo bloğu ve 3. satır"
+    },
+    {
+     "tur": "daire",
+     "hedef": "3 yanında onay kutusu"
+    }
+   ],
+   "el_yazisi": [],
+   "cikmis": {
+    "kok": "Gözünde aşırı büyütme ve yerin dibine sokma uçları arasında gidip gelme, gergin ve tutarsız kişilerarası ilişkilerin olması, kimlik karmaşası, yineleyen özkıyımla ilgili davranışlar, girişimler olan, duygudurumda belirgin tepkiselliğe bağlı instabilite gözlenen kişilik bozukluğu hangisidir?",
+    "siklar": [
+     "1) Antisosyal kişilik bozukluğu",
+     "2) Narsistik kişilik bozukluğu",
+     "3) Borderline kişilik bozukluğu",
+     "4) Obsesif-kompulsif kişilik bozukluğu",
+     "5) Histrionik kişilik bozukluğu"
+    ],
+    "ogrenci_cevap": "3",
+    "banka_id": "bea2e4416c65",
+    "banka_yil": "2020-2021 Kurul 2",
+    "banka_dogru": "C",
+    "tutarli": true,
+    "not": "Banka kökü kısaltılmış ('Karmaşık ilişkiler, yineleyen özkıyımla ilgili davranışlar …')."
+   },
+   "onem": [
+    "cikmis"
+   ],
+   "duzeltme": []
+  },
+  {
+   "id": "psk-s11-b12",
+   "bolge": "r2c2",
+   "tur": "slayt",
+   "baslik": "(B) Histriyonik Kişilik Bozukluğu",
+   "ders": "k2-35",
+   "y25": {
+    "key": "y25-k2-35-kisilik-bozukluklari",
+    "sayfa": 26
+   },
+   "basili_metin": "A. Erken erişkinlikte ortaya çıkan birçok bağlamda kendisini gösteren aşırı duygusallık ve dikkat çekme arayışı gösteren sürekli bir örüntü. 5≥\n1. İlgi odağı olmadığı durumlarda rahatsız olur.\n2. Başkalarıyla iletişimi çoğu zaman uygunsuz bir şekilde cinsel yönden ayartıcı davranışlarla belirlidir.\n3. Hızlı değişen ve yüzeysel kalan duygular sergiler.\n4. İlgiyi çekmek için fiziksel görümünü kullanır.\n5. Aşırı düzeyde başkalarını etkilemeye yönelik ve ayrıntıdan yoksun bir konuşma biçimi vardır.\n6. Gösteriş yapar, yapmacık davranır ve duygularını aşırı bir abartı ile gösterir.\n7. Telkine yatkındır, kolay etkilenir.\n8. İlişkilerin olduğundan daha yakın olması gerektiğini düşünür.",
+   "isaretler": [
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "mavi alt çizgi: tanım cümlesi; 1, 2 (cinsel yönden ayartıcı), 3, 4, 5, 6, 7. ölçütler"
+    },
+    {
+     "tur": "daire",
+     "hedef": "5≥"
+    }
+   ],
+   "el_yazisi": [],
+   "onem": [
+    "el_onemli",
+    "cikmis"
+   ],
+   "duzeltme": []
+  },
+  {
+   "id": "psk-s11-b13",
+   "bolge": "r2c2",
+   "tur": "cikmis_soru",
+   "baslik": "Histriyonik KB kliniği hakkında söylenemez: çoğu zaman başkalarını kıskanır (narsistik)",
+   "ders": "k2-35",
+   "y25": {
+    "key": "y25-k2-35-kisilik-bozukluklari",
+    "sayfa": 26
+   },
+   "basili_metin": "Aşağıdakilerden hangisi, histriyonik kişilik bozukluğu kliniği hakkında söylenemez?\n1 İlgi odağı olmadığı durumlarda rahatsız olur.\n2 Çoğu zaman başkalarını kıskanır.\n3 Hızlı değişen ve yüzeysel kalan duygular sergiler.\n4 Gösteriş yapar, yapmacık davranır.\n5 Telkine yatkındır, kolay etkilenir.",
+   "isaretler": [
+    {
+     "tur": "pembe",
+     "hedef": "tablo bloğu"
+    },
+    {
+     "tur": "daire",
+     "hedef": "2 Çoğu zaman başkalarını kıskanır"
+    },
+    {
+     "tur": "ok",
+     "hedef": "2 → narsis(tik)"
+    }
+   ],
+   "el_yazisi": [
+    {
+     "metin": "→ narsistik",
+     "hedef": "2 Çoğu zaman başkalarını kıskanır (narsistik KB ölçütü 8)",
+     "guven": "yuksek",
+     "alternatif": "görüntüde 'narsis…' kenarda kesik"
+    }
+   ],
+   "cikmis": {
+    "kok": "Aşağıdakilerden hangisi, histriyonik kişilik bozukluğu kliniği hakkında söylenemez?",
+    "siklar": [
+     "1) İlgi odağı olmadığı durumlarda rahatsız olur.",
+     "2) Çoğu zaman başkalarını kıskanır.",
+     "3) Hızlı değişen ve yüzeysel kalan duygular sergiler.",
+     "4) Gösteriş yapar, yapmacık davranır.",
+     "5) Telkine yatkındır, kolay etkilenir."
+    ],
+    "ogrenci_cevap": "2",
+    "banka_id": "q-2021final_230619_142600-3-r31",
+    "banka_yil": "2020-2021 final",
+    "banka_dogru": "B",
+    "tutarli": true,
+    "not": ""
+   },
+   "onem": [
+    "cikmis",
+    "el_onemli"
+   ],
+   "duzeltme": []
+  },
+  {
+   "id": "psk-s11-b14",
+   "bolge": "r2c2",
+   "tur": "cikmis_soru",
+   "baslik": "35 yaşında kadın, anlaşılmadığını söylerken ağlayıp gülüyor: histriyonik KB",
+   "ders": "k2-35",
+   "y25": {
+    "key": "y25-k2-35-kisilik-bozukluklari",
+    "sayfa": 26
+   },
+   "basili_metin": "35 yaşındaki bir kadın kimsenin onu anlamadığı ilgilenmediğini söylüyor bu sırada ağlıyor gülüyor yönlendirmeye müsait?\nHistrionik tip kişilik bozukluğu",
+   "isaretler": [
+    {
+     "tur": "pembe",
+     "hedef": "soru ve cevap satırı"
+    }
+   ],
+   "el_yazisi": [],
+   "cikmis": {
+    "kok": "35 yaşındaki bir kadın kimsenin onu anlamadığını, ilgilenmediğini söylüyor; bu sırada ağlıyor, gülüyor; yönlendirmeye müsait. Tanı? (öğrencinin kısa yazımı; şıklar yok)",
+    "siklar": [
+     "Cevap: Histrionik tip kişilik bozukluğu"
+    ],
+    "ogrenci_cevap": "Histrionik tip kişilik bozukluğu",
+    "banka_id": "q-25-26_d_nem_3_kurul_2-75",
+    "banka_yil": "2025-2026 Kurul 2",
+    "banka_dogru": "E) Histriyonik kişilik bozukluğu",
+    "tutarli": true,
+    "not": "Banka sürümü: 'Bir kadın, çevresindekilerin kendisiyle ilgilenmediğinden … ağlamaklı … yersiz kahkahalar'; öğrenci notunda 35 yaş ve 'yönlendirmeye müsait' (telkine yatkın) ayrıntısı var — bankadakiyle birebir aynı değil, aynı soru olması olası."
+   },
+   "onem": [
+    "cikmis"
+   ],
+   "duzeltme": [
+    {
+     "ham": "Histrionik tip",
+     "dogru": "Histriyonik",
+     "gerekce": "Slayt yazımı 'Histriyonik'"
+    }
+   ]
+  },
+  {
+   "id": "psk-s11-b15",
+   "bolge": "r2c3",
+   "tur": "slayt",
+   "baslik": "(C) Çekingen Kişilik Bozukluğu",
+   "ders": "k2-35",
+   "y25": {
+    "key": "y25-k2-35-kisilik-bozukluklari",
+    "sayfa": 31
+   },
+   "basili_metin": "A. Erken erişkinlikte ortaya çıkan, birçok bağlamda kendini gösteren sosyal inhibisyon, yetersizlik duygularının ve olumsuz değerlendirilmeye aşırı duyarlılığın olduğu sürekli bir örüntüdür. 5≥\n1. Eleştirilecek, beğenilmeyecek ya da dışlanacak olma korkusuyla kişiler arası ilişki gerektiren mesleki etkinliklerden kaçınır.\n2. Beğenildiğinden emin olmadıkça insanlarla ilişkiye girmek istemez.\n3. Mahcup düşeceği, alay konusu olacağı korkusuyla yakın ilişkilere kısıtlılık getirir.\n4. Sosyal durumlarda eleştirileceği ya da dışlanacağı üzerine aşırı zihinsel uğraşısı vardır.\n5. Yetersizlik duyguları yüzünden yeni kişiler arası durumlarda ketlenir.\n6. Kendisini sosyal yönden beceriksiz, kişisel olarak çekici olmayan ve diğerlerinden aşağıda görür.\n7. Mahcup düşebileceğinden ötürü kişisel girişimlerde bulunmak ya da yeni etkinliklere katılmak istemez.",
+   "isaretler": [
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "mavi alt çizgi: yetersizlik duygularının ve olumsuz değerlendirilmeye aşırı duyarlılığın; Mahcup düşeceği, alay konusu olacağı korkusuyla yakın ilişkilere kısıtlılık"
+    },
+    {
+     "tur": "daire",
+     "hedef": "5≥"
+    }
+   ],
+   "el_yazisi": [
+    {
+     "metin": "aşağılık kompleksi",
+     "hedef": "(C) Çekingen Kişilik Bozukluğu başlığı",
+     "guven": "yuksek",
+     "alternatif": ""
+    }
+   ],
+   "onem": [
+    "el_onemli"
+   ],
+   "duzeltme": []
+  },
+  {
+   "id": "psk-s11-b16",
+   "bolge": "r2c3",
+   "tur": "slayt",
+   "baslik": "(C) Bağımlı Kişilik Bozukluğu",
+   "ders": "k2-35",
+   "y25": {
+    "key": "y25-k2-35-kisilik-bozukluklari",
+    "sayfa": 33
+   },
+   "basili_metin": "A. Erken erişkinlikte ortaya çıkan ve birçok bağlamda kendisini gösteren itaatkar ve yapışkan davranışa ve ayrılma kaygısına yol açacak biçimde kendisine bakılma gereksiniminin aşırı olmasıyla giden sürekli bir örüntü. 4≥\n1. Başkalarından bol miktarda öğüt ve destek almazsa gündelik kararlarını vermekte güçlük çeker.\n2. Yaşamının çoğu alanında sorumluluk almak için başkalarına gereksinim duyar.\n3. Desteğini yitireceği ya da kabul görmeyeceği korkusuyla başkaları ile aynı görüşü paylaşmadığını söylemekte zorluk çeker.\n4. Tasarıları başlatma, kendi başına iş yapma zorluğu vardır.\n5. Başkalarının bakım ve desteğini sağlamak için hoş olmayan şeyleri yapmayı isteyecek kadar aşırıya gider.\n6. Kendine bakamayacağına ilişkin aşırı korku nedeniyle tek başına kaldığında kendisini rahatsız veya çaresiz hisseder.\n7. Yakın bir ilişki sonlandığında bir bakım ve destek kaynağı olarak derhal başka bir ilişki arayışı içine girer.\n8. Kendi kendine bakma durumunda bırakılacağı üzerine gerçekçi olmayan bir biçimde kafa yorar.",
+   "isaretler": [
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "mavi alt çizgi: itaatkar ve yapışkan davranışa ve ayrılma kaygısına yol açacak biçimde kendisine bakılma gereksiniminin aşırı olması"
+    },
+    {
+     "tur": "daire",
+     "hedef": "4≥"
+    }
+   ],
+   "el_yazisi": [],
+   "onem": [
+    "el_onemli"
+   ],
+   "duzeltme": []
+  },
+  {
+   "id": "psk-s11-b17",
+   "bolge": "r2c3",
+   "tur": "slayt",
+   "baslik": "(C) Obsesif Kompulsif Kişilik Bozukluğu",
+   "ders": "k2-35",
+   "y25": {
+    "key": "y25-k2-35-kisilik-bozukluklari",
+    "sayfa": 35
+   },
+   "basili_metin": "A. Genç erişkinlik döneminde başlayan ve değişik koşullar altında ortaya çıkan esneklik, açıklık ve verimlilik pahasına düzenlilik, mükemmeliyetçilik, zihinsel ve kişilerarası kontrol koyma üzerine aşırı kafa yormanın olduğu sürekli bir örüntü. 4≥\n1. Asıl amacı unutturacak şekilde ayrıntılar, kurallar, listeler, sıralama, organize etme ya da program yapma ile uğraşıp durur.\n2. İşin bitmesini zorlaştıran mükemmelliyetçilik gösterir.\n3. Etkinlik ve arkadaşlarından yoksun kalacak şekilde kendini işe ya da üretkenliğe adar.\n4. Ahlak, doğruluk, değerler gibi konularda vicdanlarının sesini aşırı dinlerler, esneklik göstermezler.\n5. Özel bir değeri olmasa bile eski, değersiz şeyleri elden çıkaramaz.\n6. Tam olarak kendisi gibi davranmadıkları sürece başkaları ile birlikte çalışmak istemez.\n7. Para harcama konusunda hem kendisine, hem de başkalarına karşı cimri davranır, paranın ileride çıkacak felaketler için biriktirilmesi gerektiğine inanırlar.\n8. Katı ve inatçıdır.",
+   "isaretler": [
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "mavi alt çizgi: tanım cümlesinin tamamı"
+    },
+    {
+     "tur": "daire",
+     "hedef": "4≥"
+    }
+   ],
+   "el_yazisi": [],
+   "onem": [
+    "el_onemli"
+   ],
+   "duzeltme": []
+  }
+ ]
+}

@@ -1,0 +1,71 @@
+{
+ "ders": "k2-52",
+ "ozet": "2023-24 Kurul 2'de bu dersten üç soru gelmiş: zihinsel yetersizlik (MR) nedeni olmayan sendrom (Turner), tekrarlayan motor ve vokal tik (Tourette) ve davranış genetiği yöntemleri (ikiz, asosiyasyon, bağlantı, mutasyon analizi: hepsi). Öğrenciler bu üç slayta yığılmış, ancak MR sorusunu yanlış aktarmış (5. şık Turner yerine Angelman). Şizofreni, otizm ve alkolle ilgili aleller işaretsiz ya da yalnız çevrelenmiş.",
+ "temalar": [
+  {"tema": "Zihinsel yetersizliğin genetik nedenleri; notta yok, sorulmuş: MR nedeni olmayan Turner", "oncelik": "A",
+   "birimler": ["tbg-s03-b04"],
+   "kanit": "2023-24 K2 çıkmışı notta yapıştırılmış ('Hangisi mental retardasyon sebebi değil?'); bankadaki doğru cevap Turner sendromu, notta ise 5. şık Angelman yazılıp işaretlenmiş (tutarsız). Turner notta hiç geçmiyor. 'En iyi bilinenler' satırının solunda kırmızı tik.",
+   "anlatim": "En iyi bilinen MR sendromları (Down, Williams, Frajil X, Prader-Willi) sayılmalı; Turner sendromunun bu listede olmadığı ve zekânın genelde normal olduğu, Angelman sendromunun ise ağır zihinsel yetersizlik yaptığı açıkça söylenmeli.",
+   "soru_payi": 30,
+   "soru_tipleri": ["olumsuz: MR nedeni olmayan → Turner", "liste: en iyi bilinen MR sendromları"]},
+  {"tema": "Tourette sendromu: motor + vokal tik", "oncelik": "A",
+   "birimler": ["tbg-s03-b09"],
+   "kanit": "2023-24 K2 çıkmışı notta 'soru – cevap' biçiminde yazılmış (tekrarlayan basit motor ve vokal tik → Tourette bozukluğu); bankadaki şıklar geçici tik, süreğen motor tik, süreğen ses tiki, Tourette, OKB.",
+   "anlatim": "Tanım tam verilmeli: tekrarlayan basit motor VE vokal tikler; motor tik örnekleri (başı ani çevirme, omuz silkme, kolların sıçrayıcı hareketi) ve vokal tik örnekleri (homurdanma, boğaz temizleme, yüksek sesli soluk alma). İki tik türünün birlikte olmasının ayırıcı nokta olduğu vurgulanmalı.",
+   "soru_payi": 25,
+   "soru_tipleri": ["tanımdan ada: motor + vokal tik → Tourette", "ayırıcı: süreğen motor tik / süreğen ses tiki / Tourette"]},
+  {"tema": "Davranış genetiğinde yöntemler ve otizmde duyarlı gen saptama", "oncelik": "A",
+   "birimler": ["tbg-s03-b02"],
+   "kanit": "2023-24 K2 çıkmışı (öncüllü: ikiz çalışmaları, asosiyasyon, bağlantı analizi, mutasyon analizi → I, II, III ve IV); slaytta '1- Kromozom anomalilerinin saptanması' solunda kırmızı tik. Aynı soru öğrencinin k2-59 sayfasına da yapıştırılmış.",
+   "anlatim": "Otizmde duyarlı gen saptama yöntemleri (kromozom anomalilerinin saptanması, ilişki/asosiyasyon çalışmaları, genetik bağlantı analizi) sıralanmalı; davranış genetiğinde ikiz çalışmaları ve mutasyon analizinin de kullanıldığı bir cümleyle bağlanmalı. Linkage–asosiyasyon farkının ayrıntısı k2-59'da, burada yalnız hangi yöntemlerin kullanıldığı.",
+   "soru_payi": 22,
+   "soru_tipleri": ["öncüllü: davranış genetiği yöntemleri (hepsi)", "liste: otizmde duyarlı gen saptama yöntemi olmayan"]},
+  {"tema": "Şizofreni: başlangıç, prevalans, aile/ikiz riski ve kromozom bölgeleri", "oncelik": "C",
+   "birimler": ["tbg-s03-b07", "tbg-s03-b08"],
+   "kanit": "Öğrenci işareti yok (kırmızı sayılar slaytta basılı); çıkmış yok. Sayı yoğun slayt, sayısal yakın değer çeldiricisine uygun.",
+   "anlatim": "15-35 yaş başlangıç, yaşam boyu prevalans %1, erkekte erken başlangıç; MZ ikizde %47, bir ebeveynde %12, iki ebeveynde %39. 11q21-22 ve HLA A9 ilişkisi tek cümleyle.",
+   "soru_payi": 10,
+   "soru_tipleri": ["sayı: MZ ikiz eşinde risk %47", "kromozom bölgesi: 11q21-22"]},
+  {"tema": "Otizm tanımı ve en duyarlı bölge 7q", "oncelik": "C",
+   "birimler": ["tbg-s03-b01", "tbg-s03-b03"],
+   "kanit": "'OTİZM' ve '7q' kırmızı yayla çevrelenmiş; çıkmış yok.",
+   "anlatim": "Otizm: sosyal etkileşim bozukluğu, dil-konuşma ve sözel olmayan iletişimde gerilik, stereotipik hareketler; genetik haritalamada en duyarlı alan 7q.",
+   "soru_payi": 8,
+   "soru_tipleri": ["bölge: otizmde en duyarlı alan 7q"]},
+  {"tema": "Diğer seçilen yerler: asetaldehit artışıyla ilişkili aleller", "oncelik": "C",
+   "birimler": ["tbg-s03-b06"],
+   "kanit": "İşaretsiz slayt yapıştırması; çıkmış yok.",
+   "anlatim": "Alkol → asetaldehit basamağında ADH 2-2, ADH 2-3, ADH 3-1; asetaldehit → asetat basamağında ALDH 2-2 alelleri asetaldehit artışıyla ilişkili. Basamak–alel eşleşmesi tablo olarak.",
+   "soru_payi": 5,
+   "soru_tipleri": ["eşleştirme: asetaldehit → asetat basamağındaki alel ALDH 2-2"]}
+ ],
+ "hoca_kaliplari": [
+  "Olumsuz kök: 'Aşağıdakilerden hangisi mental retardasyon nedeni değildir?' (2023-24)",
+  "Öncüllü (I–IV) yöntem sorusu, doğru cevap 'I, II, III ve IV' (2023-24)",
+  "Tanımdan ada: tik tanımı → Tourette, çeldiriciler aynı ailedeki tik bozuklukları",
+  "Tıbbi Genetik geneli: doğrudan %60, olumsuz %9, öncüllü %4; çeldirici çoğunlukla aynı türden ayrı kavram (%65)"
+ ],
+ "tuzaklar": [
+  {"tuzak": "Turner sendromu MR nedeni değildir; Angelman ise ağır MR nedenidir", "neden": "öğrenci notunda soru Angelman cevabıyla aktarılmış; bu kopyadan çalışan Angelman'ı işaretler"},
+  {"tuzak": "Tourette'te motor ve vokal tik birliktedir", "neden": "çeldiricide yalnız motor ya da yalnız ses tikli süreğen tik bozukluğu verilir"},
+  {"tuzak": "Şizofrenide iki ebeveyn riski bu derste %39, k2-59 slaytında %34-46 aralığı", "neden": "sayısal yakın değer çeldiricisi; hangi slayta göre sorulduğu önemli"},
+  {"tuzak": "ALDH 2-2 asetaldehit → asetat basamağındadır, ADH alelleri alkol → asetaldehit basamağında", "neden": "basamaklar yer değiştirilerek çeldirici kurulabilir"}
+ ],
+ "sayilar": [
+  "Şizofreni başlangıç 15-35 yaş, yaşam boyu prevalans %1",
+  "MZ ikizde eşte şizofreni riski %47",
+  "Bir ebeveynde %12, iki ebeveynde %39",
+  "Şizofreni: 11q21-22, HLA A9; 2, 5, 9, 13, 16, 17, 19 ve X kromozomları",
+  "Otizmde en duyarlı bölge 7q"
+ ],
+ "duzeltmeler": [
+  {"yanlis": "MR sebebi olmayan sendrom: Angelman (öğrenci cevabı)", "dogru": "MR sebebi olmayan sendrom: Turner; Angelman ağır zihinsel yetersizlik nedenidir", "kaynak": "bankadaki 2023-24 K2 doğru şık (E: Turner sendromu); öğrenci kopyasında 5. şık yanlış aktarılmış"}
+ ],
+ "ara_soru_adaylari": [
+  {"birim": "tbg-s03-b04", "fikir": "en iyi bilinen MR sendromları arasında olmayanı bul (Turner)"},
+  {"birim": "tbg-s03-b09", "fikir": "tekrarlayan motor + vokal tik tablosunun adı; çeldiriciler süreğen motor tik, süreğen ses tiki"},
+  {"birim": "tbg-s03-b02", "fikir": "öncüllü: davranış genetiğinde kullanılan yöntemler (ikiz, asosiyasyon, bağlantı, mutasyon analizi)"},
+  {"birim": "tbg-s03-b07", "fikir": "MZ ikizde eşte şizofreni riski (%47) ile ebeveyn risklerinin karşılaştırması"}
+ ],
+ "kurul2627_notu": "Bu dersin hiçbir birimi 2026-27 PDF'iyle eşlenmedi (y26 yok). Yeni PDF gelince MR sendromları, Tourette ve yöntemler slaytlarının varlığı doğrulanmalı; şizofreni aile riski sayısının (%39) k2-59'daki aralıkla (%34-46) tutarlılığı kontrol edilmeli."
+}

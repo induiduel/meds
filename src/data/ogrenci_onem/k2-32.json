@@ -1,0 +1,1275 @@
+{
+ "ders": "k2-32",
+ "kod": "2n09",
+ "brans": "Nöroloji",
+ "konu": "Felçler",
+ "kaynak": "Geçmiş yıl (2025-26) öğrenci derleme notu: noro3.2",
+ "y25": {
+  "key": "y25-k2-32-felcler",
+  "sayfalar": [
+   4,
+   5,
+   7,
+   17,
+   18,
+   19,
+   21,
+   22,
+   24,
+   26,
+   27,
+   28,
+   29,
+   30,
+   31,
+   32,
+   33
+  ]
+ },
+ "sayac": {
+  "birim": 17,
+  "A": 8,
+  "B": 3,
+  "C": 6,
+  "ogrenci_sorusu": 5,
+  "banka": 7,
+  "banka_kapsandi": 5
+ },
+ "birimler": [
+  {
+   "id": "noro-s09-b18",
+   "pdf": "noro",
+   "sayfa": 9,
+   "bolge": "r2c2",
+   "tur": "slayt",
+   "baslik": "I. Motor nöron / II. Motor nöron / M. Gravis / Kas hastalığı karşılaştırma tablosu",
+   "metin": "Kas zaafının dağılımı: I MN kolda abduktor ve ekstensor, bacakta fleksor kas gruplarında egemen | II MN segmanter veya periferik sinir tipinde | MG başlıca oküler, bulber ve boyun kasları | Kas: proksimal kas grupları\nTonus: Artar (spastisite) | Azalır | Değişmez | Değişmez veya azalır\nTendon refleksleri: Artar | Azalır veya kaybolur | Değişmez | Değişmez veya azalır\nPatolojik refleksler: Var | Yok | Yok | Yok\nKas atrofisi: Yok | Var | Yok | Var\nFasikülasyon: Yok | Lezyon ön boynuzda ise var | Yok | Yok\nDuyu kusuru: Yok | Lezyon ön boynuzda ise yok, periferik sinirde ise var | Yok | Yok\nDiğer: MSS görüntülemede patolojik bulgular saptanabilir | EMG özellikleri | EMG'de nöromüsküler iletim bozukluğu bulguları, kas zaafı antikolinesterazla düzelir | EMG özellikleri, kas enzimleri artabilir",
+   "el_yazisi": [
+    {
+     "metin": "istemli hareket (üst motor nöron, piramidal yol)",
+     "hedef": "I. Motor Nöron sütun başlığı",
+     "guven": "yuksek"
+    },
+    {
+     "metin": "(alt motor nöron)",
+     "hedef": "II. Motor Nöron sütun başlığı",
+     "guven": "yuksek"
+    },
+    {
+     "metin": "miyonöral ileti bozukluğu",
+     "hedef": "M. Gravis (ok ile 'Diplopi, ptoz...' bloğuna bağlı)",
+     "guven": "yuksek"
+    },
+    {
+     "metin": "= miyopati",
+     "hedef": "Kas Hastalığı (ok ile kas hastalıkları listesine)",
+     "guven": "yuksek"
+    },
+    {
+     "metin": "ayırıcı",
+     "hedef": "Tendon refleksleri + Patolojik refleksler satırları",
+     "guven": "yuksek"
+    },
+    {
+     "metin": "akut başlangıçta hipotoni olabilir ama Babinski (+) ise yeterli",
+     "hedef": "Tonus – I. MN: Artar (spastisite)",
+     "guven": "yuksek"
+    },
+    {
+     "metin": "= hipotoni",
+     "hedef": "Tonus – II. MN: Azalır",
+     "guven": "yuksek"
+    },
+    {
+     "metin": "(bazen hipotoni)",
+     "hedef": "Tonus – Kas hastalığı",
+     "guven": "yuksek"
+    },
+    {
+     "metin": "(piramidal yolda)",
+     "hedef": "Tendon refleksleri – I. MN: Artar",
+     "guven": "yuksek"
+    },
+    {
+     "metin": "refleks kavisinin eferent kolu hastalandığı için",
+     "hedef": "Tendon refleksleri – II. MN: Azalır veya kaybolur",
+     "guven": "yuksek"
+    },
+    {
+     "metin": "/Normal",
+     "hedef": "Tendon refleksleri – MG: Değişmez",
+     "guven": "yuksek"
+    },
+    {
+     "metin": "belirgin atrofi olmadıkça normal",
+     "hedef": "Tendon refleksleri – Kas hastalığı: Değişmez veya azalır",
+     "guven": "yuksek"
+    },
+    {
+     "metin": "★ Babinski, Hoffmann...",
+     "hedef": "Patolojik refleksler – I. MN: Var",
+     "guven": "yuksek"
+    },
+    {
+     "metin": "→ seyirme olabilir, elle/çekiçle vurulabilir",
+     "hedef": "Fasikülasyon – II. MN: lezyon ön boynuzda ise var",
+     "guven": "orta",
+     "alternatif": "'elle/aletle'"
+    },
+    {
+     "metin": "kortikospinalde yok",
+     "hedef": "Duyu kusuru – I. MN: Yok",
+     "guven": "yuksek"
+    },
+    {
+     "metin": "Gowers arazı",
+     "hedef": "Kas zaafı dağılımı – Kas hastalığı: proksimal kas grupları",
+     "guven": "yuksek"
+    },
+    {
+     "metin": "hemipleji daima 1. motor nöron ★ (piramidal yol)",
+     "hedef": "tablo altı genel not",
+     "guven": "yuksek"
+    }
+   ],
+   "isaretler": [
+    {
+     "tur": "yildiz",
+     "hedef": "tablonun tamamı (büyük daire içinde yıldız)"
+    },
+    {
+     "tur": "yesil",
+     "hedef": "Tendon refleksleri ve Patolojik refleksler satırları"
+    },
+    {
+     "tur": "ok",
+     "hedef": "'ayırıcı' köşeli parantezi: tendon refleksleri + patolojik refleksler"
+    },
+    {
+     "tur": "daire",
+     "hedef": "M. Gravis, Kas Hastalığı, Proksimal kas"
+    },
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "oküler, bulber ve boyun kasları"
+    },
+    {
+     "tur": "yildiz",
+     "hedef": "Patolojik refleksler: Var (I. MN)"
+    }
+   ],
+   "sinyal": [
+    "el_onemli",
+    "sari",
+    "yildiz"
+   ],
+   "y25": {
+    "key": "y25-k2-32-felcler",
+    "sayfa": 17
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "banka_cikmis": [
+    "6fc14196f6c3",
+    "d3-k2-nor-008",
+    "past-q-KURUL_2_C_IKMIS__3-92"
+   ],
+   "puan": 73,
+   "oncelik": "A",
+   "vurgulu": [
+    "M. Gravis, Kas Hastalığı, Proksimal kas",
+    "Patolojik refleksler: Var (I. MN)",
+    "Tendon refleksleri ve Patolojik refleksler satırları",
+    "oküler, bulber ve boyun kasları",
+    "tablonun tamamı (büyük daire içinde yıldız)"
+   ]
+  },
+  {
+   "id": "noro-s09-b09",
+   "pdf": "noro",
+   "sayfa": 9,
+   "bolge": "r1c2",
+   "tur": "slayt",
+   "baslik": "Motor nöron hastalığı (ALS)",
+   "metin": "Her iki nöron birlikte tutulduğunda «amyotrofik lateral skleroz»\nYutma kusuru, dil hareketlerinde güçlük, dizartri, kol ve bacaklarda kuvvetsizlik\nDTR artması, Hoffmann, Babinski, dil ve el kaslarında atrofi ve yaygın fasikülasyonlar",
+   "el_yazisi": [
+    {
+     "metin": "= ALS",
+     "hedef": "amyotrofik lateral skleroz",
+     "guven": "yuksek"
+    },
+    {
+     "metin": "1. motor",
+     "hedef": "DTR artması / Babinski",
+     "guven": "yuksek"
+    },
+    {
+     "metin": "2. nöron",
+     "hedef": "atrofi (ve fasikülasyon)",
+     "guven": "yuksek"
+    }
+   ],
+   "isaretler": [
+    {
+     "tur": "yesil",
+     "hedef": "tüm satırlar"
+    },
+    {
+     "tur": "daire",
+     "hedef": "Babinski"
+    },
+    {
+     "tur": "daire",
+     "hedef": "atrofi"
+    },
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "DTR artması; dil ve el kaslarında atrofi ve yaygın fasikülasyonlar"
+    }
+   ],
+   "sinyal": [
+    "cikmis",
+    "daire",
+    "el_onemli",
+    "sari"
+   ],
+   "y25": {
+    "key": "y25-k2-32-felcler",
+    "sayfa": 27
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "ogrenci_sorulari": [
+    "noro-s09-b10"
+   ],
+   "puan": 63,
+   "oncelik": "A",
+   "vurgulu": [
+    "Babinski",
+    "DTR artması; dil ve el kaslarında atrofi ve yaygın fasikülasyonlar",
+    "atrofi",
+    "tüm satırlar"
+   ]
+  },
+  {
+   "id": "noro-s09-b15",
+   "pdf": "noro",
+   "sayfa": 9,
+   "bolge": "r1c3",
+   "tur": "slayt",
+   "baslik": "Polinöropati (felç tipi)",
+   "metin": "genellikle simetrik\nEkstremi uçlarında zaaf\nFelç II. Motor nöron tipindedir\nDuyu kusuru eldiven çorap tarzındadır.",
+   "el_yazisi": [
+    {
+     "metin": "tonus azalır, DTR azalır, Babinski X, atrofi ✓, fasikülasyon",
+     "hedef": "POLİNÖROPATİ",
+     "guven": "yuksek",
+     "alternatif": "fasikülasyonun yanında işaret yok/okunmuyor"
+    }
+   ],
+   "isaretler": [
+    {
+     "tur": "yesil",
+     "hedef": "tüm satırlar"
+    },
+    {
+     "tur": "daire",
+     "hedef": "Ekstremi uçlarında zaaf"
+    }
+   ],
+   "sinyal": [
+    "cikmis",
+    "daire",
+    "el_onemli",
+    "sari"
+   ],
+   "y25": {
+    "key": "y25-k2-32-felcler",
+    "sayfa": 31
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "ogrenci_sorulari": [
+    "noro-s09-b22"
+   ],
+   "puan": 63,
+   "oncelik": "A",
+   "vurgulu": [
+    "Ekstremi uçlarında zaaf",
+    "tüm satırlar"
+   ]
+  },
+  {
+   "id": "noro-s09-b16",
+   "pdf": "noro",
+   "sayfa": 9,
+   "bolge": "r1c3",
+   "tur": "slayt",
+   "baslik": "Yüz felci: santral ve periferik tip",
+   "metin": "1- Santral Tip\n- Piramidal yol hastalıklarında görülür\n- N. Fasiyalis çekirdeğine kadar olan herhangibir noktadaki lezyon\n- Yüz alt yarısında\n2- Periferik Tip\n- N. Fasiyalis çekirdeği veya sinirin kendisindeki lezyonlar\n- Hem üst hem alt yüz yarımında\n- Gözünü kapatamaz – lagoftalmi\n- Bell fenomeni – gözünü kapatmaya çalıştığında göz küresi yukarı kayar",
+   "el_yazisi": [
+    {
+     "metin": "= sadece ağız köşesinde felç",
+     "hedef": "1- Santral Tip",
+     "guven": "yuksek"
+    },
+    {
+     "metin": "→ Firdevs hanım?",
+     "hedef": "2- Periferik Tip",
+     "guven": "orta",
+     "alternatif": "derste anlatılan hasta örneğine gönderme olabilir"
+    }
+   ],
+   "isaretler": [
+    {
+     "tur": "yesil",
+     "hedef": "tüm maddeler"
+    },
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "Piramidal yol hastalıklarında; N. Fasiyalis çekirdeğine kadar...; N. Fasiyalis çekirdeği veya sinirin kendisindeki lezyonlar; Hem üst hem alt yüz yarımında"
+    },
+    {
+     "tur": "kutu",
+     "hedef": "Bell fenomeni"
+    }
+   ],
+   "sinyal": [
+    "cikmis",
+    "el_onemli",
+    "sari"
+   ],
+   "y25": {
+    "key": "y25-k2-32-felcler",
+    "sayfa": 28
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "ogrenci_sorulari": [
+    "noro-s09-b17"
+   ],
+   "puan": 58,
+   "oncelik": "A",
+   "vurgulu": [
+    "Bell fenomeni",
+    "Piramidal yol hastalıklarında; N. Fasiyalis çekirdeğine kadar...; N. Fasiyalis çekirdeği veya sinirin kendisindeki lezyonlar; Hem üst hem alt yüz yarımında",
+    "tüm maddeler"
+   ]
+  },
+  {
+   "id": "noro-s09-b11",
+   "pdf": "noro",
+   "sayfa": 9,
+   "bolge": "r1c2",
+   "tur": "slayt",
+   "baslik": "Psödobulber paralizi",
+   "metin": "Yutma güçlüğü, dizartri, ufak adımla yürüme, DTR artışı, Babinski\nİdrar kaçırma, yersiz ağlama ve gülmeler eşlik eder\nMNH'daki gibi kranyal sinir çekirdeklerinde hastalanmadan değil kortikobulber liflerin bilateral hastalanmasına bağlıdır.\n- Dilde atrofi ve fasikülasyon görülmez.",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "yesil",
+     "hedef": "tüm satırlar"
+    },
+    {
+     "tur": "daire",
+     "hedef": "Yutma güçlüğü, dizartri, DTR artışı, Babinski, İdrar kaçırma, yersiz ağlama, gülmeler"
+    }
+   ],
+   "sinyal": [
+    "cikmis",
+    "daire",
+    "sari"
+   ],
+   "y25": {
+    "key": "y25-k2-32-felcler",
+    "sayfa": 26
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "ogrenci_sorulari": [
+    "noro-s09-b12"
+   ],
+   "puan": 55,
+   "oncelik": "A",
+   "vurgulu": [
+    "Yutma güçlüğü, dizartri, DTR artışı, Babinski, İdrar kaçırma, yersiz ağlama, gülmeler",
+    "tüm satırlar"
+   ]
+  },
+  {
+   "id": "noro-s09-b13",
+   "pdf": "noro",
+   "sayfa": 9,
+   "bolge": "r1c2",
+   "tur": "slayt",
+   "baslik": "Multipl skleroz",
+   "metin": "Genç yaşlarda başlayan piramidal bulgular, serebellar yollar, kranyal nöropatiler, duyu ve sfinkter bozukluklarıyla giden immün bir hastalık\nİyileşme ve kötüleşme dönemleri",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "yesil",
+     "hedef": "tüm satırlar"
+    },
+    {
+     "tur": "yildiz",
+     "hedef": "İyileşme ve kötüleşme dönemleri (daire içinde yıldız)"
+    }
+   ],
+   "sinyal": [
+    "sari",
+    "yildiz"
+   ],
+   "y25": {
+    "key": "y25-k2-32-felcler",
+    "sayfa": 29
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "banka_cikmis": [
+    "q-2__kurul_-6"
+   ],
+   "puan": 55,
+   "oncelik": "A",
+   "vurgulu": [
+    "tüm satırlar",
+    "İyileşme ve kötüleşme dönemleri (daire içinde yıldız)"
+   ]
+  },
+  {
+   "id": "noro-s09-b07",
+   "pdf": "noro",
+   "sayfa": 9,
+   "bolge": "r1c1",
+   "tur": "slayt",
+   "baslik": "Parapleji",
+   "metin": "Kortekste bacakların motor merkezinde iki yanlı hastalanma\nM.spinalisin yarısının hastalanması - Brown-Sequard sendromu\n- Lezyon tarafında piramidal tipte felç\n- Lezyonun karşı tarafında ağrı ve ısı duyusunda kayıp\n- Lezyon tarafında vibrasyon, pozisyon ve pasif hareket duyusu gibi derin duyu bozukluğu",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "yesil",
+     "hedef": "Brown-Sequard satırı ve 3 madde"
+    },
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "3 madde"
+    }
+   ],
+   "sinyal": [
+    "cikmis",
+    "sari"
+   ],
+   "y25": {
+    "key": "y25-k2-32-felcler",
+    "sayfa": 22
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "ogrenci_sorulari": [
+    "noro-s09-b21"
+   ],
+   "puan": 50,
+   "oncelik": "A",
+   "vurgulu": [
+    "3 madde",
+    "Brown-Sequard satırı ve 3 madde"
+   ]
+  },
+  {
+   "id": "noro-s09-b14",
+   "pdf": "noro",
+   "sayfa": 9,
+   "bolge": "r1c3",
+   "tur": "slayt",
+   "baslik": "Poliomyelit",
+   "metin": "Ön boynuz hücresinin akut iltihabi\nateşli bir devreyi izleyen asimetrik kol ve bacak felçleri\nFelçler II. Motor nöron tipindedir",
+   "el_yazisi": [
+    {
+     "metin": "tonus azalır, DTR azalır, Babinski X, atrofi ✓, fasikülasyon ✓",
+     "hedef": "POLİOMYELİT",
+     "guven": "yuksek"
+    }
+   ],
+   "isaretler": [
+    {
+     "tur": "yesil",
+     "hedef": "tüm satırlar"
+    },
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "Ön boynuz; Felçler II. Motor nöron tipindedir"
+    }
+   ],
+   "sinyal": [
+    "el_onemli",
+    "sari"
+   ],
+   "y25": {
+    "key": "y25-k2-32-felcler",
+    "sayfa": 30
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "banka_cikmis": [
+    "d3-k2-nor-014"
+   ],
+   "puan": 48,
+   "oncelik": "A",
+   "vurgulu": [
+    "tüm satırlar",
+    "Ön boynuz; Felçler II. Motor nöron tipindedir"
+   ]
+  },
+  {
+   "id": "noro-s09-b04",
+   "pdf": "noro",
+   "sayfa": 9,
+   "bolge": "r2c1",
+   "tur": "slayt",
+   "baslik": "Önemli noktalar: piramidal yol bulguları, Babinski",
+   "metin": "Piramidal yol hastalıklarında en sık rastlanılan bulgular\n★ Tendon reflekslerin artması ve Babinski delili\nPiramidal yolun akut hastalanmasında başlangıçta bir süre hipertoni yerine hipotoni ve refleks kaybı görülebilir",
+   "el_yazisi": [
+    {
+     "metin": "tek başına Babinski (diğer her şey normalse bile) piramidal yol hastalık kanıtı!!",
+     "hedef": "Babinski delili",
+     "guven": "yuksek"
+    }
+   ],
+   "isaretler": [
+    {
+     "tur": "yesil",
+     "hedef": "başlık ve hipotoni cümlesi"
+    },
+    {
+     "tur": "yildiz",
+     "hedef": "Tendon reflekslerin artması ve Babinski delili"
+    },
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "Tendon reflekslerin artması ve Babinski delili"
+    }
+   ],
+   "sinyal": [
+    "el_onemli",
+    "sari",
+    "yildiz"
+   ],
+   "y25": {
+    "key": "y25-k2-32-felcler",
+    "sayfa": 18
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "puan": 33,
+   "oncelik": "B",
+   "vurgulu": [
+    "Tendon reflekslerin artması ve Babinski delili",
+    "başlık ve hipotoni cümlesi"
+   ]
+  },
+  {
+   "id": "noro-s09-b20",
+   "pdf": "noro",
+   "sayfa": 9,
+   "bolge": "r1c3",
+   "tur": "slayt",
+   "baslik": "Kas hastalıkları (miyopati)",
+   "metin": "Genellikle ailesel ve ilerleyicidir\nAtrofi ve kuvvetsizlik genellikle simetriktir.\nProksimal kasları tutar.\nÖrdek yürüyüşü, gowers arazı\nMiyotoni",
+   "el_yazisi": [
+    {
+     "metin": "miyopati",
+     "hedef": "Kas Hastalığı",
+     "guven": "yuksek"
+    }
+   ],
+   "isaretler": [
+    {
+     "tur": "yesil",
+     "hedef": "tüm satırlar"
+    },
+    {
+     "tur": "daire",
+     "hedef": "Genellikle ailesel ve ilerleyicidir; simetriktir; gowers arazı"
+    },
+    {
+     "tur": "yildiz",
+     "hedef": "Ördek yürüyüşü, gowers arazı"
+    }
+   ],
+   "sinyal": [
+    "sari",
+    "yildiz"
+   ],
+   "y25": {
+    "key": "y25-k2-32-felcler",
+    "sayfa": 33
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "puan": 25,
+   "oncelik": "B",
+   "vurgulu": [
+    "Genellikle ailesel ve ilerleyicidir; simetriktir; gowers arazı",
+    "tüm satırlar",
+    "Ördek yürüyüşü, gowers arazı"
+   ]
+  },
+  {
+   "id": "noro-s09-b05",
+   "pdf": "noro",
+   "sayfa": 9,
+   "bolge": "r2c1",
+   "tur": "slayt",
+   "baslik": "Hemipleji/hemiparezi",
+   "metin": "Akut dönemde SVH'da felçli tarafta tonus ve DTR azalır (Flask-gevşek)\n- Babinski\nZamanla kas tonusu artar ve spastisite gelişir.\n- Spastisitede kollarda fleksör, bacakta ekstansör tonusun artması şeklindedir\n- DTR artar, patolojik refleksler ortaya çıkar\nYavaş gelişen felçlerde (Beyin tm)\n- Kuvvetsizlik bir bölgeden başlar, zamanla vücut yarısını alacak şekilde ilerler\n- Flask dönem yoktur, başlangıçtan itibaren tonus artmıştır",
+   "el_yazisi": [
+    {
+     "metin": "→ kas gücü azalmasıyla ters",
+     "hedef": "Spastisitede kollarda fleksör, bacakta ekstansör tonusun artması",
+     "guven": "yuksek"
+    }
+   ],
+   "isaretler": [
+    {
+     "tur": "yesil",
+     "hedef": "satırların çoğu"
+    },
+    {
+     "tur": "daire",
+     "hedef": "Babinski"
+    },
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "kollarda fleksör, bacakta ekstansör; DTR artar; patolojik refleksler ortaya; kuvvetsizlik ... ilerler; flask dönem yoktur"
+    }
+   ],
+   "sinyal": [
+    "daire",
+    "el_onemli",
+    "sari"
+   ],
+   "y25": {
+    "key": "y25-k2-32-felcler",
+    "sayfa": 19
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "puan": 23,
+   "oncelik": "B",
+   "vurgulu": [
+    "Babinski",
+    "kollarda fleksör, bacakta ekstansör; DTR artar; patolojik refleksler ortaya; kuvvetsizlik ... ilerler; flask dönem yoktur",
+    "satırların çoğu"
+   ]
+  },
+  {
+   "id": "noro-s09-b02",
+   "pdf": "noro",
+   "sayfa": 9,
+   "bolge": "r1c1",
+   "tur": "slayt",
+   "baslik": "Birinci motor nöron",
+   "metin": "Piramidal yollar çaprazlaştığından beyindeki lezyonlar karşı tarafta zaaf yaparken, m.spinalis lezyonları aynı tarafta felç yapar",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "yesil",
+     "hedef": "tüm cümle"
+    },
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "m.spinalis lezyonları aynı tarafta"
+    }
+   ],
+   "sinyal": [
+    "sari"
+   ],
+   "y25": {
+    "key": "y25-k2-32-felcler",
+    "sayfa": 5
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "puan": 10,
+   "oncelik": "C",
+   "vurgulu": [
+    "m.spinalis lezyonları aynı tarafta",
+    "tüm cümle"
+   ]
+  },
+  {
+   "id": "noro-s09-b03",
+   "pdf": "noro",
+   "sayfa": 9,
+   "bolge": "r1c1",
+   "tur": "slayt",
+   "baslik": "İkinci motor nöron",
+   "metin": "Beyin sapındaki motor kranyal sinirlerin nükleuslarında (3,4,5,6,7,9,10,11,12)\n- İpsilateral göz, yüz, dil, çiğneme, yutma\nM.spinalis boyunca uzanan ön boynuz hücreleri\n- İpsilateral kol, bacak ve gövde kasları",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "yesil",
+     "hedef": "tüm satırlar"
+    }
+   ],
+   "sinyal": [
+    "sari"
+   ],
+   "y25": {
+    "key": "y25-k2-32-felcler",
+    "sayfa": 7
+   },
+   "y26": null,
+   "duzeltme": [
+    {
+     "ham": "(3,4,5,6,9,11,12)",
+     "dogru": "(3,4,5,6,7,9,10,11,12)",
+     "gerekce": "Motor kranyal sinir çekirdekleri listesinde yüz kasları için 7 (fasiyal) ve vagus 10 eksik; aynı satırda 'ipsilateral yüz' sayılıyor. Slayt metni böyle; içerikte kaynak korunup not düşülmeli."
+    }
+   ],
+   "not_": null,
+   "puan": 10,
+   "oncelik": "C",
+   "vurgulu": [
+    "tüm satırlar"
+   ]
+  },
+  {
+   "id": "noro-s09-b06",
+   "pdf": "noro",
+   "sayfa": 9,
+   "bolge": "r2c1",
+   "tur": "slayt",
+   "baslik": "Piramidal hemiplejide lokalizasyon",
+   "metin": "Kapsüla internada piramidal yol kompakttır.\n- Vücut yarısını eşit şekilde etkileyen bir hemipleji\n- Duyu kusuru eşlik edebilir\nBeyin sapı lezyonu: lezyon tarafında (ipsilateral) kranyal sinir felci + karşı tarafta (kontralateral) hemipleji = çapraz (alterne) felç\nM.spinaliste lezyonla aynı taraftadır ve yüz tutulmaz.\n- Servikal bölgenin altındaysa aynı taraftaki bacak\n- Piramidal yolların birbirine yakın olması nedeniyle iki taraf birlikte tutulabilir\n- Kuadriparezi / Paraparezi",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "yesil",
+     "hedef": "Kapsüla internada piramidal yol kompakttır; Beyin sapı lezyonu – çapraz felç; M.spinaliste lezyonla aynı taraftadır ve yüz tutulmaz; Piramidal yolların birbirine yakın olması"
+    }
+   ],
+   "sinyal": [
+    "sari"
+   ],
+   "y25": {
+    "key": "y25-k2-32-felcler",
+    "sayfa": 21
+   },
+   "y26": null,
+   "duzeltme": [
+    {
+     "ham": "Beyin sapı lezyonu – kontralateral kranyal sinir felçleri – çapraz felç",
+     "dogru": "Beyin sapı lezyonu: lezyon tarafında (ipsilateral) kranyal sinir felci + karşı tarafta (kontralateral) hemipleji = çapraz (alterne) felç",
+     "gerekce": "Slayt metni kısaltılmış; 'kontralateral' hemipleji içindir, kranyal sinir felci ipsilateraldir (aynı sayfada 2. motor nöron: 'ipsilateral göz, yüz, dil')."
+    }
+   ],
+   "not_": null,
+   "puan": 10,
+   "oncelik": "C",
+   "vurgulu": [
+    "Kapsüla internada piramidal yol kompakttır; Beyin sapı lezyonu – çapraz felç; M.spinaliste lezyonla aynı taraftadır ve yüz tutulmaz; Piramidal yolların birbirine yakın olması"
+   ]
+  },
+  {
+   "id": "noro-s09-b08",
+   "pdf": "noro",
+   "sayfa": 9,
+   "bolge": "r1c1",
+   "tur": "slayt",
+   "baslik": "Spinal parapleji",
+   "metin": "Duyu kusurunun üst düzeyi lezyonun üst düzeyini gösterir.\nKaybolan DTR = lezyon düzeyi\n- Piramidal paraparezide bacaklarda artmış DTR'ye rağmen kollarda alınamıyorsa lezyon servikal bölgededir",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "yesil",
+     "hedef": "Kaybolan DTR = lezyon düzeyi; piramidal paraparezi satırı"
+    }
+   ],
+   "sinyal": [
+    "sari"
+   ],
+   "y25": {
+    "key": "y25-k2-32-felcler",
+    "sayfa": 24
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "puan": 10,
+   "oncelik": "C",
+   "vurgulu": [
+    "Kaybolan DTR = lezyon düzeyi; piramidal paraparezi satırı"
+   ]
+  },
+  {
+   "id": "noro-s09-b19",
+   "pdf": "noro",
+   "sayfa": 9,
+   "bolge": "r1c3",
+   "tur": "slayt",
+   "baslik": "Myastenia gravis belirtileri",
+   "metin": "Diplopi, ptoz, çiğneme ve yutma güçlüğü, fonasyon bozuklukları, boyun kaslarında kuvvetsizlik en sık belirtilerdir.",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "pembe",
+     "hedef": "blok açık pembe vurgulu (soru değil)"
+    },
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "Diplopi, ptoz, çiğneme ve yutma güçlüğü, fonasyon bozuklukları, boyun"
+    }
+   ],
+   "sinyal": [
+    "sari"
+   ],
+   "y25": {
+    "key": "y25-k2-32-felcler",
+    "sayfa": 32
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "puan": 10,
+   "oncelik": "C",
+   "vurgulu": [
+    "Diplopi, ptoz, çiğneme ve yutma güçlüğü, fonasyon bozuklukları, boyun",
+    "blok açık pembe vurgulu (soru değil)"
+   ]
+  },
+  {
+   "id": "noro-s09-b01",
+   "pdf": "noro",
+   "sayfa": 9,
+   "bolge": "r1c1",
+   "tur": "slayt",
+   "baslik": "Tanımlar: parezi, pleji, hemipleji, kas zaafı düzeyleri, histerik felç",
+   "metin": "Parezi\nParalizi/Pleji\nHemipleji, hemiparezi, paraparezi\nKas zaafı tespit edildiyse;\n1- Birinci motor nöron\n2- İkinci motor nöron\n3- Sinir kas bağlantısı\n4- Doğrudan çizgili kas\nHisterik felçler",
+   "el_yazisi": [
+    {
+     "metin": "= kısmi felç",
+     "hedef": "Parezi",
+     "guven": "yuksek"
+    },
+    {
+     "metin": "= tam felç (0/5)",
+     "hedef": "Paralizi/Pleji",
+     "guven": "yuksek"
+    },
+    {
+     "metin": "vücudun yarısı tutmaz",
+     "hedef": "Hemipleji",
+     "guven": "yuksek"
+    },
+    {
+     "metin": "vücudun yarısı kısmi felç",
+     "hedef": "hemiparezi",
+     "guven": "yuksek"
+    },
+    {
+     "metin": "sadece alt eks felci",
+     "hedef": "paraparezi",
+     "guven": "yuksek"
+    },
+    {
+     "metin": "istemli hareketin ilk nöronu / üst motor nöron = Piramidal yol çaprazlaştığı için beyindeki lezyon karşı tarafta (kontralateral) zaaf yapar; medulla spinalis lezyonu (çaprazlaşmadan sonra) aynı tarafta (ipsilateral) felç yapar",
+     "hedef": "1- Birinci motor nöron",
+     "guven": "orta",
+     "alternatif": "'X' çaprazlaşma anlamında; yazılan taraf eşleşmesi slayt s05 ile ters görünüyor (bkz. duzeltme)"
+    },
+    {
+     "metin": "= alt motor nöron / periferik motor nöron; 3,4,5,6,9,11,12 nükleusta",
+     "hedef": "2- İkinci motor nöron",
+     "guven": "yuksek"
+    },
+    {
+     "metin": "= miyonöral plak",
+     "hedef": "3- Sinir kas bağlantısı",
+     "guven": "yuksek"
+    },
+    {
+     "metin": "= kas distrofileri, polimiyozit ...",
+     "hedef": "4- Doğrudan çizgili kas",
+     "guven": "yuksek",
+     "alternatif": "yazılan 'poliomiyozit'"
+    },
+    {
+     "metin": "= diğer 4 ihtimal elendikten sonra son sebep olarak tanı koyularak psikiyatriye sevk",
+     "hedef": "Histerik felçler",
+     "guven": "yuksek"
+    }
+   ],
+   "isaretler": [
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "Hemipleji, hemiparezi"
+    }
+   ],
+   "sinyal": [
+    "el_onemli"
+   ],
+   "y25": {
+    "key": "y25-k2-32-felcler",
+    "sayfa": 4
+   },
+   "y26": null,
+   "duzeltme": [
+    {
+     "ham": "piramidal yol X = ipsilateral . spinal yol X yapmaz = kontralateral",
+     "dogru": "Piramidal yol çaprazlaştığı için beyindeki lezyon karşı tarafta (kontralateral) zaaf yapar; medulla spinalis lezyonu (çaprazlaşmadan sonra) aynı tarafta (ipsilateral) felç yapar",
+     "gerekce": "Slayt s05 ve aynı sayfadaki 'Birinci motor nöron' bloğu: 'beyindeki lezyonlar karşı tarafta zaaf yaparken, m.spinalis lezyonları aynı tarafta felç yapar'. Öğrenci notundaki ipsilateral/kontralateral eşleşmesi ters ya da kısaltma belirsiz."
+    },
+    {
+     "ham": "poliomiyozit",
+     "dogru": "polimiyozit",
+     "gerekce": "Kas hastalığı adı polimiyozit (slayt s33: Polimiyozit-Dermatomiyozit)."
+    }
+   ],
+   "not_": null,
+   "puan": 8,
+   "oncelik": "C",
+   "vurgulu": [
+    "Hemipleji, hemiparezi"
+   ]
+  }
+ ],
+ "ogrenci_sorulari": [
+  {
+   "id": "noro-s09-b10",
+   "pdf": "noro",
+   "sayfa": 9,
+   "bolge": "r1c2",
+   "tur": "cikmis_soru",
+   "baslik": "ALS",
+   "metin": "Motor nöronlarda dejenerasyon ve ölüm ile karakterize alt ve üst motor nöronları etkileyen, motor nöron hastalıklarının en yaygını hangisidir? A)SCA B)ALS C)SMA D)Parkinson E)MS",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "pembe",
+     "hedef": "soru bloğu"
+    },
+    {
+     "tur": "daire",
+     "hedef": "B)ALS"
+    }
+   ],
+   "sinyal": [
+    "cikmis"
+   ],
+   "y25": {
+    "key": "y25-k2-32-felcler",
+    "sayfa": 27
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "cikmis": {
+    "kok": "Motor nöronlarda dejenerasyon ve ölüm ile karakterize, alt ve üst motor nöronları etkileyen, motor nöron hastalıklarının en yaygını hangisidir?",
+    "siklar": [
+     "A) SCA",
+     "B) ALS",
+     "C) SMA",
+     "D) Parkinson",
+     "E) MS"
+    ],
+    "ogrenci_cevap": "B",
+    "banka_id": "q-No_ropsikiyatri_gis_kardiyo_-2023-2024-C__km_s_lar__240625_053302__2_-14",
+    "banka_yil": "2023",
+    "banka_dogru": "B) Amiyotrofik lateral skleroz (ALS)",
+    "tutarli": true,
+    "not": "Bankadaki kayıt isPastExam işaretsiz, disiplin Tıbbi Patoloji olarak girilmiş; ara.py banka bulamadı, doğrudan aramayla bulundu."
+   },
+   "bagli_birim": "noro-s09-b09",
+   "benzerlik": 0.687
+  },
+  {
+   "id": "noro-s09-b12",
+   "pdf": "noro",
+   "sayfa": 9,
+   "bolge": "r1c2",
+   "tur": "cikmis_soru",
+   "baslik": "Psödobulber paralizi",
+   "metin": "23) Psödobulbar paralizde hangisi görülür? – yersiz gülme",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "pembe",
+     "hedef": "soru satırı"
+    }
+   ],
+   "sinyal": [
+    "cikmis"
+   ],
+   "y25": {
+    "key": "y25-k2-32-felcler",
+    "sayfa": 26
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "cikmis": {
+    "kok": "Psödobulber paralizide hangisi görülür?",
+    "siklar": [],
+    "ogrenci_cevap": "yersiz gülme",
+    "banka_id": "",
+    "banka_yil": "",
+    "banka_dogru": "",
+    "tutarli": true,
+    "not": "Yalnız 'soru – cevap' biçiminde; şıklar yok. Bankada bulunamadı. Cevap slayt s26 ile uyumlu."
+   },
+   "bagli_birim": "noro-s09-b11",
+   "benzerlik": 0.665
+  },
+  {
+   "id": "noro-s09-b17",
+   "pdf": "noro",
+   "sayfa": 9,
+   "bolge": "r1c3",
+   "tur": "cikmis_soru",
+   "baslik": "Periferik tip yüz felci",
+   "metin": "Aşağıdakilerden hangisi periferik tipte yüz felci için doğru değildir? a) N. Fasiyalis çekirdeği veya sinirin kendisindeki hasar ile ortaya çıkar b) Hem üst hem alt yüz yarımını etkiler. Cevap bu ikisi değil... doğru cevap yazmıyordu",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "pembe",
+     "hedef": "soru bloğu"
+    }
+   ],
+   "sinyal": [
+    "cikmis"
+   ],
+   "y25": {
+    "key": "y25-k2-32-felcler",
+    "sayfa": 28
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "cikmis": {
+    "kok": "Aşağıdakilerden hangisi periferik tipte yüz felci için doğru değildir?",
+    "siklar": [
+     "a) N. Fasiyalis çekirdeği veya sinirin kendisindeki hasar ile ortaya çıkar",
+     "b) Hem üst hem alt yüz yarımını etkiler"
+    ],
+    "ogrenci_cevap": "",
+    "banka_id": "",
+    "banka_yil": "",
+    "banka_dogru": "",
+    "tutarli": true,
+    "not": "Öğrenci yalnız iki doğru şıkkı hatırlamış; doğru cevabın (yanlış ifade) metni yok. Bankada bulunamadı. Muhtemel doğru cevap santral tip özelliği (yalnız yüz alt yarısı / piramidal yol hastalığında görülür) – tahmin, doğrulanmadı."
+   },
+   "bagli_birim": "noro-s09-b16",
+   "benzerlik": 0.763
+  },
+  {
+   "id": "noro-s09-b21",
+   "pdf": "noro",
+   "sayfa": 9,
+   "bolge": "r2c3",
+   "tur": "cikmis_soru",
+   "baslik": "Sağ hemiparezi + DTR artışı: lezyon olamaz",
+   "metin": "Muayenede sağ vücut yarımında güçsüzlük ve derin tendon reflekslerinde artış saptadığınız hastada lezyon aşağıdakilerden hangisinde olamaz? 1 Beyin sapı 2 Servikal spinal kord 3 Sol serebral hemisfer 4 Sol korona radiata 5 Dorsal spinal kord ✓",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "pembe",
+     "hedef": "soru bloğu"
+    }
+   ],
+   "sinyal": [
+    "cikmis"
+   ],
+   "y25": {
+    "key": "y25-k2-32-felcler",
+    "sayfa": 21
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "cikmis": {
+    "kok": "Muayenede sağ vücut yarımında güçsüzlük ve derin tendon reflekslerinde artış saptadığınız hastada lezyon aşağıdakilerden hangisinde olamaz?",
+    "siklar": [
+     "1) Beyin sapı",
+     "2) Servikal spinal kord",
+     "3) Sol serebral hemisfer",
+     "4) Sol korona radiata",
+     "5) Dorsal spinal kord"
+    ],
+    "ogrenci_cevap": "5",
+    "banka_id": "9d2e0b3d81c4",
+    "banka_yil": "2020-2021",
+    "banka_dogru": "E) Dorsal spinal kord",
+    "tutarli": true,
+    "not": "Bankada konu 'Nörolojik Muayene' olarak etiketli; öğrenci Felçler sayfasına koymuş (lokalizasyon slaytı s21 ile ilişkili)."
+   },
+   "bagli_birim": "noro-s09-b07",
+   "benzerlik": 0.669
+  },
+  {
+   "id": "noro-s09-b22",
+   "pdf": "noro",
+   "sayfa": 9,
+   "bolge": "r2c3",
+   "tur": "cikmis_soru",
+   "baslik": "Kas güçsüzlüğü nedenleri: yanlış olan",
+   "metin": "Aşağıdakilerden hangisi yanlıştır? 1 Miyopatilerde proksimal zaaf beklenir ✓ 2 Polinöropatilerde distal zaaf beklenir ✓ 3 Nöromüsküler kavşak kusurunda okülobulber kaslar tutulur ✓ 4 Motor nöron hastalığında derin tendon refleksleri azalır (daire, kutucuk işaretli) 5 Dorsal spinal kord tam kesisinde parapleji ve sfinkter kusuru olması beklenir ✓",
+   "el_yazisi": [
+    {
+     "metin": "✓ (1,2,3,5 doğru ifadeler olarak tiklenmiş)",
+     "hedef": "şıklar 1,2,3,5",
+     "guven": "yuksek"
+    }
+   ],
+   "isaretler": [
+    {
+     "tur": "pembe",
+     "hedef": "soru bloğu"
+    },
+    {
+     "tur": "daire",
+     "hedef": "4 Motor nöron hastalığında derin tendon refleksleri azalır"
+    }
+   ],
+   "sinyal": [
+    "cikmis"
+   ],
+   "y25": {
+    "key": "y25-k2-32-felcler",
+    "sayfa": 17
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "cikmis": {
+    "kok": "Aşağıdakilerden hangisi yanlıştır?",
+    "siklar": [
+     "1) Miyopatilerde proksimal zaaf beklenir",
+     "2) Polinöropatilerde distal zaaf beklenir",
+     "3) Nöromüsküler kavşak kusurunda okülobulber kaslar tutulur",
+     "4) Motor nöron hastalığında derin tendon refleksleri azalır",
+     "5) Dorsal spinal kord tam kesisinde parapleji ve sfinkter kusuru olması beklenir"
+    ],
+    "ogrenci_cevap": "4",
+    "banka_id": "6fc14196f6c3",
+    "banka_yil": "2020-2021",
+    "banka_dogru": "D) Motor nöron hastalığında derin tendon refleksleri azalır.",
+    "tutarli": true,
+    "not": "ALS'de 1. motor nöron tutulumu nedeniyle DTR artar (slayt s27)."
+   },
+   "bagli_birim": "noro-s09-b15",
+   "benzerlik": 0.68
+  }
+ ],
+ "banka": [
+  {
+   "id": "940551369cab",
+   "ders": "k2-32",
+   "yillar": [
+    "2020-2021"
+   ],
+   "kok": "Zaman profili dikkate alındığında, birden başlayan, genellikle 5-15 dakika süren ve 24 saat içinde tamamen düzelen geçici fokal nörolojik defisit aşağıdakilerden hangisidir?",
+   "dogru": "Geçici iskemik atak (TİA)",
+   "kopyalar": [],
+   "birim": "noro-s09-b14",
+   "benzerlik": 0.564,
+   "kapsandi": false,
+   "notta_yapistirilmis": false
+  },
+  {
+   "id": "3807e9b207c5",
+   "ders": "k2-32",
+   "yillar": [
+    "2020-2021"
+   ],
+   "kok": "Serebrovasküler hastalık ve hipertansiyon öyküsü olan, sol tarafta ani güç kaybı, dizartri ve baş ağrısı ile acile başvuran hastada öncelikle hangi tetkik istenir?",
+   "dogru": "Kontrastsız beyin bilgisayarlı tomografi-difüzyon manyetik rezonans görüntüleme",
+   "kopyalar": [],
+   "birim": "noro-s09-b07",
+   "benzerlik": 0.59,
+   "kapsandi": false,
+   "notta_yapistirilmis": false
+  },
+  {
+   "id": "6fc14196f6c3",
+   "ders": "k2-32",
+   "yillar": [
+    "2020-2021"
+   ],
+   "kok": "Kas güçsüzlüğü (felç) nedenleriyle ilgili aşağıdakilerden hangisi yanlıştır?",
+   "dogru": "Motor nöron hastalığında derin tendon refleksleri azalır.",
+   "kopyalar": [],
+   "birim": "noro-s09-b18",
+   "benzerlik": 0.669,
+   "kapsandi": true,
+   "notta_yapistirilmis": true
+  },
+  {
+   "id": "d3-k2-nor-014",
+   "ders": "k2-32",
+   "yillar": [
+    "2021-2026"
+   ],
+   "kok": "Aniden konuşamama ve sağ kol ile bacakta ani güç kaybı (akut hemipleji) ile başvuran hastada, semptomların ilk saatlerinde iskemik inme ile hemorajik inme ayrımını yapmak için ilk seçilecek acil tetkik hangisidir?",
+   "dogru": "Kontrastsız beyin bilgisayarlı tomografi (BT)",
+   "kopyalar": [],
+   "birim": "noro-s09-b14",
+   "benzerlik": 0.605,
+   "kapsandi": true,
+   "notta_yapistirilmis": false
+  },
+  {
+   "id": "d3-k2-nor-008",
+   "ders": "k2-32",
+   "yillar": [
+    "2021-2026"
+   ],
+   "kok": "Nörolojik fizik muayenede Babinski pozitifliği, klonus ve spastisite gibi patolojik refleks ve piramidal bulgular aşağıdakilerin hangisinde tipik olarak gözlenir?",
+   "dogru": "Birinci motor nöron (üst motor nöron) lezyonu",
+   "kopyalar": [],
+   "birim": "noro-s09-b18",
+   "benzerlik": 0.669,
+   "kapsandi": true,
+   "notta_yapistirilmis": false
+  },
+  {
+   "id": "past-q-KURUL_2_C_IKMIS__3-92",
+   "ders": "k2-32",
+   "yillar": [
+    "Geçmiş Yıllar Çıkmışı (Arşiv)"
+   ],
+   "kok": "İkinci motor nöron (alt motor nöron) tutulumu ile ilgili aşağıdaki bulgular veriliyor:\nI. Kas tonusu azalır.\nII. Derin tendon refleksleri azalır.\nIII. Kas atrofisi olur.\nIV. Patolojik refleksler görülür.\nBu bulgulardan h",
+   "dogru": "I, II ve III",
+   "kopyalar": [],
+   "birim": "noro-s09-b18",
+   "benzerlik": 0.711,
+   "kapsandi": true,
+   "notta_yapistirilmis": false
+  },
+  {
+   "id": "q-2__kurul_-6",
+   "ders": "k2-32",
+   "yillar": [
+    "Geçmiş Yıllar Çıkmışı (Arşiv)"
+   ],
+   "kok": "Multipl skleroz ile ilgili aşağıdakilerden hangisi yanlıştır?",
+   "dogru": "Atakların tekrarlama sıklığı zamanla artar",
+   "kopyalar": [],
+   "birim": "noro-s09-b13",
+   "benzerlik": 0.603,
+   "kapsandi": true,
+   "notta_yapistirilmis": false
+  }
+ ]
+}

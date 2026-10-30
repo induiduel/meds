@@ -1,0 +1,647 @@
+{
+ "ders": "k2-08",
+ "kod": "2g01",
+ "brans": "Tıbbi Genetik",
+ "konu": "Beyin ve İskelet Sistemi Gelişimi Genetiği",
+ "kaynak": "Geçmiş yıl (2025-26) öğrenci derleme notu: tbg3.2",
+ "y25": {
+  "key": "y25-k2-08-beyin-ve-iskelet-sistemi-gelisimi-genetigi",
+  "sayfalar": [
+   7,
+   11,
+   12,
+   14,
+   15,
+   16,
+   25,
+   26,
+   28,
+   30,
+   32,
+   51,
+   54,
+   79
+  ]
+ },
+ "sayac": {
+  "birim": 14,
+  "A": 3,
+  "B": 0,
+  "C": 11,
+  "ogrenci_sorusu": 1,
+  "banka": 5,
+  "banka_kapsandi": 3
+ },
+ "birimler": [
+  {
+   "id": "tbg-s01-b09",
+   "pdf": "tbg",
+   "sayfa": 1,
+   "bolge": "r1c2",
+   "tur": "slayt",
+   "baslik": "Holoprozensefali",
+   "metin": "Holoprozensefali: Beynin ön kısmı ve orta hat yüz yapılarının gelişiminin bozulmasıdır.",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "tanım cümlesinin altı ve iki yanı kırmızı kalemle çizilmiş (kutu benzeri)"
+    }
+   ],
+   "sinyal": [
+    "kirmizi_cizgi",
+    "tekrar"
+   ],
+   "y25": {
+    "key": "y25-k2-08-beyin-ve-iskelet-sistemi-gelisimi-genetigi",
+    "sayfa": 28
+   },
+   "y26": {
+    "key": "k2-08",
+    "sayfa": 24
+   },
+   "duzeltme": [],
+   "not_": "Bankada K2 çıkmışı var: past-1790877045052-543953 (2021-2022, Kurul 2) 'hemisferlere bölünemeyen, siklopi… → Holoprosensefali'.",
+   "banka_cikmis": [
+    "d3-k2-pat-008",
+    "past-1790877045052-543953"
+   ],
+   "puan": 50,
+   "oncelik": "A",
+   "vurgulu": [
+    "tanım cümlesinin altı ve iki yanı kırmızı kalemle çizilmiş (kutu benzeri)"
+   ]
+  },
+  {
+   "id": "tbg-s01-b14",
+   "pdf": "tbg",
+   "sayfa": 1,
+   "bolge": "r2c3",
+   "tur": "slayt",
+   "baslik": "Kas hastalıkları – musküler distrofiler (DMD/BMD)",
+   "metin": "Kas hastalıkları muskuler distrofiler (öğrencinin başlığı)\nÇocukluk çağında en sık rastlanan formu; Duchenne/Becker distrofisi olup, yaklaşık 3500 erkek doğumda 1 görülür.\nErişkinlerde Miyotonik distrofi daha sıktır\nDMD ve BMD arasındaki klinik ayrılık, farklı mutasyonların protein sentezine olan etkilerinden kaynaklanır.\nTam veya tama yakın distrofin eksikliği DMD'ye sebep olur.\nBMD'li hastalar anormal molekül ağırlığı olan distrofine sahiptirler.",
+   "el_yazisi": [],
+   "isaretler": [],
+   "sinyal": [
+    "cikmis"
+   ],
+   "y25": {
+    "key": "y25-k2-08-beyin-ve-iskelet-sistemi-gelisimi-genetigi",
+    "sayfa": 79
+   },
+   "y26": {
+    "key": "k2-08",
+    "sayfa": 75
+   },
+   "duzeltme": [],
+   "not_": "Son üç satır y25 s81 / y26 s77'den.",
+   "ogrenci_sorulari": [
+    "tbg-s01-b15"
+   ],
+   "puan": 40,
+   "oncelik": "A",
+   "vurgulu": []
+  },
+  {
+   "id": "tbg-s01-b01",
+   "pdf": "tbg",
+   "sayfa": 1,
+   "bolge": "r1c1",
+   "tur": "slayt",
+   "baslik": "Homeotik genler ve HOX/HOMEOBOX tarihçesi",
+   "metin": "BEYİN VE İSKELET SİSTEMİ GELİŞİMİ GENETİĞİ (öğrencinin başlığı)\nMüller'in X ışını etkisini bulması ile GEN → Mutant GEN\nSineklerde normal dışı gelişim görüldü (anten yerine bacakların oluşumu) ↔ Homeotik genlerde mutasyon?\n1970'lerin sonunda gelişimin organizasyonunda etkili 9 homeotik gen grubu keşfedildi ve HOX genleri ismi verildi.\n1983 yılında Basel'de HOX genlerinin tümünde 180 bp'den oluşan ortak diziler bulundu ve HOMEOBOX ismi verildi.",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "karalama",
+     "hedef": "1970'ler/1983 kutuları arasında kırmızı balık/döngü biçimli çizim (vurgu imi)"
+    }
+   ],
+   "sinyal": [],
+   "y25": {
+    "key": "y25-k2-08-beyin-ve-iskelet-sistemi-gelisimi-genetigi",
+    "sayfa": 7
+   },
+   "y26": {
+    "key": "k2-08",
+    "sayfa": 7
+   },
+   "duzeltme": [
+    {
+     "ham": "gurubu",
+     "dogru": "grubu",
+     "gerekce": "yazım"
+    }
+   ],
+   "not_": null,
+   "banka_cikmis": [
+    "d3-k2-tbg-008"
+   ],
+   "puan": 30,
+   "oncelik": "A",
+   "vurgulu": []
+  },
+  {
+   "id": "tbg-s01-b06",
+   "pdf": "tbg",
+   "sayfa": 1,
+   "bolge": "r2c1",
+   "tur": "slayt",
+   "baslik": "Gelişim genleri → sendromlar listesi",
+   "metin": "PAX3 → Waardenburg sendromu tip 1\nPAX6 → Aniridi\nPITX2 → Rieger sendromu\nPITX3 → Konjenital katarakt\nPOU3F4 → Sağırlık ve distoni\nSOX9 → Kamptomelik displazi, erkek cinsiyet gelişim kusuru\nGLI3 → Greig sefalopolisindaktili sendromu\nHOXA-13 → El-ayak-genital sendromu\nHOXD-13 → Polisindaktili\nLMX1B → Nail-patella sendromu\nMITF → Waardenburg sendromu tip 2\nPax2 → Renal-kolobom sendromu\nSRY → Erkek cinsiyet gelişim bozukluğu\nTBX3 → Schinzel sendromu (ulna-mammary sendromu)\nTBX5 → Holt-Oram sendromu\nTCOF1 → Treacher-Collins sendromu\nTWIST1 → Saethre-Chotzen sendromu sendromu\nWT1 → Urogenital anomaliler",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "pembe",
+     "hedef": "PAX6 → Aniridi (yalnız bu satır pembe fosforla boyalı; soru bloğu değil, satır vurgusu)"
+    }
+   ],
+   "sinyal": [
+    "pembe"
+   ],
+   "y25": {
+    "key": "y25-k2-08-beyin-ve-iskelet-sistemi-gelisimi-genetigi",
+    "sayfa": 16
+   },
+   "y26": {
+    "key": "k2-08",
+    "sayfa": 14
+   },
+   "duzeltme": [
+    {
+     "ham": "PTX2 → Reiger sendromu",
+     "dogru": "PITX2 → Rieger sendromu",
+     "gerekce": "Gen simgesi PITX2, sendrom adı Axenfeld-Rieger"
+    },
+    {
+     "ham": "Gl13 → Grieg sendromu",
+     "dogru": "GLI3 → Greig sefalopolisindaktili sendromu",
+     "gerekce": "Gen GLI3 (L harfi, 1 değil 'I'); sendrom adı Greig"
+    },
+    {
+     "ham": "LMXIB",
+     "dogru": "LMX1B",
+     "gerekce": "Gen simgesi LMX1B"
+    },
+    {
+     "ham": "TWIST → Seathre-Chotzen",
+     "dogru": "TWIST1 → Saethre-Chotzen sendromu",
+     "gerekce": "Sendrom adı Saethre-Chotzen"
+    },
+    {
+     "ham": "WTI",
+     "dogru": "WT1",
+     "gerekce": "Wilms tümör 1 geni"
+    },
+    {
+     "ham": "TCOF",
+     "dogru": "TCOF1",
+     "gerekce": "Treacher-Collins geni TCOF1"
+    },
+    {
+     "ham": "TBX3 → ulna-mammary",
+     "dogru": "TBX3 → ulnar-mammary (Schinzel) sendromu",
+     "gerekce": "Terim ulnar-mammary"
+    }
+   ],
+   "not_": "Slayt metni y25 s16-17'ye bölünmüş; y26'da tek sayfa (s14). Bankada PAX6-aniridi çıkmışı bulunamadı.",
+   "puan": 10,
+   "oncelik": "C",
+   "vurgulu": [
+    "PAX6 → Aniridi (yalnız bu satır pembe fosforla boyalı; soru bloğu değil, satır vurgusu)"
+   ]
+  },
+  {
+   "id": "tbg-s01-b12",
+   "pdf": "tbg",
+   "sayfa": 1,
+   "bolge": "r1c3",
+   "tur": "slayt",
+   "baslik": "İskelet sistemi gelişim kusurları (displaziler) – en sık tipler",
+   "metin": "İSKELET SİSTEMİ GELİŞİM KUSURLARI (DİSPLAZİLER) (öğrencinin başlığı)\nEn sık karşılaşılan tipleri;\nAkondroplazi, 0,13-0,64/10.000\nOsteogenezis imperfekta, 1/15.000\nTanatoforik displazi,\nFibrokondrogenezis,\nAkondrogenezis,",
+   "el_yazisi": [
+    {
+     "metin": "en sık",
+     "hedef": "Akondroplazi, 0,13-0,64/10.000",
+     "guven": "yuksek",
+     "alternatif": ""
+    }
+   ],
+   "isaretler": [
+    {
+     "tur": "ok",
+     "hedef": "'En sık karşılaşılan tipleri' satırından Akondroplazi'ye kırmızı ok"
+    }
+   ],
+   "sinyal": [
+    "el_onemli"
+   ],
+   "y25": {
+    "key": "y25-k2-08-beyin-ve-iskelet-sistemi-gelisimi-genetigi",
+    "sayfa": 51
+   },
+   "y26": {
+    "key": "k2-08",
+    "sayfa": 47
+   },
+   "duzeltme": [],
+   "not_": null,
+   "puan": 8,
+   "oncelik": "C",
+   "vurgulu": []
+  },
+  {
+   "id": "tbg-s01-b02",
+   "pdf": "tbg",
+   "sayfa": 1,
+   "bolge": "r1c1",
+   "tur": "slayt",
+   "baslik": "İnsanda HOX A, B, C ve D genleri",
+   "metin": "İnsanda HOX A, B, C ve D genleri,",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "daire",
+     "hedef": "İnsanda HOX A, B, C ve D genleri (kırmızı kalemle çevrelenmiş)"
+    }
+   ],
+   "sinyal": [
+    "daire"
+   ],
+   "y25": {
+    "key": "y25-k2-08-beyin-ve-iskelet-sistemi-gelisimi-genetigi",
+    "sayfa": 11
+   },
+   "y26": {
+    "key": "k2-08",
+    "sayfa": 10
+   },
+   "duzeltme": [],
+   "not_": null,
+   "puan": 5,
+   "oncelik": "C",
+   "vurgulu": [
+    "İnsanda HOX A, B, C ve D genleri (kırmızı kalemle çevrelenmiş)"
+   ]
+  },
+  {
+   "id": "tbg-s01-b10",
+   "pdf": "tbg",
+   "sayfa": 1,
+   "bolge": "r1c2+r2c2",
+   "tur": "slayt",
+   "baslik": "Lizensefali (pakigri/agri)",
+   "metin": "En önemli beyin malformasyonlarından olan Lizensefali; beyinde kıvrımların azalması (pakigri) ya da yokluğu (agri) ile karakterizedir,\nKıvrımların kaybı ile beyinde düz yüzey, anormal kalın korteks ve kortikal laminasyonun kaybı oluşur.",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "ilk cümle (pakigri/agri tanımı) kırmızı çizgiyle çerçevelenmiş/altı çizili"
+    }
+   ],
+   "sinyal": [
+    "kirmizi_cizgi"
+   ],
+   "y25": {
+    "key": "y25-k2-08-beyin-ve-iskelet-sistemi-gelisimi-genetigi",
+    "sayfa": 30
+   },
+   "y26": {
+    "key": "k2-08",
+    "sayfa": 26
+   },
+   "duzeltme": [],
+   "not_": null,
+   "puan": 5,
+   "oncelik": "C",
+   "vurgulu": [
+    "ilk cümle (pakigri/agri tanımı) kırmızı çizgiyle çerçevelenmiş/altı çizili"
+   ]
+  },
+  {
+   "id": "tbg-s01-b13",
+   "pdf": "tbg",
+   "sayfa": 1,
+   "bolge": "r1c3",
+   "tur": "slayt",
+   "baslik": "FGFR3 Grubu",
+   "metin": "FGFR3 Grubu\nAkondroplazi,\nHipokondroplazi\nTanatoforik Displazi",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "displazi listesinden FGFR3 grubuna ve grup listesinin yanına inen kırmızı kavisli çizgiler (iki listeyi bağlıyor: akondroplazi/tanatoforik her ikisinde)"
+    }
+   ],
+   "sinyal": [
+    "kirmizi_cizgi"
+   ],
+   "y25": {
+    "key": "y25-k2-08-beyin-ve-iskelet-sistemi-gelisimi-genetigi",
+    "sayfa": 54
+   },
+   "y26": {
+    "key": "k2-08",
+    "sayfa": 50
+   },
+   "duzeltme": [],
+   "not_": null,
+   "puan": 5,
+   "oncelik": "C",
+   "vurgulu": [
+    "displazi listesinden FGFR3 grubuna ve grup listesinin yanına inen kırmızı kavisli çizgiler (iki listeyi bağlıyor: akondroplazi/tanatoforik her ikisinde)"
+   ]
+  },
+  {
+   "id": "tbg-s01-b03",
+   "pdf": "tbg",
+   "sayfa": 1,
+   "bolge": "r1c1",
+   "tur": "slayt",
+   "baslik": "HOX lokusları – fare/insan homolojisi",
+   "metin": "Bu HOX gen lokuslarında pek çok HOX geni bulunmaktadır ve fareyle insanda HOX genleri homolojisi dikkat çekecek düzeydedir.",
+   "el_yazisi": [],
+   "isaretler": [],
+   "sinyal": [],
+   "y25": {
+    "key": "y25-k2-08-beyin-ve-iskelet-sistemi-gelisimi-genetigi",
+    "sayfa": 12
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": "Bu cümle 2026-27 PDF'inde yok (y25 s12'nin y26 karşılığı bulunamadı).",
+   "puan": 0,
+   "oncelik": "C",
+   "vurgulu": []
+  },
+  {
+   "id": "tbg-s01-b04",
+   "pdf": "tbg",
+   "sayfa": 1,
+   "bolge": "r1c1+r2c1",
+   "tur": "slayt",
+   "baslik": "OTX genleri (OTX2 anterior kafa, OTX1 korteks)",
+   "metin": "Beyin gelişiminde etkili olduğu ortaya konan genlerden biri OTX genidir.\nOTX geni alt gruplarından OTX2 geninin gelişim sırasında eksprese olan ve anterior kafa oluşumunda önemli olan genlerden biri olduğu öne sürülmektedir.\nDiğer taraftan OTX1 geninin mutantları serebral korteksin çeşitli bölgelerini etkileyen multipl anomalilere sebep olduğu saptanmıştır.\nYine mezensefalon ve serebellum ile duyu organ anomalilerinde OTX1 mutant genleri rapor edilmiştir.",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "karalama",
+     "hedef": "OTX2 kutusunun altında kırmızı balık/döngü biçimli çizim"
+    }
+   ],
+   "sinyal": [],
+   "y25": {
+    "key": "y25-k2-08-beyin-ve-iskelet-sistemi-gelisimi-genetigi",
+    "sayfa": 14
+   },
+   "y26": {
+    "key": "k2-08",
+    "sayfa": 12
+   },
+   "duzeltme": [
+    {
+     "ham": "mezensephalon",
+     "dogru": "mezensefalon",
+     "gerekce": "Türkçe yazım"
+    }
+   ],
+   "not_": null,
+   "puan": 0,
+   "oncelik": "C",
+   "vurgulu": []
+  },
+  {
+   "id": "tbg-s01-b05",
+   "pdf": "tbg",
+   "sayfa": 1,
+   "bolge": "r2c1",
+   "tur": "slayt",
+   "baslik": "MSX ailesi",
+   "metin": "MSX ailesi bir diğer homeobox üyesidir.\nMSX ailesi genleri kraniofasiyal ve diş gelişiminde etkilidir.\nMSX1 mutasyonları familyal diş agenezisinden sorumlu olmaktadır.",
+   "el_yazisi": [],
+   "isaretler": [],
+   "sinyal": [],
+   "y25": {
+    "key": "y25-k2-08-beyin-ve-iskelet-sistemi-gelisimi-genetigi",
+    "sayfa": 15
+   },
+   "y26": {
+    "key": "k2-08",
+    "sayfa": 13
+   },
+   "duzeltme": [],
+   "not_": null,
+   "puan": 0,
+   "oncelik": "C",
+   "vurgulu": []
+  },
+  {
+   "id": "tbg-s01-b07",
+   "pdf": "tbg",
+   "sayfa": 1,
+   "bolge": "r1c2",
+   "tur": "slayt",
+   "baslik": "Waardenburg Sendromu (tip III, tip II, MITF)",
+   "metin": "Sinir sistemi gelişim anomalileri (öğrencinin başlığı)\nWaardenburg Sendromu\nTip III Waardenburg sendromunda; gözdeki telekantus daha belirgin, bazı olgularda üst ekstremite anomalileri eşlik eder.\nTip II'de saçta hipopigmente alan, heterokromi daha belirgindir, işitme kaybı da eşlik edebilir.\nBu olgularda; MITF geninde mutasyon bulunur,",
+   "el_yazisi": [],
+   "isaretler": [],
+   "sinyal": [],
+   "y25": {
+    "key": "y25-k2-08-beyin-ve-iskelet-sistemi-gelisimi-genetigi",
+    "sayfa": 25
+   },
+   "y26": {
+    "key": "k2-08",
+    "sayfa": 21
+   },
+   "duzeltme": [],
+   "not_": null,
+   "puan": 0,
+   "oncelik": "C",
+   "vurgulu": []
+  },
+  {
+   "id": "tbg-s01-b08",
+   "pdf": "tbg",
+   "sayfa": 1,
+   "bolge": "r1c2",
+   "tur": "slayt",
+   "baslik": "Waardenburg-anoftalmi Sendromu",
+   "metin": "Waardenburg-anoftalmi sendromunda; mikroftalmiden anoftalmiye kadar değişken derecelerde göz bulgusu, alt ve üst ekstremite anomalileri eşlik eder,\nBu sendroma SMOC1 geni mutasyonları neden olur,",
+   "el_yazisi": [],
+   "isaretler": [],
+   "sinyal": [],
+   "y25": {
+    "key": "y25-k2-08-beyin-ve-iskelet-sistemi-gelisimi-genetigi",
+    "sayfa": 26
+   },
+   "y26": {
+    "key": "k2-08",
+    "sayfa": 22
+   },
+   "duzeltme": [
+    {
+     "ham": "mikoftalmiden",
+     "dogru": "mikroftalmiden",
+     "gerekce": "terim mikroftalmi"
+    }
+   ],
+   "not_": null,
+   "puan": 0,
+   "oncelik": "C",
+   "vurgulu": []
+  },
+  {
+   "id": "tbg-s01-b11",
+   "pdf": "tbg",
+   "sayfa": 1,
+   "bolge": "r2c2",
+   "tur": "slayt",
+   "baslik": "Primer mikrosefali",
+   "metin": "Primer mikrosefali (true mikrosefali); beyinde herhangi bir malformasyon olmaksızın beyin boyutunun küçük olması durumu,",
+   "el_yazisi": [],
+   "isaretler": [],
+   "sinyal": [],
+   "y25": {
+    "key": "y25-k2-08-beyin-ve-iskelet-sistemi-gelisimi-genetigi",
+    "sayfa": 32
+   },
+   "y26": {
+    "key": "k2-08",
+    "sayfa": 28
+   },
+   "duzeltme": [],
+   "not_": null,
+   "puan": 0,
+   "oncelik": "C",
+   "vurgulu": []
+  }
+ ],
+ "ogrenci_sorulari": [
+  {
+   "id": "tbg-s01-b15",
+   "pdf": "tbg",
+   "sayfa": 1,
+   "bolge": "r2c3",
+   "tur": "cikmis_soru",
+   "baslik": "Çıkmış: musküler distrofiler – doğru olan",
+   "metin": "Muskuler distrofiler ile ilgili doğru olanı işaretleyiniz\na) Duchenne muskuler distrofi en sık rastlanan formudur\nb) Distrofin proteininin fazla olması sorumludur\nc) En ağır tipi fasioskapulohumeral tiptir\nd) Kaslarda hipertrofi mevcuttur",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "pembe",
+     "hedef": "tüm soru bloğu"
+    }
+   ],
+   "sinyal": [
+    "cikmis"
+   ],
+   "y25": {
+    "key": "y25-k2-08-beyin-ve-iskelet-sistemi-gelisimi-genetigi",
+    "sayfa": 79
+   },
+   "y26": {
+    "key": "k2-08",
+    "sayfa": 75
+   },
+   "duzeltme": [
+    {
+     "ham": "Distrofin proteinin",
+     "dogru": "Distrofin proteininin",
+     "gerekce": "yazım"
+    }
+   ],
+   "not_": null,
+   "cikmis": {
+    "kok": "Muskuler distrofiler ile ilgili doğru olanı işaretleyiniz",
+    "siklar": [
+     "a) Duchenne muskuler distrofi en sık rastlanan formudur",
+     "b) Distrofin proteinin fazla olması sorumludur",
+     "c) En ağır tipi fasioskapulohumeral tiptir",
+     "d) Kaslarda hipertrofi mevcuttur"
+    ],
+    "ogrenci_cevap": "a",
+    "banka_id": "d700decc9b5b",
+    "banka_yil": "2020-2021 (Kurul 2)",
+    "banka_dogru": "A) Duchenne musküler distrofi en sık rastlanan formudur",
+    "tutarli": true,
+    "not": "Doğru şık kırmızı yazıyla işaretli. Bankada 5 şık (E: Tanıda en değerli yöntem MR görüntülemedir) ve D 'Kaslarda gerçek hipertrofi mevcuttur'; öğrenci kopyası 4 şıklı. DMD'de baldırda psödohipertrofi vardır, gerçek hipertrofi değil — D bu yüzden yanlış."
+   },
+   "bagli_birim": "tbg-s01-b14",
+   "benzerlik": 0.783
+  }
+ ],
+ "banka": [
+  {
+   "id": "060f46f50beb",
+   "ders": "k2-08",
+   "yillar": [
+    "2020-2021",
+    "2020-2021"
+   ],
+   "kok": "Konjenital malformasyonlar arasında tipik olarak hidrosefali ve lomber miyelomeningoselin eşlik ettiği anomali hangisidir?",
+   "dogru": "Arnold-Chiari malformasyonu",
+   "kopyalar": [],
+   "birim": "tbg-s01-b10",
+   "benzerlik": 0.564,
+   "kapsandi": false,
+   "notta_yapistirilmis": false
+  },
+  {
+   "id": "d3-k2-bey-008",
+   "ders": "k2-08",
+   "yillar": [
+    "2021-2026"
+   ],
+   "kok": "Embriyolojik dönemde nöral tüpün arka nöroporunun kapanamaması sonucu spinal kanal arkus defektinden meninkslerin ve medulla spinalis ile sinir köklerinin birlikte kese şeklinde dışarı fıtıklaşması tablosu hangisidir?",
+   "dogru": "Miyelomeningosel",
+   "kopyalar": [],
+   "birim": "tbg-s01-b14",
+   "benzerlik": 0.469,
+   "kapsandi": false,
+   "notta_yapistirilmis": false
+  },
+  {
+   "id": "d3-k2-pat-008",
+   "ders": "k2-08",
+   "yillar": [
+    "2021-2026"
+   ],
+   "kok": "Ön beyin vezikülünün (prozensefalon) orta hatta iki ayrı hemisfere bölünememesi sonucu tek bir telensefalik ventrikül ve orta hat yüz anomalileri (siklopi, hipotelorizm, yarık damak) ile karakterize ağır gelişim defekti ",
+   "dogru": "Holoprozensefali",
+   "kopyalar": [],
+   "birim": "tbg-s01-b09",
+   "benzerlik": 0.745,
+   "kapsandi": true,
+   "notta_yapistirilmis": false
+  },
+  {
+   "id": "d3-k2-tbg-008",
+   "ders": "k2-08",
+   "yillar": [
+    "2021-2026"
+   ],
+   "kok": "Embriyonal gelişimde hücrelerin pozisyonel kimliklerini belirleyerek vücut ekseni boyunca bölgesel yapıların (merkezi sinir sistemi, aksiyal iskelet, faringeal arklar) oluşumunu düzenleyen temel homeobox gen grubu hangis",
+   "dogru": "HOX gen ailesi",
+   "kopyalar": [],
+   "birim": "tbg-s01-b01",
+   "benzerlik": 0.67,
+   "kapsandi": true,
+   "notta_yapistirilmis": false
+  },
+  {
+   "id": "past-1790877045052-543953",
+   "ders": "k2-08",
+   "yillar": [
+    "2021-2022"
+   ],
+   "kok": "Beynin hemisferlere veya loblara bölünemediği ve siklopi gibi yüze ait orta hat kusurları ile birlikte olabilen anomali hangisidir?",
+   "dogru": "Holoprosensefali",
+   "kopyalar": [],
+   "birim": "tbg-s01-b09",
+   "benzerlik": 0.661,
+   "kapsandi": true,
+   "notta_yapistirilmis": false
+  }
+ ]
+}

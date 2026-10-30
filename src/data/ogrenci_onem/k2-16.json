@@ -1,0 +1,304 @@
+{
+ "ders": "k2-16",
+ "kod": "2t01",
+ "brans": "FTR",
+ "konu": "Nörolojik Rehabilitasyona Giriş ve Genel İlkeler",
+ "kaynak": "Geçmiş yıl (2025-26) öğrenci derleme notu: ftr3.2",
+ "y25": {
+  "key": "y25-k2-16-norolojik-rehabilitasyona-giris",
+  "sayfalar": [
+   4,
+   5,
+   16,
+   24
+  ]
+ },
+ "sayac": {
+  "birim": 4,
+  "A": 3,
+  "B": 0,
+  "C": 1,
+  "ogrenci_sorusu": 2,
+  "banka": 3,
+  "banka_kapsandi": 2
+ },
+ "birimler": [
+  {
+   "id": "ftr-s01-b01",
+   "pdf": "ftr",
+   "sayfa": 1,
+   "bolge": "r1c1",
+   "tur": "slayt",
+   "baslik": "Bozukluk – Özürlülük – Engellilik ve futbolcu/piyanist örneği",
+   "metin": "Nörolojik Rehabilitasyona Giriş ve Genel İlkeler\nBozukluk-impairment: Yapı ve fonksiyon kaybı\nÖzürlülük-disability: Bozukluktan kaynaklanan kısıtlılıklar\nEngellilik-handicap: Bozukluk nedeniyle sosyal ve mesleki fonksiyonların yerine getirilememesi\nKaza sonucu işaret parmağının distal falanksı kopan biri profesyonel futbolcu diğeri piyano sanatçısı olan iki ayrı kişinin tanısı ortaktır ve ''bozukluk'' iskelet sistemindedir\nDüğme iliklemek için işaret parmağının kullanılamaması günlük yaşam aktivitelerinden giyinmeyi zorlaştıracak, her iki hastada da fonksiyonel kayba yani ''Özürlülüğe'' neden olacaktır.\nDurum sosyal ve mesleki düzeyde ele alındığında futbolcunun sosyal ve mesleki bağımsızlığında bir farklılık oluşmayacağı, piyano sanatçısının ise ''engelli'' olacağı rahatlıkla söylenebilir.",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "sari",
+     "hedef": "futbolcu/piyanist örneğinin üç cümlesi (bozukluk / özürlülük / engelli)"
+    }
+   ],
+   "sinyal": [
+    "cikmis",
+    "sari"
+   ],
+   "y25": {
+    "key": "y25-k2-16-norolojik-rehabilitasyona-giris",
+    "sayfa": 4
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "ogrenci_sorulari": [
+    "ftr-s01-b02"
+   ],
+   "banka_cikmis": [
+    "d3-k2-ftr-002",
+    "past-1790877042516-138078-cs2"
+   ],
+   "puan": 85,
+   "oncelik": "A",
+   "vurgulu": [
+    "futbolcu/piyanist örneğinin üç cümlesi (bozukluk / özürlülük / engelli)"
+   ]
+  },
+  {
+   "id": "ftr-s01-b03",
+   "pdf": "ftr",
+   "sayfa": 1,
+   "bolge": "r1c1",
+   "tur": "slayt",
+   "baslik": "Rehabilitasyonun amacı",
+   "metin": "Rehabilitasyonun amacı\nEşlik eden hastalıkları ve tıbbi durumları önlemek, tanımak ve tedavi etmek\nHastanın ve ailelerin eğitimi\nHasta ve yakınlarının duruma uyumuna yardımcı olmak\nFonksiyonel bağımsızlığı en üst düzeye çıkarmak\nÖzürlülüğü en aza indirmek\nEv, aile ve topluma entegrasyonu sağlamak\nHastaya yeniden anlamlı ve tatmin edici bir hayat kazandırmak",
+   "el_yazisi": [],
+   "isaretler": [],
+   "sinyal": [
+    "cikmis"
+   ],
+   "y25": {
+    "key": "y25-k2-16-norolojik-rehabilitasyona-giris",
+    "sayfa": 5
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": "Aynı liste k2-28'de de var (y25-k2-28 s06). Altındaki çıkmış 94 bu amaçlarla ilgili.",
+   "puan": 40,
+   "oncelik": "A",
+   "vurgulu": []
+  },
+  {
+   "id": "ftr-s01-b06",
+   "pdf": "ftr",
+   "sayfa": 1,
+   "bolge": "r1c2+r1c3",
+   "tur": "slayt",
+   "baslik": "Rehabilitasyonda değerlendirme: genel ve hastalığa özel",
+   "metin": "Rehabilitasyonda değerlendirme\nGenel: Motor fonksiyonlar; Duyusal bozukluklar; Mental fonksiyonlar; Konuşma bozuklukları; Kranial sinirler; Denge-koordinasyon; Yürüme; Günlük yaşam aktiviteleri; Yaşam kalitesi\nHastalığa özel: Motor fonksiyon; Yorgunluk; Tonus; Koordinasyon",
+   "el_yazisi": [],
+   "isaretler": [],
+   "sinyal": [
+    "cikmis"
+   ],
+   "y25": {
+    "key": "y25-k2-16-norolojik-rehabilitasyona-giris",
+    "sayfa": 24
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "ogrenci_sorulari": [
+    "ftr-s01-b04"
+   ],
+   "puan": 40,
+   "oncelik": "A",
+   "vurgulu": []
+  },
+  {
+   "id": "ftr-s01-b05",
+   "pdf": "ftr",
+   "sayfa": 1,
+   "bolge": "r2c1",
+   "tur": "slayt",
+   "baslik": "Nörolojik rehabilitasyon – hasta grupları",
+   "metin": "Nörolojik rehabilitasyon\nİnme (stroke)\nMedulla spinalis yaralanmaları\nTravmatik beyin hasarı\nParkinson, Multipl skleroz\nALS, miyopatiler, erişkin muskuler hastalıklar\nSerebral palsi, spina bifida, diğer pediatrik nöromuskuler hastalıklar\nKranial sinir ve periferik sinir hasarları",
+   "el_yazisi": [],
+   "isaretler": [],
+   "sinyal": [],
+   "y25": {
+    "key": "y25-k2-16-norolojik-rehabilitasyona-giris",
+    "sayfa": 16
+   },
+   "y26": null,
+   "duzeltme": [
+    {
+     "ham": "yaralanlamarı",
+     "dogru": "yaralanmaları",
+     "gerekce": "slayt yazım hatası"
+    }
+   ],
+   "not_": null,
+   "puan": 0,
+   "oncelik": "C",
+   "vurgulu": []
+  }
+ ],
+ "ogrenci_sorulari": [
+  {
+   "id": "ftr-s01-b02",
+   "pdf": "ftr",
+   "sayfa": 1,
+   "bolge": "r1c1+r1c2",
+   "tur": "cikmis_soru",
+   "baslik": "Çıkmış 17: rehabilitasyon tanımları – yanlış olan",
+   "metin": "17) Rehabilitasyon tanımlarıyla ilgili hangisi yanlıştır? Distal falanksı kopan piyanistin düğmesini ilikleyemiyor bu engelliliktir yanlış, doğrusu özürlülüktür olmalı",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "pembe",
+     "hedef": "soru-açıklama satırı"
+    },
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "'özürlülüktür' üzerinde kırmızı tik (✓)"
+    }
+   ],
+   "sinyal": [
+    "cikmis"
+   ],
+   "y25": {
+    "key": "y25-k2-16-norolojik-rehabilitasyona-giris",
+    "sayfa": 4
+   },
+   "y26": null,
+   "duzeltme": [
+    {
+     "ham": "phalanxı",
+     "dogru": "falanksı",
+     "gerekce": "Türkçe yazım"
+    },
+    {
+     "ham": "engelliktir",
+     "dogru": "engelliliktir",
+     "gerekce": "yazım"
+    }
+   ],
+   "not_": null,
+   "cikmis": {
+    "kok": "Rehabilitasyon tanımlarıyla ilgili hangisi yanlıştır?",
+    "siklar": [
+     "(yanlış şık) Distal falanksı kopan piyanistin düğmesini ilikleyememesi engelliliktir"
+    ],
+    "ogrenci_cevap": "'Piyanistin düğme ilikleyememesi engelliliktir' ifadesi yanlış; doğrusu özürlülük",
+    "banka_id": "past-1790877042516-138078-cs2",
+    "banka_yil": "2024-2025 (Kurul 2)",
+    "banka_dogru": "B) Özürlülük (disability)",
+    "tutarli": true,
+    "not": "Öğrencinin kopyası soru no 17, 'yanlış olan' biçiminde ve yalnız ilgili şık + açıklama yazılmış; diğer şıklar yok. Bankadaki kayıt aynı vakayı 'hangisine örnektir → özürlülük' diye soruyor; içerik ve cevap uyumlu (slayt y25 s04)."
+   },
+   "bagli_birim": "ftr-s01-b01",
+   "benzerlik": 0.716
+  },
+  {
+   "id": "ftr-s01-b04",
+   "pdf": "ftr",
+   "sayfa": 1,
+   "bolge": "r2c1",
+   "tur": "cikmis_soru",
+   "baslik": "Çıkmış 94: serebrovasküler olay rehabilitasyonunun ana ilkeleri",
+   "metin": "94. Aşağıdakilerden hangisi/hangileri serebrovasküler olay rehabilitasyonunun ana ilkelerinden biridir?\nI. Komorbid hastalıklara yönelik tedavilerin planlanması ve yürütülmesi\nII. Sekonder komplikasyonları önlemek veya minimale indirmek\nIII. Kaybedilen motor fonksiyonları mümkün olduğunca yerine koymak\nIV. Fonksiyonel ve ev yaşamında bağımsızlığı sağlama\na- Yalnız I, II ve III\nb. Yalnız I ve III\nc. Yalnız II ve IV\nd. Yalnız IV\ne. I, II, III ve IV",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "pembe",
+     "hedef": "tüm soru bloğu"
+    },
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "I-IV öncüllerinin her birinde kırmızı tik (✓)"
+    },
+    {
+     "tur": "daire",
+     "hedef": "e. I, II, III ve IV (kırmızı daire, kırmızı yazı)"
+    }
+   ],
+   "sinyal": [
+    "cikmis"
+   ],
+   "y25": {
+    "key": "y25-k2-16-norolojik-rehabilitasyona-giris",
+    "sayfa": 5
+   },
+   "y26": null,
+   "duzeltme": [
+    {
+     "ham": "fonksiyonlan",
+     "dogru": "fonksiyonları",
+     "gerekce": "OCR/yazım"
+    }
+   ],
+   "not_": null,
+   "cikmis": {
+    "kok": "Aşağıdakilerden hangisi/hangileri serebrovasküler olay rehabilitasyonunun ana ilkelerinden biridir? I. Komorbid hastalıklara yönelik tedavilerin planlanması ve yürütülmesi II. Sekonder komplikasyonları önlemek veya minimale indirmek III. Kaybedilen motor fonksiyonları mümkün olduğunca yerine koymak IV. Fonksiyonel ve ev yaşamında bağımsızlığı sağlama",
+    "siklar": [
+     "a) Yalnız I, II ve III",
+     "b) Yalnız I ve III",
+     "c) Yalnız II ve IV",
+     "d) Yalnız IV",
+     "e) I, II, III ve IV"
+    ],
+    "ogrenci_cevap": "e",
+    "banka_id": "past-1790877045120-496840",
+    "banka_yil": "2021-2022 (Kurul 2)",
+    "banka_dogru": "E) I, II, III ve IV",
+    "tutarli": true,
+    "not": "Konu SVO (inme) rehabilitasyonu; k2-28'e de uyar, öğrenci k2-16 amaç listesinin altına koymuş."
+   },
+   "bagli_birim": "ftr-s01-b06",
+   "benzerlik": 0.661
+  }
+ ],
+ "banka": [
+  {
+   "id": "d3-k2-ftr-002",
+   "ders": "k2-16",
+   "yillar": [
+    "2021-2026"
+   ],
+   "kok": "Dünya Sağlık Örgütü sınıflamasına göre; bir organdaki yapı ya da fonksiyon kaybı 'bozukluk (impairment)', bireysel eylemleri yapamama 'özürlülük/aktivite kısıtlılığı (disability)', sosyal ve mesleki rolleri yerine getire",
+   "dogru": "Katılım kısıtlılığı / Engellilik (handicap)",
+   "kopyalar": [],
+   "birim": "ftr-s01-b01",
+   "benzerlik": 0.773,
+   "kapsandi": true,
+   "notta_yapistirilmis": false
+  },
+  {
+   "id": "d3-k2-ftr-006",
+   "ders": "k2-16",
+   "yillar": [
+    "2021-2026"
+   ],
+   "kok": "Uzamış yatak istirahatinin kardiyovasküler sistem üzerindeki en erken fizyolojik etkisi aşağıdakilerden hangisidir?",
+   "dogru": "Plazma hacminde azalma ve ortostatik intolerans",
+   "kopyalar": [],
+   "birim": "ftr-s01-b05",
+   "benzerlik": 0.488,
+   "kapsandi": false,
+   "notta_yapistirilmis": false
+  },
+  {
+   "id": "past-1790877042516-138078-cs2",
+   "ders": "k2-16",
+   "yillar": [
+    "2024-2025"
+   ],
+   "kok": "İşaret parmağının distal falanksını kaza sonucu kaybeden bir piyanistin düğmesini ilikleyememesi, Dünya Sağlık Örgütü'nün bozukluk-özürlülük-engellilik sınıflamasına göre hangisine örnektir?",
+   "dogru": "Özürlülük (disability)",
+   "kopyalar": [],
+   "birim": "ftr-s01-b01",
+   "benzerlik": 0.842,
+   "kapsandi": true,
+   "notta_yapistirilmis": true
+  }
+ ]
+}

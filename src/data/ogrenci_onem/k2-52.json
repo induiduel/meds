@@ -1,0 +1,382 @@
+{
+ "ders": "k2-52",
+ "kod": "2g03",
+ "brans": "Tıbbi Genetik",
+ "konu": "Davranış Genetiği",
+ "kaynak": "Geçmiş yıl (2025-26) öğrenci derleme notu: tbg3.2",
+ "y25": {
+  "key": "y25-k2-52-davranis-genetigi",
+  "sayfalar": [
+   17,
+   19,
+   21,
+   29,
+   59,
+   61,
+   71,
+   75
+  ]
+ },
+ "sayac": {
+  "birim": 8,
+  "A": 3,
+  "B": 0,
+  "C": 5,
+  "ogrenci_sorusu": 2,
+  "banka": 2,
+  "banka_kapsandi": 1
+ },
+ "birimler": [
+  {
+   "id": "tbg-s03-b04",
+   "pdf": "tbg",
+   "sayfa": 3,
+   "bolge": "r1c1+r2c1",
+   "tur": "slayt",
+   "baslik": "MR-Genetik: en iyi bilinen sendromlar",
+   "metin": "Mental retardasyon (öğrencinin başlığı)\nEn iyi bilinenler;\nDown Send.\nWilliams Send.\nFragil X Send.\nPrader-Willi Send…",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "'En iyi bilinenler' solunda kırmızı tik; başlık altı çizili (basılı)"
+    }
+   ],
+   "sinyal": [
+    "cikmis"
+   ],
+   "y25": {
+    "key": "y25-k2-52-davranis-genetigi",
+    "sayfa": 29
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "ogrenci_sorulari": [
+    "tbg-s03-b05"
+   ],
+   "puan": 40,
+   "oncelik": "A",
+   "vurgulu": [
+    "'En iyi bilinenler' solunda kırmızı tik; başlık altı çizili (basılı)"
+   ]
+  },
+  {
+   "id": "tbg-s03-b09",
+   "pdf": "tbg",
+   "sayfa": 3,
+   "bolge": "r2c2+r2c3",
+   "tur": "slayt",
+   "baslik": "Tourette Sendromu",
+   "metin": "Tourette Sendromu\nTekrarlayan basit motor ve vokal tiklerle karakterize nöropsikiyatrik bir davranış bozukluğu hastalığıdır.\nMotor tikler genellikle başını ani çevirme, omuz silkme, kolları sıçrayıcı tarzda hareketini içerir.\nVokal tiklerde homurdanma, boğaz temizleme, yüksek sesli soluk alma mevcuttur.",
+   "el_yazisi": [],
+   "isaretler": [],
+   "sinyal": [
+    "cikmis"
+   ],
+   "y25": {
+    "key": "y25-k2-52-davranis-genetigi",
+    "sayfa": 75
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "ogrenci_sorulari": [
+    "tbg-s03-b10"
+   ],
+   "puan": 40,
+   "oncelik": "A",
+   "vurgulu": []
+  },
+  {
+   "id": "tbg-s03-b02",
+   "pdf": "tbg",
+   "sayfa": 3,
+   "bolge": "r1c1",
+   "tur": "slayt",
+   "baslik": "Otizmde duyarlı gen saptama yöntemleri",
+   "metin": "1- Kromozom anomalilerinin saptanması,\n2- İlişki (asosiasyon) çalışmaları\n3- Genetik bağlantı analizleri hastalığın moleküler mekanizmasının ortaya çıkarılmasında önemlidir.",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "1- maddesinin solunda küçük kırmızı tik"
+    }
+   ],
+   "sinyal": [],
+   "y25": {
+    "key": "y25-k2-52-davranis-genetigi",
+    "sayfa": 19
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "banka_cikmis": [
+    "q-No_ropsikiyatri_gis_kardiyo_-2023-2024-C__km_s_lar__240625_053302__2_-17"
+   ],
+   "puan": 30,
+   "oncelik": "A",
+   "vurgulu": [
+    "1- maddesinin solunda küçük kırmızı tik"
+   ]
+  },
+  {
+   "id": "tbg-s03-b01",
+   "pdf": "tbg",
+   "sayfa": 3,
+   "bolge": "r1c1",
+   "tur": "slayt",
+   "baslik": "Bir hastalık modeli olarak: Otizm",
+   "metin": "DAVRANIŞ GENETİĞİ (öğrencinin başlığı)\nBir hastalık modeli olarak; OTİZM\nOtizm, sosyal etkileşimde bozukluk, dil, konuşma ve sözel olmayan iletişimde gerilik ile birlikte tekrarlayıcı (stereotipik) hareketler ile karakterize MSS'nin gelişimsel bir bozukluğudur.",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "daire",
+     "hedef": "OTİZM (kırmızı parantez/yay ile çevrelenmiş)"
+    }
+   ],
+   "sinyal": [
+    "daire"
+   ],
+   "y25": {
+    "key": "y25-k2-52-davranis-genetigi",
+    "sayfa": 17
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "puan": 5,
+   "oncelik": "C",
+   "vurgulu": [
+    "OTİZM (kırmızı parantez/yay ile çevrelenmiş)"
+   ]
+  },
+  {
+   "id": "tbg-s03-b03",
+   "pdf": "tbg",
+   "sayfa": 3,
+   "bolge": "r1c1",
+   "tur": "slayt",
+   "baslik": "Otizmde en duyarlı bölge: 7q",
+   "metin": "Otistik çocuklarda yapılan genetik haritalama çalışmalarında en duyarlı alanın 7q bölgesi olduğu görülmüştür.",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "daire",
+     "hedef": "7q (üstünden kırmızı yay ile çevrelenmiş)"
+    }
+   ],
+   "sinyal": [
+    "daire"
+   ],
+   "y25": {
+    "key": "y25-k2-52-davranis-genetigi",
+    "sayfa": 21
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "puan": 5,
+   "oncelik": "C",
+   "vurgulu": [
+    "7q (üstünden kırmızı yay ile çevrelenmiş)"
+   ]
+  },
+  {
+   "id": "tbg-s03-b06",
+   "pdf": "tbg",
+   "sayfa": 3,
+   "bolge": "r2c1",
+   "tur": "slayt",
+   "baslik": "Artan asetaldehitle ilişkili aleller",
+   "metin": "Artan asetaldehitle ilişkili aleller\nAlcohol → Acetaldehyde: ADH 2-2, ADH 2-3, ADH 3-1\nAcetaldehyde → Acetate: ALDH 2-2",
+   "el_yazisi": [],
+   "isaretler": [],
+   "sinyal": [],
+   "y25": {
+    "key": "y25-k2-52-davranis-genetigi",
+    "sayfa": 71
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": "Tıbben tutarlı: ADH2*2/ADH2*3 (ADH1B) ve ADH3*1 (ADH1C) hızlı alkol yıkımı, ALDH2*2 inaktif enzim → asetaldehit birikir.",
+   "puan": 0,
+   "oncelik": "C",
+   "vurgulu": []
+  },
+  {
+   "id": "tbg-s03-b07",
+   "pdf": "tbg",
+   "sayfa": 3,
+   "bolge": "r1c2+r1c3",
+   "tur": "slayt",
+   "baslik": "Şizofreni – epidemiyoloji ve aile riski",
+   "metin": "ŞİZOFRENİ\nGenelde 15-35 yaşlar arasında başlar.\nYaşam boyu prevalansı %1 dir.\nErkeklerde daha erken başlangıçlıdır.\nMonozigotik ikizlerde birinde görülürse diğerinde görülme riski %47'dir.\nBir ebeveynde şizofreni varsa bir sonraki nesle geçme olasılığı %12. Her iki ebeveynde varsa %39'dur.",
+   "el_yazisi": [],
+   "isaretler": [],
+   "sinyal": [],
+   "y25": {
+    "key": "y25-k2-52-davranis-genetigi",
+    "sayfa": 59
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": "Kırmızı yazılı sayılar slaytta basılı (öğrenci işareti değil). k2-59'da (y25 s47) iki ebeveyn için %34-46 aralığı verilir; bu slayt %39 der.",
+   "puan": 0,
+   "oncelik": "C",
+   "vurgulu": []
+  },
+  {
+   "id": "tbg-s03-b08",
+   "pdf": "tbg",
+   "sayfa": 3,
+   "bolge": "r1c2+r1c3",
+   "tur": "slayt",
+   "baslik": "Şizofreni – kromozom bölgeleri, 11q21-22, HLA A9",
+   "metin": "Şizofreninin 2,5,9,13,16,17,19 ve X kromozomlarında meydana gelen değişiklikler sonucu ortaya çıktığı rapor edilmiştir.\n11. kromozomun 11q21-22 bölgesindeki mutasyonların şizofreni ve diğer psikotik bozukluklarla ilişkili olduğu tespit edilmiştir.\nAyrıca HLA A9 aleli olanlarda şizofreni ile ilişkilendirilmiştir.",
+   "el_yazisi": [],
+   "isaretler": [],
+   "sinyal": [],
+   "y25": {
+    "key": "y25-k2-52-davranis-genetigi",
+    "sayfa": 61
+   },
+   "y26": null,
+   "duzeltme": [
+    {
+     "ham": "çıkdığı",
+     "dogru": "çıktığı",
+     "gerekce": "yazım"
+    }
+   ],
+   "not_": null,
+   "puan": 0,
+   "oncelik": "C",
+   "vurgulu": []
+  }
+ ],
+ "ogrenci_sorulari": [
+  {
+   "id": "tbg-s03-b05",
+   "pdf": "tbg",
+   "sayfa": 3,
+   "bolge": "r1c2+r2c1",
+   "tur": "cikmis_soru",
+   "baslik": "Çıkmış: mental retardasyon sebebi olmayan",
+   "metin": "Hangisi mental retardasyon sebebi değil?\nDown\nWilliams\nPrader-Willi\nFrajil X\nAngelman",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "pembe",
+     "hedef": "soru bloğu"
+    },
+    {
+     "tur": "daire",
+     "hedef": "Angelman (kırmızı oval)"
+    }
+   ],
+   "sinyal": [
+    "cikmis"
+   ],
+   "y25": {
+    "key": "y25-k2-52-davranis-genetigi",
+    "sayfa": 29
+   },
+   "y26": null,
+   "duzeltme": [
+    {
+     "ham": "Angelman (MR sebebi değil)",
+     "dogru": "Turner sendromu (MR sebebi değil); Angelman ağır MR nedenidir",
+     "gerekce": "Banka 2023-2024 K2 cevabı Turner; Angelman UBE3A kaybıyla ağır zihinsel yetersizlik"
+    }
+   ],
+   "not_": null,
+   "cikmis": {
+    "kok": "Hangisi mental retardasyon sebebi değil?",
+    "siklar": [
+     "A) Down",
+     "B) Williams",
+     "C) Prader-Willi",
+     "D) Frajil X",
+     "E) Angelman"
+    ],
+    "ogrenci_cevap": "E (Angelman)",
+    "banka_id": "q-No_ropsikiyatri_gis_kardiyo_-2023-2024-C__km_s_lar__240625_053302__2_-15",
+    "banka_yil": "2023-2024 (Kurul 2)",
+    "banka_dogru": "E) Turner sendromu",
+    "tutarli": false,
+    "not": "Bankadaki aynı soru (aynı sıra: Down, Williams, Prader-Willi, Frajil X, E) 5. şıkkı 'Turner sendromu' ve doğru cevap Turner. Öğrenci kopyasında 5. şık 'Angelman' yazılmış ve işaretlenmiş. Angelman sendromu (15q11-13 maternal UBE3A kaybı) ağır zihinsel yetersizlik yapar; MR nedeni DEĞİLDİR demek tıbben yanlıştır. Muhtemelen öğrencinin hatırlama/aktarım hatası; doğru cevap Turner (zekâ genelde normal). Benzer soru: d3-k2-tbg-001 (Turner)."
+   },
+   "bagli_birim": "tbg-s03-b04",
+   "benzerlik": 0.657
+  },
+  {
+   "id": "tbg-s03-b10",
+   "pdf": "tbg",
+   "sayfa": 3,
+   "bolge": "r2c2+r2c3",
+   "tur": "cikmis_soru",
+   "baslik": "Çıkmış: tekrarlayan basit motor ve vokal tik",
+   "metin": "Tekrarlayan basit motor ve vokal tik? Tourette sendromu",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "pembe",
+     "hedef": "soru-cevap satırı"
+    }
+   ],
+   "sinyal": [
+    "cikmis"
+   ],
+   "y25": {
+    "key": "y25-k2-52-davranis-genetigi",
+    "sayfa": 75
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "cikmis": {
+    "kok": "Tekrarlayan basit motor ve vokal tik?",
+    "siklar": [],
+    "ogrenci_cevap": "Tourette sendromu",
+    "banka_id": "q-No_ropsikiyatri_gis_kardiyo_-2023-2024-C__km_s_lar__240625_053302__2_-16",
+    "banka_yil": "2023-2024 (Kurul 2)",
+    "banka_dogru": "D) Tourette bozukluğu",
+    "tutarli": true,
+    "not": "Öğrenci yalnız 'Soru? – cevap' biçiminde yazmış. Bankadaki kayıt discipline=Psikiyatri olarak etiketli ama aynı 2023-2024 K2 sınav dosyasından (MR ve GJB2 sorularıyla ardışık: -15, -16, -18); slayt Davranış Genetiği'nde. Şıklar: A) Durumsal (geçici) tik bozukluğu B) Süreğen motor tik bozukluğu C) Süreğen ses tiki bozukluğu D) Tourette bozukluğu E) OKB."
+   },
+   "bagli_birim": "tbg-s03-b09",
+   "benzerlik": 0.63
+  }
+ ],
+ "banka": [
+  {
+   "id": "q-No_ropsikiyatri_gis_kardiyo_-2023-2024-C__km_s_lar__240625_053302__2_-15",
+   "ders": "k2-52",
+   "yillar": [
+    "2023"
+   ],
+   "kok": "Aşağıdakilerden hangisi mental retardasyon (zihinsel yetersizlik) nedeni değildir?",
+   "dogru": "Turner sendromu",
+   "kopyalar": [],
+   "birim": "tbg-s03-b04",
+   "benzerlik": 0.536,
+   "kapsandi": false,
+   "notta_yapistirilmis": true
+  },
+  {
+   "id": "q-No_ropsikiyatri_gis_kardiyo_-2023-2024-C__km_s_lar__240625_053302__2_-17",
+   "ders": "k2-52",
+   "yillar": [
+    "2023"
+   ],
+   "kok": "Davranış genetiği çalışmalarında kullanılan yöntemler:\nI. İkiz çalışmaları\nII. Asosiyasyon (ilişki) çalışmaları\nIII. Bağlantı (linkage) analizi\nIV. Mutasyon analizi\nYukarıdakilerden hangileri davranış genetiği çalışmalar",
+   "dogru": "I, II, III ve IV",
+   "kopyalar": [],
+   "birim": "tbg-s03-b02",
+   "benzerlik": 0.641,
+   "kapsandi": true,
+   "notta_yapistirilmis": true
+  }
+ ]
+}

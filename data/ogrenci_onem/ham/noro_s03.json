@@ -1,0 +1,266 @@
+{
+ "pdf": "noro",
+ "sayfa": 3,
+ "sayfa_ozeti": "Epilepsi (k2-24): ILAE 2017 nöbet sınıflaması şeması (fokal / jeneralize / başlangıcı bilinmeyen) üzerine yoğun el yazısı; frontal ve temporal lob kökenli fokal nöbetlerin özellikleri, jeneralize motor alt tiplerin ve absans tiplerinin tanımları. Pembe çıkmış soru yok. Sayfa düşük çözünürlüklü (genel 1000×750), el yazısı büyütülerek okundu.",
+ "bloklar": [
+  {
+   "id": "noro-s03-b01",
+   "bolge": "r1c1",
+   "tur": "el_yazisi",
+   "baslik": "Fokal başlangıçlı nöbet tanımı",
+   "ders": "k2-24",
+   "y25": {
+    "key": "y25-k2-24-epilepsi",
+    "sayfa": 11
+   },
+   "basili_metin": "",
+   "isaretler": [],
+   "el_yazisi": [
+    {
+     "metin": "tek hemisferde. 3 aşamada değerlendirilir.",
+     "hedef": "Fokal başlangıçlı nöbetler (tek bir hemisferde kaynaklanır, üç aşamada değerlendirilir)",
+     "guven": "yuksek",
+     "alternatif": "sayfanın üst kenarı kesik; cümlenin başı ('Fokal başlangıçlı nöbetler') önceki sayfada/kesik olabilir"
+    }
+   ],
+   "onem": [
+    "el_onemli"
+   ],
+   "duzeltme": []
+  },
+  {
+   "id": "noro-s03-b02",
+   "bolge": "r1c1",
+   "tur": "el_yazisi",
+   "baslik": "Frontal lob kökenli fokal nöbet özellikleri",
+   "ders": "k2-24",
+   "y25": {
+    "key": "y25-k2-24-epilepsi",
+    "sayfa": 15
+   },
+   "basili_metin": "",
+   "isaretler": [
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "frontal kökenli (başlık)"
+    }
+   ],
+   "el_yazisi": [
+    {
+     "metin": "frontal kökenli: Figür 4 pozisyonu; farkındalık korunmuşken baş dönmesi; bir kol ekstansörde diğeri fleksör; kompleks hareketli otomatizma; sıklıkla uykuda",
+     "hedef": "Frontal Lob Kökenli Fokal Epilepsi Nöbetleri (s15 maddeleri 1, 3, 4, 5, 9)",
+     "guven": "yuksek",
+     "alternatif": "'baş dönmesi' = başın bir yana zorlu dönmesi (versiyon), vertigo değil"
+    }
+   ],
+   "onem": [
+    "el_onemli"
+   ],
+   "duzeltme": [
+    {
+     "ham": "farkındalık korunmuşken baş dönmesi",
+     "dogru": "farkındalık korunmuşken tonik baş dönmesi (başın kontralaterale zorlu dönüşü; vertigo anlamında değil)",
+     "gerekce": "Slayt s15: 'farkındalık korunmuşken tonik baş dönmesi frontal lob nöbeti için tipik'."
+    }
+   ]
+  },
+  {
+   "id": "noro-s03-b03",
+   "bolge": "r1c1",
+   "tur": "el_yazisi",
+   "baslik": "Temporal lob kökenli fokal nöbet özellikleri",
+   "ders": "k2-24",
+   "y25": {
+    "key": "y25-k2-24-epilepsi",
+    "sayfa": 16
+   },
+   "basili_metin": "",
+   "isaretler": [
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "temporal kökenli (başlık)"
+    }
+   ],
+   "el_yazisi": [
+    {
+     "metin": "temporal kökenli: özgeçmişte febril nöbet, + aile öyküsü; otonom duysal fenomenler (koku illüzyonu)",
+     "hedef": "Temporal Lob Kökenli Fokal Epilepsi Nöbetleri (s16 öykü; s17 madde 1 koku ve işitsel illüzyon)",
+     "guven": "yuksek",
+     "alternatif": "'otonom, duysal fenomenler' (virgülsüz yazılmış)"
+    }
+   ],
+   "onem": [
+    "el_onemli"
+   ],
+   "duzeltme": []
+  },
+  {
+   "id": "noro-s03-b04",
+   "bolge": "r1c1+r2c1",
+   "tur": "slayt",
+   "baslik": "ILAE 2017 nöbet sınıflaması – Fokal başlangıç",
+   "ders": "k2-24",
+   "y25": {
+    "key": "y25-k2-24-epilepsi",
+    "sayfa": 10
+   },
+   "basili_metin": "Fokal Başlangıç\nFarkındalık korunmuş / Farkındalık bozulmuş\nMotor semptom: Otomatizmalar, Atonik, Klonik, Epileptik spazmlar, Hiperkinetik, Miyoklonik, Tonik\nNonmotor semptom: Otonom, Duraklama, Kognitif, Emosyonel, Duysal\nFokal başlayan bilateral tonik-klonik nöbet",
+   "isaretler": [
+    {
+     "tur": "daire",
+     "hedef": "① farkındalık (Farkındalık korunmuş/bozulmuş yanında)"
+    },
+    {
+     "tur": "daire",
+     "hedef": "② → Motor semptom"
+    },
+    {
+     "tur": "daire",
+     "hedef": "③ → Nonmotor semptom"
+    }
+   ],
+   "el_yazisi": [
+    {
+     "metin": "① farkındalık",
+     "hedef": "Farkındalık korunmuş / Farkındalık bozulmuş",
+     "guven": "yuksek",
+     "alternatif": ""
+    }
+   ],
+   "onem": [
+    "el_onemli"
+   ],
+   "duzeltme": [
+    {
+     "ham": "③ Nonmotor semptom (ayrı aşama gibi numaralanmış)",
+     "dogru": "Slayta göre motor ve nonmotor semptomlar birlikte ikinci aşamadır",
+     "gerekce": "Slayt s12: 'ikinci aşama ... iki ana grupta değerlendirilir: motor semptomlar ve motor olmayan (nonmotor) semptomlar'. Öğrencinin ①②③ numaralaması bununla tam örtüşmüyor; üçüncü aşama slayt metninde açıkça adlandırılmamış (şemada 'fokal başlayan bilateral tonik-klonik' kutusu)."
+    }
+   ]
+  },
+  {
+   "id": "noro-s03-b05",
+   "bolge": "r1c2+r2c2",
+   "tur": "slayt",
+   "baslik": "ILAE 2017 – Jeneralize başlangıç: motor ve nonmotor (absans)",
+   "ders": "k2-24",
+   "y25": {
+    "key": "y25-k2-24-epilepsi",
+    "sayfa": 10
+   },
+   "basili_metin": "Jeneralize Başlangıç\nMotor semptom: Tonik-klonik, Klonik, Tonik, Miyoklonik, Miyoklonik-tonik-klonik, Miyoklonik-atonik, Atonik, Epileptik spazmlar\nNonmotor semptom (Absans): Tipik, Atipik, Miyoklonik, Göz kapağı miyoklonisi",
+   "isaretler": [
+    {
+     "tur": "ok",
+     "hedef": "Jeneralize Başlangıç (el yazısından ok)"
+    },
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "'olmayan' (miyoklonik notunda)"
+    },
+    {
+     "tur": "kutu",
+     "hedef": "Tipik/Atipik parantezle gruplanmış"
+    },
+    {
+     "tur": "unlem",
+     "hedef": "ayrımında EEG !!!"
+    }
+   ],
+   "el_yazisi": [
+    {
+     "metin": "çoğunda farkındalık bozuk. her iki hemisferdeki yaygın ağlardan",
+     "hedef": "Jeneralize Başlangıç (s18)",
+     "guven": "yuksek",
+     "alternatif": ""
+    },
+    {
+     "metin": "Tonik-klonik → devamlı kasılma ve kloni",
+     "hedef": "Tonik-klonik",
+     "guven": "yuksek",
+     "alternatif": ""
+    },
+    {
+     "metin": "Klonik → tüm vücutta ritmik sıçrama",
+     "hedef": "Klonik",
+     "guven": "yuksek",
+     "alternatif": ""
+    },
+    {
+     "metin": "Tonik → devamlı kasılma ve katılık.",
+     "hedef": "Tonik",
+     "guven": "yuksek",
+     "alternatif": ""
+    },
+    {
+     "metin": "Miyoklonik → ritmik olmayan ani sıçrama",
+     "hedef": "Miyoklonik",
+     "guven": "yuksek",
+     "alternatif": ""
+    },
+    {
+     "metin": "Miyoklonik-tonik-klonik: miyoklonik ile başlar, tonik-klonik'e dönüşür.",
+     "hedef": "Miyoklonik-tonik-klonik",
+     "guven": "yuksek",
+     "alternatif": ""
+    },
+    {
+     "metin": "Miyoklonik-atonik → miyoklonik sıçramayı takiben kas tonusunun azalması, düşme atakları (Lennox-Gastaut)",
+     "hedef": "Miyoklonik-atonik",
+     "guven": "yuksek",
+     "alternatif": ""
+    },
+    {
+     "metin": "Atonik → kas tonusu kaybolur.",
+     "hedef": "Atonik",
+     "guven": "yuksek",
+     "alternatif": ""
+    },
+    {
+     "metin": "ayrımında EEG !!!",
+     "hedef": "Tipik ve Atipik absans (parantezle)",
+     "guven": "yuksek",
+     "alternatif": ""
+    },
+    {
+     "metin": "Tipik → ani başlayan ve biten bilinç kaybı.",
+     "hedef": "Tipik absans",
+     "guven": "yuksek",
+     "alternatif": ""
+    },
+    {
+     "metin": "Atipik → tam bilinç kaybı olmayabilir, başlama bitiş net ayrılmaz.",
+     "hedef": "Atipik absans",
+     "guven": "yuksek",
+     "alternatif": ""
+    },
+    {
+     "metin": "Miyoklonik → 10-60 sn. miyoklonik sıçrama eşlikli",
+     "hedef": "Miyoklonik absans",
+     "guven": "orta",
+     "alternatif": "son kelime 'ettili' gibi görünüyor; bağlamla 'eşlikli' (slayt s20: miyoklonik sıçramaların eşlik ettiği)"
+    }
+   ],
+   "onem": [
+    "el_onemli"
+   ],
+   "duzeltme": []
+  },
+  {
+   "id": "noro-s03-b06",
+   "bolge": "r1c3",
+   "tur": "slayt",
+   "baslik": "ILAE 2017 – Başlangıcı belirlenemeyen / sınıflandırılamayan",
+   "ders": "k2-24",
+   "y25": {
+    "key": "y25-k2-24-epilepsi",
+    "sayfa": 10
+   },
+   "basili_metin": "Belirlenemeyen\nMotor semptom: Tonik-klonik, Epileptik spazmlar\nNonmotor semptom (Absans): Duraklama\nSınıflandırılamayan",
+   "isaretler": [],
+   "el_yazisi": [],
+   "onem": [],
+   "duzeltme": []
+  }
+ ]
+}

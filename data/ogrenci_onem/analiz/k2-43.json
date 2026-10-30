@@ -1,0 +1,128 @@
+{
+ "ders": "k2-43",
+ "ozet": "Sınavın çekirdeği genel hastanede yatan hastada en sık psikiyatrik tablonun deliryum olması ve konsültasyon-liyezon ile acil psikiyatri durumları üzerine 'yanlış bul' sorusudur. 2020-21'de iki sürüm halinde gelen soruda yanlış önerme 'ajitasyonda ilk uygulama fiziksel kısıtlamadır'; 2023'te en sık tablo (deliryum) soruldu. Öğrenciler kendi özet satırını ('KLP'de en sık görülen şizofreni değil deliryum') ve konsültasyonun aciliyete göre sınıflamasını vurgulamış; Lipowski türleri ve süreç adımları yalnız sarı.",
+ "temalar": [
+  {
+   "tema": "KLP'de en sık tablo deliryum; deliryumun tanımı",
+   "oncelik": "A",
+   "birimler": [
+    "psk-s18-b02",
+    "psk-s18-b07"
+   ],
+   "kanit": "2023 (q-No_ropsikiyatri_gis_kardiyo_-2023-2024-C__km_s_lar__240625_053302__2_-27): genel hastanede en sık psikiyatrik tablo → deliryum; d3-k2-psi-014: akut başlangıçlı, gün içinde dalgalı, dikkat ve bilinç bozulması → deliryum. Öğrenci özet satırı 'KLP'de en sık görülen şizofreni değil deliryum' + el notu kısaltma açılımı; 2020-21 sorusunun doğru şıklarında 'Deliryum yatan hastaların %15–30'unda görülür' ve 'KLP'de varsanıların en sık nedeni deliryumdur'.",
+   "anlatim": "Deliryumu KLP'nin en sık tablosu olarak öne al: akut başlangıç, gün içinde dalgalanma, dikkat ve bilinç bozulması. Yatan hastalarda %15–30 sıklığı ve varsanıların KLP'de en sık nedeninin deliryum olduğu çıkmış şıklarından ayrıca belirtilmeli; şizofreni ile karıştırılmaması tek cümleyle söylenmeli.",
+   "soru_payi": 35,
+   "soru_tipleri": [
+    "doğrudan: genel hastanede en sık psikiyatrik tablo → deliryum",
+    "vaka: yaşlı, akut, dalgalı, dikkat bozukluğu → deliryum",
+    "yanlış bul şıkkı: varsanıların en sık nedeni"
+   ]
+  },
+  {
+   "tema": "KLP ve acil psikiyatri yanlış önermesi: ajitasyonda ilk adım fiziksel kısıtlama değildir",
+   "oncelik": "A",
+   "birimler": [
+    "psk-s18-b02",
+    "psk-s18-b01"
+   ],
+   "kanit": "2020-21'de iki sürüm (bccf4df0f069 ve 19301ed8f053), ikisinde de cevap 'Ajitasyonda ilk yapılacak uygulama fiziksel kısıtlamadır'; hoca profilinde tekrar eden çekirdek (2×, yanlis_bul). Notta yapıştırılmış, cevap C işaretli (psk-s18-b04). Öteki doğru şıklar: şiddetli ağrı intihar girişimine yol açabilir; ağrının çözülmesi sıklıkla uyku sorununu da çözer.",
+   "anlatim": "Ajitasyon yönetimini sıra olarak ver: önce sözel yatıştırma ve ortam düzenleme, fiziksel kısıtlama son seçenek. Ağrı–intihar girişimi ve ağrı–uyku ilişkisini birer cümleyle ekle; bu bilgiler 2025-26 slayt metninde bulunamadığı için çıkmış dayanaklı olduğu bilinmeli.",
+   "soru_payi": 30,
+   "soru_tipleri": [
+    "yanlış bul: ajitasyonda ilk uygulama fiziksel kısıtlama",
+    "yanlış bul: KLP'de varsanı/deliryum/ağrı önermeleri"
+   ]
+  },
+  {
+   "tema": "Konsültasyonun aciliyete göre sınıflaması: acil, aynı gün, rutin",
+   "oncelik": "A",
+   "birimler": [
+    "psk-s18-b07"
+   ],
+   "kanit": "Slaytta 'acil, aynı günde ve rutin' ile acil konsültasyon örnekleri (deliryum, psikotik ajitasyon, intihar girişimi) ve rutinin amacı (ayırıcı tanı, izlem) sarı; d3-k2-psi-014 bu birime bağlı.",
+   "anlatim": "Üç grubu tablo ile ver; acil gruba giren üç durumu (deliryum, psikotik ajitasyon, intihar girişimi) ve rutin konsültasyonun ayırıcı tanı/izlem amacını ayrı maddelerde vurgula.",
+   "soru_payi": 15,
+   "soru_tipleri": [
+    "olumsuz: hangisi acil konsültasyon gerektirmez",
+    "doğrudan: rutin konsültasyonun amacı"
+   ]
+  },
+  {
+   "tema": "Konsültasyon ve liyezon tanımları",
+   "oncelik": "A",
+   "birimler": [
+    "psk-s18-b01"
+   ],
+   "kanit": "Öğrenci işareti yok; 2020-21 sorusu (19301ed8f053) bu birime eşlenmiş. Profilde konu bilgi türü %100 tanım-kavram.",
+   "anlatim": "Konsültasyonu tek hasta için görüş alma talebi, liyezonu bir klinikle sürekli ve düzenli işbirliği olarak karşılaştır; liyezonun eğitim, acil müdahale ve koruyucu sağlık görevlerini de kapsadığını vurgula.",
+   "soru_payi": 10,
+   "soru_tipleri": [
+    "yanlış bul: liyezon yalnız tanı-tedaviyi kapsar",
+    "tanım → terim: sürekli işbirliği → liyezon"
+   ]
+  },
+  {
+   "tema": "Diğer seçilen yerler: KLP çalışma alanı ve işlevleri, Lipowski'nin beş türü, konsültasyon süreci, hasta değerlendirmesi",
+   "oncelik": "C",
+   "birimler": [
+    "psk-s18-b05",
+    "psk-s18-b06",
+    "psk-s18-b08",
+    "psk-s18-b09"
+   ],
+   "kanit": "Yalnız sarı vurgu; çıkmış yok. Lipowski türlerinin adı ve tanımı, sürecin beş adımı, işlevlerin üç başlığı tümüyle sarı.",
+   "anlatim": "Lipowski türlerini (hasta, kriz, hekim, durum, geniş merkezli) bir tabloyla, ayırt edici sorunla birlikte ver; süreç adımlarını ve üç işlevi numaralı liste olarak geç. Hastaya bilgi verilmemesinin ajitasyon, uyum sorunu ve depresyonu anlamaya ışık tutması bir cümleyle eklenebilir.",
+   "soru_payi": 10,
+   "soru_tipleri": [
+    "eşleştirme: hekimin hastayla iletişim güçlüğü → hekim merkezli",
+    "olumsuz: KLP işlevlerinden olmayan"
+   ]
+  }
+ ],
+ "hoca_kaliplari": [
+  "'… ile ilgili aşağıdaki bilgilerden hangisi yanlıştır?' (konudaki 3 sorunun 2'si)",
+  "doğrudan 'en sık … hangisidir' (deliryum)",
+  "kısa tanım-vaka: 'akut başlangıçlı, gün içinde dalgalı seyreden …'"
+ ],
+ "tuzaklar": [
+  {
+   "tuzak": "Ajitasyonda ilk uygulama fiziksel kısıtlama değildir",
+   "neden": "İki sürümde de yanlış şık budur; fiziksel kısıtlama son seçenektir."
+  },
+  {
+   "tuzak": "KLP'de en sık tablo şizofreni değil deliryumdur",
+   "neden": "Öğrencinin kendi uyarı satırı; çeldiricide psikotik bozukluk verilebilir."
+  },
+  {
+   "tuzak": "Lipowski'de hekim merkezli ile durum merkezli karışır",
+   "neden": "Hekim merkezli: hekimin hastayla iletişim güçlüğü; durum merkezli: hasta ile tedavi ekibi arasındaki çatışma; geniş merkezli: aile de işin içinde."
+  },
+  {
+   "tuzak": "Liyezon yalnız tanı ve tedavi değildir",
+   "neden": "Eğitim, acil müdahale ve koruyucu sağlık görevlerini de kapsar."
+  }
+ ],
+ "sayilar": [
+  "Deliryum yatan hastaların %15–30'unda (2020-21 çıkmış şıkkı)",
+  "Lipowski: 5 konsültasyon türü",
+  "Konsültasyon süreci: 5 adım",
+  "KLP işlevleri: 3 başlık",
+  "Aciliyete göre 3 grup"
+ ],
+ "duzeltmeler": [],
+ "ara_soru_adaylari": [
+  {
+   "birim": "psk-s18-b07",
+   "fikir": "Cerrahi serviste gün içinde dalgalı bilinç bozukluğu olan yaşlı hasta: konsültasyon aciliyeti ve en olası tablo."
+  },
+  {
+   "birim": "psk-s18-b06",
+   "fikir": "Hemşirelerle sürekli çatışan hasta için istenen konsültasyon türü (durum merkezli) ve komşu türler."
+  },
+  {
+   "birim": "psk-s18-b01",
+   "fikir": "Liyezon ile konsültasyon farkı: sürekli işbirliği + eğitim/koruyucu görevler."
+  }
+ ],
+ "kurul2627_notu": "Çıkmış şıklarındaki deliryum sıklığı (%15–30), ajitasyon yönetimi sırası, varsanının en sık nedeni ve ağrı-uyku bilgisi 2025-26 slayt metninde yok; 2026-27 slaytında acil psikiyatri ya da ajitasyon bölümü eklenmiş mi bakılmalı. Yoksa bu bilgiler yalnız çıkmış dayanağıyla, kısa tutulmalı."
+}

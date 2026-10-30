@@ -1,0 +1,1741 @@
+{
+ "ders": "k2-19",
+ "kod": "2s03",
+ "brans": "Psikiyatri",
+ "konu": "Bipolar Bozukluk",
+ "kaynak": "Geçmiş yıl (2025-26) öğrenci derleme notu: psk3.2",
+ "y25": {
+  "key": "y25-k2-19-bipolar-bozukluk",
+  "sayfalar": [
+   8,
+   13,
+   16,
+   18,
+   19,
+   20,
+   25,
+   29,
+   30,
+   31,
+   32,
+   33,
+   34,
+   35,
+   36,
+   37,
+   38,
+   40,
+   41,
+   42
+  ]
+ },
+ "sayac": {
+  "birim": 22,
+  "A": 8,
+  "B": 4,
+  "C": 10,
+  "ogrenci_sorusu": 9,
+  "banka": 11,
+  "banka_kapsandi": 8
+ },
+ "birimler": [
+  {
+   "id": "psk-s01-b01",
+   "pdf": "psk",
+   "sayfa": 1,
+   "bolge": "r1c1",
+   "tur": "slayt",
+   "baslik": "Bipolar Bozukluğun Alt Tipleri",
+   "metin": "Bipolar Duygudurum Bozukluğu (öğrencinin başlığı)\nBipolar Bozukluğun Alt Tipleri\nBipolar I bozukluk\nBipolar II bozukluk\nSiklotimi\n-Bipolar I ve II bozuklukları için tanı kriterlerini karşılamak için sayısı ve şiddetinde yetersiz hipomanik ve depresif belirtilerin olması\nMaddenin/İlacın Yol Açtığı Bipolar ve İlişkili Bozukluk\nBipolar başka türlü sınıflandırılamayan\n-Spesifik kriterleri karşılamaz.",
+   "el_yazisi": [
+    {
+     "metin": "= mani var. (bipolar II iken mani atakları görülürse buna bipolar I denir) depresyon atağına gerek YOK! Sadece 1 mani olması bipolar-I tanısı koydurur.",
+     "hedef": "Bipolar I bozukluk",
+     "guven": "yuksek"
+    },
+    {
+     "metin": "= mani YOK. depresif atak, hipomanik atak var. (majör depresyon en az 2 hafta; hipomani en az 4 gün (tanı için)) *",
+     "hedef": "Bipolar II bozukluk",
+     "guven": "yuksek"
+    },
+    {
+     "metin": "= en az 2 yıl sürmeli, en fazla 2 ay iyi kalınabilmiş olmalı. kadın = erkek",
+     "hedef": "Siklotimi",
+     "guven": "yuksek"
+    },
+    {
+     "metin": "= Antidepresan/diğer tedaviyle ortaya çıkan ve ilacın fizyolojik etkisi süresince kalan duygudurum yükselmesi bipolar I/II sayılmaz (madde/ilaç kaynaklı bozukluk); ancak ilacın etkisinin ötesinde tam sendrom düzeyinde süren manik epizod DSM-5'te bipolar I tanısı için yeterlidir.",
+     "hedef": "Maddenin/İlacın Yol Açtığı Bipolar ve İlişkili Bozukluk",
+     "guven": "yuksek"
+    }
+   ],
+   "isaretler": [
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "sayısı ve şiddetinde yetersiz hipomanik ve depresif belirtilerin olması"
+    },
+    {
+     "tur": "yildiz",
+     "hedef": "Bipolar II: hipomanik atak en az 4 gün (tanı için)"
+    },
+    {
+     "tur": "ok",
+     "hedef": "Siklotimi → tanım satırı"
+    },
+    {
+     "tur": "karalama",
+     "hedef": "'için' kelimesi siyah karalamayla örtülmüş (slayt: 'Bipolar I ve II bozuklukları için tanı kriterlerini')"
+    }
+   ],
+   "sinyal": [
+    "cikmis",
+    "el_onemli",
+    "kirmizi_cizgi",
+    "yildiz"
+   ],
+   "y25": {
+    "key": "y25-k2-19-bipolar-bozukluk",
+    "sayfa": 8
+   },
+   "y26": null,
+   "duzeltme": [
+    {
+     "ham": "antidepresan ya da diğer tedavi sonrası oluşan duygudurum değişiklikleri sayılmaz!",
+     "dogru": "Antidepresan/diğer tedaviyle ortaya çıkan ve ilacın fizyolojik etkisi süresince kalan duygudurum yükselmesi bipolar I/II sayılmaz (madde/ilaç kaynaklı bozukluk); ancak ilacın etkisinin ötesinde tam sendrom düzeyinde süren manik epizod DSM-5'te bipolar I tanısı için yeterlidir.",
+     "gerekce": "Nüans (tıbbi hata değil): slayt yalnız kategoriyi adlandırır; el notu kesin genelleme yapıyor, DSM-5 istisnası ekleniyor."
+    }
+   ],
+   "not_": null,
+   "ogrenci_sorulari": [
+    "psk-s01-b19",
+    "psk-s01-b25"
+   ],
+   "banka_cikmis": [
+    "5745fea7afd3",
+    "q-KURUL_2_C_IKMIS__3-55",
+    "d3-k2-psi-013",
+    "past-q-3_Kurul_C__km_s__Birles_tr_-54"
+   ],
+   "puan": 100,
+   "oncelik": "A",
+   "vurgulu": [
+    "Bipolar II: hipomanik atak en az 4 gün (tanı için)",
+    "sayısı ve şiddetinde yetersiz hipomanik ve depresif belirtilerin olması"
+   ]
+  },
+  {
+   "id": "psk-s01-b02",
+   "pdf": "psk",
+   "sayfa": 1,
+   "bolge": "r1c1",
+   "tur": "slayt",
+   "baslik": "Bipolar bozukluğun yaygınlığı",
+   "metin": "Bipolar bozukluğun yaygınlığı: 1-5%\nbipolar I bozukluk: 0.4-1.6%\nbipolar II bozukluk: ~0.5%\nHastaların depressif atakları manik/hipomanik ataklardan daha fazladır.\nHastalık başlangıcı 15 - 24 yaş arasındadır fakat doğru tanı alma 5 - 10 yıl sürer.",
+   "el_yazisi": [
+    {
+     "metin": "görülme sıklığı kadın = erkek",
+     "hedef": "Bipolar bozukluğun yaygınlığı (slayt: kadın ve erkekte aynı sıklıkta)",
+     "guven": "yuksek"
+    },
+    {
+     "metin": "→ ort 21",
+     "hedef": "Hastalık başlangıcı 15 - 24 yaş",
+     "guven": "yuksek"
+    }
+   ],
+   "isaretler": [
+    {
+     "tur": "yesil",
+     "hedef": "Hastaların depressif atakları manik/hipomanik ataklardan daha fazladır."
+    },
+    {
+     "tur": "daire",
+     "hedef": "Hastaların depressif atakları manik/hipomanik ataklardan daha fazladır."
+    },
+    {
+     "tur": "yesil",
+     "hedef": "Hastalık başlangıcı 15 - 24 yaş arasındadır fakat doğru tanı alma 5 - 10 yıl sürer"
+    },
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "Hastalık başlangıcı 15 - 24 yaş arasındadır"
+    },
+    {
+     "tur": "pembe",
+     "hedef": "görülme sıklığı kadın = erkek"
+    }
+   ],
+   "sinyal": [
+    "cikmis",
+    "el_onemli",
+    "kirmizi_cizgi",
+    "yesil"
+   ],
+   "y25": {
+    "key": "y25-k2-19-bipolar-bozukluk",
+    "sayfa": 13
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "ogrenci_sorulari": [
+    "psk-s01-b03"
+   ],
+   "banka_cikmis": [
+    "past-q-I_SKENDERUN_TI_Mu_du_rlu_g_u_ne0__1__230709_230251-74"
+   ],
+   "puan": 93,
+   "oncelik": "A",
+   "vurgulu": [
+    "Hastaların depressif atakları manik/hipomanik ataklardan daha fazladır.",
+    "Hastalık başlangıcı 15 - 24 yaş arasındadır",
+    "Hastalık başlangıcı 15 - 24 yaş arasındadır fakat doğru tanı alma 5 - 10 yıl sürer",
+    "görülme sıklığı kadın = erkek"
+   ]
+  },
+  {
+   "id": "psk-s01-b15",
+   "pdf": "psk",
+   "sayfa": 1,
+   "bolge": "r1c2/r2c2",
+   "tur": "slayt",
+   "baslik": "Tanı Kriterleri - Manik Epizod",
+   "metin": "Tanı Kriterleri-Manik Epizod\nEn az bir hafta süren duygudurum değişikliği (taşkınlık, İrritabilite, yükselme)\nAşağıdakilerde en az üçü (duygudurum irritable ise dördü)\nBüyüklük hissi, benlik saygısında artma\nUyku gereksiniminde azalma\nLogore (çok konuşma, gevezelik)\nFikir uçuşması, düşüncelerin yarışması\nDistraktibilite\nAmaca yönelik etkinlik artışı-psikomotor ajitasyon\nZevk veren etkinliklere aşırı ilgi, katılım, risk alma\nMikst epizodun dışlanması gerekir\nİşlev kaybı ya da hospitalizasyon gereği ve/veya psikotik semptomatoloji vardır\nSemptomatoloji bir madde kullanımına ya da genel tıbbi duruma bağlı değildir.",
+   "el_yazisi": [
+    {
+     "metin": "ÇIKMIŞ",
+     "hedef": "Tanı Kriterleri-Manik Epizod / En az bir hafta süren",
+     "guven": "yuksek"
+    },
+    {
+     "metin": "öfori",
+     "hedef": "taşkınlık, İrritabilite, yükselme",
+     "guven": "yuksek"
+    },
+    {
+     "metin": "→ grandiyözite",
+     "hedef": "Büyüklük hissi, benlik saygısında artma",
+     "guven": "yuksek"
+    },
+    {
+     "metin": "dini aktivitede artış (örn= Allah'tan bana sinyal geliyor diyerek namaz kılmak vb)",
+     "hedef": "Büyüklük hissi / amaca yönelik etkinlik (sağ kenar)",
+     "guven": "yuksek"
+    },
+    {
+     "metin": "basınçlı, hızlı konuşur",
+     "hedef": "Logore (çok konuşma, gevezelik)",
+     "guven": "yuksek"
+    },
+    {
+     "metin": "(spontan dikkat ↑, istemli dikkat azalır)",
+     "hedef": "Distraktibilite",
+     "guven": "yuksek"
+    },
+    {
+     "metin": "→ manik durum varsa manik epizod denir.",
+     "hedef": "Mikst epizodun dışlanması gerekir",
+     "guven": "yuksek"
+    }
+   ],
+   "isaretler": [
+    {
+     "tur": "yildiz",
+     "hedef": "En az bir hafta süren (kırmızı yıldız)"
+    },
+    {
+     "tur": "daire",
+     "hedef": "En az bir hafta süren"
+    },
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "taşkınlık, İrritabilite, yükselme; çok konuşma; psikomotor ajitasyon"
+    },
+    {
+     "tur": "yesil",
+     "hedef": "en az üçü ve tüm alt maddeler; Mikst; İşlev kaybı; Semptomatoloji... satırı"
+    }
+   ],
+   "sinyal": [
+    "cikmis",
+    "el_cikmis",
+    "el_onemli",
+    "yesil",
+    "yildiz"
+   ],
+   "y25": {
+    "key": "y25-k2-19-bipolar-bozukluk",
+    "sayfa": 29
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "ogrenci_sorulari": [
+    "psk-s01-b16"
+   ],
+   "puan": 93,
+   "oncelik": "A",
+   "vurgulu": [
+    "En az bir hafta süren",
+    "En az bir hafta süren (kırmızı yıldız)",
+    "en az üçü ve tüm alt maddeler; Mikst; İşlev kaybı; Semptomatoloji... satırı",
+    "taşkınlık, İrritabilite, yükselme; çok konuşma; psikomotor ajitasyon"
+   ]
+  },
+  {
+   "id": "psk-s01-b09",
+   "pdf": "psk",
+   "sayfa": 1,
+   "bolge": "r1c2",
+   "tur": "slayt",
+   "baslik": "Belirti ve Bulgular (i–v): genel görünüm, konuşma, duygudurum, bilişsel yetiler, algı, düşünce",
+   "metin": "Belirti ve Bulgular\ni. Genel görünüm:\nii. Konuşma:\niii. Duygudurum:\niv. Bilişsel yetiler:\nAlgı bozuklukları\nv. Düşünce\n(yalnız başlıklar; içerik y25 s20–s24'ten el yazısıyla özetlenmiş)",
+   "el_yazisi": [
+    {
+     "metin": "canlı, renkli giyinmiş, coşkulu; özbakım ihmal edilir.",
+     "hedef": "i. Genel görünüm",
+     "guven": "yuksek"
+    },
+    {
+     "metin": "hızlı, aralıksız, basınçlı, yüksek sesle konuşma.",
+     "hedef": "ii. Konuşma",
+     "guven": "yuksek"
+    },
+    {
+     "metin": "coşkunluk, taşkınlık, aşırı güven. Kişinin davranışları engellenirse öfkelenir. Eleştiriye aşırı duyarlı. 2 mizaç arası sık oynamalar.",
+     "hedef": "iii. Duygudurum (s21)",
+     "guven": "yuksek"
+    },
+    {
+     "metin": "bazen uykusuzluğa bağlı delirium görülür (bilinç). Manik delirium dışında yönelim bozukluğu YOK. Bellekte artış. İstemli dikkat ↓, spontan dikkat ↑.",
+     "hedef": "iv. Bilişsel yetiler (s22)",
+     "guven": "yuksek"
+    },
+    {
+     "metin": "kısa süreli işitme-görme halüsinasyonları olabilir ⇒ psikotik mani",
+     "hedef": "Algı bozuklukları (s23)",
+     "guven": "yuksek"
+    },
+    {
+     "metin": "düşünce akışında hızlanma (düşünce süreci); düşünce içerikleri: büyük işlerin peşinde koşma, kendini süper, üstün görme, yeteneklerin abartılması",
+     "hedef": "v. Düşünce (s24)",
+     "guven": "yuksek"
+    }
+   ],
+   "isaretler": [
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "2 mizaç arası sık oynamalar"
+    },
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "yönelim; bellekte"
+    },
+    {
+     "tur": "daire",
+     "hedef": "YOK (yönelim bozukluğu)"
+    }
+   ],
+   "sinyal": [
+    "cikmis",
+    "el_onemli",
+    "kirmizi_cizgi"
+   ],
+   "y25": {
+    "key": "y25-k2-19-bipolar-bozukluk",
+    "sayfa": 20
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "ogrenci_sorulari": [
+    "psk-s01-b06"
+   ],
+   "banka_cikmis": [
+    "36ee291cfbba",
+    "past-1790877035963-337926"
+   ],
+   "puan": 88,
+   "oncelik": "A",
+   "vurgulu": [
+    "2 mizaç arası sık oynamalar",
+    "YOK (yönelim bozukluğu)",
+    "yönelim; bellekte"
+   ]
+  },
+  {
+   "id": "psk-s01-b07",
+   "pdf": "psk",
+   "sayfa": 1,
+   "bolge": "r2c1",
+   "tur": "slayt",
+   "baslik": "Manik ve karma atakların özellikleri",
+   "metin": "Duygudurum: Pure mani — Kabarmış, öforik veya irritable mizaç; Taşkın; Büyüklük; İmpulsif. Disforik / karma mani — Depresyon / anksiyete komorbiditesi; İrritabilite; Şiddet veya düşmanlık\nBilişsel: Fikir uçuşması; Distraktibilite; İçgörü azalması; Dezorganizasyon; Dikkatte bozulma; Kavramada bozulma\nPsikotik: Deluzyon; Hallusinasyon\nFiziksel: Hızlı veya basınçlı konuşma; Artmış enerji; Uyku ihtiyacında azalma; Libidoda artma; Aşırı aktif ve sosyabilitede artış; Dikkatsizlik, bizarre davranış; Uyku ve endokrin bozukluklar",
+   "el_yazisi": [
+    {
+     "metin": "bellek ↑, yönelim bozukluğu yok",
+     "hedef": "Bilişsel",
+     "guven": "yuksek"
+    },
+    {
+     "metin": "spontan ↑, istemli ↓",
+     "hedef": "Distraktibilite",
+     "guven": "yuksek"
+    },
+    {
+     "metin": "sanrılar",
+     "hedef": "Psikotik (Deluzyon)",
+     "guven": "yuksek"
+    }
+   ],
+   "isaretler": [
+    {
+     "tur": "daire",
+     "hedef": "Taşkın, Büyüklük, İmpulsif, Depresyon/anksiyete komorbiditesi, İrritabilite, Şiddet veya düşmanlık (sarı halka)"
+    },
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "Bilişsel sütunundaki tüm maddeler mavi altı çizili"
+    },
+    {
+     "tur": "daire",
+     "hedef": "İçgörü azalması (mavi halka)"
+    },
+    {
+     "tur": "yildiz",
+     "hedef": "İçgörü azalması (mavi yıldız)"
+    },
+    {
+     "tur": "kutu",
+     "hedef": "Fiziksel sütunundaki ilk altı madde mavi kutu içinde"
+    },
+    {
+     "tur": "daire",
+     "hedef": "'sanrılar' Psikotik yanında kırmızı halka"
+    }
+   ],
+   "sinyal": [
+    "cikmis",
+    "el_onemli",
+    "yildiz"
+   ],
+   "y25": {
+    "key": "y25-k2-19-bipolar-bozukluk",
+    "sayfa": 31
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "ogrenci_sorulari": [
+    "psk-s01-b08",
+    "psk-s01-b10"
+   ],
+   "puan": 63,
+   "oncelik": "A",
+   "vurgulu": [
+    "'sanrılar' Psikotik yanında kırmızı halka",
+    "Bilişsel sütunundaki tüm maddeler mavi altı çizili",
+    "Fiziksel sütunundaki ilk altı madde mavi kutu içinde",
+    "Taşkın, Büyüklük, İmpulsif, Depresyon/anksiyete komorbiditesi, İrritabilite, Şiddet veya düşmanlık (sarı halka)",
+    "İçgörü azalması (mavi halka)",
+    "İçgörü azalması (mavi yıldız)"
+   ]
+  },
+  {
+   "id": "psk-s01-b29",
+   "pdf": "psk",
+   "sayfa": 1,
+   "bolge": "r2c3",
+   "tur": "slayt",
+   "baslik": "Tedavi (farmakoterapi)",
+   "metin": "Tedavi\nDuygudurum düzenleyiciler (Lityum, Valproat/valproik asit, Karbamazepin)\nAntipsikotik ilaçlar\nAntidepresan ilaçlar (çökkün dönemde)\nBenzodiazepinler",
+   "el_yazisi": [
+    {
+     "metin": "= stres engellenmeye çalışılır.",
+     "hedef": "Tedavi",
+     "guven": "yuksek"
+    },
+    {
+     "metin": "= hastayı yatıştırmak için.",
+     "hedef": "Benzodiazepinler",
+     "guven": "yuksek"
+    },
+    {
+     "metin": "*mani dönemde antidepresan kullanılmaz*",
+     "hedef": "Antidepresan ilaçlar (çökkün dönemde)",
+     "guven": "yuksek"
+    }
+   ],
+   "isaretler": [
+    {
+     "tur": "yesil",
+     "hedef": "Lityum, Valproat/valproik asit, Karbamazepin; Antipsikotik ilaçlar; Antidepresan ilaçlar; Benzodiazepinler"
+    },
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "Valproat/valproik asit"
+    },
+    {
+     "tur": "yildiz",
+     "hedef": "dört ilaç grubunu kapsayan kırmızı süslü parantez + yıldız"
+    }
+   ],
+   "sinyal": [
+    "el_onemli",
+    "yesil",
+    "yildiz"
+   ],
+   "y25": {
+    "key": "y25-k2-19-bipolar-bozukluk",
+    "sayfa": 41
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "banka_cikmis": [
+    "past-q-I_SKENDERUN_TI_Mu_du_rlu_g_u_ne0__1__230709_230251-87"
+   ],
+   "puan": 63,
+   "oncelik": "A",
+   "vurgulu": [
+    "Lityum, Valproat/valproik asit, Karbamazepin; Antipsikotik ilaçlar; Antidepresan ilaçlar; Benzodiazepinler",
+    "Valproat/valproik asit",
+    "dört ilaç grubunu kapsayan kırmızı süslü parantez + yıldız"
+   ]
+  },
+  {
+   "id": "psk-s01-b20",
+   "pdf": "psk",
+   "sayfa": 1,
+   "bolge": "r1c3",
+   "tur": "slayt",
+   "baslik": "Bipolar bozukluğunda tanısal değişiklikler",
+   "metin": "Bipolar bozukluğunda tanısal değişiklikler\n- 3 hastanın biri yanlış tanı alır.\nHasta tanıyı inkar eder.",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "yesil",
+     "hedef": "3 hastanın biri yanlış tanı alır.; Hasta tanıyı inkar eder"
+    }
+   ],
+   "sinyal": [
+    "cikmis",
+    "yesil"
+   ],
+   "y25": {
+    "key": "y25-k2-19-bipolar-bozukluk",
+    "sayfa": 33
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "ogrenci_sorulari": [
+    "psk-s01-b12"
+   ],
+   "puan": 50,
+   "oncelik": "A",
+   "vurgulu": [
+    "3 hastanın biri yanlış tanı alır.; Hasta tanıyı inkar eder"
+   ]
+  },
+  {
+   "id": "psk-s01-b31",
+   "pdf": "psk",
+   "sayfa": 1,
+   "bolge": "r2c3",
+   "tur": "slayt",
+   "baslik": "Özet",
+   "metin": "Özet\nBipolar bozukluk yaşam boyu süren, kronik ve yıkıcı (devastating)\nTekrarlayan mani ve depresyon atakları\nDoğru tanı genellikle gecikir; tanı zorluklar içerir (symptom örtüşmesi, Hastalığın inkarı, komorbidite)\nTedavide esas amaç duygudurum stabilizasyonu; Başarılı bir tedavi her iki ucuda içermelidir.",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "yesil",
+     "hedef": "Bipolar bozukluk yaşam boyu süren, kronik ve yıkıcı; Tedavide esas amaç duygudurum stabilizasyonu; Başarılı bir tedavi her iki ucu da içermelidir"
+    }
+   ],
+   "sinyal": [
+    "cikmis",
+    "yesil"
+   ],
+   "y25": {
+    "key": "y25-k2-19-bipolar-bozukluk",
+    "sayfa": 42
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "ogrenci_sorulari": [
+    "psk-s01-b14"
+   ],
+   "puan": 50,
+   "oncelik": "A",
+   "vurgulu": [
+    "Bipolar bozukluk yaşam boyu süren, kronik ve yıkıcı; Tedavide esas amaç duygudurum stabilizasyonu; Başarılı bir tedavi her iki ucu da içermelidir"
+   ]
+  },
+  {
+   "id": "psk-s01-b21",
+   "pdf": "psk",
+   "sayfa": 1,
+   "bolge": "r1c3",
+   "tur": "slayt",
+   "baslik": "Ayırıcı Tanı",
+   "metin": "Ayırıcı Tanı\nMadde kötüye kullanımı: Başta kokain ve amfetamin\nŞizofreni: Klinik görünüm açısından maniyi, akut paranoid şizofreniden ayırmak zordur. Gözlem ve klinik izleme ile ayrım yapılabilir.\nŞizoaffektif bozukluk\nKısa psikotik atak\nPsödo-psikoz\nAntisosyal kişilik\nKatatonik eksitasyon\nNöro-psikiyatrik hastalıklar\nDiğer organik hastalıklar",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "yildiz",
+     "hedef": "Ayırıcı Tanı başlığı (kırmızı daire içinde yıldız)"
+    },
+    {
+     "tur": "daire",
+     "hedef": "Ayırıcı Tanı yıldızı"
+    },
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "tüm madde başlıkları"
+    },
+    {
+     "tur": "yesil",
+     "hedef": "tüm maddeler"
+    }
+   ],
+   "sinyal": [
+    "kirmizi_cizgi",
+    "yesil",
+    "yildiz"
+   ],
+   "y25": {
+    "key": "y25-k2-19-bipolar-bozukluk",
+    "sayfa": 34
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "puan": 30,
+   "oncelik": "B",
+   "vurgulu": [
+    "Ayırıcı Tanı başlığı (kırmızı daire içinde yıldız)",
+    "Ayırıcı Tanı yıldızı",
+    "tüm madde başlıkları",
+    "tüm maddeler"
+   ]
+  },
+  {
+   "id": "psk-s01-b27",
+   "pdf": "psk",
+   "sayfa": 1,
+   "bolge": "r1c3/r2c3",
+   "tur": "slayt",
+   "baslik": "Uzun Süreli İzlem ve Prognoz",
+   "metin": "Uzun Süreli İzlem ve Prognoz\nMizaç bozukluklarında epizodlar atlatıldıktan sonra genellikle hastalık öncesi işlevsellik düzeyine dönülür. Ancak olguların % 20-35'inde kronik bir gidiş izlenir.",
+   "el_yazisi": [
+    {
+     "metin": "→ atak sonrası iyileşildiğinde bile dikkatte azalma, eskisi gibi iyi akıl yürütememe görülür.",
+     "hedef": "hastalık öncesi işlevsellik düzeyine dönülür",
+     "guven": "yuksek"
+    }
+   ],
+   "isaretler": [
+    {
+     "tur": "yesil",
+     "hedef": "tüm paragraf"
+    },
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "epizodlar atlatıldıktan sonra genellikle hastalık öncesi işlevsellik düzeyine dönülür"
+    }
+   ],
+   "sinyal": [
+    "el_onemli",
+    "kirmizi_cizgi",
+    "yesil"
+   ],
+   "y25": {
+    "key": "y25-k2-19-bipolar-bozukluk",
+    "sayfa": 37
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "puan": 23,
+   "oncelik": "B",
+   "vurgulu": [
+    "epizodlar atlatıldıktan sonra genellikle hastalık öncesi işlevsellik düzeyine dönülür",
+    "tüm paragraf"
+   ]
+  },
+  {
+   "id": "psk-s01-b11",
+   "pdf": "psk",
+   "sayfa": 1,
+   "bolge": "r1c2",
+   "tur": "slayt",
+   "baslik": "Belirti ve Bulgular vi. Davranış / vii. Fizyolojik özellikler",
+   "metin": "vi. Davranış\nDavranışlarına akılcı açıklamalar bulup, rasyonalize ederler.\nSosyabiliteleri artmıştır\nAtağın başlaması ile kendilerini yeniden doğmuş ve enerji yüklenmiş gibi hissederler. Bu aşamada\nHiperseksüalite, sedüktivite (ayartma, baştan çıkarma) ve rastgele cinsel ilişkiler manik (s26)\nAşırı para harcama, kötü yatırımlar yapma, uygunsuz toplumsal davranışlarda bulunma, çok (s26)\nvii. Fizyolojik Özellikler: (s28)",
+   "el_yazisi": [
+    {
+     "metin": "→ borçlanma fazla olabilir",
+     "hedef": "Aşırı para harcama (s27)",
+     "guven": "yuksek"
+    },
+    {
+     "metin": "çok enerjik, yorgunluk ve ağrıya direnç, artmış/azalmış iştah, artmış libido, az uyku.",
+     "hedef": "vii. Fizyolojik Özellikler (s28)",
+     "guven": "yuksek"
+    }
+   ],
+   "isaretler": [
+    {
+     "tur": "yesil",
+     "hedef": "Davranışlarına akılcı açıklamalar bulup, rasyonalize ederler."
+    },
+    {
+     "tur": "daire",
+     "hedef": "Sosyabiliteleri artmıştır"
+    },
+    {
+     "tur": "yesil",
+     "hedef": "Sosyabiliteleri artmıştır; Atağın başlaması ile kendilerini yeniden doğmuş ve enerji yüklenmiş gibi hissederler"
+    },
+    {
+     "tur": "daire",
+     "hedef": "Hiperseksüalite"
+    },
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "sedüktivite; rastgele cinsel ilişkiler"
+    },
+    {
+     "tur": "yesil",
+     "hedef": "Aşırı para harcama, kötü yatırımlar yapma, uygunsuz toplumsal davranışlarda bulunma"
+    }
+   ],
+   "sinyal": [
+    "el_onemli",
+    "yesil"
+   ],
+   "y25": {
+    "key": "y25-k2-19-bipolar-bozukluk",
+    "sayfa": 25
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "puan": 18,
+   "oncelik": "B",
+   "vurgulu": [
+    "Aşırı para harcama, kötü yatırımlar yapma, uygunsuz toplumsal davranışlarda bulunma",
+    "Davranışlarına akılcı açıklamalar bulup, rasyonalize ederler.",
+    "Hiperseksüalite",
+    "Sosyabiliteleri artmıştır",
+    "Sosyabiliteleri artmıştır; Atağın başlaması ile kendilerini yeniden doğmuş ve enerji yüklenmiş gibi hissederler",
+    "sedüktivite; rastgele cinsel ilişkiler"
+   ]
+  },
+  {
+   "id": "psk-s01-b28",
+   "pdf": "psk",
+   "sayfa": 1,
+   "bolge": "r2c3",
+   "tur": "slayt",
+   "baslik": "İyi Prognoz",
+   "metin": "İyi Prognoz\nMani atağının hafif geçmesi, Depresyon atağının çok uzun olmaması,\nİyilik dönemlerinin uzun sürmesi, Hastalığın unipolar tipten çok bipolar türde olması,\nAtağın çevresel koşullara çok bağlı olmaması,\nOlumlu aile, iş ve uğraşı koşulları,\nAlkol ve ilaç alışkanlıklarının bulunmaması,\nYaşın çok ilerlememiş olmasıdır.",
+   "el_yazisi": [
+    {
+     "metin": "→ stres etkiler",
+     "hedef": "Atağın çevresel koşullara çok bağlı olmaması",
+     "guven": "yuksek"
+    }
+   ],
+   "isaretler": [
+    {
+     "tur": "yesil",
+     "hedef": "Mani atağının hafif geçmesi; Depresyon atağının çok uzun olmaması; İyilik dönemlerinin uzun sürmesi; Atağın çevresel koşullara çok bağlı olmaması; Alkol ve ilaç alışkanlıklarının bulunmaması; Yaşın çok ilerlememiş olması"
+    }
+   ],
+   "sinyal": [
+    "el_onemli",
+    "yesil"
+   ],
+   "y25": {
+    "key": "y25-k2-19-bipolar-bozukluk",
+    "sayfa": 38
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "puan": 18,
+   "oncelik": "B",
+   "vurgulu": [
+    "Mani atağının hafif geçmesi; Depresyon atağının çok uzun olmaması; İyilik dönemlerinin uzun sürmesi; Atağın çevresel koşullara çok bağlı olmaması; Alkol ve ilaç alışkanlıklarının bulunmaması; Yaşın çok ilerlememiş olması"
+   ]
+  },
+  {
+   "id": "psk-s01-b17",
+   "pdf": "psk",
+   "sayfa": 1,
+   "bolge": "r2c2",
+   "tur": "slayt",
+   "baslik": "Tanı Kriterleri - Major Depresif Epizod",
+   "metin": "Tanı Kriterleri-Major Depresif Epizod\nAşağıdakilerden en az 5'inin en az 15 gün süre ile bulunması\n-Depressif mizaç\n-İştah azalması ya da artması\n-Uyku azalması ya da artması\n-Psikomotor yavaşlama ya da ajitasyon\n-Enerji azalması, yorgunluk\n-Suçluluk, değersizlik hissi\n-Konsantrasyon güçlüğü\n-İntihar eğilimi\n* İşlev kaybı vardır.\n* Yas durumunun dışlanması gerekir. (Yas, kaybı takiben 2 aydan kısa sürer.)",
+   "el_yazisi": [
+    {
+     "metin": "= çökkünlük, mutsuzluk.",
+     "hedef": "Depressif mizaç",
+     "guven": "yuksek"
+    }
+   ],
+   "isaretler": [
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "en az 5'inin; en az 15 gün süre"
+    },
+    {
+     "tur": "yesil",
+     "hedef": "Aşağıdakilerden en az 5'inin en az 15 gün süre ile; İştah; Uyku; Psikomotor; İşlev kaybı vardır; Yas durumunun dışlanması gerekir (Yas, kaybı takiben 2 aydan kısa sürer)"
+    }
+   ],
+   "sinyal": [
+    "kirmizi_cizgi",
+    "yesil"
+   ],
+   "y25": {
+    "key": "y25-k2-19-bipolar-bozukluk",
+    "sayfa": 30
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "puan": 15,
+   "oncelik": "C",
+   "vurgulu": [
+    "Aşağıdakilerden en az 5'inin en az 15 gün süre ile; İştah; Uyku; Psikomotor; İşlev kaybı vardır; Yas durumunun dışlanması gerekir (Yas, kaybı takiben 2 aydan kısa sürer)",
+    "en az 5'inin; en az 15 gün süre"
+   ]
+  },
+  {
+   "id": "psk-s01-b22",
+   "pdf": "psk",
+   "sayfa": 1,
+   "bolge": "r1c3",
+   "tur": "slayt",
+   "baslik": "Klinik Gidiş ve Sonlanma",
+   "metin": "Klinik Gidiş ve Sonlanma\nTek bir manik atağı olan kişilerin % 90'dan fazlasının daha sonra da epizodları olur.\nOrta yaşta birkaç kez depresyon atağından sonra tipik bir bipolar bozukluğun gelişmesi sıktır.",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "yesil",
+     "hedef": "Tek bir manik atağı olan kişilerin %90'dan fazlasının daha sonra da epizodları olur"
+    },
+    {
+     "tur": "yesil",
+     "hedef": "Orta yaşta birkaç kez depresyon atağından sonra tipik bir bipolar bozukluğun gelişmesi sıktır"
+    },
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "Orta yaşta birkaç kez depresyon atağından sonra tipik bir bipolar bozukluğun gelişmesi"
+    }
+   ],
+   "sinyal": [
+    "kirmizi_cizgi",
+    "yesil"
+   ],
+   "y25": {
+    "key": "y25-k2-19-bipolar-bozukluk",
+    "sayfa": 35
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "puan": 15,
+   "oncelik": "C",
+   "vurgulu": [
+    "Orta yaşta birkaç kez depresyon atağından sonra tipik bir bipolar bozukluğun gelişmesi",
+    "Orta yaşta birkaç kez depresyon atağından sonra tipik bir bipolar bozukluğun gelişmesi sıktır",
+    "Tek bir manik atağı olan kişilerin %90'dan fazlasının daha sonra da epizodları olur"
+   ]
+  },
+  {
+   "id": "psk-s01-b26",
+   "pdf": "psk",
+   "sayfa": 1,
+   "bolge": "r1c3",
+   "tur": "slayt",
+   "baslik": "Tekrarlama için kritik dönem",
+   "metin": "Bir epizodun tüm belirtilerinin tedavi ile ortadan kalktıktan sonraki ilk 3 ay, tekrarlama için en kritik dönemdir.",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "yesil",
+     "hedef": "ortadan kalktıktan sonraki ilk 3 ay, tekrarlama için en kritik"
+    },
+    {
+     "tur": "daire",
+     "hedef": "ilk 3 ay"
+    },
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "tekrarlama için en kritik"
+    }
+   ],
+   "sinyal": [
+    "kirmizi_cizgi",
+    "yesil"
+   ],
+   "y25": {
+    "key": "y25-k2-19-bipolar-bozukluk",
+    "sayfa": 36
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "puan": 15,
+   "oncelik": "C",
+   "vurgulu": [
+    "ilk 3 ay",
+    "ortadan kalktıktan sonraki ilk 3 ay, tekrarlama için en kritik",
+    "tekrarlama için en kritik"
+   ]
+  },
+  {
+   "id": "psk-s01-b13",
+   "pdf": "psk",
+   "sayfa": 1,
+   "bolge": "r1c2",
+   "tur": "slayt",
+   "baslik": "Klinik Özellikler: A) Prodrom belirtileri",
+   "metin": "Klinik Özellikler\nA) Prodrom belirtileri:\nProdrom döneminde bütün hastalarda aktivite artışı, yükselmiş mizaç ve uyku ihtiyacında azalma gözlenmektedir.",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "yesil",
+     "hedef": "hastalarda aktivite artışı, yükselmiş mizaç ve uyku ihtiyacında azalma"
+    },
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "Prodrom belirtileri; ihtiyacında azalma"
+    }
+   ],
+   "sinyal": [
+    "yesil"
+   ],
+   "y25": {
+    "key": "y25-k2-19-bipolar-bozukluk",
+    "sayfa": 19
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "puan": 10,
+   "oncelik": "C",
+   "vurgulu": [
+    "Prodrom belirtileri; ihtiyacında azalma",
+    "hastalarda aktivite artışı, yükselmiş mizaç ve uyku ihtiyacında azalma"
+   ]
+  },
+  {
+   "id": "psk-s01-b04",
+   "pdf": "psk",
+   "sayfa": 1,
+   "bolge": "r1c1/r2c1",
+   "tur": "slayt",
+   "baslik": "Biyolojik etkenler (beyin disfonksiyonları, membran teorisi, mani tablosuna neden olan organik etkenler)",
+   "metin": "Biyolojik etkenler\nBeyin Disfonksiyonları:\nMembran Teorisi:\nMani Tablosuna Neden Olabilen Organik Etkenler:\n(yalnız başlıklar yapıştırılmış; içerik el yazısıyla özetlenmiş. Genetik/biyokimyasal etkenler y25 s14)",
+   "el_yazisi": [
+    {
+     "metin": "→ genetik → biyokimyasal = maninin sebebi artmış monoaminler olabilir.",
+     "hedef": "Biyolojik etkenler (s14: monoamin hipotezi, NA/DA/histamin fazlalığı)",
+     "guven": "yuksek"
+    },
+    {
+     "metin": "hücre içine Li taşıyan mekanizmada bozukluk",
+     "hedef": "Membran Teorisi",
+     "guven": "yuksek",
+     "alternatif": "'Li' daire içinde (lityum)"
+    },
+    {
+     "metin": "hipertiroidizm, Cushing, frontal lob sendromu, beyin tümörleri, steroidler...",
+     "hedef": "Mani Tablosuna Neden Olabilen Organik Etkenler",
+     "guven": "yuksek"
+    }
+   ],
+   "isaretler": [
+    {
+     "tur": "ok",
+     "hedef": "Biyolojik etkenler → genetik, biyokimyasal"
+    }
+   ],
+   "sinyal": [
+    "el_onemli"
+   ],
+   "y25": {
+    "key": "y25-k2-19-bipolar-bozukluk",
+    "sayfa": 16
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "puan": 8,
+   "oncelik": "C",
+   "vurgulu": []
+  },
+  {
+   "id": "psk-s01-b05",
+   "pdf": "psk",
+   "sayfa": 1,
+   "bolge": "r2c1",
+   "tur": "slayt",
+   "baslik": "Psikososyal etkenler: yaşam olayları, psikoanalitik yaklaşımlar",
+   "metin": "Psikososyal etkenler\nYaşam Olayları:\nPsikoanalitik Yaklaşımlar:\n(başlıklar; yaşam olayları y25 s17, psikoanalitik y25 s18)",
+   "el_yazisi": [
+    {
+     "metin": "çocuğun anne babayla yaptığı özdeşimler",
+     "hedef": "Psikoanalitik Yaklaşımlar",
+     "guven": "yuksek"
+    }
+   ],
+   "isaretler": [
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "Yaşam Olayları / Psikoanalitik Yaklaşımlar başlıkları altı çizili"
+    }
+   ],
+   "sinyal": [
+    "el_onemli"
+   ],
+   "y25": {
+    "key": "y25-k2-19-bipolar-bozukluk",
+    "sayfa": 18
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "puan": 8,
+   "oncelik": "C",
+   "vurgulu": [
+    "Yaşam Olayları / Psikoanalitik Yaklaşımlar başlıkları altı çizili"
+   ]
+  },
+  {
+   "id": "psk-s01-b18",
+   "pdf": "psk",
+   "sayfa": 1,
+   "bolge": "r2c2",
+   "tur": "slayt",
+   "baslik": "İki uçlu duygudurum bozukluğunda duygudurum değişiklikleri (grafik)",
+   "metin": "Mani — Eşikaltı (hipomani) — Mani\nSürdürüm (ötimi)\nEşikaltı depresyon (distimi) — Depresyon",
+   "el_yazisi": [
+    {
+     "metin": "depresyon kriterleri tam karşılanmaz",
+     "hedef": "Eşikaltı (hipomani) başlığı altı",
+     "guven": "orta",
+     "alternatif": "depresyon verileri tam karşılanmaz (yazı çok küçük, düşük çözünürlük)"
+    }
+   ],
+   "isaretler": [],
+   "sinyal": [
+    "el_onemli"
+   ],
+   "y25": {
+    "key": "y25-k2-19-bipolar-bozukluk",
+    "sayfa": 32
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "puan": 8,
+   "oncelik": "C",
+   "vurgulu": []
+  },
+  {
+   "id": "psk-s01-b23",
+   "pdf": "psk",
+   "sayfa": 1,
+   "bolge": "r1c3",
+   "tur": "ogrenci_ozet",
+   "baslik": "Klinik gidiş: tedaviye yanıt süresi (pembe zeminli kırmızı basılı not)",
+   "metin": "→ genellikle tedavi başladıktan sonra 3. 4 haftada düzelir ve işlevselliklerine kavuşurlar.",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "pembe",
+     "hedef": "not zemini"
+    },
+    {
+     "tur": "ok",
+     "hedef": "Klinik Gidiş ve Sonlanma başlığından"
+    }
+   ],
+   "sinyal": [
+    "el_onemli"
+   ],
+   "y25": {
+    "key": "y25-k2-19-bipolar-bozukluk",
+    "sayfa": 35
+   },
+   "y26": null,
+   "duzeltme": [
+    {
+     "ham": "işlevselleklerine",
+     "dogru": "işlevselliklerine",
+     "gerekce": "Yazım; slayt s35 'işlevselliklerine kavuşur'."
+    }
+   ],
+   "not_": null,
+   "puan": 8,
+   "oncelik": "C",
+   "vurgulu": [
+    "not zemini"
+   ]
+  },
+  {
+   "id": "psk-s01-b24",
+   "pdf": "psk",
+   "sayfa": 1,
+   "bolge": "r1c3",
+   "tur": "ogrenci_ozet",
+   "baslik": "60 yaş üstü mani: önce organik neden",
+   "metin": "60+ üzeri hastalar Mani tablosuyla geliyorsa önce organik nedenler, SVH düşün",
+   "el_yazisi": [],
+   "isaretler": [],
+   "sinyal": [
+    "el_onemli"
+   ],
+   "y25": {
+    "key": "y25-k2-19-bipolar-bozukluk",
+    "sayfa": 16
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "puan": 8,
+   "oncelik": "C",
+   "vurgulu": []
+  },
+  {
+   "id": "psk-s01-b30",
+   "pdf": "psk",
+   "sayfa": 1,
+   "bolge": "r2c3",
+   "tur": "slayt",
+   "baslik": "Bipolar bozukluğun tedavisinde amaç",
+   "metin": "Bipolar bozukluğun tedavisinde amaç\nKısa süreli: Akut belirtilerin kontrolü\nUzun süreli: Relapsın önlenmesi; Tedavinin kabulü ve uyumu\nKomorbid durumların tedavisi\nUygun tedavi – mood stabilisazyonu",
+   "el_yazisi": [],
+   "isaretler": [],
+   "sinyal": [],
+   "y25": {
+    "key": "y25-k2-19-bipolar-bozukluk",
+    "sayfa": 40
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "puan": 0,
+   "oncelik": "C",
+   "vurgulu": []
+  }
+ ],
+ "ogrenci_sorulari": [
+  {
+   "id": "psk-s01-b03",
+   "pdf": "psk",
+   "sayfa": 1,
+   "bolge": "r1c1",
+   "tur": "cikmis_soru",
+   "baslik": "Çıkmış 55: bipolar bozukluk için yanlış",
+   "metin": "55. Aşağıdakilerden hangisi bipolar bozukluk için yanlıştır?",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "pembe",
+     "hedef": "soru bloğu"
+    },
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "e şıkkı kırmızı yazılmış (cevap)"
+    }
+   ],
+   "sinyal": [
+    "cikmis"
+   ],
+   "y25": {
+    "key": "y25-k2-19-bipolar-bozukluk",
+    "sayfa": 13
+   },
+   "y26": null,
+   "duzeltme": [
+    {
+     "ham": "Sistotimik",
+     "dogru": "Siklotimik",
+     "gerekce": "Yazım hatası; bankada 'Siklotimik bozukluğu olan hastalarda'."
+    }
+   ],
+   "not_": null,
+   "cikmis": {
+    "kok": "Aşağıdakilerden hangisi bipolar bozukluk için yanlıştır?",
+    "siklar": [
+     "a. Bipolar I riski tüm cinsiyetlerde aynıdır",
+     "b. Bipolar I tanısı için mutlaka mani nöbeti gözlemlenmelidir",
+     "c. Bipolar I için ortalama başlangıç yaşı 21'dir",
+     "d. Bipolar I de ilk nöbetler sıklıkla depresyon şeklindedir",
+     "e. Sistotimik [Siklotimik] bozukluklu hastalarda bipolar I bozukluk gelişmez"
+    ],
+    "ogrenci_cevap": "E",
+    "banka_id": "past-1790877044908-52950",
+    "banka_yil": "2021-2022",
+    "banka_dogru": "E",
+    "tutarli": true,
+    "not": "Benzer kök final-2018-2019-q079 (orada doğru: 'mutlaka hem depresyon hem mani gözlemlenmeli')."
+   },
+   "bagli_birim": "psk-s01-b02",
+   "benzerlik": 0.836
+  },
+  {
+   "id": "psk-s01-b06",
+   "pdf": "psk",
+   "sayfa": 1,
+   "bolge": "r2c1",
+   "tur": "cikmis_soru",
+   "baslik": "Çıkmış 14: manide bilişsel bozukluk",
+   "metin": "14) mani de bilişsel bozukluklardan biridir",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "pembe",
+     "hedef": "soru bloğu"
+    },
+    {
+     "tur": "daire",
+     "hedef": "C şıkkı mavi daire"
+    }
+   ],
+   "sinyal": [
+    "cikmis"
+   ],
+   "y25": {
+    "key": "y25-k2-19-bipolar-bozukluk",
+    "sayfa": 31
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "cikmis": {
+    "kok": "Aşağıdakilerden hangisi manide görülen bilişsel bozukluklardan biridir? (öğrenci notunda kısaltılmış: 'mani de bilişsel bozukluklardan biridir')",
+    "siklar": [
+     "A) Sosyabilite artışı",
+     "B) Libido artışı",
+     "C) İçgörüde azalma",
+     "D) Uyku isteğinde azalma",
+     "E) İrritabilite"
+    ],
+    "ogrenci_cevap": "C",
+    "banka_id": "past-1790877035963-337926",
+    "banka_yil": "Geçmiş Yıllar Çıkmışı (Arşiv)",
+    "banka_dogru": "C",
+    "tutarli": true,
+    "not": "Slayt s31 tablosunda İçgörü azalması 'Bilişsel' sütununda."
+   },
+   "bagli_birim": "psk-s01-b09",
+   "benzerlik": 0.687
+  },
+  {
+   "id": "psk-s01-b08",
+   "pdf": "psk",
+   "sayfa": 1,
+   "bolge": "r1c2",
+   "tur": "cikmis_soru",
+   "baslik": "Çıkmış 81: manik nöbetin belirtisi olmayan",
+   "metin": "81. Aşağıdakilerden hangisi manik nöbetin bir belirtisi değildir?",
+   "el_yazisi": [
+    {
+     "metin": "insomnia görülür",
+     "hedef": "d. Hipersomnia ('rs' üstü çizilmiş)",
+     "guven": "yuksek",
+     "alternatif": "insomnia (yazım: imsomnia)"
+    }
+   ],
+   "isaretler": [
+    {
+     "tur": "daire",
+     "hedef": "d şıkkı kırmızı dolu daire"
+    }
+   ],
+   "sinyal": [
+    "cikmis",
+    "el_onemli"
+   ],
+   "y25": {
+    "key": "y25-k2-19-bipolar-bozukluk",
+    "sayfa": 29
+   },
+   "y26": null,
+   "duzeltme": [
+    {
+     "ham": "imsomnia",
+     "dogru": "insomnia",
+     "gerekce": "El yazısı yazım hatası."
+    }
+   ],
+   "not_": null,
+   "cikmis": {
+    "kok": "Aşağıdakilerden hangisi manik nöbetin bir belirtisi değildir?",
+    "siklar": [
+     "a. Basınçlı konuşma",
+     "b. Öfori/disfori",
+     "c. Grandiyözite",
+     "d. Hipersomnia",
+     "e. Psikomotor ajitasyon"
+    ],
+    "ogrenci_cevap": "D",
+    "banka_id": "final-2018-2019-q081",
+    "banka_yil": "2018-2019 (final)",
+    "banka_dogru": "D",
+    "tutarli": true,
+    "not": "Manide uyku ihtiyacı azalır (insomni), hipersomni görülmez."
+   },
+   "bagli_birim": "psk-s01-b07",
+   "benzerlik": 0.605
+  },
+  {
+   "id": "psk-s01-b10",
+   "pdf": "psk",
+   "sayfa": 1,
+   "bolge": "r1c2",
+   "tur": "cikmis_soru",
+   "baslik": "Çıkmış (tablo): mani tablosu için söylenemez",
+   "metin": "Bipolar Bozukluk: manik atak kliniği hakkında hangisi söylenemez? (sıra no/cevap tablosu)",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "pembe",
+     "hedef": "tablo bloğu ve 2. satır"
+    },
+    {
+     "tur": "kutu",
+     "hedef": "2. satır onay kutusu ✓"
+    }
+   ],
+   "sinyal": [
+    "cikmis"
+   ],
+   "y25": {
+    "key": "y25-k2-19-bipolar-bozukluk",
+    "sayfa": 22
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "cikmis": {
+    "kok": "Bipolar Bozukluk: manik atak kliniği hakkında hangisi söylenemez?",
+    "siklar": [
+     "1) Manide mizaç öforiktir.",
+     "2) Bellekte genellikle azalma tespit edilir.",
+     "3) Spontan dikkatte artma tespit edilir.",
+     "4) Genellikle yönelim bozukluğu olmaz.",
+     "5) Fikir uçuşmaları vardır."
+    ],
+    "ogrenci_cevap": "B (2)",
+    "banka_id": "36ee291cfbba",
+    "banka_yil": "2020-2021",
+    "banka_dogru": "B",
+    "tutarli": true,
+    "not": "Banka kökü: 'Aşağıdakilerden hangisi mani tablosu için söylenemez?'; slayt s22: bellekte genellikle artma. Küçük resim düşük çözünürlüklü, şıklar banka ile doğrulandı."
+   },
+   "bagli_birim": "psk-s01-b07",
+   "benzerlik": 0.714
+  },
+  {
+   "id": "psk-s01-b12",
+   "pdf": "psk",
+   "sayfa": 1,
+   "bolge": "r1c2",
+   "tur": "cikmis_soru",
+   "baslik": "Çıkmış (pembe kısa not): bipolar manide yanlış",
+   "metin": "Bipolar manide hangisi yanlış? Sosyabiliteleri azalmıştır",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "pembe",
+     "hedef": "Soru? - cevap satırı"
+    }
+   ],
+   "sinyal": [
+    "cikmis"
+   ],
+   "y25": {
+    "key": "y25-k2-19-bipolar-bozukluk",
+    "sayfa": 25
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "cikmis": {
+    "kok": "Bipolar manide hangisi yanlış?",
+    "siklar": [],
+    "ogrenci_cevap": "Sosyabiliteleri azalmıştır",
+    "banka_id": "",
+    "banka_yil": "",
+    "banka_dogru": "",
+    "tutarli": true,
+    "not": "Yalnız 'soru - cevap' biçiminde pembe satır; bankada birebir karşılık bulunamadı. Slayt s25: sosyabiliteleri artmıştır → yanlış ifade doğru seçilmiş."
+   },
+   "bagli_birim": "psk-s01-b20",
+   "benzerlik": 0.568
+  },
+  {
+   "id": "psk-s01-b14",
+   "pdf": "psk",
+   "sayfa": 1,
+   "bolge": "r1c2",
+   "tur": "cikmis_soru",
+   "baslik": "Çıkmış (tablo): bipolar bozukluklar için yanlış",
+   "metin": "Bipolar Bozukluklar için aşağıda verilen bilgilerden hangisi yanlıştır? (sıra no/cevap tablosu)",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "pembe",
+     "hedef": "4. satır pembe vurgulu"
+    }
+   ],
+   "sinyal": [
+    "cikmis"
+   ],
+   "y25": {
+    "key": "y25-k2-19-bipolar-bozukluk",
+    "sayfa": 29
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "cikmis": {
+    "kok": "Bipolar Bozukluklar için aşağıda verilen bilgilerden hangisi yanlıştır?",
+    "siklar": [
+     "1) Ataklar arasında genelde hastalık öncesi işlevselliğe dönülür.",
+     "2) Valproik asit tedavide kullanılan ilaç seçeneklerinden biridir.",
+     "3) Ayırıcı tanıda madde kullanımı akla gelmelidir.",
+     "4) Manik atakta en az 2 hafta süren duygudurum değişikliği şartı mevcuttur.",
+     "5) Depresyon ve mani atakları aynı anda ortaya çıkabilir."
+    ],
+    "ogrenci_cevap": "D (4)",
+    "banka_id": "5745fea7afd3",
+    "banka_yil": "2020-2021",
+    "banka_dogru": "D",
+    "tutarli": true,
+    "not": "Kopyası d1594f9e30c1. Manik epizod için en az 1 hafta (s29)."
+   },
+   "bagli_birim": "psk-s01-b31",
+   "benzerlik": 0.751
+  },
+  {
+   "id": "psk-s01-b16",
+   "pdf": "psk",
+   "sayfa": 1,
+   "bolge": "r2c2",
+   "tur": "cikmis_soru",
+   "baslik": "Çıkmış 57: manik nöbetin belirtisi olmayan (mikromanik)",
+   "metin": "57. Aşağıdakilerden hangisi manik nöbetin bir belirtisi değildir?",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "pembe",
+     "hedef": "soru bloğu"
+    },
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "c şıkkı kırmızı yazılmış (cevap)"
+    }
+   ],
+   "sinyal": [
+    "cikmis"
+   ],
+   "y25": {
+    "key": "y25-k2-19-bipolar-bozukluk",
+    "sayfa": 24
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "cikmis": {
+    "kok": "Aşağıdakilerden hangisi manik nöbetin bir belirtisi değildir?",
+    "siklar": [
+     "a. Spontan dikkatte artma",
+     "b. Öfori/disfori",
+     "c. Mikromanik hezeyanlar",
+     "d. Basınçlı konuşma",
+     "e. Psikomotor ajitasyon"
+    ],
+    "ogrenci_cevap": "C",
+    "banka_id": "past-1790877044914-302004",
+    "banka_yil": "2021-2022",
+    "banka_dogru": "C",
+    "tutarli": true,
+    "not": "Manide büyüklük (megalomanik) hezeyanları olur; mikromanik (küçüklük) hezeyan depresyona özgüdür."
+   },
+   "bagli_birim": "psk-s01-b15",
+   "benzerlik": 0.624
+  },
+  {
+   "id": "psk-s01-b19",
+   "pdf": "psk",
+   "sayfa": 1,
+   "bolge": "r2c2",
+   "tur": "cikmis_soru",
+   "baslik": "Çıkmış 54: hipomani tanısı",
+   "metin": "54. Hipomani tanısı alan bir kişi İçin aşağıda verilenlerden hangisi/hangileri doğrudur?",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "pembe",
+     "hedef": "soru bloğu"
+    },
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "b şıkkı kırmızı yazılmış"
+    }
+   ],
+   "sinyal": [
+    "cikmis"
+   ],
+   "y25": {
+    "key": "y25-k2-19-bipolar-bozukluk",
+    "sayfa": 8
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "cikmis": {
+    "kok": "Hipomani tanısı alan bir kişi için aşağıda verilenlerden hangisi/hangileri doğrudur? I. En az 4 gün sürmesi gerekir II. Psikotik belirtileri vardır III. Amaca yönelik davranışlarda belirgin bir artış IV. Ciddi meslekî işlev kaybı vardır",
+    "siklar": [
+     "a. Yalnız I, II ve III",
+     "b. Yalnız I ve III",
+     "c. Yalnız II ve IV",
+     "d. Yalnız IV",
+     "e. I, II, III ve IV"
+    ],
+    "ogrenci_cevap": "B",
+    "banka_id": "past-q-3_Kurul_C__km_s__Birles_tr_-54",
+    "banka_yil": "Geçmiş Yıllar Çıkmışı (Arşiv)",
+    "banka_dogru": "B",
+    "tutarli": true,
+    "not": "Hipomanide psikotik belirti ve ciddi işlev kaybı olmaz (olursa mani)."
+   },
+   "bagli_birim": "psk-s01-b01",
+   "benzerlik": 0.704
+  },
+  {
+   "id": "psk-s01-b25",
+   "pdf": "psk",
+   "sayfa": 1,
+   "bolge": "r1c3",
+   "tur": "cikmis_soru",
+   "baslik": "Çıkmış 74: duygudurum bozuklukları hakkında yanlış",
+   "metin": "74) Duygudurum bozuklukları hakkında verilen bilgilerden hangisi yanlıştır?",
+   "el_yazisi": [
+    {
+     "metin": "kadın = erkek",
+     "hedef": "D) Bipolar bozukluk, kadınlarda yaklaşık üç kat daha fazla görülmektedir.",
+     "guven": "yuksek"
+    }
+   ],
+   "isaretler": [
+    {
+     "tur": "pembe",
+     "hedef": "soru bloğu"
+    },
+    {
+     "tur": "sari",
+     "hedef": "D şıkkı sarı vurgulu (cevap)"
+    }
+   ],
+   "sinyal": [
+    "cikmis",
+    "el_onemli"
+   ],
+   "y25": {
+    "key": "y25-k2-19-bipolar-bozukluk",
+    "sayfa": 13
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "cikmis": {
+    "kok": "Duygudurum bozuklukları hakkında verilen bilgilerden hangisi yanlıştır?",
+    "siklar": [
+     "A) Depresyon atağının uzun olması, kötü prognoz göstergesidir.",
+     "B) Antisosyal kişilik bozukluğu ile tanı açısından karışabilir.",
+     "C) Epizodlar atlatıldıktan sonra genellikle hastalık öncesi işlevsellik düzeyine dönülür.",
+     "D) Bipolar bozukluk, kadınlarda yaklaşık üç kat daha fazla görülmektedir.",
+     "E) Distraktibilite, bilişsel bir belirti olarak ortaya çıkar."
+    ],
+    "ogrenci_cevap": "D",
+    "banka_id": "past-q-I_SKENDERUN_TI_Mu_du_rlu_g_u_ne0__1__230709_230251-74",
+    "banka_yil": "Geçmiş Yıllar Çıkmışı (Arşiv)",
+    "banka_dogru": "D",
+    "tutarli": true,
+    "not": "Slayt s13: kadın ve erkekte aynı sıklıkta."
+   },
+   "bagli_birim": "psk-s01-b01",
+   "benzerlik": 0.757
+  }
+ ],
+ "banka": [
+  {
+   "id": "d6c208b25527",
+   "ders": "k2-19",
+   "yillar": [
+    "2023-2024"
+   ],
+   "kok": "Aşağıdakilerden hangisi manik nöbetin bir belirtisi değildir?",
+   "dogru": "Psikomotor yavaşlama",
+   "kopyalar": [],
+   "birim": "psk-s01-b07",
+   "benzerlik": 0.485,
+   "kapsandi": false,
+   "notta_yapistirilmis": false
+  },
+  {
+   "id": "5745fea7afd3",
+   "ders": "k2-19",
+   "yillar": [
+    "2020-2021",
+    "2020-2021"
+   ],
+   "kok": "Bipolar bozukluklar ile ilgili aşağıda verilen bilgilerden hangisi yanlıştır?",
+   "dogru": "Manik atakta en az 2 hafta süren duygudurum değişikliği şartı mevcuttur.",
+   "kopyalar": [],
+   "birim": "psk-s01-b01",
+   "benzerlik": 0.751,
+   "kapsandi": true,
+   "notta_yapistirilmis": true
+  },
+  {
+   "id": "36ee291cfbba",
+   "ders": "k2-19",
+   "yillar": [
+    "2020-2021"
+   ],
+   "kok": "Aşağıdakilerden hangisi mani tablosu için söylenemez?",
+   "dogru": "Bellekte genellikle azalma tespit edilir.",
+   "kopyalar": [],
+   "birim": "psk-s01-b09",
+   "benzerlik": 0.614,
+   "kapsandi": true,
+   "notta_yapistirilmis": true
+  },
+  {
+   "id": "past-q-I_SKENDERUN_TI_Mu_du_rlu_g_u_ne0__1__230709_230251-74",
+   "ders": "k2-19",
+   "yillar": [
+    "Geçmiş Yıllar Çıkmışı (Arşiv)"
+   ],
+   "kok": "Duygudurum bozuklukları hakkında verilen bilgilerden hangisi yanlıştır?",
+   "dogru": "Bipolar bozukluk kadınlarda yaklaşık üç kat daha fazla görülmektedir.",
+   "kopyalar": [],
+   "birim": "psk-s01-b02",
+   "benzerlik": 0.77,
+   "kapsandi": true,
+   "notta_yapistirilmis": true
+  },
+  {
+   "id": "q-KURUL_2_C_IKMIS__3-55",
+   "ders": "k2-19",
+   "yillar": [
+    "Geçmiş Yıllar Çıkmışı (Arşiv)",
+    "2021-2022"
+   ],
+   "kok": "Aşağıdakilerden hangisi bipolar bozukluk için yanlıştır?",
+   "dogru": "Siklotimik bozukluğu olan hastalarda bipolar I bozukluk gelişmez",
+   "kopyalar": [],
+   "birim": "psk-s01-b01",
+   "benzerlik": 0.697,
+   "kapsandi": true,
+   "notta_yapistirilmis": false
+  },
+  {
+   "id": "q-KURUL_2_C_IKMIS__3-57",
+   "ders": "k2-19",
+   "yillar": [
+    "Geçmiş Yıllar Çıkmışı (Arşiv)",
+    "2021-2022"
+   ],
+   "kok": "Aşağıdakilerden hangisi manik nöbetin bir belirtisi değildir?",
+   "dogru": "Mikromanik hezeyanlar",
+   "kopyalar": [],
+   "birim": "psk-s01-b15",
+   "benzerlik": 0.5,
+   "kapsandi": false,
+   "notta_yapistirilmis": false
+  },
+  {
+   "id": "d3-k2-psi-013",
+   "ders": "k2-19",
+   "yillar": [
+    "2021-2026"
+   ],
+   "kok": "Aşağıdakilerden hangisi Bipolar I bozuklukta görülen akut manik atağın tanısal özelliklerinden biri DEĞİLDİR?",
+   "dogru": "Psikomotor retardasyon ve aşırı hipersomni",
+   "kopyalar": [],
+   "birim": "psk-s01-b01",
+   "benzerlik": 0.663,
+   "kapsandi": true,
+   "notta_yapistirilmis": false
+  },
+  {
+   "id": "past-q-I_SKENDERUN_TI_Mu_du_rlu_g_u_ne0__1__230709_230251-87",
+   "ders": "k2-19",
+   "yillar": [
+    "Geçmiş Yıllar Çıkmışı (Arşiv)"
+   ],
+   "kok": "Bipolar bozukluk tedavisine ilişkin aşağıdaki ilaç grupları verilmiştir:\nI. Lityum, bupropion, venlafaksin\nII. Essitalopram, sertralin\nIII. Sitalopram, duloksetin\nIV. Fluoksetin, paroksetin, lamotrijin\nDuygudurum dengele",
+   "dogru": "I ve IV",
+   "kopyalar": [],
+   "birim": "psk-s01-b29",
+   "benzerlik": 0.728,
+   "kapsandi": true,
+   "notta_yapistirilmis": false
+  },
+  {
+   "id": "past-q-3_Kurul_C__km_s__Birles_tr_-54",
+   "ders": "k2-19",
+   "yillar": [
+    "Geçmiş Yıllar Çıkmışı (Arşiv)"
+   ],
+   "kok": "Hipomani tanısı alan bir kişi ile ilgili aşağıdaki ifadeler veriliyor:\nI. En az 4 gün sürmesi gerekir.\nII. Psikotik belirtileri vardır.\nIII. Amaca yönelik davranışlarda belirgin bir artış vardır.\nIV. Ciddi meslekî işlev ",
+   "dogru": "I ve III",
+   "kopyalar": [],
+   "birim": "psk-s01-b01",
+   "benzerlik": 0.669,
+   "kapsandi": true,
+   "notta_yapistirilmis": true
+  },
+  {
+   "id": "past-1790877035963-337926",
+   "ders": "k2-19",
+   "yillar": [
+    "Geçmiş Yıllar Çıkmışı (Arşiv)"
+   ],
+   "kok": "Aşağıdakilerden hangisi manide görülen bilişsel bozukluklardan biridir?",
+   "dogru": "İçgörüde azalma",
+   "kopyalar": [],
+   "birim": "psk-s01-b09",
+   "benzerlik": 0.617,
+   "kapsandi": true,
+   "notta_yapistirilmis": true
+  },
+  {
+   "id": "q-No_ropsikiyatri_gis_kardiyo_-2023-2024-C__km_s_lar__240625_053302__2_-25",
+   "ders": "k2-19",
+   "yillar": [
+    "2023"
+   ],
+   "kok": "Bipolar bozuklukta manik dönem için hangisi yanlıştır?",
+   "dogru": "Sosyabiliteleri azalmıştır",
+   "kopyalar": [],
+   "birim": "psk-s01-b02",
+   "benzerlik": 0.6,
+   "kapsandi": false,
+   "notta_yapistirilmis": false
+  }
+ ]
+}

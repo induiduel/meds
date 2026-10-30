@@ -1,6 +1,6 @@
 # Aşama kuralları — ders_icerik
 
-> ÜRETİLMİŞ DOSYA: elle yazma. Kaynak `docs/KURUL2_YAPILMAYACAK_HATALAR.md`, üreteç `scripts/tam_hat/kural_secici.py`. 34 madde. Ayrıntı gerekirse madde başlığıyla defterde aç.
+> ÜRETİLMİŞ DOSYA: elle yazma. Kaynak `docs/KURUL2_YAPILMAYACAK_HATALAR.md`, üreteç `scripts/tam_hat/kural_secici.py`. 44 madde. Ayrıntı gerekirse madde başlığıyla defterde aç.
 
 ### Diğer oturumlarda düzeltilen hatalardan çıkarılan dersler (tarama 2026-10-20)
 - **Kural:** EMA'ya giden her Kurul 2+ metni uzun harf okunuşuyla ("dee nee aa", `patoloji_cozucu/kisaltma_ses.uzat`).
@@ -347,3 +347,49 @@
   6. **Şekil paragrafı betimlemeyle bitmez:** yalnız "…gösterilir / görülür / yer alır" cümlelerinden oluşan şekil paragrafı eksik sayılır; şeklin öğrettiği bilgi (mekanizma, sonuç, ayırıcı nokta) eklenir.
   7. **Çizim katmanı anlatımı izler:** her panel/sonuç anlatılırken lazer ve kontur o panele gider (kural 17/18; bir cümle = bir panel).
   8. **Denetçi şekle bakar:** bağımsız denetçi metni okuduktan sonra şekilli/tablolu her sayfanın görüntüsüne bakıp "şekildeki her panel/işaret anlatıldı mı" listesini işaretler; eksik varsa GEÇMEZ.
+
+### H131d — Dar ekranda süzgeç çipleri tabloyu ekran dışına itiyordu; kesik süre hücreleri (2026-10-28)
+- **Çözüm/kural:** Her süzgeç grubu tek satır yatay kaydırılır (etiket sabit); süre sütunları ≥100 px, kesilen düz metin hücresi `title` taşır; `@media (pointer: coarse)` düğme/ara/girdi 40 px, çip 32 px, alan yazısı 16 px. Kısa değer (≤14 karakter) hücrede kesilmez — tarama betiği bunu denetler.
+
+
+### H142 — Mesaj/şikâyet yazarından kişiye geçilemiyordu (2026-10-28, sayfa denetimi)
+- **Çözüm/kural:** `MesajTablosu` `git` alır; Yazan sütunu ve çekmece Kişi 360'a, "Tüm mesajları" `topluluk/mesaj?s.uid=` süzgecine bağlanır; Kişi 360'ta "Mesajları" düğmesi. Kişiye ait her kayıt panelde kişiye bağlantı verir.
+
+
+### H143 — Yönetim tablolarında uzun içerikli satırın sütunları kayıyordu (2026-10-28)
+- **Çözüm/kural:** VeriTablosu sütun px alt sınırlarının toplamını `--m16-tablo-en` olarak verir; tüm satırlar aynı en küçük genişliği paylaşır (telefonda yatay kaydırma korunur). Satır ızgarası içeriğe göre genişlemez.
+
+
+### H146 — Yönetim tabloları telefonda okunmuyordu (2026-10-28, sayfa denetimi)
+- **Çözüm/kural:** VeriTablosu ≤640 px'te kart görünümüne geçer: başlık satırı gizli, ilk hücre kart başlığı, diğerleri "Sütun adı · değer" (`data-baslik`), seçim kutusu sağ üstte; kart yüksekliği değiştiği için sanal kaydırma kapanır. Yeni tablo sütunlarına düz metin `baslik` verilir (kart etiketi buradan gelir).
+
+
+### H250–H268 — Sayfa denetimi beşinci tur, yönetim paneli kalan bulgular (2026-10-28)
+- Genel bakış kart adları ve hedefleri (topluluk şikâyeti, istemci hatası → Gelen süzgeci), yük renk eşiği, sürüm etiketi (H250–H253).
+- Bağlantılar: Ctrl/orta tık yeni sekme (H254), `manageAdres` (H255), Çıkmış ve Birleşenler içi bağlantılar panel içi gezinme (H256, H266), Branşlar → derslere (H265).
+- Metin/ad netliği: Ham defter dışa aktarım (H257), Faz 14 → "Çıkmış inceleme (Faz 14)" (H259), Kamplar → "Kamp tüyoları" (H260), benzer menü adları ayrıştırıldı (H261), Sözlük silinemez sekme açıklaması (H267), katalog form alanlarına Türkçe etiket (H268).
+- Onaylarda hedef sunucu: bakım ve LLM işleri (H262, H263; kural 20 davranışı değişmedi). Faz 14'te kimliksiz satır bildirimi (H258).
+- **H264 Boş tablo:** yalnız "Kayıt yok" diyordu → süzgeç mi kaynak mı boş söylenir, yerelde Canlı önerisi.
+- Kapsam dışı bırakılan öneriler: menünün baştan düzenlenmesi, görünürlüğün tek yerde toplanması, Çıkmış/şikâyet toplu işlemleri, kirli kurul etiketlerinin veri temizliği, üç "bugün" sayfasının birleşmesi, oynatıcı araç çubuğu yeniden tasarımı, çıkmış listesinde sayfalama.
+
+### H290–H295 — Yönetimde iş akışı uzundu: Gelen yalnız yönlendiriyordu, toplu işlem yoktu (2026-10-28, sayfa denetimi)
+- **Çözüm/kural:** Gelen'de satır ve çekmece işlemleri (Çözüldü / Yok say / Mesajı gizle / Kapat + iç not / Görüldü), aynı türde toplu işlem; `gelenOnbellekSil()` işlem uçlarında; yeni uç `POST /api/admin/gelen/hata/goruldu` (işaret `data/istemci_hata_goruldu.json`, hata yinelenirse geri düşer); VeriTablosu `dusur(t)` ile işlenen satır süzgeç/sayfa korunarak düşer. Soru şikâyetlerinde çekmeceden Çözüldü + toplu; çıkmışlarda toplu Gizle/Göster (onay + hedef + 8 sn Geri al). Not: "Yok say" şikâyeti `resolved` yapar (ayrı red durumu yok).
+
+
+### H330–H334 — Sesli ders araç çubukları kalabalıktı (2026-10-28, sayfa denetimi; kullanıcı isteği)
+- **Çözüm/kural:** Görünür kalanlar ders boyunca sık dokunulanlar: görünüm kipi, tam ekran (masaüstü), Çıkmış, Kalem, yakınlaştırma (masaüstü). Seyrekler `CdTasmaMenu` ⋯ menüsünde: yazı boyutu (menü açık kalır, değer yazar), yıldızlı paragraflar, terim yardımcısı (✓; açıkken çubukta etkin göstergesi), görünüm ayarları, tüm ders seçenekleri, tam ekran; PDF ⋯: sayfa teması, yakınlaştır/uzaklaştır/sığdır. Menü erişilebilir (aria-haspopup, ↑/↓/Home/End, Esc/dışarı/Tab kapatır, odak düğmeye döner), kısayollar değişmedi, tanıtım turu yeni hedeflere bağlandı (9/8 durak). Çizim/zamanlama mantığına dokunulmadı (kural 17/18). Açık: TV kipinde menü ok tuşları TV katmanına takılabilir; telefonda Kalem 33 px, küçült düğmesi 36×22 px.
+- **Kural:** Sesli ders ekranına yeni düğme eklenirken önce sık/seyrek kararı verilir; seyrekse ⋯ menüsüne girer, durum taşıyorsa menüde ✓ ve çubukta etkin göstergesi olur.
+
+
+### H335–H337 — TV kipinde ⋯ menüsü ve ders ekranında TV kumandası (2026-10-28)
+- **Çözüm/kural:** Odak `[role="menu"]` içindeyse TV katmanı tuşu menüye bırakır; menü Geri tuş kodlarını da kapatma sayar. Düzeltmeli/düzeltmesiz karşılaştırmayla doğrulandı. Kural: pencere düzeyinde capture dinleyici yazan her katman açık menü/diyalog içindeki tuşları bırakır.
+- **Çözüm/kural:** Bileşen ders ekranına geri bağlandı (TV dışında hiçbir şey çizmez), Kumanda düğmesi köşeye sabit. Kullanılmayan içe aktarma, kaybolmuş bir özellik işareti olabilir; büyük başlık yeniden yazımlarında eski bileşenlerin hâlâ çizildiği kontrol edilir.
+
+### H436 — Ara soru şık açıklamalarında ileriye sızıntı ve kaynakta olmayan iddia (2026-10-29, bağımsız denetçi buldu)
+- **Kural / önleme:** Şık açıklaması, ipucu ve çözüm de yalnız `ara.sayfa` ve öncesindeki slaytların bilgisini kullanır; tıbbi tanım slayt metninde yoksa yazılmaz. Bağımsız denetçi (TALIMAT adım 7) her soruda bunu slayt slayt arar; düzeltilen sorular ikinci kez denetlenir. Ders akış metni (Whisper dökümünden beslenmiş olabilir) tıbbi kaynak değildir; terim/sayı yalnız PDF sayfa metninden alınır.
+
+
+### H444 — DOCX ızgara sayfaları LibreOffice/Word'de ikiye bölündü; 26 sayfa 52 oldu (soru dışa aktarıcı, 2026-10-30)
+- **Çözüm:** boş üst bilgi kaldırıldı (yalnız "her sayfada başlık" açıkken başlık üst bilgisi); hücrelere yalnız sağ/sol iç boşluk, üst boşluk hücre içi sabit paragrafla; satır aralığı yazı tipine göre bölünür (`TEK_SATIR`); sabit sayfa kipinde yazı ölçeği ×0,93, satır yüksekliği ×0,97 güvenlik payı. 26 model sayfası → 26 DOCX sayfası.
+- **Önleme:** DOCX/PPTX üreten her değişiklik LibreOffice ile PDF'e çevrilip sayfa sayısı önizlemeyle kıyaslanır (`soffice --headless --convert-to pdf` + `pdfinfo`) ve her XML parçası ayrıştırılarak denetlenir; sabit yükseklikli tablo satırına üst/alt `tcMar` verilmez.
+

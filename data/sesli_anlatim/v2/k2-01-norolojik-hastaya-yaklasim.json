@@ -584,7 +584,11 @@
         ],
         "sekil": null
        },
-       "id": "k2-01-c0024"
+       "id": "k2-01-c0024",
+       "ogrenci": {
+        "oncelik": "A",
+        "birim": "noro-s07-b02"
+       }
       },
       {
        "ses": "Multipl sklerozda ataklar düzelir ve yinelenir.",
@@ -628,7 +632,11 @@
         ],
         "sekil": null
        },
-       "id": "k2-01-c0026"
+       "id": "k2-01-c0026",
+       "ogrenci": {
+        "oncelik": "A",
+        "birim": "noro-s07-b01"
+       }
       }
      ]
     },
@@ -864,7 +872,11 @@
         ],
         "sekil": null
        },
-       "id": "k2-01-c0036"
+       "id": "k2-01-c0036",
+       "ogrenci": {
+        "oncelik": "A",
+        "birim": "noro-s07-b02"
+       }
       }
      ]
     },
@@ -1253,6 +1265,41 @@
        "spot": null,
        "slayt": null,
        "id": "k2-01-c0052"
+      },
+      {
+       "ses": "Bu iki tabloyu kol bulgusu ayırır: Parkinson hastası maske yüzlüdür, monoton konuşur ve yürürken kollarını sallamaz; hemiplejik hastada ise kol gövdeye yapışıktır ve bacak oraklanır.",
+       "ekran": "**Parkinson**: maske yüz, monoton konuşma, **kol sallamama**; **hemipleji**: kol gövdeye yapışık, bacak oraklanır",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "Parkinson",
+         "tur": "terim"
+        },
+        {
+         "metin": "kol sallamama",
+         "tur": "tuzak"
+        },
+        {
+         "metin": "hemipleji",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": {
+        "sayfa": 5,
+        "satir": [
+         "• Hemiplejik kolun gövdeye yapışık olması, yürürken bacağını oraklaması",
+         "• Parkinson H. maske yüz, monoton konuşma, salya akması, yürürken kollarını sallamaması, vücudun fleksör postürü"
+        ],
+        "sekil": null
+       },
+       "id": "k2-01-c0121",
+       "ogrenci": {
+        "oncelik": "A",
+        "birim": "noro-s07-b03"
+       }
       }
      ]
     },
@@ -1330,6 +1377,22 @@
         "sekil": null
        },
        "id": "k2-01-c0055"
+      },
+      {
+       "ses": "Geçen yılın öğrencileri hemipleji, Parkinson hastalığı ve kas distrofisindeki bu gözlem bulgularını en önemli yerler arasına almıştı.",
+       "ekran": "Öğrencilerin en önemli bulduğu yer: **ilk izlenimde gözlem bulguları**",
+       "duzey": 0,
+       "vurgu": [
+        {
+         "metin": "ilk izlenimde gözlem bulguları",
+         "tur": "terim"
+        }
+       ],
+       "slayt_adim": null,
+       "cikmis": [],
+       "spot": null,
+       "slayt": null,
+       "id": "k2-01-c0122"
       }
      ]
     },

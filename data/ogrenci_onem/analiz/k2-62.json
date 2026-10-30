@@ -1,0 +1,63 @@
+{
+ "ders": "k2-62",
+ "ozet": "Kraniyal sinir muayenesinde en çok sorulan yer hipoglossus ve supranükleer innervasyondur: 'dilini çıkarınca sağa sapan, atrofisi olmayan hastada lezyon' sorusu 2020-21'de iki farklı şık setiyle (profilde 5 kez) ve 'tek taraflı supranükleer lezyonda VII ve XII etkilenir' öncüllü sorusu 2020-21'de çıkmış. Öğrenciler göz hareket sinirleri (Bielschowsky → IV. sinir), kornea refleksi (afferent V, efferent VII) ve fasiyal paralizi tiplerini el notlarıyla işlemiş; notta kornea refleksi ve göz hareketi soruları yapıştırılmış. Bankadaki IV. sinirin çaprazlaşması ve abdusens soruları notta yok; profilde MLF lezyonu (internükleer oftalmopleji) vakası 3 kez geçiyor.",
+ "temalar": [
+  {"tema": "Hipoglossus ve supranükleer innervasyon: dil sapmasının yönü, atrofi ile lezyon düzeyi; tek taraflı supranükleer lezyonda VII ve XII",
+   "oncelik": "A", "birimler": ["noro-s12-b14"],
+   "kanit": "3 kayıt (2020-21): 88612c9f5ce5 (iki kopya, 'dil sağa sapıyor, atrofi yok → Sağ n. hypoglossus'), 1ab3d959d0ec (aynı kök, şıklarda supranükleer seçenek var → Sol kortikobulber yol), past-1790877480031-411629 (öncüllü: tek taraflı supranükleer lezyonda VI, VII, XI, XII'den motor işlevi bozulanlar → II ve IV, yani VII ve XII). Profilde 'Sağ nervus hypoglossus' tekrar eden çekirdek (5×, 2020 ve 2021). El notu açık pembe: 'tek taraflı lezyonunda dilde atrofi; bilateral lezyonda atrofi ve her yöne hareket azlığı'.",
+   "anlatim": "Dilin zayıf genioglossus tarafına saptığı kuralı tek cümleyle kurulmalı; periferik (XII çekirdeği/siniri) lezyonda dil lezyon tarafına sapar ve atrofi gelişir, supranükleer (kortikobulber) lezyonda dil lezyonun karşı tarafına sapar, atrofi olmaz. Tek taraflı supranükleer lezyonda yalnız VII'nin alt yüz bölümü ve XII'nin belirgin etkilendiği, diğer motor çekirdeklerin iki taraflı innervasyonla korunduğu eklenmeli.",
+   "soru_payi": 26,
+   "soru_tipleri": ["vaka: dil sağa sapıyor, atrofi yok → lezyon yeri (şıklara göre sol kortikobulber yol; supranükleer şık yoksa sağ n. hypoglossus)", "öncüllü: tek taraflı supranükleer lezyonda motor işlevi bozulan sinirler → VII ve XII (çeldirici VI, XI)", "ters yön: dilde tek taraflı atrofi + aynı tarafa sapma → periferik XII lezyonu"]},
+  {"tema": "Göz hareket sinirleri (III, IV, VI): muayenenin amacı, ışık ve akomodasyon refleksi, Bielschowsky baş eğme testi; sinüs kavernozus",
+   "oncelik": "A", "birimler": ["noro-s12-b04"],
+   "kanit": "Notta 'göz hareketinde görev alan kraniyal sinir → III' soru-cevabı (bankada bulunamadı); Bielschowsky'ye el notu '= sağ IV. sinir felci'; muayene amacının dört maddesi vurgulu. d3-k2-nor-005 (2021-26, pitoz + dışa/yukarı/aşağı bakış kısıtlılığı + alın ve kornea duyusunda azalma → sinüs kavernozus). Profilde 'Sol medial longitudinal fasikulus' tekrar eden çekirdek (3×, 2021; sol gözde içe bakış kısıtlılığı + sağ gözde dışa bakışta nistagmus vakası).",
+   "anlatim": "Muayene amacı (göz hareketleri, göz kapağı, pupilla, nistagmus) ve her sinirin bakış yönü verilmeli; Bielschowsky testinin IV. sinir felcinde baş felçli tarafa eğilince hipertropinin artmasıyla pozitif olduğu, sinüs kavernozus lezyonunda III, IV, VI ve V1'in birlikte tutulduğu birer cümleyle eklenmeli. Slaytta karşılığı varsa MLF lezyonunda aynı tarafta içe bakış kısıtlılığı + karşı gözde dışa bakış nistagmusu (internükleer oftalmopleji) tek vaka olarak verilmeli.",
+   "soru_payi": 22,
+   "soru_tipleri": ["baş eğme testi pozitif → IV. sinir (troklear) felci", "vaka: pitoz + çoklu göz hareketi kısıtlılığı + alın ve kornea duyusunda azalma → sinüs kavernozus", "vaka: bir gözde içe bakış kısıtlılığı + karşı gözde dışa bakış nistagmusu → MLF lezyonu (profil)"]},
+  {"tema": "Kraniyal sinir refleks yayları: kornea refleksi (afferent V, efferent VII), çene refleksi (V-V), öğürme refleksi (afferent IX, efferent X), ışık refleksinin afferenti II",
+   "oncelik": "A", "birimler": ["noro-s12-b06", "noro-s12-b11", "noro-s12-b02"],
+   "kanit": "Notta 'kornea refleksinden sorumlu sinir çifti → V-VII' sorusu (bankada bulunamadı; şıklar II-III, III-VI, III-V, VII-XII); 'afferent 5 efferent 7' ve 'Afferent 9; Efferent 10' açık pembe vurgulu; el notları 'Çene refleksi (a-e 5. sinir)', 'kornea refleksinin efferenti' (VII yanında), 'ışık refleksinin afferenti' (II yanında); trigeminal sayfası daire içinde.",
+   "anlatim": "Dört refleks afferent ve efferent kollarıyla tek tabloda verilmeli: kornea V → VII, çene V → V, öğürme IX → X, ışık II → III. Trigeminin yüz duyusu (dokunma, ağrı, ısı) ile masseter-temporalis motor işlevi aynı sayfada kısa geçilmeli.",
+   "soru_payi": 18,
+   "soru_tipleri": ["refleks → sinir çifti: kornea refleksi → V–VII (çeldirici III-V, II-III)", "öğürme refleksinin efferenti → X", "ışık refleksinin afferenti → II"]},
+  {"tema": "Fasiyal sinir: işlevleri ve periferik / santral fasiyal paralizi",
+   "oncelik": "A", "birimler": ["noro-s12-b09"],
+   "kanit": "El notları: 'Periferik: gözünü kapatamaz, Bell fenomeni, kaşını kaldıramaz, ağız sağlam tarafa kayık', 'Santral: sadece ağız köşesinde, yüzün alt yarısında, gözünü tam kapatır, daima aynı taraflı hemiparezi ile birlikte'. Bu birime bağlanan öncüllü supranükleer soru tema 1'de sayıldı.",
+   "anlatim": "İşlevler (mimik kaslar, dilin ön 2/3 tadı, parotis dışı tükürük bezleri, stapedius) sayılmalı; periferik ve santral tip yan yana tabloyla (alın, göz kapama, ağız, eşlik eden hemiparezi, lezyon yeri) ayrılmalı.",
+   "soru_payi": 12,
+   "soru_tipleri": ["vaka: alnını kırıştıramıyor, gözünü kapatamıyor → periferik fasiyal paralizi", "dilin ön 2/3 tadı → VII; arka 1/3 → IX"]},
+  {"tema": "Diğer seçilen yerler: I (anosmi), II muayenesi, VIII (Weber ve Rinne), X ve XI",
+   "oncelik": "C", "birimler": ["noro-s12-b01", "noro-s12-b10", "noro-s12-b12", "noro-s12-b13"],
+   "kanit": "Anosmi ve nedenleri sarı; Weber-Rinne satırları daire içinde ve vurgulu; X ve XI işaretsiz. Doğrudan çıkmış yok.",
+   "anlatim": "Weber ve Rinne üç durumda (normal, iletim tipi, sensörinöral) tabloyla verilmeli; anosminin kafa travması ve ön kafa tabanı tümörlerinde görüldüğü, XI'in trapez ve SCM'yi innerve ettiği kısa madde olmalı.",
+   "soru_payi": 8,
+   "soru_tipleri": ["Weber lezyon tarafına lateralize, Rinne (−) → iletim tipi işitme kaybı", "Weber karşı tarafa, Rinne (+) → sensörinöral işitme kaybı"]},
+  {"tema": "Notta yok, sorulmuş: IV. sinirin çaprazlaşması ve abdusens felci",
+   "oncelik": "B", "birimler": [],
+   "kanit": "Bankada kapsanmamış 2 kayıt (2020-21): 7a901e64695e ('nükleusundan çıktıktan sonra çapraz yapan kraniyal sinir → IV. sinir (troklear)') ve past-1790877494321-845620 ('trafik kazasında gözün laterale bakışı bozuk → n. abducens').",
+   "anlatim": "Göz hareket sinirleri sayfasına iki kısa madde olarak eklenmeli: IV. sinir beyin sapının arkasından çıkan ve çekirdekten sonra çaprazlaşan tek sinirdir; laterale bakış (lateral rektus) VI. sinirle olur.",
+   "soru_payi": 14,
+   "soru_tipleri": ["çekirdekten çıktıktan sonra çaprazlaşan sinir → IV (çeldirici III, VI, VII, XII)", "gözün laterale bakışı bozuk → abdusens (VI)"]}
+ ],
+ "hoca_kaliplari": ["Bu konuda doğrudan kök %70, vaka %20, öncüllü %10 (10 soru, güven düşük); tanım → terim", "Lokalizasyon vakası: muayene bulgusu (dil sapması, göz hareketi kısıtlılığı) verilip lezyon yeri sorulur", "Aynı kök farklı şık setleriyle yıllar içinde tekrar (dil sapması 5×)", "Çeldiriciler aynı türden ayrı kavram %80: komşu kraniyal sinir çekirdekleri (nucleus ambiguus, nucleus tractus solitarius, glossofaringeus)"],
+ "tuzaklar": [
+  {"tuzak": "Atrofi yoksa lezyon supranükleerdir ve dil lezyonun karşı tarafına sapar", "neden": "Bankada aynı kök için iki ayrı cevap var; şıklarda kortikobulber seçenek yoksa beklenen cevap aynı taraf XII'dir. Önce şıklara bakmak gerekir."},
+  {"tuzak": "Kornea refleksinin afferenti V, efferenti VII'dir", "neden": "Çeldiricide III-V ya da V-V verilir; V-V çene refleksidir."},
+  {"tuzak": "Öğürme refleksinde afferent IX, efferent X'tur", "neden": "Kollar yer değiştirilerek sorulabilir."},
+  {"tuzak": "Bielschowsky testi IV. sinir felcini gösterir", "neden": "III ve VI felçleri çeldirici olarak verilir."},
+  {"tuzak": "Tek taraflı supranükleer lezyonda VI ve XI belirgin etkilenmez", "neden": "Öncüllü soruda I ve III öncülleri bu sinirlerdir; cevap yalnız VII ve XII."},
+  {"tuzak": "Dilin ön 2/3 tadı VII, arka 1/3 tadı IX ile taşınır", "neden": "Ön/arka bölüm yer değiştirilerek çeldirici yapılır."}
+ ],
+ "sayilar": ["Dil: ön 2/3 tat VII, arka 1/3 tat ve dokunma IX", "Dil kasları XII (palatoglossus hariç; palatoglossus X)"],
+ "duzeltmeler": [
+  {"yanlis": "'Dilini çıkarınca sağa sapan, atrofisi olmayan hastada lezyon' → Sağ n. hypoglossus (88612c9f5ce5; eski anahtar 'Sol n. hypoglossus' idi, 2026-10-21'de A'ya düzeltildi)", "dogru": "Aynı kök 1ab3d959d0ec'de 'Sol kortikobulber yol (supranükleer lezyon)' doğru şıktır. Atrofinin olmaması ve öğrencinin el notu (tek taraflı periferik lezyonda atrofi) supranükleer lezyonu destekler; supranükleer seçenek bulunmayan şık setinde 'sağ n. hypoglossus' (dil lezyon tarafına sapar, atrofi henüz gelişmemiş olabilir) en uygun şıktır. İçerikte iki kural birlikte öğretilmeli", "kaynak": "Bankadaki iki doğru şık (88612c9f5ce5, 1ab3d959d0ec) + noro-s12-b14 el notu"},
+  {"yanlis": "Periferik fasiyal paralizi: çekirdekte lezyon", "dogru": "Periferik tip: fasiyal çekirdekte veya sinirin kendisinde lezyon", "kaynak": "Felçler slaytı (k2-32 s28); noro-s12-b09 düzeltmesi"}
+ ],
+ "ara_soru_adaylari": [
+  {"birim": "noro-s12-b14", "fikir": "Dil sağa sapıyor, atrofi yok, sağ hemiparezi eşlik ediyor → sol kortikobulber (supranükleer) lezyon; atrofi olsaydı sağ XII"},
+  {"birim": "noro-s12-b06", "fikir": "Kornea refleksinin afferent ve efferent sinirleri → V ve VII"},
+  {"birim": "noro-s12-b04", "fikir": "Başı felçli tarafa eğince çift görme ve kayma artıyor → IV. sinir felci (Bielschowsky)"},
+  {"birim": "noro-s12-b09", "fikir": "Yalnız ağız köşesi düşük, göz kapanıyor, aynı tarafta hemiparezi → santral fasiyal paralizi"}
+ ],
+ "kurul2627_notu": "2026-27 slaytı mevcut; 10 birimden 8'i y26 k2-62 ile eşleşti (III-IV-VI s22, V s25, VII s29, XII s40), X ve XI sayfaları y26'da bulunamadı. Ders kaydında bu dersin öğretim üyesi Dr. Öğr. Üyesi Serap Arslan (diğer Nöroloji derslerinden farklı); sayfa numaraları 2025-26'ya göre kaymış (ör. III-IV-VI s12 → s22), bu yüzden vurgu ağırlığı yeni slayttaki ayrıntı düzeyine göre yeniden bakılmalı. MLF/internükleer oftalmopleji ve IV. sinir çaprazlaşması yeni slaytta varsa göz hareketleri temasına eklenmeli."
+}

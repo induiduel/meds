@@ -1,0 +1,498 @@
+{
+ "ders": "k2-54",
+ "kod": "2s17",
+ "brans": "Psikiyatri",
+ "konu": "Yaygın Anksiyete Bozukluğu",
+ "kaynak": "Geçmiş yıl (2025-26) öğrenci derleme notu: psk3.2",
+ "y25": {
+  "key": "y25-k2-54-yaygin-anksiyete-bozuklugu",
+  "sayfalar": [
+   3,
+   4,
+   7,
+   10,
+   15
+  ]
+ },
+ "sayac": {
+  "birim": 6,
+  "A": 5,
+  "B": 0,
+  "C": 1,
+  "ogrenci_sorusu": 3,
+  "banka": 5,
+  "banka_kapsandi": 3
+ },
+ "birimler": [
+  {
+   "id": "psk-s14-b06",
+   "pdf": "psk",
+   "sayfa": 14,
+   "bolge": "r2c1+r2c2",
+   "tur": "slayt",
+   "baslik": "KLİNİK ÖZELLİKLER",
+   "metin": "Genel Görünüm ve davranış: genel bir huzursuzluk, endişeli yüz, gergin duruş, çabuk irkilme, çabuk kızma\nKonuşma ve ilişki kurma: seste heyecanlı bir titreklik, zor konuşma, fakat konuşması düzgündür.\nDuygulanım: bun, bungunluk, bunaltı şeklinde tarif edebilirler. Beraberinde sıklıkla ruhsal çökkünlük olabilir.\nBilişsel yetiler: yorucu olan sıkıntı nedeni ile dikkati çabuk dağılır, geçici unutkanlıklar olabilir.\nDüşünce süreci ve İçeriği: yakınmalarını heyecan ve sabırsızlıkla anlatmak istediği için düşünce hızlanmış gibi olabilir. Düşünce içeriğinde tasaları baskındır.\nBedensel ve Fizyolojik belirtiler: Kan basıncında yükselme, çarpıntı, kaslarda gerginlik, ağız kuruması, yüzde solukluk, kızarma, terleme, sık idrar ve gaita çıkışı, kusma, boğazda düğümlenme hissi, nefes almakta güçlük, hava açlığı, ellerde ayaklarda uyuşma, karıncalanma",
+   "el_yazisi": [
+    {
+     "metin": "otonomik aktivite artar.",
+     "hedef": "Bedensel ve Fizyolojik belirtiler",
+     "guven": "yuksek",
+     "alternatif": ""
+    }
+   ],
+   "isaretler": [
+    {
+     "tur": "sari",
+     "hedef": "düşünce hızlanmış gibi olabilir. Düşünce içeriğinde tasaları baskındır"
+    },
+    {
+     "tur": "sari",
+     "hedef": "Kan basıncında yükselme, çarpıntı, kaslarda gerginlik, ağız kuruması, yüzde solukluk, kızarma, terleme, sık idrar ve gaita çıkışı, kusma, boğazda düğümlenme hissi, nefes almakta güçlük, hava açlığı, ellerde ayaklarda uyuşma, karıncalanma"
+    }
+   ],
+   "sinyal": [
+    "cikmis",
+    "el_onemli",
+    "sari"
+   ],
+   "y25": {
+    "key": "y25-k2-54-yaygin-anksiyete-bozuklugu",
+    "sayfa": 7
+   },
+   "y26": null,
+   "duzeltme": [
+    {
+     "ham": "sesde",
+     "dogru": "seste",
+     "gerekce": "Slayttaki yazım hatası."
+    }
+   ],
+   "not_": null,
+   "ogrenci_sorulari": [
+    "psk-s12-b07"
+   ],
+   "puan": 58,
+   "oncelik": "A",
+   "vurgulu": [
+    "Kan basıncında yükselme, çarpıntı, kaslarda gerginlik, ağız kuruması, yüzde solukluk, kızarma, terleme, sık idrar ve gaita çıkışı, kusma, boğazda düğümlenme hissi, nefes almakta güçlük, hava açlığı, ellerde ayaklarda uyuşma, karıncalanma",
+    "düşünce hızlanmış gibi olabilir. Düşünce içeriğinde tasaları baskındır"
+   ]
+  },
+  {
+   "id": "psk-s14-b01",
+   "pdf": "psk",
+   "sayfa": 14,
+   "bolge": "r1c1",
+   "tur": "slayt",
+   "baslik": "Yaygın Anksiyete Bozukluğu – tanım ve epidemiyoloji",
+   "metin": "(YAB; belli bir nesneye, yere, organa, saplantılı düşüncelere ya da zorlantıya) odaklanmamış, yani belli bir düşünsel ya da devinimsel içeriği olmayan, organizmada yaygın ruhsal ve fizyolojik bunaltı belirtileri ile yaşanan bir bozukluktur.\nEn az 6 aylık bir dönem boyunca hemen her gün bir çok olay veya etkinlik hakkında aşırı kaygı ve endişe duyma olarak tanımlanır.\nYaşam boyu yaygınlık oranı %3-6.\nTemel sağlık hizmetlerine başvuran hastalarda en sık görülen anksiyete bozukluğu YAB'dir.\nKadınlarda erkeklere göre 2 kat daha fazladır.",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "daire",
+     "hedef": "En az 6 aylık"
+    },
+    {
+     "tur": "sari",
+     "hedef": "En az 6 aylık bir dönem boyunca hemen her gün bir çok olay veya etkinlik hakkında aşırı kaygı ve endişe duyma olarak tanımlanır"
+    },
+    {
+     "tur": "sari",
+     "hedef": "Yaşam boyu yaygınlık oranı %3-6"
+    },
+    {
+     "tur": "sari",
+     "hedef": "Temel sağlık hizmetlerine başvuran hastalarda en sık görülen anksiyete bozukluğu YAB"
+    },
+    {
+     "tur": "sari",
+     "hedef": "Kadınlarda erkeklere göre 2 kat daha fazladır"
+    }
+   ],
+   "sinyal": [
+    "sari",
+    "tekrar"
+   ],
+   "y25": {
+    "key": "y25-k2-54-yaygin-anksiyete-bozuklugu",
+    "sayfa": 3
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "banka_cikmis": [
+    "03779cb0de0d",
+    "q-25-26_d_nem_3_kurul_2-82-cs3"
+   ],
+   "puan": 55,
+   "oncelik": "A",
+   "vurgulu": [
+    "En az 6 aylık",
+    "En az 6 aylık bir dönem boyunca hemen her gün bir çok olay veya etkinlik hakkında aşırı kaygı ve endişe duyma olarak tanımlanır",
+    "Kadınlarda erkeklere göre 2 kat daha fazladır",
+    "Temel sağlık hizmetlerine başvuran hastalarda en sık görülen anksiyete bozukluğu YAB",
+    "Yaşam boyu yaygınlık oranı %3-6"
+   ]
+  },
+  {
+   "id": "psk-s14-b03",
+   "pdf": "psk",
+   "sayfa": 14,
+   "bolge": "r1c1+r2c1",
+   "tur": "slayt",
+   "baslik": "YAB Risk etmenleri",
+   "metin": "YAB Risk etmenleri\n- Çocukluk çağında kötü muamele görmüş olma\n- Düşük sosyo-ekonomik durum\n- Sorunları içe atma eğilimi\n- Çocukluktaki davranım bozuklukları",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "sari",
+     "hedef": "dört risk etmeninin tümü"
+    },
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "dört risk etmeninin tümü"
+    }
+   ],
+   "sinyal": [
+    "cikmis",
+    "sari"
+   ],
+   "y25": {
+    "key": "y25-k2-54-yaygin-anksiyete-bozuklugu",
+    "sayfa": 4
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "ogrenci_sorulari": [
+    "psk-s14-b05"
+   ],
+   "puan": 50,
+   "oncelik": "A",
+   "vurgulu": [
+    "dört risk etmeninin tümü"
+   ]
+  },
+  {
+   "id": "psk-s14-b07",
+   "pdf": "psk",
+   "sayfa": 14,
+   "bolge": "r1c2+r1c3",
+   "tur": "slayt",
+   "baslik": "TANI – DSM-5 YAB TANI KRİTERLERİ",
+   "metin": "A- En az 6 aylık bir sürenin çoğu gününde birtakım olaylar ya da etkinliklerle ilgili olarak aşırı bir kaygı ve endişe vardır.\nB- Kişi endişelerini denetim altına almakta güçlük çeker.\nC- Bu kaygı ve endişeye aşağıdaki 6 belirtiden 3 (ya da daha fazlası) eşlik eder. Not: Çocuklarda yalnızca bir maddenin olması yeterlidir.\n1- Huzursuzluk ya da gergin ya da sürekli diken üzerinde olma\n2- Kolay yorulma\n3- Odaklanmakta güçlük çekme ya da zihnin boşalması\n4- İrritabilite\n5- Kas gerginliği\n6- Uyku bozukluğu (uykuya dalmakta ya da sürdürmekte zorluk çekme, ya da dinlendirici olmayan uyku)\nD- Kaygı, endişe ya da bedensel belirtiler klinik açıdan belirgin bir sıkıntıya ya da toplumsal, işle ilgili alanlarda ya da önemli diğer işlevsellik alanlarında işlevsellikte düşmeye neden olur.\nE- Bu bozukluk bir maddenin ya da başka bir tıbbi durumun fizyolojisiyle ilgili etkilerine bağlanamaz.\nF- Bu bozukluk başka bir ruhsal bozukluk ile daha iyi açıklanamaz.",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "sari",
+     "hedef": "A, B, D, E, F ölçütleri ve 6 belirtinin her biri (Huzursuzluk…, Kolay yorulma, Odaklanmakta güçlük…, İrritabilite, Kas gerginliği, Uyku bozukluğu)"
+    }
+   ],
+   "sinyal": [
+    "sari",
+    "tekrar"
+   ],
+   "y25": {
+    "key": "y25-k2-54-yaygin-anksiyete-bozuklugu",
+    "sayfa": 10
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "banka_cikmis": [
+    "d3-k2-psi-008"
+   ],
+   "puan": 50,
+   "oncelik": "A",
+   "vurgulu": [
+    "A, B, D, E, F ölçütleri ve 6 belirtinin her biri (Huzursuzluk…, Kolay yorulma, Odaklanmakta güçlük…, İrritabilite, Kas gerginliği, Uyku bozukluğu)"
+   ]
+  },
+  {
+   "id": "psk-s14-b08",
+   "pdf": "psk",
+   "sayfa": 14,
+   "bolge": "r1c3",
+   "tur": "slayt",
+   "baslik": "GİDİŞ VE SONLANIŞ",
+   "metin": "- Yaygın anksiyete bozukluğu, semptomların şiddetinde zaman içinde değişimlerin gözlendiği kronik seyreden bir hastalıktır.\n- Yaşam olayları hastalığın başlamasında ve seyrinde etkilidir.\n- Tedaviye yanıtı iyi olmayan hastalarda, kadınlarda ve erken başlangıçlı olanlarda kötü gidiş daha fazla.\n- Özkıyım riski yüksek.",
+   "el_yazisi": [],
+   "isaretler": [],
+   "sinyal": [
+    "cikmis"
+   ],
+   "y25": {
+    "key": "y25-k2-54-yaygin-anksiyete-bozuklugu",
+    "sayfa": 15
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "ogrenci_sorulari": [
+    "psk-s14-b02"
+   ],
+   "puan": 40,
+   "oncelik": "A",
+   "vurgulu": []
+  },
+  {
+   "id": "psk-s14-b04",
+   "pdf": "psk",
+   "sayfa": 14,
+   "bolge": "r1c2",
+   "tur": "slayt",
+   "baslik": "Eşlik eden diğer psikiyatrik rahatsızlıklar",
+   "metin": "Eşlik eden diğer psikiyatrik rahatsızlıklar\n- %62-67'sinde depresyon ek tanısı mevcuttur.\n- %25 kadarında panik bozukluk görülür.\n- Distimik bozukluk ve madde kullanım bozukluğu da sıktır.",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "sari",
+     "hedef": "üç maddenin tümü"
+    }
+   ],
+   "sinyal": [
+    "sari"
+   ],
+   "y25": {
+    "key": "y25-k2-54-yaygin-anksiyete-bozuklugu",
+    "sayfa": 4
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "puan": 10,
+   "oncelik": "C",
+   "vurgulu": [
+    "üç maddenin tümü"
+   ]
+  }
+ ],
+ "ogrenci_sorulari": [
+  {
+   "id": "psk-s12-b07",
+   "pdf": "psk",
+   "sayfa": 12,
+   "bolge": "r1c2",
+   "tur": "cikmis_soru",
+   "baslik": "Anksiyetenin bilişsel belirtisi: dikkat eksikliği, konsantre olamama, unutkanlık",
+   "metin": "77. Aşağıdakilerden hangisi anksiyetenin bilişsel belirtileri arasında yer alır?\na. Korku, endişe ve kaygı\nb. Yerinde duramama ve hareketsizlik\nc. Dikkat eksikliği, konsantre olamama ve unutkanlık\nd. Kalp çarpıntısı, terleme ve nefes alamama\ne. Uyku düzensizliği ve iştah kaybı",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "daire",
+     "hedef": "c şıkkı (kırmızı daire)"
+    }
+   ],
+   "sinyal": [
+    "cikmis"
+   ],
+   "y25": {
+    "key": "y25-k2-54-yaygin-anksiyete-bozuklugu",
+    "sayfa": 7
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "cikmis": {
+    "kok": "Aşağıdakilerden hangisi anksiyetenin bilişsel belirtileri arasında yer alır?",
+    "siklar": [
+     "A) Korku, endişe ve kaygı",
+     "B) Yerinde duramama ve hareketsizlik",
+     "C) Dikkat eksikliği, konsantre olamama ve unutkanlık",
+     "D) Kalp çarpıntısı, terleme ve nefes alamama",
+     "E) Uyku düzensizliği ve iştah kaybı"
+    ],
+    "ogrenci_cevap": "C",
+    "banka_id": "final-2018-2019-q077",
+    "banka_yil": "2018-2019 final",
+    "banka_dogru": "C",
+    "tutarli": true,
+    "not": "Kitapçık fotoğrafı (pembe zemin yok). Banka konusu Yaygın Anksiyete Bozukluğu (k2-54); öğrenci panik bölümüne koymuş. Dayanak y25 k2-54 s07: 'Bilişsel yetiler: … dikkati çabuk dağılır, geçici unutkanlıklar olabilir'."
+   },
+   "bagli_birim": "psk-s14-b06",
+   "benzerlik": 0.712
+  },
+  {
+   "id": "psk-s14-b02",
+   "pdf": "psk",
+   "sayfa": 14,
+   "bolge": "r1c1",
+   "tur": "cikmis_soru",
+   "baslik": "YAB hakkında yanlış bilgi",
+   "metin": "Yaygın Anksiyete Bozukluğu hakkında verilen bilgilerden hangisi yanlıştır?",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "pembe",
+     "hedef": "tüm soru bloğu"
+    },
+    {
+     "tur": "daire",
+     "hedef": "3 Otonomik aktivitede azalma mevcuttur (kırmızı çember + çarpı, onay kutusu)"
+    },
+    {
+     "tur": "ok",
+     "hedef": "1, 2, 4, 5 numaralı doğru ifadelere kırmızı tik"
+    }
+   ],
+   "sinyal": [
+    "cikmis",
+    "tekrar"
+   ],
+   "y25": {
+    "key": "y25-k2-54-yaygin-anksiyete-bozuklugu",
+    "sayfa": 10
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "cikmis": {
+    "kok": "Yaygın Anksiyete Bozukluğu hakkında verilen bilgilerden hangisi yanlıştır?",
+    "siklar": [
+     "1) Hemen her gün olan bir çok olay ya da etkinlik hakkında aşırı anksiyete ve endişe duyma vardır.",
+     "2) Tedaviye başvuranlarda semptomlar genellikle yıllar önce başlamıştır.",
+     "3) Otonomik aktivitede azalma mevcuttur.",
+     "4) Tanı için, belirtiler en az altı ay sürmelidir.",
+     "5) Belirtiler bir ilacın etkisine bağlı olmamalıdır."
+    ],
+    "ogrenci_cevap": "C (3)",
+    "banka_id": "03779cb0de0d",
+    "banka_yil": "2020-2021",
+    "banka_dogru": "C) Otonomik aktivitede azalma mevcuttur.",
+    "tutarli": true,
+    "not": "Bankadaki sürümün kökü 'DSM-5 tanı kriterlerinden biri değildir' ve 2. şıkkı 'Endişeyi denetim altında tutmakta güçlük çeker'; anahtar cevap aynı. Öğrenci doğru ifadelere tik, yanlışa çarpı + çember koymuş; sayfanın altında 'otonomik aktivite artar' notuyla bağlantılı."
+   },
+   "bagli_birim": "psk-s14-b08",
+   "benzerlik": 0.81
+  },
+  {
+   "id": "psk-s14-b05",
+   "pdf": "psk",
+   "sayfa": 14,
+   "bolge": "r2c1",
+   "tur": "cikmis_soru",
+   "baslik": "YAB risk etmeni olmayan",
+   "metin": "78) Aşağıdakilerden hangisi yaygın anksiyete bozukluğu risk etmenlerinden biri değildir?",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "pembe",
+     "hedef": "tüm soru bloğu"
+    },
+    {
+     "tur": "sari",
+     "hedef": "E) Madde kullanımının olması"
+    },
+    {
+     "tur": "daire",
+     "hedef": "E) Madde kullanımının olması (kırmızı çember)"
+    },
+    {
+     "tur": "ok",
+     "hedef": "A–D şıklarına kırmızı tik (risk etmeni olanlar)"
+    }
+   ],
+   "sinyal": [
+    "cikmis",
+    "tekrar"
+   ],
+   "y25": {
+    "key": "y25-k2-54-yaygin-anksiyete-bozuklugu",
+    "sayfa": 4
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "cikmis": {
+    "kok": "78) Aşağıdakilerden hangisi yaygın anksiyete bozukluğu risk etmenlerinden biri değildir?",
+    "siklar": [
+     "A) Çocukluktaki davranım bozuklukları",
+     "B) Sorunları içe atma eğilimi",
+     "C) Düşük sosyo-ekonomik durum",
+     "D) Çocukluk çağında kötü muamele görmüş olma",
+     "E) Madde kullanımının olması"
+    ],
+    "ogrenci_cevap": "E",
+    "banka_id": "past-q-I_SKENDERUN_TI_Mu_du_rlu_g_u_ne0__1__230709_230251-78",
+    "banka_yil": "Geçmiş Yıllar Çıkmışı (Arşiv), Kurul 2",
+    "banka_dogru": "E",
+    "tutarli": true,
+    "not": "Madde kullanım bozukluğu slaytta risk etmeni değil 'eşlik eden' bozukluk olarak geçer (s04)."
+   },
+   "bagli_birim": "psk-s14-b03",
+   "benzerlik": 0.737
+  }
+ ],
+ "banka": [
+  {
+   "id": "dbae14101597",
+   "ders": "k2-54",
+   "yillar": [
+    "2020-2021"
+   ],
+   "kok": "Aşağıdakilerden hangisi, anksiyete bozukluklarının tedavisinde sık kullanılan ilaçlardan biri değildir?",
+   "dogru": "Valproik asit",
+   "kopyalar": [],
+   "birim": "psk-s14-b04",
+   "benzerlik": 0.524,
+   "kapsandi": false,
+   "notta_yapistirilmis": false
+  },
+  {
+   "id": "03779cb0de0d",
+   "ders": "k2-54",
+   "yillar": [
+    "2020-2021"
+   ],
+   "kok": "Aşağıdakilerden hangisi Yaygın Anksiyete Bozukluğu'nun (YAB) DSM-5 tanı kriterlerinden biri değildir?",
+   "dogru": "Otonomik aktivitede azalma mevcuttur.",
+   "kopyalar": [],
+   "birim": "psk-s14-b01",
+   "benzerlik": 0.67,
+   "kapsandi": true,
+   "notta_yapistirilmis": true
+  },
+  {
+   "id": "past-q-I_SKENDERUN_TI_Mu_du_rlu_g_u_ne0__1__230709_230251-78",
+   "ders": "k2-54",
+   "yillar": [
+    "Geçmiş Yıllar Çıkmışı (Arşiv)"
+   ],
+   "kok": "Aşağıdakilerden hangisi yaygın anksiyete bozukluğu risk etmenlerinden biri değildir?",
+   "dogru": "Madde kullanımının olması",
+   "kopyalar": [],
+   "birim": "psk-s14-b08",
+   "benzerlik": 0.58,
+   "kapsandi": false,
+   "notta_yapistirilmis": true
+  },
+  {
+   "id": "d3-k2-psi-008",
+   "ders": "k2-54",
+   "yillar": [
+    "2021-2026"
+   ],
+   "kok": "DSM-5 tanı ölçütlerine göre yaygın anksiyete bozukluğu tanısı koyabilmek için aşırı kaygı ve kuruntunun (beklenti anksiyetesi) en az ne kadar süre boyunca günlerin çoğunda mevcut olması gerekir?",
+   "dogru": "6 ay",
+   "kopyalar": [],
+   "birim": "psk-s14-b07",
+   "benzerlik": 0.738,
+   "kapsandi": true,
+   "notta_yapistirilmis": false
+  },
+  {
+   "id": "q-25-26_d_nem_3_kurul_2-82-cs3",
+   "ders": "k2-54",
+   "yillar": [
+    "2025-2026"
+   ],
+   "kok": "Yaygın anksiyete bozukluğu ile ilgili aşağıdakilerden hangisi yanlıştır?",
+   "dogru": "Tanı için belirtilerin en az 1 ay sürmesi yeterlidir",
+   "kopyalar": [],
+   "birim": "psk-s14-b01",
+   "benzerlik": 0.704,
+   "kapsandi": true,
+   "notta_yapistirilmis": false
+  }
+ ]
+}

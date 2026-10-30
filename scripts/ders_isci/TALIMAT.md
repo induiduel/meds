@@ -175,6 +175,9 @@ iyi yazman yeterli.
   (`--duzelt` yalnız kesik zincir ve sızan ipucunu onarır; diğerlerini sen düzelt).
 
 ### 4. `ornek_sorular.json`
+> **Kurul 2+ (AGENTS 28):** soru dağılımı geçmiş yıl öğrenci önem notunun öncelik haritasına uyar (`docs/OGRENCI_ONEM/<ders>.md` §2 soru
+> payı ±10 puan): A birimi ≥2 soru (farklı kalıp), B ≥1; §7 "notta olmayan ama sorulmuş" çıkmışların bilgisi de soruya çevrilir. Kapı:
+> `python3 scripts/ogrenci_onem/kapi.py <ders>`.
 ```json
 {"sorular": [{"id": "<ders_id>-q01", "kazanim": 1, "zorluk": "kolay|orta|zor", "soru": "...",
   "secenekler": {"A": "...", "B": "...", "C": "...", "D": "...", "E": "..."}, "dogru": "C",

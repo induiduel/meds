@@ -1,0 +1,528 @@
+{
+ "ders": "k2-45",
+ "kod": "2s14",
+ "brans": "Psikiyatri",
+ "konu": "İntihar ve Kendine Zarar Verme",
+ "kaynak": "Geçmiş yıl (2025-26) öğrenci derleme notu: psk3.2",
+ "y25": {
+  "key": "y25-k2-45-intihar-ve-kendine-zarar-verme",
+  "sayfalar": [
+   7,
+   9,
+   10,
+   14,
+   19,
+   24,
+   25,
+   31,
+   34,
+   38
+  ]
+ },
+ "sayac": {
+  "birim": 10,
+  "A": 4,
+  "B": 0,
+  "C": 6,
+  "ogrenci_sorusu": 2,
+  "banka": 3,
+  "banka_kapsandi": 2
+ },
+ "birimler": [
+  {
+   "id": "psk-s17-b02",
+   "pdf": "psk",
+   "sayfa": 17,
+   "bolge": "r1c1",
+   "tur": "slayt",
+   "baslik": "Neden? Gençler",
+   "metin": "Yoğun psikolojik, biyolojik ve sosyal değişiklikler\n- Çevresel streslerin artması\n- Bireyselleşme isteği; sosyal destek sistemlerinin desteğinin azalması\n- Psikiyatrik hastalıklar; alkol madde kullanımının başlaması\nGelecekle ilgili belirsizlik\nSorun çözme becerilerinin yetersiz kalması",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "daire",
+     "hedef": "Bireyselleşme isteği"
+    }
+   ],
+   "sinyal": [
+    "cikmis"
+   ],
+   "y25": {
+    "key": "y25-k2-45-intihar-ve-kendine-zarar-verme",
+    "sayfa": 9
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "puan": 40,
+   "oncelik": "A",
+   "vurgulu": [
+    "Bireyselleşme isteği"
+   ]
+  },
+  {
+   "id": "psk-s17-b03",
+   "pdf": "psk",
+   "sayfa": 17,
+   "bolge": "r1c1+r2c1",
+   "tur": "slayt",
+   "baslik": "Neden? Yaşlılar",
+   "metin": "Yaşamak için nedeni olmama\nKendini gereksiz hissetme\nBedensel düşkünlük ve hastalıklar; girişimler daha ölümcül\nÖzel durum pasif intiharlar (yeme içme reddi, yaşamsal ilaçları kullanmama)",
+   "el_yazisi": [],
+   "isaretler": [],
+   "sinyal": [
+    "cikmis"
+   ],
+   "y25": {
+    "key": "y25-k2-45-intihar-ve-kendine-zarar-verme",
+    "sayfa": 10
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "ogrenci_sorulari": [
+    "psk-s17-b04"
+   ],
+   "puan": 40,
+   "oncelik": "A",
+   "vurgulu": []
+  },
+  {
+   "id": "psk-s17-b12",
+   "pdf": "psk",
+   "sayfa": 17,
+   "bolge": "r1c3",
+   "tur": "slayt",
+   "baslik": "Kendine zarar verme – sonuç tanımı ve kişilik bozukluğu ilişkisi",
+   "metin": "Kendine zarar verme davranışı olan psikiyatrik olgular incelendiğinde, bu davranışın özellikle borderline kişilik bozukluğunda olmak üzere en sık kişilik bozukluklarında görüldüğü bildirilmiştir.",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "daire",
+     "hedef": "özellikle borderline kişilik bozukluğunda olmak üzere en sık kişilik bozukluklarında"
+    },
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "incelendiğinde / en sık kişilik bozukluklarında"
+    }
+   ],
+   "sinyal": [
+    "cikmis"
+   ],
+   "y25": {
+    "key": "y25-k2-45-intihar-ve-kendine-zarar-verme",
+    "sayfa": 38
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "ogrenci_sorulari": [
+    "psk-s17-b09"
+   ],
+   "puan": 40,
+   "oncelik": "A",
+   "vurgulu": [
+    "incelendiğinde / en sık kişilik bozukluklarında",
+    "özellikle borderline kişilik bozukluğunda olmak üzere en sık kişilik bozukluklarında"
+   ]
+  },
+  {
+   "id": "psk-s17-b08",
+   "pdf": "psk",
+   "sayfa": 17,
+   "bolge": "r2c2",
+   "tur": "slayt",
+   "baslik": "İntihar hakkında genelden özele konuşulmalı",
+   "metin": "- Ölmüş olmayı istedi mi?\n- İntihar düşüncesi var mı?\n- İntihar planı var mı?\n- Planının ayrıntıları neler?\n- İntihar girişiminde bulundu mu; bulunduysa ayrıntıları neler?",
+   "el_yazisi": [],
+   "isaretler": [],
+   "sinyal": [],
+   "y25": {
+    "key": "y25-k2-45-intihar-ve-kendine-zarar-verme",
+    "sayfa": 25
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "banka_cikmis": [
+    "d3-k2-psi-003",
+    "q-25-26_d_nem_3_kurul_2-82"
+   ],
+   "puan": 35,
+   "oncelik": "A",
+   "vurgulu": []
+  },
+  {
+   "id": "psk-s17-b05",
+   "pdf": "psk",
+   "sayfa": 17,
+   "bolge": "r1c2",
+   "tur": "slayt",
+   "baslik": "4- İntihar Girişimi öyküsü",
+   "metin": "4- İntihar Girişimi öyküsü\nEn önemli risk etmeni!!!\n- Tamamlanmış intiharda\n- %50'sinde en az bir kez intihar girişimi\n- %25 önceki yıl içinde intihar girişimi",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "sari",
+     "hedef": "En önemli risk etmeni!!!"
+    },
+    {
+     "tur": "sari",
+     "hedef": "Tamamlanmış intiharda"
+    },
+    {
+     "tur": "sari",
+     "hedef": "%50'sinde en az bir kez intihar girişimi"
+    },
+    {
+     "tur": "sari",
+     "hedef": "%25 önceki yıl içinde intihar girişimi"
+    }
+   ],
+   "sinyal": [
+    "sari"
+   ],
+   "y25": {
+    "key": "y25-k2-45-intihar-ve-kendine-zarar-verme",
+    "sayfa": 14
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "puan": 10,
+   "oncelik": "C",
+   "vurgulu": [
+    "%25 önceki yıl içinde intihar girişimi",
+    "%50'sinde en az bir kez intihar girişimi",
+    "En önemli risk etmeni!!!",
+    "Tamamlanmış intiharda"
+   ]
+  },
+  {
+   "id": "psk-s17-b07",
+   "pdf": "psk",
+   "sayfa": 17,
+   "bolge": "r1c2+r2c2",
+   "tur": "slayt",
+   "baslik": "KORUYUCU ETMENLER",
+   "metin": "- Aile ve sosyal desteğin güçlü olması\n- Gebelik\n- 18 yaşından küçük çocuk sahibi olma\n- Aileye karşı sorumluluk hissi\n- Sevdiklerini üzme konusunda suçluluk\n- İntihara karşı olumsuz tutum ve değerler\n- Kültür dini manevi değerler",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "sari",
+     "hedef": "yedi koruyucu etmenin tümü"
+    }
+   ],
+   "sinyal": [
+    "sari"
+   ],
+   "y25": {
+    "key": "y25-k2-45-intihar-ve-kendine-zarar-verme",
+    "sayfa": 24
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "puan": 10,
+   "oncelik": "C",
+   "vurgulu": [
+    "yedi koruyucu etmenin tümü"
+   ]
+  },
+  {
+   "id": "psk-s17-b10",
+   "pdf": "psk",
+   "sayfa": 17,
+   "bolge": "r1c3",
+   "tur": "slayt",
+   "baslik": "Kendine zarar verme (self-injury) – tanım",
+   "metin": "Kendine zarar verme davranışı (self-injury) ile ilgili tanımları gözden geçirecek olursak en önemli özellikler arasında, vücudunun belirli bölümlerine zarar vermesi, tekrarlayıcı olması, bilinçli olmaması, ölümcül olmaması, yaşamı tehdit etmemesi, ortama uyamamanın ve tahammülsüzlüğe karşın kendine yardım etmesi olarak (belirtmişlerdir).\n[s32] Sonuç olarak, kendine zarar verme davranışı tekrarlayıcı, kişinin bilinçli ölüm isteği olmadan, isteyerek ve amaçlı olarak yapılan, doku hasarı ile sonuçlanan, kendi bedenine yönelik girişimidir.",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "sari",
+     "hedef": "self-injury tanım maddesinin tamamı"
+    },
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "vücudunun belirli bölümlerine zarar vermesi, tekrarlayıcı olması, bilinçli olmaması, ölümcül olmaması, yaşamı tehdit etmemesi, ortama uyamamanın ve tahammülsüzlüğe karşın kendine yardım etmesi"
+    }
+   ],
+   "sinyal": [
+    "sari"
+   ],
+   "y25": {
+    "key": "y25-k2-45-intihar-ve-kendine-zarar-verme",
+    "sayfa": 31
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "puan": 10,
+   "oncelik": "C",
+   "vurgulu": [
+    "self-injury tanım maddesinin tamamı",
+    "vücudunun belirli bölümlerine zarar vermesi, tekrarlayıcı olması, bilinçli olmaması, ölümcül olmaması, yaşamı tehdit etmemesi, ortama uyamamanın ve tahammülsüzlüğe karşın kendine yardım etmesi"
+   ]
+  },
+  {
+   "id": "psk-s17-b01",
+   "pdf": "psk",
+   "sayfa": 17,
+   "bolge": "r1c1",
+   "tur": "slayt",
+   "baslik": "İntiharda risk etmenleri",
+   "metin": "İntiharda risk etmenleri: Sosyodemografik risk etmenleri; İntihar düşüncesinin ciddiyeti; İntihar planı, ayrıntıları, kurtulma olasılığı; Geçmiş intihar girişimlerinin öyküsü; Kişinin hayatına son vermeyi istemesinin nedenleri; Psikiyatrik tıbbi hastalıklar; Çevresel etmenler; Sosyal destek; Psikiyatrik muayene",
+   "el_yazisi": [
+    {
+     "metin": "erkek",
+     "hedef": "Sosyodemografik risk etmenleri",
+     "guven": "yuksek",
+     "alternatif": ""
+    }
+   ],
+   "isaretler": [
+    {
+     "tur": "daire",
+     "hedef": "'erkek' notu (Sosyodemografik risk etmenleri kutusunun üstünde)"
+    }
+   ],
+   "sinyal": [
+    "el_onemli"
+   ],
+   "y25": {
+    "key": "y25-k2-45-intihar-ve-kendine-zarar-verme",
+    "sayfa": 7
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "puan": 8,
+   "oncelik": "C",
+   "vurgulu": [
+    "'erkek' notu (Sosyodemografik risk etmenleri kutusunun üstünde)"
+   ]
+  },
+  {
+   "id": "psk-s17-b11",
+   "pdf": "psk",
+   "sayfa": 17,
+   "bolge": "r1c3",
+   "tur": "slayt",
+   "baslik": "Kendine zarar verme davranışı türleri",
+   "metin": "1. Tipik kendine zarar verme davranışları: Kafa vurmak, kendine vurmak, dudak ısırmak, tırnak yemek, derisini çimdiklemek ya da tırmalamak, kendini ısırmak ve saçını yolmak.\n2. Psikotik kendine zarar verme davranışları: Göz çıkarmak ve organ kesmek.\n3. Kompulsif kendine zarar verme davranışları: Saç yolmak, deriyi çimdiklemek ve tırnak yemek.\n4. Dürtüsel kendine zarar verme davranışları: Kendini kesmek, kendini yakmak ve kendine vurmak.",
+   "el_yazisi": [
+    {
+     "metin": "kendini kesmek en sık",
+     "hedef": "Tipik kendine zarar verme davranışları (yanında, çember içinde)",
+     "guven": "yuksek",
+     "alternatif": ""
+    }
+   ],
+   "isaretler": [
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "Tipik kendine zarar verme davranışları"
+    },
+    {
+     "tur": "daire",
+     "hedef": ": Kafa"
+    },
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "vurmak, kendine vurmak, dudak ısırmak, tırnak yemek, kendini ısırmak ve saçını yolmak"
+    },
+    {
+     "tur": "daire",
+     "hedef": "'kendini kesmek en sık' notu"
+    }
+   ],
+   "sinyal": [
+    "el_onemli"
+   ],
+   "y25": {
+    "key": "y25-k2-45-intihar-ve-kendine-zarar-verme",
+    "sayfa": 34
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "puan": 8,
+   "oncelik": "C",
+   "vurgulu": [
+    "'kendini kesmek en sık' notu",
+    ": Kafa",
+    "Tipik kendine zarar verme davranışları",
+    "vurmak, kendine vurmak, dudak ısırmak, tırnak yemek, kendini ısırmak ve saçını yolmak"
+   ]
+  },
+  {
+   "id": "psk-s17-b06",
+   "pdf": "psk",
+   "sayfa": 17,
+   "bolge": "r1c2",
+   "tur": "slayt",
+   "baslik": "Tamamlanmış intiharlar",
+   "metin": "Tamamlanmış intiharlar\n- Duygudurum bozukluğu %60\n[s20] İntihar girişiminde bulunan kişilerin yaklaşık %40'ında tıbbi hastalıklar olduğu bildirilmiş (60 yaş üstünde %70)",
+   "el_yazisi": [],
+   "isaretler": [],
+   "sinyal": [],
+   "y25": {
+    "key": "y25-k2-45-intihar-ve-kendine-zarar-verme",
+    "sayfa": 19
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "puan": 0,
+   "oncelik": "C",
+   "vurgulu": []
+  }
+ ],
+ "ogrenci_sorulari": [
+  {
+   "id": "psk-s17-b04",
+   "pdf": "psk",
+   "sayfa": 17,
+   "bolge": "r2c1",
+   "tur": "cikmis_soru",
+   "baslik": "Yaşlılarda intihar girişimi nedeni olmayan",
+   "metin": "Aşağıdakilerden hangisi, yaşlılarda intihar girişimi nedenlerinden biri değildir?",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "pembe",
+     "hedef": "soru kökü"
+    },
+    {
+     "tur": "kutu",
+     "hedef": "1 Bireyselleşme isteği (onay kutusu)"
+    }
+   ],
+   "sinyal": [
+    "cikmis",
+    "tekrar"
+   ],
+   "y25": {
+    "key": "y25-k2-45-intihar-ve-kendine-zarar-verme",
+    "sayfa": 10
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "cikmis": {
+    "kok": "Aşağıdakilerden hangisi, yaşlılarda intihar girişimi nedenlerinden biri değildir?",
+    "siklar": [
+     "1) Bireyselleşme isteği",
+     "2) Yaşamak için nedeni olmama",
+     "3) Kendini gereksiz hissetme",
+     "4) Bedensel hastalıklar",
+     "5) Psikiyatrik hastalıklar"
+    ],
+    "ogrenci_cevap": "A (1)",
+    "banka_id": "2cc678599118",
+    "banka_yil": "2020-2021 (bankada Kurul 6, Yaşlılığa Özgü Ruhsal Sorunlar)",
+    "banka_dogru": "A",
+    "tutarli": true,
+    "not": "Bireyselleşme isteği gençlerde intihar nedenidir (s09); öğrenci gençler slaytında bu ifadeyi çemberlemiş."
+   },
+   "bagli_birim": "psk-s17-b03",
+   "benzerlik": 0.817
+  },
+  {
+   "id": "psk-s17-b09",
+   "pdf": "psk",
+   "sayfa": 17,
+   "bolge": "r1c3",
+   "tur": "cikmis_soru",
+   "baslik": "Self-mutilasyon için doğru olan",
+   "metin": "52. Self-mutilasyon için hangisi doğrudur?",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "a, b, c şıkları kırmızıyla üstü çizili (elenmiş)"
+    }
+   ],
+   "sinyal": [
+    "cikmis"
+   ],
+   "y25": {
+    "key": "y25-k2-45-intihar-ve-kendine-zarar-verme",
+    "sayfa": 38
+   },
+   "y26": null,
+   "duzeltme": [
+    {
+     "ham": "Selfmutilasyon",
+     "dogru": "Self-mutilasyon",
+     "gerekce": "Yazım."
+    }
+   ],
+   "not_": null,
+   "cikmis": {
+    "kok": "52. Selfmutilasyon için hangisi doğrudur?",
+    "siklar": [
+     "a. Amaç başkalarına zarar vermektir",
+     "b. Borderline kişilik bozukluğunda nadiren görülür",
+     "c. Amaç intihar etmektir",
+     "d. Genellikle acı hissederler",
+     "e. Genellikle madde bulamadıklarında veya engellendiklerinde yaparlar"
+    ],
+    "ogrenci_cevap": "işaretsiz (a, b, c elenmiş; d ve e açık)",
+    "banka_id": "past-1790877044892-240475",
+    "banka_yil": "2021-2022",
+    "banka_dogru": "E",
+    "tutarli": true,
+    "not": "Gri fotoğraflanmış basılı soru (pembe değil), kesim 'Kendine zarar verme – self-injury' başlığının yanında. Öğrenci kesin cevap işaretlememiş; elemeleri banka cevabı E ile çelişmiyor. b şıkkı aynı sayfadaki 'en sık borderline kişilik bozukluğunda' notuyla çürütülüyor."
+   },
+   "bagli_birim": "psk-s17-b12",
+   "benzerlik": 0.69
+  }
+ ],
+ "banka": [
+  {
+   "id": "d3-k2-psi-003",
+   "ders": "k2-45",
+   "yillar": [
+    "2021-2026"
+   ],
+   "kok": "Daha önce intihar girişimi öyküsü bulunan, 'ölsem de her şey bitse' şeklinde aktif intihar düşüncelerini ifade eden ve yalnız yaşayan 22 yaşındaki bir hastada hekimin acil yaklaşımı ne olmalıdır?",
+   "dogru": "Hastayı acil yatırarak kapalı serviste yakın intihar gözetimine almak",
+   "kopyalar": [],
+   "birim": "psk-s17-b08",
+   "benzerlik": 0.651,
+   "kapsandi": true,
+   "notta_yapistirilmis": false
+  },
+  {
+   "id": "past-1790877044892-240475",
+   "ders": "k2-45",
+   "yillar": [
+    "2021-2022",
+    "Geçmiş Yıllar Çıkmışı (Arşiv)"
+   ],
+   "kok": "Self-mutilasyon (kendine zarar verme) için aşağıdakilerden hangisi doğrudur?",
+   "dogru": "Genellikle madde bulamadıklarında veya engellendiklerinde yaparlar",
+   "kopyalar": [],
+   "birim": "psk-s17-b10",
+   "benzerlik": 0.585,
+   "kapsandi": false,
+   "notta_yapistirilmis": true
+  },
+  {
+   "id": "q-25-26_d_nem_3_kurul_2-82",
+   "ders": "k2-45",
+   "yillar": [
+    "2025-2026"
+   ],
+   "kok": "Daha önce intihar girişiminde bulunmuş genç bir kızın son zamanlarda okula ve derslere gitmediği, \"Ölsem de kurtulsam, her şey bitse\" tarzında söylemleri olduğu bilinmektedir. Ailesinden uzakta, evde tek başına yaşamakta",
+   "dogru": "Yatış verip hastayı yakından takip etmek",
+   "kopyalar": [],
+   "birim": "psk-s17-b08",
+   "benzerlik": 0.61,
+   "kapsandi": true,
+   "notta_yapistirilmis": false
+  }
+ ]
+}

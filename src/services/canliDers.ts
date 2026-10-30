@@ -471,7 +471,7 @@ export function registerCanliDersRoutes(app: Express) {
         vp.forEach((p: any, i: number) => {
           const cs = Array.isArray(p?.cumleler) ? p.cumleler : [];
           if (!cs.length || sade(cs.map((c: any) => c.ses).join(' ')) !== sade(pars[i].t)) return;
-          if (!cs.some((c: any) => (c.ekran && sade(c.ekran) !== sade(c.ses)) || c.vurgu?.length || c.cikmis?.length || c.slayt_adim != null)) return;
+          if (!cs.some((c: any) => (c.ekran && sade(c.ekran) !== sade(c.ses)) || c.vurgu?.length || c.cikmis?.length || c.slayt_adim != null || c.ogrenci?.oncelik)) return;
           out[String(i)] = cs.map((c: any) => ({
             e: String(c.ekran || ''),
             d: Number(c.duzey) || 0,
@@ -480,6 +480,8 @@ export function registerCanliDersRoutes(app: Express) {
             // slayt_adim şemada adım KİMLİĞİ ("k2-07-d-s05", konusma_v2.py) → destenin slideNumber'ı (eski sayı biçimi de kabul)
             a: Number.isFinite(c.slayt_adim) ? c.slayt_adim : (/-s(\d+)$/.exec(String(c.slayt_adim || '')) ? Number(/-s(\d+)$/.exec(String(c.slayt_adim))![1]) : null),
             s: c.spot ?? null,
+            // geçmiş yıl öğrenci notunda en çok çalışılan yer (scripts/ogrenci_onem, OGRENCI_ONEM_YONTEMI.md): A çıkmış kanıtlı, B vurgulu
+            o: c.ogrenci?.oncelik === 'A' || c.ogrenci?.oncelik === 'B' ? c.ogrenci.oncelik : null,
           }));
         });
         return Object.keys(out).length ? { deste: desteId, p: out } : null;

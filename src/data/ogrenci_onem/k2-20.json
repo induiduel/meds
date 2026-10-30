@@ -1,0 +1,549 @@
+{
+ "ders": "k2-20",
+ "kod": "2s04",
+ "brans": "Psikiyatri",
+ "konu": "Psikiyatrik Bozukluklarda Uygulanan Tedaviler",
+ "kaynak": "Geçmiş yıl (2025-26) öğrenci derleme notu: psk3.2",
+ "y25": {
+  "key": "y25-k2-20-psikiyatrik-tedaviler",
+  "sayfalar": [
+   2,
+   4,
+   6,
+   11,
+   14,
+   17,
+   20,
+   23
+  ]
+ },
+ "sayac": {
+  "birim": 8,
+  "A": 3,
+  "B": 2,
+  "C": 3,
+  "ogrenci_sorusu": 1,
+  "banka": 6,
+  "banka_kapsandi": 5
+ },
+ "birimler": [
+  {
+   "id": "psk-s06-b04",
+   "pdf": "psk",
+   "sayfa": 6,
+   "bolge": "r2c1",
+   "tur": "slayt",
+   "baslik": "EKT yan etkileri",
+   "metin": "Yan etkiler\nSantral Sinir Sistemi: Konfüzyon, Sersemlik, Baş ağrısı, Ajitasyon, Amnezi (Anterograd/Retrograd Amnezi)\nKardiyovasküler Sistem: Hipertansiyon, Taşikardi, Aritmi, Bradikardi (s12)\nKas ve İskelet Sistemi: Myoklonik-tonik kasılma, Kırık ve çıkıklar, Kas ve eklem ağrıları (s12)",
+   "el_yazisi": [
+    {
+     "metin": "→ beyne zarar vermez",
+     "hedef": "Yan etkiler (s13: çalışmalar EKT'nin beyine zarar vermediğini göstermiştir)",
+     "guven": "yuksek"
+    }
+   ],
+   "isaretler": [
+    {
+     "tur": "yesil",
+     "hedef": "Konfüzyon; Sersemlik; Baş ağrısı; Ajitasyon; Amnezi"
+    }
+   ],
+   "sinyal": [
+    "cikmis",
+    "el_onemli",
+    "sari"
+   ],
+   "y25": {
+    "key": "y25-k2-20-psikiyatrik-tedaviler",
+    "sayfa": 11
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "ogrenci_sorulari": [
+    "psk-s06-b05"
+   ],
+   "banka_cikmis": [
+    "past-1790877044403-707646"
+   ],
+   "puan": 88,
+   "oncelik": "A",
+   "vurgulu": [
+    "Konfüzyon; Sersemlik; Baş ağrısı; Ajitasyon; Amnezi"
+   ]
+  },
+  {
+   "id": "psk-s06-b06",
+   "pdf": "psk",
+   "sayfa": 6,
+   "bolge": "r2c1",
+   "tur": "slayt",
+   "baslik": "EKT kontrendikasyon ve ilaç etkileşimi",
+   "metin": "EKT için mutlak kontrendikasyon yoktur. (s13)\nBenzodiazepinler ve antiepileptikler nöbet eşiğini arttırdığından uygulamaya başlamadan önce kesilmelidir.",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "yesil",
+     "hedef": "EKT için mutlak kontrendikasyon yoktur.; Benzodiazepinler ve antiepileptikler nöbet eşiğini arttırdığından uygulamaya başlamadan önce kesilmelidir."
+    },
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "eşiğini arttırdığından"
+    }
+   ],
+   "sinyal": [
+    "kirmizi_cizgi",
+    "sari"
+   ],
+   "y25": {
+    "key": "y25-k2-20-psikiyatrik-tedaviler",
+    "sayfa": 14
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "banka_cikmis": [
+    "past-1790877044441-624411",
+    "past-1790877044385-678651"
+   ],
+   "puan": 50,
+   "oncelik": "A",
+   "vurgulu": [
+    "EKT için mutlak kontrendikasyon yoktur.; Benzodiazepinler ve antiepileptikler nöbet eşiğini arttırdığından uygulamaya başlamadan önce kesilmelidir.",
+    "eşiğini arttırdığından"
+   ]
+  },
+  {
+   "id": "psk-s06-b07",
+   "pdf": "psk",
+   "sayfa": 6,
+   "bolge": "r1c2/r1c3",
+   "tur": "slayt",
+   "baslik": "TMS",
+   "metin": "TMS\nDepresyonda sınırlı bir etkiye sahip olduğu, PH'da orta düzeyde etkili olduğu bildiriliyor\nPsikoz için etkisiz\nStimülasyon (Derin TMS) kısa süreli sigarayı bırakmada FDA onayı almış ve minimal yan etkilerle\nDerin transkraniyal manyetik stimülasyon (dTMS), derin ve bilateral beyin bölgelerine ulaşabilen umut verici bir nöromodülasyon tekniği olarak ortaya çıkmıştır. (s19)",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "yesil",
+     "hedef": "Depresyonda sınırlı bir etkiye sahip olduğu, PH'da orta düzeyde etkili olduğu bildiriliyor; Psikoz için etkisiz; Derin TMS kısa süreli sigarayı bırakmada FDA onayı almış; dTMS satırları"
+    },
+    {
+     "tur": "daire",
+     "hedef": "Psikoz için etkisiz"
+    },
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "(Derin TMS) kısa süreli sigarayı bırakmada FDA onayı almış"
+    }
+   ],
+   "sinyal": [
+    "sari"
+   ],
+   "y25": {
+    "key": "y25-k2-20-psikiyatrik-tedaviler",
+    "sayfa": 17
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "banka_cikmis": [
+    "d3-k2-psi-011",
+    "q-25-26_d_nem_3_kurul_2-78"
+   ],
+   "puan": 45,
+   "oncelik": "A",
+   "vurgulu": [
+    "(Derin TMS) kısa süreli sigarayı bırakmada FDA onayı almış",
+    "Depresyonda sınırlı bir etkiye sahip olduğu, PH'da orta düzeyde etkili olduğu bildiriliyor; Psikoz için etkisiz; Derin TMS kısa süreli sigarayı bırakmada FDA onayı almış; dTMS satırları",
+    "Psikoz için etkisiz"
+   ]
+  },
+  {
+   "id": "psk-s06-b03",
+   "pdf": "psk",
+   "sayfa": 6,
+   "bolge": "r2c1",
+   "tur": "slayt",
+   "baslik": "EKT endikasyonları",
+   "metin": "EKT Endikasyonları\nMajor depresyon (unipolar-bipolar depresyon)\nMani\nŞizofreni-şizoaffektif bozukluk\nDiğer: Parkinson hast., Nöroleptik malign sendrom",
+   "el_yazisi": [
+    {
+     "metin": "işlevsellik aşırı bozuksa",
+     "hedef": "Major depresyon (unipolar-bipolar depresyon)",
+     "guven": "yuksek"
+    },
+    {
+     "metin": "aşırı şiddetliyse / gebelik",
+     "hedef": "Mani",
+     "guven": "yuksek"
+    },
+    {
+     "metin": "= kronik şizofrenide işe yaramaz. EPS, gebelik...",
+     "hedef": "Şizofreni-şizoaffektif bozukluk",
+     "guven": "orta",
+     "alternatif": "'EPS, gebelik' antipsikotik kullanamama (EPS) ve gebelikte EKT tercihi anlamında olabilir"
+    }
+   ],
+   "isaretler": [
+    {
+     "tur": "yesil",
+     "hedef": "Major depresyon; Mani; Şizofreni-şizoaffektif bozukluk; Diğer: Parkinson hast., Nöroleptik malign sendrom"
+    }
+   ],
+   "sinyal": [
+    "el_onemli",
+    "sari"
+   ],
+   "y25": {
+    "key": "y25-k2-20-psikiyatrik-tedaviler",
+    "sayfa": 6
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "puan": 18,
+   "oncelik": "B",
+   "vurgulu": [
+    "Major depresyon; Mani; Şizofreni-şizoaffektif bozukluk; Diğer: Parkinson hast., Nöroleptik malign sendrom"
+   ]
+  },
+  {
+   "id": "psk-s06-b09",
+   "pdf": "psk",
+   "sayfa": 6,
+   "bolge": "r2c2/r2c3",
+   "tur": "slayt",
+   "baslik": "Derin beyin uyarımı",
+   "metin": "Derin Beyin Uyarımı\nEn az 5 yıldır hasta, en az 3 değişik antidepresan etkisiz, yeterli düzey ve sürede alınan psikoterapinin etkisiz olduğu olgular (dirençli depresyonda anterior singulat bölgenin uyarıldığı açık uçlu çalışma).\nFDA tarafından dirençli OKB tedavisinde onay almıştır. (s24)",
+   "el_yazisi": [
+    {
+     "metin": "+ Parkinson'da kullanılır, epilepsi, distoni",
+     "hedef": "FDA tarafından dirençli OKB tedavisinde onay almıştır.",
+     "guven": "yuksek"
+    }
+   ],
+   "isaretler": [
+    {
+     "tur": "yesil",
+     "hedef": "tüm metin; FDA tarafından dirençli OKB tedavisinde onay"
+    }
+   ],
+   "sinyal": [
+    "el_onemli",
+    "sari"
+   ],
+   "y25": {
+    "key": "y25-k2-20-psikiyatrik-tedaviler",
+    "sayfa": 23
+   },
+   "y26": null,
+   "duzeltme": [
+    {
+     "ham": "psikotearpinin",
+     "dogru": "psikoterapinin",
+     "gerekce": "Slayt yazım hatası."
+    }
+   ],
+   "not_": null,
+   "puan": 18,
+   "oncelik": "B",
+   "vurgulu": [
+    "tüm metin; FDA tarafından dirençli OKB tedavisinde onay"
+   ]
+  },
+  {
+   "id": "psk-s06-b02",
+   "pdf": "psk",
+   "sayfa": 6,
+   "bolge": "r1c1/r2c1",
+   "tur": "slayt",
+   "baslik": "EKT etki mekanizması",
+   "metin": "EKT(elektrokonvülzif) tedavi\nEtki mekanizması:\nBiyokimyasal hipotezler:\nβ-adrenerjik reseptör down regülasyonu\nDA artışı\n5HT transmisyonu ve 5HT2A reseptör dansitesinde artış\nNöroendokrin (HPA aksının stimülasyonu)\nBDNF artışı\nNörofizyolojik hipotezler: Kan –beyin bariyerinin geçirgenliğinde artış,\nNöroplastisite (hipokampusta sinaptik plastisite, nörogeneziste artış, apoptozisin baskılanması gibi)",
+   "el_yazisi": [
+    {
+     "metin": "(okunamadı; yazı alttaki 'EKT Endikasyonları' parçasının altında kalmış, yalnız harf uçları görünüyor)",
+     "hedef": "Nöroplastisite",
+     "guven": "dusuk"
+    }
+   ],
+   "isaretler": [
+    {
+     "tur": "yesil",
+     "hedef": "tüm mekanizma maddeleri"
+    },
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "Nöroplastisite"
+    },
+    {
+     "tur": "ok",
+     "hedef": "Nöroplastisite → sol kenara kırmızı ok (not alt slayt altında kalmış)"
+    }
+   ],
+   "sinyal": [
+    "sari"
+   ],
+   "y25": {
+    "key": "y25-k2-20-psikiyatrik-tedaviler",
+    "sayfa": 4
+   },
+   "y26": null,
+   "duzeltme": [
+    {
+     "ham": "tranmisyonu",
+     "dogru": "transmisyonu",
+     "gerekce": "Slayt yazım hatası."
+    },
+    {
+     "ham": "apopitozisin",
+     "dogru": "apoptozisin",
+     "gerekce": "Slayt yazım hatası."
+    }
+   ],
+   "not_": null,
+   "puan": 10,
+   "oncelik": "C",
+   "vurgulu": [
+    "Nöroplastisite",
+    "tüm mekanizma maddeleri"
+   ]
+  },
+  {
+   "id": "psk-s06-b08",
+   "pdf": "psk",
+   "sayfa": 6,
+   "bolge": "r1c2/r2c2",
+   "tur": "slayt",
+   "baslik": "Transkraniyal doğru akım stimülasyonu (tDCS)",
+   "metin": "tDCS\nTDCS, 0,5–2 mA aralığında, pil benzeri bir cihaza bağlı bir çift tuzlu suyla ıslatılmış elektrot pedi aracılığıyla doğrudan kafa derisine uygulanan düşük genlikli doğru akımlar kullanır.\netkilerin (cilt tahrişi ve yanma hissi) hafif olduğu sağlıklı, ilaçsız deneklerde yapılan tek olaylı uyarım çalışmalarından gelmektedir. (s22)",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "yesil",
+     "hedef": "pil benzeri bir cihaza bağlı bir çift tuzlu suyla ıslatılmış elektrot pedi aracılığıyla doğrudan kafa derisine uygulanan düşük genlikli doğru akımlar; (cilt tahrişi ve yanma hissi) hafif olduğu sağlıklı, ilaçsız deneklerde yapılan tek olaylı uyarım çalışmalarından gelmektedir"
+    }
+   ],
+   "sinyal": [
+    "sari"
+   ],
+   "y25": {
+    "key": "y25-k2-20-psikiyatrik-tedaviler",
+    "sayfa": 20
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "puan": 10,
+   "oncelik": "C",
+   "vurgulu": [
+    "pil benzeri bir cihaza bağlı bir çift tuzlu suyla ıslatılmış elektrot pedi aracılığıyla doğrudan kafa derisine uygulanan düşük genlikli doğru akımlar; (cilt tahrişi ve yanma hissi) hafif olduğu sağlıklı, ilaçsız deneklerde yapılan tek olaylı uyarım çalışmalarından gelmektedir"
+   ]
+  },
+  {
+   "id": "psk-s06-b01",
+   "pdf": "psk",
+   "sayfa": 6,
+   "bolge": "r1c1",
+   "tur": "slayt",
+   "baslik": "Biyolojik Tedaviler",
+   "metin": "Psikiyatrik Bozukluklarda Uygulanan Tedaviler (öğrencinin başlığı)\nBiyolojik Tedaviler\nEKT(elektrokonvülzif) tedavi\nTranskraniyal magnetik stimülasyon(TMS)\nTranskraniyal doğru akım stimülasyonu\nDerin beyin uyarımı\nFototerapi\nUyku Yoksunluğu\nPsikoşirürji",
+   "el_yazisi": [
+    {
+     "metin": "→ epilepsi. invaziv olduğu için sık kullanılmaz. hızlı yanıt sağladığı için gebede kullanılır. %85 MD tedavisinde.",
+     "hedef": "EKT (elektrokonvülzif) tedavi",
+     "guven": "yuksek",
+     "alternatif": "'epilepsi' = jeneralize nöbet oluşturur anlamında kısa not"
+    },
+    {
+     "metin": "→ non-invaziv. yaşlıda sınırlı etki. pahalı, ulaşılabilirlik az.",
+     "hedef": "Transkraniyal magnetik stimülasyon (TMS)",
+     "guven": "yuksek"
+    },
+    {
+     "metin": "→ non-invaziv.",
+     "hedef": "Transkraniyal doğru akım stimülasyonu",
+     "guven": "yuksek"
+    },
+    {
+     "metin": "→ invaziv. FDA depresyon için onay vermemiş.",
+     "hedef": "Derin beyin uyarımı",
+     "guven": "yuksek"
+    },
+    {
+     "metin": "→ mevsimsel affektif bozukluk. tedaviye yanıt hızlı. melatonin salınımı azalır.",
+     "hedef": "Fototerapi",
+     "guven": "yuksek"
+    },
+    {
+     "metin": "→ spesifik beyin alanlarında lezyon oluşturur.",
+     "hedef": "Psikoşirürji",
+     "guven": "yuksek"
+    }
+   ],
+   "isaretler": [
+    {
+     "tur": "ok",
+     "hedef": "her yöntemin yanında el notuna ok; Uyku Yoksunluğu yanındaki ok boş"
+    }
+   ],
+   "sinyal": [
+    "el_onemli"
+   ],
+   "y25": {
+    "key": "y25-k2-20-psikiyatrik-tedaviler",
+    "sayfa": 2
+   },
+   "y26": null,
+   "duzeltme": [
+    {
+     "ham": "EKT → invaziv olduğu için sık kullanılmaz",
+     "dogru": "EKT cerrahi anlamda invaziv değildir (kafatası açılmaz); genel anestezi ve kas gevşetici gerektirmesi, bilişsel yan etkileri ve damgalama nedeniyle ilk seçenek değildir. Slaytta 'invaziv' ifadesi yok.",
+     "gerekce": "Nüans; slayt s13 'EKT'nin beyine zarar vermediği' ve s07 endikasyonları."
+    }
+   ],
+   "not_": null,
+   "puan": 8,
+   "oncelik": "C",
+   "vurgulu": []
+  }
+ ],
+ "ogrenci_sorulari": [
+  {
+   "id": "psk-s06-b05",
+   "pdf": "psk",
+   "sayfa": 6,
+   "bolge": "r2c1/r2c2",
+   "tur": "cikmis_soru",
+   "baslik": "Çıkmış (tablo): EKT'de beklenmeyen yan etki",
+   "metin": "Elektrokonvülzif tedavide aşağıda verilen yan etkilerden hangisi beklenmez? (büyük pembe kök + aynı sorunun küçük tablo kopyası)",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "pembe",
+     "hedef": "soru kökü (iki kopya)"
+    },
+    {
+     "tur": "daire",
+     "hedef": "2. satır Ataksi"
+    }
+   ],
+   "sinyal": [
+    "cikmis"
+   ],
+   "y25": {
+    "key": "y25-k2-20-psikiyatrik-tedaviler",
+    "sayfa": 11
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "cikmis": {
+    "kok": "Elektrokonvülzif tedavide aşağıda verilen yan etkilerden hangisi beklenmez?",
+    "siklar": [
+     "1) Konfüzyon",
+     "2) Ataksi",
+     "3) Baş ağrısı",
+     "4) Ajitasyon",
+     "5) Amnezi"
+    ],
+    "ogrenci_cevap": "B (2)",
+    "banka_id": "",
+    "banka_yil": "",
+    "banka_dogru": "",
+    "tutarli": true,
+    "not": "Bankada bulunamadı (EKT ile ilgili tek benzer: d3-b-072, farklı soru). Slayt s11 SSS yan etkileri listesinde ataksi yok."
+   },
+   "bagli_birim": "psk-s06-b04",
+   "benzerlik": 0.695
+  }
+ ],
+ "banka": [
+  {
+   "id": "d3-k2-psi-011",
+   "ders": "k2-20",
+   "yillar": [
+    "2021-2026"
+   ],
+   "kok": "Tedaviye dirençli majör depresif bozuklukta kafa derisi üzerine yerleştirilen manyetik bobin ile fokal manyetik alan oluşturarak sol dorsolateral prefrontal kortekste depolarizasyon sağlayan FDA onaylı non-invaziv nöromo",
+   "dogru": "Tekrarlayıcı Transkraniyal Manyetik Stimülasyon (rTMS)",
+   "kopyalar": [],
+   "birim": "psk-s06-b07",
+   "benzerlik": 0.746,
+   "kapsandi": true,
+   "notta_yapistirilmis": false
+  },
+  {
+   "id": "past-1790877044403-707646",
+   "ders": "k2-20",
+   "yillar": [
+    "2021-2022"
+   ],
+   "kok": "I. Akut distonik reaksiyon\nII. Akatizi ve parkinsonizm\nIII. Perioral tremor ve tardif diskinezi\nIV. Miyelosupresyon ve retinopati\nAşağıdaki yan etkilerden hangisi ya da hangileri antipsikotik ilaçlarla ilişkili ekstrapir",
+   "dogru": "I, II ve III",
+   "kopyalar": [],
+   "birim": "psk-s06-b04",
+   "benzerlik": 0.641,
+   "kapsandi": true,
+   "notta_yapistirilmis": false
+  },
+  {
+   "id": "past-1790877044441-624411",
+   "ders": "k2-20",
+   "yillar": [
+    "2021-2022"
+   ],
+   "kok": "I. Ekstrapiramidal yan etkileri azaltmak için antiserotonerjik etkili klozapin ve risperidon gibi atipik ajanlar tercih edilmelidir.\nII. Antikolinerjiklerle kombinasyon yerine nöroleptik dozunun hastalığın şiddetine göre",
+   "dogru": "I, II ve III",
+   "kopyalar": [],
+   "birim": "psk-s06-b06",
+   "benzerlik": 0.632,
+   "kapsandi": true,
+   "notta_yapistirilmis": false
+  },
+  {
+   "id": "past-1790877044925-370286",
+   "ders": "k2-20",
+   "yillar": [
+    "2021-2022",
+    "Geçmiş Yıllar Çıkmışı (Arşiv)"
+   ],
+   "kok": "Uyku hijyenine yönelik düzenlemelerden hangisi yanlıştır?",
+   "dogru": "Akşam saatlerinde heyecan verici aktivitelerden kaçınılmamalıdır",
+   "kopyalar": [
+    "q-KURUL_2_C_IKMIS__3-60"
+   ],
+   "birim": "psk-s06-b06",
+   "benzerlik": 0.454,
+   "kapsandi": false,
+   "notta_yapistirilmis": false
+  },
+  {
+   "id": "past-1790877044385-678651",
+   "ders": "k2-20",
+   "yillar": [
+    "2021-2022"
+   ],
+   "kok": "I. Klozapinin keşfi (1959), ekstrapiramidal yan etkisi olmayan antipsikotiklerin de olabileceğini kanıtladığından bu alanda bir devrim niteliğindedir.\nII. Klozapin, olanzapin, ketiapin, risperidon ve aripiprazol klasik a",
+   "dogru": "I ve III",
+   "kopyalar": [],
+   "birim": "psk-s06-b06",
+   "benzerlik": 0.603,
+   "kapsandi": true,
+   "notta_yapistirilmis": false
+  },
+  {
+   "id": "q-25-26_d_nem_3_kurul_2-78",
+   "ders": "k2-20",
+   "yillar": [
+    "2025-2026"
+   ],
+   "kok": "Non-invaziv yolla depolarizasyon dalgası oluşturarak depresyon tedavisinde FDA onayı almış yöntem aşağıdakilerden hangisidir?",
+   "dogru": "Transkraniyal manyetik stimülasyon (TMS)",
+   "kopyalar": [],
+   "birim": "psk-s06-b07",
+   "benzerlik": 0.759,
+   "kapsandi": true,
+   "notta_yapistirilmis": false
+  }
+ ]
+}

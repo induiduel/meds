@@ -1,0 +1,173 @@
+{
+ "ders": "k2-15",
+ "ozet": "Dersin çekirdeği şizofreni tanı ölçütleri ve psikotik bozuklukların süreye göre ayrımıdır: çıkmışların çoğu 'kaç gün/ay sürmüş' vakası (2 hafta → kısa psikotik, 2 ay → şizofreniform) ya da 'en az altı ay', 'en az biri sanrı/varsanı/darmadağın konuşma' önermesi üzerinden kurulmuş. İkinci büyük blok pozitif–negatif belirti ayrımıdır (apati 4 kez, enkoherans 2025-26'da 2 kopya). Öğrenciler kalıtım yüzdelerine, beyin yapısal bulgularına ve sanrılı bozukluk–şizofreni karşılaştırmasına da yıldız ve el notu koymuş.",
+ "temalar": [
+  {
+   "tema": "Süreye göre ayrım: şizofreni (≥6 ay) / şizofreniform (1–6 ay) / kısa psikotik bozukluk (1 gün–1 ay)",
+   "oncelik": "A",
+   "birimler": ["psk-s04-b12", "psk-s05-b09", "psk-s05-b11", "psk-s05-b08"],
+   "kanit": "4 farklı çıkmış: 2020-21 vaka '2 aydır içe çekilme, işitsel varsanı → şizofreniform' (365430593b97, notta yapıştırılmış); 2021-22 vaka '2 haftadır düşüncelerinin yüksek sesle söylendiğini işitiyor → kısa psikotik' (yapıştırılmış); 2025-26 'kısa psikotik bozukluğun özelliklerinden değildir → ileri derecede dağınık davranış ve sıklıkla negatif belirti'; 2021-2026 d3 'kısa psikotik: 1 günden uzun 1 aydan kısa, tam döner' (doğru şık). Üç süre satırı kırmızı çizgi + sarı; el notu 'SCH'de tam geri dönülemez!!'; vakalarda öğrenci her şıkkın yanına süre yazmış ('6 ay+', '1 ay–6 ay', 'max 1 ay').",
+   "anlatim": "Üç tablo tek karşılaştırma tablosunda verilmeli: süre, gerekli belirti sayısı (kısa psikotikte bir belirti yeter, negatif belirti maddesi yok), işlevselliğe dönüş ve gidiş (kısa psikotikte tam dönüş; şizofreniformun çoğu takipte şizofreniye döner). Vaka kökündeki süreyi tabloya oturtma alıştırması yapılmalı.",
+   "soru_payi": 21,
+   "soru_tipleri": ["vaka: belirti süresi verilir → en olası tanı", "olumsuz: hangisi kısa psikotik bozukluğun özelliği değildir (negatif belirti, dağınık davranış)", "doğru ifade: kısa psikotikte hastalık öncesi işlevselliğe tam dönüş"]
+  },
+  {
+   "tema": "Pozitif ve negatif belirtiler",
+   "oncelik": "B",
+   "birimler": ["psk-s04-b15"],
+   "kanit": "Hoca profilinde bu konunun en çok tekrar eden çekirdeği: 'pozitif belirti değildir → apati' 4 kez (2020-21 üç kopya + 2023-24, 604ad168f425; öğrenci 2020-21 sürümünü yapıştırmış). 'Negatif belirti değildir → enkoherans' 2025-26 (2 kopya, d3-k2-psi-001 ile 2021-2026), 'negatif belirti değildir → algı bozukluğu' 2021-22 (yapıştırılmış). El notu: pozitif = hiperdopaminerjik, negatif = hipodopaminerjik + hipofrontalite, 'hastalar farkında değil!!'; iki liste el yazısıyla tek tek yazılmış (aloji, duygusal küntleşme, anhedoni, içe çekilme, avolüsyon, apati, dikkat bozukluğu).",
+   "anlatim": "İki liste ayrı ayrı ve eksiksiz verilmeli; her belirtinin neden o grupta olduğu (işlevin abartılması mı, kaybı mı) tanımla bağlanmalı. Dopamin hipotezi ve hipofrontaliteyle eşleştirme yapılmalı; enkoherans/darmadağın konuşmanın pozitif grupta olduğu özellikle söylenmeli.",
+   "soru_payi": 18,
+   "soru_tipleri": ["olumsuz: hangisi pozitif belirti değildir → apati", "olumsuz: hangisi negatif belirti değildir → enkoherans / algı bozukluğu", "mekanizma: hiper/hipodopaminerjik durum ↔ belirti grubu"]
+  },
+  {
+   "tema": "Şizofreni tanı ölçütleri (DSM-5 A, B, C)",
+   "oncelik": "A",
+   "birimler": ["psk-s04-b10"],
+   "kanit": "En yüksek puanlı birim (p100; çıkmış + yıldız + el notu + sarı). 2021-22 final 'tanı için negatif belirtilerden en az biri gerekir' yanlış şık (profilde 2× tekrar eden çekirdek); arşiv çıkmışı 'süregiden bulgular en az üç ay sürer' yanlış şık (el notu '6 ay+'). 'Tanı Kriterleri' ve 'en az altı ay sürer' kırmızı daire içinde yıldızlı; el notu 'tanı için gereken 2 kriterden en az biri bunlardan (1–3) olmalı'.",
+   "anlatim": "A ölçütü (5 belirtiden en az 2'si, biri mutlaka sanrı/varsanı/darmadağın konuşma, 1 ay), B ölçütü (işlevsellikte belirgin düşme) ve C ölçütü (en az 6 ay) ayrı maddelerle, sayılar vurgulanarak verilmeli. Negatif belirtinin tek başına yetmediği ve zorunlu olmadığı açıkça yazılmalı.",
+   "soru_payi": 15,
+   "soru_tipleri": ["yanlış bul: süre 3 ay / negatif belirti zorunlu", "sayı: kaç belirti, kaç ay"]
+  },
+  {
+   "tema": "Etiyoloji: kalıtım yüzdeleri, antisipasyon, stres-diyatez ve psikososyal risk etkenleri",
+   "oncelik": "A",
+   "birimler": ["psk-s04-b04", "psk-s04-b03"],
+   "kanit": "2020-21 final tablo sorusu 'hangisi söylenemez → yaz mevsiminde doğanlarda risk artar' (yapıştırılmış; el notu 'kışın doğanda daha yüksek risk'); diğer şıklar (madde kullanımı yüksek, kentsel doğum, iki ebeveynde %47, çocukluk travması) doğru önerme. 2020-21 'kalıtımın rolü → aile öyküsü olanlarda risk %20'ye kadar çıkabilir'. Kalıtım slaytı p88, yüzdeler ve antisipasyon sarı; el notları pembe zeminde: 'esrarın hücrelerde bıraktığı hasar kalıcıdır!!', 'anne karnından itibaren stres', 'ileri ebeveyn yaşı', 'kentsel yaşam', 'göç'.",
+   "anlatim": "Kalıtım yüzdeleri tek tabloda (çocukta %10, tek ebeveyn %5–6, bir kardeş+bir ebeveyn %17, iki ebeveyn %47, MZ %46, DZ %14, evlat edinme %17) verilmeli; antisipasyon tanımlanmalı. Psikososyal risk etkenleri (kış doğumu, ileri ebeveyn yaşı, gebelik-doğum komplikasyonu, kentsel yaşam, göç, çocukluk travması, esrar) madde madde, yön ters çevrilmeye açık olanlar (kış/yaz) vurgulanarak anlatılmalı.",
+   "soru_payi": 9,
+   "soru_tipleri": ["söylenemez: doğum mevsimi yönü ters", "sayı: iki ebeveyn hastaysa risk %47", "ikiz çalışması MZ/DZ oranı"]
+  },
+  {
+   "tema": "Biyolojik bulgular: yapısal beyin değişiklikleri, hipofrontalite ve şizofreni devresi, nöropatoloji, dopamin ve glutamat hipotezi",
+   "oncelik": "A",
+   "birimler": ["psk-s04-b05", "psk-s04-b07", "psk-s04-b08"],
+   "kanit": "Tablo çıkmışı 'kronik şizofrenide beyin yapısında beklenmez → hiperfrontalite' (yapıştırılmış, bankada yok); 2021-22 final doğru şık 'frontal kortekste incelme', arşiv çıkmışında 'dopamin sistem hiperaktivitesi' ve 'dorsolateral prefrontal kortekste işlev bozukluğu' doğru önerme. Yapısal bozukluklar slaytı yıldızlı (p73); el notu 'işlevsel bozukluklar daha önemli', 'talamus = duyuların filtrelendiği yer, bozulması halüsinasyona sebep'; 'gliozisin olmaması' dahil nöropatoloji maddeleri sarı.",
+   "anlatim": "Yapısal bulgular (ventrikül ve sulkus genişlemesi, frontal incelme, küçük beyin hacmi), işlevsel bulgular (hipofrontalite → negatif belirti, DLPFC) ve nöropatoloji (gliozis yok → nörogelişimsel kusur) ayrı başlıklarla verilmeli. Dopamin hipotezi pozitif/negatif belirti eşleşmesiyle, fensiklidin–glutamat ilişkisi doğru yönde (NMDA blokajı) anlatılmalı.",
+   "soru_payi": 9,
+   "soru_tipleri": ["olumsuz: hangisi beklenmez → hiperfrontalite", "yanlış bul: gliozis varlığı", "mekanizma: fensiklidin → glutamat → şizofreni benzeri tablo"]
+  },
+  {
+   "tema": "Sanrılı bozukluk: tanı, şizofreni ile karşılaştırma, alt tipler ve savunma mekanizmaları",
+   "oncelik": "A",
+   "birimler": ["psk-s05-b02", "psk-s05-b05", "psk-s05-b03", "psk-s05-b04"],
+   "kanit": "Sanrılı bozukluk iki vaka çıkmışında (2020-21, 2021-22) çeldirici; öğrenci şıkkın yanına 'varsanı çok nadir' yazmış. Tanı slaytı p88, 'A tanı ölçütü hiçbir zaman karşılanmamıştır' iki kez vurgulu; karşılaştırma tablosu yıldızlı. El notu: 'SCH'de sanrılar takip edilemez, dağınıktır', 'hekim başvurusu nadir'.",
+   "anlatim": "Şizofreni–sanrılı bozukluk karşılaştırması (işlevsellik, yeti kaybı, sanrının sistematize/tek alana odaklı ve bizar olmayan oluşu, varsanının belirgin olmaması) tabloyla verilmeli; ≥1 ay sanrı ve A ölçütünün hiç karşılanmamış olması tanı şartı olarak söylenmeli. Alt tipler (erotomanik–de Clérambault, kıskançlık–Othello, Capgras/Fregoli) ve savunmalar kısa tutulmalı.",
+   "soru_payi": 6,
+   "soru_tipleri": ["ayırıcı: işlevselliği korunmuş, tek sistematize sanrı → sanrılı bozukluk", "eşleştirme: alt tip ↔ sendrom adı"]
+  },
+  {
+   "tema": "Ayırıcı tanı: psikiyatrik hastalıklar ve genel tıbbi durumlar",
+   "oncelik": "A",
+   "birimler": ["psk-s04-b13", "psk-s04-b14"],
+   "kanit": "Arşiv çıkmışında 'ayırıcı tanıda stimülan madde kullanımı benzer bulgular oluşturur' doğru önerme; 2021-22 öncüllü soru (amfetamin, LSD, izoniazid, MAO inhibitörü → hepsi şizofreni benzeri paranoid reaksiyon yapabilir) bankada bu birime eşlenmiş ama ilaç adları notta yok. El notları: temaruz (ceza, askerlik için taklit), depersonalizasyon, OKB'de 'kişi takıntılılığının farkındadır'; genel tıbbi listede temporal lob epilepsisi, tümör, B12 eksikliği sarı.",
+   "anlatim": "Psikiyatrik ayırıcı tanı listesi tablo hâlinde ayırt ettiren tek bulguyla (ör. OKB'de içgörü, temaruzda dış kazanç) verilmeli; genel tıbbi nedenler örnekleriyle (temporal lob epilepsisi, porfiri, B12, nörosifiliz, SLE, ağır metal) ve madde/ilaç kaynaklı psikoz ayrı satır olarak anlatılmalı.",
+   "soru_payi": 4,
+   "soru_tipleri": ["öncüllü: hangi ilaç/maddeler psikotik tablo yapar", "eşleştirme: ayırıcı tanı ↔ ayırt ettiren bulgu"]
+  },
+  {
+   "tema": "Notta yok, sorulmuş: Bleuler belirtileri ve madde/ilaç kaynaklı psikotik tablo",
+   "oncelik": "B",
+   "birimler": [],
+   "kanit": "2021-22 'Bleuler'in şizofreni belirtilerinden hangisi ikinci sıra (aksesuar) belirtisidir? → sanrılar ve varsanılar' (bankada sanrılı bozukluk birimine zayıf eşlenmiş; notta Bleuler hiç geçmiyor). 2021-22 öncüllü madde/ilaç sorusu (amfetamin, LSD, izoniazid, MAOİ) notta karşılıksız. Ayrıca 2023-24 apati ve 2025-26 enkoherans sürümleri bankada kapsandı:false görünüyor, ama içerikleri notta pozitif–negatif belirti el notunda var.",
+   "anlatim": "Bleuler'in birincil (4A) ve ikincil belirtileri ile madde/ilaç kaynaklı psikotik bozukluk, 2026-27 slaytında yer alıyorsa kısa bir bölüm olarak eklenmeli; slaytta yoksa yalnız çıkmış dayanağıyla bir hatırlatma cümlesi yazılmalı.",
+   "soru_payi": 4,
+   "soru_tipleri": ["doğrudan: Bleuler'e göre aksesuar belirti", "öncüllü: psikoza yol açabilen maddeler"]
+  },
+  {
+   "tema": "Şizoaffektif bozukluk ve paylaşılmış psikoz",
+   "oncelik": "B",
+   "birimler": ["psk-s05-b07", "psk-s05-b06"],
+   "kanit": "Şizoaffektif bozukluk iki vaka çıkmışında çeldirici (el notu 'DD bozukluğu yok'). Slaytta 'en az 2 hafta süren psikotik belirtiler' vurgulu; el notları: 'ataklar arası tam iyi hâl yok → DDB'den farkı', 'psikotik belirti üstüne atak hâlinde affektif belirti → SCH'den farkı'; paylaşılmışta 'baskın eşe antipsikotik ver, pasifi ayır'.",
+   "anlatim": "Şizoaffektif bozukluk için duygudurum belirtisi olmadan en az 2 hafta psikotik belirti şartı ve prognozun şizofreni ile duygudurum bozuklukları arasında olması anlatılmalı. Paylaşılmış psikozda baskın–pasif ilişki, persekütif/hipokondriak sanrı ve ayırma + baskın kişiye tedavi verilmeli.",
+   "soru_payi": 4,
+   "soru_tipleri": ["sayı: duygudurum belirtisi olmadan en az 2 hafta psikoz", "tedavi: paylaşılmış psikozda ilk adım"]
+  },
+  {
+   "tema": "İyi ve kötü prognoz özellikleri",
+   "oncelik": "B",
+   "birimler": ["psk-s04-b21"],
+   "kanit": "Başlık daire içinde yıldızlı; yaş, cinsiyet, duygudurum belirtisi, obsesyon/kompulsiyon, transkültürel satırları sarı; el notu 'akut = ani başlar', 'premorbid uyum = kişilik özellikleri'. Çıkmış eşlenmemiş.",
+   "anlatim": "İki sütunlu tablo olarak verilmeli; sezgiye ters satırlar (duygudurum belirtisi varlığı iyi, gelişmekte olan ülke iyi, kadın iyi) özellikle belirtilmeli.",
+   "soru_payi": 3,
+   "soru_tipleri": ["hangisi iyi prognoz göstergesi değildir"]
+  },
+  {
+   "tema": "Katatoni",
+   "oncelik": "B",
+   "birimler": ["psk-s04-b22"],
+   "kanit": "'Belirtilerden üçü (ya da daha çoğu)' kırmızı çizgi ve sarı; 12 belirtinin adları vurgulu; el notu 'nadir', 'mutizm = konuşmama'.",
+   "anlatim": "12 belirtiden en az 3'ü şartı ve belirtilerin kısa tanımları (katalepsi, balmumu esnekliği, negativizm, ekolali, ekopraksi) liste hâlinde verilmeli.",
+   "soru_payi": 3,
+   "soru_tipleri": ["sayı: katatoni için en az kaç belirti", "tanım → terim: balmumu esnekliği"]
+  },
+  {
+   "tema": "Bilişsel kayıplar ve diğer klinik bulgular (içgörü eksikliği, silik nörolojik belirtiler)",
+   "oncelik": "B",
+   "birimler": ["psk-s04-b18", "psk-s04-b19"],
+   "kanit": "2021-22 final doğru şık 'hastalarda silik nörolojik belirtiler görülür'. El notu: 'temporal ve uzaysal ilişkilendirmede kayıp!!', 'bilişsel işlevler bozuk'; silik nörolojik belirtiler ve yumuşak göz takibi sarı.",
+   "anlatim": "Bilişsel kaybın temel eksiklik sayıldığı ve günlük plan yapmayı bozduğu; silik nörolojik belirtilerin örnekleri (stereognozi, grafestezi, yumuşak göz takibi) kısa listeyle verilmeli.",
+   "soru_payi": 2,
+   "soru_tipleri": ["doğru önerme olarak silik nörolojik belirti"]
+  },
+  {
+   "tema": "Diğer seçilen yerler: epidemiyoloji, gidiş ve sonlanış devreleri, diğer psikotik bozukluklar listesi",
+   "oncelik": "C",
+   "birimler": ["psk-s04-b01", "psk-s04-b20", "psk-s05-b01"],
+   "kanit": "Epidemiyolojide 'kadın = erkek' ve pik yaşlar sarı; gidiş devrelerinde el notları var (bir kısmı hatalı, bkz. düzeltmeler); liste slaytı işaretsiz.",
+   "anlatim": "Epidemiyoloji sayıları (pik yaş, mortalite, intihar) ve prodromal–aktif–rezidüel dönem tanımları kısa verilmeli.",
+   "soru_payi": 2,
+   "soru_tipleri": ["sayı: pik başlangıç yaşı kadın/erkek"]
+  }
+ ],
+ "hoca_kaliplari": [
+  "Olumsuz kök: 'hangisi pozitif/negatif belirtilerden biri değildir?' (apati 4×, enkoherans 2×, algı bozukluğu)",
+  "'… hangisi yanlıştır / söylenemez?' (tanı süresi, negatif belirti şartı, doğum mevsimi)",
+  "Kısa vaka: yaş + belirti + süre verilir, 'en olası tanı/ön tanı'; şıklar şizofreni, şizoaffektif, şizofreniform, kısa psikotik, sanrılı bozukluk",
+  "Tablo biçimli (sıra no/cevap) önerme listeleri",
+  "Öncüllü (I–IV) madde/ilaç sorusu"
+ ],
+ "tuzaklar": [
+  {"tuzak": "Şizofreni tanısı için süre 3 ay", "neden": "C ölçütü en az 6 aydır; arşiv çıkmışının yanlış şıkkı"},
+  {"tuzak": "Tanı için en az bir negatif belirti gerekir", "neden": "en az biri sanrı, varsanı ya da darmadağın konuşma olmalıdır; 2021-22 finalinin yanlış şıkkı"},
+  {"tuzak": "Apati pozitif belirti listesine konur", "neden": "apati negatif belirtidir; 4 kez sorulmuş"},
+  {"tuzak": "Enkoherans/darmadağın konuşma negatif belirti sanılır", "neden": "pozitif belirtidir; 2025-26 sorusu"},
+  {"tuzak": "Yaz doğumunda risk artar", "neden": "risk kış doğumlarında artar; 2020-21 finali"},
+  {"tuzak": "Kronik şizofrenide hiperfrontalite", "neden": "hipofrontalite görülür ve negatif belirtilerle ilişkilidir"},
+  {"tuzak": "Kısa psikotik bozuklukta negatif belirti ve kalıcı işlev kaybı", "neden": "negatif belirti ölçütte yok; hastalık öncesi işlevselliğe tam dönülür (2025-26)"},
+  {"tuzak": "2 aylık psikotik tablo kısa psikotik ya da şizofreni diye işaretlenir", "neden": "1–6 ay şizofreniform bozukluktur"},
+  {"tuzak": "Nöropatolojide gliozis bulunur", "neden": "gliozisin olmaması nörogelişimsel kusur kuramını destekler"}
+ ],
+ "sayilar": [
+  "A ölçütü: 5 belirtiden ≥2'si, en az biri 1–3. maddeden; 1 ay",
+  "C ölçütü: süregiden bulgular ≥6 ay",
+  "Şizofreniform 1–6 ay; kısa psikotik ≥1 gün, <1 ay",
+  "Şizoaffektif: duygudurum belirtisi olmadan ≥2 hafta psikotik belirti; %20–30'unda giderek artan yıkım",
+  "Kalıtım: hasta çocuğunda yaşam boyu risk %10; tek ebeveyn %5–6; bir kardeş + bir ebeveyn %17; iki ebeveyn %47'ye kadar",
+  "İkiz: monozigot %46, dizigot %14; evlat edinme çalışması %17",
+  "Pik başlangıç: kadın 25–35, erkek 15–25 yaş; kadın = erkek",
+  "Mortalite ×3; yaşam beklentisi 10–20 yıl kısa; %30–35 intihar girişimi, %10 ölüm",
+  "Katatoni: 12 belirtiden ≥3'ü",
+  "Dopamin reseptör tipi sayısı: 5"
+ ],
+ "duzeltmeler": [
+  {"yanlis": "Kısa psikotik bozuklukta takipte çoğunlukla şizofreni gelişir (slayt s45 satırı)", "dogru": "Kısa psikotik bozuklukta hasta tanım gereği hastalık öncesi işlevselliğe tam döner ve prognoz genellikle iyidir; 'takipte çoğunlukla şizofreniye dönüşür' şizofreniform bozukluk için geçerlidir", "kaynak": "aynı dersin s46 B ölçütü ('tam geri dönülür'), s47 şizofreniform, 2021-2026 d3-k2-psi-002 doğru şıkkı"},
+  {"yanlis": "İndüklenmiş psikotik bozukluk = ilaç kullanımına bağlı psikoz (el notu)", "dogru": "İndüklenmiş psikotik bozukluk paylaşılmış psikotik bozukluktur (sanrı yakın ilişkideki kişiden diğerine geçer); ilaç/madde kaynaklı psikoz ayrı tanıdır", "kaynak": "slayt s41 paylaşılmış psikoz + genel tıbbi bilgi"},
+  {"yanlis": "Yapay bozuklukta taklit yok (el notu)", "dogru": "Yapay bozuklukta da belirtiler bilinçli oluşturulur; temaruzdan farkı dış kazanç değil hasta rolü kazanma amacıdır", "kaynak": "genel tıbbi bilgi; slaytta temaruz–yapay bozukluk yan yana"},
+  {"yanlis": "Glutamatı artıran ilaçlar psikozu artırır (el notu)", "dogru": "Fensiklidin/ketamin gibi NMDA (glutamat) reseptör antagonistleri glutamaterjik iletimi azaltarak şizofreni benzeri tablo yapar", "kaynak": "slayt s16 'Fensiklidin → glutamat → şizofreni benzeri belirtiler' + genel tıbbi bilgi"},
+  {"yanlis": "Prodromal dönemde hastalık belirtisi görülmez (el notu)", "dogru": "Prodromal dönemde belirgin psikotik belirti yoktur ama özgül olmayan hafif belirtiler (içe çekilme, işlevsellikte düşme) başlar; belirtisiz dönem grafikteki I. evredir", "kaynak": "slayt s28 grafiği ve öğrencinin kendi evre notu"},
+  {"yanlis": "Aktif dönemde işlevsel bozukluk yok (el notu)", "dogru": "Aktif dönemde işlevsellik belirgin bozulur", "kaynak": "slayt s17 B ölçütü"},
+  {"yanlis": "Sanrılı bozuklukta varsanı yok (vaka şıkkı el notu)", "dogru": "Sanrılı bozuklukta varsanı olabilir ama belirgin değildir ve sanrısal konuyla ilişkilidir", "kaynak": "slayt s37 notu"},
+  {"yanlis": "Şizoaffektif bozukluk yaygınlığı %1 (slayt)", "dogru": "Güncel kaynaklarda yaşam boyu yaygınlık yaklaşık %0,3; sınavda slayt değeri esas alınır, sayıyla soru yazılmamalı", "kaynak": "slayt s44 + girdideki düzeltme notu"},
+  {"yanlis": "Kalıtım çıkmışının doğru şıkkı 'aile öyküsü olanlarda risk %20'ye kadar çıkabilir'", "dogru": "Slayttaki sayılar farklı kurgulanmış (tek ebeveyn %5–6, bir kardeş + bir ebeveyn %17, iki ebeveyn %47); soru yazarken slayt sayıları kullanılmalı, %20 değeri slaytta yok", "kaynak": "slayt s12 ile banka past-1790877040101-810624 karşılaştırması"}
+ ],
+ "ara_soru_adaylari": [
+  {"birim": "psk-s04-b10", "fikir": "tanı ölçütü yanlış bul: süre 3 ay / negatif belirti şartı"},
+  {"birim": "psk-s04-b15", "fikir": "hangisi pozitif belirti değildir: apati; hangisi negatif değildir: enkoherans"},
+  {"birim": "psk-s05-b11", "fikir": "2 aydır işitsel varsanısı olan genç erkek → şizofreniform"},
+  {"birim": "psk-s05-b09", "fikir": "2 haftalık psikotik tablo → kısa psikotik; tam dönüş"},
+  {"birim": "psk-s04-b05", "fikir": "kronik şizofrenide beklenmeyen yapısal bulgu: hiperfrontalite"},
+  {"birim": "psk-s04-b03", "fikir": "risk etkenleri söylenemez: yaz doğumu"}
+ ],
+ "kurul2627_notu": "2026-27 slaytı gelince bakılacak: kısa psikotik bozukluk slaytındaki 'takipte çoğunlukla sch gelişir' satırı düzeltilmiş mi; Bleuler belirtileri ve madde kaynaklı psikoz slayta eklenmiş mi; şizoaffektif yaygınlık değeri; kalıtım yüzdeleri değişmiş mi."
+}

@@ -26,6 +26,10 @@ Sesli çözücünün açıklamaları ikinci adımdadır (`TALIMAT_COZUCU.md`).
   `{id, yil, sinav, kok, secenekler{A..E}, dogru, tekrar:[{id, sinav}] (aynı soru başka yıllarda), yillar:[…], dikkat?}`.
   Eşleme makinedir: bazıları başka derse/konuya ait ya da PDF kapsamı dışında olabilir. `dikkat: true` = kayıt şüpheli.
 - `pdf_metin/<kod>.md`: **baştan sona oku.**
+- **Geçmiş yıl öğrenci önem notu (Kurul 2, AGENTS 28):** `python3 scripts/ogrenci_onem/oku.py --ders <k2-xx>` + `docs/OGRENCI_ONEM/<k2-xx>.md`.
+  A birimi (çıkmış kanıtlı, bu yılın slaytında var) önem listesinde madde olur ve `"ogrenci": {"oncelik": "A", "not": "<kanıt: hangi
+  çıkmış/işaret/el notu, kısa>"}` taşır; B birimi madde olursa `oncelik: "B"`. Puan sırası: doğrulanmış çıkmış > öğrenci A > profil.
+  Belgenin §9 "KULLANMA" listesindeki yanlışlar maddeye girmez.
 
 ## Çıktı — `onem/<kod>.json`
 ```json

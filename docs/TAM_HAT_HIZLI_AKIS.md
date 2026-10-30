@@ -82,3 +82,9 @@ birleşimi. Bakacakları, bu sırayla:
 
 Çıktı: `denetim.json` → `{"karar": "GEÇER|KALIR", "bulgular": [{"katman", "kimlik", "sorun", "oneri"}]}`. KALIR ise yalnız
 bulgulardaki kimlikler §3'e göre düzeltilir, denetçi yalnız o kimlikleri yeniden denetler (bütün ders değil).
+
+## Öğrenci önem notu adımı (2026-10-30, AGENTS 28)
+E0 `hazirlik.py` → `ogrenci_onem.json` (geçmiş yıl öğrenci derlemesinin A/B birimleri bu yılın sayfalarına eşlenmiş). E2 yazarlarının
+istemine `oku.py --ders <k2-xx>` özeti (≤45 satır) + `docs/OGRENCI_ONEM/<ders>.md` bağlantısı girer; önem listesi, anlatım, örnek soru ve ara
+soru bu belgedeki öncelik haritasına ve soru payına uyar. E5'te `scripts/ogrenci_onem/kapi.py <ders>` 0 HATA (eksik bilgi listesi §3 kısmi
+düzeltmeyle yalnız o bilgilere uygulanır). Yöntem: `docs/OGRENCI_ONEM_YONTEMI.md`.

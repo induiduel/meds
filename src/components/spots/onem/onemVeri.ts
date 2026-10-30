@@ -22,6 +22,9 @@ export interface Madde {
   kaynak?: 'metin' | 'tablo' | 'sekil'; klinik?: boolean; sinavUygun?: boolean;
   /** patoloji (morfoloji/mekanizma/tanım…) · prognoz · tedavi (sorulabilir) · klinik bulgu (sorulmaz) */
   kategori?: Kat;
+  /** Geçmiş yıl (2025-26) öğrenci derleme notu (scripts/ogrenci_onem): A çıkmış kanıtlı, B vurgulu + el notlu; not: öğrencinin
+   *  düzeltilmiş el notu ya da işaretin kısa açıklaması */
+  ogrenci?: { oncelik: 'A' | 'B'; not?: string };
 }
 export interface Aday { id: string; sira: number; gerekce: string }
 export interface Cikmis { sinav: string; kok: string; secenekler: Record<string, string>; dogru: string; /** aynı sorunun sorulduğu diğer sınavlar */ tekrar?: string[] }

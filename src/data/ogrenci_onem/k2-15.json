@@ -1,0 +1,2082 @@
+{
+ "ders": "k2-15",
+ "kod": "2s02",
+ "brans": "Psikiyatri",
+ "konu": "Şizofrenik Bozukluklar",
+ "kaynak": "Geçmiş yıl (2025-26) öğrenci derleme notu: psk3.2",
+ "y25": {
+  "key": "y25-k2-15-sizofrenik-bozukluklar",
+  "sayfalar": [
+   4,
+   10,
+   12,
+   13,
+   14,
+   15,
+   17,
+   18,
+   19,
+   20,
+   22,
+   26,
+   27,
+   28,
+   29,
+   32,
+   35,
+   37,
+   38,
+   39,
+   40,
+   41,
+   43,
+   45,
+   46,
+   47
+  ]
+ },
+ "sayac": {
+  "birim": 26,
+  "A": 9,
+  "B": 11,
+  "C": 6,
+  "ogrenci_sorusu": 8,
+  "banka": 12,
+  "banka_kapsandi": 9
+ },
+ "birimler": [
+  {
+   "id": "psk-s04-b10",
+   "pdf": "psk",
+   "sayfa": 4,
+   "bolge": "r1c2",
+   "tur": "slayt",
+   "baslik": "Şizofreni tanı kriterleri",
+   "metin": "Tanı Kriterleri\nA. Aşağıdaki belirtilerden ikisinden (ya da daha çoğundan) her biri, bir aylık (ya da başarıyla tedavi edilmişse daha kısa) bir sürenin önemli bir kesiminde bulunur. Bunlardan en az birinin (1), (2) ya da (3) olması gerekir.\n1. Sanrılar.\n2. Varsanılar\n3. Darmadağın konuşma (örn. sık sık konudan sapma gösterme ya da anlaşılmaz konuşma).\n4. İleri derecede dağınık davranış ya da katatoni davranışı.\n5. Silik (negatif) belirtiler (duygusal katılımda azalma ya da kalkışamama).\nB. Bir ya da birden çok ana alanda işlevsellik düzeyi, bu bozukluğun başlangıcından önce erişilen düzeyin belirgin olarak altındadır (ya da çocukluk ya da ergenlikte başlamışsa, kişilerarası, okulda ya da işle ilgili işlevsellik, erişilmesi beklenen düzeye erişemez).\nC. Bu bozukluğun süregiden bulguları en az altı ay sürer.",
+   "el_yazisi": [
+    {
+     "metin": "tanı için gereken 2 kriterden en az biri bunlardan olmalı",
+     "hedef": "1-3 (sanrı, varsanı, darmadağın konuşma) - süslü parantez",
+     "guven": "yuksek"
+    },
+    {
+     "metin": "neyi neden yaptığını bilemez.",
+     "hedef": "4. İleri derecede dağınık davranış",
+     "guven": "yuksek"
+    },
+    {
+     "metin": "= duyu organlarıyla gerçek olmayan şeyi algılamak",
+     "hedef": "2. Varsanılar",
+     "guven": "yuksek"
+    },
+    {
+     "metin": "konudan sapma",
+     "hedef": "3. Darmadağın konuşma",
+     "guven": "yuksek"
+    }
+   ],
+   "isaretler": [
+    {
+     "tur": "yildiz",
+     "hedef": "Tanı Kriterleri (kırmızı daire içinde yıldız)"
+    },
+    {
+     "tur": "yesil",
+     "hedef": "A kriteri metni; B: işlevsellik düzeyi ... belirgin olarak altındadır"
+    },
+    {
+     "tur": "daire",
+     "hedef": "bir aylık"
+    },
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "ikisinden (ya da daha çoğundan) her biri; en az birinin (1), (2) ya da (3); Sanrılar; Varsanılar; Darmadağın konuşma; İleri derecede dağınık davranış; Silik (negatif) belirtiler; işlevsellik ... altındadır"
+    },
+    {
+     "tur": "daire",
+     "hedef": "en az altı ay sürer"
+    },
+    {
+     "tur": "yildiz",
+     "hedef": "en az altı ay sürer (daire içinde yıldız)"
+    }
+   ],
+   "sinyal": [
+    "cikmis",
+    "el_onemli",
+    "sari",
+    "yildiz"
+   ],
+   "y25": {
+    "key": "y25-k2-15-sizofrenik-bozukluklar",
+    "sayfa": 17
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "ogrenci_sorulari": [
+    "psk-s04-b09",
+    "psk-s04-b11",
+    "psk-s04-b17",
+    "psk-s05-b10",
+    "psk-s05-b12"
+   ],
+   "banka_cikmis": [
+    "365430593b97"
+   ],
+   "puan": 100,
+   "oncelik": "A",
+   "vurgulu": [
+    "A kriteri metni; B: işlevsellik düzeyi ... belirgin olarak altındadır",
+    "Tanı Kriterleri (kırmızı daire içinde yıldız)",
+    "bir aylık",
+    "en az altı ay sürer",
+    "en az altı ay sürer (daire içinde yıldız)",
+    "ikisinden (ya da daha çoğundan) her biri; en az birinin (1), (2) ya da (3); Sanrılar; Varsanılar; Darmadağın konuşma; İleri derecede dağınık davranış; Silik (negatif) belirtiler; işlevsellik ... altındadır"
+   ]
+  },
+  {
+   "id": "psk-s04-b04",
+   "pdf": "psk",
+   "sayfa": 4,
+   "bolge": "r1c1/r2c1",
+   "tur": "slayt",
+   "baslik": "Biyolojik etkenler 1: Kalıtım",
+   "metin": "Biyolojik Etkenler;\n1. Kalıtım\nAile çalışmaları: Şizofreni hastalarının çocuklarında yaşam boyu risk ortalama %10'dur. Tek bir ebeveyn hasta ise %5-6 düzeyinde. Ailede hasta birey sayısı arttıkça risk artmaktadır. Bir çocuk bir ebeveyn varsa %17; iki ebeveyn varsa %47'e kadar yükselmektedir.\nİkiz çalışmaları: Monozigotlarda %46, Dizigotlarda %14,\nEvlat edinme çalışmaları: %17\nAntisipasyon: kuşaklar boyunca daha erken ve şiddetli başlangıç.",
+   "el_yazisi": [
+    {
+     "metin": "= dominant kalıtılmasa da gen etkisi önemli.",
+     "hedef": "1. Kalıtım",
+     "guven": "yuksek"
+    },
+    {
+     "metin": "→ hastalığın görülme oranının artması, daha erken ve şiddetli seyretmesi.",
+     "hedef": "Antisipasyon",
+     "guven": "yuksek"
+    }
+   ],
+   "isaretler": [
+    {
+     "tur": "yesil",
+     "hedef": "Şizofreni hastalarının çocuklarında yaşam boyu risk ortalama %10'dur. Tek bir ebeveyn hasta ise %5-6 düzeyinde."
+    },
+    {
+     "tur": "yesil",
+     "hedef": "Antisipasyon: kuşaklar boyunca daha erken ve şiddetli başlangıç"
+    }
+   ],
+   "sinyal": [
+    "cikmis",
+    "el_onemli",
+    "sari"
+   ],
+   "y25": {
+    "key": "y25-k2-15-sizofrenik-bozukluklar",
+    "sayfa": 12
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "ogrenci_sorulari": [
+    "psk-s04-b02"
+   ],
+   "banka_cikmis": [
+    "past-1790877040101-810624"
+   ],
+   "puan": 88,
+   "oncelik": "A",
+   "vurgulu": [
+    "Antisipasyon: kuşaklar boyunca daha erken ve şiddetli başlangıç",
+    "Şizofreni hastalarının çocuklarında yaşam boyu risk ortalama %10'dur. Tek bir ebeveyn hasta ise %5-6 düzeyinde."
+   ]
+  },
+  {
+   "id": "psk-s05-b02",
+   "pdf": "psk",
+   "sayfa": 5,
+   "bolge": "r1c1",
+   "tur": "slayt",
+   "baslik": "Sanrılı bozukluk: özellikler ve tanı",
+   "metin": "SANRILI BOZUKLUK\nŞizofrenideki gibi ağır yeti kaybı yok (s36)\nHastalık iç görüsü yok (s36)\nKadınlarda daha sık (s36)\nBir ay ya da daha uzun süren, bir (ya da daha çok) sanrının varlığı.\nŞizofreninin A tanı ölçütü hiçbir zaman karşılanmamıştır.\nSanrılar: Tek alana odaklı, Sistematize, Çoğunlukla bizar olmayan sanrılar",
+   "el_yazisi": [
+    {
+     "metin": "→ hekim başvurusu nadir.",
+     "hedef": "Hastalık iç görüsü yok",
+     "guven": "yuksek"
+    },
+    {
+     "metin": "→ sanrı, varsanı, darmadağın konuşma / silik belirti, ileri dağınık davranış",
+     "hedef": "Şizofreninin A tanı ölçütü (beş belirti)",
+     "guven": "yuksek"
+    },
+    {
+     "metin": "→ varsanı belirgin değil, sanrısal konuyla ilişkili.",
+     "hedef": "karşılanmamıştır (s37 notu)",
+     "guven": "yuksek"
+    },
+    {
+     "metin": "→ SCH'de sanrılar takip edilemez, dağınıktır.",
+     "hedef": "Sanrılar: Tek alana odaklı, Sistematize",
+     "guven": "yuksek"
+    }
+   ],
+   "isaretler": [
+    {
+     "tur": "yesil",
+     "hedef": "Şizofrenideki gibi ağır yeti kaybı yok; Hastalık iç görüsü yok; Bir ay ya da daha uzun süren ... sanrının varlığı; Şizofreninin A tanı ölçütü hiçbir zaman karşılanmamıştır; Sanrılar: Tek alana odaklı, Sistematize, Çoğunlukla bizar olmayan sanrılar"
+    },
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "Şizofrenideki gibi ağır yeti kaybı yok"
+    },
+    {
+     "tur": "daire",
+     "hedef": "Şizofreninin A tanı ölçütü hiçbir zaman / karşılanmamıştır"
+    }
+   ],
+   "sinyal": [
+    "cikmis",
+    "el_onemli",
+    "sari"
+   ],
+   "y25": {
+    "key": "y25-k2-15-sizofrenik-bozukluklar",
+    "sayfa": 37
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "ogrenci_sorulari": [
+    "psk-s04-b16"
+   ],
+   "banka_cikmis": [
+    "past-1790877044942-54229"
+   ],
+   "puan": 88,
+   "oncelik": "A",
+   "vurgulu": [
+    "Şizofrenideki gibi ağır yeti kaybı yok",
+    "Şizofrenideki gibi ağır yeti kaybı yok; Hastalık iç görüsü yok; Bir ay ya da daha uzun süren ... sanrının varlığı; Şizofreninin A tanı ölçütü hiçbir zaman karşılanmamıştır; Sanrılar: Tek alana odaklı, Sistematize, Çoğunlukla bizar olmayan sanrılar",
+    "Şizofreninin A tanı ölçütü hiçbir zaman / karşılanmamıştır"
+   ]
+  },
+  {
+   "id": "psk-s04-b05",
+   "pdf": "psk",
+   "sayfa": 4,
+   "bolge": "r2c1",
+   "tur": "slayt",
+   "baslik": "Biyolojik etkenler 2: Beyinde yapısal ve işlevsel bozukluklar",
+   "metin": "2. Beyinde yapısal ve işlevsel bozukluklar;\nVentriküler genişleme; kötü hastalık öncesi uyum, negatif belirtiler, tedaviye kötü yanıt, bilişsel kayıplar,\nSulkuslarda genişleme,\nFrontal kortekste incelme, beyin ve kafaiçi hacminin küçüklüğü,\nAlt bölgeler; Talamus, amigdala/hipokampus, temporal loblar; bazal ganglionlar.",
+   "el_yazisi": [
+    {
+     "metin": "= işlevsel bozukluklar daha önemli",
+     "hedef": "2. Beyinde yapısal ve işlevsel bozukluklar",
+     "guven": "yuksek"
+    },
+    {
+     "metin": "genelde demansta görülür.",
+     "hedef": "Ventriküler genişleme ... bilişsel kayıplar (parantezle)",
+     "guven": "yuksek"
+    },
+    {
+     "metin": "psk ile özellikle ilişkili",
+     "hedef": "temporal loblar",
+     "guven": "yuksek"
+    },
+    {
+     "metin": "anterior singulat korteks *",
+     "hedef": "Alt bölgeler",
+     "guven": "yuksek"
+    }
+   ],
+   "isaretler": [
+    {
+     "tur": "yesil",
+     "hedef": "Ventriküler genişleme; Sulkuslarda genişleme; Frontal kortekste incelme; beyin ve kafaiçi hacminin küçüklüğü"
+    },
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "Ventriküler genişleme; Sulkuslarda genişleme; Frontal kortekste incelme; beyin ve kafaiçi hacminin küçüklüğü; Talamus; amigdala/hipokampus; bazal ganglionlar"
+    },
+    {
+     "tur": "daire",
+     "hedef": "temporal loblar"
+    },
+    {
+     "tur": "yildiz",
+     "hedef": "anterior cingulat korteks (el notu yanında)"
+    }
+   ],
+   "sinyal": [
+    "cikmis",
+    "el_onemli",
+    "sari",
+    "yildiz"
+   ],
+   "y25": {
+    "key": "y25-k2-15-sizofrenik-bozukluklar",
+    "sayfa": 13
+   },
+   "y26": null,
+   "duzeltme": [
+    {
+     "ham": "cingulat",
+     "dogru": "singulat",
+     "gerekce": "Türkçe yazım (slayt s14 'anterior singulat')."
+    }
+   ],
+   "not_": null,
+   "ogrenci_sorulari": [
+    "psk-s04-b06"
+   ],
+   "puan": 73,
+   "oncelik": "A",
+   "vurgulu": [
+    "Ventriküler genişleme; Sulkuslarda genişleme; Frontal kortekste incelme; beyin ve kafaiçi hacminin küçüklüğü",
+    "Ventriküler genişleme; Sulkuslarda genişleme; Frontal kortekste incelme; beyin ve kafaiçi hacminin küçüklüğü; Talamus; amigdala/hipokampus; bazal ganglionlar",
+    "anterior cingulat korteks (el notu yanında)",
+    "temporal loblar"
+   ]
+  },
+  {
+   "id": "psk-s04-b12",
+   "pdf": "psk",
+   "sayfa": 4,
+   "bolge": "r1c2",
+   "tur": "slayt",
+   "baslik": "6 aylık süre ile ilgili: şizofreni / şizofreniform / kısa psikotik",
+   "metin": "Belirtiler 6 ay ve daha uzun ise\nHastalığın süresi 6 aydan kısa ise\nHastalığın süresi 1 günden fazla 4 haftadan kısa ise",
+   "el_yazisi": [
+    {
+     "metin": "= şizofreni",
+     "hedef": "Belirtiler 6 ay ve daha uzun ise",
+     "guven": "yuksek"
+    },
+    {
+     "metin": "= şizofreniform bozukluk (1-6 ay)",
+     "hedef": "Hastalığın süresi 6 aydan kısa ise",
+     "guven": "yuksek"
+    },
+    {
+     "metin": "= kısa psikotik bozukluk / sınıflandırılamayan",
+     "hedef": "Hastalığın süresi 1 günden fazla 4 haftadan kısa ise",
+     "guven": "yuksek"
+    }
+   ],
+   "isaretler": [
+    {
+     "tur": "yesil",
+     "hedef": "6 ay ve daha uzun; 6 aydan kısa; 1 günden fazla 4 haftadan kısa"
+    },
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "üç satırın tümü"
+    }
+   ],
+   "sinyal": [
+    "el_onemli",
+    "kirmizi_cizgi",
+    "sari"
+   ],
+   "y25": {
+    "key": "y25-k2-15-sizofrenik-bozukluklar",
+    "sayfa": 18
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "banka_cikmis": [
+    "past-q-I_SKENDERUN_TI_Mu_du_rlu_g_u_ne0__1__230709_230251-77"
+   ],
+   "puan": 53,
+   "oncelik": "A",
+   "vurgulu": [
+    "6 ay ve daha uzun; 6 aydan kısa; 1 günden fazla 4 haftadan kısa",
+    "üç satırın tümü"
+   ]
+  },
+  {
+   "id": "psk-s05-b09",
+   "pdf": "psk",
+   "sayfa": 5,
+   "bolge": "r2c2",
+   "tur": "slayt",
+   "baslik": "Kısa psikotik bozukluk tanı ölçütleri",
+   "metin": "Aşağıdaki belirtilerden birinin (ya da daha çoğunun) varlığı. Bunlardan en az birinin (1), (2) ya da (3) olması gerekir.\n1. Sanrılar.\n2. Varsanılar.\n3. Darmadağın konuşma (örn. sık sık konudan sapma gösterme ya da anlaşılmaz konuşma).\n4. İleri derecede dağınık davranış ya da katatoni davranışı.\nB. Bu bozukluğun bir dönemi, en az bir gün, ancak bir aydan daha kısa sürer ve en sonunda hastalık öncesi işlevsellik düzeyine tam geri dönülür.",
+   "el_yazisi": [
+    {
+     "metin": "belirtilerin en az 1'i üçünden olmalı",
+     "hedef": "1-3 (süslü parantez)",
+     "guven": "yuksek"
+    },
+    {
+     "metin": "SCH'de tam geri dönülemez!!",
+     "hedef": "tam geri dönülür",
+     "guven": "yuksek"
+    }
+   ],
+   "isaretler": [
+    {
+     "tur": "yesil",
+     "hedef": "birinin (ya da daha çoğunun); 1-4 maddeleri; B kriteri"
+    },
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "Sanrılar; Varsanılar; Darmadağın konuşma; B kriterinin tamamı"
+    },
+    {
+     "tur": "daire",
+     "hedef": "tam"
+    }
+   ],
+   "sinyal": [
+    "el_onemli",
+    "kirmizi_cizgi",
+    "sari"
+   ],
+   "y25": {
+    "key": "y25-k2-15-sizofrenik-bozukluklar",
+    "sayfa": 46
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "banka_cikmis": [
+    "q-25-26_d_nem_3_kurul_2-85"
+   ],
+   "puan": 53,
+   "oncelik": "A",
+   "vurgulu": [
+    "Sanrılar; Varsanılar; Darmadağın konuşma; B kriterinin tamamı",
+    "birinin (ya da daha çoğunun); 1-4 maddeleri; B kriteri",
+    "tam"
+   ]
+  },
+  {
+   "id": "psk-s05-b11",
+   "pdf": "psk",
+   "sayfa": 5,
+   "bolge": "r1c3",
+   "tur": "slayt",
+   "baslik": "Şizofreniform bozukluk",
+   "metin": "ŞİZOFRENİFORM BOZUKLUK\n1-6 ay süren psikotik belirtiler\nBelirtiler sch'den daha hafif ve işlevsellikte bozulma az\nA. Aşağıdaki belirtilerden ikisinden (ya da daha çoğundan) her biri, bir aylık (ya da başarıyla tedavi edilmişse daha kısa) bir sürenin önemli bir kesiminde bulunur. Bunlardan en az birinin (1), (2) ya da (3) olması gerekir. (s48)\n1. Sanrılar.\n2. Varsanılar.\n3. Darmadağın konuşma (örn. sık sık konudan sapma gösterme ya da anlaşılmaz konuşma).\n4. İleri derecede dağınık davranış ya da katatoni davranışı.\n5. Silik (negatif) belirtiler (duygusal katılımda azalma).",
+   "el_yazisi": [
+    {
+     "metin": "→ takipte SCH'ye dönüşür",
+     "hedef": "Belirtiler sch'den daha hafif ve işlevsellikte bozulma az (s47: çoğu takipte sch'e dönüşür)",
+     "guven": "yuksek"
+    }
+   ],
+   "isaretler": [
+    {
+     "tur": "daire",
+     "hedef": "1-6 ay süren psikotik belirtiler"
+    },
+    {
+     "tur": "yesil",
+     "hedef": "1-6 ay süren psikotik belirtiler; A kriteri; 1-5 maddeleri"
+    },
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "her biri, bir aylık; Sanrılar; Varsanılar; Darmadağın konuşma"
+    }
+   ],
+   "sinyal": [
+    "el_onemli",
+    "sari"
+   ],
+   "y25": {
+    "key": "y25-k2-15-sizofrenik-bozukluklar",
+    "sayfa": 47
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "banka_cikmis": [
+    "past-q-25-26_d_nem_3_kurul_2-84"
+   ],
+   "puan": 48,
+   "oncelik": "A",
+   "vurgulu": [
+    "1-6 ay süren psikotik belirtiler",
+    "1-6 ay süren psikotik belirtiler; A kriteri; 1-5 maddeleri",
+    "her biri, bir aylık; Sanrılar; Varsanılar; Darmadağın konuşma"
+   ]
+  },
+  {
+   "id": "psk-s05-b08",
+   "pdf": "psk",
+   "sayfa": 5,
+   "bolge": "r1c2/r2c2",
+   "tur": "slayt",
+   "baslik": "Kısa psikotik bozukluk",
+   "metin": "KISA PSİKOTİK BOZUKLUK\n1 gün-1 ay süren psikotik belirtiler\nPsikolojik nedenler ön planda, çoğunda KB\nKısa psikotik bozuklukta hasta tanım gereği hastalık öncesi işlevselliğe tam döner ve prognoz genellikle iyidir; yalnız bir kısmında sonradan şizofreni gelişir. 'Takipte çoğunlukla şizofreniye dönüşür' ifadesi şizofreniform bozukluk için geçerlidir (s47).\nTedavide mutlaka antipsikotik başlamak gerekliyse düşük doz ve kısa süre verilmelidir.\nStres etkeninden uzaklaştır, başa çıkma mekanizmalarına yönelik psikoterapi",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "daire",
+     "hedef": "1 gün-1 ay süren psikotik belirtiler"
+    },
+    {
+     "tur": "yesil",
+     "hedef": "tüm maddeler"
+    }
+   ],
+   "sinyal": [
+    "sari"
+   ],
+   "y25": {
+    "key": "y25-k2-15-sizofrenik-bozukluklar",
+    "sayfa": 45
+   },
+   "y26": null,
+   "duzeltme": [
+    {
+     "ham": "Takipte çoğunlukla sch gelişir.",
+     "dogru": "Kısa psikotik bozuklukta hasta tanım gereği hastalık öncesi işlevselliğe tam döner ve prognoz genellikle iyidir; yalnız bir kısmında sonradan şizofreni gelişir. 'Takipte çoğunlukla şizofreniye dönüşür' ifadesi şizofreniform bozukluk için geçerlidir (s47).",
+     "gerekce": "Slayt metnindeki olası tıbbi hata; aynı dersin s46 B kriteriyle ('tam geri dönülür') ve öğrencinin 'SCH'de tam geri dönülemez' notuyla çelişiyor. KB = kişilik bozukluğu."
+    }
+   ],
+   "not_": null,
+   "banka_cikmis": [
+    "d3-k2-psi-002",
+    "past-1790877044882-168910"
+   ],
+   "puan": 45,
+   "oncelik": "A",
+   "vurgulu": [
+    "1 gün-1 ay süren psikotik belirtiler",
+    "tüm maddeler"
+   ]
+  },
+  {
+   "id": "psk-s04-b13",
+   "pdf": "psk",
+   "sayfa": 4,
+   "bolge": "r1c2/r2c2",
+   "tur": "slayt",
+   "baslik": "Ayırıcı tanı: psikiyatrik hastalıklar",
+   "metin": "Ayırıcı Tanı\nPsikiyatrik hastalıklar;\nPsikotik özellikli bipolar bozukluk\nPsikotik özellikli major depresyon\nŞizoaffektif bozukluk\nKısa psikotik bozukluk\nŞizofreniform bozukluk\nSanrılı bozukluk\nTemaruz\nİndüklenmiş psikotik bozukluk\nPanik bozukluğu\nDepersonalizasyon bozukluğu\nObsesif kompulsif bozukluk\nKişilik bozuklukları (A Kümesi)\nYapay bozukluk",
+   "el_yazisi": [
+    {
+     "metin": "→ mani döneminde halüsinasyon görülürse.",
+     "hedef": "Psikotik özellikli bipolar bozukluk",
+     "guven": "yuksek"
+    },
+    {
+     "metin": "→ ceza almamak, işe gitmemek, askere gitmemek için vb. taklit yapmak",
+     "hedef": "Temaruz",
+     "guven": "orta",
+     "alternatif": "satır başı tile sınırında kesik; 'askere' sol parçada"
+    },
+    {
+     "metin": "→ ilaç kullanımına bağlı.",
+     "hedef": "İndüklenmiş psikotik bozukluk",
+     "guven": "yuksek"
+    },
+    {
+     "metin": "→ benliğini tanıyamama",
+     "hedef": "Depersonalizasyon bozukluğu",
+     "guven": "yuksek"
+    },
+    {
+     "metin": "→ kişi fazla takıntılılığının farkındadır.",
+     "hedef": "Obsesif kompulsif bozukluk",
+     "guven": "yuksek"
+    },
+    {
+     "metin": "→ taklit yok",
+     "hedef": "Yapay bozukluk",
+     "guven": "yuksek"
+    }
+   ],
+   "isaretler": [
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "Temaruz el notu altı dalgalı"
+    }
+   ],
+   "sinyal": [
+    "el_onemli"
+   ],
+   "y25": {
+    "key": "y25-k2-15-sizofrenik-bozukluklar",
+    "sayfa": 19
+   },
+   "y26": null,
+   "duzeltme": [
+    {
+     "ham": "İndüklenmiş psikotik bozukluk → ilaç kullanımına bağlı",
+     "dogru": "İndüklenmiş psikotik bozukluk = paylaşılmış psikotik bozukluk (folie à deux): sanrı, yakın ilişkideki psikotik bir kişiden diğerine geçer. İlaç/madde kaynaklı psikoz ayrı bir tanıdır (madde/ilaç kullanımının yol açtığı psikotik bozukluk).",
+     "gerekce": "Tıbbi hata: el notu iki ayrı kavramı karıştırıyor."
+    },
+    {
+     "ham": "Yapay bozukluk → taklit yok",
+     "dogru": "Yapay bozuklukta da belirtiler bilinçli olarak oluşturulur/taklit edilir; temaruzdan farkı dış kazanç (ceza, askerlik, para) değil hasta rolü kazanma amacıdır.",
+     "gerekce": "Nüans: 'taklit yok' yanıltıcı; ayrım dış kazanç olup olmamasıdır."
+    }
+   ],
+   "not_": null,
+   "banka_cikmis": [
+    "past-1790877044394-242744"
+   ],
+   "puan": 38,
+   "oncelik": "A",
+   "vurgulu": [
+    "Temaruz el notu altı dalgalı"
+   ]
+  },
+  {
+   "id": "psk-s05-b05",
+   "pdf": "psk",
+   "sayfa": 5,
+   "bolge": "r1c1/r2c1",
+   "tur": "slayt",
+   "baslik": "Şizofreni ile sanrılı bozukluk karşılaştırması",
+   "metin": "Şizofreni: İşlevsellik kötü, Yeti kaybı var, Sanrılar sistematize değil, yaygın, Diğer belirtiler var\nSanrılı Boz: İşlevsellik iyi, Yeti kaybı yok, Sanrılar sistematize, daha odaklanmış, Şizofreninin diğer belirtileri yok",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "yildiz",
+     "hedef": "tablo başlığı (daire içinde yıldız)"
+    },
+    {
+     "tur": "yesil",
+     "hedef": "tüm karşılaştırma maddeleri"
+    }
+   ],
+   "sinyal": [
+    "sari",
+    "yildiz"
+   ],
+   "y25": {
+    "key": "y25-k2-15-sizofrenik-bozukluklar",
+    "sayfa": 40
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "puan": 25,
+   "oncelik": "B",
+   "vurgulu": [
+    "tablo başlığı (daire içinde yıldız)",
+    "tüm karşılaştırma maddeleri"
+   ]
+  },
+  {
+   "id": "psk-s04-b21",
+   "pdf": "psk",
+   "sayfa": 4,
+   "bolge": "r2c2/r2c3",
+   "tur": "slayt",
+   "baslik": "İyi ve kötü prognoz ile ilgili özellikler",
+   "metin": "İyi ve Kötü Prognoz ile ilgili Özellikler\nÖzellik / iyi / kötü\nYaş: ileri / genç\nCinsiyet: kadın / erkek\nBaşlangıç: akut / sinsi\nSüre: kısa / kronik\nPsikiyatrik hx: yok / var\nDuygudurum blrt: var / yok\nObses/kompuls: yok / var\nSaldırganlık: yok / var\nPremorbid uyum: iyi / kötü\n(s30) Evlilik hikayesi: evli / hiç evlenmemiş\nPsikoseksüel uyum: iyi / kötü\nNörolojik fonk: normal / silik işaretler\nPerinatal komp lar: yok / var\nYapısal beyin anorm.: yok / var\nSosyal sınıf: yüksek / düşük\nAilede sch hikayesi: yok / var\nTranskültürel özellikler: Gelişmekte / Gelişmiş ülke",
+   "el_yazisi": [
+    {
+     "metin": "(ani başlar)",
+     "hedef": "Başlangıç: akut",
+     "guven": "yuksek"
+    },
+    {
+     "metin": "kişilik özellikleri",
+     "hedef": "Premorbid uyum",
+     "guven": "yuksek"
+    }
+   ],
+   "isaretler": [
+    {
+     "tur": "yildiz",
+     "hedef": "İyi ve Kötü Prognoz başlığı (daire içinde yıldız)"
+    },
+    {
+     "tur": "daire",
+     "hedef": "Yaş; Cinsiyet; Duygudurum blrt; Obses/kompuls; Transkültürel özellikler satırları"
+    },
+    {
+     "tur": "yildiz",
+     "hedef": "Premorbid uyum"
+    },
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "Premorbid uyum"
+    }
+   ],
+   "sinyal": [
+    "el_onemli",
+    "yildiz"
+   ],
+   "y25": {
+    "key": "y25-k2-15-sizofrenik-bozukluklar",
+    "sayfa": 29
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "puan": 23,
+   "oncelik": "B",
+   "vurgulu": [
+    "Premorbid uyum",
+    "Yaş; Cinsiyet; Duygudurum blrt; Obses/kompuls; Transkültürel özellikler satırları",
+    "İyi ve Kötü Prognoz başlığı (daire içinde yıldız)"
+   ]
+  },
+  {
+   "id": "psk-s04-b22",
+   "pdf": "psk",
+   "sayfa": 4,
+   "bolge": "r2c3",
+   "tur": "slayt",
+   "baslik": "Katatoni",
+   "metin": "Katatoni\nA. Klinik görünümde aşağıdaki belirtilerden üçü (ya da daha çoğu) baskındır:\n1. Stupor (psikodevinsel etkinliğin olmaması; çevreyle etkin bir biçimde ilgilenmeme).\n2. Katalepsi (yercekimine karşı edilgin bir konum alma).\n3. Balmumu esnekliği (muayene edenin konum vermesine çok az bir direnç gösterme).\n4. Mutizm (sözel tepki göstermeme ya da çok az gösterme [bilinen bir afazi varsa dışlayın]).\n5. Negativizm (yönergelere ya da dış uyaranlara karşı gelme ya da hiç tepki göstermeme).\n6. Konum (postur) alma (yer çekimine karşı bir konumu, kendiliğinden ve etkin bir biçimde sürdürme). (s33)\n7. Yapmacık davranış (mannerizm) (olağan eylemleri, yadırganacak denli olağana aykırı bir biçimde, önemsiz birtakım özelliklerini bozarak, çarpıtarak, abartarak ortaya koyma).\n8. Basmakalıp davranışlar (yineleyici, olağandışı sıklıkta, amaca yönelik olmayan eylemler).\n9. Ajitasyon.\n10. Yüzünü buruşturma (grimas).\n11. Ekolali (yankılama) (başkasının konuşmasının aynısını yapma).\n12. Ekopraksi (başkasının davranışlarının aynısını yapma).",
+   "el_yazisi": [
+    {
+     "metin": "= nadir",
+     "hedef": "Katatoni",
+     "guven": "yuksek"
+    },
+    {
+     "metin": "konuşmama",
+     "hedef": "4. Mutizm",
+     "guven": "yuksek"
+    }
+   ],
+   "isaretler": [
+    {
+     "tur": "yesil",
+     "hedef": "belirtilerden üçü (ya da daha çoğu) baskındır"
+    },
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "üçü; 12 belirtinin adlarının tümü"
+    }
+   ],
+   "sinyal": [
+    "el_onemli",
+    "kirmizi_cizgi",
+    "sari"
+   ],
+   "y25": {
+    "key": "y25-k2-15-sizofrenik-bozukluklar",
+    "sayfa": 32
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "puan": 23,
+   "oncelik": "B",
+   "vurgulu": [
+    "belirtilerden üçü (ya da daha çoğu) baskındır",
+    "üçü; 12 belirtinin adlarının tümü"
+   ]
+  },
+  {
+   "id": "psk-s04-b03",
+   "pdf": "psk",
+   "sayfa": 4,
+   "bolge": "r1c1",
+   "tur": "slayt",
+   "baslik": "Etyoloji: stres-diyatez ve psikososyal etkenler",
+   "metin": "Etyoloji\nStres-diyatez modeli (s06)\nPsikososyal Etkenler\nÇocukluk Çağı Örselenme Yaşantıları\nEsrar Kullanımı",
+   "el_yazisi": [
+    {
+     "metin": "→ anne karnından itibaren stres önemli risk faktörü!!",
+     "hedef": "Psikososyal Etkenler (s07 gebelik-doğum komplikasyonları)",
+     "guven": "yuksek"
+    },
+    {
+     "metin": "→ kışın doğanda daha yüksek risk.",
+     "hedef": "Psikososyal Etkenler (s08 doğum mevsimi)",
+     "guven": "yuksek"
+    },
+    {
+     "metin": "→ ileri ebeveyn yaşı risk.",
+     "hedef": "Psikososyal Etkenler (s09 ebeveyn yaşı)",
+     "guven": "yuksek"
+    },
+    {
+     "metin": "travmatik",
+     "hedef": "Örselenme",
+     "guven": "yuksek"
+    },
+    {
+     "metin": "= bırakılmış olsa bile esrarın hücrelerde bıraktığı hasar kalıcıdır!!",
+     "hedef": "Esrar Kullanımı",
+     "guven": "yuksek"
+    },
+    {
+     "metin": "→ kentsel yaşam",
+     "hedef": "Psikososyal Etkenler (s11)",
+     "guven": "yuksek"
+    },
+    {
+     "metin": "→ göç",
+     "hedef": "Psikososyal Etkenler (s11)",
+     "guven": "yuksek"
+    }
+   ],
+   "isaretler": [
+    {
+     "tur": "pembe",
+     "hedef": "el notları pembe zeminde (Psikososyal etkenler altı, Esrar kullanımı, kentsel yaşam)"
+    },
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "Örselenme"
+    },
+    {
+     "tur": "ok",
+     "hedef": "Çocukluk Çağı Örselenme / Esrar / kentsel yaşam / göç maddeleri"
+    }
+   ],
+   "sinyal": [
+    "el_onemli",
+    "sari"
+   ],
+   "y25": {
+    "key": "y25-k2-15-sizofrenik-bozukluklar",
+    "sayfa": 10
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "puan": 18,
+   "oncelik": "B",
+   "vurgulu": [
+    "el notları pembe zeminde (Psikososyal etkenler altı, Esrar kullanımı, kentsel yaşam)",
+    "Örselenme"
+   ]
+  },
+  {
+   "id": "psk-s04-b07",
+   "pdf": "psk",
+   "sayfa": 4,
+   "bolge": "r2c1",
+   "tur": "slayt",
+   "baslik": "Biyolojik etkenler 3: İşlevsel devreler (fonksiyonel nörogörüntüleme)",
+   "metin": "3. İşlevsel Devreler (Fonksiyonel Nörogörüntüleme)\nHipofrontalite – negatif belirtilerle ilişkilidir.\nPrefrontal korteks ve onun bir alt bölgesi olan dorsolateral prefrontal korteks.\n'Şizofreni devresi': frontal korteks (orbital, dorsolateral, medial), anterior singulat, talamus, temporal lobun çeşitli alt bölgeleri, serebellum.",
+   "el_yazisi": [
+    {
+     "metin": "frontal işlevler daha fazla bozulur.",
+     "hedef": "Hipofrontalite",
+     "guven": "yuksek"
+    },
+    {
+     "metin": "→ kişilikle ilgili. (beyin arkadan öne geliştiği için kişilik gelişimi 25'e kadar devam eder)",
+     "hedef": "frontal korteks (orbital, ...)",
+     "guven": "yuksek"
+    },
+    {
+     "metin": "→ duyuların filtrelendiği yer. (bozulması halüsinasyona sebep)",
+     "hedef": "talamus",
+     "guven": "yuksek"
+    }
+   ],
+   "isaretler": [
+    {
+     "tur": "yesil",
+     "hedef": "Hipofrontalite – negatif belirtilerle ilişkilidir; Prefrontal korteks ... dorsolateral prefrontal korteks; şizofreni devresi bileşenleri"
+    },
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "Hipofrontalite; frontal korteks; anterior singulat; talamus; temporal lobun çeşitli alt bölgeleri; serebellum"
+    },
+    {
+     "tur": "kutu",
+     "hedef": "'Şizofreni devresi'"
+    }
+   ],
+   "sinyal": [
+    "el_onemli",
+    "sari"
+   ],
+   "y25": {
+    "key": "y25-k2-15-sizofrenik-bozukluklar",
+    "sayfa": 14
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "puan": 18,
+   "oncelik": "B",
+   "vurgulu": [
+    "'Şizofreni devresi'",
+    "Hipofrontalite – negatif belirtilerle ilişkilidir; Prefrontal korteks ... dorsolateral prefrontal korteks; şizofreni devresi bileşenleri",
+    "Hipofrontalite; frontal korteks; anterior singulat; talamus; temporal lobun çeşitli alt bölgeleri; serebellum"
+   ]
+  },
+  {
+   "id": "psk-s04-b08",
+   "pdf": "psk",
+   "sayfa": 4,
+   "bolge": "r2c1",
+   "tur": "slayt",
+   "baslik": "Biyolojik etkenler 4-6: nöropatoloji, nörogelişimsel kusur, biyokimyasal araştırmalar",
+   "metin": "4. Nöropatoloji;\nKüçük kortikal ve hipokampal nöronlar\nDorsal talamusta daha az sayıda nöron\nHipokampusta azalmış sinaps ve dendritler\nGliozisin olmaması\n5. Nörogelişimsel kusur kuramı\n6. Biyokimyasal araştırmalar; (s16)\nDopamin Hipotezi; Dopamin sistemi hiperaktivitesi – D2 blokajı yapan ilaçlar, amfetamin etkisi\nDopamin reseptör tipleri (n=5) ve dağılımı: Hiperdopaminerjik durum → pozitif belirtilerle; Hipodopaminerjik durum → negatif belirtilerle\nSerotonin, noradrenalin, glutamat, GABA, nöromodülatörler, nöropeptidler....\nFensiklidin → GLUTAMAT → Şizofreni benzeri belirtiler.",
+   "el_yazisi": [
+    {
+     "metin": "→ doğum ve gebelik komplikasyonları",
+     "hedef": "5. Nörogelişimsel kusur kuramı",
+     "guven": "yuksek"
+    },
+    {
+     "metin": "→ glutamatı artıran, GABA'yı azaltan ilaçlar psikozu artırır.",
+     "hedef": "Serotonin, noradrenalin, glutamat, GABA",
+     "guven": "yuksek"
+    }
+   ],
+   "isaretler": [
+    {
+     "tur": "yesil",
+     "hedef": "Küçük kortikal ve hipokampal nöronlar; Dorsal talamusta daha az sayıda nöron; Hipokampusta azalmış sinaps ve dendritler; Gliozisin olmaması"
+    },
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "nöropatoloji maddelerinin tümü"
+    },
+    {
+     "tur": "yesil",
+     "hedef": "Hiperdopaminerjik durum → pozitif belirtilerle; Hipodopaminerjik durum → negatif belirtilerle"
+    }
+   ],
+   "sinyal": [
+    "el_onemli",
+    "sari"
+   ],
+   "y25": {
+    "key": "y25-k2-15-sizofrenik-bozukluklar",
+    "sayfa": 15
+   },
+   "y26": null,
+   "duzeltme": [
+    {
+     "ham": "glutamatı artıran ... ilaçlar psikozu artırır",
+     "dogru": "Fensiklidin/ketamin gibi NMDA (glutamat) reseptör antagonistleri glutamat iletiminde hipofonksiyonla şizofreni benzeri belirtiler oluşturur; yani psikoz glutamaterjik iletimin bloke edilmesiyle ilişkilendirilir.",
+     "gerekce": "Nüans: slayt yalnız 'Fensiklidin → GLUTAMAT → şizofreni benzeri belirtiler' diyor; el notu yönü basitleştiriyor (NMDA hipofonksiyon hipotezi)."
+    }
+   ],
+   "not_": null,
+   "puan": 18,
+   "oncelik": "B",
+   "vurgulu": [
+    "Hiperdopaminerjik durum → pozitif belirtilerle; Hipodopaminerjik durum → negatif belirtilerle",
+    "Küçük kortikal ve hipokampal nöronlar; Dorsal talamusta daha az sayıda nöron; Hipokampusta azalmış sinaps ve dendritler; Gliozisin olmaması",
+    "nöropatoloji maddelerinin tümü"
+   ]
+  },
+  {
+   "id": "psk-s04-b14",
+   "pdf": "psk",
+   "sayfa": 4,
+   "bolge": "r2c2",
+   "tur": "slayt",
+   "baslik": "Ayırıcı tanı: genel tıbbi hastalıklar",
+   "metin": "Genel tıbbi hastalıklar;\nTemporal lob epilepsisi\nTümör, inme, travma\nEndokrin, metabolik bozukluklar (örn; porfiri)\nVitamin eksikliği (örn; B12)\nEnfeksiyon (örn; nörosfiliz)\nOtoimmun (örn; SLE)\nToksik (örn; ağır metal zehirlenmesi)",
+   "el_yazisi": [
+    {
+     "metin": "→ psikotik belirtileri tetikler.",
+     "hedef": "Vitamin eksikliği (örn; B12)",
+     "guven": "yuksek"
+    }
+   ],
+   "isaretler": [
+    {
+     "tur": "yesil",
+     "hedef": "Temporal lob epilepsisi; Tümör; Vitamin eksikliği (örn; B12)"
+    }
+   ],
+   "sinyal": [
+    "el_onemli",
+    "sari"
+   ],
+   "y25": {
+    "key": "y25-k2-15-sizofrenik-bozukluklar",
+    "sayfa": 20
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "puan": 18,
+   "oncelik": "B",
+   "vurgulu": [
+    "Temporal lob epilepsisi; Tümör; Vitamin eksikliği (örn; B12)"
+   ]
+  },
+  {
+   "id": "psk-s04-b15",
+   "pdf": "psk",
+   "sayfa": 4,
+   "bolge": "r2c1/r2c2",
+   "tur": "slayt",
+   "baslik": "Klinik bulguların gruplandırılması: pozitif ve negatif belirtiler",
+   "metin": "Klinik Bulguların Gruplandırılması\nPozitif Belirtiler; beyin işlevlerinin abartılı ve bozulmuş görünümleridir.\nNegatif belirtiler; normalde var olan zihinsel işlevlerin eksikliğinin, zayıflamasının veya kaybının sonucu olarak ortaya çıkar.",
+   "el_yazisi": [
+    {
+     "metin": "(hiperdopaminerjik)",
+     "hedef": "Pozitif Belirtiler",
+     "guven": "yuksek"
+    },
+    {
+     "metin": "→ sanrı → varsanı → pozitif formel düşünce bozukluğu → acayip/dezorganize davranışlar",
+     "hedef": "Pozitif Belirtiler (s23)",
+     "guven": "yuksek"
+    },
+    {
+     "metin": "→ hastalar farkında değil!!",
+     "hedef": "Negatif belirtiler",
+     "guven": "yuksek"
+    },
+    {
+     "metin": "(hipodopaminerjik) hipofrontalite",
+     "hedef": "Negatif belirtiler",
+     "guven": "yuksek"
+    },
+    {
+     "metin": "→ aloji → duygusal küntleşme → anhedoni → toplumsal içe çekilme → avolusyon → apati → dikkat bozukluğu",
+     "hedef": "Negatif belirtiler (s24)",
+     "guven": "yuksek"
+    }
+   ],
+   "isaretler": [
+    {
+     "tur": "yesil",
+     "hedef": "Pozitif Belirtiler; beyin işlevlerinin abartılı ve bozulmuş görünümleridir"
+    },
+    {
+     "tur": "yesil",
+     "hedef": "Negatif belirtiler; normalde var olan zihinsel işlevlerin eksikliğinin, zayıflamasının veya kaybının sonucu olarak ortaya çıkar"
+    },
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "beyin işlevlerinin abartılı ve; normalde var olan zihinsel işlevlerin eksikliğinin, zayıflamasının veya kaybının"
+    }
+   ],
+   "sinyal": [
+    "el_onemli",
+    "sari"
+   ],
+   "y25": {
+    "key": "y25-k2-15-sizofrenik-bozukluklar",
+    "sayfa": 22
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "puan": 18,
+   "oncelik": "B",
+   "vurgulu": [
+    "Negatif belirtiler; normalde var olan zihinsel işlevlerin eksikliğinin, zayıflamasının veya kaybının sonucu olarak ortaya çıkar",
+    "Pozitif Belirtiler; beyin işlevlerinin abartılı ve bozulmuş görünümleridir",
+    "beyin işlevlerinin abartılı ve; normalde var olan zihinsel işlevlerin eksikliğinin, zayıflamasının veya kaybının"
+   ]
+  },
+  {
+   "id": "psk-s04-b18",
+   "pdf": "psk",
+   "sayfa": 4,
+   "bolge": "r1c3",
+   "tur": "slayt",
+   "baslik": "Temel eksiklik olarak bilişsel kayıplar",
+   "metin": "Temel Eksiklik Olarak Bilişsel Kayıplar\nSch – Nörokognitif Bozukluk\nEtkin karar vermede ve günlük yaşamla ilgili plan yapmada (bir cümle kurarken veya bir iş ararken olduğu gibi) yetersizlik yaşarlar.",
+   "el_yazisi": [
+    {
+     "metin": "bilişsel işlevler bozuk",
+     "hedef": "Etkin karar vermede ... yetersizlik (süslü parantez)",
+     "guven": "yuksek"
+    },
+    {
+     "metin": "temporal ve uzaysal ilişkilendirilmede kayıp!!",
+     "hedef": "Sch – Nörokognitif Bozukluk (s26 ilk madde)",
+     "guven": "yuksek"
+    }
+   ],
+   "isaretler": [
+    {
+     "tur": "yesil",
+     "hedef": "Etkin karar vermede ve günlük yaşamla ilgili plan yapmada (bir cümle kurarken veya bir iş ararken olduğu gibi) yetersizlik"
+    }
+   ],
+   "sinyal": [
+    "el_onemli",
+    "sari"
+   ],
+   "y25": {
+    "key": "y25-k2-15-sizofrenik-bozukluklar",
+    "sayfa": 26
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "puan": 18,
+   "oncelik": "B",
+   "vurgulu": [
+    "Etkin karar vermede ve günlük yaşamla ilgili plan yapmada (bir cümle kurarken veya bir iş ararken olduğu gibi) yetersizlik"
+   ]
+  },
+  {
+   "id": "psk-s05-b06",
+   "pdf": "psk",
+   "sayfa": 5,
+   "bolge": "r2c1",
+   "tur": "slayt",
+   "baslik": "Paylaşılmış psikoz ve tedavisi",
+   "metin": "PAYLAŞILMIŞ PSİKOZ\nİki veya daha fazla kişi aynı sanrı sistemini paylaşır Bağımlı bir ilişki, biri dominant, diğeri pasif\nSanrılar çoğunlukla persekütif veya hipokondriak içerikli\nTedaviye kendiliğinden başvuru az, işbirliği zayıftır. (s42)\nÖncelikle güven ilişkisi kurmak önemlidir. (s42)",
+   "el_yazisi": [
+    {
+     "metin": "→ baskın eşe antipsikotik ver, pasifi ayır.",
+     "hedef": "Tedaviye kendiliğinden başvuru az ... güven ilişkisi",
+     "guven": "yuksek"
+    }
+   ],
+   "isaretler": [
+    {
+     "tur": "yesil",
+     "hedef": "İki veya daha fazla kişi aynı sanrı sistemini paylaşır Bağımlı bir ilişki, biri dominant, diğeri pasif; Sanrılar çoğunlukla persekütif veya hipokondriak içerikli"
+    },
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "Tedaviye"
+    }
+   ],
+   "sinyal": [
+    "el_onemli",
+    "sari"
+   ],
+   "y25": {
+    "key": "y25-k2-15-sizofrenik-bozukluklar",
+    "sayfa": 41
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "puan": 18,
+   "oncelik": "B",
+   "vurgulu": [
+    "Tedaviye",
+    "İki veya daha fazla kişi aynı sanrı sistemini paylaşır Bağımlı bir ilişki, biri dominant, diğeri pasif; Sanrılar çoğunlukla persekütif veya hipokondriak içerikli"
+   ]
+  },
+  {
+   "id": "psk-s05-b07",
+   "pdf": "psk",
+   "sayfa": 5,
+   "bolge": "r1c2",
+   "tur": "slayt",
+   "baslik": "Şizoaffektif bozukluk",
+   "metin": "ŞİZOAFFEKTİF BOZUKLUK\nHem şizofreni, hem duygudurum bozukluğu belirtileri bulunur.\nDuygudurum belirtileri olmadan, en az 2 hafta süren psikotik belirtiler olmalıdır.\nGenel toplumdaki Slayt metni '%1' diyor; güncel kaynaklarda şizoaffektif bozukluğun yaşam boyu yaygınlığı yaklaşık %0,3 olarak verilir. (s44)\nKadınlarda daha fazla\nSch ve DDB açısından aile öyküsü (+)\nPrognozu genel olarak şizofreniden iyi, duygudurum bozukluklarından kötüdür. %20-30'unda gittikçe artan yıkım gözlenir.",
+   "el_yazisi": [
+    {
+     "metin": "ataklar arası tam iyi hal yok → DDB'larından farkı (daha kötü)",
+     "hedef": "Şizoaffektif bozukluk (s43 3. madde)",
+     "guven": "yuksek"
+    },
+    {
+     "metin": "psikotik belirti üstüne atak halinde affektif belirti eklenir → SCH'den farkı (daha iyi)",
+     "hedef": "Şizoaffektif bozukluk (s43 3. madde)",
+     "guven": "yuksek"
+    }
+   ],
+   "isaretler": [
+    {
+     "tur": "yesil",
+     "hedef": "Hem şizofreni, hem duygudurum bozukluğu belirtileri bulunur; Duygudurum belirtileri olmadan, en az 2 hafta süren psikotik belirtiler olmalıdır"
+    },
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "en az 2 hafta süren"
+    }
+   ],
+   "sinyal": [
+    "el_onemli",
+    "sari"
+   ],
+   "y25": {
+    "key": "y25-k2-15-sizofrenik-bozukluklar",
+    "sayfa": 43
+   },
+   "y26": null,
+   "duzeltme": [
+    {
+     "ham": "prevelans %1",
+     "dogru": "Slayt metni '%1' diyor; güncel kaynaklarda şizoaffektif bozukluğun yaşam boyu yaygınlığı yaklaşık %0,3 olarak verilir.",
+     "gerekce": "Nüans: slayttaki sayı genel kaynaklardan yüksek; sınavda slayt değeri esas alınır."
+    },
+    {
+     "ham": "prevelans",
+     "dogru": "prevalans",
+     "gerekce": "Yazım."
+    }
+   ],
+   "not_": null,
+   "puan": 18,
+   "oncelik": "B",
+   "vurgulu": [
+    "Hem şizofreni, hem duygudurum bozukluğu belirtileri bulunur; Duygudurum belirtileri olmadan, en az 2 hafta süren psikotik belirtiler olmalıdır",
+    "en az 2 hafta süren"
+   ]
+  },
+  {
+   "id": "psk-s04-b01",
+   "pdf": "psk",
+   "sayfa": 4,
+   "bolge": "r1c1",
+   "tur": "slayt",
+   "baslik": "Şizofreni epidemiyolojisi",
+   "metin": "Şizofreni ve Diğer Psikotik Bozukluklar (öğrencinin başlığı)\nŞizofreni\nEpidemiyoloji\nKadın=erkek (başlangıç yaşı ve gidiş farklı)\nPik yaşları k:25-35, e:15-25\nIrk ve etnik köken farkı yok.\nMortalite hızı= ×3, Yaşam beklentisi 10-20 yıl kısa (s05)\n%30-35'sinde intihar girişimi, %10 ex (s05)",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "yesil",
+     "hedef": "Kadın=erkek (başlangıç yaşı ve gidiş farklı)"
+    },
+    {
+     "tur": "daire",
+     "hedef": "k:25-35; e:15-25"
+    }
+   ],
+   "sinyal": [
+    "sari"
+   ],
+   "y25": {
+    "key": "y25-k2-15-sizofrenik-bozukluklar",
+    "sayfa": 4
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "puan": 10,
+   "oncelik": "C",
+   "vurgulu": [
+    "Kadın=erkek (başlangıç yaşı ve gidiş farklı)",
+    "k:25-35; e:15-25"
+   ]
+  },
+  {
+   "id": "psk-s04-b19",
+   "pdf": "psk",
+   "sayfa": 4,
+   "bolge": "r1c3",
+   "tur": "slayt",
+   "baslik": "Diğer klinik bulgular",
+   "metin": "İçgörü eksikliği\nSilik nörolojik belirtiler; stereognozi, grafestezi, denge, propriyosepsiyon, yumuşak göz takibi hareketlerinde bozulmalar\nVejetatif işlevler; uyku, cinsel bozukluklar\nMinör fiziksel anomaliler\nİmmün Sistem bozuklukları",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "yesil",
+     "hedef": "İçgörü eksikliği"
+    },
+    {
+     "tur": "daire",
+     "hedef": "İçgörü eksikliği"
+    },
+    {
+     "tur": "yesil",
+     "hedef": "Silik nörolojik belirtiler; yumuşak göz takibi hareketlerinde bozulmalar; Vejetatif işlevler; Minör fiziksel anomaliler; İmmün Sistem bozuklukları"
+    }
+   ],
+   "sinyal": [
+    "sari"
+   ],
+   "y25": {
+    "key": "y25-k2-15-sizofrenik-bozukluklar",
+    "sayfa": 27
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "puan": 10,
+   "oncelik": "C",
+   "vurgulu": [
+    "Silik nörolojik belirtiler; yumuşak göz takibi hareketlerinde bozulmalar; Vejetatif işlevler; Minör fiziksel anomaliler; İmmün Sistem bozuklukları",
+    "İçgörü eksikliği"
+   ]
+  },
+  {
+   "id": "psk-s05-b04",
+   "pdf": "psk",
+   "sayfa": 5,
+   "bolge": "r1c1",
+   "tur": "slayt",
+   "baslik": "Sanrılı bozuklukta savunma mekanizmaları",
+   "metin": "Sanrılı Bozuklukta Savunma mekanizmaları\nYadsıma\nYansıtma (paranoid): \"ben güvensiz değilim, dünya güvensiz\"\nKarşıt tepki kurma (grandiyöz): düşük benlik saygısına karşıt \"grandiyöz\" benlik",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "yesil",
+     "hedef": "Yadsıma; Yansıtma (paranoid): ben güvensiz değilim, dünya güvensiz; Karşıt tepki kurma"
+    }
+   ],
+   "sinyal": [
+    "sari"
+   ],
+   "y25": {
+    "key": "y25-k2-15-sizofrenik-bozukluklar",
+    "sayfa": 39
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "puan": 10,
+   "oncelik": "C",
+   "vurgulu": [
+    "Yadsıma; Yansıtma (paranoid): ben güvensiz değilim, dünya güvensiz; Karşıt tepki kurma"
+   ]
+  },
+  {
+   "id": "psk-s04-b20",
+   "pdf": "psk",
+   "sayfa": 4,
+   "bolge": "r1c3/r2c3",
+   "tur": "slayt",
+   "baslik": "Gidiş ve sonlanış: şizofreninin tipik klinik devreleri",
+   "metin": "Gidiş ve Sonlanış; Şizofreninin tipik klinik devreleri\nProdromal dönem\nAktif dönem\nRezidüel dönem\n(Grafik: işlevsellik %100→; I-II-III-IV evreler, yaş 15-20-40-60, Apoptosis/Necrosis)",
+   "el_yazisi": [
+    {
+     "metin": "→ bu evrede hastalık belirtisi görülmez",
+     "hedef": "Prodromal dönem",
+     "guven": "yuksek"
+    },
+    {
+     "metin": "→ belirtiler yoğun, hücrelerde nekroz başlamıştır. işlevsel bozukluk yok.",
+     "hedef": "Aktif dönem",
+     "guven": "orta",
+     "alternatif": "son cümle 'işlevsel bozukluk yok' okunuyor; bağlama göre 'var' olmalıydı"
+    },
+    {
+     "metin": "erken bunamış gibi işlev kaybı ve negatif belirti ön planda.",
+     "hedef": "Rezidüel dönem",
+     "guven": "yuksek"
+    },
+    {
+     "metin": "asemptomatik dönem / prodromal / akut faz / final",
+     "hedef": "Grafikteki I, II, III, IV evreleri",
+     "guven": "yuksek"
+    }
+   ],
+   "isaretler": [],
+   "sinyal": [
+    "el_onemli"
+   ],
+   "y25": {
+    "key": "y25-k2-15-sizofrenik-bozukluklar",
+    "sayfa": 28
+   },
+   "y26": null,
+   "duzeltme": [
+    {
+     "ham": "Prodromal dönem → bu evrede hastalık belirtisi görülmez",
+     "dogru": "Prodromal dönemde belirgin psikotik belirti yoktur ama özgül olmayan/hafif belirtiler (içe çekilme, işlevsellikte düşme, garip düşünceler) başlar; belirtisiz dönem grafikteki I. evredir (premorbid).",
+     "gerekce": "Tıbbi nüans: öğrencinin kendi grafik notu da I'i 'asemptomatik', II'yi 'prodromal' diye ayırıyor."
+    },
+    {
+     "ham": "Aktif dönem → işlevsel bozukluk yok",
+     "dogru": "Aktif dönemde işlevsellik belirgin bozulur (tanı kriteri B).",
+     "gerekce": "Tıbbi hata ya da yanlış okuma; slayt s17 B kriteri."
+    }
+   ],
+   "not_": null,
+   "puan": 8,
+   "oncelik": "C",
+   "vurgulu": []
+  },
+  {
+   "id": "psk-s05-b01",
+   "pdf": "psk",
+   "sayfa": 5,
+   "bolge": "r1c1/r1c2",
+   "tur": "slayt",
+   "baslik": "Diğer psikotik bozukluklar listesi",
+   "metin": "DİĞER PSİKOTİK BOZUKLUKLAR (s34)\nSanrılı bozukluk\nŞizoaffektif bozukluk\nKısa psikotik bozukluk\nŞizofreniform bozukluk\nPaylaşılmış psikotik bozukluk",
+   "el_yazisi": [],
+   "isaretler": [],
+   "sinyal": [],
+   "y25": {
+    "key": "y25-k2-15-sizofrenik-bozukluklar",
+    "sayfa": 35
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "puan": 0,
+   "oncelik": "C",
+   "vurgulu": []
+  },
+  {
+   "id": "psk-s05-b03",
+   "pdf": "psk",
+   "sayfa": 5,
+   "bolge": "r1c1",
+   "tur": "slayt",
+   "baslik": "Sanrılı bozukluk alt tipleri",
+   "metin": "Alt tipleri\nErotomanik tip (Clérambault (de Clérambault) sendromu)\nBüyüklük (grandiyöz) tipi\nKıskançlık tipi (Othello sendromu)\nParanoid tip (paranoya)\nSomatik tip\nKarma tip\nBelirlenmemiş tip (Örneğin; Capgras sendromu, Fregoli sendromu)",
+   "el_yazisi": [],
+   "isaretler": [],
+   "sinyal": [],
+   "y25": {
+    "key": "y25-k2-15-sizofrenik-bozukluklar",
+    "sayfa": 38
+   },
+   "y26": null,
+   "duzeltme": [
+    {
+     "ham": "Clerambault",
+     "dogru": "Clérambault (de Clérambault)",
+     "gerekce": "Özel ad yazımı."
+    }
+   ],
+   "not_": null,
+   "puan": 0,
+   "oncelik": "C",
+   "vurgulu": []
+  }
+ ],
+ "ogrenci_sorulari": [
+  {
+   "id": "psk-s04-b02",
+   "pdf": "psk",
+   "sayfa": 4,
+   "bolge": "r1c1",
+   "tur": "cikmis_soru",
+   "baslik": "Çıkmış (tablo): şizofreni hakkında söylenemez",
+   "metin": "Şizofreni hakkında verilen aşağıdaki bilgilerden hangisi söylenemez? (sıra no/cevap tablosu)",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "pembe",
+     "hedef": "tablo bloğu"
+    },
+    {
+     "tur": "daire",
+     "hedef": "4. satır"
+    }
+   ],
+   "sinyal": [
+    "cikmis"
+   ],
+   "y25": {
+    "key": "y25-k2-15-sizofrenik-bozukluklar",
+    "sayfa": 8
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "cikmis": {
+    "kok": "Şizofreni hakkında verilen aşağıdaki bilgilerden hangisi söylenemez?",
+    "siklar": [
+     "1) Şizofreni hastalarında madde kullanma sıklığı yüksektir.",
+     "2) Kentsel bölgelerde doğanlarda hastalık riski daha fazladır.",
+     "3) İki ebeveyninde şizofreni hastalığı varsa, çocukta görülme oranı %47'e kadar yükselmektedir.",
+     "4) Yaz mevsiminde doğanlarda risk artmaktadır.",
+     "5) Çocukluk çağı travmaları, hastalık riskini artırmaktadır."
+    ],
+    "ogrenci_cevap": "D (4)",
+    "banka_id": "q-2021final_230619_142600-3-r33",
+    "banka_yil": "2020-2021 (final)",
+    "banka_dogru": "D",
+    "tutarli": true,
+    "not": "Slayt s08: kış mevsiminde doğanlarda risk yüksek."
+   },
+   "bagli_birim": "psk-s04-b04",
+   "benzerlik": 0.74
+  },
+  {
+   "id": "psk-s04-b06",
+   "pdf": "psk",
+   "sayfa": 4,
+   "bolge": "r2c1",
+   "tur": "cikmis_soru",
+   "baslik": "Çıkmış (tablo): kronik şizofrenide beyin yapısında beklenmeyen",
+   "metin": "Kronik şizofreni hastalarında, beynin yapısında aşağıdaki bulgulardan hangisi beklenmez? (sıra no/cevap tablosu)",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "pembe",
+     "hedef": "tablo bloğu"
+    },
+    {
+     "tur": "daire",
+     "hedef": "1. satır Hiperfrontalite"
+    }
+   ],
+   "sinyal": [
+    "cikmis"
+   ],
+   "y25": {
+    "key": "y25-k2-15-sizofrenik-bozukluklar",
+    "sayfa": 14
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "cikmis": {
+    "kok": "Kronik şizofreni hastalarında, beynin yapısında aşağıdaki bulgulardan hangisi beklenmez?",
+    "siklar": [
+     "1) Hiperfrontalite",
+     "2) Ventriküler genişleme",
+     "3) Kortekste incelme",
+     "4) Gliozisin olmaması",
+     "5) Sulkuslarda genişleme"
+    ],
+    "ogrenci_cevap": "A (1)",
+    "banka_id": "",
+    "banka_yil": "",
+    "banka_dogru": "",
+    "tutarli": true,
+    "not": "Bankada bulunamadı. Slayt s14: hipofrontalite (negatif belirtilerle ilişkili)."
+   },
+   "bagli_birim": "psk-s04-b05",
+   "benzerlik": 0.637
+  },
+  {
+   "id": "psk-s04-b09",
+   "pdf": "psk",
+   "sayfa": 4,
+   "bolge": "r1c2",
+   "tur": "cikmis_soru",
+   "baslik": "Çıkmış 78: şizofreni hakkında yanlış",
+   "metin": "78- Sizofreni hastaligi hakkinda verilen bilgilerden hangisi yanlistir?",
+   "el_yazisi": [
+    {
+     "metin": "→ pozitif belirtiden en az 1 tane",
+     "hedef": "B) Tanı koyulabilmesi için negatif belirtilerden en az bir tane olması gerekir.",
+     "guven": "yuksek"
+    }
+   ],
+   "isaretler": [
+    {
+     "tur": "pembe",
+     "hedef": "soru bloğu"
+    },
+    {
+     "tur": "ok",
+     "hedef": "B şıkkı → el notu (B kalın ve başında '?')"
+    }
+   ],
+   "sinyal": [
+    "cikmis",
+    "el_onemli"
+   ],
+   "y25": {
+    "key": "y25-k2-15-sizofrenik-bozukluklar",
+    "sayfa": 17
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "cikmis": {
+    "kok": "Şizofreni hastalığı hakkında verilen bilgilerden hangisi yanlıştır?",
+    "siklar": [
+     "A) Duygusal küntleşme negatif bir belirtidir.",
+     "B) Tanı koyulabilmesi için negatif belirtilerden en az bir tane olması gerekir.",
+     "C) Hastalarda silik nörolojik belirtiler görülür.",
+     "D) Düşünce bozukluğu pozitif bir belirtidir.",
+     "E) Beyinde yapısal olarak frontal kortekste incelme olur."
+    ],
+    "ogrenci_cevap": "B",
+    "banka_id": "past-q-22_final_230619_145249-78",
+    "banka_yil": "2021-2022 (final)",
+    "banka_dogru": "B",
+    "tutarli": true,
+    "not": "Tanı için sanrı, varsanı veya darmadağın konuşmadan en az biri gerekir (s17)."
+   },
+   "bagli_birim": "psk-s04-b10",
+   "benzerlik": 0.765
+  },
+  {
+   "id": "psk-s04-b11",
+   "pdf": "psk",
+   "sayfa": 4,
+   "bolge": "r1c2",
+   "tur": "cikmis_soru",
+   "baslik": "Çıkmış 77: şizofreni hakkında söylenemez",
+   "metin": "77) Şizofreni hastalığı hakkında aşağıda verilen bilgilerden hangisi söylenemez?",
+   "el_yazisi": [
+    {
+     "metin": "6 ay+ sürer",
+     "hedef": "D) Şizofreni tanısında süregiden bulgular en az üç ay sürer.",
+     "guven": "orta",
+     "alternatif": "'baytsürer' gibi okunuyor; ilk karakter 6, 'ay+' = 6 ay ve üstü"
+    }
+   ],
+   "isaretler": [
+    {
+     "tur": "pembe",
+     "hedef": "soru bloğu"
+    },
+    {
+     "tur": "sari",
+     "hedef": "D şıkkı (cevap)"
+    }
+   ],
+   "sinyal": [
+    "cikmis",
+    "el_onemli"
+   ],
+   "y25": {
+    "key": "y25-k2-15-sizofrenik-bozukluklar",
+    "sayfa": 17
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "cikmis": {
+    "kok": "Şizofreni hastalığı hakkında aşağıda verilen bilgilerden hangisi söylenemez?",
+    "siklar": [
+     "A) Şizofreni etyolojisinde dopamin sistem hiperaktivitesi görülmüştür.",
+     "B) Pozitif Formel Düşünce Bozukluğu, pozitif belirti bulgularındandır.",
+     "C) Şizofreni hastalarının nörogörüntülemesinde dorsolateral prefrontal kortekste işlev bozukluğuna rastlanmıştır.",
+     "D) Şizofreni tanısında süregiden bulgular en az üç ay sürer.",
+     "E) Ayırıcı tanıda stimülan madde kullanımı, benzer bulgular oluşturur."
+    ],
+    "ogrenci_cevap": "D",
+    "banka_id": "past-q-I_SKENDERUN_TI_Mu_du_rlu_g_u_ne0__1__230709_230251-77",
+    "banka_yil": "Geçmiş Yıllar Çıkmışı (Arşiv)",
+    "banka_dogru": "D",
+    "tutarli": true,
+    "not": "Slayt s17 C kriteri: en az altı ay."
+   },
+   "bagli_birim": "psk-s04-b10",
+   "benzerlik": 0.786
+  },
+  {
+   "id": "psk-s04-b16",
+   "pdf": "psk",
+   "sayfa": 4,
+   "bolge": "r2c1/r2c2",
+   "tur": "cikmis_soru",
+   "baslik": "Çıkmış (tablo): pozitif belirtilerden biri olmayan",
+   "metin": "Aşağıdakilerden hangisi, şizofreni hastalarında pozitif belirtilerden biri değildir? (sıra no/cevap tablosu)",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "pembe",
+     "hedef": "tablo bloğu"
+    },
+    {
+     "tur": "daire",
+     "hedef": "5. satır Apati"
+    },
+    {
+     "tur": "kutu",
+     "hedef": "1-4. satırlar kırmızı tik"
+    }
+   ],
+   "sinyal": [
+    "cikmis",
+    "tekrar"
+   ],
+   "y25": {
+    "key": "y25-k2-15-sizofrenik-bozukluklar",
+    "sayfa": 23
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "cikmis": {
+    "kok": "Aşağıdakilerden hangisi, şizofreni hastalarında pozitif belirtilerden biri değildir?",
+    "siklar": [
+     "1) Varsanı",
+     "2) Dağınık Davranış",
+     "3) Enkohere konuşma",
+     "4) Sanrı",
+     "5) Apati"
+    ],
+    "ogrenci_cevap": "E (5)",
+    "banka_id": "c116fba1f3d0",
+    "banka_yil": "2020-2021",
+    "banka_dogru": "E",
+    "tutarli": true,
+    "not": "Aynı soru 604ad168f425 (2023-2024) - tekrar eden çıkmış."
+   },
+   "bagli_birim": "psk-s05-b02",
+   "benzerlik": 0.675
+  },
+  {
+   "id": "psk-s04-b17",
+   "pdf": "psk",
+   "sayfa": 4,
+   "bolge": "r2c2/r2c3",
+   "tur": "cikmis_soru",
+   "baslik": "Çıkmış 50: negatif belirtilerden biri olmayan",
+   "metin": "50. Aşağıdakilerden hangisi şizofreninin negatif belirtilerinden birisi değildir?",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "pembe",
+     "hedef": "soru bloğu"
+    },
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "a şıkkı kırmızı yazılmış"
+    },
+    {
+     "tur": "kutu",
+     "hedef": "b-e şıklarında kırmızı tik"
+    }
+   ],
+   "sinyal": [
+    "cikmis",
+    "tekrar"
+   ],
+   "y25": {
+    "key": "y25-k2-15-sizofrenik-bozukluklar",
+    "sayfa": 24
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "cikmis": {
+    "kok": "Aşağıdakilerden hangisi şizofreninin negatif belirtilerinden birisi değildir?",
+    "siklar": [
+     "a. Algı bozukluğu",
+     "b. Duygusal küntleşme",
+     "c. Anhedoni",
+     "d. Aloji",
+     "e. Toplumsal içe çekilme"
+    ],
+    "ogrenci_cevap": "A",
+    "banka_id": "past-1790877044886-58159",
+    "banka_yil": "2021-2022",
+    "banka_dogru": "A",
+    "tutarli": true,
+    "not": "Benzer kök 2025-2026'da (past-q-25-26_d_nem_3_kurul_2-84, doğru: Enkoherans) — tekrar eden konu."
+   },
+   "bagli_birim": "psk-s04-b10",
+   "benzerlik": 0.598
+  },
+  {
+   "id": "psk-s05-b10",
+   "pdf": "psk",
+   "sayfa": 5,
+   "bolge": "r2c2",
+   "tur": "cikmis_soru",
+   "baslik": "Çıkmış 49: 21 yaş, 2 haftadır işitsel varsanı – en olası tanı",
+   "metin": "49. Daha önce ruhsal açıdan hiçbir yakınması olmayan 21 yaşında erkek hasta 2 haftadır kendi düşüncelerinin yüksek sesle söylendiğini işittiğini, herkesin bunları duyduğunu, bu yüzden dışarı çıkamadığını, çok utandığını ifade ediyor. Bu hastanın anlattıklarına göre en olası tanınız nedir?",
+   "el_yazisi": [
+    {
+     "metin": "varsanı",
+     "hedef": "işittiğini",
+     "guven": "yuksek"
+    },
+    {
+     "metin": "6 ay+",
+     "hedef": "a. Şizofreni",
+     "guven": "yuksek"
+    },
+    {
+     "metin": "DD bozukluğu yok",
+     "hedef": "b. Şizoaffektif bozukluk",
+     "guven": "yuksek"
+    },
+    {
+     "metin": "1 ay – 6 ay",
+     "hedef": "c. Şizofreniform bozukluk",
+     "guven": "yuksek"
+    },
+    {
+     "metin": "varsanı yok",
+     "hedef": "e. Sanrılı bozukluk",
+     "guven": "yuksek"
+    }
+   ],
+   "isaretler": [
+    {
+     "tur": "pembe",
+     "hedef": "soru bloğu"
+    },
+    {
+     "tur": "daire",
+     "hedef": "2 haftadır; işittiğini; d. Kısa psikotik bozukluk"
+    },
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "kendi düşüncelerinin yüksek sesle söylendiğini işittiğini, herkesin bunları duyduğunu; a, b, c, e şıkları üstü çizili"
+    }
+   ],
+   "sinyal": [
+    "cikmis",
+    "el_onemli"
+   ],
+   "y25": {
+    "key": "y25-k2-15-sizofrenik-bozukluklar",
+    "sayfa": 45
+   },
+   "y26": null,
+   "duzeltme": [
+    {
+     "ham": "Sanrılı bozukluk → varsanı yok",
+     "dogru": "Sanrılı bozuklukta varsanı olabilir ama belirgin değildir ve sanrısal konuyla ilişkilidir (s37).",
+     "gerekce": "Nüans; öğrencinin aynı sayfadaki s37 notu da 'varsanı belirgin değil' diyor."
+    }
+   ],
+   "not_": null,
+   "cikmis": {
+    "kok": "Daha önce ruhsal açıdan hiçbir yakınması olmayan 21 yaşında erkek hasta, 2 haftadır kendi düşüncelerinin yüksek sesle söylendiğini işittiğini, herkesin bunları duyduğunu, bu yüzden dışarı çıkamadığını, çok utandığını ifade ediyor. Bu hastanın anlattıklarına göre en olası tanınız nedir?",
+    "siklar": [
+     "a. Şizofreni",
+     "b. Şizoaffektif bozukluk",
+     "c. Şizofreniform bozukluk",
+     "d. Kısa psikotik bozukluk",
+     "e. Sanrılı bozukluk"
+    ],
+    "ogrenci_cevap": "D",
+    "banka_id": "past-1790877044882-168910",
+    "banka_yil": "2021-2022",
+    "banka_dogru": "D",
+    "tutarli": true,
+    "not": "Süre 1 gün–1 ay arası → kısa psikotik bozukluk."
+   },
+   "bagli_birim": "psk-s04-b10",
+   "benzerlik": 0.671
+  },
+  {
+   "id": "psk-s05-b12",
+   "pdf": "psk",
+   "sayfa": 5,
+   "bolge": "r1c3/r2c3",
+   "tur": "cikmis_soru",
+   "baslik": "Çıkmış (tablo): 25 yaş, 2 aydır içe çekilme ve işitsel varsanı – ön tanı",
+   "metin": "Daha önce psikiyatrik tanı ve tedavi öyküsü olmayan 25y erkek hasta, yaklaşık 2 aydır var olan içe çekilme, kendi kendine konuşma-işitsel varsanı, öldürüleceği konusunda korku ve bu nedenle uyuyamama şikayeti ile getirilmiş olup; duygudurumu hafif anksiyöz olarak değerlendirilmiştir. Ön tanı için aşağıdakilerden hangisi uygundur? (sıra no/cevap tablosu)",
+   "el_yazisi": [
+    {
+     "metin": "max 1 ay",
+     "hedef": "3) Kısa psikotik bozukluk",
+     "guven": "yuksek"
+    },
+    {
+     "metin": "en az 6 ay",
+     "hedef": "4) Şizofreni",
+     "guven": "yuksek"
+    },
+    {
+     "metin": "varsanı çok nadir",
+     "hedef": "5) Sanrılı bozukluk",
+     "guven": "yuksek"
+    }
+   ],
+   "isaretler": [
+    {
+     "tur": "pembe",
+     "hedef": "kök ve 1. satır"
+    },
+    {
+     "tur": "kutu",
+     "hedef": "1. satır onay ✓"
+    },
+    {
+     "tur": "daire",
+     "hedef": "yaklaşık 2 aydır"
+    },
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "içe çekilme; kendi kendine konuşma; işitsel varsanı"
+    }
+   ],
+   "sinyal": [
+    "cikmis",
+    "el_onemli"
+   ],
+   "y25": {
+    "key": "y25-k2-15-sizofrenik-bozukluklar",
+    "sayfa": 47
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "cikmis": {
+    "kok": "Daha önce psikiyatrik tanı ve tedavi öyküsü olmayan 25 yaşında erkek hasta, yaklaşık 2 aydır var olan içe çekilme, kendi kendine konuşma, işitsel varsanı, öldürüleceği konusunda korku ve bu nedenle uyuyamama şikayeti ile getirilmiş olup duygudurumu hafif anksiyöz olarak değerlendirilmiştir. Ön tanı için aşağıdakilerden hangisi uygundur?",
+    "siklar": [
+     "1) Şizofreniform bozukluk",
+     "2) Şizoaffektif bozukluk",
+     "3) Kısa psikotik bozukluk",
+     "4) Şizofreni",
+     "5) Sanrılı bozukluk"
+    ],
+    "ogrenci_cevap": "A (1)",
+    "banka_id": "365430593b97",
+    "banka_yil": "2020-2021",
+    "banka_dogru": "A",
+    "tutarli": true,
+    "not": "2 ay = 1-6 ay aralığı → şizofreniform."
+   },
+   "bagli_birim": "psk-s04-b10",
+   "benzerlik": 0.711
+  }
+ ],
+ "banka": [
+  {
+   "id": "604ad168f425",
+   "ders": "k2-15",
+   "yillar": [
+    "2023-2024",
+    "2020-2021",
+    "2020-2021",
+    "2020-2021"
+   ],
+   "kok": "Aşağıdakilerden hangisi, şizofreni hastalarında pozitif belirtilerden biri değildir?",
+   "dogru": "Apati",
+   "kopyalar": [],
+   "birim": "psk-s05-b05",
+   "benzerlik": 0.554,
+   "kapsandi": false,
+   "notta_yapistirilmis": false
+  },
+  {
+   "id": "365430593b97",
+   "ders": "k2-15",
+   "yillar": [
+    "2020-2021"
+   ],
+   "kok": "Daha önce psikiyatrik tanı ve tedavi öyküsü olmayan 25 yaşında erkek hasta, yaklaşık 2 aydır var olan içe çekilme, kendi kendine konuşma, işitsel varsanı, öldürüleceği konusunda korku ve bu nedenle uyuyamama yakınmasıyla",
+   "dogru": "Şizofreniform bozukluk",
+   "kopyalar": [],
+   "birim": "psk-s04-b10",
+   "benzerlik": 0.678,
+   "kapsandi": true,
+   "notta_yapistirilmis": true
+  },
+  {
+   "id": "past-q-25-26_d_nem_3_kurul_2-84",
+   "ders": "k2-15",
+   "yillar": [
+    "2025-2026",
+    "2021-2026"
+   ],
+   "kok": "Aşağıdakilerden hangisi şizofreninin negatif belirtilerinden biri değildir?",
+   "dogru": "Enkoherans (söz salatası biçiminde dezorganize konuşma)",
+   "kopyalar": [
+    "d3-k2-psi-001"
+   ],
+   "birim": "psk-s05-b11",
+   "benzerlik": 0.602,
+   "kapsandi": true,
+   "notta_yapistirilmis": false
+  },
+  {
+   "id": "past-q-I_SKENDERUN_TI_Mu_du_rlu_g_u_ne0__1__230709_230251-77",
+   "ders": "k2-15",
+   "yillar": [
+    "Geçmiş Yıllar Çıkmışı (Arşiv)"
+   ],
+   "kok": "Şizofreni hastalığı hakkında aşağıda verilen bilgilerden hangisi söylenemez?",
+   "dogru": "Şizofreni tanısında süregiden bulgular en az üç ay sürer.",
+   "kopyalar": [],
+   "birim": "psk-s04-b12",
+   "benzerlik": 0.807,
+   "kapsandi": true,
+   "notta_yapistirilmis": true
+  },
+  {
+   "id": "q-25-26_d_nem_3_kurul_2-84",
+   "ders": "k2-15",
+   "yillar": [
+    "2025-2026"
+   ],
+   "kok": "Aşağıdakilerden hangisi şizofrenide görülen negatif belirtilerden değildir?",
+   "dogru": "Enkoherans",
+   "kopyalar": [],
+   "birim": "psk-s05-b05",
+   "benzerlik": 0.593,
+   "kapsandi": false,
+   "notta_yapistirilmis": false
+  },
+  {
+   "id": "d3-k2-psi-002",
+   "ders": "k2-15",
+   "yillar": [
+    "2021-2026"
+   ],
+   "kok": "Kısa psikotik bozukluğun tanısı ve klinik gidişi ile ilgili aşağıdakilerden hangisi doğrudur?",
+   "dogru": "Belirtiler 1 günden uzun, 1 aydan kısa sürer ve hasta hastalık öncesi işlevsellik düzeyine tam döner.",
+   "kopyalar": [],
+   "birim": "psk-s05-b08",
+   "benzerlik": 0.817,
+   "kapsandi": true,
+   "notta_yapistirilmis": false
+  },
+  {
+   "id": "past-1790877044394-242744",
+   "ders": "k2-15",
+   "yillar": [
+    "2021-2022"
+   ],
+   "kok": "Aşağıdaki maddeler/ilaçlar verilmiştir:\nI. Amfetaminler\nII. LSD\nIII. İzoniazid\nIV. MAO inhibitörleri\nBunlardan hangisi veya hangileri şizofreni benzeri paranoid reaksiyonlar ile deliryum ve konfüzyona neden olabilir?",
+   "dogru": "I, II, III ve IV",
+   "kopyalar": [],
+   "birim": "psk-s04-b13",
+   "benzerlik": 0.613,
+   "kapsandi": true,
+   "notta_yapistirilmis": false
+  },
+  {
+   "id": "past-1790877044886-58159",
+   "ders": "k2-15",
+   "yillar": [
+    "2021-2022"
+   ],
+   "kok": "Aşağıdakilerden hangisi şizofreninin negatif belirtilerinden biri değildir?",
+   "dogru": "Algı bozukluğu",
+   "kopyalar": [],
+   "birim": "psk-s05-b05",
+   "benzerlik": 0.583,
+   "kapsandi": false,
+   "notta_yapistirilmis": true
+  },
+  {
+   "id": "past-1790877044882-168910",
+   "ders": "k2-15",
+   "yillar": [
+    "2021-2022"
+   ],
+   "kok": "Daha önce ruhsal açıdan hiçbir yakınması olmayan 21 yaşında erkek hasta, 2 haftadır kendi düşüncelerinin yüksek sesle söylendiğini işittiğini, herkesin bunları duyduğunu, bu yüzden dışarı çıkamadığını ve çok utandığını i",
+   "dogru": "Kısa psikotik bozukluk",
+   "kopyalar": [],
+   "birim": "psk-s05-b08",
+   "benzerlik": 0.645,
+   "kapsandi": true,
+   "notta_yapistirilmis": true
+  },
+  {
+   "id": "past-1790877040101-810624",
+   "ders": "k2-15",
+   "yillar": [
+    "2020-2021"
+   ],
+   "kok": "Şizofrenide kalıtımın rolü için ne söylenebilir?",
+   "dogru": "Aile öyküsü olanlarda hastalık riski %20'ye kadar çıkabilir.",
+   "kopyalar": [],
+   "birim": "psk-s04-b04",
+   "benzerlik": 0.808,
+   "kapsandi": true,
+   "notta_yapistirilmis": false
+  },
+  {
+   "id": "past-1790877044942-54229",
+   "ders": "k2-15",
+   "yillar": [
+    "2021-2022"
+   ],
+   "kok": "Bleuler'in şizofreni belirtilerinden hangisi ikinci sıra (aksesuar) belirtisidir?",
+   "dogru": "Sanrılar ve varsanılar",
+   "kopyalar": [],
+   "birim": "psk-s05-b02",
+   "benzerlik": 0.632,
+   "kapsandi": true,
+   "notta_yapistirilmis": false
+  },
+  {
+   "id": "q-25-26_d_nem_3_kurul_2-85",
+   "ders": "k2-15",
+   "yillar": [
+    "2025-2026"
+   ],
+   "kok": "Aşağıdakilerden hangisi kısa psikotik bozukluğun özelliklerinden değildir?",
+   "dogru": "İleri derecede dağınık davranışlar ve sıklıkla negatif belirtiler görülür",
+   "kopyalar": [],
+   "birim": "psk-s05-b09",
+   "benzerlik": 0.716,
+   "kapsandi": true,
+   "notta_yapistirilmis": false
+  }
+ ]
+}

@@ -1,0 +1,46 @@
+{"pdf":"psk","sayfa":8,"sayfa_ozeti":"Psikiyatrik Semiyoloji (k2-11): Psikiyatrik muayene şeması slaytı (tek slayt, tam sayfa) ve üstüne bilişsel işlevler için el yazısı özetler: yönelim (3 bileşen, kayıp sırası, organik etken/deliryum), bellek (tespit/kısa/uzun süreli), dikkat (distraktibilite, hipervijilans), algı (halüsinasyon, hipnagojik/hipnopompik, illüzyon), soyut düşünce, gerçeği değerlendirme. Çıkmış soru yok.",
+ "bloklar":[
+  {"id":"psk-s08-b01","bolge":"r1c1","tur":"slayt","baslik":"Psikiyatrik Muayene Şeması","ders":"k2-11","y25":{"key":"y25-k2-11-psikiyatrik-semiyoloji","sayfa":3},
+   "basili_metin":"PSİKİYATRİK MUAYENE ŞEMASI\nI- BİLİŞSEL İŞLEVLER: 1) Bilinç 2) Yönelim 3) Bellek 4) Dikkat 5) Algı 6) Düşünce 7) Yargılama 8) Soyut Düşünce 9) Gerçeği Değerlendirme 10) İçgörü\nII- DUYGULANIM\nIII- MOTOR AKTİVİTE VE HAREKET\nIV- BEDENSEL İŞLEVLER: 1) Uyku 2) İştah 3) Libido 4) Defekasyon, miksiyon\nV- SOSYAL VE MESLEKİ İŞLEVSELLİK",
+   "isaretler":[],"el_yazisi":[],"onem":[],"duzeltme":[]},
+  {"id":"psk-s08-b02","bolge":"r1c1","tur":"el_yazisi","baslik":"Yönelim – bileşenler, kayıp sırası, organik etken","ders":"k2-11","y25":{"key":"y25-k2-11-psikiyatrik-semiyoloji","sayfa":7},
+   "basili_metin":"",
+   "isaretler":[{"tur":"pembe","hedef":"yönelim bozukluğu çoğunlukla organik etkenin varlığı. en sık deliryumda."}],
+   "el_yazisi":[
+    {"metin":"3 bileşeni var: zaman, yer, kişi.","hedef":"2) Yönelim (y25 s06: yönelimin üç bileşeni zaman, yer, kişi)","guven":"yuksek","alternatif":""},
+    {"metin":"= önce zaman, sonra yer, en son kişi oryantasyonu kaybolur.","hedef":"2) Yönelim (y25 s07: önce zaman, sonra yer, en son kişi oryantasyonu kaybedilir)","guven":"yuksek","alternatif":""},
+    {"metin":"yönelim bozukluğu çoğunlukla organik etkenin varlığı. en sık deliryumda.","hedef":"Yönelim bozukluğu çoğunlukla organik bir etkenin varlığını gösterir; en sık deliryumda (y25 s07)","guven":"yuksek","alternatif":""}],
+   "onem":["el_onemli","sari"],"duzeltme":[]},
+  {"id":"psk-s08-b03","bolge":"r1c1","tur":"el_yazisi","baslik":"Bellek – tespit, kısa süreli, uzun süreli","ders":"k2-11","y25":{"key":"y25-k2-11-psikiyatrik-semiyoloji","sayfa":8},
+   "basili_metin":"",
+   "isaretler":[{"tur":"pembe","hedef":"tespit (kayıt) = öğrenilenin anında tekrarlanması. 3-5 nesne saydır."}],
+   "el_yazisi":[
+    {"metin":"→ tespit (kayıt) = öğrenilenin anında tekrarlanması. 3-5 nesne saydır.","hedef":"3) Bellek – Tespit (kayıt) belleği (y25 s08)","guven":"yuksek","alternatif":""},
+    {"metin":"→ kısa süreli (recall) = 5 dk – 1 saat.","hedef":"Kısa süreli (recall) bellek (y25 s08)","guven":"yuksek","alternatif":""},
+    {"metin":"→ uzun süreli = birkaç gün – ay. eski olayları sor (doğrulatabilmelisin)","hedef":"Uzun süreli bellek (y25 s09)","guven":"yuksek","alternatif":""}],
+   "onem":["el_onemli","sari"],
+   "duzeltme":[{"ham":"kısa süreli (recall) = 5 dk - 1 saat","dogru":"kısa süreli (recall) bellek = 5 dakika ile birkaç saate kadar","gerekce":"y25 s08: '5 dakika ile birkaç saate kadar olan bellektir'"},{"ham":"uzun süreli = birkaç gün - ay","dogru":"uzun süreli bellek: birkaç gün–birkaç ay = yakın bellek; birkaç ay–yıllar = uzak bellek","gerekce":"y25 s09; öğrenci notu yalnız yakın bellek aralığını yazmış"}]},
+  {"id":"psk-s08-b04","bolge":"r1c1","tur":"el_yazisi","baslik":"Dikkat – distraktibilite, hipervijilans","ders":"k2-11","y25":{"key":"y25-k2-11-psikiyatrik-semiyoloji","sayfa":16},
+   "basili_metin":"",
+   "isaretler":[{"tur":"pembe","hedef":"distraktibilite / hipervijilans satırları"}],
+   "el_yazisi":[
+    {"metin":"→ distraktibilite","hedef":"4) Dikkat (y25 s15)","guven":"yuksek","alternatif":""},
+    {"metin":"→ hipervijilans = tehlike beklentisine karşı dikkat kesilmek. (TSSB ve sanrısal bozuklukta)","hedef":"4) Dikkat – Hipervijilans (y25 s16)","guven":"yuksek","alternatif":""}],
+   "onem":["el_onemli","sari","tekrar"],"duzeltme":[]},
+  {"id":"psk-s08-b05","bolge":"r2c1","tur":"el_yazisi","baslik":"Algı – halüsinasyon (elementer, hipnagojik/hipnopompik), illüzyon","ders":"k2-11","y25":{"key":"y25-k2-11-psikiyatrik-semiyoloji","sayfa":18},
+   "basili_metin":"",
+   "isaretler":[{"tur":"kirmizi_cizgi","hedef":"kabul edilmez"},{"tur":"pembe","hedef":"ilüzyon = uyaranların yanlış yorumlanması."}],
+   "el_yazisi":[
+    {"metin":"→ halüsinasyon - tek duyuya ait olanlar = elementer / basit. toplumda sık ve normal.","hedef":"5) Algı – elementer/basit halüsinasyon normal popülasyonda rastlanabilir (y25 s18)","guven":"yuksek","alternatif":""},
+    {"metin":"uykuya dalarken (hipnagojik) / uyanırken (hipnopompik) ise birden çok duyuylaysa (bile) psikotik kabul edilmez.","hedef":"Hipnagojik/hipnopompik halüsinasyonlar uzun ve birden fazla duyuyla ilgili olsalar da psikotik kabul edilmez (y25 s18)","guven":"yuksek","alternatif":"'duyuylaysa' = 'duyuyla ilgili olsa da'"},
+    {"metin":"ilüzyon = uyarıların yanlış yorumlanması.","hedef":"İlüzyonlar (y25 s20)","guven":"yuksek","alternatif":""}],
+   "onem":["el_onemli","sari","tekrar"],
+   "duzeltme":[{"ham":"hipnogojik","dogru":"hipnagojik","gerekce":"Tıbbi yazım 'hipnagojik' (slayt da 'hipnogojik' yazmış)"},{"ham":"toplumda sık ve normal","dogru":"normal popülasyonda rastlanabilir","gerekce":"y25 s18 'sık' demiyor, 'rastlanabilir' diyor; aşırı genelleme"},{"ham":"birden çok duyuylaysa psikotik kabul edilmez","dogru":"uzun ve birden fazla duyu ile ilgili (kompleks) olsalar da psikotik kabul edilmez","gerekce":"y25 s18; el yazısındaki 'ise' koşul gibi okunuyor, anlamı 'olsa bile'"}]},
+  {"id":"psk-s08-b06","bolge":"r2c2","tur":"el_yazisi","baslik":"Soyut düşünce, gerçeği değerlendirme","ders":"k2-11","y25":{"key":"y25-k2-11-psikiyatrik-semiyoloji","sayfa":32},
+   "basili_metin":"",
+   "isaretler":[],
+   "el_yazisi":[
+    {"metin":"= psikozda bozulur.","hedef":"8) Soyut Düşünce (y25 s32: soyutlama yeteneği psikozlarda, özellikle kronik/yıkımlı olanlarda bozulur)","guven":"yuksek","alternatif":""},
+    {"metin":"= içsel ve dışsal uyaranları ayırt etmek.","hedef":"9) Gerçeği Değerlendirme (y25 s33)","guven":"yuksek","alternatif":""}],
+   "onem":["el_onemli"],"duzeltme":[]}
+ ]}

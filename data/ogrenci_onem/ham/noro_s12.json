@@ -1,0 +1,441 @@
+{
+ "pdf": "noro",
+ "sayfa": 12,
+ "sayfa_ozeti": "KRANYAL SİNİRLER: slayt parçalarının çoğu 2025-26 'Kraniyal Sinir Muayenesi' dersinden (k2-62, 2026-27 PDF metni yok); amorozis fugax/papil ödemi kutusu Nörolojik Muayene (k2-05) dersinden. Öğrencinin el notlarının bir kısmı (ışık refleksinin afferenti, kornea refleksinin efferenti, çene refleksi a-e 5, santral/periferik fasyal ayrımı, XII tek/çift taraflı lezyon) k2-05 2026-27 slaytlarıyla birebir örtüşüyor; bu bloklara 'y26_ilgili' alanı eklendi. 2 çıkmış soru.",
+ "bloklar": [
+  {
+   "id": "noro-s12-b01",
+   "bolge": "r1c1",
+   "tur": "slayt",
+   "baslik": "CN I / N. Olfactorius",
+   "ders": "k2-62",
+   "y25": {
+    "key": "y25-k2-62-kraniyal-sinir-muayenesi",
+    "sayfa": 3
+   },
+   "y26_ilgili": {
+    "key": "k2-05",
+    "sayfa": 14,
+    "not": "k2-05 2026-27: lezyonunda anosmi, kafa travması (bilateral anosmi)"
+   },
+   "basili_metin": "İşlev: Koku alma\nLezyonunda: Koku alamama (anosmi)\nPatolojik durum: Kafa travması, ön kafa tabanı tümörleri",
+   "isaretler": [
+    {
+     "tur": "yesil",
+     "hedef": "Koku alamama (anosmi); Patolojik durum: Kafa travması, ön kafa tabanı tümörleri"
+    }
+   ],
+   "el_yazisi": [],
+   "onem": [
+    "sari"
+   ]
+  },
+  {
+   "id": "noro-s12-b02",
+   "bolge": "r1c1",
+   "tur": "slayt",
+   "baslik": "CN II / N. Opticus muayenesi",
+   "ders": "k2-62",
+   "y25": {
+    "key": "y25-k2-62-kraniyal-sinir-muayenesi",
+    "sayfa": 5
+   },
+   "y26_ilgili": {
+    "key": "k2-05",
+    "sayfa": 17,
+    "not": "k2-05 2026-27: 'Işık refleksinin afferentidir' – el notu buradan"
+   },
+   "basili_metin": "CN II / N. OPTICUS\nGörme Keskinliği (Snellen Kartları)\nGözdibi muayenesi\nRenkli Görme (Ishıhara Kartları)\nKontrast Duyarlılığı",
+   "isaretler": [],
+   "el_yazisi": [
+    {
+     "metin": "ışık refleksinin afferenti.",
+     "hedef": "CN II / N. Opticus",
+     "guven": "yuksek"
+    }
+   ],
+   "onem": [
+    "el_onemli"
+   ],
+   "not": "Başlıklar arşivde ayrı slaytlar (s04 başlık, s05 Snellen, s07 gözdibi, s08 Ishihara+kontrast); öğrenci birleştirmiş."
+  },
+  {
+   "id": "noro-s12-b03",
+   "bolge": "r1c1",
+   "tur": "slayt",
+   "baslik": "N. Optikus hastalıkları: amorozis fugax, papil ödemi",
+   "ders": "k2-05",
+   "y25": {
+    "key": "y25-k2-05-norolojik-muayene",
+    "sayfa": 19
+   },
+   "y26": {
+    "key": "k2-05",
+    "sayfa": 19
+   },
+   "basili_metin": "Amorozis fugax\n–Tek gözde ani, geçici görme kaybı\n–Genelde karotid arterden kopan embolinin retinal arterleri tıkamasına bağlı (baş-boyun oskültasyonu!)\nPapil ödemi\n–Papilla kenarlarının ve damarın silikleşmesi, optik çukurun kaybolması, retinal venlerin kalınlaşması ve pulsasyonların kaybolması\n–KİBAS en sık rastlanan nedenidir",
+   "isaretler": [
+    {
+     "tur": "yesil",
+     "hedef": "Tek gözde ani, geçici görme kaybı; karotid arterden kopan embolinin retinal arterleri tıkamasına bağlı; papil ödemi bulguları; KİBAS en sık rastlanan"
+    }
+   ],
+   "el_yazisi": [],
+   "onem": [
+    "sari"
+   ]
+  },
+  {
+   "id": "noro-s12-b04",
+   "bolge": "r2c1",
+   "tur": "slayt",
+   "baslik": "CN III-IV-VI: muayenenin amacı, refleksler, Bielschowsky",
+   "ders": "k2-62",
+   "y25": {
+    "key": "y25-k2-62-kraniyal-sinir-muayenesi",
+    "sayfa": 12
+   },
+   "y26_ilgili": {
+    "key": "k2-05",
+    "sayfa": 22,
+    "not": "k2-05 2026-27: göz küresi hareketleri, göz kapağı, pupilla, nistagmus; N. trochlearis lezyonu"
+   },
+   "basili_metin": "CN III-IV-VI / N. OCULOMOTORIUS & N. TROCHLEARIS & N. ABDUCENS\nMuayenenin amacı\n- Göz hareketlerini değerlendirmek\n- Göz kapağını ve\n- Pupillayı incelemek\n- Varsa nistagmusu değerlendirmek\nIşık Refleksi\nAkomodasyon Refleksi\nBielschowsky baş tilt testi",
+   "isaretler": [
+    {
+     "tur": "yesil",
+     "hedef": "muayenenin amacı 4 maddesi"
+    }
+   ],
+   "el_yazisi": [
+    {
+     "metin": "= sağ IV. sinir felci",
+     "hedef": "Bielschowsky baş tilt testi",
+     "guven": "yuksek",
+     "alternatif": "'sağ' muhtemelen derste gösterilen görüntüdeki örnek tarafı"
+    }
+   ],
+   "onem": [
+    "cikmis",
+    "sari",
+    "el_onemli"
+   ],
+   "not": "Bielschowsky slaytı arşivde s18; ışık/akomodasyon refleksi başlıkları s13-s17 arasında yalnız görsel. Bielschowsky testi IV. sinir (trochlear) felcinde pozitif: baş felçli tarafa eğilince hipertropi artar."
+  },
+  {
+   "id": "noro-s12-b05",
+   "bolge": "r2c1",
+   "tur": "cikmis_soru",
+   "baslik": "Göz hareketinde görev alan kranyal sinir",
+   "ders": "k2-62",
+   "y25": {
+    "key": "y25-k2-62-kraniyal-sinir-muayenesi",
+    "sayfa": 12
+   },
+   "basili_metin": "Aşağıdaki kranyal sinirlerden hangisi göz hareketinde görev alır? a) III. kranyal sinir",
+   "isaretler": [
+    {
+     "tur": "pembe",
+     "hedef": "soru bloğu"
+    }
+   ],
+   "el_yazisi": [],
+   "cikmis": {
+    "kok": "Aşağıdaki kranyal sinirlerden hangisi göz hareketinde görev alır?",
+    "siklar": [
+     "a) III. kranyal sinir"
+    ],
+    "ogrenci_cevap": "a",
+    "banka_id": "",
+    "banka_yil": "",
+    "banka_dogru": "",
+    "tutarli": true,
+    "not": "Öğrenci yalnız doğru şıkkı yazmış (kırmızı); diğer şıklar yok. Bankada bulunamadı (benzer konu: 7a901e64695e, IV. sinir çaprazlaşması). 'Iıı' = III."
+   },
+   "onem": [
+    "cikmis"
+   ]
+  },
+  {
+   "id": "noro-s12-b06",
+   "bolge": "r1c2",
+   "tur": "slayt",
+   "baslik": "CN V / N. Trigeminus",
+   "ders": "k2-62",
+   "y25": {
+    "key": "y25-k2-62-kraniyal-sinir-muayenesi",
+    "sayfa": 23
+   },
+   "y26_ilgili": {
+    "key": "k2-05",
+    "sayfa": 25,
+    "not": "k2-05 2026-27: yüz duyusu (dokunma, ağrı, ısı), kornea refleksi aff 5/eff 7, çene refleksi aff+eff 5 – el notları buradan"
+   },
+   "basili_metin": "Yüz Duyusu\nMaseter ve temporalis kası\nKornea refleksi\n- (afferent 5 efferent 7)",
+   "isaretler": [
+    {
+     "tur": "pembe",
+     "hedef": "Kornea refleksi (açık pembe vurgu, soru değil)"
+    },
+    {
+     "tur": "daire",
+     "hedef": "afferent 5 efferent 7"
+    }
+   ],
+   "el_yazisi": [
+    {
+     "metin": "→ dokunma, ağrı, ısı",
+     "hedef": "Yüz Duyusu",
+     "guven": "yuksek"
+    },
+    {
+     "metin": "Çene refleksi (a-e 5. sinir)",
+     "hedef": "Kornea refleksi altı",
+     "guven": "yuksek",
+     "alternatif": "yazılan 'Gene refleksi'; Ç'nin çengeli belirsiz, bağlam ve k2-05 s25 'çene refleksi (aff ve eff 5. sinir)' ile doğrulandı"
+    }
+   ],
+   "onem": [
+    "cikmis",
+    "daire",
+    "el_onemli"
+   ]
+  },
+  {
+   "id": "noro-s12-b07",
+   "bolge": "r1c2",
+   "tur": "slayt",
+   "baslik": "Trigeminal patolojik belirti ve bulgular",
+   "ders": "k2-05",
+   "y25": {
+    "key": "y25-k2-05-norolojik-muayene",
+    "sayfa": 26
+   },
+   "y26": {
+    "key": "k2-05",
+    "sayfa": 26
+   },
+   "basili_metin": "Patolojik belirti ve bulgular\n–Yüzde hipoestezi\n–Kornea refleksi kaybı\n–Trigeminal motor bozukluk\n–Trigeminal nevralji",
+   "isaretler": [],
+   "el_yazisi": [],
+   "onem": []
+  },
+  {
+   "id": "noro-s12-b08",
+   "bolge": "r1c2",
+   "tur": "cikmis_soru",
+   "baslik": "Kornea refleksinden sorumlu sinir çifti",
+   "ders": "k2-62",
+   "y25": {
+    "key": "y25-k2-62-kraniyal-sinir-muayenesi",
+    "sayfa": 23
+   },
+   "y26_ilgili": {
+    "key": "k2-05",
+    "sayfa": 25
+   },
+   "basili_metin": "Aşağıdaki kranyal sinir çiftlerinden hangisi kornea refleksinden sorumludur? 1 V-VII ✓ 2 II-III 3 III-VI 4 III-V 5 VII-XII",
+   "isaretler": [
+    {
+     "tur": "pembe",
+     "hedef": "soru kökü 'kornea refleksinden' ve 1 V-VII"
+    }
+   ],
+   "el_yazisi": [],
+   "cikmis": {
+    "kok": "Aşağıdaki kranyal sinir çiftlerinden hangisi kornea refleksinden sorumludur?",
+    "siklar": [
+     "1) V-VII",
+     "2) II-III",
+     "3) III-VI",
+     "4) III-V",
+     "5) VII-XII"
+    ],
+    "ogrenci_cevap": "1",
+    "banka_id": "",
+    "banka_yil": "",
+    "banka_dogru": "",
+    "tutarli": true,
+    "not": "Bankada bulunamadı. Cevap slayt (afferent 5, efferent 7) ile uyumlu."
+   },
+   "onem": [
+    "cikmis"
+   ]
+  },
+  {
+   "id": "noro-s12-b09",
+   "bolge": "r2c2",
+   "tur": "slayt",
+   "baslik": "CN VII / N. Facialis; periferik ve santral fasyal paralizi",
+   "ders": "k2-62",
+   "y25": {
+    "key": "y25-k2-62-kraniyal-sinir-muayenesi",
+    "sayfa": 25
+   },
+   "y26_ilgili": {
+    "key": "k2-05",
+    "sayfa": 29,
+    "not": "k2-05 2026-27 s28 (kornea refleksinin efferent), s29 santral, s30 periferik fasiyal paralizi – el notları bu slaytlarla örtüşüyor"
+   },
+   "basili_metin": "Mimik kasları (gözü kapama)\nDilin ön 2/3 tat duyusu\nParotis dışı tükürük bezlerinin parasempatik inervasyonu\nM. Stapediusun motor innervasyonu\nPeriferik ve santral tipte fasyal paralizi",
+   "isaretler": [
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "Periferik; santral"
+    }
+   ],
+   "el_yazisi": [
+    {
+     "metin": "kornea refleksinin efferenti",
+     "hedef": "CN VII",
+     "guven": "yuksek"
+    },
+    {
+     "metin": "Periferik: gözünü kapatamaz, Bell fenomeni, kaşını kaldıramaz, ağız sağlam tarafa kayık, çekirdekte lezyon",
+     "hedef": "Periferik tipte fasyal paralizi",
+     "guven": "yuksek"
+    },
+    {
+     "metin": "Santral: sadece ağız köşesinde, yüzün alt yarısında; gözünü tam kapatır; daima aynı taraflı hemiparezi ile birlikte; çekirdeğe kadar olan herhangi seviye",
+     "hedef": "Santral tipte fasyal paralizi",
+     "guven": "yuksek"
+    }
+   ],
+   "onem": [
+    "el_onemli"
+   ],
+   "duzeltme": [
+    {
+     "ham": "Periferik: çekirdekte lezyon",
+     "dogru": "Periferik: çekirdekte veya sinirin kendisinde lezyon",
+     "gerekce": "Felçler slaytı (k2-32 s28): 'N. Fasiyalis çekirdeği veya sinirin kendisindeki lezyonlar'."
+    }
+   ]
+  },
+  {
+   "id": "noro-s12-b10",
+   "bolge": "r2c2",
+   "tur": "slayt",
+   "baslik": "CN VIII / N. Vestibulocochlearis; Weber ve Rinne",
+   "ders": "k2-62",
+   "y25": {
+    "key": "y25-k2-62-kraniyal-sinir-muayenesi",
+    "sayfa": 29
+   },
+   "y26_ilgili": {
+    "key": "k2-05",
+    "sayfa": 32
+   },
+   "basili_metin": "İşitme ve denge\nNistagmus\nNormal: Weber orta hatta\nKondüksiyon tipi işitme kaybı: Weber o tarafa lateralize\nSensörinöral tipte işitme kaybı: Weber karşı tarafa lateralize\nNormal: Rinne (+)\nKondüksiyon tipi işitme kaybı: Rinne (-)\nSensörinöral tipte işitme kaybı: Rinne (+)",
+   "isaretler": [
+    {
+     "tur": "daire",
+     "hedef": "Kondüksiyon tipi; Sensörinöral"
+    },
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "Weber o tarafa lateralize; karşı tarafa lateralize; Kondüksiyon tipi işitme kaybı: Rinne (-); Sensörinöral tipte işitme kaybı: Rinne (+)"
+    }
+   ],
+   "el_yazisi": [],
+   "onem": [
+    "daire"
+   ],
+   "not": "Başlık/işitme-denge-nistagmus arşivde s28, Weber-Rinne s29."
+  },
+  {
+   "id": "noro-s12-b11",
+   "bolge": "r1c3",
+   "tur": "slayt",
+   "baslik": "CN IX / N. Glossopharyngeus; öğürme refleksi",
+   "ders": "k2-62",
+   "y25": {
+    "key": "y25-k2-62-kraniyal-sinir-muayenesi",
+    "sayfa": 30
+   },
+   "y26_ilgili": {
+    "key": "k2-05",
+    "sayfa": 35
+   },
+   "basili_metin": "Stilofaringeus kası\nParotis bezi\nDilin arka 1/3'ün tad ve dokunma duyusu\nÖğürme refleksi: Afferent 9, Efferent 10",
+   "isaretler": [
+    {
+     "tur": "pembe",
+     "hedef": "Öğürme refleksi satırı (açık pembe vurgu)"
+    },
+    {
+     "tur": "daire",
+     "hedef": "Afferent 9; Efferent 10"
+    }
+   ],
+   "el_yazisi": [],
+   "onem": [
+    "daire",
+    "sari"
+   ]
+  },
+  {
+   "id": "noro-s12-b12",
+   "bolge": "r1c3",
+   "tur": "slayt",
+   "baslik": "CN X / N. Vagus",
+   "ders": "k2-62",
+   "y25": {
+    "key": "y25-k2-62-kraniyal-sinir-muayenesi",
+    "sayfa": 31
+   },
+   "basili_metin": "Farenks ve larenks kasları\nPalatoglossus kası\nOrganların parasempatik innervasyonu\nFarenks ve larenksin duyusu",
+   "isaretler": [],
+   "el_yazisi": [],
+   "onem": []
+  },
+  {
+   "id": "noro-s12-b13",
+   "bolge": "r2c3",
+   "tur": "slayt",
+   "baslik": "CN XI / N. Accesorius",
+   "ders": "k2-62",
+   "y25": {
+    "key": "y25-k2-62-kraniyal-sinir-muayenesi",
+    "sayfa": 32
+   },
+   "basili_metin": "Trapezius ve sternokleidomastoid kaslar",
+   "isaretler": [],
+   "el_yazisi": [],
+   "onem": []
+  },
+  {
+   "id": "noro-s12-b14",
+   "bolge": "r2c3",
+   "tur": "slayt",
+   "baslik": "CN XII / N. Hypoglossus",
+   "ders": "k2-62",
+   "y25": {
+    "key": "y25-k2-62-kraniyal-sinir-muayenesi",
+    "sayfa": 33
+   },
+   "y26_ilgili": {
+    "key": "k2-05",
+    "sayfa": 40,
+    "not": "k2-05 2026-27: tek taraflı lezyonda dilde atrofi, dil lezyon tarafına kayar, bilateral lezyonda atrofi ve her yöne hareket azlığı – el notu buradan"
+   },
+   "basili_metin": "Dil kasları (palatoglossal hariç)",
+   "isaretler": [
+    {
+     "tur": "pembe",
+     "hedef": "el notunun tamamı (açık pembe vurgu)"
+    }
+   ],
+   "el_yazisi": [
+    {
+     "metin": "tek taraflı lezyonunda dilde atrofi. bilateral lezyonda atrofi ve her yöne hareket azlığı",
+     "hedef": "CN XII / Dil kasları",
+     "guven": "yuksek"
+    }
+   ],
+   "onem": [
+    "el_onemli"
+   ]
+  }
+ ]
+}

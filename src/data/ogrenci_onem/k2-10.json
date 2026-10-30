@@ -1,0 +1,588 @@
+{
+ "ders": "k2-10",
+ "kod": "2n04",
+ "brans": "Nöroloji",
+ "konu": "Baş ağrısına Yaklaşım",
+ "kaynak": "Geçmiş yıl (2025-26) öğrenci derleme notu: noro3.2",
+ "y25": {
+  "key": "y25-k2-10-bas-agrisina-yaklasim",
+  "sayfalar": [
+   3,
+   4,
+   5,
+   6,
+   8,
+   9
+  ]
+ },
+ "sayac": {
+  "birim": 8,
+  "A": 4,
+  "B": 0,
+  "C": 4,
+  "ogrenci_sorusu": 3,
+  "banka": 9,
+  "banka_kapsandi": 6
+ },
+ "birimler": [
+  {
+   "id": "noro-s01-b01",
+   "pdf": "noro",
+   "sayfa": 1,
+   "bolge": "r1c1",
+   "tur": "slayt",
+   "baslik": "A – Primer başağrıları (ICHD-3)",
+   "metin": "A – Primer başağrıları\n1. Migren\n2. Gerilim tipi başağrısı\n3. Trigeminal otonomik başağrısı\n4. Diğer primer başağrısı sendromları",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "sari",
+     "hedef": "Migren; Gerilim tipi başağrısı; Trigeminal otonomik başağrısı; Diğer primer başağrısı sendromları (dört başlığın tamamı)"
+    }
+   ],
+   "sinyal": [
+    "cikmis",
+    "sari"
+   ],
+   "y25": {
+    "key": "y25-k2-10-bas-agrisina-yaklasim",
+    "sayfa": 3
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "ogrenci_sorulari": [
+    "noro-s01-b04"
+   ],
+   "banka_cikmis": [
+    "d3-k2-nor-011",
+    "past-1790877038133-633883",
+    "q-2__kurul_-1-cs2"
+   ],
+   "puan": 90,
+   "oncelik": "A",
+   "vurgulu": [
+    "Migren; Gerilim tipi başağrısı; Trigeminal otonomik başağrısı; Diğer primer başağrısı sendromları (dört başlığın tamamı)"
+   ]
+  },
+  {
+   "id": "noro-s01-b09",
+   "pdf": "noro",
+   "sayfa": 1,
+   "bolge": "r1c3",
+   "tur": "slayt",
+   "baslik": "Sekonder başağrısı düşündüren öykü özellikleri",
+   "metin": "- Yeni başlayan akut ve çok şiddetli başağrısı\n- 10 yaşından önce, 50 yaşından sonra başlaması\n- Özellikle çocuklarda oksipital yerleşim göstermesi\n- Son 6 ay içinde başlayan ve devamlılık gösteren, tedaviye direnç öyküsü\n- Hastada mevcut malignite tanısı\n- Hastada mevcut sistemik hastalık tanısı\n- Hastanın yaşamındaki “en şiddetli başağrısı” tanımı\n- Gebelik ve doğum sonrası ortaya çıkması\n- Fiziksel aktivite, ıkınma, öksürme g.b işlevler sırasında ortaya çıkması\n- Dirençli kusmaların eşlikçiliği\n- Erkek cinsiyet\n- Belirli bir şekle uymayan başağrısı",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "sari",
+     "hedef": "Yeni başlayan akut ve çok şiddetli; 10 yaşından önce, 50 yaşından sonra; çocuklarda oksipital yerleşim; mevcut malignite; mevcut sistemik hastalık; en şiddetli başağrısı; gebelik ve doğum sonrası; dirençli kusmalar; erkek cinsiyet"
+    },
+    {
+     "tur": "daire",
+     "hedef": "“en şiddetli başağrısı” tanımı"
+    },
+    {
+     "tur": "daire",
+     "hedef": "Erkek cinsiyet"
+    }
+   ],
+   "sinyal": [
+    "cikmis",
+    "daire",
+    "sari"
+   ],
+   "y25": {
+    "key": "y25-k2-10-bas-agrisina-yaklasim",
+    "sayfa": 8
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "ogrenci_sorulari": [
+    "noro-s01-b10"
+   ],
+   "banka_cikmis": [
+    "048fe1e04f10",
+    "d3-k2-nor-007"
+   ],
+   "puan": 90,
+   "oncelik": "A",
+   "vurgulu": [
+    "Erkek cinsiyet",
+    "Yeni başlayan akut ve çok şiddetli; 10 yaşından önce, 50 yaşından sonra; çocuklarda oksipital yerleşim; mevcut malignite; mevcut sistemik hastalık; en şiddetli başağrısı; gebelik ve doğum sonrası; dirençli kusmalar; erkek cinsiyet",
+    "“en şiddetli başağrısı” tanımı"
+   ]
+  },
+  {
+   "id": "noro-s01-b08",
+   "pdf": "noro",
+   "sayfa": 1,
+   "bolge": "r1c2+r2c2",
+   "tur": "slayt",
+   "baslik": "Sekonder başağrısı düşündüren fizik muayene bulguları",
+   "metin": "FM = bilinç bozukluğu, ateş, 3. kranial sinir tutulumu, (öğrenci özeti)\n- Bilinç bozukluğu, senkop\n- Epileptik nöbet\n- Fokal nörolojik bulgu\n- Papilödem, subhyaloid hemoraji\n- Ateş, ense sertliği\n- Kilo kaybı, halsizlik\n- 3. kranial sinir tutulumu, anizokori\n- Horner sendromu\n- 5., 7. KS tutulumu",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "pembe",
+     "hedef": "FM = bilinç bozukluğu, ateş, 3. kranial sinir tutulumu"
+    },
+    {
+     "tur": "sari",
+     "hedef": "Bilinç bozukluğu; Epileptik nöbet; Fokal nörolojik bulgu; Papilödem; Ateş, ense sertliği; Kilo kaybı; 3. kranial sinir tutulumu; Horner sendromu; 5., 7. KS tutulumu"
+    },
+    {
+     "tur": "daire",
+     "hedef": "Papilödem"
+    }
+   ],
+   "sinyal": [
+    "cikmis",
+    "daire",
+    "sari"
+   ],
+   "y25": {
+    "key": "y25-k2-10-bas-agrisina-yaklasim",
+    "sayfa": 9
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "ogrenci_sorulari": [
+    "noro-s01-b05"
+   ],
+   "puan": 55,
+   "oncelik": "A",
+   "vurgulu": [
+    "Bilinç bozukluğu; Epileptik nöbet; Fokal nörolojik bulgu; Papilödem; Ateş, ense sertliği; Kilo kaybı; 3. kranial sinir tutulumu; Horner sendromu; 5., 7. KS tutulumu",
+    "FM = bilinç bozukluğu, ateş, 3. kranial sinir tutulumu",
+    "Papilödem"
+   ]
+  },
+  {
+   "id": "noro-s01-b07",
+   "pdf": "noro",
+   "sayfa": 1,
+   "bolge": "r1c2",
+   "tur": "slayt",
+   "baslik": "B- Sekonder başağrıları (ICHD-3 5–12)",
+   "metin": "5. Baş ve boyun travmasına bağlı başağrısı\n6. Kraniyal veya servikal damarsal bozukluklara bağlı başağrısı\n7. Damarsal olmayan intrakraniyal bozukluklara bağlı başağrısı\n8. Madde kullanımı veya kesilmesine bağlı başağrısı\n9. Enfeksiyona bağlı başağrısı\n10. Homeostaz bozukluğuna bağlı başağrısı\n11. Kraniyum, boyun, gözler, kulaklar, burun, sinüsler, ağız ya da diğer yüz veya kraniyal yapıların bozukluklarına bağlı başağrısı ya da yüz ağrısı\n12. Psikiyatrik bozukluklara bağlı başağrısı",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "sari",
+     "hedef": "5–12 numaralı tüm sekonder başlıklar"
+    }
+   ],
+   "sinyal": [
+    "sari"
+   ],
+   "y25": {
+    "key": "y25-k2-10-bas-agrisina-yaklasim",
+    "sayfa": 4
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "banka_cikmis": [
+    "past-q-I_SKENDERUN_TI_Mu_du_rlu_g_u_ne0__1__230709_230251-62"
+   ],
+   "puan": 40,
+   "oncelik": "A",
+   "vurgulu": [
+    "5–12 numaralı tüm sekonder başlıklar"
+   ]
+  },
+  {
+   "id": "noro-s01-b03",
+   "pdf": "noro",
+   "sayfa": 1,
+   "bolge": "r1c1",
+   "tur": "slayt",
+   "baslik": "Primer başağrılarında muayene",
+   "metin": "• Primer başağrılarında çoğunlukla tıbbi ve nörolojik muayene normal",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "sari",
+     "hedef": "Primer başağrılarında çoğunlukla tıbbi ve nörolojik muayene normal"
+    }
+   ],
+   "sinyal": [
+    "sari"
+   ],
+   "y25": {
+    "key": "y25-k2-10-bas-agrisina-yaklasim",
+    "sayfa": 6
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "puan": 10,
+   "oncelik": "C",
+   "vurgulu": [
+    "Primer başağrılarında çoğunlukla tıbbi ve nörolojik muayene normal"
+   ]
+  },
+  {
+   "id": "noro-s01-b06",
+   "pdf": "noro",
+   "sayfa": 1,
+   "bolge": "r1c2",
+   "tur": "ogrenci_ozet",
+   "baslik": "B- Sekonder başağrıları: tanım ve kırmızı bayraklar (öğrenci notu)",
+   "metin": "B- Sekonder başağrıları\nbaşka bir hastalığın semptomu. yaşamı tehdit edebilir. ileri tetkik gerekli\nyeni başlayan akut ve çok şiddetliyse, 10 yaşından önce ya da 50 yaşından sonra başlamışsa, hasta erkek, dirençli kusma, gebelik/doğum sonrası.",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "pembe",
+     "hedef": "yeni başlayan akut; çok şiddetliyse; 10-/50 + ise; hasta erkek; dirençli kusma; gebelik/doğum sonrası"
+    }
+   ],
+   "sinyal": [
+    "tekrar"
+   ],
+   "y25": {
+    "key": "y25-k2-10-bas-agrisina-yaklasim",
+    "sayfa": 5
+   },
+   "y26": null,
+   "duzeltme": [
+    {
+     "ham": "10-/50 + ise",
+     "dogru": "10 yaşından önce ya da 50 yaşından sonra başlamışsa",
+     "gerekce": "Slayt s08: '10 yaşından önce, 50 yaşından sonra başlaması'"
+    }
+   ],
+   "not_": null,
+   "puan": 10,
+   "oncelik": "C",
+   "vurgulu": [
+    "yeni başlayan akut; çok şiddetliyse; 10-/50 + ise; hasta erkek; dirençli kusma; gebelik/doğum sonrası"
+   ]
+  },
+  {
+   "id": "noro-s01-b02",
+   "pdf": "noro",
+   "sayfa": 1,
+   "bolge": "r1c1",
+   "tur": "ogrenci_ozet",
+   "baslik": "Primer baş ağrısı tanımı (öğrenci notu)",
+   "metin": "kendisi bir hastalık, yaşamı tehdit etmez, ileri tetkik yok.",
+   "el_yazisi": [],
+   "isaretler": [],
+   "sinyal": [],
+   "y25": {
+    "key": "y25-k2-10-bas-agrisina-yaklasim",
+    "sayfa": 5
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "puan": 0,
+   "oncelik": "C",
+   "vurgulu": []
+  },
+  {
+   "id": "noro-s01-b11",
+   "pdf": "noro",
+   "sayfa": 1,
+   "bolge": "r2c2",
+   "tur": "slayt",
+   "baslik": "C- Ağrılı kraniyal nöropatiler, diğer yüz ağrıları ve diğer başağrıları",
+   "metin": "C- Ağrılı kraniyal nöropatiler, diğer yüz ağrıları ve diğer başağrıları\n13. Ağrılı kraniyal nöropatiler ve diğer yüz ağrıları\n14. Diğer başağrısı bozuklukları (sınıflandırılamayan)",
+   "el_yazisi": [],
+   "isaretler": [],
+   "sinyal": [],
+   "y25": {
+    "key": "y25-k2-10-bas-agrisina-yaklasim",
+    "sayfa": 5
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "puan": 0,
+   "oncelik": "C",
+   "vurgulu": []
+  }
+ ],
+ "ogrenci_sorulari": [
+  {
+   "id": "noro-s01-b04",
+   "pdf": "noro",
+   "sayfa": 1,
+   "bolge": "r1c1",
+   "tur": "cikmis_soru",
+   "baslik": "Primer baş ağrısı nedeni (kısa çıkmış satırı)",
+   "metin": "Primer baş ağrısı nedeni? -Trigeminal otonomik baş ağrısı",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "pembe",
+     "hedef": "Primer baş ağrısı nedeni? -Trigeminal otonomik baş ağrısı"
+    }
+   ],
+   "sinyal": [
+    "cikmis",
+    "sari"
+   ],
+   "y25": {
+    "key": "y25-k2-10-bas-agrisina-yaklasim",
+    "sayfa": 3
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "cikmis": {
+    "kok": "Aşağıdakilerden hangisi primer baş ağrıları arasında yer alır? (öğrencinin kısa yazımı: Primer baş ağrısı nedeni?)",
+    "siklar": [
+     "A) Subaraknoid kanamaya bağlı baş ağrısı",
+     "B) Trigeminal otonomik baş ağrısı",
+     "C) Menenjite bağlı baş ağrısı",
+     "D) Beyin tümörüne bağlı kafa içi basınç artışı baş ağrısı",
+     "E) Dev hücreli arterite bağlı baş ağrısı"
+    ],
+    "ogrenci_cevap": "Trigeminal otonomik baş ağrısı",
+    "banka_id": "q-2__kurul_-1-cs2",
+    "banka_yil": "Geçmiş Yıllar Çıkmışı (Arşiv)",
+    "banka_dogru": "B",
+    "tutarli": true,
+    "not": "Sayfada yalnız soru-cevap satırı var; şıklar bankadaki eşleşen sorudan alındı."
+   },
+   "bagli_birim": "noro-s01-b01",
+   "benzerlik": 0.761
+  },
+  {
+   "id": "noro-s01-b05",
+   "pdf": "noro",
+   "sayfa": 1,
+   "bolge": "r1c1+r2c1",
+   "tur": "cikmis_soru",
+   "baslik": "Tek taraflı zonklayıcı baş ağrısı + bulantı/kusma + fotofobi/fonofobi: tanı",
+   "metin": "Tek taraflı zonklayıcı başağrısı olan genç kız hastada bulantı, kusma başağrısına eşlik ediyormuş. Fotofobi(+), fonofobi(+). Tanınız aşağıdakilerden hangisi olur?\n1 SAK / 2 akut sinüzit / 3 trigeminal otonomik başağrısı / 4 aurasız migren / 5 gerilim başağrısı",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "pembe",
+     "hedef": "soru kökü"
+    },
+    {
+     "tur": "pembe",
+     "hedef": "aurasız migren (cevap)"
+    }
+   ],
+   "sinyal": [
+    "cikmis"
+   ],
+   "y25": null,
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "cikmis": {
+    "kok": "Tek taraflı zonklayıcı başağrısı olan genç kız hastada bulantı, kusma başağrısına eşlik ediyormuş. Fotofobi(+), fonofobi(+). Tanınız aşağıdakilerden hangisi olur?",
+    "siklar": [
+     "1) SAK",
+     "2) akut sinüzit",
+     "3) trigeminal otonomik başağrısı",
+     "4) aurasız migren",
+     "5) gerilim başağrısı"
+    ],
+    "ogrenci_cevap": "4) aurasız migren",
+    "banka_id": "",
+    "banka_yil": "",
+    "banka_dogru": "",
+    "tutarli": true,
+    "not": "Çıkmış bankasında karşılığı bulunamadı (en yakın migren sorusu farklı kök). Tablo 'Sıra No / Cevap' biçiminde, büyük olasılıkla bir sınav cevap çizelgesinden kesilmiş. Aura belirtilmeyen tek taraflı zonklayıcı + bulantı/kusma + fotofobi/fonofobi = aurasız migren; cevap tıbben doğru."
+   },
+   "bagli_birim": "noro-s01-b08",
+   "benzerlik": 0.653
+  },
+  {
+   "id": "noro-s01-b10",
+   "pdf": "noro",
+   "sayfa": 1,
+   "bolge": "r1c3+r2c3",
+   "tur": "cikmis_soru",
+   "baslik": "Sekonder baş ağrısı düşündüren etken",
+   "metin": "Sekonder baş ağrısı düşündüren etken?\nAura / Fotofobi / Fonofobi / Erkek / Uzun yıllardır sürmesi",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "pembe",
+     "hedef": "soru ve şıklar"
+    },
+    {
+     "tur": "daire",
+     "hedef": "Erkek"
+    }
+   ],
+   "sinyal": [
+    "cikmis",
+    "daire",
+    "tekrar"
+   ],
+   "y25": {
+    "key": "y25-k2-10-bas-agrisina-yaklasim",
+    "sayfa": 8
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "cikmis": {
+    "kok": "Aşağıdakilerden hangisi sekonder baş ağrısı düşündüren öykü özelliklerinden biridir?",
+    "siklar": [
+     "A) Fotofobi",
+     "B) Fonofobi",
+     "C) Aura",
+     "D) Uzun yıllardır sürmesi",
+     "E) Erkek cinsiyet"
+    ],
+    "ogrenci_cevap": "Erkek",
+    "banka_id": "048fe1e04f10",
+    "banka_yil": "2020-2021",
+    "banka_dogru": "E",
+    "tutarli": true,
+    "not": "Bankada aynı sorunun ikinci kopyası: e4c0d0bc7be7 (2020-2021, doğru E). Öğrenci şıkları farklı sırada yazmış."
+   },
+   "bagli_birim": "noro-s01-b09",
+   "benzerlik": 0.626
+  }
+ ],
+ "banka": [
+  {
+   "id": "048fe1e04f10",
+   "ders": "k2-10",
+   "yillar": [
+    "2020-2021",
+    "2020-2021",
+    "2023"
+   ],
+   "kok": "Aşağıdakilerden hangisi sekonder baş ağrısı düşündüren öykü özelliklerinden biridir?",
+   "dogru": "Erkek cinsiyet",
+   "kopyalar": [
+    "q-No_ropsikiyatri_gis_kardiyo_-2023-2024-C__km_s_lar__240625_053302__2_-21"
+   ],
+   "birim": "noro-s01-b09",
+   "benzerlik": 0.632,
+   "kapsandi": true,
+   "notta_yapistirilmis": true
+  },
+  {
+   "id": "past-q-I_SKENDERUN_TI_Mu_du_rlu_g_u_ne0__1__230709_230251-62",
+   "ders": "k2-10",
+   "yillar": [
+    "Geçmiş Yıllar Çıkmışı (Arşiv)"
+   ],
+   "kok": "Hastanın \"hayatımdaki en şiddetli baş ağrısı\" ifadesinde ilk akla gelmesi gereken baş ağrısı nedeni aşağıdakilerden hangisidir?",
+   "dogru": "Subaraknoid kanama (SAK)",
+   "kopyalar": [],
+   "birim": "noro-s01-b07",
+   "benzerlik": 0.641,
+   "kapsandi": true,
+   "notta_yapistirilmis": false
+  },
+  {
+   "id": "d3-k2-nor-001",
+   "ders": "k2-10",
+   "yillar": [
+    "2021-2026"
+   ],
+   "kok": "Aşağıdaki baş ağrısı tiplerinden hangisinin tanısı tamamen ayrıntılı klinik öyküye dayanır; laboratuvar veya nörogörüntüleme yöntemlerinde karakteristik patolojik bir bulgu saptanmaz?",
+   "dogru": "Migren",
+   "kopyalar": [],
+   "birim": "noro-s01-b02",
+   "benzerlik": 0.554,
+   "kapsandi": false,
+   "notta_yapistirilmis": false
+  },
+  {
+   "id": "d3-k2-nor-007",
+   "ders": "k2-10",
+   "yillar": [
+    "2021-2026"
+   ],
+   "kok": "Kırk beş yaşında bir hasta, hayatında ilk kez ani başlayan, saniyeler içinde en yüksek şiddete ulaşan ve 'hayatımın en şiddetli baş ağrısı' olarak tarif ettiği gök gürültüsü (thunderclap) baş ağrısı, ense sertliği ve kus",
+   "dogru": "Subaraknoid kanama (SAK)",
+   "kopyalar": [],
+   "birim": "noro-s01-b09",
+   "benzerlik": 0.675,
+   "kapsandi": true,
+   "notta_yapistirilmis": false
+  },
+  {
+   "id": "d3-k2-nor-011",
+   "ders": "k2-10",
+   "yillar": [
+    "2021-2026"
+   ],
+   "kok": "Genellikle genç erkeklerde, geceleri uykudan uyandıran, tek taraflı periorbital/temporal, delici-oyucu tarzda çok şiddetli ağrıya eşlik eden aynı tarafta göz yaşarması, burun tıkanıklığı ve konjonktival hiperemi ile seyr",
+   "dogru": "Küme baş ağrısı (trigeminal otonomik sefalalji)",
+   "kopyalar": [],
+   "birim": "noro-s01-b01",
+   "benzerlik": 0.659,
+   "kapsandi": true,
+   "notta_yapistirilmis": false
+  },
+  {
+   "id": "past-1790877038133-633883",
+   "ders": "k2-10",
+   "yillar": [
+    "2020-2021"
+   ],
+   "kok": "Migren, birkaç saatten 1-2 güne kadar uzayabilen tek taraflı, zonklayıcı tipte bir baş ağrısı ile karakterizedir; bulantı, kusma, görsel skotomlar, hemianopsi ve konuşma bozukluğu gibi belirtiler de eşlik edebilir. Migre",
+   "dogru": "I, II, III ve IV",
+   "kopyalar": [],
+   "birim": "noro-s01-b01",
+   "benzerlik": 0.676,
+   "kapsandi": true,
+   "notta_yapistirilmis": false
+  },
+  {
+   "id": "past-1790877039274-141162",
+   "ders": "k2-10",
+   "yillar": [
+    "2022-2023"
+   ],
+   "kok": "Aşağıdakilerin hangisinde nörolojik tanı esas olarak anamnez bilgisi ile konabilir?",
+   "dogru": "Migren",
+   "kopyalar": [],
+   "birim": "noro-s01-b08",
+   "benzerlik": 0.571,
+   "kapsandi": false,
+   "notta_yapistirilmis": false
+  },
+  {
+   "id": "q-No_ropsikiyatri_gis_kardiyo_-2023-2024-C__km_s_lar__240625_053302__2_-20",
+   "ders": "k2-10",
+   "yillar": [
+    "2023",
+    "Geçmiş Yıllar Çıkmışı (Arşiv)"
+   ],
+   "kok": "Hastanın 'hayatımda gördüğüm en şiddetli baş ağrısı' olarak tanımladığı ani başlangıçlı baş ağrısında öncelikle düşünülmesi gereken tanı hangisidir?",
+   "dogru": "Subaraknoid kanama",
+   "kopyalar": [
+    "q-2__kurul_-7-cs2"
+   ],
+   "birim": "noro-s01-b09",
+   "benzerlik": 0.59,
+   "kapsandi": false,
+   "notta_yapistirilmis": false
+  },
+  {
+   "id": "q-2__kurul_-1-cs2",
+   "ders": "k2-10",
+   "yillar": [
+    "Geçmiş Yıllar Çıkmışı (Arşiv)"
+   ],
+   "kok": "Aşağıdakilerden hangisi primer baş ağrıları arasında yer alır?",
+   "dogru": "Trigeminal otonomik baş ağrısı",
+   "kopyalar": [],
+   "birim": "noro-s01-b01",
+   "benzerlik": 0.732,
+   "kapsandi": true,
+   "notta_yapistirilmis": true
+  }
+ ]
+}

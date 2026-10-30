@@ -1,0 +1,121 @@
+{
+ "ders": "k2-49",
+ "ozet": "Çekirdek, DEHB'nin gelişimsel seyri (okul döneminde fark edilmesi, okul yaşamını etkilemesi, erişkinlikte sürmesi) ve DSM-5 tanı koşullarıdır (en az iki ortam, 12 yaş öncesi başlangıç). Çıkmışlar 2018-19 ve 2021-22'de 'söylenemez/yanlıştır' kalıbıyla seyre, 2025-26'da tanı koşuluna, arşiv ve 2024-25'te 'DEHB ilacı olmayan' → naltreksona düşmüş. Öğrenciler seyir slaytını ve metilfenidatın ilk seçenek olmasını sarıya boyamış, 'en az 6 ay!!' el notunu eklemiş.",
+ "temalar": [
+  {
+   "tema": "DEHB seyri: okul döneminde fark edilir, okul yaşamını etkiler, erişkinlikte sürer",
+   "oncelik": "A",
+   "birimler": [
+    "psk-s19-b04"
+   ],
+   "kanit": "2021-22 (past-1790877044917-805273): 'söylenemez' → 'Okul yaşamını etkilemez'; 2018-19 final (final-2018-2019-q080): 'yanlıştır' → 'Çocukken tanı alanlarda büyük olasılıkla erişkinde düzelir'. İkisi de notta yapıştırılmış (psk-s19-b01, b02), cevaplar banka ile tutarlı. Slaytta okul dönemi cümlesi, ergenlikte dürtüsellik artışı ve 'en az %50'si yetişkinlikte de tanı alır' sarı.",
+   "anlatim": "Dönemleri sırayla ver: okul öncesinde agresyon, öfke nöbeti, karşıt gelme ve konuşma sorunlarıyla başvuru; okul çağında akademik işlevsellikte bozulma ve sınıf tekrarı; ergenlikte dürtüsel davranışta artış; erişkinlikte en az %50'sinde sürme. İki çıkmışın doğru şıklarındaki eşlik eden durumları (eşya kaybetme, öz saygıda düşüklük, sigara ve madde kullanımında artış) birer madde olarak ekle.",
+   "soru_payi": 35,
+   "soru_tipleri": [
+    "olumsuz: 'söylenemez' → okul yaşamını etkilemez",
+    "yanlış bul: erişkinde büyük olasılıkla düzelir",
+    "sayı: erişkinlikte süren oran → en az %50"
+   ]
+  },
+  {
+   "tema": "DSM-5 tanı koşulları: en az iki ortam, 12 yaş öncesi başlangıç, en az 6 ay",
+   "oncelik": "A",
+   "birimler": [
+    "psk-s19-b04",
+    "psk-s19-b03"
+   ],
+   "kanit": "2025-26 (q-25-26_d_nem_3_kurul_2-91): doğru → 'Belirtilerin bir kısmı 12 yaşından önce başlamalı ve en az iki farklı ortamda görülmeli'; d3-k2-psi-009: ortam koşulu → en az 2 ortam. Slaytta 'tanısı için en az iki ortamda' sarı; el notu 'en az 6 ay!!'.",
+   "anlatim": "Üç koşulu tek tabloda ver: süre (en az 6 ay), başlangıç (bazı belirtiler 12 yaşından önce), ortam (ev ve okul gibi en az iki ortam). 12 yaş bilgisi 2025-26 slayt metninde açık yazmıyor, çıkmış doğru şıkkından geliyor; bu yüzden ayrıca vurgulanmalı.",
+   "soru_payi": 30,
+   "soru_tipleri": [
+    "doğrudan: kaç ortamda görülmeli → en az iki",
+    "doğru bul: 12 yaş öncesi + iki ortam",
+    "sayı: belirtilerin en az süresi → 6 ay"
+   ]
+  },
+  {
+   "tema": "Tedavi: ilk seçenek metilfenidat; DEHB ilacı olmayanı bulma",
+   "oncelik": "A",
+   "birimler": [
+    "psk-s19-b05"
+   ],
+   "kanit": "Arşiv ve 2024-25 (past-1790877035993-404325): 'DEHB tedavisinde kullanılan ilaçlardan biri değildir' → naltrekson; hoca profilinde tekrar eden çekirdek (2×). Slaytta 'metilfenidat ve amfetaminler' ve 'ilk tedavi seçeneği metilfenidat' sarı.",
+   "anlatim": "Stimülanları iki grup (metilfenidat, amfetaminler) olarak ver ve metilfenidatın en çok araştırılan, ilk seçenek ilaç olduğunu söyle. Nörogelişimsel bozukluklar dersindeki ikinci basamak listesini (atomoksetin, guanfazin, klonidin, TCA, venlafaksin, bupropion, modafinil) hatırlatarak naltreksonun bu listede olmadığını vurgula.",
+   "soru_payi": 20,
+   "soru_tipleri": [
+    "olumsuz: DEHB ilacı olmayan → naltrekson",
+    "doğrudan: ilk seçenek ilaç → metilfenidat"
+   ]
+  },
+  {
+   "tema": "Görünümler, alt tip sıklık sırası ve genetik geçiş",
+   "oncelik": "B",
+   "birimler": [
+    "psk-s19-b03"
+   ],
+   "kanit": "Çıkmış yok; alt tip sıralaması cümlesi ve 'tıpta en yüksek genetik geçişe sahip bozukluklardandır' sarı; el notu 'en az 6 ay!!'.",
+   "anlatim": "Üç görünümü (bileşik, dikkat eksikliği baskın, hiperaktivite baskın) tanımla ve slayttaki sıklık sırasını ver: dikkat eksikliği baskın > bileşik > hiperaktivite-dürtüsellik baskın. Etiyolojide genetiğin temel rolünü bir cümleyle ekle.",
+   "soru_payi": 15,
+   "soru_tipleri": [
+    "doğrudan: en sık alt tip → dikkat eksikliği baskın",
+    "doğru bul: etiyolojide temel rol → genetik"
+   ]
+  }
+ ],
+ "hoca_kaliplari": [
+  "'… için aşağıdakilerden hangisi söylenemez / yanlıştır?' (konudaki 4 sorunun 2'si yanlış bul)",
+  "olumsuz ilaç sorusu: '… tedavisinde kullanılan ilaçlardan biri değildir?'",
+  "DSM-5 koşulu doğrudan: 'hangi ortam koşulunu karşılamalıdır?'",
+  "çeldiriciler aynı türden başka kavram (%75); bir şıkta mutlak ifade ('etkilemez', 'büyük olasılıkla düzelir')"
+ ],
+ "tuzaklar": [
+  {
+   "tuzak": "DEHB erişkinlikte büyük olasılıkla düzelmez",
+   "neden": "Çocuklukta tanı alanların en az %50'si erişkinde de tanı alır; 2018-19 ve 2021-22'de iki ayrı biçimde soruldu."
+  },
+  {
+   "tuzak": "DEHB okul yaşamını etkiler; fark edilmesi en çok okul döneminde olur",
+   "neden": "'Etkilemez' gibi mutlak ifadeler yanlış şıktır."
+  },
+  {
+   "tuzak": "Naltrekson DEHB ilacı değildir",
+   "neden": "Atomoksetin, klonidin, guanfazin, bupropion gibi ikinci basamak ilaçların yanında verilir."
+  },
+  {
+   "tuzak": "Tanı için tek ortam yetmez",
+   "neden": "En az iki ortam (ev ve okul) şartı 2025-26'da ve d3 bankasında soruldu."
+  },
+  {
+   "tuzak": "Slayta göre en sık alt tip dikkat eksikliği baskın tiptir, bileşik tip değil",
+   "neden": "Bileşik tip en bilinen görünüm olduğu için çeldirici olarak verilebilir."
+  }
+ ],
+ "sayilar": [
+  "Tanı için en az 2 ortam",
+  "Belirtilerin bir kısmı 12 yaşından önce (2025-26 doğru şık)",
+  "En az 6 ay (el notu)",
+  "Erişkinlikte süren oran: en az %50 (DSÖ, 10 ülke, 18–44 yaş)"
+ ],
+ "duzeltmeler": [
+  {
+   "yanlis": "Nörogelişimsel bozukluklar notundaki el notu (k2-42, psk-s16-b03): dikkat eksikliği 'tüm hayatı boyunca kalır', hiperaktivite ve dürtüsellik 'tedaviyle düzelebilir'.",
+   "dogru": "Bu dersin slaytı (s19) ergenlik döneminde dürtüsel davranışlarda artış olduğunu, s24 çocuklukta tanı alanların en az %50'sinin erişkinlikte de tanı aldığını söyler. Aşırı hareketlilik yaşla azalma eğilimindedir; 'tedaviyle düzelir' ayrımı slaytta yoktur ve öğretilmemelidir.",
+   "kaynak": "slayt s19, s24 + genel tıbbi bilgi"
+  }
+ ],
+ "ara_soru_adaylari": [
+  {
+   "birim": "psk-s19-b04",
+   "fikir": "Belirtileri yalnız okulda görülen 9 yaşındaki çocuk: tanı koşulu karşılanıyor mu (en az iki ortam)."
+  },
+  {
+   "birim": "psk-s19-b04",
+   "fikir": "DEHB için söylenemez: okul yaşamını etkilemez / erişkinde düzelir."
+  },
+  {
+   "birim": "psk-s19-b05",
+   "fikir": "DEHB'de ilk seçenek ilaç ve listede olmayan ilaç (naltrekson)."
+  }
+ ],
+ "kurul2627_notu": "2025-26 çıkmışındaki '12 yaşından önce başlama' koşulu 2025-26 slayt metninde açık yazılı değil; 2026-27 slaytında DSM-5 ölçütleri tam veriliyor mu bakılmalı. İkinci basamak ilaç listesi bu derste değil k2-42 notunda; 2026-27'de bu derse taşınmışsa naltrekson sorusu buradan anlatılmalı."
+}

@@ -23,8 +23,9 @@ parçasıdır; mevcut derslere toplu uygulanmaz. LLM adımları yalnız kullanı
 1. **Önkoşul:** ders `ders-ekle` ile eklenmiş, `data/sesli_anlatim/hizalama/<key>.json` hazır (paragraf → slayt eşlemesi).
 2. **Yer seçimi (betik, LLM yok):** `python3 meds/scripts/hoca_profili/profil_oku.py --ders "<ders adı>" --konu "<konu>"` +
    `meds/.venv-ocr/bin/python meds/scripts/hoca_profili/tahmin_girdisi.py <ders.md> --ders … --konu … --cikti <klasör>`.
-   Yer = çıkmışla eşleşmiş slayt (`kanit: cikmis`) ya da profilin ilk iki bilgi türüne uyan, `HOCA_TAHMIN_REHBERI.md`
-   ile seçilmiş slayt (`kanit: profil`, yazılı gerekçe). Kanıtsız "hoca sorar" damgası yasak (kural 26). Ders başına
+   Yer = çıkmışla eşleşmiş slayt (`kanit: cikmis`), geçmiş yıl öğrenci notunun A birimi (`docs/OGRENCI_ONEM/<ders>.md` §10
+   "ara soru adayları"; `kanit: cikmis` ya da `profil` + gerekçede "öğrenci notu A, <kanıt>") ya da profilin ilk iki bilgi türüne uyan,
+   `HOCA_TAHMIN_REHBERI.md` ile seçilmiş slayt (`kanit: profil`, yazılı gerekçe). Kanıtsız "hoca sorar" damgası yasak (kural 26). Ders başına
    tipik 6–14 soru; slayt başına en çok 2; peş peşe slaytlara yığma.
 3. **Kaynak dosyası** `kaynak/<kod>.json` (yazar):
    ```json

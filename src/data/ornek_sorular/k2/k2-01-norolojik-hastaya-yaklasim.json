@@ -107,11 +107,11 @@
      "zorluk": "orta",
      "soru": "Hasta «kolum uyuştu» diyor. Hekimin ilk yapması gereken aşağıdakilerden hangisidir?",
      "secenekler": {
-      "A": "Uyuşmayı duyu kusuru kabul edip sonraki adıma geçmek",
-      "B": "Hemen BOS incelemesi istemek",
-      "C": "Yakınmayı anlamadan muayeneye geçmek",
-      "D": "Duyu kusurunu mu kuvvet kaybını mı kastettiğini sorularla netleştirmek",
-      "E": "Öyküyü yakınından almak"
+      "A": "Uyuşmayı duyu kusuru kabul edip vakit kaybetmeden sonraki adıma geçmek",
+      "B": "Ayırıcı tanı için hemen lomber ponksiyonla BOS incelemesi istemek",
+      "C": "Yakınmanın ne anlama geldiğini anlamadan muayeneye geçmek",
+      "D": "Duyu kusurunu mu kuvvet kaybını mı kastettiğini sorarak netleştirmek",
+      "E": "Öyküyü hastanın kendisinden değil yakınından almak"
      },
      "dogru": "D",
      "aciklama": "Uyuşma duyu kusuru ya da kuvvet kaybı olabileceği için hekim önce hastanın ne kastettiğini sorularla netleştirir (sayfa 2).",
@@ -200,11 +200,11 @@
      "zorluk": "orta",
      "soru": "Hekim aşağıdakilerden hangisini anlamadan muayeneye geçmemelidir?",
      "secenekler": {
-      "A": "BOS incelemesinin sonucunu",
-      "B": "Aşil refleksinin derecesini",
-      "C": "Beyin MR sonucunu",
-      "D": "Hastanın sıkıntısının ne olduğunu ve ne söylemek istediğini",
-      "E": "Sevk yazısının biçimini"
+      "A": "Lomber ponksiyonla alınan BOS incelemesinin sonucunu",
+      "B": "Aşil refleksinin kaç derecede alındığını",
+      "C": "Beyin MR incelemesinde görülen bulguları",
+      "D": "Hastanın sıkıntısını ve ne söylemek istediğini",
+      "E": "Sevk yazısının hangi biçimde yazıldığını"
      },
      "dogru": "D",
      "aciklama": "Hekim hastanın sıkıntısını ve anlatmak istediğini anlamadan muayeneye geçmemelidir (sayfa 2).",
@@ -815,6 +815,130 @@
       "sayfa": 5,
       "alinti": "Hemiplejik kolun gövdeye yapışık olması, yürürken bacağını oraklaması"
      }
+    },
+    {
+     "id": "k2-01-norolojik-hastaya-yaklasim-q52",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "62 yaşındaki erkek hasta muayene odasına öne eğik bir duruşla, yavaş adımlarla ve yürürken kollarını sallamadan giriyor; ağzından salya akıyor. Bu hastada aşağıdaki bulgulardan hangisinin de bulunması beklenir?",
+     "secenekler": {
+      "A": "Maske yüz ve monoton konuşma",
+      "B": "Bacağın oraklanarak ilerletilmesi",
+      "C": "Karın önde badi-badi yürüyüş",
+      "D": "Kolun gövdeye yapışık durması",
+      "E": "Tek taraflı kuvvet kaybı"
+     },
+     "dogru": "A",
+     "aciklama": "Fleksör postür, kol sallamama ve salya akması Parkinson hastalığını düşündürür; bu tabloya maske yüz ve monoton konuşma eşlik eder. Kolun gövdeye yapışık durması ve bacağın oraklanması hemiplejinin bulgusudur.",
+     "sik_aciklamalari": {
+      "A": "Maske yüz ve monoton konuşma Parkinson hastalığının ilk bakışta görülen bulgularıdır. Fleksör postür, salya akması ve kol sallamama ile birlikte aynı tabloyu oluşturdukları için doğru cevaptır.",
+      "B": "Bacağın oraklanarak ilerletilmesi hemiplejik hastanın yürüyüşüdür; bacak yana doğru yarım daire çizer. Öne eğik duruş ve kol sallamama ise Parkinson hastalığına ait gözlem bulgularıdır.",
+      "C": "Karın önde badi-badi yürüyüş, ördeğe benzeyen yürüyüştür ve kas distrofisinde görülür. Bu hastadaki fleksör postür, salya ve kol sallamama Parkinson hastalığını düşündürdüğü için beklenen bulgu bu olamaz.",
+      "D": "Kolun gövdeye yapışık durması hemiplejik hastanın ilk izlenimde fark edilen bulgusudur ve tek taraflıdır. Bu hastada iki kol da yürürken sallanmadığı için tablo hemiplejiye değil Parkinson hastalığına uyar.",
+      "E": "Tek taraflı kuvvet kaybı hemiplejiyi anlatır ve akut başlangıçlı bir tablonun tipik örneğidir. Bu hastanın bulguları iki yanlıdır ve kuvvet kaybından çok Parkinson hastalığının duruş ve hareket bulgularına uyar."
+     },
+     "bilgi": [
+      22
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 5,
+      "alinti": "Parkinson H. maske yüz, monoton konuşma, salya akması, yürürken kollarını"
+     }
+    },
+    {
+     "id": "k2-01-norolojik-hastaya-yaklasim-q53",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Aşağıdakilerden hangisi Parkinson hastalığında ilk izlenimde görülen bulgulardan biri değildir?",
+     "secenekler": {
+      "A": "Maske yüz",
+      "B": "Monoton konuşma",
+      "C": "Vücudun fleksör postürü",
+      "D": "Salya akması",
+      "E": "Bacağı oraklayarak yürüme"
+     },
+     "dogru": "E",
+     "aciklama": "Bacağı oraklayarak yürüme hemiplejik hastaya aittir. Maske yüz, monoton konuşma, salya akması, kol sallamama ve fleksör postür Parkinson hastalığının ilk izlenim bulgularıdır.",
+     "sik_aciklamalari": {
+      "A": "Maske yüz, mimiklerin azaldığı ifadesiz yüzdür ve Parkinson hastalığında ilk bakışta fark edilir. Bu yüzden Parkinson hastalığının bulgusudur ve aranan seçenek bu değildir.",
+      "B": "Monoton konuşma, sesin tonlamasını yitirdiği tekdüze konuşmadır ve Parkinson hastalığında görülür. Hasta konuşmaya başladığı anda fark edilen bir Parkinson bulgusudur.",
+      "C": "Vücudun fleksör postürü, gövdenin öne eğik ve kasılmış durmasıdır. Parkinson hastalığında yürürken kolların sallanmamasıyla birlikte ilk izlenimde görülür ve tablonun parçasıdır.",
+      "D": "Salya akması Parkinson hastalığında maske yüz ve monoton konuşmaya eşlik eden gözlem bulgusudur. Hastanın görünümünden hemen fark edilir ve Parkinson tablosunun parçasıdır.",
+      "E": "Bacağı oraklayarak yürüme, bacağın yana doğru yarım daire çizerek ilerletilmesidir ve hemiplejik hastada görülür. Parkinson hastalığına ait olmadığı için doğru cevaptır."
+     },
+     "bilgi": [
+      21,
+      22
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 5,
+      "alinti": "Parkinson H. maske yüz, monoton konuşma, salya akması, yürürken kollarını"
+     }
+    },
+    {
+     "id": "k2-01-norolojik-hastaya-yaklasim-q54",
+     "kazanim": 4,
+     "zorluk": "zor",
+     "soru": "Muayene odasına giren hastada yapılan gözlem ile düşündürdüğü tablo eşleştirmelerinden hangisi YANLIŞTIR?",
+     "secenekler": {
+      "A": "Maske yüz – Parkinson hastalığı",
+      "B": "Karın önde badi-badi yürüyüş – kas distrofisi",
+      "C": "Kolun gövdeye yapışık durması – hemipleji",
+      "D": "Yürürken bacağın oraklanması – kas distrofisi",
+      "E": "Yürürken kolların sallanmaması – Parkinson hastalığı"
+     },
+     "dogru": "D",
+     "aciklama": "Yürürken bacağın oraklanması hemiplejik hastaya aittir; kas distrofisinde karın önde, ördeğe benzeyen badi-badi yürüyüş görülür. Diğer eşleştirmeler ilk izlenim bulgularıyla uyumludur.",
+     "sik_aciklamalari": {
+      "A": "Maske yüz, ifadesiz ve mimiksiz yüzdür ve Parkinson hastalığının ilk bakışta görülen bulgusudur. Eşleştirme doğrudur, bu yüzden aranan yanlış ifade bu değildir.",
+      "B": "Karın önde, ördeğe benzeyen badi-badi yürüyüş kas distrofisinde görülür ve hasta odaya girerken hemen fark edilir. Bu eşleştirme doğrudur.",
+      "C": "Kolun gövdeye yapışık durması hemiplejik hastanın tipik duruşudur ve yürürken bacağın oraklanmasıyla birlikte görülür. Bu yüzden eşleştirme doğrudur ve cevap bu değildir.",
+      "D": "Bacağın oraklanması, yürürken bacağın yana doğru yarım daire çizerek ilerletilmesidir ve hemiplejide görülür. Kas distrofisinin yürüyüşü ise badi-badi yürüyüştür; eşleştirme yanlış olduğu için doğru cevaptır.",
+      "E": "Yürürken kolların sallanmaması Parkinson hastalığında maske yüz ve monoton konuşmayla birlikte görülür. Eşleştirme doğrudur ve aranan yanlış ifade bu değildir."
+     },
+     "bilgi": [
+      21,
+      22,
+      23
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 5,
+      "alinti": "Hemiplejik kolun gövdeye yapışık olması, yürürken bacağını oraklaması"
+     }
+    },
+    {
+     "id": "k2-01-norolojik-hastaya-yaklasim-q55",
+     "kazanim": 4,
+     "zorluk": "zor",
+     "soru": "Muayene odasına giren bir hastada aşağıdaki gözlemlerden hangileri Parkinson hastalığını düşündürür?\nI. Maske yüz\nII. Kolun gövdeye yapışık durması\nIII. Salya akması\nIV. Vücudun fleksör postürü",
+     "secenekler": {
+      "A": "I ve II",
+      "B": "I, III ve IV",
+      "C": "II ve III",
+      "D": "I, II ve IV",
+      "E": "Yalnız III"
+     },
+     "dogru": "B",
+     "aciklama": "Maske yüz, salya akması ve vücudun fleksör postürü Parkinson hastalığının ilk izlenim bulgularıdır. Kolun gövdeye yapışık durması ise hemiplejik hastaya aittir.",
+     "sik_aciklamalari": {
+      "A": "Maske yüz Parkinson hastalığını düşündürür, ancak kolun gövdeye yapışık durması hemiplejinin bulgusudur. Bu seçenek salya akmasını ve fleksör postürü de dışarıda bırakır.",
+      "B": "Maske yüz, salya akması ve vücudun fleksör postürü Parkinson hastalığında ilk bakışta görülür. İkinci öncül hemiplejiye ait olduğu için doğru seçenek budur.",
+      "C": "Salya akması Parkinson hastalığında görülür, ancak kolun gövdeye yapışık durması hemiplejiye özgüdür. Bu seçenek ayrıca maske yüzü ve fleksör postürü dışarıda bırakır.",
+      "D": "Maske yüz ve fleksör postür Parkinson bulgusudur; kolun gövdeye yapışık durması ise hemiplejik hastanın duruşudur. Bu seçenek yanlış bir öncülü içerir ve salya akmasını atlar.",
+      "E": "Salya akması Parkinson hastalığının bulgusudur ama tek başına değildir. Maske yüz ve vücudun fleksör postürü de aynı tabloya ait olduğu için seçenek eksiktir."
+     },
+     "bilgi": [
+      21,
+      22
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 5,
+      "alinti": "Parkinson H. maske yüz, monoton konuşma, salya akması, yürürken kollarını"
+     }
     }
    ],
    "ilgili_cikmis": [
@@ -1349,11 +1473,11 @@
      "zorluk": "orta",
      "soru": "Beyin sapı lokalizasyonlu bir hastada MS ile SVO'yu ayıran öykü özelliği hangisidir?",
      "secenekler": {
-      "A": "Genç yaş ve düzelen çok bölgeli epizodlar MS'i; yaşlı yaş ve ateroskleroz SVO'yu gösterir",
-      "B": "Genç yaş SVO'yu, yaşlı yaş MS'i gösterir",
-      "C": "Malignite öyküsü MS'i, HT ve DM SVO'yu gösterir",
-      "D": "Sinsi ilerleyici seyir MS'i, aşı öyküsü SVO'yu gösterir",
-      "E": "İkisi de yalnız genç hastada görülür"
+      "A": "Genç yaş ve düzelen çok bölgeli epizod MS'i, yaşlı yaş ve ateroskleroz SVO'yu",
+      "B": "Genç yaş ve aterosklerotik risk SVO'yu, yaşlı yaş ve düzelen epizodlar MS'i gösterir",
+      "C": "Malignite öyküsü MS'i, hipertansiyon ve diyabet öyküsü ise SVO'yu gösterir",
+      "D": "Sinsi ilerleyici seyir MS'i, yakın zamanda aşı öyküsü ise SVO'yu gösterir",
+      "E": "İkisi de yalnız genç hastada görülür; yaş ayırıcı tanıda yol göstermez"
      },
      "dogru": "A",
      "aciklama": "Genç yaş ve düzelen çok bölgeli epizodlar MS'i, yaşlı yaş ve ateroskleroz SVO'yu düşündürür (sayfa 7).",
@@ -1521,11 +1645,11 @@
      "zorluk": "orta",
      "soru": "Acil olarak bilinçsiz bir hasta getirilmiş ve getiren kişi bilgi sahibi değildir. İlk yapılması gereken aşağıdakilerden hangisidir?",
      "secenekler": {
-      "A": "Getiren kişiden tam öykü alınmasını beklemek",
-      "B": "BOS incelemesi sonucunu beklemek",
-      "C": "Hastayı gözlemleyip laboratuvar sonuçlarını beklemek",
-      "D": "Önce sevk yazısını hazırlamak",
-      "E": "Bilgi toplarken tedaviye başlamak ve vital bulguları stabil hale getirmek"
+      "A": "Tedaviyi, getiren kişiden tam öykü alınana kadar ertelemek",
+      "B": "Lomber ponksiyon yapıp BOS incelemesinin sonucunu beklemek",
+      "C": "Hastayı yalnız gözlemleyip laboratuvar sonuçlarını beklemek",
+      "D": "Müdahaleden önce sevk yazısını hazırlayıp göndermek",
+      "E": "Bilgi toplarken tedaviye başlayıp vital bulguları stabilize etmek"
      },
      "dogru": "E",
      "aciklama": "Acilde bilgi hızlı toplanırken tedaviye de başlanır ve vital bulgular stabil hale getirilir (sayfa 9).",
@@ -1613,11 +1737,11 @@
      "zorluk": "orta",
      "soru": "Sevk yazısında hemiparezi nasıl belirtilmelidir?",
      "secenekler": {
-      "A": "Yalnız hemiparezi terimiyle",
-      "B": "Epilepsi ya da kore gibi bir deyimle",
-      "C": "Açıklanarak; örneğin hasta bacağını kaldıramıyor ama yatak içinde çekebiliyor",
-      "D": "Anlaşılmaz bir kısaltmayla",
-      "E": "Hiç yazılmaz, yalnız bilinç düzeyi yazılır"
+      "A": "Yalnız hemiparezi terimiyle, açıklama yapmadan",
+      "B": "Epilepsi ya da kore gibi genel bir deyimle",
+      "C": "Açıklayarak: örneğin bacağını kaldıramıyor ama yatakta çekebiliyor",
+      "D": "Yalnız hekimlerin anlayacağı bir kısaltmayla",
+      "E": "Hiç yazılmaz; yalnız bilinç düzeyi belirtilir"
      },
      "dogru": "C",
      "aciklama": "Hemiparezi açıklanarak yazılır (sayfa 9).",
@@ -1705,5 +1829,5 @@
    "ilgili_cikmis": []
   }
  ],
- "soru_sayisi": 51
+ "soru_sayisi": 55
 }

@@ -1642,3 +1642,44 @@ Her maddede: belirti · kök neden · Kurul 2 kuralı · kapı durumu. Kanıtlar
 - **Belirti:** hoca üslubu soruların çözümünde "Cevap: B" altında "false" satırı.
 - **Kök neden:** `hoca_uslubu_sorular` kayıtlarında `cikarim` alanı bazen `false`; `String(v ?? '')` bunu "false" metnine çevirdi.
 - **Çözüm/önleme:** soru verisini metne çeviren yardımcı yalnız string/sayı kabul eder (`kaynak.ts::s`); başka kaynaklardan alan okurken `String(x ?? '')` yerine tür denetimli dönüşüm kullanılır.
+
+## H446 — Öğrencinin en çok çalıştığı ve çıkmışta sorulan bilgi anlatımda "ders yalnız adıyla sayar" diye geçiştirildi (2026-10-30)
+- **Belirti:** k2-05 Nörolojik Muayene anlatımında "Spastisite ve rijidite kas tonusunun artmasıdır; ders ikisini yalnız adlarıyla sayar."
+  Oysa 2025-26 öğrenci notunda rijidite = "agonist ve antagonist kaslarda birlikte tonus artışı" (el notu + yıldız) ve çıkmışta tam bu
+  soruldu; 2. motor nöronda fasikülasyon, spastisite = 1. motor nöron, intensiyonel tremor da notta işaretli/çıkmışta var, anlatımda yok.
+- **Kök neden:** işçi önemi yalnız bu yılın slayt metni + çıkmış eşlemesinden kuruyordu; slaytta yalnız adı geçen kavramın hocanın derste
+  verdiği ve öğrencinin not ettiği tanımı kaynak sayılmıyordu. Geçmiş yıl öğrenci derlemeleri (hangi yer çalışıldı, hangi soru yapıştırıldı)
+  hatta hiç girmiyordu; kapsam kapıları konu düzeyinde ölçtüğü için "rijidite" sözcüğünün geçmesini kapsam sandı.
+- **Kural:** AGENTS 28 — geçmiş yıl öğrenci önem notu (`src/data/ogrenci_onem/`, `docs/OGRENCI_ONEM/<ders>.md`) her 2026-27 dersinde zorunlu
+  malzemedir: A birimi anlatımda ayrıntılı (tanım → ayırt edici nokta → sayı/ölçüt → komşu kavram), önem listesinde `ogrenci` etiketli
+  madde, ≥2 örnek soru; B birimi anlatımda açık + ≥1 soru. Slaytta yalnız adı geçen kavram, notta/çıkmışta tanımı soruluyorsa tanımıyla anlatılır.
+- **Önleme:** "ders yalnız adını verir / yalnız adlarıyla sayar" türü geçiştirme, kavram öğrenci notunda ya da çıkmışta tanımıyla geçiyorsa yasaktır.
+- **Kapı:** `python3 scripts/ogrenci_onem/kapi.py <ders>` 0 HATA — bilgi düzeyinde (el notu, vurgulu satır, çıkmış önermesi) anlatım ve önem
+  listesi cümlelerinde arar (vektör + kelime kökü örtüşmesi; yalnız vektör "spastisite ve rijidite" cümlesini rijidite tanımı sanıyordu).
+- **Ek (2026-10-30, kapı):** `kapi.py` ilk sürümü sesli metni (okunuşla: "Düşen", "müsküler") yazılı çıkmışla ("Duchenne muskuler")
+  karşılaştırıp anlatılmış bilgiyi "yok" sayıyordu (k2-08). Çözüm: v2 `ekran` maddeleri (yazımla) da aday cümledir. Önleme: sesli metinle
+  yazılı kaynağı karşılaştıran her kapı ekran/yazım katmanını da okur; kapıyı geçmek için sesli metin yazıma çevrilmez (H23).
+
+## H447 — Metni değişen paragrafların v2 cümleleri boş kaldı, ders ekranı ve çapası o paragraflarda eksik yayında (2026-10-30)
+- **Belirti:** `k2-05-norolojik-muayene-v2` yayındaki sesli derste 9 paragrafın (Rinne/Weber çizimli 31–37, refleks türleri 59,
+  duyu terimleri 65) v2 cümlesi yoktu (`cumleler: []`, kimlik `…-v2-yeni-pNNN`, `sayfa` yok); `konusma_v2.py --dogrula` 27 HATA veriyordu.
+  Ses klipleri metinden üretildiği için ders çalıyordu ama bu paragraflarda ekran maddesi, vurgu ve v2 slayt çapası yoktu.
+- **Kök neden:** `klip_tasi.py` metni değişen paragrafı v2'de bilerek boş bırakır ("konusma_v2 ile yazılmalı"); 2026-10-28 dağıtımında
+  bu adım atlandı (DEGISIKLIK_KAYDI'nda "yazılmadı" diye not düşüldü) ve yayın hattında v2 doğrulaması zorunlu kapı değildi.
+- **Çözüm:** 9 paragraf metin değişmeden dolduruldu (eski v2'de birebir aynı kalan 17 cümle kimliğiyle geri alındı, kalanlar yeni
+  kimlikle yazıldı; paragraf kimlikleri `k2-05-pNNN` biçimine döndü); `konusma_v2.py --dogrula` 0 HATA.
+- **Önleme:** `klip_tasi.py` "v2: N paragraf boş" raporu verdiyse o ders, boş paragraflar `konusma_v2` biçiminde yazılıp
+  `konusma_v2.py --dogrula <dizin>` (kaynak.md ile) 0 HATA verene dek dağıtılmaz; açık iş olarak not düşmek yerine aynı oturumda kapatılır.
+
+## H448 — `klip_tasi.py` metinle birlikte düzenlenmiş v2'yi eski metne göre yeniden kurup değişen paragrafları boşaltıyordu; `ders-ekle` elle iyileştirilmiş çapayı ezdi (2026-10-30)
+- **Belirti:** k2-05-v2'de 9 paragraf metni ve v2'si birlikte düzeltildi; `klip_tasi.py --kuru` "v2: 17 bölüm yeniden kuruldu, 9 paragraf boş" dedi
+  (çalışsaydı yeni yazılan cümleler silinecekti). Ardından `sesli_yayinla.py` → Oracle `ders-ekle`, `capa/<key>.json`'ı v2 satırlarından
+  türeyen kaba çapayla değiştirdi; oturumda elle yazılmış madde/resim/kutu/yol çapaları (78 paragraf) Oracle'da kayboldu.
+- **Kök neden:** (1) `klip_tasi` v2 için yalnız paragraf SAYISINA bakıyordu: sayı eski metinle aynıysa "eski metinle tutarlı" sayıp yeniden
+  kuruyordu; paragraf sayısı değişmeyen düzeltmede v2'nin zaten yeni metne uyduğu anlaşılmıyordu. (2) `ders-ekle` `capalar` gelince çapa
+  dosyasının tamamını yazar; değişmeyen paragrafların daha iyi çapası korunmaz.
+- **Çözüm:** `klip_tasi` cümle seslerinin birleşimi yeni paragraf metniyle aynıysa v2'ye dokunmaz. Çapa: yereldeki taşınmış çapa esas alındı,
+  değişen paragraflarda değişmeyen cümleler eski çapayı (git HEAD) geri aldı, yeni cümleler satırdan `pdf_isaret.capa_maddeleri` ile madde
+  dizinine çevrildi; `capa_dogrula` %98, 0 HATA; çapa Oracle'a yeniden yazıldı.
+- **Önleme:** yayımlanmış dersin metni düzeltildiğinde `sesli_yayinla.py`'den SONRA yerel çapa (klip_tasi ile taşınmış + değişen paragraflar
+  yazılmış) Oracle'a geri kopyalanır ve `pdf_isaret.py --key <key> --zorla` çalıştırılır (H93); `ders-ekle`'nin yazdığı kaba çapaya güvenilmez.

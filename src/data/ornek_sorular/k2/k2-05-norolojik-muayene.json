@@ -106,7 +106,7 @@
      "id": "k2-05-norolojik-muayene-q04",
      "kazanim": 1,
      "zorluk": "orta",
-     "soru": "Uyanıklık düzeyinin değerlendirilmesinde derste verilen basamaklar aşağıdakilerin hangisinde doğru sıralanmıştır?",
+     "soru": "Uyanıklık düzeyinin değerlendirilmesinde kullanılan basamaklar aşağıdakilerin hangisinde doğru sıralanmıştır?",
      "secenekler": {
       "A": "Anlık, kısa dönem, uzun dönem, amnezi",
       "B": "Konfüzyon, stupor, deliriyum, amnezi",
@@ -460,7 +460,7 @@
       "B": "Palatal hareketler: KS XII",
       "C": "Yüz duyusu: KS VII",
       "D": "Dil hareketleri: KS X",
-      "E": "Baş rotasyonu ve omuz elevasyonu: KS XI"
+      "E": "Omuz elevasyonu: KS XI"
      },
      "dogru": "E",
      "aciklama": "Muayene-sinir eşlemesi: koku I; görme II; ışık refleksi II ve III; göz hareketleri III, IV, VI; yüz duyusu V; duyma VIII; palatal hareketler IX ve X; baş rotasyonu ve omuz elevasyonu XI; dil XII (s. 12).",
@@ -615,7 +615,7 @@
       "B": "Gözlerini kapatması istenir; hastaya nane ve limon kokusu tutulur",
       "C": "Ağzını açıp aaa demesi istenir; yutma ve öğürme refleksi değerlendirilir",
       "D": "Başının üstüne diyapazon konulur; Rinne ve Weber testleri uygulanır",
-      "E": "Başını sabit tutması istenir; gözlerin tüm kadranlardaki hareketine bakılır, göz kapağı ve pupilla değerlendirilir, varsa nistagmus not edilir"
+      "E": "Başını sabit tutması istenir; gözlerin tüm kadranlardaki hareketine bakılır"
      },
      "dogru": "E",
      "aciklama": "Göz hareketi muayenesinde hastanın başı sabit tutulur ve gözlerin tüm kadranlardaki hareketine bakılır (s. 21, 22).",
@@ -769,7 +769,7 @@
      "secenekler": {
       "A": "Rinne ve Weber testleri",
       "B": "Snellen ve Jaeger kartları",
-      "C": "Serebellar testler, duruş ve yürüyüş, nistagmus ve denge testleri ile kalorik testler",
+      "C": "Nistagmus ve kalorik testler",
       "D": "Nane ve limon gibi tahriş etmeyen kokular",
       "E": "Kornea ve çene refleksleri"
      },
@@ -987,7 +987,7 @@
      "secenekler": {
       "A": "Pupilla dardır ve ışık refleksi canlıdır",
       "B": "Pupilla geniştir ve ışık refleksinin afferent kolu bozulmuştur",
-      "C": "Pupilla geniştir (midriyatik) ve ışık refleksinin efferent kolu bozulduğu için ışık refleksi alınamaz",
+      "C": "Pupilla midriyatiktir ve ışık refleksi alınamaz",
       "D": "Pupilla normal boyuttadır, yalnızca ptozis görülür",
       "E": "Pupilla dardır ve parasempatik uyarı artmıştır"
      },
@@ -1051,7 +1051,7 @@
      "secenekler": {
       "A": "Aynı tarafa lateral rotasyon ve karşı tarafa lateral fleksiyon",
       "B": "Omuz elevasyonu ve başa ekstansiyon",
-      "C": "Aynı tarafa lateral fleksiyon ve karşı tarafa lateral rotasyon; iki taraf birlikte çalışınca fleksiyon",
+      "C": "Aynı tarafa lateral fleksiyon, karşı tarafa lateral rotasyon",
       "D": "Yalnızca karşı tarafa lateral fleksiyon",
       "E": "Başın sabit tutulması, hareket yaptırmaması"
      },
@@ -1507,6 +1507,68 @@
       "sayfa": 52,
       "alinti": "1. motor nöron Tonus artar Refleksler canlı Patolojik refleks (+) Nöromusküler Kavşak Tonus değişmez"
      }
+    },
+    {
+     "id": "k2-05-norolojik-muayene-q70",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Agonist ve antagonist kasların birlikte kasılı kaldığı tonus artışı ile birinci motor nöron hasarına bağlı tonus artışı sırasıyla hangi terimlerle adlandırılır?",
+     "secenekler": {
+      "A": "Spastisite – rijidite",
+      "B": "Rijidite – spastisite",
+      "C": "Rijidite – hipotoni",
+      "D": "Klonus – spastisite",
+      "E": "Hipotoni – rijidite"
+     },
+     "dogru": "B",
+     "aciklama": "Agonist ve antagonist kaslarda birlikte tonus artışı rijiditedir; birinci motor nöron hasarındaki tonus artışı ise spastisitedir (s. 50, 52).",
+     "sik_aciklamalari": {
+      "A": "Spastisite birinci motor nöron hasarına bağlı tonus artışıdır, rijidite ise agonist ve antagonist kasların birlikte kasılı kalmasıdır. Bu seçenekte iki terimin yeri ters verildiği için sıralama tanımlarla uyuşmaz (s. 50, 52).",
+      "B": "Rijidite, hareketi yapan agonist kas ile ona karşı çalışan antagonist kasın birlikte kasılı kalmasıdır; spastisite ise birinci motor nöron hasarında görülen tonus artışıdır. İki tanım kökteki sırayla birebir eşleştiği için doğru cevap budur (s. 50, 52).",
+      "C": "Rijidite birinci tanıma uyar, ama hipotoni kas tonusunun azalmasıdır ve serebellar sistem bulgusudur. Kökün ikinci yarısı tonus artışını sorduğundan hipotoni bu sıralamayı tamamlayamaz (s. 50, 71).",
+      "D": "Klonus, uyaranla başlayıp kendini tekrarlayan ritmik kasılmadır ve refleks derecelendirmesinde beşinci derecedir. Bir tonus bulgusu olmadığı için agonist ve antagonistin birlikte kasılı kalmasını adlandırmaz (s. 54).",
+      "E": "Hipotoni tonusun azalmasıdır ve serebellar muayenede saptanır; rijidite ise karşıt kas çiftinde birlikte tonus artışıdır. Kökteki iki durum da tonus artışı olduğundan hipotoniyle başlayan sıralama yanlıştır (s. 50, 71)."
+     },
+     "bilgi": [
+      88,
+      90
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 50,
+      "alinti": "Spastisite Rijidite Atrofi"
+     }
+    },
+    {
+     "id": "k2-05-norolojik-muayene-q71",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Kas gücü iki bacakta 3/5, iki kolda 5/5 olarak değerlendirilen hastadaki tablo hangi terimle adlandırılır?",
+     "secenekler": {
+      "A": "Monoparazi",
+      "B": "Hemiparazi",
+      "C": "Kuadriparazi",
+      "D": "Paraparazi",
+      "E": "Pleji"
+     },
+     "dogru": "D",
+     "aciklama": "İki alt ekstremitede kısmi güç kaybı paraparazidir; kas gücü sıfır olmadığından tablo pleji değil parazidir (s. 44, 50).",
+     "sik_aciklamalari": {
+      "A": "Monoparazi, yalnız tek bir ekstremitede kas gücünün azalmasıdır. Bu hastada iki bacak birlikte etkilendiği için tutulumun dağılımı tek ekstremiteyle sınırlı değildir ve terim uymaz (s. 50).",
+      "B": "Hemiparazi, vücudun bir yarısında, yani aynı taraftaki kol ve bacakta güç kaybıdır. Hastada sağ ya da sol yarı değil iki bacak etkilendiğinden bu dağılım hemipareziye uymaz (s. 50).",
+      "C": "Kuadriparazi, dört ekstremitenin birlikte güçsüz olmasıdır. Hastanın iki kolunda kas gücü 5/5, yani normal olduğundan dört ekstremite tutulumu yoktur ve terim uymaz (s. 44, 50).",
+      "D": "Paraparazi, iki bacakta, yani iki alt ekstremitede kas gücünün kısmen azalmasıdır. Bacaklarda kas gücü 3/5 olup kollar normal olduğundan tablo paraparazidir ve doğru cevap budur (s. 44, 50).",
+      "E": "Pleji, kas gücünün tamamen kaybıdır ve kas kuvveti 0/5 olarak ölçülür. Bu hastanın bacakları yer çekimine karşı hareket edebildiği için güç kaybı kısmidir, yani tablo pleji değil parazidir (s. 44, 50)."
+     },
+     "bilgi": [
+      80,
+      87
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 50,
+      "alinti": "Parazi Pleji Monoparazi Hemiparazi Paraparazi Kuadriparazi"
+     }
     }
    ],
    "ilgili_cikmis": []
@@ -1669,7 +1731,7 @@
      "id": "k2-05-norolojik-muayene-q28",
      "kazanim": 4,
      "zorluk": "orta",
-     "soru": "Romberg testi, dersteki hangi duyu muayenesi grubunda yer alır?",
+     "soru": "Romberg testi hangi duyu muayenesi grubunda yer alır?",
      "secenekler": {
       "A": "Yüzeyel duyu muayenesi",
       "B": "Kortikal duyu muayenesi",
@@ -1981,7 +2043,7 @@
      "id": "k2-05-norolojik-muayene-q31",
      "kazanim": 5,
      "zorluk": "orta",
-     "soru": "Serebellar muayenede koordinasyonun metrik muayenesi için derste hangi testler verilmiştir?",
+     "soru": "Serebellar muayenede koordinasyonun metrik muayenesi hangi testlerle yapılır?",
      "secenekler": {
       "A": "Romberg testi ve vibrasyon testi",
       "B": "Parmak-burun ve diz-topuk testi",
@@ -2161,10 +2223,41 @@
       "sayfa": 71,
       "alinti": "Ataksi Disartri Hipotoni Dismetri Disdiadokinezi"
      }
+    },
+    {
+     "id": "k2-05-norolojik-muayene-q72",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "İntensiyonel tremor ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Dinlenme sırasında en belirgin olan titremedir.",
+      "B": "Hedefe yaklaştıkça belirginleşen bir titremedir.",
+      "C": "İkinci motor nöron hasarında görülen bir bulgudur.",
+      "D": "Refleks muayenesinde beşinci derece olarak kaydedilir.",
+      "E": "Kortikal duyu muayenesinde saptanan bir bulgudur."
+     },
+     "dogru": "B",
+     "aciklama": "İntensiyonel tremor, parmak-burun gibi metrik testlerde el hedefe yaklaştıkça ortaya çıkan serebellar bir titremedir (s. 67, 69).",
+     "sik_aciklamalari": {
+      "A": "Dinlenme sırasında belirgin olan titreme intensiyonel tremorun tersidir. İntensiyonel tremor hedefe yönelen hareket sırasında ortaya çıkar ve serebellar bir bulgudur; bu yüzden dinlenmeye bağlanan ifade yanlıştır (s. 69).",
+      "B": "İntensiyonel tremor, parmak-burun ya da diz-topuk testinde el veya ayak hedefe yaklaştıkça belirginleşen titremedir. Serebellar koordinasyon bozukluğunu gösterir ve tanımıyla örtüştüğü için doğru cevap budur (s. 67, 69).",
+      "C": "İkinci motor nöron hasarında tonus azalır, refleksler kaybolur, atrofi gelişir ve kasta fasikülasyon görülür. Hedefe yaklaşırken artan titreme ise serebellar sistemin bulgusudur, ikinci motor nöronun değil (s. 52, 69).",
+      "D": "Refleks derecelendirmesinde beşinci derece klonustur, yani uyaranla başlayıp kendini tekrarlayan ritmik kasılmadır. İntensiyonel tremor refleksle değil hedefe yönelen istemli hareketle ortaya çıkar (s. 54, 69).",
+      "E": "Kortikal duyu muayenesi stereognozi, iki nokta ayrımı, grafestezi ve taktil lokalizasyonu sınar. Titreme bir duyu bulgusu değildir; intensiyonel tremor serebellar sistem muayenesinde, metrik testlerle saptanır (s. 60, 69)."
+     },
+     "bilgi": [
+      115,
+      117
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 67,
+      "alinti": "Koordinasyon: Metrik muayene (parmak-burun, diz-topuk testi)"
+     }
     }
    ],
    "ilgili_cikmis": []
   }
  ],
- "soru_sayisi": 69
+ "soru_sayisi": 72
 }

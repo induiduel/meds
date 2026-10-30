@@ -1,0 +1,357 @@
+{
+ "pdf": "tbg",
+ "sayfa": 5,
+ "sayfa_ozeti": "Psikiyatrik Hastalıklar ve Genetik Analizi (k2-59): genetik araştırma yöntemleri, popülasyon çalışmaları (aile/ikiz/evlat edinme), DNA varyasyonları (RFLP, VNTR, STR, SNP, CNV), parametrik/parametrik olmayan analiz (linkage vs asosiyasyon), genetik haritalama, bağlantı analizi vs ilişki çalışmaları ('fark' el notu), kişilik bozukluklarında genler, COMT Val158Met (çevrelenmiş + pembe etiket), anksiyete ve yeme bozuklukları + 1 pembe çıkmış (davranış genetiği yöntemleri I-IV). k2-59 için 2026-27 PDF metni yok. COMT satırlarındaki kırmızı ↑ okları basılı slayt grafiğidir.",
+ "bloklar": [
+  {
+   "id": "tbg-s05-b01",
+   "bolge": "r1c1",
+   "tur": "slayt",
+   "baslik": "Genetik araştırmalarda kullanılan metodlar",
+   "ders": "k2-59",
+   "y25": {
+    "key": "y25-k2-59-psikiyatrik-hastaliklar-ve-genetik-analizi",
+    "sayfa": 3
+   },
+   "basili_metin": "Psikiyatrik Hastalıklar ve Genetik Analiz (öğrencinin başlığı)\nGenetik araştırmalarda sıklıkla kullanılan metodlar;\nGenetik epidemiyolojik çalışmalar → Populasyon genetiği ve aile çalışmaları,\nSitogenetik çalışmalar,\nMoleküler genetik çalışmalar → Linkage ve assosiasyon analizleri → GWAS analizleri.",
+   "isaretler": [
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "Populasyon genetiği ve aile çalışmaları"
+    },
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "Sitogenetik çalışmalar"
+    },
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "Moleküler genetik çalışmalar → Linkage ve assosiasyon analizleri"
+    }
+   ],
+   "el_yazisi": [],
+   "onem": [
+    "kirmizi_cizgi",
+    "cikmis"
+   ],
+   "duzeltme": []
+  },
+  {
+   "id": "tbg-s05-b02",
+   "bolge": "r1c1",
+   "tur": "slayt",
+   "baslik": "Popülasyon Çalışmaları",
+   "ders": "k2-59",
+   "y25": {
+    "key": "y25-k2-59-psikiyatrik-hastaliklar-ve-genetik-analizi",
+    "sayfa": 5
+   },
+   "basili_metin": "Popülasyon Çalışmaları\nAile çalışmaları,\nİkiz çalışmaları,\nEvlat edinilenler üzerine yapılan çalışmalar,",
+   "isaretler": [
+    {
+     "tur": "daire",
+     "hedef": "Aile çalışmaları"
+    },
+    {
+     "tur": "daire",
+     "hedef": "İkiz çalışmaları"
+    },
+    {
+     "tur": "daire",
+     "hedef": "Evlat edinilenler üzerine yapılan çalışmalar"
+    }
+   ],
+   "el_yazisi": [],
+   "onem": [
+    "daire",
+    "cikmis"
+   ],
+   "duzeltme": [],
+   "not": "Liste y25 s05 (Popülasyon çalışmaları başlıklı liste; ayrıntılar s06 aile, s07 ikiz)."
+  },
+  {
+   "id": "tbg-s05-b03",
+   "bolge": "r1c1",
+   "tur": "slayt",
+   "baslik": "DNA varyasyon türleri (RFLP, VNTR, STR, SNP, CNV)",
+   "ders": "k2-59",
+   "y25": {
+    "key": "y25-k2-59-psikiyatrik-hastaliklar-ve-genetik-analizi",
+    "sayfa": 16
+   },
+   "basili_metin": "RFLP: Restriksiyon enzimleri ile oluşturulan parça uzunluklarındaki farklılıklar\nVNTR (Minisatelit): 15 veya 100 bp uzunluğunda, genlerin içinde veya arasında olabilirler\nSTR (Mikrosatelit): Kodlamayan bölgede (junk DNA) olan, değişik motif ve uzunluklardaki (2-10 bp) ardışık, orta sıklıkta tekrarlayan nükleotid dizileridir\nSNP: DNA sekansında tek bir nükleotidin (A, T, C veya G) farklı olma durumu (insan genomunda her ~300 bp de 1 SNP)\nCNV: Her DNA'nın ~30,000 gen kodlaması ve genel olarak teoride genomda bir genden kopya olması beklenir, fakat DNA'nın büyük bir kesiminde genler farklı kopya sayısında bulunurlar",
+   "isaretler": [],
+   "el_yazisi": [],
+   "onem": [],
+   "duzeltme": [
+    {
+     "ham": "VNTR: 15 veya 100 bp",
+     "dogru": "VNTR: yaklaşık 10-100 bp'lik tekrar birimleri (minisatelit)",
+     "gerekce": "Slayt ifadesi muhtemelen '15 ile 100 bp' demek istiyor; minisatelit tekrar birimi ~10-100 bp"
+    },
+    {
+     "ham": "STR (2-10 bp)",
+     "dogru": "STR tekrar birimi genellikle 1/2-6 bp",
+     "gerekce": "Slayt 2-10 bp diyor; sınavda slayt ifadesi esas, bilgi notu"
+    }
+   ]
+  },
+  {
+   "id": "tbg-s05-b04",
+   "bolge": "r1c1+r2c1",
+   "tur": "slayt",
+   "baslik": "Varyasyonların kullanım alanları: parametrik (linkage) ve parametrik olmayan (asosiyasyon) analiz",
+   "ders": "k2-59",
+   "y25": {
+    "key": "y25-k2-59-psikiyatrik-hastaliklar-ve-genetik-analizi",
+    "sayfa": 19
+   },
+   "basili_metin": "Varyasyonların Kullanım Alanları\n1. Model bağımlı analizler (Parametrik Analizler): Kromozom yerleşimi kesin olarak bilinen bir genetik gösterge kullanarak bu göstergenin kuşaklar boyunca birlikte kalıtılıp kalıtılmadığını gösterme esasına dayanmaktadır. Aynı kromozom üzerinde birbirine çok yakın yerleşimli genlerin ya da polimorfik markerların mayoz sırasında parça değişimine uğraması (crossing over) ve birbirinden bağımsız olarak bir sonraki kuşağa kalıtılması çok zordur. Yani bir kromozom üzerinde birbirine çok yakın yerleşimli genler mayozda yeniden şekillenmezler ve yavru kuşağa daima birlikte aktarılırlar. Bu olaya bağlantılı kalıtım (linkage) adı verilmektedir.\n[Soy ağacı şeması: Father/Mother, Marker M ve HD, children]\n2. Modelden bağımsız analizler (Parametrik olmayan analizler): Hastalık ile genetik gösterge arasında anlamlı bir ilişki bulunmaya çalışılır. Assosiyasyon analizlerinde hastalıkla genetik göstergenin kuşaklararası birlikte kalıtılması sınanmaz bunun yerine hastalığın ortaya çıkmasında rolü olabilecek genler belirlenir; bu aday genler içinde yer alan polimorfik DNA değişiklikleri saptanır ve bu değişikliği oluşturan aleli ile hastalık aleli arasında ilişki olup olmadığı araştırılır. Tam bağlantı durumunda genetik gösterge alelleri ile hastalığın birlikte kalıtımı tamdır (Linkage).",
+   "isaretler": [
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "'Yani bir kromozom üzerinde birbirine çok yakın … bağlantılı kalıtım (linkage) adı verilmektedir' (altı çizili)"
+    },
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "'Assosiyasyon analizlerinde … ilişki olup olmadığı araştırılır' (altı çizili)"
+    },
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "'Tam bağlantı durumunda … (Linkage)' (altı çizili)"
+    },
+    {
+     "tur": "karalama",
+     "hedef": "parametrik kutunun altında kırmızı ∝ döngüsü"
+    }
+   ],
+   "el_yazisi": [],
+   "onem": [
+    "kirmizi_cizgi",
+    "cikmis"
+   ],
+   "duzeltme": []
+  },
+  {
+   "id": "tbg-s05-b05",
+   "bolge": "r2c1",
+   "tur": "slayt",
+   "baslik": "Genetik Haritalama",
+   "ders": "k2-59",
+   "y25": {
+    "key": "y25-k2-59-psikiyatrik-hastaliklar-ve-genetik-analizi",
+    "sayfa": 20
+   },
+   "basili_metin": "Genetik harita genlerin bir kromozom üzerindeki sırasını ve rekombinasyon sıklığına göre aralarındaki yaklaşık uzaklığı verir.\nGenetik haritalarda %1'lik rekombinasyon 1 harita birimine yani 1 sentimorgana eşittir.\nİki gen arasındaki çift değiş tokuş saptanamaz bu nedenle uzak genler arasındaki genetik uzaklık çok güvenilir olarak hesaplanamaz.",
+   "isaretler": [],
+   "el_yazisi": [],
+   "onem": [],
+   "duzeltme": []
+  },
+  {
+   "id": "tbg-s05-b06",
+   "bolge": "r2c1",
+   "tur": "slayt",
+   "baslik": "Bağlantı Analizi ve İlişki (Asosiyasyon) çalışmaları – fark",
+   "ders": "k2-59",
+   "y25": {
+    "key": "y25-k2-59-psikiyatrik-hastaliklar-ve-genetik-analizi",
+    "sayfa": 24
+   },
+   "basili_metin": "Bağlantı Analizi\nKlasik linkage çalışmaları; Hastalığın belirli bir kalıtım şekli varsa, Tek gen ya da majör gen etkisi söz konusu ise, Tanı güvenilir ve patolojik bulgularla destekleniyorsa, En iyi sonucu verir. Ancak çoğu psikiyatrik bozukluk bu ölçütlere uymaz ve bağlantı analizi ile sonuç almak güç olmaktadır.\nİlişki (Assosiasyon) çalışmaları\nBu çalışmalarda hastalık patogenezinde rol alan aday bir genin olması gerekir, Hastalığın kalıtım kalıbının belirlenmesi zorunlu değil, Bu yaklaşımda belli bir genin alelik varyantlarının hasta ve kontrol popülasyonlarındaki frekansları karşılaştırılır. Bu yöntemle Alzheimer patogenezinde yer alan ApoE geni bulunmuştur.",
+   "isaretler": [],
+   "el_yazisi": [
+    {
+     "metin": "fark",
+     "hedef": "Bağlantı Analizi başlığı (bağlantı analizi ile ilişki çalışmaları arasındaki fark vurgulanıyor)",
+     "guven": "yuksek",
+     "alternatif": ""
+    }
+   ],
+   "onem": [
+    "el_onemli"
+   ],
+   "duzeltme": [],
+   "not": "İlişki çalışmaları y25 s25."
+  },
+  {
+   "id": "tbg-s05-b07",
+   "bolge": "r1c2",
+   "tur": "slayt",
+   "baslik": "Kişilik bozukluklarında genler",
+   "ders": "k2-59",
+   "y25": {
+    "key": "y25-k2-59-psikiyatrik-hastaliklar-ve-genetik-analizi",
+    "sayfa": 30
+   },
+   "basili_metin": "Hastalık Örnekleri (öğrencinin başlığı)\nKişilik Bozuklukları\nAntisosyal Kişilik Bozukluğu (ASKB): 5HTTLPR geni\nÇekingen kişilik bozukluğunda 5-HTTLPR ve DRD3 polimorfizmleri\nObsesif kompulsif kişilik bozukluğunda (OKB) DRD4 ve DRD3 geninde değişiklikler saptanmıştır.\nParanoid kişilik bozukluğu ile ilişkili yapılan genetik çalışmalarda, L tipi voltaj bağımlı Na+ kanalını kodlayan CACNA1C ve COMT geninin [bazı alelleri paranoid fikirler ile ilişkili bulunmuştur] (kesik)\nDopamin D2 reseptör geninin (DRD2) bazı alellerinin de borderline kişilik özellikleri ile ilişkisi tespit edilmiştir",
+   "isaretler": [],
+   "el_yazisi": [],
+   "onem": [],
+   "duzeltme": [
+    {
+     "ham": "L tipi voltaj bağımlı Na+ kanalını kodlayan CACNA1C",
+     "dogru": "L tipi voltaj bağımlı Ca2+ kanalının alfa-1C alt birimini kodlayan CACNA1C",
+     "gerekce": "CACNA1C kalsiyum kanalı genidir (aynı derste y25 s36: 'alpha 1C subunit of the L-type …'); slayt s31'deki 'Na+' hatalı"
+    },
+    {
+     "ham": "5HTTLPR geni",
+     "dogru": "5-HTTLPR (serotonin taşıyıcı geni SLC6A4 promoter polimorfik bölgesi)",
+     "gerekce": "5-HTTLPR bir gen değil, SLC6A4'ün promoter polimorfizmidir"
+    }
+   ],
+   "not": "Satırlar y25 s29-s32'den derlenmiş (CACNA1C s31, DRD2 s32)."
+  },
+  {
+   "id": "tbg-s05-b08",
+   "bolge": "r1c2",
+   "tur": "slayt",
+   "baslik": "COMT-II: S-COMT, MB-COMT, Val158Met",
+   "ders": "k2-59",
+   "y25": {
+    "key": "y25-k2-59-psikiyatrik-hastaliklar-ve-genetik-analizi",
+    "sayfa": 64
+   },
+   "basili_metin": "COMT-II\nİnsanda 2 formu bulunur;\nS-COMT (Total COMT aktivitesinin %95'ini oluşturur.)\nMB-COMT (beyinde yüksek aktivite)\nCOMT Val158Met; Met158 3-4 kat daha az aktif, kodominant etkili\nNikotin → Val158 ↑\nGeç-başlangıçlı alkoliklerde Met158 ↑\n♀ → anksiyete, ağrı eşiğinde azalma → Met158 ↑",
+   "isaretler": [
+    {
+     "tur": "daire",
+     "hedef": "COMT Val158Met; Met158 3-4 kat daha az aktif, kodominant etkili (kırmızı oval)"
+    },
+    {
+     "tur": "karalama",
+     "hedef": "başlığın sağında kırmızı ∝/✗ imi"
+    },
+    {
+     "tur": "pembe",
+     "hedef": "sağda ayrı pembe etiket 'val158met comt'"
+    }
+   ],
+   "el_yazisi": [],
+   "onem": [
+    "daire",
+    "pembe",
+    "cikmis"
+   ],
+   "duzeltme": [],
+   "not": "Pembe 'val158met comt' etiketi bir çıkmış sorunun cevabı olabilir; bankada yalnız d3-k2-tbg-007 (2021-2026 K2, 'katekolamin yıkımı… şizofreni aday gen → COMT Val158Met') bulundu."
+  },
+  {
+   "id": "tbg-s05-b09",
+   "bolge": "r1c3",
+   "tur": "cikmis_soru",
+   "baslik": "Pembe etiket: 'val158met comt'",
+   "ders": "k2-59",
+   "y25": {
+    "key": "y25-k2-59-psikiyatrik-hastaliklar-ve-genetik-analizi",
+    "sayfa": 64
+   },
+   "basili_metin": "val158met comt",
+   "isaretler": [
+    {
+     "tur": "pembe",
+     "hedef": "tek satır etiket"
+    }
+   ],
+   "el_yazisi": [],
+   "cikmis": {
+    "kok": "(yalnız cevap/anahtar terim yazılmış) val158met comt",
+    "siklar": [],
+    "ogrenci_cevap": "COMT Val158Met",
+    "banka_id": "d3-k2-tbg-007",
+    "banka_yil": "2021-2026 (Kurul 2)",
+    "banka_dogru": "A) COMT Val158Met polimorfizmi",
+    "tutarli": true,
+    "not": "Soru kökü yazılmamış; banka eşleşmesi konu düzeyinde, guven orta. Banka kökü: katekolamin yıkım enzimi, prefrontal korteks, şizofreni aday gen polimorfizmi."
+   },
+   "onem": [
+    "cikmis"
+   ],
+   "duzeltme": []
+  },
+  {
+   "id": "tbg-s05-b10",
+   "bolge": "r1c3",
+   "tur": "cikmis_soru",
+   "baslik": "Çıkmış: davranış genetiği çalışma yöntemleri",
+   "ders": "k2-59",
+   "y25": {
+    "key": "y25-k2-59-psikiyatrik-hastaliklar-ve-genetik-analizi",
+    "sayfa": 3
+   },
+   "basili_metin": "Davranış genetiği çalışmaları yöntemi?\nI- İkiz çalışmaları\nII- asosiasyon çalışmaları\nIII- Linkage analizi\nIV- mutasyon analizi",
+   "isaretler": [
+    {
+     "tur": "pembe",
+     "hedef": "soru bloğu"
+    }
+   ],
+   "el_yazisi": [],
+   "cikmis": {
+    "kok": "Davranış genetiği çalışmalarında kullanılan yöntemler: I. İkiz çalışmaları II. Asosiyasyon çalışmaları III. Linkage analizi IV. Mutasyon analizi — hangileri?",
+    "siklar": [
+     "I- İkiz çalışmaları",
+     "II- asosiasyon çalışmaları",
+     "III- Linkage analizi",
+     "IV- mutasyon analizi"
+    ],
+    "ogrenci_cevap": "(işaret yok; dört öncül de listelenmiş → 'hepsi' anlamında)",
+    "banka_id": "q-No_ropsikiyatri_gis_kardiyo_-2023-2024-C__km_s_lar__240625_053302__2_-17",
+    "banka_yil": "2023-2024 (Kurul 2)",
+    "banka_dogru": "E) I, II, III ve IV",
+    "tutarli": true,
+    "not": "Öğrenci kopyasında harfli şıklar yok. Banka şıkları: A) Yalnız I B) I ve II C) I, II ve III D) II, III ve IV E) I, II, III ve IV. Konu hem k2-52 (Davranış Genetiği, y25 s15 'kalıtımı incelemek için kullanılan yöntemler') hem k2-59'da işleniyor; öğrenci k2-59 sayfasına koymuş. isPastExam boş, ara.py bulamadı."
+   },
+   "onem": [
+    "cikmis"
+   ],
+   "duzeltme": []
+  },
+  {
+   "id": "tbg-s05-b11",
+   "bolge": "r1c2+r2c2",
+   "tur": "slayt",
+   "baslik": "Anksiyete Bozuklukları",
+   "ders": "k2-59",
+   "y25": {
+    "key": "y25-k2-59-psikiyatrik-hastaliklar-ve-genetik-analizi",
+    "sayfa": 67
+   },
+   "basili_metin": "Anksiyete Bozuklukları\nObsesif kompulsif bozukluk (OKB),\nPanik bozukluk (PB),\nÖzgül fobiler,\nSosyal fobi,\nGenelleşmiş anksiyete bozukluğu (GAB)\nÖzgül Fobiler / Sosyal Fobi (yalnız başlıklar)",
+   "isaretler": [
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "liste solunda kırmızı parantez"
+    }
+   ],
+   "el_yazisi": [],
+   "onem": [
+    "kirmizi_cizgi"
+   ],
+   "duzeltme": [],
+   "not": "'Özgül Fobiler' ve 'Sosyal Fobi' yalnız başlık olarak yapıştırılmış (y25 s70, s71)."
+  },
+  {
+   "id": "tbg-s05-b12",
+   "bolge": "r2c2",
+   "tur": "slayt",
+   "baslik": "Yeme Bozuklukları: anoreksiya (TNF-α), bulimiya (5HT2C)",
+   "ders": "k2-59",
+   "y25": {
+    "key": "y25-k2-59-psikiyatrik-hastaliklar-ve-genetik-analizi",
+    "sayfa": 74
+   },
+   "basili_metin": "Yeme Bozuklukları\nAnoreksia Nervosa;\nTNF-α (tümör nekrozis faktör) salınımında artış,\nTNF-α hipotalamik-pitüiter-adrenal aksı aktive ederek yeme bozukluklarında karakteristik olan gıda alımını azaltır.\nBulimia Nervosa;\n5HT2C reseptörü varyantları üzerinde çalışmalar yapılmaktadır.",
+   "isaretler": [
+    {
+     "tur": "daire",
+     "hedef": "TNF-α (iki satırdaki TNF-α kırmızı yayla çevrelenmiş)"
+    }
+   ],
+   "el_yazisi": [],
+   "onem": [
+    "daire"
+   ],
+   "duzeltme": []
+  }
+ ]
+}

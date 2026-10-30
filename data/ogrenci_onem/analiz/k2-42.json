@@ -1,0 +1,185 @@
+{
+ "ders": "k2-42",
+ "ozet": "Sınavın çekirdeği otizm spektrum bozukluğu (OSB) ve özgül öğrenme güçlüğüdür (ÖÖG). Çıkmışlar OSB'de iki belirti kümesini ayırmaya ('toplumsal-duygusal karşılıkta yetersizliğe örnek değildir' → oyuncakları dizme/çevirme) ve kısa vakada tanıya (adına bakmama + göz teması kurmama), ÖÖG'de ise 'zekâ normaldir' ve 'kanıtlanmış ilaç tedavisi yoktur' önermelerine yığılmış. Öğrenciler OSB belirti slaytını ve ÖÖG tanımını neredeyse baştan sona sarıya boyamış; Tourette bozukluğu ise notta hiç yok ama üç kez sorulmuş.",
+ "temalar": [
+  {
+   "tema": "OSB: toplumsal-duygusal yetersizlik ile kısıtlı/tekrarlayıcı davranış kümesini ayırma",
+   "oncelik": "A",
+   "birimler": [
+    "psk-s16-b01",
+    "psk-s16-b04"
+   ],
+   "kanit": "2020-21'de iki sürüm (c77bafb04f86 / 1b0796213c00, cevap 'Oyuncakları dizme, çevirme hareketleri') + aynı yıl ters yönlü sürüm (daafa2b8d14f, 'örnektir' → 'Anne, babaya ilgi göstermede bozukluk'); hoca profilinde tekrar eden çekirdek (3×). Notta pembe kesik, cevap kırmızı çember, diğer şıklara tik (psk-s16-b05).",
+   "anlatim": "İki kümeyi yan yana bir tabloyla ver: toplumsal-duygusal (ilgi göstermeme, sosyal gülümseme yokluğu, bağlanma ve ayrılık kaygısı gelişmemesi, bay-bay taklidi yok, karşılıklı konuşmada yetersizlik) ve kısıtlı/tekrarlayıcı (dizme, tekerlek çevirme, sallanma, dönen cisimlere ilgi, değişiklikten hoşlanmama, törensel davranış). Her slayt örneğinin hangi kümeye girdiği tek tek söylenmeli.",
+   "soru_payi": 30,
+   "soru_tipleri": [
+    "olumsuz: 'toplumsal-duygusal yetersizliğe örnek değildir' → tekrarlayıcı davranış",
+    "ters yön: 'örnektir' → ilgi göstermede bozukluk",
+    "olumsuz: 'tanıda yol gösterici değildir' → tıkınırcasına yemek"
+   ]
+  },
+  {
+   "tema": "OSB: başlangıç yaşı, regresif otizm, 36 ay öncesi erken belirtiler ve kısa vaka",
+   "oncelik": "A",
+   "birimler": [
+    "psk-s16-b04"
+   ],
+   "kanit": "2025-26 vaka sorusu (q-25-26_d_nem_3_kurul_2-91-cs2: 4 yaş, adına dönüp bakmıyor + göz teması yok → OSB) ve d3-k2-psi-010 (adına tepki yok, kendi etrafında dönme → OSB); arşiv past-q-I_SKENDERUN_TI_Mu_du_rlu_g_u_ne0__1__230709_230251-75 (yol gösterici olmayan bulgu: tıkınırcasına yeme). Slaytta '12-24 ay' sarı, regresif otizm maddesi yıldızlı ve tamamen sarı, göz teması/adına bakma/ortak dikkat satırı kırmızı çizgili.",
+   "anlatim": "Belirtilerin 12–24 ayda başladığını, regresyonun da aynı aralıkta olduğunu ve başka bozukluklarda çok nadir olduğu için otizmi düşündürdüğünü vurgula. Erken belirti listesinden adına bakmama, göz temasından kaçma, işaret etmeme, ortak dikkat yokluğu ve hayali oyun yokluğunu vaka diliyle anlat; konuşmanın tekdüze ve vurgusuz olmasını ekle.",
+   "soru_payi": 15,
+   "soru_tipleri": [
+    "vaka: 4 yaş, adına bakmıyor, göz teması yok → OSB",
+    "doğrudan: regresyon hangi yaş aralığında → 12–24 ay",
+    "olumsuz: OSB tanısında yol gösterici olmayan bulgu"
+   ]
+  },
+  {
+   "tema": "OSB/YGB seyri ve tedavisinde yanlış önermeler",
+   "oncelik": "A",
+   "birimler": [
+    "psk-s16-b01"
+   ],
+   "kanit": "2021-22 (past-1790877044860-729418): 'Erişkinlikte otizm belirtileri ve davranış sorunlarında artış olur' uyuşmayan ifade; arşiv (past-1790877035999-122905): 'Nörofeedback YGB tedavisinde yaygın ve kanıtlanmış bir yöntemdir' doğru değil. İkisi de notta yapıştırılmamış.",
+   "anlatim": "Kısa tut: belirtilerin erişkinlikte artmadığını ve nörofeedbackin kanıtlanmış bir yöntem olmadığını iki cümleyle söyle; el notundaki 'yetişkinlikte de tanı konabilir' bilgisini bununla bağla.",
+   "soru_payi": 5,
+   "soru_tipleri": [
+    "yanlış bul: erişkinlikte belirtiler artar",
+    "yanlış bul: nörofeedback kanıtlı tedavi"
+   ]
+  },
+  {
+   "tema": "Nörogelişimsel bozukluk sınıflaması ve zihinsel yetersizliğin ilk belirtileri",
+   "oncelik": "A",
+   "birimler": [
+    "psk-s16-b01"
+   ],
+   "kanit": "Altı başlığın tümü sarı; el notları: 'yetişkinlikte de tanı konabilir' (oklu) ve zihinsel yetersizlik için '→ konuşmada gecikme (en sık), tuvalet kontrolünü sağlayamamak, yaşıtlarıyla uyumsuzluk'.",
+   "anlatim": "Altı grubu bir liste olarak ver; zihinsel yetersizlikte ailenin ilk fark ettiği belirti olarak konuşma gecikmesinin en sık olduğunu el notuna dayanarak bir cümleyle ekle.",
+   "soru_payi": 5,
+   "soru_tipleri": [
+    "olumsuz: hangisi nörogelişimsel bozukluk sınıflamasında yer almaz"
+   ]
+  },
+  {
+   "tema": "Özgül öğrenme güçlüğü: zekâ normal, okula başlamak şart, ilaç tedavisi yok",
+   "oncelik": "A",
+   "birimler": [
+    "psk-s16-b07"
+   ],
+   "kanit": "2020-21 (4b92269c6553, 'söylenemez' → 'Zekâ düzeyi 85'in altındadır'; el notu 'zekâ normal', çemberli) ve 2018-19 final (final-2018-2019-q078, 11 yaşında Sena, yanlış → 'İlaç tedavisi veya özel bir diyetle düzeltilebilir'; slayt s35). Tanım cümlesinde 'genel bilişsel işlevlerde bir sorun olmadığı halde' çemberli, 'okula başlaması' kırmızı çizgili; yer-yön-zaman, saat, çarpım tablosu, mecaz anlamada güçlük satırları sarı.",
+   "anlatim": "Tanımı (genel bilişsel işlev normal + akademik başarıda belirgin düşüklük), tanı için okula başlama şartını ve DSM-5'te okuma, yazılı anlatım ve matematik alt tanımlayıcılarını sırayla ver. Okul öncesi dil belirtileri ile okul çağı belirtilerini (harf/hece/satır atlama, alfabe, günler, aylar, saat) ayrı maddelerde anlat ve kanıtlanmış ilaç tedavisinin olmadığını ayrıca vurgula.",
+   "soru_payi": 22,
+   "soru_tipleri": [
+    "olumsuz: 'söylenemez' → zekâ 85 altında",
+    "vaka + yanlış bul: ilaç veya diyetle düzelir",
+    "doğrudan: tanı için hangi koşul gerekir → okula başlamış olmak"
+   ]
+  },
+  {
+   "tema": "Zihinsel yetersizlik risk etmenleri (maternal, gebelik, neonatal, postnatal)",
+   "oncelik": "B",
+   "birimler": [
+    "psk-s16-b02"
+   ],
+   "kanit": "Çıkmış yok; gebelik komplikasyonları, neonatal ve postnatal başlıkları yıldızlı, konjenital hipotiroidi sarı + kırmızı çizgili; el notu: 'kontrol edildiği için zekâ geriliğini önleyebiliriz. Aşı önemli!'",
+   "anlatim": "Dört grubu başlık düzeyinde ver; önlenebilir nedenler olarak konjenital hipotiroidi (tarama ve tedavi) ile kızamık/kabakulak (aşı) üzerinde dur. Anne yaşı sınırlarını (16'dan küçük, 40'tan büyük; ilk doğumda 35'ten büyük) ve 1500 gramın altındaki doğum öyküsünü sayı olarak ekle.",
+   "soru_payi": 5,
+   "soru_tipleri": [
+    "olumsuz: hangisi postnatal neden değildir",
+    "doğrudan: önlenebilir zihinsel yetersizlik nedeni → konjenital hipotiroidi"
+   ]
+  },
+  {
+   "tema": "DEHB alt türleri, belirti boyutları ve sağaltım ilk seçeneği (bu dersteki kısa bölüm)",
+   "oncelik": "B",
+   "birimler": [
+    "psk-s16-b03"
+   ],
+   "kanit": "Çıkmış yok; 'iki boyut, 3 alttür' sarı; 'İlk seçenek: psikostimülanlardır' sarı + kırmızı çizgili; el notları: 'genelde tüm hayatı boyunca kalır' (dikkat eksikliği), 'tedaviyle düzelebilir' (hiperaktivite + dürtüsellik), 'en önemli' (ilaç sağaltımı).",
+   "anlatim": "Ayrıntı ayrı derste (k2-49) işlendiği için burada iki boyutu, üç alttürü ve psikostimülanın ilk seçenek olduğunu kısa ver; ikinci basamak ilaç listesini (atomoksetin, guanfazin, klonidin, TCA, venlafaksin, bupropion, modafinil) sayılar halinde ekle.",
+   "soru_payi": 5,
+   "soru_tipleri": [
+    "doğrudan: DEHB'de ilk seçenek ilaç grubu",
+    "olumsuz: dürtüsellik belirtisi olmayan"
+   ]
+  },
+  {
+   "tema": "Notta yok, sorulmuş: Tourette bozukluğu ve OSB'de serebellum",
+   "oncelik": "A",
+   "birimler": [],
+   "kanit": "Tourette üç kez: 2022-23 (past-1790877039267-989167-cs2), 2023 (q-No_ropsikiyatri_gis_kardiyo_-2023-2024-C__km_s_lar__240625_053302__2_-16) ve d3-k2-tbg-004; hepsinde ölçüt 'birden fazla motor tik + en az bir vokal tik, bir yıldan uzun'. OSB'de nöropatoloji/görüntülemede tutarlı etkilenen bölge serebellum (2023, q-No_ropsikiyatri_gis_kardiyo_-2023-2024-C__km_s_lar__240625_053302__2_-38). Öğrenci notunda ikisi de yok; sınıflamada yalnız 'Motor bozukluklar' başlığı geçiyor.",
+   "anlatim": "Motor bozukluklar başlığı altında Tourette'i tanımla: çocuklukta başlar, birden fazla motor tik ve en az bir vokal tik birlikte, bir yıldan uzun; bankadaki doğru şıkta OKB ve DEHB ile sık birliktelik geçer. OSB bölümüne serebellumun tutarlı biçimde etkilenen bölge olduğunu bir cümleyle ekle; ikisi de 2026-27 slaytında yoksa yalnız çıkmış dayanağıyla verilmeli.",
+   "soru_payi": 13,
+   "soru_tipleri": [
+    "vaka: bir yıldan uzun motor + vokal tik → Tourette",
+    "doğrudan: OSB'de tutarlı etkilenen beyin bölgesi → serebellum"
+   ]
+  }
+ ],
+ "hoca_kaliplari": [
+  "olumsuz kök: '… örnek değildir', '… söylenemez', '… yol gösterici olarak değerlendirilmez' (konu profilinde olumsuz %31)",
+  "kısa vaka: 'dört yaşında çocuk, adı söylendiğinde dönüp bakmıyor' (vaka %15)",
+  "tanım → terim ya da terim → özellik; çeldiriciler aynı türden başka kavram (%77)",
+  "aynı soru iki yönde: 'örnek değildir' ve 'örnektir' (2020-21)"
+ ],
+ "tuzaklar": [
+  {
+   "tuzak": "Oyuncakları dizme ve çevirme toplumsal-duygusal yetersizlik kümesine girmez",
+   "neden": "Kısıtlı/tekrarlayıcı davranış örneğidir; şıklarda öteki dört madde toplumsal-duygusal kümeden verilir."
+  },
+  {
+   "tuzak": "Özgül öğrenme güçlüğünde zekâ düzeyi 85'in altında değildir",
+   "neden": "Tanım genel bilişsel işlevin normal olmasını şart koşar; çeldirici zihinsel yetersizlikle karıştırmaya dayanır."
+  },
+  {
+   "tuzak": "ÖÖG ilaç ya da diyetle düzeltilemez",
+   "neden": "Slayt s35: etkililiği kanıtlanmış ilaç tedavisi yoktur; vaka sorusunda 'yanlış' şık budur."
+  },
+  {
+   "tuzak": "OSB belirtileri erişkinlikte artmaz",
+   "neden": "2021-22'de 'uyuşmayan ifade' olarak soruldu."
+  },
+  {
+   "tuzak": "Tıkınırcasına yeme OSB tanısında yol gösterici değildir",
+   "neden": "Göz teması kısıtlılığı, ismine bakmama, kısıtlı ilgi ve tekrarlayıcı hareketlerle birlikte verilir; tek yabancı şıktır."
+  },
+  {
+   "tuzak": "Tourette için süre bir yıldan uzun ve hem motor hem vokal tik gerekir",
+   "neden": "Notta olmadığı için öğrenci yalnız motor tik ya da daha kısa süreyle karıştırabilir."
+  }
+ ],
+ "sayilar": [
+  "OSB belirtileri ve regresyon 12–24 ay",
+  "Erken tanı belirtileri: özellikle 36 ay öncesi",
+  "Anne yaşı riski: 16'dan küçük, 40'tan büyük (ilk doğumda 35'ten büyük)",
+  "1500 gramdan düşük doğum ağırlığı öyküsü",
+  "Tourette: bir yıldan uzun süre",
+  "ÖÖG çıkmışında zekâ eşiği çeldiricisi: 85"
+ ],
+ "duzeltmeler": [
+  {
+   "yanlis": "El notu (psk-s16-b03): dikkat eksikliği 'genelde tüm hayatı boyunca kalır', aşırı hareketlilik ve dürtüsellik 'tedaviyle düzelebilir'.",
+   "dogru": "Slaytlarda böyle bir tedavi ayrımı yok. DEHB dersinde (k2-49, slayt s19) ergenlikte dürtüsel davranışlarda artış olduğu, s24'te çocuklukta tanı alanların en az %50'sinin erişkinlikte de tanı aldığı yazar. Aşırı hareketlilik yaşla azalma eğilimindedir; bu doğal seyirdir, tedaviyle düzelme ayrımı olarak öğretilmemeli.",
+   "kaynak": "k2-49 slayt s19 ve s24 + genel tıbbi bilgi"
+  }
+ ],
+ "ara_soru_adaylari": [
+  {
+   "birim": "psk-s16-b04",
+   "fikir": "Beş davranışlık liste: hangisi toplumsal-duygusal yetersizliğe örnek değildir (tekrarlayıcı davranışı seç)."
+  },
+  {
+   "birim": "psk-s16-b04",
+   "fikir": "18 aylıkken kazandığı sözcükleri yitiren çocuk: en olası tanı ve bu gerilemenin neden otizmi düşündürdüğü."
+  },
+  {
+   "birim": "psk-s16-b07",
+   "fikir": "11 yaşında ÖÖG tanılı çocukta yanlış önerme: ilaçla düzelir / zekâ geriliği vardır."
+  },
+  {
+   "birim": "psk-s16-b02",
+   "fikir": "Önlenebilir zihinsel yetersizlik nedeni: konjenital hipotiroidi ya da aşıyla önlenen kızamık/kabakulak."
+  }
+ ],
+ "kurul2627_notu": "2026-27 slaytında motor bozukluklar başlığı altında tik bozuklukları/Tourette anlatılıyor mu bakılmalı (notta yok, üç kez sorulmuş). ÖÖG'de 's35: kanıtlanmış ilaç tedavisi yoktur' cümlesi ve OSB'de serebellum bilgisi korunmuş mu kontrol edilmeli. DEHB ayrıntısı k2-49'da; bu derste tekrarlanmamalı."
+}

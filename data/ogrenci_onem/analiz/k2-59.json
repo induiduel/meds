@@ -1,0 +1,81 @@
+{
+ "ders": "k2-59",
+ "ozet": "Dersin çekirdeği psikiyatrik genetikte araştırma yöntemleri (popülasyon/aile-ikiz-evlat edinilen çalışmaları, bağlantı ve asosiyasyon analizleri) ve COMT Val158Met polimorfizmi. Öğrenciler yöntem slaytlarının tamamını çizip işaretlemiş, COMT için ayrı pembe etiket koymuş; COMT 2021-2026 bankasında, yöntem sorusu 2023-24'te çıkmış. Kişilik, anksiyete ve yeme bozukluklarının gen listeleri yalnız vurgu düzeyinde.",
+ "temalar": [
+  {"tema": "COMT: S-COMT / MB-COMT ve Val158Met polimorfizmi", "oncelik": "A",
+   "birimler": ["tbg-s05-b08"],
+   "kanit": "1 çıkmış (d3-k2-tbg-007, 2021-2026 K2: katekolamin yıkımı, prefrontal korteks, şizofreni aday gen → COMT Val158Met); 'COMT Val158Met; Met158 3-4 kat daha az aktif, kodominant etkili' kırmızı ovalle çevrili; ayrı pembe etiket 'val158met comt'.",
+   "anlatim": "İki form (S-COMT toplam aktivitenin %95'i, MB-COMT beyinde yüksek aktivite), Met158 alelinin 3-4 kat daha az aktif ve kodominant olduğu; nikotinde Val158, geç başlangıçlı alkolikte ve kadınlarda anksiyete/ağrı eşiği düşüklüğünde Met158 artışı tablo halinde verilmeli.",
+   "soru_payi": 24,
+   "soru_tipleri": ["işlevden polimorfizme: katekolamin yıkımı + şizofreni aday gen → COMT Val158Met", "alel → durum: geç başlangıçlı alkolizm Met158", "sayı: Met158 3-4 kat az aktif"]},
+  {"tema": "Bağlantı (linkage, parametrik) ve asosiyasyon (parametrik olmayan) analizleri", "oncelik": "A",
+   "birimler": ["tbg-s05-b04", "tbg-s05-b06", "tbg-s05-b05"],
+   "kanit": "Slayt çıkmış sinyalli ve üç cümlesi altı çizili (bağlantılı kalıtım tanımı, asosiyasyonda aday gen alel–hastalık ilişkisi, tam bağlantı); bağlantı analizi başlığının yanına el notu 'fark'. 2023-24 yöntem sorusunda asosiyasyon ve linkage öncül olarak geçiyor.",
+   "anlatim": "İki yöntem karşılaştırma tablosuyla: linkage model bağımlı, yerleşimi bilinen gösterge, kuşaklar boyu birlikte kalıtım, kalıtım şekli belli ve tek/majör gen etkisinde en iyi sonuç; asosiyasyon modelden bağımsız, aday gen gerekir, kalıtım kalıbı zorunlu değil, hasta–kontrol alel frekansı karşılaştırılır, ApoE bu yolla bulunmuş. Genetik haritada %1 rekombinasyon = 1 sentimorgan ve çift değiş tokuşun saptanamaması kısa ek.",
+   "soru_payi": 22,
+   "soru_tipleri": ["ayırıcı: aday gen gerektiren / kalıtım şekli gerektiren yöntem", "tanımdan ada: yakın genlerin birlikte aktarılması → bağlantılı kalıtım", "örnek: ApoE asosiyasyonla bulundu"]},
+  {"tema": "Genetik araştırma metodları ve popülasyon çalışmaları", "oncelik": "A",
+   "birimler": ["tbg-s05-b01", "tbg-s05-b02"],
+   "kanit": "2023-24 K2 çıkmışı bu sayfaya yapıştırılmış (ikiz, asosiyasyon, linkage, mutasyon analizi → I, II, III ve IV); metod listesi kırmızı çizgili, popülasyon çalışmaları (aile, ikiz, evlat edinilen) çevrelenmiş. Soru bankada k2-52'ye eşli.",
+   "anlatim": "Üç ana grup: genetik epidemiyoloji (popülasyon genetiği, aile çalışmaları), sitogenetik, moleküler genetik (linkage, asosiyasyon, GWAS). Popülasyon çalışmalarının üç türü (aile, ikiz, evlat edinilen) ayrı maddeler olarak.",
+   "soru_payi": 20,
+   "soru_tipleri": ["öncüllü: kullanılan yöntemler (hepsi)", "liste: popülasyon çalışması olmayan seçenek"]},
+  {"tema": "Notta yok, sorulmuş: psikiyatrik hastalıkların moleküler temeli", "oncelik": "B",
+   "birimler": [],
+   "kanit": "Bankada notta karşılığı olmayan 2020-21 K2 sorusu (past-1790877040078-830959): 'Psikiyatrik hastalıkların moleküler temeli için doğru olan → epigenetik ve genetik faktörler etkilidir'.",
+   "anlatim": "Giriş bölümünde psikiyatrik hastalıklarda genetik ve epigenetik etkenlerin birlikte rol aldığı tek cümleyle söylenmeli; 2026-27 slaytında karşılığı aranmalı.",
+   "soru_payi": 10,
+   "soru_tipleri": ["doğru ifade: genetik ve epigenetik birlikte etkili"]},
+  {"tema": "Kişilik bozukluklarında genler", "oncelik": "C",
+   "birimler": ["tbg-s05-b07"],
+   "kanit": "İşaretsiz; çıkmış yok. Slaytta CACNA1C için iyon hatası düzeltilmiş (Na+ değil Ca2+). Gen → bozukluk eşleşmesi Tıbbi Genetik'in sınıflama/ad kalıbına uyar.",
+   "anlatim": "ASKB 5-HTTLPR (SLC6A4 promoter polimorfizmi); çekingen KB 5-HTTLPR ve DRD3; OKKB DRD4 ve DRD3; paranoid KB CACNA1C (L tipi Ca2+ kanalı alfa-1C) ve COMT; borderline özellikler DRD2. Tablo olarak.",
+   "soru_payi": 8,
+   "soru_tipleri": ["eşleştirme: kişilik bozukluğu → gen"]},
+  {"tema": "DNA varyasyon türleri", "oncelik": "C",
+   "birimler": ["tbg-s05-b03"],
+   "kanit": "İşaretsiz; çıkmış yok. Sayısal tanımlar sayısal yakın değer çeldiricisine uygun.",
+   "anlatim": "RFLP, VNTR (minisatelit), STR (mikrosatelit), SNP (yaklaşık her 300 bp'de 1), CNV kısa tanımlarla; bp aralıkları slayttaki gibi verilip düzeltme notuyla birlikte.",
+   "soru_payi": 6,
+   "soru_tipleri": ["tanımdan ada: tek nükleotid farkı → SNP", "minisatelit / mikrosatelit ayrımı"]},
+  {"tema": "Diğer seçilen yerler: anksiyete ve yeme bozuklukları", "oncelik": "C",
+   "birimler": ["tbg-s05-b11", "tbg-s05-b12"],
+   "kanit": "Anksiyete listesi kırmızı parantezli; anoreksiyada iki TNF-α satırı kırmızı yayla çevrelenmiş. Çıkmış yok.",
+   "anlatim": "Anksiyete bozuklukları listesi (OKB, panik, özgül fobi, sosyal fobi, GAB); anoreksiya nervozada TNF-α artışı ve HPA aksı aktivasyonuyla gıda alımında azalma; bulimiyada 5HT2C reseptör varyantları.",
+   "soru_payi": 10,
+   "soru_tipleri": ["eşleştirme: anoreksiya → TNF-α, bulimiya → 5HT2C"]}
+ ],
+ "hoca_kaliplari": [
+  "Bu konuya özgü profil yok (profil_oku eşlemesi yanlış konuya düştü); Tıbbi Genetik geneli: doğrudan %60, yanlış bul %9, olumsuz %9, öncüllü %4",
+  "İşlev + bölge + hastalık verip polimorfizm adını sorma (COMT Val158Met, 2021-2026)",
+  "Öncüllü yöntem sorusu, doğru cevap 'I, II, III ve IV' (2023-24)",
+  "2023 sonrası tanı-ayırıcı türü artmış, sınıflama/ad azalmış: yöntem karşılaştırması bu kaymaya uyar"
+ ],
+ "tuzaklar": [
+  {"tuzak": "Asosiyasyonda aday gen gerekir ama kalıtım kalıbı gerekmez; linkage'da kalıtım şekli belli olmalı", "neden": "iki yöntemin koşulları yer değiştirilerek çeldirici kurulur"},
+  {"tuzak": "Met158 düşük aktiviteli alel, Val158 yüksek", "neden": "nikotin Val158, geç başlangıçlı alkolizm ve kadında anksiyete Met158 ile; alel eşleşmeleri ters verilebilir"},
+  {"tuzak": "Toplam COMT aktivitesinin %95'i S-COMT'tan; beyinde yüksek aktiviteli form MB-COMT", "neden": "iki form karıştırılabilir"},
+  {"tuzak": "CACNA1C kalsiyum kanalı genidir", "neden": "kaynak slaytın bir sayfasında Na+ kanalı yazıyor"},
+  {"tuzak": "1 sentimorgan = %1 rekombinasyon; çift değiş tokuş saptanamadığından uzak genlerde uzaklık güvenilir değildir", "neden": "sayısal tanım çeldiricisi"}
+ ],
+ "sayilar": [
+  "S-COMT toplam COMT aktivitesinin %95'i",
+  "Met158 alelinde aktivite 3-4 kat daha az",
+  "1 sentimorgan = %1 rekombinasyon",
+  "SNP yaklaşık her 300 bp'de 1",
+  "STR 2-10 bp (slayt); VNTR '15 veya 100 bp' (slayt)",
+  "Şizofrenide iki ebeveyn riski %34-46 (y25 s47; k2-52 %39 der)"
+ ],
+ "duzeltmeler": [
+  {"yanlis": "L tipi voltaj bağımlı Na+ kanalını kodlayan CACNA1C", "dogru": "L tipi voltaj bağımlı Ca2+ kanalının alfa-1C alt birimini kodlayan CACNA1C", "kaynak": "aynı dersin y25 s36 slaytı ('alpha 1C subunit of the L-type …'); s31'deki Na+ hatalı"},
+  {"yanlis": "5HTTLPR geni", "dogru": "5-HTTLPR, serotonin taşıyıcı geni SLC6A4'ün promoter polimorfik bölgesidir; ayrı bir gen değildir", "kaynak": "girdideki düzeltme notu"},
+  {"yanlis": "VNTR: 15 veya 100 bp; STR 2-10 bp (slayt)", "dogru": "Minisatelit tekrar birimi yaklaşık 10-100 bp, mikrosatelit genellikle 1-6 bp", "kaynak": "girdideki düzeltme notu; slayt ifadesi sınavda esas alınabilir, anlatımda aralığın 'ile' olarak okunması gerektiği belirtilmeli"}
+ ],
+ "ara_soru_adaylari": [
+  {"birim": "tbg-s05-b08", "fikir": "katekolamin yıkımı + prefrontal korteks + şizofreni aday gen → COMT Val158Met"},
+  {"birim": "tbg-s05-b04", "fikir": "aday gen gerekip kalıtım kalıbı gerekmeyen yöntem (asosiyasyon) / bağlantılı kalıtımın tanımı"},
+  {"birim": "tbg-s05-b02", "fikir": "popülasyon çalışmalarının üç türü; çeldirici sitogenetik çalışma"},
+  {"birim": "tbg-s05-b06", "fikir": "ApoE geni hangi yaklaşımla bulundu (asosiyasyon)"}
+ ],
+ "kurul2627_notu": "Bu dersin hiçbir birimi 2026-27 PDF'iyle eşlenmedi (y26 yok). Yeni PDF'te CACNA1C satırındaki iyon hatasının düzelip düzelmediği, şizofreni aile riski sayısı ve 'epigenetik + genetik' giriş cümlesi kontrol edilmeli."
+}

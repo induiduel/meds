@@ -1,0 +1,127 @@
+{
+ "ders": "k2-45",
+ "ozet": "Çekirdek, gençler ve yaşlılarda intihar nedenlerinin ayrımı, yüksek riskli hastada acil yatış kararı ve kendine zarar verme davranışının tanımı ile kişilik bozukluğu ilişkisidir. 2025-26'da önceki girişim öyküsü olan, aktif ölüm düşüncesi taşıyan ve yalnız yaşayan genç hastada yatış soruldu; 2020-21'de 'bireyselleşme isteği' yaşlılarda neden değildir, 2021-22'de self-mutilasyon sorusu geldi. Öğrenciler risk etmenlerini, koruyucu etmenleri ve kendine zarar verme türlerini sarı ve el notlarıyla işaretlemiş.",
+ "temalar": [
+  {
+   "tema": "Gençler ve yaşlılarda intihar nedenleri ayrımı",
+   "oncelik": "A",
+   "birimler": [
+    "psk-s17-b02",
+    "psk-s17-b03"
+   ],
+   "kanit": "2020-21 (2cc678599118; bankada Kurul 6 'Yaşlılığa Özgü Ruhsal Sorunlar' altında): 'yaşlılarda intihar girişimi nedenlerinden biri değildir' → bireyselleşme isteği. Öğrenci gençler slaytında 'Bireyselleşme isteği' ifadesini çemberlemiş, soru notta yapıştırılmış (psk-s17-b04).",
+   "anlatim": "Gençler ve yaşlılar için nedenleri iki sütunlu tabloyla ver: gençlerde bireyselleşme isteği, sosyal desteğin azalması, madde kullanımının başlaması, sorun çözme becerisinin yetersizliği; yaşlılarda yaşamak için neden olmaması, kendini gereksiz hissetme, bedensel hastalık. Yaşlılarda girişimlerin daha ölümcül olduğunu ve yeme-içme reddi, ilaç bırakma gibi pasif intiharları ayrıca vurgula.",
+   "soru_payi": 25,
+   "soru_tipleri": [
+    "olumsuz: yaşlılarda intihar nedeni olmayan → bireyselleşme isteği",
+    "ters yön: gençlerde neden olmayan → kendini gereksiz hissetme"
+   ]
+  },
+  {
+   "tema": "İntihar riskinin değerlendirilmesi ve yüksek riskli hastada acil yatış",
+   "oncelik": "A",
+   "birimler": [
+    "psk-s17-b08",
+    "psk-s17-b05",
+    "psk-s17-b01"
+   ],
+   "kanit": "2025-26 (q-25-26_d_nem_3_kurul_2-82): önceki girişimi olan, 'Ölsem de kurtulsam' diyen, yalnız yaşayan genç kız → yatış verip yakından izlemek; d3-k2-psi-003 aynı vaka, cevap kapalı serviste yakın intihar gözetimi. Önceki girişim öyküsü 'En önemli risk etmeni!!!' sarı (%50 ve %25 oranları sarı); risk etmenleri kutusunda el notu 'erkek'.",
+   "anlatim": "Sorgulamanın genelden özele sırasını (ölmüş olmayı isteme → düşünce → plan → planın ayrıntısı → girişim) numaralı ver. Önceki girişimin en önemli risk etmeni olduğunu oranlarıyla söyle ve vakada riskleri toplayıp yatış kararına bağla.",
+   "soru_payi": 30,
+   "soru_tipleri": [
+    "vaka: önceki girişim + aktif ölüm düşüncesi + yalnız yaşama → yatış ve yakın gözetim",
+    "doğrudan: intiharda en önemli risk etmeni → önceki girişim",
+    "sıralama: intihar sorgusunun basamakları"
+   ]
+  },
+  {
+   "tema": "Kendine zarar verme: tanım, türler ve borderline kişilik bozukluğu ilişkisi",
+   "oncelik": "A",
+   "birimler": [
+    "psk-s17-b12",
+    "psk-s17-b10",
+    "psk-s17-b11"
+   ],
+   "kanit": "2021-22 ve arşiv (past-1790877044892-240475): self-mutilasyon için doğru → 'Genellikle madde bulamadıklarında veya engellendiklerinde yaparlar'. Bankada kapsandi:false görünse de soru notta yapıştırılmış (psk-s17-b09); öğrenci a, b, c şıklarını elemiş, d ve e açık. 'En sık kişilik bozukluklarında, özellikle borderline' satırı iki kez vurgulu; tanım maddesi tümüyle sarı; el notu 'kendini kesmek en sık'.",
+   "anlatim": "Tanımı ögelerine ayırarak ver: tekrarlayıcı, bilinçli ölüm isteği olmadan, isteyerek ve amaçlı, doku hasarıyla sonuçlanan, kendi bedenine yönelik. Dört türü (tipik, psikotik, kompulsif, dürtüsel) örnekleriyle tablo yap; amacın intihar ya da başkasına zarar olmadığını ve en sık borderline kişilik bozukluğunda görüldüğünü vurgula.",
+   "soru_payi": 30,
+   "soru_tipleri": [
+    "doğru bul: self-mutilasyon engellenince ya da madde bulamayınca yapılır",
+    "yanlış bul: borderline'da nadirdir / amaç intihardır",
+    "eşleştirme: göz çıkarma → psikotik, saç yolma → kompulsif, kesme/yakma → dürtüsel"
+   ]
+  },
+  {
+   "tema": "Diğer seçilen yerler: koruyucu etmenler, tamamlanmış intiharda psikiyatrik ve tıbbi hastalık oranları",
+   "oncelik": "C",
+   "birimler": [
+    "psk-s17-b07",
+    "psk-s17-b06"
+   ],
+   "kanit": "Koruyucu etmenlerin yedisi de sarı; tamamlanmış intihar oranları işaretsiz. Çıkmış yok.",
+   "anlatim": "Yedi koruyucu etmeni liste olarak ver (gebelik ve 18 yaşından küçük çocuk sahibi olmak dahil). Tamamlanmış intiharda duygudurum bozukluğunun %60, girişimde tıbbi hastalığın %40 (60 yaş üstünde %70) oranını bir maddede geç.",
+   "soru_payi": 15,
+   "soru_tipleri": [
+    "olumsuz: intihara karşı koruyucu etmen olmayan",
+    "sayı: tamamlanmış intiharda duygudurum bozukluğu oranı"
+   ]
+  }
+ ],
+ "hoca_kaliplari": [
+  "Bu konuda hoca profili yok; Psikiyatri geneli: yanlış bul %33, doğrudan %23, olumsuz %16, vaka %8",
+  "olumsuz: '… yaşlılarda intihar girişimi nedenlerinden biri değildir?'",
+  "vaka + yaklaşım: 'hekimin acil yaklaşımı ne olmalıdır?'",
+  "'… için hangisi doğrudur?' (self-mutilasyon)"
+ ],
+ "tuzaklar": [
+  {
+   "tuzak": "Bireyselleşme isteği yaşlılarda değil gençlerde intihar nedenidir",
+   "neden": "Yaşlılar sorusunda tek yabancı şık olarak verilir."
+  },
+  {
+   "tuzak": "Kendine zarar verme borderline kişilik bozukluğunda nadir değil, en sıktır",
+   "neden": "Self-mutilasyon sorusunda 'nadiren görülür' çeldiricisi var."
+  },
+  {
+   "tuzak": "Kendine zarar vermenin amacı intihar ya da başkasına zarar değildir",
+   "neden": "Tanımda bilinçli ölüm isteği yoktur; çeldiriciler bu iki amacı verir."
+  },
+  {
+   "tuzak": "Tanımda 'bilinçli olmaması' ile 'isteyerek ve amaçlı' birlikte geçer",
+   "neden": "Bilinçsiz olan ölüm isteğidir, davranışın kendisi isteyerek ve amaçlıdır; öğrenci iki satırı çelişkili sanabilir."
+  },
+  {
+   "tuzak": "Yüksek riskli vakada ayaktan izlem yeterli değildir",
+   "neden": "Önceki girişim, aktif düşünce ve yalnız yaşama birlikteyse cevap yatış ve yakın gözetimdir."
+  }
+ ],
+ "sayilar": [
+  "Tamamlanmış intiharda %50'sinde en az bir önceki girişim, %25'inde son bir yıl içinde girişim",
+  "Tamamlanmış intiharda duygudurum bozukluğu %60",
+  "İntihar girişiminde tıbbi hastalık %40 (60 yaş üstünde %70)",
+  "Koruyucu etmen sayısı 7",
+  "Kendine zarar verme türleri 4"
+ ],
+ "duzeltmeler": [
+  {
+   "yanlis": "El notu (psk-s17-b11): 'kendini kesmek en sık' tipik kendine zarar verme davranışları başlığının yanına yazılmış.",
+   "dogru": "Slaytta kendini kesmek tipik grupta değil, dürtüsel kendine zarar verme davranışları (kesme, yakma, kendine vurma) arasındadır. 'En sık' bilgisi slaytta yok; anlatımda sınıflama slayttaki gibi verilmeli.",
+   "kaynak": "slayt s34 (psk-s17-b11 metni)"
+  }
+ ],
+ "ara_soru_adaylari": [
+  {
+   "birim": "psk-s17-b03",
+   "fikir": "Yaşlı hastada yeme-içmeyi reddetme ve ilaçlarını bırakma: pasif intihar; hangisi yaşlılarda neden değildir."
+  },
+  {
+   "birim": "psk-s17-b08",
+   "fikir": "Önceki girişimi olan, yalnız yaşayan ve ölüm isteğini dile getiren hastada ilk yaklaşım."
+  },
+  {
+   "birim": "psk-s17-b12",
+   "fikir": "Kollarında tekrarlayan kesikler olan genç kadın: en sık hangi kişilik bozukluğu, amaç intihar mı."
+  }
+ ],
+ "kurul2627_notu": "Yaşlılarda intihar nedenleri bankada Kurul 6 (Yaşlılığa Özgü Ruhsal Sorunlar) altında kayıtlı; 2026-27 slaytında yaşlı ve genç ayrımı korunmuş mu bakılmalı. 2025-26'daki yatış vakası slaytın değerlendirme sorgusundan geliyor; 2026-27'de acil yaklaşım bölümü genişlemişse ona göre pay artırılmalı."
+}

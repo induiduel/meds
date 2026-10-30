@@ -12,6 +12,8 @@ Klasörde beklenenler (olanlar işlenir, olmayan iş atlanır — eksiklik durdu
      sayfa görüntü → op/s-NNN.png                          pdftoppm 110 dpi (alt ajanlar görüntüyü açarak okur — H111)
      öğrenci notu  → ogrenci_not_isaret.json               kroki/ogrenci_not.py
      çıkmış aday   → cikmis_aday.json                      ders_isci/isle.py::cikmis_adaylari (sitenin araması; elle doğrulanır — H79)
+     öğrenci önem  → ogrenci_onem.json                     ogrenci_onem/oku.py: geçmiş yıl öğrenci notunun A/B birimleri bu
+                                                           yılın sayfalarına eşlenir (OGRENCI_ONEM_YONTEMI.md; ders notta yoksa boş geçer)
 Her işin süresi ve sonucu <klasör>/hazirlik_durum.json'a yazılır; sonraki evre (anlatım, deste, soru) beklemeden başlar,
 yalnız hoca vurgusu gerektiren adım döküm bitince eklenir.
 """
@@ -20,6 +22,7 @@ from __future__ import annotations
 import argparse
 import json
 import os
+import re
 import subprocess
 import sys
 import time
@@ -105,6 +108,11 @@ def main() -> int:
         if sonuc[-1]["kod"] == 0:  # çıkmış arama sayfa metnine bağlı; sitenin aramasını kullanır (systemd dışı, ağ işi)
             isler.append(cpu.submit(calistir, "cikmis_aday", cikmis_aday(k / "sayfalar.json", a.kurul, k / "cikmis_aday.json"),
                                     L("cikmis_aday")))
+            ders_id = re.match(r"k\d+-\d+", a.ders)  # öğrenci önem verisi ders kimliğiyle (k2-19) tutulur
+            if ders_id:  # vektörleme CPU servisine gider (bge-m3 :8094); işin kendisi hafif
+                isler.append(cpu.submit(calistir, "ogrenci_onem",
+                                        [PY, str(KOK / "scripts/ogrenci_onem/oku.py"), "--ders", ders_id.group(0), "--sayfalar",
+                                         str(k / "sayfalar.json"), "--yaz", str(k / "ogrenci_onem.json")], L("ogrenci_onem")))
         sonuc += [f.result() for f in isler]
     durum = {"ders": a.ders, "toplam_sn": round(time.time() - t0), "isler": sonuc}
     (k / "hazirlik_durum.json").write_text(json.dumps(durum, ensure_ascii=False, indent=1))

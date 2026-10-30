@@ -1,0 +1,154 @@
+{
+ "ders": "k2-54",
+ "ozet": "Çekirdek YAB'nin DSM-5 tanı ölçütleri (en az 6 ay, endişeyi denetleyememe, 6 belirtiden 3) ve otonomik aktivitenin artmasıdır: 2020-21'de 'otonomik aktivitede azalma' yanlış şık, 2025-26'da '1 ay yeterli' yanlış şık olarak soruldu. Arşivde risk etmeni olmayan (madde kullanımı) ve 2018-19'da anksiyetenin bilişsel belirtisi (dikkat eksikliği, unutkanlık) gelmiş. Öğrenciler tanım-epidemiyoloji ve tanı ölçütleri slaytlarını iki kez işlemiş, bedensel belirtilere 'otonomik aktivite artar' el notunu eklemiş.",
+ "temalar": [
+  {
+   "tema": "DSM-5 tanı ölçütleri: 6 ay, denetleyememe, 6 belirtiden 3; otonomik aktivite artar",
+   "oncelik": "A",
+   "birimler": [
+    "psk-s14-b07",
+    "psk-s14-b01",
+    "psk-s14-b08"
+   ],
+   "kanit": "2020-21 (03779cb0de0d; notta psk-s14-b02 olarak yapıştırılmış): yanlış → 'Otonomik aktivitede azalma mevcuttur'; 2025-26 (q-25-26_d_nem_3_kurul_2-82-cs3): yanlış → 'Tanı için en az 1 ay yeterlidir'; d3-k2-psi-008: en az süre → 6 ay. Tanım ve ölçüt slaytları 'tekrar' sinyalli; 'En az 6 aylık' sarı; el notu 'otonomik aktivite artar'.",
+   "anlatim": "Ölçütleri A–F sırasıyla ver ve C ölçütündeki altı belirtiyi (huzursuzluk, kolay yorulma, odaklanma güçlüğü, irritabilite, kas gerginliği, uyku bozukluğu) liste yap; çocukta tek belirtinin yettiğini ayrıca söyle. Bedensel belirtilerin otonomik aktivite artışından kaynaklandığını bağla; süre ölçütünü (6 ay) sayısal çeldiricilere karşı vurgula.",
+   "soru_payi": 35,
+   "soru_tipleri": [
+    "yanlış bul: otonomik aktivitede azalma",
+    "yanlış bul: 1 ay yeterli",
+    "sayı: en az süre → 6 ay",
+    "olumsuz: C ölçütündeki belirtilerden olmayan"
+   ]
+  },
+  {
+   "tema": "Risk etmenleri: madde kullanımı risk etmeni değildir",
+   "oncelik": "A",
+   "birimler": [
+    "psk-s14-b03"
+   ],
+   "kanit": "Arşiv (past-q-I_SKENDERUN_TI_Mu_du_rlu_g_u_ne0__1__230709_230251-78): 'risk etmenlerinden biri değildir' → madde kullanımının olması; bankada kapsandi:false görünse de notta yapıştırılmış (psk-s14-b05), cevap E. Dört risk etmeninin tümü sarı.",
+   "anlatim": "Dört risk etmenini (çocuklukta kötü muamele, düşük sosyoekonomik durum, sorunları içe atma eğilimi, çocuklukta davranım bozukluğu) liste olarak ver. Madde kullanım bozukluğunun risk etmeni değil eşlik eden bozukluk olduğunu ayrı cümleyle söyle.",
+   "soru_payi": 20,
+   "soru_tipleri": [
+    "olumsuz: risk etmeni olmayan → madde kullanımı"
+   ]
+  },
+  {
+   "tema": "Klinik özellikler: bilişsel belirtiler ve bedensel/otonomik belirtiler",
+   "oncelik": "A",
+   "birimler": [
+    "psk-s14-b06"
+   ],
+   "kanit": "2018-19 final (final-2018-2019-q077): anksiyetenin bilişsel belirtisi → dikkat eksikliği, konsantre olamama, unutkanlık; öğrenci soruyu panik bölümüne yapıştırmış. Bedensel belirtiler listesi sarı; düşünce hızlanması ve tasaların baskınlığı sarı; el notu 'otonomik aktivite artar'.",
+   "anlatim": "Klinik özellikleri alanlara göre ver; bilişsel alanda dikkatin çabuk dağılması ve geçici unutkanlığı, duygulanım alanındaki bunaltıdan ayır. Bedensel belirtileri (kan basıncı artışı, çarpıntı, kas gerginliği, ağız kuruluğu, terleme, sık idrar, boğazda düğümlenme, uyuşma) otonomik aktivite artışı başlığı altında topla.",
+   "soru_payi": 20,
+   "soru_tipleri": [
+    "doğrudan: bilişsel belirti → dikkat dağınıklığı ve unutkanlık",
+    "eşleştirme: belirti → alan (duygulanım, bilişsel, bedensel)"
+   ]
+  },
+  {
+   "tema": "Tanım ve epidemiyoloji: odaklanmamış kaygı, %3–6, birinci basamakta en sık, kadında 2 kat",
+   "oncelik": "A",
+   "birimler": [
+    "psk-s14-b01"
+   ],
+   "kanit": "Epidemiyoloji cümlelerinin tümü sarı; birim 'tekrar' sinyalli. Doğrudan epidemiyoloji sorusu çıkmamış.",
+   "anlatim": "YAB'yi belli bir nesne, yer ya da düşünceye odaklanmamış kaygı olarak tanımla. Yaşam boyu %3–6, temel sağlık hizmetlerinde en sık anksiyete bozukluğu ve kadında iki kat bilgisini sayı maddesi olarak ver.",
+   "soru_payi": 10,
+   "soru_tipleri": [
+    "doğrudan: birinci basamakta en sık anksiyete bozukluğu → YAB",
+    "sayı: yaşam boyu yaygınlık"
+   ]
+  },
+  {
+   "tema": "Gidiş ve sonlanış: kronik, dalgalı şiddet, kötü gidiş etkenleri, özkıyım riski",
+   "oncelik": "A",
+   "birimler": [
+    "psk-s14-b08"
+   ],
+   "kanit": "Birim çıkmış sinyalli (2020-21 sorusu buraya bağlı); işaret yok.",
+   "anlatim": "Kronik seyri ve yaşam olaylarının etkisini bir cümleyle ver; kötü gidiş etkenlerini (tedaviye yanıtsızlık, kadın cinsiyet, erken başlangıç) ve yüksek özkıyım riskini maddele.",
+   "soru_payi": 5,
+   "soru_tipleri": [
+    "olumsuz: kötü gidiş etkeni olmayan"
+   ]
+  },
+  {
+   "tema": "Notta yok, sorulmuş: anksiyete tedavisinde sık kullanılmayan ilaç",
+   "oncelik": "A",
+   "birimler": [],
+   "kanit": "2020-21 (dbae14101597): 'anksiyete bozukluklarının tedavisinde sık kullanılan ilaçlardan biri değildir' → valproik asit; bankada kapsandi:false, notta yok. Konu profilinde bilgi türünün %17'si ilaç-endikasyon.",
+   "anlatim": "Tedavi slaytı notta yok; 2026-27 slaytında tedavi bölümü varsa ilaç gruplarını verip valproik asidin anksiyete tedavisinde sık kullanılan ilaçlardan olmadığını söyle. Slaytta yoksa yalnız çıkmış dayanağıyla tek cümle yeterli.",
+   "soru_payi": 7,
+   "soru_tipleri": [
+    "olumsuz: anksiyete tedavisinde sık kullanılmayan ilaç → valproik asit"
+   ]
+  },
+  {
+   "tema": "Diğer seçilen yerler: eşlik eden psikiyatrik bozukluklar",
+   "oncelik": "C",
+   "birimler": [
+    "psk-s14-b04"
+   ],
+   "kanit": "Üç madde sarı; çıkmış yok, ama risk etmeni sorusunun çeldiricisi (madde kullanımı) buradan geliyor.",
+   "anlatim": "Depresyon %62–67, panik bozukluk %25, distimi ve madde kullanım bozukluğunu bir listede ver; risk etmenleri ile karıştırılmaması için bu bölümü risk etmenlerinden sonra anlat.",
+   "soru_payi": 3,
+   "soru_tipleri": [
+    "sayı: YAB'de depresyon ek tanısı oranı"
+   ]
+  }
+ ],
+ "hoca_kaliplari": [
+  "olumsuz: '… DSM-5 tanı kriterlerinden biri değildir?', '… risk etmenlerinden biri değildir?' (konu profilinde olumsuz %50)",
+  "'… ile ilgili aşağıdakilerden hangisi yanlıştır?'",
+  "sayı: 'en az ne kadar süre' (6 ay)",
+  "çeldiriciler: aynı türden başka kavram %50, bileşik yer değiştirmeli %33, sayısal yakın değer %17"
+ ],
+ "tuzaklar": [
+  {
+   "tuzak": "YAB'de otonomik aktivite azalmaz, artar",
+   "neden": "2020-21'de yanlış şık; öğrenci aynı notu el yazısıyla eklemiş."
+  },
+  {
+   "tuzak": "Süre ölçütü 6 aydır, 1 ay değil",
+   "neden": "2025-26'da '1 ay yeterli' yanlış şıkkı geldi; sayısal yakın değer çeldiricisi."
+  },
+  {
+   "tuzak": "Madde kullanımı YAB'de risk etmeni değil, eşlik eden bozukluktur",
+   "neden": "Risk etmeni sorusunda tek yabancı şık olarak verilir."
+  },
+  {
+   "tuzak": "Çocukta 6 belirtiden yalnız biri yeterlidir, erişkinde 3",
+   "neden": "Ölçüt notu olarak sayısal karıştırmaya açık."
+  },
+  {
+   "tuzak": "YAB kadınlarda 2 kat, panik bozukluk 2–3 kat",
+   "neden": "İki dersin oranları yan yana verilirse karışır."
+  }
+ ],
+ "sayilar": [
+  "En az 6 ay, çoğu gün",
+  "6 belirtiden en az 3 (çocukta 1)",
+  "Yaşam boyu yaygınlık %3–6",
+  "Kadın/erkek 2/1",
+  "Depresyon ek tanısı %62–67",
+  "Panik bozukluk eşlik %25"
+ ],
+ "duzeltmeler": [],
+ "ara_soru_adaylari": [
+  {
+   "birim": "psk-s14-b07",
+   "fikir": "8 aydır her konuda endişelenen, kas gerginliği ve uyku sorunu olan hasta: hangisi DSM-5 ölçütü değildir (otonomik aktivite azalması)."
+  },
+  {
+   "birim": "psk-s14-b03",
+   "fikir": "Risk etmeni olmayanı bul: madde kullanımı (eşlik eden bozukluk)."
+  },
+  {
+   "birim": "psk-s14-b06",
+   "fikir": "Anksiyetede belirti–alan eşlemesi: unutkanlık bilişsel, bunaltı duygulanım, çarpıntı bedensel."
+  }
+ ],
+ "kurul2627_notu": "Tedavi bölümü 2025-26 notunda yok ama 2020-21'de ilaç sorusu (valproik asit) gelmiş; 2026-27 slaytında YAB tedavisi var mı bakılmalı. Bilişsel belirti sorusu öğrenci tarafından panik bölümüne konmuş; 2026-27'de bu bilgi hangi derste anlatılıyorsa oraya bağlanmalı."
+}

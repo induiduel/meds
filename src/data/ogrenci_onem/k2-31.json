@@ -1,0 +1,1283 @@
+{
+ "ders": "k2-31",
+ "kod": "2n08",
+ "brans": "Nöroloji",
+ "konu": "Medulla Spinalis Hastalıkları",
+ "kaynak": "Geçmiş yıl (2025-26) öğrenci derleme notu: noro3.2",
+ "y25": {
+  "key": "y25-k2-31-medulla-spinalis-hastaliklari",
+  "sayfalar": [
+   7,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   22,
+   23,
+   24,
+   26,
+   27,
+   28,
+   29,
+   30,
+   32,
+   33,
+   34,
+   38,
+   40,
+   41,
+   42,
+   43,
+   44
+  ]
+ },
+ "sayac": {
+  "birim": 27,
+  "A": 5,
+  "B": 10,
+  "C": 12,
+  "ogrenci_sorusu": 1,
+  "banka": 6,
+  "banka_kapsandi": 4
+ },
+ "birimler": [
+  {
+   "id": "noro-s05-b17",
+   "pdf": "noro",
+   "sayfa": 5,
+   "bolge": "r1c3",
+   "tur": "slayt",
+   "baslik": "Medulla spinalis iskemik hastalıkları",
+   "metin": "Beyne göre daha nadir. Tanı: MRI (s31)\nİnfarktlar sıklıkla watershed bölgelerde özellikle alt torakal bölgede sıktır.\nDekompresyon hastalığında (Caisson hastalığı) epidural venlerde serbest hale geçen azot gazı kabarcıkları omuriliğin venöz dolaşımını bozarak iskemik-hemorajik bir miyelopatiye neden olur.\nLezyon düzeyi altında akut pleji, ağrı ve ısı duyusu kaybı ve sfinkter kusuru olur. Sıklıkla sırt veya ensede ağrı ile başlar ve felcin yerleşimi hızlıdır. Genellikle başlangıçta bir spinal şok dönemi olur. Genellikle anterior spinal arter alanında gelişir. (s31)",
+   "el_yazisi": [
+    {
+     "metin": "→ vurgun",
+     "hedef": "Dekompresyon hastalığı (Caisson hastalığı)",
+     "guven": "yuksek",
+     "alternatif": ""
+    }
+   ],
+   "isaretler": [
+    {
+     "tur": "yesil",
+     "hedef": "Dekompresyon hastalığında (Caisson hastalığı)"
+    },
+    {
+     "tur": "ok",
+     "hedef": "→ vurgun"
+    }
+   ],
+   "sinyal": [
+    "cikmis",
+    "el_onemli"
+   ],
+   "y25": {
+    "key": "y25-k2-31-medulla-spinalis-hastaliklari",
+    "sayfa": 30
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "ogrenci_sorulari": [
+    "noro-s05-b05"
+   ],
+   "banka_cikmis": [
+    "past-1790877482971-276482"
+   ],
+   "puan": 78,
+   "oncelik": "A",
+   "vurgulu": [
+    "Dekompresyon hastalığında (Caisson hastalığı)"
+   ]
+  },
+  {
+   "id": "noro-s06-b03",
+   "pdf": "noro",
+   "sayfa": 6,
+   "bolge": "r1c1+r2c1",
+   "tur": "slayt",
+   "baslik": "Kauda equina – konus medüllaris ayırımı (özet slayt)",
+   "metin": "Kauda equina lezyonu – Konus medüllaris lezyonu ile ayırımı\nKonus medüllaris sendromunda sfinkter tutulumu tam ve akuttur. Duysal bulgular simetriktir. Ağrı geri plandadır.\nKauda equina sendromunda sfinkter daha geç tutulur. Ağrı ön plandadır. Duysal bulgular asimetriktir.",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "yildiz",
+     "hedef": "Kauda equina lezyonu başlığı (büyük kırmızı yıldız)"
+    },
+    {
+     "tur": "daire",
+     "hedef": "sfinkter tutulumu tam ve akuttur; Duysal bulgular simetriktir; Ağrı geri plandadır; sfinkter daha geç tutulur; Ağrı ön plandadır; Duysal bulgular asimetriktir"
+    }
+   ],
+   "sinyal": [
+    "daire",
+    "yildiz"
+   ],
+   "y25": {
+    "key": "y25-k2-31-medulla-spinalis-hastaliklari",
+    "sayfa": 42
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "banka_cikmis": [
+    "past-q-I_SKENDERUN_TI_Mu_du_rlu_g_u_ne0__1__230709_230251-57"
+   ],
+   "puan": 50,
+   "oncelik": "A",
+   "vurgulu": [
+    "Kauda equina lezyonu başlığı (büyük kırmızı yıldız)",
+    "sfinkter tutulumu tam ve akuttur; Duysal bulgular simetriktir; Ağrı geri plandadır; sfinkter daha geç tutulur; Ağrı ön plandadır; Duysal bulgular asimetriktir"
+   ]
+  },
+  {
+   "id": "noro-s05-b04",
+   "pdf": "noro",
+   "sayfa": 5,
+   "bolge": "r1c1+r2c1",
+   "tur": "slayt",
+   "baslik": "Tam kesi (transvers miyelopati) bulguları",
+   "metin": "Tam Kesi (Transvers myelopati)\n• Duyu Bozuklukları: – Belli bir köke ait radiküler ağrı, segmental paresteziler – Lezyon altında tüm duyularda kayıp\n• Motor Bozukluklar: – Akut lezyonlarda flask ve arefleksik, sonra spastik ve hiperrefleksik parapleji veya kuadripleji – Ekstansör plantar yanıt – Yüzeyel karın cildi refleks kaybı – Ön boynuz hücresi veya ön kök harabiyetine bağlı lezyon düzeyinde alt motor nöron bulguları (parezi, atrofi, fasikülasyon, arefleksi)\n• Otonomik Bozukluklar: – Sık idrara çıkma, idrar yapamama, idrar kaçırma (sakral düzeyde flask ve genişlemiş, üstünde spastik ve küçük mesane) – Konstipasyon – Horner sendromu",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "daire",
+     "hedef": "Lezyon altında tüm duyularda kayıp"
+    },
+    {
+     "tur": "daire",
+     "hedef": "Yüzeyel karın cildi refleks kaybı"
+    },
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "Ön boynuz hücresi veya ön kök harabiyetine bağlı lezyon düzeyinde alt motor nöron bulguları"
+    },
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "Sık idrara çıkma, idrar yapamama, idrar kaçırma"
+    },
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "Konstipasyon"
+    },
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "Horner sendromu"
+    }
+   ],
+   "sinyal": [
+    "cikmis",
+    "el_onemli"
+   ],
+   "y25": {
+    "key": "y25-k2-31-medulla-spinalis-hastaliklari",
+    "sayfa": 15
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "puan": 48,
+   "oncelik": "A",
+   "vurgulu": [
+    "Horner sendromu",
+    "Konstipasyon",
+    "Lezyon altında tüm duyularda kayıp",
+    "Sık idrara çıkma, idrar yapamama, idrar kaçırma",
+    "Yüzeyel karın cildi refleks kaybı",
+    "Ön boynuz hücresi veya ön kök harabiyetine bağlı lezyon düzeyinde alt motor nöron bulguları"
+   ]
+  },
+  {
+   "id": "noro-s05-b19",
+   "pdf": "noro",
+   "sayfa": 5,
+   "bolge": "r2c3",
+   "tur": "slayt",
+   "baslik": "Siringomiyelik sendrom",
+   "metin": "Siringomyelik sendrom\n4.ventrikül çıkışının konjenital tıkanmasına bağlı santral kanalın genişlemesi veya artmış BOS basıncına bağlı m.spinalise BOS sızması ve kavite oluşturması ile açıklanır\nKavite büyüdükçe ön boynuza yayılır ve segmental nörojenik atrofi, parezi olur\nLezyon yana yayılınca lezyon düzeyi altında spastik paralizi, arka kordon tutulumuna bağlı vibrasyon-pozisyon duyusu kaybı",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "sari",
+     "hedef": "üç cümlenin tamamı"
+    }
+   ],
+   "sinyal": [
+    "sari"
+   ],
+   "y25": {
+    "key": "y25-k2-31-medulla-spinalis-hastaliklari",
+    "sayfa": 40
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "banka_cikmis": [
+    "d3-k2-nor-006"
+   ],
+   "puan": 40,
+   "oncelik": "A",
+   "vurgulu": [
+    "üç cümlenin tamamı"
+   ]
+  },
+  {
+   "id": "noro-s06-b04",
+   "pdf": "noro",
+   "sayfa": 6,
+   "bolge": "r2c1",
+   "tur": "slayt",
+   "baslik": "Konus medüllaris – kauda ekuina karşılaştırma tablosu",
+   "metin": "Özellik | Konus medüllaris sendromu | Kauda Ekuina sendromu\nBaşlangıç | Ani ve bilateral | Yavaş ve tek yanlı\nRefleksler | Patella (+), Aşil (-) | Patella ve aşil (-)\nAğrı | Hafif | Çok şiddetli\nGluteal ağrı | Çok | Az\nDuysal bulgu | Perianal duyu kusuru | Radiküler dağılım, asimetrik\nParezi | Alt ekstremite distallerinde simetrik, hafif güçsüzlük, DTR artar, fasikülasyon olabilir | Arefleksik, atrofinin eşlik ettiği, asimetrik güçsüzlük\nİmpotans | Sık | Nadir\nSfinkter kusuru | Üriner retansiyon, anal ve üriner sfinkterler atonik, taşma inkontinansı | Nadiren hastalığın ileri formlarında",
+   "el_yazisi": [
+    {
+     "metin": "en belirgin",
+     "hedef": "Ağrı satırı (ayırımdaki en belirgin fark)",
+     "guven": "yuksek",
+     "alternatif": ""
+    },
+    {
+     "metin": "simetrik",
+     "hedef": "Gluteal ağrı – Konus: Çok",
+     "guven": "yuksek",
+     "alternatif": ""
+    },
+    {
+     "metin": "asimetrik",
+     "hedef": "Gluteal ağrı – Kauda: Az",
+     "guven": "yuksek",
+     "alternatif": ""
+    }
+   ],
+   "isaretler": [],
+   "sinyal": [
+    "el_onemli"
+   ],
+   "y25": {
+    "key": "y25-k2-31-medulla-spinalis-hastaliklari",
+    "sayfa": 43
+   },
+   "y26": null,
+   "duzeltme": [
+    {
+     "ham": "Gluteal ağrı: Konus 'Çok', Kauda 'Az'",
+     "dogru": "(değiştirilmedi) slayt tablosu böyle; ancak aynı dersin s42 özetinde konusta 'ağrı geri planda', kaudada 'ağrı ön planda' deniyor",
+     "gerekce": "Slayt içi çelişki olası; s41'de kaudada 'gluteal bölgede asimetrik duyu bozukluğu' geçiyor. Sınavda ayırımın ana ekseni ağrı (kauda > konus) ve sfinkter (konus erken/tam)."
+    }
+   ],
+   "not_": null,
+   "banka_cikmis": [
+    "ee8b186778a2"
+   ],
+   "puan": 38,
+   "oncelik": "A",
+   "vurgulu": []
+  },
+  {
+   "id": "noro-s05-b01",
+   "pdf": "noro",
+   "sayfa": 5,
+   "bolge": "r1c1",
+   "tur": "slayt",
+   "baslik": "İntumescentia cervicalis ve lumbosacralis",
+   "metin": "İntumescentia cervicalis: C3-T2 vertebralar arasındadır, C4-T1 spinal segmentlerini içerir. Çapı ortalama: 38 mm\nİntumescentia lumbosacralis: T9-T12 vertebralar arasındadır, L2-S3 spinal segmentleri içerir. Çapı ortalama: 35 mm",
+   "el_yazisi": [
+    {
+     "metin": "* çapları farklı *",
+     "hedef": "38 mm ile 35 mm (çizgiyle birbirine bağlanmış)",
+     "guven": "yuksek",
+     "alternatif": ""
+    }
+   ],
+   "isaretler": [
+    {
+     "tur": "yesil",
+     "hedef": "Çapı ortalama: 38 mm; Çapı ortalama: 35 mm"
+    },
+    {
+     "tur": "daire",
+     "hedef": "38 mm"
+    },
+    {
+     "tur": "daire",
+     "hedef": "35 mm"
+    },
+    {
+     "tur": "yildiz",
+     "hedef": "çapları farklı (iki yıldız arasında)"
+    }
+   ],
+   "sinyal": [
+    "el_onemli",
+    "sari",
+    "yildiz"
+   ],
+   "y25": {
+    "key": "y25-k2-31-medulla-spinalis-hastaliklari",
+    "sayfa": 7
+   },
+   "y26": null,
+   "duzeltme": [
+    {
+     "ham": "L2-S3 spinal segmetleri",
+     "dogru": "L2-S3 spinal segmentleri",
+     "gerekce": "yazım"
+    }
+   ],
+   "not_": null,
+   "puan": 33,
+   "oncelik": "B",
+   "vurgulu": [
+    "35 mm",
+    "38 mm",
+    "Çapı ortalama: 38 mm; Çapı ortalama: 35 mm",
+    "çapları farklı (iki yıldız arasında)"
+   ]
+  },
+  {
+   "id": "noro-s05-b13",
+   "pdf": "noro",
+   "sayfa": 5,
+   "bolge": "r2c2",
+   "tur": "slayt",
+   "baslik": "Posterior kolon hastalıkları (tabes dorsalis) bulguları",
+   "metin": "POSTERİOR KOLON HASTALIKLARI\nBulgular: Pozisyon ve vibrasyon duyumunda azalma; Şiddetli Romberg (+); Taktil lokalizasyon duyumunda azalma; Taktil halüsinasyon; Parlayıcı nöropatik ağrılar; Üriner inkontinans; DTR kaybı, hipotonik ekstremite ve hiperekstensibl eklemler; Charcot eklemi; Abdominal ağrı krizi ve laringeal krizler (stridor); Ağrı duyumunda azalma (Aşil tendonu sıkılmasına duyarsızlık –Abadie belirtisi-); Duyarlı deri alanlarında taktil duyum eşiği artar; Argyll Robertson pupillası (Işık refleksi kayıp, akomodasyon korunmuş, miyotik pupil); Optik atrofi, diğer kraniyel nöropatiler",
+   "el_yazisi": [
+    {
+     "metin": "→ Tabes dorsalis",
+     "hedef": "POSTERİOR KOLON HASTALIKLARI (arka kordonun selektif etkilendiği hastalık)",
+     "guven": "yuksek",
+     "alternatif": ""
+    }
+   ],
+   "isaretler": [
+    {
+     "tur": "sari",
+     "hedef": "Şiddetli Romberg (+); Taktil lokalizasyon duyumunda azalma; DTR kaybı, hipotonik ekstremite ve hiperekstensibl eklemler; Charcot eklemi; Ağrı duyumunda azalma; Argyll Robertson pupillası; Optik atrofi, diğer kraniyel nöropatiler"
+    },
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "Şiddetli Romberg (+); DTR kaybı; hipotonik ekstremite ve hiperekstensibl eklemler; Charcot eklemi; Ağrı duyumunda azalma; Argyll Robertson pupillası; Optik atrofi, diğer kraniyel nöropatiler"
+    },
+    {
+     "tur": "daire",
+     "hedef": "–Abadie belirtisi-"
+    },
+    {
+     "tur": "ok",
+     "hedef": "POSTERİOR KOLON HASTALIKLARI → Tabes dorsalis"
+    }
+   ],
+   "sinyal": [
+    "daire",
+    "el_onemli",
+    "sari"
+   ],
+   "y25": {
+    "key": "y25-k2-31-medulla-spinalis-hastaliklari",
+    "sayfa": 26
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "puan": 23,
+   "oncelik": "B",
+   "vurgulu": [
+    "Şiddetli Romberg (+); DTR kaybı; hipotonik ekstremite ve hiperekstensibl eklemler; Charcot eklemi; Ağrı duyumunda azalma; Argyll Robertson pupillası; Optik atrofi, diğer kraniyel nöropatiler",
+    "Şiddetli Romberg (+); Taktil lokalizasyon duyumunda azalma; DTR kaybı, hipotonik ekstremite ve hiperekstensibl eklemler; Charcot eklemi; Ağrı duyumunda azalma; Argyll Robertson pupillası; Optik atrofi, diğer kraniyel nöropatiler",
+    "–Abadie belirtisi-"
+   ]
+  },
+  {
+   "id": "noro-s06-b05",
+   "pdf": "noro",
+   "sayfa": 6,
+   "bolge": "r1c2+r1c3",
+   "tur": "slayt",
+   "baslik": "Herediter dejeneratif medulla spinalis hastalıkları – Friedreich ataksisi",
+   "metin": "HEREDİTER DEJENERATİF MEDULLA SPİNALİS HASTALIKLARI\nEn bilinen tipler spinoserebellar ataksiler ve herediter spastik paraparezidir.\nFriedreich ataksisi: OR geçişli trinükleotid tekrar hastalığıdır. Periferik nöropati. Ataksi, derin duyu ve yüzeyel duyu bozukluğu. DTR'leri kayıp, Babinski (+). Kardiyak iletim bozuklukları",
+   "el_yazisi": [
+    {
+     "metin": "örn = Friedreich ataksisi",
+     "hedef": "spinoserebellar ataksiler",
+     "guven": "yuksek",
+     "alternatif": ""
+    },
+    {
+     "metin": "→ kalıtsal (daire içinde)",
+     "hedef": "OR geçişli trinükleotid tekrar hastalığıdır",
+     "guven": "yuksek",
+     "alternatif": ""
+    }
+   ],
+   "isaretler": [
+    {
+     "tur": "yesil",
+     "hedef": "En bilinen tipler spinoserebellar ataksiler ve herediter spastik paraparezidir; OR geçişli trinükleotid tekrar hastalığıdır; Periferik nöropati; Ataksi, derin duyu ve yüzeyel duyu bozukluğu; DTR'leri kayıp"
+    },
+    {
+     "tur": "daire",
+     "hedef": "Babinski (+)"
+    },
+    {
+     "tur": "ok",
+     "hedef": "OR geçişli trinükleotid tekrar → kalıtsal"
+    },
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "DTR'leri kayıp"
+    }
+   ],
+   "sinyal": [
+    "daire",
+    "el_onemli",
+    "sari"
+   ],
+   "y25": {
+    "key": "y25-k2-31-medulla-spinalis-hastaliklari",
+    "sayfa": 44
+   },
+   "y26": null,
+   "duzeltme": [
+    {
+     "ham": "Friedrich ataksisi",
+     "dogru": "Friedreich ataksisi",
+     "gerekce": "yazım (slayt başlığı doğru yazım)"
+    }
+   ],
+   "not_": null,
+   "puan": 23,
+   "oncelik": "B",
+   "vurgulu": [
+    "Babinski (+)",
+    "DTR'leri kayıp",
+    "En bilinen tipler spinoserebellar ataksiler ve herediter spastik paraparezidir; OR geçişli trinükleotid tekrar hastalığıdır; Periferik nöropati; Ataksi, derin duyu ve yüzeyel duyu bozukluğu; DTR'leri kayıp"
+   ]
+  },
+  {
+   "id": "noro-s05-b10",
+   "pdf": "noro",
+   "sayfa": 5,
+   "bolge": "r1c2",
+   "tur": "slayt",
+   "baslik": "Poliomiyelitin akut döneminde BOS",
+   "metin": "Poliomiyelitin akut döneminde BOS'ta: Mononükleer pleositoz, protein hafif artmış, glukoz normaldir. Poliovirus IGM pozitiftir.",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "sari",
+     "hedef": "Mononükleer pleositoz, protein hafif artmış, glukoz normaldir; Poliovirus IGM pozitiftir"
+    }
+   ],
+   "sinyal": [
+    "sari",
+    "tekrar"
+   ],
+   "y25": {
+    "key": "y25-k2-31-medulla-spinalis-hastaliklari",
+    "sayfa": 22
+   },
+   "y26": null,
+   "duzeltme": [
+    {
+     "ham": "(preparalitik) BOS normal ↔ akut dönemde mononükleer pleositoz",
+     "dogru": "Slaytta iki ifade de var: s20 'BOS incelemesi normaldir' (nonparalitik/preparalitik bölüm), s22 akut dönemde mononükleer pleositoz",
+     "gerekce": "Öğrenci notu s20'yi aynen aktarıyor; iki slayt birbiriyle çelişkili görünebilir, sınavda s22 cümlesi (pleositoz, IgM+) esas alınmalı. Tıbbi kaynaklarda nonparalitik polioda da BOS'ta pleositoz olur."
+    }
+   ],
+   "not_": null,
+   "puan": 20,
+   "oncelik": "B",
+   "vurgulu": [
+    "Mononükleer pleositoz, protein hafif artmış, glukoz normaldir; Poliovirus IGM pozitiftir"
+   ]
+  },
+  {
+   "id": "noro-s05-b03",
+   "pdf": "noro",
+   "sayfa": 5,
+   "bolge": "r1c1",
+   "tur": "slayt",
+   "baslik": "Miyelopati tanımı ve miyelitin başlangıcı",
+   "metin": "Miyelopati enflamatuvar ve enfeksiyöz olmayan, toksik, nutrisyonel nekrotizan medulla spinalis hastalıkları için kullanılan bir terimdir.\nMiyelitler birkaç spinal segmenti tutarak akut ve subakut olarak başlayabilir\nyukarı doğru saatler içinde hızla yayılabilir (assendan miyelit)\nTam veya yarı medulla kesisi gibi semptom",
+   "el_yazisi": [
+    {
+     "metin": "C3'ün üstüne çıkarsa = solunum felci!!",
+     "hedef": "assendan miyelit (yukarı doğru hızla yayılma)",
+     "guven": "yuksek",
+     "alternatif": ""
+    }
+   ],
+   "isaretler": [
+    {
+     "tur": "sari",
+     "hedef": "Miyelopati enflamatuvar ve enfeksiyöz olmayan; toksik; nutrisyonel; nekrotizan medulla spinalis hastalıkları için; yukarı doğru saatler içinde hızla yayılabilir (assendan miyelit); Tam veya yarı medulla kesisi gibi semptom"
+    }
+   ],
+   "sinyal": [
+    "el_onemli",
+    "sari"
+   ],
+   "y25": {
+    "key": "y25-k2-31-medulla-spinalis-hastaliklari",
+    "sayfa": 14
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "puan": 18,
+   "oncelik": "B",
+   "vurgulu": [
+    "Miyelopati enflamatuvar ve enfeksiyöz olmayan; toksik; nutrisyonel; nekrotizan medulla spinalis hastalıkları için; yukarı doğru saatler içinde hızla yayılabilir (assendan miyelit); Tam veya yarı medulla kesisi gibi semptom"
+   ]
+  },
+  {
+   "id": "noro-s05-b06",
+   "pdf": "noro",
+   "sayfa": 5,
+   "bolge": "r2c1",
+   "tur": "slayt",
+   "baslik": "I. Viral miyelitler",
+   "metin": "A. Enterovirüsler (Grup A ve B Coxsackie virüsleri, poliomiyelit vb)\nB. Herpes zoster virüsü\nC. Epstein-Barr virüsü (EBV), sitomegalovirüs (CMV), HSV\nD. Kuduz\nE. Hepatit B virüsü\nF. HTLV-I (Tropikal spastik paraparezi)\nG. AIDS miyeliti",
+   "el_yazisi": [
+    {
+     "metin": "= uzun süre yaşamaya devam ederler ve uzun süre belirti vermeye devam ederler",
+     "hedef": "I. Viral miyelitler (başlık yanı)",
+     "guven": "orta",
+     "alternatif": "satır sonu kesik ('ede…'); 'yaşamaya' olarak okundu"
+    }
+   ],
+   "isaretler": [
+    {
+     "tur": "yesil",
+     "hedef": "Enterovirüsler; Herpes zoster; EBV; CMV; HSV; Kuduz; Hepatit B; HTLV-I; AIDS"
+    }
+   ],
+   "sinyal": [
+    "el_onemli",
+    "sari"
+   ],
+   "y25": {
+    "key": "y25-k2-31-medulla-spinalis-hastaliklari",
+    "sayfa": 16
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "puan": 18,
+   "oncelik": "B",
+   "vurgulu": [
+    "Enterovirüsler; Herpes zoster; EBV; CMV; HSV; Kuduz; Hepatit B; HTLV-I; AIDS"
+   ]
+  },
+  {
+   "id": "noro-s05-b07",
+   "pdf": "noro",
+   "sayfa": 5,
+   "bolge": "r2c1",
+   "tur": "slayt",
+   "baslik": "II. Bakteriyel, fungal, parazitik ve granülomatöz miyelitler",
+   "metin": "A. Mycoplasma pneumoniae\nB. Lyme hastalığı\nC. Piyojenik miyelit (1. Subakut meningomiyelit 2. Akut epidural abse ve granülom 3. Omurilik absesi)\nD. Tüberküloz miyeliti (1. Pott hastalığı ve omurilik basısı 2. Tüberküloz meningomiyeliti 3. Omurilik tüberkülomu)\nE. Epidural granülom, lokalize menenjit veya meningomiyelit, abse oluşturan parazitik ve fungal infeksiyonlar\nF. Sifiliz miyeliti (1. Kronik meningoradikülit (tabes dorsalis) 2. Kronik meningomiyelit 3. Meningovasküler sifiliz 4. Gommöz menenjit (kronik spinal pakimenenjit dahil))\nG. Sarkoid miyeliti",
+   "el_yazisi": [
+    {
+     "metin": "= enf.dan 15-20 yıl sonra, arka kordon etkilenir = sensoriyel ataksi, Romberg bulgusu, Argyll-Robertson pupillası, Charcot eklemi",
+     "hedef": "Kronik meningoradikülit (tabes dorsalis)",
+     "guven": "orta",
+     "alternatif": "çok küçük yazı; ilk kelime 'enfeksiyondan' kısaltması olarak okundu"
+    }
+   ],
+   "isaretler": [
+    {
+     "tur": "sari",
+     "hedef": "Mycoplasma pneumoniae; Lyme hastalığı; Piyojenik miyelit; Tüberküloz miyeliti; Epidural granülom ... parazitik ve fungal infeksiyonlar; Sifiliz miyeliti; Sarkoid miyeliti"
+    }
+   ],
+   "sinyal": [
+    "el_onemli",
+    "sari"
+   ],
+   "y25": {
+    "key": "y25-k2-31-medulla-spinalis-hastaliklari",
+    "sayfa": 17
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "puan": 18,
+   "oncelik": "B",
+   "vurgulu": [
+    "Mycoplasma pneumoniae; Lyme hastalığı; Piyojenik miyelit; Tüberküloz miyeliti; Epidural granülom ... parazitik ve fungal infeksiyonlar; Sifiliz miyeliti; Sarkoid miyeliti"
+   ]
+  },
+  {
+   "id": "noro-s05-b09",
+   "pdf": "noro",
+   "sayfa": 5,
+   "bolge": "r1c2",
+   "tur": "slayt",
+   "baslik": "Poliomiyelit: genel ve SSS tutuluşu",
+   "metin": "POLIOMIYELIT\nAseptik menenjit ve ön boynuz hücrelerinin harabiyeti\nBulaşma fekal oral yolla. Hastalık %90-95 asemptomatik\naz sayıda hastada SSS tutuluşu\nSSS tutuluşu: a) Nonparalitik veya preparalitik poliomyelit b) Paralitik poliomiyelit",
+   "el_yazisi": [
+    {
+     "metin": "ateş, halsizlik, kas ve boğaz ağrıları vb. ile başlar ama SSS tutulumunu gösteren semptomlar çıkmaya başlar → ense sertliği, irritabilite, huzursuzluk, meningeal irritasyon. BOS normal.",
+     "hedef": "a) Nonparalitik veya preparalitik poliomyelit (y25 s20)",
+     "guven": "yuksek",
+     "alternatif": ""
+    },
+    {
+     "metin": "sıklıkla bacakları tutar. flask paralizi. duyu normal kalır. kas güçsüzlüğü tablosunu izleyerek çıkar. omurilik ön boynuzu yanında hipotalamus, talamus, beyin sapı motor çekirdekleri ve retiküler formasyonu ile vestibüler + serebellar çekirdekler.",
+     "hedef": "b) Paralitik poliomiyelit (y25 s21)",
+     "guven": "yuksek",
+     "alternatif": ""
+    },
+    {
+     "metin": "akut dönem BOS = poliovirus IgM (+)",
+     "hedef": "Poliomiyelitin akut döneminde BOS (y25 s22)",
+     "guven": "yuksek",
+     "alternatif": ""
+    }
+   ],
+   "isaretler": [
+    {
+     "tur": "sari",
+     "hedef": "Aseptik menenjit ve ön boynuz hücrelerinin harabiyeti; Bulaşma fekal oral yolla; Hastalık %90-95 asemptomatik; az sayıda hastada SSS tutuluşu"
+    },
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "BOS normal; hipotalamus; talamus; akut dönem BOS = poliovirus IgM (+)"
+    }
+   ],
+   "sinyal": [
+    "el_onemli",
+    "sari"
+   ],
+   "y25": {
+    "key": "y25-k2-31-medulla-spinalis-hastaliklari",
+    "sayfa": 19
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "puan": 18,
+   "oncelik": "B",
+   "vurgulu": [
+    "Aseptik menenjit ve ön boynuz hücrelerinin harabiyeti; Bulaşma fekal oral yolla; Hastalık %90-95 asemptomatik; az sayıda hastada SSS tutuluşu",
+    "BOS normal; hipotalamus; talamus; akut dönem BOS = poliovirus IgM (+)"
+   ]
+  },
+  {
+   "id": "noro-s06-b01",
+   "pdf": "noro",
+   "sayfa": 6,
+   "bolge": "r1c1",
+   "tur": "slayt",
+   "baslik": "Konus medüllaris lezyonu",
+   "metin": "Konus medüllaris lezyonu\nPelvik taban kaslarında güçsüzlüğe neden olur ve akut inkontinans nedenidir.\nNörojenik mesaneye neden olur. [Volanter işeme yapılamaz / Artmış idrar rezidüsü / Vesikal doluluk duyumu yoktur]\nErektil disfonksiyon ve ejakülasyon bozukluğu\nSimetrik süvari yaması duyu kusuru\nAğrı nadirdir.\nTethered kord sendromu sık nedenlerden biridir.",
+   "el_yazisi": [
+    {
+     "metin": "Sfinkter tutulumu (akut) ve (tam)",
+     "hedef": "Konus medüllaris lezyonu başlığı",
+     "guven": "yuksek",
+     "alternatif": ""
+    },
+    {
+     "metin": "ikisini ayıran en önemli fark = (ağrı)",
+     "hedef": "Konus 'Ağrı nadirdir' ↔ Kauda 'akut radiküler ağrı ile ortaya çıkar' (çizgiyle bağlı)",
+     "guven": "yuksek",
+     "alternatif": ""
+    }
+   ],
+   "isaretler": [
+    {
+     "tur": "yesil",
+     "hedef": "Pelvik taban kaslarında güçsüzlüğe; Volanter işeme yapılamaz; Artmış idrar rezidüsü; Vesikal doluluk duyumu yoktur; Simetrik süvari yaması duyu kusuru; Ağrı nadirdir"
+    },
+    {
+     "tur": "daire",
+     "hedef": "Nörojenik mesaneye neden olur"
+    },
+    {
+     "tur": "daire",
+     "hedef": "Simetrik süvari yaması duyu kusuru"
+    },
+    {
+     "tur": "daire",
+     "hedef": "Ağrı nadirdir"
+    },
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "Volanter işeme yapılamaz; Artmış idrar rezidüsü; Vesikal doluluk duyumu yoktur"
+    },
+    {
+     "tur": "daire",
+     "hedef": "akut; tam (el yazısında)"
+    },
+    {
+     "tur": "ok",
+     "hedef": "'Ağrı nadirdir' ile kauda equina 'ağrı ile ortaya çıkar' arasında çizgi"
+    }
+   ],
+   "sinyal": [
+    "el_onemli",
+    "sari"
+   ],
+   "y25": {
+    "key": "y25-k2-31-medulla-spinalis-hastaliklari",
+    "sayfa": 41
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "puan": 18,
+   "oncelik": "B",
+   "vurgulu": [
+    "Ağrı nadirdir",
+    "Nörojenik mesaneye neden olur",
+    "Pelvik taban kaslarında güçsüzlüğe; Volanter işeme yapılamaz; Artmış idrar rezidüsü; Vesikal doluluk duyumu yoktur; Simetrik süvari yaması duyu kusuru; Ağrı nadirdir",
+    "Simetrik süvari yaması duyu kusuru",
+    "Volanter işeme yapılamaz; Artmış idrar rezidüsü; Vesikal doluluk duyumu yoktur",
+    "akut; tam (el yazısında)"
+   ]
+  },
+  {
+   "id": "noro-s06-b08",
+   "pdf": "noro",
+   "sayfa": 6,
+   "bolge": "r1c2+r2c2+r2c3",
+   "tur": "slayt",
+   "baslik": "Subakut kombine dejenerasyon (nöro-anemik sendrom) ve B12 eksiklik nedenleri",
+   "metin": "SUBAKUT KOMBİNE DEJENERASYON (NÖRO-ANEMİK SENDROM)\nB12 yetersizliğinden beyin, omurilik, optik sinirler ve periferik sinir sistemi etkilenir. En ağır hasar omurilikte, özellikle servikal ve üst dorsal bölgenin arka ve lateral kordonlarında ortaya çıkar.\nB12 vitamin eksiklik nedenleri: Diyetle yetersiz alım (sıkı vejeteryen diyet, malnutrisyon); İntrensek faktör yetersizliği (pernisiyöz anemi, gastrektomi, gastrik atrofi); Emilim bozukluğu (Crohn, Çölyak, geniş ileum rezeksiyonu); Konjenital hastalık (transkobalamin yetersizliği); Kronik ilaç kullanımı (H-2 antagonistleri, proton pompa inhibitörleri, antidiabetik (metformin)); Diğer nadir hastalıklar (kronik pankreatit, tiroid hastalığı, diphyllobothrium latum infestasyonu)",
+   "el_yazisi": [
+    {
+     "metin": "nörolojik belirti ve bulguları olan bazı hastalarda megaloblastik anemi görülmez!",
+     "hedef": "Subakut kombine dejenerasyon (nöro-anemik sendrom)",
+     "guven": "yuksek",
+     "alternatif": ""
+    }
+   ],
+   "isaretler": [
+    {
+     "tur": "yesil",
+     "hedef": "B12 yetersizliğinden beyin, omurilik, optik sinirler ve periferik sinir sistemi etkilenir"
+    }
+   ],
+   "sinyal": [
+    "el_onemli",
+    "sari"
+   ],
+   "y25": {
+    "key": "y25-k2-31-medulla-spinalis-hastaliklari",
+    "sayfa": 33
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "puan": 18,
+   "oncelik": "B",
+   "vurgulu": [
+    "B12 yetersizliğinden beyin, omurilik, optik sinirler ve periferik sinir sistemi etkilenir"
+   ]
+  },
+  {
+   "id": "noro-s06-b02",
+   "pdf": "noro",
+   "sayfa": 6,
+   "bolge": "r1c1+r1c2",
+   "tur": "slayt",
+   "baslik": "Kauda equina lezyonu",
+   "metin": "Kauda equina lezyonu\nL3 vertebra düzeyinin altındaki lezyonlarda akut radiküler ağrı ile ortaya çıkar.\nAğrı unilateral olabilir. Eğer neden ekstramedüller tümör ise yakınmalar ayakta iken daha azdır, yatınca artar.\nGluteal bölgede asimetrik duyu bozukluğu\nAşil refleksi kayıptır. Patella refleksi elde edilebilir. Sfinkter bozukluğu konus medüllaris lezyonuna göre daha geç gelişir.",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "yesil",
+     "hedef": "L3 vertebra düzeyinin altındaki lezyonlarda akut radiküler ağrı ile ortaya çıkar; Ağrı unilateral olabilir; Eğer neden ekstramedüller tümör ise yakınmalar ayakta iken daha azdır, yatınca artar; asimetrik; Sfinkter bozukluğu konus medüllaris lezyonuna göre daha geç gelişir"
+    },
+    {
+     "tur": "daire",
+     "hedef": "ağrı ile ortaya çıkar"
+    },
+    {
+     "tur": "daire",
+     "hedef": "Gluteal bölgede asimetrik duyu bozukluğu"
+    },
+    {
+     "tur": "daire",
+     "hedef": "Aşil refleksi kayıptır"
+    },
+    {
+     "tur": "daire",
+     "hedef": "Patella refleksi elde edilebilir"
+    },
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "Ağrı unilateral; ekstramedüller tümör ise yakınmalar ayakta iken daha azdır, yatınca artar; Sfinkter bozukluğu ... daha geç gelişir"
+    }
+   ],
+   "sinyal": [
+    "daire",
+    "sari"
+   ],
+   "y25": {
+    "key": "y25-k2-31-medulla-spinalis-hastaliklari",
+    "sayfa": 41
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "puan": 15,
+   "oncelik": "C",
+   "vurgulu": [
+    "Ağrı unilateral; ekstramedüller tümör ise yakınmalar ayakta iken daha azdır, yatınca artar; Sfinkter bozukluğu ... daha geç gelişir",
+    "Aşil refleksi kayıptır",
+    "Gluteal bölgede asimetrik duyu bozukluğu",
+    "L3 vertebra düzeyinin altındaki lezyonlarda akut radiküler ağrı ile ortaya çıkar; Ağrı unilateral olabilir; Eğer neden ekstramedüller tümör ise yakınmalar ayakta iken daha azdır, yatınca artar; asimetrik; Sfinkter bozukluğu konus medüllaris lezyonuna göre daha geç gelişir",
+    "Patella refleksi elde edilebilir",
+    "ağrı ile ortaya çıkar"
+   ]
+  },
+  {
+   "id": "noro-s05-b12",
+   "pdf": "noro",
+   "sayfa": 5,
+   "bolge": "r1c2+r2c2",
+   "tur": "slayt",
+   "baslik": "Sifiliz: nörosifilizin seyri",
+   "metin": "Nörosifilitik infeksiyonun ilk aşaması, genellikle asemptomatik olan bir menenjittir. ... ve yıllar sonra parenkimal hasara neden olur. Sifilitik menenjit, meningovasküler sifiliz, paralizi general, tabes dorsalis gibi klinik sendromlar nadiren izole olarak görülür",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "sari",
+     "hedef": "Nörosifilitik infeksiyonun ilk aşaması, genellikle asemptomatik olan bir menenjittir; Sifilitik menenjit, meningovasküler sifiliz, paralizi general, tabes dorsalis gibi klinik sendromlar nadiren izole olarak görülür"
+    }
+   ],
+   "sinyal": [
+    "sari"
+   ],
+   "y25": {
+    "key": "y25-k2-31-medulla-spinalis-hastaliklari",
+    "sayfa": 24
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "puan": 10,
+   "oncelik": "C",
+   "vurgulu": [
+    "Nörosifilitik infeksiyonun ilk aşaması, genellikle asemptomatik olan bir menenjittir; Sifilitik menenjit, meningovasküler sifiliz, paralizi general, tabes dorsalis gibi klinik sendromlar nadiren izole olarak görülür"
+   ]
+  },
+  {
+   "id": "noro-s05-b15",
+   "pdf": "noro",
+   "sayfa": 5,
+   "bolge": "r2c2",
+   "tur": "slayt",
+   "baslik": "Tüberküloza bağlı miyelopati",
+   "metin": "TÜBERKÜLOZ\nTüberküloza bağlı miyelopati genellikle tüberküloz spondilitine (Pott hastalığı) sekonder olarak gelişir. Mikobakteriler vertebralara hematojen, lenfatik ya da akciğerlerden direkt yayılım yolu ile ulaşır. En çok dorsal ve dorsolomber, daha seyrek olarak servikal",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "sari",
+     "hedef": "Tüberküloza bağlı miyelopati genellikle tüberküloz spondilitine (Pott hastalığı) sekonder olarak gelişir; En çok dorsal ve dorsolomber, daha seyrek olarak servikal"
+    }
+   ],
+   "sinyal": [
+    "sari"
+   ],
+   "y25": {
+    "key": "y25-k2-31-medulla-spinalis-hastaliklari",
+    "sayfa": 28
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "puan": 10,
+   "oncelik": "C",
+   "vurgulu": [
+    "Tüberküloza bağlı miyelopati genellikle tüberküloz spondilitine (Pott hastalığı) sekonder olarak gelişir; En çok dorsal ve dorsolomber, daha seyrek olarak servikal"
+   ]
+  },
+  {
+   "id": "noro-s05-b18",
+   "pdf": "noro",
+   "sayfa": 5,
+   "bolge": "r1c3+r2c3",
+   "tur": "slayt",
+   "baslik": "Medulla spinalis kanamaları",
+   "metin": "M.Spinalis içine kanamaya hematomiyeli denir. Beyin kanamalarına oranla çok nadir.\nHematomiyeli nedenleri: spinal travmalar, vasküler malformasyonlar ve antikoagülan kullanımı gibi kanama eğiliminin arttığı durumlar\nAkut yerleşen bir parapleji ve seviye gösteren duyu kusuru söz konusudur. BOS'un kanlı ve santrifüjden sonra ksantokromik olması kanamalı bir miyelopatiyi düşündürür.\nSubdural ve epidural hematomlar benzer nedenlerle ortaya çıkar ve hemen hemen aynı klinik belirtileri verir. Hızla cerrahi olarak boşaltılmaları gerekir.",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "sari",
+     "hedef": "Hemotomiyeli nedenleri: spinal travmalar, vasküler malformasyonlar ve antikoagülan kullanımı gibi kanama eğiliminin arttığı durumlar"
+    }
+   ],
+   "sinyal": [
+    "sari"
+   ],
+   "y25": {
+    "key": "y25-k2-31-medulla-spinalis-hastaliklari",
+    "sayfa": 32
+   },
+   "y26": null,
+   "duzeltme": [
+    {
+     "ham": "Hemotomiyeli",
+     "dogru": "Hematomiyeli",
+     "gerekce": "Aynı slaytın ilk satırında doğru yazım 'hematomiyeli'."
+    }
+   ],
+   "not_": null,
+   "puan": 10,
+   "oncelik": "C",
+   "vurgulu": [
+    "Hemotomiyeli nedenleri: spinal travmalar, vasküler malformasyonlar ve antikoagülan kullanımı gibi kanama eğiliminin arttığı durumlar"
+   ]
+  },
+  {
+   "id": "noro-s05-b02",
+   "pdf": "noro",
+   "sayfa": 5,
+   "bolge": "r1c1",
+   "tur": "slayt",
+   "baslik": "Miyelit tanımı ve tutulum yerine göre adlar",
+   "metin": "Myelit\nGri cevher: poliomyelit\nBeyaz cevher: lökomyelit\nGri ve beyaz cevher: transvers myelit\nMeninks ve spinal kord: meningomyelit\nMeninks ve kök: meningoradikülit\nSpinal dura: pakimenenjit\nPia-araknoid: leptomenenjit",
+   "el_yazisi": [
+    {
+     "metin": "= MS enflamatuar hastalıkları.",
+     "hedef": "Myelit (MS = medulla spinalis)",
+     "guven": "yuksek",
+     "alternatif": "MS burada multipl skleroz değil, medulla spinalis kısaltması (slayt s14: 'Medulla spinalis enflamatuvar hastalıklarına miyelit denir')"
+    }
+   ],
+   "isaretler": [],
+   "sinyal": [
+    "el_onemli"
+   ],
+   "y25": {
+    "key": "y25-k2-31-medulla-spinalis-hastaliklari",
+    "sayfa": 13
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "puan": 8,
+   "oncelik": "C",
+   "vurgulu": []
+  },
+  {
+   "id": "noro-s05-b14",
+   "pdf": "noro",
+   "sayfa": 5,
+   "bolge": "r2c2",
+   "tur": "slayt",
+   "baslik": "Sifilitik meningomiyelit",
+   "metin": "Sifilitik meningomiyelit\nKortikospinal traktus belirtilerinin ön planda olduğu bir spinal sifiliz formudur. Hasta genellikle ilk olarak bacaklarında güçsüzlük ve ağırlık hissinden yakınır. Buna paresteziler eklenebilir. İmpotans ve sfinkter kusurları olabilir. Muayenede spastik paraparezi ya da kuadriparezi ile uyumlu bulgular vardır. Objektif duyu azalması hafiftir.",
+   "el_yazisi": [
+    {
+     "metin": "kalınlaşmış iltihaplı meninks!! granülomatöz iltihaplı lezyonlar daha çok servikal bölgede ve lateral kolonlardadır.",
+     "hedef": "Sifilitik meningomiyelit",
+     "guven": "yuksek",
+     "alternatif": ""
+    }
+   ],
+   "isaretler": [],
+   "sinyal": [
+    "el_onemli"
+   ],
+   "y25": {
+    "key": "y25-k2-31-medulla-spinalis-hastaliklari",
+    "sayfa": 27
+   },
+   "y26": null,
+   "duzeltme": [
+    {
+     "ham": "granülamatöz",
+     "dogru": "granülomatöz",
+     "gerekce": "yazım"
+    }
+   ],
+   "not_": null,
+   "puan": 8,
+   "oncelik": "C",
+   "vurgulu": []
+  },
+  {
+   "id": "noro-s05-b08",
+   "pdf": "noro",
+   "sayfa": 5,
+   "bolge": "r2c1",
+   "tur": "slayt",
+   "baslik": "III. İnfeksiyöz olmayan inflamatuvar miyelit",
+   "metin": "A. Postinfeksiyöz ve postvaksinal miyelit\nB. Akut ve kronik yineleyici multipl skleroz\nC. Subakut nekrotizan miyelit\nD. Lupus ve diğer vaskülit formları ile birlikte miyelopati\nE. Paraneoplastik miyelopati ve poliomiyelit",
+   "el_yazisi": [],
+   "isaretler": [],
+   "sinyal": [],
+   "y25": {
+    "key": "y25-k2-31-medulla-spinalis-hastaliklari",
+    "sayfa": 18
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "puan": 0,
+   "oncelik": "C",
+   "vurgulu": []
+  },
+  {
+   "id": "noro-s05-b11",
+   "pdf": "noro",
+   "sayfa": 5,
+   "bolge": "r1c2",
+   "tur": "slayt",
+   "baslik": "Post-polio sendromu",
+   "metin": "POST-POLIO SENDROMU\nPoliomiyelit geçirdikten 1 veya 2 dekat sonra kas güçsüzlüğünde yeniden artış, ya da asemptomatik bir bölgede kas güçsüzlüğü ile karekterize (şema: Normal / Acute poliomyelitis / Post-polio)",
+   "el_yazisi": [],
+   "isaretler": [],
+   "sinyal": [],
+   "y25": {
+    "key": "y25-k2-31-medulla-spinalis-hastaliklari",
+    "sayfa": 23
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "puan": 0,
+   "oncelik": "C",
+   "vurgulu": []
+  },
+  {
+   "id": "noro-s05-b16",
+   "pdf": "noro",
+   "sayfa": 5,
+   "bolge": "r1c3",
+   "tur": "slayt",
+   "baslik": "İnfeksiyöz olmayan inflamatuvar miyelopatiler (otoimmün transvers miyelit)",
+   "metin": "Muhtemelen otoimmün, idyopatik: \"İdyopatik\" akut transvers miyelit, Multipl skleroz, ADEM, İnfeksiyon ve aşılanma sonrası miyelitler\nBilinen bir antijenle ilişkili primer miyelit: Nöromiyelit spektrumu hastalıkları (NMO) (akuaporin-4)\nDiğer sistemik hastalıklarla birlikte miyelit: Bağ dokusu hastalıkları, Behçet hastalığı, Nörosarkoidoz, Paraneoplastik sendromlar",
+   "el_yazisi": [],
+   "isaretler": [],
+   "sinyal": [],
+   "y25": {
+    "key": "y25-k2-31-medulla-spinalis-hastaliklari",
+    "sayfa": 29
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "puan": 0,
+   "oncelik": "C",
+   "vurgulu": []
+  },
+  {
+   "id": "noro-s06-b06",
+   "pdf": "noro",
+   "sayfa": 6,
+   "bolge": "r1c2+r1c3",
+   "tur": "slayt",
+   "baslik": "Herediter spastik parapleji (HSP)",
+   "metin": "Herediter spastik parapleji (HSP)\nAlt ekstremitelerde yavaş progresif spastisite, parezi, DTR artışı, babinski yanıtı ile karekterize bir hastalıktır.\nSıklıkla OD geçişlidir.",
+   "el_yazisi": [],
+   "isaretler": [],
+   "sinyal": [],
+   "y25": {
+    "key": "y25-k2-31-medulla-spinalis-hastaliklari",
+    "sayfa": 44
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "puan": 0,
+   "oncelik": "C",
+   "vurgulu": []
+  },
+  {
+   "id": "noro-s06-b07",
+   "pdf": "noro",
+   "sayfa": 6,
+   "bolge": "r1c2+r1c3",
+   "tur": "slayt",
+   "baslik": "Medulla spinalis tümörleri",
+   "metin": "İntramedüller tümörler: medülla spinalis yapılarından kaynaklanan tümörlerdir. Ependimom ve astrositomlar bunlara örnektir.\nEkstramedüller tümörler medulla spinalis komşuluğundaki yapılardan kaynaklanır. Meninjiom ve nörofibromalar\nEkstradural ekstramedüller tümörler invazyon sonucu gelişen tümörlerdir. Lenfoma, prostat CA, myelom, meme CA vb.",
+   "el_yazisi": [],
+   "isaretler": [],
+   "sinyal": [],
+   "y25": {
+    "key": "y25-k2-31-medulla-spinalis-hastaliklari",
+    "sayfa": 38
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "puan": 0,
+   "oncelik": "C",
+   "vurgulu": []
+  },
+  {
+   "id": "noro-s06-b09",
+   "pdf": "noro",
+   "sayfa": 6,
+   "bolge": "r2c2+r2c3",
+   "tur": "slayt",
+   "baslik": "Posterolateral kolon hastalığı ve B12 eksikliği bulguları",
+   "metin": "POSTEROLATERAL KOLON HASTALIĞI\nVitamin B12 eksikliğinde arka kolon ve lateral kolon birlikte etkilenir. HIV vakuoler miyelopatisi; Ekstrensek kord kompresyonu (spondilozis); HTLV ilişkili miyelopati (tropikal spastik paraparezi)\nVitamin B12 eksikliği-Subakut kombine dejenerasyon – Bulgular: Ayaklarda ve ellerde parestezi; Duysal ataksi; Romberg (+); Mesane atonisi; Spastisite ve hiperrefleksi (periferik nöropati varsa refleksler zayıflar); Ağrı ve ısı duyumu normaldir. (şema: arka ve lateral kolon tutulumu)",
+   "el_yazisi": [],
+   "isaretler": [],
+   "sinyal": [],
+   "y25": {
+    "key": "y25-k2-31-medulla-spinalis-hastaliklari",
+    "sayfa": 34
+   },
+   "y26": null,
+   "duzeltme": [
+    {
+     "ham": "HIV vakouler miyelopati",
+     "dogru": "HIV vakuoler miyelopatisi",
+     "gerekce": "yazım"
+    }
+   ],
+   "not_": null,
+   "puan": 0,
+   "oncelik": "C",
+   "vurgulu": []
+  }
+ ],
+ "ogrenci_sorulari": [
+  {
+   "id": "noro-s05-b05",
+   "pdf": "noro",
+   "sayfa": 5,
+   "bolge": "r1c1+r2c1",
+   "tur": "cikmis_soru",
+   "baslik": "Medulla spinalisin tam/tama yakın hasarında görülmeyen",
+   "metin": "Medulla spinalisin tam yada tama yakın hasarında aşağıdakilerden hangisi görülmez?\n1 Lezyon seviyesi altında otonom fonksiyonlar etkilenmiştir / 2 Lezyon seviyesi altında flask tipte güç kaybı olur / 3 Lezyon seviyesi altında derin duyu etkilenmiştir / 4 Spinal şok döneminde refleksler artmıştır / 5 Lezyon seviyesi altında his kaybı görülür",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "pembe",
+     "hedef": "soru bloğu (büyük pembe halka)"
+    },
+    {
+     "tur": "pembe",
+     "hedef": "Spinal şok döneminde refleksler artmıştır"
+    }
+   ],
+   "sinyal": [
+    "cikmis"
+   ],
+   "y25": {
+    "key": "y25-k2-31-medulla-spinalis-hastaliklari",
+    "sayfa": 15
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "cikmis": {
+    "kok": "Medulla spinalisin tam ya da tama yakın hasarında aşağıdakilerden hangisi görülmez?",
+    "siklar": [
+     "A) Lezyon seviyesi altında otonom fonksiyonlar etkilenmiştir",
+     "B) Lezyon seviyesi altında flask tipte güç kaybı olur",
+     "C) Lezyon seviyesi altında derin duyu etkilenmiştir",
+     "D) Spinal şok döneminde refleksler artmıştır",
+     "E) Lezyon seviyesi altında his kaybı görülür"
+    ],
+    "ogrenci_cevap": "4) Spinal şok döneminde refleksler artmıştır",
+    "banka_id": "6f885e32472d",
+    "banka_yil": "2020-2021",
+    "banka_dogru": "D",
+    "tutarli": true,
+    "not": "İkinci kopya: ee8b186778a2 (2020-2021, kökü bozuk OCR, doğru D). Slayt s15: akut lezyonda flask ve arefleksik."
+   },
+   "bagli_birim": "noro-s05-b17",
+   "benzerlik": 0.646
+  }
+ ],
+ "banka": [
+  {
+   "id": "fccec81b0770",
+   "ders": "k2-31",
+   "yillar": [
+    "2020-2021"
+   ],
+   "kok": "C8 sinir kökü hangi iki vertebra arasından çıkar?",
+   "dogru": "C7-T1",
+   "kopyalar": [],
+   "birim": "noro-s05-b01",
+   "benzerlik": 0.539,
+   "kapsandi": false,
+   "notta_yapistirilmis": false
+  },
+  {
+   "id": "6f885e32472d",
+   "ders": "k2-31",
+   "yillar": [
+    "2020-2021"
+   ],
+   "kok": "Medulla spinalisin tam ya da tama yakın hasarında aşağıdakilerden hangisi görülmez?",
+   "dogru": "Spinal şok döneminde refleksler artmıştır",
+   "kopyalar": [],
+   "birim": "noro-s05-b17",
+   "benzerlik": 0.541,
+   "kapsandi": false,
+   "notta_yapistirilmis": true
+  },
+  {
+   "id": "ee8b186778a2",
+   "ders": "k2-31",
+   "yillar": [
+    "2020-2021"
+   ],
+   "kok": "Evet\nNöroloji\nNöroloji\nMedulla spinalis\nHastalıkları\nMedulla spinalisin\ntam yada tama\nyakın hasarında\nşağıdakilerden\nhangi görülmez?",
+   "dogru": "Spinal şok döneminde refleksler artmıştır",
+   "kopyalar": [],
+   "birim": "noro-s06-b04",
+   "benzerlik": 0.619,
+   "kapsandi": true,
+   "notta_yapistirilmis": false
+  },
+  {
+   "id": "d3-k2-nor-006",
+   "ders": "k2-31",
+   "yillar": [
+    "2021-2026"
+   ],
+   "kok": "Servikal medulla spinalisin santral kanalında genişleme (kavitasyon) sonucu ön beyaz komissürden geçen spinotalamik liflerin çaprazlaşma yerinde basıya uğramasıyla kollarda 'pelerin tarzında' ağrı ve ısı duyusu kaybı, bu",
+   "dogru": "Siringomiyeli",
+   "kopyalar": [],
+   "birim": "noro-s05-b19",
+   "benzerlik": 0.687,
+   "kapsandi": true,
+   "notta_yapistirilmis": false
+  },
+  {
+   "id": "past-q-I_SKENDERUN_TI_Mu_du_rlu_g_u_ne0__1__230709_230251-57",
+   "ders": "k2-31",
+   "yillar": [
+    "Geçmiş Yıllar Çıkmışı (Arşiv)"
+   ],
+   "kok": "Nörolojik muayenesinde parapleji, gövdede seviye veren his kusuru ve sfinkter bozukluğu olan hastada lezyon lokalizasyonu nerededir?",
+   "dogru": "Medulla spinalis",
+   "kopyalar": [],
+   "birim": "noro-s06-b03",
+   "benzerlik": 0.645,
+   "kapsandi": true,
+   "notta_yapistirilmis": false
+  },
+  {
+   "id": "past-1790877482971-276482",
+   "ders": "k2-31",
+   "yillar": [
+    "2020-2021"
+   ],
+   "kok": "Medulla spinalisin bir yarısının kesilmesi durumunda tractus corticospinalis ile ilgili olarak aşağıdaki belirtilerden hangisi görülür?",
+   "dogru": "Aynı tarafta lezyon seviyesi altında üst motor nöron felci",
+   "kopyalar": [],
+   "birim": "noro-s05-b17",
+   "benzerlik": 0.624,
+   "kapsandi": true,
+   "notta_yapistirilmis": false
+  }
+ ]
+}

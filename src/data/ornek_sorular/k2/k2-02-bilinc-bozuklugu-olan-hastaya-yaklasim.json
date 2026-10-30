@@ -15,7 +15,7 @@
      "id": "k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim-q01",
      "kazanim": 1,
      "zorluk": "kolay",
-     "soru": "Derste verilen oranlara göre acil serviste görülen bilinç değişikliklerinin çoğunluğu hangi nedenlerden kaynaklanır?",
+     "soru": "Acil serviste görülen bilinç değişikliklerinin çoğunluğu hangi nedenlerden kaynaklanır?",
      "secenekler": {
       "A": "Metabolik ve sistemik nedenler",
       "B": "Santral sinir sistemine ait yapısal nedenler",
@@ -102,6 +102,39 @@
       "sayfa": 32,
       "alinti": "III KS(unkal): dilate, fikse"
      }
+    },
+    {
+     "id": "k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim-q46",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Bilinç bozukluğu olan hastanın ayırıcı tanısında aşağıdakilerden hangisi santral sinir sistemini yaygın etkileyen sistemik nedenlerden biri değildir?",
+     "secenekler": {
+      "A": "Hipoglisemi",
+      "B": "Hiponatremi",
+      "C": "Hiperkapni",
+      "D": "İskemik inme",
+      "E": "Üremik ensefalopati"
+     },
+     "dogru": "D",
+     "aciklama": "İskemik inme santral sinir sistemine ait yapısal bir nedendir. Hipoglisemi, hiponatremi, hiperkapni ve üremik ensefalopati beyni dışarıdan ve yaygın etkileyen sistemik nedenlerdir.",
+     "sik_aciklamalari": {
+      "A": "Hipoglisemi kan şekerinin düşmesidir ve beyni yaygın etkileyen sistemik nedenlerdendir. Gerçek bir acildir ve ilk aşamada parmak ucu ölçümle dışlanır.",
+      "B": "Hiponatremi kanda sodyumun düşmesidir ve bilinç bozukluğunun sık elektrolit nedenidir. Santral sinir sistemini yaygın etkileyen sistemik nedenler arasında yer alır.",
+      "C": "Hiperkapni kanda karbondioksitin birikmesidir ve astım ya da kronik akciğer hastalığında görülür. Beyni yaygın etkileyen sistemik bir neden olarak bilinci bastırır.",
+      "D": "İskemik inme beyin damarının tıkanmasıyla oluşan yapısal bir lezyondur ve santral sinir sistemine ait nedenler arasında yer alır. Sistemik bir neden olmadığı için doğru cevaptır.",
+      "E": "Üremik ensefalopati böbrek yetmezliğinde biriken maddelerin beyni etkilemesiyle gelişir. Organ yetmezliğine bağlı sistemik bir neden olarak santral sinir sistemini yaygın etkiler ve bilinci bozar."
+     },
+     "bilgi": [
+      15,
+      16,
+      17,
+      21
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 11,
+      "alinti": "Etiyoloji: Sistemik Neden – SSS Difüz"
+     }
     }
    ],
    "ilgili_cikmis": []
@@ -146,11 +179,11 @@
      "zorluk": "orta",
      "soru": "Ağrılı uyarana kollarını ekstansiyon ve iç rotasyona getirerek yanıt veren komadaki bir hastanın Glasgow motor (M) puanı ve bu postürün anlamı hangisidir?",
      "secenekler": {
-      "A": "M4; ağrıdan çekme yanıtı",
+      "A": "M4; ağrıdan çekme yanıtı, hemisferik işlev korunmuş",
       "B": "M3; dekortike postür, hemisferik lezyon",
-      "C": "M2; deserebre postür, daha derin beyin sapı hasarı",
-      "D": "M5; ağrıyı lokalize etme",
-      "E": "M1; motor yanıt yok"
+      "C": "M2; deserebre postür, beyin sapı hasarı",
+      "D": "M5; ağrıyı lokalize etme, kortikal yanıt",
+      "E": "M1; hiç motor yanıt yok"
      },
      "dogru": "C",
      "aciklama": "Kollarda ekstansiyon ve iç rotasyon deserebre postürdür ve Glasgow motor bileşeninde 2 puan alır (sayfa 24, 26). Derste deserebre (ekstansör) postür üst pontin hasarla ilişkilendirilir (sayfa 28); dekortike postüre göre daha derin hasarı gösterir.",
@@ -203,6 +236,351 @@
       "sayfa": 40,
       "alinti": "Cheyne-Stokes solunumu Santral nörojenik hiperventilasyon Apnestik solunum"
      }
+    },
+    {
+     "id": "k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim-q16",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Glasgow Koma Skalasının üç bileşeninin alabileceği en yüksek puanlar aşağıdakilerin hangisinde doğru verilmiştir?",
+     "secenekler": {
+      "A": "Göz 4, motor 6, sözel 5",
+      "B": "Göz 5, motor 5, sözel 5",
+      "C": "Göz 4, motor 5, sözel 6",
+      "D": "Göz 3, motor 6, sözel 6",
+      "E": "Göz 6, motor 4, sözel 5"
+     },
+     "dogru": "A",
+     "aciklama": "Göz açma 4, motor yanıt 6, sözel yanıt 5 puan üzerinden değerlendirilir ve toplam en yüksek 15 olur. Üç bileşenin de 5 puan olduğunu sanmak, toplamı doğru verse de motor puanını hatalı hesaplatır.",
+     "sik_aciklamalari": {
+      "A": "Göz açma 4, motor yanıt 6 ve sözel yanıt 5 puan üzerinden değerlendirilir. Bu dağılım doğrudur ve üçünün toplamı skalanın en yüksek değeri olan 15'i verir.",
+      "B": "Üç bileşene de beşer puan vermek toplamı 15 yapar ama dağılımı bozar. Göz açma en çok 4, motor yanıt en çok 6 puandır; bu yanlış, vaka hesabında motor puanı kaydırır.",
+      "C": "Bu dağılım motor ve sözel bileşenlerin üst sınırlarını yer değiştirir. Motor yanıt emre uymadan yanıt yokluğuna kadar altı basamaklıdır, sözel yanıt ise oryanteden yanıtsızlığa beş basamaklıdır.",
+      "D": "Bu dağılımda göz açmanın üst sınırı 3 olarak yazılmıştır; oysa spontan açık göz 4 puan alır. Sözel yanıt da beş basamaklıdır, bu nedenle dağılım skalanın gerçek basamaklarına uymaz.",
+      "E": "Göz açma dört basamaklıdır: spontan, sözel uyaranla, ağrılı uyaranla ve hiç açmama. Altı basamaklı olan bileşen motor yanıttır; bu dağılım iki bileşeni karıştırır."
+     },
+     "bilgi": [
+      33,
+      34,
+      37,
+      38
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 30,
+      "alinti": "Eye\nMovement\nVerbal\n4\n6\n5"
+     }
+    },
+    {
+     "id": "k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim-q17",
+     "kazanim": 2,
+     "zorluk": "kolay",
+     "soru": "Glasgow Koma Skalasında emre uymayan ancak ağrılı uyaranın yapıldığı yere elini götüren hastanın motor yanıt puanı kaçtır?",
+     "secenekler": {
+      "A": "3",
+      "B": "4",
+      "C": "5",
+      "D": "6",
+      "E": "2"
+     },
+     "dogru": "C",
+     "aciklama": "Ağrının yerine elini götürmek ağrıyı lokalize etmektir ve 5 puandır. Emre uyma 6, ağrıdan yalnız çekme (fleksör yanıt) 4 puan alır.",
+     "sik_aciklamalari": {
+      "A": "Üç puan dekortike yanıta verilir; ağrıda kollar dirsekten bükülür, bacaklar gerilir. Bu amaçsız bir postürdür, hasta eliyle uyaranın yerini bulamaz.",
+      "B": "Dört puan fleksör yanıttır: hasta ağrılı uyarandan kolunu geri çeker. Uyaranın yapıldığı yere elini götürmek daha üst düzeyde bir yanıttır ve bir puan fazla alır.",
+      "C": "Beş puan ağrıyı lokalize etmeye verilir; hasta ağrının kaynağını bulup elini oraya götürür. Emre uymayan ama uyaranı yerelleştiren bu hasta için doğru puandır.",
+      "D": "Altı puan emre uymaya verilir; hasta söylenen hareketi yapar. Bu hasta emre uymadığı için en üst basamağı alamaz, yanıtı ağrıyı lokalize etme düzeyindedir.",
+      "E": "İki puan deserebre yanıttır; ağrıda kollar ve bacaklar ekstansiyona gelir, kollar içe döner. Ağır beyin sapı tutulumunu gösteren bu postür amaçlı bir lokalizasyon içermez."
+     },
+     "bilgi": [
+      34
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 24,
+      "alinti": "5-Ağrıyı lokalize"
+     }
+    },
+    {
+     "id": "k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim-q18",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Ağrılı uyarana kollarını dirsekten fleksiyona getirip bacaklarını ekstansiyona alarak yanıt veren hastanın Glasgow motor puanı kaçtır?",
+     "secenekler": {
+      "A": "1",
+      "B": "2",
+      "C": "3",
+      "D": "4",
+      "E": "5"
+     },
+     "dogru": "C",
+     "aciklama": "Kollarda fleksiyon ve bacaklarda ekstansiyon dekortike yanıttır ve motor bölümde 3 puandır. Kolların da ekstansiyona geldiği deserebre yanıt 2 puandır.",
+     "sik_aciklamalari": {
+      "A": "Bir puan, ağrılı uyarana hiçbir motor yanıt alınamayan hastaya verilir. Bu hastada kollar ve bacaklar belirgin bir postür aldığı için yanıt vardır ve puan daha yüksektir.",
+      "B": "İki puan deserebre yanıttır; ağrıda kollar da bacaklar da ekstansiyona gelir ve kollar içe döner. Bu hastada kollar fleksiyonda olduğu için yanıt deserebre değildir.",
+      "C": "Üç puan dekortike yanıta verilir: kollar dirsekten fleksiyona gelir, bacaklar ekstansiyonda kalır. Tarif edilen postür budur, bu yüzden doğru puandır.",
+      "D": "Dört puan fleksör yanıttır; hasta ağrıdan kolunu çekerek uzaklaştırır. Dekortike postür ise ağrıdan kaçış değil, kalıplaşmış anormal bir fleksiyondur ve bir puan düşüktür.",
+      "E": "Beş puan ağrıyı lokalize etmektir; hasta elini ağrının yapıldığı yere götürür. Kalıplaşmış kol fleksiyonu ve bacak ekstansiyonu amaçlı bir hareket olmadığı için bu puanı alamaz."
+     },
+     "bilgi": [
+      34,
+      35
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 24,
+      "alinti": "3-Dekortike"
+     }
+    },
+    {
+     "id": "k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim-q19",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Konuşabilen ancak zaman ve yer yönelimi bozuk olan, sorulara karışık (konfüze) cümlelerle yanıt veren hastanın Glasgow sözel puanı kaçtır?",
+     "secenekler": {
+      "A": "1",
+      "B": "2",
+      "C": "3",
+      "D": "4",
+      "E": "5"
+     },
+     "dogru": "D",
+     "aciklama": "Yönelimi bozuk ama cümle kurarak konuşan hasta dezoryantedir ve sözel bölümde 4 puan alır. Uygunsuz cevap 3, oryante yanıt 5 puandır; en sık karıştırılan basamak uygunsuz cevaptır.",
+     "sik_aciklamalari": {
+      "A": "Bir puan hiç ses çıkarmayan hastaya verilir. Bu hasta konuşabildiği ve cümle kurduğu için sözel yanıtı vardır, en alt basamakta değerlendirilmez.",
+      "B": "İki puan homurtudur; hasta kelime içermeyen, anlaşılmaz sesler çıkarır. Bu hasta anlamlı cümle kurduğu için yanıtı homurtudan belirgin biçimde üst düzeydedir.",
+      "C": "Üç puan uygunsuz cevaptır; hasta soruyla ilgisiz sözcükler, bağırma ya da küfür gibi yanıtlar verir. Konuşma akışı olan ama yönelimi bozuk hasta bundan bir basamak yukarıdadır.",
+      "D": "Dört puan dezoryante yanıta verilir: hasta konuşur ama zamanı ve yeri karıştırır. Tarif edilen konfüze konuşma budur, bu nedenle doğru puandır.",
+      "E": "Beş puan oryante hastaya verilir; kim olduğunu, nerede olduğunu ve zamanı doğru söyler. Bu hastanın yönelimi bozuk olduğu için en yüksek sözel puanı alamaz."
+     },
+     "bilgi": [
+      38
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 30,
+      "alinti": "4-Dezoriente"
+     }
+    },
+    {
+     "id": "k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim-q20",
+     "kazanim": 2,
+     "zorluk": "kolay",
+     "soru": "Glasgow Koma Skalasının sözel bölümünde kelime içermeyen, anlaşılmaz sesler (homurtu) çıkaran hasta kaç puan alır?",
+     "secenekler": {
+      "A": "2",
+      "B": "1",
+      "C": "3",
+      "D": "4",
+      "E": "5"
+     },
+     "dogru": "A",
+     "aciklama": "Homurtu, yani kelime içermeyen inleme ya da anlaşılmaz ses sözel bölümde 2 puandır. Hiç ses çıkmaması 1, uygunsuz sözcükler 3 puan alır.",
+     "sik_aciklamalari": {
+      "A": "İki puan homurtuya verilir; hasta inler ya da anlaşılmaz sesler çıkarır ama kelime kuramaz. Tarif edilen yanıt budur, bu nedenle doğru puandır.",
+      "B": "Bir puan sözel yanıtın hiç olmadığı hastaya verilir. Homurtu çıkaran hasta ses ürettiği için yanıtsız sayılmaz ve bir basamak yukarıda puanlanır.",
+      "C": "Üç puan uygunsuz cevaptır; hasta anlaşılır sözcükler söyler ama bunlar soruyla ilgisizdir. Homurtuda ise anlaşılır bir kelime yoktur, bu yüzden puan daha düşüktür.",
+      "D": "Dört puan dezoryante hastaya verilir; hasta cümle kurar ama zamanı ve yeri karıştırır. Anlaşılmaz ses çıkaran hasta bu düzeyde konuşamaz.",
+      "E": "Beş puan oryante hastanın puanıdır; hasta yer, zaman ve kişiyi doğru söyler. Kelime kuramayan hasta için en yüksek puan kullanılamaz."
+     },
+     "bilgi": [
+      38
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 30,
+      "alinti": "2-Homurtu"
+     }
+    },
+    {
+     "id": "k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim-q21",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Glasgow Koma Skalasında yanıt ile puan eşleştirmelerinden hangisi YANLIŞTIR?",
+     "secenekler": {
+      "A": "Spontan göz açma – 4",
+      "B": "Emre uyma – 6",
+      "C": "Oryante sözel yanıt – 5",
+      "D": "Fleksör yanıt – 4",
+      "E": "Deserebre yanıt – 3"
+     },
+     "dogru": "E",
+     "aciklama": "Deserebre yanıt motor bölümde 2 puandır; 3 puan dekortike yanıta verilir. Diğer eşleştirmeler skaladaki puanlarla aynıdır.",
+     "sik_aciklamalari": {
+      "A": "Gözlerin kendiliğinden açık olması göz bölümünün en üst basamağıdır ve 4 puan alır. Eşleştirme doğrudur, bu yüzden aranan yanlış ifade bu değildir.",
+      "B": "Söylenen hareketi yapabilen, yani emre uyan hasta motor bölümün en yüksek puanı olan 6'yı alır. Bu eşleştirme skalaya uygundur ve aranan yanlış ifade bu değildir.",
+      "C": "Yer, zaman ve kişiyi doğru bilen oryante hasta sözel bölümde 5 puan alır. Bu da skaladaki puanla aynıdır ve doğru bir eşleştirmedir.",
+      "D": "Ağrıdan kolunu çeken hastanın fleksör yanıtı motor bölümde 4 puandır. Ağrıyı lokalize etmenin bir altında, dekortike yanıtın bir üstünde yer alır; eşleştirme doğrudur.",
+      "E": "Deserebre yanıtta ağrıyla kollar ve bacaklar ekstansiyona gelir ve bu yanıt 2 puandır. Üç puan dekortike yanıtındır; eşleştirme yanlış olduğu için doğru cevaptır."
+     },
+     "bilgi": [
+      33,
+      34,
+      38
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 30,
+      "alinti": "2-Deserebe"
+     }
+    },
+    {
+     "id": "k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim-q22",
+     "kazanim": 2,
+     "zorluk": "zor",
+     "soru": "Glasgow Koma Skalası ile ilgili aşağıdaki ifadelerden hangisi YANLIŞTIR?",
+     "secenekler": {
+      "A": "Her bileşende hastanın verebildiği en iyi yanıt puanlanır",
+      "B": "Her bileşenin en düşük puanı 1'dir",
+      "C": "Motor yanıt bölümü 6 puan üzerindendir",
+      "D": "Toplam puan 0 ile 15 arasında değişir",
+      "E": "Dekortike yanıt deserebre yanıttan yüksek puan alır"
+     },
+     "dogru": "D",
+     "aciklama": "Her bileşenin en düşük puanı 1 olduğu için toplam en az 3'tür; skala 3 ile 15 arasında değişir. Sıfır puan yoktur, bu yüzden 0–15 ifadesi yanlıştır.",
+     "sik_aciklamalari": {
+      "A": "Glasgow Koma Skalasında her bileşen için hastanın verebildiği en iyi yanıt esas alınır. Bu kural tek tarafı felçli hastada da geçerlidir; ifade doğrudur.",
+      "B": "Göz, motor ve sözel bölümlerin her birinde hiç yanıt olmaması 1 puan alır. Bu nedenle hiçbir bileşen sıfır puan almaz; ifade doğrudur.",
+      "C": "Motor yanıt emre uymadan yanıt yokluğuna kadar altı basamaklıdır ve en çok 6 puan alır. Bu ifade skalayla uyumludur; motor bölüm üç bileşen içinde en çok basamağı olan bölümdür.",
+      "D": "Her bileşenin en düşüğü 1 olduğundan toplam en az 3, en çok 15 olur. Sıfır puan verilemediği için bu ifade yanlıştır ve doğru cevaptır.",
+      "E": "Dekortike yanıt 3, deserebre yanıt 2 puandır; deserebre yanıt daha derin bir beyin sapı tutulumunu gösterir. Bu yüzden ifade doğrudur."
+     },
+     "bilgi": [
+      33,
+      34,
+      37,
+      38
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 30,
+      "alinti": "1-Yanıt yok"
+     }
+    },
+    {
+     "id": "k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim-q23",
+     "kazanim": 2,
+     "zorluk": "zor",
+     "soru": "Glasgow Koma Skalasında aşağıdaki yanıtlardan hangileri 4 puan alır?\nI. Kendiliğinden göz açma\nII. Ağrıdan kolu çekme (fleksör yanıt)\nIII. Dezoryante (konfüze) konuşma\nIV. Sözel uyaranla göz açma",
+     "secenekler": {
+      "A": "I ve II",
+      "B": "II ve IV",
+      "C": "I, II ve III",
+      "D": "I, III ve IV",
+      "E": "Yalnız I"
+     },
+     "dogru": "C",
+     "aciklama": "Kendiliğinden göz açma, fleksör yanıt ve dezoryante konuşma kendi bölümlerinde 4 puan alır. Sözel uyaranla göz açma ise 3 puandır.",
+     "sik_aciklamalari": {
+      "A": "Kendiliğinden göz açma ve fleksör yanıt gerçekten 4 puandır. Ancak dezoryante konuşma da sözel bölümde 4 puan aldığı için bu seçenek eksik kalır.",
+      "B": "Fleksör yanıt 4 puandır ama sözel uyaranla göz açma 3 puan alır. Bu seçenek dördüncü öncülü yanlış biçimde 4 puanlık sayar.",
+      "C": "Birinci, ikinci ve üçüncü öncüller kendi bölümlerinde 4 puandır: spontan göz açma, fleksör yanıt ve dezoryante konuşma. Dördüncü öncül 3 puan aldığı için doğru seçenek budur.",
+      "D": "Kendiliğinden göz açma ve dezoryante konuşma 4 puandır. Sözel uyaranla göz açma ise 3 puan aldığından bu seçenek yanlış bir öncülü içerir ve fleksör yanıtı dışarıda bırakır.",
+      "E": "Kendiliğinden göz açma 4 puandır ama tek başına değildir. Motor bölümde fleksör yanıt ve sözel bölümde dezoryante konuşma da 4 puan alır."
+     },
+     "bilgi": [
+      33,
+      34,
+      38
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 30,
+      "alinti": "4- Spontan açık"
+     }
+    },
+    {
+     "id": "k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim-q42",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Komadaki hastada beyin sapı işlevini değerlendirmek için aşağıdaki reflekslerden hangisine bakılmaz?",
+     "secenekler": {
+      "A": "Pupiller ışık refleksi",
+      "B": "Kornea-göz kırpma refleksi",
+      "C": "Okülosefalik refleks",
+      "D": "Kremaster refleksi",
+      "E": "Vestibülo-oküler refleks"
+     },
+     "dogru": "D",
+     "aciklama": "Komada başlıca beyin sapı refleksleri pupiller ışık refleksi, kornea-göz kırpma refleksi ve refleks konjuge göz hareketleridir (okülosefalik ve vestibülo-oküler). Kremaster refleksi omurilik düzeyinde bir deri refleksidir ve beyin sapını sınamaz.",
+     "sik_aciklamalari": {
+      "A": "Pupiller ışık refleksinde ışık uyarısı mezensefalona ulaşır, yanıt üçüncü kraniyal sinirle pupile döner. Mezensefalonu sınayan bir beyin sapı refleksi olduğu için komada bakılır.",
+      "B": "Kornea-göz kırpma refleksinde duyuyu beşinci, göz kırpmayı yedinci kraniyal sinir sağlar ve merkezi ponstadır. Pons işlevini gösterdiği için komada bakılan reflekslerdendir.",
+      "C": "Okülosefalik refleks, baş iki yana çevrildiğinde gözlerin hareketine bakılarak sınanır ve refleks konjuge göz hareketlerini değerlendirir. Beyin sapı sağlamsa gözler başın tersine kayar; komada bakılır.",
+      "D": "Kremaster refleksi uyluk iç yüzü uyarılınca testisin yukarı çekilmesidir ve omurilik düzeyinde oluşan bir deri refleksidir. Beyin sapını sınamadığı için doğru cevaptır.",
+      "E": "Vestibülo-oküler refleks, dış kulak yoluna soğuk su verilerek kalorik testle sınanır ve iç kulaktaki uyarıyı göz hareketine çeviren beyin sapı yolunu ölçer. Komada bakılan reflekslerdendir."
+     },
+     "bilgi": [
+      39,
+      40
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 31,
+      "alinti": "Komada Kullanılan Başlıca Beyin sapı"
+     }
+    },
+    {
+     "id": "k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim-q43",
+     "kazanim": 2,
+     "zorluk": "kolay",
+     "soru": "Komadaki hastada iğne ucu kadar daralmış (ileri miyotik) pupiller saptanıyor. Toksik bir neden düşünülüyorsa öncelikle hangisi akla gelir?",
+     "secenekler": {
+      "A": "Opiat intoksikasyonu",
+      "B": "Skopolamin zehirlenmesi",
+      "C": "Atropin zehirlenmesi",
+      "D": "Barbitürat zehirlenmesi",
+      "E": "Glutetimid zehirlenmesi"
+     },
+     "dogru": "A",
+     "aciklama": "İleri miyotik pupil opiat intoksikasyonunda görülür. Atropin, skopolamin, glutetimid ve barbitürat ise midriyatik, ışığa yanıtsız pupil yapar.",
+     "sik_aciklamalari": {
+      "A": "Opiat intoksikasyonu ileri miyotik, yani iğne ucu kadar daralmış pupil yapar. Toksik nedenli miyozisin tipik örneği olduğu için bu hastada öncelikle düşünülür ve doğru cevaptır.",
+      "B": "Skopolamin de atropin gibi antikolinerjik etkilidir ve midriyatik, ışığa yanıtsız pupil yapar. İğne ucu pupil bu zehirlenmenin tersine bir bulgudur.",
+      "C": "Atropin antikolinerjik bir ilaçtır ve pupili genişletir; zehirlenmesinde midriyatik, ışığa yanıtsız pupil görülür. İğne ucu kadar daralmış pupil bu nedenle atropini düşündürmez.",
+      "D": "Ağır barbitürat etkisinde midriyatik, ışığa yanıtsız pupil görülebilir. Barbitürat aynı zamanda solunumu baskılayarak respiratuvar asidoz yapar; iğne ucu pupil ise opiatı düşündürür.",
+      "E": "Glutetimid sedatif etkili bir ilaçtır ve zehirlenmesinde midriyatik, ışığa yanıtsız pupil görülür. Pupilde ileri daralma bu ilaçla değil opiat intoksikasyonuyla ilişkilidir."
+     },
+     "bilgi": [
+      44,
+      45
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 33,
+      "alinti": "İleri miyotik pupil\nOpiate intoksikasyonu"
+     }
+    },
+    {
+     "id": "k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim-q44",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Bilinci kapalı hastada dış kulak yoluna soğuk su verildiğinde gözlerde hiçbir hareket olmuyor. Bu bulgu aşağıdakilerden hangisini gösterir?",
+     "secenekler": {
+      "A": "Beyin sapının sağlam olduğunu",
+      "B": "Psikojen yanıtsızlığı",
+      "C": "Tek taraflı hemisfer lezyonunu",
+      "D": "Metabolik ensefalopatiyi",
+      "E": "Beyin sapı hasarını"
+     },
+     "dogru": "E",
+     "aciklama": "Beyin sapı hasarlı komada soğuk su verilmesine rağmen gözler hareket etmez; vestibülo-oküler refleks kaybolmuştur. Beyin sapı sağlamsa gözler soğuk su verilen kulağa doğru tonik olarak kayar.",
+     "sik_aciklamalari": {
+      "A": "Beyin sapı sağlam ve bilinci kapalı hastada soğuk su verilince gözler uyarılan kulağa doğru tonik olarak kayar. Gözlerde hiç hareket olmaması bu yanıtın kaybolduğunu gösterir.",
+      "B": "Psikojen yanıtsızlıkta bilinç gerçekte açıktır ve kalorik testte hızlı faz, yani nistagmus görülür. Gözlerin hiç hareket etmemesi organik bir beyin sapı sorununa işaret eder.",
+      "C": "Tek taraflı hemisfer lezyonunda beyin sapı yolları sağlam olduğundan soğuk suyla gözler uyarılan kulağa kayar. Yanıtın tamamen kaybolması lezyonun beyin sapında olduğunu gösterir.",
+      "D": "Metabolik ensefalopatide beyin sapı refleksleri çoğu kez korunur; pupiller küçük ve reaktif kalır. Bu hastada kalorik yanıtın tümüyle kaybı metabolik değil yapısal beyin sapı tutulumunu düşündürür.",
+      "E": "Vestibülo-oküler refleks iç kulaktaki uyarıyı göz hareketine çeviren beyin sapı yoludur. Soğuk suya rağmen gözlerin hiç hareket etmemesi bu yolun bozulduğunu, yani beyin sapı hasarını gösterir."
+     },
+     "bilgi": [
+      48,
+      49,
+      50
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 38,
+      "alinti": "Beyin sapı HASARLI"
+     }
     }
    ],
    "ilgili_cikmis": []
@@ -215,7 +593,7 @@
      "id": "k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim-q07",
      "kazanim": 3,
      "zorluk": "kolay",
-     "soru": "Bilinç bozukluğu olan hastaya ilk müdahalede aşağıdakilerden hangisi derste sayılan temel destek önlemlerinden biri değildir?",
+     "soru": "Bilinç bozukluğu olan hastaya ilk müdahalede aşağıdakilerden hangisi temel destek önlemlerinden biri değildir?",
      "secenekler": {
       "A": "Oksijen verilmesi",
       "B": "İki geniş damar yolu açılması",
@@ -247,7 +625,7 @@
      "id": "k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim-q08",
      "kazanim": 3,
      "zorluk": "orta",
-     "soru": "Bilinci kapalı olduğu doğrulanan hastada metabolik ve toksik tarama örnekleri alınırken derste ampirik olarak verilmesi önerilen ilaç üçlüsü hangisidir?",
+     "soru": "Bilinci kapalı olduğu doğrulanan hastada metabolik ve toksik tarama örnekleri alınırken ampirik olarak verilmesi önerilen ilaç üçlüsü hangisidir?",
      "secenekler": {
       "A": "IV glukoz, nalokson, flumazenil",
       "B": "Mannitol, deksametazon, fenitoin",
@@ -277,7 +655,7 @@
      "id": "k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim-q09",
      "kazanim": 3,
      "zorluk": "zor",
-     "soru": "Kronik alkolizmi olan, komada getirilen bir hastada beyin sapı bulguları saptanıyor. Bu dalda derste sayılan incelemeler ve tedavi bağlamında hangi uygulama özellikle önemlidir?",
+     "soru": "Kronik alkolizmi olan, komada getirilen bir hastada beyin sapı bulguları saptanıyor. Bu hastada inceleme ve tedavi açısından hangi uygulama özellikle önemlidir?",
      "secenekler": {
       "A": "Yalnız alkol düzeyine bakıp gözlemle izlemek",
       "B": "BBT/MR ile birlikte glukoz ve tiamin vermek",
@@ -305,6 +683,163 @@
       "sayfa": 59,
       "alinti": "BBT/MRI, glu, tiamin, metobolik ve toksik tarama"
      }
+    },
+    {
+     "id": "k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim-q47",
+     "kazanim": 3,
+     "zorluk": "kolay",
+     "soru": "Bilinç bozukluğu olan hastanın arteriyel kan gazında karboksihemoglobin düzeyi yüksek bulunuyor. En olası neden aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Karbonmonoksit zehirlenmesi",
+      "B": "Metanol zehirlenmesi",
+      "C": "Salisilat zehirlenmesi",
+      "D": "Opiat intoksikasyonu",
+      "E": "Hipoglisemi"
+     },
+     "dogru": "A",
+     "aciklama": "Karboksihemoglobin karbonmonoksit ve duman zehirlenmesinde yükselir ve tanıyı koydurur. Salisilat ve metanol zehirlenmesinde ise kan gazında pH bozukluğu öne çıkar.",
+     "sik_aciklamalari": {
+      "A": "Karbonmonoksit hemoglobine bağlanarak karboksihemoglobin oluşturur ve kanın oksijen taşımasını bozar. Duman ve soba zehirlenmesinde görüldüğü için bu bulgunun en olası nedenidir ve doğru cevaptır.",
+      "B": "Metanol zehirlenmesi metabolik asidoz ve osmolar açık yapar, bu yüzden kan gazında pH düşer. Karboksihemoglobin yüksekliği metanolle değil karbonmonoksitle ilişkilidir.",
+      "C": "Salisilat zehirlenmesi kan gazında pH bozukluğuyla, özellikle asidozla kendini gösterir. Kan gazında pH bu zehirlenmenin tanısında yol gösterir; karboksihemoglobin yüksekliği ise karbonmonoksite özgüdür.",
+      "D": "Opiat intoksikasyonu solunumu baskılar ve ileri miyotik pupil yapar. Tanıda iğne ucu pupil ve nalokson yanıtı yol gösterir; karboksihemoglobin yüksekliği opiatla ilişkili bir bulgu sayılmaz.",
+      "E": "Hipoglisemi kan şekerinin düşmesidir ve parmak ucundan kan şekeri ölçümüyle saptanır. Gerçek bir acildir ama kan gazındaki karboksihemoglobin düzeyiyle ilişkisi bulunmaz."
+     },
+     "bilgi": [
+      58
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 43,
+      "alinti": "COHbg: (CO, Duman zehirlenmesi)"
+     }
+    },
+    {
+     "id": "k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim-q48",
+     "kazanim": 3,
+     "zorluk": "zor",
+     "soru": "Bilinç bozukluğu olan hastanın laboratuvar incelemesiyle ilgili aşağıdakilerden hangisi YANLIŞTIR?",
+     "secenekler": {
+      "A": "Kan şekeri ilk bakılan testlerdendir",
+      "B": "Elektrolitlerden en sık sodyum bozulur",
+      "C": "Tümörlü hastada kalsiyum bozukluğu sıktır",
+      "D": "Karboksihemoglobin karbonmonoksit zehirlenmesini gösterir",
+      "E": "Trombositopeni hipogliseminin tanısını koydurur"
+     },
+     "dogru": "E",
+     "aciklama": "Trombositopeni kanama ya da sepsise işaret eder; hipoglisemi kan şekeri ölçümüyle tanınır. Diğer ifadeler laboratuvar incelemesiyle uyumludur.",
+     "sik_aciklamalari": {
+      "A": "Kan şekeri bilinç bozukluğunda ilk bakılan testtir, çünkü hipoglisemi atlanmamalıdır. Özellikle diyabetli ve kronik alkolik hastada önem kazanır; bu yüzden ifade doğrudur.",
+      "B": "Bilinç bozukluğunda elektrolitler içinde en sık sodyum bozulur ve hiponatremi sık bir nedendir. Bu nedenle elektrolit incelemesinde önce sodyuma bakılır; ifade doğrudur.",
+      "C": "Tümörü olan hastalarda kalsiyum metabolizma bozukluğu sıktır ve bilinç bozukluğu nedeni olabilir. Kanserli komalı hastada kalsiyum düzeyi bu yüzden mutlaka ölçülür; ifade doğrudur.",
+      "D": "Karboksihemoglobin karbonmonoksit ve duman zehirlenmesinde yükselir ve arteriyel kan gazında ölçülür. Bu zehirlenmenin tanısını koydurduğu için burada verilen ifade doğrudur.",
+      "E": "Tam kan sayımında trombositopeni kanama ve sepsisi düşündürür; hipoglisemi ise kan şekeri ölçümüyle tanınır. İfade yanlış olduğu için doğru cevaptır."
+     },
+     "bilgi": [
+      57,
+      58,
+      59,
+      60
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 43,
+      "alinti": "Trombositopeni; Kanama, sepsis"
+     }
+    },
+    {
+     "id": "k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim-q49",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Hipoglisemiye bağlı bilinç bozukluğu özellikle hangi hasta gruplarında etiyoloji olarak öne çıkar?",
+     "secenekler": {
+      "A": "Diyabet ve kronik alkolizm",
+      "B": "Astım ve kronik akciğer hastalığı",
+      "C": "Tümör ve kanser öyküsü",
+      "D": "Böbrek ve karaciğer yetmezliği",
+      "E": "Antidepresan ve antipsikotik kullanımı"
+     },
+     "dogru": "A",
+     "aciklama": "Özellikle diyabette ve kronik alkolizmde bilinç bozukluğunun nedeni hipoglisemi olabilir. Tümörlü hastada kalsiyum bozukluğu, akciğer hastalığında hipoksi ve hiperkapni öne çıkar.",
+     "sik_aciklamalari": {
+      "A": "Diyabetli hastada tedaviye bağlı, kronik alkolikte beslenme bozukluğuna bağlı hipoglisemi bilinç bozukluğu yapabilir. Bu iki grup hipoglisemi açısından özellikle risklidir; doğru cevaptır.",
+      "B": "Astım ve kronik obstrüktif akciğer hastalığında hipoksi ve hiperkapni gelişir ve bilinç bozulur. Bu gruplarda öne çıkan neden kan şekeri değil gaz değişimi bozukluğudur.",
+      "C": "Tümörü olan hastalarda bilinç bozukluğunun sık nedeni kalsiyum metabolizma bozukluğudur. Bu hastalarda öncelikle kalsiyum düzeyine bakılır; hipoglisemi bu grubun öne çıkan nedeni olarak verilmez.",
+      "D": "Böbrek yetmezliğinde üremik, karaciğer yetmezliğinde hepatik ensefalopati gelişir. Bu gruplarda bilinç bozukluğu organ yetmezliğine bağlıdır ve üre, kreatinin, amonyak istenir.",
+      "E": "Antidepresan fazla alındığında serotonin sendromu, antipsikotik kullananda nöroleptik malign sendrom gelişebilir. Bu ilaç kullananlarda öne çıkan neden ilaçla ilişkili acil tablolardır."
+     },
+     "bilgi": [
+      56,
+      57
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 42,
+      "alinti": "Özellikle DM ve Kr. Alkolizmde etiyoloji"
+     }
+    },
+    {
+     "id": "k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim-q50",
+     "kazanim": 3,
+     "zorluk": "zor",
+     "soru": "Bilinç bozukluğu olan hastada hipoglisemi ile ilgili aşağıdakilerden hangisi YANLIŞTIR?",
+     "secenekler": {
+      "A": "Gerçek bir acil olarak kabul edilir",
+      "B": "Parmak ucu kan şekeriyle hızla saptanır",
+      "C": "Diyabetli ve alkolik hastada koma nedeni olabilir",
+      "D": "Bilinci kapalı hastaya ampirik IV glukoz verilir",
+      "E": "Yalnız beyin sapı bulgusu varsa araştırılır"
+     },
+     "dogru": "E",
+     "aciklama": "Hipoglisemi her bilinç bozukluğunda ilk aşamada araştırılır; beyin sapı bulgusunun olup olmamasını beklemez. Diğer ifadeler hipogliseminin acil yönetimiyle uyumludur.",
+     "sik_aciklamalari": {
+      "A": "Hipoglisemi bilinç bozukluğunda gerçek bir acildir ve geç kalınırsa kalıcı beyin hasarı bırakabilir. Bu yüzden ilk aşamada hemen araştırılır; ifade doğrudur.",
+      "B": "Parmak ucundan bakılan kan şekeri hipoglisemiyi dakikalar içinde gösterir ve ilk aşamada hızlı nörolojik değerlendirmeyle birlikte yapılır. Bu nedenle ifade doğrudur.",
+      "C": "Özellikle diyabette ve kronik alkolizmde bilinç bozukluğunun nedeni hipoglisemi olabilir. Bu hasta gruplarında kan şekeri ölçümü daha da önem kazanır; ifade doğrudur.",
+      "D": "Algoritmada bilinci kapalı hastaya tetkiklerle eş zamanlı olarak damar içi glukoz, nalokson ve flumazenil verilir. Bu ampirik glukoz hipoglisemiyi hemen düzeltir; ifade doğrudur.",
+      "E": "Hipoglisemi algoritmanın beyin sapı sorusundan önce, ilk aşamada ve metabolik taramada araştırılır. Yalnız beyin sapı bulgusu olan hastaya sınırlamak yanlıştır; bu yüzden doğru cevaptır."
+     },
+     "bilgi": [
+      14,
+      57,
+      66
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 10,
+      "alinti": "Stick Kan şekeri (hipoglisemi gerçek bir"
+     }
+    },
+    {
+     "id": "k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim-q52",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Bilinç bozukluğu olan hastada prognozu iyi yönde etkileyen yaklaşım aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Tetkikler bitene dek tedaviyi ertelemek",
+      "B": "Etiyolojiye yönelik tetkik ve erken tedavi",
+      "C": "Yalnız yapısal nedenleri araştırmak",
+      "D": "Görüntülemeyi bir gün sonraya bırakmak",
+      "E": "Kan şekerine yalnız diyabetlide bakmak"
+     },
+     "dogru": "B",
+     "aciklama": "Etiyolojiye yönelik tetkik ve erken tedavi prognozu iyi yönde etkiler; bu yüzden hızlı ve ekip hâlinde yaklaşım gerekir. Ayırıcı tanıda hipoglisemi gibi hızla düzeltilebilen nedenler önce ele alınır.",
+     "sik_aciklamalari": {
+      "A": "Tedaviyi tetkiklerin bitmesine bırakmak zaman kaybettirir; komada geçen zaman kalıcı hasar demektir. Tedavi bu yüzden muayene ve tetkiklerle eş zamanlı planlanır.",
+      "B": "Etiyolojiye yönelik tetkik ve erken tedavi, bilinç bozukluğunda prognozu iyi yönde etkiler. Hızlı ve ekip hâlinde yaklaşımın amacı da budur; doğru cevaptır.",
+      "C": "Bilinç bozukluğu nedenlerinin yüzde seksen beşi metabolik ve sistemiktir. Yalnız yapısal nedenleri araştırmak sık görülen ve düzeltilebilen sistemik nedenleri atlatır.",
+      "D": "Görüntüleme yapısal lezyonu ve kafa içi kanamayı gösterir ve acil incelemeler arasındadır. Bir gün geciktirmek erken tanı ve tedavi fırsatını kaçırtır.",
+      "E": "Hipoglisemi her bilinç bozukluğunda gerçek bir acil olarak araştırılır. Diyabet ve kronik alkolizmde daha sık olsa da kan şekerine her hastada bakılır."
+     },
+     "bilgi": [
+      11,
+      76
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 61,
+      "alinti": "Bilinç bozukluğunda ayırıcı tanısı önemli"
+     }
     }
    ],
    "ilgili_cikmis": []
@@ -319,11 +854,11 @@
      "zorluk": "kolay",
      "soru": "Bilinç bozukluğu olan hastaya yaklaşımın ilk aşamasında temel (primer) amaç nedir?",
      "secenekler": {
-      "A": "Glasgow skorunu kesin olarak hesaplamak",
-      "B": "Fokal yapısal SSS lezyonlarını global metabolik problemlerden ayırmak",
-      "C": "Hastanın prognozunu belirlemek",
-      "D": "Beyin ölümü tanısı koymak",
-      "E": "Psikiyatrik değerlendirme yapmak"
+      "A": "Glasgow koma skorunu kesin olarak hesaplayıp kaydetmek",
+      "B": "Fokal yapısal SSS lezyonunu global metabolik sorundan ayırmak",
+      "C": "Hastanın prognozunu ve iyileşme olasılığını belirlemek",
+      "D": "Beyin ölümü ölçütlerini değerlendirip tanı koymak",
+      "E": "Psikiyatrik değerlendirme yapıp psikojen yanıtsızlığı dışlamak"
      },
      "dogru": "B",
      "aciklama": "Derste ilk aşamanın primer amacı, fokal yapısal SSS lezyonlarını global metabolik problemlerden ayırmak olarak verilir (sayfa 9). Bu ayrım hangi tetkiklerin ve tedavilerin öncelikleneceğini belirler.",
@@ -382,11 +917,11 @@
      "zorluk": "zor",
      "soru": "Komalı hastada BT'de yapısal hasar, BOS'ta enfeksiyon bulunmuyor; arteriyel kan gazı normal ve osmolar açık pozitif çıkıyor. Algoritmaya göre en olası etiyolojik grup hangisidir?",
      "secenekler": {
-      "A": "Anoksik ensefalopati",
-      "B": "Baziler arter tıkanması",
-      "C": "Metanol veya etilen glikol gibi toksik alkoller",
+      "A": "Kardiyak arreste bağlı anoksik ensefalopati",
+      "B": "Baziler arter tıkanmasına bağlı beyin sapı iskemisi",
+      "C": "Metanol ya da etilen glikol (toksik alkoller)",
       "D": "Nonkonvülzif status epileptikus",
-      "E": "Demiyelinizan hastalık"
+      "E": "Demiyelinizan bir hastalığın akut atağı"
      },
      "dogru": "C",
      "aciklama": "Algoritmada BT ve BOS normalse kan gazına, kan gazı da normalse osmolar açığa bakılır (sayfa 60). Osmolar açık pozitifse metanol, izopropil alkol, etil eter, etilen glikol, aseton ve trikloroetan düşünülür; negatifse anoksi, demiyelinizan hastalık, baziler tıkanma ve nonkonvülzif SE araştırılır.",
@@ -405,6 +940,337 @@
      "kanit": {
       "sayfa": 60,
       "gorsel": "Osmolar açık kutusundan pozitif ve negatif dallar, MR, EEG ve T3 T4 TSH etiketleriyle gösterilmiş"
+     }
+    },
+    {
+     "id": "k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim-q24",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Trafik kazası sonrası getirilen 25 yaşındaki erkek hasta seslenince gözlerini açıyor, sorulara yeri ve zamanı karıştırarak konfüze yanıt veriyor ve emirlere uyuyor. Hastanın Glasgow Koma Skalası puanı kaçtır?",
+     "secenekler": {
+      "A": "11",
+      "B": "12",
+      "C": "13",
+      "D": "14",
+      "E": "15"
+     },
+     "dogru": "C",
+     "aciklama": "Seslenince göz açma 3, konfüze konuşma 4, emre uyma 6 puandır ve toplam 13 olur. Göz bölümünü spontan açık sanmak 14'e götürür.",
+     "sik_aciklamalari": {
+      "A": "On bir, göz açmanın ağrılı uyaranla (2) ve motor yanıtın lokalize etme (5) düzeyinde olduğu hastaya uyar. Bu hasta seslenince gözünü açtığı ve emre uyduğu için toplamı daha yüksektir.",
+      "B": "On iki, puanlardan birinin bir basamak düşük alınmasıyla bulunur; örneğin konfüze konuşmayı uygunsuz cevap gibi 3 saymak bu sonucu verir. Dezoryante konuşma ise 4 puandır.",
+      "C": "Seslenince göz açma 3, dezoryante konuşma 4 ve emre uyma 6 puandır. Üçünün toplamı 13 eder; bu yüzden doğru cevaptır.",
+      "D": "On dört, gözlerin kendiliğinden açık olduğu varsayılarak bulunur. Bu hasta gözünü ancak seslenince açtığı için göz puanı 4 değil 3'tür.",
+      "E": "On beş, gözleri spontan açık, oryante ve emre uyan hastanın puanıdır. Bu hastanın yönelimi bozuk ve gözleri ancak sesle açıldığı için en yüksek puanı alamaz."
+     },
+     "bilgi": [
+      33,
+      34,
+      37,
+      38
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 30,
+      "alinti": "3- Verbal uyaranla"
+     }
+    },
+    {
+     "id": "k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim-q25",
+     "kazanim": 4,
+     "zorluk": "zor",
+     "soru": "Sol hemiplejisi olan 70 yaşındaki kadın hasta ağrılı uyaranla gözlerini açıyor ve uygunsuz sözcüklerle yanıt veriyor. Sol tarafında ağrıya yanıt alınamıyor, sağ eliyle ise ağrılı uyaranın yapıldığı yere uzanıyor. Hastanın Glasgow Koma Skalası puanı kaçtır?",
+     "secenekler": {
+      "A": "6",
+      "B": "8",
+      "C": "9",
+      "D": "10",
+      "E": "11"
+     },
+     "dogru": "D",
+     "aciklama": "Motor puan sağlam taraftaki en iyi yanıttan alınır: sağ elle ağrıyı lokalize etmek 5 puandır. Ağrıyla göz açma 2 ve uygunsuz cevap 3 ile toplam 10 olur.",
+     "sik_aciklamalari": {
+      "A": "Altı, motor puanın felçli sol taraftan, yani yanıt yok diye 1 alınmasıyla bulunur. Glasgow Koma Skalasında en iyi yanıt puanlandığı için sağ taraftaki lokalizasyon esas alınır.",
+      "B": "Sekiz, motor yanıtın ağrıdan çekme (4) ve sözel yanıtın homurtu (2) gibi değerlendirilmesiyle çıkar. Bu hastada sağ el uyaranın yerine gittiği ve sözcük kurduğu için iki bileşen de daha yüksektir.",
+      "C": "Dokuz, sağ eldeki yanıtın lokalize etme yerine fleksör yanıt (4) sayılmasıyla bulunur. Elini uyaranın yapıldığı yere götürmek ağrıyı lokalize etmektir ve 5 puan alır.",
+      "D": "Ağrıyla göz açma 2, uygunsuz cevap 3 ve sağlam taraftaki lokalize etme 5 puandır. Toplam 10 eder; en iyi yanıt kuralına uyduğu için doğru cevaptır.",
+      "E": "On bir, sözel yanıtın konfüze konuşma (4) olarak alınmasıyla bulunur. Uygunsuz sözcüklerle yanıt veren hasta 3 puan alır, bu nedenle toplam bir eksik olur."
+     },
+     "bilgi": [
+      33,
+      34,
+      37,
+      38
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 30,
+      "alinti": "3-Uygunsuz cevap"
+     }
+    },
+    {
+     "id": "k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim-q26",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Bilinç bozukluğuyla getirilen hasta ağrılı uyarana gözlerini açmıyor, kolları ve bacakları ekstansiyona geliyor ve yalnız anlaşılmaz sesler çıkarıyor. Hastanın Glasgow Koma Skalası puanı kaçtır?",
+     "secenekler": {
+      "A": "3",
+      "B": "4",
+      "C": "5",
+      "D": "6",
+      "E": "7"
+     },
+     "dogru": "C",
+     "aciklama": "Göz açmama 1, deserebre yanıt 2, homurtu 2 puandır ve toplam 5 olur. Ekstansör postürü dekortike sayıp 3 vermek toplamı 6'ya çıkarır.",
+     "sik_aciklamalari": {
+      "A": "Üç, skalanın en düşük puanıdır ve üç bileşende de hiç yanıt olmayan hastaya verilir. Bu hastada ekstansör postür ve ses çıkarma olduğu için toplam daha yüksektir.",
+      "B": "Dört, bileşenlerden yalnız birinde yanıt varmış gibi hesaplanınca bulunur. Bu hastada hem motor hem sözel yanıt bulunduğundan iki bileşen de 1'in üstünde puan alır.",
+      "C": "Göz açmama 1, kollar ve bacaklarda ekstansiyonla giden deserebre yanıt 2, homurtu 2 puandır. Toplam 5 eder; bu nedenle doğru cevaptır.",
+      "D": "Altı, ekstansör yanıtın dekortike gibi 3 puanla sayılmasıyla çıkar. Dekortike yanıtta kollar fleksiyondadır; burada kollar da ekstansiyonda olduğu için yanıt deserebredir.",
+      "E": "Yedi, hem motor yanıtın hem göz bölümünün birer basamak yüksek alınmasıyla bulunur. Ağrıyla bile göz açmayan hastanın göz puanı 1'dir."
+     },
+     "bilgi": [
+      33,
+      34,
+      35,
+      37,
+      38
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 30,
+      "alinti": "1- Açmıyor"
+     }
+    },
+    {
+     "id": "k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim-q27",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Ağrılı uyaranla gözlerini açan, ağrıdan kolunu çeken ve yalnız homurtu şeklinde sesler çıkaran hastanın Glasgow Koma Skalası puanı kaçtır?",
+     "secenekler": {
+      "A": "6",
+      "B": "7",
+      "C": "8",
+      "D": "9",
+      "E": "10"
+     },
+     "dogru": "C",
+     "aciklama": "Ağrıyla göz açma 2, ağrıdan çekme (fleksör yanıt) 4, homurtu 2 puandır; toplam 8 olur. Kolu çekmeyi lokalize etme saymak toplamı 9'a çıkarır.",
+     "sik_aciklamalari": {
+      "A": "Altı, kolu çekme yanıtının dekortike yanıt gibi 2 puan düşük alınmasıyla bulunur. Ağrıdan kaçan amaçlı çekme hareketi fleksör yanıttır ve 4 puan alır.",
+      "B": "Yedi, bir bileşenin bir basamak eksik alınmasıyla bulunur; örneğin fleksör yanıtı dekortike gibi 3 saymak bu sonucu verir. Ağrıdan kolu çekmek 4 puandır.",
+      "C": "Ağrıyla göz açma 2, ağrıdan kolu çekme yani fleksör yanıt 4 ve homurtu 2 puandır. Üç bileşenin toplamı 8 eder; bu yüzden doğru cevaptır.",
+      "D": "Dokuz, kolu çekmenin ağrıyı lokalize etme gibi 5 puan sayılmasıyla bulunur. Lokalizasyonda hasta elini uyaranın yerine götürür; burada yalnız çekme vardır.",
+      "E": "On, hem motor hem sözel bileşenin birer basamak yüksek alınmasıyla bulunur. Homurtu 2 puandır, uygunsuz sözcükler kurmadığı için 3 alamaz."
+     },
+     "bilgi": [
+      33,
+      34,
+      37,
+      38
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 30,
+      "alinti": "4-Fleksör Yanıt"
+     }
+    },
+    {
+     "id": "k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim-q28",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Seslenince gözlerini açan, soruyla ilgisiz uygunsuz sözcükler kullanan ve ağrılı uyarana kollarını dirsekten bükerken bacaklarını geren hastanın Glasgow Koma Skalası puanı kaçtır?",
+     "secenekler": {
+      "A": "8",
+      "B": "9",
+      "C": "10",
+      "D": "11",
+      "E": "12"
+     },
+     "dogru": "B",
+     "aciklama": "Seslenince göz açma 3, uygunsuz cevap 3, dekortike yanıt 3 puandır ve toplam 9 olur. Dekortike postürü fleksör yanıt sayıp 4 vermek toplamı 10'a çıkarır.",
+     "sik_aciklamalari": {
+      "A": "Sekiz, motor yanıtın deserebre gibi 2 puan sayılmasıyla bulunur. Deserebre yanıtta kollar da ekstansiyondadır; burada kollar fleksiyonda olduğu için yanıt dekortikedir.",
+      "B": "Seslenince göz açma 3, uygunsuz cevap 3 ve kollarda fleksiyon ile bacaklarda ekstansiyonla giden dekortike yanıt 3 puandır. Toplam 9 eder ve doğru cevaptır.",
+      "C": "On, dekortike postürün fleksör yanıt gibi 4 puan sayılmasıyla bulunur. Fleksör yanıt ağrıdan kaçan amaçlı bir çekmedir; dekortike postür ise kalıplaşmış anormal fleksiyondur.",
+      "D": "On bir, sözel yanıtın dezoryante konuşma gibi 4 alınması ve motor yanıtın da yükseltilmesiyle bulunur. Soruyla ilgisiz sözcükler uygunsuz cevaptır ve 3 puan alır.",
+      "E": "On iki, göz açmanın spontan kabul edilmesi ve diğer bileşenlerin de yükseltilmesiyle bulunur. Gözünü ancak seslenince açan hastanın göz puanı 3'tür."
+     },
+     "bilgi": [
+      33,
+      34,
+      35,
+      37,
+      38
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 30,
+      "alinti": "3-Dekortike"
+     }
+    },
+    {
+     "id": "k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim-q29",
+     "kazanim": 4,
+     "zorluk": "zor",
+     "soru": "Glasgow Koma Skalası toplamı 11 olan bir hastanın göz puanı 2, sözel puanı 4'tür. Bu hastanın motor yanıtı aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Emre uyma",
+      "B": "Ağrıyı lokalize etme",
+      "C": "Ağrıdan kolu çekme",
+      "D": "Dekortike yanıt",
+      "E": "Deserebre yanıt"
+     },
+     "dogru": "B",
+     "aciklama": "Toplamdan göz ve sözel puanlar çıkarılınca motor puan 5 kalır; 5 puan ağrıyı lokalize etmedir. Hemiplejik hastada bu puan sağlam taraftaki en iyi yanıttan alınır.",
+     "sik_aciklamalari": {
+      "A": "Emre uyma motor bölümün en yüksek basamağıdır ve 6 puandır. Bu hastada toplam 12 olurdu; 11 toplamında motor puan bir basamak aşağıdadır.",
+      "B": "Ağrıyı lokalize etmek, hastanın elini ağrının yapıldığı yere götürmesidir ve 5 puan alır. Göz 2 ve sözel 4 ile birlikte toplam 11 eder; doğru cevap budur.",
+      "C": "Ağrıdan kolu çekmek fleksör yanıttır ve 4 puan alır. Bu motor yanıtla toplam 10 olurdu; verilen toplama ulaşmak için bir puan daha gerekir.",
+      "D": "Dekortike yanıtta ağrıyla kollar fleksiyona, bacaklar ekstansiyona gelir ve 3 puan alır. Bu yanıtla toplam 9 olurdu, verilen değere uymaz.",
+      "E": "Deserebre yanıtta kollar ve bacaklar ekstansiyona gelir, kollar içe döner ve 2 puan alır. Bu yanıtla toplam 8 olurdu; motor puan çok düşük kalır."
+     },
+     "bilgi": [
+      33,
+      34,
+      37,
+      38
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 30,
+      "alinti": "5-Ağrıyı lokalize"
+     }
+    },
+    {
+     "id": "k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim-q45",
+     "kazanim": 4,
+     "zorluk": "kolay",
+     "soru": "Tip 1 diyabetli 34 yaşındaki erkek hasta evinde bilinci bulanık hâlde bulunuyor. Hava yolu, solunum ve dolaşım güvenceye alındıktan sonra ilk yapılması gereken inceleme aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Kraniyal manyetik rezonans",
+      "B": "Lomber ponksiyon",
+      "C": "Elektroensefalografi",
+      "D": "Parmak ucundan kan şekeri",
+      "E": "Tiroid işlev testleri"
+     },
+     "dogru": "D",
+     "aciklama": "İlk aşamada parmak ucundan kan şekeri hemen bakılır, çünkü hipoglisemi gerçek bir acildir. Diyabetli hastada bilinç bozukluğunun nedeni hipoglisemi olabilir ve gecikme kalıcı hasar bırakabilir.",
+     "sik_aciklamalari": {
+      "A": "Manyetik rezonans özellikle posterior fossa lezyonlarını iyi gösterir ama uzun süren bir incelemedir. Diyabetli hastada önce dakikalar içinde düzeltilebilen hipoglisemi dışlanmalıdır.",
+      "B": "Lomber ponksiyonla alınan beyin omurilik sıvısı santral sinir sistemi enfeksiyonunu tanıtır. Kitle dışlanmadan yapılmaz, çünkü herniasyon riski vardır; ilk basamak inceleme bu değildir.",
+      "C": "Elektroensefalografi nonkonvülzif status epileptikus gibi nöbet durumlarını tanıtır. İlk dakikalarda yapılan bir tetkik olmadığı için hipoglisemiyi dışlamanın önüne geçemez ve sonra planlanır.",
+      "D": "Parmak ucundan kan şekeri ölçümü ilk aşamada hemen yapılır ve hipoglisemiyi dakikalar içinde gösterir. Diyabetli hastada hipoglisemi gerçek bir acil olduğu için doğru cevaptır.",
+      "E": "Tiroid işlev testleri miksödem koması ve tiroid fırtınası gibi endokrin nedenleri tanıtır. Bu nedenler ileri basamakta araştırılır; ilk yapılacak inceleme bu değildir."
+     },
+     "bilgi": [
+      14,
+      57
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 10,
+      "alinti": "Stick Kan şekeri (hipoglisemi gerçek bir"
+     }
+    },
+    {
+     "id": "k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim-q51",
+     "kazanim": 4,
+     "zorluk": "zor",
+     "soru": "Bilinç bozukluğu olan hastaya yaklaşımla ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Tanı kesinleşmeden tedaviye başlanmaz",
+      "B": "Nedenlerin çoğu santral sinir sistemine aittir",
+      "C": "Hipoglisemi ilk aşamada kan şekeriyle dışlanır",
+      "D": "Erken tedavi prognozu belirgin değiştirmez",
+      "E": "Görüntüleme bitmeden stabilizasyon yapılmaz"
+     },
+     "dogru": "C",
+     "aciklama": "İlk aşamada parmak ucundan kan şekeri bakılarak hipoglisemi hemen dışlanır. Muayene, stabilizasyon, laboratuvar, görüntüleme ve tedavi eş zamanlı yürür ve erken tedavi prognozu iyileştirir.",
+     "sik_aciklamalari": {
+      "A": "Bilinç bozukluğunda muayene ile birlikte stabilizasyon, laboratuvar, görüntüleme ve tedavi eş zamanlı planlanır. Tanı beklenirken tedaviyi ertelemek zaman kaybettirir ve kalıcı hasar riskini artırır.",
+      "B": "Bilinç değişikliklerinin yüzde 85'i metabolik ve sistemik, yalnız yüzde 15'i santral sinir sistemine ait nedenlerdendir. Çoğunluk beyin dışı nedenlerdir.",
+      "C": "Parmak ucundan kan şekeri ilk aşamada hemen bakılır, çünkü hipoglisemi gerçek bir acildir. Ayırıcı tanıda bu adımın atlanmaması gerektiği için doğru cevaptır.",
+      "D": "Etiyolojiye yönelik tetkik ve erken tedavi prognozu iyi yönde etkiler. Hızlı ve ekip hâlinde yaklaşımın önemli olması bu yüzdendir; ifade bu bilginin tersini söyler.",
+      "E": "İlk müdahalede oksijen, iki geniş damar yolu, elektrokardiyografi ve kardiyak monitörizasyon hemen sağlanır. Stabilizasyon görüntülemeyle eş zamanlı yürür, onu beklemez."
+     },
+     "bilgi": [
+      2,
+      11,
+      14,
+      76
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 10,
+      "alinti": "Stick Kan şekeri (hipoglisemi gerçek bir"
+     }
+    },
+    {
+     "id": "k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim-q53",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Alkol kokan ve bilinç bozukluğuyla getirilen hastaya yaklaşımla ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Bilinç bozukluğu alkole bağlanıp görüntüleme yapılmaz",
+      "B": "Altta subaraknoid ya da subdural kanama araştırılır",
+      "C": "Kan şekeri ölçümüne gerek yoktur",
+      "D": "Saçlı deri muayenesi gereksizdir",
+      "E": "Yalnız kan alkol düzeyi istenir"
+     },
+     "dogru": "B",
+     "aciklama": "Koma nedeni alkol gibi görünse de altta subaraknoid ya da subdural kanama gibi başka bir etiyoloji aranmalıdır. Kronik alkolikte hipoglisemi de koma nedeni olabileceği için kan şekeri ölçülür.",
+     "sik_aciklamalari": {
+      "A": "Alkol kokusu tanıyı kolaylaştırır gibi görünür ama altta yatan kafa içi kanamayı gizleyebilir. Bu yüzden görüntüleme ihmal edilmez; ifade yanlıştır.",
+      "B": "Alkol kokan komalı hastada altta subaraknoid ya da subdural kanama olabileceği için başka etiyoloji mutlaka araştırılır. Bu yaklaşım doğrudur ve doğru cevaptır.",
+      "C": "Kronik alkolizmde bilinç bozukluğunun nedeni hipoglisemi olabilir ve bu durum gerçek bir acildir. Kan şekeri bu hastada da ilk bakılan testlerdendir.",
+      "D": "Saçlı deri ayrıntılı muayene edilir, çünkü küçük ve gizli travmalar sıklıkla atlanır. Alkollü hastada düşmeye bağlı gizli travma özellikle önemlidir.",
+      "E": "Kan alkol düzeyi tek başına komayı açıklamaya yetmez. Bilinci kapalı hastada kan gazları, glukoz, elektrolitler ve toksikolojik tarama birlikte istenir."
+     },
+     "bilgi": [
+      29,
+      30,
+      57
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 18,
+      "alinti": "Koma nedeni alkol ?"
+     }
+    },
+    {
+     "id": "k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim-q54",
+     "kazanim": 4,
+     "zorluk": "zor",
+     "soru": "Bilinç bozukluğuyla getirilen hastada fizik muayene bulgusu ile düşündürdüğü durum eşleştirmelerinden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Ateş – hipoglisemi",
+      "B": "Dilde ısırık – nöbet",
+      "C": "Saçlı deride küçük yara – metabolik koma",
+      "D": "Alkol kokusu – kanamanın dışlanması",
+      "E": "Tek taraflı dilate pupil – opiat zehirlenmesi"
+     },
+     "dogru": "B",
+     "aciklama": "Konfüze hastada dilde ısırık nöbeti, yani postiktal durumu düşündürür. Ateş sistemik enfeksiyonu, saçlı derideki küçük yara gizli travmayı, tek taraflı dilate pupil herniasyonu düşündürür.",
+     "sik_aciklamalari": {
+      "A": "Ateş sistemik enfeksiyonu düşündürür; ateşli komada santral sinir sistemi enfeksiyonu ve sepsis dışlanmalıdır. Hipoglisemi ise ateşle değil parmak ucu kan şekeri ölçümüyle tanınır.",
+      "B": "Dilde ısırık, konfüze hastada nöbet sonrası dönemi, yani postiktal durumu düşündürür. Bu bulgu bilinç bozukluğunun nedeni olarak nöbeti öne çıkardığı için eşleştirme doğrudur.",
+      "C": "Saçlı deride küçük yara sıklıkla atlanan gizli travmanın izi olabilir ve posttravmatik nedeni, örneğin subdural kanamayı düşündürür. Metabolik komayla ilişkili değildir.",
+      "D": "Alkol kokusu kanamayı dışlatmaz; tersine altta yatan subaraknoid ya da subdural kanamayı gizleyebilir. Bu yüzden alkollü komalı hastada başka etiyoloji mutlaka aranır.",
+      "E": "Tek taraflı dilate ve fikse pupil üçüncü kraniyal sinir basısını, yani unkal herniasyonu düşündürür. Opiat intoksikasyonu ise iki taraflı ileri miyotik pupil yapar."
+     },
+     "bilgi": [
+      27,
+      28,
+      29,
+      30,
+      42,
+      45
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 18,
+      "alinti": "Dilde ısırık ? NÖBET !!!"
      }
     }
    ],
@@ -509,6 +1375,381 @@
       "sayfa": 40,
       "gorsel": "Küme solunumu ve ataksik solunum traseleri ile koronal MR üzerinde düzey çizgileri"
      }
+    },
+    {
+     "id": "k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim-q30",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "65 yaşındaki kadın hasta gün içinde sürekli uyuklama yakınmasıyla getiriliyor. Adıyla seslenildiğinde hemen uyanıyor, nerede olduğunu biliyor ve sorulara uygun yanıt veriyor; konuşma bitince kısa sürede yeniden uyuyor. Bu hastanın bilinç durumu hangisidir?",
+     "secenekler": {
+      "A": "Stupor",
+      "B": "Koma",
+      "C": "Deliryum",
+      "D": "Vejetatif durum",
+      "E": "Somnolans"
+     },
+     "dogru": "E",
+     "aciklama": "Seslenmekle çabuk uyanan, uyandığında farkında olan ve uyaran kesilince yeniden uykuya meyleden hasta somnolandır. Stuporda hasta ancak zorlukla uyanır ve farkındalığı azalmıştır.",
+     "sik_aciklamalari": {
+      "A": "Stuporda hasta ancak zorlukla, güçlü uyaranla uyandırılabilir ve farkındalığı azalmıştır. Bu hasta seslenmekle hemen uyanıp yönelimini koruduğu için tablo stupordan daha hafiftir.",
+      "B": "Koma, hastanın hiçbir uyaranla, ağrıyla bile uyandırılamadığı ve farkında olmadığı düzeydir. Adıyla seslenince hemen uyanıp soruları yanıtlayan bu hasta komada olamaz.",
+      "C": "Deliryum gelip geçici, dalgalanan bir dikkat ve bilinç bozukluğudur ve davranış bozukluğu eşlik eder. Bu hastada ajitasyon ya da uygunsuz davranış yoktur; tek sorun uykuya meyildir.",
+      "D": "Vejetatif durumda hasta uyandırılabilir ama çevresinin farkında değildir; çevreyle ilişki kurmaz. Bu hasta nerede olduğunu bilip uygun yanıt verdiği için farkındalığı korunmuştur.",
+      "E": "Somnolan hasta çabuk uyandırılabilir ve farkındadır; uyaran kesilince yeniden uykuya dalmaya meyillidir. Tarif edilen tablo budur, bu yüzden doğru cevaptır."
+     },
+     "bilgi": [
+      6,
+      7,
+      8
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 6,
+      "alinti": "Somnolan: çabuk uyandırılabilir ve farkında"
+     }
+    },
+    {
+     "id": "k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim-q31",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Somnolan hastayı stupordaki hastadan ayıran özellik aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Çabuk uyandırılması ve farkında olması",
+      "B": "Gözlerinin açık olup farkında olmaması",
+      "C": "Hiçbir uyaranla uyandırılamaması",
+      "D": "Yalnız güçlü uyaranla uyandırılabilmesi",
+      "E": "Beyin sapı reflekslerinin kaybolması"
+     },
+     "dogru": "A",
+     "aciklama": "Somnolan hasta çabuk uyandırılır ve farkındadır; stuporda hasta zorlukla uyandırılır ve farkındalık azalmıştır. İki tablo uyandırılabilirlik ve farkındalık ölçütleriyle ayrılır.",
+     "sik_aciklamalari": {
+      "A": "Somnolan hasta seslenmekle bile çabuk uyanır ve uyandığında çevresinin farkındadır. Stuporda ise uyandırmak güçtür ve farkındalık azalmıştır; ayırt edici özellik budur.",
+      "B": "Gözlerin açık olup çevrenin farkında olunmaması vejetatif durumu tanımlar; uyanıklık sürer, farkındalık kaybolur. Somnolan hasta farkında olduğu için bu özellik onu stupordan ayırmaz.",
+      "C": "Hiçbir uyaranla uyandırılamamak komanın ölçütüdür ve bilinç bozukluğunun en ağır düzeyini tanımlar. Somnolans ve stupor uyandırılabilen düzeyler olduğu için bu özellik ikisini ayıramaz.",
+      "D": "Yalnız güçlü uyaranla uyandırılabilmek stupordaki hastanın özelliğidir. Somnolan hasta hafif uyaranla çabuk uyandığı için bu özellik somnolansı değil stuporu tanımlar.",
+      "E": "Beyin sapı reflekslerinin kaybı beyin ölümünde görülen geri dönüşsüz bir bulgudur. Somnolans ve stupor bilinç düzeyindeki farkla ayrılır, beyin sapı refleksleriyle ayrılmaz."
+     },
+     "bilgi": [
+      6,
+      7
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 6,
+      "alinti": "Stupor: zorlukla uyandırılabiliyor ve farkındalık"
+     }
+    },
+    {
+     "id": "k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim-q32",
+     "kazanim": 5,
+     "zorluk": "kolay",
+     "soru": "Hiçbir uyaranla uyandırılamayan ve çevresinin farkında olmayan hastanın bilinç durumu aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Somnolans",
+      "B": "Stupor",
+      "C": "Vejetatif durum",
+      "D": "Konfüzyon",
+      "E": "Koma"
+     },
+     "dogru": "E",
+     "aciklama": "Koma, hastanın uyandırılamadığı ve farkında olmadığı bilinç düzeyidir. Vejetatif durumda hasta farkında değildir ama uyandırılabilir; ayırt edici nokta budur.",
+     "sik_aciklamalari": {
+      "A": "Somnolan hasta çabuk uyandırılır, uyandığında farkındadır ve uyaran kesilince yeniden uykuya meyleder. Uyandırılamayan bir hasta bu tanıma uymaz; somnolans en hafif bilinç bozukluğudur.",
+      "B": "Stuporda hasta zorlukla da olsa, örneğin ağrılı uyaranla uyandırılabilir ve farkındalığı azalmıştır. Hiçbir uyaranla uyandırılamayan hastanın durumu stupordan daha ağırdır.",
+      "C": "Vejetatif durumda hasta farkında değildir ama uyandırılabilir; uyanıklık korunmuş, farkındalık kaybolmuştur. Bu hasta hiçbir uyaranla uyandırılamadığı için tablo vejetatif durum olamaz.",
+      "D": "Konfüzyon, uyanık hastada yön bulma ve düşünmenin bozulduğu tablodur; hasta konuşur ama yanlış yanıtlar verir. Uyandırılamayan hastada bu değerlendirme yapılamaz.",
+      "E": "Koma, hiçbir uyaranla uyandırılamayan ve çevresinin farkında olmayan hastanın bilinç düzeyidir. Tarif edilen iki ölçüt de komaya uyduğu için doğru cevaptır."
+     },
+     "bilgi": [
+      7
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 6,
+      "alinti": "Koma: uyandırılamıyor ve farkında değil"
+     }
+    },
+    {
+     "id": "k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim-q33",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Bilinç düzeyi ile tanımı eşleştirmelerinden hangisi YANLIŞTIR?",
+     "secenekler": {
+      "A": "Bilinç açık – uyanık ve farkında",
+      "B": "Somnolans – çabuk uyandırılabilir ve farkında",
+      "C": "Vejetatif durum – uyandırılamaz ve farkında değil",
+      "D": "Stupor – zorlukla uyandırılabilir, farkındalığı azalmış",
+      "E": "Koma – uyandırılamaz ve farkında değil"
+     },
+     "dogru": "C",
+     "aciklama": "Vejetatif durumda hasta uyandırılabilir ama farkında değildir. Uyandırılamamak ve farkında olmamak komanın tanımıdır; iki tablo uyandırılabilirlikle ayrılır.",
+     "sik_aciklamalari": {
+      "A": "Bilinç açık hasta uyanıktır ve çevresinin farkındadır; iki ölçüt de korunmuştur. Bu eşleştirme tanıma uyar ve bilinç düzeylerinin normal ucunu doğru tarif eder.",
+      "B": "Somnolan hasta çabuk uyandırılabilir ve farkındadır; uyaran kesilince yeniden uykuya meyleder. Letarji de aynı tabloyu anlatır ve bu eşleştirme doğrudur.",
+      "C": "Vejetatif durumda hasta uyandırılabilir, uyku ve uyanıklık döngüsü sürer ama farkındalık yoktur. Eşleştirme uyanıklığı da kaybolmuş gösterdiği için yanlıştır ve doğru cevaptır.",
+      "D": "Stuporda hasta ancak zorlukla, güçlü uyaranla uyandırılır ve farkındalığı azalmıştır. Bu eşleştirme tanıma uyar ve somnolansla koma arasındaki düzeyi tarif eder.",
+      "E": "Komada hasta hiçbir uyaranla, ağrıyla bile uyandırılamaz ve farkında değildir. Koma bu iki ölçütün birlikte kaybıdır ve buradaki eşleştirme doğrudur."
+     },
+     "bilgi": [
+      6,
+      7,
+      8
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 6,
+      "alinti": "Vejetatif durum: uyandırılıyor ancak farkında"
+     }
+    },
+    {
+     "id": "k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim-q34",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Deliryum ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Gelip geçici, dalgalanan bir bilinç bozukluğudur",
+      "B": "Hasta hiçbir uyaranla uyandırılamaz",
+      "C": "Bellek bozukluğu yıllar içinde yavaşça gelişir",
+      "D": "Beyin sapı refleksleri geri dönüşsüz kaybolur",
+      "E": "Hasta uyanıktır ama hiçbir şeyin farkında değildir"
+     },
+     "dogru": "A",
+     "aciklama": "Deliryum gelip geçici, dalgalanan bir dikkat ve bilinç bozukluğudur; davranış bozukluğu eşlik eder, hasta çoğu kez ajitedir. Yavaş gelişen bellek bozukluğu demansı tanımlar.",
+     "sik_aciklamalari": {
+      "A": "Deliryum gelip geçici, gün içinde dalgalanan bir dikkat ve bilinç bozukluğudur ve davranış bozukluğu eşlik eder. Tanımı doğru veren ifade budur.",
+      "B": "Hiçbir uyaranla uyandırılamamak komanın ölçütüdür ve en ağır bilinç düzeyini anlatır. Deliryumdaki hasta ise uyanıktır; dikkati ve bilinci dalgalanır, çoğu kez ajite ve huzursuzdur.",
+      "C": "Yıllar içinde yavaş gelişen bellek ve bilişsel işlev bozukluğu demansın özelliğidir; demansta bilinç açıktır. Deliryum ise ani başlar ve gün içinde dalgalanır.",
+      "D": "Beyin sapı reflekslerinin geri dönüşsüz kaybı beyin ölümünü tanımlar ve bilinç bozukluğu terimlerinin son basamağıdır. Deliryum gelip geçici bir tablodur ve beyin sapı işlevleri korunur.",
+      "E": "Uyanık olup çevrenin hiç farkında olmamak vejetatif durumu tanımlar; uyku ve uyanıklık döngüsü sürer. Deliryumda farkındalık tümüyle kaybolmaz, dikkat ve bilinç düzeyi dalgalanır."
+     },
+     "bilgi": [
+      9
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 7,
+      "alinti": "Deliryum"
+     }
+    },
+    {
+     "id": "k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim-q35",
+     "kazanim": 5,
+     "zorluk": "zor",
+     "soru": "Sepsis tanısıyla izlenen 80 yaşındaki erkek hasta gün içinde kimi saatlerde ajite olup bağırıyor ve damar yolunu çekmeye çalışıyor, kimi saatlerde ise durgunlaşıyor. Tablo birkaç gündür sürüyor ve saatler içinde değişiyor. Bu hastadaki bilinç bozukluğu hangisidir?",
+     "secenekler": {
+      "A": "Demans",
+      "B": "Stupor",
+      "C": "Somnolans",
+      "D": "Deliryum",
+      "E": "Koma"
+     },
+     "dogru": "D",
+     "aciklama": "Gelip geçici, saatler içinde dalgalanan ve ajitasyon gibi davranış bozukluğuyla giden tablo deliryumdur. Sepsis, santral sinir sistemini yaygın etkileyerek bilinç bozukluğu yapan sistemik nedenlerdendir.",
+     "sik_aciklamalari": {
+      "A": "Demansta bilinç açıktır; bellek ve diğer bilişsel işlevler yavaş ve ilerleyici biçimde bozulur. Günler içinde başlayıp saatler içinde dalgalanan ajitasyon demansı değil deliryumu düşündürür.",
+      "B": "Stuporda hasta ancak güçlü uyaranla uyandırılabilir ve farkındalığı azalmıştır. Ajite olup bağıran, damar yolunu çeken bu hasta uyanıktır; tablo stupora uymaz.",
+      "C": "Somnolan hasta çabuk uyandırılır ve farkındadır, ama uyaran kesilince yeniden uykuya meyleder. Bu hastada ön planda uykuya meyil değil, dalgalanan ajitasyon vardır.",
+      "D": "Deliryum gelip geçici, dalgalanan bir dikkat ve bilinç bozukluğudur; hasta çoğu kez ajite olur, bazen durgunlaşır. Sepsisli hastadaki bu tablo deliryuma uyduğu için doğru cevaptır.",
+      "E": "Komada hasta hiçbir uyaranla uyandırılamaz ve çevresinin farkında değildir; kendiliğinden amaçlı hareket yapmaz. Bağıran ve damar yolunu çekmeye çalışan bir hasta bu tanıma uymaz."
+     },
+     "bilgi": [
+      9,
+      17
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 7,
+      "alinti": "Deliryum"
+     }
+    },
+    {
+     "id": "k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim-q36",
+     "kazanim": 5,
+     "zorluk": "kolay",
+     "soru": "Aşağıdaki bilinç bozukluğu terimlerinden hangisi somnolans ile aynı tabloyu anlatır?",
+     "secenekler": {
+      "A": "Stupor",
+      "B": "Koma",
+      "C": "Konfüzyon",
+      "D": "Deliryum",
+      "E": "Letarji"
+     },
+     "dogru": "E",
+     "aciklama": "Letarji ve somnolans aynı başlıkta verilir ve aynı tabloyu anlatır: hasta sözel uyaranla uyanır, uyaran kesilince yeniden uykuya meyleder. Bu tablo stuporla karıştırılmamalıdır.",
+     "sik_aciklamalari": {
+      "A": "Stuporda hasta zorlukla uyandırılır ve farkındalığı azalmıştır. Somnolan hasta ise çabuk uyanır ve farkındadır; iki terim farklı ağırlıktaki tabloları anlatır.",
+      "B": "Komada hasta hiçbir uyaranla uyandırılamaz ve farkında değildir. Somnolan hasta çabuk uyandığı için iki terim bilinç bozukluğunun karşı uçlarını anlatır.",
+      "C": "Konfüzyon, uyanık hastada yön bulma ve düşünmenin bozulmasıdır; hasta isimleri ve saatleri karıştırır. Ön planda uykuya meyil olmadığı için somnolansla aynı değildir.",
+      "D": "Deliryum gelip geçici, dalgalanan bir dikkat ve bilinç bozukluğudur ve çoğu kez ajitasyonla gider. Uykuya meyille tanımlanan somnolanstan bu yönüyle ayrılır.",
+      "E": "Letarji, somnolansla aynı başlıkta verilen terimdir; hasta uyuklar ama sözel uyaranla kolay uyanır ve farkındadır. İki ad aynı tabloyu anlattığı için doğru cevaptır."
+     },
+     "bilgi": [
+      6,
+      9
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 7,
+      "alinti": "Letarji- Somnolans"
+     }
+    },
+    {
+     "id": "k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim-q37",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Aşağıdakilerden hangisi bilinç bozukluğunu tanımlamak için kullanılan terimlerden biri değildir?",
+     "secenekler": {
+      "A": "Konfüzyon",
+      "B": "Demans",
+      "C": "Beyin ölümü",
+      "D": "Afazi",
+      "E": "Deliryum"
+     },
+     "dogru": "D",
+     "aciklama": "Bilinç bozukluğu terimleri konfüzyon, letarji-somnolans, stupor, koma, deliryum, demans ve beyin ölümüdür. Afazi ise bilinç değil dil bozukluğudur; hasta uyanıkken konuşmayı anlama ya da üretme bozulur.",
+     "sik_aciklamalari": {
+      "A": "Konfüzyon, uyanık hastada yön bulma ve düşünmenin bozulduğu tablodur ve bilinç bozukluğu terimleri arasında yer alır. Bu yüzden aranan terim bu değildir.",
+      "B": "Demans, bellek ve diğer bilişsel işlevlerin yavaş yavaş bozulduğu tablodur ve bilinç bozukluğu terimleri listesinde yer alır. Aynı zamanda santral sinir sistemine ait nedenler arasında da sayılır.",
+      "C": "Beyin ölümü, beyin sapı dahil tüm beyin işlevlerinin geri dönüşsüz kaybıdır ve bilinç bozukluğu terimleri listesinin son basamağıdır. Listede yer aldığı için cevap bu değildir.",
+      "D": "Afazi, dili anlama ya da üretme yeteneğinin bozulduğu bir dil bozukluğudur ve sol hemisfer lezyonunu düşündürür. Bilinç düzeyini tanımlayan terimlerden biri olmadığı için doğru cevaptır.",
+      "E": "Deliryum, gelip geçici, dalgalanan bir dikkat ve bilinç bozukluğudur ve bilinç bozukluğu terimleri arasında sayılır. Bu nedenle aranan terim değildir."
+     },
+     "bilgi": [
+      9
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 7,
+      "alinti": "Bilinç Bozuklukları: Tanımlar"
+     }
+    },
+    {
+     "id": "k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim-q38",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Bilinç bozukluğuyla getirilen hasta seslenmekle ve sarsmakla uyanmıyor; tırnak yatağına güçlü bastırıldığında kısa süre gözlerini açıyor, ancak çevresinin farkında görünmüyor ve uyaran kesilince yeniden kapanıyor. Bu hastanın bilinç düzeyi hangisidir?",
+     "secenekler": {
+      "A": "Somnolans",
+      "B": "Stupor",
+      "C": "Koma",
+      "D": "Bilinç açık",
+      "E": "Letarji"
+     },
+     "dogru": "B",
+     "aciklama": "Yalnız güçlü ağrılı uyaranla zorlukla uyanan ve farkındalığı azalmış hasta stupordadır. Somnolan hasta seslenmekle çabuk uyanır, komadaki hasta ağrıyla da uyanmaz.",
+     "sik_aciklamalari": {
+      "A": "Somnolan hasta seslenmekle bile çabuk uyanır ve farkındadır; letarji de aynı tabloyu anlatır. Sesle ve sarsmakla uyanmayan bu hasta somnolanstan daha ağır bir düzeydedir.",
+      "B": "Stuporda hasta zorlukla, çoğu kez ancak ağrılı uyaranla uyandırılabilir ve farkındalığı azalmıştır. Tarif edilen hasta bu tanıma uyduğu için doğru cevaptır.",
+      "C": "Koma, bilinç bozukluğunun en ağır düzeyidir ve hasta ağrılı uyaranla bile uyanamaz. Bu hasta güçlü ağrılı uyaranla kısa süre gözünü açtığı için komada sayılmaz.",
+      "D": "Bilinç açık hasta uyanıktır ve çevresinin farkındadır. Ancak ağrılı uyaranla kısa süre uyanabilen bu hasta için bu düzey hiç uygun değildir.",
+      "E": "Letarji somnolansla aynı tabloyu anlatır: hasta sözel uyaranla kolayca uyanır. Sesle uyandırılamayan bu hasta letarjiden daha ağır bir bilinç bozukluğundadır."
+     },
+     "bilgi": [
+      6,
+      7
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 6,
+      "alinti": "Stupor: zorlukla uyandırılabiliyor ve farkındalık"
+     }
+    },
+    {
+     "id": "k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim-q39",
+     "kazanim": 5,
+     "zorluk": "zor",
+     "soru": "Bilinç düzeyleriyle ilgili aşağıdaki ifadelerden hangileri doğrudur?\nI. Somnolan hasta çabuk uyandırılır ve farkındadır.\nII. Stuporda hastanın farkındalığı tam olarak korunmuştur.\nIII. Vejetatif durumdaki hasta uyandırılabilir ancak farkında değildir.\nIV. Komadaki hasta uyandırılamaz.",
+     "secenekler": {
+      "A": "I ve II",
+      "B": "II ve III",
+      "C": "II, III ve IV",
+      "D": "I ve IV",
+      "E": "I, III ve IV"
+     },
+     "dogru": "E",
+     "aciklama": "Somnolans, vejetatif durum ve koma tanımları doğrudur. Stuporda ise hasta zorlukla uyandırılır ve farkındalığı azalmıştır; bu yüzden ikinci ifade yanlıştır.",
+     "sik_aciklamalari": {
+      "A": "Birinci ifade doğrudur ama ikinci ifade yanlıştır, çünkü stuporda farkındalık azalmıştır. Ayrıca doğru olan üçüncü ve dördüncü ifadeler bu seçenekte yer almaz.",
+      "B": "Üçüncü ifade doğrudur: vejetatif durumdaki hasta uyandırılabilir ama farkında değildir. Ancak stuporda farkındalık azaldığı için ikinci ifade yanlıştır ve bu seçenek kabul edilemez.",
+      "C": "Üçüncü ve dördüncü ifadeler doğrudur. Ancak stuporda hastanın farkındalığı azalmış olduğundan ikinci ifade yanlıştır ve bu seçenek doğru olan birinci ifadeyi de dışarıda bırakır.",
+      "D": "Birinci ve dördüncü ifadeler doğrudur ama seçenek eksiktir. Vejetatif durumda hastanın uyandırılabildiğini ve farkında olmadığını söyleyen üçüncü ifade de doğru olduğu için listeye girmelidir.",
+      "E": "Birinci, üçüncü ve dördüncü ifadeler bilinç düzeylerinin tanımlarına uyar. Stuporda farkındalık azaldığı için ikinci ifade dışarıda kalır; doğru seçenek budur."
+     },
+     "bilgi": [
+      6,
+      7,
+      8
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 6,
+      "alinti": "Vejetatif durum: uyandırılıyor ancak farkında"
+     }
+    },
+    {
+     "id": "k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim-q40",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Komadaki bir hastanın izleminde ağrılı uyarana motor yanıtın fleksör postürden ekstansör postüre dönmesi neyi gösterir?",
+     "secenekler": {
+      "A": "Lezyonun beyin sapında aşağı ilerlediğini",
+      "B": "Metabolik nedenin düzelmeye başladığını",
+      "C": "Lezyonun tek hemisferle sınırlı kaldığını",
+      "D": "Hastanın bilincinin açılmaya başladığını",
+      "E": "Tablonun psikojen yanıtsızlık olduğunu"
+     },
+     "dogru": "A",
+     "aciklama": "Hemisferik lezyonda karşı tarafta dekortike yanıt, üst pontin hasarda ise ekstansör (deserebre) postür görülür. Yanıtın fleksiyondan ekstansiyona dönmesi lezyonun beyin sapında aşağı indiğini gösterir.",
+     "sik_aciklamalari": {
+      "A": "Motor yanıt lezyonun düzeyini gösterir: hemisferik lezyonda dekortike, üst pontin hasarda deserebre postür görülür. Fleksiyondan ekstansiyona geçiş lezyonun beyin sapında aşağı indiğini gösterdiği için doğru cevaptır.",
+      "B": "Metabolik nedenin düzelmesi bilinç düzeyinin ve yanıtların iyileşmesiyle izlenir. Ekstansör postüre geçiş ise kötüleşmeyi gösterir ve motor puanı 3'ten 2'ye düşürür.",
+      "C": "Tek hemisferle sınırlı lezyon karşı tarafta hemiparezi ve dekortike yanıt yapar. Ekstansör postür beyin sapı tutulumunu gösterir; lezyon artık hemisferle sınırlı değildir.",
+      "D": "Bilincin açılması ağrıyı lokalize etmek ya da emre uymak gibi daha üst düzey yanıtlarla anlaşılır. Ekstansör postür motor yanıtın en alt basamaklarından biridir.",
+      "E": "Psikojen yanıtsızlıkta bilinç gerçekte kapalı değildir; göz kapakları açılmaya direnir ve refleksler normaldir. Kalıplaşmış ekstansör postür ise organik beyin sapı tutulumunu gösterir."
+     },
+     "bilgi": [
+      36,
+      55,
+      56
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 28,
+      "alinti": "Motor yanıtlar: Lezyon Lokalizasyonu"
+     }
+    },
+    {
+     "id": "k2-02-bilinc-bozuklugu-olan-hastaya-yaklasim-q41",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Mezensefalon ve üst pons düzeyinde lezyonu olan komadaki hastada beklenen solunum şekli aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Cheyne-Stokes solunumu",
+      "B": "Santral nörojenik hiperventilasyon",
+      "C": "Apnestik solunum",
+      "D": "Küme solunumu",
+      "E": "Ataksik solunum"
+     },
+     "dogru": "B",
+     "aciklama": "Mezensefalon ve üst pons lezyonunda sürekli, hızlı ve derin bir solunum olan santral nörojenik hiperventilasyon görülür. Apnestik solunum pons, küme solunumu alt pons, ataksik solunum medulla lezyonunu gösterir.",
+     "sik_aciklamalari": {
+      "A": "Cheyne-Stokes solunumunda solunum giderek derinleşir, yüzeyselleşir ve durur; bu döngü tekrarlar. İki taraflı hemisfer ya da diensefalon tutulumunda görülür ve mezensefalondan daha üst bir düzeyi gösterir.",
+      "B": "Santral nörojenik hiperventilasyon sürekli, hızlı ve derin bir solunumdur. Mezensefalon ve üst pons lezyonunda görüldüğü için bu düzeydeki lezyonda beklenen şekildir ve doğru cevaptır.",
+      "C": "Apnestik solunumda her inspiryumun sonunda uzun bir duraklama olur. Pons düzeyindeki lezyonu düşündürür; mezensefalon ve üst pons lezyonunda beklenen solunum şekli bu değildir.",
+      "D": "Küme solunumunda birbirini izleyen solunum kümelerinin ardından apne gelir. Alt pons lezyonunu gösterir ve mezensefalondan daha aşağıdaki bir düzeye aittir.",
+      "E": "Ataksik solunumda ritim ve derinlik tümüyle düzensizdir ve tablo apneye ilerleyebilir. Medulla lezyonunu gösterir; beyin sapının en kaudal düzeyinin solunum şeklidir."
+     },
+     "bilgi": [
+      51,
+      52,
+      53,
+      54
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 40,
+      "alinti": "Santral nörojenik hiperventilasyon"
+     }
     }
    ],
    "ilgili_cikmis": [
@@ -527,5 +1768,5 @@
    ]
   }
  ],
- "soru_sayisi": 15
+ "soru_sayisi": 54
 }

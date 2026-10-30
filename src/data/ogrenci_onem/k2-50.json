@@ -1,0 +1,358 @@
+{
+ "ders": "k2-50",
+ "kod": "2s16",
+ "brans": "Psikiyatri",
+ "konu": "Dışa Atım Bozuklukları",
+ "kaynak": "Geçmiş yıl (2025-26) öğrenci derleme notu: psk3.2",
+ "y25": {
+  "key": "y25-k2-50-disa-atim-bozukluklari",
+  "sayfalar": [
+   2,
+   4,
+   9,
+   12
+  ]
+ },
+ "sayac": {
+  "birim": 4,
+  "A": 2,
+  "B": 0,
+  "C": 2,
+  "ogrenci_sorusu": 1,
+  "banka": 5,
+  "banka_kapsandi": 3
+ },
+ "birimler": [
+  {
+   "id": "psk-s19-b08",
+   "pdf": "psk",
+   "sayfa": 19,
+   "bolge": "r1c2+r2c2",
+   "tur": "slayt",
+   "baslik": "Primer/sekonder enürezis, nokturna/diürna/mikst tip",
+   "metin": "Primer enürezis: %80'i vakaların primer tipte\nSekonder enürezis: Sekonder enürezis'de ek psikiyatrik sorun görülme olasılığı daha fazladır. En az 6 aylık kontinans ardından ortaya çıkar.\nEnürezis nokturna\nEnürezis diürna (yalnızca gündüzleri)\nMikst tip enürezis (continua)\nDiürnal ve mikst tipte organik patoloji görülme riski fazladır!!",
+   "el_yazisi": [
+    {
+     "metin": "patoloji görülme riski ↑",
+     "hedef": "Enürezis diürna ve mikst tip enürezis (ayraçla)",
+     "guven": "yuksek",
+     "alternatif": ""
+    }
+   ],
+   "isaretler": [
+    {
+     "tur": "sari",
+     "hedef": "%80'i vakaların primer tipte"
+    },
+    {
+     "tur": "sari",
+     "hedef": "Sekonder enürezis'de ek psikiyatrik sorun görülme olasılığı daha fazladır"
+    },
+    {
+     "tur": "kutu",
+     "hedef": "Enürezis diürna + Mikst tip enürezis (kırmızı süslü ayraç)"
+    },
+    {
+     "tur": "sari",
+     "hedef": "yalnızca gündüzleri"
+    },
+    {
+     "tur": "sari",
+     "hedef": "Diürnal ve mikst tipte organik patoloji görülme riski fazladır!!"
+    }
+   ],
+   "sinyal": [
+    "cikmis",
+    "el_onemli",
+    "sari"
+   ],
+   "y25": {
+    "key": "y25-k2-50-disa-atim-bozukluklari",
+    "sayfa": 4
+   },
+   "y26": null,
+   "duzeltme": [
+    {
+     "ham": "enuresis'de",
+     "dogru": "enürezis'te",
+     "gerekce": "Yazım."
+    }
+   ],
+   "not_": null,
+   "ogrenci_sorulari": [
+    "psk-s19-b07"
+   ],
+   "banka_cikmis": [
+    "195a76703179",
+    "past-q-KURUL_2_C_IKMIS__3-62"
+   ],
+   "puan": 93,
+   "oncelik": "A",
+   "vurgulu": [
+    "%80'i vakaların primer tipte",
+    "Diürnal ve mikst tipte organik patoloji görülme riski fazladır!!",
+    "Enürezis diürna + Mikst tip enürezis (kırmızı süslü ayraç)",
+    "Sekonder enürezis'de ek psikiyatrik sorun görülme olasılığı daha fazladır",
+    "yalnızca gündüzleri"
+   ]
+  },
+  {
+   "id": "psk-s19-b06",
+   "pdf": "psk",
+   "sayfa": 19,
+   "bolge": "r1c2",
+   "tur": "slayt",
+   "baslik": "Dışa Atım Bozuklukları – ENÜREZİS: yaşa göre sıklık ve tanı ölçütleri",
+   "metin": "2 yaşında çocukların %82'si enüretik\n3 yaşında çocukların %49'u enüretik\n4 yaşında çocukların %26'sı enüretik\n5 yaşında çocukların %7'si enüretik\n12 yaşında çocukların %2'si enüretik\n[s03] Erkek/kız oranı 2/1\nTakvim veya mental yaşı en az 5 olacak\nHaftada en az 2 kez enürezis yakınması\nveya sıklık önemli olmadan, bu durum nedeniyle belirgin sosyal ve psikolojik sıkıntı doğuracak\nBirbirini takip eden 3 ay boyunca ortaya çıkacak",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "sari",
+     "hedef": "2 yaşında çocukların %82'si enüretik"
+    },
+    {
+     "tur": "daire",
+     "hedef": "%82'si"
+    },
+    {
+     "tur": "sari",
+     "hedef": "Erkek/kız oranı 2/1"
+    },
+    {
+     "tur": "sari",
+     "hedef": "Takvim veya mental yaşı en az 5 olacak"
+    },
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "Takvim veya mental yaşı en az 5 olacak"
+    },
+    {
+     "tur": "sari",
+     "hedef": "Haftada en az 2 kez enüresis yakınması"
+    },
+    {
+     "tur": "kirmizi_cizgi",
+     "hedef": "Haftada en az 2 kez enüresis yakınması"
+    },
+    {
+     "tur": "sari",
+     "hedef": "Birbirini takip eden 3 ay boyunca ortaya çıkacak"
+    }
+   ],
+   "sinyal": [
+    "cikmis",
+    "sari"
+   ],
+   "y25": {
+    "key": "y25-k2-50-disa-atim-bozukluklari",
+    "sayfa": 2
+   },
+   "y26": null,
+   "duzeltme": [
+    {
+     "ham": "enüresis",
+     "dogru": "enürezis",
+     "gerekce": "Yazım tutarlılığı."
+    }
+   ],
+   "not_": null,
+   "banka_cikmis": [
+    "q-25-26_d_nem_3_kurul_2-82-cs4"
+   ],
+   "puan": 80,
+   "oncelik": "A",
+   "vurgulu": [
+    "%82'si",
+    "2 yaşında çocukların %82'si enüretik",
+    "Birbirini takip eden 3 ay boyunca ortaya çıkacak",
+    "Erkek/kız oranı 2/1",
+    "Haftada en az 2 kez enüresis yakınması",
+    "Takvim veya mental yaşı en az 5 olacak"
+   ]
+  },
+  {
+   "id": "psk-s19-b09",
+   "pdf": "psk",
+   "sayfa": 19,
+   "bolge": "r2c2",
+   "tur": "slayt",
+   "baslik": "Enürezis tedavisi",
+   "metin": "Farmakolojik olmayan yaklaşımlar: Mesane egzersizleri; Geceleri sıvı kısıtlaması; Gece belli saatte tuvalete kaldırma (en fazla 2 kez); Tablo ve ödüllendirme; Anne-baba ve öğretmene rehberlik; Alarm cihazı?\n[s10] Farmakolojik tedavi: İmipramin (Tofranil): İlk sırada tercih edilecek ilaç, 6 yaştan itibaren endike, mutlaka EKG takibi. Desmopressin: İmipraminden sonra 2. sırada tercih edilmektedir (eğer nöbet bozukluğu varsa ilk sırada desmopressin tercih edilmeli).",
+   "el_yazisi": [],
+   "isaretler": [],
+   "sinyal": [],
+   "y25": {
+    "key": "y25-k2-50-disa-atim-bozukluklari",
+    "sayfa": 9
+   },
+   "y26": null,
+   "duzeltme": [],
+   "not_": null,
+   "puan": 0,
+   "oncelik": "C",
+   "vurgulu": []
+  },
+  {
+   "id": "psk-s19-b10",
+   "pdf": "psk",
+   "sayfa": 19,
+   "bolge": "r1c3+r2c3",
+   "tur": "slayt",
+   "baslik": "ENKOPREZİS",
+   "metin": "Feçesin uygun olmayan yere bırakılması, İstemli veya istemsiz olabilir. En az ayda 1 kez, 3 ay boyunca olmalı. Çocuğu kronolojik veya mental yaşı en az 4 olmalı. Doğrudan tıbbi bir nedene bağlı olmamalıdır.\n[s15] Etkisiz ve yetersiz sfinkter kontrolü; Psikojenik megakolon: çocuk dışkıyı tutar ve istemli ya da ikincil olarak kabız olur; Dışkılama gereksinimini farkedememe; WC'ye yetişememe; Taşma inkontinansı; Kokuya uyum yapma\n[s17] Davranım bozukluğu; Karşıt olma karşıt gelme bozukluğu; Anne-çocuk arasında özellikle otonomi ve kontrol konularındaki çatışmalar; Öfke ifade biçimi\n[s18] 2 tipi vardır: Konstipasyonla giden; Konstipasyon olmayan. Konstipasyonla giden tipinde pediatriden yardım istenmeli; Anormal sfinkter tonusu; Anal fissür; Hirschsprung hastalığı (agangliyonik megakolon); Nörolojik hastalıklar\n[s21] Her öğünden sonra tuvalete oturma (öğünleri düzenleme); Artmış lifli diyet; Davranışçı öneriler (tablo, ödüllendirme); İlaç tedavisinin yeri tartışılır.",
+   "el_yazisi": [],
+   "isaretler": [],
+   "sinyal": [],
+   "y25": {
+    "key": "y25-k2-50-disa-atim-bozukluklari",
+    "sayfa": 12
+   },
+   "y26": null,
+   "duzeltme": [
+    {
+     "ham": "Hirschprung",
+     "dogru": "Hirschsprung",
+     "gerekce": "Hastalık adı yazım hatası."
+    }
+   ],
+   "not_": null,
+   "puan": 0,
+   "oncelik": "C",
+   "vurgulu": []
+  }
+ ],
+ "ogrenci_sorulari": [
+  {
+   "id": "psk-s19-b07",
+   "pdf": "psk",
+   "sayfa": 19,
+   "bolge": "r1c2+r1c3",
+   "tur": "cikmis_soru",
+   "baslik": "Enürezis hakkında söylenemeyen",
+   "metin": "Enürezis hakkında aşağıda verilen bilgilerden hangisi söylenemez?",
+   "el_yazisi": [],
+   "isaretler": [
+    {
+     "tur": "pembe",
+     "hedef": "tüm soru bloğu"
+    },
+    {
+     "tur": "daire",
+     "hedef": "4 Psikiyatrik vakalar genelde, sekonder enürezis şeklinde başvururlar (kırmızı çember + onay kutusu)"
+    },
+    {
+     "tur": "ok",
+     "hedef": "1, 2, 3, 5 şıklarına kırmızı tik"
+    }
+   ],
+   "sinyal": [
+    "cikmis",
+    "tekrar"
+   ],
+   "y25": {
+    "key": "y25-k2-50-disa-atim-bozukluklari",
+    "sayfa": 4
+   },
+   "y26": null,
+   "duzeltme": [
+    {
+     "ham": "4) Psikiyatrik vakalar genelde, sekonder enürezis şeklinde başvururlar.",
+     "dogru": "4) Ek psikiyatrik sorunlar primer enüreziste, sekonder enürezise göre daha sık görülür. (söylenemez – doğru cevap)",
+     "gerekce": "Banka 195a76703179 ve slayt s04: sekonder enürezis'te ek psikiyatrik sorun olasılığı daha fazladır; öğrencinin sürümündeki ifade doğru olduğu için 'söylenemez' cevabı olamaz."
+    }
+   ],
+   "not_": null,
+   "cikmis": {
+    "kok": "Enürezis hakkında aşağıda verilen bilgilerden hangisi söylenemez?",
+    "siklar": [
+     "1) Tanı için, haftada en az iki defa enürezis görülmelidir.",
+     "2) Birbirini takip eden üç ay boyunca görülmelidir.",
+     "3) Erkeklerde 2 kat fazladır.",
+     "4) Psikiyatrik vakalar genelde, sekonder enürezis şeklinde başvururlar.",
+     "5) Vakaların çoğunluğu primer tiptedir."
+    ],
+    "ogrenci_cevap": "D (4)",
+    "banka_id": "195a76703179",
+    "banka_yil": "2020-2021",
+    "banka_dogru": "D) Ek psikiyatrik sorunlar primer enüreziste, sekonder enürezise göre daha sık görülür.",
+    "tutarli": false,
+    "not": "Harf olarak banka ile uyuşuyor (D) ama öğrencinin yapıştırdığı sürümde 4. şık 'Psikiyatrik vakalar genelde sekonder enürezis şeklinde başvururlar' biçiminde ve bu ifade slayt s04'e göre DOĞRU ('Sekonder enürezis'te ek psikiyatrik sorun görülme olasılığı daha fazladır'). Yani bu sürümde beş şıkkın beşi de doğru; soru yeniden yazılırken yanlış olan ifade (ek psikiyatrik sorunlar PRİMER enüreziste daha sık) kaybolmuş. Bankadaki asıl ifade esas alınmalı."
+   },
+   "bagli_birim": "psk-s19-b08",
+   "benzerlik": 0.758
+  }
+ ],
+ "banka": [
+  {
+   "id": "ba419ca750d8",
+   "ders": "k2-50",
+   "yillar": [
+    "2023-2024"
+   ],
+   "kok": "Çocuklarda aşağıdakilerden hangisi kabızlığa neden olmaz?",
+   "dogru": "Erken yaşta tuvalet eğitimi",
+   "kopyalar": [],
+   "birim": "psk-s19-b09",
+   "benzerlik": 0.524,
+   "kapsandi": false,
+   "notta_yapistirilmis": false
+  },
+  {
+   "id": "195a76703179",
+   "ders": "k2-50",
+   "yillar": [
+    "2020-2021"
+   ],
+   "kok": "Enürezis (idrar kaçırma) hakkında aşağıda verilen bilgilerden hangisi söylenemez?",
+   "dogru": "Ek psikiyatrik sorunlar primer enüreziste, sekonder enürezise göre daha sık görülür.",
+   "kopyalar": [],
+   "birim": "psk-s19-b08",
+   "benzerlik": 0.73,
+   "kapsandi": true,
+   "notta_yapistirilmis": true
+  },
+  {
+   "id": "past-q-KURUL_2_C_IKMIS__3-62",
+   "ders": "k2-50",
+   "yillar": [
+    "Geçmiş Yıllar Çıkmışı (Arşiv)"
+   ],
+   "kok": "Sekonder enürezis nokturnada altına idrar kaçırma uykunun hangi döneminde görülür?",
+   "dogru": "REM dönemi",
+   "kopyalar": [],
+   "birim": "psk-s19-b08",
+   "benzerlik": 0.635,
+   "kapsandi": true,
+   "notta_yapistirilmis": false
+  },
+  {
+   "id": "k1-2020-2021-a-q093",
+   "ders": "k2-50",
+   "yillar": [
+    "2020-2021",
+    "2020-2021"
+   ],
+   "kok": "Fonksiyonel retansif olmayan fekal inkontinanslı (FNRFI) çocuklar için aşağıdakilerden hangisi doğrudur?",
+   "dogru": "Dışkı tutma kanıtı olmaksızın dışkıyı uygun olmayan yerlere yaparlar",
+   "kopyalar": [],
+   "birim": "psk-s19-b10",
+   "benzerlik": 0.593,
+   "kapsandi": false,
+   "notta_yapistirilmis": false
+  },
+  {
+   "id": "q-25-26_d_nem_3_kurul_2-82-cs4",
+   "ders": "k2-50",
+   "yillar": [
+    "2025-2026"
+   ],
+   "kok": "Primer enürezis için en doğru tanım aşağıdakilerden hangisidir?",
+   "dogru": "Çocuğun bugüne kadar en az 6 ay süren kesintisiz bir kuru dönem geçirmemiş olmasıdır",
+   "kopyalar": [],
+   "birim": "psk-s19-b06",
+   "benzerlik": 0.65,
+   "kapsandi": true,
+   "notta_yapistirilmis": false
+  }
+ ]
+}
