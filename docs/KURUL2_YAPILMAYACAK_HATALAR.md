@@ -1694,3 +1694,26 @@ Her maddede: belirti · kök neden · Kurul 2 kuralı · kapı durumu. Kanıtlar
   sesli ders listesi ve ders sayfasında seçici; seçim ders başına cihazda hatırlanır (`cdDersSesSurumu`), `cdOynat` o sesi çalar.
 - **Önleme:** yeni bir ders/ses sürümü yayımlandığında canlıda öğrencinin GİRDİĞİ sayfalarda (branş listesi + ders sayfası) görünürlüğü
   tarayıcıyla denetlenir; yalnız API alanını görmek yetmez. Denetim öncesi sayfa yeni pakete yenilenir (yüklü `chunk-main` = sunucudaki).
+
+## H450 — Çıkmış kayıtlarında uydurma ya da sınavdan sapmış şık/kök (D3K2 çıkmış PDF'leri, 2026-10-30)
+- **Belirti:** D3K2 belgeleriyle karşılaştırınca mevcut kayıtlarda sınavda olmayan şıklar (ör. YAB'de "Endişeyi denetim altında tutmakta güçlük", SMA'da tip V yerine tip III, Joubert yerine "Polimikrogiri", MS plaklarında kayıp şık), olumsuza çevrilmiş kökler (palyatif bakım) ve bu yüzden yanlış cevaplar (ör. dd00370e9106, 151c7258613c, 73bb9a7a3782, 7d9098ad526e) çıktı.
+- **Kök neden:** Faz 16 check-solve ve ders bazlı derlemeler (d3-k2-*) özgün sınav kâğıdını görmeden eksik/bozuk şıkları "tek doğru cevap" kuralını sağlamak için yeniden yazmış; özgünle benzerlik denetimi yoktu.
+- **Çözüm:** 2020-21 karneleri (✓ = resmî), 2018-19 Kurul 4 resmî anahtarı ve 2019-20 kâğıt fotoğraflarıyla 122 kayıt özgüne döndürüldü (`meds_temp/d3k2_tum`, `araclar/dogrula.py` özgün şık benzerlik kapısı).
+- **Önleme:** Özgün belge varken şık metni ondan sapamaz; sapma yalnız tıbbi zorunlulukla ve `degisiklikler` + açıklamada `Not:` ile. Şık değiştiren her ajan çıktısı özgün şıkla benzerlik kapısından geçer.
+
+## H451 — Aynı sınavın derleme kopyaları ayrı görünen sorular olarak kalmış, bazılarının cevabı yanlış (2026-10-30)
+- **Belirti:** 2025-26 Kurul 2'de aynı soru üç kaynaktan üç kez görünüyordu (d3-k2-* ders derlemesi, "25-26 dönem 3 kurul 2.pdf", aynı PDF'ten "2025-2026 Kurul 1" etiketli kayıtlar); 2019-20 kâğıdı "KURUL 2 ÇIKMIŞ 3" ve "dnm33snfkrl23snf2" içinde iki kez; kopyaların bir kısmında farklı (yanlış) cevap.
+- **Kök neden:** Tekrar analizi yalnız aynı etiketli kayıtları birleştiriyordu; kaynak belgeleri farklı etiketlenen kopyalar (yılı belirsiz / yanlış kurul) hiç aday olmadı. Ajan aday listesi de benzerlik + etiketle kurulduğu için bazı kopyalar listeye düşmedi.
+- **Çözüm:** Kopyalar birleştirildi (görünen = PDF'le doğrulanmış kayıt) ve içerik eşitlendi; yanlış "Kurul 1" etiketleri düzeltildi; ajanın aday dışı bulduğu kopyalar `girdi/manuel_kararlar.json` ile bağlandı.
+- **Önleme:** Yeni çıkmış belgesi işlenirken önce o sınavın TÜM derleme kopyaları belge adına göre toplanır; "aday listesinde yok" diye ATLA/YENI verilmez, ana oturuma bildirilir.
+
+## H452 — Sınav yılı/kurul etiketi belge kanıtı olmadan tahmin edilmişti (2026-10-30)
+- **Belirti:** "KURUL 2 ÇIKMIŞ 3" kayıtlarının bir kısmı "2025-2026 Final", 2024-25 WhatsApp dökümü ("2. kurul .pdf") "Yılı belirsiz"; bir birleştirme grubu 2023-24 ve 2024-25 kopyalarını birlikte tutuyordu. Öğrencinin "D3K2 2021-2022-2023" adlı kâğıdı aslında 2018-2019 Kurul 4 sınavıydı (meds_downloads/…/Kurul 4/Kurul IV Sınavı.pdf, resmî anahtar 04.03.2019).
+- **Kök neden:** Yıl dosya adından/çevre kayıtlardan çıkarılıyordu; gruba yıl yazılırken üyelerin kendi belge yılı denetlenmiyordu.
+- **Çözüm:** Belge yılı haritası (`05_uygula.py` BELGE_YILI), farklı yıllı grup üyesi ayrılıp bantla bağlandı; 183 kaydın yılı belgeyle kesinleşti; 2018-19 K4 resmî anahtarla eklendi (78 cevabın 75'i ajanların bağımsız sonucuyla aynıydı).
+- **Önleme:** Yıl yalnız belge kanıtıyla (resmî anahtar, sınav sitesi karnesi, belge başlığı) kesinleşir; aynı yıl + aynı kurul dışındaki kopyalar birleştirilmez, `similarPastQuestions` ile bağlanır (kullanıcı kararı 2026-10-30: her yıla ayrı kayıt).
+
+## H453 — Çıkmış PDF ayıklama tuzakları (2026-10-30)
+- **Belirti/kök neden:** (1) Karne çıktısında soru sonraki sayfaya taşınınca aynı soru iki kümeye bölündü ve iki yeni kayıt oluştu; (2) daktilo metinde sonraki sorunun kökü önceki E şıkkına yapıştı; (3) karne sayfa altlığındaki öğrenci adları şık metnine karıştı; (4) paralel ajanlar aynı geçici betik adını kullandı.
+- **Çözüm:** Karne kopyaları birleştirildi; kök/şık el ile ayrıldı; sayfa üst/alt bilgisi ve adlar ayıklamada siliniyor; ajan betikleri `/tmp/claude-1000/<parti>/` altında.
+- **Önleme:** Ayıklamadan sonra kaynak içi tekrar taraması (aynı sınav yeni kayıt çifti) ve kişisel veri taraması zorunlu; her paralel ajana ayrı geçici klasör verilir.
