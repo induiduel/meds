@@ -1717,3 +1717,13 @@ Her maddede: belirti · kök neden · Kurul 2 kuralı · kapı durumu. Kanıtlar
 - **Belirti/kök neden:** (1) Karne çıktısında soru sonraki sayfaya taşınınca aynı soru iki kümeye bölündü ve iki yeni kayıt oluştu; (2) daktilo metinde sonraki sorunun kökü önceki E şıkkına yapıştı; (3) karne sayfa altlığındaki öğrenci adları şık metnine karıştı; (4) paralel ajanlar aynı geçici betik adını kullandı.
 - **Çözüm:** Karne kopyaları birleştirildi; kök/şık el ile ayrıldı; sayfa üst/alt bilgisi ve adlar ayıklamada siliniyor; ajan betikleri `/tmp/claude-1000/<parti>/` altında.
 - **Önleme:** Ayıklamadan sonra kaynak içi tekrar taraması (aynı sınav yeni kayıt çifti) ve kişisel veri taraması zorunlu; her paralel ajana ayrı geçici klasör verilir.
+
+## H454 — Aynı soru iki yılın hatırlamasında farklı ifadeyle geçince bağlanmadı; aynı sınavın iki hatırlaması iki ayrı soru sanıldı (2026-10-31)
+- **Belirti:** 2024-25 "okülomotor sinir tutulumunda etkilenen komşuluk" (#11a) ile "CR3 çiftleri tutulunca hasar nerede" (#27) aynı sınavın
+  aynı sorusuydu; 2025-26 hatırlamasında aynı soru ("okülomotor sinirler → sinüs kavernozus", h31) ve "anterior hasar → spinal iskemik
+  hasar" (h32) vardı. İlk turda hiçbiri birbirine bağlanmadı; kurgu turunda ajan #11a için uydurma bir herniasyon sorusu kurmuştu.
+- **Kök neden:** Aday listeleri işe başlarken alınan veritabanından üretildi; aynı koşuda oluşan yeni kayıtlar birbirine aday olamadı.
+  Veritabanı bağlantı taraması (token_sort ≥ 88 + aynı cevap) hatırlamaların farklı ifadesini yakalamıyor.
+- **Çözüm:** #11a, #27 grubuna katıldı (`_birlestir`); #27 ↔ h31 ve #11c ↔ h32 `_bagla` ile bantlandı.
+- **Önleme:** Hatırlama belgeleri işlenirken farklı yılların YENİ kayıtları arasında da konu + cevap metni eşleşmesiyle tarama yapılır;
+  aynı sınavda "aynı soru olabilir" notlu ögeler önce birleştirilir, ayrı soru kurulmaz (uydurma soru yasağı kurguda da geçerli).
