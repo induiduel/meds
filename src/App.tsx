@@ -159,6 +159,7 @@ const PdfSihirbaziV15 = React.lazy(() => wrapLazy(import('./components/v15/PdfSi
 const NotlarimV15 = React.lazy(() => wrapLazy(import('./components/v15/NotlarimV15')));
 const VideoDersV15 = React.lazy(() => wrapLazy(import('./components/v15/VideoDersV15')));
 const OyunlarV15 = React.lazy(() => wrapLazy(import('./components/v15/OyunlarV15')));
+const SoruAktarV15 = React.lazy(() => wrapLazy(import('./components/v15/SoruAktarV15')));
 const DersProgramiV15 = React.lazy(() => wrapLazy(import('./components/v15/DersProgramiV15')));
 const ProgramEkleV15 = React.lazy(() => wrapLazy(import('./components/v15/ProgramEkleV15')));
 const DilBolgeV15 = React.lazy(() => wrapLazy(import('./components/v15/DilBolgeV15')));
@@ -2196,6 +2197,13 @@ export default function App() {
         {gorunenTab === 'video_ders' && (
           <Suspense fallback={<ViewFallback />}>
             <VideoDersV15 />
+          </Suspense>
+        )}
+
+        {/* TAB: /soru-aktar (görünen /sorular/disa-aktar) — soru dışa aktarıcı (PDF/DOCX/PPTX) */}
+        {gorunenTab === 'soru_aktar' && (
+          <Suspense fallback={<ViewFallback />}>
+            <SoruAktarV15 />
           </Suspense>
         )}
 

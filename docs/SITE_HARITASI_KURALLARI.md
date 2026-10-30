@@ -87,3 +87,4 @@ dört kategori kartını görür. Yönetici adresle açabilir. Geri açmak kulla
 - 2026-10-28 (H404): Sözlük ve Hastalıklar başlığındaki "Sözlük | Hastalıklar" sekme çifti kalktı; yerine tek küçük çapraz bağlantı ("Hastalıklar’a git" / "Sözlük’e git").
 - 2026-10-28 (H405): Başvuru merkezindeki "Kurul takvimi" kartı (Sınav takvimi'nin ikinci adı, aynı `/kamplar/takvim`) kalktı; kanonik Sınava hazırlan › Sınav takvimi. Ayrı bir kurul takvimi sayfası/route'u yoktu.
 - 2026-10-28 (H406): adreste kurul biçimi kanonik `kurulN`; eski `kurul_N` (yol parçası) ve `?kurul=kurul_N|kurulN` okunur, `kurulN` / `?kurul=N`'ye çevrilir (siteHaritasi `ayir`, açılışta replaceState).
+- 2026-10-30: `/sorular/disa-aktar` (iç `/soru-aktar`, takma ad `/disa-aktar`) — Soru dışa aktarıcı (PDF/DOCX/PPTX); Soru çöz merkezinde ve menüde.

@@ -15,6 +15,7 @@
  *   /sorular[/kurulN]                        Soru çöz merkezi
  *   /sorular/soru-cozucu[/kurul1/patoloji]   Sesli soru çözücü (?ders=&coz= korunur)
  *   /sorular/cikmis[/<id>] · /sorular/havuz[/<id>] · /sorular/deneme · /sorular/ornek · /sorular/olasi · /sorular/soru-haritasi
+ *   /sorular/disa-aktar                      Soru dışa aktarıcı (PDF/DOCX/PPTX; iç /soru-aktar)
  *   /kamplar[/kurul1]                        Sınava hazırlan merkezi (sekmeler: Son Prova, Kamplar, Check Up, En önemliler)
  *   /kamplar/kurul1/son-prova/...            Son Prova
  *   /kamplar/kurul1/cikmis-cozucu[/<branş>]  Çıkmış çözücü (?ders=<paket>&coz=1)
@@ -213,6 +214,8 @@ export function disYol(adres: string): string {
       return birlestir('/sorular/oyunlar', sp, hash);
     case 'yanlislarim':
       return birlestir('/sorular/yanlislarim', sp, hash);
+    case 'soru-aktar':
+      return birlestir('/sorular/disa-aktar', sp, hash);
     case 'havuz':
       return birlestir(`/sorular/havuz${s[1] ? `/${s.slice(1).map(enc).join('/')}` : ''}`, sp, hash);
     case 'sorular': {
@@ -299,7 +302,7 @@ export function disYol(adres: string): string {
 const GECMIS_KURUL_ADLARI = new Set(['gecmis-kurullar', 'gecmis_kurullar', 'gecmis-kurul', 'arsiv', 'kurul-arsivi']);
 
 /** /sorular/<x> altında araç olan adlar (gerisi eski havuz soru kimliğidir) */
-const SORU_ARACLARI = new Set(['soru-cozucu', 'cikmis', 'havuz', 'deneme', 'ornek', 'olasi', 'soru-haritasi']);
+const SORU_ARACLARI = new Set(['soru-cozucu', 'cikmis', 'havuz', 'deneme', 'ornek', 'olasi', 'soru-haritasi', 'disa-aktar']);
 
 /* ——— görünen adres → iç adres ——— */
 
@@ -372,6 +375,7 @@ export function icYol(adres: string): string {
     if (arac === 'soru-haritasi') return birlestir('/soru-haritasi', sp, hash);
     if (arac === 'oyunlar') return birlestir('/oyunlar', sp, hash);
     if (arac === 'yanlislarim') return birlestir('/yanlislarim', sp, hash);
+    if (arac === 'disa-aktar') return birlestir('/soru-aktar', sp, hash);
     // eski havuz soru bağlantısı /sorular/<soruId>
     return birlestir(`/havuz/${s.slice(1).map(enc).join('/')}`, sp, hash);
   }

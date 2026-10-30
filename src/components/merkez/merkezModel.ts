@@ -38,6 +38,7 @@ const MERKEZ_HAM: Record<KategoriId, MerkezArac[]> = {
     { id: 'yanlislarim', ne: 'Yanlış yaptığın soruları tekrar zamanı gelince yeniden çözmek istiyorsan' },
     { id: 'oyunlar', ne: 'Arkadaşlarınla canlı soru yarışması yapmak istiyorsan' },
     { id: 'soru_haritasi', ne: 'Hangi dersten hangi yıl kaç soru çıktığını görmek istiyorsan' },
+    { id: 'soru_aktar', ne: 'Seçtiğin soruları kendi düzeninle PDF, Word ya da PowerPoint olarak indirmek istiyorsan' },
     { id: 'olasi_sorular', ne: 'Sınavdan sonra kurulan olası soruları çözmek istiyorsan' },
   ],
   kamplar: [

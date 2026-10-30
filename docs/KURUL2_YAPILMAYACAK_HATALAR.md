@@ -1587,6 +1587,12 @@ Her maddede: belirti · kök neden · Kurul 2 kuralı · kapı durumu. Kanıtlar
 - **Kök neden:** `LearnReview` `.ls-root` sabit katmanı `.sh-main` içinde çiziliyordu; `.sh-main`'in zoom/yığınlama bağlamı sabit katmanı v15 yan rayının (z 40, uygulama düzeyi) altına itti. Seçili segment `--color-white` zemini koyu temada alan rengiyle aynıydı.
 - **Çözüm/önleme:** tam ekran katman `createPortal(..., document.body)` ile gövdeye taşındı; v15'te seçili segment vurgu karışımlı. Yeni tam ekran katman `.sh-main` içine değil gövdeye portal edilir.
 
+## H437 — Çevrimdışı indirme "sırada" takılıyor, her açılışta uygulama dosyası iniyor (2026-10-29)
+- **Belirti:** Çevrimdışı ekranında paketler sürekli "sırada" bekliyor ya da hiç inmiyor; her açılışta "Uygulama dosyaları iniyor".
+- **Kök neden:** (1) `net.ts::onPlanBosalinca` her dosyadan önce "uçuşan ön plan isteği yok VE son 1,5 sn'de istek başlamadı" koşulunu 20 sn'ye dek bekliyordu; saniyede yoklayan ekranlar (varlık, SSE telafisi, sayaçlar) yüzünden her dosya ~20 sn bekledi — yüzlerce dosyalı paket saatler sürdü. (2) `paketMotoru.otomatikTur` cihazda herhangi paket varsa ve `kuyrugaEkle` içerik eklenirken uygulama paketi `guncelleme` durumundaysa onu kuyruğun BAŞINA koyuyordu; her dağıtımda (onem+1) sürüm değiştiği için her açılışta uygulama yeniden indi, içerik onun arkasında bekledi.
+- **Çözüm:** bekleme yalnız uçuşan ön plan isteğine ve en çok 2 sn; uygulama paketi yalnız cihazda yokken içerikle birlikte başa, güncellemesi yalnız çevrimdışı mod + otomatik güncelleme açıkken kuyruğun sonuna.
+- **Önleme:** arka plan indirmesinde dosya başına bekleme süresi toplam süreyi paket boyuyla çarpar — bekleme paket başına değil dosya başınaysa üst sınır saniyeler düzeyinde tutulur; sürüm değişimi her dağıtımda olan bir paket kuyruğun önüne zorla alınmaz.
+
 ## H438 — Anlatım slaytın söylediğini tersine çevirdi (k2-01, 2026-10-29)
 - **Belirti:** s.4 slaytı "BT, MR tanının doğru olduğunu göstermek için çekilir" derken anlatım "BT ve MR bu hastalıkları doğrulamak için çekilmez" dedi; öğrenci çelişki gördü.
 - **Kök neden:** yazar "yapısal nedeni dışlamak" yorumunu öne çıkarırken slayt cümlesini olumsuza çevirdi; denetçi slayt satırıyla anlatım cümlesinin yönünü (olumlu/olumsuz) kıyaslamadı.
@@ -1614,3 +1620,25 @@ Her maddede: belirti · kök neden · Kurul 2 kuralı · kapı durumu. Kanıtlar
 - **Kök neden:** `src/services/canliDers.ts` liste ucu her ders için `varyantlar()` → `oku(kayit.json)` çağırıyordu: 810 KB'lık kayıt defteri 153 kez baştan ayrıştırılıyordu (istek başına ~120 MB JSON). `sinama.json` ve `dersler/kN.json` de ders başına yeniden okunuyordu.
 - **Çözüm:** salt okunur kayıt defterleri için boyut+mtime önbellekli `okuSabit` (dersler, dersBul, varyantlar, sinamaKonfig, branş kaydı). Dört sorgu biçiminde çıktı önce/sonra bayt bayt aynı; yerelde 270–380 ms → 4 ms.
 - **Önleme:** İstek başına döngü içinde dosya okuyup ayrıştırma yapılmaz; değişmeyen kayıt defteri bir kez okunur, imza (boyut+mtime) değişince tazelenir. Önbellekten dönen nesne değiştirilmez (yazan kod taze `oku` kullanır). Yeni liste ucu eklerken Oracle içinden `curl -w %{time_total}` ile ölçülür (hedef < 50 ms).
+
+## H442 — Yeni sayfanın CSS öneki başka bileşenle çakıştı; sekmeler dev daire, düzen tek sütun (soru dışa aktarıcı, 2026-10-30)
+- **Belirti:** `/sorular/disa-aktar` masaüstünde sekme düğmeleri 95 px'lik daireler hâlinde, simgeler kocaman; iki sütunlu düzen (ayarlar | önizleme) tek sütuna düşmüş, önizleme hiç görünmüyordu.
+- **Kök neden:** sayfa öneki `sa15` seçildi, oysa `styles/v15/ek15.css` aynı adı "Sınav ağırlığı" bileşeni için kullanıyor (`.sa15 { display: flex }`, `.sa15 svg { width: 100%; max-width: 520px }`). Genel kural sayfanın kapsayıcısını flex yaptı, her simgeyi tam genişliğe çekti.
+- **Çözüm:** önek `sx15` yapıldı (CSS + bileşen).
+- **Önleme:** yeni v15 sayfası/bileşeni için önek seçmeden önce `grep -rn "\.<önek>[ {.:-]" src/styles src/components` ile boş olduğu doğrulanır; kısa (3–4 harf) önekler çakışmaya en açık olanlardır.
+
+## H443 — Önizleme iframe'i genel `max-width: 100%` kuralıyla daraldı, sayfanın sağı kesildi (soru dışa aktarıcı, 2026-10-30)
+- **Belirti:** "Sığdır" önizlemesinde A4 sayfasının sağ yarısı kesik, metinler sayfa kenarında yarım kalıyordu.
+- **Kök neden:** önizleme, doğal genişlikte (822 px) bir iframe'i `transform: scale()` ile küçültür; sitenin genel `iframe { max-width: 100% }` kuralı iframe'i ölçekten önce sarmalayıcının küçültülmüş genişliğine (652 px) kıstı, belge iframe içinde 652 px'e sığmaya çalışıp taştı.
+- **Çözüm/önleme:** ölçekle küçültülen iframe/canvas'a satır içi `max-width: none` verilir; ölçekli öğenin doğal genişliği `getBoundingClientRect` ile doğrulanır (stil genişliği ≠ gerçek genişlik).
+
+## H444 — DOCX ızgara sayfaları LibreOffice/Word'de ikiye bölündü; 26 sayfa 52 oldu (soru dışa aktarıcı, 2026-10-30)
+- **Belirti:** 4'lü kart düzeninde indirilen Word belgesinde her sayfanın ikinci satırı yeni sayfaya geçiyor, çözüm hücrelerinin son satırı kesiliyordu.
+- **Kök neden:** (1) her bölüme boş bir üst bilgi bağlanmıştı; LibreOffice bunu gövdeden yer alan alan olarak içe aktarıyor. (2) Sabit yükseklikli (`hRule=exact`) satırlarda LibreOffice hücrenin üst/alt iç boşluğunu (`tcMar`) satır yüksekliğine ekliyor (Word içine sayar). (3) Word'ün "auto" satır aralığı yazı tipinin tek satır yüksekliğiyle (≈1,15–1,22 em) çarpılır, CSS `line-height` ise puntoyla: aynı ayar Word'de ~%20 daha uzun metin verir.
+- **Çözüm:** boş üst bilgi kaldırıldı (yalnız "her sayfada başlık" açıkken başlık üst bilgisi); hücrelere yalnız sağ/sol iç boşluk, üst boşluk hücre içi sabit paragrafla; satır aralığı yazı tipine göre bölünür (`TEK_SATIR`); sabit sayfa kipinde yazı ölçeği ×0,93, satır yüksekliği ×0,97 güvenlik payı. 26 model sayfası → 26 DOCX sayfası.
+- **Önleme:** DOCX/PPTX üreten her değişiklik LibreOffice ile PDF'e çevrilip sayfa sayısı önizlemeyle kıyaslanır (`soffice --headless --convert-to pdf` + `pdfinfo`) ve her XML parçası ayrıştırılarak denetlenir; sabit yükseklikli tablo satırına üst/alt `tcMar` verilmez.
+
+## H445 — Veride boolean `false` metin olarak "false" yazdı (soru dışa aktarıcı, 2026-10-30)
+- **Belirti:** hoca üslubu soruların çözümünde "Cevap: B" altında "false" satırı.
+- **Kök neden:** `hoca_uslubu_sorular` kayıtlarında `cikarim` alanı bazen `false`; `String(v ?? '')` bunu "false" metnine çevirdi.
+- **Çözüm/önleme:** soru verisini metne çeviren yardımcı yalnız string/sayı kabul eder (`kaynak.ts::s`); başka kaynaklardan alan okurken `String(x ?? '')` yerine tür denetimli dönüşüm kullanılır.

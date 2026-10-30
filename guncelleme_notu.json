@@ -1,13 +1,20 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 594,
-  "baslik": "Tek tasarım: Yalın (v15)",
+  "onem": 595,
+  "baslik": "Yeni: Soru dışa aktarıcı (PDF · Word · PowerPoint)",
   "maddeler": [
-    "Site artık yalnız Yalın (v15) tasarımıyla açılıyor; eski tasarımlar kaldırıldı, ayarlardaki tasarım seçimi yok.",
-    "Açılışta indirilen dosyalar küçüldü ve tekrar eden istekler azaldı; sayfalar daha çabuk hazır oluyor."
+    "Soru çöz › Soru dışa aktarıcı: çıkmış, örnek, sesli çözücü, hoca üslubu, hocanın sorabileceği ve Öğren sorularını tek belgede birleştir.",
+    "Kurul, ders, konu, yıl, tür ve zorlukla süz; soruları tek tek seç ya da rastgele N soru çek.",
+    "Sayfa başına 1-2-4-8 soru ya da iki sütun akış; 6 tasarım modu (sınav kitapçığı, modern renkli, kart, çalışma kâğıdı…).",
+    "Kenar boşluğu, sayfa kenarlığı, yazı tipi, punto, satır aralığı ve ders/konu/yıla göre renklendirme ayarlanabilir.",
+    "Çözümler gizlenebilir, doğru şık işaretli gelebilir, sorunun altına, sayfa altına, her sayfanın ardına ya da belgenin sonuna eklenebilir; cevap anahtarı ve cevap kâğıdı da var."
   ],
-  "eklenen": [],
-  "degisen": [],
+  "eklenen": [
+    "Soru dışa aktarıcı sayfası (/sorular/disa-aktar)"
+  ],
+  "degisen": [
+    "PDF oluştur sayfasında soru indirme bağlantısı"
+  ],
   "duzeltilen": [],
   "silinen": []
 }

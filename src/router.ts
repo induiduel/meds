@@ -90,6 +90,7 @@ export type AppRoute =
   | 'hucrem'
   | 'zihin_haritasi'
   | 'yanlislarim'
+  | 'soru_aktar'
   | 'bildirimler'
   | 'gecmis_kurullar'
   | 'kamp'
@@ -166,6 +167,7 @@ export const ROUTE_PATHS: Record<AppRoute, string> = {
   hucrem: '/hucrem',
   zihin_haritasi: '/zihin-haritasi',
   yanlislarim: '/yanlislarim',
+  soru_aktar: '/soru-aktar',
   bildirimler: '/bildirimler',
   gecmis_kurullar: '/gecmis-kurullar',
   kamp: '/kamp',
@@ -247,6 +249,7 @@ export const ROUTE_TITLES: Record<AppRoute, string> = {
   hucrem: 'Hücrem',
   zihin_haritasi: 'Zihin haritası',
   yanlislarim: 'Yanlışlarım',
+  soru_aktar: 'Soru dışa aktarıcı',
   bildirimler: 'Bildirimler',
   gecmis_kurullar: 'Geçmiş kurullar',
   kamp: 'Kurul kampı',
@@ -415,6 +418,8 @@ export const ALIASES: Record<string, AppRoute> = {
   hucrem: 'hucrem',
   'zihin-haritasi': 'zihin_haritasi',
   yanlislarim: 'yanlislarim',
+  'soru-aktar': 'soru_aktar',
+  'disa-aktar': 'soru_aktar',
   bildirimler: 'bildirimler',
   'hücrem': 'hucrem',
   'notlarım': 'notlarim',

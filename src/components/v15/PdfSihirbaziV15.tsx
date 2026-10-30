@@ -1,5 +1,6 @@
 import React, { useEffect, useMemo, useState } from 'react';
-import { BookOpen, Check, FileDown, Headphones, History, Trash2 } from 'lucide-react';
+import { BookOpen, Check, ChevronRight, FileDown, Headphones, History, ListChecks, Trash2 } from 'lucide-react';
+import { linkClick, navigateTo, pathFor } from '../../router';
 import { cdListeGetir, type CdListeDers } from '../canliDers/canliDersStore';
 import { cdTekSurum } from '../canliDers/canliDersKategori';
 import { TopluPdfDugme as SesliPdf } from '../canliDers/CanliDersTopluPdf';
@@ -71,6 +72,11 @@ export default function PdfSihirbaziV15() {
   return (
     <div className="ps15">
       <h1 className="sr-only">PDF oluştur</h1>
+      <a className="v15-card ps15-soru" href={pathFor('soru_aktar')} onClick={linkClick(() => navigateTo(pathFor('soru_aktar')))}>
+        <span className="v15-tile is-a"><ListChecks aria-hidden /></span>
+        <span><b>Soruları mı indirmek istiyorsun?</b><small>Çıkmış, örnek, çözücü ve hoca sorularını seç; 1-2-4-8 düzen, tasarım modu ve çözüm seçenekleriyle PDF, Word ya da PowerPoint indir.</small></span>
+        <ChevronRight aria-hidden />
+      </a>
       <section className="v15-card ps15-adim">
         <h2><span>1</span>Ne indirmek istiyorsun?</h2>
         <div className="ps15-kaynak" role="radiogroup" aria-label="Kaynak">

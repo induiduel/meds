@@ -20,3 +20,8 @@
 .ps15-gb h2 { margin: 0; }
 .ps15-gecmis > .v15-cap { margin: 0 2px; }
 .ps15 button.b15-row { width: 100%; text-align: left; border: 0; background: none; font: inherit; color: inherit; cursor: pointer; }
+
+.ps15-soru { display: flex; align-items: center; gap: 12px; padding: 14px 16px; color: var(--color-ink); text-decoration: none; }
+.ps15-soru > span:nth-child(2) { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
+.ps15-soru small { color: var(--color-ink-3); font-size: .8rem; line-height: 1.35; }
+.ps15-soru > svg { flex: none; width: 18px; height: 18px; color: var(--color-ink-3); }

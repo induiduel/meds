@@ -100,6 +100,7 @@ const I: Record<string, NavItem> = {
   past_exams: { id: 'past_exams', label: 'Çıkmış sorular', short: 'Çıkmış', hint: 'Kurullara göre çıkmışlar', icon: Archive, tint: '#007AFF' },
   questions: { id: 'questions', label: 'Soru havuzu', short: 'Havuz', hint: 'Öğrencilerin birlikte kurduğu kurul soruları', icon: Library, tint: '#5856D6' },
   ornek_sorular: { id: 'ornek_sorular', label: 'Örnek sorular', short: 'Örnek', hint: 'Kazanım temelli sorular', icon: Target, tint: '#FF9500' },
+  soru_aktar: { id: 'soru_aktar', label: 'Soru dışa aktarıcı', short: 'Dışa aktar', tile: 'Dışa aktar', hint: 'Soruları seç, düzenle; PDF, Word ya da PowerPoint indir', icon: FileDown, tint: '#0A84FF' },
   yanlislarim: { id: 'yanlislarim', label: 'Yanlışlarım', short: 'Yanlışlar', tile: 'Yanlışlarım', hint: 'Yanlış yaptığın sorular 48 saat sonra yeniden', icon: RotateCcw, tint: '#FF3B30' },
   oyunlar: { id: 'oyunlar', label: 'Oyunlar', short: 'Oyun', tile: 'Oyunlar', hint: 'Canlı soru yarışması: oda kur, kodu paylaş', icon: Gamepad2, tint: '#AF52DE' },
   soru_haritasi: { id: 'soru_haritasi', label: 'Soru haritası', short: 'Harita', tile: 'Soru haritası', hint: 'Ders × yıl: hangi dersten kaç çıkmış soru', icon: Grid3x3, tint: '#5E5CE6' },
@@ -153,7 +154,7 @@ export const NAV_ITEMS = I;
 export const NAV_TREE_HAM: NavGroup[] = [
   { label: null, items: [I.today] },
   { label: 'Ders çalış', items: [I.canli_ders, I.kmb_asistan, I.learn, I.summaries, I.flashcards, I.ders_programi, I.oncelikli_dersler /* H400: gecmis_kurullar çıktı; geçmiş kurullar kurul seçicide */] },
-  { label: 'Soru çöz', items: [I.soru_cozucu, I.past_exams, I.practice, I.questions, I.ornek_sorular, I.olasi_sorular, I.yanlislarim, I.oyunlar, I.soru_haritasi] },
+  { label: 'Soru çöz', items: [I.soru_cozucu, I.past_exams, I.practice, I.questions, I.ornek_sorular, I.olasi_sorular, I.yanlislarim, I.oyunlar, I.soru_haritasi, I.soru_aktar] },
   { label: 'Sınava hazırlan', items: [I.sinav_takvimi, I.sinav_plani, I.son_prova, I.cikmis_cozucu, I.kamp, I.en_onemliler, I.spots] },
   { label: 'Check Up', items: [I.genetik_checkup, I.patoloji_checkup] },
   { label: 'Başvuru', items: [I.glossary, I.diseases, I.health_ministry, I.kazanimlar] },
