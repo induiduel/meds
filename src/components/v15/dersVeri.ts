@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from 'react';
 import { pathFor } from '../../router';
-import { cdKonumListesi, cdListeGetir, type CdListeDers } from '../canliDers/canliDersStore';
+import { cdKonumListesi, cdListeGetir, cdSurumler, type CdListeDers, type CdSurum } from '../canliDers/canliDersStore';
 import { cdBransKisa, cdBransSlug, cdTekSurum } from '../canliDers/canliDersKategori';
 import { bittiMi, sesliKonuId, useTakip } from '../../services/calismaTakip';
 import { kurulKimlikten } from '../kurul/KurulSuzgec';
@@ -112,3 +112,13 @@ export function kurulBranslari(ds: CdListeDers[], kurul: number) {
 
 const noSayi = (d: CdListeDers) => d.listeNo ?? (Number(d.no) || 9999);
 export const dersSirala = (ds: CdListeDers[]) => ds.slice().sort((a, b) => noSayi(a) - noSayi(b) || (a.parca ?? 0) - (b.parca ?? 0) || (a.sira ?? 0) - (b.sira ?? 0));
+
+/** Dersin V1/V2/V3 sürümleri (ders sürümü …-v2 + adlandırılmış ses sürümleri); ana ders ya da sürüm anahtarından çağrılabilir */
+export function dersSurumleri(key: string, d: DersListeDurum): CdSurum[] {
+  const ana = key.replace(/-v[23]$/, '');
+  const hepsi = d.hepsi || d.dersler || [];
+  const bas = (d.dersler || []).find((x) => x.key === ana) || hepsi.find((x) => x.key === ana);
+  if (!bas) return [];
+  const dersler = [bas, ...(bas.surumlar || []).map((k) => hepsi.find((x) => x.key === k)).filter((x): x is CdListeDers => !!x)];
+  return cdSurumler(dersler);
+}

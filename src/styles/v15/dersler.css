@@ -371,3 +371,10 @@ a.k15-kart:hover { border-color: var(--color-accent); }
 /* H161: boş check-up sekmesi eylemleri */
 :root[data-v15='on'] .k15-bos p { margin: 0 0 10px; }
 :root[data-v15='on'] .k15-bos-eylem { display: flex; flex-wrap: wrap; gap: 8px; }
+/* Ders sürümü seçici (V1/V2/V3; SurumSecV15): ders düzeyi + adlandırılmış ses sürümleri */
+.sl15-surum a.is-on { background: var(--color-accent, #6366f1); border-color: var(--color-accent, #6366f1); color: #fff; opacity: 1; }
+.sl15-surum a small, .dd15-surum a small { font-size: 10px; font-weight: 600; margin-left: 4px; opacity: .8; }
+.dd15-surum-satir { display: flex; align-items: center; gap: 10px; margin-top: 10px; font-size: 13px; color: var(--color-ink-2, inherit); }
+.dd15-surum { display: inline-flex; gap: 4px; padding: 3px; border-radius: 999px; background: color-mix(in srgb, currentColor 7%, transparent); }
+.dd15-surum a { font-size: 13px; font-weight: 700; padding: 4px 12px; border-radius: 999px; color: inherit; text-decoration: none; }
+.dd15-surum a.is-on { background: var(--color-accent, #6366f1); color: #fff; }

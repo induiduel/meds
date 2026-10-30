@@ -4,7 +4,9 @@ import { linkClick, navigateTo } from '../../router';
 import { icKonum } from '../../siteHaritasi';
 import { cdBransKisa, cdBransSlug } from '../canliDers/canliDersKategori';
 import { useV15Baslik } from './baslik';
-import { dersAdi, dersBransi, dersKurulu, dersSirala, dersYolu, hocaYaz, merkezYolu, sureDk, useDersListesi, useIlerleme } from './dersVeri';
+import { dersAdi, dersBransi, dersKurulu, dersSirala, dersSurumleri, dersYolu, hocaYaz, merkezYolu, sureDk, useDersListesi, useIlerleme } from './dersVeri';
+import SurumSecV15 from './SurumSecV15';
+import { cdDersSesSurumu } from '../canliDers/canliDersStore';
 import { Halka } from './Halka';
 import '../../styles/v15/dersler.css';
 
@@ -17,7 +19,8 @@ export default function BransV15() {
   const sp = new URLSearchParams(icKonum().search);
   const slug = sp.get('brans') || '';
   const kurulQ = Number(sp.get('kurul')) || null;
-  const { dersler, hata } = useDersListesi();
+  const liste0 = useDersListesi();
+  const { dersler, hata } = liste0;
   const ilerleme = useIlerleme();
 
   const liste = useMemo(() => {
@@ -70,6 +73,7 @@ export default function BransV15() {
                   </span>
                   <Halka pct={i.pct} etiket={i.bitti ? 'Bitti' : `%${i.pct} dinlendi`} />
                 </a>
+                <SurumListe dk={d.key} d={liste0} />
               </li>
             );
           })}
@@ -79,4 +83,12 @@ export default function BransV15() {
       )}
     </div>
   );
+}
+
+/** Satırdaki sürüm bağlantıları: seçili (ya da güncel) sürüm vurgulu */
+function SurumListe({ dk, d }: { dk: string; d: ReturnType<typeof useDersListesi> }) {
+  const ss = dersSurumleri(dk, d);
+  if (!ss.length) return null;
+  const sec = ss.find((s) => s.vid && cdDersSesSurumu(s.key) === s.vid) || ss.find((s) => s.yeni) || null;
+  return <SurumSecV15 surumler={ss} aktif={sec} />;
 }

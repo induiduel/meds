@@ -6,7 +6,9 @@ import { icKonum } from '../../siteHaritasi';
 import { KURUL_NOLAR, kurulKaydet, useSeciliKurul } from '../kurul/KurulSecici';
 import { useV15Baslik } from './baslik';
 import KurulSecV15 from './KurulSecV15';
-import { bransYolu, dersAdi, dersSirala, dersYolu, hocaYaz, kurulBranslari, sureDk, useDersListesi, useIlerleme } from './dersVeri';
+import { bransYolu, dersAdi, dersSirala, dersSurumleri, dersYolu, hocaYaz, kurulBranslari, sureDk, useDersListesi, useIlerleme } from './dersVeri';
+import SurumSecV15 from './SurumSecV15';
+import { cdDersSesSurumu } from '../canliDers/canliDersStore';
 import { Halka } from './Halka';
 import '../../styles/v15/dersler.css';
 import '../../styles/v15/ogren.css';
@@ -34,7 +36,8 @@ export default function SesliListeV15() {
     const qs = sp.toString();
     try { history.replaceState(history.state, '', location.pathname + (qs ? `?${qs}` : '') + location.hash); } catch { /* yok */ }
   };
-  const { dersler, hata } = useDersListesi(arsiv ? '2025-2026' : '2026-2027');
+  const liste0 = useDersListesi(arsiv ? '2025-2026' : '2026-2027');
+  const { dersler, hata } = liste0;
   const satirYolu = (key: string) => (arsiv ? pathFor('canli_ders', key) : dersYolu(key));
   const ilerleme = useIlerleme();
   const [ara, setAra] = useState('');
@@ -135,13 +138,8 @@ export default function SesliListeV15() {
                         </span>
                         <Halka pct={i.pct} etiket={i.tekrar ? `Tekrar: %${i.pct} dinlendi` : i.bitti ? 'Bitti' : `%${i.pct} dinlendi`} />
                       </a>
-                      {!!d.surumlar?.length && (
-                        <span className="sl15-surum" role="group" aria-label="Sürüm">
-                          {[d.key, ...d.surumlar].map((k, n) => (
-                            <a key={k} href={satirYolu(k)} onClick={linkClick(() => navigateTo(satirYolu(k)))}>V{n + 1}</a>
-                          ))}
-                        </span>
-                      )}
+                      <SurumSecV15 surumler={dersSurumleri(d.key, liste0)}
+                        aktif={dersSurumleri(d.key, liste0).find((s) => s.vid && cdDersSesSurumu(s.key) === s.vid) || dersSurumleri(d.key, liste0).find((s) => s.yeni)} />
                     </li>
                   );
                 })}

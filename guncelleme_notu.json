@@ -1,16 +1,18 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 597,
-  "baslik": "Sesli derste ses sürümleri adlandırıldı (v1 / v2 / v3)",
+  "onem": 598,
+  "baslik": "Sesli derslerde sürüm seçici: V1 / V2 / V3",
   "maddeler": [
-    "Metni geliştirilip yeniden seslendirilen derslerde eski ses silinmedi; oynatıcıda sürüm adıyla ayrılır.",
-    "Nörolojik Hastaya Yaklaşım ve Bilinç Bozukluğu: eski ses v1, yeni ses v2 (varsayılan).",
-    "Nörolojik Muayene · V2: eski ses v2, yeni ses v3 (varsayılan)."
+    "Ders listesinde ve ders sayfasında sürüm düğmeleri: önceki sürümü de dinleyebilirsin, en yenisi \"güncel\" diye işaretli.",
+    "Nörolojik Hastaya Yaklaşım ve Bilinç Bozukluğu: V1 önceki metin, V2 güncel. Nörolojik Muayene: V1, V2 ve V3 (güncel).",
+    "Seçtiğin sürüm o ders için hatırlanır; oynatıcı dersi o sesle açar."
   ],
   "eklenen": [
-    "Ses seçicide sürüm adı"
+    "Ders sürümü seçici (liste + ders sayfası)"
   ],
   "degisen": [],
-  "duzeltilen": [],
+  "duzeltilen": [
+    "Nörolojik Muayene V2 dersine branş listesinden ulaşılamıyordu"
+  ],
   "silinen": []
 }

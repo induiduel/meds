@@ -760,6 +760,43 @@ export const cdKonumListesi = () =>
     .sort((a, b) => b.at - a.at);
 const tercihVaryant = (vs: CdVaryant[]) => cdTercihVaryant(vs)?.id ?? null;
 
+/* ---------------- ders sürümü (V1/V2/V3): ders düzeyi (…-v2) + ses düzeyi (kayit.json surumAd) ---------------- */
+const SURUM_KEY = 'medsoru_canli_ders_ses_surum_v1';
+const surumAbone = new Set<() => void>();
+const surumlarOku = (): Record<string, string> => {
+  try { return JSON.parse(localStorage.getItem(SURUM_KEY) || '{}') || {}; } catch { return {}; }
+};
+/** Bu ders için öğrencinin seçtiği ses (eski/yeni metin seslendirmesi); yoksa null → varsayılan ses */
+export const cdDersSesSurumu = (key: string): string | null => surumlarOku()[key] || null;
+export function cdDersSesSurumuAyarla(key: string, vid: string | null) {
+  try {
+    const m = surumlarOku();
+    if (vid) m[key] = vid; else delete m[key];
+    localStorage.setItem(SURUM_KEY, JSON.stringify(m));
+  } catch { /* depolama kapalı */ }
+  surumAbone.forEach((f) => f());
+}
+export const useCdDersSesSurumu = (key: string) => useSyncExternalStore(
+  (f) => { surumAbone.add(f); return () => { surumAbone.delete(f); }; },
+  () => cdDersSesSurumu(key),
+  () => null,
+);
+export interface CdSurum { ad: string; key: string; vid?: string; sureSn?: number; yeni?: boolean }
+/** Dersin sürümleri sırayla: ders sürümleri (V1 = ana ders, V2 = …-v2) ve sesi adlandırılmış (surumAd) derslerde her ses ayrı
+ *  sürüm (eski metin v1, yeni metin v2 …). En yüksek numara en yeni sürümdür. Tek sürüm varsa boş dizi. */
+export function cdSurumler(dersler: { key: string; varyantlar?: CdVaryant[] }[]): CdSurum[] {
+  const out: CdSurum[] = [];
+  dersler.forEach((d, i) => {
+    const adli = (d.varyantlar || []).filter((v) => v.surumAd);
+    if (adli.length) adli.forEach((v) => out.push({ ad: v.surumAd!.toUpperCase(), key: d.key, vid: v.id, sureSn: v.sureSn }));
+    else out.push({ ad: `V${i + 1}`, key: d.key, sureSn: d.varyantlar?.[0]?.sureSn });
+  });
+  const n = (s: CdSurum) => Number(s.ad.replace(/\D/g, '')) || 0;
+  out.sort((a, b) => n(a) - n(b));
+  if (out.length) out[out.length - 1].yeni = true;
+  return out.length > 1 ? out : [];
+}
+
 /* ---------------- varsayılan ses (kullanıcı tercihi; yoksa EMA) ---------------- */
 const VARSAYILAN_SES_KEY = 'medsoru_canli_ders_varsayilan_ses_v1';
 /** Sesin dersler arası kimliği: sağlayıcı + ses adı ("ema-yerel|Ema") */
@@ -822,7 +859,9 @@ function kaynakKur(o: CdOzet, vid: string, t0: number, oynat: boolean) {
 export function cdOynat(o: CdOzet, vid?: string, opts: { t?: number; oynat?: boolean } = {}) {
   const oynat = opts.oynat ?? true;
   // İnternet yokken cihaza indirilen seslerden biri çalınır (indirilmemiş ses açılamaz)
-  const kendi = vid || (st.key === o.key && st.vid ? st.vid : tercihVaryant(o.varyantlar));
+  const secili = cdDersSesSurumu(o.key);
+  const kendi = vid || (st.key === o.key && st.vid ? st.vid
+    : secili && o.varyantlar.some((x) => x.id === secili) ? secili : tercihVaryant(o.varyantlar));
   const v = cdCevrimdisiVid(o.key, [vid, st.key === o.key ? st.vid : null, kendi]) || kendi;
   if (!v) return;
   if (st.key === o.key && st.vid === v && audio?.getAttribute('src')) {
@@ -892,6 +931,8 @@ export function cdHizDongu() {
 /** Varyant değişince aynı paragrafın aynı oranına geçilir (zamanlama yoksa süre oranı) */
 export function cdVaryant(vid: string) {
   if (!st.key || vid === st.vid) return;
+  // sürümü adlandırılmış seslerde seçim ders için hatırlanır (ders sayfası ve listedeki V1/V2 ile aynı)
+  if (st.varyantlar.some((x) => x.surumAd)) cdDersSesSurumuAyarla(st.key, vid);
   const v = st.varyantlar.find((x) => x.id === vid);
   if (!v) return;
   const t = audio?.currentTime || st.t;

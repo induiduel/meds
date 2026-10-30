@@ -2,11 +2,12 @@ import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { BookA, Check, ChevronDown, ChevronRight, CircleHelp, ClipboardList, Download, Headphones, Layers, Lightbulb, Play, RotateCcw, MessageCircle, Stethoscope, Table2, ListOrdered, HelpCircle, WalletCards, Award } from 'lucide-react';
 import { linkClick, navigateTo, parseLocation, pathFor } from '../../router';
 import { useAppearance } from '../../utils/appearance';
-import { cdDetayGetir, cdKayitliKonum, cdSesUrl, cdTercihVaryant, fmtMb, type CdDetay } from '../canliDers/canliDersStore';
+import { cdDetayGetir, cdKayitliKonum, cdSesUrl, cdTercihVaryant, fmtMb, useCdDersSesSurumu, type CdDetay } from '../canliDers/canliDersStore';
+import SurumSecV15 from './SurumSecV15';
 import { cdBransKisa } from '../canliDers/canliDersKategori';
 import { bittiMi, sesliKonuId, useTakip } from '../../services/calismaTakip';
 import { useV15Baslik } from './baslik';
-import { bransYolu, dersBransi, dersKurulu, hocaYaz, merkezYolu, saatYaz, sureDk, useDersListesi } from './dersVeri';
+import { bransYolu, dersBransi, dersKurulu, dersSurumleri, hocaYaz, merkezYolu, saatYaz, sureDk, useDersListesi } from './dersVeri';
 import { Halka } from './Halka';
 import { dersAraCozucu, dersCozucu, dersHocaCozucu } from '../canliDers/dersCozucu';
 import DersIcerikV15 from './DersIcerikV15';
@@ -59,7 +60,8 @@ export default function DersDetayV15() {
     if (key) dersIcerikGetir(key).then(setPaket).catch(() => undefined);
   }, [key]);
   useSiteAyar();
-  const { dersler, hepsi } = useDersListesi();
+  const liste0 = useDersListesi();
+  const { dersler, hepsi } = liste0;
   const ozet = useMemo(() => (hepsi || dersler)?.find((d) => d.key === key) || null, [dersler, hepsi, key]);
   const [detay, setDetay] = useState<CdDetay | null>(null);
   const [hata, setHata] = useState<string | null>(null);
@@ -95,10 +97,13 @@ export default function DersDetayV15() {
   const bitti = key ? bittiMi(takip.k[`sesli:${sesliKonuId(key)}`]) : false;
   const konum = useMemo(() => (key ? cdKayitliKonum(key) : null), [key]);
 
+  const seciliSes = useCdDersSesSurumu(key || '');
   const varyant = useMemo(() => {
     const vs = detay?.varyantlar || ozet?.varyantlar || [];
-    return vs.find((v) => v.id === konum?.vid) || cdTercihVaryant(vs) || vs[0];
-  }, [detay, ozet, konum]);
+    return vs.find((v) => v.id === seciliSes) || vs.find((v) => v.id === konum?.vid) || cdTercihVaryant(vs) || vs[0];
+  }, [detay, ozet, konum, seciliSes]);
+  const surumler = useMemo(() => (key ? dersSurumleri(key, liste0) : []), [key, liste0]);
+  const aktifSurum = surumler.find((s) => s.key === key && (!s.vid || s.vid === varyant?.id)) || null;
   const sure = varyant?.sureSn || ozet?.varsayilan?.sureSn || 0;
   const t = konum?.t ?? null;
   const pct = bitti ? 100 : t != null && sure ? Math.min(99, Math.round((t / sure) * 100)) : 0;
@@ -219,6 +224,12 @@ export default function DersDetayV15() {
                 <span>{durumAlt}</span>
               </span>
             </div>
+            {surumler.length > 1 && (
+              <div className="dd15-surum-satir">
+                <span>Sürüm</span>
+                <SurumSecV15 surumler={surumler} aktif={aktifSurum} sinif="dd15-surum" />
+              </div>
+            )}
             <div className="dd15-resume-a">
               <a className="v15-btn dd15-cta" href={dinle} onClick={linkClick(() => navigateTo(dinle))}>
                 {bitti ? <RotateCcw aria-hidden /> : <Play aria-hidden />}
