@@ -1,25 +1,14 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 599,
-  "baslik": "Kurul 2 çıkmışları tamamlandı: 2018-19'dan 2025-26'ya",
+  "onem": 600,
+  "baslik": "Ders listesinde güncel sürümün süresi",
   "maddeler": [
-    "Dönem 3 Kurul 2 çıkmış belgeleri (2018-19 … 2025-26) sistemle tek tek karşılaştırıldı; eksik 310 soru eklendi.",
-    "2018-19 Kurul 4 (bugünkü Kurul 2 içeriği) kâğıt sınavı resmî cevap anahtarıyla eklendi; 2020-21 Kurul 2 sınav sitesi karnelerindeki sorular tamamlandı.",
-    "2023-24, 2024-25 ve 2025-26 öğrenci hatırlamalarındaki eksik şıklar ders slaytları ve önceki yılların aynı sorularıyla tamamlandı.",
-    "Yılı belirsiz görünen yüzlerce kaydın sınav yılı belgelerle kesinleşti; aynı soru farklı yıllarda sorulduysa her yılın ayrı kaydı birbirine bağlandı.",
-    "Uydurma ya da sınavdan sapmış şıklar özgün hâline döndü; birkaç sorunun cevabı literatür ve ders notuna göre düzeltildi.",
-    "Soru kartı artık soruya ait tablo ve görselleri gösterebiliyor."
+    "Sürümü olan derslerde listede güncel sürümün dakikası gösterilir (ör. Nörolojik Muayene 33 dk)."
   ],
-  "eklenen": [
-    "310 yeni Kurul 2 (ve aynı defterlerdeki Kurul 3/4) çıkmış sorusu",
-    "Soru kartında tablo ve görsel desteği"
-  ],
-  "degisen": [
-    "Çıkmış soruların sınav yılı, kurul, ders, konu ve kazanım eşlemeleri",
-    "Kurul 2 şık açıklamaları (her şık için ne olduğu, ne işe yaradığı, neden doğru/yanlış olduğu)"
-  ],
+  "eklenen": [],
+  "degisen": [],
   "duzeltilen": [
-    "Aynı sınavın kopya kayıtları tek soruda birleştirildi; yanlış \"Kurul 1\" etiketli 2025-26 Kurul 2 soruları düzeltildi"
+    "Listede eski sürümün süresi görünüyordu"
   ],
   "silinen": []
 }

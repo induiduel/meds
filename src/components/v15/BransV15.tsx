@@ -69,7 +69,7 @@ export default function BransV15() {
                   <span className={`v15-tile ${i.bitti ? 'is-ok' : i.t != null ? '' : 'is-n'}`}>{i.bitti ? <Check aria-hidden /> : <Headphones aria-hidden />}</span>
                   <span className="b15-row-t">
                     <b>{dersAdi(d)}</b>
-                    <span>{[hoca, sureDk(i.sure)].filter(Boolean).join(' · ')}</span>
+                    <span>{[hoca, sureDk(dersSurumleri(d.key, liste0).find((x) => x.yeni)?.sureSn || i.sure)].filter(Boolean).join(' · ')}</span>
                   </span>
                   <Halka pct={i.pct} etiket={i.bitti ? 'Bitti' : `%${i.pct} dinlendi`} />
                 </a>

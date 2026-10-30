@@ -134,7 +134,7 @@ export default function SesliListeV15() {
                         <span className={`v15-tile ${i.tekrar ? 'is-tekrar' : i.bitti ? 'is-ok' : i.t != null ? '' : 'is-n'}`}>{i.tekrar ? <RotateCcw aria-hidden /> : i.bitti ? <Check aria-hidden /> : <Headphones aria-hidden />}</span>
                         <span className="b15-row-t">
                           <b>{dersAdi(d)}{indirilen[d.key] && <Download className="sl15-indi" aria-label="İndirildi" />}</b>
-                          <span>{i.tekrar && <em className="sl15-tekrar">{i.tur > 0 ? `${i.tur + 1}. tekrar` : 'Tekrarda'} · %{i.pct}</em>}{[hocaYaz(d.hoca), sureDk(i.sure)].filter(Boolean).join(' · ')}</span>
+                          <span>{i.tekrar && <em className="sl15-tekrar">{i.tur > 0 ? `${i.tur + 1}. tekrar` : 'Tekrarda'} · %{i.pct}</em>}{[hocaYaz(d.hoca), sureDk(dersSurumleri(d.key, liste0).find((x) => x.yeni)?.sureSn || i.sure)].filter(Boolean).join(' · ')}</span>
                         </span>
                         <Halka pct={i.pct} etiket={i.tekrar ? `Tekrar: %${i.pct} dinlendi` : i.bitti ? 'Bitti' : `%${i.pct} dinlendi`} />
                       </a>
