@@ -1683,3 +1683,14 @@ Her maddede: belirti · kök neden · Kurul 2 kuralı · kapı durumu. Kanıtlar
   dizinine çevrildi; `capa_dogrula` %98, 0 HATA; çapa Oracle'a yeniden yazıldı.
 - **Önleme:** yayımlanmış dersin metni düzeltildiğinde `sesli_yayinla.py`'den SONRA yerel çapa (klip_tasi ile taşınmış + değişen paragraflar
   yazılmış) Oracle'a geri kopyalanır ve `pdf_isaret.py --key <key> --zorla` çalıştırılır (H93); `ders-ekle`'nin yazdığı kaba çapaya güvenilmez.
+
+## H449 — Ders/ses sürümleri (V1/V2/V3) sitede görünmüyordu; Nörolojik Muayene V2'ye branş listesinden ulaşılamıyordu (2026-10-30)
+- **Belirti:** kullanıcı eski/yeni seslere v1/v2/v3 adı verilmesini istedi; adlar API'ye ve oynatıcıya eklendi ama "sitede canlıda göremedim".
+- **Kök neden:** (1) v15 kabuğunda branş listesi (`BransV15`) ve ders sayfası (`DersDetayV15`) hiç sürüm çizmiyordu; ses seçici yalnız oynatıcının
+  "Oynatıcı" panelinde (⋯ menüsü) vardı. `SesliListeV15`'teki V1/V2 bağlantıları öğrencinin girdiği branş sayfasında yoktu → `k2-05-…-v2`
+  dersi (öğrenci önem geliştirmeleri orada) listeden açılamıyordu. (2) Dağıtımdan sonra açık sekme service worker önbelleğindeki eski paketi
+  çalıştırır; yeni ekran ancak "Site güncellendi" ile yenilenince gelir.
+- **Çözüm:** `SurumSecV15` + `dersSurumleri` (ders sürümü …-v2 ve `kayit.json surumAd` tek sırada V1…Vn, en yenisi "güncel"); branş listesi,
+  sesli ders listesi ve ders sayfasında seçici; seçim ders başına cihazda hatırlanır (`cdDersSesSurumu`), `cdOynat` o sesi çalar.
+- **Önleme:** yeni bir ders/ses sürümü yayımlandığında canlıda öğrencinin GİRDİĞİ sayfalarda (branş listesi + ders sayfası) görünürlüğü
+  tarayıcıyla denetlenir; yalnız API alanını görmek yetmez. Denetim öncesi sayfa yeni pakete yenilenir (yüklü `chunk-main` = sunucudaki).
