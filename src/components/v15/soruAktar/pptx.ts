@@ -36,7 +36,14 @@ function soruP(h: HS, a: Ayar, k: number, wMm: number): string[] {
   const par = a.paragraf * k;
   const out: string[] = [];
   const et = etiketler(h, a);
-  const etP = () => p(et.map((e, i) => (i ? r('  ·  ', { fs: fs * 0.74, renk: '9CA3AF' }) : '') + r(e.ad, { fs: fs * 0.74, b: true, renk: e.renkli && h.renk ? h.renk : '64748B' })).join(''), { satir: sat, sonra: par }, { fs: fs * 0.74 });
+  const efs = fs * a.etiketBoyut;
+  const ozel = a.etiketRenk === 'ozel';
+  const dolgulu = a.etiketSekil === 'hap' || a.etiketSekil === 'kutu' || a.etiketSekil === 'kose';
+  const etP = () => p(et.map((e, i) => {
+    const metin = ozel && !e.renkli ? a.etiketMetin : karis(e.renk, 0.8, '000000');
+    const ayrac = i ? r(dolgulu ? '  ' : '  ·  ', { fs: efs, renk: '9CA3AF' }) : '';
+    return ayrac + r(dolgulu ? ` ${e.ad} ` : e.ad, { fs: efs, b: a.etiketKalin, renk: metin, vurgu: dolgulu ? (ozel && !e.renkli ? a.etiketZemin.replace('#', '').toUpperCase() : karis(e.renk, 0.14)) : undefined });
+  }).join(''), { satir: sat, sonra: par, algn: a.etiketDizilim === 'sag' ? 'r' : a.etiketDizilim === 'orta' ? 'ctr' : undefined }, { fs: efs });
   if (et.length && a.etiketYeri === 'ust') out.push(etP());
   const numRenk = h.renk && (a.renkStil === 'numara' || a.renkStil === 'etiket') ? h.renk : a.vurgu;
   out.push(p(r(numaraMetni(h.no, a) + ' ', { fs, b: true, renk: numRenk }) + zengin(h.q.stem, { fs, b: a.kokKalin }), { satir: sat, sonra: par, algn: a.iki ? 'just' : undefined }, { fs }));
@@ -91,10 +98,12 @@ const sonBosluk = (l: string[], mm: number) => {
   l[l.length - 1] = l[l.length - 1].replace(/<a:spcAft><a:spcPts val="\d+"\/><\/a:spcAft>/, `<a:spcAft><a:spcPts val="${Math.round(mm * 2.835 * 100)}"/></a:spcAft>`);
   return l;
 };
+const grupP = (b: { ad: string; renk: string | null; seviye: number; sayi: number; k: number }, a: Ayar, ic = false): string =>
+  p(r(b.ad, { fs: a.punto * (ic ? 0.9 : [1.28, 1.12, 1.0, 0.92][Math.min(3, b.seviye)]) * b.k, b: true, renk: b.renk || a.vurgu }) + (a.grupSayi ? r(`  ${b.sayi} soru`, { fs: a.punto * 0.8 * b.k, renk: '6B7280' }) : ''), { satir: 1.15, sonra: (ic ? a.paragraf : a.soruArasi * 1.4) * b.k, ind: b.seviye && !ic ? EMU(b.seviye * 1.5) : undefined }, { fs: a.punto });
 const blokP = (b: Blok, a: Ayar, wMm: number): string[] =>
-  b.t === 'soru' ? soruP(b.h, a, b.k, wMm)
+  b.t === 'soru' ? [...(b.basliklar || []).map((g) => grupP({ ...g, k: b.k }, a, true)), ...soruP(b.h, a, b.k, wMm)]
     : b.t === 'cozum' ? sonBosluk(cozumP(b.h, a, b.k, wMm, true), a.soruArasi * b.k)
-      : [p(r(b.ad, { fs: a.punto * 1.12, b: true, renk: b.renk || a.vurgu }), { satir: 1.15, sonra: a.soruArasi * 1.4 }, { fs: a.punto })];
+      : [grupP(b, a)];
 
 /* ---------------------------------------------------------------------------
  * Şekiller

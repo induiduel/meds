@@ -1727,3 +1727,10 @@ Her maddede: belirti · kök neden · Kurul 2 kuralı · kapı durumu. Kanıtlar
 - **Çözüm:** #11a, #27 grubuna katıldı (`_birlestir`); #27 ↔ h31 ve #11c ↔ h32 `_bagla` ile bantlandı.
 - **Önleme:** Hatırlama belgeleri işlenirken farklı yılların YENİ kayıtları arasında da konu + cevap metni eşleşmesiyle tarama yapılır;
   aynı sınavda "aynı soru olabilir" notlu ögeler önce birleştirilir, ayrı soru kurulmaz (uydurma soru yasağı kurguda da geçerli).
+
+## H456 — Izgara düzeninde her alt grup değişiminde sayfa kırılıyor, sayfada tek soru kalıyordu; seyrek son sayfa (soru dışa aktarıcı, 2026-10-31)
+- **Belirti:** Gruplama açıkken 4'lü/8'li ızgarada bazı sayfalarda tek soru (konu değişince yeni sayfa); akışta belgenin son sayfası çoğu kez 1–2 soruyla yarım kalıyordu.
+- **Kök neden:** (1) ızgara sayfası tam grup yoluna (`h.grup`, en iç katman dahil) göre kesiliyordu; çok katmanlı gruplamada her konu değişimi yeni sayfa demekti. (2) Yazı ölçeği sabitti; sayfalama yalnız sığmayan tek bloğu küçültüyordu, belgenin bütünü için bir ölçek seçilmiyordu.
+- **Çözüm:** ızgarada yalnız en üst katman sayfa bandı + sayfa kırılımıdır, alt katmanlar hücre içinde küçük başlık (`Blok.basliklar`, HTML/DOCX/PPTX). "Sayfaya sığdır" (`Ayar.sigdir`: kucult/doldur, `sigdirHedef`): `belge.ts::sigdirarak` seyrek (gövdesinin %45'inden azı dolu) bölüm sonu sayfalarını sayar, hedef sayfa sayısına sığan en büyük genel ölçeği ikili aramayla bulur (0,6–1,35); ızgarada "doldur" sayfadaki hücrelere sığan ortak en büyük ölçeği uygular.
+- **Önleme:** Sayfa kırılım ölçütü hiçbir zaman en iç gruplama katmanı olmaz; gruplama katmanı ekleyen değişiklik ızgara ve akışta sayfa sayısını 40 soruluk örnekle ölçer (önizleme `.pg` sayısı ile sunucu PDF `pdfinfo` eşit olmalı; bu turda 22 = 22). DOCX/PPTX H444 kapısı (LibreOffice sayfa sayısı + XML ayrıştırma) her sürümde yeniden koşulur.
+

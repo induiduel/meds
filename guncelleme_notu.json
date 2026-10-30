@@ -1,15 +1,19 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 601,
-  "baslik": "Kurul 2 çıkmışlarına 23 kurgu soru eklendi",
+  "onem": 602,
+  "baslik": "Soru dışa aktarıcı: katmanlı gruplama, ders renkleri, sayfaya sığdır",
   "maddeler": [
-    "Okunamayan ya da yarım hatırlanan 24 çıkmış soru, ders kaynağından kurularak eklendi; kökün başında \"Kurgu Soru:\" yazar.",
-    "2024-25 ve 2025-26'da tekrar sorulan okülomotor sinir ve medulla spinalis soruları birbirine bağlandı."
+    "Soruları yıl › kurul › ders › konu gibi en çok 4 iç içe katmanla gruplayabilir, etiketlere göre kümeleyebilirsin; 12 sıralama kipi.",
+    "Her ders sitedeki kendi rengini alır; grup başlıkları ve etiketler renklenir. Etiketlerin boyutu, dizilimi, şekli ve rengi ayarlanır.",
+    "Sayfaya sığdır: yazı ölçeği belgeye göre seçilir, tek soruluk seyrek sayfalar kalkar; hedef sayfa sayısı verilebilir.",
+    "Çözümler yalnız doğru şıkkı açıklayacak biçimde de yazılabilir."
   ],
   "eklenen": [
-    "23 kurgu çıkmış soru (2018-19 Kurul 4, 2023-24 Kurul 2/3, 2024-25 ve 2025-26 Kurul 2)"
+    "Dışa aktarıcıda çok katmanlı gruplama, etiket süzgeci, sayfaya sığdır, etiket görünümü, yalnız doğru şık çözümü"
   ],
-  "degisen": [],
+  "degisen": [
+    "Izgara düzeninde yalnız en üst grup sayfa kırar, alt gruplar hücre içinde başlık (H456)"
+  ],
   "duzeltilen": [],
   "silinen": []
 }

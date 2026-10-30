@@ -4,6 +4,7 @@
  * yazı pt. Kayıt: localStorage `medsoru_soru_aktar_v1` (yalnız bu cihaz) + adlandırılmış şablonlar.
  */
 import type { KaynakId } from './kaynak';
+import { disciplineKey, type DisciplineKey } from '../../../utils/discipline';
 
 export type Bicim = 'pdf' | 'docx' | 'pptx';
 export type Kagit = 'a4' | 'a5' | 'a3' | 'b5' | 'letter';
@@ -11,10 +12,46 @@ export type Duzen = 'akis' | 1 | 2 | 4 | 8;
 export type TasarimId = 'sinav' | 'modern' | 'sade' | 'kart' | 'defter' | 'kompakt';
 export type YaziId = 'sans' | 'serif' | 'kitap' | 'modern' | 'mono';
 export type CizgiStil = 'solid' | 'dashed' | 'dotted' | 'double';
-export type RenkAlan = 'yok' | 'ders' | 'konu' | 'yil' | 'kaynak' | 'kurul' | 'tur';
+/** Soruyu sınıflandıran alanlar: gruplama katmanı, renk anahtarı ve etiket aynı listeden seçilir */
+export type Alan = 'yil' | 'kurul' | 'ders' | 'konu' | 'kaynak' | 'tur' | 'zorluk' | 'etiket';
+export const ALANLAR: { id: Alan; ad: string; alt: string }[] = [
+  { id: 'yil', ad: 'Yıl', alt: 'Sınav yılı (yeni önce)' },
+  { id: 'kurul', ad: 'Kurul', alt: 'Kurul 1 … 6' },
+  { id: 'ders', ad: 'Ders', alt: 'Branş / ders adı' },
+  { id: 'konu', ad: 'Konu', alt: 'Ders başlığı / konu' },
+  { id: 'kaynak', ad: 'Kaynak', alt: 'Çıkmış, örnek, çözücü …' },
+  { id: 'tur', ad: 'Soru türü', alt: 'Çıkmış, benzer, hoca üslubu …' },
+  { id: 'zorluk', ad: 'Zorluk', alt: 'Kolay, orta, zor' },
+  { id: 'etiket', ad: 'Etiket', alt: 'Sorunun etiketi (birden çoksa en yaygını)' },
+];
+export const alanAdi = (id: Alan) => ALANLAR.find((x) => x.id === id)?.ad || id;
+export type RenkAlan = 'yok' | Alan;
 export type CozumYeri = 'yok' | 'altinda' | 'sayfaAlti' | 'arkada' | 'sonda';
-export type Grupla = 'yok' | 'ders' | 'konu' | 'yil' | 'kaynak' | 'kurul';
-export type Sirala = 'kaynak' | 'ders' | 'konu' | 'yil' | 'zorluk' | 'rastgele';
+export type Sirala = 'kaynak' | 'ders' | 'konu' | 'yil' | 'yilEski' | 'zorluk' | 'zorlukZor' | 'numara' | 'kisa' | 'uzun' | 'alfabetik' | 'rastgele';
+export const SIRALAMALAR: { id: Sirala; ad: string }[] = [
+  { id: 'kaynak', ad: 'Kaynak sırası' },
+  { id: 'ders', ad: 'Derse göre (A→Z)' },
+  { id: 'konu', ad: 'Konuya göre (A→Z)' },
+  { id: 'yil', ad: 'Yıla göre (yeni önce)' },
+  { id: 'yilEski', ad: 'Yıla göre (eski önce)' },
+  { id: 'zorluk', ad: 'Zorluğa göre (kolaydan)' },
+  { id: 'zorlukZor', ad: 'Zorluğa göre (zordan)' },
+  { id: 'numara', ad: 'Kaynaktaki soru numarası' },
+  { id: 'kisa', ad: 'Kısadan uzuna' },
+  { id: 'uzun', ad: 'Uzundan kısaya' },
+  { id: 'alfabetik', ad: 'Soru metni (A→Z)' },
+  { id: 'rastgele', ad: 'Rastgele' },
+];
+/** Grupların kendi aralarındaki sırası: olağan (yıl yeni önce, kurul numarası, zorluk kolaydan, ad) ya da soru sayısı */
+export type GrupSirasi = 'olagan' | 'sayiAzalan' | 'sayiArtan';
+/** Grup başlığı biçimi */
+export type GrupStil = 'cizgi' | 'bant' | 'kutu' | 'sade';
+/** Sayfaya sığdır: kapalı · yalnız küçült (seyrek son sayfayı kaldırır) · doldur (küçült ya da büyüt, sayfalar dolsun) */
+export type Sigdir = 'yok' | 'kucult' | 'doldur';
+export type EtiketSekil = 'hap' | 'kutu' | 'kose' | 'cizgi' | 'duz';
+export type EtiketRenk = 'gri' | 'alan' | 'ders' | 'ozel';
+export type EtiketDizilim = 'sol' | 'sag' | 'orta' | 'dikey';
+export const EN_COK_GRUP = 4;
 
 export interface Ayar {
   tasarim: TasarimId;
@@ -68,26 +105,45 @@ export interface Ayar {
   renkStil: 'serit' | 'etiket' | 'zemin' | 'numara';
   palet: 'canli' | 'pastel' | 'koyu' | 'gri';
   renkOzel: Record<string, string>;
-  etiket: { ders: boolean; konu: boolean; yil: boolean; kaynak: boolean; kurul: boolean; zorluk: boolean; tur: boolean };
+  /** Ders renk anahtarında sitedeki sabit ders renkleri (Patoloji pembe, Farmakoloji mor …); kapalıysa palet sırası */
+  dersRenkleri: boolean;
+  etiket: { ders: boolean; konu: boolean; yil: boolean; kaynak: boolean; kurul: boolean; zorluk: boolean; tur: boolean; etiket: boolean };
   etiketYeri: 'ust' | 'alt';
+  /** etiket yazı boyutu (soru puntosuna oran) */
+  etiketBoyut: number;
+  etiketDizilim: EtiketDizilim;
+  etiketSekil: EtiketSekil;
+  etiketRenk: EtiketRenk;
+  etiketZemin: string;
+  etiketMetin: string;
+  etiketKalin: boolean;
   grupRenkli: boolean;
   /* çözüm */
   dogruIsaret: boolean;
   isaretStil: 'kalin' | 'zemin' | 'tik' | 'daire';
   cozumYeri: CozumYeri;
-  cozumIcerik: { harf: boolean; aciklama: boolean; siklar: boolean; kaynak: boolean };
+  cozumIcerik: { harf: boolean; aciklama: boolean; siklar: boolean; kaynak: boolean; yalnizDogru: boolean };
   cevapAnahtari: boolean;
   optik: boolean;
   /** "arkada" çözümde ızgara satırlarını aynalar (çift yüz baskıda kartın arkası önüne denk gelir) */
   arkaAyna: boolean;
-  /* sıra */
-  grupla: Grupla;
+  /* sıra ve gruplama */
+  /** iç içe gruplama katmanları: ilk öğe en üst grup (ör. ['yil','kurul','ders','konu']); boşsa gruplama yok */
+  gruplar: Alan[];
+  grupSirasi: GrupSirasi;
+  grupStil: GrupStil;
+  /** başlıkta soru sayısı: "Patoloji (12)" */
+  grupSayi: boolean;
   grupYeniSayfa: boolean;
   sirala: Sirala;
   sikKaristir: boolean;
   numaraBas: number;
   grupNumara: boolean;
   tohum: number;
+  /* sayfaya sığdır */
+  sigdir: Sigdir;
+  /** hedef sayfa sayısı (0 = kendiliğinden: seyrek son sayfa kaldırılır) */
+  sigdirHedef: number;
 }
 
 export const KAGIT: Record<Kagit, { ad: string; w: number; h: number }> = {
@@ -111,6 +167,28 @@ export const YAZI: Record<YaziId, { ad: string; css: string; ofis: string }> = {
   mono: { ad: 'Daktilo (Courier)', css: "'Courier New', 'Liberation Mono', Courier, 'DejaVu Sans Mono', monospace", ofis: 'Courier New' },
 };
 
+/**
+ * Sitedeki sabit ders renkleri (styles/health.css `.d-<anahtar>` --d değerleri): her ders her belgede aynı rengi alır.
+ * Eşleşmeyen dersler (Ortopedi, Aile Hekimliği …) ek listeden ad karmasıyla seçilir; böylece birbirinden ayrışır.
+ */
+export const DERS_RENK: Record<DisciplineKey, string> = {
+  pat: '#E8336B', farm: '#AF52DE', enf: '#34A853', mikro: '#2FAE6A', halk: '#00A79D', ic: '#007AFF', gen: '#5856D6', cocuk: '#FF9500',
+  kadin: '#D63AAF', acil: '#FF3B30', biyo: '#32ADE6', ana: '#A2845E', fiz: '#E6A800', noro: '#5E5CE6', psik: '#8E6CEF', kardi: '#FF2D55',
+  cerr: '#64748B', ftr: '#30B0C7', uro: '#FFB340', onko: '#BF5AF2', diger: '#8E8E93',
+};
+const EK_DERS_RENK = ['#0D9488', '#B45309', '#4D7C0F', '#9F1239', '#1D4ED8', '#6D28D9', '#0E7490', '#92400E', '#334155', '#7C2D12'];
+export function dersRengi(ad: string): string {
+  const k = disciplineKey(ad);
+  if (k !== 'diger') return DERS_RENK[k];
+  let h = 2166136261;
+  for (let i = 0; i < ad.length; i++) h = Math.imul(h ^ ad.charCodeAt(i), 16777619);
+  return EK_DERS_RENK[(h >>> 0) % EK_DERS_RENK.length];
+}
+/** Etiket türü başına sabit renk ("Alan rengi" etiket kipi) */
+export const ALAN_RENK: Record<Alan, string> = {
+  yil: '#0891b2', kurul: '#4f46e5', ders: '#db2777', konu: '#059669', kaynak: '#d97706', tur: '#7c3aed', zorluk: '#dc2626', etiket: '#0d9488',
+};
+
 export const PALETLER: Record<Ayar['palet'], { ad: string; renk: string[] }> = {
   canli: { ad: 'Canlı', renk: ['#2563eb', '#dc2626', '#059669', '#d97706', '#7c3aed', '#db2777', '#0891b2', '#65a30d', '#ea580c', '#4f46e5', '#0d9488', '#be123c'] },
   pastel: { ad: 'Pastel', renk: ['#7aa2e3', '#e88f8f', '#7cc6a4', '#e8b86d', '#b39ddb', '#f0a1c2', '#7ec8d8', '#a9cf76', '#f2a87a', '#9fa8da', '#80cbc4', '#e6a0b0'] },
@@ -126,11 +204,14 @@ const ORTAK: Ayar = {
   sayfaNo: true, altMetin: 'MeDSor', kapak: false, filigran: '',
   yazi: 'serif', punto: 10.5, satir: 1.3, paragraf: 2, soruArasi: 6, iki: false, kokKalin: true, secenekDuzen: 'alt',
   numara: '1.', harf: 'A)', metinRenk: '#111827', vurgu: '#1d4ed8', ayirici: 'yok', yazmaSatiri: 0,
-  renkAlan: 'yok', renkStil: 'serit', palet: 'canli', renkOzel: {},
-  etiket: { ders: false, konu: false, yil: false, kaynak: false, kurul: false, zorluk: false, tur: false }, etiketYeri: 'ust', grupRenkli: true,
-  dogruIsaret: false, isaretStil: 'kalin', cozumYeri: 'sonda', cozumIcerik: { harf: true, aciklama: true, siklar: false, kaynak: false },
+  renkAlan: 'yok', renkStil: 'serit', palet: 'canli', renkOzel: {}, dersRenkleri: true,
+  etiket: { ders: false, konu: false, yil: false, kaynak: false, kurul: false, zorluk: false, tur: false, etiket: false }, etiketYeri: 'ust',
+  etiketBoyut: 0.72, etiketDizilim: 'sol', etiketSekil: 'hap', etiketRenk: 'gri', etiketZemin: '#e2e8f0', etiketMetin: '#334155', etiketKalin: true,
+  grupRenkli: true,
+  dogruIsaret: false, isaretStil: 'kalin', cozumYeri: 'sonda', cozumIcerik: { harf: true, aciklama: true, siklar: false, kaynak: false, yalnizDogru: false },
   cevapAnahtari: true, optik: false, arkaAyna: true,
-  grupla: 'yok', grupYeniSayfa: false, sirala: 'kaynak', sikKaristir: false, numaraBas: 1, grupNumara: false, tohum: 1,
+  gruplar: [], grupSirasi: 'olagan', grupStil: 'cizgi', grupSayi: false, grupYeniSayfa: false, sirala: 'kaynak', sikKaristir: false, numaraBas: 1, grupNumara: false, tohum: 1,
+  sigdir: 'yok', sigdirHedef: 0,
 };
 
 export interface TasarimTanim { id: TasarimId; ad: string; alt: string; ayar: Partial<Ayar> }
@@ -149,7 +230,7 @@ export const TASARIMLAR: TasarimTanim[] = [
   },
   {
     id: 'kart', ad: 'Kart / tekrar', alt: 'Sayfa başına 4 kutulu kart, çözüm arka sayfada',
-    ayar: { yazi: 'modern', punto: 11, satir: 1.35, duzen: 4, cerceve: false, hucreCerceve: true, hucreAralik: 6, numara: 'S1.', harf: 'A)', kokKalin: true, renkAlan: 'konu', renkStil: 'etiket', palet: 'pastel', etiket: { ...ORTAK.etiket, ders: true, konu: true }, ayirici: 'yok', vurgu: '#7c3aed', metinRenk: '#1f2937', dogruIsaret: false, cozumYeri: 'arkada', cozumIcerik: { harf: true, aciklama: true, siklar: true, kaynak: false }, cevapAnahtari: false, optik: false, kapak: false, baslikAcik: false, yazmaSatiri: 0 },
+    ayar: { yazi: 'modern', punto: 11, satir: 1.35, duzen: 4, cerceve: false, hucreCerceve: true, hucreAralik: 6, numara: 'S1.', harf: 'A)', kokKalin: true, renkAlan: 'konu', renkStil: 'etiket', palet: 'pastel', etiket: { ...ORTAK.etiket, ders: true, konu: true }, ayirici: 'yok', vurgu: '#7c3aed', metinRenk: '#1f2937', dogruIsaret: false, cozumYeri: 'arkada', cozumIcerik: { harf: true, aciklama: true, siklar: true, kaynak: false, yalnizDogru: false }, cevapAnahtari: false, optik: false, kapak: false, baslikAcik: false, yazmaSatiri: 0 },
   },
   {
     id: 'defter', ad: 'Çalışma kâğıdı', alt: 'Her sorunun altında not satırları, sayfa çerçevesi',
@@ -163,7 +244,12 @@ export const TASARIMLAR: TasarimTanim[] = [
 export const tasarimUygula = (a: Ayar, id: TasarimId): Ayar => ({ ...a, ...(TASARIMLAR.find((t) => t.id === id)?.ayar || {}), tasarim: id });
 export const VARSAYILAN: Ayar = tasarimUygula(ORTAK, 'sinav');
 
-/** Kayıttan gelen ayarı doğrular (eksik alan varsayılandan, bozuk değer atılır) */
+const ALAN_SET = new Set<string>(ALANLAR.map((x) => x.id));
+/** Gruplama katmanları: yalnız geçerli alanlar, tekrarsız, en çok EN_COK_GRUP */
+export const gruplarNormal = (v: unknown): Alan[] =>
+  (Array.isArray(v) ? v : []).filter((x, i, arr): x is Alan => typeof x === 'string' && ALAN_SET.has(x) && arr.indexOf(x) === i).slice(0, EN_COK_GRUP);
+
+/** Kayıttan gelen ayarı doğrular (eksik alan varsayılandan, bozuk değer atılır); eski tek alanlı `grupla` kaydı katmana çevrilir */
 export function ayarNormal(raw: any): Ayar {
   const a: any = { ...VARSAYILAN };
   if (raw && typeof raw === 'object') {
@@ -171,15 +257,21 @@ export function ayarNormal(raw: any): Ayar {
       const v = raw[k];
       const d: any = VARSAYILAN[k];
       if (v == null) continue;
+      if (k === 'gruplar') { a.gruplar = gruplarNormal(v); continue; }
       if (Array.isArray(d)) { if (Array.isArray(v) && v.length === d.length && v.every((x: any) => typeof x === 'number')) a[k] = v; }
       else if (typeof d === 'object') { if (typeof v === 'object' && !Array.isArray(v)) a[k] = { ...d, ...v }; }
       else if (typeof v === typeof d || (k === 'duzen' && (v === 'akis' || [1, 2, 4, 8].includes(v)))) a[k] = v;
     }
+    if (!Array.isArray(raw.gruplar) && typeof raw.grupla === 'string' && raw.grupla !== 'yok') a.gruplar = gruplarNormal([raw.grupla]);
   }
   a.punto = Math.min(16, Math.max(6, Number(a.punto) || 10.5));
   a.satir = Math.min(2.4, Math.max(1, Number(a.satir) || 1.3));
   a.kenar = a.kenar.map((x: number) => Math.min(40, Math.max(0, x)));
   if (![1, 2].includes(a.sutun)) a.sutun = 1;
+  if (a.renkAlan !== 'yok' && !ALAN_SET.has(a.renkAlan)) a.renkAlan = 'yok';
+  if (!SIRALAMALAR.some((x) => x.id === a.sirala)) a.sirala = 'kaynak';
+  a.etiketBoyut = Math.min(1.1, Math.max(0.5, Number(a.etiketBoyut) || 0.72));
+  a.sigdirHedef = Math.min(999, Math.max(0, Math.round(Number(a.sigdirHedef) || 0)));
   return a as Ayar;
 }
 

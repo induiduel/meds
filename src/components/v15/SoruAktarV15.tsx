@@ -1,14 +1,14 @@
 import React, { useCallback, useDeferredValue, useEffect, useMemo, useRef, useState } from 'react';
 import { useVirtualizer } from '@tanstack/react-virtual';
 import {
-  Check, CheckSquare, Columns2, Eye, FileDown, FileText, Filter, LayoutGrid, ListChecks, Loader2, Palette, Presentation, Printer,
-  RotateCcw, Save, Search, Shuffle, SlidersHorizontal, Trash2, Type,
+  Check, CheckSquare, Columns2, Eye, FileDown, FileText, Filter, LayoutGrid, ListChecks, Loader2, Palette, Plus, Presentation, Printer,
+  RotateCcw, Save, Search, Shuffle, SlidersHorizontal, Trash2, Type, X,
 } from 'lucide-react';
 import { useV15Baslik } from './baslik';
 import { BOS_SUZGEC, KAYNAKLAR, kaynakYukle, miniDesteler, secenekler, suz, type AQ, type KaynakId, type Suzgec } from './soruAktar/kaynak';
 import {
-  KAGIT, PALETLER, PX_MM, TASARIMLAR, VARSAYILAN, YAZI, ayarNormal, karistir, sayfaOlcu, tasarimUygula,
-  type Ayar, type Bicim, type Duzen, type TasarimId,
+  ALANLAR, EN_COK_GRUP, KAGIT, PALETLER, PX_MM, SIRALAMALAR, TASARIMLAR, VARSAYILAN, YAZI, alanAdi, ayarNormal, karistir, sayfaOlcu, tasarimUygula,
+  type Alan, type Ayar, type Bicim, type Duzen, type TasarimId,
 } from './soruAktar/ayar';
 import { Olcer, belgeHtml, hazirla, kagitAdi, renkHaritasi, sayfala, type HS } from './soruAktar/belge';
 import { downloadBlob, printDocument, renderPdfOnServer, safeFileName } from '../pdf/pdfDocument';
@@ -122,6 +122,51 @@ function CokSecim({ ad, liste, secili, degis, ad2 }: { ad: string; liste: { v: s
   );
 }
 
+/** İç içe gruplama katmanları: her satır bir katman (1 = en üst grup); alan seçilir, kaldırılır, en çok EN_COK_GRUP katman */
+const HAZIR_GRUPLAR: { ad: string; v: Alan[] }[] = [
+  { ad: 'Yıl › Kurul › Ders › Konu', v: ['yil', 'kurul', 'ders', 'konu'] },
+  { ad: 'Kurul › Ders › Konu', v: ['kurul', 'ders', 'konu'] },
+  { ad: 'Ders › Konu', v: ['ders', 'konu'] },
+  { ad: 'Ders › Yıl', v: ['ders', 'yil'] },
+  { ad: 'Etiket', v: ['etiket'] },
+];
+function GrupKatmanlari({ gruplar, degis }: { gruplar: Alan[]; degis: (v: Alan[]) => void }) {
+  const bos = ALANLAR.filter((x) => !gruplar.includes(x.id));
+  return (
+    <div className="sx15-katman">
+      {gruplar.length > 0 && (
+        <ol className="sx15-kt-l">
+          {gruplar.map((g, i) => (
+            <li key={g} className="sx15-kt" style={{ '--sv': i } as React.CSSProperties}>
+              <span className="sx15-kt-no" aria-hidden>{i + 1}</span>
+              <label className="sx15-sel">
+                <span className="sr-only">{i + 1}. katman</span>
+                <select value={g} onChange={(e) => degis(gruplar.map((x, j) => (j === i ? (e.target.value as Alan) : x)))}>
+                  {ALANLAR.filter((x) => x.id === g || !gruplar.includes(x.id)).map((x) => <option key={x.id} value={x.id}>{x.ad}</option>)}
+                </select>
+              </label>
+              <small>{ALANLAR.find((x) => x.id === g)?.alt}</small>
+              <button type="button" className="v15-ib" aria-label={`${alanAdi(g)} katmanını kaldır`} onClick={() => degis(gruplar.filter((_, j) => j !== i))}><X aria-hidden /></button>
+            </li>
+          ))}
+        </ol>
+      )}
+      {gruplar.length < EN_COK_GRUP && bos.length > 0 && (
+        <div className="sx15-cipler">
+          {bos.map((x) => (
+            <button key={x.id} type="button" className="sx15-cip is-dev" title={x.alt} onClick={() => degis([...gruplar, x.id])}><Plus aria-hidden /><span>{gruplar.length ? `${x.ad} alt grubu` : `${x.ad} ile grupla`}</span></button>
+          ))}
+        </div>
+      )}
+      <div className="sx15-hazir">
+        <b>Hazır:</b>
+        {HAZIR_GRUPLAR.map((h) => <button key={h.ad} type="button" className="sx15-lnk" onClick={() => degis(h.v)}>{h.ad}</button>)}
+        {gruplar.length > 0 && <button type="button" className="sx15-lnk" onClick={() => degis([])}>Gruplama yok</button>}
+      </div>
+    </div>
+  );
+}
+
 /** Tasarım kartı küçük resmi: düzenin kaba taslağı */
 function TasarimResim({ id }: { id: TasarimId }) {
   return <span className={`sx15-tr sx15-tr-${id}`} aria-hidden><i /><i /><i /><i /></span>;
@@ -164,7 +209,7 @@ function SoruListesi({ liste, cikarilan, ac }: { liste: AQ[]; cikarilan: Set<str
 /* ---------------------------------------------------------------------------
  * Önizleme
  * ------------------------------------------------------------------------- */
-interface Oniz { html: string; sayfa: number; tahmini: boolean; tasan: number; gosterilen: number }
+interface Oniz { html: string; sayfa: number; tahmini: boolean; tasan: number; gosterilen: number; /** sayfaya sığdırın seçtiği yazı ölçeği */ olcek: number; not?: string }
 
 function Onizleme({ oniz, ayar, yukleniyor, zum }: { oniz: Oniz | null; ayar: Ayar; yukleniyor: boolean; zum: 'sigdir' | number }) {
   const dis = useRef<HTMLDivElement>(null);
@@ -282,6 +327,7 @@ export default function SoruAktarV15() {
     yillar: secenekler(tum, suzA, 'yillar'),
     turler: secenekler(tum, suzA, 'turler'),
     zorluk: secenekler(tum, suzA, 'zorluk'),
+    etiketler: secenekler(tum, suzA, 'etiketler'),
   }), [tum, suzA]);
   const secili = useMemo(() => {
     const l = suzulmus.filter((q) => !cikarilan.has(q.key));
@@ -307,7 +353,7 @@ export default function SoruAktarV15() {
         if (no !== sira.current) return;
         const tahmini = hs.length > parca.length;
         const toplam = tahmini ? Math.max(b.sayfalar.length, Math.round((b.sayfalar.length * hs.length) / parca.length)) : b.sayfalar.length;
-        setOniz({ html: belgeHtml(b, ayar, { onizleme: true, ilk: ONIZ_SAYFA, tum: hs, toplamSayfa: tahmini ? toplam : undefined }), sayfa: toplam, tahmini, tasan: b.tasan, gosterilen: Math.min(ONIZ_SAYFA, b.sayfalar.length) });
+        setOniz({ html: belgeHtml(b, ayar, { onizleme: true, ilk: ONIZ_SAYFA, tum: hs, toplamSayfa: tahmini ? toplam : undefined }), sayfa: toplam, tahmini, tasan: b.tasan, gosterilen: Math.min(ONIZ_SAYFA, b.sayfalar.length), olcek: b.olcek, not: b.sigdirNot });
       } catch (e) {
         console.warn('[soru-aktar] önizleme', e);
       } finally {
@@ -358,7 +404,7 @@ export default function SoruAktarV15() {
 
   const ac = useCallback((k: string) => setCikarilan((s) => { const n = new Set(s); if (n.has(k)) n.delete(k); else n.add(k); return n; }), []);
   const kaynakAc = (k: KaynakId) => setS({ kaynaklar: suzgec.kaynaklar.includes(k) ? suzgec.kaynaklar.filter((x) => x !== k) : [...suzgec.kaynaklar, k] });
-  const suzgecSay = suzgec.kurullar.length + suzgec.dersler.length + suzgec.konular.length + suzgec.yillar.length + suzgec.turler.length + suzgec.zorluk.length + (suzgec.cevapli ? 1 : 0) + (suzgec.aciklamali ? 1 : 0) + (suzgec.arama ? 1 : 0);
+  const suzgecSay = suzgec.kurullar.length + suzgec.dersler.length + suzgec.konular.length + suzgec.yillar.length + suzgec.turler.length + suzgec.zorluk.length + suzgec.etiketler.length + (suzgec.cevapli ? 1 : 0) + (suzgec.aciklamali ? 1 : 0) + (suzgec.arama ? 1 : 0);
   const bicim = BICIMLER.find((b) => b.id === ayar.bicim)!;
   const ozet = `${hs.length} soru · ${oniz ? `${oniz.tahmini ? '≈' : ''}${oniz.sayfa} ${ayar.bicim === 'pptx' ? 'slayt' : 'sayfa'}` : '—'} · ${kagitAdi(ayar)}`;
 
@@ -388,7 +434,7 @@ export default function SoruAktarV15() {
           </div>
         )}
       </Bolum>
-      <Bolum baslik="Süzgeçler" sag={suzgecSay > 0 ? <button type="button" className="sx15-lnk" onClick={() => setS({ kurullar: [], dersler: [], konular: [], yillar: [], turler: [], zorluk: [], cevapli: false, aciklamali: false, arama: '' })}><RotateCcw aria-hidden />Temizle</button> : undefined}>
+      <Bolum baslik="Süzgeçler" sag={suzgecSay > 0 ? <button type="button" className="sx15-lnk" onClick={() => setS({ kurullar: [], dersler: [], konular: [], yillar: [], turler: [], zorluk: [], etiketler: [], cevapli: false, aciklamali: false, arama: '' })}><RotateCcw aria-hidden />Temizle</button> : undefined}>
         <label className="sx15-ara is-b"><Search aria-hidden /><input type="search" value={suzgec.arama} placeholder="Soru metninde ara (ör. nefrotik, akut başlangıç)" onChange={(e) => setS({ arama: e.target.value })} /></label>
         <CokSecim ad="Kurul" liste={sec.kurullar} secili={suzgec.kurullar.map(String)} degis={(v) => setS({ kurullar: v.map(Number) })} ad2={(v) => `Kurul ${v}`} />
         <CokSecim ad="Ders" liste={sec.dersler} secili={suzgec.dersler} degis={(v) => setS({ dersler: v })} />
@@ -396,6 +442,7 @@ export default function SoruAktarV15() {
         <CokSecim ad="Yıl" liste={sec.yillar} secili={suzgec.yillar} degis={(v) => setS({ yillar: v })} ad2={(v) => (v === '—' ? 'Yılsız' : v)} />
         <CokSecim ad="Soru türü" liste={sec.turler} secili={suzgec.turler} degis={(v) => setS({ turler: v })} />
         <CokSecim ad="Zorluk" liste={sec.zorluk} secili={suzgec.zorluk} degis={(v) => setS({ zorluk: v })} ad2={(v) => (v === '—' ? 'Belirtilmemiş' : v[0].toLocaleUpperCase('tr') + v.slice(1))} />
+        <CokSecim ad="Etiket" liste={sec.etiketler} secili={suzgec.etiketler} degis={(v) => setS({ etiketler: v })} />
         <div className="sx15-iki">
           <Anahtar ad="Yalnız cevaplı" acik={suzgec.cevapli} degis={(v) => setS({ cevapli: v })} />
           <Anahtar ad="Yalnız açıklamalı" acik={suzgec.aciklamali} degis={(v) => setS({ aciklamali: v })} />
@@ -452,28 +499,40 @@ export default function SoruAktarV15() {
           </>
         )}
       </Bolum>
-      <Bolum baslik="Sıralama ve gruplama">
+      <Bolum baslik="Sayfaya sığdır" alt="Yazı ölçeğini belgeye göre seçer: seyrek kalan son sayfa kaldırılır, sayfalar dolar. Akış düzeninde tüm belgeye, ızgarada hücrelere uygulanır.">
+        <Seg ad="Sayfaya sığdır" deger={ayar.sigdir} degis={(sigdir) => set({ sigdir })} ogeler={[{ v: 'yok', ad: 'Kapalı', title: 'Ayarlanan punto aynen kullanılır' }, { v: 'kucult', ad: 'Yalnız küçült', title: 'Seyrek son sayfayı kaldırmak için yazıyı küçültür' }, { v: 'doldur', ad: 'Doldur', title: 'Sayfalar dolsun diye küçültür ya da büyütür' }]} />
+        {ayar.sigdir !== 'yok' && ayar.duzen === 'akis' && (
+          <>
+            <Kaydir ad="Hedef sayfa" deger={ayar.sigdirHedef} min={0} max={Math.max(2, Math.min(300, oniz?.sayfa || 20))} birim="sayfa" degis={(v) => set({ sigdirHedef: Math.round(v) })} />
+            <p className="v15-cap">{ayar.sigdirHedef > 0 ? `Belge ${ayar.sigdirHedef} içerik sayfasına sığdırılır (kapak, cevap anahtarı ve cevap kâğıdı sayılmaz).` : 'Hedef 0 = kendiliğinden: gövdesinin yarısından azı dolu son sayfa varsa bir sayfa aza sığdırılır.'}</p>
+          </>
+        )}
+        {ayar.sigdir !== 'yok' && ayar.duzen !== 'akis' && <p className="v15-cap">Izgarada sayfa sayısı hücre sayısından gelir; "Doldur" her sayfadaki hücrelere sığan ortak en büyük yazı ölçeğini kullanır.</p>}
+      </Bolum>
+      <Bolum baslik="Sıralama">
         <label className="sx15-sel"><span>Sırala</span>
           <select value={ayar.sirala} onChange={(e) => set({ sirala: e.target.value as Ayar['sirala'] })}>
-            <option value="kaynak">Kaynak sırası</option><option value="ders">Derse göre</option><option value="konu">Konuya göre</option>
-            <option value="yil">Yıla göre (yeni önce)</option><option value="zorluk">Zorluğa göre (kolaydan)</option><option value="rastgele">Rastgele</option>
+            {SIRALAMALAR.map((x) => <option key={x.id} value={x.id}>{x.ad}</option>)}
           </select>
         </label>
         {ayar.sirala === 'rastgele' && <button type="button" className="v15-btn is-ghost sx15-kb" onClick={() => set({ tohum: ayar.tohum + 1 })}><Shuffle aria-hidden />Yeniden karıştır</button>}
-        <label className="sx15-sel"><span>Grupla</span>
-          <select value={ayar.grupla} onChange={(e) => set({ grupla: e.target.value as Ayar['grupla'] })}>
-            <option value="yok">Gruplama yok</option><option value="ders">Derse göre</option><option value="konu">Konuya göre</option>
-            <option value="yil">Yıla göre</option><option value="kaynak">Kaynağa göre</option><option value="kurul">Kurula göre</option>
-          </select>
-        </label>
-        {ayar.grupla !== 'yok' && (
-          <div className="sx15-iki">
-            <Anahtar ad="Her grup yeni sayfada" acik={ayar.grupYeniSayfa || ayar.duzen !== 'akis'} kapali={ayar.duzen !== 'akis'} degis={(v) => set({ grupYeniSayfa: v })} />
-            <Anahtar ad="Numara grupta yeniden" acik={ayar.grupNumara} degis={(v) => set({ grupNumara: v })} />
-          </div>
-        )}
         <Anahtar ad="Şıkları karıştır" alt="Cevap anahtarı yeni sıraya göre yazılır" acik={ayar.sikKaristir} degis={(v) => set({ sikKaristir: v })} />
         <Kaydir ad="İlk soru numarası" deger={ayar.numaraBas} min={1} max={500} degis={(v) => set({ numaraBas: Math.round(v) })} />
+      </Bolum>
+      <Bolum baslik="Gruplama" alt="İç içe katmanlar: önce 1. katmana göre kümelenir, her küme kendi içinde 2. katmana göre … (en çok 4). Grup içi sıra yukarıdaki sıralamadır.">
+        <GrupKatmanlari gruplar={ayar.gruplar} degis={(gruplar) => set({ gruplar })} />
+        {ayar.gruplar.length > 0 && (
+          <>
+            <Seg ad="Grupların sırası" kucuk deger={ayar.grupSirasi} degis={(grupSirasi) => set({ grupSirasi })} ogeler={[{ v: 'olagan', ad: 'Olağan', title: 'Yıl yeni önce, kurul numarası, zorluk kolaydan, ad A→Z' }, { v: 'sayiAzalan', ad: 'Çok sorudan aza' }, { v: 'sayiArtan', ad: 'Az sorudan çoğa' }]} />
+            <Seg ad="Başlık biçimi" kucuk deger={ayar.grupStil} degis={(grupStil) => set({ grupStil })} ogeler={[{ v: 'cizgi', ad: 'Alt çizgi' }, { v: 'bant', ad: 'Bant' }, { v: 'kutu', ad: 'Kutu' }, { v: 'sade', ad: 'Sade' }]} />
+            <div className="sx15-iki">
+              <Anahtar ad="Başlıkta soru sayısı" acik={ayar.grupSayi} degis={(v) => set({ grupSayi: v })} />
+              <Anahtar ad="Başlıklar renkli" alt="Ders başlığı dersin rengini, diğerleri renk anahtarını alır" acik={ayar.grupRenkli} degis={(v) => set({ grupRenkli: v })} />
+              <Anahtar ad="Her üst grup yeni sayfada" acik={ayar.grupYeniSayfa || ayar.duzen !== 'akis'} kapali={ayar.duzen !== 'akis'} degis={(v) => set({ grupYeniSayfa: v })} />
+              <Anahtar ad="Numara grupta yeniden" acik={ayar.grupNumara} degis={(v) => set({ grupNumara: v })} />
+            </div>
+          </>
+        )}
       </Bolum>
       <Bolum baslik="Şablonlarım" alt="Ayarları adıyla kaydet, sonra tek dokunuşla geri yükle (bu cihazda).">
         <form className="sx15-sablon" onSubmit={(e) => { e.preventDefault(); const ad = sablonAd.trim(); if (!ad) return; setSablon((l) => [{ ad, ayar }, ...l.filter((x) => x.ad !== ad)].slice(0, 20)); setSablonAd(''); toast.success('Şablon kaydedildi', ad); }}>
@@ -577,18 +636,21 @@ export default function SoruAktarV15() {
 
   const panelRenk = (
     <>
-      <Bolum baslik="Renklendirme" alt="Soruları bir özelliğe göre renklendir: aynı ders/konu/yıl aynı rengi alır.">
-        <Seg ad="Renk anahtarı" kucuk deger={ayar.renkAlan} degis={(renkAlan) => set({ renkAlan })} ogeler={[{ v: 'yok', ad: 'Yok' }, { v: 'ders', ad: 'Ders' }, { v: 'konu', ad: 'Konu' }, { v: 'yil', ad: 'Yıl' }, { v: 'kaynak', ad: 'Kaynak' }, { v: 'kurul', ad: 'Kurul' }, { v: 'tur', ad: 'Tür' }]} />
+      <Bolum baslik="Renklendirme" alt="Soruları bir özelliğe göre renklendir: aynı ders/konu/yıl aynı rengi alır. Derste her dersin sitedeki sabit rengi kullanılır.">
+        <Seg ad="Renk anahtarı" kucuk deger={ayar.renkAlan} degis={(renkAlan) => set({ renkAlan })} ogeler={[{ v: 'yok' as const, ad: 'Yok' }, ...ALANLAR.map((x) => ({ v: x.id as Ayar['renkAlan'], ad: x.ad, title: x.alt }))]} />
         {ayar.renkAlan !== 'yok' && (
           <>
             <Seg ad="Renk biçimi" deger={ayar.renkStil} degis={(renkStil) => set({ renkStil })} ogeler={[{ v: 'serit', ad: 'Şerit' }, { v: 'etiket', ad: 'Etiket' }, { v: 'zemin', ad: 'Zemin' }, { v: 'numara', ad: 'Numara' }]} />
-            <div className="sx15-palet" role="radiogroup" aria-label="Palet">
-              {(Object.keys(PALETLER) as Ayar['palet'][]).map((p) => (
-                <button key={p} type="button" role="radio" aria-checked={ayar.palet === p} className={ayar.palet === p ? 'is-on' : ''} onClick={() => set({ palet: p })}>
-                  <span>{PALETLER[p].renk.slice(0, 6).map((c) => <i key={c} style={{ background: c }} />)}</span>{PALETLER[p].ad}
-                </button>
-              ))}
-            </div>
+            {ayar.renkAlan === 'ders' && <Anahtar ad="Her dersin kendi rengi" alt="Patoloji pembe, Farmakoloji mor … (sitedeki ders renkleri); kapalıysa palet sırası" acik={ayar.dersRenkleri} degis={(v) => set({ dersRenkleri: v })} />}
+            {!(ayar.renkAlan === 'ders' && ayar.dersRenkleri) && (
+              <div className="sx15-palet" role="radiogroup" aria-label="Palet">
+                {(Object.keys(PALETLER) as Ayar['palet'][]).map((p) => (
+                  <button key={p} type="button" role="radio" aria-checked={ayar.palet === p} className={ayar.palet === p ? 'is-on' : ''} onClick={() => set({ palet: p })}>
+                    <span>{PALETLER[p].renk.slice(0, 6).map((c) => <i key={c} style={{ background: c }} />)}</span>{PALETLER[p].ad}
+                  </button>
+                ))}
+              </div>
+            )}
             {lejant.length > 0 && (
               <div className="sx15-lejant">
                 <div className="sx15-coklu-b"><b>Renk anahtarı ({lejant.length})</b>{Object.keys(ayar.renkOzel).some((k) => k.startsWith(`${ayar.renkAlan}:`)) && <button type="button" className="sx15-lnk" onClick={() => set({ renkOzel: Object.fromEntries(Object.entries(ayar.renkOzel).filter(([k]) => !k.startsWith(`${ayar.renkAlan}:`))) })}>Renkleri sıfırla</button>}</div>
@@ -604,15 +666,28 @@ export default function SoruAktarV15() {
             )}
           </>
         )}
-        {ayar.grupla !== 'yok' && <Anahtar ad="Grup başlıkları renkli" acik={ayar.grupRenkli} degis={(v) => set({ grupRenkli: v })} />}
+        {ayar.gruplar.length > 0 && <Anahtar ad="Grup başlıkları renkli" alt="Ders başlığı dersin rengini, diğer katmanlar renk anahtarını ya da üst katmanı alır" acik={ayar.grupRenkli} degis={(v) => set({ grupRenkli: v })} />}
       </Bolum>
       <Bolum baslik="Etiketler" alt="Her sorunun üstünde ya da altında gösterilecek bilgiler.">
         <div className="sx15-cipler">
-          {([['kurul', 'Kurul'], ['ders', 'Ders'], ['konu', 'Konu'], ['yil', 'Yıl'], ['kaynak', 'Kaynak'], ['tur', 'Tür'], ['zorluk', 'Zorluk']] as [keyof Ayar['etiket'], string][]).map(([k, ad]) => (
+          {([['kurul', 'Kurul'], ['ders', 'Ders'], ['konu', 'Konu'], ['yil', 'Yıl'], ['kaynak', 'Kaynak'], ['tur', 'Tür'], ['zorluk', 'Zorluk'], ['etiket', 'Soru etiketleri']] as [keyof Ayar['etiket'], string][]).map(([k, ad]) => (
             <button key={k} type="button" aria-pressed={ayar.etiket[k]} className={`sx15-cip${ayar.etiket[k] ? ' is-on' : ''}`} onClick={() => set({ etiket: { ...ayar.etiket, [k]: !ayar.etiket[k] } })}>{ayar.etiket[k] && <Check aria-hidden />}<span>{ad}</span></button>
           ))}
         </div>
         <Seg ad="Etiket yeri" kucuk deger={ayar.etiketYeri} degis={(etiketYeri) => set({ etiketYeri })} ogeler={[{ v: 'ust', ad: 'Sorunun üstünde' }, { v: 'alt', ad: 'Sorunun altında' }]} />
+      </Bolum>
+      <Bolum baslik="Etiket görünümü" alt="Boyut, dizilim, şekil ve renk. Renk anahtarının alanı her kipte kendi rengini taşır.">
+        <Kaydir ad="Boyut" deger={ayar.etiketBoyut} min={0.5} max={1.1} adim={0.02} birim="× punto" degis={(v) => set({ etiketBoyut: v })} />
+        <Seg ad="Dizilim" kucuk deger={ayar.etiketDizilim} degis={(etiketDizilim) => set({ etiketDizilim })} ogeler={[{ v: 'sol', ad: 'Sola' }, { v: 'orta', ad: 'Ortaya' }, { v: 'sag', ad: 'Sağa' }, { v: 'dikey', ad: 'Alt alta' }]} />
+        <Seg ad="Şekil" kucuk deger={ayar.etiketSekil} degis={(etiketSekil) => set({ etiketSekil })} ogeler={[{ v: 'hap', ad: 'Hap' }, { v: 'kutu', ad: 'Yuvarlak kutu' }, { v: 'kose', ad: 'Köşeli' }, { v: 'cizgi', ad: 'Çerçeve' }, { v: 'duz', ad: 'Düz metin' }]} />
+        <Seg ad="Etiket rengi" kucuk deger={ayar.etiketRenk} degis={(etiketRenk) => set({ etiketRenk })} ogeler={[{ v: 'gri', ad: 'Gri' }, { v: 'alan', ad: 'Türüne göre', title: 'Kurul, ders, konu, yıl … her türün kendi rengi' }, { v: 'ders', ad: 'Dersin rengi', title: 'Sorunun dersinin rengi' }, { v: 'ozel', ad: 'Özel' }]} />
+        {ayar.etiketRenk === 'ozel' && (
+          <div className="sx15-iki">
+            <Renk ad="Etiket zemini" deger={ayar.etiketZemin} degis={(v) => set({ etiketZemin: v })} />
+            <Renk ad="Etiket yazısı" deger={ayar.etiketMetin} degis={(v) => set({ etiketMetin: v })} />
+          </div>
+        )}
+        <Anahtar ad="Kalın yazı" acik={ayar.etiketKalin} degis={(v) => set({ etiketKalin: v })} />
       </Bolum>
     </>
   );
@@ -642,10 +717,11 @@ export default function SoruAktarV15() {
       </Bolum>
       {ayar.cozumYeri !== 'yok' && ayar.cozumYeri !== 'sayfaAlti' && (
         <Bolum baslik="Çözümde neler olsun">
+          <Anahtar ad="Yalnız doğru şıkkı açıkla" alt="Çeldirici çözümlemesi yazılmaz; doğru seçeneğin gerekçesi (yoksa genel açıklama) verilir" acik={ayar.cozumIcerik.yalnizDogru} degis={(v) => set({ cozumIcerik: { ...ayar.cozumIcerik, yalnizDogru: v } })} />
           <div className="sx15-iki">
             <Anahtar ad="Cevap harfi" acik={ayar.cozumIcerik.harf} degis={(v) => set({ cozumIcerik: { ...ayar.cozumIcerik, harf: v } })} />
             <Anahtar ad="Açıklama" acik={ayar.cozumIcerik.aciklama} degis={(v) => set({ cozumIcerik: { ...ayar.cozumIcerik, aciklama: v } })} />
-            <Anahtar ad="Şık şık açıklama" acik={ayar.cozumIcerik.siklar} degis={(v) => set({ cozumIcerik: { ...ayar.cozumIcerik, siklar: v } })} />
+            {!ayar.cozumIcerik.yalnizDogru && <Anahtar ad="Şık şık açıklama" acik={ayar.cozumIcerik.siklar} degis={(v) => set({ cozumIcerik: { ...ayar.cozumIcerik, siklar: v } })} />}
             <Anahtar ad="Kaynak ve kazanım" acik={ayar.cozumIcerik.kaynak} degis={(v) => set({ cozumIcerik: { ...ayar.cozumIcerik, kaynak: v } })} />
           </div>
         </Bolum>
@@ -696,6 +772,13 @@ export default function SoruAktarV15() {
             <Seg ad="Yakınlık" kucuk deger={zum} degis={setZum} ogeler={[{ v: 'sigdir', ad: 'Sığdır' }, { v: 0.75, ad: '%75' }, { v: 1, ad: '%100' }]} />
           </div>
           {oniz && oniz.tasan > 0 && <p className="sx15-uyari">{oniz.tasan} soru hücresine en küçük ölçekte de sığmadı ve kırpıldı; sayfa başına daha az soru seç ya da puntoyu küçült.</p>}
+          {oniz && ayar.sigdir !== 'yok' && (
+            <p className="v15-cap">
+              Sayfaya sığdır: yazı ölçeği %{Math.round(oniz.olcek * 100)} ({(ayar.punto * oniz.olcek).toFixed(1)} pt).
+              {oniz.tahmini ? ' Önizleme ilk sorulara göre; indirilen belgede tüm sorulara göre yeniden hesaplanır.' : ''}
+            </p>
+          )}
+          {oniz?.not && <p className="sx15-uyari">{oniz.not}</p>}
           {ayar.bicim === 'pptx' && <p className="v15-cap">Her sayfa bir slayt olur; cevap kâğıdı slaytta da daireler hâlinde çizilir.</p>}
           {ayar.bicim === 'docx' && ayar.duzen === 'akis' && ayar.cozumYeri !== 'arkada' && ayar.cozumYeri !== 'sayfaAlti' && <p className="v15-cap">Word'de akış düzeni düzenlenebilir metin olarak gelir; sayfa sonları Word'ün yazı tipine göre birkaç satır kayabilir.</p>}
         </div>

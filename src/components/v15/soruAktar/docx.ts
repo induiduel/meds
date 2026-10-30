@@ -28,9 +28,9 @@ export const xml = (t: string) =>
   String(t ?? '').replace(/[\u0000-\u0008\u000B\u000C\u000E-\u001F￾￿]/g, '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]!));
 const DAIRE: Record<string, string> = { A: 'Ⓐ', B: 'Ⓑ', C: 'Ⓒ', D: 'Ⓓ', E: 'Ⓔ', F: 'Ⓕ' };
 
-interface RunO { b?: boolean; i?: boolean; renk?: string; fs: number; shd?: string; alt?: boolean }
+interface RunO { b?: boolean; i?: boolean; renk?: string; fs: number; shd?: string; alt?: boolean; /** çerçeve rengi (etiket "çizgi" biçimi) */ bdr?: string }
 const rPr = (o: RunO) =>
-  `<w:rPr>${o.b ? '<w:b/><w:bCs/>' : ''}${o.i ? '<w:i/><w:iCs/>' : ''}${o.renk ? `<w:color w:val="${hex(o.renk)}"/>` : ''}<w:sz w:val="${hp(o.fs)}"/><w:szCs w:val="${hp(o.fs)}"/>${o.shd ? `<w:shd w:val="clear" w:color="auto" w:fill="${o.shd}"/>` : ''}</w:rPr>`;
+  `<w:rPr>${o.b ? '<w:b/><w:bCs/>' : ''}${o.i ? '<w:i/><w:iCs/>' : ''}${o.renk ? `<w:color w:val="${hex(o.renk)}"/>` : ''}<w:sz w:val="${hp(o.fs)}"/><w:szCs w:val="${hp(o.fs)}"/>${o.bdr ? `<w:bdr w:val="single" w:sz="4" w:space="1" w:color="${hex(o.bdr)}"/>` : ''}${o.shd ? `<w:shd w:val="clear" w:color="auto" w:fill="${o.shd}"/>` : ''}</w:rPr>`;
 const run = (t: string, o: RunO) => `<w:r>${rPr(o)}<w:t xml:space="preserve">${xml(t)}</w:t></w:r>`;
 const zengin = (t: string, o: RunO) => parcala(t).map((p) => (p.br ? `<w:r>${rPr(o)}<w:br/></w:r>` : run(p.t, { ...o, b: o.b || p.b }))).join('');
 
@@ -87,10 +87,17 @@ function blokOrtak(h: HS, a: Ayar): Partial<ParaO> {
   return {};
 }
 
+/** Etiketler: hap/kutu/köşe → zemin dolgusu; çizgi → yalnız kenarlık; düz → ayraçlı metin. Renk `belge.ts::etiketler` ile ortak */
 function etiketRuns(h: HS, a: Ayar, fs: number): string {
+  const efs = fs * a.etiketBoyut;
+  const ozel = a.etiketRenk === 'ozel';
   return etiketler(h, a).map((e, i) => {
-    const renkli = e.renkli && h.renk;
-    return (i ? run('  ', { fs }) : '') + run(` ${e.ad} `, { fs: fs * 0.74, b: true, renk: renkli ? karis(h.renk!, 0.8, '000000') : '475569', shd: renkli ? karis(h.renk!, 0.14) : 'F1F5F9' });
+    const metin = ozel && !e.renkli ? a.etiketMetin : karis(e.renk, 0.8, '000000');
+    const zemin = ozel && !e.renkli ? hex(a.etiketZemin) : karis(e.renk, 0.14);
+    const ayrac = i ? (a.etiketSekil === 'duz' ? run(' · ', { fs: efs, renk: '9CA3AF' }) : run('  ', { fs: efs })) : '';
+    if (a.etiketSekil === 'duz') return ayrac + run(e.ad, { fs: efs, b: a.etiketKalin, renk: metin });
+    if (a.etiketSekil === 'cizgi') return ayrac + run(` ${e.ad} `, { fs: efs, b: a.etiketKalin, renk: metin, bdr: ozel && !e.renkli ? a.etiketMetin : karis(e.renk, 0.55) });
+    return ayrac + run(` ${e.ad} `, { fs: efs, b: a.etiketKalin, renk: metin, shd: zemin });
   }).join('');
 }
 
@@ -169,12 +176,23 @@ function soruParas(h: HS, a: Ayar, k: number, w: number, o: { ayirici?: boolean;
   return out;
 }
 
-const grupPara = (ad: string, renk: string | null, a: Ayar, k = 1) =>
-  para(run(ad, { fs: a.punto * 1.12 * k, b: true, renk: renk || a.vurgu }), { keep: true, satir: 1.15, after: a.soruArasi * 1.4, alt: { renk: karis(renk || a.vurgu, 0.55), stil: 'single', kalin: 6 } });
+/** Katman başlığı: seviyeye göre küçülen punto ve girinti; biçim (çizgi/bant/kutu/sade) paragraf kenarlığı ve zeminle */
+const GRUP_OLCEK = [1.28, 1.12, 1.0, 0.92];
+function grupPara(b: { ad: string; renk: string | null; seviye?: number; sayi?: number; k?: number }, a: Ayar): string {
+  const sv = Math.min(3, b.seviye ?? 0);
+  const fs = a.punto * GRUP_OLCEK[sv] * (b.k ?? 1);
+  const renk = b.renk || a.vurgu;
+  const o: ParaO = { keep: true, satir: 1.15, after: a.soruArasi * 1.4 * (b.k ?? 1), before: sv ? 1 : 2, ind: sv ? [tw(sv * 1.5), 0] : undefined };
+  if (a.grupStil === 'cizgi') o.alt = { renk: karis(renk, 0.55), stil: 'single', kalin: sv >= 2 ? 4 : 6 };
+  else if (a.grupStil === 'bant') { o.sol = { renk, kalin: 24 }; o.shd = karis(renk, sv >= 2 ? 0.05 : 0.1); }
+  else if (a.grupStil === 'kutu') { o.alt = { renk: karis(renk, 0.55), stil: 'single', kalin: 4 }; o.ust = { renk: karis(renk, 0.55), stil: 'single' }; }
+  const sayi = a.grupSayi && b.sayi != null ? run(`  ${b.sayi} soru`, { fs: fs * 0.78, b: true, renk: '6B7280' }) : '';
+  return para(run(b.ad, { fs, b: true, renk }) + sayi, o);
+}
 
 function blokParas(b: Blok, a: Ayar, w: number, o: { hucrede?: boolean } = {}): string[] {
-  if (b.t === 'grup') return [grupPara(b.ad, b.renk, a)];
-  if (b.t === 'soru') return soruParas(b.h, a, b.k, w, { ayirici: !o.hucrede, hucrede: o.hucrede });
+  if (b.t === 'grup') return [grupPara(b, a)];
+  if (b.t === 'soru') return [...(b.basliklar || []).map((g) => grupPara({ ...g, k: b.k * 0.86 }, a)), ...soruParas(b.h, a, b.k, w, { ayirici: !o.hucrede, hucrede: o.hucrede })];
   return cozumParas(b.h, a, b.k, w, false, true).map((p, i, arr) => (i === arr.length - 1 ? p.replace(/<w:keepNext\/>/, '').replace(/w:after="\d+"/, `w:after="${Math.round(a.soruArasi * b.k * 56.69)}"`) : p));
 }
 
@@ -315,9 +333,9 @@ export async function docxUret(belge: Belge, a: Ayar): Promise<Blob> {
       const ilk = p;
       while (i < ss.length && ss[i].tur === tur) { bloklar.push(...(ss[i].kolon || []).flat()); i++; }
       const kw = tw(ilk.kolonW || ilk.g.w);
-      const bas = (ilk.g.baslik && !a.baslikHerSayfa ? baslikTablo(a, genis) : '') + (tur === 'cozum' ? grupPara('Çözümler', null, a) : '');
+      const bas = (ilk.g.baslik && !a.baslikHerSayfa ? baslikTablo(a, genis) : '') + (tur === 'cozum' ? grupPara({ ad: 'Çözümler', renk: null }, a) : '');
       // Akışta ölçek yalnız sütunu aşan blokta küçülür; Word bloğu kendisi böler, ölçeği yumuşat
-      const govde = bloklar.flatMap((b) => blokParas(b.t === 'grup' ? b : { ...b, k: Math.max(b.k, MIN_K + 0.2) }, a, kw)).join('');
+      const govde = bloklar.flatMap((b) => blokParas(b.t === 'grup' ? b : { ...b, k: Math.max(b.k, (MIN_K + 0.2) * Math.min(1, belge.olcek)) }, a, kw)).join('');
       // başlık tek sütunda, sorular çok sütunda: başlık ayrı bölüm
       if (bas && a.sutun > 1) {
         bolumler.push({ icerik: bas, sutun: 1, ustBilgi: a.baslikHerSayfa });

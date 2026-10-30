@@ -44,6 +44,8 @@ export interface AQ extends PdfQuestion {
   konu: string;
   /** soru türü: Çıkmış, Örnek, Benzer, Hoca … */
   tur: string;
+  /** öğrenciye anlamlı etiketler (çıkmış `tags` + rozetler; hat/süreç etiketleri ayıklanır) */
+  etiketler: string[];
   /** arama için katlanmış metin */
   ara: string;
 }
@@ -57,9 +59,26 @@ const kurulNo = (v: unknown): number => {
   const m = /kurul\s*[_-]?\s*(\d)/i.exec(s(v)) || /^k(\d)/i.exec(s(v));
   return m ? Number(m[1]) : 0;
 };
-const tamamla = (q: PdfQuestion, ek: Omit<AQ, keyof PdfQuestion | 'ara' | 'key'> & { key?: string }): AQ => {
-  const a: AQ = { ...q, ...ek, key: ek.key || `${ek.kaynak}:${q.id}`, ara: '' };
-  a.ara = katla([a.stem, a.ders, a.konu, a.year, ...a.options.map((o) => o.text)].join(' '));
+/** Süreç/hat etiketleri (check_solve, faz14_…, donem3-kurul1, 2018-2019, dosya adı) öğrenciye gösterilmez; ders/yıl/tür zaten ayrı alandır */
+const GIZLI_ETIKET = new Set(['çıkmış sınav', 'geçmiş sınav', 'kategorisiz', 'dönem 1', 'dönem 2', 'dönem 3', 'kurul']);
+export function etiketCikar(tags: unknown, q: PdfQuestion): string[] {
+  const out: string[] = [];
+  const ekle = (t: unknown) => {
+    const v = s(t);
+    if (!v || v.length > 60 || out.includes(v)) return;
+    const k = v.toLocaleLowerCase('tr');
+    if (/_/.test(v) || /^donem\d/i.test(v) || /^\d{4}-\d{4}/.test(v) || /\.(pdf|docx?|jpe?g|png)$/i.test(v)) return;
+    if (GIZLI_ETIKET.has(k) || k === s(q.discipline).toLocaleLowerCase('tr') || k === s(q.year).toLocaleLowerCase('tr')) return;
+    out.push(v);
+  };
+  if (Array.isArray(tags)) tags.forEach(ekle);
+  // rozetler: "Denetleyici onaylı", "Cevap tartışmalı", "Klinik karar" …; süreç rozeti (Faz 14) öğrenciye anlamsız
+  (q.badges || []).filter((b) => b.tone !== 'ai').forEach((b) => ekle(b.label));
+  return out;
+}
+const tamamla = (q: PdfQuestion, ek: Omit<AQ, keyof PdfQuestion | 'ara' | 'key' | 'etiketler'> & { key?: string; etiketler?: string[] }): AQ => {
+  const a: AQ = { ...q, ...ek, key: ek.key || `${ek.kaynak}:${q.id}`, etiketler: ek.etiketler || etiketCikar([], q), ara: '' };
+  a.ara = katla([a.stem, a.ders, a.konu, a.year, ...a.etiketler, ...a.options.map((o) => o.text)].join(' '));
   return a;
 };
 /** Branş adı: "Kurul 2 Nöroloji" → "Nöroloji" */
@@ -93,7 +112,7 @@ async function cikmisYukle(): Promise<AQ[]> {
     if (!isDonem3Question({ ...q, committeeId })) continue;
     const p = fromPastQuestion({ ...q, committeeId, discipline: normalizeDonem3Discipline(q.discipline) || q.discipline });
     if (!p || p.options.length < 2) continue;
-    out.push(tamamla(p, { kaynak: 'cikmis', kurul: kurulNo(p.committeeId), ders: p.discipline, konu: p.topic || '', tur: 'Çıkmış' }));
+    out.push(tamamla(p, { kaynak: 'cikmis', kurul: kurulNo(p.committeeId), ders: p.discipline, konu: p.topic || '', tur: 'Çıkmış', etiketler: etiketCikar(q.tags, p) }));
   }
   return out;
 }
@@ -256,20 +275,22 @@ export interface Suzgec {
   yillar: string[];
   turler: string[];
   zorluk: string[];
+  /** seçilen etiketlerden en az birini taşıyan sorular */
+  etiketler: string[];
   arama: string;
   cevapli: boolean;
   aciklamali: boolean;
   desteler: string[];
 }
 export const BOS_SUZGEC: Suzgec = {
-  kaynaklar: ['cikmis'], kurullar: [], dersler: [], konular: [], yillar: [], turler: [], zorluk: [], arama: '',
+  kaynaklar: ['cikmis'], kurullar: [], dersler: [], konular: [], yillar: [], turler: [], zorluk: [], etiketler: [], arama: '',
   cevapli: false, aciklamali: false, desteler: [],
 };
 
 /** Tek alan dışındaki süzgeçleri uygular (seçenek sayımları kendi alanını yok sayar) */
 export function suz(list: AQ[], f: Suzgec, haric?: keyof Suzgec): AQ[] {
   const ara = katla(f.arama.trim()).split(/\s+/).filter(Boolean);
-  const k = (alan: keyof Suzgec, v: any[]) => haric === alan || !v.length;
+  const k = (alan: keyof Suzgec, v: any[]) => haric === alan || !v?.length;
   return list.filter((q) =>
     (k('kurullar', f.kurullar) || f.kurullar.includes(q.kurul)) &&
     (k('dersler', f.dersler) || f.dersler.includes(q.ders)) &&
@@ -277,16 +298,19 @@ export function suz(list: AQ[], f: Suzgec, haric?: keyof Suzgec): AQ[] {
     (k('yillar', f.yillar) || f.yillar.includes(q.year || '—')) &&
     (k('turler', f.turler) || f.turler.includes(q.tur)) &&
     (k('zorluk', f.zorluk) || f.zorluk.includes(q.difficulty || '—')) &&
+    (k('etiketler', f.etiketler) || q.etiketler.some((t) => f.etiketler.includes(t))) &&
     (!f.cevapli || !!q.answer) &&
     (!f.aciklamali || !!q.explanation || q.options.some((o) => o.why)) &&
     (!ara.length || ara.every((w) => q.ara.includes(w))),
   );
 }
 
-/** Bir alanın değerleri ve sayıları (diğer süzgeçler uygulanmış hâlde) */
-export function secenekler(list: AQ[], f: Suzgec, alan: 'kurullar' | 'dersler' | 'konular' | 'yillar' | 'turler' | 'zorluk'): { v: string; n: number }[] {
+export type SecenekAlan = 'kurullar' | 'dersler' | 'konular' | 'yillar' | 'turler' | 'zorluk' | 'etiketler';
+/** Bir alanın değerleri ve sayıları (diğer süzgeçler uygulanmış hâlde); etikette bir soru birden çok değere sayılır */
+export function secenekler(list: AQ[], f: Suzgec, alan: SecenekAlan): { v: string; n: number }[] {
   const m = new Map<string, number>();
   for (const q of suz(list, f, alan)) {
+    if (alan === 'etiketler') { for (const t of q.etiketler) m.set(t, (m.get(t) || 0) + 1); continue; }
     const v = alan === 'kurullar' ? String(q.kurul) : alan === 'dersler' ? q.ders : alan === 'konular' ? q.konu : alan === 'yillar' ? q.year || '—' : alan === 'turler' ? q.tur : q.difficulty || '—';
     if (!v) continue;
     m.set(v, (m.get(v) || 0) + 1);
