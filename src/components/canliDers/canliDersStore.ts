@@ -32,6 +32,8 @@ export interface CdVaryant {
   cumleKonusma?: Record<string, number[][]> | null;
   /** Paragraf → her kelimenin (/\S+/g) seste başladığı saniye (kelime_zaman.py: konuşma tanıma + harf hizalama) */
   kelimeZaman?: Record<string, number[]> | null;
+  /** Metin sürümü adı (v1, v2…; sunucu kayit.json `surumAd`) — aynı sesin eski/yeni metin seslendirmesini ayırır */
+  surumAd?: string;
 }
 export interface CdListeDers {
   key: string;
@@ -187,12 +189,13 @@ export const fmtSure = (s: number) => {
   return h ? `${h}:${String(m).padStart(2, '0')}:${String(sn).padStart(2, '0')}` : `${m}:${String(sn).padStart(2, '0')}`;
 };
 /** Kısa ses adı: "Emel · Edge", "Aoede · Gemini" (tam etiket title'da kalır) */
-export const cdSesKisa = (v: Pick<CdVaryant, 'etiket' | 'ses' | 'saglayici' | 'id'> | null | undefined) => {
+export const cdSesKisa = (v: (Pick<CdVaryant, 'etiket' | 'ses' | 'saglayici' | 'id'> & { surumAd?: string }) | null | undefined) => {
   if (!v) return '';
   const p = v.saglayici || '';
   const kaynak = /edge/i.test(p) ? 'Edge' : /gemini/i.test(p) ? 'Gemini' : /ema/i.test(p) ? 'EMA Lightning' : /xtts/i.test(p) ? 'XTTS' : '';
   const ad = v.ses || (v.etiket || '').split('·').pop()?.trim() || v.id;
-  return kaynak ? `${ad} · ${kaynak}` : ad;
+  const temel = kaynak ? `${ad} · ${kaynak}` : ad;
+  return v.surumAd ? `${temel} · ${v.surumAd}` : temel;
 };
 export const fmtMb = (b: number) => (b > 0 ? `${(b / 1048576).toFixed(b < 10485760 ? 1 : 0)} MB` : '');
 

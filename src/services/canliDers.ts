@@ -67,6 +67,8 @@ interface KayitVaryant {
   zamanlama?: [number, number][];
   /** klipli derste paragraf klip özetleri (sesliAnlatim.ts klipKaydet); kelime_zaman.py klip önbelleği için */
   klipler?: string[];
+  /** Metin sürümü adı (v1, v2…): metin düzeltilip yeniden seslendirilen derste eski ve yeni ses oynatıcıda ayrılsın (elle yazılır) */
+  surumAd?: string;
 }
 
 const oku = <T,>(p: string, bos: T): T => {
@@ -209,7 +211,7 @@ const surum = (key: string, vid: string) => {
     return 0;
   }
 };
-const ozet = (key: string) => (v: KayitVaryant) => ({ id: v.id, etiket: v.etiket, saglayici: v.saglayici, ses: v.ses, sureSn: v.sureSn, bayt: v.bayt, surum: surum(key, v.id) });
+const ozet = (key: string) => (v: KayitVaryant) => ({ id: v.id, etiket: v.etiket, saglayici: v.saglayici, ses: v.ses, sureSn: v.sureSn, bayt: v.bayt, surum: surum(key, v.id), ...(v.surumAd ? { surumAd: v.surumAd } : {}) });
 
 function medspakYoluBul(key: string): string | null {
   const m = /^(?:y25-)?k(\d+)-/.exec(key);
