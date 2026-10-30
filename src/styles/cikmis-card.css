@@ -160,3 +160,15 @@ html.ui-v7 .cx-pt-quiz[aria-checked="true"] .cx-switch i { transform: translateX
 :root[data-design='v12'] .c12 .ck.is-dar .ck-opt-b { min-height: 32px; padding: 4px 8px; font-size: 13.5px; }
 .ck.is-folded { contain-intrinsic-size: auto 150px; padding-bottom: 12px; }
 :root[data-design='v12'] .c12 .ck.is-dar .ck-key { width: 20px; height: 20px; font-size: 11px; }
+
+/* Kök ekleri: tablo ve görseller (components/cikmis/SoruEkleri.tsx) */
+.ck-ekler { display: flex; flex-direction: column; gap: 10px; margin-top: 10px; }
+.ck-tablo-kap { max-width: 100%; overflow-x: auto; border: 1px solid var(--color-line); border-radius: 10px; }
+.ck-tablo { width: 100%; border-collapse: collapse; font: 500 13.5px/1.4 var(--font-sans); color: var(--color-ink); }
+.ck-tablo caption { padding: 8px 10px 4px; text-align: left; font-weight: 700; color: var(--color-ink-2); }
+.ck-tablo th, .ck-tablo td { padding: 7px 10px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--color-line); }
+.ck-tablo th { background: var(--color-field); font-weight: 700; color: var(--color-ink-2); white-space: nowrap; }
+.ck-tablo tr:last-child td { border-bottom: 0; }
+.ck-gorsel { margin: 0; display: flex; flex-direction: column; gap: 4px; }
+.ck-gorsel img { display: block; max-width: 100%; max-height: 420px; width: auto; height: auto; border-radius: 10px; border: 1px solid var(--color-line); background: var(--color-white); }
+.ck-gorsel figcaption { font: 500 12px/1.35 var(--font-sans); color: var(--color-ink-3); }

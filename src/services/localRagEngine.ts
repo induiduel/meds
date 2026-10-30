@@ -523,6 +523,12 @@ export function chunkPastQuestions(): RagChunk[] {
     const optLines = Array.isArray(opts)
       ? opts.map((o: any) => typeof o === 'string' ? o : `${o.label || o.key || ''}) ${o.text || ''}`).join('\n')
       : '';
+    // Kök ekleri (D3K2, 2026-10-30): tablo hücreleri ve görsel açıklamaları da aranabilir olsun
+    const tablolar = [q.tablo, ...(Array.isArray(q.tablolar) ? q.tablolar : [])].filter((t: any) => t && Array.isArray(t.sutunlar) && Array.isArray(t.satirlar));
+    const ekLines = [
+      ...tablolar.map((t: any) => `${t.baslik ? `${t.baslik}\n` : ''}${t.sutunlar.join(' | ')}\n${t.satirlar.map((r: string[]) => r.join(' | ')).join('\n')}`),
+      ...(Array.isArray(q.gorseller) ? q.gorseller.map((g: any) => g?.alt ? `[Görsel: ${g.alt}]` : '').filter(Boolean) : []),
+    ].join('\n');
     const claim = isDenetleyici
       ? (denetleyiciData.correctAnswer || q.correctAnswer || q.claimedAnswer || '')
       : (q.correctAnswer || q.claimedAnswer || q.reconstruction?.correctAnswer || q.reconstruction?.correctOption || '');
@@ -558,7 +564,7 @@ Kurul: ${q.committeeId || 'donem3-kurul1'}${q.kazanim?.metin ? `\nKazanım: ${q.
 Sınav Yılı: ${q.examYear || 'Geçmiş Sınav'}
 Konu: ${q.topic || 'Kurul Sorusu'}
 ${isDenetleyici ? 'Denetim Statüsü: Denetleyici Onayı (Doğrulandı, Guyton/Robbins/Moore Uyumlu)\n' : ''}Soru Kökü:
-${stem}
+${stem}${ekLines ? `\n${ekLines}` : ''}
 
 Seçenekler:
 ${optLines}

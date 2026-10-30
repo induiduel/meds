@@ -5693,6 +5693,70 @@
        ],
        "cikmisSorular": [
         {
+         "id": "past-1790877047308-589893",
+         "questionNumber": 4,
+         "stem": "Osteoporoz ile ilgili aşağıdaki ifadeler veriliyor:\nI. Tip 1 osteoporozda kemik kaybı trabeküler kemikte kortikal kemiğe göre daha belirgindir.\nII. Tip 2 osteoporozun patogenezinde azalmış osteoblastik aktivite vardır.\nIII. Tip 2 osteoporozda femur ve pelvis kırıkları ön plandadır.\nIV. Tip 1 osteoporozda humerus kırıkları ön plandadır.\nBu ifadelerden hangileri doğrudur?",
+         "correctAnswer": "A",
+         "options": [
+          {
+           "key": "A",
+           "text": "I, II ve III"
+          },
+          {
+           "key": "B",
+           "text": "I ve III"
+          },
+          {
+           "key": "C",
+           "text": "II ve IV"
+          },
+          {
+           "key": "D",
+           "text": "Yalnız IV"
+          },
+          {
+           "key": "E",
+           "text": "I, II, III ve IV"
+          }
+         ],
+         "year": "2018-2019",
+         "discipline": "FTR",
+         "topic": "Yaşlılığa Özgü Hareket Sistemi Bozuklukları",
+         "explanation": "Doğru kombinasyon I, II ve III'tür; tip 1 osteoporozda ön plandaki kırıklar humerus değil vertebra ve distal radius kırıklarıdır.\n\n- **Tip 1 (postmenopozal):** Menopozdan sonraki 15-20 yılda görülür; östrojen eksikliği RANKL ve IL-1, IL-6, TNF gibi sitokinleri artırarak osteoklast aktivitesini yükseltir. Yüksek döngülü trabeküler kemik daha çok etkilenir.\n- **Tip 1 kırıkları:** Vertebra kompresyon kırıkları ve distal radius (Colles) kırığı tipiktir.\n- **Tip 2 (senil):** 70 yaş üzerinde her iki cinsiyette görülür; osteoblast prekürsörlerinin azalması ve kemik yapımının yetersizliği ana mekanizmadır, kalsiyum emilimi azalır, sekonder hiperparatiroidi eklenir.\n- **Tip 2 kırıkları:** Kortikal ve trabeküler kayıp birlikte olduğundan kalça (femur boynu), pelvis, proksimal humerus ve tibia kırıkları görülür.\n- **Tanı:** DXA ile T skoru -2,5 ve altı osteoporoz olarak kabul edilir.\n\nSınav: Postmenopozal osteoporoz = osteoklast artışı + trabeküler kemik + vertebra/Colles; senil osteoporoz = osteoblast azalması + kalça kırığı."
+        },
+        {
+         "id": "6d39876788eb",
+         "questionNumber": 187,
+         "stem": "Osteoartrit için aşağıdakilerden hangisi yanlıştır?",
+         "correctAnswer": "C",
+         "options": [
+          {
+           "key": "A",
+           "text": "Elde sıklıkla distal interfalangeal (DİF) eklemler tutuluma uğrar"
+          },
+          {
+           "key": "B",
+           "text": "Proksimal interfalangeal (PİF) eklem nodülleri Bouchard nodülleri olarak adlandırılır"
+          },
+          {
+           "key": "C",
+           "text": "Bouchard nodülleri başlangıçta ağrısızdır"
+          },
+          {
+           "key": "D",
+           "text": "Elde özellikle ikinci ve üçüncü DİF eklem tutulumu daha sıktır"
+          },
+          {
+           "key": "E",
+           "text": "DİF eklem tutulumunda zamanla Heberden nodülleri oluşur"
+          }
+         ],
+         "year": "2018-2019",
+         "discipline": "FTR",
+         "topic": "Yaşlılığa Özgü Hareket Sistemi Bozuklukları",
+         "explanation": "El osteoartritinde Heberden (DİF) ve Bouchard (PİF) nodülleri, gelişirken ağrılı ve hassas olabilen osteofitik şişliklerdir; başlangıçta ağrısız olduklarını söylemek yanlıştır.\n\n- **Tutulum paterni:** DİF, PİF ve birinci karpometakarpal eklem tipiktir; MKF ve el bileği genellikle korunur.\n- **Heberden nodülü:** DİF eklemde osteofit; kadınlarda ve aile öyküsü olanlarda daha sık.\n- **Bouchard nodülü:** PİF eklemde osteofit; Heberden'e göre daha seyrektir.\n- **Doğal seyir:** Erken dönemde sinovit eşliğinde ağrı, kızarıklık ve hassasiyet; olgunlaştıkça ağrı azalır, kalıcı deformite ve hareket kısıtlılığı kalır.\n- **Ayırıcı tanı:** Romatoid artrit MKF, PİF ve el bileğini simetrik tutar, DİF eklemleri çoğunlukla korur; psöriatik artrit DİF'i tutabilir ancak inflamatuvardır.\n\nSınav: DİF = Heberden, PİF = Bouchard eşleşmesi sık sorulur; nodüllerin erken evrede ağrılı olabileceği unutulmamalıdır."
+        },
+        {
          "id": "past-1790877041998-700100",
          "questionNumber": 1,
          "stem": "Yaşlanan bireyde aşağıdakilerden hangisi görülür?",
@@ -12287,7 +12351,7 @@
         {
          "id": "6e08742e3d37",
          "questionNumber": 48,
-         "stem": "Sokakta ayağına çivi batması nedeniyle başvuran hastada yapılacak tetanoz profilaksisi için aşağıdakilerden hangisi yanlıştır?",
+         "stem": "Sokakta ayağına çivi batması nedeniyle başvuran hastada uygulanacak tetanoz profilaksisi için aşağıdakilerden hangisi yanlıştır?",
          "correctAnswer": "C",
          "options": [
           {
@@ -12296,7 +12360,7 @@
           },
           {
            "key": "B",
-           "text": "3 dozdan az aşı yaptırmışsa tetanoz immünglobulini uygulanır."
+           "text": "3 dozdan az aşı yaptırmışsa tetanoz aşısı yapılır ve tetanoz immünglobulini uygulanır."
           },
           {
            "key": "C",
@@ -12304,17 +12368,17 @@
           },
           {
            "key": "D",
-           "text": "Aşı öyküsü bilinmiyor ise tetanoz aşısı yapılır ve tetanoz immünglobulini uygulanır."
+           "text": "3 dozdan fazla aşı yaptırmış ve son doz 1 yıl önce ise tetanoz aşısı yapılmasına gerek yoktur."
           },
           {
            "key": "E",
-           "text": "Tam aşılı kişilerde temiz ve küçük yaralanmalarda son dozun üzerinden 10 yıldan fazla geçmemişse ek doz gerekmez."
+           "text": "Aşı öyküsü bilinmiyor ise tetanoz aşısı yapılır ve tetanoz immünglobulini uygulanır."
           }
          ],
          "year": "2020-2021",
          "discipline": "Halk Sağlığı",
          "topic": "Bağışıklama ve önemi",
-         "explanation": "Tetanoz profilaksisi yaranın tetanoza eğilimli olup olmamasına ve aşı öyküsüne göre belirlenir. Çivi batması kirli yaradır; 3 dozdan az aşılı kişide aşıya ek olarak tetanoz immünglobulini gerekir.\n\n- **Temiz-küçük yara:** Tam aşılıda son doz 10 yıldan eskiyse yalnız aşı; aşısız ya da öyküsü bilinmeyende yalnız aşı (TIG gerekmez).\n- **Kirli/tetanoza eğilimli yara:** Toprak, dışkı, tükürükle kirlenmiş, delici, ezilmiş, yanık ve donma yaraları; tam aşılıda son doz 5 yıldan eskiyse aşı yapılır.\n- **Eksik ya da bilinmeyen aşı öyküsü + kirli yara:** Aşı ve 250 IU TIG farklı bölgelere birlikte uygulanır, seri tamamlanır.\n- **Yara bakımı:** Debridman ve temizlik profilaksinin ayrılmaz parçasıdır; geçirilmiş tetanoz kalıcı bağışıklık bırakmaz.\n\nSınav: Kirli yarada rapel sınırı 5 yıl, temiz yarada 10 yıldır; eksik aşılıda kirli yarada TIG şarttır."
+         "explanation": "Tetanoz profilaksisi yaranın tetanoza eğilimli olup olmamasına ve aşı öyküsüne göre belirlenir. Çivi batması kirli yaradır; 3 dozdan az aşılı kişide aşıya ek olarak tetanoz immünglobulini gerekir.\n\n- **Temiz-küçük yara:** Tam aşılıda son doz 10 yıldan eskiyse yalnız aşı; aşısız ya da öyküsü bilinmeyende yalnız aşı (TIG gerekmez).\n- **Kirli/tetanoza eğilimli yara:** Toprak, dışkı, tükürükle kirlenmiş, delici, ezilmiş, yanık ve donma yaraları; tam aşılıda son doz 5 yıldan eskiyse aşı yapılır, 5 yıldan yeniyse ek doz gerekmez.\n- **Eksik ya da bilinmeyen aşı öyküsü + kirli yara:** Aşı ve 250 IU TIG farklı bölgelere birlikte uygulanır, seri tamamlanır.\n- **Yara bakımı:** Debridman ve temizlik profilaksinin ayrılmaz parçasıdır; geçirilmiş tetanoz kalıcı bağışıklık bırakmaz.\n\nSınav: Kirli yarada rapel sınırı 5 yıl, temiz yarada 10 yıldır; eksik aşılıda kirli yarada TIG şarttır."
         },
         {
          "id": "past-1790877045489-277118",
@@ -13994,6 +14058,38 @@
        "slaytlar": [],
        "cikmisSorular": [
         {
+         "id": "5f3a29c8b257",
+         "questionNumber": 234,
+         "stem": "Yaşlılık dönemi ile ilgili aşağıda belirtilen ifadelerden hangisi doğrudur?",
+         "correctAnswer": "C",
+         "options": [
+          {
+           "key": "A",
+           "text": "Yaşlılar kendisinde hastalık bulunacağı kaygısı ile çok sık olarak sağlık kuruluşuna başvururlar"
+          },
+          {
+           "key": "B",
+           "text": "Yaşlı insanların yaşam kalitesini artırabilmek için sağlık, güvenlik ve katılım olanaklarını en uygun hâle getirme pasif yaşlanma sürecidir"
+          },
+          {
+           "key": "C",
+           "text": "Yaşlılar sorunlarının yaşlılıktan kaynaklandığını düşünüp sağlık kuruluşuna başvurmayı ihmal ederler"
+          },
+          {
+           "key": "D",
+           "text": "Yaşlılık döneminde görme-işitme bozukluklarının tedavisi ikincil koruma yaklaşımlarındandır"
+          },
+          {
+           "key": "E",
+           "text": "Yaşlılıkta ara sıra yapılan orta dereceli fiziksel egzersiz bazı kronik hastalıkların insidansını azaltır"
+          }
+         ],
+         "year": "2018-2019",
+         "discipline": "Halk Sağlığı",
+         "topic": "Yaşlı Sağlığı Sorunları ve Sağlık Hizmetleri",
+         "explanation": "Yaşlılar yakınmalarını yaşlılığın doğal sonucu olarak yorumladıklarından sağlık kuruluşuna başvurmayı ihmal ederler; bu, yaşlı sağlığında hastalıkların gizli kalmasının başlıca nedenidir.\n\n- **Az bildirim:** Bilişsel gerileme, depresyon, inkontinans, işitme kaybı ve düşmeler sıklıkla hekime söylenmez; periyodik geriatrik değerlendirme bu açığı kapatmak için yapılır.\n- **Aktif yaşlanma:** DSÖ tanımına göre sağlık, katılım ve güvenlik olanaklarının en uygun hâle getirilmesi sürecidir; pasif değil etkin bir yaklaşımdır.\n- **Koruma basamakları:** Birincil korumada aşılama ve sağlıklı yaşam; ikincilde tarama ve erken tanı; üçüncülde yerleşmiş yetersizliğin rehabilitasyonu (gözlük, işitme cihazı) yer alır.\n- **Fiziksel aktivite:** Düzenli orta yoğunlukta egzersiz kardiyovasküler hastalık, tip 2 diyabet, osteoporoz ve düşme riskini azaltır.\n\nSınav: Etkinin anahtarı egzersizin düzenliliğidir; 'ara sıra' ifadesi tipik çeldiricidir."
+        },
+        {
          "id": "past-1790877036352-491430",
          "questionNumber": 69,
          "stem": "Yaşlılığın temel özelliklerinden biri olan, iç dengenin devamlılığını sağlama yeteneğinde azalma olarak tanımlanan terim aşağıdakilerden hangisidir?",
@@ -14206,6 +14302,38 @@
        "slaytlar": [],
        "cikmisSorular": [
         {
+         "id": "past-1790877044722-920304",
+         "questionNumber": 26,
+         "stem": "Aşağıdaki durumlar verilmiştir:\nI. Polifarmasi\nII. Komorbidite\nIII. Uyum sorunu (non-kompliyans)\nIV. İlaç farmakokinetiğinin değişmesi\nBunlardan hangisi/hangileri geriatrik hastalarda advers etki ve ciddi advers etki insidansını artırır?",
+         "correctAnswer": "E",
+         "options": [
+          {
+           "key": "A",
+           "text": "I, II ve III"
+          },
+          {
+           "key": "B",
+           "text": "I ve III"
+          },
+          {
+           "key": "C",
+           "text": "II ve IV"
+          },
+          {
+           "key": "D",
+           "text": "Yalnız IV"
+          },
+          {
+           "key": "E",
+           "text": "I, II, III ve IV"
+          }
+         ],
+         "year": "2019-2020",
+         "discipline": "Halk Sağlığı",
+         "topic": "Yaşlı Sağlığı Sorunları ve Sağlık Hizmetleri",
+         "explanation": "Polifarmasi, komorbidite, uyum sorunu ve yaşa bağlı farmakokinetik değişimin tümü yaşlı hastada advers ve ciddi advers ilaç etkisi riskini artırır; doğru cevap I, II, III ve IV'tür.\n\n- **Polifarmasi:** Dört ya da daha fazla ilaç kullanımı ilaç-ilaç etkileşimini ve uygunsuz ilaç kullanımını artırır; düşmelerin de bilinen risk etkenidir.\n- **Komorbidite:** Böbrek, karaciğer ve kalp yetersizliği gibi eşlik eden hastalıklar ilaç-hastalık etkileşimine ve fizyolojik rezerv kaybına yol açar.\n- **Uyum sorunu:** Bilişsel bozulma, görme kaybı ve karmaşık tedavi şemaları dozun atlanmasına ya da yinelenmesine neden olur.\n- **Farmakokinetik değişim:** Yağ oranının artıp toplam vücut suyunun azalması dağılım hacmini değiştirir; glomerüler filtrasyon ve hepatik faz I metabolizması azalır, yarı ömür uzar.\n- **Farmakodinamik duyarlılık:** Benzodiazepin, antikolinerjik ve antikoagülanlara artmış duyarlılık düşme, deliryum ve kanama riskini yükseltir.\n\nSınav: Yaşlıda serum kreatinini normal görünse bile kas kütlesi azaldığından doz ayarı kreatinin klirensine göre yapılır."
+        },
+        {
          "id": "e858483cb655",
          "questionNumber": 1340,
          "stem": "Yaşlılıkta kanser taramalarıyla ilgili aşağıdakilerden hangisi yanlıştır?",
@@ -14236,38 +14364,6 @@
          "discipline": "Halk Sağlığı",
          "topic": "Yaşlı Sağlığı Sorunları ve Sağlık Hizmetleri",
          "explanation": "Ortalama riskli yaşlıda kolonoskopi ile tarama aralığı 10 yıldır; 3 yılda bir kolonoskopi rutin öneri değildir.\n\n- **Kolorektal:** 45–75 yaş arasında kolonoskopi (10 yılda bir), yıllık gaitada gizli kan/FIT ya da diğer yöntemler; 76–85 yaşta bireysel karar.\n- **Meme:** Belirli yaş aralığında iki yılda bir mamografi; ileri yaşta yaşam beklentisi belirleyicidir.\n- **Serviks:** Yeterli negatif öyküde 65 yaşından sonra sonlandırılır.\n- **Prostat:** 55–69 yaşta paylaşılan karar; 70 yaş üzerinde rutin PSA taraması önerilmez.\n- **Akciğer:** Yalnız yoğun sigara öyküsü olan yüksek riskli gruba yıllık düşük doz BT.\n- **İlke:** Yaşlıda tarama kararı kronolojik yaştan çok yaşam beklentisi (≥10 yıl) ve işlevselliğe göre verilir.\n\nSınav: Normal kolonoskopi sonrası tekrar aralığı 10 yıldır."
-        },
-        {
-         "id": "past-1790877044722-920304",
-         "questionNumber": 26,
-         "stem": "Aşağıdaki durumlar verilmiştir:\nI. Polifarmasi\nII. Komorbidite\nIII. Uyum sorunu (non-kompliyans)\nIV. İlaç farmakokinetiğinin değişmesi\nBunlardan hangisi/hangileri geriatrik hastalarda advers etki ve ciddi advers etki insidansını artırır?",
-         "correctAnswer": "E",
-         "options": [
-          {
-           "key": "A",
-           "text": "I, II ve III"
-          },
-          {
-           "key": "B",
-           "text": "I ve III"
-          },
-          {
-           "key": "C",
-           "text": "II ve IV"
-          },
-          {
-           "key": "D",
-           "text": "Yalnız IV"
-          },
-          {
-           "key": "E",
-           "text": "I, II, III ve IV"
-          }
-         ],
-         "year": "2021-2022",
-         "discipline": "Halk Sağlığı",
-         "topic": "Yaşlı Sağlığı Sorunları ve Sağlık Hizmetleri",
-         "explanation": "Dört etkenin tümü geriatrik hastada advers ve ciddi advers ilaç etkisi riskini artırır; bu nedenle cevap I, II, III ve IV'tür.\n\n- **Polifarmasi:** Beş ve üzeri ilaç kullanımı ilaç-ilaç etkileşimi ve uygunsuz ilaç (Beers kriterleri) riskini belirgin biçimde yükseltir.\n- **Komorbidite:** Böbrek, karaciğer ve kalp yetersizliği gibi eşlik eden hastalıklar ilaç-hastalık etkileşimine ve fizyolojik rezerv kaybına yol açar.\n- **Uyum sorunu:** Bilişsel bozulma, görme kaybı ve karmaşık tedavi şemaları dozun atlanmasına ya da yinelenmesine neden olur.\n- **Farmakokinetik değişim:** Yağ oranının artıp total vücut suyunun azalması dağılım hacmini değiştirir; glomerüler filtrasyon ve hepatik faz I metabolizması azalır, yarı ömür uzar.\n- **Farmakodinamik duyarlılık:** Benzodiazepin, antikolinerjik ve antikoagülanlara artmış duyarlılık düşme, deliryum ve kanama riskini artırır.\n\nSınav: Yaşlıda doz ayarlamasında serum kreatinini normal olsa bile kas kütlesi azaldığı için kreatinin klirensi hesaplanmalıdır."
         },
         {
          "id": "d3-k6-hal-014",
@@ -25710,38 +25806,6 @@
          "discipline": "Psikiyatri",
          "topic": "Yaşlılığa Özgü Ruhsal Sorunlar",
          "explanation": "Depresyon yaşlılıkta sık görülse de yaşlanmanın normal sonucu değildir; bu inanç tanı ve tedaviyi geciktiren temel önyargıdır.\n\n- **Hasta kaynaklı engeller:** Damgalanma korkusu, utanç, belirtileri bedensel yakınma olarak ifade etme ve yardım istememe.\n- **Sistem kaynaklı engeller:** Sağlık hizmetine erişim güçlüğü, ulaşım, maddi sorunlar ve sosyal destek azlığı.\n- **Hekim kaynaklı engeller:** Yaşçılık, belirtileri eşlik eden tıbbi hastalığa bağlama, kısa muayene süresi.\n- **Klinik görünüm:** Somatik yakınmalar, bellek sorunları, anksiyete ve uyku bozukluğu ön planda; suçluluk ifadesi daha az.\n- **Sonuç:** Tedavi edilmeyen yaşlı depresyonu işlev kaybı, tıbbi hastalıklarda kötü gidiş ve yüksek intihar riskiyle ilişkilidir.\n\nSınav: 'Yaşlılıkta depresyon normaldir' ifadesi yanlıştır ve yaşlı depresyonunun atlanmasının temel nedenidir."
-        },
-        {
-         "id": "2cc678599118",
-         "questionNumber": 116,
-         "stem": "Aşağıdakilerden hangisi, yaşlılarda intihar girişimleri veya intihar riskiyle ilişkili faktörlerden biri değildir?",
-         "correctAnswer": "A",
-         "options": [
-          {
-           "key": "A",
-           "text": "Bireyselleşme isteği"
-          },
-          {
-           "key": "B",
-           "text": "Yaşamak için nedeni olmama"
-          },
-          {
-           "key": "C",
-           "text": "Kendini gereksiz hissetme"
-          },
-          {
-           "key": "D",
-           "text": "Bedensel hastalıklar"
-          },
-          {
-           "key": "E",
-           "text": "Psikiyatrik hastalıklar"
-          }
-         ],
-         "year": "2020-2021",
-         "discipline": "Psikiyatri",
-         "topic": "Yaşlılığa Özgü Ruhsal Sorunlar",
-         "explanation": "Bireyselleşme isteği ergenlik ve genç erişkinliğe ait gelişimsel bir süreçtir; ders notunda gençlerde intihar nedenleri arasında sayılır, yaşlılarda ise risk etkeni değildir.\n\n- **Gençlere özgü nedenler:** Yoğun biyolojik-psikososyal değişim, bireyselleşme isteği, sosyal desteğin azalması, alkol-madde kullanımının başlaması, gelecek belirsizliği ve sorun çözme becerisinin yetersizliği.\n- **Yaşlılara özgü nedenler:** Yaşamak için nedeni olmama, kendini gereksiz hissetme, bedensel hastalıklar, psikiyatrik hastalıklar (özellikle depresyon), yalnızlık ve kayıplar.\n- **Epidemiyolojik fark:** Yaşlılarda girişim sayısı daha az olsa da öldürücü yöntem kullanımı nedeniyle tamamlanmış intihar oranı yüksektir.\n- **Klinik yaklaşım:** Kronik hastalığı olan yaşlıda depresyon taraması yapılmalı ve intihar düşüncesi doğrudan sorgulanmalıdır.\n\nSınav: Bireyselleşme isteği ve madde kullanımının başlaması gençlerin, yaşamak için neden kalmaması ve gereksizlik hissi yaşlıların intihar nedenidir."
         },
         {
          "id": "39f6b72e20fe",

@@ -17,6 +17,7 @@ import { copyQuestion } from '../utils/copyQuestion';
 import { getVoterId, toggledVote } from '../utils/voterId';
 import { AnswerPoll } from './AnswerPoll';
 import { StemText } from './ui/StemText';
+import { SoruEkleri } from './cikmis/SoruEkleri';
 import { Collapsible } from './ui/Collapsible';
 import { Dialog } from './ui/Dialog';
 import { Sheet } from './ui/Sheet';
@@ -1825,7 +1826,7 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
                 ders={(q as any).committeeUncertain ? 'Kurul belirsiz' : disciplineLabel(q.discipline) || q.discipline || 'Tıp'}
                 numberLabel={q.questionNumber ? `#${q.questionNumber}` : 'işlemleri'}
                 flags={flagNodes}
-                stem={<StemText text={stem} terms={terms} />}
+                stem={<><StemText text={stem} terms={terms} /><SoruEkleri q={q} /></>}
                 kazanim={kazanimData?.kazanim ? { baslik: ['Müfredat kazanımı', kazanimData.ders, kazanimData.konu].filter(Boolean).join(' · '), metin: String(kazanimData.kazanim) } : null}
                 special={specialView}
                 options={options as any[]}

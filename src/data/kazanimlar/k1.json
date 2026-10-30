@@ -12527,38 +12527,6 @@
        ],
        "cikmisSorular": [
         {
-         "id": "d3-k2-tbg-001",
-         "questionNumber": 1,
-         "stem": "Aşağıdaki genetik sendromlardan hangisinde zekâ düzeyi tipik olarak normaldir ve belirgin zihinsel yetersizlik (mental retardasyon) birincil klinik tabloyu oluşturmaz?",
-         "correctAnswer": "C",
-         "options": [
-          {
-           "key": "A",
-           "text": "Down sendromu (trizomi 21)"
-          },
-          {
-           "key": "B",
-           "text": "Williams sendromu (7q11.23 mikrodelesyonu)"
-          },
-          {
-           "key": "C",
-           "text": "Turner sendromu (45,X)"
-          },
-          {
-           "key": "D",
-           "text": "Prader-Willi sendromu (15q11-13 delesyonu)"
-          },
-          {
-           "key": "E",
-           "text": "Frajil X sendromu (FMR1 üçlü nükleotid tekrarı)"
-          }
-         ],
-         "year": "2021-2026",
-         "discipline": "Tıbbi Genetik",
-         "topic": "Kromozomal Hastalıklar ve Genetik Danışma",
-         "explanation": "Gonozomal monozomi olan Turner sendromu, sık görülen kromozomal sendromlar arasında genel zihinsel kapasitenin korunduğu tipik örnektir.\n\n- **Turner sendromu:** 45,X veya mozaik/yapısal X anomalileri; kısa boy (SHOX haployetmezliği), streak gonad, primer amenore, lenfödem, koarktasyon ve biküspit aort.\n- **Bilişsel profil:** Sözel zekâ normal; görsel-uzaysal işlem, matematik ve sosyal biliş alanlarında özgül güçlük olabilir. Halka X kromozomlu olgularda zihinsel yetersizlik görülebilir.\n- **Zihinsel yetersizliğin sık genetik nedenleri:** Down sendromu (en sık kromozomal), frajil X (en sık kalıtsal), mikrodelesyon sendromları (Williams, Prader-Willi, Angelman).\n- **Genel kural:** Otozomal dengesizlikler gonozomal olanlara göre daha ağır nörogelişimsel etkiye sahiptir.\n\nSınav: Klinefelter ve Turner'da zekâ genellikle normaldir; Down ve frajil X zihinsel yetersizliğin en sık genetik nedenleridir."
-        },
-        {
          "id": "k1-2023-2024-q026",
          "questionNumber": 26,
          "stem": "Aşağıdakilerden hangisi gonozomal (cinsiyet kromozomu) anöploidi sebeplerinden **değildir**?",
@@ -20037,7 +20005,40 @@
          "deckId": "k1-31-urogenital-sistem-tumorlerinde-genetik-belirtecler"
         }
        ],
-       "cikmisSorular": [],
+       "cikmisSorular": [
+        {
+         "id": "k1-2024-2025-q092",
+         "questionNumber": 92,
+         "stem": "Böbrek tümörlerinde prognostik belirteç olmayan aşağıdakilerden hangisidir?",
+         "correctAnswer": "E",
+         "options": [
+          {
+           "key": "A",
+           "text": "Tümör evresi"
+          },
+          {
+           "key": "B",
+           "text": "Nükleer derece"
+          },
+          {
+           "key": "C",
+           "text": "Histolojik alt tip"
+          },
+          {
+           "key": "D",
+           "text": "Nekroz varlığı"
+          },
+          {
+           "key": "E",
+           "text": "Aile öyküsü"
+          }
+         ],
+         "year": "2024-2025",
+         "discipline": "Tıbbi Genetik",
+         "topic": "Ürogenital Sistem Tümörlerinde Genetik Belirteçler ve Kliniğe Yansımaları",
+         "explanation": "Renal hücreli karsinomda (RHK) prognozu tümöre ait anatomik ve histopatolojik özellikler belirler; aile öyküsü kalıtsal yatkınlığı gösteren bir risk faktörüdür, prognostik belirteç değildir.\n\n- **Anatomik faktörler:** Evre, lokal yayılım, bölgesel lenf nodu metastazı ve tanıda uzak metastaz varlığı en güçlü prognostik göstergelerdir; 5 yıllık sağkalım erken evrede yaklaşık %93, ileri evrede yaklaşık %15'tir.\n- **Nükleer derece:** WHO/ISUP (eski Fuhrman) nükleer derecesi yükseldikçe sağkalım azalır.\n- **Histolojik alt tip:** Kromofob RHK en iyi, berrak hücreli RHK daha kötü seyirlidir; sarkomatoid ya da rabdoid farklılaşma kötü prognozludur.\n- **Tümör nekrozu:** Özellikle berrak hücreli RHK'da bağımsız kötü prognostik bulgudur.\n- **Herediter sendromlar:** VHL, HPRC, HLRCC gibi sendromlar tüm RHK'ların yaklaşık %3'ünü oluşturur; aile öyküsü genetik değerlendirme ve tarama endikasyonudur.\n\nSınav: Risk faktörü (sigara, obezite, hipertansiyon, aile öyküsü) ile prognostik faktör (evre, derece, alt tip, nekroz) karıştırılmamalıdır."
+        }
+       ],
        "ornekSorular": [
         {
          "id": "k1-31-urogenital-sistem-tumorlerinde-genetik-belirtecler-k01-q01",
@@ -40822,6 +40823,70 @@
          "explanation": "Ateşli hastada buzlu suyla soğuk uygulama yapılmaz; ani soğuk deride vazokonstriksiyon ve titremeye yol açarak ısı kaybını azaltır, ısı üretimini artırır ve hastayı rahatsız eder. Fiziksel soğutma gerekiyorsa ılık su kullanılır.\n\n- **Patofizyoloji:** Pirojenik sitokinler (IL-1, IL-6, TNF-α) hipotalamusta PGE2 sentezini artırarak ısı ayar noktasını yükseltir; vücut yeni ayar noktasına ulaşmak için ısı üretir ve korur.\n- **Titreme fazı:** Ayar noktası yükselirken hasta üşür ve titrer; bu dönemde ince bir örtüyle örtülmesi konfor sağlar. Ateş sabitlenip terleme başladığında fazla örtüler kaldırılır.\n- **Metabolik yük:** Her 1 °C artış oksijen tüketimini ve kalp hızını yükseltir; kalp-akciğer hastasında, yaşlıda ve sepsiste oksijen desteği gerekebilir.\n- **Sıvı:** Terleme ve takipne ile insensibl kayıp artar; ağızdan ya da intravenöz sıvı replasmanı yapılır.\n- **Etiyoloji ve ilaç:** Ateş bir belirtidir; kan sayımı, idrar tetkiki, kültürler ve görüntülemeyle odak aranır. Parasetamol ve NSAİİ'ler PGE2 sentezini baskılayarak ayar noktasını düşürür.\n\nSınav: Ateş tedavisinde buz, alkol ve soğuk su uygulaması yanlıştır; ılık uygulama ve antipiretik tercih edilir."
         },
         {
+         "id": "d3k2-2018-2019-k4-q80",
+         "questionNumber": 80,
+         "stem": "Aşağıdakilerden hangisi nekrotizan fasiiti düşündüren bulgulardan biri değildir?",
+         "correctAnswer": "E",
+         "options": [
+          {
+           "key": "A",
+           "text": "Şiddetli ve sürekli ağrı"
+          },
+          {
+           "key": "B",
+           "text": "Sistemik toksisite bulguları"
+          },
+          {
+           "key": "C",
+           "text": "Deri nekrozu ve ekimoz"
+          },
+          {
+           "key": "D",
+           "text": "Deride his kaybı"
+          },
+          {
+           "key": "E",
+           "text": "Deri renginin açık olması"
+          }
+         ],
+         "year": "2018-2019",
+         "discipline": "Enfeksiyon Hastalıkları",
+         "topic": "Enfeksiyon Hastalıklarında Genel Kavramlar ve Temel Özellikler",
+         "explanation": "Deri renginin açılması nekrotizan fasiiti düşündüren bulgulardan değildir; derin damarların trombozuyla deri tersine mor, mavi-gri ve koyu bir renk alır.\n\n- **Tanım:** Nekrotizan fasiit, yüzeyel fasya ve deri altı dokuda hızla yayılan, damar trombozu ve doku nekrozuyla seyreden ağır bir yumuşak doku enfeksiyonudur.\n- **Uyarıcı bulgular:** Şiddetli ve sürekli ağrı, bül, deri nekrozu ya da ekimoz, dokuda gaz (krepitasyon), eritem sınırını aşan ödem, deride his kaybı, sistemik toksisite ve antibiyotiğe karşın hızlı yayılım nekrotizan enfeksiyonu düşündürür.\n- **Etkenler:** Tip I polimikrobiyaldir (anaeroplar ve gram negatif basiller, sıklıkla diyabetiklerde ve Fournier gangreninde); tip II çoğunlukla A grubu streptokokla gelişir.\n- **Tanı ve tedavi:** Klinik şüphe varsa görüntüleme cerrahiyi geciktirmemelidir; acil cerrahi debridman ve geniş spektrumlu antibiyotikle birlikte toksin üretimini baskılamak için klindamisin verilir.\n\nSınav: Ağrının deri bulgularıyla orantısız olması ve zamanla yerini his kaybına bırakması nekrotizan fasiiti selülitten ayırır."
+        },
+        {
+         "id": "fe84dbf1831d",
+         "questionNumber": 170,
+         "stem": "42 yaşında bir kadın hasta yüksek ateş, bulantı, kusma, şuur bulanıklığı ve şiddetli ağrı ile acile başvuruyor. Fizik muayenesinde sağ bacakta şişlik, kızarıklık, ısı artışı ve palpasyonda tahta sertliği saptanıyor. Aşağıdakilerden hangisi en olası tanıdır?",
+         "correctAnswer": "B",
+         "options": [
+          {
+           "key": "A",
+           "text": "Selülit"
+          },
+          {
+           "key": "B",
+           "text": "Nekrotizan fasiit"
+          },
+          {
+           "key": "C",
+           "text": "Erizipel"
+          },
+          {
+           "key": "D",
+           "text": "Karbonkül"
+          },
+          {
+           "key": "E",
+           "text": "Deri apsesi"
+          }
+         ],
+         "year": "2019-2020",
+         "discipline": "Enfeksiyon Hastalıkları",
+         "topic": "Enfeksiyon Hastalıklarında Genel Kavramlar ve Temel Özellikler",
+         "explanation": "Ekstremitede kızarıklığa eşlik eden tahta sertliği, bulgularla orantısız şiddetli ağrı ve sistemik toksisite (yüksek ateş, kusma, şuur bulanıklığı) nekrotizan fasiiti düşündürür.\n\n- **Patogenez:** Enfeksiyon yüzeyel fasya boyunca hızla yayılır; damar trombozu ve doku nekrozu gelişir, deri bulguları alttaki hasarı olduğundan az gösterir.\n- **Etkenler:** Tip I polimikrobiyaldir (anaeroplar ve gram negatif basiller; diyabetiklerde ve Fournier gangreninde); tip II çoğunlukla A grubu streptokokla olur ve toksik şok sendromu eşlik edebilir.\n- **Erken ipuçları:** Orantısız ağrı ve eritem sınırını aşan sert ödem; geç dönemde bül, krepitasyon, gri-mor renk değişikliği ve deride duyu kaybı görülür.\n- **Laboratuvar:** Lökositoz, hiponatremi, CRP ve kreatin kinaz yüksekliği görülür; görüntüleme cerrahiyi geciktirmemelidir.\n- **Tedavi:** Acil ve gerektiğinde yinelenen cerrahi debridman, geniş spektrumlu antibiyotik ve toksin üretimini baskılamak için klindamisin uygulanır.\n\nSınav: Selülitte ağrı bulgularla orantılıdır; tahta sertliği, orantısız ağrı ve toksik tablo cerrahi acil olan nekrotizan fasiiti gösterir."
+        },
+        {
          "id": "past-1790877041913-739972",
          "questionNumber": 7,
          "stem": "Bakteriyel enfeksiyonların viral ve diğer enfeksiyon nedenlerinden ayırt edilmesinde C-reaktif proteinle birlikte analiz edilen ve doğruluk oranı daha yüksek olan akut faz belirteci hangisidir?",
@@ -41012,38 +41077,6 @@
          "discipline": "Enfeksiyon Hastalıkları",
          "topic": "Enfeksiyon Hastalıklarında Genel Kavramlar ve Temel Özellikler",
          "explanation": "SOFA skoru altı organ sistemindeki disfonksiyonu puanlar; ateş bu sistemlerden biri değildir.\n\n- **Altı bileşen:** Solunum (PaO2/FiO2), koagülasyon (trombosit), karaciğer (bilirubin), kardiyovasküler (ortalama arter basıncı/vazopresör), santral sinir sistemi (Glasgow koma skalası), böbrek (kreatinin/idrar).\n- **Sepsis-3 tanımı:** Enfeksiyonla birlikte SOFA skorunda ≥2 puan akut artış sepsis olarak kabul edilir.\n- **qSOFA:** Solunum sayısı ≥22/dk, bilinç değişikliği, sistolik basınç ≤100 mmHg; yatak başı tarama aracıdır.\n- **SIRS:** Ateş/hipotermi, taşikardi, takipne ve lökosit değişikliği; duyarlı fakat özgül değildir, Sepsis-3 ile tanımdan çıkarılmıştır.\n- **Septik şok:** Sıvıya rağmen ortalama arter basıncını ≥65 mmHg tutmak için vazopresör gereksinimi ve laktat >2 mmol/L.\n\nSınav: Ateş SIRS'te vardır, SOFA ve qSOFA'da yoktur."
-        },
-        {
-         "id": "fe84dbf1831d",
-         "questionNumber": 170,
-         "stem": "42 yaşında bir kadın hasta yüksek ateş, bulantı, kusma, şuur bulanıklığı ve şiddetli ağrı ile acile başvuruyor. Fizik muayenesinde sağ bacakta şişlik, kızarıklık, ısı artışı ve palpasyonda tahta sertliği saptanıyor. Aşağıdakilerden hangisi en olası tanıdır?",
-         "correctAnswer": "B",
-         "options": [
-          {
-           "key": "A",
-           "text": "Selülit"
-          },
-          {
-           "key": "B",
-           "text": "Nekrotizan fasiit"
-          },
-          {
-           "key": "C",
-           "text": "Erizipel"
-          },
-          {
-           "key": "D",
-           "text": "Karbonkül"
-          },
-          {
-           "key": "E",
-           "text": "Deri apsesi"
-          }
-         ],
-         "year": "2023-2024",
-         "discipline": "Enfeksiyon Hastalıkları",
-         "topic": "Enfeksiyon Hastalıklarında Genel Kavramlar ve Temel Özellikler",
-         "explanation": "Ekstremitede kızarıklığa eşlik eden tahta sertliği, orantısız şiddetli ağrı ve sistemik toksisite (yüksek ateş, kusma, şuur bulanıklığı) nekrotizan fasiiti düşündürür.\n\n- **Etken:** Tip I polimikrobiyal (anaeroblar + gram negatifler, diyabetik ve Fournier gangreni), tip II monomikrobiyal (A grubu streptokok, ± toksik şok sendromu).\n- **Erken ipuçları:** Ağrının görünen bulgulardan çok şiddetli olması, ödemin eritem sınırını aşması, tahta sertliği; geç dönemde bül, krepitasyon, deride gri-mor renk değişikliği ve anestezi.\n- **Laboratuvar/görüntüleme:** Lökositoz, hiponatremi, yüksek CRP ve CK; BT'de fasyal sıvı ve gaz görülebilir ama görüntüleme cerrahiyi geciktirmemelidir.\n- **Tedavi:** Acil ve gerektiğinde tekrarlanan cerrahi debridman; geniş spektrumlu antibiyotik (ör. karbapenem ya da piperasilin-tazobaktam + vankomisin + toksin baskılamak için klindamisin).\n\nSınav: Selülitte ağrı ve bulgular orantılıdır; “tahta sertliği + orantısız ağrı + toksisite” nekrotizan fasiitin cerrahi aciliyet işaretidir."
         },
         {
          "id": "past-ocr-donem3-kurul4-3.sınıf 4-q5-jeftli-cs14",
@@ -43800,6 +43833,38 @@
          "discipline": "Enfeksiyon Hastalıkları",
          "topic": "Enfeksiyon Hastalıklarında Genel Kavramlar ve Temel Özellikler",
          "explanation": "Entamoeba histolytica bağırsak lümeni ve kolon mukozasına yerleşen bir protozoondur; portal yolla karaciğere yayılabilse de dolaşımda parazit formu olarak gösterilmez ve tanısı dışkı mikroskobisi, dışkı antijen/PCR testleri ve serolojiyle konur.\n\n- **Plasmodium:** Eritrosit içi trofozoit, şizont ve gametositler kalın ve ince periferik yaymada görülür; sıtma tanısının temelidir.\n- **Trypanosoma:** T. brucei (uyku hastalığı) ve T. cruzi (Chagas) tripomastigotları akut dönemde periferik kan yaymasında saptanır.\n- **Leishmania:** Visseral leishmaniazda amastigotlar monosit/makrofaj içinde, özellikle kemik iliği ve dalak aspiratında, bazen buffy coat yaymasında görülür.\n- **Toxoplasma:** Akut ve konjenital enfeksiyonda takizoitler kanda dolaşır; PCR ile gösterilebilir.\n- **Entamoeba:** Kist ve trofozoitler dışkıda aranır; amip karaciğer apsesinde tanı seroloji ve görüntülemeyle konur.\n\nSınav: Kan/doku protozoonları (Plasmodium, Trypanosoma, Leishmania, Toxoplasma) ile bağırsak protozoonları (Entamoeba, Giardia) ayrımı sık sorulur."
+        },
+        {
+         "id": "d3k2-2018-2019-k4-q88",
+         "questionNumber": 88,
+         "stem": "Dermatofitler hakkında aşağıdaki ifadelerden hangisi doğrudur?",
+         "correctAnswer": "A",
+         "options": [
+          {
+           "key": "A",
+           "text": "Trichophyton cinsi mantarlar saç, deri ve tırnakta infeksiyon yapar"
+          },
+          {
+           "key": "B",
+           "text": "Tinea capitis daha çok yüzün sakalsız kısımlarını tutar"
+          },
+          {
+           "key": "C",
+           "text": "Tinea facialis daha çok sakal ve bıyık bölgesinde görülür"
+          },
+          {
+           "key": "D",
+           "text": "Tinea corporis daha çok saçlı deri, kaş ve kirpikte görülür"
+          },
+          {
+           "key": "E",
+           "text": "Dermatofitler keratinize olmayan dokularda infeksiyon yapar"
+          }
+         ],
+         "year": "2018-2019",
+         "discipline": "Enfeksiyon Hastalıkları",
+         "topic": "Enfeksiyon Hastalıklarında Genel Kavramlar ve Temel Özellikler",
+         "explanation": "Dermatofitlerden Trichophyton cinsi saç, deri ve tırnağın üçünü de tutabilir; diğer şıklarda tinea tipleri ile tuttukları bölgeler karıştırılmıştır.\n\n- **Cinsler:** Trichophyton deri, saç ve tırnak; Microsporum deri ve saç; Epidermophyton deri ve tırnak enfeksiyonu yapar.\n- **Keratin bağımlılığı:** Dermatofitler keratinofiliktir; stratum korneum, saç ve tırnak gibi keratinize dokularda kutanöz mikoz oluşturur.\n- **Tinea tipleri:** Tinea capitis saçlı deri, tinea barbae sakal ve bıyık bölgesi, tinea faciei yüzün sakalsız kısmı, tinea corporis gövde ve ekstremiteler, tinea pedis ayak, tinea unguium tırnak tutulumudur.\n- **Tanı:** Kazıntı örneğinde potasyum hidroksit ile hifler gösterilir, kültürle tür belirlenir; histopatolojide PAS boyası mantar yapılarını belirginleştirir.\n- **Tedavi:** Yüzeysel lezyonlarda topikal azoller ve alilaminler, tinea capitis ve tırnak tutulumunda sistemik terbinafin ya da griseofulvin kullanılır.\n\nSınav: Saça yerleşmeyen dermatofit Epidermophyton, tırnağı tutmayan ise Microsporum'dur."
         },
         {
          "id": "past-1790877037124-886733",
@@ -327451,6 +327516,38 @@
        ],
        "cikmisSorular": [
         {
+         "id": "q-KURUL_2_C_IKMIS__3-70",
+         "questionNumber": null,
+         "stem": "Lepranın klinik ve epidemiyolojik özellikleriyle ilgili aşağıdakilerden hangisi yanlıştır?",
+         "correctAnswer": "D",
+         "options": [
+          {
+           "key": "A",
+           "text": "Lepromların yüzde diffüz infiltrasyonuna aslan yüzü (facies leonina) denir"
+          },
+          {
+           "key": "B",
+           "text": "Lepromatöz leprada birçok organ basil tarafından tutulur"
+          },
+          {
+           "key": "C",
+           "text": "Tüberküloid leprada deri ve periferik sinirler tutulur"
+          },
+          {
+           "key": "D",
+           "text": "Türkiye'de yeni olgu görülmemektedir"
+          },
+          {
+           "key": "E",
+           "text": "Dünyadaki prevalansı 1/10.000'in altındadır"
+          }
+         ],
+         "year": "2019-2020",
+         "discipline": "Halk Sağlığı",
+         "topic": "Salgın Hastalıklarda Kontrol ve Korunma Yöntemleri",
+         "explanation": "Yanlış ifade D'dir: Türkiye'de lepra eliminasyon düzeyinde olsa da yeni olgular az sayıda da olsa bildirilmeye devam etmektedir.\n\n- **Etken ve bulaş:** Mycobacterium leprae, aside dirençli, yavaş çoğalan ve periferik sinirlerin Schwann hücrelerine tropizm gösteren bir basildir; uzun süreli yakın temasla solunum yolundan bulaşır.\n- **Tüberküloid form:** Güçlü hücresel bağışıklık, granülom oluşumu, az lezyon ve belirgin sinir tutulumu (duyu kaybı) görülür.\n- **Lepromatöz form:** Zayıf hücresel yanıt, yaygın basil yükü, aslan yüzü, kaş dökülmesi ve çok organ tutulumu görülür.\n- **Eliminasyon kavramı:** Bir hastalığın belirli bir bölgede kabul edilebilir düzeyin altına indirilmesidir; lepra için eşik prevalansın 1/10.000'in altına inmesidir. Eradikasyondan farkı, etkenin ve yeni olguların ortadan kalkmamasıdır.\n- **Türkiye:** Cumhuriyetin erken döneminde vertikal örgütlenmeyle lepra savaşı yürütülmüştür.\n\nSınav: Eliminasyon ile eradikasyon karıştırılmamalıdır; eliminasyonda olgular sürer, yalnızca halk sağlığı sorunu olmaktan çıkar."
+        },
+        {
          "id": "k1-2019-2020-q031",
          "questionNumber": 31,
          "stem": "Bir enfeksiyon etkeni için:\nI. Bağışıklık bırakması\nII. Dış ortam koşullarına dayanıklı olması\nIII. Güçlü bir aşısının olması\nIV. Birden fazla kaynağa sahip olması\ndurumlarından hangisi/hangilerinde eradikasyon hedefine ulaşma olasılığı daha yüksektir?",
@@ -327673,70 +327770,6 @@
          "discipline": "Halk Sağlığı",
          "topic": "Salgın Hastalıklarda Kontrol ve Korunma Yöntemleri",
          "explanation": "Etken dünyada yok edilmemişken belirli bir bölgede hastalığa ait vaka görülmemesi eliminasyondur; bu durum kalıcı değildir ve önlemlerle korunmak zorundadır.\n\n- **Ders tanımı:** Eliminasyon, hastalığın tanımlı bir coğrafi bölgede artık büyük bir halk sağlığı sorunu olmamasıdır; yeniden ortaya çıkışı önlemek için sürveyans ve kontrol önlemleri sürdürülür.\n- **Hiyerarşi:** Kontrol (kabul edilebilir düzey, vakalar sürer), eliminasyon (bölgesel sıfır) ve eradikasyon (küresel ve kalıcı sıfır) giderek zorlaşan hedeflerdir.\n- **İthal vaka:** Eliminasyon sağlanmış ülkede dışarıdan gelen vakalar görülebilir; hızlı bildirim ve filyasyonla yerel bulaş zinciri oluşmadan durdurulur.\n- **Salgın fazları:** Salgının azalma fazında hedeflenen müdahaleler eliminasyon veya eradikasyondur.\n- **Eradikasyon farkı:** Eradikasyonda etken hiçbir yerde kalmadığı için aşılama gibi önlemler bırakılabilir; eliminasyonda bırakılamaz.\n\nSınav: Kökteki 'etken yok edilmemiş' ifadesi eradikasyonu, 'hiç vaka yok' ifadesi kontrolü dışlar; cevap eliminasyondur."
-        },
-        {
-         "id": "q-KURUL_2_C_IKMIS__3-70",
-         "questionNumber": null,
-         "stem": "Lepranın klinik ve epidemiyolojik özellikleriyle ilgili aşağıdakilerden hangisi yanlıştır?",
-         "correctAnswer": "D",
-         "options": [
-          {
-           "key": "A",
-           "text": "Lepromların yüzde diffüz infiltrasyonuna aslan yüzü (facies leonina) denir"
-          },
-          {
-           "key": "B",
-           "text": "Lepromatöz leprada birçok organ basil tarafından tutulur"
-          },
-          {
-           "key": "C",
-           "text": "Tüberküloid leprada deri ve periferik sinirler tutulur"
-          },
-          {
-           "key": "D",
-           "text": "Türkiye'de yeni olgu görülmemektedir"
-          },
-          {
-           "key": "E",
-           "text": "Dünyadaki prevalansı 1/10.000'in altındadır"
-          }
-         ],
-         "year": "Geçmiş Yıllar Çıkmışı (Arşiv)",
-         "discipline": "Halk Sağlığı",
-         "topic": "Salgın Hastalıklarda Kontrol ve Korunma Yöntemleri",
-         "explanation": "Yanlış ifade D'dir: Türkiye'de lepra eliminasyon düzeyinde olsa da yeni olgular az sayıda da olsa bildirilmeye devam etmektedir.\n\n- **Etken ve bulaş:** Mycobacterium leprae, aside dirençli, yavaş çoğalan ve periferik sinirlerin Schwann hücrelerine tropizm gösteren bir basildir; uzun süreli yakın temasla solunum yolundan bulaşır.\n- **Tüberküloid form:** Güçlü hücresel bağışıklık, granülom oluşumu, az lezyon ve belirgin sinir tutulumu (duyu kaybı) görülür.\n- **Lepromatöz form:** Zayıf hücresel yanıt, yaygın basil yükü, aslan yüzü, kaş dökülmesi ve çok organ tutulumu görülür.\n- **Eliminasyon kavramı:** Bir hastalığın belirli bir bölgede kabul edilebilir düzeyin altına indirilmesidir; lepra için eşik prevalansın 1/10.000'in altına inmesidir. Eradikasyondan farkı, etkenin ve yeni olguların ortadan kalkmamasıdır.\n- **Türkiye:** Cumhuriyetin erken döneminde vertikal örgütlenmeyle lepra savaşı yürütülmüştür.\n\nSınav: Eliminasyon ile eradikasyon karıştırılmamalıdır; eliminasyonda olgular sürer, yalnızca halk sağlığı sorunu olmaktan çıkar."
-        },
-        {
-         "id": "past-q-KURUL_2_C_IKMIS__3-70",
-         "questionNumber": 70,
-         "stem": "Lepranın klinik ve epidemiyolojik özellikleriyle ilgili aşağıdakilerden hangisi yanlıştır?",
-         "correctAnswer": "D",
-         "options": [
-          {
-           "key": "A",
-           "text": "Lepromların yüzde diffüz infiltrasyonuna aslan yüzü (facies leonina) denir"
-          },
-          {
-           "key": "B",
-           "text": "Lepromatöz leprada birçok organ basil tarafından tutulur"
-          },
-          {
-           "key": "C",
-           "text": "Tüberküloid leprada deri ve periferik sinirler tutulur"
-          },
-          {
-           "key": "D",
-           "text": "Türkiye'de yeni olgu görülmemektedir"
-          },
-          {
-           "key": "E",
-           "text": "Dünyadaki prevalansı 1/10.000'in altındadır"
-          }
-         ],
-         "year": "Geçmiş Yıllar Çıkmışı (Arşiv)",
-         "discipline": "Halk Sağlığı",
-         "topic": "Salgın Hastalıklarda Kontrol ve Korunma Yöntemleri",
-         "explanation": "Yanlış ifade D'dir: Türkiye'de lepra eliminasyon düzeyinde olsa da yeni olgular az sayıda da olsa bildirilmeye devam etmektedir.\n\n- **Etken ve bulaş:** Mycobacterium leprae, aside dirençli, yavaş çoğalan ve periferik sinirlerin Schwann hücrelerine tropizm gösteren bir basildir; uzun süreli yakın temasla solunum yolundan bulaşır.\n- **Tüberküloid form:** Güçlü hücresel bağışıklık, granülom oluşumu, az lezyon ve belirgin sinir tutulumu (duyu kaybı) görülür.\n- **Lepromatöz form:** Zayıf hücresel yanıt, yaygın basil yükü, aslan yüzü, kaş dökülmesi ve çok organ tutulumu görülür.\n- **Eliminasyon kavramı:** Bir hastalığın belirli bir bölgede kabul edilebilir düzeyin altına indirilmesidir; lepra için eşik prevalansın 1/10.000'in altına inmesidir. Eradikasyondan farkı, etkenin ve yeni olguların ortadan kalkmamasıdır.\n- **Türkiye:** Cumhuriyetin erken döneminde vertikal örgütlenmeyle lepra savaşı yürütülmüştür.\n\nSınav: Eliminasyon ile eradikasyon karıştırılmamalıdır; eliminasyonda olgular sürer, yalnızca halk sağlığı sorunu olmaktan çıkar."
         }
        ],
        "ornekSorular": [
@@ -340733,38 +340766,6 @@
          "explanation": "Aşılama, hastalık oluşmadan önce sağlıklı bireylere uygulanan spesifik bir korunma yöntemi olduğu için birincil korumadır.\n\n- **Primordial koruma:** Risk faktörlerinin toplumda hiç ortaya çıkmamasını hedefler (ör. çocuklarda sağlıklı beslenme alışkanlığı).\n- **Birincil koruma:** Hastalık oluşmadan önce uygulanır; sağlığın geliştirilmesi (sağlık eğitimi, beslenme, çevre sağlığı) ve spesifik korunma (aşı, kemoprofilaksi, iyotlu tuz) olarak iki bileşeni vardır.\n- **İkincil koruma:** Erken tanı ve tedavi; tarama programları (mamografi, Pap smear, yenidoğan taraması) ve poliklinik tedavisi.\n- **Üçüncül koruma:** Sakatlığın sınırlandırılması ve rehabilitasyon.\n- **Ayrım ipucu:** Hastalık başlamadan → birincil; başlamış ama belirti yok/erken → ikincil; yerleşmiş hasar → üçüncül.\n\nSınav: Tarama her zaman ikincil korumadır; “erken tanı” ifadesi gören öğrenci birincil korumayı elemelidir."
         },
         {
-         "id": "5f3a29c8b257",
-         "questionNumber": 234,
-         "stem": "Yaşlılık dönemi ile ilgili aşağıda belirtilen ifadelerden hangisi doğrudur?",
-         "correctAnswer": "C",
-         "options": [
-          {
-           "key": "A",
-           "text": "Yaşlılar kendisinde hastalık bulunacağı kaygısı ile çok sık olarak sağlık kuruluşuna başvururlar"
-          },
-          {
-           "key": "B",
-           "text": "Yaşlı insanların yaşam kalitesini artırabilmek için sağlık, güvenlik ve katılım olanaklarını en uygun hâle getirme pasif yaşlanma sürecidir"
-          },
-          {
-           "key": "C",
-           "text": "Yaşlılar sorunlarının yaşlılıktan kaynaklandığını düşünüp sağlık kuruluşuna başvurmayı ihmal ederler"
-          },
-          {
-           "key": "D",
-           "text": "Yaşlılık döneminde görme-işitme bozukluklarının tedavisi ikincil koruma yaklaşımlarındandır"
-          },
-          {
-           "key": "E",
-           "text": "Yaşlılıkta ara sıra yapılan orta dereceli fiziksel egzersiz bazı kronik hastalıkların insidansını azaltır"
-          }
-         ],
-         "year": "2018-2019",
-         "discipline": "Halk Sağlığı",
-         "topic": "Koruyucu Sağlık Hizmetleri",
-         "explanation": "Yaşlılar yakınmalarını yaşlılığın doğal sonucu olarak yorumladıklarından sağlık kuruluşuna başvurmayı ihmal ederler; bu, yaşlı sağlığında hastalıkların gizli kalmasının başlıca nedenidir.\n\n- **Az bildirim:** Bilişsel gerileme, depresyon, inkontinans, işitme kaybı ve düşmeler sıklıkla hekime söylenmez; periyodik geriatrik değerlendirme bu açığı kapatmak için yapılır.\n- **Aktif yaşlanma:** DSÖ tanımına göre sağlık, katılım ve güvenlik olanaklarının en uygun hâle getirilmesi sürecidir; pasif değil etkin bir yaklaşımdır.\n- **Koruma basamakları:** Birincil korumada aşılama ve sağlıklı yaşam; ikincilde tarama ve erken tanı; üçüncülde yerleşmiş yetersizliğin rehabilitasyonu (gözlük, işitme cihazı) yer alır.\n- **Fiziksel aktivite:** Düzenli orta yoğunlukta egzersiz kardiyovasküler hastalık, tip 2 diyabet, osteoporoz ve düşme riskini azaltır.\n\nSınav: Etkinin anahtarı egzersizin düzenliliğidir; 'ara sıra' ifadesi tipik çeldiricidir."
-        },
-        {
          "id": "k1-2019-2020-q001",
          "questionNumber": 1,
          "stem": "Adölesan sağlığı ile ilgili olarak aşağıdakilerden hangisi yanlıştır?",
@@ -347285,6 +347286,38 @@
         }
        ],
        "cikmisSorular": [
+        {
+         "id": "k1-2020-2021-a-q004",
+         "questionNumber": 4,
+         "stem": "Aşağıdakilerden hangisi üreme sağlığı hizmetlerinden değildir?",
+         "correctAnswer": "E",
+         "options": [
+          {
+           "key": "A",
+           "text": "Çevresel faktörlerin düzenlenmesi"
+          },
+          {
+           "key": "B",
+           "text": "Sosyal, kültürel ve davranışsal faktörlerin düzenlenmesi"
+          },
+          {
+           "key": "C",
+           "text": "Genital yol enfeksiyonlarının ve CYBH'nin önlenmesi"
+          },
+          {
+           "key": "D",
+           "text": "Adölesan sağlığı ve cinselliği"
+          },
+          {
+           "key": "E",
+           "text": "Homoseksüalite tedavisi"
+          }
+         ],
+         "year": "2020-2021",
+         "discipline": "Halk Sağlığı",
+         "topic": "Ana-Çocuk Sağlığı Düzeyinin İzlenmesi",
+         "explanation": "Homoseksüalite bir hastalık olmadığından 'tedavisi' üreme sağlığı hizmetleri arasında yer almaz; doğru cevap E'dir.\n\n- **Tanım:** Üreme sağlığı, üreme sistemi, işlevleri ve süreçleriyle ilgili yalnız hastalık yokluğu değil, fiziksel, ruhsal ve sosyal iyilik hâlidir (Kahire, 1994).\n- **Hizmet bileşenleri:** Aile planlaması, güvenli annelik (doğum öncesi, doğum ve doğum sonrası bakım), güvenli olmayan düşüğün önlenmesi, infertilite, genital enfeksiyonlar ve CYBE, üreme organı kanserleri, adölesan cinsel sağlığı.\n- **Belirleyiciler:** Çevresel, sosyal, kültürel ve davranışsal etmenlerin düzenlenmesi de programların parçasıdır.\n- **Cinsel yönelim:** Değiştirilebilecek ya da tedavi edilecek bir durum değildir; bu yönde girişimler etik dışıdır.\n\nSınav: Üreme sağlığı hizmetleri yaşam boyu yaklaşımı benimser ve adölesandan menopoza kadar tüm dönemleri kapsar."
+        },
         {
          "id": "k1-2020-2021-d-q004",
          "questionNumber": 4,
@@ -390977,70 +391010,6 @@
          "discipline": "Üroloji",
          "topic": "Enürezis Nokturna",
          "explanation": "Enüretik çocukların uyarılma eşiği yüksektir ve uyandırma uyarılarına az yanıt verirler; ancak bu iyi uyudukları anlamına gelmez, uyku kaliteleri genellikle kötüdür. Bu nedenle B yanlıştır.\n\n- **Sınıflama:** Hiç kuru dönem kazanılmamış ve gündüz alt üriner sistem belirtisi olmayan primer monosemptomatik noktürnal enürezis en sık formdur.\n- **Uyanma bozukluğu:** Mesane doluluğu ve kontraksiyonlarının algılanması ve inhibisyonunda gelişimsel gecikme vardır; dolu mesane çocuğu uyandıramaz.\n- **Detrüsör aktivitesi:** Ürodinamide total mesane kapasitesi normal, fonksiyonel mesane kapasitesi düşük bulunur; gece detrüsör instabilitesi buna katkı yapar.\n- **Kabızlık:** Gündüz inkontinansı olan çocuklarda son derece yaygındır; rektal distansiyon detrüsör aşırı aktivitesini tetikler, bu yüzden MoNE'de enürezis tedavisinden önce kabızlık ekarte edilmeli ya da tedavi edilmelidir.\n- **Diğer etkenler:** Genetik yatkınlık (iki ebeveynde öykü varsa %77) ve gece ADH ritmindeki gecikmeye bağlı noktürnal poliüri.\n\nSınav: 'Uyarılma eşiği yüksek' doğru, 'uyku kalitesi iyi' yanlıştır; total kapasite normal, fonksiyonel kapasite düşüktür."
-        },
-        {
-         "id": "past-1790877036003-183147",
-         "questionNumber": 34,
-         "stem": "Aşağıdakilerden hangisi enürezis ile ilgili yanlış bir bilgidir?",
-         "correctAnswer": "C",
-         "options": [
-          {
-           "key": "A",
-           "text": "Detrusor kasının aşırı aktivitesi enürezis nedenlerinden biridir"
-          },
-          {
-           "key": "B",
-           "text": "Küçük mesane kapasitesi enürezisle ilişkili olabilir"
-          },
-          {
-           "key": "C",
-           "text": "Prolaktin hormonu düzeyleri enürezis gelişiminde temel rol oynar"
-          },
-          {
-           "key": "D",
-           "text": "Vazopresin salınımındaki bozukluk enürezise yol açabilir"
-          },
-          {
-           "key": "E",
-           "text": "Derin uyku sırasında mesane doluluğuna karşı yetersiz uyanma refleksi enürezisle ilişkilidir"
-          }
-         ],
-         "year": "Geçmiş Yıllar Çıkmışı (Arşiv)",
-         "discipline": "Üroloji",
-         "topic": "Enürezis Nokturna",
-         "explanation": "Enürezis nokturnanın patogenezinde genetik etkenler, uyanma bozukluğu, noktürnal poliüri ve mesane işlev bozukluğu rol oynar; prolaktinin bu süreçte tanımlanmış bir rolü yoktur.\n\n- **Genetik:** Anne ve babada öykü varsa çocukta görülme olasılığı yaklaşık %77, ebeveynlerden birinde varsa %44'tür.\n- **Uyanma bozukluğu:** Dolu mesane uyarısına rağmen uyanamama; alarm tedavisi bu mekanizmayı hedefler.\n- **Noktürnal poliüri:** Gece vazopresin salınımındaki yetersizlik idrar hacmini artırır; desmopressin bu durumda etkilidir.\n- **Mesane işlev bozukluğu:** Gece düşük fonksiyonel mesane kapasitesi ve detrusor aşırı aktivitesi.\n- **Diğer etkenler:** Obstrüktif uyku apnesi, kabızlık; psikopatolojik bozukluklar etiyolojik etken kabul edilmez, enürezisin sonucu olarak kaygıya yol açabilir.\n\nSınav: Enürezis patogenezinde vazopresin (ADH) rol oynar; prolaktin gibi ilgisiz bir hormon klasik çeldiricidir."
-        },
-        {
-         "id": "past-q-KURUL_2_C_IKMIS__3-63",
-         "questionNumber": 63,
-         "stem": "Primer enürezis nokturnada altına idrar kaçırma uykunun hangi döneminde görülür?",
-         "correctAnswer": "C",
-         "options": [
-          {
-           "key": "A",
-           "text": "1. dönem"
-          },
-          {
-           "key": "B",
-           "text": "2. dönem"
-          },
-          {
-           "key": "C",
-           "text": "3. dönem"
-          },
-          {
-           "key": "D",
-           "text": "Uyanıklık dönemi"
-          },
-          {
-           "key": "E",
-           "text": "REM dönemi"
-          }
-         ],
-         "year": "Geçmiş Yıllar Çıkmışı (Arşiv)",
-         "discipline": "Üroloji",
-         "topic": "Enürezis Nokturna",
-         "explanation": "Primer enürezis nokturna, klasik olarak derin NREM (3. dönem, yavaş dalga) uykusunda ortaya çıkar; bu evrede uyarılma eşiği en yüksektir ve çocuk dolu mesane uyarısıyla uyanamaz.\n\n- **Uyanma bozukluğu:** Enüretik çocuklar uyandırma uyarılarına normal çocuklardan daha az yanıt verir; mesane doluluk ve kontraksiyonlarının algılanmasında gelişimsel gecikme vardır.\n- **Uyku yapısı:** Yavaş dalga uykusu gecenin ilk üçte birinde yoğundur; enürezis olaylarının da sıklıkla gecenin ilk yarısında olması bu ilişkiyi destekler.\n- **Eşlik eden mekanizmalar:** Gece ADH artışının yetersizliğine bağlı noktürnal poliüri ve düşük fonksiyonel mesane kapasitesi, uyanamama ile birleşerek ıslatmaya yol açar.\n- **Güncel veri:** Polisomnografi çalışmaları enürezisin uykunun her döneminde görülebildiğini göstermiştir; ders kaynağı da bu ifadeyi kullanır.\n\nNot: Evre ayrımı klasik sınav bilgisidir; güncel kılavuzlar tek bir evreye özgüllük tanımlamaz.\n\nSınav: Primer → derin NREM (3. dönem), sekonder → REM eşleştirmesi aynı sınavda birlikte sorulmuştur; ayrıca yüksek uyarılma eşiğinin iyi uyku anlamına gelmediği unutulmamalıdır."
         }
        ],
        "ornekSorular": [
