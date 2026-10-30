@@ -1,19 +1,18 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 602,
-  "baslik": "Soru dışa aktarıcı: katmanlı gruplama, ders renkleri, sayfaya sığdır",
+  "onem": 603,
+  "baslik": "Çıkmış sorularda sınav yılı netleşti",
   "maddeler": [
-    "Soruları yıl › kurul › ders › konu gibi en çok 4 iç içe katmanla gruplayabilir, etiketlere göre kümeleyebilirsin; 12 sıralama kipi.",
-    "Her ders sitedeki kendi rengini alır; grup başlıkları ve etiketler renklenir. Etiketlerin boyutu, dizilimi, şekli ve rengi ayarlanır.",
-    "Sayfaya sığdır: yazı ölçeği belgeye göre seçilir, tek soruluk seyrek sayfalar kalkar; hedef sayfa sayısı verilebilir.",
-    "Çözümler yalnız doğru şıkkı açıklayacak biçimde de yazılabilir."
+    "Her çıkmış sorunun yılı tek öğretim yılı olarak gösterilir; \"2021-2026\", \"Geçmiş Yıllar\", \"Kategorisiz\" gibi belirsiz etiketler kalktı.",
+    "Kaynağı yılı söylemeyen sorular \"Yılı belirsiz\" grubunda toplandı; yıl süzgecinde en sonda yer alır.",
+    "Yılı kesinleşemeyen az sayıda soru en çok iki yıllık aralıkla (\"2024-2026\") gösterilir."
   ],
-  "eklenen": [
-    "Dışa aktarıcıda çok katmanlı gruplama, etiket süzgeci, sayfaya sığdır, etiket görünümü, yalnız doğru şık çözümü"
-  ],
+  "eklenen": [],
   "degisen": [
-    "Izgara düzeninde yalnız en üst grup sayfa kırar, alt gruplar hücre içinde başlık (H456)"
+    "1.169 çıkmış kaydının examYear değeri tek yıla/≤2 yıla indirildi; gerekçeler kayıtta (yilDuzeltmesi)"
   ],
-  "duzeltilen": [],
+  "duzeltilen": [
+    "Yıl etiketleri (H455)"
+  ],
   "silinen": []
 }

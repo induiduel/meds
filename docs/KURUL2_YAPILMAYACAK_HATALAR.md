@@ -1728,6 +1728,21 @@ Her maddede: belirti · kök neden · Kurul 2 kuralı · kapı durumu. Kanıtlar
 - **Önleme:** Hatırlama belgeleri işlenirken farklı yılların YENİ kayıtları arasında da konu + cevap metni eşleşmesiyle tarama yapılır;
   aynı sınavda "aynı soru olabilir" notlu ögeler önce birleştirilir, ayrı soru kurulmaz (uydurma soru yasağı kurguda da geçerli).
 
+## H455 — Çıkmış kayıtlarında sınav yılı çok yıllı aralık ("2021-2026") ya da yılsız etiket ("Geçmiş Yıllar Çıkmışı (Arşiv)", "Kategorisiz", "2026") kalmıştı (2026-10-31)
+- **Belirti:** Yıl filtresinde "2021-2026" (692 kayıt), "Geçmiş Yıllar Çıkmışı (Arşiv)" (310), "Kategorisiz" (134), "2026" (25),
+  "2025-2026 (Geçen Sene)" (5) grupları vardı; öğrenci bir sorunun hangi yılın sınavı olduğunu göremiyordu, aynı soru farklı yıllarda
+  farklı etiketlerle duruyordu.
+- **Kök neden:** Ders derlemesi üretim betikleri (`scripts/archive/generate_kurul*_redakte_sorular.mjs`) `examYear: '2021-2026'` sabitini
+  yazdı; soru notundaki gerçek yıl (`sourceNote`) alana taşınmadı. Eski içe aktarımlar yıl bulamayınca "Geçmiş Yıllar…"/"Kategorisiz"
+  koydu; mega kayıt parçalama "2026" (işlem yılı) yazdı. Belge düzeyi yıl kanıtı (karne tarihi, belge içi tarih, dosya adı) hiç kullanılmadı.
+- **Çözüm:** `meds_temp/cikmis_yil_duzelt/yil_duzelt.py` kural zinciri (soru notu → D3K1 PDF eşlemesi → tekrar analizi kimliği → belge
+  tablosu → benzer tarihli kayıt → belirsiz) ile 1.169 kayıt tek yıla/≤2 yıla indirildi, 404'ü `Yılı belirsiz` + `yil_belirsiz`; her kararın
+  gerekçesi `yilDuzeltmesi` + `evidence`'ta. Türev dosyalar kimlikle eşitlendi.
+- **Önleme:** Yeni çıkmış kaydında `examYear` yalnız "YYYY-YYYY" (tek akademik yıl) ya da en çok iki yıl ("2021-2023") olabilir; kanıt yoksa
+  `Yılı belirsiz` + `yil_belirsiz` etiketi yazılır, asla işlem yılı/geniş aralık/kategori adı yazılmaz. Derleme/toplu içe aktarımda soru notundaki
+  yıl alana taşınır; belge yılı belge içi tarih/karne numarası/dosya adıyla doğrulanır ve `sinavKimligi.gerekce`'ye yazılır.
+  Kapı: `python3 meds_temp/cikmis_yil_duzelt/yil_duzelt.py` kuru koşusunda "Geçersiz biçimde kalan: 0" olmalı.
+
 ## H456 — Izgara düzeninde her alt grup değişiminde sayfa kırılıyor, sayfada tek soru kalıyordu; seyrek son sayfa (soru dışa aktarıcı, 2026-10-31)
 - **Belirti:** Gruplama açıkken 4'lü/8'li ızgarada bazı sayfalarda tek soru (konu değişince yeni sayfa); akışta belgenin son sayfası çoğu kez 1–2 soruyla yarım kalıyordu.
 - **Kök neden:** (1) ızgara sayfası tam grup yoluna (`h.grup`, en iç katman dahil) göre kesiliyordu; çok katmanlı gruplamada her konu değişimi yeni sayfa demekti. (2) Yazı ölçeği sabitti; sayfalama yalnız sığmayan tek bloğu küçültüyordu, belgenin bütünü için bir ölçek seçilmiyordu.
