@@ -1,14 +1,15 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 600,
-  "baslik": "Ders listesinde güncel sürümün süresi",
+  "onem": 601,
+  "baslik": "Kurul 2 çıkmışlarına 23 kurgu soru eklendi",
   "maddeler": [
-    "Sürümü olan derslerde listede güncel sürümün dakikası gösterilir (ör. Nörolojik Muayene 33 dk)."
+    "Okunamayan ya da yarım hatırlanan 24 çıkmış soru, ders kaynağından kurularak eklendi; kökün başında \"Kurgu Soru:\" yazar.",
+    "2024-25 ve 2025-26'da tekrar sorulan okülomotor sinir ve medulla spinalis soruları birbirine bağlandı."
   ],
-  "eklenen": [],
+  "eklenen": [
+    "23 kurgu çıkmış soru (2018-19 Kurul 4, 2023-24 Kurul 2/3, 2024-25 ve 2025-26 Kurul 2)"
+  ],
   "degisen": [],
-  "duzeltilen": [
-    "Listede eski sürümün süresi görünüyordu"
-  ],
+  "duzeltilen": [],
   "silinen": []
 }
