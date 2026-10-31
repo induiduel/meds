@@ -1775,3 +1775,61 @@ Her maddede: belirti · kök neden · Kurul 2 kuralı · kapı durumu. Kanıtlar
   v15 menü "Sorunlar", eşitleme kartı düğmesi), HTTP koduna göre sade açıklama + "Yeniden dene" + kopyalanabilir teknik ayrıntı.
 - **Önleme:** kullanıcının işlemi hiçbir yerde sessizce silinmez; kuyruktan düşen her şey denetçiye bildirilir. Yeni eşitleme/çevrimdışı
   hatası eklenirken hataDenetci'ye `bildir()` ile sade dilde başlık + açıklama + çözüm yazılır, ham hata yalnız `teknik` alanına.
+
+## H459 — KMB (Üretral kateter): küçük video, tekrar eden altyazı, iptal edilemeyen otomatik geçiş, metin hataları, hata takibi yok (2026-10-31)
+
+- **Belirti:** PC'de Öğren ekranı üç sütundu (adım listesi · video · metin), video ~430 px'e sıkışıyordu; etiketler
+  ("Üretral kateter: meatustan mesaney…") kesik görünüyordu; v15'te becerinin adı hiçbir yerde görünmüyordu (h1 gizli,
+  üst çubukta "KMB dersleri"); video bitince 1,2 sn'lik `setTimeout` sonraki adıma geçiyordu ve "Yeniden izle"ye basılsa
+  bile geçiş iptal olmuyordu; mobilde videonun kenarına tek dokunuş 10 sn atlatıyordu; hız değişince görüntü zıplıyordu;
+  altyazı/hız tercihi her videoda sıfırlanıyordu. Sınavda yanlışlar hiçbir yerde tutulmuyor, öğrenci hangi basamağı
+  unuttuğunu göremiyordu. Hocanın kaydıyla çelişen cümleler vardı (ağrı "takıldıktan sonra" değil "çıkarıldıktan sonra";
+  idrar miktarı "en önemli gösterge"; yatağa bağımlılık göreceli endikasyon; kadında 3–4 cm yeterli; doğum yapmış kadında
+  vajinaya girmek "kolay ayrım" değil "hata ama sorun yaratmaz"; tek jel lidokainli; izotonik "yıkama" değil yer sınaması)
+  ve kadın OSCE akışında "idrar gelince birkaç cm daha ilerlet" basamağı yoktu; 8 şık açıklaması kural 14 alt sınırının altındaydı.
+- **Kök neden:** düzen sabit sütun genişlikleriyle (220/1fr/340) viewport'a göre kuruluyordu, kenar çubuğu açıkken içerik
+  dar kalıyordu; otomatik geçiş oynatıcının dışında, iptal yolu olmayan zamanlayıcıydı; oynatıcı saati hız değişiminde
+  yeniden tabanlanmıyordu; etiketler `white-space: nowrap; max-width: 46cqi` ile kesiliyordu. Ses dökümü cümleye
+  çevrilirken hocanın vurgusu özetlenip yumuşatılmış, akış basamakları anlatım cümlelerinden ayrı yazıldığı için
+  "birkaç cm daha ilerlet" yalnız açıklama içinde kalmıştı; KMB doğrulayıcısı şık açıklama kapısını çağırmıyordu.
+- **Çözüm:** Öğren yeniden kuruldu (`KmbAsistan.tsx::Ogret`): üstte adım başlığı + önceki/sonraki + 18 parçalı adım şeridi
+  (izlenen yeşil, sınavda eksik kırmızı), tüm adımlar açılır panelde; video + eşzamanlı metin `@container kmb` ile dar
+  alanda alt alta, ≥860 px içerikte yan yana (video yapışkan); cümleye dokununca video o cümleden oynar
+  (`LottieVideo` `ref.bolumeGit`). Oynatıcı: tek dokunuş oynat/duraklat, kenarda çift dokunuş ±10 sn, önceki/sonraki cümle
+  düğmesi ve ↑/↓, hız değişiminde saat yeniden tabanlanır, altyazı/hız `medsoru_kmb_oynatici_v1`'de, bitişte geri sayımlı
+  `otoSonraki` (Yeniden izle / Burada kal / konumlama iptal eder), etiketler iki satıra iner. Hata istatistiği
+  `kmbHata.ts` + "Eksikler" sekmesi (`Eksikler.tsx`): her deneme kavram anahtarına (OSCE basamağı, vaka, yapı, hedef)
+  yazılır, iki kez üst üste doğru yapılana dek zayıf sayılır; öğretim adımına göre gruplanır ("Adımı yeniden çalış"),
+  hedefli tekrar (unutulan basamak için "bundan sonra ne yaparsın?", vaka, sahnede bul, hedefi anlat + öz değerlendirme).
+  Sınav ögelerine `adim` alanı eklendi (dogrula.py denetler). `medsoru_kmb_*` hesapla eşitlenir (userKvSync).
+  İçerik: kayda dayanan 11 cümle/açıklama düzeltmesi, kadın akışına `ilerlet2`, 11 şık açıklaması genişletildi.
+- **Önleme:** KMB'de yeni ekran düzeni viewport değil `@container kmb` ile seçilir; otomatik geçiş yalnız oynatıcının
+  iptal edilebilir `otoSonraki`'si ile yapılır. Hocanın sözü cümleye çevrilirken derecelendirme ("en önemli", "göreceli",
+  "hata ama sorun değil") korunur; anlatımda vurgulanan her uygulama eylemi OSCE akışında ayrı basamaktır. Her yeni sınav
+  ögesi `adim` taşır (yoksa dogrula.py HATA). Şık açıklamaları `sik_aciklama.denetle` ile 0 HATA.
+
+## H460 — KMB Lottie videoları: kesik/taşan etiketler, kayan kamera, yanlış durumdan başlayan sahneler, sonsuz sayaç (2026-10-31)
+
+- **Belirti:** 18 adım videosunun (89 cümle) kare denetiminde: 47 etiket telefonda "…" ile kesiliyor ("Üretral kateter:
+  meatustan mesaney…"), ~100 etiket kadraj dışına ya da altyazı bölgesine (alt %24) düşüp oynatıcı tarafından sahnenin
+  üstüne sıkıştırılıyordu; erkek temizlikte kadın/erkek karşılaştırma cümlesinde kamera cümle boyunca kendiliğinden
+  kayıyordu; sistit cümlesinde ("mesanede yalnız 15–20 mL") mesane şişip küçülüyordu; travmada "yalnız kırık" cümlesinde
+  darbe + kırık baştan oynuyordu; idrar gelmezse ve sabitlemede "40 mL / 10 mL" sayacı sonraki sahnelerde (form, hasta
+  konuşması) ekranda kalıyordu; malzemede yardımcının steril olmayan eli steril alanın içindeydi; kadın vulva sahnelerinde
+  uyluklar arası beyaz boşluk; alt raf, torba, meatustaki kan altyazının altında; erkek yerleştirmede anatomi etiketleri ve
+  "Penis dik ve gergin" iki kez.
+- **Kök neden:** (1) Etiketler sahne koordinatıyla elle yazılıyor, oynatıcının kameraya göre sıkıştırma/itme/kesme
+  kuralı (LottieVideo.tsx Katman + kmb.css 46cqi) üretimde hiç hesaplanmıyordu; kapı yoktu. (2) `kamera_ekle` geçişin
+  başlangıç anahtarını ekleme anındaki son anahtardan kopyalıyordu: araya sonradan eklenen hareket (zemin_kat sıfırlaması)
+  sonraki geçişin başlangıcını güncellemiyordu. (3) `Ic` (alt kompozisyon) eşlenmeyen (None) bölümü video sonrasına
+  atıyordu; önceki bölümün anahtarları geleceğe gidince Lottie anahtarları zamanca yeniden sıralanıyor, eşlenen bölüm
+  yanlış durumdan başlıyordu. (4) Oynatıcı sayacı `t >= bas` ile videonun sonuna dek gösterir (bitişi yok).
+- **Kalıcı çözüm:** `lottie_dsl.py`: kamera artık hareket listesi, `kamera_coz` zaman sırasıyla çözer;
+  `etiket_yerlestir` her etiketi kamera geçişi bitince belirtir, ömrü boyunca (0,25 sn örnekle) kadrajda ve altyazının
+  üstünde tutar, eşzamanlı etiketleri oynatıcının itme eşiğinin (%26/%8) dışına ayırır; `Ic` eşlenmeyen önceki bölümleri
+  (ve `'once'`) görünmeden önceki sessiz paya sıkıştırır ("olmuş bitmiş"), sonrakileri atar; sahneye ait sayaç sahne
+  kaybolunca biten adım etiketlerine çevrilir. 45 etiket ≤30 harfe kısaltıldı; sahne düzeltmeleri `adim_lottie.py` ve
+  `lottie_uret.py`'de. Kapı: `dogrula.py` → `lottie_dsl.etiket_denetle` (≤30 harf, kadraj, altyazı bölgesi, çakışma) HATA.
+- **Önleme:** Video değişikliğinden sonra `node meds/scripts/kmb/kare_onizle.mjs [ad…]` ile temas sayfası üretilir ve her
+  cümle karesi metinle karşılaştırılır (rapor.json otomatik bulgu 0 olmalı). Etiket ≤30 harf; önemli öge (torba, meatus,
+  kan) sahnenin alt %24'üne konmaz; alt kompozisyonda "son durum" gerekiyorsa `'once'` kullanılır, None değil.

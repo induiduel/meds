@@ -1,3 +1,13 @@
+## 2026-10-31 — KMB Lottie videoları kare denetimi ve onarımı (H460)
+- Yeni araç `scripts/kmb/kare_onizle.mjs`: başsız Chrome + lottie-web canvas ile her bölümün başı/ortası/sonundan kare,
+  oynatıcının etiket katmanını taklit eder, cümle metniyle temas sayfası + `rapor.json` (kesik/taşan/çakışan etiket, boş kare).
+- `lottie_dsl.py`: kamera hareket listesi + `kamera_coz` (kayan kamera hatası), `etiket_yerlestir`/`etiket_denetle`
+  (kadraj, altyazı bölgesi, çakışma, ≤30 harf), `Ic` eşlenmeyen bölüm "olmuş bitmiş" (`'once'`), sahne sayacı → etiket.
+- `adim_lottie.py`/`lottie_uret.py`: 45 etiket kısaltıldı; sistit küçük iltihaplı mesane, travma neden/kırık/yalnız kırık
+  ayrımı + penis/kan yukarı, malzeme alt raf ve steril alan sınırı, kateter boyları, torba kamerası, vulva perine zemini,
+  erkek temizlikte eldiven değişimi paneli, idrar gelmezse iki neden yan yana, yeni cümle metinlerine uyan etiketler.
+- `dogrula.py` etiket kapısını çağırır (0 HATA). 02.json ve ses dosyalarına dokunulmadı; commit/dağıtım yapılmadı.
+
 ## 2026-10-31 — Soru dışa aktarıcı: çok katmanlı gruplama, ders renkleri, sayfaya sığdır, etiket görünümü, yalnız doğru şık (H456)
 - `v15/soruAktar/ayar.ts`: `gruplar: Alan[]` (yıl/kurul/ders/konu/kaynak/tür/zorluk/etiket, en çok 4 iç içe katman; eski `grupla` kaydı katmana çevrilir), `grupSirasi` (olağan / soru sayısı), `grupStil` (alt çizgi, bant, kutu, sade), `grupSayi`; 12 sıralama kipi (`SIRALAMALAR`: yıl eski önce, zordan, kaynak numarası, kısa/uzun, A→Z …); `dersRenkleri` + `DERS_RENK`/`dersRengi` (sitedeki `health.css` ders renkleri; eşleşmeyen ders ad karmasıyla ek listeden); `sigdir` (kapalı / yalnız küçült / doldur) + `sigdirHedef`; etiket görünümü (`etiketBoyut`, `etiketDizilim`, `etiketSekil` hap/kutu/köşeli/çerçeve/düz, `etiketRenk` gri/türüne göre/dersin rengi/özel, `etiketZemin/Metin`, `etiketKalin`); `cozumIcerik.yalnizDogru`.
 - `kaynak.ts`: `AQ.etiketler` (çıkmış `tags` + rozetler; süreç etiketleri `_`, `donem3-…`, yıl, dosya adı, ders/yıl kopyası ve Faz 14 rozeti ayıklanır), süzgeç `etiketler`, `secenekler('etiketler')`.

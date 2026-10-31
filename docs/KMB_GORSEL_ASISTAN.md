@@ -35,9 +35,12 @@ Kayıttan net duyulamayan sayı/süre (`dogrulanacak: true`) öğrenciye kesin b
 ```
 { kod, ad, belgeKodu, amac, kaynaklar[], hedefler[{no, metin, adimlar[]}],
   adimlar[{ id, baslik, sahne, ek[], cumleler[{ metin, eylem[] }], puf[], dikkat[] }],
-  sinav: { akislar[{ id, ad, yonerge, basamaklar[{ id, metin, aciklama, dal?{ soru, yollar[{ id, etiket, basamaklar[] }] } }] }], senaryolar[{ id, baslik, sahne, eylem[], soru, secenekler[{metin, dogru, aciklama}], puf }],
-           bul[{ id, sahne, yonerge, hedef, aciklama }] } }
+  sinav: { akislar[{ id, ad, yonerge, basamaklar[{ id, metin, aciklama, adim, dal?{ soru, yollar[{ id, etiket, basamaklar[] }] } }] }], senaryolar[{ id, baslik, sahne, adim, eylem[], soru, secenekler[{metin, dogru, aciklama}], puf }],
+           bul[{ id, sahne, yonerge, hedef, aciklama, adim }] } }
 ```
+
+`adim` (zorunlu, dogrula.py): sınav ögesinin ilgili öğretim adımı. Hata istatistiği (Eksikler) yanlışı bu adıma bağlar
+ve "Adımı yeniden çalış" ile Öğren'i o adımda açar.
 
 Eylem türleri: `vurgula` (nabız ışığı), `ciz` (çizgi aşama aşama çizilir), `renk` (yesil/kirmizi/mavi/sari), `goster`, `gizle`,
 `etiket`. Bir adımdaki eylemler cümle ilerledikçe birikir; ses cümle zamanlamasıyla eşzamanlıdır.
@@ -46,7 +49,8 @@ Eylem türleri: `vurgula` (nabız ışığı), `ciz` (çizgi aşama aşama çizi
 
 ```
 python3 meds/scripts/kmb/lottie_uret.py                 # Lottie videoları (ses varsa ses zamanlı); ses.py'den sonra yeniden çalıştır
-python3 meds/scripts/kmb/dogrula.py                     # 0 HATA olmadan ses ve yayın yok
+python3 meds/scripts/kmb/dogrula.py                     # 0 HATA olmadan ses ve yayın yok (Lottie etiket kapısı dahil)
+node meds/scripts/kmb/kare_onizle.mjs [ad… | konu]     # kare temas sayfası: her cümlenin karesi metinle göz denetimi (OUT=klasör)
 bash meds/scripts/patoloji_cozucu/cozucu_ses_gpu.sh meds/scripts/kmb/ses.py 02   # EMA, GPU
 ```
 
@@ -56,3 +60,15 @@ bash meds/scripts/patoloji_cozucu/cozucu_ses_gpu.sh meds/scripts/kmb/ses.py 02  
 2. `index.json`'da becerinin `durum`unu `hazirlaniyor` yap; `<kod>.json`'u hedeflerden başlat.
 3. Gerekirse `sahneler.tsx`'e yeni sahne (her öge `id`'li, etiketi `lbl-<id>`).
 4. `dogrula.py` 0 HATA → `ses.py <kod>` (GPU) → `npx vite build` → durum `hazir`.
+
+## 6. Ekran ve hata istatistiği (2026-10-31, H459)
+
+- Öğrenme yolu: İzle → Öğren → Hedefler → Sınav + **Eksikler** (`/dersler/kmb/<beceri>/eksik`).
+- Öğren: adım başlığı + önceki/sonraki + adım şeridi (yeşil izlendi, kırmızı sınavda eksik), tüm adımlar açılır panelde;
+  video + eşzamanlı metin (cümleye dokun → video o cümleden), düzen `@container kmb` (dar: alt alta, ≥860 px: yan yana).
+- Oynatıcı (`LottieVideo.tsx`): tek dokunuş oynat/duraklat, kenarda çift dokunuş ±10 sn, önceki/sonraki cümle, hız/altyazı
+  tercihi hatırlanır, bitişte iptal edilebilir geri sayım (`otoSonraki`).
+- Hata istatistiği (`kmbHata.ts`, `medsoru_kmb_hata_<kod>`, hesapla eşitlenir): vaka, OSCE sırası (basamak başına),
+  kontrol listesi ("Atladım" = unutulan basamak), sahnede bul (görev başına ilk dokunuş), etiketleme (yapı başına ilk
+  deneme), hedef anlatımı (öz değerlendirme). Kavram iki kez üst üste doğru yapılınca eksik listesinden düşer.
+  `Eksikler.tsx`: özet, bölüm başına doğruluk, 14 gün, adıma göre eksikler, hedefli tekrar oturumu (en fazla 10 soru).

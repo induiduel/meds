@@ -7,7 +7,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
 import LottieVideo, { KMB_DURDUR, LOTTILER, lottieOnYukle } from './LottieVideo';
-import type { Ders, SesKayit } from './KmbAsistan';
+import type { Ders, SesKayit } from './kmbVeri';
 
 export default function DersVideo({ ders, ses, bas = 0, onKapat, izlendi }: {
   ders: Ders; ses: SesKayit | null; bas?: number; onKapat: () => void; izlendi?: (adimId: string) => void;
@@ -52,7 +52,7 @@ export default function DersVideo({ ders, ses, bas = 0, onKapat, izlendi }: {
       </div>
       <div className="kmb-dv-govde">
         <LottieVideo key={a.id} ad={`adim-${a.id}`} kod={ders.kod} ses={ses} otomatik doldur
-          onBitti={() => { izlendi?.(a.id); if (sonraki) window.setTimeout(() => setI((n) => n + 1), 250); }}
+          onBitti={() => izlendi?.(a.id)} otoSonraki={600}
           sonraki={sonraki ? { ad: `adim-${sonraki.id}`, baslik: sonraki.baslik, git: ileri } : undefined} />
       </div>
     </div>,

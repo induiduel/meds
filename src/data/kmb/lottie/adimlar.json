@@ -53,22 +53,10 @@
     100
    ],
    [
-    7.315,
+    8.215,
     400.0,
     250.0,
     100
-   ],
-   [
-    7.901,
-    300,
-    160,
-    210
-   ],
-   [
-    8.215,
-    300,
-    160,
-    210
    ],
    [
     8.515,
@@ -130,7 +118,7 @@
     "bas": 0.8,
     "son": 1.61,
     "x": 440,
-    "y": 380,
+    "y": 356.0,
     "metin": "Bulbar üretra",
     "tur": "etiket"
    },
@@ -145,7 +133,7 @@
    {
     "bas": 0.8,
     "son": 1.61,
-    "x": 720,
+    "x": 704.0,
     "y": 340,
     "metin": "Meatus",
     "tur": "etiket"
@@ -159,10 +147,18 @@
     "tur": "bilgi"
    },
    {
+    "bas": 2.75,
+    "son": 7.31,
+    "x": 400,
+    "y": 356.0,
+    "metin": "Meatustan mesaneye esnek boru",
+    "tur": "dogru"
+   },
+   {
     "bas": 3.24,
     "son": 4.06,
     "x": 330,
-    "y": 410,
+    "y": 312.0,
     "metin": "Kıvrım: zorlama yok",
     "tur": "uyari"
    },
@@ -170,7 +166,7 @@
     "bas": 4.06,
     "son": 4.87,
     "x": 215,
-    "y": 330,
+    "y": 286.0,
     "metin": "En dar bölüm",
     "tur": "uyari"
    },
@@ -178,8 +174,8 @@
     "bas": 5.69,
     "son": 6.5,
     "x": 600,
-    "y": 360,
-    "metin": "İdrar geldi → yine de sonuna kadar",
+    "y": 312.0,
+    "metin": "İdrar geldi: yine sonuna kadar",
     "tur": "bilgi"
    },
    {
@@ -191,15 +187,7 @@
     "tur": "dogru"
    },
    {
-    "bas": 2.75,
-    "son": 7.31,
-    "x": 400,
-    "y": 440,
-    "metin": "Üretral kateter: meatustan mesaneye, idrarı dışarı alır",
-    "tur": "dogru"
-   },
-   {
-    "bas": 8.65,
+    "bas": 8.38,
     "son": 13.71,
     "x": 180,
     "y": 275,
@@ -207,7 +195,7 @@
     "tur": "bilgi"
    },
    {
-    "bas": 10.03,
+    "bas": 9.75,
     "son": 13.71,
     "x": 400,
     "y": 275,
@@ -215,7 +203,15 @@
     "tur": "bilgi"
    },
    {
-    "bas": 11.4,
+    "bas": 10.96,
+    "son": 13.71,
+    "x": 400,
+    "y": 356.0,
+    "metin": "Kolay · birkaç küçük incelik",
+    "tur": "bilgi"
+   },
+   {
+    "bas": 11.13,
     "son": 13.71,
     "x": 620,
     "y": 275,
@@ -223,15 +219,7 @@
     "tur": "bilgi"
    },
    {
-    "bas": 10.96,
-    "son": 13.71,
-    "x": 400,
-    "y": 420,
-    "metin": "Teknik kolay: birkaç küçük incelik",
-    "tur": "bilgi"
-   },
-   {
-    "bas": 15.07,
+    "bas": 14.78,
     "son": 20.44,
     "x": 220,
     "y": 295,
@@ -239,15 +227,15 @@
     "tur": "dogru"
    },
    {
-    "bas": 16.53,
+    "bas": 16.24,
     "son": 20.44,
     "x": 400,
-    "y": 295,
+    "y": 339.0,
     "metin": "Kime asla?",
     "tur": "uyari"
    },
    {
-    "bas": 17.99,
+    "bas": 17.7,
     "son": 20.44,
     "x": 580,
     "y": 295,
@@ -255,7 +243,7 @@
     "tur": "bilgi"
    },
    {
-    "bas": 21.88,
+    "bas": 21.54,
     "son": 28.14,
     "x": 130,
     "y": 315,
@@ -263,15 +251,15 @@
     "tur": "bilgi"
    },
    {
-    "bas": 23.16,
+    "bas": 22.82,
     "son": 28.14,
     "x": 300,
-    "y": 343,
+    "y": 356.0,
     "metin": "2 · Kontrendikasyon",
     "tur": "bilgi"
    },
    {
-    "bas": 24.43,
+    "bas": 24.09,
     "son": 28.14,
     "x": 470,
     "y": 315,
@@ -279,11 +267,11 @@
     "tur": "bilgi"
    },
    {
-    "bas": 25.71,
+    "bas": 25.37,
     "son": 28.14,
     "x": 640,
-    "y": 343,
-    "metin": "4 · Kadında / erkekte uygulama",
+    "y": 356.0,
+    "metin": "4 · Uygulama",
     "tur": "bilgi"
    }
   ],
@@ -294,42 +282,42 @@
  {
   "ad": "adim-endikasyon-takip",
   "baslik": "Endikasyon 1: idrar çıkışını izlemek",
-  "sure": 45.85,
+  "sure": 45.66,
   "bolumler": [
    {
     "baslik": "Tansiyon, nabız, solunum sayısı",
-    "metin": "Tansiyon, nabız, solunum sayısı, satürasyon ve ateş vital bulgulardır; saatlik ve yirmi dört saatlik idrar miktarı da en az onlar kadar önemli bir göstergedir.",
+    "metin": "Tansiyon, nabız, solunum sayısı, satürasyon ve ateş vital bulgulardır; ama sıvı tedavisinde en önemli gösterge saatlik ve yirmi dört saatlik idrar miktarıdır.",
     "bas": 0.8,
-    "son": 9.93,
+    "son": 9.84,
     "ses_bas": 0.12
    },
    {
     "baslik": "Yemek yiyemeyen, su içemeyen",
     "metin": "Yemek yiyemeyen, su içemeyen yoğun bakım hastasına ne kadar sıvı vereceğine idrar çıkışına bakarak karar verirsin.",
-    "bas": 10.83,
-    "son": 16.89,
-    "ses_bas": 9.699
+    "bas": 10.74,
+    "son": 16.8,
+    "ses_bas": 9.613
    },
    {
     "baslik": "Hasta günde iki litre",
     "metin": "Hasta günde iki litre idrar çıkarırken ona bin mililitre verirsen hasta dehidrate kalır ve böbrek fonksiyonları bozulur.",
-    "bas": 17.79,
-    "son": 24.4,
-    "ses_bas": 16.21
+    "bas": 17.7,
+    "son": 24.31,
+    "ses_bas": 16.123
    },
    {
     "baslik": "Bin mililitre çıkaran hastaya",
     "metin": "Bin mililitre çıkaran hastaya beş bin mililitre verirsen bu kez akciğer ödemi, periferik ödem ve konjestif kalp yetmezliği tablosu gelişir.",
-    "bas": 25.3,
-    "son": 32.83,
-    "ses_bas": 23.271
+    "bas": 25.21,
+    "son": 32.74,
+    "ses_bas": 23.185
    },
    {
     "baslik": "Bu nedenle yoğun bakım",
     "metin": "Bu nedenle yoğun bakım hastaları, uzun ya da kanamalı ameliyatlar, septik, hipovolemik ve hemorajik şok, inme veya diyabetik ketoasidoz gibi bilinci kapalı hastalar idrar takibi için kateterlenir.",
-    "bas": 33.73,
-    "son": 44.55,
-    "ses_bas": 31.251
+    "bas": 33.64,
+    "son": 44.36,
+    "ses_bas": 31.164
    }
   ],
   "kamera": [
@@ -352,25 +340,25 @@
     100
    ],
    [
-    17.788,
+    17.702,
     400.0,
     250.0,
     100
    ],
    [
-    18.088,
+    18.002,
     400.0,
     250.0,
     100
    ],
    [
-    33.727,
+    33.642,
     400.0,
     250.0,
     100
    ],
    [
-    34.027,
+    33.942,
     400.0,
     250.0,
     100
@@ -378,146 +366,146 @@
   ],
   "etiketler": [
    {
-    "bas": 1.26,
-    "son": 9.93,
+    "bas": 1.25,
+    "son": 9.84,
     "x": 130,
     "y": 100,
     "metin": "TA 120/80",
     "tur": "bilgi"
    },
    {
-    "bas": 1.99,
-    "son": 9.93,
+    "bas": 1.98,
+    "son": 9.84,
     "x": 250,
-    "y": 100,
+    "y": 144.0,
     "metin": "Nabız 84",
     "tur": "bilgi"
    },
    {
-    "bas": 2.72,
-    "son": 9.93,
+    "bas": 2.7,
+    "son": 9.84,
     "x": 370,
     "y": 100,
     "metin": "SS 16",
     "tur": "bilgi"
    },
    {
-    "bas": 3.45,
-    "son": 9.93,
+    "bas": 3.42,
+    "son": 9.84,
     "x": 170,
     "y": 280,
     "metin": "SpO₂ %98",
     "tur": "bilgi"
    },
    {
-    "bas": 4.18,
-    "son": 9.93,
+    "bas": 4.15,
+    "son": 9.84,
     "x": 330,
-    "y": 280,
+    "y": 324.0,
     "metin": "Ateş 36,8 °C",
     "tur": "bilgi"
    },
    {
-    "bas": 5.36,
-    "son": 9.93,
+    "bas": 5.32,
+    "son": 9.84,
     "x": 640,
-    "y": 410,
-    "metin": "Saatlik / 24 saatlik idrar: vital bulgu kadar önemli",
+    "y": 356.0,
+    "metin": "En önemli: saatlik idrar",
     "tur": "dogru"
    },
    {
-    "bas": 10.83,
-    "son": 16.89,
-    "x": 140,
-    "y": 30,
+    "bas": 10.74,
+    "son": 16.8,
+    "x": 175.0,
+    "y": 40.0,
     "metin": "Ağızdan alamıyor: giren sıvı",
     "tur": "bilgi"
    },
    {
-    "bas": 13.25,
-    "son": 16.89,
+    "bas": 13.17,
+    "son": 16.8,
     "x": 560,
-    "y": 470,
+    "y": 356.0,
     "metin": "Çıkan idrar → ne kadar sıvı?",
     "tur": "dogru"
    },
    {
-    "bas": 21.09,
-    "son": 24.4,
+    "bas": 21.01,
+    "son": 24.31,
     "x": 180,
     "y": 110,
     "metin": "Çıkan 2000 mL",
     "tur": "bilgi"
    },
    {
-    "bas": 21.09,
-    "son": 24.4,
+    "bas": 21.01,
+    "son": 24.31,
     "x": 360,
-    "y": 110,
+    "y": 154.0,
     "metin": "Giren 1000 mL",
     "tur": "bilgi"
    },
    {
-    "bas": 21.42,
-    "son": 24.4,
-    "x": 620,
-    "y": 380,
-    "metin": "Dehidratasyon · böbrek fonksiyonu bozulur",
+    "bas": 21.34,
+    "son": 24.31,
+    "x": 614.0,
+    "y": 356.0,
+    "metin": "Dehidratasyon · böbrek bozulur",
     "tur": "uyari"
    },
    {
-    "bas": 29.06,
-    "son": 32.83,
+    "bas": 28.98,
+    "son": 32.74,
     "x": 180,
     "y": 110,
     "metin": "Çıkan 1000 mL",
     "tur": "bilgi"
    },
    {
-    "bas": 29.06,
-    "son": 32.83,
+    "bas": 28.98,
+    "son": 32.74,
     "x": 360,
-    "y": 110,
+    "y": 154.0,
     "metin": "Giren 5000 mL",
     "tur": "bilgi"
    },
    {
-    "bas": 29.82,
-    "son": 32.83,
+    "bas": 29.73,
+    "son": 32.74,
     "x": 560,
-    "y": 440,
-    "metin": "Akciğer ödemi · periferik ödem · KKY",
+    "y": 356.0,
+    "metin": "Akciğer ödemi · ödem · KKY",
     "tur": "uyari"
    },
    {
-    "bas": 34.59,
-    "son": 44.55,
+    "bas": 33.96,
+    "son": 44.36,
     "x": 110,
     "y": 285,
     "metin": "Yoğun bakım",
     "tur": "bilgi"
    },
    {
-    "bas": 36.62,
-    "son": 44.55,
+    "bas": 35.97,
+    "son": 44.36,
     "x": 300,
-    "y": 313,
+    "y": 330,
     "metin": "Uzun / kanamalı ameliyat",
     "tur": "bilgi"
    },
    {
-    "bas": 38.65,
-    "son": 44.55,
+    "bas": 37.98,
+    "son": 44.36,
     "x": 490,
     "y": 285,
-    "metin": "Şok (septik · hipovolemik · hemorajik)",
+    "metin": "Şok",
     "tur": "uyari"
    },
    {
-    "bas": 40.68,
-    "son": 44.55,
-    "x": 680,
-    "y": 313,
+    "bas": 39.99,
+    "son": 44.36,
+    "x": 636.0,
+    "y": 330,
     "metin": "Bilinci kapalı (inme, DKA)",
     "tur": "bilgi"
    }
@@ -529,7 +517,7 @@
  {
   "ad": "adim-endikasyon-retansiyon",
   "baslik": "Endikasyon 2: idrar yapamayan hasta ve glob vezikale",
-  "sure": 29.71,
+  "sure": 30.55,
   "bolumler": [
    {
     "baslik": "Kateterin acilde en sık",
@@ -550,14 +538,14 @@
     "metin": "Tedavisi üretral kateter takarak mesaneyi boşaltmak ve hastayı rahatlatmaktır.",
     "bas": 16.29,
     "son": 20.79,
-    "ses_bas": 14.707
+    "ses_bas": 14.709
    },
    {
     "baslik": "Kendi başına tuvalete gidemeyen",
-    "metin": "Kendi başına tuvalete gidemeyen yatağa bağımlı hastalar ve hareket ettirilemeyen travma hastaları da bu grupta kateterlenebilir.",
-    "bas": 21.69,
-    "son": 28.41,
-    "ses_bas": 19.665
+    "metin": "Kendi başına tuvalete gidemeyen yatağa bağımlı hastalar ve hareket ettirilemeyen travma hastaları ise göreceli bir endikasyonla kateterlenebilir.",
+    "bas": 21.7,
+    "son": 29.25,
+    "ses_bas": 19.668
    }
   ],
   "kamera": [
@@ -588,35 +576,29 @@
    [
     9.233,
     450,
-    192.30769230769232,
+    192.31,
     130
    ],
    [
-    16.286,
+    16.287,
     450,
-    192.30769230769232,
+    192.31,
     130
    ],
    [
-    16.786,
+    16.787,
     400.0,
     250.0,
     100
    ],
    [
-    20.793,
+    21.695,
     400.0,
     250.0,
     100
    ],
    [
-    21.693,
-    400.0,
-    250.0,
-    100
-   ],
-   [
-    21.993,
+    21.995,
     400.0,
     250.0,
     100
@@ -624,44 +606,52 @@
   ],
   "etiketler": [
    {
+    "bas": 2.2,
+    "son": 6.93,
+    "x": 518.2,
+    "y": 305.7,
+    "metin": "Hasta idrar yapamıyor",
+    "tur": "uyari"
+   },
+   {
     "bas": 7.83,
     "son": 15.39,
-    "x": 640,
+    "x": 518.2,
     "y": 130,
     "metin": "Suprapubik kabarıklık",
     "tur": "bilgi"
    },
    {
-    "bas": 2.03,
-    "son": 6.93,
-    "x": 600,
-    "y": 420,
-    "metin": "Hasta idrar yapamıyor",
-    "tur": "uyari"
-   },
-   {
     "bas": 18.99,
     "son": 20.79,
     "x": 250,
-    "y": 440,
+    "y": 356.0,
     "metin": "Mesane boşalır, hasta rahatlar",
     "tur": "dogru"
    },
    {
-    "bas": 22.36,
-    "son": 28.41,
+    "bas": 22.45,
+    "son": 29.25,
     "x": 210,
     "y": 330,
-    "metin": "Kendi başına tuvalete gidemeyen, yatağa bağımlı",
+    "metin": "Yatağa bağımlı hasta",
     "tur": "bilgi"
    },
    {
-    "bas": 25.05,
-    "son": 28.41,
+    "bas": 25.47,
+    "son": 29.25,
     "x": 600,
     "y": 330,
-    "metin": "Hareket ettirilemeyen travma hastası",
+    "metin": "Hareket ettirilemeyen travma",
     "tur": "uyari"
+   },
+   {
+    "bas": 26.23,
+    "son": 29.25,
+    "x": 400,
+    "y": 60,
+    "metin": "Göreceli endikasyon",
+    "tur": "bilgi"
    }
   ],
   "sayaclar": [],
@@ -738,16 +728,16 @@
    {
     "bas": 2.37,
     "son": 7.1,
-    "x": 690,
+    "x": 663.5,
     "y": 260,
-    "metin": "Küçük çocuk · yaşlı: temiz örnek veremiyor",
+    "metin": "Temiz örnek veremiyor",
     "tur": "bilgi"
    },
    {
     "bas": 3.95,
     "son": 7.1,
     "x": 560,
-    "y": 300,
+    "y": 344.0,
     "metin": "Steril kültür örneği",
     "tur": "dogru"
    },
@@ -755,7 +745,7 @@
     "bas": 8.76,
     "son": 11.81,
     "x": 600,
-    "y": 390,
+    "y": 356.0,
     "metin": "Kemoterapötik ilaç",
     "tur": "bilgi"
    },
@@ -764,11 +754,11 @@
     "son": 16.91,
     "x": 600,
     "y": 220,
-    "metin": "Travma · sistografi: opak madde",
+    "metin": "Sistografi: opak madde",
     "tur": "bilgi"
    },
    {
-    "bas": 18.29,
+    "bas": 17.99,
     "son": 23.85,
     "x": 150,
     "y": 305,
@@ -776,7 +766,7 @@
     "tur": "dogru"
    },
    {
-    "bas": 19.8,
+    "bas": 19.5,
     "son": 23.85,
     "x": 400,
     "y": 305,
@@ -784,9 +774,9 @@
     "tur": "dogru"
    },
    {
-    "bas": 21.31,
+    "bas": 21.01,
     "son": 23.85,
-    "x": 650,
+    "x": 625.0,
     "y": 305,
     "metin": "3 · Kültür, ilaç, sistografi",
     "tur": "bilgi"
@@ -799,7 +789,7 @@
  {
   "ad": "adim-tuzak-sistit",
   "baslik": "Acilin tuzağı: 'idrar yapamıyorum' diyen sistit",
-  "sure": 50.15,
+  "sure": 50.12,
   "bolumler": [
    {
     "baslik": "Acilde en sık yapılan",
@@ -820,28 +810,28 @@
     "metin": "Bu hastanın 'idrar yapamıyorum' sözü retansiyon değildir; önce gerçekten idrar yapamadığını sen değerlendirmelisin.",
     "bas": 16.41,
     "son": 22.41,
-    "ses_bas": 14.836
+    "ses_bas": 14.835
    },
    {
     "baslik": "Hastayı yatırıp suprapubik bölgede",
     "metin": "Hastayı yatırıp suprapubik bölgede şişlik ve dolgunluk ararsın; glob vezikalede alt karın altı aylık gebe karnı gibi kabarık olabilir.",
     "bas": 23.31,
-    "son": 30.64,
-    "ses_bas": 21.279
+    "son": 30.63,
+    "ses_bas": 21.278
    },
    {
     "baslik": "Acilde ultrason varsa probu",
     "metin": "Acilde ultrason varsa probu suprapubik koyarsın; mesane ağzına kadar doluysa kateter endikasyonu kesinleşir.",
-    "bas": 31.54,
+    "bas": 31.53,
     "son": 37.62,
-    "ses_bas": 29.056
+    "ses_bas": 29.055
    },
    {
     "baslik": "Gereksiz kateter enfeksiyon riski",
-    "metin": "Gereksiz kateter enfeksiyon riski taşır, çıkarıldıktan sonra günlerce süren ağrı bırakır ve endikasyonla, doğru teknikle takılsa bile tek bir kateter erkekte üretra darlığına yol açabilir.",
+    "metin": "Gereksiz kateter enfeksiyon riski taşır, çıkarıldıktan sonra birkaç gün süren ağrı bırakır ve endikasyonla, doğru teknikle takılsa bile tek bir kateter erkekte üretra darlığına yol açabilir.",
     "bas": 38.52,
-    "son": 48.85,
-    "ses_bas": 35.593
+    "son": 48.82,
+    "ses_bas": 35.592
    }
   ],
   "kamera": [
@@ -876,12 +866,6 @@
     112
    ],
    [
-    22.408,
-    400,
-    260,
-    112
-   ],
-   [
     23.308,
     400,
     260,
@@ -902,41 +886,41 @@
    [
     27.15,
     450,
-    192.30769230769232,
+    192.31,
     130
    ],
    [
-    28.193,
+    28.192,
     450,
-    192.30769230769232,
+    192.31,
     130
    ],
    [
-    29.593,
-    533.3333333333333,
+    29.592,
+    533.33,
     200,
     150
    ],
    [
-    31.535,
-    533.3333333333333,
+    31.534,
+    533.33,
     200,
     150
    ],
    [
-    32.935,
+    32.934,
     450,
-    208.33333333333334,
+    208.33,
     120
    ],
    [
-    38.522,
+    38.521,
     450,
-    208.33333333333334,
+    208.33,
     120
    ],
    [
-    38.822,
+    38.821,
     400.0,
     250.0,
     100
@@ -955,24 +939,8 @@
     "bas": 3.78,
     "son": 5.77,
     "x": 560,
-    "y": 460,
+    "y": 356.0,
     "metin": "Hemen sonda takma!",
-    "tur": "uyari"
-   },
-   {
-    "bas": 6.67,
-    "son": 15.52,
-    "x": 330,
-    "y": 330,
-    "metin": "Sistit: 15–20 mL",
-    "tur": "uyari"
-   },
-   {
-    "bas": 6.67,
-    "son": 15.52,
-    "x": 400,
-    "y": 470,
-    "metin": "\"İdrar yapamıyorum\" ≠ retansiyon",
     "tur": "uyari"
    },
    {
@@ -980,7 +948,15 @@
     "son": 15.52,
     "x": 560,
     "y": 200,
-    "metin": "Suprapubik ağrı · sık idrar · yanma",
+    "metin": "Ağrı · sık idrar · yanma",
+    "tur": "uyari"
+   },
+   {
+    "bas": 11.09,
+    "son": 15.52,
+    "x": 330,
+    "y": 330,
+    "metin": "Sistit: 15–20 mL",
     "tur": "uyari"
    },
    {
@@ -988,11 +964,11 @@
     "son": 22.41,
     "x": 600,
     "y": 300,
-    "metin": "Retansiyon değil · önce değerlendir",
+    "metin": "Önce sen değerlendir",
     "tur": "uyari"
    },
    {
-    "bas": 25.75,
+    "bas": 27.15,
     "son": 28.19,
     "x": 640,
     "y": 130,
@@ -1000,51 +976,51 @@
     "tur": "bilgi"
    },
    {
+    "bas": 27.15,
+    "son": 30.63,
+    "x": 600,
+    "y": 270.7,
+    "metin": "6 aylık gebe karnı gibi",
+    "tur": "bilgi"
+   },
+   {
     "bas": 28.19,
-    "son": 30.64,
+    "son": 30.63,
     "x": 680,
-    "y": 260,
+    "y": 226.2,
     "metin": "Palpasyon",
     "tur": "bilgi"
    },
    {
-    "bas": 31.54,
+    "bas": 31.53,
     "son": 37.62,
-    "x": 250,
+    "x": 387.0,
     "y": 215,
-    "metin": "Ultrasonda mesane ağzına kadar dolu",
+    "metin": "USG: mesane ağzına kadar dolu",
     "tur": "dogru"
    },
    {
-    "bas": 26.97,
-    "son": 30.64,
-    "x": 600,
-    "y": 440,
-    "metin": "Altı aylık gebe karnı gibi kabarık",
-    "tur": "bilgi"
-   },
-   {
-    "bas": 39.35,
-    "son": 48.85,
+    "bas": 38.83,
+    "son": 48.82,
     "x": 160,
     "y": 305,
     "metin": "Enfeksiyon riski",
     "tur": "uyari"
    },
    {
-    "bas": 41.93,
-    "son": 48.85,
+    "bas": 41.41,
+    "son": 48.82,
     "x": 400,
     "y": 305,
-    "metin": "Günlerce ağrı",
+    "metin": "Birkaç gün ağrı",
     "tur": "uyari"
    },
    {
-    "bas": 44.51,
-    "son": 48.85,
+    "bas": 43.98,
+    "son": 48.82,
     "x": 640,
     "y": 305,
-    "metin": "Tek kateter bile: erkekte darlık",
+    "metin": "Tek kateter bile darlık",
     "tur": "uyari"
    }
   ],
@@ -1118,12 +1094,6 @@
     140
    ],
    [
-    17.38,
-    300,
-    280,
-    140
-   ],
-   [
     18.28,
     300,
     280,
@@ -1132,31 +1102,19 @@
    [
     18.78,
     505,
-    352.94117647058823,
-    170
-   ],
-   [
-    26.571,
-    505,
-    352.94117647058823,
+    352.94,
     170
    ],
    [
     27.471,
     505,
-    352.94117647058823,
+    352.94,
     170
    ],
    [
     27.971,
     400,
-    238.0952380952381,
-    105
-   ],
-   [
-    36.689,
-    400,
-    238.0952380952381,
+    238.1,
     105
    ]
   ],
@@ -1166,14 +1124,14 @@
     "son": 7.44,
     "x": 400,
     "y": 350,
-    "metin": "Kesin kontrendikasyon: takarsan malpraktis",
+    "metin": "Takarsan malpraktis",
     "tur": "uyari"
    },
    {
     "bas": 10.15,
     "son": 13.31,
     "x": 150,
-    "y": 460,
+    "y": 355.7,
     "metin": "Rektal tuşe de yapılmaz",
     "tur": "uyari"
    },
@@ -1181,16 +1139,16 @@
     "bas": 11.96,
     "son": 17.38,
     "x": 200,
-    "y": 60,
-    "metin": "Akut prostatit / abse: bakteriyemi, sepsis",
+    "y": 130.0,
+    "metin": "Akut prostatit: sepsis riski",
     "tur": "uyari"
    },
    {
     "bas": 19.94,
     "son": 26.57,
     "x": 600,
-    "y": 470,
-    "metin": "Orşit · epididimit · Fournier · abse",
+    "y": 415.3,
+    "metin": "Orşit · epididimit · Fournier",
     "tur": "uyari"
    },
    {
@@ -1198,7 +1156,7 @@
     "son": 36.69,
     "x": 380,
     "y": 40,
-    "metin": "Hızlı boşaltma → mukozal kanama",
+    "metin": "Hızlı boşaltma: kanama",
     "tur": "bilgi"
    },
    {
@@ -1270,13 +1228,13 @@
    ],
    [
     2.2,
-    363.6363636363636,
+    363.64,
     250,
     110
    ],
    [
     6.606,
-    363.6363636363636,
+    363.64,
     250,
     110
    ],
@@ -1287,27 +1245,33 @@
     100
    ],
    [
-    13.11,
+    14.01,
     400.0,
     250.0,
     100
    ],
    [
-    14.01,
+    15.41,
     330,
     270,
     170
    ],
    [
-    15.41,
+    17.936,
+    330,
+    270,
+    170
+   ],
+   [
+    19.336,
     400,
-    352.94117647058823,
+    340,
     170
    ],
    [
     22.761,
     400,
-    352.94117647058823,
+    340,
     170
    ],
    [
@@ -1317,27 +1281,21 @@
     100
    ],
    [
-    29.972,
+    30.872,
     400.0,
     250.0,
     100
    ],
    [
-    30.872,
-    400,
-    352.94117647058823,
-    170
-   ],
-   [
     32.272,
     400,
-    321.42857142857144,
-    140
+    291.67,
+    120
    ]
   ],
   "etiketler": [
    {
-    "bas": 0.8,
+    "bas": 2.2,
     "son": 5.71,
     "x": 130,
     "y": 220,
@@ -1345,42 +1303,10 @@
     "tur": "uyari"
    },
    {
-    "bas": 6.61,
-    "son": 13.11,
-    "x": 250,
-    "y": 345,
-    "metin": "Pubis kırığı",
-    "tur": "uyari"
-   },
-   {
-    "bas": 6.61,
-    "son": 13.11,
-    "x": 400,
-    "y": 210,
-    "metin": "Simfiz ayrılması",
-    "tur": "uyari"
-   },
-   {
-    "bas": 14.01,
-    "son": 21.86,
-    "x": 520,
-    "y": 470,
-    "metin": "Meatusta taze kan",
-    "tur": "uyari"
-   },
-   {
-    "bas": 30.87,
-    "son": 38.84,
-    "x": 620,
-    "y": 420,
-    "metin": "Üretral kateter YOK",
-    "tur": "uyari"
-   },
-   {
     "bas": 7.26,
     "son": 13.11,
     "x": 160,
-    "y": 190,
+    "y": 290,
     "metin": "Yüksekten düşme",
     "tur": "uyari"
    },
@@ -1388,7 +1314,7 @@
     "bas": 8.23,
     "son": 13.11,
     "x": 400,
-    "y": 190,
+    "y": 290,
     "metin": "Trafik kazası",
     "tur": "uyari"
    },
@@ -1396,48 +1322,72 @@
     "bas": 9.21,
     "son": 13.11,
     "x": 640,
-    "y": 190,
+    "y": 290,
     "metin": "Ata biner gibi düşme",
     "tur": "uyari"
    },
    {
-    "bas": 22.76,
-    "son": 26.37,
-    "x": 130,
-    "y": 220,
-    "metin": "Darbe",
-    "tur": "uyari"
+    "bas": 10.51,
+    "son": 13.11,
+    "x": 400,
+    "y": 90,
+    "metin": "Pelvis kırığıyla birlikte",
+    "tur": "bilgi"
    },
    {
-    "bas": 26.37,
-    "son": 29.97,
+    "bas": 15.41,
+    "son": 17.94,
     "x": 250,
-    "y": 345,
+    "y": 332.4,
     "metin": "Pubis kırığı",
     "tur": "uyari"
    },
    {
-    "bas": 26.37,
-    "son": 29.97,
+    "bas": 15.41,
+    "son": 17.94,
     "x": 400,
     "y": 210,
     "metin": "Simfiz ayrılması",
     "tur": "uyari"
    },
    {
+    "bas": 19.34,
+    "son": 21.86,
+    "x": 520,
+    "y": 400,
+    "metin": "Meatusta taze kan",
+    "tur": "uyari"
+   },
+   {
+    "bas": 23.26,
+    "son": 29.97,
+    "x": 280,
+    "y": 330,
+    "metin": "Pubis kırığı",
+    "tur": "uyari"
+   },
+   {
     "bas": 26.37,
     "son": 29.97,
     "x": 600,
-    "y": 460,
-    "metin": "Pelvis kırığı var, meatusta kan yok → takılabilir",
+    "y": 356.0,
+    "metin": "Kırık var, kan yok: takılır",
     "tur": "dogru"
+   },
+   {
+    "bas": 30.87,
+    "son": 38.84,
+    "x": 620,
+    "y": 356.0,
+    "metin": "Üretral kateter YOK",
+    "tur": "uyari"
    },
    {
     "bas": 33.26,
     "son": 38.84,
     "x": 250,
-    "y": 440,
-    "metin": "Kısmi yırtık: zorlama yırtığı tamamlar",
+    "y": 380.0,
+    "metin": "Zorlama yırtığı tamamlar",
     "tur": "uyari"
    },
    {
@@ -1456,7 +1406,7 @@
  {
   "ad": "adim-malzeme",
   "baslik": "Malzemeler ve steril alan",
-  "sure": 35.92,
+  "sure": 35.7,
   "bolumler": [
    {
     "baslik": "Önce malzemeyi hazırlayıp kontrol",
@@ -1466,32 +1416,32 @@
     "ses_bas": 0.12
    },
    {
-    "baslik": "Tek kullanımlık kayganlaştırıcı jel",
-    "metin": "Tek kullanımlık kayganlaştırıcı jel gerekir; erkekte kullanılan jel lidokain içerdiği için anestezi de sağlar.",
+    "baslik": "Tek kullanımlık jel hem",
+    "metin": "Tek kullanımlık jel hem kayganlaştırır hem de içindeki lidokain sayesinde anestezi sağlar.",
     "bas": 7.43,
-    "son": 13.6,
-    "ses_bas": 6.299
+    "son": 12.48,
+    "ses_bas": 6.301
    },
    {
     "baslik": "Balonu şişirmek için steril",
-    "metin": "Balonu şişirmek için steril izotonik ve enjektör, idrar gelmezse yıkama için geniş uçlu kateter enjektörü hazırlanır.",
-    "bas": 14.5,
-    "son": 20.9,
-    "ses_bas": 12.922
+    "metin": "Balonu şişirmek için steril izotonik ve enjektör, idrar gelmezse kateterin yerini sınamak için geniş uçlu kateter enjektörü hazırlanır.",
+    "bas": 13.38,
+    "son": 20.68,
+    "ses_bas": 11.803
    },
    {
     "baslik": "Antiseptik solüsyon ve gazlı",
     "metin": "Antiseptik solüsyon ve gazlı bez, varsa steril delikli örtü ve idrar torbası da tepside olmalıdır.",
-    "bas": 21.8,
-    "son": 27.14,
-    "ses_bas": 19.769
+    "bas": 21.58,
+    "son": 26.93,
+    "ses_bas": 19.55
    },
    {
     "baslik": "Steril malzemeleri yardımcın paketi",
     "metin": "Steril malzemeleri yardımcın paketi açarak sana uzatır; steril eldivenle yalnız steril alana ve steril malzemeye dokunursun.",
-    "bas": 28.05,
-    "son": 34.62,
-    "ses_bas": 25.569
+    "bas": 27.83,
+    "son": 34.4,
+    "ses_bas": 25.351
    }
   ],
   "kamera": [
@@ -1510,53 +1460,53 @@
    [
     2.2,
     400,
-    195.3125,
+    195.31,
     128
    ],
    [
-    7.428,
+    7.43,
     400,
-    195.3125,
+    195.31,
     128
    ],
    [
-    8.828,
-    235.2941176470588,
+    8.83,
+    235.29,
     270,
     170
    ],
    [
-    14.5,
-    235.2941176470588,
+    13.381,
+    235.29,
     270,
     170
    ],
    [
-    15.9,
+    14.781,
     500,
     280,
     135
    ],
    [
-    21.796,
+    21.577,
     500,
     280,
     135
    ],
    [
-    23.196,
+    22.977,
     400,
-    304.6875,
+    304.69,
     128
    ],
    [
-    28.045,
+    27.827,
     400,
-    304.6875,
+    304.69,
     128
    ],
    [
-    29.445,
+    29.227,
     400.0,
     250.0,
     100
@@ -1564,23 +1514,23 @@
   ],
   "etiketler": [
    {
-    "bas": 1.37,
+    "bas": 2.2,
     "son": 6.53,
-    "x": 120,
+    "x": 189.8,
     "y": 160,
     "metin": "Lateks Foley · 16 Fr",
     "tur": "bilgi"
    },
    {
-    "bas": 1.95,
+    "bas": 2.2,
     "son": 6.53,
     "x": 320,
-    "y": 186,
+    "y": 220.4,
     "metin": "Silikon Foley",
     "tur": "bilgi"
    },
    {
-    "bas": 3.66,
+    "bas": 3.67,
     "son": 6.53,
     "x": 510,
     "y": 160,
@@ -1590,89 +1540,89 @@
    {
     "bas": 4.81,
     "son": 6.53,
-    "x": 690,
-    "y": 186,
+    "x": 635.9,
+    "y": 220.4,
     "metin": "Steril eldiven",
     "tur": "bilgi"
    },
    {
-    "bas": 8.35,
-    "son": 13.6,
+    "bas": 8.83,
+    "son": 12.48,
     "x": 150,
     "y": 310,
     "metin": "Jel (lidokainli)",
     "tur": "bilgi"
    },
    {
-    "bas": 15.14,
-    "son": 20.9,
+    "bas": 9.96,
+    "son": 12.48,
+    "x": 300,
+    "y": 330,
+    "metin": "Lidokain: kayganlık + anestezi",
+    "tur": "dogru"
+   },
+   {
+    "bas": 14.78,
+    "son": 20.68,
     "x": 320,
     "y": 336,
     "metin": "Steril izotonik",
     "tur": "bilgi"
    },
    {
-    "bas": 16.42,
-    "son": 20.9,
+    "bas": 15.57,
+    "son": 20.68,
     "x": 500,
     "y": 310,
     "metin": "10 mL enjektör · balon",
     "tur": "bilgi"
    },
    {
-    "bas": 18.66,
-    "son": 20.9,
-    "x": 680,
+    "bas": 18.12,
+    "son": 20.68,
+    "x": 678.9,
     "y": 336,
     "metin": "Geniş uçlu 50 mL enjektör",
     "tur": "bilgi"
    },
    {
-    "bas": 22.33,
-    "son": 27.14,
-    "x": 170,
-    "y": 470,
+    "bas": 22.98,
+    "son": 26.93,
+    "x": 198.4,
+    "y": 290,
     "metin": "Antiseptik · gazlı bez",
     "tur": "bilgi"
    },
    {
-    "bas": 24.2,
-    "son": 27.14,
+    "bas": 23.98,
+    "son": 26.93,
     "x": 400,
-    "y": 496,
+    "y": 290,
     "metin": "Steril delikli örtü",
     "tur": "bilgi"
    },
    {
-    "bas": 25.81,
-    "son": 27.14,
+    "bas": 25.59,
+    "son": 26.93,
     "x": 600,
-    "y": 470,
+    "y": 290,
     "metin": "İdrar torbası",
     "tur": "bilgi"
    },
    {
-    "bas": 10.51,
-    "son": 13.6,
-    "x": 300,
-    "y": 330,
-    "metin": "Lidokain: kayganlaştırır + anestezi",
-    "tur": "dogru"
-   },
-   {
-    "bas": 29.36,
-    "son": 34.62,
-    "x": 660,
-    "y": 330,
+    "bas": 29.23,
+    "son": 34.4,
+    "x": 663.5,
+    "y": 110,
     "metin": "Yardımcı açar, uzatır",
     "tur": "bilgi"
    },
    {
-    "bas": 31.99,
-    "son": 34.62,
-    "x": 520,
-    "y": 330,
-    "metin": "Steril el yalnız steril alana",
+    "bas": 31.77,
+    "son": 34.4,
+    "x": 380,
+    "y": 340,
+    "metin": "Steril el: yalnız steril alan",
     "tur": "dogru"
    }
   ],
@@ -1762,13 +1712,13 @@
    ],
    [
     10.349,
-    210.52631578947367,
+    210.53,
     250,
     190
    ],
    [
     14.376,
-    210.52631578947367,
+    210.53,
     250,
     190
    ],
@@ -1786,39 +1736,39 @@
    ],
    [
     24.308,
-    466.6666666666667,
+    466.67,
     250,
     120
    ],
    [
     29.635,
-    466.6666666666667,
+    466.67,
     250,
     120
    ],
    [
     31.035,
-    363.6363636363636,
-    227.27272727272728,
+    363.64,
+    227.27,
     110
    ],
    [
     36.271,
-    363.6363636363636,
-    227.27272727272728,
+    363.64,
+    227.27,
     110
    ],
    [
     37.671,
-    452.17391304347825,
-    282.6086956521739,
-    115
+    460,
+    330,
+    80
    ],
    [
     40.835,
-    400.0,
-    250.0,
-    100
+    460,
+    330,
+    80
    ],
    [
     42.235,
@@ -1845,7 +1795,7 @@
     "tur": "bilgi"
    },
    {
-    "bas": 8.95,
+    "bas": 10.35,
     "son": 13.48,
     "x": 90,
     "y": 190,
@@ -1856,7 +1806,7 @@
     "bas": 10.76,
     "son": 13.48,
     "x": 150,
-    "y": 310,
+    "y": 305.8,
     "metin": "Sabitleme balonu",
     "tur": "bilgi"
    },
@@ -1864,7 +1814,7 @@
     "bas": 16.67,
     "son": 22.01,
     "x": 670,
-    "y": 330,
+    "y": 286.2,
     "metin": "Kalın drenaj kanalı → torba",
     "tur": "dogru"
    },
@@ -1880,15 +1830,15 @@
     "bas": 26.99,
     "son": 28.74,
     "x": 400,
-    "y": 420,
-    "metin": "Torba her zaman drenaj kanalına",
+    "y": 338.3,
+    "metin": "Torba drenaj kanalına",
     "tur": "dogru"
    },
    {
     "bas": 33.94,
     "son": 35.37,
     "x": 330,
-    "y": 380,
+    "y": 323.6,
     "metin": "Basit çekiştirmeyle çıkmaz",
     "tur": "bilgi"
    },
@@ -1896,15 +1846,15 @@
     "bas": 38.1,
     "son": 39.94,
     "x": 520,
-    "y": 470,
+    "y": 462.5,
     "metin": "Musluktan boşaltılır",
     "tur": "bilgi"
    },
    {
     "bas": 42.59,
     "son": 49.61,
-    "x": 720,
-    "y": 170,
+    "x": 400,
+    "y": 44,
     "metin": "Erişkin 12–24 Fr · boy aynı",
     "tur": "bilgi"
    },
@@ -1912,8 +1862,8 @@
     "bas": 46.1,
     "son": 49.61,
     "x": 600,
-    "y": 370,
-    "metin": "Çocuk 6–8–10 Fr · daha kısa",
+    "y": 312,
+    "metin": "Çocuk 6–8–10 Fr · kısa",
     "tur": "bilgi"
    }
   ],
@@ -1924,7 +1874,7 @@
  {
   "ad": "adim-iletisim",
   "baslik": "Hasta ile iletişim, onam ve mahremiyet",
-  "sure": 40.93,
+  "sure": 41.18,
   "bolumler": [
    {
     "baslik": "Bilinci açık hastada önce",
@@ -1938,28 +1888,28 @@
     "metin": "Hastayı 'yatın, sonda takacağım' diye geçiştirmezsin; güzelce anlatır ve sözlü onamını alırsın.",
     "bas": 8.31,
     "son": 13.46,
-    "ses_bas": 7.18
+    "ses_bas": 7.176
    },
    {
     "baslik": "Kateter damar yolu açar",
     "metin": "Kateter damar yolu açar gibi ortalık yerde takılmaz; acilde paravan arkasında, serviste perde çekilerek ya da uygun bir odada, mahremiyet korunarak takılır.",
     "bas": 14.36,
-    "son": 23.07,
-    "ses_bas": 12.781
+    "son": 23.06,
+    "ses_bas": 12.776
    },
    {
     "baslik": "Yanında seni asiste edecek",
-    "metin": "Yanında seni asiste edecek bir sağlık personeli mutlaka bulunur; karşı cinsten hastaya ya da çocuğa takarken yanında karşı cinsten bir personel, çocukta ebeveyn olmalıdır.",
-    "bas": 23.97,
-    "son": 33.39,
-    "ses_bas": 21.941
+    "metin": "Yanında seni asiste edecek bir sağlık personeli mutlaka bulunur; çocukta ebeveynlerden biri, erkek hekim kadın ya da çocuk hastaya takarken yanında kadın bir personel olmalıdır.",
+    "bas": 23.96,
+    "son": 33.63,
+    "ses_bas": 21.931
    },
    {
     "baslik": "Bu hem hastanın kendini",
     "metin": "Bu hem hastanın kendini rahat hissetmesi hem de seni olası medikolegal sorunlardan korumak içindir.",
-    "bas": 34.29,
-    "son": 39.63,
-    "ses_bas": 31.81
+    "bas": 34.53,
+    "son": 39.88,
+    "ses_bas": 32.052
    }
   ],
   "kamera": [
@@ -1977,66 +1927,54 @@
    ],
    [
     2.2,
-    266.6666666666667,
-    166.66666666666666,
+    266.67,
+    166.67,
     150
    ],
    [
-    8.309,
-    266.6666666666667,
-    166.66666666666666,
+    8.306,
+    266.67,
+    166.67,
     150
    ],
    [
-    8.809,
+    8.806,
     400.0,
     250.0,
     100
    ],
    [
-    13.46,
+    14.355,
     400.0,
     250.0,
     100
    ],
    [
-    14.36,
-    266.6666666666667,
-    166.66666666666666,
-    150
-   ],
-   [
-    15.76,
-    492.3076923076923,
+    15.755,
+    492.31,
     250,
     130
    ],
    [
-    23.969,
-    492.3076923076923,
+    23.96,
+    492.31,
     250,
     130
    ],
    [
-    24.469,
+    24.46,
     400.0,
     250.0,
     100
    ],
    [
-    33.387,
+    34.531,
     400.0,
     250.0,
     100
    ],
    [
-    34.287,
-    400.0,
-    250.0,
-    100
-   ],
-   [
-    34.587,
+    34.831,
     400.0,
     250.0,
     100
@@ -2044,7 +1982,7 @@
   ],
   "etiketler": [
    {
-    "bas": 0.8,
+    "bas": 2.2,
     "son": 7.41,
     "x": 235,
     "y": 85,
@@ -2052,23 +1990,7 @@
     "tur": "bilgi"
    },
    {
-    "bas": 14.36,
-    "son": 23.07,
-    "x": 700,
-    "y": 30,
-    "metin": "Paravan",
-    "tur": "bilgi"
-   },
-   {
-    "bas": 23.97,
-    "son": 33.39,
-    "x": 660,
-    "y": 488,
-    "metin": "Yardımcı personel",
-    "tur": "dogru"
-   },
-   {
-    "bas": 8.57,
+    "bas": 8.81,
     "son": 10.88,
     "x": 520,
     "y": 130,
@@ -2080,28 +2002,52 @@
     "son": 13.46,
     "x": 520,
     "y": 300,
-    "metin": "Neden gerektiğini anlatır, onam alır",
+    "metin": "Neden gerektiğini anlat · onam",
     "tur": "dogru"
    },
    {
-    "bas": 28.68,
-    "son": 33.39,
-    "x": 150,
-    "y": 200,
-    "metin": "Çocukta ebeveyn · karşı cinste karşı cins personel",
+    "bas": 15.76,
+    "son": 23.06,
+    "x": 700,
+    "y": 88.5,
+    "metin": "Paravan",
     "tur": "bilgi"
    },
    {
-    "bas": 34.71,
-    "son": 39.63,
+    "bas": 24.46,
+    "son": 33.63,
+    "x": 590,
+    "y": 140,
+    "metin": "Yardımcı personel",
+    "tur": "dogru"
+   },
+   {
+    "bas": 28.8,
+    "son": 33.63,
+    "x": 150,
+    "y": 200,
+    "metin": "Çocukta ebeveyn",
+    "tur": "bilgi"
+   },
+   {
+    "bas": 29.76,
+    "son": 33.63,
+    "x": 400,
+    "y": 60,
+    "metin": "Erkek hekim: kadın personel",
+    "tur": "bilgi"
+   },
+   {
+    "bas": 34.69,
+    "son": 39.88,
     "x": 260,
     "y": 315,
     "metin": "Hasta rahat",
     "tur": "dogru"
    },
    {
-    "bas": 36.72,
-    "son": 39.63,
+    "bas": 36.7,
+    "son": 39.88,
     "x": 540,
     "y": 315,
     "metin": "Medikolegal koruma",
@@ -2165,15 +2111,7 @@
     "son": 5.89,
     "x": 400,
     "y": 200,
-    "metin": "Supin: sırtüstü · iç çamaşırı indirilir",
-    "tur": "bilgi"
-   },
-   {
-    "bas": 11.93,
-    "son": 15.93,
-    "x": 640,
-    "y": 30,
-    "metin": "Yandan: diz bükük, topuk yatakta",
+    "metin": "Supin · iç çamaşırı indirilir",
     "tur": "bilgi"
    },
    {
@@ -2185,9 +2123,17 @@
     "tur": "bilgi"
    },
    {
+    "bas": 11.93,
+    "son": 15.93,
+    "x": 640,
+    "y": 40.0,
+    "metin": "Yandan: diz bükük",
+    "tur": "bilgi"
+   },
+   {
     "bas": 14.37,
     "son": 15.93,
-    "x": 680,
+    "x": 636.0,
     "y": 300,
     "metin": "Bacaklar V şeklinde açılır",
     "tur": "dogru"
@@ -2200,7 +2146,7 @@
  {
   "ad": "adim-kadin-anatomi",
   "baslik": "Kadında meatusu bulmak",
-  "sure": 29.25,
+  "sure": 32.25,
   "bolumler": [
    {
     "baslik": "Dışta labium majuslar, onların",
@@ -2214,28 +2160,28 @@
     "metin": "Klitorisin yaklaşık bir santimetre altında, labium minusların arasında kalan üstteki açıklık eksternal üretra ağzıdır.",
     "bas": 5.15,
     "son": 11.54,
-    "ses_bas": 4.019
+    "ses_bas": 4.017
    },
    {
     "baslik": "Alttaki daha geniş açıklık",
     "metin": "Alttaki daha geniş açıklık vajinadır.",
     "bas": 12.44,
-    "son": 14.61,
-    "ses_bas": 10.863
+    "son": 14.6,
+    "ses_bas": 10.857
    },
    {
-    "baslik": "Doğum yapmış kadında bu",
-    "metin": "Doğum yapmış kadında bu ayrım kolaydır; asıl kız bebekte, çocukta ve cinsel olarak aktif olmayan kadında bu anatomiyi kesin bilmelisin.",
-    "bas": 15.51,
-    "son": 22.92,
-    "ses_bas": 13.479
+    "baslik": "Doğum yapmış kadında kateteri",
+    "metin": "Doğum yapmış kadında kateteri yanlışlıkla vajinaya sokmak hatadır ama ciddi bir sorun yaratmaz; kız bebekte, çocukta ve cinsel olarak aktif olmayan kadında ise bu anatomiyi kesin bilmelisin.",
+    "bas": 15.5,
+    "son": 25.92,
+    "ses_bas": 13.472
    },
    {
     "baslik": "Gerçek dokuda labialar maketteki",
     "metin": "Gerçek dokuda labialar maketteki kadar sert değildir, daha yumuşak açılır.",
-    "bas": 23.82,
-    "son": 27.95,
-    "ses_bas": 21.339
+    "bas": 26.82,
+    "son": 30.95,
+    "ses_bas": 24.342
    }
   ],
   "kamera": [
@@ -2258,37 +2204,37 @@
     100
    ],
    [
-    5.148,
+    5.146,
     400.0,
     250.0,
     100
    ],
    [
-    6.548,
+    6.546,
     400,
     200,
     170
    ],
    [
-    12.441,
+    12.435,
     400,
     200,
     170
    ],
    [
-    13.841,
+    13.835,
     400,
     280,
     150
    ],
    [
-    15.506,
+    15.499,
     400,
     280,
     150
    ],
    [
-    16.906,
+    16.899,
     400.0,
     250.0,
     100
@@ -2312,7 +2258,7 @@
     "tur": "bilgi"
    },
    {
-    "bas": 5.15,
+    "bas": 6.55,
     "son": 11.54,
     "x": 520,
     "y": 118,
@@ -2320,50 +2266,50 @@
     "tur": "bilgi"
    },
    {
-    "bas": 7.71,
+    "bas": 7.7,
     "son": 11.54,
-    "x": 560,
+    "x": 551.8,
     "y": 205,
     "metin": "Meatus (≈1 cm altında)",
     "tur": "dogru"
    },
    {
-    "bas": 12.44,
-    "son": 14.61,
+    "bas": 13.84,
+    "son": 14.6,
     "x": 560,
     "y": 310,
     "metin": "Vajina",
     "tur": "bilgi"
    },
    {
-    "bas": 16.25,
-    "son": 22.92,
+    "bas": 16.9,
+    "son": 25.92,
     "x": 100,
     "y": 190,
     "metin": "Kız çocuk ⚠",
     "tur": "uyari"
    },
    {
-    "bas": 16.25,
-    "son": 22.92,
+    "bas": 16.9,
+    "son": 25.92,
     "x": 210,
-    "y": 190,
-    "metin": "Doğum yapmış ✓",
+    "y": 234.0,
+    "metin": "Doğum yapmış: risk az",
     "tur": "dogru"
    },
    {
-    "bas": 17.73,
-    "son": 22.92,
+    "bas": 18.62,
+    "son": 25.92,
     "x": 400,
-    "y": 470,
-    "metin": "Kız bebek, çocuk, cinsel aktif olmayan: anatomiyi kesin bil",
+    "y": 356.0,
+    "metin": "Anatomiyi kesin bil",
     "tur": "uyari"
    },
    {
-    "bas": 25.05,
-    "son": 27.95,
+    "bas": 28.06,
+    "son": 30.95,
     "x": 400,
-    "y": 470,
+    "y": 356.0,
     "metin": "Gerçek dokuda yumuşak açılır",
     "tur": "bilgi"
    }
@@ -2428,14 +2374,14 @@
    ],
    [
     2.2,
-    492.3076923076923,
-    307.6923076923077,
+    492.31,
+    307.69,
     130
    ],
    [
     6.258,
-    492.3076923076923,
-    307.6923076923077,
+    492.31,
+    307.69,
     130
    ],
    [
@@ -2495,7 +2441,47 @@
   ],
   "etiketler": [
    {
-    "bas": 18.54,
+    "bas": 2.2,
+    "son": 5.36,
+    "x": 660,
+    "y": 389.2,
+    "metin": "Antiseptikli gazlı bez",
+    "tur": "bilgi"
+   },
+   {
+    "bas": 7.66,
+    "son": 9.93,
+    "x": 561.0,
+    "y": 110.0,
+    "metin": "1. silme · merkezden dışa",
+    "tur": "bilgi"
+   },
+   {
+    "bas": 9.93,
+    "son": 13.6,
+    "x": 561.0,
+    "y": 110.0,
+    "metin": "2. silme · merkezden dışa",
+    "tur": "bilgi"
+   },
+   {
+    "bas": 15.9,
+    "son": 17.64,
+    "x": 601.2,
+    "y": 80,
+    "metin": "3. silme · merkezden dışa",
+    "tur": "bilgi"
+   },
+   {
+    "bas": 15.9,
+    "son": 17.64,
+    "x": 175.8,
+    "y": 80,
+    "metin": "Dıştan içe silme yok",
+    "tur": "uyari"
+   },
+   {
+    "bas": 19.94,
     "son": 24.07,
     "x": 680,
     "y": 100,
@@ -2503,50 +2489,10 @@
     "tur": "dogru"
    },
    {
-    "bas": 0.8,
-    "son": 5.36,
-    "x": 660,
-    "y": 440,
-    "metin": "Antiseptiğe batırılan gazlı bez · steril olmayan eldiven",
-    "tur": "bilgi"
-   },
-   {
-    "bas": 6.26,
-    "son": 9.93,
-    "x": 640,
-    "y": 80,
-    "metin": "1. silme · merkezden dışa",
-    "tur": "bilgi"
-   },
-   {
-    "bas": 9.93,
-    "son": 13.6,
-    "x": 640,
-    "y": 80,
-    "metin": "2. silme · merkezden dışa",
-    "tur": "bilgi"
-   },
-   {
-    "bas": 14.5,
-    "son": 17.64,
-    "x": 640,
-    "y": 80,
-    "metin": "3. silme · merkezden dışa",
-    "tur": "bilgi"
-   },
-   {
-    "bas": 14.5,
-    "son": 17.64,
-    "x": 160,
-    "y": 80,
-    "metin": "Dıştan içe silme yok",
-    "tur": "uyari"
-   },
-   {
-    "bas": 18.54,
+    "bas": 19.94,
     "son": 24.07,
     "x": 400,
-    "y": 470,
+    "y": 356.0,
     "metin": "Delikli örtü · steril alan",
     "tur": "dogru"
    },
@@ -2555,15 +2501,15 @@
     "son": 31.33,
     "x": 560,
     "y": 120,
-    "metin": "Yardımcı paketi açar, steril uzatır",
+    "metin": "Yardımcı açar, steril uzatır",
     "tur": "bilgi"
    },
    {
     "bas": 28.79,
     "son": 31.33,
     "x": 300,
-    "y": 430,
-    "metin": "Steril el yalnız steril malzemeye",
+    "y": 356.0,
+    "metin": "Steril el: yalnız steril",
     "tur": "dogru"
    }
   ],
@@ -2574,7 +2520,7 @@
  {
   "ad": "adim-kadin-yerlestirme",
   "baslik": "Kadında kateteri ilerletmek",
-  "sure": 30.52,
+  "sure": 33.16,
   "bolumler": [
    {
     "baslik": "Kadında kateterin ucuna yaklaşık",
@@ -2588,28 +2534,28 @@
     "metin": "Kateteri avucunun içinde halka gibi toplayarak tutarsın; sallanan uç hastanın uyluğuna ya da sana değerse steriliteyi bozar.",
     "bas": 5.49,
     "son": 12.26,
-    "ses_bas": 4.36
+    "ses_bas": 4.359
    },
    {
     "baslik": "Bir elinle labiaları ayırır",
     "metin": "Bir elinle labiaları ayırır, diğeriyle kateteri meatustan içeri itersin.",
     "bas": 13.16,
     "son": 17.07,
-    "ses_bas": 11.586
+    "ses_bas": 11.584
    },
    {
-    "baslik": "Kadın üretrası kısadır; birkaç",
-    "metin": "Kadın üretrası kısadır; birkaç santimetre içinde idrar gelir.",
+    "baslik": "Kadın üretrası kısadır; kateterin",
+    "metin": "Kadın üretrası kısadır; kateterin üç dört santimetresinin içeri girmesi yeterlidir, büyük kısmı dışarıda kalır.",
     "bas": 17.97,
-    "son": 21.5,
-    "ses_bas": 15.947
+    "son": 24.14,
+    "ses_bas": 15.944
    },
    {
     "baslik": "İdrar geldikten sonra balonun",
     "metin": "İdrar geldikten sonra balonun tamamen mesaneye girmesi için kateteri birkaç santimetre daha ilerletir, sonra balonu şişirirsin.",
-    "bas": 22.4,
-    "son": 29.22,
-    "ses_bas": 19.926
+    "bas": 25.04,
+    "son": 31.86,
+    "ses_bas": 22.567
    }
   ],
   "kamera": [
@@ -2627,90 +2573,102 @@
    ],
    [
     1.3,
-    533.3333333333333,
+    533.33,
     300,
     150
    ],
    [
-    4.589,
-    533.3333333333333,
+    5.488,
+    533.33,
     300,
     150
    ],
    [
-    5.489,
-    533.3333333333333,
-    300,
-    150
-   ],
-   [
-    5.789,
+    5.788,
     400.0,
     250.0,
     100
    ],
    [
-    13.164,
+    13.162,
     400.0,
     250.0,
     100
    ],
    [
-    13.464,
+    13.462,
     400.0,
     250.0,
     100
    ],
    [
-    17.974,
+    17.971,
     400.0,
     250.0,
     100
    ],
    [
-    18.856,
-    400.0,
-    250.0,
-    100
+    19.371,
+    333.33,
+    260,
+    120
    ],
    [
-    19.738,
-    400.0,
-    250.0,
-    100
+    19.514,
+    333.33,
+    260,
+    120
    ],
    [
-    20.62,
-    400.0,
-    250.0,
-    100
+    20.914,
+    392,
+    374,
+    260
    ],
    [
-    22.02,
+    21.057,
+    392,
+    374,
+    260
+   ],
+   [
+    22.457,
+    400,
+    340,
+    170
+   ],
+   [
+    22.6,
+    400,
+    340,
+    170
+   ],
+   [
+    24.0,
     340,
     280,
     160
    ],
    [
-    22.402,
+    25.043,
     340,
     280,
     160
    ],
    [
-    23.802,
+    26.443,
     320,
     240,
     200
    ],
    [
-    25.809,
+    28.45,
     320,
     240,
     200
    ],
    [
-    27.209,
+    29.85,
     330,
     230,
     190
@@ -2718,7 +2676,7 @@
   ],
   "etiketler": [
    {
-    "bas": 0.8,
+    "bas": 1.3,
     "son": 4.59,
     "x": 560,
     "y": 260,
@@ -2729,20 +2687,20 @@
     "bas": 8.88,
     "son": 12.26,
     "x": 400,
-    "y": 460,
-    "metin": "Avuçta halka: uç hiçbir yere değmez",
+    "y": 356.0,
+    "metin": "Avuçta halka: uç değmez",
     "tur": "dogru"
    },
    {
     "bas": 10.37,
     "son": 12.26,
-    "x": 640,
+    "x": 619.5,
     "y": 310,
-    "metin": "Sallanan uç uyluğa değdi → steril değil",
+    "metin": "Uç uyluğa değdi: steril değil",
     "tur": "uyari"
    },
    {
-    "bas": 14.34,
+    "bas": 14.33,
     "son": 17.07,
     "x": 600,
     "y": 160,
@@ -2751,7 +2709,7 @@
    },
    {
     "bas": 17.97,
-    "son": 18.86,
+    "son": 19.51,
     "x": 330,
     "y": 140,
     "metin": "Mesane",
@@ -2759,7 +2717,7 @@
    },
    {
     "bas": 17.97,
-    "son": 18.86,
+    "son": 19.51,
     "x": 210,
     "y": 300,
     "metin": "Vajina",
@@ -2767,7 +2725,7 @@
    },
    {
     "bas": 17.97,
-    "son": 18.86,
+    "son": 19.51,
     "x": 440,
     "y": 330,
     "metin": "Simfiz",
@@ -2775,39 +2733,47 @@
    },
    {
     "bas": 17.97,
-    "son": 18.86,
+    "son": 19.51,
     "x": 410,
-    "y": 300,
+    "y": 256.0,
     "metin": "Kısa üretra",
     "tur": "bilgi"
    },
    {
-    "bas": 18.86,
-    "son": 19.74,
+    "bas": 19.51,
+    "son": 21.06,
     "x": 470,
-    "y": 380,
+    "y": 348.3,
     "metin": "Meatus",
     "tur": "dogru"
    },
    {
-    "bas": 20.62,
-    "son": 21.5,
+    "bas": 22.46,
+    "son": 24.14,
+    "x": 501.2,
+    "y": 216.5,
+    "metin": "3–4 cm içeride yeterli",
+    "tur": "dogru"
+   },
+   {
+    "bas": 22.6,
+    "son": 24.14,
     "x": 470,
-    "y": 420,
+    "y": 346.2,
     "metin": "İdrar geldi",
     "tur": "bilgi"
    },
    {
-    "bas": 22.4,
-    "son": 25.81,
+    "bas": 25.04,
+    "son": 28.45,
     "x": 250,
     "y": 195,
     "metin": "Birkaç santim daha",
     "tur": "uyari"
    },
    {
-    "bas": 25.81,
-    "son": 29.22,
+    "bas": 29.85,
+    "son": 31.86,
     "x": 400,
     "y": 190,
     "metin": "Balon boyunda ✓",
@@ -2821,7 +2787,7 @@
  {
   "ad": "adim-erkek-temizlik",
   "baslik": "Erkekte temizlik ve lidokainli jel",
-  "sure": 32.73,
+  "sure": 35.41,
   "bolumler": [
    {
     "baslik": "Sünnetsiz hastada önce prepisyumu",
@@ -2832,31 +2798,31 @@
    },
    {
     "baslik": "Temizliğe eksternal meatustan başlar",
-    "metin": "Temizliğe eksternal meatustan başlar, glans boyunca dışa doğru silersin ve bunu üç kez tekrarlarsın.",
+    "metin": "Temizliğe eksternal meatustan başlar, glans boyunca dışa doğru silersin ve bunu üç kez tekrarlarsın; ardından eldiveni çıkarıp steril eldiven giyersin.",
     "bas": 4.38,
-    "son": 10.07,
-    "ses_bas": 3.254
+    "son": 12.76,
+    "ses_bas": 3.253
    },
    {
     "baslik": "Kadında ucuna sürmek yeterliydi",
     "metin": "Kadında ucuna sürmek yeterliydi; erkek üretrası uzun ve kateter takmak daha ağrılı olduğu için jelin tamamını kullanırsın.",
-    "bas": 10.97,
-    "son": 17.74,
-    "ses_bas": 9.388
+    "bas": 13.66,
+    "son": 20.43,
+    "ses_bas": 12.08
    },
    {
     "baslik": "Jelin ucunu meatusa yerleştirir",
     "metin": "Jelin ucunu meatusa yerleştirir, çok sert basmadan tüpün tamamını üretraya verirsin.",
-    "bas": 18.64,
-    "son": 23.2,
-    "ses_bas": 16.61
+    "bas": 21.33,
+    "son": 25.89,
+    "ses_bas": 19.3
    },
    {
     "baslik": "Penisin ucunu sıkıca tutarak",
     "metin": "Penisin ucunu sıkıca tutarak ya da klempleyerek iki üç dakika beklersin; jeldeki lidokain etkisini gösterir ve anestezi sağlanır.",
-    "bas": 24.1,
-    "son": 31.43,
-    "ses_bas": 21.624
+    "bas": 26.79,
+    "son": 34.11,
+    "ses_bas": 24.314
    }
   ],
   "kamera": [
@@ -2874,66 +2840,66 @@
    ],
    [
     2.2,
-    266.6666666666667,
+    266.67,
     250,
     150
    ],
    [
-    4.383,
-    266.6666666666667,
+    4.382,
+    266.67,
     250,
     150
    ],
    [
-    5.783,
+    5.782,
     480,
     250,
     140
    ],
    [
-    10.966,
+    13.658,
     480,
     250,
     140
    ],
    [
-    11.266,
+    13.958,
     400.0,
     250.0,
     100
    ],
    [
-    18.637,
-    480,
-    250,
-    140
+    21.328,
+    400.0,
+    250.0,
+    100
    ],
    [
-    20.037,
+    22.728,
     600.0,
     250,
     200
    ],
    [
-    20.919,
+    23.61,
     600.0,
     250,
     200
    ],
    [
-    22.319,
-    333.3333333333333,
+    25.01,
+    333.33,
     250,
     120
    ],
    [
-    24.101,
-    333.3333333333333,
+    26.791,
+    333.33,
     250,
     120
    ],
    [
-    25.501,
+    28.191,
     400,
     250,
     110
@@ -2941,73 +2907,102 @@
   ],
   "etiketler": [
    {
-    "bas": 0.8,
+    "bas": 2.2,
     "son": 3.48,
     "x": 160,
-    "y": 100,
+    "y": 110.0,
     "metin": "Prepisyum geri",
     "tur": "bilgi"
    },
    {
     "bas": 4.38,
-    "son": 10.07,
-    "x": 640,
-    "y": 420,
+    "son": 12.76,
+    "x": 438.7,
+    "y": 320.7,
     "metin": "Meatustan dışa · 3 kez",
     "tur": "bilgi"
    },
    {
-    "bas": 20.92,
-    "son": 23.2,
-    "x": 200,
-    "y": 300,
-    "metin": "Jelin tamamı üretraya",
-    "tur": "bilgi"
-   },
-   {
-    "bas": 24.1,
-    "son": 31.43,
-    "x": 400,
-    "y": 470,
-    "metin": "Ucu tut · 2–3 dk bekle",
+    "bas": 11.08,
+    "son": 12.76,
+    "x": 600,
+    "y": 210,
+    "metin": "Steril eldiven giy",
     "tur": "dogru"
    },
    {
-    "bas": 10.97,
-    "son": 17.74,
+    "bas": 13.96,
+    "son": 20.43,
     "x": 220,
     "y": 110,
     "metin": "Kadın: kısa üretra · uca jel",
     "tur": "bilgi"
    },
    {
-    "bas": 13.67,
-    "son": 17.74,
+    "bas": 16.37,
+    "son": 20.43,
     "x": 420,
-    "y": 400,
-    "metin": "Erkek: uzun üretra, daha ağrılı · jelin tamamı",
+    "y": 356.0,
+    "metin": "Erkek: uzun üretra · tüm jel",
     "tur": "dogru"
-   }
-  ],
-  "sayaclar": [
+   },
    {
-    "bas": 26.3,
-    "son": 31.43,
-    "v1": 0,
-    "v2": 3,
-    "birim": "dk",
-    "x": 680,
+    "bas": 25.01,
+    "son": 25.89,
+    "x": 200,
+    "y": 300,
+    "metin": "Jelin tamamı üretraya",
+    "tur": "bilgi"
+   },
+   {
+    "bas": 26.79,
+    "son": 34.11,
+    "x": 400,
+    "y": 338.3,
+    "metin": "Ucu tut · 2–3 dk bekle",
+    "tur": "dogru"
+   },
+   {
+    "bas": 28.99,
+    "son": 30.7,
+    "x": 676.4,
     "y": 120,
-    "ondalik": 1
+    "metin": "0,0 dk",
+    "tur": "sayac"
+   },
+   {
+    "bas": 30.7,
+    "son": 32.4,
+    "x": 676.4,
+    "y": 120,
+    "metin": "1,0 dk",
+    "tur": "sayac"
+   },
+   {
+    "bas": 32.4,
+    "son": 34.11,
+    "x": 676.4,
+    "y": 120,
+    "metin": "2,0 dk",
+    "tur": "sayac"
+   },
+   {
+    "bas": 34.11,
+    "son": 34.41,
+    "x": 676.4,
+    "y": 120,
+    "metin": "3,0 dk",
+    "tur": "sayac"
    }
   ],
+  "sayaclar": [],
   "adim": "erkek-temizlik",
   "sesli": true
  },
  {
   "ad": "adim-erkek-yerlestirme",
   "baslik": "Erkekte kateteri sonuna kadar ilerletmek",
-  "sure": 31.31,
+  "sure": 31.5,
   "bolumler": [
    {
     "baslik": "Erkekte silikon kateteri avucuna",
@@ -3020,29 +3015,29 @@
     "baslik": "Penisi dik ve gergin",
     "metin": "Penisi dik ve gergin tutarak kateteri meatustan içeri itersin.",
     "bas": 7.51,
-    "son": 10.9,
-    "ses_bas": 6.377
+    "son": 10.91,
+    "ses_bas": 6.379
    },
    {
     "baslik": "Kateter prostatik üretradan geçip",
     "metin": "Kateter prostatik üretradan geçip mesaneye ulaşır; maketlerde takılabilir, gerçek hastada genellikle daha kolay ilerler.",
     "bas": 11.8,
     "son": 18.62,
-    "ses_bas": 10.224
+    "ses_bas": 10.227
    },
    {
-    "baslik": "Erkekte en önemli kural",
-    "metin": "Erkekte en önemli kural: idrar erken gelse bile kateteri çatal kısmına kadar, sonuna kadar ilerletirsin.",
+    "baslik": "Erkekte en önemli nokta",
+    "metin": "Erkekte en önemli nokta, idrar erken gelse bile kateteri çatal kısmına kadar, sonuna kadar ilerletmektir.",
     "bas": 19.52,
-    "son": 25.45,
-    "ses_bas": 17.489
+    "son": 25.64,
+    "ses_bas": 17.494
    },
    {
     "baslik": "Böylece balon kesinlikle mesanede",
     "metin": "Böylece balon kesinlikle mesanede, mesane boynunun ötesinde olur.",
-    "bas": 26.35,
-    "son": 30.01,
-    "ses_bas": 23.871
+    "bas": 26.54,
+    "son": 30.2,
+    "ses_bas": 24.061
    }
   ],
   "kamera": [
@@ -3065,79 +3060,85 @@
     100
    ],
    [
-    8.638,
+    7.508,
     400.0,
     250.0,
     100
    ],
    [
-    9.77,
-    400.0,
-    250.0,
-    100
+    8.908,
+    492.31,
+    300,
+    130
    ],
    [
-    11.17,
-    589.4736842105264,
+    9.207,
+    492.31,
+    300,
+    130
+   ],
+   [
+    10.607,
+    589.47,
     300,
     190
    ],
    [
-    11.802,
-    589.4736842105264,
+    11.805,
+    589.47,
     300,
     190
    ],
    [
-    13.202,
+    13.205,
     380,
     335,
     230
    ],
    [
-    14.073,
+    14.077,
     380,
     335,
     230
    ],
    [
-    15.473,
+    15.477,
     300,
     300,
     250
    ],
    [
-    16.345,
+    16.349,
     300,
     300,
     250
    ],
    [
-    17.745,
+    17.749,
     300,
     250,
     210
    ],
    [
-    19.516,
+    19.521,
     300,
     250,
     210
    ],
    [
-    20.916,
-    419.04761904761904,
+    20.921,
+    419.05,
     250,
     105
    ],
    [
-    26.347,
-    419.04761904761904,
+    26.537,
+    419.05,
     250,
     105
    ],
    [
-    27.747,
+    27.937,
     300,
     160,
     210
@@ -3148,69 +3149,21 @@
     "bas": 3.12,
     "son": 6.61,
     "x": 400,
-    "y": 460,
+    "y": 356.0,
     "metin": "Avuca dola",
     "tur": "dogru"
    },
    {
-    "bas": 4.86,
+    "bas": 4.87,
     "son": 6.61,
     "x": 640,
     "y": 280,
-    "metin": "Uçtan gevşek tutarsan ilerletemezsin",
+    "metin": "Uçtan gevşek: ilerlemez",
     "tur": "uyari"
    },
    {
     "bas": 7.51,
-    "son": 8.64,
-    "x": 230,
-    "y": 60,
-    "metin": "Mesane",
-    "tur": "etiket"
-   },
-   {
-    "bas": 7.51,
-    "son": 8.64,
-    "x": 210,
-    "y": 262,
-    "metin": "Prostat",
-    "tur": "etiket"
-   },
-   {
-    "bas": 7.51,
-    "son": 8.64,
-    "x": 215,
-    "y": 315,
-    "metin": "Eksternal sfinkter",
-    "tur": "etiket"
-   },
-   {
-    "bas": 7.51,
-    "son": 8.64,
-    "x": 440,
-    "y": 380,
-    "metin": "Bulbar üretra",
-    "tur": "etiket"
-   },
-   {
-    "bas": 7.51,
-    "son": 8.64,
-    "x": 560,
-    "y": 250,
-    "metin": "Penil üretra",
-    "tur": "etiket"
-   },
-   {
-    "bas": 7.51,
-    "son": 8.64,
-    "x": 720,
-    "y": 340,
-    "metin": "Meatus",
-    "tur": "etiket"
-   },
-   {
-    "bas": 8.64,
-    "son": 9.77,
+    "son": 9.21,
     "x": 560,
     "y": 230,
     "metin": "Penis dik ve gergin",
@@ -3218,51 +3171,43 @@
    },
    {
     "bas": 11.8,
-    "son": 14.07,
-    "x": 330,
-    "y": 410,
+    "son": 14.08,
+    "x": 445.0,
+    "y": 355.8,
     "metin": "Kıvrım: zorlama yok",
     "tur": "uyari"
    },
    {
-    "bas": 14.07,
-    "son": 16.34,
+    "bas": 15.48,
+    "son": 16.35,
     "x": 215,
     "y": 330,
     "metin": "En dar bölüm",
     "tur": "uyari"
    },
    {
-    "bas": 19.52,
-    "son": 25.45,
-    "x": 600,
-    "y": 360,
-    "metin": "İdrar geldi → yine de sonuna kadar",
+    "bas": 15.48,
+    "son": 18.62,
+    "x": 400,
+    "y": 300.5,
+    "metin": "Makette takılabilir",
     "tur": "bilgi"
    },
    {
-    "bas": 26.35,
-    "son": 30.01,
+    "bas": 19.52,
+    "son": 25.64,
+    "x": 401.9,
+    "y": 300.5,
+    "metin": "İdrar geldi: yine sonuna kadar",
+    "tur": "bilgi"
+   },
+   {
+    "bas": 27.94,
+    "son": 30.2,
     "x": 380,
     "y": 150,
     "metin": "Balon mesanede ✓",
     "tur": "dogru"
-   },
-   {
-    "bas": 7.85,
-    "son": 10.9,
-    "x": 620,
-    "y": 200,
-    "metin": "Penis dik ve gergin",
-    "tur": "bilgi"
-   },
-   {
-    "bas": 15.21,
-    "son": 18.62,
-    "x": 400,
-    "y": 470,
-    "metin": "Makette takılabilir · gerçek hastada daha kolay",
-    "tur": "bilgi"
    }
   ],
   "sayaclar": [],
@@ -3339,56 +3284,50 @@
    ],
    [
     1.3,
-    429.6296296296296,
-    240,
-    108
-   ],
-   [
-    6.445,
-    429.6296296296296,
+    429.63,
     240,
     108
    ],
    [
     7.345,
-    429.6296296296296,
+    429.63,
     240,
     108
    ],
    [
-    8.745,
-    514.2857142857142,
-    230,
-    140
+    7.845,
+    400.0,
+    250.0,
+    100
    ],
    [
     14.678,
-    300,
-    200,
-    140
+    400.0,
+    250.0,
+    100
    ],
    [
     16.078,
-    589.4736842105264,
+    589.47,
     302,
     190
    ],
    [
     17.223,
-    589.4736842105264,
+    589.47,
     302,
     190
    ],
    [
     18.623,
-    466.6666666666667,
-    291.66666666666663,
+    466.67,
+    291.67,
     120
    ],
    [
     20.668,
-    466.6666666666667,
-    291.66666666666663,
+    466.67,
+    291.67,
     120
    ],
    [
@@ -3417,14 +3356,14 @@
    ],
    [
     31.272,
-    492.3076923076923,
-    307.6923076923077,
+    492.31,
+    307.69,
     130
    ],
    [
     33.637,
-    492.3076923076923,
-    307.6923076923077,
+    492.31,
+    307.69,
     130
    ],
    [
@@ -3472,43 +3411,11 @@
   ],
   "etiketler": [
    {
-    "bas": 0.8,
+    "bas": 1.3,
     "son": 6.44,
     "x": 600,
-    "y": 380,
+    "y": 338.1,
     "metin": "İdrar yok → şişirme!",
-    "tur": "uyari"
-   },
-   {
-    "bas": 14.68,
-    "son": 17.22,
-    "x": 700,
-    "y": 250,
-    "metin": "Geniş uçlu enjektör",
-    "tur": "bilgi"
-   },
-   {
-    "bas": 20.67,
-    "son": 26.11,
-    "x": 380,
-    "y": 120,
-    "metin": "Rahat gidip geliyor → mesanede ✓",
-    "tur": "dogru"
-   },
-   {
-    "bas": 27.01,
-    "son": 29.87,
-    "x": 320,
-    "y": 420,
-    "metin": "Geri gelmiyor → üretrada kıvrım",
-    "tur": "uyari"
-   },
-   {
-    "bas": 29.87,
-    "son": 32.74,
-    "x": 600,
-    "y": 380,
-    "metin": "Şişirmeden geri çek",
     "tur": "uyari"
    },
    {
@@ -3520,23 +3427,119 @@
     "tur": "uyari"
    },
    {
-    "bas": 7.47,
-    "son": 10.56,
-    "x": 200,
-    "y": 140,
+    "bas": 7.84,
+    "son": 13.78,
+    "x": 170,
+    "y": 50,
     "metin": "1) Mesane gerçekten boş",
     "tur": "bilgi"
    },
    {
-    "bas": 10.56,
-    "son": 13.78,
-    "x": 600,
-    "y": 60,
-    "metin": "2) Kateter takıldı, kıvrıldı",
+    "bas": 16.08,
+    "son": 17.22,
+    "x": 700,
+    "y": 250,
+    "metin": "Geniş uçlu enjektör",
+    "tur": "bilgi"
+   },
+   {
+    "bas": 17.22,
+    "son": 17.54,
+    "x": 640,
+    "y": 220,
+    "metin": "0 mL",
+    "tur": "sayac"
+   },
+   {
+    "bas": 17.54,
+    "son": 17.86,
+    "x": 640,
+    "y": 220,
+    "metin": "5 mL",
+    "tur": "sayac"
+   },
+   {
+    "bas": 17.86,
+    "son": 18.18,
+    "x": 640,
+    "y": 220,
+    "metin": "10 mL",
+    "tur": "sayac"
+   },
+   {
+    "bas": 18.18,
+    "son": 18.49,
+    "x": 640,
+    "y": 220,
+    "metin": "15 mL",
+    "tur": "sayac"
+   },
+   {
+    "bas": 18.49,
+    "son": 18.81,
+    "x": 640,
+    "y": 220,
+    "metin": "20 mL",
+    "tur": "sayac"
+   },
+   {
+    "bas": 18.81,
+    "son": 19.13,
+    "x": 640,
+    "y": 220,
+    "metin": "25 mL",
+    "tur": "sayac"
+   },
+   {
+    "bas": 19.13,
+    "son": 19.45,
+    "x": 640,
+    "y": 220,
+    "metin": "30 mL",
+    "tur": "sayac"
+   },
+   {
+    "bas": 19.45,
+    "son": 19.77,
+    "x": 640,
+    "y": 220,
+    "metin": "35 mL",
+    "tur": "sayac"
+   },
+   {
+    "bas": 19.77,
+    "son": 20.67,
+    "x": 640,
+    "y": 220,
+    "metin": "40 mL",
+    "tur": "sayac"
+   },
+   {
+    "bas": 22.07,
+    "son": 26.11,
+    "x": 380,
+    "y": 120,
+    "metin": "Gidip geliyor: mesanede ✓",
+    "tur": "dogru"
+   },
+   {
+    "bas": 28.41,
+    "son": 29.87,
+    "x": 320,
+    "y": 388.2,
+    "metin": "Geri gelmiyor: kıvrım",
     "tur": "uyari"
    },
    {
-    "bas": 33.64,
+    "bas": 29.87,
+    "son": 32.74,
+    "x": 504.8,
+    "y": 380,
+    "metin": "Şişirmeden geri çek",
+    "tur": "uyari"
+   },
+   {
+    "bas": 35.04,
     "son": 37.77,
     "x": 400,
     "y": 60,
@@ -3544,31 +3547,7 @@
     "tur": "bilgi"
    },
    {
-    "bas": 37.77,
-    "son": 41.91,
-    "x": 400,
-    "y": 450,
-    "metin": "Üretra zorla genişliyor",
-    "tur": "uyari"
-   },
-   {
-    "bas": 42.81,
-    "son": 46.37,
-    "x": 400,
-    "y": 450,
-    "metin": "Yırtık + kanama · sfinkter → inkontinans",
-    "tur": "uyari"
-   },
-   {
-    "bas": 46.37,
-    "son": 49.92,
-    "x": 400,
-    "y": 450,
-    "metin": "Darlık · idrar yoksa şişirme yok",
-    "tur": "uyari"
-   },
-   {
-    "bas": 33.8,
+    "bas": 35.04,
     "son": 37.36,
     "x": 200,
     "y": 250,
@@ -3578,39 +3557,52 @@
    {
     "bas": 37.36,
     "son": 41.91,
-    "x": 600,
-    "y": 470,
-    "metin": "Üretra ≈ 1 cm: şişirirsen perfore",
+    "x": 560,
+    "y": 144.0,
+    "metin": "≈1 cm üretra: perfore olur",
     "tur": "uyari"
    },
    {
-    "bas": 43.52,
+    "bas": 37.77,
+    "son": 41.91,
+    "x": 400,
+    "y": 325.7,
+    "metin": "Üretra zorla genişliyor",
+    "tur": "uyari"
+   },
+   {
+    "bas": 42.81,
+    "son": 46.37,
+    "x": 400,
+    "y": 312.4,
+    "metin": "Yırtık + kanama",
+    "tur": "uyari"
+   },
+   {
+    "bas": 44.21,
     "son": 49.92,
-    "x": 600,
-    "y": 60,
-    "metin": "Sfinkterde şişirme → kalıcı inkontinans",
+    "x": 532.4,
+    "y": 126.5,
+    "metin": "Sfinkter: kalıcı inkontinans",
+    "tur": "uyari"
+   },
+   {
+    "bas": 47.77,
+    "son": 49.92,
+    "x": 400,
+    "y": 346.4,
+    "metin": "İdrar yoksa şişirme yok",
     "tur": "uyari"
    }
   ],
-  "sayaclar": [
-   {
-    "bas": 17.22,
-    "son": 19.77,
-    "v1": 0,
-    "v2": 40,
-    "birim": "mL",
-    "x": 640,
-    "y": 220,
-    "ondalik": 0
-   }
-  ],
+  "sayaclar": [],
   "adim": "idrar-gelmezse",
   "sesli": true
  },
  {
   "ad": "adim-sabitleme",
   "baslik": "Balonu şişirmek, torbayı bağlamak ve kayıt",
-  "sure": 32.7,
+  "sure": 31.96,
   "bolumler": [
    {
     "baslik": "Kateterin mesanede olduğundan emin",
@@ -3623,29 +3615,29 @@
     "baslik": "Kateteri hafifçe geri çektiğinde",
     "metin": "Kateteri hafifçe geri çektiğinde direnç hissedersin; balon mesane boynuna oturmuştur.",
     "bas": 7.65,
-    "son": 12.29,
-    "ses_bas": 6.524
+    "son": 12.28,
+    "ses_bas": 6.521
    },
    {
     "baslik": "İdrar torbasını kalın drenaj",
     "metin": "İdrar torbasını kalın drenaj kanalına bağlarsın; gerekiyorsa bu sırada idrar kültürü için örnek alırsın.",
-    "bas": 13.19,
-    "son": 18.92,
-    "ses_bas": 11.608
+    "bas": 13.18,
+    "son": 18.91,
+    "ses_bas": 11.602
    },
    {
     "baslik": "Son olarak yaptığın işlemi",
     "metin": "Son olarak yaptığın işlemi, kullandığın kateteri ve gelişen komplikasyonları kaydedersin.",
-    "bas": 19.82,
-    "son": 24.53,
-    "ses_bas": 17.797
+    "bas": 19.81,
+    "son": 24.52,
+    "ses_bas": 17.788
    },
    {
-    "baslik": "İşlemden sonra hasta birkaç",
-    "metin": "İşlemden sonra hasta birkaç gün yanma ve ağrı hissedebilir; bunu önceden anlatmak hastanın uyumunu artırır.",
-    "bas": 25.43,
-    "son": 31.4,
-    "ses_bas": 22.953
+    "baslik": "Hastaya, kateter çıkarıldıktan sonra",
+    "metin": "Hastaya, kateter çıkarıldıktan sonra birkaç gün yanma ve ağrı hissedebileceğini önceden anlatırsın.",
+    "bas": 25.42,
+    "son": 30.66,
+    "ses_bas": 22.941
    }
   ],
   "kamera": [
@@ -3675,102 +3667,78 @@
    ],
    [
     3.688,
-    514.2857142857142,
-    321.42857142857144,
+    514.29,
+    321.43,
     140
    ],
    [
-    3.777,
-    514.2857142857142,
-    321.42857142857144,
+    3.775,
+    514.29,
+    321.43,
     140
    ],
    [
-    5.177,
-    466.6666666666667,
-    291.66666666666663,
+    5.175,
+    466.67,
+    291.67,
     120
    ],
    [
-    5.265,
-    466.6666666666667,
-    291.66666666666663,
+    5.263,
+    466.67,
+    291.67,
     120
    ],
    [
-    6.665,
+    6.663,
     400,
     290,
     150
    ],
    [
-    7.653,
+    7.65,
     400,
     290,
     150
    ],
    [
-    9.053,
+    9.05,
     400,
-    307.6923076923077,
+    307.69,
     130
    ],
    [
-    9.97,
+    9.965,
     400,
-    307.6923076923077,
+    307.69,
     130
    ],
    [
-    11.37,
+    11.365,
     400,
-    272.72727272727275,
+    272.73,
     110
    ],
    [
-    13.186,
+    13.18,
     400,
-    272.72727272727275,
+    272.73,
     110
    ],
    [
-    14.586,
-    210.52631578947367,
-    160,
-    190
+    13.68,
+    420,
+    320,
+    80
    ],
    [
-    15.099,
-    210.52631578947367,
-    160,
-    190
+    19.815,
+    420,
+    320,
+    80
    ],
    [
-    16.499,
-    400,
-    291.66666666666663,
-    120
-   ],
-   [
-    17.011,
-    400,
-    291.66666666666663,
-    120
-   ],
-   [
-    18.411,
-    564.7058823529412,
-    352.94117647058823,
-    170
-   ],
-   [
-    19.824,
-    564.7058823529412,
-    352.94117647058823,
-    170
-   ],
-   [
-    20.124,
+    20.115,
     400.0,
     250.0,
     100
@@ -3788,136 +3756,197 @@
    {
     "bas": 2.29,
     "son": 3.78,
-    "x": 700,
-    "y": 380,
+    "x": 568.3,
+    "y": 250.7,
     "metin": "Balon kanalı + enjektör",
     "tur": "bilgi"
+   },
+   {
+    "bas": 3.78,
+    "son": 4.11,
+    "x": 640,
+    "y": 380,
+    "metin": "0 mL",
+    "tur": "sayac"
+   },
+   {
+    "bas": 4.11,
+    "son": 4.45,
+    "x": 640,
+    "y": 380,
+    "metin": "1 mL",
+    "tur": "sayac"
+   },
+   {
+    "bas": 4.45,
+    "son": 4.78,
+    "x": 640,
+    "y": 380,
+    "metin": "2 mL",
+    "tur": "sayac"
+   },
+   {
+    "bas": 4.78,
+    "son": 5.12,
+    "x": 640,
+    "y": 380,
+    "metin": "4 mL",
+    "tur": "sayac"
+   },
+   {
+    "bas": 5.12,
+    "son": 5.45,
+    "x": 640,
+    "y": 379.6,
+    "metin": "5 mL",
+    "tur": "sayac"
    },
    {
     "bas": 5.26,
     "son": 6.75,
     "x": 260,
-    "y": 400,
+    "y": 360.7,
     "metin": "Ağrı olursa dur",
     "tur": "uyari"
    },
    {
-    "bas": 7.65,
-    "son": 9.97,
+    "bas": 5.45,
+    "son": 5.78,
     "x": 640,
-    "y": 470,
+    "y": 374.8,
+    "metin": "6 mL",
+    "tur": "sayac"
+   },
+   {
+    "bas": 5.78,
+    "son": 6.12,
+    "x": 640,
+    "y": 368.0,
+    "metin": "8 mL",
+    "tur": "sayac"
+   },
+   {
+    "bas": 6.12,
+    "son": 6.45,
+    "x": 614.9,
+    "y": 362.5,
+    "metin": "9 mL",
+    "tur": "sayac"
+   },
+   {
+    "bas": 6.66,
+    "son": 12.58,
+    "x": 602.7,
+    "y": 360.7,
+    "metin": "10 mL",
+    "tur": "sayac"
+   },
+   {
+    "bas": 9.05,
+    "son": 9.96,
+    "x": 633.8,
+    "y": 321.5,
     "metin": "Hafifçe çek",
     "tur": "bilgi"
    },
    {
-    "bas": 9.97,
-    "son": 12.29,
+    "bas": 9.96,
+    "son": 12.28,
     "x": 400,
-    "y": 430,
+    "y": 369.1,
     "metin": "Balon mesane boynunda ✓",
     "tur": "dogru"
    },
    {
-    "bas": 13.19,
-    "son": 15.1,
+    "bas": 13.68,
+    "son": 15.09,
     "x": 200,
     "y": 300,
     "metin": "Uçtaki delikler",
     "tur": "bilgi"
    },
    {
-    "bas": 15.1,
-    "son": 17.01,
+    "bas": 15.09,
+    "son": 17.0,
     "x": 420,
     "y": 420,
     "metin": "Drenaj kanalı → torba",
     "tur": "bilgi"
    },
    {
-    "bas": 17.01,
-    "son": 18.92,
-    "x": 560,
-    "y": 200,
-    "metin": "Saatlik / 24 saatlik miktar",
-    "tur": "bilgi"
-   },
-   {
-    "bas": 16.63,
-    "son": 18.92,
+    "bas": 16.62,
+    "son": 18.91,
     "x": 470,
     "y": 220,
     "metin": "Gerekirse kültür örneği",
     "tur": "bilgi"
    },
    {
+    "bas": 17.0,
+    "son": 18.91,
+    "x": 560,
+    "y": 145.0,
+    "metin": "Saatlik / 24 saatlik miktar",
+    "tur": "bilgi"
+   },
+   {
     "bas": 20.29,
-    "son": 24.53,
+    "son": 24.52,
     "x": 600,
     "y": 130,
     "metin": "Kateter türü · boyu",
     "tur": "bilgi"
    },
    {
-    "bas": 21.14,
-    "son": 24.53,
+    "bas": 21.13,
+    "son": 24.52,
     "x": 600,
     "y": 180,
     "metin": "Balon hacmi",
     "tur": "bilgi"
    },
    {
-    "bas": 21.99,
-    "son": 24.53,
+    "bas": 21.98,
+    "son": 24.52,
     "x": 600,
     "y": 230,
     "metin": "İdrar miktarı · görünümü",
     "tur": "bilgi"
    },
    {
-    "bas": 22.84,
-    "son": 24.53,
+    "bas": 22.82,
+    "son": 24.52,
     "x": 600,
     "y": 280,
     "metin": "Güçlük",
     "tur": "bilgi"
    },
    {
-    "bas": 23.68,
-    "son": 24.53,
+    "bas": 23.67,
+    "son": 24.52,
     "x": 600,
     "y": 330,
     "metin": "Komplikasyon",
     "tur": "bilgi"
    },
    {
-    "bas": 27.22,
-    "son": 31.4,
+    "bas": 26.99,
+    "son": 30.66,
     "x": 460,
     "y": 110,
     "metin": "Birkaç gün yanma olabilir",
     "tur": "bilgi"
    },
    {
-    "bas": 29.01,
-    "son": 31.4,
+    "bas": 28.56,
+    "son": 30.66,
     "x": 400,
-    "y": 470,
-    "metin": "Önceden anlatmak uyumu artırır",
+    "y": 356.0,
+    "metin": "Önceden anlat",
     "tur": "dogru"
    }
   ],
-  "sayaclar": [
-   {
-    "bas": 3.78,
-    "son": 6.46,
-    "v1": 0,
-    "v2": 10,
-    "birim": "mL",
-    "x": 640,
-    "y": 380,
-    "ondalik": 0
-   }
-  ],
+  "sayaclar": [],
   "adim": "sabitleme",
   "sesli": true
  }

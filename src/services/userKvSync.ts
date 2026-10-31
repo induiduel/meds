@@ -24,6 +24,8 @@ const SYNC_PATTERNS: RegExp[] = [
   /^medsoru_learn_attempts_v1$/,
   /^medsoru_learn_(sort|view)$/,
   /^medsoru_lesson_day_mode$/,
+  // KMB dersleri: izlenen/öğrenilen adımlar, hedefler, vakalar, kontrol listesi, hata istatistiği, oynatıcı tercihi (components/kmb)
+  /^medsoru_kmb_[a-z0-9_-]+$/,
   // Son Prova: aşama/check-up/deneme ilerlemesi (components/sonProva/spIlerleme.ts)
   /^medsoru_son_prova_v1$/,
   // 60 planı: günlük saat ve sınav senaryosu girdileri/sonuçları (components/takip/SinavPlani, SinavSenaryo)

@@ -1340,12 +1340,19 @@ export function SahneCiz({ sahne, durum, onSec, secilebilir, isaret }: {
     <svg viewBox="0 0 800 500" className="kmb-sahne" role="img" aria-label={S.ad} onClick={tikla}>
       <Ortak />
       <S.Ciz o={o} />
-      {Object.entries(S.etiket).map(([id, [x, y, metin]]) => durum[id]?.etiket ? (
-        <g key={`e-${id}`} className="kmb-etiket">
-          <rect x={x - metin.length * 4.6 - 10} y={y - 17} width={metin.length * 9.2 + 20} height={28} rx={14} />
-          <text x={x} y={y + 3} textAnchor="middle">{metin}</text>
-        </g>
-      ) : null)}
+      {Object.entries(S.etiket).map(([id, [x0, y0, metin]]) => {
+        if (!durum[id]?.etiket) return null;
+        // etiket sahne kenarından taşmasın (kenardaki yapıların etiketi yarım görünüyordu): kutu çerçeve içine itilir
+        const yari = metin.length * 4.6 + 10;
+        const x = Math.min(800 - 6 - yari, Math.max(6 + yari, x0));
+        const y = Math.min(500 - 14, Math.max(20, y0));
+        return (
+          <g key={`e-${id}`} className="kmb-etiket">
+            <rect x={x - yari} y={y - 17} width={yari * 2} height={28} rx={14} />
+            <text x={x} y={y + 3} textAnchor="middle">{metin}</text>
+          </g>
+        );
+      })}
     </svg>
   );
 }

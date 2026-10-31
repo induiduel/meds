@@ -1,7 +1,9 @@
 /**
- * KMB Lottie videosu — gerçek video oynatıcı gibi: oynat/duraklat, ekranın solunda ve sağında 10 sn geri/ileri (çift dokunma
- * da), bölüm işaretli zaman çubuğu, süre, hız, video üstünde altyazı, tam ekran (iOS'ta sahte tam ekran), denetimler tam
- * ekranda kendiliğinden gizlenir. Klavye: boşluk/k, ←/→ 10 sn, f tam ekran, c altyazı.
+ * KMB Lottie videosu — gerçek video oynatıcı gibi: tek dokunuş oynat/duraklat, kenarlarda çift dokunuş 10 sn geri/ileri,
+ * önceki/sonraki cümle düğmeleri, bölüm işaretli zaman çubuğu, süre, hız ve altyazı (tercih hatırlanır), video üstünde altyazı,
+ * tam ekran (iOS'ta sahte tam ekran), denetimler tam ekranda kendiliğinden gizlenir, bitince iptal edilebilir geri sayımla
+ * sıradakine geçer (`otoSonraki`). Dışarıdan `ref.bolumeGit(i)` ile cümleye atlanır (Öğren metni tıklanınca).
+ * Klavye: boşluk/k, ←/→ 10 sn, ↑/↓ önceki/sonraki cümle, f tam ekran, c altyazı.
  * Başarım (mobil/tablet donması): sayfada aynı anda tek animasyon çalar (KMB_DURDUR); animasyon ancak ekrana yaklaşınca
  * kurulur, uzaklaşınca yok edilir; JSON modül önbelleğinde (ön yükleme `lottieOnYukle`); kare yalnız değişince çizilir,
  * arayüz saati 10 fps. `zaman` verilirse (ders videosu) dış saatle sessiz çizer.
@@ -24,7 +26,7 @@ export type LottieBilgi = {
 type SesKayit = Record<string, { h: string; sure: number; zaman: [number, number][] }>;
 
 /** Konu videoları (lottie_uret.py) + adım videoları (adim_lottie.py: her cümle bir bölüm, ses `o-<adım>`) */
-export const LOTTILER = [...(LINDEX as LottieBilgi[]), ...(AINDEX as LottieBilgi[])];
+export const LOTTILER = [...(LINDEX as unknown as LottieBilgi[]), ...(AINDEX as unknown as LottieBilgi[])];
 export const klipAdi = (v: LottieBilgi) => (v.adim ? `o-${v.adim}` : `l-${v.ad}`);
 const VERI = import.meta.glob(['../../data/kmb/lottie/*.json', '!../../data/kmb/lottie/index.json', '!../../data/kmb/lottie/adimlar.json']);
 export const sn = (t: number) => `${Math.floor(t / 60)}:${String(Math.floor(t % 60)).padStart(2, '0')}`;
@@ -173,11 +175,20 @@ type Props = {
   onZaman?: (t: number) => void;
   /** sonraki video (önceden yüklenir; bitince "Sıradaki" düğmesi) */
   sonraki?: { ad: string; baslik: string; git: () => void };
+  /** bitince bu kadar ms sonra sonrakine kendiliğinden geç (geri sayım görünür; yeniden izle/konumlama iptal eder) */
+  otoSonraki?: number;
   /** kabı tamamen doldur (ders videosu tam ekran düzeni) */
   doldur?: boolean;
 };
+export type VideoTutamac = { bolumeGit: (i: number) => void; oynat: () => void; durdur: () => void };
 
-export default function LottieVideo({ ad, kod, ses, zaman, kompakt, otomatik, onBitti, onZaman, sonraki, doldur }: Props) {
+/** Altyazı ve hız tercihi cihazda/hesapta kalır (her videoda yeniden açılıp kapanmasın) */
+const TERCIH = 'medsoru_kmb_oynatici_v1';
+const tercihOku = (): { cc: boolean; hiz: number } => { try { return { cc: true, hiz: 1, ...JSON.parse(localStorage.getItem(TERCIH) || '{}') }; } catch { return { cc: true, hiz: 1 }; } };
+const tercihYaz = (p: Partial<{ cc: boolean; hiz: number }>) => { try { localStorage.setItem(TERCIH, JSON.stringify({ ...tercihOku(), ...p })); } catch { /* özel pencere */ } };
+const HIZLAR = [1, 1.25, 1.5, 0.75];
+
+const LottieVideo = React.forwardRef<VideoTutamac, Props>(function LottieVideo({ ad, kod, ses, zaman, kompakt, otomatik, onBitti, onZaman, sonraki, otoSonraki, doldur }, ref) {
   const v = LOTTILER.find((x) => x.ad === ad);
   const kap = useRef<HTMLDivElement>(null);
   const audio = useRef<HTMLAudioElement | null>(null);
@@ -185,18 +196,24 @@ export default function LottieVideo({ ad, kod, ses, zaman, kompakt, otomatik, on
   const tRef = useRef(0);
   const sahne = useRef<SahneTutamac>(null);
   const bekliyor = useRef(false);
-    const [t, setT] = useState(0);
+  const gizleZ = useRef(0);
+  const dokunZ = useRef(0);
+  const [t, setT] = useState(0);
   const [cal, setCal] = useState(false);
-  const [hiz, setHiz] = useState(1);
-  const [altyazi, setAltyazi] = useState(true);
+  const [hiz, setHizS] = useState(() => tercihOku().hiz);
+  const [altyazi, setAltyaziS] = useState(() => tercihOku().cc);
   const [tam, setTam] = useState(false);
   const [sahte, setSahte] = useState(false);
   const [gizli, setGizli] = useState(false);
   const [bitti, setBitti] = useState(false);
+  const [otoIptal, setOtoIptal] = useState(false);
   const [atlama, setAtlama] = useState<'' | 'geri' | 'ileri'>('');
   const klip = v ? ses?.[klipAdi(v)] : undefined;
   const dis = zaman !== undefined;
   const sure = v?.sure || 1;
+  // hız değişince saat yeniden tabanlanır (geçen süre yeni hızla yeniden hesaplanıp görüntü zıplamasın)
+  const setHiz = (h: number) => { saat.current = { bas: performance.now(), t: tRef.current }; if (audio.current) audio.current.playbackRate = h; setHizS(h); tercihYaz({ hiz: h }); };
+  const setAltyazi = (f: (x: boolean) => boolean) => setAltyaziS((x) => { const y = f(x); tercihYaz({ cc: y }); return y; });
 
   const git = useCallback((s: number) => {
     const y = Math.max(0, Math.min(sure, s));
@@ -208,9 +225,10 @@ export default function LottieVideo({ ad, kod, ses, zaman, kompakt, otomatik, on
   // tam ekranda denetimler 2,5 sn hareketsizlikten sonra gizlenir
   const uyandir = useCallback(() => {
     setGizli(false);
-    window.clearTimeout((uyandir as any)._z);
-    (uyandir as any)._z = window.setTimeout(() => setGizli(true), 2500);
+    window.clearTimeout(gizleZ.current);
+    gizleZ.current = window.setTimeout(() => setGizli(true), 2500);
   }, []);
+  useEffect(() => () => { window.clearTimeout(gizleZ.current); window.clearTimeout(dokunZ.current); }, []);
   const durdur = useCallback(() => { audio.current?.pause(); setCal(false); }, []);
   const oynat = useCallback((bas?: number) => {
     window.dispatchEvent(new CustomEvent(KMB_DURDUR, { detail: ad }));
@@ -224,10 +242,19 @@ export default function LottieVideo({ ad, kod, ses, zaman, kompakt, otomatik, on
     }
     saat.current = { bas: performance.now(), t: s };
     tRef.current = s;
+    setT(s);
     setBitti(false);
+    setOtoIptal(false);
     setCal(true);
     uyandir(); // oynatma başlayınca da gizlenme sayacı işler
   }, [sure, klip, kod, ad, v, uyandir]);
+  const bolumeGit = useCallback((i: number) => {
+    const b = v?.bolumler[Math.max(0, Math.min(i, (v?.bolumler.length || 1) - 1))];
+    if (!b) return;
+    // bölüm başından biraz önce: cümle kesilmeden, ses baştan duyulsun
+    oynat(Math.max(0, b.bas - 0.05));
+  }, [v, oynat]);
+  React.useImperativeHandle(ref, () => ({ bolumeGit, oynat: () => oynat(), durdur }), [bolumeGit, oynat, durdur]);
 
   // oynatma döngüsü: saat video saatidir. Ses bölüm içinde ses saatine eşlenir; bekleme payında durur, sonraki bölümde
   // kaldığı yerden sürer (yakınsa konumlanmaz). Sapma küçükse saat yumuşakça sese çekilir (zıplama yok), ses tamponlanırken
@@ -275,6 +302,17 @@ export default function LottieVideo({ ad, kod, ses, zaman, kompakt, otomatik, on
     return () => { cancelAnimationFrame(id); audio.current?.pause(); };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [cal, dis, klip, hiz, sure, v]);
+  // duraklatılmışken konum değişince dış dünyaya bildir (metin vurgusu konumu izlesin)
+  useEffect(() => { if (!cal && !dis) onZaman?.(t); /* eslint-disable-next-line react-hooks/exhaustive-deps */ }, [t, cal, dis]);
+
+  // bitince geri sayımla sıradakine geç; kullanıcı yeniden izler, konumlar ya da iptal ederse geçilmez
+  const sonrakiRef = useRef(sonraki);
+  sonrakiRef.current = sonraki;
+  useEffect(() => {
+    if (!bitti || otoIptal || otoSonraki === undefined || !sonrakiRef.current) return;
+    const z = window.setTimeout(() => sonrakiRef.current?.git(), otoSonraki);
+    return () => window.clearTimeout(z);
+  }, [bitti, otoIptal, otoSonraki]);
 
   // açılışta sesi önceden indir (ilk oynatmada bekleme olmasın); sonraki videonun sesi de
   useEffect(() => { if (klip && v && !dis) sesOnYukle(klipUrl(kod, v, klip.h)).catch(() => {}); }, [klip, v, kod, dis]);
@@ -316,18 +354,26 @@ export default function LottieVideo({ ad, kod, ses, zaman, kompakt, otomatik, on
     window.setTimeout(() => setAtlama(''), 500);
     if (cal) saat.current = { bas: performance.now(), t: tRef.current };
   };
+  const degistir = () => (cal ? durdur() : oynat());
+  // tek dokunuş oynat/duraklat (yanlışlıkla atlama olmasın); kenarlarda çift dokunuş ±10 sn
+  const kenar = (yon: 1 | -1) => {
+    if (dokunZ.current) { window.clearTimeout(dokunZ.current); dokunZ.current = 0; atla(yon); return; }
+    dokunZ.current = window.setTimeout(() => { dokunZ.current = 0; degistir(); }, 260);
+  };
+  const bi = v ? bolumAn(v, t) : 0;
   const tus = (e: React.KeyboardEvent) => {
     uyandir();
-    if (e.key === ' ' || e.key === 'k') { e.preventDefault(); if (cal) durdur(); else oynat(); }
-    else if (e.key === 'ArrowRight') atla(1);
-    else if (e.key === 'ArrowLeft') atla(-1);
+    if (e.key === ' ' || e.key === 'k') { e.preventDefault(); degistir(); }
+    else if (e.key === 'ArrowRight') { e.preventDefault(); atla(1); }
+    else if (e.key === 'ArrowLeft') { e.preventDefault(); atla(-1); }
+    else if (e.key === 'ArrowUp' || e.key === 'p') { e.preventDefault(); bolumeGit(bi - (t - (v?.bolumler[bi]?.bas ?? 0) > 1.5 ? 0 : 1)); }
+    else if (e.key === 'ArrowDown' || e.key === 'n') { e.preventDefault(); bolumeGit(bi + 1); }
     else if (e.key === 'f') tamEkran();
     else if (e.key === 'c') setAltyazi((x) => !x);
     else if (e.key === 'Escape' && sahte) setSahte(false);
   };
 
   if (!v) return null;
-  const bi = bolumAn(v, t);
   const bolum = v.bolumler[bi];
   const konusuyor = bolum && t >= bolum.bas - 0.2 && t <= bolum.son + 0.3;
 
@@ -339,6 +385,7 @@ export default function LottieVideo({ ad, kod, ses, zaman, kompakt, otomatik, on
     );
   }
   const yuzde = (t / sure) * 100;
+  const geriSay = bitti && !otoIptal && otoSonraki !== undefined && !!sonraki;
   return (
     <div ref={kap} className={`kmb-lv${tamMi ? ' tam' : ''}${sahte ? ' sahte' : ''}${kompakt ? ' kompakt' : ''}${doldur ? ' doldur' : ''}${gizli && cal ? ' gizli' : ''}${cal ? ' calan' : ''}`}
       tabIndex={0} onKeyDown={tus} onMouseMove={uyandir} onTouchStart={uyandir} aria-label={`Video: ${v.baslik}`}>
@@ -346,17 +393,21 @@ export default function LottieVideo({ ad, kod, ses, zaman, kompakt, otomatik, on
         {/* durgun ve başta: ilk bölümün bir karesi kapak olarak (boş sahne görünmesin) */}
         <LottieSahne ref={sahne} ad={ad} kare={!cal && t < 0.05 ? Math.min(sure, (v.bolumler[0]?.bas ?? 0) + 1.2) : t} />
         <Katman v={v} t={t} />
-        {/* dokunma alanları: sol 10 sn geri, orta oynat/duraklat, sağ 10 sn ileri (yazısız; geri bildirim yalnız dokununca) */}
-        <button className="kmb-lv-alan sol" aria-label="10 saniye geri" onClick={() => atla(-1)} />
-        <button className="kmb-lv-alan orta" aria-label={cal ? 'Duraklat' : 'Oynat'} onClick={() => (cal ? durdur() : oynat())} />
-        <button className="kmb-lv-alan sag" aria-label="10 saniye ileri" onClick={() => atla(1)} />
+        {/* dokunma alanları: tek dokunuş oynat/duraklat, kenarlarda çift dokunuş 10 sn geri/ileri */}
+        <button className="kmb-lv-alan sol" aria-label="Oynat/duraklat; çift dokunuş 10 saniye geri" onClick={() => kenar(-1)} />
+        <button className="kmb-lv-alan orta" aria-label={cal ? 'Duraklat' : 'Oynat'} onClick={degistir} />
+        <button className="kmb-lv-alan sag" aria-label="Oynat/duraklat; çift dokunuş 10 saniye ileri" onClick={() => kenar(1)} />
         {atlama && <span className={`kmb-lv-atlama ${atlama}`}>{atlama === 'ileri' ? '+10 sn' : '−10 sn'}</span>}
         {!cal && !bitti && <span className="kmb-lv-buyuk-oynat" aria-hidden><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg></span>}
         {altyazi && bolum?.metin && <div className={`kmb-lv-altyazi${konusuyor ? '' : ' sessiz'}`} aria-live="polite"><span>{bolum.metin}</span></div>}
         {bitti && (
           <div className="kmb-lv-son">
-            <button onClick={() => oynat(0)}>↺ Yeniden izle</button>
-            {sonraki && <button className="ana" onClick={sonraki.git}>Sıradaki: {sonraki.baslik} ›</button>}
+            {sonraki && <p className="kmb-lv-son-bas">{geriSay ? 'Sıradaki birazdan başlıyor' : 'Sıradaki'}</p>}
+            {sonraki && <button className={`ana${geriSay ? ' geri-say' : ''}`} style={geriSay ? { ['--kmb-gs' as string]: `${otoSonraki}ms` } : undefined} onClick={sonraki.git}>{sonraki.baslik} ›</button>}
+            <div className="kmb-lv-son-alt">
+              <button onClick={() => oynat(0)}>↺ Yeniden izle</button>
+              {geriSay && <button onClick={() => setOtoIptal(true)}>Burada kal</button>}
+            </div>
           </div>
         )}
         {tamMi && !doldur && <div className="kmb-lv-ust"><b>{v.baslik}</b><button onClick={tamEkran} aria-label="Tam ekrandan çık">✕</button></div>}
@@ -368,15 +419,22 @@ export default function LottieVideo({ ad, kod, ses, zaman, kompakt, otomatik, on
             {v.bolumler.slice(1).map((b, i) => <span key={i} className="kmb-lv-bolum-isaret" style={{ left: `${(b.bas / sure) * 100}%` }} />)}
           </div>
           <span className="kmb-lv-tutamac" style={{ left: `${yuzde}%` }} />
-          <input type="range" min={0} max={sure} step={0.1} value={t} aria-label="Zaman" onChange={(e) => { git(Number(e.target.value)); if (cal) saat.current = { bas: performance.now(), t: Number(e.target.value) }; }} />
+          <input type="range" min={0} max={sure} step={0.1} value={t} aria-label="Zaman" aria-valuetext={`${sn(t)} / ${sn(sure)}`}
+            onChange={(e) => { git(Number(e.target.value)); setOtoIptal(true); if (cal) saat.current = { bas: performance.now(), t: Number(e.target.value) }; }} />
         </div>
         <div className="kmb-lv-dugmeler">
-          <button onClick={() => (cal ? durdur() : oynat())} aria-label={cal ? 'Duraklat' : 'Oynat'}>
+          <button className="kmb-lv-bol" onClick={() => bolumeGit(bi - (t - (bolum?.bas ?? 0) > 1.5 ? 0 : 1))} aria-label="Cümlenin başına / önceki cümle" title="Önceki cümle (↑)">
+            <svg viewBox="0 0 24 24"><path d="M6 5h2v14H6zM20 5v14L9 12z" /></svg>
+          </button>
+          <button onClick={degistir} aria-label={cal ? 'Duraklat' : 'Oynat'}>
             <svg viewBox="0 0 24 24">{cal ? <path d="M7 5h3.5v14H7zM13.5 5H17v14h-3.5z" /> : <path d="M8 5v14l11-7z" />}</svg>
           </button>
+          <button className="kmb-lv-bol" onClick={() => bolumeGit(bi + 1)} disabled={bi >= v.bolumler.length - 1} aria-label="Sonraki cümle" title="Sonraki cümle (↓)">
+            <svg viewBox="0 0 24 24"><path d="M16 5h2v14h-2zM4 5v14l11-7z" /></svg>
+          </button>
           <span className="kmb-lv-sure">{sn(t)} / {sn(sure)}</span>
-          <span className="kmb-lv-baslik">{bolum ? `${bi + 1}/${v.bolumler.length} · ${bolum.baslik}` : ''}</span>
-          <button className="kmb-lv-hiz" onClick={() => setHiz((h) => [1, 1.25, 1.5, 0.75][([1, 1.25, 1.5, 0.75].indexOf(h) + 1) % 4])} aria-label="Oynatma hızı">{hiz}×</button>
+          <span className="kmb-lv-baslik">{bolum ? `Cümle ${bi + 1}/${v.bolumler.length}` : ''}</span>
+          <button className="kmb-lv-hiz" onClick={() => setHiz(HIZLAR[(HIZLAR.indexOf(hiz) + 1) % HIZLAR.length])} aria-label={`Oynatma hızı ${hiz}×`}>{hiz}×</button>
           <button className={altyazi ? 'etkin' : ''} onClick={() => setAltyazi((x) => !x)} aria-label="Altyazı" aria-pressed={altyazi}>CC</button>
           <button onClick={tamEkran} aria-label={tamMi ? 'Tam ekrandan çık' : 'Tam ekran'}>
             <svg viewBox="0 0 24 24">{tamMi ? <path d="M9 4v5H4v2h7V4zM15 4h-2v7h7V9h-5zM4 15h5v5h2v-7H4zM13 13v7h2v-5h5v-2z" /> : <path d="M4 4h7v2H6v5H4zM13 4h7v7h-2V6h-5zM4 13h2v5h5v2H4zM18 13h2v7h-7v-2h5z" />}</svg>
@@ -385,4 +443,5 @@ export default function LottieVideo({ ad, kod, ses, zaman, kompakt, otomatik, on
       </div>
     </div>
   );
-}
+});
+export default LottieVideo;

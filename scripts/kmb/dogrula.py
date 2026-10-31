@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """KMB görsel asistan içerik kapısı (docs/KMB_GORSEL_ASISTAN.md §2 A6). 0 HATA olmadan ses ve yayın yok.
 Denetler: şema, hedef kapsamı (her öğrenim hedefi ≥1 adım), sahne/öge kimlikleri (sahneler.tsx SAHNE_OGELERI),
-cümle başına eylem, senaryoda tek doğru şık + şık açıklama standardı, Türkçe üslup, bul görevinin hedefi.
+cümle başına eylem, senaryoda tek doğru şık + şık açıklama standardı, Türkçe üslup, bul görevinin hedefi,
+Lottie etiketleri (≤30 harf, kadrajda, altyazı bölgesinin üstünde, çakışmasız — lottie_dsl.etiket_denetle).
 Kullanım: python3 meds/scripts/kmb/dogrula.py [kod …]"""
 import json, re, sys
 from pathlib import Path
@@ -10,6 +11,8 @@ MEDS = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(MEDS / 'scripts'))
 import sik_aciklama as SA  # noqa: E402
 import turkce_uslup as TU  # noqa: E402
+sys.path.insert(0, str(MEDS / 'scripts/kmb'))
+import lottie_dsl as LD  # noqa: E402  (etiket kapısı: kesilme, kadraj, altyazı bölgesi, çakışma)
 
 VERI = MEDS / 'src/data/kmb'
 SAHNE_TSX = MEDS / 'src/components/kmb/sahneler.tsx'
@@ -94,9 +97,21 @@ def denetle(p: Path, S):
         if sum(1 for c in s['secenekler'] if c['dogru']) != 1: H.append(f'{y}: tam 1 doğru şık olmalı')
         if len(s['secenekler']) < 3: H.append(f'{y}: en az 3 şık')
         for i, c in enumerate(s['secenekler']):
-            H += SA.denetle(c['aciklama'], f'{y} şık {i + 1}', enaz=18)
+            H += SA.denetle(c['aciklama'], f'{y} şık {i + 1}')
     for b in sn['bul']:
         if b['hedef'] not in S.get(b['sahne'], set()): H.append(f'bul {b["id"]}: hedef öge yok {b["hedef"]}')
+    # hata istatistiği (Eksiklerim) her sınav ögesini öğretim adımına bağlar: yanlışta "bu adımı yeniden çalış" yolu
+    adim_idleri = {a['id'] for a in d['adimlar']}
+    def adim_bag(o, y):
+        if not o.get('adim'): H.append(f'{y}: ilgili öğretim adımı (adim) yok')
+        elif o['adim'] not in adim_idleri: H.append(f'{y}: adim bilinmiyor {o["adim"]}')
+    def bag_agac(L, y):
+        for b in L:
+            adim_bag(b, f'{y} {b["id"]}')
+            for yol in (b.get('dal') or {}).get('yollar', []): bag_agac(yol['basamaklar'], y)
+    for ak in sn.get('akislar', []): bag_agac(ak['basamaklar'], f'akış {ak["id"]}')
+    for s in sn['senaryolar']: adim_bag(s, f'senaryo {s["id"]}')
+    for b in sn['bul']: adim_bag(b, f'bul {b["id"]}')
     hc = d.get('hedefCalisma', [])
     if sorted(x['no'] for x in hc) != sorted(h['no'] for h in d['hedefler']): H.append('hedefCalisma: her öğrenim hedefi için tam bir kart olmalı')
     for x in hc:
@@ -117,10 +132,12 @@ def denetle(p: Path, S):
         elif len(v['bolumler']) != len(a['cumleler']): H.append(f'adım {a["id"]}: video bölümü {len(v["bolumler"])} ≠ cümle {len(a["cumleler"])}')
         elif [b['metin'] for b in v['bolumler']] != [c['metin'] for c in a['cumleler']]: H.append(f'adım {a["id"]}: video metni ders metniyle aynı değil (adim_lottie.py yeniden)')
         elif not v.get('sesli'): U.append(f'adım {a["id"]}: adım videosu ses zamanlı değil')
+        if v: H += LD.etiket_denetle(v)
     li = VERI / 'lottie/index.json'
     if li.exists():
         for v in json.loads(li.read_text(encoding='utf-8')):
             if not 15 <= v['sure'] <= 90: H.append(f'lottie {v["ad"]}: süre {v["sure"]} sn (15–90)')
+            H += LD.etiket_denetle(v)
             for b in v['bolumler']: H += TU.denetle(b['metin'], f'lottie {v["ad"]}')
     for a in d['adimlar']:
         for x in a.get('dogrulanacak', []): U.append(f'adım {a["id"]}: doğrulanacak — {x}')
