@@ -11,7 +11,8 @@
 import React, { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
 import { getCustomApiUrl } from '../../services/api';
-import { SahneCiz, type SahneDurum } from './sahneler';
+import { type SahneDurum } from './sahneler';
+import SahneGoster, { sahne3bVar, ucBoyutTercih } from './SahneGoster';
 import { uygula } from './eylem';
 import { KMB_DURDUR, sesOnYukle } from './LottieVideo';
 import { ilAnahtar, ilOku, ilYaz } from './kmbVeri';
@@ -43,17 +44,17 @@ function sessizZaman(cumleler: string[]): [number, number][] {
 }
 
 /** `i` cümlesine kadar biriken sahne + durum (sahne değişince durum sıfırlanır) */
-function sahneDurumu(k: HedefKart, i: number): { sahne: string; durum: SahneDurum; odak: string | null; zoom: number } {
+function sahneDurumu(k: HedefKart, i: number): { sahne: string; durum: SahneDurum; odak: string | null; zoom: number; aci: [number, number] | null } {
   const film = k.film || [];
-  let sahne = k.sahne, durum: SahneDurum = {}, odak: string | null = null, zoom = 1;
-  if (!film.length) return { sahne, durum: uygula({}, k.eylem), odak: null, zoom: 1 };
+  let sahne = k.sahne, durum: SahneDurum = {}, odak: string | null = null, zoom = 1, aci: [number, number] | null = null;
+  if (!film.length) return { sahne, durum: uygula({}, k.eylem), odak: null, zoom: 1, aci: null };
   for (let j = 0; j <= Math.min(i, film.length - 1); j++) {
     const v: FilmVurus = film[j];
     if (v.sahne && v.sahne !== sahne) { sahne = v.sahne; durum = {}; }
     durum = uygula(durum, v.eylem);
-    if (j === Math.min(i, film.length - 1)) { odak = v.odak || null; zoom = v.zoom ?? (v.odak ? 1.4 : 1); }
+    if (j === Math.min(i, film.length - 1)) { odak = v.odak || null; zoom = v.zoom ?? (v.odak ? 1.2 : 1); aci = v.aci || null; }
   }
-  return { sahne, durum, odak, zoom };
+  return { sahne, durum, odak, zoom, aci };
 }
 
 const Ikon = ({ d }: { d: string }) => <svg viewBox="0 0 24 24" aria-hidden><path d={d} /></svg>;
@@ -226,24 +227,31 @@ export default function HedefFilmi({ ders, ses, bas = 0, onKapat, onSinav }: {
   }, [cal, asama, sure, soruKlip, k, tercih.hiz, soruyaGec, bitir]);
 
   // ——— kamera: odak ögesinin gerçek kutusuna yaklaş (etiketler ve spot da ona göre)
+  const [ucB, setUcB] = useState(ucBoyutTercih);
+  useEffect(() => { const f = () => setUcB(ucBoyutTercih()); window.addEventListener('kmb-3b', f); return () => window.removeEventListener('kmb-3b', f); }, []);
+  const ucBoyut = !!sd && ucB && sahne3bVar(sd.sahne);
   useLayoutEffect(() => {
     if (!sd) return;
     const kök = sahneKap.current;
-    if (!sd.odak || sd.zoom <= 1.02) { setKam(TAM); return; }
+    // 3B sahnede kamera motorun içindedir (odak → yumuşak yaklaşma); CSS yakınlaştırma ve spot kullanılmaz
+    if (ucBoyut || !sd.odak || sd.zoom <= 1.02) { setKam(TAM); return; }
     const el = kök?.querySelector<SVGGraphicsElement>(`[data-id="${sd.odak}"]`);
     if (!el || typeof el.getBBox !== 'function') { setKam(TAM); return; }
     try {
       const b = el.getBBox();
       if (!b.width && !b.height) { setKam(TAM); return; }
-      const z = Math.min(2, Math.max(1, sd.zoom));
-      // odak kutusu kadrajın içinde kalsın: görünen alan 800/z × 500/z, merkez kenarlardan taşmasın
+      // H462: yakınlaşma ılımlı (≤1,35) ve odak kutusu + etiket payı kadrajın en çok %70'ini kaplar; daha yakın çekim
+      // komşu ayrıntıları ve etiketleri kesiyordu. Kutu zaten büyükse yakınlaşma yapılmaz (yalnız spot).
+      const pay = 24;
+      const kw = b.width + pay * 2, kh = b.height + pay * 2;
+      const z = Math.max(1, Math.min(1.35, sd.zoom, (800 * 0.7) / kw, (500 * 0.7) / kh));
+      if (z < 1.04) { setKam({ cx: 400, cy: 250, z: 1, kutu: { x: b.x - pay, y: b.y - pay, w: kw, h: kh } }); return; }
       const gw = 800 / z, gh = 500 / z;
       const cx = Math.min(800 - gw / 2, Math.max(gw / 2, b.x + b.width / 2));
       const cy = Math.min(500 - gh / 2, Math.max(gh / 2, b.y + b.height / 2));
-      const pay = 18;
-      setKam({ cx, cy, z, kutu: { x: b.x - pay, y: b.y - pay, w: b.width + pay * 2, h: b.height + pay * 2 } });
+      setKam({ cx, cy, z, kutu: { x: b.x - pay, y: b.y - pay, w: kw, h: kh } });
     } catch { setKam(TAM); }
-  }, [sd?.odak, sd?.zoom, sd?.sahne]); // eslint-disable-line react-hooks/exhaustive-deps
+  }, [sd?.odak, sd?.zoom, sd?.sahne, ucBoyut]); // eslint-disable-line react-hooks/exhaustive-deps
 
   // ——— denetimler
   const cumleyeGit = (i: number) => {
@@ -313,7 +321,7 @@ export default function HedefFilmi({ ders, ses, bas = 0, onKapat, onSinav }: {
       <div className="kmb-hf-govde">
         <div className={`kmb-hf-sahne-kap ev-${ev}`} onClick={(e) => { e.stopPropagation(); if (goster) degistir(); else uyandir(); }}>
           <div className="kmb-hf-sahne" ref={sahneKap} style={kamStil}>
-            {sd && <SahneCiz key={sd.sahne} sahne={sd.sahne} durum={sd.durum} olcek={kam.z} />}
+            {sd && <SahneGoster key={sd.sahne} sahne={sd.sahne} durum={sd.durum} odak={sd.odak} aci={sd.aci} olcek={kam.z} />}
             <div className="kmb-hf-spot" style={spotStil} aria-hidden />
           </div>
           {/* evre damgası (sol üst) */}

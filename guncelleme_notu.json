@@ -1,37 +1,17 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 613,
-  "baslik": "KMB Hedefler filmi: 15 öğrenim hedefi tam ekran, sahne sahne ve sesli",
+  "onem": 614,
+  "baslik": "KMB Hedefler filmi: yakınlaştırma düzeltildi",
   "maddeler": [
-    "Hedefler sekmesinde \"Hedefler filmi · tam ekran\": KMB belgesindeki 15 hedef sırayla, her biri Ne yaparsın → Nasıl → Neden → Sık hata → Hoca sorar akışıyla.",
-    "Kamera anlatılan parçaya yaklaşır, odak dışı alan loşlaşır; etiket ve çizimler cümleyle eş zamanlı belirir; sık hata evresi kırmızı uyarıyla.",
-    "Her hedefin sonunda hocanın sorusu okunur, 5 saniyelik düşünme payı verilir (kapatılabilir); sonunda tüm hedeflerin özeti.",
-    "Telefonda dikey, bilgisayarda yatay düzen; klavye: boşluk, ←/→ cümle, PgUp/PgDn hedef, f tam ekran."
+    "Hedefler filminde kamera anlatılan parçaya ılımlı yaklaşır; komşu ayrıntılar ve etiketler artık kadrajdan taşmaz."
   ],
-  "eklenen": [
-    "KMB Hedefler filmi (tam ekran, sesli, kamera odaklı animasyon)"
-  ],
+  "eklenen": [],
   "degisen": [
-    "KMB hedef kartlarının üstünde film düğmesi"
+    "Hedefler filmi yakınlaştırma ölçüsü"
   ],
-  "duzeltilen": [],
+  "duzeltilen": [
+    "Yakın çekimde kesilen ayrıntılar"
+  ],
   "silinen": [],
-  "yenilikler": [
-    {
-      "ad": "KMB Hedefler filmi",
-      "nerede": {
-        "ad": "Ders çalış › KMB dersleri › Üretral kateter › Hedefler",
-        "yol": "/dersler/kmb/uretral-kateter/hedef"
-      },
-      "amac": "KMB belgesindeki 15 öğrenim hedefini sınav gözüyle, tek seferde ve tam ekranda izlersin; her hedefte ne yapacağını, nasıl ve neden yapacağını, hocanın sorduğu soruyu duyarsın.",
-      "islevler": [
-        "15 hedef art arda, kaldığın hedeften başlar",
-        "Kamera anlatılan yapıya yaklaşır, geri kalanı loşlaşır",
-        "Sık hata evresi kırmızı uyarıyla",
-        "Hedef sonunda hocanın sorusu + düşünme payı (kapatılabilir)",
-        "Hız seçimi, cümle ve hedef atlama"
-      ],
-      "ipucu": "Bilgisayarda boşluk oynat/duraklat, ←/→ cümle, PgUp/PgDn hedef, f tam ekran, Esc kapat."
-    }
-  ]
+  "yenilikler": []
 }

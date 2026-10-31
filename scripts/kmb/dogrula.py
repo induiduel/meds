@@ -20,6 +20,32 @@ EYLEMLER = {'vurgula', 'ciz', 'renk', 'goster', 'gizle', 'etiket'}
 RENKLER = {'yesil', 'kirmizi', 'mavi', 'sari'}
 
 
+
+def sahne3b_denetle(S):
+    """sahne3b/sahneler3b*.ts: `const Ad: Sahne3BTanim = {…}` bloklarındaki o3('id') kimlikleri ↔ SAHNE_OGELERI (kayıt adı → sahne anahtarı)."""
+    import re as _re
+    kok = Path(__file__).resolve().parents[2] / 'src/components/kmb/sahne3b'
+    H = []
+    metin = ''.join(p.read_text(encoding='utf-8') for p in sorted(kok.glob('sahneler3b*.ts')))
+    kayit = {}
+    for m in _re.finditer(r"export const SAHNELER3B(?:_2|_ORGANIK)?[^=]*=\s*\{([^}]*)\}", metin, _re.S):
+        for k, v in _re.findall(r"'?([\w-]+)'?\s*:\s*([A-Z]\w*)", m.group(1)): kayit[v] = k
+    bloklar = _re.split(r"\nconst (\w+): Sahne3BTanim = \{", metin)
+    for i in range(1, len(bloklar), 2):
+        ad, govde = bloklar[i], bloklar[i + 1]
+        sahne = kayit.get(ad)
+        if not sahne: continue
+        if sahne not in S: H.append(f'3B {ad}: SVG sahnesi yok ({sahne})'); continue
+        ids = set(_re.findall(r"o3\('([\w-]+)'\)", govde))
+        eksik = sorted(S[sahne] - ids)
+        if eksik: H.append(f'3B {sahne}: eksik öge {", ".join(eksik)}')
+        fazla = sorted(i for i in ids - S[sahne] if not i.startswith('_'))
+        if fazla: H.append(f'3B {sahne}: SVG sahnesinde olmayan öge {", ".join(fazla)}')
+        for e in _re.findall(r"etiket: \{([^}]*)\}", govde)[:1]:
+            for eid in _re.findall(r"'([\w-]+)':", e):
+                if eid not in S[sahne]: H.append(f'3B {sahne}: etiket ögesi yok {eid}')
+    return H
+
 def sahne_ogeleri():
     t = SAHNE_TSX.read_text(encoding='utf-8')
     blok = t[t.index('SAHNE_OGELERI'):]
@@ -136,9 +162,13 @@ def denetle(p: Path, S):
             eylem_denetle(v.get('eylem'), sahne, f'{y} film {i}')
             if v.get('odak') and v['odak'] not in S.get(sahne, set()): H.append(f'{y} film {i}: odak ögesi yok {v["odak"]}')
             z = v.get('zoom', 1)
-            if not 1 <= z <= 2: H.append(f'{y} film {i}: zoom {z} (1–2)')
+            ac = v.get('aci')
+            if ac is not None and (not isinstance(ac, list) or len(ac) != 2 or not all(isinstance(q, (int, float)) and -60 <= q <= 60 for q in ac)): H.append(f'{y} film {i}: aci [yaw, pitch] -60…60 olmalı')
+            if not 1 <= z <= 1.4: H.append(f'{y} film {i}: zoom {z} (1–1,4; daha yakını ayrıntıyı keser, H462)')
         if not any(v.get('odak') or v.get('eylem') for v in film): H.append(f'{y}: film boş')
     H += TU.denetle_yapi(d, p.stem)
+    # 3B sahne kapısı (sahne3b/sahneler3b*.ts): her 3B sahne SVG sahnesinin TÜM öge kimliklerini kurmalı (eylem/odak aynı veriyle çalışır)
+    H += sahne3b_denetle(S)
     ai = VERI / 'lottie/adimlar.json'
     av = {v['adim']: v for v in json.loads(ai.read_text(encoding='utf-8'))} if ai.exists() else {}
     for a in d['adimlar']:

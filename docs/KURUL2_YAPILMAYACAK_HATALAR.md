@@ -1861,3 +1861,27 @@ Her maddede: belirti · kök neden · Kurul 2 kuralı · kapı durumu. Kanıtlar
   değiştiren tek dokunuş yalnız görünür düğmededir ve görünür düğme çift dokunuş bölgesine (kenar %35) taşmaz. Jest
   kuralları başsız Chrome dokunma olaylarıyla sınanır (26 senaryo: tek/çift/üçlü dokunuş, basılı tutma, kaydırma,
   tam ekran, fare). Tam ekran/sabit katmanlar `[role=dialog]` taşıyorsa genel max-height'ı kapatır (H461, hucrem.css örneği).
+
+## H462 — KMB Hedefler filmi: yakınlaştırma ayrıntıyı kesiyordu; 3B deneme (Pixar/organik) kalite eşiğini geçemedi → ARŞİV (2026-11-01)
+
+- **Belirti:** Filmde kamera odak ögesine 1,5–1,8× yaklaşınca komşu ayrıntılar ve etiketler kadrajdan taşıyor, yakınlaşma
+  olmasa da sahne 8:5 kadrajı "çok yakın çekim" gibi dolduruyordu. Ardından denenen three.js 3B küme (14 sahne; ilkel
+  kapsül/küre sonra marching-cubes organik yüzeyler) kullanıcı denetiminde reddedildi: iç içe geçen parçalar, kesik kadraj,
+  boncuk gibi zincir yüzeyler, "sakız gibi" katı antiseptik halkaları (ıslak film olmalıydı), insana benzemeyen anatomi,
+  ölçek uyumsuz eller; `organik()` nesnesine dışarıdan verilen ölçek iç ölçeğini ezdiği için eller minicik/kopuk çıktı (H464).
+- **Kök neden:** (1) yakınlaştırma odak kutusunun büyüklüğüne bakmadan sabit katsayıyla yapılıyordu; (2) 3B'de prosedürel
+  ilkel geometri ile insan dokusu kurmak ek yeri ve iç içe geçme üretir, metaball ile kaynaştırma da düşük çözünürlükte
+  boncuklanır; sıvı/katı ayrımı (ıslak alan) malzemeyle değil geometriyle verilmişti; önizleme "tüm ögeler açık" yapay
+  durumuyla alındığından birbirini dışlayan ögeler (sönük/şişmiş balon) üst üste görünüp hata gibi okundu.
+- **Çözüm:** yakınlaştırma tavanı 1,35 ve odak kutusu + etiket payı kadrajın en çok %70'i (`HedefFilmi` kamera; veri zoom
+  1–1,4 kapısı `dogrula.py`). 3B küme (`components/kmb/sahne3b/`, `SahneGoster`) **arşivde**: varsayılan KAPALI
+  (`localStorage.medsoru_kmb_3b='1'` ile yalnız geliştirici açar), "3B" düğmesi kaldırıldı, canlıya gönderilmedi.
+  Ön yüz 2B (SVG + Lottie) hattında sürer; hedef stil: düz vektör çizgi film (referans: Foley kateter illüstrasyonu —
+  pürüzsüz dolgular, temiz kontur, sınırlı palet).
+- **Önleme (2B yeniden çizim için KESİN kurallar):** ① hiçbir parça diğerinin içine girmez (katmanlar kesişmez, önde olan
+  arkadakini düzgün örter); ② ölçekler anatomiye uyar (16 Fr ≈ 5 mm; üretra ~1 cm; balon 10 mL ≈ 2,7 cm); ③ sıvılar
+  (idrar, izotonik, jel, antiseptik) yarı saydam/parlak ve yüzeye yapışık gösterilir, katı halka/boncuk olmaz; ④ bakış
+  açısı anatomiye göre seçilir (sagittal kesit yandan, vulva önden litotomi, mesane içi üstten) ve kadraj hiçbir anlatılan
+  ögeyi kesmez; ⑤ her öge adıyla ayırt edilir (neyin ne olduğu belirsizse çizim yeniden yapılır); ⑥ önizleme
+  gerçek vuruş durumuyla alınır (`sahne3b_onizle.mjs --film`, SVG için de çalışır), "tüm ögeler açık" karesi yalnız
+  kimlik denetimi içindir; ⑦ her sahne yayından önce kare temas sayfasıyla göz denetiminden geçer.

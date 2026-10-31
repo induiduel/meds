@@ -28,6 +28,7 @@ Kayıttan net duyulamayan sayı/süre (`dogrulanacak: true`) öğrenciye kesin b
 | A7 | Ekran: `/dersler/kmb[/<beceri>[/ogren|hedef|video|sinav]] (eski /kamplar/kmb yönlenir)` (iç `/kmb`) | ✅ |
 | A8 | Lottie videoları: `scripts/kmb/lottie_dsl.py` (bölüm zaman çizelgesi, SVG yolu→Lottie, yol boyunca hareket, kırpma, degrade) + `lottie_uret.py` (12 video, 18–41 sn, EMA `l-<ad>` sesine kare kare oturur) → `src/data/kmb/lottie/`; oynatıcı `LottieVideo.tsx` (zaman çubuğu, bölümler, hız, altyazı, tam ekran); tam ekran ders videosu `DersVideo.tsx` (adım başına 2–3 görsel yatayda, altta altyazı) | ✅ 02 |
 | A8b | **Hedefler filmi** `HedefFilmi.tsx` (2026-10-31): hedef kartları (`hedefCalisma`) tam ekranda art arda; SVG sahneler gerçek zamanlı, cümle başına `film[i]` vuruşu (`sahne?`, `eylem[]`, `odak`, `zoom` 1–2), kamera odak kutusuna yaklaşır + spot, evreler Ne/Nasıl/Neden/Sık hata/Hoca sorar (`h-N`, `h-N-s`), bitiş özeti; kapı `dogrula.py` film denetimi | ✅ 02 |
+| A8c | 3B deneme (three.js, `components/kmb/sahne3b/`): 14 sahne, organik yüzeyler — 2026-11-01 kullanıcı kararıyla ARŞİV (varsayılan kapalı, `localStorage.medsoru_kmb_3b='1'`); ön yüz 2B (SVG+Lottie) hattında, hedef stil düz vektör çizgi film (H462 kuralları) | 🗄 arşiv |
 | A9 | Kalan beceriler: NG sonda, atel, burun kanaması, hava yolu, enjeksiyon — **ses kaydı geldikçe** A2–A6 tekrar | ⏳ kaynak bekleniyor |
 | A10 | Bağımsız denetçi geçişi (yazar + denetçi), yayın (`dagit.sh`) | ⏳ |
 

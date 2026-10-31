@@ -9,7 +9,8 @@ import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { getCustomApiUrl } from '../../services/api';
 import { navigateTo } from '../../router';
 import { icKonum } from '../../siteHaritasi';
-import { SAHNELER, SahneCiz, type SahneDurum } from './sahneler';
+import { SAHNELER, SAHNE_OGELERI, type SahneDurum } from './sahneler';
+import SahneGoster from './SahneGoster';
 import { uygula } from './eylem';
 import LottieVideo, { KMB_DURDUR, LOTTILER, bolumAn, sn, type VideoTutamac } from './LottieVideo';
 import DersVideo from './DersVideo';
@@ -205,7 +206,7 @@ function Ogret({ ders, ses, onBitir, onEksik }: { ders: Ders; ses: SesKayit | nu
               onBitti={videoBitti} otoSonraki={otomatik ? 2000 : undefined}
               bekle={kontrol === 'acik'} bekleMetin="Sıradaki adıma geçmeden videonun altındaki kısa soruyu yanıtla."
               sonraki={sonraki ? { ad: `adim-${sonraki.id}`, baslik: sonraki.baslik, git: () => git(ai + 1) } : undefined} />
-          ) : <div className="kmb-sahne-kap"><SahneCiz sahne={adim.sahne} durum={durum} /></div>}
+          ) : <div className="kmb-sahne-kap"><SahneGoster sahne={adim.sahne} durum={durum} /></div>}
           {kontrol === 'acik' && soru && (
             <div ref={kontrolRef}><HizliKontrol key={soru.id} ders={ders} z={soru} onBitir={() => setKontrol('bitti')} /></div>
           )}
@@ -237,7 +238,7 @@ function Ogret({ ders, ses, onBitir, onEksik }: { ders: Ders; ses: SesKayit | nu
             {gorsel && (
               <div className="kmb-ekler">
                 {[adim.sahne, ...(adim.ek || []).filter((e) => !e.startsWith('lottie:'))].map((e) => (
-                  <figure key={e} className="kmb-ek"><div className="kmb-sahne-kap"><SahneCiz sahne={e} durum={durum} /></div><figcaption>{SAHNELER[e]?.ad}</figcaption></figure>
+                  <figure key={e} className="kmb-ek"><div className="kmb-sahne-kap"><SahneGoster sahne={e} durum={durum} /></div><figcaption>{SAHNELER[e]?.ad}</figcaption></figure>
                 ))}
               </div>
             )}
@@ -387,7 +388,7 @@ function Senaryolar({ ders, ses, oynatici }: { ders: Ders; ses: SesKayit | null;
         <span className="kmb-sayac">{dogruSay} / {ders.sinav.senaryolar.length} doğru</span>
       </div>
       <div className="kmb-senaryo-govde">
-        <div className="kmb-sahne-kap kucuk"><SahneCiz sahne={s.sahne} durum={durum} /></div>
+        <div className="kmb-sahne-kap kucuk"><SahneGoster sahne={s.sahne} durum={durum} /></div>
         <div>
           <h3>Vaka {si + 1}: {s.baslik}</h3>
           <p className="kmb-soru">{s.soru}</p>
@@ -431,7 +432,7 @@ function SahnedeBul({ ders, oynatici }: { ders: Ders; oynatici: ReturnType<typeo
   return (
     <div className="kmb-bul">
       <p className="kmb-yonerge"><b>Görev {bi + 1} / {ders.sinav.bul.length}:</b> {b.yonerge}</p>
-      <div className="kmb-sahne-kap"><SahneCiz sahne={b.sahne} durum={durum} secilebilir={!bitti} isaret={isaret} onSec={(id) => {
+      <div className="kmb-sahne-kap"><SahneGoster sahne={b.sahne} durum={durum} secilebilir={!bitti} isaret={isaret} onSec={(id) => {
         if (bitti) return;
         const d = id === b.hedef;
         setIsaret({ id, dogru: d });
@@ -523,7 +524,7 @@ function Yerlestir({ ders }: { ders: Ders }) {
         </div>
       )}
       <p className="kmb-yonerge">{bitti ? <b>Hepsi yerinde.</b> : secili ? <>Şimdi sahnede <b>{etiket[secili]?.[2]}</b> yapısına dokun.</> : 'Bir yapıyı sahnede yerine sürükle ya da seçip yerine dokun.'}</p>
-      <div className={`kmb-sahne-kap${surukle?.hareket ? ' kmb-surukleniyor' : ''}`}><SahneCiz sahne={sahne} durum={durum} secilebilir={(!!secili || !!surukle) && !bitti} isaret={isaret} onSec={(id) => { if (secili) dene(secili, id); }} /></div>
+      <div className={`kmb-sahne-kap${surukle?.hareket ? ' kmb-surukleniyor' : ''}`}><SahneGoster sahne={sahne} durum={durum} secilebilir={(!!secili || !!surukle) && !bitti} isaret={isaret} onSec={(id) => { if (secili) dene(secili, id); }} /></div>
       {surukle?.hareket && createPortal(<div className="kmb-hayalet" style={{ left: surukle.x, top: surukle.y }} aria-hidden>{etiket[surukle.id]?.[2]}</div>, document.body)}
       <div className="kmb-yer-cip" role="listbox" aria-label="Yapılar">
         {yapilar.map((y) => {
@@ -663,7 +664,7 @@ function Hedefler({ ders, ses, onBitir }: { ders: Ders; ses: SesKayit | null; on
         ))}
       </aside>
       <section className="kmb-sahne-alan">
-        <div className="kmb-sahne-kap"><SahneCiz sahne={k.sahne} durum={durum} /></div>
+        <div className="kmb-sahne-kap"><SahneGoster sahne={k.sahne} durum={durum} /></div>
         {k.lottie && (video
           ? <div className="kmb-videolar"><LottieVideo ad={k.lottie} kod={ders.kod} ses={ses} kompakt /></div>
           : <button className="kmb-dv-ac kmb-hedef-video" onClick={() => setVideo(true)}>▶ Bu hedefin uygulamalı gösterimini izle</button>)}
@@ -801,8 +802,27 @@ function Yol({ ders, b, git, izle, ek }: { ders: Ders; b: string; git: (b: strin
   );
 }
 
+/** Geliştirici önizlemesi: /kmb?sahne=<id>[&goster=1][&etiket=1][&odak=<öge>][&eylem=<json>] — tek sahneyi (3B varsa 3B) büyük çizer;
+ *  scripts/kmb/sahne3b_onizle.mjs bununla yüksek çözünürlüklü kare alır. Öğrenciye bağlantı verilmez. */
+function SahneOnizle({ sp }: { sp: URLSearchParams }) {
+  const sahne = sp.get('sahne') || 'foley';
+  const durum = useMemo<SahneDurum>(() => {
+    let d: SahneDurum = {};
+    const ids = (SAHNE_OGELERI as Record<string, string[]>)[sahne] || [];
+    if (sp.get('goster')) for (const id of ids) d[id] = { ...(d[id] || {}), gor: true, ciz: 1 };
+    if (sp.get('etiket')) for (const id of ids) d[id] = { ...(d[id] || {}), etiket: true };
+    try { const e = sp.get('eylem'); if (e) d = uygula(d, JSON.parse(e)); } catch { /* bozuk eylem */ }
+    return d;
+  }, [sahne, sp]);
+  const w = Number(sp.get('w') || 1600);
+  // kabuğun sütun sınırından bağımsız, filmdeki gibi tam 8:5 kadraj (sabit konumlu katman)
+  return <div className="kmb-kok kmb-onizle" style={{ position: 'fixed', inset: 0, zIndex: 2147483000, maxWidth: 'none', padding: 0, margin: 0, width: 'auto', background: '#0e131b' }}><div className="kmb-sahne-kap" data-onizle style={{ width: w, height: w * 0.625, padding: 0, border: 0, borderRadius: 0, position: 'relative' }}><SahneGoster sahne={sahne} durum={durum} odak={sp.get('odak')} /></div></div>;
+}
+
 export default function KmbAsistan() {
   const { beceri, b, git } = useYol();
+  const onizleSp = new URLSearchParams(icKonum().search);
+  if (onizleSp.get('sahne')) return <SahneOnizle sp={onizleSp} />;
   const kayit = INDEX.beceriler.find((x) => x.slug === beceri);
   const [ders, setDers] = useState<Ders | null>(null);
   const [ses, setSes] = useState<SesKayit | null>(null);

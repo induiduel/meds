@@ -9,7 +9,7 @@ export type Basamak = { id: string; metin: string; aciklama: string; adim?: stri
 export type Akis = { id: string; ad: string; yonerge: string; basamaklar: Basamak[] };
 export type Bul = { id: string; sahne: string; yonerge: string; hedef: string; aciklama: string; adim?: string };
 /** Hedefler filmi vuruşu (cümle başına): sahne değişimi (durum sıfırlanır), biriken eylemler, kameranın yaklaştığı öge ve yakınlaşma */
-export type FilmVurus = { sahne?: string; eylem?: Eylem[]; odak?: string; zoom?: number };
+export type FilmVurus = { sahne?: string; eylem?: Eylem[]; odak?: string; zoom?: number; /** 3B kamera açısı sapması [yaw, pitch] derece */ aci?: [number, number] };
 export type HedefKart = { no: number; sahne: string; eylem?: Eylem[]; lottie?: string; ne: string; nasil: string[]; neden: string; hata: string; hoca: string; dogrulanacak?: string; film?: FilmVurus[] };
 export type Ders = {
   kod: string; slug: string; ad: string; belgeKodu: string; amac: string;

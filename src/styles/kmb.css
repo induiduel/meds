@@ -759,3 +759,18 @@ body.kmb-film-acik .v15-tabs { display: none !important; }
   .kmb-hf-kart, .kmb-hf-kart-no, .kmb-hf-kart-ust, .kmb-hf-kart h2, .kmb-hf-damga, .kmb-hf-son li { animation-duration: 1ms; }
   .kmb-hf.hata .kmb-hf-sahne { animation: none; }
 }
+
+/* ———————— 3B sahneler (sahne3b/Sahne3B.tsx): tuval kabı sahne kutusunu doldurur, etiketler HTML katmanında */
+.kmb-3b { position: relative; width: 100%; aspect-ratio: 8 / 5; border-radius: inherit; overflow: hidden; background: linear-gradient(180deg, #f8fafc, #d9e2ec); user-select: none; animation: kmb-3b-gecis .7s ease-out; }
+@keyframes kmb-3b-gecis { from { opacity: 0; transform: scale(1.02); } }
+.kmb-3b.secilebilir { cursor: pointer; }
+.kmb-3b-tuval { position: absolute; inset: 0; }
+.kmb-3b-tuval canvas { display: block; width: 100% !important; height: 100% !important; }
+.kmb-3b-etiketler { position: absolute; inset: 0; pointer-events: none; }
+.kmb-3b-etiket { position: absolute; left: 0; top: 0; white-space: nowrap; padding: .3em .75em; border-radius: .9em; background: #1f2a3a; color: #fff; font-size: 13px; font-weight: 600;
+  box-shadow: 0 4px 14px rgb(0 0 0 / .25), 0 0 0 1.5px #fff; animation: kmb-belir .35s ease-out; will-change: transform; }
+.kmb-3b-etiket::after { content: ''; position: absolute; left: 50%; bottom: -6px; width: 10px; height: 10px; background: #1f2a3a; transform: translateX(-50%) rotate(45deg); border-right: 1.5px solid #fff; border-bottom: 1.5px solid #fff; }
+.kmb-hf .kmb-3b, [data-onizle] .kmb-3b { aspect-ratio: auto; position: absolute; inset: 0; border-radius: 14px; }
+[data-onizle] .kmb-3b { border-radius: 0; }
+.kmb-hf .kmb-3b-etiket { font-size: clamp(12px, 1.3vw, 17px); }
+.kmb-sahne-kap.kucuk .kmb-3b-etiket { font-size: 11px; }

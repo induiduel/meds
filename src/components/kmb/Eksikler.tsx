@@ -6,7 +6,8 @@
  * yapılan nokta listeden düşer.
  */
 import React, { useMemo, useState } from 'react';
-import { SAHNELER, SahneCiz, type SahneDurum } from './sahneler';
+import { SAHNELER, type SahneDurum } from './sahneler';
+import SahneGoster from './SahneGoster';
 import { uygula } from './eylem';
 import { KAYNAK_AD, hataKaydet, hataSifirla, ozet, useHata, zayiflar, type Kaynak, type Kavram } from './kmbHata';
 import { basamakAnahtar, karistir, yollar, type Basamak, type Ders } from './kmbVeri';
@@ -211,7 +212,7 @@ function Tekrar({ ders, liste, onBitir, adimaGit }: { ders: Ders; liste: Z[]; on
 
       {s.tur === 'vaka' && (
         <div className="kmb-senaryo-govde">
-          <div className="kmb-sahne-kap kucuk"><SahneCiz sahne={s.s.sahne} durum={durum} /></div>
+          <div className="kmb-sahne-kap kucuk"><SahneGoster sahne={s.s.sahne} durum={durum} /></div>
           <div className="kmb-eks-soru">
             <p className="kmb-eks-etiket">Yanlış yaptığın vaka · {s.s.baslik}</p>
             <h3>{s.s.soru}</h3>
@@ -232,7 +233,7 @@ function Tekrar({ ders, liste, onBitir, adimaGit }: { ders: Ders; liste: Z[]; on
         <div className="kmb-eks-soru">
           <p className="kmb-eks-etiket">Sahnede bul</p>
           <h3>{s.yonerge}</h3>
-          <div className="kmb-sahne-kap"><SahneCiz sahne={s.sahne} durum={durum} secilebilir={!cevap} isaret={isaret} onSec={(id) => {
+          <div className="kmb-sahne-kap"><SahneGoster sahne={s.sahne} durum={durum} secilebilir={!cevap} isaret={isaret} onSec={(id) => {
             if (cevap) return;
             const d = id === s.hedef;
             setIsaret({ id, dogru: d });
