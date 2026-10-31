@@ -1,31 +1,37 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 606,
-  "baslik": "Eksik profil bilgileri tamamlanıyor",
+  "onem": 607,
+  "baslik": "Sorun denetçisi: bağlantı ve eşitleme sorunlarını bulur, anlatır, onarır",
   "maddeler": [
-    "Profil: üniversite, kurul ya da öğrenci numarası eksikse her açılışta yalnız eksik alanlar sorulur."
+    "Sorun denetçisi: internet, gönderim kuyruğu, ilerleme eşitlemesi, cihaz belleği ve cihaz saati arka planda denetlenir; sorun anlaşılır dille anlatılır.",
+    "Gönderilemeyen işlemler: sunucunun kabul etmediği yorum, beğeni ve bildirimler artık kaybolmaz; nedeni gösterilir, \"Yeniden dene\" ile tekrar gönderilebilir."
   ],
   "eklenen": [
-    "\"Profilini tamamla\" penceresi"
+    "Sorun denetçisi paneli",
+    "\"Bir sorun bulundu\" şeridi"
   ],
   "degisen": [
-    "Kayıt akışında öğrenci numarası artık isteğe bağlı gösterilmiyor; \"Sonra\" yalnız o açılış için kapatır"
+    "Gönderilemeyen işlem bildiriminde \"Nedenini gör\" düğmesi"
   ],
-  "duzeltilen": [],
+  "duzeltilen": [
+    "Sunucunun reddettiği işlemlerin sessizce silinmesi"
+  ],
   "silinen": [],
   "yenilikler": [
     {
-      "ad": "Profilini tamamla",
+      "ad": "Sorun denetçisi",
       "nerede": {
-        "ad": "Açılış",
+        "ad": "Araçlar › Sorunlar",
         "yol": "/"
       },
-      "amac": "Sıralamada doğru sınıfta görünmen ve sana uygun kurulun açılması için eksik bilgileri tamamlatır.",
+      "amac": "Çevrimdışı ve eşitleme sorunlarını fark edip sana sade dille anlatır, onarabildiğini kendisi onarır.",
       "islevler": [
-        "Yalnız eksik alanları sorar: üniversite, kurul, öğrenci numarası",
-        "Listede olmayan üniversite elle eklenebilir",
-        "Bilgiler hesabına eşitlenir, başka cihazda yeniden sorulmaz"
-      ]
+        "Takılan işlemleri ve gönderilemeyen ilerlemeyi kendiliğinden yeniden gönderir",
+        "Reddedilen işlemin nedenini söyler, \"Yeniden dene\" sunar",
+        "Cihaz belleği dolarken ve cihaz saati yanlışken uyarır",
+        "Destek için teknik ayrıntıyı kopyalayabilirsin"
+      ],
+      "ipucu": "Ekranın üstünde \"Bir sorun bulundu\" çıkarsa dokunman yeterli."
     }
   ]
 }

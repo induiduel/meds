@@ -994,6 +994,7 @@ class OfflineDatabaseService {
       if ((act.nextAt || 0) > now) continue;
       let ok = false;
       let permanent = false;
+      let durum = 0;
       try {
         const headers: Record<string, string> = { 'Content-Type': 'application/json' };
         try {
@@ -1006,6 +1007,7 @@ class OfflineDatabaseService {
           body: act.method === 'DELETE' && act.payload == null ? undefined : JSON.stringify(act.payload),
         });
         ok = res.ok;
+        durum = res.status;
         permanent = !ok && res.status >= 400 && res.status < 500 && res.status !== 408 && res.status !== 429;
       } catch {
         ok = false;
@@ -1013,7 +1015,11 @@ class OfflineDatabaseService {
       const attempts = (act.attempts || 0) + 1;
       if (ok || permanent || attempts >= MAX_ATTEMPTS) {
         if (ok) synced += 1;
-        else dropped += 1;
+        else {
+          dropped += 1;
+          // Hata denetçisi düşen işlemi saklar, öğrenciye nedenini söyler ve "yeniden dene" sunar (hataDenetci.ts)
+          window.dispatchEvent(new CustomEvent('medsoru:islem-dustu', { detail: { eylem: { ...act, id: undefined }, durum: permanent ? durum : 0 } }));
+        }
         await this.writeQueue(db, (st) => st.delete(act.id));
       } else {
         failed += 1;
@@ -1026,7 +1032,7 @@ class OfflineDatabaseService {
     this.state.queuedActionsCount = (await this.readQueue(db)).length;
     this.notify();
     if (synced > 0) toast.success('Gönderildi', `Bekleyen ${synced} işlem sunucuya iletildi.`);
-    if (dropped > 0) toast.info('Bazı işlemler gönderilemedi', `${dropped} işlem sunucu tarafından kabul edilmedi ve kuyruktan çıkarıldı.`);
+    if (dropped > 0) toast.info('Bazı işlemler gönderilemedi', `${dropped} işlem sunucu tarafından kabul edilmedi ve kuyruktan çıkarıldı; kaybolmadı, denetçide saklanıyor.`, { label: 'Nedenini gör', onClick: () => window.dispatchEvent(new Event('medsoru:denetci')) });
     // Hâlâ bekleyen varsa en yakın deneme zamanına kur
     if (this.state.queuedActionsCount > 0) {
       const rest = await this.readQueue(db);

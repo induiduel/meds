@@ -1,10 +1,15 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { createRoot } from 'react-dom/client';
-import { WifiOff, Wifi, CloudUpload, RefreshCw } from 'lucide-react';
+import { WifiOff, Wifi, CloudUpload, RefreshCw, AlertTriangle } from 'lucide-react';
 import { useNetState, type NetState } from '../../services/net';
 import { offlineDatabaseService } from '../../services/offlineDatabaseService';
 import './system.css';
 import { PendingOpsSheet } from './PendingOpsSheet';
+import { HataDenetciSheet } from './HataDenetciSheet';
+import { acikSorunlar, denetciDinle, installHataDenetci } from '../../services/hataDenetci';
+
+/** Şeritte gösterilecek denetçi sorunları: ağ durumu şeridin kendisi gösterir, bilgi düzeyi şeridi açmaz */
+const seritSorunu = () => acikSorunlar().filter((s) => s.tur !== 'ag' && s.ciddiyet !== 'bilgi');
 
 /**
  * Bağlantı şeridi: ağ zayıf ya da yokken ekranın üstünde ince bir kapsül belirir, bekleyen işlem sayısını
@@ -17,6 +22,8 @@ const NetworkBanner: React.FC = () => {
   const [flash, setFlash] = useState(false);
   const [busy, setBusy] = useState(false);
   const prev = useRef<NetState>(net);
+  const [sorun, setSorun] = useState(seritSorunu().length);
+  useEffect(() => denetciDinle(() => setSorun(seritSorunu().length)), []);
 
   useEffect(() => offlineDatabaseService.subscribe((s) => setQueued(s.queuedActionsCount)), []);
   useEffect(() => {
@@ -39,7 +46,20 @@ const NetworkBanner: React.FC = () => {
     }
   };
 
-  const visible = net !== 'online' || flash || (queued > 0 && net === 'online');
+  // Denetçi sorunu yalnız çevrimiçiyken ve kuyruk boşken şeridi ele alır (öncelik: ağ > kuyruk > sorun)
+  const denetciKipi = net === 'online' && !flash && queued === 0 && sorun > 0;
+  const visible = net !== 'online' || flash || (queued > 0 && net === 'online') || denetciKipi;
+  if (denetciKipi) {
+    return (
+      <div className="nb-wrap is-in" aria-live="polite" role="status">
+        <button type="button" className="nb-pill is-bad is-tap" onClick={() => window.dispatchEvent(new Event('medsoru:denetci'))} aria-label="Sorun denetçisini aç">
+          <span className="nb-ico"><AlertTriangle aria-hidden /></span>
+          <span className="nb-t">{sorun > 1 ? `${sorun} sorun bulundu` : 'Bir sorun bulundu'}</span>
+          <span className="nb-q">Gör</span>
+        </button>
+      </div>
+    );
+  }
   const kind = net === 'offline' ? 'is-off' : net === 'slow' ? 'is-slow' : 'is-ok';
   const Icon = net === 'offline' ? WifiOff : net === 'slow' ? Wifi : queued > 0 ? CloudUpload : Wifi;
   const text =
@@ -80,6 +100,7 @@ let mounted = false;
 export function installNetworkBanner() {
   if (mounted || typeof document === 'undefined') return;
   mounted = true;
+  installHataDenetci();
   const host = document.createElement('div');
   host.id = 'net-banner-root';
   document.body.appendChild(host);
@@ -87,6 +108,7 @@ export function installNetworkBanner() {
     <>
       <NetworkBanner />
       <PendingOpsSheet />
+      <HataDenetciSheet />
     </>
   );
 }

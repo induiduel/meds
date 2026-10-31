@@ -1762,3 +1762,16 @@ Her maddede: belirti · kök neden · Kurul 2 kuralı · kapı durumu. Kanıtlar
   `cdTakiliArkaPlanIptal()` eski takılı `cd|…` kayıtlarını açılışta ve her indirmede iptal eder.
 - **Önleme:** tarayıcıya devredilen bir indirme/iş, ilerleme gelmezse zaman aşımıyla sayfa içi yola düşmeden kullanılmaz;
   çevrimdışı içerik kullanıcının dosya sistemine değil uygulama önbelleğine yazılır.
+
+## H458
+- **Belirti:** sunucunun reddettiği (4xx) ya da 8 denemede gidemeyen yorum/beğeni/bildirim, kısa bir "kuyruktan çıkarıldı"
+  bildirimiyle kayboluyordu; öğrenci nedenini bilmiyor, yeniden deneyemiyordu. Profil eşitleme hatası yalnız konsola yazılıyordu.
+- **Kök neden:** `offlineDatabaseService.drain()` düşen işlemi hiçbir yerde saklamadan siliyordu; `backupUserDataToDatabase` hata
+  metnini arayüze iletmiyordu; depolama doluluğu, IndexedDB, service worker ve cihaz saati sapması hiç denetlenmiyordu.
+- **Çözüm:** `src/services/hataDenetci.ts` (Sorun denetçisi): düşen işlem `medsoru:islem-dustu`, eşitleme hatası
+  `medsoru:esitleme-hatasi` olayıyla denetçiye gider; denetçi 90 sn'de bir / bağlantı dönünce / sekme öne gelince ağ, takılı kuyruk,
+  gönderilmemiş ilerleme, depolama, IDB, SW ve saat sapmasını yoklar, güvenli onarımları (kuyruğu yeniden gönder, eşitlemeyi yeniden
+  çalıştır, kalıcı depolama iste, SW'yi yeniden kur) kendisi yapar. Panel `HataDenetciSheet` (bağlantı şeridi "Sorun bulundu",
+  v15 menü "Sorunlar", eşitleme kartı düğmesi), HTTP koduna göre sade açıklama + "Yeniden dene" + kopyalanabilir teknik ayrıntı.
+- **Önleme:** kullanıcının işlemi hiçbir yerde sessizce silinmez; kuyruktan düşen her şey denetçiye bildirilir. Yeni eşitleme/çevrimdışı
+  hatası eklenirken hataDenetci'ye `bildir()` ile sade dilde başlık + açıklama + çözüm yazılır, ham hata yalnız `teknik` alanına.

@@ -4,7 +4,7 @@
  * ikisini birden gönderir. Bağlantı gelince bunlar zaten kendiliğinden gider (userDataSyncService 'online' + arka plan eşitleme).
  */
 import { useEffect, useState } from 'react';
-import { Check, CloudOff, Loader2, RefreshCw } from 'lucide-react';
+import { Check, CloudOff, Loader2, RefreshCw, Stethoscope } from 'lucide-react';
 import { useNetState } from '../../services/net';
 import { dirtyKvCount, onProfileDataChange } from '../../services/userKvSync';
 
@@ -78,6 +78,9 @@ export default function EsitlemeKarti() {
       </p>
       <div className="cv-esit-alt">
         {is === 'hata' && <small className="cv-hata">{hata}</small>}
+        <button type="button" className="cv-btn is-ghost" onClick={() => window.dispatchEvent(new Event('medsoru:denetci'))}>
+          <Stethoscope aria-hidden="true" /><span>Sorun denetçisi</span>
+        </button>
         {is === 'tamam' && <small className="cv-ok"><Check aria-hidden="true" /> Eşitlendi</small>}
         <button type="button" className="cv-btn" disabled={ag === 'offline' || is === 'gonder'} onClick={() => void esitle()}>
           {is === 'gonder' ? <Loader2 className="cv-don" aria-hidden="true" /> : ag === 'offline' ? <CloudOff aria-hidden="true" /> : <RefreshCw aria-hidden="true" />}

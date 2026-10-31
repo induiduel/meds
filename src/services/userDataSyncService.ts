@@ -414,6 +414,7 @@ export async function backupUserDataToDatabase(): Promise<{
     // Sunucunun hız sınırı (429) bir hata değil; otomatik yedekleme sonra yeniden dener
     // Hız sınırı (429) ve internetsizlik (Failed to fetch / NetworkError) hata değil: veri cihazda durur, bağlantı gelince yeniden denenir
     (/Çok sık|Failed to fetch|NetworkError|Load failed|çevrimdışı/i.test(String(err?.message)) ? console.warn : console.error)('[UserDataSync] Backup failed:', err?.message || err);
+    if (typeof window !== 'undefined') window.dispatchEvent(new CustomEvent('medsoru:esitleme-hatasi', { detail: { hata: String(err?.message || err) } }));
     return { success: false, error: err.message || 'Veritabanı yedekleme hatası' };
   }
 }

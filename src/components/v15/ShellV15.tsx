@@ -169,6 +169,7 @@ function useAraclar(kapat: () => void, ek: { onPdf?: () => void; onOffline?: () 
     ...(ek.onOffline ? [{ id: 'cevrimdisi', ad: 'İndirilen', icon: Database, tikla: yap(ek.onOffline) }] : []),
     { id: 'kuyruk', ad: 'Kuyruk', icon: CloudUpload, rozet: queued, tikla: yap(() => window.dispatchEvent(new Event('medsoru:pending'))) },
     ...(canInstall ? [{ id: 'yukle', ad: 'Yükle', icon: Smartphone, tikla: yap(() => pwaService.promptInstall()) }] : []),
+    { id: 'denetci', ad: 'Sorunlar', icon: Stethoscope, tikla: yap(() => window.dispatchEvent(new Event('medsoru:denetci'))) },
   ];
 }
 
