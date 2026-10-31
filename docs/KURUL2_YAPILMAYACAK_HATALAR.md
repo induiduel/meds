@@ -1749,3 +1749,16 @@ Her maddede: belirti · kök neden · Kurul 2 kuralı · kapı durumu. Kanıtlar
 - **Çözüm:** ızgarada yalnız en üst katman sayfa bandı + sayfa kırılımıdır, alt katmanlar hücre içinde küçük başlık (`Blok.basliklar`, HTML/DOCX/PPTX). "Sayfaya sığdır" (`Ayar.sigdir`: kucult/doldur, `sigdirHedef`): `belge.ts::sigdirarak` seyrek (gövdesinin %45'inden azı dolu) bölüm sonu sayfalarını sayar, hedef sayfa sayısına sığan en büyük genel ölçeği ikili aramayla bulur (0,6–1,35); ızgarada "doldur" sayfadaki hücrelere sığan ortak en büyük ölçeği uygular.
 - **Önleme:** Sayfa kırılım ölçütü hiçbir zaman en iç gruplama katmanı olmaz; gruplama katmanı ekleyen değişiklik ızgara ve akışta sayfa sayısını 40 soruluk örnekle ölçer (önizleme `.pg` sayısı ile sunucu PDF `pdfinfo` eşit olmalı; bu turda 22 = 22). DOCX/PPTX H444 kapısı (LibreOffice sayfa sayısı + XML ayrıştırma) her sürümde yeniden koşulur.
 
+
+## H457 — Sesli ders "İndir" düğmesi indirmeyi hiç başlatmıyordu (çevrimdışı, 2026-10-31)
+
+- **Belirti:** Çevrimdışı merkezinde ya da derste "İndir" denince ilerleme %0'da kalıyor, ders cihaza inmiyordu.
+- **Kök neden:** `cdCevrimdisiAyarla` önce tarayıcının Background Fetch indiricisini deniyordu. Chrome bu işi tarayıcının
+  "İndirilenler" akışına koyar; otomatik indirme izni beklenirken kayıt `result: ''` hâlinde sonsuza dek bekler, hiç
+  `progress` gelmez. Kod bu sözü zaman aşımsız bekliyor, sayfa içi indirmeye düşmüyordu; `bf.get(id)` aynı takılı kaydı
+  her yeni denemede geri verdiği için tekrar basmak da işe yaramıyordu.
+- **Çözüm:** Background Fetch kapatıldı (`BF_ETKIN = false`, `canliDersCevrimdisi.ts`); ses, metin ve PDF yalnız sayfa içi
+  `fetch` ile uygulamanın önbelleğine (Cache Storage, `CD_OFFLINE_CACHE`) yazılır; indirilenler klasörüne dosya düşmez.
+  `cdTakiliArkaPlanIptal()` eski takılı `cd|…` kayıtlarını açılışta ve her indirmede iptal eder.
+- **Önleme:** tarayıcıya devredilen bir indirme/iş, ilerleme gelmezse zaman aşımıyla sayfa içi yola düşmeden kullanılmaz;
+  çevrimdışı içerik kullanıcının dosya sistemine değil uygulama önbelleğine yazılır.

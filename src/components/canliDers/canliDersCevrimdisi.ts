@@ -149,7 +149,23 @@ export function cdCevrimdisiIndir(key: string, opts: { caliyorVid?: string | nul
 /** sw.js ile ortak: arka planda inen dosyaların bekleme önbelleği + yarım kalan ders işaretleri */
 const CD_BEKLEYEN_CACHE = 'medsoru-cd-bekleyen';
 const BF_ONEK = 'cd|';
+/**
+ * Arka plan indiricisi KAPALI (H-çevrimdışı 2026-10-31): Chrome indirmeyi "İndirilenler" listesine koyuyor, otomatik
+ * indirme izni sorulduğunda kayıt sonsuza dek beklemede kalıyor ve `bf.get(id)` aynı takılı kaydı her denemede geri
+ * veriyordu → indirme hiç başlamıyordu. Ders yalnız sayfa içi fetch ile uygulama önbelleğine (Cache Storage) yazılır.
+ * Eski takılı kayıtlar açılışta iptal edilir.
+ */
+const BF_ETKIN = false;
+export async function cdTakiliArkaPlanIptal(): Promise<void> {
+  try {
+    const reg = await navigator.serviceWorker?.getRegistration();
+    const bf = reg && (reg as any).backgroundFetch;
+    if (!bf) return;
+    for (const id of await bf.getIds()) if (String(id).startsWith(BF_ONEK)) (await bf.get(id))?.abort().catch(() => false);
+  } catch { /* yok say */ }
+}
 const bfDestek = async () => {
+  if (!BF_ETKIN) return null;
   if (typeof navigator === 'undefined' || !('serviceWorker' in navigator) || typeof (window as any).BackgroundFetchManager === 'undefined') return null;
   const reg = await navigator.serviceWorker.getRegistration();
   return reg && (reg as any).backgroundFetch ? reg : null;
@@ -219,6 +235,7 @@ async function arkaPlanIndir(
 /** Sayfa kapalıyken biten arka plan indirmelerini kaydeder (bekleme önbelleğindeki işaretler). Açılışta çağrılır. */
 export async function cdBekleyenleriTamamla(): Promise<void> {
   if (!cdCevrimdisiDestek()) return;
+  void cdTakiliArkaPlanIptal();
   const bekleyen = await caches.open(CD_BEKLEYEN_CACHE);
   for (const req of await bekleyen.keys()) {
     const m = new URL(req.url).pathname.match(/^\/__cd-bekleyen\/(.+)$/);
@@ -249,6 +266,7 @@ export async function cdCevrimdisiAyarla(key: string, vidler: string[] | null, o
   const ac = new AbortController();
   iptaller.set(key, ac);
   isYaz(key, { oran: 0 });
+  void cdTakiliArkaPlanIptal();
   try {
     // Kurul boyunca tarayıcının alan açmak için silmemesi istenir (izin verilmezse yine de çalışır)
     void navigator.storage?.persist?.().catch(() => false);
