@@ -1,42 +1,18 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 610,
-  "baslik": "KMB dersleri yenilendi: büyük video, cümleye atlama ve Eksiklerim istatistiği",
+  "onem": 611,
+  "baslik": "Profil sayfası daha derli toplu",
   "maddeler": [
-    "KMB Öğren: video büyüdü; bilgisayarda metin yanında, telefonda altında. Bir cümleye dokununca video o cümleden oynar.",
-    "Oynatıcı: tek dokunuş oynat/duraklat, kenarda çift dokunuş 10 sn; önceki/sonraki cümle; hız ve altyazı tercihi hatırlanır.",
-    "Eksikler sekmesi: sınavda yanlış yaptığın vaka, unuttuğun OSCE basamağı ve bulamadığın yapılar adım adım listelenir, hedefli tekrar yaparsın.",
-    "Üretral kateter: hocanın kaydına göre 11 cümle düzeltildi, kadın OSCE sırasına eksik basamak eklendi; animasyonlar ve sesler yenilendi."
+    "Profil: bilgisayarda boş alan bırakan düzen düzeltildi; kartlar iki dengeli sütunda.",
+    "Bitirilen ve çalışılan dersler kısa listeyle açılır, \"Tümünü göster\" ile genişler."
   ],
-  "eklenen": [
-    "KMB Eksikler sekmesi (hata istatistiği ve hedefli tekrar)",
-    "Cümleye dokununca videoyu o cümleden oynatma"
-  ],
+  "eklenen": [],
   "degisen": [
-    "KMB Öğren ekranı düzeni ve video oynatıcı",
-    "Üretral kateter animasyonları ve EMA sesleri"
+    "Profil sayfası iki sütun düzeni ve kısa listeler"
   ],
   "duzeltilen": [
-    "Kesik ya da kenardan taşan etiketler",
-    "Video bitince iptal edilemeyen otomatik geçiş",
-    "Hız değişince görüntünün zıplaması"
+    "Profilde büyük boş alan ve çok yer kaplayan ders listeleri"
   ],
   "silinen": [],
-  "yenilikler": [
-    {
-      "ad": "KMB Eksiklerim",
-      "nerede": {
-        "ad": "Ders çalış › KMB dersleri › Üretral kateter › Eksikler",
-        "yol": "/dersler/kmb/uretral-kateter/eksik"
-      },
-      "amac": "Pratik sınavda unuttuğun basamakları ve eksik kaldığın adımları görüp yalnız onları çalışırsın.",
-      "islevler": [
-        "Deneme sayısı, doğruluk ve son 14 gün",
-        "Eksiklerin öğretim adımına göre gruplanır; \"Adımı yeniden çalış\" ile o adıma gidersin",
-        "Hedefli tekrar: unuttuğun basamaktan sonra ne yapılır, yanlış vakalar, sahnede yeniden bul",
-        "İki kez üst üste doğru yaptığın nokta listeden düşer"
-      ],
-      "ipucu": "Önce Sınav sekmesinde vaka ve OSCE sırasını çöz; eksiklerin kendiliğinden burada toplanır."
-    }
-  ]
+  "yenilikler": []
 }

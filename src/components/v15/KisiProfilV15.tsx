@@ -24,6 +24,8 @@ export default function KisiProfilV15() {
   const [mesgul, setMesgul] = useState(false);
   const [davet, setDavet] = useState(false);
   const { durum } = useBasarim();
+  const [bitenAcik, setBitenAcik] = useState(false);
+  const [dersAcik, setDersAcik] = useState(false);
   useV15Baslik({ baslik: p?.ben ? 'Profilim' : p?.ad || 'Profil', alt: 'Açık profil', geri: '/arkadaslar' });
 
   const yukle = useCallback(() => {
@@ -104,7 +106,23 @@ export default function KisiProfilV15() {
           </span>
         </div>
       </div>
+      {dugmeler}
+      {mesaj && <p className="apr15-not is-tam" role="status">{mesaj}</p>}
+
+
+
+
+      <div className="apr15-ikili is-akis is-tam">
+        <div className="apr15-kol">
       <Durum p={p} />
+      <div className="v15-card apr15-son">
+        <span className="v15-tile"><BookOpen aria-hidden /></span>
+        <div>
+          <small>En son çalıştığı</small>
+          {p.son ? <b>{p.son.ad}</b> : <b>Henüz kayıtlı çalışma yok</b>}
+          {p.son && <small>{p.son.modul} · {once(p.son.at)}</small>}
+        </div>
+      </div>
       {kidem && (
         <div className="v15-card apr15-kidem">
           <div><small>Kıdem</small><b>{kidem.ad}</b></div>
@@ -116,18 +134,8 @@ export default function KisiProfilV15() {
           ) : <small>En üst kıdemdesin.</small>}
         </div>
       )}
-      {dugmeler}
-      {mesaj && <p className="apr15-not is-tam" role="status">{mesaj}</p>}
-
-      <div className="v15-card apr15-son">
-        <span className="v15-tile"><BookOpen aria-hidden /></span>
-        <div>
-          <small>En son çalıştığı</small>
-          {p.son ? <b>{p.son.ad}</b> : <b>Henüz kayıtlı çalışma yok</b>}
-          {p.son && <small>{p.son.modul} · {once(p.son.at)}</small>}
         </div>
-      </div>
-
+        <div className="apr15-kol">
       <div className="v15-card apr15-ozet">
         <Halka yuzde={oran} />
         <div className="apr15-ozet-sag">
@@ -136,7 +144,6 @@ export default function KisiProfilV15() {
           <small>Günlük ortalama (bu hafta): {sure(gunlukOrt)}{p.puan ? ` · bu hafta ${sayi(p.puan.hafta)} puan` : ''}</small>
         </div>
       </div>
-
       {sira && (
         <button type="button" className="v15-card apr15-sira" onClick={() => git('/siralama')}>
           {([['hafta', 'Hafta'], ['kurul', 'Kurul'], ['tum', 'Tümü']] as const).map(([k, t]) => (
@@ -145,6 +152,8 @@ export default function KisiProfilV15() {
           <ChevronRight aria-hidden className="apr15-sira-ok" />
         </button>
       )}
+        </div>
+      </div>
 
       <div className="apr15-olcu is-tam">
         <Olcu ikon={<Clock aria-hidden />} ad="Bugün" deger={sure(p.calisma?.bugun)} />
@@ -156,16 +165,31 @@ export default function KisiProfilV15() {
       </div>
 
       <Gunluk p={p} />
-
-      {!!p.bitenler?.length && (
+      <div className="apr15-ikili is-tam">
+        <div className="apr15-kol">
+      {moduller.length > 0 && modulToplam > 0 && (
         <section className="v15-card apr15-kutu">
-          <h3><CheckCircle2 aria-hidden /> Bitirdiği dersler <span className="apr15-say">{p.bitenler.length}</span></h3>
-          <ul className="apr15-biten">{p.bitenler.map((d, i) => (
-            <li key={i}><CheckCircle2 aria-hidden /><span><b>{d.ad}</b><small>{d.modul}{d.at ? ` · ${once(d.at)}` : ''}</small></span></li>
+          <h3>Çalışma dağılımı</h3>
+          <div className="apr15-yigin" aria-hidden>{moduller.map(([m, sn], i) => <i key={m} className={`is-r${i}`} style={{ width: `${(sn / modulToplam) * 100}%` }} />)}</div>
+          <ul className="apr15-lejant">{moduller.map(([m, sn], i) => <li key={m}><span><i className={`is-r${i}`} /> {m}</span><em>{sure(sn)} · %{Math.round((sn / modulToplam) * 100)}</em></li>)}</ul>
+        </section>
+      )}
+      {enCok.length > 1 && enCokMax > 0 && (
+        <section className="v15-card apr15-kutu">
+          <h3>En çok çalışılan dersler</h3>
+          <ul className="apr15-cubuk">{enCok.map((d, i) => (
+            <li key={i}><span><b>{d.ad}</b><i className="apr15-bar" aria-hidden><i style={{ width: `${Math.max(4, ((d.sn || 0) / enCokMax) * 100)}%` }} /></i></span><em>{sure(d.sn)}</em></li>
           ))}</ul>
         </section>
       )}
-
+      {!!p.haftaDersler?.length && (
+        <section className="v15-card apr15-kutu">
+          <h3>Bu hafta en çok çalıştığı</h3>
+          <ul>{p.haftaDersler.map((d, i) => <li key={i}><span><b>{d.ad}</b><small>{d.modul}</small></span><em>{sure(d.sn)}</em></li>)}</ul>
+        </section>
+      )}
+        </div>
+        <div className="apr15-kol">
       {!!p.siralamaBasari?.length && (
         <section className="v15-card apr15-kutu">
           <h3><Medal aria-hidden /> Sıralama başarıları <span className="apr15-say">{p.siralamaBasari.length}</span></h3>
@@ -181,41 +205,36 @@ export default function KisiProfilV15() {
           })}</ul>
         </section>
       )}
-
-      {moduller.length > 0 && modulToplam > 0 && (
+      {!!p.bitenler?.length && (
         <section className="v15-card apr15-kutu">
-          <h3>Çalışma dağılımı</h3>
-          <div className="apr15-yigin" aria-hidden>{moduller.map(([m, sn], i) => <i key={m} className={`is-r${i}`} style={{ width: `${(sn / modulToplam) * 100}%` }} />)}</div>
-          <ul className="apr15-lejant">{moduller.map(([m, sn], i) => <li key={m}><span><i className={`is-r${i}`} /> {m}</span><em>{sure(sn)} · %{Math.round((sn / modulToplam) * 100)}</em></li>)}</ul>
-        </section>
-      )}
-
-      {enCok.length > 1 && enCokMax > 0 && (
-        <section className="v15-card apr15-kutu">
-          <h3>En çok çalışılan dersler</h3>
-          <ul className="apr15-cubuk">{enCok.map((d, i) => (
-            <li key={i}><span><b>{d.ad}</b><i className="apr15-bar" aria-hidden><i style={{ width: `${Math.max(4, ((d.sn || 0) / enCokMax) * 100)}%` }} /></i></span><em>{sure(d.sn)}</em></li>
+          <h3><CheckCircle2 aria-hidden /> Bitirdiği dersler <span className="apr15-say">{p.bitenler.length}</span></h3>
+          <ul className="apr15-biten">{(bitenAcik ? p.bitenler : p.bitenler.slice(0, 6)).map((d, i) => (
+            <li key={i}><CheckCircle2 aria-hidden /><span><b>{d.ad}</b><small>{d.modul}{d.at ? ` · ${once(d.at)}` : ''}</small></span></li>
           ))}</ul>
-        </section>
-      )}
-
-      {!!p.haftaDersler?.length && (
-        <section className="v15-card apr15-kutu">
-          <h3>Bu hafta en çok çalıştığı</h3>
-          <ul>{p.haftaDersler.map((d, i) => <li key={i}><span><b>{d.ad}</b><small>{d.modul}</small></span><em>{sure(d.sn)}</em></li>)}</ul>
+          {p.bitenler.length > 6 && <button type="button" className="apr15-daha" onClick={() => setBitenAcik((v) => !v)}>{bitenAcik ? 'Daha az göster' : `Tümünü göster (${p.bitenler.length})`}</button>}
         </section>
       )}
       <section className="v15-card apr15-kutu">
-        <h3>Çalıştığı dersler</h3>
+        <h3><BookOpen aria-hidden /> Çalıştığı dersler{p.dersler?.length ? <span className="apr15-say">{p.dersler.length}</span> : null}</h3>
         {p.dersler?.length ? (
-          <ul>{p.dersler.map((d, i) => (
-            <li key={i}>
-              <span><b>{d.ad}</b><small>{d.modul}{d.bitti ? ' · bitirdi' : ''} · {once(d.at)}</small></span>
-              <em>{sure(d.sn)}{d.soru ? ` · ${d.soru} soru` : ''}</em>
-            </li>
-          ))}</ul>
+          <>
+            <ul>{(dersAcik ? p.dersler : p.dersler.slice(0, 5)).map((d, i) => (
+              <li key={i}>
+                <span><b>{d.ad}</b><small>{d.modul}{d.bitti ? ' · bitirdi' : ''} · {once(d.at)}</small></span>
+                <em>{sure(d.sn)}{d.soru ? ` · ${d.soru} soru` : ''}</em>
+              </li>
+            ))}</ul>
+            {p.dersler.length > 5 && <button type="button" className="apr15-daha" onClick={() => setDersAcik((v) => !v)}>{dersAcik ? 'Daha az göster' : `Tümünü göster (${p.dersler.length})`}</button>}
+          </>
         ) : <p className="apr15-not">Henüz ders çalışma kaydı yok. Sesli ders, Öğren ya da soru çözücüde çalışınca burada görünür.</p>}
       </section>
+        </div>
+      </div>
+
+
+
+
+
 
       {p.ben && <div className="is-tam"><GizlilikAnahtari /></div>}
       {davet && <DavetPencere kimlik={p.kimlik} ad={p.ad} kapat={() => setDavet(false)} />}
