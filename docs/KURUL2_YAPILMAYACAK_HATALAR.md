@@ -1833,3 +1833,31 @@ Her maddede: belirti · kök neden · Kurul 2 kuralı · kapı durumu. Kanıtlar
 - **Önleme:** Video değişikliğinden sonra `node meds/scripts/kmb/kare_onizle.mjs [ad…]` ile temas sayfası üretilir ve her
   cümle karesi metinle karşılaştırılır (rapor.json otomatik bulgu 0 olmalı). Etiket ≤30 harf; önemli öge (torba, meatus,
   kan) sahnenin alt %24'üne konmaz; alt kompozisyonda "son durum" gerekiyorsa `'once'` kullanılır, None değil.
+
+- **Arayüz: dense ızgarada boşluk (2026-10-31, profil):** farklı yükseklikteki kartlar `grid-auto-flow: dense` ile iki sütuna dizilince uzun kartın yanında büyük boşluk kalır. Kolonları açık kur (`.apr15-ikili > .apr15-kol`), uzun listeyi kısa açıp "Tümünü göster" ekle; düzeni gerçek veri büyüklüğüyle (40+ öğe) sına.
+
+## H461 — KMB video oynatıcı: tek dokunuş oynatmayı durduruyor ya da 10 sn sarıyordu (tam ekran dahil) (2026-10-31)
+
+- **Belirti:** Videoya (tam ekran ders videosunda da) tek dokunuş ya duraklatıyor ya da kenarlarda 10 sn ileri/geri sarıyordu;
+  öğrenci yalnız alttaki çubuğu gizlemek istediğinde bunu yapamıyordu. Sonraki sınamada iki ek kusur çıktı: (1) orta
+  düğme sırasındaki ±10 düğmeleri kenar bölgelerine taşıyor, kenara tek dokunuş yine görünür bir sarma düğmesine denk
+  geliyordu; (2) sağa seri sarmanın hemen ardından sola dokunmak tek başına geri sarıyordu. Ayrıca tam ekran açılamayınca
+  (iOS) ders videosu katmanı alttan 24 px kısa kalıyor, altında sitenin menüsü görünüyordu; zaman çubuğunda sarmak
+  otomatik geçişi kalıcı iptal ediyordu.
+- **Kök neden:** sahnede üç görünmez düğme (sol %25 / orta / sağ %25) vardı ve her biri tek tıkta eylem yapıyordu; dokunma
+  ile fare aynı kurala bağlıydı, dokunma sayısı ve hareket (basılı tutma, kaydırma) hiç ayırt edilmiyordu. Seri sarma
+  penceresi tarafı denetlemiyordu. v11.css'teki genel `[role=dialog] { max-height: vvh − 24px }` tam ekran katmanını da kısaltıyordu.
+- **Çözüm:** tek jest katmanı (`LottieVideo.tsx` `jestBas/jestKay/jestBit`, pointer olayları): DOKUNMATİK tek dokunuş
+  yalnız denetimleri gösterir/gizler (280 ms çift dokunuş beklenir), kenarda çift dokunuş ±10 sn ve 700 ms içinde aynı
+  kenara her dokunuş +10 (toplam rozetle), ortada çift dokunuş oynat/duraklat, basılı tutma 2×, yatay kaydırma sarar
+  (hedef süre + cümle balonu; dikey kaydırma sayfaya kalır, `touch-action: pan-y`). FARE tık oynat/duraklat, çift tık
+  tam ekran. Denetimler her kipte görüntünün üstünde yüzer, oynarken 3 sn sonra gizlenir (ince ilerleme çizgisi kalır);
+  ders videosunun üst şeridi aynı duruma bağlı (`onGoster`). Orta sıra: önceki cümle · oynat · sonraki cümle (±10 yok).
+  Cümle listesi menüsü, hız menüsü (0,75–2×), cümle parçalı zaman çubuğu + üzerinde süre/cümle önizlemesi, 0–9 tuşları,
+  dokunmatikte ilk oynatmada bir kez jest ipucu. Adım videosu bitince altında o adıma bağlı tek soru (`HizliKontrol`);
+  yanıtlanana dek geri sayım bekler, cevap Eksikler istatistiğine "Video sonu soruları" olarak yazılır. Sarma otomatik
+  geçişi iptal etmez (yalnız "Burada kal"). `.kmb-dv[role=dialog] { max-height: none }`.
+- **Önleme:** oynatıcıda görünmez tıklama bölgesi tek dokunuşta oynatma durumunu ya da konumu değiştirmez; konum/oynatma
+  değiştiren tek dokunuş yalnız görünür düğmededir ve görünür düğme çift dokunuş bölgesine (kenar %35) taşmaz. Jest
+  kuralları başsız Chrome dokunma olaylarıyla sınanır (26 senaryo: tek/çift/üçlü dokunuş, basılı tutma, kaydırma,
+  tam ekran, fare). Tam ekran/sabit katmanlar `[role=dialog]` taşıyorsa genel max-height'ı kapatır (H461, hucrem.css örneği).

@@ -1,18 +1,43 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
-  "onem": 611,
-  "baslik": "Profil sayfası daha derli toplu",
+  "onem": 612,
+  "baslik": "KMB video oynatıcı: dokunarak denetle, çift dokunarak sar, video sonu sorusu",
   "maddeler": [
-    "Profil: bilgisayarda boş alan bırakan düzen düzeltildi; kartlar iki dengeli sütunda.",
-    "Bitirilen ve çalışılan dersler kısa listeyle açılır, \"Tümünü göster\" ile genişler."
+    "Tek dokunuş artık videoyu durdurmaz ya da sarmaz; yalnız denetimleri açıp kapatır (tam ekranda da).",
+    "Kenara çift dokun ±10 sn (dokunmaya devam ettikçe +10), ortaya çift dokun oynat/duraklat, basılı tut 2× hız, yana kaydırarak sar.",
+    "Videoda cümle listesi, hız menüsü ve cümlelere bölünmüş zaman çubuğu; bilgisayarda tık oynat/duraklat, çift tık tam ekran.",
+    "Her adım videosunun sonunda o adımdan kısa bir soru; yanlışın Eksikler sekmesine eklenir."
   ],
-  "eklenen": [],
+  "eklenen": [
+    "Video jestleri: çift dokunuş, basılı tutma, kaydırma",
+    "Cümle listesi ve hız menüsü",
+    "Adım sonu kısa soru"
+  ],
   "degisen": [
-    "Profil sayfası iki sütun düzeni ve kısa listeler"
+    "KMB video denetimleri görüntünün üstünde, kendiliğinden gizlenir"
   ],
   "duzeltilen": [
-    "Profilde büyük boş alan ve çok yer kaplayan ders listeleri"
+    "Tek dokunuşun videoyu durdurması ya da 10 sn sarması",
+    "Tam ekran ders videosunun altında site menüsünün görünmesi",
+    "Sarınca otomatik geçişin kalıcı olarak kapanması"
   ],
   "silinen": [],
-  "yenilikler": []
+  "yenilikler": [
+    {
+      "ad": "Etkileşimli KMB video oynatıcı",
+      "nerede": {
+        "ad": "Ders çalış › KMB dersleri › Üretral kateter",
+        "yol": "/dersler/kmb/uretral-kateter"
+      },
+      "amac": "Videoyu telefonda parmakla rahatça yönetirsin; her adımın sonunda öğrendiğini hemen sınarsın.",
+      "islevler": [
+        "Tek dokunuş: denetimleri aç/kapat",
+        "Kenara çift dokunuş: ±10 sn, devam ettikçe +10",
+        "Basılı tut: 2× hız; yana kaydır: sar",
+        "Cümle listesi ve hız menüsü",
+        "Adım sonunda kısa soru, yanlışlar Eksikler sekmesine"
+      ],
+      "ipucu": "Bilgisayarda boşluk oynat/duraklat, ←/→ 10 sn, ↑/↓ cümle, 0–9 videonun o yüzdesine gider."
+    }
+  ]
 }

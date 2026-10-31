@@ -19,8 +19,8 @@ import '../../styles/kmb.css';
 export type { Adim, Ders, SesKayit } from './kmbVeri';
 import type { Ders, SesKayit, Basamak } from './kmbVeri';
 import { karistir, yollar, basamakAnahtar, IL, ilOku, ilYaz, ilAnahtar } from './kmbVeri';
-import { hataKaydet, useHata, zayifAdimlar } from './kmbHata';
-import Eksikler from './Eksikler';
+import { hataKaydet, useHata, zayifAdimlar, zayiflar } from './kmbHata';
+import Eksikler, { HizliKontrol, adimSorusu } from './Eksikler';
 
 const DERSLER = import.meta.glob('../../data/kmb/[0-9][0-9].json');
 const SESLER = import.meta.glob('../../data/kmb/ses_*.json');
@@ -136,17 +136,31 @@ function Ogret({ ders, ses, onBitir, onEksik }: { ders: Ders; ses: SesKayit | nu
   const [gorsel, setGorsel] = useState(false);
   const [video, setVideo] = useState(false);
   const [liste, setListe] = useState(false);
+  // adım videosu bitince altında tek soru (o adıma bağlı vaka/OSCE basamağı); yanıtlanana dek otomatik geçiş bekler
+  const [kontrol, setKontrol] = useState<'yok' | 'acik' | 'bitti'>('yok');
+  const kontrolRef = useRef<HTMLDivElement>(null);
   const vref = useRef<VideoTutamac>(null);
   const serit = useRef<HTMLDivElement>(null);
   const adim = ders.adimlar[ai];
   const v = LOTTILER.find((x) => x.adim === adim.id);
   const bi = v ? bolumAn(v, t) : -1;
   useEffect(() => {
-    ilYaz(anahtar(ders.kod, 'son'), ai); setT(0); setGorsel(false); setListe(false);
+    ilYaz(anahtar(ders.kod, 'son'), ai); setT(0); setGorsel(false); setListe(false); setKontrol('yok');
     const el = serit.current?.querySelector<HTMLElement>('.etkin');
     if (el && serit.current) serit.current.scrollTo({ left: el.offsetLeft - serit.current.clientWidth / 2 + el.clientWidth / 2, behavior: 'smooth' });
   }, [ai, ders.kod]);
   const sonraki = ders.adimlar[ai + 1];
+  // soru adım açılırken seçilir (aynı adımda video yeniden izlenince aynı soru); zayıf olan öne
+  const soru = useMemo(() => adimSorusu(ders, adim.id, new Set(zayiflar(hata).map((x) => x.id)), ai * 7 + new Date().getDate()),
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [ders, adim.id]);
+  const videoBitti = () => {
+    listeyeEkle(ders.kod, 'ogren', adim.id);
+    if (soru && kontrol === 'yok') {
+      setKontrol('acik');
+      window.setTimeout(() => kontrolRef.current?.scrollIntoView({ behavior: 'smooth', block: 'nearest' }), 60);
+    }
+  };
   const durum = useMemo(() => {
     let d: SahneDurum = {};
     adim.cumleler.forEach((c) => { d = uygula(d, c.eylem); });
@@ -187,9 +201,13 @@ function Ogret({ ders, ses, onBitir, onEksik }: { ders: Ders; ses: SesKayit | nu
         <section className="kmb-ogret-video">
           {v ? (
             <LottieVideo ref={vref} key={adim.id} ad={`adim-${adim.id}`} kod={ders.kod} ses={ses} otomatik={oynat} onZaman={setT}
-              onBitti={() => listeyeEkle(ders.kod, 'ogren', adim.id)} otoSonraki={otomatik ? 2000 : undefined}
+              onBitti={videoBitti} otoSonraki={otomatik ? 2000 : undefined}
+              bekle={kontrol === 'acik'} bekleMetin="Sıradaki adıma geçmeden videonun altındaki kısa soruyu yanıtla."
               sonraki={sonraki ? { ad: `adim-${sonraki.id}`, baslik: sonraki.baslik, git: () => git(ai + 1) } : undefined} />
           ) : <div className="kmb-sahne-kap"><SahneCiz sahne={adim.sahne} durum={durum} /></div>}
+          {kontrol === 'acik' && soru && (
+            <div ref={kontrolRef}><HizliKontrol key={soru.id} ders={ders} z={soru} onBitir={() => setKontrol('bitti')} /></div>
+          )}
           <div className="kmb-ogret-arac">
             <label className="kmb-oto"><input type="checkbox" checked={otomatik} onChange={(e) => setOtomatik(e.target.checked)} /> Bitince sonraki adıma geç</label>
             <button className="kmb-bag" onClick={() => setVideo(true)}>Tüm ders · tam ekran ›</button>

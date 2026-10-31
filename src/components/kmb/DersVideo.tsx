@@ -1,7 +1,7 @@
 /**
  * KMB ders videosu — dersin 18 adım videosu (adim_lottie.py: her cümle bir bölüm) tam ekranda art arda oynar. Her adım kendi
  * EMA sesiyle (o-<adım>) kendi oynatıcısında çalar; bir sonraki önceden yüklenir, bitince kendiliğinden geçilir (geçişte boş
- * kare/ses kayması olmaz). Üstte adım şeridi (atla), altta oynatıcının altyazısı ve denetimleri; sağ/sol 10 sn.
+ * kare/ses kayması olmaz). Üstte adım şeridi (atla), oynatıcının denetimleriyle birlikte açılıp gizlenir (`onGoster`; tek dokunuş ikisini birden).
  * İzlenen adımlar `izlendi` ile bildirilir (öğrenme yolu ilerlemesi).
  */
 import React, { useEffect, useRef, useState } from 'react';
@@ -16,8 +16,6 @@ export default function DersVideo({ ders, ses, bas = 0, onKapat, izlendi }: {
   const adimlar = ders.adimlar.filter((a) => LOTTILER.some((x) => x.adim === a.id));
   const [i, setI] = useState(Math.max(0, adimlar.findIndex((a) => a.id === ders.adimlar[bas]?.id)));
   const [uyanik, setUyanik] = useState(true);
-  const zaman = useRef(0);
-  const uyandir = () => { setUyanik(true); window.clearTimeout(zaman.current); zaman.current = window.setTimeout(() => setUyanik(false), 2800); };
   const a = adimlar[i];
   const sonraki = adimlar[i + 1];
 
@@ -25,7 +23,6 @@ export default function DersVideo({ ders, ses, bas = 0, onKapat, izlendi }: {
     kap.current?.requestFullscreen?.().catch(() => { /* izin yoksa katman pencereyi kaplar */ });
     try { (screen.orientation as any)?.lock?.('landscape').catch(() => {}); } catch { /* yönlendirme kilidi yok */ }
     document.body.style.overflow = 'hidden';
-    uyandir();
     return () => { document.body.style.overflow = ''; window.dispatchEvent(new CustomEvent(KMB_DURDUR, { detail: 'kapat' })); };
   }, []);
   useEffect(() => { if (sonraki) lottieOnYukle(`adim-${sonraki.id}`).catch(() => {}); }, [sonraki]);
@@ -36,7 +33,7 @@ export default function DersVideo({ ders, ses, bas = 0, onKapat, izlendi }: {
 
   // gövdeye portal: site içerik alanındaki CSS yakınlaştırması (uiZoom) sabit katmanı küçültmesin
   return createPortal(
-    <div ref={kap} className={`kmb-dv kmb-kok${uyanik ? '' : ' uyku'}`} onMouseMove={uyandir} onTouchStart={uyandir} role="dialog" aria-label={`Ders videosu: ${ders.ad}`} onKeyDown={(e) => { if (e.key === 'Escape') kapat(); }}>
+    <div ref={kap} className={`kmb-dv kmb-kok${uyanik ? '' : ' uyku'}`} role="dialog" aria-label={`Ders videosu: ${ders.ad}`} onKeyDown={(e) => { if (e.key === 'Escape') kapat(); }}>
       <div className="kmb-dv-ust">
         <div className="kmb-dv-serit" role="tablist" aria-label="Adımlar">
           {adimlar.map((x, j) => (
@@ -52,7 +49,7 @@ export default function DersVideo({ ders, ses, bas = 0, onKapat, izlendi }: {
       </div>
       <div className="kmb-dv-govde">
         <LottieVideo key={a.id} ad={`adim-${a.id}`} kod={ders.kod} ses={ses} otomatik doldur
-          onBitti={() => izlendi?.(a.id)} otoSonraki={600}
+          onBitti={() => izlendi?.(a.id)} otoSonraki={600} onGoster={setUyanik}
           sonraki={sonraki ? { ad: `adim-${sonraki.id}`, baslik: sonraki.baslik, git: ileri } : undefined} />
       </div>
     </div>,

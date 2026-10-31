@@ -66,8 +66,12 @@ bash meds/scripts/patoloji_cozucu/cozucu_ses_gpu.sh meds/scripts/kmb/ses.py 02  
 - Öğrenme yolu: İzle → Öğren → Hedefler → Sınav + **Eksikler** (`/dersler/kmb/<beceri>/eksik`).
 - Öğren: adım başlığı + önceki/sonraki + adım şeridi (yeşil izlendi, kırmızı sınavda eksik), tüm adımlar açılır panelde;
   video + eşzamanlı metin (cümleye dokun → video o cümleden), düzen `@container kmb` (dar: alt alta, ≥860 px: yan yana).
-- Oynatıcı (`LottieVideo.tsx`): tek dokunuş oynat/duraklat, kenarda çift dokunuş ±10 sn, önceki/sonraki cümle, hız/altyazı
-  tercihi hatırlanır, bitişte iptal edilebilir geri sayım (`otoSonraki`).
+- Oynatıcı (`LottieVideo.tsx`, H461): denetimler görüntünün üstünde, oynarken 3 sn sonra gizlenir. Dokunmatik: tek dokunuş
+  denetimleri aç/kapat (oynatmaya/konuma dokunmaz), kenarda çift dokunuş ±10 sn (seri: her dokunuş +10), ortada çift
+  dokunuş oynat/duraklat, basılı tut 2×, yana kaydır sar. Fare: tık oynat/duraklat, çift tık tam ekran. Orta sıra önceki
+  cümle · oynat · sonraki cümle; cümle listesi ve hız menüsü; zaman çubuğu cümle parçalı + önizleme; hız/altyazı tercihi
+  hatırlanır; bitişte geri sayım (`otoSonraki`, "Burada kal" iptal eder; `bekle` soruyu bekler).
+- Öğren'de adım videosu bitince o adıma bağlı tek soru (`Eksikler.tsx::HizliKontrol`), cevap istatistiğe "video" kaynağıyla.
 - Hata istatistiği (`kmbHata.ts`, `medsoru_kmb_hata_<kod>`, hesapla eşitlenir): vaka, OSCE sırası (basamak başına),
   kontrol listesi ("Atladım" = unutulan basamak), sahnede bul (görev başına ilk dokunuş), etiketleme (yapı başına ilk
   deneme), hedef anlatımı (öz değerlendirme). Kavram iki kez üst üste doğru yapılınca eksik listesinden düşer.

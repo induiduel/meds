@@ -218,92 +218,170 @@
 .kmb-hedef-video { margin-top: 10px; width: 100%; }
 .kmb-videolar { margin-top: 10px; }
 
-/* ———————— Video oynatıcı (LottieVideo). Sahne her zaman 8:5; denetimler normalde sahnenin ALTINDA kendi
-   satırında (üstüne binmez). Altyazı sahnenin içinde altta tek kutu. Tam ekranda denetimler sahnenin üstünde yüzer. */
-.kmb-lv { position: relative; display: flex; flex-direction: column; background: #0f141b; color: #eef2f7; border-radius: var(--kmb-r); overflow: hidden; outline: none; }
+/* ———————— Video oynatıcı (LottieVideo, 2026-10-31 H461 etkileşimli yeniden kurulum). Sahne her zaman 8:5 (tam ekranda
+   ekranı doldurur). Denetimler her kipte görüntünün ÜSTÜNDE yüzer; .gizli iken solar, yalnız alttaki ince ilerleme
+   çizgisi kalır. Altyazı denetimler açıkken çubuğun üstüne çıkar. Jest katmanı tüm sahneyi kaplar (kurallar TSX'te). */
+.kmb-lv { position: relative; display: flex; flex-direction: column; background: #0f141b; color: #eef2f7; border-radius: var(--kmb-r); overflow: hidden; outline: none;
+  --kmb-cubuk-h: 66px; -webkit-user-select: none; user-select: none; }
 .kmb-lv:focus-visible { box-shadow: 0 0 0 3px var(--kmb-ana); }
-.kmb-lv-sahne { position: relative; aspect-ratio: 8 / 5; background: #fff; overflow: hidden; container-type: inline-size; contain: layout paint; cursor: pointer; }
+.kmb-lv-sahne { position: relative; aspect-ratio: 8 / 5; background: #fff; overflow: hidden; container-type: inline-size; contain: layout paint; }
 .kmb-lv-lottie { position: absolute; inset: 0; }
 .kmb-lv-lottie canvas, .kmb-lv-lottie svg { width: 100% !important; height: 100% !important; display: block; }
 .kmb-lv-katman { position: absolute; inset: 0; z-index: 1; pointer-events: none; }
-.kmb-lv-etiket { position: absolute; transform: translate(-50%, -50%); padding: .3em .75em; border-radius: 999px; background: #1f2a3a; color: #fff;
+.kmb-lv-etiket { position: absolute; transform: translate(-50%, -50%); padding: .3em .75em; border-radius: .9em; background: #1f2a3a; color: #fff;
   font-size: clamp(10px, 2cqi, 20px); font-weight: 600; line-height: 1.25; text-align: center; width: max-content; max-width: 40cqi; overflow-wrap: anywhere;
   box-shadow: 0 2px 6px rgba(0, 0, 0, .2); animation: kmb-belir .3s ease-out; }
-.kmb-lv-etiket { border-radius: .9em; }
 .kmb-lv-etiket.bilgi { background: #2f6fd6; }
 .kmb-lv-etiket.uyari { background: #c0392b; }
 .kmb-lv-etiket.dogru { background: #2e9e5b; }
 .kmb-lv-sayac { position: absolute; transform: translate(-50%, -50%); padding: .25em .6em; border-radius: 8px; background: rgba(15, 20, 27, .85); color: #ffd866;
   font: 700 clamp(11px, 2.6cqi, 30px) var(--font-mono, ui-monospace, monospace); }
-.kmb-lv-alan { position: absolute; top: 0; bottom: 0; z-index: 2; border: 0; background: transparent; padding: 0; cursor: pointer; -webkit-tap-highlight-color: transparent; }
-.kmb-lv-alan.sol { left: 0; width: 25%; }
-.kmb-lv-alan.orta { left: 25%; right: 25%; }
-.kmb-lv-alan.sag { right: 0; width: 25%; }
-.kmb-lv-atlama { position: absolute; top: 50%; z-index: 4; transform: translate(-50%, -50%); padding: 8px 14px; border-radius: 999px; background: rgba(15, 20, 27, .72); color: #fff;
-  font-size: 14px; font-weight: 700; pointer-events: none; animation: kmb-belir .2s ease-out; }
-.kmb-lv-atlama.geri { left: 16%; }
-.kmb-lv-atlama.ileri { left: 84%; }
-.kmb-lv-buyuk-oynat { position: absolute; left: 50%; top: 50%; z-index: 3; transform: translate(-50%, -50%); width: clamp(48px, 14cqi, 72px); aspect-ratio: 1; border-radius: 50%;
-  background: rgba(15, 20, 27, .62); color: #fff; display: grid; place-items: center; pointer-events: none; }
-.kmb-lv-buyuk-oynat svg { width: 46%; margin-left: 6%; }
-.kmb-lv-altyazi { position: absolute; left: 0; right: 0; bottom: 0; z-index: 3; display: flex; justify-content: center; padding: 0 5% 2.5%; pointer-events: none;
+
+/* jest katmanı: dikey kaydırma sayfaya kalır (pan-y), yatay hareket sarmaya; tam ekranda tüm hareket oynatıcının */
+.kmb-lv-jest { position: absolute; inset: 0; z-index: 2; touch-action: pan-y; cursor: pointer; -webkit-tap-highlight-color: transparent; -webkit-touch-callout: none; }
+.kmb-lv.tam .kmb-lv-jest, .kmb-lv.doldur .kmb-lv-jest { touch-action: none; }
+.kmb-lv.calan.gizli .kmb-lv-jest { cursor: none; }
+
+/* orta düğmeler: −10 · oynat/duraklat · +10 */
+.kmb-lv-orta { position: absolute; left: 50%; top: 50%; z-index: 4; transform: translate(-50%, calc(-50% - var(--kmb-cubuk-h) / 3)); display: flex; align-items: center; gap: clamp(8px, 3cqi, 22px);
+  pointer-events: none; animation: kmb-belir .18s ease-out; }
+.kmb-lv-orta button { pointer-events: auto; border: 0; border-radius: 50%; display: grid; place-items: center; color: #fff; cursor: pointer; background: rgba(15, 20, 27, .55);
+  backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px); transition: transform .12s, background .2s; }
+.kmb-lv-orta button:active { transform: scale(.92); }
+.kmb-lv-orta button.ana { width: clamp(52px, 15cqi, 76px); aspect-ratio: 1; }
+.kmb-lv-orta button.ana svg { width: 48%; fill: currentColor; }
+.kmb-lv-orta button.yan { position: relative; width: clamp(40px, 10cqi, 54px); aspect-ratio: 1; }
+.kmb-lv-orta button.yan svg { width: 62%; fill: currentColor; }
+.kmb-lv-orta button.yan svg { width: 46%; }
+.kmb-lv-orta button:disabled { opacity: .35; }
+/* fareli cihazda oynarken orta düğmeler gizli (tık zaten oynat/duraklat); durgunken büyük oynat görünür */
+@media (hover: hover) and (pointer: fine) { .kmb-lv-orta:not(.durgun) { display: none; } .kmb-lv-orta.durgun .yan { display: none; } }
+
+.kmb-lv-jest-ipucu { position: absolute; left: 50%; top: 10px; z-index: 7; transform: translateX(-50%); display: flex; flex-wrap: wrap; justify-content: center; gap: 4px 12px;
+  width: min(92%, 520px); padding: 8px 12px; border: 0; border-radius: 12px; background: rgba(15, 20, 27, .82); color: #fff; font: 12px var(--font-sans, inherit); cursor: pointer; animation: kmb-belir .25s ease-out; }
+.kmb-lv-jest-ipucu b { color: #ffd866; font-weight: 700; }
+/* geri bildirim rozetleri */
+.kmb-lv-atlama { position: absolute; top: 50%; z-index: 5; transform: translate(-50%, -50%); display: flex; align-items: center; gap: 6px; padding: 10px 16px; border-radius: 999px;
+  background: rgba(15, 20, 27, .72); color: #fff; font-size: clamp(13px, 2.6cqi, 18px); font-weight: 800; pointer-events: none; animation: kmb-nabiz .35s ease-out; }
+.kmb-lv-atlama svg { width: 1.3em; fill: currentColor; }
+.kmb-lv-atlama.geri { left: 18%; }
+.kmb-lv-atlama.ileri { left: 82%; }
+@keyframes kmb-nabiz { from { opacity: .3; transform: translate(-50%, -50%) scale(.85); } }
+.kmb-lv-rozet { position: absolute; top: 10px; left: 50%; z-index: 5; transform: translateX(-50%); padding: 5px 12px; border-radius: 999px; background: rgba(15, 20, 27, .75);
+  color: #fff; font-size: 13px; font-weight: 800; pointer-events: none; }
+.kmb-lv-kayma { position: absolute; left: 50%; top: 42%; z-index: 5; transform: translate(-50%, -50%); display: flex; flex-direction: column; align-items: center; gap: 2px;
+  padding: 10px 18px; border-radius: 14px; background: rgba(15, 20, 27, .78); color: #fff; font: 600 clamp(14px, 3cqi, 20px) var(--font-mono, monospace); pointer-events: none; }
+.kmb-lv-kayma b { font-size: 1.25em; }
+.kmb-lv-kayma small { font: 600 12px var(--font-sans, inherit); opacity: .85; }
+.kmb-lv-isik { position: absolute; left: 50%; top: 50%; z-index: 5; width: clamp(48px, 13cqi, 68px); aspect-ratio: 1; border-radius: 50%; display: grid; place-items: center;
+  background: rgba(15, 20, 27, .55); color: #fff; pointer-events: none; animation: kmb-isik .5s ease-out forwards; }
+.kmb-lv-isik svg { width: 46%; fill: currentColor; }
+@keyframes kmb-isik { from { opacity: 1; transform: translate(-50%, -50%) scale(.8); } to { opacity: 0; transform: translate(-50%, -50%) scale(1.25); } }
+
+/* altyazı: denetimler açıkken çubuğun üstünde, kapalıyken en altta */
+.kmb-lv-altyazi { position: absolute; left: 0; right: 0; bottom: calc(var(--kmb-cubuk-h) + 4px); z-index: 3; display: flex; justify-content: center; padding: 0 5%; pointer-events: none;
   font-size: clamp(11px, 2.3cqi, 20px); transition: opacity .25s, bottom .25s; }
+.kmb-lv.gizli .kmb-lv-altyazi { bottom: 3.5%; }
 .kmb-lv-altyazi span { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden; max-width: min(900px, 92%);
   padding: .25em .7em; border-radius: 6px; background: rgba(15, 20, 27, .72); color: #fff; text-align: center; line-height: 1.4; }
 .kmb-lv-altyazi.sessiz { opacity: 0; }
-.kmb-lv-son { position: absolute; inset: 0; z-index: 5; display: flex; flex-direction: column; gap: 8px; align-items: center; justify-content: center; padding: 16px; background: rgba(15, 20, 27, .62); color: #fff; }
-.kmb-lv-son-bas { margin: 0; font-size: 13px; opacity: .85; }
+
+/* bitiş ekranı */
+.kmb-lv-son { position: absolute; inset: 0; z-index: 6; display: flex; flex-direction: column; gap: 8px; align-items: center; justify-content: center; padding: 16px 16px calc(var(--kmb-cubuk-h) + 8px);
+  background: rgba(15, 20, 27, .62); color: #fff; }
+.kmb-lv-son-bas { margin: 0; font-size: 13px; opacity: .9; text-align: center; }
 .kmb-lv-son-alt { display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; }
 .kmb-lv-son button { position: relative; border: 0; border-radius: 12px; padding: 10px 16px; font-size: 14px; font-weight: 600; cursor: pointer; background: rgba(255, 255, 255, .92); color: #1b2330; max-width: min(100%, 520px); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .kmb-lv-son button.ana { background: var(--kmb-ana); color: #fff; font-size: 15px; padding: 12px 18px; }
 /* geri sayım: düğmenin altında dolan çubuk (süre --kmb-gs) */
 .kmb-lv-son button.geri-say::after { content: ''; position: absolute; left: 0; bottom: 0; height: 3px; width: 100%; background: rgba(255, 255, 255, .85); transform-origin: left; animation: kmb-gs var(--kmb-gs, 2s) linear both; }
 @keyframes kmb-gs { from { transform: scaleX(0); } to { transform: scaleX(1); } }
-@container (max-width: 420px) { .kmb-lv-son { gap: 6px; padding: 8px; } .kmb-lv-son button { padding: 8px 12px; font-size: 13px; } .kmb-lv-son-bas { display: none; } }
-.kmb-lv-ust { position: absolute; inset: 0 0 auto 0; z-index: 6; display: flex; align-items: center; gap: 12px; padding: max(10px, env(safe-area-inset-top)) 14px 22px;
+@container (max-width: 420px) { .kmb-lv-son { gap: 6px; padding: 8px 8px calc(var(--kmb-cubuk-h) + 4px); } .kmb-lv-son button { padding: 8px 12px; font-size: 13px; } }
+
+.kmb-lv-ust { position: absolute; inset: 0 0 auto 0; z-index: 7; display: flex; align-items: center; gap: 12px; padding: max(10px, env(safe-area-inset-top)) 14px 22px;
   background: linear-gradient(rgba(15, 20, 27, .6), transparent); color: #fff; transition: opacity .3s; }
 .kmb-lv-ust b { flex: 1; min-width: 0; font-size: 16px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.kmb-lv-ust button { flex: none; width: 40px; height: 40px; border-radius: 50%; border: 0; background: rgba(255, 255, 255, .18); color: #fff; font-size: 17px; cursor: pointer; }
+.kmb-lv-ust button { flex: none; width: 40px; height: 40px; border-radius: 50%; border: 0; background: rgba(255, 255, 255, .18); color: #fff; cursor: pointer; display: grid; place-items: center; }
+.kmb-lv-ust button svg { width: 20px; fill: currentColor; }
 
-/* denetim çubuğu */
-.kmb-lv-cubuk { padding: 2px 8px 4px; background: #0f141b; transition: opacity .3s; }
-.kmb-lv-zaman { position: relative; height: 22px; touch-action: none; }
-.kmb-lv-iz { position: absolute; left: 4px; right: 4px; top: 9px; height: 4px; border-radius: 2px; background: rgba(255, 255, 255, .22); }
-.kmb-lv-dolu { position: absolute; left: 0; top: 0; bottom: 0; border-radius: 2px; background: var(--kmb-ana); }
-.kmb-lv-bolum-isaret { position: absolute; top: 0; width: 2px; height: 4px; margin-left: -1px; background: #0f141b; }
-.kmb-lv-tutamac { position: absolute; top: 5px; width: 12px; height: 12px; margin-left: -2px; border-radius: 50%; background: #fff; transform: translateX(-50%); pointer-events: none; box-shadow: 0 1px 3px rgba(0, 0, 0, .4); }
+/* cümle ve hız menüsü: sahnenin sağında açılır panel */
+.kmb-lv-menu { position: absolute; z-index: 8; right: 8px; top: 8px; bottom: calc(var(--kmb-cubuk-h) + 6px); width: min(420px, calc(100% - 16px)); display: flex; flex-direction: column;
+  border-radius: 14px; background: rgba(15, 20, 27, .92); color: #eef2f7; box-shadow: 0 10px 30px rgba(0, 0, 0, .35); animation: kmb-belir .18s ease-out; overflow: hidden; }
+.kmb-lv-menu.kucuk { width: 180px; bottom: auto; }
+.kmb-lv-menu .bas { display: flex; align-items: center; justify-content: space-between; padding: 8px 8px 6px 14px; font-size: 14px; }
+.kmb-lv-menu .bas button { width: 34px; height: 34px; border: 0; border-radius: 50%; background: rgba(255, 255, 255, .1); color: inherit; display: grid; place-items: center; cursor: pointer; }
+.kmb-lv-menu .bas svg { width: 18px; fill: currentColor; }
+.kmb-lv-menu ol { list-style: none; margin: 0; padding: 0 6px 8px; overflow: auto; overscroll-behavior: contain; }
+.kmb-lv-menu li button { width: 100%; display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 10px; align-items: baseline; text-align: left; border: 0; background: none; color: inherit;
+  padding: 8px 8px; border-radius: 10px; font-size: 13.5px; line-height: 1.4; cursor: pointer; }
+.kmb-lv-menu.kucuk li button { grid-template-columns: 1fr; font-size: 14px; }
+.kmb-lv-menu li button:hover { background: rgba(255, 255, 255, .08); }
+.kmb-lv-menu li button.etkin { background: color-mix(in srgb, var(--kmb-ana) 45%, transparent); }
+.kmb-lv-menu .z { font: 12px var(--font-mono, monospace); opacity: .75; }
+
+/* ince ilerleme (denetimler gizliyken) */
+.kmb-lv-ince { position: absolute; left: 0; right: 0; bottom: 0; z-index: 3; height: 3px; background: rgba(15, 20, 27, .18); opacity: 0; transition: opacity .25s; pointer-events: none; }
+.kmb-lv-ince i { display: block; height: 100%; background: var(--kmb-ana); }
+.kmb-lv.gizli .kmb-lv-ince { opacity: 1; }
+
+/* denetim çubuğu: her kipte görüntünün üstünde yüzer */
+.kmb-lv-cubuk { position: absolute; left: 0; right: 0; bottom: 0; z-index: 6; padding: 18px 8px 4px; background: linear-gradient(transparent, rgba(15, 20, 27, .82) 45%);
+  transition: opacity .25s, transform .25s; }
+.kmb-lv.gizli .kmb-lv-cubuk { opacity: 0; transform: translateY(8px); pointer-events: none; }
+.kmb-lv.gizli .kmb-lv-ust { opacity: 0; pointer-events: none; }
+.kmb-lv-zaman { position: relative; height: 24px; touch-action: none; }
+.kmb-lv-iz { position: absolute; left: 4px; right: 4px; top: 10px; height: 4px; transition: height .15s, top .15s; }
+.kmb-lv-zaman:hover .kmb-lv-iz, .kmb-lv-zaman:active .kmb-lv-iz { top: 9px; height: 6px; }
+/* zaman çubuğu cümle parçaları: aralarında ince boşluk, oynayan cümle biraz daha parlak */
+.kmb-lv-parca { position: absolute; top: 0; bottom: 0; padding-right: 2px; }
+.kmb-lv-parca::before { content: ''; position: absolute; inset: 0 2px 0 0; border-radius: 2px; background: rgba(255, 255, 255, .25); }
+.kmb-lv-parca.etkin::before { background: rgba(255, 255, 255, .38); }
+.kmb-lv-parca i { position: absolute; left: 0; top: 0; bottom: 0; max-width: calc(100% - 2px); border-radius: 2px; background: var(--kmb-ana); }
+.kmb-lv-tutamac { position: absolute; top: 6px; width: 14px; height: 14px; border-radius: 50%; background: #fff; transform: translateX(-50%); pointer-events: none; box-shadow: 0 1px 3px rgba(0, 0, 0, .4); transition: transform .15s; }
+.kmb-lv-zaman:active .kmb-lv-tutamac { transform: translateX(-50%) scale(1.25); }
 .kmb-lv-zaman input { position: absolute; inset: 0; width: 100%; height: 100%; margin: 0; opacity: 0; cursor: pointer; }
+.kmb-lv-onizle { position: absolute; bottom: 30px; z-index: 2; transform: translateX(-50%); width: max-content; max-width: 140px; display: flex; flex-direction: column; align-items: center;
+  padding: 5px 9px; border-radius: 8px; background: rgba(15, 20, 27, .92); color: #fff; pointer-events: none; text-align: center; }
+.kmb-lv-onizle b { font: 700 12px var(--font-mono, monospace); }
+.kmb-lv-onizle small { font-size: 11px; line-height: 1.3; opacity: .85; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden; }
+@media (hover: none) { .kmb-lv-onizle { display: none; } }
 .kmb-lv-dugmeler { display: flex; align-items: center; gap: 2px; min-width: 0; }
 .kmb-lv-dugmeler button { flex: none; display: grid; place-items: center; min-width: 40px; height: 40px; padding: 0 8px; border: 0; border-radius: 10px; background: none; color: #eef2f7; cursor: pointer; font-size: 13px; font-weight: 700; }
-.kmb-lv-dugmeler button:hover { background: rgba(255, 255, 255, .1); }
-.kmb-lv-dugmeler button svg { width: 22px; height: 22px; }
+.kmb-lv-dugmeler button:hover { background: rgba(255, 255, 255, .12); }
+.kmb-lv-dugmeler button svg { width: 22px; height: 22px; fill: currentColor; }
 .kmb-lv-dugmeler button.etkin { color: #ffd866; }
 .kmb-lv-dugmeler button:disabled { opacity: .35; cursor: default; }
 .kmb-lv-dugmeler button.kmb-lv-bol svg { width: 18px; height: 18px; }
-.kmb-lv-sure { flex: none; font: 12px var(--font-mono, ui-monospace, monospace); opacity: .85; padding: 0 4px; font-variant-numeric: tabular-nums; }
+.kmb-lv-sure { flex: none; font: 12px var(--font-mono, ui-monospace, monospace); opacity: .9; padding: 0 4px; font-variant-numeric: tabular-nums; }
 .kmb-lv-baslik { flex: 1; min-width: 0; font-size: 12px; opacity: .7; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; padding: 0 4px; }
 .kmb-lv.kompakt .kmb-lv-baslik { display: none; }
 .kmb-lv.kompakt .kmb-lv-sure { margin-right: auto; }
+/* dar oynatıcı: önceki/sonraki cümle düğmeleri menüye bırakılır, süre yanında boşluk */
+@container kmb (max-width: 520px) {
+  .kmb-lv:not(.tam):not(.doldur) .kmb-lv-bol { display: none; }
+  .kmb-lv:not(.tam):not(.doldur) .kmb-lv-baslik { display: none; }
+  .kmb-lv:not(.tam):not(.doldur) .kmb-lv-sure { margin-right: auto; }
+  .kmb-lv:not(.tam):not(.doldur) .kmb-lv-dugmeler button { min-width: 36px; padding: 0 5px; }
+}
 
-/* tam ekran (gerçek ya da iOS sahte) ve ders videosu (doldur): sahne alanı ekranı kaplar, görüntü ortalanır; denetimler üstte yüzer */
-.kmb-lv.tam, .kmb-lv.doldur { width: 100%; height: 100%; border-radius: 0; background: #fff; }
+/* tam ekran (gerçek ya da iOS sahte) ve ders videosu (doldur): sahne alanı ekranı kaplar, görüntü ortalanır */
+.kmb-lv.tam, .kmb-lv.doldur { width: 100%; height: 100%; border-radius: 0; background: #fff; --kmb-cubuk-h: 78px; }
 .kmb-lv.sahte { position: fixed; inset: 0; z-index: 2147483001; height: 100dvh; }
 .kmb-lv.tam .kmb-lv-sahne, .kmb-lv.doldur .kmb-lv-sahne { flex: 1; aspect-ratio: auto; min-height: 0; }
-.kmb-lv.tam .kmb-lv-cubuk, .kmb-lv.doldur .kmb-lv-cubuk { position: absolute; left: 0; right: 0; bottom: 0; z-index: 6; padding: 24px max(12px, env(safe-area-inset-right)) max(6px, env(safe-area-inset-bottom)) max(12px, env(safe-area-inset-left));
-  background: linear-gradient(transparent, rgba(15, 20, 27, .78)); }
-.kmb-lv.tam .kmb-lv-altyazi, .kmb-lv.doldur .kmb-lv-altyazi { bottom: 76px; padding-bottom: 0; font-size: clamp(13px, min(1.7vw, 3vh), 22px); }
+.kmb-lv.tam .kmb-lv-cubuk, .kmb-lv.doldur .kmb-lv-cubuk { padding: 28px max(12px, env(safe-area-inset-right)) max(8px, env(safe-area-inset-bottom)) max(12px, env(safe-area-inset-left)); }
+.kmb-lv.tam .kmb-lv-altyazi, .kmb-lv.doldur .kmb-lv-altyazi { font-size: clamp(13px, min(1.7vw, 3vh), 22px); }
 .kmb-lv.tam.gizli .kmb-lv-altyazi, .kmb-lv.doldur.gizli .kmb-lv-altyazi { bottom: max(14px, env(safe-area-inset-bottom)); }
 .kmb-lv.tam .kmb-lv-etiket, .kmb-lv.doldur .kmb-lv-etiket { font-size: clamp(11px, 1.5cqi, 20px); }
-.kmb-lv.tam.gizli .kmb-lv-cubuk, .kmb-lv.doldur.gizli .kmb-lv-cubuk, .kmb-lv.tam.gizli .kmb-lv-ust { opacity: 0; pointer-events: none; }
-.kmb-lv.tam.gizli, .kmb-lv.doldur.gizli { cursor: none; }
 @media (max-height: 520px) {
-  .kmb-lv.tam .kmb-lv-altyazi, .kmb-lv.doldur .kmb-lv-altyazi { bottom: 62px; }
-  .kmb-lv.tam .kmb-lv-altyazi span, .kmb-lv.doldur .kmb-lv-altyazi span { -webkit-line-clamp: 1; }
+  .kmb-lv.tam, .kmb-lv.doldur { --kmb-cubuk-h: 64px; }
   .kmb-lv.tam .kmb-lv-cubuk, .kmb-lv.doldur .kmb-lv-cubuk { padding-top: 14px; }
 }
 
 /* ———————— Ders videosu (DersVideo): tam ekran kabuk; üst şerit sahnenin üstünde yüzer, hareketsizlikte gizlenir */
 .kmb-dv, .kmb-dv.kmb-kok { position: fixed; inset: 0; z-index: 2147483000; max-width: none; margin: 0; padding: 0; width: auto; height: auto; background: #fff; color: #1b2330; display: flex; flex-direction: column; }
+/* genel [role=dialog] max-height (v11.css: vvh − 24px) tam ekran katmanını alttan kısaltıyordu; tam ekran açılamayınca (iOS)
+   altta sitenin menüsü görünüyordu (H461) */
+.kmb-dv.kmb-dv[role="dialog"] { max-height: none; }
 .kmb-dv-govde { position: absolute; inset: 0; }
 .kmb-dv-govde > .kmb-lv { position: absolute; inset: 0; }
 .kmb-dv-ust { position: absolute; left: 0; right: 0; top: 0; z-index: 8; display: grid; grid-template-columns: minmax(0, 1fr) auto; grid-template-areas: "serit serit" "baslik dugmeler"; gap: 6px 10px; align-items: center;
@@ -421,6 +499,11 @@
 .kmb-kontrol-sonuc { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 10px 14px; border-radius: var(--kmb-r); background: var(--kmb-alan); }
 .kmb-kontrol-sonuc.gecti { background: var(--color-ok-soft, #dff3e7); }
 .kmb-kontrol-sonuc.kaldi { background: var(--color-warn-soft, #fdf0d5); }
+
+.kmb-hizli { margin-top: 10px; padding: 12px 14px; border-radius: var(--kmb-r); border: 1px solid color-mix(in srgb, var(--kmb-ana) 35%, var(--kmb-cizgi));
+  background: color-mix(in srgb, var(--kmb-ana) 6%, var(--kmb-yuzey)); display: flex; flex-direction: column; gap: 8px; animation: kmb-belir .25s ease-out; }
+.kmb-hizli h3 { margin: 0; font-size: 16px; line-height: 1.4; }
+.kmb-hizli .kmb-denetim { margin-top: 2px; }
 
 /* ———————— Eksiklerim: hata istatistiği + hedefli tekrar (Eksikler.tsx) */
 .kmb-eks, .kmb-eks-tekrar { display: flex; flex-direction: column; gap: 12px; min-width: 0; }

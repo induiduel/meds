@@ -8,13 +8,13 @@
  */
 import { useEffect, useState } from 'react';
 
-export type Kaynak = 'vaka' | 'sira' | 'kontrol' | 'bul' | 'etiket' | 'hedef' | 'tekrar';
+export type Kaynak = 'vaka' | 'sira' | 'kontrol' | 'bul' | 'etiket' | 'hedef' | 'tekrar' | 'video';
 export type KavramTur = 'basamak' | 'vaka' | 'yapi' | 'hedef';
 export type Kavram = { tur: KavramTur; ad: string; adim?: string; y: number; d: number; seri: number; t: number; son: Kaynak };
 export type HataVeri = { k: Record<string, Kavram>; s: Partial<Record<Kaynak, [number, number]>>; g: Record<string, [number, number]> };
 
 export const KAYNAK_AD: Record<Kaynak, string> = {
-  vaka: 'Vaka soruları', sira: 'OSCE sırası', kontrol: 'Kontrol listesi', bul: 'Sahnede bul', etiket: 'Etiketleme', hedef: 'Hedef anlatımı', tekrar: 'Eksik tekrarı',
+  vaka: 'Vaka soruları', sira: 'OSCE sırası', kontrol: 'Kontrol listesi', bul: 'Sahnede bul', etiket: 'Etiketleme', hedef: 'Hedef anlatımı', tekrar: 'Eksik tekrarı', video: 'Video sonu soruları',
 };
 const OLAY = 'kmb-hata';
 const anahtar = (kod: string) => `medsoru_kmb_hata_${kod}`;

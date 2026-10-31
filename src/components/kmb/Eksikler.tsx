@@ -9,9 +9,9 @@ import React, { useMemo, useState } from 'react';
 import { SAHNELER, SahneCiz, type SahneDurum } from './sahneler';
 import { uygula } from './eylem';
 import { KAYNAK_AD, hataKaydet, hataSifirla, ozet, useHata, zayiflar, type Kaynak, type Kavram } from './kmbHata';
-import { karistir, yollar, type Basamak, type Ders } from './kmbVeri';
+import { basamakAnahtar, karistir, yollar, type Basamak, type Ders } from './kmbVeri';
 
-type Z = Kavram & { id: string };
+export type Z = Kavram & { id: string };
 
 function Ozet({ ders, onTekrar, adimaGit }: { ders: Ders; onTekrar: () => void; adimaGit: (adim: string) => void }) {
   const v = useHata(ders.kod);
@@ -278,4 +278,57 @@ export default function Eksikler({ ders, adimaGit }: { ders: Ders; adimaGit: (ad
   const [tekrar, setTekrar] = useState<Z[] | null>(null);
   if (tekrar) return <Tekrar ders={ders} liste={tekrar} onBitir={() => setTekrar(null)} adimaGit={adimaGit} />;
   return <Ozet ders={ders} onTekrar={() => setTekrar(zayiflar(v).slice(0, 10))} adimaGit={adimaGit} />;
+}
+
+/** Öğren'de adım videosu bitince altında çıkan tek soru: o adıma bağlı (sınav ögesi `adim`) vaka ya da OSCE basamağı.
+ *  Önce zayıf olan seçilir; cevap hata istatistiğine "Video sonu soruları" olarak yazılır. Soru yoksa null döner. */
+export function adimSorusu(ders: Ders, adim: string, zayifIdler: Set<string>, tohum: number): Z | null {
+  const aday: Z[] = [];
+  const bos = { y: 0, d: 0, seri: 0, t: 0, son: 'video' as const };
+  for (const s of ders.sinav.senaryolar) if (s.adim === adim) aday.push({ id: `v:${s.id}`, tur: 'vaka', ad: s.baslik, adim, ...bos });
+  for (const ak of ders.sinav.akislar) {
+    const gez = (L: Basamak[]) => L.forEach((b) => {
+      if (b.adim === adim) aday.push({ id: basamakAnahtar(ak.id, b), tur: 'basamak', ad: b.metin, adim, ...bos });
+      b.dal?.yollar.forEach((y) => gez(y.basamaklar));
+    });
+    gez(ak.basamaklar);
+  }
+  const tekil = [...new Map(aday.map((z) => [z.id, z])).values()];
+  if (!tekil.length) return null;
+  const once = tekil.filter((z) => zayifIdler.has(z.id));
+  const L = once.length ? once : tekil;
+  return L[tohum % L.length];
+}
+
+export function HizliKontrol({ ders, z, onBitir }: { ders: Ders; z: Z; onBitir: () => void }) {
+  const [tohum] = useState(() => Date.now() % 10000);
+  const s = useMemo(() => soruKur(ders, z, tohum), [ders, z, tohum]);
+  const [cevap, setCevap] = useState<{ dogru: boolean; secim: number } | null>(null);
+  if (!s || (s.tur !== 'basamak' && s.tur !== 'vaka')) return null;
+  const secenekler = s.tur === 'basamak' ? s.secenekler.map((m) => ({ metin: m, dogru: m === s.dogru, aciklama: '' })) : s.s.secenekler;
+  const yanitla = (j: number) => {
+    if (cevap) return;
+    const d = secenekler[j].dogru;
+    setCevap({ dogru: d, secim: j });
+    hataKaydet(ders.kod, z.id, d, 'video', { tur: z.tur, ad: z.ad, adim: z.adim });
+  };
+  return (
+    <section className="kmb-hizli" aria-label="Hızlı kontrol">
+      <p className="kmb-eks-etiket">Hızlı kontrol · bu adımdan</p>
+      <h3>{s.tur === 'basamak' ? s.soru : s.s.soru}</h3>
+      <div className="kmb-secenekler">
+        {secenekler.map((c, j) => (
+          <button key={j} disabled={!!cevap} onClick={() => yanitla(j)} className={!cevap ? '' : c.dogru ? 'dogru' : cevap.secim === j ? 'yanlis' : 'soluk'}>
+            <b>{'ABCDE'[j]}</b> {c.metin}
+            {cevap && c.aciklama && (cevap.secim === j || c.dogru) && <span className="kmb-aciklama">{c.aciklama}</span>}
+          </button>
+        ))}
+      </div>
+      {cevap && s.tur === 'basamak' && <div className={`kmb-kutu ${cevap.dogru ? 'puf' : 'dikkat'}`}><b>{cevap.dogru ? 'Doğru' : `Doğrusu: ${s.dogru}`}</b><p>{s.b.aciklama}</p></div>}
+      <div className="kmb-denetim">
+        {cevap ? <button className="ana" onClick={onBitir}>Devam ›</button> : <button onClick={onBitir}>Şimdilik geç</button>}
+        {cevap && !cevap.dogru && <span className="kmb-sayac">Eksiklerine eklendi</span>}
+      </div>
+    </section>
+  );
 }
