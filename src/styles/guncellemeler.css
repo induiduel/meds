@@ -121,3 +121,43 @@
   .gg-kart { padding: 12px 14px; }
   .gg-dosya { margin-left: 0; }
 }
+
+/* ── Sürüm notu ortak (SurumNotu.tsx): vitrin, yenilik kartları, açılış penceresi ── */
+.gg-vitrin { display: flex; flex-direction: column; gap: 12px; padding: 18px; border-radius: 18px; border: 1px solid color-mix(in srgb, var(--color-accent) 28%, var(--color-line)); background: linear-gradient(160deg, var(--color-accent-soft), var(--color-white) 62%); }
+.gg-vitrin-ust { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px; font-size: 12px; font-weight: 600; color: var(--color-accent); letter-spacing: .02em; text-transform: uppercase; }
+.gg-vitrin-ust span + span { color: var(--color-ink-3); text-transform: none; font-weight: 500; letter-spacing: 0; }
+.gg-vitrin h2 { font: 680 21px/1.2 var(--font-sans); letter-spacing: -.015em; }
+
+.sn-liste { display: grid; gap: 10px; }
+.sn-kart { display: flex; flex-direction: column; gap: 8px; padding: 14px 15px; border-radius: 14px; border: 1px solid var(--color-line); background: var(--color-white); text-align: left; }
+.sn-ad { margin: 0; font: 650 15.5px/1.3 var(--font-sans); color: var(--color-ink); }
+.sn-meta { display: flex; flex-wrap: wrap; gap: 6px; }
+.sn-meta > span { display: inline-flex; align-items: center; gap: 5px; height: 24px; padding: 0 9px; border-radius: 999px; font-size: 12px; color: var(--color-ink-2); background: color-mix(in srgb, var(--color-ink) 6%, transparent); }
+.sn-meta svg { width: 13px; height: 13px; }
+.sn-meta a { display: inline-flex; align-items: center; gap: 2px; color: var(--color-accent); font-weight: 600; text-decoration: none; }
+.sn-meta a:hover { text-decoration: underline; }
+.sn-amac, .sn-ipucu { display: flex; gap: 8px; margin: 0; font-size: 13.5px; line-height: 1.5; color: var(--color-ink-2); }
+.sn-amac svg, .sn-ipucu svg { width: 15px; height: 15px; margin-top: 3px; flex: none; color: var(--color-accent); }
+.sn-amac b { color: var(--color-ink); font-weight: 600; }
+.sn-ipucu { padding: 8px 10px; border-radius: 10px; background: var(--color-warn-soft); }
+.sn-ipucu svg { color: var(--color-warn); }
+.sn-islev, .sn-madde { display: grid; gap: 6px; margin: 0; padding: 0; list-style: none; }
+.sn-islev li, .sn-madde li { position: relative; padding-left: 18px; font-size: 13.5px; line-height: 1.5; color: var(--color-ink-2); }
+.sn-islev li::before, .sn-madde li::before { content: ''; position: absolute; left: 4px; top: .62em; width: 6px; height: 6px; border-radius: 2px; background: var(--color-accent); transform: rotate(45deg); }
+.sn-islev b, .sn-madde b, .gg-bolum b { color: var(--color-ink); font-weight: 600; }
+
+/* Açılış penceresi (UpdatePrompt) geniş kip */
+.up-card.up-genis { position: relative; width: min(560px, calc(100vw - 32px)); max-height: min(86vh, 760px); display: flex; flex-direction: column; text-align: left; padding: 20px 20px 16px; }
+.up-genis .up-x { position: absolute; top: 10px; right: 10px; width: 34px; height: 34px; border-radius: 10px; display: grid; place-items: center; color: var(--color-ink-3); cursor: pointer; }
+.up-genis .up-x:hover { background: color-mix(in srgb, var(--color-ink) 7%, transparent); }
+.up-genis .up-x svg { width: 18px; height: 18px; }
+.up-genis .up-bas { display: flex; align-items: center; gap: 12px; padding-right: 30px; margin-bottom: 12px; }
+.up-genis .up-ico { margin: 0; flex: none; }
+.up-genis .up-ust { margin: 0 0 2px; font-size: 11.5px; font-weight: 650; letter-spacing: .04em; text-transform: uppercase; color: var(--color-accent); }
+.up-genis .up-h { margin: 0; font-size: 18px; line-height: 1.25; }
+.up-genis .up-b { flex: 1 1 auto; min-height: 0; overflow-y: auto; overscroll-behavior: contain; display: flex; flex-direction: column; gap: 10px; margin: 0 -4px; padding: 2px 4px; }
+.up-genis .up-b ul { padding-left: 0; }
+.up-genis .up-ara { margin: 4px 0 0; font-size: 12px; font-weight: 650; text-transform: uppercase; letter-spacing: .04em; color: var(--color-ink-3); }
+.up-genis .up-not { margin: 12px 0 0; font-size: 12px; line-height: 1.45; color: var(--color-ink-3); }
+.up-genis .up-act { margin-top: 14px; }
+.up-genis a.up-btn { text-decoration: none; }

@@ -8,12 +8,13 @@ import React, { useEffect, useMemo, useState } from 'react';
 import { ChevronDown, FileMinus2, FilePen, FilePlus2, Minus, Plus, RefreshCw, ScrollText, Search, Wrench } from 'lucide-react';
 import VERI from '../../data/surum_gunlugu.json';
 import '../../styles/guncellemeler.css';
+import { Madde, YenilikKarti, tarihYaz, type Yenilik } from './SurumNotu';
 
 type Tur = 'eklenen' | 'degisen' | 'duzeltilen' | 'silinen';
 type Not = { tur: Tur; metin: string; commit: string; tarih: string };
 type Surum = {
   surum: number; tarih: string; commit: string; baslik: string;
-  ogrenci: Record<Tur, string[]>; gelistirme: Not[];
+  ogrenci: Record<Tur, string[]>; yenilikler?: Yenilik[]; gelistirme: Not[];
   dosyalar: { eklenen: number; silinen: number; degisen: number; ornekEklenen: string[]; ornekSilinen: string[] };
 };
 type Veri = { uretildi: string | null; surumler: Surum[]; yayinlanmamis: Not[]; oncesi: { gun: string; gelistirme: Not[] }[] };
@@ -70,12 +71,16 @@ function SurumKarti({ s, suzgec, gelistirici, ilk }: { s: Surum; suzgec: Tur | n
         </div>
       </header>
 
+      {(s.yenilikler?.length ?? 0) > 0 && (
+        <div className="sn-liste">{s.yenilikler!.map((y, i) => <YenilikKarti key={i} y={y} tarih={s.tarih} />)}</div>
+      )}
+
       {bolumler.length > 0 && (
         <div className="gg-bolumler">
           {bolumler.map((t) => (
             <section key={t.id} className="gg-bolum" data-tur={t.id}>
               <h4><t.ikon /> {t.ad}</h4>
-              <ul>{ogrenciMaddeleri(s.ogrenci[t.id]).map((m, i) => <li key={i}>{m}</li>)}</ul>
+              <ul>{ogrenciMaddeleri(s.ogrenci[t.id]).map((m, i) => <li key={i}><Madde m={m} /></li>)}</ul>
             </section>
           ))}
         </div>
@@ -147,6 +152,16 @@ export default function GuncellemeGunluguView() {
           <p>Her sürümde nelerin eklendiğini, değiştiğini, düzeltildiğini ve kaldırıldığını buradan izleyebilirsin.</p>
         </div>
       </header>
+
+      {son && !ara && !suzgec && (
+        <section className="gg-vitrin" aria-labelledby="gg-vitrin-b">
+          <p className="gg-vitrin-ust"><span>Son sürüm · v{son.surum}</span><span>{tarihYaz(son.tarih)} · {saatYaz(son.tarih)}</span></p>
+          <h2 id="gg-vitrin-b">{son.baslik}</h2>
+          {(son.yenilikler?.length ?? 0) > 0
+            ? <div className="sn-liste">{son.yenilikler!.map((y, i) => <YenilikKarti key={i} y={y} tarih={son.tarih} />)}</div>
+            : <ul className="sn-madde">{TURLER.flatMap((t) => ogrenciMaddeleri(son.ogrenci[t.id])).map((m, i) => <li key={i}><Madde m={m} /></li>)}</ul>}
+        </section>
+      )}
 
       {son && (
         <div className="gg-ozet">

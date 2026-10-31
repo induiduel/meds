@@ -100,7 +100,8 @@ def main() -> int:
             for m in maddeler: ogrenci[madde_turu(m)].append(m)
         surumler.append({
             'surum': onem, 'tarih': t, 'commit': h, 'baslik': n.get('baslik') or f'Sürüm {onem}',
-            'ogrenci': ogrenci, 'gelistirme': notlar(bekleyen), 'dosyalar': dosya_ozeti(son_hash, h),
+            'ogrenci': ogrenci, 'yenilikler': [y for y in n.get('yenilikler') or [] if isinstance(y, dict) and y.get('ad')],
+            'gelistirme': notlar(bekleyen), 'dosyalar': dosya_ozeti(son_hash, h),
         })
         son_onem, son_hash, bekleyen = onem, h, []
 

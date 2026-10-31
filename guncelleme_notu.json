@@ -1,17 +1,46 @@
 {
-  "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 604,
-  "baslik": "Sesli ders indirme düzeltildi",
+  "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir). 'yenilikler': her yeni özellik için {ad, nerede:{ad,yol}, amac, islevler[], ipucu?} — açılış penceresi ve /guncellemeler sayfası bunları kart olarak gösterir; 'maddeler' kısa ek notlardır ('Başlık: açıklama' biçimi kalın başlıkla gösterilir).",
+  "onem": 605,
+  "baslik": "Yenilikler artık ayrıntılı tanıtılıyor",
   "maddeler": [
-    "Sesli dersleri çevrimdışı için indir düğmesi yeniden çalışıyor; ders doğrudan uygulamanın içine kaydedilir, İndirilenler klasörüne dosya düşmez.",
-    "Önceden takılı kalmış indirmeler kendiliğinden iptal edilir; dersi yeniden indirmeniz yeterli."
+    "Maddeler: \"Başlık: açıklama\" biçimindeki notlar artık kalın başlıkla, daha okunaklı gösteriliyor."
   ],
-  "eklenen": [],
+  "eklenen": [
+    "Sürüm notlarında ayrıntılı özellik tanıtım kartları",
+    "Güncellemeden sonraki ilk açılışta \"Yenilikler\" penceresi"
+  ],
   "degisen": [
-    "Çevrimdışı indirme yalnız sayfa içi indirme + uygulama önbelleği kullanır (Background Fetch kapatıldı)"
+    "Güncelleme günlüğü sayfası yeniden tasarlandı: son sürüm vitrini ve okunaklı maddeler",
+    "Eski sürümdeki sekmelerde \"Siteyi güncelle\" penceresi her sürüm için bir kez kendiliğinden açılır"
   ],
-  "duzeltilen": [
-    "Sesli ders indirmesinin başlamaması (H457)"
-  ],
-  "silinen": []
+  "duzeltilen": [],
+  "silinen": [],
+  "yenilikler": [
+    {
+      "ad": "Yeni güncelleme günlüğü",
+      "nerede": {
+        "ad": "Başvuru › Güncelleme günlüğü",
+        "yol": "/guncellemeler"
+      },
+      "amac": "Siteye eklenen her özelliğin ne olduğunu, nerede bulunduğunu ve ne işe yaradığını tek yerde göstermek.",
+      "islevler": [
+        "Son sürüm vitrini: en yeni sürümün özellikleri sayfanın başında kartlarla tanıtılır",
+        "Özellik kartı: her yenilik için yeri (tıklanınca o sayfaya gider), eklendiği tarih, amacı ve yapabileceklerin",
+        "Arama ve süzgeç: eski sürümlerde konuya ya da türe göre (eklenen, değişen, düzeltilen) arama"
+      ]
+    },
+    {
+      "ad": "Açılışta \"Yenilikler\" penceresi",
+      "nerede": {
+        "ad": "Siteyi açtığında, kendiliğinden"
+      },
+      "amac": "Site güncellendikten sonra ilk girişinde neyin değiştiğini kaçırmaman.",
+      "islevler": [
+        "Zaten yeni sürümdeysen: yalnız bilgilendirir, yenileme gerekmez; \"Anladım\" ile kapanır",
+        "Eski sürüm açıksa: aynı ayrıntılarla \"Siteyi güncelle\" penceresi bir kez açılır; \"Sonra\" dersen üst çubuktaki ✦ simgesi kalır",
+        "Her sürüm bu cihazda yalnız bir kez gösterilir"
+      ],
+      "ipucu": "Pencereyi kaçırırsan tüm notlara Güncelleme günlüğü sayfasından ulaşabilirsin."
+    }
+  ]
 }
