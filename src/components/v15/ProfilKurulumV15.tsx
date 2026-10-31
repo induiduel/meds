@@ -10,8 +10,8 @@ import { useTamKatman } from '../../utils/tamKatman';
 
 /**
  * v15 · Kayıt adımları (tasarım I07 kayitUni · I08 kayitSinif · I09 kayitKurul · I10 kayitHedef · I11 kayitBitti).
- * Girişten sonra profili eksik öğrenciye bir kez açılır (App, hesaptan eşitleme için kısa gecikmeyle); Profil ›
- * "Bilgilerimi düzenle" ile yeniden açılır. "Sonra" profili tamamlanmış saymaz ama bu oturumda yeniden sormaz.
+ * Girişten sonra profili eksik öğrenciye her açılışta açılır (App, hesaptan eşitleme için kısa gecikmeyle); Profil ›
+ * "Bilgilerimi düzenle" ile yeniden açılır. "Sonra" profili tamamlanmış saymaz; bir sonraki açılışta yeniden sorulur.
  * Kurul seçimi sitenin kurul seçicisine (kurulKaydet), hedef Bugün planına yazılır.
  */
 const fold = (s: string) => s.toLocaleLowerCase('tr-TR').normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/ı/g, 'i');
@@ -115,7 +115,7 @@ export default function ProfilKurulumV15({ onKapat }: { onKapat: () => void }) {
                 <button key={n} type="button" role="radio" aria-checked={p.sinif === n} className={`v15-btn ${p.sinif === n ? '' : 'is-soft'}`} onClick={() => ay({ sinif: n })}>{n}. sınıf</button>
               ))}
             </div>
-            <span className="kr15k-lbl">Öğrenci numarası (isteğe bağlı)</span>
+            <span className="kr15k-lbl">Öğrenci numarası</span>
             <label className="kr15k-inp"><IdCard aria-hidden />
               <input inputMode="numeric" value={p.numara || ''} onChange={(e) => ay({ numara: e.target.value.replace(/[^\d ]/g, '').slice(0, 16) })} placeholder="Öğrenci numaran" aria-label="Öğrenci numarası" />
             </label>
@@ -170,11 +170,121 @@ export default function ProfilKurulumV15({ onKapat }: { onKapat: () => void }) {
   );
 }
 
-/** Uygulama kökünde: girişli, profili eksik öğrenciye bir kez açar; `medsoru:profil-kur` olayı her zaman açar. */
+type EksikAlan = 'universite' | 'kurul' | 'numara';
+export const profilEksikleri = (p: Profil = profilOku()): EksikAlan[] => {
+  const e: EksikAlan[] = [];
+  if (!p.universite?.trim()) e.push('universite');
+  if (!p.kurul) e.push('kurul');
+  if (!p.numara?.trim()) e.push('numara');
+  return e;
+};
+
+/**
+ * Kurulumu bitirmiş ama üniversite, kurul ya da öğrenci numarası eksik kalan öğrenciye her açılışta çıkan kısa sayfa:
+ * yalnız eksik alanları sorar; "Sonra" yalnız bu açılış için kapatır.
+ */
+function ProfilEksikV15({ eksik, onKapat }: { eksik: EksikAlan[]; onKapat: () => void }) {
+  const [p, setP] = useState<Profil>(() => ({
+    kurul: undefined,
+    numara: (() => { try { return localStorage.getItem(SAVED_STUDENT_NUMBER_KEY) || ''; } catch { return ''; } })() || undefined,
+    ...profilOku(),
+  }));
+  const [ara, setAra] = useState('');
+  const ay = (k: Partial<Profil>) => setP((x) => ({ ...x, ...k }));
+  const uniler = useMemo(() => {
+    const f = fold(ara.trim());
+    return (f ? UNIVERSITELER.filter((u) => fold(u).includes(f)) : UNIVERSITELER).slice(0, 5);
+  }, [ara]);
+  useTamKatman();
+  const tamam = profilEksikleri(p).length === 0;
+  const kaydet = () => {
+    const son: Profil = { ...profilOku(), universite: p.universite?.trim(), kurul: p.kurul, numara: p.numara?.trim() || undefined };
+    profilYaz(son);
+    if (son.kurul) kurulKaydet(son.kurul);
+    if (son.numara) { try { localStorage.setItem(SAVED_STUDENT_NUMBER_KEY, son.numara); } catch { /* yok */ } }
+    onKapat();
+  };
+  const elleUni = ara.trim() && !UNIVERSITELER.some((u) => fold(u) === fold(ara.trim()));
+
+  return createPortal(
+    <div className="kr15e-arka" role="presentation">
+      <div className="kr15e" role="dialog" aria-modal="true" aria-labelledby="kr15e-b">
+        <div className="kr15e-bas">
+          <span className="kr15e-ikon" aria-hidden><IdCard /></span>
+          <div>
+            <h2 id="kr15e-b">Profilini tamamla</h2>
+            <p>{eksik.length} bilgi eksik. Sıralamada doğru sınıfta görünmen ve sana uygun kurulun açılması için gerekli.</p>
+          </div>
+        </div>
+        <div className="kr15e-ic">
+          {eksik.includes('universite') && (
+            <section>
+              <span className="kr15k-lbl">Üniversite</span>
+              <label className="kr15k-inp"><Search aria-hidden />
+                <input value={ara} onChange={(e) => setAra(e.target.value.slice(0, 80))} placeholder="Üniversiteni ara" aria-label="Üniversite ara" />
+              </label>
+              <ul className="v15-card kr15k-liste" role="radiogroup" aria-label="Üniversite">
+                {uniler.map((u) => (
+                  <li key={u}>
+                    <button type="button" role="radio" aria-checked={p.universite === u} onClick={() => ay({ universite: u })}>
+                      <span className={`kr15k-radio${p.universite === u ? ' is-on' : ''}`} />
+                      <span><b>{u}</b></span>
+                    </button>
+                  </li>
+                ))}
+                {elleUni && (
+                  <li>
+                    <button type="button" role="radio" aria-checked={p.universite === ara.trim()} onClick={() => ay({ universite: ara.trim() })}>
+                      <span className={`kr15k-radio${p.universite === ara.trim() ? ' is-on' : ''}`} />
+                      <span><b>{ara.trim()}</b><small>Listede yok, böyle ekle</small></span>
+                    </button>
+                  </li>
+                )}
+              </ul>
+            </section>
+          )}
+          {eksik.includes('kurul') && (
+            <section>
+              <span className="kr15k-lbl">Aktif kurul</span>
+              <div className="kr15e-kurul" role="radiogroup" aria-label="Aktif kurul">
+                {KURULLAR.map((k) => (
+                  <button key={k.kurul} type="button" role="radio" aria-checked={p.kurul === k.kurul} title={k.ad}
+                    className={`v15-btn ${p.kurul === k.kurul ? '' : 'is-soft'}`} onClick={() => ay({ kurul: k.kurul })}>
+                    Kurul {k.kurul}{k.kurul === aktifKurul().kurul && <small>şu an</small>}
+                  </button>
+                ))}
+              </div>
+            </section>
+          )}
+          {eksik.includes('numara') && (
+            <section>
+              <span className="kr15k-lbl">Öğrenci numarası</span>
+              <label className="kr15k-inp"><IdCard aria-hidden />
+                <input inputMode="numeric" value={p.numara || ''} onChange={(e) => ay({ numara: e.target.value.replace(/[^\d ]/g, '').slice(0, 16) })} placeholder="Öğrenci numaran" aria-label="Öğrenci numarası" />
+              </label>
+              <p className="kr15k-not">Başkalarına gösterilmez; yalnız sınıf sıralaması ve katkıların için kullanılır.</p>
+            </section>
+          )}
+        </div>
+        <footer className="kr15e-alt">
+          <button type="button" className="v15-btn kr15k-ana" onClick={kaydet} disabled={!tamam}>Kaydet</button>
+          <button type="button" className="kr15k-link" onClick={onKapat}>Sonra</button>
+        </footer>
+      </div>
+    </div>,
+    document.body,
+  );
+}
+
+/**
+ * Uygulama kökünde: girişli öğrencide üniversite, kurul ya da öğrenci numarası eksikse HER açılışta sorar (kurulum hiç
+ * bitmediyse tam akış, bittiyse yalnız eksik alanlar). "Sonra" yalnız bu açılış için kapatır. `medsoru:profil-kur` olayı
+ * tam akışı her zaman açar.
+ */
 export function ProfilKurulumKapisi({ girisli, yonetici }: { girisli: boolean; yonetici: boolean }) {
-  const [acik, setAcik] = useState(false);
+  const [acik, setAcik] = useState<false | 'tam' | 'eksik'>(false);
   React.useEffect(() => {
-    const ac = () => setAcik(true);
+    const ac = () => setAcik('tam');
     window.addEventListener('medsoru:profil-kur', ac);
     return () => window.removeEventListener('medsoru:profil-kur', ac);
   }, []);
@@ -182,13 +292,14 @@ export function ProfilKurulumKapisi({ girisli, yonetici }: { girisli: boolean; y
     if (!girisli || yonetici) return;
     // hesaptan eşitleme gelsin diye bekle; başka cihazda doldurulmuş profil yeniden sorulmaz
     const t = window.setTimeout(() => {
-      let sonra = false;
-      try { sonra = !!sessionStorage.getItem('medsoru_profil_sonra'); } catch { /* yok */ }
-      if (!profilOku().tamam && !sonra) setAcik(true);
+      const p = profilOku();
+      if (!p.tamam) setAcik('tam');
+      else if (profilEksikleri(p).length) setAcik('eksik');
     }, 5000);
     return () => window.clearTimeout(t);
   }, [girisli, yonetici]);
   if (!acik) return null;
-  return <ProfilKurulumV15 onKapat={() => { try { sessionStorage.setItem('medsoru_profil_sonra', '1'); } catch { /* yok */ } setAcik(false); }} />;
+  if (acik === 'eksik') return <ProfilEksikV15 eksik={profilEksikleri()} onKapat={() => setAcik(false)} />;
+  return <ProfilKurulumV15 onKapat={() => setAcik(false)} />;
 }
 export const profilKurulumAc = () => window.dispatchEvent(new Event('medsoru:profil-kur'));
